@@ -8,7 +8,7 @@ Devi distribuire il tuo contratto intelligente, affinché sia disponibile agli u
 
 Per distribuire un contratto intelligente, invii una transazione di Ethereum contenente il codice compilato del contratto intelligente, senza specificare alcun destinatario.
 
-## Prerequisiti {#prerequisites}
+## Prerequisiti \{#prerequisites}
 
 Dovresti comprendere le [reti di Ethereum](/developers/docs/networks/), le [transazioni](/developers/docs/transactions/) e l'[anatomia dei contratti intelligenti](/developers/docs/smart-contracts/anatomy/), prima di distribuire i contratti intelligenti.
 
@@ -16,22 +16,22 @@ Distribuire un contratto, inoltre, costa ether (ETH), poiché questi sono memori
 
 Infine, dovrai compilare il tuo contratto prima di distribuirlo, quindi, assicurati di aver letto a riguardo della [compilazione dei contratti intelligenti](/developers/docs/smart-contracts/compiling/).
 
-## Come distribuire un contratto intelligente {#how-to-deploy-a-smart-contract}
+## Come distribuire un contratto intelligente \{#how-to-deploy-a-smart-contract}
 
-### Cosa ti serve {#what-youll-need}
+### Cosa ti serve \{#what-youll-need}
 
 - il bytecode del tuo contratto: è generato tramite la [compilazione](/developers/docs/smart-contracts/compiling/)
 - ETH per gas: imposterai il limite di gas come per altre transazioni, quindi, sappi che la distribuzione del contratto necessita di molto più gasi di un semplice trasferimento di ETH
 - uno script o un plugin di distribuzione.
 - accesso a un [nodo Ethereum](/developers/docs/nodes-and-clients/) tramite esecuzione di un nodo personalizzato, connessione a un nodo pubblico o utilizzando una chiave API con un [servizio di nodi](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
-### Passaggi per distribuire un contratto intelligente {#steps-to-deploy}
+### Passaggi per distribuire un contratto intelligente \{#steps-to-deploy}
 
 I passaggi specifici dipenderanno dagli strumenti utilizzati. Per esempio, dai un'occhiata alla [documentazione di Hardhat sulla distribuzione dei tuoi contratti](https://hardhat.org/guides/deploying.html) o alla [documentazione di Truffle su reti e distribuzione delle app](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment). Questi sono due degli strumenti più popolari per la distribuzione dei contratti intelligenti, che coinvolgono la scrittura di uno script per gestire i passaggi di distribuzione.
 
 Una volta distribuito, il contratto avrà un indirizzo Ethereum come gli altri [conti](/developers/docs/accounts/).
 
-## Strumenti correlati {#related-tools}
+## Strumenti correlati \{#related-tools}
 
 **Remix - _Remix IDE consente di sviluppare, distribuire e amministrare i contratti intelligenti per Ethereum, come le blockchain_**
 
@@ -61,21 +61,21 @@ Una volta distribuito, il contratto avrà un indirizzo Ethereum come gli altri [
 
 - [Documentazione](https://portal.thirdweb.com/deploy/)
 
-## Tutorial correlati {#related-tutorials}
+## Tutorial correlati \{#related-tutorials}
 
 - [Deploying your first smart contract](/developers/tutorials/deploying-your-first-smart-contract/): _Un'introduzione alla distribuzione del primo contratto su una rete di prova di Ethereum._
 - [Hello World | smart contract tutorial](/developers/tutorials/hello-world-smart-contract/): _Un tutorial facile da seguire per creare e distribuire un contratto intelligente di base su Ethereum._
 - [Interagire con gli altri contratti da Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/): _Come distribuire un contratto intelligente da un contratto esistente e interagirvi._
 - [How to downsize your contract size](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/): _Come ridurre le dimensioni del tuo contratto per mantenerlo sotto il limite e risparmiare carburante_
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
 - [Distribuire i tuoi contratti Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
 
 _Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
-## Argomenti correlati {#related-topics}
+## Argomenti correlati \{#related-topics}
 
 - [Quadri di sviluppo](/developers/docs/frameworks/)
 - [Eseguire un nodo di Ethereum](/developers/docs/nodes-and-clients/run-a-node/)

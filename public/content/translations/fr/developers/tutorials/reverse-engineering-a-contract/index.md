@@ -10,7 +10,7 @@ skill: advanced
 published: 2021-12-30
 ---
 
-## Introduction {#introduction}
+## Introduction \{#introduction}
 
 _Il n'y a aucun secret sur la blockchain_, tout ce qui se passe est cohérent, vérifiable et accessible au public. Idéalement, [les contrats devraient avoir leur code source publié et vérifié sur Etherscan](https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code). Or [ce n'est pas toujours le cas](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code). Dans cet article, vous apprendrez comment rétro-concevoir des contrats en prenant comme exemple un contrat sans code source, [`0x2510c039cc3b061d79e564b38836da87e31b342f`](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f).
 
@@ -18,7 +18,7 @@ Il existe des décompilateurs, mais ils ne produisent pas toujours [des résulta
 
 Pour être en mesure de comprendre cet article, vous devriez connaître les bases de l'EVM et être au moins familier avec l'assembleur EVM. [Vous pouvez en savoir plus sur ces sujets ici](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
-## Préparer le Code Exécutable {#prepare-the-executable-code}
+## Préparer le Code Exécutable \{#prepare-the-executable-code}
 
 Vous pouvez récupérer les opcodes en cherchant le contrat sur Etherscan, cliquez sur l'onglet **Contract** et puis sur **Switch to Opcodes View**. Vous obtenez un affichage d'un opcode par ligne.
 
@@ -42,12 +42,12 @@ Dans la cellule `A1`, déclarez la première valeur décalée à 0. Puis, dans l
 
 Nous avons besoin de cette fonction pour nous donner la valeur hexadécimale car les valeurs poussées avant les sauts (`JUMP` et `JUMPI`) nous sont données en hexadécimal.
 
-## Le Point d'Entrée (0x00) {#the-entry-point-0x00}
+## Le Point d'Entrée (0x00) \{#the-entry-point-0x00}
 
 Les contrats sont toujours exécutés à partir du premier octet. Ceci est la première partie du code :
 
 | Décalage | Opcode       | Pile (après le code d'opération) |
-| --------:| ------------ | -------------------------------- |
+| -------: | ------------ | -------------------------------- |
 |        0 | PUSH1 0x80   | 0x80                             |
 |        2 | PUSH1 0x40   | 0x40, 0x80                       |
 |        4 | MSTORE       | Vide                             |
@@ -64,10 +64,10 @@ Ce code fait deux choses :
 
 ![Organigramme de cette partie](flowchart-entry.png)
 
-### Le Gestionnaire à 0x5E (pour les données d'appel non-ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
+### Le Gestionnaire à 0x5E (pour les données d'appel non-ABI) \{#the-handler-at-0x5e-for-non-abi-call-data}
 
 | Décalage | Opcode       |
-| --------:| ------------ |
+| -------: | ------------ |
 |       5E | JUMPDEST     |
 |       5F | CALLDATASIZE |
 |       60 | PUSH2 0x007c |
@@ -76,7 +76,7 @@ Ce code fait deux choses :
 Ce snippet commence avec un `JUMPDEST`. Les programmes EVM (machine virtuelle Ethereum) lèvent une exception si l'on saute à un code d'opération qui n'est pas `JUMPDEST`. Puis, il vérifie le CALLDATASIZE et si c'est « true » (c'est-à-dire, si ce n'est pas zéro), il saute à 0x7C. Nous verrons ça ci-dessous.
 
 | Décalage | Opcode     | Pile (après l'opcode)                                                      |
-| --------:| ---------- | -------------------------------------------------------------------------- |
+| -------: | ---------- | -------------------------------------------------------------------------- |
 |       64 | CALLVALUE  | [Wei](/glossary/#wei) fourni par l'appel. Appelé `msg.value` dans Solidity |
 |       65 | PUSH1 0x06 | 6 CALLVALUE                                                                |
 |       67 | PUSH1 0x00 | 0 6 CALLVALUE                                                              |
@@ -94,20 +94,20 @@ Ensuite, cliquez sur l'onglet **State** et développez le contrat que nous rétr
 
 ![Le changement dans Stockage[6]](storage6.png)
 
-Si nous regardons dans les changements d'état causés par [d'autres transactions `Transfer` de la même période](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) nous voyons que `Storage[6]` a suivi la valeur du contrat pendant un certain temps. Pour le moment, nous l'appellerons `Valeur*`. L'astérisque (`*`) nous rappelle que nous ne _savons_ pas ce que cette variable fait pour le moment, mais ça ne peut pas être simplement de tracer la valeur du contrat parce qu'il n'y a pas besoin d'utiliser  le stockage, qui est très cher, quand vous pouvez obtenir le solde de vos comptes à l'aide de `ADDRESS BALANCE`. Le premier code d'opérations dévoile la propre adresse du contrat. Le deuxième lit l'adresse en haut de la pile et la remplace par le solde de cette adresse.
+Si nous regardons dans les changements d'état causés par [d'autres transactions `Transfer` de la même période](https://etherscan.io/tx/0xf708d306de39c422472f43cb975d97b66fd5d6a6863db627067167cbf93d84d1#statechange) nous voyons que `Storage[6]` a suivi la valeur du contrat pendant un certain temps. Pour le moment, nous l'appellerons `Valeur*`. L'astérisque (`*`) nous rappelle que nous ne _savons_ pas ce que cette variable fait pour le moment, mais ça ne peut pas être simplement de tracer la valeur du contrat parce qu'il n'y a pas besoin d'utiliser le stockage, qui est très cher, quand vous pouvez obtenir le solde de vos comptes à l'aide de `ADDRESS BALANCE`. Le premier code d'opérations dévoile la propre adresse du contrat. Le deuxième lit l'adresse en haut de la pile et la remplace par le solde de cette adresse.
 
-| Décalage | Opcode       | Pile                                          |
-| --------:| ------------ | --------------------------------------------- |
+| Décalage | Opcode       | Pile                                        |
+| -------: | ------------ | ------------------------------------------- |
 |       6C | PUSH2 0x0075 | 0x75 Value\* CALLVALUE 0 6 CALLVALUE        |
 |       6F | SWAP2        | CALLVALUE Value\* 0x75 0 6 CALLVALUE        |
 |       70 | SWAP1        | Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
 |       71 | PUSH2 0x01a7 | 0x01A7 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
-|       74 | JUMP         |                                               |
+|       74 | JUMP         |                                             |
 
 Nous continuerons à tracer ce code à la destination du saut.
 
-| Décalage | Opcode     | Pile                                                          |
-| --------:| ---------- | ------------------------------------------------------------- |
+| Décalage | Opcode     | Pile                                                        |
+| -------: | ---------- | ----------------------------------------------------------- |
 |      1A7 | JUMPDEST   | Value\* CALLVALUE 0x75 0 6 CALLVALUE                        |
 |      1A8 | PUSH1 0x00 | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE                   |
 |      1AA | DUP3       | CALLVALUE 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
@@ -115,39 +115,39 @@ Nous continuerons à tracer ce code à la destination du saut.
 
 Le `NOT` est au niveau des bits donc il inverse la valeur de chaque bit dans la valeur d'appel.
 
-| Décalage | Opcode       | Pile                                                                            |
-| --------:| ------------ | ------------------------------------------------------------------------------- |
+| Décalage | Opcode       | Pile                                                                        |
+| -------: | ------------ | --------------------------------------------------------------------------- |
 |      1AC | DUP3         | Value\* 2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |      1AD | GT           | Value\*>2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE         |
 |      1AE | ISZERO       | Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE        |
 |      1AF | PUSH2 0x01df | 0x01DF Value\*<=2^256-CALLVALUE-1 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
-|      1B2 | JUMPI        |                                                                                 |
+|      1B2 | JUMPI        |                                                                             |
 
 On saute si `Value*` est inférieure à 2^256-CALLVALUE-1 ou égale à celle-ci. Cela ressemble à une logique pour éviter les dépassements. Et en effet, nous voyons qu'après quelques opérations absurdes (écrire en mémoire est sur le point d'être supprimé, par exemple) au décalage 0x01DE, le contrat annule si le dépassement est détecté, ce qui est le comportement normal.
 
 Notez qu'un tel dépassement est extrêmement improbable, parce qu'il nécessiterait une valeur d'appel et `Value*` d'être d'un ordre de grandeur de 2^256 wei, environ 10^59 ETH. [L'offre d'ETH total, au moment ou l'on écrit ceci, est inférieur à deux cents millions](https://etherscan.io/stat/supply).
 
-| Décalage | Opcode   | Pile                                        |
-| --------:| -------- | ------------------------------------------- |
+| Décalage | Opcode   | Pile                                      |
+| -------: | -------- | ----------------------------------------- |
 |      1DF | JUMPDEST | 0x00 Value\* CALLVALUE 0x75 0 6 CALLVALUE |
 |      1E0 | POP      | Value\* CALLVALUE 0x75 0 6 CALLVALUE      |
 |      1E1 | ADD      | Value\*+CALLVALUE 0x75 0 6 CALLVALUE      |
 |      1E2 | SWAP1    | 0x75 Value\*+CALLVALUE 0 6 CALLVALUE      |
-|      1E3 | JUMP     |                                             |
+|      1E3 | JUMP     |                                           |
 
 Si nous sommes arrivés ici, obtenons `Value* + CALLVALUE` et sautons au décalage 0x75.
 
-| Décalage | Opcode   | Pile                              |
-| --------:| -------- | --------------------------------- |
+| Décalage | Opcode   | Pile                            |
+| -------: | -------- | ------------------------------- |
 |       75 | JUMPDEST | Value\*+CALLVALUE 0 6 CALLVALUE |
 |       76 | SWAP1    | 0 Value\*+CALLVALUE 6 CALLVALUE |
 |       77 | SWAP2    | 6 Value\*+CALLVALUE 0 CALLVALUE |
-|       78 | SSTORE   | 0 CALLVALUE                       |
+|       78 | SSTORE   | 0 CALLVALUE                     |
 
 Si nous arrivons ici (ce qui nécessite que les données d'appel soient vides), nous ajoutons à `Value*` la valeur d'appel. Ceci est cohérent avec ce que nous disons sur ce que les transactions `Transfer` font.
 
 | Décalage | Opcode |
-| --------:| ------ |
+| -------: | ------ |
 |       79 | POP    |
 |       7A | POP    |
 |       7B | STOP   |
@@ -158,7 +158,7 @@ Pour tout résumer, voici un diagramme du code initial.
 
 ![Organigramme des points d'entrée](flowchart-entry.png)
 
-## Le gestionnaire à 0x7C {#the-handler-at-0x7c}
+## Le gestionnaire à 0x7C \{#the-handler-at-0x7c}
 
 J'ai sciemment omis de mettre dans la rubrique ce que fait ce gestionnaire. Le but n'est pas de vous enseigner comment fonctionne ce contrat spécifique, mais comment rétro-concevoir les contrats. Vous apprendrez ce qu'il fait de la même manière que moi, en suivant le code.
 
@@ -168,7 +168,7 @@ Nous arrivons ici de plusieurs façons :
 - Si la signature de la méthode est inconnue (à partir des décalages 0x42 et 0x5D)
 
 | Décalage | Opcode       | Pile                 |
-| --------:| ------------ | -------------------- |
+| -------: | ------------ | -------------------- |
 |       7C | JUMPDEST     |                      |
 |       7D | PUSH1 0x00   | 0x00                 |
 |       7F | PUSH2 0x009d | 0x9D 0x00            |
@@ -178,21 +178,21 @@ Nous arrivons ici de plusieurs façons :
 Il s'agit d'une autre cellule de stockage, une cellule que je n'ai pas trouvée dans aucune transaction, donc il est plus difficile de savoir ce que cela signifie. Le code ci-dessous clarifiera la question.
 
 | Décalage | Opcode                                            | Pile                            |
-| --------:| ------------------------------------------------- | ------------------------------- |
+| -------: | ------------------------------------------------- | ------------------------------- |
 |       85 | PUSH20 0xffffffffffffffffffffffffffffffffffffffff | 0xff....ff Storage[3] 0x9D 0x00 |
 |       9A | AND                                               | Storage[3]-as-address 0x9D 0x00 |
 
 Ces codes d'opération tronquent la valeur que nous lisons de Stockage[3] à 160 bits, la longueur d'une adresse Ethereum.
 
 | Décalage | Opcode | Pile                            |
-| --------:| ------ | ------------------------------- |
+| -------: | ------ | ------------------------------- |
 |       9B | SWAP1  | 0x9D Storage[3]-as-address 0x00 |
 |       9C | JUMP   | Storage[3]-as-address 0x00      |
 
 Ce saut est superflu puisque nous allons au prochain code d'opérations. Ce code n'est pas aussi efficace en gaz qu'il pourrait l'être.
 
 | Décalage | Opcode     | Pile                            |
-| --------:| ---------- | ------------------------------- |
+| -------: | ---------- | ------------------------------- |
 |       9D | JUMPDEST   | Storage[3]-as-address 0x00      |
 |       9E | SWAP1      | 0x00 Storage[3]-as-address      |
 |       9F | POP        | Storage[3]-as-address           |
@@ -202,7 +202,7 @@ Ce saut est superflu puisque nous allons au prochain code d'opérations. Ce code
 Au tout début du code, nous définissons Mem[0x40] à 0x80. Si nous cherchons 0x40 plus tard, nous voyons que nous ne le changeons pas - nous pouvons donc supposer qu'il est 0x80.
 
 | Décalage | Opcode       | Pile                                              |
-| --------:| ------------ | ------------------------------------------------- |
+| -------: | ------------ | ------------------------------------------------- |
 |       A3 | CALLDATASIZE | CALLDATASIZE 0x80 Storage[3]-as-address           |
 |       A4 | PUSH1 0x00   | 0x00 CALLDATASIZE 0x80 Storage[3]-as-address      |
 |       A6 | DUP3         | 0x80 0x00 CALLDATASIZE 0x80 Storage[3]-as-address |
@@ -211,7 +211,7 @@ Au tout début du code, nous définissons Mem[0x40] à 0x80. Si nous cherchons 0
 Copiez toutes les données d'appel en mémoire, à partir de 0x80.
 
 | Décalage | Opcode        | Pile                                                                             |
-| --------:| ------------- | -------------------------------------------------------------------------------- |
+| -------: | ------------- | -------------------------------------------------------------------------------- |
 |       A8 | PUSH1 0x00    | 0x00 0x80 Storage[3]-as-address                                                  |
 |       AA | DUP1          | 0x00 0x00 0x80 Storage[3]-as-address                                             |
 |       AB | CALLDATASIZE  | CALLDATASIZE 0x00 0x00 0x80 Storage[3]-as-address                                |
@@ -228,7 +228,7 @@ Les choses sont maintenant beaucoup plus claires. Ce contrat peut agir comme un 
 - _Données de retour_ : Aucune (0x00 - 0x00), nous allons obtenir les données de retour par d'autres moyens (voir ci-dessous)
 
 | Décalage | Opcode         | Pile                                                                                          |
-| --------:| -------------- | --------------------------------------------------------------------------------------------- |
+| -------: | -------------- | --------------------------------------------------------------------------------------------- |
 |       B0 | RETURNDATASIZE | RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                          |
 |       B1 | DUP1           | RETURNDATASIZE RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address           |
 |       B2 | PUSH1 0x00     | 0x00 RETURNDATASIZE RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address      |
@@ -238,7 +238,7 @@ Les choses sont maintenant beaucoup plus claires. Ce contrat peut agir comme un 
 Ici, nous copions toutes les données retournées dans le tampon de mémoire à partir de 0x80.
 
 | Décalage | Opcode       | Pile                                                                                                                         |
-| --------:| ------------ | ---------------------------------------------------------------------------------------------------------------------------- |
+| -------: | ------------ | ---------------------------------------------------------------------------------------------------------------------------- |
 |       B6 | DUP2         | (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                              |
 |       B7 | DUP1         | (((call success/failure))) (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address   |
 |       B8 | ISZERO       | (((did the call fail))) (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address      |
@@ -250,12 +250,12 @@ Ici, nous copions toutes les données retournées dans le tampon de mémoire à 
 
 Donc, après l'appel, nous copions les données retournées dans le tampon 0x80 - 0x80+RETURNDATASIZE, et si l'appel réussit, nous retournons `RETURN` avec exactement ce tampon.
 
-### Échec de DELEGATECALL {#delegatecall-failed}
+### Échec de DELEGATECALL \{#delegatecall-failed}
 
 Si nous arrivons ici, à 0xC0, cela signifie que le contrat que nous avons appelé a annulé son exécution. Étant donné que nous ne sommes qu'un proxy pour ce contrat, nous voulons retourner les mêmes données et annuler également.
 
 | Décalage | Opcode   | Pile                                                                                                                |
-| --------:| -------- | ------------------------------------------------------------------------------------------------------------------- |
+| -------: | -------- | ------------------------------------------------------------------------------------------------------------------- |
 |       C0 | JUMPDEST | (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address                     |
 |       C1 | DUP2     | RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address      |
 |       C2 | DUP5     | 0x80 RETURNDATASIZE (((call success/failure))) RETURNDATASIZE (((call success/failure))) 0x80 Storage[3]-as-address |
@@ -265,12 +265,12 @@ Donc nous annulons `REVERT` avec le même tampon que nous avons utilisé pour `R
 
 ![Organigramme de l'appel de proxy](flowchart-proxy.png)
 
-## Appels ABI {#abi-calls}
+## Appels ABI \{#abi-calls}
 
 Si la taille des données de l'appel est de quatre octets ou plus, il peut s'agir d'un appel ABI valide.
 
 | Décalage | Opcode       | Pile                                              |
-| --------:| ------------ | ------------------------------------------------- |
+| -------: | ------------ | ------------------------------------------------- |
 |        D | PUSH1 0x00   | 0x00                                              |
 |        F | CALLDATALOAD | (((First word (256 bits) of the call data)))      |
 |       10 | PUSH1 0xe0   | 0xE0 (((First word (256 bits) of the call data))) |
@@ -279,7 +279,7 @@ Si la taille des données de l'appel est de quatre octets ou plus, il peut s'agi
 Etherscan nous dit que `1C` est un code d'opération inconnu, parce qu'[il a été ajouté après que Etherscan ait écrit cette fonctionnalité](https://eips.ethereum.org/EIPS/eip-145) et qu'ils ne l'ont pas mise à jour. Un [tableau d'opcode à jour](https://github.com/wolflo/evm-opcodes) nous montre que c'est un décalage à droite
 
 | Décalage | Opcode           | Pile                                                                                                     |
-| --------:| ---------------- | -------------------------------------------------------------------------------------------------------- |
+| -------: | ---------------- | -------------------------------------------------------------------------------------------------------- |
 |       13 | DUP1             | (((first 32 bits (4 bytes) of the call data))) (((first 32 bits (4 bytes) of the call data)))            |
 |       14 | PUSH4 0x3cd8045e | 0x3CD8045E (((first 32 bits (4 bytes) of the call data))) (((first 32 bits (4 bytes) of the call data))) |
 |       19 | GT               | 0x3CD8045E>first-32-bits-of-the-call-data (((first 32 bits (4 bytes) of the call data)))                 |
@@ -300,10 +300,10 @@ Si aucune correspondance n'est trouvée, le code saute vers [le gestionnaire de 
 
 ![Organigramme des appels ABI](flowchart-abi.png)
 
-## splitter() {#splitter}
+## splitter() \{#splitter}
 
 | Décalage | Opcode       | Pile                          |
-| --------:| ------------ | ----------------------------- |
+| -------: | ------------ | ----------------------------- |
 |      103 | JUMPDEST     |                               |
 |      104 | CALLVALUE    | CALLVALUE                     |
 |      105 | DUP1         | CALLVALUE CALLVALUE           |
@@ -317,7 +317,7 @@ Si aucune correspondance n'est trouvée, le code saute vers [le gestionnaire de 
 La première chose que fait cette fonction est de vérifier que l'appel n'a pas envoyé d'ETH. Cette fonction n'est pas [`payable`](https://solidity-by-example.org/payable/). Si quelqu'un nous a envoyé des ETH, cela doit être une erreur et nous voulons `REVERT` pour éviter d'avoir cet ETH où il ne peut le récupérer.
 
 | Décalage | Opcode                                            | Pile                                                                        |
-| --------:| ------------------------------------------------- | --------------------------------------------------------------------------- |
+| -------: | ------------------------------------------------- | --------------------------------------------------------------------------- |
 |      10F | JUMPDEST                                          |                                                                             |
 |      110 | POP                                               |                                                                             |
 |      111 | PUSH1 0x03                                        | 0x03                                                                        |
@@ -334,18 +334,18 @@ La première chose que fait cette fonction est de vérifier que l'appel n'a pas 
 Et 0x80 contient maintenant l'adresse du proxy
 
 | Décalage | Opcode       | Pile      |
-| --------:| ------------ | --------- |
+| -------: | ------------ | --------- |
 |      131 | PUSH1 0x20   | 0x20 0x80 |
 |      133 | ADD          | 0xA0      |
 |      134 | PUSH2 0x00e4 | 0xE4 0xA0 |
 |      137 | JUMP         | 0xA0      |
 
-### Le code E4 {#the-e4-code}
+### Le code E4 \{#the-e4-code}
 
 C'est la première fois que nous voyons ces lignes, mais elles sont partagées avec d'autres méthodes (voir ci-dessous). Nous allons donc appeler la valeur dans la pile X, et n'oubliez pas que dans la fonction `splitter()` la valeur de ce X est 0xA0.
 
 | Décalage | Opcode     | Pile        |
-| --------:| ---------- | ----------- |
+| -------: | ---------- | ----------- |
 |       E4 | JUMPDEST   | X           |
 |       E5 | PUSH1 0x40 | 0x40 X      |
 |       E7 | MLOAD      | 0x80 X      |
@@ -359,12 +359,12 @@ Ce code reçoit un pointeur de mémoire dans la pile (X), et entraîne le contra
 
 Dans le cas de `splitter()`, ceci retourne l'adresse pour laquelle nous sommes un proxy. `RETURN` retourne le tampon en 0x80-0x9F, où nous avons écrit ces données (décalage 0x130 ci-dessus).
 
-## currentWindow() {#currentwindow}
+## currentWindow() \{#currentwindow}
 
 Le code aux décalages 0x158-0x163 est identique à ce que nous avons vu en 0x103-0x10E dans `splitter()` (autre que la destination `JUMPI`), donc nous savons que `currentWindow()` n'est pas `payable` non plus.
 
 | Décalage | Opcode       | Pile                 |
-| --------:| ------------ | -------------------- |
+| -------: | ------------ | -------------------- |
 |      164 | JUMPDEST     |                      |
 |      165 | POP          |                      |
 |      166 | PUSH2 0x00da | 0xDA                 |
@@ -373,12 +373,12 @@ Le code aux décalages 0x158-0x163 est identique à ce que nous avons vu en 0x10
 |      16C | DUP2         | 0xDA Storage[1] 0xDA |
 |      16D | JUMP         | Storage[1] 0xDA      |
 
-### Le code DA {#the-da-code}
+### Le code DA \{#the-da-code}
 
 Ce code est aussi partagé avec d'autres méthodes. Nous allons donc appeler la valeur dans la pile Y, et n'oubliez pas que dans la fonction `currentWindow()` la valeur de ce Y est Stockage[1].
 
 | Décalage | Opcode     | Pile             |
-| --------:| ---------- | ---------------- |
+| -------: | ---------- | ---------------- |
 |       DA | JUMPDEST   | Y 0xDA           |
 |       DB | PUSH1 0x40 | 0x40 Y 0xDA      |
 |       DD | MLOAD      | 0x80 Y 0xDA      |
@@ -389,18 +389,18 @@ Ce code est aussi partagé avec d'autres méthodes. Nous allons donc appeler la 
 Écrire Y à 0x80-0x9F.
 
 | Décalage | Opcode     | Pile           |
-| --------:| ---------- | -------------- |
+| -------: | ---------- | -------------- |
 |       E1 | PUSH1 0x20 | 0x20 0x80 0xDA |
 |       E3 | ADD        | 0xA0 0xDA      |
 
 Et le reste est déjà expliqué [au-dessus](#the-e4-code). Donc les sauts à 0xDA écrivent la pile supérieure (Y) à 0x80-0x9F, et retournent cette valeur. Dans le cas de `currentWindow()`, il retourne Stockage[1].
 
-## merkleRoot() {#merkleroot}
+## merkleRoot() \{#merkleroot}
 
 Le code aux décalages 0xED-0xF8 est identique à ce que nous avons vu en 0x103-0x10E dans `splitter()` (autre que la destination `JUMPI`), donc nous savons que `merkleRoot()` n'est pas `payable` non plus.
 
 | Décalage | Opcode       | Pile                 |
-| --------:| ------------ | -------------------- |
+| -------: | ------------ | -------------------- |
 |       F9 | JUMPDEST     |                      |
 |       FA | POP          |                      |
 |       FB | PUSH2 0x00da | 0xDA                 |
@@ -411,12 +411,12 @@ Le code aux décalages 0xED-0xF8 est identique à ce que nous avons vu en 0x103-
 
 [Nous avons déjà compris](#the-da-code) ce qu'il se passe après le saut. Donc `merkleRoot()` retourne Stockage[0].
 
-## 0x81e580d3 {#0x81e580d3}
+## 0x81e580d3 \{#0x81e580d3}
 
 Le code aux décalages 0x138-0x143 est identique à ce que nous avons vu en 0x103-0x10E dans `splitter()` (autre que la destination `JUMPI`), donc nous savons que cette fonction n'est pas `payable` non plus.
 
 | Décalage | Opcode       | Pile                                                         |
-| --------:| ------------ | ------------------------------------------------------------ |
+| -------: | ------------ | ------------------------------------------------------------ |
 |      144 | JUMPDEST     |                                                              |
 |      145 | POP          |                                                              |
 |      146 | PUSH2 0x00da | 0xDA                                                         |
@@ -439,7 +439,7 @@ Le code aux décalages 0x138-0x143 est identique à ce que nous avons vu en 0x10
 Il semblerait que cette fonction prenne au moins 32 octets (un mot) de données d'appel.
 
 | Décalage | Opcode | Pile                                         |
-| --------:| ------ | -------------------------------------------- |
+| -------: | ------ | -------------------------------------------- |
 |      19D | DUP1   | 0x00 0x00 0x04 CALLDATASIZE 0x0153 0xDA      |
 |      19E | DUP2   | 0x00 0x00 0x00 0x04 CALLDATASIZE 0x0153 0xDA |
 |      19F | REVERT |                                              |
@@ -449,7 +449,7 @@ Si elle ne récupère pas les données d'appel, la transaction est annulée sans
 Voyons ce qui se passe si la fonction _obtient_ les données d'appel dont elle a besoin.
 
 | Décalage | Opcode       | Pile                                     |
-| --------:| ------------ | ---------------------------------------- |
+| -------: | ------------ | ---------------------------------------- |
 |      1A0 | JUMPDEST     | 0x00 0x04 CALLDATASIZE 0x0153 0xDA       |
 |      1A1 | POP          | 0x04 CALLDATASIZE 0x0153 0xDA            |
 |      1A2 | CALLDATALOAD | calldataload(4) CALLDATASIZE 0x0153 0xDA |
@@ -457,7 +457,7 @@ Voyons ce qui se passe si la fonction _obtient_ les données d'appel dont elle a
 `calldataload(4)` est le premier mot des données d'appel _après_ la signature de la méthode
 
 | Décalage | Opcode       | Pile                                                                         |
-| --------:| ------------ | ---------------------------------------------------------------------------- |
+| -------: | ------------ | ---------------------------------------------------------------------------- |
 |      1A3 | SWAP2        | 0x0153 CALLDATASIZE calldataload(4) 0xDA                                     |
 |      1A4 | SWAP1        | CALLDATASIZE 0x0153 calldataload(4) 0xDA                                     |
 |      1A5 | POP          | 0x0153 calldataload(4) 0xDA                                                  |
@@ -478,7 +478,7 @@ Voyons ce qui se passe si la fonction _obtient_ les données d'appel dont elle a
 Si le premier mot n'est pas inférieur à Stockage[4], la fonction échoue. Elle s'annule sans valeur retournée :
 
 | Décalage | Opcode     | Pile          |
-| --------:| ---------- | ------------- |
+| -------: | ---------- | ------------- |
 |      17A | PUSH1 0x00 | 0x00 ...      |
 |      17C | DUP1       | 0x00 0x00 ... |
 |      17D | REVERT     |               |
@@ -486,7 +486,7 @@ Si le premier mot n'est pas inférieur à Stockage[4], la fonction échoue. Elle
 Si le calldataload(4) est inférieur au Stockage[4], nous obtenons ce code :
 
 | Décalage | Opcode     | Pile                                                |
-| --------:| ---------- | --------------------------------------------------- |
+| -------: | ---------- | --------------------------------------------------- |
 |      17E | JUMPDEST   | calldataload(4) 0x04 calldataload(4) 0xDA           |
 |      17F | PUSH1 0x00 | 0x00 calldataload(4) 0x04 calldataload(4) 0xDA      |
 |      181 | SWAP2      | 0x04 calldataload(4) 0x00 calldataload(4) 0xDA      |
@@ -496,7 +496,7 @@ Si le calldataload(4) est inférieur au Stockage[4], nous obtenons ce code :
 Et les emplacements mémoire 0x00-0x1F contiennent maintenant les données 0x04 (0x00-0x1E sont tous des zéros, 0x1F est quatre)
 
 | Décalage | Opcode     | Pile                                                                    |
-| --------:| ---------- | ----------------------------------------------------------------------- |
+| -------: | ---------- | ----------------------------------------------------------------------- |
 |      184 | PUSH1 0x20 | 0x20 calldataload(4) 0x00 calldataload(4) 0xDA                          |
 |      186 | SWAP1      | calldataload(4) 0x20 0x00 calldataload(4) 0xDA                          |
 |      187 | SWAP2      | 0x00 0x20 calldataload(4) calldataload(4) 0xDA                          |
@@ -507,7 +507,7 @@ Et les emplacements mémoire 0x00-0x1F contiennent maintenant les données 0x04 
 Il y a une table de recherche dans le stockage, qui commence à SHA3 de 0x000... 004 et a une entrée pour chaque valeur légitime de données d'appel (valeur au-dessous de Stockage[4]).
 
 | Décalage | Opcode | Pile                                                                    |
-| --------:| ------ | ----------------------------------------------------------------------- |
+| -------: | ------ | ----------------------------------------------------------------------- |
 |      18B | SWAP1  | calldataload(4) Storage[(((SHA3 of 0x00-0x1F))) + calldataload(4)] 0xDA |
 |      18C | POP    | Storage[(((SHA3 of 0x00-0x1F))) + calldataload(4)] 0xDA                 |
 |      18D | DUP2   | 0xDA Storage[(((SHA3 of 0x00-0x1F))) + calldataload(4)] 0xDA            |
@@ -515,23 +515,23 @@ Il y a une table de recherche dans le stockage, qui commence à SHA3 de 0x000...
 
 Nous savons déjà ce que fait [le code à la valeur décalée 0xDA](#the-da-code) , il retourne la valeur la plus élevée de la pile à l'appelant. Ainsi, cette fonction retourne la valeur de la table de recherche à l'appelant.
 
-## 0x1f135823 {#0x1f135823}
+## 0x1f135823 \{#0x1f135823}
 
 Le code aux décalages 0xC4-0xCF est identique à ce que nous avons vu en 0x103-0x10E dans `splitter()` (autre que la destination `JUMPI`), donc nous savons que cette fonction n'est pas `payable` non plus.
 
-| Décalage | Opcode       | Pile                |
-| --------:| ------------ | ------------------- |
-|       D0 | JUMPDEST     |                     |
-|       D1 | POP          |                     |
-|       D2 | PUSH2 0x00da | 0xDA                |
-|       D5 | PUSH1 0x06   | 0x06 0xDA           |
+| Décalage | Opcode       | Pile              |
+| -------: | ------------ | ----------------- |
+|       D0 | JUMPDEST     |                   |
+|       D1 | POP          |                   |
+|       D2 | PUSH2 0x00da | 0xDA              |
+|       D5 | PUSH1 0x06   | 0x06 0xDA         |
 |       D7 | SLOAD        | Value\* 0xDA      |
 |       D8 | DUP2         | 0xDA Value\* 0xDA |
 |       D9 | JUMP         | Value\* 0xDA      |
 
 Nous savons déjà ce que fait [le code à la position 0xDA](#the-da-code) , il retourne la valeur la plus élevée de la pile à l'appelant. Donc cette fonction retourne `Value*`.
 
-### Résumé de la méthode {#method-summary}
+### Résumé de la méthode \{#method-summary}
 
 Avez-vous l'impression de comprendre le contrat à ce stade ? Non. Jusqu'à présent, nous disposons de ces méthodes :
 
@@ -542,11 +542,11 @@ Avez-vous l'impression de comprendre le contrat à ce stade ? Non. Jusqu'à pré
 | [currentWindow()](#currentwindow) | Return Storage[1]                                                                                      |
 | [merkleRoot()](#merkeroot)        | Return Storage[0]                                                                                      |
 | [0x81e580d3](#0x81e580d3)         | Retourne la valeur d'une table de recherche, à condition que le paramètre soit inférieur à Stockage[4] |
-| [0x1f135823](#0x1f135823)         | Return Storage[6], a.k.a. Value\*                                                                    |
+| [0x1f135823](#0x1f135823)         | Return Storage[6], a.k.a. Value\*                                                                      |
 
 Mais nous savons que toute autre fonctionnalité est fournie par le contrat dans Stockage[3]. Peut-être que si nous savions quel est ce contrat, cela nous donnerait un indice. Heureusement, ceci est la blockchain et tout est connu, du moins en théorie. Nous n'avons pas vu de méthode qui définisse Stockage[3], donc il doit avoir été défini par le constructeur.
 
-## Le Constructeur {#the-constructor}
+## Le Constructeur \{#the-constructor}
 
 Lorsque nous [regardons un contrat](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f) nous pouvons également voir la transaction qui l'a créée.
 
@@ -554,7 +554,7 @@ Lorsque nous [regardons un contrat](https://etherscan.io/address/0x2510c039cc3b0
 
 Si nous cliquons sur cette transaction, puis sur l'onglet **État** , nous pouvons voir les valeurs initiales des paramètres. Plus précisément, nous pouvons voir que Stockage[3] contient [0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761](https://etherscan.io/address/0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761). Ce contrat doit contenir la fonctionnalité manquante. Nous pouvons le comprendre en utilisant les mêmes outils que ceux utilisés pour le contrat que nous étudions.
 
-## Le contrat de proxy {#the-proxy-contract}
+## Le contrat de proxy \{#the-proxy-contract}
 
 En utilisant les mêmes techniques que celles utilisées pour le contrat original ci-dessus, nous pouvons voir que le contrat est annulé si :
 
@@ -580,7 +580,7 @@ Nous pouvons ignorer les quatre dernières méthodes parce que nous ne les attei
 
 Une des méthodes restantes est `claim(<params>)`, et une autre est `isClaimed(<params>)`, donc cela ressemble à un contrat d'airdrop. Au lieu de fouiller le code d'opération restant par opcode, nous pouvons [essayer le décompilateur](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), qui donne des résultats utilisables pour trois fonctions de ce contrat. La rétro-conception des autres est laissée au lecteur comme exercice de travail.
 
-### scaleAmountByPercentage {#scaleamountbypercentage}
+### scaleAmountByPercentage \{#scaleamountbypercentage}
 
 Voilà ce que nous donne le décompilateur pour cette fonction :
 
@@ -598,7 +598,7 @@ L'instruction `if` semble vérifier que `_param1` n'est pas zéro et que `_param
 
 Enfin, la fonction retourne une valeur mise à l'échelle.
 
-### claim {#claim}
+### claim \{#claim}
 
 Le code que le décompilateur crée est complexe, et tout n'est pas pertinent pour nous. Je vais en passer une partie pour me concentrer sur les lignes qui je pense fournissent des informations utiles
 
@@ -673,7 +673,7 @@ Il semble donc que les contrats tentent d'envoyer de l'ETH à `_param2`. S'ils p
 
 ![Une transaction de réclamation](claim-tx.png)
 
-### 1e7df9d3 {#1e7df9d3}
+### 1e7df9d3 \{#1e7df9d3}
 
 Cette fonction est très similaire à [`claim`](#claim) ci-dessus. Elle vérifie également une preuve de Merkle, tente de transférer de l'ETH au premier, et produit le même type d'entrée de journal.
 
@@ -739,6 +739,6 @@ La principale différence est que le premier paramètre, la fenêtre du retrait,
 
 Donc elle ressemble à une variante de `claim` qui réclame toutes les fenêtres.
 
-## Conclusion {#conclusion}
+## Conclusion \{#conclusion}
 
 À présent, vous devriez savoir comment comprendre les contrats dont le code source n'est pas disponible, en utilisant soit les codes d'opérations soit (quand cela fonctionne) le décompilateur. Comme le montre la longueur de cet article, rétro-concevoir un contrat n'est pas trivial, mais dans un système où la sécurité est essentielle, il est important d'être capable de vérifier que les contrats fonctionnent comme promis.

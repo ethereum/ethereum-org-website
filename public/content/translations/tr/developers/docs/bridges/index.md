@@ -6,7 +6,7 @@ lang: tr
 
 L1 blokzincirlerinin ve L2 [ölçeklendirme](/developers/docs/scaling/) çözümlerinin yaygınlaşması, bunun yanı sıra giderek artan sayıda merkeziyetsiz uygulamanın farklı zincirlerde kullanılabilir hale gelmesi nedeniyle zincirler arası iletişim ve varlık hareketinin ihtiyacı ağ altyapısının temel bir parçası haline gelmiştir. Bunu mümkün kılmak için farklı türde köprüler mevcuttur.
 
-## Köprü ihtiyacı {#need-for-bridges}
+## Köprü ihtiyacı \{#need-for-bridges}
 
 Köprüler, blokzincir ağlarını birbirine bağlamaya yarar. Blokzincirler arasında bağlantı ve birlikte çalışma olanağı sağlarlar.
 
@@ -14,7 +14,7 @@ Blokzincirler izole edilmiş ortamlarda var oldukları için blokzincirlerin di�
 
 Köprüler, izole edilmiş blokzincir ortamlarının birbirleriyle bağlantı kurmasını sağlar. Blokzincirler arasında bir ulaşım rotası oluştururlar; bu sayede jetonlar, mesajlar, keyfi veriler ve hatta [akıllı sözleşme](/developers/docs/smart-contracts/) çağrıları bir zincirden diğerine transfer edilebilir.
 
-## Köprülerin avantajları {#benefits-of-bridges}
+## Köprülerin avantajları \{#benefits-of-bridges}
 
 Basitçe söylemek gerekirse, köprüler blokzincir ağlarının veri alışverişi yapmasını ve varlıkları birbirleri arasında taşımasını sağlayarak birçok kullanım durumunu mümkün kılar.
 
@@ -28,7 +28,7 @@ Köprüler, geliştiriciler için aşağıdakileri mümkün kılar:
 - farklı blokzincir ekosistemlerinden gelen geliştiricilerin yeni ürünler oluşturmak için iş birliği yapması.
 - farklı ekosistemlerden kullanıcıları ve toplulukları merkeziyetsiz uygulamalarına çekme fırsatı.
 
-## Köprüler nasıl çalışır? {#how-do-bridges-work}
+## Köprüler nasıl çalışır? \{#how-do-bridges-work}
 
 Çeşitli [köprü tasarım türleri](https://blog.li.fi/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa) mevcut olsa da, varlıkların zincirler arası transferini kolaylaştırma konusunda öne çıkan üç yöntem vardır:
 
@@ -36,7 +36,7 @@ Köprüler, geliştiriciler için aşağıdakileri mümkün kılar:
 - **Yak ve Bas: –** Kaynak zincirdeki varlıkları yakıp hedef zincirde yeni varlıklar basmak.
 - **Atomik takaslar: –** Kaynak zincirdeki varlıkları başka bir tarafla hedef zincirdeki varlıklarla takas etmek.
 
-## Köprü türleri {#bridge-types}
+## Köprü türleri \{#bridge-types}
 
 Köprüler genellikle aşağıdaki kategorilerden birine girer:
 
@@ -45,7 +45,7 @@ Köprüler genellikle aşağıdaki kategorilerden birine girer:
 - **Genelleştirilmiş mesaj iletim köprüleri –** Bu köprüler, varlıkları, mesajları ve keyfi verileri zincirler arasında transfer edebilir. Örnekler: Nomad ve LayerZero.
 - **Likidite ağları –** Bu köprüler, ağırlıklı olarak atomik takaslar aracılığıyla bir zincirden diğerine varlık transferine odaklanır. Genellikle zincirler arası mesaj iletimini desteklemezler. Örnekler: Connext ve Hop.
 
-## Dikkate alınması gereken ödünleşmeler {#trade-offs}
+## Dikkate alınması gereken ödünleşmeler \{#trade-offs}
 
 Köprüler söz konusu olduğunda mükemmel çözüm diye bir şey yoktur. Bunun yerine, bir amacı yerine getirmek için yapılan ödünleşmeler vardır. Geliştiriciler ve kullanıcılar, köprüleri aşağıdaki faktörlere dayalı olarak değerlendirebilir:
 
@@ -65,7 +65,7 @@ Güven gerektirmez köprüleri diğer faktörlere göre değerlendirmek için bu
 - **Genelleştirilmiş mesaj iletim köprüleri –** Bu köprüler, güvenlik ve zincirler arası daha karmaşık veri transferi konularında uzmandır. Genellikle maliyet-etkinlik konusunda da iyidirler. Ancak, bu güçlükler genellikle hafif istemci köprüleri için bağlantı (örneğin IBC) ve sahtecilik kanıtları kullanan iyimser köprüler (örneğin Nomad) için hız dezavantajları maliyetiyle gelir.
 - **Likidite ağları –** Bu köprüler, varlık transferi için atomik takas kullanır ve yerel olarak doğrulanan sistemlerdir (yani altındaki blokzincirin doğrulayıcılarını işlemleri doğrulamak için kullanırlar). Sonuç olarak, güvenlik ve hız konusunda uzmandırlar. Ayrıca nispeten maliyet-etkin kabul edilirler ve iyi bir bağlantı sunarlar. Bununla birlikte ana ödünleştirme, zincirler arası mesaj iletimini desteklememeleri nedeniyle daha karmaşık veri iletimini sağlayamamalarıdır.
 
-## Köprülerin riskleri {#risk-with-bridges}
+## Köprülerin riskleri \{#risk-with-bridges}
 
 Köprüler, [DeFi'deki en büyük üç hack'in](https://rekt.news/leaderboard/) sorumlusu olarak kabul edilir ve hala geliştirme aşamasının erken dönemlerindedir. Herhangi bir köprü kullanmanın aşağıdaki riskleri taşıdığını unutmayın:
 
@@ -74,11 +74,11 @@ Köprüler, [DeFi'deki en büyük üç hack'in](https://rekt.news/leaderboard/) 
 - **Karşı taraf riski –** Bazı köprüler, kullanıcıların doğrulayıcıların kullanıcı fonlarını çalmak için işbirliği yapmayacağı varsayımına güvenmeleri gereken güvenilir bir tasarım kullanır. Kullanıcıların bu üçüncü taraf aktörlere güvenmeleri gerekliliği, onları likidite havuzu boşaltma, sansür ve diğer kötü niyetli faaliyetler gibi risklere maruz bırakır.
 - **Açık sorunlar –** Köprülerin geliştirme aşamalarının henüz başlangıcında olduğu göz önüne alındığında, örneğin ağ sıkışıklığı dönemleri ve ağ düzeyinde saldırılar veya durum geri alımları gibi beklenmeyen olaylar sırasında karşılaşılabilecek farklı piyasa koşullarında köprülerin nasıl performans göstereceğiyle ilgili birçok cevapsız soru bulunmaktadır. Bu belirsizlik, henüz tam olarak bilinmeyen belirli riskleri taşır.
 
-## Merkeziyetsiz uygulamalar köprüleri nasıl kullanır? {#how-can-dapps-use-bridges}
+## Merkeziyetsiz uygulamalar köprüleri nasıl kullanır? \{#how-can-dapps-use-bridges}
 
 Geliştiricilerin merkeziyetsiz uygulamalarını köprülerle çapraz zincire taşıma konusunda göz önünde bulundurabileceği bazı pratik uygulamalar şunlardır:
 
-### Köprüleri entegre etme {#integrating-bridges}
+### Köprüleri entegre etme \{#integrating-bridges}
 
 Geliştiriciler için köprüleri destek eklemenin birçok yolu bulunmaktadır:
 
@@ -101,7 +101,7 @@ Ancak, köprü birleştiricileri de kısıtlamalara tabidir. Örneğin, daha faz
 
 Bir merkeziyetsiz uygulama, bir köprü veya birleştirici entegrasyonu yolunu seçerse, entegrasyonun ne kadar derin olması gerektiğine bağlı olarak farklı seçenekler bulunmaktadır. Örneğin, sadece kullanıcı giriş deneyimini iyileştirmek için ön uç entegrasyonu yapılıyorsa, bir merkeziyetsiz uygulama aracı entegre eder. Ancak entegrasyon, hisseleme, likidite madenciliği vb. gibi daha derin çaplı zincirler arası stratejileri keşfetmek amacını taşıyorsa, merkeziyetsiz uygulama SDK veya API'yi entegre eder.
 
-### Bir merkeziyetsiz uygulamayı birden fazla zincire dağıtma {#deploying-a-dapp-on-multiple-chains}
+### Bir merkeziyetsiz uygulamayı birden fazla zincire dağıtma \{#deploying-a-dapp-on-multiple-chains}
 
 Geliştiriciler, bir merkeziyetsiz uygulamayı birden fazla zincire dağıtmak için [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/) gibi geliştirme platformlarından yararlanabilir. Genellikle bu platformlar, merkeziyetsiz uygulamaların zincirler arası işlem yapmasını sağlayabilecek birleştirilebilir eklentilere sahiptir. Örneğin, geliştiriciler [hardhat-dağıtım eklentisi](https://github.com/wighawag/hardhat-deploy) tarafından sunulan belirleyici dağıtım vekilini kullanabilir.
 
@@ -111,7 +111,7 @@ Geliştiriciler, bir merkeziyetsiz uygulamayı birden fazla zincire dağıtmak i
 - [Zincirler Arası NFT Pazar Yeri oluşturma](https://youtu.be/WZWCzsB1xUE)
 - [Moralis: Zincirler arası NFT merkeziyetsiz uygulamaları oluşturma](https://www.youtube.com/watch?v=ehv70kE1QYo)
 
-### Zincirler arası sözleşme etkinliğini görüntüleme {#monitoring-contract-activity-across-chains}
+### Zincirler arası sözleşme etkinliğini görüntüleme \{#monitoring-contract-activity-across-chains}
 
 Geliştiriciler, akıllı sözleşmelerin zincirler arasındaki etkinliğini izlemek için alt grafikleri ve Tenderly gibi geliştirici platformlarını kullanabilir. Bu tür platformlar aynı zamanda, [akıllı sözleşmeler tarafından yayımlanan olayları](https://docs.soliditylang.org/en/v0.8.14/contracts.html?highlight=events#events) kontrol etmek gibi zincirler arası etkinlikler için daha geniş veri izleme işlevselliği sunan araçlara sahiptir.
 
@@ -120,7 +120,7 @@ Geliştiriciler, akıllı sözleşmelerin zincirler arasındaki etkinliğini izl
 - [The Graph](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla okuma \{#further-reading}
 
 - [Blokzincir Köprüleri](/bridges/) – ethereum.org
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) 8 Eylül 2021 – Dmitriy Berenzon

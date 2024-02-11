@@ -17,7 +17,7 @@ In questo articolo imparerai come creare e utilizzare un contratto di memorizzaz
 
 Se desideri saltare l'articolo e visualizzare soltanto il codice sorgente, [lo trovi qui](https://github.com/qbzzt/20220915-all-you-can-cache). Lo stack di sviluppo è [Foundry](https://book.getfoundry.sh/getting-started/installation).
 
-## Design generale {#overall-design}
+## Design generale \{#overall-design}
 
 Per semplicità supponiamo che tutti i parametri delle transazioni siano `uint256`, lunghi 32 byte. Quando riceviamo una transazione, analizziamo ogni parametro come segue:
 
@@ -34,7 +34,7 @@ Per semplicità supponiamo che tutti i parametri delle transazioni siano `uint25
    | 0x12,0xAC         |             0x02AC |
    | 0x2D,0xEA, 0xD6   |           0x0DEAD6 |
 
-## Manipolazione della cache {#cache-manipulation}
+## Manipolazione della cache \{#cache-manipulation}
 
 La cache è implementata in [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol). Analizziamolo riga per riga.
 
@@ -306,7 +306,7 @@ Se arriviamo qui significa che abbiamo una chiave non inferiore a 16\*256<sup>15
 }  // Cache
 ```
 
-### Testare la cache {#testing-the-cache}
+### Testare la cache \{#testing-the-cache}
 
 Uno dei vantaggi di Foundry è che [ti consente di scrivere i test in Solidity](https://book.getfoundry.sh/forge/tests), semplificando la scrittura dei test unitari. I test per la classe `Cache` sono [qui](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Poiché il codice del test è ripetitivo, come tendono a essere i test, questo articolo spiega soltanto le parti interessanti.
 
@@ -665,11 +665,11 @@ Questa funzione invia cinque valori. Sappiamo che il quinto valore è ignorato p
 
 ```
 
-## Un esempio di applicazione {#a-sample-app}
+## Un esempio di applicazione \{#a-sample-app}
 
 Scrivere test in Solidity va bene, ma alla fine una dapp deve poter elaborare le richieste dall'esterno della catena per essere utile. Questo articolo dimostra come utilizzare la memorizzazione nella cache in una dapp con `WORM`, che sta per "Write Once, Read Many" (Scrivi una volta, leggi molte volte). Se una chiave non è ancora stata scritta, puoi scriverci un valore. Se la chiave è già scritta, ottieni un ripristino.
 
-### Il contratto {#the-contract}
+### Il contratto \{#the-contract}
 
 [Questo è il contratto](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/WORM.sol). Per lo più ripete ciò che abbiamo già fatto con `Cache` e `CacheTest`, quindi copriremo soltanto le parti interessanti.
 
@@ -708,7 +708,7 @@ Nota che anche se definiamo `WRITE_ENTRY_CACHED` come una variabile di stato, pe
 
 La funzione Leggi è una `view`, quindi non richiede una transazione, né costa gas. Di conseguenza, non vi è beneficio nell'usare la cache per il parametro. Con le funzioni view, è meglio utilizzare il meccanismo standard, che è più semplice.
 
-### Il codice di prova {#the-testing-code}
+### Il codice di prova \{#the-testing-code}
 
 [Questo è il codice di prova per il contratto](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Anche in questo caso ci occupiamo soltanto di ciò che ci interessa.
 
@@ -758,7 +758,7 @@ Poiché utilizziamo la funzione di basso livello `<address>.call()`, non possiam
 
 Così, verifichiamo che il codice [emetta un evento correttamente](https://book.getfoundry.sh/cheatcodes/expect-emit), in Foundry.
 
-### Il client {#the-client}
+### Il client \{#the-client}
 
 Una cosa che non ottieni con i test in Solidity è il codice in JavaScript che puoi tagliare e incollare nella tua applicazione. Per scrivere quel codice, ho distribuito WORM a [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli), la nuova rete di prova di [Optimism](https://www.optimism.io/). Si trova all'indirizzo [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a).
 
@@ -845,7 +845,7 @@ Come con il codice di test di Solidity, non possiamo chiamare normalmente una fu
 
 Per leggere le voci possiamo utilizzare il meccanismo normale. Non serve utilizzare il salvataggio nella cache del parametro con le funzioni `view`.
 
-## Conclusioni {#conclusion}
+## Conclusioni \{#conclusion}
 
 Il codice in questo articolo è una prova di concetto, lo scopo è rendere l'idea facile da comprendere. Per un sistema pronto alla produzione, potresti voler implementare delle funzionalità aggiuntive:
 

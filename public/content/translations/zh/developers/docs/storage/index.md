@@ -17,9 +17,9 @@ lang: zh
 - 去中心化
 - 共识
 
-## 持久性机制/激励结构 {#persistence-mechanism}
+## 持久性机制/激励结构 \{#persistence-mechanism}
 
-### 基于区块链 {#blockchain-based}
+### 基于区块链 \{#blockchain-based}
 
 为了使某个数据永久保存，我们需要使用一种持久性机制。 例如，在以太坊中，持久性机制是当运行一个节点时，需要考虑整条链的情况。 新建的数据持续不断地堆积到链的末端，并且要求每个节点复制所有新加入的数据。
 
@@ -34,7 +34,7 @@ lang: zh
 - 以太坊
 - [Arweave](https://www.arweave.org/)
 
-### 基于合约 {#contract-based}
+### 基于合约 \{#contract-based}
 
 我们能直观地感受到，**基于合约**的持久性使得数据不能被每个节点复制并永久存储，而必须根据合约协议进行维护。 这些是与多个节点达成的协议，这些节点承诺在一段时间内保存一份数据。 每当费用耗尽或数据更新时，就必须向这些节点续费，以保持数据的持续性。
 
@@ -50,7 +50,7 @@ lang: zh
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
 
-### 其他注意事项 {#additional-consideration}
+### 其他注意事项 \{#additional-consideration}
 
 星际文件系统是一个储存和访问文件、网站、应用程序和数据的分布式系统。 虽然它没有内置激励计划，但可以与上述任何基于合同的激励解决方案一起使用，以获得更长期的持久性。 另一个将数据持久存储在星际文件系统上的办法是与某项固定服务（表示将您的数据固定在某处）一起使用。 您甚至可以运行自己的星际文件系统节点来为该网络做出贡献，从而将您和/或他人的数据免费持久地存储在星际文件系统上。
 
@@ -64,11 +64,11 @@ lang: zh
 
 SWARM 是一种去中心化的数据存储和分发技术，具有存储激励系统和存储空间租金价格预言机。
 
-## 数据留存 {#data-retention}
+## 数据留存 \{#data-retention}
 
 为了保留数据，系统必须有某种机制，确保数据得到保留。
 
-### 质疑机制 {#challenge-mechanism}
+### 质疑机制 \{#challenge-mechanism}
 
 一种最常见的确保保留数据的方法是使用某种类型的密码质询，这种加密质询向节点发出，确保它们仍然持有数据。 一种简单的方法是查看 Arweave 的访问证明。 他们向节点发出质询，查看它们是否在最近的区块和过去的随机区块中都具有数据。 如果节点无法给出答案，则会受到惩罚。
 
@@ -81,7 +81,7 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 - Crust Network
 - 4EVERLAND
 
-### 去中心化 {#decentrality}
+### 去中心化 \{#decentrality}
 
 没有有效的工具来衡量平台的去中心化程度，但一般来说，您可能想使用那些没有某种形式的身份验证的工具来证明平台并未中心化。
 
@@ -96,7 +96,7 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 - Crust Network
 - 4EVERLAND
 
-### 共识 {#consensus}
+### 共识 \{#consensus}
 
 这些工具大多有自己的[共识机制](/developers/docs/consensus-mechanisms/)版本，但一般都是基于[**工作量证明 (PoW)**](/developers/docs/consensus-mechanisms/pow/) 或[**权益证明 (PoS)**](/developers/docs/consensus-mechanisms/pos/)。
 
@@ -112,7 +112,7 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 - 0Chain
 - Crust Network
 
-## 相关工具 {#related-tools}
+## 相关工具 \{#related-tools}
 
 **IPFS - _即星际文件系统，是以太坊的去中心化存储和文件引用系统。_**
 
@@ -198,13 +198,13 @@ SWARM 是一种去中心化的数据存储和分发技术，具有存储激励�
 - [相关文档](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [什么是去中心化存储？](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [打破关于去中心化存储的五种谣传](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
-## 相关主题 {#related-topics}
+## 相关主题 \{#related-topics}
 
 - [开发框架](/developers/docs/frameworks/)

@@ -43,7 +43,7 @@ interface IERC20 {
 
 Iată un explicator linie cu linie a utilităţii fiecărei funcții. După aceasta vom prezenta o implementare simplă a unui token ERC-20.
 
-## Getters {#getters}
+## Getters \{#getters}
 
 ```solidity
 function totalSupply() external view returns (uint256);
@@ -63,7 +63,7 @@ function allowance(address owner, address spender) external view returns (uint25
 
 Standardul ERC-20 permite unei adrese să ofere unei alte adrese o alocaţie pentru a putea recupera tokenuri de la aceasra. Această funcție „getter” returnează numărul rămas de tokenuri pe care funcția `spender` va putea să le cheltuiască în numele proprietarului, funcția `owner`. Această funcție este un „getter” și nu modifică starea contractului și ar trebui să răspundă prin 0 în mod implicit.
 
-## Funcții {#functions}
+## Funcții \{#functions}
 
 ```solidity
 function transfer(address recipient, uint256 amount) external returns (bool);
@@ -83,7 +83,7 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 
 Mută `amount` (numărul) de tokenuri de la `expeditor` la `destinatar` folosind mecanismul „allowance” (alocație). Apoi „amount” este dedus din „allowance” al apelantului. Această funcție emite evenimentul `Transfer`.
 
-## Evenimente {#events}
+## Evenimente \{#events}
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
@@ -99,7 +99,7 @@ event Approval(address indexed owner, address indexed spender, uint256 value);
 
 Acest eveniment este emis atunci când cantitatea de tokenuri (`value`) este aprobată de `owner` pentru a fi utilizate de către `spender`.
 
-## O implementare elementară a tokenurilor ERC-20 {#a-basic-implementation-of-erc-20-tokens}
+## O implementare elementară a tokenurilor ERC-20 \{#a-basic-implementation-of-erc-20-tokens}
 
 Iată cel mai simplu cod pe care să vă bazaţi tokenul ERC-20:
 

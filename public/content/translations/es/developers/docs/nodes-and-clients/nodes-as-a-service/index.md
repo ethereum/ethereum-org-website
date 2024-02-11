@@ -5,15 +5,15 @@ lang: es
 sidebarDepth: 2
 ---
 
-## Introducción {#Introduction}
+## Introducción \{#Introduction}
 
 Ejecutar su propio [ nodo de Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) puede ser desafiante, especialmente al principio o durante una escalada rápida. Hay un [número de servicios](#popular-node-services) que ejecutan infraestructuras de nodo optimizadas para ti; así podrás centrarte en desarrollar tu producto o aplicación. Te explicaremos el funcionamiento de los servicios de nodos, las ventajas y desventajas de usarlos, y haremos una lista con los proveedores por si estás interesado en ponerte en marcha.
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos \{#prerequisites}
 
 Si aún no entiende claramente lo que son los nodos y los clientes, consulte [Nodos y clientes](/developers/docs/nodes-and-clients/).
 
-## Participantes {#stakoooooooooooooors}
+## Participantes \{#stakoooooooooooooors}
 
 Los participantes en solitario deben ejecutar su propia infraestructura en lugar de depender de otros proveedores. Esto conlleva la ejecución de un cliente de ejecución acoplado con un cliente de consenso. Antes de [La Fusión](/roadmap/merge), se podía ejecutar un cliente de consenso solo y servirse de un proveedor centralizado para ejecutar los datos. Esto ya no se puede hacer, ahora un participante en solitario debe ejecutar ambos clientes. Sin embargo, hay servicios disponibles para facilitar este proceso.
 
@@ -21,7 +21,7 @@ Los participantes en solitario deben ejecutar su propia infraestructura en lugar
 
 Los servicios descritos en esta página hacen referencia a nodos que no se estén apostando.
 
-## ¿Cómo funcionan los servicios de nodos? {#how-do-node-services-work}
+## ¿Cómo funcionan los servicios de nodos? \{#how-do-node-services-work}
 
 Los proveedores de servicios de nodos ejecutan clientes de nodos distribuidos sin que usted se dé cuenta, por lo tanto usted no tiene que hacerlo.
 
@@ -35,19 +35,19 @@ Muchas veces, los servicios de nodos ejecutan una serie de [clientes de nodos](/
 
 Es importante remarcar que los servicios de nodos no almacenan ni deben almacenar sus claves o información privadas.
 
-## ¿Qué ventajas supone el uso de un servicio de nodos? {#benefits-of-using-a-node-service}
+## ¿Qué ventajas supone el uso de un servicio de nodos? \{#benefits-of-using-a-node-service}
 
 La principal ventaja que se obtiene al usar un servicio de nodo es no tener que dedicar parte de su tiempo a la ingeniería con el mantenimiento y la administración de los nodos. Esto le permite centrarse en crear su producto, en lugar de tener que preocuparse por el mantenimiento de la infraestructura.
 
 Ejecutar sus propios nodos puede ser muy caro: desde el almacenamiento al ancho de banda, pasando por el elevadísimo coste que supone el tiempo dedicado a la ingeniería. Operaciones como activar más nodos al escalar, actualizar los nodos a las últimas versiones y asegurar la consistencia del estado pueden desviar la atención de la construcción y de la asignación de recursos en su producto Web3 deseado.
 
-## ¿Qué desventajas supone el uso de un servicio de nodos? {#cons-of-using-a-node-service}
+## ¿Qué desventajas supone el uso de un servicio de nodos? \{#cons-of-using-a-node-service}
 
 Al utilizar un servicio de nodos, centraliza el aspecto infraestructural de su producto. Por este motivo, los proyectos que se basan en la descentralización como uno de sus puntos fuertes quizá prefieran utilizar nodos autoalojados que externalizarlos a un tercero.
 
 Obtenga más información aquí sobre [las ventajas de ejecutar su propio nodo](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Servicios de nodos populares {#popular-node-services}
+## Servicios de nodos populares \{#popular-node-services}
 
 A continuación se incluye una lista con algunos de los proveedores de nodos de Ethereum más populares. Si nota que falta alguno, puede añadirlo. Cada servicio de nodos ofrece diferentes beneficios y características, además de niveles gratuitos o de pago. Te recomendamos que investigues cuáles se adaptan mejor a tus necesidades antes de tomar una decisión.
 
@@ -372,15 +372,15 @@ A continuación se incluye una lista con algunos de los proveedores de nodos de 
   - Pago con criptomoneda
   - Soporte externo para requisitos de comportamiento adicionales
 
-## Más información {#further-reading}
+## Más información \{#further-reading}
 
 - [Lista de servicios de nodos de Ethereum](https://ethereumnodes.com/)
 
-## Temas relacionados {#related-topics}
+## Temas relacionados \{#related-topics}
 
 - [ Nodos y clientes](/developers/docs/nodes-and-clients/)
 
-## Tutoriales relacionados {#related-tutorials}
+## Tutoriales relacionados \{#related-tutorials}
 
 - [Primeros pasos con el desarrollo de Ethereum usando Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Guía para enviar transacciones usando Web 3.0 y Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

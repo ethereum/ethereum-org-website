@@ -12,23 +12,23 @@ Bár a számok változnak, de úgy becsülik, hogy a biztonsági hibák miatt az
 
 Ezek az esetek kötelezővé teszik a fejlesztők számára, hogy folyamatosan azon dolgozzanak, hogy az okosszerződések biztonságosak, robusztusak és ellenállók legyenek. Az okosszerződésbiztonság komoly téma, melyet minden fejlesztőnek a maga érdekében meg kell ismerni. Ez az útmutató lefedi azokat a biztonsági megfontolásokat, amelyek az Ethereum-fejlesztőknek fontosak, és forrásokat tár fel az okosszerződésbiztonság továbbfejlesztésére.
 
-## Előfeltételek {#prerequisites}
+## Előfeltételek \{#prerequisites}
 
 Tisztában kell lennie az [okosszerződés-fejlesztés alapjaival](/developers/docs/smart-contracts/), mielőtt a biztonsági kérdésekkel foglalkozna.
 
-## Iránymutatások a biztonságos Ethereum-okosszerződések építéséhez {#smart-contract-security-guidelines}
+## Iránymutatások a biztonságos Ethereum-okosszerződések építéséhez \{#smart-contract-security-guidelines}
 
-### 1. Tervezzen megfelelő hozzáférés-szabályozást {#design-proper-access-controls}
+### 1. Tervezzen megfelelő hozzáférés-szabályozást \{#design-proper-access-controls}
 
 Az okosszerződésekben a `public` (publikus) vagy `external` (külső) jelölésű függvényeket bármelyik külső tulajdonú számla (EOA) vagy szerződésszámla meghívhatja. A függvényeket szükséges nyilvánossá tenni, ha Ön azt akarja, hogy mások interakcióba lépjenek a szerződésével. A `private` (privát) jelölésű függvényeket csak az okosszerződésen belüli függvények hívhatják meg, külső számlák nem. Problémás lehet az összes hálózati résztvevőnek hozzáférést adni bizonyos szerződésfüggvényekhez, főleg ha így bárki végrehajthat fontos műveleteket (pl. új tokenek kibocsátása).
 
 Ahhoz, hogy megakadályozzuk az okosszerződés függvényeinek nem hitelesített használatát, biztonságos hozzáférés-szabályozásra van szükség. A hozzáférés-szabályozás mechanizmusai az okosszerződés bizonyos függvényeinek használatát a jóváhagyott entitások csoportjára, például a szerződés kezeléséért felelős számlákra korlátozzák. A **tulajdonosi minta** és a **szerepalapú irányítás** két hasznos minta az okosszerződésben beállítható hozzáférés-szabályozásra:
 
-#### Tulajdonosi minta (ownable pattern) {#ownable-pattern}
+#### Tulajdonosi minta (ownable pattern) \{#ownable-pattern}
 
 A tulajdonosi mintában beállítható egy cím, mint a szerződés „tulajdonosa” a szerződés létrehozása folyamán. A védett függvényekhez hozzárendelnek egy `OnlyOwner`-módosítót, így a szerződés azonosítani fogja az identitását a hívást végző címnek, mielőtt végrehajtaná a függvényt. A védett függvények meghívását csak akkor engedi, ha az a szerződés tulajdonosának címéről érkezik, különben elveti azt, megakadályozva az akaratlan hozzáférést.
 
-#### Szerepalapú hozzáférés-szabályozás {#role-based-access-control}
+#### Szerepalapú hozzáférés-szabályozás \{#role-based-access-control}
 
 Ha az okosszerződésben egyetlen címet regisztrálnak, mint `Owner` (tulajdonos), az a centralizáció kockázatát hordozza és felmerül az egyetlen meghibásodási pont lehetősége. Ha a tulajdonos számlakulcsa nyilvánossá válik, akkor a támadók hozzáférhetnek ehhez a tulajdonolt szerződéshez. Emiatt jobb opció lehet a szerepalapú hozzáférés-szabályozás mintája, ahol több adminisztratív számla van.
 
@@ -40,7 +40,7 @@ A biztonságos hozzáférés-szabályozásra egy másik megközelítés a [több
 
 Ennek használata egy újabb biztonsági réteget vezet be, mivel a szerződésen végrehajtandó akciókba több félnek is bele kell egyeznie. Ez különösen hasznos, ha a tulajdonosi mintát (ownable pattern) kell használni, mert még nehezebb a támadó vagy egy rosszhiszemű belső fél számára, hogy rossz célokra használja fel a fontos szerződésfüggvényeket.
 
-### 2. Használja a require(), assert() és revert() parancsokat, hogy óvja a szerződés működését {#use-require-assert-revert}
+### 2. Használja a require(), assert() és revert() parancsokat, hogy óvja a szerződés működését \{#use-require-assert-revert}
 
 Amint az okosszerződés telepítésre kerül a blokkláncon, bárki meg tudja hívni a benne lévő publikus függvényeket. Mivel nem lehet tudni előre, hogy a külső tulajdonú számlák hogyan fognak interakciókat folytatni a szerződéssel, ezért ideális esetben belső óvintézkedéseket kell tenni a problémás működésekkel kapcsolatban a telepítés előtt. Az okosszerződésben elő lehet írni a megfelelő viselkedést a `require()`, `assert()` és `revert()` parancsokkal, hogy ha bizonyos feltételek nem teljesülnek, akkor leálljon és visszaforgassa a változásokat.
 
@@ -70,7 +70,7 @@ contract VendingMachine {
 }
 ```
 
-### 3. Tesztelje az okosszerződéseket és ellenőrizze a kód helyességét {#test-smart-contracts-and-verify-code-correctness}
+### 3. Tesztelje az okosszerződéseket és ellenőrizze a kód helyességét \{#test-smart-contracts-and-verify-code-correctness}
 
 Az [Ethereum virtuális gépen](/developers/docs/evm/) érvényes kódváltoztathatatlanság miatt az okosszerződéseknél jelentős minőség-ellenőrzésre van szükség a fejlesztési időszakban. Tesztelje szerződését kiterjedt módon, és figyelje meg, hogy kap-e váratlan eredményeket, így fejlesztheti a biztonságot és megvédheti a felhasználókat hosszú távon is.
 
@@ -82,17 +82,17 @@ Jobb megközelítés az egységtesztelés tulajdonságalapú teszteléssel (prop
 
 A [formális ellenőrzés (formal verification)](/developers/docs/smart-contracts/formal-verification) egy másik technika az okosszerződések biztonsági tulajdonságainak igazolására. A megszokott teszteléshez képest a formális ellenőrzés képes egyértelműen bizonyítani, hogy nincsenek hibák az okosszerződésben. Ezt úgy éri el, hogy egy formális specifikációt hoz létre, amely a kívánt biztonsági tulajdonságokat rögzíti, majd bizonyítja, hogy a szerződések formális modellje megfelel ennek a specifikációnak.
 
-### 4. Kérjen egy független átvizsgálást a kódjára {#get-independent-code-reviews}
+### 4. Kérjen egy független átvizsgálást a kódjára \{#get-independent-code-reviews}
 
 Miután tesztelte a szerződését, kérjen meg másokat is, hogy ellenőrizzék le a kódot a lehetséges biztonsági problémák szempontjából. A tesztelés nem tárja fel az okosszerződés minden hibáját, de egy független vizsgálat megnöveli annak valószínűségét, hogy kiderülnek a sebezhető pontok.
 
-#### Auditok {#audits}
+#### Auditok \{#audits}
 
 Az okosszerződés auditálása az egyik módja a független kódvizsgálatnak. Az auditorok fontos szerepet játszanak abban, hogy az okosszerződések biztonságosak legyenek és ne legyenek bennük minőségi és tervezési hibák.
 
 Mindazonáltal fontos megjegyezni, hogy az audit nem old meg minden problémát. Az okosszerződés-auditok nem tárnak fel minden egyes hibát, és a terv általában egy második körös ellenőrzés, hogy azokat a problémákat kiszúrja, ami a fejlesztőknek nem vált világossá a fejlesztés és tesztelés során. Kövesse a [bevált gyakorlatokat az auditorokkal való munka kapcsán](https://twitter.com/tinchoabbate/status/1400170232904400897), mint amilyen a kód megfelelő dokumentálása és a sorokhoz kapcsolt kommentek, amelyek révén az okosszerződés-auditból a lehető legtöbb előnyt ki lehet hozni.
 
-#### Hibavadászatok {#bug-bounties}
+#### Hibavadászatok \{#bug-bounties}
 
 Egy másik megoldás lehet a hibavadászat-program felállítása, amellyel külsődleges kódvizsgálatot lehet végezni. A hibavadászat pénzügyi jutalommal jár olyan egyéneknek (általában fehérkalapos hackereknek), akik sebezhető pontokat fedeznek fel az alkalmazásban.
 
@@ -100,7 +100,7 @@ Ez a jutalom a hibavadászatért, ha megfelelően használják, kellő motiváci
 
 Hasznos stratégia lehet, ha a kifizetés összegét arányosan kezelik a hiba által veszélybe kerülő pénzeszközök értékével. Ezt „[skálázódó hibavadászatnak](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)” is nevezhetjük, ami pénzügyi motivációt ad az egyéneknek, hogy inkább feltárják a gyenge pontokat és ne kihasználják azokat.
 
-### 5. Kövesse a bevált gyakorlatokat az okosszerződésfejlesztés során {#follow-smart-contract-development-best-practices}
+### 5. Kövesse a bevált gyakorlatokat az okosszerződésfejlesztés során \{#follow-smart-contract-development-best-practices}
 
 Az auditok és hibavadászatok nem csökkentik az Ön felelősségét, hogy jó minőségű kódot írjon. A megfelelő okosszerződés-biztonság azzal kezdődik, hogy megfelelő tervezési és fejlesztési folyamatokat követ:
 
@@ -118,11 +118,11 @@ Az auditok és hibavadászatok nem csökkentik az Ön felelősségét, hogy jó 
 
 - Dokumentálja megfelelően a kódot (a [NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html) használatában), és magyarázza el a részleteket a szerződés architektúrájáról egyszerű nyelven. Ezáltal könnyebb lesz másoknak auditálni és ellenőrizni a kódot.
 
-### 6. Vezessen be komoly leállást követő helyreállítási tervet {#implement-disaster-recovery-plans}
+### 6. Vezessen be komoly leállást követő helyreállítási tervet \{#implement-disaster-recovery-plans}
 
 A biztonságos hozzáférés-szabályozási terv, a függvénymódosítók bevezetése és más javaslatok fejlesztik az okosszerződés biztonságát, de nem zárhatják ki a lehetőségét egy ártó szándékú támadásnak. A biztonságos okosszerződés építése megkívánja azt is, hogy „felkészüljön a hibára”, és kidolgozzon egy tervet, amely alapján hatásosan tud reagálni egy támadásra. Egy megfelelő hibát vagy leállást követő helyreállítási terv (disaster recovery plan) a következő komponensek néhány vagy összes elemét tartalmazza:
 
-#### Szerződésfrissítések {#contract-upgrades}
+#### Szerződésfrissítések \{#contract-upgrades}
 
 Miközben az Ethereum-okosszerződések alapvetően megváltozhatatlanok, mégis el lehet érni egy bizonyos fokú változtathatóságot a frissítési minták alkalmazásával. A szerződések frissítése elkerülhetetlen ha egy kritikus hiba miatt a régi szerződés használhatatlan lesz, és az új logika bevezetése a legjobb megoldás.
 
@@ -134,7 +134,7 @@ Ahhoz, hogy hívást lehessen delegálni a logikai szerződésnek, a címét el 
 
 [Bővebben a szerződések frissítéséről](/developers/docs/smart-contracts/upgrading/).
 
-#### Vészleállítások {#emergency-stops}
+#### Vészleállítások \{#emergency-stops}
 
 Ahogy már említettük, sem a kiterjedt audit, sem a tesztelés nem képes felfedezni az okosszerződés összes hibáját. Ha a telepítés után sebezhető pont jelenik meg a kódjában, akkor azt nem lehet kijavítani, mert a szerződés címén futó kód megváltoztathatatlan. Emellett a frissítési mechanizmust (például a proxymintákat) időbe telik bevezetni (gyakran több jóváhagyást is igényelnek), ami csak időt ad a támadóknak, hogy több kárt okozzanak.
 
@@ -198,7 +198,7 @@ Az `onlyWhenStopped` azokhoz a függvényekhez használandó, amelyek vészhelyz
 
 A vészleállítási lehetőség egy hatásos hézagpótlás ahhoz, hogy a fejlesztő a komoly sebezhetőségeket kezelni tudja az okosszerződésében. Ugyanakkor a felhasználóktól több bizalmat igényel a fejlesztők felé, hogy nem használják ki ezt a funkciót önös érdekeikre. Erre lehetséges megoldást jelenthet a vészleállítás decentralizált kontrollja, mint például egy láncon belüli szavazás, időzár alkalmazása vagy egy több aláírásos tárca általi jóváhagyás.
 
-#### Eseményfigyelés {#event-monitoring}
+#### Eseményfigyelés \{#event-monitoring}
 
 Az [események](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events) lehetővé teszik az okosszerződéshez érkező hívások trekkelését és az állapotváltozók változásának felügyeletét. Bevált gyakorlatnak számít, ha az okosszerződés mindig kiad eseményt, amikor valaki egy biztonságkritikus tevékenységet végez (például kiveszi a pénzeszközöket).
 
@@ -206,7 +206,7 @@ Az események naplózása és felügyelete láncon kívül betekintést enged a 
 
 Választhat egy előre összeállított felügyeleti eszközt, amely automatikusan figyelmeztetéseket küld, amikor valaki interakcióba lép az Ön szerződéseivel. Ezek az eszközök segítenek személyre szabott figyelmeztetéseket is létrehozni különféle paraméterek alapján, mint amilyen a tranzakciómennyiség, a függvénymeghívások gyakorisága vagy az érintett függvények. Például beállíthat egy figyelmeztetést, ha a kivett pénzmennyiség egy tranzakcióban egy bizonyos határ felett van.
 
-### 7. Tervezzen biztonságos irányítási rendszert {#design-secure-governance-systems}
+### 7. Tervezzen biztonságos irányítási rendszert \{#design-secure-governance-systems}
 
 Talán szeretné, hogy az alkalmazása decentralizált legyen, így a központi okosszerződések kontrollját a közösségi tagoknak adná. Ebben az esetben az okosszerződés rendszere felölel egy irányítási modult is – egy olyan mechanizmust, amellyel a közösségi tagok jóváhagyhatnak adminisztratív változásokat egy láncon belüli irányítási rendszer segítségével. Például azt a javaslatot, hogy a proxyszerződést egy új verzióra frissítsék, megszavaztathatja a tokennel rendelkező felhasználókkal.
 
@@ -216,7 +216,7 @@ A láncon működő irányítási modell problémáit meg lehet oldani az [időz
 
 Bővebben a [biztonságos irányítási rendszerek tervezése](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/) és a [különféle szavazási mechanizmusok a DAO-knál](https://hackernoon.com/governance-is-the-holy-grail-for-daos) témákról.
 
-### 8. Csökkentse a kód komplexitását a minimumra {#reduce-code-complexity}
+### 8. Csökkentse a kód komplexitását a minimumra \{#reduce-code-complexity}
 
 A hagyományos szoftverfejlesztők elve az, hogy a lehető legegyszerűbb legyen a kód (KISS-elv), és így nem vezetnek be fölösleges bonyolításokat a tervben. Ennek alapja az az elgondolás, hogy az „összetett rendszerek összetett módokon vallhatnak kudarcot”, és sokkal hajlamosabbak a költséges hibákra.
 
@@ -224,9 +224,9 @@ A minél egyszerűbb megközelítés kiemelten fontos az okosszerződések írá
 
 Másik követendő tanács az, hogy rövid függvényeket kell írni és a szerződést modulárisan kell felállítani, az üzleti logikát több szerződés között felosztva. Az egyszerű kódok írása kevesebb teret ad a támadásra, emellett a teljes rendszer helyességét is jobban lehet igazolni, és a lehetséges tervezési hibák is korán kiderülhetnek.
 
-### 9. Védekezzen az okosszerződés általános sebezhetőségei ellen {#mitigate-common-smart-contract-vulnerabilities}
+### 9. Védekezzen az okosszerződés általános sebezhetőségei ellen \{#mitigate-common-smart-contract-vulnerabilities}
 
-#### Újrabelépés {#reentrancy}
+#### Újrabelépés \{#reentrancy}
 
 Az EVM nem engedi a párhuzamosságot, tehát két szerződés egy üzenethívásban nem futhat egyszerre. Egy külső hívás megállítja a meghívó szerződés végrehajtását és memóriáját addig, amíg a hívás vissza nem tér, amikor is a végrehajtás normálisan megtörténik. Ezt a folyamatot hivatalosan úgy nevezik, hogy a [kontrollfolyamat](https://www.computerhope.com/jargon/c/contflow.htm) átadása egy másik szerződésnek.
 
@@ -353,7 +353,7 @@ contract MutexPattern {
 
 Továbbá a [„fizetéskérés”](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) rendszere is használható, amelynél a felhasználó vesz ki pénzt az okosszerződésből ahelyett, hogy a szerződés „fizetésküldést” végezne a számlák felé. Így nem lehet véletlenül elindítani egy kódot ismeretlen címeken (és bizonyos szolgálatmegtagadási támadásokat is ki tud védeni).
 
-#### Egész szám túlfolyása lefelé vagy felfelé {#integer-underflows-and-overflows}
+#### Egész szám túlfolyása lefelé vagy felfelé \{#integer-underflows-and-overflows}
 
 Egy egész szám akkor folyik túl felfelé, amikor egy aritmetikai művelet eredménye kívül esik az elfogadható tartományon, így az „tovább gördül” a legalacsonyabb megjeleníthető értékre. Például egy `uint8` csak 2^8-1=255 értéket tud tárolni. Az aritmetikai művelet, amelynek eredménye nagyobb mint `255`, túlfolyik és visszaállítja az `uint` kódot `0` értékre, ahhoz hasonlóan, ahogy egy autóban a megtett távolságot mérő óra is 0-ra fordul át, ha elérte a maximális értékét (999 999).
 
@@ -434,7 +434,7 @@ contract Attack {
 
 A 0.8.0 verzió szerint a Solidity átfordító elutasítja azokat a kódokat, amelyek az egész szám túlfolyását eredményezik. Ugyanakkor az alacsonyabb verziójú átfordítóval készült szerződések esetén ellenőrizni kell azokat a függvényeket, amelyek aritmetikai műveleteket hajtanak végre, vagy egy olyan könyvtárat lehet használni (például [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)), amely ellenőrzi a túlfolyásokat.
 
-#### Orákulum manipulációja {#oracle-manipulation}
+#### Orákulum manipulációja \{#oracle-manipulation}
 
 Az [orákulumok](/developers/docs/oracles/) láncon kívüli információkat gyűjtenek és beküldik azokat a láncra, hogy az okosszerződések használhassák. Az orákulumok révén Ön olyan okosszerződéseket tervezhet, amelyek együtt tudnak működni láncon kívüli rendszerekkel, mint a tőkepiacok, ezzel nagy mértékben kiterjesztve az alkalmazási körüket.
 
@@ -452,9 +452,9 @@ A minimum követelmény az, hogy decentralizált orákulumhálózatokat kell has
 
 Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárakért, akkor használjon olyat, amely idővel súlyozott átlagárat (TWAP) számol. A [TWAP-orákulum](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) egy adott eszköz árát két különböző időpontban (ami módosítható) kérdezi le, és a megszerzett átlaga alapján kalkulálja az azonnali árat. A hosszabb időtartomány használata megvédi a protokollt az ármanipulációtól, mert a közelmúltban végrehajtott nagy rendelések nem befolyásolják az árat.
 
-## Okosszerződés-biztonsággal kapcsolatos anyagok fejlesztők számára {#smart-contract-security-resources-for-developers}
+## Okosszerződés-biztonsággal kapcsolatos anyagok fejlesztők számára \{#smart-contract-security-resources-for-developers}
 
-### Eszközök az okosszerződések elemzéséhez és a kód helyességének ellenőrzéséhez {#code-analysis-tools}
+### Eszközök az okosszerződések elemzéséhez és a kód helyességének ellenőrzéséhez \{#code-analysis-tools}
 
 - **[Tesztelő eszközök és könyvtárak](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** – _Iparági standard eszközök és könyvtárak gyűjteménye az okosszerződések egységteszteléséhez, valamint a statikus és dinamikus elemzéséhez._
 
@@ -468,13 +468,13 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[ABI Encoder](https://abi.hashex.org/)** – _Egy ingyenes online szolgáltatás a Solidity szerződés függvényeinek és constructor parancsainak kódolására._
 
-### Eszközök az okosszerződések felügyeletére {#smart-contract-monitoring-tools}
+### Eszközök az okosszerződések felügyeletére \{#smart-contract-monitoring-tools}
 
 - **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** – _Egy eszköz az okosszerződés automatikus felügyeletére, valamint az eseményekre, függvényekre és tranzakcióparaméterekre való válaszadásra._
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** – _Egy eszköz, amellyel valós idejű értesítést kaphat, amikor az okosszerződésén vagy tárcáján szokatlan vagy váratlan események történnek._
 
-### Eszközök az okosszerződések biztonságos adminisztrálásához {#smart-contract-administration-tools}
+### Eszközök az okosszerződések biztonságos adminisztrálásához \{#smart-contract-administration-tools}
 
 - **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** – _Interfész az okosszerződések adminisztrációjának kezeléséhez, beleértve a hozzáférés-kezelést, frissítéseket és leállítást is._
 
@@ -482,7 +482,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** – _Szerződéskönyvtárak az adminisztrációs jellemzők bevezetésére, beleértve a szerződés tulajdonlását, frissítéseket, hozzáférés-kezelést, irányítást, leállíthatóság és még sok mást._
 
-### Okosszerződés auditálására kínált szolgáltatások {#smart-contract-auditing-services}
+### Okosszerződés auditálására kínált szolgáltatások \{#smart-contract-auditing-services}
 
 - **[ConsenSys Diligence](https://consensys.net/diligence/)** – _Okosszerződés auditálására kínált szolgáltatások, amelyek támogatják a blokklánc-ökoszisztéma projektjeit, hogy a protokolljaik készen állnak-e a bevezetésre és úgy épültek-e meg, hogy védik a felhasználókat._
 
@@ -506,7 +506,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Code4rena](https://code4rena.com/)** – _Versenyképes auditplatform, amely arra ösztönzi az okosszerződés-biztonsági szakértőket, hogy sebezhetőséget találjanak és segítsenek a web3-at biztonságosabbá tenni._
 
-### Hibavadászplatformok {#bug-bounty-platforms}
+### Hibavadászplatformok \{#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** – _Hibavadászplatform okosszerződésekhez és DeFi-projektekhez, ahol a biztonsági kutatók átnézik a kódot, kizárják a sebezhetőségeket, ezért jutalmat kapnak, és biztonságosabbá teszik a kripto világát._
 
@@ -514,7 +514,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[HackenProof](https://hackenproof.com/)** – _Szakértői hibavadászplatform kriptoprojektek (DeFi, okosszerződések, tárcák, CEX stb.) számára, ahol a biztonsági szakértők prioritási sorrendszolgáltatást nyújtanak, a kutatók pedig jutalmat kapnak a releváns, igazolt hibák jelentéséért._
 
-### Publikációk az okosszerződések ismert sebezhetőségeiről és azok kihasználásáról {#common-smart-contract-vulnerabilities-and-exploits}
+### Publikációk az okosszerződések ismert sebezhetőségeiről és azok kihasználásáról \{#common-smart-contract-vulnerabilities-and-exploits}
 
 - **[Consensys: az okosszerződéseket ért ismert támadások](https://consensys.github.io/smart-contract-best-practices/attacks/)** – _Egyszerűen megfogalmazott magyarázat a legkomolyabb sérülékenységekről a szerződésekben, a legtöbb esetben mintakódokkal együtt._
 
@@ -522,7 +522,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Rekt](https://rekt.news/)** – _Rendszeresen frissített publikáció a nagy jelentőségű kriptohackelésekről és támadásokról, az esemény után készült részletes riportokkal._
 
-### Kihívások az okosszerződés-biztonság elsajátításában {#challenges-for-learning-smart-contract-security}
+### Kihívások az okosszerződés-biztonság elsajátításában \{#challenges-for-learning-smart-contract-security}
 
 - **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** – _Blokkláncbiztonsági háborús játékok, kihívások és [szerezd meg a zászlót (Capture The Flag)](https://www.webopedia.com/definitions/ctf-event/amp/) versenyek és megoldások gondozott listája._
 
@@ -530,7 +530,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** – _Web3/Solidity-alapú háborús játék, ahol minden szint egy okosszerződés, amelyet meg kell „hackelni”._
 
-### Bevált gyakorlatok az okosszerződések biztonságossá tételére {#smart-contract-security-best-practices}
+### Bevált gyakorlatok az okosszerződések biztonságossá tételére \{#smart-contract-security-best-practices}
 
 - **[ConsenSys: az Ethereum okosszerződés-biztonság bevált gyakorlatai](https://consensys.github.io/smart-contract-best-practices/)** – _Részletes útmutatók az Ethereum-okosszerződések biztonságossá tételére._
 
@@ -542,7 +542,7 @@ Ha Ön azt tervezi, hogy egy láncon lévő orákulumot kérdez le eszközárak�
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** – _Egy tizennégy részes ellenőrző lista fejlesztők, architektúrával foglalkozók, biztonság-ellenőrzők és beszállítók számára az okosszerződések biztonságának szabványosításához._
 
-### Útmutatók az okosszerződés-biztonságról {#tutorials-on-smart-contract-security}
+### Útmutatók az okosszerződés-biztonságról \{#tutorials-on-smart-contract-security}
 
 - [Hogyan lehet biztonságosabb okosszerződéskódot írni](/developers/tutorials/secure-development-workflow/)
 

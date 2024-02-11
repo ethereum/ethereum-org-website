@@ -4,7 +4,7 @@ description: Základné informácie, ktoré vám pomôžu začať používať pe
 lang: sk
 ---
 
-# Peňaženky pre Ethereum {#ethereum-wallets}
+# Peňaženky pre Ethereum \{#ethereum-wallets}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: sk
 
 </FeaturedText>
 
-## Čo je peňaženka pre Ethereum a ktorú mám používať? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
+## Čo je peňaženka pre Ethereum a ktorú mám používať? \{#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
 Peňaženky sú aplikácie, ktoré zjednodušujú držanie a odosielanie [etheru](/sk/eth/) a zároveň umožňujú interakciu s [aplikáciami vytvorenými na Ethereu](/sk/dapps/).
 

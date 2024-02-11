@@ -8,7 +8,7 @@ Kesalahpahaman yang umum adalah bahwa pengembang harus menulis kontrak pintar un
 
 Ethereum dan komunitasnya menerima sumber terbuka. Anda bisa menemukan proyek komunitas - implementasi klien, API, kerangka kerja pengembangan, peralatan uji coba - dalam berbagai bahasa.
 
-## Pilih bahasa Anda {#data}
+## Pilih bahasa Anda \{#data}
 
 Pilih bahasa pilihan Anda untuk menemukan proyek, sumber daya, dan komunitas virtual:
 
@@ -21,7 +21,7 @@ Pilih bahasa pilihan Anda untuk menemukan proyek, sumber daya, dan komunitas vir
 - [Ethereum untuk pengembang Delphi](/developers/docs/programming-languages/delphi/)
 - [Ethereum untuk pengembang Dart](/developers/docs/programming-languages/dart/)
 
-### Bagaimana jika bahasa saya tidak didukung {#other-lang}
+### Bagaimana jika bahasa saya tidak didukung \{#other-lang}
 
 Jika Anda ingin terhubung dengan sumber daya atau menunjuk ke komunitas virtual untuk bahasa pemrograman tambahan, Anda dapat meminta halaman baru dengan [membuka sebuah masalah](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 

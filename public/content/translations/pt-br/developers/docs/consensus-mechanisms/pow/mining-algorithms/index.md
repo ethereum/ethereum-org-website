@@ -10,11 +10,11 @@ A prova de trabalho não está mais subjacente ao mecanismo de consenso do Ether
 
 A mineração Ethereum usou um algoritmo conhecido como Ethash. A ideia fundamental do algoritmo é que um minerador tente encontrar uma entrada de nonce usando a computação de força bruta, para que o hash resultante seja menor que um limite determinado pela dificuldade calculada. Esse nível de dificuldade pode ser ajustado dinamicamente, permitindo que a produção de blocos ocorra em intervalos regulares.
 
-## Pré-Requisitos {#prerequisites}
+## Pré-Requisitos \{#prerequisites}
 
 Para entender melhor esta página, recomendamos que você leia primeiro sobre o [consenso da prova de trabalho](/developers/docs/consensus-mechanisms/pow) e a [mineração](/developers/docs/consensus-mechanisms/pow/mining).
 
-## Dagger Hashimoto {#dagger-hashimoto}
+## Dagger Hashimoto \{#dagger-hashimoto}
 
 Dagger Hashimoto foi um algoritmo de pesquisa precursor para mineração Ethereum que Ethash substituiu. Era uma fusão de dois algoritmos diferentes: Dagger e Hashimoto. Foi apenas uma implementação de pesquisa e foi substituída pelo Ethash no momento em que a rede principal do Ethereum foi lançada.
 
@@ -26,12 +26,12 @@ Dagger-Hashimoto usou versões modificadas dos algoritmos Dagger e Hashimoto. A 
 
 Mais sobre [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto).
 
-## Ethash {#ethash}
+## Ethash \{#ethash}
 
 Ethash foi o algoritmo de mineração, que na verdade foi usado na rede principal Ethereum real, sob a agora obsoleta arquitetura de prova de trabalho. Ethash foi efetivamente um novo nome dado a uma versão específica do Dagger-Hashimoto depois que o algoritmo foi significativamente atualizado, enquanto ainda herdava os princípios fundamentais de seu antecessor. A rede principal do Ethereum só usava Ethash. Dagger Hashimoto era uma versão de pesquisa e desenvolvimento do algoritmo de mineração que foi substituído antes do início da mineração na rede principal do Ethereum.
 
 [Mais sobre Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 _Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-a!_

@@ -11,11 +11,11 @@ sidebarDepth: 2
 
 执行客户端通过执行层的点对点网络广播交易信息。 这需要经验证的对等点之间进行加密通信。 当一个验证者被选中来提议区块时，该节点本地交易池中的交易将会通过一个本地远程过程调用连接传递至共识客户端，然后再将其打包进信标区块。 之后，共识客户端将在它们的对等网络中广播信标区块。 广播过程需要两个独立的对等网络：一个连接执行客户端，负责交易的广播；另一个连接共识客户端，负责区块的广播。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 对以太坊[节点和客户端](/developers/docs/nodes-and-clients/)略有了解将有助于理解本文。
 
-## 执行层 {#execution-layer}
+## 执行层 \{#execution-layer}
 
 执行层的网络协议分为两个堆栈：
 
@@ -25,7 +25,7 @@ sidebarDepth: 2
 
 这两个堆栈并行作用， 发现堆栈将新的网络参与者输送到网络中，DevP2P 则使它们进行交互。
 
-### 发现 {#discovery}
+### 发现 \{#discovery}
 
 发现是在网络中寻找其他节点的过程。 该过程使用一小组引导节点（即地址[硬编码](https://github.com/ethereum/go-ethereum/blob/master/params/bootnodes.go)为客户端的节点，以便它们能被立即找到，并将客户端连接至对等点）进行引导。 这些引导节点旨在将新节点引入一组对等点，这是它们唯一的目的。它们不参与普通的客户端任务，例如同步链，仅在第一次使用客户端时使用。
 
@@ -43,15 +43,15 @@ sidebarDepth: 2
 
 执行客户端目前使用 [Discv4](https://github.com/ethereum/devp2p/blob/master/discv4.md) 发现协议，并且正在积极迁移到 [Discv5](https://github.com/ethereum/devp2p/tree/master/discv5) 协议。
 
-#### ENR：以太坊节点记录 {#enr}
+#### ENR：以太坊节点记录 \{#enr}
 
 [以太坊节点记录 (ENR)](/developers/docs/networking-layer/network-addresses/) 是一个包含三个基本元素的对象：签名（根据某种商定的身份识别方案创建的记录内容的散列）、跟踪记录更改的序号和键:值对的任意列表。 这种格式不会过时，使新对等点之间身份识别信息的交换更加容易，并且是以太坊节点的首选[网络地址](/developers/docs/networking-layer/network-addresses)格式。
 
-#### 发现为什么建立在 UDP 协议上？ {#why-udp}
+#### 发现为什么建立在 UDP 协议上？ \{#why-udp}
 
 UDP 协议不支持任何错误检查、重新发送失败的数据包，或者动态地打开和关闭连接；相反，它只是将连续的信息流发送至目标，无论它们是否被对方成功接收。 这种最简化的功能会产生最少的连接开销，从而使这种连接非常迅速。 对于发现而言，如果某个节点只想让其它节点知道它的存在以便它与某个对等点建立正式的连接，UDP 协议就已经足够了。 然而，对网络协议栈的其余部分来说，UDP 协议就不那么合适了。 节点之间的信息交流相当复杂，因此需要一个功能更完善的协议来支持重新发送、错误检查等。 TCP 协议带来更多功能所产生的额外连接开销是值得的。 因此，对等网络协议栈中的大多数协议在 TCP 协议之上运行。
 
-### DevP2P {#devp2p}
+### DevP2P \{#devp2p}
 
 DevP2P 本身就是以太坊为建立和维护对等网络而实施的一整套协议。 新节点进入网络后，它们的交互由 [DevP2P](https://github.com/ethereum/devp2p) 堆栈中的协议管控。 这些操作均基于传输控制协议，包括 RLPx 传输协议、线路协议和若干子协议。 [RLPx](https://github.com/ethereum/devp2p/blob/master/rlpx.md) 是管理启动、验证和维护节点之间会话的协议。 使用 RLP（递归长前缀）的 RLPx 对消息进行编码。递归长度前缀是一种非常节省空间的编码方法，可将数据编码成最小结构，以便在节点之间发送。
 
@@ -69,57 +69,57 @@ Hello 消息包含：
 
 除了“hello”消息之外，线路协议还可以发送一个“disconnect”消息，以警告对等点连接将被断开。 线路协议还包含定期发送的 PING 和 PONG 消息，以使会话保持开放。 因此，RLPx 和线路协议之间信息交换为节点之间的通信奠定了基础，并为根据特定子协议交换有用的信息提供了平台。
 
-### 子协议 {#sub-protocols}
+### 子协议 \{#sub-protocols}
 
-#### 线路协议 {#wire-protocol}
+#### 线路协议 \{#wire-protocol}
 
 连接对等点并启动 RLPx 会话后，线路协议定义了对等点间的通信方式。 起初，线路协议定义了三项主要任务：链同步、区块传播和交易交换。 但是当以太坊切换至权益证明之后，区块传播和链同步变为共识层的一部分。 交易交换仍由执行客户端负责。 交易交换所指的是节点之间互相交换待处理的交易，以便矿工能够选择其中一些交易放到下一区块中。 有关这些任务的详细信息可从[这里](https://github.com/ethereum/devp2p/blob/master/caps/eth.md)获取。 支持这些子协议的客户端通过 [JSON-RPC](/developers/docs/apis/json-rpc/) 将自己公开给网络中的其它部分。
 
-#### les（以太坊轻客户端子协议） {#les}
+#### les（以太坊轻客户端子协议） \{#les}
 
 这是用于同步轻量级客户端的最小协议。 传统上很少使用这一协议，因为全部节点都要求在没有任何奖励的情况下向轻量级客户端提供数据。 执行客户端的默认行为不是通过以太坊轻客户端子协议为轻量级客户端数据提供服务。 更多信息请见以太坊轻客户端子协议[规范](https://github.com/ethereum/devp2p/blob/master/caps/les.md)。
 
-#### 快照 {#snap}
+#### 快照 \{#snap}
 
 [快照协议](https://github.com/ethereum/devp2p/blob/master/caps/snap.md#ethereum-snapshot-protocol-snap)是一种可选扩展，该扩展使对等点能够交换最近状态的快照，从而无需下载默克尔前缀树的内部节点就能验证帐户信息和存储的数据。
 
-#### Wit（见证协议） {#wit}
+#### Wit（见证协议） \{#wit}
 
 [见证协议](https://github.com/ethereum/devp2p/blob/master/caps/wit.md#ethereum-witness-protocol-wit)也是一种可选扩展，可以使对等点交换彼此的状态见证，从而帮助客户端与链端同步。
 
-#### 耳语 {#whisper}
+#### 耳语 \{#whisper}
 
 耳语协议旨在实现对等节点之间的安全消息传输，无需向区块链写入任何信息。 它曾是 DevP2P 线路协议的一部分，但现在已经弃用。 其他[相关项目](https://wakunetwork.com/)也存在类似目标。
 
-## 共识层 {#consensus-layer}
+## 共识层 \{#consensus-layer}
 
 共识客户端参与具有不同规范的单独对等网络。 共识客户端需要参与区块广播，以便它们可以从对等点接收新区块，并在轮到它们成为区块提议者时进行广播。 与执行层类似，此过程首先需要一个发现协议，以便节点可以找到对等节点并建立安全会话，以交换区块、认证等。
 
-### 发现 {#consensus-discovery}
+### 发现 \{#consensus-discovery}
 
 与执行客户端类似，共识客户端使用基于用户数据报协议的 [discv5](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-discovery-domain-discv5) 寻找对等点。 Discv5 的共识层实现与执行客户端的不同之处仅在于它包含一个将 discv5 连接到 [libP2P](https://libp2p.io/) 堆栈的适配器，而且弃用了 DevP2P。 执行层的 RLPx 会话已被弃用，取而代之的是 libP2P 的噪声安全信道握手。
 
-### 以太坊节点记录 {#consensus-enr}
+### 以太坊节点记录 \{#consensus-enr}
 
 共识节点的以太坊节点记录包括节点的公钥、IP 地址、用户数据报协议和传输控制协议端口，以及两个共识特定字段：证明子网位字段和 `eth2` 密钥。 前者使节点更容易找到参与特定证明广播子网络的对等点。 `eth2` 密钥包含有关节点正在使用的以太坊分叉的版本信息，以确保对等点连接到正确的以太坊。
 
-### libP2P {#libp2p}
+### libP2P \{#libp2p}
 
 LibP2P 堆栈支持发现后的所有通信。 根据其以太坊节点记录的定义，客户端可以在 IPv4 和/或 IPv6 上拨号和收听。 LibP2P 层上的协议可以细分为广播和请求-响应域。
 
-### 广播 {#gossip}
+### 广播 \{#gossip}
 
 广播域包括必须在整个网络中快速传播的所有信息。 这包括信标块、证明、认证、退出和罚没。 这是使用 libP2P gossipsub v1 传输的，并且依赖于在每个节点本地存储的各种元数据，包括要接收和传输的广播有效载荷的上限。 有关广播域的详细信息可在[此处](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#the-gossip-domain-gossipsub)找到。
 
-### 请求-响应 {#request-response}
+### 请求-响应 \{#request-response}
 
 请求-响应域包含客户端从其对等点请求特定信息的协议。 示例包括请求匹配某些根哈希值或在一定时隙范围内的特定信标块。 响应总是以快速压缩的简单序列化编码字节的形式返回。
 
-## 为什么共识客户端更偏好简单序列化而不是递归长度前缀？ {#ssz-vs-rlp}
+## 为什么共识客户端更偏好简单序列化而不是递归长度前缀？ \{#ssz-vs-rlp}
 
 SSZ 代表简单序列化。 它使用固定偏移量，可以轻松解码编码消息的各个部分，而无需解码整个结构，这对于共识客户端非常有用，因为它可以有效地从编码消息中获取特定信息。 它还专门设计用于与默克尔协议集成，并提升与默克尔化有关的效率。 由于共识层中的所有哈希值都是默克尔树根，因此这带来了显著的改进。 简单序列化还保证了值的唯一表示。
 
-## 连接执行客户端和共识客户端 {#connecting-clients}
+## 连接执行客户端和共识客户端 \{#connecting-clients}
 
 共识客户端和执行客户端同时运行。 它们需要彼此连接，这样共识客户端才能向执行客户端提供指令，后者也才能向前者传送需要纳入信标区块的交易捆绑包。 两个客户端之间的通信可通过本地远程过程调用连接实现。 名为[“引擎-API”](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)的应用程序接口定义两个客户端之间发送的指令。 由于两个客户端共用同一个网络身份，因此它们也共享同一个以太坊节点记录 (ENR)，其中包含了每个客户端单独的密钥（eth1 密钥和 eth2 密钥）。
 
@@ -150,6 +150,6 @@ SSZ 代表简单序列化。 它使用固定偏移量，可以轻松解码编码
 
 共识客户端和执行客户端的网络层示意图，取自 [ethresear.ch](https://ethresear.ch/t/eth1-eth2-client-relationship/7248)
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 [DevP2P](https://github.com/ethereum/devp2p) [LibP2p](https://github.com/libp2p/specs) [共识层网络规范](https://github.com/ethereum/consensus-specs/blob/dev/specs/phase0/p2p-interface.md#enr-structure) [kademlia 至 discv5](https://vac.dev/kademlia-to-discv5) [kademlia 论文](https://pdos.csail.mit.edu/~petar/papers/maymounkov-kademlia-lncs.pdf) [以太坊对等网络简介](https://p2p.paris/en/talks/intro-ethereum-networking/) [以太坊 1/以太坊 2 的关系](http://ethresear.ch/t/eth1-eth2-client-relationship/7248) [合并和以太坊 2 客户端详情视频](https://www.youtube.com/watch?v=zNIrIninMgg)

@@ -5,11 +5,11 @@ lang: ro
 incomplete: true
 ---
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Pentru a înțelege mai bine această pagină, vă recomandăm să citiți mai întâi despre [tranzacții](/developers/docs/transactions/), <a href="/developers/docs/blocks/">blocuri</a> și [dovada-muncii (PoW)](/developers/docs/consensus-mechanisms/pow/).
 
-## Ce este minarea pe Ethereum? {#what-is-ethereum-mining}
+## Ce este minarea pe Ethereum? \{#what-is-ethereum-mining}
 
 Minarea este procesul de creare a unui bloc de tranzacții care trebuie adăugat la blockchain-ul Ethereum.
 
@@ -19,17 +19,17 @@ Ethereum, la fel ca Bitcoin, utilizează în prezent un mecanism de consens prin
    Dovada-mizei va înlocui minarea și dovada-muncii în cursul anului viitor. Puteți începe de astăzi să vă mizați ETH-ul. <a href="/staking/">Aflați mai multe despre mizare</a>    
 </InfoBanner>
 
-## De ce există miner-i? {#why-do-miners-exist}
+## De ce există miner-i? \{#why-do-miners-exist}
 
 În sistemele descentralizate precum Ethereum trebuie să ne asigurăm că toată lumea este de acord cu ordinea tranzacțiilor. Miner-ii contribuie la realizarea acestui lucru rezolvând puzzle-uri de calcul dificile pentru a produce blocuri, ceea ce servește ca modalitate de a proteja rețeaua de atacuri.
 
 [Mai multe despre dovada-muncii](/developers/docs/consensus-mechanisms/pow/)
 
-## Cine poate deveni miner pe Ethereum? {#who-can-become-a-miner}
+## Cine poate deveni miner pe Ethereum? \{#who-can-become-a-miner}
 
 Din punct de vedere tehnic, oricine poate mina în rețeaua Ethereum folosindu-și computerul. Totuși, nu toată lumea poate mina ether (ETH) în mod profitabil. În majoritatea cazurilor, miner-ii trebuie să cumpere echipamente informatice specializate pentru a mina în mod profitabil. Deși este adevărat că oricine poate rula software-ul de minare pe computerul său, este puțin probabil ca un computer obișnuit să câștige recompense suficiente sub formă de blocuri pentru a acoperi costurile minării.
 
-### Costul minării {#cost-of-mining}
+### Costul minării \{#cost-of-mining}
 
 - Costurile potențiale de hardware necesare pentru construirea și întreținerea unei platforme de minare
 - Costul electricității pentru alimentarea platformei de minare
@@ -38,7 +38,7 @@ Din punct de vedere tehnic, oricine poate mina în rețeaua Ethereum folosindu-�
 
 Pentru a analiza în continuare profitabilitatea minării, utilizați un calculator de minare, cum ar fi cel oferit de [Etherscan](https://etherscan.io/ether-mining-calculator).
 
-## Cum sunt minate tranzacțiile în Ethereum {#how-ethereum-transactions-are-mined}
+## Cum sunt minate tranzacțiile în Ethereum \{#how-ethereum-transactions-are-mined}
 
 1. Un utilizator scrie și semnează o cerere de [tranzacție](/developers/docs/transactions/) cu cheia privată a unui [cont](/developers/docs/accounts/).
 2. Utilizatorul transmite cererea de tranzacție către întreaga rețea Ethereum de la un anumit [nod](/developers/docs/nodes-and-clients/).
@@ -53,21 +53,23 @@ Pentru a analiza în continuare profitabilitatea minării, utilizați un calcula
 
 Fiecare tranzacție este minată (inclusă într-un bloc nou și propagată pentru prima dată) o singură dată, dar executată și verificată de fiecare participant la procesul de avansare a stării canonice a EVM. Aceasta evidențiază una dintre formulele centrale sacre ale blockchain-ului: **Să nu aveți încredere, verificați**.
 
-## O demonstrație vizuală {#a-visual-demo}
+## O demonstrație vizuală \{#a-visual-demo}
 
 Urmăriți cum vă îndrumă Austin în procesul de minare și blockchain-ul dovezii-muncii.
 
+{
 <YouTube id="zcX7OJ-L8XQ" />
+}
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
-## Instrumente corelate {#related-tools}
+## Instrumente corelate \{#related-tools}
 
 - [Miner-i de top în Ethereum](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
 - [Calculator de minare Etherscan](https://etherscan.io/ether-mining-calculator)
 - [Minerstat mining calculator](https://minerstat.com/coin/ETH)
 
-## Subiecte corelate {#related-topics}
+## Subiecte corelate \{#related-topics}
 
 - [Gaz](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)

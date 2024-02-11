@@ -4,15 +4,15 @@ description: La politique utilisée lors de l'ajout de liens vers des projets su
 lang: fr
 ---
 
-# Ajouter des projets {#adding-projects}
+# Ajouter des projets \{#adding-projects}
 
 Nous souhaitons présenter une variété de projets et donner un bon aperçu du paysage DeSci.
 
 Chacun est libre de proposer un projet à inscrire sur la page DeSci d'ethereum.org. De même, toute personne qui remarque un projet qui n'est plus pertinent ou qui ne répond plus à nos critères d'éligibilité est libre de suggérer que nous le supprimions.
 
-## Le cadre décisionnel {#the-decision-framework}
+## Le cadre décisionnel \{#the-decision-framework}
 
-### Critères d'inclusion : les incontournables {#the-must-haves}
+### Critères d'inclusion : les incontournables \{#the-must-haves}
 
 - **Code/données open source** - Le code et les données open source sont un principe fondamental de DeSci, les projets DeSci ne doivent pas être en code source fermé. La base de code doit être accessible et idéalement ouverte aux PR.
 - **Les projets DeSci doivent être manifestement décentralisés** - Cela pourrait inclure d'être gouverné par un DAO, ou de construire avec une pile technologique décentralisée comprenant des portefeuilles non-dépositaires. Cela implique vraisemblablement des contrats intelligents vérifiables sur Ethereum.
@@ -30,7 +30,7 @@ Chacun est libre de proposer un projet à inscrire sur la page DeSci d'ethereum.
 - **Audits de tiers** - votre produit a fait l'objet d'un audit professionnel sur les vulnérabilités par un tiers de confiance.
 - **Point de contact** - Un point de contact pour le projet (qui pourrait être un représentant d'une DAO ou d'une communauté) nous aidera grandement à obtenir des informations précises lorsque des changements sont apportés. Cela permettra de continuer à mettre à jour ethereum.org raisonnablement lors de la collecte d'informations futures.
 
-## Maintenance {#maintenance}
+## Maintenance \{#maintenance}
 
 Ethereum étant flexible par nature, les équipes et les produits vont et viennent et l'innovation est quotidienne. Nous procéderons donc à des vérifications de routine de notre contenu pour :
 
@@ -39,6 +39,6 @@ Ethereum étant flexible par nature, les équipes et les produits vont et vienne
 
 Ethereum.org est maintenu par la communauté open source & nous comptons sur la communauté pour nous aider à tenir le site à jour. Si vous remarquez que des informations sur les projets listés doivent être mises à jour, veuillez ouvrir une « Issue » ou une « Pull Récent » sur notre GitHub.
 
-## Conditions d'utilisation {#terms-of-use}
+## Conditions d'utilisation \{#terms-of-use}
 
 Veuillez également vous reporter à nos [conditions d'utilisation](/terms-of-use/). Les informations sur ethereum.org sont fournies uniquement à des fins d'information générale.

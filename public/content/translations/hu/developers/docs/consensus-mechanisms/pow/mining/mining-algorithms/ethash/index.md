@@ -10,7 +10,7 @@ lang: hu
 
 Az [Ethash](https://github.com/ethereum/wiki/wiki/Ethash) a [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto) algoritmus egy módosított változata. Az Ethash proof-of-work egy [ memóriaigényes (memory hard)](https://wikipedia.org/wiki/Memory-hard_function) működés, ami miatt ez az algoritmus ASIC-ellenálló. Az Ethash ASIC-t végül kifejlesztették, de a GPU-bányászat még mindig működő opció volt addig, amíg a proof-of-work metódust ki nem kapcsolták. Az Ethasht még használják más érmék bányászatánál, nem Ethereumon és nem proof-of-work hálózatokon.
 
-## Hogyan működik az Ethash? {#how-does-ethash-work}
+## Hogyan működik az Ethash? \{#how-does-ethash-work}
 
 A memóriaigényt (memory hardness) egy proof-of-work algoritmussal lehet elérni, amelynek egy rögzített erőforrás részhalmazait kell kiválasztania a nonce és a blokkfejléc alapján. Ezt az erőforrást (ami néhány gigabájt nagyságú) DAG-nek (irányított aciklikus gráf/Directed Acyclic Graph) nevezik. A DAG minden 30 000. blokknál megváltozik, ami nagyjából 125 órás időtartamnak felel meg – ezt korszaknak nevezik (kb. 5,2 nap) és időbe telik, amíg létrejön. Mivel a DAG csak a blokk magasságán múlik, ezért előre el lehet készíteni, de ha nincs, akkor a kliensnek meg kell várnia a folyamat végét ahhoz, hogy blokkot készítsen. Ha a kliensek nem hozzák létre és cache-elik a DAG-eket korábban, akkor a hálózat komoly blokk-késedelmet szenved el minden korszakváltásnál (epoch). Fontos megjegyezni, hogy a DAG nem szükséges a proof-of-work ellenőrzéséhez, így ezt a folyamatot alacsony CPU-val és kevés memóriával is lehet végezni.
 
@@ -23,7 +23,7 @@ Az algoritmus a következő általános utat teszi meg:
 
 A nagy adathalmaz minden 30 000. blokk után frissül, ezért a bányászok erőfeszítéseinek legjava az adatkészlet olvasására összpontosít, nem pedig a változtatására.
 
-## Definíciók {#definitions}
+## Definíciók \{#definitions}
 
 A következő definíciókat használjuk:
 
@@ -42,13 +42,13 @@ CACHE_ROUNDS = 3                  # number of rounds in cache production
 ACCESSES = 64                     # number of accesses in hashimoto loop
 ```
 
-### Az SHA3 használata {#sha3}
+### Az SHA3 használata \{#sha3}
 
 Az Ethereum fejlesztése egybe esett az SHA3 szabvány kifejlesztésével, és a standard folyamat egy változtatást vitt véghez a végső hashalgoritmussal kapcsolatban, így az Ethereum „sha3_256” és „sha3_512” hashek nem szabványos sha3 hashek, hanem variánsok, melyre gyakran „Keccak-256” és „Keccak-512” néven hivatkoznak más kontextusban. A kapcsolódó beszélgetéseket [itt](https://eips.ethereum.org/EIPS-1803), [itt](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) vagy [itt](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057) találja.
 
 Vegye figyelembe, hogy az alábbi leírás SHA3-hashekre hivatkozik az algoritmus tekintetében.
 
-## Parameters {#parameters}
+## Parameters \{#parameters}
 
 Az Ethash-cache és adathalmaz paraméterei a blokkszámtól függenek. A cache és az adathalmaz mérete egyenes arányosságban növekszik; ugyanakkor mindig a legnagyobb prímszámot választjuk a lineárisan növekvő határ alatt, hogy kevesebb kockázata legyen valamilyen szokatlan dolognak, ami ciklikus viselkedéshez vezet.
 
@@ -70,7 +70,7 @@ def get_full_size(block_number):
 
 Az adathalmaznak és a cache-méret értékeinek táblázatát a függelékben találja.
 
-## Cache létrehozása {#cache-generation}
+## Cache létrehozása \{#cache-generation}
 
 Most meghatározzuk a cache létrehozásának függvényét:
 
@@ -94,7 +94,7 @@ def mkcache(cache_size, seed):
 
 A cache létrehozása először 32 MB-nyi memória szekvenciális feltöltését igényli, majd Sergio Demian Lerner _RandMemoHash_ algoritmusának két végrehajtását a [_Strict Memory Hard Hashing Functions-ből_ (2014)](http://www.hashcash.org/papers/memohash.pdf). Az eredmény egy 524 288 db 64-bájtos elemből álló készlet.
 
-## Adataggregálási függvény {#date-aggregation-function}
+## Adataggregálási függvény \{#date-aggregation-function}
 
 Olyan algoritmust használunk, amit az [FNV hash](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) inspirált néhány esetben, mint a XOR nem-asszociatív helyettesítője. Vegye figyelembe, hogy a prímszámot a teljes 32 bites bemeneti adattal megszorozzuk, ellentétben az FNV-1 specifikációval, ami a prímszámot egy bájttal (octet) szorozza.
 
@@ -107,7 +107,7 @@ def fnv(v1, v2):
 
 Vegye figyelembe, hogy még a Sárgakönyv is úgy határozza meg az fnv-t, mint v1\*(FNV_PRIME ^ v2), és minden jelenlegi implementáció konzisztensen ezt használja.
 
-## Teljes adathalmaz kiszámítása {#full-dataset-calculation}
+## Teljes adathalmaz kiszámítása \{#full-dataset-calculation}
 
 Minden 64 bájtos elem a teljes 1 GB-nyi adathalmazban a következőképpen kerül kiszámolásra:
 
@@ -133,7 +133,7 @@ def calc_dataset(full_size, cache):
     return [calc_dataset_item(cache, i) for i in range(full_size // HASH_BYTES)]
 ```
 
-## Fő ciklus {#main-loop}
+## Fő ciklus \{#main-loop}
 
 Most meghatározzuk a fő „hashimoto”-szerű ciklust, ahol aggregáljuk a teljes adathalmazból vett adatokat azért, hogy egy bizonyos fejléchez és nonce-hoz végső értéket rendeljünk. A lenti kódban a `header` (fejléc) az SHA3-256 _hasht_ képviseli, ami az RLP reprezentációja egy _csonka_ blokkfejlécnek, tehát olyan fejléc, amiben nincs benne a **mixHash** és a **nonce**. A `nonce` egy 64 bites, nem aláírt egész szám nyolc bájtja big-endian sorban. Tehát a `nonce[::-1]` a nyolc bájtos kis-endian reprezentációja ennek az értéknek:
 
@@ -175,7 +175,7 @@ Lényegében egy 128 bájt széles „mixet” készítünk, és ismétlődő m�
 
 Ha az algoritmus kimenete a várt eredményt adja, akkor a nonce érvényes. Fontos megjegyezni, hogy az `sha3_256` extra alkalmazása a végén azt biztosítja, hogy létezik egy köztes nonce, ami bizonyítja, hogy legalább egy kis munkavégzés történt; ezt a gyors, külső proof-of-work-ellenőrzést DDoS elleni célokra lehet használni. Emellett statisztikai biztosítást is ad, hogy az eredmény egy helyes 256 bites szám.
 
-## Bányászat {#mining}
+## Bányászat \{#mining}
 
 A bányászati algoritmust a következőképpen definiáljuk:
 
@@ -190,7 +190,7 @@ def mine(full_size, dataset, header, difficulty):
     return nonce
 ```
 
-## A seed hash meghatározása {#seed-hash}
+## A seed hash meghatározása \{#seed-hash}
 
 A seed hash kiszámolásához, amellyel egy adott blokk tetején lehet bányászni, a következő algoritmust használjuk:
 
@@ -204,11 +204,11 @@ A seed hash kiszámolásához, amellyel egy adott blokk tetején lehet bányász
 
 Vegye figyelembe, hogy a zavartalan bányászat és ellenőrzés érdekében érdemes előre kiszámolni a jövőbeli seed hasheket és adathalmazokat egy másik helyen.
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
 
-## Függelék {#appendix}
+## Függelék \{#appendix}
 
 A következő kódot kell beilleszteni, ha Ön a fenti python-specifikációt akarja futtatni kódként.
 
@@ -260,7 +260,7 @@ def isprime(x):
     return True
 ```
 
-### Adatméretek {#data-sizes}
+### Adatméretek \{#data-sizes}
 
 A következő tábla kb. 2048 korszak adat- és cache-méreteit mutatja meg.
 

@@ -22,7 +22,7 @@ Wszystko to zmieniło się wraz z Internetem. Liczba osób, które widzą konkre
 
 Blockchain ponownie zmieni te rynki — pozwolę sobie pokazać, w jaki sposób.
 
-## Monetyzacja {#monetization}
+## Monetyzacja \{#monetization}
 
 Model biznesowy serwisu ogłoszeniowego w publicznym blockchainie będzie musiał różnić się od modelu Ebay i spółki.
 
@@ -38,7 +38,7 @@ Po prostu wyczuwam tutaj okazję biznesową. W łatwy sposób można wdrożyć s
 
 Po prostu cieszę się, że to buduję. Rzućmy okiem na kod.
 
-## Implementacja {#implementation}
+## Implementacja \{#implementation}
 
 Jakiś czas temu uruchomiliśmy [repozytorium open source](https://github.com/HQ20/contracts?ref=hackernoon.com) z implementacjami zastosowań biznesowych i innymi ciekawymi rzeczami. Rzuć okiem.
 
@@ -138,7 +138,7 @@ function cancelTrade(uint256 _trade)
 
 To już wszystko. Dotrwałeś do końca implementacji. To zaskakujące, jak kompaktowe są niektóre pojęcia biznesowe wyrażane w kodzie i jest to jeden z tych przypadków. Sprawdź pełną umowę [w naszym repozytorium](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
-## Podsumowanie {#conclusion}
+## Podsumowanie \{#conclusion}
 
 Serwisy ogłoszeniowe to powszechna konfiguracja rynku, która intensywnie rosła wraz z Internetem, stając się niezwykle popularnym modelem biznesowym z kilkoma monopolistycznymi zwycięzcami.
 

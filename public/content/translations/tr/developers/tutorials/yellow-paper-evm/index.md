@@ -11,15 +11,15 @@ published: 2022-05-15
 
 [Sarı Kağıt](https://ethereum.github.io/yellowpaper/paper.pdf), Ethereum'un resmi spesifikasyonudur. [EIP süreci](/eips/) tarafından düzenlenen yerler dışında, her şeyin nasıl çalıştığına dair net bir açıklama içerir. Programcıların anlaşılır bulmayabileceği terimler içeren matematiksel bir kağıt olarak yazılmıştır. Bu kağıtta, spesifikasyonu ve dolayısıyla bağlantılı diğer matematiksel kağıtları nasıl okuyacağınızı öğreneceksiniz.
 
-## Hangi Sarı Kağıt? {#which-yellow-paper}
+## Hangi Sarı Kağıt? \{#which-yellow-paper}
 
 Ethereum'daki her şey gibi, Sarı Kağıt da zamanla evrimleşiyor. Spesifik bir versiyona atıfta bulunabilmek için [yazımı devam eden versiyonu](yellow-paper-berlin.pdf) yükledim. Kullanacağım bölüm, sayfa ve denklem numaraları o versiyona ait olacaktır. Bu dokümanı okurken farklı bir pencerede Sarı Kağıdı açık tutmak iyi bir fikir olabilir.
 
-### Neden Ethereum Sanal Makinesi? {#why-the-evm}
+### Neden Ethereum Sanal Makinesi? \{#why-the-evm}
 
 Orijinal sarı kağıt, Ethereum'un geliştirme sürecinin başında yazılmıştı. Başlangıçta ağı korumak için kullanılan mutabakat mekanizmasını temel alan orijinal iş ispatını açıklamaktadır. Bununla birlikte, Ethereum Eylül 2022'de iş ispatını bırakıp hisse ispatı tabanlı istemciyi kullanmaya başladı. Bu öğretici, sarı kağıdın Ethereum Sanal Makinesi'ni tanıttığı bölümlere değinecektir. EVM, (DIFFICULTY işlem kodunun dönüş değeri dışında) hisse ispatına geçiş nedeniyle değiştirilmemiştir.
 
-## 9 Yürütüm modeli {#9-execution-model}
+## 9 Yürütüm modeli \{#9-execution-model}
 
 Bu bölüm (sayfa 12-14) daha çok EVM'nin tanıtımını içeriyor.
 
@@ -29,7 +29,7 @@ _Sistem durumu_ terimi, sistemi çalıştırmak için bilmeniz gereken her şeyi
 
 [Turing-tamam](https://en.wikipedia.org/wiki/Turing_completeness) terimi, bir bilgisayarın hesapları bir Turing makinesi gibi çalıştırabileceği anlamına gelir. Turing makineleri sonsuz döngülere girebilir ancak EVM giremez; çünkü gazı biter, yani EVM sadece yarı-Turing-tamam niteliğindedir.
 
-## 9.1 Temeller {#91-basics}
+## 9.1 Temeller \{#91-basics}
 
 Bu bölüm EVM'nin temellerini ve diğer hesaplama modelleri ile nasıl benzerlik ve farklılıklarını gösterir.
 
@@ -56,11 +56,11 @@ Kodun bellekten yürütüldüğü sadece iki durum vardır:
 
 İstisnai yürütüm terimi, güncel sözleşmenin yürütümünün durmasına sebep olan bir istisnayı ifade eder.
 
-## 9.2 Ücretlerle ilgili genel bilgi {#92-fees-overview}
+## 9.2 Ücretlerle ilgili genel bilgi \{#92-fees-overview}
 
 Bu bölüm, gaz ücretlerinin nasıl hesapladığını anlatır. Üç maliyet kalemi vardır:
 
-### İşlem kodu maliyeti {#opcode-cost}
+### İşlem kodu maliyeti \{#opcode-cost}
 
 Spesifik işlem kodunun öz maliyeti. Bu değere ulaşabilmek için Ek H'de (sayfa 28, (327). denklemin altında) işlem kodunun maliyet grubunu ve (324.) denklemdeki maliyet grubunu bulun. Bu size bir maliyet fonksiyonu verir, bu da çoğu durumda Ek G'deki (sayfa 27) parametreleri kullanır.
 
@@ -68,14 +68,14 @@ Spesifik işlem kodunun öz maliyeti. Bu değere ulaşabilmek için Ek H'de (say
 
 Hala _⌈μ<sub>s</sub>[2]÷32⌉_ ifadesini çözmemiz gerekiyor. En dıştaki kısım olan _⌈ \<value\> ⌉_ tavan fonksiyonudur ve değerden küçük olmayan en küçük tam sayıyı verir. Örneğin _⌈2.5⌉ = ⌈3⌉ = 3_. İç kısım _μ<sub>s</sub>[2]÷32_ şeklindedir. 3. bölüme (Yöntemler) bakarsak, sayfa 3'te _μ_, makinenin durumudur. Makine durumu sayfa 13, bölüm 9.4.1'de açıklanmıştır. O bölüme göre yığın için makine durumu parametrelerinden biri _s_'dir. Hepsini birleştirdiğimizde _μ<sub>s</sub>[2]_, yığındaki 2. konumdur. [İşlem koduna](https://www.evm.codes/#37) bakarsak, yığındaki 2. konum, verinin bayt cinsinden boyutudur. Grup W<sub>copy</sub>, [`CODECOPY`](https://www.evm.codes/#39) ve [`RETURNDATACOPY`](https://www.evm.codes/#3e) içindeki diğer işlem kodlarına bakarsak, işlem kodlarının da aynı konumda veri boyutları olduğunu görürüz. Yani _⌈μ<sub>s</sub>[2]÷32⌉_, kopyalanan veriyi depolayabilmek için gereken 32 baytlık kelimelerin sayısıdır. Toparlamak gerekirse, [`CALLDATACOPY`](https://www.evm.codes/#37) işlem kodunun kalıtımsal maliyeti, kopyalanan veri kelimesi başına 3 gaz artı 3'tür.
 
-### Çalıştırma maliyeti {#running-cost}
+### Çalıştırma maliyeti \{#running-cost}
 
 Çağrı yaptığımız kodun çalıştırma maliyetidir.
 
 - [`CREATE`](https://www.evm.codes/#f0) ve[`CREATE2`](https://www.evm.codes/#f5) durumlarında, yeni sözleşmenin oluşturucusu.
 - [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa), ya da [`DELEGATECALL`](https://www.evm.codes/#f4) durumlarında, çağırdığımız sözleşme.
 
-### Bellek maliyetini genişletme {#expanding-memory-cost}
+### Bellek maliyetini genişletme \{#expanding-memory-cost}
 
 Bellek genişletme maliyeti (eğer gerekliyse).
 
@@ -87,7 +87,7 @@ Bu faktörlerin sadece _kalıtımsal_ gaz maliyetini etkilediğini **unutmayın*
 
 [Gaz hakkında daha fazla bilgi edinin](/developers/docs/gas/).
 
-## 9.3 Yürütüm ortamı {#93-execution-env}
+## 9.3 Yürütüm ortamı \{#93-execution-env}
 
 Yürütme ortamları veri tabanında kayıtları oluşturan bir veri grubudur, _I_, blokzincirin durumu ya da ESM'nin bir parçası olmayan bilgiyi içerir.
 
@@ -113,7 +113,7 @@ Yürütme ortamları veri tabanında kayıtları oluşturan bir veri grubudur, _
 | _A_       | 6.1 (8. sayfa)           | Birikmiş yan durum (değişimler, işlem sonuna göre programlanmıştır)                                                                                                                                               |
 | _o_       | 9.3 (13. sayfa)          | Çıktı - İç işlem durumunda (bir sözleşme bir diğerini aradığında) ve fonksiyonları görüntülemek için yapılan aramalarda (sadece bilgi istiyorken, yani bir işlem için beklemeye gerek yokken) döndürülen sonuçtur |
 
-## 9.4 Yürütme ile ilgili temel bilgiler {#94-execution-overview}
+## 9.4 Yürütme ile ilgili temel bilgiler \{#94-execution-overview}
 
 Ön hazırlıkların hepsi tamam olduğuna göre, artık EVM'nin nasıl çalıştığı üzerinde çalışmaya başlayabiliriz.
 
@@ -135,13 +135,13 @@ Yürütme ortamları veri tabanında kayıtları oluşturan bir veri grubudur, _
 1. Eğer işlem dizisi [`RETURN`](https://www.evm.codes/#f3)) ile gösterildiği gibi tamamlanmışsa durum, yeni duruma güncellenir.
 1. 1-3 uç koşullarından birinde değilsek, çalıştırmaya devam edin.
 
-## 9.4.1 Makine Durumu {#941-machine-state}
+## 9.4.1 Makine Durumu \{#941-machine-state}
 
 Bu bölüm makine durumunu daha detaylı bir şekilde anlatıyor. _w_'nin güncel işlem kodu olduğunu belirtiyor. Eğer _μ<sub>pc</sub>_ _||I<sub>b</sub>||_ kodun uzunluğundan daha azsa, o zaman o bayt (_I<sub>b</sub>[μ<sub>pc</sub>]_) işlem kodudur. Aksi halde işlem kodu, [`STOP`](https://www.evm.codes/#00) olarak tanımlanır.
 
 Bu bir [yığın makinesi olduğundan](https://en.wikipedia.org/wiki/Stack_machine), her bir işlem kodu tarafından çıkarılmış (_δ_) ve sokulmuş (_α_) öğeleri takip etmemiz gerekir.
 
-## 9.4.2 İstisnai Durma {#942-exceptional-halt}
+## 9.4.2 İstisnai Durma \{#942-exceptional-halt}
 
 Bu bölüm, anormal bir sonuca ulaştığımızda verilen _Z_ fonksiyonunu tanımlar. Bu bir [Boole](https://en.wikipedia.org/wiki/Boolean_data_type) fonksiyonudur, dolayısıyla bir mantıksal veya için [_∨_ işaretini](https://en.wikipedia.org/wiki/Logical_disjunction) ve bir mantıksal ve için [_∧_ işaretini kullanır](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -174,7 +174,7 @@ Bu durumlardan biri doğruysa bir istisnai durma söz konusudur:
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_** [`SSTORE`](https://www.evm.codes/#55) değerini G<sub>callstipend</sub> değerinden daha fazla gazınız yoksa çalıştıramazsınız (Ek G'de 2300 olarak tanımlanmıştır).
 
-## 9.4.3 Sıçrama Varış Noktası Doğruluğu {#943-jump-dest-valid}
+## 9.4.3 Sıçrama Varış Noktası Doğruluğu \{#943-jump-dest-valid}
 
 Burada resmi olarak [`JUMPDEST`](https://www.evm.codes/#5b) işlem kodlarını tanımlıyoruz. Sadece 0x5B bayt değerini arayamayız, çünkü bir PUSH'un içinde de olabilir (ve bu yüzden bir işlem kodu değil, veridir).
 
@@ -184,7 +184,7 @@ Bu fonksiyon 152. denklemde _D<sub>J</sub>(c,i)_ öğesini tanımlamak için kul
 
 Tüm ayrı durumlarda yeni işlem koduna giderek kodun geri kalanına bakarız ve buradan başlayan kümeyi alırız. _c[i]_ güncel işlem kodudur, bu yüzden _N(i,c[i])_ bir sonraki işlem kodunun konumudur. Bu yüzden _D<sub>J</sub>(c,N(i,c[i]))_, sonraki işlem kodunda başlayan geçerli işlem kodlarının bir kümesidir. Eğer şu anki işlem kodu `JUMPDEST` değilse, sadece o kümeyi döndürün. `JUMPDEST` ise, sonuç kümesine dahil edin ve döndürün.
 
-## 9.4.4 Normal durma {#944-normal-halt}
+## 9.4.4 Normal durma \{#944-normal-halt}
 
 Durma fonksiyonu _H_, üç farklı değer türü döndürebilir.
 
@@ -192,7 +192,7 @@ Durma fonksiyonu _H_, üç farklı değer türü döndürebilir.
 - Eğer çıktı oluşturmayan bir durma işlem kodumuz varsa, ([`STOP`](https://www.evm.codes/#00) ya da [`SELFDESTRUCT`](https://www.evm.codes/#ff)), sıfır boyutlu baytlardan oluşan bir diziyi dönen veri olarak döndürün. Bunun boş bir kümeden çok daha farklı olduğunu not edin. Bu değer EVM'nin gerçekten durduğu anlamına gelir, yalnız okunacak bir dönen veri yoktur.
 - Eğer çıktı oluşturan bir işlem kodumuz varsa ([`RETURN`](https://www.evm.codes/#f3) ya da [`REVERT`](https://www.evm.codes/#fd)), o işlem kodu tarafından belirtilen bayt dizisini döndürün. Bu dizi bellekten alınır, yığının başındaki değer (_μ<sub>s</sub>[0]_) ilk bayttır ve ondan sonraki değer de (_μ<sub>s</sub>[1]_) uzunluktur.
 
-## H.2 Talimat kümesi {#h2-instruction-set}
+## H.2 Talimat kümesi \{#h2-instruction-set}
 
 EVM'nin son alt kümesine olan 9.5'e gitmeden önce, talimatların kendilerine bir bakalım. Bu talimatlar, 29. sayfada başlayan Ek H.2'de tanımlanmıştır. O spesifik işlem koduyla değişen olarak belirtilmeyen her şeyin aynı kalması beklenir. Değişen değişkenler \<something\>′ olarak belirtilir.
 
@@ -237,7 +237,7 @@ Eğer _σ[μ<sub>s</sub>[0] mod 2<sup>160</sup>] ≠ ∅_ ise, bu adresle ilgili
 
 Herhangi bir yığın öğesini kullanabilmek için onu çıkarmamız gerektiğini, yani üstündeki her yığın öğesini çıkarmamız gerektiğini unutmayın. [`DUP<n>`](https://www.evm.codes/#8f) ve [`SWAP<n>`](https://www.evm.codes/#9f) durumlarında bu, on altı değere kadar ekleme ve çıkarma yapmak mecburiyeti anlamına gelir.
 
-## 9.5 Yürütme döngüsü {#95-exec-cycle}
+## 9.5 Yürütme döngüsü \{#95-exec-cycle}
 
 Artık her parçasına hakim olduğumuza göre, EVM'nin yürütme döngüsünün nasıl belgelendiğini sonunda anlayabiliriz.
 
@@ -254,7 +254,7 @@ Yeni durum: _(σ', μ', A', I')_.
 
 Artık EVM tamamen açıklanmıştır.
 
-## Sonuç {#conclusion}
+## Sonuç \{#conclusion}
 
 Matematiksel gösterim kesindir ve Sarı Kağıdın Ethereum'un her detayını belirtmesini sağlamıştır. Yine de, bazı dezavantajları vardır:
 

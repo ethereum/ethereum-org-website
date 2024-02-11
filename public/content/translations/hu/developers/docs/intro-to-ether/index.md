@@ -4,11 +4,11 @@ description: Bevezetés fejlesztőknek az ether kriptovalutába.
 lang: hu
 ---
 
-## Előfeltételek {#prerequisites}
+## Előfeltételek \{#prerequisites}
 
 Ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először olvassa el a [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) oldalunkat.
 
-## Mi az a kriptovaluta? {#what-is-a-cryptocurrency}
+## Mi az a kriptovaluta? \{#what-is-a-cryptocurrency}
 
 A kriptovaluta a csere eszköze, amelyet egy blokkláncalapú főkönyv biztosít.
 
@@ -16,7 +16,7 @@ A csere eszköze bármi lehet, amit széles körben elfogadnak az áruk és szol
 
 Az első kriptovaluta a Bitcoin volt, amelyet Satoshi Nakamoto hozott létre. A Bitcoin 2009-es elindulása óta az emberek ezernyi kriptovalutát hoztak létre számos különféle blokkláncon.
 
-## Mi az ether? {#what-is-ether}
+## Mi az ether? \{#what-is-ether}
 
 **Ether (ETH)** a kriptovaluta, amelyet számtalan dologra használnak az Ethereum hálózaton. Alapvetően ez az egyetlen elfogadott fizetési eszköz a tranzakciódíjakhoz, és a [Beolvadás](/roadmap/merge) után ether kell ahhoz, hogy blokkot javasoljanak és validáljanak a főhálózaton. Az ether emellett az elsődleges fedezet a [decentralizált pénzügyek (DeFi)](/defi) kölcsönzési piacain, az NFT (nem helyettesíthető token) piactereken könyvelési egység, fizetség a szolgáltatások nyújtásakor vagy termékeladáskor és még sok más esetben.
 
@@ -28,13 +28,13 @@ Ezért még ha egy rosszindulatú dapp egy végtelen körforgást indítana is e
 
 [Gyakori](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [az, hogy](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [összekapcsolják](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) az Ethereumot és az ethert – amikor az emberek az Ethereum árára gondolnak, akkor az ethernek az árát értik rajta.
 
-## Az ether létrehozása (minting) {#minting-ether}
+## Az ether létrehozása (minting) \{#minting-ether}
 
 A minting az a folyamat, amikor új ethert hoznak létre az Ethereum főkönyvön. A mögöttes Ethereum protokoll kreálja az új ethert, a felhasználók nem tudnak ilyet tenni.
 
 Az ether minden javasolt blokk jutalmaként keletkezik, illetve minden korszakban azért a validátori tevékenységért jár, ami a konszenzus létrehozását adja. A teljes kiadott összeg függ a validátorok számától, és hogy ők mennyi ethert helyeztek letétbe. Ez a teljes kiadás ideális esetben egyenlően oszlik el a validátorok között az, mivel minden validátor jóhiszemű és online van, de a valóságban változik a validátor teljesítménye alapján. A blokkjavasló a kiadott összeg 1/8-át kapja meg, a többi eloszlik a többi validátor között. A blokkjavasló emellett még borravalót kap a tranzakciós díjból és MEV-hez (maximálisan kinyerhető érték) kapcsolódó bevételt, ez azonban az újrahasznált etherből ered, nem az újból.
 
-## Az ether elégetése {#burning-ether}
+## Az ether elégetése \{#burning-ether}
 
 Ahogy új ether keletkezik a blokkhoz kapcsolódó jutalmak következtében, úgy meg is szűnik, amit elégetésnek nevezünk. Amikor az ethert elégetik, az örökre kivonódik a körforgásból.
 
@@ -42,7 +42,7 @@ Ez minden tranzakciónál megtörténik az Ethereumon. Amikor a felhasználó fi
 
 Az alapdíj elégetése megakadályozza, hogy a blokk-készítők manipulálják a tranzakciókat. Például, ha egy blokk-készítő megkapná az alapdíjat, akkor a saját tranzakcióit ingyen tehetné be, míg a többiek díját megemelné. Alternatívaként vissza lehetne adni az alapdíjat a felhasználóknak láncon kívül, ami egy homályosabb és komplexebb tranzakciósilleték-piachoz vezetne.
 
-## Az ether címletei {#denominations}
+## Az ether címletei \{#denominations}
 
 Mivel számos tranzakció értéke az Ethereumon viszonylag kicsi, ezért az ether számos címlettel bír, amelyek kisebb egységek. Ezekből a wei és a gwei a legfontosabbak.
 
@@ -55,7 +55,7 @@ Gwei vagyis giga wei általában a gázdíj meghatározásában jelenik meg az E
 | Wei    | 10<sup>-18</sup> | Technikai implementáció            |
 | Gwei   | 10<sup>-9</sup>  | A felhasználóknak érthető gázdíjak |
 
-## Az ether küldése {#transferring-ether}
+## Az ether küldése \{#transferring-ether}
 
 Az Ethereumon minden tranzakció tartalmaz egy `value` (érték) mezőt, ami az elküldendő ether összegét mutatja wei címletben, hogy a küldő címéről a fogadó címére érkezzen.
 
@@ -63,13 +63,13 @@ Amikor a fogadó címe egy [okosszerződés](/developers/docs/smart-contracts/),
 
 [Bővebben a tranzakciókról](/developers/docs/transactions/)
 
-## Az ether-egyenleg lekérdezése {#querying-ether}
+## Az ether-egyenleg lekérdezése \{#querying-ether}
 
 A felhasználók bármelyik [számla](/developers/docs/accounts/) egyenlegét meg tudják nézni az adott számla `balance` (egyenleg) mezőjében, ami az ott lévő ethert weiben mutatja.
 
 Az [Etherscan](https://etherscan.io) egy népszerű eszköz arra, hogy egy webalapú alkalmazásban megnézhessék egy adott cím egyenlegét. Például [ez az Etherscan oldal](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) megmutatja az Ethereum Alapítvány egyenlegét. A számlaegyenlegeket a tárcák lekérdezésével vagy a csomópontokon közvetlenül is meg lehet nézni.
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Az Ether és az Ethereum meghatározása](https://www.cmegroup.com/education/courses/introduction-to-ether/defining-ether-and-ethereum.html) – _CME Group_
 - [Ethereum fehérkönyv](/whitepaper/): Az eredeti javaslat az Ethereum megalkotására. A jelen dokumentum az ether lényegét és a kialakításának célját írja le.

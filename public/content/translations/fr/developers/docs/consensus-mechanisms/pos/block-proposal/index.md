@@ -6,15 +6,15 @@ lang: fr
 
 Les blocs sont les unités de base de la blockchain. Ce sont des paquets d'informations distincts qui sont transmis entre les nœuds, acceptés puis ajoutée à la base de données de chaque nœud. Cette page explique comment ils sont construits.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 La proposition de blocs fait partie du protocole de preuve d'enjeu. Pour mieux comprendre cette page, nous vous recommandons de lire celle sur la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) et [l'architecture des blocs](/developers/docs/blocks/).
 
-## Qui produit les blocs ? {#who-produces-blocks}
+## Qui produit les blocs ? \{#who-produces-blocks}
 
 Les comptes de validateurs proposent les blocs. Les validateurs sont gérés par des opérateurs de nœuds qui exécutent un logiciel de validation avec leurs clients d'exécution et de consensus, et qui ont déposé au moins 32 ETH dans le contrat de dépôt. Cependant, chaque validateur est occasionnellement responsable de la proposition d'un bloc. Ethereum mesure le temps en créneaux et en périodes. Chaque créneau dure douze secondes, et 32 créneaux (6,4 minutes) forment une période. Chaque créneau est une occasion d'ajouter un nouveau bloc sur Ethereum.
 
-### Sélection aléatoire {#random-selection}
+### Sélection aléatoire \{#random-selection}
 
 Un seul validateur est choisi de manière pseudo-aléatoire pour proposer un bloc à chaque créneau. Il n'existe pas de véritable aléa dans une blockchain, car si chaque nœud générait des nombres véritablement aléatoires, ils ne pourraient pas parvenir à atteindre un consensus. Au lieu de cela, l'objectif est de rendre le processus de sélection des validateurs imprévisible. Le pseudo-aléa est réalisé sur Ethereum à l'aide d'un algorithme appelé RANDAO, qui mélange un hachage du validateur qui propose le bloc avec une graine qui est mise à jour à chaque bloc. Cette valeur est utilisée pour sélectionner un validateur spécifique parmi l'ensemble des validateurs. La sélection des validateurs est fixée deux périodes à l'avance afin de se protéger contre certains types de manipulation de la graine utilisée.
 
@@ -22,7 +22,7 @@ Bien que les validateurs ajoutent des données à RANDAO à chaque créneau, la 
 
 Un seul validateur est sélectionné à chaque créneau pour proposer un bloc. Dans des conditions normales, un seul producteur de bloc crée et publie un unique bloc dans son créneau dédié. Créer deux blocs pour le même créneau est une infraction passible de sanction, souvent appelée « équivoque ».
 
-## Comment le bloc est-il créé ? {#how-is-a-block-created}
+## Comment le bloc est-il créé ? \{#how-is-a-block-created}
 
 Le proposeur de bloc est censé diffuser un bloc phare signé qui s'appuie sur la tête de la chaîne la plus récente selon son propre algorithme de choix de fourche exécuté localement. L'algorithme de choix entre les possibles fourches regroupe toutes les attestations restantes du créneau précédent en une file d'attente, puis trouve le bloc avec le plus grand poids cumulé d'attestations dans son historique. Ce bloc est le parent du nouveau bloc créé par le proposeur.
 
@@ -50,17 +50,17 @@ Toutes ces données sont collectées dans un bloc phare, signées, puis diffusé
 
 En savoir plus sur [l'anatomie des blocs](/developers/docs/blocks).
 
-## Qu'arrive-t-il au block ? {#what-happens-to-blocks}
+## Qu'arrive-t-il au block ? \{#what-happens-to-blocks}
 
 Le bloc est ajouté à la base de données locale du proposeur de bloc puis diffusé aux pairs via le réseau de communication de la couche de consensus. Lorsqu'un validateur reçoit le bloc, il vérifie les données qu'il contient, notamment en vérifiant que le bloc a le bon bloc parent, correspond au créneau actuel, que l'index du proposeur est bien celui attendu, que RANDAO est valide et enfin que le proposeur n'a pas été sanctionné. L'`exécution_payload` est décompressé, et le client d'exécution du validateur exécute à nouveau toutes les transactions de la liste pour vérifier le changement d'état proposé. Si le bloc passe toutes ces vérifications, chaque validateur ajoute le bloc à sa propre chaîne canonique. Le processus recommence ensuite lors du créneau suivant.
 
-## Récompenses du bloc {#block-rewards}
+## Récompenses du bloc \{#block-rewards}
 
 Le proposeur de bloc reçoit une rémunération pour son travail. Il y a `base_reward`, une récompense de base calculée en fonction du nombre de validateurs actifs et de leurs soldes effectifs. Ensuite, le validateur reçoit une fraction de la récompense de base (`base_reward`) pour chaque attestation valide incluse dans le bloc ; plus il y a de validateurs qui attestent le bloc, plus grande est la récompense pour le proposeur de bloc. Il y a également une récompense pour les validateurs signalant des infractions passibles de sanction, égale à `1/512 * effective balance` pour chaque validateur sanctionné.
 
 [Plus d'informations sur les récompenses et sanctions](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [Introduction aux blocs](/developers/docs/blocks/)
 - [Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)

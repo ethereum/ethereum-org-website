@@ -13,7 +13,7 @@ lang: id
 published: 2020-11-14
 ---
 
-## Apa yang akan di pelajari pada tutorial ini? {#what-is-this-tutorial-about}
+## Apa yang akan di pelajari pada tutorial ini? \{#what-is-this-tutorial-about}
 
 Pada tutorial ini, Anda akan belajar cara:
 
@@ -26,11 +26,11 @@ Asumsi:
 - Anda terbiasa dengan `JavaScript` dan `TypeScript`
 - Anda telah menyelesaikan tutorial `Waffle` lainnya atau mengetahui beberapa hal tentangnya
 
-## Mocking dinamis {#dynamic-mocking}
+## Mocking dinamis \{#dynamic-mocking}
 
 Mengapa mocking dinamis sangat berguna? Baiklah, hal ini mengizinkan kita menulis tes unit ketimbang tes yang terintegrasi. Apa maksudnya? Hal ini berarti bahwa kita tidak perlu khawatir tentang dependensi kontrak pintar, sehingga kita bisa menguji semuanya secara terisolasi. Saya akan menunjukan bagaimana cara Anda melakukannya.
 
-### **1. Proyek** {#1-project}
+### **1. Proyek** \{#1-project}
 
 Sebelum memulai, kita perlu menyiapkan proyek node.js sederhana:
 
@@ -69,7 +69,7 @@ Struktur proyek Anda seharusnya terlihat seperti ini:
 └── test
 ```
 
-### **2. Kontrak pintar** {#2-smart-contract}
+### **2. Kontrak pintar** \{#2-smart-contract}
 
 Untuk memulai mocking dinamis, kita membutuhkan kontrak pintar dengan dependensi. Tenang, saya akan membantu!
 
@@ -118,7 +118,7 @@ $ npx waffle
 
 Mudah, bukan? Dalam folder `build/`, dua file sesuai dengan kontrak dan antar mukanya muncul. Kita akan menggunakannya nanti untuk percobaan.
 
-### **3. Pengujian** {#3-testing}
+### **3. Pengujian** \{#3-testing}
 
 Mari kita buat file bernama `AmIRichAlready.test.ts` untuk tes yang sebenarnya. Pertama, kita harus menangani hasil impor. Kita akan membutuhkannya nanti:
 
@@ -253,7 +253,7 @@ Anda jalankan tesnya...
 
 ....dan ini dia! Kontrak kita tampak berjalan sebagaimana mestinya :)
 
-## Menguji pemanggilan kontrak {#testing-contract-calls}
+## Menguji pemanggilan kontrak \{#testing-contract-calls}
 
 Mari kita ringkas apa yang telah kita lakukan sejauh ini. Kita telah menguji fungsionalitas kontrak `AmIRichAlready` kita dan tampaknya bekerja dengan benar. Artinya, kita telah selesai, bukan? Belum selesai! Waffle memungkinkan kita menguji kontrak bahkan lebih jauh lagi. Tapi, bagaimana persisnya? Dalam gudang senjata Waffle, ada matcher `calledOnContract()` dan `calledOnContractWith()`. Mereka akan memungkinkan kita memeriksa apakah kontrak kita memanggil kontrak mock ERC20. Berikut adalah tes dasarnya dengan salah satu matcher ini:
 
@@ -285,7 +285,7 @@ Hebat, semua test berwarna hijau.
 
 Menguji pemanggilan kontrak dengan Waffle sangatlah mudah. Dan inilah bagian terbaiknya. Matcher ini bekerja baik dalam kontrak normal dan mocked! Itu karena Waffle mencatat dan menyaring pemanggilan EVM ketimbang menginjeksi kode, seperti dalam kasus pustaka pengujian populer untuk teknologi lainnya.
 
-## Garis Akhir {#the-finish-line}
+## Garis Akhir \{#the-finish-line}
 
 Selamat! Sekarang Anda tahu cara menggunakan Waffle untuk menguji pemanggilan kontrak dan kontrak mock secara dinamis. Ada fitur yang jauh lebih menarik untuk ditemukan. Saya menyarankan menyelam ke dalam dokumentasi Waffle.
 

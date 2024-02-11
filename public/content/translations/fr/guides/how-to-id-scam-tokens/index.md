@@ -4,7 +4,7 @@ description: Comprendre les jetons frauduleux, comment ils se présentent comme 
 lang: fr
 ---
 
-# Comment identifier les jetons frauduleux {#identify-scam-tokens}
+# Comment identifier les jetons frauduleux \{#identify-scam-tokens}
 
 Ethereum est couramment utilisé par des groupes pour créer des jetons échangeables ou, dans un certain sens, leur propre monnaie. Ces jetons suivent généralement une norme, [ERC-20](/developers/docs/standards/tokens/erc-20/). Cependant, partout où il existe des cas d'utilisation légitimes qui apportent de la valeur, il y a aussi des criminels qui essaient de voler cette valeur à leur profit.
 
@@ -15,6 +15,7 @@ Ils peuvent vous tromper de deux façons :
 
 Pour illustrer ce que sont les jetons frauduleux et comment les identifier, nous allons examiner un exemple de jeton frauduleux : [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Ce jeton tente de ressembler au jeton [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) légitime.
 
+{
 <ExpandableCard
 title="Qu'est-ce que ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum est une organisation qui développe et gère des <a href="/developers/docs/scaling/optimistic-rollups/">rollups optimistiques</a>. Au départ, Arbitrum était organisée comme une entreprise à but lucratif, mais elle a ensuite pris des mesures pour se décentraliser. Dans le cadre de ce processus, un <a href="/dao/#token-based-membership">jeton de gouvernance</a> échangeable a été créé.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Pourquoi le token malveillant s'appelle-t-il wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ Il existe une convention dans Ethereum selon laquelle lorsqu'un actif n'est pas 
 Il n'est pas logique de créer une version enveloppée d'un jeton ERC-20 déjà présent sur Ethereum, mais les escrocs s'appuient sur l'apparence de légitimité plutôt que sur la réalité sous-jacente.
 
 </ExpandableCard>
+}
 
-## Comment fonctionnent les jetons frauduleux ? {#how-do-scam-tokens-work}
+## Comment fonctionnent les jetons frauduleux ? \{#how-do-scam-tokens-work}
 
 L'objectif d'Ethereum est la décentralisation. Cela signifie qu'il n'y a pas d'autorité centrale qui puisse confisquer vos actifs ou vous empêcher de déployer un contrat intelligent. Mais cela signifie également que les escrocs peuvent déployer n'importe quel contrat intelligent.
 
+{
 <ExpandableCard
 title="Qu'est-ce qu'un contrat intelligent ?"
 contentPreview=''>
@@ -44,10 +49,11 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Les contrats intelligents</a> sont les programmes qui s'exécutent sur la blockchain Ethereum. Chaque jeton ERC-20, par exemple, est implémenté comme contrat intelligent.
 
 </ExpandableCard>
+}
 
 Plus précisément, Arbitrum a déployé un contrat qui utilise le symbole `ARB`. Mais cela n'empêche pas d'autres personnes de déployer un contrat qui utilise exactement le même symbole, ou un symbole similaire. Quiconque rédige le contrat définit son contenu.
 
-## Paraître légitime {#appearing-legitimate}
+## Paraître légitime \{#appearing-legitimate}
 
 Les créateurs de jetons frauduleux ont recours à plusieurs astuces pour paraître légitimes.
 
@@ -61,13 +67,13 @@ Les créateurs de jetons frauduleux ont recours à plusieurs astuces pour paraî
 
 - **Transferts légitimes**. _Les propriétaires légitimes ne paieraient pas pour transférer un jeton frauduleux à d'autres, donc s'il y a des transferts, ils doivent être légitimes, n'est-ce pas ? _ **Faux**. Les événements `Transfert` sont produits par le contrat ERC-20. Un escroc peut facilement rédiger le contrat de manière à ce qu'il produise ces actions.
 
-## Sites web frauduleux {#websites}
+## Sites web frauduleux \{#websites}
 
 Les escrocs peuvent également produire des sites web très convaincants, parfois même des clones précis de sites authentiques avec des interfaces utilisateur identiques, mais avec des astuces subtiles. Il peut s'agir, par exemple, de liens externes qui semblent légitimes mais qui renvoient l'utilisateur vers un site frauduleux, ou d'instructions incorrectes qui amènent l'utilisateur à exposer ses clés ou à envoyer des fonds à l'adresse d'un pirate.
 
 Une bonne pratique pour éviter cela est de vérifier soigneusement l'URL des sites que vous visitez et d'enregistrer les adresses de sites authentiques connus dans vos signets. Ensuite, vous pouvez accéder au site réel par le biais de vos signets sans faire accidentellement de fautes d'orthographe ou dépendre de liens externes.
 
-## Comment se protéger ? {#protect-yourself}
+## Comment se protéger ? \{#protect-yourself}
 
 1. **Vérifier l'adresse du contrat**. Les jetons légitimes proviennent d'organisations légitimes, et vous pouvez consulter les adresses des contrats sur le site web de l'organisation. Par exemple, [pour `ARB`, vous pouvez consulter les adresses légitimes ici](https://docs.arbitrum.foundation/deployment-addresses#token).
 
@@ -87,7 +93,7 @@ Il s'agit d'un autre élément qui montre que `wARB` n'est probablement pas un j
 
    ![Les tokens frauduleux sur Etherscan](./etherscan-scam.png)
 
-## Conclusion {#conclusion}
+## Conclusion \{#conclusion}
 
 Tant qu'il y aura de la valeur dans le monde, il y aura des malfaiteurs qui tenteront de s'en emparer, et dans un monde décentralisé, il n'y a personne d'autre que vous-même pour vous protéger. Suivez ces indications pour vous aider à distinguer les jetons légitimes des arnaques :
 

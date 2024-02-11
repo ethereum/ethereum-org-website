@@ -17,9 +17,9 @@ Când analizăm opțiunile de stocare descentralizată (dStorage), există câte
 - Descentralizarea
 - Consensul
 
-## Mecanismul de persistență/structura stimulativă {#persistence-mechanism}
+## Mecanismul de persistență/structura stimulativă \{#persistence-mechanism}
 
-### Bazat pe blockchain {#blockchain-based}
+### Bazat pe blockchain \{#blockchain-based}
 
 Pentru ca o parte din date să persiste pentru totdeauna, trebuie să folosim un mecanism de persistență. De exemplu, pe Ethereum mecanismul de persistență este că întregul lanț trebuie luat în considerare atunci când se rulează un nod. Pe măsură ce se adaugă noi tranşe de date la capătul lanțului, acesta continuă să crească - necesitând ca fiecare nod să reproducă toate datele încorporate.
 
@@ -34,7 +34,7 @@ Platforme cu persistență bazată pe blockchain:
 - Ethereum
 - [Arweave](https://www.arweave.org/)
 
-### Bazată pe contracte {#contract-based}
+### Bazată pe contracte \{#contract-based}
 
 Persistența **bazată pe contracte** presupune că datele nu pot fi replicate de fiecare nod și stocate pentru totdeauna, ci trebuie întreținute prin acorduri contractuale. Acestea sunt acorduri încheiate cu noduri multiple care au promis să păstreze o transă de date o perioadă. Acestea trebuie rambursate sau reînnoite ori de câte ori se epuizează pentru a menține persistența datelor.
 
@@ -47,7 +47,7 @@ Platforme cu persistență bazată pe contracte:
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
 
-### Considerații suplimentare {#additional-consideration}
+### Considerații suplimentare \{#additional-consideration}
 
 IPFS este un sistem distribuit de stocare și accesare a fișierelor, site-urilor web, aplicațiilor și datelor. Sistemul nu are încorporată o schemă de stimulare, în schimb se poate utiliza cu oricare dintre soluțiile de stimulare de mai sus bazate pe contracte, pentru o persistență de lungă durată. Altă modalitate ca datele să persiste pe IPFS este de a lucra cu un serviciu de „pinning” (fixare), care se va ocupa cu „fixarea” datelor pentru dvs. Ați putea chiar să vă rulați propriul nod IPFS, contribuind astfel la persistența rețelei, pentru a vă păstra datele dvs. și/sau ale altora în mod gratuit!
 
@@ -56,11 +56,11 @@ IPFS este un sistem distribuit de stocare și accesare a fișierelor, site-urilo
 - [web3.storage](https://web3.storage/) _(Serviciul IPFS/Filecoin de stocare a datelor pe un nod)_
 - [Infura](https://infura.io/product/ipfs) _(Serviciul IPFS de stocare a datelor pe un nod)_
 
-## Păstrarea datelor {#data-retention}
+## Păstrarea datelor \{#data-retention}
 
 Pentru a păstra datele, sistemele trebuie să dispună de un mecanism care să garanteze păstrarea datelor.
 
-### Mecanismul provocării {#challenge-mechanism}
+### Mecanismul provocării \{#challenge-mechanism}
 
 Una dintre cele mai populare modalități de a ne asigura că datele sunt păstrate este de a utiliza un anumit tip de provocare criptografică, care este emisă pentru noduri, ca să ne asigurăm că acestea încă au datele. Un exemplu simplu îl puteţi vedea la dovada-accesului la Arweave. Emit o provocare pentru noduri ca să vadă dacă dețin datele, atât la cel mai recent bloc, cât și la un bloc aleatoriu din trecut. Dacă nodul nu poate da un răspuns, este penalizat.
 
@@ -71,7 +71,7 @@ Tipuri de dStorage cu un mecanism de provocare:
 - Arweave
 - Filecoin
 
-### Descentralizarea {#decentrality}
+### Descentralizarea \{#decentrality}
 
 Nu există instrumente grozave pentru măsurarea nivelului de descentralizare a platformelor, însă în general trebuie să folosiţi instrumente care nu au o formă de KYC pentru a furniza dovezi că nu sunt centralizate.
 
@@ -84,7 +84,7 @@ Instrumente descentralizate fără KYC:
 - IPFS
 - Ethereum
 
-### Consensul {#consensus}
+### Consensul \{#consensus}
 
 Majoritatea acestor instrumente au propria versiune de [mecanism de consens](/developers/docs/consensus-mechanisms/) dar în general se bazează fie pe [**dovada-muncii (PoW)**](/developers/docs/consensus-mechanisms/pow/), fie pe [**dovada-mizei (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
@@ -100,7 +100,7 @@ Bazate pe PoS:
 - Filecoin
 - 0Chain
 
-## Instrumente corelate {#related-tools}
+## Instrumente corelate \{#related-tools}
 
 **IPFS - _InterPlanetary File System este un sistem descentralizat de stocare și indexare a fișierelor pentru Ethereum._**
 
@@ -167,13 +167,13 @@ Bazate pe PoS:
 - [Documentație](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 - [Ce este stocarea descentralizată?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [Spulberarea a cinci mituri comune despre stocarea descentralizată](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
 
-## Subiecte corelate {#related-topics}
+## Subiecte corelate \{#related-topics}
 
 - [Framework-uri de dezvoltare](/developers/docs/frameworks/)

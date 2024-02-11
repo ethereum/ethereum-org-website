@@ -4,11 +4,11 @@ description: Podstawowe standardy, do których dążymy w przestrzeniach ethereu
 lang: pl
 ---
 
-## Misja {#mission}
+## Misja \{#mission}
 
 Rozwijanie i utrzymanie najbardziej obszernego i dostępnego centrum wiedzy na temat Ethereum.
 
-## Wartości {#values}
+## Wartości \{#values}
 
 Społeczność ethereum.org dąży do bycia:
 
@@ -19,7 +19,7 @@ Społeczność ethereum.org dąży do bycia:
 - skupioną na podstawowej technologii Ethereum i przypadkach jej użycia
 - skupioną na koncepcjach i zasadach projektowania Ethereum
 
-## Czym nie jesteśmy {#what-we-are-not}
+## Czym nie jesteśmy \{#what-we-are-not}
 
 - Stroną Fundacji Ethereum
 - Platformą do promowania inwestycji lub czerpania jakichkolwiek zysków
@@ -27,17 +27,17 @@ Społeczność ethereum.org dąży do bycia:
 - DEX, CEX lub jakąkolwiek inną formą platformy finansowej
 - Platformą udzielającą jakichkolwiek porad finansowych lub prawnych
 
-## Kodeks postępowania {#code-of-conduct}
+## Kodeks postępowania \{#code-of-conduct}
 
-### Zobowiązanie {#pledge}
+### Zobowiązanie \{#pledge}
 
 Otwarte uczestnictwo jest podstawą etosu ethereum.org. Jesteśmy stroną i społecznością utrzymywaną przez tysiące użytkowników, a jest to możliwe tylko wtedy, gdy utrzymujemy przyjazne i otwarte środowisko. W tym celu współtwórcy tej strony zobowiązują się do utrzymywania środowiska wolnego od nękania dla wszystkich uczestników na wszystkich platformach ethereum.org i przestrzeniach społecznościowych. Społeczność ethereum.org akceptuje i ceni każdego, kto chce uczestniczyć w konstruktywny i przyjazny sposób, bez względu na wiek, niepełnosprawność, pochodzenie etniczne, cechy płciowe, tożsamość płciową, poziom doświadczenia, obszar specjalizacji, wykształcenie, status społeczno-ekonomiczny, narodowość, wygląd osobisty, rasę, religię lub jakikolwiek inny aspekt różnorodności.
 
-### Zakres {#scope}
+### Zakres \{#scope}
 
 Ten kodeks postępowania dotyczy wszystkich przestrzeni ethereum.org (takich jak GitHub, Discord, Figma, Crowdin, Twitter i inne platformy internetowe), a także ma zastosowanie, gdy społeczność jest reprezentowana w rzeczywistych przestrzeniach publicznych, takich jak spotkania, konferencje i wydarzenia.
 
-### Nasze standardy {#our-standards}
+### Nasze standardy \{#our-standards}
 
 Przykłady zachowań, które przyczyniają się do tworzenia przyjaznego środowiska, obejmują:
 
@@ -62,7 +62,7 @@ Przykłady niedopuszczalnych zachowań uczestników obejmują:
 - Lekceważenie próśb lub ostrzeżeń moderatorów społeczności
 - Angażowanie się w inne zachowania, które mogłyby zostać uznane za niewłaściwe w środowisku profesjonalnym
 
-### Zgłaszanie {#reporting}
+### Zgłaszanie \{#reporting}
 
 Naruszenia kodeksu postępowania będą zwykle widoczne dla społeczności, ponieważ staramy się robić wszystko w otwartych, publicznych kanałach, umożliwiając członkom społeczności samokontrolę.
 
@@ -70,6 +70,6 @@ Jeśli jednak wydarzy się coś, co Twoim zdaniem wymaga uwagi, możesz zgłosi�
 
 Podczas zgłaszania prosimy o podanie jak największej liczby szczegółów, w tym konkretnych przykładów i sygnatur czasowych. Pomoże to zapewnić uczciwy rezultat.
 
-### Egzekwowanie {#enforcement}
+### Egzekwowanie \{#enforcement}
 
 W zależności od stopnia naruszenia, osoby naruszające kodeks postępowania mogą otrzymać ostrzeżenia, bany tymczasowe lub bany permanentne od społeczności ethereum.org.

@@ -4,7 +4,7 @@ description: Ethereum hakkında bilgi edinmek için İngilizce olmayan kaynaklar
 lang: tr
 ---
 
-# Dil kaynakları {#language-resources}
+# Dil kaynakları \{#language-resources}
 
 Ethereum topluluğu küreseldir ve İngilizce bilmeyen milyonlarca kişiden oluşur.
 
@@ -14,15 +14,15 @@ Ana dilinizde okumayı tercih ediyorsanız veya İngilizce bilmeyen birini tanı
 
 Kendi dilinizde bir eğitim kaynağı mı biliyorsunuz? [Listeye eklemek için](https://github.com/ethereum/ethereum-org-website/issues/new/choose) bir konu açın!
 
-## Ethereum.org kaynakları {#ethereum-org}
+## Ethereum.org kaynakları \{#ethereum-org}
 
 Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dile yerel olarak çevrilmiştir.
 
 İki dilliyseniz ve daha fazla kişiye ulaşmamıza yardımcı olmak istiyorsanız, [ethereum.org Çeviri Programı](/contributing/translation-program/#translation-program)na da katılarak web sitesini tercüme etmemize yardımcı olabilirsiniz.
 
-## Topluluk kaynakları {#community}
+## Topluluk kaynakları \{#community}
 
-### Brezilya Portekizcesi {#br-pt}
+### Brezilya Portekizcesi \{#br-pt}
 
 **Haberler**
 
@@ -40,7 +40,7 @@ Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dil
 - [Cointimes](http://www.cointimes.com.br/) - kripto para haberleri ve eğitimi
 - [Web3 başlangıç paketi](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - en sık sorulan ve temel kripto sorularını yanıtlayan bir kılavuz
 
-### Çince {#zh}
+### Çince \{#zh}
 
 **Genel kaynaklar**
 
@@ -67,28 +67,28 @@ Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dil
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - kriptografi, güvenlik vb. açıklayan bir WeChat hesabı
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - zk teknolojisini açıklayan bir WeChat hesabı
 
-### Çekçe {#cs}
+### Çekçe \{#cs}
 
 - [Gwei.cz](https://gwei.cz) - Web3 etrafında yerel topluluk, eğitim içeriği oluşturur, çevrimiçi ve yüz yüze etkinlikler düzenler
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - yeni başlayanlar için Ethereum rehberi
 - [DAO Příručka](https://dao.gwei.cz/) - DAO'lara yeni başlayanlar için rehber
 - [Ethereum'da Uzmanlaşma](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Çekçe Ethereum'da Uzmanlaşmak
 
-### Fransızca {#fr}
+### Fransızca \{#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) - Ethereum France, etkinlikler düzenliyor, içerik oluşturuyor ve Ethereum hakkında müzakereleri teşvik ediyor
 - [Ethereum.fr](https://ethereum.fr/) - Ethereum haberleri ve eğitimleri
 - [BanklessFR](https://banklessfr.substack.com/) - Fransızca Bankless haber bülteni
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - Ethereum alt sayfası bulunan bir kripto para forumu
 
-### Almanca {#de}
+### Almanca \{#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - Solidity kullanarak
 - [Microsoft Learn (akıllı sözleşmeler)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Solidity ile Ethereum akıllı sözleşmeleri yazın
 - [Microsoft Learn (Ethereum ağları)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - Ethereum ağlarına bağlanın ve ağları dağıtın
 - [Microsoft Learn (blok zincirler)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - blok zincir geliştirmeye giriş
 
-### İtalyanca {#it}
+### İtalyanca \{#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - Akıllı sözleşmeler ve blok zincir teknolojilerine odaklı Ethereum eğitim, organizasyon ve haberleri
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - İtalyanca Ethereum podcast'i
@@ -96,11 +96,11 @@ Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dil
 - [Microsoft Learn (Akıllı sözleşmeler)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - Solidity ile Ethereum akıllı sözleşmeleri yazmayı öğrenin
 - [Microsoft Learn (dapps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - merkeziyetsiz uygulamalar ile bir kullanıcı arayüzü oluşturun
 
-### Rusça {#ru}
+### Rusça \{#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) - web3 yaratıcıları için eğitim alanı
 
-### İspanyolca {#es}
+### İspanyolca \{#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - blok zincir, DeFi ve yönetişim kursları, etkinlikleri ve blogu
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - Yeni başlayanlar için İspanyolca Ethereum rehberi
@@ -110,18 +110,18 @@ Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dil
 - [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - Solidity'de DeFi akıllı sözleşmelerinin nasıl çalıştığını öğrenin ve kendi Otomatik Piyasa Yapıcınızı oluşturun
 - [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - Başlangıçtan ileri seviyeye kadar teknik olmayan blok zincir eğitimi. Kripto ve Ethereum hakkında her şeyi öğrenin.
 
-### Türkçe {#tr}
+### Türkçe \{#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - blok zincir ve kripto para odaklı kurs
 - [Büyük yeniden adlandırma: Eth2'ye ne oldu?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - Büyük yeniden adlandırma blog gönderisinin Türkçe çevirisi, "Eth2" terminolojisinden uzaklaşmayı açıklıyor
 
-### Vietnamca {#vi}
+### Vietnamca \{#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - Ethereum, merkeziyetsiz uygulamalar, cüzdanlar ve SSS'lere genel bakış
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - Ethereum haberleri ve eğitimi için alt sayfalar içeren bir web platformu
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - Ethereum haberleri ve eğitim ile ilgili bilgiler içeren bir kripto para portalı
 
-### Japonca {#ja}
+### Japonca \{#ja}
 
 - [Japonya Sanal ve Kripto Varlıklar Borsası Birliği](https://jvcea.or.jp/)
 - [Japonya Kripto Varlık İş Birliği](https://cryptocurrency-association.org/)

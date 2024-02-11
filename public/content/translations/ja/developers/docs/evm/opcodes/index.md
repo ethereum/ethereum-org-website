@@ -4,7 +4,7 @@ description: イーサリアム仮想マシンで利用可能な全オペコー�
 lang: ja
 ---
 
-## 概要 {#overview}
+## 概要 \{#overview}
 
 [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes)で公開されている EVM リファレンスページの最新版です。 [Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf)、[Jello Paper](https://jellopaper.org/evm/)、[geth](https://github.com/ethereum/go-ethereum)の実装からも引用されています。 わかりやすいリファレンスを目指していますが、とりわけ厳密なものではありません。 すべてのエッジケースを正確に把握したい場合は、Jello Paper またはクライアント実装をご利用ください。
 

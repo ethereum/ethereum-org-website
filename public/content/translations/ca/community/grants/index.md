@@ -4,13 +4,13 @@ description: Llistat dels programes de subvencions a través de l'ecosistema Eth
 lang: ca
 ---
 
-# Subvencions Ethereum {#ethereum-grants}
+# Subvencions Ethereum \{#ethereum-grants}
 
 Els programes de la següent llista ofereixen una varietat de subvencions per a finançar projectes que treballin per la promoció de l'èxit i el creixement de l'ecosistema Ethereum. Utilitzeu aquest document com a guia per a trobar i solicitar fons que ajudin a convertir el vostre següent projecte Ethereum en un èxit.
 
 La llista ha estat confeccionada per la nostra comnunitat. Si falta alguna cosa o bé quelcom és incorrecte, editeu la pàgina!
 
-## Ampli ecosistema Ethereum {#broad-ethereum-ecosystem}
+## Ampli ecosistema Ethereum \{#broad-ethereum-ecosystem}
 
 Aquests programes donen suport a l'ample ecosistema Ethereum oferint subvencions a un gran ventall de projectes. Entre ells, solucions d'escalabilitat, desenvolupament de la comunitat, seguretat, privacitat i molts altres. Aquestes subvencions no son específiques de cap plataforma Ethereum i són un bon punt de partida si teniu cap dubte.
 
@@ -23,7 +23,7 @@ Aquests programes donen suport a l'ample ecosistema Ethereum oferint subvencions
 - [Subvenciones obertes](https://opengrants.com/explore)
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
 
-## Per projectes {#project-specific}
+## Per projectes \{#project-specific}
 
 Aquests projectes han creat les seves pròpies subvencions per projectes enfocades al desenvolupament i la experimentació amb les seves pròpies tecnologies.
 
@@ -36,13 +36,13 @@ Aquests projectes han creat les seves pròpies subvencions per projectes enfocad
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecosistema [The Graph](https://thegraph.com/)_
 - [Programa de subvencions Uniswap](https://www.unigrants.org/) – _Comunitat [Uniswap](https://uniswap.org/)_
 
-## Finançament quadràtic {#quadratic-funding}
+## Finançament quadràtic \{#quadratic-funding}
 
 Les arrels de programari lliure d'Ethereum han afavorit el creixement d'un nou model de recaptació de fons: el finançament quadràtic. Té el potencial de millorar la manera en què es subvencionarà tot tipus de béns públics en un futur. El finançament quadràtic assegura que els projectes que reben més finançament són aquells amb major demanda única. En altres paraules, projectes que pretenen millorar les vides del major nombre de persones. [Més informació sobre el finançament quadràtic.](/defi/#quadratic-funding)
 
 - [Gitcoin](https://gitcoin.co/grants)
 - [clr.fund](https://clr.fund/)
 
-## Treballar a Ethereum {#work-in-ethereum}
+## Treballar a Ethereum \{#work-in-ethereum}
 
 No esteu a punt per iniciar el vostre propi projecte? Hi ha centenars d'empreses que busquen activament persones passionades per a treballar i contribuir a l'ecosistema Ethereum. Busqueu més informació? [Descobriu llocs de treball relacionats amb Ethereum](/community/get-involved/#ethereum-jobs)

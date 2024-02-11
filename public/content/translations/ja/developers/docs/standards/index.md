@@ -5,7 +5,7 @@ lang: ja
 incomplete: true
 ---
 
-## 開発規格の概要 {#standards-overview}
+## 開発規格の概要 \{#standards-overview}
 
 イーサリアムコミュニティでは、（[イーサリアムクライアント](/developers/docs/nodes-and-clients/)やウォレットなどの）各種プロジェクトにおける様々な実装間での相互運用性を維持し、スマートコントラクトや Dapp に対してコンポーザビリティを提供するために、多くの規格を定めています。
 
@@ -20,7 +20,7 @@ incomplete: true
 - [イーサリアムにおけるプロトコル開発のガバナンスならびにネットワークアップグレードの調整](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020 年 3 月 23 日、ハドソン・ジェイムソン作成。_
 - [イーサリアム・コアデベロッパー・ミーティングの全プレイリスト](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _（YouTube のプレイリスト）_
 
-## 標準規格の種類 {#types-of-standards}
+## 標準規格の種類 \{#types-of-standards}
 
 EIP は、以下の 3 種類に分類されます:
 
@@ -37,7 +37,7 @@ EIP は、以下の 3 種類に分類されます:
 
 これらの種類やカテゴリーの詳細については、[EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)を参照してください。
 
-### トークン規格 {#token-standards}
+### トークン規格 \{#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - 投票トークン、ステーキングトークン、通貨トークンなど、代替性トークン (FT) のための標準インタフェースです。
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - transfer または transferFrom を受信した後の受信者側におけるコードの実行や、承認後における spender コードをサポートする、ERC-20 トークンのトークンインターフェイスを定義します。
@@ -51,7 +51,7 @@ EIP は、以下の 3 種類に分類されます:
 
 [トークン規格](/developers/docs/standards/tokens/)に関する詳細情報。
 
-## 参考文献 {#further-reading}
+## 参考文献 \{#further-reading}
 
 - [イーサリアム改善提案 (EIP)](/eips/)
 

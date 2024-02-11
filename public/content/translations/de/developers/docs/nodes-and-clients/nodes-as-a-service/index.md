@@ -5,15 +5,15 @@ lang: de
 sidebarDepth: 2
 ---
 
-## Einführung {#Introduction}
+## Einführung \{#Introduction}
 
 Ihren eigenen [Ethereum-Node](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) zu betreiben, kann eine Herausforderung sein, vor allem wenn Sie gerade beginnen oder beim schnellen Skalieren. Es gibt eine [Anzahl von Diensten](#popular-node-services), die optimierte Node-Infrastrukturen für Sie ausführen, damit Sie sich stattdessen auf die Entwicklung Ihrer Anwendung oder Ihres Produkts konzentrieren können. Wir erklären Ihnen, wie Node-Dienste funktionieren, welche Vor- und Nachteile sie haben und listen Anbieter auf, falls Sie anfangen möchten, sie zu verwenden.
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen \{#prerequisites}
 
 Wenn Sie noch nicht wissen, was Nodes und Clients sind, lesen Sie [Nodes und Clients](/developers/docs/nodes-and-clients/).
 
-## Staker {#stakoooooooooooooors}
+## Staker \{#stakoooooooooooooors}
 
 Solo-Staker müssen ihre eigene Infrastruktur betreiben, anstatt sich auf Drittanbieter zu verlassen. Das bedeutet, dass ein Ausführungsclient zusammen mit einem Konsensclient betrieben wird. Vor [der Zusammenführung](/roadmap/merge) war es möglich, nur einen Konsensclient zu betreiben und einen zentralisierten Anbieter für Ausführungsdaten zu verwenden; das ist jetzt nicht mehr möglich – ein Solo-Staker muss beide Clients betreiben. Es gibt jedoch Dienste, die diesen Prozess erleichtern können.
 
@@ -21,7 +21,7 @@ Solo-Staker müssen ihre eigene Infrastruktur betreiben, anstatt sich auf Dritta
 
 Die auf dieser Seite beschriebenen Dienste gelten für Nicht-Staking-Nodes.
 
-## Wie funktionieren Node-Dienste? {#how-do-node-services-work}
+## Wie funktionieren Node-Dienste? \{#how-do-node-services-work}
 
 Node-Dienste betreiben im Hintergrund dezentralisierte Node-Clients für Sie, so dass Sie sich nicht darum kümmern müssen.
 
@@ -35,19 +35,19 @@ Oft laufen Node-Dienste mit einer Vielzahl von [Node-Clients](/developers/docs/n
 
 Es ist wichtig zu beachten, dass Node-Dienste keinesfalls Ihre privaten Schlüssel oder Informationen speichern können und sollten.
 
-## Was sind die Vorteile bei der Verwendung eines Node-Dienstes? {#benefits-of-using-a-node-service}
+## Was sind die Vorteile bei der Verwendung eines Node-Dienstes? \{#benefits-of-using-a-node-service}
 
 Der Hauptvorteil bei der Nutzung eines Node-Dienstes besteht darin, dass keine Entwicklungszeit benötigt wird, um die Nodes selbst warten und zu verwalten. So können Sie sich auf den Aufbau Ihres Produkts konzentrieren, anstatt sich um die Wartung der Infrastruktur kümmern zu müssen.
 
 Der Betrieb eigener Nodes kann sehr kostspielig sein, vom Speicherplatz über die Bandbreite bis hin zu wertvoller Entwicklungszeit. Dinge wie das Starten weiterer Nodes bei der Skalierung, das Aufrüsten von Nodes auf die neueste Version und die Sicherstellung der Zustandskonsistenz können von der Entwicklung und dem Einsatz von Ressourcen für Ihr gewünschtes Web3-Produkt ablenken.
 
-## Was sind die Nachteile eines Node-Dienstes? {#cons-of-using-a-node-service}
+## Was sind die Nachteile eines Node-Dienstes? \{#cons-of-using-a-node-service}
 
 Durch den Einsatz eines Node-Dienstes zentralisieren Sie den Infrastrukturaspekt Ihres Produkts. Aus diesem Grund bevorzugen Projekte, für die Dezentralisierung die oberste Priorität hat, eher selbst bereitgestellte Nodes gegenüber Outsourcing an Dritte.
 
 Erfahren Sie mehr über die [Vorteile des Betriebs Ihres eigenen Nodes](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Beliebte Node-Dienste {#popular-node-services}
+## Beliebte Node-Dienste \{#popular-node-services}
 
 Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neue hinzu, die noch fehlen! Jeder Node-Dienst bietet zusätzlich zu kostenlosen oder bezahlten Stufen verschiedene Vorteile und Funktionen. Bevor Sie sich entscheiden, sollten Sie prüfen, welcher am besten zu Ihren Bedürfnissen passt.
 
@@ -372,15 +372,15 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
   - Mit Kryptowährung zahlen
   - Externe Unterstützung für zusätzliche Verhaltenskriterien
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 - [Liste der Ethereum-Knotendienste](https://ethereumnodes.com/)
 
-## Verwandte Themen {#related-topics}
+## Verwandte Themen \{#related-topics}
 
 - [Knotenpunkte und Clients](/developers/docs/nodes-and-clients/)
 
-## Verwandte Tutorials {#related-tutorials}
+## Verwandte Tutorials \{#related-tutorials}
 
 - [Erste Schritte in der Ethereum-Entwicklung mit Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Leitfaden zum Versenden von Transaktionen über web3 und Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

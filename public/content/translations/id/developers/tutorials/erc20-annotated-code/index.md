@@ -10,13 +10,13 @@ skill: beginner
 published: 2021-03-09
 ---
 
-## Pendahuluan {#introduction}
+## Pendahuluan \{#introduction}
 
 Salah satu kegunaan paling umum dari Ethereum untuk suatu grup adalah membuat token yang dapat dipertukarkan, dalam pengertian sebagai mata uang mereka sendiri. Token ini biasanya mengikuti standar, [ERC-20](/developers/docs/standards/tokens/erc-20/). Standar ini memungkinkan penulisan perangkat, seperti kumpulan likuiditas dan dompet, yang bekerja dengan semua token ERC-20. Dalam artikel ini, kita akan menganalisis [penerapan ERC20 Solidity OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), maupun [definisi antarmuka](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 Ini adalah kode sumber beranotasi. Jika Anda ingin menerapkan ERC-20, [baca tutorial ini](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
-## Antarmuka {#the-interface}
+## Antarmuka \{#the-interface}
 
 Tujuan standar seperti ERC-20 adalah membuat banyak penerapan token yang saling berinteraksi di seluruh aplikasi, seperti dompet dan bursa terdesentralisasi. Untuk mencapai hal tersebut, kita membuat [antamuka](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Kode apa pun yang perlu menggunakan kontrak token dapat menggunakan definisi yang sama dalam antarmuka dan dapat menjadi kompatibel dengan semua kontrak token yang menggunakannya, apakah dompet seperti MetaMask, dapp seperti etherscan.io, atau kontrak berbeda seperti pool likuiditas.
 
@@ -184,7 +184,7 @@ Akhirnya, `transferFrom` digunakan oleh pembelanja untuk benar-benar menggunakan
 
 Aksi ini dipancarkan ketika status kontrak ERC-20 berubah.
 
-## Kontrak Sebenarnya {#the-actual-contract}
+## Kontrak Sebenarnya \{#the-actual-contract}
 
 Ini adalah kontrak sebenarnya yang menerapkan standar ERC-20, [yang diambil dari sini](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). Kontrak ini tidak dimaksudkan untuk digunakan seperti namanya, tetapi Anda dapat [mewarisi](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) untuk memperluasnya menjadi sesuatu yang berguna.
 
@@ -195,7 +195,7 @@ pragma solidity >=0.6.0 <0.8.0;
 
 &nbsp;
 
-### Impor Pernyataan {#import-statements}
+### Impor Pernyataan \{#import-statements}
 
 Selain definisi antarmuka di atas, definisi kontrak mengimpor dua file lainnya:
 
@@ -241,7 +241,7 @@ Komentar ini menjelaskan tujuan dari kontrak.
 
 ```
 
-### Definisi Kontrak {#contract-definition}
+### Definisi Kontrak \{#contract-definition}
 
 ```solidity
 contract ERC20 is Context, IERC20 {
@@ -259,7 +259,7 @@ This line specifies the inheritance, in this case from `IERC20` from above and `
 
 Baris ini melekatkan pustaka `SafeMath` ke jenis `uint256`. Anda dapat menemukan pustaka ini [di sini](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
 
-### Definisi Variabel {#variable-definitions}
+### Definisi Variabel \{#variable-definitions}
 
 Definisi-definisi ini menentukan variabel status kontrak. Variabel-variabel ini dinyatakan bersifat `pribadi`, tetapi hanya berarti bahwa kontrak lain di rantai blok tidak dapat membaca variabel-variabel tersebut. _Tidak ada rahasia di rantai blok_, perangkat lunak di setiap simpul memiliki status dari setiap kontrak dalam setiap blok. Dengan konvensi, variabel status diberi nama `_<something>`.
 
@@ -303,7 +303,7 @@ Solusinya adalah menelusuri bilangan bulat, tetapi sebagai gantinya menghitung t
 
 Aplikasi perlu mengetahui cara menampilkan saldo token. Jika pengguna memiliki 3.141.000.000.000.000.000 wei, apakah itu sama dengan 3,14 ETH? 31,41 ETH? 3.141 ETH? Dalam kasus ether, nilai ini didefiniskan sebagai 10^18 wei untuk ETH, tetapi untuk token Anda, Anda dapat memilih nilai yang berbeda. Jika membagi token tidak masuk akal, Anda dapat menggunakan nilai nol `_decimals`. Jika Anda ingin menggunakan standar yang sama seperti ETH, gunakan nilai **18**.
 
-### Konstruktor {#the-constructor}
+### Konstruktor \{#the-constructor}
 
 ```solidity
     /**
@@ -324,7 +324,7 @@ Aplikasi perlu mengetahui cara menampilkan saldo token. Jika pengguna memiliki 3
 
 Konstruktor dipanggil ketika kontrak terlebih dahulu dibuat. Dengan konvensi, parameter fungsi diberi nama `<something>_`.
 
-### Fungsi Antarmuka Pengguna {#user-interface-functions}
+### Fungsi Antarmuka Pengguna \{#user-interface-functions}
 
 ```solidity
     /**
@@ -372,7 +372,7 @@ Jenis pengembaliannya adalah `memori string`, yang berarti kembalikan string yan
 
 Dalam kasus ini, `memori` adalah pilihan terbaik.
 
-### Informasi Token Baca {#read-token-information}
+### Informasi Token Baca \{#read-token-information}
 
 Fungsi-fungsi ini menyediakan informasi tentang token, baik total persediaan atau saldo akun.
 
@@ -400,7 +400,7 @@ Fungsi `totalSupply` mengembalikan total persediaan token.
 
 Baca saldo akun. Perhatikan bahwa siapa pun boleh mendapatkan saldo akun orang lain. Bagaimanapun juga, tidak ada gunanya mencoba menyembunyikan informasi ini, karena informasi tersebut tersedia di setiap simpul. _Tidak ada rahasia di rantai blok._
 
-### Token Transfer {#transfer-tokens}
+### Token Transfer \{#transfer-tokens}
 
 ```solidity
     /**
@@ -428,11 +428,11 @@ Fungsi `_transfer` melakukan pekerjaan sebenarnya. Ini adalah fungsi pribadi yan
 
 Umumnya dalam Solidity, kita menggunakan `msg.sender` untuk pengirim pesan. Namun, itu memecah [OpenGSN](http://opengsn.org/). Jika kita ingin mengizinkan transaksi tanpa ether dengan token kita, kita perlu menggunakan `_msgSender()`. Fungsi tersebut mengembalikan `msg.sender` untuk transaksi normal, tetapi untuk transaksi tanpa ether mengembalikan penandatangan asli dan bukan kontrak yang menyampaikan pesan.
 
-### Fungsi Tunjangan {#allowance-functions}
+### Fungsi Tunjangan \{#allowance-functions}
 
 Ini adalah fungsi yang menerapkan fungsionalitas tunjangan: `tunjangan`, `persetujuan`, `transferFrom`, dan `_approve`. Selain itu, penerapan OpenZeppelin melebihi standar dasar yang memasukkan beberapa fitur sehingga meningkatkan keamanan: `increaseAllowance`, dan `decreaseAllowance`.
 
-#### Fungsi tunjangan {#allowance}
+#### Fungsi tunjangan \{#allowance}
 
 ```solidity
     /**
@@ -445,7 +445,7 @@ Ini adalah fungsi yang menerapkan fungsionalitas tunjangan: `tunjangan`, `perset
 
 Fungsi `tunjangan` membuat semua orang memeriksa tunjangan mana pun.
 
-#### Fungsi persetujuan {#approve}
+#### Fungsi persetujuan \{#approve}
 
 ```solidity
     /**
@@ -473,7 +473,7 @@ Fungsi ini dipanggil untuk membuat tunjangan. Fungsi ini serupa dengan fungsi `t
 
 Kita menggunakan fungsi internal untuk meminimalkan jumlah tempat di mana perubahan status terjadi. Fungsi _mana pun_ yang mengubah status merupakan resiko keamanan berpotensi yang perlu diaudit demi keamanan. Dengan cara ini, kita mengurangi peluang untuk kesalahan.
 
-#### Fungsi transferFrom {#transferFrom}
+#### Fungsi transferFrom \{#transferFrom}
 
 Fungsi ini dipanggil pembelanja untuk membelanjakan tunjangan. Fungsi ini memerlukan dua operasi: transfer jumlah yang akan dibelanjakan dan kurangi tunjangan sebesar jumlah tersebut.
 
@@ -507,7 +507,7 @@ Panggilan fungsi `a.sub(b, "message")` melakukan dua hal. Pertama, fungsi terseb
     }
 ```
 
-#### Penambahan keamanan OpenZeppelin {#openzeppelin-safety-additions}
+#### Penambahan keamanan OpenZeppelin \{#openzeppelin-safety-additions}
 
 Menetapkan tunjangan tidak nol ke nilai tidak nol lainnya berbahaya, karena Anda hanya mengendalikan urutan transaksi Anda sendiri, bukan milik orang lain. Bayangkan Anda mempunyai dua pengguna, Alice yang naif dan Bill yang tidak jujur. Alice menginginkan beberapa layanan dari Bill, yang dipikirnya membutuhkan lima token - sehingga ia memberikan tunjangan sebesar lima token kepada Bill.
 
@@ -583,11 +583,11 @@ Fungsi `a.add(b)` aman untuk ditambahkan. Dalam kasus yang jarang terjadi bahwa 
     }
 ```
 
-### Fungsi yang Memodifikasi Informasi Token {#functions-that-modify-token-information}
+### Fungsi yang Memodifikasi Informasi Token \{#functions-that-modify-token-information}
 
 Keempat fungsi ini melakukan pekerjaan sebenarnya: `_transfer`, `_mint`, `_burn`, dan `_approve`.
 
-#### Fungsi \_transfer {#\_transfer}
+#### Fungsi \_transfer \{#\_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Baris-baris ini benar-benar melakukan transfer. Perhatikan bahwa **tidak terjadi
 
 Akhirnya, pancarkan aksi `Transfer`. Aksi tidak dapat diakses oleh kontrak pintar, tetapi kode yang beroperasi di luar rantai blok dapat mendengarkan aksi dan bereaksi terhadapnya. Contohnya, dompet dapat menelusuri waktu pemilik mendapatkan lebih banyak token.
 
-#### Fungsi \_mint dan \_burn {#\_mint-and-\_burn}
+#### Fungsi \_mint dan \_burn \{#\_mint-and-\_burn}
 
 Kedua fungsi (`_mint` dan `_burn`) ini memodifikasi total persediaan token. Kedua fungsi tersebut bersifat internal dan tidak memiliki fungsi yang memanggil kedua fungsi tersebut dalam kontrak ini, sehingga kedua fungsi tersebut hanya berguna jika Anda mewariskannya dari kontrak dan menambahkan logika Anda sendiri untuk menentukan dalam kondisi apa untuk mencetak token baru atau membakar token yang sudah ada.
 
@@ -706,7 +706,7 @@ Pastikan memperbarui `_totalSupply` ketika total jumlah token berubah.
 
 Fungsi `_burn` hampir sama dengan `_mint`, kecuali bergerak ke arah yang lain.
 
-#### Fungsi \_approve {#\_approve}
+#### Fungsi \_approve \{#\_approve}
 
 Fungsi ini benar-benar menentukan tunjangan. Perhatikan bahwa fungsi tersebut membuat pemilik menentukan tunjangan yang lebih tinggi dari saldo pemilik saat ini. Ini OKE karena saldo diperiksa pada waktu transfer terjadi, ketika saldonya dapat berbeda dari saldo saat tunjangan dibuat.
 
@@ -741,7 +741,7 @@ Pancarkan aksi `Persetujuan`. Bergantung pada cara aplikasi ditulis, kontrak pem
 
 ```
 
-### Modifikasi Variabel Desimal {#modify-the-decimals-variable}
+### Modifikasi Variabel Desimal \{#modify-the-decimals-variable}
 
 ```solidity
 
@@ -760,7 +760,7 @@ Pancarkan aksi `Persetujuan`. Bergantung pada cara aplikasi ditulis, kontrak pem
 
 Fungsi ini memodifikasi variabel `_decimals` yang digunakan untuk memberitahu antarmuka pengguna tentang cara menafsirkan jumlahnya. Anda seharusnya memanggilnya dari konstruktor. Tidak jujur untuk memanggilnya pada titik berikut mana pun, dan aplikasi tidak dirancang untuk menangani ketidakjujuran tersebut.
 
-### Kaitan {#hooks}
+### Kaitan \{#hooks}
 
 ```solidity
 
@@ -784,7 +784,7 @@ Fungsi ini memodifikasi variabel `_decimals` yang digunakan untuk memberitahu an
 
 Fungsi kaitan ini yang akan dipanggil selama transfer. It is empty here, but if you need it to do something you just override it.
 
-# Kesimpulan {#conclusion}
+# Kesimpulan \{#conclusion}
 
 Sebagai tinjauan ulang, berikut adalah beberapa pemikiran paling penting dalam kontrak ini (menurut pendapat saya, kepunyaan Anda mungkin bisa saja berbeda):
 

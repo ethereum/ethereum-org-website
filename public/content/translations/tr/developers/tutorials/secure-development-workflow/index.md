@@ -13,7 +13,7 @@ source: Güvenli sözleşmeler oluşturmak
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
-## Akıllı sözleşme geliştirme kontrol listesi {#smart-contract-development-checklist}
+## Akıllı sözleşme geliştirme kontrol listesi \{#smart-contract-development-checklist}
 
 İşte akıllı sözleşmelerinizi yazarken izlemenizi önerdiğimiz üst düzey bir süreç.
 
@@ -49,7 +49,7 @@ Son olarak, otomatik araçların kolayca bulamayacağı sorunlara dikkat edin:
 - Kriptografik operasyonlar
 - Harici DeFi bileşenleriyle riskli etkileşimler
 
-## Yardım isteyin {#ask-for-help}
+## Yardım isteyin \{#ask-for-help}
 
 [Ethereum office hours](https://calendly.com/dan-trailofbits/ethereum-office-hours), (çalışma asatleri) her salı öğleden sonra gerçekleştirilir. Bu 1 saatlik 1'e 1 oturumlar, güvenlikle ilgili tüm sorularınızı bize sorma, araçlarımızı kullanarak sorun giderme ve mevcut yaklaşımınız hakkında uzmanlardan geri bildirim alma fırsatıdır. Bu rehberi tamamlamanıza yardımcı olacağız.
 

@@ -4,7 +4,7 @@ description: Technologia rozproszonego walidatora umożliwia rozproszoną obsłu
 lang: pl
 ---
 
-# Technologia rozproszonego walidatora {#distributed-validator-technology}
+# Technologia rozproszonego walidatora \{#distributed-validator-technology}
 
 Technologia rozproszonego walidatora (DVT) to podejście do bezpieczeństwa walidatora, które rozkłada zarządzanie kluczami i obowiązki podpisywania na wiele podmiotów, aby zmniejszyć liczbę pojedynczych punktów awarii i zwiększyć odporność walidatora.
 
@@ -12,21 +12,21 @@ Robi to poprzez **rozdzielenie klucza prywatnego** używanego do zabezpieczenia 
 
 ![Schemat pokazujący, w jaki sposób pojedynczy klucz walidatora jest dzielony na udziały klucza i dystrybuowany do wielu węzłów z różnymi komponentami.](./dvt-cluster.png)
 
-## Dlaczego potrzebujemy DVT? {#why-do-we-need-dvt}
+## Dlaczego potrzebujemy DVT? \{#why-do-we-need-dvt}
 
-### Bezpieczeństwo {#security}
+### Bezpieczeństwo \{#security}
 
 Walidatory generują dwie pary kluczy publiczno-prywatnych: klucze walidatora do uczestniczenia w konsensusie i klucze wypłaty do uzyskiwania dostępu do funduszy. Podczas gdy walidatory mogą zabezpieczyć klucze wypłat w zimnych danych (cold storage), klucze prywatne walidatorów muszą być online 24/7. Jeśli klucz prywatny walidatora zostanie naruszony, atakujący może kontrolować walidator, potencjalnie prowadząc do odcięcia lub utraty ETH stakera. DVT może pomóc zmniejszyć to ryzyko. Oto jak:
 
 Korzystając z DVT, stakerzy mogą uczestniczyć w stakowaniu, jednocześnie przechowując klucz prywatny walidatora w zimnych danych. Osiąga się to poprzez zaszyfrowanie oryginalnego, pełnego klucza walidatora, a następnie podzielenie go na udziały klucza. Udziały klucza działają w trybie online i są dystrybuowane do wielu węzłów, co umożliwia rozproszone działanie walidatora. Jest to możliwe, ponieważ walidatory Ethereum używają podpisów BLS, które są addytywne, co oznacza, że pełny klucz można zrekonstruować, sumując ich części składowe. Pozwala to stakerowi na bezpieczne przechowywanie pełnego, oryginalnego „głównego” klucza walidatora offline.
 
-### Brak pojedynczych punktów awarii {#no-single-point-of-failure}
+### Brak pojedynczych punktów awarii \{#no-single-point-of-failure}
 
 Gdy walidator jest podzielony między wielu operatorów i wiele komputerów, może wytrzymać indywidualne awarie sprzętu i oprogramowania bez przechodzenia w tryb offline. Ryzyko awarii można również zmniejszyć, stosując różne konfiguracje sprzętu i oprogramowania w węzłach klastra. Ta odporność nie jest dostępna dla konfiguracji walidatorów z jednym węzłem — pochodzi z warstwy DVT.
 
 Jeśli jeden z komponentów maszyny w klastrze ulegnie awarii (na przykład, jeśli w klastrze walidatora jest czterech operatorów, a jeden z nich korzysta z określonego klienta, który ma błąd), pozostali zapewniają ciągłość działania walidatora.
 
-### Decentralizacja {#decentralization}
+### Decentralizacja \{#decentralization}
 
 Idealnym scenariuszem dla Ethereum jest posiadanie jak największej liczby niezależnie obsługiwanych walidatorów. Jednak kilku dostawców stakowania stało się bardzo popularnych i odpowiada za znaczną część całkowitego stakowanego ETH w sieci. DVT może pozwolić tym operatorom na istnienie przy jednoczesnym zachowaniu decentralizacji stawek. Wynika to z faktu, że klucze dla każdego walidatora są rozproszone na wielu maszynach i potrzeba znacznie większej zmowy, aby walidator stał się złośliwy.
 
@@ -42,7 +42,7 @@ Bez DVT dostawcom stakingu łatwiej jest obsługiwać tylko jedną lub dwie konf
 6. **Zwiększa różnorodność** (klient, centrum danych, lokalizacja, przepisy itp.)
 7. **Zwiększone bezpieczeństwo** zarządzania kluczami walidatora
 
-## Jak działa DVT? {#how-does-dvt-work}
+## Jak działa DVT? \{#how-does-dvt-work}
 
 Rozwiązanie DVT zawiera następujące składniki:
 
@@ -54,21 +54,21 @@ Rozwiązanie DVT zawiera następujące składniki:
 
 Rozproszone walidatory mają wbudowaną tolerancję na błędy i mogą działać nawet wtedy, gdy niektóre z poszczególnych węzłów przejdą w tryb offline. Oznacza to, że klaster jest odporny, nawet jeśli niektóre z jego węzłów okażą się złośliwe lub leniwe.
 
-## Przypadki użycia DVT {#dvt-use-cases}
+## Przypadki użycia DVT \{#dvt-use-cases}
 
 DVT ma znaczące implikacje dla szerszej branży stakingowej:
 
-### Stakerzy solo {#solo-stakers}
+### Stakerzy solo \{#solo-stakers}
 
 DVT pozwala również na stakowanie bez nadzoru, umożliwiając dystrybucję klucza walidatora w zdalnych węzłach, przy jednoczesnym zachowaniu pełnego klucza całkowicie offline. Oznacza to, że stakerzy domowi niekoniecznie muszą wydawać pieniądze na sprzęt, a dystrybucja udziałów w kluczach może pomóc wzmocnić ich przed potencjalnymi włamaniami.
 
-### Usługi stakingowe (SaaS) {#saas}
+### Usługi stakingowe (SaaS) \{#saas}
 
 Operatorzy (tacy jak stakowanie w puli i stakerzy instytucjonalni) zarządzający wieloma walidatorami mogą korzystać z DVT, aby zmniejszyć swoje ryzyko. Dystrybucja infrastruktury pozwala na zwiększenie redundancji operacji i dywersyfikację typów używanego sprzętu.
 
 DVT dzieli odpowiedzialność za zarządzanie kluczami na wiele węzłów, co oznacza, że niektóre koszty operacyjne mogą być również dzielone. DVT może również zmniejszyć ryzyko operacyjne i koszty ubezpieczenia dla dostawców stakingu.
 
-### Staking pools {#staking-pools}
+### Staking pools \{#staking-pools}
 
 Ze względu na standardowe konfiguracje walidatorów, stakowanie w puli i dostawcy płynnych stakingów są zmuszeni do posiadania różnych poziomów zaufania pojedynczego operatora, ponieważ zyski i straty są uspołeczniane w całej puli. Są one również zależne od operatorów w zakresie ochrony kluczy podpisujących, ponieważ do tej pory nie było dla nich innej opcji.
 
@@ -78,13 +78,13 @@ Wykorzystując DVT, zaufanie wymagane od operatorów jest znacznie zmniejszone. 
 
 Kolejną korzyścią płynącą z minimalizowania zaufania pojedynczego operatora jest to, że stakowanie w puli może pozwolić na bardziej otwarte i niewymagające uprawnień uczestnictwo operatora. W ten sposób usługi mogą zmniejszyć swoje ryzyko i wspierać decentralizację Ethereum, wykorzystując zarówno wyselekcjonowane, jak i pozbawione uprawnień zestawy operatorów, na przykład poprzez łączenie domowych lub mniejszych stakerów z większymi.
 
-## Potencjalne wady korzystania z DVT {#potential-drawbacks-of-using-dvt}
+## Potencjalne wady korzystania z DVT \{#potential-drawbacks-of-using-dvt}
 
 - **Dodatkowy komponent** — wprowadzenie węzła DVT dodaje kolejną część, która może być wadliwa lub podatna na ataki. Sposobem na złagodzenie tego jest dążenie do wielu implementacji węzła DVT, co oznacza wielu klientów DVT (podobnie jak istnieje wielu klientów dla warstw konsensusu i wykonania).
 - **Koszty operacyjne** — ponieważ DVT dystrybuuje walidator między wieloma podmiotami, do działania wymagana jest większa liczba węzłów zamiast tylko jednego węzła, co powoduje wzrost kosztów operacyjnych.
 - **Potencjalnie zwiększone opóźnienie** — ponieważ DVT wykorzystuje protokół konsensusu do osiągnięcia konsensusu między wieloma węzłami obsługującymi walidator, może potencjalnie wprowadzić zwiększone opóźnienie.
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 - [Specyfikacja rozproszonego walidatora Ethereum (wysoki poziom)](https://github.com/ethereum/distributed-validator-specs)
 - [Specyfikacja techniczna rozproszonego walidatora Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)

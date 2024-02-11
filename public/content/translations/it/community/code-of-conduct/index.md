@@ -4,11 +4,11 @@ description: Gli standard di base che ci impegniamo a rispettare negli spazi di 
 lang: it
 ---
 
-## Missione {#mission}
+## Missione \{#mission}
 
 Sviluppare e mantenere l'hub più completo ed accessibile di conoscenza Ethereum.
 
-## Valori {#values}
+## Valori \{#values}
 
 La community di ethereum.org si impegna ad essere:
 
@@ -19,7 +19,7 @@ La community di ethereum.org si impegna ad essere:
 - incentrata sulla tecnologia sottostante e sui casi d'uso di Ethereum
 - incentrata sui concetti e sui principi di progettazione di Ethereum
 
-## Cosa non siamo {#what-we-are-not}
+## Cosa non siamo \{#what-we-are-not}
 
 - Il sito web di Ethereum Foundation
 - Una piattaforma per promuovere investimenti o profitti di qualsiasi tipo
@@ -27,17 +27,17 @@ La community di ethereum.org si impegna ad essere:
 - Una DEX, CEX o qualsiasi altra forma di piattaforma finanziaria
 - Una piattaforma che fornisce consulenza finanziaria o legale di qualsiasi tipo
 
-## Codice di condotta {#code-of-conduct}
+## Codice di condotta \{#code-of-conduct}
 
-### Impegno {#pledge}
+### Impegno \{#pledge}
 
 La partecipazione aperta è il cuore dell'etica di ethereum.org. Siamo un sito web e una community mantenuta da migliaia di collaboratori, e questo è possibile solo se manteniamo un ambiente accogliente e partecipativo. A tal fine, i collaboratori di questo sito si impegnano a mantenere un ambiente privo di vessazioni per tutti i partecipanti su tutte le piattaforme e gli spazi della community di ethereum.org. La community di ethereum.org accoglie e apprezza chiunque voglia partecipare in un modo costruttivo e amichevole, a prescindere da fattori come età, disabilità, etnia, caratteristiche sessuali, identità di genere, livello di esperienza, area di competenza, istruzione, stato socio-economico, nazionalità, aspetto personale, razza, religione o qualsiasi altra dimensione di diversità.
 
-### Ambito di applicazione {#scope}
+### Ambito di applicazione \{#scope}
 
 Questo Codice di condotta si applica a tutti gli spazi di ethereum.org (come GitHub, Discord, Figma, Crowdin, Twitter e altre piattaforme online) e si applica anche quando la community è rappresentata in spazi pubblici nel mondo reale come raduni, conferenze ed eventi.
 
-### I nostri standard {#our-standards}
+### I nostri standard \{#our-standards}
 
 Esempi di comportamenti che contribuiscono a creare un ambiente positivo sono:
 
@@ -62,7 +62,7 @@ Esempi di comportamenti inaccettabili da parte dei partecipanti sono:
 - Ignorare le richieste o gli avvertimenti dei moderatori della community
 - Altri comportamenti che potrebbero essere ragionevolmente considerati inappropriati in un contesto professionale
 
-### Segnalazione {#reporting}
+### Segnalazione \{#reporting}
 
 Le violazioni del codice di condotta saranno normalmente visibili alla community, poiché cerchiamo di fare tutto in canali aperti e pubblici, consentendo ai membri della community di autoregolarsi.
 
@@ -70,6 +70,6 @@ Tuttavia, se si verifica qualcosa che si ritiene necessiti di attenzione, è pos
 
 Quando si segnala, includere il maggior numero di dettagli possibile, compresi esempi specifici e indicatori ora. Ciò contribuirà a garantire un risultato imparziale.
 
-### Conseguenze {#enforcement}
+### Conseguenze \{#enforcement}
 
 A seconda della gravità, le persone che violano il codice di condotta possono ricevere avvertimenti, o essere banditi in modo temporaneo o permanente dalle community di ethereum.org.

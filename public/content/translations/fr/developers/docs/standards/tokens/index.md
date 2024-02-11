@@ -5,16 +5,16 @@ lang: fr
 incomplete: true
 ---
 
-## Introduction {#introduction}
+## Introduction \{#introduction}
 
 De nombreuses normes de développement Ethereum se concentrent sur les interfaces de jetons. Ces normes aident à garantir que les contrats intelligents restent composables, afin que, par exemple, lorsqu'un nouveau projet émet un jeton, celui-ci reste compatible avec les échanges décentralisés existants.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 - [Normes de développement Ethereum](/developers/docs/standards/)
 - [Contrats intelligents](/developers/docs/smart-contracts/)
 
-## Normes des jetons {#token-standards}
+## Normes des jetons \{#token-standards}
 
 Voici quelques-unes des normes de jetons les plus populaires sur Ethereum :
 
@@ -26,11 +26,11 @@ Voici quelques-unes des normes de jetons les plus populaires sur Ethereum :
 
 La liste complète des propositions [ERC](https://eips.ethereum.org/erc).
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
-## Tutoriels connexes {#related-tutorials}
+## Tutoriels connexes \{#related-tutorials}
 
 - [Liste de contrôle d'intégration de jetons](/developers/tutorials/token-integration-checklist/) _- Liste de contrôle des choses à prendre en compte quand on interagit avec des jetons._
 - [Comprendre le contrat intelligent de jeton ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- Introduction au déploiement de votre premier contrat intelligent sur un réseau de test Ethereum._

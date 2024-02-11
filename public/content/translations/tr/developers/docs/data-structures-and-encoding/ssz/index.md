@@ -7,9 +7,9 @@ sidebarDepth: 2
 
 **Basit serileştirme (SSZ)**, İşaret Zincirinde kullanılan serileştirme yöntemidir. Bu, yürütüm katmanında kullanılan RLP serileştirmesini, eş keşif protokolü hariç fikir birliği katmanının tamamında değiştirir. SSZ, belirleyici ve aynı zamanda Merkle işlemini verimli bir şekilde gerçekleştirebilecek şekilde tasarlanmıştır. SSZ'nin iki bileşeni olduğu düşünülebilir: bir serileştirme şeması ve serileştirilmiş veri yapısıyla etkili bir şekilde çalışacak şekilde tasarlanmış bir Merkle işlemi şeması.
 
-## SSZ nasıl çalışır? {#how-does-ssz-work}
+## SSZ nasıl çalışır? \{#how-does-ssz-work}
 
-### Serileştirme {#serialization}
+### Serileştirme \{#serialization}
 
 SSZ, kendini tanımlamayan bir serileştirme şemasıdır; aksine önceden bilinmesi gereken bir şemaya dayanır. SSZ serileştirmesinin amacı, nesneleri keyfi karmaşıklıkta bayt dizeleri olarak temsil etmektir. Bu, "temel tipler" için oldukça basit bir süreçtir. Öğe, onaltılık baytlara dönüştürülür. Temel tipler şunlardır:
 
@@ -83,13 +83,13 @@ Bu nedenle, değişken uzunluktaki tiplerin gerçek değerleri, serileştirilmi�
 
 Ayrıca, `BitList` türü gibi özel muamele gerektiren bazı durumlar da bulunur. Bu durumlar, serileştirmede uzunluk sınırlamasının eklenmesini ve seri halden çıkarma sırasında kaldırılmasını gerektirir. Detaylı bilgiler [SSZ spesifikasyonunda](https://github.com/ethereum/consensus-specs/blob/dev/ssz/simple-serialize.md) mevcuttur.
 
-### Seri durumdan çıkarma {#deserialization}
+### Seri durumdan çıkarma \{#deserialization}
 
 Bu nesneyi seri durumdan çıkarmak için <b>şema</b> gereklidir. Şema, serileştirilmiş verinin kesin düzenini tanımlar, böylece her bir özel öğe, bayt grubundan anlamlı bir nesneye, öğelerin doğru türüne, değerine, boyutuna ve konumuna sahip şekilde seri halden çıkarılabilir. Şema, hangi değerlerin gerçek değerler olduğunu ve hangi değerlerin kayma olduğunu seri durumdan çıkarıcıya bildiren unsurdur. Bir nesne serileştirildiğinde tüm alan adları kaybolur ancak bunlar, seri halden çıkarma sırasında şemaya göre tekrar oluşturulur.
 
 Bu konuyla ilgili interaktif bir açıklamayı [ssz.dev](https://www.ssz.dev/overview) adresinde bulabilirsiniz.
 
-## Merkle işlemini gerçekleştirme {#merkleization}
+## Merkle işlemini gerçekleştirme \{#merkleization}
 
 Bu SSZ serileştirilmiş nesnesi, daha sonra aynı verinin bir Merkle ağacı gösterimine dönüştürülebilir. İlk olarak, serileştirilmiş nesnedeki 32 baytlık parçaların sayısı belirlenir. Bunlar, ağacın "yaprakları"dır. Toplam yaprak sayısı, yaprakları karma hale getirerek sonunda tek bir karma ağaç kökü üretmek için 2'nin bir katı olmalıdır. Eğer bu doğal olarak böyle değilse, 32 baytlık sıfırlar içeren ekstra yapraklar eklenir. Diyagram olarak ifade etmek gerekirse:
 
@@ -111,7 +111,7 @@ Ağacın yapraklarının, yukarıdaki örnekte olduğu gibi doğal olarak eşit 
 
 Bu ağaç öğelerine yaprak X, düğüm X gibi isimler yerine genelleştirilmiş indeksler verebiliriz. Bu, kök = 1 ile başlayan ve her seviyede soldan sağa sayılan genelleştirilmiş indekslerle yapılır. Bu, yukarıda açıklanan genelleştirilmiş indekstir. Serileştirilmiş listedeki her öğenin, `2**depth + idx`'e eşit bir genelleştirilmiş dizini vardır; burada idx, serileştirilmiş nesnedeki sıfır dizinli konumudur ve derinlik, Merkle ağacındaki düzey sayısıdır ve öğe (yaprak) sayısının iki tabanındaki logaritması olarak belirlenebilir.
 
-## Genelleştirilmiş indeksler {#generalized-indices}
+## Genelleştirilmiş indeksler \{#generalized-indices}
 
 Bir genelleştirilmiş indeks, her düğümün bir genelleştirilmiş indeksi temsil ettiği ikili bir Merkle ağacındaki bir düğümü temsil eden tam sayıdır, burada her düğümün genelleştirilmiş indeksi `2 ** depth + index in row` şeklindedir.
 
@@ -124,7 +124,7 @@ Bir genelleştirilmiş indeks, her düğümün bir genelleştirilmiş indeksi te
 
 Bu gösterim, Merkle ağacındaki her bir veri parçası için bir düğüm oluşturur.
 
-## Çoklu kanıtlar {#multiproofs}
+## Çoklu kanıtlar \{#multiproofs}
 
 Belirli bir öğeyi temsil eden genelleştirilmiş endekslerin listesini sağlamak, onu karma ağaç kökü ile karşılaştırarak doğrulamamıza olanak tanır. Bu kök, gerçekliğin kabul edilmiş versiyonudur. Sağladığımız herhangi bir veri, Merkle ağacında (genelleştirilmiş indeksi tarafından belirlenir) doğru yere yerleştirilerek ve kökün sabit kaldığı gözlemlenerek bu gerçekliğe karşı doğrulanabilir. Belirli bir genelleştirilmiş indeks kümesinin içeriğini doğrulamak için gereken en küçük düğüm kümesini hesaplamak için [burada](https://github.com/ethereum/consensus-specs/blob/dev/ssz/merkle-proofs.md#merkle-multiproofs) spesifikasyon içinde özel fonksiyonlar bulunmaktadır.
 
@@ -140,7 +140,7 @@ Belirli bir öğeyi temsil eden genelleştirilmiş endekslerin listesini sağlam
 
 ```
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla okuma \{#further-reading}
 
 - [Ethereum'u Yükseltme: SSZ](https://eth2book.info/altair/part2/building_blocks/ssz)
 - [Ethereum'u Yükseltme: Merkle İşlemi](https://eth2book.info/altair/part2/building_blocks/merkleization)

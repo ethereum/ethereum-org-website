@@ -11,15 +11,15 @@ published: 2022-05-15
 
 Lo [Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf) è la specifica formale di Ethereum. Tranne che per le modifiche apportate dal [processo EIP](/eips/), contiene la descrizione esatta di come funziona il tutto. È scritto come un documento matematico, che include una terminologia con cui i programmatori potrebbero non avere familiarità. In questo documento si impara a leggerlo e, per estensione, a leggere altri documenti matematici correlati.
 
-## Quale Yellow Paper? {#which-yellow-paper}
+## Quale Yellow Paper? \{#which-yellow-paper}
 
 Come quasi tutto in Ethereum, lo Yellow Paper evolve nel tempo. Per poter fare riferimento a una versione specifica, ho caricato [la versione corrente al momento della redazione](yellow-paper-berlin.pdf). I numeri di sezione, pagina ed equazione che utilizzerò si riferiranno a quella versione. Sarebbe buona norma aprirla in un'altra finestra durante la lettura di questo documento.
 
-### Perché la EVM? {#why-the-evm}
+### Perché la EVM? \{#why-the-evm}
 
 Lo Yellow Paper originale è stato scritto subito all'inizio dello sviluppo di Ethereum. Descrive il meccanismo di consenso basato sul proof-of-work originariamente utilizzato per proteggere la rete. Tuttavia, Ethereum ha abbandonato il proof-of-work e ha iniziato a utilizzare il consenso basato sul proof-of-stake nel settembre 2022. Questo tutorial si concentra sulle parti dello Yellow Paper che definiscono la macchina virtuale di Ethereum. La EVM è rimasta invariata con il passaggio al proof-of-stake (ad eccezione del valore di restituzione dell’opcode DIFFICULTY).
 
-## 9 Modello di esecuzione {#9-execution-model}
+## 9 Modello di esecuzione \{#9-execution-model}
 
 Questa sezione (pagg. 12-14) comprende la maggior parte della definizione della EVM.
 
@@ -31,7 +31,7 @@ Il termine
 
 Turing equivalente indica un computer che può eseguire gli stessi calcoli di una macchina di Turing. Le macchine di Turing possono entrare in loop infiniti, mentre l'EVM non può farlo perché finirebbe il carburante, quindi è solo quasi Turing equivalente.
 
-## 9.1 Nozioni di base {#91-basics}
+## 9.1 Nozioni di base \{#91-basics}
 
 Questa sezione fornisce le nozioni di base della EVM e come si compara ad altri modelli computazionali.
 
@@ -58,11 +58,11 @@ Esistono solo due casi in cui il codice viene eseguito dalla memoria:
 
 Con il termine esecuzione eccezionale si intende un'eccezione che causa l'interruzione dell'esecuzione del contratto attivo.
 
-## 9.2 Panoramica delle commissioni {#92-fees-overview}
+## 9.2 Panoramica delle commissioni \{#92-fees-overview}
 
 Questa sezione spiega come vengono calcolate le commissioni del carburante. I costi sono tre:
 
-### Costo dell’opcode {#opcode-cost}
+### Costo dell’opcode \{#opcode-cost}
 
 Il costo intrinseco dello specifico opcode. Per ottenere questo valore, trova il gruppo di costo dell’opcode nell'Appendice H (pag. 28, sotto l'equazione (327)) e trova il gruppo di costo nell'equazione (324). Si ottiene così una funzione di costo, che nella maggior parte dei casi utilizza i parametri dell'Appendice G (pag. 27).
 
@@ -70,14 +70,14 @@ Ad esempio, l'opcode [`CALLDATACOPY`](https://www.evm.codes/#37) fa parte del gr
 
 Dobbiamo ancora decifrare l'espressione _⌈μ<sub>s</sub>[2]÷32⌉_. La parte più esterna, _⌈ \<valore\> ⌉_ è la funzione ceiling: una funzione che, dato un valore, restituisce il più piccolo numero intero che non è ancora minore del valore stesso. Ad esempio, _⌈2,5⌉ = ⌈3⌉ = 3_. La parte interna è _μ<sub>s</sub>[2]÷32_. Guardando la sezione 3 (Convenzioni) a pag. 3, _μ_ è lo stato della macchina. Lo stato della macchina è definito nella sezione 9.4.1 a pag. 13. Secondo questa sezione, uno dei parametri di stato della macchina è _s_ per lo stack. Mettendo tutto insieme, sembra che _μ<sub>s</sub>[2]_ sia la posizione #2 dello stack. Guardando [l'opcode](https://www.evm.codes/#37), la posizione #2 dello stack è la dimensione dei dati in byte. Osservando gli altri opcode del gruppo W<sub>copy</sub>, [`CODECOPY`](https://www.evm.codes/#39) e [`RETURNDATACOPY`](https://www.evm.codes/#3e), anch'essi hanno una dimensione di dati nella stessa posizione. Quindi _⌈μ<sub>s</sub>[2]÷32⌉_ è il numero di parole da 32 byte necessarie per memorizzare i dati copiati. Mettendo tutto insieme, il costo intrinseco di [`CALLDATACOPY`](https://www.evm.codes/#37) è di 3 unità di carburante più 3 per ogni parola di dati copiata.
 
-### Costi di esecuzione {#running-cost}
+### Costi di esecuzione \{#running-cost}
 
 Il costo dell'esecuzione del codice che stiamo chiamando.
 
 - Nel caso di [`CREATE`](https://www.evm.codes/#f0) e [`CREATE2`](https://www.evm.codes/#f5), il costruttore del nuovo contratto.
 - Nel caso di [`CALL`](https://www.evm.codes/#f1), [`CALLCODE`](https://www.evm.codes/#f2), [`STATICCALL`](https://www.evm.codes/#fa) o [`DELEGATECALL`](https://www.evm.codes/#f4), il contratto che viene chiamato.
 
-### Costo di espansione della memoria {#expanding-memory-cost}
+### Costo di espansione della memoria \{#expanding-memory-cost}
 
 Il costo per espandere la memoria (se necessario).
 
@@ -89,7 +89,7 @@ La funzione _C<sub>mem</sub>_ è definita nell'equazione 326: _C<sub>mem</sub>(a
 
 [Maggiori informazioni sul carburante](/developers/docs/gas/).
 
-## 9.3 Ambiente di esecuzione {#93-execution-env}
+## 9.3 Ambiente di esecuzione \{#93-execution-env}
 
 L'ambiente di esecuzione è una tupla, _I_, che include informazioni che non fanno parte dello stato della blockchain o della EVM.
 
@@ -115,7 +115,7 @@ Per comprendere il resto della sezione 9 sono necessari alcuni altri parametri:
 | _A_       | 6.1 (pag. 8)            | Sottostato accumulato (modifiche previste per la fine della transazione)                                                                                                                                                                      |
 | _o_       | 9.3 (pag. 13)           | Output: il risultato restituito in caso di transazione interna (quando un contratto ne invoca un altro) e di chiamate a funzioni di visualizzazione (quando si chiedono solo informazioni, quindi non è necessario attendere una transazione) |
 
-## 9.4 Panoramica dell'esecuzione {#94-execution-overview}
+## 9.4 Panoramica dell'esecuzione \{#94-execution-overview}
 
 Ora che possediamo tutte le conoscenze preliminari, possiamo finalmente iniziare a lavorare sul funzionamento della EVM.
 
@@ -137,13 +137,13 @@ L'equazione 143 ci dice che ci sono quattro possibili condizioni in ogni momento
 3.  Se la sequenza di operazioni è terminata, come indicato da un [`RETURN`](https://www.evm.codes/#f3)), lo stato viene aggiornato al nuovo stato.
 4.  Se non ci troviamo in una delle condizioni di interruzione 1-3, continua a eseguire il codice.
 
-## 9.4.1 Stato della macchina {#941-machine-state}
+## 9.4.1 Stato della macchina \{#941-machine-state}
 
 Questa sezione spiega in modo più dettagliato lo stato della macchina. Specifica che _w_ è l'opcode attuale. Se _μ<sub>pc</sub>_ è inferiore a _||I<sub>b</sub>||_, la lunghezza del codice, allora quel byte (_I<sub>b</sub>[μ<sub>pc</sub>]_) è l'opcode. Altrimenti, l'opcode è definito come [`STOP`](https://www.evm.codes/#00).
 
 Poiché si tratta di una [macchina a stack](https://en.wikipedia.org/wiki/Stack_machine), dobbiamo tenere traccia del numero di elementi estratti (_δ_) e introdotti (_α_) da ciascun opcode.
 
-## 9.4.2 Arresto eccezionale {#942-exceptional-halt}
+## 9.4.2 Arresto eccezionale \{#942-exceptional-halt}
 
 Questa sezione definisce la funzione _Z_, che specifica quando si ha un'interruzione anomala. Si tratta di una funzione [booleana](https://en.wikipedia.org/wiki/Boolean_data_type), quindi utilizza [_∨_ per un OR logico](https://en.wikipedia.org/wiki/Logical_disjunction) e [_∧_ per un AND logico](https://en.wikipedia.org/wiki/Logical_conjunction).
 
@@ -177,7 +177,7 @@ Abbiamo un arresto eccezionale se una di queste condizioni è True:
 
 - **_w = SSTORE ∧ μ<sub>g</sub> ≤ G<sub>callstipend</sub>_** Non è possibile eseguire [`SSTORE`](https://www.evm.codes/#55) se non si ha più di G<sub>callstipend</sub> (definito come 2300 nell'Appendice G) carburante.
 
-## 9.4.3 Validità della destinazione del salto {#943-jump-dest-valid}
+## 9.4.3 Validità della destinazione del salto \{#943-jump-dest-valid}
 
 Qui definiamo formalmente cosa sono gli opcode [`JUMPDEST`](https://www.evm.codes/#5b). Non possiamo limitarci a cercare il valore del byte 0x5B, perché potrebbe trovarsi all'interno di un PUSH (e quindi di dati e non di un opcode).
 
@@ -187,7 +187,7 @@ Questa funzione viene utilizzata nell'equazione (152) per definire _D<sub>J</sub
 
 In tutti gli altri casi si guarda al resto del codice andando all'opcode successivo e ottenendo l'insieme a partire da esso. _c[i]_ è l'opcode corrente, quindi _N(i,c[i])_ è la posizione del prossimo opcode. _D<sub>J</sub>(c,N(i,c[i]))_ è quindi l'insieme delle destinazioni di salto valide che inizia dall'opcode successivo. Se l'opcode corrente non è un `JUMPDEST`, restituisce semplicemente l'insieme. Se è `JUMPDEST`, viene incluso nell'insieme dei risultati e restituito.
 
-## 9.4.4 Arresto normale {#944-normal-halt}
+## 9.4.4 Arresto normale \{#944-normal-halt}
 
 La funzione di arresto _H_ può restituire tre tipi di valori.
 
@@ -195,7 +195,7 @@ La funzione di arresto _H_ può restituire tre tipi di valori.
 - Se abbiamo un opcode di arresto che non produce un output (o [`STOP`](https://www.evm.codes/#00) o [`SELFDESTRUCT`](https://www.evm.codes/#ff)), restituisce una sequenza di byte di dimensione zero come valore restituito. Si noti che questo è molto diverso dall'insieme vuoto. Questo valore significa che l'EVM si è davvero arrestata, ma non ci sono dati restituiti da leggere.
 - Se abbiamo un opcode di arresto che produce un output (o [`RETURN`](https://www.evm.codes/#f3) o [`REVERT`](https://www.evm.codes/#fd)), restituisce la sequenza di byte specificata da quell'opcode. Questa sequenza viene presa dalla memoria, il valore in cima allo stack(_μ<sub>s</sub>[0]_) è il primo byte e il valore successivo (_μ<sub>s</sub>[1]_) è la lunghezza.
 
-## H.2 Insieme di istruzioni {#h2-instruction-set}
+## H.2 Insieme di istruzioni \{#h2-instruction-set}
 
 Prima di passare alla sottosezione finale della EVM, la 9.5, esaminiamo le istruzioni stesse. Sono definite nell'Appendice H.2 che inizia a pag. 29. Tutto ciò che non è specificato come variabile con quello specifico opcode deve rimanere inalterato. Le variabili che cambiano sono specificate con \<something\>′.
 
@@ -240,7 +240,7 @@ La seconda equazione, _A'<sub>a</sub> ≡ A<sub>a</sub> ∪ {μ<sub>s</sub>[0] m
 
 Si noti che per utilizzare un elemento dello stack è necessario estrarlo, il che significa che è necessario estrarre anche tutti gli elementi dello stack che si trovano sopra di esso. Nel caso di [`DUP<n>`](https://www.evm.codes/#8f) e [`SWAP<n>`](https://www.evm.codes/#9f), ciò significa dover estrarre e poi reinserire fino a sedici valori.
 
-## 9.5 Il ciclo di esecuzione {#95-exec-cycle}
+## 9.5 Il ciclo di esecuzione \{#95-exec-cycle}
 
 Ora che abbiamo tutte le parti, possiamo finalmente capire come viene documentato il ciclo di esecuzione della EVM.
 
@@ -257,7 +257,7 @@ Le equazioni (156)-(158) definiscono lo stack e la sua variazione dovuta a un op
 
 Con ciò la EVM è completamente definita.
 
-## Conclusioni {#conclusion}
+## Conclusioni \{#conclusion}
 
 La notazione matematica è precisa e ha permesso allo Yellow Paper di specificare ogni dettaglio di Ethereum. Tuttavia, presenta alcuni svantaggi:
 

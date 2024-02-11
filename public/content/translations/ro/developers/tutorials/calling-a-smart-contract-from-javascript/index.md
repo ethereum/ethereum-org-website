@@ -96,7 +96,7 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 În partea următoare vom apela funcția `balanceOf` pentru a prelua suma curentă de tokenuri deținute de ambele adrese.
 
-## Apel: citirea valorii dintr-un contract inteligent {#call-reading-value-from-a-smart-contract}
+## Apel: citirea valorii dintr-un contract inteligent \{#call-reading-value-from-a-smart-contract}
 
 Primul exemplu va apela o metodă „constantă” și va executa metoda sa de contract inteligent în EVM fără a trimite nicio tranzacție. Pentru aceasta vom citi soldul ERC20 al unei adrese. [Citiţi articolul nostru despre tokenuri ERC20](/developers/tutorials/understand-the-erc20-token-smart-contract/).
 
@@ -114,7 +114,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 
 Rețineţi că DAI ERC20 are 18 zecimale, ceea ce înseamnă că trebuie să eliminaţi 18 zerouri pentru a obține suma corectă. uint256 sunt returnate ca şiruri, deoarece JavaScript nu operează cu valori numerice mari. Dacă nu ştiţi sigur [cum să vă ocupaţi de numerelor mari în JS, consultaţi tutorialul nostru despre bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
-## Trimitere: trimiterea unei tranzacții către o funcție contract inteligent {#send-sending-a-transaction-to-a-smart-contract-function}
+## Trimitere: trimiterea unei tranzacții către o funcție contract inteligent \{#send-sending-a-transaction-to-a-smart-contract-function}
 
 Pentru al doilea exemplu, vom apela funcția „transfer” a contractului inteligent DAI pentru a trimite 10 DAI la a doua noastră adresă. Funcția „transfer” acceptă doi parametri: adresa destinatarului și cantitatea de tokenuri pentru transferuri:
 

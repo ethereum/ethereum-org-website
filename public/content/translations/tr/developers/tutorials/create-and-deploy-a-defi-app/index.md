@@ -18,7 +18,7 @@ sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 
 Bu öğreticide, kullanıcıların akıllı sözleşmeye bir ERC20 token'ı yatırabilecekleri ve Farm Token'larını basıp onlara aktarabilecekleri, Solidity ile bir DeFi Uygulaması oluşturacağız. Kullanıcılar daha sonra Farm Token'larını akıllı sözleşmede yakarak ERC20 token'larını geri çekebilirler ve ERC20 token'ları kendilerine geri aktarılır.
 
-## Truffle ve Ganache kurun {#install-truffle-and-ganache}
+## Truffle ve Ganache kurun \{#install-truffle-and-ganache}
 
 İlk kez bir akıllı sözleşme yazıyorsanız, ortamınızı ayarlamanız gerekecektir. İki araç kullanacağız: [Truffle](https://www.trufflesuite.com/) ve [Ganache](https://www.trufflesuite.com/ganache).
 
@@ -44,7 +44,7 @@ Bu, akıllı sözleşmelerimizin geliştirilmesi ve uygulanması için boş bir 
 
 - `truffle-config.js`: Truffle yapılandırma dosyası
 
-## ERC20 Token'ını Oluşturun {#create-the-erc20-token}
+## ERC20 Token'ını Oluşturun \{#create-the-erc20-token}
 
 Öncelikle akıllı sözleşmede stake etmek için kullanacağımız ERC20 token'ımızı oluşturmamız gerekiyor. Değiştirilebilir simgemizi oluşturmak için önce OpenZeppelin kütüphanesini kurmamız gerekecek. Bu kütüphane, ERC20 ve ERC721 gibi standartların uygulamalarını içerir. Onu kurmak için, şu komutu çalıştırın:
 
@@ -90,7 +90,7 @@ constructor (string memory name_, string memory symbol_) public {
 }
 ```
 
-## ERC20 Token'ını Derleyin {#compile-the-erc20-token}
+## ERC20 Token'ını Derleyin \{#compile-the-erc20-token}
 
 Akıllı sözleşmemizi derlemek için önce solidity derleyici versiyonumuzu kontrol etmeliyiz. Bunu şu komutu çalıştırarak kontrol edebilirsiniz:
 
@@ -123,7 +123,7 @@ compilers: {
 truffle compile
 ```
 
-## ERC20 Token'ını Dağıtın {#deploy-erc20-token}
+## ERC20 Token'ını Dağıtın \{#deploy-erc20-token}
 
 Derlemeden sonra artık token'ımızı dağıtabiliriz.
 
@@ -175,7 +175,7 @@ Yukarıdaki komutları çalıştırarak, ilk adreste gerçekten de 1 milyon MyTo
 
 _İlk adreste 1000000 MyToken var_
 
-## FarmToken Akıllı Sözleşmesini Oluşturun {#create-farmtoken-smart-contract}
+## FarmToken Akıllı Sözleşmesini Oluşturun \{#create-farmtoken-smart-contract}
 
 FarmToken akıllı sözleşmesinin 3 fonksiyonu olacaktır:
 
@@ -468,7 +468,7 @@ Bu komut dosyasını çalıştırmak için: `truffle exec .\scripts\withdrawMyTo
 
 _withdrawMyTokenFromTokenFarm.js çıktısı_
 
-## Referanslar {#references}
+## Referanslar \{#references}
 
 [Sözleşmeler - OpenZeppelin Belgeleri](https://docs.openzeppelin.com/contracts/3.x/)
 

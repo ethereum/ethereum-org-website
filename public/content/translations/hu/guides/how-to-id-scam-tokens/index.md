@@ -4,7 +4,7 @@ description: A valótlan tokenek felismerése, hogyan tűnnek legitimnek, és ho
 lang: hu
 ---
 
-# Hogyan lehet felismerni a valótlan tokeneket {#identify-scam-tokens}
+# Hogyan lehet felismerni a valótlan tokeneket \{#identify-scam-tokens}
 
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. Ezek a tokenek jellemzően a [ERC-20](/developers/docs/standards/tokens/erc-20/)-szabványt követik. Ahol legitim alkalmazási területek vannak, melyek értéket teremtenek, mindig megjelennek a csalók is, hogy ezt az értéket megszerezzék maguknak.
 
@@ -15,6 +15,7 @@ Kétféle módon próbálhatják Önt megtéveszteni:
 
 A hamis tokenek illusztrálása végett, és hogyan lehet beazonosítani azokat, megnézünk egy példát: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Ez a token megpróbál úgy kinézni, mint a valós [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) token.
 
+{
 <ExpandableCard
 title="Mi az az ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Az Arbitrum egy olyan szervezet, mely <a href="/developers/docs/scaling/optimistic-rollups/">optimista rollupokat</a> fejleszt és kezel. Kezdetben az Arbitrum egy profitorientált vállalatként működött, de aztán decentralizálta magát. Ennek részeként kibocsátott egy <a href="/dao/#token-based-membership">irányítási tokent</a>, amivel kereskedni lehet.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="A hamis tokent miért nevezik wARB-nek?"
 contentPreview=''>
@@ -32,11 +35,13 @@ Az Ethereumon létezik egy konvenció, hogy a nem ERC-20-szabványnak megfelelő
 Nincs értelme egy olyan ERC-20 token becsomagolt változatát létrehozni, ami már az Ethereumon van, de a csalók a kinézetre hagyatkoznak, nem a mögöttes valóságra.
 
 </ExpandableCard>
+}
 
-## Hogyan működnek a hamis tokenek? {#how-do-scam-tokens-work}
+## Hogyan működnek a hamis tokenek? \{#how-do-scam-tokens-work}
 
 Az Ethereum lényege a decentralizáció. Emiatt nincs központi hatóság, amely elkobozná bárki eszközeit vagy megakadályozná, hogy egy okosszerződést hozzon létre. De ez azt is jelenti, hogy a csalók is képesek bármilyen okosszerződést létrehozni.
 
+{
 <ExpandableCard
 title="Mi az az okosszerződés?"
 contentPreview=''>
@@ -44,10 +49,11 @@ contentPreview=''>
 Az <a href="/developers/docs/smart-contracts/">okosszerződések</a> olyan programok, amelyek az Ethereum-blokkláncon futnak. Minden ERC-20 token egy okosszerződéként van létrehozva.
 
 </ExpandableCard>
+}
 
 Specifikusan, az Arbitrum készített egy szerződést, amely az `ARB` szimbólumot használja. De ez nem akadályozza meg a többi embert, hogy egy szerződést készítsenek ugyanezzel a szimbólummal vagy egy hasonlóval. Aki ezt a szerződést megírja, be kell állítsa, hogy az mit fog csinálni.
 
-## Valósnak tűnnek {#appearing-legitimate}
+## Valósnak tűnnek \{#appearing-legitimate}
 
 Számos trükk van, amit a hamis tokenek létrehozói képesek megtenni, hogy valósnak tüntessék azt fel.
 
@@ -61,13 +67,13 @@ Számos trükk van, amit a hamis tokenek létrehozói képesek megtenni, hogy va
 
 - **A valós átutalást használják**. _A valós kibocsátók nem fizetnének egy hamis token átküldéséért, ezért ezek a transzferek valósak, ugye?_ **Nem**. `A transzfer` is az ERC-20-szerződés szerint megy. A csalók könnyedén le tudják programozni, hogy így viselkedjen.
 
-## Hamis weboldalak {#websites}
+## Hamis weboldalak \{#websites}
 
 A csalók nagyon meggyőző weboldalakat is készíthetnek, amelyek néha az eredeti pontos másai, azonos kinézettel, de mégis apró trükkökkel. Például a valósnak tűnő hivatkozások, amelyek elirányítják a felhasználót hamis oldalakra, vagy valótlan információk, amelyek elkérik a felhasználók kulcsait vagy a támadók címére küldetnek pénzeszközöket.
 
 A legjobb, ha mindig megvizsgálja a weboldal címét, illetve a hiteles oldalakat elmenti a könyvjelzők közé. Így a valódi oldalra lép be anélkül, hogy félreírná azt vagy külső hivatkozásra támaszkodna.
 
-## Hogyan tudja Ön is megvédeni magát? {#protect-yourself}
+## Hogyan tudja Ön is megvédeni magát? \{#protect-yourself}
 
 1. **Ellenőrizze a szerződés címét**. A valódi tokenek valódi szervezetektől érkeznek, amelyek címét meg lehet találni a szervezet honlapján. Például [az `ARB` esetében itt találja a valódi címeket](https://docs.arbitrum.foundation/deployment-addresses#token).
 
@@ -87,7 +93,7 @@ Ez is azt mutatja, hogy a `wARB` nem lehet valódi.
 
    ![Hamis token az Etherscanben](./etherscan-scam.png)
 
-## Következtetés {#conclusion}
+## Következtetés \{#conclusion}
 
 Amíg érték van a világon, addig csalók is lesznek, akik meg akarják azt szerezni, és egy decentralizált világban senki sem fogja megvédeni Önt, kivéve önmaga. Reméljük, hogy az alábbi jellemzők alapján Ön is könnyedén megkülönbözteti a valódi tokent a hamistól:
 

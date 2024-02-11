@@ -4,7 +4,7 @@ description: Ethereum.org'a katman 2 eklerken kullandığımız politika
 lang: tr
 ---
 
-# Katman 2'leri Ekleme {#adding-layer-2}
+# Katman 2'leri Ekleme \{#adding-layer-2}
 
 Kullanıcıların katman 2 alanında güvenli ve kendinden emin bir şekilde gezinebilmeleri için mümkün olan en iyi kaynakları listelediğimizden emin olmak istiyoruz.
 
@@ -18,9 +18,9 @@ Herkes ethereum.org'da bir katman 2 eklemeyi önermekte özgürdür. Gözden ka�
 
 Katman 2, Ethereum için nispeten yeni ve heyecan verici bir paradigmadır. Ethereum.org'da değerlendirilmek üzere adil bir çerçeve oluşturmaya çalıştık, ancak listeleme kriterleri zamanla değişecek ve gelişecektir.
 
-## Karar çerçevesi {#decision-framework}
+## Karar çerçevesi \{#decision-framework}
 
-### Dahil edilme kriterleri: olmazsa olmazlar {#criteria-for-inclusion-the-must-haves}
+### Dahil edilme kriterleri: olmazsa olmazlar \{#criteria-for-inclusion-the-must-haves}
 
 **L2BEAT'te listeleme**
 
@@ -70,7 +70,7 @@ _Veri kullanılabilirliği veya güvenlik için Ethereum kullanmayan diğer öl�
 
 - Listelenen projeler, kullanıcıların zincirde kolayca gezinmesini sağlamak için çalışan bir blok arayıcısı gerektirir.
 
-### Diğer kriterler: olursa iyi olan şeyler {#nice-to-haves}
+### Diğer kriterler: olursa iyi olan şeyler \{#nice-to-haves}
 
 **Proje için borsa desteği**
 
@@ -88,7 +88,7 @@ _Veri kullanılabilirliği veya güvenlik için Ethereum kullanmayan diğer öl�
 
 - Katman 2'yi yerel olarak destekleyen herhangi bir cüzdan var mı?
 
-## Katman 2'nizi ekleyin {#add-exchange}
+## Katman 2'nizi ekleyin \{#add-exchange}
 
 Ethereum.org'a bir katman 2 eklemek istiyorsanız, GitHub'da bir konu oluşturun.
 

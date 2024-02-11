@@ -14,15 +14,17 @@ summaryPoint3: Gebaseerd op open-source-technologieën die iedereen kan gebruike
 
 DeFi is een open en globaal financieel systeem gemaakt voor het internettijdperk. Het is een alternatief voor het huidige financiële systeem dat streng gecontrolleerd is en dat op een oude infrastructuur gebouwd is. Het geeft u volledige controlle en inzicht in uw geld. Het geeft u blootstelling aan de mondiale markten en alternatieven voor uw lokale valuta of bankopties. DeFi-producten stellen diensten open voor iedereen met een internetverbinding en zijn grotendeels het eigendom van en worden onderhouden door de gebruikers. Tot dusver zijn er al miljarden dollars aan crypto door DeFi-applicaties gestroomd en dit groeit nog elke dag.
 
-## Wat is DeFi? {#what-is-defi}
+## Wat is DeFi? \{#what-is-defi}
 
 DeFi is een collectieve term voor financiële producten en diensten die toegankelijk zijn voor iedereen die Ethereum kan gebruiken - iedereen met een internetverbinding. Met DeFi zijn de markten altijd open en is er geen gecentraliseerde autoriteit die betalingen kan blokkeren of de toegang van gebruikers kan weigeren. Diensten die voorheen traag waren en die het risico liepen op menselijke fouten, zijn automatisch en veiliger nu ze worden beheerd door middel van code die iedereen online kan bekijken.
 
 Er is een bloeiende cryptomarkt waar u kunt lenen, long/short kunt gaan, rente kunt verdienen, en meer. In crypto onderlegde Argentiniërs hebben DeFi gebruikt om te ontsnappen aan verlammende inflatie. Bedrijven zijn begonnen met het streamen van loon van hun werknemers in realtime. Sommige mensen zijn leningen ter waarde van miljoenen dollars aangegaan en hebben deze afbetaald, zonder dat daar enige persoonlijke identificatie voor nodig was.
 
+{
 <YouTube id="H-O3r2YMWJ4" />
+}
 
-## Defi vs traditionele financiën {#defi-vs-tradfi}
+## Defi vs traditionele financiën \{#defi-vs-tradfi}
 
 Een van de beste manieren om het potentieel van DeFi in te zien is het begrijpen van de problemen die vandaag de dag bestaan.
 
@@ -35,7 +37,7 @@ Een van de beste manieren om het potentieel van DeFi in te zien is het begrijpen
 - Als gevolg van interne menselijke processen kunnen geldoverdrachten dagen duren.
 - Er is een premie voor financiële diensten, omdat intermediaire instellingen hun deel vereisen.
 
-### Een vergelijking {#defi-comparison}
+### Een vergelijking \{#defi-comparison}
 
 | DeFi                                                                                                                                | Traditionele financiën                                                                                                                                         |
 | ----------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,15 +53,17 @@ Een van de beste manieren om het potentieel van DeFi in te zien is het begrijpen
   Verken DeFi apps
 </ButtonLink>
 
-## Het begon allemaal met Bitcoin... {#bitcoin}
+## Het begon allemaal met Bitcoin... \{#bitcoin}
 
 Bitcoin was in vele opzichten de eerste DeFi-applicatie. Bitcoin laat u echt waarde bezitten en beheren en u kunt het overal ter wereld heen sturen. Het doet dit door een manier te bieden voor een groot aantal mensen die elkaar niet vertrouwen, om akkoord te gaan met een grootboekrekening zonder dat een vertrouwde tussenpersoon nodig is. Bitcoin is toegankelijk voor iedereen en niemand heeft de bevoegdheid om de regels te wijzigen. De regels van Bitcoin, zoals de schaarste en de openheid ervan, zijn in de technologie verwerkt. Het is niet zoals traditionele financiën waar regeringen geld kunnen bijprinten zodat jouw spaargeld devalueert, en waar bedrijven de markten zomaar kunnen sluiten.
 
 Ethereum bouwt hierop voort. Net als Bitcoin, kunnen de regels niet veranderen en heeft iedereen toegang. Maar het maakt dit digitale geld ook programmeerbaar met behulp van [slimme contracten](/glossary#smart-contract), zodat u veel meer kunt doen dan enkel het opslaan en verzenden van waarde.
 
+{
 <YouTube id="qFBYB4W2tqU" />
+}
 
-## Programmeerbaar geld {#programmable-money}
+## Programmeerbaar geld \{#programmable-money}
 
 Dit klinkt vreemd... "Waarom zou ik mijn geld willen programmeren"? Dit is echter meer dan een standaardkenmerk van tokens op Ethereum. Iedereen kan logica programmeren in betalingen. Zodat u de controle en veiligheid van Bitcoin kunt krijgen gemengd met de diensten die door financiële instellingen worden aangeboden. Dit laat u dingen doen met cryptocurrencies die u niet kunt doen met Bitcoin, zoals leningen geven en nemen, betalingen plannen, investeren in indexfondsen en veel meer.
 
@@ -70,7 +74,7 @@ Dit klinkt vreemd... "Waarom zou ik mijn geld willen programmeren"? Dit is echte
   </ButtonLink>
 </InfoBanner>
 
-## Wat kunt u doen met DeFi? {#defi-use-cases}
+## Wat kunt u doen met DeFi? \{#defi-use-cases}
 
 Er is een gedecentraliseerd alternatief voor de meeste financiële diensten. Maar Ethereum creëert ook mogelijkheden om financiële producten te maken die volledig nieuw zijn. Dit is een steeds groter wordende lijst.
 
@@ -86,9 +90,11 @@ Er is een gedecentraliseerd alternatief voor de meeste financiële diensten. Maa
 - [Koop verzekering](#insurance)
 - [Beheer uw portfolio](#aggregators)
 
+{
 <Divider />
+}
 
-### Stuur snel geld over de hele wereld {#send-money}
+### Stuur snel geld over de hele wereld \{#send-money}
 
 Als blockchain is Ethereum ontworpen voor het op veilige en mondiale manier verzenden van transacties. Net als Bitcoin, maakt Ethereum het verzenden van geld over de hele wereld zo eenvoudig als het verzenden van een e-mail. Voer gewoon de [ENS-naam](/nft/#nft-domains) (zoals bob.eth) van uw ontvanger in of het accountadres van hun portemonnee, en uw betaling zal (doorgaans) direct in minuten naar hen gaan. Om betalingen te kunnen verzenden en/of ontvangen, heeft u een [portemonnee](/wallets/) nodig.
 
@@ -96,15 +102,17 @@ Als blockchain is Ethereum ontworpen voor het op veilige en mondiale manier verz
   Zie betaling-dapps
 </ButtonLink>
 
-#### Stream geld over de hele wereld... {#stream-money}
+#### Stream geld over de hele wereld... \{#stream-money}
 
 U kunt ook geld over Ethereum streamen. Hiermee kunt u iemands salaris per seconde betalen, waardoor hij/zij toegang krijgt tot zijn/haar geld waar en wanneer hij/zij dat nodig heeft. Of iets huren per seconde, zoals een opslagplaats of een elektrische scooter.
 
 En als u niet [ETH](/eth/) wilt verzenden of streamen vanwege het feit dat de waarde kan veranderen, zijn er alternatieve valuta op Ethereum: stablecoins.
 
+{
 <Divider />
+}
 
-### Krijg toegang tot stabiele valuta {#stablecoins}
+### Krijg toegang tot stabiele valuta \{#stablecoins}
 
 Volatiliteit van cryptocurrencies is een probleem voor veel financiële producten en algemene uitgaven. De DeFi-gemeenschap heeft dit opgelost met stalecoins. Hun waarde blijft gekoppeld aan een ander activum, meestal een populaire valuta zoals dollars.
 
@@ -114,9 +122,11 @@ Munten als Dai of USDC hebben een waarde die binnen een paar cent van een dollar
   Meer over stablecoins
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Lenen {#lending}
+### Lenen \{#lending}
 
 Het lenen van geld van gedecentraliseerde aanbieders komt in twee hoofdvarianten.
 
@@ -129,7 +139,7 @@ Het lenen van geld van gedecentraliseerde aanbieders komt in twee hoofdvarianten
 
 Er zijn vele voordelen voor het gebruik van een gedecentraliseerd grootboek...
 
-#### Lenen met privacy {#borrowing-privacy}
+#### Lenen met privacy \{#borrowing-privacy}
 
 Vandaag gaat het bij het lenen en krediet verstrekken van geld allemaal om de personen die betrokken zijn. Banken moeten weten of u een lening kunt terugbetalen voordat u de lening krijgt.
 
@@ -137,15 +147,15 @@ Gedecentraliseerde leningen werken zonder dat een van beide partijen zich hoeft 
 
 Dit stelt u in staat om geld te lenen zonder kredietcontroles of het geven van privé-gegevens.
 
-#### Toegang tot globale fondsen {#access-global-funds}
+#### Toegang tot globale fondsen \{#access-global-funds}
 
 Wanneer u een gedecentraliseerde kredietgever gebruikt, heeft u toegang tot fondsen die van over de hele wereld worden gestort, dus niet enkel de fondsen in de bewaring van uw gekozen bank of instelling. Dit maakt leningen toegankelijker en verbetert de rentevoet.
 
-#### Belastingefficiëntie {#tax-efficiencies}
+#### Belastingefficiëntie \{#tax-efficiencies}
 
 Lenen kan u toegang geven tot de fondsen die u nodig heeft zonder dat u ETH hoeft te verkopen (een belastbare gebeurtenis). In plaats daarvan kun je ETH gebruiken als onderpand voor een lening in stablecoins. Dit geeft u de cash-flow die u nodig heeft en laat u uw ETH behouden. Stablecoins zijn tokens die veel beter zijn voor wanneer u geld nodig heeft omdat ze niet fluctueren in waarde zoals ETH. [Meer over stablecoins](#stablecoins)
 
-#### Flash-leningen {#flash-loans}
+#### Flash-leningen \{#flash-loans}
 
 Flash-leningen zijn een experimentele vorm van gedecentraliseerde leningen, die u zonder onderpand laten lenen en waarbij u geen persoonlijke informatie hoeft te verstrekken.
 
@@ -170,11 +180,13 @@ Om het bovenstaande voorbeeld in de traditionele financiële wereld te kunnen do
 
 [Meer over flash-leningen](https://aave.com/flash-loans/)
 
+{
 <Divider />
+}
 
-### Begin met het sparen van crypto {#saving}
+### Begin met het sparen van crypto \{#saving}
 
-#### Uitlenen {#lending}
+#### Uitlenen \{#lending}
 
 U kunt rente verdienen op uw crypto door het uit te lenen en uw geld in realtime te laten groeien. Op dit moment liggen de rentetarieven veel hoger dan wat u waarschijnlijk bij uw lokale bank krijgt (als u geluk genoeg hebt om er toegang toe te hebben). Hier is een voorbeeld:
 
@@ -187,7 +199,7 @@ U kunt rente verdienen op uw crypto door het uit te lenen en uw geld in realtime
   Bekijk uitleen-dapps
 </ButtonLink>
 
-#### Loterijen zonder verlies {#no-loss-lotteries}
+#### Loterijen zonder verlies \{#no-loss-lotteries}
 
 No-loss loterijen zoals PoolTogether zijn een leuke en innovatieve nieuwe manier om geld te besparen.
 
@@ -203,9 +215,11 @@ De prijzenpool wordt gegenereerd door alle rente die gegenereerd wordt door het 
   Probeer PoolTogether
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Exchange tokens {#swaps}
+### Exchange tokens \{#swaps}
 
 Er zijn duizenden tokens op Ethereum. Gedecentraliseerde exchanges (DEX's) laten u verschillende tokens verhandelen wanneer u dat wilt. U geeft de controle over uw activa nooit op. Dit is net zoiets als het gebruik van een wisselkantoor bij een bezoek aan een ander land. Maar de DeFi-versie sluit nooit. De markten zijn 24/7, 365 dagen per jaar open en de technologie garandeert dat er altijd iemand is die een handel accepteert.
 
@@ -215,9 +229,11 @@ Als u bijvoorbeeld de no-loss loterij PoolTogether wilt gebruiken (hierboven bes
   Bekijk token exchanges
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Geavanceerd handelen {#trading}
+### Geavanceerd handelen \{#trading}
 
 Er zijn meer geavanceerde opties voor handelaren die van een beetje meer controle houden. Limietorders, perpetuals, margehandel en meer zijn allemaal mogelijk. Met gedecentraliseerd handelen krijgt u toegang tot wereldwijde liquiditeit, de markt sluit nooit af, en u heeft altijd de controle over uw geld.
 
@@ -227,9 +243,11 @@ Wanneer u een gecentraliseerde exchange gebruikt, moet u uw geld storten vóór 
   Bekijk trading dapps
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Breid uw portfolio uit {#investing}
+### Breid uw portfolio uit \{#investing}
 
 Er zijn producten voor fondsbeheer op Ethereum die zullen proberen uw portefeuille te laten groeien op basis van een strategie naar eigen keuze. Dit is automatisch, open voor iedereen, en heeft geen menselijke manager nodig die een deel van uw winst afneemt.
 
@@ -239,9 +257,11 @@ Een goed voorbeeld is het [DeFi Pulse Index-fonds (DPI)](https://defipulse.com/b
   Bekijk investering-dapps
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Financier uw ideeën {#crowdfunding}
+### Financier uw ideeën \{#crowdfunding}
 
 Ethereum is een ideaal platform voor crowdfunding:
 
@@ -253,7 +273,7 @@ Ethereum is een ideaal platform voor crowdfunding:
   Zie crowdfunding dapps
 </ButtonLink>
 
-#### Kwadratische financiering {#quadratic-funding}
+#### Kwadratische financiering \{#quadratic-funding}
 
 Ethereum is open-source software en veel van het werk tot nu toe is gefinancierd door de gemeenschap. Dit heeft geleid tot de groei van een interessant nieuw fondsenwervingsmodel: kwadratische financiering. Dit heeft het potentieel om de toekomstige financiering van alle soorten collectieve goederen te verbeteren.
 
@@ -268,9 +288,11 @@ Dit betekent dat Project A met zijn 100 donaties van 1 dollar uiteindelijk meer 
 
 [Meer over kwadratische financiering](https://wtfisqf.com)
 
+{
 <Divider />
+}
 
-### Verzekering {#insurance}
+### Verzekering \{#insurance}
 
 Gedecentraliseerde verzekeringen zijn bedoeld om verzekering goedkoper en sneller en transparanter te maken. Met meer automatisering is de dekking betaalbaarder en zijn de uitbetalingen veel sneller. De gegevens die gebruikt worden om uw claim te bepalen zijn volledig transparant.
 
@@ -280,9 +302,11 @@ Ethereum-producten, zoals elke software, kunnen lijden onder bugs en exploits. O
   Zie verzekering-dapps
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Aggregators en portfoliobeheerders {#aggregators}
+### Aggregators en portfoliobeheerders \{#aggregators}
 
 Met alle drukte die u heeft, heeft u een manier nodig om al uw investeringen, leningen en transacties bij te houden. Er zijn een heleboel producten waarmee u al uw DeFi-activiteiten vanaf één plaats kunt coördineren. Dit is het mooie van de open architectuur van DeFi. Teams kunnen interfaces bouwen waar u uw saldo voor alle producten niet alleen kunt zien, u kunt hun functies ook nog eens gebruiken. U vindt dit misschien nuttig terwijl u meer kennis over Defi opbouwt.
 
@@ -290,9 +314,11 @@ Met alle drukte die u heeft, heeft u een manier nodig om al uw investeringen, le
   Bekijk portfolio-dapps
 </ButtonLink>
 
+{
 <Divider />
+}
 
-## Hoe werkt DeFi? {#how-defi-works}
+## Hoe werkt DeFi? \{#how-defi-works}
 
 DeFi gebruikt cryptocurrencies en slimme contracten om diensten te bieden waarbij geen tussenpersonen nodig zijn. In de financiële wereld van vandaag de dag staan financiële instellingen garant voor transacties. Dit geeft deze instellingen een enorme macht, omdat uw geld via hen gaat. Plus miljarden mensen over de hele wereld hebben geen toegang tot een bankrekening.
 
@@ -304,7 +330,7 @@ Contracten zijn ook openbaar zodat iedereen ze kan inzien en controleren. Dit be
 
 Dit betekent dat er momenteel een noodzaak bestaat om de meer technische leden van de Ethereum-gemeenschap die code kunnen lezen, te vertrouwen. De open-source gebaseerde gemeenschap helpt ontwikkelaars in toom te houden, maar deze noodzaak zal afnemen in de loop van de tijd, aangezien slimme contracten gemakkelijker te lezen worden en er andere manieren worden ontwikkeld om de betrouwbaarheid van code te bewijzen.
 
-## Ethereum en DeFi {#ethereum-and-defi}
+## Ethereum en DeFi \{#ethereum-and-defi}
 
 Ethereum is de perfecte basis voor DeFi om een aantal redenen:
 
@@ -320,7 +346,7 @@ U kunt DeFi zien als verschillende lagen:
 3. De protocollen – [slimme contracten](/glossary/#smart-contract) die de functionaliteit leveren, bijvoorbeeld een service die het mogelijk maakt om activa gedecentraliseerd uit te lenen.
 4. [De applicaties](/dapps/) – de producten die we gebruiken om de protocollen te beheren en te raadplegen.
 
-## DeFi opbouwen {#build-defi}
+## DeFi opbouwen \{#build-defi}
 
 DeFi is een open-source beweging. De DeFi-protocollen en -applicaties staan allemaal open voor u om te inspecteren, te forken en te vernieuwen. Vanwege deze gelaagde stack (ze delen allemaal dezelfde basis-blockchain en activa), kunnen protocollen worden gemengd en gematched om unieke combo mogelijkheden te ontgrendelen.
 
@@ -328,25 +354,25 @@ DeFi is een open-source beweging. De DeFi-protocollen en -applicaties staan alle
   Meer over het bouwen van dapps
 </ButtonLink>
 
-## Verder lezen {#futher-reading}
+## Verder lezen \{#futher-reading}
 
-### DeFi-data {#defi-data}
+### DeFi-data \{#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 - [DeFi Rate](https://defirate.com/)
 
-### DeFi-artikelen {#defi-articles}
+### DeFi-artikelen \{#defi-articles}
 
 - [A beginner's guide to DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, January 6, 2020_
 
-### Video's {#videos}
+### Video's \{#videos}
 
 - [Finematics - voorlichting over gedecentraliseerde financiën](https://finematics.com/) - _Video's over Defi_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _DeFi basics: Everything you need to know to get started in this occasionally baffling space._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _Wat is DeFi?_
 
-### Gemeenschappen {#communities}
+### Gemeenschappen \{#communities}
 
 - [DeFi Llama Discord server](https://discord.gg/buPFYXzDDd)
 - [DeFi Pulse Discord server](https://discord.gg/Gx4TCTk)

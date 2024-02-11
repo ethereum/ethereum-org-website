@@ -13,13 +13,13 @@ summaryPoints:
   - Mantenha os tokens participados na sua carteira
 ---
 
-## O que são pools de participação? {#what-are-staking-pools}
+## O que são pools de participação? \{#what-are-staking-pools}
 
 Os pools de participação são uma abordagem colaborativa para permitir que muitos com quantidades menores de ETH obtenham os 32 ETH necessários para ativar um conjunto de chaves de validador. A funcionalidade de pooling não é nativamente suportada no protocolo, então soluções foram construídas separadamente para resolver essa necessidade.
 
 Alguns pools operam usando contratos inteligentes, onde os fundos podem ser depositados em um contrato, que gerencia e controla com necessidade mínima de confiança seu stake, e lhe emite um token que representa esse valor. Outros pools podem não envolver contratos inteligentes e, em vez disso, são mediadas fora da cadeia.
 
-## Por que fazer participação com um pool? {#why-stake-with-a-pool}
+## Por que fazer participação com um pool? \{#why-stake-with-a-pool}
 
 Além dos benefícios delineados em nossa [introdução ao staking](/staking/), fazer stake em um pool traz alguns benefícios distintos.
 
@@ -29,9 +29,11 @@ Além dos benefícios delineados em nossa [introdução ao staking](/staking/), 
   <Card title="tokens participados" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
+{
 <StakingComparison page="pools" />
+}
 
-## O que considerar {#what-to-consider}
+## O que considerar \{#what-to-consider}
 
 Staking delegado ou em pools não é nativamente suportado pelo protocolo Ethereum, mas dada a demanda para que os usuários façam staking com menos de 32 ETH, um número crescente de soluções para servir esta demanda foram construídas.
 
@@ -43,26 +45,35 @@ Entretanto, esses tokens de ETH participado tendem a criar comportamentos semelh
 
 Os indicadores de atributo são usados abaixo para sinalizar notáveis pontos fortes ou fracos que um staking pool listado pode ter. Utilize esta seção como referência de como definimos estes atributos enquanto você está escolhendo participar de um pool.
 
+{
 <StakingConsiderations page="pools" />
+}
 
-## Explore pools de participação {#explore-staking-pools}
+## Explore pools de participação \{#explore-staking-pools}
 
 Há uma variedade de opções disponíveis para ajudá-lo na sua configuração. Use os indicadores acima para guiá-lo pelas ferramentas abaixo.
 
+{
 <ProductDisclaimer />
+}
 
+{
 <StakingProductsCardGrid category="pools" />
+}
 
 Observe a importância de escolher um serviço que leve a sério a [diversidade de clientes](/developers/docs/nodes-and-clients/client-diversity/), pois isso aumenta a segurança da rede e limita seu risco. Os serviços que têm evidências de limitação do uso do cliente majoritário são indicados com <em style={{ textTransform: "uppercase" }}>"diversidade do cliente de execução"</em> e <em style={{ textTransform: "uppercase" }}>"diversidade do cliente de consenso".</em>
 
 Alguma sugestão de ferramenta de participação que não mencionamos? Leia a nossa [política de listagem de produtos](/contributing/adding-staking-products/) para ver se a sugestão é pertinente e para enviá-la para análise.
 
-## Perguntas frequentes {#faq}
+## Perguntas frequentes \{#faq}
 
+{
 <ExpandableCard title="Como ganho recompensas?">
 Normalmente, os tokens de participação ERC-20 são emitidos para participantes (stakers) e representam o valor de ETH participado, mais as recompensas. Lembre-se de que diferentes pools distribuirão recompensas de staking para seus usuários por meio de métodos minimamente diferentes, mas esse é o assunto comum.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Quando posso sacar meu stake?">
 Agora mesmo! A atualização da rede Shanghai/Capella ocorreu em abril de 2023 e introduziu saques de staking. As contas dos validadores que dão suporte aos pools de staking agora têm a capacidade de sair e sacar ETH para o endereço de saque designado. Isso permite resgatar sua parte do stake para o ETH subjacente. Verifique com o seu provedor para ver como eles dão suporte a essa funcionalidade.
 
@@ -70,7 +81,9 @@ Como alternativa, os pools que utilizam um token de participação ERC-20 permit
 
 <ButtonLink to="/staking/withdrawals/">Mais sobre retirada de participação</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Isso é diferente de fazer staking com minha exchange (corretora)?">
 Existem muitas semelhanças entre essas opções de staking em pools agrupadas e trocas centralizadas, como a capacidade de fazer entrega de pequenas quantidades de ETH e fazê-los juntar para ativar validadores.
 
@@ -78,8 +91,9 @@ Ao contrário das corretoras centralizadas, muitas outras opções de participa�
 
 Algumas opções de pooling são mais descentralizadas do que outras quando se trata dos nós que os sustentam. Para promover a saúde e a descentralização da rede, os participantes são sempre encorajados a selecionar um serviço de pooling (compartilhamento) que ofereça um conjunto descentralizado de operadores de nós sem permissão.
 </ExpandableCard>
+}
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 - [Fazendo stake com a Rocket Pool – Visão global de staking](https://docs.rocketpool.net/guides/staking/overview.html) - _Documentação do Rocket Pool_
 - [Staking Ethereum com Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Documentação de ajuda Lido_

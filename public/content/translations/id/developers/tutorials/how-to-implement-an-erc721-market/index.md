@@ -22,7 +22,7 @@ Semuanya berubah dengan internet. Jumlah orang yang bisa melihat papan iklan bar
 
 Dengan blockchain, pasar-pasar ini akan berubah sekali lagi, berikut caranya.
 
-## Monetisasi {#monetization}
+## Monetisasi \{#monetization}
 
 Model bisnis papan iklan baris blockchain publik akan berbeda dari jenis Ebay dan perusahaan lainnya.
 
@@ -38,7 +38,7 @@ Saya baru saja mencium kesempatan bisnis di sini. Papan iklan baris yang tanpa b
 
 Saya hanya senang membangunnya. Mari kita lihat kodenya.
 
-## Implementasi {#implementation}
+## Implementasi \{#implementation}
 
 Beberapa waktu lalu kami memulai sebuah [repository sumber terbuka](https://github.com/HQ20/contracts?ref=hackernoon.com) dengan implementasi percontohan dalam kasus bisnis dan hal lainnya, silakan dilihat.
 
@@ -138,7 +138,7 @@ function cancelTrade(uint256 _trade)
 
 Selesai. Anda sampai pada bagian akhir implementasi. Cukup mengejutkan melihat betapa ringkasnya beberapa konsep bisnis saat diekspresikan dalam kode, dan ini adalah salah kasus itu. Simak kontrak lengkapnya [di repo kami](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
-## Kesimpulan {#conclusion}
+## Kesimpulan \{#conclusion}
 
 Papan iklan baris adalah konfigurasi pasar umum yang berskala besar dengan internet, menjadi model bisnis yang sangat populer dengan beberapa pemenang monopoli.
 

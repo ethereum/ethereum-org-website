@@ -4,7 +4,7 @@ description:
 lang: zh
 ---
 
-## 介绍 {#introduction}
+## 介绍 \{#introduction}
 
 **什么叫做代币？**
 
@@ -24,13 +24,13 @@ lang: zh
 
 ERC-20 提出了一个同质化代币的标准，换句话说，它们具有一种属性，使得每个代币都与另一个代币（在类型和价值上）完全相同。 例如，一个 ERC-20 代币就像以太币一样，意味着一个代币会并永远会与其他代币一样。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 - [帐户](/developers/docs/accounts)
 - [智能合约](/developers/docs/smart-contracts/)
 - [代币标准](/developers/docs/standards/tokens/)
 
-## 正文 {#body}
+## 正文 \{#body}
 
 ERC-20（以太坊意见征求 20）由 Fabian Vogelsteller 提出于 2015 年 11 月。这是一个能实现智能合约中代币的应用程序接口标准。
 
@@ -45,7 +45,7 @@ ERC-20 的功能示例包括：
 
 来自 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)：
 
-### 方法 {#methods}
+### 方法 \{#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -59,18 +59,18 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### 事件 {#events}
+### 事件 \{#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
 event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 ```
 
-### 示例 {#web3py-example}
+### 示例 \{#web3py-example}
 
 让我们看看如此重要的一个标准是如何使我们能够简单地检查以太坊上的任何 ERC-20 代币合约。 我们只需要合约的应用程序二进制接口 (ABI) 来创造一个 ERC-20 代币界面。 下面我们将使用一个简化的应用程序二进制接口，让例子变得更为简单。
 
-#### Web3.py 示例 {#web3py-example}
+#### Web3.py 示例 \{#web3py-example}
 
 首先，请确保您已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
 
@@ -141,7 +141,7 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [EIP-20：ERC-20 代币标准](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - 代币](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)

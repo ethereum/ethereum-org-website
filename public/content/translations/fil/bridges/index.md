@@ -4,13 +4,15 @@ description: Binibigyang-daan ng mga bridge ang mga user na ilipat-ilipat sa iba
 lang: fil
 ---
 
-# Mga blockchain bridge {#prerequisites}
+# Mga blockchain bridge \{#prerequisites}
 
 _Ang Web3 ay naging ecosystem ng mga L1 blockchain at L2 scaling solution, kung saan may mga natatanging kakayahan at trade-off ang bawat isa. Habang dumarami ang mga blockchain protocol, lumalaki rin [ang demand na ilipat-lipat ng chain ang mga asset](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Upang mapunan ang demand na ito, kailangan natin ng mga bridge._
 
+{
 <Divider />
+}
 
-## Ano ang mga bridge? {#what-are-bridges}
+## Ano ang mga bridge? \{#what-are-bridges}
 
 Gumagana ang mga blockchain bridge na parang mga tulay sa tunay na buhay. Tulad kung paano pinag-uugnay ng pisikal na tulay ang dalawang pisikal na lokasyon, pinag-uugnay ng isang blockchain bridge ang dalawang blockchain ecosystem. Pinapadali ng mga bridge ang komunikasyon sa pagitan ng mga blockchain sa pamamagitan ng pag-transfer ng impormasyon at mga asset.
 
@@ -20,7 +22,7 @@ Naninirahan ka sa USA at nagpaplano kang bumiyahe sa Europe. Mayroon kang USD, p
 
 Ngunit ano ang gagawin mo kung nais mong magsagawa ng katulad na exchange para gumamit ng ibang blockchain? Sabihin nating gusto mong i-exchange ang ETH sa Ethereum Mainnet sa ETH sa [Arbitrum](https://arbitrum.io/). Tulad ng currency exchange na ginawa natin para sa EUR, kailangan natin ng paraan upang ilipat ang ating ETH sa Arbitrum mula sa Ethereum. Ginagawang posible ng mga bridge ang ganitong transaksyon. Sa ganitong sitwasyon, [may native na bridge ang Arbitrum](https://bridge.arbitrum.io/) na makakapag-transfer ng ETH sa Arbitrum mula sa Mainnet.
 
-## Bakit kailangan natin ang mga bridge? {#why-do-we-need-bridges}
+## Bakit kailangan natin ang mga bridge? \{#why-do-we-need-bridges}
 
 May kanya-kanyang limitasyon ang lahat ng blockchain. Upang makasabay ang Ethereum sa demand, iniatas nito ang mga rollup. Iba naman ang pagkakadisenyo ng mga L1 tulad ng Solana at Avalanche upang magbigay-daan sa mas mataas na throughput pero ang kapalit nito ay decentralization.
 
@@ -37,25 +39,27 @@ Sa tulong ng mga bridge, naisasagawa ang mga sumusunod:
 
 [Paano maidurugtong ang tokens sa layer 2](/guides/how-to-use-a-bridge/)
 
+{
 <Divider />
+}
 
-## Mga use case ng bridge {#bridge-use-cases}
+## Mga use case ng bridge \{#bridge-use-cases}
 
 Narito ang ilang sitwasyon kung saan maaari kang gumamit ng bridge:
 
-### Mas murang bayarin sa transaksyon {#transaction-fees}
+### Mas murang bayarin sa transaksyon \{#transaction-fees}
 
 Sabihin nating mayroon kang ETH sa Ethereum Mainnet ngunit mas gusto mo ng mas murang bayarin sa transaksyon upang subukan ang iba't ibang dapp. Sa pamamagitan ng pag-bridge ng ETH mo sa Ethereum L2 rollup mula sa Mainnet, magiging mas mura ang iyong mga bayarin sa transaksyon.
 
-### Mga dapp sa iba pang blockchain {#dapps-other-chains}
+### Mga dapp sa iba pang blockchain \{#dapps-other-chains}
 
 Kung gumagamit ka ng Aave sa Ethereum Mainnet para magpautang ng USDT ngunit mas mataas ang interest rate para sa pagpapautang ng USDT gamit ang Aave sa Polygon.
 
-### Tingnan ang mga blockchain ecosystem {#explore-ecosystems}
+### Tingnan ang mga blockchain ecosystem \{#explore-ecosystems}
 
 Kung mayroon kang ETH sa Ethereum Mainnet at nais mong subukan ang isang alternatibong L1 para subukan ang mga native nitong dapp. Maaari kang gumamit ng bridge upang i-transfer ang iyong ETH sa alt L1 mula sa Ethereum Mainnet.
 
-### Mga sariling native na crypto asset {#own-native}
+### Mga sariling native na crypto asset \{#own-native}
 
 Sabihin nating gusto mong magkaroon ng native na Bitcoin (BTC), ngunit nasa Ethereum Mainnet lang ang pondo mo. Upang magkaroon ng exposure sa BTC sa Ethereum, maaari kang bumili ng Wrapped Bitcoin (WBTC). Gayunpaman, ang WBTC ay isang ERC-20 token na native sa Ethereum network. Ibig sabihin, ito ay isang bersyon ng Bitcoin sa Ethereum at hindi ang orihinal na asset sa Bitcoin blockchain. Para magkaroon ng native na BTC, kailangan mong i-bridge ang iyong mga asset sa Bitcoin mula sa Ethereum gamit ang bridge. Ibi-bridge nito ang WBTC mo at gagawin nito itong native na BTC. Puwede ring mayroon ka nang BTC at gusto mo itong gamitin sa mga Ethereum DeFi protocol. Pabaligtad ang magiging pag-bridge nito, mula sa BTC patungong WBTC na siyang magagamit bilang asset sa Ethereum.
 
@@ -63,9 +67,11 @@ Sabihin nating gusto mong magkaroon ng native na Bitcoin (BTC), ngunit nasa Ethe
   Maaari mo ring gawin ang lahat ng nabanggit gamit ang isang <a href="/get-eth/">centralized exchange</a>. Gayunpaman, maliban kung nasa isang exchange na ang iyong mga pondo, maraming hakbang ang kailangan para dito, at magiging mas mainam kung gumamit ka na lang ng bridge.
 </InfoBanner>
 
+{
 <Divider />
+}
 
-## Mga uri ng bridge {#types-of-bridge}
+## Mga uri ng bridge \{#types-of-bridge}
 
 Maraing uri ng disenyo at detalye ang mga bridge. Karaniwang nahahati sa dalawang kategorya ang mga bridge: mga trusted at trustless bridge.
 
@@ -93,9 +99,11 @@ Ang self check-in ay katulad ng trustless model dahil inaalis nito ang papel ng 
 
 Gumagamit ang maraming bridging solution ng mga model sa pagitan ng dalawang uring ito, na may iba't ibang antas ng pagiging trustless.
 
+{
 <Divider />
+}
 
-## Panganib sa paggamit ng mga bridge {#bridge-risk}
+## Panganib sa paggamit ng mga bridge \{#bridge-risk}
 
 Nasa mga unang yugto pa lang ng development ang mga bridge. Malaki ang posibilidad na hindi pa natutuklasan ang pinakamagandang disenyo ng bridge. May kaakibat na panganib ang pag-interact sa anumang uri ng bridge:
 
@@ -119,9 +127,11 @@ Ang isang kamakailang hack ay ang Wormhole bridge ng Solana, [kung saan 120k wET
 
 Mahalaga ang mga bridge sa mga user na nasa onboarding sa mga Ethereum L2, at maging sa mga user na gustong gumamit ng iba't ibang ecosystem. Gayunpaman, dahil sa mga panganib na kaakibat ng pag-interact sa mga bridge, dapat maunawaan ng mga user ang mga trade-off ng mga bridge. Ito ang ilang [estratehiya para sa cross-chain security](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
+{
 <Divider />
+}
 
-## Karagdagang pagbabasa {#further-reading}
+## Karagdagang pagbabasa \{#further-reading}
 
 - [EIP-5164: Cross-Chain Execution](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _Hunyo 18, 2022 - Brendan Asselstine_
 - [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _Hulyo 5, 2022 - Bartek Kiepuszewski_

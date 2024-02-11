@@ -27,7 +27,7 @@ fs.readFile("keyfile.json", (err, data) => {
 
 このドキュメントは、**バージョン 3**の Web3 シークレットストレージの定義です。
 
-## 定義 {#definition}
+## 定義 \{#definition}
 
 ファイルのエンコードとデコードは、暗号化アルゴリズムが AES-128-CBC に固定されなくなったことを除いて(AES-128-CTR が最小要件になりました)、実際にはバージョン 1 からほとんど変更されていません 。 ほとんどの意味またはアルゴリズムは、バージョン 1 と似ていますが、`mac`を除きます。これは、完全な`ciphertext`と共に導出鍵の左から 2 番目の 16 バイトを連結した SHA3 (keccak-256) として指定されます。
 
@@ -72,7 +72,7 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 
 バージョンの「ハード」識別子として機能する `version`フィールドに加えて、実装では`minorversion`を使用してフォーマットへのより小さな非破壊的な変更を追跡することもできます。
 
-## テストベクトル {#test-vectors}
+## テストベクトル \{#test-vectors}
 
 詳細:
 
@@ -82,7 +82,7 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 - `Password`: `testpassword`
 - `Secret`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
 
-### PBKDF2-SHA-256 {#PBKDF2-SHA-256}
+### PBKDF2-SHA-256 \{#PBKDF2-SHA-256}
 
 `AES-128-CTR`および`PBKDF2-SHA-256`を使用したテストベクトル
 
@@ -114,7 +114,7 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 
 `Derived key`: `f06d69cdc7da0faffb1008270bca38f5e31891a3a773950e6d0fea48a7188551` `MAC Body`: `e31891a3a773950e6d0fea48a71885515318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46` `MAC`: `517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2` `Cipher key`: `f06d69cdc7da0faffb1008270bca38f5`
 
-### スクリプト {#scrypt}
+### スクリプト \{#scrypt}
 
 AES-128-CTR とスクリプトを使用したテストベクトル
 
@@ -145,7 +145,7 @@ AES-128-CTR とスクリプトを使用したテストベクトル
 
 `Derived key`: `fac192ceb5fd772906bea3e118a69e8bbb5cc24229e20d8766fd298291bba6bd` `MAC Body`: `bb5cc24229e20d8766fd298291bba6bdd172bf743a674da9cdad04534d56926ef8358534d458fffccd4e6ad2fbde479c` `MAC`: `2103ac29920d71da29f15d75b4a16dbe95cfd7ff8faea1056c33131d846e3097` `Cipher key`: `fac192ceb5fd772906bea3e118a69e8b`
 
-## バージョン 1 からの変更点 {#alterations-from-v2}
+## バージョン 1 からの変更点 \{#alterations-from-v2}
 
 このバージョンでは、[こちら](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst)に公開されているバージョン 1 のいくつかの矛盾点が解消されています。 簡単には次のとおりです。
 
@@ -184,6 +184,6 @@ AES-128-CTR とスクリプトを使用したテストベクトル
 }
 ```
 
-## バージョン 2 からの変更点 {#alterations-from-v2}
+## バージョン 2 からの変更点 \{#alterations-from-v2}
 
 バージョン 2 は、初期の C++実装で多くのバグがありました。 すべての必須機能は、バージョン 2 から変更ありません。

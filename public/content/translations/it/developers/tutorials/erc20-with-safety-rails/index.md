@@ -9,7 +9,7 @@ skill: beginner
 published: 2022-08-15
 ---
 
-## Introduzione {#introduction}
+## Introduzione \{#introduction}
 
 Una delle cose fantastiche su Ethereum è che non esiste un'autorità centrale che possa modificare o annullare le tue transazioni. Uno dei suoi grandi problemi è che non c'è un'autorità centrale con il potere di annullare gli errori o le transazioni illecite degli utenti. In questo articolo imparerai alcuni dei comuni errori che gli utenti commettono con i token [ERC-20](/developers/docs/standards/tokens/erc-20/), nonché come creare dei contratti ERC-20 che aiutano gli utenti a evitarli, o danno poteri a un'autorità centrale (ad esempio, congelare gli account).
 
@@ -22,7 +22,7 @@ Se desideri visualizzare il codice sorgente completo:
 3. Clona la repository di GitHub `https://github.com/qbzzt/20220815-erc20-safety-rails`.
 4. Apri **contratti > erc20-safety-rails.sol**.
 
-## Creare un contratto ERC-20 {#creating-an-erc-20-contract}
+## Creare un contratto ERC-20 \{#creating-an-erc-20-contract}
 
 Prima di poter aggiungere la funzionalità della barriera di sicurezza, ci occorre un contratto ERC-20. In questo articolo utilizzeremo [la procedura guidata dei contratti di OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/wizard). Aprila in un altro browser e segui queste istruzioni:
 
@@ -42,9 +42,9 @@ Prima di poter aggiungere la funzionalità della barriera di sicurezza, ci occor
 4. Ora, abbiamo un contratto ERC-20 pienamente funzionante. Puoi espandere `.deps` > `npm` per visualizzare il codice importato.
 5. Compila, distribuisci e gioca con il contratto, per scoprire che funziona come un contratto ERC-20. Se devi apprendere come funziona Remix, [utilizza questo tutorial](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
 
-## Errori comuni {#common-mistakes}
+## Errori comuni \{#common-mistakes}
 
-### Gli errori {#the-mistakes}
+### Gli errori \{#the-mistakes}
 
 Gli utenti, talvolta, inviano dei token all'indirizzo errato. Anche se non possiamo leggere la loro mente per sapere cosa intendevano fare, ci sono due tipi di errore che capitano spesso e sono facili da rilevare:
 
@@ -52,7 +52,7 @@ Gli utenti, talvolta, inviano dei token all'indirizzo errato. Anche se non possi
 
 2. Inviare i token a un indirizzo vuoto, non corrispondente a un [conto posseduto esternamente](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs) o a un [contratto intelligente](/developers/docs/smart-contracts). Sebbene non siano disponibili le statistiche su quanto spesso si verifichi, [un incidente potrebbe costare fino a 20.000.000 token](https://gov.optimism.io/t/message-to-optimism-community-from-wintermute/2595).
 
-### Prevenire i trasferimenti {#preventing-transfers}
+### Prevenire i trasferimenti \{#preventing-transfers}
 
 Il contratto ERC-20 di OpenZeppelin include [un hook, `_beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368), chiamato prima del trasferimento di un token. Per impostazione predefinita, questo hook non fa nulla, ma possiamo allegarci la nostra funzionalità, come controlli che ripristinano la transazione se si verifica un problema.
 
@@ -87,7 +87,7 @@ Dobbiamo specificare esplicitamente che stiamo [sovrascrivendo](https://docs.sol
 
 Questa riga chiama la funzione `_beforeTokenTransfer` del contratto o dei contratti da cui abbiamo ereditato o che la contengono. In qusto caso, è solo `ERC20`, `Ownable` non contiene questo hook. Sebbene correntemente `ERC20._beforeTokenTransfer` non faccia nulla, lo chiamiamo nel caso in cui la funzionalità sia aggiunta in futuro (e, quindi, decidiamo di ridistribuire il contratto, poiché i contratti non cambiano dopo la distribuzione).
 
-### Codifica dei requisiti {#coding-the-requirements}
+### Codifica dei requisiti \{#coding-the-requirements}
 
 Vogliamo aggiungere questi requisiti alla funzione:
 
@@ -119,7 +119,7 @@ Questo è il primo requisito, controlla che `to` `this(address)` non siano la st
 
 E, infine, abbiamo il controllo effettivo per gli indirizzi vuoti.
 
-## Accesso amministrativo {#admin-access}
+## Accesso amministrativo \{#admin-access}
 
 Talvolta è utile avere un amministratore che possa annullare gli errori. Per ridurre il potenziale di abusi, questo può essere una [multifirma](https://blog.logrocket.com/security-choices-multi-signature-wallets/), quindi più persone devono approvare un'azione. In questo articolo abbiamo due funzionalità amministrative:
 
@@ -137,7 +137,7 @@ OpenZeppelin fornisce due meccanismi per consentire l'accesso amministrativo:
 
 Per semplicità, in questo articolo utilizzeremo `Ownable`.
 
-### Congelare e scongelare i contratti {#freezing-and-thawing-contracts}
+### Congelare e scongelare i contratti \{#freezing-and-thawing-contracts}
 
 Congelare e scongelare i contratti richiede diverse modifiche:
 
@@ -183,7 +183,7 @@ Congelare e scongelare i contratti richiede diverse modifiche:
        require(!frozenAccounts[from], "The account is frozen");
   ```
 
-### Pulizia della risorsa {#asset-cleanup}
+### Pulizia della risorsa \{#asset-cleanup}
 
 Per rilasciare i token ERC-20 detenuti da questo contratto, dobbiamo chiamare una funzione sul contratto del token cui aappartengono, [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) o [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve). Non ha senso, in questo caso, sprecare gas sulle indennità, potremmo anche trasferirle direttamente.
 
@@ -208,6 +208,6 @@ Questa è la sintassi per creare un oggetto per un contratto quando riceviamo l'
 
 Questa è una funzione di pulizia, quindi, presumibilmente, non vogliamo lasciare alcun token. Invece di ottenere manualmente il saldo dall'utente, potremmo automatizzare anche questo processo.
 
-## Conclusioni {#conclusion}
+## Conclusioni \{#conclusion}
 
 Questa non è una soluzione perfetta, non esiste una soluzione perfetta al problema "un utente ha commesso un errore". Tuttavia, utilizzando questi tipi di controlli, alcuni errori possono almeno essere prevenuti. L'abilità di congelare gli account, sebbene pericolosa, è utilizzabile per limitare i danni di certi attacchi, negando all'hacker i fondi rubati.

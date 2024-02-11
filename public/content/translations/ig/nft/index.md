@@ -11,7 +11,7 @@ summaryPoint2: NFT na-enye ndị na-ekepụta ihe ikike karịa ka ọ dị na m
 summaryPoint3: Nke usoro ngwaọrụ kọmputa kwadoro na blọkchen Ethereum.
 ---
 
-## Kedu ihe bụ NFTs? {#what-are-nfts}
+## Kedu ihe bụ NFTs? \{#what-are-nfts}
 
 NFT bụ tokin nke pụrụ iche n'onwe ha. NFT ọbụla nwere akụrụngwa dị iche iche (nke e ji egosipụta nnwe) ma ọ dikwa ụkọ. Nke a dị iche na tokin dị ka ERC-20s ebe tokin ọbụla yiri onwe ya ma nwee otu akụrụngwa ('nwere ike igbanwe'). Ị chọghị ịma kpọmkwem ụgwọ dọla i nwere n'akpa ego ịntanetị, n'ihi na ha niile yiri onwe ha ma bụrụ otu ọnụ ahịa. Agbanyeghị, ị _na-eme_ na-elekọta NFTnke i nwere kpọmkwem, n'ihi na ha niile nwere akụrụngwa nkeonwe nke mere ka ya na ndị ọzọ dị iche ('nke apụghị igbanwe').
 
@@ -19,13 +19,13 @@ NFT bụ tokin nke pụrụ iche n'onwe ha. NFT ọbụla nwere akụrụngwa d�
 
 <YouTube id="Xdkkux6OxfM" />
 
-## Ịntanetị nke akụrụngwa {#internet-of-assets}
+## Ịntanetị nke akụrụngwa \{#internet-of-assets}
 
 NFTna Ethereum na-edozi ụfọdụ nsogbu nke dị na ịntanetị taa. Dị ka ihe niile na-adịzị na dijitalụ, ọ dị oke mkpa imegharị akụrụngwa nke ihe ana-ahụ anya dị ka ụkọ ihe, ọpụrụiche, nakwa ihe akaebe nke nnwe. n'ụzọ na-enweghị ụlọ ọrụ etiti nke na achịkwa ya. Iji maa atu, na NFT, i nwere ike inwe egwu mp3 na-abụghị maka ngwa egwu otu ụlọ ọrụ kpọmkwem, maọbụ i nwere ike inweta njikwa mgbasa ozi nke i nwere ike ree maọbụ gbanwee, mana onye na-ahụ maka nhiwe enweghị ike ịnapụ gị ya.
 
 Nke a bụ etu ịntanetị NFT si dị ma a tụnyere ya na ịntanetị ọtụtụ n'ime anyị na-eji taa...
 
-### Ntụnyere {#nft-comparison}
+### Ntụnyere \{#nft-comparison}
 
 | Ịntanetị NFT                                                                                                     | Ịntanetị ụbọchị taa                                                                                                           |
 | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
@@ -36,13 +36,13 @@ Nke a bụ etu ịntanetị NFT si dị ma a tụnyere ya na ịntanetị ọt�
 | Ndị nkepụta nwere ike ire ihe nkepụta ha ebe ọbụla ma nwee ikike ire ahịa n'ahịa mba.                            | Ndị nkepụta na-adabere n'akụrụngwa na nkesa nke nhiwe ha na-eji. Ndị a na-adịkarị n'okpuru usoro ojiji yana mgbochi mpaghara. |
 | Ndị nkepụta NFT nwere ike jigide ikike onwunwe nyere ihe ha kepụtara, ma mee ka e nwee ntụkwasị obi na ngwa NFT. | Nhiwe, dị ka ọrụ ndị na-eme ka e gee egwu, na-ejigide ọtụtụ nhiwe nke sitere n'ire ahịa.                                      |
 
-## Kedu ka NFT si arụ ọrụ? {#how-nfts-work}
+## Kedu ka NFT si arụ ọrụ? \{#how-nfts-work}
 
 Dị ka tokin ọbụla e nyere n'Ethereum, ngwa kọmputa na-enye NFT. Ngwa kọmputa na-ekwekọrọ n'otu n'ime usoro NFT (na-abụkarị ERC-721 maọbụ ERC-1155) nke na-akọwapụta ọrụ ngwa ahụ nwere. Ngwa ahụ nwere ike imepụta ('mint') NFT ma kenye ha n'aka onye nwe ya. A kọwara ikike nnwe na ngwa nkwekọrịta site n'idepụta NFT gaa na adreesị nke ọ bụ. NFT ahụ nwere Njirimara nkwa data meta nke metụtara ya nke mekwara ka tokin ahụ dịrị onwe ya iche.
 
 Mgbe mmadụ keputa maọbụ mepụta NFT, ha na-arụ ọrụ na ngwa kọmputa na-enye NFT ọbụla adreesị. E chedoro ozi a n'ebe nchedo ngwa ahụ, nke so na blọkchen. Onye nkepụta ngwa kọmputa ahụ nwere ike ide ihe ọzọ n'ime ngwa ahụ, iji maa atụ, ibelata mkpokọta ọnụọgụ nnyefe maọbụ ịkọpụta ụgwọ a ga-akwụ onye nkepụta mgbe ọbụla e nyefere tokin.
 
-## Kedu ihe a na-eji NFT eme? {#nft-use-cases}
+## Kedu ihe a na-eji NFT eme? \{#nft-use-cases}
 
 E ji NFT eme ọtụtụ ihe, gụnyere:
 
@@ -71,7 +71,7 @@ Webụsaịtị a nwekwara aha ngalaba ọzọ nke NFT kwadoro, **ehereum.eth**.
 
 <Divider />
 
-### Nchekwa NFT {#nft-security}
+### Nchekwa NFT \{#nft-security}
 
 Nchekwa Ethereum na-esi n'ihe akaebe-nke-itinye ego abịa. E mere sistemụ a ka o wee belata ajọ akpamagwa, wee mee ka Ethereum ghara ịna-egbanwe. Nke a bụ ihe na-eme ka NFT dị ire. Ozugbo blọk azụmahịa NFT dị na ya bịara na njedebe, ọ ga-eri onye na-ezu ohi nde kwuru nde Ethereum igbanwe ya. Onye ọbụla na-eji ngwa Ethereum nwere ike ịchọpụta na a na-achọ aka itinye aka ná NFT n'ụzọ n'ezighị ezi, ma a ga-atakwa onye ahụ ahụhụ wee chụpụkwa ya.
 
@@ -81,7 +81,7 @@ Okwu nchekwa metụtara NFT na-abukari ihe gbasara ozi maka iji aghụghọ nara
   Ihe ndị i ọzọ na nchekwa
 </ButtonLink>
 
-## Further reading {#further-reading}
+## Further reading \{#further-reading}
 
 - [ Ntuziaka onye mbido na NFT ohuru](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Jenuwari 2020_
 - [Nnyocha EtherscanNft](https://etherscan.io/nft-top-contracts)

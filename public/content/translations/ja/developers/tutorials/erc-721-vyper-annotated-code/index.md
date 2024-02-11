@@ -11,13 +11,13 @@ skill: beginner
 published: 2021-04-01
 ---
 
-## はじめに {#introduction}
+## はじめに \{#introduction}
 
 [ERC-721](/developers/docs/standards/tokens/erc-721/)標準規格は、非代替性トークン（NFT）の所有権を保持するために使用されます。 [ERC-20](/developers/docs/standards/tokens/erc-20/)トークンは代替性を持つため、コモディティとして機能します。 一方、ERC-721 トークンは、様々な[猫のイラスト](https://www.cryptokitties.co/)や不動産物件の各部分に対する権原など、同じ種類ではあるが異なるアセットを対象として設計されたものです。
 
 本記事では、[中村龍矢氏の ERC-721 コントラクト](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy)を分析します。 このコントラクトは、[Vyper](https://vyper.readthedocs.io/en/latest/index.html)で作成されました。Vyper は、Python に似たコントラクト開発言語であり、Solidity と比較するとセキュリティが低いコードを作成しにくくなっています。
 
-## コントラクトの内容 {#contract}
+## コントラクトの内容 \{#contract}
 
 ```python
 # @dev Implementation of ERC-721 non-fungible token standard.
@@ -37,7 +37,7 @@ ERC-721 インターフェイスは、Vyper 言語に組み込まれています
 
 第 1 行はインターフェイスをインポートし、第 2 行はここで実装することを指示します。
 
-### ERC-721 の Receiver インターフェイス {#receiver-interface}
+### ERC-721 の Receiver インターフェイス \{#receiver-interface}
 
 ```python
 # Interface for the contract called by safeTransferFrom()
@@ -79,7 +79,7 @@ ERC-721 トークンの ID は、256 ビットです。 通常トークン ID �
 
 この関数は`view`関数であるため、ブロックチェーンの状態を読み取るだけで、変更はできません。
 
-### イベント {#events}
+### イベント \{#events}
 
 [イベント](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e)は、ブロックチェーン外のユーザーおよびサーバーにイベントを通知するために発行されます。 イベントの内容は、ブロックチェーン上のコントラクトでは利用できないことに注意してください。
 
@@ -133,7 +133,7 @@ event ApprovalForAll:
 
 `approved`の値を通じて、当該イベントが承認を求めるものか、承認を取り消したものかを確認することができます。
 
-### 状態変数 {#state-vars}
+### 状態変数 \{#state-vars}
 
 状態変数には、トークンの現在の状態、つまりどのトークンが存在し、誰が所有するかの情報が含まれます。 大部分の状態変数は`HashMap`オブジェクトであり、[2 つのタイプ間に存在する一方向のマッピング](https://vyper.readthedocs.io/en/latest/types.html#mappings)です。
 
@@ -183,11 +183,11 @@ ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000
 
 [ERC-165](https://eips.ethereum.org/EIPS/eip-165)では、コントラクトにおいてアプリケーションがどのようなやりとりを行うか、およびどの ERC 規格に準拠するのかを開示するメカニズムの仕様が規定されています。 このコントラクトの場合、ERC-165 と ERC-721 に準拠しています。
 
-### 関数 {#functions}
+### 関数 \{#functions}
 
 以下は、実際に ERC-721 で実装できる関数です。
 
-#### コンストラクタ関数 {#constructor}
+#### コンストラクタ関数 \{#constructor}
 
 ```python
 @external
@@ -212,7 +212,7 @@ Python および Vyper では、複数行の文字列（文頭および文末を
 
 状態変数にアクセスするには、`self.<variable name>`を使用します（これも、Python と同様です）。
 
-#### ビュー関数 {#views}
+#### ビュー関数 \{#views}
 
 ビュー関数は、ブロックチェーンの状態を変更しない関数であり、外部から呼び出されると無料で実行されます。 一方、コントラクトがビュー関数を呼び出す場合は全ノードで実行する必要があるため、ガス代が発生します。
 
@@ -311,7 +311,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 この関数は、「`_operator`」がこのコントラクト内の「`_owner`」のトークンをすべて管理できるかどうかをチェックします。 複数のオペレーターが存在する可能性があるため、ハッシュマップも 2 つのレベルが存在します。
 
-#### 送信ヘルパー関数 {#transfer-helpers}
+#### 送信ヘルパー関数 \{#transfer-helpers}
 
 これらの関数は、トークンの送信またはトークン管理の一部のオペレーションを実装しています。
 
@@ -428,7 +428,7 @@ def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: addr
 
 Vyper 上でイベントを発行するには、`log`ステートメントを使用します（詳細は、[こちら](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)をご覧ください）。
 
-#### 送信関数 {#transfer-funs}
+#### 送信関数 \{#transfer-funs}
 
 ```python
 
@@ -551,7 +551,7 @@ def setApprovalForAll(_operator: address, _approved: bool):
     log ApprovalForAll(msg.sender, _operator, _approved)
 ```
 
-#### 新しいトークンのミントと既存トークンの破壊 {#mint-burn}
+#### 新しいトークンのミントと既存トークンの破壊 \{#mint-burn}
 
 コントラクトを作成したアカウントは`minter`となり、新規の NFT をミントする承認を受けたスーパーユーザーとなります。 ただし、ミンターは既存トークンをバーンすることはできません。 バーンできるのは、所有者および所有者の承認を受けたエンティティのみです。
 
@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 トークンの送信が許可されているユーザーは、そのトークンをバーンすることができます。 バーンは、ゼロアドレスへの送信と同じ外見を持ちますが、このゼロアドレスは実際にはこのトークンを受け取りません。 バーンを通じて、このトークンに使用されたすべてのストレージを解放できるため、トランザクションのガス代を軽減することができます。
 
-# コントラクトの使用方法 {#using-contract}
+# コントラクトの使用方法 \{#using-contract}
 
 Solidity とは異なり、Viper は相続機能を提供しません。 これは、コードをより明確にし、セキュリティを確保しやすくするための意図的な設計上の選択によるものです。 このため、あなた自身が Vyper で ERC-721 コントラクトを作成する際は、[このコントラクト](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy)を用いて修正し、必要なビジネスロジックを実装してください。
 
-# まとめ {#conclusion}
+# まとめ \{#conclusion}
 
 このコントラクトにつき、最も重要なポイントを以下にまとめました：
 

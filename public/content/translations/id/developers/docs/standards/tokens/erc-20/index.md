@@ -4,7 +4,7 @@ description:
 lang: id
 ---
 
-## Pendahuluan {#introduction}
+## Pendahuluan \{#introduction}
 
 **Apa itu Token?**
 
@@ -24,13 +24,13 @@ Fitur yang begitu kuat dari Ethereum ini harus ditangani oleh standar yang juga 
 
 ERC-20 memperkenalkan sebuah standar untuk Token Fungible, dengan kata lain, mereka memiliki properti yang membuat tiap Token sama persis (dalam tipe dan nilai) dengan Token lainnya. Sebagai contoh, satu Token ERC-20 bertindak sama seperti ETH, berarti 1 Token adalah dan akan selalu sama dengan semua Token lainnya.
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 - [Akun](/developers/docs/accounts)
 - [Kontrak Pintar](/developers/docs/smart-contracts/)
 - [Standar token](/developers/docs/standards/tokens/)
 
-## Tubuh {#body}
+## Tubuh \{#body}
 
 ERC-20 (Ethereum Request for Comments 20), yang diusulkan oleh Fabian Vogelsteller pada November 2015, adalah Standar Token yang menerapkan API untuk token dalam Kontrak Pintar.
 
@@ -45,7 +45,7 @@ Jika Kontrak Pintar menerapkan metode dan aksi berikut ini, kontrak tersebut dap
 
 Dari [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
-### Metode {#methods}
+### Metode \{#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -59,18 +59,18 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### Aksi {#events}
+### Aksi \{#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
 event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 ```
 
-### Contoh {#web3py-example}
+### Contoh \{#web3py-example}
 
 Mari kita lihat bagaimana sebuah Standar begitu penting untuk mempermudah pemeriksaan Kontrak Token ERC-20 di Ethereum. Kita hanya memerlukan Application Binary Interface (ABI) Kontrak untuk membuat antarmuka untuk Token ERC-20 mana pun. Seperti yang dapat Anda lihat di bawah, kita akan menggunakan satu ABI yang disederhanakan, untuk membuatnya menjadi contoh bergesekan rendah.
 
-#### Contoh Web3.py {#web3py-example}
+#### Contoh Web3.py \{#web3py-example}
 
 Pertama-tama, pastikan Anda telah menginstal pustaka Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
@@ -141,7 +141,7 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 - [EIP-20: Standar Token ERC-20](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Token](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)

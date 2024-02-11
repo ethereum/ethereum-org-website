@@ -4,15 +4,15 @@ description: Como manter a segurança no Ethereum
 lang: pt-br
 ---
 
-# Segurança e prevenção de fraude do Ethereum {#introduction}
+# Segurança e prevenção de fraude do Ethereum \{#introduction}
 
 Com o crescente interesse em criptomoedas, é essencial aprender as práticas recomendadas ao usar criptomoedas. Operar com criptomoedas pode ser divertido e empolgante, mas também existem sérios riscos. Se você estiver atendo a estes pequenos detalhes, poderá mitigar esses riscos.
 
 <Divider />
 
-## Noções básicas de segurança na web {#web-security}
+## Noções básicas de segurança na web \{#web-security}
 
-### Use senhas fortes {#use-strong-passwords}
+### Use senhas fortes \{#use-strong-passwords}
 
 [Mais de 80% da usurpação de contas são um resultado de senhas fracas ou roubadas](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Uma longa combinação de caracteres, números e símbolos é o melhor para manter suas contas seguras.
 
@@ -26,7 +26,7 @@ Exemplo de uma senha forte: ymv\*azu.EAC8eyp8umf
 
 Outro erro comum é o uso de senhas que podem ser facilmente adivinhadas ou descobertas por meio de [engenharia social](<https://wikipedia.org/wiki/Social_engineering_(security)>). Incluir o nome de solteira de sua mãe, os nomes de seus filhos ou animais de estimação ou datas de nascimento em sua senha não é seguro e aumentará o risco de sua senha ser invadida.
 
-#### Práticas recomendadas relacionadas a senhas: {#good-password-practices}
+#### Práticas recomendadas relacionadas a senhas: \{#good-password-practices}
 
 - Crie senhas tão extensas quanto permitidas pelo gerador de senhas ou pelo formulário que você está preenchendo
 - Use uma combinação de maiúsculas, minúsculas, números e símbolos
@@ -35,11 +35,11 @@ Outro erro comum é o uso de senhas que podem ser facilmente adivinhadas ou desc
 
 [Mais sobre a criação de senhas fortes](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
 
-### Use senhas exclusivas para tudo {#use-unique-passwords}
+### Use senhas exclusivas para tudo \{#use-unique-passwords}
 
 Uma senha forte não fornece muita proteção se a senha for revelada em uma violação de dados. O site[Have I Been Pwned](https://haveibeenpwned.com)permite verificar se as suas contas foram envolvidas em quaisquer violações de dados armazenadas na base de dados deles. Caso sim, **você deveria alterar as senhas "pwned" imediatamente**. Usar senhas únicas para cada conta diminui o risco de os hackers obterem acesso a todas as suas contas quando uma delas for comprometida.
 
-### Use um gerenciador de senhas {#use-password-manager}
+### Use um gerenciador de senhas \{#use-password-manager}
 
 <InfoBanner emoji=":bulb:">
   <div>
@@ -51,14 +51,14 @@ Lembrar de senhas fortes e exclusivas para cada conta que você possui não é o
 
 ![Exemplo do uso de um gerenciador de senhas](./passwordManager.png)
 
-#### Experimente um gerenciador de senha: {#try-password-manager}
+#### Experimente um gerenciador de senha: \{#try-password-manager}
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
 - [1Password](https://1password.com/)
 - Ou confira outros [gerenciadores de senhas recomendados](https://www.privacytools.io/secure-password-manager)
 
-### Use autenticação de dois fatores {#two-factor-authentication}
+### Use autenticação de dois fatores \{#two-factor-authentication}
 
 Para provar que você é realmente você, existem diferentes provas únicas que podem ser usadas para autenticação. Estas são conhecidas como **fatores**, e os três principais fatores são:
 
@@ -82,7 +82,7 @@ Usar **a autenticação de dois fatores (2FA)** fornece um _fator de segurança_
   </div>
 </InfoBanner>
 
-#### Chaves de segurança {#security-keys}
+#### Chaves de segurança \{#security-keys}
 
 Para aqueles que querem dar o próximo passo na 2FA, considere a utilização de uma chave de segurança. As chaves de segurança são dispositivos de autenticação em hardware que funcionam do mesmo jeito que os aplicativos de autenticação. A utilização de uma chave de segurança é a forma mais segura para a 2FA. Muitas dessas chaves utilizam o padrão FIDO Universal 2nd Factor (U2F). [Aprenda mais sobre FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
 
@@ -90,11 +90,11 @@ Veja mais informações sobre 2FA neste vídeo:
 
 <YouTube id="m8jlnZuV1i4" start="3479" />
 
-### Desinstale extensões de navegador {#uninstall-browser-extensions}
+### Desinstale extensões de navegador \{#uninstall-browser-extensions}
 
 Extensões de navegador como extensões do Chrome ou complementos para o Firefox podem aumentar as funcioanlidades do navegador e melhorar a experiência do usuário, mas elas vêm com riscos. Por padrão, a maioria das extensões de navegador solicita acesso para "ler e alterar dados do site", permitindo que elas façam quase tudo com seus dados. As extensões do Chrome são sempre atualizadas automaticamente, portanto, uma extensão previamente segura pode ser atualizada mais tarde para incluir código malicioso. A maioria das extensões de navegador não está tentando roubar seus dados, mas você deve estar ciente de que elas podem.
 
-#### Mantenha a segurança: {#browser-extension-safety}
+#### Mantenha a segurança: \{#browser-extension-safety}
 
 - Somente instale extensões de navegador de fontes confiáveis
 - Remova extensões de navegador que não sejam utilizadas
@@ -104,9 +104,9 @@ Extensões de navegador como extensões do Chrome ou complementos para o Firefox
 
 <Divider />
 
-## Noções básicas sobre segurança de criptomoedas {#crypto-security}
+## Noções básicas sobre segurança de criptomoedas \{#crypto-security}
 
-### Aumente o seu nível de conhecimento {#level-up-your-knowledge}
+### Aumente o seu nível de conhecimento \{#level-up-your-knowledge}
 
 Uma das maiores razões pelas quais as pessoas sofrem golpes com criptomoedas é, geralmente, a falta de conhecimento. Por exemplo, se você não entende que a rede Ethereum é descentralizada e não pertence a ninguém, então é fácil ser presa de alguém fingindo ser um agente de atendimento ao cliente que promete devolver o ETH perdido como negociação das suas chaves privadas. Educar-se sobre como o Ethereum funciona é um investimento valioso.
 
@@ -119,9 +119,9 @@ Uma das maiores razões pelas quais as pessoas sofrem golpes com criptomoedas é
 </DocLink>
 <Divider />
 
-## Segurança da carteira {#wallet-security}
+## Segurança da carteira \{#wallet-security}
 
-### Não entregue suas chaves privadas {#protect-private-keys}
+### Não entregue suas chaves privadas \{#protect-private-keys}
 
 **Nunca, por nenhuma razão, compartilhe suas chaves privadas!**
 
@@ -131,28 +131,28 @@ A chave privada da sua carteira atua como uma senha para a sua carteira Ethereum
   O que é uma carteira Ethereum?
 </DocLink>
 
-#### Não faça capturas de tela das suas frases de recuperação/chaves privadas {#screenshot-private-keys}
+#### Não faça capturas de tela das suas frases de recuperação/chaves privadas \{#screenshot-private-keys}
 
 Ao capturar a tela com as suas frases semente ou chaves privadas, você corre o risco de sincronizá-las com a nuvem e fazê-las potencialmente acessíveis aos hackers. Obter as chaves privadas da nuvem é um vetor de ataque comum para os hackers.
 
-### Use uma carteira de hardware {#use-hardware-wallet}
+### Use uma carteira de hardware \{#use-hardware-wallet}
 
 Uma carteira de hardware fornece armazenamento off-line para chaves privadas. Elas são consideradas a opção de carteira mais segura para armazenar suas chaves privadas, pois elas nunca entram em contato com a Internet e permanecem completamente locais em seu dispositivo.
 
 Manter chaves privadas off-line reduz maciçamente o risco de serem hackeadas, mesmo que um hacker tenha controle de seu computador.
 
-#### Experimente uma carteira de hardware: {#try-hardware-wallet}
+#### Experimente uma carteira de hardware: \{#try-hardware-wallet}
 
 - [Ledger](https://www.ledger.com/)
 - [Trezor](https://trezor.io/)
 
-### Verifique duas vezes as transações antes de enviar {#double-check-transactions}
+### Verifique duas vezes as transações antes de enviar \{#double-check-transactions}
 
 Enviar criptomoedas acidentalmente para um endereço de carteira errado é um erro comum. **Uma transação enviada no Ethereum é irreversível.** A menos que você conheça o proprietário do endereço e possa convencê-lo de enviar seus fundos de volta, não haverá maneira de você recuperá-los.
 
 Certifique-se sempre de que o endereço de destino corresponde exatamente ao endereço do destinatário desejado antes de enviar uma transação. Ao interagir com um contrato inteligente, também é recomendado que se leia a mensagem de transação antes de assinar.
 
-### Defina limites de gastos para contratos inteligentes {#spend-limits}
+### Defina limites de gastos para contratos inteligentes \{#spend-limits}
 
 Ao interagir com contratos inteligentes, não permita limites de gastos ilimitados. Uma despesa ilimitada poderia permitir que o contrato inteligente drenasse a sua carteira. Em vez disso, defina limites de gastos apenas na quantidade necessária para a transação.
 
@@ -162,7 +162,7 @@ Muitas carteiras Ethereum oferecem proteção de limites para evitar que as cont
 
 <Divider />
 
-## Fraudes comuns {#common-scams}
+## Fraudes comuns \{#common-scams}
 
 Os golpistas estão sempre procurando maneiras de tirar seus fundos de você. É impossível deter completamente os fraudadores, mas podemos torná-los menos eficazes ao conhecermos a maioria das técnicas utilizadas. Existem muitas variações dessas fraudes, mas elas geralmente seguem os mesmos padrões de alto nível. Em todo caso, lembre-se:
 
@@ -170,19 +170,19 @@ Os golpistas estão sempre procurando maneiras de tirar seus fundos de você. É
 - Ninguém vai te dar ETH de graça ou com desconto
 - ninguém precisa acessar suas chaves privadas ou informações pessoais
 
-### Golpe de doação {#giveaway}
+### Golpe de doação \{#giveaway}
 
 Uma das fraudes mais comuns com criptomoedas é o golpe de sorteio. O golpe sorteio pode ter muitas formas, mas o princípio geral é que se você enviar ETH para o endereço da carteira fornecido, você receberá seu ETH de volta em dobro. *Por esta razão, esse golpe também é conhecido como "golpe dois em um".*
 
 Esses golpes geralmente estipulam um tempo limite para reivindicar a oferta para incentivar tomadas de decisão precipitadas e criar uma falsa sensação de urgência.
 
-#### Hacks de mídia social {#social-media-hacks}
+#### Hacks de mídia social \{#social-media-hacks}
 
 Um exemplo notório desses ocorreu em julho de 2020, quando as contas do Twitter de celebridades e organizações foram hackeadas. O hacker publicou simultaneamente uma doação de Bitcoins nas contas hackeadas. Embora os tweets enganosos tenham sido rapidamente detectados e excluídos, os hackers ainda conseguiram levar 11 bitcoins (ou US$ 500.000 em setembro de 2021) e saíram impunes.
 
 ![Uma fraude no Twitter](./appleTwitterScam.png)
 
-#### Golpe de doação usando celebridades {#celebrity-giveaway}
+#### Golpe de doação usando celebridades \{#celebrity-giveaway}
 
 O golpe de sorteio usando celebridades é outra variável comum do golpe sorteio. Os golpistas pegarão uma entrevista de vídeo ou uma palestra gravada dada por uma celebridade e a transmitirão ao vivo no YouTube, fazendo parecer que a celebridade estava dando uma entrevista ao vivo promovendo um sorteio de criptomoedas.
 
@@ -192,7 +192,7 @@ Vitalik Buterin é frequentemente usado nessa fraude, mas muitas outras pessoas 
 
 ![Um golpe no YouTube](./youtubeScam.png)
 
-### Golpes de suporte {#support-scams}
+### Golpes de suporte \{#support-scams}
 
 Criptomoeda é uma tecnologia relativamente jovem e mal compreendida. Uma fraude comum que tira vantagem disso é a fraude de suporte, na qual os golpistas se personificam como equipe de suporte de carteiras, agências de câmbio ou blockchains populares.
 
@@ -212,7 +212,7 @@ Como regra geral, o pessoal de suporte nunca se comunicará com você por meio d
   </div>
 </InfoBanner>
 
-### Golpe com o token 'Eth2' {#eth2-token-scam}
+### Golpe com o token 'Eth2' \{#eth2-token-scam}
 
 Na fase de preparação para [The Merge](/roadmap/merge/) (A Fusão), os golpistas aproveitaram a confusão em torno do termo "Eth2" para tentar fazer com que os usuários resgatassem seu ETH por um token "ETH2". Não há "ETH2" e nenhum outro token legítimo foi introduzido com a A Fusão. O ETH que você possuía antes da fusão é o mesmo ETH agora. Não há **necessidade de realizar nenhuma ação relacionada ao seu ETH para contabilizar a mudança de prova de trabalho para prova de participação**.
 
@@ -220,7 +220,7 @@ Os golpistas podem aparecer como "suporte", informando que, se você depositar s
 
 _Nota: existem tokens/rótulos derivados que podem representar ETH em participação (ou seja, rETH do Rocket Pool, stETH de Lido, ETH2 do Coinbase), mas você não precisa "migrar" para algum eles._
 
-### Golpes de “phishing” {#phishing-scams}
+### Golpes de “phishing” \{#phishing-scams}
 
 Golpes de “phishing” são outra abordagem cada vez mais comum que os golpistas usarão para tentar roubar os fundos da sua carteira.
 
@@ -234,7 +234,7 @@ Se você receber um e-mail de um remetente desconhecido, lembre-se:
 
 [Mais sobre como evitar golpes de “phishing”](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
 
-### Golpes de corretores de criptomoedas {#broker-scams}
+### Golpes de corretores de criptomoedas \{#broker-scams}
 
 Os falsos corretores de criptomoedas alegam ser especialistas e se oferecerão pegar seu dinheiro e investi-lo em seu nome. Promessas de retorno exageradas geralmente acompanham esse tipo de oferta. Depois que o golpista recebe seus fundos, ele pode persuadir você a enviar mais fundos, para que você não perca mais ganhos de investimento, ou pode desaparecer por completo.
 
@@ -244,7 +244,7 @@ Esses corretores fraudulentos encontram seus alvos usando contas falsas no YouTu
 
 ![Um golpe de corretor no YouTube](./brokerScam.png)
 
-### Golpes de pool (consórcio) de mineração de criptomoedas {#mining-pool-scams}
+### Golpes de pool (consórcio) de mineração de criptomoedas \{#mining-pool-scams}
 
 A partir de setembro de 2022, não será mais possível realizar mineração no Ethereum. No entanto, os golpes de pool de mineração ainda existem. Os golpes de pool de mineração envolvem pessoas que entram em contato com você, sem a sua solicitação, alegando que você pode obter grandes retornos juntando-se a um pool de mineração Ethereum. O golpista continuará fazendo afirmações e permanecerá em contato com você pelo tempo que for necessário. Essencialmente, o golpista tentará convencê-lo de que ao ingressar em um pool de mineração Ethereum, sua criptomoeda será usada para criar ETH e que você receberá dividendos na forma de ETH. O que vai acabar acontecendo é que você notará que sua criptomoeda está gerando pequenos retornos. Isso é simplesmente uma isca para induzi-lo a investir mais. Por fim, todos os seus fundos serão enviados para um endereço desconhecido e o golpista desaparecerá ou, em alguns casos, ele continuará mantendo contato, como aconteceu em um caso recente.
 
@@ -258,7 +258,7 @@ Algumas coisas para você se lembrar:
 
 [Homem perde 200.000 dólares em golpe de pool de mineração](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
-### Golpes de airdrop {#airdrop-scams}
+### Golpes de airdrop \{#airdrop-scams}
 
 As fraudes com airdrop envolvem um projeto fradulento que lança um ativo (NFT, token) em sua carteira e o redireciona para um site fraudulento para você reivindicar o ativo lançado. Você será solicitado a entrar com a sua carteira Ethereum e "aprovar" uma transação ao tentar reivindicar o ativo falso. Essa transação compromete a sua conta enviando suas chaves públicas e privadas para o golpista. Uma forma alternativa dessa fraude pode fazer com que você confirme uma transação que enviará fundos para a conta do golpista.
 
@@ -266,23 +266,23 @@ As fraudes com airdrop envolvem um projeto fradulento que lança um ativo (NFT, 
 
 <Divider />
 
-## Leia mais {#further-reading}
+## Leia mais \{#further-reading}
 
-### Segurança na web {#reading-web-security}
+### Segurança na web \{#reading-web-security}
 
 - [É por isso que você não deve usar mensagens de textos para autenticação de dois fatores](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [Até 3 milhões de dispositivos infectados por complementos do Chrome e Edge com malware](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [Como criar uma senha forte — que você não vai esquecer](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [O que é uma chave de segurança?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
 
-### Segurança de criptomoedas {#reading-crypto-security}
+### Segurança de criptomoedas \{#reading-crypto-security}
 
 - [Protegendo você e seus fundos](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
 - [4 maneiras de se manter seguro quando se usa criptomoedas](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
 - [Guia de segurança para leigos e pessoas inteligentes também](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Segurança de criptomoedas: senhas e autenticação](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 
-### Informações sobre golpes {#reading-scam-education}
+### Informações sobre golpes \{#reading-scam-education}
 
 - [Guia: Como identificar tokens fraudulentos](/guides/how-to-id-scam-tokens/)
 - [Como se proteger: golpes comuns](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_

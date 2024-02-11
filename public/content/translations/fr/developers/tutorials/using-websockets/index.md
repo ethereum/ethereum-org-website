@@ -16,7 +16,7 @@ published: 2020-12-01
 
 Il s'agit d'un guide pour débuter avec l'utilisation de WebSockets et d'Alchemy pour effectuer des requêtes sur la blockchain Ethereum.
 
-## WebSockets vs. HTTP {#websockets-vs-http}
+## WebSockets vs. HTTP \{#websockets-vs-http}
 
 Contrairement à HTTP, avec les WebSockets, il n'est pas nécessaire d'émettre continuellement des demandes lorsque vous souhaitez obtenir des informations spécifiques. WebSockets maintient une connexion réseau pour vous (si cela est fait correctement) et écoute les modifications.
 
@@ -24,7 +24,7 @@ Comme pour toute connexion réseau, vous ne devez pas supposer qu'un WebSocket r
 
 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) ajoute automatiquement la gestion des erreurs WebSocket et les retente sans configuration nécessaire.
 
-## Essayez le {#try-it-out}
+## Essayez le \{#try-it-out}
 
 Le moyen le plus simple de tester WebSockets est d'installer un outil de lignes de commandes pour créer des requêtes WebSocket telles que [wscat](https://github.com/websockets/wscat). En utilisant wscat, vous pouvez envoyer des requêtes comme suit :
 
@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ```
 
-## Comment utiliser WebSockets {#how-to-use-websockets}
+## Comment utiliser WebSockets \{#how-to-use-websockets}
 
 Pour commencer, ouvrez un WebSocket en utilisant le lien Websocket pour votre app. Vous pouvez trouver l'URL WebSocket de votre application en ouvrant la page de l'application dans [votre tableau de bord](https://dashboard.alchemyapi.io/) et en cliquant sur « Afficher la clé ». Notez que l'URL de votre application pour WebSockets est différente de son URL pour les demandes HTTP, mais les deux peuvent être trouvées en cliquant sur « Voir la clé ».
 
@@ -47,7 +47,7 @@ Pour commencer, ouvrez un WebSocket en utilisant le lien Websocket pour votre ap
 
 Chacune des API listées dans la [Référence de l'API Alchemy](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) peut être utilisée via WebSocket. Pour ce faire, utilisez le même bloc que le corps d'une requête HTTP POST, mais envoyez ce payload à travers le WebSocket.
 
-## Avec Web3 {#with-web3}
+## Avec Web3 \{#with-web3}
 
 Faire la transition vers WebSockets tout en utilisant une bibliothèque client comme Web3 est simple. Il suffit de passer l'URL WebSocket au lieu de l'URL HTTP lors de l'instanciation de votre client Web3. Par exemple :
 
@@ -57,26 +57,26 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## API d'abonnement {#subscription-api}
+## API d'abonnement \{#subscription-api}
 
 Lorsque vous êtes connecté avec WebSocket, vous avez accès à deux méthodes supplémentaires : `eth_subscribe` et `eth_unsubscribe`. Ces méthodes vous permettront d'écouter des événements spécifiques et d'être immédiatement averti lorsqu'ils se produisent.
 
-### `eth_subscribe` {#eth-subscribe}
+### `eth_subscribe` \{#eth-subscribe}
 
 Crée un nouvel abonnement pour les événements spécifiés. [En savoir plus sur `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
-#### Paramètres {#parameters}
+#### Paramètres \{#parameters}
 
 1. Types d'abonnement
 2. Paramètres facultatifs
 
 Le premier argument spécifie le type d'événement à écouter. Le deuxième argument contient des options supplémentaires qui dépendent du premier argument. Les différents types de description, leurs options et leurs blocs d'événement sont décrits ci-dessous.
 
-#### Valeur de retour {#returns}
+#### Valeur de retour \{#returns}
 
 L'identifiant de l'abonnement : cet identifiant sera attaché à chaque événements reçu, et peut également être utilisé pour résilier l'abonnement associé en utilisant `eth_unsubscribe`.
 
-#### Événements d'abonnement {#subscription-events}
+#### Événements d'abonnement \{#subscription-events}
 
 Tant que l'abonnement est actif, vous recevrez des événements sous la forme d'objets avec les propriétés suivantes :
 
@@ -86,7 +86,7 @@ Tant que l'abonnement est actif, vous recevrez des événements sous la forme d'
   - `subscription` : L'identifiant de l'abonnement retourné par l'appel de la méthode `eth_subscription` qui a créé cet abonnement.
   - `result` : Un objet dont le contenu varie en fonction du type d'abonnement.
 
-#### Types d'abonnement {#subscription-types}
+#### Types d'abonnement \{#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
@@ -209,7 +209,7 @@ Exemple :
 
 ```
 
-### `eth_unsubscribe` {#eth-unsubscribe}
+### `eth_unsubscribe` \{#eth-unsubscribe}
 
 Annule un abonnement existant afin qu'aucun événement supplémentaire ne soit envoyé.
 

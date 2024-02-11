@@ -5,7 +5,7 @@ lang: zh
 incomplete: true
 ---
 
-## 标准概述 {#standards-overview}
+## 标准概述 \{#standards-overview}
 
 以太坊社区已经采用了许多标准，这有助于在项目的不同实现中保持统一的兼容性（例如[以太坊客户](/developers/docs/nodes-and-clients/)和钱包），并确保智能合约和 dapps 仍保持兼容。
 
@@ -20,7 +20,7 @@ incomplete: true
 - [以太坊协议开发治理和网络升级协调](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020 年 3 月 23 日 - Hudson Jameson_
 - [以太坊核心开发者会议播放列表](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)_（YouTube 播放列表）_
 
-## 标准的类型 {#types-of-standards}
+## 标准的类型 \{#types-of-standards}
 
 EIP 有 3 种类型：
 
@@ -37,7 +37,7 @@ EIP 有 3 种类型：
 
 关于这些不同类型和类别的更多详细信息，请参见 [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 
-### 代币标准 {#token-standards}
+### 代币标准 \{#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - 同质化（可互换）代币的标准接口，比如投票代币、质押代币或虚拟货币。
   - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - 为 ERC-20 代币定义一个代币接口，支持在转账函数或 transferFrom 函数后执行接收者代码，或批准后执行消费者代码。
@@ -51,7 +51,7 @@ EIP 有 3 种类型：
 
 了解更多关于[代币标准](/developers/docs/standards/tokens/)的信息。
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [以太坊改进提议 (EIP)](/eips/)
 

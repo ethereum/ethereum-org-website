@@ -15,11 +15,11 @@ source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 
-## Instalasi {#installation}
+## Instalasi \{#installation}
 
 Echidna dapat diinstal melalui docker atau dengan menggunakan binari yang telah dikompilasi sebelumnya.
 
-### Echidna melalui docker {#echidna-through-docker}
+### Echidna melalui docker \{#echidna-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
@@ -35,15 +35,15 @@ solc-select 0.5.11
 cd /home/training
 ```
 
-### Binari {#binary}
+### Binari \{#binary}
 
 [https://github.com/crytic/echidna/releases/tag/v1.4.0.0](https://github.com/crytic/echidna/releases/tag/v1.4.0.0)
 
-## Pengantar fuzzing berbasis properti {#introduction-to-property-based-fuzzing}
+## Pengantar fuzzing berbasis properti \{#introduction-to-property-based-fuzzing}
 
 Echidna merupakan sebuah fuzzer berbasis properti, yang kami deskripsikan dalam postingan blog kami sebelumnya ([1](https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/), [2](https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/), [3](https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/)).
 
-### Fuzzing {#fuzzing}
+### Fuzzing \{#fuzzing}
 
 [Fuzzing](https://wikipedia.org/wiki/Fuzzing) adalah sebuah teknik yang terkenal dalam komunitas keamanan. Teknik ini berfungsi untuk membuat lebih banyak atau lebih sedikit input secara acak untuk menemukan bug dalam program. Fuzzer bagi perangkat lunak tradisional (seperti [AFL](http://lcamtuf.coredump.cx/afl/) atau [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) dikenal sebagai peralatan efisien untuk menemukan bug.
 
@@ -53,7 +53,7 @@ Di luar dari pembentukan input acak secara murni, ada banyak teknik dan strategi
 - Menghasilkan input yang sesuai dengan batasan struktural. Misalnya, jika input Anda berisi header dengan checksum, akan masuk akal untuk mengizinkan fuzzer membuat input yang memvalidasi checksum.
 - Menggunakan input yang diketahui untuk membuat input baru: jika Anda memiliki akses ke kumpulan data besar input yang valid, fuzzer Anda dapat membuat input yang baru darinya, daripada memulai generasinya dari awal. Ini biasa disebut _seed_.
 
-### Fuzzing berbasis properti {#property-based-fuzzing}
+### Fuzzing berbasis properti \{#property-based-fuzzing}
 
 Echidna termasuk pada keluarga fuzzer khusus: fuzzing berbasis properti yang sangat diinspirasikan oleh [QuickCheck](https://wikipedia.org/wiki/QuickCheck). Berlawanan dengan fuzzer klasik yang akan mencoba menemukan kesalahan, Echidna akan mencoba memecah invarian yang ditentukan oleh pengguna.
 
@@ -63,7 +63,7 @@ Dalam kontrak pintar, invarian adalah fungsi Solidity, yang dapat mewakili state
 - Mesin state yang salah: token dapat ditransfer sementara kontrak dijeda.
 - Aritmatika yang salah: pengguna dapat melakukan underflow terhadap saldonya dan mendapatkan token gratis yang tak terbatas.
 
-### Menguji properti dengan Echidna {#testing-a-property-with-echidna}
+### Menguji properti dengan Echidna \{#testing-a-property-with-echidna}
 
 Kita akan melihat cara menguji kontrak pintar dengan Echidna. Targetnya adalah kontrak pintar [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol) berikut ini:
 
@@ -88,7 +88,7 @@ Kita akan membuat asumsi bahwa token ini harus memiliki properti berikut ini:
 - Siapa pun dapat memiliki maksimum 1000 token
 - Token tidak dapat ditransfer (ini bukan token ERC20)
 
-### Tulis sebuah properti {#write-a-property}
+### Tulis sebuah properti \{#write-a-property}
 
 Properti Echidna merupakan fungsi Solidity. Sebuah properti harus:
 
@@ -122,7 +122,7 @@ contract TestToken is Token{
 
 [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol) mengimplementasikan properti dan mewariskannya dari token.
 
-### Mulai sebuah kontrak {#initiate-a-contract}
+### Mulai sebuah kontrak \{#initiate-a-contract}
 
 Echidna memerlukan sebuah [pembangun](/developers/docs/smart-contracts/anatomy/#constructor-functions) tanpa argumen. Jika kontrak Anda memerlukan inisialisasi khusus, Anda perlu melakukannya di pembangun.
 
@@ -133,7 +133,7 @@ Ada beberapa alamat khusus di Echidna:
 
 Kita tidak memiliki inisialisasi khusus mana pun dalam contoh kita saat ini, akibatnya pembangun kita kosong.
 
-### Jalankan Echidna {#run-echidna}
+### Jalankan Echidna \{#run-echidna}
 
 Echidna diluncurkan dengan:
 
@@ -147,7 +147,7 @@ Jika contract.sol berisi berbagai kontrak, Anda dapat menentukan target:
 $ echidna-test contract.sol --contract MyContract
 ```
 
-### Ringkasan: Menguji sebuah properti {#summary-testing-a-property}
+### Ringkasan: Menguji sebuah properti \{#summary-testing-a-property}
 
 Berikut ini merangkum operasi echidna dalam contoh kita:
 
@@ -174,7 +174,7 @@ echidna_balance_under_1000: failed!💥
 
 Echidna menemukan bahwa properti dilanggar jika `backdoor` dipanggil.
 
-## Menyaring fungsi untuk memanggil saat kampanye fuzzing berlangsung {#filtering-functions-to-call-during-a-fuzzing-campaign}
+## Menyaring fungsi untuk memanggil saat kampanye fuzzing berlangsung \{#filtering-functions-to-call-during-a-fuzzing-campaign}
 
 Kita akan melihat cara menyaring fungsi untuk di-fuzz. Targetnya adalah kontrak pintar berikut ini:
 
@@ -236,7 +236,7 @@ echidna_state4: passed! 🎉
 Seed: -3684648582249875403
 ```
 
-### Menyaring fungsi {#filtering-functions}
+### Menyaring fungsi \{#filtering-functions}
 
 Echidna memiliki masalah dalam menemukan urutan yang benar untuk menguji kontrak ini karena dua fungsi pengaturan ulang (`reset1` dan `reset2`) akan menetapkan semua variabel state ke `false`. Namun, kita dapat menggunakan fitur spesial Echidna untuk membuat daftar hitam fungsi pengaturan ulang atau membuat daftar putih hanya untuk fungsi `f`, `g`, `h` dan `i`.
 
@@ -257,7 +257,7 @@ filterFunctions: ["f", "g", "h", "i"]
 - `filterBlacklist` bersifat `true` secara default.
 - Penyaringan akan dilakukan berdasarkan nama saja (tanpa parameter). Jika Anda memiliki `f()` dan `f(uint256)`, `"f"` penyaring akan memasangkan kedua fungsi tersebut.
 
-### Jalankan Echidna {#run-echidna-1}
+### Jalankan Echidna \{#run-echidna-1}
 
 Untuk menjalankan Echidna dengan file konfigutasi `blacklist.yaml`:
 
@@ -274,7 +274,7 @@ echidna_state4: failed!💥
 
 Echidna akan segera menemukan urutan transaksi untuk memalsukan properti.
 
-### Ringkasan: Fungsi penyaringan {#summary-filtering-functions}
+### Ringkasan: Fungsi penyaringan \{#summary-filtering-functions}
 
 Echidna dapat membuat daftar hitam atau daftar putih fungsi yang dipanggil pada saat kampanye fuzzing dengan menggunakan:
 
@@ -290,7 +290,7 @@ $ echidna-test contract.sol --config config.yaml
 
 Echidna memulai kampanye fuzzing dengan membuat daftar hitam `f1`, `f2` dan `f3` atau hanya memanggil ini, berdasarkan nilai dari boolean `filterBlacklist`.
 
-## Bagaimana cara menguji assert Solidity dengan Echidna {#how-to-test-soliditys-assert-with-echidna}
+## Bagaimana cara menguji assert Solidity dengan Echidna \{#how-to-test-soliditys-assert-with-echidna}
 
 Dalam tutorial pendek ini, kami akan menunjukkan bagaimana cara menggunakan Echidna untuk menguji pemeriksaan fungsi penegasan dalam kontrak. Anggaplah kita memiliki sebuah kontrak seperti ini:
 
@@ -307,7 +307,7 @@ contract Incrementor {
 }
 ```
 
-### Tulis sebuah penegasan {#write-an-assertion}
+### Tulis sebuah penegasan \{#write-an-assertion}
 
 Kita ingin memastikan bahwa `tmp` kurang dari atau sama dengan `counter` setelah mengembalikan perbedaannya. Kita dapat menulis sebuah properti Echidna, tetapi kita akan perlu menyimpan nilai `tmp` di suatu tempat. Sebagai gantinya, kita dapat menggunakan sebuah penegasan seperti yang ini:
 
@@ -324,7 +324,7 @@ contract Incrementor {
 }
 ```
 
-### Jalankan Echidna {#run-echidna-2}
+### Jalankan Echidna \{#run-echidna-2}
 
 To enable the assertion failure testing, create an [Echidna configuration file](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
 
@@ -348,7 +348,7 @@ Seed: 1806480648350826486
 
 Seperti yang Anda dapat lihat, Echidna melaporkan beberapa kegagalan penegasan dalam fungsi `inc`. Dimungkinkan menambahkan lebih dari satu penegasan per fungsi, tetapi Echidna tidak dapat mengetahui penegasan mana yang gagal.
 
-### Kapan dan bagaimana cara menggunakan penegasan {#when-and-how-use-assertions}
+### Kapan dan bagaimana cara menggunakan penegasan \{#when-and-how-use-assertions}
 
 Penegasan dapat digunakan sebagai alternatif untuk properti eksplisit, secara khusus jika kondisi untuk memeriksa terkait langsung dengan penggunaan beberapa operasi `f` yang benar. Adding assertions after some code will enforce that the check will happen immediately after it was executed:
 
@@ -384,7 +384,7 @@ Secara umum, kami menyarankan mengikuti [rekomendasi John Regehr](https://blog.r
 
 Akhirnya, harap **tidak menggunakan** `require` ketimbang `assert`, karena Echidna tidak akan dapat mendeteksinya (tetapi kontraknya bagaimana pun akan melakukan pembalikan).
 
-### Ringkasan: Pemeriksaan Penegasan {#summary-assertion-checking}
+### Ringkasan: Pemeriksaan Penegasan \{#summary-assertion-checking}
 
 Berikut ini merangkum operasi echidna dalam contoh kita:
 
@@ -415,7 +415,7 @@ Seed: 1806480648350826486
 
 Echidna menemukan bahwa penegasan dalam `inc` dapat gagal jika fungsi ini dipanggil beberapa kali dengan argumen yang besar.
 
-## Mengumpulkan dan memodifikasi sebuah korpus Echidna {#collecting-and-modifying-an-echidna-corpus}
+## Mengumpulkan dan memodifikasi sebuah korpus Echidna \{#collecting-and-modifying-an-echidna-corpus}
 
 Kita akan melihat bagaimana cara mengumpulkan dan menggunakan sebuah korpus transaksi dengan Echidna. Targetnya adalah kontrak pintar [`magic.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol) berikut ini:
 
@@ -450,7 +450,7 @@ Seed: 2221503356319272685
 
 Namun, kita masih dapat menggunakan Echidna untuk mengumpulkan korpus ketika menjalankan kampanye fuzzing ini.
 
-### Mengumpulkan sebuah korpus {#collecting-a-corpus}
+### Mengumpulkan sebuah korpus \{#collecting-a-corpus}
 
 Untuk memungkinkan pengumpulan korpus, buat sebuah direktori korpus:
 
@@ -518,7 +518,7 @@ Echidna masih tidak dapat menemukan nilai magic yang benar, tetapi kita dapat me
 
 Jelas, input ini tidak akan memicu kegagalan dalam properti kita. Namun, dalam tahap berikutnya, kita akan melihat bagaimana cara untuk memodifikasinya untuk tujuan itu.
 
-### Membuat seed dari sebuah korpus {#seeding-a-corpus}
+### Membuat seed dari sebuah korpus \{#seeding-a-corpus}
 
 Echidna membutuhkan beberapa bantuan untuk menangani fungsi `magic`. Kita akan menyalin dan memodifikasi input agar parameter yang sesuai digunakan untuknya:
 
@@ -544,7 +544,7 @@ Seed: -7293830866560616537
 
 This time, it found that the property is violated immediately.
 
-## Menemukan transaksi dengan pemakaiaan gas yang tinggi {#finding-transactions-with-high-gas-consumption}
+## Menemukan transaksi dengan pemakaiaan gas yang tinggi \{#finding-transactions-with-high-gas-consumption}
 
 We will see how to find the transactions with high gas consumption with Echidna. Targetnya adalah kontrak pintar berikut ini:
 
@@ -583,7 +583,7 @@ echidna_test: passed! 🎉
 Seed: 2320549945714142710
 ```
 
-### Mengukur Pemakaian Gas {#measuring-gas-consumption}
+### Mengukur Pemakaian Gas \{#measuring-gas-consumption}
 
 To enable the gas consumption with Echidna, create a configuration file `config.yaml`:
 
@@ -598,7 +598,7 @@ seqLen: 2
 estimateGas: true
 ```
 
-### Run Echidna {#run-echidna-3}
+### Run Echidna \{#run-echidna-3}
 
 Setelah kita memiliki file konfigurasi yang telah dibuat, kita dapat menjalankan Echidna seperti ini:
 
@@ -619,7 +619,7 @@ Seed: -325611019680165325
 
 - Gas yang diperlihatkan adalah sebuah perkiraan yang disediakan oleh [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-).
 
-### Menyaring Pemanggilan Pengurangan Gas {#filtering-out-gas-reducing-calls}
+### Menyaring Pemanggilan Pengurangan Gas \{#filtering-out-gas-reducing-calls}
 
 Tutorial tentang **menyaring fungsi untuk melakukan pemanggilan pada saat kampanye fuzzing** di atas menunjukkan cara menghilangkan beberapa fungsi dari pengujian Anda.  
 Langkah ini dapat menjadi sangat penting untuk mendapatkan sebuah perkiraan gas yang akurat. Perhatikan contoh berikut:
@@ -677,7 +677,7 @@ push used a maximum of 40839 gas
 check used a maximum of 1484472 gas
 ```
 
-### Ringkasan: Menemukan transaksi dengan pemakaian gas yang tinggi {#summary-finding-transactions-with-high-gas-consumption}
+### Ringkasan: Menemukan transaksi dengan pemakaian gas yang tinggi \{#summary-finding-transactions-with-high-gas-consumption}
 
 Echidna dapat menemukan transaksi dengan pemakaian gas yang tinggi dengan menggunakan opsi konfigurasi `estimateGas`:
 

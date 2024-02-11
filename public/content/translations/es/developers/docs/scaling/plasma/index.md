@@ -10,7 +10,7 @@ Una cadena de Plasma es una cadena de bloques separada anclada a la Red principa
 
 Los Merkle trees permiten la creación de una pila interminable de estas cadenas que pueden funcionar para descargar ancho de banda de las cadenas principales (parent chains) (incluida la red principal de Ethereum). Sin embargo, aunque estas cadenas obtienen algo de seguridad de Ethereum (a través de pruebas de fraude), su seguridad y eficiencia se ven afectadas por varias limitaciones de diseño.
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos \{#prerequisites}
 
 Debe tener una buena comprensión de todos los temas básicos y un alto nivel de conocimiento del [escalado de Ethereum](/developers/docs/scaling/).
 
@@ -24,7 +24,7 @@ El contrato de Plasma funciona, entre otras cosas, como un [puente](/developers/
 
 Los componentes básicos del marco de trabajo de Plasma son:
 
-### Computación fuera de la cadena {#off-chain-computation}
+### Computación fuera de la cadena \{#off-chain-computation}
 
 La velocidad actual de procesamiento de Ethereum está limitada a ~ 15-20 transacciones por segundo, reduciendo a corto plazo la posibilidad de escalamiento para manejar más usuarios. Este problema existe principalmente porque el [mecanismo de consenso](/developers/docs/consensus-mechanisms/) de Ethereum requiere muchos nodos peer-to-peer para verificar cada actualización del estado de la cadena de bloques.
 
@@ -34,7 +34,7 @@ Plasma supone que la red principal de Ethereum no necesita verificar todas las t
 
 La computación fuera de la cadena (off-chain) es necesaria porque las cadenas de Plasma pueden optimizar la velocidad y el costo. Por ejemplo, una cadena de Plasma tal vez –y suele ser el caso– use un único "operador" para manejar los pedidos y la ejecución de las transacciones. Con solo una entidad que verifique las transacciones, el tiempo de procesamiento en una cadena de Plasma es más rápido que el de la red principal de Ethereum.
 
-### Compromisos de estado {#state-commitments}
+### Compromisos de estado \{#state-commitments}
 
 Si bien Plasma ejecuta las transacciones fuera de la cadena, estas se liquidan en la capa de ejecución principal de Ethereum; de otra manera, las cadenas de Plasma no se podrían beneficiar de las garantías de seguridad de Ethereum. Pero finalizar las transacciones fuera de la cadena sin conocer el estado de la cadena de Plasma rompería el modelo de seguridad y permitiría la proliferación de transacciones invalidas. Por esto el operador, el ente responsable por producir bloques en la cadena de Plasma, debe publicar los "compromisos de estado" en Ethereum periódicamente.
 
@@ -44,17 +44,17 @@ Las raíces de Merkle son primitivos criptográficos que permiten comprimir gran
 
 Las raíces de Merkle son importantes para proporcionar información sobre el estado fuera de la cadena a Ethereum. Puede pensar en las raíces de Merkle como "puntos de guardado": el operador está diciendo: "Este es el estado de la cadena de Plasma en el punto x en el tiempo, y esta es la raíz de Merkle como prueba". El operador se está comprometiendo con el _estado actual_ de la cadena de Plasma con una raíz de Merkle, razón por la que se le llama "compromiso de estado".
 
-### Entradas y salidas {#entries-and-exits}
+### Entradas y salidas \{#entries-and-exits}
 
 Para que los usuarios de Ethereum aprovechen la tecnología de Plasma, debe haber un mecanismo para mover fondos entre la cadena principal y las cadenas de Plasma. Sin embargo, no podemos enviar ether arbitrariamente a una dirección en la cadena de Plasma; estas cadenas son incompatibles, por lo que la transacción fallaría o llevaría a la pérdida de fondos.
 
 Plasma utiliza un contrato maestro que se ejecuta en Ethereum para procesar las entradas y salidas de los usuarios. Este contrato maestro también es responsable de hacer un seguimiento de los compromisos de estado (explicado anteriormente) y castigar el comportamiento deshonesto a través de pruebas de fraude (lo explicaremos mejor más adelante).
 
-#### Entrar a la cadena de Plasma {#entering-the-plasma-chain}
+#### Entrar a la cadena de Plasma \{#entering-the-plasma-chain}
 
 Para entrar a la cadena de Plasma, Alice (la usuaria) tiene que depositar ETH o cualquier token ERC-20 en el contrato de Plasma. El operador de Plasma, el cual vigila los depósitos en el contrato, recrea una cantidad igual a la que Alice depositó inicialmente y la libera hacia la dirección de esta en la cadena de Plasma. Alice debe dar fe de que ha recibido los fondos de la cadena secundaria o child y luego puede usar estos fondos para transacciones.
 
-#### Salir de la cadena de Plasma {#exiting-the-plasma-chain}
+#### Salir de la cadena de Plasma \{#exiting-the-plasma-chain}
 
 Salir de la cadena de Plasma es más complejo que entrar a ella por varias razones. La más importante es que, si bien Ethereum tiene información sobre el estado de la cadena de Plasma, no puede verificar si la información es verdadera o no. Un usuario malicioso podría hacer una afirmación incorrecta ("tengo 1000 ETH") y salirse con la suya proporcionando pruebas falsas para respaldar su afirmación.
 
@@ -70,7 +70,7 @@ El usuario también debe añadir una fianza a la solicitud de retiro como garant
 
 Si el periodo de impugnación transcurre sin que nadie proporcione una prueba de fraude, la solicitud de retiro de Alice se considera válida, lo que le permite recuperar los depósitos del contrato de Plasma en Ethereum.
 
-### Arbitraje de disputas {#dispute-arbitration}
+### Arbitraje de disputas \{#dispute-arbitration}
 
 Como cualquier cadena de bloques, las cadenas de Plasma necesitan un mecanismo para hacer cumplir la integridad de las transacciones en caso de que los participantes actúen de forma maliciosa (por ejemplo, fondos de doble gasto). Con este fin, las cadenas de Plasma utilizan pruebas de fraude para arbitrar disputas sobre la validez de las transiciones de estado y penalizar el mal comportamiento. Las pruebas de fraude se utilizan como un mecanismo a traves del cual una cadena secundaria de Plasma presenta una queja a su cadena principal o a la cadena raíz.
 
@@ -80,7 +80,7 @@ Para evitar el retiro, Bob construirá una prueba de fraude proporcionando evide
 
 Si el desafío de Bob tiene éxito, la solicitud de retiro de Alice se cancela. Sin embargo, este enfoque se basa en la capacidad de Bob de vigilar la cadena para detectar solicitudes de retiro. Si Bob está desconectado, Alice puede procesar el retiro malicioso una vez que transcurra el periodo de desafío.
 
-## El problema de la salida masiva en Plasma {#the-mass-exit-problem-in-plasma}
+## El problema de la salida masiva en Plasma \{#the-mass-exit-problem-in-plasma}
 
 El problema de salida masiva se produce cuando un gran número de usuarios intentan el retiro de una cadena de Plasma al mismo tiempo. La razón por la que existe este problema tiene que ver con uno de los mayores inconvenientes de Plasma: la **no disponibilidad de datos**.
 
@@ -104,7 +104,7 @@ Pero este enfoque todavía tiene problemas. Por ejemplo, si todos los usuarios d
 
 Aunque los juegos de salida suenan bien en teoría, las salidas masivas de la vida real probablemente desencadenarán la congestión de toda la red en el propio Ethereum. Además de dañar la funcionalidad de Ethereum, una salida masiva mal coordinada significa que es posible que los usuarios no puedan retirar fondos antes de que el operador vacíe todas las cuentas de la cadena de Plasma.
 
-## Pros y contras de Plasma {#pros-and-cons-of-plasma}
+## Pros y contras de Plasma \{#pros-and-cons-of-plasma}
 
 | Ventajas                                                                                                                                                                                                                                                                                                   | Desventajas                                                                                                                                                                                                       |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -114,41 +114,41 @@ Aunque los juegos de salida suenan bien en teoría, las salidas masivas de la vi
 | Reduce la carga en la cadena principal de Ethereum moviendo el cálculo y el almacenamiento fuera de la cadena.                                                                                                                                                                                             | Los retiros se retrasan varios días para permitir reclamos (objeciones). Para los activos fungibles, esto puede ser mitigado por los proveedores de liquidez, pero hay un costo de capital asociado.              |
 |                                                                                                                                                                                                                                                                                                            | Si demasiados usuarios intentan salir simultáneamente, la red principal de Ethereum podría congestionarse.                                                                                                        |
 
-## Protocolos de escalado de Plasma frente a capa 2 {#plasma-vs-layer-2}
+## Protocolos de escalado de Plasma frente a capa 2 \{#plasma-vs-layer-2}
 
 Si bien Plasma alguna vez se consideró una solución de escalado útil para Ethereum, desde entonces se ha desincentivado en favor de los [protocolos de escalado de capa 2 (L2)](/layer-2/). Las soluciones de escalado L2 solucionan varios de los problemas de Plasma:
 
-### Eficiencia {#efficiency}
+### Eficiencia \{#efficiency}
 
 Los [rollups de conocimiento cero (ZK)](/developers/docs/scaling/zk-rollups) generan pruebas criptográficas de la validez de cada lote de transacciones procesadas fuera de la cadena. Esto evita que los usuarios (y operadores) promuevan transiciones de estado no válidas, eliminando la necesidad de periodos de desafío y juegos de salida. También significa que los usuarios no tienen que ver la cadena periódicamente para asegurar sus fondos.
 
-### Soporte para contratos inteligentes {#support-for-smart-contracts}
+### Soporte para contratos inteligentes \{#support-for-smart-contracts}
 
 Otro problema con el marco de Plasma era la [incapacidad de admitir la ejecución de contratos inteligentes de Ethereum](https://ethresear.ch/t/why-smart-contracts-are-not-feasible-on-plasma/2598/4). Como resultado, la mayoría de las implementaciones de Plasma se creaban principalmente para pagos simples o el intercambio de tokens ERC-20.
 
 Por el contrario, los rollups optimistas son compatibles con la [Máquina virtual de Ethereum](/developers/docs/evm/) y pueden ejecutar [contratos inteligentes](/developers/docs/smart-contracts/) nativos de Ethereum, lo que los convierte en una solución útil y _segura_ para escalar [aplicaciones descentralizadas](/developers/docs/dapps/). Del mismo modo, hay planes en marcha para [crear una implementación de conocimiento cero de la EVM (zkEVM)](https://ethresear.ch/t/a-zk-evm-specification/11549) que permitiría que los rollups de ZK procesen lógica arbitraria y ejecuten contratos inteligentes.
 
-### No disponibilidad de datos {#data-unavailability}
+### No disponibilidad de datos \{#data-unavailability}
 
 Como se explicó anteriormente, Plasma tiene el problema de la disponibilidad de datos. Si un operador malicioso promoviera una transición no válida en la cadena de Plasma, los usuarios no podrían impugnarla, ya que el operador puede retener los datos necesarios para crear la prueba de fraude. Los rollups resuelven este problema obligando a los operadores a publicar los datos de las transacciones en Ethereum, lo que permite a cualquiera verificar el estado de la cadena y crear pruebas de fraude si es necesario.
 
-### Problema de salida masiva {#mass-exit-problem}
+### Problema de salida masiva \{#mass-exit-problem}
 
 Los rollups de ZK y los rollups optimistas resuelven el problema de salida masiva de Plasma de varias maneras. Por ejemplo, un rollup de ZK se basa en mecanismos criptográficos que garantizan que los operadores no puedan robar fondos de los usuarios en ningún escenario.
 
 Del mismo modo, los rollups optimistas imponen un periodo de retraso en los retiros durante el cual cualquier persona puede iniciar un desafío o reclamo y evitar solicitudes de retiro maliciosas. Si bien esto es similar a Plasma, la diferencia es que los verificadores tienen acceso a los datos necesarios para crear pruebas de fraude. Por lo tanto, no hay necesidad de que los usuarios de rollups se involucren en una migración frenética "primero en salir" a la red principal de Ethereum.
 
-## ¿En qué se diferencia Plasma de las cadenas laterales y la fragmentación? {#plasma-sidechains-sharding}
+## ¿En qué se diferencia Plasma de las cadenas laterales y la fragmentación? \{#plasma-sidechains-sharding}
 
 Plasma, las cadenas laterales y la fragmentación, o sharding, son bastante similares porque todos se conectan a la red principal de Ethereum de alguna manera. Sin embargo, el nivel y la fuerza de estas conexiones varían, lo que afecta a las propiedades de seguridad de cada solución de escalado.
 
-### Plasma vs cadenas laterales {#plasma-vs-sidechains}
+### Plasma vs cadenas laterales \{#plasma-vs-sidechains}
 
 Una [cadena lateral](/developers/docs/scaling/sidechains/) es una cadena de bloques operada de forma independiente conectada a la red principal de Ethereum a través de un puente bidireccional. Los [puentes](/bridges/) permiten a los usuarios intercambiar tokens entre las dos cadenas de bloques para realizar transacciones en la cadena lateral, reduciendo la congestión en la red principal de Ethereum y mejorando la escalabilidad. Las cadenas laterales utilizan un mecanismo de consenso separado y suelen ser mucho más pequeñas que la red principal de Ethereum. Como resultado, puentear activos a estas cadenas implica un mayor riesgo; dada la falta de garantías de seguridad heredadas de la red principal de Ethereum en el modelo de cadena lateral, los usuarios se arriesgan a la pérdida de fondos en un ataque en la cadena lateral.
 
 Por el contrario, las cadenas de Plasma derivan su seguridad de la cadena principal. Esto las hace mensurablemente más seguras que las cadenas laterales. Tanto las cadenas laterales como las cadenas de Plasma pueden tener diferentes protocolos de consenso, pero la diferencia es que las cadenas de plasma publican raíces Merkle para cada bloque en la red principal de Ethereum. Las raíces de bloque son pequeñas porciones de información que podemos usar para verificar la información sobre las transacciones que ocurren en una cadena de Plasma. Si se produce un ataque en una cadena de Plasma, los usuarios pueden retirar sus fondos de forma segura a la red principal utilizando las pruebas apropiadas.
 
-### Plasma vs. fragmentación {#plasma-vs-sharding}
+### Plasma vs. fragmentación \{#plasma-vs-sharding}
 
 Tanto las cadenas de Plasma como las cadenas de fragmentos (shards) publican periódicamente pruebas criptográficas en la red principal de Ethereum. Sin embargo, ambas tienen diferentes propiedades de seguridad.
 
@@ -158,13 +158,13 @@ El Plasma es diferente porque la red principal solo recibe información mínima 
 
 **Note** que la fragmentación de la cadena de bloques de Ethereum ya no está en la hoja de ruta. Ha sido reemplazada por el escalamiento a través de rollups y [Danksharding](/roadmap/danksharding).
 
-### Usos de Plasma {#use-plasma}
+### Usos de Plasma \{#use-plasma}
 
 Múltiples proyectos proveen implementaciones de Plasma que puede integrar en sus dApps:
 
 - [Polygon](https://polygon.technology/) (anteriormente, Matic Network)
 
-## Más información {#further-reading}
+## Más información \{#further-reading}
 
 - [Información sobre Plasma](https://www.learnplasma.org/en/)
 - [Un recordatorio rápido de lo que significa "seguridad compartida" y por qué es tan importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)

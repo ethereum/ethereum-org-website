@@ -27,11 +27,11 @@ Ethereum on Arm'ı kullanarak Raspberry Pi'ı Ethereum düğümüne çevirmek i�
 - Soğutucusu ve fanı olan bir kasa
 - USB klavye, Monitör ve HDMI kablosu (mikro-HDMI) (İsteğe bağlı)
 
-## Neden Ethereum on ARM'ı çalıştıralım? {#why-run-ethereum-on-arm}
+## Neden Ethereum on ARM'ı çalıştıralım? \{#why-run-ethereum-on-arm}
 
 ARM kartları çok uygun fiyatlı, esnek ve küçük bilgisayarlardır. Ethereum düğümlerini çalıştırmak için iyi seçimlerdir çünkü ucuza satın alınabilirler, tüm kaynakları yalnızca düğüme odaklanacak şekilde yapılandırılabilirler, bu onları verimli kılar, düşük miktarda güç tüketir ve fiziksel olarak küçüktür, böylece herhangi bir eve dikkat çekmeden sığabilirler. Ayrıca, Raspberry Pi'ın MicroSD'si bir yüklemeye ya da yazılım oluşturmaya gerek olmadan basitçe önceden yüklenmiş bir görüntüyle doldurabildiği için düğümlerin kodlarını yazmak aşırı kolaydır.
 
-## Nasıl çalışır? {#how-does-it-work}
+## Nasıl çalışır? \{#how-does-it-work}
 
 Raspberry Pi'ın bellek kartı önceden oluşturulmuş bir görüntüyle depolanmıştır. Bu görüntü, bir Ethereum düğümünü çalıştırabilmek için gereken her şeyi içerir. Yüklenmiş bir kartla, kullanıcının yapması gereken tek şey Raspberry Pi'ı açmaktır. Düğümü çalıştırmak için gereken her işlem otomatik olarak başlatılır. Bu, bellek kartı Linux tabanlı bir işletim sistemi (OS) içerdiğinden ve bu sistemde birimi bir Ethereum düğümüne dönüştüren sistem seviyesindeki işlemler otomatik olarak çalıştığından işe yarar.
 
@@ -39,7 +39,7 @@ Ethereum, popüler Raspberry Pi Linux OS "Raspbian" kullanılarak çalıştırı
 
 **Sürücüler**, ortamın kurulmasından ve SSD diskinin biçimlendirilmesinden, Ethereum yazılımını kurup çalıştırmaya ve ayrıca blokzincir senkronizasyonunu başlatmaya kadar gerekli tüm adımların üstesinden gelir.
 
-## Yürütüm ve fikir birliği istemcileriyle ilgili not {#note-on-execution-and-consensus-clients}
+## Yürütüm ve fikir birliği istemcileriyle ilgili not \{#note-on-execution-and-consensus-clients}
 
 Ethereum on Arm görüntüsü, hizmet olarak önceden oluşturulmuş yürütüm ve fikir birliği istemcileri içerir. Bir ethereum düğümü senkronize olmak ve çalışmak için iki istemciye de ihtiyaç duyar. Görüntüyü yükleyip depolamanız ve ardından hizmetleri başlatmanız yeterlidir. Bu görüntüye, aşağıdaki yürütüm istemcileri:
 
@@ -56,7 +56,7 @@ ve aşağıdaki fikir birliği istemcileri önceden yüklenmiştir:
 
 Çalıştırmak için her birinden bir tanesini seçmelisiniz; tüm yürütüm istemcileri tüm fikir birliği istemcileriyle uyumludur. Açık bir şekilde bir istemci seçmezseniz düğüm, varsayılanlarına geri dönecek (Geth ve Lighthouse) ve bunları kart açıldığında otomatik olarak çalıştıracaktır. Geth'in eşleri bulup bağlanabilmesi için yönlendiricinizin 30303 bağlantı noktasını açmalısınız.
 
-## Görüntüyü İndirme {#downloading-the-image}
+## Görüntüyü İndirme \{#downloading-the-image}
 
 Raspberry Pi Ethereum görüntüsü, yürütüm ve fikir birliği istemcilerini otomatik olarak yükleyip ayarlayan ve onları birbiriyle konuşmaları ve Ethereum ağına bağlanmaları için yapılandıran "tak ve çalıştır" tipi bir görüntüdür. Kullanıcının tek yapması gereken basit bir komut kullanarak işlemlerini başlatmaktır.
 
@@ -70,7 +70,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 
 Rock 5B ve Odroid M1 kartlarının görüntülerinin Ethereum-on-Arm'ın [indirmeler sayfasında](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html) mevcut olduğunu unutmayın.
 
-## MicroSD'yi yükleme {#flashing-the-microsd}
+## MicroSD'yi yükleme \{#flashing-the-microsd}
 
 Raspberry Pi için kullanılacak MicroSD kartın yüklenebilmesi için öncelikle bir masaüstü veya dizüstü bilgisayara takılması gerekir. Ardından aşağıdaki terminal komutları, indirilen görüntüyü SD karta aktaracaktır:
 
@@ -91,7 +91,7 @@ sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=prog
 
 Kart şimdi yanıp sönüyor, böylece Raspberry Pi'a takılabilir.
 
-## Düğümü başlatma {#start-the-node}
+## Düğümü başlatma \{#start-the-node}
 
 Raspberry Pi'a takılı SD kart ile ethernet kablosunu ve SSD'yi bağlayın ve ardından gücü açın. İşletim sistemi açılır ve Raspberry Pi'ı bir Ethereum düğümüne dönüştüren, istemci yazılımının yüklenmesi ve oluşturulması da dahil olmak üzere önceden yapılandırılmış görevler otomatik olarak gerçekleştirilir. Bu, muhtemelen 10-15 dakika sürecektir.
 
@@ -127,7 +127,7 @@ Geth ve Lighthouse hizmetleri senkronize ve çalışır durumdaysa, Raspberry Pi
 
 Geth, metrikleri tarayıcıda görüntülenebilen Grafana paneline rapor etmek üzere önceden yapılandırılmıştır. Daha ileri seviye kullanıcılar bu özelliği, `ipaddress:3000` adresine gidip `user: admin` ve `passwd: ethereum` öğelerini geçirmek yoluyla düğümlerinin sağlığını izlemek için kullanmak isteyebilirler.
 
-## Doğrulayıcılar {#validators}
+## Doğrulayıcılar \{#validators}
 
 Fikir birliği istemcisine isteğe bağlı olarak bir doğrulayıcı da eklenebilir. Doğrulayıcı yazılımı, düğümünüzün mutabakata aktif olarak katılmasına olanak tanır ve ağa kriptoekonomik güvenlik sağlar. Bu iş için ETH bazında ödüllendirilirsiniz. Bir doğrulayıcıyı çalıştırmak için öncelikle yatırma sözleşmesine yatırmak üzere 32 ETH'ye sahip olmanız gerekir. **Bu, uzun süreli bir bağlılık gerektirir; bu ETH'yi çekmek henüz mümkün değildir!**. Yatırma işlemi, [Başlama noktası](https://launchpad.ethereum.org/)'ndaki adım-adım rehberi takip edilerek yapılabilir. Bunu bir masaüstü/dizüstü bilgisayarda yapın ancak anahtar oluşturmayın; bu, doğrudan Raspberry Pi üzerinde yapılabilir.
 
@@ -158,15 +158,15 @@ sudo systemctl start lighthouse-validator
 
 Tebrikler, artık Raspberry Pi üzerinde çalışan tam bir Ethereum düğümünüz ve doğrulayıcınız var!
 
-## Daha fazla ayrıntı {#more-details}
+## Daha fazla ayrıntı \{#more-details}
 
 Bu sayfa, Raspberry Pi kullanarak Geth-Lighthouse düğümünü ve doğrulayıcısını nasıl kuracağınız hakkında genel bir görünüm sunmuştur. Daha detaylı açıklama [Ethereum-on-Arm web sitesinde](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html) mevcuttur.
 
-## Geribildirimleriniz bizi memnun eder {#feedback-appreciated}
+## Geribildirimleriniz bizi memnun eder \{#feedback-appreciated}
 
 Raspberry Pi'ın, Ethereum ağının sağlığı üzerinde çok olumlu bir etkisi olabilecek büyük bir kullanıcı tabanına sahip olduğunu biliyoruz. Lütfen bu öğreticideki ayrıntıları inceleyin, test ağlarında çalıştırmayı deneyin, Github'da Ethereum on Arm'a göz atın, geribildirimde bulunun, sorunları ve çekme isteklerini dile getirin, teknolojiyi ve dokümanları geliştirmeye yardımcı olun!
 
-## Referanslar {#references}
+## Referanslar \{#references}
 
 1. https://ubuntu.com/download/raspberry-pi
 2. https://wikipedia.org/wiki/Port_forwarding

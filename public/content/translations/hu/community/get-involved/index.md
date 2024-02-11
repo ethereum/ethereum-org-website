@@ -4,13 +4,13 @@ description: Hogyan lehet bekapcsolódni az Ethereum közösségébe.
 lang: hu
 ---
 
-# Hogyan lehet ebben részt venni? {#get-involved}
+# Hogyan lehet ebben részt venni? \{#get-involved}
 
 Az Ethereum-közösségek tagjai különféle háttérrel és képességekkel rendelkeznek. Lehet Ön fejlesztő, művész vagy könyvelő, mindenkinek lehetősége van közreműködni. Az alábbi javaslatok segíthetnek megtalálni a megfelelő kiindulási pontot.
 
 Kezdje azzal, hogy elolvassa az ethereum.org misszióját és értékeit a [magatartási szabályok](/community/code-of-conduct) oldalon.
 
-## Fejlesztők <Emoji text=":computer:" size={1} /> {#developers}
+## Fejlesztők <Emoji text=":computer:" size={1} /> \{#developers}
 
 - Tanuljon az Ethereumról és próbálja ki az [ethereum.org/developers/](/developers/) oldalon
 - [Nyerjen jutalmat a Gitcoin-on](https://gitcoin.co/) azáltal, hogy kisebb-nagyobb technikai problémákon dolgozik, és kapjon érte kriptót!
@@ -21,7 +21,7 @@ Kezdje azzal, hogy elolvassa az ethereum.org misszióját és értékeit a [maga
 - [Web3Bridge](https://www.web3bridge.com/) – csatlakozzon az inspiráló web3-közösséghez, mely egész Afrikában fejlesztők és közösségi tagok százait választja ki, tanítja be és támogatja
 - Csatlakozzon a [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) csatornához
 
-## Kutatók és akadémikusok <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
+## Kutatók és akadémikusok <Emoji text=":mag:" size={1} /> \{#researchers-and-academics}
 
 Ön matematikus, kriptográfus vagy közgazdász háttérrel rendelkezik? Érdeklik az élvonalbeli tevékenységek az Ethereum-ökoszisztéma kapcsán:
 
@@ -42,61 +42,61 @@ Kezdje azzal, hogy elolvassa az ethereum.org misszióját és értékeit a [maga
 
 [Fedezzen fel még több kutatási területet](/community/research/).
 
-## Nem technikai képességek <Emoji text=":briefcase:" size={1} /> {#non-technical}
+## Nem technikai képességek <Emoji text=":briefcase:" size={1} /> \{#non-technical}
 
 Ha Ön nem fejlesztő, nehéz lehet felmérni, hogy hol kapcsolódjon be az Ethereum világába. Íme néhány javaslat hivatkozásokkal együtt a specifikus szakmai hátterekhez.
 
-### Szervezzen találkozót a városában {#meetups}
+### Szervezzen találkozót a városában \{#meetups}
 
 - Nem tudja, hogyan kezdje? A [BUIDL-hálózat](https://consensys.net/developers/buidlnetwork/) segít benne.
 
-### Írjon az Ethereumról {#write-content}
+### Írjon az Ethereumról \{#write-content}
 
 - Az Ethereumnak szüksége van jó írókra, akik el tudják magyarázni az értékeit egyszerű nyelven
 - Még nem áll készen, hogy a saját cikkét megjelentesse? Vegyen részt a meglévő tartalom kezelésében vagy [javasoljon új tartalmat az ethereum.org számára](/contributing/)!
 
-### Készítsen jegyzetet a közösségi megbeszéléseken (community calls) {#take-notes}
+### Készítsen jegyzetet a közösségi megbeszéléseken (community calls) \{#take-notes}
 
 - Számos nyilvános közösségi megbeszélés létezik, ahol a jegyzet készítése nagy segítség. Ha érdekli Önt, akkor csatlakozzon az [Ethereum Cat Herders discord](https://discord.com/invite/Nz6rtfJ8Cu) csatornához, és mutatkozzon be!
 
-### Fordítsa saját nyelvére az Ethereumhoz kapcsolódó tartalmat {#translate-ethereum}
+### Fordítsa saját nyelvére az Ethereumhoz kapcsolódó tartalmat \{#translate-ethereum}
 
 - Az ethereum.org egy fordítói programot is üzemeltet, mely a weboldalakat és más forrásokat fordítja különféle nyelvekre
 - Nézze meg [itt](/contributing/translation-program), hogyan tudna ebben segíteni
 
-### Csomópont futtatása {#run-a-node}
+### Csomópont futtatása \{#run-a-node}
 
 Csatlakozzon ezernyi csomópont működtetőjéhez, hogy az Ethereum még decentralizáltabb legyen.
 
 - [Bővebben a csomópontok futtatásáról](/developers/docs/nodes-and-clients/run-a-node/)
 
-### Helyezze letétbe a rendelkezésére álló ETH-t {#staking}
+### Helyezze letétbe a rendelkezésére álló ETH-t \{#staking}
 
 A letétbe helyezéssel jutalmakat tud szerezni, miközben segít az Ethereum hálózatát biztosítani.
 
 - [Többet a letétbe helyezésről](/staking/)
 
-### Támogasson projekteket {#support-projects}
+### Támogasson projekteket \{#support-projects}
 
 Az Ethereum-ökoszisztéma missziója, hogy közjóval kapcsolatos és nagy hatást tevő projekteket finanszírozzon. Még a kis adományokkal is kimutathatja támogatását és fontos munkákat segíthet.
 
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
-## Pénzügyi szakemberek és könyvelők <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
+## Pénzügyi szakemberek és könyvelők <Emoji text=":chart_with_upwards_trend:" size={1} /> \{#financial-professionals}
 
 - Az Ethereum otthont ad a decentralizált pénzügyek ökoszisztémának – protokollok és alkalmazások hálózata, ami egy alternatív pénzügyi rendszert kínál. Nézzen meg néhány DeFi-alkalmazást a [DeFi Llama](https://defillama.com/) vagy [DeFiPrime](https://defiprime.com) oldalakon
 - Ön könyvelő? Az Ethereum-eszközök, mint ETH, tokenek, DeFi stb. számtalan új könyvelési kérdést vetnek fel. Nézzen meg néhány projektet, amelyek a felhasználók könyvelési kihívásait próbálják támogatni – ilyen például a [Rotki](https://rotki.com/)
 
-## Termékmenedzserek <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
+## Termékmenedzserek <Emoji text=":fountain_pen:" size={1} /> \{#product-managers}
 
 - Az Ethereum-ökoszisztémának az Ön tehetségére is szüksége van! Számos cég keres ilyen pozícióra munkaerőt. Ha szeretne egy nyílt forráskódú projektben közreműködni, keresse meg az [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) vagy [MetaCartel](https://www.metacartel.org/) csapatokat
 
-## Marketing <Emoji text=":megaphone:" size={1} /> {#marketing}
+## Marketing <Emoji text=":megaphone:" size={1} /> \{#marketing}
 
 - Számtalan marketinggel és kommunikációval összefüggő pozíció érhető el az Ethereumnál!
 
-## Ethereum-álláslehetőségek {#ethereum-jobs}
+## Ethereum-álláslehetőségek \{#ethereum-jobs}
 
 **Szeretne munkát találni az Ethereum világában?**
 
@@ -115,7 +115,7 @@ Az Ethereum-ökoszisztéma missziója, hogy közjóval kapcsolatos és nagy hat�
 - [Ethereum-álláslehetőségek](https://startup.jobs/ethereum-jobs)
 - [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
-## Csatlakozzon egy DAO-hoz {#decentralized-autonomous-organizations-daos}
+## Csatlakozzon egy DAO-hoz \{#decentralized-autonomous-organizations-daos}
 
 A DAO-k decentralizált autonóm szervezetek. Ezek az Ethereum technológiára építve működtetnek szerveződéseket és együttműködéseket. Például a tagság kezelése, a javaslatok megszavazása vagy összegyűjtött eszközök kezelése kapcsán. Bár kísérleti fázisban vannak, de rengeteg lehetőséget ajánlanak, hogy találjon egy hasonlóan gondolkodó csoportot, együttműködő partnereket és hatást gyakoroljon az Ethereum közösségre. [Bővebben a DAO-król](/dao/)
 

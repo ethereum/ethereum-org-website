@@ -4,7 +4,7 @@ description:
 lang: pl
 ---
 
-## Wprowadzenie {#introduction}
+## Wprowadzenie \{#introduction}
 
 **Czym jest niewymienny token (NFT)?**
 
@@ -16,13 +16,13 @@ ERC-721 wprowadza standard dla NFT, innymi słowy ten typ tokena jest unikalny i
 
 Tak! Wszystkie NFT mają zmienną `uint256` o nazwie `tokenId`, więc dla każdego kontraktu ERC-721, para `contract address, uint256 tokenId` musi być unikatowa globalnie. Dzięki temu zdecentralizowana aplikacja może mieć „konwerter”, który używa `tokenId` jako danych wejściowych i wyświetla obraz czegoś fajnego, takiego jak zombie, broń, umiejętności lub niesamowite kociaki!
 
-## Warunki wstępne {#prerequisites}
+## Warunki wstępne \{#prerequisites}
 
 - [Konta](/developers/docs/accounts/)
 - [Inteligentne kontrakty](/developers/docs/smart-contracts/)
 - [Standardy tokenów](/developers/docs/standards/tokens/)
 
-## Treść {#body}
+## Treść \{#body}
 
 ERC-721 (Ethereum Request for Comments 721), zaproponowany przez Williama Entrikena, Dietera Shirleya, Jacoba Evansa, Nastassia Sachs w styczniu 2018 r. to standard tokenów niewymiennych, który implementuje interfejs API dla tokenów w ramach inteligentnych kontraktów.
 
@@ -32,7 +32,7 @@ Jeśli inteligentny kontrakt implementuje następujące metody i zdarzenia, moż
 
 Od [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-### Metody {#methods}
+### Metody \{#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Od [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### Wydarzenia {#events}
+### Wydarzenia \{#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -54,11 +54,11 @@ Od [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### Przykłady {#web3py-example}
+### Przykłady \{#web3py-example}
 
 Zobaczmy, dlaczego standard jest tak ważny, aby ułatwić nam sprawdza kontraktów z tokenami ERC-721 na Ethereum. Potrzebujemy tylko interfejsu binarnego Umowy (ABI), aby utworzyć interfejs dla każdego tokenu ERC-721. Jak możesz zobaczyć poniżej, użyjemy uproszczonego ABI, aby zmniejszyć złożoność przykładu.
 
-#### Przykład Web3.py {#web3py-example}
+#### Przykład Web3.py \{#web3py-example}
 
 Najpierw upewnij się, że zainstalowałeś [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) bibliotekę Pythona:
 
@@ -226,7 +226,7 @@ birth_logs = w3.eth.getLogs({
 recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## Popularne NFT {#popular-nfts}
+## Popularne NFT \{#popular-nfts}
 
 - [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) wyświetla listę najpopularniejszych NFT na Ethereum według wielkości transferów.
 - [CryptoKitties](https://www.cryptokitties.co/) to gra skoncentrowana wokół rozmnażania, kolekcjonerskiego i słodkich stworzonek – CryptoKitties.
@@ -235,13 +235,13 @@ recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in 
 - [Unstoppable Domains](https://unstoppabledomains.com/) jest to firma z San Francisco budująca domeny w blockchainach. Domeny blockchainu zastępują adresy kryptowalut nazwami czytelnymi dla człowieka i mogą być używane do włączenia stron odpornych na cenzurę.
 - [Gods Unchained Cards](https://godsunchained.com/) to TCG w blockchainie Ethereum, który używa NFT do zapewnienia rzeczywistego prawa własności w grze.
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 - [EIP-721: ERC-721 – standard tokenów niewymiennych](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin – dokumentacja ERC-721](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin – implementacja ERC-721](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 
-## Powiązane tematy {#related-topics}
+## Powiązane tematy \{#related-topics}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 - [ERC-777](/developers/docs/standards/tokens/erc-777/)

@@ -4,13 +4,13 @@ description: Orodha ya mipango ya ruzuku katika mazingira yote ya Ethereum.
 lang: sw
 ---
 
-# Ruzuku za Ethereum {#ethereum-grants}
+# Ruzuku za Ethereum \{#ethereum-grants}
 
 Programu zilizoorodheshwa hapa chini hutoa misaada ya ufadhili kwa miradi inayofanya kazi ya mafanikio na ukuaji wa ikolojia ya Ethereum. Tumia hii kama mwongozo kupata na kuomba pesa ili ufaniskishe mradi wako ujao wa Ethereum.
 
 Orodha hii imepangwa na jamii yetu. Ikiwa kuna kitu kinakosekana au sio sahihi, tafadhali hariri ukurasa huu!
 
-## Mfumo mpana wa ikolojia ya Ethereum {#broad-ethereum-ecosystem}
+## Mfumo mpana wa ikolojia ya Ethereum \{#broad-ethereum-ecosystem}
 
 Programu hizi zinasaidia ikolojia ya Ethereum kwa kutoa fedha kwa miradi mingi. Hizi ni pamoja na suluhu za kutoweka, ujenzi wa jamii, usalama, faragha, na zaidi. Ruzuku hizi sio maalum kwa jukwaa moja la Ethereum na ni mahali pazuri pa kuanzia ikiwa huna uhakika.
 
@@ -21,7 +21,7 @@ Programu hizi zinasaidia ikolojia ya Ethereum kwa kutoa fedha kwa miradi mingi. 
 - [Ruzuku zilizo wazi](https://opengrants.com/explore)
 - [Ruzuku za DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Ukurasa wa google wa mashirika yanayotoa Ruzuku._
 
-## Mradi maalum {#project-specific}
+## Mradi maalum \{#project-specific}
 
 Miradi hii imeunda misaada yao kwa miradi inayolenga kukuza na kujaribu teknolojia yao wenyewe.
 
@@ -34,13 +34,13 @@ Miradi hii imeunda misaada yao kwa miradi inayolenga kukuza na kujaribu teknoloj
 - [Grafu](https://airtable.com/shrdfvnFvVch3IOVm) - _Ikolojia ya [Grafu](https://thegraph.com/)_
 - [Programu ya Ruzuku za Uniswap](https://www.unigrants.org/) - _Jamii ya [Uniswap](https://uniswap.org/)_
 
-## Ufadhili wa Kwadratiki {#quadratic-funding}
+## Ufadhili wa Kwadratiki \{#quadratic-funding}
 
 Mizizi ya wazi ya Ethereum imesababisha ukuaji wa mtindo mpya wa kuvutia wa kukusanya fedha: fedha za kwadratiki. Hii ina uwezo wa kuboresha jinsi tunavyofadhili aina zote za bidhaa za umma katika siku zijazo. Ufadhili wa kwadaratiki huhakikisha kuwa miradi inayopokea ufadhili mwingi ni ile yenye mahitaji ya kipekee. Kwa maneno mengine, miradi ambayo inasimama kuboresha maisha ya watu wengi. [Zaidi juu ya ufadhili wa kwadaratiki.](/defi/#quadratic-funding)
 
 - [Gitcoin](https://gitcoin.co/grants)
 - [clr.fedha](https://clr.fund/)
 
-## Fanya kazi kwenye Ethereum {#work-in-ethereum}
+## Fanya kazi kwenye Ethereum \{#work-in-ethereum}
 
 Hauko tayari kuanza rasimu yako mwenyewe? Kuna makampuni zaidi ya mia moja yanayotafuta watu binafsi wenye shauku wafanye kazi na kutoa michango kwenye ikolojia ya Ethereum. Unatafuta taarifa zaidi? [Angalia kazi zinazohusiana na Ethereum](/community/get-involved/#ethereum-jobs)

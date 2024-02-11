@@ -4,7 +4,7 @@ description: Uma lista de todos os opcodes disponíveis para a máquina virtual 
 lang: pt-br
 ---
 
-## Visão geral {#overview}
+## Visão geral \{#overview}
 
 Essa é uma versão atualizada da página de referência EVM em [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes). Também extraído do [Papel Amarelo](https://ethereum.github.io/yellowpaper/paper.pdf), do [Jello Paper](https://jellopaper.org/evm/) e da implementação [geth](https://github.com/ethereum/go-ethereum). Este artigo tem o intuito de ser uma referência acessível, mas não é particularmente rigorosa. Se quiser se certificar da exatidão e consciência de todos os casos extremos, é aconselhável usar o Jello Paper ou uma implementação do cliente.
 

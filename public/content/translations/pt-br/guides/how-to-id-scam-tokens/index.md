@@ -4,7 +4,7 @@ description: Compreender tokens fraudulentos, como se fazem passar por legítimo
 lang: pt-br
 ---
 
-# Como identificar tokens fraudulentos {#identify-scam-tokens}
+# Como identificar tokens fraudulentos \{#identify-scam-tokens}
 
 Um dos usos mais comuns do Ethereum é para que um grupo possa criar sua própria moeda negociável. Esses tokens normalmente seguem um padrão, [ERC-20](/developers/docs/standards/tokens/erc-20/). Entretanto, sempre onde há casos de uso legítimos que agregam valor, também haverá criminosos que tentam roubar esse valor.
 
@@ -15,6 +15,7 @@ Um dos usos mais comuns do Ethereum é para que um grupo possa criar sua própri
 
 Para ilustrar o que são tokens fraudulentos e como identificá-los, veremos um exemplo: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Esse token tenta se parecer com o token [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) legítimo.
 
+{
 <ExpandableCard
 title="O que é ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum é uma organização que desenvolve e gerencia <a href="/developers/docs/scaling/optimistic-rollups/">rollups otimistas</a>. Inicialmente, a Arbitrum foi organizada como uma empresa com fins lucrativos, mas depois tomou medidas para se descentralizar. Como parte desse processo, a empresa emitiu um <a href="/dao/#token-based-membership">token de governança</a> negociável.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Por que o token fraudulento é chamado wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ Há uma convenção no Ethereum de que, quando um ativo não está em conformida
 Não faz sentido criar uma versão enrolada de um token ERC-20 que já está no Ethereum, mas os golpistas confiam na aparência de legitimidade em vez da realidade subjacente.
 
 </ExpandableCard>
+}
 
-## Como funcionam os tokens fraudulentos? {#how-do-scam-tokens-work}
+## Como funcionam os tokens fraudulentos? \{#how-do-scam-tokens-work}
 
 O ponto principal do Ethereum é a descentralização. Isso significa que não há uma autoridade central que possa confiscar os seus ativos ou impedir você de implantar um contrato inteligente. Mas isso também significa que os golpistas podem implementar qualquer contrato inteligente.
 
+{
 <ExpandableCard
 title="O que são contratos inteligentes?"
 contentPreview=''>
@@ -44,10 +49,11 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Os contratos inteligentes</a> são programas que são executados no blockchain Ethereum. Cada token ERC-20, por exemplo, é implementado como um contrato inteligente.
 
 </ExpandableCard>
+}
 
 Especificamente, a Arbitrum implantou um contrato que utiliza o símbolo `ARB`. Mas isso não impede que outras pessoas também implantem um contrato que use exatamente o mesmo símbolo, ou um semelhante. Quem elabora o contrato pode definir o que o contrato fará.
 
-## Aparência de legitimidade {#appearing-legitimate}
+## Aparência de legitimidade \{#appearing-legitimate}
 
 Os criadores de tokens fraudulentos têm diversos truques para fazer com que os tokens passem por legítimos.
 
@@ -61,13 +67,13 @@ Os criadores de tokens fraudulentos têm diversos truques para fazer com que os 
 
 - **Transferências legítimas**. _Os proprietários legítimos não pagarão terceiros para transferir um token fraudulento. Portanto, se há transferências, elas devem ser legítimas, certo?_ **Errado**. Eventos de `transferência` são produzidos pelo contrato ERC-20. Um golpista pode facilmente elaborar o contrato de forma que ele produza essas ações.
 
-## Sites fraudulentos {#websites}
+## Sites fraudulentos \{#websites}
 
 Os golpistas também podem criar sites muito convincentes, às vezes até clones exatos de sites autênticos, com interfaces de usuário idênticas, mas com truques sutis. Os exemplos podem incluir links externos que parecem legítimos e que, na verdade, enviam o usuário para um site externo fraudulento, ou instruções incorretas que orientam o usuário a expor as chaves ou enviar fundos para o endereço de um invasor.
 
 A melhor prática para evitar isso é verificar cuidadosamente o URL dos sites que você visita e salvar os endereços de sites autênticos conhecidos nos seus favoritos. Assim, você pode acessar o site real por meio dos seus favoritos, sem cometer erros de ortografia acidentalmente ou depender de links externos.
 
-## Como você pode se proteger? {#protect-yourself}
+## Como você pode se proteger? \{#protect-yourself}
 
 1. **Verificação do endereço do contrato**. Os tokens legítimos derivam de organizações legítimas, e você pode ver os endereços do contrato no site da organização. Por exemplo, [do `ARB`, os endereços legítimos estão disponíveis aqui](https://docs.arbitrum.foundation/deployment-addresses#token).
 
@@ -87,7 +93,7 @@ Essa é outra evidência que nos mostra que esse `wARB` provavelmente não é um
 
    ![Token fraudulento no Etherscan](./etherscan-scam.png)
 
-## Conclusão {#conclusion}
+## Conclusão \{#conclusion}
 
 Enquanto houver valor no mundo, haverá golpistas que tentarão roubá-lo e, em um mundo descentralizado, não há ninguém para protegê-lo além de você. Esperamos que você se lembre desses pontos para ajudar a distinguir os tokens legítimos dos fraudulentos:
 

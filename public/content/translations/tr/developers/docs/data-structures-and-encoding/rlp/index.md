@@ -14,7 +14,7 @@ Bir sözlüğü kodlamak için RLP kullanmanın iki kabul edilmiş yolu:
 - sözlüksel bir sırada anahtarlarla `[[k1,v1],[k2,v2]...]` kullanmak
 - Ethereum'un yaptığı gibi kodlama için üst düzey Patricia Ağacını kullanmak
 
-## Tanım {#definition}
+## Tanım \{#definition}
 
 RLP kodlama fonksiyonu bir öğeyi içine alır. Bir öğe aşağıdaki gibi tanımlanır:
 
@@ -66,7 +66,7 @@ def to_binary(x):
     return to_binary(int(x / 256)) + chr(x % 256)
 ```
 
-## Örnekler {#examples}
+## Örnekler \{#examples}
 
 - "dog" dizesi = = [ 0x83, 'd', 'o', 'g' ]
 - [ "cat", "dog" ] listesi = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`
@@ -79,7 +79,7 @@ def to_binary(x):
 - ağacın [küme teorisi ile gösterimi](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers), `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - "Lorem ipsum dolor sit amet, consectetur adipisicing elit" dizesi =`[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'ı', 't' ]`
 
-## RLP kodunu çözme {#rlp-decoding}
+## RLP kodunu çözme \{#rlp-decoding}
 
 RLP'nin kodlaması kurallarına ve sürecine göre RLP kod çözme girdisi, bir ikili veri dizisi olarak kabul edilir. RLP kod çözme süreci aşağıdaki gibidir:
 
@@ -148,12 +148,12 @@ def to_integer(b):
     return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
 ```
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla okuma \{#further-reading}
 
 - [Ethereum'da RLP](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [Yakın planda Ethereum: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
 - [Coglio, A. (2020). Ethereum ACL2'deki Özyinelemeli Uzunluk Ön Eki. arXiv ön baskı arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
-## İlgili konular {#related-topics}
+## İlgili konular \{#related-topics}
 
 - [Patricia merkle dijital ağacı](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)

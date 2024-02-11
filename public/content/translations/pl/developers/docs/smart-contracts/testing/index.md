@@ -5,7 +5,7 @@ lang: pl
 incomplete: true
 ---
 
-## Narzędzia i biblioteki do testowania {#testing-tools-and-libraries}
+## Narzędzia i biblioteki do testowania \{#testing-tools-and-libraries}
 
 **Waffle –** **<em x-id="4">framework pozwalający na tworzenie i testowanie zaawansowanych kontraktów (oparty na ethers.js).</em>**
 
@@ -32,7 +32,7 @@ incomplete: true
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers)
 - [Dokumentacja](https://docs.openzeppelin.com/test-helpers)
 
-## Powiązane samouczki {#related-tutorials}
+## Powiązane samouczki \{#related-tutorials}
 
 - [Solidity and Truffle Continuous Integration Setup](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– jak skonfigurować Travis lub Circle CI do testowania Truffle wraz z przydatnymi wtyczkami_
 - [Narzędzia testowe](/developers/tutorials/guide-to-smart-contract-security-tools/) _– przegląd i porównanie różnych narzędzi testowych_
@@ -42,6 +42,6 @@ incomplete: true
 - [Jak tworzyć kontrakty Solidity pod kątem testowania](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Jak migrować z Truffle Tests do środowiska testowego OpenZeppelin](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_

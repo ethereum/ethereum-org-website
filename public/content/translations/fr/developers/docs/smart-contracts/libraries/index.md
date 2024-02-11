@@ -6,15 +6,15 @@ lang: fr
 
 Vous n'avez pas besoin de rédiger tous les contrats intelligents de votre projet à partir de zéro. Il existe de nombreuses bibliothèques de contrats intelligents open source fournissant des blocs de construction réutilisables, qui peuvent vous éviter d'avoir à réinventer la roue.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 Avant de vous intéresser aux bibliothèques de contrats intelligents, nous vous conseillons d'avoir bien compris en quoi consiste la structure d'un contrat intelligent. Lisez la page [Anatomie des contrats intelligents](/developers/docs/smart-contracts/anatomy/) si vous ne l'avez pas déjà fait.
 
-## En quoi consiste une bibliothèque ? {#whats-in-a-library}
+## En quoi consiste une bibliothèque ? \{#whats-in-a-library}
 
 Vous pouvez généralement trouver deux types de blocs de construction dans les bibliothèques de contrats intelligents : des comportements réutilisables que vous pouvez ajouter à vos contrats, et des implémentations de diverses normes.
 
-### Comportements {#behaviors}
+### Comportements \{#behaviors}
 
 Lorsque vous rédigez des contrats intelligents, il y a de grandes chances que vous vous retrouviez à réécrire indéfiniment des modèles similaires, comme assigner une adresse _admin_ pour effectuer des opérations protégées, ou ajouter un bouton d'urgence _pause_ pour répondre aux problèmes inattendus.
 
@@ -52,7 +52,7 @@ contract MyContract is Ownable {
 
 Autres exemples populaires : [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) ou [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html). Ce sont des bibliothèques (par opposition aux contrats de base) qui fournissent des fonctions arithmétiques avec des vérifications de dépassement qui ne sont pas fournies par le langage. Une bonne pratique consiste à utiliser l'une de ces bibliothèques au lieu d'opérations arithmétiques natives pour protéger votre contrat contre les dépassements, qui peuvent avoir des conséquences désastreuses !
 
-### Normes {#standards}
+### Normes \{#standards}
 
 Pour faciliter la [composabilité et l'interopérabilité](/developers/docs/smart-contracts/composability/), la communauté Ethereum a défini plusieurs normes sous la forme de demandes de commentaires (**ERC**). Pour plus d'informations, lisez la page [Normes de développement Ethereum](/developers/docs/standards/).
 
@@ -60,7 +60,7 @@ Quand vous incluez une ERC dans vos contrats, il est préférable de chercher de
 
 Il convient de mentionner que certaines ERC ne sont pas autonomes, mais sont des ajouts à d'autres ERC. Par exemple, [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) ajoute une extension à ERC20 pour améliorer son opérabilité.
 
-## Comment ajouter une bibliothèque ? {#how-to}
+## Comment ajouter une bibliothèque ? \{#how-to}
 
 Pour obtenir des instructions spécifiques, consultez toujours la documentation de la bibliothèque que vous voulez inclure à votre projet. Plusieurs bibliothèques de contrats Solidity sont compilées en utilisant `npm`, il vous suffit donc d'utiliser `nmp install`. La plupart des outils utilisés pour la [compilation](/developers/docs/smart-contracts/compiling/) de contrats examineront vos `node_modules` pour les bibliothèques de contrats intelligents, vous pouvez donc faire ce qui suit :
 
@@ -75,7 +75,7 @@ contract MyNFT is ERC721 {
 
 Quelle que soit la méthode que vous utilisez, lorsque vous incluez une bibliothèque, gardez toujours un œil sur la version du [langage](/developers/docs/smart-contracts/languages/). Par exemple, vous ne pouvez pas utiliser une bibliothèque pour Solidity 0.6 si vous rédigez vos contrats en Solidity 0.5.
 
-## Quand les utiliser ? {#when-to-use}
+## Quand les utiliser ? \{#when-to-use}
 
 L'utilisation d'une bibliothèque de contrats intelligents pour votre projet présente plusieurs avantages. D'abord, elle vous fait gagner du temps en vous fournissant des blocs de construction prêts à l'emploi que vous pouvez inclure dans votre système, plutôt que d'avoir à les coder vous-même.
 
@@ -85,7 +85,7 @@ Cependant, l'utilisation de bibliothèques de contrats intelligents comporte le 
 
 Enfin, au moment où vous décidez s'inclure une bibliothèque, considérez son utilisation globale. Un projet adopté à grande échelle a l'avantage de disposer d'une communauté plus vaste, donc de plus d'utilisateurs qui cherchent les problèmes potentiels. La sécurité doit être votre priorité principale lorsque vous construisez avec des contrats intelligents!
 
-## Outils connexes {#related-tools}
+## Outils connexes \{#related-tools}
 
 **Contrats OpenZeppelin -** **_Bibliothèque la plus populaire pour développer des contrats intelligents de façon sécurisée_**
 
@@ -107,11 +107,11 @@ Enfin, au moment où vous décidez s'inclure une bibliothèque, considérez son 
 - [Documentation](https://portal.thirdweb.com/solidity/)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
-## Tutoriels connexes {#related-tutorials}
+## Tutoriels connexes \{#related-tutorials}
 
 - [Considérations de sécurité pour les développeurs Ethereum](/developers/docs/smart-contracts/security/) _- Tutoriel sur les considérations de sécurité lors de la construction de contrats intelligents, y compris l'utilisation de la bibliothèque_
 - [Comprendre le contrat intelligent de jeton ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- Tutoriel sur la norme ERC20, fournie par de multiples bibliothèques_
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

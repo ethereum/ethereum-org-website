@@ -4,30 +4,30 @@ lang: de
 description: Nützliche Ressourcen für ethereum.org-Übersetzer
 ---
 
-# Ressourcen {#resources}
+# Ressourcen \{#resources}
 
 Nachfolgend finden Sie einige nützliche Anleitungen und Tools für ethereum.org-Übersetzer sowie Übersetzergemeinschaften und Updates.
 
-## Leitfäden {#guides}
+## Leitfäden \{#guides}
 
 - [Leitfaden für die Übersetzung](/contributing/translation-program/translators-guide/) _ – Anweisungen und Tipps für ethereum.org-Übersetzer_
 - [Übersetzungs-FAQs](/contributing/translation-program/faq/)_ – häufig gestellte Fragen und Antworten zum Übersetzungsprogramm von ethereum.org_
 - [Editorleitfaden für Crowdin-Online](https://support.crowdin.com/online-editor/)_ – ein ausführlicher Ratgeber für die Nutzung des Online-Crowdin-Editors und seiner umfangreichen Funktionen_
 - [Inhaltsbereich](/contributing/translation-program/content-buckets/)_ – welche Seiten gehören zu welchen Inhaltsbereichen von ethereum.org_
 
-## Tools {#tools}
+## Tools \{#tools}
 
 - [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _ – nützlich um Standardübersetzungen für technische Begriffe zu finden und zu überprüfen_
 - [Linguee](https://www.linguee.com/) _ – Suchmaschine für Übersetzungen und ein Wörterbuch, in dem Sie nach Wörtern und auch nach Phrasen suchen können_
 - [Proz-Begriffssuche](https://www.proz.com/search/) _ – Datenbank für Übersetzungen, Wörterbücher und Glossare für Fachbegriffe_
 - [Eurotermbank](https://www.eurotermbank.com/) _ – Sammlungen von Terminologie zu europäischen Themen in 42 Sprachen_
 
-## Communities {#communities}
+## Communities \{#communities}
 
 - [Sprachenspezifische Discord-Übersetzungsgruppen](/discord/) _ – eine Initiative zur Verbindung von ethereum.org-Übersetzern mit Übersetzungsgruppen_
 - [Chinesische Übersetzergruppe](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _ – Begriffsseite für die einfachere Koordination zwischen den chinesischen Übersetzern_
 
-## Letzte Aktualisierungen {#latest-updates}
+## Letzte Aktualisierungen \{#latest-updates}
 
 Damit Sie beim aktuellen Fortschritt des Übersetzungsprogramms auf dem Laufenden bleiben, folgen Sie dem [Ethereum Foundation-Blog](https://blog.ethereum.org/):
 
@@ -36,7 +36,7 @@ Damit Sie beim aktuellen Fortschritt des Übersetzungsprogramms auf dem Laufende
 - [Juli 2020, Updates für Meilensteine](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
 - [August 2019, Start des Übersetzungsprogramms](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
 
-## Sprechstunde für Übersetzerinnen und Übersetzer {#office-hours}
+## Sprechstunde für Übersetzerinnen und Übersetzer \{#office-hours}
 
 Jeden zweiten Mittwoch im Monat haben wir Sprechstunde für Übersetzer. Diese finden im Sprachkanal #office-hours auf dem [ethereum.org-Discord](/discord/) statt, wo Sie auch die genauen Zeiten und weitere Details finden.
 

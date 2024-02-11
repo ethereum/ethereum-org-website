@@ -4,7 +4,7 @@ lang: en
 hideEditButton: true
 ---
 
-# Cookie Policy {#cookie-policy}
+# Cookie Policy \{#cookie-policy}
 
 Our Websites may use cookies to distinguish you from other users of our Websites. This may help us to provide you with a good experience when you browse our Websites and may also allow us to improve our Websites. By continuing to browse the Websites, you are agreeing to our use of cookies as well as the terms of this policy (the “Cookie Policy”). A cookie is a small file of letters and numbers that we may store on your browser or the hard drive of your computer if you agree. Cookies contain information that is transferred to your computer's hard drive. We may use the following cookies:
 
@@ -13,7 +13,9 @@ Our Websites may use cookies to distinguish you from other users of our Websites
 - **Functionality cookies.** These cookies are used to recognise you when you return to our websites. They may enable us to personalise our content for you, greet you by name, or remember your preferences (for example, your choice of language or region).
 - **Targeting cookies.** These cookies record your visit to our websites, the pages you have visited and the links you have followed.
 
+{
 <MatomoOptOut />
+}
 
 You can find more information about the individual cookies we may use and the purposes for which we may use them in the table below:
 

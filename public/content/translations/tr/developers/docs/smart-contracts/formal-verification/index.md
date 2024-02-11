@@ -10,13 +10,13 @@ Resmi doğrulama, [akıllı sözleşme güvenliğini](/developers/docs/smart-con
 
 Resmi doğrulama, akıllı sözleşmelerde uygulandığında bir sözleşmenin iş mantığının önceden tanımlanmış bir özelliği karşıladığını kanıtlayabilir. Resmi doğrulama, test etme gibi sözleşme kodunun doğruluğunu değerlendiren diğer yöntemlerle karşılaştırıldığında, bir akıllı sözleşmenin fonksiyonel olarak doğru olduğunu garanti etme noktasında daha güçlüdür.
 
-## Resmi doğrulama nedir? {#what-is-formal-verification}
+## Resmi doğrulama nedir? \{#what-is-formal-verification}
 
 Resmi doğrulama, bir sistemin resmi spesifikasyonu ile ilgili olarak doğruluğunu değerlendirme sürecini ifade eder. Daha basit ifadelerle resmi doğrulama, bize sistem davranışının bazı gereksinimleri (örneğin istediklerimizi yapması) karşılayıp karşılamadığını bilme imkanı tanır.
 
 Sistemin (bu durumda akıllı sözleşme) öngörülen davranışları, resmi modelleme kullanılarak açıklanırken spesifikasyon dilleri resmi özelliklerin yaratılmasına olanak tanır. Bunun ardından resmi modelleme teknikleri bir sözleşmenin uygulanmasının spefifikasyonuna uygun olduğunu ve bunun doğruluğunun matematiksel kanıtını ortaya koyduğunu doğrulayabilir. Bir sözleşme spesifikasyonunu karşılarsa ''fonksiyonel olarak doğru'', ''tasarım olarak doğru'' veya ''yapı olarak doğru'' biçimlerinde sınıflandırılır.
 
-### Resmi model nedir? {#what-is-a-formal-model}
+### Resmi model nedir? \{#what-is-a-formal-model}
 
 Bilgisayar bilimlerinde [resmi model](https://en.wikipedia.org/wiki/Model_of_computation) bilgi işleme sürecin matematiksel açıklamasıdır. Programlar, matematiksel işlevler (denklemler) halinde soyutlanırken model, bir girdi verildiğinde fonksiyonlara verilen çıktıların nasıl işlendiğini açıklar.
 
@@ -30,7 +30,7 @@ Diğer resmi modeller, bunun aksine bir akıllı sözleşmenin düşük düzey d
 
 Düşük düzeyli modeller, bir akıllı sözleşmenin Ethereum'un yürütme ortamındaki (örneğin [EVM](/developers/docs/evm/)) fiili yürütülmesini temsil ettiğinden ideal olarak kabul edilir. Düşük düzeyli modelleme teknikleri, özellikle akıllı sözleşmelerde kritik güvenlik özelliklerini tesis ederken ve olası güvenlik açıklarını tespit ederken kullanışlıdır.
 
-### Resmi spesifikasyon nedir? {#what-is-a-formal-specification}
+### Resmi spesifikasyon nedir? \{#what-is-a-formal-specification}
 
 Spesifikasyon, basitçe anlatmak gerekirse belirli bir sistemin karşılaması gereken bir teknik gerekliliktir. Spesifikasyon, programlamada bir programın yürütülmesi hakkındaki genel fikirleri (örneğin programın ne yapması gerektiği) temsil eder.
 
@@ -40,7 +40,7 @@ Böylelikle resmi spesifikasyonu, akıllı sözleşmenin amaçlanan yürütmesin
 
 Resmi spesifikasyonlar, akıllı sözleşmelerin güvenli uygulamalarını geliştirirken hayati önem taşır. Değişmezleri uygulayamayan veya yürütme sırasında özellikleri ihlal edilen sözleşmeler, işlevselliğini zedeleyecek veya kötü niyetli istismara yol açabilecek güvenlik açıklarına yatkındır.
 
-## Akıllı sözleşmeler için resmi spesifikasyon türleri {#formal-specifications-for-smart-contracts}
+## Akıllı sözleşmeler için resmi spesifikasyon türleri \{#formal-specifications-for-smart-contracts}
 
 Resmi spesifikasyonlar, program yürütülmesinin doğruluğu hakkında matematiksel gerekçelendirmeyi mümkün kılar. Resmi modellerde olduğu gibi resmi spesifikasyonlar da sözleşme uygulamasının ya yüksek düzey özelliklerini ya da düşük düzey davranışını yakalar.
 
@@ -48,7 +48,7 @@ Resmi spesifikasyonlar, bir programın özellikleri hakkında resmi gerekçelend
 
 Akıllı sözleşmelere yönelik resmi spesifikasyonlar, geniş bağlamda **yüksek düzeyli** veya **düşük düzeyli** spesifikasyonlar olarak sınıflandırılabilir. Spesifikasyon hangi kategoriye ait olursa olsun analiz edilen sistemin özelliğini yeterli ve açık biçimde tarif etmelidir.
 
-### Yüksek düzeyli spesifikasyonlar {#high-level-specifications}
+### Yüksek düzeyli spesifikasyonlar \{#high-level-specifications}
 
 İsminden de anlaşılacağı gibi, yüksek düzeyli bir spesifikasyon ("model yönelimli spesifikasyon" olarak da adlandırılır), bir programın üst düzey davranışını tanımlar. Yüksek düzeyli spesifikasyonlar, bir akıllı sözleşmeyi, FSM modeli için resmi özellikleri tanımlamak amacıyla kullanılan zamansal mantıkla işlemler gerçekleştirerek durumlar arasında geçiş yapabilen bir [sonlu durum makinesi](https://en.wikipedia.org/wiki/Finite-state_machine) (FSM) olarak modeller.
 
@@ -60,7 +60,7 @@ ERC-20 jeton sözleşmelerinde `transfer()` veya `transferFrom()` fonksiyonları
 
 Canlılık özellikleri "iyi bir şeyin nihayetinde gerçekleştiğini" ileri sürer ve bir sözleşmenin farklı durumlardan geçme kabiliyeti ile ilgilidir. Canlılık özelliğine örnek olarak, bir sözleşmenin kullanıcılarına isteğe bağlı olarak bakiyelerini transfer etme kabiliyeti anlamına gelen "likidite" verilebilir. Bu özelliğin ihlal edilmesi durumunda kullanıcılar tıpkı [Parity cüzdanı olayında](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html) olduğu gibi sözleşmede saklanan varlıklarını çekemezler.
 
-### Düşük düzeyli spesifikasyonlar {#low-level-specifications}
+### Düşük düzeyli spesifikasyonlar \{#low-level-specifications}
 
 Yüksek düzeyli spesifikasyonlar, sonlu durum sözleşme modelini bir başlangıç noktası olarak alır ve bu modelin arzulanan özelliklerini açıklar. Tam tersi şekilde düşük düzeyli spesifikasyonlar (''özellik odaklı spesifikasyonlar'' da denir) sıklıkla programları (akıllı sözleşmeler) matematiksel fonksiyonlardan oluşan bir koleksiyon içeren sistemler olarak modeller ve bu sistemlerin doğru davranışlarını açıklar.
 
@@ -68,7 +68,7 @@ Basitleştirmek gerekirse, düşük düzeyli spesifikasyonlar _program izlerini_
 
 Düşük düzeyli resmi spesifikasyonlar Hoare tarzı özellikler veya yürütme yolundaki değişmezler olarak verilebilir.
 
-### Hoare tarzı özellikler {#hoare-style-properties}
+### Hoare tarzı özellikler \{#hoare-style-properties}
 
 [Hoare Mantığı](https://en.wikipedia.org/wiki/Hoare_logic), akıllı sözleşmeleri de kapsayan programların doğruluğu hakkında resmi bir gerekçelendirme kural sınıfı sağlar. Hoare-tarzı bir özellik, Hoare üçlüsü tarafından temsil edilir {_P_}_c_{_Q_}, burada _c_ bir programdır ve _P_ ile _Q_ da _c_ (yani program) durumuna yönelik ifadelerdir, resmi olarak sırayla _ön koşullar_ ve _art koşullar_ olarak tanımlanmışlardır.
 
@@ -84,7 +84,7 @@ Hoare mantığı kullanılarak oluşturulan akıllı sözleşme spesifikasyonlar
 
 `assert` güvenlik için gerekli art koşulu belirlerken `require` ifadeleri ise bir ön koşulu veya değişmezi açıklar ve sıklıkla kullanıcı girdilerini doğrulamak amacıyla kullanılır. Örneğin; fonksiyonlar için düzgün erişim kontrolü (bir güvenlik özelliği örneği), `require` ifadesinin çağıran hesabın kimliği üzerinde bir ön koşul kontrolü olarak kullanılmasıyla elde edilebilir. Benzer biçimde sözleşmedeki durum değişkenlerinin izin verilen değişmezleri (örneğin dolaşımdaki toplam jeton sayısı), fonksiyon yürütmesinin ardından sözleşme durumunu onaylamak için `assert` ifadesi kullanılarak ihlalden korunabilir.
 
-### İz düzeyinde özellikler {#trace-level-properties}
+### İz düzeyinde özellikler \{#trace-level-properties}
 
 İz tabanlı spesifikasyonlar, bir sözleşmeye farklı durumlar arasında geçiş yaptıran işlemleri ve bu işlemler arasındaki ilişkileri açıklar. Daha önce açıklandığı üzere izler, sözleşmenin durumunu belirli bir şekilde değiştiren işlem dizileridir.
 
@@ -102,9 +102,9 @@ Bu yaklaşım, akıllı sözleşmeleri, durum geçiş sistemleri modeli olarak e
 
 İz düzeyinde özelliklere örnek olarak _"fon yatırmamış kullanıcıların bir teklife oy verememesi"_ ya da _"bir teklife oy vermemiş kullanıcıların her zaman para iadesi talep edebilmesi"_ verilebilir. Her iki özellik de tercih edilen yürütme sıralamalarını belirtir (oy verme, fon yatırma işleminden _önce_ ve bir iade talebi, bir teklife oy verdikten _sonra_ gerçekleşemez).
 
-## Akıllı sözleşmelerin resmi doğrulamasına yönelik teknikler {#formal-verification-techniques}
+## Akıllı sözleşmelerin resmi doğrulamasına yönelik teknikler \{#formal-verification-techniques}
 
-### Model kontrolü {#model-checking}
+### Model kontrolü \{#model-checking}
 
 Model kontrolü, bir algoritmanın resmi bir akıllı sözleşme modelini spesifikasyonu ile karşılaştırarak kontrol ettiği bir resmi doğrulama tekniğidir. Model kontrolünde, izin verilen sözleşme durumlarındaki özellikler zamansal mantık kullanılarak açıklanırken akıllı sözleşmeler sıklıkla durum geçiş sistemleri olarak gösterilir.
 
@@ -116,7 +116,7 @@ Resmi doğrulamada model kontrolü, öncelikli olarak bir sözleşmenin zaman i�
 
 Model kontrolü, bir akıllı sözleşmenin tüm olası durumlarını oluşturmayı ve özellik ihlali ile sonuçlanan ulaşılabilir durumları bulmaya çalışmayı içeren durum alan keşfini kullanır. Ancak bu, durum sayısının sonsuz olmasına (''durum patlama sorunu'' olarak da bilinir) yol açabilir ve dolayısıyla model kontrolü yapanlar, akıllı sözleşmelerin etkili analizini yapmayı mümkün kılan soyutlama tekniklerine güvenirler.
 
-### Varsayım kanıtlama {#theorem-proving}
+### Varsayım kanıtlama \{#theorem-proving}
 
 Varsayım kanıtlama, akıllı sözleşmeleri de içeren programların doğruluğunu matematiksel olarak gerekçelendirmeye yönelik bir yöntemdir. Bir sözleşmenin sistem modelini ve spesifikasyonlarını matematiksel formüllere (mantık ifadeleri) dönüştürmeyi içerir.
 
@@ -128,7 +128,7 @@ Model kontrolü, sözleşmeleri sonlu duruma sahip geçiş sistemleri olarak mod
 
 Bunun bir sonucu olarak, varsayım kanıtlayıcısına doğruluk kanıtlarına erişirken rehberlik etmesi için sıklıkla insan desteği gereklidir. İnsan çabasının varsayım kanıtlamada kullanımı, tamamen otomatikleştirilmiş olan model denetimine kıyasla onu daha pahalı hale getirmektedir.
 
-### Sembolik yürütme {#symbolic-execution}
+### Sembolik yürütme \{#symbolic-execution}
 
 Sembolik yürütme, fonksiyonların _somut değerler_ (örneğin, `x == 5`) yerine _sembolik değerler_ (örneğin `x > 5`) kullanarak bir yürütüldüğü akıllı sözleşme analiz yöntemidir. Bir resmi doğrulama tekniği olarak sembolik yürütme, sözleşme kodunda bulunan iz düzeyinde özellikleri anlamak amacıyla kullanılır.
 
@@ -156,15 +156,15 @@ function safe_add(uint x, uint y) returns(uint z){
 
 Tamsayı taşması ile sonuçlanan bir yürütme izinin şu formülü sağlaması gerekir: `z = x + y VE (z >= x) VE (z >= y) VE (z < x VEYA z < y)`. Böyle bir formülün çözülmesi pek olası değildir, bu nedenle `safe_add` fonksiyonunun asla taşmadığına dair bir matematiksel kanıt görevi görür.
 
-### Akıllı sözleşmeler için neden resmi doğrulama kullanılmalı? {#benefits-of-formal-verification}
+### Akıllı sözleşmeler için neden resmi doğrulama kullanılmalı? \{#benefits-of-formal-verification}
 
-#### Güvenilirlik gereksinimi {#need-for-reliability}
+#### Güvenilirlik gereksinimi \{#need-for-reliability}
 
 Hata yapması sonucunda ölüm, yaralanma veya maddi yıkım gibi tahrip edici sonuçlara sebep olabilecek hayati öneme sahip sistemlerin doğruluğunun değerlendirmesinde resmi doğrulama kullanılır. Akıllı sözleşmeler, basit hataların [kullanıcılar için geri döndürülemez kayıplara yol açacağı](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/), çok büyük miktarda değeri kontrol eden yüksek değerli uygulamalardır. Ancak bir sözleşmeyi dağıtımdan önce resmi olarak doğrulamak, blok zincir üzerinde çalıştığında arzu edildiği gibi işlem göreceğine yönelik garantiyi güçlendirecektir.
 
 Güvenilirlik, her bir akıllı sözleşmede, özellikle de kodu değiştirilemez olarak dağıtılmış Ethereum Sanal Makinesi'nde (EVM) yüksek düzeyde arzu edilen bir niteliktir. Şu anda erişilemeyen piyasaya sürülme sonrası yükseltmelerle sözleşmelerin güvenilirliğini garanti etme ihtiyacı, resmi doğrulamayı gerekli kılar. Resmi doğrulama, denetimciler ve test edenlerin gözünden kaçabilecek tamsayı taşma ve yetersizliği, yeniden giriş ve düşük gaz optimizasyonları gibi dolambaçlı sorunları algılayabilir.
 
-#### Fonksiyonel doğruluğun kanıtlanması {#prove-functional-correctness}
+#### Fonksiyonel doğruluğun kanıtlanması \{#prove-functional-correctness}
 
 Program test etme, bir akıllı sözleşmenin bazı gereklilikleri karşıladığını kanıtlamanın en yaygın yöntemidir. Bu süreç, işlemesi beklenen bir veri örneği ile sözleşmenin yürütülmesini ve davranışının incelenmesini içerir. Sözleşmenin örnek veri için beklenen sonuçları vermesi durumunda geliştiriciler, doğruluğuna ilişkin nesnel kanıta sahip olmuş olur.
 
@@ -174,13 +174,13 @@ Bunun aksine resmi doğrulama, sözleşme _hiç_ yürütülmeden akıllı sözle
 
 Resmi doğrulama sayesinde bir sözleşmenin iş mantığının gereklilikleri karşılayıp karşılamadığını doğrulama sorusu, kanıtlanabilen veya aksi ispatlanabilen matematiksel bir önerme niteliği kazanır. Bir önermeyi resmi olarak kanıtlayarak sınırsız sayıda test durumunu sınırlı sayıda adımla doğrulayabiliriz. Bu bağlamda resmi doğrulamanın bir sözleşmenin bir spesifikasyona göre işlevsel olarak doğruluğunu kanıtlama konusunda başarılı olma olasılığı daha yüksektir.
 
-#### İdeal doğrulama hedefleri {#ideal-verification-targets}
+#### İdeal doğrulama hedefleri \{#ideal-verification-targets}
 
 Bir doğrulama hedefi, resmi olarak doğrulanacak sistemi açıklar. Resmi doğrulama en iyi ''gömülü sistemlerde'' (daha büyük bir sistemin bir parçasını teşkil eden küçük, basit yazılım parçaları) sonuç verir. Ayrıca, alan adına özgü özellikleri doğrulamaya yarayan araçları düzenlemeyi kolaylaştırdığı için daha az kurala sahip özel alan adları için de idealdirler.
 
 Akıllı sözleşmeler, (en azından, belirli bir ölçüde) her iki gerekliliği de karşılar. Örneğin, Ethereum sözleşmelerinin boyutunun küçük olması, bu sözleşmeleri resmi doğrulama açısından daha uygun kılar. Benzer şekilde, Ethereum Sanal Makinesi de basit kuralları uygular ve bu durum, Ethereum Sanal Makinesi'nde çalışan programlar için anlamsal özellikleri belirtme ve doğrulamayı kolaylaştırır.
 
-### Daha hızlı geliştirme döngüsü {#faster-development-cycle}
+### Daha hızlı geliştirme döngüsü \{#faster-development-cycle}
 
 Model kontrolü ve sembolik yürütme gibi resmi doğrulama teknikleri, genellikle akıllı sözleşme kodunun sıradan analizinden (test etme ve denetim sırasında uygulanan) daha etkilidir. Bunun nedeni, resmi doğrulamanın savları test etmek için somut değer kullanmanın aksine ("ya kullanıcı 5 ether çekmek isterse?") sembolik değerlere ("ya kullanıcı _n_ sayıda ether çekmek isterse?") bağlı olmasıdır.
 
@@ -188,29 +188,29 @@ Sembolik girdi değişkenleri somut değerlerin birçok sınıfını içerebilec
 
 Resmi doğrulama ayrıca, masraflı tasarım hatalarını azaltarak merkeziyetsiz uygulamaların (daaps) geliştirilme sürecini de hızlandırır. Güvenlik açıklarını düzeltmek amacıyla sözleşmeleri yükseltmek (mümkün olduğu durumlarda) için kod tabanlarının kapsamlı şekilde yeniden yazılması ve geliştirmeye daha fazla çaba harcanması gerekir. Resmi doğrulama, sözleşme uygulamalarında test edenlerin ve denetimcilerin gözünden kaçabilecek birçok hatayı saptayabilir ve sözleşmeyi dağıtmadan önce bu hataların düzeltilmesi için çok sayıda fırsat sunar.
 
-## Resmi doğrulamanın dezavantajları {#drawbacks-of-formal-verification}
+## Resmi doğrulamanın dezavantajları \{#drawbacks-of-formal-verification}
 
-### El emeği maliyeti {#cost-of-manual-labor}
+### El emeği maliyeti \{#cost-of-manual-labor}
 
 Resmi doğrulama, özellikle doğruluk kanıtlarını elde etmede insanın kanıtlayıcıya rehberlik ettiği yarı otomatik doğrulama ciddi miktarda el emeği gerektirir. Daha da ötesi, resmi spesifikasyon oluşturmak yüksek düzey beceri gerektiren karmaşık bir faaliyettir.
 
 Bu faktörler (çaba ve beceri), test etme ve denetleme gibi sıradan sözleşme doğruluğu belirleme yöntemlerine kıyasla resmi doğrulamayı daha zorlayıcı ve masraflı hale getirir. Yine de akıllı sözleşme uygulamalarında yapılan hataların maliyeti göz önüne alındığında tam doğrulama denetiminin maliyetini ödemek daha makuldür.
 
-### Yalancı negatifler {#false-negatives}
+### Yalancı negatifler \{#false-negatives}
 
 Resmi doğrulama, yalnızca akıllı sözleşmenin yürütmesinin resmi spesifikasyon ile eşleşip eşleşmediğini denetleyebilir. Bu bakımdan, spesifikasyonun akıllı sözleşmenin beklenen davranışlarını doğru şekilde açıkladığından emin olmak önemlidir.
 
 Spesifikasyonlar kötü yazılmışsa, özellik ihlalleri (güvenlik açığı bulunan yürütmelere işaret eden) resmi doğrulama denetimi yoluyla saptanamaz. Bu durumda, bir geliştirici yanlışlıkla sözleşmenin hatasız olduğunu varsayabilir.
 
-### Performans sorunları {#performance-issues}
+### Performans sorunları \{#performance-issues}
 
 Resmi doğrulamada bir dizi performans sorunu ile karşılaşılır. Örneğin, model kontrolü ve sembolik kontrol sırasında karşılaşılan, sırasıyla durum ve yol patlama sorunları doğrulama prosedürlerini etkileyebilir. Ayrıca resmi doğrulama araçları, alt katmanlarında sıklıkla SMT çözücülerini ve diğer kısıtlama çözücülerini kullanır ve bu çözücüler işlemsel açıdan yoğun süreçlere dayalıdır.
 
 Buna ek olarak, program asla sonlanmayabileceğinden program doğrulayıcılarının bir özelliğin (mantıksal formül olarak belirtilen) karşılanabilip karşılanamayacağını ("[karar verilebilirlik sorunu](https://en.wikipedia.org/wiki/Decision_problem)") belirlemesi her zaman mümkün değildir. Bundan ötürü iyi belirtilmiş olsa bile bir sözleşme için bazı özellikleri kanıtlamak imkânsız olabilir.
 
-## Ethereum akıllı sözleşmeleri için resmi doğrulama araçları {#formal-verification-tools}
+## Ethereum akıllı sözleşmeleri için resmi doğrulama araçları \{#formal-verification-tools}
 
-### Resmi spesifikasyonlar oluşturmaya yönelik spesifikasyon dilleri {#specification-languages}
+### Resmi spesifikasyonlar oluşturmaya yönelik spesifikasyon dilleri \{#specification-languages}
 
 **Eylem**: \_\*Eylem, depolama spesifikasyonlarının, ön/art koşulların ve sözleşme değişmezlerinin spesifikasyonuna olanak tanır. Ayrıca, araç takımı Coq, SMT çözücüleri veya hevm üzerinden birçok özelliği kanıtlayabilen kanıt arka uçlarına sahiptir.\*\*
 
@@ -225,7 +225,7 @@ Buna ek olarak, program asla sonlanmayabileceğinden program doğrulayıcıları
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
-### Doğruluk kontrolü için program doğrulayıcıları {#program-verifiers}
+### Doğruluk kontrolü için program doğrulayıcıları \{#program-verifiers}
 
 **Certora Prover** - _Certora Prover, akıllı sözleşmelerde kod doğruluğunu kontrol etmeye yarayan otomatik bir resmi doğrulama aracıdır. Spesifikasyonlar, özellik ihlallerinin tespit edilmesi için statik analiz ve kısıt çözümleme kombinasyonu kullanılarak CVL (Certora Doğrulama Dili) dilinde yazılır._
 
@@ -245,7 +245,7 @@ Buna ek olarak, program asla sonlanmayabileceğinden program doğrulayıcıları
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [Belgeler](https://jellopaper.org/)
 
-### Varsayım kanıtlama için mantıksal çerçeveler {#theorem-provers}
+### Varsayım kanıtlama için mantıksal çerçeveler \{#theorem-provers}
 
 **Isabelle** - _Isabelle/HOL, matematik formüllerinin resmi bir dilde ifade edilmesine olanak tanıyan ve bu formülleri kanıtlamaya yarayan araçlar sağlayan bir kanıt asistanıdır. Ana uygulama, matematiksel kanıtların ve özellikle bilgisayar donanımının veya yazılımının doğruluğunu ve bilgisayar dilleri ve protokollerinin özelliklerini kanıtlamayı içeren resmi doğrulamanın resmileştirilmesidir._
 
@@ -257,7 +257,7 @@ Buna ek olarak, program asla sonlanmayabileceğinden program doğrulayıcıları
 - [GitHub](https://github.com/coq/coq)
 - [Belgeler](https://coq.github.io/doc/v8.13/refman/index.html)
 
-### Akıllı sözleşmelerdeki güvenlik açığı modellerinin tespit edilmesine yarayan sembolik yürütme tabanlı araçlar {#symbolic-execution-tools}
+### Akıllı sözleşmelerdeki güvenlik açığı modellerinin tespit edilmesine yarayan sembolik yürütme tabanlı araçlar \{#symbolic-execution-tools}
 
 **Manticore** - \__EVM bit kodu analizi için sembolik yürütmeye dayalı bir analiz aracıdır_.\*
 
@@ -273,7 +273,7 @@ Buna ek olarak, program asla sonlanmayabileceğinden program doğrulayıcıları
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [Belgeler](https://mythril-classic.readthedocs.io/en/develop/)
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Akıllı Sözleşmelerin Resmi Doğrulaması Nasıl Çalışır?](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
 - [Resmi Doğrulama, Akıllı Sözleşmelerin Kusursuz Olmasını Nasıl Sağlar?](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)

@@ -30,15 +30,15 @@ Et si vous ne l'avez pas déjà fait, vous aurez certainement besoin d'un compte
 
 Sans plus attendre, commençons !
 
-## Introduction à la fabrication de NFT {#making-nfts-101}
+## Introduction à la fabrication de NFT \{#making-nfts-101}
 
 Avant même de commencer à regarder du code, il est important de comprendre comment la fabrication d'un NFT fonctionne. Elle comporte deux étapes :
 
-### Publier un contrat intelligent de NFT sur la blockchain Ethereum {#publish-nft}
+### Publier un contrat intelligent de NFT sur la blockchain Ethereum \{#publish-nft}
 
 La plus grande différence entre les deux normes de contrat intelligent NFT est que l'ERC-1155 est un standard multijeton et inclut la fonctionnalité de lot. Alors que l'ERC-721 est un standard à jeton unique et supporte donc uniquement le transfert d'un jeton à la fois.
 
-### Appeler la fonction de « frappe » (mint) {#minting-function}
+### Appeler la fonction de « frappe » (mint) \{#minting-function}
 
 Habituellement, cette fonction de frappe nécessite que vous passiez deux variables en paramètres. Tout d'abord le `recipient`, qui spécifie l'adresse qui recevra votre NFT fraîchement frappé. Et la seconde qui est le `tokenURI`du NFT : une chaîne de caractères qui pointe sur un document JSON décrivant les métadonnées du NFT.
 
@@ -50,7 +50,7 @@ Dans ce tutoriel, nous allons nous concentrer sur la deuxième partie, en appela
 
 Bien, maintenant que nous comprenons comment la fabrication de NFT fonctionne, clonons nos fichiers et démarrons  !
 
-## Cloner les fichiers de démarrage {#clone-the-starter-files}
+## Cloner les fichiers de démarrage \{#clone-the-starter-files}
 
 Tout d'abord, rendez-vous sur le dépôt GitHub [nft-minter-tutorial](https://github.com/alchemyplatform/nft-minter-tutorial) pour obtenir les fichiers de démarrage de ce projet. Clonez ce dépôt dans votre environnement local.=
 
@@ -63,11 +63,11 @@ Ensuite, ouvrez votre copie de `minter-starter-files` dans votre éditeur de cod
 
 Tout le code que nous allons écrire restera dans le dossier `src`. Nous allons modifier le composant `Minter.js` et écrire des fichiers javascript supplémentaires pour ajouter des fonctionnalités à notre projet Web3.
 
-## Étape 2 : Vérifier nos fichiers de démarrage {#step-2-check-out-our-starter-files}
+## Étape 2 : Vérifier nos fichiers de démarrage \{#step-2-check-out-our-starter-files}
 
 Avant de commencer à coder, il est important de connaître ce qui est déjà fourni dans les fichiers de base.
 
-### Faites tourner votre projet de React {#get-your-react-project-running}
+### Faites tourner votre projet de React \{#get-your-react-project-running}
 
 Commençons par exécuter le projet React dans notre navigateur. La beauté de React est qu'une fois que notre projet est en cours d'exécution dans notre navigateur, toutes les modifications que nous sauvegardons seront mises à jour en direct dans notre navigateur.
 
@@ -88,7 +88,7 @@ Cela devrait ouvrir http://localhost:3000/ dans votre navigateur, où vous verre
 
 Si vous essayez de cliquer sur les boutons « Connect Wallet » (connecter le portefeuille) ou « Mint NFT » (frapper un NFT), vous remarquerez qu'ils ne fonctionnent pas. C'est parce qu'il nous faut encore programmer leur fonctionnalité ! :\)
 
-### Le composant Minter.js {#minter-js}
+### Le composant Minter.js \{#minter-js}
 
 **REMARQUE :** Assurez-vous d'être dans le dossier `minter-starter-files` et non le dossier `nft-minter` !
 
@@ -195,21 +195,21 @@ Si vous ouvrez le fichier `App.js`, qui est le composant principal en React agis
 
 Maintenant que nous comprenons ce avec quoi nous travaillons, mettons en place notre portefeuille Ethereum !
 
-## Configurez votre portefeuille Ethereum {#set-up-your-ethereum-wallet}
+## Configurez votre portefeuille Ethereum \{#set-up-your-ethereum-wallet}
 
 Pour que les utilisateurs puissent interagir avec votre contrat intelligent, ils devront connecter leur portefeuille Ethereum à votre dApp.
 
-### Téléchargez MetaMask {#download-metamask}
+### Téléchargez MetaMask \{#download-metamask}
 
 Pour ce tutoriel, nous utiliserons MetaMask, un portefeuille virtuel utilisable dans le navigateur servant à gérer les adresses Ethereum. Si vous voulez en savoir plus sur le fonctionnement des transactions sur Ethereum, consultez [cette page](/developers/docs/transactions/).
 
 Vous pouvez télécharger et créer un compte MetaMask gratuitement [ici](https://metamask.io/download.html). Lorsque vous créez un compte, ou si vous en avez déjà un, assurez-vous de basculer sur « Réseau de test Ropsten » en haut à droite \(afin de ne pas utiliser d'argent réel\).
 
-### Ajoutez de l'ether depuis un Robinet {#add-ether-from-faucet}
+### Ajoutez de l'ether depuis un Robinet \{#add-ether-from-faucet}
 
 Afin de frapper nos NFT (ou de signer des transactions sur la blockchain Ethereum), nous aurons besoin de faux Eth. Pour obtenir des ETH, vous pouvez vous rendre sur le [robinet Ropsten](https://faucet.ropsten.be/) et entrer votre adresse Ropsten, puis cliquer sur « Send Ropsten ETH. » Vous devriez voir les ETH dans votre compte MetaMask peu de temps après !
 
-### Vérifiez votre solde {#check-your-balance}
+### Vérifiez votre solde \{#check-your-balance}
 
 Pour revérifier que votre solde est correct, faisons une requête [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) en utilisant [l'outil Alchemy Composer](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Cela va retourner la quantité d'ETH que contient votre portefeuille. Après avoir entré l'adresse de votre compte MetaMask et cliqué sur « Send Request », vous devriez voir une réponse comme celle-ci :
 
@@ -221,13 +221,13 @@ Pour revérifier que votre solde est correct, faisons une requête [eth_getBalan
 
 Ouf ! Notre faux argent est bien là ! <Emoji text=":money_mouth_face:" size={1} />
 
-## Connecter MetaMask à votre interface utilisateur {#connect-metamask-to-your-UI}
+## Connecter MetaMask à votre interface utilisateur \{#connect-metamask-to-your-UI}
 
 Maintenant que notre portefeuille MetaMask est configuré, connectons-y notre dApp !
 
 Pour respecter le paradigme [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) , nous allons créer un fichier séparé qui contient nos fonctions pour gérer la logique, les données, et les règles de notre dApp, puis passer ces fonctions à notre interface (notre composant Minter.js).
 
-### La fonction `connectWallet` {#connect-wallet-function}
+### La fonction `connectWallet` \{#connect-wallet-function}
 
 Pour cela, créons un nouveau dossier appelé `utils` dans votre dossier `src` et ajoutons-y un fichier appelé `interact.js`, qui contiendra toutes les fonctions de notre portefeuille et les interactions avec le contrat intelligent.
 
@@ -289,7 +289,7 @@ En utilisant une boucle try/catch, nous allons essayer de nous connecter à Meta
 - Si l'utilisateur choisit de se connecter, `method : "eth_requestAccounts"` retournera une table qui contient toutes les adresses du compte de l'utilisateur qui sont connectées à la dApp. Au final, notre fonction `connectWallet` retourne un objet JSON qui contient la _première_ `address` dans cette table \(voir ligne 9\\) et un message `status` qui invite l'utilisateur à écrire un message sur le contrat intelligent.
 - Si l'utilisateur rejette la connexion, alors l'objet JSON contiendra une chaîne vide pour l'`address` retournée et un message `status` qui indique que l'utilisateur a rejeté la connexion.
 
-### Ajouter une fonction connectWallet à votre composant Minter.js {#add-connect-wallet}
+### Ajouter une fonction connectWallet à votre composant Minter.js \{#add-connect-wallet}
 
 Maintenant que nous avons écrit cette fonction `connectWallet`, connectons-la à notre composant `Minter.js.`.
 
@@ -335,7 +335,7 @@ Ensuite, essayez de rafraîchir la page... c'est étrange. Notre bouton de porte
 
 Mais ne vous inquiétez pas ! Nous pouvons facilement corriger cela en implémentant une fonction appelée `getCurrentWalletConnected`, qui vérifiera si une adresse est déjà connectée à notre dApp, et mettra à jour notre interface en conséquence !
 
-### La fonction `getCurrentWalletConnected` {#get-current-wallet}
+### La fonction `getCurrentWalletConnected` \{#get-current-wallet}
 
 Dans votre fichier `interact.js`, ajoutez la fonction suivante `getCurrentWalletted` :
 
@@ -412,7 +412,7 @@ Remarquez que nous utilisons la réponse de notre appel à `getCurrentWalletConn
 
 Une fois que vous avez ajouté ce code, essayez de rafraîchir votre fenêtre de navigateur. Le bouton devrait indiquer que vous êtes connecté et afficher un aperçu de l'adresse de votre portefeuille connecté, même après avoir été actualisé !
 
-### Implémenter `addWalletListener` {#implement-add-wallet-listener}
+### Implémenter `addWalletListener` \{#implement-add-wallet-listener}
 
 La dernière étape de la configuration de notre dApp de portefeuille consiste à mettre en place le listener de portefeuille afin que notre interface utilisateur soit mise à jour lorsque l'état de notre portefeuille change, par exemple lorsque l'utilisateur se déconnecte ou change de compte.
 
@@ -463,7 +463,7 @@ useEffect(async () => {
 
 Et voilà ! Nous avons terminé la programmation de toutes les fonctionnalités de notre portefeuille ! Maintenant que notre portefeuille est configuré, regardons comment créer notre NFT !
 
-## Métadonnées NFT 101 {#nft-metadata-101}
+## Métadonnées NFT 101 \{#nft-metadata-101}
 
 Rappelez-vous que les métadonnées NFT dont nous venons de parler à l'étape 0 de ce tutoriel, donnent vie à un NFT, lui permettant d'avoir des propriétés, comme un actif numérique, un nom, une description et d'autres attributs.
 
@@ -477,11 +477,11 @@ Le texte des champs « Lien vers l'actif », « Nom » et « Description » comp
 
 Pour stocker nos métadonnées sur IPFS, nous allons utiliser [Pinata](https://pinata.cloud/), une API et une boîte à outils IPFS très pratique. Dans l'étape suivante, nous vous expliquerons exactement comment faire !
 
-## Utiliser Pinata pour épingler vos métadonnées sur IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Utiliser Pinata pour épingler vos métadonnées sur IPFS \{#use-pinata-to-pin-your-metadata-to-IPFS}
 
 Si vous n'avez pas de compte [Pinata](https://pinata.cloud/), créez-vous un compte gratuit [ici](https://pinata.cloud/signup) et suivez les étapes pour vérifier votre mail et votre compte.
 
-### Créer votre clé API Pinata {#create-pinata-api-key}
+### Créer votre clé API Pinata \{#create-pinata-api-key}
 
 Naviguez vers la page [https://pinata.cloud/keys](https://pinata.cloud/keys), puis sélectionnez le bouton « New Key » en haut, activez le widget Admin et nommez votre clé.
 
@@ -489,7 +489,7 @@ Vous verrez ensuite une popup avec vos infos d'API. Assurez-vous de mettre cela 
 
 Maintenant que notre clé est configurée, ajoutons-la à notre projet pour que nous puissions l'utiliser.
 
-### Créer un fichier `.env` {#create-a-env}
+### Créer un fichier `.env` \{#create-a-env}
 
 Nous pouvons stocker en toute sécurité notre clé et notre secret Pinata dans un fichier d'environnement. Installons le paquet [dotenv](https://www.npmjs.com/package/dotenv) dans le répertoire de votre projet.
 
@@ -516,7 +516,7 @@ REACT_APP_PINATA_SECRET = <pinata-api-secret>
 
 Enregistrez le fichier et vous êtes prêt à commencer à écrire la fonction pour télécharger vos métadonnées JSON sur IPFS !
 
-### Implémenter pinJSONToIPFS {#pin-json-to-ipfs}
+### Implémenter pinJSONToIPFS \{#pin-json-to-ipfs}
 
 Heureusement pour nous, Pinata a une [API spécifique pour télécharger des données JSON sur IPFS](https://pinata.cloud/documentation#PinJSONToIPFS) et un JavaScript pratique avec un exemple d'axios que nous pouvons utiliser en opérant juste quelques petites modifications.
 
@@ -575,19 +575,19 @@ Ensuite, nous avons notre fonction asynchrone `pinJSONToIPFS`, qui prend un `JSO
 
 Comme avec notre fonction de types retournés `connectWallet`, nous retournons des objets JSON afin que nous puissions utiliser leurs paramètres pour mettre à jour nos variables d'état et notre interface utilisateur.
 
-## Charger votre contrat intelligent {#load-your-smart-contract}
+## Charger votre contrat intelligent \{#load-your-smart-contract}
 
 Maintenant que nous avons un moyen d'envoyer nos métadonnées NFT vers IPFS via notre fonction `pinJSONToIPFS`, nous allons avoir besoin d'un moyen de charger une instance de notre contrat intelligent afin que nous puissions appeler sa fonction `mintNFT`.
 
 Comme nous l'avons mentionné précédemment dans ce tutoriel, nous utiliserons [ce contrat intelligent NFT existant](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE). Cependant, si vous souhaitez apprendre comment nous avons fait, en faire un par vous-même, nous vous recommandons vivement de consulter notre autre tutoriel, ["Comment créer un NFT](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
 
-### Le contrat ABI {#contract-abi}
+### Le contrat ABI \{#contract-abi}
 
 Si vous avez examiné en détail nos fichiers, vous aurez remarqué que dans notre répertoire `src`, il existe un fichier `contract-abi.json`. Une ABI est nécessaire pour spécifier quelle fonction un contrat invoquera en s'assurant également que la fonction retournera des données dans le format que vous attendez.
 
 Nous allons également avoir besoin d'une clé API Alchemy et de l'API Alchemy Web3 pour nous connecter à la blockchain Ethereum et charger notre contrat intelligent.
 
-### Créer votre clé API Alchemy {#create-alchemy-api}
+### Créer votre clé API Alchemy \{#create-alchemy-api}
 
 Si vous n'avez pas déjà un compte Alchemy, vous pouvez [vous inscrire gratuitement ici](https://alchemy.com/?a=eth-org-nft-minter).
 
@@ -611,7 +611,7 @@ REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 
 Maintenant que nous avons notre contrat ABI et notre clé API Alchemy, nous sommes prêts à charger notre contrat intelligent en utilisant [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
 
-### Configurer votre point de terminaison Alchemy Web3 et votre contrat {#setup-alchemy-endpoint}
+### Configurer votre point de terminaison Alchemy Web3 et votre contrat \{#setup-alchemy-endpoint}
 
 Tout d'abord, si vous ne l'avez pas déjà fait, vous devrez installer [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) en naviguant dans le répertoire principal : `nft-minter-tutorial` dans le terminal :
 
@@ -645,7 +645,7 @@ const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
 
 Une fois que nous avons les deux, nous sommes prêts à commencer à coder notre fonction de frappage !
 
-## Implémenter la fonction mintNFT {#implement-the-mintnft-function}
+## Implémenter la fonction mintNFT \{#implement-the-mintnft-function}
 
 Dans votre fichier `interact.js`, définissons notre fonction, `mintNFT`, qui comme son nom l'indique va frapper notre NFT.
 
@@ -657,7 +657,7 @@ Les trois entrées de notre fonction seront l'`url` de notre actif numérique, `
 export const mintNFT = async (url, name, description) => {}
 ```
 
-### Gestion des erreurs d'entrée {#input-error-handling}
+### Gestion des erreurs d'entrée \{#input-error-handling}
 
 Naturellement, il est logique d'avoir une sorte de gestion des erreurs d'entrée au début de la fonction et ainsi, nous quitterons cette fonction si nos paramètres d'entrée ne sont pas corrects. Dans notre fonction, ajoutons le code suivant :
 
@@ -675,7 +675,7 @@ export const mintNFT = async (url, name, description) => {
 
 Si l'un des paramètres d'entrée est une chaîne de caractères vide, alors nous retournons un objet JSON où le booléen `succes` est `false`, et les relais de chaîne de caractère `status` signalent que tous les champs de notre interface utilisateur doivent être complétés.
 
-### Télécharger les métadonnées sur IPFS {#upload-metadata-to-ipfs}
+### Télécharger les métadonnées sur IPFS \{#upload-metadata-to-ipfs}
 
 Une fois que nous savons que nos métadonnées sont correctement formatées, la prochaine étape est de l'envelopper dans un objet JSON et de le charger sur IPFS via le `pinJSONToIPFS` que nous avons écrit !
 
@@ -832,7 +832,7 @@ export const mintNFT = async (url, name, description) => {
 
 C'est une fonction géante ! Maintenant, nous avons juste besoin de connecter notre fonction `mintNFT` à notre composant `Minter.js`...
 
-## Connecter mintNFT à notre frontend Minter.js {#connect-our-frontend}
+## Connecter mintNFT à notre frontend Minter.js \{#connect-our-frontend}
 
 Ouvrez votre fichier `Minter.js` et mettez à jour la ligne du haut `import{ connectWallet, getCurrentWalletConnected } from "./utils/interact.js";` pour devenir :
 
@@ -853,13 +853,13 @@ const onMintPressed = async () => {
 }
 ```
 
-## Déployer votre NFT sur un site Web en ligne {#deploy-your-NFT}
+## Déployer votre NFT sur un site Web en ligne \{#deploy-your-NFT}
 
 Prêt à mettre en ligne votre projet pour que les utilisateurs puissent interagir avec ? Consultez [ce tutoriel](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) pour déployer votre Minter sur un site Web directement.
 
 Encore une dernière étape...
 
-## Prendre d'assaut le monde de la blockchain {#take-the-blockchain-world-by-storm}
+## Prendre d'assaut le monde de la blockchain \{#take-the-blockchain-world-by-storm}
 
 Je plaisante, vous êtes arrivé à la fin du tutoriel !
 

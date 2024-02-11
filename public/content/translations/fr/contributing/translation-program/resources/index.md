@@ -4,30 +4,30 @@ lang: fr
 description: Ressources utiles pour les traducteurs d'ethereum.org
 ---
 
-# Ressources {#resources}
+# Ressources \{#resources}
 
 Vous pouvez trouver ci-dessous des guides et des outils utiles pour les traducteurs d'ethereum.org, ainsi que des communautés de traduction et d'actualisation des informations.
 
-## Guides {#guides}
+## Guides \{#guides}
 
 - [Guide de style pour la traduction](/contributing/translation-program/translators-guide/)_– instructions et conseils pour les traducteurs d'ethereum.org_
 - [FAQ sur la traduction](/contributing/translation-program/faq/) _– foire aux questions sur le programme de traduction d'ethereum.org_
 - [Guide sur l'éditeur en ligne Crowdin](https://support.crowdin.com/online-editor/) _– un guide détaillé sur l'utilisation de l'éditeur en ligne Crowdin et certaines des fonctionnalités avancées de Crowdin_
 - [Ensembles de contenu](/contributing/translation-program/content-buckets/) _– quelles pages sont incluses dans chaque ensemble de contenu d'ethereum.org_
 
-## Outils {#tools}
+## Outils \{#tools}
 
 - [Microsoft Language Portal](https://www.microsoft.com/en-us/language) _– utile pour trouver et vérifier les traductions des termes techniques_
 - [Linguee](https://www.linguee.com/) _– moteur de recherche de traductions et dictionnaire qui permet la recherche par mot ou phrase_
 - [Recherche de terme Proz](https://www.proz.com/search/) _– base de données de dictionnaires de traduction et de glossaires pour des termes spécialisés_
 - [Eurotermbank](https://www.eurotermbank.com/) _– collections de terminologie européenne en 42 langues_
 
-## Communautés {#communities}
+## Communautés \{#communities}
 
 - [Groupes de traduction spécifiques à une langue sur Discord](/discord/) _– une initiative pour connecter les traducteurs ethereum.org à travers des groupes de traduction_
 - [Groupe de traducteurs chinois](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– page de notion pour faciliter la coordination entre les traducteurs chinois_
 
-## Dernières mises à jour {#latest-updates}
+## Dernières mises à jour \{#latest-updates}
 
 Pour vous tenir au courant des dernières avancées du programme de traduction, vous pouvez suivre le blog de l'[Ethereum Foundation](https://blog.ethereum.org/) :
 
@@ -36,7 +36,7 @@ Pour vous tenir au courant des dernières avancées du programme de traduction, 
 - [Mise à jour de juillet 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
 - [Lancement du programme de traduction, août 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
 
-## Permanence pour les traducteurs {#office-hours}
+## Permanence pour les traducteurs \{#office-hours}
 
 Nous assurons des permanences pour les traducteurs le deuxième mercredi du mois. Celles-ci sont tenues dans le canal vocal #office-hours sur l'[ethereum.org Discord](/discord/), où vous pouvez également trouver les heures exactes et les détails supplémentaires.
 

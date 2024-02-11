@@ -10,11 +10,11 @@ sidebarDepth: 3
 
 To, co jest szczególnie fascynującą cechą łańcuchów bocznych, to fakt, że taki łańcuch działa tak samo, jak główny łańcuch Ethereum, ponieważ jest oparty na [EVM](/developers/docs/evm/). Nie korzysta z Ethereum, ale jest Ethereum. To znaczy, że jeśli chcesz użyć swojej [aplikacji zdecentralizowanej](/developers/docs/dapps/) w łańcuchu bocznym, wystarczy wdrożyć własny kod do tego łańcucha. Wygląda i działa tak samo jak sieć główna — piszesz kontrakty w Solidity, i dokonujesz operacji na łańcuchu za pośrednictwem API Web3.
 
-## Warunki wstępne {#prerequisites}
+## Warunki wstępne \{#prerequisites}
 
 Musisz dobrze się orientować we wszystkich podstawowych tematach i mieć zaawansowaną wiedzę na temat [skalowania Ethereum](/developers/docs/scaling/).
 
-## Plusy i minusy {#pros-and-cons}
+## Plusy i minusy \{#pros-and-cons}
 
 | Zalety                                           | Wady                                                                                                          |
 | ------------------------------------------------ | ------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +22,7 @@ Musisz dobrze się orientować we wszystkich podstawowych tematach i mieć zaawa
 | Obsługa obliczeń ogólnych, kompatybilność z EVM. | Korzysta z odrębnego mechanizmu konsensusu. Niezabezpieczone warstwą 1 (więc technicznie nie jest warstwą 2). |
 |                                                  | Kworum walidatorów łańcuchów bocznych może popełnić oszustwa.                                                 |
 
-### Używanie łańcuchów bocznych {#use-sidechains}
+### Używanie łańcuchów bocznych \{#use-sidechains}
 
 Wiele projektów dostarcza implementacje łańcuchów bocznych, które można zintegrować z własnymi aplikacjami zdecentralizowanymi:
 
@@ -30,7 +30,7 @@ Wiele projektów dostarcza implementacje łańcuchów bocznych, które można zi
 - [Sieć POA](https://www.poa.network/)
 - [Gnosis Chain (formerly xDai)](https://www.xdaichain.com/)
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 - [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 

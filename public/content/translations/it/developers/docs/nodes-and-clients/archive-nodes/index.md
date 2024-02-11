@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Un nodo archivio è un'istanza di un client di Ethereum configurata per creare un archivio di tutti gli stati storici. È uno strumento utile per certi casi d'uso ma potrebbe essere più complicato da eseguire di un nodo completo.
 
-## Prerequisiti {#prerequisites}
+## Prerequisiti \{#prerequisites}
 
 Dovresti comprendere il concetto di [nodo di Ethereum](/developers/docs/nodes-and-clients/), [la sua architettura](/developers/docs/nodes-and-clients/node-architecture/), le [strategie di sincronizzazione](/developers/docs/nodes-and-clients/#sync-modes) e le pratiche della sua [esecuzione](/developers/docs/nodes-and-clients/run-a-node/) e [utilizzo](/developers/docs/apis/json-rpc/).
 
@@ -68,13 +68,13 @@ Per una maggiore stabilità e sicurezza nel prevenire la corruzione accidentale 
 
 Durante la sincronizzazione iniziale, i client in modalità archivio eseguiranno ogni transazione dalla genesi. La velocità di esecuzione è per lo più limitata dalla CPU, quindi una CPU più veloce può aiutare con i tempi della sincronizzazione iniziale. Sul computer del consumatore medio, la sincronizzazione iniziale può richiedere fino a un mese.
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 - [Nodo completo vs nodo archivio di Ethereum](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode, settembre 2022_
 - [Costruire il proprio nodo archivio di Ethereum](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush, agosto 2021_
 - [Come configurare Erigon, RPC di Erigon e TrueBlocks (scrape e API) come servizi](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, aggiornato a settembre 2022_
 
-## Argomenti correlati {#related-topics}
+## Argomenti correlati \{#related-topics}
 
 - [ Nodi e client](/developers/docs/nodes-and-clients/)
 - [Eseguire un nodo](/developers/docs/nodes-and-clients/run-a-node/)

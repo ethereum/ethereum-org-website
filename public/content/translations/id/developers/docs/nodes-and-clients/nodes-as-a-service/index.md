@@ -5,15 +5,15 @@ lang: id
 sidebarDepth: 2
 ---
 
-## Pendahuluan {#Introduction}
+## Pendahuluan \{#Introduction}
 
 Menjalankan [node Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) milik Anda bisa sangat sulit, khususnya pada proses awal atau saat melakukan penskalaan dengan cepat. Ada [sejumlah layanan](#popular-node-services) yang menjalankan infrastruktur node yang dioptimalkan untuk Anda, sehingga Anda dapat fokus pada pengembangan aplikasi atau produk. Kami akan menjelaskan bagaimana cara kerja layanan node, pro dan kotra dalam penggunaannya, dan daftar penyedia jika Anda tertarik untuk memulainya.
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 Jika Anda belum memahami apa itu node dan klien, bacalah tentang [Node dan klien](/developers/docs/nodes-and-clients/).
 
-## Bagaimana cara kerja layanan node? {#how-do-node-services-work}
+## Bagaimana cara kerja layanan node? \{#how-do-node-services-work}
 
 Penyedia layanan node menjalankan klien node terdistribusi di belakang layar untuk Anda, sehingga Anda tidak perlu melakukannya sendiri.
 
@@ -27,19 +27,19 @@ Sering kali layanan node akan menjalankan berbagai [klien node](/developers/docs
 
 Penting untuk dicatat bahwa layanan node tidak dan seharusnya tidak menyimpan kunci atau informasi privat Anda.
 
-## Apa keuntungan menggunakan layanan node? {#benefits-of-using-a-node-service}
+## Apa keuntungan menggunakan layanan node? \{#benefits-of-using-a-node-service}
 
 Keuntungan utama menggunakan layanan node adalah Anda tidak perlu menyediakan waktu merawat dan mengelola node sendiri. Ini memungkinkan Anda fokus pada penyusunan produk Anda alih-alih harus khawatir dengan pemeliharaan infrastruktur.
 
 Menjalankan node Anda sendiri bisa sangat mahal dari segi penyimpanan bandwidth hingga segi waktu yang seharusnya lebih banyak untuk melakukan pembuatan. Hal-hal seperti menjalankan lebih banyak node ketika melakukan penskalaan, memperbarui node ke versi terbaru, dan memastikan konsistensi state, bisa mengurangi pembangunan dan pemakaian sumber daya pada produk web3 yang Anda inginkan.
 
-## Apa kelebihan penggunaan Layanan Node? {#cons-of-using-a-node-service}
+## Apa kelebihan penggunaan Layanan Node? \{#cons-of-using-a-node-service}
 
 Dengan menggunakan layanan node Anda memusatkan aspek infrastruktur produk Anda. Karena alasan ini, proyek yang menerapkan desentralisasi sampai ke level paling tinggi mungkin lebih memilih node hosting mandiri dari pada menyewa pihak ketiga.
 
 Baca lebih lanjut tentang [keuntungan menjalankan node Anda sendiri](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Layanan node populer {#popular-node-services}
+## Layanan node populer \{#popular-node-services}
 
 Berikut ini adalah daftar beberapa penyedia node Ethereum paling populer, jangan ragu-ragu menambahkan penyedia mana saja yang terlewat! Setiap layanan node menawarkan keuntungan dan fitur berbeda di samping layanan gratis atau berbayar, Anda harus menginvestigasi mana yang paling sesuai dengan kebutuhan Anda sebelum membuat keputusan.
 
@@ -203,15 +203,15 @@ Berikut ini adalah daftar beberapa penyedia node Ethereum paling populer, jangan
     - Resource scaling
     - High processing speeds
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 - [Daftar layanan node Ethereum](https://ethereumnodes.com/)
 
-## Topik terkait {#related-topics}
+## Topik terkait \{#related-topics}
 
 - [Node dan klien](/developers/docs/nodes-and-clients/)
 
-## Tutorial terkait {#related-tutorials}
+## Tutorial terkait \{#related-tutorials}
 
 - [Memulai pengembangan Ethereum menggunakan Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Panduan untuk mengirim transaksi menggunakan web3 dan Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

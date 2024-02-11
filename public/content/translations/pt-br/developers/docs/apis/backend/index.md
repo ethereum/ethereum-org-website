@@ -10,15 +10,15 @@ Para isso, cada cliente Ethereum implementa a especificação [JSON-RPC](/develo
 
 Se você quiser usar uma linguagem de programação específica para se conectar com um nó Ethereum, existem várias bibliotecas de conveniência dentro do ecossistema que tornam isso muito mais fácil. Com essas bibliotecas, os desenvolvedores podem escrever intuitivamente métodos on-line para iniciar requisições JSON RPC (por debaixo dos panos) que interajam com a Ethereum.
 
-## Pré-requisitos {#prerequisites}
+## Pré-requisitos \{#prerequisites}
 
 Pode ser útil para entender a [stack da Ethereum](/developers/docs/ethereum-stack/) e [clientes Ethereum](/developers/docs/nodes-and-clients/).
 
-## Por que usar uma biblioteca? {#why-use-a-library}
+## Por que usar uma biblioteca? \{#why-use-a-library}
 
 Essas bibliotecas abstraem muito da complexidade de interagir diretamente com um nó Ethereum. Eles também fornecem funções de utilidade (por exemplo, Convertendo ETH para Gwei) para que como desenvolvedor você possa passar menos tempo lidando com as complexidades de clientes da Ethereum e mais tempo focado na funcionalidade única do seu aplicativo.
 
-## Bibliotecas disponíveis {#available-libraries}
+## Bibliotecas disponíveis \{#available-libraries}
 
 **Alchemy -** **_Plataforma de Desenvolvimento Ethereum._**
 
@@ -148,16 +148,16 @@ Essas bibliotecas abstraem muito da complexidade de interagir diretamente com um
 - [GetBlock.io](https://getblock.io/)
 - [Documentação](https://getblock.io/docs/)
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 _Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_
 
-## Tópicos relacionados {#related-topics}
+## Tópicos relacionados \{#related-topics}
 
 - [Nós e clientes](/developers/docs/nodes-and-clients/)
 - [Estruturas de desenvolvimento](/developers/docs/frameworks/)
 
-## Tutoriais relacionados {#related-tutorials}
+## Tutoriais relacionados \{#related-tutorials}
 
 - [Configure o Web3js para usar a blockchain Ethereum em JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruções para configurar o web3.js em seu projeto._
 - [Chamando um contrato inteligente do JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando o token do DAI, veja como os contratos de chamadas funcionam usando JavaScript._

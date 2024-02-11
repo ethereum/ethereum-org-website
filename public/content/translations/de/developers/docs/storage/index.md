@@ -17,9 +17,9 @@ Bei dezentralen Speichersystemen (dStorage) gibt es ein paar Aspekte, die Sie be
 - Dezentralität
 - Konsensmechanismus
 
-## Persistenzmechanismus/Anreizstruktur {#persistence-mechanism}
+## Persistenzmechanismus/Anreizstruktur \{#persistence-mechanism}
 
-### Blockchain-basiert {#blockchain-based}
+### Blockchain-basiert \{#blockchain-based}
 
 Damit Daten für immer persistent sind, müssen wir uns einen Persistenzmechanismus zunutze machen. Auf Ethereum besteht der Mechanismus zur Persistenz darin, dass die gesamte Chain beim Betrieb eines Nodes berücksichtigt beziehungsweise heruntergeladen werden muss. Neue Daten werden am Ende der Kette angehängt und die Kette wächst weiter – jeder Node muss alle eingebetteten Daten replizieren.
 
@@ -34,7 +34,7 @@ Plattformen mit Blockchain-basierter Persistenz:
 - Ethereum
 - [Arweave](https://www.arweave.org/)
 
-### Vertragsbasiert {#contract-based}
+### Vertragsbasiert \{#contract-based}
 
 **Vertragsbasierte** Persistenz ist dazu gedacht, dass Daten nicht von jedem Node repliziert und für immer gespeichert werden können, sondern durch vertragliche Vereinbarungen aufrechterhalten werden müssen. Das sind Vereinbarungen zwischen mehreren Nodes, die einander versprechen, bestimmte Daten für einen festgelegten Zeitraum verfügbar zu halten. Wenn die Vereinbarungen auslaufen, müssen sie beendet oder erneuert werden, um die Datenpersistenz zu garantieren.
 
@@ -50,7 +50,7 @@ Plattformen mit vertragsbsierter Persistenz:
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
 
-### Weitere Überlegungen {#additional-consideration}
+### Weitere Überlegungen \{#additional-consideration}
 
 IPFS ist ein verteiltes System für die Speicherung und den Zugriff auf Dateien, Websites, Anwendungen und Daten. Es hat kein eingebautes Anreizsystem, sondern kann stattdessen mit einer der oben genannten vertragsbasierten Anreizlösungen für eine längerfristige Persistenz verwendet werden. Eine andere Möglichkeit, Daten auf IPFS zu halten, ist die Zusammenarbeit mit einem Pinning-Dienst, der Ihre Daten für Sie "anpinnt". Sie können sogar Ihren eigenen IPFS-Node betreiben und zum Netzwerk beitragen, um Ihre und/oder die Daten anderer kostenlos aufzubewahren.
 
@@ -64,11 +64,11 @@ IPFS ist ein verteiltes System für die Speicherung und den Zugriff auf Dateien,
 
 SWARM ist eine dezentrale Datenspeicherungs- und Datenverteilungstechnologie mit einem Speicher-Incentive-System und einem Speicher-Mietpreis-Orakel.
 
-## Datenaufbewahrung/Verfügbarkeit {#data-retention}
+## Datenaufbewahrung/Verfügbarkeit \{#data-retention}
 
 Systeme müssen für die Datenverfügbarkeit über einen Mechanismus verfügen, der genau dies sicherstellt.
 
-### Herausforderungsmechanismus {#challenge-mechanism}
+### Herausforderungsmechanismus \{#challenge-mechanism}
 
 Einer der beliebtesten Wege zur Gewährleistung der Datenverfügbarkeit ist es, irgendeine Art von kryptographischer Herausforderung an die Knoten zu senden, die sie nur lösen können, wenn die Daten noch vorhanden sind. Ein einfaches Beispiel ist der Proof-of-Access von Arweave. Sie senden eine Herausforderung an Knoten, um zu sehen, ob sie über diese die Daten im aktuellsten Block sowie einem zufälligen Block in der Vergangenheit verfügen. Hat ein Knoten nicht die richtige Antwort, wird er bestraft.
 
@@ -81,7 +81,7 @@ Anbieter von dStorage mit einem Herausforderungsmechanismus:
 - Crust Netzwerk
 - 4EVERLAND
 
-### Dezentralität {#decentrality}
+### Dezentralität \{#decentrality}
 
 Es gibt keine hervorragenden Tools, um den Grad der Dezentralität von Plattformen festzustellen. Doch im Allgemeinen sollte man die Tools verwenden, die keine Form von KYC für die Benutzung benötigen.
 
@@ -96,7 +96,7 @@ Dezentrale Tools ohne KYC:
 - Crust Netzwerk
 - 4EVERLAND
 
-### Konsens {#consensus}
+### Konsens \{#consensus}
 
 Die meisten diesere Tools haben ihre eigene Version eines [Konsensmechanismus](/developers/docs/consensus-mechanisms/), basieren aber typischerweise auf [**Proof-of-Work (PoW)**](/developers/docs/consensus-mechanisms/pow/) oder [**Proof-of-Stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
@@ -112,7 +112,7 @@ Basierend auf Proof-of-Stake:
 - 0Chain
 - Crust Netzwerk
 
-## Verwandte Werkzeuge {#related-tools}
+## Verwandte Werkzeuge \{#related-tools}
 
 **IPFS – _InterPlanetary File System ist dezentrales Speicher- und Datei-Referenzierungssystem für Ethereum_**
 
@@ -198,13 +198,13 @@ Basierend auf Proof-of-Stake:
 - [Dokumentation](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 - [Was sind dezentrale Speichersysteme?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) – _CoinMarketCap_
 - [Fünf gängige Mythen über dezentrale Speichersysteme entlarvt](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) – _Storj_
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
 
-## Verwandte Themen {#related-topics}
+## Verwandte Themen \{#related-topics}
 
 - [Entwicklungs-Frameworks](/developers/docs/frameworks/)

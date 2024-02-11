@@ -4,7 +4,7 @@ description:
 lang: de
 ---
 
-## Einführung {#introduction}
+## Einführung \{#introduction}
 
 Eine Standardschnittstelle für Verträge, die mehrere Token-Typen verwalten. Ein einzelner bereitgestellter Vertrag kann eine beliebige Kombination aus fungiblen Token, nicht-fungiblen Token oder anderen Konfigurationen (z. B. halb-fungible Token) enthalten.
 
@@ -14,11 +14,11 @@ Die Idee ist einfach und zielt darauf ab, eine Smart-Contract-Schnittstelle zu s
 
 Der ERC-1155-Token wird in [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155) ausführlich beschrieben.
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen \{#prerequisites}
 
 Um diese Seite besser zu verstehen, empfehlen wir Ihnen, zuerst etwas über [Token-Standards](/developers/docs/standards/tokens/), [ERC-20](/developers/docs/standards/tokens/erc-20/) und [ERC-721](/developers/docs/standards/tokens/erc-721/) zu lesen.
 
-## ERC-1155 Funktionen und Merkmale: {#body}
+## ERC-1155 Funktionen und Merkmale: \{#body}
 
 - [Batch-Transfer](#batch_transfers): Übertragen Sie mehrere Assets in einem einzigen Schritt.
 - [Batch-Balance](#batch_balance): Abrufen der Salden mehrerer Anlagen in einem einzigen Schritt.
@@ -27,7 +27,7 @@ Um diese Seite besser zu verstehen, empfehlen wir Ihnen, zuerst etwas über [Tok
 - [NFT-Support](#nft_support): Wenn das Angebot nur 1 ist, wird es als NFT behandelt.
 - [Sichere Übertragungsregeln](#safe_transfer_rule): Regelwerk für die sichere Übertragung.
 
-### Batch-Übertragungen {#batch-transfers}
+### Batch-Übertragungen \{#batch-transfers}
 
 Die Batch-Übertragung funktioniert sehr ähnlich wie die regulären ERC-20-Übertragungen. Schaue Sie sich die reguläre ERC-20 Übertragung-von-Funktion an:
 
@@ -53,7 +53,7 @@ Der einzige Unterschied bei ERC-1155 besteht darin, dass wir die Werte als Array
 
 In ERC-1155 haben wir nur `Übertragung von`, keine `Übertragung`. Um sie wie eine normale `Übertragung` zu benutzen, setzen Sie einfach die Absenderadresse auf die Adresse, welche die Funktion aufruft.
 
-### Batch-Balance {#batch-balance}
+### Batch-Balance \{#batch-balance}
 
 Der entsprechende ERC-20 `Balance-von`-Schritt hat ebenfalls eine Partnerfunktion mit Batch-Unterstützung. Zur Erinnerung: Dies ist die ERC-20-Version:
 
@@ -80,7 +80,7 @@ Zum Beispiel wird bei `_ids=[3, 6, 13]` und `_owners=[0xbeef..., 0x1337..., 0x11
 ]
 ```
 
-### Batch-Genehmigung {#batch-approval}
+### Batch-Genehmigung \{#batch-approval}
 
 ```solidity
 // ERC-1155
@@ -101,7 +101,7 @@ Der aktuelle Status kann über `isApprovedForAll` ausgelesen werden. Wie Sie seh
 
 Dies wurde absichtlich so einfach wie möglich gestaltet. Sie können alles nur für eine Adresse genehmigen.
 
-### Haken erhalten {#receive-hook}
+### Haken erhalten \{#receive-hook}
 
 ```solidity
 function onERC1155BatchReceived(
@@ -121,11 +121,11 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 Wenn der empfangende Vertrag diesen Wert zurückgibt, wird davon ausgegangen, dass der Vertrag die Übertragung akzeptiert und weiß, wie er mit den ERC-1155-Token umgehen soll. Großartig, keine feststeckenden Token mehr in einem Vertrag!
 
-### NFT-Unterstützung {#nft-support}
+### NFT-Unterstützung \{#nft-support}
 
 Wenn es nur eine Angebotsmenge gibt, ist der Token im Wesentlichen ein nicht-fungibler Token (NFT). Und wie bei ERC-721 üblich, können Sie eine Metadaten-URL definieren. Die URL kann von Clients gelesen und geändert werden, siehe [hier](https://eips.ethereum.org/EIPS/eip-1155#metadata).
 
-### Regel zur sicheren Übertragung {#safe-transfer-rule}
+### Regel zur sicheren Übertragung \{#safe-transfer-rule}
 
 In den vorangegangenen Erläuterungen haben wir bereits einige Regeln für die sichere Übertragung angesprochen. Aber schauen wir uns die wichtigsten Regeln an:
 
@@ -138,7 +138,7 @@ In den vorangegangenen Erläuterungen haben wir bereits einige Regeln für die s
 
 _Hinweis_: Alle Batch-Funktionen einschließlich des Hakens gibt es auch als Versionen ohne Batch. Dies geschieht aus Gründen der Gaseffizienz, da die Übertragung nur eines Vermögenswerts wahrscheinlich immer noch der am häufigsten genutzte Weg sein wird. Wir haben sie der Einfachheit halber in den Erläuterungen weggelassen, einschließlich der Regeln für die sichere Übertragung. Die Namen sind identisch, Sie müssen nur das „Batch" entfernen.
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 - [EIP-1155: Multi-Token-Standard](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Openzeppelin Docs](https://docs.openzeppelin.com/contracts/3.x/erc1155)

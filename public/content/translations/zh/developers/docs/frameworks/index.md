@@ -4,7 +4,7 @@ description: 探索框架的优势并比较现有的选项。
 lang: zh
 ---
 
-## 框架介绍 {#introduction-to-frameworks}
+## 框架介绍 \{#introduction-to-frameworks}
 
 构建一个完整的去中心化应用程序需要不同的技术。 软件框架包括许多需要的功能，或提供简单的插件系统来选择您需要的工具。
 
@@ -16,11 +16,11 @@ lang: zh
 - 无论是在本地运行的实例，还是在以太坊的公共网络之一，可以连接到以太网并且部署合约的配置。
 - 去中心化的应用程序分布——与类似星际文件系统（一种用于存储和访问文件、网站、应用程序和数据的分布式系统）的存储选项一体化。
 
-## 前置要求 {#prerequisites}
+## 前置要求 \{#prerequisites}
 
 在更深入介绍这个框架之前，我们推荐您先阅读下面对于[去中心化应用程序](/developers/docs/dapps/)的简介以及[以太坊堆栈](/developers/docs/ethereum-stack/)。
 
-## 可用的框架 {#available-frameworks}
+## 可用的框架 \{#available-frameworks}
 
 **Truffle -** **_开发环境、测试框架、部署通道及其他工具。_**
 
@@ -102,10 +102,10 @@ lang: zh
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
-## 相关主题 {#related-topics}
+## 相关主题 \{#related-topics}
 
 - [设置本地开发环境](/developers/local-environment/)

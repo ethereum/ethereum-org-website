@@ -8,27 +8,27 @@ isOutdated: true
 
 Wyrocznie to źródła danych łączące Ethereum z informacjami spoza łańcucha, ze świata rzeczywistego, umożliwiające zapytania o dane w inteligentnych kontraktach. Na przykład aplikacje dapp rynków prognostycznych używają wyroczni do rozliczania płatności na podstawie zdarzeń. Rynek prognostyczny może poprosić Cię o postawienie ETH na następnego prezydenta Stanów Zjednoczonych. Użyje wyroczni, aby potwierdzić wynik i wypłacić nagrodę zwycięzcom.
 
-## Warunki wstępne {#prerequisites}
+## Warunki wstępne \{#prerequisites}
 
 Upewnij się, że wiesz wystarczająco dużo na temat [węzłów](/developers/docs/nodes-and-clients/), [mechanizmów konsensusu](/developers/docs/consensus-mechanisms/) i [anatomii kontraktów inteligentnych](/developers/docs/smart-contracts/anatomy/), w szczególności zdarzeń.
 
-## Co to jest wyrocznia {#what-is-an-oracle}
+## Co to jest wyrocznia \{#what-is-an-oracle}
 
 Wyrocznia jest pomostem między blockchainem a światem rzeczywistym. Wyrocznie działają jako interfejsy API w łańcuchu, do których można wysyłać zapytania, aby uzyskać informacje do inteligentnych kontraktów. Może to być wszystko, od informacji o cenach po prognozy pogody.
 
-## Dlaczego są potrzebne? {#why-are-they-needed}
+## Dlaczego są potrzebne? \{#why-are-they-needed}
 
 Z blockchainem takim jak Ethereum potrzebujesz każdego węzła w sieci, aby móc odtworzyć każdą transakcję i uzyskać ten sam wynik, gwarantowany. API wprowadzają potencjalnie zmienne dane. Jeśli wysyłasz komuś kwotę ETH na podstawie uzgodnionej wartości $USD za pomocą interfejsu API ceny, zapytanie zwróci inny wynik każdego dnia. Nie wspominając o tym, że API może zostać zhakowany lub być przestarzały. Jeśli tak się stanie, węzły w sieci nie będą w stanie uzgodnić aktualnego stanu Ethereum, skutecznie łamiąc [konsensus](/developers/docs/consensus-mechanisms/).
 
 Wyrocznie rozwiązują ten problem, publikując dane w blockchainie. Tak więc każdy węzeł odtwarzający transakcję wykorzysta te same niezmienne dane, które zostały opublikowane dla wszystkich. W tym celu wyrocznia składa się zazwyczaj z inteligentnego kontraktu i niektórych elementów nieobjętych łańcuchem, które mogą odpytywać API, następnie okresowo wysyłać transakcje, aby zaktualizować dane inteligentnego kontraktu.
 
-### Ochrona {#security}
+### Ochrona \{#security}
 
 Wyrocznia jest tak bezpieczna, jak jej źródła danych. Jeśli aplikacja dapp używa Uniswap jako wyroczni dla swojego kanału cenowego ETH/DAI, atakujący może zmienić cenę na Uniswap w celu manipulowania wiedzą aplikacji na temat bieżącej ceny. Można z tym walczyć, wykorzystując na przykład [system kanałów](https://developer.makerdao.com/feeds/) podobny do używanego przez MakerDAO, który porównuje dane cenowe z wielu zewnętrznych źródeł cen, zamiast polegać tylko na jednym.
 
-## Wykorzystanie {#usage}
+## Wykorzystanie \{#usage}
 
-### Wyrocznie jako usługa {#oracles-as-a-service}
+### Wyrocznie jako usługa \{#oracles-as-a-service}
 
 Usługi takie jak Chainlink oferują wyrocznie jako usługę, z której możesz korzystać. Dysponują infrastrukturą umożliwiającą użytkownikom podjęcie następujących działań:
 
@@ -74,13 +74,13 @@ contract PriceConsumerV3 {
 
 [Wyświetl dokumenty](https://docs.chain.link/docs/get-the-latest-price)
 
-#### Usługi wyroczni {#other-services}
+#### Usługi wyroczni \{#other-services}
 
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
 - [Provable](https://provable.xyz/)
 
-### Tworzenie kontraktu inteligentnego z wykorzystaniem wyroczni {#build-an-oracle-smart-contract}
+### Tworzenie kontraktu inteligentnego z wykorzystaniem wyroczni \{#build-an-oracle-smart-contract}
 
 Oto przykład kontraktu z wykorzystaniem wyroczni autorstwa Pedro Costa. W artykule znajdziesz kolejną adnotację: [Wprowadzanie wyroczni blockchainu w Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e).
 
@@ -197,7 +197,7 @@ contract Oracle {
 
 _Ucieszyłaby nas większa ilość dokumentacji dotyczącej tworzenia inteligentnych kontraktów z wykorzystaniem wyroczni. Jeśli możesz pomóc, utwórz PR!_
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 - [Zdecentralizowane wyrocznie: kompleksowy przegląd](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) – _Julien Thevenard_
 - [Wdrażanie wyroczni blockchainu w Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) – _Pedro Costa_

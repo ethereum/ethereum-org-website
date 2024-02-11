@@ -19,7 +19,7 @@ Ce tutoriel a pour objectif d'aider les lecteurs à comprendre les concepts fond
 
 Les données en chaîne (On-chain) peuvent nous aider à comprendre Ethereum, le réseau, permettre des économies de puissance informatique et devrait servir de base à la compréhension des défis auxquels Ethereum est confronté aujourd'hui (par exemple : la hausse des prix du gaz) et, plus important encore, avoir des discussions sur les solutions évolutives.
 
-### Transactions {#transactions}
+### Transactions \{#transactions}
 
 Le voyage d'un utilisateur sur Ethereum débute par l'initialisation d'un compte utilisateur contrôlé ou d'une entité avec un solde ETH. Il existe deux types de comptes - contrôlé par l'utilisateur ou un contrat intelligent (voir [ethereum.org](/developers/docs/accounts/)).
 
@@ -63,19 +63,19 @@ FROM temp_table
 
 Cela donnera les mêmes informations que celles fournies sur la page de transaction Etherscan. À titre de comparaison, voici les deux sources :
 
-#### Etherscan {#etherscan}
+#### Etherscan \{#etherscan}
 
 ![](./etherscan_view.png)
 
 [La page du contrat de la Fondation Ethereum sur Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
-#### Dune Analytics {#dune-analytics}
+#### Dune Analytics \{#dune-analytics}
 
 ![](./dune_view.png)
 
 Vous pouvez trouver le tableau de bord [ici](https://duneanalytics.com/paulapivat/Learn-Ethereum). Cliquez sur la table pour voir la requête (voir aussi ci-dessus).
 
-### Décortiquer les transactions {#breaking_down_transactions}
+### Décortiquer les transactions \{#breaking_down_transactions}
 
 Une transaction soumise comprend plusieurs informations dont ([source](/developers/docs/transactions/) ) :
 
@@ -104,7 +104,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Les blocs {#blocks}
+### Les blocs \{#blocks}
 
 Chaque transaction va changer l'état de la machine virtuelle Ethereum ([EVM](/developers/docs/evm/)) ([source](/developers/docs/transactions/)). Les transactions sont diffusées sur le réseau pour être vérifiées et incluses dans un bloc. Chaque transaction est associée à un numéro de bloc. Pour consulter les données, nous pourrions interroger un numéro de bloc spécifique : 12396854 (le bloc le plus récent parmi les transactions de la Fondation Ethereum à ce jour, 11/05/21).
 
@@ -211,7 +211,7 @@ FROM temp_table
 
 Le nombre moyen de blocs produits par jour depuis 2016 est légèrement supérieur à ce nombrede 5 874. Alternativement, diviser 86 400 secondes par 5 874 blocs en moyenne donne 14,7 secondes, soit environ un bloc toutes les 15 secondes.
 
-### Gaz {#gas}
+### Gaz \{#gas}
 
 Les blocs sont limités en taille. La taille maximale de bloc est dynamique et varie en fonction de la demande sur le réseau, entre 12 500 000 et 25 000 000 d'unités. Des limites sont requises pour éviter que des blocs de taille arbitraire puissent déformer des nœuds complets en termes d'espace disque et de vitesse requise ([source](/developers/docs/blocks/)).
 
@@ -263,7 +263,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Résumé {#summary}
+### Résumé \{#summary}
 
 Avec ce tutoriel, nous comprenons les concepts fondateurs d'Ethereum et comment fonctionne la blockchain d'Ethereum en interrogeant et en se donnant une idée des données en chaîne.
 

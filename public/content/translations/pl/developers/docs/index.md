@@ -8,11 +8,11 @@ Ta dokumentacja jest zaprojektowana tak, aby pomóc Ci budować z Ethereum. Obej
 
 To jest przedsięwzięcie społeczności open-source, więc nie krępuj się sugerować nowych tematów, dodawać nowych treści i dostarczać przykładów wszędzie tam, gdzie uważasz, że może to być pomocne. Cała dokumentacja jest edytowalna przez GitHub — jeśli nie wiesz, jak [postępuj zgodnie z tymi instrukcjami](https://github.com/ethereum/ethereum-org-website/blob/dev/README.md).
 
-## Moduły rozwojowe {#development-modules}
+## Moduły rozwojowe \{#development-modules}
 
 Jeśli jest to Twoja pierwsza próba rozwoju Ethereum, zalecamy zacząć od początku i przebrnąć przez to jak przez książkę.
 
-### Podstawowe tematy {#fundamental-topics}
+### Podstawowe tematy \{#fundamental-topics}
 
 - [Wprowadzenie do Ethereum](/developers/docs/intro-to-ethereum/) _– szybki przegląd Ethereum_
 - [Web2 vs Web3](/developers/docs/web2-vs-web3/) <em x-id="4">– podstawowe różnice wynikające ze stosowania aplikacji opartych na blockchainie</em>
@@ -27,7 +27,7 @@ Jeśli jest to Twoja pierwsza próba rozwoju Ethereum, zalecamy zacząć od pocz
 - [Sieci](/developers/docs/networks/) _– implementacje Ethereum, w tym sieci testowe_
 - <a href="/developers/docs/nodes-and-clients/">Węzły i klienci</a> _– osoby uczestniczące w sieci i oprogramowanie, które uruchamiają w celu weryfikacji transakcji_
 
-### Stos Ethereum {#the-ethereum-stack}
+### Stos Ethereum \{#the-ethereum-stack}
 
 - [Wprowadzenie do stosu](/developers/docs/ethereum-stack/) <em x-id="4">– przegląd stosu Ethereum/web3</em>
 - [Kontrakty inteligentne](/developers/docs/smart-contracts/) _– programy, które są zlokalizowane pod adresem Ethereum i uruchamiają funkcje, gdy są wyzwalane przez transakcje_
@@ -38,7 +38,7 @@ Jeśli jest to Twoja pierwsza próba rozwoju Ethereum, zalecamy zacząć od pocz
 - [Frameworki programistyczne](/developers/docs/frameworks/) _– narzędzia ułatwiające programowanie w Ethereum_
 - [Środowiska programistyczne](/developers/docs/ides/) _– najlepsze środowiska do pisania kodu aplikacji zdecentralizowanych_
 
-### Zaawansowane {#advanced}
+### Zaawansowane \{#advanced}
 
 - [Standardy tokenów](/developers/docs/standards/tokens/)
 - [Wyrocznie](/developers/docs/oracles/)

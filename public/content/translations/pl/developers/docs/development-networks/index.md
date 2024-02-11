@@ -8,11 +8,11 @@ Podczas tworzenia aplikacji Ethereum z inteligentnymi kontraktami, chcesz urucho
 
 Podobnie jak możesz uruchomić lokalny serwer na komputerze w celu tworzenia stron internetowych, możesz użyć sieci programistycznej, aby utworzyć lokalną instancję blockchain do przetestowania aplikacji zdecentralizowanej. Te sieci deweloperskie Ethereum zapewniają funkcje, które umożliwiają znacznie szybszą iterację niż publiczne sieci testowe (np. nie musisz zajmować się nabyciem ETH z sieci testowej).
 
-## Warunki wstępne {#prerequisites}
+## Warunki wstępne \{#prerequisites}
 
 Powinieneś zrozumieć [podstawy stosu Ethereum](/developers/docs/ethereum-stack/) i [sieci Ethereum](/developers/docs/networks/) przed zagłębieniem się w sieci programistycznej.
 
-## Czym jest sieć programistyczna? {#what-is-a-development-network}
+## Czym jest sieć programistyczna? \{#what-is-a-development-network}
 
 Sieci programistyczne są zasadniczo klientami Ethereum (implementacje Ethereum) zaprojektowanymi specjalnie pod kątem lokalnych prac programistycznych.
 
@@ -24,11 +24,11 @@ _Mógłbyś_ [uruchomić węzeł](/developers/docs/nodes-and-clients/#running-yo
 - Natychmiastowe wydobywanie bloków z każdą otrzymaną transakcją, w kolejności i bez opóźnień
 - Ulepszone funkcje debugowania i rejestrowania
 
-## Dostępne narzędzia {#available-projects}
+## Dostępne narzędzia \{#available-projects}
 
 **Uwaga**: większość [frameworków programistycznych](/developers/docs/frameworks/) zawiera wbudowaną sieć programistyczną. Zalecamy zaczynać od frameworka, aby [skonfigurować lokalne środowisko programistyczne](/developers/local-environment/).
 
-### Ganache {#ganache}
+### Ganache \{#ganache}
 
 Szybko odpal osobisty blockchain Ethereum, który możesz wykorzystać do uruchamiania testów, wykonywania poleceń i sprawdzania stanu, kontrolując jednocześnie sposób działania łańcucha.
 
@@ -38,7 +38,7 @@ Ganache dostarcza zarówno aplikację stacjonarną (Ganache UI), jak i narzędzi
 - [GitHub](https://github.com/trufflesuite/ganache)
 - [Dokumentacja](https://www.trufflesuite.com/docs/ganache/overview)
 
-### Sieć Hardhat {#hardhat-network}
+### Sieć Hardhat \{#hardhat-network}
 
 Lokalna sieć Ethereum zaprojektowana pod kątem [rac programistycznych. Pozwala na wdrożenie kontraktów, wykonanie testów i debugowanie kodu
 
@@ -47,11 +47,11 @@ Sieć Hardhat jest wbudowana w Hardhat, środowisko programistyczne Ethereum dla
 - [Strona internetowa](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
 
-## Powiązane tematy {#related-topics}
+## Powiązane tematy \{#related-topics}
 
 - [Frameworki programistyczne](/developers/docs/frameworks/)
 - [Konfigurowanie lokalnego środowiska programistycznego](/developers/local-environment/)

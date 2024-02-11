@@ -4,7 +4,7 @@ description: A list of all available opcodes for the Ethereum virtual machine.
 lang: en
 ---
 
-## Overview {#overview}
+## Overview \{#overview}
 
 This is an updated version of the EVM reference page at [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes).
 Also drawn from the [Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf), the [Jello Paper](https://jellopaper.org/evm/), and the [geth](https://github.com/ethereum/go-ethereum) implementation.

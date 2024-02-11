@@ -12,7 +12,7 @@ summaryPoint2: Upaya untuk memanfaatkan Ethereum untuk memecahkan krisis-krisis 
 summaryPoint3: Alat untuk meningkatkan skala aset manfaat ekologi secara drastis seperti kredit karbon terverifikasi
 ---
 
-## Apa itu ReFi? {#what-is-refi}
+## Apa itu ReFi? \{#what-is-refi}
 
 **Keuangan Regeneratif (ReFi)** adalah seperangkat perangkat dan ide yang dibangun di atas rantai blok, yang bertujuan untuk menciptakan ekonomi yang regeneratif, bukan ekstraktif atau eksploitatif. Hasilnya, sistem ekstraktif menguras sumber daya yang tersedia dan runtuh; tanpa mekanisme regeneratif, sistem ini tidak memiliki ketahanan. ReFi beroperasi dengan asumsi bahwa penciptaan nilai moneter harus dipisahkan dari ekstraksi sumber daya yang tidak berkelanjutan dari planet dan masyarakat kita.
 
@@ -26,7 +26,7 @@ Proyek ReFi merealisasikan prinsip-prinsip ini dengan menggunakan [kontrak pinta
 
 ReFi juga meliputi gerakan [sains terdesentralisasi (DeSci)](/desci/), yang menggunakan Ethereum sebagai platform untuk membiayai, menciptakan, meninjau, kredit, menyimpan, dan menyebarkan pengetahuan ilmiah. Perangkat DeSci dapat berguna untuk mengembangkan standar dan praktik yang dapat diverifikasi untuk menerapkan dan memantau kegiatan regeneratif seperti menanam pohon, menghilangkan plastik dari lautan, atau memulihkan ekosistem yang rusak.
 
-## Tokenisasi kredit karbon {#tokenization-of-carbon-credits}
+## Tokenisasi kredit karbon \{#tokenization-of-carbon-credits}
 
 **[Pasar Karbon Sukarela (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** adalah mekanisme untuk mendanai proyek-proyek yang memberikan dampak positif yang terverifikasi terhadap emisi karbon, baik untuk mengurangi emisi yang sedang berlangsung, maupun untuk menghilangkan gas rumah kaca yang telah dipancarkan dari atmosfer. Proyek-proyek ini menerima aset yang disebut "kredit karbon" setelah diverifikasi, yang dapat mereka jual kepada individu dan organisasi yang ingin mendukung aksi iklim.
 
@@ -50,7 +50,7 @@ Proyek ReFi menggunakan teknologi rantai blok untuk mengatasi banyak masalah pas
 - ** Aktivitas perdagangan terjadi tanpa perantara**, yang mengenakan biaya tinggi. Kredit karbon digital mewakili [peningkatan biaya sebesar 62% dibandingkan dengan kredit tradisional setara](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne), menurut data dari satu perusahaan analitik.
 - ** DCM bersifat dapat diskalakan** dan dapat memenuhi permintaan baik dari individu maupun perusahaan multinasional.
 
-### Komponen kunci dari DCM {#key-components-dcm}
+### Komponen kunci dari DCM \{#key-components-dcm}
 
 Empat komponen utama membentuk lanskap saat ini dari DCM:
 
@@ -65,7 +65,7 @@ Beberapa layanan seperti [Klima Infinity](https://www.klimadao.finance/infinity)
 
 4. Landasan dan infrastruktur dasar yang memfasilitasi peningkatan dampak dan efisiensi dari seluruh rantai pasokan pasar karbon. [KlimaDAO](http://klimadao.finance/) menyediakan likuiditas sebagai kebaikan publik (memungkinkan siapa pun untuk membeli atau menjual kredit karbon dengan harga yang transparan), memberikan insentif keluaran peningkatan pasar karbon dan penghapusan dengan imbalan, dan menyediakan perangkat yang mudah digunakan dan interoperabel untuk mengakses data tentang, serta mendapatkan dan menghapus, berbagai jenis kredit karbon yang diberikan dalam bentuk token.
 
-## ReFi di luar pasar karbon {#refi-beyond}
+## ReFi di luar pasar karbon \{#refi-beyond}
 
 Meskipun saat ini ada penekanan kuat pada pasar karbon secara umum dan khususnya pada peralihan dari VCM ke DCM di dalam ruang ini, istilah “ReFi” tidak secara ketat terbatas pada karbon. Aset lingkungan lainnya selain kredit karbon dapat dikembangkan dan di-tokenisasi, yang akan berarti eksternalitas negatif lainnya juga dapat dihargai dalam lapisan dasar dari sistem ekonomi di masa depan. Selain itu, aspek regeneratif dari model ekonomi ini dapat diterapkan pada bidang lain, seperti pendanaan barang publik melalui platform pendanaan kuadratik seperti [Gitcoin](https://gitcoin.co/). Organisasi yang dibangun berdasarkan gagasan partisipasi terbuka dan distribusi sumber daya yang adil memberdayakan semua orang untuk mengalirkan dana ke proyek perangkat lunak sumber terbuka, serta proyek pendidikan, lingkungan, dan berbasis komunitas.
 

@@ -4,7 +4,7 @@ description: Pagrindinė informacija, kurios reikia norint suprasti ETH.
 lang: lt
 ---
 
-# Kas yra Ether (ETH)? {#what-is-ether-eth}
+# Kas yra Ether (ETH)? \{#what-is-ether-eth}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: lt
 
 </FeaturedText>
 
-## Kas yra ETH ir kaip jį gauti? {#what-is-eth-and-how-do-i-get-it}
+## Kas yra ETH ir kaip jį gauti? \{#what-is-eth-and-how-do-i-get-it}
 
 Ether arba ETH yra Ethereum valiuta. Tai „skaitmeniniai pinigai“, kurie gali būti siunčiami internetu greitai ir pigiai bei naudojami daugelyje [su Ethereum sukurtų programų](/dapps/).
 

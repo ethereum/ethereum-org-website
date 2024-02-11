@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 Validium es una [solución de escalabilidad](/developers/docs/scaling/) que impone la integridad de las transacciones utilizando purebas de validez como los [rollups de conocimiento cero (ZK)](/developers/docs/scaling/zk-rollups/), pero no almacena información de las transacciones en la Red principal de Ethereum. Si bien la dispoibilidad de datos fuera de la cadena introduce compensaciones (o cosas que deben resignarse), puede también conducir a mejoras inmensas en cuanto a escalabilidad (los validiums pueden procesar [~9.000 transacciones, o más, por segundo](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)).
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos \{#prerequisites}
 
 Debe haber leído y comprendido el tema [Escalamiento de Ethereum](/developers/docs/scaling/) y [capa 2](/layer-2).
 
-## ¿Qué es validium? {#what-is-validium}
+## ¿Qué es validium? \{#what-is-validium}
 
 Los validiums son soluciones de escalado que utilizan la disponibilidad de datos fuera de la cadena y la computación diseñada para mejorar el rendimiento o la velocidad mediante el procesamiento de transacciones fuera de la red principal de Ethereum. Al igual que los rollups de conocimiento cero (ZK), los validiums publican [pruebas de conocimiento cero](/glossary/#zk-proof) para verificar las transacciones fuera de la cadena en Ethereum. Esto evita las transiciones de estado no válidas y mejora las garantías de seguridad de una cadena de validiums.
 
@@ -23,7 +23,7 @@ Sin embargo, los usuarios de validium pueden ver congelados sus fondos y restrin
 
 Esta es la principal diferencia entre los validiums y los rollups de ZK: sus posiciones en el espectro de disponibilidad de datos. Ambas soluciones abordan el almacenamiento de datos de manera diferente, lo que tiene implicaciones para la seguridad y la no necesidad de confianza.
 
-## ¿Cómo interactúan los validiums con Ethereum? {#how-do-validiums-interact-with-ethereum}
+## ¿Cómo interactúan los validiums con Ethereum? \{#how-do-validiums-interact-with-ethereum}
 
 Los validiums son protocolos de escalado construidos sobre la cadena de Ethereum existente. Aunque ejecuta transacciones fuera de la cadena, una cadena de validium es administrada por una colección de contratos inteligentes implementados en la red principal, que incluyen:
 
@@ -33,31 +33,31 @@ Los validiums son protocolos de escalado construidos sobre la cadena de Ethereum
 
 Los Validiums también utilizan la cadena principal de Ethereum para lo siguiente:
 
-### Resolución {#settlement}
+### Resolución \{#settlement}
 
 Las transacciones ejecutadas en un validium no se pueden confirmar completamente hasta que la cadena principal verifique su validez. Todos los negocios realizados en un validium deben resolverse finalmente en la red principal. La cadena de bloques de Ethereum también proporciona "garantías de liquidación" para los usuarios de validium, lo que significa que las transacciones fuera de la cadena no se pueden revertir o alterar una vez subidas o cargadas en la cadena.
 
-### Seguridad {#security}
+### Seguridad \{#security}
 
 Ethereum, que actúa como una capa de liquidación, también garantiza la validez de las transiciones de estado en el validium. Las transacciones fuera de la cadena ejecutadas en la cadena de validiums se verifican a través de un contrato inteligente en la capa base de Ethereum.
 
 Si el contrato de verificación en cadena considera que la prueba no es válida, las transacciones se rechazan. Esto significa que los operadores deben cumplir con las condiciones de validez impuestas por el protocolo de Ethereum antes de actualizar el estado del validium.
 
-## ¿Cómo funciona el validium? {#how-does-validium-work}
+## ¿Cómo funciona el validium? \{#how-does-validium-work}
 
-### Transacciones {#transactions}
+### Transacciones \{#transactions}
 
 Los usuarios envían transacciones al operador, un nodo responsable de ejecutar transacciones en la cadena de validiums. Algunos validiums pueden utilizar un operador único para ejecutar la cadena o confiar en un mecanismo de [prueba de participación (PoS)](/developers/docs/consensus-mechanisms/pos/) para rotar los operadores.
 
 El operador agrega las transacciones en un lote y lo envía a un circuito de prueba para la verificación. El circuito de prueba acepta el lote de transacciones (y otros datos relevantes) como entradas y salidas de una prueba de validez que verifica que las operaciones se realizaron correctamente.
 
-### Compromisos de estado {#state-commitments}
+### Compromisos de estado \{#state-commitments}
 
 El estado del validium se hashea como un árbol de Merkle, cuya raíz se almacena en el contrato principal de Ethereum. La raíz de Merkle, también conocida como la raíz de estado, actúa como un compromiso criptográfico con el estado actual de cuentas y saldos en el validium.
 
 Para realizar una actualización de estado, el operador debe calcular una nueva raíz de estado (después de ejecutar las transacciones) y enviarla al contrato en cadena. Si se comprueba la prueba de validez, se acepta el estado propuesto y el validium cambia a la nueva raíz de estado.
 
-### Depósitos y retiros {#deposits-and-withdrawals}
+### Depósitos y retiros \{#deposits-and-withdrawals}
 
 Los usuarios mueven fondos de Ethereum a un validium depositando ETH (o cualquier token compatible con ERC) en el contrato en cadena. El contrato transmite el evento de depósito al validium fuera de la cadena, donde se acredita a la dirección del usuario con una cantidad igual a su depósito. El operador también incluye esta transacción de depósito en un nuevo lote.
 
@@ -65,13 +65,13 @@ Para devolver los fondos a la red principal, un usuario de validium inicia una t
 
 Como mecanismo anticensura, el protocolo de validium permite a los usuarios retirar directamente del contrato de validium sin pasar por el operador. En este caso, los usuarios deben proporcionar una prueba de Merkle al contrato de verificación que muestre la inclusión de una cuenta en la raíz del estado. Si se acepta la prueba, el usuario puede invocar la función de retiro del contrato principal para quitar sus fondos del validium.
 
-### Envío de lotes {#batch-submission}
+### Envío de lotes \{#batch-submission}
 
 Después de ejecutar un lote de transacciones, el operador envía la prueba de validez asociada al contrato de verificación y propone una nueva raíz de estado para el contrato principal. Si la prueba es válida, el contrato principal actualiza el estado del validium y finaliza los resultados de las transacciones en el lote.
 
 A diferencia de un rollup de ZK, los productores de bloques en un validium no están obligados a publicar datos de transacciones para lotes de transacciones (solo encabezados de bloque). Esto hace que validium sea un protocolo de escalado puramente fuera de la cadena, a diferencia de los protocolos de escalado "híbridos" (es decir, [capa 2](/layer-2/)), que publican datos de estado en la cadena principal de Ethereum como `calldata`.
 
-### Disponibilidad de datos {#data-availability}
+### Disponibilidad de datos \{#data-availability}
 
 Como se mencionó, los validiums utilizan un modelo de disponibilidad de datos fuera de la cadena, donde los operadores almacenan todos los datos de las transacciones fuera de la red principal de Ethereum. La baja huella de datos en cadena de validium mejora la escalabilidad (el rendimiento no está limitado por la capacidad de procesamiento de datos de Ethereum) y reduce las tarifas de usuario (el costo de publicación de `calldata` es menor).
 
@@ -83,7 +83,7 @@ Los administradores de disponibilidad de datos en validium dan fe de la disponib
 
 Los validiums difieren en su enfoque de la gestión de la disponibilidad de datos. Algunos usan partes de confianza para almacenar los datos del estado, mientras que otros utilizan validadores asignados al azar para la tarea.
 
-#### Comité de disponibilidad de datos (DAC) {#data-availability-committee}
+#### Comité de disponibilidad de datos (DAC) \{#data-availability-committee}
 
 Para garantizar la disponibilidad de los datos fuera de la cadena, algunas soluciones de validum designan un grupo de entidades de confianza, conocidas colectivamente como comité de disponibilidad de datos (DAC), para almacenar copias del estado y proporcionar pruebas de la disponibilidad de los datos. Los DAC son más fáciles de implementar y requieren menos coordinación, ya que la membresía es baja.
 
@@ -91,7 +91,7 @@ Sin embargo, los usuarios deben confiar en que el DAC pondrá los datos a dispos
 
 [Más información sobre los comités de disponibilidad de datos en validiums](https://medium.com/starkware/data-availability-e5564c416424).
 
-#### Disponibilidad de datos con fianza {#bonded-data-availability}
+#### Disponibilidad de datos con fianza \{#bonded-data-availability}
 
 Otros validiums requieren que los participantes encargados de almacenar datos fuera de línea participen o hagan staking (es decir, bloqueen) de tokens en un contrato inteligente antes de asumir sus funciones. Esta participación o staking sirve como "fianza" para garantizar un comportamiento honesto entre los administradores de disponibilidad de datos y reduce las suposiciones de confianza. Si estos participantes no prueban la disponibilidad de datos, la fianza se pierde.
 
@@ -99,7 +99,7 @@ En un esquema de disponibilidad de datos con fianza, se puede designar a cualqui
 
 [Más información sobre la disponibilidad de datos con fianza en validiums](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf).
 
-## Voliciones y validiums {#volitions-and-validium}
+## Voliciones y validiums \{#volitions-and-validium}
 
 Los validiums ofrecen muchos beneficios, pero vienen con compensaciones o cosas que deben resignarse (sobre todo, la disponibilidad de datos). Pero, al igual que con muchas soluciones de escalamiento, los validiums son adecuados para casos de uso específicos, por lo que se crearon voliciones.
 
@@ -107,7 +107,7 @@ Las voliciones combinan una cadena de rollups de conocimiento cero (ZK) y otra d
 
 Un exchange descentralizado (DEX) puede preferir utilizar la infraestructura escalable y privada de un validium para operaciones de alto valor. También puede usar un rollup de ZK para los usuarios que desean las mayores garantías de seguridad y la no necesidad de confianza de estos.
 
-## Compatibilidad de los validiums y la EVM {#validiums-and-evm-compatibility}
+## Compatibilidad de los validiums y la EVM \{#validiums-and-evm-compatibility}
 
 Al igual que los rollups de ZK, los validiums son principalmente adecuados para las aplicaciones simples, como los intercambios de tokens y los pagos. El soporte para la computación general y la ejecución de contratos inteligentes entre los validiums es difícil de implementar, dada la considerable sobrecarga de probar las instrucciones de la [EVM](/developers/docs/evm/) en un circuito de prueba de conocimiento cero.
 
@@ -117,21 +117,21 @@ Algunos equipos, sin embargo, están intentando optimizar los códigos de operac
 
 [Más sobre la zkEVM](https://www.alchemy.com/overviews/zkevm).
 
-## ¿Cómo escalan los validiums Ethereum? {#scaling-ethereum-with-validiums}
+## ¿Cómo escalan los validiums Ethereum? \{#scaling-ethereum-with-validiums}
 
-### 1. Almacenamiento de datos fuera de la cadena {#off-chain-data-storage}
+### 1. Almacenamiento de datos fuera de la cadena \{#off-chain-data-storage}
 
 Los proyectos de escalado de capa 2, como los rollups optimistas y los rollups de ZK, intercambian la escalabilidad infinita de los protocolos de escalado puramente fuera de la cadena (por ejemplo, [Plasma](/developers/docs/scaling/plasma/)) por seguridad mediante la publicación de algunos datos de transacciones en L1. Pero esto significa que las propiedades de escalabilidad de los rollups están limitadas por el ancho de banda de datos en la red principal de Ethereum (el [data sharding](/roadmap/danksharding/), o fragmentación de datos, propone mejorar la capacidad de almacenamiento de datos de Ethereum por esta razón).
 
 Los validiums logran escalabilidad manteniendo todos los datos de las transacciones fuera de la cadena y solo publican compromisos de estado (y pruebas de validez) al transmitir las actualizaciones de estado a la cadena principal de Ethereum. La existencia de pruebas de validez, sin embargo, da a los validiums mayores garantías de seguridad que otras soluciones de escalado puramente fuera de la cadena, incluyendo Plasma y las [cadenas laterales](/developers/docs/scaling/sidechains/). Al reducir la cantidad de datos que Ethereum tiene que procesar antes de validar las transacciones fuera de la cadena, los diseños de validium amplían en gran medida el rendimiento en la red principal.
 
-### 2. Pruebas recursivas {#recursive-proofs}
+### 2. Pruebas recursivas \{#recursive-proofs}
 
 Una prueba recursiva es una prueba de validez que verifica la validez de otras pruebas. Estas "pruebas de pruebas" se generan agregando recursivamente múltiples pruebas hasta que se crea una prueba final que verifique todas las pruebas anteriores. Las pruebas recursivas escalan las velocidades de procesamiento de la cadena de bloques al aumentar el número de transacciones que se pueden verificar por prueba de validez.
 
 Por lo general, cada prueba de validez que el operador de validium envía a Ethereum para su verificación valida la integridad de un solo bloque. Mientras que una sola prueba recursiva se puede utilizar para confirmar la validez de varios bloques de validiums al mismo tiempo, esto es posible, ya que el circuito de prueba puede agregar recursivamente varias pruebas de bloque en una prueba final. Si el contrato de verificación en cadena acepta la prueba recursiva, todos los bloques subyacentes se finalizan inmediatamente.
 
-## Pros y contras de validium {#pros-and-cons-of-validium}
+## Pros y contras de validium \{#pros-and-cons-of-validium}
 
 | Ventajas                                                                                                                                                             | Desventajas                                                                                                                                                                                       |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -142,7 +142,7 @@ Por lo general, cada prueba de validez que el operador de validium envía a Ethe
 | Adecuado para casos de uso específicos, como el trading o los juegos de cadena de bloques que priorizan la privacidad y la escalabilidad de las transacciones.       | Se puede evitar que los usuarios retiren fondos, ya que la generación de pruebas de propiedad de Merkle requiere que los datos fuera de la cadena estén disponibles en todo momento.              |
 | La disponibilidad de datos fuera de la cadena proporciona mayores niveles de rendimiento y aumenta la escalabilidad.                                                 | El modelo de seguridad se basa en supuestos de confianza e incentivos criptoeconómicos, a diferencia de los rollups de ZK, que se basan exclusivamente en mecanismos de seguridad criptográficos. |
 
-### Usar Validium/Voliciones {#use-validium-and-volitions}
+### Usar Validium/Voliciones \{#use-validium-and-volitions}
 
 Múltiples proyectos proporcionan implementaciones de Validium y voliciones que puede integrar en sus dapps:
 
@@ -156,7 +156,7 @@ Múltiples proyectos proporcionan implementaciones de Validium y voliciones que 
 - [Documentación](https://docs.zksync.io/zkevm/#what-is-zkporter)
 - [Sitio web](https://zksync.io/)
 
-## Más información {#further-reading}
+## Más información \{#further-reading}
 
 - [Validium y la capa 2 (matriz 2 x 2), emisión n.º 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [Rollups de ZK vs. Validiums](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)

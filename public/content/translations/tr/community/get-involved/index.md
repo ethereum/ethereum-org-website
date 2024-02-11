@@ -4,13 +4,13 @@ description: Ethereum topluluğuna nasıl dahil olunur?
 lang: tr
 ---
 
-# Nasıl dahil olabilirim? {#get-involved}
+# Nasıl dahil olabilirim? \{#get-involved}
 
 Ethereum topluluğu, birçok farklı geçmişe ve beceriye sahip insanları içerir. İster geliştirici, ister sanatçı veya muhasebeci olun, dahil olmanın çeşitli yolları vardır. İşte başlamanıza yardımcı olabilecek önerilerin bir listesi.
 
 [İş ahlakı kuralları](/community/code-of-conduct)mızdan, Ethereum.org misyonu ve değerleri hakkında okumaya başlayın.
 
-## Geliştiriciler <Emoji text=":computer:" size={1} />‍ {#developers}
+## Geliştiriciler <Emoji text=":computer:" size={1} />‍ \{#developers}
 
 - [ethereum.org/developers/](/developers/) adresinden Ethereum hakkında bilgi edinin ve Ethereum'u deneyin
 - [Gitcoin'de bir ödül bulun](https://gitcoin.co/), küçük veya büyük bir teknik sorun üzerinde çalışın ve kripto kazanın!
@@ -21,7 +21,7 @@ Ethereum topluluğu, birçok farklı geçmişe ve beceriye sahip insanları içe
 - [Web3Bridge](https://www.web3bridge.com/) - Afrika genelinde yüzlerce geliştiriciyi ve topluluk üyesini belirleme, eğitme ve destekleme girişimlerinde hevesli web3 topluluğuna katılın
 - [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) grubuna katılın
 
-## Araştırmacılar ve Akademisyenler <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
+## Araştırmacılar ve Akademisyenler <Emoji text=":mag:" size={1} /> \{#researchers-and-academics}
 
 Matematik, kriptografi ya da ekonomi alanlarında bir geçmişiniz var mı? Ethereum ekosisteminde yapılan en son işlerin bazıları ilginizi çekebilir:
 
@@ -42,61 +42,61 @@ Matematik, kriptografi ya da ekonomi alanlarında bir geçmişiniz var mı? Ethe
 
 [Daha fazla aktif araştırma alanı keşfedin](/community/research/).
 
-## Teknik olmayan beceri grupları <Emoji text=":briefcase:" size={1} /> {#non-technical}
+## Teknik olmayan beceri grupları <Emoji text=":briefcase:" size={1} /> \{#non-technical}
 
 Bir geliştirici değilseniz Ethereum'da nereden başlayacağınızı bilmek zor olabilir. Burada, belirli profesyonel geçmişlere yönelik kaynaklarla birlikte birkaç öneri bulunmaktadır.
 
-### Şehrinizde bir buluşma düzenleyin {#meetups}
+### Şehrinizde bir buluşma düzenleyin \{#meetups}
 
 - Nereden başlayacağınıza emin değil misiniz? [BUIDL Network](https://consensys.net/developers/buidlnetwork/) yardımcı olabilir.
 
-### Ethereum hakkında içerik yazın {#write-content}
+### Ethereum hakkında içerik yazın \{#write-content}
 
 - Ethereum'un değerini sade bir dille açıklayabilecek iyi yazarlara ihtiyacı var
 - Kendi makalelerinizi yayınlamaya hazır değil misiniz? Halihazırda, topluluk kaynaklarında bulunan içeriklere katkı sağlayabilir veya [ethereum.org için yeni içerik önerebilirsiniz](/contributing/)!
 
-### Topluluk çağrıları için not alma teklifi {#take-notes}
+### Topluluk çağrıları için not alma teklifi \{#take-notes}
 
 - Birçok açık kaynaklı topluluk çağrısı bulunmaktadır ve not alıcılara sahip olmak çok yardımcı olur. Eğer ilgiliyseniz, [Ethereum Cat Herders discord sunucusuna](https://discord.com/invite/Nz6rtfJ8Cu) katılın ve kendinizi tanıtın!
 
-### Ethereum içeriklerini ana dilinize çevirin {#translate-ethereum}
+### Ethereum içeriklerini ana dilinize çevirin \{#translate-ethereum}
 
 - ethereum.org, web sitesini ve diğer kaynakları birçok farklı dile çeviren bir çeviri programı yürütür
 - Nasıl dahil olabileceğinizi [buradan](/contributing/translation-program) öğrenin
 
-### Bir düğüm çalıştırın {#run-a-node}
+### Bir düğüm çalıştırın \{#run-a-node}
 
 Ethereum'u daha fazla merkeziyetsizleştirmeye yardım etmek için binlerce düğüm operatörüne katılın.
 
 - [Bir düğüm çalıştırmak hakkında daha fazla bilgi](/developers/docs/nodes-and-clients/run-a-node/)
 
-### ETH'nizi stake edin {#staking}
+### ETH'nizi stake edin \{#staking}
 
 ETH'nizi hisseleyerek Ethereum ağının güvenliğini sağlamaya yardımcı olurken ödüller kazanabilirsiniz.
 
 - [Stake etme hakkında daha fazla bilgi](/staking/)
 
-### Projeleri destekleyin {#support-projects}
+### Projeleri destekleyin \{#support-projects}
 
 Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna sahiptir. Çok küçük bağışlarla desteğinizi gösterebilir ve önemli işlerin gerçekleşmesine olanak sağlayabilirsiniz.
 
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
-## Finans uzmanları ve Muhasebeciler <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
+## Finans uzmanları ve Muhasebeciler <Emoji text=":chart_with_upwards_trend:" size={1} /> \{#financial-professionals}
 
 - Ethereum, alternatif bir finansal sistem sunan bir protokoller ve uygulamalar ağı olan “Merkeziyetsiz Finans” ekosistemine ev sahipliği yapmaktadır. Eğer finans alanında bir profesyonelseniz, [DeFi Llama](https://defillama.com/) veya [DeFiPrime](https://defiprime.com)'daki merkeziyetsiz uygulamalara göz atın
 - Muhasebeci misiniz? Ethereum üzerindeki ETH, token'lar, DeFi vb. varlıklar, birçok yeni muhasebecilik sorununu beraberinde getirir. [Rotki](https://rotki.com/) gibi, kullanıcıların saymanlık ve muhasebecilik sorunlarını çözmeye yardımcı olmayı hedefleyen bazı projeleri inceleyerek başlayabilirsiniz
 
-## Ürün Yöneticileri <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
+## Ürün Yöneticileri <Emoji text=":fountain_pen:" size={1} /> \{#product-managers}
 
 - Ethereum ekosisteminin yeteneklerinize ihtiyacı var! Birçok şirket, ürün yöneticisi rolleri için çalışan arıyor. Açık kaynak kodlu bir projeye katkıda bulunarak başlamak istiyorsanız [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) veya [MetaCartel](https://www.metacartel.org/) adresleriyle iletişime geçin
 
-## Pazarlama <Emoji text=":megaphone:" size={1} /> {#marketing}
+## Pazarlama <Emoji text=":megaphone:" size={1} /> \{#marketing}
 
 - Ethereum ekosisteminde pazarlama ve iletişim alanında birçok pozisyon bulunuyor!
 
-## Ethereum işleri {#ethereum-jobs}
+## Ethereum işleri \{#ethereum-jobs}
 
 **Ethereum'da çalışacağınız bir iş bulmak ister misiniz?**
 
@@ -115,7 +115,7 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 - [Ethereum İşleri](https://startup.jobs/ethereum-jobs)
 - [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
-## Bir DAO'ya katılın {#decentralized-autonomous-organizations-daos}
+## Bir DAO'ya katılın \{#decentralized-autonomous-organizations-daos}
 
 "DAO'lar", merkeziyetsiz otonom organizasyonlardır. Bu gruplar, organizasyonu ve iş birliğini kolaylaştırmak için Ethereum teknolojisinden yararlanır. Örneğin; üyeliği kontrol etmek, teklifleri oylamak veya havuza alınan varlıkları yönetmek için. DAO'lar hâlâ deneysel olsalar da aynı fikirde olduğunuz gruplar ile iş ortakları bulmanız ve Ethereum topluluğu üzerindeki etkinizi artırmanız için fırsatlar sunar. [DAO'lar hakkında daha fazlası](/dao/)
 

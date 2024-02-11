@@ -13,7 +13,7 @@ lang: it
 published: 2020-11-14
 ---
 
-## A cosa serve questo tutorial? {#what-is-this-tutorial-about}
+## A cosa serve questo tutorial? \{#what-is-this-tutorial-about}
 
 In questo tutorial imparerai come:
 
@@ -26,11 +26,11 @@ Premesse:
 - sai utilizzare `JavaScript` e `TypeScript`
 - hai seguito altri tutorial di `Waffle<` o ne sai già qualcosa
 
-## Simulazione dinamica {#dynamic-mocking}
+## Simulazione dinamica \{#dynamic-mocking}
 
 Perché la simulazione dinamica è utile? Ci consente di scrivere unit test anziché test di integrazione. Cosa significa? Che non dobbiamo preoccuparci delle dipendenze tra gli Smart Contract, dunque possiamo testarli tutti in completo isolamento. Vediamo come.
 
-### **1. Progetto** {#1-project}
+### **1. Progetto** \{#1-project}
 
 Prima di iniziare dobbiamo preparare un semplice progetto node.js:
 
@@ -69,7 +69,7 @@ La struttura del progetto sarà ora simile a:
 └── test
 ```
 
-### **2. Smart Contract** {#2-smart-contract}
+### **2. Smart Contract** \{#2-smart-contract}
 
 Per avviare la simulazione dinamica, serve uno Smart Contract con dipendenze. Nessun problema.
 
@@ -118,7 +118,7 @@ npx waffle
 
 Facile, vero? Nella cartella `build/` sono comparsi due file corrispondenti al contratto e all'interfaccia. Li useremo dopo per i test.
 
-### **3. Test** {#3-testing}
+### **3. Test** \{#3-testing}
 
 Creiamo un file chiamato `AmIRichAlready.test.ts` per il test reale. Prima di tutto, dobbiamo gestire le importazioni. Ci serviranno dopo:
 
@@ -253,7 +253,7 @@ Esegui i test...
 
 ...ed ecco qui! Il nostro contratto sembra funzionare come previsto :)
 
-## Test delle chiamate del contratto {#testing-contract-calls}
+## Test delle chiamate del contratto \{#testing-contract-calls}
 
 Ricapitoliamo cosa abbiamo fatto finora. Abbiamo testato la funzionalità del contratto `AmIRichAlready` che sembra funzionare correttamente. Quindi abbiamo finito, giusto? Non proprio. Waffle ci consente di testare il nostro contratto ancora più a fondo. Ma come esattamente? Beh, nell'arsenale di Waffle ci sono i matcher `calledOnContract()` e `calledOnContractWith()`. Ci consentiranno di verificare se il contratto ha chiamato il contratto simulato ERC20. Ecco un test di base con uno di questi matcher:
 
@@ -285,7 +285,7 @@ Ottimo, tutti i test danno luce verde.
 
 Testare le chiamate di contratto con Waffle è facilissimo. Ma ecco la parte migliore. Questi matcher funzionano sia con contratti normali che simulati! Questo perché Waffle registra e filtra le chiamate all'EVM piuttosto che inserire il codice, come invece fanno librerie di testing popolari di altre tecnologie.
 
-## Il traguardo {#the-finish-line}
+## Il traguardo \{#the-finish-line}
 
 Congratulazioni! Ora sai come usare Waffle per testare le chiamate di contratto e i contratti simulati dinamicamente. Ci sono funzionalità ben più interessanti da scoprire. Ti consiglio di tuffarti nella documentazione di Waffle.
 

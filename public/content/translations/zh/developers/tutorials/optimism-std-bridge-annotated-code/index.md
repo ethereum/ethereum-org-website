@@ -17,16 +17,16 @@ lang: zh
 
 这就是[乐观解决方案标准链桥](https://community.optimism.io/docs/developers/bridge/standard-bridge)的工作方式。 在本文中，我们将学习链桥的源代码，看看它如何工作，并将它作为精心编写的 Solidity 代码示例加以研究。
 
-## 控制流通 {#control-flows}
+## 控制流通 \{#control-flows}
 
 链桥有两种主要流通方式：
 
 - 存款（从第一层到第二层）
 - 提款（从第二层到第一层）
 
-### 存款流通 {#deposit-flow}
+### 存款流通 \{#deposit-flow}
 
-#### 第一层 {#deposit-flow-layer-1}
+#### 第一层 \{#deposit-flow-layer-1}
 
 1. 如果存入 ERC-20，存款人会给链桥一笔费用，这笔费用从所存入的金额中抽取
 2. 存款人调用第一层链桥（`depositERC20`、`depositERC20To`、`depositETH` 或 `depositETHTo`）
@@ -35,7 +35,7 @@ lang: zh
    - ERC-20：资产被链桥转移给链桥自身，使用的是存款人提供的费用
 4. 第一层链桥使用跨域信息机制调用第二层链桥上的 `finalizeDeposit`
 
-#### 二层网络 {#deposit-flow-layer-2}
+#### 二层网络 \{#deposit-flow-layer-2}
 
 5. 第二层链桥验证调用 `finalizeDeposit` 是否合法：
    - 来自交叉域信息合约
@@ -45,26 +45,26 @@ lang: zh
    - 第二层合约报告它支持正确的接口（[使用 ERC-165](https://eips.ethereum.org/EIPS/eip-165)）。
 7. 如果第二层合约正确，请调用它以便在适当地址铸造相应数量的代币。 如果不正确，请启动提款过程让用户可以在第一层上认领代币。
 
-### 提款流程 {#withdrawal-flow}
+### 提款流程 \{#withdrawal-flow}
 
-#### 二层网络 {#withdrawal-flow-layer-2}
+#### 二层网络 \{#withdrawal-flow-layer-2}
 
 1. 提款人调用第二层链桥（`withdraw` 或 `withdrawTo`）
 2. 第二层链桥销毁属于 `msg.sender` 的适当数量代币
 3. 第二层链桥使用跨域信息机制调用第一层链桥上的 `finalizeETHWithdrawal` 或 `finalizeERC20Withdrawal`
 
-#### 第一层 {#withdrawal-flow-layer-1}
+#### 第一层 \{#withdrawal-flow-layer-1}
 
 4. 第一层链桥验证调用 `finalizeETHWithdrawal` 或 `finalizeERC20Withdrawal` 是否合法：
    - 来自交叉域信息机制
    - 最初来自第二层上的链桥
 5. 第一层链桥将适当资产（以太币或 ERC-20）转账到适当地址
 
-## 一层网络代码 {#layer-1-code}
+## 一层网络代码 \{#layer-1-code}
 
 以下代码在第一层即以太坊主网上运行。
 
-### IL1ERC20Bridge {#IL1ERC20Bridge}
+### IL1ERC20Bridge \{#IL1ERC20Bridge}
 
 [此接口在此处定义](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol)。 其中包括桥接 ERC-20 代币所需的函数和定义。
 
@@ -220,7 +220,7 @@ lang: zh
 1. 在第二层上的启动交易。
 2. 在第一层上完成或声明交易。 在第二层交易的[缺陷质询期](https://community.optimism.io/docs/how-optimism-works/#fault-proofs)结束后此交易才可以进行。
 
-### IL1StandardBridge {#il1standardbridge}
+### IL1StandardBridge \{#il1standardbridge}
 
 [此接口在此处定义](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol)。 该文件包含以太币的事件和函数定义。 这些定义与上述 `IL1ERC20Bridge` 中为 ERC-20 定义的定义非常相似。
 
@@ -301,7 +301,7 @@ interface IL1StandardBridge is IL1ERC20Bridge {
 }
 ```
 
-### CrossDomainEnabled {#crossdomainenabled}
+### CrossDomainEnabled \{#crossdomainenabled}
 
 [此合约](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol)由两个链桥（[一层网络](#the-l1-bridge-contract)和[二层网络](#the-l2-bridge-contract)）继承，以便向其他层发送信息。
 
@@ -437,7 +437,7 @@ contract CrossDomainEnabled {
 
 在这种情况下，我们不担心重入漏洞，我们知道 `getCrossDomainMessenger()` 返回一个可信地址，即使 Slither 无法知道这一点。
 
-### 第一层链桥合约 {#the-l1-bridge-contract}
+### 第一层链桥合约 \{#the-l1-bridge-contract}
 
 [此合约的源代码在此处](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol)。
 
@@ -883,11 +883,11 @@ ERC-20 代币的转账过程不同以太币：
 
 对于早期实现的链桥， 当我们从该实现转移到当前实现时，我们必须转移所有资产。 ERC-20 代币可以转移。 但是，要将以太币转账到合约，您需要得到该合约的批准，`donateETH` 就起到这一作用。
 
-## 第二层上的 ERC-20 代币 {#erc-20-tokens-on-l2}
+## 第二层上的 ERC-20 代币 \{#erc-20-tokens-on-l2}
 
 为了使 ERC-20 代币适合标准链桥，它需要允许标准链桥并且*只*允许标准链桥铸造代币。 这是必要的，因为链桥需要确保在乐观解决方案上流通的代币数量和锁定在第一层链桥合约内的代币数量相同。 如果第二层上的代币太多，一些用户将无法将他们的资产桥接到第一层。 我们实际上将重新建立[部分准备金银行制度](https://www.investopedia.com/terms/f/fractionalreservebanking.asp)，而不是一个受信任的链桥。 如果第一层上的代币太多，其中一些代币将永远锁定在链桥合约中，因为不销毁第二层代币就无法释放它们。
 
-### IL2StandardERC20 {#il2standarderc20}
+### IL2StandardERC20 \{#il2standarderc20}
 
 第二层上使用标准链桥的每个 ERC-20 代币都需要提供[此接口](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol)，它具有标准链桥需要的函数和事件。
 
@@ -926,7 +926,7 @@ interface IL2StandardERC20 is IERC20, IERC165 {
 
 铸造（创建）和燃烧（销毁）代币的函数和事件。 链桥应该是唯一可以运行这些函数的实体，以确保代币数量正确（等于锁定在第一层上的代币数量）。
 
-### L2StandardERC20 {#L2StandardERC20}
+### L2StandardERC20 \{#L2StandardERC20}
 
 [这是我们对 `IL2StandardERC20` 接口的实现](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol)。 除非您需要某种自定义逻辑，否则您应该使用它。
 
@@ -1015,7 +1015,7 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
 
 `_mint` 和 `_burn` 实际上是在 [OpenZeppelin ERC-20 合约](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)中定义的。 该合约只是没有将它们暴露在外部，因为铸造和销毁代币的条件与 ERC-20 使用方式的数量一样多变。
 
-## 第二层链桥代码 {#l2-bridge-code}
+## 第二层链桥代码 \{#l2-bridge-code}
 
 这是在乐观解决方案上运行链桥的代码。 [此合约源自此处](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol)。
 
@@ -1268,7 +1268,7 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
 }
 ```
 
-## 总结 {#conclusion}
+## 总结 \{#conclusion}
 
 标准链桥是最灵活的资产转移机制。 然而，由于它非常笼统，因而并非总是可供使用的最简便机制。 特别是对于提款，大多数用户喜欢使用[第三方链桥](https://www.optimism.io/apps/bridges)，这些链桥不用等待质询期并且不需要进行默克尔证明就能完成提款。
 

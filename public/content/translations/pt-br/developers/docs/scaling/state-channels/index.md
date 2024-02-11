@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 Os canais de estado permitem que os participantes transacionem com segurança off-chain, com o mínimo de interação com a rede principal do Ethereum. Os peers do canal podem conduzir um número arbitrário de transações off-chain enquanto enviam apenas duas transações on-chain para abrir e fechar o canal. Isso permite uma taxa de transferência de transação extremamente alta e resulta em custos mais baixos para os usuários.
 
-## Pré-Requisitos {#prerequisites}
+## Pré-Requisitos \{#prerequisites}
 
 Você deve ter lido e compreendido nossas páginas sobre [escalando o Ethereum](/developers/docs/scaling/) e [segunda camada](/layer-2/).
 
-## O que são canais? {#what-are-channels}
+## O que são canais? \{#what-are-channels}
 
 Blockchains públicas, como Ethereum, enfrentam desafios de dimensionamento devido à sua arquitetura distribuída: onde as transações on-chain devem ser executadas por todos os nós. Os nós devem ser capazes de lidar com o volume de transações em um bloco usando hardware modesto, impondo um limite na taxa de transferência da transação para manter a rede descentralizada. Os canais de blockchain resolvem esse problema permitindo que os usuários interajam off-chain enquanto ainda confiam na segurança da cadeia principal para a liquidação final.
 
@@ -25,7 +25,7 @@ Para fechar o canal, os participantes submetem o último estado acordado do cana
 
 Os canais ponto a ponto são particularmente úteis para situações em que alguns participantes predefinidos desejam realizar transações com alta frequência sem incorrer em sobrecarga visível. Os canais da blockchain se enquadram em duas categorias: **canais de pagamento** e **canais de estado**.
 
-## Canais de pagamento {#payment-channels}
+## Canais de pagamento \{#payment-channels}
 
 Um canal de pagamento é melhor descrito como um "livro de duas vias" mantido coletivamente por dois usuários. O saldo inicial do livro é a soma dos depósitos bloqueados no contrato on-chain durante a fase de abertura do canal. Transferências do canal de pagamento podem ser realizadas instantaneamente e sem o envolvimento da própria blockchain, exceto a criação inicial de uma única vez on-chain e um eventual fechamento do canal.
 
@@ -33,7 +33,7 @@ As atualizações no saldo do livro (ou seja, o estado do canal de pagamento) re
 
 Os canais de pagamento estavam entre as primeiras soluções de dimensionamento projetadas para minimizar atividades caras on-chain, em interações simples do usuário (por exemplo, transferências ETH, atomic swaps, micropagamentos). Os participantes do canal podem conduzir uma quantidade ilimitada de instâncias, transações sem valor entre si, desde que a soma líquida de suas transferências não exceda os tokens depositados.
 
-## Canais de Estado {#state-channels}
+## Canais de Estado \{#state-channels}
 
 Além de oferecer suporte a pagamentos off-chain, os canais de pagamento não têm se mostrado úteis para lidar com a lógica geral de transição de estado. Os canais de estado foram criados para resolver esse problema e torná-los úteis para dimensionar a computação de propósito geral.
 
@@ -47,13 +47,13 @@ Embora isso resolva o problema de dimensionamento descrito anteriormente, tem im
 
 Os canais de estado não têm as mesmas garantias de segurança. Até certo ponto, um canal de estado é uma versão miniatura da rede principal. Com um conjunto limitado de participantes aplicando regras, a possibilidade de comportamento malicioso (por exemplo, propondo atualizações de estado inválidas) aumenta. Canais de estado derivam sua segurança de um sistema de arbitragem de disputas baseado em [provas de fraude](/glossary/#fraud-proof).
 
-## Como os canais de estado funcionam {#how-state-channels-work}
+## Como os canais de estado funcionam \{#how-state-channels-work}
 
 Basicamente, a atividade em um canal de estado é uma sessão de interações envolvendo usuários e um sistema blockchain. Os usuários se comunicam principalmente off-chain e interagem apenas com a blockchain subjacente para abrir o canal, fechar o canal ou resolver possíveis disputas entre os participantes.
 
 A seção a seguir descreve o fluxo de trabalho básico de um canal de estado:
 
-### Abrir o canal {#opening-the-channel}
+### Abrir o canal \{#opening-the-channel}
 
 Abrir um canal exige que os participantes comprometam fundos a um contrato inteligente na rede principal. O depósito também funciona como uma tabulação virtual, de modo que os atores participantes podem transacionar livremente sem necessidade de liquidar os pagamentos imediatamente. Somente quando o canal estiver finalizado on-chain, as partes fazem o acerto e retiram o que corresponde a cada uma delas.
 
@@ -61,7 +61,7 @@ Este depósito também serve como um vínculo para garantir um comportamento hon
 
 Os pares de canal devem assinar um acordo inicial, com o qual todos concordam. Isto serve como origem do canal de estado, após a qual os usuários poderão começar a realizar transações.
 
-### Usar o canal {#using-the-channel}
+### Usar o canal \{#using-the-channel}
 
 Depois de inicializar o estado do canal, os pares interagem assinando transações e enviando uns aos outros para aprovação. Os participantes iniciam atualizações de estado com essas transações e assinam atualizações de estados de outros. Cada transação é composta do seguinte:
 
@@ -75,7 +75,7 @@ Depois de inicializar o estado do canal, os pares interagem assinando transaçõ
 
 As atualizações de estado no canal não são transmitidas on-chain, como normalmente acontece quando os usuários interagem na rede principal, o que se alinha com o objetivo dos canais de estado de minimizar a pegada on-chain. Desde que os participantes concordem em atualizações de estado, elas são tão finais como uma transação Ethereum. Os participantes só têm de depender do consenso da rede principal se surgir uma disputa.
 
-### Fechar o canal {#closing-the-channel}
+### Fechar o canal \{#closing-the-channel}
 
 Fechar um canal de estado requer o envio do estado final e acordado do canal para o contrato inteligente on-chain. Os detalhes referenciados na atualização do estado incluem o número de movimentos de cada participante e uma lista de transações aprovadas.
 
@@ -93,7 +93,7 @@ O cenário descrito acima representa o que acontece caso tudo dê certo. Às vez
 
 Sempre que o consenso se divide entre os participantes em um canal, a última opção é contar com o consenso da rede principal para impor o estado final e válido do canal. Neste caso, o encerramento do canal de estado exige a resolução de litígios on-chain.
 
-### Resolução de disputas {#settling-disputes}
+### Resolução de disputas \{#settling-disputes}
 
 Normalmente, as partes em um canal concordam em fechar o canal antecipadamente e coassinam a última transição de estado, que eles submetem ao contrato inteligente. Uma vez que a atualização é aprovada on-chain, a execução do contrato inteligente off-chain termina e os participantes saem do canal com o dinheiro deles.
 
@@ -111,7 +111,7 @@ Uma vez que uma parte aciona o sistema de resolução de disputas on-chain, a ou
 
 Seja qual for o caso, usuários de canais sempre têm fortes garantias de finalidade: se a transição de estado em sua posse foi assinada por todos os membros e é a atualização mais recente, então tem a mesma finalidade de uma transação regular on-chain. Continuam a ter de desafiar a outra parte on-chain, mas o único resultado possível é a conclusão do último estado válido, que eles detêm.
 
-### Como os canais de estado interagem com o Ethereum? {#how-do-state-channels-interact-with-ethereum}
+### Como os canais de estado interagem com o Ethereum? \{#how-do-state-channels-interact-with-ethereum}
 
 Embora eles existam como protocolos off-chain, os canais de estado têm um componente on-chain: o contrato inteligente implantado no Ethereum ao abrir o canal. Este contrato controla os ativos depositados no canal, verifica atualizações de estado e arbitra disputas entre os participantes.
 
@@ -119,23 +119,23 @@ Canais de estado não publicam dados de transação ou compromissos de estado na
 
 As canais de estado dependem do protocolo principal do Ethereum para o seguinte:
 
-#### 1. Vivacidade {#liveness}
+#### 1. Vivacidade \{#liveness}
 
 O contrato on-chain implantado ao abrir o canal é responsável pela funcionalidade do canal. Se o contrato estiver em execução no Ethereum, então o canal estará sempre disponível para uso. Inversamente, uma sidechain sempre pode falhar, mesmo que a rede principal esteja operacional, colocando o dinheiro dos usuários em risco.
 
-#### 2. Segurança {#security}
+#### 2. Segurança \{#security}
 
 Até certo ponto, os canais de estado dependem do Ethereum para fornecer segurança e proteger usuários de pares maliciosos. Conforme discutido em outras seções, os canais usam um mecanismo de prova de fraude que permite aos usuários desafiarem tentativas de finalizar o canal com uma atualização inválida ou obsoleta.
 
 Neste caso, a parte honesta fornece o mais recente estado válido do canal como uma prova de fraude do contrato on-chain para verificação. As provas de fraude permitem que partes mutuamente desconfiadas realizem transações off-chain sem arriscar os seus fundos no processo.
 
-#### 3. Finalidade {#finality}
+#### 3. Finalidade \{#finality}
 
 Atualizações de estado assinadas coletivamente pelos usuários do canal são consideradas como boas transações on-chain. Ainda assim, toda a atividade dentro do canal só atinge a verdadeira finalidade quando o canal é fechado no Ethereum.
 
 No caso otimista, ambas as partes podem cooperar e assinar a atualização final do estado e enviar on-chain para fechar o canal, após o qual os fundos são distribuídos de acordo com o estado final do canal. No caso pessimista, onde alguém tenta trapacear publicando uma atualização incorreta do estado on-chain, sua transação não é finalizada até que a janela do desafio termine.
 
-## Canais de estado virtual {#virtual-state-channels}
+## Canais de estado virtual \{#virtual-state-channels}
 
 A implementação ingênua de um canal de estado seria implantar um novo contrato quando dois usuários desejam executar um aplicativo off-chain. Isso não é apenas inviável, mas também anula a relação custo-benefício dos canais de estado (os custos de transação on-chain podem aumentar rapidamente).
 
@@ -147,13 +147,13 @@ Os usuários em cada canal virtual interagem por meio de uma nova instância de 
 
 Assim como os canais regulares, os usuários trocam atualizações de estado para progredir na máquina de estado. Exceto quando surge uma disputa, o intermediário só precisa ser contatado ao abrir ou encerrar o canal.
 
-### Canais de pagamento virtual {#virtual-payment-channels}
+### Canais de pagamento virtual \{#virtual-payment-channels}
 
 Os canais virtuais de pagamento funcionam com a mesma ideia dos canais virtuais de estado: os participantes conectados à mesma rede podem passar mensagens sem a necessidade de abrir um novo canal on-chain. Nos canais virtuais de pagamento, as transferências de valores são roteadas por um ou mais intermediários, com a garantia de que somente o destinatário pretendido poderá receber os recursos transferidos.
 
-## Aplicações de canais de estado {#applications-of-state-channels}
+## Aplicações de canais de estado \{#applications-of-state-channels}
 
-### Pagamentos {#payments}
+### Pagamentos \{#payments}
 
 Os canais de blockchain iniciais eram simples protocolos que permitiam a dois participantes realizarem transferências rápidas e de baixas taxas off-chain sem terem que pagar elevadas taxas de transação na rede principal. Hoje, os canais de pagamento ainda são úteis para os aplicativos projetados para a troca e depósitos de ether e tokens.
 
@@ -169,7 +169,7 @@ Pagamentos baseados em canais possuem as seguintes vantagens:
 
 Implementar canais de estado nas soluções de camada 2, como [rollups](/developers/docs/scaling/#rollups), poderia torná-las ainda mais atraentes para pagamentos. Embora os canais ofereçam pagamentos baratos, os custos de estabelecer o contrato on-chain na rede principal durante a fase de abertura podem ser caros, especialmente quando as taxas de gás aumentam. Os rollups baseados no Ethereum oferecem [taxas de transação mais baixas](https://l2fees.info/) e podem reduzir a sobrecarga para os participantes do canal reduzindo as taxas de configuração.
 
-### Microtransações {#microtransactions}
+### Microtransações \{#microtransactions}
 
 As microtransações são pagamentos de baixo valor (por exemplo, menores que uma fração de dólar) que as empresas não podem processar sem incorrer em perdas. Estas entidades têm de pagar aos prestadores de serviços de pagamento, o que não podem fazer se a margem sobre os pagamentos aos clientes for demasiado baixa para obter lucros.
 
@@ -177,7 +177,7 @@ Os canais de pagamento resolvem este problema reduzindo a sobrecarga associada c
 
 Além do custo de abrir e fechar o canal, os participantes não incorrem em custos adicionais nas microtransações (sem taxas de gás). Esta é uma situação vantajosa para todos, uma vez que os clientes têm mais flexibilidade na forma como pagam os serviços, e as empresas não perdem em microtransações rentáveis.
 
-### Aplicativos descentralizados {#decentralized-applications}
+### Aplicativos descentralizados \{#decentralized-applications}
 
 Tal como os canais de pagamento, os canais de estado podem fazer pagamentos condicionais, de acordo com os estados finais da máquina de estado. Canais de estado também podem suportar lógica arbitrária de transição de estado, tornando-os úteis para executar aplicativos genéricos off-chain.
 
@@ -189,15 +189,15 @@ Um caso de uso potencial para aplicativos de canal de estado sao os jogos de doi
 
 Outros possíveis casos de uso para aplicativos de canais de estado incluem propriedade de nome ENS, registros NFT e muito mais.
 
-### Transferências atômicas {#atomic-transfers}
+### Transferências atômicas \{#atomic-transfers}
 
 Os canais de pagamento iniciais eram restritos a transferências entre duas partes, limitando a sua usabilidade. No entanto, a introdução de canais virtuais permitiu que indivíduos encaminhassem transferências através de intermediários (ou seja, vários canais p2p) sem ter que abrir um novo canal on-chain.
 
 Comumente descrito como transferências "multi-hop", os pagamentos roteados são atômicos (ou seja, ou todas as partes da transação são realizadas de forma bem-sucedida ou ela falha completamente). As transferências atômicas usam [Hashed Timelock Contracts (HTLCs)](https://en.bitcoin.it/wiki/Hash_Time_Locked_Contracts) para garantir que o pagamento seja liberado apenas se certas condições forem atendidas, reduzindo assim o risco de contraparte.
 
-## Desvantagens de se usar canais de estado {#drawbacks-of-state-channels}
+## Desvantagens de se usar canais de estado \{#drawbacks-of-state-channels}
 
-### Suposições de vivacidade {#liveness-assumptions}
+### Suposições de vivacidade \{#liveness-assumptions}
 
 Para garantir a eficiência, os canais de estado colocam limites de tempo na capacidade de os participantes do canal responderem a disputas. Essa regra assume que os pares estarão sempre online para monitorar a atividade do canal e contestar os desafios quando necessário.
 
@@ -205,7 +205,7 @@ Na realidade, os usuários podem ficar offline por razões fora do seu controle 
 
 Alguns canais usam "watchtowers" – entidades responsáveis por acompanhar eventos de disputas on-chain em nome de outros e tomar as ações necessárias, como alertar as partes interessadas. No entanto, isso pode aumentar os custos de utilização de um canal de estado.
 
-### Indisponibilidade de dados {#data-unavailability}
+### Indisponibilidade de dados \{#data-unavailability}
 
 Como explicado anteriormente, desafiar uma disputa inválida requer apresentar o mais recente e válido estado do canal de estado. Esta é outra regra baseada em uma suposição: que os usuários têm acesso ao estado mais recente do canal.
 
@@ -213,7 +213,7 @@ Embora seja razoável esperar que os usuários do canal armazenem cópias do est
 
 Os usuários do Ethereum não precisam lidar com esse problema, uma vez que a rede impõe regras de disponibilidade de dados. Os dados da transação são armazenados e propagados por todos os nós e disponíveis para que os usuários baixem se e quando necessário.
 
-### Problemas de liquidez {#liquidity-issues}
+### Problemas de liquidez \{#liquidity-issues}
 
 Para estabelecer um canal blockchain, os participantes precisam bloquear fundos em um contrato inteligente on-chain para o ciclo de vida do canal. Isto reduz a liquidez dos usuários do canal e também limita os canais para aqueles que podem arcar com os fundos bloqueados na rede principal.
 
@@ -221,25 +221,25 @@ No entanto, canais do ledger, operados por um provedor de serviços off-chain (O
 
 Provedores de serviço off-chain também podem abrir canais com vários pares, tornando-os úteis para encaminhar pagamentos. É claro que os utilizadores têm de pagar taxas aos OSPs pelos seus serviços, o que pode ser indesejável para alguns.
 
-### Ataques de griefing {#griefing-attacks}
+### Ataques de griefing \{#griefing-attacks}
 
 Os ataques de griefing são uma característica comum dos sistemas baseados em provas de fraude. Um ataque de griefing não beneficia diretamente o atacante, mas causa dor (ou seja, dano) à vítima, daí o nome.
 
 A prova de fraude é suscetível a ataques de griefing porque a parte honesta deve responder a todas as disputas, até mesmo as inválidas, ou corre o risco de perder os seus fundos. Um participante malicioso pode decidir repetidamente publicar o estado de transições on-chain, forçando a parte honesta a responder com o estado válido. O custo dessas transações on-chain pode aumentar rapidamente, fazendo com que partes honestas se percam no processo.
 
-### Conjuntos de participantes predefinidos {#predefined-participant-sets}
+### Conjuntos de participantes predefinidos \{#predefined-participant-sets}
 
 Por desenho, o número de participantes que compõem um canal do estado permanece fixo ao longo de sua vida. Isso porque atualizar o conjunto dos participantes iria complicar a operação do canal, especialmente ao financiar o canal ou resolver conflitos. Adicionar ou remover os participantes também exigiria atividade adicional on-chain, o que aumenta a sobrecarga para os usuários.
 
 Embora isso torne os canais de estado mais fáceis de justificar, ele limita a utilidade dos desenhos de canais aos desenvolvedores de aplicativos. Isso explica parcialmente porque os canais de estado foram preteridos a favor de outras soluções de dimensionamento, como rollups.
 
-### Processamento paralelo de transações {#parallel-transaction-processing}
+### Processamento paralelo de transações \{#parallel-transaction-processing}
 
 Os participantes do canal de estado enviam atualizações de estado em turnos, e é por isso que eles funcionam melhor para aplicativos baseados em turnos (por exemplo, um jogo de xadrez com dois jogadores). Isso elimina a necessidade de lidar com atualizações de estado simultâneas e reduz o trabalho que o contrato on-chain deve fazer para punir quem publica atualizações de estado obsoletas. No entanto, um efeito colateral desse desenho é que as transações são dependentes uma das outras, aumentando a latência e diminuindo a experiência geral do usuário.
 
 Alguns canais de estado resolvem esse problema usando um design "full-duplex" que separa o estado off-chain em dois estados unidirecionais de estados "simplex", permitindo atualizações de estado simultâneas. Tais desenhos melhoram a taxa de transferência off-chain e diminuem os atrasos nas transações.
 
-## Usar canais de estado {#use-state-channels}
+## Usar canais de estado \{#use-state-channels}
 
 Vários projetos fornecem implementações da cadeia Plasma que você pode integrar aos seus dapps:
 
@@ -249,7 +249,7 @@ Vários projetos fornecem implementações da cadeia Plasma que você pode integ
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 **Canais de Estado**
 

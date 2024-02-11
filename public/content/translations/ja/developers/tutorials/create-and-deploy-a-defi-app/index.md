@@ -18,7 +18,7 @@ sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 
 このチュートリアルでは、Solidity を使用して DeFi アプリケーションを構築します。このアプリケーションでは、ERC20 トークンをスマートコントラクトに入金した上で、Farm Token を発行して転送することができます。 ユーザーはその後、スマートコントラクトで Farm Token をバーンすることで ERC-20 トークンを引き出すことができ、ERC-20 トークンは再度ユーザーに転送されます。
 
-## Truffle と Ganache をインストールする {#install-truffle-and-ganache}
+## Truffle と Ganache をインストールする \{#install-truffle-and-ganache}
 
 はじめてスマートコントラクトを作成する場合は、環境設定が必要です。 [Truffle](https://www.trufflesuite.com/)と[Ganache](https://www.trufflesuite.com/ganache)という 2 つのツールを使用します。
 
@@ -44,7 +44,7 @@ truffle init
 
 - `truffle-config.js`：Truffle の設定ファイル
 
-## ERC-20 トークンを作成する {#create-the-erc20-token}
+## ERC-20 トークンを作成する \{#create-the-erc20-token}
 
 最初に、スマートコントラクトにステークするために使用する ERC-20 トークンを作成する必要があります。 代替可能なトークンを作成するには、まず OpenZeppelin ライブラリをインストールする必要があります。 このライブラリには、ERC-20 や ERC-721 のような標準の実装が含まれています。 インストールするには、以下のコマンドを実行します：
 
@@ -90,7 +90,7 @@ constructor (string memory name_, string memory symbol_) public {
 }
 ```
 
-## ERC-20 トークンをコンパイルする {#compile-the-erc20-token}
+## ERC-20 トークンをコンパイルする \{#compile-the-erc20-token}
 
 スマートコントラクトをコンパイルするには、まず Solidity コンパイラのバージョンを確認してください。 バージョンを確認するには、以下のコマンドを実行します：
 
@@ -123,7 +123,7 @@ compilers: {
 truffle compile
 ```
 
-## ERC-20 トークンをデプロイする {#deploy-erc20-token}
+## ERC-20 トークンをデプロイする \{#deploy-erc20-token}
 
 コンパイルが完了すると、トークンをデプロイできるようになります。
 
@@ -175,7 +175,7 @@ truffle console
 
 _最初のアドレスに、100 万 MyTokens が含まれています。_
 
-## Farm Token のスマートコントラクトを作成する {#create-farmtoken-smart-contract}
+## Farm Token のスマートコントラクトを作成する \{#create-farmtoken-smart-contract}
 
 Farm Token のスマートコントラクトは、以下の 3 つの機能を持ちます：
 
@@ -468,7 +468,7 @@ module.exports = async function (callback) {
 
 _withdrawMyTokenFromTokenFarm.js の出力_
 
-## 参考文献 {#references}
+## 参考文献 \{#references}
 
 [コントラクト - OpenZeppelin 関連文書](https://docs.openzeppelin.com/contracts/3.x/)
 

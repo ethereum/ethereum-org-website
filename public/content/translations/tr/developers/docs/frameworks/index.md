@@ -4,7 +4,7 @@ description: Çerçevelerin avantajlarını keşfedin ve uygun seçenekleri kar�
 lang: tr
 ---
 
-## Çerçevelere giriş {#introduction-to-frameworks}
+## Çerçevelere giriş \{#introduction-to-frameworks}
 
 Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerektirir. Yazılım çerçeveleri gereken özelliklerin çoğunu içerirler veya istediğiniz araçları seçmeniz için kolay eklenti sistemleri sağlarlar.
 
@@ -16,11 +16,11 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - Ethereum ağlarına bağlanmak ve yerel olarak çalışan bir örneğe veya Ethereum'un genel ağlarından birine sözleşmeleri dağıtmak için yapılandırma.
 - Merkeziyetsiz uygulama dağıtımı - IPFS gibi depolama seçenekleri ile entegrasyonlar.
 
-## Ön Koşullar {#prerequisites}
+## Ön Koşullar \{#prerequisites}
 
 Çerçevelere girmeden önce, [dapp'ler](/developers/docs/dapps/) ve [Ethereum yığını](/developers/docs/ethereum-stack/) konularına girişimizi okumanızı öneririz.
 
-## Mevcut çerçeveler {#available-frameworks}
+## Mevcut çerçeveler \{#available-frameworks}
 
 **Truffle -** **_Bir geliştirme ortamı, test çerçevesi, yapı hattı ve diğer araçlar._**
 
@@ -102,10 +102,10 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-## daha fazla okuma {#further-reading}
+## daha fazla okuma \{#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## İlgili konular {#related-topics}
+## İlgili konular \{#related-topics}
 
 - [Yerel bir geliştirme ortamı oluşturun](/developers/local-environment/)

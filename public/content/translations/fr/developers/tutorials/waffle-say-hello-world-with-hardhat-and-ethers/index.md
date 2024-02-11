@@ -79,7 +79,7 @@ MyWaffleProject
 └── package.json
 ```
 
-### Maintenant, parlons de certains de ces fichiers : {#now-lets-talk}
+### Maintenant, parlons de certains de ces fichiers : \{#now-lets-talk}
 
 - Greeter.sol - notre contrat intelligent écrit en solidity ;
 
@@ -126,7 +126,7 @@ describe("Greeter", function () {
 })
 ```
 
-### La prochaîne étape consiste à compiler notre contrat et à exécuter nos tests : {#compiling-and-testing}
+### La prochaîne étape consiste à compiler notre contrat et à exécuter nos tests : \{#compiling-and-testing}
 
 Les tests Waffle utilisent Mocha (un framework de test) avec Chai (une bibliothèque d'assertions). Tout ce que vous avez à faire est d'exécuter `npx hardhat test` et d'attendre que le message suivant apparaisse.
 
@@ -134,7 +134,7 @@ Les tests Waffle utilisent Mocha (un framework de test) avec Chai (une biblioth�
 ✓ Doit renvoyer le nouveau message de bienvenue une fois qu'il a changé
 ```
 
-### Tout semble bien pour l'instant, ajoutons une certaine complexité à notre projet <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
+### Tout semble bien pour l'instant, ajoutons une certaine complexité à notre projet <Emoji text=":slightly_smiling_face:" size={1}/> \{#adding-complexity}
 
 Imaginez une situation où quelqu'un ajoute une chaîne vide comme un salut. Ce ne serait pas un accueil chaleureux, n'est-ce pas ?  
 Veillons à ce que cela ne se produise pas :
@@ -195,7 +195,7 @@ Exécutons les tests à nouveau :
 
 Félicitations ! Vous y êtes arrivé :)
 
-### Conclusion {#conclusion}
+### Conclusion \{#conclusion}
 
 Nous avons réalisé un projet simple avec Waffle, Hardhat et ethers.js. Nous avons appris comment mettre en place un projet, ajouter un test et implémenter de nouvelles fonctionnalités.
 

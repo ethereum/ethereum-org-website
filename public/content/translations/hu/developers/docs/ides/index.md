@@ -6,7 +6,7 @@ lang: hu
 
 Amikor egy [integrált fejlesztői környezet (IDE)](https://wikipedia.org/wiki/Integrated_development_environment) felállításáról van szó, az Ethereumon történő fejlesztés hasonló bármely más szoftveres projekthez. Sok lehetőség közül lehet választani, ezért azt az IDE-t vagy kódszerkesztőt válassza, amely a legjobban megfelel a preferenciáinak. Nagy valószínűséggel a legjobb IDE az Ethereum fejlesztéséhez éppen az, amit a hagyományos szoftverfejlesztéshez is használ.
 
-## Web alapú IDE-k {#web-based-ides}
+## Web alapú IDE-k \{#web-based-ides}
 
 Ha szeretnél eljátszadozni a kóddal, mielőtt [felállítanál egy helyi fejlesztői környezetet](/developers/local-environment/), ezek a webes alkalmazások egyénre szabottak az Ethereum okosszerződések fejlesztésére.
 
@@ -30,7 +30,7 @@ Ha szeretnél eljátszadozni a kóddal, mielőtt [felállítanál egy helyi fejl
 
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
-## Asztali IDE-k {#desktop-ides}
+## Asztali IDE-k \{#desktop-ides}
 
 A legtöbb megalapozott IDE-nek vannak beépített pluginjai, amelyek tovább fokozzák az Ethereum fejlesztői élményt. Legalább egy syntax kijelölést biztosítanak az [okosszerződés nyelveknek](/developers/docs/smart-contracts/languages/).
 
@@ -58,13 +58,13 @@ A legtöbb megalapozott IDE-nek vannak beépített pluginjai, amelyek tovább fo
 - [Letöltés](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
-## Plugin-ok és kiterjesztések {#plugins-extensions}
+## Plugin-ok és kiterjesztések \{#plugins-extensions}
 
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) – Ethereum Solidity nyelv a Visual Studio-kódhoz
 - [Solidity + Hardhat for VS Code](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) – Solidity és Hardhat a Hardhat csapat által támogatva
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) – Kódformázó használata
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _ – Alchemy listája az Ethereum IDE-okról_
 

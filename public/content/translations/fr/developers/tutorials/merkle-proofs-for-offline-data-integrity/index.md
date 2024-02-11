@@ -9,7 +9,7 @@ lang: fr
 published: 2021-12-30
 ---
 
-## Introduction {#introduction}
+## Introduction \{#introduction}
 
 Idéalement, nous souhaiterions tout conserver dans le stockage Ethereum, qui est lui-même stocké sur des milliers d'ordinateurs et bénéficie ainsi d'une disponibilité extrêmement élevée (les données ne peuvent pas être censurées) et d'une grande intégrité (les données ne peuvent pas être modifiées de manière non autorisée) sachant, cependant, que stocker un mot de 32 octets coûte normalement 20 000 gaz. Ce que je vais écrire ici aurait un coût équivalent à 6,60 $. À 21 cents par octet, c'est trop cher pour beaucoup d'utilisations.
 
@@ -17,7 +17,7 @@ Pour résoudre ce problème, l'écosystème Ethereum a développé [de nombreuse
 
 Dans cet article, vous apprendrez **comment** assurer l'intégrité des données sans avoir à les stocker sur la blockchain, en utilisant [les preuves de Merkle](https://computersciencewiki.org/index.php/Merkle_proof).
 
-## Comment ça marche ? {#how-does-it-work}
+## Comment ça marche ? \{#how-does-it-work}
 
 En théorie, nous pourrions simplement stocker le hachage des données de la chaîne et envoyer toutes les données dans les transactions qui en ont besoin. Cependant, cela reste encore trop cher. Un octet de données lors d'une transaction a un coût d'environ 16 gaz, soit environ un demi-cent actuellement ou environ 5 $ par kilo-octets. À 5 000 $ le mégaoctet, c'est encore trop cher pour de nombreuses utilisations même sans le coût supplémentaire de hachage des données.
 
@@ -29,15 +29,15 @@ Le hachage racine est la seule partie qui doit être stockée dans la chaîne. P
 
 ![Preuve de la valeur de C](proof-c.png)
 
-## Implémentation {#implementation}
+## Implémentation \{#implementation}
 
 [Le code échantillon est fourni ici](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### Code hors chaîne {#off-chain-code}
+### Code hors chaîne \{#off-chain-code}
 
 Dans cet article, nous utilisons JavaScript pour les calculs hors chaîne. La plupart des applications décentralisées ont leur composant hors chaîne en JavaScript.
 
-#### Création de la racine Merkle {#creating-the-merkle-root}
+#### Création de la racine Merkle \{#creating-the-merkle-root}
 
 Premièrement, nous devons apporter la racine Merkle à la chaîne.
 
@@ -126,7 +126,7 @@ const getMerkleRoot = (inputArray) => {
 
 Pour obtenir la racine, escaladez jusqu'à ce qu'il ne reste qu'une seule valeur.
 
-#### Créer une preuve de Merkle {#creating-a-merkle-proof}
+#### Créer une preuve de Merkle \{#creating-a-merkle-proof}
 
 Une preuve de Merkle est l'ensemble des valeurs à hacher ensemble avec la valeur prouvée pour récupérer la racine de Merkle. La valeur à prouver est souvent disponible à partir d'autres données. Je préfère ainsi la fournir séparément plutôt que dans le cadre du code.
 
@@ -163,7 +163,7 @@ Nous hachons `(v[0],v[1])`, `(v[2],v[3])`, etc. Ainsi, pour les valeurs uniques,
 }   // getMerkleProof
 ```
 
-### Code en chaîne {#on-chain-code}
+### Code en chaîne \{#on-chain-code}
 
 Enfin, nous avons le code qui vérifie la preuve. Le code en chaîne est écrit en [Solidity](https://docs.soliditylang.org/en/v0.8.11/). L'optimisation est beaucoup plus importante ici parce que les frais en gaz sont relativement élevés.
 
@@ -228,13 +228,13 @@ Cette fonction génère un hachage de la paire. Il s'agit juste de la traduction
 
 En notation mathématique, la vérification par la preuve de Merkle ressemble à ceci : `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. Ce code l'implémente.
 
-## Les preuves de Merkle et les rollups ne font pas bon ménage {#merkle-proofs-and-rollups}
+## Les preuves de Merkle et les rollups ne font pas bon ménage \{#merkle-proofs-and-rollups}
 
 Les preuves de Merkle ne fonctionnent pas bien avec les [rollups](/developers/docs/scaling/#rollups). La raison en est que les rollups écrivent toutes les données de transaction sur L1, mais le processus sur L2. Le coût d'envoi d'une preuve Merkle avec une transaction est en moyenne de 638 gaz par couche (actuellement, un octet de données d'appel coûte 16 gaz s'il n'est pas nul, et 4 s'il est nul). Si nous avons 1 024 mots de données, une preuve de Merkle nécessite dix couches, soit un total de 6 380 gaz.
 
 En cherchant un exemple avec [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), écrire du gaz en L1 coûte environ 100 gwei et le gaz en L2 coûte 0,001 gwei (c'est le prix normal, il peut augmenter s'il y a congestion). Ainsi, pour le coût d'un gaz L1, nous pouvons dépenser cent mille gaz pour le traitement L2. En supposant que nous n'ayons pas écrasé le stockage, cela signifie que nous pouvons écrire environ cinq mots à stocker sur L2 pour le prix d'un gaz L1. Pour une seule preuve de Merkle, nous pouvons écrire l'intégralité des 1 024 mots sur le stockage (en supposant qu'ils peuvent être calculés sur la chaîne pour commencer, au lieu d'être fourni dans une transaction) et disposons toujours de la majeure partie du gaz restant.
 
-## Conclusion {#conclusion}
+## Conclusion \{#conclusion}
 
 Dans la vie réelle, il se peut que vous n'ayez jamais à implémenter d'arbres de Merkle par vous-même. Il existe des bibliothèques bien connues et auditées que vous pouvez utiliser et, en général, il est préférable de ne pas implémenter des primitives cryptographiques par vous-même. Cependant, j'espère que, maintenant, vous comprendrez mieux les preuves de Merkle et que vous pourrez décider quand elles valent la peine d'être utilisées.
 

@@ -4,7 +4,7 @@ description: Az elosztott validátor technológia lehetővé teszi, hogy több e
 lang: hu
 ---
 
-# Elosztott validátor technológia {#distributed-validator-technology}
+# Elosztott validátor technológia \{#distributed-validator-technology}
 
 Az elosztott validátor technológia (DVT) a validátor biztonságát akarja megerősíteni, ezért több entitásra osztja fel a kulcsok kezelését és az aláírási jogosultságokat, így kizárja az egyetlen meghibásodási pont kockázatát, a rugalmasság pedig nő.
 
@@ -12,21 +12,21 @@ Ennek érdekében **felosztja a validátort biztosító privát kulcsot** **töb
 
 ![Az ábra azt mutatja, hogy a validátorkulcsot szétosztják kulcsrészekre és több csomópontnak elosztják, melyek különféle komponensekből állnak.](./dvt-cluster.png)
 
-## Miért van szükség az elosztott validátor technológiára (DVT)? {#why-do-we-need-dvt}
+## Miért van szükség az elosztott validátor technológiára (DVT)? \{#why-do-we-need-dvt}
 
-### Biztonság {#security}
+### Biztonság \{#security}
 
 A validátorok két nyilvános privát kulcspárt hoznak létre: a validátorkulcsot a konszenzusban való részvételhez, a visszavonási kulcsot ahhoz, hogy elérjék a pénzeszközöket. Miközben a visszavonási kulcsot tarthatja a validátor olyan helyen is, ahol lassabban éri el (cold storage), addig a privát kulcsnak folyamatosan online kell lennie (24/7). Ha a validátor privát kulcsa veszélybe kerül, akkor egy támadó átveheti felette a kontrollt, ami súlyos büntetéssel egybekötött kizáráshoz (slashing), illetve a letétbe helyezett ETH elvesztéséhez vezethet. A DVT segít ezt a kockázatot csökkenteni. A működése:
 
 A DVT használatával a letétbe helyező (staker) részt vehet a letétbe helyezésben, miközben a validátor privát kulcsát cold storage-ban tartja. Ehhez az eredeti, teljes validátorkulcsot titkosítják és azután darabokra osztják. A kulcs darabjai online vannak és több csomópont megkapja azokat, így a validátor működése elosztódik ezek között. Ez azért lehetséges, mert az Ethereum-validátorok BLS aláírást használnak, ami összeadódik, tehát a teljes kulcsot bármikor összerakják a részekből. Tehát a letétbe helyező a teljes, eredeti validátorkulcsát biztonságban tarthatja offline.
 
-### Nincs egyetlen meghibásodási pont sem {#no-single-point-of-failure}
+### Nincs egyetlen meghibásodási pont sem \{#no-single-point-of-failure}
 
 Amikor a validátor több operátorra és több gépre van elosztva, akkor lesz offline, ha az egyedi hardverek vagy szoftverek leállnak. A leállás kockázatát azzal is lehet csökkenteni, hogy a klaszterbe tartozó csatlakozási pontoknak eltérő hardver- és szoftverkonfigurációkat állítanak össze. A rugalmasság nem kézzelfogható az egyetlen csatlakozási pontot használó validátorkonfigurációnál – ez a DVT megoldásból származik.
 
 Ha a klaszter egyik gépének valamelyik komponense leáll (például a klaszter négy operátorából az egyik olyan klienst használ, amelyen hiba van), akkor a többiek biztosítják, hogy a validátor ugyanúgy működjön tovább.
 
-### Decentralizáció {#decentralization}
+### Decentralizáció \{#decentralization}
 
 Az Ethereum számára az az ideális szcenárió, ha annyi függetlenül üzemeltetett validátora van, amennyi csak lehetséges. Ugyanakkor néhány letétszolgáltató igen népszerű lett és a teljes letétbe helyezett ETH lényeges részét tudhatja magáénak a hálózaton. A DVT révén lehetséges ilyen operátorok működése, miközben a letétbe helyezett ETH megőrzi decentralizáltságát. Mivel a validátor kulcsai el vannak osztva több számítógépen, és a visszaéléshez sokkal komolyabb összejátszásra lenne szükség.
 
@@ -42,7 +42,7 @@ A DVT nélkül a letétszolgáltatóknak könnyebb csak egy-két klienskonfigur�
 6. **Javítja a diverzitást** (kliens, adatközpont, hely, szabályozás stb.)
 7. **Nagyobb biztonság** a validátorkulcs kezelését illetően
 
-## Hogyan működik a DVT? {#how-does-dvt-work}
+## Hogyan működik a DVT? \{#how-does-dvt-work}
 
 A DVT megoldás a következő komponensekből áll:
 
@@ -54,21 +54,21 @@ A DVT megoldás a következő komponensekből áll:
 
 Az elosztott validátorok ellenállóbbak a hibákkal szemben, és akkor is képesek működni, ha az egyéni csomópontok közül néhány leáll. A klaszter tehát ellenálló, még ha a benne lévő csomópontokról ki is derül, hogy ártalmasak vagy lusták.
 
-## A DVT alkalmazási területei {#dvt-use-cases}
+## A DVT alkalmazási területei \{#dvt-use-cases}
 
 A DVT jelentős hatást gyakorol a kiterjedtebb letétszolgáltató iparágban:
 
-### Önálló letétesek {#solo-stakers}
+### Önálló letétesek \{#solo-stakers}
 
 A DVT lehetővé teszi a nem felügyelt letétbe helyezést is, mivel a validátorkulcsot távoli csomópontok között is el lehet osztani, miközben a teljes kulcsot offline tárolják. Tehát az otthoni letéteseknek nem feltétlenül kell, hogy hardverre költsenek, mivel a kulcsrészek elosztása megerősítheti őket a lehetséges támadások ellen.
 
-### Staking as a service (SaaS) {#saas}
+### Staking as a service (SaaS) \{#saas}
 
 Az operátorok (mint letéti alapok és intézményi letétesek), akik sok validátort kezelnek, a DVT révén csökkenthetik kockázatukat. Az infrastruktúra elosztásával a működésükhöz redundanciát (extra kapacitást) tudnak adni és diverzifikálják a hardvertípusok használatát is.
 
 A DVT megosztja a kulcskezelés felelősségét számod csomóponton keresztül, így az üzemeltetési költség is megosztható. A DVT csökkenti a letétszolgáltatók üzemeltetési kockázatát és biztosítási költségeit.
 
-### Staking pools {#staking-pools}
+### Staking pools \{#staking-pools}
 
 A standard validátorbeállítás következtében a letéti alapok és a likvid letétbe helyezők kénytelenek egy operátorral működő validátorban változó szinten megbízni, mivel a nyereségek és a veszteségek az egész alapot érintik. Emellett bízniuk kell az operátorokban, hogy biztonságban tartják az aláírási kulcsokat, mert korábban nem volt erre másik megoldás.
 
@@ -78,13 +78,13 @@ A DVT kihasználásával az operátoroknak nem kell másban bízniuk. **Az alapo
 
 Az egyoperátoros bizalom minimalizálása következtében a letéti alapok nyitottabb és külön engedélyhez nem kötött operátorrészvételt engedhetnek meg. A szolgáltatóknak így kevesebb kockázattal kell számolniuk, támogatja az Ethereum decentralizációt azáltal, hogy válogatott és külön engedély nélküli operátorcsoportokat is használ, például összepárosítva az otthoni vagy kisebb letéteseket a nagyobbakkal.
 
-## A DVT lehetséges hátrányai {#potential-drawbacks-of-using-dvt}
+## A DVT lehetséges hátrányai \{#potential-drawbacks-of-using-dvt}
 
 - **Még egy komponens** – DVT-csomópont hozzáadásával még egy összetevő lehet hibás vagy sebezhető. Ennek minimalizálásához arra kell törekedni, hogy a DVT csomópontot többféle beállítással, vagyis több DVT-klienssel kell használni (ahogy a konszenzus és végrehajtási rétegre is többféle kliens létezik).
 - **Működési költségek** – mivel a DVT elosztja a validátort több entitás között, ezért (egy helyett) több csomópontra van szükség a működéshez, ami nagyobb költséggel jár.
 - **A késedelem lehetséges növekedése** – mivel a DVT konszenzusprotokollt használ ahhoz, hogy megegyezést érjen el a több csomópont között, melyek a validátort működtetik, ezért a késedelem megnövekedhet.
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Az Ethereum elosztott validátorának specifikációja (átfogó)](https://github.com/ethereum/distributed-validator-specs)
 - [Az Ethereum elosztott validátorának technikai specifikációi](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)

@@ -4,7 +4,7 @@ description: Vadovai, ištekliai ir įrankiai, skirti pradedantiesiems Ethereum 
 lang: lt
 ---
 
-# Kas yra Ethereum? {#what-is-ethereum}
+# Kas yra Ethereum? \{#what-is-ethereum}
 
 Norite susipažinti su Ethereum? Esate tinkamoje vietoje. Pradėkime nuo bendro vaizdo.
 

@@ -27,7 +27,7 @@ fs.readFile("keyfile.json", (err, data) => {
 
 本文介绍 Web3 密钥存储定义的**第 3 版**。
 
-## 定义 {#definition}
+## 定义 \{#definition}
 
 文件的实际编码和解码与第 1 版相比基本没有变化，只是加密算法不再固定为 AES-128-CBC（AES-128-CTR 目前是最低要求）。 大部分的含义/算法与第 1 版相似，除了 `mac`，它由派生密钥的最左边第二组 16 个字节与完整 `ciphertext` 拼接后的 SHA3(Keccak-256) 给出。
 
@@ -72,7 +72,7 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 
 除了作为版本“硬”标识符的 `version` 字段外，实现还可能会使用 `minorversion` 跟踪格式的较小、不重要的变更。
 
-## 测试向量 {#test-vectors}
+## 测试向量 \{#test-vectors}
 
 详细信息：
 
@@ -82,7 +82,7 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 - `Password`: `测试密码`
 - `Secret`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
 
-### PBKDF2-SHA-256 {#PBKDF2-SHA-256}
+### PBKDF2-SHA-256 \{#PBKDF2-SHA-256}
 
 使用 `AES-128-CTR` 和 `PBKDF2-SHA-256` 的测试向量：
 
@@ -114,7 +114,7 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 
 `Derived key`: `f06d69cdc7da0faffb1008270bca38f5e31891a3a773950e6d0fea48a7188551` `MAC Body`: `e31891a3a773950e6d0fea48a71885515318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46` `MAC`: `517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2` `Cipher key`: `f06d69cdc7da0faffb1008270bca38f5`
 
-### Scrypt {#scrypt}
+### Scrypt \{#scrypt}
 
 使用 AES-128-CTR 和 Scrypt 的测试向量：
 
@@ -145,7 +145,7 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 
 `Derived key`: `fac192ceb5fd772906bea3e118a69e8bbb5cc24229e20d8766fd298291bba6bd` `MAC Body`: `bb5cc24229e20d8766fd298291bba6bdd172bf743a674da9cdad04534d56926ef8358534d458fffccd4e6ad2fbde479c` `MAC`: `2103ac29920d71da29f15d75b4a16dbe95cfd7ff8faea1056c33131d846e3097` `Cipher key`: `fac192ceb5fd772906bea3e118a69e8b`
 
-## 第 1 版的改动 {#alterations-from-v2}
+## 第 1 版的改动 \{#alterations-from-v2}
 
 本版本修复了与[此处](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst)发布的第 1 版不一致的几个地方。 简短来说，它们是：
 
@@ -184,6 +184,6 @@ KECCAK(DK[16..31] ++ <ciphertext>)
 }
 ```
 
-## 第 2 版的改动 {#alterations-from-v2}
+## 第 2 版的改动 \{#alterations-from-v2}
 
 第 2 版是早期 C++ 实现的版本，有很多漏洞。 所有重要内容保持不变。

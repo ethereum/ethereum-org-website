@@ -6,21 +6,21 @@ lang: it
 
 La Proof of Stake (PoS) è alla base del [meccanismo di consenso](/developers/docs/consensus-mechanisms/) di Ethereum. Ethereum ha attivato il suo meccanismo di Proof of Stake nel 2022 perché è più sicuro, consuma meno energia ed è migliore per implementare nuove soluzioni di ridimensionamento rispetto all'architettura di [Proof of Work](/developers/docs/consensus-mechanisms/pow) precedente.
 
-## Prerequisiti {#prerequisites}
+## Prerequisiti \{#prerequisites}
 
 Per capire meglio questa pagina ti consigliamo di leggere i [meccanismi di consenso](/developers/docs/consensus-mechanisms/).
 
-## Cos'è la proof-of-stake (PoS)? {#what-is-pos}
+## Cos'è la proof-of-stake (PoS)? \{#what-is-pos}
 
 Proof-of-stake è un modo per dimostrare che i validatori hanno messo qualcosa di valore nella rete che può essere distrutto se agiscono in maniera disonesta. Nel proof-of-stake di Ethereum, i validatori mettono esplicitamente in stakaing il capitale sotto forma di ETH, in un contratto intelligente su Ethereum. Il validatore è poi responsabile di verificare che i nuovi blocchi propagati sulla rete siano validi e, occasionalmente, di creare e propagare nuovi blocchi. Se prova a frodare la rete (ad esempio proponendo blocchi multipli quando dovrebbe inviarne uno o inviando attestazioni conflittuali) alcuni o tutti i suoi ETH in staking possono venire distrutti.
 
-## Validatori {#validators}
+## Validatori \{#validators}
 
 Per partecipare come validatore, un utente deve depositare 32 ETH nel contratto di deposito ed eseguire tre software distinti: un client di esecuzione, uno di consenso e un validatore. Depositando i propri ETH, l'utente si unisce alla coda di attivazione che limita la frequenza di partecipazione alla rete dei nuovi validatori. Una volta attivati, i validatori ricevono nuovi blocchi dai pari sulla rete di Ethereum. Le transazioni inviate nel blocco sono eseguite nuovamente per controllare che i cambiamenti dello stato di Ethereum proposti siano validi e che la firma del blocco sia controllata. Il validatore invia poi nella rete un voto (detto attestazione) a favore di quel blocco.
 
 Se con il proof-of-work la tempistica dei blocchi è determinata dalla difficoltà di mining, nel proof-of-stake il ritmo invece è fisso. Il tempo in Ethereum di proof-of-stake è diviso in slot (12 secondi) ed epoche (32 slot). In ogni slot viene selezionato casualmente un validatore come propositore di blocchi. Questo validatore è responsabile della creazione di un nuovo blocco e del suo invio ad altri nodi sulla rete. Inoltre, in ogni slot, è scelto casualmente un comitato di validatori, i cui voti sono usati per determinare la validità del blocco proposto. Dividere le impostazioni del validatore in comitati è importante per mantenere gestibile il carico della rete. I comitati suddividono la serie di validatori affinché ogni validatore attivo attesti in ogni epoca ma non in ogni slot.
 
-## Come viene eseguita una transazione nel PoS di Ethereum {#transaction-execution-ethereum-pos}
+## Come viene eseguita una transazione nel PoS di Ethereum \{#transaction-execution-ethereum-pos}
 
 Di seguito è fornita una spiegazione completa dell'esecuzione di una transazione nel proof-of-stake di Ethereum.
 
@@ -33,23 +33,23 @@ Di seguito è fornita una spiegazione completa dell'esecuzione di una transazion
 
 Ulteriori dettagli sulla finalità si possono trovare di seguito.
 
-## Finalità {#finality}
+## Finalità \{#finality}
 
 Una transazione ha "finalità" nelle reti distribuite quando fa parte di un blocco che non può cambiare senza bruciare un consistente quantitativo di ETH. Su Ethereum di proof-of-stake, questo è gestito usando i blocchi di "punto di controllo". Il primo blocco in ogni epoca è un punto di controllo. I validatori votano per le coppie di punti di controllo che considerano valide. Se una coppia di punti di controllo attrae voti che rappresentano almeno due terzi degli ETH in staking totali, i punti di controllo sono aggiornati. Il più recente dei due (target), diventa "giustificato". Il primo dei due è già giustificato perché era il "target" nell'epoca precedente. Ora è aggiornato a "finalizzato".
 
 Per annullare un blocco finalizzato, un utente malevolo dovrebbe impegnarsi a perdere almeno un terzo dell'offerta totale di ETH in staking. Il motivo esatto di ciò è spiegato in questo [post del blog dell'Ethereum Foundation](https://blog.ethereum.org/2016/05/09/on-settlement-finality/). Poiché la finalità richiede una maggioranza di due terzi, un utente malevolo potrebbe impedire alla rete di raggiungere la finalità votando con un terzo dello stake totale. Esiste un meccanismo per difendersi da questa eventualità: la [fuga d'inattività](https://eth2book.info/bellatrix/part2/incentives/inactivity). Questa si attiva ogni volta che la catena non riesce a finalizzare per più di quattro epoche. La fuga d'inattività disperde gli ETH messi in staking dai validatori che votano contro la maggioranza, consentendo a quest'ultima di ottenere nuovamente la maggioranza di due terzi e di finalizzare la catena.
 
-## Sicurezza cripto-economica {#crypto-economic-security}
+## Sicurezza cripto-economica \{#crypto-economic-security}
 
 Gestire un validatore è un impegno. Il validatore deve mantenere hardware e connettività sufficienti per partecipare alla validazione e proposta dei blocchi. In cambio, il validatore è pagato in ETH (il suo saldo di staking aumenta). D'altra parte, la partecipazione come validatore apre anche nuove strade attraverso le quali gli utenti potrebbero attaccare la rete per profitto personale o sabotaggio. Per impedirlo, i validatori perdono le ricompense in ETH se non partecipano quando richiesto e il loro stake esistente può essere distrutto se si comportano in modo disonesto. Due comportamenti principali sono considerabili disonesti: proporre diversi blocchi in uno slot singolo (equivoco) e inviare attestazioni contraddittorie.
 
 L'importo di ETH oggetto di slashing dipende da quanti validatori sono oggetto sanzionati in contemporanea. Questa è nota come la ["sanzione di correlazione"](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty) e può essere minore (circa l'1% dello stake se viene tagliato un singolo validatore) oppure può comportare la distruzione del 100% dello stake del validatore (taglio di massa). Viene imposto a metà di un periodo di uscita forzata che inizia con una sanzione immediata (fino a 1 ETH) al Giorno 1, la sanzione di correlazione al Giorno 18 e, infine, espulsione dalla rete al Giorno 36. Ogni giorno ricevono modeste sanzioni d'attestazione perché sono presenti sulla rete ma non inviano voti. Tutto questo significa che un attacco coordinato sarebbe molto costoso per un utente malevolo.
 
-## Scelta della biforcazione {#fork-choice}
+## Scelta della biforcazione \{#fork-choice}
 
 Quando la rete opera in modo ottimale ed onesto, c'è sempre e solo un nuovo blocco alla testa della catena e tutti i validatori attestano quel blocco. È però possibile che i validatori abbiano una visione differente della testa della catena, a causa della latenza della rete o perché un propositore di blocchi ha equivocato. I client di consenso necessitano quindi di un algoritmo per decidere quale favorire. L'algoritmo usato in Ethereum di proof-of-stake è detto [LMD-GHOST](https://arxiv.org/pdf/2003.03052.pdf) e funziona identificando la biforcazione avente il peso di attestazioni maggiore nella sua storia.
 
-## Proof-of-stake e sicurezza {#pos-and-security}
+## Proof-of-stake e sicurezza \{#pos-and-security}
 
 La minaccia di un [attacco 51%](https://www.investopedia.com/terms/1/51-attack.asp) esiste ancora sul proof-of-stake, come già nel proof-of-work, ma è ancora più rischiosa per gli utenti malevoli. Un utente malevolo necessiterebbe del 51% degli ETH in staking. Potrebbe poi usare le proprie attestazioni per garantire che la propria biforcazione preferita sia quella con le maggiori attestazioni accumulate. Il 'peso' delle attestazioni accumulate è ciò che i client di consenso usano per determinare la catena corretta, così l'utente malevolo potrebbe rendere canonica la propria biforcazione. Tuttavia, un punto di forza del proof-of-stake rispetto al proof-of-work è che la community gode di una flessibilità nel preparare un contrattacco. Ad esempio, i validatori onesti potrebbero decidere di continuare a costruire sulla catena di minoranza e ignorare la biforcazione dell'utente malevolo, incoraggiando app, borse e pool a fare lo stesso. Potrebbero anche decidere di rimuovere forzatamente l'utente malevolo dalla rete e di distruggerne gli ETH in staking. Si tratta di difese economiche forti contro un attacco 51%.
 
@@ -57,7 +57,7 @@ Gli attacchi 51% sono solo un tipo di attività malevola. Gli utenti malevoli po
 
 In generale è stato dimostrato che il proof-of-stake, come implementato su Ethereum, è più sicuro economicamente rispetto al proof-of-work.
 
-## Pro e contro {#pros-and-cons}
+## Pro e contro \{#pros-and-cons}
 
 | Pro                                                                                                                                                                                                                                                                         | Contro                                                                                                |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
@@ -66,7 +66,7 @@ In generale è stato dimostrato che il proof-of-stake, come implementato su Ethe
 | Il proof-of-stake offre una maggiore sicurezza cripto-economica rispetto al proof-of-work                                                                                                                                                                                   | Gli utenti devono far funzionare tre parti di software per partecipare al proof-of-stake di Ethereum. |
 | È richiesta una minore emissione di nuovi ETH per incentivare i partecipanti alla rete                                                                                                                                                                                      |                                                                                                       |
 
-### Confronto con proof-of-work {#comparison-to-proof-of-work}
+### Confronto con proof-of-work \{#comparison-to-proof-of-work}
 
 Ethereum non è sempre stata una rete di proof-of-stake. All'inizio Ethereum utilizzava il proof-of-work. Il passaggio da proof-of-work a proof-of-stake è avvenuto nel settembre 2022. Il proof-of-stake ha dei vantaggi rispetto al proof-of-work:
 
@@ -77,7 +77,7 @@ Ethereum non è sempre stata una rete di proof-of-stake. All'inizio Ethereum uti
 - le sanzioni economiche per comportamenti scorretti rendono gli attacchi di tipo 51% più costosi per un utente malevolo, rispetto al proof-of-work
 - la community può ricorrere al recupero sociale di una catena onesta, qualora un attacco 51% dovesse superare le difese cripto-economiche.
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 - [FAQ Proof of Stake](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Cos'è il Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
@@ -88,6 +88,6 @@ Ethereum non è sempre stata una rete di proof-of-stake. All'inizio Ethereum uti
 - [Una filosofia di progettazione di Proof of Stake](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 - [Video: Vitalik Buterin spiega il proof-of-stake a Lex Fridman](https://www.youtube.com/watch?v=3yrqBG-7EVE)
 
-## Argomenti correlati {#related-topics}
+## Argomenti correlati \{#related-topics}
 
 - [Proof of Work](/developers/docs/consensus-mechanisms/pow/)

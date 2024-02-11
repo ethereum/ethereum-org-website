@@ -33,13 +33,13 @@ Pentru a urma această listă de verificare, vei dori să ai această ieșire di
 - slither-prop . --contract ContractName # Necesită configurare și utilizarea Echidna și Manticore
 ```
 
-## Considerații generale {#general-considerations}
+## Considerații generale \{#general-considerations}
 
 - **Contractul are un control de securitate.** Evită interacțiunea cu contractele care nu au o revizuire de securitate. Verifică durata evaluării (adică „nivelul efortului”), reputația firmei de securitate și numărul și gravitatea constatărilor.
 - **Ai contactat programatorii.** S-ar putea să fie necesar să alertezi echipa lor cu privire la un incident. Caută contacte adecvate pe [contacte pentru securitatea blockchain-ului](https://github.com/crytic/blockchain-security-contacts).
 - **Ei au o listă de corespondență de securitate pentru anunțuri critice.** Echipa lor ar trebui să sfătuiască utilizatorii (ca tine!) când se găsesc probleme critice sau când apar actualizări.
 
-## Conformitatea ERC {#erc-conformity}
+## Conformitatea ERC \{#erc-conformity}
 
 Slither include un utilitar, [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance), care analizează conformitatea unui token cu multe standarde ERC conexe. Folosește slither-check-erc pentru a verifica dacă:
 
@@ -58,14 +58,14 @@ Slither include un utilitar, [slither-prop](https://github.com/crytic/slither/wi
 - **Transfer și transferFrom nu trebuie să ia o taxă.** Tokenurile deflaționiste pot duce la un comportament neașteptat.
 - **Se ia în considerare dobânda potențială câștigată din token.** Unele tokenuri distribuie interesul deținătorilor de tokenuri. Acest interes poate rămâne blocat în contract dacă nu este luat în considerare.
 
-## Componența contractului {#contract-composition}
+## Componența contractului \{#contract-composition}
 
 - **Contractul evită complexitatea inutilă.** Tokenul ar trebui să fie un contract simplu; un token cu cod complex necesită un standard mai ridicat de revizuire. Utilizează [imprimantă-rezumativă-umană](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) Slither pentru a identifica un cod complex.
 - **Contractul utilizează SafeMath.** Contractele care nu utilizează SafeMath necesită un standard mai ridicat de revizuire. Inspectează manual contractul pentru utilizarea SafeMath.
 - **Contractul are doar câteva funcții care nu au legătură cu tokenul.** Funcțiile nelegate de token cresc probabilitatea apariției unei probleme în contract. Utilizează [imprimantă-rezumativă-umană](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) Slithert pentru a revizui în linii mari codul utilizat în contract.
 - **Tokenul are o singură adresă.** Tokenurile cu mai multe puncte de intrare pentru actualizările balanței pot rupe evidența contabilă internă pe baza adresei (de exemplu `solduri[token_address][msg.sender]` s-ar putea să nu reflecte soldul real).
 
-## Privilegiile proprietarului {#owner-privileges}
+## Privilegiile proprietarului \{#owner-privileges}
 
 - **Tokenului nu i se poate fface upgrade.** Contractele cărora li se poate face upgrade își pot modifica regulile în timp. Utilizează [imprimantă-rezumativă-umană](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) Slither pentru a determina dacă se poate face un upgrade contractului.
 - **Proprietarul are capacități limitate de batere de monedă.**Proprietarii rău intenționați sau compromiși pot abuza de capacitățile de batere de monedă. Utilizează [imprimantă-rezumativă-umană](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) Slither pentru a revizui capacitățile de batere monedă și ia în considerare revizuirea manuală a codului.
@@ -73,7 +73,7 @@ Slither include un utilitar, [slither-prop](https://github.com/crytic/slither/wi
 - **Proprietarul nu poate pune contractul pe lista neagră.** Proprietarii rău intenționați sau compromiși pot prinde în capcană contracte care se bazează pe tokenuri de pe lista neagră. Identifică manual caracteristicile care pot fi trecute pe lista neagră.
 - **Echipa din spatele tokenului este cunoscută și poate fi responsabilă pentru abuz.** Contractele cu echipe anonime de dezvoltare sau care locuiesc în adăposturi legale ar trebui să necesite un standard mai ridicat de revizuire.
 
-## Deficit de token {#token-scarcity}
+## Deficit de token \{#token-scarcity}
 
 Recenziile pentru probleme de penurie de tokenuri necesită o revizuire manuală. Verifică aceste condiții:
 

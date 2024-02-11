@@ -10,11 +10,11 @@ lang: ja
 
 イーサリアムのマイニングでは、Ethash と呼ばれるアルゴリズムを使っていました。 このアルゴリズムの基本的なアイデアは、マイナーがしらみつぶしに計算を行い、ノンス (nonce)の入力を探し、その結果のハッシュ値が、計算された難易度によって決められたしきい値より小さくなるように試みるというものです。 この難易度は動的に調整することが可能で、一定間隔でブロック生成を行うことができます。
 
-## 前提知識 {#prerequisites}
+## 前提知識 \{#prerequisites}
 
 このページをより理解するために、事前に[プルーフ・オブ・ワーク・コンセンサス](/developers/docs/consensus-mechanisms/pow)と[マイニング](/developers/docs/consensus-mechanisms/pow/mining)をお読みになることをお勧めします。
 
-## ダガーハシモト {#dagger-hashimoto}
+## ダガーハシモト \{#dagger-hashimoto}
 
 ダガーハシモト(Dagger-Hashimoto)は、イーサリアムのマイニングアルゴリズムの前身となる研究アルゴリズムで、後に Ethash に取って代わられました。 ダガーハシモトは、ダガー(Dagger)とハシモト(Hashimoto)という、2 つの異なるアルゴリズムを組み合わせたものです。 研究実装のみを目的としており、イーサリアムメインネットが開始されるまでには、Ethash に引き継がれています。
 
@@ -26,12 +26,12 @@ lang: ja
 
 [ダガーハシモト](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto)の詳細
 
-## Ethash {#ethash}
+## Ethash \{#ethash}
 
 Ethash は、現在は廃止となっているプルーフ・オブ・ワークのアーキテクチャの下で、実際にイーサリアムメインネットで使われたマイニングアルゴリズムです。 Ethash は、ダガーハシモトのアルゴリズムが大幅に更新された後に、特定のダガーハシモトのバージョンに事実上付けられたた新しい名前です。なので、前バージョンの基本理念を継承しています。 イーサリアムメインネットは、これまで Ethash のみを使用していました。ダガーハシモトは、研究開発バージョンのマイニングアルゴリズムで、イーサリアムメインネットでマイニングが開始される前に Ethash に引き継がれました。
 
 [Ethash の詳細](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
 
-## 参考文献 {#further-reading}
+## 参考文献 \{#further-reading}
 
 _役に立つコミュニティリソースをご存知の場合は、 このページを編集して追加してください。_

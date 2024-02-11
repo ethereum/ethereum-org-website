@@ -11,7 +11,7 @@ Használj Ethereumot decentralizált alkalmazások (avagy "dappok") fejlesztés�
 
 Építsen decentralizált alkalmazásokat Ethereumra és lépjen kapcsolatba okosszerződésekkel a Microsoft tech stack használatával, mely támogatja a C#, # Visual Basic .NET, F# nyelveket VSCode és Visual Studio eszközökkel a .NET Framework/.NET Core/.NET Standard-on keresztül. Telepítsen percek alatt egy Ethereum blokkláncot Azure-ra a Microsoft Azure Blockchain használatával. Hozza el a .NET szeretetét az Ethereumra!
 
-## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel {#getting-started-with-smart-contracts-and-the-solidity-language}
+## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel \{#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Tegye meg az első lépést, hogy integrálja a .NET-et az Ethereummal**
 
@@ -22,7 +22,7 @@ Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg az [ethereum.or
 - [Írd meg az első Okosszerződésed](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Tanuld meg a Solidity fordítását és telepítését](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Referenciák és hivatkozások kezdők számára {#beginner-references-and-links}
+## Referenciák és hivatkozások kezdők számára \{#beginner-references-and-links}
 
 **Bemutatjuk a Nethereum könyvtárat és a VS Code Solidity-t**
 
@@ -43,7 +43,7 @@ Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg az [ethereum.or
   - Ether utalása egy számlára [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... És még sok más!
 
-## Köztes cikkek {#intermediate-articles}
+## Köztes cikkek \{#intermediate-articles}
 
 - [Nethereum Munkafüzet/Minta Lista](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Telepítse saját fejlesztői tesztláncait](https://github.com/Nethereum/Testchains)
@@ -56,13 +56,13 @@ Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg az [ethereum.or
 - [Kaleido és Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum és Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## Speciális használati minták {#advanced-use-patterns}
+## Speciális használati minták \{#advanced-use-patterns}
 
 - [Azure Key Vault és Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum backend referencia architektúra](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## .NET projektek, eszközök és más érdekes dolgok {#dot-net-projects-tools-and-other-fun-stuff}
+## .NET projektek, eszközök és más érdekes dolgok \{#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](http://playground.nethereum.com/) - _Fordítson, készítsen és futtasson Nethereum kódrészleteket böngészőben_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum kódgenerátor UI-jal Blazor-ben_
@@ -74,13 +74,13 @@ Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg az [ethereum.or
 
 Még több anyagot keresel? Tekintsd meg az [ethereum.org/developers](/developers/) oldalt.
 
-## .NET közösségi közreműködők {#dot-net-community-contributors}
+## .NET közösségi közreműködők \{#dot-net-community-contributors}
 
 Mi a Nethereumon főleg a [Gitteren](https://gitter.im/Nethereum/Nethereum) kommunikálunk, ahol bárki nyugodtan kérdezhet/válaszolhat, segítséget kaphat vagy csak velünk lehet. Bátran készítsen egy PR-t vagy nyisson egy „problémát” (issue) a [Nethereum Github mappában](https://github.com/Nethereum), vagy csak böngésszen a rengeteg mellék-/mintaprojektjeink között. Megtalál minket [Discord-on](https://discord.gg/jQPrR58FxX) is!
 
 Ha Önnek új a Nethermind és segítségre van szüksége a kezdéshez, akkor csatlakozzon a [Discord](http://discord.gg/PaCMRFdvWT) csatornánkhoz. Fejlesztőink készséggel válaszolnak a kérdéseire. PR-okért vagy issue-kért tekintse meg a [Nethermind Github mappát](https://github.com/NethermindEth/nethermind).
 
-## Egyéb összesített listák {#other-aggregated-lists}
+## Egyéb összesített listák \{#other-aggregated-lists}
 
 [Hivatalos Nethereum Oldal](https://nethereum.com/)  
 [Hivatalos Nethermind Oldal](https://nethermind.io/)

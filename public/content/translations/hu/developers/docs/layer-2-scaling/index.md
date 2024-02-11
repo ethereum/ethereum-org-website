@@ -9,17 +9,17 @@ isOutdated: true
 
 A 2. réteg (layer 2) egy gyűjtőnév az olyan megoldásoknak, melyeket arra terveztek, hogy skálázzák az alkalmazásodat úgy, hogy a tranzakciókat az Ethereum láncon (1. réteg) kívül kezelik. A tranzakciós sebesség szenved, amikor a hálózaton nagy a forgalom, mely rontja a felhasználói élményt bizonyos dapp típusoknál. Ahogy nő a hálózat forgalma, úgy nőnek a gáz árak, mivel a tranzakció küldők próbálják egymást túllicitálni. Ez nagyon drágává teszi az Ethereum használatát.
 
-## Előfeltételek {#prerequisites}
+## Előfeltételek \{#prerequisites}
 
 Jó alapokkal kell rendelkezned az összes alapvető témakörről. A 2. rétegű megoldások bevezetése elég haladó szint, mivel a technológia kevésbé kiforrott.
 
-## Miért szükséges a 2. réteg? {#why-is-layer-2-needed}
+## Miért szükséges a 2. réteg? \{#why-is-layer-2-needed}
 
 - Némely felhasználási esetnek, például a blokklánc játékoknak, nincs értelme a jelenlegi tranzakciós időkkel
 - Szükségtelenül drága a blokklánc alkalmazások használata
 - A skálázhatóságra történő frissítés nem mehet a decentralizáció rovására - a 2. réteg az Ethereumra épít.
 
-## 2. réteg megoldások típusai {#types}
+## 2. réteg megoldások típusai \{#types}
 
 - [Összegzők](#rollups)
   - [ZK összegzők](#zk-rollups)
@@ -34,7 +34,7 @@ A legtöbb 2. rétegű megoldás egy szerver vagy egy szerver cluster körül he
 
 Egy adott 2. réteg instance esetében lehet nyitott és megosztott több alkalmazás között, vagy egy adott cég által üzemeltetve és csak a saját alkalmazásukat támogatva.
 
-## Összegzők {#rollups}
+## Összegzők \{#rollups}
 
 Az összegzők (rollups) olyan megoldások, melyek melléklánc tranzakciókat kötnek össze vagy "tekernek fel (roll up)" egy tranzakcióba majd egy kriptográfiai bizonyítékot generálnak, melyet SNARK-nak nevezünk (succinct non-interactive argument of knowledge). Csak ez a bizonyíték kerül fel a fő láncra.
 
@@ -55,7 +55,7 @@ Kétfajta összegző van különböző biztonsági modellel:
 - Zero knowledge: a számítások off-chain történnek és egy [**érvényességi bizonyítékot**](/glossary/#validity-proof) küld fel a láncra
 - Optimista: azt feltételezi, hogy a tranzakciók alapvetően érvényesek és csak egy [**csalási bizonyítékon **](/glossary/#fraud-proof) keresztül végez számításokat egy felelősségre vonás alkalmával
 
-### Zero-knowledge összegzők {#zk-rollups}
+### Zero-knowledge összegzők \{#zk-rollups}
 
 A zero-knowledge összegzők, másnéven ZK-összegzők, több száz átutalást kötnek össze a láncon kívül egy tranzakcióban egy okosszerződésen keresztül. A beküldött adattal az okosszerződés hitelesíti az összes átutalást, mely benne volt. Ezt úgy hívjuk, hogy érvényességi bizonyíték.
 
@@ -63,7 +63,7 @@ A ZK-összegző segítségével a blokkok validálása gyorsabb és olcsóbb, mi
 
 A melléklánc, ahol a ZK-összegzés történik, optimálható a tranzakció méret további csökkentésére. Például egy számlát egy index, nem pedig egy cím reprezentál, ami 32 bájtról 4 bájtra csökkenti a tranzakciót. A tranzakciókat calldataként írjuk az Ethereumra, amivel gázt takarítunk meg.
 
-#### Előnyök és hátrányok {#zk-pros-and-cons}
+#### Előnyök és hátrányok \{#zk-pros-and-cons}
 
 | Előnyök                                                                                                       | Hátrányok                                                                                                                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -71,14 +71,14 @@ A melléklánc, ahol a ZK-összegzés történik, optimálható a tranzakció m�
 | Kevésbé sérülékeny a gazdasági támadásokkal szemben, mint az [Optimista összegző](#optimistic-pros-and-cons). | Az érvényességi bizonyítékokat nehéz kiszámítani - nem érdemes kis on-chain aktivitású alkalmazásoknál használni.                                                                                                                              |
 |                                                                                                               | Lassabb szubjektív [véglegességi](/glossary/#finality) idő (10-30 perc egy ZK bizonyíték generálása) (de gyorsabb a teljes véglegesség, mivel nincsen felelősségre vonási késés, mint az [Optimista összegzők](#optimistic-rollups) esetében). |
 
-#### ZK-összegzők használata {#use-zk-rollups}
+#### ZK-összegzők használata \{#use-zk-rollups}
 
 - [Loopring](https://loopring.org/#/)
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkSync](https://matter-labs.io/)
 - [Aztec 2.0](https://aztec.network/)
 
-### Optimista összegzők {#optimistic-rollups}
+### Optimista összegzők \{#optimistic-rollups}
 
 Az optimista összegzők egy mellékláncot használnak, mely a fő Ethereum lánccal párhuzamosan működik. Növelhetik a skálázhatóságot, mivel alapvetően nem végeznek számításokat. Ehelyett egy tranzakció után egy új állapotot javasolnak a főhálózatnak. Vagyis "jegyzik" a tranzakciót.
 
@@ -86,7 +86,7 @@ Az optimista összegzőknél a tranzakciók calldataként vannak a fő Ethereum 
 
 Mivel a számítás az Ethereum használatának lassú és drága része, az optimista összegzők a tranzakciótól függően akár 10–100-szoros javulást is kínálnak a méretezhetőségben. Ez a szám tovább fog nőni a következő Eth2 fejlesztés bevezetésével: [shard láncok](/roadmap/danksharding). Ennek az az oka, hogy több adat áll majd rendelkezésre felelősségre vonási esemény során.
 
-#### Tranzakciók megkérdőjelezése {#disputing-transactions}
+#### Tranzakciók megkérdőjelezése \{#disputing-transactions}
 
 Az optimista összegzők valójában nem számítják ki a tranzakciót, így szükség van valamilyen mechanizmusra, mely biztosítja, hogy a tranzakciók jogosak és nem hamisak. Itt jön a képbe a csalási bizonyíték. Ha valaki egy hamis tranzakciót észlel, akkor az összegző végrehajt egy csalási biztosítékot és elvégzi a tranzakció kiszámítását a rendelkezésre álló állapot adatok felhasználásával. Ez azt jelenti, hogy hosszabb ideig kell várnod a tranzakciók megerősítésére, mint egy ZK-összegző esetében, mert ez megtámadható.
 
@@ -98,20 +98,20 @@ A csalás igazolásának kiszámításához szükséges gáz még meg is térül
 
 Tehát a csalás bizonyítása megtérül.
 
-#### Előnyök és hátrányok {#optimistic-pros-and-cons}
+#### Előnyök és hátrányok \{#optimistic-pros-and-cons}
 
 | Előnyök                                                                                                                    | Hátrányok                                                                                                                          |
 | -------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
 | Bármi, amit az Ethereum 1. rétegen csinálhatsz, megcsinálhatod optimista összegzőkkel, mivel EVM és Solidity kompatibilis. | Hosszú várakozási idő az on-chain tranzakcióknál a potenciális csalási bizonyítások miatt.                                         |
 | Az összes tranzakciós adat az 1. rétegű láncon tárolódik, ami azt jelenti, hogy biztonságos és decentralizált.             | Potenciálisan sérülékeny a támadásokkal szemben, ha az érték egy optimista összegzőben meghaladja az operátor kötvényének értékét. |
 
-#### Optimista összegzők használata {#use-optimistic-rollups}
+#### Optimista összegzők használata \{#use-optimistic-rollups}
 
 - [Optimism](https://optimism.io/)
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Fuel Network](https://fuel.sh/)
 
-## Csatornák {#channels}
+## Csatornák \{#channels}
 
 A csatornák lehetővé teszik a résztvevőknek, hogy `x` alkalommal indítsanak tranzakciókat off-chain, mialatt csak két tranzakciót indítanak a hálózaton on-chain. Ez extrém magas tranzakció átvitelt tesz lehetővé
 
@@ -125,7 +125,7 @@ A résztvevőknek le kell kötniük az Ethereum állapotának egy részét, mint
 
 Az állapot lekötésének ezen módja jelenti az első tranzakciót és a csatorna megnyitását. A részvevők gyorsan és ingyen tudnak off-chain tranzakciókat indítani. Amikor véget ér az interakció, egy végső on-chain tranzakciót kell küldeni, mely feloldja az állapotot.
 
-### Állapot csatornák {#state-channels}
+### Állapot csatornák \{#state-channels}
 
 Állapot csatorna amőba:
 
@@ -140,7 +140,7 @@ Jelenleg kétfajta csatorna létezik:
 - Állapot csatornák - ahogy fentebb részleteztük
 - Fizetési csatornák - Egyszerűsített állapot csatornák, mely csak fizetésekkel operál. Off-chain tranzakciókat tesz lehetővé két fél között addig, amíg a nettó összege az átutalásaiknak meg nem haladja a letétbe helyezett tokenek mennyiségét.
 
-#### Előnyök és hátrányok {#channels-pros-and-cons}
+#### Előnyök és hátrányok \{#channels-pros-and-cons}
 
 | Előnyök                                                                                                 | Hátrányok                                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -149,14 +149,14 @@ Jelenleg kétfajta csatorna létezik:
 | Legalacsonyabb egy tranzakcióra eső költség - jól használható mikrofizetéses streaming szolgáltatásokra | Le kell kötni a pénzt nyílt fizetési csatornákon                                                                                                |
 |                                                                                                         | Nem támogatja a nyílt részvételt                                                                                                                |
 
-#### Állapot csatornák használata {#use-state-channels}
+#### Állapot csatornák használata \{#use-state-channels}
 
 - [Connext](https://connext.network/)
 - [Raiden](https://raiden.network/)
 - [Perun](https://perun.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Plasma {#plasma}
+## Plasma \{#plasma}
 
 A plasma lánc olyan különálló blokklánc, mely hozzá van kötve a fő Ethereum lánchoz, és csalási bizonyítékokat használ (mint az [optimista összegzők](#optimistic-rollups)), hogy eldöntse a vitákat.
 
@@ -167,14 +167,14 @@ A plasma lánc olyan különálló blokklánc, mely hozzá van kötve a fő Ethe
 |                                                                                                                                               | Egy vagy több szolgáltatóra támaszkodik az adattároláshoz és a lekérdezéshez.                                                                                                                                     |
 |                                                                                                                                               | A kiutalások több napig is tarthatnak, hogy lehetővé tegyék a felelősségre vonást. A helyettesíthető eszközök esetében ezt a likviditásszolgáltatók csökkenthetik, de ez egy ehhez kapcsolódó tőkeköltséggel jár. |
 
-### Plasma használata {#use-plasma}
+### Plasma használata \{#use-plasma}
 
 - [OMG Network](https://omg.network/)
 - [Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
-## Validium {#validium}
+## Validium \{#validium}
 
 Érvényességi bizonyítékokat használ, mint a [ZK-összegzők](#zk-rollups), de az adatokat nem az 1. rétegű Ethereum lánc tartalmazza. Ez akár 10k tranzakciót is jelenthet másodpercenként egy validium láncon és több lánc is futhat párhuzamosan.
 
@@ -184,13 +184,13 @@ A plasma lánc olyan különálló blokklánc, mely hozzá van kötve a fő Ethe
 | Nem sérülékeny bizonyos gazdasági támadásokkal szemben, melyekkel a csalási bizonyíték alapú rendszerek szembesülnek a nagy értékű alkalmazásoknál. | Nagy számítási kapacitást igényel a ZK bizonyítékok generálása; nem költséghatékony az alacsony átvitelű alkalmazásoknál.                             |
 |                                                                                                                                                     | Lassabb szubjektív véglegességi idő (10-30 perc egy ZK bizonyíték generálása)(de gyorsabb a teljes véglegesség, mivel nincs felelősségre vonási idő). |
 
-### Validium használata {#use-validium}
+### Validium használata \{#use-validium}
 
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkPorter](https://matter-labs.io/)
 - [Loopring](https://loopring.org/#/)
 
-## Mellékláncok {#sidechains}
+## Mellékláncok \{#sidechains}
 
 A melléklánc egy különálló blokklánc, mely párhuzamosan fut a főhálózattal és tőle függetlenül működik. Saját konszenzus algoritmusa van ([Proof-of-Authority](https://wikipedia.org/wiki/Proof_of_authority), [delegált proof-of-stake](https://en.bitcoinwiki.org/wiki/DPoS), [bizánci hibatűrés](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), stb). Egy kétirányú összekötővel van a fő lánchoz kapcsolva.
 
@@ -200,20 +200,20 @@ A melléklánc egy különálló blokklánc, mely párhuzamosan fut a főhálóz
 | Támogatja az általános számítást, EVM kompatibilitást. | Másfajta konszenzus mechanizmust használ. Nem az 1. réteg tartja biztonságban (tehát technikailag nem egy 2. réteg). |
 |                                                        | A melléklánc validátorok határozatképessége csalást idézhet elő.                                                     |
 
-### Mellékláncok használata {#use-sidechains}
+### Mellékláncok használata \{#use-sidechains}
 
 - [Skale](https://skale.network/)
 - [POA Network](https://www.poa.network/)
 
-## Hibrid megoldások {#hybrid-solutions}
+## Hibrid megoldások \{#hybrid-solutions}
 
 Kombinálja a többrétegű technológiák legjobb tulajdonságait, és konfigurálható kompromisszumokat kínálhat.
 
-### Hibrid megoldások használata {#use-hybrid-solutions}
+### Hibrid megoldások használata \{#use-hybrid-solutions}
 
 - [Celer](https://www.celer.network/)
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Validium And The Layer 2 Two-By-Two — Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)

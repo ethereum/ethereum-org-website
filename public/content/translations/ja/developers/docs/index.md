@@ -8,18 +8,18 @@ lang: ja
 
 これはオープンソースのコミュニティ活動ですので、役に立つと思われる場合は、新しいトピックの提案、新しいコンテンツの追加、または例を提供してください。 すべてのドキュメントは GitHub で編集できます。編集方法がわからない場合は、[こちらの手順](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md)に従ってください。
 
-## 開発モジュール {#development-modules}
+## 開発モジュール \{#development-modules}
 
 初めてイーサリアムの開発に挑戦される方は、最初から本のように読み進めていくことをお勧めします。
 
-### 基本的なトピック {#foundational-topics}
+### 基本的なトピック \{#foundational-topics}
 
 <DeveloperDocsLinks headerId="foundational-topics" />
 
-### イーサリアムスタック {#ethereum-stack}
+### イーサリアムスタック \{#ethereum-stack}
 
 <DeveloperDocsLinks headerId="ethereum-stack" />
 
-### 上級者向け {#advanced}
+### 上級者向け \{#advanced}
 
 <DeveloperDocsLinks headerId="advanced" />

@@ -18,7 +18,7 @@ sourceUrl: https://soliditydeveloper.com/thegraph
 
 De data aceasta vom arunca o privire mai atentă la „The Graph” care, în esență, a devenit parte din stiva standard pentru dezvoltarea aplicațiilor dapp în ultimul an. Să vedem mai întâi cum am face lucrurile în mod tradițional...
 
-## Fără „The Graph”... {#without-the-graph}
+## Fără „The Graph”... \{#without-the-graph}
 
 Vom folosi un exemplu simplu în scopul de ilustrare. Tuturor ne plac jocurile, deci să ne imaginăm un joc simplu, cu utilizatori care plasează pariuri:
 
@@ -83,19 +83,21 @@ Putem vedea de ce acest lucru nu este optim:
 
 Acum să analizăm o soluție mai bună.
 
-## Permite-mi să-ți prezint GraphQL {#let-me-introduce-to-you-graphql}
+## Permite-mi să-ți prezint GraphQL \{#let-me-introduce-to-you-graphql}
 
 În primul rând, să vorbim despre GraphQL, inițial proiectat și implementat de Facebook. Este posibil să fii familiarizat cu modelul tradițional API Rest. Acum imaginează-ți că ai putea scrie o interogare pentru exact datele pe care le-ai dorit:
 
 ![GraphQL API față de REST API](./graphql.jpg)
 
+{
 <img src="https://cdn0.scrvt.com/b095ee27d37b3d7b6b150adba9ac6ec8/42226f4816a77656/bc5c8b270798/graphql-querygif.gif" width="100%" />
+}
 
 Cele două imagini surprind destul de bine esența GraphQL. Cu ajutorul interogării din dreapta putem defini exact ce date vrem și astfel obținem totul printr-o singură cerere, exact ce avem nevoie și nimic mai mult. Un server GraphQL se ocupă de preluarea tuturor datelor necesare, utilizarea fiind deci incredibil de ușoară de către consumatorul din frontend. [Se explică frumos prin aceasta](https://www.apollographql.com/blog/graphql-explained-5844742f195e/) cum anume gestionează serverul o interogare, dacă sunteți interesat.
 
 Cunoscând acum aceste lucruri, să ne avântăm în sfârșit în spațiul blockchain și în „The Graph”.
 
-## Ce este „The Graph”? {#what-is-the-graph}
+## Ce este „The Graph”? \{#what-is-the-graph}
 
 Un blockchain este o bază de date descentralizată, dar, spre deosebire de ceea ce se întâmplă de obicei, nu avem un limbaj de interogare pentru această bază de date. Soluțiile pentru obținerea datelor sunt chinuitoare sau absolut imposibile. „The Graph” este un protocol descentralizat pentru indexarea și interogarea datelor de pe blockchain. Și poate ați ghicit, utilizează GraphQL ca limbaj de interogare.
 
@@ -103,7 +105,7 @@ Un blockchain este o bază de date descentralizată, dar, spre deosebire de ceea
 
 Cel mai bine se înțeleg lucrurile din exemple, așa că haideți să folosim „The Graph” în exemplul nostru „GameContract”.
 
-## Cum să creăm un Subgraph {#how-to-create-a-subgraph}
+## Cum să creăm un Subgraph \{#how-to-create-a-subgraph}
 
 Definiția modului de indexare a datelor se numește „subgraph”. Acesta necesită trei componente:
 
@@ -111,7 +113,7 @@ Definiția modului de indexare a datelor se numește „subgraph”. Acesta nece
 2. Schema (`schema.graphql`)
 3. Mapping (`mapping.ts`)
 
-### Manifest (`subgraph.yaml`) {#manifest}
+### Manifest (`subgraph.yaml`) \{#manifest}
 
 Manifestul este fișierul nostru de configurare și definește:
 
@@ -155,7 +157,7 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-### Schema (`schema.graphql`) {#schema}
+### Schema (`schema.graphql`) \{#schema}
 
 Schema este definiția datelor GraphQL. Aceasta vă va permite să definiți ce entități există și tipurile acestora. Tipurile acceptate din „The Graph” sunt
 
@@ -186,7 +188,7 @@ type Player @entity {
 }
 ```
 
-### Mapping (`mapping.ts`) {#mapping}
+### Mapping (`mapping.ts`) \{#mapping}
 
 Fișierul de mapare din „The Graph” definește funcțiile noastre care transformă evenimentele primite în entități. Este scris în AssemblyScript, un subset al Typescript. Deci poate fi compilat în WASM (WebAssembly) pentru executarea mai eficientă și portabilă a mapării.
 
@@ -238,7 +240,7 @@ export function handleNewBet(event: PlacedBet): void {
 }
 ```
 
-## Folosindu-l în Front-end {#using-it-in-the-frontend}
+## Folosindu-l în Front-end \{#using-it-in-the-frontend}
 
 Folosind ceva de genul Apollo Boost, puteți integra cu ușurință „The Graph” în aplicația dvs. React Dapp (sau Apollo Vue). În special când utilizați hooks React și Apollo, este tot atât de simplu să preluați datele cât să scrieți o singură interogare GrafQl în componenta dvs. O configurare tipică ar putea arăta astfel:
 
@@ -289,19 +291,19 @@ React.useEffect(() => {
 
 Dar ne lipsește o ultimă piesă din puzzle, și anume serverul. Puteți fie să îl rulați singur, fie să utilizați serviciul găzduit.
 
-## Serverul „The Graph” {#the-graph-server}
+## Serverul „The Graph” \{#the-graph-server}
 
-### Exploratorul Graph: Serviciul găzduit {#graph-explorer-the-hosted-service}
+### Exploratorul Graph: Serviciul găzduit \{#graph-explorer-the-hosted-service}
 
 Cel mai simplu mod de a utiliza serviciul găzduit. Pentru a implementa un subgraf, urmați instrucțiunile de [aici](https://thegraph.com/docs/deploy-a-subgraph). Pentru multe proiecte, puteți găsi subgraph-urile existente în explorator la https://thegraph.com/explorer/.
 
 ![Exploratorul - The Graph](./thegraph-explorer.png)
 
-### Rularea propriului tău nod {#running-your-own-node}
+### Rularea propriului tău nod \{#running-your-own-node}
 
 Altfel, vă puteți rula propriul nod: https://github.com/graphprotocol/graph-node#quick-start. Poate faceți acest lucru pentru că utilizați o rețea care nu este acceptată de serviciul găzduit. Sunt actualmente acceptate Mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI și Sokol.
 
-## Viitorul descentralizat {#the-decentralized-future}
+## Viitorul descentralizat \{#the-decentralized-future}
 
 GraphQL acceptă și fluxuri pentru evenimente nou primite. „The Graph” nu acceptă încă aceasta, dar compatibilitatea se va lansa în curând.
 

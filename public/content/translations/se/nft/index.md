@@ -16,7 +16,7 @@ NFT:er tar för närvarande den digitala konst- och samlarvärlden med storm. Di
 
 Om Andy Warhol hade fötts i slutet av 90-talet, skulle han förmodligen ha skapat sin Campbell-soppa som en NFT. Det är bara en tidsfråga innan Nike lägger ut en serie Jordans på Ethereum. Och inom en snar framtid kanske du kan bevisa att du är ägare till din bil med hjälp av en NFT.
 
-## Vad är en NFT? {#what-are-nfts}
+## Vad är en NFT? \{#what-are-nfts}
 
 NFT:er är polletter, eller tokens på engelska, som vi kan använda för att representera äganderätten till unika föremål. De låter oss pollettisera, det vill säga, skapa tokens för konst, samlarföremål eller till och med fastigheter. Ägarskap av en tillgång säkras av Ethereums blockkedja – ingen kan modifiera ägarregistret och eller kopiera/klistra in en ny NFT för att skapa den.
 
@@ -24,15 +24,17 @@ NFT är en akronym för Non-Fungible Token, en icke-fungibel pollett. Icke-fungi
 
 Fungibla föremål, å andra sidan, kan bytas ut eftersom det är deras värde som definierar, inte deras unika egenskaper. Till exempel är ETH eller dollar fungibla eftersom 1 ETH/1 USD kan bytas mot en annan 1 ETH/1 USD.
 
+{
 <YouTube id="Xdkkux6OxfM" />
+}
 
-## Internet för tillgångar {#internet-of-assets}
+## Internet för tillgångar \{#internet-of-assets}
 
 NFT och Ethereum löser några av de problem som finns på internet idag. Allteftersom allt blir mer digitalt finns det ett behov av att replikera egenskaperna hos fysiska objekt som brist på tillgång, unikhet och bevis på ägande. För att inte tala om att digitala föremål ofta bara fungerar när de är kopplade till deras produkt. Du kan till exempel inte sälja en iTunes-mp3-fil som du har köpt eller så kan du inte byta ett företags lojalitetspoäng mot krediter på en annan plattform, även om det finns en marknad för det.
 
 Så här ser ett internet av NFT:er ut jämfört med internet som de flesta av oss använder idag ...
 
-### En jämförelse {#nft-comparison}
+### En jämförelse \{#nft-comparison}
 
 | Ett NFT-internet                                                                                                                                                                                                                 | Internet idag                                                                                                                                                                               |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -43,7 +45,7 @@ Så här ser ett internet av NFT:er ut jämfört med internet som de flesta av o
 | Kreatörer kan behålla äganderätten till sitt eget verk och göra anspråk på återförsäljningsavgifter direkt.                                                                                                                      | Plattformar, som musikstreamingtjänster, behåller huvuddelen av vinsten från försäljningen.                                                                                                 |
 | Föremål kan användas på överraskande sätt. Du kan till exempel använda digitala konstverk som säkerhet i ett decentraliserat lån.                                                                                                |                                                                                                                                                                                             |
 
-### Exempel på NFT:er {#nft-examples}
+### Exempel på NFT:er \{#nft-examples}
 
 NFT-världen är relativt ny. I teorin omfattar NFT allt som är unikt och där man behöver kunna bevisa ägandeskap. Här är några exempel på NFT:er som finns idag, för att hjälpa dig att förstå vad det egentligen är:
 
@@ -61,23 +63,23 @@ NFT-världen är relativt ny. I teorin omfattar NFT allt som är unikt och där 
 - [Move 2 Earn](https://yeticoineth.com/about.html)
 - [Digital identitet](https://photochromic.io/)
 
-### exempel på ethereum.org {#ethereum-org-examples}
+### exempel på ethereum.org \{#ethereum-org-examples}
 
 Exempel på ethereum.org
 
-#### POAPs (Proof of Attendance Protocol) {#poaps}
+#### POAPs (Proof of Attendance Protocol) \{#poaps}
 
 Om du bidrar till ethereum.org kan du göra anspråk på en NFT för POAP. Det här är samlarobjekt som bevisar att du deltog i ett evenemang. Vissa kryptoträffar har använt POAP:er som en form av biljett till evenemangen. Vissa kryptoträffar har använt POAP:er som en typ av biljett till evenemangen.
 
 ![ethereum.org POAP](./poap.png)
 
-#### ethereum.eth {#ethereum-dot-eth}
+#### ethereum.eth \{#ethereum-dot-eth}
 
 Denna webbplats har ett alternativt domännamn som drivs med hjälp av NFT:er,**ethereum.eth**. Vår `.org`-adress hanteras centralt av en leverantör av domännamnssystem (DNS), medan ethereum`.eth` är registrerad på Ethereum via Ethereum Name Service (ENS). Och det ägs och förvaltas av oss. [Kontrollera vår ENS-historik](https://app.ens.domains/name/ethereum.eth)
 
 [Mer om ENS](https://app.ens.domains)
 
-## Hur fungerar NFT:er? {#how-nfts-work}
+## Hur fungerar NFT:er? \{#how-nfts-work}
 
 NFT:er skiljer sig från ERC-20-polletter, såsom DAI eller LINK, på grund av att varje enskild polett är helt unik och inte delbar. NFT:er ger möjligheten att tilldela eller göra anspråk på ägande av alla unika digitala data. Dessa är spårbara genom att använda Ethereums blockkedja som en offentlig reskontra. En NFT präglas av digitala objekt som en representation av digitala eller icke-digitala tillgångar. Till exempel kan en NFT representera:
 
@@ -130,7 +132,7 @@ Och om du _skapar_ en NFT:
 - Du kan tjäna royalties varje gång den säljs.
 - Du kan sälja den på vilken NFT-marknad som helst eller peer-to-peer. Du är inte låst till någon plattform och du behöver inte någon som mellanhand.
 
-### Brist på tillgång {#scarcity}
+### Brist på tillgång \{#scarcity}
 
 Skaparen av en NFT får bestämma hur mycket eller hur många det ska finnas av den.
 
@@ -138,13 +140,13 @@ Tänk till exempel på en biljett till ett sportevenemang. Precis som en arrang�
 
 I dessa fall skulle varje NFT fortfarande ha en unik identifierare (som en streckkod på en traditionell "biljett"), med endast en ägare. Den avsedda bristen på NFT spelar roll, och det är upp till skaparen. En skapare kan ha för avsikt att göra varje NFT helt unik för att skapa brist, eller ha skäl att producera flera tusen kopior. Kom ihåg att all denna information är offentlig.
 
-### Royalties {#royalties}
+### Royalties \{#royalties}
 
 Vissa NFTs kommer automatiskt att betala ut royalties till sina skapare när de säljs. Detta är fortfarande ett koncept under utveckling, men det är ett av de mest kraftfulla. Ursprungliga ägare till[EulerBeats Originals](https://eulerbeats.com/)tjäna 8 % royalty varje gång NFT säljs vidare. Och vissa plattformar, som [Foundation](https://foundation.app) och [Zora](https://zora.co/), stödja royalties för sina artister.
 
 Detta är helt automatiskt så kreatörer kan bara luta sig tillbaka och tjäna royalties när deras arbete säljs från person till person. För närvarande är det väldigt manuellt att ta reda på royalties och det saknar noggrannhet – många kreatörer får inte betalt vad de förtjänar. Om din NFT har en royalty inprogrammerad kommer du aldrig att missa någon royaltybetalning.
 
-## Vad används NFT till? {#nft-use-cases}
+## Vad används NFT till? \{#nft-use-cases}
 
 Här är mer information om några av de bättre utvecklade användningsfallen och visionerna för NFTs på Ethereum.
 
@@ -155,9 +157,11 @@ Här är mer information om några av de bättre utvecklade användningsfallen o
 - [Investeringar och säkerheter](#nfts-and-defi)
 - [Tokengating](#tokengating)
 
+{
 <Divider />
+}
 
-### Maximera intäkterna för kreatörer {#nfts-for-creators}
+### Maximera intäkterna för kreatörer \{#nfts-for-creators}
 
 Den största användningen av NFT:er sker idag inom världen för digitalt innehåll. Det beror på att branschen idag är splittrad. Innehållsskapare ser sin vinst och intjäningspotential slukas av plattformar.
 
@@ -174,7 +178,7 @@ När de säljer sitt innehåll går pengarna direkt till dem. Om den nya ägaren
   </ButtonLink>
 </InfoBanner>
 
-#### Problemet med att kopiera/klistra in {#nfts-copy-paste}
+#### Problemet med att kopiera/klistra in \{#nfts-copy-paste}
 
 Kritiker tar ofta upp det faktum att NFT:er "är dumma" vanligtvis tillsammans med en bild av dem själva med skärmdumpar av ett NFT-konstverk. "Titta, nu har jag samma bild gratis!", säger de självbelåtet.
 
@@ -184,9 +188,11 @@ Att faktiskt äga den äkta varan är i slutändan ldet som räknas och det är 
 
 Att äga en faktisk sak som kan verifieras har alltid mer värde än att inte göra det.
 
+{
 <Divider />
+}
 
-### Öka spelpotentialen {#nft-gaming}
+### Öka spelpotentialen \{#nft-gaming}
 
 NFT:er har skapat ett stort intresse bland spelutvecklare. NFT:er kan tillhandahålla register över ägande av föremål i spelet, driva på ekonomin i spelet och ge spelarna en mängd fördelar.
 
@@ -207,9 +213,11 @@ Decentraland, ett virtuell verklighetsspel, låter dig till och med köpa NFT:er
   </ButtonLink>
 </InfoBanner>
 
+{
 <Divider />
+}
 
-### Skapa Ethereum-adresser som är lättare att komma ihåg {#nft-domains}
+### Skapa Ethereum-adresser som är lättare att komma ihåg \{#nft-domains}
 
 Ethereums namntjänst använder NFT för att ge din Ethereum-adress ett namn som är lättare att komma ihåg, som `mywallet.eth`. Det betyder att du kan be någon att skicka ETH till dig via `mywallet.eth` i ställe för `0x123456789.....`.
 
@@ -221,9 +229,11 @@ Ditt ENS-namn kan:
 - Peka mot en decentraliserad webbplats, som[ethereum.eth](https://ethereum.eth.link). [Mer om att decentralisera din webbplats](https://docs.ipfs.io/how-to/websites-on-ipfs/link-a-domain/#domain-name-service-dns)
 - Lagra eventuell godtycklig information, inklusive profilinformation som e-postadresser och Twitter-handtag.
 
+{
 <Divider />
+}
 
-### Fysiska föremål {#nft-physical-items}
+### Fysiska föremål \{#nft-physical-items}
 
 Pollettisering av fysiska föremål är ännu inte lika utvecklad som deras digitala motsvarigheter. Men det finns massor av projekt som utforskar pollettiseringen av fastigheter, unika modeartiklar och många andra saker.
 
@@ -231,13 +241,15 @@ Eftersom NFT:er i huvudsak är transaktionshandlingar kan du en dag kan köpa en
 
 När det finns värdefulla tillgångar som bilar och egendom representerade på Ethereum, kan du använda NFT:er som säkerhet i decentraliserade lån. Detta är särskilt användbart om du inte är rik på kontanter eller kryptovalutor medn äger fysiska föremål av värde. [Mer om DeFi](/defi/)
 
+{
 <Divider />
+}
 
-### NFT:er och DeFi {#nfts-and-defi}
+### NFT:er och DeFi \{#nfts-and-defi}
 
 NFT-världen och världen av [decentraliserade finanser (DeFi)](/defi/) börjar arbeta tillsammans på ett flertal intressanta sätt.
 
-#### NFT-stödda lån {#nft-backed-loans}
+#### NFT-stödda lån \{#nft-backed-loans}
 
 Det finns DeFi-applikationer som låter dig låna pengar genom att använda säkerheter. Till exempel kan du ställa en säkerhet på 10 ETH för att du ska kunna låna 5 000 DAI ([en så kallad stablecoin](/stablecoins/)). Detta garanterar att långivaren får sina pengar tillbaka – om låntagaren inte betalar tillbaka i DAI skickas säkerheten till långivaren. Men alla har inte tillräckligt med krypto för att använda som säkerhet.
 
@@ -245,7 +257,7 @@ Projekt börjar utforska möjligheten att använda NFT:er som säkerhet iställe
 
 Och detta är inte svårt för Ethereum, eftersom båda världarna (NFT och DeFi) delar samma infrastruktur.
 
-#### Delägande {#fractional-ownership}
+#### Delägande \{#fractional-ownership}
 
 NFT-skapare kan också skapa "aktier" för sin NFT:er. Detta ger investerare och fans möjlighet att äga en del av en NFT utan att behöva köpa hela objektet. Detta ger ännu fler möjligheter för både personer som myntar NFT och samlare.
 
@@ -266,15 +278,17 @@ Som vi nämnde är detta ett område som håller på att utvecklas. NFT, DAO, fr
 
 [Mer om DAOs](/dao/)
 
-### Äkthetsintyg {#certificates}
+### Äkthetsintyg \{#certificates}
 
 Företag som erbjuder falska certifikat för universitetsexamen är enligt uppgift en miljardindustri. Men NFT:er kan hjälpa till att bekämpa detta. NFT:er kan vara ett säkert och snabbt sätt att verifiera en persons examensbevis.
 
 Tokengating är ett sätt att begränsa tillgången till något och där kan NFT:er används för att få åtkomst till det som är begränsat. [Trinity Business School (TBS) i Irland planerar också att erbjuda NFT:er från 2023](https://trinitynews.ie/2022/04/business-school-to-offer-degree-nfts/).
 
+{
 <Divider />
+}
 
-### Tokengating {#tokengating}
+### Tokengating \{#tokengating}
 
 Tokengating är ett sätt att begränsa tillgången till något och där kan NFT: er används för att få åtkomst till det som är begränsat. Dessa saker kan variera kraftigt beroende på plattform men några populära exempel är begränsat innehåll (gated content), privata chattservrar och inom e-handeln, exklusiva produkter.
 
@@ -290,9 +304,11 @@ Om prägling och distribuering av NFT:er handlar om generering som görs av geme
 - [Unlock protocol](https://unlock-protocol.com/) är ett protokoll för tokengating
 - [Shopify](https://help.shopify.com/en/manual/products/digital-service-product/nfts) har en växande lista med appar som tillåter handlare använda pollettportar för att få åtkomst till produkter och rabatter
 
+{
 <Divider />
+}
 
-## Ethereum och NFT:er {#ethereum-and-nfts}
+## Ethereum och NFT:er \{#ethereum-and-nfts}
 
 Ethereum gör det möjligt för NFT:er att fungera av ett antal anledningar:
 
@@ -302,13 +318,13 @@ Ethereum gör det möjligt för NFT:er att fungera av ett antal anledningar:
 - Alla Ethereum-produkter delar samma "backend". Med andra ord kan alla Ethereum-produkter lätt förstå varandra – detta gör NFT:er kan användas för en uppsjö av olika produkter. Du kan köpa en NFT på en produkt och sälja den på en annan på ett enkelt sätt. Som kreatör kan du lista dina NFT:er på flera produkter samtidigt – varje produkt kommer att ha den senaste ägarinformationen.
 - Ethereum ligger aldrig nere, vilket betyder att dina polletter alltid kommer att vara tillgängliga för försäljning.
 
-## Miljöpåverkan av NFT:er {#environmental-impact-nfts}
+## Miljöpåverkan av NFT:er \{#environmental-impact-nfts}
 
 Att skapa och överföra NFT:er är precis som en Ethereum-transaktion - prägling, köp, byte eller interaktioner med NFT:er konsumerar inte direkt någon energi. Sedan [The Merge](/roadmap/merge) är Ethereum en blockkedja med låg energiförbrukning, vilket innebär att miljöeffekterna av att använda NFT:er är försumbara.
 
 [Mer om Ethereums energikonsumtion](/energy-consumption/).
 
-### Skyll inte på NFT:erna {#nft-qualities}
+### Skyll inte på NFT:erna \{#nft-qualities}
 
 Hela NFT-ekosystemet fungerar eftersom Ethereum är decentraliserat och säkert.
 
@@ -318,7 +334,7 @@ Säker betyder att ingen kan kopiera/klistra in dina NFT eller stjäla dem.
 
 Dessa egenskaper hos Ethereum gör det möjligt att digitalt äga unika föremål och få ett rättvist pris för ditt innehåll. Ethereum skyddar dina tillgångar genom att använda en decentraliserad mekanism för konsensus som involverar ["proof-of-stake"](/developers/docs/consensus-mechanisms/pos). Det är en metod med lågt koldioxidavtryck som avgör vem som kan lägga till ett block med transaktioner i kedjan. Något som anses vara mer säkert än det mer energislukande alternativet, ["proof-of-work"](/developers/docs/consensus-mechanisms/pow). NFT:er kopplas normalt ihop med en hög energiförbrukning eftersom Ethereum tidigare använde proof-of-work som säkringsmetod. Detta stämmer inte längre.
 
-#### Prägla NFT:er {#minting-nfts}
+#### Prägla NFT:er \{#minting-nfts}
 
 När du skapar en NFT måste några saker hända:
 
@@ -329,7 +345,7 @@ När du skapar en NFT måste några saker hända:
 
 Alla dessa arbetsuppgifter utförs av blockskapare och blockvaliderare. Blockförslagsställare lägger till din NFT-transaktion till ett block och sprider informationen till resten av nätverket. Validerarna kontrollerar att transaktionen är korrekt och lägger därefter till den i sina databaser. Det finns flera krypto-ekonomiska incitament på plats som säkerställer att validerarna agerar på ett ärligt sätt. Annars skulle vem som helst kunna hävda att de äger den NFT som du precis präglat och genom bedrägeri överföra ägarskapet.
 
-#### NFT-säkerhet {#nft-security}
+#### NFT-säkerhet \{#nft-security}
 
 Ethereums säkerhet baseras på proof-of-stake. Systemet är utformat för att ekonomiskt avskräcka från skadliga handlingar och göra Ethereum manipuleringssäkert. Det är detta som gör NFT möjligt. När blocket som innehåller din NFT-transaktion har slutförts skulle det kosta en angripare miljontals ETH att ändra den. Alla som kör Ethereum-programvara skulle omedelbart kunna upptäcka oärlig manipulering med en NFT, och den skadliga aktören skulle straffas ekonomiskt och kastas ut.
 
@@ -339,11 +355,11 @@ Säkerhetsfrågor relaterade till NFT är oftast relaterade till phishing-bedrä
   Mer om säkerhet
 </ButtonLink>
 
-## Bygg med NFT:er {#build-with-nfts}
+## Bygg med NFT:er \{#build-with-nfts}
 
 De flesta NFT:er är byggda med en konsekvent standard som kallas [ERC-721](/developers/docs/standards/tokens/erc-721/). Men det finns andra standarder som du kanske vill titta närmare på. Standaren [ERC-1155](/developers/docs/standards/tokens/erc-1155/) tillåter halvfungibla polletter vilket är särskilt användbart inom spelområdet. Och på senare tid har förslag gällande [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) börjat komma in, för att göra präglingen av NFT:er mycket effektivare. Denna standard låter dig prägla så många du vill i en transaktion!
 
-## Läs vidare {#further-reading}
+## Läs vidare \{#further-reading}
 
 - [Kryptokonstdata](https://cryptoart.io/data) – _Richard Chen, uppdateras automatiskt_
 - [OpenSea: the NFT Bible](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, 10 januari 2020_
@@ -353,4 +369,6 @@ De flesta NFT:er är byggda med en konsekvent standard som kallas [ERC-721](/dev
 - [Ethereums energikonsumtion](/energy-consumption/)
 - [Ethereum NFT APIs](https://www.alchemy.com/list-of/nft-apis-on-ethereum) - _Alchemy_
 
+{
 <QuizWidget quizKey="nfts" />
+}

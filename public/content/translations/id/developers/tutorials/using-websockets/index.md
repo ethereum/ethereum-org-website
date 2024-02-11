@@ -18,7 +18,7 @@ published: 2020-12-01
 
 Ini adalah panduan level pemula tentang menggunakan WebSocket dan Alchemy untuk membuat permintaan di blockchain Ethereum.
 
-## WebSocket vs. HTTP {#websockets-vs-http}
+## WebSocket vs. HTTP \{#websockets-vs-http}
 
 Tidak seperti HTTP, dengan WebSocket, Anda tidak perlu secara berulang membuat permintaan saat Anda menginginkan informasi spesifik. WebSocket mempertahankan koneksi jaringan untuk Anda (jika dilakukan dengan benar) dan mendengarkan perubahannya.
 
@@ -26,7 +26,7 @@ Seperti koneksi jaringan mana pun, Anda tidak boleh menganggap bahwa WebSocket a
 
 ​[Web3 Alchemy](https://docs.alchemy.com/reference/api-overview) secara otomatis menambah penanganan untuk kegagalan WebSocket dan mencoba kembali tanpa perlu adanya konfigurasi.
 
-## Cobalah {#try-it-out}
+## Cobalah \{#try-it-out}
 
 Cara termudah untuk menguji WebSocket adalah menginstal peralatan baris perintah untuk membuat permintaan WebSocket, seperti [wscat](https://github.com/websockets/wscat). Dengan wscat, Anda bisa mengirim permintaan seperti berikut ini:
 
@@ -41,7 +41,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ```
 
-## Cara menggunakan WebSocket {#how-to-use-websockets}
+## Cara menggunakan WebSocket \{#how-to-use-websockets}
 
 Untuk memulai, buka WebSocket menggunakan URL WebSocket untuk aplikasi Anda. Anda bisa menemukan URL WebSocket aplikasi Anda dengan membuka halaman aplikasi di [dasbor Anda](https://dashboard.alchemyapi.io/) dan mengklik "View Key". Perhatikan bahwa URL aplikasi Anda untuk WebSocket berbeda dari URL untuk permintaan HTTP, tapi keduanya bisa ditemukan dengan mengklik "View Key".
 
@@ -49,7 +49,7 @@ Untuk memulai, buka WebSocket menggunakan URL WebSocket untuk aplikasi Anda. And
 
 Setiap API yang terdaftar di [Referensi API Alchemy](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) bisa digunakan melalui WebSocket. Untuk melakukannya, gunakan payload yang sama yang akan dikirimkan sebagai isi permintaan HTTP POST, tapi sebaliknya kirimkan payload itu melalui WebSocket.
 
-## Dengan Web3 {#with-web3}
+## Dengan Web3 \{#with-web3}
 
 Beralih ke WebSocket sementara menggunakan pustaka klien seperti Web3 itu mudah. Cukup hanya dengan meneruskan URL WebSocket sebagai ganti HTTP saat membuat instance klien Web3 Anda. Sebagai contoh:
 
@@ -59,26 +59,26 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## API Langganan {#subscription-api}
+## API Langganan \{#subscription-api}
 
 Saat terhubung lewat WebSocket, Anda bisa menggunakan dua metode tambahan: `eth_subscribe` dan `eth_unsubscribe`. Metode ini akan memungkinkan Anda mendengar aksi tertentu dan mendapat pemberitahuan dengan segera.
 
-### `eth_subscribe` {#eth-subscribe}
+### `eth_subscribe` \{#eth-subscribe}
 
 Membuat langganan baru untuk aksi yang ditentukan. [Pelajari selengkapnya tentang `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
 
-#### Parameter {#parameters}
+#### Parameter \{#parameters}
 
 1. Jenis langganan
 2. Parameter opsional
 
 Argumen pertama menentukan jenis aksi yang didengarkan. Argumen kedua berisi opsi tambahan yang tergantung pada argumen pertama. Jenis deskripsi, opsi, dan payload aksi yang berbeda dideskripsikan di bawah.
 
-#### Mengembalikan {#returns}
+#### Mengembalikan \{#returns}
 
 ID langganan: ID ini akan dilampirkan pada setiap aksi yang diterima, dan bisa juga digunakan untuk membatalkan langganan menggunakan `eth_unsubscribe`.
 
-#### Aksi langganan {#subscription-events}
+#### Aksi langganan \{#subscription-events}
 
 Saat langganan aktif, Anda akan menerima aksi yang adalah objek dengan field berikut:
 
@@ -88,7 +88,7 @@ Saat langganan aktif, Anda akan menerima aksi yang adalah objek dengan field ber
   - `subscription`: ID langganan yang dikembalikan oleh pemanggilan `eth_subscription` yang membuat langganan ini.
   - `result`: Objek yang isinya bervariasi bergantung pada jenis langganan.
 
-#### Jenis langganan {#subscription-types}
+#### Jenis langganan \{#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
@@ -213,7 +213,7 @@ Contoh:
 
 ```
 
-### `eth_unsubscribe` {#eth-unsubscribe}
+### `eth_unsubscribe` \{#eth-unsubscribe}
 
 Membatalkan langganan yang ada, sehingga tidak ada aksi berikutnya yang dikirimkan.
 

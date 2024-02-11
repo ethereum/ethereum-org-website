@@ -21,11 +21,11 @@ Questa è una guida per principianti per muovere i primi passi con lo sviluppo d
 
 Inizieremo dalla registrazione ad Alchemy e passeremo alla scrittura del tuo primo script web3! Non è necessaria alcuna esperienza di sviluppo con blockchain.
 
-## 1. Registrati per un Conto Gratuito di Alchemy {#sign-up-for-a-free-alchemy-account}
+## 1. Registrati per un Conto Gratuito di Alchemy \{#sign-up-for-a-free-alchemy-account}
 
 Creare un conto di Alchemy è facile, [registrati gratuitamente qui](https://auth.alchemyapi.io/signup).
 
-## 2. Crea un'app con Alchemy {#create-an-alchemy-app}
+## 2. Crea un'app con Alchemy \{#create-an-alchemy-app}
 
 Per comunicare con la catena Ethereum e per utilizzare i prodotti di Alchemy, è necessaria una chiave API per autenticare le richieste.
 
@@ -43,7 +43,7 @@ Puoi anche prelevare chiavi API esistenti passando con il mouse su "Apps" e sele
 
 ![Gif che mostra a un utente come estrarre le chiavi API](./pull-api-keys.gif)
 
-## 3. Effettua una richiesta dalla riga di comando {#make-a-request-from-the-command-line}
+## 3. Effettua una richiesta dalla riga di comando \{#make-a-request-from-the-command-line}
 
 Interagisci con la blockchain Ethereum tramite Alchemy usando JSON-RPC e curl.
 
@@ -71,7 +71,7 @@ _**NOTA:** Sostituisci [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-m
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
-## 4. Configura il client Web3 {#set-up-your-web3-client}
+## 4. Configura il client Web3 \{#set-up-your-web3-client}
 
 **Se hai già un client,** cambia l'URL del provider del nodo corrente inserendo un URL Alchemy con la tua chiave API: `"https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -102,7 +102,7 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
-## 5. Scrivi il tuo primo script Web3! {#write-your-first-web3-script}
+## 5. Scrivi il tuo primo script Web3! \{#write-your-first-web3-script}
 
 Ora per sporcarci un po' le mani con la programmazione web3 scriveremo uno script semplice che riporta il numero dell'ultimo blocco della rete principale Ethereum.
 

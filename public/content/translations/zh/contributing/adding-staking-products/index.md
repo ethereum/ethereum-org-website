@@ -4,7 +4,7 @@ description: 将质押产品或服务添加到 ethereum.org 时适用的政策
 lang: zh
 ---
 
-# 添加质押产品或服务 {#adding-staking-products-or-services}
+# 添加质押产品或服务 \{#adding-staking-products-or-services}
 
 我们想要确保我们上架的资源是最好的，能够让用户安全和放心。
 
@@ -18,7 +18,7 @@ lang: zh
 
 信标链上的权益证明自 2020 年 12 月 1 日起生效。 虽然质押仍相对较新，但我们已尝试在 ethereum.org 上创建一个公平透明的考量框架，但纳入标准会随时间推移而变化和发展，且最终由 ethereum.org 网站团队自行决定。
 
-## 决策框架 {#the-decision-framework}
+## 决策框架 \{#the-decision-framework}
 
 在 ethereum.org 上架产品不是由单个因素决定的。 在决定上架产品或服务时，会同时考虑多个标准。 满足以下标准越多，产品就越有可能上架。
 
@@ -31,7 +31,7 @@ lang: zh
 
 目前，我们仅在这些类别中上架产品或服务。
 
-### 纳入标准 {#criteria-for-inclusion}
+### 纳入标准 \{#criteria-for-inclusion}
 
 所提交的质押产品或服务将按以下标准进行评估：
 
@@ -54,7 +54,7 @@ lang: zh
 
 - 例如 Linux、macOS、Windows、iOS、Android
 
-#### 软件和智能合约 {#software-and-smart-contracts}
+#### 软件和智能合约 \{#software-and-smart-contracts}
 
 对于所涉及的任何定制软件或智能合约：
 
@@ -78,7 +78,7 @@ lang: zh
 - 如果没有，是否有计划建立安全漏洞悬赏机制？
 - 这用于确定产品的“漏洞悬赏”评分。
 
-#### 节点或客户端工具 {#node-or-client-tooling}
+#### 节点或客户端工具 \{#node-or-client-tooling}
 
 对于与节点或客户端设置、管理或迁移相关的软件产品：
 
@@ -87,7 +87,7 @@ lang: zh
 - 支持哪些客户端？ 用户可以选择吗？
 - 这用于确定产品的“多客户端”评分。
 
-#### 质押即服务 {#staking-as-a-service}
+#### 质押即服务 \{#staking-as-a-service}
 
 对于[质押即服务的上架](/staking/saas/)（即委托节点操作）：
 
@@ -112,7 +112,7 @@ lang: zh
 - 截至上次编辑，Prysm 是由大多数节点运营商运行的共识层客户端，这对网络来说极为危险。 如果有超过 33% 的网络当前正在使用某一种 CL 客户端，我们即会索取与其使用情况相关的数据。
 - 这用于确定产品的“多样性客户端”分数。
 
-#### 质押池 {#staking-pool}
+#### 质押池 \{#staking-pool}
 
 对于[联合质押服务](/staking/pools/)：
 
@@ -142,7 +142,7 @@ lang: zh
 - 截至上次编辑，Prysm 是由大多数节点运营商运行的共识层客户端，这对网络来说极为危险。 如果有超过 33% 的网络当前正在使用某一种 CL 客户端，我们即会索取与其使用情况相关的数据。
 - 这用于确定产品的“多样性客户端”分数。
 
-### 其他标准：最好具备 {#other-criteria}
+### 其他标准：最好具备 \{#other-criteria}
 
 **支持哪些用户界面？**
 
@@ -156,13 +156,13 @@ lang: zh
 
 - 这会告诉我们您目前的服务范围。
 
-## 我们如何显示结果 {#product-ordering}
+## 我们如何显示结果 \{#product-ordering}
 
 上述[纳入标准](#criteria-for-inclusion)将用于计算每个产品或服务的累积分数。 这些分数会用来分类和展示满足某些客观标准的产品。 提供证据的标准越多，产品的排序就越高，并且在加载时会随机排列。
 
 这些标准的代码逻辑和权重当前包含在我们存储库的[这个 JavaScript 组件](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350)中。
 
-## 添加您的产品或服务 {#add-product}
+## 添加您的产品或服务 \{#add-product}
 
 如果您想将质押产品或服务添加到 ethereum.org，请在 GitHub 上创建一个提议。
 

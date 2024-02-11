@@ -4,7 +4,7 @@ description: Gamit ang distributed validator technology, pinaghihiwa-hiwalay ang
 lang: fil
 ---
 
-# Distributed validator technology {#distributed-validator-technology}
+# Distributed validator technology \{#distributed-validator-technology}
 
 Ang distributed validator technology (DVT) ay isang estratehiya sa seguridad ng validator kung saan pinaghihiwa-hiwalay sa maraming partido ang mga pangunahing responsibilidad at pag-sign para mabawasan ang mga single point of failure, at para mapahusay ang resiliency ng validator.
 
@@ -12,21 +12,21 @@ Ginagawa ito sa pamamagitan ng **paghahati ng pribadong key** na ginagamit upang
 
 ![Isang Diagram na nagpapakita kung paano hinahati ang isang validator key at inilalagay sa maraming node na may iba't ibang component.](./dvt-cluster.png)
 
-## Bakit kailangan natin ang DVT? {#why-do-we-need-dvt}
+## Bakit kailangan natin ang DVT? \{#why-do-we-need-dvt}
 
-### Seguridad {#security}
+### Seguridad \{#security}
 
 Gumagawa ang mga validator ng dalawang pares ng pampubliko at pribadong key: mga validator key para sa pakikilahok sa consensus at mga withdrawal key para sa pag-access sa mga pondo. Bagama't mase-secure ng mga validator ang mga withdrawal key sa cold storage, dapat online 24/7 ang mga pribado key ng validator. Kung makokompromiso ang pribadong key ng validator, makokontrol ng attacker ang validator na posibleng maging dahilan ng pag-slash o pagkawala ng ETH ng staker. Makakatulong ang DVT na mapaliit ang panganib na ito. Narito kung paano:
 
 Sa pamamagitan ng paggamit ng DVT, puwedeng mag-stake ang mga staker habang nasa cold storage ang mga pribadong key ng validator. Magagawa ito sa pamamagitan ng pag-encrypt ng orihinal at kumpletong key ng validator at paghahati nito sa mga key share. Nananatili online ang mga key share at inilalagay sa maraming node, kung kaya, naisasagawa ang distributed na operasyon ng validator. Naisasagawa ito dahil gumagamit ang mga Ethereum validator ng mga BLS signature na additive. Ibig sabihin nito, mabubuo ulit ang kumpletong key sa pamamagitan ng pagsasama-sama ng mga component ng mga ito. Dahil dito, secure na maitatabi offline ng staker ang kumpleto at orihinal na 'master' key ng validator.
 
-### Walang single point of failure {#no-single-point-of-failure}
+### Walang single point of failure \{#no-single-point-of-failure}
 
 Kapag hinati ang isang validator sa maraming operator at maraming machine, malalabanan nito ang mga pagpalya ng mga indibidwal na hardware at software nang hindi nagiging offline. Mapapaliit din ang mga panganib ng pagpalya sa pamamagitan ng paggamit ng iba't ibang configuration ng hardware at software sa mga node sa isang cluster. Hindi available ang ganitong resiliency sa mga configuration ng validator na may isang node - ito ay nagmumula sa DVT layer.
 
 Kung masisira ang isa sa mga component ng machine sa isang cluster (halimbawa, kung may apat na operator sa isang cluster ng validator at gumagamit ang isa sa mga ito ng partikular na client na may bug), tinitiyak ng ibang component na patuloy na tatakbo ang validator.
 
-### Desentralisasyon {#decentralization}
+### Desentralisasyon \{#decentralization}
 
 Mainam para sa Ethereum na magkaroon ng lahat ng hiwalay na pinapatakbong validator na makakaya. Gayunpaman, may ilang staking provider na mas madalas na ginagamit at ang mga ito ang responsable sa malaking bahagi ng kabuuang halaga ng na-stake na ETH sa network. Puwedeng hayaan ng DVT ang mga operator na ito habang pinapanatili ang decentralization ng stake. Ito ay dahil inilalagay sa maraming machine ang mga key para sa bawat validator at kakailanganin ng mas malaking sabwatan para maging mapaminsala ang isang validator.
 
@@ -42,7 +42,7 @@ Kung walang DVT, mas madali para sa mga staking provider na suportahan lang ang 
 6. **Pinapaigting ang diversity** (client, data center, lokasyon, regulasyon, at iba pa.)
 7. **Pinaigting na seguridad** ng pamamahala ng key ng validator
 
-## Paano gumagana ang DVT? {#how-does-dvt-work}
+## Paano gumagana ang DVT? \{#how-does-dvt-work}
 
 Ang DVT (Decentralized Virtual Token) solution ay naglalaman ng mga sumusunod na component:
 
@@ -54,21 +54,21 @@ Ang DVT (Decentralized Virtual Token) solution ay naglalaman ng mga sumusunod na
 
 May built-in na tolerance sa problema ang mga distributed validator at patuloy na tatakbo ang mga ito kahit mag-offline ang ilan sa mga indibidwal na node. Ibig sabihin nito, resilient ang cluster kahit pa maging mapaminsala o lazy ang ilan sa mga node.
 
-## Mga use case ng DVT {#dvt-use-cases}
+## Mga use case ng DVT \{#dvt-use-cases}
 
 May malalaking epekto ang DVT para sa mas malawak na industriya ng staking:
 
-### Mga solo staker {#solo-stakers}
+### Mga solo staker \{#solo-stakers}
 
 Binibigyang-daan din ng DVT ang non-custodial staking sa pamamagitan ng pagpapahintulot sa iyong ilagay ang key ng validator mo sa mga remote node habang pinapanatiling ganap na offline ang kumpletong key. Ibig sabihin nito, hindi kailangang maglaan ng pera ng mga home staker para sa hardware, habang mas malalabanan nila ang mga potensyal na pag-hack sa pamamagitan ng pamamahagi ng mga key share.
 
-### Staking as a service (SaaS) {#saas}
+### Staking as a service (SaaS) \{#saas}
 
 Ang mga operator (tulad ng mga staking pool at institusyonal na staker) na namamahala ng maraming validator ay maaaring gumamit ng DVT upang mapaliit ang kanilang panganib. Sa pamamagitan ng pamamahagi ng kanilang infrastructure, makakapagdagdag ang mga ito ng redundancy sa kanilang mga operasyon at pag-iba-ibahin ang mga uri ng hardware na ginagamit ng mga ito.
 
 Ibinabahagi ng DVT ang responsibilidad para sa pamamahala ng key sa iba't ibang mga node, na nangangahulugang maibabahagi rin ang gastos sa operasyon. Mapapaliit ng DVT ang panganib sa operasyon at gastos sa insurance para sa mga staking provider.
 
-### Staking pools {#staking-pools}
+### Staking pools \{#staking-pools}
 
 Dahil sa mga standard na setup ng validator, ang mga staking pool at liquid staking provider ay inaatasang magkaroon ng iba't ibang antas ng tiwala sa nag-iisang operator dahil ang mga kita at pagkalugi ay ipinapamahagi sa buong pool. Umaasa rin ang mga ito na poprotektahan ng mga operator ang mga signing key dahil, hanggang ngayon, wala nang iba pang opsyon ang mga ito.
 
@@ -78,13 +78,13 @@ Sa pamamagitan ng paggamit ng DVT, lubos na lumiliit ang tiwalang kailangan mula
 
 Ang isa pang benepisyo ng pagpapaliit sa tiwala sa nag-iisang operator ay maaaring pahintulutan ng mga staking pool ang mas bukas at walang pahintulot na partisipasyon ng mga operator. Sa pamamagitan nito, mapapaliit ng mga serbisyo ang kanilang panganib at masusuportahan nila ang decentralization ng Ethereum sa pamamagitan ng paggamit ng mga curated at walang pahintulot na hanay ng mga operator, halimbawa, sa pamamagitan ng pagpapares ng mga home o mas maliit na staker sa mas malalaking staker.
 
-## Mga potensyal na problema sa paggamit ng DVT {#potential-drawbacks-of-using-dvt}
+## Mga potensyal na problema sa paggamit ng DVT \{#potential-drawbacks-of-using-dvt}
 
 - **Karagdagang component** - ang pagdaragdag ng DVT node ay nagdaragdag ng isa pang bahagi na posibleng magkaproblema o maging vulnerable. Ang isang paraan upang maibsan ito ay ang pagtutok sa pagkakaroon ng maraming implementation ng isang DVT node, na tumutukoy sa maraming DVT client (tulad ng pagkakaroon ng maraming client para sa mga layer ng consensus at execution).
 - **Gastos sa operasyon** - dahil ang DVT ang namamahagi ng validator sa maraming partido, nangangailangan ng mas maraming tool para sa operasyon sa halip na isang node lang, kaya mas lumalaki ang gastos sa operasyon.
 - **Posibleng mas mataas na latency** - dahil gumagamit ang DVT ng protocol ng consensus para magkaroon ng consensus sa maraming mode na nagpapatakbo ng isang operator, posible itong magdulot ng mas mataas na latency.
 
-## Further Reading {#further-reading}
+## Further Reading \{#further-reading}
 
 - [Specs ng Ethereum distributed validator (mataas na antas)](https://github.com/ethereum/distributed-validator-specs)
 - [Technical specs ng Ethereum distributed validator](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)

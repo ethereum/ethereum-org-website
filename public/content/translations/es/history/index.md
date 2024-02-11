@@ -5,10 +5,11 @@ lang: es
 sidebarDepth: 1
 ---
 
-# La historia de Ethereum {#the-history-of-ethereum}
+# La historia de Ethereum \{#the-history-of-ethereum}
 
 Una cronología que incluye todos los principales hitos, bifurcaciones y actualizaciones de la cadena de bloques de Ethereum.
 
+{
 <ExpandableCard title="¿Qué son las bifurcaciones?" contentPreview="Changes to the rules of the Ethereum protocol which often include planned technical upgrades.">
 
 Las bifurcaciones se producen cuando es necesario realizar actualizaciones o cambios técnicos importantes en la red; suelen provenir de las [propuestas de mejora de Ethereum (o EIP)](/eips/) y cambian las «reglas» del protocolo.
@@ -18,6 +19,7 @@ Cuando se precisan actualizaciones en un software tradicional y controlado centr
 Estos cambios en las normas pueden crear una división temporal en la red. Los bloques nuevos podrían producirse de acuerdo con las reglas nuevas o con las antiguas. Normalmente las bifurcaciones se acuerdan con antelación para que los clientes adopten los cambios a la vez. Además, de este modo las bifurcaciones actualizadas se convertirán en la cadena principal. Sin embargo, en casos excepcionales, los desacuerdos con respecto a las bifurcaciones pueden provocar que la red permanezca dividida. La más notable es la creación de Ethereum Classic con la [bifurcación DAO] (#dao-fork).
 
 </ExpandableCard>
+}
 
 Vaya directamente a la información sobre algunas de las actualizaciones anteriores más importantes: [La cadena de baliza](/upgrades); [La Fusión](/roadmap/merge/); y [EIP-1559](#london)
 
@@ -25,16 +27,17 @@ Vaya directamente a la información sobre algunas de las actualizaciones anterio
 
 <Divider />
 
-## 2023 {#2023}
+## 2023 \{#2023}
 
-### Shanghai {#shanghai}
+### Shanghai \{#shanghai}
 
 <NetworkUpgradeSummary name="shanghai" />
 
-#### Resumen {#shanghai-summary}
+#### Resumen \{#shanghai-summary}
 
 La actualizacion Shangai permite retirar la participación a la capa de ejecución. Junto con la actualización Capella, habilitó los bloques para aceptar las operaciones de retirada, que permitieran a los interesados retirar sus ETH provenientes de la cadena de baliza para ejecutarlos posteriormente.
 
+{
 <ExpandableCard title="EIP de Shangai" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -46,16 +49,17 @@ La actualizacion Shangai permite retirar la participación a la capa de ejecuci�
 </ul>
 
 </ExpandableCard>
+}
 
 - [Lea la especificación de la actualización Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
 ---
 
-### Capella {#capella}
+### Capella \{#capella}
 
 <NetworkUpgradeSummary name="capella" />
 
-#### Resumen {#capella-summary}
+#### Resumen \{#capella-summary}
 
 La actualizacion Capella es la tercera actualización importante a la capa de consenso (cadena de baliza), que le permite retirar su participación. Capella se produjo de forma sincrónica a la actualización de la capa de ejecución, Shanghai, y activó la funcionalidad de retirada de participaciones.
 
@@ -68,18 +72,19 @@ La actualizacion también proporciona la funcionalidad de barrido automático de
 
 <Divider />
 
-## 2022 {#2022}
+## 2022 \{#2022}
 
-### Paris (La Fusión) {#paris}
+### Paris (La Fusión) \{#paris}
 
 <NetworkUpgradeSummary name="paris" />
 
-#### Resumen {#paris-summary}
+#### Resumen \{#paris-summary}
 
 El paso de la cadena de bloque de la prueba de trabajo a la [dificultad total terminal](/glossary/#terminal-total-difficulty) de 58750000000000000000000 originó La Fusión. Esto ocurrió en el bloque 15537393 el 15 de septiembre de 2022, y dio comienzo a la actualización Paris en el siguiente bloque. Paris supuso la transición denominada [La Fusión](/roadmap/merge/): cuya característica principal consistió en pasar del [algoritmo de minería y lógica de consenso asociada de la](/developers/docs/consensus-mechanisms/pow) prueba de trabajo [a la prueba de participación](/developers/docs/consensus-mechanisms/pos). Paris fue en sí una actualización a los [clientes de ejecución](/developers/docs/nodes-and-clients/#execution-clients) (equivalente a Bellatrix, en la capa de consenso) que les permitió recibir instrucciones de sus <a href="/developers/docs/nodes-and-clients/#consensus-clients">clientes de consenso conectados</a>. Esto requirió que se activara un nuevo conjunto de métodos internos de API, conocido colectivamente como [Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md). Esta fue probablemente la actualización más significativa en la historia de Ethereum desde [Homestead](#homestead)!
 
 - [Lea la especificación de actualización Paris](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/paris.md)
 
+{
 <ExpandableCard title="EIP de Paris" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -88,14 +93,15 @@ El paso de la cadena de bloque de la prueba de trabajo a la [dificultad total te
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### Bellatrix {#bellatrix}
+### Bellatrix \{#bellatrix}
 
 <NetworkUpgradeSummary name="bellatrix" />
 
-#### Resumen {#bellatrix-summary}
+#### Resumen \{#bellatrix-summary}
 
 La actualización Bellatrix fue la segunda actualización programada para la [cadena de baliza](/roadmap/beacon-chain), como prepración de la cadena para [La Fusión](/roadmap/merge/). Incorpora penalizaciones del validador a sus valores completos por inactividad y recortes por malas conductas. Bellatrix también incluye una actualización de las reglas de elección de la bifurcación para preparar la cadena de cara a La Fusión y la transición del último bloque de prueba de trabajo al primer bloque de prueba de participación. Esto incluye sensibilizar a los clientes sobre la dificultad [total de la terminal](/glossary/#terminal-total-difficulty) de 58750000000000000000000.
 
@@ -103,16 +109,17 @@ La actualización Bellatrix fue la segunda actualización programada para la [ca
 
 ---
 
-### Gray Glacier {#gray-glacier}
+### Gray Glacier \{#gray-glacier}
 
 <NetworkUpgradeSummary name="grayGlacier" />
 
-#### Resumen {#gray-glacier-summary}
+#### Resumen \{#gray-glacier-summary}
 
 La actualización de la red Gray Glacier hizo retroceder la [bomba de dificultad](/glossary/#difficulty-bomb) tres meses. Este es el único cambio introducido en esta actualización, y es similar en naturaleza a las actualizaciones [Arrow Glacier](#arrow-glacier) y [Muir Glacier](#muir-glacier). Se han llevado a cabo cambios similares en las actualizaciones de red [Byzantium](#byzantium),[Constantinople](#constantinople) y [London](#london).
 
 - [EF Blog: anuncio de actualización de Gray Glacier](https://blog.ethereum.org/2022/06/16/gray-glacier-announcement/)
 
+{
 <ExpandableCard title="EIPs de Gray Glacier" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -120,22 +127,24 @@ La actualización de la red Gray Glacier hizo retroceder la [bomba de dificultad
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
-## 2021 {#2021}
+## 2021 \{#2021}
 
-### Arrow Glacier {#arrow-glacier}
+### Arrow Glacier \{#arrow-glacier}
 
 <NetworkUpgradeSummary name="arrowGlacier" />
 
-#### Resumen {#arrow-glacier-summary}
+#### Resumen \{#arrow-glacier-summary}
 
 La actualización de la red Arrow Glacier hizo retroceder la [bomba de dificultad](/glossary/#difficulty-bomb) varios meses. Este es el único cambio introducido en esta actualización, y es similar en naturaleza a la actualización de [Muir Glacier](#muir-glacier). Cambios similares han sido realizados en las actualizaciones de red [Byzantium](#byzantium),[Constantinopla](#constantinople) y [Londres](#london).
 
 - [Blog de EF: anuncio de actualización de Arrow Glacier](https://blog.ethereum.org/2021/11/10/arrow-glacier-announcement/)
 - [Ethereum Cat Herders: actualización de Arrow Glacier de Ethereum](https://medium.com/ethereum-cat-herders/ethereum-arrow-glacier-upgrade-e8d20fa4c002)
 
+{
 <ExpandableCard title="EIP de Arrow Glacier" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -143,20 +152,21 @@ La actualización de la red Arrow Glacier hizo retroceder la [bomba de dificulta
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### Altair {#altair}
+### Altair \{#altair}
 
 <NetworkUpgradeSummary name="altair" />
 
-#### Resumen {#altair-summary}
+#### Resumen \{#altair-summary}
 
 La actualización Altair fue la primera programada para la [cadena de baliza](/roadmap/beacon-chain). Añadió soporte para los «comités de sincronización», permitiendo clientes ligeros y un aumento de la inactividad del validador y de las penalizaciones de recorte a medida que avanzaba el desarrollo hacia La Fusión.
 
 - [Lea las especificaciones de actualización Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />¡Dato curioso! {#altair-fun-fact}
+#### <emoji text=":tada:" size={1} me="0.5rem" />¡Dato curioso! \{#altair-fun-fact}
 
 Altair fue la primera gran actualización de red que ha tenido un periodo de implementación preciso. Cada una de las actualizaciones anteriores se habían basado en un número de bloques declarados en la cadena de prueba de trabajo, donde los tiempos de bloque varían. La cadena de baliza no requiere resolución para la prueba de trabajo y, en lugar de ello, funciona en un sistema épocas basado en el tiempo, que consiste en «ranuras» de tiempo de doce segundos durante los cuales los validadores pueden proponer bloques. Por esta razón sabíamos exactamente cuándo alcanzaríamos la época 74.240 y Altair vería la luz.
 
@@ -164,11 +174,11 @@ Altair fue la primera gran actualización de red que ha tenido un periodo de imp
 
 ---
 
-### London {#london}
+### London \{#london}
 
 <NetworkUpgradeSummary name="london" />
 
-#### Resumen {#london-summary}
+#### Resumen \{#london-summary}
 
 La actualización London introdujo [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), que ha transformado el mercado de las comisiones de las transacciones, junto con cambios en la forma en que se manejan los reembolsos de gas y el plan [Era de hielo](/glossary/#ice-age).
 
@@ -176,6 +186,7 @@ La actualización London introdujo [EIP-1559](https://eips.ethereum.org/EIPS/eip
 - [Lea el anuncio de Ethereum Foundation.](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Lea la explicación de Ethereum Cat Herders.](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)
 
+{
 <ExpandableCard title="EIP de London" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -187,20 +198,22 @@ La actualización London introdujo [EIP-1559](https://eips.ethereum.org/EIPS/eip
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### Berlin {#berlin}
+### Berlin \{#berlin}
 
 <NetworkUpgradeSummary name="berlin" />
 
-#### Resumen {#berlin-summary}
+#### Resumen \{#berlin-summary}
 
 La actualización Berlin optimizó el coste del gas para ciertas acciones de EVM, y aumentó la compatibilidad con múltiples tipos de transacciones.
 
 - [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2021/03/08/ethereum-berlin-upgrade-announcement/)
 - [Leer la explicación de Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/the-berlin-upgrade-overview-2f7ad710eb80)
 
+{
 <ExpandableCard title="EIP de Berlin" contentPreview="Official improvements included in this upgrade.">
 
 <ul>
@@ -211,16 +224,17 @@ La actualización Berlin optimizó el coste del gas para ciertas acciones de EVM
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
-## 2020 {#2020}
+## 2020 \{#2020}
 
-### El origen de la cadena de baliza {#beacon-chain-genesis}
+### El origen de la cadena de baliza \{#beacon-chain-genesis}
 
 <NetworkUpgradeSummary name="beaconChainGenesis" />
 
-#### Resumen {#beacon-chain-genesis-summary}
+#### Resumen \{#beacon-chain-genesis-summary}
 
 La [cadena de baliza](/roadmap/beacon-chain/) necesita 16.384 depósitos de 32 ETH apostados para enviarse de forma segura. Esto sucedió el 27 de noviembre, lo que significa que la cadena de baliza comenzó a producir su cadena de bloques a partir del 1 de diciembre de 2020. Este es un importante primer paso para lograr la[ vision de Ethereum](/roadmap/vision/).
 
@@ -232,11 +246,11 @@ La [cadena de baliza](/roadmap/beacon-chain/) necesita 16.384 depósitos de 32 E
 
 ---
 
-### Contrato de depósito de participación implementado {#staking-deposit-contract}
+### Contrato de depósito de participación implementado \{#staking-deposit-contract}
 
 <NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
-#### Resumen {#deposit-contract-summary}
+#### Resumen \{#deposit-contract-summary}
 
 El contrato de depósito de participación introdujo la [participación](/glossary/#staking) en el ecosistema de Ethereum. A pesar de ser un contrato en la [red principal](/glossary/#mainnet), ha tenido impacto directo sobre la secuenciación de lanzamiento de la [cadena de baliza](/roadmap/beacon-chain/), una importante [ actualización de Ethereum](/roadmap/).
 
@@ -248,17 +262,18 @@ El contrato de depósito de participación introdujo la [participación](/glossa
 
 ---
 
-### Muir Glacier {#muir-glacier}
+### Muir Glacier \{#muir-glacier}
 
 <NetworkUpgradeSummary name="muirGlacier" />
 
-#### Resumen {#muir-glacier-summary}
+#### Resumen \{#muir-glacier-summary}
 
 La bifurcación Muir Glacier introdujo un retraso en la [bomba de dificultad](/glossary/#difficulty-bomb). El aumento de la dificultad del bloque del mecanismo de consenso de la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow/) amenazó con degradar la usabilidad de Ethereum, debido al incremento de los tiempos de espera para enviar transacciones y utilizar DApps.
 
 - [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2019/12/23/ethereum-muir-glacier-upgrade-announcement/)
 - [Leer la explicación de Ethereum Cat Herders](https://medium.com/ethereum-cat-herders/ethereum-muir-glacier-upgrade-89b8cea5a210)
 
+{
 <ExpandableCard title="EIP de Muir Glacier" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -266,16 +281,17 @@ La bifurcación Muir Glacier introdujo un retraso en la [bomba de dificultad](/g
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
-## 2019 {#2019}
+## 2019 \{#2019}
 
-### Istanbul {#istanbul}
+### Istanbul \{#istanbul}
 
 <NetworkUpgradeSummary name="istanbul" />
 
-#### Resumen {#istanbul-summary}
+#### Resumen \{#istanbul-summary}
 
 La bifurcación de Istanbul:
 
@@ -287,6 +303,7 @@ La bifurcación de Istanbul:
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2019/11/20/ethereum-istanbul-upgrade-announcement/)
 
+{
 <ExpandableCard title="EIP de Estambul" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -299,14 +316,15 @@ La bifurcación de Istanbul:
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### Constantinople {#constantinople}
+### Constantinople \{#constantinople}
 
 <NetworkUpgradeSummary name="constantinople" />
 
-#### Resumen {#constantinople-summary}
+#### Resumen \{#constantinople-summary}
 
 La bifurcación Constantinople:
 
@@ -316,6 +334,7 @@ La bifurcación Constantinople:
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
+{
 <ExpandableCard title="Las EIP de Constantinople" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -326,16 +345,17 @@ La bifurcación Constantinople:
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
-## 2017 {#2017}
+## 2017 \{#2017}
 
-### Byzantium {#byzantium}
+### Byzantium \{#byzantium}
 
 <NetworkUpgradeSummary name="byzantium" />
 
-#### Resumen {#byzantium-summary}
+#### Resumen \{#byzantium-summary}
 
 La bifurcación de Bizantium:
 
@@ -346,6 +366,7 @@ La bifurcación de Bizantium:
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2017/10/12/byzantium-hf-announcement/)
 
+{
 <ExpandableCard title="EIP de Bizantium" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -361,16 +382,17 @@ La bifurcación de Bizantium:
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
-## 2016 {#2016}
+## 2016 \{#2016}
 
-### Spurious Dragon {#spurious-dragon}
+### Spurious Dragon \{#spurious-dragon}
 
 <NetworkUpgradeSummary name="spuriousDragon" />
 
-#### Resumen {#spurious-dragon-summary}
+#### Resumen \{#spurious-dragon-summary}
 
 La bifurcación Spurious Dragon fue la segunda respuesta a los ataques de denegación de servicio (DoS) a la red (septiembre/octubre de 2016) e incluye:
 
@@ -380,6 +402,7 @@ La bifurcación Spurious Dragon fue la segunda respuesta a los ataques de denega
 
 [Lea el anuncio de la Fundación Ethereum](https://blog.ethereum.org/2016/11/18/hard-fork-no-4-spurious-dragon/)
 
+{
 <ExpandableCard title="EIP de Spurious Dragon" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -390,14 +413,15 @@ La bifurcación Spurious Dragon fue la segunda respuesta a los ataques de denega
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### Tangerine Whistle {#tangerine-whistle}
+### Tangerine Whistle \{#tangerine-whistle}
 
 <NetworkUpgradeSummary name="tangerineWhistle" />
 
-#### Resumen {#tangerine-whistle-summary}
+#### Resumen \{#tangerine-whistle-summary}
 
 La bifurcación Tangerine Whistle fue la primera respuesta a los ataques de denegación de servicio (DoS) a la red (septiembre/octubre de 2016) e incluyó:
 
@@ -405,6 +429,7 @@ La bifurcación Tangerine Whistle fue la primera respuesta a los ataques de dene
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2016/10/18/faq-upcoming-ethereum-hard-fork/)
 
+{
 <ExpandableCard title="EPI de Tangerine Whistle" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -413,14 +438,15 @@ La bifurcación Tangerine Whistle fue la primera respuesta a los ataques de dene
 </ul>
 
 </ExpandableCard>
+}
 
 ---
 
-### La bifuración DAO {#dao-fork}
+### La bifuración DAO \{#dao-fork}
 
 <NetworkUpgradeSummary name="daoFork" />
 
-#### Resumen {#dao-fork-summary}
+#### Resumen \{#dao-fork-summary}
 
 La bifurcación DAO surgió como respuesta al [ataque de DAO de 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/) donde un contrato inseguro [DAO](/glossary/#dao) fue drenando más de 3,6 millones de ETH en un hackeo. La bifurcación movió los fondos del contrato defectuoso a un [nuevo contrato](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) con una única función: la de retirada. Cualquiera que haya perdido fondos podría retirar 1 ETH por cada 100 tókenes DAO en sus carteras.
 
@@ -432,16 +458,17 @@ Algunos mineros se negaron a bifurcar porque el incidente de la DAO no era un de
 
 ---
 
-### Homestead {#homestead}
+### Homestead \{#homestead}
 
 <NetworkUpgradeSummary name="homestead" />
 
-#### Resumen {#homestead-summary}
+#### Resumen \{#homestead-summary}
 
 Homestead: la bifurcación con perspectivas de futuro. Incluyó varios cambios de protocolo y un cambio de red que concedió a Ethereum la capacidad de hacer más actualizaciones de red.
 
 [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2016/02/29/homestead-release/)
 
+{
 <ExpandableCard title="EIP de Homestead" contentPreview="Official improvements included in this fork.">
 
 <ul>
@@ -451,16 +478,17 @@ Homestead: la bifurcación con perspectivas de futuro. Incluyó varios cambios d
 </ul>
 
 </ExpandableCard>
+}
 
 <Divider />
 
-## 2015 {#2015}
+## 2015 \{#2015}
 
-### Deshielo Frontier {#frontier-thawing}
+### Deshielo Frontier \{#frontier-thawing}
 
 <NetworkUpgradeSummary name="frontierThawing" />
 
-#### Resumen {#frontier-thawing-summary}
+#### Resumen \{#frontier-thawing-summary}
 
 La bifurcación de deshielo Frontier elevó el limite del [gas](/glossary/#gas) de 5.000 por [bloque](/glossary/#block) y fijó el precio por defecto en 51 [gwei](/glossary/#gwei). Esto permitió que se realizaran transacciones que requiriesen 21.000 unidades de gas. La [bomba de dificultad](/glossary/#difficulty-bomb)se introdujo para asegurar un futuro de bifurcación dura a la [prueba de participación](/glossary/#pos).
 
@@ -469,11 +497,11 @@ La bifurcación de deshielo Frontier elevó el limite del [gas](/glossary/#gas) 
 
 ---
 
-### Frontier {#frontier}
+### Frontier \{#frontier}
 
 <NetworkUpgradeSummary name="frontier" />
 
-#### Resumen {#frontier-summary}
+#### Resumen \{#frontier-summary}
 
 Frontier fue una implementación en vivo, pero básica, del proyecto Ethereum. Siguió a la exitosa fase de pruebas Olympic. Estaba destinada a usuarios técnicos, específicamente a desarrolladores. [Los bloques](/glossary/#block) tenían un límite de [gas](/glossary/#gas) de 5.000. Este período de «deshielo» permitió a los mineros iniciar sus operaciones y a los primeros adoptantes instalar sus clientes sin tener que «precipitarse».
 
@@ -481,9 +509,9 @@ Frontier fue una implementación en vivo, pero básica, del proyecto Ethereum. S
 
 <Divider />
 
-## 2014 {#2014}
+## 2014 \{#2014}
 
-### Venta de ether {#ether-sale}
+### Venta de ether \{#ether-sale}
 
 <NetworkUpgradeSummary name="etherSale" />
 
@@ -493,7 +521,7 @@ El ether salió oficialmente a la venta durante 42 días. Podía comprarse con B
 
 ---
 
-### Protocolo publicado {#yellowpaper}
+### Protocolo publicado \{#yellowpaper}
 
 <NetworkUpgradeSummary name="yellowpaperRelease" />
 
@@ -503,9 +531,9 @@ El protocolo, escrito por el Dr. Gavin Wood, es una definición técnica del pro
 
 <Divider />
 
-## 2013 {#2013}
+## 2013 \{#2013}
 
-### Protocolo publicado {#whitepaper}
+### Protocolo publicado \{#whitepaper}
 
 <NetworkUpgradeSummary name="whitepaperRelease" />
 

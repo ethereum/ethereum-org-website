@@ -13,13 +13,13 @@ summaryPoint3: A tokenek és NFT-k új lehetősége adnak a tartalom fizetőeszk
 
 A közösségi hálózatok komoly szerepet töltenek be a napi kommunikációban és kapcsolódásban. Ugyanakkor ezen platformok centralizált irányítása számos problémát teremtett: adatlopás, szerverleállás, kizárás a platformról, cenzúra és a magán jelleg megsértése csak néhány kompromisszum, amit a közösségi média gyakran elszenved. E problémák megoldása érdekében a fejlesztők az Ethereumon építenek közösségi hálózatokat. A decentralizált közösségi hálózatok a hagyományos platformok számtalan problémájára megoldást nyújtanak, ás javítják a felhasználói élményt is.
 
-## Mik azok a decentralizált közösségi hálózatok? {#what-are-decentralized-social-networks}
+## Mik azok a decentralizált közösségi hálózatok? \{#what-are-decentralized-social-networks}
 
 A decentralizált közösségi hálózatok olyan blokkláncalapú platformok, melyeken a felhasználók kommunikálnak egymással, illetve tartalmat publikálnak és terjesztenek. Mivel ezek az alkalmazások a blokkláncon működnek, ezért képesek decentralizáltan üzemelni, ellenállnak a cenzúrának és a jogtalan kontrollnak.
 
 Számos decentralizált közösségi hálózat létezik az olyan közösségimédia-szolgáltatások alternatívájaként, mint a Facebook, LinkedIn, Twitter és Medium. Ugyanakkor a blokkláncon működtetett közösségi hálózatok olyan jellemzőkkel is bírnak, melyek a hagyományos platformok fölé helyezik őket.
 
-### Hogyan működnek a decentralizált közösségi hálózatok? {#decentralized-social-networks-overview}
+### Hogyan működnek a decentralizált közösségi hálózatok? \{#decentralized-social-networks-overview}
 
 A decentralizált közösségi hálózatok valójában [decentralizált alkalmazások (dapp)](/dapps/), melyeket a blokkláncon létrehozott [okosszerződések](/developers/docs/smart-contracts/) működtetnek. A szerződés programkódja adja ezen alkalmazások hátterét és meghatározza azok üzleti logikáját.
 
@@ -31,7 +31,7 @@ A decentralizált tárhelyek használatával, mint amilyen az [InterPlanetary Fi
 
 Számos blokkláncalapú közösségi platform rendelkezik saját tokenekkel, hogy a reklámbevétel helyett ezzel biztosítsa a pénzforrások létrehozását. A felhasználók megvehetik ezeket a tokeneket, hogy bizonyos funkciókat használhassanak, vásárolhassanak az alkalmazáson belül, vagy akár ezzel díjazzák a kedvenc tartalomkészítőiket.
 
-## A decentralizált közösségi hálózatok előnyei {#benefits}
+## A decentralizált közösségi hálózatok előnyei \{#benefits}
 
 1. A decentralizált közösségi hálózatok ellenállnak a cenzúrának és bárki számára elérhetők. Tehát a felhasználókat nem lehet letiltani, kizárni a platformról vagy önkényesen korlátozni.
 
@@ -47,33 +47,33 @@ Számos blokkláncalapú közösségi platform rendelkezik saját tokenekkel, ho
 
 7. A decentralizált közösségi hálózatok decentralizált adattároláson alapulnak, nem centralizált adatbázisokon, így jobban meg tudják védeni a felhasználók adatait.
 
-## A decentralizált közösségi hálózatok az Ethereumon {#ethereum-social-networks}
+## A decentralizált közösségi hálózatok az Ethereumon \{#ethereum-social-networks}
 
 Az Ethereum-hálózat lett a decentralizált közösségi média fejlesztőinek kedvelt helye, mivel népszerű tokenekkel (ERC-20/ERC-721) és masszív felhasználói bázissal rendelkezik. Néhány Ethereumon alapuló közösségi hálózat:
 
-### Peepeth {#peepeth}
+### Peepeth \{#peepeth}
 
 A [Peepeth](https://peepeth.com/) egy mikroblogoló, a Twitterhez hasonló platform. Az Ethereum blokkláncon működik, és IPFS-t használ a felhasználói adatok tárolására.
 
 A felhasználók rövid üzeneteket tudnak küldeni, amit „peep”-nek neveznek, és nem lehet törölni vagy módosítani azokat. Az alkalmazáson belül lehetséges borravalót gyűjteni vagy adni ether (ETH) formájában.
 
-### Mirror {#mirror}
+### Mirror \{#mirror}
 
 A [Mirror](https://mirror.xyz/) egy web3-alapú, decentralizált és a felhasználók által üzemeltetett íróplatform. A felhasználók ingyen olvashatnak és írhatnak azáltal, hogy a saját tárcáikkal kapcsolódnak. Emellett gyűjthetnek írásokat és feliratkozhatnak a kedvenc íróikra is.
 
 Az itt publikált írások állandóan elérhetők az Arweave révén, ami egy decentralizált tárhely, és gyűjthető [NFT (nem helyettesíthető token)](/nft/) készíthető belőlük, más néven szöveg NFT. A szöveg NFT-t az írók teljesen ingyen hozhatják létre, a gyűjtés pedig az Ethereumra épülő második blokkláncrétegen (L2) történik, így a tranzakciók olcsók, gyorsak és környezetbarátak.
 
-### MINDS {#minds}
+### MINDS \{#minds}
 
 A [MINDS](https://www.minds.com/) az egyik legnépszerűbb decentralizált közösségi hálózat. A Facebookhoz hasonlóan működik, és milliónyi felhasználója van.
 
 A felhasználók a platform saját ERC-20 tokenjével $MIND fizetnek a dolgokért. A felhasználók szerezhetnek azáltal is $MIND tokent, hogy népszerű tartalmat publikálnak, hozzájárulnak az ökoszisztémához és ajánlják a platformot másoknak.
 
-## Web2 közösségi hálózatok az Ethereumon {#web2-social-networks-and-ethereum}
+## Web2 közösségi hálózatok az Ethereumon \{#web2-social-networks-and-ethereum}
 
 Nem csak a [web3](/web3/) közösségi platformok használják a blokklánc-technológiát a közösségi médiához. Számos centralizált platform is integrálni szeretné az Ethereumot a saját infrastruktúrájába:
 
-### Reddit {#reddit}
+### Reddit \{#reddit}
 
 A Reddit olyan [közösségi pontokat](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users) használ, melyek [ERC-20 tokenek](/developers/docs/standards/tokens/erc-20/), és a felhasználók a minőségi tartalmak publikálására, illetve az online közösséghez (subreddit) való hozzájárulásra kapnak belőle. Ezeket a tokeneket a felhasználó egy subreddit fórumon belül be tudja váltani, hogy [különleges jogokat vagy bevételt szerezzen](https://www.reddit.com/community-points/). A Reddit az Arbitrummal működik együtt, amely egy olyan [második blokkláncréteg (L2)](/layer-2/), ami rollup segítségével teszi skálázhatóvá az Ethereum-tranzakciókat.
 
@@ -81,24 +81,24 @@ A program már elérhető, az r/CryptoCurrency subreddit [a „Moons”-nak neve
 
 Miután a bétatesztelés lezárult a Rinkeby-teszthálózaton, a Reddit közösségi pontok elérhetővé válnak az [Arbitrum Nova](https://nova.arbitrum.io/) blokkláncon, ami a [melléklánc](/developers/docs/scaling/sidechains/) és az [optimista rollup](/developers/docs/scaling/optimistic-rollups/) jellemzőit kombinálja. A felhasználók nemcsak különleges funkciókra használhatják pontjaikat, hanem eladhatják azokat hagyományos valutáért is a tőzsdéken. Emellett az adott felhasználó közösségi pontjainak összege meghatározza, hogy a közösségen belül milyen mértékben vehetnek részt a döntésekben.
 
-### Twitter {#twitter}
+### Twitter \{#twitter}
 
 2021. januárjában elindult a Twitter Blue, amely [ támogatja az NFT-használatot](https://mashable.com/article/twitter-blue-nft-profile-picture), így a felhasználók hozzákapcsolhatják a tárcáikat és profilképként választhatnak onnan NFT-t. Ezt követően a közösségi média tulajdonos vállalata [bejelentette tervét](https://www.theverge.com/2021/8/16/22627435/twitter-bluesky-lead-jay-graber-decentralized-social-web), hogy a jövőben decentralizált közösségi hálózatot hoz létre.
 
-### Instagram {#instagram}
+### Instagram \{#instagram}
 
 2022. májusában az [Instagram bejelentette, hogy támogatja az NFT-k használatát](https://about.instagram.com/blog/announcements/instagram-digital-collectibles) az Ethereum- és a Polygon-hálózatokról. A felhasználók közvetlenül az Instagramra, az Ethereum-tárcájukhoz kapcsolódva posztolhatják az NFT-ket.
 
-## A decentralizált közösségi hálózatok használata {#use-decentralized-social-networks}
+## A decentralizált közösségi hálózatok használata \{#use-decentralized-social-networks}
 
 - **[Status.im](https://status.im/)** – _A Status egy biztonságos üzenetküldő alkalmazás, mely nyílt forráskódú, peer-to-peer protokollt használ, és elejétől a végéig titkosítva van, hogy megvédje az üzeneteket._
 - **[Mirror.xyz](https://mirror.xyz/)** – _A Mirror egy decentralizált, felhasználók által működtetett publikáló platform az Ethereumon, hogy a felhasználók finanszírozást gyűjtsenek az ötleteiknek, bevételt kapjanak a tartalom után és értékes közösségeket építsenek._
 - **[Lens Protocol](https://lens.xyz/)** – _A Lens Protocol egy decentralizált közösségi gráf, ahol a tartalomkészítők tulajdonolják az általuk létrehozott tartalmat a decentralizált internet teljes hosszában._
 - **[Farcaster](https://farcaster.xyz/)** – _A Farcaster egy kellően decentralizált közösségi hálózat. Egy nyitott protokoll, amely több klienst is támogat, mint például az e-mail-funkció._
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
-### Cikkek {#articles}
+### Cikkek \{#articles}
 
 - [A decentralizált közösségi média: útmutató a web3 közösségi alkalmazásokhoz](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [A közösségi hálózatok világa a következő nagy decentralizálási lehetőség](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
@@ -108,13 +108,13 @@ Miután a bétatesztelés lezárult a Rinkeby-teszthálózaton, a Reddit közös
 - [A közösségi média hálózatok megérkeztek a blokkláncra](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
 - [Elégséges decentralizáció a közösségi hálózatok számára](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
-### Videók {#videos}
+### Videók \{#videos}
 
 - [A decentralizált közösségi média bemutatása](https://www.youtube.com/watch?v=UdT2lpcGvcQ) — _Coinmarketcap_
 - [DeSo a blokklánc decentralizálja a közösségi médiát](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Bloomberg Technology_
 - [A decentralizált közösségi média jövője – Balaji Srinivasan, Vitalik Buterin, Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) — _ETHGlobal_
 
-### Közösségek {#communities}
+### Közösségek \{#communities}
 
 - [Status Discord-szerver](https://discord.com/invite/3Exux7Y)
 - [Mirror Discord-szerver](https://discord.com/invite/txuCHcE8wV)

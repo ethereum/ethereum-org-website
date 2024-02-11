@@ -4,7 +4,7 @@ description: The policy we use when adding exchanges to ethereum.org
 lang: en
 ---
 
-# Adding Ethereum exchanges {#adding-ethereum-exchanges}
+# Adding Ethereum exchanges \{#adding-ethereum-exchanges}
 
 Anyone is free to suggest new exchanges on ethereum.org.
 
@@ -18,7 +18,7 @@ Because of this context, we need some specific information when you suggest an e
 
 **NOTE:** If you want to list a decentralized exchange, take a look at our [policy for listing wallets and dapps](/contributing/adding-products/).
 
-## What we need {#what-we-need}
+## What we need \{#what-we-need}
 
 - The geographical restrictions that apply to the exchange. Geographic restrictions associated with the exchange should be detailed on a dedicated page or section of the exchange's website.
 - The currencies users can use to buy ETH
@@ -31,7 +31,7 @@ And so that ethereum.org can be more confident that the exchange is a legitimate
 
 ---
 
-## Add your exchange {#add-exchange}
+## Add your exchange \{#add-exchange}
 
 If you want to add an exchange to ethereum.org, create an issue on GitHub.
 

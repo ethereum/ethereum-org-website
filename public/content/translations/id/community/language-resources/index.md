@@ -4,7 +4,7 @@ description: Sumber non-Inggris untuk belajar tentang Ethereum
 lang: id
 ---
 
-# Sumber bahasa {#language-resources}
+# Sumber bahasa \{#language-resources}
 
 Komunitas Ethereum berskala global dan terdiri dari jutaan penutur non-Inggris.
 
@@ -14,15 +14,15 @@ Jika Anda lebih suka membaca dalam bahasa asli Anda atau mengetahui seseorang ya
 
 Tahu sumber daya edukasi dalam bahasa Anda? [Buka masalah](https://github.com/ethereum/ethereum-org-website/issues/new/choose) untuk menambahkannya ke daftar!
 
-## Sumber Daya Ethereum.org {#ethereum-org}
+## Sumber Daya Ethereum.org \{#ethereum-org}
 
 Ethereum.org diterjemahkan oleh penutur asli ke lebih dari 40 bahasa yang dapat Anda temukan di [halaman bahasa](/languages) kami.
 
 Jika Anda adalah dwibahasawan dan dapat menolong kami menjangkau lebih banyak orang, Anda juga dapat terlibat dalam [Program Penerjemahan ethereum.org](/contributing/translation-program/#translation-program) dan menolong kami menerjemahkan situs web.
 
-## Sumber komunitas {#community}
+## Sumber komunitas \{#community}
 
-### Portugis Brasil {#br-pt}
+### Portugis Brasil \{#br-pt}
 
 **Berita**
 
@@ -38,7 +38,7 @@ Jika Anda adalah dwibahasawan dan dapat menolong kami menjangkau lebih banyak or
 - [Cointimes](http://www.cointimes.com.br/) - berita dan edukasi tentang mata uang kripto
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - suatu panduan yang menjawab pertanyaan yang paling sering diajukan dan pertanyaan kripto yang paling fundamental
 
-### Mandarin {#zh}
+### Mandarin \{#zh}
 
 **Sumber umum**
 
@@ -65,21 +65,21 @@ Jika Anda adalah dwibahasawan dan dapat menolong kami menjangkau lebih banyak or
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - sebuah akun WeChat, yang menjelaskan kriptografi, keamanan, dll.
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - sebuah akun WeChat, yang menjelaskan tentang teknologi zk
 
-### Perancis {#fr}
+### Perancis \{#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) - Ethereum France mengelola aksi, membuat konten, dan mendorong diskusi tentang Ethereum
 - [Ethereum.fr](https://ethereum.fr/) - Berita dan edukasi tentang Ethereum
 - [BanklessFR](https://banklessfr.substack.com/) - Buletin Bankless dalam bahasa Perancis
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - forum mata uang kripto dengan sebuah subhalaman Ethereum
 
-### Jerman {#de}
+### Jerman \{#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - menggunakan Solidity
 - [Microsoft Learn (Kontrak pintar)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - menulis kontrak pintar Ethereum dengan Solidity
 - [Microsoft Learn (Jaringan Ethereum)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - terhubung dengan dan menyebarkan jaringan Ethereum
 - [Microsoft Learn (blockchain)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - pintu masuk ke pengembangan blokchain
 
-### Italia {#it}
+### Italia \{#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - Ethereum edukasi, aksi, dan berita, yang berfokus pada kontrak pintar dan teknologi blockchain
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - siniar Ethereum dalam bahasa Italia
@@ -87,7 +87,7 @@ Jika Anda adalah dwibahasawan dan dapat menolong kami menjangkau lebih banyak or
 - [Microsoft Learn (Kontrak pintar)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - mempelajari tentang menulis kontrak pintar dengan menggunakan Solidity
 - [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - membuat antarmuka pengguna dengan aplikasi terdesentralisasi
 
-### Spanyol {#es}
+### Spanyol \{#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - pelatihan, aksi, dan blog blockchain, DeFi, dan tata kelola
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - panduan Ethereum untuk pemula dalam bahasa Spanyol
@@ -96,11 +96,11 @@ Jika Anda adalah dwibahasawan dan dapat menolong kami menjangkau lebih banyak or
 - [Curso Introducción a Seguridad y Hacking en Ethereum](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - memahami kerentanan umum dan masalah keamanan dalam kontrak pintar yang nyata
 - [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - mempelajari cara kontrak pintar DeFi bekerja di Solidity dan membuat Pembuat Pasar Otomatis Anda sendiri
 
-### Turki {#tr}
+### Turki \{#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - pelatihan yang berfokus terhadap blokchain dan mata uang kripto
 
-### Vietnam {#vi}
+### Vietnam \{#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - tinjauan umum tentang Ethereum, dApps, dompet, dan Pertanyaan Yang Paling Sering Diajukan
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - platform web dengan subhalaman untuk berita dan edukasi tentang Ethereum

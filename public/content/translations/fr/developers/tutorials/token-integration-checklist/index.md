@@ -33,13 +33,13 @@ Pour suivre cette liste de vérification, vous voudrez avoir cette sortie de Sli
 - slither-prop . --contract ContractName # requires configuration, and use of Echidna and Manticore
 ```
 
-## Considérations générales {#general-considerations}
+## Considérations générales \{#general-considerations}
 
 - **Le contrat fait l'objet d'un contrôle de sécurité.** Évitez d'interagir avec des contrats qui ne font pas l'objet d'un quelconque contrôle de sécurité. Vérifiez la durée de l'évaluation (c'est-à-dire le « niveau d'effort »), la réputation de la société de sécurité, le nombre et la gravité des découvertes.
 - **Vous avez contacté les développeurs**. Vous devrez peut-être avertir leur équipe d'un incident. Recherchez des contacts appropriés sur[ blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts).
 - **Ils ont une liste de diffusions de sécurité pour les annonces critiques.** Leur équipe devrait informer les utilisateurs (comme vous !) lorsque des problèmes critiques sont trouvés ou lorsque des mises à jour se produisent.
 
-## Conformité ERC {#erc-conformity}
+## Conformité ERC \{#erc-conformity}
 
 Slither inclut un utilitaire, [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance), qui vérifie la conformité d'un token à de nombreuses normes ERC connexes. Utilisez slither-check-erc pour vérifier ceci:
 
@@ -58,14 +58,14 @@ Enfin, il y a certaines caractéristiques qui sont difficiles à détecter autom
 - **Transfer et transferFrom ne doivent pas prendre de frais.** Les tokens déflationnistes peuvent conduire à des comportements inattendus.
 - **L'intérêt potentiel gagné à partir d'un token est pris en compte.** Certains tokens distribuent des intérêts aux détenteurs de jetons. Cet intérêt pourrait être pris au piège dans un contrat s'il n'est pas pris en compte.
 
-## Composition de contrat {#contract-composition}
+## Composition de contrat \{#contract-composition}
 
 - **Le contrat évite la complexité inutile.** Le jeton devrait être un simple contrat ; un jeton avec un code compliqué nécessite un niveau de contrôle accru. Utilisez [l'imprimante human-summary](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) de Slither pour identifier les codes complexes.
 - **Le contrat utilise SafeMath.** Les contrats qui n'utilisent pas SafeMath nécessitent un examen approfondi. Inspectez le contrat manuellement pour l'utilisation de SafeMath.
 - **Le contrat ne possède que quelques fonctions non liées au jeton.** Les fonctions non relatives au jeton augmentent la probabilité d'un problème dans le contrat. Utilisez [l'afficheur contract-summary](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) de Slither pour revoir largement le code utilisé dans le contrat.
 - **Le jeton n'a qu'une seule adresse.** Les jetons avec plusieurs points d'entrée pour les mises à jour de solde peuvent casser la comptabilité interne basée sur l'adresse (ex. `balances[token_address][msg.sender]` pourrait ne pas refléter le solde réel).
 
-## Privilèges du propriétaire {#owner-privileges}
+## Privilèges du propriétaire \{#owner-privileges}
 
 - **Le jeton ne peut pas être mis à niveau.** Les contrats modifiables peuvent changer leurs règles au fil du temps. Utilisez l'imprimante [l'imprimante human-summary](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) de Slither pour déterminer si une mise à niveau du contrat est possible.
 - **Le propriétaire a des capacités de frappe limitées.** Les propriétaires malveillants ou compromis peuvent abuser des capacités de frappe. Utilisez [l'imprimante human-summary](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) de Slither pour examiner les capacités de frappe et envisagez de revoir le code manuellement .
@@ -73,7 +73,7 @@ Enfin, il y a certaines caractéristiques qui sont difficiles à détecter autom
 - **Le propriétaire ne peut pas mettre sur liste noire le contrat.** Les propriétaires malveillants ou compromis peuvent piéger des contrats en s'appuyant sur des jetons avec une liste noire. Identifiez manuellement les fonctionnalités de la liste noire.
 - **L'équipe derrière le jeton est connue et peut être tenue responsable d'abus.** Les contrats ayant des équipes de développement anonymes, ou qui résident dans des juridictions douteuses nécessitent un niveau d'examen plus rigoureux.
 
-## Rareté des jetons {#token-scarcity}
+## Rareté des jetons \{#token-scarcity}
 
 Rechercher des problèmes liés à la rareté des jetons nécessite un examen manuel. Vérifiez les conditions suivantes :
 

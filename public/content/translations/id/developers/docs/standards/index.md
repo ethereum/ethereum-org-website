@@ -5,7 +5,7 @@ lang: id
 incomplete: true
 ---
 
-## Gambaran umum standar {#standards-overview}
+## Gambaran umum standar \{#standards-overview}
 
 Komunitas Ethereum telah mengadopsi banyak standar yang menolong menjaga proyek (seperti [klien Ethereum](/developers/docs/nodes-and-clients/) dan dompet) tetap dapat bertukar informasi di keseluruhan implementasi, dan memastikan kontrak pintar dan dapp tetap dapat disusun.
 
@@ -20,13 +20,13 @@ Biasanya standar diperkenalkan sebagai [Proposal Peningkatan Ethereum](/eips/) (
 - [Tata Kelola Pengembangan Protokol Ethereum dan Koordinasi Peningkatan Jaringan](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 Maret 2020 - Hudson Jameson_
 - [Daftar Putar semua Rapat Pengembang Inti Ethereum](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(Daftar Putar YouTube)_
 
-## Tipe standar {#types-of-standards}
+## Tipe standar \{#types-of-standards}
 
 EIP tertentu berhubungan dengan standar pada tingkat aplikasi (contoh: sebuah format kontrak pintar standar), yang dikenal sebagai [Ethereum Requests for Comment (ERC)](https://eips.ethereum.org/erc). Banyak ERC yang menjadi standar penting yang digunakan secara luas di ekosistem Ethereum.
 
 - [Daftar ERC](https://eips.ethereum.org/erc)
 
-### Standar token {#token-standards}
+### Standar token \{#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Sebuah antarmuka standar untuk token fungible (dapat dipertukarkan), seperti token pengambilan suara, token penaruhan, atau mata uang virtual.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - Sebuah antarmuka standar untuk token yang tidak dapat dipertukarkan, seperti akta untuk karya seni atau lagu.
@@ -35,6 +35,6 @@ EIP tertentu berhubungan dengan standar pada tingkat aplikasi (contoh: sebuah fo
 
 Pelajari lebih lanjut tentang [standar token](/developers/docs/standards/tokens/).
 
-## Bacaan lebih lanjut {#further-reading}
+## Bacaan lebih lanjut \{#further-reading}
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

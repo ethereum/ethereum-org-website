@@ -4,13 +4,13 @@ lang: de
 description: Unsere Kriterien für die Auflistung von Inhaltsressourcen auf ethereum.org
 ---
 
-# Inhaltsressourcen hinzufügen {#adding-content-resources}
+# Inhaltsressourcen hinzufügen \{#adding-content-resources}
 
 Ethereum vollständig abzubilden, ist wegen des Umfangs nicht möglich. Daher versuchen wir, einige der großartigen Artikel, Tutorials, Newsletter, Jobbörsen und verschiedene Inhaltsressourcen vorzustellen, die die Community erstellt. Sie bieten oft tiefergreifende Informationen zu Themen, die für die Nutzer von Interesse sind.
 
 Wenn Sie eine Ressource kennen, die Ihrer Meinung nach nützlich ist, können Sie sie an geeigneter Stelle zur Hinzufügung vorschlagen.
 
-## Die Entscheidungsfindung {#how-we-decide}
+## Die Entscheidungsfindung \{#how-we-decide}
 
 Die Lernressourcen werden anhand der folgenden Kriterien bewertet:
 
@@ -23,7 +23,7 @@ Die Lernressourcen werden anhand der folgenden Kriterien bewertet:
 
 ---
 
-## Ihre Inhaltsressource hinzufügen {#add-your-content-resource}
+## Ihre Inhaltsressource hinzufügen \{#add-your-content-resource}
 
 Wenn Sie eine Inhaltsressource zu ethereum.org hinzufügen möchten und diese die Kriterien erfüllt, erstellen Sie einen Eintrag auf GitHub.
 

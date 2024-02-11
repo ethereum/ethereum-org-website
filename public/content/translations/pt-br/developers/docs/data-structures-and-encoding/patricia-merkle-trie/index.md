@@ -9,11 +9,11 @@ Uma árvore Merkle Patricia fornece uma estrutura de dados criptograficamente au
 
 Árvores Merkle Patricia são totalmente determinísticas, o que significa que há a garantia de que árvores com as mesmas ligações `(key, value)` são idênticas – até o último byte. Isto significa que elas têm o mesmo hash raiz, fornecendo a máxima eficiência `o(log(n))` para inserções, buscas e exclusões. Além disso, elas são mais simples de entender e codificar do que alternativas mais complexas baseadas em comparação, como as árvores vermelho-pretas.
 
-## Pré-requisitos {#prerequisites}
+## Pré-requisitos \{#prerequisites}
 
 Para entender melhor esta página, seria útil ter conhecimento básico sobre [hashes](https://en.wikipedia.org/wiki/Hash_function), [Árvores Merkle](https://en.wikipedia.org/wiki/Merkle_tree), [árvores](https://en.wikipedia.org/wiki/Trie) e [serialização](https://en.wikipedia.org/wiki/Serialization).
 
-## Árvores radix básicas {#basic-radix-tries}
+## Árvores radix básicas \{#basic-radix-tries}
 
 Em uma árvore radix básica, cada nó se parece com o seguinte:
 
@@ -68,11 +68,11 @@ Uma árvore Radix "Merkle" é construída ligando os nós usando digests de hash
 
 Vamos nos referir a uma unidade atômica de uma árvore de radix (por exemplo, um único caractere hexadecimal, ou número binário de 4 bits) como um "nibble". Ao percorrerem um caminho um nibble de cada vez, conforme descrito acima, os nós podem fazer referência a 16 filhos, no máximo, mas incluir um elemento `value`. Portanto, nós os representamos como uma faixa de comprimento 17. Chamamos esses arrays de 17 elementos de "branch nodes".
 
-## Árvore Merkle Patricia {#merkle-patricia-trees}
+## Árvore Merkle Patricia \{#merkle-patricia-trees}
 
 As árvores radix têm uma grande limitação: são ineficientes. Se você quiser armazenar uma vinculação `(path, value)` em que o caminho tem, como no Ethereum, 64 caracteres de comprimento (o número de nibbles em `bytes32`), você vai precisar de mais de um kilobyte de espaço extra para armazenar um nível por caractere, e cada busca ou exclusão precisará das 64 etapas completas. A árvore Patricia apresentada aqui resolve esta questão.
 
-### Otimização {#optimization}
+### Otimização \{#optimization}
 
 Um nó em uma árvore Merkle Patricia é um dos seguintes:
 
@@ -89,7 +89,7 @@ Esta otimização acima, porém, introduz ambiguidade.
 
 Quando atravessamos caminhos em nibbles, podemos acabar com um número ímpar de nibbles para percorrer, mas porque todos os dados são armazenados no formato `bytes`. Não é possível diferenciar entre, por exemplo, o nibble `1` e os nibbles`01` (ambos devem ser armazenados como `<01>`). Para especificar comprimento ímpar, o caminho parcial é precedido com um flag.
 
-### Especificação: Codificação compacta de sequência hexadecimal com terminador opcional {#specification}
+### Especificação: Codificação compacta de sequência hexadecimal com terminador opcional \{#specification}
 
 A sinalização de _largura restante do caminho parcial, par ou ímpar,_ e de _nó leaf vs nó de extensão_ conforme descrito acima reside no primeiro nibble do caminho parcial de qualquer nó de 2 elementos. Eles resultam no seguinte:
 
@@ -158,7 +158,7 @@ Aqui está o código estendido para obter um nó na árvore Merkle Patricia:
         return get_helper(node,path2)
 ```
 
-### Árvore de exemplo {#example-trie}
+### Árvore de exemplo \{#example-trie}
 
 Suponha que nós queremos uma árvore contendo quatro pares de caminho/valor `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
 
@@ -185,7 +185,7 @@ Quando um nó é referenciado dentro de outro nó, o que é incluído é `H(rlp.
 
 Observe que, ao atualizar uma árvore, é necessário armazenar o par chave/valor `(keccak256(x), x)` em uma tabela de pesquisa persistente _se_ o nó recém-criado tem comprimento >= 32. Entretanto, se o nó é menor do que isso, não é preciso armazenar nada, já que a função f(x) = x é reversível.
 
-## Árvores no Ethereum {#tries-in-ethereum}
+## Árvores no Ethereum \{#tries-in-ethereum}
 
 Todas as árvores Merkle na camada de execução do Ethereum usam uma árvore Merkle Patricia.
 
@@ -195,11 +195,11 @@ Do cabeçalho do bloco há 3 raízes dessas 3 árvores.
 2.  transactionsRoot
 3.  receiptsRoot
 
-### Árvore de estado {#state-trie}
+### Árvore de estado \{#state-trie}
 
 Existe um estado global da árvore que é atualizado toda vez que um cliente processa um bloco. Nela, um `path` é sempre: `keccak256(ethereumAddress)` e um `value` é sempre: `rlp(ethereumAccount)`. Mais especificamente uma `conta` Ethereum é uma array de 4 itens `[nonce,balance,storageRoot,codeHash]`. Neste ponto, vale a pena notar que este `storageRoot` é a raiz de outra árvore Patricia:
 
-### Árvore de armazenamento {#storage-trie}
+### Árvore de armazenamento \{#storage-trie}
 
 Árvore de armazenamento é onde _todos_ os dados de contrato se encontram. Há uma árvore de armazenamento separada para cada conta. Para recuperar valores em posições específicas de armazenamento em um determinado endereço, o endereço de armazenamento, posição inteira dos dados armazenados no armazenamento, e a ID do bloco, são necessárias. Eles podem então ser passados como argumentos para `eth_getStorageAt` definido na API JSON-RPC, por exemplo, para recuperar os dados no slot de armazenamento 0 para o endereço `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
@@ -233,7 +233,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### Árvore de transações {#transaction-trie}
+### Árvore de transações \{#transaction-trie}
 
 Há uma árvore de transações separada para cada bloco, armazenando novamente pares `(key, value)`. Um caminho aqui é: `rlp(transactionIndex)` que representa a chave que corresponde a um valor determinado por:
 
@@ -246,13 +246,13 @@ else:
 
 Mais informações sobre isso podem ser encontradas na documentação do [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 
-### Árvore de recibos {#receipts-trie}
+### Árvore de recibos \{#receipts-trie}
 
 Cada bloco tem sua própria árvore de recibos. Um `path` aqui é: `rlp(transactionIndex)`. `transactionIndex` é seu índice dentro do bloco que é minerado. A árvore de recibos nunca é atualizada. De maneira similar à árvore de Transações, existem recibos atuais e legados. Para consultar um recibo específico na árvore de Recibos, o índice da transação em seu bloco, o payload do recibo e o tipo de transação são necessários. O recibo retornado pode ser do tipo `Receipt`, que é definido como a concentração de `TransactionType` e `ReceiptPayload`, ou pode ser do tipo `LegacyReceipt`, que é definido como `rlp([status, acumulativoGasUsed, logsBloom, logs])`.
 
 Mais informações sobre isso podem ser encontradas na documentação do [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718).
 
-## Leitura Adicional {#further-reading}
+## Leitura Adicional \{#further-reading}
 
 - [Árvore Merkle Patricia modificada: como o Ethereum salva um estado](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
 - [Fazendo Merkle no Ethereum](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)

@@ -27,7 +27,7 @@ fs.readFile("keyfile.json", (err, data) => {
 
 Questo documenta la **versione 3** della Definizione di Archiviazione Segreta del Web3.
 
-## Definizione {#definition}
+## Definizione \{#definition}
 
 La codifica e decofica effettiva del file resta largamente immutata dalla versione 1, tranne nel fatto che l'algoritmo cripto non è più fisso ad AES-128-CBC (AES-128-CTR è ora il requisito minimo). Gran parte dei significati e dell'algoritmo sono simili alla versione 1, tranne `mac`, indicato come lo SHA3 (keccak-256) delle concatenazioni dei secondi 16 byte da sinistra della chiave derivata, insieme al `ciphertext` completo.
 
@@ -72,7 +72,7 @@ La creazione/crittografia di una chiave segreta dovrebbe essere essenzialmente l
 
 Oltre al campo `version`, che dovrebbe agire da identificatore "rigido" della versione, le implementazioni potrebbero anche utilizzare `minorversion` per tracciare le modifiche più piccole e non divisibili al formato.
 
-## Vettori di Prova {#test-vectors}
+## Vettori di Prova \{#test-vectors}
 
 Dettagli:
 
@@ -82,7 +82,7 @@ Dettagli:
 - `Password`: `testpassword`
 - `Secret`: `7a28b5ba57c53603b0b07b56bba752f7784bf506fa95edc395f5cf6c7514fe9d`
 
-### PBKDF2-SHA-256 {#PBKDF2-SHA-256}
+### PBKDF2-SHA-256 \{#PBKDF2-SHA-256}
 
 Vettore di prova che utilizza `AES-128-CTR` e `PBKDF2-SHA-256`:
 
@@ -114,7 +114,7 @@ Contenuti del file di `~/.web3/keystore/3198bc9c-6672-5ab3-d9954942343ae5b6.json
 
 `Derived key`: `f06d69cdc7da0faffb1008270bca38f5e31891a3a773950e6d0fea48a7188551` `MAC Body`: `e31891a3a773950e6d0fea48a71885515318b4d5bcd28de64ee5559e671353e16f075ecae9f99c7a79a38af5f869aa46` `MAC`: `517ead924a9d0dc3124507e3393d175ce3ff7c1e96529c6c555ce9e51205e9b2` `Cipher key`: `f06d69cdc7da0faffb1008270bca38f5`
 
-### Scrypt {#scrypt}
+### Scrypt \{#scrypt}
 
 Vettore di prova che utilizza AES-128-CTR e Scrypt:
 
@@ -145,7 +145,7 @@ Vettore di prova che utilizza AES-128-CTR e Scrypt:
 
 `Derived key`: `7446f59ecc301d2d79bc3302650d8a5cedc185ccbb4bf3ca1ebd2c163eaa6c2d` `MAC Body`: `edc185ccbb4bf3ca1ebd2c163eaa6c2ddd8a1132cf57db67c038c6763afe2cbe6ea1949a86abc5843f8ca656ebbb1ea2` `MAC`: `337aeb86505d2d0bb620effe57f18381377d67d76dac1090626aa5cd20886a7c` `Cipher key`: `7446f59ecc301d2d79bc3302650d8a5c`
 
-## Alterazioni dalla Versione 1 {#alterations-from-v2}
+## Alterazioni dalla Versione 1 \{#alterations-from-v2}
 
 Questa versione corregge diverse incongruenze con la versione 1 pubblicata [qui](https://github.com/ethereum/homestead-guide/blob/master/old-docs-for-reference/go-ethereum-wiki.rst/Passphrase-protected-key-store-spec.rst). In breve sono:
 
@@ -184,6 +184,6 @@ Le modifiche sono state apportate al formato per restituire il seguente file, fu
 }
 ```
 
-## Modifiche dalla Versione 2 {#alterations-from-v2}
+## Modifiche dalla Versione 2 \{#alterations-from-v2}
 
 La versione 2 era un'implementazione iniziale in C++ con numerosi bug. Tutti gli elementi essenziali restano immutati da essa.

@@ -28,7 +28,7 @@ Asumsi:
 
 Sekali lagi, jika salah satu dari asumsi ini tidak benar, atau Anda tidak berencana untuk membuat kembali kode dalam artikel ini, Anda kemungkinan masih dapat mengikuti penjelasannya dengan baik.
 
-## Beberapa kata tentang Waffle {#a-few-words-about-waffle}
+## Beberapa kata tentang Waffle \{#a-few-words-about-waffle}
 
 [Waffle](https://getwaffle.io) adalah pustaka yang paling canggih untuk penulisan dan pengujian kontrak pintar.
 
@@ -36,7 +36,7 @@ Berfungsi dengan [API JavaScript](/developers/docs/apis/javascript/) ethers-js.
 
 Anda dapat membaca detail selengkapnya di [dokumentasi Waffle](https://ethereum-waffle.readthedocs.io/en/latest/#waffle-documentation)!
 
-## Tutorial cepat {#the-quick-tutorial}
+## Tutorial cepat \{#the-quick-tutorial}
 
 Pertama-tama, buat proyek `JavaScript` atau `TypeScript` baru ( Saya akan menggunakan `TS`, tetapi jika Anda menggunakan `JS` itu tidak jadi masalah ) :
 
@@ -641,7 +641,7 @@ Itu akan tampak seperti ini:
 
 </details>
 
-## Langkah #1: Instal waffle dalam proyek Anda [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) {#step-1-install-waffle-in-your-project}
+## Langkah #1: Instal waffle dalam proyek Anda [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) \{#step-1-install-waffle-in-your-project}
 
 Untuk memulai, instal `ethereum-waffle`. Dalam tutorial ini, saya akan menggunakan `yarn`, sehingga untuk menginstal `ethereum-waffle` jalankan:
 
@@ -649,7 +649,7 @@ Untuk memulai, instal `ethereum-waffle`. Dalam tutorial ini, saya akan menggunak
  yarn add --dev ethereum-waffle
 ```
 
-## Langkah #2: Tulis kontrak pintar [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract) {#step-2-write-a-smart-contract}
+## Langkah #2: Tulis kontrak pintar [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract) \{#step-2-write-a-smart-contract}
 
 Dalam tutorial ini, saya akan menggunakan token [ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/ded2b0a55c9c13731963ab7b85a70c8e73504bab/contracts/token/ERC20/ERC20.sol) dari [OpenZeppelin](https://openzeppelin.com).
 
@@ -675,7 +675,7 @@ contract BasicToken is ERC20 {
 
 ```
 
-## Langkah #3: Kompilasikan kontrak pintar Anda [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) {#step-3-compile-your-smart-contract}
+## Langkah #3: Kompilasikan kontrak pintar Anda [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) \{#step-3-compile-your-smart-contract}
 
 Untuk mengompilasi kontrak pintar Anda, tambahkan entri berikut ke dalam `package.json` proyek Anda:
 
@@ -1007,9 +1007,9 @@ Anda akan melihat bahwa Waffle mengompilasi kontrak Anda dan menempatkan output 
 
 </details>
 
-## Langkah #4: Uji kontrak pintar Anda [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-test-your-smart-contract}
+## Langkah #4: Uji kontrak pintar Anda [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) \{#step-4-test-your-smart-contract}
 
-### Langkah #4.1 Instal dependensi yang diperlukan [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-1}
+### Langkah #4.1 Instal dependensi yang diperlukan [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) \{#step-4-1}
 
 Setelah kita telah berhasil menulis sebuah Kontrak Pintar, kita dapat mengujinya. Kita akan menggunakan `Waffle` untuk melakukannya.
 
@@ -1021,7 +1021,7 @@ Jadi, kita perlu menambahkan `Chai` ke dependensi kita:
  yarn add --dev mocha chai
 ```
 
-### Langkah #4.2 Buat file uji [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-2}
+### Langkah #4.2 Buat file uji [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) \{#step-4-2}
 
 Untuk menulis tes, kita perlu membuat file `BasicToken.test.ts` dalam direktori tes kita.
 
@@ -1059,7 +1059,7 @@ it("Assigns initial balance", async () => {
 
 Untuk menjalankan tes gunakan `yarn test`
 
-### Langkah #4.3 Memancarkan aksi [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events) {#step-4-3}
+### Langkah #4.3 Memancarkan aksi [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events) \{#step-4-3}
 
 Dalam tutorial ini, saya ingin menunjukkan kepada Anda matcher yang paling berguna dari `Waffle`, jadi mari kita mulai dengan yang pertama.
 
@@ -1081,7 +1081,7 @@ Selain itu, keunggulan besar dari matcher ini adalah kita dapat memeriksa di arg
 
 Ini akan memungkinkan kita memastikan bahwa fungsi kita dipanggil dengan benar!
 
-### Langkah #4.4 Balikkan dengan message [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message) {#step-4-4}
+### Langkah #4.4 Balikkan dengan message [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message) \{#step-4-4}
 
 `Waffle` memungkinkan kita menguji dengan message mana itu dibalikkan.
 
@@ -1097,7 +1097,7 @@ it("Can not transfer above the amount", async () => {
 })
 ```
 
-### Langkah #4.5 Ubah saldo token [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance) {#step-4-5}
+### Langkah #4.5 Ubah saldo token [Tautkan ke dokumen](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance) \{#step-4-5}
 
 `Waffle` memungkinkan kita memeriksa perubahan dalam saldo dompet!
 
@@ -1129,7 +1129,7 @@ it("Send transaction changes sender and receiver balances", async () => {
 
 Transaksinya diharapkan untuk diteruskan sebagai callback (kita perlu memeriksa saldo sebeleum pemanggilan ini) atau sebagai respon transaksi.
 
-## Selamat {#congratulations}
+## Selamat \{#congratulations}
 
 **Selamat! Anda telah menyelesaikan tutorial saya. Anda telah mengambil langkah besar pertama Anda dalam menguji kontrak pintar dengan Waffle.**
 

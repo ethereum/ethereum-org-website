@@ -6,11 +6,11 @@ lang: fr
 
 Les blocs sont des lots de transactions avec un hachage du bloc précédent dans la chaîne. Ceci relie les blocs ensemble (dans une chaîne) car les hachages sont cryptographiquement dérivés des données des blocs. Cela empêche la fraude, car un changement dans n'importe quel bloc de l'historique invaliderait tous les blocs suivants puisque tous les hachages ultérieurs changeraient et que quiconque exécutant la blockchain le remarquerait.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 Les blocs sont un sujet très accessible pour les débutants. Mais pour vous aider à mieux comprendre cette page, nous vous recommandons de commencer par lire les pages [Comptes](/developers/docs/accounts/), [Transactions](/developers/docs/transactions/) et [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Pourquoi les blocs? {#why-blocks}
+## Pourquoi les blocs? \{#why-blocks}
 
 Afin de s'assurer que tous les participants du réseau Ethereum restent synchronisés et s'accordent sur l'historique exacte des transactions, les transactions sont traitées par blocs. Cela signifie que des dizaines (ou centaines) de transactions sont engagées, acceptées et synchronisées en même temps.
 
@@ -18,13 +18,13 @@ Afin de s'assurer que tous les participants du réseau Ethereum restent synchron
 
 En espaçant les engagements, nous donnons à tous les participants du serveur assez de temps pour parvenir à un consensus : même si les demande de transaction se présentent des dizaines de fois par seconde, les blocs sont seulement créés et engagés sur Ethereum toutes les douze secondes.
 
-## Comment fonctionnent les blocs {#how-blocks-work}
+## Comment fonctionnent les blocs \{#how-blocks-work}
 
 Pour préserver l'historique des transactions, les blocs sont strictement ordonnés (chaque nouveau bloc créé contient une référence à son bloc parent), et les transactions au sein des blocs sont également strictement ordonnées. Sauf dans de rares cas, à tout moment, tous les participants au réseau sont d'accord sur le nombre exact et l'historique des blocs, et s'efforcent de regrouper les demandes de transactions en cours dans le bloc suivant.
 
 Une fois qu'un bloc a été lié aux autres blocs par un validateur sélectionné aléatoirement sur le réseau, il est scellé au reste du réseau ; ce bloc ajouté à la chaîne de bloc (blockchain) est lié au précédent, et une copie est transmise à tous les noeuds du réseau, ensuite un autre validateur est sélectionné pour créer le nouveau bloc. Le processus exact d'assemblage de blocs et le processus d'engagement/consensus sont actuellement spécifiés par le protocole de la « preuve d'enjeu » d'Ethereum.
 
-## Protocole de la preuve d'enjeu {#proof-of-work-protocol}
+## Protocole de la preuve d'enjeu \{#proof-of-work-protocol}
 
 La preuve d'enjeu implique les éléments suivants :
 
@@ -35,7 +35,7 @@ La preuve d'enjeu implique les éléments suivants :
 
 [En savoir plus sur la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos)
 
-## Que contient un bloc ? {#block-anatomy}
+## Que contient un bloc ? \{#block-anatomy}
 
 Un bloc contient de nombreuses informations. Au plus haut niveau, un bloc contient les champs suivants :
 
@@ -131,21 +131,21 @@ La liste `withdrawals` contient les objets `withdrawal` structurée de la façon
 | `Index`          | valeur d'index du retrait          |
 | `validatorIndex` | valeur d'index du validateur       |
 
-## Durée de blocage {#block-time}
+## Durée de blocage \{#block-time}
 
 Le temps de bloc fait référence au temps qui sépare les blocs. Dans Ethereum, le temps est divisé en unités de douze secondes appelées « créneau ». Pour chaque créneau, un validateur est choisi pour proposer un bloc. Si tous les validateurs sont en ligne et complétement opérationnels, il y aura un bloc dans chaque créneau, ce qui signifie que le temps de bloc est de 12 s. Occasionnellement, des validateurs peuvent être hors-ligne lorsqu'ils sont appelés pour valider un bloc, de sorte que les créneaux peuvent parfois être vide.
 
 Cette implémentation diffère des systèmes fondés sur la preuve de travail (PoW), dans lesquels la génération d'un bloc est une occurrence naturelle, compensée par la difficulté de mining du protocole. Le temps moyen de propagation des blocs d'Ethereum [average block time](https://etherscan.io/chart/blocktime) est l'exemple parfait de l'implementation de la preuve d'enjeu, et donc du passage de la preuve de travail (PoW) à la preuve d'enjeu (PoS), rendu possible grâce à un nouvel ajustement du temps de propagation des blocs, qui est passé à 12 secondes.
 
-## Taille des blocs {#block-size}
+## Taille des blocs \{#block-size}
 
 Une dernière remarque importante : les blocs eux-mêmes sont limités par la taille. Chaque bloc vise une taille cible de 15 millions de gaz, mais leur taille s'adapte aux exigences du réseau, jusqu'à la limite de 30 millions de gaz (deux fois la taille cible de bloc). La quantité totale de gaz dépensée par toutes les transactions dans le bloc doit être inférieure à la limite de gaz du bloc. Ce point est important car il garantit que les blocs ne peuvent pas être arbitrairement grands. Si les blocs pouvaient être arbitrairement grands, les nœuds complets moins performants cesseraient progressivement de suivre le réseau à cause des exigences d'espace et de vitesse. Plus le bloc est grand, plus il faut de puissance de calcul pour traiter la transaction à temps pour le prochain créneau. Il s'agit d'un facteur de centralisation, auquel nous nous opposons en plafonnant la taille des blocs.
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
-## Sujets connexes {#related-topics}
+## Sujets connexes \{#related-topics}
 
 - [Transactions](/developers/docs/transactions/)
 - [Gaz](/developers/docs/gas/)

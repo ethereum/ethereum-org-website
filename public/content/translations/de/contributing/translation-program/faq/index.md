@@ -4,11 +4,11 @@ lang: de
 description: Häufig gestellte Fragen zum Übersetzungprogramm von ethereum.org
 ---
 
-# Übersetzungsanleitung für ethereum.org {#translating-ethereum-guide}
+# Übersetzungsanleitung für ethereum.org \{#translating-ethereum-guide}
 
 Wenn Sie neu im Übersetzungsprogramm sind und zögern, sich einzubringen, finden Sie hier einige FAQs, die Ihnen den Einstieg erleichtern können. Sie finden in diesem Leitfaden Antworten auf häufig gestellte Fragen.
 
-## Werde ich dafür bezahlt, wenn ich für ethereum.org übersetze? {#compensation}
+## Werde ich dafür bezahlt, wenn ich für ethereum.org übersetze? \{#compensation}
 
 Ethereum.org ist eine Open-Source-Website. Das bedeutet das jeder mitmachen und einen Beitrag dazu leisten kann.
 
@@ -20,7 +20,7 @@ Daher ist das Übersetzungsprogramm offen zugänglich. Die Mitarbeit erfolgt auf
 
 Wir setzen alles daran, unseren Mitwirkenden eine erfolgreiche Teilnahme am Ethereum-Ökosystem zu ermöglichen. Es gibt viele nicht-monetäre Anreize wie: [angebotene POAPs](/contributing/translation-program/acknowledgements/#poap) und ein [Übersetzungszertifikat](/contributing/translation-program/acknowledgements/#certificate) sowie [Übersetzungsranglisten](/contributing/translation-program/acknowledgements/) und [die Nennung all unserer Übersetzer auf der Site](/contributing/translation-program/contributors/).
 
-## Wie kann ich Strings mit `<HTML-Tags>` übersetzen? {#tags}
+## Wie kann ich Strings mit `<HTML-Tags>` übersetzen? \{#tags}
 
 Nicht jeder String wird in reiner Textform geschrieben. Einige Strings bestehen aus gemischten Skripten wie HTML-Tags (`<0>`, `</0>`). Diese werden in der Regel für Hyperlinks oder alternative Formatierungen in der Mitte eines Satzes verwendet.
 
@@ -33,7 +33,7 @@ Sie können die Position der Tags innerhalb der Zeichenkette verschieben, um sie
 
 Ausführlichere Informationen zum Umgang mit Tags und Code-Ausschnitten finden Sie im [Übersetzungsleitfaden von ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
 
-## Woher kommen die Strings? {#strings}
+## Woher kommen die Strings? \{#strings}
 
 Oft reichen die Quelltexte allein nicht aus, um eine genaue Übersetzung zu erstellen.
 
@@ -44,7 +44,7 @@ Oft reichen die Quelltexte allein nicht aus, um eine genaue Übersetzung zu erst
 
 ![Ein Beispiel-Screenshot, der zu Kontextzwecken hinzugefügt wurde](./source-string-2.png)
 
-## Wie kann ich Kommentare hinterlassen oder Fragen stellen? Ich möchte ein Problem oder einen Tippfehler melden... {#comment}
+## Wie kann ich Kommentare hinterlassen oder Fragen stellen? Ich möchte ein Problem oder einen Tippfehler melden... \{#comment}
 
 Wenn Sie eine bestimmte Zeichenfolge markieren möchten, die Aufmerksamkeit erfordert, können Sie einen Kommentar dazu verfassen.
 
@@ -54,7 +54,7 @@ Wenn Sie eine bestimmte Zeichenfolge markieren möchten, die Aufmerksamkeit erfo
 
 ![Zeigt, wie Kommentare geschrieben und Probleme gemeldet werden können](./comment-issue.png)
 
-## Was ist Translation Memory (TM)? {#translation-memory}
+## Was ist Translation Memory (TM)? \{#translation-memory}
 
 Translation Memory (TM) ist eine Funktion von Crowdin, die alle zuvor übersetzten Zeichenketten in [ethereum.org](http://ethereum.org/) speichert. Wenn eine Zeichenkette übersetzt wird, wird sie automatisch in unserem Projekt-TM gespeichert. Das ist ein nützliches Werkzeug, mit dem sich beim Übersetzen Zeit sparen lässt.
 
@@ -63,7 +63,7 @@ Translation Memory (TM) ist eine Funktion von Crowdin, die alle zuvor übersetzt
 
 ![Ein Screenshot des Übersetzungsspeichers](./translation-memory.png)
 
-## Wie benutze ich das Crowdin-Glossar? {#glossary}
+## Wie benutze ich das Crowdin-Glossar? \{#glossary}
 
 Die Terminologie von Ethereum ist ein weiterer entscheidender Bestandteil unserer Übersetzungsarbeit, da neue technologische Begriffe in anderen Sprachen häufig noch nicht lokalisiert sind. Außerdem gibt es Begriffe, die in verschiedenen Kontexten unterschiedliche Bedeutungen haben. [Weitere Informationen zur Übersetzung der Ethereum-Terminologie](#terminology).
 
@@ -81,7 +81,7 @@ Das Crowding-Glossar ist der beste Ort, um Begriffe und Definitionen besser zu v
 
 ![Ein Screenshot, der zeigt, wie Glossarbegriffe zu Crowdin hinzugefügt werden](./add-glossary-term.png)
 
-### Übersetzungsrichtlinie für Eigennamen und Fachbegriffe {#terminology}
+### Übersetzungsrichtlinie für Eigennamen und Fachbegriffe \{#terminology}
 
 _Für Namen (Marken, Unternehmen, Personen) und neue technische Begriffe (Beacon Chain, Shard Chains etc.)_
 
@@ -100,13 +100,13 @@ Im Folgenden finden Sie die von uns vorgeschlagene Vorgehensweise, wenn Sie auf 
 
 Wir empfehlen, Namen von Marken, Unternehmen und Personen nicht zu übersetzen, da eine Übersetzung unnötige Verwirrung stiften und zu SEO-Schwierigkeiten führen kann.
 
-## Wie funktioniert der Überprüfungsprozess? {#review-process}
+## Wie funktioniert der Überprüfungsprozess? \{#review-process}
 
 Um ein bestimmtes Niveau und Konsistenz in unseren Überstzungen zu gewährleisten, arbeiten wir mit [Acolad](https://www.acolad.com/), einem der weltweit größten Übersetzungsdienstleister, zusammen. Acolad arbeitet mit mehr als 20.000 professionellen Sprachexperten zusammen. Das bedeutet, dass sie für jede Sprache und jede Art von Inhalten, die wir benötigen, professionelle Prüfer bereitstellen können.
 
 Der Überprüfungsprozess ist unkompliziert. Sobald ein bestimmtes [Inhaltsgebiet](/contributing/translation-program/content-buckets) vollständig übersetzt ist, beauftragen wir die eine die Überprüfung dieser Inhalte. Der Überprüfungsprozess erfolgt direkt in Crowdin. Sobald die Überprüfung abgeschlossen ist aktualisieren wir die Website mit dem übersezten Inhalt.
 
-## Wie kann ich Inhalte in meiner Sprache hinzufügen? {#adding-foreign-language-content}
+## Wie kann ich Inhalte in meiner Sprache hinzufügen? \{#adding-foreign-language-content}
 
 Derzeit werden alle nicht-englischen Inhalte direkt vom englischen Quelltext übersetzt. Inhalte, die es nicht auf Englisch gibt, können nicht zu anderen Sprachen hinzugefügt werden.
 
@@ -114,6 +114,6 @@ Wenn Sie neue Inhalte für ethereum.org vorschlagen möchten, [erstellen Sie ein
 
 Wir planen, in naher Zukunft Unterstützung für nicht-englische Inhalte hinzuzufügen.
 
-## Kontakt {#contact}
+## Kontakt \{#contact}
 
 Vielen Dank, dass Sie sich die Inhalte oben angesehen haben. Wir hoffen, dass das hilfreich war, damit Sie sich an unserem Programm beteiligen können. Sie können unserem [Discord-Übersetzungskanal](https://discord.gg/ethereum-org) beitreten, um Fragen zu stellen und mit anderen Übersetzern zusammenzuarbeiten. Sie können sich aber auch unter translations@ethereum.org an uns wenden.

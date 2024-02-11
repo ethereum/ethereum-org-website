@@ -16,7 +16,7 @@ _Cette image est reprise de geth.ethereum.org et utilise le logo de Geth pour re
 
 Pour que cette structure à deux clients fonctionne, les clients de consensus doivent être en mesure de transmettre des paquets de transactions au client d'exécution. L'exécution locale des transactions permet au client de valider le fait que les transactions ne violent aucune règle d'Ethereum et que la mise à jour proposée de l'état d'Ethereum soit correcte. De même, lorsque le nœud est sélectionné pour être un producteur de blocs, le client de consensus doit être en mesure de demander à Geth des lots de transactions à inclure dans le nouveau bloc et de les exécuter pour mettre à jour l'état global. Cette communication inter-clients est gérée par une connexion RPC locale utilisant le [moteur API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
-## Que fait le client d'exécution ? {#execution-client}
+## Que fait le client d'exécution ? \{#execution-client}
 
 Le client d'exécution est responsable de la gestion des transactions, de la propagation des transactions, de la gestion de l'état et du fonctionnement de la Machine Virtuelle Ethereum ([EVM](/developers/docs/evm/)). Cependant, il n'est **pas** responsable de la construction de blocs, de leur propagation ou de la gestion de la logique de consensus. Ces responsabilités relèvent du client de consensus.
 
@@ -29,19 +29,19 @@ En résumé, le client d'exécution est :
 - une passerelle utilisateur vers Ethereum
 - le siège de la machine virtuelle Ethereum, de l'état d'Ethereum et du pool de transactions.
 
-## Que fait le client de consensus ? {#consensus-client}
+## Que fait le client de consensus ? \{#consensus-client}
 
 Le client de consensus s'occupe de toute la logique qui permet à un nœud de rester synchronisé avec le réseau Ethereum. Cela comprend la réception de blocs de pairs et l'exécution d'un algorithme de choix de fourche pour garantir que le nœud suive toujours la chaîne avec la plus grande accumulation d'attestations (pondérées par les soldes effectifs des validateurs). Semblable au client d'exécution, les clients de consensus ont leur propre réseau P2P à travers lequel ils partagent les blocs et les attestations.
 
 Le client de consensus ne participe pas à l'attestation ou à la proposition de blocs - cela est fait par un validateur, un module complémentaire facultatif d'un client de consensus. Un client de consensus sans validateur ne suit que la tête de la chaîne, permettant au nœud de rester synchronisé. Cela permet à un utilisateur de réaliser des transactions avec Ethereum en utilisant son client d'exécution, en étant sûr qu'il se trouve sur la chaîne correcte.
 
-## Validateurs {#validators}
+## Validateurs \{#validators}
 
 Les opérateurs de nœuds peuvent ajouter un validateur à leurs clients de consensus en déposant 32 ETH dans le contrat de dépôt. Le client de validation inclut le client de consensus et peut être ajouté à un nœud à tout moment. Le validateur gère les attestations et les propositions de blocs. Ils permettent à un nœud d'accumuler des récompenses ou de perdre de l'ETH par des pénalités ou des sanctions. Exécuter le logiciel de validation rend également un nœud éligible pour être sélectionné afin de proposer un nouveau bloc.
 
 [En savoir plus sur les mises](/staking/).
 
-## Comparaison des composants d'un nœud {#node-comparison}
+## Comparaison des composants d'un nœud \{#node-comparison}
 
 | Client d'exécution                                 | Client de consensus                                                        | Validateur                         |
 | -------------------------------------------------- | -------------------------------------------------------------------------- | ---------------------------------- |
@@ -52,7 +52,7 @@ Les opérateurs de nœuds peuvent ajouter un validateur à leurs clients de cons
 | Crée la charge utile d'exécution                   | Conserve une trace de l'accumulation de l'aléatoire dans RANDAO            | Peut être pénalisé                 |
 | Expose l'API JSON-RPC pour interagir avec Ethereum | Suit la justification et la finalisation des blocs                         |                                    |
 
-## Complément d'information {#further-reading}
+## Complément d'information \{#further-reading}
 
 - [Preuve d'enjeu](/developers/docs/consensus-mechanisms/pos)
 - [Proposition de bloc](/developers/docs/consensus-mechanisms/pos/block-proposal)

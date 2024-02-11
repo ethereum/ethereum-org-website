@@ -9,17 +9,17 @@ isOutdated: true
 
 La capa 2 es un término colectivo de soluciones diseñadas para ayudar a escalar tu aplicación mediante el manejo de transacciones de la cadena principal de Ethereum (capa 1). La velocidad de transacción sufre cuando la red está ocupada, lo que puede hacer que la experiencia del usuario sea poco favorable para ciertos tipos de dapps. Además, en cuanto la red se activa más, los precios del gas aumentan a medida que los remitentes de las transacciones intentan superar sus apuestas. Esto puede encarecer mucho el uso de Ethereum.
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos \{#prerequisites}
 
 Es necesario que comprendas todos los temas fundamentales. La implementación de las soluciones de capa 2 se consideran avanzadas, ya que la tecnología se ha probado menos en la práctica.
 
-## ¿Por qué es necesaria la capa 2? {#why-is-layer-2-needed}
+## ¿Por qué es necesaria la capa 2? \{#why-is-layer-2-needed}
 
 - Algunos casos de uso, como juegos de la blockchain, no tienen sentido con los tiempos de transacción actuales.
 - Usar aplicaciones de blockchain puede ser innecesariamente costoso.
 - Cualquier actualización de la escalabilidad no debería ser a costa de la descentralización de la seguridad; la capa 2 se construye sobre Ethereum.
 
-## Tipos de solución de capa 2 {#types}
+## Tipos de solución de capa 2 \{#types}
 
 - [Rollups](#rollups)
   - [ZK rollups](#zk-rollups)
@@ -34,7 +34,7 @@ La mayoría de las soluciones de capa 2 se centran en un servidor o un clúster 
 
 Una instancia específica de la capa 2 puede ser abierta y compartida por varias aplicaciones, o bien puede ser implementada mediante una empresa y dedicarse a ofrecer soporte a su aplicación únicamente.
 
-## Rollups {#rollups}
+## Rollups \{#rollups}
 
 Las rollups son soluciones que agrupan transacciones de sidechain en una sola transacción y generan una prueba criptográfica que se denomina SNARK (siglas en inglés de "Succinct Non-interactive ARgument of Knowledge"). Únicamente esta prueba se envía a la cadena principal.
 
@@ -55,7 +55,7 @@ Hay dos tipos de rollups con diferentes modelos de seguridad:
 - Cero conocimiento: Ejecuta el cálculo fuera de la cadena y envía una [**prueba de validez**](/glossary/#validity-proof) a la cadena.
 - Optimista: Asume que las transacciones son válidas por defecto y sólo ejecuta el cálculo, a través de una [**prueba de fraude**](/glossary/#fraud-proof) en caso de que se produzca un desafío.
 
-### Rollups de conocimiento cero {#zk-rollups}
+### Rollups de conocimiento cero \{#zk-rollups}
 
 Los rollups de conocimiento cero, también conocidos como ZK-Rollups, agrupan cientos de transferencias fuera de la cadena en una sola transacción realizada través de un contrato inteligente. A partir de los datos enviados, el contrato inteligente puede verificar todas las transferencias que están incluidas. Esto se conoce como una prueba de validez.
 
@@ -63,7 +63,7 @@ Con un ZK-Rollup, validar un bloque es más rápido y más barato porque se incl
 
 La cadena lateral donde ocurren los ZK-Rollups se puede optimizar para reducir aún más el tamaño de las transacciones. Por ejemplo, una cuenta está representada mediante un índice en lugar de con una dirección, lo que reduce una transacción de 32 bytes a únicamente 4 bytes. Las transacciones también se escriben en Ethereum como datos de llamadas, lo que reduce el gas.
 
-#### Ventajas y desventajas {#zk-pros-and-cons}
+#### Ventajas y desventajas \{#zk-pros-and-cons}
 
 | Ventajas                                                                                                                        | Desventajas                                                                                                                                                                                                                                                                        |
 | ------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -71,14 +71,14 @@ La cadena lateral donde ocurren los ZK-Rollups se puede optimizar para reducir a
 | Menos vulnerable a los ataques económicos a los que los [Optimistic Rollups](#optimistic-pros-and-cons) pueden ser vulnerables. | Las pruebas de validez son difíciles de computar, no vale la pena para aplicaciones con poca actividad en cadena.                                                                                                                                                                  |
 |                                                                                                                                 | Duración de la [finalidad](/glossary/#finality) subjetiva más larga (se tarda de 10 a 30 minutos en generar una prueba de ZK) (pero la finalización completa es más rápida, ya que no hay retrasos en el tiempo de disputa como en los [Optimistic rollups](#optimistic-rollups)). |
 
-#### Uso de ZK Rollups {#use-zk-rollups}
+#### Uso de ZK Rollups \{#use-zk-rollups}
 
 - [Loopring](https://loopring.org/#/)
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkSync](https://matter-labs.io/)
 - [Aztec 2.0](https://aztec.network/)
 
-### Optimistic Rollups {#optimistic-rollups}
+### Optimistic Rollups \{#optimistic-rollups}
 
 Los Optimistic Rollups utilizan una cadena lateral que se establece en paralelo a la cadena principal de Ethereum. Pueden ofrecer mejoras en escalabilidad porque no realizan ningún cálculo por defecto. En cambio, tras realizar una transacción, proponen un estado a la red principal. O "validan" la transacción.
 
@@ -86,7 +86,7 @@ Con los Optimistic Rollups, las transacciones se escriben en la cadena principal
 
 Como el cálculo es la parte lenta y costosa del uso de Ethereum, los Optimistic Rollups pueden ofrecer resultados de 10 a 100 veces mejores en lo que respecta a la escalabilidad en función de la transacción. Este número aumentará aún más con la introducción de la mejora de Eth2: [Las cadenas de fragmentos](/roadmap/danksharding). Esto se debe a que habrá más datos disponibles en el caso de que una transacción sea disputada.
 
-#### Disputar transacciones {#disputing-transactions}
+#### Disputar transacciones \{#disputing-transactions}
 
 En realidad, los Optimistic Rollups no calculan la transacción; por eso, es necesario que exista un mecanismo para garantizar que las transacciones sean legítimas y no fraudulentas. Aquí es donde entran las pruebas de fraude. Si alguien es consciente de la existencia de una transacción fraudulenta, el rollup realizará una prueba de fraude y ejecutará el cómputo de la transacción con ayuda de los datos del estado disponibles. Esto significa que el tiempo de espera para la confirmación de la transacción puede ser más largo que un ZK-rollup, ya que podría ser desafiado.
 
@@ -98,20 +98,20 @@ Incluso el gas que necesita para ejecutar el cálculo de la prueba de fraude se 
 
 Entonces se te reembolsa por haber demostrado el fraude.
 
-#### Ventajas y desventajas {#optimistic-pros-and-cons}
+#### Ventajas y desventajas \{#optimistic-pros-and-cons}
 
 | Ventajas                                                                                                                                    | Desventajas                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
 | Cualquier cosa que se pueda hacer en la capa 1 de Ethereum se puede hacer con Optimistic Rollups, ya que su EVM y Solidity son compatibles. | Los tiempos de espera de las transacciones en cadena son largos debido a posibles desafíos por fraude.                   |
 | Todos los datos de transacción se almacenan en la cadena de la capa 1, lo que significa que es seguro y descentralizado.                    | Es potencialmente vulnerable a ataques si el valor en un Optimistic Rollup excede la cantidad en el bono de un operador. |
 
-#### Usar Optimistic Rollups {#use-optimistic-rollups}
+#### Usar Optimistic Rollups \{#use-optimistic-rollups}
 
 - [Optimismo](https://optimism.io/)
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Red de combustible](https://fuel.sh/)
 
-## Canales {#channels}
+## Canales \{#channels}
 
 Los canales permiten a los participantes realizar transacciones `x` número de veces fuera de la cadena mientras solo se envían dos transacciones a la red en cadena. Esto permite disfrutar de un rendimiento de transacción extremadamente alto
 
@@ -125,7 +125,7 @@ Los participantes deben bloquear una porción del estado de Ethereum, como un de
 
 Bloquear el estado de esta manera es la primera transacción y abre el canal. A continuación, los participantes pueden realizar transacciones rápida y libremente fuera de la cadena. Cuando se termina la interacción, se envía una transacción final en cadena, lo que desbloquea el estado.
 
-### Canales de estado {#state-channels}
+### Canales de estado \{#state-channels}
 
 Canal de estado (tres en raya):
 
@@ -140,7 +140,7 @@ Hay dos tipos de canales en este momento:
 - Canales de estado, es decir, los que se han descrito anteriormente.
 - Canales de pago, es decir, canales de estado simplificados que solo se ocupan de los pagos. Permiten realizar transferencias fuera de la cadena entre dos participantes, siempre y cuando la suma neta de sus transferencias no supere los tokens depositados.
 
-#### Ventajas y desventajas {#channels-pros-and-cons}
+#### Ventajas y desventajas \{#channels-pros-and-cons}
 
 | Ventajas                                                                               | Desventajas                                                                                                                                               |
 | -------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -149,14 +149,14 @@ Hay dos tipos de canales en este momento:
 | El gasto por transición es más bajo; es recomendable para realizar micropagos.         | Precisa el bloqueo de fondos en los canales de pago abiertos.                                                                                             |
 |                                                                                        | No es compatible con la participación abierta.                                                                                                            |
 
-#### Usos de los canales de estado {#use-state-channels}
+#### Usos de los canales de estado \{#use-state-channels}
 
 - [Connext](https://connext.network/)
 - [Raiden](https://raiden.network/)
 - [Perun](https://perun.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Plasma {#plasma}
+## Plasma \{#plasma}
 
 Una cadena de plasma es una blockchain independiente que está anclada a la cadena principal de Ethereum y utiliza pruebas de fraude (como [Optimistic Rollups](#optimistic-rollups)) para procesar disputas.
 
@@ -167,14 +167,14 @@ Una cadena de plasma es una blockchain independiente que está anclada a la cade
 |                                                                                                                                                                  | Depende de uno o más operadores para almacenar datos y servirlos bajo petición.                                                                                                                          |
 |                                                                                                                                                                  | Los retiros se retrasan varios días para permitir desafíos. En el caso de los activos fungibles, esto puede ser mitigado mediante los proveedores de liquidez, pero existe un costo de capital asociado. |
 
-### Usos de Plasma {#use-plasma}
+### Usos de Plasma \{#use-plasma}
 
 - [Red OMG](https://omg.network/)
 - [Red Matic](https://matic.network/)
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
-## Validium {#validium}
+## Validium \{#validium}
 
 Utiliza pruebas de validez como [ZK-Rollups](#zk-rollups), pero los datos no se almacenan en la cadena Ethereum de la capa 1 principal. Esto puede llevar a 10 000 transacciones por segundo y por cadena Validium, así como a la ejecución en paralelo de varias cadenas.
 
@@ -184,13 +184,13 @@ Utiliza pruebas de validez como [ZK-Rollups](#zk-rollups), pero los datos no se 
 | No es vulnerable a ciertos ataques económicos a los que se enfrentan los sistemas basados en fraudes en aplicaciones de alto valor.    | Un alto poder computacional requerido para generar pruebas de ZK; no es rentable para las aplicaciones de bajo rendimiento.                                                     |
 |                                                                                                                                        | Tiempo de finalidad más lento (de 10 a 30 minutos para generar una prueba de ZK) (pero más rápido para la finalización completa porque no hay retraso en el tiempo de disputa). |
 
-### Usos de Validium {#use-validium}
+### Usos de Validium \{#use-validium}
 
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkPorter](https://matter-labs.io/)
 - [Loopring](https://loopring.org/#/)
 
-## Sidechains {#sidechains}
+## Sidechains \{#sidechains}
 
 Una cadena sidechain (o lateral) es una blockchain independiente que funciona en paralelo con respecto a la red principal y opera independientemente. Tiene su propio algoritmo de consenso ([Prueba de autoridad](https://wikipedia.org/wiki/Proof_of_authority), [Prueba de participación delegada](https://en.bitcoinwiki.org/wiki/DPoS), [tolerancia a fallas bizantinas](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Está conectado a la cadena principal por un puente bidireccional.
 
@@ -200,20 +200,20 @@ Una cadena sidechain (o lateral) es una blockchain independiente que funciona en
 | Soporta el cálculo general y es compatible con la EVM. | Utiliza un mecanismo de consenso separado. No asegurado por la capa 1 (técnicamente no es la capa 2). |
 |                                                        | Un quórum de validadores de sidechain puede cometer fraude.                                           |
 
-### Usos de las sidechains {#use-sidechains}
+### Usos de las sidechains \{#use-sidechains}
 
 - [Skale](https://skale.network/)
 - [Red POA](https://www.poa.network/)
 
-## Soluciones híbridas {#hybrid-solutions}
+## Soluciones híbridas \{#hybrid-solutions}
 
 Combinan las mejores partes de las tecnologías múltiples de capa 2 y pueden ofrecer compensaciones configurables.
 
-### Usos de las soluciones híbridas {#use-hybrid-solutions}
+### Usos de las soluciones híbridas \{#use-hybrid-solutions}
 
 - [Celer](https://www.celer.network/)
 
-## Para seguir leyendo {#further-reading}
+## Para seguir leyendo \{#further-reading}
 
 - [Validium y la capa 2, número 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [Evaluación de soluciones de escala de la capa 2 de Ethereum: Una estructura de comparación](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)

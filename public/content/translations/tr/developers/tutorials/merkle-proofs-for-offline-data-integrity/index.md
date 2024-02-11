@@ -9,7 +9,7 @@ lang: tr
 published: 2021-12-30
 ---
 
-## Giriş {#introduction}
+## Giriş \{#introduction}
 
 İdeal olarak tüm verileri binlerce bilgisayarda depolanan ve son derece yüksek kullanılabilirlik (veri sansürlenemez) ve bütünlüğe (veri yetkisiz bir şekilde değiştirilemez) sahip olan Ethereum depolaması üzerinde saklamak isteriz ancak 32 bayt büyüklüğünde bir kelime depolamanın maliyeti yaklaşık olarak 20,000 gazdır. Bunu yazarken, bu maliyet $6,60'a eşittir. Bayt başına 21 sentlik ücret birçok kullanıcı için çok pahalıdır.
 
@@ -17,7 +17,7 @@ Bu sorunu çözmek için Ethereum ekosistemi [verileri merkeziyetsiz bir şekild
 
 Bu makalede blok zinciri üzerinde veri depolamadan [Merkle ispatları](https://computersciencewiki.org/index.php/Merkle_proof) kullanarak **nasıl** veri bütünlüğü sağlanacağını öğreneceksiniz.
 
-## Nasıl çalışır? {#how-does-it-work}
+## Nasıl çalışır? \{#how-does-it-work}
 
 Teoride verileri şifrelenmiş bir şeklide blok zinciri üzerinde tutup, işlem için gerekli verileri gönderebilirdik. Ancak bu hâlâ çok maliyetlidir. Bir işlem için bir bayt veri yaklaşık 16 gaz harcar. Bu, şu anda yaklaşık yarım sent veya kilobayt başına yaklaşık $5 değerindedir. Megabayt başına $5000, veriyi şifrelemenin maliyetini dahil etmesek bile bir çok kullanım alanı için çok pahalıdır.
 
@@ -29,15 +29,15 @@ Sadece kök hash değerinin ağ üzerinde depolanmış olması gerekmektedir. Bi
 
 ![C değerinin ispatı](proof-c.png)
 
-## Uygulama {#implementation}
+## Uygulama \{#implementation}
 
 [Örnek kod burada sağlanmıştır](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### Zincir dışı kod {#off-chain-code}
+### Zincir dışı kod \{#off-chain-code}
 
 Bu makalede zincir dışı işlemler için Javascript kullanıyoruz. Çoğu merkeziyetsiz uygulama Javascript'te zincir dışı bileşenlere sahiptir.
 
-#### Merkle kökünü oluşturma {#creating-the-merkle-root}
+#### Merkle kökünü oluşturma \{#creating-the-merkle-root}
 
 Öncelikle ağa, Merkle kökünü sağlamamız gerekmektedir.
 
@@ -126,7 +126,7 @@ const getMerkleRoot = (inputArray) => {
 
 Ana değere ulaşmak için ağaçta tek bir değer kalana kadar tırmanın.
 
-#### Bir Merkle ispatı oluşturma {#creating-a-merkle-proof}
+#### Bir Merkle ispatı oluşturma \{#creating-a-merkle-proof}
 
 Bir Merkle ispatı, Merkle kökünü geri almak için kanıtlanan değerle birlikte karma hale getirilecek değerlerdir. İspatlanacak olan değer sıklıkla diğer veride bulunabilir. Bu yüzden kodun bir parçası yerine ayrı olarak sağlamayı tercih ederim.
 
@@ -163,7 +163,7 @@ const getMerkleProof = (inputArray, n) => {
 }   // getMerkleProof
 ```
 
-### Zincir üstü kod {#on-chain-code}
+### Zincir üstü kod \{#on-chain-code}
 
 Nihayet, kanıtları kontrol eden koda ulaştık. Zincir üstü kod, [Solidity](https://docs.soliditylang.org/en/v0.8.11/) ile yazılmıştır. Gaz maliyeti yüksek olduğundan burada optimizasyon çok daha önemlidir.
 
@@ -228,13 +228,13 @@ Bu fonksiyon bir eş karma değeri oluşturur. Bu, sadece `hash` ve `pairHash` i
 
 Matematiksel gösterimde Merkle ispatı şöyle görünür: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. Bu kod onu uygular.
 
-## Merkle ispatları ve toplamalar uyumlu değildir {#merkle-proofs-and-rollups}
+## Merkle ispatları ve toplamalar uyumlu değildir \{#merkle-proofs-and-rollups}
 
 Merkle ispatları, [toplamalar](/developers/docs/scaling/#rollups) ile iyi çalışmaz. Sebebi ise toplamalarda işlemlerin Katman 1 üzerinde yazılması ancak Katman 2 üzerinde işlenmesidir. Bir işlem ile Merkle ispatı göndermenin maliyeti katman başına ortalama 638 gazdır (güncel olarak çağrı verisinde gaz maliyeti, bayt sıfır değilse 16, sıfır ise 4'tür). Eğer 1024 kelimeden oluşan bir verimiz varsa, bir Merkle ispatı 10 katman veya 6380 gaz gerektirir.
 
 Örneğin [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)'e bakacak olursak: Katman 1 gaz yazmak ortalama 100 gwei, Katman 2 gaz yazmak ise 0,001 gwei'ye mal olmaktadır (bu, normal fiyattır ve tıkanıklık olursa artabilir). Yani bir Katman 1 gazının bedeli ile Katman 2 işlemeye yüz bin gaz harcayabiliriz. Depolamanın üzerine yazmadığımızı varsayarsak bu, bir Katman 1 gazı fiyatına Katman 2'deki depolamaya yaklaşık beş kelime yazabileceğimiz anlamına gelir. Tek bir Merkle ispatı için 1024 kelimenin tamamını depolamaya yazabiliriz (bir işlemde sağlanmak yerine zincir üzerinde hesaplayabileceklerini varsayarsak) ve hâlâ gaz maliyetinden tasarruf etme imkanımız olur.
 
-## Sonuç {#conclusion}
+## Sonuç \{#conclusion}
 
 Gerçek hayatta, Merkle ağaçlarını hiçbir zaman kendi başınıza uygulamayacak olabilirsiniz. Denetlenmiş ve iyi bilinen kütüphaneler mevcuttur. Genel olarak kendi başınıza ilkel kriptografik yöntemleri uygulamamanız en iyi seçimdir. Fakat Merkle ispatlarını ve ne zaman kullanmaya değer olduklarını umarım daha iyi anlamışsınızdır.
 

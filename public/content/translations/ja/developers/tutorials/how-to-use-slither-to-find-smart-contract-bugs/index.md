@@ -15,7 +15,7 @@ source: セキュアなコントラクトの構築
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
-## Slither の使い方 {#how-to-use-slither}
+## Slither の使い方 \{#how-to-use-slither}
 
 このチュートリアルでは、Slither を使って、スマートコントラクトのバグを自動で検出する方法を学びます。
 
@@ -24,7 +24,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 - [静的解析入門](#static-analysis)：静的解析の簡単な紹介
 - [API](#api-basics)：Python API の説明
 
-## インストール {#installation}
+## インストール \{#installation}
 
 Slither には、Python 3.6 以上が必要です。 pip でインストールすることも、Docker を使用してインストールすることもできます。
 
@@ -50,7 +50,7 @@ solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### スクリプトを実行する {#running-a-script}
+### スクリプトを実行する \{#running-a-script}
 
 Python3 で Python スクリプトを実行するには、以下を実行します：
 
@@ -58,7 +58,7 @@ Python3 で Python スクリプトを実行するには、以下を実行しま�
 python3 script.py
 ```
 
-### コマンドライン {#command-line}
+### コマンドライン \{#command-line}
 
 **コマンドラインとユーザー定義スクリプトの比較**：Slither には、多くの一般的なバグを見つけるための事前定義された検出器のセットが付属しています。 コマンドラインで Slither を呼び出すとすべての検出器が実行されますので、静的解析の詳しい知識は必要ありません：
 
@@ -70,7 +70,7 @@ Slither では、検出器に加えて、[プリンター](https://github.com/cr
 
 プライベート検出器および GitHub での統合にアクセスするには、[crytic.io](https://github.com/crytic)を使用します。
 
-## 静的解析 {#static-analysis}
+## 静的解析 \{#static-analysis}
 
 Slither 静的解析フレームワークの機能と設計は、ブログ投稿 ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/)、[2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) と[学術論文](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf)で説明されています。
 
@@ -82,11 +82,11 @@ Slither 静的解析フレームワークの機能と設計は、ブログ投稿
 - [コード解析](#analysis)
 - [中間表現](#intermediate-representation)
 
-### コード表現 {#code-representation}
+### コード表現 \{#code-representation}
 
 単一の実行パスについて推論する動的解析とは対照的に、静的解析では一度にすべてのパスを対象として推論します。 これには、別のコード表現が必要です。 最も一般的なコード表現は、抽象構文木（AST）および制御フローグラフ（CFG）の 2 つです。
 
-### 抽象構文木（AST） {#abstract-syntax-trees-ast}
+### 抽象構文木（AST） \{#abstract-syntax-trees-ast}
 
 AST は、コンパイラがコードを解析するたびに用いられます。 おそらく、静的解析を実行できる最も基本的な構造だと言えるでしょう。
 
@@ -128,7 +128,7 @@ visitor = HasAddition(expression) # expression is the expression to be tested
 print(f'The expression {expression} has a addition: {visitor.result()}')
 ```
 
-### 制御フローグラフ（CFG） {#control-flow-graph-cfg}
+### 制御フローグラフ（CFG） \{#control-flow-graph-cfg}
 
 2 番目によく用いられるコード表現は、制御フローグラフ（CFG）です。 名前が示すように、すべての実行パスを可視化するグラフベースの表現です。 各ノードには、1 つまたは複数の命令が含まれます。 グラフのエッジ部分は、制御フロー操作（if/then/else、ループなど）を表します。 先ほどの例を CFG で表すと、次のようになります：
 
@@ -138,11 +138,11 @@ CFG は、大部分の解析の土台となる表現です。
 
 他にも、様々なコード表現が存在します。 それぞれの表現には、実行したい解析に応じて長所と短所があります。
 
-### 解析 {#analysis}
+### 解析 \{#analysis}
 
 Slither で実行できる最もシンプルな解析タイプは、構文解析です。
 
-### 構文解析 {#syntax-analysis}
+### 構文解析 \{#syntax-analysis}
 
 Slither は、コードおよび表現に含まれるさまざまな構成要素を移動しながら、パターンマッチングに類似したアプローチで矛盾や欠陥を発見します。
 
@@ -152,13 +152,13 @@ Slither は、コードおよび表現に含まれるさまざまな構成要素
 
 - [不適切な ERC-20 インターフェース](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface)：不適切な ERC-20 関数の署名を探します（[incorrect_erc20_interface.py#L34-L55](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/erc/incorrect_erc20_interface.py#L34-L55)）。
 
-### 意味解析 {#semantic-analysis}
+### 意味解析 \{#semantic-analysis}
 
 構文解析とは対照的に、意味解析は、より深くコードの「意味」を解析します。 この解析手法は、いくつかの種類に大別できます。 意味解析は、より強力で有益な結果を得られますが、より複雑なコードを書く必要があります。
 
 意味解析は、最も高度な脆弱性検出に用いられています。
 
-#### データ依存解析 {#fixed-point-computation}
+#### データ依存解析 \{#fixed-point-computation}
 
 `variable_a`の値が`variable_b`の影響を受けるパスが存在する場合、`variable_a`の変数は`variable_b`に対して依存関係を持ちます。
 
@@ -173,7 +173,7 @@ Slither では、中間表現（以下を参照）を利用して、[データ�
 
 データ依存関係を解析する具体例としては、[危険をもたらす厳密な等値の検出器](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities)を参照してください。 ここで、Slither は、ある危険な値に対する厳密な等値比較を発見しようと試みます（[incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)）。その上で、攻撃者がコントラクトをトラップできる状態を防止するために、`==`ではなく、`>=`または`<=`を使用するようにユーザーに警告します。 検出器はまず、`balanceOf(address)`の呼び出しにおける戻り値を危険な値だと見なし（[incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)）、データ依存関係エンジンを使用してその使用状況を追跡します。
 
-#### 不動点の計算 {#fixed-point-computation}
+#### 不動点の計算 \{#fixed-point-computation}
 
 解析がエッジを辿って CFG 全体を移動する場合、すでに訪問済みのノードを発見する可能性が高いでしょう。 例えば、以下のようなループがある場合です：
 
@@ -189,13 +189,13 @@ for(uint i; i < range; ++){
 
 効率的な不動点計算を用いた解析を作成するには、解析において情報がどのように拡散するかをよく理解しておく必要があります。
 
-### 中間表現 {#intermediate-representation}
+### 中間表現 \{#intermediate-representation}
 
 中間表現（IR）は、オリジナルのコードよりも静的解析を実行しやすくした言語です。 Slither では、Solidity を Slither 独自の IR である[SlithIR](https://github.com/crytic/slither/wiki/SlithIR)に変換します。
 
 基本的なチェックを作成したいだけの場合は、SlithIR を理解する必要はありません。 ただし、より高度な意味解析を作成したい場合は、SlithIR の知識が有益になるでしょう。 [SlithIR](https://github.com/crytic/slither/wiki/Printer-documentation#slithir)および[SSA](https://github.com/crytic/slither/wiki/Printer-documentation#slithir-ssa)のプリンターは、コードがどのように変換されるかを理解する上で役立ちます。
 
-## API の基本 {#api-basics}
+## API の基本 \{#api-basics}
 
 Slither には、コントラクトの基本的な属性や関数について探索できる API が含まれています。
 
@@ -207,7 +207,7 @@ slither = Slither('/path/to/project')
 
 ```
 
-### コントラクトや関数を探索する {#exploring-contracts-and-functions}
+### コントラクトや関数を探索する \{#exploring-contracts-and-functions}
 
 `Slither`オブジェクトは、以下を持ちます：
 

@@ -19,13 +19,13 @@ Herzlichen Glückwunsch! Sie haben es zum kürzesten und einfachsten Teil unsere
 
 Als Voraussetzung sollten Sie MetaMask bereits auf ihrem Handy oder in Ihrem Browser installiert haben und es sollte das Konto enthalten, für die Sie Ihre NFTs geprägt haben. Die App können Sie kostenlos auf [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) oder [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=de_US&gl=US) erhalten.
 
-## Schritt 1: Das Netzwerk auf Ropsten festlegen {#set-network-to-ropsten}
+## Schritt 1: Das Netzwerk auf Ropsten festlegen \{#set-network-to-ropsten}
 
 Drücken Sie oben in der App auf die Schaltfläche "Wallet". Daraufhin werden Sie aufgefordert, ein Netzwerk auszuwählen. Da unser NFT im Ropsten-Netzwerk geprägt wurde, sollten Sie als Netzwerk Ropsten auswählen.
 
 ![So legen Sie Ropsten als Netzwerk auf MetaMask fest](./goerliMetamask.gif)
 
-## Schritt 2: Kollektion zu MetaMask hinzufügen {#add-nft-to-metamask}
+## Schritt 2: Kollektion zu MetaMask hinzufügen \{#add-nft-to-metamask}
 
 Sobald Sie sich im Ropsten-Netzwerk befinden, wählen Sie die Registerkarte "Collectibles" (Sammelbare Elemente) auf der rechten Seite und fügen Sie die NFT-Smart-Contract-Adresse und die ERC-721-Token-ID Ihres NFT hinzu. Sie können sie anhand des Transaktions-Hashes Ihres NFT, der im zweiten Teil unseres Tutorials bereitgestellt wurde, auf Etherscan finden.
 

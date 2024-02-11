@@ -10,19 +10,19 @@ Inteligentne kontrakty Ethereum są niezwykle elastyczne, zdolne zarówno do utr
 - [Problem kont Parity z wieloma podpisami nr 2 — zablokowane 300 mln USD](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [Zhakowanie The DAO na 3,6 mln ETH! Ponad 1 mld USD w dzisiejszych cenach ETH](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
-## Warunki wstępne {#prerequisites}
+## Warunki wstępne \{#prerequisites}
 
 W tej części zostanie omówione bezpieczeństwo [kontraktów inteligentnych](/developers/docs/smart-contracts/), więc wcześniej upewnij się, że dobrze orientujesz się w dotyczących ich kwestiach.
 
-## Jak napisać bezpieczniejszy kod inteligentnego kontraktu {#how-to-write-more-secure-smart-contract-code}
+## Jak napisać bezpieczniejszy kod inteligentnego kontraktu \{#how-to-write-more-secure-smart-contract-code}
 
 Przed uruchomieniem jakiegokolwiek kodu w sieci głównej należy podjąć odpowiednie środki ostrożności, aby chronić wszystko, co ma wartość, którą powierzono Twojemu inteligentnemu kontraktowi. W tym artykule omówimy kilka konkretnych ataków, udostępnimy zasoby, z których można dowiedzieć się więcej na temat innych typów ataków, a także przedstawimy kilka podstawowych narzędzi i najlepszych praktyk, aby zapewnić prawidłowe i bezpieczne funkcjonowanie kontraktów.
 
-## Audyty to nie srebrne pociski {#audits-are-not-a-silver-bullet}
+## Audyty to nie srebrne pociski \{#audits-are-not-a-silver-bullet}
 
 Wiele lat wcześniej narzędzia do pisania, kompilowania, testowania i wdrażania inteligentnych kontraktów były bardzo niedojrzałe, co prowadziło do tego, że w wielu projektach kod Solidity był pisany w sposób chaotyczny i szybko przekazywany audytorowi, który go badał, aby upewnić się, że działa on bezpiecznie i zgodnie z oczekiwaniami. W 2020 roku procesy programistyczne i narzędzia wspierające pisanie Solidity są znacznie lepsze; wykorzystanie tych najlepszych praktyk nie tylko zapewnia łatwiejsze zarządzanie projektem, ale jest także istotną częścią bezpieczeństwa projektu. Audyt pod koniec pisania inteligentnego kontraktu nie jest już wystarczający jako jedyny czynnik bezpieczeństwa w projekcie. Bezpieczeństwo zaczyna się przed napisaniem pierwszego wiersza kodu inteligentnego kontraktu, **bezpieczeństwo zaczyna się od odpowiednich procesów projektowania i programowania**.
 
-## Proces tworzenia inteligentnych kontraktów {#smart-contract-development-process}
+## Proces tworzenia inteligentnych kontraktów \{#smart-contract-development-process}
 
 Co najmniej:
 
@@ -42,11 +42,11 @@ Można powiedzieć o wiele więcej na temat procesu rozwoju, ale te elementy są
 - Pozwala deweloperom na szybkie iterowanie, testowanie i uzyskiwanie informacji zwrotnych na temat modyfikacji
 - Mniej prawdopodobne, że Twój projekt doświadcza regresji
 
-## Ataki i podatność na zagrożenia {#attacks-and-vulnerabilities}
+## Ataki i podatność na zagrożenia \{#attacks-and-vulnerabilities}
 
 Teraz, gdy piszesz kod Solidity za pomocą wydajnego procesu rozwoju, przyjrzyjmy się pewnym powszechnym słabościom Solidity, aby zobaczyć, co może pójść źle.
 
-### Wielobieżność {#re-entrancy}
+### Wielobieżność \{#re-entrancy}
 
 Wielobieżność jest jedną z największych i najistotniejszych kwestii bezpieczeństwa, które należy rozważyć podczas opracowywania inteligentnych kontraktów. Chociaż EVM nie może uruchamiać wielu kontraktów w tym samym czasie, kontrakt wywołujący inny kontrakt wstrzymuje wykonywanie kontraktu wywołującego i stan pamięci do momentu zwrotu wywołania, w którym to momencie wykonanie przebiega normalnie. Ta przerwa i ponowne uruchomienie może stworzyć podatność znaną jako „wielobieżność”.
 
@@ -116,7 +116,7 @@ Wywołanie Attacker.beginAttack() rozpocznie cykl, który wygląda następująco
 
 Wywołanie Attacker.beginAttack z 1 ETH spowoduje atak ponownego wejścia na ofiarę, wycofanie więcej ETH niż zostało dostarczone (pobrane z sald innych użytkowników, powodując, że kontrakt ofiary stanie się niewystarczająco zabezpieczony)
 
-### Jak radzić sobie z wielobieżnością (niewłaściwy sposób) {#how-to-deal-with-re-entrancy-the-wrong-way}
+### Jak radzić sobie z wielobieżnością (niewłaściwy sposób) \{#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Można rozważyć pokonanie wielobieżności po prostu uniemożliwiając jakimkolwiek inteligentnym kontraktom interakcję z Twoim kodem. Wyszukujesz stackoverflow, znajdujesz ten fragment kodu z mnóstwem głosów za:
 
@@ -185,7 +185,7 @@ require(tx.origin == msg.sender)
 
 Nadal jednak nie jest to dobre rozwiązanie. Jednym z najbardziej ekscytujących aspektów Ethereum jest możliwość komponowania, inteligentne kontrakty integrują się ze sobą i nadbudowują się wzajemnie. Korzystając z powyższej linii, ograniczasz użyteczność swojego projektu.
 
-### Jak radzić sobie z wielobieżnością (właściwy sposób) {#how-to-deal-with-re-entrancy-the-right-way}
+### Jak radzić sobie z wielobieżnością (właściwy sposób) \{#how-to-deal-with-re-entrancy-the-right-way}
 
 Po prostu zmieniając kolejność aktualizacji pamięci masowej i wywołania zewnętrznego, zapobiegamy warunkowi wielobieżności, który umożliwił atak. Wywołanie zwrotne wycofania jest wprawdzie możliwe, ale atakujący na tym nie skorzysta, ponieważ pamięć `balances` będzie już ustawiona na 0.
 
@@ -202,11 +202,11 @@ contract NoLongerAVictim {
 
 Powyższy kod jest zgodny z wzorcem projektu „Checks-Effects-Interaction”, który pomaga chronić przed wielobieżnością. Możesz [przeczytać więcej na temat interakcji Checks-Effects-Interactions tutaj](https://fravoll.github.io/solidity-patterns/checks_effects_interactions.html)
 
-### Jak radzić sobie z wielobieżnością (opcja nuklearna) {#how-to-deal-with-re-entrancy-the-nuclear-option}
+### Jak radzić sobie z wielobieżnością (opcja nuklearna) \{#how-to-deal-with-re-entrancy-the-nuclear-option}
 
 Za każdym razem, gdy wysyłasz ETH na niezaufany adres lub wchodzisz w interakcje z nieznanym kontraktem (np. wywołanie `transfer()` adresu tokenów dostarczonego przez użytkownika), otwiera się na możliwość wielobieżności. **Projektując kontrakty, które nie wysyłają ETH ani nie wywołują niezaufanych kontraktów, zapobiegasz możliwości wielobieżności!**
 
-## Więcej rodzajów ataków {#more-attack-types}
+## Więcej rodzajów ataków \{#more-attack-types}
 
 Powyższe rodzaje ataków obejmują problemy z kodowaniem inteligentnych kontraktów (wielobieżność) i osobliwości Ethereum (działający kod wewnątrz konstruktorów, zanim kod będzie dostępny pod adresem kontraktowym). Istnieje wiele, wiele innych rodzajów ataków, o których należy wiedzieć, takich jak:
 
@@ -219,11 +219,11 @@ Dalsza lektura:
 - [Consensys Smart Contract — znane ataki](https://consensys.github.io/smart-contract-best-practices/attacks/) — bardzo czytelne wyjaśnienie najważniejszych luk, z przykładowym kodem dla większości.
 - [Rejestr SWC](https://swcregistry.io/docs/SWC-128) — wyselekcjonowana lista CWE, które mają zastosowanie do Ethereum i inteligentnych kontraktów
 
-## Narzędzia bezpieczeństwa {#security-tools}
+## Narzędzia bezpieczeństwa \{#security-tools}
 
 Chociaż nic nie zastąpi zrozumienia podstaw bezpieczeństwa Ethereum i zaangażowania profesjonalnej firmy audytorskiej w sprawdzenie kodu, dostępnych jest wiele narzędzi, które pomogą wskazać potencjalne problemy w kodzie.
 
-### Bezpieczeństwo kontraktów inteligentnych {#smart-contract-security}
+### Bezpieczeństwo kontraktów inteligentnych \{#smart-contract-security}
 
 **Slither —** **_framework analizy statycznej Solidity napisany w Pythonie 3._**
 
@@ -254,14 +254,14 @@ Chociaż nic nie zastąpi zrozumienia podstaw bezpieczeństwa Ethereum i zaanga�
 - [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
 - [Forum](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
 
-### Weryfikacja formalna {#formal-verification}
+### Weryfikacja formalna \{#formal-verification}
 
 **Informacje na temat weryfikacji formalnej**
 
 - [Jak działa formalna weryfikacja inteligentnych kontaktów](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _20 lipca 2018 – Brian Marick_
 - [Jak weryfikacja formalna może zapewnić bezbłędne inteligentne kontrakty](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _29 stycznia 2018 — Bernard Mueller_
 
-### Korzystanie z narzędzi {#using-tools}
+### Korzystanie z narzędzi \{#using-tools}
 
 Dwa najpopularniejsze narzędzia do analizy bezpieczeństwa inteligentnych kontraktów to:
 
@@ -304,7 +304,7 @@ Slither zidentyfikował tutaj możliwość wielobieżności, identyfikując kluc
 
 pozwalający szybko dowiedzieć się o potencjalnych problemach z kodem. Podobnie jak wszystkie zautomatyzowane narzędzia testowe, Slither nie jest doskonały i popełnia zbyt wiele błędów, jeśli chodzi o raportowanie. Może ostrzec przed potencjalną wielobieżnością nawet jeśli nie ma podatności na zagrożenia. Często przeglądanie RÓŻNICY w danych wyjściowych Slither między zmianami w kodzie jest niezwykle pouczające, pomagając odkryć luki w zabezpieczeniach, które zostały wprowadzone znacznie wcześniej niż w przypadku czekania na ukończenie projektu.
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 **Przewodnik po najlepszych praktykach bezpieczeństwa dotyczących inteligentnych kontraktów**
 
@@ -318,7 +318,7 @@ pozwalający szybko dowiedzieć się o potencjalnych problemach z kodem. Podobni
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
 
-## Powiązane samouczki {#related-tutorials}
+## Powiązane samouczki \{#related-tutorials}
 
 - [Bezpieczny proces tworzenia](/developers/tutorials/secure-development-workflow/)
 - [Jak korzystać ze Slither, aby znaleźć błędy dotyczące inteligentnych kontraktów](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)

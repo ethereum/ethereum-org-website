@@ -33,13 +33,13 @@ slither-check-erc 0xdac17f958d2ee523a2206206994597c13d831ec7 TetherToken
 - slither-prop . --contract ContractName # requires configuration, and use of Echidna and Manticore
 ```
 
-## 全般的な考慮事項 {#general-considerations}
+## 全般的な考慮事項 \{#general-considerations}
 
 - **セキュリティレビューを実行済みのコントラクトであること**。セキュリティレビューを経ていないコントラクトとは、やりとりしないでください。 セキュリティレビューでは、アセスメント期間（「Level of Effort」と呼ぶ場合もある） 、セキュリティ企業の評判、発見された件数および深刻度を確認してください。
 - **デベロッパに問い合わせられること**。インシデントが発生した場合、開発チームにアラートを提供する必要があるかもしれません。 [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts)で、適切な問合せ先を確認してください。
 - **重要なアナウンスを行うセキュリティ関連のメーリングリストがあること**。重大な問題の発生時やアップグレード時に、あなたのようなユーザーに助言が提供される体制が整っているかを確認してください。
 
-## ERC 適合性 {#erc-conformity}
+## ERC 適合性 \{#erc-conformity}
 
 Slither に含まれる[slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance)ユーティリティで、関連する多くの ERC 標準に対するトークンの遵守度をレビューできます。 slither-check-erc を次の内容の評価に使用してください。
 
@@ -58,14 +58,14 @@ Slither には[slither-prop](https://github.com/crytic/slither/wiki/Property-gen
 - **Transfer および transferFrom がフィーを取らないこと**。デフレトークンは、予期せぬ動作を引き起こす可能性があります。
 - **トークンから得られる潜在的な利子収入が考慮されていること**。一部のトークンは、トークン保有者に利子を分配します。 この点を考慮しない場合、利子がコントラクト内でトラップされる可能性があります。
 
-## コントラクトの構成 {#contract-composition}
+## コントラクトの構成 \{#contract-composition}
 
 - **コントラクトが必要以上に複雑になっていないか**。 トークンは、シンプルなコントラクトでなければなりません。コードが複雑になればなるほど、よりレビューが煩雑になります。 複雑なコードを特定するには、Slither の[human-summary プリンター](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary)を使用してください。
 - **コントラクトが SafeMath を使用しているか**。SafeMath を使用していないコントラクトは、より厳格なレビュー基準が必要になります。 コントラクトで SafeMath が使用されているかどうか、マニュアルで確認してください。
 - **トークンに関連しない関数の数が、最低限に抑えられているか**。 トークンに関連しない関数は、コントラクトにおいて問題が発生する可能性を高めてしまいます。 Slither の [contract-summary プリンター](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary)を使用して、コントラクトのコード全体をレビューしてください。
 - **トークンのアドレスが複数存在しないか**。残高更新のために複数のエントリーポイントを持つトークンは、当該アドレスに基づく内部の帳簿管理を毀損する可能性があります（例：`balances[token_address][msg.sender]`が実際の残高を反映しない場合）。
 
-## 所有者の特権 {#owner-privileges}
+## 所有者の特権 \{#owner-privileges}
 
 - **トークンがアップグレード不可能であるか**。アップグレード可能なコントラクトは、時間の経過と共にルールが変更される可能性があります。 Slither の[human-summary プリンター](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary)を使用して、コントラクトがアップグレード可能かどうかを決定します。
 - **所有者のミント能力が制限されているか**。 悪意の所有者やセキュリティが侵害された所有者は、ミント能力を悪用する可能性があります。 Slither の[human-summary プリンター](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary)を使用して、ミント能力を評価し、マニュアルでコードをレビューする必要があるかを決定してください。
@@ -73,7 +73,7 @@ Slither には[slither-prop](https://github.com/crytic/slither/wiki/Property-gen
 - **所有者がコントラクトをブラックリストに登録できるようになっていないか**。 悪意の所有者やセキュリティが侵害された所有者は、ブラックリストに登録されたトークンを使用して、コントラクトをトラップすることが可能です。 マニュアルで、ブラックリスト機能を特定してください。
 - \*\*トークン開発チームの身元がはっきりしており、不正使用の責任を負える組織であるか/strong>。匿名の開発チームが開発したコントラクトや、または法的シェルターの対象に含まれるコントラクトに対しては、より厳格なレビューが必要になります。
 
-## トークンの枯渇 {#token-scarcity}
+## トークンの枯渇 \{#token-scarcity}
 
 トークンの枯渇に関わる問題については、マニュアルでレビューする必要があります。 以下の条件を確認してください：
 

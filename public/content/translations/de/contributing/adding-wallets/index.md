@@ -4,7 +4,7 @@ description: Richtlinien, die wir verwenden, wenn wir eine Wallet zu ethereum.or
 lang: de
 ---
 
-# Wallets hinzufügen {#adding-wallets}
+# Wallets hinzufügen \{#adding-wallets}
 
 Wir wollen sicherstellen, dass wir eine Vielzahl von Wallets zeigen, die die funktionsreiche Landschaft der Wallets abdecken, so dass die Nutzer sich sicher auf Ethereum bewegen können.
 
@@ -17,9 +17,9 @@ Jeder kann eine neue Wallet vorschlagen. Wallets sind derzeit hier aufgelistet:
 
 Wallets verändern sich auf Ethereum rasch. Wir haben versucht, ein gerechtes Framework für Überlegungen auf ethereum.org zu schaffen. Allerdings werden sich die Kriterien für die Auflistung im Laufe der Zeit verändern und weiterentwickeln.
 
-## Der Entscheidungsrahmen {#the-decision-framework}
+## Der Entscheidungsrahmen \{#the-decision-framework}
 
-### Aufnahmekriterien: die Must-haves {#the-must-haves}
+### Aufnahmekriterien: die Must-haves \{#the-must-haves}
 
 - **Ein sicherheitsgeprüftes Produkt** – ob durch ein Audit, ein internes Sicherheitsteam, einen offenen Source-Code oder eine andere Methode, die Sicherheit Ihrer Wallet muss zuverlässig sein. So lässt sich das Risiko für unsere Nutzerinnen und Nutzer verringern. Zudem ist das ein Zeichen für die Ernsthaftigkeit eines Produkts.
 - **Eine Wallet, die seit mehr als sechs Monaten "live" ist ODER von einer Gruppe mit einer seriösen Erfolgsbilanz herausgegeben wurde** – das ist ein weiterer Hinweis auf Sicherheit. Sechs Monate sind ein guter Zeitraum, in dem kritische Fehler und Sicherheitslücken gefunden werden könnten. Wir bitten um sechs Monate, um Forks herauszufiltern, die schnell als Projekte aufgegeben werden.
@@ -27,7 +27,7 @@ Wallets verändern sich auf Ethereum rasch. Wir haben versucht, ein gerechtes Fr
 - **Ehrliche und genaue Angaben**: Es wird erwartet, dass alle vorgeschlagenen Projektangebote ehrliche und genaue Angaben enthalten. Produkte, die falsche Angaben machen, z. B. Ihr Produkt als "Open Source" deklarieren, obwohl es das nicht ist, werden entfernt.
 - **Ansprechpartner** – Ein Ansprechpartner für die Wallet hilft uns erheblich, genaue Informationen zu erhalten, wenn Änderungen vorgenommen werden. Somit bleibt die Aktualisierung von ethereum.org bei der Erfassung künftiger Informationen überschaubar.
 
-### Weitere Kriterien: optionale Aspekte {#the-nice-to-haves}
+### Weitere Kriterien: optionale Aspekte \{#the-nice-to-haves}
 
 - **Globaler Zugang** – Ihre Wallet hat keine geografischen Einschränkungen oder KYC-Anforderungen, die bestimmte Personen vom Zugang zu Ihrem Service ausschließen.
 - **Verfügbarkeit in mehreren Sprachen** – Ihre Wallet wird in mehrere Sprachen übersetzt, so dass Nutzer auf der ganzen Welt darauf zugreifen können.
@@ -53,7 +53,7 @@ Wallets verändern sich auf Ethereum rasch. Wir haben versucht, ein gerechtes Fr
 - **Eigenes Support-Team** – Ihre Wallet hat ein eigenes Support-Team, an das sich die Nutzer bei Problemen wenden können.
 - **Lehrreiche Ressourcen/Dokumentation** – Ihr Produkt sollte über ein gut gestaltetes Onboarding-System verfügen, um den Benutzern zu helfen und sie zu informieren. Alternativ sind Informationen zu Lerninhalten wie Artikel oder Videos hilfreich.
 
-## Eine Wallet hinzufügen {#adding-a-wallet}
+## Eine Wallet hinzufügen \{#adding-a-wallet}
 
 Wenn Sie eine Wallet zu ethereum.org hinzufügen möchten, erstellen Sie ein Ticket auf GitHub.
 
@@ -61,7 +61,7 @@ Wenn Sie eine Wallet zu ethereum.org hinzufügen möchten, erstellen Sie ein Tic
   Ein Thema erstellen
 </ButtonLink>
 
-## Wartung {#maintenance}
+## Wartung \{#maintenance}
 
 Ethereum befindet sich in der Entwicklung. Daher kommen und gehen Teams und Produkte und Innovationen finden täglich statt, so dass wir unsere Inhalte regelmäßig überprüfen:
 
@@ -70,6 +70,6 @@ Ethereum befindet sich in der Entwicklung. Daher kommen und gehen Teams und Prod
 
 Ethereum.org wird von der Open-Source-Community gepflegt; wir sind auf die Hilfe der Community angewiesen, um diese Seite auf dem neuesten Stand zu halten. Wenn Ihnen Informationen zu den aufgelisteten Wallets auffallen, die aktualisiert werden müssen, öffnen Sie bitte [ein Ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) oder [Pull Request](https://github.com/ethereum/ethereum-org-website/pulls)!
 
-## Nutzungsbedingungen {#terms-of-use}
+## Nutzungsbedingungen \{#terms-of-use}
 
 Bitte beachten Sie auch unsere[Nutzungsbedingungen](/terms-of-use/). Die Informationen auf ethereum.org werden ausschließlich zu allgemeinen Informationszwecken bereitgestellt.

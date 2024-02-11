@@ -6,15 +6,15 @@ lang: es
 
 Los bloques son las unidades fundamentales de la cadena de bloques. Los bloques son unidades discretas de información que se pasan entre nodos, se acuerdan y se añaden a la base de datos de cada nodo. Esta página explica cómo se producen.
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos \{#prerequisites}
 
 La propuesta de bloque es parte del protocolo de prueba de participación. Para ayudar a entender esta página, le recomendamos que lea sobre la [prueba de participación](/developers/docs/consensus-mechanisms/pos/) y la [arquitectura de bloques](/developers/docs/blocks/).
 
-## ¿Quién produce los bloques? {#who-produces-blocks}
+## ¿Quién produce los bloques? \{#who-produces-blocks}
 
 Las cuentas de validadores proponen bloques. Las cuentas de validación slas administran operadores de nodos que ejecutan software de validación como parte de sus clientes de ejecución y consenso y han depositado al menos 32 ETH en el contrato de depósito. No obstante, cada validador solo es responsable ocasionalmente de proponer un bloque. Ethereum mide el tiempo en ranuras y épocas. Cada ranura es de doce segundos, y 32 ranuras (6,4 minutos) hacen una época. Cada ranura es una oportunidad de añadir un nuevo bloque en Ethereum.
 
-### Selección aleatoria {#random-selection}
+### Selección aleatoria \{#random-selection}
 
 Un solo validador se elige pseudoaleatoriamente para proponer un bloque en cada ranura. No hay tal cosa como la verdadera aleatoriedad en una cadena de bloques, porque si cada nodo generara números genuinamente aleatorios, no podrían llegar a un consenso. En su lugar, el objetivo es hacer que el proceso de selección del validador sea impredecible. La aleatoriedad se logra en Ethereum utilizando un algoritmo llamado RANDAO que mezcla un hash del proponente de bloques con una semilla que se actualiza en cada bloque. Este valor sirve para seleccionar un validador específico del conjunto de validadores totales. La selección del validador se fija con dos épocas de antelación como una forma de protegerse contra ciertos tipos de manipulación de semillas.
 
@@ -22,7 +22,7 @@ Aunque los validadores se añaden a RANDAO en cada ranura, el valor global de RA
 
 Solo se selecciona un proponente de bloque en cada ranura. En condiciones normales, un productor de un solo bloque crea y lanza un solo bloque en su ranura dedicada. Crear dos bloques para la misma ranura es una ofensa que se puede recortar, a menudo conocida como «equivocación».
 
-## ¿Cómo se crea el bloque? {#how-is-a-block-created}
+## ¿Cómo se crea el bloque? \{#how-is-a-block-created}
 
 Se espera que el proponente de bloques transmita un bloque de baliza firmado que se construye sobre la cabeza más reciente de la cadena, de acuerdo con la vista de su propio algoritmo de elección de bifurcación de ejecución local. El algoritmo de elección de bifurcación aplica cualquier certificación en cola que quede de la ranura anterior, luego encuentra el bloque con el mayor peso acumulado de certificaciones en su historia. Ese bloque es el padre del nuevo bloque creado por el proponente.
 
@@ -50,17 +50,17 @@ Todos estos datos se recopilan en un bloque de baliza, se firman y se transmiten
 
 Más información sobre la [anatomía de los bloques](/developers/docs/blocks).
 
-## ¿Qué pasa con el bloque? {#what-happens-to-blocks}
+## ¿Qué pasa con el bloque? \{#what-happens-to-blocks}
 
 El bloque se añade a la base de datos local del proponente del bloque y se transmite a los pares a través de la red de intercambio de información de la capa de consenso. Cuando un validador recibe el bloque, verifica los datos dentro de él, incluida la verificación de que el bloque tiene el padre correcto, corresponde a la ranura indicada, el índice del proponente es el esperado, la revelación de RANDAO es válida y que el proponente no está recortado. El `execution_payload` se desagrupa, y el cliente de ejecución del validador vuelve a ejecutar las transacciones de la lista para comprobar el cambio de estado propuesto. Suponiendo que el bloque pase todas estas comprobaciones, cada validador añade el bloque a su propia cadena predilecta. El proceso comienza de nuevo en la siguiente ranura.
 
-## Recompensas de bloque {#block-rewards}
+## Recompensas de bloque \{#block-rewards}
 
 El proponente de bloques recibe el pago por su trabajo. Hay una `base_reward` calculada en función del número de validadores activos y sus saldos efectivos. El proponente del bloque recibe entonces una fracción de `base_reward` por cada certificación válida incluida en el bloque; cuantos más validadores certifican el bloque, mayor será la recompensa del proponente del bloque. También hay una recompensa por los validadores de informes que deban ser recortados, igual a `1/512 * effective balance` por cada validador recortado.
 
 [Más información sobre recompensas y penalizaciones](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
 
-## Más información {#further-reading}
+## Más información \{#further-reading}
 
 - [Introducción a los bloques](/developers/docs/blocks/)
 - [Introducción a la prueba de participación](/developers/docs/consensus-mechanisms/pos/)

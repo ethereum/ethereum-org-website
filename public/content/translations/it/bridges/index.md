@@ -4,13 +4,15 @@ description: I ponti consentono agli utenti di spostare i propri fondi tra diver
 lang: it
 ---
 
-# Ponti della blockchain {#prerequisites}
+# Ponti della blockchain \{#prerequisites}
 
 _Web3 si è evoluto in un ecosistema delle blockchain del L1 e soluzioni di ridimensionamento del L2, ognuna progettata con capacità e compromessi unici. All'aumentare del numero di protocolli delle blockchain, aumenta anche [la domanda di spostare risorse tra le catene](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Per soddisfare questa domanda, necessitiamo dei ponti._
 
+{
 <Divider />
+}
 
-## Cosa sono i ponti? {#what-are-bridges}
+## Cosa sono i ponti? \{#what-are-bridges}
 
 I ponti della blockchain funzionano proprio come i ponti che conosciamo nel mondo fisico. Proprio come un ponte fisico connette due località fisiche, il ponte di una blockchain connette due ecosistemi della blockchain. I ponti facilitano la comunicazione tra le blockchain tramite il trasferimento di informazioni e risorse.
 
@@ -20,7 +22,7 @@ Risiedi negli USA e stai pianificando un viaggio in Europa. Possiedi USD, ma nec
 
 Ma, cosa faresti se volessi effettuare una simile conversione per usare un'altra blockchain? Diciamo che vuoi scambiare ETH sulla Rete Principale di Ethereum per ETH su [Arbitrum](https://arbitrum.io/). Come il cambio di valuta fatto per gli EUR, necessitiamo di un meccanismo per spostare i nostri ETH da Ethereum ad Arbitrum. I ponti rendono possibile una simile transazione. In questo caso, [Arbitrum ha un ponte nativo](https://bridge.arbitrum.io/) che può trasferire gli ETH dalla Rete Principale ad Arbitrum.
 
-## Perché necessitiamo dei ponti? {#why-do-we-need-bridges}
+## Perché necessitiamo dei ponti? \{#why-do-we-need-bridges}
 
 Tutte le blockchain hanno le proprie restrizioni. Affinché Ethereum si ridimensionasse e tenesse il passo con la domanda, sono stati necessari i rollup. Altrimenti, gli L1 come Solana e Avalanche sono progettati diversamente, per consentire un volume maggiore, ma al costo della decentralizzazione.
 
@@ -37,25 +39,27 @@ I ponti consentono:
 
 [Come collegare i token al livello 2](/guides/how-to-use-a-bridge/)
 
+{
 <Divider />
+}
 
-## Casi d'uso dei ponti {#bridge-use-cases}
+## Casi d'uso dei ponti \{#bridge-use-cases}
 
 I seguenti sono alcuni scenari in cui puoi usare un ponte:
 
-### Commissioni di transazione più basse {#transaction-fees}
+### Commissioni di transazione più basse \{#transaction-fees}
 
 Diciamo che possiedi degli ETH sulla Rete Principale di Ethereum, ma vorresti commissioni di transazione più economiche per esplorare diverse dapp. Collegando i tuoi ETH dalla Rete Principale al rollup di L2 di Ethereum, puoi godere di commissioni di transazione inferiori.
 
-### Dapp su altre blockchain {#dapps-other-chains}
+### Dapp su altre blockchain \{#dapps-other-chains}
 
 Se utilizzi Aave sulla Rete Principale di Ethereum per prestare USDT, il tasso d'interesse per prestarli usando Aave su Polygon è maggiore.
 
-### Esplora gli ecosistemi della blockchain {#explore-ecosystems}
+### Esplora gli ecosistemi della blockchain \{#explore-ecosystems}
 
 Se possiedi degli ETH sulla Rete Principale di Ethereum e desideri esplorare un L1 alternativo per provarne le dapp native. Puoi usare un ponte per trasferire i tuoi ETH dalla Rete Principale di Ethereum al L1 alternativo.
 
-### Cripto-risorse native proprie {#own-native}
+### Cripto-risorse native proprie \{#own-native}
 
 Diciamo che vuoi possedere Bitcoin (BTC) nativi, ma hai fondi soltanto sulla Rete Principale di Ethereum. Per esporti ai BTC su Ethereum, puoi acquistare dei Wrapped Bitcoin (WBTC). Tuttavia, WBTC è un token ERC-20 nativo alla rete di Ethereum, ovvero, una versione di Bitcoin di Ethereum e non è la risorsa originale sulla blockchain di Bitcoin. Per possedere BTC nativi, dovresti collegare le tue risorse da Ethereum a Bitcoin usando un ponte. Questo collegherà i tuoi WBTC e li convertirà in BTC nativi. Altrimenti, potresti possedere dei BTC e volerli usare nei protocolli della DeFi di Ethereum. Questo richiederebbe il collegamento inverso, da BTC a WBTC, poi utilizzabili come risorse su Ethereum.
 
@@ -63,9 +67,11 @@ Diciamo che vuoi possedere Bitcoin (BTC) nativi, ma hai fondi soltanto sulla Ret
   Inoltre, puoi fare tutto quanto descritto sopra, usando una <a href="/get-eth/">borsa centralizzata</a>. Tuttavia, a meno che i tuoi fondi non siano già su una borsa, comporterebbe diversi passaggi, e sarebbe più conveniente usare un ponte.
 </InfoBanner>
 
+{
 <Divider />
+}
 
-## Tipi di ponte {#types-of-bridge}
+## Tipi di ponte \{#types-of-bridge}
 
 I ponti hanno molti tipi di design e complessità. In generale, i ponti rientrano in due categorie: fiduciari e non fiduciari.
 
@@ -93,9 +99,11 @@ Il controllo automatico è simile a un modello non fiduciario, poiché rimuove i
 
 Molte soluzioni di collegamento adottano modelli tra questi due estremi, con gradi di fiducia variabili.
 
+{
 <Divider />
+}
 
-## Rischi nell'uso dei ponti {#bridge-risk}
+## Rischi nell'uso dei ponti \{#bridge-risk}
 
 I ponti sono nelle prime fasi di sviluppo. È probabile che il design ottimale dei ponti non sia ancora stato scoperto. L'interazione con qualsiasi tipo di ponte comporta dei rischi:
 
@@ -119,9 +127,11 @@ Una hack recente è quella del ponte del Wormhole di Solana, [in cui 120k di wET
 
 I ponti sono fondamentali per accogliere gli utenti sui L2 di Ethereum e persino per gli utenti che desiderano esplorare diversi ecosistemi. Tuttavia, dati i rischi comportati dall'interazione coi ponti, gli utenti devono comprenderne i compromessi. Ecco alcune [strategie per la sicurezza tra le catene](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
+{
 <Divider />
+}
 
-## Ulteriori letture {#further-reading}
+## Ulteriori letture \{#further-reading}
 
 - [EIP-5164: Esecuzione Tra Catene](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 giugno 2022 - Brendan Asselstine_
 - [Quadro dei rischi di L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 luglio 2022 - Bartek Kiepuszewski_

@@ -4,7 +4,7 @@ description: Ethereum Sanal Makinası için tüm mevcut işlem kodlarının bir 
 lang: tr
 ---
 
-## Genel Bakış {#overview}
+## Genel Bakış \{#overview}
 
 Bu EVM referans sayfasının [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes) güncellenmiş bir versiyonudur. Ayrıca [Sarı Kağıt](https://ethereum.github.io/yellowpaper/paper.pdf)'tan, [Jello Kağıt](https://jellopaper.org/evm/)'tan ve [geth](https://github.com/ethereum/go-ethereum) uygulamasından alınmıştır. Bunun erişilebilir bir referans olması amaçlanmıştır, ancak özellikle net değildir. Eğer doğruluktan emin olmak ve her kenar durumundan haberdar olmak istiyorsanız, Jello Kağıdı veya bir müşteri uygulaması kullanmanız tavsiye edilir.
 

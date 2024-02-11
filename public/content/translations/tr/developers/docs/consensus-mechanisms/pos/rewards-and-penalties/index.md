@@ -14,9 +14,9 @@ Tüm ödüller ve cezalar dönem başına bir defa uygulanmaktadır.
 
 Daha fazla ayrıntı için okumaya devam edin...
 
-## Ödüller ve cezalar {#rewards}
+## Ödüller ve cezalar \{#rewards}
 
-### Ödüller {#rewards}
+### Ödüller \{#rewards}
 
 Doğrulayıcılar diğer doğrulayıcıların çoğunluğu ile uyumlu oylar verdiklerinde, bloklar önerdiklerinde ve senkronizasyon kurullarına katıldıklarında ödüller alırlar. Her bir dönemdeki ödüllerin değeri `base_reward` ile hesaplanır. Bu diğer ödüllerin hesaplandığı ana birimdir. `base_reward` bir dönem altındaki ideal şartlar altında bir doğrulayıcı tarafından alınan ortalama ödülü temsil etmektedir. Bu, doğrulayıcının geçerli bakiyesi ve toplam doğrulayıcı sayısından yola çıkılarak şu şekilde hesaplanır:
 
@@ -54,7 +54,7 @@ Hızlı tasdikleri teşvik etmek için ek bir ödül eklenmiştir. Bu `inclusion
 
 Blok önericileri bloka dahil edilen ** her geçerli tasdik** için `8 / 64 * base_reward` almaktadır, yani ödülün gerçek değeri tasdik eden doğrulayıcıların sayısına göre ölçeklenir. Blok önericileri ayrıca önerdikleri blokta diğer doğrulayıcılar tarafından kötü davranışların kanıtını ekleyerek de ödüllerini artırabilirler. Bu ödüller doğrulayıcı dürüstlüğünü destekleyen "havuçlar"dır. Kesimi dahil eden bir blok önericisi `slashed_validators_effective_balance/512` ile ödüllendirilecektir.
 
-### Cezalar {#penalties}
+### Cezalar \{#penalties}
 
 Şimdiye kadar mükemmel davranışlar sergileyen doğrulayıcıları düşündük ama zamanında baş, kaynak veya hedef oyları vermeyen veya bunu aşırı yavaş şekilde yapan doğrulayıcılara ne olacak?
 
@@ -62,7 +62,7 @@ Hedef ve kaynak oylamalarını kaçırmanın cezası tasdik edicinin onları ver
 
 [Mutabakat özelliklerinde](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md) ödüller ve cezalar hakkında daha fazlasını okuyun. Ödüller ve cezalar Bellatrix yükseltmesinde değiştirilmiştir - Danny Ryan ve Vitalik'in bunu [Peep an EIP videosunda](https://www.youtube.com/watch?v=iaAEGs1DMgQ) tartışmasını izleyin.
 
-## Ceza {#slashing}
+## Ceza \{#slashing}
 
 Ceza bir doğrulayıcının ağdan zorla çıkarılmasına ve buna bağlantılı olarak hisselenmiş etherlerinin kaybına sebep olan daha sert bir eylemdir. Bir doğrulayıcının kesilebileceği, hepsinin ya aldatıcı öneri ya da blok tasdikine dayandığı üç yol vardır:
 
@@ -72,13 +72,13 @@ Ceza bir doğrulayıcının ağdan zorla çıkarılmasına ve buna bağlantılı
 
 Eğer bu hareketler tespit edilirse, doğrulayıcı kesilir. Bu hisselenmiş etherlerinin 1/32'sinin (maksimum 1 ethere kadar) anında yakılması ve sonrasında 36 günlük kaldırma sürecinin başlaması anlamına gelir. Bu kaldırma sürecinde doğrulayıcının hissesi zamanla akıp dereceli olarak akıp gider. Orta noktada (18. Gün) kesim etkinliğinden 36 gün öncesine kadarki dönemde cezalandırılan tüm doğrulayıcıların toplam hisselenmiş ether miktarı ile ölçeklenen bir büyüklüğü olan ek bir ceza uygulanır. Bu kesilen doğrulayıcı sayısı arttıkça, cezanın büyüklüğünün artması anlamına gelir. Maksimum ceza tüm cezalandırılan doğrulayıcıların toplam etkili bakiyesidir (yani eğer çok fazla cezalandırılan doğrulayıcı olur ise tüm hisselerini kaybedebilirler). Diğer bir yandan, tekil, izole bir ceza etkinliği doğrulayıcının hissesinin sadece küçük bir kısmını yakar. Cezalandırılan doğrulayıcı sayısı ile ölçeklendirilen bu orta nokta cezasına "korelasyon cezası" denir.
 
-## Hareketsizlik sızıntısı {#inactivity-leak}
+## Hareketsizlik sızıntısı \{#inactivity-leak}
 
 Eğer fikir birliği katmanı kesinleşmeden dört dönemden uzun süre giderse, "hareketsizlik sızıntısı" denilen acil bir protokol aktifleştirilir. Hareketsizlik sızıntısının asıl amacı zincirinin kesinliği kurtarması için gerekli olan ortamı oluşturmaktır. Yukarıda açıklandığı gibi, kesinlik kaynak ve hedef kontrol noktaları üzerinde anlaşmak için toplam hisselenen ether miktarının 2/3'lük çoğunluğuna ihtiyaç duyar. Eğer toplam doğrulayıcıların 1/3'ünden fazlasını temsil eden sayıda doğrulayıcı çevrimdışı olursa ya da doğru tasdikler vermeyi başaramazsa 2/3'lük bir çoğunluğun kontrol noktalarını kesinleştirebilmesi mümkün değildir. Hareketsizlik sızıntısı aktif olmayan doğrulayıcılara ait hissenin toplam hisselerin 1/3'ünden azını kontrol edene kadar zamanla akıp gitmesine izin verir, bu da kalan aktif doğrulayıcıların zinciri kesinleştirebilmesini sağlar. Aktif olmayan doğrulayıcıların havuzu ne kadar büyük olursa olsun, kalan aktif doğrulayıcılar eninde sonunda hisselerin 2/3'ünden fazlasını kontrol edecektir. Bir hissenin kaybı aktif olmayan doğrulayıcıların en kısa sürede yeniden aktifleşmesi için güçlü bir teşviktir! Bir hareketsizlik sızıntısı senaryosu Medalla test ağında aktif doğrulayıcıların %66'dan az bir kısmı mevcut blok zincirin başı üzerinde mutabakata vardığında görülmüştü. Hareketsizlik sızıntısı aktifleştirilmişti ve kesinlik nihayet geri kazanılmıştı!
 
 Mutabakat mekanizmasının ödül, ceza ve ceza mekanizması tekil doğrulayıcıları doğru davranmaya yönlendirir. Ancak, bu tasarım seçimlerinden doğrulayıcıların birden çok istemci arasında eşit biçimde dağılımını güçlü bir şekilde teşvik eden ve tekil istemci baskınlığından güçlü bir şekilde caydırmaya çalışan bir sistem ortaya çıkmıştır.
 
-## Daha fazla okuma {#further-reading}
+## Daha fazla okuma \{#further-reading}
 
 - [Ethereum'u Yükseltmek: Teşvik katmanı](https://eth2book.info/altair/part2/incentives)
 - [Ethereum'un hibrit Casper protokolünde teşvikler](https://arxiv.org/pdf/1903.04205.pdf)

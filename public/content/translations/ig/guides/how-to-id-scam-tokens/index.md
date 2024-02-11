@@ -4,7 +4,7 @@ description: Ịghọta tokin adigboloja, ka ha si eme onwe ha ka ha dị ka nd�
 lang: ig
 ---
 
-# Otu e si amata tokin adigboloja {#identify-scam-tokens}
+# Otu e si amata tokin adigboloja \{#identify-scam-tokens}
 
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. Tokin ndị a na-agbasoro ọkọlọtọ, [ERC-20](/developers/docs/standards/tokens/erc-20/). Agbanyeghị, n'ebe ọbụla e nwere okwu ikpe ziri ezi na-eweta ihe nrita, a ga-enwekwa ndị mmempụ na-achọ izuru ihe nrita ahụ maka onwe ha.
 
@@ -15,6 +15,7 @@ E nwere ụzọ abụọ ha nwere ike isi duhie gị:
 
 Iji gosi ihe tokin adigboloja bụ, yana otu e si amata ha, anyị ga-eleba anya n'ihe atụ nke otu: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Tokin na-achọ ịdị ka [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1) tokin.
 
+{
 <ExpandableCard
 title="Kedu ihe bụ ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum bụ otu na-etolite ma na-ejikwa <a href="/developers/docs/scaling/optimistic-rollups/">atụmatụ nwere nchekwube</a>. Na mbụ, a haziri Arbitrum dị ka ụlọ ọrụ na-erite uru, mana e mesịa mee ka ọ nọrọ n'etiti. Dịka usoro nke ahụ, ha nyere <a href="/dao/#token-based-membership">tokin gọọmenti nke e nwere ike iregharị</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Kedu ihe kpatara eji akpọ tokin adigboloja wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ E nwere iwu n'Ethereum na mgbe akụ enweghị nkwado ERC-20, anyị emepụta �
 Ọ baghị uru imeputa ụdị tokin ERC-20 e kechiri nke dịvu na Ethereum, mana ndị ojoro na-adabere na nke ziri ezi na-abụghị etu o kwesiri.
 
 </ExpandableCard>
+}
 
-## Kedu ka tokin adigboloja si arụ ọrụ? {#how-do-scam-tokens-work}
+## Kedu ka tokin adigboloja si arụ ọrụ? \{#how-do-scam-tokens-work}
 
 Ihe niile maka Ethereum bụ ọdịịrịonwe. Nke a pụtara na o nweghị ikike nwere ike ịnara akụ gị maọbụ gbochiere gị iji igwe na-arụ nke aka ya. Mana ọ pụtakwara na ndị adigboloja nwere ike iji ngwa kọmputa ọbụla ha chọrọ.
 
+{
 <ExpandableCard
 title="What are smart contracts?"
 contentPreview=''>
@@ -44,10 +49,11 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Ngwa kọmputa</a> bụ ngwaọrụ kọmputa na-arụ ọrụ na blọkchen Ethereum. A na-emejuputa tokin ERC-20 ọ bụla, iji maa atụ, dị ka nkwekọrịta ngwa kọmputa.
 
 </ExpandableCard>
+}
 
 Kpọmkwem, Arbitrum wepụrụ ngwa kọmputa na-eji akara `ARB`. Mana nke ahụ anaghị egbochi ndị ọzọ ibuga ngwa na-eji otu akara ahụ, maọbụ nke yiri ya. Onye ọbụla na-ede ngwa ahụ ga-edozi ihe ngwa ahụ ga-eme.
 
-## Na-egosi na o ziri ezi {#appearing-legitimate}
+## Na-egosi na o ziri ezi \{#appearing-legitimate}
 
 E nwere ọtụtụ ụzọ aghụghọ ndị na-emepụta tokin adigboloja na-eme ka ọ dị ka ọ bụ nke ziri ezi.
 
@@ -61,13 +67,13 @@ E nwere ọtụtụ ụzọ aghụghọ ndị na-emepụta tokin adigboloja na-e
 
 - **Nnyefe ziri ezi**. _Ndị nnwe ziri ezi agaghị akwụ ụgwọ iji bufee ndị tokin ojoro ndị ozo, yabụ ọ bụrụ na e nwere mbufe ọ ga-abụrịrị nke ziri ezi, ọ dị mma?_ **Ọ dịghị mma**. `Nnyefe` na-emepụta ihe omume site na ngwa ERC-20. Onye ojoro nwere ike dee nkwekọrịta n'ụzọ dị mfe n'ụzọ ọ ga-esi mepụta omume ndị ahụ.
 
-## Webụsaịtị adigboloja {#websites}
+## Webụsaịtị adigboloja \{#websites}
 
 Ndị ojoro nwekwara ike imepụta webụsaịtị pụrụ iche, mgbe ụfọdụ ọbụlagodi ijiri ihe ndị dị n'ezigbo webụsaịtị ma mee ka o nwee UI yiri onwe ha, mana n'ụzọ aghụghọ. Ọmụmatụ nwere ike ịbụ njikọ mpụga nke dị ka o ziri ezi na-eziga onye ojiji na saịtị mpụga adigboloja, maọbụ ntụziaka na-ezighi ezi ga-eme ka onye ojiji kpughe igodo ha maọbụ ziga ego n'adreesị onye ojoro ahụ.
 
 Ụzọ kachasị mma iji zeere nke a bụ iji nwayọọ lelee URL saịtị ndị ị gara na ha, ma chekwaa adreesị maka saịtị ndị ziri ezi na bumaakị gị. Mgbe ahụ, i nwere ike ịga na saịtị ziri ezi site na bumaakị gị n'adịghị iwu nsupe maọbụ dabere na njikọ mpụga.
 
-## Kedu ka ị ga-esi chedoo onwe gị? {#protect-yourself}
+## Kedu ka ị ga-esi chedoo onwe gị? \{#protect-yourself}
 
 1. **Lelee adreesị nkwekọrịta**. Tokin ziri ezi na-esi na ndị otu ụlọ ọrụ a ma ama abịa, ma i nwere ike ịhụ adreesị ngwa kọmputa na webụsaịtị ụlọ ọrụ. Iji maa atụ, [maka `ARB` i nwere ike ịhụ adreesị ndị ziri ezi ebe a](https://docs.arbitrum.foundation/deployment-addresses#token).
 
@@ -87,7 +93,7 @@ Nke a bụ ihe akaebe ọzọ na-egosi anyị `wARB` abụghị akara ziri ezi.
 
    ![Tokin adigboloja n'Etherscan](./etherscan-scam.png)
 
-## Conclusion {#conclusion}
+## Conclusion \{#conclusion}
 
 Ọ bụrụhaala na e nwere ihe nrita n'ụwa, a ga-enwe ndị adigboloja ndị na-anwa izu ohi maka onwe ha, ma n'ime ọnọdụ onye ọbụla nọọro onwe ya o nweghị onye ga-echebe gị ma e wezụga gị. E nwere olileanya na ị na-echeta ihe ndị a iji nyere tokin ziri ezi aka ka ọ ghara ịbanye n'aka ndị ojoro:
 

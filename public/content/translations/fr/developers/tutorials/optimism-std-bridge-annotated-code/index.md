@@ -17,16 +17,16 @@ Pour utiliser les actifs L1 sur Optimism (ou n'importe quel autre L2), les actif
 
 C'est ainsi que fonctionne la [passerelle standard Optimism](https://community.optimism.io/docs/developers/bridge/standard-bridge). Dans cet article, nous passerons en revue le code source de cette passerelle pour comprendre comment elle fonctionne et l'étudier comme un exemple de code Solidity parfaitement écrit.
 
-## Flux de contrôle {#control-flows}
+## Flux de contrôle \{#control-flows}
 
 La passerelle dispose de deux flux principaux :
 
 - Dépôt (de L1 vers L2)
 - Retrait (de L2 vers L1)
 
-### Flux de dépôt {#deposit-flow}
+### Flux de dépôt \{#deposit-flow}
 
-#### Couche 1 {#deposit-flow-layer-1}
+#### Couche 1 \{#deposit-flow-layer-1}
 
 1. En cas de dépôt d'un ERC-20, le déposant affecte à la passerelle une provision pour dépenser le montant déposé
 2. Le déposant appelle la passerelle L1 (`depositERC20`, `depositERC20To`, `depositETH`, ou `depositETHTo`)
@@ -35,7 +35,7 @@ La passerelle dispose de deux flux principaux :
    - ERC-20 : l'actif est transféré par la passerelle à elle-même en utilisant la provision fournie par le déposant
 4. La passerelle de connexion L1 utilise le mécanisme de message inter-domaine pour appeler `finalizeDeposit` sur la passerelle de connexion L2
 
-#### Couche 2 {#deposit-flow-layer-2}
+#### Couche 2 \{#deposit-flow-layer-2}
 
 5. La passerelle de connexion L2 vérifie que l'appel `finalizeDeposit` est légitime :
    - Provient du contrat de message inter-domaine
@@ -45,26 +45,26 @@ La passerelle dispose de deux flux principaux :
    - Le contrat L2 signale qu'il prend en charge l'interface correcte ([en utilisant ERC-165](https://eips.ethereum.org/EIPS/eip-165)).
 7. Si le contrat L2 est le bon, appelez-le pour frapper le nombre approprié de jetons à l'adresse appropriée. Sinon, commencez un processus de retrait pour permettre à l'utilisateur de réclamer les jetons sur L1.
 
-### Flux de retrait {#withdrawal-flow}
+### Flux de retrait \{#withdrawal-flow}
 
-#### Couche 2 {#withdrawal-flow-layer-2}
+#### Couche 2 \{#withdrawal-flow-layer-2}
 
 1. Le retirant appelle la passerelle de connexion L2 (`withdraw` ou `withdrawTo`)
 2. La passerelle de connexion L2 brûle le nombre approprié de jetons appartenant à `msg.sender`
 3. La passerelle de connexion L2 utilise le mécanisme de message inter-domaine pour appeler `finalizeETHWithdrawal` ou `finalizeERC20Withdrawal` de la passerelle L1
 
-#### Couche 1 {#withdrawal-flow-layer-1}
+#### Couche 1 \{#withdrawal-flow-layer-1}
 
 4. La passerelle de connexion L1 vérifie que l'appel à `finalizeETHWithal` ou à `finalizeERC20Withal` est légitime :
    - Provient du mécanisme de message inter-domaine
    - Était à l'origine en provenance de la passerelle de connexion sur L2
 5. La passerelle L1 transfère l'actif approprié (ETH ou ERC-20) à l'adresse appropriée
 
-## Code de la couche 1 {#layer-1-code}
+## Code de la couche 1 \{#layer-1-code}
 
 C'est le code qui s'exécute sur L1, le réseau principal Ethereum.
 
-### IL1ERC20Bridge {#IL1ERC20Bridge}
+### IL1ERC20Bridge \{#IL1ERC20Bridge}
 
 [Cette interface est définie ici](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol). Elle comprend les fonctions et les définitions requises pour la connexion en passerelle des jetons ERC-20.
 
@@ -220,7 +220,7 @@ Les retraits (et autres messages de L2 vers L1) dans Optimism sont des processus
 1. Une transaction d'initialisation sur L2.
 2. Une transaction de finalisation ou de réclamation sur L1. Cette transaction doit être réalisée après la [période de contestation des défauts](https://community.optimism.io/docs/how-optimism-works/#fault-proofs) pour que la transaction L2 se termine.
 
-### IL1StandardBridge {#il1standardbridge}
+### IL1StandardBridge \{#il1standardbridge}
 
 [Cette interface est définie ici](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol). Ce fichier contient des définitions d'événements et de fonctions pour ETH. Ces définitions sont très similaires à celles définies ci-dessus dans `IL1ERC20Bridge` pour ERC-20.
 
@@ -301,7 +301,7 @@ Cet événement est presque identique à la version ERC-20 (`ERC20DepositInitiat
 }
 ```
 
-### CrossDomainEnabled {#crossdomainenabled}
+### CrossDomainEnabled \{#crossdomainenabled}
 
 [Ce contrat](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol) a hérité des deux passerelles ([L1](#the-l1-bridge-contract) et [L2](#the-l2-bridge-contract)) pour envoyer des messages à l'autre couche.
 
@@ -437,7 +437,7 @@ Enfin, la fonction qui envoie un message à l'autre couche.
 
 Dans notre cas, nous ne devons pas nous inquiéter de la réentrance, nous savons que `getCrossDomainMessenger()` retourne une adresse digne de confiance, même si Slither n'a aucun moyen de le savoir.
 
-### Le contrat de passerelle L1 {#the-l1-bridge-contract}
+### Le contrat de passerelle L1 \{#the-l1-bridge-contract}
 
 [Le code source de ce contrat se trouve ici](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol).
 
@@ -883,11 +883,11 @@ Mettre à jour la structure de données `deposits`.
 
 Il y a eu une implémentation antérieure de la passerelle. Lorsque nous sommes passés de l'implémentation à celle-ci, nous avons dû déplacer tous les actifs. Les jetons ERC-20 peuvent juste être déplacés. Cependant, pour transférer l'ETH à un contrat, vous avez besoin de l'approbation de ce contrat, ce que `donateETH` nous fournit.
 
-## Jetons ERC-20 sur L2 {#erc-20-tokens-on-l2}
+## Jetons ERC-20 sur L2 \{#erc-20-tokens-on-l2}
 
 Pour qu'un jeton ERC-20 s'intègre dans la passerelle standard, il doit permettre à la passerelle de connexion standard, et _uniquement_ la passerelle standard, de frapper des jetons. Ceci est nécessaire, car les passerelles doivent s'assurer que le nombre de jetons circulant sur Optimism est égal au nombre de jetons verrouillés à l'intérieur du contrat passerelle L1. S'il existe trop de jetons sur L2, certains utilisateurs seraient incapables de récupérer leurs actifs sur L1. Au lieu d'une passerelle de confiance, nous recréerions en fait une [banque de réserve fractionnaire](https://www.investopedia.com/terms/f/fractionalreservebanking.asp). S'il y a trop de jetons sur L1, certains de ces jetons resteraient bloqués à l'intérieur du contrat passerelle pour toujours puisqu'il n'y a aucun moyen de les libérer sans brûler les jetons L2.
 
-### IL2StandardERC20 {#il2standarderc20}
+### IL2StandardERC20 \{#il2standarderc20}
 
 Chaque jeton ERC-20 sur L2 qui utilise la passerelle standard doit fournir [cette interface](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol), qui possède les fonctions et les événements dont la passerelle standard a besoin.
 
@@ -926,7 +926,7 @@ Cette fonction fournit l'adresse du jeton L1 qui est relié à ce contrat. Notez
 
 Les fonctions et événements à frapper (créer) et brûler (détruire) des jetons. La passerelle de connexion devrait être la seule entité qui puisse exécuter ces fonctions pour s'assurer que le nombre de jetons est correct (égal au nombre de jetons verrouillés sur L1).
 
-### L2StandardERC20 {#L2StandardERC20}
+### L2StandardERC20 \{#L2StandardERC20}
 
 [Ceci est notre implémentation de l'interface `IL2StandardERC20`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol). À moins que vous n'ayez besoin d'une sorte de logique personnalisée, vous devriez utiliser celle-ci.
 
@@ -1015,7 +1015,7 @@ Seul la passerelle L2 est autorisée à frapper et à brûler des actifs.
 
 `_mint` et `_burn` sont définis dans le contrat [OpenZeppelin ERC-20](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn). Ce contrat ne les expose pas en externe, parce que les conditions de frappe et de brûlage des jetons sont aussi variées que le nombre de façons d'utiliser ERC-20.
 
-## Code de passerelle L2 {#l2-bridge-code}
+## Code de passerelle L2 \{#l2-bridge-code}
 
 Il s'agit du code qui exécute la passerelle de connexion sur Optimism. [La source de ce contrat se trouve ici](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol).
 
@@ -1268,7 +1268,7 @@ Si un utilisateur a fait une erreur détectable en utilisant la mauvaise adresse
 }
 ```
 
-## Conclusion {#conclusion}
+## Conclusion \{#conclusion}
 
 La passerelle standard est le mécanisme le plus souple pour les transferts d'actifs. Cependant, parce qu'il est si générique, ce n'est pas toujours le mécanisme le plus facile à utiliser. Spécialement pour les retraits, la plupart des utilisateurs préfèrent utiliser des [passerelles tierces](https://www.optimism.io/apps/bridges) qui n'attendent pas la période problématique et ne nécessitent pas de preuve de Merkle pour finaliser le retrait.
 

@@ -8,7 +8,7 @@ Herhangi bir yazılım yığınında görülebileceği gibi ''Ethereum yığın�
 
 Ancak, yazılım uygulamalarının Ethereum blok zinciri ile nasıl etkileşime geçtiği hakkında zihinsel bir model sağlamaya yardımcı olan Ethereum'un temel bileşenleri bulunmaktadır. Yığının katmanlarını anlamak, Ethereum'u yazılım projelerine entegre etmenin farklı yollarını anlamanıza yardımcı olur.
 
-## Seviye 1: Ethereum Sanal Makinesi {#ethereum-virtual-machine}
+## Seviye 1: Ethereum Sanal Makinesi \{#ethereum-virtual-machine}
 
 [Ethereum Sanal Makinesi (EVM)](/developers/docs/evm/) Ethereum üzerindeki akıllı sözleşmeler için olan program ortamıdır. Ethereum blok zincirindeki tüm akıllı sözleşmeler ve durum değişiklikleri [işlemler](/developers/docs/transactions/) tarafından yürütülür. EVM, Ethereum ağında yapılan tüm işlemleri idare eder.
 
@@ -18,7 +18,7 @@ EVM arka planda belirli görevleri yürütmek için bir dizi işlem kodu talimat
 
 Bir DAPP geliştiricisi olarak EVM hakkında çok bilgili olmanıza gerek yok, tek bilmeniz gereken şey; EVM'nin Ethereum'daki bütün uygulamaların temeli olduğudur.
 
-## Seviye 2: Akıllı Sözleşmeler {#smart-contracts}
+## Seviye 2: Akıllı Sözleşmeler \{#smart-contracts}
 
 [Akıllı sözleşmeler](/developers/docs/smart-contracts/) Ethereum blok zincirinde çalışan yürütülebilir uygulamalardır.
 
@@ -28,7 +28,7 @@ Akıllı sözleşmeler açık kaynak kütüphane işlevi görmelerinin yanında,
 
 Bir dapp geliştiricisi olarak, sadece Ethereum blok zincirinde özel işlevsellik eklemek istiyorsanız akıllı sözleşmeler yazmanız gerekecek. Projenizin ihtiyaçlarının çoğunu veya tamamını sadece mevcut akıllı sözleşmelerle entegre olarak karşılayabildiğinizi görebilirsiniz; sabit para ile ödemeleri destekleme veya token'ların merkeziyetsiz takasını etkinleştirme buna örnek gösterilebilir.
 
-## Seviye 3: Ethereum düğümleri {#ethereum-nodes}
+## Seviye 3: Ethereum düğümleri \{#ethereum-nodes}
 
 Bir uygulamanın Ethereum blok zinciriyle etkileşime geçebilmesi için öncelikle bir [Ethereum düğümüne](/developers/docs/nodes-and-clients/) bağlanması gereklidir. Bir düğüme bağlanmak blok zinciri verisi okumanızı ve/veya ağa işlemler göndermenizi sağlar.
 
@@ -36,7 +36,7 @@ Ethereum düğümleri yazılım, yani bir Ethereum istemcisi çalıştıran bilg
 
 Uygulamanız ([JSON-RPC API](/developers/docs/apis/json-rpc/) aracılığıyla) bir Ethereum düğümüne bağlandığında, blok zincirinden veri okuyabilir (kullanıcı hesap bakiyeleri gibi) ve ağa yeni işlemler yayınlayabilir (kullanıcı hesapları arasında ETH aktarımı yapmak veya akıllı sözleşmelerin fonksiyonlarını yürütmek gibi).
 
-## Seviye 4: Ethereum istemci API'leri {#ethereum-client-apis}
+## Seviye 4: Ethereum istemci API'leri \{#ethereum-client-apis}
 
 Birçok kolaylık kütüphanesi (Ethereum'un açık kaynak topluluğu tarafından geliştirilen ve sürdürülen) uygulamalarınızın Ethereum blok zinciriyle bağlantı kurmasını ve iletişime geçmesini sağlar.
 
@@ -44,17 +44,17 @@ Eğer kullanıcıya dönük uygulamanız bir web uygulaması ise, ön ucunuzda d
 
 Bu API'ler her ne kadar yığının gerekli bir parçası olmasalar da, bir Ethereum düğümüyle doğrudan etkileşime geçmenin zorluklarının çoğunu basitleştirirler. Ayrıca, bir geliştirici olarak Ethereum istemcilerinin karmaşıklıkları ile daha az zaman harcayabilmeniz ve uygulamanızın benzersiz işlevselliğine daha fazla zaman ayırabilmeniz için yardımcı işlevler (örneğin, ETH'yi Gwei'ye dönüştürmek) sağlarlar.
 
-## Seviye 5: Son kullanıcı uygulamaları {#end-user-applications}
+## Seviye 5: Son kullanıcı uygulamaları \{#end-user-applications}
 
 Yığının en üst seviyesinde kullanıcılara dönük uygulamalar bulunur. Bunlar günümüzde düzenli olarak kullandığınız ve inşa ettiğiniz standart uygulamalardır: başlıca web ve mobil uygulamaları.
 
 Bu kullanıcı arayüzlerini geliştirme yollarınız özünde değişmez. Kullanıcıların kullandıkları uygulamanın bir blok zinciri kullanılarak inşa edildiğini bilmeleri pek gerekmez.
 
-## Yığınınızı seçmeye hazır mısınız? {#ready-to-choose-your-stack}
+## Yığınınızı seçmeye hazır mısınız? \{#ready-to-choose-your-stack}
 
 Ethereum uygulamanız için [yerel bir geliştirme ortamı kurulumu](/developers/local-environment/) rehberimizi inceleyin.
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [Bir Web 3.0 uygulamasının mimarisi](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
 

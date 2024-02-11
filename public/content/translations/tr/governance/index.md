@@ -5,25 +5,25 @@ lang: tr
 postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
-# Ethereum yönetişimine giriş {#introduction}
+# Ethereum yönetişimine giriş \{#introduction}
 
 _Hiç kimse Ethereum'un sahibi değilse, Ethereum'a dair geçmişteki ve gelecekteki değişikliklere nasıl karar veriliyor? Ethereum yönetişimi, bu tür kararların alınmasını sağlayan süreci ifade eder._
 
 <Divider />
 
-## Yönetişim nedir? {#what-is-governance}
+## Yönetişim nedir? \{#what-is-governance}
 
 Yönetişim, kararların alınmasına izin veren mevcut sistemlerdir. Tipik bir organizasyon yapısında, yönetim ekibi veya yönetim kurulu karar vermede son söze sahip olabilir. Ya da hissedarlar değişikliği yürürlüğe koymak için tekliflere oy verebilirler. Siyasi bir sistemde, seçilmiş yetkililer seçmenlerinin arzularını temsil etmeye çalışan yasalar çıkarabilir.
 
-## Merkeziyetsiz yönetişim {#decentralized-governance}
+## Merkeziyetsiz yönetişim \{#decentralized-governance}
 
 Ethereum protokolünün sahibi veya protokolü yöneten hiç kimse yoktur, ancak ağın uzun ömürlülüğünü ve refahını en iyi şekilde sağlamak için değişikliklerin uygulanması konusunda kararların alınması gerekir. Herhangi bir sahibin bulunmadığı bu durum, geleneksel kurumsal yönetişimi uyumsuz bir çözüm hâline getirir.
 
-## Ethereum Yönetişimi {#ethereum-governance}
+## Ethereum Yönetişimi \{#ethereum-governance}
 
 Ethereum yönetişimi, protokol değişikliklerinin yapıldığı süreçtir. Bu sürecin, insanların ve uygulamaların protokolü nasıl kullandığıyla ilgili olmadığını belirtmek önemlidir: Ethereum izinsizdir. Dünyanın herhangi bir yerinden herkes zincir içi etkinliklere katılabilir. Kimin uygulama oluşturup oluşturmayacağı veya işlem gönderip gönderemeyeceği konusunda belirlenmiş bir kural yoktur. Ancak, bu merkeziyetsiz uygulamaların üzerinde çalıştığı çekirdek protokolde değişiklik önermek için bir süreç vardır. Pek çok insan Ethereum'un istikrarına güvendiğinden, Ethereum'daki herhangi bir değişikliğin güvenli olmasını ve topluluk tarafından geniş çapta desteklenmesini sağlamak için sosyal ve teknik süreçler de dahil olmak üzere temel değişiklikler için çok yüksek bir koordinasyon eşiği vardır.
 
-### Zincir içi ve zincir dışı yönetişim {#on-chain-vs-off-chain}
+### Zincir içi ve zincir dışı yönetişim \{#on-chain-vs-off-chain}
 
 Blok zinciri teknolojisi, zincir içi yönetişim olarak bilinen yeni yönetişim kabiliyetlerine izin verir. Zincir içi yönetişim, önerilen protokol değişikliklerine, genellikle bir yönetişim token'ının sahipleri tarafından bir hissedar oyu ile karar verilmesi ve oylamanın blok zincirinde gerçekleşmesidir. Zincir üstünde yönetişimin bazı biçimlerinde, önerilen protokol değişiklikleri zaten koda yazılıdır ve paydaşlar değişiklikleri bir işlemi imzalayarak onaylarsa otomatik olarak uygulanır.
 
@@ -39,7 +39,7 @@ _Protokol düzeyinde Ethereum yönetişimi zincir dışı olsa da, DAO'lar gibi 
 
 <Divider />
 
-## Kimler dahil olur? {#who-is-involved}
+## Kimler dahil olur? \{#who-is-involved}
 
 [Ethereum topluluğunda](/community/) her biri yönetişim sürecinde rol oynayan çeşitli hissedarlar vardır. Protokolden en uzaktaki hissedarlardan başlayarak ve yakınlaşarak şunları görebiliriz:
 
@@ -55,7 +55,7 @@ _Not: Herhangi bir kişi bu grupların birçoğunun parçası olabilir (örneği
 
 <Divider />
 
-## EIP nedir? {#what-is-an-eip}
+## EIP nedir? \{#what-is-an-eip}
 
 Ethereum yönetişiminde kullanılan önemli süreçlerden birisi **Ethereum İyileştirme Önerileridir (EIP'ler)**. EIP'ler, Ethereum için potansiyel yeni özellikleri veya süreçleri belirleyen standartlardır. Ethereum topluluğu içindeki herkes bir EIP oluşturabilir. Eğer bir EIP yazmaya veya yönetişim ve/veya bağımsız değerlendirmeye katılım sağlamaya meraklıysanız şuna bakın:
 
@@ -65,7 +65,7 @@ Ethereum yönetişiminde kullanılan önemli süreçlerden birisi **Ethereum İy
 
 <Divider />
 
-## Resmi süreç {#formal-process}
+## Resmi süreç \{#formal-process}
 
 Ethereum protokolünde değişiklik yapmak için resmi süreç aşağıdaki gibidir:
 
@@ -87,17 +87,17 @@ Ethereum protokolünde değişiklik yapmak için resmi süreç aşağıdaki gibi
 
 Bu akış, çok basitleştirilmiş olsa da, Ethereum'da bir protokol değişikliğinin etkinleştirilmesi için gereken önemli aşamalara genel bir bakış sunar. Şimdi bu süreçte rol oynayan resmi gayriresmî faktörlere bakalım.
 
-## Gayriresmî süreç {#informal-process}
+## Gayriresmî süreç \{#informal-process}
 
-### Geçmişteki çalışmaları anlamak {#prior-work}
+### Geçmişteki çalışmaları anlamak \{#prior-work}
 
 EIP Öncüleri, Ethereum Mainnet'te dağıtım için ciddi olarak düşünülebilecek bir EIP oluşturmadan önce önceki çalışmalara ve tekliflere aşina olmalıdır. Bu şekilde, EIP'nin daha önce reddedilmemiş yeni bir şey sunması umulur. Bunu araştırmak için üç ana yer şunlardır: [EIP deposu](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) ve [ethresear.ch](https://ethresear.ch/).
 
-### Çalışma grupları {#working-groups}
+### Çalışma grupları \{#working-groups}
 
 Bir EIP'nin ilk taslağının, düzenleme veya değişiklik yapılmadan Ethereum Mainnet'te uygulanması pek olası değildir. Genel olarak EIP Öncüleri, tekliflerini belirlemek, uygulamak, test etmek, yinelemek ve sonuçlandırmak için Protokol Geliştiricilerinin bir alt kümesiyle birlikte çalışır. Tarihsel olarak, bu çalışma grupları birkaç ay (ve bazen yıllarca!) çalışmayı gerektirmiştir. Benzer şekilde, bu tür değişiklikler için EIP Öncüleri, ilgili Uygulama/Araç Geliştiricilerini son kullanıcı geri bildirimi toplama ve herhangi bir dağıtım riskini azaltma çabalarına erken dahil etmelidir.
 
-### Topluluk mutabakatı {#community-consensus}
+### Topluluk mutabakatı \{#community-consensus}
 
 Bazı EIP'ler minimum ayrıntılara sahip basit teknik iyileştirmeler olsa da, bazıları daha karmaşıktır ve farklı hissedarları farklı yollarla etkileyecek bazı feragatlarla birlikte gelirler. Bu, bazı EIP'lerin topluluk içinde diğerlerinden daha tartışmalı olduğu anlamına gelir.
 
@@ -109,13 +109,13 @@ Ethereum ağının güvenliğinin ötesinde, Ekosistemi diğer hissedarlar için
 
 <Divider />
 
-## Anlaşmazlıkların ele alınması {#disagreements}
+## Anlaşmazlıkların ele alınması \{#disagreements}
 
 Farklı motivasyon ve inançlara sahip birçok hissedar bulunduğu için sık sık anlaşmazlıklarla karşılaşılabilir.
 
 Genel olarak anlaşmazlıklar, sorunun kökenini anlamak ve herkesin durumu ölçmesine izin vermek için halka açık forumlarda uzun süreli tartışmalarla ele alınır. Tipik olarak, bir grup durumu kabul eder veya uygun bir ortak çözüme ulaşılır. Bir grup yeterince güçlü hissediyorsa, belirli bir değişikliği zorlamak zincirin bölünmesine neden olabilir. Zincir bölünmesi, bazı hissedarların, iki farklı blok zincirinin ortaya çıktığı, protokolün farklı, uyumsuz sürümleriyle sonuçlanan bir protokol değişikliğini uygulamayı protesto etmesidir.
 
-### DAO çatalı {#dao-fork}
+### DAO çatalı \{#dao-fork}
 
 Çatallar, ağda büyük teknik yükseltmeler veya değişiklikler yapılması ve protokolün "kurallarının" değiştirilmesi gerekmesidir. [Ethereum istemcileri](/developers/docs/nodes-and-clients/) yeni çatal kurallarını uygulamak için yazılımlarını güncellemelidir.
 
@@ -139,7 +139,7 @@ DAO saldırısı hakkında daha fazlasını izleyin:
 
 <Divider />
 
-### Çatallamanın faydası {#forking-utility}
+### Çatallamanın faydası \{#forking-utility}
 
 Ethereum/Ethereum Classic çatalı, sağlıklı bir çatalın mükemmel bir örneğidir. Kendi spesifik eylem planlarını sürdürmenin içerdiği risklere değdiğini hissedecek kadar bazı temel değerler konusunda birbirleriyle yeterince anlaşamayan iki grubumuz vardı.
 
@@ -147,7 +147,7 @@ Ethereum/Ethereum Classic çatalı, sağlıklı bir çatalın mükemmel bir örn
 
 <Divider />
 
-## İşaret Zinciri yönetişimi {#beacon-chain}
+## İşaret Zinciri yönetişimi \{#beacon-chain}
 
 Ethereum yönetişim süreci, genellikle açıklık ve kapsayıcılık için hız ve verimlilikten ödün verir. İşaret Zincirinin gelişimini hızlandırmak için, İşaret Zinciri Ethereum'unun iş ispatı ağından ayrı olarak kullanıma sokuldu ve İşaret Zincirine has yönetişim yöntemleri izlendi.
 
@@ -161,7 +161,7 @@ Tanım ve geliştirme uygulamaları her zaman tamamen açık kaynak olsa da, yuk
 
 <Divider />
 
-## Nasıl dahil olabilirim? {#get-involved}
+## Nasıl dahil olabilirim? \{#get-involved}
 
 - [Bir EIP önerin](/eips/#participate)
 - [Mevcut teklifleri tartışın](https://ethereum-magicians.org/)
@@ -171,7 +171,7 @@ Tanım ve geliştirme uygulamaları her zaman tamamen açık kaynak olsa da, yuk
 - [İstemci geliştirmeye katkıda bulunun](/developers/docs/nodes-and-clients/#execution-clients)
 - [Çekirdek Geliştirici Çıraklık Programı](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 Ethereum'daki yönetişimin katı kuralları yoktur. Çeşitli topluluk katılımcıları bu konuda farklı bakış açılarına sahiptir. İşte bunlardan birkaçı:
 

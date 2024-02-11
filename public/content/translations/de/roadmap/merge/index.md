@@ -4,7 +4,7 @@ description: Erfahren Sie mehr über die Zusammenführung, als Mainnet Ethereum 
 lang: de
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Ethereum Mainnet verwendet Proof-of-Stake, aber das war nicht immer der Fall.
 summaryPoint2: Der Wechsel vom ursprünglichen Proof-of-Work Mechanismus zu Proof-of-Stake wurde Zusammenführung genannt.
 summaryPoint3: Die Zusammenführung bezieht sich auf das ursprüngliche Ethereum Mainnet, welches mit einer separaten Proof-of-Stake-Blockchain namens Beacon Chain vereinigt wurde, und somit nun beide als eine Blockchain existieren.
@@ -15,17 +15,19 @@ summaryPoint4: Die Zusammenführung reduzierte Ethereums Energieverbrauch um ca.
   Die Zusammenführung wurde am 15. September 2022 durchgeführt. Dies vervollständigte Ethereums Übergang zu Proof-of-Stake, was Proof-of-Work offiziell abschaffte und den Energieverbrauch um ~99,95 % verringert hat.
 </UpgradeStatus>
 
-## Was war die Zusammenführung? {#what-is-the-merge}
+## Was war die Zusammenführung? \{#what-is-the-merge}
 
 Die Zusammenführung war das Verbinden der ursprünglichen Ausführungsschicht von Ethereum (das Mainnet das seit [Genesis](/history/#frontier) existierte) mit der neuen Proof-of-Stake Konsensschicht, der Beacon Chain. Damit entfällt das energieintensive Mining. Stattdessen wird das Netzwerk durch den Einsatz von Staked Ether gesichert. Ein wirklich spannender Schritt zur Verwirklichung der Ethereum-Vision: mehr Skalierbarkeit, Sicherheit und Nachhaltigkeit.
 
+{
 <MergeInfographic />
+}
 
 Ursprünglich wurde die [Beacon Chain](/roadmap/beacon-chain/) getrennt vom [Mainnet](/glossary/#mainnet) betrieben. Das Ethereum-Mainnet, mit allen Konten, Kontoständen, Smart Contracts, und des Blockchain-Zustandes, wurde weiterhin durch [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) gesichert, auch wenn die Beacon Chain parallel dazu mit [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) betrieben wurde. Die Zusammenführung fand statt, als diese beiden Systeme schließlich vereint wurden und Proof-of-Work permanent durch Proof-of-Stake ersetzt wurde.
 
 Stellen Sie sich Ethereum als ein Raumschiff vor, das gestartet wurde, bevor es für interstellare Reisen bereit war. Mit der Beacon Chain hat die Community einen neuen Motor und einen gehärteten Rumpf gebaut. Nach umfangreichen Tests war es an der Zeit, mitten im Flug den neuen Antrieb gegen den Alten auszutauschen. Dadurch wurde der neue effizientere Motor in das bestehende Raumschiff eingebaut, sodass noch einige Lichtjahre im Universum zurückgelegt werden können.
 
-## Die Zusammenführung mit dem Mainnet {#merging-with-mainnet}
+## Die Zusammenführung mit dem Mainnet \{#merging-with-mainnet}
 
 Proof-of-Work sicherte Ethereum Mainnet von Genesis bis zur Zusammenführung. Dies ermöglichte es der Ethereum Blockchain, an die wir alle gewöhnt sind, im Juli 2015 mit all ihren bekannten Merkmalen – Transaktionen, intelligente Verträge, Konten usw. – an den Start zu gehen.
 
@@ -41,7 +43,7 @@ Keine Historie ging bei der Zusammenführung verloren. Als Mainnet mit der Beaco
 Der Übergang zu Proof-of-Stake änderte die Art und Weise wie Ether benutzt wird. Erfahren Sie mehr über <a href="/roadmap/merge/issuance/">Etherausgabe vor und nach der Zusammenführung</a>.
 </InfoBanner>
 
-### Benutzer und Halter {#users-holders}
+### Benutzer und Halter \{#users-holders}
 
 **Die Zusammenführung hat nichts für Halter/Benutzer geändert.**
 
@@ -51,8 +53,9 @@ Trotz des Austauschs von Proof-of-Work blieb die gesamte Geschichte von Ethereum
 
 [Mehr zu Ethereums Sicherheit](/security/#eth2-token-scam)
 
-### Node Operatoren und dApp Entwickler {#node-operators-dapp-developers}
+### Node Operatoren und dApp Entwickler \{#node-operators-dapp-developers}
 
+{
 <ExpandableCard
 title="Staking Node Operatoren und Anbieter"
 contentPreview="If you are a staker running your own node setup or a node infrastructure provider, there are a few things you need to be aware of after The Merge."
@@ -68,7 +71,9 @@ Wenn Sie die ersten beiden obigen Elemente nicht abschließen, wird Ihre Node al
 
 Wenn kein "Gebührenempfänger" gesetzt wird, kann sich dein Validator wie üblich verhalten, aber Sie werden auf unverbrannte Gebührentipps verzichten und alle MEV, die Sie sonst in Blöcken verdient hätten, die Ihr Validator vorschlägt.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Nicht-validierende Node-Operatoren und Infrastruktur-Anbieter"
 contentPreview="If you're operating a non-validating Ethereum node, the most significant change that came with The Merge was the requirement to run clients for BOTH the execution layer AND the consensus layer."
@@ -86,7 +91,9 @@ Schlüssel-Aktionen beinhalten:
 Wenn Sie die ersten beiden obigen Elemente nicht abschließen, wird Ihre Node als "offline" betrachtet, bis beide Ebenen synchronisiert und authentifiziert sind.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="dApp und Smart Contract Entwickler"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
@@ -105,17 +112,19 @@ The Merge trat ein, indem es Änderungen an der Konsens-Methode mit sich brachte
 Weitere Informationen findest Du in diesem Blogartikel von Tim Heiko zum <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Thema The Merge Update: Welche Auswirkungen hat das Ereignis auf die Ethereum-Execution Layer?</a>.
 
 </ExpandableCard>
+}
 
-## Die Zusammenführung und der Energieverbrauch {#merge-and-energy}
+## Die Zusammenführung und der Energieverbrauch \{#merge-and-energy}
 
 Die Zusammenführung markierte das Ende von Proof-of-Work für Ethereum und den Start der Ära eines nachhaltigeren und umweltfreundlicheren Ethereums. Ethereums Energieverbrauch reduzierte sich um geschätzte 99,95%, was Ethereum zu einer grünen Blockchain macht. Erfahren Sie mehr über [Ethereums Energieverbrauch](/energy-consumption/).
 
-## Die Zusammenführung und Skalierbarkeit {#merge-and-scaling}
+## Die Zusammenführung und Skalierbarkeit \{#merge-and-scaling}
 
 Die Zusammenführung ebnet auch den Weg für weitere Skalierungsupgrades, welche unter Proof-of-Work nicht möglich waren. Dies bringt Ethereum einen Schritt näher die volle Skalierung, Sicherheit und Nachhaltigkeit zu erreichen, die in der [Ethereum Vision](/roadmap/vision/) beschrieben ist.
 
-## Misverständnisse über die Zusammenführung {#misconceptions}
+## Misverständnisse über die Zusammenführung \{#misconceptions}
 
+{
 <ExpandableCard
 title="Misverständnis: &quot; Das Betreiben einer Node benötigt 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
@@ -133,7 +142,9 @@ Die Möglichkeit für jeden, einen eigenen Node zu betreiben, ist <em>absolut es
 <a href="/run-a-node/">Mehr zum Betrieb eines eigenen Nodes</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Misverständnis: &quot;Der Merge schlug fehl Gasgebühren zu senken.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
@@ -143,7 +154,9 @@ Die Gasgebühren sind ein Produkt der Netznachfrage im Verhältnis zur Netzkapaz
 Mit einer <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">Rollup-zentrierten Roadmap</a>, die Bemühungen konzentrieren sich auf die Ausweitung der Nutzeraktivitäten auf <a href="/layer-2/">Ebene 2</a>, und gleichzeitig das Ebene 1 Mainnet als sichere dezentrale Abwicklungsschicht zu etablieren, die für die Speicherung von Rollup-Daten optimiert ist und dazu beiträgt, Rollup-Transaktionen exponentiell billiger zu machen. Der Übergang zu Proof-of-Stake ist ein entscheidender Vorläufer für die Umsetzung. <a href="/developers/docs/gas/">Mehr zum Thema Gas-Kosten.</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Misverständnis: &quot;Transaktionen wurden durch den Merge dramatisch beschleunigt.&quot;"
 contentPreview="False. Though some slight changes exist, transaction speed is mostly the same on layer 1 now as it was before The Merge.">
@@ -154,7 +167,9 @@ Historisch war es nach Proof-of-Work das Ziel, alle ~13.3 Sekunden einen neuen B
 Proof-of-Stake führte das bisher nicht existierende Konzept der Transaktionsfinalität ein. Bei Proof-of-Work wird die Rückgängigmachung eines Blocks exponentiell schwieriger, wenn neue Blöcke auf vorherigen aufgebaut werden, aber es erreicht nie ganz Null. Unter Proof-of-Stake werden Blöcke in Epochen (6,4 Minuten Zeitspanne mit 32 Chancen für Blöcke) gebündelt, über die Validatoren abstimmen. Wenn eine Epoche endet, stimmen die Validatoren darüber ab, ob sie die Epoche als "gerechtfertigt" betrachten sollen. Wenn die Validatoren einverstanden sind, die Epoche zu rechtfertigen, wird sie in der nächsten Epoche fertiggestellt. Abgeschlossene Transaktionen rückgängig zu machen ist wirtschaftlich unrentabel, da sie mehr als ein Drittel der insgesamt eingesetzten ETH einsetzen und verbrennen müssten.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Misverständnis: &quot;Der Merge aktivierte Staking-Auszahlungen.&quot;"
 contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
@@ -166,7 +181,9 @@ Seit des Netzwerk-Upgrades namens Shanghai/Capella können die Staker nun einen 
 <a href="/staking/withdrawals/">Mehr zu Staking-Auszahlungen</a>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Irrtum: &quot;Jetzt, da der Zusammenschluss abgeschlossen ist und die Abhebungen möglich sind, können alle Staker auf einmal aussteigen.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
@@ -178,8 +195,9 @@ Dadurch wird ein Massenexodus der für Staking eingesetzten Mittel verhindert. D
 
 Der effektive Jahreszins ist auch bewusst dynamisch, damit ein Markt von Stakern abwägen kann, wie viel sie bereit sind, für die Sicherung des Netzwerks zu zahlen. Wenn die Rate zu niedrig ist, werden die Validatoren mit einer durch das Protokoll begrenzten Rate aussteigen. Nach und nach wird dadurch die APR für alle erhöht, die bleiben und wieder neue oder wiederkehrende Staker anziehen.
 </ExpandableCard>
+}
 
-## Was ist mit "Eth2" passiert? {#eth2}
+## Was ist mit "Eth2" passiert? \{#eth2}
 
 Der Begriff "Eth2" ist veraltet. Nach der Zusammenführung von "Eth1" und "Eth2" in eine einzelne Chain gibt es keinen Grund mehr zwischen zwei Ethereum Netzwerken zu unterscheiden. Es gibt nur Ethereum.
 
@@ -192,11 +210,11 @@ Diese aktualisierte Terminologie ändert lediglich die Benennungskonventionen. D
 
 [Mehr erfahren über die „Eth2“-Umbenennung](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## Beziehung zwischen den Upgrades {#relationship-between-upgrades}
+## Beziehung zwischen den Upgrades \{#relationship-between-upgrades}
 
 Die Ethereum-Upgrades sind alle in gewisser Weise miteinander verbunden. Sehen wir uns nun an, welche Verbindung zwischen der Zusammenführung und anderen Upgrades besteht.
 
-### Die Zusammenführung und die Beacon Chain {#merge-and-beacon-chain}
+### Die Zusammenführung und die Beacon Chain \{#merge-and-beacon-chain}
 
 Die Zusammenführung stellt die formale Übernahme der Beacon Chain als neue Konsensschicht auf die ursprüngliche Mainnet-Ausführungsschicht dar. Seit dem Zusammenführen sind Validatoren der Sicherung vom Ethereum Mainnet zugewiesen, und das Minen auf [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) ist nicht mehr ein gültiges Mittel zur Blockproduktion.
 
@@ -206,13 +224,13 @@ Blöcke werden stattdessen durch validierende Nodes vorgeschlagen, die ETH als G
   Die Beacon Chain
 </ButtonLink>
 
-### Die Zusammenführung und das Shanghai Upgrade {#merge-and-shanghai}
+### Die Zusammenführung und das Shanghai Upgrade \{#merge-and-shanghai}
 
 Um den erfolgreichen Übergang zum Proof-of-Stake zu vereinfachen und zu maximieren, enthielt das Merge-Upgrade nicht bestimmte erwartete Funktionen, wie die Möglichkeit, eingesetztes ETH zurückzuziehen. Diese Funktion wurde mit dem Shanghai/Capella-Upgrade separat aktiviert.
 
 Für Neugierige: Erfahren Sie mehr darüber, [ was nach der Zusammenführung passiert](https://youtu.be/7ggwLccuN5s?t=101), präsentiert von Vitalik an der ETHGlobal-Veranstaltung im April 2021.
 
-### Die Zusammenführung und Sharding {#merge-and-data-sharding}
+### Die Zusammenführung und Sharding \{#merge-and-data-sharding}
 
 Ursprünglich war geplant, vor der Zusammenführung an Sharding zu arbeiten, um die Skalierbarkeit zu verbessern. Mit dem Boom der [Layer-2-Skalierungslösungen](/layer-2/), hat sich die Priorität jedoch auf die Umwandlung von Proof-of-Work zu Proof-of-Stake, durch die Zusammenführung, verschoben.
 
@@ -222,8 +240,12 @@ Pläne für die gemeinsame Nutzung entwickeln sich rasch, aber angesichts des An
   Sharding
 </ButtonLink>
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
+{
 <MergeArticleList />
+}
 
+{
 <QuizWidget quizKey="merge" />
+}

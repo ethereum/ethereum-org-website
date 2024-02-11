@@ -6,7 +6,7 @@ lang: zh
 
 随着一层网络区块链和二层网络[扩容](/developers/docs/scaling/)解决方案的激增，以及越来越多的去中心化应用程序跨链，跨链通信和资产转移需求已成为网络基础设施的重要组成部分。 存在不同类型的链桥就是为了帮助解决这种需求。
 
-## 对链桥的需求 {#need-for-bridges}
+## 对链桥的需求 \{#need-for-bridges}
 
 链桥的存在是为了连接区块链网络。 它们实现了区块链之间的连通性和互操作性。
 
@@ -14,7 +14,7 @@ lang: zh
 
 链桥提供了一种让孤立的区块链环境相互连通的途径。 它们在区块链之间建立了一条传输路线，让代币、信息、任意数据甚至[智能合约](/developers/docs/smart-contracts/)调用都可以从一条区块链转移到另一条。
 
-## 链桥的优点 {#benefits-of-bridges}
+## 链桥的优点 \{#benefits-of-bridges}
 
 简而言之，链桥解锁了大量应用场景，它允许区块链网络之间交换数据和转移资产。
 
@@ -28,7 +28,7 @@ lang: zh
 - 不同区块链生态系统的开发者之间相互协作，构建新产品。
 - 吸引来自不同生态系统的用户和社区使用他们的去中心化应用程序。
 
-## 链桥是如何工作的？ {#how-do-bridges-work}
+## 链桥是如何工作的？ \{#how-do-bridges-work}
 
 虽然[链桥设计](https://blog.li.fi/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa)多种多样，但以下三种方便资产跨链转移的方法脱颖而出：
 
@@ -36,7 +36,7 @@ lang: zh
 - **销毁并铸币 – **销毁源链上的资产并在目标链上铸币。
 - **原子交换 – **通过第三方将源链上的资产与目标链上的资产交换。
 
-## 链桥类型 {#bridge-types}
+## 链桥类型 \{#bridge-types}
 
 链桥通常可以分为以下几类之一：
 
@@ -45,7 +45,7 @@ lang: zh
 - **通用信息传递链桥 – **这些链桥可以跨链传输资产、信息和任意数据。 例如：Nomad 与 LayerZero。
 - **流动性网络 –** 这些链桥主要是通过原子交换将资产从一条链转移到另一条链。 一般来讲，它们不支持跨链信息传递。 例如：Connext 与 Hop。
 
-## 权衡利弊 {#trade-offs}
+## 权衡利弊 \{#trade-offs}
 
 没有完美的链桥解决方案。 有的只是为了实现目的而进行的权衡利弊。 开发者和用户可以根据以下因素评估链桥：
 
@@ -65,7 +65,7 @@ lang: zh
 - **通用信息传递链桥 –** 这些链桥在安全性和跨链传输更复杂数据的能力方面表现卓越。 通常，它们还具有良好的成本效益。 然而，这些优点通常以轻客户端链桥（例如 IBC）的连通性以及使用欺诈证明的乐观链桥（例如 Nomad）的速度劣势作为代价。
 - **流动性网络 –** 这些链桥使用原子交换转移资产，并且是本地验证系统(即，它们使用底层区块链的验证者验证交易）。 因此，它们在安全性和速度方面表现出色。 此外，流动性网络具有不错的成本效益和良好的连通性。 然而，最大的折衷之处是它们无法传递更复杂的数据 — 因为它们不支持跨链信息传递。
 
-## 链桥相关风险 {#risk-with-bridges}
+## 链桥相关风险 \{#risk-with-bridges}
 
 去中心化金融领域中[最大的三次黑客攻击](https://rekt.news/leaderboard/) 都是链桥造成的，而且链桥目前仍处于开发阶段早期。 使用任何链桥都有以下风险：
 
@@ -74,11 +74,11 @@ lang: zh
 - **交易对手风险 –** 一些链桥采用可信设计，这要求用户依靠一种假设，即验证者不会串通起来窃取用户的资金。 用户需要信任这些第三方参与者，这使他们面临一些风险，比如跑路、审查和其他恶意活动。
 - **未解决的问题 –** 考虑到链桥处于发展阶段初期，还有许多关于链桥在不同市场条件下如何表现的问题都尚未解决，如网络拥塞期和在发生网络级攻击或状态回滚等不可预见的事件时。 这种不确定性带来了一定的风险，且风险程度目前仍然未知。
 
-## 去中心化应用程序如何使用链桥？ {#how-can-dapps-use-bridges}
+## 去中心化应用程序如何使用链桥？ \{#how-can-dapps-use-bridges}
 
 下面介绍一些实际应用，在这些应用中，开发者可以考虑链桥并让他们的去中心化应用程序跨链：
 
-### 集成桥接 {#integrating-bridges}
+### 集成桥接 \{#integrating-bridges}
 
 对于开发者来说，有很多方法可以添加对链桥的支持：
 
@@ -101,7 +101,7 @@ lang: zh
 
 如果去中心化应用程序计划集成链桥或聚合器，那么根据集成的深度会有不同的选择。 例如，如果只是进行前端集成以改善用户上手体验，去中心化应用程序将集成小组件。 然而，如果整合是为了探索更深层次的跨链策略，如质押、流动性矿池等，去中心化应用程序就集成软件开发工具包或应用程序接口。
 
-### 在多条链上部署去中心化应用程序 {#deploying-a-dapp-on-multiple-chains}
+### 在多条链上部署去中心化应用程序 \{#deploying-a-dapp-on-multiple-chains}
 
 要在多条链上部署去中心化应用程序，开发者可以使用 [Alchemy](https://www.alchemy.com/)、[安全帽](https://hardhat.org/)、[Truffle](https://trufflesuite.com/)、[Moralis](https://moralis.io/) 等开发平台。 这些平台通常提供可组合的插件，能够支持去中心化应用程序跨链。 例如，开发者可以使用[安全帽部署插件](https://github.com/wighawag/hardhat-deploy)提供的确定性部署代理。
 
@@ -111,7 +111,7 @@ lang: zh
 - [构建跨链非同质化代币市场](https://youtu.be/WZWCzsB1xUE)
 - [Moralis：构建跨链非同质化代币去中心化应用程序](https://www.youtube.com/watch?v=ehv70kE1QYo)
 
-### 监控跨链合约活动 {#monitoring-contract-activity-across-chains}
+### 监控跨链合约活动 \{#monitoring-contract-activity-across-chains}
 
 要监控跨链合约活动，开发者可以使用子图和 Tenderly 等开发者平台实时观察智能合约。 这类平台上还有一些工具，提供更强大的跨链活动数据监控功能，例如，检查有没有[合约触发的事件](https://docs.soliditylang.org/en/v0.8.14/contracts.html?highlight=events#events)等。
 
@@ -120,7 +120,7 @@ lang: zh
 - [图表](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [区块链链桥](/bridges/) — ethereum.org
 - [区块链链桥：构建加密网络的网络](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) 2021 年 9 月 8 日 - Dmitriy Berenzon

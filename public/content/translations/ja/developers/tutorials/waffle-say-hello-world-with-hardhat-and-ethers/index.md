@@ -79,7 +79,7 @@ MyWaffleProject
 └── package.json
 ```
 
-### 次に、これらのファイルのいくつかを説明します。 {#now-lets-talk}
+### 次に、これらのファイルのいくつかを説明します。 \{#now-lets-talk}
 
 - Greeter.sol は、このチュートリアルで使用する Solidity で書かれたスマートコントラクトです。
 
@@ -126,7 +126,7 @@ describe("Greeter", function () {
 })
 ```
 
-### 次に、コントラクトをコンパイルし、テストを実行します。 {#compiling-and-testing}
+### 次に、コントラクトをコンパイルし、テストを実行します。 \{#compiling-and-testing}
 
 Waffle では、Mocha（テスト用フレームワーク）および Chai（アサーションライブラリ）を使ってテストを実行します。 `npx hardhat test`を実行して、以下のメッセージが表示されるまで待つだけです。
 
@@ -134,7 +134,7 @@ Waffle では、Mocha（テスト用フレームワーク）および Chai（ア
 ✓ Should return the new greeting once it's changed
 ```
 
-### 今のところ順調ですので、プロジェクトにもう少し機能を付け加えてみましょう<Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
+### 今のところ順調ですので、プロジェクトにもう少し機能を付け加えてみましょう<Emoji text=":slightly_smiling_face:" size={1}/> \{#adding-complexity}
 
 他のユーザーが、挨拶の代わりに空の文字列を追加したと想定してみましょう。 無言の挨拶は嬉しくありませんね！  
 ですから、このようなことが起こらないようにします：
@@ -195,7 +195,7 @@ greeting = _greeting;
 
 おめでとうございます！ テストが完成しました :)
 
-### まとめ {#conclusion}
+### まとめ \{#conclusion}
 
 Waffle、Hardhat、および ethers.js を使った簡単なプロジェクトを作成しました。 このチュートリアルでは、プロジェクトを開始し、テストを追加し、さらに新たな機能を実装する方法について学びました。
 

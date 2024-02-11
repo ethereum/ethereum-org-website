@@ -12,7 +12,7 @@ summaryPoint2: İklim değişikliği gibi küresel düzeydeki koordinasyon krizl
 summaryPoint3: Doğrulanmış karbon kredileri gibi ekolojik fayda varlıklarını büyük ölçüde ölçeklendirmek için bir araç
 ---
 
-## ReFi nedir? {#what-is-refi}
+## ReFi nedir? \{#what-is-refi}
 
 **Rejeneratif Finans (ReFi)**, çıkarıcı veya sömürücü olmaktan ziyade canlandırıcı ekonomiler yaratmayı amaçlayan, blok zincirler üzerine inşa edilmiş bir dizi araç ve fikirdir. Sonunda, çıkarıcı sistemler mevcut olan kaynakları tüketir ve çökerler; rejeneratif sistemler olmadan eksiktir. ReFi, parasal değer yaratmanın, gezegenimiz ve topluluklarımızdan sürdürülemez şekilde kaynak çıkarılmasından ayrıştırılması gerektiği varsayımı ile işler.
 
@@ -26,7 +26,7 @@ ReFi projeleri bu prensiplerin kullanıldığı [akıllı sözleşmelerde](/deve
 
 ReFi aynı zamanda Ethereum'u bilimsel bilgiyi finanse etmek, oluşturmak, gözden geçirmek, kredilendirmek, depolamak ve yaymak için platform olarak kullanan [merkeziyetsiz bilim (DeSci)](/desci/) hareketi ile örtüşür. DeSci araçları ağaç dikmek, okyanustan plastik temizlemek veya bozulmuş bir ekosistemi yenilemek gibi rejeneratif aktiviteleri uygulamak ve gözlemlemek için doğrulanabilir standartlar ve pratikler geliştirme amaçlı kullanışlı olabilir.
 
-## Karbon Kredilerinin Tokenlaştırılması {#tokenization-of-carbon-credits}
+## Karbon Kredilerinin Tokenlaştırılması \{#tokenization-of-carbon-credits}
 
 **[Gönüllü karbon piyasası (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** mevcut emisyonları azaltarak veya atmosferde yayılan sera gazlarını kaldırarak karbon emisyonları üzerinde doğrulanmış pozitif etki yaratan projeleri fonlamak için bir mekanizmadır. Bu projeler doğrulandıktan sonra iklim hareketini destekleyen kişiler veya organizasyonlara satabilecekleri "karbon kredisi" isimli bir varlık elde ederler.
 
@@ -50,7 +50,7 @@ ReFi projeleri geleneksel piyasaların sorunlarını hafifletmek için blok zinc
 - **Takas aktivitesi aracılar olmadan gerçekleşir**, aracılar yüksek ücretler alırlar. Dijital karbon kredileri bir analiz firmasının verisine göre [eş değer geleneksek kredilere göre %62 masraf iyileştirmesini](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne) temsil eder.
 - **DCM ölçeklenebilirdir** ve benzer tekillerin ve uluslararası firmaların isteklerini karşılayabilir.
 
-### DCM'in Ana Bileşenleri {#key-components-dcm}
+### DCM'in Ana Bileşenleri \{#key-components-dcm}
 
 Dört ana bileşen DCM'nin mevcut peyzajını oluşturur:
 
@@ -65,7 +65,7 @@ Blok zincirler üzerinde inşa edilen ve bu sektördeki mevcut önde gelenlerle 
 
 4. Karbon piyasasının tüm tedarik zinciri etkisinin ve verimliliğinin ölçeklendirilmesini kolaylaştıran temeldeki raylar ve altyapı. [KlimaDAO](http://klimadao.finance/) likiditeyi bir kamu malı olarak sunar (herhangi birinin karbon kredilerini şeffaf bir fiyatla alıp satabilmesini sağlar), karbon piyasalarında girdi artışını ve emeklilikleri ödüllerle teşvik eder, alım ve emekliliğin yanında, geniş bir tokenlaştırılmış karbon kredileri yelpazesi ile alakalı veriye erişim için kullanıcı dostu ve beraber çalışabilen araçlar sunar.
 
-## Karbon pazarlarının ötesinde ReFi {#refi-beyond}
+## Karbon pazarlarının ötesinde ReFi \{#refi-beyond}
 
 Şu anda karbon piyasaları ve VCM'nin DCM'ye dönüşümü hakkında alan içinde büyük bir vurgu olsa da, "ReFi" terimi sadece karbon ile sınırlı değildir. Karbon kredilerinin dışında diğer çevresel varlıklar da geliştirilebilir ve tokenlaştırılabilir, yani ayrıca diğer negatif dışsallıklar da gelecekteki ekonomik sistemlerin temel katmanlarında fiyatlandırılabilir. Dahası, bu ekonomik modelin rejeneratif yönü diğer alanlara uygulanabilir, tıpkı [Gitcoin](https://gitcoin.co/) gibi ikinci dereceden finansman platformları aracılığıyla kamu mallarının fonlanması gibi. Açık katılım ve kaynakların eşit dağıtımı fikri üzerinde inşa edilmiş organizasyonlar herkesi açık kaynak yazılım projelerine olduğu gibi eğitimsel, çevresel ve topluluk odaklı projelere para aktarmak için destekler.
 

@@ -4,7 +4,7 @@ description:
 lang: pl
 ---
 
-## Wprowadzenie {#introduction}
+## Wprowadzenie \{#introduction}
 
 **Czym jest token?**
 
@@ -24,13 +24,13 @@ Tak potężna funkcja Ethereum musi być obsługiwana przez solidny standard, pr
 
 ERC-20 wprowadza standard dla tokenów wymiennych, innymi słowy mają one właściwość, która sprawia, że każdy token jest dokładnie taki sam (pod względem typu i wartości) jak inny token. Na przykład token ERC-20 działa podobnie jak ETH, oznacza, że 1 token jest i będzie zawsze równy wszystkim pozostałym tokenom.
 
-## Warunki wstępne {#prerequisites}
+## Warunki wstępne \{#prerequisites}
 
 - [Konta](/developers/docs/accounts)
 - [Inteligentne kontrakty](/developers/docs/smart-contracts/)
 - [Standardy tokenów](/developers/docs/standards/tokens/)
 
-## Treść {#body}
+## Treść \{#body}
 
 ERC-20 (Ethereum Request for Comments 20) zaproponowany przez Fabiana Vogelstellera w listopadzie 2015 r. jest standardem tokenów, który implementuje API dla tokenów w inteligentnych kontraktach.
 
@@ -40,7 +40,7 @@ Jeśli inteligentny kontrakt implementuje następujące metody i zdarzenia, moż
 
 Od [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
-### Metody {#methods}
+### Metody \{#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -54,7 +54,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### Wydarzenia {#events}
+### Wydarzenia \{#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
@@ -62,11 +62,11 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ```
 
-### Przykłady {#web3py-example}
+### Przykłady \{#web3py-example}
 
 Zobaczmy, dlaczego standard jest tak ważny, aby ułatwić nam sprawdza kontraktów z tokenami ERC-20 na Ethereum. Potrzebujemy tylko interfejsu binarnego Umowy (ABI), aby utworzyć interfejs dla każdego tokenu ERC-20. Jak możesz zobaczyć poniżej, użyjemy uproszczonego ABI, aby zmniejszyć złożoność przykładu.
 
-#### Przykład Web3.py {#web3py-example}
+#### Przykład Web3.py \{#web3py-example}
 
 Najpierw upewnij się, że zainstalowałeś [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) bibliotekę Pythona:
 
@@ -138,14 +138,14 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## Dalsza lektura {#further-reading}
+## Dalsza lektura \{#further-reading}
 
 - [EIP-20: standard tokena ERC-20](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin – tokeny](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin – implementacja ERC-20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [ConsenSys – wdrożenie ERC-20](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)
 
-## Powiązane tematy {#related-topics}
+## Powiązane tematy \{#related-topics}
 
 - [ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [ERC-777](/developers/docs/standards/tokens/erc-777/)

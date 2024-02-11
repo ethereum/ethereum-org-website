@@ -4,7 +4,7 @@ description: Política aplicable para añadir intercambios a ethereum.org
 lang: es
 ---
 
-# Añadir intercambios a Ethereum {#adding-ethereum-exchanges}
+# Añadir intercambios a Ethereum \{#adding-ethereum-exchanges}
 
 Cualquiera es libre de sugerir nuevos intercambios a Ethereum.org.
 
@@ -18,7 +18,7 @@ Debido a este contexto, necesitamos información específica cuando usted sugier
 
 **NOTA:** si quiere incluir un intercambio descentralizado, eche un vistazo a nuestra [política para incluir carteras y dapps](/contributing/adding-products/).
 
-## Lo que necesitamos {#what-we-need}
+## Lo que necesitamos \{#what-we-need}
 
 - Restricciones geográficas aplicables al intercambio. Las restricciones geográficas relacionadas con el intercambio deben detallarse en una página o sección específica del sitio web del intercambio.
 - Las divisas que los usuarios pueden usar para comprar ETH.
@@ -31,7 +31,7 @@ Y para que ethereum.org pueda estar más seguro de que el intercambio es un serv
 
 ---
 
-## Añada su intercambio {#add-exchange}
+## Añada su intercambio \{#add-exchange}
 
 Si desea añadir un interambio a ethereum.org, cree una incidencia en GitHub.
 

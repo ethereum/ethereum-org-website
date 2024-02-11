@@ -8,11 +8,11 @@ sidebarDepth: 3
 
 Uporablja dokaze o veljavnosti, kot so [ZK-zvitki](/developers/docs/scaling/zk-rollups/), vendar podatki niso shranjeni na glavni plasti 1 verige Ethereum. To lahko pripelje do 10 000 transakcij na sekundo na verigo Validium, prav tako pa lahko vzporedno deluje več verig.
 
-## Predpogoji {#prerequisites}
+## Predpogoji \{#prerequisites}
 
 Dobro morate razumeti vse temeljne teme in zelo dobro razumeti [razširljivosti Ethereum](/developers/docs/scaling/). Implementacija rešitev za razširljivost, kot je Validium, je napredno področje, saj tehnologija v praksi še ni dovolj testirana ter se še naprej raziskuje in razvija.
 
-## Prednosti in slabosti {#pros-and-cons}
+## Prednosti in slabosti \{#pros-and-cons}
 
 | Prednosti                                                                                                                                       | Slabosti                                                                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -21,14 +21,14 @@ Dobro morate razumeti vse temeljne teme in zelo dobro razumeti [razširljivosti 
 |                                                                                                                                                 | Počasnejši čas subjektivne dokončnosti (od 10 do 30 minut za generiranje ZK-dokaza) (vendar hitrejši čas do polne dokončnosti, saj ni časovnega zamika zaradi sporov). |
 |                                                                                                                                                 | Generiranje dokaza zahteva, da so podatki izven verige vedno dostopni.                                                                                                 |
 
-### Uporaba Validiuma {#use-validium}
+### Uporaba Validiuma \{#use-validium}
 
 Več projektov zagotavlja implementacije Validiuma, ki jih lahko integrirate v svoje dappe:
 
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkPorter](https://matter-labs.io/)
 
-## Nadaljnje branje {#further-reading}
+## Nadaljnje branje \{#further-reading}
 
 - [Validium in Plast 2 dve-krat-dve — izdaja št. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 

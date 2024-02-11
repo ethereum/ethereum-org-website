@@ -15,11 +15,11 @@ lang: zh
 
 如果您很好奇，喜欢帮助测试仍在大力发展的新语言，则可以尝试使用 Fe，这是一种新兴的智能合约语言，目前仍处于起步阶段。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 如果已经有编程语言（特别是关于 JavaScript 或 Python）知识，可以帮助您体验到智能合约语言的差异。 同时，我们建议您在深入理解语言差异之前，先理解作为概念的智能合约。 [智能合约简介](/developers/docs/smart-contracts/)。
 
-## Solidity {#solidity}
+## Solidity \{#solidity}
 
 - 执行智能合约的目标导向高级语言。
 - 受 C++ 影响最深的大括号编程语言。
@@ -29,7 +29,7 @@ lang: zh
   - 库（您可以创建从不同的合约调用的可重用代码 - 就像静态函数在其它面向对象编程语言的静态类中一样）。
   - 复杂的用户自定义类型。
 
-### 重要链接 {#important-links}
+### 重要链接 \{#important-links}
 
 - [相关文档](https://docs.soliditylang.org/en/latest/)
 - [Solidity 语言网站](https://soliditylang.org/)
@@ -40,7 +40,7 @@ lang: zh
 - [Solidity 博客](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
 
-### 合约示例 {#example-contract}
+### 合约示例 \{#example-contract}
 
 ```solidity
 / SPDX-License-Identifier: GPL-3.0
@@ -83,7 +83,7 @@ contract Coin {
 
 这个示例应该能让您感觉到 Solidity 合约语法是什么样子的。 关于函数和变量的详细描述，[请查看文档](https://docs.soliditylang.org/en/latest/contracts.html)。
 
-## Vyper {#vyper}
+## Vyper \{#vyper}
 
 - 类 Python 编程语言
 - 强类型
@@ -101,7 +101,7 @@ contract Coin {
 
 更多信息，[请查阅 Vyper 原理](https://vyper.readthedocs.io/en/latest/index.html)。
 
-### 重要的链接 {#important-links-1}
+### 重要的链接 \{#important-links-1}
 
 - [相关文档](https://vyper.readthedocs.io)
 - [Vyper 示例](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
@@ -116,7 +116,7 @@ contract Coin {
 - [Vyper 最热门的智能合约示例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [出色的 Vyper 精选资源](https://github.com/spadebuilders/awesome-vyper)
 
-### 示例 {#example}
+### 示例 \{#example}
 
 ```python
 # Open Auction
@@ -199,7 +199,7 @@ def endAuction():
 
 这个例子应该让您了解 Vyper 合约语法是什么样的。 有关函数和变量的详细说明，[请参阅文档](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)。
 
-## Yul 和 Yul+ {#yul}
+## Yul 和 Yul+ \{#yul}
 
 如果您是以太坊的新手并且尚未使用智能合约语言进行任何编码，我们建议您开始使用 Solidity 或 Vyper。 只有在您熟知智能合约安全最佳做法和使用 EVM 的具体细节后，才可以查看 Yul 或 Yul+。
 
@@ -215,14 +215,14 @@ def endAuction():
 - 最初设计用于[乐观卷叠](/developers/docs/scaling/optimistic-rollups/)合约。
 - Yul+ 可以被视为对 Yul 的实验性升级建议，为其添加新功能。
 
-### 重要的链接 {#important-links-2}
+### 重要的链接 \{#important-links-2}
 
 - [Yul 相关文档](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ 相关文档](https://github.com/fuellabs/yulp)
 - [Yul+ 实战场](https://yulp.fuel.sh/)
 - [Yul+ 介绍帖子](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### 合约示例 {#example-contract-2}
+### 合约示例 \{#example-contract-2}
 
 以下简单示例实现了幂函数。 它可以使用 `solc --strict-assembly --bin input.yul` 编译。 这个例子应该 存储在 input.yul 文件中。
 
@@ -247,14 +247,14 @@ def endAuction():
 
 如果您已经熟悉智能合约，可以在 [此处找到 Yul 中的完整 ERC20 实例](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)。
 
-## Fe {#fe}
+## Fe \{#fe}
 
 - 以太坊虚拟机 (EVM) 静态类型语言。
 - 受到 Python 和 Rust 的启发。
 - 目标是容易学习 - 甚至对以太坊生态系统为新的开发者来说也是如此。
 - Fe 开发仍处于早期阶段，该语言于 2021 年 1 月发行。
 
-### 重要链接 {#important-links-3}
+### 重要链接 \{#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
 - [Fe 公告](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
@@ -262,7 +262,7 @@ def endAuction():
 - [Fe Discord 聊天室](https://discord.com/invite/ywpkAXFjZH)
 - [Fe Twitter](https://twitter.com/official_fe)
 
-### 合约示例 {#example-contract-3}
+### 合约示例 \{#example-contract-3}
 
 以下是在 Fe 中执行的简单的智能合约。
 
@@ -285,34 +285,34 @@ contract GuestBook:
 
 ```
 
-## 如何选择 {#how-to-choose}
+## 如何选择 \{#how-to-choose}
 
 与任何其他编程语言一样，它主要是关于为合适的工作以及个人喜好选择合适的工具。
 
 如果您还没有尝试过任何一种语言，请考虑以下几点：
 
-### Solidity 的优点是什么？ {#solidity-advantages}
+### Solidity 的优点是什么？ \{#solidity-advantages}
 
 - 如果您是初学者，这里有很多教程和学习工具。 在[通过编码学习](/developers/learning-tools/)部分了解更多相关信息。
 - 提供出色的开发者工具。
 - Solidity 拥有庞大的开发人员社区，这意味着您很可能会很快找到问题的答案。
 
-### Vyper 的优点是什么？ {#vyper-advatages}
+### Vyper 的优点是什么？ \{#vyper-advatages}
 
 - 想要编写智能合约的 Python 开发人员入门的好方法。
 - Vyper 的功能较少，因此非常适合快速制作创意原型。
 - Vyper 旨在易于审计并最大限度地提高人类可读性。
 
-### Yul 和 Yul+ 的优点是什么？ {#yul-advantages}
+### Yul 和 Yul+ 的优点是什么？ \{#yul-advantages}
 
 - 简单而实用的低级语言。
 - 允许更接近原始 EVM，这有助于优化合约的 gas 使用量。
 
-## 语言比较 {#language-comparisons}
+## 语言比较 \{#language-comparisons}
 
 关于基本语法的比较、合同生命周期、接口、操作员、数据结构、功能、控制流程以及更多，请查看[由 Auditless 编写的备忘清单](https://reference.auditless.com/cheatsheet/)
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [OpenZeppelin 的 Solidity 合约库](https://docs.openzeppelin.com/contracts)
 - [Solidity 示例](https://solidity-by-example.org)

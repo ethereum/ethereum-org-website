@@ -4,7 +4,7 @@ description: A política que usamos ao adicionar câmbios ao ethereum.org
 lang: pt-br
 ---
 
-# Adicionar câmbios ao Ethereum {#adding-ethereum-exchanges}
+# Adicionar câmbios ao Ethereum \{#adding-ethereum-exchanges}
 
 Qualquer pessoa pode sugerir novos câmbios no ethereum.org.
 
@@ -18,7 +18,7 @@ Devido a esse contexto, precisaremos de algumas informações específicas quand
 
 **NOTA:** Se você quiser adicionar um câmbio descentralizado, confira nossa [política para adicionar carteiras e dapps](/contributing/adding-products/).
 
-## Do que precisamos {#what-we-need}
+## Do que precisamos \{#what-we-need}
 
 - As restrições geográficas aplicáveis ao câmbio
 - As moedas que os usuários podem usar para comprar ETH
@@ -31,7 +31,7 @@ E para que o ethereum.org possa confiar na legitimidade e segurança dos serviç
 
 ---
 
-## Adicionar sua agência de câmbio {#add-exchange}
+## Adicionar sua agência de câmbio \{#add-exchange}
 
 Se você deseja adicionar uma agência de câmbio no ethereum.org, crie um tíquete no GitHub.
 

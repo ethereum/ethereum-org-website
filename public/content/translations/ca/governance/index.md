@@ -4,25 +4,27 @@ description: Una introducció sobre com es prenen les decisions a Ethereum.
 lang: ca
 ---
 
-# Introducció a la governança d'Ethereum {#introduction}
+# Introducció a la governança d'Ethereum \{#introduction}
 
 _Si ningú és el propietari d'Ethereum, com es prenen les decisions sobre els canvis passats i futurs d'Ethereum? La governança d'Ethereum es refereix al procés que permet que es prenguin aquestes decisions_
 
+{
 <Divider />
+}
 
-## Què és la governança? {#what-is-governance}
+## Què és la governança? \{#what-is-governance}
 
 La governança són els sistemes implementats que permeten prendre decisions. En una estructura organitzativa típica, l'equip executiu o el consell de direcció pot tenir l'última paraula en el procés de presa de decisions. O potser cal el vot dels accionistes per a promulgar un canvi. En un sistema polític, els càrrecs electes poden promulgar legislació que busca representar els desitjos dels seus votants.
 
-## Governança descentralitzada {#decentralized-governance}
+## Governança descentralitzada \{#decentralized-governance}
 
 Ningú és propietari o controla el protocol Ethereum, però això no vol dir que no calgui prendre decisions sobre la implementació de canvis que assegurin millor la longevitat i prosperitat de la xarxa. Aquesta falta de propietari fa que l'organització tradicional de governança no sigui una solució compatible.
 
-## Governança d'Ethereum {#ethereum-governance}
+## Governança d'Ethereum \{#ethereum-governance}
 
 La governança d'Ethereum és el procés pel qual es fan canvis en el protocol. És important assenyalar que aquest procés no està relacionat amb com la gent i les aplicacions utilitzen el protocol; la xarxa Ethereum no requereix permisos per a ser utilitzada. Qualsevol persona d'arreu del món pot participar en les activitats de la cadena. No hi ha normes que determinin qui pot o no construir una aplicació o enviar una transacció. Amb tot, hi ha un procés per proposar canvis al protocol bàsic, sobre el qual funcionen aquestes aplicacions. Com que hi ha tanta gent que depèn de l'estabilitat d'Ethereum i per tal d'assegurar que els canvis que es facin a Ethereum siguin segurs i tinguin un suport molt ampli de la comunitat, el llindar de coordinació que cal per a fer modificacions mínimes és molt alt, incloent-hi processos tècnics i socials.
 
-### Governança «en cadena» vs «fora de cadena» {#on-chain-vs-off-chain}
+### Governança «en cadena» vs «fora de cadena» \{#on-chain-vs-off-chain}
 
 La tecnologia de cadenes de blocs proporciona una nova forma de governança, coneguda com a governança en cadena. La governança en cadena es produeix quan els canvis en el protocol es decideixen a través de la votació dels tenidors, generalment aquells que estan en possessió d'un token de governança, i la votació succeeix en la cadena de blocs. En algunes formes de governança en cadena, els canvis que es proposen per a un protocol ja estan escrits en codi i s'implementen automàticament si els tenidors aproven els canvis.
 
@@ -36,9 +38,11 @@ _Mentre que a nivell del protocol la governança d'Ethereum és fora de cadena, 
   Més sobre les DAO
 </ButtonLink>
 
+{
 <Divider />
+}
 
-## Qui hi està involucrat? {#who-is-involved}
+## Qui hi està involucrat? \{#who-is-involved}
 
 Hi ha diversos tipus de tenidors a la [comunitat Ethereum](/community/) i cadascú juga el seu paper en el procés de governança. Començant pels tenidors més allunyats del protocol i apropant la lupa a poc a poc, tenim:
 
@@ -52,9 +56,11 @@ Hi ha diversos tipus de tenidors a la [comunitat Ethereum](/community/) i cadasc
 
 _Nota: Qualsevol particular pot ser part de mutitud d'aquests grups (p. ex. un desenvolupador de protocol podria ser autor d'una EIP i executar un validador de la cadena de balisa a més d'utilitzar aplicacions DeFi). No obstant això, per a presentar els conceptes de forma clara, és més fàcil que hi hagi diferències entre ells._
 
+{
 <Divider />
+}
 
-## Què és una EIP? {#what-is-an-eip}
+## Què és una EIP? \{#what-is-an-eip}
 
 Un procés important utilitzat en la governança d'Ethereum és la iniciativa d'**EIP (Propostes de Millora d'Ethereum o «Ethereum Improvement Proposals», en anglès)**. Les EIP són estàndards que especifiquen nous processos o característiques potencials per a Ethereum. Qualsevol persona dins la comunitat Ethereum pot crear una EIP. Per exemple, cap dels autors de la EIP-721, l'EIP que ha estandarditzat els NFT, ha treballat directament en el desenvolupament del protocol d'Ethereum.
 
@@ -62,9 +68,11 @@ Un procés important utilitzat en la governança d'Ethereum és la iniciativa d'
   Més informació sobre les EIP
 </ButtonLink>
 
+{
 <Divider />
+}
 
-## El procés formal {#formal-process}
+## El procés formal \{#formal-process}
 
 El procés formal per introduir canvis al protocol Ethereum és el següent:
 
@@ -86,17 +94,17 @@ El procés formal per introduir canvis al protocol Ethereum és el següent:
 
 Aquest flux, a la vegada que molt simplificat, dona una visió general dels nivells rellevant perquè s'activi un canvi de protocol a Ethereum. Ara, fem una ullada als factors informals en joc durant aquest procés.
 
-## El procés informal {#informal-process}
+## El procés informal \{#informal-process}
 
-### Treballs previs {#prior-work}
+### Treballs previs \{#prior-work}
 
 Els autors d'EIP haurien de familiaritzar-se amb les propostes i els treballs previs abans de crear una EIP que pugui ser considerada formalment per a la seva implementació a la xarxa principal d'Ethereum. D'aquesta manera, s'espera que l'EIP aporti quelcom de nou que no hagi estat rebutjat anteriorment. Els tres llocs principals per fer-ne recerques són el [repositori d'EIP](https://github.com/ethereum/eips), el fòrum [Ethereum Magicians](https://ethereum-magicians.org/) i [ethresear.ch](https://ethresear.ch/).
 
-### Grups de treball {#working-groups}
+### Grups de treball \{#working-groups}
 
 És poc probable que un primer esborrany d'una EIP sigui implementat a la xarxa principal d'Ethereum sense edicions o canvis. Generalment, els autors d'EIP treballaran amb un subconjunt de desenvolupadors de protocol per especificar, implementar, provar, iterar i finalitzar la seva proposta. Històricament, aquests grups de treball han requerit molts mesos (i de vegades anys!) de treball. De forma similiar, per a efectuar tals canvis, els autors d'EIP hauran d'involucrar desenvolupadors d'aplicacions/eines rellevants des del primer moment per a recaptar opinions d'usuaris finals i mitigar qualsevol risc d'implementació.
 
-### Consens comunitari {#community-consensus}
+### Consens comunitari \{#community-consensus}
 
 Mentre que algunes EIP són simples millores tècniques amb matissos mínims, d'altres són compensacions més complexes i inherents que afectaran a diferents tenidors de diverses formes. Això significa que algunes EIP acabaran sent més polèmiques dins la comunitat que d'altres.
 
@@ -106,15 +114,17 @@ S'espera que els autors d'EIP demanin l'opinió de tots els tenidors rellevants.
 
 Més enllà de la seguretat de la xarxa Ethereum, històricament els desenvolupadors de protocol han atorgat un pes significant al valor dels desenvolupadors d'aplicacions/eines i als usuaris d'aplicacions, ja que el seu ús i desenvolupament a Ethereum és el que fa que l'ecosistema sigui atractiu per a altres tenidors. A més, les EIP han d'implementar-se al llarg de totes les implementacions de client, que són gestionades per diferents equips. Part d'aquest procés significa generalment convèncer múltiples equips de desenvolupadors de protocol que un canvi en particular és valuós i ajuda als usuaris finals o soluciona un problema de seguretat.
 
+{
 <Divider />
+}
 
-## Com abordar els desacords {#disagreements}
+## Com abordar els desacords \{#disagreements}
 
 Comptar amb molts tenidors amb motivacions i creences diferents significa que els desacords no són inusuals.
 
 Per norma general, els desacords s'aborden en llargues discussions en fòrums públics per comprendre el problema d'arrel i permetre que l'opinió de qualsevol tingui pes. Normalment, o bé un dels grups cedeix o bé s'aconsegueix un terme mitjà. Si un grup se sent suficientment fort, el fet de forçar a través d'un canvi particular podria resultar en una separació de cadena. Una separació de cadena es produeix quan alguns tenidors protesten implementant un canvi de protocol i això dona com a resultat versions diferents i incompatibles del protocol que està operatiu, del qual sorgeixen dues cadenes de blocs diferents.
 
-### La bifurcació d'una DAO {#dao-fork}
+### La bifurcació d'una DAO \{#dao-fork}
 
 Les bifurcacions es donen quan s'han de fer importants millores tècniques o modificacions a la xarxa i canvien les «normes» del protocol. [Els clients Ethereum](/developers/docs/nodes-and-clients/) han d'actualitzar el software per a implementar les noves normes de la bifurcació.
 
@@ -134,19 +144,25 @@ Avui en dia, la comunitat Ethereum ha adoptat una política de no-intervenció e
 
 Veieu aquest vídeo amb més informació sobre el pirateig de la DAO:
 
+{
 <YouTube id="rNeLuBOVe8A" />
+}
 
+{
 <Divider />
+}
 
-### La utilitat de les bifurcacions {#forking-utility}
+### La utilitat de les bifurcacions \{#forking-utility}
 
 La bifurcació d'Ethereum/Ethereum Classic és un exemple excel·lent d'una bifurcació sana. Teníem dos grups que diferien tant l'un de l'altre en relació amb els valors principals com per sentir que pagaven la pena els riscs derivats de perseguir els seus camins d'acció específics.
 
 L'habilitat de bifurcar-se front a diferències polítiques, filosòfiques o econòmiques significants juga un gran paper en l'èxit de la governança d'Ethereum. Si no hi hagués hagut la possibilitat d'una bifurcació, l'alternativa era una lluita interna continuada, participació forçada reticent per a aquells que eventualment van formar Ethereum Classic i una visió cada cop més diferent de com es percep l'èxit d'Ethereum.
 
+{
 <Divider />
+}
 
-## Desenvolupament de la cadena de balisa {#beacon-chain}
+## Desenvolupament de la cadena de balisa \{#beacon-chain}
 
 El procés de governança d'Ethereum sovint sacrifica velocitat i eficiència per obertura i inclusivitat. Per a accelerar el desenvolupament de la cadena de balisa, es va llençar de forma separada a la xarxa de prova de treball d'Ethereum i seguia les seves pròpies pràctiques de governança.
 
@@ -158,9 +174,11 @@ Quan la cadena de balisa es fusioni amb la capa d'execució d'Ethereum, el proc�
   Més informació sobre La Fusió
 </ButtonLink>
 
+{
 <Divider />
+}
 
-## Com puc involucrar-me? {#get-involved}
+## Com puc involucrar-me? \{#get-involved}
 
 - [Proposeu una EIP](/eips/#participate)
 - [Debatiu propostes actuals](https://ethereum-magicians.org/)
@@ -170,7 +188,7 @@ Quan la cadena de balisa es fusioni amb la capa d'execució d'Ethereum, el proc�
 - [Contribuïu al desenvolupament de clients](/developers/docs/nodes-and-clients/#execution-clients)
 - [Programa d'aprenentatge per a desenvolupadors de nucli](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
-## Llegir-ne més {#further-reading}
+## Llegir-ne més \{#further-reading}
 
 La governança a Ethereum no està definida de manera rígida. Diversos participants de la comunitat tenen diferents perspectives al respecte. Aquí en teniu uns quants:
 

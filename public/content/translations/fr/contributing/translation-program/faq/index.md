@@ -4,11 +4,11 @@ lang: fr
 description: Questions fréquentes sur le programme de traduction d'ethereum.org
 ---
 
-# Guide de traduction du site ethereum.org {#translating-ethereum-guide}
+# Guide de traduction du site ethereum.org \{#translating-ethereum-guide}
 
 Si vous n'avez jamais utilisé de logiciels de traduction et hésitez à vous lancer, voici quelques questions/réponses pour commencer. Utilisez ce guide pour trouver les réponses aux questions les plus courantes.
 
-## Puis-je obtenir une compensation pour la traduction d'ethereum.org ? {#compensation}
+## Puis-je obtenir une compensation pour la traduction d'ethereum.org ? \{#compensation}
 
 Ethereum.org est un site web open source, ce qui signifie que tout le monde peut y contribuer.
 
@@ -20,7 +20,7 @@ Par conséquent, le programme de traduction est ouvert et sur la base du volonta
 
 Nous faisons tout notre possible pour permettre à nos contributeurs de réussir dans l'écosystème Ethereum. De nombreuses incitations non monétaires sont en place, notamment [l'offre de POAP](/contributing/translation-program/acknowledgements/#poap) et la délivrance d'un certificat de traducteur[](/contributing/translation-program/acknowledgements/#certificate), ainsi que l'organisation de [classements des traducteurs](/contributing/translation-program/acknowledgements/) et [la mention de tous nos traducteurs sur le site](/contributing/translation-program/contributors/).
 
-## Comment traduire des chaînes avec des balises `<HTML tags>` ? {#tags}
+## Comment traduire des chaînes avec des balises `<HTML tags>` ? \{#tags}
 
 Toutes les chaînes ne sont pas écrites sous forme de texte pur. Certaines se composent de scripts mixtes comme des balises HTML (`<0>`, `</0>`), généralement utilisées pour les hyperliens ou les styles de caractère au sein d'une phrase.
 
@@ -33,7 +33,7 @@ Vous pouvez déplacer les balises dans la chaîne pour la rendre plus naturelle 
 
 Pour des informations plus détaillées sur le traitement des balises et des extraits de code, veuillez vous référer au [guide de style pour la traduction d'ethereum.org](/contributing/translation-program/translators-guide/#dealing-with-tags).
 
-## Où sont réellement les chaînes ? {#strings}
+## Où sont réellement les chaînes ? \{#strings}
 
 Souvent, les chaînes sources seules ne sont pas suffisantes pour fournir une traduction précise.
 
@@ -44,7 +44,7 @@ Souvent, les chaînes sources seules ne sont pas suffisantes pour fournir une tr
 
 ![Un exemple de capture d'écran ajoutée pour le contexte](./source-string-2.png)
 
-## Comment laisser des commentaires ou poser des questions ? Je voudrais signaler un problème ou une faute de frappe... {#comment}
+## Comment laisser des commentaires ou poser des questions ? Je voudrais signaler un problème ou une faute de frappe... \{#comment}
 
 Si vous voulez signaler une chaîne particulière qui a besoin d'être examinée, n'hésitez pas à soumettre un commentaire.
 
@@ -54,7 +54,7 @@ Si vous voulez signaler une chaîne particulière qui a besoin d'être examinée
 
 ![Image montrant comment écrire des commentaires et signaler des problèmes/poser des questions](./comment-issue.png)
 
-## Qu'est-ce que la mémoire de traduction (TM) ? {#translation-memory}
+## Qu'est-ce que la mémoire de traduction (TM) ? \{#translation-memory}
 
 La mémoire de traduction (TM, de l'anglais Translation Memory) est une fonctionnalité de Crowdin qui stocke toutes les chaînes précédemment traduites sur [ethereum.org](http://ethereum.org/). Lorsqu'une chaîne de caractères est traduite, elle est automatiquement enregistrée dans notre TM du projet. Cela peut être un outil utile pour vous aider à gagner du temps !
 
@@ -63,7 +63,7 @@ La mémoire de traduction (TM, de l'anglais Translation Memory) est une fonction
 
 ![Une capture d'écran de la mémoire de traduction](./translation-memory.png)
 
-## Comment utiliser le glossaire Crowdin ? {#glossary}
+## Comment utiliser le glossaire Crowdin ? \{#glossary}
 
 La terminologie Ethereum est un autre élément crucial de notre travail de traduction, car souvent les nouveaux termes technologiques n'auront pas encore d'équivalents dans de nombreuses langues. Certains termes ont également des significations différentes dans différents contextes. [En savoir plus sur la traduction de la terminologie Ethereum](#terminology)
 
@@ -81,7 +81,7 @@ Le glossaire Crowdin est le meilleur endroit pour clarifier les termes et les d�
 
 ![Une capture d'écran montrant comment ajouter un terme au glossaire de Crowdin](./add-glossary-term.png)
 
-### Politique de traduction terminologique {#terminology}
+### Politique de traduction terminologique \{#terminology}
 
 _Pour les noms (marques, entreprises, personnes) et les nouveaux termes technologiques (chaîne phare, chaîne de fragments, etc.)_
 
@@ -100,13 +100,13 @@ Voici ce que nous suggérons lorsque vous trouvez un terme qui vous est inconnu 
 
 Nous vous recommandons de laisser les noms des marques, des entreprises et des personnes non traduits, car une traduction pourrait causer des confusions inutiles et des difficultés en matière de SEO.
 
-## Comment fonctionne le processus de révision ? {#review-process}
+## Comment fonctionne le processus de révision ? \{#review-process}
 
 Pour assurer un certain niveau de qualité et de cohérence dans nos traductions, nous travaillons avec [Acolad](https://www.acolad.com/), l'un des plus grands fournisseurs de services linguistiques au monde. Acolad compte 20 000 linguistes professionnels, ce qui signifie qu'ils peuvent fournir des réviseurs professionnels pour chaque langue et chaque type de contenu dont nous avons besoin.
 
 Le processus de révision est simple ; une fois qu'un certain [ensemble de contenu](/contributing/translation-program/content-buckets) est traduit à 100 %, nous commandons une révision pour cet ensemble de contenu. Le processus de révision se déroule directement dans Crowdin. Une fois la révision terminée, nous mettons à jour le site web avec le contenu traduit.
 
-## Comment ajouter du contenu dans ma langue ? {#adding-foreign-language-content}
+## Comment ajouter du contenu dans ma langue ? \{#adding-foreign-language-content}
 
 Actuellement, tout le contenu dans d'autres langues que l'anglais a été traduit directement à partir du contenu source anglais, et tout contenu qui n'existe pas en anglais ne peut être ajouté dans les autres langues.
 
@@ -114,6 +114,6 @@ Pour proposer du nouveau contenu pour ethereum.org, vous pouvez [créer un ticke
 
 Nous prévoyons de prendre en charge l'ajout de contenu dans d'autres langues que l'anglais dans un futur proche.
 
-## Nous contacter {#contact}
+## Nous contacter \{#contact}
 
 Je vous remercie d'avoir lu toutes ces informations. Nous espérons que cela vous aidera à participer à notre programme. N'hésitez pas à rejoindre notre [canal de traduction sur Discord](https://discord.gg/ethereum-org) afin de poser des questions et de travailler avec les autres traducteurs, ou à nous contacter à l'adresse translations@ethereum.org !

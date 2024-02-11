@@ -35,7 +35,7 @@ Setiap teknik memiliki keunggulan dan kelemahan, dan akan berguna dalam [kasus t
 
 **Manticore** melakukan analisis "bobot paling berat". Seperti Echidna, Manticore memverifikasi properti yang disediakan pengguna. Akan memakan lebih banyak waktu untuk dijalankan, tetapi dapat membuktikan validitas properti dan tidak akan melaporkan alarm palsu.
 
-## Alur kerja yang disarankan {#suggested-workflow}
+## Alur kerja yang disarankan \{#suggested-workflow}
 
 Mulai dengan detektor bawaan Slither untuk memastikan bahwa tidak ada bug sederhana yang muncul saat ini atau yang akan ditunjukkan nantinya. Gunakan Slither untuk memeriksa properti yang terkait dengan warisan, dependensi variabel, dan masalah struktur. Seiring dengan perkembangan basis kode, gunakan Echidna untuk menguji properti mesin state yang lebih kompleks. Kembali ke Slither untuk mengembangkan pemeriksaan kustom untuk mendapatkan perlindungan yang tidak tersedia di Solidity, seperti perlindungan terhadap fungsi yang diganti. Akhirnya, gunakan Manticore untuk melakukan verifikasi yang ditargetkan terhadap properti keamanan penting, misalnya operasi aritmatika.
 
@@ -46,7 +46,7 @@ Mulai dengan detektor bawaan Slither untuk memastikan bahwa tidak ada bug sederh
 
 **Sebuah catatan tentang tes unit**. Tes unit diperlukan untuk membangun perangkat lunak berkualitas tinggi. Namun, teknik ini bukan yang terbaik untuk menemukan celah keamanan. Teknik ini umumnya digunakan untuk menguji perilaku kode yang positif (maksudnya kodenya bekerja seperti yang diharapkan dalam kondisi normal), sedangkan celah keamanan cenderung ada di dalam kasus tepi yang tidak dipertimbangkan oleh para pengembang. Dalam penelitian kami terhadap lusinan ulasan keamanan kontrak pintar, [cakupan tes unit tidak berdampak apa pun terhadap jumlah atau tingkat keparahan celah keamanan](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/) yang kami temukan dalam kode klien kami.
 
-## Menentukan Properti Keamanan {#determining-security-properties}
+## Menentukan Properti Keamanan \{#determining-security-properties}
 
 Untuk menguji dan memverifikasi kode Anda dengan efektif, Anda harus mengidentifikasi area yang perlu diperhatikan. Karena sumber daya Anda yang digunakan untuk keamanan terbatas, membuat cakupan bagian yang bernilai tinggi atau rendah dari basis kode Anda menjadi penting untuk mengoptimalkan upaya Anda. Pemodelan dapat membantu. Pertimbangkan untuk mengulas:
 
@@ -57,7 +57,7 @@ Untuk menguji dan memverifikasi kode Anda dengan efektif, Anda harus mengidentif
 - [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
 - [Penggunaan Assertion](https://blog.regehr.org/archives/1091)
 
-### Komponen {#components}
+### Komponen \{#components}
 
 Mengetahui apa yang Anda ingin periksa akan menolong Anda memilih peralatan yang tepat.
 
@@ -86,7 +86,7 @@ Area luas yang sering kali relevan untuk kontrak pintar mencakup:
 - **Kesesuaian dengan standar.** Standar Ethereum (misalnya ERC20) memiliki riwayat ditemukannya celah dalam rancangannya. Ketahuilah batasan standar yang sedang Anda bangun.
   - Slither, Echidna, dan Manticore akan membantu Anda mendeteksi deviasi dari standar yang diberikan.
 
-### Lembar contekan pemilihan peralatan {#tool-selection-cheatsheet}
+### Lembar contekan pemilihan peralatan \{#tool-selection-cheatsheet}
 
 | Komponen            | Perangkat                   | Contoh                                                                                                                                                                                                                                                       |
 | ------------------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

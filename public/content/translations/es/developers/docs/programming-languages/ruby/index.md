@@ -9,7 +9,7 @@ incomplete: false
 
 Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprovechan las ventajas de las criptomonedas y la tecnología de blockchain. Estas dapps pueden ser trustless, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Controlan activos digitales para crear nuevos tipos de aplicaciones financieras. Estas aplicaciones pueden ser descentralizadas, es decir, ninguna entidad o persona las controla y, por lo tanto, son prácticamente imposibles de censurar.
 
-## Por dónde empezar con los contratos inteligentes y el lenguaje Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Por dónde empezar con los contratos inteligentes y el lenguaje Solidity \{#getting-started-with-smart-contracts-and-solidity}
 
 **Dé los primeros pasos para integrar Rust con Ethereum.**
 
@@ -20,7 +20,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Escribir el primer contrato inteligente](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Aprende a compilar e implementar Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Artículos para principiantes {#beginner-articles}
+## Artículos para principiantes \{#beginner-articles}
 
 - [Comprender finalmente las cuentas de Ethereum](https://dev.to/q9/finally-understanding-ethereum-accounts-1kpe)
 - [Autenticar finalmente usuarios de Rails con MetaMask](https://dev.to/q9/finally-authenticating-rails-users-with-metamask-3fj)
@@ -28,14 +28,14 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Cómo conectarse a la red Ethereum usando Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-connect-to-the-ethereum-network-using-ruby)
 - [Cómo generar una nueva dirección de Ethereum en Ruby](https://www.quicknode.com/guides/web3-sdks/how-to-generate-a-new-ethereum-address-in-ruby)
 
-## Artículos intermedios {#intermediate-articles}
+## Artículos intermedios \{#intermediate-articles}
 
 - [Aplicación de cadena de bloques con Ruby](https://www.nopio.com/blog/blockchain-app-ruby/)
 - [Use Ruby conectado a Ethereum, para ejecutar el contrato inteligente](https://titanwolf.org/Network/Articles/Article?AID=87285822-9b25-49d5-ba2a-7ad95fff7ef9)
 
-## Proyectos y herramientas de Rust {#ruby-projects-and-tools}
+## Proyectos y herramientas de Rust \{#ruby-projects-and-tools}
 
-### Activos {#active}
+### Activos \{#active}
 
 - [eth.rb](https://github.com/q9f/eth.rb): _Biblioteca de Ruby y cliente RPC para manejar cuentas de Ethereum, mensajes y transacciones_
 - [keccak.rb](https://github.com/q9f/keccak.rb): _El hash Keccak (SHA3) usado por Ethereum_
@@ -46,7 +46,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [omniauth-mft:](https://github.com/valthon/omniauth-nft) _Estrategia de OmniAuth para la autenticación mediante propiedad de NFT_
 - [ethereum-on-rails](https://github.com/q9f/ethereum-on-rails): _Plantilla de Ethereum en Rails que permite conectar MetaMask con Ruby en Rails_
 
-### Archivados / Ya no mantenidos {#archived--no-longer-maintained}
+### Archivados / Ya no mantenidos \{#archived--no-longer-maintained}
 
 - [web3-eth](https://github.com/spikewilliams/vtada-ethereum): _Llamar métodos RPC de nodos de Ethereum con Ruby_
 - [ethereum_tree](https://github.com/longhoangwkm/ethereum_tree): _Biblioteca de Ruby para generar direcciones ETH desde una billetera con determinismo jerárquico según el estándar BIP32_
@@ -56,6 +56,6 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 
 ¿Buscas más recursos? Revise [la página de inicio para desarrolladores](/developers/).
 
-## Colaboradores de la comunidad de Rust {#ruby-community-contributors}
+## Colaboradores de la comunidad de Rust \{#ruby-community-contributors}
 
 El [grupo de Telegram de Ruby para Ethereum](https://t.me/ruby_eth) es el anfitrión de una comunidad en rápido crecimiento y el recurso dedicado a debates sobre cualquiera de los proyectos anteriores y temas relacionados.

@@ -43,7 +43,7 @@ interface IERC20 {
 
 Berikut adalah penjelasan baris per baris dari peran setiap fungsi. Setelah ini, kita akan mempresentasikan implementasi sederhana dari token ERC-20.
 
-## Getter {#getters}
+## Getter \{#getters}
 
 ```solidity
 function totalSupply() external view returns (uint256);
@@ -63,7 +63,7 @@ function allowance(address owner, address spender) external view returns (uint25
 
 Standar ERC-20 memungkinkan alamat memberi izin ke alamat lain agar bisa mengambil token darinya. Pemanggil ini mengembalikan jumlah token tersisa yang akan dizinkan untuk dipakai oleh `spender` atas nama `owner`. Fungsi ini adalah pemanggil dan tidak memodifikasi state kontrak dan akan mengembalikan 0 secara default.
 
-## Fungsi {#functions}
+## Fungsi \{#functions}
 
 ```solidity
 function transfer(address recipient, uint256 amount) external returns (bool);
@@ -83,7 +83,7 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 
 Memindahkan `amount` token dari `sender` ke `recipient` menggunakan mekanisme allowance. jumlah kemudian dikurangi dari allowance pemanggil. Fungsi ini memancarkan aksi `Transfer`.
 
-## Aksi {#events}
+## Aksi \{#events}
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
@@ -99,7 +99,7 @@ event Approval(address indexed owner, address indexed spender, uint256 value);
 
 Aksi ini dipancarkan saat jumlah token (`value`) disetujui oleh `owner` untuk digunakan oleh `spender`.
 
-## Implementasi sederhana token ERC-20 {#a-basic-implementation-of-erc-20-tokens}
+## Implementasi sederhana token ERC-20 \{#a-basic-implementation-of-erc-20-tokens}
 
 Berikut adalah kode paling sederhana sebagai dasar token ERC-20 Anda:
 

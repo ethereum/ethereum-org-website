@@ -15,11 +15,11 @@ A tapasztaltabb fejlesztők kipróbálhatják a Yul nyelvet, mely egy haladó ny
 
 Amennyiben Ön kíváncsi típus, és szeret olyan új nyelvek tesztelésében segíteni, amelyek még komoly fejlesztés előtt állnak, akkor fedezze fel a Fe-t, egy kialakulóban lévő okosszerződésnyelvet, amely még gyerekcipőben jár.
 
-## Előfeltételek {#prerequisites}
+## Előfeltételek \{#prerequisites}
 
 A programozási nyelvek, különösen a JavaScript vagy a Python korábbi ismerete segíthet az okosszerződés nyelvekben mutatkozó különbségek értelmezésében. Javasoljuk, hogy először értse meg az okosszerződést, mint koncepciót, mielőtt túl mélyre ásna a nyelvi összehasonlításokban. [Bevezetés az okosszerződésekbe](/developers/docs/smart-contracts/).
 
-## Solidity {#solidity}
+## Solidity \{#solidity}
 
 - Objektumorientált, magas szintű nyelv az okosszerződések telepítésére.
 - Kerek zárójeles nyelv, amelyet a leginkább a C++ befolyásolt.
@@ -29,7 +29,7 @@ A programozási nyelvek, különösen a JavaScript vagy a Python korábbi ismere
   - Könyvtárak (újrafelhasználható kódot írhat, melyet meghívhat különböző szerződésekből – mint a statikus függvényeket statikus osztályokban más objektumorientált programozási nyelveken).
   - Komplex, felhasználó által definiált típusok.
 
-### Fontos linkek {#important-links}
+### Fontos linkek \{#important-links}
 
 - [Dokumentáció](https://docs.soliditylang.org/en/latest/)
 - [Solidity Nyelvportál](https://soliditylang.org/)
@@ -40,7 +40,7 @@ A programozási nyelvek, különösen a JavaScript vagy a Python korábbi ismere
 - [Solidity Blog](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
 
-### Példaszerződés {#example-contract}
+### Példaszerződés \{#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -83,7 +83,7 @@ contract Coin {
 
 Ez a példa azt mutathatja meg Önnek, hogyan néz ki a Solidity szerződés szintaxisa. A függvények és a változók részletesebb leírásáért [tekintse meg a dokumentációt](https://docs.soliditylang.org/en/latest/contracts.html).
 
-## Vyper {#vyper}
+## Vyper \{#vyper}
 
 - Pythonikus programozási nyelv
 - Erősen típusos
@@ -101,7 +101,7 @@ Ez a példa azt mutathatja meg Önnek, hogyan néz ki a Solidity szerződés szi
 
 További információkért [tekintse meg a Vyper magyarázatát](https://vyper.readthedocs.io/en/latest/index.html).
 
-### Fontos linkek {#important-links-1}
+### Fontos linkek \{#important-links-1}
 
 - [Dokumentáció](https://vyper.readthedocs.io)
 - [Vyper példa alapján](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
@@ -116,7 +116,7 @@ További információkért [tekintse meg a Vyper magyarázatát](https://vyper.r
 - [Példák a Vyper legjobb okosszerződéseire](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [A Vyper által gondozott kiváló források](https://github.com/spadebuilders/awesome-vyper)
 
-### Példa {#example}
+### Példa \{#example}
 
 ```python
 # Nyílt Aukció
@@ -205,7 +205,7 @@ def endAuction():
 
 Ez a példa megmutathatja Önnek, hogyan néz ki a Vyper szerződés szintaxisa. A függvények és a változók részletesebb leírásáért [tekintse meg a dokumentációt](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
-## Yul és Yul+ {#yul}
+## Yul és Yul+ \{#yul}
 
 Ha Önnek új az Ethereum és nem programozott okosszerződésnyelveken, akkor azt javasoljuk, hogy kezdjen először a Solidity-vel és a Vyperrel. Csak akkor kezdjen bele a Yul vagy Yul+ nyelvekbe, ha már ismeri az okosszerződésre vonatkozó biztonsági gyakorlatokat és az EVM-mel kapcsolatos munka részleteit.
 
@@ -221,14 +221,14 @@ Ha Önnek új az Ethereum és nem programozott okosszerződésnyelveken, akkor a
 - Eredetileg az [optimista összesítéses](/developers/docs/scaling/optimistic-rollups/) szerződésként fejlesztették ki.
 - A Yul+ egy kísérleti fejlesztési javaslatként is tekinthető, melyhez új funkciók tartoznak.
 
-### Fontos linkek {#important-links-2}
+### Fontos linkek \{#important-links-2}
 
 - [Yul Dokumentáció](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ Dokumentáció](https://github.com/fuellabs/yulp)
 - [Yul+ Játszótér](https://yulp.fuel.sh/)
 - [Yul+ Bevezető poszt](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### Példa szerződés {#example-contract-2}
+### Példa szerződés \{#example-contract-2}
 
 Az alábbi egyszerű példa egy hatványfüggvényt implementál. A `solc --strict-assembly --bin input.yul` használatával lehet befordítani. Ezt a példát az input.yul fájlnak kell tartalmaznia.
 
@@ -253,14 +253,14 @@ Az alábbi egyszerű példa egy hatványfüggvényt implementál. A `solc --stri
 
 Ha már nagy tapasztalatra tett szert az okosszerződésekkel kapcsolatban, akkor a teljes ERC20 implementáció Yul-ban [itt érhető el](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
-## Fe {#fe}
+## Fe \{#fe}
 
 - Statikusan típusos nyelv az Ethereum virtuális géphez (EVM).
 - A Python és a Rust inspirálta.
 - Lényege, hogy könnyen tanulható, még azoknak a fejlesztőknek is, akiknek új az Ethereum ökoszisztémája.
 - A Fe fejlesztése még nagyon korai szakaszban tart, az alfa kiadása 2021. januárban történt.
 
-### Fontos linkek {#important-links-3}
+### Fontos linkek \{#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
 - [Fe bejelentés](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
@@ -268,7 +268,7 @@ Ha már nagy tapasztalatra tett szert az okosszerződésekkel kapcsolatban, akko
 - [Fe Discord-csevegés](https://discord.com/invite/ywpkAXFjZH)
 - [Fe Twitter](https://twitter.com/official_fe)
 
-### Példa szerződés {#example-contract-3}
+### Példa szerződés \{#example-contract-3}
 
 Ez a példa egy egyszerű szerződés Fe nyelven telepítve.
 
@@ -291,34 +291,34 @@ contract GuestBook:
 
 ```
 
-## Hogyan válasszunk {#how-to-choose}
+## Hogyan válasszunk \{#how-to-choose}
 
 Mint minden más programozási nyelvnél, itt is leginkább a megfelelő eszköz kiválasztása a megfelelő munkához, valamint a személyes preferenciák döntenek.
 
 Íme néhány szempont, amelyet érdemes figyelembe venni, ha még nem próbálta egyik nyelvet sem:
 
-### Mi a jó a Solidity-ben? {#solidity-advantages}
+### Mi a jó a Solidity-ben? \{#solidity-advantages}
 
 - A kezdőknek sok útmutató és tanulási anyag áll rendelkezésükre. További anyagért látogasson el a [Tanulás kódolással](/developers/learning-tools/) című részhez.
 - Remek fejlesztői eszközök érhetők el.
 - A Solidity-nek kiterjedt a fejlesztői közössége, ami azt jelenti, hogy nagy valószínűséggel gyorsan választ kap a kérdéseire.
 
-### Mi a jó a Vyperben? {#vyper-advatages}
+### Mi a jó a Vyperben? \{#vyper-advatages}
 
 - Nagyszerű módszer a Python fejlesztők számára az első okosszerződések megírására.
 - A Vyper kevesebb funkcióval rendelkezik, így kiválóan alkalmas arra, hogy az ötleteiből gyorsan prototípust készítsen.
 - A Vyper célja, hogy könnyen auditálható és az emberek számára olvasható legyen.
 
-### Mi a jó a Yul és a Yul+ nyelvekben? {#yul-advantages}
+### Mi a jó a Yul és a Yul+ nyelvekben? \{#yul-advantages}
 
 - Egyszerűsített és funkcionális alacsony szintű nyelv.
 - Közelebb enged a nyers EVM-hez, így Ön könnyebben tudja a szerződések gázfelhasználását optimalizálni.
 
-## Nyelv-összehasonlítások {#language-comparisons}
+## Nyelv-összehasonlítások \{#language-comparisons}
 
 Az alapvető szintaxis, szerződés-életciklus, interfészek, operátorok, adatszerkezetek, függvények, control flow és további szempontok alapján történő összehasonlításért olvassa el a [Puska az Auditless-től](https://reference.auditless.com/cheatsheet/) című cikket
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Solidity szerződéskönyvtár az OpenZeppelintől](https://docs.openzeppelin.com/contracts)
 - [Solidity egy példa alapján](https://solidity-by-example.org)

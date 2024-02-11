@@ -5,16 +5,16 @@ lang: zh
 incomplete: true
 ---
 
-## 介绍 {#introduction}
+## 介绍 \{#introduction}
 
 许多以太坊开发标准都集中在代币接口上。 这些标准有助于确保智能合约仍然可以被撰写，例如，当新项目签发代币时，它与现有分散化的交易是兼容的。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 - [以太坊开发标准](/developers/docs/standards/)
 - [智能合约](/developers/docs/smart-contracts/)
 
-## 代币标准 {#token-standards}
+## 代币标准 \{#token-standards}
 
 以下是以太坊上最受欢迎的一些代币标准：
 
@@ -24,11 +24,11 @@ incomplete: true
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155 允许更有效的交易和打包交易，从而节省燃料成本。 此代币标准允许创建实用代币（例如 $BNB 或 $BAT）和加密朋克之类的非同质化代币。
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - 一个代币化的资金库标准，旨在优化和统一收益资金库的技术参数。
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
-## 相关教程 {#related-tutorials}
+## 相关教程 \{#related-tutorials}
 
 - [代币集成清单](/developers/tutorials/token-integration-checklist/) _- 与代币互动时要考虑的事项清单。_
 - [了解 ERC20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _— — 介绍如何在以太坊测试网络上部署您的第一个智能合约。_

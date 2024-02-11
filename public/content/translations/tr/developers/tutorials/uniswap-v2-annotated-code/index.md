@@ -9,11 +9,11 @@ published: 2021-05-01
 lang: tr
 ---
 
-## Giriş {#introduction}
+## Giriş \{#introduction}
 
 [Uniswap v2](https://uniswap.org/whitepaper.pdf) herhangi iki ERC-20 token'ı arasında bir takas piyasası oluşturabilir. Bu yazıda bu protokolü uygulayan sözleşmelerin kaynak kodunu inceleyecek ve neden bu şekilde yazıldığını göreceğiz.
 
-### Uniswap ne yapar? {#what-does-uniswap-do}
+### Uniswap ne yapar? \{#what-does-uniswap-do}
 
 Temel olarak iki tür kullanıcı vardır: likidite sağlayıcıları ve ticaret yapanlar.
 
@@ -25,15 +25,15 @@ Likidite sağlayıcıları varlıklarını geri istediklerinde havuz jetonların
 
 [Daha geniş çaplı bir açıklama için buraya tıklayın](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
-### Neden v2? Neden v3 değil? {#why-v2}
+### Neden v2? Neden v3 değil? \{#why-v2}
 
 [Uniswap v3](https://uniswap.org/whitepaper-v3.pdf), v2'den çok daha karmaşık bir yükseltmedir. Önce v2'yi öğrenip ardından v3'e geçmek daha kolaydır.
 
-### Çekirdek Sözleşmeler ve Çevre Sözleşmeler {#contract-types}
+### Çekirdek Sözleşmeler ve Çevre Sözleşmeler \{#contract-types}
 
 Uniswap v2, çekirdek ve çevre olmak üzere iki bileşene ayrılmıştır. Bu ayrım, varlıkları elinde tutan ve bu nedenle güvenli olmak _zorunda_ olan çekirdek sözleşmelerin daha basit ve denetlenmesi daha kolay olmasını sağlar. Ticaret yapanların ihtiyaç duyduğu tüm ekstra işlevsellik daha sonra çevre sözleşmeleriyle sağlanabilir.
 
-## Veri ve Kontrol Akışları {#flows}
+## Veri ve Kontrol Akışları \{#flows}
 
 Bu, Uniswap'ın üç ana eylemini gerçekleştirdiğinizde gerçekleşen veri ve kontrol akışıdır:
 
@@ -41,72 +41,72 @@ Bu, Uniswap'ın üç ana eylemini gerçekleştirdiğinizde gerçekleşen veri ve
 2. Piyasaya likidite katın ve eş takası ERC-20 likidite token'ları ile ödüllendirin
 3. ERC-20 likidite token'larını yakın ve eş takasının, ticaret yapan kişilerin takas yapmasını sağlayan ERC-20 token'larını geri alın
 
-### Takas {#swap-flow}
+### Takas \{#swap-flow}
 
 Bu, ticaret yapanlar tarafından kullanılan en yaygın akıştır:
 
-#### Çağıran {#caller}
+#### Çağıran \{#caller}
 
 1. Çevre hesabına takas edilecek tutarda bir ödenek sağlayın.
 2. Çevre sözleşmesinin birçok takas fonksiyonundan birini çağırın (hangisini çağıracağınız, ETH'nin dahil olup olmadığına; tüccarın yatırılacak token miktarını veya geri alınacak token miktarını belirleyip belirlemediğine vb. bağlıdır). Her takas fonksiyonu, geçmesi gereken bir dizi takas olan bir `path` kabul eder.
 
-#### Çevre sözleşmesinde (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
+#### Çevre sözleşmesinde (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02-sol}
 
 3. Yol boyunca her takasta işlem görmesi gereken miktarları belirleyin.
 4. Yol üzerinde tekrarlar. Yol boyunca her takas için giriş token'ını gönderir ve ardından takasın `swap` fonksiyonunu çağırır. Çoğu durumda token'lar için hedef adres, yoldaki bir sonraki eş takasıdır. Son takasta, ticaret yapan kişi tarafından sağlanan adrestir.
 
-#### Çekirdek sözleşmede (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### Çekirdek sözleşmede (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-2}
 
 5. Çekirdek sözleşmenin dolandırılmadığını ve takastan sonra yeterli likiditeyi koruyabildiğini doğrulayın.
 6. Bilinen rezervlere ek olarak kaç tane ekstra token'ımız olduğunu görün. Bu miktar, takas etmek için aldığımız giriş token'larının sayısıdır.
 7. Çıktı token'larını hedefe gönderin.
 8. Rezerv tutarlarını güncellemek için `_update` komutunu çağırın
 
-#### Çevre sözleşmesine geri dönün (UniswapV2Router02.sol) {#back-in-the-periphery-contract-uniswapv2router02-sol}
+#### Çevre sözleşmesine geri dönün (UniswapV2Router02.sol) \{#back-in-the-periphery-contract-uniswapv2router02-sol}
 
 9. Gerekli temizleme işlemlerini gerçekleştirin (örneğin, ticaret yapana göndermek için ETH'yi geri almak amacıyla WETH token'larını yakın)
 
-### Likidite Ekleyin {#add-liquidity-flow}
+### Likidite Ekleyin \{#add-liquidity-flow}
 
-#### Çağıran {#caller-2}
+#### Çağıran \{#caller-2}
 
 1. Likidite havuzuna eklenecek tutarlarda çevre hesabına bir ödenek sağlayın.
 2. Çevre sözleşmesinin `addLiquidity` fonksiyonlarından birini çağırın.
 
-#### Çevre sözleşmesinde (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
+#### Çevre sözleşmesinde (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02sol-2}
 
 3. Gerekirse yeni bir eş takası oluşturun
 4. Mevcut bir eş takası varsa, eklenecek jeton miktarını hesaplayın. Yeni jetonların mevcut jetonlara oranının aynı olması için bunun her iki jeton için aynı değer olması gerekir.
 5. Tutarların kabul edilebilir olup olmadığını kontrol edin (çağıranlar, altında likidite eklemek istemeyecekleri bir minimum tutar belirtebilir)
 6. Çekirdek sözleşmeyi çağırın.
 
-#### Çekirdek sözleşmede (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### Çekirdek sözleşmede (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-2}
 
 7. Likidite token'larını basın ve çağırana gönderin
 8. Rezerv tutarlarını güncellemek için `_update`'i çağırın
 
-### Likiditeyi Kaldır {#remove-liquidity-flow}
+### Likiditeyi Kaldır \{#remove-liquidity-flow}
 
-#### Çağıran {#caller-3}
+#### Çağıran \{#caller-3}
 
 1. Çevre hesabına, temeldeki token'lar karşılığında yakılacak likidite token'ı ödeneği sağlayın.
 2. Çevre sözleşmesinin `removeLiquidity` fonksiyonlarından birini çağırın.
 
-#### Çevre sözleşmesinde (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
+#### Çevre sözleşmesinde (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02sol-3}
 
 3. Likidite token'larını eş takasına gönderin
 
-#### Çekirdek sözleşmede (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
+#### Çekirdek sözleşmede (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-3}
 
 4. Temeldeki jetonları hedef adrese yakılmış jetonlarla orantılı olarak gönderin. Örneğin, havuzda 1000 A token'ı, 500 B token'ı ve 90 likidite token'ı varsa ve yakmak için 9 token alırsak, likidite token'ının %10'unu yakıyoruz, böylece kullanıcıya 100 A token'ı ve 50 B token'ı geri gönderiyoruz.
 5. Likidite jetonlarını yakın
 6. Rezerv tutarlarını güncellemek için `_update`'i çağırın
 
-## Çekirdek Sözleşmeler {#core-contracts}
+## Çekirdek Sözleşmeler \{#core-contracts}
 
 Bunlar likiditeyi tutan güvenli sözleşmelerdir.
 
-### UniswapV2Pair.sol {#UniswapV2Pair}
+### UniswapV2Pair.sol \{#UniswapV2Pair}
 
 [Bu sözleşme](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol), jetonları takas eden asıl havuzu uygular. Temel Uniswap fonksiyonudur.
 
@@ -144,7 +144,7 @@ Havuz sözleşmesindeki birçok hesaplama kesir gerektirir. Ancak, kesirler EVM 
 
 Bu kütüphane hakkında daha fazla ayrıntı [belgenin ilerleyen bölümlerinde](#FixedPoint) bulunabilir.
 
-#### Değişkenler {#pair-vars}
+#### Değişkenler \{#pair-vars}
 
 ```solidity
     uint public constant MINIMUM_LIQUIDITY = 10**3;
@@ -212,7 +212,7 @@ Eş takasının jeton0 ile jeton1 arasındaki takas oranına karar verme yöntem
 
 Ticaret yapanlar daha fazla token0 sağladıkça, arz ve talebe bağlı olarak token1'in göreceli değeri artar ve bunun tersi de aynı şekilde işler.
 
-#### Kilitleme {#pair-lock}
+#### Kilitleme \{#pair-lock}
 
 ```solidity
     uint private unlocked = 1;
@@ -246,7 +246,7 @@ Bir niteleyicide `_;` orijinal fonksiyon çağrısıdır (tüm parametrelerle bi
 
 Ana fonksiyon geri döndükten sonra kilidi açın.
 
-#### Diğer fonksiyonlar {#pair-misc}
+#### Diğer fonksiyonlar \{#pair-misc}
 
 ```solidity
     function getReserves() public view returns (uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast) {
@@ -279,7 +279,7 @@ Bir ERC-20 transfer çağrısının başarısızlığı bildirebilmesinin iki yo
 
 Bu koşullardan herhangi biri gerçekleşirse, geri döndürün.
 
-#### Olaylar {#pair-events}
+#### Olaylar \{#pair-events}
 
 ```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
@@ -307,7 +307,7 @@ Bu olay, ticaret yapan kişi bir token'ı diğeriyle takas ettiğinde ortaya ç�
 
 Son olarak, nedenden bağımsız olarak en son rezerv bilgilerini (ve dolayısıyla takas oranını) sağlamak için jetonlar her eklendiğinde veya çekildiğinde `Sync` gönderilir.
 
-#### Kurulum Fonksiyonları {#pair-setup}
+#### Kurulum Fonksiyonları \{#pair-setup}
 
 Bu fonksiyonların, yeni eş takası kurulduğunda bir kez çağrılması gerekiyor.
 
@@ -330,7 +330,7 @@ Yapıcı, eşleri oluşturan fabrikanın adresini takip etmemizi sağlar. Bu bil
 
 Bu fonksiyon, fabrikanın (sadece ama sadece fabrikanın) bu eşin takas edeceği iki ERC-20 token'ını belirtmesine olanak tanır.
 
-#### Dahili Güncelleme Fonksiyonları {#pair-update-internal}
+#### Dahili Güncelleme Fonksiyonları \{#pair-update-internal}
 
 ##### \_update
 
@@ -451,7 +451,7 @@ Ek likidite token'larını gerçekten oluşturmak ve bunları `feeTo` öğesine 
 
 Herhangi bir ücret yoksa `kLast` öğesini sıfıra ayarlayın (zaten değilse). Bu sözleşme yazıldığında, sözleşmeleri ihtiyaç duymadıkları depolama alanını sıfırlayarak Ethereum durumunun genel boyutunu küçültmeye teşvik eden bir [gaz iadesi özelliği](https://eips.ethereum.org/EIPS/eip-3298) bulunuyordu. Bu kod, mümkün olduğunda o iadeyi alır.
 
-#### Harici Erişilebilir Fonksiyonlar {#pair-external}
+#### Harici Erişilebilir Fonksiyonlar \{#pair-external}
 
 Herhangi bir işlem veya sözleşme bu fonksiyonları _çağırabilir_, ancak bunların çevre sözleşmesinden çağrılacak şekilde tasarlandığını unutmayın. Onları doğrudan çağırırsanız eş takasında hile yapamazsınız ancak bir hata nedeniyle değer kaybedebilirsiniz.
 
@@ -680,7 +680,7 @@ Bu durumda iki çözüm var:
 }
 ```
 
-### UniswapV2Factory.sol {#UniswapV2Factory}
+### UniswapV2Factory.sol \{#UniswapV2Factory}
 
 [Bu sözleşme](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) eş takaslarını oluşturur.
 
@@ -798,7 +798,7 @@ Yeni çift bilgisini durum değişkenlerine kaydedin ve yeni eş takasını dün
 
 Bu iki fonksiyon `feeSetter` öğesinin ücret alıcısını (varsa) kontrol etmesine ve `feeSetter` öğesini yeni bir adresle değiştirmesine olanak tanır.
 
-### UniswapV2ERC20.sol {#UniswapV2ERC20}
+### UniswapV2ERC20.sol \{#UniswapV2ERC20}
 
 [Bu sözleşme](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol), ERC-20 likidite jetonunu uygular. Bu sözleşme [OpenZeppelin ERC-20 sözleşmesine](/developers/tutorials/erc20-annotated-code) benzer, bu yüzden sadece `permit` işlevselliği olan farklı kısmı açıklayacağım.
 
@@ -884,15 +884,15 @@ Ethereum imza algoritması, imzalamak için 256 bit almayı bekler, bu nedenle `
 
 Her şey tamamsa bunu bir [ERC-20 onayı](https://eips.ethereum.org/EIPS/eip-20#approve) olarak görün.
 
-## Çevre Sözleşmeleri {#periphery-contracts}
+## Çevre Sözleşmeleri \{#periphery-contracts}
 
 Çevre sözleşmeler, Uniswap için API'dir (uygulama programı arayüzü). Diğer sözleşmelerden veya merkeziyetsiz uygulamalardan harici çağrılar için kullanılabilirler. Çekirdek sözleşmeleri doğrudan çağırabilirsiniz ancak bu daha karmaşıktır ve bir hata yaparsanız değer kaybedebilirsiniz. Çekirdek sözleşmeler, başkaları için doğruluk testi yapmaya değil yalnızca bu kişilerin aldatılmadıklarından emin olmaya yönelik testler içerir. Bunlar, gerektiğinde güncellenebilmeleri için çevrededir.
 
-### UniswapV2Router01.sol {#UniswapV2Router01}
+### UniswapV2Router01.sol \{#UniswapV2Router01}
 
 [Bu sözleşmenin](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) sorunları vardır ve [artık kullanılmamalıdır](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Neyse ki çevre sözleşmeleri durumsuz olduğu ve herhangi bir varlık tutmadıkları için onları kullanımdan kaldırmak ve insanlara bunun yerine `UniswapV2Router02` kullanmayı önermek kolaydır.
 
-### UniswapV2Router02.sol {#UniswapV2Router02}
+### UniswapV2Router02.sol \{#UniswapV2Router02}
 
 Çoğu durumda Uniswap'i [bu sözleşme](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol) aracılığıyla kullanırsınız. Nasıl kullanacağınızı [burada](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02) görebilirsiniz.
 
@@ -947,7 +947,7 @@ Yapıcı sadece değişmez durum değişkenlerini ayarlar.
 
 Bu fonksiyon, WETH sözleşmesinden token'ları tekrar ETH'ye döndürdüğümüzde çağrılır. Sadece kullandığımız WETH sözleşmesi bunu yapmak için yetkilidir.
 
-#### Likidite Ekleyin {#add-liquidity}
+#### Likidite Ekleyin \{#add-liquidity}
 
 Bu fonksiyonlar, likidite havuzunu artıran eş takasına token'lar ekler.
 
@@ -1131,7 +1131,7 @@ ETH'yi yatırmak için sözleşme önce onu WETH olarak paketler ve ardından WE
 
 Kullanıcı bize ETH'yi zaten gönderdi, bu nedenle fazladan kalan varsa (çünkü diğer jeton kullanıcının düşündüğünden daha az değerlidir), bir geri ödeme yapmamız gerekir.
 
-#### Likiditeyi Kaldırın {#remove-liquidity}
+#### Likiditeyi Kaldırın \{#remove-liquidity}
 
 Bu işlevler likiditeyi ortadan kaldıracak ve likidite sağlayıcısına geri ödeme yapacaktır.
 
@@ -1292,7 +1292,7 @@ Bu fonksiyon, transfer veya depolama ücreti olan token'lar için kullanılabili
 
 Son fonksiyon, depolama ücretlerini meta işlemlerle birleştirir.
 
-#### Ticaret {#trade}
+#### Ticaret \{#trade}
 
 ```solidity
     // **** SWAP ****
@@ -1650,15 +1650,15 @@ Bunlar, normal token'lar için kullanılanlarla aynı varyantlardır, ancak bunu
 
 Bu fonksiyonlar yalnızca [UniswapV2Library fonksiyonlarını çağıran proxy'lerdir](#uniswapV2library).
 
-### UniswapV2Migrator.sol {#UniswapV2Migrator}
+### UniswapV2Migrator.sol \{#UniswapV2Migrator}
 
 Bu sözleşme, borsaları eski v1'den v2'ye taşımak için kullanıldı. Artık taşındıklarına için geçerli değildir.
 
-## Kütüphaneler {#libraries}
+## Kütüphaneler \{#libraries}
 
 [SafeMath kütüphanesi](https://docs.openzeppelin.com/contracts/2.x/api/math) iyi belgelenmiştir, dolayısıyla burada belgelemeye gerek yoktur.
 
-### Math {#Math}
+### Math \{#Math}
 
 Bu kütüphane, normalde Solidity kodunda ihtiyaç duyulmayan bazı matematik fonksiyonlarını içerir, dolayısıyla bunlar dilin bir parçası değildir.
 
@@ -1703,7 +1703,7 @@ Sıfırın kareköküne asla ihtiyacımız olmamalı. Bir, iki ve üçün karek�
 }
 ```
 
-### Sabit Nokta Kesirleri (UQ112x112) {#FixedPoint}
+### Sabit Nokta Kesirleri (UQ112x112) \{#FixedPoint}
 
 Bu kütüphane normalde Ethereum aritmetiğinin parçası olmayan kesirleri işler. Bunu, _x_ sayısını _x\*2^112_ olarak kodlayarak yapar. Bu, orijinal toplama ve çıkarma işlem kodlarını değişiklik yapmadan kullanmamızı sağlar.
 
@@ -1740,7 +1740,7 @@ Y `uint112` olduğundan, en fazla 2^112-1 olabilir. Bu sayı hâlâ `UQ112x112` 
 
 Eğer iki `UQ112x112` değerini bölersek, sonuç artık 2^112 tarafından çarpılmaz. Bunun yerine payda için bir tam sayı alıyoruz. Çarpma yapmak için benzer bir hile kullanmamız gerekirdi, ancak `UQ112x112` değerlerinin çarpımını yapmamıza gerek yoktur.
 
-### UniswapV2Library {#uniswapV2library}
+### UniswapV2Library \{#uniswapV2library}
 
 Bu kütüphane yalnızca çevre sözleşmeleri tarafından kullanılır
 
@@ -1862,7 +1862,7 @@ Bu fonksiyon kabaca aynı şeyi yapar ancak çıktı miktarını alır ve girdi 
 
 Bu iki fonksiyon, birkaç eş takasından geçmek gerektiğinde değerleri tanımlamayı sağlar.
 
-### Transfer Yardımcısı {#transfer-helper}
+### Transfer Yardımcısı \{#transfer-helper}
 
 [Bu kütüphane](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol), ERC-20 ve Ethereum transfer işlemleri ile ilgili başarı kontrolleri ekleyerek bir geri alım ile `yanlış` değer dönüşünün aynı şekilde işlenmesini sağlar.
 
@@ -1947,7 +1947,7 @@ Bu fonksiyon, [ERC-20'nin transferFrom işlevselliğini](https://eips.ethereum.o
 
 Bu fonksiyon, ether'ı bir hesaba aktarır. Farklı bir sözleşmeye yapılan herhangi bir çağrı, ether göndermeyi deneyebilir. Aslında herhangi bir fonksiyonu çağırmamız gerekmediğinden, çağrıyla birlikte herhangi bir veri göndermeyiz.
 
-## Sonuç {#conclusion}
+## Sonuç \{#conclusion}
 
 Bu yaklaşık 50 sayfalık uzun bir makaledir. Buraya kadar varabildiyseniz tebrikler! Umuyoruz ki şimdiye kadar gerçek hayatta bir uygulama yazarken (kısa örnek programların aksine) dikkate alınması gereken hususları kavramış ve kendi kullanım alanlarınız için sözleşmeler yazabilme konusunda daha iyi durumdasınızdır.
 

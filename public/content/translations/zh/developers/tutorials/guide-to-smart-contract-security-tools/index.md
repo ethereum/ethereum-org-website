@@ -35,7 +35,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 **Manticore** 进行的是“最大权重”分析。 像 Echidna 一样，Manticore 会验证用户提供的特性。 它需要更多的时间来运行，但它可以证明某个特性的有效性，并且不会报告误报。
 
-## 推荐工作流程 {#suggested-workflow}
+## 推荐工作流程 \{#suggested-workflow}
 
 从 Slither 的内置检测器开始，确保现在没有或以后不会引入简单的漏洞。 使用 Slither 检查与继承、变量依赖关系和结构问题相关的属性。 随着代码库的增大，可以使用 Echidna 来测试状态机更复杂的特性。 再次使用 Slither 开发专门用于那些 Solidity 不提供保护的自定义检查，比如防止某个函数被覆盖。 最后，使用 Manticore 对关键安全属性进行有针对性的验证，例如算术运算。
 
@@ -46,7 +46,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 **关于单元测试的说明**。 单元测试是构建高质量软件的必要条件。 然而，要找出安全漏洞，这些技术并不是最合适的。 它们通常用来测试正向代码行为（例如：代码在正常情况下按预期工作）， 但安全漏洞往往存在于开发者未考虑的边缘情况。 在我们进行的数十次智能合约安全测试研究中，[单元测试覆盖率对于我们在客户端的代码中发现的安全漏洞的数量或者严重程度没有影响](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/)。
 
-## 确定安全属性 {#determining-security-properties}
+## 确定安全属性 \{#determining-security-properties}
 
 为了有效测试和验证代码，您必须确定需要注意的地方。 因为花费在安全上的资源是有限的，只有划分出代码库中的薄弱和高价值部分，才能优化您的工作。 威胁建模可以提供帮助。 供考虑的审核方法有：
 
@@ -57,7 +57,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 - [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
 - [使用断言](https://blog.regehr.org/archives/1091)
 
-### 组件 {#components}
+### 组件 \{#components}
 
 了解要检查的内容也有助于选择正确的工具。
 
@@ -86,7 +86,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 - **标准一致性**。 以太坊标准（例如 ERC20）记录了他们在设计上的缺陷。 请注意您正在构建的标准的局限性。
   - Slither、Echidna 和 Manticore 可以帮助您发现偏离特定标准的情况。
 
-### 工具选择备忘清单 {#tool-selection-cheatsheet}
+### 工具选择备忘清单 \{#tool-selection-cheatsheet}
 
 | 组件         | 工具                        | 示例                                                                                                                                                                                                                                                   |
 | ------------ | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |

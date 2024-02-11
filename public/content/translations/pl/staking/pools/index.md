@@ -13,13 +13,13 @@ summaryPoints:
   - Przechowuj tokeny stakingu we własnym portfelu
 ---
 
-## Czym jest stakowanie w puli? {#what-are-staking-pools}
+## Czym jest stakowanie w puli? \{#what-are-staking-pools}
 
 Stakowanie w puli to podejście oparte na współpracy, które pozwala wielu osobom posiadającym mniejsze ilości ETH uzyskać 32 ETH wymagane do aktywacji zestawu kluczy walidatora. Funkcja poolingu (w puli) nie jest natywnie obsługiwana w ramach protokołu, więc rozwiązania zostały stworzone osobno, aby zaspokoić tę potrzebę.
 
 Niektóre pule działają w oparciu o inteligentne kontrakty, w których środki można zdeponować do kontraktu, który bez zaufania zarządza i śledzi udziały użytkownika oraz wydaje token reprezentujący tę wartość. Inne pule mogą nie obejmować inteligentnych kontraktów i zamiast tego są pośredniczone poza łańcuchem.
 
-## Dlaczego stakować w puli? {#why-stake-with-a-pool}
+## Dlaczego stakować w puli? \{#why-stake-with-a-pool}
 
 Oprócz korzyści, które opisaliśmy w naszym [wprowadzeniu do stakingu](/staking/), stakowanie w puli wiąże się z szeregiem wyraźnych korzyści.
 
@@ -31,7 +31,7 @@ Oprócz korzyści, które opisaliśmy w naszym [wprowadzeniu do stakingu](/staki
 
 <StakingComparison page="pools" />
 
-## Co wziąć pod uwagę {#what-to-consider}
+## Co wziąć pod uwagę \{#what-to-consider}
 
 Stakowanie w puli lub delegowane nie jest natywnie obsługiwane przez protokół Ethereum, ale biorąc pod uwagę zapotrzebowanie użytkowników na stakowanie mniej niż 32 ETH, powstała rosnąca liczba rozwiązań, które zaspokajają to zapotrzebowanie.
 
@@ -45,7 +45,7 @@ Wskaźniki atrybutów są używane poniżej, aby zasygnalizować godne uwagi moc
 
 <StakingConsiderations page="pools" />
 
-## Odkryj usługi stakowania w puli {#explore-staking-pools}
+## Odkryj usługi stakowania w puli \{#explore-staking-pools}
 
 Dostępnych jest wiele opcji ułatwiających konfigurację. Skorzystaj z powyższych wskaźników, które oprowadzą cię z poniższymi narzędziami.
 
@@ -57,12 +57,15 @@ Należy pamiętać, że ważne jest, aby wybrać usługę, która poważnie trak
 
 Masz sugestię dotyczącą narzędzia do stakingu, które pominęliśmy? Zapoznaj się z naszymi [zasadami umieszczania produktów na liście](/contributing/adding-staking-products/), aby sprawdzić, czy są one odpowiednie i przesłać je do recenzji.
 
-## Często zadawane pytania {#faq}
+## Często zadawane pytania \{#faq}
 
+{
 <ExpandableCard title="Jak mogę zdobyć nagrody?">
 Zazwyczaj tokeny stakingu ERC-20 są wydawane stakerom, które reprezentują wartość zestakowanego przez nich ETH plus nagrody. Należy pamiętać, że różne pule będą dystrybuować nagrody ze stakowania do swoich użytkowników za pomocą nieco innych metod, ale jest to częste.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Kiedy mogę wypłacić swoją stawkę?">
 Już teraz! Aktualizacja sieci Shanghai/Capella miała miejsce w kwietniu 2023 r. i wprowadziła wypłaty ze stakingu. Konta walidatorów, które wspierają stakowanie w puli mają teraz możliwość wyjścia i wypłaty ETH na wyznaczony adres wypłaty. Daje to możliwość zdobycia swojej części swojej stawki za bazowe ETH. Sprawdź u swojego dostawcy, aby sprawdzić, w jaki sposób obsługuje tę funkcję.
 
@@ -70,7 +73,9 @@ Alternatywnie, pule wykorzystujące token stakingowy ERC-20 pozwalają użytkown
 
 <ButtonLink to="/staking/withdrawals/">Więcej o wypłatach ze stakingu</ButtonLink>
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Czy różni się to od stakowania z moją giełdą?">
 Jest wiele podobieństw między tymi opcjami stakowania w puli a scentralizowanymi giełdami, takimi jak możliwość stakowania niewielkich ilości ETH i łączenia ich w celu aktywacji walidatorów.
 
@@ -78,8 +83,9 @@ W przeciwieństwie do scentralizowanych giełd wiele innych opcji stakowania w p
 
 Niektóre opcje puli są bardziej zdecentralizowane niż inne, jeśli chodzi o węzły, które je obsługują. Aby promować zdrowie i decentralizację sieci, stakerzy są zawsze zachęcani do wyboru usługi w puli, która umożliwia zdecentralizowany zestaw operatorów węzłów bez zezwoleń.
 </ExpandableCard>
+}
 
-## Dodatkowo przeczytaj {#further-reading}
+## Dodatkowo przeczytaj \{#further-reading}
 
 - [Staking z Rocket Pool - Przegląd stakingu](https://docs.rocketpool.net/guides/staking/overview.html) — _Dokumenty RocketPool_
 - [Staking Ethereum z Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) — _dokumenty pomocy Lido_

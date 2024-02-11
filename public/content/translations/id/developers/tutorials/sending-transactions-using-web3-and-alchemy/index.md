@@ -17,30 +17,30 @@ This is a beginner friendly guide to sending Ethereum transactions using web3. A
 
 **NOTE:** This guide is for signing your transactions on the _backend_ for your app, if you want to integrate signing your transactions on the frontend, check out integrating [Web3 with a browser provider](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider).
 
-## Dasar-Dasar {#the-basics}
+## Dasar-Dasar \{#the-basics}
 
 Seperti kebanyakan pengembang blockchain ketika mereka baru memulai, Anda mungkin telah melakukan beberapa penelitian tentang bagaimana cara mengirim transaksi (sesuatu yang seharusnya cukup sederhana) dan menemukan banyak panduan, yang masing-masing mengatakan hal-hal yang berbeda dan membuat Anda kewalahan dan bingung. Jika Anda ada di tempat itu, jangan khawatir; kita semua pernah ada di beberapa titik tersebut! Jadi, sebelum kita memulai, mari meluruskan beberapa hal:
 
-### 1\. Alchemy tidak menyimpan kunci privat Anda {#alchemy-does-not-store-your-private-keys}
+### 1\. Alchemy tidak menyimpan kunci privat Anda \{#alchemy-does-not-store-your-private-keys}
 
 - Ini berarti bahwa Alchemy tidak dapat menandatangani dan mengirim transaksi mewakili Anda. Alasannya untuk ini bersifat keamanan. Alchemy tidak pernah meminta Anda membagikan kunci privat Anda, dan Anda seharusnya tidak pernah membagikan kunci privat Anda dengan node yang di-host (atau dengan siapa pun dalam hal ini).
 - You can read from the blockchain using Alchemy’s core API, but to write to it you’ll need to use something else to sign your transactions before sending them through Alchemy (this is the same for any other [node service](/developers/docs/nodes-and-clients/nodes-as-a-service/)).
 
-### 2\. Apa itu "penandatangan"? {#what-is-a-signer}
+### 2\. Apa itu "penandatangan"? \{#what-is-a-signer}
 
 - Penandatangan akan menandatangani transaksi untuk Anda dengan menggunakan kunci privat Anda. In this tutorial we’ll be using [Alchemy web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3) to sign our transaction, but you could also use any other web3 library.
 - Pada bagian frontend, sebuah contoh yang baik dari penandatangan adalah [metamask](https://metamask.io/), yang akan menandatangani dan mengirim transaksi mewakili Anda.
 
-### 3\. Mengapa saya harus menandatangani transaksi saya? {#why-do-i-need-to-sign-my-transactions}
+### 3\. Mengapa saya harus menandatangani transaksi saya? \{#why-do-i-need-to-sign-my-transactions}
 
 - Setiap pengguna yang ingin mengirim transaksi di jaringan Ethereum harus menandatangani transaksi (menggunakan kunci privat mereka), untuk memvalidasi bahwa asal transaksi sesuai dengan pihak yang diklaimnya.
 - Sangat penting untuk melindungi kunci privat ini, karena memiliki akses ke kunci tersebut memberikan kontrol penuh terhadap akun Ethereum Anda, yang memungkinkan Anda (atau siapa pun yang memiliki akses) untuk melakukan transaksi mewakili Anda.
 
-### 4\. Bagaimana cara melindungi kunci privat saya? {#how-do-i-protect-my-private-key}
+### 4\. Bagaimana cara melindungi kunci privat saya? \{#how-do-i-protect-my-private-key}
 
 - Ada banyak cara melindungi kunci privat Anda dan menggunakannya untuk mengirimkan transaksi. Dalam tutorial ini, kita akan menggunakan file .env. Namun, Anda juga dapat menggunakan penyedia terpisah yang menyimpan kunci privat, menggunakan file penyimpanan kunci, atau opsi lainnya.
 
-### 5\. Apa perbedaan antara `eth_sendTransaction` dan `eth_sendRawTransaction`? {#difference-between-send-and-send-raw}
+### 5\. Apa perbedaan antara `eth_sendTransaction` dan `eth_sendRawTransaction`? \{#difference-between-send-and-send-raw}
 
 `eth_sendTransaction` dan `eth_sendRawTransaction` keduanya adalah fungsi API Ethereum yang menyiarkan transaksi ke jaringan Ethereum, sehingga transaksi akan ditambahkan ke blok berikutnya. Fungsi ini berbeda dalam cara menangani penandatanganan transaksi.
 
@@ -51,7 +51,7 @@ Ketika menggunakan web3, `eth_sendRawTransaction` diakses dengan memanggil fungs
 
 This is what we will be using in this tutorial.
 
-### 6\. Apa itu pustaka web3? {#what-is-the-web3-library}
+### 6\. Apa itu pustaka web3? \{#what-is-the-web3-library}
 
 - Web3.js adalah pustaka pembungkus seputar pemanggilan JSON-RPC standar yang cukup umum untuk digunakan dalam pengembangan Ethereum.
 - Ada banyak pustaka web3 untuk bahasa pemrograman berbeda. Dalam tutorial ini, kita akan menggunakan [Web3 Alchemy](https://docs.alchemy.com/reference/api-overview) yang ditulis dalam JavaScript. Anda dapat memeriksa opsi lainnya [di sini](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
@@ -64,17 +64,17 @@ Baiklah, karena kita telah menjawab beberapa pertanyaan, mari kita teruskan ke b
 2.  [Create MetaMask account](https://metamask.io/) (or get an Ethereum address)
 3.  [Ikuti langkah-langkah ini untuk menginstal NodeJs dan NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
-## Langkah-Langkah untuk Mengirim Transaksi Anda {#steps-to-sending-your-transaction}
+## Langkah-Langkah untuk Mengirim Transaksi Anda \{#steps-to-sending-your-transaction}
 
-### 1\. Buat aplikasi Alchemy di testnet Rinkeby {#create-an-alchemy-app-on-the-rinkeby-testnet}
+### 1\. Buat aplikasi Alchemy di testnet Rinkeby \{#create-an-alchemy-app-on-the-rinkeby-testnet}
 
 Arahkan kursor ke [Dasbor Alchemy](https://dashboard.alchemyapi.io/) Anda dan buat aplikasi baru, yang memilih Rinkeby (atau testnet lain mana pun) untuk jaringan Anda.
 
-### 2\. Meminta ETH dari keran Rinkeby {#request-eth-from-rinkeby-faucet}
+### 2\. Meminta ETH dari keran Rinkeby \{#request-eth-from-rinkeby-faucet}
 
 Follow the instructions on the [Alchemy Rinkeby faucet](https://www.rinkebyfaucet.com/) to receive ETH. Make sure to include your **Rinkeby** Ethereum address (from MetaMask) and not another network. After following the instructions, double-check that you’ve received the ETH in your wallet.
 
-### 3\. Buat direktori proyek baru dan `cd` di dalamnya {#create-a-new-project-direction}
+### 3\. Buat direktori proyek baru dan `cd` di dalamnya \{#create-a-new-project-direction}
 
 Buat direktori proyek baru dari baris perintah (terminal untuk mac) dan arahkan kursor ke sana:
 
@@ -83,7 +83,7 @@ mkdir sendtx-example
 cd sendtx-example
 ```
 
-### 4\. Instal Web3 Alchemy (atau pustaka web3 mana pun) {#install-alchemy-web3}
+### 4\. Instal Web3 Alchemy (atau pustaka web3 mana pun) \{#install-alchemy-web3}
 
 Jalankan perintah berikut dalam direktori proyek Anda untuk menginstal [Web3 Alchemy](https://docs.alchemy.com/reference/api-overview):
 
@@ -91,7 +91,7 @@ Jalankan perintah berikut dalam direktori proyek Anda untuk menginstal [Web3 Alc
 npm install @alch/alchemy-web3
 ```
 
-### 5\. Instal dotenv {#install-dotenv}
+### 5\. Instal dotenv \{#install-dotenv}
 
 Kita akan menggunakan file .env untuk menyimpan kunci API dan kunci privat kita dengan aman.
 
@@ -99,7 +99,7 @@ Kita akan menggunakan file .env untuk menyimpan kunci API dan kunci privat kita 
 npm install dotenv --save
 ```
 
-### 6\. Buat file .env {#create-the-dotenv-file}
+### 6\. Buat file .env \{#create-the-dotenv-file}
 
 Create a `.env` file in your project directory and add the following (replacing “`your-api-url`" and "`your-private-key`")
 
@@ -115,7 +115,7 @@ PRIVATE_KEY = "your-private-key"
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
 </InfoBanner>
 
-### 7\. Buat file `sendTx.js` {#create-sendtx-js}
+### 7\. Buat file `sendTx.js` \{#create-sendtx-js}
 
 Hebat, karena sekarang kita memiliki data sensitif yang dilindungi di file .env, mari mulai pengodean. Untuk contoh pengiriman transaksi, kita akan mengirimkan ETH kembali ke keran Rinkeby.
 
@@ -174,7 +174,7 @@ Now, before we jump into running this code, let's talk about some of the compone
 - Smart contact transaction: Execute some smart contract code on the chain. In this case, the data field should contain the smart function you wish to execute, alongside any parameters.
   - For a practical example, check out Step 8 in this [Hello World Tutorial](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction).
 
-### 8\. Jalankan kode dengan menggunakan `node sendTx.js` {#run-the-code-using-node-sendtx-js}
+### 8\. Jalankan kode dengan menggunakan `node sendTx.js` \{#run-the-code-using-node-sendtx-js}
 
 Arahkan kursor kembali ke terminal atau baris perintah dan jalankan:
 
@@ -182,7 +182,7 @@ Arahkan kursor kembali ke terminal atau baris perintah dan jalankan:
 node sendTx.js
 ```
 
-### 9\. Lihat transaksi Anda di Mempool {#see-your-transaction-in-the-mempool}
+### 9\. Lihat transaksi Anda di Mempool \{#see-your-transaction-in-the-mempool}
 
 Buka [halaman Mempool](https://dashboard.alchemyapi.io/mempool) di dasbor Alchemy Anda dan filter berdasarkan aplikasi yang Anda buat untuk menemukan transaksi Anda. Inilah tempat di mana kita dapat melihat transisi transaksi kita dari status menunggu hingga status ditambang (jika berhasil) atau status dibatalkan jika tidak berhasil. Pastikan untuk memilih "Semua" sehingga Anda melihat kategori transaksi "ditambang", "menunggu", dan "dibatalkan". Anda juga dapat mencari transaksi Anda dengan mencari transaksi yang dikirim ke alamat `0x31b98d14007bdee637298086988a0bbd31184523`.
 

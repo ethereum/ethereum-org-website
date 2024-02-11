@@ -20,7 +20,7 @@ published: 2021-04-22
 
 我们开始吧！
 
-## 第 1 步：安装 Web3 {#install-web3}
+## 第 1 步：安装 Web3 \{#install-web3}
 
 如果您跟随第一个教程创建了您的非同质化代币智能合约，那么您在使用 Ethers.js 方面已经有了经验。 Web3 与 Ethers 相似，也是一个库，用于更轻松地创建对以太坊区块链的请求。 在本教程中，我们将使用增强版 Web3 库 [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)，它提供自动重试和强大的 WebSocket 支持。
 
@@ -30,7 +30,7 @@ published: 2021-04-22
 npm install @alch/alchemy-web3
 ```
 
-## 第 2 步：创建 `mint-nft.js` 文件 {#create-mintnftjs}
+## 第 2 步：创建 `mint-nft.js` 文件 \{#create-mintnftjs}
 
 在你的脚本目录中，创建一个 `mint-nft.js` 文件并添加以下代码行：
 
@@ -41,7 +41,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## 第 3 步：获取您的合约应用程序二进制接口 {#contract-abi}
+## 第 3 步：获取您的合约应用程序二进制接口 \{#contract-abi}
 
 我们的合约 ABI（应用程序二进制接口）是与我们的智能合约交互的接口。 您可以在[此处](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is)了解更多关于合约应用程序二进制接口的信息。 安全帽自动为我们生成应用程序二进制接口，并将其保存在 `MyNFT.json` 文件中。 为了使用该接口，我们需要通过在我们的 `mint-nft.js` 文件中添加以下代码行来解析内容：
 
@@ -61,7 +61,7 @@ console.log(JSON.stringify(contract.abi))
 node scripts/mint-nft.js
 ```
 
-## 第 4 步：使用 IPFS 系统为您的 NFT 配置元数据 {#config-meta}
+## 第 4 步：使用 IPFS 系统为您的 NFT 配置元数据 \{#config-meta}
 
 如果你还记得我们第 1 部分的教程，我们的 `mintNFT` 智能合约函数使用 tokenURI 参数，该参数应解析为描述非同质化代币元数据的 JSON 文档，正是它生成非同质化代币并赋予非同质化代币可配置的属性，如名称、描述、图像和其他属性。
 
@@ -109,7 +109,7 @@ node scripts/mint-nft.js
 
 ![如何将您的 nft-metadata.json 上传至 Pinata](./uploadPinata.gif)
 
-## 第 5 步：创建您的合约实例 {#instance-contract}
+## 第 5 步：创建您的合约实例 \{#instance-contract}
 
 现在，为了与我们的合约进行交互，我们需要在代码中创建一个实例。 为此，我们需要合约地址，可以从部署或 [Etherscan](https://sepolia.etherscan.io/) 中通过查找用来部署合约的地址获得。
 
@@ -125,7 +125,7 @@ const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef778"
 const nftContract = new web3.eth.Contract(contracts.abi, contracttAddress)
 ```
 
-## 第 6 步：更新 `.env` 文件 {#update-env}
+## 第 6 步：更新 `.env` 文件 \{#update-env}
 
 现在，为了创建并发送交互到以太坊链，我们将使用您的以太坊公共帐户地址来获得账户随机数（解释如下）。
 
@@ -137,7 +137,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## 第 7 步：创建您的交易 {#create-txn}
+## 第 7 步：创建您的交易 \{#create-txn}
 
 首先，让我们定义一个名为 `mintNFT(tokenData)` 的函数并通过执行以下操作创建我们的交易：
 
@@ -186,7 +186,7 @@ PUBLIC_KEY = "your-public-account-address"
    }​
 ```
 
-## 第 8 步：签署交易 {#sign-txn}
+## 第 8 步：签署交易 \{#sign-txn}
 
 现在我们已经创建了我们的交易，我们需要签署它，以便将其发送出去。 在这里我们将使用到我们的私钥。
 
@@ -244,7 +244,7 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## 第 9 步：调用 `mintNFT` 并运行节点 `mint-nft.js` {#call-mintnft-fn}
+## 第 9 步：调用 `mintNFT` 并运行节点 `mint-nft.js` \{#call-mintnft-fn}
 
 还记得你上传到 Pinata 的 `metadata.json` 吗？ 从 Pinata 获取其哈希代码，并将以下内容作为参数传送给函数 `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 

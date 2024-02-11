@@ -9,7 +9,7 @@ template: roadmap
 
 Einige Aspekte der Roadmap sind zwar nicht unmittelbar für die Skalierung oder Sicherheit von Ethereum erforderlich, legen jedoch den Grundstein für langfristige Stabilität und Zuverlässigkeit von Ethereum.
 
-## Quantenresistenz {#quantum-resistance}
+## Quantenresistenz \{#quantum-resistance}
 
 Wenn Quantencomputing Realität wird, wird einiges der Kryptographie, die das heutige Ethereum sichert, gefährdet sein. Obwohl Quantencomputer vermutlich noch Jahrzehnte davon entfernt sind, eine echte Bedrohung für die moderne Kryptographie darzustellen, wird Ethereum dennoch so entwickelt, dass es für die kommenden Jahrhunderte sicher ist. Dies bedeutet, dass Ethereum so schnell wie möglich [quantenresistent](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) gemacht werden soll.
 
@@ -17,9 +17,11 @@ Die Herausforderung für Ethereum-Entwickler besteht darin, dass das aktuelle Pr
 
 Die in mehreren Bereichen von Ethereum zur Generierung kryptographischer Geheimnisse verwendeten ["KZG"-Verpflichtungsschemata](/roadmap/danksharding/#what-is-kzg) sind als quantenanfällig bekannt. Derzeit wird dies durch "vertrauenswürdige Setups" umgangen, bei denen viele Benutzer Zufälligkeit erzeugen, die von einem Quantencomputer nicht rückgängig gemacht werden kann. Die ideale Lösung wäre jedoch einfach, Quanten-sichere Kryptographie einzubauen. Es gibt zwei führende Ansätze, die effiziente Ersatzlösungen für das BLS-Schema werden könnten: [STARK-basierte](https://hackmd.io/@vbuterin/stark_aggregation) und [Gitter-basierte](https://medium.com/asecuritysite-when-bob-met-alice/so-what-is-lattice-encryption-326ac66e3175) Signierung. Diese werden noch erforscht und prototypisiert.
 
+{
 <ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Lesen Sie über KZG und vertrauenswürdige Setups</ButtonLink>
+}
 
-## Einfacheres und effizienteres Ethereum {#simpler-more-efficient-ethereum}
+## Einfacheres und effizienteres Ethereum \{#simpler-more-efficient-ethereum}
 
 Komplexität schafft Möglichkeiten für Fehler oder Schwachstellen, die von Angreifern ausgenutzt werden können. Ein Bestandteil des Fahrplans besteht daher darin, Ethereum zu vereinfachen, indem nicht mehr benötigter oder verbesserungsfähiger Code, der sich durch verschiedene Upgrades gehalten hat, entfernt wird. Eine schlankere, einfachere Codebasis ist für Entwickler leichter zu warten und zu verstehen.
 
@@ -27,7 +29,7 @@ Es gibt mehrere Updates, die an der [Ethereum Virtual Machine (EVM)](/developers
 
 Ebenso können Updates an anderen Teilen der gegenwärtigen Ethereum-Clients vorgenommen werden. Ein Beispiel dafür ist, dass aktuelle Ausführungs- und Konsens-Clients eine andere Art der Datenkompression verwenden. Es wird viel einfacher und intuitiver sein, Daten zwischen Clients auszutauschen, wenn das Kompressionsschema im gesamten Netzwerk einheitlich ist.
 
-## Aktueller Fortschritt {#current-progress}
+## Aktueller Fortschritt \{#current-progress}
 
 Die meisten der für die Zukunftssicherung von Ethereum erforderlichen Upgrades befinden sich noch in der Forschungsphase und könnten mehrere Jahre von der Implementierung entfernt sein. Upgrades wie das Entfernen von SELF-DESTRUCT und die Harmonisierung des Kompressionsschemas, das in den Ausführungs- und Konsens-Clients verwendet wird, werden wahrscheinlich früher kommen als die Quantenresistente Kryptographie.
 

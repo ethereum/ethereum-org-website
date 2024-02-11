@@ -4,7 +4,7 @@ description: Isang hindi teknikal na panimula sa mga zero-knowledge proof para s
 lang: fil
 ---
 
-## Ano ang mga zero-knowledge proof? {#what-are-zk-proofs}
+## Ano ang mga zero-knowledge proof? \{#what-are-zk-proofs}
 
 Ang zero-knowledge proof ay isang paraan para patunayan ang validity ng isang pahayag nang hindi ipinapakita ang mismong pahayag. Ang ‘prover’ ang partidong sumusubok na patunayan ang isang pahayag, samantalang ang ‘verifier’ ang responsable sa pag-validate ng claim.
 
@@ -14,7 +14,7 @@ Ang mga zero-knowledge proof ay unang lumitaw sa isang artikulo noong 1985 na, �
 
 Ang mga zero-knowledge proof ay humusay sa paglipas ng mga taon at ginagamit na ngayon sa ilang sitwasyon sa totoong buhay.
 
-## Bakit natin kailangan ang mga zero-knowledge proof? {#why-zero-knowledge-proofs-are-important}
+## Bakit natin kailangan ang mga zero-knowledge proof? \{#why-zero-knowledge-proofs-are-important}
 
 Itinuring na pagsulong sa applied cryptography ang mga zero-knowledge proof, dahil ipinangako ng mga itong paigtingin ang seguridad ng impormasyon para sa mga indibidwal. Isipin kung paano mo mapapatunayan ang isang pahayag (hal., "Ako ay mamamayan ng bansang X") sa ibang partido (hal., isang service provider). Kakailanganin mong magbigay ng “patunay” upang suportahan ang iyong pahayag, tulad ng pambansang passport o lisensya sa pagmamaneho.
 
@@ -24,7 +24,7 @@ Nilulutas ng mga zero-knowledge proof ang problemang ito sa pamamagitan ng pag-a
 
 Kapag binalikan natin ang nauna nating halimabawa, ang tanging ebidensyang kailangan mo upang patunayan ang iyong pahayag ng pagkamamamayan ay isang zero-knowledge proof. Kailangan lang tingnan ng verifier kung totoo ang ilang partikular na property ng patunay para makumbinsing totoo rin ang pangunahing pahayag.
 
-## Paano gumagana ang mga zero-knowledge proof? {#how-do-zero-knowledge-proofs-work}
+## Paano gumagana ang mga zero-knowledge proof? \{#how-do-zero-knowledge-proofs-work}
 
 Sa tulong ng zero-knowledge proof, mapapatunayan mo ang katotohanan ng isang statement nang hindi ibinabahagi ang nilalaman ng statement o ibinubunyag kung paano mo natuklasan ang katotohanan. Upang gawin itong posible, umaasa ang mga zero-knowledge protocol sa mga algorithm na kumukuha ng ilang data bilang input at nagbabalik ng ‘true’ o ‘false’ bilang output.
 
@@ -48,7 +48,7 @@ Inilalarawan sa itaas ang structure ng ‘interactive na zero-knowledge proof’
 
 Isang magandang halimbawa na nagpapakita kung paano gumagana ang mga interactive na proof ay ang sikat na [kuwento ni Ali Baba sa kuweba](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave) na gawa ni Jean-Jacques Quisquater. Sa kuwento, gustong patunayan ni Peggy (ang prover) kay Victor (ang verifier) na alam niya ang secret phrase upang buksan ang mahiwagang pinto nang hindi ito sinasabi.
 
-### Mga hindi interactive na zero-knowledge proof {#non-interactive-zero-knowledge-proofs}
+### Mga hindi interactive na zero-knowledge proof \{#non-interactive-zero-knowledge-proofs}
 
 Bagama't makabago, hindi palaging magagamit ang interactive na pagpapatunay dahil kailangang available at nag-i-interact nang paulit-ulit ang dalawang partido. Kahit na kumbinsido ang verifier sa katapatan ng prover, hindi magagamit para sa independent verification ang patunay (sa pag-compute ng bagong patunay, kailangan ng bagong set ng mga mensahe sa pagitan ng prover at verifier).
 
@@ -60,9 +60,9 @@ Sa hindi interactive na proofing, nababawasan ang komunikasyon sa pagitan ng pro
 
 Itinuring na pagsulong sa zero-knowledge technology ang mga hindi interactive na proof at pinasigla nito ang pag-develop ng mga proving system na ginagamit ngayon. Pag-uusapan natin ang mga uri na ito ng proof sa ibaba:
 
-### Mga uri ng mga zero-knowledge proof {#types-of-zero-knowledge-proofs}
+### Mga uri ng mga zero-knowledge proof \{#types-of-zero-knowledge-proofs}
 
-#### ZK-SNARKs {#zk-snarks}
+#### ZK-SNARKs \{#zk-snarks}
 
 Ang ZK-SNARK ay isang acronym para sa **Zero-Knowledge Succinct Non-Interactive Argument of Knowledge**. Ang protocol ng ZK-SNARK ay may mga sumusunod na katangian:
 
@@ -82,7 +82,7 @@ Ang [Multi-party computation (MPC)](https://en.wikipedia.org/wiki/Secure_multi-p
 
 Sa mga trusted setup, hinihiling sa mga user na pagkatiwalaan ang mga kalahok sa pag-generate ng parameter. Gayunpaman, noong na-develop ang ZK-STARKs, nagkaroon na ng mga protocol sa pagpapatunay na gumagana sa non-trusted setup.
 
-#### ZK-STARKs {#zk-starks}
+#### ZK-STARKs \{#zk-starks}
 
 Ang ZK-STARK ay isang acronym para sa **Zero-Knowledge Scalable Transparent Argument of Knowledge**. Ang ZK-STARKs ay katulad ng ZK-SNARKs, pero ang mga ito ay:
 
@@ -92,9 +92,9 @@ Ang ZK-STARK ay isang acronym para sa **Zero-Knowledge Scalable Transparent Argu
 
 Ang ZK-STARKs ay nagpo-produce ng mas malalaking proof kaysa sa ZK-SNARKs, ibig sabihin, karaniwang mas malalaki ang overhead ng mga ito para sa pag-verify. Gayunpaman, may mga pagkakataon (tulad ng pagpapatunay ng malalaking dataset) kung saan mas makakatipid sa ZK-STARKs kaysa sa ZK-SNARKs.
 
-## Mga use case para sa mga zero-knowledge proof {#use-cases-for-zero-knowledge-proofs}
+## Mga use case para sa mga zero-knowledge proof \{#use-cases-for-zero-knowledge-proofs}
 
-### Mga anonymous na pagbabayad {#anonymous-payments}
+### Mga anonymous na pagbabayad \{#anonymous-payments}
 
 Kadalasan, nakikita ng maraming partido ang mga pagbabayad gamit ang credit card, kasama na ang payments provider, mga bangko, at iba pang interesadong partido (hal., mga awtoridad ng pamahalaan). Bagama't makakatulong ang financial surveillance sa pagtukoy ng ilegal na aktibidad, inilalagay din nito sa panganib ang privacy ng mga ordinaryong mamamayan.
 
@@ -106,19 +106,19 @@ Sa pamamagitan ng paglalagay ng zero-knowledge technology sa protocol, pinapayag
 
 Ang mga zero-knowledge proof ay ginagamit din sa mga anonymizing na transaksyon sa mga pampublikong blockchain. Halimbawa nito ang Tornado Cash, na isang decentralized at non-custodial na serbisyong nagbibigay-daan sa mga user na magsagawa ng mga pribadong transaksyon sa Ethereum. Ang Tornado Cash ay gumagamit ng mga zero-knowledge proof upang i-obfuscate ang mga detalye ng transaksyon at tiyakin ang financial privacy. Sa kasamaang-palad, iniuugnay ang mga ito sa ilegal na aktibidad dahil mga "opt-in" na privacy tool ang mga ito. Upang malabanan ito, dapat maging default ang privacy sa mga pampublikong blockchain.
 
-### Proteksyon ng pagkakakilanlan {#identity-protection}
+### Proteksyon ng pagkakakilanlan \{#identity-protection}
 
 Inilalagay ng mga kasalukuyang identity management system ang personal na impormasyon sa panganib. Ang mga zero-knowledge proof ay makakatulong sa mga indibidwal na mag-validate ng pagkakakilanlan habang pinoprotektahan ang mga sensitibong detalye.
 
 Ang mga zero-knowledge proof ay partikular na kapaki-pakinabang sa konteksto ng [decentralized identity](/decentralized-identity/). Binibigyan ng decentralized identity (na tinatawag din na 'self-sovereign identity') ang indibidwal ng kakayahang kontrolin ang access sa mga personal identifier. Ang pagpapatunay ng iyong pagkamamamayan nang hindi ipinapakita ang detalye ng iyong tax ID o pasaporte ay magandang halimbawa ng kung paano binibigyang-daan ng zero-knowledge technology ang decentralized identity.
 
-### Pag-authenticate {#authentication}
+### Pag-authenticate \{#authentication}
 
 Kapag gumagamit ng mga online na serbisyo, kailangan mong patunayan ang iyong pagkakakilanlan at karapatang i-access ang mga platform na iyon. Kadalasan, kailangan mong magbigay ng personal na impormasyon, tulad ng mga pangalan, email address, petsa ng kapanganakan, at iba pa. Maaaring kailanganin mo ring tandaan ang mahahabang password para hindi mawalan ng access.
 
 Gayunpaman, mapapasimple ng mga zero-knowledge proof ang pag-authenticate para sa mga platform at user. Kapag gumawa ng ZK-proof gamit ang mga pampublikong input (hal., data na nagpapatunay sa pagiging miyembro ng user sa plataporma) at mga pribadong input (hal., mga detalye ng user), puwedeng ipakita na lang ito ng user para i-authenticate ang kanyang pagkakakilanlan kapag kailangan nilang i-access ang serbisyo. Pinapaganda nito ang karanasan para sa mga user at dahil dito, hindi na kailangan ng mga organisasyon na mag-store ng napakaraming impormasyon ng user.
 
-### Nave-verify na computation {#verifiable-computation}
+### Nave-verify na computation \{#verifiable-computation}
 
 Ang nave-verify na computation ay isa pang paggamit ng zero-knowledge technology para sa pagpapaganda ng mga disenyo ng blockchain. Binibigyang-daan tayo ng nave-verify na computing na ipaubaya ang computation sa ibang entity habang pinapanatiling nave-verify ang mga resulta. Isinisumite ng entity ang resulta kasama ng patunay na nagve-verify na isinagawa nang tama ang programa.
 
@@ -142,7 +142,7 @@ Dito papasok ang nave-verify na computation. Kapag nag-execute ang isang node ng
 
 Ang [mga zero-knowledge rollup](/developers/docs/scaling/zk-rollups) at [validium](/developers/docs/scaling/validium/) ay dalawang off-chain scaling solution na gumagamit ng mga validity proof upang magbigay ng secure na scalability. Ang mga protocol na ito ay nag-e-execute ng libo-libong transaksyon off-chain at nagsusumite ng mga patunay para ma-verify sa Ethereum. Maaaring ilapat kaagad ang mga resultang iyon kapag na-verify na ang patunay, kaya makakapagproseso ang Ethereum ng mas maraming transaksyon nang hindi dinadagdagan ang computation sa base layer.
 
-### Pagpigil sa panunuhol at pagsasabwatan sa on-chain voting {#secure-blockchain-voting}
+### Pagpigil sa panunuhol at pagsasabwatan sa on-chain voting \{#secure-blockchain-voting}
 
 Maraming magagandang katangian ang mga blockchain voting scheme: ganap na mao-audit, secure laban sa mga atake, matibay laban sa censorship, at walang heograpikal na limitasyon ang mga ito. Pero may nangyayari pa ring **pagsasabwatan** sa mga on-chain voting scheme.
 
@@ -156,7 +156,7 @@ Sa paggamit ng on-chain voting, madaling magsabwatan sa quadratic funding: pampu
 
 Sa kabutihang-palad, ang mga mas bagong solution tulad ng MACI (Minimum Anti-Collusion Infrastructure) ay gumagamit ng mga zero-knowledge proof upang gawing matibay laban sa panunuhol at pagsasabwatan ang on-chain voting (hal., mga quadratic funding mechanism). Ang MACI ay isang hanay ng mga smart contract at mga script na nagpapahintulot sa isang central administrator (tinatawag na "coordinator") na pagsama-samahin ang mga boto at itala ang mga resulta nang _hindi_ inilalantad ang mga detalye sa pagboto ng bawat indibidwal. Kahit ganito, maaari pa ring i-verify na wasto ang pagbibilang ng mga boto, o kumpirmahing bumoto ang isang partikular na indibidwal sa botohan.
 
-#### Paano gumagana ang MACI kasama ng mga zero-knowledge proof? {#how-maci-works-with-zk-proofs}
+#### Paano gumagana ang MACI kasama ng mga zero-knowledge proof? \{#how-maci-works-with-zk-proofs}
 
 Sa simula, dine-deploy ng coordinator ang MACI contract sa Ethereum, at pagkatapos nito, makakapag-sign up ang mga user upang makaboto (sa pamamagitan ng pagrerehistro ng kanilang pampublikong key sa smart contract). Bumoboto ang mga user sa pamamagitan ng pagpapadala ng mensaheng na-encrypt ng kanilang pampublikong key sa smart contract (dapat na-sign ang valid na boto ng pinakabagong pampublikong key na nauugnay sa identity ng user, at may iba pang pamantayan). Pagkatapos nito, ipinoproseso ng coordinator ang lahat ng mensahe kapag natapos na ang panahon ng pagboto, itinatala niya ang mga boto, at vine-verify niya ang mga resulta on-chain.
 
@@ -178,29 +178,29 @@ Ngunit kung mananatiling matapat ang coordinator, ang MACI ay isang mahusay na t
 
 [Magbasa pa tungkol sa MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
 
-## Mga problema sa paggamit ng mga zero-knowledge proof {#drawbacks-of-using-zero-knowledge-proofs}
+## Mga problema sa paggamit ng mga zero-knowledge proof \{#drawbacks-of-using-zero-knowledge-proofs}
 
-### Gastos sa hardware {#hardware-costs}
+### Gastos sa hardware \{#hardware-costs}
 
 Kapag gumagawa ng mga zero-knowledge proof, kailangan ng mga napakakumplikadong kalkulasyon na pinakamainam na isinasagawa sa mga specialized machine. Dahil mahal ang mga machine na ito, madalas na hindi ito kayang bilhin ng mga regular na indibidwal. Dagdag pa rito, dapat isaalang-alang ng mga application na gustong gumamit ng zero-knowledge technology ang mga gastos sa hardware—na maaaring magpalaki ng gastusin ng mga end user.
 
-### Gastos sa pag-verify sa proof {#proof-verification-costs}
+### Gastos sa pag-verify sa proof \{#proof-verification-costs}
 
 Ang pag-verify ng mga proof ay nangangailangan din ng kumplikadong computation at nagpapalaki ng gastos sa pagpapatupad ng zero-knowledge technology sa mga application. Ang gastos na ito ay partikular na may kaugnayan sa pagpapatunay ng computation. Halimbawa, ang mga ZK-rollup ay nagbabayad ng ~ 500,000 gas para sa pag-verify ng iisang ZK-SNARK proof sa Ethereum, at mas mahal pang bayarin ang kailangan para sa ZK-STARKs.
 
-### Mga trust assumption {#trust-assumptions}
+### Mga trust assumption \{#trust-assumptions}
 
 Sa ZK-SNARK, ang Common Reference String (mga pampublikong parameter) ay ginagawa nang isang beses at maaaring gamitin ulit ng mga partidong nais sumali sa zero-knowledge protocol. Ang mga pampublikong parameter ay ginagawa sa pamamagitan ng isang trusted setup ceremony, kung saan inaasahang magiging matapat ang mga kalahok.
 
 Subalit wala talagang paraan para masukat ng mga user ang katapatan ng mga kalahok at kailangang pagkatiwalaan ng mga user ang sinasabi ng mga developer. Walang trust assumption ang ZK-STARKs dahil hayagang mave-verify ang randomness na ginamit sa paggawa sa string. Samantala, pinagsusumikapan ng mga mananaliksik ang mga non-trusted setup para sa ZK-SNARKs upang mapaigting ang seguridad ng ng mga mekanismo ng pagpapatunay.
 
-### Mga panganib ng quantum computing {#quantum-computing-threats}
+### Mga panganib ng quantum computing \{#quantum-computing-threats}
 
 Ang ZK-SNARK ay gumagamit ng elliptic curve cryptography ([ECDSA](/glossary/#ecdsa)) para sa pag-encrypt. Bagama't secure sa ngayon ang ECDSA algorithm, maaaring sirain ng pagkakabuo ng mga quantum computer ang security model nito sa hinaharap.
 
 Ang ZK-STARK ay itinuturing na hindi apektado ng banta ng quantum computing, dahil gumagamit ito ng mga collision-resistant hash para sa pag-encrypt. Kumpara sa mga pares ng pampublikong key at pribadong key na ginagamit sa elliptic curve cryptography, mas mahihirapan ang mga quantum computing algorithm na pasukin ang collision-resistant hashing.
 
-## Karagdagang pagbabasa {#further-reading}
+## Karagdagang pagbabasa \{#further-reading}
 
 - [Ipapaliwanag ng Isang Computer Scientist ang Isang Konsepto sa 5 Antas ng Kahirapan | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Channel sa YouTube ng Wired_
 - [Pangkalahatang-ideya ng mga use case para sa mga zero-knowledge proof](https://appliedzkp.org/#Projects) — _Privacy and Scaling Explorations Team_

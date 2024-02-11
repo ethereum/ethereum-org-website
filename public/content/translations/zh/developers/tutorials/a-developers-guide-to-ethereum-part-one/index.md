@@ -16,7 +16,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 想必您已经听说过以太坊，那么，您准备好投身于这个领域了吗？ 本篇文章将快速介绍一些区块链基础知识，然后让您与模拟的以太坊节点进行互动，比如读取区块数据、检查账户余额和发送交易。 在这个过程中，我们会着重强调用传统方式构建应用与这种新的去中心化范式之间的差异。
 
-## （软）前提条件 {#soft-prerequisites}
+## （软）前提条件 \{#soft-prerequisites}
 
 本文希望面向所有开发者。 在文章里会涉及 [Python 工具](/developers/docs/programming-languages/python/)，不过它们只是思想的载体，如果您不是 Python 开发者也没有问题。 不过，我将对您已经了解的知识作一些假设，以便我们能够迅速地进入以太坊部分。
 
@@ -27,7 +27,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 - 您的机器上有安装 Python 3.6 或更高版本 (强烈推荐使用 [虚拟环境](https://realpython.com/effective-python-environment/#virtual-environments) )，并且
 - 您使用过 `pip`，Python 的软件包安装程序。 再次强调，如果您不符合其中任何一条，或者您不打算敲本文中的代码，您照着学仍然可以学得很好。
 
-## 区块链简述 {#blockchains-briefly}
+## 区块链简述 \{#blockchains-briefly}
 
 描述以太坊有很多方法，但其核心还是区块链。 区块链由一系列区块组成，所以让我们从区块链开始。 用最简单的话来说，以太坊区块链上的每个区块只是一些元数据和一个交易的列表。 在 JSON 格式中，它看起来像这样：
 
@@ -53,7 +53,7 @@ _区块链本质上是一个链表；每个区块都有一个对前一个区块�
 
 区块链验证资金确实从一个用户发送给另一个用户的唯一方法是使用该区块链原生货币（即，由该区块链创建和管理的货币）。 在以太坊，这种货币被称为 ETH，以太坊区块链是账户余额的唯一正式记录。
 
-## 一种新范式 {#a-new-paradigm}
+## 一种新范式 \{#a-new-paradigm}
 
 这种新的去中心化技术栈催生了新的开发者工具。 许多编程语言都有这样的工具，但我们将通过 Python 的视角来观察。 重申一下：即使 Python 不是您的首选语言，跟上文章也不会有什么太大的问题。
 
@@ -77,7 +77,7 @@ w3.eth.get_block('latest')
 w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 ```
 
-## 安装 {#installation}
+## 安装 \{#installation}
 
 在这个演练中，我们仅在 Python 解释器中进行。 我们不会创建任何目录、文件、类或函数。
 
@@ -103,7 +103,7 @@ $ pip install 'web3[tester]'
 
 您已经设置完毕！
 
-## 开启沙盒环境 {#spin-up-a-sandbox}
+## 开启沙盒环境 \{#spin-up-a-sandbox}
 
 在终端中运行 `ipython`，打开一个新的 Python 环境。 这与运行 `python` 类似，但更友好。
 
@@ -123,7 +123,7 @@ In [1]:
 In [1]: from web3 import Web3
 ```
 
-## Web3 模块介绍 {#introducing-the-web3-module}
+## Web3 模块介绍 \{#introducing-the-web3-module}
 
 除了作为以太坊的网关， [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) 模块还提供了一些便利的功能。 让我们来探究探究。
 
@@ -152,7 +152,7 @@ Out[3]: Decimal('0.5')
 
 Web3 模块上的其他实用方法包括数据格式转换器（例如 [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)），地址助手，（例如 [`is address`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)），以及哈希函数（例如 [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)）。 其中许多内容将在后面的系列文章中介绍。 要查看所有可用的方法和属性，可以利用 IPython 的自动补全功能，输入 `Web3`。 然后在点号后面按两次 tab 键。
 
-## 与链交互 {#talk-to-the-chain}
+## 与链交互 \{#talk-to-the-chain}
 
 方便的方法很受欢迎，但让我们继续来说区块链。 接下来配置 Web3.py 与以太坊节点通信。 在这里，我们可以选择使用 IPC、HTTP 或 Websocket 提供者。
 
@@ -177,7 +177,7 @@ In [4]: w3 = Web3(Web3.EthereumTesterProvider())
 
 现在，您已经准备好在链上冲浪了！ 这不是人们常说的以太链。 我只是虚构了它。 我们来快速了解一下。
 
-## 快速了解 {#the-quick-tour}
+## 快速了解 \{#the-quick-tour}
 
 第一件事，先进行连接检查。
 
@@ -188,7 +188,7 @@ Out[5]: True
 
 由于我们使用的是测试器提供者，这不是一个非常有价值的测试，但如果它确实失败了，很可能是在实例化 `w3` 变量时发生了输入错误。 仔细检查您是否包含了内括号，即 `Web3.EthereumTesterProvider()`。
 
-## 第一站：[帐户 ](/developers/docs/accounts/) {#tour-stop-1-accounts}
+## 第一站：[帐户 ](/developers/docs/accounts/) \{#tour-stop-1-accounts}
 
 为了方便起见，测试器提供者创建了一些帐户，并预先分配了测试以太币。
 
@@ -219,7 +219,7 @@ Out[8]: Decimal('1000000')
 
 100 万测试以太币，也不算太寒酸。
 
-## 第二站：区块数据 {#tour-stop-2-block-data}
+## 第二站：区块数据 \{#tour-stop-2-block-data}
 
 我们来看看这个模拟区块链的状态。
 
@@ -240,7 +240,7 @@ Out[9]: AttributeDict({
 - `transactions` 是一个空列表，原因相同：我们还没有做任何事情。 第一个区块是一个**空区块**，只是为了开个头。
 - 注意，`parentHash` 只是一堆空的字节。 这标志着它是链条上的第一个区块，也就是所谓的**创世区块**。
 
-## 第三站：[ 交易 ](/developers/docs/transactions/) {#tour-stop-3-transactions}
+## 第三站：[ 交易 ](/developers/docs/transactions/) \{#tour-stop-3-transactions}
 
 在没有待处理交易之前，我们停留在零区块处，所以我们给它一个交易。 从一个账户向另一个账户发送一些测试 ETH：
 
@@ -290,6 +290,6 @@ Out[13]: 1000003000000000000000000
 
 <FeaturedText>注：在公共网络上，交易费用根据网络需求和您希望交易处理的速度而变化。 如果您对费用的计算方式感兴趣，请查看我之前关于<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">如何将交易包含在一个区块中</a>的文章。</FeaturedText>
 
-## 结尾 {#and-breathe}
+## 结尾 \{#and-breathe}
 
 我们已经学习一段时间，现在可以休息一下。 要学习的内容还有很多，我们将在本系列的第二部分继续进行探索。 探索这些概念：连接真实节点、智能合约和代币， 仍有后续问题？ 请告诉我！ 您的反馈对我们今后的学习至关重要！ 欢迎通过 [Twitter](https://twitter.com/wolovim) 与我联系。

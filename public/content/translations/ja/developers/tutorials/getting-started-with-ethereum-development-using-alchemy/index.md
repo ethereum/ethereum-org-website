@@ -21,11 +21,11 @@ sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-developm
 
 このチュートリアルでは、Alchemy にサインアップする方法から、最初の web3 スクリプトを作成するまでを学習します。 ブロックチェーンの開発経験は必要ありません！
 
-## 1. 無料の Alchemy アカウントにサインアップする {#sign-up-for-a-free-alchemy-account}
+## 1. 無料の Alchemy アカウントにサインアップする \{#sign-up-for-a-free-alchemy-account}
 
 Alchemy のアカウントを作成するのは簡単です。 [こちら](https://auth.alchemyapi.io/signup)から無料でサインアップしてください。
 
-## 2. Alchemy アプリを作成する {#create-an-alchemy-app}
+## 2. Alchemy アプリを作成する \{#create-an-alchemy-app}
 
 イーサリアムチェーンと通信し、Alchemy 製品を使用するには、あなたのリクエストを認証するための API キーが必要になります。
 
@@ -43,7 +43,7 @@ API キーは、[ダッシュボード](http://dashboard.alchemyapi.io/)で作�
 
 ![APIキーの取得方法をユーザーに表示するGIF画像](./pull-api-keys.gif)
 
-## 3. コマンドラインでリクエストを作成する {#make-a-request-from-the-command-line}
+## 3. コマンドラインでリクエストを作成する \{#make-a-request-from-the-command-line}
 
 JSON-RPC と curl を使用して、Alchemy 経由でイーサリアムブロックチェーンとのやり取りを行います。
 
@@ -71,7 +71,7 @@ _**注意：** [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.a
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
-## 4. Web3 クライアントを設定する {#set-up-your-web3-client}
+## 4. Web3 クライアントを設定する \{#set-up-your-web3-client}
 
 **すでにクライアントをインストール済みの場合は、** 現在のノードプロバイダーの URL を、API キーを含む Alchemy の URL（ `"https://eth-mainnet.alchemyapi.io/v2/your-api-key"`など）に変更します。
 
@@ -102,7 +102,7 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
-## 5. はじめての Web3 スクリプトを作成しましょう！ {#write-your-first-web3-script}
+## 5. はじめての Web3 スクリプトを作成しましょう！ \{#write-your-first-web3-script}
 
 それではさっそく、実際に web3 のプログラミングを始めましょう。まずは、イーサリアム・メインネットにおける最新のブロック番号を出力する簡単なスクリプトを作成します。
 

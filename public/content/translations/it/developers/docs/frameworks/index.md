@@ -4,7 +4,7 @@ description: Scopri Esplora i vantaggi dei framework e confronta le opzioni disp
 lang: it
 ---
 
-## Introduzione ai framework {#introduction-to-frameworks}
+## Introduzione ai framework \{#introduction-to-frameworks}
 
 Sviluppare una dapp completa richiede diverse tecnologie. I framework software includono molte delle funzionalità necessarie oppure offrono semplici plugin per scegliere gli strumenti richiesti.
 
@@ -16,11 +16,11 @@ I framework sono già dotati di molte funzionalità, come:
 - Configurazione per connettersi a reti Ethereum e distribuire contratti, a un'istanza locale o a una delle reti pubbliche di Ethereum.
 - Distribuzione di app decentralizzate - integrazioni con opzioni di archiviazione come IPFS.
 
-## Prerequisiti {#prerequisites}
+## Prerequisiti \{#prerequisites}
 
 Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra introduzione alle [dApp](/developers/docs/dapps/) e allo [stack di Ethereum](/developers/docs/ethereum-stack/).
 
-## Framework disponibili {#available-frameworks}
+## Framework disponibili \{#available-frameworks}
 
 **Truffle:** **_ ambiente di sviluppo, framework di test, pipeline di sviluppo e altri strumenti_**
 
@@ -102,10 +102,10 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 _Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
-## Argomenti correlati {#related-topics}
+## Argomenti correlati \{#related-topics}
 
 - [Configura un ambiente di sviluppo locale](/developers/local-environment/)

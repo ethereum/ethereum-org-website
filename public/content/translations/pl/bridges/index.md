@@ -4,13 +4,15 @@ description: Mosty pozwalają użytkownikom przenosić swoje środki pomiędzy r
 lang: pl
 ---
 
-# Mosty blockchain {#prerequisites}
+# Mosty blockchain \{#prerequisites}
 
 _Web3 przekształcił się w ekosystem blockchainów warstwy 1 i rozwiązań skalujących warstwy 2, z których każdy ma unikalne możliwości i kompromisy. Wraz ze wzrostem liczby protokołów blockchain, rośnie [zapotrzebowanie na przenoszenie aktywów pomiędzy łańcuchami](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Aby zaspokoić to zapotrzebowanie, potrzebujemy mostów._
 
+{
 <Divider />
+}
 
-## Czym są mosty? {#what-are-bridges}
+## Czym są mosty? \{#what-are-bridges}
 
 Mosty blockchain działają podobnie jak mosty znane nam w świecie fizycznym. Tak jak fizyczny most łączy dwie fizyczne lokalizacje, most blockchain łączy dwa ekosystemy blockchain. Mosty ułatwiają komunikację pomiędzy blockchainami poprzez transfer informacji i aktywów.
 
@@ -20,7 +22,7 @@ Jesteś z USA i planujesz podróż do Europy. Masz USD, ale potrzebujesz EUR do 
 
 Ale co zrobić, jeśli chcesz dokonać podobnej wymiany, aby użyć innego blockchainu? Powiedzmy, że chcesz wymienić ETH na sieci głównej Ethereum na ETH na [Arbitrum](https://arbitrum.io/). Podobnie jak w przypadku wymiany walut na EUR potrzebujemy mechanizmu umożliwiającego przeniesienie ETH z Ethereum do Arbitrum. I właśnie mosty umożliwia taką transakcję. W tym przypadku [Arbitrum ma natywny most](https://bridge.arbitrum.io/) , który może przenieść ETH z sieci głównej do Arbitrum.
 
-## Dlaczego potrzebujemy mostów? {#why-do-we-need-bridges}
+## Dlaczego potrzebujemy mostów? \{#why-do-we-need-bridges}
 
 Wszystkie blockchainy mają swoje ograniczenia. Aby Ethereum mogło się skalować i nadążać za popytem, wymagane były pakiety zbiorcze. Alternatywnie, warstwy 1 takie jak Solana i Avalanche, są zaprojektowane inaczej, aby umożliwić wyższą przepustowość, ale kosztem decentralizacji.
 
@@ -37,25 +39,27 @@ Mosty umożliwiają:
 
 [Jak zmostkować tokeny do warstwy 2](/guides/how-to-use-a-bridge/)
 
+{
 <Divider />
+}
 
-## Przypadki użycia mostów {#bridge-use-cases}
+## Przypadki użycia mostów \{#bridge-use-cases}
 
 Poniżej znajdują się niektóre scenariusze, w których możesz użyć mostu:
 
-### Niższe opłaty transakcyjne {#transaction-fees}
+### Niższe opłaty transakcyjne \{#transaction-fees}
 
 Powiedzmy, że masz ETH na sieci głównej Ethereum, ale chcesz tańszych opłat za transakcje, aby przejrzeć i wypróbować różne zdecentralizowane aplikacje. Przenosząc swoje ETH z sieci głównej do pakietu zbiorczego warstwy 2 Ethereum, możesz cieszyć się niższymi opłatami transakcyjnymi.
 
-### Zdecentralizowane aplikacje na innych blockchainach {#dapps-other-chains}
+### Zdecentralizowane aplikacje na innych blockchainach \{#dapps-other-chains}
 
 Jeśli używałeś Aave w sieci głównej Ethereum do pożyczania USDT, ale stopa procentowa za pożyczanie USDT za pomocą Aave na Polygon jest wyższa.
 
-### Odkryj ekosystemy blockchainów {#explore-ecosystems}
+### Odkryj ekosystemy blockchainów \{#explore-ecosystems}
 
 Jeśli posiadasz ETH w sieci głównej Ethereum i chcesz odkryć alternatywną warstwę 1, aby wypróbować ich natywne dapps. Możesz użyć mostu, aby przenieść swoje ETH z sieci głównej Ethereum do alternatywnej warstwy 1.
 
-### Posiadaj natywne aktywa kryptograficzne {#own-native}
+### Posiadaj natywne aktywa kryptograficzne \{#own-native}
 
 Załóżmy, że chcesz posiadać natywny Bitcoin (BTC), ale masz środki tylko w sieci głównej Ethereum. Aby uzyskać ekspozycję na BTC na Ethereum, możesz kupić Wrapped Bitcoin (WBTC). WBTC jest jednak tokenem ERC-20 natywnym dla sieci Ethereum, co oznacza, że jest to wersja Bitcoina w Ethereum, a nie oryginalne aktywo w blockchainie Bitcoina. Aby posiadać natywne BTC, musiałbyś połączyć swoje aktywa z Ethereum do Bitcoina za pomocą mostu. Spowoduje to zmostkowanie WBTC i przekształcenie go w natywny BTC. Alternatywnie, możesz posiadać BTC i chcieć wykorzystać go w protokołach DeFi Ethereum. Wymagałoby to mostkowania w drugą stronę, z BTC do WBTC, który można następnie wykorzystać jako aktywa na Ethereum.
 
@@ -63,9 +67,11 @@ Załóżmy, że chcesz posiadać natywny Bitcoin (BTC), ale masz środki tylko w
   Wszystkie powyższe czynności można również wykonać za pomocą <a href="/get-eth/">scentralizowanej giełdy</a>. Jeśli jednak Twoje środki nie znajdują się już na giełdzie, wymagałoby to wielu kroków i prawdopodobnie lepiej byłoby skorzystać z mostu.
 </InfoBanner>
 
+{
 <Divider />
+}
 
-## Rodzaje mostów {#types-of-bridge}
+## Rodzaje mostów \{#types-of-bridge}
 
 Mosty mają wiele rodzajów konstrukcji i zawiłości. Ogólnie rzecz biorąc, mosty dzielą się na dwie kategorie: mosty zaufane i mosty niewymagające zaufania.
 
@@ -93,9 +99,11 @@ Samodzielna odprawa jest podobna do modelu bez zaufania, ponieważ eliminuje rol
 
 Wiele rozwiązań mostowych przyjmuje modele pomiędzy tymi dwoma skrajnościami z różnym stopniem braku zaufania.
 
+{
 <Divider />
+}
 
-## Ryzyko korzystania z mostów {#bridge-risk}
+## Ryzyko korzystania z mostów \{#bridge-risk}
 
 Mosty są we wczesnej fazie rozwoju. Jest prawdopodobne, że optymalny projekt mostu nie został jeszcze odkryty. Interakcja z każdym rodzajem mostu wiąże się z ryzykiem:
 
@@ -119,9 +127,11 @@ Jedno z ostatnich włamań było na moście Solana przy użyciu Wormhole, [gdzie
 
 Mosty mają kluczowe znaczenie dla wdrażania użytkowników do Ethereum, a nawet dla użytkowników, którzy chcą odkrywać różne ekosystemy. Biorąc jednak pod uwagę ryzyko związane z interakcją z mostami, użytkownicy muszą rozumieć kompromisy, jakie mosty podejmują. Oto kilka [strategii bezpieczeństwa międzyłańcuchowych](https://blog.debridge.finance/10-strategies-for-cross-chain-security-8ed5f5879946).
 
+{
 <Divider />
+}
 
-## Dodatkowo przeczytaj {#further-reading}
+## Dodatkowo przeczytaj \{#further-reading}
 
 - [EIP-5164: Wykonanie międzyłańcuchowe](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 czerwca 2022 r. — Brendan Asselstine_
 - [Ramy ryzyka L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 lipca 2022 r. — Bartek Kiepuszewski_

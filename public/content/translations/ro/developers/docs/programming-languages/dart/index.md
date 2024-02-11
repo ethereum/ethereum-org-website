@@ -5,9 +5,9 @@ lang: ro
 incomplete: true
 ---
 
-## Noțiuni de bază despre contractele inteligente și limbajul Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Noțiuni de bază despre contractele inteligente și limbajul Solidity \{#getting-started-with-smart-contracts-and-solidity}
 
-## Tutoriale {#tutorials}
+## Tutoriale \{#tutorials}
 
 - [Flutter și Blockchain – Aplicația dapp „Hello World”](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) vă conduce prin toate etapele, pentru început:
   1.  Instalarea [suitei de dezvoltare Truffle](https://www.trufflesuite.com/)
@@ -18,7 +18,7 @@ incomplete: true
 - Dacă sunteți nerăbdător, probabil preferați [Construirea unei aplicații blockchain descentralizate cu Flutter și Dart pe Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), care durează doar circa douăzeci de minute
 - [Integrarea MetaMask în aplicația Flutter](https://youtu.be/8qzVDje3IWk) - acest scurt videoclip vă conduce prin etapele de integrare a MetaMask în aplicaţiile dvs. Flutter.
 
-## Cum se lucrează cu clienții Ethereum {#working-with-ethereum-clients}
+## Cum se lucrează cu clienții Ethereum \{#working-with-ethereum-clients}
 
 Puteți folosi Ethereum pentru a crea aplicații descentralizate (sau „dapp-uri”) care folosesc atât beneficiile criptomonedelor, cât și ale tehnologiei blockchain. Sunt întreţinute cel puțin două biblioteci actualmente pentru ca Dart să utilizeze [API-ul JSON RPC](/developers/docs/apis/json-rpc/) pentru Ethereum.
 

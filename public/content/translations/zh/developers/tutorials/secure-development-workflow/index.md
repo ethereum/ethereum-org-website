@@ -13,7 +13,7 @@ source: 构建安全的合约
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
-## 智能合约开发清单 {#smart-contract-development-checklist}
+## 智能合约开发清单 \{#smart-contract-development-checklist}
 
 这是一个高级别的过程，我们建议在您编写智能合约时遵循。
 
@@ -49,7 +49,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 - 加密操作
 - 与外部 DeFi 组件的风险互动
 
-## 寻求帮助 {#ask-for-help}
+## 寻求帮助 \{#ask-for-help}
 
 [以太坊的办公时间](https://calendly.com/dan-trailofbits/ethereum-office-hours)为每周二下午。 这些 1 小时的 1 对 1 会议是一个机会，您可以向我们询问有关安全的任何问题，使用我们的工具进行故障排除，并获得专家对您当前方法的反馈。 我们将帮助您消化本指南。
 

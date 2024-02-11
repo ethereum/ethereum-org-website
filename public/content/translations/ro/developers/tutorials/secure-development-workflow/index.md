@@ -13,7 +13,7 @@ source: Construirea de contracte securizate
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
-## Lista de verificare pentru dezvoltarea contractelor inteligente {#smart-contract-development-checklist}
+## Lista de verificare pentru dezvoltarea contractelor inteligente \{#smart-contract-development-checklist}
 
 Iată un proces în linii mari pe care vă recomandăm să îl urmați pentru scrierea contractelor inteligente.
 
@@ -49,7 +49,7 @@ Documentați proprietățile de securitate de importanță majoră și utilizaț
 - Operațiuni criptografice
 - Interacțiuni riscante cu componente externe DeFi
 
-## Solicitați ajutor {#ask-for-help}
+## Solicitați ajutor \{#ask-for-help}
 
 [Biroul Ethereum este deschis](https://calendly.com/dan-trailofbits/ethereum-office-hours) în fiecare marți după-amiază. Aceste sesiuni individuale de 1 oră reprezintă ocazia să ne puneți orice întrebări despre securitate și depanare cu instrumentele noastre, precum și să primiți feedback de la experți cu privire la abordarea dvs. actuală. Vă vom ajuta să parcurgeți acest ghid.
 

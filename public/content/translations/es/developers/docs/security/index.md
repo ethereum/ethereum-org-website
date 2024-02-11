@@ -10,19 +10,19 @@ Los contratos Inteligentes de Ethereum son extremadamente flexibles, capaces de 
 - [Problema de paridad multi-sig #2: $300M bloqueados](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [TheDAO hack, 3.6M ETH! Más de $1B en los precios ETH de hoy](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos \{#prerequisites}
 
 Esto cubrirá la seguridad de los contratos inteligentes, así que asegúrate de que estás familiarizado con los [contratos inteligentes](/developers/docs/smart-contracts/) antes de abordar la seguridad.
 
-## Cómo escribir un código de contrato inteligente más seguro {#how-to-write-more-secure-smart-contract-code}
+## Cómo escribir un código de contrato inteligente más seguro \{#how-to-write-more-secure-smart-contract-code}
 
 Antes de lanzar cualquier código para la red principal, es importante tomar las precauciones suficientes para proteger cualquier recurso de valor que se confíe a su contrato inteligente. En este artículo abordaremos algunos ataques específicos, proporcionaremos recursos para aprender sobre más tipos de ataque y te informaremos acerca de algunas herramientas básicas y prácticas recomendadas para asegurarte de que tus contratos funcionen de forma correcta y segura.
 
-## Las auditorías no siempre son milagrosas {#audits-are-not-a-silver-bullet}
+## Las auditorías no siempre son milagrosas \{#audits-are-not-a-silver-bullet}
 
 Hace algunos años, las herramientas para escribir, compilar, probar e implementar contratos inteligentes eran muy nuevas, lo que llevó a muchos proyectos a escribir código de Solidity de maneras imprecisas. A continuación, se lo mostraban a un auditor para que investigase el código y garantizase que funcionaría con el nivel de seguridad esperado. En 2020, los procesos de desarrollo y las herramientas que apoyan la redacción con Solidity son significativamente mejores. Aprovechar estas prácticas recomendadas no solo asegura que tu proyecto sea más fácil de gestionar, sino que es una parte vital de la seguridad de tu proyecto. Una auditoría al final de la escritura de tu contrato inteligente ya no basta como única consideración de seguridad. La seguridad comienza antes de escribir la primera línea de código del contrato inteligente, **la seguridad comienza con el diseño y los procesos de desarrollo adecuados**.
 
-## Proceso de desarrollo de contratos inteligentes {#smart-contract-development-process}
+## Proceso de desarrollo de contratos inteligentes \{#smart-contract-development-process}
 
 Como mínimo:
 
@@ -42,11 +42,11 @@ Hay mucho más que decir sobre el proceso de desarrollo, pero estos puntos confo
 - Permite a los desarrolladores iterar, probar y obtener comentarios sobre las modificaciones
 - Es menos probable que tu proyecto experimente regresiones
 
-## Ataques y vulnerabilidades {#attacks-and-vulnerabilities}
+## Ataques y vulnerabilidades \{#attacks-and-vulnerabilities}
 
 Ahora que estás escribiendo código de Solidity mediante un proceso de desarrollo eficiente, veamos algunas vulnerabilidades comunes de Solidity para ver qué puede fallar.
 
-### Re-entrancy {#re-entrancy}
+### Re-entrancy \{#re-entrancy}
 
 El ''Re-entrancy'' es uno de los mayores y más importantes problemas de seguridad a tener en cuenta al desarrollar contratos inteligentes. Mientras que la EVM no puede ejecutar varios contratos al mismo tiempo, un contrato que llama a un contrato diferente pausa el estado de ejecución y memoria del contrato de llamada hasta que la llamada regrese, en cuyo punto la ejecución continúa normalmente. Esta pausa y el consiguiente reinicio puede crear una vulnerabilidad conocida como "Re-entrancy".
 
@@ -116,7 +116,7 @@ Al llamar a Attacker.beginAttack(), se iniciará un ciclo que se parecerá a lo 
 
 Llamar al Attacker.beginAttack con 1 ETH hará que vuelva a entrar el ataque a la Víctima, extrayendo más ETH del proporcionado (tomado de los balances de otros usuarios, causando que el contrato de la Víctima sea sub-colateralizado)
 
-### Cómo lidiar con la reentrada (la forma incorrecta) {#how-to-deal-with-re-entrancy-the-wrong-way}
+### Cómo lidiar con la reentrada (la forma incorrecta) \{#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Uno podría considerar derrotar la reentrada simplemente impidiendo que cualquier contrato inteligente interactúe con tu código. Si buscas stackoverflow, encuentras el segmento de código con muchos votos positivos:
 
@@ -185,7 +185,7 @@ require(tx.origin == msg.sender)
 
 Sin embargo, esta todavía no es una buena solución. Uno de los aspectos más emocionantes de Ethereum es su composición, los contratos inteligentes se integran y construyen entre sí. Al usar la línea de arriba, estás limitando la utilidad de tu proyecto.
 
-### Cómo lidiar con la re-entrada (la forma correcta) {#how-to-deal-with-re-entrancy-the-right-way}
+### Cómo lidiar con la re-entrada (la forma correcta) \{#how-to-deal-with-re-entrancy-the-right-way}
 
 Simplemente cambiando el orden de la actualización de almacenamiento y llamada externa, prevenimos la condición de re-entrada que permitió el ataque. Pedir de nuevo el retiro, si es posible, no beneficiaría al atacante, ya que el almacenamiento de `balances` estará establecido en 0.
 
@@ -202,11 +202,11 @@ contract NoLongerAVictim {
 
 El código anterior sigue el patrón de diseño "Chequeo-Efectos-Interacciones", el cual ayuda a proteger contra re-entrada. Puedes [leer más acerca de Chequeo-Efectos-Interacciones aquí](https://fravoll.github.io/solidity-patterns/checks_effects_interactions.html)
 
-### Cómo lidiar con la re-entrada (la forma incorrecta) {#how-to-deal-with-re-entrancy-the-nuclear-option}
+### Cómo lidiar con la re-entrada (la forma incorrecta) \{#how-to-deal-with-re-entrancy-the-nuclear-option}
 
 Cada vez que estás enviando ETH a una dirección no confiable, o interactuando con un contrato desconocido (tal como llamar a `transferir()` de una dirección de token provista por un usuario), te abres a ti mismo a la posibilidad de re-entrada. **Al diseñar contratos que no envían ETH ni llaman contratos no confiables, previenes la posibilidad de que se produzca una re-entrada.**
 
-## Más tipos de ataques {#more-attack-types}
+## Más tipos de ataques \{#more-attack-types}
 
 Los tipos de ataques anteriores cubren problemas de codificación de contrato inteligente (de re-entrada) y las peculiaridades de Ethereum (ejecutar códigos dentro de constructores de contratos, antes de que el código esté disponible en la dirección del contrato). Existen muchos más ataques a los que se debe prestar atención, por ejemplo:
 
@@ -219,11 +219,11 @@ Más información:
 - [Ataques conocidos del contrato inteligente Consensys](https://consensys.github.io/smart-contract-best-practices/attacks/): Una explicación bastante legible de las más significativas vulnerabilidades, con código de ejemplo para muchos.
 - [Registro SWC](https://swcregistry.io/docs/SWC-128): Lista curada de los CWE que aplican para Ethereum y los contratos inteligentes
 
-## Herramientas de seguridad {#security-tools}
+## Herramientas de seguridad \{#security-tools}
 
 Aunque no hay sustituto para entender los conceptos básicos de seguridad de Ethereum y comprometer a una empresa de auditoría profesional para revisar su código, hay muchas herramientas disponibles para ayudarte a diagnosticar los posibles problemas de tu código.
 
-### Seguridad de contratos inteligentes {#smart-contract-security}
+### Seguridad de contratos inteligentes \{#smart-contract-security}
 
 **Slither:** **_Entorno de trabajo de análisis estático de Solidity escrito en Python 3._**
 
@@ -254,14 +254,14 @@ Aunque no hay sustituto para entender los conceptos básicos de seguridad de Eth
 - [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
 - [Foro](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
 
-### Verificación formal {#formal-verification}
+### Verificación formal \{#formal-verification}
 
 **Información sobre la verificación formal**
 
 - [Cómo funciona la verificación formal en los contratos inteligentes](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/), _20 de julio 2018, Brian Marick_
 - [Cómo puede la verificación formal garantizar la perfección de los contratos inteligentes](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1), _29 de enero 2018, Bernard Mueller_
 
-### Uso de herramientas {#using-tools}
+### Uso de herramientas \{#using-tools}
 
 Dos de las herramientas más populares para el análisis de seguridad de contratos inteligentes son:
 
@@ -304,7 +304,7 @@ Slither ha identificado la re-entrada potencial aquí, mediante la identificaci�
 
 permitiéndote conocer rápidamente los posibles problemas de tu código. Al igual que todas las herramientas de pruebas automatizadas, Slither no es perfecta y peca de informar demasiado. Puede advertir sobre una posible reentrada, incluso cuando no existe una vulnerabilidad explotable. A menudo, revisar la DIFERENCIA en la salida de Slither entre los cambios de código es extremadamente esclarecedor, ya que contribuye a descubrir las vulnerabilidades que se introdujeron mucho antes sin tener que esperar hasta que el código de tu proyecto esté completo.
 
-## Más lectura {#further-reading}
+## Más lectura \{#further-reading}
 
 **Guía de prácticas recomendadas de seguridad para contratos inteligentes**
 
@@ -318,7 +318,7 @@ permitiéndote conocer rápidamente los posibles problemas de tu código. Al igu
 
 _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
 
-## Tutoriales relacionados {#related-tutorials}
+## Tutoriales relacionados \{#related-tutorials}
 
 - [Flujo de trabajo de desarrollo seguro](/developers/tutorials/secure-development-workflow/)
 - [Cómo utilizar Slither para encontrar errores en contratos inteligentes](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)

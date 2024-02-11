@@ -6,21 +6,21 @@ lang: es
 
 La prueba de participación (PoS) subyace al [mecanismo de consenso](/developers/docs/consensus-mechanisms/) de Ethereum. Ethereum cambió su mecanismo de prueba de participación en 2022 porque es más seguro, consume menos energía y resulta más apropiado para implementar nuevas soluciones de escalabilidad en comparación con la arquitectura anterior de la [prueba de trabajo](/developers/docs/consensus-mechanisms/pow).
 
-## Requisitos previos {#prerequisites}
+## Requisitos previos \{#prerequisites}
 
 Para comprender mejor esta página, te recomendamos que primero leas los [mecanismos de consenso](/developers/docs/consensus-mechanisms/).
 
-## ¿Qué es la prueba de participación (PoS)? {#what-is-pos}
+## ¿Qué es la prueba de participación (PoS)? \{#what-is-pos}
 
 La prueba de participación es la manera de probar que los validadores han puesto algo de valor en la red y que puede destruirse si actúan deshonestamente. En la prueba de participación de Ethereum, los validadores explícitamente apuestan capital en forma de ETH en un contrato inteligente en Ethereum. Así pues, el validador es responsable de verificar la validez de los nuevos bloques propagados por la red y, en ciertas circunstancias, de crear y propagar nuevos bloques. Si ellos intentan estafar a la red (por ejemplo al proponer múltiples bloques cuando deberían enviar uno o enviar certificaciones contradictorias), algunas o todas sus apuestas en ETH se pueden destruir.
 
-## Validadores {#validators}
+## Validadores \{#validators}
 
 Para participar como validador, un usuario debe de depositar 32 ETH en el contrato de depósito y ejecutar tres piezas de software de manera separada: un cliente de ejecución, un cliente de consenso y un cliente validador. Al depositar sus ETH, el usuario se une a una cola de activación que limita el número de nuevos validadores que se unen a la red. Una vez habilitados, los validadores reciben nuevos bloques de sus pares en la red de Ethereum. Las transacciones entregadas en el bloque se vuelven a ejecutar para comprobar que los cambios propuestos en los estados de Ethereum sean válidos, y se compruebe la firma del bloque. Luego, el validador envía un voto (denominado certificación) a favor de dicho bloque en la red.
 
 En la prueba de trabajo (PoW) el tiempo de los bloques se determinaba por la dificultad de minado, mientras que en la prueba de participación (PoS) el tiempo es predeterminado. En la prueba de participación (PoS) de Ethereum, el tiempo se divide en ranuras (12 segundos) y épocas (32 ranuras). Se selecciona de manera aleatoria a un validador para que proponga un bloque en cada ranura. Este validador será responsable de crear un nuevo bloque y de enviarlo a otro nodo de la red. Por otra parte, se escoge de manera aleatoria a un comité de validadores para cada ranura, cuyos votos se utilizarán para determinar la validez del bloque propuesto. Dividir la configuración del validador en comités es importante para mantener la carga de la red manejable. Los comités dividen el conjunto de validadores para que todos los validadores activos certifiquen en cada época, pero no en todas las ranuras.
 
-## Cómo se ejecutan las transacciones en la PoS de Ethereum {#transaction-execution-ethereum-pos}
+## Cómo se ejecutan las transacciones en la PoS de Ethereum \{#transaction-execution-ethereum-pos}
 
 La siguiente explicación detalla íntegramente cómo se ejecuta una transacción en la prueba de participación de Ethereum.
 
@@ -33,23 +33,23 @@ La siguiente explicación detalla íntegramente cómo se ejecuta una transacció
 
 En la siguiente sección se detalla la finalidad.
 
-## Finalidad {#finality}
+## Finalidad \{#finality}
 
 Una transacción tiene la «finalidad» de distribuir redes cuando no se puede cambiar una parte del bloque sin que se queme una gran cantidad de ETH. Con la prueba de participación de Ethereum, esto se resuelve utilizando bloques de «puntos de control». El primer bloque de cada época será un punto de control. Los validadores votan por los pares de puntos que consideran válidos. Si un par de puntos de control atrae votos que representan al menos dos tercios del total de ETH apostado, los puntos de control se actualizan. El más reciente entre ambos (objetivo) se convierte en «justificado». El primero de los dos de por sí ya está justificado al ser el «objetivo» de la época anterior. Ahora se ha clasificado como «finalizado».
 
 Para revertir un bloque finalizado, un atacante se comprometería a perder al menos un tercio del total de ETH apostado. La razón exacta de esto se explica en esta [publicación del blog de Ethereum Fondation](https://blog.ethereum.org/2016/05/09/on-settlement-finality/). Ya que la finalización requiere una mayoría de dos tercios, un atacante podría evitar que se alcance la finalización en la red al votar con un tercio de la apuesta total. Existe un mecanismo de defensa contra esto: el [filtro de inactividad](https://eth2book.info/bellatrix/part2/incentives/inactivity). Este se activa cada vez que la cadena no logra finalizar tras más de cuatro épocas. El filtro de inactividad diluye el ETH en reserva de los validadores que han votado contra la mayoría, permitiendo así que la mayoría logre recuperar los dos tercios para finalizar la cadena.
 
-## Seguridad criptoeconómica {#crypto-economic-security}
+## Seguridad criptoeconómica \{#crypto-economic-security}
 
 Hacer de validador significa adoptar un firme compromiso. Se espera que el validador cuente con el hardware y la conectividad suficientes para participar en la validación y propuesta de bloques. A cambio, el validador recibirá un pago en ETH (haciendo que su saldo de participación aumente). Por otra parte, al participar como validador también se abren nuevos caminos para que ciertos usuarios ataquen la red en busca de beneficios propios o sabotajes. Para evitarlo, los validadores perderán las recompensas en ETH cuando no participen tras haber sido asignados, así como también se podrá destruir el ETH de sus participaciones ante malas conductas. Dos principales comportamientos pueden considerarse deshonestos: proponer múltiples bloques en un solo espacio (equivocación) y presentar certificaciones contradictorias.
 
 La cantidad de ETH recortados dependerá del número de validadores que se vean afectados en ese preciso momento. Esto se conoce como [«penalización por correlación»](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty), que podrá ser inferior (~1% de reducción del fondo de garantía para un solo validador) o incluso puede resultar en la destrucción del 100 % de la garantía del validador (evento masivo de recortes). Se podrá imponer a mitad del proceso un período de salida forzosa con una penalización inmediata (de hasta 1 ETH) el primer día, la penalización por correlación el 18.º día y, por último, la expulsión de la red el 36.º día. Recibirán multas por certificaciones menores a diario al estar presentes en la red sin participar en las votaciones. Esto significaría que un ataque coordinado podría resultar muy costoso para el atacante.
 
-## Selección de bifurcación {#fork-choice}
+## Selección de bifurcación \{#fork-choice}
 
 Cuando la red opera de manera óptima y honesta, solo habrá un nuevo bloque en la cabeza de la cadena y todos los validadores lo certifican. A pesar de ello, existe la posibilidad de que los validadores tengan diferentes puntos de vista en relación con la cabeza de la cadena debido a latencias en la red o ante la equivocación de un proponente de bloque. Por este motivo, se requiere de un algoritmo para que los clientes de consenso puedan decidir a cuál favorecer. El algoritmo empleado en la prueba de participación de Ethereum se llama [LMD-GHOST](https://arxiv.org/pdf/2003.03052.pdf), y opera identificando la bifurcación que tenga la mayor cantidad de certificaciones en su historial.
 
-## Prueba de participación y seguridad {#pos-and-security}
+## Prueba de participación y seguridad \{#pos-and-security}
 
 La amenaza de un [ataque del 51 %](https://www.investopedia.com/terms/1/51-attack.asp) aún está presente en la prueba de participación, al igual que en la prueba de trabajo, solo que ahora es incluso más peligroso para los atacantes. Un atacante necesitará el 51 % del ETH apostado como garantía. Luego podrían hacer uso de sus certificaciones para asegurar que la bifurcación que han elegido sea la que acumula la mayor cantidad de certificaciones. El «peso» de las certificaciones acumuladas lo utilizan los clientes de consenso para determinar cuál es la cadena correcta, por lo que este atacante podría ser capaz de convertir su bifurcación en la predilecta. Sin embargo, una ventaja que la prueba de participación (PoS) tiene frente a la prueba de trabajo (PoW) es que la comunidad cuenta con la flexibilidad de perpetrar un contraataque. Por ejemplo, los validadores honestos podrán optar por seguir construyendo en la cadena minoritaria, ignorando la bifurcación del atacante e invitando a las aplicaciones, intercambios y reservas de liquidez a actuar en consecuencia. También tendrían la posibilidad de eliminar de la red al atacante de manera forzosa, así como destruir su ETH apostado. Estas son defensas económicas sólidas contra un ataque del 51 %.
 
@@ -57,7 +57,7 @@ Los ataques del 51 % son solo una de las actividades malintencionadas en la red.
 
 En conjunto, la prueba de participación, tal como ha sido implementada en Ethereum, demuestra tener mayor seguridad económica que la prueba de trabajo.
 
-## Ventajas y desventajas {#pros-and-cons}
+## Ventajas y desventajas \{#pros-and-cons}
 
 | Ventajas                                                                                                                                                                                                                                                                                    | Desventajas                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
@@ -66,7 +66,7 @@ En conjunto, la prueba de participación, tal como ha sido implementada en Ether
 | La prueba de participación ofrece mayor seguridad criptoeconómica en comparación con la prueba de trabajo.                                                                                                                                                                                  | Los usuarios deben ejecutar tres piezas de software distintas para poder participar en la prueba de participación de Ethereum. |
 | Se requiere una menor emisión de nuevos ETH para incentivar a los participantes de la red.                                                                                                                                                                                                  |                                                                                                                                |
 
-### Comparación con la prueba de trabajo {#comparison-to-proof-of-work}
+### Comparación con la prueba de trabajo \{#comparison-to-proof-of-work}
 
 Ethereum no siempre ha sido una red de prueba de participación. Cuando Ethereum empezó, se usaba la prueba de trabajo. El cambio de la prueba de trabajo a la prueba de participación ocurrió en septiembre 2022. La prueba de participación tiene beneficios sobre la prueba de trabajo:
 
@@ -77,7 +77,7 @@ Ethereum no siempre ha sido una red de prueba de participación. Cuando Ethereum
 - Las sanciones económicas por mala conducta hacen que los ataques, como el del 51 % por ejemplo, sean más costosos para un atacante en comparación con la prueba de trabajo.
 - La comunidad puede recurrir al rescate social de una cadena honesta ante un ataque del 51 % realizado para superar las defensas criptoeconómicas.
 
-## Más información {#further-reading}
+## Más información \{#further-reading}
 
 - [Preguntas frecuentes sobre la prueba de participación](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Qué es la prueba de participación](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
@@ -88,6 +88,6 @@ Ethereum no siempre ha sido una red de prueba de participación. Cuando Ethereum
 - [Filosofía de diseño de las pruebas de participación](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 - [Video: Vitalik Buterin explica la prueba de participación a Lex Fridman](https://www.youtube.com/watch?v=3yrqBG-7EVE)
 
-## Temas relacionados {#related-topics}
+## Temas relacionados \{#related-topics}
 
 - [Prueba de trabajo](/developers/docs/consensus-mechanisms/pow/)

@@ -6,7 +6,7 @@ lang: zh
 
 当建立一个[集成开发环境](https://wikipedia.org/wiki/Integrated_development_environment)时，以太坊上的应用编程类似于任何其他软件项目编程。 这里有许多选项可供选择，最后，请选择一个最适合您偏好的集成开发环境或代码编辑器。 对您的以太坊开发来说，最好的集成开发环境很可能就是您在传统软件开发中使用过的集成开发环境。
 
-## 基于网络的集成开发环境 {#web-based-ides}
+## 基于网络的集成开发环境 \{#web-based-ides}
 
 如果您想在[设置本地开发环境](/developers/local-environment/)之前摆弄一下代码，这些网络应用是为以太坊智能合约开发定制的。
 
@@ -30,7 +30,7 @@ lang: zh
 
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
-## 桌面 IDE {#desktop-ides}
+## 桌面 IDE \{#desktop-ides}
 
 大多数成熟的集成开发环境都包含增强以太坊开发体验的插件。 至少，它们能为[智能合约语言](/developers/docs/smart-contracts/languages/)提供语法突出显示。
 
@@ -58,13 +58,13 @@ lang: zh
 - [下载](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
-## 插件与扩展 {#plugins-extensions}
+## 插件与扩展 \{#plugins-extensions}
 
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - 面向 Visual Studio Code 的以太坊 Solidity 语言
 - [面向 VS Code 的 Solidity + 安全帽](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - 安全帽团队提供 Solidity 和安全帽支持
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - 使用 Prettier 的代码格式化工具
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [以太坊集成开发环境 (IDE)](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy 提供的以太坊 IDE 列表_
 

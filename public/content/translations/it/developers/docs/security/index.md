@@ -10,19 +10,19 @@ Gli Smart Contract Ethereum sono estremamente flessibili, in grado di contenere 
 - [Problema 2 relativo a multi-sig Parity: bloccati 300 milioni di dollari](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [The DAO hack, 3,6 milioni di ETH! Oltre un miliardo di dollari in base al prezzo attuale dell'ETH](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
-## Prerequisiti {#prerequisites}
+## Prerequisiti \{#prerequisites}
 
 Parleremo della sicurezza degli Smart Contract quindi assicurati di avere familiarità con gli [Smart Contract](/developers/docs/smart-contracts/) prima di affrontare questo argomento.
 
-## Come scrivere codice più sicuro per gli Smart Contract {#how-to-write-more-secure-smart-contract-code}
+## Come scrivere codice più sicuro per gli Smart Contract \{#how-to-write-more-secure-smart-contract-code}
 
 Prima di eseguire codice sulla rete principale, è importante prendere sufficienti precauzioni per proteggere le risorse di valore associate allo Smart Contract. In questo articolo parleremo di alcuni attacchi specifici, suggeriremo risorse per saperne di più su altri tipi di attacco e indicheremo alcuni strumenti di base e le best practice per garantire il funzionamento corretto e sicuro dei contratti.
 
-## Gli audit non sono infallibili {#audits-are-not-a-silver-bullet}
+## Gli audit non sono infallibili \{#audits-are-not-a-silver-bullet}
 
 Anni fa, gli strumenti per scrivere, compilare, testare e distribuire Smart Contract erano molto immaturi, e di conseguenza molti progetti includevano codice Solidity scritto a caso che veniva poi passato a un auditor che lo esaminava per garantire che funzionasse in modo sicuro e come previsto. Nel 2020, i processi di sviluppo e gli strumenti che supportano la scrittura di codice Solidity sono decisamente migliori; queste best practice non solo assicurano che un progetto sia più facile da gestire, ma sono una parte fondamentale della sicurezza del progetto. Un audit al termine della scrittura dello Smart Contract non è più sufficiente come unico strumento per garantire la sicurezza del progetto. La sicurezza inizia ancor prima di scrivere la prima riga di codice dello Smart Contract, **la sicurezza inizia da processi di progettazione e sviluppo adeguati**.
 
-## Processo di sviluppo di Smart Contract {#smart-contract-development-process}
+## Processo di sviluppo di Smart Contract \{#smart-contract-development-process}
 
 Requisiti minimi:
 
@@ -42,11 +42,11 @@ C'è molto altro da dire sul processo di sviluppo, ma questo è un buon punto di
 - Gli sviluppatori potranno iterare, testare e ottenere feedback velocemente sulle modifiche
 - È meno probabile che il progetto subisca regressioni
 
-## Attacchi e vulnerabilità {#attacks-and-vulnerabilities}
+## Attacchi e vulnerabilità \{#attacks-and-vulnerabilities}
 
 Una volta assicurato che il codice Solidity sia scritto utilizzando un processo di sviluppo efficiente, diamo un'occhiata ad alcune vulnerabilità comuni di Solidity, per capire cosa può andare storto.
 
-### Codice rientrante {#re-entrancy}
+### Codice rientrante \{#re-entrancy}
 
 Il codice rientrante è uno dei più comuni e più importanti problemi di sicurezza da valutare quando si sviluppano Smart Contract. Mentre l'EVM non può eseguire più contratti allo stesso tempo, un contratto che chiama un altro contratto interrompe l'esecuzione e lo stato di memoria del contratto chiamante fino a quando la chiamata restituisce un risultato, dopo di che l'esecuzione procede normalmente. Questo momento di pausa e riavvio può creare una vulnerabilità conosciuta come "re-entrancy" o codice rientrante.
 
@@ -116,7 +116,7 @@ Chiamando Attacker.beginAttack() si avvierà un ciclo del tipo:
 
 Chiamando Attacker.beginAttack con 1 ETH si attacca Victim con codice rientrante, prelevando più ETH rispetto alla disponibilità (prendendoli dai saldi di altri utenti e rendendo il contratto Victim non collateralizzato)
 
-### Come gestire il codice rientrante (in modo sbagliato) {#how-to-deal-with-re-entrancy-the-wrong-way}
+### Come gestire il codice rientrante (in modo sbagliato) \{#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Si potrebbe pensare di difendersi dal codice rientrante semplicemente impedendo a qualsiasi Smart Contract di interagire con il proprio codice. Se cerchi stackoverflow, trovi questo frammento di codice con tantissimi voti a favore:
 
@@ -185,7 +185,7 @@ require(tx.origin == msg.sender)
 
 Anche questa però non è ancora una buona soluzione. Uno degli aspetti più entusiasmanti di Ethereum è la sua componibilità: gli Smart Contract si integrano e si costruiscono l'uno sull'altro. Utilizzando la riga sopra, limiti l'utilità del progetto.
 
-### Come gestire il codice rientrante (in modo corretto) {#how-to-deal-with-re-entrancy-the-right-way}
+### Come gestire il codice rientrante (in modo corretto) \{#how-to-deal-with-re-entrancy-the-right-way}
 
 Semplicemente cambiando l'ordine dell'aggiornamento dello storage e della chiamata esterna si impedisce la condizione di codice rientrante che ha reso possibile l'attacco. Una nuova chiamata a withdraw, sempre se possibile, non andrà a beneficio dell'attaccante, dal momento che lo storage di `balances` (il saldo) sarà già impostato a 0.
 
@@ -202,11 +202,11 @@ contract NoLongerAVictim {
 
 Il codice qui sopra segue il modello di progettazione "controlli-effetti-interazioni", che aiuta a proteggere dal codice rientrante. Puoi approfondire [controli-effetti-interazioni qui](https://fravoll.github.io/solidity-patterns/checks_effects_interactions.html)
 
-### Come gestire il codice rientrante (opzione a prova di bomba) {#how-to-deal-with-re-entrancy-the-nuclear-option}
+### Come gestire il codice rientrante (opzione a prova di bomba) \{#how-to-deal-with-re-entrancy-the-nuclear-option}
 
 Ogni volta che invii ETH a un indirizzo non attendibile o interagisci con un contratto sconosciuto (chiamando `transfer()` di un indirizzo token fornito dall'utente), ti apri alla possibilità di codice rientrante. **Progettando contratti che non inviano ETH e non chiamano contratti non affidabili, si preclude ogni possibilità di codice rientrante!**
 
-## Altri tipi di attacco {#more-attack-types}
+## Altri tipi di attacco \{#more-attack-types}
 
 I tipi di attacco illustrati sopra coprono i problemi del codice di Smart Contract (codice rientrante) e alcune stranezze di Ethereum (codice in esecuzione all'interno di costruttori di contratto, prima che il codice sia disponibile all'indirizzo del contratto). Ci sono moltissimi altri tipi di attacco da evitare, ad esempio:
 
@@ -219,11 +219,11 @@ Letture consigliate:
 - [Consensys Smart Contract Known Attacks](https://consensys.github.io/smart-contract-best-practices/attacks/) - Una spiegazione molto leggibile delle vulnerabilità più significative, molte con codice di esempio.
 - [SWC Registry](https://swcregistry.io/docs/SWC-128) - Elenco curato di CWE che si applicano a Ethereum e Smart Contract
 
-## Strumenti per la sicurezza {#security-tools}
+## Strumenti per la sicurezza \{#security-tools}
 
 Niente può sostituire la conoscenza dei principi di base della sicurezza di Ethereum e l'utilizzo di una società di auditing professionale che riveda il codice, però sono disponibili molti strumenti che aiutano a evidenziare potenziali problemi nel codice.
 
-### Sicurezza degli Smart Contract {#smart-contract-security}
+### Sicurezza degli Smart Contract \{#smart-contract-security}
 
 **Slither -** **_Framework di analisi statica per Solidity scritto in Python 3_**
 
@@ -254,14 +254,14 @@ Niente può sostituire la conoscenza dei principi di base della sicurezza di Eth
 - [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
 - [Forum](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
 
-### Verifica formale {#formal-verification}
+### Verifica formale \{#formal-verification}
 
 **Informazioni sulla verifica formale**
 
 - [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _20 luglio 2018 - Brian Marick_
 - [How Formal Verification Can Ensure Flawless Smart Contract](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _29 gennaio 2018 - Bernard Mueller_
 
-### Usare gli strumenti {#using-tools}
+### Usare gli strumenti \{#using-tools}
 
 Due degli strumenti più popolari per l'analisi della sicurezza degli Smart Contract sono:
 
@@ -304,7 +304,7 @@ Qui Slither ha identificato una potenzialità di codice rientrante, individuando
 
 In questo modo, si conoscono rapidamente i potenziali problemi del codice. Come tutti gli strumenti di test automatici, Slither non è perfetto, e a volte segnala troppo. Può mettere in guardia da un potenziale codice rientrante anche quando non è presente alcuna vulnerabilità sfruttabile. Spesso, rivedere le DIFFERENZE nell'output di Slither tra le modifiche al codice è estremamente illuminante e aiuta a scoprire le vulnerabilità che sono state introdotte molto prima che il codice del progetto sia completo.
 
-## Letture consigliate {#further-reading}
+## Letture consigliate \{#further-reading}
 
 **Guida alle best practice per la sicurezza degli Smart Contract**
 
@@ -318,7 +318,7 @@ In questo modo, si conoscono rapidamente i potenziali problemi del codice. Come 
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
 
-## Tutorial correlati {#related-tutorials}
+## Tutorial correlati \{#related-tutorials}
 
 - [Secure development workflow](/developers/tutorials/secure-development-workflow/)
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)

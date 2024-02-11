@@ -12,13 +12,13 @@ published: 2021-01-13
 
 Tutorial ini akan menolong Anda menyiapkan node Geth Anda sehingga Anda dapat lebih baik memahami kinerjanya dan mengenali masalah yang mungkin muncul.
 
-## Prasyarat {#prerequisites}
+## Prasyarat \{#prerequisites}
 
 - Anda seharusnya telah menjalankan instance Geth.
 - Kebanyakan langkah dan contoh adalah untuk lingkungan linux, pengetahuan terminal dasar akan menolong.
 - Lihat tinjauan luas video dari rangkaian metrik Geth ini: [Mengawasi infrastruktur Ethereum oleh Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
 
-## Mengawasi tumpukan {#monitoring-stack}
+## Mengawasi tumpukan \{#monitoring-stack}
 
 Klien Ethereum mengumpulkan banyak data yang dapat dibaca dalam bentuk basis data kronologis. Untuk mempermudah pengawasan, Anda dapat mem-feed ini ke dalam perangkat lunak visualisasi data. Ada beberapa opsi yang tersedia:
 
@@ -33,7 +33,7 @@ Ada juga [Pengekspor Prometheus Geth](https://github.com/hunterlong/gethexporter
 
 Dalam tutorial ini, kita akan menyiapkan klien Geth Anda untuk mendorong data ke InfluxDB untuk membuat basis data dan Grafana untuk membuat visualisasi grafik datanya. Melakukan ini secara manual akan membantu Anda untuk dengan lebih baik memahami prosesnya, mengubahnya, dan menyebarkannya di lingkungan yang berbeda.
 
-## Menyiapkan InfluxDB {#setting-up-influxdb}
+## Menyiapkan InfluxDB \{#setting-up-influxdb}
 
 Pertama - tama, mari kita unduh dan instal InfluxDB. Berbagai opsi pengunduhan dapat ditemukan di [halaman rilis influxdata](https://portal.influxdata.com/downloads/). Pilih salah satu yang cocok dengan lingkungan Anda. Anda juga dapat menginstalnya dari suatu [repository](https://repos.influxdata.com/). Sebagai contoh dalam distribusi berbasis Debian:
 
@@ -82,7 +82,7 @@ exit
 
 InfluxDB beroperasi dan dikonfigurasi untuk menyimpan metrik dari Geth.
 
-## Menyiapkan Geth {#preparing-geth}
+## Menyiapkan Geth \{#preparing-geth}
 
 Setelah menyiapkan basis data, kita perlu mengaktifkan pengumpulan metrik di Geth. Perhatikan `METRICS AND STATS OPTIONS` dalam `geth --help`. Beberapa opsi dapat ditemukan di sana, dalam kasus ini kita ingin Geth mendorong data ke dalam InfluxDB. Penyiapan dasar menentukan endpoint di mana InfluxDB dapat dijangkau dan otentikasi untuk basis data.
 
@@ -99,7 +99,7 @@ use geth
 show measurements
 ```
 
-## Menyiapkan Grafana {#setting-up-grafana}
+## Menyiapkan Grafana \{#setting-up-grafana}
 
 Langkah berikutnya adalah menginstal Grafana yang akan mengartikan data secara grafis. Ikuti proses instalasi untuk lingkungan Anda dalam dokumentasi Grafana. Sebaliknya, pastikan menginstal versi OSS jika Anda tidak ingin menggunakan cara sebelumnya. Langkah instalasi percontohan untuk distribusi Debian yang menggunakan repository:
 

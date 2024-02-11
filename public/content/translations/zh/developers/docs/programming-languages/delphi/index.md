@@ -15,7 +15,7 @@ incomplete: true
 
 在以太坊顶部构建去中心化应用，并使用 Delphi 编程语言与智能合约交互！
 
-## 智能合约和 Solidity 语言入门 {#getting-started-with-smart-contracts-and-the-solidity-language}
+## 智能合约和 Solidity 语言入门 \{#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **迈出第一步，将 Delphi 与以太坊集成**
 
@@ -26,7 +26,7 @@ incomplete: true
 - [编写您的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## 初学者参考文献和链接 {#beginner-references-and-links}
+## 初学者参考文献和链接 \{#beginner-references-and-links}
 
 **介绍 Delphereum 库**
 
@@ -40,13 +40,13 @@ incomplete: true
 - [3 分钟的智能合约和 Delphi - 第 1 部分](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
 - [3 分钟的智能合约和 Delphi - 第 2 部分](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## 面向中等程度用户的文章 {#intermediate-articles}
+## 面向中等程度用户的文章 \{#intermediate-articles}
 
 - [在 Delphi 中生成一个以太坊认证的消息签名](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [使用 Delphi 交易以太币](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [使用 Delphi 交易基于 ERC-20 的代币](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
-## 面向高等程度用户的使用模式 {#advanced-use-patterns}
+## 面向高等程度用户的使用模式 \{#advanced-use-patterns}
 
 - [Delphi 和以太坊域名服务](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode、以太坊和 Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)

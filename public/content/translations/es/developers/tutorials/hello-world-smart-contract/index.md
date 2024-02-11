@@ -20,11 +20,11 @@ En la parte 2 de este tutorial veremos cómo interactuar con nuestro contrato in
 
 Si tiene alguna pregunta, no dude en consultar [Alchemy Discord](https://discord.gg/gWuC7zB)!
 
-## Paso 1: Conectarse a la red Ethereum {#step-1}
+## Paso 1: Conectarse a la red Ethereum \{#step-1}
 
 Hay muchas maneras de hacer solicitudes a la cadena Ethereum. Por simplicidad, usaremos una cuenta gratis en Alchemy, una plataforma de desarrolladores de cadenas de bloques y una API que nos permitirá comunicarnos con la cadena Ethereum sin tener que ejecutar nuestros propios nodos. La plataforma también tiene herramientas de desarrollo para el monitoreo y analíticas que nos darán ventaja en este tutorial para entender lo que está sucediendo en el desarrollo de nuestro contrato inteligente. Si aún no tiene cuenta en Alchemy, [puede registrarse gratis aquí](https://dashboard.alchemyapi.io/signup).
 
-## Paso 2: Crear su aplicación (y llave API) {#step-2}
+## Paso 2: Crear su aplicación (y llave API) \{#step-2}
 
 Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API creando una aplicación. Esto nos permitirá hacer peticiones a la red de pruebas de Ropsten. Si no está familiarizado con las redes de pruebas, revise [la página](/developers/docs/networks/).
 
@@ -38,7 +38,7 @@ Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API cr
 
 3. ¡Haga clic en «Crear app» y ya está! Su aplicación debería aparecer en la siguiente tabla.
 
-## Paso 3: Crear una cuenta Ethereum (dirección) {#step-3}
+## Paso 3: Crear una cuenta Ethereum (dirección) \{#step-3}
 
 Necesitamos tener una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos MetaMask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Más información en [transacciones](/developers/docs/transactions/).
 
@@ -46,11 +46,11 @@ Puede descargar y crear una cuenta MetaMask gratis [aquí](https://metamask.io/d
 
 ![ejemplo de MetaMask Ropsten](./metamask-ropsten-example.png)
 
-## Paso 4: Agregar ether de un Faucet {#step-4}
+## Paso 4: Agregar ether de un Faucet \{#step-4}
 
 Para desarrollar nuestro contrato inteligente en la red de prueba, necesitaremos ETH de prueba. Para obtener sus ETH de prueba, puede ir a [Ropsten faucet](https://faucet.dimensions.network/) e introducir la dirección de su cuenta de Ropsten, y hacer click en «Enviar Ropsten ETH». Puede llevar algo de tiempo recibir su ETH de prueba debido a la congestión de la red. ¡Deberían aparecer los ETH en su cuenta de MetaMask poco después!
 
-## Paso 5: Comprobar su balance {#step-5}
+## Paso 5: Comprobar su balance \{#step-5}
 
 Para comprobar que nuestro balance este ahí, hagamos una solicitud de [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)usando [la herramienta de composición de Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto hará que aparezca la cantidad de ETH en nuestra billetera. Después de introducir la dirección de su cuenta de MetaMask y hacer click en «Enviar Solicitud», debería ver una respuesta como esta:
 
@@ -62,7 +62,7 @@ Para comprobar que nuestro balance este ahí, hagamos una solicitud de [eth_getB
 >
 > ¡Fiu! Nuestro dinero de prueba esta todo ahí <Emoji text=":money_mouth_face:" size={1} />.
 
-## Paso 6: Iniciar nuestro proyecto {#step-6}
+## Paso 6: Iniciar nuestro proyecto \{#step-6}
 
 Primero, necesitaremos crear un a carpeta para nuestro proyecto. Vaya a su línea de comando y teclee:
 
@@ -118,7 +118,7 @@ npm install --save-dev hardhat
 
 Revise esta página para obtener más información acerca de las [intrucciones de instalación](https://hardhat.org/getting-started/#overview).
 
-## Paso 8: Crear un proyecto en Hardhat {#step-8}
+## Paso 8: Crear un proyecto en Hardhat \{#step-8}
 
 Dentro de la carpeta de nuestro proyecto, ejecute:
 
@@ -148,7 +148,7 @@ Quit
 
 Esto generará un archivo `hardhat.config.js` por nosotros, que es donde especificaremos todos los ajustes para nuestro proyecto (en el paso 13).
 
-## Paso 9: Añadir carpetas de proyecto {#step-9}
+## Paso 9: Añadir carpetas de proyecto \{#step-9}
 
 Para mantener nuestro proyecto organizado, crearemos dos nuevas carpetas. Navegue al directorio raíz de su proyecto en su línea de comandos y escriba:
 
@@ -160,7 +160,7 @@ mkdir scripts
 - `contratos/` es donde mantendremos nuestro archivo de código del contrato inteligente Hola, mundo
 - `scripts/` es donde mantendremos los scripts para implementar e interactuar con nuestro contrato
 
-## Paso 10: Escribir nuestro contrato {#step-10}
+## Paso 10: Escribir nuestro contrato \{#step-10}
 
 Tal vez se esté preguntando, ¿¿cuándo diablos escribiremos el código?? Bueno, aquí estamos, en el paso 10.
 
@@ -199,7 +199,7 @@ contract HelloWorld {
 
 Es un contrato inteligente muy sencillo que almacena un mensaje al momento de la creación y puede actualizarse con la función `update`.
 
-## Paso 11: Conectar MetaMask & Alchemy a su proyecto {#step-11}
+## Paso 11: Conectar MetaMask & Alchemy a su proyecto \{#step-11}
 
 Hemos creado una billetera de MetaMask, una cuenta de Alchemy y escrito nuestro contrato inteligente, ahora es momento de conectarlos entre sí.
 
@@ -235,7 +235,7 @@ Para conectarlos efectivamente a nuestro código, vincularemos estas variables e
 ¡No exponga su <code>.env</code>! Asegúrese de que nunca comparte ni expone su archivo <code>.env</code> con nadie, ya que ello conlleva revelar sus secretos. Si está haciendo un control de la versión, añada <code>.env</code> a un archivo <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 
-## Paso 12: Instalar Ethers.js {#step-12-install-ethersjs}
+## Paso 12: Instalar Ethers.js \{#step-12-install-ethersjs}
 
 Ethers.js es una biblioteca que facilita la interacción y la realización de solicitudes a Ethereum agrupando [métodos JSON-RPC estándar](/developers/docs/apis/json-rpc/) con métodos más fáciles para el usuario.
 
@@ -249,7 +249,7 @@ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 También necesitaremos ethers en nuestro `hardhat.config.js` en el próximo paso.
 
-## Paso 13: Actualizar hardhat.config.js {#step-13-update-hardhatconfigjs}
+## Paso 13: Actualizar hardhat.config.js \{#step-13-update-hardhatconfigjs}
 
 Hasta ahora hemos añadido varias dependencias y plugins, por lo que ahora necesitamos actualizar `hardhat.config.js` para que nuestro proyecto sepa de todas ellas.
 
@@ -277,7 +277,7 @@ module.exports = {
 }
 ```
 
-## Paso 14: Compilar nuestro contrato {#step-14-compile-our-contracts}
+## Paso 14: Compilar nuestro contrato \{#step-14-compile-our-contracts}
 
 Para asegurarnos de que todo funciona correctamente hasta ahora, compilemos nuestro contrato. La función `compile` está incluida dentro de las funciones por defecto de hardhat.
 
@@ -289,7 +289,7 @@ npx hardhat compile
 
 Puede que reciba una advertencia sobre `SPDX license identifier not provided in source file` , pero no se preocupe por eso. ¡Con suerte, todo lo demás habrá ido bien! Si no es así, siempre puede escribir un mensaje en [Alchemy discord](https://discord.gg/u72VCg3).
 
-## Paso 15: Escribir nuestro script de despliegue {#step-15-write-our-deploy-scripts}
+## Paso 15: Escribir nuestro script de despliegue \{#step-15-write-our-deploy-scripts}
 
 Ahora que nuestro contrato está escrito y nuestro archivo de configuración está listo, es momento de escribir nuestro script de implementación del contrato.
 
@@ -325,7 +325,7 @@ const hello_world = await HelloWorld.deploy();
 
 Ejecutar `deploy()` en una `ContractFactory` iniciará el despliegue, y obtendrá un `Promise` que determina un `Contract`. Este es el objeto que tiene un método para cada una de nuestras funciones de contrato inteligente.
 
-## Paso 16: Desplegar nuestro contrato {#step-16-deploy-our-contract}
+## Paso 16: Desplegar nuestro contrato \{#step-16-deploy-our-contract}
 
 ¡Por fin estamos listos para desplegar nuestro contrato inteligente! Desde la linea de comandos, ejecute:
 

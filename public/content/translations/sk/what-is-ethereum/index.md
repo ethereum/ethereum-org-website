@@ -4,7 +4,7 @@ description: Sprievodcovia, zdroje a nástroje pre používateľov, ktorí ešte
 lang: sk
 ---
 
-# Čo je to Ethereum? {#what-is-ethereum}
+# Čo je to Ethereum? \{#what-is-ethereum}
 
 Počujete o Ethereu prvýkrát? Tak ste na správnom mieste. Začnime celkovým prehľadom.
 
@@ -47,12 +47,18 @@ Výhodou týchto decentralizovaných aplikácií (alebo „dappiek“) je, že s
 
 [Decentralizovať všetko s Vitalikom Buterinom](https://youtu.be/WSN5BaCzsbo)
 
+{
 <YouTube id="WSN5BaCzsbo" />
+}
 
 [Ben Horowitz hovorí o ďalšom smerovaní technológie blockchainu](https://www.youtube.com/watch?v=l9jvKWKmRfs&feature=youtu.be)
 
+{
 <YouTube id="l9jvKWKmRfs" />
+}
 
 [Blockchain Ethereum v TechCrunch](https://www.youtube.com/watch?v=WfULutvxvzY)
 
+{
 <YouTube id="WfULutvxvzY" />
+}

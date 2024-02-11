@@ -15,7 +15,7 @@ source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---
 
-## Cara menggunakan Slither {#how-to-use-slither}
+## Cara menggunakan Slither \{#how-to-use-slither}
 
 Tujuan tutorial ini adalah menunjukkan cara menggunakan Slither untuk menemukan bug dalam kontrak pintar secara otomatis.
 
@@ -24,7 +24,7 @@ Tujuan tutorial ini adalah menunjukkan cara menggunakan Slither untuk menemukan 
 - [Pengantar analisis statis](#static-analysis): Pengantar singkat tentang analisis statis
 - [API](#api-basics): deskripsi API Python
 
-## Instalasi {#installation}
+## Instalasi \{#installation}
 
 Slither memerlukan versi Python >= 3.6. Itu bisa diinstal melalui pip atau docker.
 
@@ -50,7 +50,7 @@ solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### Menjalankan skrip {#running-a-script}
+### Menjalankan skrip \{#running-a-script}
 
 Untuk menjalankan skrip python dengan python 3:
 
@@ -58,7 +58,7 @@ Untuk menjalankan skrip python dengan python 3:
 python3 script.py
 ```
 
-### Baris perintah {#command-line}
+### Baris perintah \{#command-line}
 
 **Baris perintah versus skrip yang ditentukan pengguna.** Slither dilengkapi dengan serangkaian detektor yang telah ditentukan sebelumnya yang menemukan banyak bug umum. Memanggil Slither dari baris perintah akan menjalankan semua detektor, pengetahuan mendetail tentang analisis statis tidak diperlukan:
 
@@ -70,7 +70,7 @@ Selain detektor, Slither memiliki kemampuan meninjau kode melalui [printer](http
 
 Gunakan [crytic.io](https://github.com/crytic) untuk mengakses detektor privat dan integrasi GitHub.
 
-## Analisis statis {#static-analysis}
+## Analisis statis \{#static-analysis}
 
 Kemampuan dan desain kerangka kerja analisis statis Slither telah dijelaskan dalam postingan blog ([1](https://blog.trailofbits.com/2018/10/19/slither-a-solidity-static-analysis-framework/), [2](https://blog.trailofbits.com/2019/05/27/slither-the-leading-static-analyzer-for-smart-contracts/)) dan sebuah [makalah akademik](https://github.com/trailofbits/publications/blob/master/papers/wetseb19.pdf).
 
@@ -82,11 +82,11 @@ Kita tidak akan mengulas secara lengkap teknik analisis statis dan penelitinya d
 - [Analisis kode](#analysis)
 - [Representasi tingkat menengah](#intermediate-representation)
 
-### Representasi kode {#code-representation}
+### Representasi kode \{#code-representation}
 
 Berbeda dengan analisis dinamis, yang menalarkan tentang jalur eksekusi tunggal, analisis statis menalarkan tentang semua jalur sekaligus. Untuk melakukannya, bergantung pada representasi kode yang berbeda. Dua representasi paling umum adalah pohon sintaksis abstrak (AST) dan grafik aliran kontrol (CFG).
 
-### Pohon Sintaksis Abstrak (AST) {#abstract-syntax-trees-ast}
+### Pohon Sintaksis Abstrak (AST) \{#abstract-syntax-trees-ast}
 
 AST digunakan setiap kali pengompilasi menguraikan kode. Kemungkinan ini adalah struktur paling dasar di mana analisis statis bisa dilakukan.
 
@@ -128,7 +128,7 @@ visitor = HasAddition(expression) # ekspresi adalah ekspresi yang harus diuji
 print(f'The expression {expression} has a addition: {visitor.result()}')
 ```
 
-### Grafik Aliran Kontrol (CFG) {#control-flow-graph-cfg}
+### Grafik Aliran Kontrol (CFG) \{#control-flow-graph-cfg}
 
 Representasi kode paling umum kedua adalah grafik aliran kontrol (CFG). Seperti namanya, ini adalah representasi berbasis grafik yang menampilkan semua jalur eksekusi. Setiap node berisi satu atau beberapa instruksi. Tepi dalam grafik merepresentasikan operasi alur kontrol (jika/maka/jika tidak, perulangan, dll). CFG contoh kita sebelumnya adalah:
 
@@ -138,11 +138,11 @@ CFG adalah representasi yang di atasnya kebanyakan analisis dibangun.
 
 Ada banyak representasi kode lainnya. Setiap representasi memiliki kelebihan dan kekurangan bergantung pada analisis yang ingin Anda lakukan.
 
-### Analisis {#analysis}
+### Analisis \{#analysis}
 
 Jenis analisis paling sederhana yang dapat dilakukan dengan Slither adalah analisis sintaksis.
 
-### Analisis sintaksis {#syntax-analysis}
+### Analisis sintaksis \{#syntax-analysis}
 
 Slither bisa menelusuri berbagai komponen kode dan representasinya untuk menemukan inkonsistensi dan kelemahan dengan menggunakan pendekatan pola yang mirip.
 
@@ -152,13 +152,13 @@ Contohnya, detektor berikut mencari masalah yang terkait dengan sintaksis:
 
 - [Antarmuka ERC20 yang salah](https://github.com/crytic/slither/wiki/Detector-Documentation#incorrect-erc20-interface): cari tanda tangan fungsi ERC20 yang salah ([incorrect_erc20_interface.py#L34-L55](https://github.com/crytic/slither/blob/0441338e055ab7151b30ca69258561a5a793f8ba/slither/detectors/erc/incorrect_erc20_interface.py#L34-L55))
 
-### Analisis semantik {#semantic-analysis}
+### Analisis semantik \{#semantic-analysis}
 
 Berbeda dengan analisis sintaksis, analisis semantik akan bergerak lebih dalam dan menganalisis "arti" kode. Keluarga ini memasukkan beberapa jenis analisis yang luas. Mereka membuat hasil yang lebih efektif dan berguna, tapi juga lebih rumit untuk ditulis.
 
 Analisis semantik digunakan untuk deteksi kerentanan yang paling canggih.
 
-#### Analisis dependensi data {#fixed-point-computation}
+#### Analisis dependensi data \{#fixed-point-computation}
 
 Variabel `variable_a` dianggap bergantung pada data `variable_b` jika ada jalur yang nilai `variable_a` dipengaruhi oleh `variable_b`.
 
@@ -173,7 +173,7 @@ Slither hadir dengan kemampuan [dependensi data](https://github.com/crytic/slith
 
 Satu contoh penggunaan dependensi data bisa ditemukan dalam [detektor kesamaan ketat berbahaya](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities). Di sini, Slither akan mencari perbandingan kesamaan ketat dari nilai berbahaya ([incorrect_strict_equality.py#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)), dan akan memberi tahu pengguna bahwa harus menggunakan `>=` atau `<=` daripada `==`, untuk mencegah penyerang memerangkap kontrak. Di antara lainnya, detektor akan menganggap nilai pengembalian dari pemanggilan `balanceOf(address)` berbahaya ([incorrect_strict_equality.py#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)), dan akan menggunakan mesin dependensi data untuk melacak penggunaannya.
 
-#### Komputasi titik tetap {#fixed-point-computation}
+#### Komputasi titik tetap \{#fixed-point-computation}
 
 Jika analisis Anda menelusuri CFG dan mengikuti tepinya, Anda mungkin akan melihat node yang sudah dikunjungi. Contohnya, jika satu perulangan ditampilkan seperti di bawah:
 
@@ -189,13 +189,13 @@ Contoh penggunaan titik tetap bisa ditemukan dalam detektor reentrancy: Slither 
 
 Menulis analisis dengan komputasi titik tetap yang efisien memerlukan pemahaman yang baik tentang cara analisis menyebarkan informasinya.
 
-### Representasi tingkat menengah {#intermediate-representation}
+### Representasi tingkat menengah \{#intermediate-representation}
 
 Representasi tingkat menengah (IR) adalah sebuah bahasa yang dimaksudkan agar lebih mudah diterima oleh analisis statis daripada bahasa aslinya. Slither menerjemahkan Solidity ke dalam IR-nya sendiri: [SlithIR](https://github.com/crytic/slither/wiki/SlithIR).
 
 Memahami SlithIR tidak penting jika Anda hanya mau menulis pemeriksaan biasa. Namun, itu akan berguna jika Anda berencana menulis analisis semantik tingkat lanjut. Printer [SlithIR](https://github.com/crytic/slither/wiki/Printer-documentation#slithir) dan [SSA](https://github.com/crytic/slither/wiki/Printer-documentation#slithir-ssa) akan membantu Anda memahami cara kode diterjemahkan.
 
-## Dasar-Dasar API {#api-basics}
+## Dasar-Dasar API \{#api-basics}
 
 Slither memiliki API yang mengizinkan Anda menjelajah atribut dasar kontrak dan fungsinya.
 
@@ -207,7 +207,7 @@ slither = Slither('/path/to/project')
 
 ```
 
-### Menjelajahi kontrak dan fungsi {#exploring-contracts-and-functions}
+### Menjelajahi kontrak dan fungsi \{#exploring-contracts-and-functions}
 
 Objek `Slither` memiliki:
 

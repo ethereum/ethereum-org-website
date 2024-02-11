@@ -10,11 +10,11 @@ lang: zh
 
 以太坊挖矿使用过一种称为 Ethash 的算法。 该算法的基本思想是，矿工尝试使用蛮力计算找到一个随机数输入，使得生成的哈希小于一个取决于计算难度的阈值。 此难度级别可以动态调整，从而允许定期进行区块生产。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 为了更好地理解本页内容，推荐你先阅读[工作量证明共识](/developers/docs/consensus-mechanisms/pow)和[挖矿](/developers/docs/consensus-mechanisms/pow/mining)。
 
-## Dagger Hashimoto {#dagger-hashimoto}
+## Dagger Hashimoto \{#dagger-hashimoto}
 
 Dagger Hashimoto 是以太坊挖矿的先导研究算法，现已被 Ethash 取代。 它是两种不同算法：Dagger 和 Hashimoto 的融合。 它只是一个研究实现，并在以太坊主网启动时被 Ethash 取代。
 
@@ -26,12 +26,12 @@ Dagger-Hashimoto 是在 Dagger 和 Hashimoto 的基础上改进而来的以太�
 
 详细了解 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto)。
 
-## Ethash {#ethash}
+## Ethash \{#ethash}
 
 Ethash 是在现已弃用的工作量证明架构下，实际用于真正的以太坊主网的挖矿算法。 Ethash 实际上是为 Dagger Hashimoto 算法进行重要更新后的一个特殊版本命名的新名称，但它仍然继承了其前身的基本原理。 以太坊主网只使用过 Ethash - Dagger Hashimoto 是挖矿算法的研发版本，在以太坊主网上开始挖矿之前被取代。
 
 [详细了解 Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)。
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_

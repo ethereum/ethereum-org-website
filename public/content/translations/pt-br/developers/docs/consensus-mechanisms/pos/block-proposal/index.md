@@ -6,15 +6,15 @@ lang: pt-br
 
 Os blocos são as unidades fundamentais da blockchain. Blocos são unidades discretas de informação passadas entre os nós, acordadas e adicionadas ao banco de dados de cada nó. Esta página explica como elas são produzidas.
 
-## Pré-requisitos {#prerequisites}
+## Pré-requisitos \{#prerequisites}
 
 A proposta de bloco faz parte do protocolo de prova de participação. Para ajudar a entender esta página, recomendamos que você leia sobre a [prova de participação](/developers/docs/consensus-mechanisms/pos/) e a [arquitetura de bloco](/developers/docs/blocks/).
 
-## Quem produz os blocos? {#who-produces-blocks}
+## Quem produz os blocos? \{#who-produces-blocks}
 
 Contas validadoras propõem blocos. Contas validadoras são gerenciadas por operadores de nós que executam um software validador como parte de seus clientes de consenso e execução e que depositaram pelo menos 32 ETH no contrato de depósito. No entanto, cada validador é apenas ocasionalmente responsável por propor um bloco. O Ethereum mede o tempo em slots e épocas. Cada slot é de doze segundos, sendo que 32 slots (6,4 minutos) formam uma época. Cada slot é uma oportunidade de adicionar um novo bloco ao Ethereum.
 
-### Seleção aleatória {#random-selection}
+### Seleção aleatória \{#random-selection}
 
 Um único validador é pseudo-aleatoriamente escolhido para propor um bloco em cada slot. Não existe algo realmente aleatório em uma blockchain, porque se cada nó gerou números genuinamente aleatórios, não há como chegar a um consenso. Em vez disso, o objetivo é tornar o processo de seleção do validador imprevisível. A aleatoriedade é alcançada no Ethereum usando um algoritmo chamado RANDAO, que mistura um hash do proponente do bloco com uma semente que é atualizada em todos os blocos. Esse valor é usado para selecionar um validador específico do validador total definido. A seleção do validador é fixa em duas épocas de antecedência como uma forma de proteção contra certos tipos de manipulação de sementes.
 
@@ -22,7 +22,7 @@ Embora os validadores se adicionem ao RANDAO em cada slot, o valor global do RAN
 
 Somente um proponente de blocos é selecionado em cada slot. Em condições normais, um único produtor de blocos cria e libera um único bloco no seu slot dedicado. A criação de dois blocos para o mesmo slot é uma ofensiva removível, geralmente conhecida como “ambiguidade”.
 
-## Como o bloco é criado? {#how-is-a-block-created}
+## Como o bloco é criado? \{#how-is-a-block-created}
 
 Espera-se que o proponente de blocos transmita um bloco beacon assinado que se baseia no cabeçalho mais recente da cadeia, de acordo com a visualização de seu próprio algoritmo de escolha de bifurcação (fork choice) local. O algoritmo de escolha de bifurcação (fork) aplica todas as atestações na fila deixadas no slot anterior e, em seguida, encontra o bloco com o maior peso acumulado de atestações em seu histórico. Esse bloco é o pai do novo bloco criado pelo proponente.
 
@@ -50,17 +50,17 @@ Todos esses dados são coletados em um bloco de sinal, assinado e transmitido pa
 
 Leia mais sobre a [anatomia dos blocos](/developers/docs/blocks).
 
-## O que acontece com os blocos? {#what-happens-to-blocks}
+## O que acontece com os blocos? \{#what-happens-to-blocks}
 
 O bloco é adicionado ao banco de dados local do proponente do bloco e transmitido aos pares pela rede de fofocas da camada de consenso. Quando um validador recebe o bloco, ele verifica os dados dentro dele, inclusive se o bloco tem o pai correto, corresponde ao pacote correto, se o índice do proponente é o esperado, se a revelação RANDAO é válida e se o proponente não foi removido. O `execution_payload` é descompactado e o cliente de execução do validador reexecuta as transações na lista para verificar a proposta de mudança de estado. Supondo que o bloco passe em todas essas verificações, cada validador adiciona o bloco à sua própria cadeia padronizada. O processo recomeça no próximo slot.
 
-## Recompensas do bloco {#block-rewards}
+## Recompensas do bloco \{#block-rewards}
 
 O proponente de blocos recebe pagamento pelo seu trabalho. Há uma `base_reward` calculada como uma função do número de validadores ativos e seus saldos efetivos. O proponente de blocos recebe uma fração de `base_reward` por cada certificado válido incluído no bloco; quanto mais validadores atestarem o bloco, maior será a recompensa do seu proponente. Há também uma recompensa por reportar validadores que devem ser removidos, igual a `1/512 * saldo efetivo` para cada validador removido.
 
 [Recompensas e penalidades da PoS](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
 
-## Leitura adicional {#further-reading}
+## Leitura adicional \{#further-reading}
 
 - [Introdução aos blocos](/developers/docs/blocks/)
 - [Introdução à prova de participação](/developers/docs/consensus-mechanisms/pos/)

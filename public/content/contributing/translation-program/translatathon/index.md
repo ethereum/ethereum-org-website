@@ -12,16 +12,16 @@ The goal is to translate website content and help make ethereum.org more accessi
 
 We invite you to join us in breaking down language barriers and making ethereum.org content available to a truly global audience. By participating in the Translatathon, you’ll have an opportunity to meet and collaborate with like-minded individuals from across the globe, compete for exciting prizes, and contribute to making Ethereum content more accessible to the world!
 
-## Overview {#overview}
+## Overview \{#overview}
 
-### When {#when}
+### When \{#when}
 
 - Application period: August 1st - August 15th
 - Translation period: August 16th - August 23rd
 - Evaluation & QA period: August 23rd - August 30th
 - Results announcement: August 31st
 
-### Where {#where}
+### Where \{#where}
 
 The translations and review process will take place in the [ethereum.org project on Crowdin](https://crowdin.com/project/ethereum-org), a localization management platform where all of our localization processes take place.
 
@@ -29,9 +29,9 @@ All of the Translatathon participants will be required to join the project in Cr
 
 Office hours, workshops, team formation and FAQ sessions will be hosted on the [ethereum.org Discord](https://www.ethereum.org/discord), where you’ll also be able to find all the relevant information on the Translatathon, follow along with announcements and updates, and reach out to other participants and the ethereum.org team.
 
-### How {#how}
+### How \{#how}
 
-#### Application period {#applications}
+#### Application period \{#applications}
 
 The application period will be open from **August 1st** to **August 15th**
 
@@ -41,7 +41,7 @@ During this period, we will be organizing several team formation calls on the Di
 
 Participants planning to compete as a team need to fill out the [Team registration form](https://teams.paperform.co/) by the end of the application period, adding links to the Crowdin profiles of each team member.
 
-#### Categories {#categories}
+#### Categories \{#categories}
 
 The Translatathon will be split into two categories: **Teams** and **Individuals**
 
@@ -53,7 +53,7 @@ Individuals will participate in the Translatathon as normal, competing only agai
 
 **Only translations, submitted during the Translation period - starting 16th of August at 5:00am UTC and ending 23rd of August at 5:00am UTC - will count towards the final score.**
 
-## Step-by-step instructions {#instructions}
+## Step-by-step instructions \{#instructions}
 
 1. Learn more about the Translatathon and read up on the timeline, process, requirements, and evaluation process
 
@@ -71,9 +71,9 @@ Individuals will participate in the Translatathon as normal, competing only agai
   When translating, do not use machine translation or submit low-quality translations, since all translations will be reviewed, and <strong>participants found using machine translation or submitting inaccurate translations will be disqualified from competing for prizes!</strong>
 </InfoBanner>
 
-## Details and submission criteria {#details}
+## Details and submission criteria \{#details}
 
-### Requirements and scoring {#requirements-scoring}
+### Requirements and scoring \{#requirements-scoring}
 
 With the translation process taking place in Crowdin, the deliverable for Translatathon participants is simply the content you have translated in the [ethereum.org project](https://crowdin.com/project/ethereum-org). No need to manually submit anything.
 
@@ -106,13 +106,13 @@ Full breakdown of multipliers by content bucket:
 - Content buckets 16-28: 1x points multiplier
 - Remix translations: 0.8x points multiplier
 
-### Prizes {#prizes}
+### Prizes \{#prizes}
 
 The total prize pool for the Translatathon is 30,000$.
 
 A detailed breakdown of prizes will be announced at the end of the application period.
 
-### Evaluation process {#evaluation-process}
+### Evaluation process \{#evaluation-process}
 
 We work with [Acolad](https://www.acolad.com/), a leading localization agency, on all review and QA processes for ethereum.org content.
 
@@ -128,7 +128,7 @@ The evaluation period will take one week after the translation period ends, and 
 
 All translations will also be subject to a thorough review before being added to the website.
 
-## Terms & conditions {#Terms-and-Conditions}
+## Terms & conditions \{#Terms-and-Conditions}
 
 _The Ethereum.org Translation Competition, also referred to as the “Translatathon”, is an experimental initiative by the ethereum.org team to incentivise and reward contributions to the ethereum.org Translation Program._
 
@@ -150,8 +150,9 @@ _The Ethereum.org Translation Competition, also referred to as the “Translatat
 
 - <strong>Governing Law.</strong> Any dispute or claim arising out of or relating to the Translatathon (in each case, including non-contractual disputes or claims), shall be governed by and construed in accordance with the laws of Switzerland without giving effect to any choice or conflict of law provision or rule (whether of Switzerland or any other jurisdiction).
 
-## Frequently asked questions {#FAQ}
+## Frequently asked questions \{#FAQ}
 
+{
 <ExpandableCard title="Who can I contact if I need help or have questions, feedback, or ideas?" eventCategory="/translation-program/translatathon" eventName="clicked Who can I contact if I need help or have questions, feedback, or ideas?">
 
 - In Crowdin, you can send a direct message to <a href="https://crowdin.com/profile/ethdotorg">Ethereum.org Team</a>
@@ -159,7 +160,9 @@ _The Ethereum.org Translation Competition, also referred to as the “Translatat
 - You can send an email to <strong>translations@ethereum.org</strong>
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Which languages can I translate into?" eventCategory="/translation-program/translatathon" eventName="clicked Which languages can I translate into?">
 
 You can translate into any language! It is recommended to only translate into your native language to ensure sufficient quality, but in short, all language available in Crowdin are in scope for the Translatathon.
@@ -167,7 +170,9 @@ You can translate into any language! It is recommended to only translate into yo
 In case you would like to translate into a language that is not available in the <a href="https://crowdin.com/project/ethereum-org">ethereum.org project in Crowdin</a>, please send a message to <a href="https://crowdin.com/profile/ethdotorg">Ethereum.org Team</a> in Crowdin, or send a message in the <strong>#translatathon</strong> or <strong>#translate</strong> channels on the <a href="/discord/">ethereum.org Discord</a> and we’ll add the language to the project.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="I want to participate as part of a team. Do I need to apply as an individual as well?" eventCategory="/translation-program/translatathon" eventName="clicked I want to participate as part of a team. Do I need to apply as an individual as well?">
 
 Yes, all Translatathon participants are required to submit the individual application form to participate.
@@ -175,7 +180,9 @@ Yes, all Translatathon participants are required to submit the individual applic
 Only one member of a team needs to submit the team registration form, so we can keep track of teams and their members.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Which tools can I use to assist me with the translation?" eventCategory="/translation-program/translatathon" eventName="clicked Which tools can I use to assist me with the translation?">
 
 Machine translation is strictly forbidden, but the project in Crowdin has a built-in Translation memory and Glossary that you can use to assist you in the process, or check definitions and established translations for specific terms.
@@ -183,7 +190,9 @@ Machine translation is strictly forbidden, but the project in Crowdin has a buil
 You can learn more about navigating Crowdin and using the Translation memory and Glossary <a href="https://support.crowdin.com/online-editor/#section-4">here</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="How can I find teammates to compete in the Teams category?" eventCategory="/translation-program/translatathon" eventName="clicked How can I find teammates to compete in the Teams category?">
 
 If you are already connected with other translators or people who would be interested in participating, you can simply <a href="https://teams.paperform.co/">apply to register as a team</a> and add the Crowdin accounts for everyone that will be part of the team.
@@ -193,7 +202,9 @@ You can also invite your friends and form a team with them.
 Finally, we’ll be hosting team formation calls on the <a href="/discord/">ethereum.org Discord</a>, where you can connect with other individuals looking for teammates.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="What should I do if my language is 100% translated?" eventCategory="/translation-program/translatathon" eventName="clicked What should I do if my language is 100% translated?">
 
 If the ethereum.org content in Crowdin has been 100% translated into your language, congratulations!
@@ -204,3 +215,4 @@ However, despite your language being completely translated, you can still partic
 These translations will be used in the Remix IDE documentation and have a lower score multiplier than ethereum.org content.
 
 </ExpandableCard>
+}

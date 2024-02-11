@@ -12,11 +12,11 @@ Amikor azonban az Ethereum [proof-of-work](/developers/docs/consensus-mechanisms
 
 Ez az új típusú kulcs a [**Boneh-Lyn-Shacham (BLS)** aláírási sémát használja](https://wikipedia.org/wiki/BLS_digital_signature). A BLS lehetővé teszi az aláírások nagyon hatékony aggregálását, ugyanakkor az aggregált egyedi validátorkulcsok visszafejtését is, és ideális a validátorok közötti műveletek kezelésére.
 
-## A validátorkulcsok két típusa {#two-types-of-keys}
+## A validátorkulcsok két típusa \{#two-types-of-keys}
 
 A proof-of-stake-re való átállás előtt az Ethereum-felhasználóknak csak egyetlen elliptikus görbén alapuló privát kulccsal volt hozzáférésük a pénzükhöz. A proof-of-stake bevezetésével az önálló letétbe helyezőknek szükségük volt egy **validátorkulcsra** és egy **kivételi kulcsra** is.
 
-### A validátorkulcs {#validator-key}
+### A validátorkulcs \{#validator-key}
 
 A validátor aláírókulcs két elemből áll:
 
@@ -35,13 +35,13 @@ Ennek a rugalmasságnak az az előnye, hogy a validátor aláírókulcsok gyorsa
 
 A **validátor publikus kulcsa** szerepel a tranzakció adataiban, amikor egy felhasználó ETH-t fizet be a letéti szerződésbe. Ez az úgynevezett _letéti adat_, amely lehetővé teszi az Ethereum számára a validátor azonosítását.
 
-### Kivételi hitelesítő adatok {#withdrawal-credentials}
+### Kivételi hitelesítő adatok \{#withdrawal-credentials}
 
 Minden validátor rendelkezik egy tulajdonsággal, amelyet _visszavonási hitelesítő adatoknak_ neveznek. Ez a 32 bájtos mező vagy `0x00`-val kezdődik, ami a BLS kivonási hitelesítő adatokat jelenti, vagy` 0x01`-gyel, ami a végrehajtási címre mutató hitelesítő adatokat jelenti.
 
 A `0x00` BLS kulcsokkal rendelkező validátoroknak frissíteniük kell ezeket a hitelesítő adatokat, hogy azok egy végrehajtási címre mutassanak a többletegyenleg kifizetéséhez vagy a letétkivonáshoz. Ezt úgy lehet megtenni, hogy a kezdeti kulcsgenerálás során a letétbe helyezési adatokban megadunk egy végrehajtási címet, _VAGY_ úgy, hogy a kivételi kulcsot egy későbbi időpontban felhasználjuk egy `BLSToExecutionChange` üzenet aláírására és továbbítására.
 
-### A kivételi kulcs {#withdrawal-key}
+### A kivételi kulcs \{#withdrawal-key}
 
 A kivételi kulcsra a kivételi hitelesítő adatok frissítéséhez van szükség, hogy azok egy végrehajtási címre mutassanak, ha a kezdeti befizetés során ezt nem állították be. Ez lehetővé teszi a felhasználók számára a többletegyenleg kifizetését, és a letétbe helyezett ETH teljes kivételét is.
 
@@ -56,7 +56,7 @@ A validátorkulcsok és az Ethereum számlakulcsok szétválasztása lehetővé 
 
 ![validátorkulcs ábra](validator-key-schematic.png)
 
-## Kulcsok származtatása egy kulcsmondatból {#deriving-keys-from-seed}
+## Kulcsok származtatása egy kulcsmondatból \{#deriving-keys-from-seed}
 
 Ha minden 32 ETH feltöltéséhez 2 független kulcsból álló új készletre lenne szükség, a kulcskezelés nehézkessé válna, különösen a több validátort futtató felhasználók számára. Ehelyett több validátorkulcsot lehet egyetlen titokból levezetni, és ennek a titoknak a tárolása lehetővé teszi a hozzáférést több validátorkulcshoz.
 
@@ -90,7 +90,7 @@ Az egyes ágakat `/` választja el egymástól, így `m/2` azt jelenti, hogy a m
 
 ![validátorkulcs logika](multiple-keys.png)
 
-## További olvasnivaló {#further-reading}
+## További olvasnivaló \{#further-reading}
 
 - [Ethereum Alapítvány blogbejegyzés Carl Beekhuizentől](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 BLS12-381 kulcsgenerálás](https://eips.ethereum.org/EIPS/eip-2333)

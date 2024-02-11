@@ -4,7 +4,7 @@ description: Ethereum.org'a merkeziyetsiz uygulamalar eklerken kullandığımız
 lang: tr
 ---
 
-# Ethereum ürünleri ekleme {#adding-products}
+# Ethereum ürünleri ekleme \{#adding-products}
 
 Herkes, uygun olduğunda ethereum.org'daki içeriğe yeni merkeziyetsiz uygulamalar önermekte özgürdür. **Hayır, merkeziyetsiz uygulamanızı ana sayfamızda listelemeyeceğiz** 😜
 
@@ -30,16 +30,16 @@ Genel olarak **ethereum.org, yeni kullanıcılar için "kesintisiz ilk katılım
 
 İşte karar çerçevemizin daha ayrıntılı hâli. Geribildirim sağlamaktan veya değişiklik önermekten çekinmeyin.
 
-## Karar çerçevesi {#decision-framework}
+## Karar çerçevesi \{#decision-framework}
 
-### Dahil edilme kriterleri: olmazsa olmazlar {#criteria-for-inclusion-the-must-haves}
+### Dahil edilme kriterleri: olmazsa olmazlar \{#criteria-for-inclusion-the-must-haves}
 
 - **Güvenlik testi yapılmış bir ürün** – ister denetim yoluyla, ister dahili güvenlik ekibiyle veya başka bir yöntemle olsun, ürününüzün güvenliği güvenilir bir şekilde test edilmelidir. Bu, kullanıcılarımıza yönelik riski azaltır ve güvenliği ciddiye aldığınızı gösterir.
 - **6 ayı aşkın süredir "kullanımda" olan bir ürün**: Bu, güvenliğin bir başka göstergesidir. 6 ay, kritik hataların ve açıkların bulunması için iyi bir zaman dilimidir.
 - **Aktif bir ekip tarafından üzerinde çalışılıyor**: Bu, kaliteyi korumaya ve bir kullanıcı sorgularıyla ilgili destek almasını sağlamaya yardımcı olur.
 - **Dürüst ve doğru listeleme bilgileri**: Projelerden önerilen tüm listelemelerin dürüst ve doğru bilgilerle gelmesi beklenir. Ürününüzü "açık kaynak" değilken öyleymiş gibi duyurmak gibi listeleme bilgilerini tahrif eden ürünler kaldırılacaktır.
 
-### Sıralama için kriter: olursa iyi olacak şeyler {#criteria-for-ranking-the-nice-to-haves}
+### Sıralama için kriter: olursa iyi olacak şeyler \{#criteria-for-ranking-the-nice-to-haves}
 
 Merkeziyetsiz uygulamanız aşağıdaki kriterler nedeniyle ethereum.org'da diğerleri kadar belirgin bir şekilde listelenmemiş olabilir.
 
@@ -53,7 +53,7 @@ Merkeziyetsiz uygulamanız aşağıdaki kriterler nedeniyle ethereum.org'da diğ
 - **Açık kaynak** – kodunuz erişilebilir olmalıdır ve daha geniş topluluktan PR'leri kabul etmelisiniz.
 - **Topluluk** – kullanıcıların yardım almak veya yeni özellikler önermek için ekibinizle etkileşime geçebileceği özel bir topluluğunuzun, belki bir Discord'unuzun olması.
 
-## Uygulamada kriterler {#criteria-in-practice}
+## Uygulamada kriterler \{#criteria-in-practice}
 
 Ne kadar çok kriteri karşılarsanız, ürününüzün ethereum.org'a girme olasılığı o kadar artar.
 
@@ -70,15 +70,15 @@ Bu, ethereum.org'un sorumlu olduğu bir tasarım kararıdır.
 
 Ancak içiniz rahat olsun, **daha fazla merkeziyetsiz uygulama sıralaması yapan başka web sitelerine bağlantılar verilecektir**
 
-### Ürün Siparişi {#product-ordering}
+### Ürün Siparişi \{#product-ordering}
 
 Ürünler, örneğin alfabetik olarak, aksi belirtilmedikçe, sayfaya en yakın zamanda eklenenden en eski eklenene doğru gösterilecektir. Diğer bir deyişle, en yeni ürünler listenin en altına eklenir.
 
-### Kullanım koşulları {#terms-of-use}
+### Kullanım koşulları \{#terms-of-use}
 
 Ayrıca lütfen [kullanım koşullarımıza](/terms-of-use/) başvurun. Ethereum.org'daki bilgiler, yalnızca genel bilgi amaçlı verilmektedir.
 
-## Bakım {#maintenance}
+## Bakım \{#maintenance}
 
 Ethereum'un akıcı yapısında olduğu gibi, ekipler ve ürünler gelir ve gider; yenilikler her gün gerçekleşir, bu nedenle şu amaçlarla içeriğimizin rutin kontrollerini gerçekleştireceğiz:
 
@@ -91,7 +91,7 @@ _Ayrıca, topluluğun tercihlerini belirtebilmesi ve önerebileceğimiz en iyi �
 
 ---
 
-## Ürününüzü ekleyin {#add-your-product}
+## Ürününüzü ekleyin \{#add-your-product}
 
 Ethereum.org'a bir merkeziyetsiz uygulama eklemek istiyorsanız ve bu uygulama kriterleri karşılıyorsa GitHub'da bir konu oluşturun.
 

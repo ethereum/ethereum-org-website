@@ -21,13 +21,13 @@ Ang **mga pag-withdraw sa staking** ay tumutukoy sa mga pag-transfer ng ETH mula
 
 Ang **mga reward payment para sa sobrang balanse** na mahigit 32 ETH ay awtomatiko at regular na ipapadala sa withdrawal address na naka-link sa bawat validator, kapag ibinigay na ito ng user. Ang mga user ay puwede ring **ganap na umalis sa staking**, na nagbubukas ng kanilang buong balanse bilang validator.
 
-## Mga reward mula sa staking {#staking-rewards}
+## Mga reward mula sa staking \{#staking-rewards}
 
 Ang mga reward payment ay awtomatikong ipinoproseso para sa mga aktibong validator account na may maxed out na effective balance na 32 ETH.
 
 Ang anumang balanse na mahigit 32 ETH na nakamit sa pamamagitan ng mga reward ay hindi talaga nagdadagdag sa pangunahing balanse, o hindi nagpapataas ng weight ng validator sa network, kaya, awtomatiko itong iwi-withdraw bilang reward payment kada ilang araw. Maliban sa pagbibigay ng withdrawal address isang beses, hindi kinakailangan ng anumang aksyon mula sa operator ng validator para sa mga reward na ito. Ito ay nagsisimula sa consensus layer, kung kaya, walang gas (bayarin sa transaksyon) na kinakailangan sa kahit anong hakbang.
 
-### Paano tayo nakarating dito? {#how-did-we-get-here}
+### Paano tayo nakarating dito? \{#how-did-we-get-here}
 
 Sa mga nakaraang taon, ang Ethereum ay sumailalim sa ilang pag-upgrade sa network at nag-transition sa network na pinoprotektahan ng ETH mismo, sa halip ng energy-intensive mining tulad ng dati. Ang paglahok sa consensus sa Ethereum ay kinikilala na ngayon bilang "staking", dahil ang mga kalahok ay boluntaryong naglalagay ng kanilang ETH sa isang "stake" upang magkaroon ng kakayahan na makilahok sa network. Ang mga user na sumusunod sa mga panuntunan ay mabibigyan ng gantimpala, habang ang mga magtatangkang mandaya ay maaaring parusahan.
 
@@ -35,11 +35,13 @@ Mula nang ilunsad ang staking deposit contract noong Nobyembre 2020, boluntaryon
 
 Bago ang Shanghai/Capella upgrade, hindi mo magamit o ma-access ang iyong staked ETH. Ngunit ngayon, maaari mong piliin awtomatikong matanggap ang iyong mga reward sa isang piling account, at mawi-withdraw mo rin ang iyong staked ETH kung kailan mo gusto.
 
-### Paano ako maghahanda? {#how-do-i-prepare}
+### Paano ako maghahanda? \{#how-do-i-prepare}
 
+{
 <WithdrawalsTabComparison />
+}
 
-### Mahahalagang paunawa {#important-notices}
+### Mahahalagang paunawa \{#important-notices}
 
 Ang pagbibigay ng withdrawal address ay isang kinakailangang hakbang para sa anumang validator account bago ito maging eligible na mag-withdraw ng ETH mula sa balanse nito.
 
@@ -49,7 +51,7 @@ Ang pagbibigay ng withdrawal address ay isang kinakailangang hakbang para sa anu
 
 Sa ngayon, <strong>walang banta sa pondo mo</strong> kung hindi mo ito ibibigay, basta't nananatiling ligtas offline ang iyong mnemonic/seed phrase, at hindi ito nakompromiso sa anumang paraan. Kung hindi maipapakita ang mga kredensyal sa pag-withdraw, hindi makukuha ang ETH sa validator account hangga't hindi nagbibigay ng withdrawal address.
 
-## Ganap na pag-alis sa staking {#exiting-staking-entirely}
+## Ganap na pag-alis sa staking \{#exiting-staking-entirely}
 
 Kailangang magbigay ng withdrawal address bago ma-transfer ang _anumang_ pondo mula sa balanse ng validator account.
 
@@ -59,7 +61,7 @@ Ang proseso ng pag-alis ng isang validator sa staking ay gumugugol ng iba't iban
 
 Kapag ang isang account ay na-flag na bilang "withdrawable", at nagbigay na ng mga kredensyal sa pag-withdraw, wala nang kailangang gawin ang user kundi maghintay. Ang mga account ay awtomatiko at tuloy-tuloy na isi-sweep ng mga block proposer para sa mga eligible na exited fund, at ita-transfer ang buong balanse ng iyong account (kilala rin bilang "full withdrawal") sa susunod na <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>sweep</a>.
 
-## Kailan pinapagana ang mga pag-withdraw sa staking? {#when}
+## Kailan pinapagana ang mga pag-withdraw sa staking? \{#when}
 
 Live na ang mga pag-withdraw sa staking! Ang functionality ng pag-withdraw ay in-enable bilang bahagi ng Shanghai/Capella upgrade na naganap noong Abril 12, 2023.
 
@@ -68,17 +70,19 @@ Ang Shanghai/Capella upgrade ang nagbigay-daan para maibalik ang staked ETH sa m
 - [Iba pang detalye tungkol sa kasaysayan ng Ethereum](/history/)
 - [Iba pang detalye tungkol sa roadmap ng Ethereum](/roadmap/)
 
-## Paano gumagana ang mga withdrawal payment? {#how-do-withdrawals-work}
+## Paano gumagana ang mga withdrawal payment? \{#how-do-withdrawals-work}
 
 Ang pagiging eligible ng isang partikular na validator para sa pag-withdraw ay tinutukoy sa pamamagitan ng kalagayan mismo ng validator account. Hindi kailangan ng anumang user input anumang oras upang matukoy kung dapat magsimula ng pag-withdraw ang account o hindi—ang buong proseso ay awtomatikong ginagawa ng consensus layer sa isang tuloy-tuloy na loop.
 
-### More of a visual learner? {#visual-learner}
+### More of a visual learner? \{#visual-learner}
 
 Tingnan ang paliwanag ng Finematics tungkol sa mga pag-withdraw sa staking ng Ethereum:
 
+{
 <YouTube id="RwwU3P9n3uo" />
+}
 
-### "Pag-sweep" ng validator {#validator-sweeping}
+### "Pag-sweep" ng validator \{#validator-sweeping}
 
 Kapag nakaiskedyul ang isang validator na magmungkahi ng susunod na block, kailangan nitong gumawa ng withdrawal queue ng hanggang 16 na eligible withdrawal. Ito ay ginagawa sa pamamagitan ng pagsisimula sa validator index 0, pagtukoy kung may eligible withdrawal para sa account na ito batay sa mga panuntunan ng protocol, at pagdadagdag nito sa queue kung mayroon man. Ang validator na nakatakda na mag-propose ng susunod na bloke ay magpapatuloy kung saan iniwan ng huling bloke, at magpapatuloy ito nang sunod-sunod ng walang katapusan.
 
@@ -88,7 +92,7 @@ Ngayon, sa halip na 1 hanggang 12, isipin na may 0 hanggang N <em>(ang kabuuang 
 Ituturo ng kamay sa orasan ang susunod na validator na kailangang tingnan kung may mga eligible withdrawal. Nagsisimula ito sa, at umuusad paikot nang hindi nilalaktawan ang anumang account. Kapag naabot na ang huling validator, babalik ang sa simula ang cycle.
 </InfoBanner>
 
-#### Pagtingin kung may mga withdrawal ang account {#checking-an-account-for-withdrawals}
+#### Pagtingin kung may mga withdrawal ang account \{#checking-an-account-for-withdrawals}
 
 Habang sini-sweep ng isang proposer ang mga validator para sa mga posibleng withdrawal, inihahambing ang bawat sinusuring validator sa maikling serye ng mga tanong para tukuyin kung dapat mag-trigger ng withdrawal, at kung oo, kung gaano karaming ETH ang dapat i-withdraw.
 
@@ -101,11 +105,11 @@ May dalawang aksyon lang na ginagawa ng mga validator operator sa buong life cyc
 - Magbigay ng mga kredensyal sa pag-withdraw upang ma-enable ang anumang uri ng withdrawal
 - Umalis sa network, na magti-trigger ng full withdrawal
 
-### Walang gas {#gas-free}
+### Walang gas \{#gas-free}
 
 Sa estratehiyang ito sa mga pag-withdraw sa staking, hindi hinihiling sa mga staker na manual na magsumite ng transaksyon na nagpapa-withdraw ng partikular na dami ng ETH. Ibig sabihin nito, **hindi kailangan ng gas (bayarin sa transaksyon)**, at hindi rin nakikipag-agawan ang mga withdrawal para sa kasalukuyang execution layer block space.
 
-### Gaano kadalas kong matatanggap ang aking mga staking reward? {#how-soon}
+### Gaano kadalas kong matatanggap ang aking mga staking reward? \{#how-soon}
 
 Maaaring magproseso ng hanggang 16 na withdrawal sa isang block. Sa bilis na 'yon, puwedeng magproseso ng 115,200 validator withdrawal kada araw (kung walang nilaktawang slot). Tulad ng nabanggit sa itaas, lalaktawan ang mga validator na walang eligible na withdrawal, na magpapabilis sa pagtatapos ng sweep.
 
@@ -125,8 +129,9 @@ Kapag pinalawak ang kalkulasyong ito, matatantya natin ang oras na kakailanganin
 
 Tulad ng nakikita mo, babagal ito habang dumarami ang mga validator sa network. Kapag dumami ang mga nilaktawang slot, babagal ito nang husto, pero karaniwan nitong kakatawanin ang mas mabagal na posibleng resulta.
 
-## Mga karaniwang itanong {#faq}
+## Mga karaniwang itanong \{#faq}
 
+{
 <ExpandableCard
 title="Kapag nakapagbigay na ako ng withdrawal address, puwede ko ba itong palitan ng alternatibong withdrawal address?"
 eventCategory="FAQ"
@@ -134,7 +139,9 @@ eventAction="Once I have provided a withdrawal address, can I change it to an al
 eventName="read more">
 Hindi, ang proseso ng pagbibigay ng mga kredensyal sa pag-withdraw ay one-time process, at hindi na maaaring baguhin kapag naisumite na.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Bakit isang beses lang maaaring itakda ang withdrawal address?"
 eventCategory="FAQ"
@@ -146,7 +153,9 @@ Ang mga withdrawal address ay maaaring maging smart contract (kontrolado ng code
 
 Bilang alternatibo sa pagbabago ng withdrawal address para sa partikular na validator, maaaring piliin ng mga user na magtakda ng isang smart contract bilang kanilang withdrawal address na maaaring pangasiwaan ang pag-rotate ng key, tulad ng Safe. Ang mga user na nagtatakda ng kanilang pondo sa kanilang sariling EOA ay maaaring magsagawa ng ganap na pag-alis para i-withdraw ang lahat ng kanilang na-stake na pondo, at pagkatapos ay mag-stake ulit gamit ang mga bagong kredensyal.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Paano kung sumali ako sa pag-stake ng mga token o sa pooled staking"
 eventCategory="FAQ"
@@ -158,7 +167,9 @@ Kung bahagi ka ng isang <a href="/staking/pools/">staking pool</a> o may hawak k
 Sa pangkalahatan, dapat malaya ang mga user na kunin ang kasalukuyan nilang staked ETH, o magpalit ng staking provider na ginagamit nila. Kung masyado nang nagiging malaki ang isang partikular na pool, puwedeng alisin, i-redeem, at i-stake ulit ang pondo sa <a href="https://rated.network/">mas maliit na provider</a>. O, kung nakalikom ka na ng sapat na ETH, maaari kang <a href="/staking/solo/">mag-stake mula sa bahay</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Awtomatiko bang nangyayari ang mga reward payment (mga partial withdrawal)?"
 eventCategory="FAQ"
@@ -166,7 +177,9 @@ eventAction="Do reward payments (partial withdrawals) happen automatically?"
 eventName="read more">
 Oo, basta't may ibinigay na withdrawal address ang iyong validator. Dapat itong ibigay nang isang beses para inisyal na ma-enable ang anumang withdrawal, pagkatapos ay awtomatikong mati-trigger kada ilang araw ang mga reward payment sa bawat validator sweep.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Awtomatiko bang nangyayari ba ang full withdrawal?"
 eventCategory="FAQ"
@@ -178,7 +191,9 @@ Hindi, kung ang iyong validator ay aktibo pa sa network, hindi magaganap nang aw
 Kapag natapos na ng validator ang proseso ng pag-alis, at kung may mga kredensyal sa pag-withdraw ang account, ang natitirang balanse ay <em>saka</em> iwi-withdraw sa susunod na <a href="#validator-sweeping">validator sweep</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard title="Puwede ba akong mag-withdraw ng custom na halaga?"
 eventCategory="FAQ"
 eventAction="Can I withdraw a custom amount?"
@@ -187,7 +202,9 @@ Ang mga withdrawal ay idinisenyo upang awtomatikong maiproseso, at ililipat nito
 
 Hindi posibleng manual na hilingin ang partikular na halaga ng ETH na iwi-withdraw.
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Nagpapatakbo ako ng validator. Saan ako makakakita ng iba pang impormasyon tungkol sa pagpapagana ng mga withdrawal?"
 eventCategory="FAQ"
@@ -199,7 +216,9 @@ Inirerekomenda sa mga operator ng validator na bisitahin ang page na <a href="ht
 Upang subukan muna ang iyong setup sa isang testnet, bisitahin ang <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a> para magsimula.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Puwede ko bang i-reactivate ang aking validator matapos umalis sa pamamagitan ng pagdeposito pa ng ETH?"
 eventCategory="FAQ"
@@ -207,8 +226,9 @@ eventAction="Can I re-activate my validator after exiting by depositing more ETH
 eventName="read more">
 Hindi. Kapag umalis na ang isang validator at na-wtihdraw na ang kumpletong balanse nito, awtomatikong ita-transfer ang anumang karagdagang pondong idineposito sa validator na iyon sa withdrawal address sa susunod na validator sweep. Upang mag-stake ulit ng ETH, kailangang mag-activate ng bagong validator.
 </ExpandableCard>
+}
 
-## Karagdagang pagbabasa {#further-reading}
+## Karagdagang pagbabasa \{#further-reading}
 
 - [Mga Pag-withdraw sa Staking sa Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Mga Beacon chain push withdrawal bilang mga operasyon](https://eips.ethereum.org/EIPS/eip-4895)

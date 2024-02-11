@@ -10,31 +10,31 @@ Bu amaçla, her [Ethereum müşterisi](/developers/docs/nodes-and-clients/#execu
 
 [JSON-RPC](https://www.jsonrpc.org/specification) durumsuz, hafifliği özel bir uzaktan prosedür çağrısı (RPC) protokolüdür. Birkaç veri yapısını ve bunların işlenmesiyle ilgili kuralları tanımlar. Kavramların aynı süreç içinde, soketler üzerinden, HTTP üzerinden veya birçok farklı mesaj geçiş ortamında kullanılabilir olması açısından aktarımdan bağımsızdır. Veri formatı olarak JSON (RFC 4627) kullanır.
 
-## İstemci uygulamaları {#client-implementations}
+## İstemci uygulamaları \{#client-implementations}
 
 Ethereum istemcilerinin her biri, JSON-RPC şartnamesini uygularken farklı programlama dilleri kullanabilir. Belirli programlama dilleriyle ilgili daha fazla ayrıntı için [istemci belgelerine](/developers/docs/nodes-and-clients/#execution-clients) bakın. En güncel API destek bilgileri için her istemcinin belgelerini kontrol etmenizi öneririz.
 
-## Kolaylık Kütüphaneleri {#convenience-libraries}
+## Kolaylık Kütüphaneleri \{#convenience-libraries}
 
 JSON-RPC API aracılığıyla Ethereum istemcileriyle doğrudan etkileşim kurmayı seçebilseniz de, dapp geliştiricileri için genellikle daha kolay seçenekler vardır. JSON-RPC API'sinin üzerinde paketleyiciler sağlamak için birçok [JavaScript](/developers/docs/apis/javascript/#available-libraries) ve [arka uç API'si](/developers/docs/apis/backend/#available-libraries) kütüphanesi bulunur. Bu kütüphanelerle geliştiriciler, Ethereum ile etkileşime giren JSON RPC taleplerini (arka planda) başlatmak için tercih ettikleri programlama dilinde sezgisel ve tek satırlı yöntemler yazabilirler.
 
-## Fikir birliği istemci API'ları {#consensus-clients}
+## Fikir birliği istemci API'ları \{#consensus-clients}
 
 Bu sayfa, özellikle Ethereum yürütüm istemcileri tarafından kullanılan JSON-RPC API'sı ile ilgilidir. Ancak, fikir birliği istemcileri de kullanıcıların bir düğümden bilgi sorgulamasına, İşaret bloklarını, İşaret durumunu ve mutabakat ile ilgili diğer bilgileri direkt talep etmesine olanak veren bir RPC API'sına sahiptir. Bu API, [Beacon API web sayfasında](https://ethereum.github.io/beacon-APIs/#/) belgelenmiştir.
 
 Bir düğüm içinde müşteri veya istemci arası iletişim için dahili bir API da kullanılır; - yani, bu fikir birliği istemcisinin ve yürütüm istemcisinin veri takas etmesini sağlar. Buna "Motor API'sı" denir ve özellikler [GitHub](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)'da mevcuttur.
 
-## Yürütüm istemcisi özellikleri {#spec}
+## Yürütüm istemcisi özellikleri \{#spec}
 
 [GitHub'da tam JSON-RPC API özelliklerini okuyun](https://github.com/ethereum/execution-apis).
 
-## Konvansiyonlar {#conventions}
+## Konvansiyonlar \{#conventions}
 
-### Onaltılık değer kodlaması {#hex-encoding}
+### Onaltılık değer kodlaması \{#hex-encoding}
 
 JSON üzerinden iki temel veri türü geçirilir: biçimlendirilmemiş bayt dizileri ve miktarlar. Her ikisi de bir on altılı kodlamayla geçirilir, ancak biçimlendirme için farklı gereksinimler vardır.
 
-#### Miktarlar {#quantities-encoding}
+#### Miktarlar \{#quantities-encoding}
 
 Miktarları (tamsayılar, sayılar) kodlarken: on altılı olarak kodlayın, önek "0x", en kompakt gösterim (küçük istisna: sıfır "0x0" olarak gösterilmelidir).
 
@@ -46,7 +46,7 @@ Miktarları (tamsayılar, sayılar) kodlarken: on altılı olarak kodlayın, ön
 - YANLIŞ: 0x0400 (baştaki sıfırlara izin verilmez)
 - YANLIŞ: ff (0x ön eki olmalıdır)
 
-### Formatlanmamış bilgi {#unformatted-data-encoding}
+### Formatlanmamış bilgi \{#unformatted-data-encoding}
 
 Biçimlendirilmemiş verileri kodlarken (bayt dizileri, hesap adresleri, karmalar, bayt kodu dizileri): ön ek "0x" ile, bayt başına iki on altılık basamak ve on altılı olarak kodlayın.
 
@@ -58,7 +58,7 @@ Biçimlendirilmemiş verileri kodlarken (bayt dizileri, hesap adresleri, karmala
 - YANLIŞ: 0xf0f0f (hane sayısı çift olmalıdır)
 - YANLIŞ: 004200 (0x ön eki olmalıdır)
 
-### Varsayılan blok parametresi {#default-block}
+### Varsayılan blok parametresi \{#default-block}
 
 Aşağıdaki yöntemlerde fazladan bir varsayılan blok parametresi bulunur:
 
@@ -83,7 +83,7 @@ DefaultBlock parametresi için aşağıdaki seçenekler mümkündür:
 
 Bu sayfada, komut satırı aracı [curl](https://curl.se) kullanılarak ayrı ayrı JSON_RPC API uç noktalarının nasıl kullanılacağına ilişkin örnekler sunuyoruz. Bu ayrı uç nokta örnekleri, aşağıda [Kıvrılma örnekleri](#curl-examples) bölümünde bulunur. Sayfanın ilerleyen kısımlarında, Geth düğümü, JSON_RPC API ve kıvrılma kullanarak akıllı bir sözleşme derlemek ve dağıtmak için [uçtan uca bir örnek](#usage-example) de sağlıyoruz.
 
-## Kıvrılma örnekleri {#curl-examples}
+## Kıvrılma örnekleri \{#curl-examples}
 
 Bir Ethereum düğümüne [curl](https://curl.se) istekleri yaparak JSON_RPC API'sını kullanma örnekleri aşağıda verilmiştir. Her örnek belirli uç noktanın bir tanımını, parametrelerini, dönüş türünü ve nasıl kullanılması gerektiğine dair çalışılmış bir örneği içerir.
 
@@ -93,18 +93,18 @@ Kıvrılma istekleri, içerik türüyle ilgili bir hata mesajı döndürebilir. 
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## Dedikodu, Durum, Geçiş {#gossip-state-history}
+## Dedikodu, Durum, Geçiş \{#gossip-state-history}
 
 Bir avuç temel JSON-RPC yöntemi, Ethereum ağından veri gerektirir ve düzgün bir şekilde üç ana kategoriye ayrılır: _Dedikodu, Durum ve Geçmiş_. Her bir yönteme atlamak için bu bölümlerdeki bağlantıları kullanın veya tüm yöntemler listesini keşfetmek için içindekiler tablosunu kullanın.
 
-### Dedikodu Yöntemleri {#gossip-methods}
+### Dedikodu Yöntemleri \{#gossip-methods}
 
 > Bu yöntemler zincirin başını izler. Bu, işlemlerin ağ etrafında nasıl dolaştığını, blokların içinde nasıl yer bulduğunu ve istemcilerin yeni bloklar hakkında nasıl bilgi sahibi olduğunu gösterir.
 
 - [eth_blockNumber](#eth_blocknumber)
 - [eth_sendRawTransaction](#eth_sendrawtransaction)
 
-### Durum Yöntemleri {#state_methods}
+### Durum Yöntemleri \{#state_methods}
 
 > Depolanan tüm verinin mevcut durumunu raporlayan yöntemlerdir. "Durum" RAM'nin paylaşımlı, büyük tek bir parçası gibidir ve hesap bakiyelerini, sözleşme verilerini ve gaz tahminlerini içerir.
 
@@ -115,7 +115,7 @@ Bir avuç temel JSON-RPC yöntemi, Ethereum ağından veri gerektirir ve düzgü
 - [eth_call](#eth_call)
 - [eth_estimateGas](#eth_estimategas)
 
-### Geçmiş Yöntemleri {#history_methods}
+### Geçmiş Yöntemleri \{#history_methods}
 
 > Başlangıça kadar her blokun geçmiş kayıtlarını alır. Bu tek büyük sadece ekleme yapılabilen bir dosya gibidir ve tüm blok başlıklarını, blok gövdelerini, amca bloklarını ve işlem makbuzlarını içerir.
 
@@ -132,9 +132,9 @@ Bir avuç temel JSON-RPC yöntemi, Ethereum ağından veri gerektirir ve düzgü
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
 
-## JSON-RPC API Yöntemleri {#json-rpc-methods}
+## JSON-RPC API Yöntemleri \{#json-rpc-methods}
 
-### web3_clientVersion {#web3_clientversion}
+### web3_clientVersion \{#web3_clientversion}
 
 Geçerli istemci sürümünü döndürür.
 
@@ -159,7 +159,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 {#web3_sha3}
+### web3_sha3 \{#web3_sha3}
 
 Verilen verilerin Keccak-256'sını (standartlaştırılmış SHA3-256 _olmayan_) döndürür.
 
@@ -188,7 +188,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version {#net_version}
+### net_version \{#net_version}
 
 Geçerli ağ kimliğini döndürür.
 
@@ -219,7 +219,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening {#net_listening}
+### net_listening \{#net_listening}
 
 İstemci aktif olarak ağ bağlantılarını dinliyorsa `true` değerini döndürür.
 
@@ -244,7 +244,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount {#net_peercount}
+### net_peerCount \{#net_peercount}
 
 Şu anda istemciye bağlı olan eşlerin sayısını döndürür.
 
@@ -269,7 +269,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 }
 ```
 
-### eth_protocolVersion {#eth_protocolversion}
+### eth_protocolVersion \{#eth_protocolversion}
 
 Geçerli Ethereum protokol sürümünü döndürür. Bu yöntemin [Geth'de mevcut olmadığını](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924) aklınızda tutun.
 
@@ -294,7 +294,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing {#eth_syncing}
+### eth_syncing \{#eth_syncing}
 
 Senkronizasyon durumu veya `false` ile ilgili verileri içeren bir nesne döndürür.
 
@@ -333,7 +333,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase {#eth_coinbase}
+### eth_coinbase \{#eth_coinbase}
 
 İstemci para tabanı adresini döndürür.
 
@@ -358,7 +358,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId {#eth_chainId}
+### eth_chainId \{#eth_chainId}
 
 Tekrardan korumalı işlemleri imzalamak için kullanılan zincir kimliğini döndürür.
 
@@ -383,7 +383,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining {#eth_mining}
+### eth_mining \{#eth_mining}
 
 Müşteri aktif olarak yeni bloklar kazıyorsa `true` değerini döndürür.
 
@@ -408,7 +408,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate {#eth_hashrate}
+### eth_hashrate \{#eth_hashrate}
 
 Düğümün madencilik yaptığı saniye başına karma sayısını döndürür.
 
@@ -433,7 +433,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice {#eth_gasprice}
+### eth_gasPrice \{#eth_gasprice}
 
 Wei cinsinden gaz başına geçerli fiyatı döndürür.
 
@@ -458,7 +458,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
-### eth_accounts {#eth_accounts}
+### eth_accounts \{#eth_accounts}
 
 İstemcinin sahip olduğu adreslerin listesini döndürür.
 
@@ -483,7 +483,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber {#eth_blocknumber}
+### eth_blockNumber \{#eth_blocknumber}
 
 En son blokun numarasını döndürür.
 
@@ -508,7 +508,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 }
 ```
 
-### eth_getBalance {#eth_getbalance}
+### eth_getBalance \{#eth_getbalance}
 
 Verilen adresin hesabının bakiyesini döndürür.
 
@@ -538,7 +538,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 }
 ```
 
-### eth_getStorageAt {#eth_getstorageat}
+### eth_getStorageAt \{#eth_getstorageat}
 
 Belirli bir adresteki bir depolama konumundan değeri döndürür.
 
@@ -605,7 +605,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount {#eth_gettransactioncount}
+### eth_getTransactionCount \{#eth_gettransactioncount}
 
 Bir adresten _gönderilen_ işlem sayısını döndürür.
 
@@ -638,7 +638,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 }
 ```
 
-### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
+### eth_getBlockTransactionCountByHash \{#eth_getblocktransactioncountbyhash}
 
 Verilen blok karması ile eşleşen bir bloktan olan bir bloktaki işlem sayısını döndürür.
 
@@ -667,7 +667,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 }
 ```
 
-### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
+### eth_getBlockTransactionCountByNumber \{#eth_getblocktransactioncountbynumber}
 
 Verilen blok numarasıyla eşleşen bir bloktaki işlem sayısını döndürür.
 
@@ -698,7 +698,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 }
 ```
 
-### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
+### eth_getUncleCountByBlockHash \{#eth_getunclecountbyblockhash}
 
 Verilen blok karması ile eşleşen bir bloktan olan bir bloktaki amcaların sayısını döndürür.
 
@@ -727,7 +727,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 }
 ```
 
-### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
+### eth_getUncleCountByBlockNumber \{#eth_getunclecountbyblocknumber}
 
 Verilen blok numarası ile eşleşen bir bloktan olan bir bloktaki amcaların sayısını döndürür.
 
@@ -758,7 +758,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 }
 ```
 
-### eth_getCode {#eth_getcode}
+### eth_getCode \{#eth_getcode}
 
 Belirli bir adresteki kodu döndürür.
 
@@ -791,7 +791,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xa94f53
 }
 ```
 
-### eth_sign {#eth_sign}
+### eth_sign \{#eth_sign}
 
 İmza yöntemi, Ethereum'a özel bir imzayı şu şekilde hesaplar: `sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`.
 
@@ -821,7 +821,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction {#eth_signtransaction}
+### eth_signTransaction \{#eth_signtransaction}
 
 [eth_sendRawTransaction](#eth_sendrawtransaction) ile kullanılarak daha sonra ağa gönderilebilecek bir işlemi imzalar.
 
@@ -854,7 +854,7 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction {#eth_sendtransaction}
+### eth_sendTransaction \{#eth_sendtransaction}
 
 Veri alanı kod içeriyorsa, yeni mesaj çağrısı işlemi veya sözleşme oluşturma gerçekleşir.
 
@@ -902,7 +902,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction {#eth_sendrawtransaction}
+### eth_sendRawTransaction \{#eth_sendrawtransaction}
 
 İmzalı işlemler için yeni mesaj arama işlemi veya sözleşme oluşturma gerçekleşir.
 
@@ -935,7 +935,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call {#eth_call}
+### eth_call \{#eth_call}
 
 Blok zincirde bir işlem oluşturmadan hemen yeni bir mesaj çağrısı yürütür.
 
@@ -969,7 +969,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas {#eth_estimategas}
+### eth_estimateGas \{#eth_estimategas}
 
 İşlemin tamamlanmasına izin vermek için ne kadar gazın gerekli olduğuna dair bir tahmin oluşturur ve döndürür. İşlem blok zincire eklenmez. Tahminin, ESM mekaniği ve düğüm performansı dahil olmak üzere çeşitli nedenlerle işlem tarafından fiilen kullanılan gaz miktarından önemli ölçüde daha fazla olabileceğini unutmayın.
 
@@ -994,7 +994,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 }
 ```
 
-### eth_getBlockByHash {#eth_getblockbyhash}
+### eth_getBlockByHash \{#eth_getblockbyhash}
 
 Karma ile bir blok hakkında bilgi döndürür.
 
@@ -1071,7 +1071,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 }
 ```
 
-### eth_getBlockByNumber {#eth_getblockbynumber}
+### eth_getBlockByNumber \{#eth_getblockbynumber}
 
 Blok numarasına göre bir blok hakkında bilgi verir.
 
@@ -1098,7 +1098,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":[
 
 Sonuç bkz. [eth_getBlockByHash](#eth_getblockbyhash)
 
-### eth_getTransactionByHash {#eth_gettransactionbyhash}
+### eth_getTransactionByHash \{#eth_gettransactionbyhash}
 
 İşlem karması tarafından istenen bir işlem hakkındaki bilgileri döndürür.
 
@@ -1157,7 +1157,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
+### eth_getTransactionByBlockHashAndIndex \{#eth_gettransactionbyblockhashandindex}
 
 Blok karması ve işlem dizini konumuna göre bir işlem hakkındaki bilgileri döndürür.
 
@@ -1184,7 +1184,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAnd
 
 Sonuç bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
-### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
+### eth_getTransactionByBlockNumberAndIndex \{#eth_gettransactionbyblocknumberandindex}
 
 Blok numarasına ve işlem dizini konumuna göre bir işlem hakkında bilgi verir.
 
@@ -1211,7 +1211,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberA
 
 Sonuç bkz. [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
-### eth_getTransactionReceipt {#eth_gettransactionreceipt}
+### eth_getTransactionReceipt \{#eth_gettransactionreceipt}
 
 İşlem karmasına göre bir işlemin makbuzunu döndürür.
 
@@ -1278,7 +1278,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
+### eth_getUncleByBlockHashAndIndex \{#eth_getunclebyblockhashandindex}
 
 Karma ve amca dizin konumuna göre bir blokun amcası hakkında bilgi verir.
 
@@ -1307,7 +1307,7 @@ Sonuç bkz. [eth_getBlockByHash](#eth_getblockbyhash)
 
 **Not**: Bir amca, bireysel işlemleri içermez.
 
-### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
+### eth_getUncleByBlockNumberAndIndex \{#eth_getunclebyblocknumberandindex}
 
 Sayıya ve amca dizin konumuna göre bir blokun amcası hakkında bilgi verir.
 
@@ -1336,7 +1336,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndInde
 
 Sonuç bkz. [eth_getBlockByHash](#eth_getblockbyhash)
 
-### eth_getCompilers {#eth_getcompilers}
+### eth_getCompilers \{#eth_getcompilers}
 
 İstemcideki kullanılabilir derleyicilerin bir listesini döndürür.
 
@@ -1357,7 +1357,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCompilers","params":[],"i
 }
 ```
 
-### eth_compileSolidity {#eth_compile_solidity}
+### eth_compileSolidity \{#eth_compile_solidity}
 
 Derlenmiş Solidity kodunu döndürür.
 
@@ -1418,7 +1418,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileSolidity","params":["
 }
 ```
 
-### eth_compileLLL {#eth_compileLLL}
+### eth_compileLLL \{#eth_compileLLL}
 
 Derlenmiş LLL kodunu döndürür.
 
@@ -1445,7 +1445,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileLLL","params":["(retu
 }
 ```
 
-### eth_compileSerpent {#eth_compileserpent}
+### eth_compileSerpent \{#eth_compileserpent}
 
 Derlenmiş serpent kodunu döndürür.
 
@@ -1472,7 +1472,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_compileSerpent","params":["/
 }
 ```
 
-### eth_newFilter {#eth_newfilter}
+### eth_newFilter \{#eth_newfilter}
 
 Durum değiştiğinde (günlükler) bildirimde bulunmak için filtre seçeneklerine dayalı olarak bir filtre nesnesi oluşturur. Durumun değişip değişmediğini kontrol etmek için [eth_getFilterChanges](#eth_getfilterchanges)'i arayın.
 
@@ -1525,7 +1525,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 }
 ```
 
-### eth_newBlockFilter {#eth_newblockfilter}
+### eth_newBlockFilter \{#eth_newblockfilter}
 
 Yeni bir blok geldiğinde bildirimde bulunmak için düğümde bir filtre oluşturur. Durumun değişip değişmediğini kontrol etmek için [eth_getFilterChanges](#eth_getfilterchanges)'i arayın.
 
@@ -1546,7 +1546,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 }
 ```
 
-### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
+### eth_newPendingTransactionFilter \{#eth_newpendingtransactionfilter}
 
 Yeni bekleyen işlemler geldiğinde bildirimde bulunmak için düğümde bir filtre oluşturur. Durumun değişip değişmediğini kontrol etmek için [eth_getFilterChanges](#eth_getfilterchanges)'i arayın.
 
@@ -1567,7 +1567,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 }
 ```
 
-### eth_uninstallFilter {#eth_uninstallfilter}
+### eth_uninstallFilter \{#eth_uninstallfilter}
 
 Verilen kimliğe sahip bir filtreyi kaldırır. Saate artık ihtiyaç duyulmadığında her zaman çağrılmalıdır. Ek olarak Filtreler, belirli bir süre için [eth_getFilterChanges](#eth_getfilterchanges) ile istenmediğinde zaman aşımına uğrar.
 
@@ -1596,7 +1596,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges {#eth_getfilterchanges}
+### eth_getFilterChanges \{#eth_getfilterchanges}
 
 Son yoklamadan bu yana oluşan günlüklerin bir dizisini döndüren bir filtre için yoklama yöntemi.
 
@@ -1648,7 +1648,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs {#eth_getfilterlogs}
+### eth_getFilterLogs \{#eth_getfilterlogs}
 
 Verilen kimliğe sahip filtreyle eşleşen tüm günlüklerin bir dizisini döndürür.
 
@@ -1673,7 +1673,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 
 Sonuç, bkz. [eth_getFilterChanges](#eth_getfilterchanges)
 
-### eth_getLogs {#eth_getlogs}
+### eth_getLogs \{#eth_getlogs}
 
 Belirli bir filtre nesnesiyle eşleşen tüm günlüklerin bir dizisini döndürür.
 
@@ -1708,7 +1708,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics"
 
 Sonuç, bkz. [eth_getFilterChanges](#eth_getfilterchanges)
 
-### eth_getWork {#eth_getwork}
+### eth_getWork \{#eth_getwork}
 
 Geçerli blokun, seedHash'in ve karşılanacak sınır koşulunun ("hedef") karmasını döndürür.
 
@@ -1737,7 +1737,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getWork","params":[],"id":73
 }
 ```
 
-### eth_submitWork {#eth_submitwork}
+### eth_submitWork \{#eth_submitwork}
 
 İş ispatı çözümü göndermek için kullanılır.
 
@@ -1770,7 +1770,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method":"eth_submitWork", "params":["0x0
 }
 ```
 
-### eth_submitHashrate {#eth_submithashrate}
+### eth_submitHashrate \{#eth_submithashrate}
 
 Madencilik karma oranı göndermek için kullanılır.
 
@@ -1801,7 +1801,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method":"eth_submitHashrate", "params":[
 }
 ```
 
-### db_putString (kullanımdan kalkmış) {#db_putstring}
+### db_putString (kullanımdan kalkmış) \{#db_putstring}
 
 Yerel veritabanında bir dize depolar.
 
@@ -1832,7 +1832,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_putString","params":["testDB"
 }
 ```
 
-### db_getString (kullanımdan kalkmış) {#db_getstring}
+### db_getString (kullanımdan kalkmış) \{#db_getstring}
 
 Yerel veritabanından dize döndürür. **Not** bu işlev kullanımdan kaldırılmıştır.
 
@@ -1860,7 +1860,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_getString","params":["testDB"
 }
 ```
 
-### db_putHex (kullanımdan kalkmış) {#db_puthex}
+### db_putHex (kullanımdan kalkmış) \{#db_puthex}
 
 İkili verileri yerel veritabanında depolar. **Not** bu işlev kullanımdan kaldırılmıştır.
 
@@ -1889,7 +1889,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_putHex","params":["testDB","m
 }
 ```
 
-### db_getHex (kullanımdan kalkmış) {#db_gethex}
+### db_getHex (kullanımdan kalkmış) \{#db_gethex}
 
 Yerel veritabanından ikili verileri döndürür. **Not** bu işlev kullanımdan kaldırılmıştır.
 
@@ -1917,7 +1917,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"db_getHex","params":["testDB","m
 }
 ```
 
-### shh_version (kullanımdan kalkmış) {#shh_post}
+### shh_version (kullanımdan kalkmış) \{#shh_post}
 
 Geçerli fısıltı protokolü sürümünü döndürür.
 
@@ -1940,7 +1940,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_version","params":[],"id":67
 }
 ```
 
-### shh_post (kullanımdan kalkmış) {#shh_version}
+### shh_post (kullanımdan kalkmış) \{#shh_version}
 
 Fısıltı mesajı gönderir.
 
@@ -2209,7 +2209,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_getFilterChanges","params":[
 }
 ```
 
-### shh_getMessages (kullanımdan kalkmış) {#shh_getmessages}
+### shh_getMessages (kullanımdan kalkmış) \{#shh_getmessages}
 
 Bir filtreyle eşleşen tüm mesajları alın. `shh_getFilterChanges`'in aksine bu, tüm mesajları döndürür.
 
@@ -2237,9 +2237,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"shh_getMessages","params":["0x7"
 
 Sonuç, bkz. [shh_getFilterChanges](#shh_getfilterchanges)
 
-## Kullanım Örneği {#usage-example}
+## Kullanım Örneği \{#usage-example}
 
-### JSON_RPC kullanarak bir sözleşmeyi dağıtma {#deploying-contract}
+### JSON_RPC kullanarak bir sözleşmeyi dağıtma \{#deploying-contract}
 
 Bu bölüm, yalnızca RPC arayüzünü kullanarak bir sözleşmenin nasıl dağıtılacağının bir gösterimini içerir. Bu karmaşıklığın ortadan kaldırıldığı sözleşmeleri dağıtmanın alternatif yolları vardır; örneğin, [web3.js](https://web3js.readthedocs.io/) ve [web3.py](https://github.com/ethereum/web3.py) gibi RPC arayüzünün üzerine kurulmuş kitaplıkları kullanmak gibi. Bu soyutlamaların anlaşılması genellikle daha kolaydır ve hataya karşı daha korumalıdır, ancak kaputun altında neler oldup bittiğini anlamak yine de yardımcı olur.
 
@@ -2315,7 +2315,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": [
 
 Sözleşmemiz `0x4d03d617d700cf81935d7f797f4e2ae719648262` üzerinde oluşturuldu. Makbuz yerine boş bir sonuç, işlemin henüz bir bloka dahil edilmediği anlamına gelir. Bir dakika bekleyin ve madencinizin çalışıp çalışmadığını kontrol edip yeniden deneyin.
 
-#### Akıllı sözleşmelerle etkileşim {#interacting-with-smart-contract}
+#### Akıllı sözleşmelerle etkileşim \{#interacting-with-smart-contract}
 
 Bu örnekte, sözleşmenin `multiply` yöntemine, `eth_sendTransaction` kullanarak bir işlem göndereceğiz.
 
@@ -2376,7 +2376,7 @@ web3.sha3("Print(uint256)")
 
 Bu, JSON-RPC'nin doğrudan kullanımını gösteren en yaygın görevlerden bazılarına kısa bir giriş niteliğindeydi.
 
-## İlgili konular {#related-topics}
+## İlgili konular \{#related-topics}
 
 - [JSON-RPC özellikleri](http://www.jsonrpc.org/specification)
 - [ Düğümler ve İstemciler](/developers/docs/nodes-and-clients/)

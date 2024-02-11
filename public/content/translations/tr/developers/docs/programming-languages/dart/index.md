@@ -5,9 +5,9 @@ lang: tr
 incomplete: true
 ---
 
-## Akıllı sözleşmeler ve Solidity dilini öğrenmeye başlangıç {#getting-started-with-smart-contracts-and-solidity}
+## Akıllı sözleşmeler ve Solidity dilini öğrenmeye başlangıç \{#getting-started-with-smart-contracts-and-solidity}
 
-## Öğreticiler {#tutorials}
+## Öğreticiler \{#tutorials}
 
 - [Flutter ve Blok Zinciri – Hello World Dapp](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) başlamanız için tüm adımlarda size yol gösterir:
   1.  [Truffle geliştirme paketini](https://www.trufflesuite.com/) yükleme
@@ -18,7 +18,7 @@ incomplete: true
 - Sabırsızsanız, yaklaşık yirmi dakika uzunluğundaki [Flutter ve Dart ile Ethereum Üzerinde bir Blok Zinciri Merkeziyetsiz Uygulaması Oluşturma](https://www.youtube.com/watch?v=jaMFEOCq_1s) videosunu tercih edebilirsiniz
 - [MetaMask'i Flutter uygulamasına entegre etme](https://youtu.be/8qzVDje3IWk) - bu kısa video, MetaMask'i Flutter uygulamalarınıza entegre etme adımlarında size yol gösterir
 
-## Ethereum istemcileri ile çalışma {#working-with-ethereum-clients}
+## Ethereum istemcileri ile çalışma \{#working-with-ethereum-clients}
 
 Ethereum'u, kripto para birimi ve blok zinciri teknolojisinin faydalarını kullanan merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için kullanabilirsiniz. Dart'ın Ethereum için [JSON RPC API](/developers/docs/apis/json-rpc/)'sini kullanması için şu anda yürütülen en az iki kütüphane vardır.
 

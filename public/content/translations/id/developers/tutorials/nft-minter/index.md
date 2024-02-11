@@ -31,15 +31,15 @@ And if you haven't already, you'll definitely need an Alchemy account to complet
 
 Without further ado, let's get started!
 
-## Making NFTs 101 {#making-nfts-101}
+## Making NFTs 101 \{#making-nfts-101}
 
 Before we even start looking at any code, it's important to understand how making an NFT works. It involves two steps:
 
-### Publish an NFT smart contract on the Ethereum blockchain {#publish-nft}
+### Publish an NFT smart contract on the Ethereum blockchain \{#publish-nft}
 
 The biggest difference between the two NFT smart contact standards is that ERC-1155 is a multi-token standard and includes batch functionality, whereas with the ERC-721 is a single-token standard and therefore only supports transferring one token at a time.
 
-### Call the minting function {#minting-function}
+### Call the minting function \{#minting-function}
 
 Usually, this minting function requires you to pass in two variables as parameters, first the `recipient`, which specifies the address that will receive your freshly minted NFT, and second the NFT's `tokenURI`, a string that resolves to a JSON document describing the NFT's metadata.
 
@@ -51,7 +51,7 @@ In this tutorial, we're going to focus on part 2, calling an existing NFT's smar
 
 Cool, now that we understand how making an NFT works, let's clone our starter files!
 
-## Clone the starter files {#clone-the-starter-files}
+## Clone the starter files \{#clone-the-starter-files}
 
 First, go to the [nft-minter-tutorial GitHub repository](https://github.com/alchemyplatform/nft-minter-tutorial) to get the starter files for this project. Clone this repository into your local environment.=
 
@@ -64,11 +64,11 @@ Next, open your copy of `minter-starter-files` in your code editor, and then nav
 
 All of the code we'll write will live under the `src` folder. We'll be editing the `Minter.js` component and writing additional javascript files to give our project Web3 functionality.
 
-## Step 2: Check out our starter files {#step-2-check-out-our-starter-files}
+## Step 2: Check out our starter files \{#step-2-check-out-our-starter-files}
 
 Before we start coding, it's important to check out what's already provided for us in the starter files.
 
-### Get your react project running {#get-your-react-project-running}
+### Get your react project running \{#get-your-react-project-running}
 
 Let's start by running the React project in our browser. The beauty of React is that once we have our project running in our browser, any changes we save will be updated live in our browser.
 
@@ -89,7 +89,7 @@ Doing so should open http://localhost:3000/ in your browser, where you'll see th
 
 If you try clicking "Connect Wallet" or "Mint NFT" buttons, you'll notice they don't work—that's because we still need to program their functionality! :\)
 
-### The Minter.js component {#minter-js}
+### The Minter.js component \{#minter-js}
 
 **NOTE:** Make sure you're in the `minter-starter-files` folder and not the `nft-minter` folder!
 
@@ -196,21 +196,21 @@ If you go to the `App.js` file, which is the main component in React that acts a
 
 Now that we understand what we're working with, let's set up our Ethereum wallet!
 
-## Set up your Ethereum wallet {#set-up-your-ethereum-wallet}
+## Set up your Ethereum wallet \{#set-up-your-ethereum-wallet}
 
 For users to be able to interact with your smart contract they will need to connect their Ethereum wallet to your dApp.
 
-### Download MetaMask {#download-metamask}
+### Download MetaMask \{#download-metamask}
 
 Untuk tutorial ini, kita akan menggunakan MetaMask, dompet virtual dalam peramban yang digunakan untuk mengelola alamat akun Ethereum Anda. If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/).
 
 Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Ropsten Test Network” in the upper right \(so that we’re not dealing with real money\).
 
-### Add ether from a Faucet {#add-ether-from-faucet}
+### Add ether from a Faucet \{#add-ether-from-faucet}
 
 In order to mint our NFTs (or sign any transactions on the Ethereum blockchain), we’ll need some fake Eth. To get Eth you can go to the [Ropsten faucet](https://faucet.ropsten.be/) and enter your Ropsten account address, then click “Send Ropsten Eth.” You should see Eth in your MetaMask account soon after!
 
-### Check your balance {#check-your-balance}
+### Check your balance \{#check-your-balance}
 
 To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. Setelah Anda memasukkan alamat akun MetaMask Anda dan klik "Kirim Permintaan", Anda akan melihat respons seperti ini:
 
@@ -222,13 +222,13 @@ To double check our balance is there, let’s make an [eth_getBalance](https://d
 
 Fiuh! Uang palsu kita semuanya ada di sana! <Emoji text=":money_mouth_face:" size={1} />
 
-## Connect MetaMask to your UI {#connect-metamask-to-your-UI}
+## Connect MetaMask to your UI \{#connect-metamask-to-your-UI}
 
 Now that our MetaMask wallet is set up, let's connect our dApp to it!
 
 Because we want to prescribe to the [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) paradigm, we're going to create a separate file that contains our functions to manage the logic, data, and rules of our dApp, and then pass those functions to our frontend (our Minter.js component).
 
-### The `connectWallet` function {#connect-wallet-function}
+### The `connectWallet` function \{#connect-wallet-function}
 
 To do so, let's create a new folder called `utils` in your `src` directory and add a file called `interact.js` inside it, which will contain all of our wallet and smart contract interaction functions.
 
@@ -290,7 +290,7 @@ Using a try/catch loop, we'll try to connect to MetaMask by calling`[window.ethe
 - If the user chooses to connect, `method: "eth_requestAccounts"` will return an array that contains all of the user's account addresses that are connected to the dApp. Altogether, our `connectWallet` function will return a JSON object that contains the _first_ `address` in this array \(see line 9\) and a `status` message that prompts the user to write a message to the smart contract.
 - If the user rejects the connection, then the JSON object will contain an empty string for the `address` returned and a `status` message that reflects that the user rejected the connection.
 
-### Add connectWallet function to your Minter.js UI Component {#add-connect-wallet}
+### Add connectWallet function to your Minter.js UI Component \{#add-connect-wallet}
 
 Now that we've written this `connectWallet` function, let's connect it to our `Minter.js.` component.
 
@@ -336,7 +336,7 @@ Next, try refreshing the page... this is strange. Our wallet button is prompting
 
 Don't worry though! We easily can fix that by implementing a function called `getCurrentWalletConnected`, which will check if an address is already connected to our dApp and update our UI accordingly!
 
-### The getCurrentWalletConnected function {#get-current-wallet}
+### The getCurrentWalletConnected function \{#get-current-wallet}
 
 In your `interact.js` file, add the following `getCurrentWalletConnected` function:
 
@@ -413,7 +413,7 @@ Notice, we use the response of our call to `getCurrentWalletConnected` to update
 
 Once you've added this code, try refreshing our browser window. The button should say that you're connected, and show a preview of your connected wallet's address - even after you refresh!
 
-### Implement addWalletListener {#implement-add-wallet-listener}
+### Implement addWalletListener \{#implement-add-wallet-listener}
 
 The final step in our dApp wallet setup is implementing the wallet listener so our UI updates when our wallet's state changes, such as when the user disconnects or switches accounts.
 
@@ -464,7 +464,7 @@ useEffect(async () => {
 
 And voila! We've completed programming all of our wallet functionality! Now that our wallet is set up, let's figure out how to mint our NFT!
 
-## NFT Metadata 101 {#nft-metadata-101}
+## NFT Metadata 101 \{#nft-metadata-101}
 
 So remember the NFT metadata we just talked about in Step 0 of this tutorial—it brings an NFT to life, allowing it to have properties, such as a digital asset, name, description, and other attributes.
 
@@ -478,11 +478,11 @@ The text in the "Link to Asset", "Name", "Description" fields will comprise the 
 
 To store our metadata on IPFS, we will use [Pinata](https://pinata.cloud/), a convenient IPFS API and toolkit. In the next step, we'll explain exactly how to do this!
 
-## Use Pintata to pin your metadata to IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Use Pintata to pin your metadata to IPFS \{#use-pinata-to-pin-your-metadata-to-IPFS}
 
 If you don't have a [Pinata](https://pinata.cloud/) account, sign up for a free account [here](https://pinata.cloud/signup) and complete the steps to verify your email and account.
 
-### Create your Pinata API key {#create-pinata-api-key}
+### Create your Pinata API key \{#create-pinata-api-key}
 
 Navigate to the [https://pinata.cloud/keys](https://pinata.cloud/keys) page, then select the "New Key" button at the top, set the Admin widget as enabled, and name your key.
 
@@ -490,7 +490,7 @@ You'll then be shown a popup with your API info. Make sure to put this somewhere
 
 Now that our key is set up, let's add it to our project so we can use it.
 
-### Create a .env file {#create-a-env}
+### Create a .env file \{#create-a-env}
 
 We can safely store our Pinata key and secret in an environment file. Let's install the [dotenv package](https://www.npmjs.com/package/dotenv) in your project directory.
 
@@ -517,7 +517,7 @@ REACT_APP_PINATA_SECRET = <pinata-api-secret>
 
 Save the file, and then you're ready to start writing the function to upload your JSON metadata to IPFS!
 
-### Implement pinJSONToIPFS {#pin-json-to-ipfs}
+### Implement pinJSONToIPFS \{#pin-json-to-ipfs}
 
 Fortunately for us, Pinata has an [API specifically for uploading JSON data to IPFS](https://pinata.cloud/documentation#PinJSONToIPFS) and a convenient JavaScript with axios example that we can use, with some slight modifications.
 
@@ -576,19 +576,19 @@ Then we have our asynchronous function `pinJSONToIPFS`, which takes a `JSONBody`
 
 As with our `connectWallet`function return types, we're returning JSON objects so we can use their parameters to update our state variables and UI.
 
-## Load your smart contract {#load-your-smart-contract}
+## Load your smart contract \{#load-your-smart-contract}
 
 Now that we have a way to upload our NFT metadata to IPFS via our `pinJSONToIPFS` function, we're going to need a way to load an instance of our smart contract so we can call its `mintNFT` function.
 
 As we mentioned earlier, in this tutorial we will be using [this existing NFT smart contract](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE); however, if you'd like to learn how we made it, or make one yourself, we highly recommend you check out our other tutorial, ["How to Create an NFT."](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft).
 
-### The contract ABI {#contract-abi}
+### The contract ABI \{#contract-abi}
 
 If you examined our files closely, you'll have noticed that in our `src` directory, there's a `contract-abi.json` file. An ABI is necessary for specifying which function a contract will invoke as well ensuring that the function will return data in the format you're expecting.
 
 We're also going to need an Alchemy API key and the Alchemy Web3 API to connect to the Ethereum blockchain and load our smart contract.
 
-### Create your Alchemy API key {#create-alchemy-api}
+### Create your Alchemy API key \{#create-alchemy-api}
 
 If you don't already have an Alchemy account, [sign up for free here.](https://alchemy.com/?a=eth-org-nft-minter)
 
@@ -612,7 +612,7 @@ REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 
 Now that we have our contract ABI and our Alchemy API key, we're ready to load our smart contract using [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
 
-### Set up your Alchemy Web3 endpoint and contract {#setup-alchemy-endpoint}
+### Set up your Alchemy Web3 endpoint and contract \{#setup-alchemy-endpoint}
 
 First, if you don't have it already, you'll need to install [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) by navigating to the home directory: `nft-minter-tutorial` in the terminal:
 
@@ -646,7 +646,7 @@ const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
 
 Once we have both of those, we're ready to start coding our mint function!
 
-## Implement the mintNFT function {#implement-the-mintnft-function}
+## Implement the mintNFT function \{#implement-the-mintnft-function}
 
 Inside your `interact.js` file, let's define our function, `mintNFT`, which eponymously will mint our NFT.
 
@@ -658,7 +658,7 @@ The three inputs to our function will be the `url` of our digital asset, `name`,
 export const mintNFT = async (url, name, description) => {}
 ```
 
-### Input error handling {#input-error-handling}
+### Input error handling \{#input-error-handling}
 
 Naturally, it makes sense to have some sort of input error handling at the start of the function, so we exit this function if our input parameters aren't correct. Inside our function, let's add the following code:
 
@@ -676,7 +676,7 @@ export const mintNFT = async (url, name, description) => {
 
 Essentially, if any of the input parameters are an empty string, then we return a JSON object where the `success` boolean is false, and the `status` string relays that all fields in our UI must be complete.
 
-### Upload the metadata to IPFS {#upload-metadata-to-ipfs}
+### Upload the metadata to IPFS \{#upload-metadata-to-ipfs}
 
 Once we know our metadata is formatted properly, the next step is to wrap it into a JSON object and upload it to IPFS via the `pinJSONToIPFS` we wrote!
 
@@ -833,7 +833,7 @@ export const mintNFT = async (url, name, description) => {
 
 That's one giant function! Now, we just need to connect our `mintNFT` function to our `Minter.js` component...
 
-## Connect mintNFT to our Minter.js frontend {#connect-our-frontend}
+## Connect mintNFT to our Minter.js frontend \{#connect-our-frontend}
 
 Open up your `Minter.js` file and update the `import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";` line at the top to be:
 
@@ -854,13 +854,13 @@ const onMintPressed = async () => {
 }
 ```
 
-## Deploy your NFT to a live website {#deploy-your-NFT}
+## Deploy your NFT to a live website \{#deploy-your-NFT}
 
 Ready to take your project live for users to interact with? Check out [this tutorial](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) for deploying your Minter to a live website.
 
 One last step...
 
-## Take the blockchain world by storm {#take-the-blockchain-world-by-storm}
+## Take the blockchain world by storm \{#take-the-blockchain-world-by-storm}
 
 Just kidding, you made it to the end of the tutorial!
 

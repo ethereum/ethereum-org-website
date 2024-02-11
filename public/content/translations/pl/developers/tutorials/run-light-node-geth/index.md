@@ -28,13 +28,13 @@ w wierszu poleceń (bez znaku dolara). Nie rób tego jeszcze! Po uruchomieniu `g
 
 Ten proces może trwać od godzin do dni i wymaga kilkuset GB wolnego miejsca. Na razie po prostu uruchomimy lekki węzeł w sieci testowej, aby zapoznać się z tym, jak korzystać z Getha. Aby to zrobić, będziemy musieli przejść przez kilka ważnych opcji i narzędzi wiersza poleceń.
 
-## Główna sieć i testnet {#mainnet-and-testnet}
+## Główna sieć i testnet \{#mainnet-and-testnet}
 
 Domyślnie Geth uruchamia węzeł sieci głównej. Możesz uruchomić `geth --testnet`, aby uruchomić pełny węzeł sieci testowej Ropsten. Możesz uruchomić węzeł w Rinkeby, zamieniając `testnet` na `rinkeby`.
 
 [Dowiedz się więcej o różnych sieciach](/developers/docs/networks/).
 
-## Syncmode {#syncmode}
+## Syncmode \{#syncmode}
 
 Geth ma trzy `syncmode`.
 
@@ -52,12 +52,12 @@ Wreszcie, `"light"` uruchamia lekki węzeł, który omówiliśmy powyżej.
 
 Aby wyjaśnić różnice pomiędzy trzema trybami synchronizacji, zobacz tę [odpowiedź giełdy](https://ethereum.stackexchange.com/questions/11297/what-is-geths-light-sync-and-why-is-it-so-fast).
 
-## Dokumentacja i inne opcje wiersza poleceń {#documentation-and-other-command-line-options}
+## Dokumentacja i inne opcje wiersza poleceń \{#documentation-and-other-command-line-options}
 
 - [Pełna dokumentacja](https://geth.ethereum.org/docs/)
 - [Wszystkie opcje wiersza poleceń](https://geth.ethereum.org/docs/interface/command-line-options)
 
-## Uruchomienie lekkiego węzła {#running-your-light-node}
+## Uruchomienie lekkiego węzła \{#running-your-light-node}
 
 Uruchomimy lekki węzeł sieci testowej, aby zapoznać się z zarządzaniem węzłem i interakcją z nim. Aby to zrobić, po prostu uruchom
 
@@ -111,7 +111,7 @@ INFO [11-18|16:07:11.630] Imported new block headers               count=2   ela
 
 W tym momencie wiadomości zaczną przychodzić co 10-30 sekund, a wartość `count` będzie składać się z pojedynczych cyfr dla każdej wiadomości.
 
-## Gdzie przechowywane są dane z blockchainu i EVM? {#where-is-the-blockchain-and-evm-data-stored}
+## Gdzie przechowywane są dane z blockchainu i EVM? \{#where-is-the-blockchain-and-evm-data-stored}
 
 Katalog, którego Geth używa do przechowywania nieprzetworzonych danych łańcucha bloków, zależy od systemu operacyjnego. Po uruchomieniu Geth poszukaj wiadomości, która wygląda jak
 
@@ -123,7 +123,7 @@ INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/b
 
 Warto w tym miejscu podkreślić, że na najniższym poziomie to właśnie tutaj żyje blockchain. Pełna zawartość łańcucha bloków i stan EVM są przechowywane na każdym pełnym węźle w sieci Ethereum, w katalogach, które wyglądają bardzo podobnie do tego na twoim komputerze.
 
-## Dołączanie do konsoli JavaScript {#attaching-to-the-javascript-console}
+## Dołączanie do konsoli JavaScript \{#attaching-to-the-javascript-console}
 
 Uruchamianie węzła nie jest przydatne, chyba że faktycznie możemy z nim wchodzić w interakcje. Na przykład możemy chcieć rozgłaszać żądania transakcji lub wyszukiwać dane EVM/blockchainu (takie jak saldo konta). Geth ma wbudowaną konsolę JavaScript i interfejs API JavaScript o nazwie [web3js](https://github.com/ethereum/web3.js/), którego możesz użyć do interakcji z węzłem.
 
@@ -160,7 +160,7 @@ eth.getBalance('0x85d918c2B7F172d033D190152AEc58709Fb6D048')
 # Saldo tego konta w ether wynosi około 1,059 eth.
 ```
 
-## Zatrzymywanie i ponowne uruchamianie węzła {#stopping-and-restarting-your-node}
+## Zatrzymywanie i ponowne uruchamianie węzła \{#stopping-and-restarting-your-node}
 
 Możesz zatrzymać swój węzeł w każdej chwili. Jeśli chcesz zrestartować węzeł, ponowna synchronizacja Geth zajmie kilka sekund lub minut (pobranie bloków i/lub nagłówków bloków od miejsca, w którym zostało przerwane, gdy węzeł ostatnio przestał działać). Jeśli którakolwiek z powyższych instrukcji nie działa, pierwszą rzeczą, którą powinieneś zrobić, to spróbować zrestartować swój węzeł.
 

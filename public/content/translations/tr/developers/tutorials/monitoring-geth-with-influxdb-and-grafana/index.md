@@ -12,13 +12,13 @@ published: 2021-01-13
 
 Bu öğretici, Geth düğümünüzün performansını daha iyi anlayabilmeniz ve olası sorunları belirleyebilmeniz için izleme kurmanıza yardımcı olacaktır.
 
-## Ön koşullar {#prerequisites}
+## Ön koşullar \{#prerequisites}
 
 - Zaten bir Geth örneği çalıştırıyor olmalısınız.
 - Adımların ve örneklerin çoğu linux ortamı içindir, temel terminal bilgisi yardımcı olacaktır.
 - Geth'in ölçüm paketine dair bu genel bakış videosuna göz atın: [Bir Ethereum altyapısını izleme - Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
 
-## İzleme yığını {#monitoring-stack}
+## İzleme yığını \{#monitoring-stack}
 
 Bir Ethereum istemcisi, kronolojik bir veri tabanı şeklinde okunabilecek çok sayıda veri toplar. İzlemeyi kolaylaştırmak için bunu veri görselleştirme yazılımına aktarabilirsiniz. Birden fazla seçenek mevcuttur:
 
@@ -33,7 +33,7 @@ Ayrıca InfluxDB ve Grafana ile önceden yapılandırılmış olan bir seçenek 
 
 Bu öğreticide, Geth istemcinizi bir veri tabanı oluşturmak için InfluxDB'ye ve verilerin grafik görselleştirmesini oluşturmak için Grafana'ya veri gönderecek şekilde ayarlayacağız. Bunu manuel olarak yapmak; süreci daha iyi anlamanıza, değiştirmenize ve farklı ortamlarda dağıtmanıza yardımcı olacaktır.
 
-## InfluxDB kurulumu {#setting-up-influxdb}
+## InfluxDB kurulumu \{#setting-up-influxdb}
 
 Öncelikle InfluxDB'yi indirip kuralım. [Influxdata yayın sayfasında](https://portal.influxdata.com/downloads/) çeşitli indirme seçenekleri bulunabilir. Ortamınıza uygun olanı seçin. Ayrıca bir [depodan](https://repos.influxdata.com/) da indirebilirsiniz. Örnek olarak Debian temelli bir dağıtımda:
 
@@ -82,7 +82,7 @@ exit
 
 InfluxDB, Geth'ten gelen ölçümleri depolamak için çalışıyor ve yapılandırıldı.
 
-## Geth'i hazırlama {#preparing-geth}
+## Geth'i hazırlama \{#preparing-geth}
 
 Veri tabanını kurduktan sonra Geth'te ölçüm toplamayı etkinleştirmemiz gerekiyor. `geth --help` içindeki `METRICS AND STATS OPTIONS`'a dikkat edin. Orada birden fazla seçenek bulunabilir, bu durumda Geth'in verileri InfluxDB'ye göndermesini istiyoruz. Temel kurulum, InfluxDB'nin erişilebilir olduğu uç noktayı ve veri tabanı için kimlik doğrulamasını belirtir.
 
@@ -99,7 +99,7 @@ use geth
 show measurements
 ```
 
-## Grafana kurulumu {#setting-up-grafana}
+## Grafana kurulumu \{#setting-up-grafana}
 
 Bir sonraki adım, verileri grafiksel olarak yorumlayacak olan Grafana'yı kurmaktır. Grafana belgelerinde ortamınız için kurulum sürecini takip edin. Başka türlü istemiyorsanız, OSS sürümünü yüklediğinizden emin olun. Depo kullanan Debian dağıtımları için örnek kurulum adımları:
 

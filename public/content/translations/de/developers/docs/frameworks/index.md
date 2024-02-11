@@ -4,7 +4,7 @@ description: Mehr über die Vorteile von Frameworks erfahren und verfügbare Opt
 lang: de
 ---
 
-## Einführung in Frameworks {#introduction-to-frameworks}
+## Einführung in Frameworks \{#introduction-to-frameworks}
 
 Für den Aufbau einer vollwertigen dApp sind unterschiedliche Technologieteile erforderlich. Software-Frameworks enthalten viele der erforderlichen Funktionen oder bieten einfache Plugin-Systeme, über die Sie die Tools auswählen können, die Sie als hilfreich erachten.
 
@@ -16,11 +16,11 @@ Frameworks bieten zahlreiche direkt einsetzbare Funktionen wie:
 - Konfiguration für die Verbindung zu Ethereum-Netzwerken und zur Bereitstellung von Verträgen, sei es zu einer lokal laufenden Instanz oder für ein öffentliches Netzwerk von Ethereum
 - Dezentralisierte App-Verteilung – Integration mit Speicheroptionen wie IPFS
 
-## Voraussetzungen {#prerequisites}
+## Voraussetzungen \{#prerequisites}
 
 Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit der Einführung in [dApps](/developers/docs/dapps/) und den [Ethereum-Stack](/developers/docs/ethereum-stack/) vertraut machen.
 
-## Verfügbare Frameworks {#available-frameworks}
+## Verfügbare Frameworks \{#available-frameworks}
 
 **Truffle –** **_Eine Entwicklungsumgebung, Test-Framework, Build-Pipeline und weitere Tools_**
 
@@ -102,10 +102,10 @@ Bevor Sie sich mit Frameworks beschäftigen, empfehlen wir, dass Sie sich mit de
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-## Weiterführende Informationen {#further-reading}
+## Weiterführende Informationen \{#further-reading}
 
 _Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
-## Verwandte Themen {#related-topics}
+## Verwandte Themen \{#related-topics}
 
 - [Eine lokale Entwicklungsumgebung einrichten](/developers/local-environment/)

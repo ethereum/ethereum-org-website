@@ -8,11 +8,11 @@ Les oracles sont des flux de données qui rendent les sources de données hors c
 
 En donnant aux contrats intelligents la possibilité de s'exécuter en utilisant des données hors chaîne, on étend la valeur et l'utilité des applications décentralisées. Par exemple, les marchés de prédiction sur la blockchain s'appuient sur des oracles pour fournir des informations sur les résultats avec lesquels ils peuvent valider les prédictions des utilisateurs. Supposons qu'Alice parie 20 ETH sur qui deviendra le prochain président des États-Unis . Dans ce cas, la dApp du marché prédictif a besoin d'un oracle pour confirmer les résultats des élections et déterminer si Alice a droit à un paiement.
 
-## Prérequis {#prerequisites}
+## Prérequis \{#prerequisites}
 
 Cette page suppose que le lecteur est familier avec les principes fondamentaux d'Ethereum, notamment des [nœuds](/developers/docs/nodes-and-clients/), [ des mécanismes de consensus](/developers/docs/consensus-mechanisms/), et de [l'EVM](/developers/docs/evm/). Vous devez également avoir une bonne connaissance des [contrats intelligents](/developers/docs/smart-contracts/) et de [l'anatomie des contrats intelligents](/developers/docs/smart-contracts/anatomy/), notamment des [événements](/glossary/#events).
 
-## Qu'est-ce qu'un oracle blockchain ? {#what-is-a-blockchain-oracle}
+## Qu'est-ce qu'un oracle blockchain ? \{#what-is-a-blockchain-oracle}
 
 Les oracles sont des applications qui génèrent, vérifient et transmettent des informations externes (c'est-à-dire des informations stockées hors chaîne) aux contrats intelligents fonctionnant sur la blockchain. En plus « d'intégrer » des données hors chaîne et de les diffuser sur Ethereum, les oracles peuvent également faire « remonter » des informations de la blockchain vers des systèmes externes, comme par exemple déverrouiller un verrou intelligent une fois que l'utilisateur envoie des frais via une transaction Ethereum.
 
@@ -20,7 +20,7 @@ Sans oracle, un contrat intelligent serait entièrement limité aux données de 
 
 Les oracles diffèrent en fonction de la source des données (une ou plusieurs sources), des modèles de confiance (centralisés ou décentralisés) et de l'architecture du système (lecture immédiate, publication-abonnement et demande-réponse). Nous pouvons également distinguer les oracles selon qu'ils récupèrent des données externes à utiliser par les contrats on-chain (oracles d'entrée), qu'ils envoient des informations de la blockchain aux applications off-chain (oracles de sortie) ou qu'ils effectuent des tâches de calcul off-chain (oracles de calcul).
 
-## Pourquoi les contrats intelligents ont-ils besoin d'oracles ? {#why-do-smart-contracts-need-oracles}
+## Pourquoi les contrats intelligents ont-ils besoin d'oracles ? \{#why-do-smart-contracts-need-oracles}
 
 Beaucoup de développeurs considèrent les contrats intelligents comme du code exécutés sur des adresses spécifiques de la blockchain. Cependant, une vision plus [générale des contrats intelligents](/smart-contracts/) est qu'il s'agit de programmes logiciels auto-exécutoires capables de faire respecter les accords entre les parties une fois que des conditions spécifiques sont remplies - d'où le terme « smart contracts. »
 
@@ -42,7 +42,7 @@ Pour ce faire, un oracle est généralement constitué d'un contrat intelligent 
 
 Essentiellement, un oracle de blockchain comble le fossé informationnel entre la blockchain et l'environnement externe, créant ainsi des « contrats intelligents hybrides ». Un contrat intelligent hybride est un contrat qui fonctionne sur la base d'une combinaison de code de contrat on-chain et d'infrastructure off-chain. Les marchés de prédiction décentralisés sont un excellent exemple de contrats intelligents hybrides. Parmi les autres exemples, on peut citer les contrats intelligents d'assurance récolte qui versent des indemnités lorsqu'un ensemble d'oracles détermine que certains phénomènes météorologiques ont eu lieu.
 
-## Quel est le problème de l'oracle ? {#the-oracle-problem}
+## Quel est le problème de l'oracle ? \{#the-oracle-problem}
 
 Les oracles résolvent un problème important, mais introduisent également certaines complications, par exemple :
 
@@ -60,9 +60,9 @@ Différents oracles proposent différentes solutions au problème de l'oracle, q
 
 3. **Compatibilité incitative** : Un oracle devrait inciter les fournisseurs de données hors chaîne à soumettre des informations correctes aux contrats intelligents. La compatibilité incitative implique _l'imputabilité_ et _la responsabilité_. L'attribuabilité permet de lier un élément d'information externe à son fournisseur, tandis que la responsabilité lie les fournisseurs de données aux informations qu'ils fournissent, pour qu'ils puissent être récompensés ou pénalisés en fonction de la qualité des informations fournies.
 
-## Comment fonctionne un service oracle blockchain ? {#how-does-a-blockchain-oracle-service-work}
+## Comment fonctionne un service oracle blockchain ? \{#how-does-a-blockchain-oracle-service-work}
 
-### Utilisateurs {#users}
+### Utilisateurs \{#users}
 
 Les utilisateurs sont des entités (c'est-à-dire des contrats intelligents) qui ont besoin d'informations externes à la blockchain pour effectuer des actions spécifiques. Le flux de travail de base d'un service oracle commence par l'envoi par l'utilisateur d'une demande de données au contrat oracle. Les demandes de données répondent généralement à tout ou partie des questions suivantes :
 
@@ -76,7 +76,7 @@ Les utilisateurs sont des entités (c'est-à-dire des contrats intelligents) qui
 
 5. Quelle méthode doit être mise en œuvre pour filtrer les soumissions et agréger les rapports en une seule valeur ?
 
-### Contrat Oracle {#oracle-contract}
+### Contrat Oracle \{#oracle-contract}
 
 Le contrat d'oracle est le composant sur la blockchain du service de l'oracle. Il écoute les demandes de données provenant d'autres contrats, transmet les requêtes de données aux nœuds de l'oracle et diffuse les données renvoyées aux contrats clients. Ce contrat peut également effectuer des calculs sur les points de données renvoyés pour produire une valeur agrégée à envoyer au contrat demandeur.
 
@@ -196,7 +196,7 @@ contract Oracle {
 }
 ```
 
-### Nœuds Oracle {#oracle-nodes}
+### Nœuds Oracle \{#oracle-nodes}
 
 Le noeud d'oracle est le composant hors chaîne du service de l'oracle. Il extrait des informations de sources externes, telles que des API hébergées sur des serveurs tiers, et les met sur la chaîne pour être utilisé par des contrats intelligents. Les nœuds Oracle écoutent les événements provenant du contrat d'oracle sur la chaîne et procèdent à l'exécution de la tâche décrite dans le journal.
 
@@ -204,15 +204,15 @@ Une tâche courante des nœuds Oracle consiste à envoyer une requête [HTTP GET
 
 Les oracles informatiques s'appuient également sur des nœuds hors chaîne pour effectuer des calculs, qui ne seraient pas pratiques à exécuter sur la chaîne, compte tenu des coûts du gaz et des limites de taille des blocs. Par exemple, le nœud Oracle peut être chargé de générer un chiffre aléatoire vérifiable (par exemple, pour les jeux basés sur la blockchain).
 
-## Modèles de conception Oracle {#oracle-design-patterns}
+## Modèles de conception Oracle \{#oracle-design-patterns}
 
 Il existe différents types d'oracles, notamment _lecture-immédiate_, _publier-s'abonner_, et _demande-réponse_. Les deux derniers sont les plus populaires parmi les contrats intelligents Ethereum. Ici, nous décrivons brièvement les modèles de « publier-s'abonner » et de « requête-réponse ».
 
-### Oracles publier-s'abonner {#publish-subscribe-oracles}
+### Oracles publier-s'abonner \{#publish-subscribe-oracles}
 
 Ce type d'oracle expose un « flux de données » que d'autres contrats peuvent régulièrement lire pour obtenir des informations. Dans ce cas, les données sont censées changer fréquemment, de sorte que les contrats clients doivent écouter les mises à jour des données dans le stockage de l'oracle. Un exemple est un oracle qui fournit les dernières informations sur le prix ETH en USD aux utilisateurs.
 
-### Oracles requête-réponse {#request-response-oracles}
+### Oracles requête-réponse \{#request-response-oracles}
 
 Une configuration requête-réponse permet au contrat client de demander des données arbitraires autres que celles fournies par un oracle de type publier-s'abonner. Les oracles de type requête-réponse sont idéaux lorsque l'ensemble de données est trop volumineux pour être stocké dans un contrat intelligent, et/ou que les utilisateurs n'auront besoin que d'une petite partie des données à un moment donné.
 
@@ -220,25 +220,25 @@ Bien que plus complexes que les modèles publier-s'abonner, les oracles de requ�
 
 Les utilisateurs qui interrogent les données doivent couvrir le coût de la récupération des informations à partir de la source hors chaîne. Le contrat du client doit également fournir des fonds pour couvrir les frais de gaz encourus par le contrat de l'oracle pour renvoyer la réponse via la fonction de rappel spécifiée dans la demande.
 
-## Oracles centralisés vs décentralisés {#types-of-oracles}
+## Oracles centralisés vs décentralisés \{#types-of-oracles}
 
-### Oracles centralisés {#centralized-oracles}
+### Oracles centralisés \{#centralized-oracles}
 
 Comme son nom l'indique, un oracle centralisé est contrôlé par une seule entité chargée d'agréger les informations hors chaîne et de mettre à jour les données du contrat de l'oracle selon les demandes. Les oracles centralisés sont efficaces car ils reposent sur une seule source de vérité. Ils pourraient même mieux fonctionner pour les jeux de données propriétaires qui sont publiés directement par le propriétaire avec une signature largement acceptée. Cependant, ils présentent également des inconvénients :
 
-#### Faibles garanties de correction {#low-correctness-guarantees}
+#### Faibles garanties de correction \{#low-correctness-guarantees}
 
 Avec les oracles centralisés, il n'y a aucun moyen de confirmer si l'information fournie est correcte ou non. Même les fournisseurs « honorables » peuvent devenir malhonnêtes ou être piratés. Si l'oracle est corrompu, les contrats intelligents seront exécutés sur la base de mauvaises données.
 
-#### Faible disponibilité {#poor-availability}
+#### Faible disponibilité \{#poor-availability}
 
 Les oracles centralisés ne sont pas garantis de toujours mettre les données hors chaîne à la disposition des autres contrats intelligents. Si le fournisseur décide de désactiver le service ou si un pirate informatique détourne le composant hors chaîne de l'oracle, votre contrat intelligent risque de subir une attaque par déni de service (DoS).
 
-#### Mauvaise compatibilité des incitations {#poor-incentive-compatibility}
+#### Mauvaise compatibilité des incitations \{#poor-incentive-compatibility}
 
 Les oracles centralisés ont souvent des incitations mal conçues ou inexistantes pour que le fournisseur de données envoie des informations exactes/altérées. Payer un oracle pour sa justesse ne garantit pas son honnêteté. Ce problème s'aggrave à mesure que la valeur contrôlée par les contrats intelligents augmente.
 
-### Oracles décentralisés {#decentralized-oracles}
+### Oracles décentralisés \{#decentralized-oracles}
 
 Les oracles décentralisés sont conçus pour surmonter les limites des oracles centralisés en éliminant les points uniques de défaillance. Un service d'oracle décentralisé comprend plusieurs participants dans un réseau peer-to-peer qui forment un consensus sur les données hors chaîne avant de les envoyer à un contrat intelligent.
 
@@ -246,11 +246,11 @@ Un oracle décentralisé devrait (idéalement) être sans permission, sans confi
 
 L'utilisation d'oracles décentralisés présente les avantages suivants :
 
-### Hautes garanties de correction {#high-correctness-guarantees}
+### Hautes garanties de correction \{#high-correctness-guarantees}
 
 Les oracles décentralisés tentent d'assurer l'exactitude des données en utilisant différentes approches. Il s'agit notamment d'utiliser des preuves attestant de l'authenticité et de l'intégrité des informations renvoyées et de demander à plusieurs entités de s'accorder collectivement sur la validité des données hors chaîne.
 
-#### Preuves d'authenticité {#authenticity-proofs}
+#### Preuves d'authenticité \{#authenticity-proofs}
 
 Les preuves d'authenticité sont des mécanismes cryptographiques qui permettent la vérification indépendante d'informations extraites de sources externes. Ces preuves permettent de valider la source de l'information et de détecter les éventuelles altérations des données après leur récupération.
 
@@ -262,7 +262,7 @@ Voici quelques exemples de preuves d'authenticité :
 
 Certaines classes d'oracles décentralisés exigent que les opérateurs de nœuds d'oracle fournissent des attestations TEE. Cela confirme à un utilisateur que l'opérateur du nœud exécute une instance du client oracle dans un environnement d'exécution de confiance. Les TEE empêchent les processus externes de modifier ou de lire le code et les données d'une application. Par conséquent, ces attestations prouvent que le nœud oracle a conservé les informations intactes et confidentielles.
 
-#### Validation consensuelle des informations {#consensus-based-validation-of-information}
+#### Validation consensuelle des informations \{#consensus-based-validation-of-information}
 
 Les oracles centralisés reposent sur une source unique de vérité lorsqu'ils fournissent des données aux contrats intelligents, ce qui introduit la possibilité de publier des informations inexactes. Les oracles décentralisés résolvent ce problème en s'appuyant sur plusieurs nœuds d'oracle pour interroger les informations hors chaîne. En comparant les données provenant de plusieurs sources, les oracles décentralisés réduisent le risque de transmettre des informations invalides aux contrats on-chain.
 
@@ -288,7 +288,7 @@ Parmi les autres exemples d'oracles qui utilisent les mécanismes du point de Sc
 
 Les mécanismes du point de Schelling sont intéressants car ils minimisent l'empreinte sur la chaîne (une seule transaction doit être envoyée) tout en garantissant la décentralisation. Ce dernier cas est possible parce que les nœuds doivent approuver la liste des réponses soumises avant qu'elle ne soit introduite dans l'algorithme qui produit la valeur moyenne/médiane.
 
-### Disponibilité {#availability}
+### Disponibilité \{#availability}
 
 Les services décentralisés d'oracle assurent une haute disponibilité des données hors chaîne pour les contrats intelligents. Pour ce faire, il faut décentraliser à la fois la source d'information hors chaîne et les nœuds responsables du transfert de l'information dans la chaîne.
 
@@ -296,7 +296,7 @@ Cela garantit la tolérance aux pannes puisque le contrat de l'oracle peut s'app
 
 Il est également possible pour les oracles basés sur les enjeux de sabrer les opérateurs de nœuds qui ne répondent pas rapidement aux demandes de données. Cela incite fortement les nœuds d'oracle à investir dans une infrastructure tolérante aux pannes et à fournir des données en temps voulu.
 
-### Bonne compatibilité des incitations {#good-incentive-compatibility}
+### Bonne compatibilité des incitations \{#good-incentive-compatibility}
 
 Les oracles décentralisés implémentent diverses conceptions d'incitation pour prévenir le comportement [Byzantin](https://en.wikipedia.org/wiki/Byzantine_fault) parmi les noeuds Oracle. Plus précisément, ils atteignent _l'attribuabilité_ et _la responsabilité_ :
 
@@ -304,11 +304,11 @@ Les oracles décentralisés implémentent diverses conceptions d'incitation pour
 
 2. Les oracles décentralisés - comme expliqué précédemment - peuvent exiger des nœuds qu'ils placent un enjeu sur leur confiance dans la véracité des données qu'ils soumettent. Si la demande est acceptée, cette mise peut être restituée avec des récompenses pour service honnête. Mais il peut également être réduit en cas d'information incorrecte, ce qui permet une certaine responsabilisation.
 
-## Applications des oracles dans les contrats intelligents {#applications-of-oracles-in-smart-contracts}
+## Applications des oracles dans les contrats intelligents \{#applications-of-oracles-in-smart-contracts}
 
 Voici les cas d'utilisation courants des oracles dans Ethereum :
 
-### Récupération des données financières {#retrieving-financial-data}
+### Récupération des données financières \{#retrieving-financial-data}
 
 Les applications de [finance décentralisée](/defi/) (DeFi) permettent de prêter, d'emprunter et d'échanger des actifs de pair à pair. Cela nécessite souvent d'obtenir différentes informations sur la finance, notamment des données sur les taux de change (pour calculer la valeur en monnaie fiduciaire des crypto-monnaies ou comparer les prix des jetons) et des données sur les marchés de capitaux (pour calculer la valeur d'actifs tokenisés, comme l'or ou le dollar américain).
 
@@ -354,7 +354,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Génération d'un caractère aléatoire vérifiable {#generating-verifiable-randomness}
+### Génération d'un caractère aléatoire vérifiable \{#generating-verifiable-randomness}
 
 Certaines applications blockchain, telles que les jeux ou les systèmes de loterie basés sur la blockchain, nécessitent un niveau élevé d'imprévisibilité et de nature aléatoire pour fonctionner efficacement. Cependant, l'exécution déterministe des blockchains élimine l'aléa.
 
@@ -364,13 +364,13 @@ Il est possible de générer la valeur aléatoire hors chaîne et de l'envoyer e
 
 Les oracles conçus pour le calcul hors chaîne résolvent ce problème en générant de manière sécurisée des résultats aléatoires hors chaîne qu'ils diffusent sur la chaîne avec des preuves cryptographiques attestant de l'imprévisibilité du processus. Un exemple est le [VRF (Verifiable Random Function) de Chainlink](https://docs.chain.link/docs/chainlink-vrf/), qui est un générateur de nombres aléatoires (RNG) à l'épreuve de la falsification et d'une équité prouvée, utile pour construire des contrats intelligents fiables pour des applications qui reposent sur des résultats imprévisibles. Un autre exemple de programmation quantique est le programme [API3 QRNG](https://docs.api3.org/explore/qrng/) : une méthode de développement quantique en libre accès, dans le Web3, sur des propositions d'algorithmes Quantiques (QRNG) générant des nombres entiers aléatoires, mise à disposition, à titre de courtoisie, par l'Université nationale australienne (ANU).
 
-### Obtenir des résultats pour les événements {#getting-outcomes-for-events}
+### Obtenir des résultats pour les événements \{#getting-outcomes-for-events}
 
 Avec les oracles, il est facile de créer des contrats intelligents qui répondent à des événements du monde réel. Les services Oracle rendent cela possible en permettant aux contrats de se connecter à des API externes par le biais de composants hors chaîne et de consommer des informations provenant de ces sources de données. Par exemple, la dApp de prédiction mentionnée précédemment peut demander à un oracle de renvoyer les résultats des élections à partir d'une source hors chaîne fiable (par exemple, l'Associated Press).
 
 En utilisant des oracles pour récupérer des données basées sur des résultats du monde réel, cela permet d'autres cas d'utilisation innovants ; par exemple, un produit d'assurance décentralisé a besoin d'informations précises sur la météo, les catastrophes, etc. pour fonctionner efficacement.
 
-### Automatisation des contrats intelligents {#automating-smart-contracts}
+### Automatisation des contrats intelligents \{#automating-smart-contracts}
 
 Les contrats intelligents ne s'exécutent pas automatiquement : un compte externe (EOA), ou un autre compte de contrat, doit déclencher les bonnes fonctions pour exécuter le code du contrat. Dans la plupart des cas, l'essentiel des fonctions du contrat sont publiques et peuvent être invoquées par les EOA et d'autres contrats.
 
@@ -382,7 +382,7 @@ Certains réseaux d'oracle décentralisés offrent des services d'automatisation
 
 Le [réseau Keeper](https://chain.link/keepers) de Chainlink, offre aux contrats intelligents la possibilité d'externaliser les tâches de maintenance régulières d'une manière décentralisée et avec un minimum de confiance. Lisez la [documentation officielle de Keepers](https://docs.chain.link/docs/chainlink-keepers/introduction/) pour savoir comment rendre votre contrat compatible avec Keeper et utiliser le service Upkeep.
 
-## Comment utiliser les oracles de la blockchain {#use-blockchain-oracles}
+## Comment utiliser les oracles de la blockchain \{#use-blockchain-oracles}
 
 Il existe de multiples applications oracle que vous pouvez intégrer dans votre dApp Ethereum :
 
@@ -402,7 +402,7 @@ Il existe de multiples applications oracle que vous pouvez intégrer dans votre 
 
 **[API3 DAO](https://www.api3.org/)** - _L'API3 DAO permet d'apporter des solutions de service d'oracle de premier plan, et d'optimiser la transparence, la fiabilité, la sécurité et la scalabilité des données, dans une solution décentralisée dédiée aux contrats intelligents._
 
-## Lecture complémentaire {#further-reading}
+## Lecture complémentaire \{#further-reading}
 
 **Articles**
 

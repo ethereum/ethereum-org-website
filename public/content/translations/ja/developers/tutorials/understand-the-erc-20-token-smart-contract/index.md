@@ -42,7 +42,7 @@ interface IERC20 {
 
 ここでは、それぞれの関数の役割について説明しています。 その後、ERC-20 トークンの簡単な実装をご紹介します。
 
-## Getters {#getters}
+## Getters \{#getters}
 
 ```solidity
 function totalSupply() external view returns (uint256);
@@ -62,7 +62,7 @@ function allowance(address owner, address spender) external view returns (uint25
 
 ERC-20 は、あるアドレスが他のアドレスに権限を与え、そのアドレスからトークンを取り戻すことができます。 この関数は、`spender`が`owner`のために使用可能なトークンの残数を返します。 この関数は getter 関数であり、コントラクトの状態を変更することはありません。したがってデフォルトで 0 が返ってきます
 
-## 関数 {#functions}
+## 関数 \{#functions}
 
 ```solidity
 function transfer(address recipient, uint256 amount) external returns (bool);
@@ -82,7 +82,7 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 
 `amount`のトークンを`sender`から`recipient`へ承認メカニズムを使って送金します。 関数を呼び出したアドレスから手数料が差し引かれます。 この関数は、`Transfer`イベントを発行します。
 
-## イベント {#events}
+## イベント \{#events}
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
@@ -98,7 +98,7 @@ event Approval(address indexed owner, address indexed spender, uint256 value);
 
 このイベントは、トークンの量(`value`)が`owner`によって、`spender`に使用することが承認されたときに発行されるものです。
 
-## ERC-20 トークンの基本的な実装 {#a-basic-implementation-of-erc-20-tokens}
+## ERC-20 トークンの基本的な実装 \{#a-basic-implementation-of-erc-20-tokens}
 
 ERC-20 トークンのベースとなるシンプルなコードを以下にご紹介します。
 

@@ -3,7 +3,7 @@ title: Info
 lang: nl
 ---
 
-# Info over Ethereum {#learn-about-ethereum}
+# Info over Ethereum \{#learn-about-ethereum}
 
 **Welkom bij [ethereum.org/nl/learn](/nl/learn/): een set bronnen waarmee je meer te weten kunt komen over Ethereum.** Deze pagina bevat technische **en** niet-technische artikelen, handleidingen en bronnen. Is Ethereum helemaal nieuw voor je, [dan raden we je aan hier te beginnen](/nl/what-is-ethereum/).
 
@@ -23,7 +23,7 @@ Naast de informatie op deze pagina zijn er bronnen uit de community die het verk
 - [What’s new in ETH 2.0](https://eth2.news) _Een periodieke nieuwsbrief over de ontwikkeling van ETH 2.0_
 - [ETHGlobal](https://ethglobal.co) _Ethereum-hackathons: bezoek er eentje in je buurt!_
 
-## De basisprincipes van Ethereum {#ethereum-basics}
+## De basisprincipes van Ethereum \{#ethereum-basics}
 
 Nieuw bij Ethereum? Deze artikelen en bronnen zijn een goede plek om te beginnen.
 
@@ -33,7 +33,7 @@ Nieuw bij Ethereum? Deze artikelen en bronnen zijn een goede plek om te beginnen
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
 - [Don’t let Doubts about Blockchains Close your Mind](https://www.bloomberg.com/opinion/articles/2018-04-27/blockchains-warrant-skepticism-but-keep-an-open-mind) _April 27, 2018 - Tyler Cowen_
 
-## Hoe Ethereum werkt {#how-ethereum-works}
+## Hoe Ethereum werkt \{#how-ethereum-works}
 
 High-level uitleg over Ethereum en blockchaintechnologie in het algemeen.
 
@@ -42,26 +42,26 @@ High-level uitleg over Ethereum en blockchaintechnologie in het algemeen.
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
 
-## Smart Contracts {#smart-contracts}
+## Smart Contracts \{#smart-contracts}
 
 Een 'smart contract' is gewoon een stuk code dat op Ethereum wordt uitgevoerd. Het heet een ‘contract’ omdat code die op Ethereum werkt, waardevolle zaken zoals ETH of andere digitale activa kan beheren.
 
 - Wil je leren hoe je op Ethereum kunt programmeren met Smart Contracts? [ethereum.org/nl/developers](/nl/developers/)
 
-## Proof-of-work en mining {#proof-of-work-and-mining}
+## Proof-of-work en mining \{#proof-of-work-and-mining}
 
 Ethereum gebruikt momenteel een systeem met de naam 'proof-of-work'. Hierdoor kan het Ethereum-netwerk het eens worden over de status van alle gegevens die in de Ethereum-blockchain zijn vastgelegd en kunnen bepaalde soorten economische aanvallen worden voorkomen.
 
 In ETH 2.0 zal Ethereum evolueren naar een ander systeem genaamd 'proof-of-stake'. [Lees meer over ETH 2.0 hieronder](#consensus-layer-upgrades).
 
-## Clients en nodes {#clients-and-nodes}
+## Clients en nodes \{#clients-and-nodes}
 
 Het Ethereum-netwerk bestaat uit vele nodes die compatibele clientsoftware draaien. Er zijn twee clients die gebruikt worden door een meerderheid van nodes: [Geth](https://geth.ethereum.org/) (geschreven in Go) en [Parity](https://www.parity.io/ethereum/) (geschreven in Rust).
 
 - Wil je leren hoe je een eigen node moet beheren? → [ethereum.org/nl/developers](/nl/developers/#clients--running-your-own-node/)
 - [Volledige lijst van alle Ethereum-clients](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
-## De schaalbaarheid van Ethereum verbeteren {#improving-ethereums-scalability}
+## De schaalbaarheid van Ethereum verbeteren \{#improving-ethereums-scalability}
 
 Er wordt veel aandacht besteed aan het beter 'schaalbaar' maken van Ethereum door de snelheid en de algemene transactiedoorvoer te verbeteren. Over het algemeen worden deze verdeeld in 'Layer 1' en 'Layer 2' oplossingen.
 
@@ -87,18 +87,18 @@ Er wordt veel aandacht besteed aan het beter 'schaalbaar' maken van Ethereum doo
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - Een leerbron voor het Plasma-framework](https://www.learnplasma.org/en/)
 
-## ETH 2.0 {#consensus-layer-upgrades}
+## ETH 2.0 \{#consensus-layer-upgrades}
 
 ETH 2.0 (ook bekend als 'Serenity') verwijst naar de volgende grote verbetering van het Ethereum-coreprotocol. Hierin komen verschillende verbeteringen in het coreprotocol van Ethereum of ‘Layer 1’ samen.
 
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
-## ETH 1.x {#execution-layer-upgrades}
+## ETH 1.x \{#execution-layer-upgrades}
 
 ETH 1.x is de naam voor een collectie upgrades van het bestaande Ethereum-protocol. Het doel is om Ethereum te blijven verbeteren en onderhouden terwijl ETH 2.0 wordt ontwikkeld en geïmplementeerd.
 
-## Crypto-economie {#cryptoeconomics}
+## Crypto-economie \{#cryptoeconomics}
 
 'Crypto-economie' is de praktische wetenschap van het bouwen van gedistribueerde systemen, waarbij de eigenschappen van deze systemen worden aangestuurd door financiële prikkels en waarbij de economische mechanismen worden gegarandeerd door cryptografie. Het is de algemene term voor het ontwerpen en schalen van blockchains zoals Ethereum en Bitcoin.
 
@@ -106,7 +106,7 @@ ETH 1.x is de naam voor een collectie upgrades van het bestaande Ethereum-protoc
 - [Intro to Cryptoeconomics](https://www.youtube.com/watch?v=F0FCI8GxO5I) _(Video) Aug 19, 2018 - Karl Floersch_
 - [Making Sense of Cryptoeconomics](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) _Nov 16 2017 - Josh Stark_
 
-## Kritiek en scepcis {#critique-and-skepticism}
+## Kritiek en scepcis \{#critique-and-skepticism}
 
 Kritische meningen over Ethereum en cryptovaluta.
 

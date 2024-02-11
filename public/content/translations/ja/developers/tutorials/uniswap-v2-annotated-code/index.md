@@ -10,11 +10,11 @@ published: 2021-05-01
 lang: ja
 ---
 
-## はじめに {#introduction}
+## はじめに \{#introduction}
 
 [Uniswap v2](https://uniswap.org/whitepaper.pdf)では、任意の 2 つの ERC-20 トークン同士の取引が可能になります。 本記事では、このプロトコルを実装したコントラクトのソースコードをチェックして、このように書かれている理由を理解していきます。
 
-### Uniswap の役割 {#what-does-uniswap-do}
+### Uniswap の役割 \{#what-does-uniswap-do}
 
 基本的には、流動性プロバイダーとトレーダーの 2 種類のユーザーが存在します。
 
@@ -26,15 +26,15 @@ _Traders_(トレーダー)は、あるトークンをプールに送り、流動
 
 詳しい説明は[こちら](https://docs.uniswap.org/protocol/V2/concepts/core-concepts/swaps/)をご覧ください。
 
-### なぜ v2? v3 じゃないの? {#why-v2}
+### なぜ v2? v3 じゃないの? \{#why-v2}
 
 [Uniswap v3](https://uniswap.org/whitepaper-v3.pdf)は v2 を非常に複雑化したアップグレード版です。 まず v2 を学んでから v3 に進む方が簡単です。
 
-### コアコントラクト vs ペリフェリーコントラクト {#contract-types}
+### コアコントラクト vs ペリフェリーコントラクト \{#contract-types}
 
 Uniswap v2 は、コアコントラクトとペリフェリーコントラクトの 2 つのコンポーネントに分かれています。 コアコントラクトはアセットを*保有する*ため安全性の保証が重要となりますが、この分割によって監査を簡略化することができます。 ペリフェリーコントラクトはトレーダーが必要とするすべての機能を提供しています。
 
-## データおよび制御フロー {#flows}
+## データおよび制御フロー \{#flows}
 
 Uniswap の 3 大アクションを実行したときに発生するデータフローと制御フローは以下のとおりです。
 
@@ -42,72 +42,72 @@ Uniswap の 3 大アクションを実行したときに発生するデータフ
 2. 市場に流動性を与え、ERC-20 流動性トークンのペア取引で報酬を得る
 3. ERC-20 流動性トークンをバーンし、ペア取引によってトレーダーが取引できる ERC-20 トークンを取り戻す
 
-### スワップ {#swap-flow}
+### スワップ \{#swap-flow}
 
 トレーダーが使用する最も一般的なフローです。
 
-#### 呼び出し元 {#caller}
+#### 呼び出し元 \{#caller}
 
 1. スワップされた量のアローワンスをペリフェリーアカウントへ提供します。
 2. ペリフェリーコントラクトには多数のスワップ関数がありますが、そのうち 1 つを呼び出します(ETH が関係しているかどうか、入金するトークンの量や取り戻すトークンの量をトレーダーが指定するかどうかなどによって、呼び出す関数は異なります)。 どのスワップ関数も`path`、つまり経由する取引所の配列を受け取ります。
 
-#### ペリフェリーコントラクト内の処理 (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
+#### ペリフェリーコントラクト内の処理 (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02-sol}
 
 3. パスに沿って、各取引所で取引する量を特定します。
 4. パスを繰り返し処理します。 経路にある各取引所に入力トークンを送信し、取引所の`スワップ`関数を呼び出します。 通常、トークンの送信先アドレスはパス上にある次のペア取引所です。 最後の取引は、トレーダーが提供したアドレスとなります。
 
-#### コアコントラクト内の処理(UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### コアコントラクト内の処理(UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-2}
 
 5. コアコントラクトで不正がされていないこと、スワップ後も十分な流動性を維持できることを検証します。
 6. 既存のリザーブ量と追加のトークン数を確認します。 追加のトークン量は、交換用に受け取った入力トークンの数です。
 7. 出力トークンを送信先に送ります。
 8. `_update`を呼び出し、リザーブ量をアップデートします。
 
-#### ペリフェリーコントラクト(UniswapV2Router02.sol)に戻る {#back-in-the-periphery-contract-uniswapv2router02-sol}
+#### ペリフェリーコントラクト(UniswapV2Router02.sol)に戻る \{#back-in-the-periphery-contract-uniswapv2router02-sol}
 
 9. 必要なクリーンアップを行います(例えば、WETH トークンをバーンして ETH へ戻し、トレーダーに送るなど)。
 
-### 流動性の追加 {#add-liquidity-flow}
+### 流動性の追加 \{#add-liquidity-flow}
 
-#### 呼び出し元 {#caller-2}
+#### 呼び出し元 \{#caller-2}
 
 1. 流動性プールに追加される量のアローワンスをペリフェリーアカウントに提供します。
 2. ペリフェリーコントラクトの`addLiquidity`関数の 1 つを呼び出します。
 
-#### ペリフェリーコントラクト内の処理(UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
+#### ペリフェリーコントラクト内の処理(UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02sol-2}
 
 3. 必要に応じて新しいペア取引所を作成します。
 4. 既存のペア取引所がある場合は、追加するトークンの量を計算します。 両方のトークンは同じ値であることが想定されるため、新規トークンと既存トークンの比率は同じになるはずです。
 5. 受け取り可能なトークンの量かどうか確認します(実行者は流動性の追加を希望しない最低量を指定することができます) 。
 6. コアコントラクトを呼び出します。
 
-#### コアコントラクト内の処理(UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
+#### コアコントラクト内の処理(UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-2}
 
 7. 流動性トークンをミントして、呼び出し元に送信します。
 8. `_update`を呼び出し、リザーブ量をアップデートします。
 
-### 流動性の削除 {#remove-liquidity-flow}
+### 流動性の削除 \{#remove-liquidity-flow}
 
-#### 呼び出し元 {#caller-3}
+#### 呼び出し元 \{#caller-3}
 
 1. ペリフェリーアカウントに、基礎トークンと引き換えにバーンされた流動性トークンのアローワンスを提供します。
 2. ペリフェリーコントラクトの`removeLiquidity`関数の内の 1 つを呼び出します。
 
-#### ペリフェリーコントラクト内の処理(UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
+#### ペリフェリーコントラクト内の処理(UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02sol-3}
 
 3. ペア取引所に流動性トークンを送ります。
 
-#### コアコントラクト(UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
+#### コアコントラクト(UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-3}
 
 4. バーンされたトークンの量に応じて、基礎トークンを送信先アドレスに送ります。 例えば、プールに A トークンが 1000 個、B トークンが 500 個、流動性トークンが 90 個あるとします。流動性トークン 9 個を受け取ってバーンすると、流動性トークンの 10％をバーンすることになり、ユーザーに 100 個の A トークンと 50 個の B トークンが返されることになります。
 5. 流動性トークンをバーンします。
 6. `_update`を呼び出し、リザーブ量をアップデートします。
 
-## コアコントラクト {#core-contracts}
+## コアコントラクト \{#core-contracts}
 
 流動性を保持する安全なコントラクトです。
 
-### UniswapV2Pair.sol {#UniswapV2Pair}
+### UniswapV2Pair.sol \{#UniswapV2Pair}
 
 [このコントラクト](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol)は、トークンを交換する実際のプールを実装しています。 これは Uniswap の中核機能です。
 
@@ -145,7 +145,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 このライブラリの詳細は、[後述するドキュメント](#FixedPoint)に掲載されています。
 
-#### 変数 {#pair-vars}
+#### 変数 \{#pair-vars}
 
 ```solidity
     uint public constant MINIMUM_LIQUIDITY = 10**3;
@@ -213,7 +213,7 @@ token0 と token1 の交換レートは、取引時の両リザーブの倍数�
 
 トレーダーが提供する token0 の量が増えるほど、需要と供給により token1 の相対的価値も上がり、逆の場合も同じことが言えます。
 
-#### ロック {#pair-lock}
+#### ロック \{#pair-lock}
 
 ```solidity
     uint private unlocked = 1;
@@ -247,7 +247,7 @@ modifier の`_;`は、(すべてのパラメータを含む)元の関数呼び�
 
 main 関数に戻った後、ロックを解除します。
 
-#### その他の 関数 {#pair-misc}
+#### その他の 関数 \{#pair-misc}
 
 ```solidity
     function getReserves() public view returns (uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast) {
@@ -280,7 +280,7 @@ ERC-20 転送コールが失敗を報告する例を下記に 2 つご紹介し�
 
 いずれかの状態が発生した場合は、元に戻します。
 
-#### イベント {#pair-events}
+#### イベント \{#pair-events}
 
 ```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
@@ -308,7 +308,7 @@ ERC-20 転送コールが失敗を報告する例を下記に 2 つご紹介し�
 
 最後に、`Sync`は、トークンが追加または引き出されるたびに発行され、その理由に関係なく、最新のリザーブ情報(交換レート)を提供します。
 
-#### setup 関数 {#pair-setup}
+#### setup 関数 \{#pair-setup}
 
 これらの関数は、新しいペア取引所がセットアップされたときに 1 度だけ呼び出されます。
 
@@ -331,7 +331,7 @@ ERC-20 転送コールが失敗を報告する例を下記に 2 つご紹介し�
 
 この関数では、ファクトリー(のみ)が、このペアが交換する 2 つの ERC-20 トークンを指定できます。
 
-#### 内部の update 関数 {#pair-update-internal}
+#### 内部の update 関数 \{#pair-update-internal}
 
 ##### \_update
 
@@ -452,7 +452,7 @@ Uniswap 2.0 で、トレーダーは、マーケットの利用料として 0.30
 
 フィーがない場合、`kLast`がゼロでなければゼロに設定します。 このコントラクトが書かれたとき、[ガス払い戻し機能](https://eips.ethereum.org/EIPS/eip-3298)がありました。この機能は、コントラクトによって必要のないストレージをゼロにすることで、イーサリアム全体のサイズを縮小するよう促したものです。 この機能により、可能な場合はコードは払い戻しを受けます。
 
-#### 外部アクセス可能な関数 {#pair-external}
+#### 外部アクセス可能な関数 \{#pair-external}
 
 どのトランザクションまたはコントラクトでも、これらの関数を呼び出すことは*できます*が、ペリフェリーコントラクトから呼び出されるように設計されていることに注意してください。 直接呼び出すと、ペア取引所で不正行為はできませんが、誤って価値を失ってしまう可能性があります。
 
@@ -681,7 +681,7 @@ Uniswap 2.0 で、トレーダーは、マーケットの利用料として 0.30
 }
 ```
 
-### UniswapV2Factory.sol {#UniswapV2Factory}
+### UniswapV2Factory.sol \{#UniswapV2Factory}
 
 [このコントラクト](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol)では、ペア取引所を作ります。
 
@@ -799,7 +799,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 これらの 2 つの関数は、 `feeSetter`にフィーの受取人を(必要に応じて)制御し、 `feeSetter`を新しいアドレスに変更できます。
 
-### UniswapV2ERC20.sol {#UniswapV2ERC20}
+### UniswapV2ERC20.sol \{#UniswapV2ERC20}
 
 [このコントラクト](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol)は、ERC-20 流動性トークンを実装しています。 [OpenZeppelin ERC-20 コントラクト](/developers/tutorials/erc20-annotated-code)と類似しているので、異なる箇所である`permit`の機能についてのみ説明します。
 
@@ -885,15 +885,15 @@ EIP-712 の[ドメインセパレータ](https://eips.ethereum.org/EIPS/eip-712#
 
 すべて問題なければ、これを[ERC-20 承認](https://eips.ethereum.org/EIPS/eip-20#approve)として処理します。
 
-## ペリフェリーコントラクト {#periphery-contracts}
+## ペリフェリーコントラクト \{#periphery-contracts}
 
 ペリフェリーコントラクトは、Uniswap の API(アプリケーションプログラムインターフェイス) です。 他のコントラクトや分散型アプリケーションから、外部呼び出しで利用可能です。 コアコントラクトは直接呼び出すことができますが、より複雑で間違えると価値を失ってしまう可能性があります。 コアコントラクトには、他者に対する不正行為がないことを確認するためのテストのみが含まれており、サニティチェックは含まれていません。 ペリフェリーコントラクトには含まれており、必要に応じてアップデートすることができます。
 
-### UniswapV2Router01.sol {#UniswapV2Router01}
+### UniswapV2Router01.sol \{#UniswapV2Router01}
 
 [このコントラクト](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol)には問題があるため、[使用してはいけません](https://uniswap.org/docs/v2/smart-contracts/router01/)。 幸いなことに、ペリフェリーコントラクトはステートレスでアセットを保有していないため、非推奨にするのは簡単です。代わりに、`UniswapV2Router02`を使用するよう提案します。
 
-### UniswapV2Router02.sol {#UniswapV2Router02}
+### UniswapV2Router02.sol \{#UniswapV2Router02}
 
 通常は[このコントラクト](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)を通して Uniswap を使用します。 [こちら](https://uniswap.org/docs/v2/smart-contracts/router02/)で使用方法を確認できます。
 
@@ -948,7 +948,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 この関数は、トークンを WETH コントラクトから ETH に引き換える際に呼び出されます。 私たちが使用している WETH コントラクトだけが、これを行うことを許可されています。
 
-#### 流動性の追加 {#add-liquidity}
+#### 流動性の追加 \{#add-liquidity}
 
 これらの関数は、ペア取引所にトークンを追加し、流動性プールを増加させます。
 
@@ -1132,7 +1132,7 @@ ETH を入金するには、コントラクトはまずそれを WETH にラッ�
 
 ユーザーは、ETH をすでに送金しているので、(一方のトークンがユーザーが考えるより価値が低いため) 余りが出てしまう場合は、払い戻しを行う必要があります。
 
-#### 流動性の削除 {#remove-liquidity}
+#### 流動性の削除 \{#remove-liquidity}
 
 これらの関数は流動性を削除し、流動性プロバイダーに返却します。
 
@@ -1293,7 +1293,7 @@ WETH トークンを受け取り、ETH と交換して流動性プロバイダ�
 
 最後の関数は、ストレージフィーとメタトランザクションを結び付けています。
 
-#### 取引 {#trade}
+#### 取引 \{#trade}
 
 ```solidity
     // **** SWAP ****
@@ -1651,15 +1651,15 @@ Solidity の関数パラメータは、`memory`または`calldata`のいずれ�
 
 これらの関数は、[UniswapV2 ライブラリ関数](#uniswapV2library)を呼び出すプロキシにすぎません。
 
-### UniswapV2Migrator.sol {#UniswapV2Migrator}
+### UniswapV2Migrator.sol \{#UniswapV2Migrator}
 
 このコントラクトは、取引所を以前の v1 から v2 へ移行するために使用されました。 現在は、移行済みのため使われません。
 
-## ライブラリ {#libraries}
+## ライブラリ \{#libraries}
 
 [SafeMath ライブラリ](https://docs.openzeppelin.com/contracts/2.x/api/math)は、十分にドキュメント化されているため、ここでドキュメント化する必要はありません。
 
-### 数学 {#Math}
+### 数学 \{#Math}
 
 このライブラリには、Solidity コードで通常は必要としない、言語に含まれていない数学関数があります。
 
@@ -1704,7 +1704,7 @@ library Math {
 }
 ```
 
-### 固定点小数(UQ112x112) {#FixedPoint}
+### 固定点小数(UQ112x112) \{#FixedPoint}
 
 このライブラリは、通常イーサリアムの算術の一部ではない小数を処理します。 数字*x*を*x\*2^112*としてコード化して実行することで、 元の加算および減算オペコードをそのまま使用できます。
 
@@ -1741,7 +1741,7 @@ y は、`uint112`であるため、大体の値は 2^112-1 です。 この数�
 
 2 つの`UQ112x112`の値を割ると、結果は 2^112 で乗算されなくなります。 そのため、代わりに分母に整数を使用します。 乗算を行うには同様のトリックを使用する必要がありますが、`UQ112x112`の値の乗算を行う必要はありません。
 
-### UniswapV2 ライブラリ {#uniswapV2library}
+### UniswapV2 ライブラリ \{#uniswapV2library}
 
 このライブラリは、ペリフェリーコントラクトにのみ使用されます。
 
@@ -1863,7 +1863,7 @@ Solidity は小数をネイティブに扱うことができないため、単�
 
 これらの 2 つの関数は、複数のペア取引所を経由する必要がある場合に、値を特定します。
 
-### 送金ヘルパー {#transfer-helper}
+### 送金ヘルパー \{#transfer-helper}
 
 この[ライブラリ](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol)は、元の状態に戻せるよう、ERC-20 およびイーサリアム送金関連の成功チェックを追加し、同様の方法で`false`値も返します。
 
@@ -1948,7 +1948,7 @@ ERC-20 標準以前に作成されたトークンとの後方互換性の便宜�
 
 この関数は、アカウントにイーサ(ETH)を送金します。 異なるコントラクトへのすべての呼び出しで、イーサ(ETH)の送信ができます。 実際には関数を呼び出す必要がないため、この呼び出しでデータを送信することはありません。
 
-## まとめ {#conclusion}
+## まとめ \{#conclusion}
 
 この記事は、約 50 ページにおよびます。 ここまで読んでいただきありがとうございました。 (短いサンプルプログラムとは対照的に)実際のアプリケーションを作成する際の考慮事項を理解し、独自のユースケースにおいてコントラクトを作成できるようになったことを願っています。
 

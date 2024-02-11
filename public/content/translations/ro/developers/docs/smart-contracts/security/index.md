@@ -10,19 +10,19 @@ Contractele inteligente Ethereum sunt extrem de flexibile, capabile atât să de
 - [Problema nr. 2 cu Parity Multi-Sign - 300 mil. USD blocați](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [Atacul TheDAO, 3,6 mil. USD în ETH! Peste 1 mld. USD la prețul ETH-ului de astăzi](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
-## Condiții prealabile {#prerequisites}
+## Condiții prealabile \{#prerequisites}
 
 Se va vorbi despre securitatea contractelor inteligente, de aceea aveţi grijă să vă familiarizaţi cu [contractele inteligente](/developers/docs/smart-contracts/) înainte de a aborda securitatea.
 
-## Cum să scrieţi coduri de contracte inteligente mai securizate {#how-to-write-more-secure-smart-contract-code}
+## Cum să scrieţi coduri de contracte inteligente mai securizate \{#how-to-write-more-secure-smart-contract-code}
 
 Înainte de a lansa orice cod pe Mainnet, este important să luaţi suficiente măsuri de precauție pentru a proteja lucrurile de valoare încredințate contractului dvs. inteligent. În acest articol vom discuta despre câteva atacuri specifice, vă vom oferi resurse pentru a afla mai multe despre diferite tipuri de atacuri și vă vom furniza câteva instrumente de bază și cele mai bune practici pentru a vă garanta funcționarea corectă a contractelor dvs.
 
-## Auditurile nu sunt o soluție perfectă {#audits-are-not-a-silver-bullet}
+## Auditurile nu sunt o soluție perfectă \{#audits-are-not-a-silver-bullet}
 
 Cu ani înainte, instrumentele pentru scrierea, compilarea, testarea și implementarea contractelor inteligente erau foarte imature, permițând multor proiecte să scrie codul Solidity în moduri întâmplătoare, să îl arunce peste „gard” către un auditor care ar investiga codul pentru a se asigura că acesta funcționează securizat și conform aşteptărilor. În 2020, procesele de dezvoltare și instrumentele care acceptă scrierea Solidity sunt mult perfecţionate; valorificarea acestor bune practici nu numai că garantează facilitatea de gestionare a proiectuliu dvs., ci este o parte vitală a securității lui. Nu mai este suficient să auditaţi contractul inteligent când l-aţi terminat de scris ca singur aspect de care să ţineţi cont privind securitatea proiectului dvs. Securitatea începe înainte de a scrie prima linie de cod de contract inteligent, **securitatea începe cu procese de proiectare și dezvoltare corespunzătoare**.
 
-## Procesul de dezvoltare a contractelor Inteligente {#smart-contract-development-process}
+## Procesul de dezvoltare a contractelor Inteligente \{#smart-contract-development-process}
 
 Cerințe minime:
 
@@ -42,11 +42,11 @@ Sunt mult mai multe de spus despre procesul de dezvoltare, dar este bine să în
 - Veţi permite dezvoltatorilor să itereze rapid, să testeze și să obțină feedback despre modificări
 - Va fi mai puţin probabil ca proiectul dvs. să regreseze
 
-## Atacuri și vulnerabilități {#attacks-and-vulnerabilities}
+## Atacuri și vulnerabilități \{#attacks-and-vulnerabilities}
 
 După ce aţi aflat cum să scrieţi cod Solidity folosind un proces de dezvoltare eficient, să analizăm câteva vulnerabilități comune din Solidity pentru a vedea unde se poate poticni.
 
-### Re-intrare {#re-entrancy}
+### Re-intrare \{#re-entrancy}
 
 Re-intrarea este una dintre cele mai mari și mai semnificative probleme de securitate de luat în considerare atunci când se dezvoltă contracte inteligente. Deși EVM nu poate executa mai multe contracte simultan, un contract care apelează un alt contract întrerupe executarea contractului de apelare și starea memoriei până când apelul revine, moment în care executarea se desfășoară în mod normal. Această întrerupere și re-pornire poate crea o vulnerabilitate cunoscută sub numele de „re-intrare”.
 
@@ -116,7 +116,7 @@ Apelarea Attacker.beginAttack() va începe un ciclu care arată cam aşa:
 
 Apelarea Attacker.beginAttack cu 1 ETH va ataca prin re-intrare Victima, retrăgând mai mult ETH decât a furnizat (luat din soldurile altor utilizatori, iar din această cauză contractul Victimă ajunge să fie sub-garantat)
 
-### Cum să abordaţi re-intrarea (modul greșit) {#how-to-deal-with-re-entrancy-the-wrong-way}
+### Cum să abordaţi re-intrarea (modul greșit) \{#how-to-deal-with-re-entrancy-the-wrong-way}
 
 Aţi putea lua în calcul interziceţi re-intrarea împiedicând orice contract inteligent să interacționeze cu codul dvs. Când căutaţi stackoverflow, descoperiţi că acest fragment de cod (snippet) are tone de voturi pozitive:
 
@@ -185,7 +185,7 @@ require(tx.origin == msg.sender)
 
 Totuși, aceasta nu este încă o soluție bună. Unul dintre cele mai interesante aspecte ale lui Ethereum este combinabilitatea: contractele inteligente se integrează unul cu altul și se construiesc bizuindu-se unul pe celălalt. Prin utilizarea liniei de mai sus, vă limitaţi utilitatea proiectului.
 
-### Cum să abordaţi re-intrarea (modul corect) {#how-to-deal-with-re-entrancy-the-right-way}
+### Cum să abordaţi re-intrarea (modul corect) \{#how-to-deal-with-re-entrancy-the-right-way}
 
 Prin simpla comutare a ordinii actualizării de stocare și a apelului extern, eliminăm condiția de re-intrare care a permis atacul. Apelarea înapoi la „withdraw” (retragere) cât timp este încă posibil nu va avantaja atacantul, deoarece `soldul` stocării va fi deja setat la 0.
 
@@ -202,11 +202,11 @@ contract NoLongerAVictim {
 
 Codul de mai sus urmează modelul de concept „Verificări-Efecte-Interacțiuni”, care ajută la protejarea împotriva re-intrării. Puteţi [citi mai multe despre Verificări-Efecte-Interacțiuni aici](https://fravoll.github.io/solidity-patterns/checks_effects_interactions.html)
 
-### Cum să abordaţi re-intrarea (opțiunea nucleară) {#how-to-deal-with-re-entrancy-the-nuclear-option}
+### Cum să abordaţi re-intrarea (opțiunea nucleară) \{#how-to-deal-with-re-entrancy-the-nuclear-option}
 
 De fiecare dată când trimiteți ETH la o adresă care nu este de încredere sau interacționaţi cu un contract necunoscut (cum ar fi apelarea `transfer()` a unei adrese de token furnizate de utilizator), faceţi loc chiar dvs. posibilităţii de re-intrare. **Proiectând contracte care nici nu trimit ETH, și nici nu apelează contracte nesigure, eliminaţi posibilitatea re-intrării!**
 
-## Mai multe tipuri de atacuri {#more-attack-types}
+## Mai multe tipuri de atacuri \{#more-attack-types}
 
 Tipurile de atac de mai sus tratează problemele de programare a contractelor inteligente (re-intrarea) și ciudățeniile din Ethereum (executarea codului în interiorul constructorilor de contracte înainte ca acest cod să fie disponibil la adresa contractului). Există multe, multe alte tipuri de atacuri despre care trebuie să știţi, cum ar fi:
 
@@ -219,11 +219,11 @@ Referințe suplimentare:
 - [Atacuri cunoscute ale contractelor inteligente Consensys](https://consensys.github.io/smart-contract-best-practices/attacks/) - O explicație foarte lizibilă a celor mai semnificative vulnerabilități, majoritatea cu un exemplu de cod.
 - [Registru SWC](https://swcregistry.io/docs/SWC-128) - Lista selectată de CWE-uri care se aplică la Ethereum și la contractele inteligente
 
-## Instrumente de securitate {#security-tools}
+## Instrumente de securitate \{#security-tools}
 
 Deși este de neînlocuit înțelegerea elementelor de bază ale securității Ethereum și angajarea unei firme de audit profesionale pentru a vă examina codul, există multe instrumente disponibile pentru a evidenția problemele potențiale cu codul dvs.
 
-### Securitatea contractelor inteligente {#smart-contract-security}
+### Securitatea contractelor inteligente \{#smart-contract-security}
 
 **Slither -** **_framework de analiză statică Solidity scris în Python 3._**
 
@@ -254,14 +254,14 @@ Deși este de neînlocuit înțelegerea elementelor de bază ale securității E
 - [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
 - [Forum](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
 
-### Verificare formală {#formal-verification}
+### Verificare formală \{#formal-verification}
 
 **Informații despre verificarea formală**
 
 - [Cum funcționează verificarea formală a contactelor inteligente](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _20 Iulie 2018 - Brian Marick_
 - [Modul în care verificarea formală poate asigura contracte inteligente fără greşeli](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _29 ianuarie 2018 - Bernard Mueller_
 
-### Folosirea instrumentelor {#using-tools}
+### Folosirea instrumentelor \{#using-tools}
 
 Două dintre cele mai populare instrumente pentru analiza securității contractelor inteligente sunt:
 
@@ -304,7 +304,7 @@ Slither a identificat aici potențialul de re-intrare, identificând liniile che
 
 permițându-vă să aflaţi rapid despre potențialele probleme cu codul. Ca toate instrumentele de testare automată, Slither nu este perfect și greșește, raportând prea mult. Poate avertiza despre o potențială re-intrare, chiar și atunci când nu există o vulnerabilitate exploatabilă. Adesea, revizuirea DIFERENȚEI modificării codului la rezultatele Slither este extrem de folositoare, ajutând la descoperirea de vulnerabilități introduse cu mult înainte decât aşteptând până la codificarea completă a proiectului dvs.
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 **Ghid de bune practici pentru securitatea contractelor inteligente**
 
@@ -318,7 +318,7 @@ permițându-vă să aflaţi rapid despre potențialele probleme cu codul. Ca to
 
 _Cunoaşteţi o resursă comunitară care v-a ajutat? Editaţi această pagină și adăugaţi-o!_
 
-## Tutoriale corelate {#related-tutorials}
+## Tutoriale corelate \{#related-tutorials}
 
 - [Flux de lucru pentru dezvoltarea securizată](/developers/tutorials/secure-development-workflow/)
 - [Cum se folosește Slither pentru a depista bug-urile din contractele inteligente](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)

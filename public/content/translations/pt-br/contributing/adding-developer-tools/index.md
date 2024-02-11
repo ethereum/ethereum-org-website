@@ -4,7 +4,7 @@ lang: pt-br
 description: Nossos critérios para listar ferramentas de desenvolvedor no ethereum.org
 ---
 
-# Adicionando ferramentas de desenvolvedor {#contributing-to-ethereumorg-}
+# Adicionando ferramentas de desenvolvedor \{#contributing-to-ethereumorg-}
 
 Queremos ter certeza de que listamos os melhores recursos de desenvolvedor possíveis para que as pessoas possam desenvolver com confiança e obter o suporte necessário.
 
@@ -14,7 +14,7 @@ Atualmente, listamos as ferramentas de desenvolvedor por meio do nosso [portal d
 
 **Não hesite em nos sugerir novas adições às páginas apropriadas.**
 
-## Como decidimos {#ways-to-contribute}
+## Como decidimos \{#ways-to-contribute}
 
 Os envios de ferramentas para desenvolvedores serão avaliados pelos seguintes critérios:
 
@@ -46,13 +46,13 @@ Muitos projetos no espaço Ethereum são de código aberto. É mais provável qu
 
 ---
 
-## Ordenação dos produtos {#product-ordering}
+## Ordenação dos produtos \{#product-ordering}
 
 A menos que os produtos sejam ordenados especificamente de outra forma, como em ordem alfabética, os produtos serão exibidos dos mais antigos aos mais recentes adicionados à página. Em outras palavras, os produtos mais recentes são adicionados ao final da lista.
 
 ---
 
-## Adicione sua ferramenta de desenvolvedor {#how-decisions-about-the-site-are-made}
+## Adicione sua ferramenta de desenvolvedor \{#how-decisions-about-the-site-are-made}
 
 Se você deseja adicionar uma ferramenta de desenvolvedor ao ethereum.org e ela atender aos critérios, crie um tíquete no GitHub.
 

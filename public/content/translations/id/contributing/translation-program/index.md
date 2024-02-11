@@ -4,7 +4,7 @@ lang: id
 description: Bagaimana berkontribusi pada Program Terjemahan ethereum.org
 ---
 
-# Program Penerjemahan {#translation-program}
+# Program Penerjemahan \{#translation-program}
 
 Program Terjemahan adalah sebuah usaha kolaboratif untuk menerjemahkan ethereum.org ke berbagai bahasa untuk membuat situs web lebih mudah diakses oleh miliaran penutur non-Inggris di seluruh dunia.
 
@@ -22,7 +22,7 @@ Jika Anda ingin terlibat dan membantu kami mengembangkan komunitas Ethereum glob
   <Link to="/contributing/translation-program/acknowledgements/#poap">Selengkapnya tentang POAP</Link>
 </InfoBanner>
 
-## Misi dan visi {#mission-and-vision}
+## Misi dan visi \{#mission-and-vision}
 
 Komunitas Ethereum bertujuan untuk menjadi global dan inklusif, namun sebagian besar kontennya hanya melayani penutur bahasa Inggris, meninggalkan 6 miliar pembicara non-Inggris di dunia. Agar ethereum.org bertindak sebagai portal menuju ke Ethereum untuk komunitas di seluruh dunia, kami percaya menyediakan konten Ethereum dalam bahasa ibu mereka bagi penutur non-Inggris sangat penting.
 
@@ -42,7 +42,7 @@ Program Terjemahan ethereum.org bertujuan untuk membuat Ethereum dapat diakses o
 - Mendukung berbagi pengetahuan antar bahasa untuk menciptakan komunitas Ethereum yang lebih terinformasi dan terdidik
 - Meningkatkan inklusivitas dan aksesibilitas Ethereum dengan menghilangkan hambatan bahasa yang menghalangi penutur non-Inggris bergabung dengan ekosistem
 
-## Cara menerjemahkan {#how-to-translate}
+## Cara menerjemahkan \{#how-to-translate}
 
 <InfoBanner shouldCenter emoji=":light_bulb:">
   Kami menyarankan Anda untuk melihat Panduan Gaya Penerjemahan ethereum.org. Ini berisi beberapa panduan, instruksi, dan tips yang paling penting bagi para penerjemah dan bisa menjadi rujukan saat melokalkan situs web.
@@ -118,27 +118,27 @@ Jika Anda adalah seorang penerjemah ethereum.org atau ingin menjadi salah satuny
   {" "}<Link to="/en/contributing/translation-program/faq/">Pertanyaan yang Sering Diajukan tentang menerjemahkan ethereum.org</Link>
 </InfoBanner>
 
-## Sumber Daya {#resources}
+## Sumber Daya \{#resources}
 
-### Panduan {#guides}
+### Panduan \{#guides}
 
 - [Panduan Gaya Penerjemahan](/contributing/translation-program/translators-guide/) _– Instruksi dan tips untuk penerjemah ethereum.org_
 - [Pertanyaan yang Sering Diajukan tentang penerjemahan](/contributing/translation-program/faq/) _– Pertanyaan yang paling sering diajukan dan jawabannya tentang Program Penerjemahan ethereum.org_
 - [Versi konten](/contributing/translation-program/content-versions/) _– halaman mana yang termasuk dalam setiap versi konten ethereum.org_
 
-### Perangkat {#tools}
+### Perangkat \{#tools}
 
 - [Portal Bahasa Microsoft](https://www.microsoft.com/en-us/language) _– berguna untuk menemukan dan memeriksa terjemahan standar istilah_
 - [Linguee](https://www.linguee.com/) _– mesin pencarian khusus terjemahan dan kamus yang memungkinkan pencarian berdasarkan kata atau frasa_
 - [Pencarian istilah Proz](https://www.proz.com/search/) _– database kamus terjemahan dan glosarium untuk istilah khusus_
 - [Eurotermbank](https://www.eurotermbank.com/) _– koleksi terminologi Eropa dalam 42 bahasa_
 
-### Komunitas {#communities}
+### Komunitas \{#communities}
 
 - [Grup penerjemahan Discord khusus bahasa](https://discord.gg/ethereum-org) _– sebuah inisiatif untuk menghubungkan para penerjemah ethereum.org ke dalam Grup Penerjemahan_
 - [Grup penerjemah bahasa Mandarin](https://www.notion.so/Ethereum-org-05375fe0a94c4214acaf90f42ba40171) _– Halaman gagasan untuk memudahkan koordinasi di antara para penerjemah bahasa Mandarin_
 
-### Pembaruan terbaru {#latest-updates}
+### Pembaruan terbaru \{#latest-updates}
 
 Untuk tetap mendapatkan info terkini tentang kemajuan Program Terjemahan terbaru, Anda dapat mengikuti [blog Yayasan Ethereum](https://blog.ethereum.org/):
 
@@ -147,7 +147,7 @@ Untuk tetap mendapatkan info terkini tentang kemajuan Program Terjemahan terbaru
 - [Pembaruan tonggak pencapaian Juli 2020](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
 - [Peluncuran Program Terjemahan Agustus 2019](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
 
-## Terjemahan Launchpad Penaruhan Ethereum {#staking-launchpad}
+## Terjemahan Launchpad Penaruhan Ethereum \{#staking-launchpad}
 
 Komunitas terjemahan kami juga sedang mengerjakan [Launchpad Penaruhan](https://launchpad.ethereum.org/en/). Ini memperbolehkan siapa saja untuk mengatur validator Ethereum dan membantu mengamankan jaringan Ethereum. Launchpad saat ini terdiri dari 17 bahasa.
 

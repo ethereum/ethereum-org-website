@@ -13,7 +13,7 @@ source: Créer des contrats sécurisés
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
-## Liste de contrôle pour le développement de contrats intelligents {#smart-contract-development-checklist}
+## Liste de contrôle pour le développement de contrats intelligents \{#smart-contract-development-checklist}
 
 Voici un processus de haut niveau que nous vous recommandons de suivre lors de la rédaction de vos contrats intelligents.
 
@@ -49,7 +49,7 @@ Enfin, soyez attentifs aux problèmes que les outils automatisés ne peuvent pas
 - Opérations cryptographiques
 - Interactions risquées avec les composants DeFi externes
 
-## Demandez de l'aide {#ask-for-help}
+## Demandez de l'aide \{#ask-for-help}
 
 [Les heures de bureau d'Ethereum](https://calendly.com/dan-trailofbits/ethereum-office-hours) se déroulent tous les mardis après-midi. Ces sessions en tête à tête sont l'occasion de nous poser toutes vos questions sur la sécurité, de dépannage à l'aide de nos outils et d'obtenir des commentaires d'experts sur votre approche actuelle. Nous vous aiderons à travailler à travers ce guide.
 

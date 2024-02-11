@@ -9,7 +9,7 @@ incomplete: true
 
 Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps pueden ser confiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Son descentralizadas, lo que significa que funcionan en una red de punto a punto, y no hay un único punto de fracaso. Ninguna entidad o persona las controla y es casi imposible censurarlas. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones.
 
-## Empezando con contratos inteligentes y el lenguaje Solidity {#getting-started-with-smart-contracts-and-solidity}
+## Empezando con contratos inteligentes y el lenguaje Solidity \{#getting-started-with-smart-contracts-and-solidity}
 
 **Da los primeros pasos para integrar Go con Ethereum**
 
@@ -21,7 +21,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 - [Aprender a compilar e implementar Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [Tutorial del contrato](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
-## Artículos y libros para principiantes {#beginner-articles-and-books}
+## Artículos y libros para principiantes \{#beginner-articles-and-books}
 
 - [Seleccionar a un cliente de Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Comenzar con Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
@@ -30,7 +30,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 - [Una guía paso a paso para probar e implementar contratos inteligentes de Ethereum en Go](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [eBook: Desarrollo de Ethereum con Go](https://goethereumbook.org/): _Desarrollo de aplicaciones Ethereum con Go_
 
-## Artículos y documentos de nivel intermedio {#intermediate-articles-and-docs}
+## Artículos y documentos de nivel intermedio \{#intermediate-articles-and-docs}
 
 - [Documentación Ethereum de Go](https://geth.ethereum.org/docs/): _La documentación oficial para Ethereum Golang_
 - [Guía del programador de Erigon:](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) _Guía ilustrada que incluye el árbol de estado, multipruebas y procesamiento de transacciones_
@@ -42,7 +42,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 - [Unidad de prueba de contratos de Solidity en Ethereum con Go](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Referencia rápida para usar Geth como biblioteca](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
-## Patrones de uso avanzados {#advanced-use-patterns}
+## Patrones de uso avanzados \{#advanced-use-patterns}
 
 - [El fondo simulado de GETH](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Aplicaciones de Blockchain-as-a-Service que utilizan Ethereum y Quorum](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
@@ -50,7 +50,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 - [Clientes móviles: Bibliotecas y nodos Inproc Ethereum](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [Aplicaciones nativas: Bindings de Go para contratos de Ethereum](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-## Proyectos y herramientas de Go {#go-projects-and-tools}
+## Proyectos y herramientas de Go \{#go-projects-and-tools}
 
 - [Geth/Go Ethereum](https://github.com/ethereum/go-ethereum): _Implementación oficial en Go del protocolo Ethereum_
 - [Análisis de código Go de Ethereum](https://github.com/ZtesoftCS/go-ethereum-code-analysis): _Revisión y análisis del código fuente de Go para Ethereum_
@@ -68,7 +68,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 
 ¿Buscas más recursos? Visite [ethereum.org/developers](/developers/).
 
-## Colaboradores de la comunidad de Go {#go-community-contributors}
+## Colaboradores de la comunidad de Go \{#go-community-contributors}
 
 - [Geth Discord](https://discordapp.com/invite/nthXNEv)
 - [Geth Gist](https://gitter.im/ethereum/go-ethereum)
@@ -78,7 +78,7 @@ Usa Ethereum para crear aplicaciones descentralizadas (o "dapps"). Estas dapps p
 - [Gitter de Ethereum](https://gitter.im/ethereum/home)
 - [Cliente Gitter ligero de Geth](https://gitter.im/ethereum/light-client)
 
-## Otras listas adicionales {#other-aggregated-lists}
+## Otras listas adicionales \{#other-aggregated-lists}
 
 - [Ethereum es increíble](https://github.com/btomashvili/awesome-ethereum)
 - [Consensis: Una lista definitiva de herramientas de desarrollador de Ethereum](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [Fuente de GitHub](https://github.com/ConsenSys/ethereum-developer-tools-list)

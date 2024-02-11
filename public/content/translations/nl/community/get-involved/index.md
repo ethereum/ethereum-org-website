@@ -4,11 +4,11 @@ description: Hoe meedoen aan de Ethereum-gemeenschap.
 lang: nl
 ---
 
-# Hoe kan ik meedoen? {#get-involved}
+# Hoe kan ik meedoen? \{#get-involved}
 
 De Ethereum-gemeenschap omvat mensen met verschillende achtergronden en vaardigheden. Of u nu ontwikkelaar bent, een kunstenaar of een accountant, er zijn verschillende manieren om betrokken te raken. Hier is een lijst met suggesties die u kunnen helpen om aan de slag te gaan.
 
-## Ontwikkelaars <Emoji text=":computer:" size={1} />→ {#developers}
+## Ontwikkelaars <Emoji text=":computer:" size={1} />→ \{#developers}
 
 - Leer meer over en probeer Ethereum op [ethereum.org/developers/](/developers/)
 - [Vind een premie op Gitcoin](https://gitcoin.co/), werk aan een klein of groot technisch probleem, verdien crypto!
@@ -19,7 +19,7 @@ De Ethereum-gemeenschap omvat mensen met verschillende achtergronden en vaardigh
 - [Web3Bridge](https://www.web3bridge.com/) - sluit u aan bij de ambitieuze web3-gemeenschap in hun initiatief om honderden ontwikkelaars en leden van de gemeenschap in heel Afrika te identificeren, te trainen en te ondersteunen
 - Sluit u aan bij de [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
 
-## Onderzoekers & Academici<Emoji text=":mag:" size={1} />± {#researchers-and-academics}
+## Onderzoekers & Academici<Emoji text=":mag:" size={1} />± \{#researchers-and-academics}
 
 Heeft u een achtergrond in wiskunde, cryptografie of economie? Misschien bent u dan geïnteresseerd in het geavanceerde werk dat wordt gedaan in het Ethereum-ecosysteem
 
@@ -30,61 +30,61 @@ Heeft u een achtergrond in wiskunde, cryptografie of economie? Misschien bent u 
 
 [Ontdek meer actieve onderzoeksgebieden](/community/research/).
 
-## Niet-technische vaardigheden <Emoji text=":briefcase:" size={1} /> {#non-technical}
+## Niet-technische vaardigheden <Emoji text=":briefcase:" size={1} /> \{#non-technical}
 
 Als u geen ontwikkelaar bent, kan het moeilijk zijn om te weten waar in Ethereum u moet beginnen. Hier zijn een paar suggesties, samen met hulpbronnen voor specifieke professionele achtergronden.
 
-### Organiseer een afspraak in uw stad {#meetups}
+### Organiseer een afspraak in uw stad \{#meetups}
 
 - Weet u niet waar te starten? Het [BUIDL-netwerk](https://consensys.net/developers/buidlnetwork/) kan helpen.
 
-### Schrijf content over Ethereum {#write-content}
+### Schrijf content over Ethereum \{#write-content}
 
 - Ethereum heeft goede schrijvers nodig die de waarde ervan in eenvoudige taal kunnen uitleggen
 - Niet gereed om uw eigen artikelen te publiceren? Overweeg om bij te dragen aan de bestaande inhoud op communitybronnen of [stel nieuwe inhoud voor ethereum.org](/contributing/) voor!
 
-### Aanbieden om notities te maken voor gemeenschapsoproepen {#take-notes}
+### Aanbieden om notities te maken voor gemeenschapsoproepen \{#take-notes}
 
 - Er zijn veel open-source gemeenschapsoproepen, en het hebben van notetakers is een enorme hulp. Als je geïnteresseerd bent, sluit je dan aan bij de [Ethereum Cat Herders discord](https://discord.com/invite/Nz6rtfJ8Cu)en introduceer jezelf!
 
-### Vertaal Ethereum content in uw eigen taal {#translate-ethereum}
+### Vertaal Ethereum content in uw eigen taal \{#translate-ethereum}
 
 - ethereum.org onderhoudt een vertaalprogramma dat de website en andere bronnen vertaalt in veel verschillende talen
 - Ontdek [hier](/contributing/translation-program) hoe u mee kunt doen
 
-### Voer een node uit {#run-a-node}
+### Voer een node uit \{#run-a-node}
 
 Sluit u aan bij duizenden node-beheerders om Ethereum verder te decentraliseren.
 
 - [Meer over hoe een node uit te voeren](/developers/docs/nodes-and-clients/run-a-node/)
 
-### Stake uw ETH {#staking}
+### Stake uw ETH \{#staking}
 
 Door het staken van uw ETH kunt u beloningen verdienen terwijl u het Ethereum-netwerk helpt beveiligen.
 
 - [Meer over staking](/staking/)
 
-### Ondersteun projecten {#support-projects}
+### Ondersteun projecten \{#support-projects}
 
 Het Ethereum-ecosysteem is op een missie om publieke goederen en waardevolle projecten te financieren. Met zeer kleine donaties kunt u uw steun tonen en toestaan dat belangrijk werk wordt uitgevoerd.
 
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
-## Financiële professionals & accountants <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
+## Financiële professionals & accountants <Emoji text=":chart_with_upwards_trend:" size={1} /> \{#financial-professionals}
 
 - Ethereum is de thuisbasis van het “Decentralized Finance”-ecosysteem - een netwerk van protocollen en toepassingen die een alternatief financieel systeem bieden. Als u een financiële professional bent, bekijk dan enkele DeFi-apps op [DeFi Llama](https://defillama.com/) of [ DeFiPrime](https://defiprime.com)
 - Accountant? Assets op Ethereum - ETH, tokens, DeFi, etc - introduceren veel nieuwe boekhoudkundige kwesties. U kunt beginnen met het bekijken van enkele projecten die erop gericht zijn gebruikers van cryptovaluta te helpen hun boekhouduitdagingen op te lossen, zoals [Rotki](https://rotki.com/)
 
-## Productbeheerders <Emoji text=":fountain_pen:" size={1} /> ½ {#product-managers}
+## Productbeheerders <Emoji text=":fountain_pen:" size={1} /> ½ \{#product-managers}
 
 - Het Ethereum-ecosysteem heeft uw talenten nodig! Veel bedrijven huren productmanagers in. Als u wilt beginnen met bij te dragen aan een open-source project, neem dan contact op met de [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) of met [MetaCartel](https://www.metacartel.org/)
 
-## Marketing <Emoji text=":megaphone:" size={1} />≤ {#marketing}
+## Marketing <Emoji text=":megaphone:" size={1} />≤ \{#marketing}
 
 - Er zijn veel marketing- en communicatieposities in het Ethereum-ecosysteem!
 
-## Banen bij Ethereum {#ethereum-jobs}
+## Banen bij Ethereum \{#ethereum-jobs}
 
 **Wilt u een baan vinden bij Ethereum?**
 
@@ -103,7 +103,7 @@ Het Ethereum-ecosysteem is op een missie om publieke goederen en waardevolle pro
 - [Ethereum-banen](https://startup.jobs/ethereum-jobs)
 - [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
-## Neem deel aan een DAO {#decentralized-autonomous-organizations-daos}
+## Neem deel aan een DAO \{#decentralized-autonomous-organizations-daos}
 
 "DAO's" zijn gedecentraliseerde autonome organisaties. Deze groepen maken gebruik van de Ethereum-technologie om organisatie en samenwerking te vergemakkelijken. Bijvoorbeeld voor het controleren van het lidmaatschap, het stemmen op voorstellen of het beheren van samengevoegde activa. Hoewel DAO's nog steeds experimenteel zijn, bieden ze u kansen om groepen te vinden waarmee u zich identificeert, medewerkers te vinden en uw impact op de Ethereum-gemeenschap te vergroten. [Meer over DAO's](/dao/)
 

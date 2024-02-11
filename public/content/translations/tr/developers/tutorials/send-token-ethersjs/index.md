@@ -11,19 +11,19 @@ lang: tr
 published: 2021-04-06
 ---
 
-## ethers.js(5.0) Kullanarak Token Gönderin {#send-token}
+## ethers.js(5.0) Kullanarak Token Gönderin \{#send-token}
 
-### Bu Eğitimde Şunların Nasıl Yapılacağını Öğreneceksiniz {#you-learn-about}
+### Bu Eğitimde Şunların Nasıl Yapılacağını Öğreneceksiniz \{#you-learn-about}
 
 - Ethers.js içe aktarımı
 - Token transferi
 - Gaz fiyatını ağ trafiği durumuna göre ayarlama
 
-### Başlamak İçin {#to-get-started}
+### Başlamak İçin \{#to-get-started}
 
 Başlamak için önce ethers.js kitaplığını javascript'imize aktarmalıyız ethers.js(5.0) dahil
 
-### Kurulum {#install-ethersjs}
+### Kurulum \{#install-ethersjs}
 
 ```shell
 /home/ricmoo> npm install --save ethers
@@ -47,7 +47,7 @@ Tarayıcıda ES3(UMD)
 ></script>
 ```
 
-### Parametreler {#param}
+### Parametreler \{#param}
 
 1. **`contract_address`**: Token sözleşme adresi (aktarmak istediğiniz token, ether olmadığında sözleşme adresi gereklidir)
 2. **`send_token_amount`**: Alıcıya göndermek istediğiniz token miktarı
@@ -55,15 +55,15 @@ Tarayıcıda ES3(UMD)
 4. **`send_account`**: Göndericinin adresi
 5. **`private_key`**: İşlemi imzalamak ve token'ları tam olarak aktarmak için göndericinin özel anahtarı
 
-## Uyarı {#notice}
+## Uyarı \{#notice}
 
 `sendTransaction()` onu dahili olarak yaptığı için `signTransaction(tx)` kaldırılmıştır.
 
-## Gönderim Prosedürleri {#procedure}
+## Gönderim Prosedürleri \{#procedure}
 
-### 1. Ağa bağlan (test ağı) {#connect-to-network}
+### 1. Ağa bağlan (test ağı) \{#connect-to-network}
 
-#### Sağlayıcı Ayarla (Infura) {#set-provider}
+#### Sağlayıcı Ayarla (Infura) \{#set-provider}
 
 Ropsten test ağına bağlan
 
@@ -71,29 +71,29 @@ Ropsten test ağına bağlan
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. Cüzdan oluştur {#create-wallet}
+### 2. Cüzdan oluştur \{#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Cüzdanı ağa bağla {#connect-wallet-to-net}
+### 3. Cüzdanı ağa bağla \{#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. Mevcut gaz ücretini al {#get-gas}
+### 4. Mevcut gaz ücretini al \{#get-gas}
 
 ```javascript
 window.ethersProvider.getGasPrice() // gasPrice
 ```
 
-### 5. İşlemi tanımla {#define-transaction}
+### 5. İşlemi tanımla \{#define-transaction}
 
 Aşağıda tanımlanan bu değişkenler, `send_token()` komutuna bağlıdır
 
-### İşlem parametreleri {#transaction-params}
+### İşlem parametreleri \{#transaction-params}
 
 1. **`send_account`**: token göndericisinin adresi
 2. **`to_address`**: token alıcısının adresi
@@ -114,7 +114,7 @@ const tx = {
 }
 ```
 
-### 6. Aktarım {#transfer}
+### 6. Aktarım \{#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
@@ -123,7 +123,7 @@ walletSigner.sendTransaction(tx).then((transaction) => {
 })
 ```
 
-## Nasıl kullanılır {#how-to-use}
+## Nasıl kullanılır \{#how-to-use}
 
 ```javascript
 let private_key =
@@ -146,11 +146,11 @@ send_token(
 )
 ```
 
-### Başarılı! {#success}
+### Başarılı! \{#success}
 
 ![başarılı bir şekilde yapılan işlemin görüntüsü](./successful-transaction.png)
 
-## send_token() {#send-token-method}
+## send_token() \{#send-token-method}
 
 ```javascript
 function send_token(

@@ -6,15 +6,15 @@ lang: tr
 
 Projenizdeki her akıllı sözleşmeyi sıfırdan yazmanız gerekmez. Projenize yeniden kullanılabilir yapı taşları sağlayarak her şeyi sıfırdan yapmanıza gerek bırakmayacak birçok açık kaynak akıllı sözleşme kütüphanesi bulunmaktadır.
 
-## Ön koşullar {#prerequisites}
+## Ön koşullar \{#prerequisites}
 
 Akıllı sözleşme kütüphanelerine dalmadan önce, bir akıllı sözleşmenin yapısı hakkında derin bir anlayışa sahip olmanız iyi olur. Henüz buna sahip değilseniz [akıllı sözleşme anatomisine](/developers/docs/smart-contracts/anatomy/) gidin.
 
-## Kütüphanenin içindekiler {#whats-in-a-library}
+## Kütüphanenin içindekiler \{#whats-in-a-library}
 
 Genelde akıllı sözleşme kütüphanelerinde iki tür yapı taşı bulunur: sözleşmelerinize ekleyebileceğiniz yeniden kullanılabilir davranışlar ve çeşitli standartların uygulamaları.
 
-### Davranışlar {#behaviors}
+### Davranışlar \{#behaviors}
 
 Büyük ihtimalle, akıllı sözleşmeler yazarken bir sözleşmede korunan işlemler gerçekleştirmek için bir _yönetici_ adresi atamak veya beklenmeyen bir sıkıntı esnasında acil bir _duraklatma_ düğmesi eklemek gibi benzer kalıpları sürekli yazıp durduğunuzu göreceksiniz.
 
@@ -52,7 +52,7 @@ contract MyContract is Ownable {
 
 [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) ya da [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html) de diğer ünlü örnekler arasındadır. Bunlar, dil tarafından sağlanmayan taşma kontrollü aritmetik fonksiyonlar sağlayan kütüphanelerdir (temel sözleşme yerine). Ana aritmetik işlemler yerine sözleşmenizi feci sonuçlar oluşturan taşmalardan korumak için bu kütüphanelerden birini kullanmak iyi bir yöntemdir!
 
-### Standartlar {#standards}
+### Standartlar \{#standards}
 
 [Birleştirilebilirliği ve birlikte çalışabilirliği](/developers/docs/smart-contracts/composability/) kolaylaştırmak için, Ethereum topluluğu **ERC** denilen birtakım standartlar belirlemiştir. Bunlar hakkında daha fazlasını [standartlar](/developers/docs/standards/) kısmında okuyabilirsiniz.
 
@@ -60,7 +60,7 @@ Sözleşmelerinize bir ERC dahil ederken, kendi başınıza dağıtmaktansa stan
 
 Bazı ERC'lerin yekpare değil, başka ERC'lerin ekleri olduğunu söylemek gerekir. Örneğin [ERC2612](https://eips.ethereum.org/EIPS/eip-2612), kullanılabilirliğini geliştirmek için ERC20'ye bir eklenti ekler.
 
-## Kütüphane ekleme {#how-to}
+## Kütüphane ekleme \{#how-to}
 
 Her zaman dahil ettiğiniz kütüphanenin belgelerinde bulunan, projenin nasıl dahil edileceğine dair özel yönergelere başvurun. Birçok Solidity sözleşme kütüphanesi `npm` kullanılarak paketlenmiştir, bu yüzden onları sadece `npm install` ile indirebilirsiniz. Sözleşmeleri [derlemeye](/developers/docs/smart-contracts/compiling/) yarayan birçok araç, akıllı sözleşme kütüphaneleri için `node_modules` klasörünüze bakacaktır, bu yüzden aşağıdakileri yapabilirsiniz:
 
@@ -75,7 +75,7 @@ contract MyNFT is ERC721 {
 
 Kullandığınız yola bakmaksızın, bir kütüphane dahil ederken, her zaman gözünüz [dil](/developers/docs/smart-contracts/languages/) sürümünün üzerinde olsun. Misal, eğer sözleşmelerinizi Solidity 0.5'te yazıyorsanız Solidity 0.6 için olan bir kütüphaneyi kullanamazsınız.
 
-## Ne zaman kullanmalı {#when-to-use}
+## Ne zaman kullanmalı \{#when-to-use}
 
 Projeniz için bir akıllı sözleşme kütüphanesi kullanmanın birçok yararı vardır. İlk ve en önemlisi, kendiniz kodlamanızdansa size kullanıma hazır, sisteminize dahil edebileceğiniz yapı taşları sunarak zamandan tasarruf etmenizi sağlar.
 
@@ -85,7 +85,7 @@ Ancak, akıllı sözleşme kütüphanelerini kullanmak aşina olmadığınız ko
 
 Son olarak, bir kütüphaneyi dahil edip etmeyeceğinize karar verirken, onun genel kullanımını göz önünde bulundurun. Geniş çapta kabul edilmiş bir tanesi, daha büyük bir topluluğa sahip olma ve sorunlar için daha çok gözden geçirme gibi yararlara sahiptir. Akıllı sözleşmeler yaparken güvenlik ana odağınız olmalıdır!
 
-## İlgili araçlar {#related-tools}
+## İlgili araçlar \{#related-tools}
 
 **OpenZeppelin Contracts -** **_Güvenli akıllı sözleşme geliştirme için en popüler kütüphanedir._**
 
@@ -107,11 +107,11 @@ Son olarak, bir kütüphaneyi dahil edip etmeyeceğinize karar verirken, onun ge
 - [Dokümanlar](https://portal.thirdweb.com/solidity/)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
-## İlgili eğitimler {#related-tutorials}
+## İlgili eğitimler \{#related-tutorials}
 
 - [Ethereum geliştiricilerinin güvenlik konusunda dikkat etmesi gereken hususlar](/developers/docs/smart-contracts/security/) _– Akıllı sözleşme oluşturma sırasında, kütüphane kullanımı da dahil olmak üzere güvenlik konusunda dikkat edilmesi gereken hususlar hakkında bir öğretici._
 - [ERC-20 jeton akıllı sözleşmesini anlamak](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Birden fazla kütüphane tarafından sağlanan, ERC20 standardı hakkında bir öğretici._
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_

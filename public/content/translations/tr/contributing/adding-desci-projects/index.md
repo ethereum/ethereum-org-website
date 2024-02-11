@@ -4,15 +4,15 @@ description: Ethereum.org'da merkeziyetsiz bilim sayfasındaki projelere bağlan
 lang: tr
 ---
 
-# Proje ekleme {#adding-projects}
+# Proje ekleme \{#adding-projects}
 
 Çeşitli projeler sunduğumuzdan ve Merkeziyetsiz Bilim manzarasının anlık görüntüsünü verdiğimizden emin olmak istiyoruz.
 
 Herkes, ethereum.org'daki Merkeziyetsiz Bilim sayfasındaki listeye proje önermek konusunda özgürdür. Aynı şekilde, bir projenin artık alakalı olmadığını ya da artık kriterlerimize uymadığını fark eden herkes, o projeyi kaldırmamızı önermekte özgürdür.
 
-## Karar çerçevesi {#the-decision-framework}
+## Karar çerçevesi \{#the-decision-framework}
 
-### Dahil edilme kriterleri: olmazsa olmazlar {#the-must-haves}
+### Dahil edilme kriterleri: olmazsa olmazlar \{#the-must-haves}
 
 - **Açık kaynak kodu/verisi** - Kodların ve verilerin açıklığı, Merkeziyetsiz Bilimin ana prensiplerindendir, bu yüzden merkeziyetsiz bilim projeleri kapalı kaynak olmamalıdır. Kod temeli erişilebilir ve tercihen "çekme talebine" açık olmalıdır.
 - **Merkeziyetsiz bilim projeleri bariz bir şekilde merkeziyetsiz olmalıdır** - Bu, bir DAO tarafından yönetilmek ya da merkeziyetsiz cüzdanları da içeren merkezi olmayan bir teknoloji yığınıyla geliştirmek şeklinde olabilir. Muhtemelen Ethereum'da denetlenebilir akıllı sözleşmeleri içerir.
@@ -30,7 +30,7 @@ Herkes, ethereum.org'daki Merkeziyetsiz Bilim sayfasındaki listeye proje önerm
 - **Üçüncü taraf denetimleri** - ürününüz, güvenlik açıkları için güvenilir bir üçüncü tarafın profesyonel denetiminden geçirilir.
 - **İletişim noktası** - Proje için bir iletişim noktası (bir DAO ya da topluluktan bir temsilci tarafından olabilir), değişiklikler yapıldığında doğru bilgi almada bize büyük ölçüde yardımcı olacaktır. Bu, geleceğe ait bilgileri toplarken ethereum.org'u güncelleme sürecini yönetilebilir halde tutacaktır.
 
-## Bakım {#maintenance}
+## Bakım \{#maintenance}
 
 Ethereum'un akıcı yapısında olduğu gibi, ekipler ve ürünler gelir ve gider; yenilikler her gün gerçekleşir, bu nedenle şu amaçlarla içeriğimizin rutin kontrollerini gerçekleştireceğiz:
 
@@ -39,6 +39,6 @@ Ethereum'un akıcı yapısında olduğu gibi, ekipler ve ürünler gelir ve gide
 
 Ethereum, açık kaynak topluluğu tarafından yönetilir ve onu güncel tutmaları için topluluğa güveniriz. Listelenmiş projelerde güncellenmesi gereken herhangi bir bilgi olduğunu fark ettiyseniz, lütfen Github depomuzda bir sorun ya da çekme isteği açın.
 
-## Kullanım Koşulları {#terms-of-use}
+## Kullanım Koşulları \{#terms-of-use}
 
 Ayrıca lütfen [kullanım koşullarımıza](/terms-of-use/) başvurun. Ethereum.org'daki bilgiler, yalnızca genel bilgi amaçlı verilmektedir.

@@ -4,7 +4,7 @@ description: Zrozumienie fałszywych tokenów, jak sprawiają wrażenie prawdziw
 lang: pl
 ---
 
-# Jak zidentyfikować fałszywe tokeny {#identify-scam-tokens}
+# Jak zidentyfikować fałszywe tokeny \{#identify-scam-tokens}
 
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. Te tokeny zwykle używają standardu [ERC-20](/developers/docs/standards/tokens/erc-20/). Jednak wszędzie tam, gdzie istnieją uzasadnione przypadki użycia, które przynoszą wartość, są też przestępcy, którzy próbują ukraść tę wartość dla siebie.
 
@@ -15,6 +15,7 @@ Istnieją dwa sposoby, którymi będą próbowali Cię oszukać:
 
 Aby pokazać, czym są fałszywe tokeny i jak je zidentyfikować, popatrzmy na przykład jednego z nich: [`wARB`](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82). Ten token próbuje wyglądać jak prawdziwy token [`ARB`](https://etherscan.io/address/0xb50721bcf8d664c30412cfbc6cf7a15145234ad1).
 
+{
 <ExpandableCard
 title="Co to jest ARB?"
 contentPreview=''>
@@ -22,7 +23,9 @@ contentPreview=''>
 Arbitrum to organizacja, która tworzy i zarządza <a href="/developers/docs/scaling/optimistic-rollups/">optymistycznymi pakietami zbiorczymi</a>. Początkowo, Arbitrum było zorganizowane jako firma nastawiona na zysk, ale następnie podjęła kroki w celu decentralizacji. W ramach tego procesu wydali oni wymienialny <a href="/dao/#token-based-membership">token zarządzania</a>.
 
 </ExpandableCard>
+}
 
+{
 <ExpandableCard
 title="Dlaczego fałszywy token jest nazwany wARB?"
 contentPreview=''>
@@ -32,11 +35,13 @@ W Ethereum istnieje konwencja, że gdy zasób nie jest zgodny z ERC-20, tworzymy
 Nie ma sensu tworzyć opakowanej wersji tokena ERC-20, który jest już na Ethereum, ale oszuści polegają raczej na pozorach wiarygodności niż na podstawowej rzeczywistości.
 
 </ExpandableCard>
+}
 
-## Jak działają fałszywe tokeny? {#how-do-scam-tokens-work}
+## Jak działają fałszywe tokeny? \{#how-do-scam-tokens-work}
 
 Głównym celem Ethereum jest decentralizacja. Oznacza to, że nie ma centralnego zarządu, który mógłby skonfiskować Twoje aktywa lub ostrzec Cię przed wdrożeniem inteligentnego kontraktu. Jednak oznacza to również, że oszuści mogą wdrażać dowolne inteligentne kontrakty, jakie tylko chcą.
 
+{
 <ExpandableCard
 title="Czym są inteligentne kontrakty?"
 contentPreview=''>
@@ -44,10 +49,11 @@ contentPreview=''>
 <a href="/developers/docs/smart-contracts/">Inteligentne kontrakty</a> to programy, które działają na blockchainie Ethereum. Dla przykładu każdy token ERC-20 jest implementowany jako inteligentny kontrakt.
 
 </ExpandableCard>
+}
 
 Szczególnie, Arbitrum wdrożyło kontrakt, który używa symbolu `ARB`. Nie powstrzymuje jednak innych ludzi od również wdrażania kontraktu, który używa dokładnie tego samego symbolu lub podobnego. Ktokolwiek pisze kontrakt, decyduje również o tym, co będzie on robił.
 
-## Wyglądające na prawdziwe {#appearing-legitimate}
+## Wyglądające na prawdziwe \{#appearing-legitimate}
 
 Istnieje kilka sztuczek, które stosują twórcy fałszywych tokenów, aby sprawiać wrażenie prawdziwych.
 
@@ -61,13 +67,13 @@ Istnieje kilka sztuczek, które stosują twórcy fałszywych tokenów, aby spraw
 
 - **Prawdziwe transfery**. _Prawdziwi właściciele nie zapłaciliby za transfer fałszywego tokena do innych, więc jeśli są transfery, to muszą być prawdziwe, prawda?_ **Źle**. Zdarzenia `Transfer` są generowane przez kontrakt ERC-20. Oszust może z łatwością napisać kontrakt w taki sposób, aby wywołać takie działania.
 
-## Fałszywe strony {#websites}
+## Fałszywe strony \{#websites}
 
 Oszuści mogą również tworzyć bardzo przekonujące strony, czasami nawet dokładne repliki ich autentycznych stron z identycznym interfejsem, ale z subtelnymi podstępami. Przykładami mogą być zewnętrzne linki, które wydają się prawdziwe, a w rzeczywistości wysyłają użytkownika do zewnętrznej fałszywej strony, lub nieprawidłowe instrukcje, które prowadzą użytkownika do ujawnienia kluczy lub wysłania środków na adres oszusta.
 
 Najlepszą praktyką do omijania tego jest dokładne sprawdzanie adresu URL stron, które odwiedzasz oraz zapisywanie adresów znanych autentycznych stron w zakładkach. Następnie możesz uzyskać dostęp do prawdziwej strony za pomocą zakładek bez przypadkowego popełniania błędów ortograficznych lub polegania na zewnętrznych linkach.
 
-## Jak można się zabezpieczyć? {#protect-yourself}
+## Jak można się zabezpieczyć? \{#protect-yourself}
 
 1. **Sprawdź adres kontraktu**. Prawdziwe tokeny pochodzą od zaufanych organizacji, a adresy kontraktów można sprawdzić na stronie danej organizacji. Na przykład, [dla `ARB` można zobaczyć prawdziwe adresy tutaj](https://docs.arbitrum.foundation/deployment-addresses#token).
 
@@ -87,7 +93,7 @@ To kolejna część dowodu, która pokazuje nam, że `wARB` najprawdopodobniej n
 
    ![Fałszywe tokeny na Etherscan](./etherscan-scam.png)
 
-## Podsumowanie {#conclusion}
+## Podsumowanie \{#conclusion}
 
 Tak długo, jak na świecie istnieje wartość, będą istnieć oszuści, którzy będą próbowali ją ukraść dla siebie, a w zdecentralizowanym świecie nie ma nikogo, kto mógłby Cię chronić, z wyjątkiem ciebie samego. Miejmy nadzieję, że zapamiętasz te punkty, które pomogą Ci odróżnić prawdziwe tokeny od tych fałszywych:
 

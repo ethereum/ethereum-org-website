@@ -10,19 +10,19 @@ lang: zh
 - [钱包问题 #2 - 3 亿美金锁定](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)
 - [TheDAO 被黑，360 万 ETH 被盗！ 目前价值超过 10 亿美元](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)
 
-## 前置要求 {#prerequisites}
+## 前置要求 \{#prerequisites}
 
 这个章节将介绍智能合约安全问题，以确保你在处理安全问题之前熟悉[智能合约](/developers/docs/smart-contracts/)。
 
-## 如何编写更安全的智能合约代码 {#how-to-write-more-secure-smart-contract-code}
+## 如何编写更安全的智能合约代码 \{#how-to-write-more-secure-smart-contract-code}
 
 在启动任何代码到主网之前，采取足够的预防措施来保护你的智能合约所委托的任何有价值的东西是很重要的。 在本文中，我们将讨论一些特定的攻击，提供学习了解更多攻击类型的资源，并为你提供一些基本工具和最佳实践，以确保你的合约正确、安全地运行。
 
-## 审核不是完美的解决方案 {#audits-are-not-a-silver-bullet}
+## 审核不是完美的解决方案 \{#audits-are-not-a-silver-bullet}
 
 几年前，用于编写、编译、测试和部署智能合约的工具还非常不成熟，许多项目被随意地编写 Solidity 代码，并将其交给审查员，审查员将审查代码以确保其安全并按预期运行。 在 2020 年，编写 Solidity 代码的开发过程和工具得到了显著改善，不仅可以确保项目更易于管理，而且能够组成项目安全性的一部分。 仅仅在项目结束时对你的智能合约进行审计已经不足以成为项目的唯一安全考虑。 **安全性来源于适当的设计和开发过程**，所以在你编写第一行智能合约代码之前，安全性就应该被考虑。
 
-## 智能合约开发过程 {#smart-contract-development-process}
+## 智能合约开发过程 \{#smart-contract-development-process}
 
 最低安全限度：
 
@@ -42,11 +42,11 @@ lang: zh
 - 允许开发者快速迭代、测试并在修改时获得反馈
 - 回滚代码的可能性较低
 
-## 攻击和脆弱性 {#attacks-and-vulnerabilities}
+## 攻击和脆弱性 \{#attacks-and-vulnerabilities}
 
 既然你正在使用高效的开发过程编写 Solidity 代码，那么让我们看看一些常见的 Solidity 漏洞问题。
 
-### 重入攻击 {#re-entrancy}
+### 重入攻击 \{#re-entrancy}
 
 重入攻击时在编写智能合约代码时应该考虑的最大且最重要的安全问题。 虽然以太坊虚拟机不能同时运行多个合约，一个合约可以调用另一个合约来暂停一个合约的执行和内存状态，直到被重新调用。这时，代码将会继续被正常执行。 暂停和重新启动的过程可能会造成一种被称为“重入攻击”的漏洞。
 
@@ -115,7 +115,7 @@ contract Attacker {
 
 攻击者帐户使用 1 个 ETH 调用 Attacker.beginAttack 函数将会重复攻击受害者帐户，并将赚取远超其提供 ETH 的数量（这些额外的 ETH 会从其他用户帐户的余额中赚取，这样会造成受害者账户余额减少）
 
-### 如何解决重入攻击（一种错误的方式） {#how-to-deal-with-re-entrancy-the-wrong-way}
+### 如何解决重入攻击（一种错误的方式） \{#how-to-deal-with-re-entrancy-the-wrong-way}
 
 防止重入攻击的一种简单方法便是让您的任何代码不与任何智能合约进行交互。 但当你搜索 stackoverflow 时，会发现这段被许多人使用的代码片段：
 
@@ -184,7 +184,7 @@ require(tx.origin == msg.sender)
 
 然而，这依旧不是一个很好的解决办法。 因为以太坊最令人兴奋的方面之一是它的可组合性，智能合约相互集成并融合、发展。 通过使用上面的代码，你会限制你项目的实用性。
 
-### 如何解决重入攻击（一种正确的方式） {#how-to-deal-with-re-entrancy-the-right-way}
+### 如何解决重入攻击（一种正确的方式） \{#how-to-deal-with-re-entrancy-the-right-way}
 
 只需切换存储更新和外部调用的顺序，我们就可以防止启用攻击的重新进入条件。 虽然有可能，回调退却不会给攻击者带来好处，因为 `balances` 存储已经设置为 0。
 
@@ -201,11 +201,11 @@ contract NoLongerAVictim {
 
 上面的代码遵循“检查-生效-相互作用”设计模式，它有助于防止冲入。 你可以在这里 [阅读更多关于检查-生效-交互作用的信息](https://fravoll.github.io/solidity-patterns/checks_effects_interactions.html)
 
-### 如何解决重入攻击（核心选择） {#how-to-deal-with-re-entrancy-the-nuclear-option}
+### 如何解决重入攻击（核心选择） \{#how-to-deal-with-re-entrancy-the-nuclear-option}
 
 任何时候你都会将 ETH 发送到一个不信任的地址或与一个未知合约进行交互（例如调用 `transfer()` 到用户提供的代币地址），你可以自行开启重入。 **通过设计既不发送 ETH 也不调用不信任合约的智能合约，你将防止重入攻击的可能性！**
 
-## 更多攻击类型 {#more-attack-types}
+## 更多攻击类型 \{#more-attack-types}
 
 上述攻击类型包括智能合约编码问题（重入）和以太坊奇数（在合约构造器内运行代码，合约地址才有编码）。 有许多更多的攻击类型需要了解，如：
 
@@ -218,11 +218,11 @@ contract NoLongerAVictim {
 - [共识智能合约已知攻击](https://consensys.github.io/smart-contract-best-practices/attacks/) - 对最重要弱点的可读解释，有很多样本代码。
 - [SWC 注册](https://swcregistry.io/docs/SWC-128) - 适用于以太坊和智能合约的 CWE 的管理列表
 
-## 安全工具 {#security-tools}
+## 安全工具 \{#security-tools}
 
 虽然了解以太坊安全基础知识和聘请专业审计公司审查你的代码是无可替代的，但有许多工具可以帮助突出你的代码中的潜在问题。
 
-### 智能合约安全 {#smart-contract-security}
+### 智能合约安全 \{#smart-contract-security}
 
 **Slither -** **_用 Python 3 编写的 Solidity 静态分析框架。_**
 
@@ -253,14 +253,14 @@ contract NoLongerAVictim {
 - [erc20-verifier.openzeppelin.com](https://erc20-verifier.openzeppelin.com)
 - [论坛](https://forum.openzeppelin.com/t/online-erc20-contract-verifier/1575)
 
-### 形式化验证 {#formal-verification}
+### 形式化验证 \{#formal-verification}
 
 **有关形式化验证的信息**
 
 - [How formal verification of smart-contacts works](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/) _July 20, 2018 - Brian Marick_
 - [How Formal Verification Can Ensure Flawless Smart Contracts](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1) _Jan 29, 2018 - Bernard Mueller_
 
-### 使用工具 {#using-tools}
+### 使用工具 \{#using-tools}
 
 智能合约安全分析最受欢迎的两个工具是：
 
@@ -303,7 +303,7 @@ Slither 已经在这里确定了重新进入的可能性。 确定问题可能�
 
 允许你快速了解你代码的潜在问题。 像所有自动化测试工具一样，Slither 并不完美，它在报告一侧出现了太多错误。 即使在不存在可开发的脆弱性的情况下，它也可以就潜在的重返提出警告。 在代码更改之间在 Slither 输出中查看 DIFERENER 常常是非常有启发性的，可以帮助发现比等待你的项目代码完成早得多的漏洞。
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 **智能合约安全性最佳实践指南**
 
@@ -317,7 +317,7 @@ Slither 已经在这里确定了重新进入的可能性。 确定问题可能�
 
 _你知道有什么社区资源帮助过你吗？ 编辑并添加本页面！_
 
-## 相关教程 {#related-tutorials}
+## 相关教程 \{#related-tutorials}
 
 - [安全的开发工作流程](/developers/tutorials/secure-development-workflow/)
 - [如何使用 Slither 查询智能合约漏洞](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)

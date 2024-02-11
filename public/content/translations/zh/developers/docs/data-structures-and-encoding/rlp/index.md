@@ -14,7 +14,7 @@ sidebarDepth: 2
 - 使用 `[[k1,v1],[k2,v2]...]` 加上按字典顺序排列的键
 - 像以太坊一样使用更高级别的前缀树编码
 
-## 定义 {#definition}
+## 定义 \{#definition}
 
 递归长度前缀编码函数接受一个项目。 该项目的定义如下：
 
@@ -66,7 +66,7 @@ def to_binary(x):
         return to_binary(int(x / 256)) + chr(x % 256)
 ```
 
-## 示例 {#examples}
+## 示例 \{#examples}
 
 - 字符串“dog”= [ 0x83, 'd', 'o', 'g' ]
 - 列表 [ "cat", "dog" ] = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`
@@ -79,7 +79,7 @@ def to_binary(x):
 - 3 的[集合论表示](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers)，`[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - 字符串“Lorem ipsum dolor sit amet, consectetur adipisicing elit”= `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
-## 递归长度前缀解码 {#rlp-decoding}
+## 递归长度前缀解码 \{#rlp-decoding}
 
 根据递归长度前缀编码的规则和过程，递归长度前缀译码的输入被视为一个二进制数据数组。 递归长度前缀解码过程如下：
 
@@ -150,12 +150,12 @@ def to_integer(b):
         return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
 ```
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [以太坊中的递归长度前缀](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [底层以太坊：递归长度前缀](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
 - [Coglio, A. (2020)。 以太坊 ACL2 中的递归长度前缀。 arXiv 预印本 arXiv:2009.13769。](https://arxiv.org/abs/2009.13769)
 
-## 相关主题 {#related-topics}
+## 相关主题 \{#related-topics}
 
 - [默克尔前缀树](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)

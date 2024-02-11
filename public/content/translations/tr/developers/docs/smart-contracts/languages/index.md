@@ -15,11 +15,11 @@ Daha deneyimli geliştiricilerin [Ethereum Sanal Makinesi](/developers/docs/evm/
 
 Eğer meraklıysanız ve hâlâ ağır geliştirme altında olan yeni dilleri test etmeye yardımcı olmak istiyorsanız, daha başlangıç aşamasında ve yakın zamanda ortaya çıkmış bir akıllı sözleşme dili olan Fe'yi deneyebilirsiniz.
 
-## Ön koşullar {#prerequisites}
+## Ön koşullar \{#prerequisites}
 
 Programlama dilleri, özellikle JavaScript veya Python hakkında önceden bilgiye sahip olmak akıllı sözleşme dillerindeki farklılıkları bir mantığa oturtabilmenize yardımcı olur. Ayrıca dil karşılaştırmalarında çok derine dalmadan önce akıllı sözleşmeleri konsept olarak anlamanızı öneriyoruz. [Akıllı sözleşmelere giriş](/developers/docs/smart-contracts/).
 
-## Solidity {#solidity}
+## Solidity \{#solidity}
 
 - Akıllı sözleşmeler yapmak için nesne odaklı ve yüksek düzey bir dil.
 - En çok C++'tan etkilenmiş olan bir süslü ayraç dili.
@@ -29,7 +29,7 @@ Programlama dilleri, özellikle JavaScript veya Python hakkında önceden bilgiy
   - Kütüphaneler (başka nesne odaklı programlama dillerinde statik bir sınıftaki statik fonksiyonlar gibi başka sözleşmelerden çağırabileceğiniz yeniden kullanılabilir kodlar oluşturabilirsiniz).
   - Karışık, kullanıcı tarafından tanımlanan türler.
 
-### Önemli bağlantılar {#important-links}
+### Önemli bağlantılar \{#important-links}
 
 - [Belgeler](https://docs.soliditylang.org/en/latest/)
 - [Solidity Dil Portalı](https://soliditylang.org/)
@@ -40,7 +40,7 @@ Programlama dilleri, özellikle JavaScript veya Python hakkında önceden bilgiy
 - [Solidity Bloğu](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
 
-### Örnek sözleşme {#example-contract}
+### Örnek sözleşme \{#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -83,7 +83,7 @@ contract Coin {
 
 Bu örnek size Solidity sözleşme söz dizimi hakkında bir fikir verecektir. Fonksiyonlar ve değişkenler hakkında daha detaylı bir açıklama için [belgelere bakın](https://docs.soliditylang.org/en/latest/contracts.html).
 
-## Vyper {#vyper}
+## Vyper \{#vyper}
 
 - Python'a benzer programlama dili
 - Güçlü tipleme
@@ -101,7 +101,7 @@ Bu örnek size Solidity sözleşme söz dizimi hakkında bir fikir verecektir. F
 
 Daha fazla bilgi için [Vyper mantığını okuyun](https://vyper.readthedocs.io/en/latest/index.html).
 
-### Önemli bağlantılar {#important-links-1}
+### Önemli bağlantılar \{#important-links-1}
 
 - [Belgeler](https://vyper.readthedocs.io)
 - [Örnekle Vyper](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
@@ -116,7 +116,7 @@ Daha fazla bilgi için [Vyper mantığını okuyun](https://vyper.readthedocs.io
 - [Vyper en başarılı akıllı sözleşme örnekleri](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Harika Vyper düzenlenmiş kaynakları](https://github.com/spadebuilders/awesome-vyper)
 
-### Örnek {#example}
+### Örnek \{#example}
 
 ```python
 # Open Auction
@@ -205,7 +205,7 @@ def endAuction():
 
 Bu örnek size Vyper sözleşme söz dizimi hakkında bir fikir verecektir. Fonksiyonlar ve değişkenler hakkında daha detaylı bir açıklama için [belgelere bakın](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
-## Yul ve Yul+ {#yul}
+## Yul ve Yul+ \{#yul}
 
 Eğer Ethereum'da yeniyseniz ve akıllı sözleşme dilleriyle henüz herhangi bir kodlama yapmadıysanız, Solidity veya Vyper ile başlamanızı öneririz. Akıllı sözleşme güvenliğinin en iyi yöntemleri ve EVM ile çalışmanın şartları ile aşina olduğunuz zaman Yul veya Yul+ dillerine bakın.
 
@@ -221,14 +221,14 @@ Eğer Ethereum'da yeniyseniz ve akıllı sözleşme dilleriyle henüz herhangi b
 - Aslen bir [iyimser toplama](/developers/docs/scaling/optimistic-rollups/) sözleşmesi için dizayn edilmiştir.
 - Yul+, Yul'a yeni özellikler ekleyen deneysel bir yükseltme tasarısı olarak görülebilir.
 
-### Önemli bağlantılar {#important-links-2}
+### Önemli bağlantılar \{#important-links-2}
 
 - [Yul Belgeleri](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ Belgeleri](https://github.com/fuellabs/yulp)
 - [Yul+ Playground](https://yulp.fuel.sh/)
 - [Yul+ Giriş Gönderisi](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### Örnek sözleşme {#example-contract-2}
+### Örnek sözleşme \{#example-contract-2}
 
 Aşağıdaki basit örnek bir üs fonksiyonu uygular. `solc --strict-assembly --bin input.yul` ile derlenebilir. Örnek input.yul dosyasında depolanmalıdır.
 
@@ -253,14 +253,14 @@ Aşağıdaki basit örnek bir üs fonksiyonu uygular. `solc --strict-assembly --
 
 Hâlihazırda akıllı sözleşmeler konusunda deneyimliyseniz, [buradan](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example) Yul'daki tam bir ERC20 uygulamasına ulaşabilirsiniz.
 
-## Fe {#fe}
+## Fe \{#fe}
 
 - Ethereum Sanal Makinesi (EVM) için statik olarak yazılmış dil.
 - Python ve Rust'tan ilham almıştır.
 - Ethereum ekosistemine yabancı geliştiriciler için bile kolay öğrenilebilir olmayı hedefler.
 - Fe geliştirilmesi henüz erken aşamalarındadır: Alpha sürümü Ocak 2021'de yayınlanmıştır.
 
-### Önemli bağlantılar {#important-links-3}
+### Önemli bağlantılar \{#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
 - [Fe Duyurusu](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
@@ -268,7 +268,7 @@ Hâlihazırda akıllı sözleşmeler konusunda deneyimliyseniz, [buradan](https:
 - [Fe Discord Sohbeti](https://discord.com/invite/ywpkAXFjZH)
 - [Fe Twitter](https://twitter.com/official_fe)
 
-### Örnek sözleşme {#example-contract-3}
+### Örnek sözleşme \{#example-contract-3}
 
 Aşağıda Fe ile uygulanan basit bir sözleşme bulunuyor.
 
@@ -291,34 +291,34 @@ contract GuestBook:
 
 ```
 
-## Seçim yapmak {#how-to-choose}
+## Seçim yapmak \{#how-to-choose}
 
 Her diğer programlama dilinde olduğu gibi, kişisel tercihlerin yanı sıra çoğunlukla doğru iş için doğru aracı seçmekle de ilgilidir.
 
 Eğer dillerden herhangi birini denemediyseniz burada akılda tutulabilecek birkaç şey bulunmaktadır:
 
-### Solidity'nin harika olan tarafı nedir? {#solidity-advantages}
+### Solidity'nin harika olan tarafı nedir? \{#solidity-advantages}
 
 - Eğer acemiyseniz, birçok öğretici ve öğrenim aracı bulunmaktadır. Bunun hakkında daha fazlasına [Kodlayarak Öğren](/developers/learning-tools/) bölümünden ulaşabilirsiniz.
 - İyi geliştirici araçları bulunur.
 - Solidity büyük bir geliştirici topluluğuna sahiptir, bu da sorularınıza büyük ihtimalle hızlıca cevaplar bulabileceğiniz anlamına gelir.
 
-### Vyper'ın harika olan tarafı nedir? {#vyper-advatages}
+### Vyper'ın harika olan tarafı nedir? \{#vyper-advatages}
 
 - Akıllı sözleşmeler yazmak isteyen Python geliştiricileri için iyi bir başlangıç yolu.
 - Vyper daha az özellik sayısına sahip olduğu için fikirlerin hızlı prototiplenmesi için harikadır.
 - Vyper kolay denetlenebilirliği ve en yüksek seviyede insan tarafından okunabilmeyi hedefler.
 
-### Yul ve Yul+'ın harika olan tarafları nedir? {#yul-advantages}
+### Yul ve Yul+'ın harika olan tarafları nedir? \{#yul-advantages}
 
 - Basite indirgenmiş ve işlevsel alt düzey dil.
 - Saf EVM'ye çok daha yakınlaşmayı sağlar, bu da sözleşmelerinizin gaz kullanımını optimize etmeye yardımcı olabilir.
 
-## Dil karşılaştırmaları {#language-comparisons}
+## Dil karşılaştırmaları \{#language-comparisons}
 
 Temel söz dizimi, sözleşme yaşam döngüsü, arayüzler, operatörler, veri yapıları, fonksiyonlar, kontrol akışı ve daha fazlasının karşılaştırmaları için [Auditless tarafından hazırlanan kopya kağıdına](https://reference.auditless.com/cheatsheet/) bakabilirsiniz
 
-## Daha fazla bilgi {#further-reading}
+## Daha fazla bilgi \{#further-reading}
 
 - [OpenZeppelin'den Solidity Sözleşmeleri Kütüphanesi](https://docs.openzeppelin.com/contracts)
 - [Örnekle Solidity](https://solidity-by-example.org)

@@ -10,11 +10,11 @@ lang: zh
 
 然而，对改进智能合约的研究不断加强，导致引入了几种升级模式。 这些升级模式使开发者能够通过将业务逻辑放置在不同的合约中来升级智能合约（同时保持不可变性）。
 
-## 前提条件 {#prerequisites}
+## 前提条件 \{#prerequisites}
 
 你应当充分了解[智能合约](/developers/docs/smart-contracts/)、[智能合约结构](/developers/docs/smart-contracts/anatomy/)以及[以太坊虚拟机 (EVM)](/developers/docs/evm/)。 本指南还假定读者掌握了编写智能合约的知识。
 
-## 什么是智能合约升级？ {#what-is-a-smart-contract-upgrade}
+## 什么是智能合约升级？ \{#what-is-a-smart-contract-upgrade}
 
 智能合约升级涉及更改智能合约的业务逻辑，同时保留合约的状态。 重要的是要澄清，可升级性和可变性并不是相同的概念，尤其是在智能合约的背景下。
 
@@ -32,7 +32,7 @@ lang: zh
 
 5. 使用钻石模式将函数调用从代理合约委托给逻辑合约。
 
-### 升级机制 #1：合约迁移 {#contract-migration}
+### 升级机制 #1：合约迁移 \{#contract-migration}
 
 合约迁移是基于版本控制的概念，即创建和管理相同软件的独特状态。 合约迁移涉及部署现有智能合约的新实例，并将存储和余额转移到新合约中。
 
@@ -44,7 +44,7 @@ lang: zh
 
 [更多关于合约迁移的信息。](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
 
-### 升级机制 #2：数据分离 {#data-separation}
+### 升级机制 #2：数据分离 \{#data-separation}
 
 升级智能合约的另一种方法是将业务逻辑和数据存储分离为不同的合约。 这意味着用户与逻辑合约进行交互，而数据存储在存储合约中。
 
@@ -58,7 +58,7 @@ lang: zh
 
 与合约迁移相比，数据分离模式在实现上按理说更容易。 然而，你将需要管理多个合约并实施复杂的授权方案，以保护智能合约免受恶意升级的影响。
 
-### 升级机制 #3：代理模式 {#proxy-patterns}
+### 升级机制 #3：代理模式 \{#proxy-patterns}
 
 代理模式还使用数据分离，将业务逻辑和数据保存在单独的合约中。 不过，在代理模式中，存储合约（称为代理）会在代码执行过程中调用逻辑合约。 这与数据分离法相反，即逻辑合约调用存储合约。
 
@@ -88,7 +88,7 @@ lang: zh
 
 [更多关于代理模式的信息](https://blog.openzeppelin.com/proxy-patterns/)。
 
-### 升级机制 #4：策略模式 {#strategy-pattern}
+### 升级机制 #4：策略模式 \{#strategy-pattern}
 
 这项技术受到[策略模式](https://en.wikipedia.org/wiki/Strategy_pattern)的影响，该模式鼓励创建与其他程序进行接口交互的软件程序，以实现特定功能。 将策略模式应用于以太坊开发意味着构建一个智能合约，该合约可以调用其他合约的函数。
 
@@ -100,7 +100,7 @@ lang: zh
 
 这种模式的主要缺点是它主要适用于推出小规模升级。 此外，如果主合约被泄露（如被黑客攻击），则无法使用此升级方法。
 
-### 升级机制 #5：钻石模式 {#diamond-pattern}
+### 升级机制 #5：钻石模式 \{#diamond-pattern}
 
 钻石模式可以说是代理模式的改进。 钻石模式不同于代理模式，因为钻石代理合约可以将函数调用委托给多个逻辑合约。
 
@@ -118,7 +118,7 @@ lang: zh
 
 [更多关于钻石模式的信息](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w)。
 
-## 升级智能合约的优缺点 {#pros-and-cons-of-upgrading-smart-contracts}
+## 升级智能合约的优缺点 \{#pros-and-cons-of-upgrading-smart-contracts}
 
 | 优点                                                                           | 缺点                                                                           |
 | ------------------------------------------------------------------------------ | ------------------------------------------------------------------------------ |
@@ -128,7 +128,7 @@ lang: zh
 | 合约升级为开发人员提供了更广阔的空间来试验不同的功能和不断改进分布式应用程序。 | 升级智能合约的机会可能会促使开发人员更快启动项目，但在开发阶段不进行尽职审查。 |
 |                                                                                | 智能合约中不安全的访问控制或中心化会让恶意行为者更容易执行未经授权的升级。     |
 
-## 升级智能合约的考量 {#considerations-for-upgrading-smart-contracts}
+## 升级智能合约的考量 \{#considerations-for-upgrading-smart-contracts}
 
 1. 使用安全的访问控制或授权机制，防止未经授权的智能合约升级，尤其是在使用代理模式、策略模式或数据分离的情况下。 例如，限制升级功能的访问权限，只有合约所有者才能调用该功能。
 
@@ -142,21 +142,21 @@ lang: zh
 
 如果用户不同意拟议的更改（如逻辑升级或新的收费方案），时间锁会给他们一些时间退出系统。 如果没有时间锁，用户就需要相信开发人员不会在没有事先通知的情况下对智能合约进行任意更改。 这样做的缺点是，时间锁限制了快速修补漏洞的能力。
 
-## 更多资源 {#resources}
+## 更多资源 \{#resources}
 
 **OpenZeppelin 升级插件 - _一套用于部署和保护可升级智能合约的工具。_**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
 - [相关文档](https://docs.openzeppelin.com/upgrades)
 
-## 教程 {#tutorials}
+## 教程 \{#tutorials}
 
 - [升级智能合约 | YouTube 教程](https://www.youtube.com/watch?v=bdXJmWajZRY) - Patrick Collins
 - [以太坊智能合约迁移教程](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) - Austin Griffith
 - [使用 UUPS 代理模式升级智能合约](https://blog.logrocket.com/author/praneshas/) - Pranesh A.S
 - [Web3 教程：使用 OpenZeppelin 编写可升级智能合约（代理）](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916)- fangjun.eth
 
-## 延伸阅读 {#further-reading}
+## 延伸阅读 \{#further-reading}
 
 - [智能合约升级的现状](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) - Santiago Palladino
 - [升级 Solidity 智能合约的多种方法](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool 博客

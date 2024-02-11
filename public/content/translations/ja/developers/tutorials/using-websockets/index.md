@@ -16,7 +16,7 @@ published: 2020-12-01
 
 このガイドでは、初級者向けに、WebSocket と Alchemy を使ってイーサリアムブロックチェーンにリクエストを送信する方法を学びます。
 
-## WebSocket と HTTP の比較 {#websockets-vs-http}
+## WebSocket と HTTP の比較 \{#websockets-vs-http}
 
 HTTP とは異なり、WebSocket では特定の情報が必要な場合にリクエストを継続的に実行する必要はありません。 WebSocket では、正しく設定されていれば、ネットワーク接続が継続され、変更をリッスンすることができます。
 
@@ -24,7 +24,7 @@ HTTP とは異なり、WebSocket では特定の情報が必要な場合にリ�
 
 ​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)を利用することで、WebSocket の接続失敗に自動的に対応し、設定なしでリトライさせることができます。
 
-## さっそく試してましょう {#try-it-out}
+## さっそく試してましょう \{#try-it-out}
 
 WebSocket をテストする最も簡単な方法は、[wscat](https://github.com/websockets/wscat)などの WebSocket リクエストを行うためのコマンドラインツールをインストールすることです。 wscat を使って、次のようにリクエストを送ります：
 
@@ -39,7 +39,7 @@ $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ```
 
-## WebSocket の使用方法 {#how-to-use-websockets}
+## WebSocket の使用方法 \{#how-to-use-websockets}
 
 まず、アプリに WebSocket の URL を入力して WebSocket を開きます。 アプリの WebSocket URL を確認するには、[ダッシュボード](https://dashboard.alchemyapi.io/)の App ページを開き、「View Key」をクリックしてください。 アプリの WebSocket 用 URL は HTTP リクエスト用の URL とは異なっており、両方とも「View Key」で確認できる点に注意してください。
 
@@ -47,7 +47,7 @@ $ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 [Alchemy API レファレンス](https://docs.alchemyapi.io/documentation/alchemy-api-reference/)に記載されている API は、いずれも WebSocket 経由で使用可能です。 これには、HTTP POST リクエストの本文として送信する場合と同じペイロードを使用しますが、このペイロードを WebSocket 経由で送信します。
 
-## Web3 での WebSocket 使用方法 {#with-web3}
+## Web3 での WebSocket 使用方法 \{#with-web3}
 
 Web3 のようなクライアント向けライブラリを使用する場合、WebSocket への移行は簡単です。 Web3 クライアントのインスタンスを作成する際に、HTTP URL ではなく WebSocket URL を渡すだけでよいです。 以下の例をご覧ください：
 
@@ -57,26 +57,26 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## API を講読する {#subscription-api}
+## API を講読する \{#subscription-api}
 
 WebSocket 経由で接続する場合、`eth_subscribe`および`eth_unsubscribe`という 2 つの追加メソッドを使用できます。 これらのメソッドを使用することで、特定のイベントをリッスンし、すぐに通知を受け取ることができるようになります。
 
-### `eth_subscribe` {#eth-subscribe}
+### `eth_subscribe` \{#eth-subscribe}
 
 特定のイベントを対象とする新規のサブスクリプションを作成しましょう。 `eth_subscribe`の詳細については、[こちら](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe)をご覧ください。
 
-#### パラメータ {#parameters}
+#### パラメータ \{#parameters}
 
 1. サブスクリプションの種類
 2. オプションのパラメータ
 
 最初の引数では、リッスンするイベントのタイプを指定します。 2 番目の引数では、最初の引数に依存したオプションを追加します。 以下では、説明タイプ、タイプ別のオプション、およびイベントのペイロードについて説明します。
 
-#### 戻り値 {#returns}
+#### 戻り値 \{#returns}
 
 サブスクリプション ID：この ID は、受信したすべてのイベントに付与されるもので、`eth_unsubscribe`を使用してサブスクリプションを取り消すする際にも使用します。
 
-#### サブスクリプション関連のイベント {#subscription-events}
+#### サブスクリプション関連のイベント \{#subscription-events}
 
 サブスクリプションが有効である場合、以下のフィールドを含むオブジェクトであるイベントが送信されます：
 
@@ -86,7 +86,7 @@ WebSocket 経由で接続する場合、`eth_subscribe`および`eth_unsubscribe
   - `subscription`：このサブスクリプションを作成した`eth_subscription`の呼び出しが返したサブスクリプション ID です。
   - `result`：サブスクリプションのタイプによって内容が異なるオブジェクトです。
 
-#### サブスクリプションのタイプ {#subscription-types}
+#### サブスクリプションのタイプ \{#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
@@ -209,7 +209,7 @@ WebSocket 経由で接続する場合、`eth_subscribe`および`eth_unsubscribe
 
 ```
 
-### `eth_unsubscribe` {#eth-unsubscribe}
+### `eth_unsubscribe` \{#eth-unsubscribe}
 
 新たにイベントが送信されないように、既存のサブスクリプションを取り消します。
 

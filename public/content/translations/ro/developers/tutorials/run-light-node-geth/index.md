@@ -16,7 +16,7 @@ A light client requires less than 400MB of storage whilst still allowing full in
 
 For an explanation of the differences between the different sync modes, read our [nodes and clients developer docs](/developers/docs/nodes-and-clients/#node-types).
 
-## Install and run {#install-and-run}
+## Install and run \{#install-and-run}
 
 First, [install Geth](https://geth.ethereum.org/docs/install-and-build/installing-geth).
 
@@ -32,13 +32,13 @@ When your Geth node has enough peers, it will import headers from new blocks on 
 
 When new block headers no longer have an "age", Geth will be synced to the chain's head.
 
-## Oprirea și repornirea nodului dvs. {#stopping-and-restarting-your-node}
+## Oprirea și repornirea nodului dvs. \{#stopping-and-restarting-your-node}
 
 You can stop your node at any time by pressing <kbd>CTRL</kbd>+<kbd>C</kbd>.
 
 When restarting the node, Geth will take a few minutes to download block headers created since the node was last run.
 
-## Enable the HTTP-RPC server {#enable-the-http-rpc-server}
+## Enable the HTTP-RPC server \{#enable-the-http-rpc-server}
 
 Enabling the HTTP-RPC server lets you connect your Ethereum node to other software like wallets, browser extensions, or custom software libraries.
 
@@ -50,7 +50,7 @@ geth --syncmode light --http
 
 Once enabled, run `curl http://127.0.0.1:8545`. This should report no error.
 
-### Allow remote connections {#allow-remote-connections}
+### Allow remote connections \{#allow-remote-connections}
 
 To allow remote hosts to connect to your node, launch Geth with the following command:
 
@@ -60,7 +60,7 @@ geth --syncmode light --http --http.addr 0.0.0.0
 
 Note: this assumes that there is no process blocking requests to your localhost, such as a firewall.
 
-## Geth JavaScript console {#geth-javascript-console}
+## Geth JavaScript console \{#geth-javascript-console}
 
 Geth has a built-in JavaScript console and a JavaScript API called [web3js](https://github.com/ethereum/web3.js/) that you can use to interact with your node.
 
@@ -74,7 +74,7 @@ This console allows direct interaction with Ethereum. For example, running the `
 
 [Full web3js documentation](http://web3js.readthedocs.io/)
 
-## Mainnet and testnets {#mainnet-and-testnets}
+## Mainnet and testnets \{#mainnet-and-testnets}
 
 Geth runs your node on [Ethereum Mainnet](/glossary/#mainnet) by default.
 
@@ -86,7 +86,7 @@ geth --syncmode light --rinkeby
 geth --syncmode light --goerli
 ```
 
-## Unde sunt stocate datele de pe blockchain și EVM? {#where-is-the-blockchain-and-evm-data-stored}
+## Unde sunt stocate datele de pe blockchain și EVM? \{#where-is-the-blockchain-and-evm-data-stored}
 
 Directorul pe care îl utilizează Geth pentru a stoca datele brute de pe blockchain depinde de sistemul dvs. de operare. Upon running Geth, look for a message that looks like this:
 
@@ -98,7 +98,7 @@ Calea care urmează `„database=”` (baza de date) ar trebui să vă spună un
 
 Merită subliniat aici că, la cel mai de jos nivel, aici locuieşte blockchain-ul. Conținutul complet al blockchain-ului și starea EVM sunt stocate pe fiecare nod complet din rețeaua Ethereum, în directoare care seamănă foarte mult cu cele de pe computerul dvs.
 
-## Referințe suplimentare {#further-reading}
+## Referințe suplimentare \{#further-reading}
 
 - [Aflaţi mai multe despre diferite rețele](/developers/docs/Networks/).
 - [Run a full node](/run-a-node/)

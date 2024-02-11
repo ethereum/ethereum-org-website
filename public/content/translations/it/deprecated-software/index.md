@@ -5,21 +5,21 @@ lang: it
 sidebarDepth: 2
 ---
 
-# Software obsoleto {#summary-deprecated-software}
+# Software obsoleto \{#summary-deprecated-software}
 
 Questo è un elenco dei progetti e delle risorse chiave relativi ad Ethereum che sono diventati obsoleti o che non sono più mantenuti. È importante mettere in evidenza il lavoro obsoleto così che gli utenti possano trovare alternative valide e per evitare che vengano distribuite versioni malevoli.
 
 Questo elenco è curato dalla nostra comunità. Se c'è qualcosa di mancante o incorretto, si prega di modificare la pagina!
 
-## Proof of Work {#pow}
+## Proof of Work \{#pow}
 
 [Proof of work ](/developers/docs/consensus-mechanisms/pow) è il motore di consenso che è stato implementato in Ethereum fino a settembre 2022. È diventato obsoleto quando Ethereum è passato al meccanismo di consenso basato su [proof-of-stake](/developers/docs/consensus-mechanisms/pos). Questo è stato raggiunto abbandonando le parti del software del client relative al mining in proof-of-work, incluso [Ethhash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethhash) (l'algoritmo di mining) e tutta la logica di consenso e la funzionalità di gossip del blocco che era stata originariamente integrata nei client di esecuzione. I client stessi non sono diventati obsoleti ma lo sono molti dei loro componenti principali. Il concetto di proof-of-work è stato abbandonato come effetto globale della rimozione delle relative componenti del software del client.
 
-## Software {#software}
+## Software \{#software}
 
 Questa sezione è dedicata ai software per desktop, per riga di comando o per server che sono diventati obsoleti. I tipi principali sono portafogli, ambienti di sviluppo integrati, linguaggi e client Ethereum. È assolutamente necessario fare attenzione a non installare software obsoleto a meno che non si sia certi che provenga dalla fonte originale, per esempio: un repository contenuto all'interno di https://github.com/ethereum.
 
-### OpenEthereum {#open-ethereum}
+### OpenEthereum \{#open-ethereum}
 
 Obsoleto dal luglio 2021
 
@@ -39,7 +39,7 @@ OpenEthereum è stata costruita da miner, fornitori di servizi e borse che neces
 
 [Confronta tutte le opzioni del client di esecuzione di Ethereum](/developers/docs/nodes-and-clients/#execution-clients).
 
-### Grid {#grid}
+### Grid \{#grid}
 
 Obsoldeto dal 10 dicembre 2020
 
@@ -59,7 +59,7 @@ Grid potrebbe essere visto come il successore di Mist, anche essa un'applicazion
 
 [DAppNode](https://dappnode.io/) è una piattaforma per distribuire e ospitare dapp, client P2P e nodi blockchain.
 
-### Ethereum Studio {#ethereum-studio}
+### Ethereum Studio \{#ethereum-studio}
 
 Obsoleto dal 7 dicembre 2020
 
@@ -79,7 +79,7 @@ Ethereum Studio è stato sviluppato per fornire agli utenti un IDE con una block
 
 [Remix](https://remix.ethereum.org/) è un IDE web alternativo per lo sviluppo in Solidity. Inoltre il [Portale per sviluppatori](/developers/) ha strumenti per lo sviluppo su web e in locale, documentazione e molto altro.
 
-### Portafoglio Meteor Dapp {#meteor-dapp-wallet}
+### Portafoglio Meteor Dapp \{#meteor-dapp-wallet}
 
 Obsoleto dal 27 marzo 2019
 
@@ -105,7 +105,7 @@ Vedi Mist qui sotto.
 
 Visita la pagina dei [Portafogli di Ethereum](/wallets/) su ethereum.org.
 
-### Mist {#mist}
+### Mist \{#mist}
 
 Obsoleto dal 27 marzo 2019
 
@@ -125,7 +125,7 @@ Mist è stato un importante esperimento iniziale perché ha esplorato come gesti
 
 [MetaMask](https://metamask.io/) è un portafoglio nel browser che permette di gestire le chiavi di Ethereum e di interagire con le dapp. È disponibile come un'estensione per Google Chrome e Firefox ed è incluso nel [Browser Brave](https://brave.com/).
 
-### Mix {#mix}
+### Mix \{#mix}
 
 Obsoleto dall'11 agosto 2016
 
@@ -145,7 +145,7 @@ Mix è stato la prima delle applicazioni legate ad Ethereum. Guarda questa [pres
 
 [Remix](https://remix.ethereum.org/) è un IDE ospitato su browser per lo sviluppo, il testing e la distribuzione di contratti intelligenti in Solidity. Ha anche una soluzione desktop.
 
-### Minimal {#minimal}
+### Minimal \{#minimal}
 
 Obsoleto dal 2020.
 
@@ -161,7 +161,7 @@ Minimal era un'implementazione modulare della blockchain di Ethereum scritta in 
 
 Minimal è stato sostituito da [polgon-sdk](https://github.com/0xPolygon/polygon-edge)
 
-### Hyperledger Burrow {#hyperledger-burrow}
+### Hyperledger Burrow \{#hyperledger-burrow}
 
 Obsoleto dal 2022.
 
@@ -173,7 +173,7 @@ Hyperledger Burrow era un nodo blockchain autorizzato di contratti intelligenti 
 
 [Repo Github archiviati](https://github.com/hyperledger/burrow)
 
-### Mana-Ethereum {#mana-ethereum}
+### Mana-Ethereum \{#mana-ethereum}
 
 **Riepilogo**
 
@@ -187,7 +187,7 @@ Mana-Ethereum era un client Ethereum costruito usando Elixir.
 
 Il repository GitHub di Mana-Ethereum non è stato esplicitamente archiviato, ma l'ultimo commit è del 2019.
 
-### Aleth (cpp-ethereum) {#aleth}
+### Aleth (cpp-ethereum) \{#aleth}
 
 Obsoleto dal 6 ottobre 2021
 
@@ -207,7 +207,7 @@ Aleth è stato il terzo client più popolare per Ethereum prima di essere abband
 
 [Geth](https://geth.ethereum.org/) è un noto client Ethereum alternativo.
 
-### Ethereum-H {#ethereum-h}
+### Ethereum-H \{#ethereum-h}
 
 **Archivi**
 
@@ -221,7 +221,7 @@ Ethereum-H era un client Ethereum scritto in Haskell. È stato abbandonato intor
 
 [Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://besu.hyperledger.org/en/stable/) e [Erigon](https://github.com/ledgerwatch/erigon) sono valide alternative di client Ethereum - non esiste attualmente un client in Haskell.
 
-### ruby-ethereum {#ruby-ethereum}
+### ruby-ethereum \{#ruby-ethereum}
 
 **Archivi**
 
@@ -235,7 +235,7 @@ ruby-ethereum era un client Ethereum scritto in Ruby. È stato abbandonato intor
 
 [Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://besu.hyperledger.org/en/stable/) e [Erigon](https://github.com/ledgerwatch/erigon) sono valide alternative di client Ethereum. Non esiste più un client in Ruby attivo.
 
-### Parity {#parity}
+### Parity \{#parity}
 
 Obsoleto dal 2 giugno 2020
 
@@ -259,7 +259,7 @@ Essendo uno dei due principali client validi nei primi anni di Ethereum (l'altro
 
 La risorsa ["Avvia il tuo nodo di Ethereum"](/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) su ethereum.org include una sezione per scaricare, installare ed eseguire un client Ethereum.
 
-### Trinity {#trinity}
+### Trinity \{#trinity}
 
 Obsoleto dal 1° luglio 2021
 
@@ -281,11 +281,11 @@ La risorsa ["Avvia il tuo nodo di Ethereum"](/developers/docs/nodes-and-clients/
 
 Il progetto [EthereumJS](https://github.com/ethereumjs) ha uno scopo di ricerca e formazione simile a Trinity.
 
-## Dapp e Servizi {#dapps-and-services}
+## Dapp e Servizi \{#dapps-and-services}
 
 Questa sezione riguarda i servizi distribuiti sulla Rete Principale di Ethereum e su altre reti baste sull'EVM. Si tenga presente che le dapp e i servizi qui elencati potrebbero includere applicazioni DeFi che sono state hackerate o che potrebbero soffrire di vulnerabilità di sicurezza dovute alla mancanza di manutenzione, di cambiamenti nel protocollo, ecc.
 
-### Protocollo Cover {#cover-protocol}
+### Protocollo Cover \{#cover-protocol}
 
 Chiuso nell'autunno del 2021
 
@@ -303,7 +303,7 @@ Cover era un protocollo assicurativo Defi che funziona su Ethereum e altre reti 
 
 [Documentazione](https://wayback.archive-it.org/17679/20211004074634/https://docs.coverprotocol.com/)
 
-### The DAO {#the-dao}
+### The DAO \{#the-dao}
 
 Hackerato e chiuso nell'estate del 2016
 
@@ -331,7 +331,7 @@ Sebbene The DAO sia fallito, il concetto è sopravvissuto. L'innovativo modello 
 
 [Gitcoin Grants](https://gitcoin.co/grants/)
 
-### SparkPool {#sparkpool}
+### SparkPool \{#sparkpool}
 
 Chiuso nell'autunno del 2021
 
@@ -349,11 +349,11 @@ Associato alla community EthFans, il servizio è stato lanciato nel 2015. SparkP
 
 [Ethermine](https://ethermine.org/)
 
-## Documentazione e fonti informative {#documentation-and-information-sources}
+## Documentazione e fonti informative \{#documentation-and-information-sources}
 
 Esistono numerose fonti di documentazione, articoli, tutorial e forum che sono stati rimossi o ancora online ma non più mantenuti. Ne abbiamo selezionati alcuni che sono significativi o il cui attuale stato di "obsoleto" potrebbe portare a confusione o tentativi di truffe.
 
-### Legacy Wiki ed eth.wiki {#eth-wiki}
+### Legacy Wiki ed eth.wiki \{#eth-wiki}
 
 **Riepilogo**
 
@@ -379,7 +379,7 @@ I progetti software di Ethereum spesso ospitano la loro documentazione in [Leggi
 
 Specifiche tecniche ospitate su GitHub: [EIP](https://github.com/ethereum/EIPs), [Specifiche di esecuzione](https://github.com/ethereum/execution-specs), [Specifiche di consenso](https://github.com/ethereum/consensus-specs)
 
-### forum.ethereum.org {#forum-ethereum-org}
+### forum.ethereum.org \{#forum-ethereum-org}
 
 **Riepilogo**
 
@@ -397,9 +397,9 @@ Questo Forum è stato il primo forum "ufficiale" di discussione per la community
 
 [/r/ethereum](https://reddit.com/r/ethereum), e un gran numero di forum di DAO e di server Discord.
 
-## Canali Gitter {#gitter-channels}
+## Canali Gitter \{#gitter-channels}
 
-### AllCoreDevs {#allcorewdevs-gitter}
+### AllCoreDevs \{#allcorewdevs-gitter}
 
 **Riepilogo**
 
@@ -413,7 +413,7 @@ AllCoreDevs su Gitter era il principale canale di comunicazione pubblico di coor
 
 Si prega di utilizzare il canale "allcoredevs" sul [server Discord in EthR&D](https://discord.gg/qHv7AjTDuK)
 
-### EthereumJS {#ethereumjs-gitter}
+### EthereumJS \{#ethereumjs-gitter}
 
 **Riepilogo**
 

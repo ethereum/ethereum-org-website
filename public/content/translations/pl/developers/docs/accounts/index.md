@@ -7,11 +7,11 @@ isOutdated: true
 
 Konto Ethereum jest jednostką z saldem etheru (ETH), która może wysyłać transakcje na Ethereum. Konta mogą być kontrolowane przez użytkownika lub wdrażane jako inteligentne kontrakty.
 
-## Warunki wstępne {#prerequisites}
+## Warunki wstępne \{#prerequisites}
 
 Konta to bardzo przyjazny dla początkujących temat. Ale aby pomóc Ci lepiej zrozumieć tę stronę, zalecamy przeczytanie naszego [wprowadzenia do Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Rodzaje kont {#types-of-account}
+## Rodzaje kont \{#types-of-account}
 
 Ethereum ma dwa typy kont:
 
@@ -23,7 +23,7 @@ Oba typy kont mają możliwość:
 - Odbierania, przechowywania i wysyłania ETH i tokenów
 - Interakcji z wdrożonymi inteligentnymi kontraktami
 
-### Kluczowe różnice {#key-differences}
+### Kluczowe różnice \{#key-differences}
 
 **Zewnętrznie posiadane**
 
@@ -37,7 +37,7 @@ Oba typy kont mają możliwość:
 - Może wysyłać transakcje tylko w odpowiedzi na otrzymanie transakcji
 - Transakcje z konta zewnętrznie posiadanego na konto kontraktu mogą wyzwalać kod, który może wykonywać wiele różnych działań, takich jak przenoszenie tokenów lub nawet tworzenie nowego kontraktu
 
-## Konto – analiza {#an-account-examined}
+## Konto – analiza \{#an-account-examined}
 
 Konta Ethereum mają cztery pola:
 
@@ -48,7 +48,7 @@ Konta Ethereum mają cztery pola:
 
 ![Schemat przedstawiający skład konta](./accounts.png) _Schemat zaadaptowany z [Ilustracja Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Konta zewnętrzne i kluczowe pary {#externally-owned-accounts-and-key-pairs}
+## Konta zewnętrzne i kluczowe pary \{#externally-owned-accounts-and-key-pairs}
 
 Konto składa się z pary kluczy kryptograficznych: publicznego i prywatnego. Pomogą one udowodnić, że transakcja została faktycznie podpisana przez nadawcę i zapobiec fałszerstwom. Twój klucz prywatny jest tym, czego używasz do podpisywania transakcji, więc zapewnia Ci opiekę nad środkami powiązanymi z Twoim kontem. Tak naprawdę nigdy nie trzymasz kryptowaluty, trzymasz klucze prywatne – środki są zawsze w księdze Ethereum.
 
@@ -56,7 +56,7 @@ Zapobiega to nadawaniu fałszywych transakcji przez złośliwe podmioty, poniewa
 
 Jeśli Alice chce wysłać ether ze swojego konta na konto Boba, Alice musi utworzyć prośbę o transakcję i wysłać ją do sieci w celu weryfikacji. Wykorzystanie kryptografii klucza publicznego przez Ethereum zapewnia, że ​​Alice może udowodnić, że pierwotnie zainicjowała żądanie transakcji. Bez mechanizmów kryptograficznych złośliwa Eve mogłaby po prostu publicznie rozesłać zapytanie, które wygląda jak „Wyślij 5 ETH z konta Alice na konto Eve”, i nikt nie byłby w stanie sprawdzić, czy nie pochodziło od Alice.
 
-## Tworzenie konta {#account-creation}
+## Tworzenie konta \{#account-creation}
 
 Kiedy chcesz utworzyć konto, większość bibliotek wygeneruje losowy klucz prywatny.
 
@@ -86,7 +86,7 @@ Możliwe jest pozyskanie nowych kluczy publicznych z Twojego klucza prywatnego, 
 
 Potrzebujesz prywatnego klucza do podpisywania wiadomości i transakcji, które wygenerują podpis. Inni mogą wtedy wziąć podpis, aby uzyskać klucz publiczny, potwierdzając autora wiadomości. W swojej aplikacji możesz użyć biblioteki javascript do wysyłania transakcji do sieci.
 
-## Konto kontraktowe {#contract-accounts}
+## Konto kontraktowe \{#contract-accounts}
 
 Konta umowne mają również 42 znaki w układzie szesnastkowym:
 
@@ -96,15 +96,15 @@ Przykład:
 
 Adres kontraktu jest zazwyczaj podany w momencie realizacji zamówienia do Ethereum Blockchain. Adres pochodzi z adresu twórcy i liczby transakcji wysłanych z tego adresu („nonce”).
 
-## Więcej o portfelach {#a-note-on-wallets}
+## Więcej o portfelach \{#a-note-on-wallets}
 
 Konto nie jest portfelem. Portfel jest parą kluczy powiązaną z kontem będącym własnością użytkownika, która pozwala użytkownikowi na dokonywanie transakcji z konta lub zarządzanie nim.
 
-## Dodatkowo przeczytaj {#further-reading}
+## Dodatkowo przeczytaj \{#further-reading}
 
 _Wiesz o zasobach społecznościowych, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
 
-## Powiązane tematy {#related-topics}
+## Powiązane tematy \{#related-topics}
 
 - [Inteligentne kontrakty](/developers/docs/smart-contracts/)
 - [Transakcje](/developers/docs/transactions/)

@@ -12,7 +12,7 @@ summaryPoint2: Ein Versuch, Ethereum für die Lösung globaler Koordinationskris
 summaryPoint3: Ein Instrument zur drastischen Skalierung von Gütern für ökologischen Nutzen wie geprüften Kohlenstoffgutschriften
 ---
 
-## Was ist ReFi? {#what-is-refi}
+## Was ist ReFi? \{#what-is-refi}
 
 **Regenerative Finanzen (ReFi)** ist eine Reihe von Instrumenten und Ideen, die auf Blockchains aufbauen und darauf abzielen, eine Wirtschaft zu schaffen, die regenerativ ist und nicht extraktiv oder ausbeuterisch. Schließlich erschöpfen extraktive Systeme die verfügbaren Ressourcen und brechen irgendwann zusammen. Ohne Regenerationsmechanismen fehlt ihnen die Widerstandsfähigkeit. ReFi geht von der Annahme aus, dass die Schaffung von Geldwerten entkoppelt werden muss von einer nicht nachhaltigen Entnahme von Ressourcen aus unserem Planeten und unseren Gemeinschaften.
 
@@ -26,7 +26,7 @@ ReFi-Projekte verwirklichen diese Prinzipien mithilfe von [Smart Contracts](/dev
 
 ReFi überschneidet sich auch mit der Bewegung der [dezentralen Wissenschaft (DeSci)](/desci/), die Ethereum als Plattform für die Finanzierung, Erstellung, Überprüfung, Gutschrift, Speicherung und Verbreitung wissenschaftlicher Erkenntnisse nutzt. DeSci-Instrumente könnten sich als nützlich erweisen, um überprüfbare Standards und Praktiken für die Umsetzung und Überwachung regenerativer Aktivitäten wie das Pflanzen von Bäumen, die Entfernung von Plastik aus den Ozeanen oder die Wiederherstellung eines geschädigten Ökosystems zu entwickeln.
 
-## Tokenisierung von Kohlenstoffgutschriften {#tokenization-of-carbon-credits}
+## Tokenisierung von Kohlenstoffgutschriften \{#tokenization-of-carbon-credits}
 
 Der **[freiwillige Kohlenstoffmarkt (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** ist ein Mechanismus zur Finanzierung von Projekten, die sich nachweislich positiv auf die Kohlenstoffemissionen auswirken, indem sie entweder laufende Emissionen reduzieren oder bereits emittierte Treibhausgase aus der Atmosphäre entfernen. Diese Projekte erhalten nach ihrer Verifizierung einen Vermögenswert, die so genannten "Kohlenstoffgutschriften", die sie an Einzelpersonen und Organisationen verkaufen können, die den Klimaschutz unterstützen wollen.
 
@@ -50,7 +50,7 @@ Bei ReFi-Projekten wird die Blockchain-Technologie eingesetzt, um viele der Prob
 - **Die Handelstätigkeit erfolgt ohne Zwischenhändler**, die hohe Gebühren verlangen. Digitale Emissionsgutschriften stellen eine [62%ige Kostenverbesserung im Vergleich zu entsprechenden traditionellen Gutschriften](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne) dar, so die Daten eines Analyseunternehmens.
 - **Das DCM ist skalierbar** und kann die Anforderungen von Einzelpersonen und multinationalen Unternehmen gleichermaßen erfüllen.
 
-### Hauptbestandteile des DCM {#key-components-dcm}
+### Hauptbestandteile des DCM \{#key-components-dcm}
 
 Die derzeitige Landschaft des DCM setzt sich aus vier Hauptkomponenten zusammen:
 
@@ -65,7 +65,7 @@ Einige, wie zum Beispiel [Klima Infinity](https://www.klimadao.finance/infinity)
 
 4. Das zugrundeliegende System und die Infrastruktur, die die Ausweitung von Wirkung und Effizienz der gesamten Lieferkette des Kohlenstoffmarktes erleichtern. [KlimaDAO](http://klimadao.finance/) stellt Liquidität als öffentliches Gut zur Verfügung (und ermöglicht es jedem, Emissionsgutschriften zu einem transparenten Preis zu kaufen oder zu verkaufen), schafft Anreize für einen erhöhten Durchsatz auf den Emissionshandelsmärkten und für die Stilllegung von Emissionsgutschriften durch Belohnungen und bietet benutzerfreundliche, interoperable Tools für den Zugriff auf Daten sowie für den Erwerb und die Stilllegung einer Vielzahl von tokenisierten Emissionsgutschriften.
 
-## ReFi über Kohlenstoffmärkte hinaus {#refi-beyond}
+## ReFi über Kohlenstoffmärkte hinaus \{#refi-beyond}
 
 Obwohl der Schwerpunkt derzeit auf Kohlenstoffmärkten im Allgemeinen und dem Übergang von VCM zu DCM im Besonderen liegt, ist der Begriff "ReFi" nicht auf Kohlenstoff beschränkt. Neben Kohlenstoffgutschriften können andere Umweltgüter entwickelt und mit Token versehen werden. Das bedeutet, dass auch andere negative externe Effekte in den Basisebenen zukünftiger Wirtschaftssysteme bepreist werden können. Darüber hinaus kann der regenerative Aspekt dieses Wirtschaftsmodells auch auf andere Bereiche angewandt werden, z. B. auf die Finanzierung öffentlicher Güter über quadratische Finanzierungsplattformen wie [Gitcoin](https://gitcoin.co/). Organisationen, die auf der Idee der offenen Beteiligung und der gerechten Verteilung von Ressourcen beruhen, ermöglichen es jedem, Geld in Open-Source-Softwareprojekte sowie in Bildungs-, Umwelt- und Gemeinschaftsprojekte zu stecken.
 

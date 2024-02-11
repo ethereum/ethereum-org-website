@@ -14,15 +14,17 @@ summaryPoint3: Basat en tecnologia de codi obert amb la que qualsevol pot progra
 
 DeFi és un sistema obert i global pensat per l'era d'internet: una alternativa a un sistema opac, hípercontrolat i sustentat per una infraestructura i uns processos antics. Us dona control i visibilitat sobre els vostres diners. Us dona accés als mercats globals i alternatives a la vostra moneda o opcions bancàries locals. Els productes DeFi obren els serveis financers a qualsevol persona amb una connexió d'internet, alhora que són els propis usuaris els que n'ostenten la propietat i els mantenen. Fins ara, desenes de milions de dòlars en criptomonedes han passat a través d'aplicacions DeFi i aquest nombre creix cada dia.
 
-## Què és DeFi? {#what-is-defi}
+## Què és DeFi? \{#what-is-defi}
 
 DeFi és un terme col·lectiu per als productes i serveis financers que són accessibles per a qualsevol persona que pugui fer servir Ethereum, qualsevol persona amb una connexió d'internet. Amb DeFi, els mercats estan sempre oberts i no hi ha cap autoritat central que pugui bloquejar pagaments o denegar-vos accés a res. Els serveis que abans eren lents i sensibles als errors humans són ara automàtics i més segurs, perquè estan gestionats per un codi informàtic que qualsevol pot inspeccionar i sotmetre a escrutini.
 
 Hi ha una criptoeconomia puixant allà fora, on podeu prestar, demanar prestat, rebre interessos i molt més. Els argentins amb coneixements de criptografia han usat les DeFi per escapar de la inflació tan limitadora que pateix el seu país. Les empreses han començat a pagar els salaris dels seus empleats en temps real. Hi ha hagut casos de persones que han pagat préstecs per valor de milions de dòlars, sense la necessitat de cap identificació personal.
 
+{
 <YouTube id="H-O3r2YMWJ4" />
+}
 
-## DeFi vs les finances tradicionals {#defi-vs-tradfi}
+## DeFi vs les finances tradicionals \{#defi-vs-tradfi}
 
 Una de les millors maneres de veure el potencial de DeFi és entendre els problemes que hi ha avui.
 
@@ -35,7 +37,7 @@ Una de les millors maneres de veure el potencial de DeFi és entendre els proble
 - Les transferències monetàries poden arribar a trigar dies a completar-se, a causa de procediments interns que realitzen humans.
 - Sempre hi ha primes o comissions que es paguen als intermediaris dels serveis financers.
 
-### Una comparativa {#defi-comparison}
+### Una comparativa \{#defi-comparison}
 
 | DeFi                                                                                                                     | Finances tradicionals                                                                                                                       |
 | ------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,15 +53,17 @@ Una de les millors maneres de veure el potencial de DeFi és entendre els proble
   Exploreu aplicacions DeFi
 </ButtonLink>
 
-## Va començar amb Bitcoin... {#bitcoin}
+## Va començar amb Bitcoin... \{#bitcoin}
 
 Segons com es miri, Bitcoin va ser la primera aplicació DeFi. Bitcoin us permet tenir control i ser propietaris dels vostres fons i enviar-los a qualsevol lloc del món. Això passa perquè permet que moltes persones que no tenen perquè necessàriament confiar entre elles puguin posar-se d'acord en un registre de comptes (de pagaments i cobraments), sense la necessitat de tenir un intermediari de confiança. Bitcoin és obert a tothom i ningú té l'autoritat de canviar les seves regles. Les regles de Bitcoin, igual que la seva escassetat i la seva accessibilitat, estan escrites en la pròpia tecnologia. No és com en les finances tradicionals on els governs poden emetre nova moneda, cosa que devalua el valor dels vostres estalvis, o on les empreses poden tancar els mercats.
 
 Ethereum desenvolupa tot això. Com Bitcoin, les regles no es poden canviar i tothom hi té accés. Però també permet que el diners digitals siguin programables mitjançant [contractes intel·ligents](/glossary#smart-contract), així podeu fer més coses, a banda de guardar o enviar valor.
 
+{
 <YouTube id="qFBYB4W2tqU" />
+}
 
-## Diners programables {#programmable-money}
+## Diners programables \{#programmable-money}
 
 Sona estrany... «per què he de voler programar els meus diners»? En tot cas, aquesta és una característica per defecte dels tókens a Ethereum. Tothom pot programar lògica en els pagaments. Així teniu el control i la seguretat de Bitcoin juntament amb els serveis que proporcionen les institucions financeres. Això permet que feu coses amb criptomonedes que no podeu fer amb Bitcoin, com prestar i endeutar-te, programar pagaments, invertir en índexs, fons i altres.
 
@@ -70,7 +74,7 @@ Sona estrany... «per què he de voler programar els meus diners»? En tot cas, 
   </ButtonLink>
 </InfoBanner>
 
-## Què podeu fer amb DeFi? {#defi-use-cases}
+## Què podeu fer amb DeFi? \{#defi-use-cases}
 
 Hi ha una alternativa descentralitzada a la majoria dels serveis financers. Però Ethereum també crea oportunitats per crear productes financers que són completament nous. Aquesta és una llista en continu creixement.
 
@@ -86,9 +90,11 @@ Hi ha una alternativa descentralitzada a la majoria dels serveis financers. Per�
 - [Comprar assegurances](#insurance)
 - [Gestionar la vostra cartera d'inversions](#aggregators)
 
+{
 <Divider />
+}
 
-### Enviar diners arreu del món, ràpidament {#send-money}
+### Enviar diners arreu del món, ràpidament \{#send-money}
 
 Com a cadena de blocs (o «blockchain»), Ethereum està dissenyat per enviar transaccions de forma segura i global. Igual que Bitcoin, Ethereum converteix l'acte d'enviar diners arreu del món en una cosa tan fàcil com enviar un correu electrònic. Només heu d'introduir el [el nom ENS](/nft/#nft-domains) del destinatari (com josep.eth) o l'adreça de la seva cartera i el vostre pagament li arribarà en qüestió de minuts (normalment). Per a enviar o rebre pagaments, necessiteu una [cartera](/wallets/).
 
@@ -96,15 +102,17 @@ Com a cadena de blocs (o «blockchain»), Ethereum està dissenyat per enviar tr
   Exploreu dapps de pagament
 </ButtonLink>
 
-#### Transferir diners arreu del món... {#stream-money}
+#### Transferir diners arreu del món... \{#stream-money}
 
 També podeu transferir diners dins d'Ethereum. Això us permet pagar salaris en un segon i donar als treballadors accés als seus diners en qualsevol moment que ho necessitin. O llogar coses en un segon, com un traster o una moto elèctrica.
 
 I si no voleu enviar o transferir [ETH](/eth/) a causa de les grans oscil·lacions de valor que pot patir, hi ha divises alternatives dins d'Ethereum: monedes estables («stablecoins»).
 
+{
 <Divider />
+}
 
-### Accedir a divises estables {#stablecoins}
+### Accedir a divises estables \{#stablecoins}
 
 La volatilitat de les criptomonedes és un problema per a molts productes financers i la despesa en general. La comunitat DeFi ho ha sol·lucionat amb les monedes estables o «stablecoins». El seu valor està lligat a un altre actiu, normalment una divisa popular com els dòlars americans.
 
@@ -114,9 +122,11 @@ Monedes com DAI o USDC tenen un valor que oscil·la uns pocs cèntims al voltant
   Més informació sobre monedes estables
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Obtenir préstecs {#lending}
+### Obtenir préstecs \{#lending}
 
 Obtenir diners prestats de proveïdors descentralitzats té dues varietats principals.
 
@@ -129,7 +139,7 @@ Obtenir diners prestats de proveïdors descentralitzats té dues varietats princ
 
 Usar un prestatari descentralitzat té molts avantatges...
 
-#### Demanar prestat de forma privada {#borrowing-privacy}
+#### Demanar prestat de forma privada \{#borrowing-privacy}
 
 Avui dia, prestar diners i demanar-ne prestats té a veure amb els individus involucrats en l'operació. Els bancs, abans de deixar diners, han de saber si una persona podrà tornar un préstec.
 
@@ -137,15 +147,15 @@ Els préstecs descentralitzats funcionen sense necessitat que les parts s'hagin 
 
 Això us permet demanar diners sense la necessitat d'haver de passar per auditories o haver d'entregar informació privada.
 
-#### Accedir a fons globals {#access-global-funds}
+#### Accedir a fons globals \{#access-global-funds}
 
 Quan utilitzeu un prestador descentralitzat teniu accés a fons dipositats d'arreu del món, no només dels fons custodiats que pugui tenir el vostre banc o la vostra institució de crèdit. Això fa els préstecs més accessibles i millora els tipus d'interès.
 
-#### Eficiències fiscals {#tax-efficiencies}
+#### Eficiències fiscals \{#tax-efficiencies}
 
 Demanar préstecs pot donar-vos accés a fons que necessiteu sense haver de vendre els vostres ETH (cosa que pot generar una obligació fiscal). En canvi podeu fer servir els vostres ETH com a garantia per a obtenir un préstec amb una divisa estable («stablecoin»). Això us dona el fluxe de caixa que necessiteu i us permet mantenir els vostres ETH. Les divises estables són tókens que són millors per quan teniu necessitat de caixa, tenen l'avantatge que el seu valor no fluctua com pugui fer-ho l'ETH. [Més sobre les divises estables](#stablecoins)
 
-#### Préstecs ràpids {#flash-loans}
+#### Préstecs ràpids \{#flash-loans}
 
 Els préstecs ràpids són una forma experimental que us permet demanar manlleus sense necessitat de garantia o de donar informació privada.
 
@@ -170,11 +180,13 @@ Per a poder dur a terme l'exemple anterior en les finances tradicionals, necessi
 
 [Més sobre préstecs ràpids](https://aave.com/flash-loans/)
 
+{
 <Divider />
+}
 
-### Comenceu a estalviar amb criptomonedes {#saving}
+### Comenceu a estalviar amb criptomonedes \{#saving}
 
-#### Prestar {#lending}
+#### Prestar \{#lending}
 
 Podeu guanyar interessos per les vostres criptomonedes fent préstecs i veure com els vostres fons creixen en temps real. En aquest moment els tipus d'interès són molt superiors al que normalment trobeu al vostre banc local (si teniu prou sort com per tenir-ne algun a prop). Aquí en teniu un exemple:
 
@@ -187,7 +199,7 @@ Podeu guanyar interessos per les vostres criptomonedes fent préstecs i veure co
   Veure dApps de préstecs
 </ButtonLink>
 
-#### Loteria sense pèrdues {#no-loss-lotteries}
+#### Loteria sense pèrdues \{#no-loss-lotteries}
 
 Les loteries sense pèrdues com PoolTogether són una nova forma divertida i innovadora d'estalviar diners.
 
@@ -203,9 +215,11 @@ La quantitat del premi surt dels interessos que es generen prestant els tiquets 
   Proveu PoolTogether
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Tókens dels mercats d'intercanvi {#swaps}
+### Tókens dels mercats d'intercanvi \{#swaps}
 
 Hi ha milers de tókens a Ethereum. Els mercats d'intercanvi descentralitzats (DEX) us permeten intercanviar diferents tókens, en qualsevol moment que vulgueu. No doneu mai el control sobre els vostres actius. És com fer servir un mercat d'intercanvi de divises quan es visita un altre país. Però la versió DeFi no tanca mai. Els mercats estan oberts 24 hores al dia, 365 dies l'any i la tecnologia garanteix que sempre hi haurà algú que accepti la transacció.
 
@@ -215,9 +229,11 @@ Per exemple, si voleu fer servir la loteria sense pèrdues PoolTogether (descrit
   Veure intercanvi de tókens
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Comerç avançat {#trading}
+### Comerç avançat \{#trading}
 
 Hi ha opcions més avançades per a qui vulgui una mica més de control sobre les operacions d'intercanvi. Ordres amb límit, contractes perpetus, palanquejament i moltes altres. Amb el comerç descentralitzat teniu accés a liquiditat global, els mercats no tanquen mai i sempre teniu control dels vostres actius.
 
@@ -227,9 +243,11 @@ Quan feu servir un mercat (o casa de canvi) centralitzat heu de dipositar-hi els
   Veure dapps de comerç
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Fes créixer la vostra cartera {#investing}
+### Fes créixer la vostra cartera \{#investing}
 
 Hi ha productes de gestió de fons a Ethereum que poden fer créixer la vostra cartera en base a l'estratègia que trieu. És automàtic, obert a tothom i no requereix la presència d'un gestor humà que s'endugui una comissió.
 
@@ -239,9 +257,11 @@ Un bon exemple és el [fons DeFi Pulse Index (DPI)](https://defipulse.com/blog/d
   Veure dapps d'inversió
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Finançament per a les vostres idees {#crowdfunding}
+### Finançament per a les vostres idees \{#crowdfunding}
 
 Ethereum és una plataforma ideal per al crowfunding:
 
@@ -253,7 +273,7 @@ Ethereum és una plataforma ideal per al crowfunding:
   Veure dapps de crowfunding
 </ButtonLink>
 
-#### Finançament quadràtic {#quadratic-funding}
+#### Finançament quadràtic \{#quadratic-funding}
 
 Ethereum és un sofware de codi obert i molta de la feina que s'ha fet fins ara l'ha finançada la comunitat. Això ha comportat el creixement d'un nou model de finançament interessant: el finançament quadràtic. Té el potencial de millorar la manera en què es subvenciona tot tipus de béns públics en un futur.
 
@@ -268,9 +288,11 @@ Això vol dir que el Projecte A amb les seves 100 donacions d'1 dòlar, podria a
 
 [Més sobre finançament quadràtic](https://wtfisqf.com)
 
+{
 <Divider />
+}
 
-### Assegurances {#insurance}
+### Assegurances \{#insurance}
 
 Les assegurances descentralitzades pretenen ser més econòmiques, ràpides a cobrar pels afectats i més transparents. Amb més automatitzacions, les cobertures són més econòmiques i els assegurats cobren les indemnitzacions més ràpidament. Les dades que s'utilitzen per decidir sobre una reclamació són completament transparents.
 
@@ -280,9 +302,11 @@ Els productes Ethereum, com qualsevol software, poden tenir errors de codi i ser
   Veure dapps d'assegurances
 </ButtonLink>
 
+{
 <Divider />
+}
 
-### Agregadors i gestors de carteres {#aggregators}
+### Agregadors i gestors de carteres \{#aggregators}
 
 Amb tantes coses alhora, necessitareu una forma per fer un seguiment de totes les inversions, préstecs i compra-vendes. Hi ha una munió de productes que us permeten coordinar la vostra activitat DeFi des d'un mateix lloc. Aquesta és la bellesa de l'arquitectura oberta de les DeFi. Equips de desenvolupadors fan interfícies on no només podeu veure els saldos de tots els vostres productes, sinó que també podeu utilitzar les seves funcions. Això us pot ser útil alhora que continueu l'exploració de les DeFi.
 
@@ -290,9 +314,11 @@ Amb tantes coses alhora, necessitareu una forma per fer un seguiment de totes le
   Veure les dapps de gestió de carteres
 </ButtonLink>
 
+{
 <Divider />
+}
 
-## Com funcionen les DeFi? {#how-defi-works}
+## Com funcionen les DeFi? \{#how-defi-works}
 
 Les DeFi utilitzen les criptomonedes i els contractes intel·ligents per oferir serveis sense intermediaris. Avui dia en el món financer, les institucions financeres actuen com a garants de les transaccions. Això els dona a aquestes institucions un poder immens, ja que els vostres diners flueixen a través seu. A més, milers de milions de persones arreu del món no tenen accés a un compte bancari.
 
@@ -304,7 +330,7 @@ A més, els contractes són públics per tal que tothom els pugui inspeccionar i
 
 Significa també que actualment hi ha una necessitat de confiar en els membres més tècnics de la comunitat d'Ethereum que puguin llegir codi. La comunitat basada en el codi obert ajuda a mantenir els desenvolupadors sota control, però aquesta necessitat s'anirà reduint amb el temps, a mida que els contractes intel·ligents siguin més fàcils de llegir i es desenvolupin altres formes de demostrar la fiabilitat d'un determinat codi.
 
-## Ethereum i DeFi {#ethereum-and-defi}
+## Ethereum i DeFi \{#ethereum-and-defi}
 
 Ethereum és el fonament perfecte per a les DeFi per diverses raons:
 
@@ -320,7 +346,7 @@ Podeu pensar en les DeFi com en capes:
 3. Els protocols\_ [contractes intel·ligents](/glossary/#smart-contract) que proporcionen les funcionalitats, per exemple un servei que permeti el préstec d'actius de forma descentralitzada.
 4. [Les aplicacions](/dapps/): els productes que fem servir per a gestionar i accedir als protocols.
 
-## Construir les DeFi {#build-defi}
+## Construir les DeFi \{#build-defi}
 
 Les DeFi són un moviment de codi obert. Els protocols i les aplicacions DeFi són oberts per tal que puguin ser inspeccionats pels usuaris, ser bifurcats i subjectes a innovació. Com que estan construïts per capes (tots comparteixen la mateixa base de cadena de blocs i els seus actius), els protocols poden combinar-se per generar oportunitats úniques.
 
@@ -328,24 +354,24 @@ Les DeFi són un moviment de codi obert. Els protocols i les aplicacions DeFi s�
   Més sobre construir dapps
 </ButtonLink>
 
-## Llegir-ne més {#futher-reading}
+## Llegir-ne més \{#futher-reading}
 
-### Dades sobre DeFi {#defi-data}
+### Dades sobre DeFi \{#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
-### Articles sobre DeFi {#defi-articles}
+### Articles sobre DeFi \{#defi-articles}
 
 - [Una guia per a principiants de les DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 de gener de 2020_
 
-### Vídeos {#videos}
+### Vídeos \{#videos}
 
 - [Finematics – Educació sobre finances descentralitzades](https://finematics.com/) – _Vídeos sobre DeFi_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _DeFi Basics: Tot el que necessiteu saber per a començar en aquest sector, a vegades desconcertant._
 - [Pissarra Crypto](https://youtu.be/17QRFlml4pA)_Què són les DeFi?_
 
-### Comunitats {#communities}
+### Comunitats \{#communities}
 
 - [Servidor Discord de DeFi Llama](https://discord.gg/buPFYXzDDd)
 - [Servidor Discord de DeFi Pulse](https://discord.gg/Gx4TCTk)

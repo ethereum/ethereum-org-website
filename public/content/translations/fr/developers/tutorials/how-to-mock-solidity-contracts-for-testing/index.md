@@ -16,13 +16,13 @@ sourceUrl: https://soliditydeveloper.com/mocking-contracts
 
 [Les objets simulés](https://wikipedia.org/wiki/Mock_object) sont un modèle de conception commun en programmation orientée objet. Provenant du vieux mot français "mocquer", qui signifiait "se moquer de", sa signification a évolué en "imiter quelque chose de réel", ce qui est en fait ce que nous faisons en programmation. Vous pouvez vous moquer de vos contrats intelligents si vous le souhaitez, mais simulez-les dès que vous le pouvez. Cela vous facilite la vie.
 
-## Contrats de test unitaire avec simulation {#unit-testing-contracts-with-mocks}
+## Contrats de test unitaire avec simulation \{#unit-testing-contracts-with-mocks}
 
 Simuler un contrat signifie essentiellement créer une seconde version de ce contrat qui se comporte d'une manière très similaire à la version originale, mais qui peut être facilement contrôlé par le développeur. Vous vous retrouvez souvent avec des contrats complexes où vous ne voulez que [tester de petites parties du contrat](/developers/docs/smart-contracts/testing/). Le problème est le suivant : que se passe-t-il si le test de cette petite partie exige un état de contrat très spécifique dans lequel il est difficile de s'y retrouver ?
 
 Vous pouvez écrire une logique de configuration de test complexe à chaque fois que le contrat est dans l'état requis ou vous pouvez écrire une simulation. Il est facile de simuler un contrat en utilisant l'héritage. Il suffit de créer un second contrat fictif qui hérite du contrat original. Vous pouvez maintenant remplacer les fonctions sur votre contrat fictif. Voyons cela avec un exemple.
 
-## Exemple : ERC20 privé {#example-private-erc20}
+## Exemple : ERC20 privé \{#example-private-erc20}
 
 Notre exemple est celui d'un contrat ERC-20 ayant une durée de vie privée initiale. Le propriétaire peut gérer les utilisateurs privés et seuls ces derniers seront autorisés à recevoir des jetons au début. Une fois un certain temps écoulé, tout le monde sera autorisé à utiliser les jetons. Si vous êtes curieux, sachez que nous utilisons le crochet [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/3.x/extending-contracts#using-hooks) des nouveaux contrats OpenZeppelin v3.
 
@@ -94,11 +94,11 @@ Comme nous utilisons la nouvelle version 0.6 de Solidity, nous devons ajouter le
 
 Dans vos tests unitaires, vous pouvez désormais utiliser `PrivateERC20Mock` à la place. Pour tester le comportement pendant le temps d'utilisation privée, utilisez `setIsPublic(false)` et, de la même manière, `setIsPublic(true)` pour tester le temps d'utilisation publique. Bien sûr, dans notre exemple, nous pourrions juste utiliser [des aides de temps](https://docs.openzeppelin.com/test-helpers/0.5/api#increase) pour également changer les temps correspondants. Mais l'utilisation d'une version fictive devrait désormais être plus claire. Vous pouvez imaginer des scénarios où il n'est pas aussi simple de faire avancer le temps.
 
-## Simuler de nombreux contrats {#mocking-many-contracts}
+## Simuler de nombreux contrats \{#mocking-many-contracts}
 
 La situation peut devenir confuse si vous devez créer un autre contrat pour chaque simulation. Si cela vous dérange, vous pouvez jeter un coup d'oeil à la bibliothèque [MockContract](https://github.com/gnosis/mock-contract). Elle vous permet de remplacer et de modifier les comportements des contrats à la volée. Cependant, cela ne fonctionne que pour simuler des appels à un autre contrat, cela ne fonctionnerait donc pas dans notre exemple.
 
-## La simulation peut être encore plus puissante {#mocking-can-be-even-more-powerful}
+## La simulation peut être encore plus puissante \{#mocking-can-be-even-more-powerful}
 
 Les pouvoirs de la simulation ne s'arrêtent pas là.
 
