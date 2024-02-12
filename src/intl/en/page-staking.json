@@ -173,7 +173,7 @@
   "page-staking-section-comparison-solo-rewards-li3": "You'll also receive unburnt transaction fees for blocks you propose",
   "page-staking-section-comparison-saas-rewards-li1": "Usually involves full protocol rewards minus monthly fee for node operations",
   "page-staking-section-comparison-saas-rewards-li2": "Dashboards often available to easily track your validator client",
-  "page-staking-section-comparison-pools-rewards-li1": "Pooled stakers accrue rewards differently, depending on which method of pooled staking chosen",
+  "page-staking-section-comparison-pools-rewards-li1": "Pooled stakers accrue rewards differently, depending on which method of pooled staking is chosen",
   "page-staking-section-comparison-pools-rewards-li2": "Many pooled staking services offer one or more liquidity tokens that represents your staked ETH plus your share of the validator rewards",
   "page-staking-section-comparison-pools-rewards-li3": "Liquidity tokens can be held in your own wallet, used in DeFi and sold if you decide to exit",
   "page-staking-section-comparison-risks-title": "Risks",

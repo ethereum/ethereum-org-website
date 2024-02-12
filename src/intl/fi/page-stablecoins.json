@@ -128,7 +128,6 @@
   "page-stablecoins-stablecoins-table-type-fiat-backed": "Fiat, perinteinen valuutta",
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "Jalometallit",
   "page-stablecoins-table-error": "Ei voitu ladata vakaita kryptoja. Yritä päivittää sivu.",
-  "page-stablecoins-table-loading": "Lataus käynnissä...",
   "page-stablecoins-title": "Vakaat kryptovaluutat",
   "page-stablecoins-top-coins": "Vakaat kryptovaluutat TOP 7, markkina-arvon mukaan",
   "page-stablecoins-top-coins-intro": "Markkina-arvo on",

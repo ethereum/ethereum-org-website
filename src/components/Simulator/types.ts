@@ -1,10 +1,10 @@
 import {
+  CIRCLE,
   CONNECT_WEB3,
   CREATE_ACCOUNT,
-  SEND_RECEIVE,
-  CIRCLE,
   FULL_BUTTON,
   NARROW_BUTTON,
+  SEND_RECEIVE,
 } from "./constants"
 import { SimulatorDetails } from "./interfaces"
 
