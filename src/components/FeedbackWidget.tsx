@@ -33,6 +33,7 @@ const FixedDot = ({
   isExpanded,
   ...props
 }: FixedDotProps) => {
+  const { t } = useTranslation("common")
   const size = "3rem"
   return (
     <Button
