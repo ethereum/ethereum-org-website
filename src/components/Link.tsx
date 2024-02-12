@@ -1,13 +1,11 @@
+import NextLink, { type LinkProps as NextLinkProps } from "next/link"
 import { useRouter } from "next/router"
 import { RxExternalLink } from "react-icons/rx"
-import {
-  Link as NextLink,
-  type LinkProps as NextLinkProps,
-} from "@chakra-ui/next-js"
 import {
   forwardRef,
   Icon,
   Link as ChakraLink,
+  type LinkProps as ChakraLinkProps,
   type StyleProps,
   VisuallyHidden,
 } from "@chakra-ui/react"
@@ -30,7 +28,9 @@ type BaseProps = {
   customEventOptions?: MatomoEventOptions
 }
 
-export type LinkProps = BaseProps & Omit<NextLinkProps, "href">
+export type LinkProps = BaseProps &
+  ChakraLinkProps &
+  Omit<NextLinkProps, "as" | "legacyBehavior" | "passHref" | "href">
 
 /**
  * Link wrapper which handles:
@@ -57,10 +57,10 @@ export const BaseLink = forwardRef(function Link(
   }: LinkProps,
   ref
 ) {
-  let href = (to ?? hrefProp) as string
-
-  const { asPath, locale } = useRouter()
+  const { asPath } = useRouter()
   const { flipForRtl } = useRtlFlip()
+
+  let href = (to ?? hrefProp) as string
 
   const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
   const isDiscordInvite = url.isDiscordInvite(href)
@@ -86,7 +86,7 @@ export const BaseLink = forwardRef(function Link(
     href,
   }
 
-  if (isInternalPdf || isExternal) {
+  if (isExternal) {
     return (
       <ChakraLink
         isExternal
@@ -95,9 +95,7 @@ export const BaseLink = forwardRef(function Link(
             customEventOptions ?? {
               eventCategory: `Link`,
               eventAction: `Clicked`,
-              eventName: `Clicked on ${
-                isInternalPdf ? "internal PDF" : "external link"
-              }`,
+              eventName: "Clicked on external link",
               eventValue: href,
             }
           )
@@ -116,6 +114,32 @@ export const BaseLink = forwardRef(function Link(
             transform={flipForRtl}
           />
         )}
+      </ChakraLink>
+    )
+  }
+
+  if (isInternalPdf) {
+    return (
+      <ChakraLink
+        isExternal
+        // disable locale prefixing for internal PDFs
+        // TODO: add i18n support using a rehype plugin (similar as we do for
+        // images)
+        locale={false}
+        onClick={() =>
+          trackCustomEvent(
+            customEventOptions ?? {
+              eventCategory: `Link`,
+              eventAction: `Clicked`,
+              eventName: "Clicked on internal PDF",
+              eventValue: href,
+            }
+          )
+        }
+        {...commonProps}
+        as={NextLink}
+      >
+        {children}
       </ChakraLink>
     )
   }
@@ -142,8 +166,7 @@ export const BaseLink = forwardRef(function Link(
   }
 
   return (
-    <NextLink
-      locale={locale}
+    <ChakraLink
       onClick={() =>
         trackCustomEvent(
           customEventOptions ?? {
@@ -155,16 +178,15 @@ export const BaseLink = forwardRef(function Link(
         )
       }
       {...commonProps}
+      as={NextLink}
     >
       {children}
-    </NextLink>
+    </ChakraLink>
   )
 })
 
 const InlineLink = forwardRef((props: LinkProps, ref) => {
-  const { locale } = useRouter()
-
-  return <BaseLink data-inline-link ref={ref} locale={locale} {...props} />
+  return <BaseLink data-inline-link ref={ref} {...props} />
 })
 
 export default InlineLink

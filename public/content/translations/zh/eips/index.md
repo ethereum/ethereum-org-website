@@ -1,5 +1,5 @@
 ---
-title: 以太坊改进提议 (EIP)
+title: 以太坊改进提案 (EIP)
 description: 了解以太坊改进提案所需的基本信息
 lang: zh
 ---
@@ -8,7 +8,7 @@ lang: zh
 
 ## 什么是 EIP？ {#what-are-eips}
 
-[以太坊改进提议 (EIP)](https://eips.ethereum.org/)是为以太坊潜在新功能或流程提出建议的标准。 EIP 包含提议改进的技术规范，并作为社区的“真相来源”。 在 EIP 的过程中，将会讨论和制定以太坊的网络升级和应用标准。
+[以太坊改进提案 (EIP)](https://eips.ethereum.org/)是为以太坊潜在新功能或流程提出建议的标准。 EIP 包含提议改进的技术规范，并作为社区的“真相来源”。 在 EIP 的过程中，将会讨论和制定以太坊的网络升级和应用标准。
 
 以太坊社区中的任何人都可以创造一个 EIP。 以太坊改进提案编写准则在 [EIP 1](https://eips.ethereum.org/EIPS/eip-1) 中提供。 以太坊改进提案应主要包括简明技术规范，并提供一些激励措施。 以太坊改进提案的创作者负责在社区内建立共识并记录不同意见。 从历史上看，大多数以太坊改进提案的创作者通常是应用程序或协议开发者，因为提交高水平的以太坊改进提案需要很强的技术能力。
 
@@ -52,7 +52,7 @@ EIP 作为一个中心角色，记载以太坊的变化并且记载在以太坊�
 
 ## 了解更多 {#learn-more}
 
-如果您有兴趣详细了解以太坊改进提案，请查看[以太坊改进提案网站](https://eips.ethereum.org/)和[ EIP-1](https://eips.ethereum.org/EIPS/eip-1)。 下面是一些有用的链接：
+如果你有兴趣详细了解以太坊改进提案，请查看[以太坊改进提案网站](https://eips.ethereum.org/)和[ EIP-1](https://eips.ethereum.org/EIPS/eip-1)。 下面是一些有用的链接：
 
 - [以太坊改进提案完整列表](https://eips.ethereum.org/all)
 - [所以太坊改进提案类型说明](https://eips.ethereum.org/EIPS/eip-1#eip-types)

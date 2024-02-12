@@ -13,7 +13,7 @@ import Card from "@/components/Card"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 
-import { IProps as TriangleSVGProps, TriangleSVG } from "./Triangle"
+import { TriangleSVG, TriangleSVGProps } from "./Triangle"
 import { useTrilemma } from "./useTrilemma"
 
 const Trilemma = () => {
@@ -81,7 +81,7 @@ const Trilemma = () => {
               justifyContent="flex-start"
               my={8}
             />
-            <DrawerCloseButton top={6} insetInlineEnd={6} />
+            <DrawerCloseButton top="6" insetInlineEnd="6" />
           </DrawerContent>
         </Drawer>
       </Hide>

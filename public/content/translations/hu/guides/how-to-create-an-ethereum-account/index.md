@@ -20,7 +20,7 @@ A tárca egy olyan alkalmazás, amely segíti az Ethereum-számla kezelését. K
 
 Ha Ön most ismerkedik ezzel a területtel, akkor választhatja a „Kezdő a kripto világában” szűrőt a „Tárca keresése” oldalon, hogy olyan termékek közül választhasson, amelyek kifejezetten a kezdők számára fontos funkciókat kínálni.
 
-![szűrés a „Tárca keresése” oldalon](./wallet-box.png)
+![Szűrési lehetőségek a „Tárca keresése” oldalon](./wallet-box.png)
 
 Egyéb profilszűrők is elérhetők, hogy saját igényeire szabhassa a keresést. Íme néhány példa a leggyakrabban használt tárcák közül – mindig vizsgálja meg Ön is az adott szolgáltatást, mielőtt bármilyen szoftvert kiválaszt.
 

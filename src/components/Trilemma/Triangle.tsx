@@ -4,7 +4,7 @@ import { chakra, HTMLChakraProps } from "@chakra-ui/react"
 
 import { HandleClickParam } from "./useTrilemma"
 
-export interface IProps {
+export type TriangleSVGProps = {
   handleClick: (selection: HandleClickParam) => void
   isDecentralizedAndSecure: boolean
   isScalableAndSecure: boolean
@@ -15,7 +15,7 @@ export interface IProps {
   isScalable: boolean
 }
 
-export const TriangleSVG: React.FC<IProps> = ({
+export const TriangleSVG = ({
   handleClick,
   isDecentralizedAndSecure,
   isScalableAndSecure,
@@ -24,7 +24,7 @@ export const TriangleSVG: React.FC<IProps> = ({
   isDecentralized,
   isSecure,
   isScalable,
-}) => {
+}: TriangleSVGProps) => {
   const { t } = useTranslation("page-roadmap-vision")
 
   const Path = () => (

@@ -45,17 +45,17 @@ const FilterToggle = ({
   </Box>
 )
 
-export interface WalletFilterFeatureProps {
+export type WalletFilterFeatureProps = {
   resetWalletFilter: MutableRefObject<() => void>
   filters: Record<string, boolean>
   updateFilterOption: (key: any) => void
   updateFilterOptions: (key: any, value: any) => void
 }
 
-const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
+const WalletFilterFeature = ({
   updateFilterOption,
   ...restProps
-}) => {
+}: WalletFilterFeatureProps) => {
   const { filterOptions, setShowOptions } = useWalletFilterFeature(restProps)
 
   const filterPanelBg = useColorModeValue("chakra-subtle-bg", "black400")

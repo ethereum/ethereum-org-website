@@ -49,7 +49,7 @@ const FilterTab = ({
   />
 )
 
-interface WalletFilterSidebarProps extends Omit<TabsProps, "children"> {
+type WalletFilterSidebarProps = Omit<TabsProps, "children"> & {
   filters: FiltersType
   resetWalletFilter: React.MutableRefObject<() => void>
   resetFilters: () => void
@@ -60,7 +60,7 @@ interface WalletFilterSidebarProps extends Omit<TabsProps, "children"> {
   updateFilterOptions: (keys: any, value: any) => void
 }
 
-const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
+const WalletFilterSidebar = ({
   filters,
   resetWalletFilter,
   resetFilters,
@@ -71,7 +71,7 @@ const WalletFilterSidebar: React.FC<WalletFilterSidebarProps> = ({
   updateFilterOptions,
   top,
   ...tabsProps
-}) => {
+}: WalletFilterSidebarProps) => {
   const theme = useTheme()
   const { t } = useTranslation("page-wallets-find-wallet")
 

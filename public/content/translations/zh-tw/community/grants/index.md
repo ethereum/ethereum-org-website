@@ -15,30 +15,26 @@ lang: zh-tw
 這些計劃通過向各種專案提供資助來支援開放的以太坊生態系統。 其中包括可擴展性、社群建設、安全性、隱私等方面的解決方案。 這些贈款並不專門針對任何一個以太坊平台，如果你不確定，可以從這裡開始。
 
 - [EF 生態系統支援計劃](https://esp.ethereum.foundation) - _資助有益於以太坊的開源專案，特別關注通用工具、基礎設施、研究和公共產品_
-- [以太坊需求建議書](https://github.com/ethereum/requests-for-proposals) - _以太坊基金會對以太坊生態系統中的工作和專案提出的建議要求_
 - [MetaCartel](https://www.metacartel.org/grants/) - _開發去中心化應用程式、創建去中心化自治組織_
 - [Moloch DAO](https://www.molochdao.com/) - _隱私性、二層網路擴容、用戶端安全性等_
-- [公開募資](https://opengrants.com/explore)
-- [去中心化自治組織資助](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _有關資助機構的 Google 電子表格_
-- [Crunchbase Web3 資助計劃](https://www.cryptoneur.xyz/web3-grants) - _按類別、使用案例、總金額等篩選及搜尋資助計劃。 歡迎幫助他人尋找適合的資助計劃。_
+- [去中心化自治組織資助計畫](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _有關資助機構的 Google 試算表_
+- [Crunchbase Web3 資助計劃](https://www.cryptoneur.xyz/web3-grants) - _按類別、使用案例、總金額等篩選及搜尋資助計劃。 幫助他人尋找適合的資助計劃。_
 - [學術資助](https://esp.ethereum.foundation/academic-grants) - _支援以太坊相關學術工作的資助計劃_
+- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks 彙編了關於所有資助計畫、提案徵集和漏洞懸賞計畫的詳盡清單。_
 
 ## 特定專案 {#project-specific}
 
 這些專案旨在為開發和實驗自身技術的專案獲取資助。
 
 - [Aave 資助計劃](https://aavegrants.org/) – _[Aave](https://aave.com/) 為去中心化自治組織提供資助_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/) 生態系統基金_
+- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _[Balancer](https://balancer.fi/) 生態系統基金_
 - [Chainlink 資助計劃](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) 社群資助_
-- [Compound 資助計劃](https://compoundgrants.org/) – _[Compound](https://compound.finance/) 金融生態系統_
 - [Decentraland 資助計劃](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) 去中心化自治組織元宇宙_
-- [Lido 生態系統資助組織 (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) 金融生態系統_
+- [Lido 生態系統資助機構 (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/) 金融生態系統_
 - [MetaMask 計劃](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) 員工引導自助去中心化自治組織_
-- [mStable 資助計劃](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/) 社群_
 - [SKALE 網路資助計劃](https://skale.space/developers#grants) - _[SKALE 網路](https://skale.space/)生態系統_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) 生態系統_
-- [UMA 資助計劃](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/) 開發者支援_
-- [Uniswap 資助計劃](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/) 社群_
+- [Uniswap 資助計畫](https://www.uniswapfoundation.org/apply-for-a-grant) - _[Uniswap](https://uniswap.org/) 社群_
 - [Web3 資助計劃](https://web3grants.net) - _與 Web3/加密貨幣相關的資助計劃詳盡列表_
 
 ## 二次融資 {#quadratic-funding}
