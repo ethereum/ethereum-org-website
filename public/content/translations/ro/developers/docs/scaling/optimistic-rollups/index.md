@@ -49,7 +49,6 @@ Există mai multe implementări ale rollup-urilor Optimistic pe care le puteți 
 
 **Optimistic rollups reading**
 
-- [Tot ce trebuie să știți despre Rollup-ul Optimistic](https://research.paradigm.xyz/rollups)
 - [Ghidul esențial pentru Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [Cum funcționează cu adevărat Rollup-ul Optimistic?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [OVM Deep Dive](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)
