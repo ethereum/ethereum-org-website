@@ -1,38 +1,44 @@
-import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
 import React, { useEffect, useMemo, useState } from "react"
-import { navigate } from "gatsby"
+import { useRouter } from "next/router"
+import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { PATH_ID_QUERY_PARAM, SIMULATOR_ID } from "./constants"
 import { Explanation } from "./Explanation"
+import type {
+  SimulatorDetails,
+  SimulatorNav,
+  SimulatorPathSummary,
+} from "./interfaces"
 import { PathButton } from "./PathButton"
 import { Phone } from "./Phone"
 import { SimulatorModal } from "./SimulatorModal"
 import { Template } from "./Template"
-import type {
-  SimulatorDetails,
-  SimulatorPathSummary,
-  SimulatorNav,
-} from "./interfaces"
 import type { PathId, SimulatorData } from "./types"
-import { PATH_ID_QUERY_PARAM, SIMULATOR_ID } from "./constants"
-import { trackCustomEvent } from "../../utils/matomo"
-import { clearUrlParams, getValidPathId } from "./utils"
+import { getValidPathId } from "./utils"
 
-interface IProps extends Pick<FlexProps, "children"> {
+type SimulatorProps = Pick<FlexProps, "children"> & {
   data: SimulatorData
-  location: Location
 }
-export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
+export const Simulator = ({ children, data }: SimulatorProps) => {
+  const router = useRouter()
+
   // Track step
   const [step, setStep] = useState(0) // 0-indexed to use as array index
 
   // Track pathID
-  const params = new URLSearchParams(location.search)
-  const pathIdString = params.get(PATH_ID_QUERY_PARAM)
-  const pathId = getValidPathId(pathIdString)
+  const pathId = getValidPathId(router.query.sim as string)
   const simulator: SimulatorDetails | null = pathId ? data[pathId] : null
   const totalSteps: number = simulator ? simulator.explanations.length : 0
 
   // If pathId present, modal is open, else closed
   const isOpen = !!pathId
+
+  const clearUrlParams = () => {
+    const pathWithoutParams = router.asPath.replace(/\?[^\#]*/, "")
+    router.replace(pathWithoutParams)
+  }
 
   // When simulator closed: log event, clear URL params and close modal
   const onClose = (): void => {
@@ -42,13 +48,14 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
       eventName: `close-from-step-${step + 1}`,
     })
     // Clearing URL Params will reset pathId, and close modal
-    clearUrlParams(location)
+    clearUrlParams()
   }
 
   // Remove URL search param if invalid pathId
   useEffect(() => {
     setStep(0)
-    if (!pathId) clearUrlParams(location)
+    if (!pathId) clearUrlParams()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathId])
 
   // Navigation helpers
@@ -68,7 +75,7 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
       eventName: `back-from-step-${step + 1}`,
     })
     if (step === 0) {
-      clearUrlParams(location)
+      clearUrlParams()
       return
     }
     setStep((step) => Math.max(step - 1, 0))
@@ -79,7 +86,7 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
     const params = new URLSearchParams()
     params.set(PATH_ID_QUERY_PARAM, id)
     const url = `?${params.toString()}#${SIMULATOR_ID}`
-    navigate(url, { replace: true })
+    router.replace(url)
   }
 
   // Navigation object passed to child components
@@ -108,7 +115,7 @@ export const Simulator: React.FC<IProps> = ({ children, data, location }) => {
       secondaryText: title,
       Icon,
     }
-  }, [pathId])
+  }, [data, simulator])
 
   const logFinalCta = (): void => {
     trackCustomEvent({

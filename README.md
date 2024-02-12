@@ -6,7 +6,7 @@
 [![gitpoap badge](https://public-api.gitpoap.io/v1/repo/ethereum/ethereum-org-website/badge)](https://www.gitpoap.io/gh/ethereum/ethereum-org-website)
 
 <div align="center" style="margin-top: 1em; margin-bottom: 3em;">
-  <a href="https://ethereum.org"><img alt="ethereum logo" src="./eth-transparent.png" alt="ethereum.org" width="125"></a>
+  <a href="https://ethereum.org"><img alt="ethereum logo" src="./public/assets/eth-transparent.png" alt="ethereum.org" width="125"></a>
   <h1>👋 Welcome to ethereum.org!</h1>
 </div>
 
@@ -91,15 +91,15 @@ git checkout -b new_branch_name
 2. Start developing!
 
 ```sh
-yarn start
+yarn dev
 ```
 
-- Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:8000` from your browser
+- Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:3000` from your browser
 - Pro Tip:
   - Explore scripts within `package.json` for more build options
-  - Get **faster** local builds by building only one language. E.g. in your `.env` file, set `GATSBY_BUILD_LANGS=en` to build the content only in English
+  - Get **faster** local builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
 
-By default the script will build all the languages (complete list in `data/translations.json`) and will ignore the `/docs` and `/tutorials` folders. To control this behavior you can play with the `GATSBY_BUILD_LANGS` and `IGNORE_CONTENT` env variables. Check out `.env.example` to read more about them.
+By default the script will build all the languages (complete list in `data/translations.json`) and will ignore the `/docs` and `/tutorials` folders. To control this behavior you can play with the `BUILD_LOCALES` and `IGNORE_CONTENT` env variables. Check out `.env.example` to read more about them.
 
 3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)).
 
@@ -154,7 +154,7 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
-![POAP Logo](src/assets/poap-logo.svg)
+![POAP Logo](public/poap-logo.svg)
 
 ## Claim your POAP!
 
@@ -177,7 +177,7 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 ### GitPOAP
 
-- If you've made at least one contribution and that gets merged into ethereum.org, GitPOAP will also auto recognize it and let you mint a unique contributor POAP.
+- If you've made at least one contribution and that gets merged into ethereum.org, GitPOAP will also auto recognize it and let you mint a unique contributor POAP for the specific year.
   [More on GitPOAP](https://www.gitpoap.io).
 
 If you haven't contributed yet and would like to earn a POAP to show your loyalty to the Ethereum space, head over to the [issues](https://github.com/ethereum/ethereum-org-website/issues/) tab to get started!
@@ -1001,7 +1001,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://twitter.com/patcito"><img src="https://avatars.githubusercontent.com/u/26435?v=4?s=100" width="100px;" alt="Patrick Aljord"/><br /><sub><b>Patrick Aljord</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=patcito" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/decipherer2"><img src="https://avatars.githubusercontent.com/u/16278986?v=4?s=100" width="100px;" alt="decifer"/><br /><sub><b>decifer</b></sub></a><br /><a href="#ideas-decipherer2" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/aghArdeshir"><img src="https://avatars.githubusercontent.com/u/5755214?v=4?s=100" width="100px;" alt="aghArdeshir"/><br /><sub><b>aghArdeshir</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aghArdeshir" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MiConnell"><img src="https://avatars.githubusercontent.com/u/14168559?v=4?s=100" width="100px;" alt="Michael Connell"/><br /><sub><b>Michael Connell</b></sub></a><br /><a href="#content-MiConnell" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=MiConnell" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MiConnell"><img src="https://avatars.githubusercontent.com/u/14168559?v=4?s=100" width="100px;" alt="Michael Connell"/><br /><sub><b>Michael Connell</b></sub></a><br /><a href="#content-MiConnell" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=MiConnell" title="Code">💻</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AMiConnell" title="Bug reports">🐛</a></td>
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/amm98d"><img src="https://avatars.githubusercontent.com/u/39633205?v=4?s=100" width="100px;" alt="Ahmed Mustafa Malik"/><br /><sub><b>Ahmed Mustafa Malik</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=amm98d" title="Code">💻</a></td>
@@ -1673,7 +1673,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/costgallo"><img src="https://avatars.githubusercontent.com/u/49433698?v=4?s=100" width="100px;" alt="Costanza"/><br /><sub><b>Costanza</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=costgallo" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/joaolago1113"><img src="https://avatars.githubusercontent.com/u/22820692?v=4?s=100" width="100px;" alt="joao"/><br /><sub><b>joao</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=joaolago1113" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://p2p.org"><img src="https://avatars.githubusercontent.com/u/3310192?v=4?s=100" width="100px;" alt="Eugene"/><br /><sub><b>Eugene</b></sub></a><br /><a href="#content-rgb2hsl" title="Content">🖋</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.danielgorbe.com"><img src="https://avatars.githubusercontent.com/u/36860942?v=4?s=100" width="100px;" alt="Dániel Görbe"/><br /><sub><b>Dániel Görbe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=g0rbe" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.gorbe.io"><img src="https://avatars.githubusercontent.com/u/36860942?v=4?s=100" width="100px;" alt="Dániel Görbe"/><br /><sub><b>Dániel Görbe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=g0rbe" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://blog.insubli.me"><img src="https://avatars.githubusercontent.com/u/41712656?v=4?s=100" width="100px;" alt="s-crypt"/><br /><sub><b>s-crypt</b></sub></a><br /><a href="#content-s-crypt" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tudorpintea999"><img src="https://avatars.githubusercontent.com/u/87604944?v=4?s=100" width="100px;" alt="iwantanode"/><br /><sub><b>iwantanode</b></sub></a><br /><a href="#content-tudorpintea999" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/shak58"><img src="https://avatars.githubusercontent.com/u/150069539?v=4?s=100" width="100px;" alt="shak58"/><br /><sub><b>shak58</b></sub></a><br /><a href="#content-shak58" title="Content">🖋</a></td>
@@ -1701,6 +1701,24 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/xiaolou86"><img src="https://avatars.githubusercontent.com/u/20718693?v=4?s=100" width="100px;" alt="xiaolou86"/><br /><sub><b>xiaolou86</b></sub></a><br /><a href="#content-xiaolou86" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/aztecEagle22"><img src="https://avatars.githubusercontent.com/u/152518936?v=4?s=100" width="100px;" alt="aztecEagle22"/><br /><sub><b>aztecEagle22</b></sub></a><br /><a href="#content-aztecEagle22" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Messi-Q"><img src="https://avatars.githubusercontent.com/u/21357985?v=4?s=100" width="100px;" alt="QIAN"/><br /><sub><b>QIAN</b></sub></a><br /><a href="#content-Messi-Q" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/SanShi2023"><img src="https://avatars.githubusercontent.com/u/136459117?v=4?s=100" width="100px;" alt="SanShi2023"/><br /><sub><b>SanShi2023</b></sub></a><br /><a href="#content-SanShi2023" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/kamuik16"><img src="https://avatars.githubusercontent.com/u/93703995?v=4?s=100" width="100px;" alt="Krishang Shah"/><br /><sub><b>Krishang Shah</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=kamuik16" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/vuvoth"><img src="https://avatars.githubusercontent.com/u/45826131?v=4?s=100" width="100px;" alt="Vu Vo"/><br /><sub><b>Vu Vo</b></sub></a><br /><a href="#content-vuvoth" title="Content">🖋</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://o2stake.com"><img src="https://avatars.githubusercontent.com/u/77958700?v=4?s=100" width="100px;" alt="Tim - o2Stake"/><br /><sub><b>Tim - o2Stake</b></sub></a><br /><a href="#content-o2Stake" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://benedikt-wagner.dev"><img src="https://avatars.githubusercontent.com/u/113296072?v=4?s=100" width="100px;" alt="Benedikt Wagner"/><br /><sub><b>Benedikt Wagner</b></sub></a><br /><a href="#content-b-wagn" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/tdahar"><img src="https://avatars.githubusercontent.com/u/18716811?v=4?s=100" width="100px;" alt="Tarun Mohandas Daryanani"/><br /><sub><b>Tarun Mohandas Daryanani</b></sub></a><br /><a href="#content-tdahar" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Crosstons"><img src="https://avatars.githubusercontent.com/u/110349596?v=4?s=100" width="100px;" alt="Shubh"/><br /><sub><b>Shubh</b></sub></a><br /><a href="#content-Crosstons" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/duckdegen"><img src="https://avatars.githubusercontent.com/u/98649644?v=4?s=100" width="100px;" alt="duckdegen"/><br /><sub><b>duckdegen</b></sub></a><br /><a href="#content-duckdegen" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sminempepe"><img src="https://avatars.githubusercontent.com/u/76882704?v=4?s=100" width="100px;" alt="sminempepe"/><br /><sub><b>sminempepe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=sminempepe" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/aslikaya"><img src="https://avatars.githubusercontent.com/u/9151261?v=4?s=100" width="100px;" alt="aslikaya"/><br /><sub><b>aslikaya</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aslikaya" title="Documentation">📖</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://lucasamberg.dev"><img src="https://avatars.githubusercontent.com/u/102396588?v=4?s=100" width="100px;" alt="Lucas Amberg"/><br /><sub><b>Lucas Amberg</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=lucas-amberg" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://a-hagi.dev/"><img src="https://avatars.githubusercontent.com/u/92589940?v=4?s=100" width="100px;" alt="Abdullahi"/><br /><sub><b>Abdullahi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aa-hagi613" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/pranav-konde-56aa141b5/"><img src="https://avatars.githubusercontent.com/u/76070589?v=4?s=100" width="100px;" alt="Pranav Konde"/><br /><sub><b>Pranav Konde</b></sub></a><br /><a href="#content-pranavkonde" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/MohitKambli"><img src="https://avatars.githubusercontent.com/u/31406633?v=4?s=100" width="100px;" alt="Mohit Kambli"/><br /><sub><b>Mohit Kambli</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MohitKambli" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
