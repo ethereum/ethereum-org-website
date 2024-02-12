@@ -1717,6 +1717,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://lucasamberg.dev"><img src="https://avatars.githubusercontent.com/u/102396588?v=4?s=100" width="100px;" alt="Lucas Amberg"/><br /><sub><b>Lucas Amberg</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=lucas-amberg" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://a-hagi.dev/"><img src="https://avatars.githubusercontent.com/u/92589940?v=4?s=100" width="100px;" alt="Abdullahi"/><br /><sub><b>Abdullahi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aa-hagi613" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/pranav-konde-56aa141b5/"><img src="https://avatars.githubusercontent.com/u/76070589?v=4?s=100" width="100px;" alt="Pranav Konde"/><br /><sub><b>Pranav Konde</b></sub></a><br /><a href="#content-pranavkonde" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
