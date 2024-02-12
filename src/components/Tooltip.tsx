@@ -4,13 +4,13 @@ import { Box, useColorModeValue, useToken } from "@chakra-ui/react"
 
 import { isMobile as isMobileCheck } from "../lib/utils/isMobile"
 
-export interface IProps {
+export type TooltipProps = {
   content: ReactNode
   children?: React.ReactNode
 }
 
 // TODO add `position` prop
-const Tooltip: React.FC<IProps> = ({ content, children }) => {
+const Tooltip = ({ content, children }: TooltipProps) => {
   const [isVisible, setIsVisible] = useState<boolean>(false)
   const isMobile = isMobileCheck()
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")

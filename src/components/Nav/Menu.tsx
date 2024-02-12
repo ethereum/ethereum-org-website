@@ -5,12 +5,12 @@ import NavDropdown from "./Dropdown"
 // import { Lang } from "../../utils/languages"
 import { ISections } from "./types"
 
-export interface IProps extends FlexProps {
+export type MenuProps = FlexProps & {
   path: string
   sections: ISections
 }
 
-const Menu: React.FC<IProps> = ({ path, sections, ...props }) => {
+const Menu = ({ path, sections, ...props }: MenuProps) => {
   // const { locale } = useRouter()
   const direction = "ltr"
   // const direction = getDirection(language as Lang)

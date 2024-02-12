@@ -94,7 +94,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   let marketsHasError = false
   let markets: Market[] = []
@@ -521,7 +521,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <Box>
                       <ButtonLink
                         variant="outline"
-                        to="https://kb.oasis.app/help/what-is-dai"
+                        to="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
+                        isSecondary
                       >
                         {t("page-stablecoins-dai-banner-learn-button")}
                       </ButtonLink>
@@ -563,7 +564,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <ButtonLink
                       mb={4}
                       me={4}
-                      to="https://matcha.xyz/markets/ETH/USDC"
+                      to="https://matcha.xyz/tokens/ethereum/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
                     >
                       {t("page-stablecoins-usdc-banner-swap-button")}
                     </ButtonLink>
@@ -572,6 +573,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <ButtonLink
                       variant="outline"
                       to="https://www.coinbase.com/usdc"
+                      isSecondary
                     >
                       {t("page-stablecoins-usdc-banner-learn-button")}
                     </ButtonLink>
@@ -633,14 +635,19 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             "page-stablecoins-stablecoins-dapp-callout-description"
           )}
           image={dogeComputerImg}
-          maxImageWidth={600}
+          imageWidth={600}
           alt={t("page-stablecoins-stablecoins-dapp-callout-image-alt")}
         >
           <Flex flexFlow="wrap" gap="1em">
             <ButtonLink to="/dapps/">
               {t("page-stablecoins-explore-dapps")}
             </ButtonLink>
-            <ButtonLink variant="outline" to="/defi/" whiteSpace="normal">
+            <ButtonLink
+              variant="outline"
+              to="/defi/"
+              whiteSpace="normal"
+              isSecondary
+            >
               {t("page-stablecoins-more-defi-button")}
             </ButtonLink>
           </Flex>

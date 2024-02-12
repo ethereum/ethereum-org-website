@@ -4,21 +4,21 @@ import { Box, Flex, FlexProps } from "@chakra-ui/react"
 import Emoji from "./Emoji"
 import Text from "./OldText"
 
-export interface IProps extends Omit<FlexProps, "title"> {
+export type HorizontalCardProps = Omit<FlexProps, "title"> & {
   emoji: string
   title?: ReactNode
   description: ReactNode
   emojiSize?: number
 }
 
-const HorizontalCard: React.FC<IProps> = ({
+const HorizontalCard = ({
   emoji,
   title,
   description,
   children,
   emojiSize,
   ...rest
-}) => (
+}: HorizontalCardProps) => (
   <Flex borderRadius="base" {...rest}>
     <Emoji fontSize={`${emojiSize}rem`} text={emoji} />
     <Box flexGrow="0" flexShrink="1" flexBasis="75%" ms="8">

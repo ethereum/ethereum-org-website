@@ -88,14 +88,14 @@ We're open source, with a community of contributors, so you can propose changes 
 ### 3. ethereum.org is not a typical product website 🦄 {#core-principles-3}
 
 Ethereum is a big thing: it includes a community, a technology, a set of ideas and ideologies, and more.
-This means the website needs to handle many different user journeys, from “a developer who wants a specific tool” and “a newcomer who just bought some ETH and doesn’t know what a wallet is"
+This means the website needs to handle many different user journeys, from “a developer who wants a specific tool” and “a newcomer who just bought some ETH and doesn’t know what a wallet is".
 "What is the best website for a blockchain platform?" remains an open question - we are pioneers. Building this requires experimentation.
 
 ## Product roadmap {#roadmap}
 
 To make our work more accessible and to foster more community collaboration, the ethereum.org core team publishes an overview of our quarterly roadmap goals.
 
-[View our 2023 Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/9090)
+[View our 2024 Q1 product roadmap](https://github.com/ethereum/ethereum-org-website/issues/12005)
 
 **How's that sound?** We always appreciate feedback on our roadmap - if there's something you think we should work on, please let us know! We welcome ideas and PRs from anyone in the community.
 

@@ -297,7 +297,7 @@
   },
   {
     "code": "ne-np",
-    "crowdinCode": "ne-np",
+    "crowdinCode": "ne-NP",
     "name": "Nepali",
     "localName": "नेपाली",
     "langDir": "ltr",
@@ -457,7 +457,7 @@
   },
   {
     "code": "ur",
-    "crowdinCode": "ur",
+    "crowdinCode": "ur-IN",
     "name": "Urdu",
     "localName": "اردو",
     "langDir": "rtl",

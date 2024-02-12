@@ -17,7 +17,7 @@ import {
   SelfCustodyIcon,
   TrustlessIcon,
 } from "@/components/icons/staking"
-import { IProps as StakingConsiderationsProps } from "@/components/Staking/StakingConsiderations"
+import { StakingConsiderationsProps } from "@/components/Staking/StakingConsiderations"
 
 import { MatomoEventOptions } from "@/lib/utils/matomo"
 

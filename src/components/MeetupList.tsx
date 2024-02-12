@@ -48,11 +48,9 @@ const filterMeetups = (query: string): Array<Meetup> => {
 // sort meetups by country and then by city
 const sortedMeetups: Array<Meetup> = sortBy(meetups, ["emoji", "location"])
 
-export interface IProps {}
-
 // TODO create generalized CardList / TableCard
 // TODO prop if ordered list or unordered
-const MeetupList: React.FC<IProps> = () => {
+const MeetupList = () => {
   const [searchField, setSearchField] = useState<string>("")
   const { flipForRtl } = useRtlFlip()
   const filteredMeetups = filterMeetups(searchField)
@@ -128,7 +126,12 @@ const MeetupList: React.FC<IProps> = () => {
               me={4}
               flexWrap="wrap"
             >
-              <Emoji text={meetup.emoji} boxSize={4} me={2} lineHeight="unset" />
+              <Emoji
+                text={meetup.emoji}
+                boxSize={4}
+                me={2}
+                lineHeight="unset"
+              />
               <Text mb={0} opacity={"0.6"}>
                 {meetup.location}
               </Text>

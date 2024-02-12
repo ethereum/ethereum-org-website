@@ -71,7 +71,7 @@ Warstwa wykonawcza związana jest z wykonywaniem transakcji, uruchamianiem [wirt
 - [Ścieżki do wygaśnięcia stanu](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Propozycje wygaśnięcia stani i Verkel](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Zarządzanie historią](https://eips.ethereum.org/EIPS/eip-4444)
-- [Drzewa Verkle](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Drzewa Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Próbkowanie dostępności danych](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Rozwój klientów {#client-development}

@@ -3,6 +3,7 @@ import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 import {
   Box,
+  type BoxProps,
   Flex,
   type FlexProps,
   Icon,
@@ -55,7 +56,9 @@ const SummaryPoint = (props: ChildOnlyProp) => (
   <ListItem color="text300" mb={0} {...props} />
 )
 
-const Container = (props: ChildOnlyProp) => (
+type ContainerProps = Pick<BoxProps, "children" | "dir">
+
+const Container = (props: ContainerProps) => (
   <Box position="relative" {...props} />
 )
 
@@ -130,18 +133,21 @@ export const upgradeComponents = {
   BeaconChainActions,
 }
 
-interface IProps
-  extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems" | "lastUpdatedDate"> {
-  frontmatter: UpgradeFrontmatter
-}
-export const UpgradeLayout: React.FC<IProps> = ({
+type UpgradeLayoutProps = ChildOnlyProp &
+  Pick<
+    MdPageContent,
+    "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+  > & {
+    frontmatter: UpgradeFrontmatter
+  }
+export const UpgradeLayout = ({
   children,
   frontmatter,
   slug,
   tocItems,
   lastUpdatedDate,
-}) => {
+  contentNotTranslated,
+}: UpgradeLayoutProps) => {
   const { t } = useTranslation("page-upgrades")
   const { locale } = useRouter()
 
@@ -175,7 +181,7 @@ export const UpgradeLayout: React.FC<IProps> = ({
   const lgBreakpoint = useToken("breakpoints", "lg")
 
   return (
-    <Container>
+    <Container dir={contentNotTranslated ? "ltr" : "unset"}>
       <HeroContainer>
         <TitleCard>
           <Breadcrumbs slug={slug} startDepth={1} mt={2} mb="8" />
