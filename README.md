@@ -1714,6 +1714,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sminempepe"><img src="https://avatars.githubusercontent.com/u/76882704?v=4?s=100" width="100px;" alt="sminempepe"/><br /><sub><b>sminempepe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=sminempepe" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/aslikaya"><img src="https://avatars.githubusercontent.com/u/9151261?v=4?s=100" width="100px;" alt="aslikaya"/><br /><sub><b>aslikaya</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=aslikaya" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://lucasamberg.dev"><img src="https://avatars.githubusercontent.com/u/102396588?v=4?s=100" width="100px;" alt="Lucas Amberg"/><br /><sub><b>Lucas Amberg</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=lucas-amberg" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
