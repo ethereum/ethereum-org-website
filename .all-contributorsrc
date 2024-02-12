@@ -10993,6 +10993,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "a-hagi613",
+      "name": "Abdullahi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/92589940?v=4",
+      "profile": "https://a-hagi.dev/",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
