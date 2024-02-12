@@ -521,7 +521,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <Box>
                       <ButtonLink
                         variant="outline"
-                        to="https://kb.oasis.app/help/what-is-dai"
+                        to="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
                         isSecondary
                       >
                         {t("page-stablecoins-dai-banner-learn-button")}
