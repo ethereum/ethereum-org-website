@@ -48,11 +48,11 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
-      <Flex>
+      <Flex whiteSpace='pre-wrap'>
         <Emoji fontSize="sm" me={2} text=":bricks:" />
         {t(translationKey)}:{" "}
         <InlineLink to={`${explorerUrl}${number}`}>
-          <span style={{ marginLeft: '4px' }}>{new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}</span>
+         {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
         </InlineLink>
       </Flex>
     )
