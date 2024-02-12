@@ -216,7 +216,7 @@ Aby wprowadzić więcej osób do Ethereum, ekosystem musi poprawić UX/UI. Będz
 
 ### Ekonomia {#economics}
 
-Badania ekonomiczne w Ethereum zasadniczo opierają się na dwóch podejściach: walidacji bezpieczeństwa mechanizmów opartych na zachętach ekonomicznych („mikroekonomia”) i analizie przepływów wartości między protokołami, aplikacjami i użytkownikami („makroekonomia”). Istnieją złożone czynniki krypto-ekonomiczne związane z natywnym aktywem Ethereum (ethereum) i tokenami zbudowanymi na nim (na przykład NFT i tokeny ERC20).
+Badania ekonomiczne w Ethereum zasadniczo opierają się na dwóch podejściach: walidacji bezpieczeństwa mechanizmów opartych na zachętach ekonomicznych („mikroekonomia”) i analizie przepływów wartości między protokołami, aplikacjami i użytkownikami („makroekonomia”). Istnieją złożone czynniki krypto-ekonomiczne związane z natywnym aktywem Ethereum (eter) i tokenami zbudowanymi na nim (na przykład NFT i tokeny ERC20).
 
 #### Podstawowe informacje {#background-reading-9}
 
