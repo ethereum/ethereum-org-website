@@ -1711,6 +1711,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/tdahar"><img src="https://avatars.githubusercontent.com/u/18716811?v=4?s=100" width="100px;" alt="Tarun Mohandas Daryanani"/><br /><sub><b>Tarun Mohandas Daryanani</b></sub></a><br /><a href="#content-tdahar" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Crosstons"><img src="https://avatars.githubusercontent.com/u/110349596?v=4?s=100" width="100px;" alt="Shubh"/><br /><sub><b>Shubh</b></sub></a><br /><a href="#content-Crosstons" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/duckdegen"><img src="https://avatars.githubusercontent.com/u/98649644?v=4?s=100" width="100px;" alt="duckdegen"/><br /><sub><b>duckdegen</b></sub></a><br /><a href="#content-duckdegen" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/sminempepe"><img src="https://avatars.githubusercontent.com/u/76882704?v=4?s=100" width="100px;" alt="sminempepe"/><br /><sub><b>sminempepe</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=sminempepe" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
