@@ -16,7 +16,7 @@ Event tracking is a great way to validate our design decisions and assumptions. 
 
 ethereum.org uses Matomo, an open-source alternative to Google Analytics, allowing us to protect user privacy by not sharing any analytics with third parties.
 
-We implemented Matomo using the [JavaScript tracking client](https://developer.matomo.org/guides/tracking-javascript-guide) via the [`gatsby-matomo-plugin`](https://github.com/kremalicious/gatsby-plugin-matomo) Gatsby plugin.
+We implemented Matomo using the [JavaScript tracking client](https://developer.matomo.org/guides/tracking-javascript-guide) via the [`@socialgouv/matomo-next`](https://github.com/SocialGouv/matomo-next) package.
 
 ## What to measure?
 

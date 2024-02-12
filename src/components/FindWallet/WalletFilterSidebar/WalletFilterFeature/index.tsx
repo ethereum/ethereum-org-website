@@ -1,4 +1,5 @@
 import React, { MutableRefObject } from "react"
+import { uniqueId } from "lodash"
 import { BsToggleOff, BsToggleOn } from "react-icons/bs"
 import {
   Accordion,
@@ -18,9 +19,10 @@ import {
   useColorModeValue,
   VStack,
 } from "@chakra-ui/react"
-import { uniqueId } from "lodash"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
 import { useWalletFilterFeature } from "./useWalletFilterFeature"
-import { trackCustomEvent } from "../../../../utils/matomo"
 
 const FilterToggle = ({
   ariaLabel,
@@ -43,20 +45,20 @@ const FilterToggle = ({
   </Box>
 )
 
-export interface WalletFilterFeatureProps {
+export type WalletFilterFeatureProps = {
   resetWalletFilter: MutableRefObject<() => void>
   filters: Record<string, boolean>
   updateFilterOption: (key: any) => void
   updateFilterOptions: (key: any, value: any) => void
 }
 
-const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
+const WalletFilterFeature = ({
   updateFilterOption,
   ...restProps
-}) => {
+}: WalletFilterFeatureProps) => {
   const { filterOptions, setShowOptions } = useWalletFilterFeature(restProps)
 
-  const filterPanelBg = useColorModeValue("primary100", "black400")
+  const filterPanelBg = useColorModeValue("chakra-subtle-bg", "black400")
   return (
     <Accordion
       as={VStack}
@@ -85,11 +87,13 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                   color="primary.base"
                   borderBottom={isExpanded ? "1px" : "none"}
                   borderColor="currentColor"
-                  fontSize="2xl"
+                  fontSize="lg"
                   fontWeight={600}
                   lineHeight={1.4}
-                  pb={isExpanded ? 3 : 0}
+                  py={1}
                   px={4}
+                  borderRadius={1}
+                  _hover={{ color: "primary.hover" }}
                 >
                   <AccordionButton
                     color="inherit"
@@ -97,11 +101,16 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                     fontSize="inherit"
                     p={0}
                     textAlign="initial"
+                    _hover={{ background: "transparent" }}
                   >
                     <Box as="span" flex={1}>
                       {filterOption.title}
                     </Box>
-                    <AccordionIcon color="primary.base" boxSize={9} />
+                    <AccordionIcon
+                      color="primary.base"
+                      boxSize={9}
+                      _hover={{ color: "primary.hover" }}
+                    />
                   </AccordionButton>
                 </Heading>
                 <AccordionPanel as={List} p={0} m={0}>
@@ -109,6 +118,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                     const LabelIcon = item.icon
                     return (
                       <Box
+                        key={itemIdx}
                         borderBottom="1px"
                         borderColor="lightBorder"
                         pt="1.16rem"
@@ -188,7 +198,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                         </SimpleGrid>
                         {item.options.length > 0 && item.showOptions && (
                           <HStack mt={3.5} spacing={2}>
-                            {item.options.map((option) => {
+                            {item.options.map((option, optionIdx) => {
                               const handleClick = () => {
                                 let closeShowOptions = true
 
@@ -230,6 +240,7 @@ const WalletFilterFeature: React.FC<WalletFilterFeatureProps> = ({
                               }
                               return (
                                 <Checkbox
+                                  key={optionIdx}
                                   aria-label={option.name}
                                   isChecked={
                                     restProps.filters[option.filterKey!]

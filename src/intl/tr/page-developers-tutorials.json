@@ -20,9 +20,10 @@
   "page-tutorials-meta-description": "İncelenen Ethereum topluluğu eğitimlerine konuya göre göz atın ve filtreleyin.",
   "page-tutorial-external-link": "Harici",
   "page-tutorials-meta-title": "Ethereum Geliştirme Öğreticileri",
-  "page-tutorial-beginner": "Yeni başlayan",
+  "page-tutorial-beginner": "Acemi",
   "page-tutorial-intermediate": "Orta düzey",
   "page-tutorial-advanced": "Gelişmiş",
   "page-find-wallet-try-removing": "Bir veya iki özelliği kaldırmayı deneyin",
-  "page-find-wallet-clear": "Filtreleri temizle"
+  "page-find-wallet-clear": "Filtreleri temizle",
+  "page-tutorials-env-banner": "<code>.env</code>'yi girmeyin! Sırlarınızın başkası tarafından ele geçirilmesi riski taşıdığından lütfen <code>.env</code> dosyanızı başkalarına asla göstermeyin veya başkalarıyla asla paylaşmayın. Versiyon kontrolü kullanıyorsanız <code>.env</code>'nizi bir <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a> dosyasına ekleyin."
 }

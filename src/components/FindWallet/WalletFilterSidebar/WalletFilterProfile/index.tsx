@@ -1,23 +1,19 @@
-// Libraries
 import React from "react"
+import { MdCircle } from "react-icons/md"
 import {
   Box,
   Flex,
   Heading,
+  Icon,
   ListItem,
   UnorderedList,
-  Icon,
   useColorModeValue,
 } from "@chakra-ui/react"
 
-// Components
-import Translation from "../../../Translation"
+import Translation from "@/components/Translation"
 
-// Icons
-import { MdCircle } from "react-icons/md"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-// Utils
-import { trackCustomEvent } from "../../../../utils/matomo"
 import { useWalletFilterProfile } from "./useWalletFilterProfile"
 
 const WalletFilterProfile = ({
@@ -29,13 +25,15 @@ const WalletFilterProfile = ({
   const { personas } = useWalletFilterProfile()
 
   const getContainerBg = (idx: number) =>
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useColorModeValue(
-      selectedPersona === idx ? "primary200" : "primary100",
+      selectedPersona === idx ? "primary100" : "chakra-subtle-bg",
       selectedPersona === idx ? "primary900" : "black400"
     )
   const getContainerHoverBg = (idx: number) =>
+    // eslint-disable-next-line react-hooks/rules-of-hooks
     useColorModeValue(
-      "primary200",
+      "primary100",
       selectedPersona === idx ? "primary900" : "black500"
     )
 
@@ -51,7 +49,7 @@ const WalletFilterProfile = ({
         textAlign="center"
         color="secondary"
       >
-        <Translation id="page-find-wallet-persona-desc" />
+        <Translation id="page-wallets-find-wallet:page-find-wallet-persona-desc" />
       </Box>
       {personas.map((persona, idx) => {
         return (
@@ -86,7 +84,7 @@ const WalletFilterProfile = ({
               }
             }}
           >
-            <Flex alignItems="center" gap={2} mb="0.6rem" pt={2} pb={0} px={2}>
+            <Flex alignItems="center" gap={2} mb="0.2rem" pt={0} pb={0} px={2}>
               <Box
                 boxSize="1.3rem"
                 role="checkbox"
@@ -95,7 +93,7 @@ const WalletFilterProfile = ({
                 <Icon
                   as={MdCircle}
                   borderRadius="full"
-                  boxSize={4}
+                  boxSize={3}
                   my={0}
                   mx={1}
                   fill={
@@ -110,7 +108,7 @@ const WalletFilterProfile = ({
                   }
                   outline="1.5px solid"
                   outlineColor={
-                    selectedPersona === idx ? "primary.base" : "text"
+                    selectedPersona === idx ? "primary.base" : "primary.base"
                   }
                   outlineOffset="3px"
                   fontSize={8}
@@ -118,48 +116,49 @@ const WalletFilterProfile = ({
               </Box>
               <Heading
                 as="h3"
-                ml={2}
-                fontSize="1.3rem"
+                ms={0}
+                fontSize="1.2rem"
                 py={0}
-                pr={1}
-                pl={0}
+                pe={1}
+                ps={0}
                 lineHeight="1.7rem"
-                color="text"
+                color="primary.base"
               >
                 {persona.title}
               </Heading>
             </Flex>
             <Box
               as="span"
-              m="0.5rem 0 0.8rem 0"
-              p="0.7rem 0.6rem 0"
+              m="0.8rem 0 0.8rem 0"
+              p="0.8rem 0.6rem 0"
               color={selectedPersona === idx ? "text" : "text200"}
               fontSize="0.9rem"
               fontWeight="normal"
               transition="0.5s all"
               lineHeight={1.3}
               borderTop="1px solid"
-              borderTopColor="lightBorder"
+              borderTopColor="primary.base"
             >
               {persona.description}
             </Box>
             <UnorderedList
               m={0}
               display="grid"
-              gridTemplateColumns="50% 50%"
               width="full"
               columnGap="0.2rem"
-              rowGap={2}
+              rowGap="0.4rem"
               aria-label={`${persona.title} filters`}
             >
-              {persona.featureHighlight.map((feature) => (
+              {persona.featureHighlight.map((feature, idx) => (
                 <ListItem
+                  key={idx}
                   display="flex"
                   gap="0.2rem"
                   fontSize="0.85rem"
                   lineHeight="0.95rem"
                   margin="0.1rem"
                   alignItems="center"
+                  wordBreak={"break-word"}
                   sx={{
                     p: {
                       mb: 0,
