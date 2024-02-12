@@ -4,7 +4,6 @@ description: En savoir plus sur La Fusion - quand le réseau principal Ethereum 
 lang: fr
 template: upgrade
 image: /upgrades/merge.png
-alt: 
 summaryPoint1: Le réseau principal Ethereum utilise la preuve d'enjeu, mais cela n'a pas toujours été le cas.
 summaryPoint2: La mise à niveau du mécanisme original de preuve de travail à celui de la preuve d'enjeu s'appelle La Fusion.
 summaryPoint3: La Fusion fait référence à la fusion du réseau principal original Ethereum avec une blockchain distincte de preuve d'enjeu appelée la Chaîne phare, qui existe maintenant sous la forme d'une chaîne unique.
@@ -92,15 +91,18 @@ title="Développeurs de dApps et de contrats intelligents"
 contentPreview="The Merge was designed to have minimal impact on smart contract and dapp developers."
 id="developers">
 
-La Fusion a été réalisée avec des changements de consensus, qui impliquent également les changements liés à :
+La Fusion s'est accompagnée de changements apportés au consensus, qui incluent également des changements liés à :<
 
-- La structure de bloc
-- Le slot/timing de bloc
-- Les changements d'opcode
-- Les sources en chaîne aléatoire
-- Les concepts de _tête sécurisée_ et de _blocs finalisés_
+<ul>
+  <li>la structure d'un bloc</li>
+  <li>synchronisation des créneaux/blocs</li>
+  <li>changements de codes opératoires</li>
+  <li>sources d'erreurs aléatoires en chaîne</li>
+  <li>concept de <em>safe head</em> et de <em>blocs finalisés</em></li>
+</ul>
 
-Pour plus d'informations, veuillez consulter cet article de blog de Tim Beiko sur [Comment la Fusion impacte la couche d'application d'Ethereum](https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/).
+Pour plus d'informations, consultez ce billet de blog de Tim Beiko sur <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Comment La Fusion a un impact sur la couche d'application d'Ethereum</a>.
+
 </ExpandableCard>
 
 ## La Fusion et la consommation énergétique {#merge-and-energy}
@@ -109,33 +111,36 @@ La Fusion marque la fin de la preuve de travail pour Ethereum, et le début de l
 
 ## La Fusion et la fragmentation {#merge-and-scaling}
 
-La Fusion permet également de préparer le terrain pour d'autres améliorations des mises à niveau non envisageables avec la preuve de travail, en rapprochant Ethereum d'une étape de la réalisation d'évolutivité, de sécurité et de durabilité décrite dans le [plan de développement d'Ethereum](/roadmap/vision/).
+La Fusion permet également de préparer le terrain pour d'autres améliorations des mises à niveau non envisageables avec la preuve de travail, en rapprochant Ethereum d'une étape de la réalisation d'évolutivité, de sécurité et de durabilité décrite dans la [vision d'Ethereum](/roadmap/vision/).
 
 ## Les idées fausses sur La Fusion {#misconceptions}
 
 <ExpandableCard
 title="Idée reçue : &quot;L'exécution d'un nœud nécessite la mise en jeu de 32 ETH.&quot;"
 contentPreview="False. Anyone is free to sync their own self-verified copy of Ethereum (i.e. run a node). No ETH is required—not before The Merge, not after The Merge, not ever.">
+
 Il existe deux types de nœuds sur Ethereum : ceux qui peuvent proposer de nouveaux blocs, et ceux qui ne le peuvent pas.
 
 Les nœuds qui peuvent proposer des blocs représentent une petite fraction du nombre total de nœuds existants. Cette catégorie inclut les nœuds de minage sous preuve de travail (PoW) et les nœuds des validateurs sous preuve d'enjeu (PoS). Cette catégorie nécessite d'engager des ressources économiques (que ce soient le pouvoir d'hachage des GPU pour la preuve de travail ou des ETH mis en jeu par les validateurs en preuve d'enjeu) afin de pouvoir, occasionnellement, proposer un nouveau bloc et gagner les récompenses offertes par le protocole.
 
 Les autres nœuds sur le réseau (la majorité en fait) ne nécessitent pas d'engager des ressources économiques, exception faite d'un ordinateur grand public bénéficiant d'un ou deux TO de stockage disponible et d'une connexion internet. Ces nœuds ne proposent pas de blocs mais ils jouent quand même un rôle critique dans la sécurité du réseau, en tenant tous les promoteurs responsables de l'énumération des blocs déjà existants et de la vérification de la validité des nouveaux blocs, conformément aux règles de consensus du réseau. Si le bloc est valide, le noeud permettra sa diffusion sur le réseau. Si le bloc n'est pas valable pour une raison quelconque, le logiciel ne le considérera pas valable et empêchera sa propagation.
 
-Exécuter un noeud ne produisant pas de bloc est possible pour quiconque et ce, quel que soit le mécanisme de consensus (preuve de travail ou preuve d'enjeu). C'est même fortement encouragé pour l'ensemble des utilisateurs qui en ont les moyens. L'exécution d'un noeud est extrêmement précieuse pour Ethereum et permet à chaque personne qui opère son propre noeud de bénéficier d'avantages supplémentaires en matière de sécurité, de vie privée, et de résistance à la censure améliorées.
+L’exécution d’un nœud non producteur de blocs est possible pour toute personne sous l’un ou l’autre mécanisme de consensus (preuve de travail ou preuve d'enjeu) ; c'est <em>fortement encouragé</em> pour tous les utilisateurs s'ils en ont les moyens. L'exécution d'un noeud est extrêmement précieuse pour Ethereum et permet à chaque personne qui opère son propre noeud de bénéficier d'avantages supplémentaires en matière de sécurité, de vie privée, et de résistance à la censure améliorées.
 
-La possibilité pour quiconque de pouvoir exécuter son propre noeud est absolument essentiel afin de maintenir la décentralisation du réseau Ethereum.
+La possibilité pour quiconque de pouvoir exécuter son propre noeud est <em>absolument essentielle</em> afin de maintenir la décentralisation du réseau Ethereum.
 
-[En savoir plus sur l'exécution de votre propre noeud](/run-a-node/)
+<a href="/run-a-node/">En savoir plus sur l'exécution de son propre nœud</a>
 
 </ExpandableCard>
 
 <ExpandableCard
 title="Idée reçue : &quot;La Fusion n'a pas réussi à réduire les frais de gaz.&quot;"
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
+
 Les frais de gaz sont le produit des demandes envoyées au réseau par rapport à sa capacité. La Fusion a rendu obsolète l'utilisation de la preuve de travail pour une transition vers le consensus par la preuve d'enjeu, mais elle n'a pas modifié de manière significative les paramètres qui influencent directement la capacité ou le débit du réseau.
 
-Avec une <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">feuille de route axée sur les rollups</a>, les efforts sont concentrés sur la mise à l'échelle de l'activité des utilisateurs sur la couche 2, tout en activant le réseau principal de couche 1 en tant que couche de règlement décentralisée, sécurisée et optimisée pour le stockage de données cumulatives afin de rendre les transactions rollups exponentiellement moins chères. La transition vers la preuve d'enjeu est une étape préalable essentielle afin de réaliser cela. [En savoir plus sur le gaz et les frais.](/developers/docs/gas/)
+Avec une <a href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">feuille de route axée sur les rollups</a>, les efforts sont concentrés sur la mise à l'échelle de l'activité des utilisateurs sur la <a href="/layer-2/">couche 2</a>, tout en activant le réseau principal de couche 1 en tant que couche de règlement décentralisée, sécurisée et optimisée pour le stockage de données cumulatives afin de rendre les transactions rollups exponentiellement moins chères. La transition vers la preuve d'enjeu est une étape préalable essentielle afin de réaliser cela. <a href="/developers/docs/gas/">Plus d'infos sur le gaz et les frais</a>
+
 </ExpandableCard>
 
 <ExpandableCard
@@ -151,28 +156,26 @@ La preuve d’enjeu a introduit le concept de finalité des transactions qui n�
 
 <ExpandableCard
 title="Idée reçue : &quot;La Fusion a permis la mise en jeu des retraits.&quot;"
-contentPreview="False. Staking withdrawals are not yet enabled with The Merge. The following Shanghai upgrade will enable staking withdrawals.">
-Les récompenses d'ETH et de mise en jeu continuent d'être verrouillées sans possibilité d'être retirées. Les retraits sont prévus pour la prochaine mise à niveau Shanghai.
+contentPreview="False, but staking withdrawals have since been enabled via the Shanghai/Capella upgrade.">
+
+Initialement après La Fusion, les stakers ne pouvaient accéder qu'à des frais de priorité et MEV qui ont été gagnés à la suite de propositions de blocs. Ces récompenses sont créditées sur un compte non-staking contrôlé par le validateur (connu sous le nom de <em>bénéficiaire de frais</em>) et sont disponibles immédiatement. Ces récompenses sont séparées des récompenses de protocole pour l'exercice de fonctions de validateur.
+
+Depuis la mise à niveau du réseau Shanghai/Capella, les validateurs peuvent maintenant désigner <em>une adresse de retrait</em> pour commencer à recevoir des paiements automatiques de tout solde excédentaire de mise en jeu (plus de 32 ETH à partir de récompenses de protocole). Cette mise à jour a également permis à un validateur de déverrouiller et de récupérer tout son solde en quittant le réseau.
+
+<a href="/staking/withdrawals/">En savoir plus sur les retraits de mise en jeu</a>
+
 </ExpandableCard>
 
 <ExpandableCard
-title="Idée reçue : &quot;Les validateurs ne recevront aucune récompense ETH liquide jusqu'à la mise à niveau Shanghai lorsque les retraits sont activés.&quot;"
-contentPreview="False. Fee tips/MEV are credited to a non-staking account controlled by the validator, available immediately.">
-Cela peut sembler contre-intuitif, au regard des éléments ci-dessus, dans la mesure où les retraits ne sont pas activés jusqu'à la mise à niveau Shanghai, mais les validateurs DOIVENT avoir un accès immédiat aux récompenses de frais/MEV gagnés lors des propositions de bloc.
-
-Le protocole émet l'ETH comme récompense à destination des validateurs pour avoir contribué au consensus. La couche de consensus représente l'ETH nouvellement émis, où un validateur a une adresse unique qui contient son ETH mis en jeu ainsi que ses récompenses de protocole. Ces ETH sont bloqués jusqu'à la mise à niveau Shanghai.
-
-L'ETH pour la couche d'exécution est comptabilisé séparément de la couche de consensus. Lorsque les utilisateurs exécutent des transactions sur le réseau principal Ethereum, ils doivent s'acquitter des frais de gaz en ETH, y compris une commission pour le validateur. Cet ETH se trouve déjà sur la couche d'exécution, n'est PAS nouvellement émis par le protocole, et est disponible immédiatement pour le validateur (étant donné qu'une adresse appropriée de « destinataire de frais » est fournie au logiciel client).
-</ExpandableCard>
-
-<ExpandableCard
-title="Idée reçue : &quot;Lorsque les retraits sont activés, les validateurs partiront tous en même temps.&quot;"
+title="Mauvaise conception : &quot;Maintenant que La Fusion est terminée, et que les retraits sont activés, les stakers pourraient tous sortir en même temps.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
-Depuis que les retraits ont été activés suite à la mise à niveau Shanghai, tous les validateurs seront incités à retirer leur solde d'ETH si celui-ci est supérieur à 32, ces fonds ne permettant pas de générer un rendement complémentaire et qu'ils seront par ailleurs, verrouillés. En fonction de l'APR (déterminé par l'ETH total mis en jeu), ils peuvent être encouragés à quitter leur(s) validateur(s) pour récupérer leur solde en entier ou potentiellement en miser encore plus en utilisant leurs récompenses pour obtenir plus de rendement.
+Depuis que les retraits ont été activés à la suite de la mise à jour Shanghai/Capella, tous les validateurs seront incités à retirer leur solde d'ETH si celui-ci est supérieur à 32 car ces fonds n'augmentent pas le rendement et sont par ailleurs bloqués. En fonction de l'APR (déterminé par l'ETH total mis en jeu), ils peuvent être encouragés à quitter leur(s) validateur(s) pour récupérer leur solde en entier ou potentiellement en miser encore plus en utilisant leurs récompenses pour obtenir plus de rendement.
 
-Une mise en garde importante et nécessaire ici, les sorties complètes de validateur sont limitées par le protocole. Ainsi, uniquement six validateurs peuvent sortir par période (chaques 6,4 minutes, et ainsi 1 350 fois par jour, ou seulement environ 43 200 ETH par jour sur plus de 10 millions d'ETH misés). Cette limite de taux s’ajuste en fonction du total d'ETH mis en jeu et empêche un exode massif des fonds. De plus, il empêche un attaquant potentiel d'utiliser ses ETH mis en jeu pour commettre une attaque normalement punissable tout en retirant sa mise avant que le protocole ne puisse appliquer la sanction.
+Une mise en garde importante ici : les sorties complètes des validateurs sont limitées par le protocole, et seul un nombre limité de validateurs peuvent sortir par période (toutes les 6,4 minutes). Cette limite fluctue en fonction du nombre de validateurs actifs, mais passe à environ 0,33 % du total des ETH stakés qui peuvent être sortis du réseau en une seule journée.
 
-L'APR a été rendue dynamique intentionnellement, afin de permettre aux stakers de trouver un équilibre concernant le montant de la rémunération qu'ils souhaitent percevoir pour aider à sécuriser le réseau. Lorsque les retraits seront activés et si le taux est trop bas, les validateurs se retireront à un taux limité par le protocole. Peu à peu, cela permettra d'élever l'APR pour tous ceux qui restent, attirant encore une fois de nouveaux stakers ou en permettant le retour d'anciens validateurs.
+Cela empêche un exode massif de fonds misés. En outre, cela empêche un attaquant potentiel ayant accès à une grande partie du total d'ETH mis en jeu de commettre une infraction « slashable » et de quitter/retirer tous les soldes de validateur incriminés au cours de la même époque avant que le protocole puisse appliquer la pénalité de réduction.
+
+L'APR a été rendue dynamique intentionnellement, afin de permettre aux stakers de trouver un équilibre concernant le montant de la rémunération qu'ils souhaitent percevoir pour aider à sécuriser le réseau. Si le taux est trop bas, alors les validateurs pourront se retirer en suivant un taux limité par le protocole. Peu à peu, cela permettra d'élever l'APR pour tous ceux qui restent, attirant encore une fois de nouveaux stakers ou en permettant le retour d'anciens validateurs.
 </ExpandableCard>
 
 ## Que devient « Eth2 » ? {#eth2}
@@ -204,9 +207,9 @@ Les blocs sont dès lors proposés par validation des nœuds qui ont misés l'ET
 
 ### La Fusion et la mise à niveau de Shanghai {#merge-and-shanghai}
 
-Afin de simplifier et de permettre une transition aussi rapide et réussie que possible vers le système de preuve d'enjeu, la mise à jour vers La Fusion n'intègre pas certaines fonctionnalités anticipées telles que, par exemple, la possibilité de retirer les ETH bloqués sur la chaîne phare. La prochaine mise à niveau de Shanghai qui suivra la Fusion intégrera la possibilité de retirer les ETH bloqués sur chaîne phare.
+Afin de simplifier et de permettre une transition aussi rapide et réussie que possible vers le système de preuve d'enjeu, la mise à jour vers La Fusion n'intègre pas certaines fonctionnalités anticipées telles que, par exemple, la possibilité de retirer les ETH bloqués sur la chaîne phare. Cette fonctionnalité a été activée séparément avec la mise à niveau Shanghai/Capella.
 
-Restez à jour avec [la question de la planification de la mise à jour Shanghai sur GitHub](https://github.com/ethereum/pm/issues/450) ou le [Blog EF Recherche et Développement](https://blog.ethereum.org/category/research-and-development/). Pour ceux qui sont curieux, apprenez-en plus sur [Ce qui se passe après la fusion](https://youtu.be/7ggwLccuN5s?t=101), une présentation par Vitalik lors de l'événement ETHGlobal d'avril 2021.
+Pour ceux qui sont curieux, apprenez-en plus sur [Ce qui se passe après la fusion](https://youtu.be/7ggwLccuN5s?t=101), une présentation par Vitalik lors de l'événement ETHGlobal d'avril 2021.
 
 ### La Fusion et la fragmentation {#merge-and-data-sharding}
 

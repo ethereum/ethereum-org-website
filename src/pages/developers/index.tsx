@@ -15,7 +15,7 @@ import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
-import Card, { IProps as ICardProps } from "@/components/Card"
+import Card, { CardProps } from "@/components/Card"
 import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
@@ -110,7 +110,7 @@ const IntroColumn = (props: ChildOnlyProp) => (
   />
 )
 
-const StyledCard = (props: ICardProps) => {
+const StyledCard = (props: CardProps) => {
   const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
   return (
@@ -139,7 +139,7 @@ const StyledCallout = chakra(Callout, {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/developers")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 

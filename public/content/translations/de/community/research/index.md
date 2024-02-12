@@ -71,7 +71,7 @@ Die Ausführungsebene beschäftigt sich mit dem Ausführen von Transaktionen, de
 - [Wege zum Zustandsverfall](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Vorschläge für Verkel- und Zustandsverfall](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Verlaufsmanagement](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle-Bäume](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Verkle-Bäume](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Datenverfügbarkeits-Sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Client-Entwicklung {#client-development}

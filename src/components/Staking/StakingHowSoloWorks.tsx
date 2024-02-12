@@ -1,5 +1,4 @@
 /* eslint-disable react/jsx-key */
-import { Link } from "@chakra-ui/next-js"
 import { Center } from "@chakra-ui/react"
 
 import { Image } from "@/components/Image"
@@ -8,7 +7,7 @@ import Translation from "@/components/Translation"
 
 import image from "@/public/hackathon_transparent.png"
 
-const StakingHowSoloWorks: React.FC = () => {
+const StakingHowSoloWorks = () => {
   const items = [
     <p>
       <Translation id="page-staking:page-staking-how-solo-works-item-1" />

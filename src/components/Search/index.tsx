@@ -27,7 +27,19 @@ import "@docsearch/css"
 
 export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   (props, ref) => (
-    <Button ref={ref} variant="ghost" isSecondary px={1.5} {...props}>
+    <Button
+      ref={ref}
+      variant="ghost"
+      isSecondary
+      px={1.5}
+      _hover={{
+        color: "primary.base",
+        transform: "rotate(5deg)",
+        transition: "transform 0.2s ease-in-out",
+      }}
+      transition="transform 0.2s ease-in-out"
+      {...props}
+    >
       <MdSearch />
     </Button>
   )

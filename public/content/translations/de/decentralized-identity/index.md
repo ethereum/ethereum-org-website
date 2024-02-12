@@ -109,7 +109,7 @@ Im Folgenden zeigt ein Beispiel, wie On-Chain-Attestierungen in der Praxis funkt
 
 ### Seelengebundene Token und Identität {#soulbound}
 
-[Seelengebundene Token](https://vitalik.ca/general/2022/01/26/soulbound.html) (nicht übertragbare NFTs) können verwendet werden, um Informationen zu sammeln, die eindeutig auf eine bestimmte Wallet zutreffen. Dies erzeugt eine einzigartige On-Chain-Identität, die an eine bestimmte Ethereum-Adresse gebunden ist, die Token enthalten könnte, welche wiederum bestimmte Leistungen (z. B. Abschluss eines bestimmten Online-Kurses oder das Bestehen eines Schwellenwertes in einem Spiel) oder eine Gemeinschaftsbeteiligung darstellen.
+[Seelengebundene Token](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (nicht übertragbare NFTs) können verwendet werden, um Informationen zu sammeln, die eindeutig auf eine bestimmte Wallet zutreffen. Dies erzeugt eine einzigartige On-Chain-Identität, die an eine bestimmte Ethereum-Adresse gebunden ist, die Token enthalten könnte, welche wiederum bestimmte Leistungen (z. B. Abschluss eines bestimmten Online-Kurses oder das Bestehen eines Schwellenwertes in einem Spiel) oder eine Gemeinschaftsbeteiligung darstellen.
 
 ## Vorteile dezentralisierter Identitäten {#benefits-of-decentralized-identity}
 

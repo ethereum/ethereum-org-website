@@ -65,5 +65,5 @@ Justin Drake'in hisse ispatının iş ispatına göre avantajlarını açıklama
 ## Daha fazla bilgi {#further-reading}
 
 - [Vitalik'in hisse ispatı tasarım felsefesi](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
-- [Vitalik'in hisse ispatı SSS'leri](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik'in hisse ispatı SSS'leri](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 - [Hisse ispatı ve iş ispatının "basitçe açıklanmış" videosu](https://www.youtube.com/watch?v=M3EFi_POhps)

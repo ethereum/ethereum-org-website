@@ -28,7 +28,7 @@ Matematik, kriptografi ya da ekonomi alanlarında bir geçmişiniz var mı? Ethe
 - Bir Ethereum Geliştirme Önerisini yazın veya revize edin
   - Bir EIP yazın
     1. Fikrinizi [Ethereum Magicians](https://ethereum-magicians.org)'a gönderin
-    2. [EIP-1](https://eip.ethereum.org/EIPS/eip-1)'i okuyun -**Evet, bu dökümanın _tamamı._**
+    2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1) sayfasını okuyun. **Evet, bu dökümanın _tamamı._**
     3. EIP-1'in yönergelerini takip edin. Taslağınızı hazırlarken, EIP-1 den referans alın.
   - Nasıl bir [EIP Editörü](https://eips.ethereum.org/EIPS/eip-5069) olacağınızı öğrenin
     - Siz de şu anda EIP'leri gözden geçirebilirsiniz! [Açılan PR taleplerini `e-inceleme`etikeyiyle görebilirsiniz](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Teknik geri bildirimlerinizi `tartışmalar` bağlantısına bırakın.

@@ -24,7 +24,7 @@ Ejemplo de una contraseña débil: CuteFluffyKittens!
 Ejemplo de una contraseña fuerte: ymv\*azu.EAC8eyp8umf
 ```
 
-Otro error común es el uso de contraseñas que se pueden adivinar fácilmente o descubrir a través de [ingeniería social](<https://wikipedia.org/wiki/Social_engineering_(security)>). Incluir el nombre de soltera de su madre, los nombres de tus hijos o mascotas, o fechas de nacimiento en su contraseña no es seguro y aumentará el riesgo de que su contraseña sea pirateada.
+Otro error común es el uso de contraseñas que se pueden adivinar fácilmente o descubrir a través de [ingeniería social](https://wikipedia.org/wiki/Social_engineering_(security)). Incluir el nombre de soltera de su madre, los nombres de tus hijos o mascotas, o fechas de nacimiento en su contraseña no es seguro y aumentará el riesgo de que su contraseña sea pirateada.
 
 #### Buenas prácticas de contraseña: {#good-password-practices}
 
@@ -66,7 +66,7 @@ Para demostrar que es realmente usted el usuario, hay diferentes pruebas únicas
 - Algún rasgo distintivo suyo (como una huella dactilar o un escáner de iris/facial).
 - Algo que tenga (una clave de seguridad o una aplicación de autenticación en su teléfono).
 
-Utilizando **la autenticación de dos factores (2FA)** proporciona un _factor de seguridad adicional_ para sus cuentas en línea, de modo que conocer solo su contraseña (algo que usted sepa) no sea suficiente para acceder a una cuenta. Lo más común es que el segundo factor sea un código aleatorio de 6 dígitos, conocido como una **contraseña de una sola vez basada en (TOTP)**, que puede acceder a través de una aplicación de autenticación, como Google Authenticator o Authy. Estos funcionan como un factor de «algo que usted posee», porque la semilla que genera el código temporizado se almacena en su dispositivo.
+Utilizando **la autenticación de dos factores (2FA)** proporciona un *factor de seguridad adicional* para sus cuentas en línea, de modo que conocer solo su contraseña (algo que usted sepa) no sea suficiente para acceder a una cuenta. Lo más común es que el segundo factor sea un código aleatorio de 6 dígitos, conocido como una **contraseña de una sola vez basada en (TOTP)**, que puede acceder a través de una aplicación de autenticación, como Google Authenticator o Authy. Estos funcionan como un factor de «algo que usted posee», porque la semilla que genera el código temporizado se almacena en su dispositivo.
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -270,15 +270,14 @@ Las estafas de distribución de criptomonedas, o airdropping, implican una tenta
 
 ### Seguridad de la Web {#reading-web-security}
 
-- [Esta es la razón por la que no deberías usar textos para la autenticación de dos factores](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
-- [Hasta 3 millones de dispositivos infectados por complementos Chrome y Edge enlazados con malware](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
-- [Cómo crear una contraseña segura que no olvides](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
-- [¿Qué es una clave de seguridad?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
+- [Hasta 3 millones de dispositivos infectados por complementos Chrome y Edge enlazados con malware](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/), _Dan Goodin_
+- [Cómo crear una contraseña segura que no olvide](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget), _AVG_
+- [¿Qué es una clave de seguridad?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq), _Coinbase_
 
 ### Seguridad en las criptomonedas {#reading-crypto-security}
 
 - [Protección para usted y sus fondos](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) _MyCrypto_
-- [4 formas de mantenerse seguro en las criptomonedas](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [Problemas de seguridad comunes en programas cripto de comunicación](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media), _Salus_
 - [Guía de Seguridad para torpes y para listos también](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Seguridad en las criptomonedas: contraseñas y autenticación](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. ispoulos_
 

@@ -22,7 +22,7 @@ La participación como servicio (SaaS), representa una categoría de servicios d
 El protocolo de Ethereum no respalda originariamente la delegación de participaciones y, por tanto, estos servicios se han creado con el fin de cubrir esta demanda. Si tiene 32 ETH para participar, pero no domina con confianza el hardware, los servicios de participación (SaaS) le permiten delegar la parte técnica mientras gana recompensas de bloques nativos.
 
 <CardGrid>
-  <Card title="Su propio validador" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
+  <Card title="Su propio validador" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
   <Card title="Es fácil comenzar" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="Limite su riesgo" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
@@ -47,7 +47,7 @@ A continuación encontrará algunos proveedores SaaS disponibles. Utilice los in
 
 <StakingProductsCardGrid category="saas" />
 
-Por favor, tenga en cuenta la importancia de elegir [clientes diversos](/developers/docs/nodes-and-clients/client-diversity/) ya que mejora la seguridad de la red y limita su riesgo. Los servicios que tienen constatación de limitar el uso de cliente mayoritario están señalados con <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de ejecución"</em> y <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de consenso".</em>
+Por favor, tenga en cuenta la importancia de elegir [clientes diversos](/developers/docs/nodes-and-clients/client-diversity/) ya que mejora la seguridad de la red y limita su riesgo. Los servicios que tienen constatación de limitar el uso de cliente mayoritario están señalados como <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de ejecución"</em> y <em style={{ textTransform: "uppercase" }}>"diversidad de cliente de consenso".</em>
 
 ### Generadores de claves
 
@@ -91,4 +91,5 @@ Póngase en contacto con un proveedor individual de SaaS para obtener más detal
 
 ## Para profundizar sobre el tema {#further-reading}
 
+- [El directorio de participación de Ethereum](https://www.staking.directory/), _Eridian y Spacesider_
 - [Examen de los servicios de participación](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

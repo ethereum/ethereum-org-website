@@ -117,7 +117,7 @@ Smart-Contract-Wallets sind bereits verfügbar, aber es sind noch weitere Verbes
 - ["Warum Kontenabstraktion ein Game-Changer für Dapps ist" von der Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - ["Kontenabstraktion ELI5" von der Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Vitaliks Notizen zur "Road to Account Abstraction"](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Vitaliks Blogpost über Social-Recovery-Wallets](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Vitaliks Blogpost über Social-Recovery-Wallets](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [Notizen zu EIP-2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [Dokumentation zu EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
 - [Notizen zu EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)
