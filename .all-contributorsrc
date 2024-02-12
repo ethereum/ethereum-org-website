@@ -10984,6 +10984,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "lucas-amberg",
+      "name": "Lucas Amberg",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102396588?v=4",
+      "profile": "http://lucasamberg.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
