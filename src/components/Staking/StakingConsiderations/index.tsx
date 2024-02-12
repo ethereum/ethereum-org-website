@@ -1,20 +1,20 @@
-import React from "react"
 import { Box, Flex, List, ListItem, useToken, VStack } from "@chakra-ui/react"
 
-// SVG imports
+import type { StakingPage } from "@/lib/types"
+
+import ButtonDropdown from "@/components/ButtonDropdown"
 import {
   CautionProductGlyphIcon,
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
-} from "../../icons/staking"
+} from "@/components/icons/staking"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
-// Component imports
-import ButtonDropdown from "../../ButtonDropdown"
-import Translation from "../../Translation"
-import Text from "../../OldText"
-import OldHeading from "../../OldHeading"
-import { trackCustomEvent } from "../../../utils/matomo"
-import { useStakingConsiderations } from "./use-staking-considerations"
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { useStakingConsiderations } from "@/hooks/useStakingConsiderations"
 
 const IndicatorGroup = ({
   label,
@@ -54,11 +54,11 @@ const IndicatorGroup = ({
   )
 }
 
-export interface IProps {
-  page: "solo" | "saas" | "pools"
+export type StakingConsiderationsProps = {
+  page: StakingPage
 }
 
-const StakingConsiderations: React.FC<IProps> = ({ page }) => {
+const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
   // TODO: Replace with direct token implementation after UI migration is completed
   const mdBp = useToken("breakpoints", "md")
 
@@ -106,9 +106,9 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
                         height: 0,
                         width: 0,
                         top: 0,
-                        left: "100%",
+                        insetInlineStart: "100%",
                         border: "1rem solid transparent",
-                        borderLeftColor: "primary.base",
+                        borderInlineStartColor: "primary.base",
                       },
                     }
                   : { color: "primary.base" })}
