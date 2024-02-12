@@ -1,6 +1,6 @@
 ---
 title: Come visualizzare il tuo NFT nel portafoglio (Parte 3/3 della Serie di tutorial sugli NFT)
-description: Questo tutorial descrive come visualizzare un NFT esistente su Metamask!
+description: Questo tutorial descrive come visualizzare un NFT esistente su MetaMask!
 author: "Sumi Mudgil"
 tags:
   - "ERC-721"

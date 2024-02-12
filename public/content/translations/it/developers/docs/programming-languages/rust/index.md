@@ -5,7 +5,7 @@ lang: it
 incomplete: true
 ---
 
-<div class="featured">Impara a sviluppare per Ethereum usando progetti e strumenti basati su Rust</div>
+<FeaturedText>Impara a sviluppare per Ethereum usando progetti e strumenti basati su Rust</FeaturedText>
 
 Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttano i vantaggi delle criptovalute e della tecnologia blockchain. Queste dapp sono attendibili perché, una volta "caricate" su Ethereum, vengono eseguite sempre come sono state programmate. Possono controllare risorse digitali per creare nuove tipologie di applicazioni finanziarie. Possono essere decentralizzate, il che significa che nessuna singola entità o persona le controlla e sono quasi impossibile da censurare.
 

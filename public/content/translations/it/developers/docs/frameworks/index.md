@@ -29,7 +29,7 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [Chat della community di Foundry su Telegram](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
-**Hardhat:** **_ ambiente di sviluppo Ethereum per professionisti_**
+**Hardhat:** **_ambiente di sviluppo Ethereum per professionisti_**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)

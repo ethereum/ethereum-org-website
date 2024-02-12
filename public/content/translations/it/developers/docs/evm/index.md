@@ -10,7 +10,7 @@ Il protocollo di Ethereum stesso esiste unicamente allo scopo di mantenere la co
 
 ## Prerequisiti {#prerequisites}
 
-Per comprendere l'EVM, è richiesta una conoscenza di base dei termini comuni dell'informatica, come ad esempio [byte](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) e [stack](https://wikipedia.org/wiki/Stack_(abstract_data_type)). Sarebbe inoltre utile esser a conoscenza dei concetti crittografici e della blockchain come le [funzioni di hash](https://wikipedia.org/wiki/Cryptographic_hash_function) e l'[albero di Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Per comprendere l'EVM, è richiesta una conoscenza di base dei termini comuni dell'informatica, come ad esempio [byte](https://wikipedia.org/wiki/Byte), [memoria](https://wikipedia.org/wiki/Computer_memory) e [stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>). Sarebbe inoltre utile esser a conoscenza dei concetti crittografici e della blockchain come le [funzioni di hash](https://wikipedia.org/wiki/Cryptographic_hash_function) e l'[albero di Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Dal libro mastro alla macchina a stati {#from-ledger-to-state-machine}
 
