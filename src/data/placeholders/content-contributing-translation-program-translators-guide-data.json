@@ -1,0 +1,46 @@
+{
+  "/content/contributing/translation-program/translators-guide/article-titles-in-sidebar.png": {
+    "hash": "933a37ca",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAABYlAAAWJQFJUiTwAAABH0lEQVR4nGOYu2jl/yMnz/+fNG0OmP70/c9/r4Cw/4ycQv/FpBT+C4hJ48UMU6bP/b9x+97/azZt/19Z3/o/Kj7tv6m1w382ftH/IuJyhA1ITsv9n51b+r+hqeu/s3vgfwYGVrBGPlHJ/1zCYmBFXALiQL7Uf0ExGbAcssEMDOz8/2tzu//3lc39P7917f+Gwr7/i7s2/W8tmvJfQUkH7A0lZb3/kjLKYFcx8Qr+5xQQQxggIaf8f37v2v+rJu7+v2nGYTC9ftqB/9tmHPu/sHPD/9bSKf/nta75X57Z+t/IwPZ/fEjOf3NjV7CrwAaACH/P6P/hvin/o/zS/ns4BP/3cY0AK0yNLPqvrWUJdrKckvZ/OUWN/6rqxmAa5gIAzdSuW/IQY48AAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translators-guide/article-titles-in-editor.png": {
+    "hash": "1d92eb2b",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAGCAYAAADKfB7nAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAn0lEQVR4nGPgF1f8LyCp8h9Es/BJAbHkfwZO8f+MPJJQPipmF5T5zysqD8YgNoOMssZ/NT3z/3JqRv9VtfX/y6lo/lfTNf2voKaJ1QCYITA2A6+E2n8BGa3/POKq//mAruAUlAa7hktYFqcByJhBXFH7v4KW+X9+CWWws5ExUQasXr/7/6+///8zMAgSpQHDAL+QhP+5RbX/GVhFyTIAAPS/eosIRZR2AAAAAElFTkSuQmCC"
+  },
+  "/content/contributing/translation-program/translators-guide/crowdin-warning-example.png": {
+    "hash": "4cc91f46",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAALCAYAAAB24g05AAAACXBIWXMAABYlAAAWJQFJUiTwAAABcklEQVR4nI2SvUvDUBTFI92kiIi4SBVt0nyHfLUvSZOQpB9pq6AFcXFz6youTuLiIA4OgoKb/47/T10sx/fSUlFCcfhxL3k5557cPI6rbGBOFZX1TfBCA01HB3E0uLZKe432tNoKXGuOJMvY2t4Bt1YF1zB8qE5EicGrLdQlG5bXLZCMAG47B6+4qB0q2KurqDFoL+r0XaUJzvR7iPqn8NMROsMBwixH3OkhyzP4cQ+aHUAyyS9k0yuGsuGcaMdQyYA+SGD6HRgkg+mlsIIEejOFZEWlKHYEQfNoAho17J+BJMdQ3BSi2S5oLKpkhaUsDa5ubjGdfuJrNsPr2zt2eYselotKDUbjC9w/PuPh6QWXk2s44QCtaPh/A0H3caAS7IsuRHpgBX2wxWpuUi5efNbPDkgHYfcErXhI93C0rMxk1Q5kiqARdg8C/EXQg5XiwsBJwdJzBklh08vCJrJfyIQsXrmQxpZMGNE5xncfsPIJvgGXiyDraHiMWAAAAABJRU5ErkJggg=="
+  },
+  "/content/contributing/translation-program/translators-guide/editor-settings.png": {
+    "hash": "ae4e745e",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAADCAYAAACasY9UAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAqElEQVR4nGPw8nX+r2eo8T8zJ/m/i5vd/8ra4v+z5075v3jZHDgG8SdO6fxfVFb0f/r8pf/j03L/6xiY/Gdg4PzPEBYW9r+xoen/oUOH/k+cMPH/nLlz/799+/Y/Onj69Nn/8xfOg9nPnz0D0ytXLP/PkJWd+b+4pPh/a2vL/7Ky0v/z58//v379erAh3759g+MnT56ADfjz9+//d+/eAcW+/3/1+vV/ANSbkLz7gFtxAAAAAElFTkSuQmCC"
+  },
+  "/content/contributing/translation-program/translators-guide/hide-tags.png": {
+    "hash": "eefc5659",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAQCAYAAAAiYZ4HAAAACXBIWXMAABYlAAAWJQFJUiTwAAABwUlEQVR4nH2RQUiTYRjHX4QC6ZIEiiBd9KAYhaLZ4cNDdJhgkLssUYdCfLjDCDxshDL0VEzninCgQTtEfXQaiKxdHO6wjH0h+p3MUWSNltSgNIaQ49fetxxG33rgx/vw8v6f//M8r3C73TgcDsVr00RGsVjELgqFAmJmeoax0TF0fZynzwyi0SiRSIRsNlsRn0R4vOPccA1w9oygqe40Xz5/+lOv9I+DErjcLvqc/dSeEggheBCaJR6PK6djN4nMLctCzAXnmPLfITQbZnPLIhaLkclkyOVyFWR78lQzOIec1JyroeVCC0uLSwQCAQzDsB1atbSaSrLwaIHHT35bSqptSQmul/uvP19PW0cbPp+PyalJZV9VsPYyzd3wPYL3g+rh9pttUqmUrUjN0NvfR5fWzcjoMPJPpIOu6yQSCXuB7r2FP+Bn+cWKuvhfKIF34jYXL1+iub0Z7arG7ofdqgLZpgg9nMcz4WF+MUxyPUl+L8/BjwNbZDGhXdPKW2pg3XzFhrVBOpP+C3PTrOTGcwNx+POQo9LRCUoVZOS/7vFt/zvvPr5n5+1O+acHnFRj8OYgre2t9FzpobGpkc6uTn4B7RdgBy9Ib6YAAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translators-guide/example-of-link.png": {
+    "hash": "78d0640d",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAIAAAC0SDtlAAAACXBIWXMAABJ0AAASdAHeZh94AAABBUlEQVR4nGM4duzY8uXLly1bum3bto8fPrx79/YdDHz79hXC2AcG165dByKGa9eu7dm779y5C9u37wTy7927d+7cOSAJZAMFgQjIOH78+P59e48f3fn27SuG9rYGBgYGVRVxDhYgzaAoL6AgJ6SmIqGjJcfFDhK3t9UHsnW01exsTZ88ecBw9uzZvr7u8vKiqZObGmqzp09p+/r1E9Ckd+/eABkQ8sN7kDvfv//w//9/htt3bq9cuwrohtMXzr15++Y/IQCyoae35+rVqxBf/v//j4CGNWvXhoWFNTe3vHn7lqDxUBta29qamtqAAff9+3fCGp49ewbUc/Tokb179wJdRVADAKjVXMokOIiEAAAAAElFTkSuQmCC"
+  },
+  "/content/contributing/translation-program/translators-guide/example-of-links-inside-tags.png": {
+    "hash": "941f0f05",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAIAAAB/FOjAAAAACXBIWXMAABJ0AAASdAHeZh94AAAA5klEQVR4nGNYtWpVBxhs27bt+fMXt27devbsGZDx+MkTIIJwgVLz588HkkDFDECcnp4+ZcoUoNCqlUu2bt0yZcrUSRN7Fsyft2zZAqAgkFtTXdbZ2Q4xlAHI0tBQkpSUUgICRVlODoaUlPi5c6bPnzd73tyZQIPq6uqB3C1bNgJ1Hjp0iGHfoX3tPW2bNm+aPG3y7dt3bt688e/f3/84wOfPn0FO8vf3r6yqfPT4EVwCogeuE8iAsD99+sgAtCgsNGzevLm///zGZTCKDdu371iwYBHQMUAOURqAGBiI7z98IKgaogEAy9Iyxg7ud1MAAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translators-guide/example-of-strong-tags.png": {
+    "hash": "011523aa",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAIAAAAy3EnLAAAACXBIWXMAABJ0AAASdAHeZh94AAABBUlEQVR4nGM4fvz48uUr165dt337zufPXzwDAyADzgaCfWBw7ty5a9euMbx4/vTsmaOnTh05ffroOyh48/r1k69fPwFZHz98+P79+zUwAOoEijDMmztDTlbAwEDVw81GVFSEhYVNVERAV1vB2EhbWloGKGJiYqyurs7OxpaYlATSsG3b9pycvHPnLjx68PjmjZtAe48dO3bn7r179+4/uH8fYjDEBqDq////Mzx49GD9lvWPnzw+de7Um7dv/hMCDEAjGxoagKZ++foV6FyiNEyfPn3njp0ElUI1HD5yOCsrC2gDsRqANrS2tQItAYb0unXrgJ4joAHod2CIQCIFSALZ+DUAAKZokC3htzsIAAAAAElFTkSuQmCC"
+  },
+  "/content/contributing/translation-program/translators-guide/example-of-code-snippets.png": {
+    "hash": "e870a5f9",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAIAAAB/FOjAAAAACXBIWXMAABJ0AAASdAHeZh94AAAA3UlEQVR4nGNYvXpNVU0tEMyeM+fz5y/Pnj37jAFWrVo1ZcqUQ4cOnTt3juHs6WPZWfGFhYUV5bmtLZVAOaDmoqKi/IKC2NhYIDstLQ3IffzkyX8wYJg6ZTIDAwM/P7+EhIiigrS2tg6Qa2trCzQPqHnbtm1Act+BA0B7oBqAnOyCnE2bN81ftOD06dNAJ92+fef58xf/cQCGffv3tbS2VFVXnzp9CpciFA3z58/X1tY+ePAAMapBGoBOVFJS2rp1C9Axt27dgrsVp4ZHjx9NmDgRGBodHR1AEqgNvwYAOTUtRsvLpekAAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translators-guide/example-of-ambiguous-tags.png": {
+    "hash": "e1c6055f",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAIAAAB/FOjAAAAACXBIWXMAABJ0AAASdAHeZh94AAAA3UlEQVR4nGM4derU8uXL169ff+nSpf8Y4M/fv0ASKAVUdvv2bSCDAag0Ly8vLi6uuaU5LS0tDwxSU1M93W1tbS1zspPT0jJyc3PDwsKAakAa5s+fb2xs7A8GdnZ2KioqQLnly5cxgIG4uAhQQVtbW11dXVlZGUjDvn37ahtqt27bOmXKFKBtQGmg7UBnzJ+/IC8v/+3bN8gu/PbtG8Pho4fbe9rXrl177tI5TD+gAZCGgwcPAq0DGgzkoMmhiUA1AJ0RHh4BdN+OHduIsuHJkyenTp0G+ubt27fEaAAASw0m6eYtWFMAAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translators-guide/how-to-find-a-button.png": {
+    "hash": "1cbb1987",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAIAAAB/FOjAAAAACXBIWXMAABJ0AAASdAHeZh94AAAApklEQVR4nGM4duzYcjDYtm3bMxxgGxicO3fu2rVrDEAM5Kxbt27fvn3fv3//jw28A4PvYMAAtKGmrq61ra2uvv7J06dYNSADhgvnzzU0VG9at27Jovmrli27e/0GAQ3b1q7lY2AwkpFVFxJR5uZuzC0Aiv788QOnBqDjgC5hY+NatXIVQfeANNy7dw/oaQtLyw3r1xOlARig/f3906dPnz9//jYiAAD9jEG1R4RYtgAAAABJRU5ErkJggg=="
+  }
+}
