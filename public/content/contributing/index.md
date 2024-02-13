@@ -17,7 +17,7 @@ Before contributing, make sure you're familiar with:
 
 ## Ways to contribute {#ways-to-contribute}
 
-### Contribution types
+### Contribution types {#contribution-types}
 
 There are a number of ways for you to contribute to ethereum.org. Click on the contribution type you are interested in for more information.
 
@@ -27,7 +27,7 @@ There are a number of ways for you to contribute to ethereum.org. Click on the c
 - [Translation program contributions](/contributing/translation-program/#translation-program) _– Help us bring ethereum.org to new languages_
 - [QA testing contributions](/contributing/testing/) _- Help us test release candidates for ethereum.org_
 
-### Suggest improvements
+### Suggest improvements {#suggest-improvements}
 
 - [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)
   _– Let us know about any ideas you have for a new feature or design_
@@ -35,7 +35,7 @@ There are a number of ways for you to contribute to ethereum.org. Click on the c
   _– Help us continue to expand the Ethereum [glossary](/glossary/)_
 - [Quizzes](/contributing/quizzes/) _- Add, update, and delete quiz question banks for a relevant page_
 
-### Add resources or projects
+### Add resources or projects {#add-resources-or-projects}
 
 - [Add community resources](/contributing/content-resources/)
   _– Add a helpful article or resource to a relevant page_
@@ -82,7 +82,7 @@ Only use your original work or content that you have permission to use when cont
 
 We have low barrier to entry issues on our GitHub repository specifically designed for developers who are new to open-source labelled [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
-## ethereum.org 2023 Contributor POAP
+## ethereum.org 2023 Contributor POAP {#ethereumorg-2023-contributor-poap}
 
 If you have committed any changes in 2023 so far that were merged into our repo, you have a [GitPOAP](https://www.gitpoap.io/) waiting! Check out your pull request for a claim message.
 

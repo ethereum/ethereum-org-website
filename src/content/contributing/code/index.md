@@ -4,18 +4,18 @@ description: Code contribution to ethereum.org
 lang: en
 ---
 
-### 1. Submit an issue
+### 1. Submit an issue {#submit-an-issue}
 
 - Create a [new issue](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 - Comment on the issue (if you'd like to be assigned to it) - that way [our team can assign the issue to you](https://github.blog/2019-06-25-assign-issues-to-issue-commenters/).
 
 More information on the issue creation process, and expectations around creating issues can be [found here](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/github-issue-triage-process.md).
 
-### 2. Fork the repository (repo)
+### 2. Fork the repository (repo) {#fork-the-repository}
 
 - If you're not sure, here's how to [fork the repo](https://help.github.com/en/articles/fork-a-repo).
 
-### 3. Set up your local environment (optional)
+### 3. Set up your local environment (optional) {#set-up-your-local-environment}
 
 If you're ready to contribute and create your PR, it will help to set up a local environment so you can see your changes.
 
@@ -53,7 +53,7 @@ We recommend using a node manager to use multiple node versions in your system. 
 yarn
 ```
 
-### 4. Make awesome changes!
+### 4. Make awesome changes! {#make-awesome-changes}
 
 1. Create new branch for your changes off of your local `dev` branch
 
@@ -94,7 +94,7 @@ git commit -m "brief description of changes [Fixes #1234]"
 git push
 ```
 
-### 5. Local development with lambda functions
+### 5. Local development with lambda functions {#local-development-with-lambda-functions}
 
 There may be times where you develop features that make external API requests to other services. For these we write lambda functions to obfuscate API keys.
 
@@ -109,7 +109,7 @@ Typically, you will develop and test functions in the Gatsby context, by running
 
 In case you want to test them as if you were in a Netlify env, you can install the [Netlify CLI](https://docs.netlify.com/cli/get-started/) and run `netlify dev --framework=gatsby`.
 
-### 6. Submit your PR
+### 6. Submit your PR {#submit-your-pr}
 
 - After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
@@ -119,7 +119,7 @@ In case you want to test them as if you were in a Netlify env, you can install t
 - _Confirm your GC preview deploy looks & functions as expected_
 - Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/CetY6Y4)?
 
-### 7. Wait for review
+### 7. Wait for review {#wait-for-review}
 
 - The website team reviews every PR
 - See [how decisions are made on content changes](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made)
@@ -128,7 +128,7 @@ In case you want to test them as if you were in a Netlify env, you can install t
 
 Learn more about how we review pull requests [here](docs/review-process.md).
 
-### 8. Release
+### 8. Release {#release}
 
 - `master` is continually synced to Netlify and will automatically deploy new commits to ethereum.org
 - Learn more about how we deploy the site [here](docs/deploy-process.md)
