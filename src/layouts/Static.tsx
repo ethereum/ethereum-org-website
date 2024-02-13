@@ -35,6 +35,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import GuideHeroImage from "@/public/heroes/guides-hub-hero.jpg"
+import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
@@ -91,12 +92,13 @@ export const StaticLayout = ({
   lastUpdatedDate,
   contentNotTranslated,
 }: StaticLayoutProps) => {
-  const { locale } = useRouter()
+  const { locale, asPath } = useRouter()
 
   const absoluteEditPath = getEditPath(slug)
 
   return (
     <Box w="full">
+      <DevconGrantsBanner pathname={asPath} />
       <Flex
         justifyContent="space-between"
         w="full"
