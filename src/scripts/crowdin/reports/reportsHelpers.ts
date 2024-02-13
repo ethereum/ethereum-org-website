@@ -1,11 +1,12 @@
-import axios, { AxiosResponse } from "axios"
 import { ReportsModel } from "@crowdin/crowdin-api-client"
-import crowdinClient from "../api-client/crowdinClient"
+
 import {
   CROWDIN_PROJECT_ID,
   FIRST_CROWDIN_CONTRIBUTION_DATE,
   REGULAR_RATES,
-} from "../../../constants"
+} from "../../../lib/constants"
+import crowdinClient from "../api-client/crowdinClient"
+
 import { ReportData, saveReportDataToJson } from "./fileHelpers"
 
 const { reportsApi } = crowdinClient
@@ -20,7 +21,6 @@ export async function fetchTranslationCostsReport(
   fileId: number,
   crowdinLangCode: string
 ): Promise<void> {
-  const now = new Date()
   const dateTo = getPreviousDayISOString()
 
   // Todo: Remove ts-ignore when this PR gets merged
@@ -34,8 +34,8 @@ export async function fetchTranslationCostsReport(
     regularRates: REGULAR_RATES,
     dateFrom: FIRST_CROWDIN_CONTRIBUTION_DATE,
     dateTo,
-    // @ts-ignore
     languageId: crowdinLangCode,
+    // @ts-ignore
     fileIds: [fileId],
   }
 
@@ -105,10 +105,11 @@ export async function downloadReport(
       `${crowdinLangCode}—Retrieved JSON URL for report of file ID ${fileId}`
     )
 
-    const reportData: AxiosResponse<ReportData> = await axios.get(jsonUrl)
+    const reportReq = await fetch(jsonUrl)
     console.log(`Downloaded report data for file ID ${fileId}`)
+    const reportData: ReportData = await reportReq.json()
 
-    await saveReportDataToJson(reportData.data, fileId, crowdinLangCode)
+    await saveReportDataToJson(reportData, fileId, crowdinLangCode)
     console.log(`Saved report data for file ID ${fileId} to JSON file`)
   } catch (error: unknown) {
     if (error instanceof Error) {

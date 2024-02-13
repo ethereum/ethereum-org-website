@@ -1,13 +1,28 @@
-import React, { FC, useRef } from "react"
-import { Icon, IconButton, Flex, Text, Box } from "@chakra-ui/react"
-import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
+import { FC, useRef } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { BsTranslate } from "react-icons/bs"
+import { MdBrightness2, MdWbSunny } from "react-icons/md"
+import {
+  Box,
+  Button,
+  Flex,
+  HStack,
+  Icon,
+  MenuButton,
+  Text,
+  useDisclosure,
+  useEventListener,
+} from "@chakra-ui/react"
+
+import { IconButton } from "@/components/Buttons"
+import { EthHomeIcon } from "@/components/icons"
+import LanguagePicker from "@/components/LanguagePicker"
+import { BaseLink } from "@/components/Link"
+import Search from "@/components/Search"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
-import ButtonLink from "../ButtonLink"
-import Link from "../Link"
-import Search from "../Search"
-import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
 
 export interface IProps {
@@ -18,18 +33,33 @@ export interface IProps {
 const Nav: FC<IProps> = ({ path }) => {
   const {
     ednLinks,
-    fromPageParameter,
-    i18n,
     isDarkTheme,
     shouldShowSubNav,
-    t,
     toggleColorMode,
     linkSections,
-    searchRef,
     mobileNavProps,
   } = useNav({ path })
-
+  const { locale } = useRouter()
+  const { t } = useTranslation("common")
+  const searchModalDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
+  const languagePickerState = useDisclosure()
+  const languagePickerRef = useRef<HTMLButtonElement>(null)
+  /**
+   * Adds a keydown event listener to toggle color mode (ctrl|cmd + \)
+   * or open the language picker (\).
+   * @param {string} event - The keydown event.
+   */
+  useEventListener("keydown", (e) => {
+    if (e.key !== "\\") return
+    e.preventDefault()
+    if (e.metaKey || e.ctrlKey) {
+      toggleColorMode()
+    } else {
+      if (languagePickerState.isOpen) return
+      languagePickerRef.current?.click()
+    }
+  })
 
   return (
     <Box position="sticky" top={0} zIndex={100} width="full">
@@ -51,7 +81,7 @@ const Nav: FC<IProps> = ({ path }) => {
           width="full"
           maxW="container.2xl"
         >
-          <Link
+          <BaseLink
             to="/"
             aria-label={t("home")}
             display="inline-flex"
@@ -59,55 +89,96 @@ const Nav: FC<IProps> = ({ path }) => {
             textDecor="none"
           >
             <EthHomeIcon opacity={0.85} _hover={{ opacity: 1 }} />
-          </Link>
+          </BaseLink>
           {/* Desktop */}
           <Flex
-            justifyContent="space-between"
-            w="100%"
-            display={{ base: "none", lg: "flex" }}
-            ml={{ base: 3, xl: 8 }}
+            w="full"
+            justifyContent={{ base: "flex-end", lg: "space-between" }}
+            ms={{ base: 3, xl: 8 }}
           >
-            <Menu path={path} sections={linkSections} />
+            <Menu hideBelow="lg" path={path} sections={linkSections} />
             <Flex
               alignItems="center"
               justifyContent="space-between"
-              gap={{ base: 1, xl: 0 }}
+              gap={{ base: 2, xl: 4 }}
             >
-              <Search ref={searchRef} />
-              <IconButton
-                aria-label={
-                  isDarkTheme ? "Switch to Light Theme" : "Switch to Dark Theme"
-                }
-                icon={<Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />}
-                variant="icon"
-                size="sm"
-                fontSize="2xl"
-                ms={{ xl: 2 }}
-                _hover={{ color: "primary.base" }}
-                onClick={toggleColorMode}
+              <Search {...searchModalDisclosure} />
+              {/* Mobile */}
+              <MobileNavMenu
+                {...mobileNavProps}
+                hideFrom="lg"
+                toggleSearch={searchModalDisclosure.onOpen}
+                drawerContainerRef={navWrapperRef}
               />
-              <ButtonLink
-                to={`/languages/${fromPageParameter}`}
-                variant="icon"
-                px={{ base: 1, xl: 1.5 }}
-                size="sm"
-                fontSize="md"
-              >
-                <Icon as={MdLanguage} fontSize="2xl" />
-                <Text as="span" pl={2}>
-                  <Box as="span" hideBelow="lg">
-                    {t("languages")}
-                  </Box>{" "}
-                  {i18n.language.toUpperCase()}
-                </Text>
-              </ButtonLink>
+              {/* Desktop */}
+              <HStack spacing={2} hideBelow="lg">
+                <IconButton
+                  transition="transform 0.5s, color 0.2s"
+                  icon={isDarkTheme ? <MdWbSunny /> : <MdBrightness2 />}
+                  aria-label={
+                    isDarkTheme
+                      ? "Switch to Light Theme"
+                      : "Switch to Dark Theme"
+                  }
+                  variant="ghost"
+                  isSecondary
+                  px={1.5}
+                  _hover={{
+                    transform: "rotate(10deg)",
+                    color: "primary.hover",
+                  }}
+                  onClick={toggleColorMode}
+                />
+
+                {/* Locale-picker menu */}
+                <LanguagePicker
+                  placement="bottom-end"
+                  minH="unset"
+                  maxH="75vh"
+                  w="xs"
+                  inset="unset"
+                  top="unset"
+                  menuState={languagePickerState}
+                >
+                  <MenuButton
+                    as={Button}
+                    ref={languagePickerRef}
+                    variant="ghost"
+                    color="body.base"
+                    transition="color 0.2s"
+                    _hover={{
+                      color: "primary.hover",
+                      "& svg": {
+                        transform: "rotate(10deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }}
+                    _active={{
+                      color: "primary.hover",
+                      bg: "primary.lowContrast",
+                    }}
+                    sx={{
+                      "& svg": {
+                        transform: "rotate(0deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }}
+                  >
+                    <Icon
+                      as={BsTranslate}
+                      fontSize="2xl"
+                      verticalAlign="middle"
+                      me={2}
+                    />
+                    <Text hideBelow="lg" as="span">
+                      {t("common:languages")}&nbsp;
+                    </Text>
+                    {locale!.toUpperCase()}
+                  </MenuButton>
+                </LanguagePicker>
+              </HStack>
             </Flex>
           </Flex>
-          {/* Mobile */}
-          <MobileNavMenu
-            {...mobileNavProps}
-            drawerContainerRef={navWrapperRef}
-          />
         </Flex>
       </Flex>
       {shouldShowSubNav && (
@@ -123,19 +194,21 @@ const Nav: FC<IProps> = ({ path }) => {
           px={8}
         >
           {ednLinks.map((link, idx) => (
-            <Link
+            <BaseLink
               key={idx}
               to={link.to}
               isPartiallyActive={link.isPartiallyActive}
               color="text"
+              fontWeight="normal"
               textDecor="none"
-              mr={8}
+              me={8}
               _hover={{
                 color: "primary.base",
                 svg: {
                   fill: "currentColor",
                 },
               }}
+              _visited={{}}
               sx={{
                 svg: {
                   fill: "currentColor",
@@ -143,7 +216,7 @@ const Nav: FC<IProps> = ({ path }) => {
               }}
             >
               {link.text}
-            </Link>
+            </BaseLink>
           ))}
         </Flex>
       )}

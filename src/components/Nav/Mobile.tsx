@@ -1,28 +1,37 @@
 import React, { Fragment, ReactNode, RefObject } from "react"
+import { motion } from "framer-motion"
+import { useTranslation } from "next-i18next"
+import { IconType } from "react-icons"
+import { BsTranslate } from "react-icons/bs"
+import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
 import {
   Box,
-  IconButton,
-  Icon,
+  ButtonProps,
   Drawer,
-  DrawerOverlay,
-  DrawerContent,
   DrawerBody,
+  DrawerCloseButton,
+  DrawerContent,
+  DrawerFooter,
+  DrawerOverlay,
+  Flex,
+  forwardRef,
+  Grid,
+  Icon,
+  IconButton,
   List,
   ListItem,
-  forwardRef,
-  DrawerFooter,
-  Flex,
+  MenuButton,
+  Text,
+  useColorModeValue,
 } from "@chakra-ui/react"
-import { MdBrightness2, MdLanguage, MdSearch, MdWbSunny } from "react-icons/md"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { motion } from "framer-motion"
 
-import Link from "../Link"
-import Translation from "../Translation"
+import LanguagePicker from "@/components/LanguagePicker"
+
+import type { ChildOnlyProp } from "../../lib/types"
+import { Button } from "../Buttons"
+import { BaseLink } from "../Link"
 
 import { ISections } from "./types"
-import { ChildOnlyProp } from "../../types"
-import { SearchIconButton } from "../Search"
 
 const NavListItem = forwardRef<{ "aria-label"?: string }, typeof List>(
   (props, ref) => <ListItem ref={ref} mb={12} {...props} />
@@ -37,7 +46,7 @@ const StyledNavLink = (props: {
   isPartiallyActive: boolean
   children: ReactNode
 }) => (
-  <Link
+  <BaseLink
     color="currentColor"
     textDecor="none"
     _hover={{
@@ -71,8 +80,25 @@ const FooterItem = forwardRef<ChildOnlyProp, "div">((props, ref) => (
   />
 ))
 
+type FooterButtonProps = ButtonProps & {
+  icon: IconType
+}
+
+const FooterButton = ({ icon, ...props }: FooterButtonProps) => (
+  <Button
+    leftIcon={<Icon as={icon} />}
+    sx={{ span: { m: 0 } }}
+    variant="ghost"
+    flexDir="column"
+    alignItems="center"
+    color="body.base"
+    px="1"
+    {...props}
+  />
+)
+
 const FooterItemText = (props: ChildOnlyProp) => (
-  <Box
+  <Text
     fontSize="sm"
     lineHeight={1.6}
     fontWeight={400}
@@ -90,21 +116,101 @@ const hamburgerSvg =
   "M 2 13 l 10 0 l 0 0 l 10 0 M 4 19 l 8 0 M 12 19 l 8 0 M 2 25 l 10 0 l 0 0 l 10 0"
 const glyphSvg =
   "M 2 19 l 10 -14 l 0 0 l 10 14 M 2 19 l 10 7 M 12 26 l 10 -7 M 2 22 l 10 15 l 0 0 l 10 -15"
-const closeSvg =
-  "M 2 13 l 0 -3 l 20 0 l 0 3 M 7 14 l 10 10 M 7 24 l 10 -10 M 2 25 l 0 3 l 20 0 l 0 -3"
 
-const glyphPathVariants = {
-  closed: {
-    d: hamburgerSvg,
-    transition: { duration: 0.4 },
-  },
-  open: {
-    d: [hamburgerSvg, glyphSvg, glyphSvg, glyphSvg, closeSvg],
-    transition: { duration: 1.2 },
-  },
+const hamburgerVariants = {
+  closed: { d: hamburgerSvg, transition: { duration: 0.25 } },
+  open: { d: glyphSvg, transition: { duration: 0.25 } },
 }
 
-export interface IProps {
+type HamburgerProps = ButtonProps & {
+  isMenuOpen: boolean
+  onToggle: () => void
+}
+
+const HamburgerButton = ({
+  isMenuOpen,
+  onToggle,
+  ...props
+}: HamburgerProps) => {
+  const { t } = useTranslation("common")
+  return (
+    <IconButton
+      onClick={onToggle}
+      aria-label={t("aria-toggle-search-button")}
+      variant="ghost"
+      isSecondary
+      px={0}
+      color="body.base"
+      icon={
+        <Icon
+          viewBox="0 0 24 40"
+          pointerEvents={isMenuOpen ? "none" : "auto"}
+          mx={0.5}
+          width={6}
+          height={10}
+          position="relative"
+          strokeWidth="2px"
+          _hover={{
+            color: "primary.base",
+            "& > path": {
+              stroke: "primary.base",
+            },
+          }}
+          sx={{
+            "& > path": {
+              stroke: "text",
+              fill: "none",
+            },
+          }}
+        >
+          <motion.path
+            variants={hamburgerVariants}
+            initial={false}
+            animate={isMenuOpen ? "open" : "closed"}
+          />
+        </Icon>
+      }
+      {...props}
+    />
+  )
+}
+
+type CloseButtonProps = ButtonProps & {
+  onToggle: () => void
+}
+
+const CloseButton = ({ onToggle, ...props }: CloseButtonProps) => {
+  const { t } = useTranslation("common")
+  return (
+    <IconButton
+      onClick={onToggle}
+      aria-label={t("aria-toggle-search-button")}
+      variant="ghost"
+      isSecondary
+      px={0}
+      color="menu.lvl1.main"
+      icon={
+        <Icon
+          viewBox="0 0 24 24"
+          width={6}
+          height={6}
+          position="relative"
+          strokeWidth="2px"
+          display="inline-block"
+          stroke="currentColor"
+        >
+          <path d="M 2 4 l 0 -3 l 20 0 l 0 3" />
+          <path d="M 7 15 l 10 -10 " />
+          <path d="M 7 5 l 10 10" />
+          <path d="M 2 16 l 0 3 l 20 0 l 0 -3" />
+        </Icon>
+      }
+      {...props}
+    />
+  )
+}
+
+export type MobileNavMenuProps = ButtonProps & {
   isMenuOpen: boolean
   isDarkTheme: boolean
   toggleMenu: () => void
@@ -115,80 +221,37 @@ export interface IProps {
   drawerContainerRef: RefObject<HTMLElement | null>
 }
 
-const MobileNavMenu: React.FC<IProps> = ({
+const MobileNavMenu = ({
   isMenuOpen,
   isDarkTheme,
-  toggleMenu,
+  toggleMenu: onToggle,
   toggleTheme,
   toggleSearch,
   linkSections,
   fromPageParameter,
   drawerContainerRef,
-}) => {
-  const { t } = useTranslation()
+  ...props
+}: MobileNavMenuProps) => {
+  const { t } = useTranslation("common")
 
-  const handleClick = (): void => {
-    toggleMenu()
-  }
+  const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
+  const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
 
   return (
-    <Box
-      display={{ base: "flex", lg: "none" }}
-      gap={2}
-      sx={{ svg: { fill: "body.base" } }}
-    >
-      <SearchIconButton
-        onClick={toggleSearch}
-        aria-label={t("aria-toggle-search-button")}
-        size="sm"
-      />
-      <IconButton
-        icon={
-          <Icon
-            viewBox="0 0 24 40"
-            pointerEvents={isMenuOpen ? "none" : "auto"}
-            mx={0.5}
-            width={6}
-            height={10}
-            position="relative"
-            strokeWidth="2px"
-            zIndex={100}
-            _hover={{
-              color: "primary.base",
-              "& > path": {
-                stroke: "primary.base",
-              },
-            }}
-            sx={{
-              "& > path": {
-                stroke: "text",
-                fill: "none",
-              },
-            }}
-          >
-            <motion.path
-              variants={glyphPathVariants}
-              initial={false}
-              animate={isMenuOpen ? "open" : "closed"}
-            />
-          </Icon>
-        }
-        onClick={toggleMenu}
-        aria-label={t("aria-toggle-search-button")}
-        variant="icon"
-        size="sm"
-        zIndex={2000}
-        _hover={{ svg: { fill: "primary.base" } }}
-      />
+    <>
+      <HamburgerButton isMenuOpen={isMenuOpen} onToggle={onToggle} {...props} />
       <Drawer
         portalProps={{ containerRef: drawerContainerRef }}
         isOpen={isMenuOpen}
-        onClose={handleClick}
-        placement="left"
+        onClose={onToggle}
+        placement="start"
         size="sm"
       >
         <DrawerOverlay bg="modalBackground" />
         <DrawerContent bg="background.base">
+          <DrawerCloseButton fontSize="md" w="fit-content" px="2" m="2">
+            {t("close")}
+          </DrawerCloseButton>
           <DrawerBody pt={12} pb={24} px={4}>
             <List m={0}>
               {Object.keys(linkSections).map((sectionKey, idx) => {
@@ -213,7 +276,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                               {item.text}
                             </Box>
                             {item.items.map((item, idx) => (
-                              <SectionItem key={idx} onClick={handleClick}>
+                              <SectionItem key={idx} onClick={onToggle}>
                                 <StyledNavLink
                                   to={item.to}
                                   isPartiallyActive={item.isPartiallyActive}
@@ -224,7 +287,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                             ))}
                           </Fragment>
                         ) : (
-                          <SectionItem key={idx} onClick={handleClick}>
+                          <SectionItem key={idx} onClick={onToggle}>
                             <StyledNavLink
                               to={item.to}
                               isPartiallyActive={item.isPartiallyActive}
@@ -237,7 +300,7 @@ const MobileNavMenu: React.FC<IProps> = ({
                     </List>
                   </NavListItem>
                 ) : (
-                  <NavListItem key={idx} onClick={handleClick}>
+                  <NavListItem key={idx} onClick={onToggle}>
                     <StyledNavLink
                       to={section.to}
                       isPartiallyActive={section.isPartiallyActive}
@@ -259,47 +322,43 @@ const MobileNavMenu: React.FC<IProps> = ({
             py={0}
             mt="auto"
           >
-            <FooterItem
-              onClick={() => {
-                // Workaround to ensure the input for the search modal can have focus
-                toggleMenu()
-                toggleSearch()
-              }}
-            >
-              <Icon as={MdSearch} />
-              <FooterItemText>
-                <Translation id="search" />
-              </FooterItemText>
-            </FooterItem>
-            <FooterItem onClick={toggleTheme}>
-              <Icon as={isDarkTheme ? MdWbSunny : MdBrightness2} />
-              <FooterItemText>
-                <Translation id={isDarkTheme ? "light-mode" : "dark-mode"} />
-              </FooterItemText>
-            </FooterItem>
-            <FooterItem onClick={handleClick}>
-              <Flex
-                as={Link}
-                to={`/languages/${fromPageParameter}`}
-                alignItems="center"
-                color="text"
-                flexDir="column"
-                textDecor="none"
-                _hover={{
-                  color: "primary.base",
-                  textDecor: "none",
+            <Grid templateColumns="repeat(3, 1fr)" w="full">
+              <FooterButton
+                icon={MdSearch}
+                onClick={() => {
+                  // Workaround to ensure the input for the search modal can have focus
+                  onToggle()
+                  toggleSearch()
                 }}
               >
-                <Icon as={MdLanguage} />
-                <FooterItemText>
-                  <Translation id="languages" />
-                </FooterItemText>
-              </Flex>
-            </FooterItem>
+                <FooterItemText>{t("search")}</FooterItemText>
+              </FooterButton>
+              <FooterButton icon={ThemeIcon} onClick={toggleTheme}>
+                <FooterItemText>{t(themeLabelKey)}</FooterItemText>
+              </FooterButton>
+              <LanguagePicker
+                hideFrom="lg" // TODO: Confirm breakpoint after nav-menu PR merged
+                position="fixed"
+                w="calc(100vw - var(--eth-sizes-8))"
+                inset="4"
+                handleClose={onToggle}
+                _before={{
+                  content: '""',
+                  position: "fixed",
+                  inset: 0,
+                  bg: "black",
+                  opacity: 0.4,
+                }} // TODO: Replace with overlay component
+              >
+                <MenuButton as={FooterButton} icon={BsTranslate}>
+                  <FooterItemText>{t("languages")}</FooterItemText>
+                </MenuButton>
+              </LanguagePicker>
+            </Grid>
           </DrawerFooter>
         </DrawerContent>
       </Drawer>
-    </Box>
+    </>
   )
 }
 

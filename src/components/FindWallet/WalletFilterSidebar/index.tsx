@@ -1,27 +1,24 @@
-// Libraries
-import React, { forwardRef } from "react"
-import {
-  Icon,
-  Center,
-  useTheme,
-  Tabs,
-  TabList,
-  Tab,
-  TabPanels,
-  TabPanel,
-} from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
+import {
+  Box,
+  Center,
+  Icon,
+  Tab,
+  TabList,
+  TabPanel,
+  TabPanels,
+  Tabs,
+  type TabsProps,
+  useTheme,
+} from "@chakra-ui/react"
 
-// Components
-import Translation from "../../Translation"
-import WalletFilterProfile from "./WalletFilterFeature"
-import WalletFilterPersonas from "./WalletFilterProfile"
+import WalletFilterProfile from "@/components/FindWallet/WalletFilterSidebar/WalletFilterFeature"
+import WalletFilterPersonas from "@/components/FindWallet/WalletFilterSidebar/WalletFilterProfile"
 
-// Utils
-import { trackCustomEvent } from "../../../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { FiltersType } from "../../../pages/wallets/find-wallet"
+import { FiltersType } from "@/pages/wallets/find-wallet"
 
 const FilterTab = ({
   eventName,
@@ -52,8 +49,7 @@ const FilterTab = ({
   />
 )
 
-interface WalletFilterSidebarProps {
-  showMobileSidebar: boolean
+type WalletFilterSidebarProps = Omit<TabsProps, "children"> & {
   filters: FiltersType
   resetWalletFilter: React.MutableRefObject<() => void>
   resetFilters: () => void
@@ -64,74 +60,48 @@ interface WalletFilterSidebarProps {
   updateFilterOptions: (keys: any, value: any) => void
 }
 
-const WalletFilterSidebar = forwardRef<
-  HTMLDivElement,
-  WalletFilterSidebarProps
->(
-  /**
-   * Note: forwardRef here comes from React and not Chakra
-   * Chakra's version throws error of `children` prop missing
-   */
-  (props, ref) => {
-    const {
-      showMobileSidebar,
-      filters,
-      resetWalletFilter,
-      resetFilters,
-      setFilters,
-      selectedPersona,
-      setSelectedPersona,
-      updateFilterOption,
-      updateFilterOptions,
-    } = props
+const WalletFilterSidebar = ({
+  filters,
+  resetWalletFilter,
+  resetFilters,
+  setFilters,
+  selectedPersona,
+  setSelectedPersona,
+  updateFilterOption,
+  updateFilterOptions,
+  top,
+  ...tabsProps
+}: WalletFilterSidebarProps) => {
+  const theme = useTheme()
+  const { t } = useTranslation("page-wallets-find-wallet")
 
-    const theme = useTheme()
-    const { t } = useTranslation()
-    return (
-      <Tabs
-        ref={ref}
-        maxW="330px"
-        overflowY="scroll"
-        bg="background.base"
-        transition="0.5s all"
-        zIndex={20}
-        borderTopRightRadius="lg"
-        pointerEvents="auto"
-        sx={{
-          scrollbarWidth: "thin",
-          scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
+  return (
+    <Tabs
+      bg="background.base"
+      transition="0.5s all"
+      sx={{
+        scrollbarWidth: "thin",
+        scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
 
-          "::-webkit-scrollbar": {
-            width: 2,
-          },
-          "::-webkit-scrollbar-track": {
-            bg: "background.base",
-          },
-          "::-webkit-scrollbar-thumb": {
-            bgColor: "lightBorder",
-            borderRadius: "base",
-            border: "2px solid",
-            borderColor: "background.base",
-          },
-        }}
-        width={{ base: "90%", sm: "350px", lg: "full" }}
-        height={{ base: "full", lg: "auto" }}
-        hideBelow={!showMobileSidebar ? "lg" : undefined}
-        position={{
-          base: showMobileSidebar ? "absolute" : "relative",
-          lg: "static",
-        }}
-        boxShadow={{
-          base: showMobileSidebar ? "0 800px 0 800px rgb(0 0 0 / 65%)" : "none",
-          lg: "none",
-        }}
-        left={showMobileSidebar ? 0 : "-400px"}
-      >
+        "::-webkit-scrollbar": {
+          width: 2,
+        },
+        "::-webkit-scrollbar-track": {
+          bg: "background.base",
+        },
+        "::-webkit-scrollbar-thumb": {
+          bgColor: "lightBorder",
+          borderRadius: "base",
+          border: "2px solid",
+          borderColor: "background.base",
+        },
+      }}
+      {...tabsProps}
+    >
+      <Box position="sticky" top={top ?? 0}>
         <TabList
           borderBottom="1px solid"
           borderBottomColor="primary.base"
-          position="sticky"
-          top={0}
           bg="background.base"
           sx={{
             ".chakra-tabs__tab": {
@@ -140,16 +110,16 @@ const WalletFilterSidebar = forwardRef<
               letterSpacing: "0.02rem",
               py: "0.9rem",
               _first: {
-                borderTopLeftRadius: "lg",
+                borderTopStartRadius: "lg",
               },
               _last: {
-                borderTopRightRadius: "lg",
+                borderTopEndRadius: "lg",
               },
             },
           }}
         >
           <FilterTab eventName="show user personas">
-            <Translation id="page-find-wallet-profile-filters" />
+            {t("page-find-wallet-profile-filters")}
           </FilterTab>
           <FilterTab eventName="show feature filters">
             {t("page-find-wallet-feature-filters")} (
@@ -162,63 +132,63 @@ const WalletFilterSidebar = forwardRef<
             )
           </FilterTab>
         </TabList>
-        <Center
-          as="button"
-          borderRadius="base"
-          color="primary.base"
-          fontSize="xs"
-          gap={1}
-          mx="auto"
-          my="0.55rem"
-          py={0.5}
-          px={1}
-          _hover={{
-            color: "selectHover",
-          }}
-          onClick={() => {
-            resetFilters()
-            resetWalletFilter.current()
-            trackCustomEvent({
-              eventCategory: "WalletFilterReset",
-              eventAction: `WalletFilterReset clicked`,
-              eventName: `reset filters`,
-            })
-          }}
-        >
-          <Icon as={BsArrowCounterclockwise} aria-hidden="true" fontSize="sm" />
-          {"Reset filters".toUpperCase()}
-        </Center>
-        <TabPanels
-          m={0}
-          sx={{
-            ".chakra-tabs__tab-panel": {
-              bg: "transparent",
-              border: "none",
-              p: 0,
-            },
-          }}
-        >
-          <TabPanel>
-            <WalletFilterPersonas
-              resetFilters={resetFilters}
-              setFilters={setFilters}
-              selectedPersona={selectedPersona}
-              setSelectedPersona={setSelectedPersona}
-            />
-          </TabPanel>
-          <TabPanel>
-            <WalletFilterProfile
-              resetWalletFilter={resetWalletFilter}
-              filters={filters}
-              updateFilterOption={updateFilterOption}
-              updateFilterOptions={updateFilterOptions}
-            />
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-    )
-  }
-)
+      </Box>
+      <Center
+        as="button"
+        borderRadius="base"
+        color="primary.base"
+        fontSize="xs"
+        gap={1}
+        mx="auto"
+        mt="0.55rem"
+        py={0.5}
+        px={1}
+        _hover={{
+          color: "selectHover",
+        }}
+        onClick={() => {
+          resetFilters()
+          resetWalletFilter.current()
+          trackCustomEvent({
+            eventCategory: "WalletFilterReset",
+            eventAction: `WalletFilterReset clicked`,
+            eventName: `reset filters`,
+          })
+        }}
+      >
+        <Icon as={BsArrowCounterclockwise} aria-hidden="true" fontSize="sm" />
+        {t("page-find-wallet-reset-filters").toUpperCase()}
+      </Center>
+      <TabPanels
+        m={0}
+        sx={{
+          ".chakra-tabs__tab-panel": {
+            bg: "transparent",
+            border: "none",
+            p: 0,
+          },
+        }}
+      >
+        <TabPanel>
+          <WalletFilterPersonas
+            resetFilters={resetFilters}
+            setFilters={setFilters}
+            selectedPersona={selectedPersona}
+            setSelectedPersona={setSelectedPersona}
+          />
+        </TabPanel>
+        <TabPanel>
+          <WalletFilterProfile
+            resetWalletFilter={resetWalletFilter}
+            filters={filters}
+            updateFilterOption={updateFilterOption}
+            updateFilterOptions={updateFilterOptions}
+          />
+        </TabPanel>
+      </TabPanels>
+    </Tabs>
+  )
+}
 
 WalletFilterSidebar.displayName = "WalletFilterSidebar"
 

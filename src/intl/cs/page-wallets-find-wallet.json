@@ -54,7 +54,7 @@
   "page-find-wallet-info-updated-on": "informace aktualizovány",
   "page-find-wallet-showing-all-wallets": "Zobrazení všech peněženek",
   "page-find-wallet-showing": "Zobrazeno ",
-  "page-find-wallet-wallets": "peněženkách.",
+  "page-find-wallet-wallets": "peněženky",
   "page-find-wallet-iOS": "iOS",
   "page-find-wallet-android": "Android",
   "page-find-wallet-linux": "Linux",
@@ -81,12 +81,15 @@
   "page-find-wallet-feature-filters": "Filtry funkcí",
   "page-find-wallet-footnote-1": "Peněženky uvedené na této stránce nejsou oficiálním doporučením a jsou poskytovány pouze pro informační účely.",
   "page-find-wallet-footnote-2": "Jejich popisy byly poskytnuty samotnými tvůrci peněženek.",
-  "page-find-wallet-footnote-3": "Na tuto stránku přidáváme produkty na základě kritérií v našich <a href=\"/contributing/adding-products/\">pravidlech</a>. Pokud byste chtěli přidat peněženku, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">navrhněte podnět na GitHubu</a>.",
+  "page-find-wallet-footnote-3": "Na tuto stránku přidáváme produkty na základě kritérií v našich <a href=\"/contributing/adding-wallets/\">zásadách pro přidávání</a>. Pokud byste chtěli přidat peněženku, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">navrhněte podnět na GitHubu</a>.",
   "page-find-wallet-mobile": "Mobilní",
   "page-find-wallet-mobile-desc": "Peněženky s mobilními aplikacemi",
   "page-find-wallet-desktop": "Desktopová",
   "page-find-wallet-desktop-desc": "Peněženky s desktopovými aplikacemi",
   "page-find-wallet-browser": "Prohlížeč",
   "page-find-wallet-browser-desc": "Peněženky s rozšířeními prohlížeče",
-  "page-find-wallet-device": "Zařízení"
+  "page-find-wallet-device": "Zařízení",
+  "page-find-choose-to-compare": "Zvolte pro porovnání",
+  "page-find-wallet-choose-features": "Vyberte funkce",
+  "page-find-wallet-reset-filters": "Resetovat filtry"
 }

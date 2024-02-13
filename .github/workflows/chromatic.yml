@@ -14,9 +14,8 @@ on:
       # Only run on file changes in any of these paths
       - "src/components/**/*"
       - "src/pages/**/*"
-      - "src/pages-conditional/**/*"
-      - "src/templates/**/*"
-      - "src/@chakra-ui/gatsby-plugin/**/*"
+      - "src/layouts/**/*"
+      - "src/@chakra-ui/**/*"
 
 # List of jobs
 jobs:
