@@ -33,7 +33,7 @@ O site ethereum.org, como o Ethereum de forma mais ampla, é um projeto de códi
 - [Questionários](/contributing/quizzes/) _- Adicione, atualize e exclua bancos de perguntas do questionário para uma página relevante_
 - [Sugerir um recurso de design](/contributing/design/adding-design-resources/) _- Adicionar, atualizar e excluir recursos úteis de design_
 
-_Alguma dúvida?_ 🤔 Entre em contato no nosso [servidor do Discord](https://discord.gg/CetY6Y4)
+_Alguma dúvida?_ 🤔 Entre em contato no nosso [servidor do Discord](https://discord.gg/ethereum-org)
 
 ## Como trabalhar no ethereum.org {#how-to-update-content}
 
@@ -44,7 +44,7 @@ Todas as atualizações são efetuadas por meio do processo de PR (solicitação
 Você não precisa de permissão para trabalhar em nada, mas é sempre melhor nos informar sobre o que está planejando fazer. Você pode fazer isso:
 
 - Comentando sobre um problema ou uma solicitação de pull (PR) no [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Enviando uma mensagem em nosso [servidor Discord](https://discord.gg/CetY6Y4)
+- Enviando uma mensagem em nosso [servidor Discord](https://discord.gg/ethereum-org)
 
 Antes de contribuir, certifique-se de está familiarizado com:
 
@@ -59,7 +59,7 @@ As decisões sobre PRs individuais, desenvolvimento do design e grandes atualiza
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Servidor do Discord](https://discord.gg/CetY6Y4)
+- [Servidor do Discord](https://discord.gg/ethereum-org)
 
 ### Observação sobre plágio {#plagiarism}
 
