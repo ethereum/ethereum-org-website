@@ -14,7 +14,7 @@ module.exports = {
     defaultLocale: "default",
     // supported locales defined in `i18n.config.json`
     locales: ["default", ...locales],
-    localeDetection: true,
+    localeDetection: false,
   },
   // define custom location for intl files, otherwise default to public/locales (https://github.com/i18next/next-i18next#2-translation-content)
   localePath: "./src/intl",
