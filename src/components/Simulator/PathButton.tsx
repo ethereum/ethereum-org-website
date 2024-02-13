@@ -1,12 +1,13 @@
 import React from "react"
 import { Button, Flex, Text } from "@chakra-ui/react"
+
 import type { SimulatorPathSummary } from "./interfaces"
 
-interface IProps {
+type PathButtonProps = {
   pathSummary: SimulatorPathSummary
   handleClick: () => void
 }
-export const PathButton: React.FC<IProps> = ({ pathSummary, handleClick }) => {
+export const PathButton = ({ pathSummary, handleClick }: PathButtonProps) => {
   const { primaryText, secondaryText, Icon } = pathSummary
   return (
     <Button

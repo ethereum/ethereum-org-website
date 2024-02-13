@@ -1,8 +1,8 @@
 // Import data types
-import { QuestionBank } from "../../types"
+import type { QuestionBank } from "@/lib/types"
 
 // Declare hash map of question bank
-const questionBank: QuestionBank = {
+const questionBank = {
   // What is Ethereum?
   a001: {
     prompt: "a001-prompt",
@@ -887,6 +887,467 @@ const questionBank: QuestionBank = {
     ],
     correctAnswerId: "h005-b",
   },
-}
+  // Solo staking
+  j001: {
+    prompt: "j001-prompt",
+    answers: [
+      {
+        id: "j001-a",
+        label: "j001-a-label",
+        explanation: "j001-a-explanation",
+      },
+      {
+        id: "j001-b",
+        label: "j001-b-label",
+        explanation: "j001-b-explanation",
+      },
+      {
+        id: "j001-c",
+        label: "j001-c-label",
+        explanation: "j001-c-explanation",
+      },
+      {
+        id: "j001-d",
+        label: "j001-d-label",
+        explanation: "j001-d-explanation",
+      },
+    ],
+    correctAnswerId: "j001-d",
+  },
+  j002: {
+    prompt: "j002-prompt",
+    answers: [
+      {
+        id: "j002-a",
+        label: "j002-a-label",
+        explanation: "j002-a-explanation",
+      },
+      {
+        id: "j002-b",
+        label: "j002-b-label",
+        explanation: "j002-b-explanation",
+      },
+      {
+        id: "j002-c",
+        label: "j002-c-label",
+        explanation: "j002-c-explanation",
+      },
+      {
+        id: "j002-d",
+        label: "j002-d-label",
+        explanation: "j002-d-explanation",
+      },
+    ],
+    correctAnswerId: "j002-b",
+  },
+  j003: {
+    prompt: "j003-prompt",
+    answers: [
+      {
+        id: "j003-a",
+        label: "j003-a-label",
+        explanation: "j003-a-explanation",
+      },
+      {
+        id: "j003-b",
+        label: "j003-b-label",
+        explanation: "j003-b-explanation",
+      },
+      {
+        id: "j003-c",
+        label: "j003-c-label",
+        explanation: "j003-c-explanation",
+      },
+      {
+        id: "j003-d",
+        label: "j003-d-label",
+        explanation: "j003-d-explanation",
+      },
+    ],
+    correctAnswerId: "j003-b",
+  },
+  j004: {
+    prompt: "j004-prompt",
+    answers: [
+      {
+        id: "j004-a",
+        label: "j004-a-label",
+        explanation: "j004-a-explanation",
+      },
+      {
+        id: "j004-b",
+        label: "j004-b-label",
+        explanation: "j004-b-explanation",
+      },
+      {
+        id: "j004-c",
+        label: "j004-c-label",
+        explanation: "j004-c-explanation",
+      },
+      {
+        id: "j004-d",
+        label: "j004-d-label",
+        explanation: "j004-d-explanation",
+      },
+    ],
+    correctAnswerId: "j004-d",
+  },
+  j005: {
+    prompt: "j005-prompt",
+    answers: [
+      {
+        id: "j005-a",
+        label: "j005-a-label",
+        explanation: "j005-a-explanation",
+      },
+      {
+        id: "j005-b",
+        label: "j005-b-label",
+        explanation: "j005-b-explanation",
+      },
+      {
+        id: "j005-c",
+        label: "j005-c-label",
+        explanation: "j005-c-explanation",
+      },
+      {
+        id: "j005-d",
+        label: "j005-d-label",
+        explanation: "j005-d-explanation",
+      },
+    ],
+    correctAnswerId: "j005-c",
+  },
+  j006: {
+    prompt: "j006-prompt",
+    answers: [
+      {
+        id: "j006-a",
+        label: "j006-a-label",
+        explanation: "j006-a-explanation",
+      },
+      {
+        id: "j006-b",
+        label: "j006-b-label",
+        explanation: "j006-b-explanation",
+      },
+      {
+        id: "j006-c",
+        label: "j006-c-label",
+        explanation: "j006-b-explanation",
+      },
+      {
+        id: "j006-d",
+        label: "j006-d-label",
+        explanation: "j006-b-explanation",
+      },
+    ],
+    correctAnswerId: "j006-a",
+  },
+  j007: {
+    prompt: "j007-prompt",
+    answers: [
+      {
+        id: "j007-a",
+        label: "j007-a-label",
+        explanation: "j007-a-explanation",
+      },
+      {
+        id: "j007-b",
+        label: "j007-b-label",
+        explanation: "j007-b-explanation",
+      },
+      {
+        id: "j007-c",
+        label: "j007-c-label",
+        explanation: "j007-c-explanation",
+      },
+      {
+        id: "j007-d",
+        label: "j007-d-label",
+        explanation: "j007-d-explanation",
+      },
+    ],
+    correctAnswerId: "j007-c",
+  },
+  j008: {
+    prompt: "j008-prompt",
+    answers: [
+      {
+        id: "j008-a",
+        label: "j008-a-label",
+        explanation: "j008-a-explanation",
+      },
+      {
+        id: "j008-b",
+        label: "j008-b-label",
+        explanation: "j008-b-explanation",
+      },
+      {
+        id: "j008-c",
+        label: "j008-c-label",
+        explanation: "j008-c-explanation",
+      },
+      {
+        id: "j008-d",
+        label: "j008-d-label",
+        explanation: "j008-d-explanation",
+      },
+    ],
+    correctAnswerId: "j008-d",
+  },
+  // Scaling
+  k001: {
+    prompt: "k001-prompt",
+    answers: [
+      {
+        id: "k001-a",
+        label: "k001-a-label",
+        explanation: "k001-a-explanation",
+      },
+      {
+        id: "k001-b",
+        label: "k001-b-label",
+        explanation: "k001-b-explanation",
+      },
+      {
+        id: "k001-c",
+        label: "k001-c-label",
+        explanation: "k001-c-explanation",
+      },
+      {
+        id: "k001-d",
+        label: "k001-d-label",
+        explanation: "k001-d-explanation",
+      },
+    ],
+    correctAnswerId: "k001-d",
+  },
+  k002: {
+    prompt: "k002-prompt",
+    answers: [
+      {
+        id: "k002-a",
+        label: "k002-a-label",
+        explanation: "k002-a-explanation",
+      },
+      {
+        id: "k002-b",
+        label: "k002-b-label",
+        explanation: "k002-b-explanation",
+      },
+      {
+        id: "k002-c",
+        label: "k002-c-label",
+        explanation: "k002-c-explanation",
+      },
+      {
+        id: "k002-d",
+        label: "k002-d-label",
+        explanation: "k002-d-explanation",
+      },
+    ],
+    correctAnswerId: "k002-c",
+  },
+  k003: {
+    prompt: "k003-prompt",
+    answers: [
+      {
+        id: "k003-a",
+        label: "k003-a-label",
+        explanation: "k003-a-explanation",
+      },
+      {
+        id: "k003-b",
+        label: "k003-b-label",
+        explanation: "k003-b-explanation",
+      },
+      {
+        id: "k003-c",
+        label: "k003-c-label",
+        explanation: "k003-c-explanation",
+      },
+      {
+        id: "k003-d",
+        label: "k003-d-label",
+        explanation: "k003-d-explanation",
+      },
+    ],
+    correctAnswerId: "k003-d",
+  },
+  k004: {
+    prompt: "k004-prompt",
+    answers: [
+      {
+        id: "k004-a",
+        label: "k004-a-label",
+        explanation: "k004-a-explanation",
+      },
+      {
+        id: "k004-b",
+        label: "k004-b-label",
+        explanation: "k004-b-explanation",
+      },
+      {
+        id: "k004-c",
+        label: "k004-c-label",
+        explanation: "k004-c-explanation",
+      },
+      {
+        id: "k004-d",
+        label: "k004-d-label",
+        explanation: "k004-d-explanation",
+      },
+    ],
+    correctAnswerId: "k004-b",
+  },
+  // Run a node
+  l001: {
+    prompt: "l001-prompt",
+    answers: [
+      {
+        id: "l001-a",
+        label: "l001-a-label",
+        explanation: "l001-a-explanation",
+      },
+      {
+        id: "l001-b",
+        label: "l001-b-label",
+        explanation: "l001-b-explanation",
+      },
+      {
+        id: "l001-c",
+        label: "l001-c-label",
+        explanation: "l001-c-explanation",
+      },
+      {
+        id: "l001-d",
+        label: "l001-d-label",
+        explanation: "l001-d-explanation",
+      },
+    ],
+    correctAnswerId: "l001-a",
+  },
+  l002: {
+    prompt: "l002-prompt",
+    answers: [
+      {
+        id: "l002-a",
+        label: "l002-a-label",
+        explanation: "l002-a-explanation",
+      },
+      {
+        id: "l002-b",
+        label: "l002-b-label",
+        explanation: "l002-a-explanation",
+      },
+      {
+        id: "l002-c",
+        label: "l002-c-label",
+        explanation: "l002-a-explanation",
+      },
+      {
+        id: "l002-d",
+        label: "l002-d-label",
+        explanation: "l002-d-explanation",
+      },
+    ],
+    correctAnswerId: "l002-a",
+  },
+  l003: {
+    prompt: "l003-prompt",
+    answers: [
+      {
+        id: "l003-a",
+        label: "l003-a-label",
+        explanation: "l003-a-explanation",
+      },
+      {
+        id: "l003-b",
+        label: "l003-b-label",
+        explanation: "l003-b-explanation",
+      },
+      {
+        id: "l003-c",
+        label: "l003-c-label",
+        explanation: "l003-c-explanation",
+      },
+      {
+        id: "l003-d",
+        label: "l003-d-label",
+        explanation: "l003-d-explanation",
+      },
+    ],
+    correctAnswerId: "l003-d",
+  },
+  l004: {
+    prompt: "l004-prompt",
+    answers: [
+      {
+        id: "l004-a",
+        label: "l004-a-label",
+        explanation: "l004-a-explanation",
+      },
+      {
+        id: "l004-b",
+        label: "l004-b-label",
+        explanation: "l004-b-explanation",
+      },
+      {
+        id: "l004-c",
+        label: "l004-c-label",
+        explanation: "l004-c-explanation",
+      },
+      {
+        id: "l004-d",
+        label: "l004-d-label",
+        explanation: "l004-d-explanation",
+      },
+    ],
+    correctAnswerId: "l004-c",
+  },
+  l005: {
+    prompt: "l005-prompt",
+    answers: [
+      {
+        id: "l005-a",
+        label: "l005-a-label",
+        explanation: "l005-a-explanation",
+      },
+      {
+        id: "l005-b",
+        label: "l005-b-label",
+        explanation: "l005-b-explanation",
+      },
+      {
+        id: "l005-c",
+        label: "l005-c-label",
+        explanation: "l005-c-explanation",
+      },
+      {
+        id: "l005-d",
+        label: "l005-d-label",
+        explanation: "l005-d-explanation",
+      },
+    ],
+    correctAnswerId: "l005-a",
+  },
+  l006: {
+    prompt: "l006-prompt",
+    answers: [
+      {
+        id: "l006-a",
+        label: "l006-a-label",
+        explanation: "l006-a-explanation",
+      },
+      {
+        id: "l006-b",
+        label: "l006-b-label",
+        explanation: "l006-a-explanation",
+      },
+    ],
+    correctAnswerId: "l006-b",
+  },
+} as const satisfies QuestionBank
 
 export default questionBank
