@@ -102,7 +102,7 @@ To use an existing function locally you don't need to do anything. Just check th
 
 To create a new function, you will need to create two files:
 
-- One in []`src/lambda`](https://github.com/ethereum/ethereum-org-website/tree/dev/src/lambda) where the logic will live. These are the ones that will be deployed to Netlify. These functions follow [this format](https://docs.netlify.com/functions/build-with-javascript/#synchronous-function-format).
+- One in [`src/lambda`](https://github.com/ethereum/ethereum-org-website/tree/dev/src/lambda) where the logic will live. These are the ones that will be deployed to Netlify. These functions follow [this format](https://docs.netlify.com/functions/build-with-javascript/#synchronous-function-format).
 - One in [`src/api`](https://github.com/ethereum/ethereum-org-website/tree/dev/src/api) that will be just a wrapper around the previous one in order to be compatible with Gatsby functions. More on the [Gatbsy docs](https://www.gatsbyjs.com/docs/reference/functions/getting-started/) for the format they follow.
 
 Typically, you will develop and test functions in the Gatsby context, by running `yarn start`.
