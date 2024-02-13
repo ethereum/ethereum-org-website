@@ -1,6 +1,4 @@
-// Libraries
-import React from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 
 // Icons
 import {
@@ -61,7 +59,7 @@ interface Personas {
 }
 
 export const useWalletFilterProfile = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
 
   const filterLabels = {
     hardware: {

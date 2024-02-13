@@ -11,6 +11,7 @@
   "page-upgrades-answer-1": "La Beacon Chain è stata utilizzata come strumento per aggiornare la Rete Principale di Ethereum alla Fusione.",
   "page-upgrades-answer-2": "Con La Fusione, Ethereum ha avuto il suo aggiornamento più sostanziale di sempre, scambiando il proof-of-work per un nuovo livello di consenso basato sul proof-of-stake.",
   "page-upgrades-answer-4": "La Beacon Chain è stata utilizzata per sviluppare il consenso basato sul proof-of-stake che Ethereum utilizza oggi. Era eseguita separatamente dalla Rete Principale di Ethereum, così che gli sviluppatori potessero osservare il meccanismo di consenso in isolamento prima di utilizzarlo per coordinare le attività reali.",
+  "page-upgrade-article-author-status": "Stato",
   "page-upgrade-article-author-ethmerge": "Ethmerge",
   "page-upgrade-article-author-alchemy": "Alchemy",
   "page-upgrade-article-author-consensys": "Consensys",
