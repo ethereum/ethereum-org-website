@@ -70,7 +70,7 @@ Durante a sincronização inicial, os clientes no modo arquivo executarão todas
 
 ## Leitura adicional {#further-reading}
 
-- [Nó completo Ethereum vs Nó de arquivo](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) — _QuickNode, setembro de 2022_
+- [Nó completo Ethereum vs Nó de arquivo](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) — *QuickNode, setembro de 2022*
 - [Construindo seu próprio nó de arquivo Ethereum](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) — _Thomas Jay Rush, agosto de 2021_
 - [Como configurar Erigon, o RPC do Erigon e TrueBlocks (extração e API) como serviços](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, atualizado em setembro de 2022_
 

@@ -6,7 +6,7 @@ lang: de
 
 # So verwenden Sie eine Wallet
 
-Lernen Sie die grundlegenden Funktionen einer Krypto-Wallet kennen. Falls Sie noch keine besitzen, schauen Sie sich mal die Seite [Wie erstelle ich einen Ethereum "Account"](/guides/how-to-create-an-ethereum-account/) an.
+Lernen Sie die grundlegenden Funktionen einer Krypto-Wallet kennen. Wenn Sie noch keine haben, werfen Sie einen blick auf unseren [Leitfaden zur Erstellung eines Ethereum-Kontos](/guides/how-to-create-an-ethereum-account/) an.
 
 ## Öffnen Sie Ihre Wallet
 
@@ -18,7 +18,7 @@ Möchten Sie Kryptowährungen in ihrer Wallet empfangen?
 
 Jedes Ethereum Account hat seine eigene Empfangsadresse, welche eine einzigartige Abfolge von Zahlen und Buchstaben enthält. Die Adresse funktioniert wie eine Bankkontonummer. Ethereum-Adressen beginnen immer mit „0x“. Sie können diese Adresse mit jedem teilen: Es besteht kein Sicherheitsrisiko.
 
-Ihre Adresse (die auch als „public key" bezeichnet wird) ist wie Ihre Wohnanschrift: Sie müssen sie den Leuten mitteilen, damit sie Sie finden können. Es besteht keine Gefahr, dies zu tun, weil Sie immer noch Ihre Haustür mit einem anderen Schlüssel, den Sie kontrollieren, abschließen können, sodass keiner hereinkommen kann, auch wenn sie wissen, wo Sie wohnen.
+Mit Ihrer Adresse verhält es sich wie mit Ihrer Privatadresse: Sie müssen diese angeben, damit man Sie finden kann. Es besteht keine Gefahr, dies zu tun, weil Sie immer noch Ihre Haustür mit einem anderen Schlüssel, den Sie kontrollieren, abschließen können, sodass keiner hereinkommen kann, auch wenn sie wissen, wo Sie wohnen.
 
 Sie müssen jedem, der Ihnen Geld schicken möchten, Ihre öffentliche Adresse zur Verfügung stellen. Viele Wallet-Apps lassen Sie zur vereinfachten Handhabung Ihre Adresse kopieren oder zeigen einen QR-Code an, der gescannt werden kann. Vermeiden Sie die manuelle Eingabe einer Ethereum-Adresse. Dies kann leichtfertig zu Schreibfehlern und damit zum Verlust Ihres Vermögens führen.
 
@@ -51,7 +51,7 @@ Ihre Adresse wird auf allen Ethereum Projekten dieselbe sein. Sie brauchen sich 
 
 1. Besuchen Sie die Webseite eines Projekts.
 2. Wenn die Zielseite des Projekts nur eine statische Beschreibung des Projekts ist, sollten Sie in der Lage sein, auf eine Schaltfläche „App öffnen" im Menü zu klicken, die Sie zur eigentlichen Web-App navigiert.
-3. Sobald Sie sich in der App befinden, klicken Sie auf „Verbinden"
+3. Sobald Sie in der App sind, klicken Sie auf "Verbinden".
 
 ![Schaltfläche zum Verbinden mit einer Wallet](./connect1.png)
 
@@ -77,7 +77,7 @@ Sie können dieselbe Adresse auf allen EVM-kompatiblen Blockchains verwenden (we
 
 ### Kann ich dieselbe Adresse auf mehreren Geräten verwenden?
 
-Ja, Sie können dieselbe Adresse auf mehreren Geräten verwenden. Wallets sind technisch gesehen nur eine Schnittstelle, um Ihnen Ihr Guthaben zu zeigen und Transaktionen zu tätigen, Ihr Konto ist nicht in der Wallet gespeichert, sondern auf der Blockchain.
+Ja, Sie können die gleiche Adresse auf mehreren Geräten verwenden. Wallets sind technisch gesehen nur eine Schnittstelle, um Ihnen Ihr Guthaben zu zeigen und Transaktionen zu tätigen, Ihr Konto ist nicht in der Wallet gespeichert, sondern auf der Blockchain.
 
 ### Ich habe kein Krypto erhalten, wo kann ich den Status einer Transaktion überprüfen?
 
