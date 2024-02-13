@@ -1719,6 +1719,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://a-hagi.dev/"><img src="https://avatars.githubusercontent.com/u/92589940?v=4?s=100" width="100px;" alt="Abdullahi"/><br /><sub><b>Abdullahi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aa-hagi613" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/pranav-konde-56aa141b5/"><img src="https://avatars.githubusercontent.com/u/76070589?v=4?s=100" width="100px;" alt="Pranav Konde"/><br /><sub><b>Pranav Konde</b></sub></a><br /><a href="#content-pranavkonde" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/MohitKambli"><img src="https://avatars.githubusercontent.com/u/31406633?v=4?s=100" width="100px;" alt="Mohit Kambli"/><br /><sub><b>Mohit Kambli</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=MohitKambli" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/oleksandr-hyriavets"><img src="https://avatars.githubusercontent.com/u/19614509?v=4?s=100" width="100px;" alt="Oleksandr Hyriavets"/><br /><sub><b>Oleksandr Hyriavets</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=oleksandr-hyriavets" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
