@@ -7,6 +7,7 @@ import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
+import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
@@ -35,7 +36,6 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import GuideHeroImage from "@/public/heroes/guides-hub-hero.jpg"
-import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 
 const Heading1 = (props: HeadingProps) => (
   <MdHeading1 fontSize={{ base: "2.5rem", md: "5xl" }} {...props} />
