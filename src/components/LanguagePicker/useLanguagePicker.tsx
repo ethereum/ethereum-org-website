@@ -11,7 +11,7 @@ import type {
 } from "@/lib/types"
 
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
-import { filterFakedLocales, languages } from "@/lib/utils/translations"
+import { filterRealLocales, languages } from "@/lib/utils/translations"
 
 import progressData from "@/data/translationProgress.json"
 
@@ -37,7 +37,7 @@ export const useLanguagePicker = (
 
   // perform all the filtering and mapping when the filter value change
   useEffect(() => {
-    const locales = filterFakedLocales(rawLocales)
+    const locales = filterRealLocales(rawLocales)
 
     // Get the preferred languages for the users browser
     const navLangs = typeof navigator !== "undefined" ? navigator.languages : []
