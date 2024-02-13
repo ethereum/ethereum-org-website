@@ -92,7 +92,7 @@ export const layer2Data: Rollups = {
       bridge: "https://bridge.base.org/deposit",
       bridgeWallets: ["MetaMask", "WalletConnect", "Coinbase Wallet"],
       blockExplorer: "https://basescan.org/",
-      ecosystemPortal: "https://www.ethereum-ecosystem.com/blockchains/base",
+      ecosystemPortal: "https://www.base.org/ecosystem",
       tokenLists: "",
       noteKey: "layer-2-base-note",
       purpose: ["universal"],
