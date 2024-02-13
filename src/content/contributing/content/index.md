@@ -52,7 +52,7 @@ We can find the about page in the [`/src/content/about/index.md`](https://github
 
 Make changes to the [`/src/content/about/index.md`](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/about/index.md) file, and save. Then commit and push your changes up to your branch. Example terminal command:
 
-```
+```sh
 git add <path>
 git commit -m "<descriptive commit message>"
 git push origin <branch name>
@@ -86,7 +86,7 @@ In the [`/src/content/`](https://github.com/ethereum/ethereum-org-website/tree/d
 
 For the purpose of this example, create a folder for the `/test` page with an `index.md` file. This should create the structure `/src/content/test/index.md` Remember, the path in this structure maps to the URL. After doing that, write your content in markdown. At the start of the page, make sure to include the necessary frontmatter text, description, and lang.
 
-```
+```markdown
 ---
 title: Content contributions
 description: Content contribution to ethereum.org
@@ -100,7 +100,7 @@ Test content
 
 Commit your changes and push them up to your branch.
 
-```
+```sh
 git add <path>
 git commit -m "<descriptive commit message>"
 git push origin <branch name>
