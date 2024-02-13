@@ -1,5 +1,5 @@
 {
-  "page-developer-meta-title": "Zasoby Ethereum dla deweloperów",
+  "page-developer-meta-title": "Zasoby dla deweloperów Ethereum",
   "page-developers-about": "Więcej informacji o zasobach dla deweloperów",
   "page-developers-about-desc": "ethereum.org zawiera zasoby, które pomogą Ci tworzyć Ethereum. Znajdziesz tu dokumentację dotyczącą założeń koncepcyjnych, a także podstawowe narzędzia deweloperskie. Możesz też skorzystać z samouczków, aby od razu rozpocząć pracę.",
   "page-developers-about-desc-2": "Do stworzenia tych zasobów zainspirowała nas Mozilla Developer Network (MDN). Uznaliśmy, że Ethereum także potrzebuje jednego miejsca, z którego można pobrać wszystkie narzędzia i zasoby programistyczne. Podobnie jak u naszych kolegów odpowiedzialnych za Mozillę, wszystkie udostępniane składniki mają licencję open-source i mogą posłużyć Ci jako platforma do wprowadzania ulepszeń i poprawek.",
@@ -24,7 +24,7 @@
   "page-developers-explore-documentation": "Przejrzyj dokumentację",
   "page-developers-feedback": "Jeśli chcesz nam przekazać swoją opinię, jesteśmy dostępni poprzez GitHub lub na serwerze Discord.",
   "page-developers-frameworks-desc": "Narzędzia służące przyspieszeniu rozwoju",
-  "page-developers-frameworks-link": "Ramy rozwojowe",
+  "page-developers-frameworks-link": "Frameworki programistyczne",
   "page-developers-fundamentals": "Podstawy",
   "page-developers-gas-desc": "Ether potrzebny do zasilania transakcji",
   "page-developers-gas-link": "Paliwo",

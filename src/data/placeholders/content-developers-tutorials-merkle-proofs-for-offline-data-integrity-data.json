@@ -1,0 +1,14 @@
+{
+  "/content/developers/tutorials/merkle-proofs-for-offline-data-integrity/tree.png": {
+    "hash": "7f3e6301",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABo0lEQVR4nGP4jwR+/vgBxiAwrbXlv4mW1v8wN9f/Z44cgcujAwYMEbDC7//LkxL+NxQV/Y/ydP/fXVmOTRmmASvnzP7fXVfzvzE35//pw4fgNi6bPu2/t7np/1VzZ/9/8eQxpgEwhaUJ8f9lhIX+p4eH/b924Rxc0bZVK/8bq6v+97C1/r9gYj+Kd8AGvHv18v/pQwf+12Sk/c+Pjvif5O3x/8vHj3BFu9ev/e9lqPe/IDry/8T6OrArXjx5AjEAxAAFlK+N9f+pLc3/H929819LUgLsFZA31i1d/N9SW+v/xKYGMN/dxPh/Vnzs/9ld7f/fvX79nwFEOOjq/DfVUAP7EaRIR0ryv72+3v8DWzf9n93X81+Bl+d/bkz0/6N7d/8vAgauvADf/9LEBLALGS6eOgEOtGRvT7BTNyxe/L8mPfV/bljo/wPbtgCdXPu/p7Lif6Sj3f+716+D+SC5wpjI/4/v3vvP4Gqg+z/Y3u5/tI/3fx9Li//x3l7/i5MS/3uYmf4PAAaajYb6/5TAQDCdGxn+X1Nc7H99TtZ/BVYmsGsAg3GhnrgzXL0AAAAASUVORK5CYII="
+  },
+  "/content/developers/tutorials/merkle-proofs-for-offline-data-integrity/proof-c.png": {
+    "hash": "af29dece",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABuklEQVR4nG2RX0hTYRiHv6tugugPdNNFhEF0V900zlCCEoss8c+ggtDcRW5MI8uzKTtdnDZXNHKtEdVRwi1RiaAoI0YWKKPoQiMHEwwOwiZOkkFIrUU+HT9IpPWD9+bj/R6e930FG/KrVJK1lqeGwbm6OvyuNubSM/xeXaVY/MG/EWUvVko/i8SuaRjhsAQMRe/8r60cMPl6jMS9GP2hXjJTU+s2L0bj2O0VBPu8zJtz5YC/ahF/D9WKQlC9ijmbkdprCRk9bNkr2LxPcOOWysY/ElBY/irnfBgIctunct3dxveVlXWDieQYlcpuzrfUMHw/xnJ+UZYEZBdMDlVXsF/Zhaa7WMotUl9lJx6LyjHevXqJs6GBJw/6yUxP43Y0EbJMnz0a4FuhYAHy82yz9MQOgS/kZvbTDGeOHcHlcPA+meR5YpBaxSbH+vwhRcRa7gnbYe5qmjQUX9Jp+jQfXudZPr4dJzHwGL29k5v6ZVKpN9YFovIK/tZmcqbJiLXkcNcVIt0q+WwW4W6sR73QjObxoHsuIoRlIzax/fRW9hzdSUeTA/1SO85TJwl7VRor7Ri9AY4fPCBt/gBR97CNHBJZzQAAAABJRU5ErkJggg=="
+  },
+  "/content/developers/tutorials/merkle-proofs-for-offline-data-integrity/merkle-empty-hash.png": {
+    "hash": "426a7e58",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAYAAAC9vt6cAAAACXBIWXMAAAsTAAALEwEAmpwYAAABr0lEQVR4nG1SSyiEURT+F2yspLAgKcIoO4b6PcarQYwZkUzeDDMy8kqkNBqvUUoeySwGk6QUSRZkhZWFYmEjbIRkapQZmmE+9x55/Pg2937n3vud75xzBfzCi9tNq23IBI0ox7jRgO0lm+TsJ4Q/EYZHhwO1qcnQq/JRlS6iUZGKV+/rf1elAk7HA04O9zHRYYTdMoqnRyccd7dYnhiHbXgQN1cXdOePgNvlIlKnEBHrJ0Atiybu8Xjw5vPh2e2CzF+ATBBgaW2SlEMCXq+XCLeqZda7S1RfMQ6eua0oDwOGBmjiY3B/fS11cHl2CotRj1GDjoJVKYkwFuTi/OSYeF9FGUoT4tjOhw3rHJSRYdi2L3wLtORnIzYwAO2qPApqxSQUp4kw62rISWZUBLTKLFhN/VgcM6OjspwlyKEzEuCWuSpvFodZV4cC9mh1apI4F04PCcLB1iY1cbK7DTsr9g8HI/p6jLDa+Lz5w/X5WbQoM7E2O03CR3u7VA4Xb87OoH5IppAWHIROTSGqmW11ggw9ZSr2B+Qw1WqhCA/FTG8X4ln3uUgcW3lmPpnPKbwDq6rfvhp5NNsAAAAASUVORK5CYII="
+  }
+}

@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Fitur filter",
   "page-find-wallet-footnote-1": "Dompet yang tercantum di halaman ini bukan dukungan resmi, dan disediakan hanya untuk tujuan informasi.",
   "page-find-wallet-footnote-2": "Deskripsi mereka telah disediakan oleh proyek dompet itu sendiri.",
-  "page-find-wallet-footnote-3": "Kami menambahkan produk ke halaman ini berdasarkan kriteria kami <a href=\"/contributing/adding-products/\">kebijakan daftar</a>. Jika Anda ingin kami menambahkan dompet, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">kirim issue di GitHub</a>.",
+  "page-find-wallet-footnote-3": "Kami menambahkan produk ke halaman ini berdasarkan kriteria kami <a href=\"/contributing/adding-wallets/\">kebijakan daftar</a>. Jika Anda ingin kami menambahkan dompet, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">kirim issue di GitHub</a>.",
   "page-find-wallet-mobile": "Seluler",
   "page-find-wallet-mobile-desc": "Dompet dengan aplikasi seluler",
   "page-find-wallet-desktop": "Desktop",
