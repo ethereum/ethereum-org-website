@@ -11047,6 +11047,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "nebolax",
+      "name": "Alexey Nebolsin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/63492346?v=4",
+      "profile": "https://t.me/nebolax",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
