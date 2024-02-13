@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next/types"
-import { useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -55,7 +55,6 @@ import daiLargeImg from "@/public/stablecoins/dai-large.png"
 import heroImg from "@/public/stablecoins/hero.png"
 import stablecoinsWtfImg from "@/public/stablecoins/tools/stablecoinswtf.png"
 import usdcLargeImg from "@/public/stablecoins/usdc-large.png"
-
 type EthereumDataResponse = Array<{
   id: string
   name: string
@@ -726,6 +725,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       </Content>
       <Box id="tools" py={12} px={8} w="full">
         <H2>{t("page-stablecoins-tools-title")}</H2>
+        
         <Flex
           alignItems="flex-start"
           width="full"
@@ -744,7 +744,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           >
             <ProductList
               actionLabel={t("page-stablecoins:page-dapps-ready-button")}
-              category="Dashboards & Education"
+              category={t("page-stablecoins-category")}
               content={toolsData}
             />
           </Box>
