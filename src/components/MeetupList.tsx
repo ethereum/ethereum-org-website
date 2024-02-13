@@ -1,5 +1,4 @@
-// Libraries
-import React, { useState } from "react"
+import { useState } from "react"
 import { sortBy } from "lodash"
 import {
   Box,
@@ -13,19 +12,18 @@ import {
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-// Components
-import Emoji from "./Emoji"
-import InfoBanner from "./InfoBanner"
-import InlineLink, { BaseLink } from "./Link"
-import Translation from "./Translation"
-import Text from "./OldText"
+import Emoji from "@/components/Emoji"
+import InfoBanner from "@/components/InfoBanner"
+import Input from "@/components/Input"
+import InlineLink, { BaseLink } from "@/components/Link"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
-// Data
-import meetups from "../data/community-meetups.json"
-import Input from "./Input"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-// Utils
-import { trackCustomEvent } from "../utils/matomo"
+import meetups from "@/data/community-meetups.json"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export interface Meetup {
   title: string
@@ -50,12 +48,11 @@ const filterMeetups = (query: string): Array<Meetup> => {
 // sort meetups by country and then by city
 const sortedMeetups: Array<Meetup> = sortBy(meetups, ["emoji", "location"])
 
-export interface IProps {}
-
 // TODO create generalized CardList / TableCard
 // TODO prop if ordered list or unordered
-const MeetupList: React.FC<IProps> = () => {
+const MeetupList = () => {
   const [searchField, setSearchField] = useState<string>("")
+  const { flipForRtl } = useRtlFlip()
   const filteredMeetups = filterMeetups(searchField)
   const listBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
   const listItemBoxShadow = useColorModeValue(
@@ -105,8 +102,8 @@ const MeetupList: React.FC<IProps> = () => {
               bg: "tableBackgroundHover",
             }}
           >
-            <Flex flex="1 1 75%" mr={4}>
-              <Box mr={4} opacity="0.4">
+            <Flex flex="1 1 75%" me={4}>
+              <Box me={4} opacity="0.4">
                 {idx + 1}
               </Box>
               <Box>
@@ -116,19 +113,25 @@ const MeetupList: React.FC<IProps> = () => {
                   textDecor="none"
                   color="text"
                   hideArrow
+                  isExternal
                 >
                   {meetup.title}
                 </LinkOverlay>
               </Box>
             </Flex>
             <Flex
-              textAlign="right"
+              textAlign="end"
               alignContent="flex-start"
               flex="1 1 25%"
-              mr={4}
+              me={4}
               flexWrap="wrap"
             >
-              <Emoji text={meetup.emoji} boxSize={4} mr={2} />
+              <Emoji
+                text={meetup.emoji}
+                boxSize={4}
+                me={2}
+                lineHeight="unset"
+              />
               <Text mb={0} opacity={"0.6"}>
                 {meetup.location}
               </Text>
@@ -137,8 +140,10 @@ const MeetupList: React.FC<IProps> = () => {
               as="span"
               _after={{
                 content: '"↗"',
-                ml: 0.5,
-                mr: 1.5,
+                ms: 0.5,
+                me: 1.5,
+                transform: flipForRtl,
+                display: "inline-block",
               }}
             ></Box>
           </LinkBox>

@@ -1,4 +1,5 @@
-import React, { ReactNode } from "react"
+import { ReactNode } from "react"
+import { useTranslation } from "next-i18next"
 import {
   AccordionButton,
   AccordionItem,
@@ -9,28 +10,30 @@ import {
   Heading,
   Text,
 } from "@chakra-ui/react"
+
+import type { ChildOnlyProp } from "@/lib/types"
+
 import Emoji from "../Emoji"
 import Pill from "../Pill"
-import Translation from "../Translation"
-import { ChildOnlyType } from "."
+
 import { accordionButtonContent, CategoryNameType } from "./utils"
 
-export const LeftColumnPanel = (props: ChildOnlyType & Partial<BoxProps>) => (
-  <Box flex="0 0 50%" maxW={{ lg: "75%" }} mr={{ lg: 16 }} {...props} />
+export const LeftColumnPanel = (props: ChildOnlyProp & Partial<BoxProps>) => (
+  <Box flex="0 0 50%" maxW={{ lg: "75%" }} me={{ lg: 16 }} {...props} />
 )
 
-export const RightColumnPanel = (props: ChildOnlyType) => (
-  <LeftColumnPanel mr={0} flex="0 1 50%" mt={{ base: 12, lg: 0 }} {...props} />
+export const RightColumnPanel = (props: ChildOnlyProp) => (
+  <LeftColumnPanel me={0} flex="0 1 50%" mt={{ base: 12, lg: 0 }} {...props} />
 )
 
 const MoreOrLessLink = ({ isOpen }: { isOpen: boolean }) => {
+  const { t } = useTranslation("page-stablecoins")
+
   return (
-    <Box mr={6} color="primary.base">
-      {isOpen ? (
-        <Translation id="page-stablecoins-accordion-less" />
-      ) : (
-        <Translation id="page-stablecoins-accordion-more" />
-      )}
+    <Box me={6} color="primary.base">
+      {isOpen
+        ? t("page-stablecoins-accordion-less")
+        : t("page-stablecoins-accordion-more")}
     </Box>
   )
 }
@@ -45,6 +48,7 @@ interface AccordionCustomItemProps {
 
 export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
   const { category, children } = props
+  const { t } = useTranslation("page-stablecoins")
 
   const contentObj = accordionButtonContent[category]
 
@@ -78,16 +82,16 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
                     fontSize={{ base: "1.25rem", md: "1.5rem" }}
                     lineHeight={1.4}
                   >
-                    <Translation id={contentObj.title} />
+                    {t(contentObj.title)}
                   </Heading>
                   {!!contentObj.pill && (
-                    <Pill ml={4} background={contentObj.pill.color}>
-                      <Translation id={contentObj.pill.name} />
+                    <Pill ms={4} background={contentObj.pill.color}>
+                      {t(contentObj.pill.name)}
                     </Pill>
                   )}
                 </Flex>
                 <Text color="text200" textAlign="start">
-                  <Translation id={contentObj.textPreview} />
+                  {t(contentObj.textPreview)}
                 </Text>
               </Box>
             </Flex>

@@ -1,8 +1,9 @@
-import getAndSaveDirectories from "./source-files/fetchAndSaveDirectories"
-import getDirectoryIds from "./utils"
 import { getTranslatedMarkdownPaths } from "../markdownChecker"
-import fetchAndSaveFileIds from "./source-files/fetchAndSaveFileIds"
+
 import getTranslationCostsReports from "./reports/getTranslationCostsReports"
+import getAndSaveDirectories from "./source-files/fetchAndSaveDirectories"
+import fetchAndSaveFileIds from "./source-files/fetchAndSaveFileIds"
+import getDirectoryIds from "./utils"
 
 async function main() {
   await getAndSaveDirectories()
