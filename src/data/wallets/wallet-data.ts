@@ -7,6 +7,7 @@ import AlphaWalletImage from "@/public/wallets/alpha.png"
 import AmbireImage from "@/public/wallets/ambire.png"
 import ApexImage from "@/public/wallets/apex.png"
 import ArgentImage from "@/public/wallets/argent.png"
+import Aurox from "@/public/wallets/aurox.png"
 import BitcoindotcomImage from "@/public/wallets/bitcoindotcom.png"
 import BitkeepImage from "@/public/wallets/bitkeep.png"
 import BlockWalletImage from "@/public/wallets/blockwallet.png"
@@ -2715,7 +2716,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2023-10-30",
     name: "Aurox Wallet",
-    image_name: "aurox",
+    image: Aurox,
     brand_color: "#1F47FF",
     url: "https://getaurox.com/wallet",
     wallet_live_date: "2022-12-06",
