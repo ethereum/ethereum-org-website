@@ -1,6 +1,6 @@
 import { StaticImageData } from "next/image"
 
-import TrustWalletImage from "wallets/trustwallet.png"
+import TrustWalletImage from "@/public/wallets/trustwallet.png"
 import OneInchWalletImage from "@/public/wallets/1inch.png"
 import AirgapImage from "@/public/wallets/airgap.png"
 import AktionariatImage from "@/public/wallets/aktionariat.png"
