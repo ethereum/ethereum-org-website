@@ -2757,9 +2757,9 @@ const walletData: WalletData[] = [
     multisig: false,
     social_recovery: false,
     onboard_documentation:
-      " https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
+      "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
     documentation:
-      " https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
+      "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
   },
 ]
 
