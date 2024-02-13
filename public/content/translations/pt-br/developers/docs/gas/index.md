@@ -24,7 +24,7 @@ Taxas de gas tem que ser pagas na moeda nativa do Ethereum, ether (ETH). Preços
 
 Por exemplo, em vez de dizer que seu gás custa 0.000000001 Ether, pode-se dizer que ele custa 1 Gwei.
 
-A palavra 'gwei' é uma contração de 'giga-wei', significando 'bilhão de wei'. Um gwei é igual a um bilhão de wei. O próprio Wei (nomeado em homenagem a [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), criador do [B-Money](https://www.investopedia.com/terms/b/bmoney.asp)) é a menor unidade de ETH.
+A palavra 'gwei' é uma contração de 'giga-wei', significando 'bilhão de wei'. Um gwei é igual a um bilhão de wei. O próprio Wei (nomeado em homenagem a [Wei Dai](https://wikipedia.org/wiki/WeiDai), criador do [B-Money](https://www.investopedia.com/terms/b/bmoney.asp)) é a menor unidade de ETH.
 
 ## Como são calculadas as taxas de gás? {#how-are-gas-fees-calculated}
 
@@ -55,7 +55,7 @@ Cada bloco tem uma taxa base que funciona como um preço de reserva. Para ser el
 A taxa base é calculada por uma fórmula que compara o tamanho do bloco anterior (a quantidade de gás utilizada para todas as transações) com o tamanho do alvo. A taxa base aumentará em um máximo de 12,5% por bloco se o tamanho do bloco de destino for excedido. Esse crescimento exponencial torna economicamente inviável que o tamanho do bloco permaneça elevado indefinidamente.
 
 | Número do bloco | Gás incluído | Aumento de taxa | Taxa base atual |
-| --------------- | -----------: | --------------: | --------------: |
+| --------------- | ------------:| ---------------:| ---------------:|
 | 1               |          15M |              0% |        100 gwei |
 | 2               |          30M |              0% |        100 gwei |
 | 3               |          30M |           12,5% |      112,5 gwei |
@@ -70,7 +70,7 @@ Conforme a tabela acima, para criar uma transação no bloco número 9, uma cart
 Também é importante notar que, é improvável que veremos picos prolongados de blocos completos, devido à velocidade com que a taxa base aumenta antes de um bloco completo.
 
 | Número do bloco | Gás incluído | Aumento da taxa | Taxa base atual |
-| --------------- | -----------: | --------------: | --------------: |
+| --------------- | ------------:| ---------------:| ---------------:|
 | 30              |          30M |           12,5% |     2705,6 gwei |
 | ...             |          ... |           12,5% |             ... |
 | 50              |          30M |           12,5% |    28531,3 gwei |
