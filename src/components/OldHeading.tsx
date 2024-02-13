@@ -1,5 +1,4 @@
-import * as React from "react"
-import { Heading, HeadingProps } from "@chakra-ui/react"
+import { Heading, type HeadingProps } from "@chakra-ui/react"
 
 /**
  * @deprecated To be removed in favor of new Chakra Heading theme
