@@ -28,9 +28,8 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 These projects have created their own grants for projects aimed at developing and experimenting with their own technology.
 
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/) grants DAO_
-- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _[Balancer](https://balancer.fi/) ecosystem fund_
+- [Balancer](https://grants.balancer.community/) – _[Balancer](https://balancer.fi/) ecosystem fund_
 - [Chainlink Grants Program](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) community grants_
-- [Compound Grants Program](https://twitter.com/compoundgrants/status/1615562418297659393?s=20) – _[Compound](https://compound.finance/) finance ecosystem_
 - [Decentraland Grants Program](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/) finance ecosystem_
 - [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
