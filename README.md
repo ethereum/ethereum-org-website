@@ -1723,6 +1723,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/titanism"><img src="https://avatars.githubusercontent.com/u/101466223?v=4?s=100" width="100px;" alt="titanism"/><br /><sub><b>titanism</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=titanism" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.ethereum-ecosystem.com/"><img src="https://avatars.githubusercontent.com/u/43566493?v=4?s=100" width="100px;" alt="Maxime Servais"/><br /><sub><b>Maxime Servais</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Maxservais" title="Code">💻</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://t.me/nebolax"><img src="https://avatars.githubusercontent.com/u/63492346?v=4?s=100" width="100px;" alt="Alexey Nebolsin"/><br /><sub><b>Alexey Nebolsin</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=nebolax" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 
