@@ -128,7 +128,6 @@
   "page-stablecoins-stablecoins-table-type-fiat-backed": "通貨",
   "page-stablecoins-stablecoins-table-type-precious-metals-backed": "貴金属",
   "page-stablecoins-table-error": "ステーブルコインをロードできませんでした。ページを更新してみてください。",
-  "page-stablecoins-table-loading": "ステーブルコインのデータを読み込んでいます...",
   "page-stablecoins-title": "ステーブルコイン",
   "page-stablecoins-top-coins": "時価総額別の上位ステーブルコイン",
   "page-stablecoins-top-coins-intro": "時価総額は",

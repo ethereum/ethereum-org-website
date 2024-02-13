@@ -1,20 +1,21 @@
-import React from "react"
-import { calc, Flex, FlexProps, HeadingProps } from "@chakra-ui/react"
+import { calc, Flex, type FlexProps, type HeadingProps } from "@chakra-ui/react"
+
+import type { ToCItem } from "@/lib/types"
 
 import ButtonDropdown, {
-  IProps as ButtonDropdownProps,
+  ButtonDropdownProps,
   List as ButtonDropdownList,
-} from "../ButtonDropdown"
-import OldHeading from "../OldHeading"
-import Translation from "../Translation"
-import UpgradeTableOfContents from "../UpgradeTableOfContents"
+} from "@/components/ButtonDropdown"
+import OldHeading from "@/components/OldHeading"
+import Translation from "@/components/Translation"
+import UpgradeTableOfContents from "@/components/UpgradeTableOfContents"
 
 export const H2 = (props: HeadingProps) => (
   <OldHeading
     fontWeight={700}
     lineHeight={1.4}
     size="lg"
-    textAlign="left"
+    textAlign="start"
     mt={0}
     {...props}
   />
@@ -29,29 +30,29 @@ export const StyledButtonDropdown = ({
   </Flex>
 )
 
-interface IProps extends FlexProps {
+type LeftNavBarProps = FlexProps & {
   dropdownLinks?: ButtonDropdownList
   maxDepth?: number
-  tocItems: any[]
+  tocItems: ToCItem[]
 }
 
-const LeftNavBar: React.FC<IProps> = ({
+const LeftNavBar = ({
   dropdownLinks,
   maxDepth = 1,
   tocItems,
   ...props
-}) => {
+}: LeftNavBarProps) => {
   return (
     <Flex
       as="aside"
       flexDirection="column"
       flex="0 1 400px"
-      ml={8}
-      mr={16}
+      ms={8}
+      me={16}
       position="sticky"
       top="6.25rem"
       height={calc("100vh").subtract("80px").toString()}
-      zIndex="dropdown"
+      zIndex={99}
       {...props}
     >
       {dropdownLinks && <StyledButtonDropdown list={dropdownLinks} />}

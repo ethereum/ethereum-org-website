@@ -1,0 +1,14 @@
+{
+  "/content/guides/how-to-use-a-wallet/send.png": {
+    "hash": "f0d976f4",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAECAYAAACHtL/sAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA10lEQVR4nGPg4Ob7j4wZWTj/S0jJ/P/y7ef/X3/+/9+958B/ETGJ/8ycfP/ZuXj+i0jK/3cPzfhvZOv1n4WV6z+Dhrbuf3Nr+//GZlYo2Mbe9b+TqycQe/w3MrUEi4FoUyub/9b2Lv/NzK3+g/QyVFQ3/N++++D/9Ru3/9+0dc//5as3/t974DiYPnT0DFB8J5g/ddYCML+rf8r/pOS0/6cf/v8fn5rzn8HZw+t/Ylrm/+jYBDBOSEr7HxObBGfHJaaCaZh8WETM/8DgsP85pQ3/7Z09/gMAYNiG5vJpqDgAAAAASUVORK5CYII="
+  },
+  "/content/guides/how-to-use-a-wallet/connect1.png": {
+    "hash": "f2adbb39",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAADCAYAAACasY9UAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAvklEQVR4nGMQENH8r6zh+F9QTBWM2blk/3PzK/xnZpX+z8Ag8Z+LX+W/tnkMEMf+1zKNBNO6Vgn/VQwC/jOzyf1nCE/o+P/qy///SWml/3snLvjf2jnjf1l5+39ldcv/HFwy/yWV7P7XT7z1v3nq4/8Nk+79r+y+9D+5eNP/sLT5/4UkDYGWMEj/5+RRAjIk/7OySf/n4Vf6z8EtD+YzMIj+Z2SV+6+g5fVf1TD4v4pe0H9lXV8wllV1+Q/SCwBOqFH76uAQ9QAAAABJRU5ErkJggg=="
+  },
+  "/content/guides/how-to-use-a-wallet/connect2.png": {
+    "hash": "8b7e1a35",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAYAAAC9vt6cAAAACXBIWXMAAAsTAAALEwEAmpwYAAABpElEQVR4nH2RTUtbQRSGR4RupIjQlWjFiqlKvFai1xujidFraq1pTOJHY1JbDdEG3IiCH6AYXQQRii5cVJG7qKQFm10RNxVaRAUX7vwN7gvdPs5YKaVGFw9nOMyZed/3CN0wGU9O8ioYxewKMz2zRFNzJ0IUkPfgESK/6DaikIdFJbjcLxDFZbXYHC+pru/kqdaG3eGjoqaVSrvnXqo0LyXldQjd5efXDwtrc4ftzBGZ7AkbW9/ofzN/J+HYLEPxFE2ePkSV5sFaW2F8bIpYYpHExDLR0Tnau+OSEbxduXiLzz8mVZuI0goH1UaEWqOXZ7ofTe+h3gjQ2BK+Rv2Si2bvIOU2A6HpAS5/w4ePZ1hfvvNp74SdzCH7hxek1/foGZhm4N0CYSX9hmB0htejKQxPP+KJzcngSBrT/57ngQTdoaSUJ2swSYe00GLGbtMRoU3aqLS7EUqGarp9w9cDyp86q5pz+J8H1LaE8pnaPGdh9SsHUnYme4r1+Se72WPiE2lCMvH/txC62YJTWXgsQ3R6Izhcwb/B6a1/aoPs3YW6o9RfAXz7OO073a9uAAAAAElFTkSuQmCC"
+  }
+}
