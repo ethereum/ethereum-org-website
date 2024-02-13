@@ -14,7 +14,7 @@ This is the project repository for the [ethereum.org](https://ethereum.org) webs
 
 ### Join our Discord server
 
-We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/CetY6Y4).
+We have a space to discuss all things ethereum.org – share your ideas or just say hi over [on Discord](https://discord.gg/ethereum-org).
 
 ## How to contribute to ethereum.org
 

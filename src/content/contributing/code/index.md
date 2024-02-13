@@ -117,7 +117,7 @@ In case you want to test them as if you were in a Netlify env, you can install t
 - Gatsby Cloud (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.:
   ![Gatsby Cloud deploy preview](./GC-preview-deploy.png)
 - _Confirm your GC preview deploy looks & functions as expected_
-- Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/CetY6Y4)?
+- Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/ethereum-org)?
 
 ### 7. Wait for review {#wait-for-review}
 
