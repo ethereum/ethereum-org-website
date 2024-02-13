@@ -1,5 +1,5 @@
 ---
-title: Node-Architektur
+title: Knotenarchitektur
 description: Einleitung zum Aufbau von Ethereum-Knoten.
 lang: de
 ---
@@ -55,5 +55,5 @@ Knotenbetreiber können Validatoren zu ihren Konsensclients hinzufügen, indem s
 ## Weiterführende Informationen {#further-reading}
 
 - [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos)
-- [Blockvorschlag](/developers/docs/consensus-mechanisms/pos/block-proposal)
+- [Block-Vorschlag](/developers/docs/consensus-mechanisms/pos/block-proposal)
 - [Prämien und Strafen für Validatoren](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties)
