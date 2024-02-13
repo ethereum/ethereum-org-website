@@ -1,5 +1,6 @@
 import { StaticImageData } from "next/image"
 
+import TrustWalletImage from "wallets/trustwallet.png"
 import OneInchWalletImage from "@/public/wallets/1inch.png"
 import AirgapImage from "@/public/wallets/airgap.png"
 import AktionariatImage from "@/public/wallets/aktionariat.png"
@@ -2715,7 +2716,7 @@ const walletData: WalletData[] = [
   {
     last_updated: "2023-11-02",
     name: "Trust Wallet",
-    image_name: "trustwallet",
+    image: TrustWalletImage,
     brand_color: "#0500FF",
     url: "https://www.trustwallet.com/",
     wallet_live_date: "2017-10-25",
