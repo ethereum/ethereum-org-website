@@ -17,7 +17,7 @@ export const getSearchButtonStyles = (): ButtonProps => ({
   bg: "none",
   gap: 4,
   m: 0,
-  pl: 3,
+  ps: 3,
   _hover: {
     ...commonBtnStateStyles,
     ".DocSearch-Button-Keys kbd": {
@@ -74,6 +74,11 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
   "--docsearch-modal-width": "650px",
   "--docsearch-hit-height": "fit-content",
 
+  ".DocSearch.DocSearch-Container": {
+    position: "fixed",
+    inset: 0,
+  },
+
   ".DocSearch-SearchBar": {
     p: { base: 4, md: 8 },
     pb: 4,
@@ -91,6 +96,8 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     },
     input: {
       fontSize: { base: "md", md: "xl" },
+      p: 0,
+      ps: 2,
     },
   },
 
@@ -101,10 +108,9 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     },
   },
 
-  ".DocSearch-Container--Stalled .DocSearch-MagnifierLabel, .DocSearch-Container--Stalled .DocSearch-LoadingIndicator":
-    {
-      color: "primary.highContrast",
-    },
+  ".DocSearch-Container--Stalled .DocSearch-MagnifierLabel, .DocSearch-Container--Stalled .DocSearch-LoadingIndicator": {
+    color: "primary.highContrast",
+  },
 
   ".DocSearch-Dropdown": {
     ps: { base: 4, md: 8 },
@@ -149,7 +155,7 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
   },
 
   ".DocSearch-Hit-Select-Icon:focus, .DocSearch-Hit-Select-Icon:hover": {
-    color: "switchBackground",
+    color: "switchBackground", // TODO: Remove? Causing low contrast in dark mode
   },
 
   ".DocSearch-Footer": {
@@ -184,17 +190,24 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     display: "grid",
     placeItems: "center",
     borderRadius: "base",
+    mr: "unset",
+    me: 1.5
   },
 
   ".DocSearch-Logo": {
     ".DocSearch-Label": {
-      color: "body.light",
+      color: "body.medium",
       textTransform: "uppercase",
     },
   },
 
+  "svg[aria-label='Algolia']": {
+    ml: "unset",
+    ms: 2,
+  },
+
   "svg[aria-label='Algolia'] *": {
-    fill: "body.light",
+    fill: "body.medium",
   },
 
   "@media (max-width: 768px)": {

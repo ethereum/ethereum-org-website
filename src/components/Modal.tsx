@@ -1,31 +1,34 @@
 import React from "react"
-
 import {
   Modal as ChakraModal,
-  ModalOverlay,
-  ModalContent,
   ModalCloseButton,
+  ModalContent,
+  type ModalContentProps,
+  ModalOverlay,
+  type ModalProps as ChakraModalProps,
 } from "@chakra-ui/react"
 
-export interface IPropsOverlay {
-  isActive: boolean
-}
+export type ModalProps = ModalContentProps &
+  Pick<ChakraModalProps, "size"> & {
+    children?: React.ReactNode
+    isOpen: boolean
+    setIsOpen: (isOpen: boolean) => void
+  }
 
-export interface IProps {
-  children?: React.ReactNode
-  isOpen: boolean
-  setIsOpen: (isOpen: boolean) => void
-}
-
-const Modal: React.FC<IProps> = ({ children, isOpen, setIsOpen, ...props }) => {
+const Modal = ({
+  children,
+  isOpen,
+  setIsOpen,
+  size,
+  ...restProps
+}: ModalProps) => {
   return (
     <ChakraModal
       isOpen={isOpen}
       onClose={() => setIsOpen(false)}
       isCentered
-      size="xl"
+      size={size ?? "xl"}
       scrollBehavior="inside"
-      {...props}
     >
       <ModalOverlay bgColor="blackAlpha.700" />
 
@@ -35,6 +38,7 @@ const Modal: React.FC<IProps> = ({ children, isOpen, setIsOpen, ...props }) => {
         border="1px"
         borderColor="border"
         borderRadius="md"
+        {...restProps}
       >
         <ModalCloseButton />
         {children}
