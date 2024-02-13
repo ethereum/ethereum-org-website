@@ -1,16 +1,20 @@
 import React, { ReactNode, useCallback, useEffect, useState } from "react"
 import useEmblaCarousel from "embla-carousel-react"
-
-import { Box, Center, Flex, IconButton, Stack } from "@chakra-ui/react"
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"
+import { Box, Center, Flex, IconButton, Stack } from "@chakra-ui/react"
 
-export interface IProps {
+import { ChildOnlyProp } from "@/lib/types"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
+export type SliderProps = {
   children?: React.ReactNode
   onSlideChange?: (slideIndex: number) => void
 }
 
-const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
-  const [emblaRef, embla] = useEmblaCarousel()
+const Slider = ({ children, onSlideChange }: SliderProps) => {
+  const { flipForRtl, direction } = useRtlFlip()
+  const [emblaRef, embla] = useEmblaCarousel({ direction })
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false)
   const [selectedIndex, setSelectedIndex] = useState(0)
@@ -28,7 +32,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
         onSlideChange(index)
       }
     },
-    [embla]
+    [embla, onSlideChange]
   )
 
   const onSelect = useCallback(() => {
@@ -49,7 +53,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
       }
       onSelect()
     })
-  }, [embla, setScrollSnaps, onSelect])
+  }, [embla, setScrollSnaps, onSelect, onSlideChange])
 
   return (
     <Box
@@ -65,7 +69,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
         <Flex>{children}</Flex>
       </Box>
       <Flex
-        justifyContent={{ sm: "left", base: "center" }}
+        justifyContent={{ sm: "start", base: "center" }}
         mb={{ sm: 0, base: 4 }}
       >
         <IconButton
@@ -73,12 +77,13 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           onClick={scrollPrev}
           icon={<MdChevronLeft fontSize={24} focusable />}
           isRound
-          mr="0.8rem"
+          me="0.8rem"
           _hover={{ boxShadow: "none" }}
           _focus={{ boxShadow: "none" }}
           bg={prevBtnEnabled ? "sliderBtnBg" : "sliderBtnBgDisabled"}
           size="sm"
           color={prevBtnEnabled ? "sliderBtnColor" : "sliderBtnColorDisabled"}
+          transform={flipForRtl}
         />
         <IconButton
           aria-label="MdChevronRight"
@@ -90,12 +95,13 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
           bg={nextBtnEnabled ? "sliderBtnBg" : "sliderBtnBgDisabled"}
           size="sm"
           color={nextBtnEnabled ? "sliderBtnColor" : "sliderBtnColorDisabled"}
+          transform={flipForRtl}
         />
       </Flex>
       <Center
         position={{ sm: "absolute" }}
         bottom={{ sm: "2.9rem" }}
-        left={{ sm: "calc((100% - 68px)/2)" }}
+        insetInlineStart={{ sm: "calc((100% - 68px)/2)" }}
       >
         {scrollSnaps.map((_, index) => (
           <Box
@@ -111,9 +117,9 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
             cursor="pointer"
             onClick={() => scrollTo(index)}
             sx={{
-              marginRight: "1rem",
+              me: "1rem",
               "&:last-child": {
-                marginRight: 0,
+                me: 0,
               },
             }}
           />
@@ -123,7 +129,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
   )
 }
 
-export const EmblaSlide: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const EmblaSlide = ({ children }: ChildOnlyProp) => {
   return (
     <Box
       position="relative"

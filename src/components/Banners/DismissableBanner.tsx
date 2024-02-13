@@ -6,18 +6,21 @@ import { Center, CloseButton } from "@chakra-ui/react"
 import BannerNotification from "../BannerNotification"
 
 // Interface
-export interface IProps {
+export type DismissableBannerProps = {
   children: JSX.Element
   storageKey: string
 }
 
-const DismissableBanner: React.FC<IProps> = ({ children, storageKey }) => {
+const DismissableBanner = ({
+  children,
+  storageKey,
+}: DismissableBannerProps) => {
   const [show, setShow] = useState<boolean>(false)
 
   useEffect(() => {
     const isDismissed = localStorage.getItem(storageKey) === "true"
     setShow(!isDismissed)
-  }, [])
+  }, [storageKey])
 
   const onClose = () => {
     localStorage.setItem(storageKey, "true")

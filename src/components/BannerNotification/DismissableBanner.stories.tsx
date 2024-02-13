@@ -1,5 +1,6 @@
-import { Meta, StoryObj } from "@storybook/react"
 import React from "react"
+import { Meta, StoryObj } from "@storybook/react"
+
 import DismissableBanner from "../Banners/DismissableBanner"
 
 export default {
@@ -19,10 +20,9 @@ export const DismissableBannerStory: StoryObj<typeof DismissableBanner> = {
   render: () => {
     const children = <div>{bannerText}</div>
     return (
-      <DismissableBanner
-        children={children}
-        storageKey={dismissableBannerStoryPageKey}
-      />
+      <DismissableBanner storageKey={dismissableBannerStoryPageKey}>
+        {children}
+      </DismissableBanner>
     )
   },
 }

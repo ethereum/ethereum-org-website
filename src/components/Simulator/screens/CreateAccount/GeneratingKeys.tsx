@@ -1,29 +1,32 @@
-import { Grid, Flex, Spinner, Icon, Text } from "@chakra-ui/react"
 import React, { useEffect, useState } from "react"
-import { PiCheckThin } from "react-icons/pi"
-import { PhoneScreenProps } from "../../interfaces"
 import { motion } from "framer-motion"
+import { PiCheckThin } from "react-icons/pi"
+import { Flex, Grid, Icon, Spinner, Text } from "@chakra-ui/react"
+
+import type { PhoneScreenProps } from "@/lib/types"
+
 import { ProgressCta } from "../../ProgressCta"
+
 import {
-  SPINNER_SIZE,
-  WORD_GENERATION_SPINNER_DURATION,
   BUTTON_DELAY_DURATION,
   BUTTON_FADE_DURATION,
+  SPINNER_SIZE,
+  WORD_GENERATION_SPINNER_DURATION,
 } from "./constants"
 
-interface IProps extends PhoneScreenProps {
+type GeneratingKeysProps = PhoneScreenProps & {
   generateNewWords: () => void
 }
-export const GeneratingKeys: React.FC<IProps> = ({
+export const GeneratingKeys = ({
   nav,
   ctaLabel,
   generateNewWords,
-}) => {
+}: GeneratingKeysProps) => {
   const { progressStepper } = nav
   const [loading, setLoading] = useState(true)
   const [complete, setComplete] = useState(false)
 
-  useEffect(generateNewWords, [])
+  useEffect(() => generateNewWords(), [generateNewWords])
 
   // Show spinner for defined number of milliseconds, switching "loading" state to false when complete
   useEffect(() => {
