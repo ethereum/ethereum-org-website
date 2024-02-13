@@ -14,12 +14,12 @@
     "crowdin-contributors": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/getCrowdinContributors.ts",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "chromatic": "chromatic --project-token fee8e66c9916",
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts"
   },
   "dependencies": {
-    "@chakra-ui/next-js": "^2.1.5",
     "@chakra-ui/react": "^2.8.0",
     "@crowdin/crowdin-api-client": "^1.25.0",
     "@docsearch/react": "^3.5.2",
@@ -70,6 +70,7 @@
     "@types/node": "^20.4.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
+    "chromatic": "^10.5.0",
     "eslint": "^8.45.0",
     "eslint-config-next": "^13.0.0",
     "eslint-config-prettier": "^9.0.0",

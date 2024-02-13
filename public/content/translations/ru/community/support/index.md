@@ -39,7 +39,7 @@ _Это не полный список. Нужна помощь в поиске 
 Этот процесс может быть сложным. Вот несколько ориентированных на разработку ресурсов с опытными разработчиками Ethereum, которые будут рады помочь.
 
 - [Университет Alchemy](https://university.alchemy.com/#starter_code)
-- [CryptoDevs на платформе Discord](https://discord.gg/Z9TA39m8Yu)
+- [CryptoDevs на платформе Discord](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Университет Web3](https://www.web3.university/)
@@ -53,7 +53,7 @@ _Это не полный список. Нужна помощь в поиске 
 
 Вот примеры нескольких популярных.
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -65,7 +65,7 @@ _Это не полный список. Нужна помощь в поиске 
 
 Если вы запускаете узел или валидатора, вот несколько сообществ, призванных помочь вам начать работу.
 
-- [EthStaker на платформе Discord](https://discord.io/ethstaker)
+- [EthStaker на платформе Discord](https://discord.gg/ethstaker)
 - [EthStaker на платформе Reddit](https://www.reddit.com/r/ethstaker)
 
 У большинства команд, разрабатывающих клиентов Ethereum, также есть специальные открытые площадки, где вы можете получить поддержку и задать вопросы.

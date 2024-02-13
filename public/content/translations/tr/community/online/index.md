@@ -24,13 +24,13 @@ Yüz binlerce Ethereum meraklısı, haberleri paylaşmak, son gelişmeler hakkı
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Kedi Güdücüler</Link> - Ethereum geliştirmeye proje yönetimi desteği sunmaya odaklı topluluk</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Bilgisayar Korsanları</Link> - ETHGlobal tarafından yürütülen Discord sohbeti: tüm dünyadaki Ethereum bilgisayar korsanları için çevrimiçi bir topluluk</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Ethereum geliştirme odaklı Discord topluluğu</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link> - mevcut ve potansiyel kilitleyiciler için topluluk tarafından yönetilen rehberlik, eğitim, destek ve kaynaklar</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ethereum.org web sitesi ekibi</Link> - uğrayın ve ethereum.org web geliştirme ve tasarımı ekibi ile ve topluluktan insanlarla sohbet edin</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - mevcut ve potansiyel kilitleyiciler için topluluk tarafından yönetilen rehberlik, eğitim, destek ve kaynaklar</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/CetY6Y4">Ethereum.org web sitesi ekibi</Link> - uğrayın ve ethereum.org web geliştirme ve tasarımı ekibi ile ve topluluktan insanlarla sohbet edin</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - yaratıcıların, endüstrinin önde gelenlerinin ve Ethereum meraklılarının takıldığı bir web3 yaratıcı topluluğu. Web3 geliştirme, tasarım ve kültürü hakkında tutkuluyuz. Gelin ve bizle beraber inşa edin.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - Solidity geliştirme için sohbet (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - Solidity geliştirme için sohbet (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity geliştirme için sohbet (Matrix)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum StackExchange</Link> _- soru cevap forumu_</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- merkeziyetsiz soru cevap forumu_</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum StackExchange</Link> *- soru cevap forumu*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *- merkeziyetsiz soru cevap forumu*</SocialListItem>
 
 ## YouTube ve Twitter {#youtube-and-twitter}
 

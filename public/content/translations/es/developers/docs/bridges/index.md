@@ -30,7 +30,7 @@ En el caso de los desarrolladores, los puentes permiten lo siguiente:
 
 ## ¿Cómo funcionan los puentes? {#how-do-bridges-work}
 
-Si bien hay muchos [tipos de diseños de puentes](https://blog.li.fi/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa), resaltan tres formas de facilitar la transferencia de activos entre cadenas:
+Si bien hay muchos [tipos de diseños de puentes](https://li.fi/knowledge-hub/blockchain-bridges-and-classification/), resaltan tres formas de facilitar la transferencia de activos entre cadenas:
 
 - **Bloqueo y minteo:** Bloquear los activos en la cadena de origen y mintear activos en la cadena de destino.
 - **Quemar y mintear:** Quemar activos en la cadena de origen y mintearlos en la cadena de destino.
@@ -91,7 +91,7 @@ Para los desarrolladores, hay muchas maneras de añadir soporte para puentes:
    - La evaluación y el mantenimiento de puentes son difíciles y requieren mucho tiempo.
    - Seleccionar un puente crea un único punto de falla y dependencia.
    - La dapp está limitada por las capacidades del puente.
-   - Los puentes por sí solos podrían no ser suficientes. Las dapps podrían necesitar que los DEX ofrezcan más funcionalidad, como intercambios entre cadenas.
+   - Los puentes por sí solos podrían no ser suficientes. Las DApps podrían necesitar que los DEX ofrezcan más funcionalidad, como intercambios entre cadenas.
 
 4. **Integración de múltiples puentes:** Esta solución resuelve muchos problemas asociados con la integración de un solo puente. No obstante, también tiene limitaciones, ya que la integración de múltiples puentes consume recursos y crea gastos generales técnicos y de comunicación para los desarrolladores, el recurso más escaso en criptografía.
 

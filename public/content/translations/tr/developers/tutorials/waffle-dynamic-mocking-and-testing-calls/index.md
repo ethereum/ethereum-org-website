@@ -10,7 +10,7 @@ tags:
   - "taklit"
 skill: intermediate
 lang: tr
-published: 2020-11-04
+published: 2020-11-14
 ---
 
 ## Bu öğretici ne ile ilgili? {#what-is-this-tutorial-about}

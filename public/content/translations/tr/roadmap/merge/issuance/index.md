@@ -72,7 +72,7 @@ Fikir birliği katmanı dağıtımı, Birleşim öncesinde olduğu gibi, blok ö
 
 Nisan 2023'te gerçekleşen Shanghai/Capella yükseltmesinden beri bu para çekme işlemleri paydaşlar için etkinleştirilmiştir. Paydaşlar _kazançlarını/ödüllerini (32 ETH üzerindeki bakiye)_ kaldırmak üzere teşvik edilir çünkü bu fonlar hisse ağırlıklarına katkıda bulunmazlar (32 maksimum değerdir).
 
-Paydaşlar aynı zamanda çıkmayı ve tüm doğrulayıcı bakiyelerini geri çekmeyi seçebilir. Ethereum'un stabil olduğundan emin olmak için aynı anda sistemi terk eden doğrulayıcı sayısı sınırlanmıştır.
+Paydaşlar aynı zamanda çıkmayı ve tüm doğrulayıcı bakiyelerini çekmeyi seçebilir. Ethereum'un stabil olduğundan emin olmak için aynı anda sistemi terk eden doğrulayıcı sayısı sınırlanmıştır.
 
 Toplam doğrulayıcıların nerdeyse %0,33'ü belirli bir gün içerisinde çıkabilir. Varsayım olarak her dönemde dört (4) doğrulayıcı çıkabilir (her 6,4 dakikada bir ya da her gün 900). 262.144 (2<sup>18</sup>) üzerindeki her ek 65.536 (2<sup>16</sup>) doğrulayıcı için fazladan bir (1) doğrulayıcının çıkmasına izin verilir. Örneğin 327.680 doğrulayıcı ile her dönemde beş (5) kişi ayrılabilir (günde 1.125). Bu kurala dayalı olarak doğrulayıcı sayısının 393.216 olması durumunda altı (6) kişinin çıkmasına izin verilir.
 

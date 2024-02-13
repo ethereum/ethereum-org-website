@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 Una sidechain è una blockchain separata eseguita in modo indipendente da Ethereum ed è connessa alla Rete principale di Ethereum da un ponte bidirezionale. Le sidechain possono avere parametri del blocco e [algoritmi di consenso](/developers/docs/consensus-mechanisms/) separati, spesso progettati per l'elaborazione efficiente delle transazioni. Usare una sidechain comporta compromessi, però, poiché non eredita le proprietà di sicurezza di Ethereum. A differenza dalle [soluzioni di ridimensionamento del livello 2](/layer-2/), le sidechain non ri-pubblicano i cambiamenti di stato e i dati della transazione nella Rete principale di Ethereum.
 
-Inoltre, le sidechain sacrificano alcune misure di decentralizzazione o di sicurezza per ottenere un volume elevato ([trilemma di scalabilità](https://vitalik.ca/general/2021/05/23/scaling.html)). Tuttavia, Ethereum, si impegna nel ridimensionamento senza compromettere la decentralizzazione e la sicurezza come definito nella [dichiarazione della vision](/roadmap/vision/) per gli aggiornamenti.
+Inoltre, le sidechain sacrificano alcune misure di decentralizzazione o di sicurezza per ottenere un volume elevato ([trilemma di scalabilità](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Tuttavia, Ethereum, si impegna nel ridimensionamento senza compromettere la decentralizzazione e la sicurezza come definito nella [dichiarazione della vision](/roadmap/vision/) per gli aggiornamenti.
 
 ## Come funzionano le sidechain? {#how-do-sidechains-work}
 

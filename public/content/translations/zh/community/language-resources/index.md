@@ -10,15 +10,15 @@ lang: zh
 
 我们的目标是提供所有语言的教育内容，帮助世界各地的人们克服语言障碍，成功加入以太坊社区。
 
-如果您更喜欢用您的母语阅读或者知道某人不会说英语，您可以在下面找到有用的非英语资源列表。 数十万以太坊爱好者齐聚这些在线论坛，分享消息、谈论近来的发展、热烈讨论技术问题并畅想未来。
+如果你更喜欢用你的母语阅读或者知道某人不会说英语，你可以在下面找到有用的非英语资源列表。 数十万以太坊爱好者齐聚这些在线论坛，分享消息、谈论近来的发展、热烈讨论技术问题并畅想未来。
 
-知道一个您语言的教育资源？ [创建问题](https://github.com/ethereum/ethereum-org-website/issues/new/choose)，以将其添加到列表！
+知道一个你语言的教育资源？ [创建问题](https://github.com/ethereum/ethereum-org-website/issues/new/choose)，以将其添加到列表！
 
 ## Ethereum.org 资源 {#ethereum-org}
 
 Ethereum.org 被地道地翻译成 40 多种语言，请参阅我们的[语言页面](/languages)。
 
-如果您会使用两种语言，而且想帮助我们宣传到更多的人，您也可以参与 [ethereum.org 翻译计划](/contributing/translation-program/#translation-program)，帮助我们翻译该网站。
+如果你会使用两种语言，而且想帮助我们宣传到更多的人，你也可以参与 [ethereum.org 翻译计划](/contributing/translation-program/#translation-program)，帮助我们翻译该网站。
 
 ## 社区资源 {#community}
 
@@ -72,7 +72,7 @@ Ethereum.org 被地道地翻译成 40 多种语言，请参阅我们的[语言�
 - [Gwei.cz](https://gwei.cz) - 当地 Web3 社区，制作教育内容，组织在线和现场活动
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - 以太坊初学者指南
 - [DAO Příručka](https://dao.gwei.cz/) - 去中心化自治组织初学者指南
-- [精通以太坊](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - 精通以太坊（捷克语）
+- [精通以太坊](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - 精通以太坊（捷克语）
 
 ### 法语 {#fr}
 

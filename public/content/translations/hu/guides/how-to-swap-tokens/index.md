@@ -12,7 +12,7 @@ A tokenváltás két különböző eszköz cseréje, melyek az Ethereum hálóza
 
 **Feltételek:**
 
-- rendelkeznie kell egy kriptotárcával – ehhez kövesse a következő útmutatót: [Hogyan lehet létrehozni Ethereum számlát](/guides/how-to-register-an-ethereum-account/)
+- rendelkeznie kell egy kriptotárcával – ehhez kövesse a következő útmutatót: [Hogyan lehet létrehozni Ethereum-számlát](/guides/how-to-create-an-ethereum-account/)
 - lennie kell pénzeszközöknek a tárcájában
 
 ## 1. Kapcsolja a tárcáját egy kiválasztott decentralizált tőzsdéhez (DEX)

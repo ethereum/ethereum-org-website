@@ -15,31 +15,27 @@ Diese Liste wird von unserer Community verwaltet. Wenn Informationen fehlen oder
 Diese Programme unterstützen das breit gefächerte Ethereum-Ökosystem, indem sie Finanzierungen für zahlreiche Projekte bereitstellen. Dazu gehören unter anderem Lösungen zu Skalierbarkeit, Community-Aufbau, Sicherheit und Privatsphäre. Diese Fördermaßnahmen sind nicht spezifisch für eine bestimmte Ethereum-Plattform und sind ein guter Ausgangspunkt, wenn Sie unsicher sind.
 
 - [EF-Ökosystem Unterstützungsprogramm](https://esp.ethereum.foundation) - _Finanzierung von Open-Source-Projekten, die Ethereum zugutekommen, mit besonderem Fokus auf universelle Werkzeuge, Infrastruktur, Forschung und öffentliche Güter_
-- [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) – _Ausschreibungen der Ethereum Foundation für Arbeiten und Projekte im Ethereum-Ökosystem_
 - [MetaCartel](https://www.metacartel.org/grants/) - _DApp-Entwicklung, DAO-Erstellung_
-- [Moloch DAO](https://www.molochdao.com/) – _Datenschutz, Layer-2-Skalierung, Kundensicherheit und mehr_
-- [Offene Zuschüsse](https://opengrants.com/explore)
-- [DAO-Stipendien](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google-Tabelle der Organisationen, die Stipendien anbieten_
-- [Crunchbase für Web3-Grants](https://www.cryptoneur.xyz/web3-grants) - _Filter und suche nach Grants nach Kategorie, Anwendungsfall, Betrag und mehr. Hilf anderen dabei, die richtige Zuwendung zu finden._
+- [Moloch DAO](https://www.molochdao.com/) – _Datenschutz, Layer-2-Skalierung, Client-Sicherheit und mehr_
+- [DAO-Zuschüsse](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _Google-Tabelle der Organisationen, die Zuschüsse anbieten_
+- [Crunchbase für Web3-Zuschüsse](https://www.cryptoneur.xyz/web3-grants) – _Filtere und suche nach Zuschüssen nach Kategorie, Anwendungsfall, Betrag und mehr. Hilf anderen dabei, den richtigen Zuschuss zu finden._
 - [Akademische Stipendien](https://esp.ethereum.foundation/academic-grants) – _Stipendien zur Untstützung akademischer Arbeiten in Bezug auf Ethereum_
+- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks hat ein umfassendes Verzeichnis aller Zuschüsse, Ausschreibungen und Bug-Bounties zusammengestellt._
 
 ## Projektspezifisch {#project-specific}
 
 Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklung und Erprobung ihrer eigenen Technologie geschaffen.
 
 - [Aave-Zuschussprogramm](https://aavegrants.org/) – _[Aave](https://aave.com/) Grants DAO_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)-Ökosystemfonds_
+- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41) – _[Balancer](https://balancer.fi/)-Ökosystemfonds_
 - [Chainlink-Förderprogramm](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) Gemeinschaftsförderungen_
-- [Programm für Verbundzuschüsse](https://compoundgrants.org/) – _[Verbund](https://compound.finance/)-Finanzökosystem_
-- [Decentraland-Zuschussprogramm](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/) DAO Metaverse_
-- [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)-Finanzökosystem_
-- [MetaMask-Programm](https://metamaskgrants.org/) – _Von Mitarbeitern geleitete DAO für[MetaMask](https://metamask.io/)-Stipendien_
-- [mStable-Zuschussprogram](https://docs.mstable.org/advanced/grants-program) – _[mStable](https://mstable.org/)-Gemeinschaft_
-- [SKALE Network-Förderprogramm](https://skale.space/developers#grants) – _[SKALE Network](https://skale.space/)-Ökosystem_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)-Ökosystem_
-- [UMA Grants Program](https://grants.umaproject.org/) – _[UMA](https://umaproject.org/)-Entwicklerunterstützung_
-- [Uniswap-Zuschussprogramm](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)-Community_
-- [Web3-Förderung](https://web3grants.net) – _Eine umfangreiche Liste von Web3-/Krypto-verwandten Förderprogrammen_
+- [Decentraland-Zuschussprogramm](https://governance.decentraland.org/grants/) – _[Decentraland](https://decentraland.org/)-DAO-Metaverse_
+- [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/)-Finanzökosystem_
+- [MetaMask-Programm](https://metamaskgrants.org/) – _Mitarbeitergeleitete DAO für[MetaMask](https://metamask.io/)-Zuschüsse_
+- [SKALE-Network-Förderprogramm](https://skale.space/developers#grants) – _[SKALE-Network](https://skale.space/)-Ökosystem_
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The-Graph](https://thegraph.com/)-Ökosystem_
+- [Uniswap-Förderprogramm](https://www.uniswapfoundation.org/apply-for-a-grant) – _[Uniswap](https://uniswap.org/)-Community_
+- [Web3-Zuschüsse](https://web3grants.net) – _Eine umfangreiche Liste von Förderprogrammen mit Bezug zu Web3/Krypto_
 
 ## Quadratische Finanzierung {#quadratic-funding}
 

@@ -37,7 +37,7 @@ Ayrıca, doğrulayıcıların hepsinin her bir kümede bir blok önermek için r
 
 ## Güncel ilerleme {#current-progress}
 
-Hem SSLE hem de SnSLE şu anda araştırma aşamasında. Henüz iki fikrin de sonuçlanmış bir tanımlaması yok. SSLE ve SnSLE ikisi de hâlâ uygulanamayan öneriler için rekabet halinde. Uygulamaya geçmeden önce halka açık test ağlarında biraz daha araştırmaya, geliştirmeye, prototiplemeye ve denenmeye ihtiyacı var.
+Hem SSLE hem de SnSLE şu anda araştırma aşamasında. Henüz iki fikrin de sonuçlanmış bir özelliği yok. SSLE ve SnSLE ikisi de hâlâ uygulanamayan öneriler için rekabet halinde. Uygulamaya geçmeden önce halka açık test ağlarında biraz daha araştırmaya, geliştirmeye, prototiplemeye ve denenmeye ihtiyacı var.
 
 ## Daha fazla bilgi {#further-reading}
 
