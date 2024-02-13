@@ -11029,6 +11029,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "titanism",
+      "name": "titanism",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101466223?v=4",
+      "profile": "https://github.com/titanism",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
