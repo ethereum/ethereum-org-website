@@ -176,29 +176,6 @@ const ButtonRow = (props: ChildOnlyProp) => (
   <Flex align="center" mt={4} mb={6} wrap="wrap" gap={4} {...props} />
 )
 
-export const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
-  <Card
-    flex="1 1 30%"
-    minW="240px"
-    maxW={{ base: "full", md: "46%", lg: "31%" }}
-    m={4}
-    p={6}
-    {...props}
-  />
-)
-
-const Stat: React.FC<{ stat: IFetchStat }> = ({ stat }) => {
-  const isLoading = !stat.value
-
-  return stat.hasError ? (
-    <StatErrorMessage fontSize="1rem" />
-  ) : isLoading ? (
-    <StatLoadingMessage fontSize="1rem" />
-  ) : (
-    <>{stat.formattedValue}</>
-  )
-}
-
 const NoWrapText = (props: ChildOnlyProp) => (
   <Text as="span" whiteSpace="nowrap" {...props} />
 )
@@ -397,7 +374,7 @@ const WhatIsEthereumPage = ({
             <H2>{t("page-what-is-ethereum-what-can-eth-do-title")}</H2>
             <CardContainer>
               {cards.map((card, idx) => (
-                <StyledCard
+                <Card
                   key={idx}
                   emoji={card.emoji}
                   title={card.title}
