@@ -1,36 +1,36 @@
-import React from "react"
+import NextLink, { type LinkProps as NextLinkProps } from "next/link"
+import { useRouter } from "next/router"
+import { RxExternalLink } from "react-icons/rx"
 import {
-  Box,
+  forwardRef,
   Icon,
   Link as ChakraLink,
-  LinkProps,
-  useTheme,
+  type LinkProps as ChakraLinkProps,
+  type StyleProps,
   VisuallyHidden,
 } from "@chakra-ui/react"
-import { navigate as gatsbyNavigate } from "gatsby"
-import { Link as IntlLink } from "gatsby-plugin-react-i18next"
-import { NavigateOptions } from "@reach/router"
-import { RxExternalLink } from "react-icons/rx"
 
-import { Lang } from "../utils/languages"
-import { trackCustomEvent, MatomoEventOptions } from "../utils/matomo"
-import * as url from "../utils/url"
-import { Direction } from "../types"
-import { SITE_URL, DISCORD_PATH } from "../constants"
+import { type MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+import { getRelativePath } from "@/lib/utils/relativePath"
+import * as url from "@/lib/utils/url"
 
-export interface IBaseProps {
+import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
+type BaseProps = {
+  /** @deprecated Use `href` prop instead */
   to?: string
   href?: string
-  language?: Lang
   hideArrow?: boolean
   isPartiallyActive?: boolean
+  activeStyle?: StyleProps
   customEventOptions?: MatomoEventOptions
-  activeStyle?: object
 }
 
-export interface IProps extends IBaseProps, LinkProps {
-  dir?: Direction // TODO: remove this prop once we use the native Chakra RTL support
-}
+export type LinkProps = BaseProps &
+  ChakraLinkProps &
+  Omit<NextLinkProps, "as" | "legacyBehavior" | "passHref" | "href">
 
 /**
  * Link wrapper which handles:
@@ -43,68 +43,119 @@ export interface IProps extends IBaseProps, LinkProps {
  *
  * - PDFs & static files (which open in a new tab)
  * e.g. <Link href="/eth-whitepaper.pdf">
- *
- * - Intl links
- * e.g. <Link href="/page-2/" language="de">
  */
-export const BaseLink: React.FC<IProps> = ({
-  to: toProp,
-  href,
-  language,
-  dir = "ltr",
-  children,
-  hideArrow = false,
-  isPartiallyActive = true,
-  customEventOptions,
-  activeStyle = null,
-  ...restProps
-}) => {
-  const theme = useTheme()
+export const BaseLink = forwardRef(function Link(
+  {
+    to,
+    href: hrefProp,
+    children,
+    hideArrow,
+    isPartiallyActive = true,
+    activeStyle = { color: "primary.base" },
+    customEventOptions,
+    ...props
+  }: LinkProps,
+  ref
+) {
+  const { asPath } = useRouter()
+  const { flipForRtl } = useRtlFlip()
 
-  // TODO: in the next PR we are going to deprecate the `to` prop and just use `href`
-  // this is to support the ButtonLink component which uses the `to` prop
-  let to = (toProp ?? href)!
+  let href = (to ?? hrefProp) as string
 
-  const isDiscordInvite = url.isDiscordInvite(to)
-  if (isDiscordInvite) to = new URL(DISCORD_PATH, SITE_URL).href
-  const isExternal = url.isExternal(to)
-  const isHash = url.isHash(to)
-  const isStatic = url.isStatic(to)
-  const isPdf = url.isPdf(to)
+  const isActive = url.isHrefActive(href, asPath, isPartiallyActive)
+  const isDiscordInvite = url.isDiscordInvite(href)
+  const isPdf = url.isPdf(href)
+  const isExternal = url.isExternal(href)
+  const isInternalPdf = isPdf && !isExternal
+  const isHash = url.isHash(href)
 
-  const externalLinkEvent: MatomoEventOptions = {
-    eventCategory: `External link`,
-    eventAction: `Clicked`,
-    eventName: to,
+  // Get proper download link for internally hosted PDF's & static files (ex: whitepaper)
+  // Opens in separate window.
+  if (isInternalPdf) {
+    href = getRelativePath(asPath, href)
   }
 
-  const hashLinkEvent: MatomoEventOptions = {
-    eventCategory: `Hash link`,
-    eventAction: `Clicked`,
-    eventName: to,
+  if (isDiscordInvite) {
+    href = new URL(DISCORD_PATH, SITE_URL).href
   }
 
   const commonProps = {
-    dir,
-    ...restProps,
+    ref,
+    ...props,
+    ...(isActive && activeStyle),
+    href,
   }
 
-  // Must use Chakra's native <Link> for anchor links
-  // Otherwise the Gatsby <Link> functionality will navigate to homepage
-  // See https://github.com/gatsbyjs/gatsby/issues/21909
+  if (isExternal) {
+    return (
+      <ChakraLink
+        isExternal
+        onClick={() =>
+          trackCustomEvent(
+            customEventOptions ?? {
+              eventCategory: `Link`,
+              eventAction: `Clicked`,
+              eventName: "Clicked on external link",
+              eventValue: href,
+            }
+          )
+        }
+        {...commonProps}
+      >
+        {children}
+        <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
+        {!hideArrow && (
+          <Icon
+            as={RxExternalLink}
+            boxSize="6"
+            p="1"
+            verticalAlign="middle"
+            me="-1"
+            transform={flipForRtl}
+          />
+        )}
+      </ChakraLink>
+    )
+  }
+
+  if (isInternalPdf) {
+    return (
+      <ChakraLink
+        isExternal
+        // disable locale prefixing for internal PDFs
+        // TODO: add i18n support using a rehype plugin (similar as we do for
+        // images)
+        locale={false}
+        onClick={() =>
+          trackCustomEvent(
+            customEventOptions ?? {
+              eventCategory: `Link`,
+              eventAction: `Clicked`,
+              eventName: "Clicked on internal PDF",
+              eventValue: href,
+            }
+          )
+        }
+        {...commonProps}
+        as={NextLink}
+      >
+        {children}
+      </ChakraLink>
+    )
+  }
+
   if (isHash) {
     return (
       <ChakraLink
-        href={to}
         onClick={(e) => {
-          // only track events on external links and hash links
-          if (!isHash) {
-            return
-          }
-
           e.stopPropagation()
           trackCustomEvent(
-            customEventOptions ? customEventOptions : hashLinkEvent
+            customEventOptions ?? {
+              eventCategory: "Link",
+              eventAction: "Clicked",
+              eventName: "Clicked on hash link",
+              eventValue: href,
+            }
           )
         }}
         {...commonProps}
@@ -114,72 +165,28 @@ export const BaseLink: React.FC<IProps> = ({
     )
   }
 
-  // Download link for internally hosted PDF's & static files (ex: whitepaper)
-  // Opens in separate window.
-  if (isExternal || isPdf || isStatic) {
-    return (
-      <ChakraLink
-        href={to}
-        isExternal
-        onClick={(e) => {
-          // only track events on external links and hash links
-          if (!isExternal) {
-            return
-          }
-
-          e.stopPropagation()
-          trackCustomEvent(
-            customEventOptions ? customEventOptions : externalLinkEvent
-          )
-        }}
-        {...commonProps}
-      >
-        <>
-          {children}
-          <VisuallyHidden>(opens in a new tab)</VisuallyHidden>
-          {!hideArrow && (
-            <Icon
-              as={RxExternalLink}
-              boxSize="6"
-              p="1"
-              verticalAlign="middle"
-              me="-1"
-            />
-          )}
-        </>
-      </ChakraLink>
-    )
-  }
-
-  // Use `gatsby-theme-i18n` Link (which prepends lang path)
   return (
     <ChakraLink
-      to={to}
-      as={IntlLink}
-      language={language}
-      partiallyActive={isPartiallyActive}
-      activeStyle={activeStyle ? activeStyle : { color: theme.colors.primary }}
-      whiteSpace={"normal"}
+      onClick={() =>
+        trackCustomEvent(
+          customEventOptions ?? {
+            eventCategory: `Link`,
+            eventAction: `Clicked`,
+            eventName: `Clicked on internal link`,
+            eventValue: href,
+          }
+        )
+      }
       {...commonProps}
+      as={NextLink}
     >
       {children}
     </ChakraLink>
   )
-}
+})
 
-export function navigate(
-  to: string,
-  language: Lang,
-  options?: NavigateOptions<{}>
-) {
-  if (typeof window === "undefined") {
-    return
-  }
-
-  const link = `/${language}${to}`
-  gatsbyNavigate(link, options)
-}
-
-const InlineLink = (props: IProps) => <BaseLink data-inline-link {...props} />
+const InlineLink = forwardRef((props: LinkProps, ref) => {
+  return <BaseLink data-inline-link ref={ref} {...props} />
+})
 
 export default InlineLink

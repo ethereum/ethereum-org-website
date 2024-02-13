@@ -1,9 +1,12 @@
 import fs from "fs"
 import path from "path"
 
-import { SourceFilesModel, ResponseObject } from "@crowdin/crowdin-api-client"
+import { ResponseObject, SourceFilesModel } from "@crowdin/crowdin-api-client"
 
-import { CROWDIN_PROJECT_ID, CROWDIN_API_MAX_LIMIT } from "../../../constants"
+import {
+  CROWDIN_API_MAX_LIMIT,
+  CROWDIN_PROJECT_ID,
+} from "../../../lib/constants"
 import crowdinClient from "../api-client/crowdinClient"
 
 const { sourceFilesApi } = crowdinClient

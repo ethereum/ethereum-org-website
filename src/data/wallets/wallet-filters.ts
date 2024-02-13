@@ -1,4 +1,4 @@
-import { TranslationKey } from "../../utils/translations"
+import type { TranslationKey } from "@/lib/types"
 
 interface WalletFilter {
   title: TranslationKey
