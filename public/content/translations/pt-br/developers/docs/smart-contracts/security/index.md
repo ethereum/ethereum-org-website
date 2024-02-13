@@ -8,7 +8,7 @@ Os contratos inteligentes são extremamente flexíveis e capazes de controlar gr
 
 Blockchains públicas, como a Ethereum, complicam ainda mais a questão de proteger contratos inteligentes. O código de contrato implantado _geralmente_ não pode ser alterado para corrigir falhas de segurança, enquanto os ativos roubados de contratos inteligentes são extremamente difíceis de rastrear e, em sua maioria, irrecuperáveis devido à imutabilidade.
 
-Embora os números variem, estima-se que o valor total roubado ou perdido devido a defeitos de segurança em contratos inteligentes é facilmente superior a 1 bilhão de dólares. Isso inclui incidentes de alto perfil, como o [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (com 3,6 milhões de ETH roubados, no valor de mais de US$ 1 bilhão de dólares nos preços de hoje), [ Hack da carteira múltiplas assinaturas da Parity](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (US$ 30 milhões perdidos para hackers) e o [ Caso da carteira congelada da Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (mais de US$ 300 milhões em ETH bloqueados para sempre).
+Embora os números variem, estima-se que o valor total roubado ou perdido devido a defeitos de segurança em contratos inteligentes é facilmente superior a 1 bilhão de dólares. Isso inclui incidentes de alto perfil, como o [DAO hack](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/) (com 3,6 milhões de ETH roubados, no valor de mais de US$ 1 bilhão de dólares nos preços de hoje), [Hack da carteira múltiplas assinaturas da Parity](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach) (US$ 30 milhões perdidos para hackers) e o [Caso da carteira congelada da Parity](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether) (mais de US$ 300 milhões em ETH bloqueados para sempre).
 
 As questões mencionadas tornam imperativo para os desenvolvedores investirem esforços na construção de contratos inteligentes seguros, sólidos e resistentes. Segurança dos contratos inteligentes é um assunto sério, e todo desenvolvedor deve aprender. Este guia abrangerá considerações de segurança para desenvolvedores de Ethereum e explorará recursos para melhorar a segurança dos contratos inteligentes.
 
@@ -470,13 +470,13 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 ### Ferramentas para monitorar contratos inteligentes {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - *Uma ferramenta para monitorar e responder automaticamente a eventos, funções e parâmetros de transação em seus contratos inteligentes.*
+- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Uma ferramenta para monitorar e responder automaticamente a eventos, funções e parâmetros de transação em seus contratos inteligentes._
 
 - **[Alerta leve e em tempo real](https://tenderly.co/alerting/)** - _Uma ferramenta para receber notificações em tempo real quando eventos incomuns ou inesperados acontecem em seus contratos inteligentes ou carteiras._
 
 ### Ferramentas para administração segura de contratos inteligentes {#smart-contract-administration-tools}
 
-- **[Administrador do OpenZeppelin Defender](https://docs.openzeppelin.com/defender/v1/admin)** - *Interface para gerenciar a administração de contrato inteligente, incluindo controles de acesso, atualizações e pausas.*
+- **[Administrador do OpenZeppelin Defender](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface para gerenciar a administração de contrato inteligente, incluindo controles de acesso, atualizações e pausas._
 
 - **[Safe](https://safe.global/)** - _Carteira de contrato inteligente em execução na Ethereum, que requer um número mínimo de pessoas para aprovar uma transação antes que ela possa ocorrer (M-de-N)._
 
@@ -500,7 +500,7 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 - **[Hacken](https://hacken.io)** - _Auditor de cibersegurança da Web3 que traz a abordagem de 360 graus à segurança da blockchain._
 
-- **[Nethermind](https://nethermind.io/smart-contracts-audits)** -  _Serviços de auditoria Solidity e Cairo que garantem a integridade dos contratos inteligentes e a segurança dos usuários em toda a Ethereum e Starknet._
+- **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Serviços de auditoria Solidity e Cairo que garantem a integridade dos contratos inteligentes e a segurança dos usuários em toda a Ethereum e Starknet._
 
 - **[HashEx](https://hashex.org/)** – _O HashEx se dedica a blockchain e auditoria de contrato inteligente para garantir a segurança de criptomoedas, fornecendo serviços como desenvolvimento de contrato inteligente, teste de penetração e consultoria em blockchain._
 
@@ -524,7 +524,7 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 ### Desafios para aprender a segurança de contratos inteligentes {#challenges-for-learning-smart-contract-security}
 
-- **[A Incrível BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - *Lista selecionada de jogos de guerra de segurança na blockchain, desafios e a [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/) com competições e descrições de soluções.*
+- **[A Incrível BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _Lista selecionada de jogos de guerra de segurança na blockchain, desafios e a [Capture The Flag](https://www.webopedia.com/definitions/ctf-event/amp/) com competições e descrições de soluções._
 
 - **[Maldito DeFi Vulnerável](https://www.damnvulnerabledefi.xyz/)** - _Jogo de guerra para aprender a segurança ofensiva de contratos inteligentes DeFi e desenvolver habilidades em caça a bugs e auditoria de segurança._
 
@@ -536,7 +536,7 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 - **[Nascent: Kit de Ferramentas de Segurança Simples](https://github.com/nascentxyz/simple-security-toolkit)** - _Coleção de guias práticos com foco em segurança e listas de verificação para o desenvolvimento de contratos inteligentes._
 
-- **[Padrões Solidity](https://fravoll.github.io/solidity-patterns/)** - *Compilação útil de padrões segurança e melhores práticas para contratos inteligentes da linguagem de programação Solidity.*
+- **[Padrões Solidity](https://fravoll.github.io/solidity-patterns/)** - _Compilação útil de padrões segurança e melhores práticas para contratos inteligentes da linguagem de programação Solidity._
 
 - **[Documentação Solidity: Considerações de Segurança](https://docs.soliditylang.org/en/v0.8.16/security-considerations.html)** - _Diretrizes para programar contratos inteligentes seguros com Solidity._
 
