@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import {
   Accordion,
   AccordionButton,
@@ -25,6 +26,7 @@ type MenuBodyProps = {
 }
 
 const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
+  const { locale } = useRouter()
   const menuColors = useNavMenuColors()
 
   return (
@@ -53,7 +55,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
                         eventAction: "Section changed",
                         eventName: `${
                           isExpanded ? "Close" : "Open"
-                        } section: ${label}`,
+                        } section: ${locale} - ${key}`,
                       })
                     }}
                   >
