@@ -11065,6 +11065,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "gabrieltemtsen",
+      "name": "Gabriel Temsten",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57184013?v=4",
+      "profile": "https://github.com/gabrieltemtsen",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
