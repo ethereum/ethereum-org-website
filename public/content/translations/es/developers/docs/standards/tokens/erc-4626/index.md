@@ -204,4 +204,4 @@ Donde `sender` es el usuario que desencadenó el retiro e intercambió `shares`,
 ## Más información {#further-reading}
 
 - [EIP-4626: estándar de bóveda tokenizada](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: repositorio de GitHub](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)
+- [ERC-4626: repositorio de GitHub](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
