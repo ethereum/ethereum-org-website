@@ -1,6 +1,6 @@
 import NextLink from "next/link"
 import { useRouter } from "next/router"
-import { Box, Button, Icon, ListItem, UnorderedList } from "@chakra-ui/react"
+import { Button, Icon, ListItem, UnorderedList } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 import * as Portal from "@radix-ui/react-portal"
 
@@ -38,7 +38,7 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
 
   if (lvl > 3) return null
 
-  const pad = 4
+  const pad = 4 // Chakra-UI space token
 
   return (
     <NavigationMenu.Content>
