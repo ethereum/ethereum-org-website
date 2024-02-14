@@ -1,15 +1,4 @@
-interface NetworkUpgradeProps {
-  dateTimeAsString: string
-  ethPriceInUSD: number
-  waybackLink: string
-  blockNumber?: number
-  epochNumber?: number
-  slotNumber?: number
-}
-
-export interface NetworkUpgradeSummaryDataProps {
-  [key: string]: NetworkUpgradeProps
-}
+import type { NetworkUpgradeData } from "@/lib/types"
 
 const NetworkUpgradeSummaryData: NetworkUpgradeSummaryDataProps = {
   shanghai: {
