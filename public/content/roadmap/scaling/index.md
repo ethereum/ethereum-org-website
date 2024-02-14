@@ -11,7 +11,7 @@ Ethereum is scaled using [layer 2s](/layer-2/#rollups) (also known as rollups), 
 
 <InfoBanner mb={8} title="Transaction costs">
   <ul style={{ marginBottom: 0 }}>
-    <li>Today’s rollups are <strong>~3-8x</strong> cheaper than Ethereum layer 1</li>
+    <li>Today’s rollups are <strong>~5-20x</strong> cheaper than Ethereum layer 1</li>
     <li>ZK-rollups will soon lower fees by <strong>~40-100x</strong></li>
     <li>Upcoming changes to Ethereum will provide another <strong>~100-1000x</strong> of scaling</li>
     <li style={{ marginBottom: 0 }}>Users should benefit from transactions <strong>costing less than $0.001</strong></li>
@@ -24,9 +24,9 @@ Rollups collect large numbers of transactions, execute them and submit the resul
 
 ### Proto-Danksharding {#proto-danksharding}
 
-Rollup data is stored on Ethereum permanently, which is expensive. Over 90% of the transaction cost users pay on rollups is due to this data storage. To reduce transaction costs, we can move the data into a new temporary 'blob' storage. Blobs are cheaper because they are not permanent; they get deleted from Ethereum once they are no longer needed. Storing rollup data long term becomes the responsibility of the people that need it, such as rollup operators, exchanges, indexing services etc. Adding blob transactions to Ethereum is part of an upgrade known as "Proto-Danksharding". It is expected to be shipped relatively soon—perhaps in late 2023.
+Rollup data has historically been stored on Ethereum permanently, which is expensive. Over 90% of the transaction cost users pay on rollups is due to this data storage. To reduce transaction costs, we can move the data into a new temporary 'blob' storage. Blobs are cheaper because they are not permanent; they get deleted from Ethereum once they are no longer needed. Storing rollup data long-term becomes the responsibility of the people that need it, such as rollup operators, exchanges, indexing services etc. Adding blob transactions to Ethereum is part of an upgrade known as "Proto-Danksharding".
 
-After blob transactions have become part of the Ethereum protocol through Proto-Danksharding, it will be possible to add many blobs to Ethereum blocks. This will be another substantial (>100x) scale-up to Ethereum’s throughput and scale-down to transaction costs.
+With Proto-Danksharding, it is possible to add many blobs to Ethereum blocks. This enables another substantial (>100x) scale-up to Ethereum’s throughput and scale-down to transaction costs.
 
 ### Danksharding {#danksharding}
 
@@ -44,6 +44,7 @@ This second step is known as [“Danksharding”](/roadmap/danksharding/). It is
 
 ## Current progress {#current-progress}
 
-Proto-Danksharding is likely to be one of the earlier roadmap items to be implemented. The decentralized computation steps required to set it up are already underway and several clients have implemented prototypes for handling blob data. Full Danksharding is likely several years away, as it relies upon several other roadmap items being completed first. Decentralizing rollup infrastructure is likely to be a gradual process - there are many different rollups that are building slightly different systems and will fully decentralize at different rates.
+Proto-Danksharding is the first of these roadmap items to be implemented as part of the Deneb + Cancun network upgrade in March of 2024. 
+Full Danksharding is likely several years away, as it relies upon several other roadmap items being completed first. Decentralizing rollup infrastructure is likely to be a gradual process - there are many different rollups that are building slightly different systems and will fully decentralize at different rates.
 
 <QuizWidget quizKey="scaling" />
