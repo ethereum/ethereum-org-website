@@ -15,14 +15,14 @@ lang: ja
 - 宝くじの券。
 - 企業の株式などの金融資産。
 - 米ドルをはじめとする法定通貨。
-- 金（ゴールド）1 オンス。
+- 金（ゴールド）1オンス。
 - 等々。
 
-イーサリアムにおいてこれほどの威力を持つ機能に対しては、必然的に堅牢な規格が必要です。 これこそ、ERC-20 規格が果たすべき役割なのです！ この規格を用いることで、イーサリアム外の製品やサービスと相互運用できるトークンアプリを構築することが可能になります。
+イーサリアムにおいてこれほどの威力を持つ機能に対しては、必然的に堅牢な規格が必要です。 これこそ、ERC-20規格が果たすべき役割なのです！ この規格を用いることで、イーサリアム外の製品やサービスと相互運用できるトークンアプリを構築することが可能になります。
 
-**ERC-20 とは何か？**
+**ERC-20とは何か？**
 
-ERC-20 規格は、代替性トークンを扱うための標準規格です。つまりこの規格では、ひとつのトークンが、その種類および値において他のトークンとまったく同じであるというプロパティを持たせることができます。 例えば、ERC-20 トークンは ETH とまったく同様に動作します。つまり、1 トークンは、現在および将来において常に、他のひとつのトークンと同等になります。
+ERC-20規格は、代替性トークンを扱うための標準規格です。つまりこの規格では、ひとつのトークンが、その種類および値において他のトークンとまったく同じであるというプロパティを持たせることができます。 例えば、ERC-20トークンはETHとまったく同様に動作します。つまり、1トークンは、現在および将来において常に、他のひとつのトークンと同等になります。
 
 ## 前提知識 {#prerequisites}
 
@@ -32,16 +32,16 @@ ERC-20 規格は、代替性トークンを扱うための標準規格です。�
 
 ## 規格の概要 {#body}
 
-ERC-20（Ethereum Request for Comments 20）は、スマートコントラクト内にトークン API として実装できるトークン規格として、ファビアン・ヴォゲルステラー氏により 2015 年 11 月に提案されました。
+ERC-20（Ethereum Request for Comments 20）は、スマートコントラクト内にトークンAPIとして実装できるトークン規格として、ファビアン・ヴォゲルステラー氏により2015年11月に提案されました。
 
-ERC-20 は、以下のような機能を提供します:
+ERC-20は、以下のような機能を提供します:
 
 - トークンを、ひとつのアカウントから他のアカウントに転送する。
 - アカウントにおける現在のトークン残高を取得する。
 - ネットワーク上で利用可能なトークンの総供給量を取得する。
 - 特定のアカウントにおけるトークンにつき、一定額をサードパーティのアカウントが使用できるか否かを承認する。
 
-以下のメソッドおよびイベントを実装しているスマートコントラクトは ERC-20 トークンコントラクトと呼ぶことができ、デプロイされると、イーサリアム上で発行されたトークンの状況を追跡する責任を負います。
+以下のメソッドおよびイベントを実装しているスマートコントラクトはERC-20トークンコントラクトと呼ぶことができ、デプロイされると、イーサリアム上で発行されたトークンの状況を追跡する責任を負います。
 
 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)から引用：
 
@@ -59,7 +59,7 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### イベント {#events}
+#### イベント {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
@@ -68,11 +68,11 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 ### 実例： {#web3py-example}
 
-イーサリアムの ERC-20 トークンコントラクトのコードを詳しく見ることで、これらの規格がイーサリアムのシンプルさを保証する上でどれだけ重要なのかを理解しておきましょう。 ERC-20 トークンを扱うインターフェイスを開発するには、当該コントラクトのアプリケーション・バイナリー・インターフェイス（ABI）を用いればよいです。 理解しやすいように、以下では簡略化した ABI を用いています。
+イーサリアムのERC-20トークンコントラクトのコードを詳しく見ることで、これらの規格がイーサリアムのシンプルさを保証する上でどれだけ重要なのかを理解しておきましょう。 ERC-20トークンを扱うインターフェイスを開発するには、当該コントラクトのアプリケーション・バイナリー・インターフェイス（ABI）を用いればよいです。 理解しやすいように、以下では簡略化したABIを用いています。
 
 #### Web3.py の実例： {#web3py-example}
 
-まず、 Python のライブラリから[Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation)をインストール済みであることを確認してください:
+まず、 Pythonのライブラリから[Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation)をインストール済みであることを確認してください:
 
 ```
 pip install web3
@@ -143,6 +143,7 @@ print("Addr Balance:", addr_balance)
 
 ## 参考文献 {#further-reading}
 
-- [EIP-20：ERC-20 トークン規格](https://eips.ethereum.org/EIPS/eip-20)
+- [EIP-20：ERC-20トークン規格](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - トークン](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
-- [OpenZeppelin - ERC-20 の実装](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [OpenZeppelin - ERC-20の実装](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [Alchemy - SolidityにおけるERC20トークンのガイド](https://www.alchemy.com/overviews/erc20-solidity)

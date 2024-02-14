@@ -56,12 +56,11 @@ Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, 
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW-Faucet](https://sepolia-faucet.pk910.de/)
-- [Sepolia-Faucet](https://faucet.sepolia.dev/)
-- [FaucETH](https://fauceth.komputing.org)
-- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
-- [Alchemy Sepolia-Faucet](https://sepoliafaucet.com/)
-- [Infura Sepolia-Faucet](https://www.infura.io/faucet)
-- [Chainstack Sepolia-Faucet](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet für Coinbase-Wallet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Faucet für Alchemy Sepolia](https://sepoliafaucet.com/)
+- [Faucet für Infura Sepolia](https://www.infura.io/faucet)
+- [Faucet für Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Testnetz-Faucet | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(Langzeit-Support)_ {#goerli}
 
@@ -113,9 +112,17 @@ Ein Testnet für [Optimism](https://www.optimism.io/).
 - [Paradigm-Faucet](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
+#### Starknet Goerli {#starknet-goerli}
+
+Ein Testnetz für [Starknet](https://www.starknet.io).
+
+##### Faucets
+
+- [Starknet-Faucet](https://faucet.goerli.starknet.io)
+
 ## Private Netzwerke {#private-networks}
 
-Ein Ethereum-Netzwerk ist ein privates Netzwerk, wenn seine Knoten nicht mit einem öffentlichen Netzwerk verbunden sind (d. h. Mainnet oder ein Testnet). In diesem Zusammenhang bedeutet privat nur reserviert oder isoliert statt geschützt oder sicher.
+Ein Ethereum-Netzwerk ist ein privates Netzwerk, wenn seine Knoten nicht mit einem öffentlichen Netzwerk verbunden sind (z. B. mit Mainnet oder einem Testnet). In diesem Zusammenhang bedeutet privat nur reserviert oder isoliert statt geschützt oder sicher.
 
 ### Entwicklungsnetzwerke {#development-networks}
 
@@ -125,7 +132,7 @@ Es gibt Projekte und Tools, die dabei hilfreich sind. Erfahren Sie mehr über [E
 
 ### Konsortium-Netzwerke {#consortium-networks}
 
-Der Konsensprozess wird von einer vordefinierten Gruppe von Knoten gesteuert, die vertrauenswürdig sind. Zum Beispiel ein privates Netzwerk bekannter akademischer Institutionen, die jeweils einen einzelnen Knoten stellen, wodurch Blöcke mit einer Schwelle von Unterzeichnern innerhalb des Netzwerks validiert werden.
+Der Konsensprozess wird von einer vordefinierten Gruppe von Nodes gesteuert, die vertrauenswürdig sind. Beispielsweise ein privates Netzwerk bekannter akademischer Institutionen, die jeweils eine einzelne Node stellen, sowie Blöcke werden mithilfe einer Schwelle von Unterzeichnern innerhalb des Netzwerks validiert.
 
 Wenn ein öffentliches Ethereum-Netzwerk wie das öffentliche Internet ist, dann ist ein Konsortialnetzwerk wie ein privates Intranet.
 
@@ -137,4 +144,4 @@ Wenn ein öffentliches Ethereum-Netzwerk wie das öffentliche Internet ist, dann
 ## Weiterführende Informationen {#further-reading}
 
 - [Vorschlag: vorhersehbarer Ethereum-Testnet-Lebenszyklus](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
-- [Die Evolution der Ethereum-Testnets](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
+- [Die Entwicklung der Ethereum-Testnets](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)
