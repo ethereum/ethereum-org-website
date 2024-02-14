@@ -241,13 +241,15 @@ const Layer2Onboard = ({
             </Text>
           </Box>
           {/* LeftSelected */}
-          <ReactSelect
-            instanceId="layer2-left-selected"
-            placeholder={t("layer-2-onboard-wallet-input-placeholder")}
-            options={layer2Options}
-            onChange={handleLayer2SelectChange}
-            variant="outline"
-          />
+          <Box mt="auto">
+            <ReactSelect
+              instanceId="layer2-left-selected"
+              placeholder={t("layer-2-onboard-wallet-input-placeholder")}
+              options={layer2Options}
+              onChange={handleLayer2SelectChange}
+              variant="outline"
+            />
+          </Box>
         </Flex>
         <Flex flexDir="column">
           {/* RightDescription */}
@@ -262,21 +264,23 @@ const Layer2Onboard = ({
             </Text>
           </Box>
           {/* RightSelect */}
-          <ReactSelect
-            instanceId="exchange-onboard-select"
-            options={[
-              {
-                options: [...cexSupportOptions],
-              },
-              {
-                label:
-                  "Don't see you exchange? Use dapps to bridge directly from exchanges to layer 2.",
-                options: [...cexOnboardOptions],
-              },
-            ]}
-            onChange={handleExchangeOnboard}
-            variant="outline"
-          />
+          <Box mt="auto">
+            <ReactSelect
+              instanceId="exchange-onboard-select"
+              options={[
+                {
+                  options: [...cexSupportOptions],
+                },
+                {
+                  label:
+                    "Don't see you exchange? Use dapps to bridge directly from exchanges to layer 2.",
+                  options: [...cexOnboardOptions],
+                },
+              ]}
+              onChange={handleExchangeOnboard}
+              variant="outline"
+            />
+          </Box>
         </Flex>
         {/* LeftSelected extra */}
         {selectedL2 && (
