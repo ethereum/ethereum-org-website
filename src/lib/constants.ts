@@ -70,3 +70,34 @@ export const ETHERSCAN_API_URL = "https://api.etherscan.io"
 
 export const NAV_BAR_PX_HEIGHT = "75px"
 export const FROM_QUERY = "from"
+
+// Wallets features
+export const NEW_TO_CRYPTO_FEATURES = [
+  "connect_to_dapps",
+  "layer_2",
+  "ens_support",
+  "erc_20_support",
+  "buy_crypto",
+  "eip_1559_support",
+]
+
+export const NFTS_FEATURES = ["nft_support", "layer_2", "connect_to_dapps"]
+
+export const LONG_TERM_FEATURES = ["hardware", "non_custodial"]
+
+export const FINANCE_FEATURES = [
+  "hardware_support",
+  "connect_to_dapps",
+  "gas_fee_customization",
+  "erc_20_support",
+  "eip_1559_support",
+]
+
+export const DEVELOPER_FEATURES = [
+  "open_source",
+  "walletconnect",
+  "rpc_importing",
+  "connect_to_dapps",
+  "gas_fee_customization",
+  "erc_20_support",
+]
