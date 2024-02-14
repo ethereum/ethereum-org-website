@@ -11083,6 +11083,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "Molotov-Eugene",
+      "name": "Eugene",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95471552?v=4",
+      "profile": "https://github.com/Molotov-Eugene",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
