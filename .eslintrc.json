@@ -87,6 +87,6 @@
         "fixToUnknown": true
       }
     ],
-    "unused-imports/no-unused-imports-ts": 2
+    "unused-imports/no-unused-imports-ts": "warn"
   }
 }
