@@ -53,14 +53,14 @@ Dostępnych jest wiele opcji ułatwiających konfigurację. Skorzystaj z powyżs
 
 <StakingProductsCardGrid category="pools" />
 
-Należy pamiętać, że ważne jest, aby wybrać usługę, która poważnie traktuje [różnorodność klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ zwiększa to bezpieczeństwo sieci i ogranicza ryzyko. Usługi, które mają dowody na ograniczanie korzystania z większości klientów, są oznaczone <em style={{ textTransform: "uppercase" }}>„różnorodność klientów wykonawczych”</em> i <em style={{ textTransform: "uppercase" }}>„różnorodność klientów konsensusu.”</em>
+Należy pamiętać, że ważne jest, aby wybrać usługę, która poważnie traktuje [różnorodność klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ zwiększa to bezpieczeństwo sieci i ogranicza ryzyko. Usługi, które mają dowody na ograniczanie korzystania z większości klientów, są oznaczone jako <em style={{ textTransform: "uppercase" }}>„różnorodność klientów wykonawczych”</em> i <em style={{ textTransform: "uppercase" }}>„różnorodność klientów konsensusu”.</em>
 
 Masz sugestię dotyczącą narzędzia do stakingu, które pominęliśmy? Zapoznaj się z naszymi [zasadami umieszczania produktów na liście](/contributing/adding-staking-products/), aby sprawdzić, czy są one odpowiednie i przesłać je do recenzji.
 
 ## Często zadawane pytania {#faq}
 
 <ExpandableCard title="Jak mogę zdobyć nagrody?">
-Zazwyczaj tokeny stakingu ERC-20 są wydawane stakerom, które reprezentują wartość zestakowanego przez nich ETH plus nagrody. Należy pamiętać, że różne pule będą dystrybuować nagrody ze stakowania do swoich użytkowników za pomocą nieco innych metod, ale jest to częste.
+Zazwyczaj tokeny stakingu ERC-20 są wydawane stakerom i reprezentują wartość zestakowanego przez nich ETH plus nagrody. Należy pamiętać, że różne pule będą dystrybuować nagrody ze stakowania do swoich użytkowników za pomocą nieco innych metod, ale jest to częste.
 </ExpandableCard>
 
 <ExpandableCard title="Kiedy mogę wypłacić swoją stawkę?">
@@ -81,5 +81,6 @@ Niektóre opcje puli są bardziej zdecentralizowane niż inne, jeśli chodzi o w
 
 ## Dodatkowo przeczytaj {#further-reading}
 
+- [Katalog stakingu Ethereum](https://www.staking.directory/) — _Eridian i Spacesider_
 - [Staking z Rocket Pool - Przegląd stakingu](https://docs.rocketpool.net/guides/staking/overview.html) — _Dokumenty RocketPool_
 - [Staking Ethereum z Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) — _dokumenty pomocy Lido_

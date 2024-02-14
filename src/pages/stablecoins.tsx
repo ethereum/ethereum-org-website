@@ -94,7 +94,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage("/stablecoins")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   let marketsHasError = false
   let markets: Market[] = []
@@ -521,7 +521,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <Box>
                       <ButtonLink
                         variant="outline"
-                        to="https://kb.oasis.app/help/what-is-dai"
+                        to="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
+                        isSecondary
                       >
                         {t("page-stablecoins-dai-banner-learn-button")}
                       </ButtonLink>
@@ -572,6 +573,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <ButtonLink
                       variant="outline"
                       to="https://www.coinbase.com/usdc"
+                      isSecondary
                     >
                       {t("page-stablecoins-usdc-banner-learn-button")}
                     </ButtonLink>
@@ -640,7 +642,12 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             <ButtonLink to="/dapps/">
               {t("page-stablecoins-explore-dapps")}
             </ButtonLink>
-            <ButtonLink variant="outline" to="/defi/" whiteSpace="normal">
+            <ButtonLink
+              variant="outline"
+              to="/defi/"
+              whiteSpace="normal"
+              isSecondary
+            >
               {t("page-stablecoins-more-defi-button")}
             </ButtonLink>
           </Flex>
@@ -719,6 +726,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       </Content>
       <Box id="tools" py={12} px={8} w="full">
         <H2>{t("page-stablecoins-tools-title")}</H2>
+        
         <Flex
           alignItems="flex-start"
           width="full"
@@ -737,7 +745,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           >
             <ProductList
               actionLabel={t("page-stablecoins:page-dapps-ready-button")}
-              category="Dashboards & Education"
+              category={t("page-stablecoins-category-dashboard-and-education")}
               content={toolsData}
             />
           </Box>
