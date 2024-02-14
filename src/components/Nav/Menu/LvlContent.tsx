@@ -21,6 +21,7 @@ type LvlContentProps = {
   lvl: Level
   refs: LvlRefs
   items: NavItem[]
+  activeSection: string
 }
 
 /**
@@ -30,10 +31,11 @@ type LvlContentProps = {
  * @param lvl - The level of the menu
  * @param refs - The references to the Grid column elements.
  * @param items - The items to be displayed in the menu
+ * @param activeSection - English label of the active section for event tracking
  * @returns The JSX element representing the menu content.
  */
-const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
-  const { asPath } = useRouter()
+const LvlContent = ({ lvl, refs, items, activeSection }: LvlContentProps) => {
+  const { asPath, locale } = useRouter()
   const menuColors = useNavMenuColors()
 
   if (lvl > 3) return null
@@ -98,7 +100,7 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
                             onClick={() =>
                               trackCustomEvent({
                                 eventCategory: "Desktop navigation menu",
-                                eventAction: `Follow level ${lvl} link`,
+                                eventAction: `Follow link from section: ${locale} - ${activeSection}`,
                                 eventName: action.href!,
                               })
                             }
@@ -119,6 +121,7 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
                           lvl={(lvl + 1) as Level}
                           items={subItems}
                           refs={refs}
+                          activeSection={activeSection}
                         />
                       </>
                     )}

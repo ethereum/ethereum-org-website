@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useRef, useState } from "react"
 import { Box, type BoxProps, Flex, Grid } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
@@ -8,7 +8,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { SECTION_LABELS } from "@/lib/constants"
 
-import type { Level, LvlRefs, NavSections } from "../types"
+import type { Level, LvlRefs, NavSectionKey, NavSections } from "../types"
 
 import LvlContent from "./LvlContent"
 
@@ -22,6 +22,7 @@ type NavMenuProps = BoxProps & {
 const Menu = ({ sections, ...props }: NavMenuProps) => {
   const { direction } = useRtlFlip()
   const menuColors = useNavMenuColors()
+  const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
 
   const refs: LvlRefs = {
     lvl1: useRef(null),
@@ -38,6 +39,16 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
     },
   })
 
+  const getEnglishSectionName = (
+    activeSection: string
+  ): NavSectionKey | null => {
+    const index = Object.values(sections).findIndex(
+      (section) => section.label === activeSection
+    )
+    if (index < 0) return null
+    return Object.keys(sections)[index] as NavSectionKey
+  }
+
   return (
     <Box {...props}>
       <NavigationMenu.Root
@@ -45,13 +56,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
         orientation="horizontal"
         delayDuration={750}
         onValueChange={(activeSection) => {
-          trackCustomEvent({
-            eventCategory: "Desktop navigation menu",
-            eventAction: "Section changed",
-            eventName: activeSection
-              ? `Open section: ${activeSection}`
-              : "Menu closed",
-          })
+          setActiveSection(getEnglishSectionName(activeSection))
         }}
       >
         <NavigationMenu.List asChild>
@@ -77,7 +82,12 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                       {label}
                     </Button>
                   </NavigationMenu.Trigger>
-                  <LvlContent lvl={1} items={items} refs={refs} />
+                  <LvlContent
+                    lvl={1}
+                    items={items}
+                    refs={refs}
+                    activeSection={activeSection}
+                  />
                 </NavigationMenu.Item>
               )
             })}
