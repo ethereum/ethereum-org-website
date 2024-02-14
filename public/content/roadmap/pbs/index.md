@@ -20,7 +20,7 @@ For example, inclusion lists can be introduced so that when validators know abou
 
 <ExpandableCard title="What kinds of censorship does PBS solve?" eventCategory="/roadmap/pbs" eventName="clicked what kinds of censorship does PBS solve?">
 
-Powerful organizations can pressure validators to censor transactions to or from certain addresses. Validators comply with this pressure by detecting blacklisted addresses in their transaction pool and omitting them from the blocks the propose. After PBS this will no longer be possible because block proposers will not know which transactions they are broadcasting in their blocks. It might be important for certain individuals or apps to comply with censorship rules, for example when it is made law in their region. In these cases, compliance happens at the application level, while the protocol remains permissionless and censorship free.
+Powerful organizations can pressure validators to censor transactions to or from certain addresses. Validators comply with this pressure by detecting blacklisted addresses in their transaction pool and omitting them from the blocks they propose. After PBS this will no longer be possible because block proposers will not know which transactions they are broadcasting in their blocks. It might be important for certain individuals or apps to comply with censorship rules, for example when it is made law in their region. In these cases, compliance happens at the application level, while the protocol remains permissionless and censorship free.
 
 </ExpandableCard>
 
