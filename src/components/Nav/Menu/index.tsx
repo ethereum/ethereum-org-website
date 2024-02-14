@@ -1,5 +1,4 @@
-import { useRef } from "react"
-import { Box, type BoxProps, Flex, Grid } from "@chakra-ui/react"
+import { Box, type BoxProps, Flex } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
 import { Button } from "@/components/Buttons"
@@ -23,20 +22,14 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
   const { direction } = useRtlFlip()
   const menuColors = useNavMenuColors()
 
-  const refs: LvlRefs = {
-    lvl1: useRef(null),
-    lvl2: useRef(null),
-    lvl3: useRef(null),
-  }
-
-  const getLvlSx = (lvl: Level): BoxProps["sx"] => ({
-    opacity: 0,
-    '&:has([data-state="open"])': {
-      bg: menuColors.lvl[lvl].background,
-      opacity: 1,
-      transition: "opacity 300ms linear",
-    },
-  })
+  // const getLvlSx = (lvl: Level): BoxProps["sx"] => ({
+  //   opacity: 0,
+  //   '&:has([data-state="open"])': {
+  //     bg: menuColors.lvl[lvl].background,
+  //     opacity: 1,
+  //     transition: "opacity 300ms linear",
+  //   },
+  // })
 
   return (
     <Box {...props}>
@@ -78,16 +71,14 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                     </Button>
                   </NavigationMenu.Trigger>
                   <NavigationMenu.Content asChild>
-                    <Grid
+                    <Box
                       position="absolute"
                       top="19"
                       insetInline="0"
-                      templateColumns="repeat(3, 1fr)"
                       shadow="md"
                       border="1px"
                       borderColor={menuColors.stroke}
                       bg={menuColors.lvl[1].background}
-                      // opacity={0}
                       sx={{
                         '&:has(#lvl1 [data-state="open"])': {
                           opacity: 1,
@@ -101,8 +92,8 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                         },
                       }}
                     >
-                      <LvlContent lvl={1} items={items} refs={refs} />
-                    </Grid>
+                      <LvlContent lvl={1} items={items} />
+                    </Box>
                   </NavigationMenu.Content>
                 </NavigationMenu.Item>
               )
@@ -111,10 +102,6 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
         </NavigationMenu.List>
 
         <NavigationMenu.Viewport />
-        {/* <Box ref={refs.lvl1} id="lvl1" sx={getLvlSx(1)}>
-          </Box>
-          <Box ref={refs.lvl2} id="lvl2" sx={getLvlSx(2)} />
-          <Box ref={refs.lvl3} id="lvl3" sx={getLvlSx(3)} /> */}
       </NavigationMenu.Root>
     </Box>
   )
