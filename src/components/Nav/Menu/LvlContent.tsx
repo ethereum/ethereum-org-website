@@ -85,6 +85,10 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
                         pe: pad,
                       },
                     }}
+                    onMouseLeave={(e) => {
+                      // Bring focus to destination button when leaving
+                      ;(e.relatedTarget as HTMLButtonElement).focus()
+                    }}
                   >
                     {isLink ? (
                       <NextLink href={action.href!} passHref legacyBehavior>
