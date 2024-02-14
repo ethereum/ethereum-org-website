@@ -1,5 +1,5 @@
 import { GetStaticProps } from "next/types"
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -55,6 +55,7 @@ import daiLargeImg from "@/public/stablecoins/dai-large.png"
 import heroImg from "@/public/stablecoins/hero.png"
 import stablecoinsWtfImg from "@/public/stablecoins/tools/stablecoinswtf.png"
 import usdcLargeImg from "@/public/stablecoins/usdc-large.png"
+
 type EthereumDataResponse = Array<{
   id: string
   name: string
