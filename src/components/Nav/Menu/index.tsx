@@ -77,41 +77,44 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                       {label}
                     </Button>
                   </NavigationMenu.Trigger>
-                  <LvlContent lvl={1} items={items} refs={refs} />
+                  <NavigationMenu.Content asChild>
+                    <Grid
+                      position="absolute"
+                      top="19"
+                      insetInline="0"
+                      templateColumns="repeat(3, 1fr)"
+                      shadow="md"
+                      border="1px"
+                      borderColor={menuColors.stroke}
+                      bg={menuColors.lvl[1].background}
+                      // opacity={0}
+                      sx={{
+                        '&:has(#lvl1 [data-state="open"])': {
+                          opacity: 1,
+                          transition: "opacity 200ms linear",
+                        },
+                        '&:has(#lvl2 [data-state="open"])': {
+                          bg: menuColors.lvl[2].background,
+                        },
+                        '&:has(#lvl3 [data-state="open"])': {
+                          bg: menuColors.lvl[3].background,
+                        },
+                      }}
+                    >
+                      <LvlContent lvl={1} items={items} refs={refs} />
+                    </Grid>
+                  </NavigationMenu.Content>
                 </NavigationMenu.Item>
               )
             })}
           </Flex>
         </NavigationMenu.List>
-        <Grid
-          position="absolute"
-          top="19"
-          insetInline="0"
-          templateColumns="repeat(3, 1fr)"
-          shadow="md"
-          border="1px"
-          borderColor={menuColors.stroke}
-          bg={menuColors.lvl[1].background}
-          opacity={0}
-          sx={{
-            '&:has(#lvl1 [data-state="open"])': {
-              opacity: 1,
-              transition: "opacity 200ms linear",
-            },
-            '&:has(#lvl2 [data-state="open"])': {
-              bg: menuColors.lvl[2].background,
-            },
-            '&:has(#lvl3 [data-state="open"])': {
-              bg: menuColors.lvl[3].background,
-            },
-          }}
-        >
-          <Box ref={refs.lvl1} id="lvl1" sx={getLvlSx(1)}>
-            <NavigationMenu.Viewport />
+
+        <NavigationMenu.Viewport />
+        {/* <Box ref={refs.lvl1} id="lvl1" sx={getLvlSx(1)}>
           </Box>
           <Box ref={refs.lvl2} id="lvl2" sx={getLvlSx(2)} />
-          <Box ref={refs.lvl3} id="lvl3" sx={getLvlSx(3)} />
-        </Grid>
+          <Box ref={refs.lvl3} id="lvl3" sx={getLvlSx(3)} /> */}
       </NavigationMenu.Root>
     </Box>
   )

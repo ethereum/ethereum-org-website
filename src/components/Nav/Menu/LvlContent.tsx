@@ -41,98 +41,98 @@ const LvlContent = ({ lvl, refs, items }: LvlContentProps) => {
   const pad = 4 // Chakra-UI space token
 
   return (
-    <NavigationMenu.Content>
-      <NavigationMenu.Root orientation="vertical">
-        <NavigationMenu.List asChild>
-          <UnorderedList listStyleType="none" p={pad} m="0">
-            {items.map((item) => {
-              const { label, description, icon, ...action } = item
-              const subItems = action.items || []
-              const isLink = "href" in action
-              const isActivePage = isLink && cleanPath(asPath) === action.href
-              const activeStyles = {
-                outline: "none",
-                rounded: "md",
-                "p, svg": { color: menuColors.highlight },
-                bg: menuColors.lvl[lvl].activeBackground,
-                boxShadow: "none",
-              }
-              const buttonProps: ButtonProps = {
-                color: isActivePage ? menuColors.active : menuColors.body,
-                leftIcon: lvl === 1 && icon ? <Icon as={icon} /> : undefined,
-                rightIcon: isLink ? undefined : <NextChevron />,
-                position: "relative",
-                w: "full",
-                me: -pad,
-                sx: {
-                  "span:first-of-type": { m: 0, me: pad }, // Spacing for icon
-                },
-                py: pad,
-                bg: "none",
-                _hover: activeStyles,
-                _focus: activeStyles,
-                variant: "ghost",
-              }
-              return (
-                <NavigationMenu.Item key={label} asChild>
-                  <ListItem
-                    mb="0"
-                    sx={{
-                      '&:has(button[data-state="open"])': {
-                        roundedEnd: "none",
-                        bg: menuColors.lvl[lvl].activeBackground,
-                        me: -pad,
-                        pe: pad,
-                      },
-                    }}
-                    onMouseLeave={(e) => {
-                      // Bring focus to destination button when leaving
-                      ;(e.relatedTarget as HTMLButtonElement).focus()
-                    }}
-                  >
-                    {isLink ? (
-                      <NextLink href={action.href!} passHref legacyBehavior>
-                        <NavigationMenu.Link asChild>
-                          <Button
-                            as={Link}
-                            onClick={() =>
-                              trackCustomEvent({
-                                eventCategory: "Desktop navigation menu",
-                                eventAction: `Follow level ${lvl} link`,
-                                eventName: action.href!,
-                              })
-                            }
-                            {...buttonProps}
-                          >
-                            <ItemContent item={item} lvl={lvl} />
-                          </Button>
-                        </NavigationMenu.Link>
-                      </NextLink>
-                    ) : (
-                      <>
-                        <NavigationMenu.Trigger asChild>
-                          <Button {...buttonProps}>
-                            <ItemContent item={item} lvl={lvl} />
-                          </Button>
-                        </NavigationMenu.Trigger>
+    <NavigationMenu.Sub orientation="vertical">
+      <NavigationMenu.List asChild>
+        <UnorderedList listStyleType="none" p={pad} m="0">
+          {items.map((item) => {
+            const { label, description, icon, ...action } = item
+            const subItems = action.items || []
+            const isLink = "href" in action
+            const isActivePage = isLink && cleanPath(asPath) === action.href
+            const activeStyles = {
+              outline: "none",
+              rounded: "md",
+              "p, svg": { color: menuColors.highlight },
+              bg: menuColors.lvl[lvl].activeBackground,
+              boxShadow: "none",
+            }
+            const buttonProps: ButtonProps = {
+              color: isActivePage ? menuColors.active : menuColors.body,
+              leftIcon: lvl === 1 && icon ? <Icon as={icon} /> : undefined,
+              rightIcon: isLink ? undefined : <NextChevron />,
+              position: "relative",
+              w: "full",
+              me: -pad,
+              sx: {
+                "span:first-of-type": { m: 0, me: pad }, // Spacing for icon
+              },
+              py: pad,
+              bg: "none",
+              _hover: activeStyles,
+              _focus: activeStyles,
+              variant: "ghost",
+            }
+            return (
+              <NavigationMenu.Item key={label} asChild>
+                <ListItem
+                  mb="0"
+                  sx={{
+                    '&:has(button[data-state="open"])': {
+                      roundedEnd: "none",
+                      bg: menuColors.lvl[lvl].activeBackground,
+                      me: -pad,
+                      pe: pad,
+                    },
+                  }}
+                  onMouseLeave={(e) => {
+                    // Bring focus to destination button when leaving
+                    ;(e.relatedTarget as HTMLButtonElement).focus()
+                  }}
+                >
+                  {isLink ? (
+                    <NextLink href={action.href!} passHref legacyBehavior>
+                      <NavigationMenu.Link asChild>
+                        <Button
+                          as={Link}
+                          onClick={() =>
+                            trackCustomEvent({
+                              eventCategory: "Desktop navigation menu",
+                              eventAction: `Follow level ${lvl} link`,
+                              eventName: action.href!,
+                            })
+                          }
+                          {...buttonProps}
+                        >
+                          <ItemContent item={item} lvl={lvl} />
+                        </Button>
+                      </NavigationMenu.Link>
+                    </NextLink>
+                  ) : (
+                    <>
+                      <NavigationMenu.Trigger asChild>
+                        <Button {...buttonProps}>
+                          <ItemContent item={item} lvl={lvl} />
+                        </Button>
+                      </NavigationMenu.Trigger>
+                      <NavigationMenu.Content>
                         <LvlContent
                           lvl={(lvl + 1) as Level}
                           items={subItems}
                           refs={refs}
                         />
-                      </>
-                    )}
-                  </ListItem>
-                </NavigationMenu.Item>
-              )
-            })}
-          </UnorderedList>
-        </NavigationMenu.List>
-        <Portal.Root container={refs[`lvl${lvl + 1}`]?.current}>
-          <NavigationMenu.Viewport />
-        </Portal.Root>
-      </NavigationMenu.Root>
-    </NavigationMenu.Content>
+                      </NavigationMenu.Content>
+                    </>
+                  )}
+                </ListItem>
+              </NavigationMenu.Item>
+            )
+          })}
+        </UnorderedList>
+      </NavigationMenu.List>
+      <NavigationMenu.Viewport />
+      {/* <Portal.Root container={refs[`lvl${lvl + 1}`]?.current}>
+      </Portal.Root> */}
+    </NavigationMenu.Sub>
   )
 }
 
