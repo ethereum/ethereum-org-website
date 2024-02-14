@@ -30,7 +30,12 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
   }
 
   const getLvlSx = (lvl: Level): BoxProps["sx"] => ({
-    '&:has([data-state="open"])': { bg: menuColors.lvl[lvl].background },
+    opacity: 0,
+    '&:has([data-state="open"])': {
+      bg: menuColors.lvl[lvl].background,
+      opacity: 1,
+      transition: "opacity 300ms linear",
+    },
   })
 
   return (
@@ -80,7 +85,6 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
         </NavigationMenu.List>
         <Grid
           position="absolute"
-          visibility="hidden"
           top="19"
           insetInline="0"
           templateColumns="repeat(3, 1fr)"
@@ -88,9 +92,11 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
           border="1px"
           borderColor={menuColors.stroke}
           bg={menuColors.lvl[1].background}
+          opacity={0}
           sx={{
             '&:has(#lvl1 [data-state="open"])': {
-              visibility: "visible",
+              opacity: 1,
+              transition: "opacity 200ms linear",
             },
             '&:has(#lvl2 [data-state="open"])': {
               bg: menuColors.lvl[2].background,
@@ -100,7 +106,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
             },
           }}
         >
-          <Box ref={refs.lvl1} id="lvl1" bg={menuColors.lvl[1].background}>
+          <Box ref={refs.lvl1} id="lvl1" sx={getLvlSx(1)}>
             <NavigationMenu.Viewport />
           </Box>
           <Box ref={refs.lvl2} id="lvl2" sx={getLvlSx(2)} />
