@@ -53,7 +53,7 @@ const baseStyle = definePartsStyle({
     w: "full",
     boxShadow: "buttonHover",
     maxH: "xs",
-    overflowY: "scroll",
+    overflowY: "auto",
   },
   option: {
     color: "primary.base",
