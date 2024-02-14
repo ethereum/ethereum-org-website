@@ -1,6 +1,6 @@
+import Emoji from "react-emoji-render"
 import { Text } from "@chakra-ui/react"
 
-import Emoji from "react-emoji-render"
 import DismissableBanner from "./Banners/DismissableBanner"
 import Link from "./Link"
 
