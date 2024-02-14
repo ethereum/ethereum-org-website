@@ -202,13 +202,13 @@ A forma como o par de troca decide sobre a taxa de câmbio entre o token0 e o to
 Veja um exemplo. Note que para manter a simplicidade a tabela mostra apenas três dígitos após a vírgula decimal e ignoramos a taxa de negociação de 0,3%, portanto os números não são precisos.
 
 | Evento                                      |  reserve0 |  reserve1 | reserve0 \* reserve1 | Taxa de câmbio média (token1 / token0) |
-| ------------------------------------------- | --------: | --------: | -------------------: | -------------------------------------- |
-| Configuração Inicial                        | 1.000,000 | 1.000,000 |            1.000.000 |                                        |
-| Trader A troca 50 token0 por 47,619 token1  | 1.050,000 |   952,381 |            1.000.000 | 0,952                                  |
-| Trader B troca 10 token0 por 8,984 token1   | 1.060,000 |   943,396 |            1.000.000 | 0,898                                  |
-| Trader C troca 40 token0 por 34,305 token1  | 1.100,000 |   909,090 |            1.000.000 | 0,858                                  |
-| Trader D troca 100 token1 por 109,01 token0 |   990,990 | 1.009,090 |            1.000.000 | 0,917                                  |
-| Trader E troca 10 token0 por 10,079 token1  | 1.000,990 |   999,010 |            1.000.000 | 1,008                                  |
+| ------------------------------------------- | ---------:| ---------:| ----------------------:| -------------------------------------- |
+| Configuração Inicial                        | 1.000,000 | 1.000,000 |              1.000.000 |                                        |
+| Trader A troca 50 token0 por 47,619 token1  | 1.050,000 |   952,381 |              1.000.000 | 0,952                                  |
+| Trader B troca 10 token0 por 8,984 token1   | 1.060,000 |   943,396 |              1.000.000 | 0,898                                  |
+| Trader C troca 40 token0 por 34,305 token1  | 1.100,000 |   909,090 |              1.000.000 | 0,858                                  |
+| Trader D troca 100 token1 por 109,01 token0 |   990,990 | 1.009,090 |              1.000.000 | 0,917                                  |
+| Trader E troca 10 token0 por 10,079 token1  | 1.000,990 |   999,010 |              1.000.000 | 1,008                                  |
 
 À medida que os traders fornecem mais token0, o valor relativo do token1 aumenta, e vice-versa, baseado na oferta e na demanda.
 
@@ -362,12 +362,12 @@ Se o tempo decorrido não for zero, isso significa que somos a primeira transaç
         }
 ```
 
-Cada acumulador de custo é atualizado com o último custo (reserva do outro token/reserva desse token) vezes o tempo decorrido em segundos. Para obter um preço médio, deve-se ler o preço cumulativo de dois pontos no tempo e dividir pela diferença de tempo entre eles. Por exemplo, suponha esta sequência de eventos:
+Cada acumulador de custo é atualizado com o último custo (reserva do outro token/reserva desse token) vezes o tempo decorrido em segundos. Para obter um preço médio, tome o preço acumulado em dois pontos no tempo e divida-o pela diferença de tempo entre eles. Por exemplo, suponha esta sequência de eventos:
 
-| Evento                                                |  reserva0 |  reserva1 | carimbo de data/hora | Taxa de câmbio marginal (reserve1 / reserve0) |       price0CumulativeLast |
-| ----------------------------------------------------- | --------: | --------: | -------------------- | --------------------------------------------: | -------------------------: |
-| Configuração Inicial                                  | 1.000,000 | 1.000,000 | 5.000                |                                         1.000 |                          0 |
-| Trader A deposita 50 token0 e recebe 47,619 token1    | 1.050,000 |   952,381 | 5.020                |                                         0,907 |                         20 |
+| Evento                                                |  reserva0 |  reserva1 | carimbo de data/hora | Taxa de câmbio marginal (reserve1 / reserve0) |         price0CumulativeLast |
+| ----------------------------------------------------- | ---------:| ---------:| -------------------- | ---------------------------------------------:| ----------------------------:|
+| Configuração Inicial                                  | 1.000,000 | 1.000,000 | 5.000                |                                         1.000 |                            0 |
+| Trader A deposita 50 token0 e recebe 47,619 token1    | 1.050,000 |   952,381 | 5.020                |                                         0,907 |                           20 |
 | Trader B deposita 10 token0 e recebe 8,984 token1     | 1.060,000 |   943,396 | 5.030                |                                         0,890 |       20+10\*0,907 = 29,07 |
 | Trader C deposita 40 token0 e recebe 34,305 token1    | 1.100,000 |   909,090 | 5.100                |                                         0,826 |    29,07+70\*0,890 = 91,37 |
 | Trader D deposita 100 token1 e recupera 109,01 token0 |   990,990 | 1.009,090 | 5.110                |                                         1.018 |    91,37+10\*0,826 = 99,63 |
@@ -499,9 +499,9 @@ No momento do primeiro depósito, não sabemos o valor relativo dos dois tokens,
 Podemos confiar nisso, pois é do interesse do depositante oferecer o mesmo valor para evitar perda de valor por arbitragem. Digamos que o valor dos dois tokens é idêntico, mas nosso depositante depositou quatro vezes mais o **Token1** do que o **Token0**. Um trader pode usar o fato de que o par de troca pensa que o **Token0** é mais valioso para extrair valor dessa situação.
 
 | Evento                                                         | reserva0 | reserva1 | reserva0 \* reserva1 | Valor do pool (reserve0 + reserve1) |
-| -------------------------------------------------------------- | -------: | -------: | -------------------: | ----------------------------------: |
-| Configuração Inicial                                           |        8 |       32 |                  256 |                                  40 |
-| O trader deposita 8 tokens **Token0** e recupera 16 **Token1** |       16 |       16 |                  256 |                                  32 |
+| -------------------------------------------------------------- | --------:| --------:| ----------------------:| -----------------------------------:|
+| Configuração Inicial                                           |        8 |       32 |                    256 |                                  40 |
+| O trader deposita 8 tokens **Token0** e recupera 16 **Token1** |       16 |       16 |                    256 |                                  32 |
 
 Como você pode ver, o trader ganhou 8 tokens extra, que vêm de uma redução do valor do pool, prejudicando o depositante que a possui.
 
@@ -515,12 +515,12 @@ Em todos os depósitos subsequentes, já conhecemos a taxa de câmbio entre os d
 Seja um depósito inicial, seja um depósito subsequente, o número de tokens de liquidez que fornecemos é igual à raiz quadradada da alteração em `reserve0*reserve1` e o valor do token de liquidez não muda (a menos que obtenhamos um depósito com valores diferentes nos dois tipos, então, neste caso, a "multa" é distribuída). Aqui está outro exemplo com dois tokens que têm o mesmo valor, com três depósitos bons e um ruim (depósito de apenas um tipo de token, portanto, ele não produz nenhum token de liquidez).
 
 | Evento                          | reserva0 | reserva1 | reserva0 \* reserva1 | Valor do Pool (reserve0 + reserve1) | Tokens de liquidez cunhados para este depósito | Total de tokens de liquidez | valor de cada token de liquidez |
-| ------------------------------- | -------: | -------: | -------------------: | ----------------------------------: | ---------------------------------------------: | --------------------------: | ------------------------------: |
-| Configuração Inicial            |    8,000 |    8,000 |                   64 |                              16,000 |                                              8 |                           8 |                           2,000 |
-| Depósito de quatro de cada tipo |   12,000 |   12,000 |                  144 |                              24,000 |                                              4 |                          12 |                           2,000 |
-| Depósito de dois de cada tipo   |   14,000 |   14,000 |                  196 |                              28,000 |                                              2 |                          14 |                           2,000 |
-| Depósito de valores desiguais   |   18,000 |   14,000 |                  252 |                              32,000 |                                              0 |                          14 |                          ~2,286 |
-| Após a arbitragem               |  ~15,874 |  ~15,874 |                  252 |                             ~31,748 |                                              0 |                          14 |                          ~2,267 |
+| ------------------------------- | --------:| --------:| ----------------------:| -----------------------------------:| ----------------------------------------------:| ---------------------------:| -------------------------------:|
+| Configuração Inicial            |    8,000 |    8,000 |                     64 |                              16,000 |                                              8 |                           8 |                           2,000 |
+| Depósito de quatro de cada tipo |   12,000 |   12,000 |                    144 |                              24,000 |                                              4 |                          12 |                           2,000 |
+| Depósito de dois de cada tipo   |   14,000 |   14,000 |                    196 |                              28,000 |                                              2 |                          14 |                           2,000 |
+| Depósito de valores desiguais   |   18,000 |   14,000 |                    252 |                              32,000 |                                              0 |                          14 |                          ~2,286 |
+| Após a arbitragem               |  ~15,874 |  ~15,874 |                    252 |                             ~31,748 |                                              0 |                          14 |                          ~2,267 |
 
 ```solidity
         }
@@ -985,7 +985,7 @@ Provedores de liquidez especificam um mínimo, geralmente porque querem limitar 
 Por exemplo, imagine um caso em que a taxa de câmbio é de um para um, e o provedor de liquidez especifica esses valores:
 
 | Parâmetro      | Valor |
-| -------------- | ----: |
+| -------------- | -----:|
 | amountADesired | 1.000 |
 | amountBDesired | 1.000 |
 | amountAMin     |   900 |

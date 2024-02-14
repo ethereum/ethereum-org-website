@@ -66,9 +66,9 @@ There are also two maintained public test implementations of Ethereum: Goerli an
 
 Kurtosis is a build system for multi-container test environments which enables developers to locally spin up reproducible instances of blockchain networks.
 
-The Ethereum Kurtosis package locally instantiates a containerized and parameterizable Ethereum testnet, with support for multiple different Execution Layer (EL) and Consensus Layer (CL) clients and an n-number of nodes. Kurtosis gracefully handles all local port mappings and service connections for easy dApp and smart contract prototyping and testing.
+The Ethereum Kurtosis package can be used to quickly instantiate a parameterizable, highly scaleable, and private Ethereum testnet over Docker or Kubernetes. The package supports all major Execution Layer (EL) and Consensus Layer (CL) clients. Kurtosis gracefully handles all local port mappings and service connections for a representative network to be used in validation and testing workflows relating to Etheruem core infrastructure.
 
-- [Ethereum network package](https://github.com/kurtosis-tech/eth-network-package)
+- [Ethereum network package](https://github.com/kurtosis-tech/ethereum-package)
 - [Website](https://www.kurtosis.com/)
 - [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentation](https://docs.kurtosis.com/)

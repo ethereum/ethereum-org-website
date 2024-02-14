@@ -23,4 +23,4 @@ Novos termos inseridos no glossário serão avaliados pelos seguintes critérios
 
 ## Adicione seu termo {#how-decisions-about-the-site-are-made}
 
-Se você quiser adicionar um termo ao glossário no ethereum.org e que atenda aos critérios, [ abra um tíquete no GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).
+Se você quiser adicionar um termo ao glossário no ethereum.org que atenda aos critérios, [abra um tíquete no GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).

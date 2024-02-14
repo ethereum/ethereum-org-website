@@ -3,7 +3,7 @@ title: Planejamento Ethereum
 description: O caminho para mais escalabilidade, segurança e sustentabilidade no Ethereum.
 lang: pt-br
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /heroes/roadmap-hub-hero.jpg
 alt: "Planejamento Ethereum"
 summaryPoints:
 buttons:
@@ -59,7 +59,7 @@ O Ethereum recebe melhorias regulares que aprimoram a escalabilidade, a seguran�
 
 <RoadmapImageContent title="Como o planejamento é definido">
 
-O planejamento é, em grande parte, o resultado de anos de trabalho de pesquisadores e desenvolvedores, pois o protocolo é muito técnico, mas qualquer pessoa motivada pode participar. As ideias geralmente começam como discussões em um fórum, como [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) ou no servidor Eth R&D no Discord. Elas podem ser respostas a novas vulnerabilidades constatadas, sugestões de organizações que trabalham na camada de aplicativos (como dApps e corretoras) ou de atritos conhecidos junto a usuários finais (como custos ou velocidades de transação). Quando essas ideias amadurecem, elas podem ser apresentadas como [Propostas de melhorias do Ethereum] (https://eips.ethereum.org/). Tudo isso é feito abertamente, e qualquer pessoa da comunidade pode dar sua opinião, a qualquer momento.
+O planejamento é, em grande parte, o resultado de anos de trabalho de pesquisadores e desenvolvedores, pois o protocolo é muito técnico, mas qualquer pessoa motivada pode participar. As ideias geralmente começam como discussões em um fórum, como [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://ethereum-magicians.org) ou no servidor Eth R&D no Discord. Elas podem ser respostas a novas vulnerabilidades constatadas, sugestões de organizações que trabalham na camada de aplicativos (como dApps e corretoras) ou de atritos conhecidos junto a usuários finais (como custos ou velocidades de transação). Quando essas ideias amadurecem, elas podem ser apresentadas como [Propostas de melhorias do Ethereum] (https://eips.ethereum.org/). Tudo isso é feito abertamente, e qualquer pessoa da comunidade pode dar sua opinião, a qualquer momento.
 
 [Mais sobre a governança do Ethereum](/governance/)
 

@@ -135,7 +135,7 @@ def calc_dataset(full_size, cache):
 
 ## Loop principal {#main-loop}
 
-Agora, especificamos o loop padrão "hashimoto" principal, onde agregamos dados do conjunto de dados completo para produzir nosso valor final para um cabeçalho em particular ou nonce. No código abaixo, `header` representa o _hash \_SHA3-256 da representação RLP de um cabeçalho de bloco \_truncado_, ou seja, de um cabeçalho excluindo os campos **mixHash** e **nonce**. `nonce` é os oito bytes de um inteiro sem sinal de 64 bits na ordem big-endian. Então `nonce[::-1]` é a representação little-endian de oito bytes desse valor:
+Agora, especificamos o loop padrão "hashimoto" principal, onde agregamos dados do conjunto de dados completo para produzir nosso valor final para um cabeçalho em particular ou nonce. No código abaixo, `header` representa o _hash _SHA3-256 da representação RLP de um cabeçalho de bloco _truncado_, ou seja, de um cabeçalho excluindo os campos **mixHash** e **nonce**. `nonce` é os oito bytes de um inteiro sem sinal de 64 bits na ordem big-endian. Então `nonce[::-1]` é a representação little-endian de oito bytes desse valor:
 
 ```python
 def hashimoto(header, nonce, full_size, dataset_lookup):
