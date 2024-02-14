@@ -30,8 +30,9 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
   return (
     <DrawerBody as="nav" p="0">
       <Accordion allowToggle>
-        {SECTION_LABELS.map((key) => linkSections[key]).map(
-          ({ label, items }) => (
+        {SECTION_LABELS.map((key) => {
+          const { label, items } = linkSections[key]
+          return (
             <AccordionItem key={label}>
               {({ isExpanded }) => (
                 <>
@@ -79,6 +80,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
                     <LvlAccordion
                       lvl={2 as Level}
                       items={items}
+                      activeSection={key}
                       onToggle={onToggle}
                     />
                   </AccordionPanel>
@@ -86,7 +88,7 @@ const MenuBody = ({ linkSections, onToggle }: MenuBodyProps) => {
               )}
             </AccordionItem>
           )
-        )}
+        })}
       </Accordion>
     </DrawerBody>
   )

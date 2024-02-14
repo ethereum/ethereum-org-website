@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import {
   Accordion,
   AccordionButton,
@@ -14,7 +15,7 @@ import { BaseLink } from "@/components/Link"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import type { Level, NavItem } from "../types"
+import type { Level, NavItem, NavSectionKey } from "../types"
 
 import ExpandIcon from "./ExpandIcon"
 
@@ -23,10 +24,17 @@ import { useNavMenuColors } from "@/hooks/useNavMenuColors"
 type LvlAccordionProps = {
   lvl: Level
   items: NavItem[]
+  activeSection: NavSectionKey
   onToggle: () => void
 }
 
-const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => {
+const LvlAccordion = ({
+  lvl,
+  items,
+  activeSection,
+  onToggle,
+}: LvlAccordionProps) => {
+  const { locale } = useRouter()
   const menuColors = useNavMenuColors()
 
   return (
@@ -52,7 +60,7 @@ const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => {
                 onClick={() => {
                   trackCustomEvent({
                     eventCategory: "Mobile navigation menu",
-                    eventAction: `Follow level ${lvl - 1} link`,
+                    eventAction: `Follow link from section: ${locale} - ${activeSection}`,
                     eventName: actions.href!,
                   })
                   onToggle()
@@ -123,6 +131,7 @@ const LvlAccordion = ({ lvl, items, onToggle }: LvlAccordionProps) => {
                   <LvlAccordion
                     lvl={(lvl + 1) as Level}
                     items={actions.items}
+                    activeSection={activeSection}
                     onToggle={onToggle}
                   />
                 </AccordionPanel>
