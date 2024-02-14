@@ -726,6 +726,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       </Content>
       <Box id="tools" py={12} px={8} w="full">
         <H2>{t("page-stablecoins-tools-title")}</H2>
+        
         <Flex
           alignItems="flex-start"
           width="full"
@@ -744,7 +745,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           >
             <ProductList
               actionLabel={t("page-stablecoins:page-dapps-ready-button")}
-              category="Dashboards & Education"
+              category={t("page-stablecoins-category-dashboard-and-education")}
               content={toolsData}
             />
           </Box>
