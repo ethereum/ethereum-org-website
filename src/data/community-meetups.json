@@ -436,5 +436,11 @@
     "emoji": ":belgium:",
     "location": "Brussels",
     "link": "https://dao.brussels/"
+  },
+  {
+    "title": "Ethereum Edmonton Meetup",
+    "emoji": ":canada:",
+    "location": "Edmonton",
+    "link": "https://www.meetup.com/ethereum-edmonton-meetup/"
   }
 ]
