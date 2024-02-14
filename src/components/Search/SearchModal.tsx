@@ -9,9 +9,10 @@ type ModalPropsNoScroll = Omit<DocSearchModalProps, "initialScrollY">
 const DocSearchModalWithChakra = chakra(
   (props: ModalPropsNoScroll & { className?: string }) => {
     const { className, ...docModalProps } = props
+    const windowScrollY = typeof window === "undefined" ? 0 : window.scrollY
     return (
       <div className={className}>
-        <DocSearchModal initialScrollY={0} {...docModalProps} />
+        <DocSearchModal initialScrollY={windowScrollY} {...docModalProps} />
       </div>
     )
   }

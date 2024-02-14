@@ -2,17 +2,21 @@ import React from "react"
 import { PiMagnifyingGlass } from "react-icons/pi"
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 
+import { SimulatorNavProps } from "@/lib/types"
+
 import { EthTokenIconGrayscale, QrCodeIcon } from "../../icons"
-import type { SimulatorNavProps } from "../../interfaces"
 import { NotificationPopover } from "../../NotificationPopover"
 import { CategoryTabs } from "../../WalletHome/CategoryTabs"
 
 import { CONTACTS } from "./constants"
 
-interface IProps extends SimulatorNavProps {
+type SendFromContactsProps = SimulatorNavProps & {
   setRecipient: (name: string) => void
 }
-export const SendFromContacts: React.FC<IProps> = ({ nav, setRecipient }) => {
+export const SendFromContacts = ({
+  nav,
+  setRecipient,
+}: SendFromContactsProps) => {
   const handleSelection = (name: string) => {
     setRecipient(name)
     nav.progressStepper()

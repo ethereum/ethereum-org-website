@@ -18,7 +18,7 @@ Para as pessoas que aprendem melhor de forma visual, assistam ao vídeo do Luka 
 
 Você precisará fazer login na sua conta do Crowdin ou criar uma conta, caso ainda não tenha. Você só precisa de uma conta de e-mail e senha para se cadastrar.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   Junte-se ao projeto
 </ButtonLink>
 
@@ -38,7 +38,7 @@ Não vê seu idioma na lista? [Abra um tíquete](https://github.com/ethereum/eth
 
 ![Arquivos traduzidos e não traduzidos no Crowdin](./crowdin-files.png)
 
-Uma nota sobre recipientes de conteúdo: utilizamos “recipientes de conteúdos” dentro do Crowdin para ter o conteúdo de prioridade mais alta lançado primeiro. Ao verificar um idioma, por exemplo, [Filipino](https://crowdin.com/project/ethereum-org/fil#) você verá pastas por categoria de conteúdo (“1. Página inicial", "2. Use páginas do Ethereum” etc.).
+Uma nota sobre recipientes de conteúdo: utilizamos “recipientes de conteúdos” dentro do Crowdin para ter o conteúdo de prioridade mais alta lançado primeiro. Ao verificar um idioma, por exemplo, [Filipino](https://crowdin.com/project/ethereum-org/fil#) você verá pastas por categoria de conteúdo (“1. Página inicial", "2. Essenciais", "3. Explorando”, etc.).
 
 Recomendamos que você traduza nesta ordem numérica (1 → 2 → 3 → ⋯) para assegurar que as páginas de maior impacto sejam traduzidas primeiro.
 
