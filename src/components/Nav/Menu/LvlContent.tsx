@@ -10,7 +10,7 @@ import Link from "@/components/Link"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
 
-import type { Level, LvlRefs, NavItem } from "../types"
+import type { Level, LvlRefs, NavItem, NavSectionKey } from "../types"
 
 import ItemContent from "./ItemContent"
 import NextChevron from "./NextChevron"
@@ -21,7 +21,7 @@ type LvlContentProps = {
   lvl: Level
   refs: LvlRefs
   items: NavItem[]
-  activeSection: string
+  activeSection: NavSectionKey | null
 }
 
 /**
