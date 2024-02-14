@@ -41,6 +41,9 @@ const baseStyle = definePartsStyle({
       outlineColor: "primary.hover",
     },
   },
+  groupHeading: {
+    color: "body.medium",
+  },
   indicatorIcon: {
     transitionProperty: "common",
     transitionDuration: "normal",

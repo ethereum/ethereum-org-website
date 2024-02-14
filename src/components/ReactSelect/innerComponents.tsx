@@ -19,6 +19,7 @@ export const reactSelectAnatomyKeys = [
   "indicatorIcon",
   "menuList",
   "option",
+  "groupHeading",
 ] as const
 
 export const nullop = () => null
@@ -67,7 +68,7 @@ const Control = <
     <HStack
       ref={innerRef}
       data-expanded={menuIsOpen}
-      __css={styles.control}
+      sx={styles.control}
       {...innerProps}
     >
       {children}
@@ -85,7 +86,7 @@ const DropdownIndicator = <
   const { innerProps } = props
   const styles = useReactSelectStyles()
   return (
-    <Center {...innerProps} __css={styles.indicatorIcon}>
+    <Center {...innerProps} sx={styles.indicatorIcon}>
       <Icon as={FaChevronDown} />
     </Center>
   )
@@ -100,7 +101,7 @@ const MenuList = <
   const { innerProps, innerRef, children } = props
   const styles = useReactSelectStyles()
   return (
-    <Box ref={innerRef} {...innerProps} __css={styles.menuList}>
+    <Box ref={innerRef} {...innerProps} sx={styles.menuList}>
       {children}
     </Box>
   )
@@ -122,7 +123,7 @@ const Option = <
       data-focused={isFocused}
       data-active={isSelected}
       {...innerProps}
-      __css={styles.option}
+      sx={styles.option}
     >
       {children}
     </Box>
@@ -136,13 +137,9 @@ const Group = <
 >(
   props: GroupProps<Option, IsMulti, Group>
 ) => {
-  const {
-    children,
-    Heading: GroupHeading,
-    headingProps,
-    label,
-    ...rest
-  } = props
+  const { children, headingProps, label } = props
+
+  const styles = useReactSelectStyles()
 
   const notFirstGroupStyles = {
     _notFirst: {
@@ -158,9 +155,9 @@ const Group = <
   return (
     <Box p={2} {...notFirstGroupStyles}>
       <Box fontSize="sm">
-        <GroupHeading id={headingProps.id} {...rest}>
+        <Box id={headingProps.id} sx={styles.groupHeading}>
           {label}
-        </GroupHeading>
+        </Box>
       </Box>
       {children}
     </Box>
@@ -170,7 +167,7 @@ const Group = <
 export const components = {
   SelectContainer,
   Control,
-  // Essentially remove this component from default render
+  // Essentially removes this component from default render
   IndicatorSeparator: nullop,
   DropdownIndicator,
   MenuList,

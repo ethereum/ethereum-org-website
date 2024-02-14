@@ -1,14 +1,20 @@
 import Select, { ActionMeta, GroupBase, Props } from "react-select"
 import {
   createStylesContext,
+  type SystemStyleObject,
   ThemingProps,
   useMultiStyleConfig,
 } from "@chakra-ui/react"
 
-import { components } from "./innerComponents"
+import { components, reactSelectAnatomyKeys } from "./innerComponents"
 
-export const [ReactSelectStylesProvider, useReactSelectStyles] =
+const [ReactSelectStylesProvider, useSelectStyles] =
   createStylesContext("ReactSelect")
+
+export const useReactSelectStyles = useSelectStyles as () => Record<
+  (typeof reactSelectAnatomyKeys)[number],
+  SystemStyleObject
+>
 
 /**
  * Type for onChange handler in the `Select` component
@@ -50,7 +56,9 @@ const ReactSelect = <
 }: Omit<Props<Option, IsMulti, Group>, "unstyled" | "menuPlacement"> & {
   variant?: ThemingProps<"ReactSelect">["variant"]
 }) => {
-  const styles = useMultiStyleConfig("ReactSelect", { variant })
+  const styles = useMultiStyleConfig("ReactSelect", {
+    variant,
+  })
   return (
     <ReactSelectStylesProvider value={styles}>
       <Select
