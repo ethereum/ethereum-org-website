@@ -744,7 +744,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           >
             <ProductList
               actionLabel={t("page-stablecoins:page-dapps-ready-button")}
-              category={t("page-stablecoins-category")}
+              category={t("page-stablecoins-category-dashboard-and-education")}
               content={toolsData}
             />
           </Box>
