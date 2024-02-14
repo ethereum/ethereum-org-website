@@ -18,33 +18,32 @@ const baseStyle = definePartsStyle({
     "& > .react-select__menu": {
       zIndex: -1,
     },
-    _hover: {
-      boxShadow: "buttonHover",
-    },
-    "&[data-expanded=true]": {
-      boxShadow: "buttonHover",
-    },
   },
   control: {
     borderColor: "currentColor",
+    outlineOffset: "-2px",
     p: 2,
     gap: 4,
     _hover: {
       color: "primary.base",
+      borderColor: "primary.lowContrast",
     },
     "&[data-expanded=true]": {
       bg: "background.highlight",
       color: "primary.base",
+      borderColor: "primary.lowContrast",
     },
     "&:focus-within:not([data-expanded=true])": {
       outline: "3px solid",
       outlineColor: "primary.hover",
+      borderColor: "transparent",
     },
   },
   groupHeading: {
     color: "body.medium",
   },
   indicatorIcon: {
+    fontSize: "sm",
     transitionProperty: "common",
     transitionDuration: "normal",
     "*[data-expanded=true] &": {
@@ -54,12 +53,12 @@ const baseStyle = definePartsStyle({
   menuList: {
     bg: "background.highlight",
     w: "full",
-    boxShadow: "buttonHover",
     maxH: "xs",
     overflowY: "auto",
+    zIndex: -1,
   },
   option: {
-    color: "primary.base",
+    color: "body.base",
     p: 2,
     "&[data-focused=true], &[data-active=true]": {
       bg: "primary.hover",
@@ -77,7 +76,16 @@ const variantFlushed = definePartsStyle({
   },
   control: {
     borderTopRadius: $borderTopRadius.reference,
+    border: $borderBaseWidth.reference,
+    "&[data-expanded=true]": {
+      borderBottomColor: "primary.base",
+    },
+  },
+  menuList: {
+    borderInline: $borderBaseWidth.reference,
     borderBottom: $borderBaseWidth.reference,
+    borderColor: "primary.lowContrast",
+    borderBottomRadius: "base",
   },
 })
 
@@ -99,7 +107,7 @@ const variantOutline = definePartsStyle({
   menuList: {
     borderInline: $borderBaseWidth.reference,
     borderBottom: $borderBaseWidth.reference,
-    borderColor: "primary.base",
+    borderColor: "primary.lowContrast",
     borderBottomRadius: "base",
   },
 })

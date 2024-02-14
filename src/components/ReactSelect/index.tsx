@@ -79,6 +79,7 @@ const ReactSelect = <
         {...rest}
         unstyled
         menuPlacement="bottom"
+        menuIsOpen
       />
     </ReactSelectStylesProvider>
   )

@@ -47,7 +47,8 @@ const SelectContainer = <
       className={className}
       data-expanded={menuIsOpen}
       {...innerProps}
-      __css={styles.container}
+      id="react-select-container"
+      sx={styles.container}
     >
       {children}
     </Box>
@@ -70,6 +71,7 @@ const Control = <
       data-expanded={menuIsOpen}
       sx={styles.control}
       {...innerProps}
+      id="react-select-control"
     >
       {children}
     </HStack>
@@ -86,7 +88,11 @@ const DropdownIndicator = <
   const { innerProps } = props
   const styles = useReactSelectStyles()
   return (
-    <Center {...innerProps} sx={styles.indicatorIcon}>
+    <Center
+      {...innerProps}
+      id="react-select-dropdown-indicator"
+      sx={styles.indicatorIcon}
+    >
       <Icon as={FaChevronDown} />
     </Center>
   )
@@ -101,7 +107,12 @@ const MenuList = <
   const { innerProps, innerRef, children } = props
   const styles = useReactSelectStyles()
   return (
-    <Box ref={innerRef} {...innerProps} sx={styles.menuList}>
+    <Box
+      ref={innerRef}
+      {...innerProps}
+      id="react-select-menu-list"
+      sx={styles.menuList}
+    >
       {children}
     </Box>
   )
@@ -123,6 +134,7 @@ const Option = <
       data-focused={isFocused}
       data-active={isSelected}
       {...innerProps}
+      id="react-select-option"
       sx={styles.option}
     >
       {children}
@@ -148,12 +160,18 @@ const Group = <
     },
   }
 
+  const PARENT_ID = "react-select-group"
+
   if (!label) {
-    return <Box {...notFirstGroupStyles}>{children}</Box>
+    return (
+      <Box id={PARENT_ID} {...notFirstGroupStyles}>
+        {children}
+      </Box>
+    )
   }
 
   return (
-    <Box p={2} {...notFirstGroupStyles}>
+    <Box id={PARENT_ID} p={2} {...notFirstGroupStyles}>
       <Box fontSize="sm">
         <Box id={headingProps.id} sx={styles.groupHeading}>
           {label}
