@@ -35,12 +35,11 @@ import Text from "@/components/OldText"
 import Tag from "@/components/Tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getWalletPersonas } from "@/lib/utils/wallets"
 
 import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
-
-import { useWalletPersonas } from "../../../hooks/useWalletPersonas"
 
 const Container = (props: TableProps) => (
   <Table
@@ -70,7 +69,10 @@ const Grid = forwardRef<SimpleGridProps, "tr">((props, ref) => (
   <SimpleGrid
     as={Tr}
     ref={ref}
-    templateColumns={{ base: "60% auto 0% 0% 5%", md: "40% auto auto auto 5%" }}
+    templateColumns={{
+      base: "60% auto 0% 0% 5%",
+      md: "100% auto auto auto auto",
+    }}
     w="full"
     columnGap={2}
     alignItems="center"
@@ -146,6 +148,7 @@ const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
 const ChakraSelect = chakra((props: { className?: string }) => (
   <Select {...props} />
 ))
+
 const StyledSelect = (props) => (
   <ChakraSelect
     w="full"
@@ -230,7 +233,6 @@ const StyledSelect = (props) => (
 
 const FlexInfo = (props: FlexProps) => (
   <Flex
-    alignItems="center"
     gap={4}
     ps="0.3rem"
     sx={{
@@ -334,9 +336,6 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
 
-  const personas = useWalletPersonas()
-  console.log({ personas })
-
   return (
     <Container>
       <WalletContentHeader>
@@ -423,6 +422,8 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
         wallet.firefox && deviceLabels.push(t("page-find-wallet-firefox"))
         wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
 
+        const walletPersonas = getWalletPersonas(wallet)
+
         return (
           <WalletContainer key={wallet.key}>
             <Wallet
@@ -438,102 +439,112 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
               }}
             >
               <Td lineHeight="revert">
-                <FlexInfo>
-                  <Box>
-                    <Image
-                      src={wallet.image}
-                      alt=""
-                      objectFit="contain"
-                      boxSize="56px"
-                    />
-                  </Box>
-                  <Box>
-                    <Text>{wallet.name}</Text>
+                <Flex justifyContent="space-between" alignItems="center">
+                  <FlexInfo>
+                    <Box>
+                      <Image
+                        src={wallet.image}
+                        alt=""
+                        objectFit="contain"
+                        boxSize="56px"
+                      />
+                    </Box>
+                    <Box>
+                      <Text>{wallet.name}</Text>
 
-                    <Flex>
-                      {personas.map((persona) => (
-                        <Tag
-                          key={persona.title}
-                          label={persona.title.toUpperCase()}
-                        />
-                      ))}
-                    </Flex>
+                      {/* Wallet Personas supported */}
+                      <Flex>
+                        {walletPersonas.map((persona) => (
+                          <Tag key={persona} label={t(persona).toUpperCase()} />
+                        ))}
+                      </Flex>
 
-                    <Text
-                      hideBelow="sm"
-                      color="text200"
-                      fontSize="0.7rem"
-                      lineHeight="0.85rem"
-                    >
-                      {deviceLabels.join(" · ")}
-                    </Text>
-                    {deviceLabels.map((label) => (
                       <Text
-                        key={label}
-                        hideFrom="md"
+                        hideBelow="sm"
+                        color="text200"
                         fontSize="0.7rem"
                         lineHeight="0.85rem"
-                        color="text200"
                       >
-                        {label}
+                        {deviceLabels.join(" · ")}
                       </Text>
-                    ))}
-                    <Box mt={4}>
-                      <Flex gap="0.8rem">
-                        <SocialLink
-                          to={wallet.url}
-                          hideArrow
-                          customEventOptions={{
-                            eventCategory: "WalletExternalLinkList",
-                            eventAction: `Go to wallet`,
-                            eventName: `Website: ${wallet.name} ${idx}`,
-                            eventValue: JSON.stringify(filters),
-                          }}
+                      {deviceLabels.map((label) => (
+                        <Text
+                          key={label}
+                          hideFrom="md"
+                          fontSize="0.7rem"
+                          lineHeight="0.85rem"
+                          color="text200"
                         >
-                          <Icon as={FaGlobe} fontSize="2xl" />
-                        </SocialLink>
-                        {wallet.twitter && (
+                          {label}
+                        </Text>
+                      ))}
+                      <Box mt={4}>
+                        <Flex gap="0.8rem">
                           <SocialLink
-                            to={wallet.twitter}
+                            to={wallet.url}
                             hideArrow
                             customEventOptions={{
                               eventCategory: "WalletExternalLinkList",
                               eventAction: `Go to wallet`,
-                              eventName: `Twitter: ${wallet.name} ${idx}`,
+                              eventName: `Website: ${wallet.name} ${idx}`,
                               eventValue: JSON.stringify(filters),
                             }}
                           >
-                            <Icon
-                              as={FaTwitter}
-                              color="#1da1f2"
-                              fontSize="2xl"
-                            />
+                            <Icon as={FaGlobe} fontSize="2xl" />
                           </SocialLink>
-                        )}
-                        {wallet.discord && (
-                          <SocialLink
-                            to={wallet.discord}
-                            hideArrow
-                            customEventOptions={{
-                              eventCategory: "WalletExternalLinkList",
-                              eventAction: `Go to wallet`,
-                              eventName: `Discord: ${wallet.name} ${idx}`,
-                              eventValue: JSON.stringify(filters),
-                            }}
-                          >
-                            <Icon
-                              as={FaDiscord}
-                              color="#7289da"
-                              fontSize="2xl"
-                            />
-                          </SocialLink>
-                        )}
-                      </Flex>
+                          {wallet.twitter && (
+                            <SocialLink
+                              to={wallet.twitter}
+                              hideArrow
+                              customEventOptions={{
+                                eventCategory: "WalletExternalLinkList",
+                                eventAction: `Go to wallet`,
+                                eventName: `Twitter: ${wallet.name} ${idx}`,
+                                eventValue: JSON.stringify(filters),
+                              }}
+                            >
+                              <Icon
+                                as={FaTwitter}
+                                color="#1da1f2"
+                                fontSize="2xl"
+                              />
+                            </SocialLink>
+                          )}
+                          {wallet.discord && (
+                            <SocialLink
+                              to={wallet.discord}
+                              hideArrow
+                              customEventOptions={{
+                                eventCategory: "WalletExternalLinkList",
+                                eventAction: `Go to wallet`,
+                                eventName: `Discord: ${wallet.name} ${idx}`,
+                                eventValue: JSON.stringify(filters),
+                              }}
+                            >
+                              <Icon
+                                as={FaDiscord}
+                                color="#7289da"
+                                fontSize="2xl"
+                              />
+                            </SocialLink>
+                          )}
+                        </Flex>
+                      </Box>
                     </Box>
-                  </Box>
-                </FlexInfo>
+                  </FlexInfo>
+
+                  <FlexInfoCenter>
+                    <Box>
+                      <Icon
+                        as={wallet.moreInfo ? MdExpandLess : MdExpandMore}
+                        color="primary.base"
+                        fontSize="2xl"
+                      />
+                    </Box>
+                  </FlexInfoCenter>
+                </Flex>
               </Td>
-              <Td>
+              {/* <Td>
                 <FlexInfoCenter className={firstCol}>
                   {wallet[firstFeatureSelect.filterKey!] ? (
                     <GreenCheckProductGlyphIcon />
@@ -541,8 +552,8 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                     <WarningProductGlyphIcon />
                   )}
                 </FlexInfoCenter>
-              </Td>
-              <Td>
+              </Td> */}
+              {/* <Td>
                 <FlexInfoCenter className={secondCol}>
                   {wallet[secondFeatureSelect.filterKey!] ? (
                     <GreenCheckProductGlyphIcon />
@@ -550,8 +561,8 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                     <WarningProductGlyphIcon />
                   )}
                 </FlexInfoCenter>
-              </Td>
-              <Td>
+              </Td> */}
+              {/* <Td>
                 <FlexInfoCenter className={thirdCol}>
                   {wallet[thirdFeatureSelect.filterKey!] ? (
                     <GreenCheckProductGlyphIcon />
@@ -559,8 +570,8 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                     <WarningProductGlyphIcon />
                   )}
                 </FlexInfoCenter>
-              </Td>
-              <Td>
+              </Td> */}
+              {/* <Td>
                 <FlexInfoCenter>
                   <Box>
                     <Icon
@@ -570,7 +581,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                     />
                   </Box>
                 </FlexInfoCenter>
-              </Td>
+              </Td> */}
             </Wallet>
             {wallet.moreInfo && (
               <WalletMoreInfo
