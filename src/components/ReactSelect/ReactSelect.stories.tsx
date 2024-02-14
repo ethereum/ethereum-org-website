@@ -1,4 +1,5 @@
 import { useState } from "react"
+import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import ReactSelect, { ReactSelectOnChange } from "."
@@ -10,6 +11,13 @@ type ReactSelectType = typeof ReactSelect
 const meta = {
   title: "Atoms / Form / Dropdown",
   component: ReactSelect,
+  decorators: [
+    (Story) => (
+      <Box w="lg">
+        <Story />
+      </Box>
+    ),
+  ],
 } satisfies Meta<ReactSelectType>
 
 export default meta
