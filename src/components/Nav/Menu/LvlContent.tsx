@@ -46,13 +46,14 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
 
   const pad = 4 // Chakra-UI space token
 
+  const getColumns = (lvl: Level) => {
+    const count = 4 - lvl // lvl 1: 3 cols, lvl 2: 2, lvl 3: 1
+    return `repeat(${count}, 1fr)`
+  }
+
   return (
     <NavigationMenu.Sub orientation="vertical" asChild>
-      <Grid
-        w="full"
-        h="full"
-        gridTemplateColumns={`repeat(${3 - (lvl - 1)}, 1fr)`}
-      >
+      <Grid w="full" h="full" gridTemplateColumns={getColumns(lvl)}>
         <NavigationMenu.List asChild>
           <UnorderedList listStyleType="none" p={pad} m="0">
             {items.map((item) => {
