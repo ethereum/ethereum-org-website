@@ -11,7 +11,7 @@ const DencunBanner = () => {
     .dateTimeAsString as string
   const upgradeDate = new Date(dateTimeAsString)
   return (
-    <DismissableBanner storageKey="devconGrants">
+    <DismissableBanner storageKey="dencunBanner">
       <Text m={0}>
         <Emoji text="🚨" me="2" />
         The Deneb + Cancun network upgrade is scheduled for{" "}
