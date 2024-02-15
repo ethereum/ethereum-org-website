@@ -108,12 +108,12 @@ export const WalletMoreInfo = ({
               color="text"
               fontWeight={500}
               mx="0.2rem"
-              my={-3}
+              my={-3.5}
             >
-              {t("page-find-wallet-visit-website")}
+              {t("page-find-wallet-social-links")}
             </Heading>
 
-            <Flex gap="0.8rem">
+            <Flex ps={1} gap="0.8rem">
               <SocialLink
                 to={wallet.url}
                 hideArrow
