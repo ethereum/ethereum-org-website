@@ -1,25 +1,24 @@
-import * as React from "react"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogCloseButton,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
+  Box,
   Button,
-  Flex,
-  Modal,
-  ModalCloseButton,
-  ModalContent,
-  ModalOverlay,
 } from "@chakra-ui/react"
-import Text from "../OldText"
-import Translation from "../Translation"
+
 import FixedDot from "./FixedDot"
 import { useFeedbackWidget } from "./useFeedbackWidget"
 
-interface FeedbackWidgetProps {
-  location: string
-}
-
-const FeedbackWidget = ({ location }: FeedbackWidgetProps) => {
+const FeedbackWidget = () => {
+  const { t } = useTranslation("common")
   const {
     bottomOffset,
+    cancelRef,
     feedbackSubmitted,
     getButtonProps,
     handleClose,
@@ -28,10 +27,7 @@ const FeedbackWidget = ({ location }: FeedbackWidgetProps) => {
     handleSurveyOpen,
     isExpanded,
     isOpen,
-  } = useFeedbackWidget({ location })
-  const { t } = useTranslation()
-  const { language } = useI18next()
-  if (language !== "en") return null
+  } = useFeedbackWidget()
   return (
     <>
       <FixedDot
@@ -40,71 +36,99 @@ const FeedbackWidget = ({ location }: FeedbackWidgetProps) => {
         bottomOffset={bottomOffset}
         isExpanded={isExpanded}
       />
-      <Modal isOpen={isOpen} onClose={handleClose} size="xs">
-        <ModalOverlay />
-        <ModalContent
-          textAlign="center"
-          p="8"
-          position="fixed"
-          insetEnd="8"
-          bottom="20"
-        >
-          <Text fontWeight="bold" fontSize="xl" lineHeight={6}>
-            {feedbackSubmitted ? (
-              <Translation id="feedback-widget-thank-you-title" />
-            ) : (
-              <Translation id="feedback-widget-prompt" />
-            )}
-          </Text>
-          {feedbackSubmitted && (
-            <Text fontWeight="normal" fontSize="md" lineHeight={5}>
-              <Translation id="feedback-widget-thank-you-subtitle" />
-            </Text>
-          )}
-          {feedbackSubmitted && (
-            <Text
-              fontWeight="bold"
-              fontSize="xs"
-              lineHeight={4}
-              letterSpacing="wide"
-              color="searchBorder"
+
+      <AlertDialog
+        isOpen={isOpen}
+        leastDestructiveRef={cancelRef}
+        onClose={handleClose}
+        isCentered
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent
+            position="fixed"
+            maxW={1504}
+            m="auto"
+            alignItems="flex-end"
+            backgroundColor="transparent"
+            boxShadow="tableItemBox"
+            me={24}
+            bottom={{ base: `${bottomOffset + 5}rem`, lg: 20 }}
+          >
+            <Box
+              w="min(300px, calc(100% - 1rem))"
+              mx="2"
+              bgColor="ednBackground"
+              border="1px"
+              borderColor="background.base"
+              borderRadius="base"
+              py="4"
+              px="2"
             >
-              <Translation id="feedback-widget-thank-you-timing" />
-            </Text>
-          )}
-          <ModalCloseButton />
-          <Flex flexWrap="nowrap" gap="6" w="full">
-            {feedbackSubmitted ? (
-              <Button
-                onClick={handleSurveyOpen}
-                aria-label={t("feedback-widget-thank-you-cta")}
-                flex={1}
+              <AlertDialogCloseButton />
+
+              <AlertDialogHeader
+                fontSize="xl"
+                fontWeight="bold"
+                lineHeight="6"
+                textAlign="center"
               >
-                <Translation id="feedback-widget-thank-you-cta" />
-              </Button>
-            ) : (
-              <>
-                <Button
-                  variant="solid"
-                  onClick={() => handleSubmit(true)}
-                  aria-label={t("yes")}
-                  flex={1}
-                >
-                  <Translation id="yes" />
-                </Button>
-                <Button
-                  variant="solid"
-                  onClick={() => handleSubmit(false)}
-                  aria-label={t("no")}
-                  flex={1}
-                >
-                  <Translation id="no" />
-                </Button>
-              </>
-            )}
-          </Flex>
-        </ModalContent>
-      </Modal>
+                {feedbackSubmitted
+                  ? t("feedback-widget-thank-you-title")
+                  : t("feedback-widget-prompt")}
+              </AlertDialogHeader>
+
+              {/* Body: */}
+              {feedbackSubmitted && (
+                <>
+                  <AlertDialogBody
+                    fontWeight="normal"
+                    fontSize="md"
+                    lineHeight="5"
+                    textAlign="center"
+                  >
+                    {t("feedback-widget-thank-you-subtitle")}
+                  </AlertDialogBody>
+                  <AlertDialogBody
+                    fontWeight="bold"
+                    fontSize="xs"
+                    lineHeight="4"
+                    letterSpacing="wide"
+                    color="searchBorder"
+                    textAlign="center"
+                  >
+                    {t("feedback-widget-thank-you-timing")}
+                  </AlertDialogBody>
+                </>
+              )}
+
+              <AlertDialogFooter display="flex" gap="6">
+                {feedbackSubmitted ? (
+                  <Button onClick={handleSurveyOpen} flex={1}>
+                    {t("feedback-widget-thank-you-cta")}
+                  </Button>
+                ) : (
+                  <>
+                    <Button
+                      variant="solid"
+                      onClick={() => handleSubmit(true)}
+                      flex={1}
+                    >
+                      {t("yes")}
+                    </Button>
+                    <Button
+                      variant="solid"
+                      onClick={() => handleSubmit(false)}
+                      flex={1}
+                    >
+                      {t("no")}
+                    </Button>
+                  </>
+                )}
+              </AlertDialogFooter>
+            </Box>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
     </>
   )
 }

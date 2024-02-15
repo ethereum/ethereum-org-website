@@ -1,19 +1,21 @@
-import * as React from "react"
+import { useTranslation } from "next-i18next"
 import { Button, ButtonProps, ScaleFade, Text } from "@chakra-ui/react"
-import { FeedbackGlyphIcon } from "../icons"
-import Translation from "../Translation"
 
-interface FixedDotProps extends ButtonProps {
+import { FeedbackGlyphIcon } from "../icons"
+
+type FixedDotProps = ButtonProps & {
   bottomOffset: number
   isExpanded: boolean
 }
 const FixedDot = ({ bottomOffset, isExpanded, ...props }: FixedDotProps) => {
+  const { t } = useTranslation("common")
   const size = "12"
   return (
     <Button
       h={size}
-      w={{ base: size, lg: !isExpanded ? size : "max-content" }}
+      w={{ base: size, lg: isExpanded ? "15rem" : size }}
       borderRadius="full"
+      boxShadow="tableItemBox"
       position="sticky"
       bottom={{ base: `${bottomOffset + 1}rem`, lg: 4 }}
       color="white"
@@ -21,13 +23,16 @@ const FixedDot = ({ bottomOffset, isExpanded, ...props }: FixedDotProps) => {
       me="4"
       mt={{ lg: "inherit" }}
       zIndex={98} /* Below the mobile menu */
+      display="flex"
+      alignItems="center"
       _hover={{
         transform: "scale(1.1)",
         transition: "transform 0.2s ease-in-out",
       }}
-      transition="transform 0.2s ease-in-out, width 0.25s linear,
+      transition="transform 0.2s ease-in-out, width 0.25s ease-in-out,
       border-radius 0.25s linear"
-      leftIcon={<FeedbackGlyphIcon />}
+      aria-label={t("feedback-widget")}
+      leftIcon={<FeedbackGlyphIcon color="white" />}
       iconSpacing={{ base: 0, lg: "3" }}
       sx={{
         ".chakra-button__icon": {
@@ -45,7 +50,7 @@ const FixedDot = ({ bottomOffset, isExpanded, ...props }: FixedDotProps) => {
           alignItems="center"
           display={{ base: "none", lg: isExpanded ? "flex" : "none" }}
         >
-          <Translation id="feedback-widget-prompt" />
+          {t("feedback-widget-prompt")}
         </Text>
       </ScaleFade>
     </Button>

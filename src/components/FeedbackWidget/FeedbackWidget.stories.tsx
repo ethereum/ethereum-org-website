@@ -1,7 +1,8 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import FeedbackWidgetComponent from "."
 import { Box, Stack } from "@chakra-ui/react"
+import { Meta, StoryObj } from "@storybook/react"
+
+import FeedbackWidgetComponent from "./"
 
 type FeedbackWidgetType = typeof FeedbackWidgetComponent
 
@@ -23,5 +24,5 @@ const meta = {
 export default meta
 
 export const FeedbackWidget: StoryObj<FeedbackWidgetType> = {
-  render: () => <FeedbackWidgetComponent location="" />,
+  render: () => <FeedbackWidgetComponent />,
 }

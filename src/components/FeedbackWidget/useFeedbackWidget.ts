@@ -1,23 +1,31 @@
+import { useEffect, useMemo, useRef, useState } from "react"
+import { useRouter } from "next/router"
 import { useDisclosure } from "@chakra-ui/react"
-import { useEffect, useMemo, useState } from "react"
-import { useSurvey } from "../../hooks/useSurvey"
-import { trackCustomEvent } from "../../utils/matomo"
 
-export const useFeedbackWidget = ({ location }: { location: string }) => {
-  const [isExpanded, setIsExpanded] = useState<boolean>(false)
-  const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { useSurvey } from "@/hooks/useSurvey"
+
+export const useFeedbackWidget = () => {
+  const { asPath } = useRouter()
+
+  const [isExpanded, setIsExpanded] = useState(false)
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
 
   const { getButtonProps, isOpen, onClose, onOpen } = useDisclosure()
 
+  const cancelRef = useRef<HTMLButtonElement>(null)
+
   useEffect(() => {
-    // Reset component state when path (location) changes
+    // Reset component state when path (asPath) changes
     onClose()
     setFeedbackSubmitted(false)
+    setIsExpanded(false)
 
-    let expandTimeout = setTimeout(() => setIsExpanded(true), 30000)
+    let expandTimeout = setTimeout(() => setIsExpanded(true), 3_000)
 
     return () => clearTimeout(expandTimeout)
-  }, [location])
+  }, [asPath, onClose])
 
   const surveyUrl = useSurvey(feedbackSubmitted)
 
@@ -26,12 +34,12 @@ export const useFeedbackWidget = ({ location }: { location: string }) => {
     const CONDITIONAL_OFFSET = 6.75
     let offset = 0
     pathsWithBottomNav.forEach((path) => {
-      if (location.includes(path)) {
+      if (asPath.includes(path)) {
         offset = CONDITIONAL_OFFSET
       }
     })
     return offset
-  }, [location])
+  }, [asPath])
 
   const handleClose = (): void => {
     onClose()
@@ -41,14 +49,17 @@ export const useFeedbackWidget = ({ location }: { location: string }) => {
       eventName: `Closed feedback widget`,
     })
   }
+
   const handleOpen = (): void => {
     onOpen()
+    setIsExpanded(false)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
       eventName: `Opened feedback widget`,
     })
   }
+
   const handleSubmit = (choice: boolean): void => {
     trackCustomEvent({
       eventCategory: `Page is helpful feedback`,
@@ -65,17 +76,19 @@ export const useFeedbackWidget = ({ location }: { location: string }) => {
     })
     window && surveyUrl && window.open(surveyUrl, "_blank")
     onClose() // Close widget without triggering redundant tracker event
+    setIsExpanded(false)
   }
 
   return {
     bottomOffset,
+    cancelRef,
     feedbackSubmitted,
+    getButtonProps,
     handleClose,
     handleOpen,
     handleSubmit,
     handleSurveyOpen,
     isExpanded,
     isOpen,
-    getButtonProps,
   }
 }
