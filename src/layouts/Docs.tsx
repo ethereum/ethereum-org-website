@@ -149,6 +149,7 @@ const Content = (props: ChildOnlyProp) => {
   return (
     <Box
       as={MainArticle}
+      boxSizing="content-box"
       flex={`1 1 ${mdBreakpoint}`}
       maxW={{ base: "full", lg: mdBreakpoint }}
       pt={{ base: 32, md: 12 }}
