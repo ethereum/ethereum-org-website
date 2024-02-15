@@ -107,3 +107,22 @@ git push origin <branch name>
 ```
 
 Lastly, make a pull request into the `dev` branch from your fork and we will review it.
+
+### Custom header ID's for translations {#custom-header-ids}
+
+All markdown pages should include custom header IDs for each header. For example:
+
+
+```markdown
+## Here is a header {#here-is-a-header}
+
+Content...
+```
+
+The `{#here-is-a-header}` tag will be parsed into an `id` for this header, and is used for hash links to take a user directly to this section. For example: [https://ethereum.org/about#a-note-on-names](https://ethereum.org/about#a-note-on-names) will take a user directly to the `A note on names` section of the about page.
+
+This custom ID is intentionally _not translated_ during the translation process, allowing the link to work for any language, since the link ID will not change from language-to-language.
+
+If this is not included, a new ID will be generated for each language, breaking the portability of these links between languages.
+
+These ID's should be unique to the page. Typically a "kebab-cased" version of the header label itself is used, but this is not required, and should be changed for any recurring header labels (ie: multiple "Example" sub-sections should _not_ all be named `{#example}`).
