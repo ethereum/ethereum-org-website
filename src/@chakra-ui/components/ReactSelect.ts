@@ -20,6 +20,7 @@ const baseStyle = definePartsStyle({
     },
   },
   control: {
+    border: $borderBaseWidth.reference,
     borderColor: "currentColor",
     outlineOffset: "-2px",
     p: 2,
@@ -76,7 +77,12 @@ const variantFlushed = definePartsStyle({
   },
   control: {
     borderTopRadius: $borderTopRadius.reference,
-    border: $borderBaseWidth.reference,
+    borderTopColor: "transparent",
+    borderInlineColor: "transparent",
+    _hover: {
+      borderTopColor: "transparent",
+      borderInlineColor: "transparent",
+    },
     "&[data-expanded=true]": {
       borderBottomColor: "primary.base",
     },
@@ -98,7 +104,6 @@ const variantOutline = definePartsStyle({
   },
   control: {
     borderRadius: $borderOutlineRadius.reference,
-    border: $borderBaseWidth.reference,
     "&[data-expanded=true]": {
       borderBottomColor: "transparent",
       borderBottomRadius: "none",
