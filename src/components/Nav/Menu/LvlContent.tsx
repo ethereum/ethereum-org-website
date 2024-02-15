@@ -1,6 +1,13 @@
 import NextLink from "next/link"
 import { useRouter } from "next/router"
-import { Button, Grid, Icon, ListItem, UnorderedList } from "@chakra-ui/react"
+import {
+  Box,
+  Button,
+  Grid,
+  Icon,
+  ListItem,
+  UnorderedList,
+} from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
 import { ButtonProps } from "@/components/Buttons"
@@ -39,7 +46,11 @@ const LvlContent = ({ lvl, items }: LvlContentProps) => {
 
   return (
     <NavigationMenu.Sub orientation="vertical" asChild>
-      <Grid w="full" gridTemplateColumns={`repeat(${3 - (lvl - 1)}, 1fr)`}>
+      <Grid
+        w="full"
+        h="full"
+        gridTemplateColumns={`repeat(${3 - (lvl - 1)}, 1fr)`}
+      >
         <NavigationMenu.List asChild>
           <UnorderedList gridArea="a" listStyleType="none" p={pad} m="0">
             {items.map((item) => {
@@ -112,11 +123,13 @@ const LvlContent = ({ lvl, items }: LvlContentProps) => {
                             <ItemContent item={item} lvl={lvl} />
                           </Button>
                         </NavigationMenu.Trigger>
-                        <NavigationMenu.Content>
-                          <LvlContent
-                            lvl={(lvl + 1) as Level}
-                            items={subItems}
-                          />
+                        <NavigationMenu.Content asChild>
+                          <Box bg={menuColors.lvl[lvl + 1].background} h="full">
+                            <LvlContent
+                              lvl={(lvl + 1) as Level}
+                              items={subItems}
+                            />
+                          </Box>
                         </NavigationMenu.Content>
                       </>
                     )}

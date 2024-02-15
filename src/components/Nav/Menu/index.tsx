@@ -84,12 +84,6 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                           opacity: 1,
                           transition: "opacity 200ms linear",
                         },
-                        '&:has(#lvl2 [data-state="open"])': {
-                          bg: menuColors.lvl[2].background,
-                        },
-                        '&:has(#lvl3 [data-state="open"])': {
-                          bg: menuColors.lvl[3].background,
-                        },
                       }}
                     >
                       <LvlContent lvl={1} items={items} />
