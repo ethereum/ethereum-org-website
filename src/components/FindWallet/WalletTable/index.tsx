@@ -24,12 +24,14 @@ import {
 
 import { ChildOnlyProp } from "@/lib/types"
 
+import { ButtonLink } from "@/components/Buttons"
 import { useWalletTable } from "@/components/FindWallet/WalletTable/useWalletTable"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
 import {
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
+import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
 import InlineLink, { LinkProps } from "@/components/Link"
 import Text from "@/components/OldText"
@@ -45,8 +47,6 @@ import {
 import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
-import { ButtonLink } from "@/components/Buttons"
-import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 
 const Container = (props: TableProps) => (
   <Table
@@ -480,9 +480,8 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
 
                           <Text
                             hideBelow="sm"
-                            color="text200"
-                            fontSize="0.7rem"
-                            lineHeight="0.85rem"
+                            fontSize="1rem !important"
+                            fontWeight="normal !important"
                           >
                             {deviceLabels.join(" · ")}
                           </Text>
@@ -492,9 +491,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                           <Text
                             key={label}
                             hideFrom="md"
-                            fontSize="0.7rem"
-                            lineHeight="0.85rem"
-                            color="text200"
+                            fontSize="1rem !important"
                           >
                             {label}
                           </Text>
@@ -506,9 +503,8 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
 
                           <Text
                             hideBelow="sm"
-                            color="text200"
-                            fontSize="0.7rem"
-                            lineHeight="0.85rem"
+                            fontSize="1rem !important"
+                            fontWeight="normal !important"
                           >
                             {/* TODO: simplify */}
                             {formatSupportedLanguages(
