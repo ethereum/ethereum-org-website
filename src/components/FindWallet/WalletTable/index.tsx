@@ -27,10 +27,6 @@ import { ChildOnlyProp } from "@/lib/types"
 import { ButtonLink } from "@/components/Buttons"
 import { useWalletTable } from "@/components/FindWallet/WalletTable/useWalletTable"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
-import {
-  GreenCheckProductGlyphIcon,
-  WarningProductGlyphIcon,
-} from "@/components/icons/staking"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
 import InlineLink, { LinkProps } from "@/components/Link"
@@ -308,15 +304,6 @@ const SocialLink = (props: LinkProps) => (
     {...props}
   />
 )
-
-// Types
-export interface DropdownOption {
-  label: string
-  value: string
-  filterKey: string
-  category: string
-  icon: ReactNode
-}
 
 // Constants
 const firstCol = "firstCol"
