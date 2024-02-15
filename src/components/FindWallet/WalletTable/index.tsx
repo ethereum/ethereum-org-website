@@ -14,6 +14,7 @@ import {
   keyframes,
   SimpleGrid,
   SimpleGridProps,
+  Stack,
   Table,
   TableProps,
   Td,
@@ -44,6 +45,8 @@ import {
 import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
+import { ButtonLink } from "@/components/Buttons"
+import { DevicesIcon } from "@/components/icons/wallets"
 
 const Container = (props: TableProps) => (
   <Table
@@ -454,52 +457,73 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                       />
                     </Box>
                     <Box>
-                      <Text>{wallet.name}</Text>
+                      <Stack gap={6}>
+                        <Text>{wallet.name}</Text>
 
-                      {/* Wallet Personas supported */}
-                      <Flex>
-                        {walletPersonas.map((persona) => (
-                          <Tag key={persona} label={t(persona).toUpperCase()} />
+                        {/* Wallet Personas supported */}
+                        <Flex>
+                          {walletPersonas.map((persona) => (
+                            <Tag
+                              key={persona}
+                              label={t(persona).toUpperCase()}
+                            />
+                          ))}
+                        </Flex>
+
+                        {/* Device labels */}
+                        <Flex alignItems="center" gap={3}>
+                          <Icon as={DevicesIcon} fontSize="2xl" />
+
+                          <Text
+                            hideBelow="sm"
+                            color="text200"
+                            fontSize="0.7rem"
+                            lineHeight="0.85rem"
+                          >
+                            {deviceLabels.join(" · ")}
+                          </Text>
+                        </Flex>
+
+                        {deviceLabels.map((label) => (
+                          <Text
+                            key={label}
+                            hideFrom="md"
+                            fontSize="0.7rem"
+                            lineHeight="0.85rem"
+                            color="text200"
+                          >
+                            {label}
+                          </Text>
                         ))}
-                      </Flex>
 
-                      {/* Device labels */}
-                      <Text
-                        hideBelow="sm"
-                        color="text200"
-                        fontSize="0.7rem"
-                        lineHeight="0.85rem"
-                      >
-                        {deviceLabels.join(" · ")}
-                      </Text>
-
-                      {deviceLabels.map((label) => (
+                        {/* Supported languages */}
                         <Text
-                          key={label}
-                          hideFrom="md"
+                          hideBelow="sm"
+                          color="text200"
                           fontSize="0.7rem"
                           lineHeight="0.85rem"
-                          color="text200"
                         >
-                          {label}
+                          {/* TODO: simplify */}
+                          {formatSupportedLanguages(
+                            getNativeSupportedLanguages(
+                              wallet.languages_supported
+                            )
+                          )}
                         </Text>
-                      ))}
 
-                      {/* Supported languages */}
-                      <Text
-                        hideBelow="sm"
-                        color="text200"
-                        fontSize="0.7rem"
-                        lineHeight="0.85rem"
-                      >
-                        {formatSupportedLanguages(
-                          getNativeSupportedLanguages(
-                            wallet.languages_supported
-                          )
-                        )}
-                      </Text>
+                        {/* Wallet Website (desktop) */}
+                        <ButtonLink
+                          to={wallet.url}
+                          variant="outline"
+                          w="auto"
+                          isExternal
+                        >
+                          {/* TODO add i18n text */}
+                          Visit website
+                        </ButtonLink>
+                      </Stack>
 
-                      <Box mt={4}>
+                      <Box mt={4} display={{ base: "block", md: "none" }}>
                         {/* Social icons */}
                         <Flex gap="0.8rem">
                           <SocialLink
@@ -551,6 +575,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                             </SocialLink>
                           )}
                         </Flex>
+                        S
                       </Box>
                     </Box>
                   </FlexInfo>

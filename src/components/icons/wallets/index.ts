@@ -2,6 +2,7 @@ import { BrowserIcon } from "./BrowserIcon"
 import { BuyCryptoIcon } from "./BuyCryptoIcon"
 import { ConnectDappsIcon } from "./ConnectDappsIcon"
 import { DesktopIcon } from "./DesktopIcon"
+import { DevicesIcon } from "./DevicesIcon"
 import { EIP1559Icon } from "./EIP1559Icon"
 import { ENSSupportIcon } from "./ENSSupportIcon"
 import { ERC20SupportIcon } from "./ERC20SupportIcon"
@@ -28,6 +29,7 @@ export {
   BuyCryptoIcon,
   ConnectDappsIcon,
   DesktopIcon,
+  DevicesIcon,
   EIP1559Icon,
   ENSSupportIcon,
   ERC20SupportIcon,
