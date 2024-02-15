@@ -139,6 +139,7 @@ const FeedbackWidget = () => {
   return (
     <Box position="sticky" bottom="0">
       <Popover
+        variant="responsive"
         isOpen={isOpen}
         onOpen={handleOpen}
         onClose={handleClose}
@@ -185,7 +186,7 @@ const FeedbackWidget = () => {
           borderColor="buttonColor"
           boxShadow="tableItemBox"
           borderRadius="base"
-          me="4"
+          mx="4"
           mb="2"
           py="4"
           px="2"
