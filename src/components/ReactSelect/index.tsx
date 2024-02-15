@@ -64,11 +64,6 @@ const ReactSelect = <
       <Select
         components={components}
         styles={{
-          menu: (base) => ({
-            ...base,
-            // This is to ensure a seamless border between the control and menu on open
-            marginTop: "-2px",
-          }),
           singleValue: (base) => ({
             ...base,
             // Force text overflow at smaller widths when inline with other select components

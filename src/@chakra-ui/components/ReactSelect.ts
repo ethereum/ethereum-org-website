@@ -56,7 +56,6 @@ const baseStyle = definePartsStyle({
     w: "full",
     maxH: "xs",
     overflowY: "auto",
-    zIndex: -1,
   },
   option: {
     color: "body.base",
@@ -88,13 +87,14 @@ const variantFlushed = definePartsStyle({
       borderInlineColor: "transparent",
     },
     "&[data-expanded=true]": {
+      borderColor: "body.light",
       borderBottomColor: "primary.base",
     },
   },
   menuList: {
     borderInline: $borderBaseWidth.reference,
     borderBottom: $borderBaseWidth.reference,
-    borderColor: "primary.lowContrast",
+    borderColor: "body.light",
     borderBottomRadius: "base",
   },
 })
