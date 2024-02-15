@@ -93,6 +93,7 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
                     _last={{ mb: 0 }}
                     sx={{
                       '&:has(button[data-state="open"])': {
+                        roundedStart: "md",
                         roundedEnd: "none",
                         bg: menuColors.lvl[lvl].activeBackground,
                         me: -pad,
