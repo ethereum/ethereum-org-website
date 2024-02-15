@@ -52,7 +52,7 @@ const LvlContent = ({ lvl, items }: LvlContentProps) => {
         gridTemplateColumns={`repeat(${3 - (lvl - 1)}, 1fr)`}
       >
         <NavigationMenu.List asChild>
-          <UnorderedList gridArea="a" listStyleType="none" p={pad} m="0">
+          <UnorderedList listStyleType="none" p={pad} m="0">
             {items.map((item) => {
               const { label, description, icon, ...action } = item
               const subItems = action.items || []
