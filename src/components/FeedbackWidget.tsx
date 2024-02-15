@@ -32,6 +32,7 @@ type FixedDotProps = ButtonProps & {
 }
 const FixedDot = forwardRef(
   ({ children, bottomOffset, isExpanded, ...props }: FixedDotProps, ref) => {
+    const { t } = useTranslation("common")
     const size = "3rem"
     return (
       <Button
@@ -55,6 +56,7 @@ const FixedDot = forwardRef(
         }}
         transition="transform 0.2s ease-in-out, width 0.25s ease-in-out,
       border-radius 0.25s linear"
+        aria-label={t("feedback-widget")}
         {...props}
       >
         {children}

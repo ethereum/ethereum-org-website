@@ -338,7 +338,11 @@ const CommunityPage = () => {
               <ButtonLink to="/community/get-involved/#ethereum-jobs/">
                 {t("page-community-find-a-job")}
               </ButtonLink>
-              <StyledButtonLink variant="outline" to="/community/grants/">
+              <StyledButtonLink
+                variant="outline"
+                to="/community/grants/"
+                isSecondary
+              >
                 {t("page-community-explore-grants")}
               </StyledButtonLink>
             </ButtonRow>
@@ -382,6 +386,7 @@ const CommunityPage = () => {
                 <StyledButtonLink
                   variant="outline"
                   to="https://github.com/ethereum/ethereum-org-website/"
+                  isSecondary
                 >
                   {t("page-community-contribute-secondary-button")}
                 </StyledButtonLink>

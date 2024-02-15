@@ -22,10 +22,6 @@ Alicja i Bob urządzają sobie wyścig rowerowy. Załóżmy, że Alice założy�
 
 Ten jaskrawy przykład ilustruje problem z dowolną umową nieinteligentną. Nawet jeśli warunki umowy zostaną spełnione (np. Ty jesteś zwycięzcą wyścigu), nadal musisz ufać innej osobie, że wywiąże się z umowy (np. wypłaci zakład).
 
-## Inteligentne kontrakty {#smart-contracts}
-
-Inteligentne kontrakty digitalizują umowy, przekształcając warunki umowy w kod komputerowy, który automatycznie wykonuje się, gdy warunki kontraktu są spełnione.
-
 ## Cyfrowy automat do sprzedaży {#vending-machine}
 
 Prostą metaforą inteligentnego kontraktu jest automat sprzedający, który działa nieco podobnie do inteligentnego kontraktu — określone wejścia gwarantują z góry określone wyjścia.

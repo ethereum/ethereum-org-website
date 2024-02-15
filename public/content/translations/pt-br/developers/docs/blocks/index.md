@@ -40,7 +40,7 @@ Prova de participação significa o seguinte:
 Há muitas informações contidas em um bloco. No nível mais alto, um bloco contém os seguintes campos:
 
 | Campo            | Descrição                                                  |
-| :--------------- | :--------------------------------------------------------- |
+|:---------------- |:---------------------------------------------------------- |
 | `slot`           | o slot ao qual o bloco pertence                            |
 | `proposer_index` | a ID do validador que propõe o bloco                       |
 | `parent_root`    | o hash do bloco anterior                                   |
@@ -50,7 +50,7 @@ Há muitas informações contidas em um bloco. No nível mais alto, um bloco con
 O bloco `body` contém vários campos próprios:
 
 | Campo                | Descrição                                                     |
-| :------------------- | :------------------------------------------------------------ |
+|:-------------------- |:------------------------------------------------------------- |
 | `randao_reveal`      | um valor usado para selecionar o proponente do próximo bloco  |
 | `eth1_data`          | informações sobre o contrato de depósito                      |
 | `graffiti`           | dados arbitrários usados para marcar blocos                   |
@@ -65,7 +65,7 @@ O bloco `body` contém vários campos próprios:
 O campo `attestations` contém uma lista de todas as atestações no bloco. As atestações têm seu próprio tipo de dados que contém vários dados. Cada atestação contém:
 
 | Campo              | Descrição                                                   |
-| :----------------- | :---------------------------------------------------------- |
+|:------------------ |:----------------------------------------------------------- |
 | `aggregation_bits` | uma lista de quais validadores participaram desta atestação |
 | `data`             | um contêiner com vários subcampos                           |
 | `signature`        | assinatura agregada com todos os validadores de atestação   |
@@ -73,7 +73,7 @@ O campo `attestations` contém uma lista de todas as atestações no bloco. As a
 O campo `data` no `attestation` contém o seguinte:
 
 | Campo               | Descrição                                        |
-| :------------------ | :----------------------------------------------- |
+|:------------------- |:------------------------------------------------ |
 | `slot`              | o local ao qual a atestação se refere            |
 | `index`             | índices para as atestações dos validadores       |
 | `beacon_block_root` | o hash raiz do bloco Beacon contendo este objeto |
@@ -85,7 +85,7 @@ A execução das transações no `execution_payload` atualiza o estado global. T
 O `execution_payload_header` contém os seguintes campos:
 
 | Campo               | Descrição                                                          |
-| :------------------ | :----------------------------------------------------------------- |
+|:------------------- |:------------------------------------------------------------------ |
 | `parent_hash`       | hash do bloco pai                                                  |
 | `fee_recipient`     | endereço da conta para pagar taxas de transação para               |
 | `state_root`        | hash raiz para o estado global após aplicar alterações neste bloco |
@@ -105,7 +105,7 @@ O `execution_payload_header` contém os seguintes campos:
 O próprio `execution_payload` contém o seguinte (note que é idêntico ao cabeçalho, exceto que, em vez do hash raiz das transações, ele inclui a lista real de transações e informações de retirada):
 
 | Campo              | Descrição                                                          |
-| :----------------- | :----------------------------------------------------------------- |
+|:------------------ |:------------------------------------------------------------------ |
 | `parent_hash`      | hash do bloco pai                                                  |
 | `fee_recipient`    | endereço da conta para pagar taxas de transação para               |
 | `state_root`       | hash raiz para o estado global após aplicar alterações neste bloco |
@@ -125,7 +125,7 @@ O próprio `execution_payload` contém o seguinte (note que é idêntico ao cabe
 A lista `withdrawals` contém objetos `withdrawal` estruturados da seguinte forma:
 
 | Campo            | Descrição                     |
-| :--------------- | :---------------------------- |
+|:---------------- |:----------------------------- |
 | `endereço`       | endereço da conta que retirou |
 | `amount`         | quantidade retirada           |
 | `index`          | valor do índice da retirada   |

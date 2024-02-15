@@ -28,7 +28,7 @@ Haben Sie einen Hintergrund in Mathematik, Kryptographie oder Wirtschaftswissens
 - Ethereum-Verbesserungsvorschläge formulieren oder prüfen
   - Ein EIP schreiben
     1. Reichen Sie Ihre Idee auf [Ethereum Magicians](https://ethereum-magicians.org) ein.
-    2. Lesen Sie [EIP-1](https://eip.ethereum.org/EIPS/eip-1) – **Ja, das ist das _ganze_ Dokument**.
+    2. Lesen Sie [EIP-1](https://eips.ethereum.org/EIPS/eip-1) – **Ja, das ist das _ganze_ Dokument**.
     3. Folgen Sie den Anweisungen in EIP-1. Beziehen Sie sich auf die darin enthaltenen Informationen, während Sie Ihren Entwurf schreiben.
   - Erfahren Sie, wie Sie ein [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069) werden.
     - Sie können direkt in das Peer-Review von EIPs einsteigen. Sehen Sie [Öffnen von PRs mit dem `e-review`-Tag](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Geben Sie technisches Feedback über den `discussion-to`-Link.

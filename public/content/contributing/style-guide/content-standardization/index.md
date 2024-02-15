@@ -155,6 +155,21 @@ Sentences using active voice are more concise and efficient, making your writing
 
 _This isn't an easy one, especially for non-native English speakers. If you aren't sure, don't worry. We'll help with any of these._
 
+### Date Format {#date-format}
+
+When including dates in markdown content across Ethereum documentation, it is essential to maintain a consistent and clear presentation. In order to achieve this, we recommend the following guidelines:
+
+**Format:**
+
+Use the "D-Mon-YYYY" format for dates. This format eliminates ambiguity between the month and day, providing a standardized and easily understandable representation.
+
+**Examples:**
+
+- Preferred: 2-Nov-2023, 11-Feb-2023
+- Avoid: Nov-2-2023, 2/11/2023, 11/2/2023
+
+By adhering to these guidelines, we create a unified approach to presenting dates, fostering clarity and comprehension throughout Ethereum documentation.
+
 ### Linking to internal pages {#internal-links}
 
 When linking to another page on Ethereum.org, use the relative path over the absolute path. Do not hard-code the language path (i.e. `/en/`) in any links. This maintains consistent functionality across different language versions of the site.
