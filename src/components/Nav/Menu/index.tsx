@@ -1,14 +1,13 @@
-import { useRef, useState } from "react"
-import { Box, type BoxProps, Flex, Grid } from "@chakra-ui/react"
+import { useState } from "react"
+import { Box, type BoxProps, Flex } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
 import { Button } from "@/components/Buttons"
 
-import { trackCustomEvent } from "@/lib/utils/matomo"
-
+// import { trackCustomEvent } from "@/lib/utils/matomo"
 import { SECTION_LABELS } from "@/lib/constants"
 
-import type { Level, LvlRefs, NavSectionKey, NavSections } from "../types"
+import type { NavSectionKey, NavSections } from "../types"
 
 import LvlContent from "./LvlContent"
 
@@ -24,20 +23,14 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
   const menuColors = useNavMenuColors()
   const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
 
-  const refs: LvlRefs = {
-    lvl1: useRef(null),
-    lvl2: useRef(null),
-    lvl3: useRef(null),
-  }
-
-  const getLvlSx = (lvl: Level): BoxProps["sx"] => ({
-    opacity: 0,
-    '&:has([data-state="open"])': {
-      bg: menuColors.lvl[lvl].background,
-      opacity: 1,
-      transition: "opacity 300ms linear",
-    },
-  })
+  // const getLvlSx = (lvl: Level): BoxProps["sx"] => ({
+  //   opacity: 0,
+  //   '&:has([data-state="open"])': {
+  //     bg: menuColors.lvl[lvl].background,
+  //     opacity: 1,
+  //     transition: "opacity 300ms linear",
+  //   },
+  // })
 
   const getEnglishSectionName = (
     activeSection: string
@@ -82,46 +75,36 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                       {label}
                     </Button>
                   </NavigationMenu.Trigger>
-                  <LvlContent
-                    lvl={1}
-                    items={items}
-                    refs={refs}
-                    activeSection={activeSection}
-                  />
+                  <NavigationMenu.Content asChild>
+                    <Box
+                      position="absolute"
+                      top="19"
+                      insetInline="0"
+                      shadow="md"
+                      border="1px"
+                      borderColor={menuColors.stroke}
+                      bg={menuColors.lvl[1].background}
+                      sx={{
+                        '&:has(#lvl1 [data-state="open"])': {
+                          opacity: 1,
+                          transition: "opacity 200ms linear",
+                        },
+                      }}
+                    >
+                      <LvlContent
+                        lvl={1}
+                        items={items}
+                        activeSection={activeSection}
+                      />
+                    </Box>
+                  </NavigationMenu.Content>
                 </NavigationMenu.Item>
               )
             })}
           </Flex>
         </NavigationMenu.List>
-        <Grid
-          position="absolute"
-          top="19"
-          insetInline="0"
-          templateColumns="repeat(3, 1fr)"
-          shadow="md"
-          border="1px"
-          borderColor={menuColors.stroke}
-          bg={menuColors.lvl[1].background}
-          opacity={0}
-          sx={{
-            '&:has(#lvl1 [data-state="open"])': {
-              opacity: 1,
-              transition: "opacity 200ms linear",
-            },
-            '&:has(#lvl2 [data-state="open"])': {
-              bg: menuColors.lvl[2].background,
-            },
-            '&:has(#lvl3 [data-state="open"])': {
-              bg: menuColors.lvl[3].background,
-            },
-          }}
-        >
-          <Box ref={refs.lvl1} id="lvl1" sx={getLvlSx(1)}>
-            <NavigationMenu.Viewport />
-          </Box>
-          <Box ref={refs.lvl2} id="lvl2" sx={getLvlSx(2)} />
-          <Box ref={refs.lvl3} id="lvl3" sx={getLvlSx(3)} />
-        </Grid>
+
+        <NavigationMenu.Viewport />
       </NavigationMenu.Root>
     </Box>
   )

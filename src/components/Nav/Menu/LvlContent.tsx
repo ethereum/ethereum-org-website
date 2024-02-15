@@ -1,8 +1,14 @@
 import NextLink from "next/link"
 import { useRouter } from "next/router"
-import { Button, Icon, ListItem, UnorderedList } from "@chakra-ui/react"
+import {
+  Box,
+  Button,
+  Grid,
+  Icon,
+  ListItem,
+  UnorderedList,
+} from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
-import * as Portal from "@radix-ui/react-portal"
 
 import { ButtonProps } from "@/components/Buttons"
 import Link from "@/components/Link"
@@ -10,7 +16,7 @@ import Link from "@/components/Link"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { cleanPath } from "@/lib/utils/url"
 
-import type { Level, LvlRefs, NavItem, NavSectionKey } from "../types"
+import type { Level, NavItem, NavSectionKey } from "../types"
 
 import ItemContent from "./ItemContent"
 import NextChevron from "./NextChevron"
@@ -19,7 +25,6 @@ import { useNavMenuColors } from "@/hooks/useNavMenuColors"
 
 type LvlContentProps = {
   lvl: Level
-  refs: LvlRefs
   items: NavItem[]
   activeSection: NavSectionKey | null
 }
@@ -29,12 +34,11 @@ type LvlContentProps = {
  * Content renders inside sibling Viewport
  * Viewport wrapped in Portal to render inside a passed ref
  * @param lvl - The level of the menu
- * @param refs - The references to the Grid column elements.
  * @param items - The items to be displayed in the menu
  * @param activeSection - English label of the active section for event tracking
  * @returns The JSX element representing the menu content.
  */
-const LvlContent = ({ lvl, refs, items, activeSection }: LvlContentProps) => {
+const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
   const { asPath, locale } = useRouter()
   const menuColors = useNavMenuColors()
 
@@ -43,8 +47,12 @@ const LvlContent = ({ lvl, refs, items, activeSection }: LvlContentProps) => {
   const pad = 4 // Chakra-UI space token
 
   return (
-    <NavigationMenu.Content>
-      <NavigationMenu.Root orientation="vertical">
+    <NavigationMenu.Sub orientation="vertical" asChild>
+      <Grid
+        w="full"
+        h="full"
+        gridTemplateColumns={`repeat(${3 - (lvl - 1)}, 1fr)`}
+      >
         <NavigationMenu.List asChild>
           <UnorderedList listStyleType="none" p={pad} m="0">
             {items.map((item) => {
@@ -117,12 +125,15 @@ const LvlContent = ({ lvl, refs, items, activeSection }: LvlContentProps) => {
                             <ItemContent item={item} lvl={lvl} />
                           </Button>
                         </NavigationMenu.Trigger>
-                        <LvlContent
-                          lvl={(lvl + 1) as Level}
-                          items={subItems}
-                          refs={refs}
-                          activeSection={activeSection}
-                        />
+                        <NavigationMenu.Content asChild>
+                          <Box bg={menuColors.lvl[lvl + 1].background} h="full">
+                            <LvlContent
+                              lvl={(lvl + 1) as Level}
+                              items={subItems}
+                              activeSection={activeSection}
+                            />
+                          </Box>
+                        </NavigationMenu.Content>
                       </>
                     )}
                   </ListItem>
@@ -131,11 +142,10 @@ const LvlContent = ({ lvl, refs, items, activeSection }: LvlContentProps) => {
             })}
           </UnorderedList>
         </NavigationMenu.List>
-        <Portal.Root container={refs[`lvl${lvl + 1}`]?.current}>
-          <NavigationMenu.Viewport />
-        </Portal.Root>
-      </NavigationMenu.Root>
-    </NavigationMenu.Content>
+
+        <NavigationMenu.Viewport style={{ gridColumn: "2/4" }} />
+      </Grid>
+    </NavigationMenu.Sub>
   )
 }
 
