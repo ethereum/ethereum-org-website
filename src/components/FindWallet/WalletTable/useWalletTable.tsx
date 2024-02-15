@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { Icon } from "@chakra-ui/react"
 
 import { WalletTableProps } from "@/components/FindWallet/WalletTable"
 import {
@@ -9,7 +8,6 @@ import {
   ENSSupportIcon,
   ERC20SupportIcon,
   GasFeeCustomizationIcon,
-  HardwareSupportIcon,
   Layer2Icon,
   MultisigIcon,
   NFTSupportIcon,
@@ -30,7 +28,6 @@ export interface DropdownOption {
   value: string
   filterKey: string
   category: string
-  icon: typeof Icon
 }
 
 export type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
@@ -50,126 +47,108 @@ export const useWalletTable = ({
       value: t("page-find-wallet-open-source"),
       filterKey: "open_source",
       category: "security",
-      icon: OpenSourceWalletIcon,
     },
     {
       label: t("page-find-wallet-self-custody"),
       value: t("page-find-wallet-self-custody"),
       filterKey: "non_custodial",
       category: "security",
-      icon: NonCustodialIcon,
     },
     {
       label: t("page-find-wallet-hardware-wallet-support"),
       value: t("page-find-wallet-hardware-wallet-support"),
       filterKey: "hardware_support",
       category: "feature",
-      icon: HardwareSupportIcon,
     },
     {
       label: t("page-find-wallet-walletconnect"),
       value: t("page-find-wallet-walletconnect"),
       filterKey: "walletconnect",
       category: "feature",
-      icon: WalletConnectIcon,
     },
     {
       label: t("page-find-wallet-rpc-importing"),
       value: t("page-find-wallet-rpc-importing"),
       filterKey: "rpc_importing",
       category: "feature",
-      icon: RPCImportingIcon,
     },
     {
       label: t("page-find-wallet-nft-support"),
       value: t("page-find-wallet-nft-support"),
       filterKey: "nft_support",
       category: "feature",
-      icon: NFTSupportIcon,
     },
     {
       label: t("page-find-wallet-connect-to-dapps"),
       value: t("page-find-wallet-connect-to-dapps"),
       filterKey: "connect_to_dapps",
       category: "feature",
-      icon: ConnectDappsIcon,
     },
     {
       label: t("page-find-wallet-staking"),
       value: t("page-find-wallet-staking"),
       filterKey: "staking",
       category: "feature",
-      icon: StakingIcon,
     },
     {
       label: t("page-find-wallet-swaps"),
       value: t("page-find-wallet-swaps"),
       filterKey: "swaps",
       category: "feature",
-      icon: SwapIcon,
     },
     {
       label: t("page-find-wallet-layer-2"),
       value: t("page-find-wallet-layer-2"),
       filterKey: "layer_2",
       category: "feature",
-      icon: Layer2Icon,
     },
     {
       label: t("page-find-wallet-gas-fee-customization"),
       value: t("page-find-wallet-gas-fee-customization"),
       filterKey: "gas_fee_customization",
       category: "feature",
-      icon: GasFeeCustomizationIcon,
     },
     {
       label: t("page-find-wallet-ens-support"),
       value: t("page-find-wallet-ens-support"),
       filterKey: "ens_support",
       category: "feature",
-      icon: ENSSupportIcon,
     },
     {
       label: t("page-find-wallet-token-importing"),
       value: t("page-find-wallet-token-importing"),
       filterKey: "erc_20_support",
       category: "feature",
-      icon: ERC20SupportIcon,
     },
     {
       label: t("page-find-wallet-fee-optimization"),
       value: t("page-find-wallet-fee-optimization"),
       filterKey: "eip_1559_support",
       category: "feature",
-      icon: EIP1559Icon,
     },
     {
       label: t("page-find-wallet-buy-crypto"),
       value: t("page-find-wallet-buy-crypto"),
       filterKey: "buy_crypto",
       category: "trade_and_buy",
-      icon: BuyCryptoIcon,
     },
     {
       label: t("page-find-wallet-sell-for-fiat"),
       value: t("page-find-wallet-sell-for-fiat"),
       filterKey: "withdraw_crypto",
       category: "trade_and_buy",
-      icon: WithdrawCryptoIcon,
     },
     {
       label: t("page-find-wallet-multisig"),
       value: t("page-find-wallet-multisig"),
       filterKey: "multisig",
       category: "smart_contract",
-      icon: MultisigIcon,
     },
     {
       label: t("page-find-wallet-social-recovery"),
       value: t("page-find-wallet-social-recovery"),
       filterKey: "social_recovery",
       category: "smart_contract",
-      icon: SocialRecoverIcon,
     },
   ]
 
@@ -208,6 +187,7 @@ export const useWalletTable = ({
     let hardwareCheck = true
 
     const featureFilterKeys = featureDropdownItems.map((item) => item.filterKey)
+
     const deviceFilters = Object.entries(filters).filter(
       (item) => !featureFilterKeys.includes(item[0])
     )
