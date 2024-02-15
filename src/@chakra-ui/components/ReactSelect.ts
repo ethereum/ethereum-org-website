@@ -61,9 +61,13 @@ const baseStyle = definePartsStyle({
   option: {
     color: "body.base",
     p: 2,
-    "&[data-focused=true], &[data-active=true]": {
-      bg: "primary.hover",
-      color: "primary.lowContrast",
+    "&[data-focused=true]": {
+      bg: "primary.lowContrast",
+      color: "primary.base",
+    },
+    "&[data-active=true]": {
+      bg: "body.light",
+      color: "primary.visited",
     },
   },
 })
