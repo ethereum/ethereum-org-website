@@ -1,8 +1,9 @@
 import React from "react"
 import { Box, type BoxProps } from "@chakra-ui/react"
 
-interface IProps extends Pick<BoxProps, "children"> {}
-export const Phone: React.FC<IProps> = ({ children }) => (
+type PhoneProps = Pick<BoxProps, "children">
+
+export const Phone = ({ children }: PhoneProps) => (
   <Box as="figure" minW="min(100%, 322px)" maxW="min(100%, 322px)" mx="auto">
     {/* Phone frame */}
     <Box

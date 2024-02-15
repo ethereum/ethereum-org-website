@@ -1,20 +1,21 @@
-import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 import React from "react"
-import { NotificationPopover } from "../../NotificationPopover"
-import { EthTokenIcon } from "../../icons"
+import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 
-interface IProps {
+import { EthTokenIcon } from "../../icons"
+import { NotificationPopover } from "../../NotificationPopover"
+
+type SendEtherProps = {
   ethPrice: number
   ethBalance: number
   chosenAmount: number
   setChosenAmount: (amount: number) => void
 }
-export const SendEther: React.FC<IProps> = ({
+export const SendEther = ({
   ethPrice,
   ethBalance,
   chosenAmount,
   setChosenAmount,
-}) => {
+}: SendEtherProps) => {
   const formatDollars = (amount: number): string =>
     new Intl.NumberFormat("en-US", {
       style: "currency",

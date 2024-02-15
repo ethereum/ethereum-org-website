@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Penapis ciri",
   "page-find-wallet-footnote-1": "Dompet yang disenaraikan di halaman ini bukan sokongan rasmi, dan disediakan untuk tujuan maklumat sahaja.",
   "page-find-wallet-footnote-2": "Penerangan telah disediakan oleh projek dompet itu sendiri.",
-  "page-find-wallet-footnote-3": "Kami menambah produk kepada halaman ini berdasarkan kriteria dalam <a href=\"/contributing/adding-products/\">dasar penyenaraian</a>. Jika anda ingin kami menambah suatu dompet, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">bangkitkan isu di GitHub</a>.",
+  "page-find-wallet-footnote-3": "Kami menambah produk kepada halaman ini berdasarkan kriteria dalam <a href=\"/contributing/adding-wallets/\">dasar penyenaraian</a>. Jika anda ingin kami menambah suatu dompet, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">bangkitkan isu di GitHub</a>.",
   "page-find-wallet-mobile": "Mudah Alih",
   "page-find-wallet-mobile-desc": "Dompet dengan aplikasi mudah alih",
   "page-find-wallet-desktop": "Desktop",

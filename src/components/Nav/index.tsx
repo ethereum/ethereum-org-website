@@ -1,13 +1,28 @@
-import React, { FC, useRef } from "react"
-import { Icon, Flex, Box, HStack, useDisclosure } from "@chakra-ui/react"
-import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
+import { FC, useRef } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { BsTranslate } from "react-icons/bs"
+import { MdBrightness2, MdWbSunny } from "react-icons/md"
+import {
+  Box,
+  Button,
+  Flex,
+  HStack,
+  Icon,
+  MenuButton,
+  Text,
+  useDisclosure,
+  useEventListener,
+} from "@chakra-ui/react"
+
+import { IconButton } from "@/components/Buttons"
+import { EthHomeIcon } from "@/components/icons"
+import LanguagePicker from "@/components/LanguagePicker"
+import { BaseLink } from "@/components/Link"
+import Search from "@/components/Search"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
-import { ButtonLink, IconButton } from "../Buttons"
-import Link, { BaseLink } from "../Link"
-import Search from "../Search"
-import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
 
 export interface IProps {
@@ -18,18 +33,33 @@ export interface IProps {
 const Nav: FC<IProps> = ({ path }) => {
   const {
     ednLinks,
-    fromPageParameter,
-    i18n,
     isDarkTheme,
     shouldShowSubNav,
-    t,
     toggleColorMode,
     linkSections,
     mobileNavProps,
   } = useNav({ path })
+  const { locale } = useRouter()
+  const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
-
   const navWrapperRef = useRef(null)
+  const languagePickerState = useDisclosure()
+  const languagePickerRef = useRef<HTMLButtonElement>(null)
+  /**
+   * Adds a keydown event listener to toggle color mode (ctrl|cmd + \)
+   * or open the language picker (\).
+   * @param {string} event - The keydown event.
+   */
+  useEventListener("keydown", (e) => {
+    if (e.key !== "\\") return
+    e.preventDefault()
+    if (e.metaKey || e.ctrlKey) {
+      toggleColorMode()
+    } else {
+      if (languagePickerState.isOpen) return
+      languagePickerRef.current?.click()
+    }
+  })
 
   return (
     <Box position="sticky" top={0} zIndex={100} width="full">
@@ -64,7 +94,7 @@ const Nav: FC<IProps> = ({ path }) => {
           <Flex
             w="full"
             justifyContent={{ base: "flex-end", lg: "space-between" }}
-            ml={{ base: 3, xl: 8 }}
+            ms={{ base: 3, xl: 8 }}
           >
             <Menu hideBelow="lg" path={path} sections={linkSections} />
             <Flex
@@ -80,8 +110,10 @@ const Nav: FC<IProps> = ({ path }) => {
                 toggleSearch={searchModalDisclosure.onOpen}
                 drawerContainerRef={navWrapperRef}
               />
+              {/* Desktop */}
               <HStack spacing={2} hideBelow="lg">
                 <IconButton
+                  transition="transform 0.5s, color 0.2s"
                   icon={isDarkTheme ? <MdWbSunny /> : <MdBrightness2 />}
                   aria-label={
                     isDarkTheme
@@ -91,17 +123,59 @@ const Nav: FC<IProps> = ({ path }) => {
                   variant="ghost"
                   isSecondary
                   px={1.5}
+                  _hover={{
+                    transform: "rotate(10deg)",
+                    color: "primary.hover",
+                  }}
                   onClick={toggleColorMode}
-                ></IconButton>
-                <ButtonLink
-                  to={`/languages/${fromPageParameter}`}
-                  leftIcon={<Icon as={MdLanguage} />}
-                  variant="ghost"
-                  isSecondary
-                  px={1.5}
+                />
+
+                {/* Locale-picker menu */}
+                <LanguagePicker
+                  placement="bottom-end"
+                  minH="unset"
+                  maxH="75vh"
+                  w="xs"
+                  inset="unset"
+                  top="unset"
+                  menuState={languagePickerState}
                 >
-                  {t("languages")} {i18n.language.toUpperCase()}
-                </ButtonLink>
+                  <MenuButton
+                    as={Button}
+                    ref={languagePickerRef}
+                    variant="ghost"
+                    color="body.base"
+                    transition="color 0.2s"
+                    _hover={{
+                      color: "primary.hover",
+                      "& svg": {
+                        transform: "rotate(10deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }}
+                    _active={{
+                      color: "primary.hover",
+                      bg: "primary.lowContrast",
+                    }}
+                    sx={{
+                      "& svg": {
+                        transform: "rotate(0deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }}
+                  >
+                    <Icon
+                      as={BsTranslate}
+                      fontSize="2xl"
+                      verticalAlign="middle"
+                      me={2}
+                    />
+                    <Text hideBelow="lg" as="span">
+                      {t("common:languages")}&nbsp;
+                    </Text>
+                    {locale!.toUpperCase()}
+                  </MenuButton>
+                </LanguagePicker>
               </HStack>
             </Flex>
           </Flex>
@@ -127,7 +201,7 @@ const Nav: FC<IProps> = ({ path }) => {
               color="text"
               fontWeight="normal"
               textDecor="none"
-              mr={8}
+              me={8}
               _hover={{
                 color: "primary.base",
                 svg: {
