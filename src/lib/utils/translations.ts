@@ -9,22 +9,6 @@ export const languages: Languages = i18nConfig.reduce((result, config) => {
   return { ...result, [config.code]: config }
 }, {} as Languages)
 
-// Get a list of lang codes with their native names as values ({ lang: nativeLangTitle })
-export const getLanguagesList = () => {
-  const languagesList = [{}]
-
-  for (const lang in languages) {
-    const langMetadata = {
-      ...languages[lang],
-    }
-
-    const nativeLangTitle = langMetadata.localName
-    languagesList.push({ [lang]: nativeLangTitle })
-  }
-
-  return languagesList
-}
-
 export const isLangRightToLeft = (lang: Lang): boolean => {
   const langConfig = i18nConfig.filter((language) => language.code === lang)
 
@@ -178,7 +162,11 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path.endsWith("/wallets/find-wallet")) {
     primaryNamespace = "page-wallets-find-wallet"
-    requiredNamespaces = [...requiredNamespaces, "page-wallets"]
+    requiredNamespaces = [
+      ...requiredNamespaces,
+      "page-languages",
+      "page-wallets",
+    ]
   }
 
   if (path.startsWith("/layer-2")) {
