@@ -1,6 +1,11 @@
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
-import { Box, Flex, Heading, HStack, Icon } from "@chakra-ui/react"
+import { Box, Heading, HStack, Icon, Stack } from "@chakra-ui/react"
+
+import {
+  GreenCheckProductGlyphIcon,
+  WarningProductGlyphIcon,
+} from "@/components/icons/staking"
 
 import walletFilterData from "../../../data/wallets/wallet-filters"
 import Text from "../../OldText"
@@ -24,7 +29,7 @@ export const WalletMoreInfoCategory = ({
   const { t } = useTranslation("page-wallets-find-wallet")
 
   return (
-    <Box width="full" mt={12} _first={{ mt: 2 }}>
+    <Box width="full" mt={4} _first={{ mt: 2 }}>
       <Heading
         as="h4"
         lineHeight={1.4}
@@ -36,9 +41,10 @@ export const WalletMoreInfoCategory = ({
       >
         {headingLabel}
       </Heading>
-      <Flex gap={2} wrap="wrap">
+      <Stack gap={2} wrap="wrap">
         {orderedFeatureDropdownItems.map((feature) => {
           const featureColor = wallet[feature.filterKey!] ? "text" : "secondary"
+
           if (feature.category === sectionName)
             return (
               <HStack
@@ -54,9 +60,6 @@ export const WalletMoreInfoCategory = ({
                     color: featureColor,
                     flex: "none",
                     mb: 0,
-                    textDecor: wallet[feature.filterKey!]
-                      ? "none"
-                      : "line-through",
                   },
                   "span + p": {
                     textDecor: "none",
@@ -71,8 +74,12 @@ export const WalletMoreInfoCategory = ({
                 }}
               >
                 <Icon
-                  as={feature.icon}
-                  fontSize="1.75rem"
+                  as={
+                    wallet[feature.filterKey!]
+                      ? GreenCheckProductGlyphIcon
+                      : WarningProductGlyphIcon
+                  }
+                  fontSize="1rem"
                   color={featureColor}
                 />
                 <p>{feature.label}</p>
@@ -88,7 +95,7 @@ export const WalletMoreInfoCategory = ({
               </HStack>
             )
         })}
-      </Flex>
+      </Stack>
     </Box>
   )
 }
