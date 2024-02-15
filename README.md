@@ -1729,6 +1729,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gabrieltemtsen"><img src="https://avatars.githubusercontent.com/u/57184013?v=4?s=100" width="100px;" alt="Gabriel Temsten"/><br /><sub><b>Gabriel Temsten</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=gabrieltemtsen" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/jennyg0"><img src="https://avatars.githubusercontent.com/u/60794961?v=4?s=100" width="100px;" alt="Jen "/><br /><sub><b>Jen </b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=jennyg0" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Molotov-Eugene"><img src="https://avatars.githubusercontent.com/u/95471552?v=4?s=100" width="100px;" alt="Eugene"/><br /><sub><b>Eugene</b></sub></a><br /><a href="#content-Molotov-Eugene" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/rimtaex"><img src="https://avatars.githubusercontent.com/u/155366533?v=4?s=100" width="100px;" alt="RimTaeX"/><br /><sub><b>RimTaeX</b></sub></a><br /><a href="#content-rimtaex" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
