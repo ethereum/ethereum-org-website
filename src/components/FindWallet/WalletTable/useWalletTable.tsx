@@ -1,25 +1,6 @@
 import { useState } from "react"
 
 import { WalletTableProps } from "@/components/FindWallet/WalletTable"
-import {
-  BuyCryptoIcon,
-  ConnectDappsIcon,
-  EIP1559Icon,
-  ENSSupportIcon,
-  ERC20SupportIcon,
-  GasFeeCustomizationIcon,
-  Layer2Icon,
-  MultisigIcon,
-  NFTSupportIcon,
-  NonCustodialIcon,
-  OpenSourceWalletIcon,
-  RPCImportingIcon,
-  SocialRecoverIcon,
-  StakingIcon,
-  SwapIcon,
-  WalletConnectIcon,
-  WithdrawCryptoIcon,
-} from "@/components/icons/wallets"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 

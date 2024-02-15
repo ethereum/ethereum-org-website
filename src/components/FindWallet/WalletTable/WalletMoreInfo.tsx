@@ -110,8 +110,7 @@ export const WalletMoreInfo = ({
               mx="0.2rem"
               my={-3}
             >
-              {/* TODO: add i18n translation */}
-              {"Links"}
+              {t("page-find-wallet-visit-website")}
             </Heading>
 
             <Flex gap="0.8rem">

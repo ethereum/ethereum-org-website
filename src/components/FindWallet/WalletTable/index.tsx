@@ -496,8 +496,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                             w="auto"
                             isExternal
                           >
-                            {/* TODO add i18n text */}
-                            Visit website
+                            {t("page-find-wallet-visit-website")}
                           </ButtonLink>
                         </Box>
                       </Stack>
