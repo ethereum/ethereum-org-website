@@ -10,8 +10,6 @@ import {
   NFTS_FEATURES,
 } from "../constants"
 
-import { getLanguagesList } from "./translations"
-
 export const getSupportedLocaleWallets = (locale: string) =>
   shuffle(
     walletData.filter((wallet) => wallet.languages_supported.includes(locale))
@@ -62,20 +60,20 @@ export const getWalletPersonas = (wallet: WalletData) => {
 }
 
 // Get a list of wallet supported languages with native title
-export const getNativeSupportedLanguages = (
-  walletSupportedLanguages: string[]
+export const getSupportedLanguages = (
+  walletSupportedLanguages: string[],
+  languages: {}[]
 ) => {
-  const languages = getLanguagesList()
-  const nativeSupportedLanguages = [] as string[]
+  const supportedLanguages = [] as string[]
 
   walletSupportedLanguages.forEach((supportedLanguage) => {
     for (const [key, value] of Object.entries(languages)) {
       if (value[supportedLanguage])
-        nativeSupportedLanguages.push(value[supportedLanguage])
+        supportedLanguages.push(value[supportedLanguage])
     }
   })
 
-  return nativeSupportedLanguages
+  return supportedLanguages
 }
 
 export const formatSupportedLanguages = (supportedLanguages: string[]) => {
