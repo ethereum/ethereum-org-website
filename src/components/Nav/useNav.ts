@@ -151,7 +151,11 @@ export const useNav = () => {
               label: t("nav-guides-label"),
               description: t("nav-guides-description"),
               items: [
-                // TODO: Add /guides/ link as first sub-item?
+                {
+                  label: t("nav-overview-label"),
+                  description: t("nav-guide-overview-description"),
+                  href: "/guides/",
+                },
                 {
                   label: t("nav-guide-create-account-label"),
                   description: t("nav-guide-create-account-description"),
