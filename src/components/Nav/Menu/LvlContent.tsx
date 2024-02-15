@@ -112,7 +112,7 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
                             onClick={() =>
                               trackCustomEvent({
                                 eventCategory: "Desktop navigation menu",
-                                eventAction: `Follow link from section: ${locale} - ${activeSection}`,
+                                eventAction: `Menu - ${activeSection} - ${locale}`,
                                 eventName: action.href!,
                               })
                             }
