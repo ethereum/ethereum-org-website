@@ -57,11 +57,13 @@ Diversas organizações trabalharam juntas para tornar o Ethereum amigável para
 - O [Hyperledger Besu](https://www.hyperledger.org/use/besu) _é um cliente Ethereum de código aberto desenvolvido sob licença Apache 2.0 e escrito em Java_
 - O [Infura](https://infura.io/) _é uma API escalável de acesso às redes Ethereum e IPFS_
 - O [Kaleido](https://kaleido.io/) _é uma plataforma de desenvolvimento focada em empresas que oferece uma cadeia de blocos simplificada e aplicativos de ativos digitais_
+- [NodeReal](https://nodereal.io/) _fornece infraestrutura de blockchain escalável e a API do provedor de serviços para o ecossistema Web3_
 - O [Provide](https://provide.services/) _fornece infraestrutura e APIs para aplicativos Web3 para empresas_
 - O [QuickNode](https://www.quicknode.com/) _fornece nós confiáveis e rápidos com APIs de alto nível como NFT API, Token API, entre outras, enquanto entrega um pacote unificado de produtos e soluções de nível empresarial_
 - [Tenderly](https://tenderly.co) _é uma plataforma de desenvolvimento Web3 que fornece blocos de depuração de infraestrutura, observação e construção para desenvolvimento, teste, monitoramento e operação de contratos inteligentes_
 - A [Unibright](https://unibright.io/) _é uma equipe de especialistas, arquitetos, desenvolvedores e consultores da blockchain, com mais de 20 anos de experiência em processos de negócios e integração_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _é um provedor de serviços gerenciados espalhado por locais compartilhados na Europa e na Ásia. Opera e monitora seus nós de forma segura e confiável_
+- [Zeeve](https://www.zeeve.io/) _fornece uma variedade de produtos e ferramentas de criação no Ethereum, além de infraestrutura e APIs para aplicativos Web3 para empresas._
 
 ### Ferramentas e bibliotecas {#tooling-and-libraries}
 

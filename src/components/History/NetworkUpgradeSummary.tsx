@@ -11,11 +11,11 @@ import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
 import Emoji from "../Emoji"
 import InlineLink from "../Link"
 
-interface IProps {
+type NetworkUpgradeSummaryProps = {
   name: string
 }
 
-const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
+const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
   const [formattedUTC, setFormattedUTC] = useState("")
   const { locale } = useRouter()
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale as Lang)
@@ -48,11 +48,11 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
-      <Flex>
+      <Flex whiteSpace='pre-wrap'>
         <Emoji fontSize="sm" me={2} text=":bricks:" />
         {t(translationKey)}:{" "}
         <InlineLink to={`${explorerUrl}${number}`}>
-          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
+         {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
         </InlineLink>
       </Flex>
     )

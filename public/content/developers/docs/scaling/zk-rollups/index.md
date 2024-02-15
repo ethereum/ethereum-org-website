@@ -1,5 +1,5 @@
 ---
-title: Zero-Knowledge rollups
+title: Zero-knowledge rollups
 description: An introduction to zero-knowledge rollups—a scaling solution used by the Ethereum community.
 lang: en
 ---

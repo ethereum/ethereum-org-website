@@ -9,11 +9,11 @@ import Translation from "./Translation"
 
 const rollups = layer2Data as Rollups
 
-export interface IProps {
+export type RollupProductDevDocProps = {
   rollupType: RollupType
 }
 
-const RollupProductDevDoc: React.FC<IProps> = ({ rollupType }) => {
+const RollupProductDevDoc = ({ rollupType }: RollupProductDevDocProps) => {
   return (
     <Box>
       {rollups[rollupType].map(

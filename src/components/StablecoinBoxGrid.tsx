@@ -3,6 +3,8 @@ import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
 
+import { ChildOnlyProp } from "@/lib/types"
+
 import { isMobile } from "../lib/utils/isMobile"
 
 import Emoji from "./Emoji"
@@ -35,7 +37,7 @@ interface ILink {
   text: string
 }
 
-interface IPropsGridItem {
+type GridItemProps = {
   description: string
   columnNumber: number
   rowNumber: number
@@ -50,7 +52,7 @@ interface IPropsGridItem {
   links: Array<ILink>
 }
 
-const OpenTitle: React.FC<{ title: string }> = ({ title }) => {
+const OpenTitle = ({ title }: { title: string }) => {
   return (
     <OldHeading
       as="h3"
@@ -63,7 +65,7 @@ const OpenTitle: React.FC<{ title: string }> = ({ title }) => {
   )
 }
 
-const Title: React.FC<{ title: string }> = ({ title }) => {
+const Title = ({ title }: { title: string }) => {
   return (
     <OldHeading
       as="h3"
@@ -76,7 +78,7 @@ const Title: React.FC<{ title: string }> = ({ title }) => {
   )
 }
 
-const Subtitle: React.FC<{ children: any }> = ({ children }) => {
+const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
     <OldHeading
       as="h4"
@@ -93,7 +95,7 @@ const Subtitle: React.FC<{ children: any }> = ({ children }) => {
   )
 }
 
-const Body: React.FC<{ children: any }> = ({ children }) => {
+const Body = ({ children }: ChildOnlyProp) => {
   return (
     <Box fontSize="xl" lineHeight="140%" color="black300">
       {children}
@@ -101,7 +103,7 @@ const Body: React.FC<{ children: any }> = ({ children }) => {
   )
 }
 
-const StyledEmoji: React.FC<{ emoji: string }> = ({ emoji }) => {
+const StyledEmoji = ({ emoji }: { emoji: string }) => {
   return (
     <Emoji
       fontSize="8xl"
@@ -117,7 +119,7 @@ const StyledEmoji: React.FC<{ emoji: string }> = ({ emoji }) => {
   )
 }
 
-const Row: React.FC<{ children: any }> = ({ children }) => {
+const Row = ({ children }: ChildOnlyProp) => {
   return (
     <Flex
       justify="space-between"
@@ -129,11 +131,11 @@ const Row: React.FC<{ children: any }> = ({ children }) => {
   )
 }
 
-const Column: React.FC<{ children: any }> = ({ children }) => {
+const Column = ({ children }: ChildOnlyProp) => {
   return <Box width="100%">{children}</Box>
 }
 
-const GridItem: React.FC<IPropsGridItem> = ({
+const GridItem = ({
   description,
   columnNumber,
   rowNumber,
@@ -146,7 +148,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
   pros,
   cons,
   links,
-}) => {
+}: GridItemProps) => {
   const handleClick = (): void => {
     callback(index)
   }
@@ -260,11 +262,11 @@ export interface IPropsBoxItem {
   links: Array<ILink>
 }
 
-export interface IProps {
+export type StablecoinBoxGridProps = {
   items: Array<IPropsBoxItem>
 }
 
-const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
+const StablecoinBoxGrid = ({ items }: StablecoinBoxGridProps) => {
   const [indexOpen, setOpenIndex] = useState<number>(0)
   const router = useRouter()
 

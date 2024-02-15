@@ -204,19 +204,19 @@ const getValidChildrenForCodeblock = (child) => {
   }
 }
 
-export interface IProps {
+export type CodeblockProps = {
   allowCollapse?: boolean
   codeLanguage: string
   fromHomepage?: boolean
   children: React.ReactNode
 }
 
-const Codeblock: React.FC<IProps> = ({
+const Codeblock = ({
   children,
   allowCollapse = true,
   codeLanguage,
   fromHomepage = false,
-}) => {
+}: CodeblockProps) => {
   const { t } = useTranslation("common")
   const selectedTheme = useColorModeValue(codeTheme.light, codeTheme.dark)
 

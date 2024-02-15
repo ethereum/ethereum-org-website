@@ -5,7 +5,7 @@ import { Center, Text } from "@chakra-ui/react"
 // Components
 import BannerNotification from "../BannerNotification"
 
-const BugBountyBanner: React.FC = () => (
+const BugBountyBanner = () => (
   <BannerNotification shouldShow>
     <Center>
       <Text m={0} p={0}>

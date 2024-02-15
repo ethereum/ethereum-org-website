@@ -11,17 +11,17 @@ interface WordIndex {
 }
 type WordsWithIndex = Array<WordIndex>
 
-interface IProps {
+type WordSelectorButtonsProps = {
   words: Array<string>
   wordsSelected: number
   setWordsSelected: (value: React.SetStateAction<number>) => void
 }
 
-export const WordSelectorButtons: React.FC<IProps> = ({
+export const WordSelectorButtons = ({
   words,
   wordsSelected,
   setWordsSelected,
-}) => {
+}: WordSelectorButtonsProps) => {
   const wordIndices: WordsWithIndex = words.map((word, index) => ({
     word,
     index,

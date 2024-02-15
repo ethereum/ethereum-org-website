@@ -302,6 +302,14 @@ const communityConferences: CommunityConference[] = [
     description: "Through Hackathon, Conference, side events, discussions, collaborations, and vast networking, we aim to further establish Kyiv as an innovation and infrastructure development leader",
   },
   {
+    title: "EthCC",
+    to: "https://ethcc.io",
+    location: "Brussels, Belgium",
+    description: "The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Four intense days of conferences, networking and learning.",
+    startDate: "2024-7-08",
+    endDate: "2024-7-11"
+  },
+  {
     title: "Pragma Brussels",
     to: "https://ethglobal.com/events/pragma-brussels",
     location: "Brussels, Belgium",
@@ -340,6 +348,15 @@ const communityConferences: CommunityConference[] = [
     to: "https://event.web3bridge.com/",
     location: "Lagos, NGA",
     description: "This conference will bring together Web3 enthusiasts from all over Nigeria and beyond. Here, community meets technology for three days of intensive Networking and Learning experiences.",
+  },
+  {
+    title: "ETHSafari",
+    startDate: "2024-09-09",
+    endDate: "2024-09-15",
+    to: "https://ethsafari.xyz/",
+    location: "Nairobi & Kilifi, Kenya",
+    description:
+      "Welcome to the largest Ethereum event happening in Africa! Join the BlockTrain from Nairobi to celebrate an ETH-festival held underneath ancient Boabab trees in Kilifi.",
   },
   {
     title: "TOKEN2049",

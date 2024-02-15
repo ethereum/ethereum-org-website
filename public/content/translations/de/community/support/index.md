@@ -30,7 +30,7 @@ Haben Sie Probleme mit Ihrer Wallet? Die meisten Wallets haben spezielle Support
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Das ist keine vollständige Liste. Brauchen Sie Hilfe bei der Suche nach Unterstützung für eine bestimmte Wallet? Treten Sie dem [ethereum.org-Discord](https://discord.gg/ethereum-org) bei, dann versuchen wir, Ihnen zu helfen._
+_Das ist keine vollständige Liste. Brauchen Sie Hilfe bei der Suche nach Unterstützung für eine bestimmte Wallet? Treten Sie dem [ethereum.org-Discord](https://discord.gg/rZz26QWfCg) bei, dann versuchen wir, Ihnen zu helfen._
 
 Suchen Sie eine Ethereum-Wallet? [Sehen Sie sich unsere vollständige Liste der Ethereum-Wallets an](/wallets/find-wallet/).
 
@@ -39,7 +39,7 @@ Suchen Sie eine Ethereum-Wallet? [Sehen Sie sich unsere vollständige Liste der 
 Erstellen kann durchaus schwer sein. Hier finden Sie einige Breiche mit Schwerpunkt auf Entwicklung mit erfahrenen Ethereum-Entwicklern, die Ihnen gerne helfen.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [CryptoDevs-Discord](https://discord.gg/Z9TA39m8Yu)
+- [CryptoDevs-Discord](https://discord.com/invite/5W5tVb3)
 - [Ethereum StackExchange](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
@@ -53,7 +53,7 @@ Bezieht sich Ihre Frage auf ein bestimmtes Tool, Projekt oder eine Bibliothek? D
 
 Hier sind einige beliebte Beispiele:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -65,7 +65,7 @@ Hier sind einige beliebte Beispiele:
 
 Wenn Sie einen Knoten oder Validator betreiben, finden Sie hier einige Communitys, die Ihnen den Einstieg erleichtern.
 
-- [EthStaker-Discord](https://discord.io/ethstaker)
+- [EthStaker-Discord](https://discord.gg/ethstaker)
 - [EthStaker-Reddit](https://www.reddit.com/r/ethstaker)
 
 Die meisten Teams, die Ethereum-Clients entwickeln, haben auch eigene, öffentlich zugängliche Bereiche, in denen Sie Unterstützung erhalten und Fragen stellen können.

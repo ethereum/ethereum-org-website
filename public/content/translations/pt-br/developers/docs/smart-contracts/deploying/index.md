@@ -20,16 +20,14 @@ Finalmente, você precisará compilar seu contrato antes de implantá-lo, então
 
 ### O que você precisará {#what-youll-need}
 
-- bytecode do seu contrato - isto é gerado através da [compilação](/developers/docs/smart-contracts/compiling/).
+- Bytecode do seu contrato - isto é gerado através da [compilação](/developers/docs/smart-contracts/compiling/).
 - Ether para gás – você definirá o seu limite de gás como outras transações, então esteja ciente de que a implantação do contrato precisa de muito mais gás do que uma simples transferência de ETH
 - um script de implantação ou um plugin
-- acesso a um [nó Ethereum](/developers/docs/nodes-and-clients/), ou executando o seu próprio, conectando a um nó público, ou usando uma chave API usando um [serviço de nó](/developers/docs/nodes-and-clients/nodes-as-a-service/) como [Infura](https://www.infura.io/) ou [Alchemy](https://docs.alchemy.com/).
+- acesso a um [nó Ethereum](/developers/docs/nodes-and-clients/), executando o seu próprio, conectando a um nó público ou por meio de uma chave de API usando um [serviço de nó](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
 ### Como implantar um contrato inteligente {#steps-to-deploy}
 
-Os passos específicos envolvidos dependerão das ferramentas que você usa. Por exemplo, confira a [documentação de hardware sobre a implantação de seus contratos](https://hardhat.org/guides/deploying.html) ou [documentação do Truffle sobre redes e implantação de aplicativos](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment). Estas são duas das ferramentas mais populares para a implantação de contratos inteligentes, que envolvem a elaboração de um script para manipular as etapas de implementação.
-
-Uma vez implantado, o seu contrato terá um endereço Ethereum, como outras [contas](/developers/docs/accounts/).
+The specific steps involved will depend on the development framework in question. For example, you can check out [Hardhat's documentation on deploying your contracts](https://hardhat.org/guides/deploying.html) or [Foundry's documentation on deploying and verifying a smart contract](https://book.getfoundry.sh/forge/deploying). Once deployed, your contract will have an Ethereum address like other [accounts](/developers/docs/accounts/) and can be verified using [source code verification tools](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Ferramentas relacionadas {#related-tools}
 
@@ -51,27 +49,26 @@ Uma vez implantado, o seu contrato terá um endereço Ethereum, como outras [con
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
-**Truffle -\*\***_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._\*\*
+**thirdweb - _Implemente facilmente qualquer contrato em qualquer cadeia compatível com EVM, usando um único comando_**
 
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [Documentos em redes e implantação de aplicativos](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
-- [GitHub](https://github.com/trufflesuite/truffle)
+- [Documentação](https://portal.thirdweb.com/deploy/)
 
 ## Tutoriais relacionados {#related-tutorials}
 
-- [Implantando o seu primeiro contrato inteligente](/developers/tutorials/deploying-your-first-smart-contract/) _– Uma introdução à implantação do seu primeiro contrato inteligente em uma rede de teste da Ethereum._
-- [Hello World | tutorial para contrato inteligente](/developers/tutorials/hello-world-smart-contract/)_ - Um tutorial fácil de seguir para criar & implantar um contrato inteligente básico na Ethereum._
+- [Implementando o seu primeiro contrato inteligente](/developers/tutorials/deploying-your-first-smart-contract/) _– Uma introdução à implementação do seu primeiro contrato inteligente em uma rede de teste da Ethereum._
+- [Hello World | tutorial para contrato inteligente](/developers/tutorials/hello-world-smart-contract/)_ - Um tutorial fácil de seguir para criar & implementar um contrato inteligente básico na Ethereum._
 - [Interaja com outros contratos da Solidity](/developers/tutorials/interact-with-other-contracts-from-solidity/) _– Como implantar um contrato inteligente a partir de um contrato existente e interagir com ele._
-- [Como diminuir o tamanho de seu contrato](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Como reduzir o tamanho do seu contrato para mantê-lo abaixo do limite e economizar gás_
+- [Como diminuir o tamanho de seu contrato](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- Como reduzir o tamanho do seu contrato para mantê-lo abaixo do limite e economizar Gas_
 
 ## Leia mais {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
 - [Implementando seus contratos com Hardhat](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
 
-_Conhece um recurso da comunidade que o ajudou? Edite esta página e adicione-o!_
+_Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_
 
 ## Tópicos relacionados {#related-topics}
 
 - [Estruturas de desenvolvimento](/developers/docs/frameworks/)
 - [Executando um nó Ethereum](/developers/docs/nodes-and-clients/run-a-node/)
+- [Nódulos como serviço](/developers/docs/nodes-and-clients/nodes-as-a-service)

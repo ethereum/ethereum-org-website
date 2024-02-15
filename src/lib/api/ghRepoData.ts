@@ -22,11 +22,11 @@ const frameworksList: Array<Framework> = [
     image: WaffleImage,
   },
   {
-    id: "kurtosis",
-    url: "https://www.kurtosis.com/",
-    githubUrl: "https://github.com/kurtosis-tech/kurtosis",
+    id: "Kurtosis Ethereum Package",
+    url: "https://github.com/kurtosis-tech/ethereum-package",
+    githubUrl: "https://github.com/kurtosis-tech/ethereum-package",
     background: "#000000",
-    name: "Kurtosis",
+    name: "Kurtosis Ethereum Package",
     description:
       "page-developers-local-environment:page-local-environment-kurtosis-desc",
     alt: "page-developers-local-environment:page-local-environment-kurtosis-logo-alt",
@@ -93,7 +93,8 @@ const frameworksList: Array<Framework> = [
     githubUrl: "https://github.com/scaffold-eth/scaffold-eth-2",
     background: "#ffffff",
     name: "Scaffold-ETH-2",
-    description: "page-developers-local-environment:page-local-environment-scaffold-eth-desc",
+    description:
+      "page-developers-local-environment:page-local-environment-scaffold-eth-desc",
     alt: "page-local-environment-scaffold-eth-logo-alt",
     image: ScaffoldEthImage,
   },
@@ -129,7 +130,7 @@ export const ghRepoData = async (githubUrl: string) => {
     `https://api.github.com/repos/${repoOwner}/${repoName}`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY}`,
       },
     }
   )
@@ -144,7 +145,7 @@ export const ghRepoData = async (githubUrl: string) => {
     `https://api.github.com/repos/${repoOwner}/${repoName}/languages`,
     {
       headers: {
-        Authorization: `Bearer ${process.env.GITHUB_TOKEN_READ_ONLY}`,
+        Authorization: `Bearer ${process.env.NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY}`,
       },
     }
   )

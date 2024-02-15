@@ -19,7 +19,7 @@ export interface DataRow {
   apy: string
 }
 
-export interface IProps {
+export type DataProductCardProps = {
   url: string
   background: string
   image: StaticImageData
@@ -30,7 +30,7 @@ export interface IProps {
   data?: Array<DataRow>
 }
 
-const DataProductCard: React.FC<IProps> = ({
+const DataProductCard = ({
   url,
   background,
   image,
@@ -39,7 +39,7 @@ const DataProductCard: React.FC<IProps> = ({
   name,
   description,
   data,
-}) => {
+}: DataProductCardProps) => {
   const boxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
   return (
