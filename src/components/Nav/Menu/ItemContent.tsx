@@ -22,15 +22,12 @@ const ItemContent = ({ item, lvl }: ItemProps) => {
 
   return (
     <Box me="auto" textAlign="start" position="relative">
-      <Text
-        fontWeight="bold"
-        color={isActivePage ? menuColors.active : menuColors.body}
-      >
+      <Text fontWeight="bold" color={menuColors.body}>
         {label}
       </Text>
       <Text
         fontSize="sm"
-        color={isActivePage ? menuColors.active : menuColors.lvl[lvl].subtext}
+        color={isActivePage ? menuColors.body : menuColors.lvl[lvl].subtext}
       >
         {description}
       </Text>

@@ -68,7 +68,7 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
                 boxShadow: "none",
               }
               const buttonProps: ButtonProps = {
-                color: isActivePage ? menuColors.active : menuColors.body,
+                color: menuColors.body,
                 leftIcon: lvl === 1 && icon ? <Icon as={icon} /> : undefined,
                 rightIcon: isLink ? undefined : <NextChevron />,
                 position: "relative",
@@ -78,7 +78,9 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
                   "span:first-of-type": { m: 0, me: pad }, // Spacing for icon
                 },
                 py: pad,
-                bg: "none",
+                bg: isActivePage
+                  ? menuColors.lvl[lvl].activeBackground
+                  : "none",
                 _hover: activeStyles,
                 _focus: activeStyles,
                 variant: "ghost",
@@ -86,7 +88,8 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
               return (
                 <NavigationMenu.Item key={label} asChild>
                   <ListItem
-                    mb="0"
+                    mb="1"
+                    _last={{ mb: 0 }}
                     sx={{
                       '&:has(button[data-state="open"])': {
                         roundedEnd: "none",
