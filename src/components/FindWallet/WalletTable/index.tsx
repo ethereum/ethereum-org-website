@@ -439,7 +439,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                         <Text>{wallet.name}</Text>
 
                         {/* Wallet Personas supported */}
-                        <Flex>
+                        <Flex gap={1.5}>
                           {walletPersonas.map((persona) => (
                             <Tag
                               key={persona}
