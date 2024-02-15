@@ -35,11 +35,10 @@ import Text from "@/components/OldText"
 import Tag from "@/components/Tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getLanguagesList } from "@/lib/utils/translations"
 import {
+  formatSupportedLanguages,
   getNativeSupportedLanguages,
   getWalletPersonas,
-  sliceSupportedLanguages,
 } from "@/lib/utils/wallets"
 
 import { WalletData } from "@/data/wallets/wallet-data"
@@ -493,7 +492,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                         fontSize="0.7rem"
                         lineHeight="0.85rem"
                       >
-                        {sliceSupportedLanguages(
+                        {formatSupportedLanguages(
                           getNativeSupportedLanguages(
                             wallet.languages_supported
                           )
