@@ -105,10 +105,12 @@ export const WalletMoreInfo = ({
               as="h4"
               lineHeight={1.4}
               fontSize="md"
+              color="text"
               fontWeight={500}
               mx="0.2rem"
-              mb={-3}
+              my={-3}
             >
+              {/* TODO: add i18n translation */}
               {"Links"}
             </Heading>
 
