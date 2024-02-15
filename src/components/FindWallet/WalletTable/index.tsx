@@ -35,7 +35,12 @@ import Text from "@/components/OldText"
 import Tag from "@/components/Tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
-import { getWalletPersonas } from "@/lib/utils/wallets"
+import { getLanguagesList } from "@/lib/utils/translations"
+import {
+  getNativeSupportedLanguages,
+  getWalletPersonas,
+  sliceSupportedLanguages,
+} from "@/lib/utils/wallets"
 
 import { WalletData } from "@/data/wallets/wallet-data"
 
@@ -459,6 +464,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                         ))}
                       </Flex>
 
+                      {/* Device labels */}
                       <Text
                         hideBelow="sm"
                         color="text200"
@@ -467,6 +473,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                       >
                         {deviceLabels.join(" · ")}
                       </Text>
+
                       {deviceLabels.map((label) => (
                         <Text
                           key={label}
@@ -478,7 +485,23 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                           {label}
                         </Text>
                       ))}
+
+                      {/* Supported languages */}
+                      <Text
+                        hideBelow="sm"
+                        color="text200"
+                        fontSize="0.7rem"
+                        lineHeight="0.85rem"
+                      >
+                        {sliceSupportedLanguages(
+                          getNativeSupportedLanguages(
+                            wallet.languages_supported
+                          )
+                        )}
+                      </Text>
+
                       <Box mt={4}>
+                        {/* Social icons */}
                         <Flex gap="0.8rem">
                           <SocialLink
                             to={wallet.url}

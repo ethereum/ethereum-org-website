@@ -4,10 +4,26 @@ import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import i18nConfig from "../../../i18n.config.json"
 
-// same data as in the `config.json` but indexed by language code
+// Same data as in the `config.json` but indexed by language code
 export const languages: Languages = i18nConfig.reduce((result, config) => {
   return { ...result, [config.code]: config }
 }, {} as Languages)
+
+// Get a list of lang codes with their native names as values ({ lang: nativeLangTitle })
+export const getLanguagesList = () => {
+  const languagesList = [{}]
+
+  for (const lang in languages) {
+    const langMetadata = {
+      ...languages[lang],
+    }
+
+    const nativeLangTitle = langMetadata.localName
+    languagesList.push({ [lang]: nativeLangTitle })
+  }
+
+  return languagesList
+}
 
 export const isLangRightToLeft = (lang: Lang): boolean => {
   const langConfig = i18nConfig.filter((language) => language.code === lang)
