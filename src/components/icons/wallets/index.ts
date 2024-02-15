@@ -11,6 +11,7 @@ import { FrameIcon } from "./FrameIcon"
 import { GasFeeCustomizationIcon } from "./GasFeeCustomizationIcon"
 import { HardwareIcon } from "./HardwareIcon"
 import { HardwareSupportIcon } from "./HardwareSupportIcon"
+import { LanguagesIcon } from "./LanguagesIcon"
 import { Layer2Icon } from "./Layer2Icon"
 import { MobileIcon } from "./MobileIcon"
 import { MultisigIcon } from "./MultisigIcon"
@@ -38,6 +39,7 @@ export {
   GasFeeCustomizationIcon,
   HardwareIcon,
   HardwareSupportIcon,
+  LanguagesIcon,
   Layer2Icon,
   MobileIcon,
   MultisigIcon,

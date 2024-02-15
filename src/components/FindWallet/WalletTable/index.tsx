@@ -46,7 +46,7 @@ import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 import { ButtonLink } from "@/components/Buttons"
-import { DevicesIcon } from "@/components/icons/wallets"
+import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 
 const Container = (props: TableProps) => (
   <Table
@@ -471,7 +471,11 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                         </Flex>
 
                         {/* Device labels */}
-                        <Flex alignItems="center" gap={3}>
+                        <Flex
+                          alignItems="center"
+                          gap={3}
+                          display={deviceLabels.length > 0 ? "flex" : "none"}
+                        >
                           <Icon as={DevicesIcon} fontSize="2xl" />
 
                           <Text
@@ -497,19 +501,23 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                         ))}
 
                         {/* Supported languages */}
-                        <Text
-                          hideBelow="sm"
-                          color="text200"
-                          fontSize="0.7rem"
-                          lineHeight="0.85rem"
-                        >
-                          {/* TODO: simplify */}
-                          {formatSupportedLanguages(
-                            getNativeSupportedLanguages(
-                              wallet.languages_supported
-                            )
-                          )}
-                        </Text>
+                        <Flex alignItems="center" gap={3}>
+                          <Icon as={LanguagesIcon} fontSize="2xl" />
+
+                          <Text
+                            hideBelow="sm"
+                            color="text200"
+                            fontSize="0.7rem"
+                            lineHeight="0.85rem"
+                          >
+                            {/* TODO: simplify */}
+                            {formatSupportedLanguages(
+                              getNativeSupportedLanguages(
+                                wallet.languages_supported
+                              )
+                            )}
+                          </Text>
+                        </Flex>
 
                         {/* Wallet Website (desktop) */}
                         <ButtonLink
