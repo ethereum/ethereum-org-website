@@ -29,7 +29,6 @@ import { useWalletTable } from "@/components/FindWallet/WalletTable/useWalletTab
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
-import InlineLink, { LinkProps } from "@/components/Link"
 import Text from "@/components/OldText"
 import Tag from "@/components/Tag"
 
@@ -290,21 +289,6 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
   />
 )
 
-const SocialLink = (props: LinkProps) => (
-  <InlineLink
-    display="flex"
-    height={8}
-    alignItems="center"
-    verticalAlign="middle"
-    transform="scale(1)"
-    transition="transform 0.1s"
-    _hover={{
-      transform: "scale(1.15)",
-    }}
-    {...props}
-  />
-)
-
 // Constants
 const firstCol = "firstCol"
 const secondCol = "secondCol"
@@ -517,61 +501,6 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                           </ButtonLink>
                         </Box>
                       </Stack>
-
-                      <Box mt={4} display={{ base: "block", md: "none" }}>
-                        {/* Social icons */}
-                        <Flex gap="0.8rem">
-                          <SocialLink
-                            to={wallet.url}
-                            hideArrow
-                            customEventOptions={{
-                              eventCategory: "WalletExternalLinkList",
-                              eventAction: `Go to wallet`,
-                              eventName: `Website: ${wallet.name} ${idx}`,
-                              eventValue: JSON.stringify(filters),
-                            }}
-                          >
-                            <Icon as={FaGlobe} fontSize="2xl" />
-                          </SocialLink>
-                          {wallet.twitter && (
-                            <SocialLink
-                              to={wallet.twitter}
-                              hideArrow
-                              customEventOptions={{
-                                eventCategory: "WalletExternalLinkList",
-                                eventAction: `Go to wallet`,
-                                eventName: `Twitter: ${wallet.name} ${idx}`,
-                                eventValue: JSON.stringify(filters),
-                              }}
-                            >
-                              <Icon
-                                as={FaTwitter}
-                                color="#1da1f2"
-                                fontSize="2xl"
-                              />
-                            </SocialLink>
-                          )}
-                          {wallet.discord && (
-                            <SocialLink
-                              to={wallet.discord}
-                              hideArrow
-                              customEventOptions={{
-                                eventCategory: "WalletExternalLinkList",
-                                eventAction: `Go to wallet`,
-                                eventName: `Discord: ${wallet.name} ${idx}`,
-                                eventValue: JSON.stringify(filters),
-                              }}
-                            >
-                              <Icon
-                                as={FaDiscord}
-                                color="#7289da"
-                                fontSize="2xl"
-                              />
-                            </SocialLink>
-                          )}
-                        </Flex>
-                        S
-                      </Box>
                     </Box>
                   </FlexInfo>
 
