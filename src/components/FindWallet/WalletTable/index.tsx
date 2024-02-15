@@ -40,13 +40,15 @@ import Tag from "@/components/Tag"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import {
   formatSupportedLanguages,
-  getNativeSupportedLanguages,
+  getSupportedLanguages,
   getWalletPersonas,
 } from "@/lib/utils/wallets"
 
 import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
+
+import { useLanguagesList } from "@/hooks/useLanguagesList"
 
 const Container = (props: TableProps) => (
   <Table
@@ -342,6 +344,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
     thirdFeatureSelect,
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
+  const languagesList = useLanguagesList()
 
   return (
     <Container>
@@ -430,6 +433,10 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
         wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
 
         const walletPersonas = getWalletPersonas(wallet)
+        const supportedLanguages = getSupportedLanguages(
+          wallet.languages_supported,
+          languagesList
+        )
 
         return (
           <WalletContainer key={wallet.key}>
@@ -457,7 +464,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                       />
                     </Box>
                     <Box>
-                      <Stack gap={6}>
+                      <Stack gap={5}>
                         <Text>{wallet.name}</Text>
 
                         {/* Wallet Personas supported */}
@@ -506,25 +513,22 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                             fontSize="1rem !important"
                             fontWeight="normal !important"
                           >
-                            {/* TODO: simplify */}
-                            {formatSupportedLanguages(
-                              getNativeSupportedLanguages(
-                                wallet.languages_supported
-                              )
-                            )}
+                            {formatSupportedLanguages(supportedLanguages)}
                           </Text>
                         </Flex>
 
                         {/* Wallet Website (desktop) */}
-                        <ButtonLink
-                          to={wallet.url}
-                          variant="outline"
-                          w="auto"
-                          isExternal
-                        >
-                          {/* TODO add i18n text */}
-                          Visit website
-                        </ButtonLink>
+                        <Box w="auto">
+                          <ButtonLink
+                            to={wallet.url}
+                            variant="outline"
+                            w="auto"
+                            isExternal
+                          >
+                            {/* TODO add i18n text */}
+                            Visit website
+                          </ButtonLink>
+                        </Box>
                       </Stack>
 
                       <Box mt={4} display={{ base: "block", md: "none" }}>
