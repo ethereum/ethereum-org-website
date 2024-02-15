@@ -48,7 +48,7 @@ export const WalletMoreInfo = ({
 
   return (
     <Box>
-      <SimpleGrid templateColumns="65px auto">
+      <SimpleGrid columns={1} templateColumns="65px auto">
         <Box>
           <Box
             bgGradient={`linear(to-b, ${wallet.brand_color} 0%, rgba(217, 217, 217, 0) 97.4%)`}
