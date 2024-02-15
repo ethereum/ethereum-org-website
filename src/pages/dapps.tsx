@@ -101,7 +101,6 @@ import rotki from "@/public/dapps/rotki.png"
 import rubic from "@/public/dapps/rubic.png"
 import sablier from "@/public/dapps/sablier.png"
 import set from "@/public/dapps/set.png"
-import skiff from "@/public/dapps/skiff.png"
 import spatial from "@/public/dapps/spatial.png"
 import spruce from "@/public/dapps/spruce.png"
 import dai from "@/public/dapps/stabledai.png"
@@ -434,7 +433,7 @@ interface Categories {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -1138,13 +1137,6 @@ const DappsPage = () => {
       link: "https://xmtp.org/",
       image: xmtp,
       alt: t("page-dapps-xmtp-logo-alt"),
-    },
-    {
-      title: "Skiff",
-      description: t("page-dapps-dapp-description-skiff"),
-      link: "https://skiff.com/",
-      image: skiff,
-      alt: t("page-dapps-skiff-logo-alt"),
     },
   ]
 

@@ -52,7 +52,7 @@ Beispiele für inakzeptables Verhalten von Teilnehmenden:
 
 - Körperliche Gewalt, Androhung körperlicher Gewalt oder Aufforderung zu körperlicher Gewalt jeglicher Art
 - Verwendung einer sexualisierten Sprache oder Bildsprache oder Signalisierung unerwünschter sexueller Aufmerksamkeit
-- Sich als eine andere Person auszugeben oder auf andere Weise unredlich zu behaupten, eine Verbindung zu einer Person oder Organisation zu haben.
+- Sich als eine andere Person auszugeben oder auf andere Weise unredlich zu behaupten, eine Verbindung zu einer Person oder Organisation zu haben
 - Trolling, beleidigende/abwertende Kommentare und persönliche oder politische Angriffe
 - Belästigung anderer Community-Mitglieder in öffentlichen oder privaten Kanälen
 - Veröffentlichung privater Informationen anderer, wie z. B. einer physischen oder elektronischen Adresse, ohne ausdrückliche Erlaubnis
