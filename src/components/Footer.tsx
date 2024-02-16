@@ -55,11 +55,14 @@ export type FooterProps = {
 }
 
 const Footer = ({ lastDeployDate }: FooterProps) => {
-  const { locale } = useRouter()
+  const { asPath, locale } = useRouter()
   const { t } = useTranslation("common")
 
   // TODO: check if `medBp` is being used or remove it
   const [medBp] = useToken("breakpoints", ["md"])
+
+  const is500Page = asPath.includes("/500")
+
   const linkSections: Array<LinkSection> = [
     {
       title: t("use-ethereum"),
@@ -298,10 +301,12 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
         alignItems="center"
         flexWrap="wrap"
       >
-        <Box color="text200">
-          <Translation id="website-last-updated" />:{" "}
-          {getLocaleTimestamp(locale as Lang, lastDeployDate!)}
-        </Box>
+        {!is500Page && (
+          <Box color="text200">
+            <Translation id="website-last-updated" />:{" "}
+            {getLocaleTimestamp(locale as Lang, lastDeployDate!)}
+          </Box>
+        )}
         <Box my={4}>
           {socialLinks.map((link, idk) => {
             return (
