@@ -1,7 +1,7 @@
 {
   "/content/developers/docs/consensus-mechanisms/pos/attack-and-defense/reorg-schematic.png": {
-    "hash": "aaff0fbb",
-    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAJCAYAAAA7KqwyAAAACXBIWXMAAAsTAAALEwEAmpwYAAABUUlEQVR4nGNggIK0tDT+jo4OORA7NDSUs7m6WR5IM4P4QLZicUwxNwM+cOXYMaFLZ8/qZSbna86cOFP57dvn2leuXGEDyV0+d0L//Pn9Alg1hoauAtsyafOVRRM3XfkPMuTu3btZ33/8/P/27atQGRkLzqnbbv2fvuVyL1h9/Sq2////M8INqK+vZwLRMzddTJm48cxChv8MjG/evNH6/+PT/P8/v+jb19ezTFx5YvP0tafjQOqAmplwegNs8jYG9glHN5lWzzuyctbWE05QcRYQvXj/aYeWJce3bzlxyRjTMKBL0maeYQUx1x4/7tqx/ur/uQfOpoH49vt7RED0rD3HE5pXXvi/8/gNTxB/1SqI9zFdAQRvn9/RmdTcreisEStcb1/PArMRiNnxegMKGMvKymSiA9Mk/e3jBWDRSTQAuQKYLkDeYUSTYGRAjgEgAAAQw6QrLEaZfwAAAABJRU5ErkJggg=="
+    "hash": "d2ace192",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAKCAYAAAC9vt6cAAAACXBIWXMAABYlAAAWJQFJUiTwAAAB5UlEQVR4nHVSTWjTYBj+3Pw7KKKiB9Gut5286hBRD7uI7KroRdjJwQYe5lFyUEpZSb+GfU3ypSWw5aAEwdHVOJCSlqVZm07oz6bDId2hMmXgjpPV+UiyRtxhD3y8vM/H+7y/RBTFc4qiRDVNuixJ0oVUKhWhlEY552cIIQSm2Q/gCOlBEITjnKcijLEBWU5cDMlTvmWMPdM0DaqqglKa8DnTNPvD4P9E+iYmpBOBU65gdGnpV73RgKHruVeyzECnlZ13+nQdrv4WJX0RFeNeGFwuY6BaRc7z9mq1GsZJqwVpYwNY/YS9fH79/tUIOUsIOb1d4JP4+BpYeQN4xtNQoFTCtUYDu+020GxihjgOLhWL3RHL2h1yXQx7HqRqDVMrH37c7L6nd/5Y4u1W8euI44K5FciFAm7k853h+fn26NxcZzBQtSwr6GftC57/3AY6HaBex4Mwa7OJJ5ubwNYWsLqGMZ+zbRztDQR9oeM4GKwu4/HCwrcXeib3iCZi1yUxPmQYhYelxd/j/p9tIxpsBziwnXC6gVAyOTU5OzuDbDbbzWQy4FxGPP7y7mFb+QfOl4/5VpblMUVRvquq2mKMfU4mk+uUslv7Sez90g9DLBY77x9TOp2+IgjCSf9w/EcIOVhuD38BdSEZfTv6MEwAAAAASUVORK5CYII="
   },
   "/content/translations/es/developers/docs/consensus-mechanisms/pos/attack-and-defense/reorg-schematic.png": {
     "hash": "2e38c778",
