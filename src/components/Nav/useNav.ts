@@ -413,6 +413,11 @@ export const useNav = () => {
           icon: BsSignpost,
           items: [
             {
+              label: t("nav-overview-label"),
+              description: t("nav-roadmap-overview-description"),
+              href: "/roadmap/",
+            },
+            {
               label: t("nav-roadmap-security-label"),
               description: t("nav-roadmap-security-description"),
               href: "/roadmap/security",
