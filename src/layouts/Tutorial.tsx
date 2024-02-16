@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import {
   Badge,
   Box,
@@ -46,6 +45,7 @@ import { getEditPath } from "@/lib/utils/editPath"
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { useClientSideGitHubLastEdit } from "@/hooks/useClientSideGitHubLastEdit"
+import { useRouter } from "@/hooks/useRouter"
 
 type ContentContainerProps = Pick<BoxProps, "children" | "dir">
 

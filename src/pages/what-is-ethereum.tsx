@@ -1,5 +1,4 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MdInfoOutline } from "react-icons/md"
@@ -59,6 +58,7 @@ import {
   getRequiredNamespacesForPage,
 } from "@/lib/utils/translations"
 
+import { useRouter } from "@/hooks/useRouter"
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
 import developers from "@/public/developers-eth-blocks.png"
 import community from "@/public/enterprise.png"

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Flex, Stack, Text } from "@chakra-ui/react"
 
@@ -10,6 +9,8 @@ import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
 import Emoji from "../Emoji"
 import InlineLink from "../Link"
+
+import { useRouter } from "@/hooks/useRouter"
 
 type NetworkUpgradeSummaryProps = {
   name: string
@@ -48,11 +49,11 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
-      <Flex whiteSpace='pre-wrap'>
+      <Flex whiteSpace="pre-wrap">
         <Emoji fontSize="sm" me={2} text=":bricks:" />
         {t(translationKey)}:{" "}
         <InlineLink to={`${explorerUrl}${number}`}>
-         {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
+          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
         </InlineLink>
       </Flex>
     )

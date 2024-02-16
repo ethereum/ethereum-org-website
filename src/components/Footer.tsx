@@ -1,6 +1,5 @@
 // TODO
 import React from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import {
@@ -20,6 +19,8 @@ import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
+
+import { useRouter } from "@/hooks/useRouter"
 
 const socialLinks = [
   {

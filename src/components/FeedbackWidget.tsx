@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useRef, useState } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
   AlertDialog,
@@ -23,6 +22,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
+import { useRouter } from "@/hooks/useRouter"
 import { useSurvey } from "@/hooks/useSurvey"
 
 type FixedDotProps = ButtonProps & {

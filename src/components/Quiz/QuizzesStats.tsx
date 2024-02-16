@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaTwitter } from "react-icons/fa"
 import {
@@ -31,6 +30,8 @@ import {
   getTotalQuizzesPoints,
   shareOnTwitter,
 } from "./utils"
+
+import { useRouter } from "@/hooks/useRouter"
 
 const handleShare = ({ score, total }: QuizShareStats) => {
   shareOnTwitter({

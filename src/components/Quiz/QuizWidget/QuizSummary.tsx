@@ -1,6 +1,5 @@
 import { useEffect } from "react"
 import { merge } from "lodash"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
   Heading,
@@ -17,6 +16,8 @@ import {
 import { numberToPercent } from "@/lib/utils/numberToPercent"
 
 import { useQuizWidgetContext } from "./context"
+
+import { useRouter } from "@/hooks/useRouter"
 
 export const QuizSummary = () => {
   const { numberOfCorrectAnswers, questions, ratioCorrect, isPassingScore } =

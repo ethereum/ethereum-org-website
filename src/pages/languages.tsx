@@ -2,7 +2,6 @@ import { join } from "path"
 
 import React, { useState } from "react"
 import { GetStaticProps } from "next"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { MdClose } from "react-icons/md"
@@ -26,6 +25,8 @@ import {
 import { FROM_QUERY } from "@/lib/constants"
 
 import OldHeading from "../components/OldHeading"
+
+import { useRouter } from "@/hooks/useRouter"
 
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/languages")

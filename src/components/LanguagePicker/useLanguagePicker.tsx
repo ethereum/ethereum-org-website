@@ -1,5 +1,4 @@
 import { useEffect, useRef, useState } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { useDisclosure, type UseDisclosureReturn } from "@chakra-ui/react"
 
@@ -16,6 +15,8 @@ import { languages } from "@/lib/utils/translations"
 import progressDataJson from "@/data/translationProgress.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
+
+import { useRouter } from "@/hooks/useRouter"
 
 const progressData = progressDataJson satisfies ProjectProgressData[]
 

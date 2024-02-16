@@ -1,6 +1,5 @@
 import { useState } from "react"
 import { shuffle } from "lodash"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
 // TODO: Remove unused?
@@ -17,6 +16,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import exchangeData from "@/data/exchangesByCountry"
 
+import { useRouter } from "@/hooks/useRouter"
 import binance from "@/public/exchanges/binance.png"
 import bitbuy from "@/public/exchanges/bitbuy.png"
 import bitfinex from "@/public/exchanges/bitfinex.png"

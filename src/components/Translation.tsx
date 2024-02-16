@@ -1,11 +1,12 @@
 import htmr from "htmr"
 import type { TOptions } from "i18next"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import InlineLink from "./Link"
+
+import { useRouter } from "@/hooks/useRouter"
 
 type TranslationProps = {
   id: string

@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
 import {
   Avatar,
   Flex,
@@ -24,6 +23,8 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getLocaleTimestamp } from "@/lib/utils/time"
+
+import { useRouter } from "@/hooks/useRouter"
 
 // TODO: skeletons are not part of the DS, so these should be replaced once we
 // implement the new designs. Thats the reason we haven't define these styles in

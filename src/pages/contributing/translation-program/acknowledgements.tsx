@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -33,6 +32,7 @@ import allTimeData from "../../../data/translation-reports/alltime/alltime-data.
 import monthData from "../../../data/translation-reports/month/month-data.json"
 import quarterData from "../../../data/translation-reports/quarter/quarter-data.json"
 
+import { useRouter } from "@/hooks/useRouter"
 import darkThemeCertificateImg from "@/public/certificates/dark-certificate.png"
 import lightThemeCertificateImg from "@/public/certificates/light-certificate.png"
 import dogeComputerImg from "@/public/doge-computer.png"

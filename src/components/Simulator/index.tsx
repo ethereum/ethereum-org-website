@@ -1,5 +1,4 @@
 import React, { useEffect, useMemo, useState } from "react"
-import { useRouter } from "next/router"
 import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -17,6 +16,8 @@ import { SimulatorModal } from "./SimulatorModal"
 import { Template } from "./Template"
 import type { PathId, SimulatorData } from "./types"
 import { getValidPathId } from "./utils"
+
+import { useRouter } from "@/hooks/useRouter"
 
 type SimulatorProps = Pick<FlexProps, "children"> & {
   data: SimulatorData

@@ -1,5 +1,4 @@
 import { type ReactNode, useState } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Flex, type FlexProps, Heading } from "@chakra-ui/react"
 
@@ -13,6 +12,7 @@ import { isLangRightToLeft } from "@/lib/utils/translations"
 
 import Translation from "./Translation"
 
+import { useRouter } from "@/hooks/useRouter"
 import { useSurvey } from "@/hooks/useSurvey"
 
 type FeedbackCardProps = FlexProps & {

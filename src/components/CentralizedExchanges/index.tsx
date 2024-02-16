@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Box, Center, chakra, Flex } from "@chakra-ui/react"
 
@@ -16,6 +15,7 @@ import { getLocaleTimestamp } from "@/lib/utils/time"
 import { WEBSITE_EMAIL } from "@/lib/constants"
 
 import { useCentralizedExchanges } from "@/hooks/useCentralizedExchanges"
+import { useRouter } from "@/hooks/useRouter"
 
 const ListContainer = (props: ChildOnlyProp) => (
   <Box mt={16} flex={{ base: "1 1 100%", md: "1 1 50%" }} {...props} />

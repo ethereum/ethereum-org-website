@@ -1,5 +1,4 @@
 import NextLink, { type LinkProps as NextLinkProps } from "next/link"
-import { useRouter } from "next/router"
 import { RxExternalLink } from "react-icons/rx"
 import {
   forwardRef,
@@ -16,6 +15,7 @@ import * as url from "@/lib/utils/url"
 
 import { DISCORD_PATH, SITE_URL } from "@/lib/constants"
 
+import { useRouter } from "@/hooks/useRouter"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type BaseProps = {

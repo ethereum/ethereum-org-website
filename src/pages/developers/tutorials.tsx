@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
 import { GetStaticProps, InferGetServerSidePropsType } from "next"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
@@ -42,6 +41,7 @@ import {
 
 import externalTutorials from "@/data/externalTutorials.json"
 
+import { useRouter } from "@/hooks/useRouter"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 const FilterTag = forwardRef<{ isActive: boolean; name: string }, "button">(

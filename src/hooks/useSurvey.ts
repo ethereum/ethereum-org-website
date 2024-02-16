@@ -1,7 +1,8 @@
 import { useMemo } from "react"
-import { useRouter } from "next/router"
 
 import { SITE_URL } from "@/lib/constants"
+
+import { useRouter } from "@/hooks/useRouter"
 
 export const useSurvey = (feedbackSubmitted: boolean) => {
   const { asPath } = useRouter()

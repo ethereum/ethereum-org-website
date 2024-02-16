@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 import {
@@ -38,6 +37,8 @@ import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
 import { MAIN_CONTENT_ID } from "@/lib/constants"
+
+import { useRouter } from "@/hooks/useRouter"
 
 const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
 

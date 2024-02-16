@@ -1,7 +1,6 @@
 import { join } from "path"
 
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
 
 import type { Lang, LastUpdatedState } from "@/lib/types"
 
@@ -12,6 +11,7 @@ import {
 } from "@/lib/constants"
 
 import { gitHubAuthHeaders } from "@/hooks/useClientSideGitHubContributors"
+import { useRouter } from "@/hooks/useRouter"
 
 const fetchGitHubLastEdit = async (
   relativePath: string,

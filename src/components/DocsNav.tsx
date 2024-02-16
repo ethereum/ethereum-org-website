@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
   Box,
@@ -20,6 +19,7 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import docLinks from "@/data/developer-docs-links.yaml"
 
+import { useRouter } from "@/hooks/useRouter"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 const TextDiv = ({ children, ...props }: FlexProps) => (

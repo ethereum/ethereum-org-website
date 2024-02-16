@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
 
 import { Lang } from "@/lib/types"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { useRouter } from "@/hooks/useRouter"
 
 /**
  * Custom hook that sets the DOM direction based on the locale,

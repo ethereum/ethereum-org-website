@@ -1,5 +1,4 @@
 import React from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
   Bar,
@@ -22,6 +21,8 @@ import {
 import type { Lang } from "@/lib/types"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { useRouter } from "@/hooks/useRouter"
 
 type CustomTickProps = {
   x: number

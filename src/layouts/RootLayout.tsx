@@ -1,6 +1,5 @@
 import { join } from "path"
 
-import { useRouter } from "next/router"
 import { Container } from "@chakra-ui/react"
 
 import type { Root } from "@/lib/types"
@@ -17,6 +16,8 @@ import { toPosixPath } from "@/lib/utils/relativePath"
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
 import { lightTheme as oldTheme } from "../theme"
+
+import { useRouter } from "@/hooks/useRouter"
 
 export const RootLayout = ({
   children,

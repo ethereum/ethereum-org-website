@@ -1,5 +1,4 @@
 import { GetStaticProps } from "next"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentPropsWithRef } from "react"
@@ -37,6 +36,7 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { useRouter } from "@/hooks/useRouter"
 import oldship from "@/public/upgrades/oldship.png"
 
 const Page = (props: ChildOnlyProp) => (

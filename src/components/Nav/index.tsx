@@ -1,5 +1,4 @@
 import { FC, useRef } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdWbSunny } from "react-icons/md"
@@ -24,6 +23,8 @@ import Search from "@/components/Search"
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import { useNav } from "./useNav"
+
+import { useRouter } from "@/hooks/useRouter"
 
 export interface IProps {
   path: string

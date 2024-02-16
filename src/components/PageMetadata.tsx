@@ -1,10 +1,11 @@
 import { join } from "path"
 
 import Head from "next/head"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
 import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
+
+import { useRouter } from "@/hooks/useRouter"
 
 type NameMeta = {
   name: string

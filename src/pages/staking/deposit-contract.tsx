@@ -1,7 +1,6 @@
 import { ReactNode, useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { type GetStaticProps } from "next"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -40,6 +39,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { DEPOSIT_CONTRACT_ADDRESS } from "@/data/addresses"
 
+import { useRouter } from "@/hooks/useRouter"
 import consensys from "@/public/projects/consensys.png"
 import etherscan from "@/public/projects/etherscan-logo-circle.png"
 import ef from "@/public/staking/ef-blog-logo.png"

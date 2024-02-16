@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
   Breadcrumb,
@@ -12,6 +11,8 @@ import type { Lang } from "@/lib/types"
 import { BaseLink } from "@/components/Link"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { useRouter } from "@/hooks/useRouter"
 
 export type BreadcrumbsProps = ChakraBreadcrumbProps & {
   slug: string

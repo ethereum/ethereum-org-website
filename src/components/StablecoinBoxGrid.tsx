@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
 
@@ -10,6 +9,8 @@ import { isMobile } from "../lib/utils/isMobile"
 import Emoji from "./Emoji"
 import InlineLink from "./Link"
 import OldHeading from "./OldHeading"
+
+import { useRouter } from "@/hooks/useRouter"
 
 // Represent string as 32-bit integer
 const hashCode = (string: string): number => {

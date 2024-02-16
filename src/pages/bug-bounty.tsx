@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -37,6 +36,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import consensusData from "@/data/consensus-bounty-hunters.json"
 import executionData from "@/data/execution-bounty-hunters.json"
 
+import { useRouter } from "@/hooks/useRouter"
 import besu from "@/public/upgrades/besu.png"
 import erigon from "@/public/upgrades/erigon.png"
 import geth from "@/public/upgrades/geth.png"

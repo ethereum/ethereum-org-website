@@ -1,5 +1,4 @@
 import { useRef } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdSearch } from "react-icons/md"
 import {
@@ -24,6 +23,8 @@ import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
 
 import "@docsearch/css"
+
+import { useRouter } from "@/hooks/useRouter"
 
 export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   (props, ref) => (

@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { Box, chakra, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
@@ -35,6 +34,7 @@ import { getEditPath } from "@/lib/utils/editPath"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
+import { useRouter } from "@/hooks/useRouter"
 import GuideHeroImage from "@/public/heroes/guides-hub-hero.jpg"
 
 const Heading1 = (props: HeadingProps) => (

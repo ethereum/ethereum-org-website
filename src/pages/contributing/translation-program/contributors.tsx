@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -27,6 +26,8 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import allTimeData from "../../../data/translation-reports/alltime/alltime-data.json"
+
+import { useRouter } from "@/hooks/useRouter"
 
 type TranslatorDataType = {
   user: {

@@ -1,6 +1,5 @@
 import { type ComponentPropsWithRef, useEffect, useRef, useState } from "react"
 import { type GetStaticProps } from "next"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -48,6 +47,7 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import { useRouter } from "@/hooks/useRouter"
 import aave from "@/public/dapps/aave.png"
 import ankr from "@/public/dapps/ankr.png"
 import api3 from "@/public/dapps/api3.png"

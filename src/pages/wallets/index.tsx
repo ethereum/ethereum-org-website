@@ -1,6 +1,5 @@
 import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next"
-import { useRouter } from "next/router"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -37,6 +36,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import { walletOnboardingSimData } from "@/data/WalletSimulatorData"
 
+import { useRouter } from "@/hooks/useRouter"
 import DappsImage from "@/public/doge-computer.png"
 import ETHImage from "@/public/eth-logo.png"
 import FindWalletImage from "@/public/wallets/find-wallet.png"

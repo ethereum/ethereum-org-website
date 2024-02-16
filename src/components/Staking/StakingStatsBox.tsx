@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 import { Code, Flex, Icon, VStack } from "@chakra-ui/react"
@@ -10,6 +9,8 @@ import Text from "@/components/OldText"
 import Tooltip from "@/components/Tooltip"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+
+import { useRouter } from "@/hooks/useRouter"
 
 const Cell = ({ children }: ChildOnlyProp) => (
   <VStack

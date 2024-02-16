@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
 
@@ -11,6 +10,8 @@ import { DEFAULT_LOCALE } from "../lib/constants"
 
 import { ButtonLink } from "./Buttons"
 import Emoji from "./Emoji"
+
+import { useRouter } from "@/hooks/useRouter"
 
 export type TranslationBannerProps = {
   shouldShow: boolean

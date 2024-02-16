@@ -1,7 +1,6 @@
 import { useRef, useState } from "react"
 import { shuffle } from "lodash"
 import { GetStaticProps } from "next"
-import { useRouter } from "next/router"
 import { SSRConfig, useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -43,6 +42,7 @@ import walletData from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
+import { useRouter } from "@/hooks/useRouter"
 import FindWalletHeroImage from "@/public/wallets/find-wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (

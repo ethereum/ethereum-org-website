@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 import {
@@ -16,6 +15,7 @@ import type { LoadingState } from "@/lib/types"
 import InlineLink from "@/components/Link"
 import Tooltip from "@/components/Tooltip"
 
+import { useRouter } from "@/hooks/useRouter"
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type EthPriceResponse = {

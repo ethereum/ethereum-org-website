@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsCheck } from "react-icons/bs"
 import {
@@ -17,6 +16,8 @@ import type { LocaleDisplayInfo } from "@/lib/types"
 import { BaseLink } from "@/components/Link"
 
 import ProgressBar from "./ProgressBar"
+
+import { useRouter } from "@/hooks/useRouter"
 
 type ItemProps = ChakraMenuItemProps & {
   displayInfo: LocaleDisplayInfo

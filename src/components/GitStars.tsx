@@ -1,10 +1,11 @@
-import { useRouter } from "next/router"
 import { FaGithub } from "react-icons/fa"
 import { Center, Flex, Icon } from "@chakra-ui/react"
 
 import Emoji from "./Emoji"
 import { BaseLink, LinkProps } from "./Link"
 import Text from "./OldText"
+
+import { useRouter } from "@/hooks/useRouter"
 
 type GitHubRepo = {
   stargazerCount: number

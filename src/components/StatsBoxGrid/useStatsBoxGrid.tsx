@@ -1,5 +1,4 @@
 import { useState } from "react"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
 import type { AllMetricData, Lang, StatsBoxMetric } from "@/lib/types"
@@ -9,6 +8,8 @@ import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 import { RANGES } from "@/lib/constants"
 
 import { RangeSelector } from "./RangeSelector"
+
+import { useRouter } from "@/hooks/useRouter"
 
 const formatTotalStaked = (amount: number, locale: string): string => {
   return new Intl.NumberFormat(locale, {

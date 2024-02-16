@@ -1,5 +1,4 @@
 import { DateTime, DateTimeFormatOptions } from "luxon"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord } from "react-icons/fa"
 import {
@@ -21,6 +20,8 @@ import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { useRouter } from "@/hooks/useRouter"
 
 const matomoEvent = (buttonType: string) => {
   trackCustomEvent({

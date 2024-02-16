@@ -1,4 +1,3 @@
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 
@@ -12,6 +11,8 @@ import Translation from "@/components/Translation"
 import TutorialTags from "@/components/TutorialTags"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
+
+import { useRouter } from "@/hooks/useRouter"
 
 export type TutorialMetadataProps = {
   frontmatter: TutorialFrontmatter

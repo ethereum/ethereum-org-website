@@ -1,8 +1,8 @@
-import { useRouter } from "next/router"
-
 import type { Lang } from "@/lib/types"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { useRouter } from "@/hooks/useRouter"
 
 type UseDirection = {
   flipForRtl: "scaleX(-1)" | undefined
@@ -18,5 +18,9 @@ type UseDirection = {
 export const useRtlFlip = (): UseDirection => {
   const { locale } = useRouter()
   const isRtl = isLangRightToLeft(locale as Lang)
-  return { flipForRtl: isRtl ? "scaleX(-1)" : undefined, isRtl, direction: isRtl ? "rtl" : "ltr" }
+  return {
+    flipForRtl: isRtl ? "scaleX(-1)" : undefined,
+    isRtl,
+    direction: isRtl ? "rtl" : "ltr",
+  }
 }
