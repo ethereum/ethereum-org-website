@@ -154,7 +154,7 @@ export const useNav = () => {
                 {
                   label: t("nav-overview-label"),
                   description: t("nav-guide-overview-description"),
-                  href: "/guides/",
+                  href: "/guides",
                 },
                 {
                   label: t("nav-guide-create-account-label"),
@@ -415,7 +415,7 @@ export const useNav = () => {
             {
               label: t("nav-overview-label"),
               description: t("nav-roadmap-overview-description"),
-              href: "/roadmap/",
+              href: "/roadmap",
             },
             {
               label: t("nav-roadmap-security-label"),
