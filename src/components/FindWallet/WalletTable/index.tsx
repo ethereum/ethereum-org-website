@@ -425,7 +425,8 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
             >
               <Td lineHeight="revert">
                 <Flex justifyContent="space-between" alignItems="center">
-                  <FlexInfo>
+                  <FlexInfo w={{ base: "100%", md: "auto" }}>
+                    {/* Wallet image */}
                     <Box w="56px">
                       <Image
                         src={wallet.image}
@@ -434,7 +435,8 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                         boxSize="56px"
                       />
                     </Box>
-                    <Box>
+
+                    <Box w={{ base: "100%", md: "auto" }}>
                       <Stack gap={5}>
                         <Text>{wallet.name}</Text>
 
@@ -479,7 +481,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                         </Flex>
 
                         {/* Wallet Website (desktop) */}
-                        <Box w="auto">
+                        <Box display={{ base: "none", md: "block" }} w="auto">
                           <ButtonLink
                             to={wallet.url}
                             variant="outline"
@@ -498,51 +500,31 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                       <Icon
                         as={wallet.moreInfo ? MdExpandLess : MdExpandMore}
                         color="primary.base"
-                        fontSize="2xl"
+                        fontSize={{ base: "5xl", md: "4xl" }}
                       />
                     </Box>
                   </FlexInfoCenter>
                 </Flex>
+                {/* Wallet Website (mobile) */}
+                <Box
+                  display={{ base: "block", md: "none" }}
+                  mt={6}
+                  w="100%"
+                  ps={1}
+                  pe={3}
+                >
+                  <ButtonLink
+                    to={wallet.url}
+                    variant="outline"
+                    w="100%"
+                    isExternal
+                  >
+                    {t("page-find-wallet-visit-website")}
+                  </ButtonLink>
+                </Box>
               </Td>
-              {/* <Td>
-                <FlexInfoCenter className={firstCol}>
-                  {wallet[firstFeatureSelect.filterKey!] ? (
-                    <GreenCheckProductGlyphIcon />
-                  ) : (
-                    <WarningProductGlyphIcon />
-                  )}
-                </FlexInfoCenter>
-              </Td> */}
-              {/* <Td>
-                <FlexInfoCenter className={secondCol}>
-                  {wallet[secondFeatureSelect.filterKey!] ? (
-                    <GreenCheckProductGlyphIcon />
-                  ) : (
-                    <WarningProductGlyphIcon />
-                  )}
-                </FlexInfoCenter>
-              </Td> */}
-              {/* <Td>
-                <FlexInfoCenter className={thirdCol}>
-                  {wallet[thirdFeatureSelect.filterKey!] ? (
-                    <GreenCheckProductGlyphIcon />
-                  ) : (
-                    <WarningProductGlyphIcon />
-                  )}
-                </FlexInfoCenter>
-              </Td> */}
-              {/* <Td>
-                <FlexInfoCenter>
-                  <Box>
-                    <Icon
-                      as={wallet.moreInfo ? MdExpandLess : MdExpandMore}
-                      color="primary.base"
-                      fontSize="2xl"
-                    />
-                  </Box>
-                </FlexInfoCenter>
-              </Td> */}
             </Wallet>
+
             {wallet.moreInfo && (
               <WalletMoreInfo
                 wallet={wallet}
