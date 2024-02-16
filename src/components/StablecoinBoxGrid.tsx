@@ -1,7 +1,9 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
+import { FaExclamation } from "react-icons/fa6"
+import { HiOutlineSpeakerphone } from "react-icons/hi";
+import { Box, Flex, HStack,Icon,Text,useColorModeValue } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -39,6 +41,7 @@ interface ILink {
 
 type GridItemProps = {
   description: string
+  disclaimer: string
   columnNumber: number
   rowNumber: number
   emoji: string
@@ -63,6 +66,23 @@ const OpenTitle = ({ title }: { title: string }) => {
       {title}
     </OldHeading>
   )
+}
+
+const Disclaimer = ({ disclaimer }: { disclaimer: string }) => {
+
+  return (
+    <Box p={1}  borderRadius={'5px'} bg={'warning'}>
+          <HStack>
+          <Icon as={HiOutlineSpeakerphone} /> 
+          {/* <Icon fontWeight={300} fontSize={'sm'} as={FaExclamation}  />  */}
+          <Text  fontSize="sm" fontWeight={400} >
+            {disclaimer}  
+          </Text>
+          </HStack>
+      </Box>
+  
+  )
+
 }
 
 const Title = ({ title }: { title: string }) => {
@@ -186,7 +206,18 @@ const GridItem = ({
       }}
     >
       {isOpen ? (
-        <Emoji mb={8} text={emoji} fontSize="8xl" />
+        <>
+      <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'} gap={48}>
+      <Emoji  mb={8} text={emoji} fontSize="8xl" />
+      {title === t("page-stablecoins-algorithmic") && (
+
+        <Disclaimer disclaimer={t("page-stablecoins-algorithmic-disclaimer")} />
+        
+       )}
+      </Box>
+      
+      
+        </>  
       ) : (
         <>
           <StyledEmoji emoji={emoji} />
@@ -196,7 +227,8 @@ const GridItem = ({
       <div>
         {isOpen && (
           <div>
-            <OpenTitle title={title} />
+              <OpenTitle title={title} />
+              
             <Body>{description}</Body>
             <Row>
               {pros && (
@@ -255,6 +287,7 @@ const GridItem = ({
 
 export interface IPropsBoxItem {
   description: string
+  disclaimer?: string
   emoji: string
   title: string
   pros?: Array<string>
@@ -299,6 +332,7 @@ const StablecoinBoxGrid = ({ items }: StablecoinBoxGridProps) => {
             title={item.title}
             emoji={item.emoji}
             description={item.description}
+            disclaimer={item.disclaimer || ''}
             pros={item.pros}
             cons={item.cons}
             links={item.links}

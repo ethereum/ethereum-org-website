@@ -291,6 +291,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
     {
       title: t("page-stablecoins-algorithmic"),
       description: t("page-stablecoins-algorithmic-description"),
+      disclaimer: t("page-stablecoins-algorithmic-disclaimer"),
       emoji: ":chart_with_downwards_trend:",
       pros: [
         t("page-stablecoins-algorithmic-pro-1"),
