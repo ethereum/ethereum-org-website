@@ -32,7 +32,6 @@ type LvlContentProps = {
 /**
  * Content for each sub-menu below top-level navigation
  * Content renders inside sibling Viewport
- * Viewport wrapped in Portal to render inside a passed ref
  * @param lvl - The level of the menu
  * @param items - The items to be displayed in the menu
  * @param activeSection - English label of the active section for event tracking
@@ -99,10 +98,6 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
                         me: -pad,
                         pe: pad,
                       },
-                    }}
-                    onMouseLeave={(e) => {
-                      // Bring focus to destination button when leaving
-                      ;(e.relatedTarget as HTMLButtonElement).focus()
                     }}
                   >
                     {isLink ? (

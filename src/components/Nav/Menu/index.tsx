@@ -23,15 +23,6 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
   const menuColors = useNavMenuColors()
   const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
 
-  // const getLvlSx = (lvl: Level): BoxProps["sx"] => ({
-  //   opacity: 0,
-  //   '&:has([data-state="open"])': {
-  //     bg: menuColors.lvl[lvl].background,
-  //     opacity: 1,
-  //     transition: "opacity 300ms linear",
-  //   },
-  // })
-
   const getEnglishSectionName = (
     activeSection: string
   ): NavSectionKey | null => {
@@ -53,7 +44,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
         }}
       >
         <NavigationMenu.List asChild>
-          <Flex listStyleType="none">
+          <Flex as="ul" listStyleType="none">
             {SECTION_LABELS.map((sectionKey) => {
               const { label, items } = sections[sectionKey]
               return (
@@ -76,6 +67,10 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                     </Button>
                   </NavigationMenu.Trigger>
                   <NavigationMenu.Content asChild>
+                    {/**
+                     * This is the CONTAINER for all three menu levels
+                     * This renders inside the NavigationMenu.Viewport component
+                     */}
                     <Box
                       position="absolute"
                       top="19"
@@ -84,12 +79,6 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                       border="1px"
                       borderColor={menuColors.stroke}
                       bg={menuColors.lvl[1].background}
-                      sx={{
-                        '&:has(#lvl1 [data-state="open"])': {
-                          opacity: 1,
-                          transition: "opacity 200ms linear",
-                        },
-                      }}
                     >
                       <LvlContent
                         lvl={1}
