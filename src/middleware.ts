@@ -39,7 +39,8 @@ export async function middleware(req: NextRequest) {
     const locale = localeDetected || DEFAULT_LOCALE
 
     return NextResponse.redirect(
-      new URL(`/${locale}${req.nextUrl.pathname}`, req.url)
+      new URL(`/${locale}${req.nextUrl.pathname}`, req.url),
+      { status: 301 }
     )
   }
 }
