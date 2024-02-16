@@ -88,9 +88,11 @@ export const useLanguagePicker = (
       const targetName = i18nConfigTarget || fallbackTarget
 
       if (!sourceName || !targetName) {
-        throw new Error(
-          "Missing language display name, locale: " + localeOption
-        )
+        console.warn("Missing language display name:", {
+          localeOption,
+          sourceName,
+          targetName,
+        })
       }
 
       // English will not have a dataItem
@@ -106,10 +108,9 @@ export const useLanguagePicker = (
               (dataItem!.words.approved / dataItem!.words.total) * 100
             ) || 0
 
-      if (progressData.length === 0)
-        throw new Error(
-          "Missing translation progress data; check GitHub action"
-        )
+      if (progressData.length === 0) {
+        console.warn("Missing translation progress data; check GitHub action")
+      }
 
       const totalWords = progressData[0].words.total
 
@@ -123,8 +124,8 @@ export const useLanguagePicker = (
       return {
         localeOption,
         approvalProgress,
-        sourceName,
-        targetName,
+        sourceName: sourceName ?? "",
+        targetName: targetName ?? "",
         englishName,
         wordsApproved,
         isBrowserDefault,
