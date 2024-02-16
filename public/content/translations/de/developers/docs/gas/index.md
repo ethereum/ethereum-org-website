@@ -55,7 +55,7 @@ Jeder Block hat seine eigene Basisgebühr, welche als reservierter Preis erschei
 Die Grundgebühr wird anhand einer Formel berechnet, die die Größe des vorherigen Blocks (die für alle Transaktionen verwendete Gasmenge) mit der Zielgröße vergleicht. Die Grundgebühr erhöht sich um maximal 12,5 % pro Block, wenn die Zielblockgröße überschritten wird. Dieses exponentielle Wachstum macht es wirtschaftlich unrentabel, die Blockgröße unbegrenzt hoch zu halten.
 
 | Blocknummer | Enthaltenes Gas | Gebührenerhöhung | Aktuelle Grundgebühr |
-| ----------- | --------------: | ---------------: | -------------------: |
+| ----------- | ---------------:| ----------------:| --------------------:|
 | 1           |            15 m |              0 % |             100 gwei |
 | 2           |            30 m |              0 % |             100 gwei |
 | 3           |            30 m |           12,5 % |           112,5 gwei |
@@ -70,7 +70,7 @@ Der obigen Tabelle folgend: Um eine Transaktion auf Block Nummer 9 zu erstellen,
 Außerdem ist es unwahrscheinlich, dass es zu längeren Zeiträumen mit vollen Blöcken kommt, da die Grundgebühr vor einem vollen Block schnell ansteigt.
 
 | Blocknummer | Enthaltenes Gas | Gebührenerhöhung | Aktuelle Grundgebühr |
-| ----------- | --------------: | ---------------: | -------------------: |
+| ----------- | ---------------:| ----------------:| --------------------:|
 | 30          |            30 m |           12,5 % |          2705,6 gwei |
 | ...         |             ... |           12,5 % |                  ... |
 | 50          |            30 m |           12,5 % |         28531,3 gwei |

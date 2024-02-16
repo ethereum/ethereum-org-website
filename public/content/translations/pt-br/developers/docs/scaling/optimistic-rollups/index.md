@@ -198,7 +198,7 @@ Os optimistic rollups usam um esquema de taxa de gás, muito parecido com o Ethe
 
 2. **`calldata`**: além da taxa básica de transação, o custo de cada escrita de estado depende do tamanho de `calldata` publicado na L1. Os custos de `calldata` são atualmente regidos por [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), que estipula um custo de 16 gás para bytes diferentes de zero e 4 gás para zero bytes de `calldata`, respectivamente. Para reduzir as taxas do usuário, os operadores de rollup compactam as transações para reduzir o número de bytes `calldata` publicados no Ethereum.
 
-3. **Taxas do operador L2**: este é o valor pago aos nós de rollup como compensação pelos custos computacionais incorridos no processamento de transações, assim como as taxas do minerador no Ethereum. Os nós de rollup cobram taxas de transação mais baixas, pois os L2s têm capacidades de processamento mais altas e não enfrentam congestionamentos de rede que forçam os mineradores no Ethereum a priorizar transações com taxas mais altas.
+3. **Taxas do operador L2**: Este é o valor pago aos nódulos de rollup como compensação pelos custos computacionais decorrentes do processamento de transações, muito parecido com as taxas de Gas no Ethereum. Os nódulos de rollup cobram taxas de transação mais baixas, já que as L2s têm capacidades de processamento mais altas e não enfrentam os congestionamentos de rede, que forçam os validadores no Ethereum a priorizar transações com taxas mais altas.
 
 Os optimistic rollups aplicam vários mecanismos para reduzir as taxas para os usuários, incluindo transações em lote e compactando `calldata` para reduzir os custos de publicação de dados. Você pode verificar o [rastreador de taxas L2](https://l2fees.info/), para ter uma ideia geral real do custo de uso de optimistic rollups baseados em Ethereum.
 
@@ -229,7 +229,7 @@ Fazer alguns cálculos aproximados sobre esses números pode ajudar a mostrar as
 
 Esta é uma estimativa bastante otimista, uma vez que as transações de optimistic rollups não podem abranger um bloco inteiro no Ethereum. No entanto, pode dar uma ideia aproximada de quantos ganhos de dimensionamento os optimistic rollups podem proporcionar aos usuários do Ethereum (as implementações atuais oferecem até 2.000 TPS).
 
-Espera-se que a introdução de [particionamento de dados (sharding)](/roadmap/danksharding/) no Ethereum melhore o dimensionamento do optimistic rollup. Como as transações de rollup devem compartilhar o espaço de blocos (blockspace) com outras transações não-rollup, sua capacidade de processamento é limitada pela taxa de transferência de dados na cadeia principal do Ethereum. O particionamento aumentará o espaço disponível para as cadeias L2, para publicar dados por bloco, aumentando ainda mais a taxa de transferência nos rollups.
+Espera-se que a introdução de [fragmentação (sharding) de dados](/roadmap/danksharding/) no Ethereum melhore o dimensionamento do rollup otimista. Como as transações de rollup devem compartilhar o espaço de blocos (blockspace) com outras transações não-rollup, sua capacidade de processamento é limitada pela taxa de transferência de dados na cadeia principal do Ethereum. Danksharding aumentará o espaço disponível para que cadeias L2 publiquem dados por bloco, usando armazenamento de “blob” impermanente e mais barato em vez de `CALLDATA`, que é permanente e caro.
 
 ### Prós e contras dos optimistic rollups {#optimistic-rollups-pros-and-cons}
 

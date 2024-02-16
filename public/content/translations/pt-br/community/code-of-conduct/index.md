@@ -52,7 +52,7 @@ Exemplos de comportamento inaceitável por parte dos participantes incluem:
 
 - Violência física, ameaça de violência física ou incentivo à violência física de qualquer tipo
 - Usar linguagem ou imagens sexualizadas ou impor atenção sexual indesejada
-- Fazer-se passar por outra pessoa ou reivindicar, de forma desonesta, afiliação a alguma pessoa ou organização.
+- Fazer-se passar por outra pessoa ou reivindicar, de forma desonesta, afiliação a alguma pessoa ou organização
 - Brincadeiras de mau gosto, comentários ofensivos/pejorativos e ataques pessoais ou políticos
 - Assediar outros membros da comunidade em canais públicos ou privados
 - Publicar informações privadas de outras pessoas, como endereço físico ou eletrônico, sem permissão explícita

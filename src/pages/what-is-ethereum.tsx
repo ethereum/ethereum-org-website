@@ -370,7 +370,7 @@ const WhatIsEthereumPage = ({
           <br />
           <br />
 
-          <Section>
+          <Box>
             <H2>{t("page-what-is-ethereum-what-can-eth-do-title")}</H2>
             <CardContainer>
               {cards.map((card, idx) => (
@@ -386,7 +386,7 @@ const WhatIsEthereumPage = ({
                 />
               ))}
             </CardContainer>
-          </Section>
+          </Box>
 
           <TwoColumnContent>
             <Width60>
