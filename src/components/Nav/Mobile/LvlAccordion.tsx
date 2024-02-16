@@ -14,6 +14,7 @@ import {
 import { BaseLink } from "@/components/Link"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { cleanPath } from "@/lib/utils/url"
 
 import type { Level, NavItem, NavSectionKey } from "../types"
 
@@ -34,19 +35,20 @@ const LvlAccordion = ({
   activeSection,
   onToggle,
 }: LvlAccordionProps) => {
-  const { locale } = useRouter()
+  const { asPath, locale } = useRouter()
   const menuColors = useNavMenuColors()
-
   return (
     <Accordion allowToggle boxShadow="menu.accordion">
-      {items.map(({ label, description, ...actions }) => {
-        if ("href" in actions)
+      {items.map(({ label, description, ...action }) => {
+        const isLink = "href" in action
+        const isActivePage = isLink && cleanPath(asPath) === action.href
+        if (isLink)
           return (
             <AccordionItem key={label}>
               <Button
                 as={BaseLink}
                 w="full"
-                href={actions.href}
+                href={action.href}
                 variant="ghost"
                 borderRadius="none"
                 borderColor={menuColors.stroke}
@@ -60,20 +62,28 @@ const LvlAccordion = ({
                 onClick={() => {
                   trackCustomEvent({
                     eventCategory: "Mobile navigation menu",
-                    eventAction: `Follow link from section: ${locale} - ${activeSection}`,
-                    eventName: actions.href!,
+                    eventAction: `Menu: ${locale} - ${activeSection}`,
+                    eventName: action.href!,
                   })
                   onToggle()
                 }}
               >
                 <Box flex="1" textAlign="start">
-                  <Text fontWeight="bold" fontSize="md" color={menuColors.body}>
+                  <Text
+                    fontWeight="bold"
+                    fontSize="md"
+                    color={isActivePage ? menuColors.active : menuColors.body}
+                  >
                     {label}
                   </Text>
                   <Text
                     fontWeight="regular"
                     fontSize="sm"
-                    color={menuColors.lvl[lvl].subtext}
+                    color={
+                      isActivePage
+                        ? menuColors.active
+                        : menuColors.lvl[lvl].subtext
+                    }
                   >
                     {description}
                   </Text>
@@ -130,7 +140,7 @@ const LvlAccordion = ({
                 <AccordionPanel p="0" bg={menuColors.lvl[lvl + 1].background}>
                   <LvlAccordion
                     lvl={(lvl + 1) as Level}
-                    items={actions.items}
+                    items={action.items}
                     activeSection={activeSection}
                     onToggle={onToggle}
                   />
