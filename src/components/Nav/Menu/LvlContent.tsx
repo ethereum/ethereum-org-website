@@ -54,7 +54,7 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
     <NavigationMenu.Sub orientation="vertical" asChild>
       <Grid w="full" h="full" gridTemplateColumns={getColumns(lvl)}>
         <NavigationMenu.List asChild>
-          <UnorderedList listStyleType="none" p={pad} m="0">
+          <UnorderedList listStyleType="none" p={pad / 2} m="0">
             {items.map((item) => {
               const { label, description, icon, ...action } = item
               const subItems = action.items || []
@@ -75,7 +75,7 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
                 w: "full",
                 me: -pad,
                 sx: {
-                  "span:first-of-type": { m: 0, me: pad }, // Spacing for icon
+                  "span:first-of-type": { m: 0, me: 4 }, // Spacing for icon
                 },
                 py: pad,
                 bg: isActivePage
@@ -88,7 +88,7 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
               return (
                 <NavigationMenu.Item key={label} asChild>
                   <ListItem
-                    mb="1"
+                    mb={pad / 2}
                     _last={{ mb: 0 }}
                     sx={{
                       '&:has(button[data-state="open"])': {
