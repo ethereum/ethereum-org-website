@@ -1,6 +1,5 @@
 import { ReactNode } from "react"
 import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import Select from "react-select"
 import {
@@ -145,6 +144,7 @@ const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
         hideBelow: "md",
       },
     }}
+    templateColumns="auto"
     {...props}
   />
 ))
@@ -464,16 +464,6 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
                             {deviceLabels.join(" · ")}
                           </Text>
                         </Flex>
-
-                        {deviceLabels.map((label) => (
-                          <Text
-                            key={label}
-                            hideFrom="md"
-                            fontSize="1rem !important"
-                          >
-                            {label}
-                          </Text>
-                        ))}
 
                         {/* Supported languages */}
                         <Flex alignItems="center" gap={3}>
