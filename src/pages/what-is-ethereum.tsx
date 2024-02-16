@@ -217,14 +217,23 @@ const WhatIsEthereumPage = ({
   const { locale } = useRouter()
   const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
 
-  const formatNumber = (value: number) =>
+  const formatNumber = (
+    value: number,
+    minSignificantDigits: number,
+    maxSignificantDigits: number,
+    style?: string,
+    currency?: string
+  ) =>
     new Intl.NumberFormat(localeForNumberFormat, {
       notation: "compact",
-      minimumSignificantDigits: 3,
-      maximumSignificantDigits: 4,
+      minimumSignificantDigits: minSignificantDigits,
+      maximumSignificantDigits: maxSignificantDigits,
+      style: style,
+      currency: currency,
+      currencyDisplay: "narrowSymbol",
     }).format(value)
 
-  const txStat = "error" in data ? "" : formatNumber(data.value)
+  const txStat = "error" in data ? "" : formatNumber(data.value, 3, 4)
 
   const cards = [
     {
@@ -466,11 +475,20 @@ const WhatIsEthereumPage = ({
               <H2>{t("page-what-is-ethereum-ethereum-in-numbers-title")}</H2>
               <BannerGrid>
                 <BannerGridCell>
-                  <StatPrimary>4k+</StatPrimary>
+                  <StatPrimary>{formatNumber(4000, 1, 1)}+</StatPrimary>
                   <StatDescription>
-                    Projects built on{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-1-desc")
+                      .split(" ")
+                      .slice(0, -1)
+                      .join(" ")}{" "}
                     <NoWrapText>
-                      Ethereum{" "}
+                      {
+                        t(
+                          "page-what-is-ethereum-ethereum-in-numbers-stat-1-desc"
+                        )
+                          .split(" ")
+                          .slice(-1)[0]
+                      }{" "}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -485,11 +503,20 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>96M+</StatPrimary>
+                  <StatPrimary>{formatNumber(96_000_000, 2, 2)}+</StatPrimary>
                   <StatDescription>
-                    Accounts (wallets) with an ETH{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-2-desc")
+                      .split(" ")
+                      .slice(0, -1)
+                      .join(" ")}{" "}
                     <NoWrapText>
-                      balance{" "}
+                      {
+                        t(
+                          "page-what-is-ethereum-ethereum-in-numbers-stat-2-desc"
+                        )
+                          .split(" ")
+                          .slice(-1)[0]
+                      }{" "}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -504,11 +531,20 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>53.3M+</StatPrimary>
+                  <StatPrimary>{formatNumber(53_300_000, 3, 3)}+</StatPrimary>
                   <StatDescription>
-                    Smart contracts on{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-3-desc")
+                      .split(" ")
+                      .slice(0, -1)
+                      .join(" ")}{" "}
                     <NoWrapText>
-                      Ethereum{" "}
+                      {
+                        t(
+                          "page-what-is-ethereum-ethereum-in-numbers-stat-3-desc"
+                        )
+                          .split(" ")
+                          .slice(-1)[0]
+                      }{" "}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -523,11 +559,22 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>$410B</StatPrimary>
+                  <StatPrimary>
+                    {formatNumber(410_000_000_000, 3, 3, "currency", "USD")}
+                  </StatPrimary>
                   <StatDescription>
-                    Value secured on{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-4-desc")
+                      .split(" ")
+                      .slice(0, -1)
+                      .join(" ")}{" "}
                     <NoWrapText>
-                      Ethereum{" "}
+                      {
+                        t(
+                          "page-what-is-ethereum-ethereum-in-numbers-stat-4-desc"
+                        )
+                          .split(" ")
+                          .slice(-1)[0]
+                      }{" "}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl: "https://ultrasound.money/#tvs",
@@ -541,11 +588,22 @@ const WhatIsEthereumPage = ({
                   </StatDescription>
                 </BannerGridCell>
                 <BannerGridCell>
-                  <StatPrimary>$3.5B</StatPrimary>
+                  <StatPrimary>
+                    {formatNumber(3_500_000_000, 2, 2, "currency", "USD")}
+                  </StatPrimary>
                   <StatDescription>
-                    Creator earnings on Ethereum in{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-5-desc")
+                      .split(" ")
+                      .slice(0, -1)
+                      .join(" ")}{" "}
                     <NoWrapText>
-                      2021{" "}
+                      {
+                        t(
+                          "page-what-is-ethereum-ethereum-in-numbers-stat-5-desc"
+                        )
+                          .split(" ")
+                          .slice(-1)[0]
+                      }{" "}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -566,9 +624,18 @@ const WhatIsEthereumPage = ({
                   </StatPrimary>
                   {/* TODO: Extract strings for translation */}
                   <StatDescription>
-                    Number of transactions{" "}
+                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-6-desc")
+                      .split(" ")
+                      .slice(0, -1)
+                      .join(" ")}{" "}
                     <NoWrapText>
-                      today{" "}
+                      {
+                        t(
+                          "page-what-is-ethereum-ethereum-in-numbers-stat-6-desc"
+                        )
+                          .split(" ")
+                          .slice(-1)[0]
+                      }{" "}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl: "https://etherscan.io/",
