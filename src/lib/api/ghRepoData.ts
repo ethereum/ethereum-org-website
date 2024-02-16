@@ -22,11 +22,11 @@ const frameworksList: Array<Framework> = [
     image: WaffleImage,
   },
   {
-    id: "kurtosis",
-    url: "https://www.kurtosis.com/",
-    githubUrl: "https://github.com/kurtosis-tech/kurtosis",
+    id: "Kurtosis Ethereum Package",
+    url: "https://github.com/kurtosis-tech/ethereum-package",
+    githubUrl: "https://github.com/kurtosis-tech/ethereum-package",
     background: "#000000",
-    name: "Kurtosis",
+    name: "Kurtosis Ethereum Package",
     description:
       "page-developers-local-environment:page-local-environment-kurtosis-desc",
     alt: "page-developers-local-environment:page-local-environment-kurtosis-logo-alt",

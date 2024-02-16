@@ -75,6 +75,11 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
   "--docsearch-modal-width": "650px",
   "--docsearch-hit-height": "fit-content",
 
+  ".DocSearch.DocSearch-Container": {
+    position: "fixed",
+    inset: 0,
+  },
+
   ".DocSearch-SearchBar": {
     p: { base: 4, md: 8 },
     pb: 4,

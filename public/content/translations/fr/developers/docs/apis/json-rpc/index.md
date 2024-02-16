@@ -620,7 +620,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 La récupération d'un élément de la carte est plus difficile. La position d'un élément dans la carte est calculée avec :
 
 ```js
-keccack(LeftPad32(key, 0), LeftPad32(map position, 0))
+keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
 Cela signifie que pour récupérer le stockage sur pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] nous devons calculer la position avec :

@@ -114,12 +114,12 @@ Rozszerzając te obliczenia, możemy oszacować czas potrzebny na przetworzenie 
 <TableContainer>
 
 | Liczba wypłat | Czas realizacji |
-| :-----------: | :-------------: |
-|    400,000    |    3,5 dnia     |
-|    500,000    |    4,3 dnia     |
-|    600,000    |    5,2 dnia     |
-|    700,000    |    6,1 dnia     |
-|    800,000    |     7,0 dni     |
+| :-------------------: | :--------------: |
+|        400,000        |     3,5 dnia     |
+|        500,000        |     4,3 dnia     |
+|        600,000        |     5,2 dnia     |
+|        700,000        |     6,1 dnia     |
+|        800,000        |     7,0 dni       |
 
 </TableContainer>
 
@@ -194,7 +194,7 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Operatorom walidatorów zaleca się odwiedzenie strony <a href="https://launchpad.ethereum.org/withdrawals/">wypłaty Staking Launchpad</a>, gdzie można znaleźć więcej szczegółów na temat przygotowania walidatora do wypłat. przygotowane, czas zdarzeń i więcej szczegółów na temat funkcjonowania wypłat.
+Operatorom walidatorów zaleca się odwiedzenie strony <a href="https://launchpad.ethereum.org/withdrawals/">wypłaty Staking Launchpad</a>, gdzie można znaleźć więcej szczegółów na temat przygotowania walidatora do wypłat, czasu wydarzeń i więcej szczegółów na temat działania wypłat.
 
 Aby najpierw wypróbować swoją konfigurację w sieci testowej, odwiedź <a href="https://goerli.launchpad.ethereum.org">Goerli Testnet Staking Launchpad</a>, aby rozpocząć.
 
@@ -214,5 +214,5 @@ Nie. Po wyjściu walidatora i wypłaceniu jego pełnego salda wszelkie dodatkowe
 - [EIP-4895: Wypłaty z łańcucha śledzącego jako operacje](https://eips.ethereum.org/EIPS/eip-4895)
 - [Ethereum Cat Herders — Szanghaj](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Wypłata zestakowanego ETH (testowanie) z Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Łańcuch śledzący wywiera wypłaty jako operacje z Alexem Stokesem](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [PEEPanEIP#68: EIP-4895: Wypłaty push łańcucha śledzącego jako operacje z Alexem Stokesem](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Zrozumienie efektywnego bilansu walidatora](https://www.attestant.io/posts/understanding-validator-effective-balance/)

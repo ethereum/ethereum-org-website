@@ -35,6 +35,7 @@ const FixedDot = ({
   isExpanded,
   ...props
 }: FixedDotProps) => {
+  const { t } = useTranslation("common")
   const size = "3rem"
   return (
     <Button
@@ -60,6 +61,7 @@ const FixedDot = ({
       }}
       transition="transform 0.2s ease-in-out, width 0.25s ease-in-out,
       border-radius 0.25s linear"
+      aria-label={t("feedback-widget")}
       {...props}
     >
       {children}

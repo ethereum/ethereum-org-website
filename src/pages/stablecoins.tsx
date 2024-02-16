@@ -521,7 +521,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <Box>
                       <ButtonLink
                         variant="outline"
-                        to="https://kb.oasis.app/help/what-is-dai"
+                        to="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
                         isSecondary
                       >
                         {t("page-stablecoins-dai-banner-learn-button")}
@@ -564,7 +564,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <ButtonLink
                       mb={4}
                       me={4}
-                      to="https://matcha.xyz/markets/ETH/USDC"
+                      to="https://matcha.xyz/tokens/ethereum/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
                     >
                       {t("page-stablecoins-usdc-banner-swap-button")}
                     </ButtonLink>
@@ -726,6 +726,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       </Content>
       <Box id="tools" py={12} px={8} w="full">
         <H2>{t("page-stablecoins-tools-title")}</H2>
+        
         <Flex
           alignItems="flex-start"
           width="full"
@@ -744,7 +745,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           >
             <ProductList
               actionLabel={t("page-stablecoins:page-dapps-ready-button")}
-              category="Dashboards & Education"
+              category={t("page-stablecoins-category-dashboard-and-education")}
               content={toolsData}
             />
           </Box>

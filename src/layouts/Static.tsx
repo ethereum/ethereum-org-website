@@ -7,6 +7,7 @@ import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
+import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
@@ -91,12 +92,13 @@ export const StaticLayout = ({
   lastUpdatedDate,
   contentNotTranslated,
 }: StaticLayoutProps) => {
-  const { locale } = useRouter()
+  const { locale, asPath } = useRouter()
 
   const absoluteEditPath = getEditPath(slug)
 
   return (
     <Box w="full">
+      <DevconGrantsBanner pathname={asPath} />
       <Flex
         justifyContent="space-between"
         w="full"
