@@ -426,7 +426,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
               <Td lineHeight="revert">
                 <Flex justifyContent="space-between" alignItems="center">
                   <FlexInfo>
-                    <Box>
+                    <Box w="56px">
                       <Image
                         src={wallet.image}
                         alt=""
