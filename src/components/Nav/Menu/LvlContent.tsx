@@ -1,3 +1,4 @@
+import { AnimatePresence, motion, type MotionProps } from "framer-motion"
 import NextLink from "next/link"
 import { useRouter } from "next/router"
 import {
@@ -22,6 +23,7 @@ import ItemContent from "./ItemContent"
 import NextChevron from "./NextChevron"
 
 import { useNavMenuColors } from "@/hooks/useNavMenuColors"
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 type LvlContentProps = {
   lvl: Level
@@ -40,111 +42,127 @@ type LvlContentProps = {
 const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
   const { asPath, locale } = useRouter()
   const menuColors = useNavMenuColors()
+  const { isRtl } = useRtlFlip()
 
   if (lvl > 3) return null
 
   const pad = 4 // Chakra-UI space token
 
-  const getColumns = (lvl: Level) => {
-    const count = 4 - lvl // lvl 1: 3 cols, lvl 2: 2, lvl 3: 1
-    return `repeat(${count}, 1fr)`
+  const templateColumns = `repeat(${4 - lvl}, 1fr)`
+
+  const menuVariants: MotionProps["variants"] = {
+    closed: { opacity: 0, scaleX: 0.8, originX: isRtl ? 1 : 0 },
+    open: { opacity: 1, scaleX: 1 },
   }
 
   return (
     <NavigationMenu.Sub orientation="vertical" asChild>
-      <Grid w="full" h="full" gridTemplateColumns={getColumns(lvl)}>
-        <NavigationMenu.List asChild>
-          <UnorderedList listStyleType="none" p={pad / 2} m="0">
-            {items.map((item) => {
-              const { label, description, icon, ...action } = item
-              const subItems = action.items || []
-              const isLink = "href" in action
-              const isActivePage = isLink && cleanPath(asPath) === action.href
-              const activeStyles = {
-                outline: "none",
-                rounded: "md",
-                "p, svg": { color: menuColors.highlight },
-                bg: menuColors.lvl[lvl].activeBackground,
-                boxShadow: "none",
-              }
-              const buttonProps: ButtonProps = {
-                color: menuColors.body,
-                leftIcon: lvl === 1 && icon ? <Icon as={icon} /> : undefined,
-                rightIcon: isLink ? undefined : <NextChevron />,
-                position: "relative",
-                w: "full",
-                me: -pad,
-                sx: {
-                  "span:first-of-type": { m: 0, me: 4 }, // Spacing for icon
-                },
-                py: pad,
-                bg: isActivePage
-                  ? menuColors.lvl[lvl].activeBackground
-                  : "none",
-                _hover: activeStyles,
-                _focus: activeStyles,
-                variant: "ghost",
-              }
-              return (
-                <NavigationMenu.Item key={label} asChild>
-                  <ListItem
-                    mb={pad / 2}
-                    _last={{ mb: 0 }}
-                    sx={{
-                      '&:has(button[data-state="open"])': {
-                        roundedStart: "md",
-                        roundedEnd: "none",
-                        bg: menuColors.lvl[lvl].activeBackground,
-                        me: -pad,
-                        pe: pad,
-                      },
-                    }}
-                  >
-                    {isLink ? (
-                      <NextLink href={action.href!} passHref legacyBehavior>
-                        <NavigationMenu.Link asChild>
-                          <Button
-                            as={Link}
-                            onClick={() =>
-                              trackCustomEvent({
-                                eventCategory: "Desktop navigation menu",
-                                eventAction: `Menu - ${activeSection} - ${locale}`,
-                                eventName: action.href!,
-                              })
-                            }
-                            {...buttonProps}
-                          >
-                            <ItemContent item={item} lvl={lvl} />
-                          </Button>
-                        </NavigationMenu.Link>
-                      </NextLink>
-                    ) : (
-                      <>
-                        <NavigationMenu.Trigger asChild>
-                          <Button {...buttonProps}>
-                            <ItemContent item={item} lvl={lvl} />
-                          </Button>
-                        </NavigationMenu.Trigger>
-                        <NavigationMenu.Content asChild>
-                          <Box bg={menuColors.lvl[lvl + 1].background} h="full">
-                            <LvlContent
-                              lvl={(lvl + 1) as Level}
-                              items={subItems}
-                              activeSection={activeSection}
-                            />
-                          </Box>
-                        </NavigationMenu.Content>
-                      </>
-                    )}
-                  </ListItem>
-                </NavigationMenu.Item>
-              )
-            })}
-          </UnorderedList>
-        </NavigationMenu.List>
-
-        <NavigationMenu.Viewport style={{ gridColumn: "2/4" }} />
-      </Grid>
+      <AnimatePresence>
+        <Grid
+          as={motion.div}
+          variants={menuVariants}
+          initial="closed"
+          animate="open"
+          exit="closed"
+          w="full"
+          h="full"
+          gridTemplateColumns={templateColumns}
+        >
+          <NavigationMenu.List asChild>
+            <UnorderedList listStyleType="none" p={pad / 2} m="0">
+              {items.map((item) => {
+                const { label, description, icon, ...action } = item
+                const subItems = action.items || []
+                const isLink = "href" in action
+                const isActivePage = isLink && cleanPath(asPath) === action.href
+                const activeStyles = {
+                  outline: "none",
+                  rounded: "md",
+                  "p, svg": { color: menuColors.highlight },
+                  bg: menuColors.lvl[lvl].activeBackground,
+                  boxShadow: "none",
+                }
+                const buttonProps: ButtonProps = {
+                  color: menuColors.body,
+                  leftIcon: lvl === 1 && icon ? <Icon as={icon} /> : undefined,
+                  rightIcon: isLink ? undefined : <NextChevron />,
+                  position: "relative",
+                  w: "full",
+                  me: -pad,
+                  sx: {
+                    "span:first-of-type": { m: 0, me: 4 }, // Spacing for icon
+                  },
+                  py: pad,
+                  bg: isActivePage
+                    ? menuColors.lvl[lvl].activeBackground
+                    : "none",
+                  _hover: activeStyles,
+                  _focus: activeStyles,
+                  variant: "ghost",
+                }
+                return (
+                  <NavigationMenu.Item key={label} asChild>
+                    <ListItem
+                      mb={pad / 2}
+                      _last={{ mb: 0 }}
+                      sx={{
+                        '&:has(button[data-state="open"])': {
+                          roundedStart: "md",
+                          roundedEnd: "none",
+                          bg: menuColors.lvl[lvl].activeBackground,
+                          me: -pad,
+                          pe: pad,
+                        },
+                      }}
+                    >
+                      {isLink ? (
+                        <NextLink href={action.href!} passHref legacyBehavior>
+                          <NavigationMenu.Link asChild>
+                            <Button
+                              as={Link}
+                              onClick={() =>
+                                trackCustomEvent({
+                                  eventCategory: "Desktop navigation menu",
+                                  eventAction: `Menu - ${activeSection} - ${locale}`,
+                                  eventName: action.href!,
+                                })
+                              }
+                              {...buttonProps}
+                            >
+                              <ItemContent item={item} lvl={lvl} />
+                            </Button>
+                          </NavigationMenu.Link>
+                        </NextLink>
+                      ) : (
+                        <>
+                          <NavigationMenu.Trigger asChild>
+                            <Button {...buttonProps}>
+                              <ItemContent item={item} lvl={lvl} />
+                            </Button>
+                          </NavigationMenu.Trigger>
+                          <NavigationMenu.Content asChild>
+                            <Box
+                              bg={menuColors.lvl[lvl + 1].background}
+                              h="full"
+                            >
+                              <LvlContent
+                                lvl={(lvl + 1) as Level}
+                                items={subItems}
+                                activeSection={activeSection}
+                              />
+                            </Box>
+                          </NavigationMenu.Content>
+                        </>
+                      )}
+                    </ListItem>
+                  </NavigationMenu.Item>
+                )
+              })}
+            </UnorderedList>
+          </NavigationMenu.List>
+          <NavigationMenu.Viewport style={{ gridColumn: "2/4" }} />
+        </Grid>
+      </AnimatePresence>
     </NavigationMenu.Sub>
   )
 }
