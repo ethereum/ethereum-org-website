@@ -1,37 +1,22 @@
-import { useState } from "react"
 import { Box, type BoxProps, Flex } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
 import { Button } from "@/components/Buttons"
 
-// import { trackCustomEvent } from "@/lib/utils/matomo"
 import { SECTION_LABELS } from "@/lib/constants"
 
-import type { NavSectionKey, NavSections } from "../types"
+import type { NavSections } from "../types"
 
 import LvlContent from "./LvlContent"
-
-import { useNavMenuColors } from "@/hooks/useNavMenuColors"
-import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { useNavMenu } from "./useNavMenu"
 
 type NavMenuProps = BoxProps & {
   sections: NavSections
 }
 
 const Menu = ({ sections, ...props }: NavMenuProps) => {
-  const { direction } = useRtlFlip()
-  const menuColors = useNavMenuColors()
-  const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
-
-  const getEnglishSectionName = (
-    activeSection: string
-  ): NavSectionKey | null => {
-    const index = Object.values(sections).findIndex(
-      (section) => section.label === activeSection
-    )
-    if (index < 0) return null
-    return Object.keys(sections)[index] as NavSectionKey
-  }
+  const { direction, menuColors, activeSection, handleSectionChange } =
+    useNavMenu(sections)
 
   return (
     <Box {...props}>
@@ -39,9 +24,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
         dir={direction}
         orientation="horizontal"
         delayDuration={750}
-        onValueChange={(activeSection) => {
-          setActiveSection(getEnglishSectionName(activeSection))
-        }}
+        onValueChange={handleSectionChange}
       >
         <NavigationMenu.List asChild>
           <Flex as="ul" listStyleType="none">
