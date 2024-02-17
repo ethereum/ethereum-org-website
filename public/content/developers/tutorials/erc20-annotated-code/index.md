@@ -794,7 +794,7 @@ Make sure to update `_totalSupply` when the total number of tokens changes.
 
 &nbsp;
 
-```
+```solidity
     /**
      * @dev Destroys `amount` tokens from `account`, reducing the
      * total supply.
