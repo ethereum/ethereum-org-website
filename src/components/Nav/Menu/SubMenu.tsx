@@ -1,6 +1,5 @@
-import { AnimatePresence, motion, type MotionProps } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import NextLink from "next/link"
-import { useRouter } from "next/router"
 import {
   Box,
   Button,
@@ -21,14 +20,13 @@ import type { Level, NavItem, NavSectionKey } from "../types"
 
 import ItemContent from "./ItemContent"
 import NextChevron from "./NextChevron"
-
-import { useNavMenuColors } from "@/hooks/useNavMenuColors"
-import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { useSubMenu } from "./useSubMenu"
 
 type LvlContentProps = {
   lvl: Level
   items: NavItem[]
   activeSection: NavSectionKey | null
+  onClose: () => void
 }
 
 /**
@@ -37,26 +35,36 @@ type LvlContentProps = {
  * @param lvl - The level of the menu
  * @param items - The items to be displayed in the menu
  * @param activeSection - English label of the active section for event tracking
+ * @param onClose - Function to close the menu
  * @returns The JSX element representing the menu content.
  */
-const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
-  const { asPath, locale } = useRouter()
-  const menuColors = useNavMenuColors()
-  const { isRtl } = useRtlFlip()
+const SubMenu = ({
+  lvl,
+  items,
+  activeSection,
+  onClose,
+}: LvlContentProps) => {
+  const {
+    activeSub,
+    asPath,
+    locale,
+    menuColors,
+    menuVariants,
+    PADDING,
+    setActiveSub,
+    handleSubMenuChange,
+  } = useSubMenu()
 
   if (lvl > 3) return null
 
-  const pad = 4 // Chakra-UI space token
-
   const templateColumns = `repeat(${4 - lvl}, 1fr)`
 
-  const menuVariants: MotionProps["variants"] = {
-    closed: { opacity: 0, scaleX: 0.8, originX: isRtl ? 1 : 0 },
-    open: { opacity: 1, scaleX: 1 },
-  }
-
   return (
-    <NavigationMenu.Sub orientation="vertical" asChild>
+    <NavigationMenu.Sub
+      orientation="vertical"
+      asChild
+      onValueChange={handleSubMenuChange}
+    >
       <AnimatePresence>
         <Grid
           as={motion.div}
@@ -69,7 +77,7 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
           gridTemplateColumns={templateColumns}
         >
           <NavigationMenu.List asChild>
-            <UnorderedList listStyleType="none" p={pad / 2} m="0">
+            <UnorderedList listStyleType="none" p={PADDING / 2} m="0">
               {items.map((item) => {
                 const { label, description, icon, ...action } = item
                 const subItems = action.items || []
@@ -88,11 +96,11 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
                   rightIcon: isLink ? undefined : <NextChevron />,
                   position: "relative",
                   w: "full",
-                  me: -pad,
+                  me: -PADDING,
                   sx: {
                     "span:first-of-type": { m: 0, me: 4 }, // Spacing for icon
                   },
-                  py: pad,
+                  py: PADDING,
                   bg: isActivePage
                     ? menuColors.lvl[lvl].activeBackground
                     : "none",
@@ -101,17 +109,17 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
                   variant: "ghost",
                 }
                 return (
-                  <NavigationMenu.Item key={label} asChild>
+                  <NavigationMenu.Item key={label} asChild value={label}>
                     <ListItem
-                      mb={pad / 2}
+                      mb={PADDING / 2}
                       _last={{ mb: 0 }}
                       sx={{
                         '&:has(button[data-state="open"])': {
                           roundedStart: "md",
                           roundedEnd: "none",
                           bg: menuColors.lvl[lvl].activeBackground,
-                          me: -pad,
-                          pe: pad,
+                          me: -PADDING,
+                          pe: PADDING,
                         },
                       }}
                     >
@@ -120,13 +128,14 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
                           <NavigationMenu.Link asChild>
                             <Button
                               as={Link}
-                              onClick={() =>
+                              onClick={() => {
+                                onClose()
                                 trackCustomEvent({
                                   eventCategory: "Desktop navigation menu",
                                   eventAction: `Menu - ${activeSection} - ${locale}`,
                                   eventName: action.href!,
                                 })
-                              }
+                              }}
                               {...buttonProps}
                             >
                               <ItemContent item={item} lvl={lvl} />
@@ -145,10 +154,11 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
                               bg={menuColors.lvl[lvl + 1].background}
                               h="full"
                             >
-                              <LvlContent
+                              <SubMenu
                                 lvl={(lvl + 1) as Level}
                                 items={subItems}
                                 activeSection={activeSection}
+                                onClose={onClose}
                               />
                             </Box>
                           </NavigationMenu.Content>
@@ -167,4 +177,4 @@ const LvlContent = ({ lvl, items, activeSection }: LvlContentProps) => {
   )
 }
 
-export default LvlContent
+export default SubMenu

@@ -9,7 +9,7 @@ import { SECTION_LABELS } from "@/lib/constants"
 
 import type { NavSections } from "../types"
 
-import LvlContent from "./LvlContent"
+import SubMenu from "./LvlContent"
 import { useNavMenu } from "./useNavMenu"
 
 type NavMenuProps = BoxProps & {
@@ -93,7 +93,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                         borderColor={menuColors.stroke}
                         bg={menuColors.lvl[1].background}
                       >
-                        <LvlContent
+                        <SubMenu
                           lvl={1}
                           items={items}
                           activeSection={activeSection}
