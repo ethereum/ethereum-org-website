@@ -1333,7 +1333,7 @@ const DappsPage = () => {
     <Page>
       <PageMetadata
         title={t("common:decentralized-applications-dapps")}
-        description={t("common:page-dapps-desc")}
+        description={t("page-dapps-desc")}
         image="/doge-computer.png"
       />
       <PageHero content={heroContent} />
