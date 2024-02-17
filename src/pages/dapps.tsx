@@ -85,7 +85,6 @@ import loopring from "@/public/dapps/loopring.png"
 import marble from "@/public/dapps/marble.png"
 import matcha from "@/public/dapps/matcha.png"
 import mirror from "@/public/dapps/mirror.png"
-import multichain from "@/public/dapps/multichain.png"
 import nexus from "@/public/dapps/nexus.png"
 import nifty from "@/public/dapps/nifty.png"
 import opensea from "@/public/dapps/opensea.png"
@@ -1209,13 +1208,6 @@ const DappsPage = () => {
   ]
 
   const bridges = [
-    {
-      title: "Multichain",
-      description: t("page-dapps-dapp-description-multichain"),
-      link: "https://multichain.xyz/",
-      image: multichain,
-      alt: t("page-dapps-multichain-logo-alt"),
-    },
     {
       title: "Rubic",
       description: t("page-dapps-dapp-description-rubic"),
