@@ -77,6 +77,7 @@ const QuizzesHubPage: NextPage<
       <PageMetadata
         title={t("quizzes-title")}
         description={t("quizzes-subtitle")}
+        image="/heroes/quizzes-hub-hero.png"
       />
       <HubHero
         title={t("quizzes-title")}

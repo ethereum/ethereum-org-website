@@ -403,6 +403,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       <PageMetadata
         title={t("page-stablecoins-title")}
         description={t("page-stablecoins-meta-description")}
+        image="/stablecoins/hero.png"
       />
       <PageHero isReverse content={heroContent} />
       <Divider />

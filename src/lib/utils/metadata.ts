@@ -4,9 +4,11 @@ import { DEFAULT_OG_IMAGE } from "@/lib/constants"
  * List of default og images for different sections
  */
 const imageForSlug = [
-  { section: "developers", image: "/enterprise-eth.png" },
-  { section: "dapps", image: "/doge-computer.png" },
-  { section: "roadmap", image: "/upgrades/upgrade_doge.png" },
+  { section: "developers", image: "/heroes/developers-hub-hero.jpg" },
+  { section: "roadmap", image: "/heroes/roadmap-hub-hero.jpg" },
+  { section: "guides", image: "/heroes/guides-hub-hero.jpg" },
+  { section: "community", image: "/heroes/community-hero.png" },
+  { section: "staking", image: "/upgrades/upgrade_rhino.png" },
 ] as const
 
 /**

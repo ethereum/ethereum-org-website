@@ -217,6 +217,7 @@ const DevelopersPage = () => {
       <PageMetadata
         title={t("page-developers-index:page-developer-meta-title")}
         description={t("page-developers-index:page-developers-meta-desc")}
+        image="/heroes/developers-hub-hero.jpg"
       />
       <HubHero
         heroImg={HeroImage}
