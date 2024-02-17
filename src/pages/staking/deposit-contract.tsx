@@ -1,20 +1,20 @@
-import { ReactNode, useEffect, useState } from "react"
-import makeBlockie from "ethereum-blockies-base64"
-import { type GetStaticProps } from "next"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   Button,
-  type ButtonProps,
   Checkbox,
   Flex,
   Heading,
   Img,
   Text,
   useToken,
+  type ButtonProps,
 } from "@chakra-ui/react"
+import makeBlockie from "ethereum-blockies-base64"
+import { type GetStaticProps } from "next"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useRouter } from "next/router"
+import { ReactNode, useEffect, useState } from "react"
 
 import type { BasePageProps, ChildOnlyProp, TranslationKey } from "@/lib/types"
 
@@ -351,7 +351,7 @@ const DepositContractPage = () => {
           <OldHeading>{t("page-staking-deposit-contract-h2")}</OldHeading>
           <Text>
             {t("page-staking-deposit-contract-staking")}{" "}
-            <InlineLink to="/staking/">
+            <InlineLink href="/staking/">
               {t("page-staking-deposit-contract-staking-more-link")}
             </InlineLink>
           </Text>
@@ -478,7 +478,7 @@ const DepositContractPage = () => {
               <InfoBanner isWarning emoji=":warning:">
                 <div>
                   {t("page-staking-deposit-contract-warning-2")}{" "}
-                  <InlineLink to="https://launchpad.ethereum.org">
+                  <InlineLink href="https://launchpad.ethereum.org">
                     {t("page-staking-deposit-contract-launchpad-2")}
                   </InlineLink>
                 </div>

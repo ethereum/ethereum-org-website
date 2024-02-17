@@ -1,7 +1,3 @@
-import { ComponentPropsWithRef } from "react"
-import { GetStaticProps } from "next/types"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   BoxProps,
@@ -19,6 +15,10 @@ import {
   Tr,
   UnorderedList,
 } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { GetStaticProps } from "next/types"
+import { ComponentPropsWithRef } from "react"
 
 import { BasePageProps } from "@/lib/types"
 
@@ -260,7 +260,7 @@ const GasPage = () => {
             <Text>{t("page-gas-what-causes-high-gas-fees-text-3")}</Text>
             <Text>
               {t("page-gas-want-to-dive-deeper")}{" "}
-              <InlineLink to="/developers/docs/gas/">
+              <InlineLink href="/developers/docs/gas/">
                 {t("page-gas-check-out-the-developer-docs")}
               </InlineLink>
             </Text>

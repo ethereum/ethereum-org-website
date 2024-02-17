@@ -1,7 +1,3 @@
-import { useRouter } from "next/router"
-import { GetStaticProps } from "next/types"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   BoxProps,
@@ -11,6 +7,10 @@ import {
   SimpleGrid,
   UnorderedList,
 } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useRouter } from "next/router"
+import { GetStaticProps } from "next/types"
 
 import { AllTimeData, BasePageProps, Unpacked } from "@/lib/types"
 
@@ -150,7 +150,7 @@ const Contributors = () => {
         </Text>
         <Text>
           {t("page-languages:page-languages-interested")}{" "}
-          <InlineLink to="/contributing/translation-program/">
+          <InlineLink href="/contributing/translation-program/">
             {t("page-languages:page-languages-learn-more")}
           </InlineLink>
           .
@@ -178,7 +178,7 @@ const Contributors = () => {
         </SimpleGrid>
         <Text>
           {t("page-languages:page-languages-interested")}{" "}
-          <InlineLink to="/contributing/translation-program/">
+          <InlineLink href="/contributing/translation-program/">
             {t("page-languages:page-languages-learn-more")}
           </InlineLink>
           .

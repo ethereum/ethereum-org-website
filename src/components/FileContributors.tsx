@@ -1,18 +1,18 @@
-import { useState } from "react"
-import { useRouter } from "next/router"
 import {
   Avatar,
+  Skeleton as ChakraSkeleton,
+  SkeletonCircle as ChakraSkeletonCircle,
   Flex,
   FlexProps,
   Heading,
   ListItem,
   ModalBody,
   ModalHeader,
-  Skeleton as ChakraSkeleton,
-  SkeletonCircle as ChakraSkeletonCircle,
   UnorderedList,
   VStack,
 } from "@chakra-ui/react"
+import { useRouter } from "next/router"
+import { useState } from "react"
 
 import type { Author, Lang } from "@/lib/types"
 
@@ -60,7 +60,7 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
         me={2}
       />
       {contributor.user && (
-        <InlineLink to={contributor.user.url}>
+        <InlineLink href={contributor.user.url}>
           @{contributor.user.login}
         </InlineLink>
       )}
@@ -147,7 +147,7 @@ const FileContributors = ({
             <Text m={0} color="text200">
               <Translation id="last-edit" />:{" "}
               {lastContributor.user && (
-                <InlineLink to={lastContributor.user.url}>
+                <InlineLink href={lastContributor.user.url}>
                   @{lastContributor.user.login}
                 </InlineLink>
               )}

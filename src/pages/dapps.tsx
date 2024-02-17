@@ -1,22 +1,22 @@
-import { type ComponentPropsWithRef, useEffect, useRef, useState } from "react"
-import { type GetStaticProps } from "next"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Badge,
   Box,
   Button,
-  type ButtonProps,
   Divider as ChakraDivider,
-  type DividerProps,
   Flex,
-  type FlexProps,
   Heading,
-  type HeadingProps,
   SimpleGrid,
   useToken,
+  type ButtonProps,
+  type DividerProps,
+  type FlexProps,
+  type HeadingProps,
 } from "@chakra-ui/react"
+import { type GetStaticProps } from "next"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useRouter } from "next/router"
+import { useEffect, useRef, useState, type ComponentPropsWithRef } from "react"
 
 import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
@@ -107,8 +107,10 @@ import dai from "@/public/dapps/stabledai.png"
 import status from "@/public/dapps/status.png"
 import superrare from "@/public/dapps/superrare.png"
 import synthetix from "@/public/dapps/synthetix.png"
-import uniswapec from "@/public/dapps/uni.png"
-import uniswap from "@/public/dapps/uni.png"
+import {
+  default as uniswap,
+  default as uniswapec,
+} from "@/public/dapps/uni.png"
 import xmtp from "@/public/dapps/xmtp.png"
 import yearn from "@/public/dapps/yearn.png"
 import zapper from "@/public/dapps/zapper.png"
@@ -1858,7 +1860,7 @@ const DappsPage = () => {
           <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             {t("page-dapps-magic-behind-dapps-description")}
           </Text>
-          <InlineLink to="/what-is-ethereum/">
+          <InlineLink href="/what-is-ethereum/">
             {t("page-dapps-magic-behind-dapps-link")}
           </InlineLink>
         </Flex>

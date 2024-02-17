@@ -1,7 +1,3 @@
-import { useRouter } from "next/router"
-import { GetStaticProps } from "next/types"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   BoxProps,
@@ -11,6 +7,10 @@ import {
   ListItem,
   useColorModeValue,
 } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useRouter } from "next/router"
+import { GetStaticProps } from "next/types"
 
 import { BasePageProps } from "@/lib/types"
 
@@ -122,7 +122,7 @@ const TranslatorAcknowledgements = () => {
               {t(
                 "page-contributing-translation-program-acknowledgements-acknowledgement-page-3"
               )}{" "}
-              <InlineLink to="/contributing/translation-program/contributors/">
+              <InlineLink href="/contributing/translation-program/contributors/">
                 {t(
                   "page-contributing-translation-program-acknowledgements-acknowledgement-page-link"
                 )}
@@ -283,7 +283,7 @@ const TranslatorAcknowledgements = () => {
             {t(
               "page-contributing-translation-program-acknowledgements-how-to-claim-1"
             )}{" "}
-            <InlineLink to="https://discord.gg/CetY6Y4">
+            <InlineLink href="https://discord.gg/CetY6Y4">
               {t(
                 "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord"
               )}
