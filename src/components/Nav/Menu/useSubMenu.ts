@@ -12,7 +12,7 @@ export const useSubMenu = () => {
   const { isRtl } = useRtlFlip()
 
   const menuVariants: MotionProps["variants"] = {
-    closed: { opacity: 0, scaleX: 0.8, originX: isRtl ? 1 : 0 },
+    closed: { opacity: 0, scaleX: 0.9, originX: isRtl ? 1 : 0 },
     open: { opacity: 1, scaleX: 1, originX: isRtl ? 1 : 0 },
   }
 
