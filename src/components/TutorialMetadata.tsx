@@ -1,9 +1,9 @@
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
 import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+import { useRouter } from "next/router"
 
-import type { Lang, TranslationKey } from "@/lib/types"
 import { TutorialFrontmatter } from "@/lib/interfaces"
+import type { Lang, TranslationKey } from "@/lib/types"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
@@ -81,7 +81,7 @@ const TutorialMetadata = ({
         {hasSource && (
           <Box>
             <Emoji fontSize="sm" me={2} text=":books:" />
-            <InlineLink to={frontmatter.sourceUrl}>
+            <InlineLink href={frontmatter.sourceUrl}>
               {frontmatter.source}
             </InlineLink>
           </Box>

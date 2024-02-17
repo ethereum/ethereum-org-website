@@ -1,7 +1,7 @@
+import { Box, Flex, Icon, Text, VStack } from "@chakra-ui/react"
 import { kebabCase } from "lodash"
 import { MdInfoOutline } from "react-icons/md"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
-import { Box, Flex, Icon, Text, VStack } from "@chakra-ui/react"
 
 import type { StatsBoxMetric } from "@/lib/types"
 
@@ -16,7 +16,7 @@ import Translation from "../Translation"
 const tooltipContent = (metric: StatsBoxMetric) => (
   <div>
     <Translation id="data-provided-by" />{" "}
-    <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
+    <InlineLink href={metric.apiUrl}>{metric.apiProvider}</InlineLink>
   </div>
 )
 

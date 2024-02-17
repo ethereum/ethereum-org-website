@@ -1,9 +1,3 @@
-import { useEffect, useMemo, useState } from "react"
-import { GetStaticProps, InferGetServerSidePropsType } from "next"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { FaGithub } from "react-icons/fa"
 import {
   Badge,
   Box,
@@ -13,6 +7,12 @@ import {
   Heading,
   useToken,
 } from "@chakra-ui/react"
+import { GetStaticProps, InferGetServerSidePropsType } from "next"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useRouter } from "next/router"
+import { useEffect, useMemo, useState } from "react"
+import { FaGithub } from "react-icons/fa"
 
 import { BasePageProps, Lang } from "@/lib/types"
 
@@ -246,7 +246,7 @@ const TutorialPage = ({
         </Heading>
         <Text>
           <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />{" "}
-          <InlineLink to="/contributing/content-resources/">
+          <InlineLink href="/contributing/content-resources/">
             <Translation id="page-developers-tutorials:page-tutorial-listing-policy" />
           </InlineLink>
         </Text>

@@ -1,12 +1,10 @@
-import { join } from "path"
-
-import React, { useState } from "react"
+import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 import { GetStaticProps } from "next"
-import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { useRouter } from "next/router"
+import React, { useState } from "react"
 import { MdClose } from "react-icons/md"
-import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import { BasePageProps, I18nLocale, TranslationKey } from "@/lib/types"
 
@@ -103,14 +101,14 @@ const LanguagesPage = () => {
           <Text>{t("page-languages-p1")}</Text>
           <Text>
             {t("page-languages-interested")}{" "}
-            <InlineLink to="/contributing/translation-program/">
+            <InlineLink href="/contributing/translation-program/">
               {t("page-languages-learn-more")}
             </InlineLink>
             .
           </Text>
           <Text>
             {t("page-languages-resources-paragraph")}{" "}
-            <InlineLink to="/community/language-resources">
+            <InlineLink href="/community/language-resources">
               {t("page-languages-resources-link")}
             </InlineLink>
             .
@@ -205,7 +203,7 @@ const LanguagesPage = () => {
           </OldHeading>
           <Text>
             {t("page-languages-want-more-paragraph")}{" "}
-            <InlineLink to="/contributing/translation-program/">
+            <InlineLink href="/contributing/translation-program/">
               {t("page-languages-want-more-link")}
             </InlineLink>
             .

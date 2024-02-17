@@ -1,7 +1,7 @@
 // Libraries
-import { StaticImageData } from "next/image"
-import { useTranslation } from "next-i18next"
 import { Box, Center, Flex, Heading } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+import { StaticImageData } from "next/image"
 
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"
@@ -83,17 +83,17 @@ const Layer2ProductCard = ({
           )}
         </Box>
         {bridge && (
-          <InlineLink to={bridge}>
+          <InlineLink href={bridge}>
             {name} {t("layer-2-bridge")}
           </InlineLink>
         )}
         {ecosystemPortal && (
-          <InlineLink to={ecosystemPortal}>
+          <InlineLink href={ecosystemPortal}>
             {name} {t("layer-2-ecosystem-portal")}
           </InlineLink>
         )}
         {tokenLists && (
-          <InlineLink to={tokenLists}>
+          <InlineLink href={tokenLists}>
             {name} {t("layer-2-token-lists")}
           </InlineLink>
         )}

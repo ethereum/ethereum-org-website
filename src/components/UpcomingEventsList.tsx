@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react"
-import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+import { useEffect, useState } from "react"
 
 import type { CommunityConference } from "@/lib/types"
 
@@ -86,7 +86,7 @@ const UpcomingEventsList = () => {
     return (
       <InfoBanner emoji=":information_source:">
         {t("page-community-upcoming-events-no-events")}{" "}
-        <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
+        <InlineLink href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
           {t("page-community-please-add-to-page")}
         </InlineLink>
       </InfoBanner>

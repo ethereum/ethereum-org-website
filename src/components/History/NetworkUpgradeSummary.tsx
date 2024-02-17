@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react"
-import { useRouter } from "next/router"
-import { useTranslation } from "next-i18next"
 import { Flex, Stack, Text } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+import { useRouter } from "next/router"
+import { useEffect, useState } from "react"
 
 import type { Lang } from "@/lib/types"
 
@@ -48,11 +48,11 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
-      <Flex whiteSpace='pre-wrap'>
+      <Flex whiteSpace="pre-wrap">
         <Emoji fontSize="sm" me={2} text=":bricks:" />
         {t(translationKey)}:{" "}
-        <InlineLink to={`${explorerUrl}${number}`}>
-         {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
+        <InlineLink href={`${explorerUrl}${number}`}>
+          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
         </InlineLink>
       </Flex>
     )
@@ -97,7 +97,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
       {waybackLink && (
         <Flex>
           <Emoji fontSize="sm" me={2} text=":desktop_computer:" />
-          <InlineLink to={waybackLink}>
+          <InlineLink href={waybackLink}>
             {t("page-history:page-history-ethereum-org-wayback")}
           </InlineLink>
         </Flex>

@@ -1,6 +1,3 @@
-import { useState } from "react"
-import { StaticImageData } from "next/image"
-import { useTranslation } from "next-i18next"
 import {
   Box,
   chakra,
@@ -10,6 +7,9 @@ import {
   Stack,
   UnorderedList,
 } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+import { StaticImageData } from "next/image"
+import { useState } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 
@@ -240,7 +240,7 @@ const Layer2Onboard = ({
             <H4>{t("layer-2-onboard-wallet-title")}</H4>
             <Text>{t("layer-2-onboard-wallet-1")}</Text>
             <Text>
-              <InlineLink to="/bridges/">
+              <InlineLink href="/bridges/">
                 {t("layer-2-more-on-bridges")}
               </InlineLink>
             </Text>
@@ -269,7 +269,7 @@ const Layer2Onboard = ({
             <Text>{t("layer-2-onboard-exchange-1")}</Text>
             <Text>
               {t("layer-2-onboard-exchange-2")}{" "}
-              <InlineLink to="/wallets/find-wallet/">
+              <InlineLink href="/wallets/find-wallet/">
                 {t("layer-2-onboard-find-a-wallet")}
               </InlineLink>
             </Text>
