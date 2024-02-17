@@ -7,36 +7,20 @@ import { Button } from "@/components/Buttons"
 
 import { SECTION_LABELS } from "@/lib/constants"
 
-import type { NavSectionKey, NavSections } from "../types"
+import type { NavSections } from "../types"
 
 import LvlContent from "./LvlContent"
-
-import { useNavMenuColors } from "@/hooks/useNavMenuColors"
-import { useRtlFlip } from "@/hooks/useRtlFlip"
+import { useNavMenu } from "./useNavMenu"
 
 type NavMenuProps = BoxProps & {
   sections: NavSections
 }
 
 const Menu = ({ sections, ...props }: NavMenuProps) => {
-  const { direction } = useRtlFlip()
-  const menuColors = useNavMenuColors()
-  const [activeSection, setActiveSection] = useState<NavSectionKey | null>(null)
+  const { direction, menuColors, activeSection, handleSectionChange } =
+    useNavMenu(sections)
+
   const isOpen = activeSection !== null
-
-  const getEnglishSectionName = (
-    activeSection: string
-  ): NavSectionKey | null => {
-    const index = Object.values(sections).findIndex(
-      (section) => section.label === activeSection
-    )
-    if (index < 0) return null
-    return Object.keys(sections)[index] as NavSectionKey
-  }
-
-  const handleSectionChange = (activeSection: string) => {
-    setActiveSection(getEnglishSectionName(activeSection))
-  }
 
   const containerVariants: MotionProps["variants"] = {
     open: {
