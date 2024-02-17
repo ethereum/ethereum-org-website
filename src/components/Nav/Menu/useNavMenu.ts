@@ -1,4 +1,5 @@
 import { useState } from "react"
+import type { MotionProps } from "framer-motion"
 
 import type { NavSectionKey, NavSections } from "../types"
 
@@ -24,10 +25,30 @@ export const useNavMenu = (sections: NavSections) => {
     setActiveSection(getEnglishSectionName(activeSection))
   }
 
+  const isOpen = activeSection !== null
+
+  const onClose = () => {
+    setActiveSection(null)
+  }
+
+  const containerVariants: MotionProps["variants"] = {
+    open: {
+      opacity: 1,
+      maxHeight: "100vh",
+      transition: { duration: 0.2 },
+    },
+    closed: {
+      opacity: 0,
+    },
+  }
+
   return {
-    direction,
-    menuColors,
     activeSection,
+    containerVariants,
+    direction,
     handleSectionChange,
+    isOpen,
+    menuColors,
+    onClose,
   }
 }

@@ -38,33 +38,15 @@ type LvlContentProps = {
  * @param onClose - Function to close the menu
  * @returns The JSX element representing the menu content.
  */
-const SubMenu = ({
-  lvl,
-  items,
-  activeSection,
-  onClose,
-}: LvlContentProps) => {
-  const {
-    activeSub,
-    asPath,
-    locale,
-    menuColors,
-    menuVariants,
-    PADDING,
-    setActiveSub,
-    handleSubMenuChange,
-  } = useSubMenu()
+const SubMenu = ({ lvl, items, activeSection, onClose }: LvlContentProps) => {
+  const { asPath, locale, menuColors, menuVariants, PADDING } = useSubMenu()
 
   if (lvl > 3) return null
 
   const templateColumns = `repeat(${4 - lvl}, 1fr)`
 
   return (
-    <NavigationMenu.Sub
-      orientation="vertical"
-      asChild
-      onValueChange={handleSubMenuChange}
-    >
+    <NavigationMenu.Sub orientation="vertical" asChild>
       <AnimatePresence>
         <Grid
           as={motion.div}
@@ -109,7 +91,7 @@ const SubMenu = ({
                   variant: "ghost",
                 }
                 return (
-                  <NavigationMenu.Item key={label} asChild value={label}>
+                  <NavigationMenu.Item key={label} asChild>
                     <ListItem
                       mb={PADDING / 2}
                       _last={{ mb: 0 }}

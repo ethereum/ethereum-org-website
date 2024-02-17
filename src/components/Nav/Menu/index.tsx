@@ -1,5 +1,4 @@
-import { useState } from "react"
-import { AnimatePresence, motion, MotionProps } from "framer-motion"
+import { AnimatePresence, motion } from "framer-motion"
 import { Box, type BoxProps, Flex, Text } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
@@ -9,7 +8,7 @@ import { SECTION_LABELS } from "@/lib/constants"
 
 import type { NavSections } from "../types"
 
-import SubMenu from "./LvlContent"
+import SubMenu from "./SubMenu"
 import { useNavMenu } from "./useNavMenu"
 
 type NavMenuProps = BoxProps & {
@@ -17,21 +16,15 @@ type NavMenuProps = BoxProps & {
 }
 
 const Menu = ({ sections, ...props }: NavMenuProps) => {
-  const { direction, menuColors, activeSection, handleSectionChange } =
-    useNavMenu(sections)
-
-  const isOpen = activeSection !== null
-
-  const containerVariants: MotionProps["variants"] = {
-    open: {
-      opacity: 1,
-      maxHeight: "100vh",
-      transition: { duration: 0.2 },
-    },
-    closed: {
-      opacity: 0,
-    },
-  }
+  const {
+    activeSection,
+    containerVariants,
+    direction,
+    handleSectionChange,
+    isOpen,
+    menuColors,
+    onClose,
+  } = useNavMenu(sections)
 
   return (
     <Box {...props}>
@@ -97,6 +90,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                           lvl={1}
                           items={items}
                           activeSection={activeSection}
+                          onClose={onClose}
                         />
                       </Box>
                     </NavigationMenu.Content>
