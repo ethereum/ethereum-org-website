@@ -1,20 +1,20 @@
+import { ReactNode, useEffect, useState } from "react"
+import makeBlockie from "ethereum-blockies-base64"
+import { type GetStaticProps } from "next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   Button,
+  type ButtonProps,
   Checkbox,
   Flex,
   Heading,
   Img,
   Text,
   useToken,
-  type ButtonProps,
 } from "@chakra-ui/react"
-import makeBlockie from "ethereum-blockies-base64"
-import { type GetStaticProps } from "next"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useRouter } from "next/router"
-import { ReactNode, useEffect, useState } from "react"
 
 import type { BasePageProps, ChildOnlyProp, TranslationKey } from "@/lib/types"
 

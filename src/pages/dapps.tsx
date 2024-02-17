@@ -1,22 +1,22 @@
+import { type ComponentPropsWithRef,useEffect, useRef, useState } from "react"
+import { type GetStaticProps } from "next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Badge,
   Box,
   Button,
+  type ButtonProps,
   Divider as ChakraDivider,
+  type DividerProps,
   Flex,
+  type FlexProps,
   Heading,
+  type HeadingProps,
   SimpleGrid,
   useToken,
-  type ButtonProps,
-  type DividerProps,
-  type FlexProps,
-  type HeadingProps,
 } from "@chakra-ui/react"
-import { type GetStaticProps } from "next"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useRouter } from "next/router"
-import { useEffect, useRef, useState, type ComponentPropsWithRef } from "react"
 
 import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 

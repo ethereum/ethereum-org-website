@@ -1,7 +1,7 @@
-import { Flex, Stack, Text } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-import { useRouter } from "next/router"
 import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { Flex, Stack, Text } from "@chakra-ui/react"
 
 import type { Lang } from "@/lib/types"
 

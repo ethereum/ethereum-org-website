@@ -1,3 +1,6 @@
+import { useState } from "react"
+import { StaticImageData } from "next/image"
+import { useTranslation } from "next-i18next"
 import {
   Box,
   chakra,
@@ -7,9 +10,6 @@ import {
   Stack,
   UnorderedList,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-import { StaticImageData } from "next/image"
-import { useState } from "react"
 
 import type { ChildOnlyProp } from "@/lib/types"
 

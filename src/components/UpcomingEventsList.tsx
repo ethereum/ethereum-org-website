@@ -1,6 +1,6 @@
-import { Box } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 import { useEffect, useState } from "react"
+import { useTranslation } from "next-i18next"
+import { Box } from "@chakra-ui/react"
 
 import type { CommunityConference } from "@/lib/types"
 

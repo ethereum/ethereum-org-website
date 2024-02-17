@@ -1,18 +1,18 @@
+import { useState } from "react"
+import { useRouter } from "next/router"
 import {
   Avatar,
-  Skeleton as ChakraSkeleton,
-  SkeletonCircle as ChakraSkeletonCircle,
   Flex,
   FlexProps,
   Heading,
   ListItem,
   ModalBody,
   ModalHeader,
+  Skeleton as ChakraSkeleton,
+  SkeletonCircle as ChakraSkeletonCircle,
   UnorderedList,
   VStack,
 } from "@chakra-ui/react"
-import { useRouter } from "next/router"
-import { useState } from "react"
 
 import type { Author, Lang } from "@/lib/types"
 

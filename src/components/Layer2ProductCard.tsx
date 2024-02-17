@@ -1,7 +1,7 @@
 // Libraries
-import { Box, Center, Flex, Heading } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 import { StaticImageData } from "next/image"
+import { useTranslation } from "next-i18next"
+import { Box, Center, Flex, Heading } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import { Image } from "@/components/Image"

@@ -1,18 +1,18 @@
-import {
-  Box,
-  Center,
-  Flex,
-  type BoxProps,
-  type CenterProps,
-  type Icon as ChakraIcon,
-  type FlexProps,
-  type HeadingProps,
-} from "@chakra-ui/react"
+import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import type { GetStaticProps } from "next/types"
 import type { ComponentProps, ReactNode } from "react"
 import { FaDiscord } from "react-icons/fa"
+import {
+  Box,
+  type BoxProps,
+  Center,
+  type CenterProps,
+  Flex,
+  type FlexProps,
+  type HeadingProps,
+  type Icon as ChakraIcon,
+} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
