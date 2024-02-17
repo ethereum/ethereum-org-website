@@ -234,7 +234,6 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/contributing/translation-program/translatathon",
     "/contributing/translation-program/translators-guide",
     "/cookie-policy",
-    "/deprecated-software",
     "/eips",
     "/energy-consumption",
     "/enterprise",

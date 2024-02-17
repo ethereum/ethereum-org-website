@@ -4,16 +4,15 @@ description: Uma introdução ao desenvolvimento do Ethereum, especialmente úti
 author: Marc Garreau
 lang: pt-br
 tags:
-  - "primeiros passos"
   - "python"
   - "web3.py"
 skill: beginner
 published: 2020-09-08
-source: Snake charmers
+source: O encantador de cobras
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
 ---
 
-Você ouviu falar sobre Ethereum e agora está pronto para saber mais? Este post cobrirá rapidamente alguns conceitos básicos de blockchain e, em seguida, fará com que você interaja com um nó simulado do Ethereum – lendo dados do bloco, verificando saldos da conta e enviando transações. Em todo o caminho, vamos destacar as diferenças entre as maneiras tradicionais de desenvolver aplicativos e este novo paradigma descentralizado.
+Então, você ouviu falar sobre esta coisa do Ethereum e está pronto para se aventurar no buraco do coelho? Este post cobrirá rapidamente alguns conceitos básicos de blockchain e, em seguida, fará com que você interaja com um nó simulado do Ethereum – lendo dados do bloco, verificando saldos da conta e enviando transações. Em todo o caminho, vamos destacar as diferenças entre as maneiras tradicionais de desenvolver aplicativos e este novo paradigma descentralizado.
 
 ## Pré-requisitos de software {#soft-prerequisites}
 
@@ -21,8 +20,8 @@ Este post espera ser acessível a muitos desenvolvedores. Usaremos [ferramentas 
 
 Suposições:
 
-- você pode utilizar um terminal,
-- você já escreveu algumas linhas de código Python,
+- Você pode utilizar um terminal,
+- Você já escreveu algumas linhas de código Python,
 - A versão 3.6 ou superior do Python está instalada no seu computador (uso de um [ambiente virtual](https://realpython.com/effective-python-environment/#virtual-environments) é fortemente recomendado) e
 - você já usou o `pip`, instalador de pacotes do Python. Novamente, se algum destes pré-requisitos não for verdadeiro, ou se você não planeja reproduzir o código apresentado neste artigo, é provável que você ainda possa acompanhar sem maiores problemas.
 
@@ -35,7 +34,6 @@ Há muitas maneiras de descrever o Ethereum, mas no fundo é uma blockchain. As 
    "number": 1234567,
    "hash": "0xabc123...",
    "parentHash": "0xdef456...",
-   "miner": "0xa1b2c3...",
    ...,
    "transactions": [...]
 }
@@ -59,11 +57,11 @@ Esta nova pilha de tecnologia descentralizada gerou novas ferramentas de desenvo
 
 Os desenvolvedores do Python que querem interagir com o Ethereum provavelmente usem a [Web3.py](https://web3py.readthedocs.io/). Web3.py é uma biblioteca que simplifica muito a forma como você se conecta a um nó Ethereum, e depois envia e recebe dados dele.
 
-<FeaturedText>Nota: "Nó Ethereum" e "Cliente Ethereum" são usados de forma intercambiável. Em ambos os casos, refere-se ao software que um participante da rede Ethereum executa. Este software pode ler dados de blocos, receber atualizações quando novos blocos são adicionados à cadeia ("minerado"), transmitir novas transações e muito mais.</FeaturedText>
+<FeaturedText>Nota: "Nó Ethereum" e "Cliente Ethereum" são usados de forma intercambiável. Em ambos os casos, refere-se ao software que um participante da rede Ethereum executa. Este software pode ler dados de blocos, receber atualizações quando novos blocos são adicionados à cadeia, transmitir novas transações e mais. Tecnicamente, o cliente é o software, o nódulo é o computador que executa o software.</FeaturedText>
 
 [Clientes Ethereum](/developers/docs/nodes-and-clients/) podem ser configurados para serem acessíveis por [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTPS ou Websockets, então Web3. y precisará espelhar esta configuração. Web3.py refere-se a estas opções de conexão como **provedores**. Você vai querer escolher um dos três provedores para vincular a instância da Web3.py ao seu nó.
 
-![Um diagrama que mostra como web3.py usa o IPC para conectar o seu aplicativo a um nó Ethereum](./web3py-and-nodes.png)
+![Um diagrama mostrando como web3.py usa IPC para conectar seu aplicativo a um nódulo Ethereum](./web3py-and-nodes.png)
 
 _Configure o nó Ethereum e o Web3.py para se comunicarem através do mesmo protocolo, por exemplo, o IPC neste diagrama._
 
@@ -86,29 +84,31 @@ Neste guia, vamos trabalhar apenas com um interpretador de Python. Não criaremo
 Primeiro, instale [IPython](https://ipython.org/) para explorar em um ambiente amigável. IPython propõe, entre outros, um recurso de autopreenchimento com tab, o que facilita a navegação no Web3.py.
 
 ```bash
-$ pip install ipython
+pip install ipython
 ```
 
 Web3.py é publicado sob o nome `web3`. Instale-o assim:
 
 ```bash
-$ pip install web3
+pip install web3
 ```
 
 Mais uma coisa: vamos simular uma blockchain mais tarde, o que requer mais algumas dependências. Você pode instalar por meio de:
 
 ```bash
-$ pip install 'web3[tester]'
+pip install 'web3[tester]'
 ```
 
 Você está pronto para começar!
 
+Nota: o pacote `web3[tester]` funciona até Python 3.10.xx
+
 ## Crie uma sandbox {#spin-up-a-sandbox}
 
-Abra um novo ambiente Python executando o `ipython` no seu terminal. Isso é comparável a executar `python`, mas vem com mais "efeitos especiais".
+Abra um novo ambiente Python executando o `ipython` no seu terminal. Isso é como executar `python`, mas vem com mais "efeitos especiais".
 
 ```bash
-$ ipython
+ipython
 ```
 
 Isso mostrará algumas informações sobre as versões do Python e do IPython que você está executando, então você deve ver um prompt esperando por uma entrada:
@@ -117,7 +117,7 @@ Isso mostrará algumas informações sobre as versões do Python e do IPython qu
 In [1]:
 ```
 
-Você está olhando para um shell interativo do Python agora. Essencialmente, é uma sandbox para utilizar. If you’ve made it this far, its time to import Web3.py:
+Você está olhando para um shell interativo do Python agora. Essencialmente, é um ambiente de testes para brincar. Se você chegou até aqui, é hora de importar Web3.py:
 
 ```python
 In [1]: from web3 import Web3
@@ -127,7 +127,7 @@ In [1]: from web3 import Web3
 
 Além de ser um gateway para Ethereum, o módulo [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) oferece algumas funções práticas. Vamos ver algumas.
 
-Em um aplicativo Ethereum, você normalmente precisará converter denominações de moeda. O módulo Web3 fornece alguns métodos auxiliares só para isso: [fromWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.fromWei) e [toWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toWei).
+Em um aplicativo Ethereum, você normalmente precisará converter denominações de moeda. O módulo web3 fornece alguns métodos auxiliares apenas para isso: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) e [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <FeaturedText>
 Observação: os computadores são notoriamente pouco eficazes para lidar com números decimais. Para contornar isso, os desenvolvedores costumam armazenar valores em dólares em centavos. Por exemplo, um item com preço de $5,99 pode ser armazenado no banco de dados como 599.
@@ -143,10 +143,10 @@ Um padrão similar é usado ao lidar com transações em <b>ether</b>. No entant
 Tente converter alguns valores de e para wei. Note que [existem nomes para muitas das denominações](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) entre ether e wei. Um dos mais conhecidos entre eles é o **gwei**, já que é frequentemente como as taxas de transação são representadas.
 
 ```python
-In [2]: Web3.toWei(1, 'ether')
+In [2]: Web3.to_wei(1, 'ether')
 Out[2]: 1000000000000000000
 
-In [3]: Web3.fromWei(500000000, 'gwei')
+In [3]: Web3.from_wei(500000000, 'gwei')
 Out[3]: Decimal('0.5')
 ```
 
@@ -175,14 +175,14 @@ O nó simulado é chamado [eth-tester](https://github.com/ethereum/eth-tester) e
 In [4]: w3 = Web3(Web3.EthereumTesterProvider())
 ```
 
-Agora você está pronto para navegar pela cadeia! Isso não é algo que as pessoas falam. É algo que eu acabei de inventar. Façamos um tour rápido.
+Agora você está pronto para navegar pela cadeia! Disso as pessoas não falam. É algo que eu acabei de inventar. Façamos um tour rápido.
 
 ## O tour rápido {#the-quick-tour}
 
 Primeiro, uma verificação:
 
 ```python
-In [5]: w3.isConnected()
+In [5]: w3.is_connected()
 Out[5]: True
 ```
 
@@ -201,7 +201,7 @@ Out[6]: ['0x7E5F4552091A69125d5DfCb7b8C2659029395Bdf',
  '0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69', ...]
 ```
 
-Se você executar esse comando, você deverá ver uma lista de dez strings que começam com `0x`. Cada um é um **endereço público** e é, em alguns aspectos, análogo ao número da conta em uma conta corrente. Você forneceria este endereço a alguém que quisesse mandar ether para você.
+Se você executar esse comando, você deverá ver uma lista de dez variáveis que começam com `0x`. Cada um é um **endereço público** e é, em alguns aspectos, análogo ao número da conta em uma conta corrente. Você forneceria este endereço a alguém que quisesse mandar ether para você.
 
 Como mencionado, o provedor de teste pré-carregou cada uma dessas contas com algum ether. Vamos descobrir quanto há na primeira conta:
 
@@ -213,7 +213,7 @@ Out[7]: 1000000000000000000000000
 São muitos zeros! Antes de você ir rindo até o banco falso, lembre-se daquela lição anterior sobre denominações de moeda. Os valores de ether são representados na menor denominação, wei. Converta para ether:
 
 ```python
-In [8]: w3.fromWei(1000000000000000000000000, 'ether')
+In [8]: w3.from_wei(1000000000000000000000000, 'ether')
 Out[8]: Decimal('1000000')
 ```
 
@@ -236,30 +236,30 @@ Out[9]: AttributeDict({
 
 Sãp fornecidas muitas informações sobre um bloco, mas há apenas alguns pontos para salientar aqui:
 
-- O número de bloco é zero — não importa quanto tempo você configurou o provedor de teste. Ao contrário da rede Ethereum real, que minera um novo bloco aproximadamente a cada 15 segundos, essa simulação esperará até que você a instrua a fazer alguma coisa.
+- O número de bloco é zero — não importa quanto tempo você configurou o provedor de teste. Ao contrário da rede Ethereum real, que minera um novo bloco aproximadamente a cada 12 segundos, essa simulação esperará até que você a instrua a fazer alguma coisa.
 - `transactions` é uma lista vazia, pelo mesmo motivo: ainda não fizemos nada. Este primeiro bloco é um **bloco vazio**, apenas para iniciar a cadeia.
 - Observe que o `parentHash` é apenas um monte de bytes vazios. Isso significa que ele é o primeiro bloco da cadeia, também conhecido como **bloco de início**.
 
 ## Parada n.º 2 do tour: [transações](/developers/docs/transactions/) {#tour-stop-3-transactions}
 
-Estamos presos no bloco zero até que haja uma transação para minerar, então vamos começar. Envie um teste com ether de uma conta para outra:
+Estamos parados no bloco zero até que haja uma transação para minerar, então vamos começar. Envie um teste com ether de uma conta para outra:
 
 ```python
 In [10]: tx_hash = w3.eth.send_transaction({
    'from': w3.eth.accounts[0],
    'to': w3.eth.accounts[1],
-   'value': w3.toWei(3, 'ether'),
+   'value': w3.to_wei(3, 'ether'),
    'gas': 21000
 })
 ```
 
-Normalmente, esse é o ponto em que você espera que sua transação seja minerada em um novo bloco. O processo completo envolve algo como isto:
+Esse é normalmente o ponto em que você espera (vários segundos) até que sua transação seja minerada em um novo bloco. O processo completo envolve algo como isto:
 
-1. Envie uma transação e espere pelo hash da transação. A transação fica "pendente" até que seja minerada. `tx_hash = w3.eth.send_transaction({ … })`
+1. Envie uma transação e espere pelo hash da transação. Até que o bloco que contém a transação seja criado e transmitido, a transação fica "pendente" `tx_hash = w3.eth.send_transaction({ … })`
 2. Aguarde a mineração da transação: `w3.eth.wait_for_transaction_receipt(tx_hash)`
 3. Continue a lógica do aplicativo. Para visualizar a transação bem-sucedida: `w3.eth.get_transaction(tx_hash)`
 
-Nosso ambiente simulado adicionará a transação a um novo bloco instantaneamente, para que possamos ver a transação imediatamente:
+Nosso ambiente simulado adicionará a transação a um novo bloco instantaneamente para que possamos ver a transação imediatamente:
 
 ```python
 In [11]: w3.eth.get_transaction(tx_hash)
@@ -274,19 +274,21 @@ Out[11]: AttributeDict({
 })
 ```
 
-You’ll see some familiar details here: the `from`, `to`, and `value` fields should match the inputs of our `send_transaction` call. A outra parte tranquilizadora é que esta transação foi incluída como a primeira transação (`'transactionIndex': 0`) dentro do bloco número 1.
+Você verá alguns detalhes familiares aqui: os campos `de`, `para` e `valor` devem corresponder às entradas da chamada `sendTransaction`. A outra parte tranquilizadora é que esta transação foi incluída como a primeira transação (`'transactionIndex': 0`) dentro do bloco número 1.
 
 Também podemos ver facilmente o sucesso dessa transação, verificando o saldo das duas contas envolvidas. Três ether deveriam ter sido enviados de uma conta para outra.
 
 ```python
 In [12]: w3.eth.get_balance(w3.eth.accounts[0])
-Out[12]: 999996999999999999969000
+Out[12]: 999996999979000000000000
 
 In [13]: w3.eth.get_balance(w3.eth.accounts[1])
 Out[13]: 1000003000000000000000000
 ```
 
-O último parece bem! O saldo foi de 1.000.000 a 1.000.003 ether. Mas o que aconteceu com a primeira conta? Parece ter perdido um pouco mais de três ether. Infelizmente, nada na vida é gratuito, e o uso da rede pública Ethereum requer que você compense os seus pares pelo papel de apoio deles. A small transaction fee was deducted from the account making the transaction to the tune of 31000 wei.
+O último parece bem! O saldo foi de 1.000.000 a 1.000.003 ether. Mas o que aconteceu com a primeira conta? Parece ter perdido um pouco mais que três ether. Infelizmente, nada na vida é gratuito, e o uso da rede pública Ethereum requer que você compense os seus pares pelo papel de apoio deles. Uma pequena taxa de transação foi deduzida da conta que submeteu a transação - esta taxa é a quantidade de gás queimado (21000 unidades de gás para uma transferência ETH) multiplicado por uma taxa base, que varia de acordo com a atividade da rede, mais a gorjeta que vai para o validador que inclui a transação em um bloco.
+
+Mais sobre [gás](/developers/docs/gas/#post-london)
 
 <FeaturedText>Observação: na rede pública, as taxas de transação são variáveis baseadas na demanda da rede e na rapidez com que você gostaria que uma transação fosse processada. Se você estiver interessado em ver como as taxas são calculadas, veja minha publicação anterior sobre <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">como transações são incluídas em um bloco</a>.</FeaturedText>
 

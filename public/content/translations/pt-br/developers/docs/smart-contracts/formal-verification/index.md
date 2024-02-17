@@ -212,16 +212,16 @@ Além disso, nem sempre é possível que os verificadores de programa determinem
 
 ### Linguagens de especificação para criação de especificações formais {#specification-languages}
 
-**Act**: \_\*O Act permite a especificação de atualizações de armazenamento, condições de pré/pós e invariáveis do contrato. Seu conjunto de ferramentas também tem backends capazes de comprovar muitas propriedades via Coq, solucionadores SMT, ou hevm.\*\*
+**Act**: _*O Act permite a especificação de atualizações de armazenamento, condições de pré/pós e invariáveis do contrato. Seu conjunto de ferramentas também tem backends capazes de comprovar muitas propriedades via Coq, solucionadores SMT, ou hevm.*_
 
 - [GitHub](https://github.com/ethereum/act)
 - [Documentação](https://ethereum.github.io/act/)
 
-**Scribble** - \_\*Scribble transforma anotações de código na linguagem de especificação Scribble em afirmações concretas que verificam a especificação.\*\*
+**Scribble** - _*Scribble transforma anotações de código na linguagem de especificação Scribble em afirmações concretas que verificam a especificação.*_
 
 - [Documentação](https://docs.scribble.codes/)
 
-**Dafny** - \_\*Dafny é uma linguagem de programação pronta para verificação que depende de anotações de alto nível para argumentar e comprovar a exatidão do código.\*\*
+**Dafny** - _*Dafny é uma linguagem de programação pronta para verificação que depende de anotações de alto nível para argumentar e comprovar a exatidão do código.*_
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
@@ -232,15 +232,15 @@ Além disso, nem sempre é possível que os verificadores de programa determinem
 - [Site](https://www.certora.com/)
 - [Documentação](https://docs.certora.com/en/latest/index.html)
 
-**Solidity SMTChecker** - \_\*Solidity’s SMTChecker é um verificador de modelos integrado com base no SMT (Teorias do Módulo de Satisfiabilidade) e na resolução de Horn. Ele confirma se o código-fonte de um contrato corresponde às especificações durante a compilação e procura estaticamente por violações de propriedades de segurança.\*\*
+**Solidity SMTChecker** - _*Solidity’s SMTChecker é um verificador de modelos integrado com base no SMT (Teorias do Módulo de Satisfiabilidade) e na resolução de Horn. Ele confirma se o código-fonte de um contrato corresponde às especificações durante a compilação e procura estaticamente por violações de propriedades de segurança.*_
 
 - [GitHub](https://github.com/ethereum/solidity)
 
-**solc-verify** - \_\*solc-verify é uma versão estendida do compilador Solidity que pode executar a verificação formal automatizada no código Solidity usando anotações e verificação de programa modular.\*\*
+**solc-verify** - _*solc-verify é uma versão estendida do compilador Solidity que pode executar a verificação formal automatizada no código Solidity usando anotações e verificação de programa modular.*_
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**KEVM** - \_\*KEVM é uma semântica formal da Máquina Virtual Ethereum (EVM) escrita no framework K. KEVM é executável e pode comprovar determinadas declarações relacionadas à propriedade usando a lógica de alcançabilidade.\*\*
+**KEVM** - _*KEVM é uma semântica formal da Máquina Virtual Ethereum (EVM) escrita no framework K. KEVM é executável e pode comprovar determinadas declarações relacionadas à propriedade usando a lógica de alcançabilidade.*_
 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [Documentação](https://jellopaper.org/)
@@ -259,12 +259,12 @@ Além disso, nem sempre é possível que os verificadores de programa determinem
 
 ### Ferramentas de execução simbólica para detectar padrões vulneráveis em contratos inteligentes {#symbolic-execution-tools}
 
-**Manticore** - \__Uma ferramenta para analisar a ferramenta de análise de bytecode EVM com base em execução simbólica_.\*
+**Manticore** - _*Uma ferramenta para analisar a ferramenta de análise de bytecode EVM com base em execução simbólica.*_
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Documentação](https://github.com/trailofbits/manticore/wiki)
 
-**hevm** - \_\*hevm é um mecanismo de execução simbólico e um verificador de equivalência para bytecode EVM.\*\*
+**hevm** - _*hevm é um mecanismo de execução simbólico e um verificador de equivalência para bytecode EVM.*_
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
