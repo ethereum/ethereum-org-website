@@ -301,6 +301,22 @@ const WhatIsEthereumPage = ({
     { eventName: "Gamers slide" },
   ]
 
+  const statsDescriptions = [
+    t("page-what-is-ethereum-ethereum-in-numbers-stat-1-desc"),
+    t("page-what-is-ethereum-ethereum-in-numbers-stat-2-desc"),
+    t("page-what-is-ethereum-ethereum-in-numbers-stat-3-desc"),
+    t("page-what-is-ethereum-ethereum-in-numbers-stat-4-desc"),
+    t("page-what-is-ethereum-ethereum-in-numbers-stat-5-desc"),
+    t("page-what-is-ethereum-ethereum-in-numbers-stat-6-desc"),
+  ]
+
+  const splitDescriptions = statsDescriptions.map((description) => {
+    const words = description.split(" ")
+    const lastWord = words.pop()
+    const mainText = words.join(" ")
+    return { mainText, lastWord }
+  })
+
   const tooltipContent = ({ apiUrl, apiProvider, ariaLabel }) => (
     <div>
       {t("common:data-provided-by")}{" "}
@@ -477,18 +493,9 @@ const WhatIsEthereumPage = ({
                 <BannerGridCell>
                   <StatPrimary>{formatNumber(4000, 1, 1)}+</StatPrimary>
                   <StatDescription>
-                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-1-desc")
-                      .split(" ")
-                      .slice(0, -1)
-                      .join(" ")}{" "}
+                    {splitDescriptions[0].mainText}{" "}
                     <NoWrapText>
-                      {
-                        t(
-                          "page-what-is-ethereum-ethereum-in-numbers-stat-1-desc"
-                        )
-                          .split(" ")
-                          .slice(-1)[0]
-                      }{" "}
+                      {splitDescriptions[0].lastWord}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -505,18 +512,9 @@ const WhatIsEthereumPage = ({
                 <BannerGridCell>
                   <StatPrimary>{formatNumber(96_000_000, 2, 2)}+</StatPrimary>
                   <StatDescription>
-                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-2-desc")
-                      .split(" ")
-                      .slice(0, -1)
-                      .join(" ")}{" "}
+                    {splitDescriptions[1].mainText}{" "}
                     <NoWrapText>
-                      {
-                        t(
-                          "page-what-is-ethereum-ethereum-in-numbers-stat-2-desc"
-                        )
-                          .split(" ")
-                          .slice(-1)[0]
-                      }{" "}
+                      {splitDescriptions[1].lastWord}{" "}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -533,18 +531,9 @@ const WhatIsEthereumPage = ({
                 <BannerGridCell>
                   <StatPrimary>{formatNumber(53_300_000, 3, 3)}+</StatPrimary>
                   <StatDescription>
-                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-3-desc")
-                      .split(" ")
-                      .slice(0, -1)
-                      .join(" ")}{" "}
+                    {splitDescriptions[2].mainText}{" "}
                     <NoWrapText>
-                      {
-                        t(
-                          "page-what-is-ethereum-ethereum-in-numbers-stat-3-desc"
-                        )
-                          .split(" ")
-                          .slice(-1)[0]
-                      }{" "}
+                      {splitDescriptions[2].lastWord}{" "}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -563,18 +552,9 @@ const WhatIsEthereumPage = ({
                     {formatNumber(410_000_000_000, 3, 3, "currency", "USD")}
                   </StatPrimary>
                   <StatDescription>
-                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-4-desc")
-                      .split(" ")
-                      .slice(0, -1)
-                      .join(" ")}{" "}
+                    {splitDescriptions[3].mainText}{" "}
                     <NoWrapText>
-                      {
-                        t(
-                          "page-what-is-ethereum-ethereum-in-numbers-stat-4-desc"
-                        )
-                          .split(" ")
-                          .slice(-1)[0]
-                      }{" "}
+                      {splitDescriptions[3].lastWord}{" "}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl: "https://ultrasound.money/#tvs",
@@ -592,18 +572,9 @@ const WhatIsEthereumPage = ({
                     {formatNumber(3_500_000_000, 2, 2, "currency", "USD")}
                   </StatPrimary>
                   <StatDescription>
-                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-5-desc")
-                      .split(" ")
-                      .slice(0, -1)
-                      .join(" ")}{" "}
+                    {splitDescriptions[4].mainText}{" "}
                     <NoWrapText>
-                      {
-                        t(
-                          "page-what-is-ethereum-ethereum-in-numbers-stat-5-desc"
-                        )
-                          .split(" ")
-                          .slice(-1)[0]
-                      }{" "}
+                      {splitDescriptions[4].lastWord}{" "}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl:
@@ -624,18 +595,9 @@ const WhatIsEthereumPage = ({
                   </StatPrimary>
                   {/* TODO: Extract strings for translation */}
                   <StatDescription>
-                    {t("page-what-is-ethereum-ethereum-in-numbers-stat-6-desc")
-                      .split(" ")
-                      .slice(0, -1)
-                      .join(" ")}{" "}
+                    {splitDescriptions[5].mainText}{" "}
                     <NoWrapText>
-                      {
-                        t(
-                          "page-what-is-ethereum-ethereum-in-numbers-stat-6-desc"
-                        )
-                          .split(" ")
-                          .slice(-1)[0]
-                      }{" "}
+                      {splitDescriptions[5].lastWord}{" "}
                       <Tooltip
                         content={tooltipContent({
                           apiUrl: "https://etherscan.io/",
