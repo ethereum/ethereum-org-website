@@ -1,3 +1,5 @@
+import { useState } from "react"
+import { sortBy } from "lodash"
 import {
   Box,
   Flex,
@@ -9,8 +11,6 @@ import {
   useToken,
   VisuallyHidden,
 } from "@chakra-ui/react"
-import { sortBy } from "lodash"
-import { useState } from "react"
 
 import Emoji from "@/components/Emoji"
 import InfoBanner from "@/components/InfoBanner"

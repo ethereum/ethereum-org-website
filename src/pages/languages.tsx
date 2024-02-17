@@ -1,10 +1,10 @@
-import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
+import React, { useState } from "react"
 import { GetStaticProps } from "next"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useRouter } from "next/router"
-import React, { useState } from "react"
 import { MdClose } from "react-icons/md"
+import { Box, Flex, IconButton, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
 import { BasePageProps, I18nLocale, TranslationKey } from "@/lib/types"
 

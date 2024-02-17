@@ -1,3 +1,7 @@
+import { useRouter } from "next/router"
+import { GetStaticProps } from "next/types"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   BoxProps,
@@ -7,10 +11,6 @@ import {
   ListItem,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useRouter } from "next/router"
-import { GetStaticProps } from "next/types"
 
 import { BasePageProps } from "@/lib/types"
 

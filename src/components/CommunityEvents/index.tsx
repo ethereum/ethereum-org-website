@@ -1,3 +1,7 @@
+import { DateTime, DateTimeFormatOptions } from "luxon"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { FaDiscord } from "react-icons/fa"
 import {
   Box,
   Center,
@@ -7,10 +11,6 @@ import {
   GridItem,
   Icon,
 } from "@chakra-ui/react"
-import { DateTime, DateTimeFormatOptions } from "luxon"
-import { useTranslation } from "next-i18next"
-import { useRouter } from "next/router"
-import { FaDiscord } from "react-icons/fa"
 
 import type { CommunityEvent } from "@/lib/interfaces"
 

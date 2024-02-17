@@ -1,3 +1,5 @@
+import { useTranslation } from "next-i18next"
+import { MdArrowForward } from "react-icons/md"
 import {
   Accordion,
   Box,
@@ -7,8 +9,6 @@ import {
   LinkBox,
   LinkOverlay,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-import { MdArrowForward } from "react-icons/md"
 
 import { ChildOnlyProp, TranslationKey } from "@/lib/types"
 

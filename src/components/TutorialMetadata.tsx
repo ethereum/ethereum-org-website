@@ -1,9 +1,9 @@
-import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { Badge, Box, Flex, HStack, Text } from "@chakra-ui/react"
 
-import { TutorialFrontmatter } from "@/lib/interfaces"
 import type { Lang, TranslationKey } from "@/lib/types"
+import { TutorialFrontmatter } from "@/lib/interfaces"
 
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"

@@ -1,7 +1,7 @@
-import { Code, Flex, Icon, VStack } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
 import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
+import { Code, Flex, Icon, VStack } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang, StakingStatsData } from "@/lib/types"
 

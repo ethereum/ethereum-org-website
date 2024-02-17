@@ -1,3 +1,7 @@
+import { ReactNode } from "react"
+import { GetStaticProps } from "next"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   chakra,
@@ -6,10 +10,6 @@ import {
   TextProps,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { GetStaticProps } from "next"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { ReactNode } from "react"
 
 import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 

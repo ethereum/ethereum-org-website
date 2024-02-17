@@ -1,20 +1,20 @@
+import { GetStaticProps, InferGetStaticPropsType } from "next"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
+import { MdInfoOutline } from "react-icons/md"
 import {
   Box,
+  type BoxProps,
   Center,
   Flex,
+  type FlexProps,
   Heading,
+  type HeadingProps,
   Icon,
   ListItem,
   UnorderedList,
-  type BoxProps,
-  type FlexProps,
-  type HeadingProps,
 } from "@chakra-ui/react"
-import { GetStaticProps, InferGetStaticPropsType } from "next"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { useRouter } from "next/router"
-import { MdInfoOutline } from "react-icons/md"
 
 import type {
   BasePageProps,

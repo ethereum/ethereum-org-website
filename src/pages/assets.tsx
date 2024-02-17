@@ -1,16 +1,16 @@
+import type { GetStaticProps } from "next/types"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   Center,
   Flex,
   Heading,
-  SimpleGrid,
-  useColorModeValue,
   type HeadingProps,
+  SimpleGrid,
   type SimpleGridProps,
+  useColorModeValue,
 } from "@chakra-ui/react"
-import { useTranslation } from "next-i18next"
-import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import type { GetStaticProps } from "next/types"
 
 import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
@@ -36,29 +36,29 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 // import leslieTheRhino from "@/public/upgrades/upgrade_rhino.png"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
+import ethDiamondBlack from "@/public/assets/eth-diamond-black.png"
 import ethDiamondBlackGray from "@/public/assets/eth-diamond-black-gray.png"
 import ethDiamondBlackWhite from "@/public/assets/eth-diamond-black-white.jpg"
-import ethDiamondBlack from "@/public/assets/eth-diamond-black.png"
 import ethDiamondGlyph from "@/public/assets/eth-diamond-glyph.png"
+import ethDiamondPurple from "@/public/assets/eth-diamond-purple.png"
 import ethDiamondPurplePurple from "@/public/assets/eth-diamond-purple-purple.png"
 import ethDiamondPurpleWhite from "@/public/assets/eth-diamond-purple-white.jpg"
-import ethDiamondPurple from "@/public/assets/eth-diamond-purple.png"
 import ethDiamondColor from "@/public/assets/eth-diamond-rainbow.png"
 import ethGlyphColored from "@/public/assets/eth-glyph-colored.png"
-import ethLandscapeBlackGray from "@/public/assets/ethereum-logo-landscape-black-gray.png"
 import ethLandscapeBlack from "@/public/assets/ethereum-logo-landscape-black.png"
+import ethLandscapeBlackGray from "@/public/assets/ethereum-logo-landscape-black-gray.png"
+import ethLandscapePurple from "@/public/assets/ethereum-logo-landscape-purple.png"
 import ethLandscapePurplePurple from "@/public/assets/ethereum-logo-landscape-purple-purple.png"
 import ethLandscapePurpleWhite from "@/public/assets/ethereum-logo-landscape-purple-white.png"
-import ethLandscapePurple from "@/public/assets/ethereum-logo-landscape-purple.png"
-import ethPortraitBlackGray from "@/public/assets/ethereum-logo-portrait-black-gray.png"
 import ethPortraitBlack from "@/public/assets/ethereum-logo-portrait-black.png"
-import ethPortraitPurplePurple from "@/public/assets/ethereum-logo-portrait-purple-purple.png"
+import ethPortraitBlackGray from "@/public/assets/ethereum-logo-portrait-black-gray.png"
 import ethPortraitPurple from "@/public/assets/ethereum-logo-portrait-purple.png"
-import ethWordmarkBlackGray from "@/public/assets/ethereum-wordmark-black-gray.png"
+import ethPortraitPurplePurple from "@/public/assets/ethereum-logo-portrait-purple-purple.png"
 import ethWordmarkBlack from "@/public/assets/ethereum-wordmark-black.png"
+import ethWordmarkBlackGray from "@/public/assets/ethereum-wordmark-black-gray.png"
+import ethWordmarkPurple from "@/public/assets/ethereum-wordmark-purple.png"
 import ethWordmarkPurplePurple from "@/public/assets/ethereum-wordmark-purple-purple.png"
 import ethWordmarkPurpleWhite from "@/public/assets/ethereum-wordmark-purple-white.png"
-import ethWordmarkPurple from "@/public/assets/ethereum-wordmark-purple.png"
 import developers from "@/public/developers-eth-blocks.png"
 import doge from "@/public/doge-computer.png"
 import enterprise from "@/public/enterprise-eth.png"
@@ -74,8 +74,8 @@ import layer2Hero from "@/public/heroes/layer-2-hub-hero.jpg"
 import learnHero from "@/public/heroes/learn-hub-hero.png"
 import quizzesHub from "@/public/heroes/quizzes-hub-hero.png"
 import roadmapHero from "@/public/heroes/roadmap-hub-hero.jpg"
-import heroPanda from "@/public/home/hero-panda.png"
 import hero from "@/public/home/hero.png"
+import heroPanda from "@/public/home/hero-panda.png"
 import mergePanda from "@/public/home/merge-panda.png"
 import impact from "@/public/impact_transparent.png"
 import infrastructure from "@/public/infrastructure_transparent.png"
