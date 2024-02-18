@@ -1,10 +1,10 @@
-import { AnimatePresence, motion } from "framer-motion"
+import { motion } from "framer-motion"
 import { Box, type BoxProps, Flex, Text } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
 import { Button } from "@/components/Buttons"
 
-import { SECTION_LABELS } from "@/lib/constants"
+import { MAIN_NAV_ID, SECTION_LABELS } from "@/lib/constants"
 
 import type { NavSections } from "../types"
 
@@ -35,7 +35,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
         onValueChange={handleSectionChange}
       >
         <NavigationMenu.List asChild>
-          <Flex as="ul" listStyleType="none">
+          <Flex id={MAIN_NAV_ID} as="ul" listStyleType="none">
             {SECTION_LABELS.map((sectionKey) => {
               const { label, items } = sections[sectionKey]
               const isActive = activeSection === sectionKey

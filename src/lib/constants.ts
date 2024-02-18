@@ -85,3 +85,5 @@ export const SECTION_LABELS: NavSectionKey[] = [
   "participate",
   "research",
 ]
+
+export const MAIN_NAV_ID = "main-navigation"
