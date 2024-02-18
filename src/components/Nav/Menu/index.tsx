@@ -66,35 +66,32 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                       </Text>
                     </Button>
                   </NavigationMenu.Trigger>
-                  <AnimatePresence>
-                    <NavigationMenu.Content asChild>
-                      {/**
-                       * This is the CONTAINER for all three menu levels
-                       * This renders inside the NavigationMenu.Viewport component
-                       */}
-                      <Box
-                        as={motion.div}
-                        key={sectionKey + "-content"}
-                        variants={containerVariants}
-                        initial={false}
-                        animate={isOpen ? "open" : "closed"}
-                        position="absolute"
-                        top="19"
-                        insetInline="0"
-                        shadow="md"
-                        border="1px"
-                        borderColor={menuColors.stroke}
-                        bg={menuColors.lvl[1].background}
-                      >
-                        <SubMenu
-                          lvl={1}
-                          items={items}
-                          activeSection={activeSection}
-                          onClose={onClose}
-                        />
-                      </Box>
-                    </NavigationMenu.Content>
-                  </AnimatePresence>
+                  <NavigationMenu.Content asChild>
+                    {/**
+                     * This is the CONTAINER for all three menu levels
+                     * This renders inside the NavigationMenu.Viewport component
+                     */}
+                    <Box
+                      as={motion.div}
+                      variants={containerVariants}
+                      initial={false}
+                      animate={isOpen ? "open" : "closed"}
+                      position="absolute"
+                      top="19"
+                      insetInline="0"
+                      shadow="md"
+                      border="1px"
+                      borderColor={menuColors.stroke}
+                      bg={menuColors.lvl[1].background}
+                    >
+                      <SubMenu
+                        lvl={1}
+                        items={items}
+                        activeSection={activeSection}
+                        onClose={onClose}
+                      />
+                    </Box>
+                  </NavigationMenu.Content>
                 </NavigationMenu.Item>
               )
             })}
