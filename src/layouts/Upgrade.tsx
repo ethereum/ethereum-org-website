@@ -9,6 +9,7 @@ import {
   Icon,
   List,
   ListItem,
+  Skeleton,
   Text,
   useToken,
 } from "@chakra-ui/react"
@@ -193,10 +194,12 @@ export const UpgradeLayout = ({
               ))}
             </List>
           </Box>
-          <LastUpdated>
-            {t("common:page-last-updated")}:{" "}
-            {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
-          </LastUpdated>
+          {lastUpdatedDate && (
+            <LastUpdated>
+              {t("common:page-last-updated")}:{" "}
+              {getLocaleTimestamp(locale as Lang, lastUpdatedDate)}
+            </LastUpdated>
+          )}
         </TitleCard>
         {frontmatter.image && (
           <Image

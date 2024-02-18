@@ -473,8 +473,8 @@ const TutorialPage = ({
               </Flex>
               <Text color="text200" fontSize="sm" textTransform="uppercase">
                 <Emoji text=":writing_hand:" fontSize="sm" me={2} />
-                {tutorial.author} •
-                {published(locale!, tutorial.published ?? "")}
+                {tutorial.author}
+                {tutorial.published && " • " + published(locale!, tutorial.published)}
                 {tutorial.timeToRead && (
                   <>
                     {" "}
