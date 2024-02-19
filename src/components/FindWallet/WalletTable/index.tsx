@@ -391,6 +391,27 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
           />
         </Th>
       </WalletContentHeader>
+      {filteredWallets.length === 0 && (
+        <Flex
+          justifyContent="center"
+          m={{ base: 12, md: 24 }}
+          borderStyle="dashed"
+          borderColor="disabled"
+          border="dashed red"
+        >
+          <Stack textAlign="center" p={12}>
+            <Text>No results</Text>
+
+            <Text>
+              There are no wallets matching your criteria, try removing some
+              filters.
+            </Text>
+
+            <Text mb={0}>Reset filters</Text>
+          </Stack>
+        </Flex>
+      )}
+
       {filteredWallets.map((wallet, idx) => {
         const deviceLabels: Array<string> = []
 
