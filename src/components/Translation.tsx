@@ -5,7 +5,7 @@ import { useTranslation } from "next-i18next"
 
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import InlineLink from "./Link"
+import MdLink from "./MdLink"
 
 type TranslationProps = {
   id: string
@@ -15,7 +15,7 @@ type TranslationProps = {
 // Custom components mapping to be used by `htmr` when parsing the translation
 // text
 const transform = {
-  a: InlineLink,
+  a: MdLink,
 }
 
 // Renders the translation string for the given translation key `id`. It
