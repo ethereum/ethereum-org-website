@@ -115,9 +115,9 @@
   "website-last-updated": "Sivusto viimeksi päivitetty",
   "what-is-ether": "Mikä on ether (ETH)?",
   "what-is-ethereum": "Mikä on Ethereum?",
-  "defi-page": "Hajautettu rahoitus (DeFi)",
-  "dao-page": "Hajautetut autonomiset organisaatiot (DAO:t)",
-  "nft-page": "Ei-vaihdettavat poletit (NFT:t)",
+  "defi-page": "DeFi - Hajautettu rahoitus",
+  "dao-page": "DAO:t - Hajautetut autonomiset organisaatiot",
+  "nft-page": "NFT:t - Ei-vaihdettavat poletit",
   "yes": "Kyllä",
   "page-index-meta-title": "Etusivu",
   "page-developers-aria-label": "Kehittäjien valikko"
