@@ -4,7 +4,8 @@ description: Este tutorial descreve como criar um NFT na blockchain Ethereum usa
 author: "Sumi Mudgil"
 tags:
   - "ERC-721"
-  - "Solidity"
+  - "alchemy"
+  - "solidity"
   - "contratos inteligentes"
 skill: beginner
 lang: pt-br
@@ -13,7 +14,7 @@ published: 2021-04-22
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): 69 milhões de doláres [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 milhões de doláres [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 milhões de doláres
 
-Estes NFTs foram criados usando a poderosa API da Alchemy. Neste tutorial, vamos te ensinar a fazer o mesmo em < 10 minutos.
+All of them minted their NFTs using Alchemy’s powerful API. Neste tutorial, vamos te ensinar a fazer o mesmo em < 10 minutos.
 
 "Cunhar um NFT" é o ato de publicar uma instância única do seu token ERC-721 na blockchain. Usando nosso contrato inteligente da [Parte 1 desta série de tutoriais NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/), vamos usar nossas habilidades Web3 e criar um NFT. No final deste tutorial, você será capaz de cunhar tantos NFTs quanto seu coração (e sua carteira) desejar!
 
@@ -110,9 +111,9 @@ Uma vez terminada a edição do arquivo JSON, salve-o e faça o upload para o Pi
 
 ## Etapa 5: Criar uma instância de seu contrato {#instance-contract}
 
-Agora, para interagir com o nosso contrato, precisamos criar uma instância dele em nosso código. Para fazer isso, precisaremos do nosso endereço de contrato, obtido na implantação ou no [Etherscan](https://goerli.etherscan.io/), procurando o endereço que você usou para implantar o contrato.
+Agora, para interagir com o nosso contrato, precisamos criar uma instância dele em nosso código. Para fazer isso, precisaremos do nosso endereço de contrato, obtido na implantação ou no [Etherscan](https://sepolia.etherscan.io/), procurando o endereço que você usou para implantar o contrato.
 
-![Veja o seu endereço de contrato no Etherscan](./viewContractEtherscan.png)
+![Veja o seu endereço de contrato no Etherscan](./view-contract-etherscan.png)
 
 No exemplo acima, o endereço do contrato é 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
@@ -131,7 +132,7 @@ Agora, para criar e enviar transações para a cadeia Ethereum, usaremos seu end
 Adicione sua chave pública ao seu arquivo `.env` — se você concluiu a parte 1 do tutorial, nosso arquivo `.env` deve ficar assim:
 
 ```js
-API_URL = "https://eth-goerli.g.alchemy.com/v2/your-api-key"
+API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
 PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
@@ -314,15 +315,15 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 Agora, execute `node scripts/mint-nft.js` para implantar seu NFT. Depois de alguns segundos, você deverá ver uma resposta como essa no seu terminal:
 
     O hash de sua transação é: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
-
+    
     Verifique o Mempool da Alquemy para ver o estado da sua transação!
 
-Em seguida, acesse a [mempool (área de espera) da Alchemy](https://dashboard.alchemyapi.io/mempool) para ver o estado da sua transação (se pendente, minerada ou recusada pela rede). Se a sua transação foi descartada, também é útil verificar o [Goerli Etherscan](https://goerli.etherscan.io/) e procurar pelo hash da transação.
+Em seguida, acesse a [mempool (área de espera) da Alchemy](https://dashboard.alchemyapi.io/mempool) para ver o estado da sua transação (se pendente, minerada ou recusada pela rede). Se a sua transação se perdeu, também é útil verificar no [Sepolia Etherscan](https://sepolia.etherscan.io/) e procurar o hash da transação.
 
-![Veja seu hash de transação NFT no Etherscan](./viewNFTEtherscan.png)_Veja seu hash de transação NFT no Etherscan_
+![Veja seu hash de transação NFT no Etherscan](./view-nft-etherscan.png)_Veja seu hash de transação NFT no Etherscan_
 
 E pronto! Você agora implantou E cunhou um NFT na blockchain Ethereum <Emoji text=":money_mouth_face:" size={1} />
 
-Usando o `mint-nft.js`, você pode cunhar quantos NFTs você (e sua carteira) desejar! Apenas certifique-se de transmitir um novo tokenURI descrevendo os metadados do NFT (caso contrário, você acaba criando um monte de identificações idênticas, com IDs diferentes).
+Using the `mint-nft.js` you can mint as many NFTs as your heart (and wallet) desires! Apenas certifique-se de transmitir um novo tokenURI descrevendo os metadados do NFT (caso contrário, você acaba criando um monte de identificações idênticas, com IDs diferentes).
 
 Provavelmente você gostaria de poder exibir seu NFT na sua carteira — então certifique-se de conferir [Parte 3: Como ver seu NFT na sua carteira](/developers/tutorials/how-to-view-nft-in-metamask/)!
