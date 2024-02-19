@@ -23,15 +23,10 @@ export const WalletEmptyState = ({
     >
       <Stack textAlign="center" p={12} lineHeight="1.6">
         <Heading as="h3" fontSize="3xl" fontWeight="normal" mb={6}>
-          {/* TODO: add i18n namespace */}
-          {"No results"}
+          {t("page-find-wallet-empty-results-title")}
         </Heading>
 
-        {/* TODO: add i18n namespace */}
-        <Text>
-          There are no wallets matching your criteria, try removing some
-          filters.
-        </Text>
+        <Text>{t("page-find-wallet-empty-results-desc")}</Text>
 
         <Text
           mb={0}
