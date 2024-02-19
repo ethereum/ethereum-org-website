@@ -9,6 +9,7 @@ import {
   Flex,
   FlexProps,
   forwardRef,
+  Heading,
   Icon,
   keyframes,
   SimpleGrid,
@@ -391,22 +392,28 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
           />
         </Th>
       </WalletContentHeader>
+      {/* TODO: move to separate component WalletTableEmptyState */}
       {filteredWallets.length === 0 && (
         <Flex
           justifyContent="center"
           m={{ base: 12, md: 24 }}
-          borderStyle="dashed"
-          borderColor="disabled"
+          // borderStyle="dashed"
+          // borderColor="disabled"
           border="dashed red"
         >
-          <Stack textAlign="center" p={12}>
-            <Text>No results</Text>
+          <Stack textAlign="center" p={12} lineHeight="1.6">
+            <Heading as="h3" fontSize="3xl" fontWeight="normal" mb={6}>
+              {/* TODO: add i18n namespace */}
+              {"No results"}
+            </Heading>
 
+            {/* TODO: add i18n namespace */}
             <Text>
               There are no wallets matching your criteria, try removing some
               filters.
             </Text>
 
+            {/* TODO: add i18n namespace */}
             <Text mb={0}>Reset filters</Text>
           </Stack>
         </Flex>
