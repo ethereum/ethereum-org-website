@@ -25,6 +25,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Sirato](https://www.web3labs.com/sirato)
 - [EthVM](https://www.ethvm.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
+- [3xpl Block Explorer](https://3xpl.com/ethereum) - Also available via [Tor Onion Service](http://3xplor3rzajysy4j5fi3g3k27vivfcw75zjxdb2tg2wpz3i4cdiyhxyd.onion/ethereum)
 
 ## Data {#data}
 
