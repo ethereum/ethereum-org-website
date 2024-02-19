@@ -297,10 +297,18 @@ const thirdCol = "thirdCol"
 
 export interface WalletTableProps {
   filters: Record<string, boolean>
+  // TODO: update type
+  resetFilters: any
+  resetWalletFilter: any
   walletData: WalletData[]
 }
 
-const WalletTable = ({ filters, walletData }: WalletTableProps) => {
+const WalletTable = ({
+  filters,
+  resetFilters,
+  resetWalletFilter,
+  walletData,
+}: WalletTableProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const {
     featureDropdownItems,
@@ -397,9 +405,8 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
         <Flex
           justifyContent="center"
           m={{ base: 12, md: 24 }}
-          // borderStyle="dashed"
-          // borderColor="disabled"
-          border="dashed red"
+          border="2px dashed"
+          borderColor="body.light"
         >
           <Stack textAlign="center" p={12} lineHeight="1.6">
             <Heading as="h3" fontSize="3xl" fontWeight="normal" mb={6}>
@@ -413,8 +420,23 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
               filters.
             </Text>
 
-            {/* TODO: add i18n namespace */}
-            <Text mb={0}>Reset filters</Text>
+            <Text
+              mb={0}
+              color="primary.base"
+              textDecoration="underline"
+              cursor="pointer"
+              onClick={() => {
+                resetFilters()
+                resetWalletFilter.current()
+                trackCustomEvent({
+                  eventCategory: "WalletFilterReset",
+                  eventAction: `WalletFilterReset clicked`,
+                  eventName: `reset filters`,
+                })
+              }}
+            >
+              {t("page-find-wallet-reset-filters")}
+            </Text>
           </Stack>
         </Flex>
       )}
