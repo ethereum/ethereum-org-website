@@ -298,9 +298,8 @@ const thirdCol = "thirdCol"
 
 export interface WalletTableProps {
   filters: Record<string, boolean>
-  // TODO: update type
-  resetFilters: any
-  resetWalletFilter: any
+  resetFilters: () => void
+  resetWalletFilter: React.MutableRefObject<() => void>
   walletData: WalletData[]
 }
 

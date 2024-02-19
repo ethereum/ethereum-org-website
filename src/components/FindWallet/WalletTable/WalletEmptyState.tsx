@@ -4,8 +4,8 @@ import { Flex, Heading, Stack, Text } from "@chakra-ui/react"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 interface WalletEmptyStateProps {
-  resetFilters: any
-  resetWalletFilter: any
+  resetFilters: () => void
+  resetWalletFilter: React.MutableRefObject<() => void>
 }
 
 export const WalletEmptyState = ({
