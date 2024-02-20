@@ -57,7 +57,7 @@ export const BaseLink = forwardRef(function Link(
   }: LinkProps,
   ref
 ) {
-  const { asPath } = useRouter()
+  const { asPath, locale } = useRouter()
   const { flipForRtl } = useRtlFlip()
 
   let href = (to ?? hrefProp) as string
@@ -84,6 +84,7 @@ export const BaseLink = forwardRef(function Link(
     ...props,
     ...(isActive && activeStyle),
     href,
+    hrefLang: locale,
   }
 
   if (isExternal) {
