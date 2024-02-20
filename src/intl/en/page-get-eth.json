@@ -11,7 +11,7 @@
   "page-get-eth-community-safety": "Community posts on security",
   "page-get-eth-description": "Ethereum isn't controlled by any single organization - it is decentralized.",
   "page-get-eth-dex": "Decentralized exchanges (DEXs)",
-  "page-get-eth-dex-desc": "If you want more control, buy ETH using smart contracts. With a DEX you can trade digital assets without ever giving control of your funds to a centralized company.",
+  "page-get-eth-dex-desc": "If you want more control, buy ETH using <a href=\"/glossary/#smart-contract\">smart contracts</a>. With a DEX you can trade digital assets without ever giving control of your funds to a centralized company.",
   "page-get-eth-peers": "Receive ETH from your peers",
   "page-get-eth-peers-desc": "Once you have an Ethereum account, all you need to do is share your address to start sending and receiving ETH (and other tokens) peer-to-peer.",
   "page-get-eth-staking": "Staking rewards",
