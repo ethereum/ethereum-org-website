@@ -163,6 +163,7 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path.startsWith("/layer-2")) {
     primaryNamespace = "page-layer-2"
+    requiredNamespaces = [...requiredNamespaces, "glossary"]
   }
 
   // Quizzes

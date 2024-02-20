@@ -287,7 +287,9 @@ const Layer2Page = () => {
             <Text>
               <Translation id="page-layer-2:layer-2-what-is-layer-1-1" />
             </Text>
-            <Text>{t("layer-2-what-is-layer-1-2")}</Text>
+            <Text>
+              <Translation id="page-layer-2:layer-2-what-is-layer-1-2" />
+            </Text>
           </Box>
           <Box flex="50%">
             <Text>
@@ -448,7 +450,9 @@ const Layer2Page = () => {
         <InfoBanner isWarning>
           <SectionHeading>{t("layer-2-dyor-title")}</SectionHeading>
           <Text>{t("layer-2-dyor-1")}</Text>
-          <Text>{t("layer-2-dyor-2")}</Text>
+          <Text>
+            <Translation id="page-layer-2:layer-2-dyor-2" />
+          </Text>
           <Text>
             <ButtonLink to="https://l2beat.com/scaling/risk">
               {t("layer-2-dyor-3")}
@@ -460,11 +464,15 @@ const Layer2Page = () => {
       <ContentBox id="use-layer-2">
         <SectionHeading>{t("layer-2-use-layer-2-title")}</SectionHeading>
         <Text>{t("layer-2-use-layer-2-1")}</Text>
-        <Text>{t("layer-2-contract-accounts")}</Text>
+        <Text>
+          <Translation id="page-layer-2:layer-2-contract-accounts" />
+        </Text>
         <SectionHeading as="h3">
           {t("layer-2-use-layer-2-generalized-title")}
         </SectionHeading>
-        <Text>{t("layer-2-use-layer-2-generalized-1")}</Text>
+        <Text>
+          <Translation id="page-layer-2:layer-2-use-layer-2-generalized-1" />
+        </Text>
         <Layer2CardGrid>
           {layer2DataCombined
             .filter((l2) => !l2.purpose.indexOf("universal"))
