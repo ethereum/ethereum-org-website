@@ -17,7 +17,7 @@ incomplete: true
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [编写您的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [编写你的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## 初学者文章 {#beginner-articles}
@@ -25,7 +25,7 @@ incomplete: true
 - [以太坊开发者指南 (Python)](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
 - [2023 区块链报告中的 Python 状态](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
 - [基于 Vyper 的智能合约简介](https://kauri.io/#collections/Getting%20Started/an-introduction-to-smart-contracts-with-vyper/)
-- [使用 Python 和 Brownie 部署您自己的 ERC20 代币](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
+- [使用 Python 和 Brownie 部署你自己的 ERC20 代币](https://betterprogramming.pub/python-blockchain-token-deployment-tutorial-create-an-erc20-77a5fd2e1a58)
 - [如何使用 Python Flask 开发 Ethereum 合约？](https://medium.com/coinmonks/how-to-develop-ethereum-contract-using-python-flask-9758fe65976e)
 - [Web3.py 简介 · 面向 Python 开发者的以太坊资源](https://www.dappuniversity.com/articles/web3-py-intro)
 - [如何通过 Python 和 web3.py 调用智能合约函数？](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
@@ -36,7 +36,7 @@ incomplete: true
 - [创建 Python 以太坊接口：第 1 部分](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
 - [基于 Python 的以太坊智能合约开发：完整（入门）教程](https://hackernoon.com/ethereum-smart-contracts-in-python-a-comprehensive-ish-guide-771b03990988)
 - [使用 Brownie 和 Python 部署智能合约](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
-- [使用 Brownie 在 OpenSea 上创建 NFT](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
+- [使用 Brownie 在 OpenSea 上创建非同质化代币](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
 ## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
@@ -82,7 +82,7 @@ incomplete: true
 ## Python 社区讨论 {#python-community-contributors}
 
 - [以太坊 Python 社区 Discord](https://discord.gg/9zk7snTfWe)，适合讨论 Web3.py 和其他 Python 框架
-- [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>)，适合讨论 Vyper 智能合约编程
+- [Vyper Discord](https://discord.gg/SdvKC79cJk)，适合讨论 Vyper 智能合约编程
 
 ## 其他汇总列表 {#other-aggregated-lists}
 
