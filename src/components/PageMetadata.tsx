@@ -1,10 +1,10 @@
-import { join } from "path"
-
 import Head from "next/head"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
-import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
+import { getFullUrl } from "@/lib/utils/url"
+
+import { SITE_URL } from "@/lib/constants"
 
 type NameMeta = {
   name: string
@@ -33,7 +33,7 @@ const PageMetadata = ({
   canonicalUrl,
   author,
 }: PageMetadataProps) => {
-  const { locale, asPath } = useRouter()
+  const { locale, locales, asPath } = useRouter()
   const { t } = useTranslation()
 
   const desc = description || t("site-description")
@@ -51,10 +51,7 @@ const PageMetadata = ({
    * @example ethereum.org/about/ -> ethereum.org/about
    * @example ethereum.org/pt-br/web3/ -> ethereum.org/pt-br/web3
    */
-  const url = new URL(
-    join(locale === DEFAULT_LOCALE ? "" : locale!, path),
-    SITE_URL
-  ).href.replace(/\/$/, "")
+  const url = getFullUrl(locale, path)
   const canonical = canonicalUrl || url
 
   /* Set fallback ogImage based on path */
@@ -105,6 +102,16 @@ const PageMetadata = ({
         />
       ))}
       <link rel="canonical" key={canonical} href={canonical} />
+      {locales
+        ?.filter((loc) => loc !== locale)
+        .map((loc) => (
+          <link
+            key={loc}
+            rel="alternate"
+            hrefLang={loc}
+            href={getFullUrl(loc, path)}
+          />
+        ))}
     </Head>
   )
 }
