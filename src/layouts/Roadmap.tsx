@@ -195,7 +195,7 @@ export const RoadmapLayout = ({
         <LeftNavBar
           hideBelow={lgBp}
           dropdownLinks={dropdownLinks}
-          maxDepth={frontmatter.sidebarDepth!}
+          maxDepth={frontmatter.sidebarDepth}
           tocItems={tocItems}
         />
         <ContentContainer>

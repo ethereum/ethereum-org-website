@@ -31,7 +31,7 @@ export type TableOfContentsProps = BoxProps & {
 
 const TableOfContents = ({
   items,
-  maxDepth = 1,
+  maxDepth = 2,
   slug,
   editPath,
   hideEditButton = false,
@@ -99,8 +99,8 @@ const TableOfContents = ({
           <List m={0}>
             <ItemsList
               items={items}
-              depth={0}
-              maxDepth={maxDepth ? maxDepth : 1}
+              depth={1} // Starting depth is 1 (h2 headings)
+              maxDepth={maxDepth}
               activeHash={activeHash}
             />
           </List>

@@ -2,7 +2,6 @@
 title: Opi Ethereumista
 description: Kokoelma teknisiä ja ei-teknisiä artikkeleita, ohjeita ja resursseja Ethereumin oppimiseen.
 lang: fi
-sidebarDepth: 1
 ---
 
 # Opi Ethereumista {#learn-about-ethereum}

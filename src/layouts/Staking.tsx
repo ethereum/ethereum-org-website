@@ -269,7 +269,7 @@ export const StakingLayout = ({
             position="relative"
             zIndex={2}
             items={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
+            maxDepth={frontmatter.sidebarDepth}
             isMobile
           />
         </Flex>
@@ -289,7 +289,7 @@ export const StakingLayout = ({
           hideBelow={lgBp}
           dropdownLinks={dropdownLinks}
           tocItems={tocItems}
-          maxDepth={frontmatter.sidebarDepth!}
+          maxDepth={frontmatter.sidebarDepth}
         />
         <ContentContainer>
           {children}

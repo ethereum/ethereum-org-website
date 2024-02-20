@@ -221,7 +221,7 @@ export const UpgradeLayout = ({
           hideBelow={lgBreakpoint}
           dropdownLinks={dropdownLinks}
           tocItems={tocItems}
-          maxDepth={frontmatter.sidebarDepth!}
+          maxDepth={frontmatter.sidebarDepth}
         />
         <ContentContainer>
           {children}

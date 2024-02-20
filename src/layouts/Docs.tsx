@@ -266,7 +266,7 @@ export const DocsLayout = ({
             editPath={absoluteEditPath}
             items={tocItems}
             isMobile
-            maxDepth={frontmatter.sidebarDepth!}
+            maxDepth={frontmatter.sidebarDepth}
             hideEditButton={!!frontmatter.hideEditButton}
           />
           {children}
@@ -280,7 +280,7 @@ export const DocsLayout = ({
             slug={slug}
             editPath={absoluteEditPath}
             items={tocItems}
-            maxDepth={frontmatter.sidebarDepth!}
+            maxDepth={frontmatter.sidebarDepth}
             hideEditButton={!!frontmatter.hideEditButton}
             pt={isPageIncomplete ? "5rem" : "3rem"}
           />

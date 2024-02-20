@@ -146,7 +146,7 @@ export const StaticLayout = ({
               zIndex={2}
               items={tocItems}
               isMobile
-              maxDepth={frontmatter.sidebarDepth || 2}
+              maxDepth={frontmatter.sidebarDepth}
               hideEditButton={!!frontmatter.hideEditButton}
             />
             {children}
@@ -157,7 +157,7 @@ export const StaticLayout = ({
         <TableOfContents
           editPath={absoluteEditPath}
           items={tocItems}
-          maxDepth={frontmatter.sidebarDepth || 2}
+          maxDepth={frontmatter.sidebarDepth}
           hideEditButton={!!frontmatter.hideEditButton}
         />
       </Flex>

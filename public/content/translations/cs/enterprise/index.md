@@ -2,7 +2,6 @@
 title: Pro firmy
 description: Příručky, články a nástroje o veřejných a soukromých blockchainech Etherea pro firmy
 lang: cs
-sidebarDepth: 1
 ---
 
 # Ethereum pro firmy {#ethereum-for-enterprise}

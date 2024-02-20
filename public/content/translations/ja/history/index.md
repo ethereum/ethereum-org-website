@@ -2,7 +2,6 @@
 title: イーサリアムの歴史とフォーク
 description: 主要なマイルストーン、リリース、フォークを含むイーサリアムブロックチェーンの歴史。
 lang: ja
-sidebarDepth: 1
 ---
 
 # イーサリアムの歴史 {#the-history-of-ethereum}

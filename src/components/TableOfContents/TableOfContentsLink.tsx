@@ -2,7 +2,7 @@ import { cssVar, SystemStyleObject } from "@chakra-ui/react"
 
 import type { ToCItem } from "@/lib/types"
 
-import { BaseLink } from "@/components/Link"
+import { ButtonLink } from "@/components/Buttons"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
@@ -18,16 +18,10 @@ const Link = ({
   activeHash,
 }: TableOfContentsLinkProps) => {
   const { flipForRtl } = useRtlFlip()
-  const isActive = activeHash === url
-  const isNested = depth === 2
-
-  const classList: Array<string> = []
-  isActive && classList.push("active")
-  isNested && classList.push("nested")
-  const classes = classList.join(" ")
 
   const $dotBg = cssVar("dot-bg")
 
+  // Styling for ToC circle indicator
   const hoverOrActiveStyle: SystemStyleObject = {
     color: "primary.base",
     _after: {
@@ -38,16 +32,19 @@ const Link = ({
       borderRadius: "50%",
       boxSize: 2,
       position: "absolute",
-      insetInlineStart: "-1.29rem",
+      insetInlineStart: `calc(-1 * (1rem * ${depth} + 4.5px))`,
       top: "50%",
       mt: -1,
     },
   }
 
   return (
-    <BaseLink
+    <ButtonLink
+      isActive={activeHash === url}
+      variant="link"
       href={url}
-      className={classes}
+      p="0"
+      border="0px"
       textDecoration="none"
       display="inline-block"
       position="relative"
@@ -58,32 +55,26 @@ const Link = ({
       _hover={{
         ...hoverOrActiveStyle,
       }}
-      sx={{
-        [$dotBg.variable]: "colors.background",
-        "&.active": {
-          [$dotBg.variable]: "colors.primary",
-          ...hoverOrActiveStyle,
-        },
-        "&.nested": {
-          _before: {
-            content: `"⌞"`,
-            opacity: 0.5,
-            display: "inline-flex",
-            position: "absolute",
-            insetInlineStart: -3.5,
-            top: -1,
-            transform: flipForRtl,
-          },
-          "&.active, &:hover": {
-            _after: {
-              insetInlineStart: "-2.29rem",
-            },
-          },
-        },
+      _active={{
+        [$dotBg.variable]: "colors.primary",
+        ...hoverOrActiveStyle,
       }}
+      _before={
+        depth > 2
+          ? {
+              content: `"⌞"`,
+              opacity: 0.5,
+              display: "inline-flex",
+              position: "absolute",
+              insetInlineStart: -3.5,
+              top: -1,
+              transform: flipForRtl,
+            }
+          : undefined
+      }
     >
       {title}
-    </BaseLink>
+    </ButtonLink>
   )
 }
 

@@ -204,7 +204,7 @@ export const UseCasesLayout = ({
             </UnorderedList>
             <TableOfContents
               items={tocItems}
-              maxDepth={frontmatter.sidebarDepth || 2}
+              maxDepth={frontmatter.sidebarDepth}
               isMobile
             />
           </Box>
@@ -254,7 +254,7 @@ export const UseCasesLayout = ({
           hideBelow={lgBp}
           dropdownLinks={dropdownLinks}
           tocItems={tocItems}
-          maxDepth={frontmatter.sidebarDepth!}
+          maxDepth={frontmatter.sidebarDepth}
         />
         <ContentContainer>
           {children}
