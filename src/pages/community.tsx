@@ -226,7 +226,6 @@ const CommunityPage = () => {
       <PageMetadata
         title={t("page-community-meta-title")}
         description={t("page-community-meta-description")}
-        image="/heroes/community-hero.png"
       />
       <HubHero {...heroContent} />
       <Divider />
