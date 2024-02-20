@@ -27,12 +27,12 @@ const DencunBanner = () => {
         </Tooltip>
         . Node operators must update client software to a supported version to
         prepare.{" "}
-        <Link
+        {/* <Link
           href="#TODO-link-blog-announcement-when-ready"
           color="background.base !important"
         >
           Learn more
-        </Link>
+        </Link> */}
       </Text>
     </DismissableBanner>
   )
