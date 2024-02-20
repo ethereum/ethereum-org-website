@@ -575,7 +575,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 Recuperar um elemento do mapa é mais difícil. A posição de um elemento no mapa é calculada com:
 
 ```js
-keccack(LeftPad32(key, 0), LeftPad32(map position, 0))
+keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
 Isso significa que, para recuperar o armazenamento na pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] precisamos calcular a posição com:

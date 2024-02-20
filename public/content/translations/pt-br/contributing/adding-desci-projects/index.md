@@ -37,7 +37,7 @@ O Ethereum é fluido por natureza, por isso, suas equipes e produtos vêm e vão
 - garantir que todos os projetos listados ainda atendam aos nossos critérios
 - verificar se não há produtos sugeridos que atendam mais aos nossos critérios do que os atualmente listados
 
-O ethereum.org é mantido pela comunidade de código aberto e dependemos da comunidade para ajudar a mantê-lo atualizado. Se você observar alguma informação sobre os projetos listados que precisam ser atualizados, abra um tíquete ou uma solicitação por pull em nosso repositório do GitHub.
+O ethereum.org é mantido pela comunidade de código aberto e dependemos da comunidade para ajudar a mantê-lo atualizado. Se você notar alguma informação sobre projetos listados que precisam ser atualizados, abra um tíquete ou uma solicitação de pull em nosso repositório do GitHub.
 
 ## Termos de uso {#terms-of-use}
 

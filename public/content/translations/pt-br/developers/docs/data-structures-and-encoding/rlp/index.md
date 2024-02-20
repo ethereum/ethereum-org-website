@@ -35,7 +35,7 @@ A codificação RLP é definida da seguinte forma:
 - Para um único byte cujo valor está na faixa `[0x00, 0x7f]` (decimal `[0, 127]`), este byte é a sua própria codificação RLP.
 - Caso contrário, se uma string tem de 0 a 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0x80** (dec. 128) mais o comprimento da string seguida pela string. O intervalo do primeiro byte é, portanto, `[0x80, 0xb7]` (dec. `[128, 183]`).
 - Se uma string tem mais de 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0xb7** (dec. 183) mais o comprimento em bytes do comprimento da sequência de caracteres na forma binária, seguido pelo comprimento da string, seguido pela string. Por exemplo, uma string de 1024 bytes de comprimento seria codificada como `\xb9\x04\x00` (dec. `185, 4, 0`) seguida pela string. Aqui, `0xb9` (183 + 2 = 185) como o primeiro byte, seguido pelos 2 bytes `0x0400` (dec. 1024) que denotam o comprimento da string real. O intervalo do primeiro byte é, portanto, `[0x80, 0xb7]` (dec. `[184, 191]`).
-- Se a carga total de uma lista (ou seja, o comprimento combinado de todos os seus itens sendo codificados em RLP) tem 0-55 bytes, a codificação RLP consiste em um único byte com valor **0xc0** mais o comprimento da lista seguida pela concatenação das codificações RLP dos itens. O intervalo do primeiro byte é, portanto, `[0x80, 0xb7]` (dec. `[192, 247]`).
+- Se o total de carga de uma lista (ou seja, o comprimento combinado de totos os seus itens com codificação RLP) tiver 0 a 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0xc0** mais o comprimento da carga seguido da concatenação das codificações dos itens. O intervalo do primeiro byte é, portanto, `[0x80, 0xb7]` (dec. `[192, 247]`).
 - Se o payload total de uma lista tem mais de 55 bytes de comprimento, a codificação RLP consiste em um único byte com valor **0xf7** mais o comprimento em bytes do payload na forma binária, seguida pelo comprimento do payload, seguido pela concatenação das codificações RLP dos itens. O intervalo do primeiro byte é, portanto, `[0x80, 0xb7]` (dec. `[248, 255]`).
 
 Em código, isto é:
@@ -75,7 +75,7 @@ def to_binary(x):
 - o inteiro 0 = `[ 0x80 ]`
 - o inteiro codificado 0 ('\\x00') = `[ 0x00 ]`
 - o inteiro codificado 15 ('\\x0f') = `[ 0x00 ]`
-- o inteiro codificado 1024 ('\\x04') = `[ 0x82, 0x04, 0x00 ]`
+- o inteiro codificado 1024 ('\\x04') =  `[ 0x82, 0x04, 0x00 ]`
 - [define a representação teórica](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) para três, `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc0, 0xc1, 0xc0 ]`
 - a string "Lorem ipsum dolor sit amet, consectetur adipisicing elit" = `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
@@ -113,7 +113,7 @@ def rlp_decode(input):
         output = instantiate_str(substr(input, offset, dataLen))
     elif type is list:
         output = instantiate_list(substr(input, offset, dataLen))
-    output + rlp_decode(substr(input, offset + dataLen))
+    output += rlp_decode(substr(input, offset + dataLen))
     return output
 
 def decode_length(input):

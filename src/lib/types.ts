@@ -59,10 +59,13 @@ export type Layout = keyof LayoutMappingType
 
 export type Lang =
   | "en"
+  | "am"
   | "ar"
   | "az"
+  | "be"
   | "bg"
   | "bn"
+  | "bs"
   | "ca"
   | "cs"
   | "da"
@@ -71,6 +74,7 @@ export type Lang =
   | "es"
   | "fa"
   | "fi"
+  | "fil"
   | "fr"
   | "gl"
   | "gu"
@@ -78,6 +82,7 @@ export type Lang =
   | "hi"
   | "hr"
   | "hu"
+  | "hy-am"
   | "id"
   | "ig"
   | "it"
@@ -85,13 +90,15 @@ export type Lang =
   | "ka"
   | "kk"
   | "km"
+  | "kn"
   | "ko"
   | "lt"
   | "ml"
   | "mr"
   | "ms"
-  | "nl"
   | "nb"
+  | "ne-np"
+  | "nl"
   | "pcm"
   | "ph"
   | "pl"
@@ -106,6 +113,7 @@ export type Lang =
   | "sw"
   | "ta"
   | "th"
+  | "tk"
   | "tr"
   | "uk"
   | "ur"
@@ -155,7 +163,8 @@ export type RawQuestion = {
 
 export type QuestionBank = Record<string, RawQuestion>
 export type QuestionKey = keyof typeof allQuestionData
-export type AnswerKey = typeof allQuestionData[QuestionKey]["answers"][number]["id"]
+export type AnswerKey =
+  (typeof allQuestionData)[QuestionKey]["answers"][number]["id"]
 
 export type Question = RawQuestion & {
   id: QuestionKey
@@ -192,7 +201,10 @@ export type QuizKey = keyof typeof allQuizData
 type HasScoredPerfect = boolean
 type QuestionsCorrect = number
 
-export type CompletedQuizzes = Record<QuizKey, [HasScoredPerfect, QuestionsCorrect]>
+export type CompletedQuizzes = Record<
+  QuizKey,
+  [HasScoredPerfect, QuestionsCorrect]
+>
 
 export type UserStats = {
   score: number
@@ -238,37 +250,12 @@ export type LocaleContributions = {
 }
 
 // Crowdin translation progress
-type Language = {
-  id: string
-  name: string
-  editorCode: string
-  twoLettersCode: string
-  threeLettersCode: string
-  locale: string
-  androidCode: string
-  osxCode: string
-  osxLocale: string
-  pluralCategoryNames: string[]
-  pluralRules: string
-  pluralExamples: string[]
-  textDirection: string
-  dialectOf: unknown
-}
-
-type CountSummary = {
-  total: number
-  translated: number
-  preTranslateAppliedTo: number
-  approved: number
-}
-
 export type ProjectProgressData = {
-  languageId: string,
-  language?: Language,
-  words: CountSummary,
-  phrases: CountSummary,
-  translationProgress: number
-  approvalProgress: number
+  languageId: string
+  words: {
+    total: number
+    approved: number
+  }
 }
 
 export type LocaleDisplayInfo = {
@@ -329,7 +316,6 @@ export type AllTimeData = {
   }>
 }
 
-
 // GitHub contributors
 export type Commit = {
   commit: {
@@ -368,8 +354,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-    items: TocNodeType[]
-  }
+      items: TocNodeType[]
+    }
 
 export type ToCItem = {
   title: string
@@ -435,12 +421,12 @@ export type TimestampedData<T> = {
 
 export type MetricDataValue<Data, Value> =
   | {
-    error: string
-  }
+      error: string
+    }
   | {
-    data: Data
-    value: Value
-  }
+      data: Data
+      value: Value
+    }
 
 export type EtherscanNodeResponse = {
   result: {

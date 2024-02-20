@@ -44,7 +44,7 @@ Gesamt ETH Angebot: **~120,520,000 ETH** (zum Zeitpunkt von The Merge im Septemb
 
 **Ausgabe in der Ausführungsschicht:**
 
-- Wurde auf 2,08 ETH pro 13,3 Sekunden\* geschätzt: **~4,930,000** ETH wurden in einem Jahr ausgegeben
+- Wurde auf 2,08 ETH pro 13,3 Sekunden* geschätzt: **~4,930,000** ETH wurden in einem Jahr ausgegeben
 - Führte zu einer Inflationsrate von **etwa 4.09%** (4,93 Mio. pro Jahr / 120,5 Mio. Gesamt)
 - \*Dies beinhaltet die 2 ETH pro kanonischem Block, plus durchschnittlich 0,08 ETH über die Zeit von Ommer-Blöcken. Es verwendet auch 13,3 Sekunden, die Zielzeit für den Baseline-Block ohne jeglichen Einfluss durch eine ["Difficulty Bomb"](/glossary/#difficulty-bomb). ([Siehe Quelle](https://bitinfocharts.com/ethereum/))
 

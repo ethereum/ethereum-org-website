@@ -13,11 +13,11 @@ import type {
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 import { filterRealLocales, languages } from "@/lib/utils/translations"
 
-import progressData from "@/data/translationProgress.json"
+import progressDataJson from "@/data/translationProgress.json"
 
 import { DEFAULT_LOCALE } from "@/lib/constants"
 
-const data = progressData as ProjectProgressData[]
+const progressData = progressDataJson satisfies ProjectProgressData[]
 
 export const useLanguagePicker = (
   handleClose?: () => void,
@@ -73,8 +73,14 @@ export const useLanguagePicker = (
       const fallbackSource =
         intlSource !== localeOption ? intlSource : englishName
       const i18nKey = "language-" + localeOption.toLowerCase()
-      const i18nSource = t(i18nKey)
-      const sourceName = i18nSource === i18nKey ? fallbackSource : i18nSource
+      const i18nSource = t(i18nKey) // Falls back to English namespace if not found
+
+      // If i18nSource (fetched from `language-{locale}` in current namespace)
+      // is not translated (output === englishName), or not available
+      // (output === i18nKey), use the Intl.DisplayNames result as fallback
+      const sourceName = [i18nKey, englishName].includes(i18nSource)
+        ? fallbackSource
+        : i18nSource
 
       // Get "target" display name (Language choice displayed in that language)
       const fallbackTarget = new Intl.DisplayNames([localeOption], {
@@ -90,20 +96,24 @@ export const useLanguagePicker = (
       }
 
       // English will not have a dataItem
-      const dataItem = data.find(
+      const dataItem = progressData.find(
         ({ languageId }) =>
           i18nItem.crowdinCode.toLowerCase() === languageId.toLowerCase()
       )
 
       const approvalProgress =
-        localeOption === DEFAULT_LOCALE ? 100 : dataItem?.approvalProgress || 0
+        localeOption === DEFAULT_LOCALE
+          ? 100
+          : Math.floor(
+              (dataItem!.words.approved / dataItem!.words.total) * 100
+            ) || 0
 
-      if (data.length === 0)
+      if (progressData.length === 0)
         throw new Error(
           "Missing translation progress data; check GitHub action"
         )
 
-      const totalWords = data[0].words.total
+      const totalWords = progressData[0].words.total
 
       const wordsApproved =
         localeOption === DEFAULT_LOCALE

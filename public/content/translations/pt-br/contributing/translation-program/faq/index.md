@@ -110,10 +110,10 @@ O processo de revisão é simples: uma vez que um determinado [lote de conteúdo
 
 Atualmente, todo o conteúdo que não está na língua inglesa é traduzido diretamente do conteúdo em inglês, e qualquer conteúdo que não esteja nesse idioma não pode ser adicionado a outros idiomas.
 
-Para sugerir um novo conteúdo para o ethereum.org, é possível [registrar uma contribuição](https://github.com/ethereum/ethereum-org-website/issues) no GitHub. Se adicionado, o conteúdo será escrito em inglês e traduzido para outros idiomas usando o Crowdin.
+Para sugerir um novo conteúdo para o ethereum.org, é possível [criar um tíquete](https://github.com/ethereum/ethereum-org-website/issues) no GitHub. Se adicionado, o conteúdo será escrito em inglês e traduzido para outros idiomas usando o Crowdin.
 
 Planejamos adicionar suporte para adições de conteúdos que não estejam em inglês em um futuro próximo.
 
 ## Entre em contato conosco {#contact}
 
-Agradecemos por ter lido todas estas informações. Esperamos que elas tenham incentivado você a participar de nosso programa. Junte-se ao nosso [canal de tradução do Discord](https://discord.gg/ethereum-org) para fazer perguntas e colaborar com outros tradutores, ou entre em contato conosco em translations@ethereum.org!
+Agradecemos por ter lido todas estas informações. Esperamos que elas tenham incentivado você a participar de nosso programa. Junte-se ao nosso [canal de tradução do Discord](https://discord.gg/XVepFu7sqR) para fazer perguntas e colaborar com outros tradutores, ou entre em contato conosco em translations@ethereum.org!

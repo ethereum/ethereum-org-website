@@ -116,7 +116,7 @@ A melhor maneira de lidar com links é copiá-los diretamente da fonte, clicando
 
 ![Exemplo de link.png](./example-of-link.png)
 
-Os links também aparecem no texto de origem na forma de tags (por exemplo, <0> </0>). Se você passar o mouse por cima da tag, o editor exibirá seu conteúdo completo. Às vezes, essas tags representarão links.
+Links também aparecem no texto fonte na forma de tags (ou seja, <0> </0>). Se você passar o mouse por cima da tag, o editor exibirá seu conteúdo completo. Às vezes, essas tags representarão links.
 
 É muito importante copiar os links da origem e não mudar a sua ordem.
 
