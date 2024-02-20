@@ -55,7 +55,7 @@
   "layer-2-zk-rollups-childSentance": "More on ZK-rollups",
   "layer-2-dyor-title": "Do your own research: risks of layer 2",
   "layer-2-dyor-1": "Many layer 2 projects are relatively young and still require users to trust some operators to be honest as they work to decentralize their networks. Always do your own research to decide if you're comfortable with any risks involved.",
-  "layer-2-dyor-2": "For more information on the technology, risks, and <a href=\"/glossary/#trustless\">trust assumptions</a> of layer 2s, we recommend checking out L2BEAT, which provides a comprehensive risk assessment framework of each project.",
+  "layer-2-dyor-2": "For more information on the technology, risks, and <a href=\"/glossary/#trust-assumptions\">trust assumptions</a> of layer 2s, we recommend checking out L2BEAT, which provides a comprehensive risk assessment framework of each project.",
   "layer-2-dyor-3": "Go to L2BEAT",
   "layer-2-use-layer-2-title": "Use layer 2",
   "layer-2-use-layer-2-1": "Now that you understand why layer 2 exists and how it works, let's get you up and running!",
