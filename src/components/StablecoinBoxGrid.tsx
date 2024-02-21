@@ -1,9 +1,7 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { FaExclamation } from "react-icons/fa6"
-import { HiOutlineSpeakerphone } from "react-icons/hi";
-import { Box, Flex, HStack,Icon,Text,useColorModeValue } from "@chakra-ui/react"
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
 
@@ -41,7 +39,6 @@ interface ILink {
 
 type GridItemProps = {
   description: string
-  disclaimer: string
   columnNumber: number
   rowNumber: number
   emoji: string
@@ -66,23 +63,6 @@ const OpenTitle = ({ title }: { title: string }) => {
       {title}
     </OldHeading>
   )
-}
-
-const Disclaimer = ({ disclaimer }: { disclaimer: string }) => {
-
-  return (
-    <Box p={1}  borderRadius={'5px'} bg={'warning'}>
-          <HStack>
-          <Icon as={HiOutlineSpeakerphone} /> 
-          {/* <Icon fontWeight={300} fontSize={'sm'} as={FaExclamation}  />  */}
-          <Text  fontSize="sm" fontWeight={400} >
-            {disclaimer}  
-          </Text>
-          </HStack>
-      </Box>
-  
-  )
-
 }
 
 const Title = ({ title }: { title: string }) => {
@@ -275,7 +255,6 @@ const GridItem = ({
 
 export interface IPropsBoxItem {
   description: string
-  disclaimer?: string
   emoji: string
   title: string
   pros?: Array<string>
@@ -320,7 +299,6 @@ const StablecoinBoxGrid = ({ items }: StablecoinBoxGridProps) => {
             title={item.title}
             emoji={item.emoji}
             description={item.description}
-            disclaimer={item.disclaimer || ''}
             pros={item.pros}
             cons={item.cons}
             links={item.links}
