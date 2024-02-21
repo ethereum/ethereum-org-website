@@ -9,7 +9,7 @@ sidebarDepth: 2
 
 ## 前提条件 {#prerequisites}
 
-在继续阅读本文章之前，您应当对以太坊和[客户端软件](/developers/docs/nodes-and-clients/)的基本原理已经有所了解。 若是熟悉网络层这一概念和[以太坊白皮书](/whitepaper/)的话会更好。
+在继续阅读本文章之前，你应当对以太坊和[客户端软件](/developers/docs/nodes-and-clients/)的基本原理已经有所了解。 若是熟悉网络层这一概念和[以太坊白皮书](/whitepaper/)的话会更好。
 
 ## 数据结构 {#data-structures}
 
