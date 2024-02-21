@@ -4,6 +4,10 @@ const { i18n } = require("./next-i18next.config")
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS || 2)
 
+const ContentSecurityPolicy = `
+  frame-ancestors 'none';
+`
+
 const experimental = LIMIT_CPUS
   ? {
       // This option could be enabled in the future when flagged as stable, to speed up builds
@@ -32,6 +36,19 @@ module.exports = (phase, { defaultConfig }) => {
       })
 
       return config
+    },
+    async headers() {
+      return [
+        {
+          source: "/(.*?)",
+          headers: [
+            {
+              key: "Content-Security-Policy",
+              value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
+            },
+          ],
+        },
+      ]
     },
     i18n,
     images: {
