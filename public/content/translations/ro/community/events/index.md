@@ -4,7 +4,7 @@ description: Cum să vă implicați în comunitatea Ethereum.
 lang: ro
 ---
 
-## Evenimente apropiate {#events}
+# Evenimente apropiate {#events}
 
 **În fiecare lună au loc evenimenteEthereum majore în întreaga lume.** Gândiți-vă să participați la unul ce se desfășoară în apropiere, pentru a vă întâlni cu mai multe persoane din comunitate, pentru a afla despre oportunități de angajare și pentru a vă dezvolta noi competențe.
 
