@@ -29,8 +29,8 @@ Centinaia di migliaia di appassionati di Ethereum si riuniscono in questi forum 
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - community dei creatori di web3; un luogo di incontro per costruttori, figure industriali e appassionati di Ethereum. Siamo appassionati di sviluppo, progettazione e cultura del web3. Vieni a costruire con noi.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - chat per lo sviluppo in solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat per lo sviluppo in solidity (Matrix)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> - forum di domande e risposte</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> -forum decentralizzato di domande e risposte</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- forum di domande e risposte</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> <i>- forum decentralizzato di domande e risposte</i></SocialListItem>
 
 ## YouTube e Twitter {#youtube-and-twitter}
 
