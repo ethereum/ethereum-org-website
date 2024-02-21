@@ -21,7 +21,13 @@ const GlossaryDefinition = ({ term, size = "md" }: GlossaryDefinitionProps) => {
       <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
         <Translation id={"glossary:" + term + "-term"} />
       </OldHeading>
-      <Text {...textStyles}>
+      {/**
+       * `as="span"` prevents hydration warnings for strings that contain
+       * elements that cannot be nested inside `p` tags, like `ul` tags
+       * (found in some Glossary definition).
+       * TODO: Develop a better solution to handle this case.
+       */}
+      <Text as="span" {...textStyles}>
         <Translation id={"glossary:" + term + "-definition"} />
       </Text>
     </Box>
