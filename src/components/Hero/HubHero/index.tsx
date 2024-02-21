@@ -14,7 +14,7 @@ const HubHero = ({
 }: CommonHeroProps) => {
   if (buttons && buttons.length > 2) {
     throw new Error(
-      "Cannot have more than two call-to-action buttons in this hero component."
+      "Can not have more than two call-to-action buttons in this hero component."
     )
   }
 
@@ -81,4 +81,4 @@ const HubHero = ({
   )
 }
 
-export default HubHero;
+export default HubHero
