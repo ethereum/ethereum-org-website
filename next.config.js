@@ -44,6 +44,10 @@ module.exports = (phase, { defaultConfig }) => {
           source: "/(.*?)",
           headers: [
             {
+              key: "X-Frame-Options",
+              value: "deny",
+            },
+            {
               key: "Content-Security-Policy",
               value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
             },
