@@ -19,8 +19,13 @@ interface Props {
  * translations.
  */
 function MdLink(props: Props) {
+  const { href } = props
+  if (!href) {
+    return <InlineLink {...props} />
+  }
+
   const regex = new RegExp(/\/glossary\/#(.+)/)
-  const matches = props.href.match(regex)
+  const matches = href.match(regex)
 
   // get the `termKey` from the `href`
   // e.g. in `/glossary/#new-term` => "new-term" is the `termKey`
