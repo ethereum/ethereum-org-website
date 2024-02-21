@@ -13,8 +13,8 @@ const HubHero = ({
   buttons,
 }: CommonHeroProps) => {
   if (buttons && buttons.length > 2) {
-    throw Error(
-      "Can not have more than two call-to-action buttons in this hero component."
+    throw new Error(
+      "Cannot have more than two call-to-action buttons in this hero component."
     )
   }
 
@@ -49,21 +49,25 @@ const HubHero = ({
         backdropBlur={{ xl: "base" }}
         wordBreak="break-word"
       >
-        <Heading
-          as="h1"
-          size="sm"
-          color="body.medium"
-          fontWeight="normal"
-          textTransform="uppercase"
-        >
-          {title}
-        </Heading>
+        {title ? (
+          <Heading
+            as="h1"
+            size="sm"
+            color="body.medium"
+            fontWeight="normal"
+            textTransform="uppercase"
+          >
+            {title}
+          </Heading>
+        ) : null}
         <Stack
           alignSelf="center"
           spacing={{ base: "2", md: "1" }}
           maxW="container.md"
         >
-          <Heading size="2xl">{header}</Heading>
+          <Heading as={title ? "h2" : "h1"} size="2xl">
+            {header}
+          </Heading>
           <Text size="lg">{description}</Text>
         </Stack>
         <HStack justify={{ md: "center", xl: "start" }} spacing="4">
@@ -77,4 +81,4 @@ const HubHero = ({
   )
 }
 
-export default HubHero
+export default HubHero;
