@@ -171,7 +171,7 @@ Ada banyak proyek ambisius yang menggunakan Ethereum sebagai landasan untuk solu
 - [Apa itu Ethereum ERC725? Manajemen Identitas Mandiri di Rantai Blok](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [Bagaimana Rantai Blok Dapat Memecahkan Masalah Identitas Digital](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [Apa Itu Identitas Terdesentralisasi Dan Mengapa Anda Harus Peduli?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
-- <a hrf="https://walt.id/white-paper/digital-identity">Pendahuluan tentang Identitas Terdesentralisasi</a> — _Dominik Beron_
+- [Pendahuluan tentang Identitas Terdesentralisasi](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
 
 ### Video {#videos}
 
