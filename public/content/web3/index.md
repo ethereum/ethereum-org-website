@@ -98,7 +98,7 @@ However, people define many Web3 communities as DAOs. These communities all have
 
 Traditionally, you would create an account for every platform you use. For example, you might have a Twitter account, a YouTube account, and a Reddit account. Want to change your display name or profile picture? You have to do it across every account. You can use social sign-ins in some cases, but this presents a familiar problem—censorship. In a single click, these platforms can lock you out of your entire online life. Even worse, many platforms require you to trust them with personally identifiable information to create an account.
 
-Web3 solves these problems by allowing you to control your digital identity with an Ethereum address and ENS profile. Using an Ethereum address provides a single login across platforms that is secure, censorship-resistant, and anonymous.
+Web3 solves these problems by allowing you to control your digital identity with an Ethereum address and Ethereum Name Service (ENS) profile. Using an Ethereum address provides a single login across platforms that is secure, censorship-resistant, and anonymous.
 
 <ButtonLink to="https://login.xyz/">
   Sign-in with Ethereum
