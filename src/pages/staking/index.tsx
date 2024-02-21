@@ -442,7 +442,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
@@ -463,7 +463,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
@@ -479,7 +479,7 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "solo-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
@@ -512,7 +512,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
@@ -530,7 +530,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
@@ -543,7 +543,7 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "saas-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
@@ -579,7 +579,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
@@ -600,7 +600,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
@@ -613,7 +613,7 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "pool-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>

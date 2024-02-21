@@ -24,7 +24,7 @@ Bütün kaynak kodunu görmek isterseniz:
 
 ## ERC-20 sözleşmesi oluşturma {#creating-an-erc-20-contract}
 
-Güvenlik önlemi işlevini eklemeden önce bize bir ERC-20 sözleşmesi lazım. Bu makalede [OpenZeppelin'in Sözleşme Sihirbazı'nı](https://docs.openzeppelin.com/contracts/4.x/wizard) kullanacağız. Başka bir sekmede açın ve şu yönergeleri izleyin:
+Güvenlik önlemi işlevini eklemeden önce bize bir ERC-20 sözleşmesi lazım. Bu makalede [OpenZeppelin'in Sözleşme Sihirbazı'nı](https://docs.openzeppelin.com/contracts/5.x/wizard) kullanacağız. Başka bir sekmede açın ve şu yönergeleri izleyin:
 
 1. **ERC20**'yi seçin.
 2. Bu ayarları girin:

@@ -10,7 +10,7 @@ import type {
 } from "@/lib/types"
 
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
-import { languages } from "@/lib/utils/translations"
+import { filterRealLocales, languages } from "@/lib/utils/translations"
 
 import progressDataJson from "@/data/translationProgress.json"
 
@@ -25,7 +25,7 @@ export const useLanguagePicker = (
   menuState?: UseDisclosureReturn
 ) => {
   const { t } = useTranslation("page-languages")
-  const { locale, locales } = useRouter()
+  const { locale, locales: rawLocales } = useRouter()
   const refs = {
     inputRef: useRef<HTMLInputElement>(null),
     firstItemRef: useRef<HTMLAnchorElement>(null),
@@ -38,6 +38,8 @@ export const useLanguagePicker = (
 
   // perform all the filtering and mapping when the filter value change
   useEffect(() => {
+    const locales = filterRealLocales(rawLocales)
+
     // Get the preferred languages for the users browser
     const navLangs = typeof navigator !== "undefined" ? navigator.languages : []
 
@@ -150,7 +152,7 @@ export const useLanguagePicker = (
             .includes(filterValue.toLowerCase())
       )
     )
-  }, [filterValue, locale, locales, t])
+  }, [filterValue, locale, rawLocales, t])
 
   const { isOpen, ...menu } = useDisclosure()
 

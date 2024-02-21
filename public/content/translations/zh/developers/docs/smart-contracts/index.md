@@ -8,13 +8,13 @@ lang: zh
 
 智能合约只是一个运行在以太坊链上的一个程序。 它是位于以太坊区块链上一个特定地址的一系列代码（函数）和数据（状态）。
 
-智能合约也是一个[以太坊帐户](/developers/docs/accounts/)，我们称之为合约帐户。 这意味着它们有余额，可以成为交易的对象。 但是，他们无法被人操控，他们是被部署在网络上作为程序运行着。 个人用户可以通过提交交易执行智能合约的某一个函数来与智能合约进行交互。 智能合约能像常规合约一样定义规则，并通过代码自动强制执行。 默认情况下，您无法删除智能合约，与它们的交互是不可逆的。
+智能合约也是一个[以太坊帐户](/developers/docs/accounts/)，我们称之为合约帐户。 这意味着它们有余额，可以成为交易的对象。 但是，他们无法被人操控，他们是被部署在网络上作为程序运行着。 个人用户可以通过提交交易执行智能合约的某一个函数来与智能合约进行交互。 智能合约能像常规合约一样定义规则，并通过代码自动强制执行。 默认情况下，你无法删除智能合约，与它们的交互是不可逆的。
 
 ## 前置要求 {#prerequisites}
 
-如果您刚刚入门或寻找技术含量较低的介绍，我们推荐我们的[智能合约简介](/smart-contracts/)。
+如果你刚刚入门或寻找技术含量较低的介绍，我们推荐我们的[智能合约简介](/smart-contracts/)。
 
-确保在您已深入了解[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和[以太坊虚拟机](/developers/docs/evm/)，然后再开始学习智能合约。
+确保在你已深入了解[帐户](/developers/docs/accounts/)、[交易](/developers/docs/transactions/)和[以太坊虚拟机](/developers/docs/evm/)，然后再开始学习智能合约。
 
 ## 数字自动售货机 {#a-digital-vending-machine}
 
@@ -67,7 +67,7 @@ contract VendingMachine {
 
 ## 无需准入性 {#permissionless}
 
-任何人都可以编写智能合约并将其部署到区块链网络上。 您只需要学习如何用[智能合约语言编码](/developers/docs/smart-contracts/languages/)，并有足够的以太币来部署您的合约。 部署智能合约在技术上是一笔交易，因此就像你需要为简单的以太币转账支付燃料费一样，你也需要为部署智能合约支付[燃料费](/developers/docs/gas/)。 但是，合约部署的燃料成本要高得多。
+任何人都可以编写智能合约并将其部署到区块链网络上。 你只需要学习如何用[智能合约语言编码](/developers/docs/smart-contracts/languages/)，并有足够的以太币来部署你的合约。 部署智能合约在技术上是一笔交易，因此就像你需要为简单的以太币转账支付燃料费一样，你也需要为部署智能合约支付[燃料费](/developers/docs/gas/)。 但是，合约部署的燃料成本要高得多。
 
 以太坊提供了对开发者友好的智能合约编程语言：
 
@@ -88,7 +88,7 @@ contract VendingMachine {
 
 智能合约本身无法获取有关“现实世界”事件的信息，因为它们无法从链下来源检索数据。 这意味着它们无法对现实世界中的事件作出响应。 这是设计使然。 因为依赖外部信息可能会影响共识，而共识对安全性和去中心化而言十分重要。
 
-然而，对于区块链应用来说，能够使用链下数据非常重要。 解决方案是[预言机](/developers/docs/oracles/)，它们是将链下数据引入并使其可供智能合约使用的工具。
+然而，对于区块链应用程序来说，能够使用链下数据非常重要。 解决方案是[预言机](/developers/docs/oracles/)，它们是将链下数据引入并供智能合约使用的工具。
 
 智能合约的另一个限制是最大合约大小。 智能合约最大可达 24 KB，否则会消耗完燃料。 可以使用[钻石模式](https://eips.ethereum.org/EIPS/eip-2535)来规避它。
 
@@ -98,7 +98,7 @@ contract VendingMachine {
 
 ## 智能合约资源 {#smart-contract-resources}
 
-**OpenZeppelin 合约\*\*** - _安全智能合约开发库。_\*\*
+**OpenZeppelin 合约**** - _安全智能合约开发库。_**
 
 - [openzeppelin.com/contracts/](https://openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
@@ -108,4 +108,4 @@ contract VendingMachine {
 
 - [Coinbase：什么是智能合约？](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
 - [Chainlink：什么是智能合约？](https://chain.link/education/smart-contracts)
-- [视频：智能合约的简介](https://youtu.be/ZE2HxTmxfrI)
+- [视频：智能合约简介](https://youtu.be/ZE2HxTmxfrI)
