@@ -25,6 +25,7 @@ module.exports = (phase, { defaultConfig }) => {
   let nextConfig = {
     ...defaultConfig,
     reactStrictMode: true,
+    poweredByHeader: false,
     webpack: (config) => {
       config.module.rules.push({
         test: /\.ya?ml$/,
