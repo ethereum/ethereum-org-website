@@ -121,18 +121,18 @@ Les « DAO » sont des organisations autonomes décentralisées. Ces groupes t
 
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promouvoir le concept de DAO dans le domaine non technologique et aider les personnes à créer de la valeur grâce au DAO_
 - [Développeur DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Communauté de constructeurs qui croient en la propriété collective d'Internet_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - *Collectif de développement Web3 indépendant travaillant en tant que DAO*
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Collectif de développement Web3 indépendant travaillant en tant que DAO_
 - [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _ Développement décentralisé & gouvernance des applications décentralisées (dApps) & protocoles_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - *Gouvernance communautaire de DAOhaus*
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Gouvernance communautaire de DAOhaus_
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Franchise de super-héros appartenant à la Communauté_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - *Ingénierie juridique*
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - *Communauté artistique*
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - *Incubateur DAO*
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - *Venture pour des projets de crypto pré-amorçage*
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - *Mécaniques de jeu MMORPG pour la vraie vie*
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - *Marques de vêtements digiphysiques*
+- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Ingénierie juridique_
+- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Communauté artistique_
+- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Incubateur DAO_
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture pour des projets de crypto pré-amorçage_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Mécaniques de jeu MMORPG pour la vraie vie_
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Marques de vêtements digiphysiques_
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Projets dirigés par des femmes_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - *Communauté axée sur le financement du développement d'Ethereum*
-- [Guilde Raid](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - *Collectif de constructeurs Web3*
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Communauté axée sur le financement du développement d'Ethereum_
+- [Guilde Raid](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collectif de constructeurs Web3_
 
-À chaque fois et quelle que soit la façon dont vous contribuez à ethereum.org, pensez à respecter le [code de conduite](/community/code-of-conduct) !
+À chaque fois et quelle que soit la façon dont vous contribuez à ethereum.org, pensez à respecter le [code de conduite](/community/code-of-conduct)!

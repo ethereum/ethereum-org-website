@@ -340,7 +340,7 @@ La fourche Constantinople a :
 
 La fourche Byzantium a :
 
-- réduit les récompenses pour le [minage ](/developers/docs/consensus-mechanisms/pow/mining/)des blocs de 5 à 3 ETH ;
+- réduit les récompenses pour le [minage](/developers/docs/consensus-mechanisms/pow/mining/)des blocs de 5 à 3 ETH ;
 - retardé la [bombe de difficulté](/glossary/#difficulty-bomb) d'un an ;
 - ajouté la possibilité d'effectuer des appels sans changement d'état vers d'autres contrats ;
 - ajouté certaines méthodes de cryptographie pour permettre la [mise à l'échelle de la couche 2](/developers/docs/scaling/#layer-2-scaling).
