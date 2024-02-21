@@ -76,7 +76,7 @@ Geistiges Eigentum (IP) ist ein Hauptproblem der traditionellen Wissenschaft: Es
 
 Auf die gleiche Weise, wie NFTs Einnahmen für zukünftige Transaktionen an den ursprünglichen Ersteller zurückgeben können, können Sie transparente Wertzuweisungsketten einrichten, um Forscher, Verwaltungsorgane (wie DAOs) oder sogar die Personen, deren Daten gesammelt werden, zu belohnen.
 
-[IP-NFTs](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) können auch als Schlüssel zu einem dezentralisierten Datenspeicher für die durchgeführten Forschungsexperimente fungieren und sich in die NFT- und [DeFi](/defi/)-Finanzierung einfügen (von der Fraktionalisierung bis zu Leihpools und Wertschätzung). Es ermöglicht auch nativen On-Chain-Einheiten als DAOs wie etwa [VitaDAO](https://www.vitadao.com/), direkt in der Kette zu recherchieren. Die Einführung von nicht übertragbaren ["soulbound"-Token](https://vitalik.ca/general/2022/01/26/soulbound.html) könnte ebenfalls eine wichtige Rolle in DeSci spielen, da sie es Einzelpersonen ermöglichen, ihre Erfahrung und ihre Referenzen in Verbindung mit ihrer Ethereum-Adresse nachzuweisen.
+[IP-NFTs](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) können auch als Schlüssel zu einem dezentralisierten Datenspeicher für die durchgeführten Forschungsexperimente fungieren und sich in die NFT- und [DeFi](/defi/)-Finanzierung einfügen (von der Fraktionalisierung bis zu Leihpools und Wertschätzung). Es ermöglicht auch nativen On-Chain-Einheiten als DAOs wie etwa [VitaDAO](https://www.vitadao.com/), direkt in der Kette zu recherchieren. Die Einführung von nicht übertragbaren ["soulbound"-Token](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) könnte ebenfalls eine wichtige Rolle in DeSci spielen, da sie es Einzelpersonen ermöglichen, ihre Erfahrung und ihre Referenzen in Verbindung mit ihrer Ethereum-Adresse nachzuweisen.
 
 ### Datenspeicherung, Zugriff und Architektur {#data-storage}
 
@@ -103,7 +103,7 @@ Erkunden Sie Projekte und werden Sie Teil der DeSci-Gemeinschaft.
 - [OceanDAO: DAO regelte die Finanzierung der datenbezogenen Wissenschaft](https://oceanprotocol.com/dao)
 - [OpScientia: offene dezentrale wissenschaftliche Workflows](https://opsci.io/research/)
 - [LabDAO: Falten eines Proteins in Silizium](https://alphafodl.vercel.app/)
-- [Bio.xyz: Erhalten Sie Mittel für Ihr Biotech-DAO oder desci-Projekt](https://www.molecule.to/)
+- [Bio.xyz: Erhalten Sie Mittel für Ihr Biotech-DAO oder desci-Projekt](https://www.bio.xyz/)
 - [ResearchHub: Poste ein wissenschaftliches Ergebnis und führe ein Gespräch mit Partnern](https://www.researchhub.com/)
 - [VitaDAO: Langfristige Forschung finanziert durch gesponserte Forschungsverträge](https://www.vitadao.com/)
 - [Flamming-Protokoll: Open-Source-Datenwirtschaft, die die kollaborative biomedizinische Entdeckung fördert](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

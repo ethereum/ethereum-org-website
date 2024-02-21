@@ -99,6 +99,7 @@ const PageHero = ({
         {buttons && (
           <Wrap spacing={2} overflow="visible" sx={{ ul: { m: 0 } }}>
             {buttons.map((button, idx) => {
+              const isSecondary = idx !== 0
               if (isButtonLink(button)) {
                 return (
                   <WrapItem key={idx}>
@@ -112,6 +113,7 @@ const PageHero = ({
                           eventName: button.matomo.eventName,
                         })
                       }
+                      isSecondary={isSecondary}
                     >
                       {button.content}
                     </ButtonLink>
@@ -132,6 +134,7 @@ const PageHero = ({
                           eventName: button.matomo.eventName,
                         })
                       }
+                      isSecondary={isSecondary}
                     >
                       {button.content}
                     </Button>

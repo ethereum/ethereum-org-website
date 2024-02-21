@@ -150,27 +150,26 @@ Inversamente, as cadeias Plasma derivam sua segurança da rede principal. Isto a
 
 ### Plasma vs fragmentação (sharding) {#plasma-vs-sharding}
 
-Tanto as cadeias Plasma quanto as [cadeias de shard](/roadmap/danksharding/) publicam periodicamente provas criptográficas para a rede principal do Ethereum. No entanto, ambas têm propriedades de segurança diferentes.
+Tanto as cadeias plasma quanto as cadeias de fragmentos periodicamente publicam provas criptográficas na Mainnet (Rede principal) do Ethereum. No entanto, ambas têm propriedades de segurança diferentes.
 
 As cadeias de shard gravam "cabeçalhos de agrupamento" na rede principal contendo informações detalhadas sobre cada shard de dados. Os nós na rede principal verificam e garantem a validade de shards de dados, reduzindo a possibilidade de transições de shards inválidos e protegendo a rede contra atividades maliciosas.
 
 A cadeia Plasma é diferente porque a rede principal só recebe informação mínima sobre o estado das cadeias filhas. Isto significa que rede principal não pode verificar eficazmente as transações realizadas em cadeias filhas, tornando-as menos seguras.
 
+**Observe** que fragmentar a blockchain Ethereum não está mais no roteiro. Ela foi substituída por escalabilidade via rollups e [Danksharding](/roadmap/danksharding).
+
 ### Usar a cadeia Plasma {#use-plasma}
 
 Vários projetos fornecem implementações da cadeia Plasma que você pode integrar aos seus dapps:
 
-- [OMG Network](https://omg.network/)
 - [Polygon](https://polygon.technology/) (anteriormente Matic Network)
-- [Gluon](https://gluon.network/)
-- [LeapDAO](https://ipfs.leapdao.org/)
 
 ## Leitura adicional {#further-reading}
 
 - [Aprenda sobre a cadeia Plasma](https://www.learnplasma.org/en/)
 - [Um lembrete rápido do que significa "segurança compartilhada" e por que é tão importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Sidechains vs Plasma vs Sharding](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)
+- [Sidechains vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Entenda a cadeia Plasma - parte 1: O básico](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [A vida e a morte da cadeia Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 
-_Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_
+_Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_

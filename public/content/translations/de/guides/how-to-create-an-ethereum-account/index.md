@@ -4,37 +4,39 @@ description: Eine Schritt-für-Schritt-Anleitung für die Erstellung eines Ether
 lang: de
 ---
 
-# So "registrieren" Sie ein Ethereum-Konto
+# So erstellen Sie ein Ethereum-Konto
 
-Jeder kann ein Ethereum-Konto kostenlos erstellen mit einer speziellen Art App, allgemein als „Wallet" bezeichnet. Wallets erstellen und sichern die Schlüssel die ein Halten, Senden und Empfangen von Kryptowährungen ermöglichen. Außerdem kann man sich mit Projekten auf Ethereum verbinden, um beispielsweise NFTs oder Token zu handeln, wie auch den Zugang zu Spielen zu öffnen, und noch viel mehr.
+Jeder kann zu jeder Zeit ein kostenloses Ethereum-Konto einrichten. Es gibt mehrere Möglichkeiten, aber die einfachste und gebräuchlichste ist die Verwendung einer App, die als Wallet bekannt ist. Wallets erstellen und sichern den Schlüssel, mit dem Sie Ethereum nutzen können. Mit Ihrer Wallet können Sie Transaktionen senden, Ihren Token-Saldo überprüfen und sich mit Anwendungen verbinden, die auf Ethereum aufgebaut sind, wie zum Beispiel Token-Börsen, Spiele, NFT-Marktplätze und mehr. Einige "web2"-Anwendungen erlauben es nun auch, sich mit Ethereum anzumelden.
 
-Im Gegensatz zur Eröffnung eines neuen Kontos bei einer Firma erfolgt die Erstellung eines Ethereum Kontos frei, privat und ohne gesonderte Erlaubnis. Die Konten werden durch Schlüssel kontrolliert, die Sie mit Hilfe Ihrer Wallet-Software erstellen. Sie werden weder von einer dritten Partei ausgestellt noch in einem zentralen Register gespeichert.
+Im Gegensatz zur Eröffnung eines neuen Kontos bei einem Unternehmen erfolgt die Einrichtung eines Ethereum-Kontos freiwillig, privat und ohne Genehmigungspflicht. Die Konten werden durch Schlüssel kontrolliert, die Sie mit Hilfe Ihrer Wallet-Software erstellen. Sie werden weder von einer dritten Partei ausgestellt noch in einem zentralen Register gespeichert.
 
-## Schritt 1: Durchsuchen Sie unsere Liste der Wallets (Geldbörsen)
+## Schritt 1: Eine Wallet auswählen
 
-Eine Wallet ist wie ein Online-Bankkonto für Ethereum. Es gibt Dutzende von verschiedenen Wallets (Geldbörsen) zur Auswahl - für das Handy, für den Desktop oder sogar für Browser-Erweiterungen. Unsere Liste mit vertrauenswürdigen Geldbörsen ist ein guter Anfang.
+Eine Wallet ist eine App, mit der Sie Ihr Ethereum-Konto verwalten können. Die App verwendet Ihre Schlüssel, um Transaktionen zu senden oder entgegenzunehmen und sich bei Anwendungen anzumelden. Es gibt Dutzende von verschiedenen Wallets (Geldbörsen) zur Auswahl - für das Handy, für den Desktop oder sogar für Browser-Erweiterungen.
 
 <ButtonLink to="/wallets/find-wallet/">
   Finden Sie eine Wallet
 </ButtonLink>
 
-## Schritt 2: Wählen Sie eine Wallet, die Ihren Anforderungen entspricht
+Wenn Sie noch keine Erfahrung mit Kryptowährungen haben, können Sie den Filter "New to Crypto" (Neu im Bereich Kryptowährungen) auf der Seite "Find a Wallet" (Geldbörse finden) auswählen, um die Wallets zu finden, die alle notwendigen Funktionen für Einsteiger enthalten.
 
-Wenn Sie neu sind, können Sie den Filter „New to crypto" aktivieren, um nur die Wallets zu sehen, die alle notwendigen Funktionen enthalten, von denen wir glauben, dass sie für Anfänger besonders geeignet sind. Es gibt auch andere Profilfilter, die auf Ihre Bedürfnisse abgestimmt sind.
+![Filterauswahl auf der Seite „Wallet finden“](./wallet-box.png)
 
-## Schritt 3: Laden Sie Ihre Wallet-App herunter und installieren Sie sie.
+Es gibt auch andere Profilfilter, die auf Ihre Bedürfnisse abgestimmt sind. Das sind Beispiele für gängige Wallets – Sie sollten jedoch selbst recherchieren, bevor Sie einer Software vertrauen.
+
+## Schritt 2: Wallet-App herunterladen und installieren
 
 Wenn Sie sich für eine bestimmte Wallet entschieden haben, besuchen Sie die offizielle Website oder den App-Store, laden Sie es herunter und installieren Sie es. Sie alle sollten kostenlos sein.
 
-## Schritt 4: Öffnen Sie die App und erstellen oder importieren Sie Ihr Ethereum-Konto
+## Schritt 3: App öffnen und ein Ethereum-Konto erstellen oder importieren
 
 Wenn Sie Ihre neue Wallet zum ersten Mal öffnen, werden Sie möglicherweise gefragt, ob Sie ein neues Konto anlegen oder ein bestehendes importieren möchten. Klicken Sie auf neues Konto erstellen.
 
-## Schritt 5: Speichern Sie Ihren Wiederherstellungssatz
+## Schritt 4: Wiederherstellungssatz speichern
 
-Einige Anwendungen fordern Sie auf, einen geheimen Wiederherstellungssatz zu speichern. Es ist extrem wichtig, diesen geheimen Wiederherstellungssatz sicher aufzubewahren! Jede Person, die diesen geheimen Wiederherstellungssatz kennt, kann die Kontrolle über alle Ihre Konten übernehmen, die mit diesen Wörtern erstellt wurden. Geben Sie diese niemals weiter. Dieser Satz sollte 12 bis 24 zufällig generierte Wörter enthalten (die Reihenfolge der Wörter ist wichtig).
+Einige Anwendungen fordern Sie auf, eine geheime "Seed-Phrase" zu speichern (diese wird auch als "Recovery-Phrase" oder "Mnemonic" bezeichnet). Es ist extrem wichtig, diese "Seed-Phrase " sicher aufzubewahren! Die Seed-Phrase wird verwendet, um einen geheimen Schlüssel für ein Konto zu generieren, der zum Signieren und Senden von Transaktionen verwendet werden kann. Jede Person, die die Seed-Phrase kennt, kann alle Konten kontrollieren, die damit erstellt wurden. Teilen Sie die Seed-Phrase niemals mit anderen. Die Seed-Phrase sollte 12 bis 24 zufällig generierte Wörter enthalten (die Reihenfolge der Wörter ist wichtig).
 
-Sobald Sie Ihren Wiederherstellungssatz gespeichert haben, sollten Sie das Dashboard Ihrer Brieftasche mit Ihrem Guthaben sehen. Schauen Sie sich unsere Anleitung an: [Wie verwenden Sie ein Wallet.](/guides/how-to-use-a-wallet)
+Sobald Sie Ihre Seed-Phrase gespeichert haben, sollten Sie Ihr Wallet-Dashboard mit Ihrem Guthaben sehen können. Schauen Sie sich unsere Anleitung an: [Wie verwenden Sie ein Wallet.](/guides/how-to-use-a-wallet)
 
  <br />
 
@@ -49,20 +51,22 @@ Sobald Sie Ihren Wiederherstellungssatz gespeichert haben, sollten Sie das Dashb
 
 ### Ist meine Wallet auch mein Ethereum-Konto?
 
-Nein, genau wie beim Online-Banking auch kann man mehrere unterschiedliche Konten besitzen, die in einer Wallet-Anwendung gespeichert sind. Die 1aus 24 bzw. 24 Wörtern bestehende Phrase sichert sie alle: Man kann sie mit dem Samen eines großen Baumes vergleichen (weshalb sie stets sicher verwahrt werden muss). Jeder Ast des Baumes enthält einen Schlüssel, und jeder Schlüssel ist einer Ihrer Konten. Wenn Sie den Zugang zu Ihrer Wallet verlieren (also der Baum gefällt wird), können Sie jederzeit alle verschiedenen Konten durch andere Software und den gleichen Seed wiederherstellen (es wächst immer der gleiche Baum daraus).
+Nein. Die Wallet ist ein Verwaltungsinstrument, mit dem Sie Ihre Konten verwalten können. Eine einzige Wallet kann Zugang zu mehreren Konten gewähren, und ein einziges Konto kann von mehreren Wallets genutzt werden. Die Seed-Phrase wird verwendet, um Konten zu erstellen, die dann von der Wallet verwaltet werden.
+
+Sie können sich die Konten als Blätter an einem Baum vorstellen, die alle aus einer einzigen Seed-Phrase "erwachsen". Jedes einzelne "Seed" bringt einen völlig anderen Konto-Baum hervor.
 
 ### Kann ich Bitcoin an eine Ethereum-Adresse senden oder Ether an eine Bitcoin-Adresse?
 
-Nein, das können Sie nicht. Bitcoin und Ether befinden sich auf zwei separaten Netzwerken (also unterschiedlichen Blockchains) mit jeweils eigenen Modellen der Buchführung und des Formats der Adresse. Es gab verschiedene Versuche, eine Brücke zwischen den Netzwerken zu bauen, von welchen der Aktivste derzeit [Wrapped bitcoin bzw. WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/) ist. Dies ist keine Unterstützung, da WBTC eine treuhänderische Lösung ist (was bedeutet, dass eine einzelne Personengruppe bestimmte kritische Funktionen kontrolliert) und wird hier nur zu Informationszwecken bereitgestellt.
+Nein, das ist nicht möglich. Bitcoin und Ether befinden sich auf zwei separaten Netzwerken (also unterschiedlichen Blockchains) mit jeweils eigenen Modellen der Buchführung und des Formats der Adresse. Es gab verschiedene Versuche, eine Brücke zwischen den Netzwerken zu bauen, von welchen der Aktivste derzeit [Wrapped bitcoin bzw. WBTC](https://www.bitcoin.com/get-started/what-is-wbtc/) ist. Dies ist keine Unterstützung, da WBTC eine treuhänderische Lösung ist (was bedeutet, dass eine einzelne Personengruppe bestimmte kritische Funktionen kontrolliert) und wird hier nur zu Informationszwecken bereitgestellt.
 
 ### Wenn ich eine ETH-Adresse besitze, besitze ich dann die gleiche Adresse auf anderen Blockchains?
 
-Sie können dieselbe Adresse auf allen EVM-kompatiblen Blockchains verwenden (wenn Sie eine Wallet mit einem Wiederherstellungssatz haben). Diese [Liste](https://chainlist.org/) zeigt Ihnen, welche Blockchains Sie mit der gleichen Adresse verwenden können. Einige Blockchains, wie z. B. Bitcoin, implementieren einen komplett separaten Satz von Netzwerkregeln und Sie benötigen eine andere Adresse mit einem anderen Format. Wenn Sie eine Smart Contract Wallet haben, sollten Sie auf der Produktwebsite nachsehen, welche Blockchains unterstützt werden.
+Sie können dieselbe Adresse auf allen Blockchains verwenden, die eine ähnliche zugrunde liegende Software wie Ethereum verwenden (bekannt als "EVM-kompatibel"). Diese [Liste](https://chainlist.org/) zeigt Ihnen, welche Blockchains Sie mit der gleichen Adresse verwenden können. Einige Blockchains, wie z. B. Bitcoin, implementieren einen komplett separaten Satz von Netzwerkregeln und Sie benötigen eine andere Adresse mit einem anderen Format. Wenn Sie eine Smart Contract Wallet haben, sollten Sie auf der Produktwebsite nachsehen, welche Blockchains unterstützt werden.
 
 ### Ist eine eigene Wallet sicherer als die Beträge auf einer Börse zu halten?
 
-Ja, das ist eine viel sicherere Option, da niemand sonst Zugriff auf Ihre Gelder haben wird. Leider gibt es viele Beispiele für gescheiterte Börsen, die Konkurs angemeldet haben, was dazu führte, dass die Nutzer ihre verwahrten Ersparnisse verloren. Hacks, eingefrorene Konten oder blockierte Auszahlungen sind weitere häufige Risiken. Der Besitz einer Wallet (mit einem Wiederherstellungssatz) ist der beste Weg, um Ihr Vermögen zu schützen. Ein schlecht gesicherter Wiederherstellungssatz birgt jedoch potenziell mehr Risiken als die Verwaltung Ihrer Schlüssel durch eine Börse. Bewahren Sie Ihren Wiederherstellungssatz an einem sicheren Ort auf.
+Eine eigene Wallet zu besitzen bedeutet, dass Sie die Verantwortung für die Sicherheit Ihrer Vermögenswerte übernehmen. Leider gibt es viele Beispiele für gescheiterte Börsen, die das Geld ihrer Kunden verloren haben. Wenn Sie eine Wallet besitzen (mit einer Seed-Phrase), ist es nicht erforderlich, dass Sie Ihr Vermögen einem anderen Unternehmen anvertrauen. Allerdings müssen Sie Ihre eigenen Schlüssel sichern und Phishing-Betrug, die versehentliche Genehmigung von Transaktionen oder die Preisgabe von Schlüsseln, die Interaktion mit gefälschten Websites und andere Risiken bei der Selbstverwahrung vermeiden. Risiken und Nutzen sind unterschiedlich.
 
 ### Wenn ich mein/e Telefon/Hardware-Wallet verliere, muss ich dann dieselbe Wallet-App erneut verwenden, um das verlorene Geld wiederzuerlangen?
 
-Nein, Sie können nahezu jede Wallet verwenden, da der Wiederherstellungsprozess weitestgehend standardisiert ist. Das bedeutet, dass die Eingabe des gleichen Satzes aus 12 bzw. 24 Wörtern in den meisten Wallets zur Wiederherstellung desselben Kontos genutzt werden kann. Seien Sie vorsichtig, falls Sie dies einmal tun müssen: Stellen Sie am besten sicher, dass Sie während der Wiederherstellung Ihrer Wallet nicht mit dem Internet verbunden sind, um ein versehentliches Durchsickern Ihres Wiederherstellungscodes zu vermeiden. Es ist meist unmöglich, verlorene Guthaben ohne den Wiederherstellungssatz wiederzuerlangen.
+Nein, es ist möglich, eine andere Wallet zu verwenden. Solange Sie die Seed-Phrase haben, können Sie diese in den meisten Wallets eingeben. Die Wallet stellt dann Ihr Konto wieder her. Seien Sie vorsichtig, wenn das einmal erforderlich werden sollte: Stellen Sie sicher, dass Sie bei der Wiederherstellung Ihrer Wallet nicht mit dem Internet verbunden sind, damit Ihre Seed-Phrase nicht versehentlich veröffentlicht wird. Meist ist es nicht möglich, verlorene Gelder ohne die Seed-Phrase wiederzuerlangen.

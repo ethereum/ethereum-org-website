@@ -171,7 +171,7 @@ Diversi progetti forniscono implementazioni di Plasma che puoi integrare nelle t
 
 - [Scopri plasma](https://www.learnplasma.org/en/)
 - [Un rapido promemoria su che cos'è la "sicurezza condivisa" e perché è così importante](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)
-- [Sidechains vs Plasma vs Sharding](https://vitalik.ca/general/2019/06/12/plasma_vs_sharding.html)
+- [Sidechains vs Plasma vs Sharding](https://vitalik.eth.limo/general/2019/06/12/plasma_vs_sharding.html)
 - [Comprendere Plasma, Parte 1: Fondamenti](https://www.theblockcrypto.com/amp/post/10793/understanding-plasma-part-1-the-basics)
 - [The Life and Death of Plasma](https://medium.com/dragonfly-research/the-life-and-death-of-plasma-b72c6a59c5ad#)
 

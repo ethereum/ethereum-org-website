@@ -3,12 +3,12 @@ import { Box, Text } from "@chakra-ui/react"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
 
-interface IProps {
+interface GlossaryDefinitionProps {
   term: string
   size?: "md" | "sm"
 }
 
-const GlossaryDefinition: React.FC<IProps> = ({ term, size = "md" }) => {
+const GlossaryDefinition = ({ term, size = "md" }: GlossaryDefinitionProps) => {
   const headingStyles =
     size === "sm"
       ? { fontSize: "md", mt: 0, mb: 2 }

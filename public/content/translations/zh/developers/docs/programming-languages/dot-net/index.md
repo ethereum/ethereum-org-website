@@ -19,7 +19,7 @@ incomplete: true
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [编写您的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [编写你的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## 初学者参考文献和链接 {#beginner-references-and-links}
@@ -46,7 +46,7 @@ incomplete: true
 ## 面向中等程度用户的文章 {#intermediate-articles}
 
 - [Nethereum 练习册/样本列表](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
-- [部署您自己的开发测试链](https://github.com/Nethereum/Testchains)
+- [部署你自己的开发测试链](https://github.com/Nethereum/Testchains)
 - [Solidity 的 VSCode Codegen 插件](https://docs.nethereum.com/en/latest/nethereum-codegen-vscodesolidity/)
 - [Unity 和以太坊：为何以及如何？](https://www.raywenderlich.com/5509-unity-and-ethereum-why-and-how)
 - [为以太坊 dapp 创建 ASP.NET Core Web API](https://tech-mint.com/blockchain/create-asp-net-core-web-api-for-ethereum-dapps/)
@@ -76,7 +76,7 @@ incomplete: true
 
 ## .NET 社区贡献者 {#dot-net-community-contributors}
 
-在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 可以随意在 [Nethereum GitHub 存储库](https://github.com/Nethereum)上提交拉取请求或者打开一个问题，或者仅仅浏览我们提供的许多小项目/示例项目。 您可以在 [Discord](https://discord.gg/jQPrR58FxX) 上找到我们！
+在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 可以随意在 [Nethereum GitHub 存储库](https://github.com/Nethereum)上提交拉取请求或者打开一个问题，或者仅仅浏览我们提供的许多小项目/示例项目。 你可以在 [Discord](https://discord.gg/jQPrR58FxX) 上找到我们！
 
 如果你是 Nethermind 的新手并且需要入门帮助，请加入我们的 [Discord](http://discord.gg/PaCMRFdvWT)。 我们的开发人员随时准备回答你的问题。 不要犹豫，在 [Nethermind GitHub 存储库](https://github.com/NethermindEth/nethermind)上打开一个拉取请求或提出任何问题。
 

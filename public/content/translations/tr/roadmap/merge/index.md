@@ -1,6 +1,6 @@
 ---
 title: Birleştirme
-description: "Birleşim: Ana Ağ Ethereum'un hisse ispatını kullanmaya başlama zamanı hakkında bilgi edinin."
+description: 'Birleşim: Ana Ağ Ethereum''un hisse ispatını kullanmaya başlama zamanı hakkında bilgi edinin.'
 lang: tr
 template: upgrade
 image: /upgrades/merge.png
@@ -99,7 +99,7 @@ Birleşim, mutabakata değişikliklerle beraber geldi, bu değişiklikler şunla
   <li>yuva/blok zamanlaması</li>
   <li>işlem kodu değişiklikleri</li>
   <li>zincir üstündeki rastgeleliğin kaynakları</li>
-  <li><em>güvenli baş</em> ve <em>sonlandırılmış bloklar</em> konsepti</li>
+  <li><em>güvenli baş</em> ve <em>kesinleştirilmiş bloklar</em> konsepti</li>
 </ul>
 
 Daha fazla bilgi için, Tim Beiko tarafından yazılmış <a href="https://blog.ethereum.org/2021/11/29/how-the-merge-impacts-app-layer/">Birleşim Ethereum'un Uygulama Katmanını Nasıl Etkiler</a> üzerine blog gönderisine bakın.
@@ -168,7 +168,7 @@ Shangai/Capella ağ yükseltmesinden bu yana, paydaşlar herhangi bir hisse baki
 </ExpandableCard>
 
 <ExpandableCard
-title="Yanılgı: &quot;Birleşim tamamlandığı için, para çekimine izin verilir ve paydaşlar bir anda çıkabilir.&quot;"
+title="Yanılgı: &quot;Birleşim tamamlandığı için, para çekmeye izin verilir ve paydaşlar bir anda çıkabilir.&quot;"
 contentPreview="False. Validator exits are rate limited for security reasons.">
 Shanghai/Capella yükseltmesi çekimleri yapılabilir hale getirdiğinden beri, doğrulayıcılar da 32 Ethereum'dan yüksek olan hisse bakiyelerini çekmeye teşvik edildiler, zaten bunlar getiriye eklenmiyordu ve eğer aksi bir durum varsa da kilitleniyordu. APR'ye (toplam hisselenen ETH tarafından belirlenir) bağlı olarak, tüm bakiyelerini geri almak için doğrulayıcılarından çıkmaya veya daha fazla getiri elde etmek için ödüllerini kullanarak potansiyel olarak daha fazla hisselemeye teşvik edilebilirler.
 

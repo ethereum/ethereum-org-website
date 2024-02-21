@@ -18,7 +18,7 @@ Zdecentralizowana nauka (DeSci) jest ruchem, który ma na celu zbudowanie public
 
 DeSci ma na celu stworzenie ekosystemu, w którym naukowcy są zachęcani do otwartego dzielenia się swoimi badaniami i otrzymują uznanie za swoją pracę, jednocześnie umożliwiając każdemu łatwy dostęp do badań i uczestniczenie w nich. DeSci działa w oparciu o ideę, że wiedza naukowa powinna być dostępna dla każdego, a proces badań naukowych powinien być przejrzysty. DeSci tworzy bardziej zdecentralizowany i rozproszony model badań naukowych, dzięki czemu są one bardziej odporne na cenzurę i kontrolę ze strony władz centralnych. DeSci to środowisko, w którym nowe i niekonwencjonalne pomysły mogą się rozwijać poprzez decentralizację dostępu do finansowania, narzędzi naukowych i kanałów komunikacji.
 
-Zdecentralizowana nauka umożliwia bardziej zróżnicowane źródła finansowania (od [DAO](/dao/), [kwadratowych darowizn](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) do finansowania społecznościowego i innych form), łatwiejszy dostęp do danych i metod, a także poprzez zapewnienie zachęt do odtwarzalności.
+Zdecentralizowana nauka pozwala na bardziej zróżnicowane źródła finansowania (od [DAO](/dao/), [kwadratowych darowizn](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) do finansowania społecznościowego i nie tylko), bardziej dostępne dane i metody oraz poprzez zapewnienie zachęt do odtwarzalności.
 
 ### Juan Benet — ruch DeSci
 
@@ -76,7 +76,7 @@ Własność intelektualna (IP) stanowi duży problem w tradycyjnej nauce: od utk
 
 W ten sam sposób, w jaki NFT mogą przekazywać przychody z przyszłych transakcji z powrotem do pierwotnego twórcy, można ustanowić przejrzyste łańcuchy przypisywania wartości, aby nagradzać badaczy, organy zarządzające (jak DAO), a nawet podmioty, których dane są gromadzone.
 
-[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) mogą również funkcjonować jako klucz do zdecentralizowanego repozytorium danych o podejmowanych eksperymentach badawczych, a także podłączać się do NFT i [DeFi](/defi/) finansjeryzacji (od frakcjonalizacji po pule pożyczkowe i wycenę wartości). Umożliwia również podmiotom działającym natywnie w łańcuchu, takim jak DAO [VitaDAO](https://www.vitadao.com/), prowadzenie badań bezpośrednio w łańcuchu. Pojawienie się niezbywalnych [tokenów „soulbound”](https://vitalik.ca/general/2022/01/26/soulbound.html) może również odgrywać ważną rolę w DeSci, umożliwiając jednostkom udowodnienie swojego doświadczenia i poświadczeń powiązanych z ich adresem Ethereum.
+[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) mogą również funkcjonować jako klucz do zdecentralizowanego repozytorium danych o podejmowanych eksperymentach badawczych, a także podłączać się do NFT i [DeFi](/defi/) finansjeryzacji (od frakcjonalizacji po pule pożyczkowe i wycenę wartości). Umożliwia również podmiotom działającym natywnie w łańcuchu, takim jak DAO [VitaDAO](https://www.vitadao.com/), prowadzenie badań bezpośrednio w łańcuchu. Pojawienie się niezbywalnych [tokenów „soulbound”](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) może również odgrywać ważną rolę w DeSci, umożliwiając jednostkom udowodnienie swojego doświadczenia i poświadczeń powiązanych z ich adresem Ethereum.
 
 ### Przechowywanie danych, dostęp do nich i ich architektura {#data-storage}
 
@@ -103,7 +103,7 @@ Przeglądaj projekty i dołącz do społeczności DeSci.
 - [OceanDAO: DAO finansuje naukę związaną z danymi](https://oceanprotocol.com/dao)
 - [Opscientia: otwarty, zdecentralizowany przepływ prac naukowych](https://opsci.io/research/)
 - [LabDAO: projektuj białka in-silico (za pomocą komputera)](https://alphafodl.vercel.app/)
-- [Bio.xyz: zdobądź fundusze na swój biotechnologiczny projekt DAO lub desci](https://www.molecule.to/)
+- [Bio.xyz: zdobądź fundusze na swój biotechnologiczny projekt DAO lub desci](https://www.bio.xyz/)
 - [Research Hub: wysyłaj wyniki naukowe i angażuj się w rozmowy z partnerami](https://www.researchhub.com/)
 - [VitaDAO: uzyskuj środki finansowe w ramach sponsorowanych umów badawczych na długotrwałe badania](https://www.vitadao.com/)
 - [Protokół Fleminga: gospodarka danymi typu open-source, która wspiera wspólne odkrycia biomedyczne](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

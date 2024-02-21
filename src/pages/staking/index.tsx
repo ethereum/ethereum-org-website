@@ -212,7 +212,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const data = await cachedFetchBeaconchainData()
 
@@ -442,7 +442,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
@@ -463,7 +463,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
@@ -479,7 +479,7 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "solo-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
@@ -512,7 +512,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
@@ -530,7 +530,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
@@ -543,7 +543,7 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "saas-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
@@ -579,7 +579,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
@@ -600,7 +600,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
@@ -613,7 +613,7 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "pool-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
@@ -672,7 +672,7 @@ const StakingPage = ({
               <H2 id={tocItems.further.id}>{tocItems.further.title}</H2>
               <ul>
                 <li>
-                  <InlineLink href="https://vitalik.ca/general/2020/11/06/pos2020.html">
+                  <InlineLink href="https://vitalik.eth.limo/general/2020/11/06/pos2020.html">
                     {t("page-staking-further-reading-1-link")}
                   </InlineLink>{" "}
                   -{" "}
@@ -690,7 +690,7 @@ const StakingPage = ({
                   </i>
                 </li>
                 <li>
-                  <InlineLink href="https://vitalik.ca/general/2017/12/31/pos_faq.html">
+                  <InlineLink href="https://vitalik.eth.limo/general/2017/12/31/pos_faq.html">
                     {t("page-staking-further-reading-3-link")}
                   </InlineLink>{" "}
                   -{" "}

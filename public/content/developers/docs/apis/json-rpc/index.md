@@ -166,7 +166,7 @@ Returns Keccak-256 (_not_ the standardized SHA3-256) of the given data.
 
 **Parameters**
 
-1. `DATA` - the data to convert into a SHA3 hash
+1. `DATA` - The data to convert into a SHA3 hash
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
@@ -622,7 +622,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 Retrieving an element of the map is harder. The position of an element in the map is calculated with:
 
 ```js
-keccack(LeftPad32(key, 0), LeftPad32(map position, 0))
+keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
 This means to retrieve the storage on pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] we need to calculate the position with:

@@ -109,7 +109,7 @@ Burada, zincir üstündeki tasdiklerin uygulamada nasıl çalışabileceğine bi
 
 ### Soulbound token'lar ve kimlik {#soulbound}
 
-[Soulbound token'lar](https://vitalik.ca/general/2022/01/26/soulbound.html) (aktarılamaz NFT'ler), belirli bir cüzdana özgü bilgileri toplamak için kullanılabilir. Bu, başarıları (örneğin, belirli bir çevrimiçi kursu bitirme veya bir oyunda bir eşik puanını geçme) veya topluluk katılımını temsil eden tokenleri içerebilen belirli bir Ethereum adresine bağlı benzersiz bir zincir-üstü kimlik oluşturur.
+[Soulbound token'lar](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (aktarılamaz NFT'ler), belirli bir cüzdana özgü bilgileri toplamak için kullanılabilir. Bu, başarıları (örneğin, belirli bir çevrimiçi kursu bitirme veya bir oyunda bir eşik puanını geçme) veya topluluk katılımını temsil eden tokenleri içerebilen belirli bir Ethereum adresine bağlı benzersiz bir zincir-üstü kimlik oluşturur.
 
 ## Merkeziyetsiz kimliğin avantajları {#benefits-of-decentralized-identity}
 

@@ -50,11 +50,11 @@ export interface LinkSection {
   }>
 }
 
-export interface IProps {
+export type FooterProps = {
   lastDeployDate: string
 }
 
-const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
+const Footer = ({ lastDeployDate }: FooterProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("common")
 
@@ -311,6 +311,7 @@ const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
                 hideArrow
                 color="secondary"
                 aria-label={link.ariaLabel}
+                ms={4}
               >
                 <Icon
                   as={link.icon}
@@ -320,7 +321,6 @@ const Footer: React.FC<IProps> = ({ lastDeployDate }) => {
                       "color 0.2s ease-in-out, transform 0.2s ease-in-out",
                   }}
                   fontSize="4xl"
-                  ms={4}
                 />
               </BaseLink>
             )
