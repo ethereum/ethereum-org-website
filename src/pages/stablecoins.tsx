@@ -600,6 +600,9 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               <Icon ms={2} fill="'text" name="info" boxSize={4} />
             </Tooltip>
           </H3>
+          <InfoBanner emoji="⚠️" isWarning>
+              {t("page-stablecoins-algorithmic-disclaimer")}
+          </InfoBanner>
           <Text>
             {t("page-stablecoins-top-coins-intro")}{" "}
             {t("page-stablecoins-top-coins-intro-code")}
@@ -713,16 +716,16 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             />
           ))}
         </Grid>
-        <InfoBanner isWarning shouldCenter>
-          <H3 mt={0} mb={4}>
-            {t("page-stablecoins-research-warning-title")}
-          </H3>
-          {t("page-stablecoins-research-warning")}
-        </InfoBanner>
       </Content>
       <Divider />
       <Content id="how">
         <H2 mt={0}>{t("page-stablecoins-types-of-stablecoin")}</H2>
+        <InfoBanner emoji="⚠️" isWarning>
+          <H3 mt={0} mb={4}>
+            {t("page-stablecoins-research-warning-title")}
+          </H3>
+          {t("page-stablecoins-algorithmic-disclaimer")}
+        </InfoBanner>
         <StablecoinBoxGrid items={features} />
       </Content>
       <Box id="tools" py={12} px={8} w="full">

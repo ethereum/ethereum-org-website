@@ -206,18 +206,7 @@ const GridItem = ({
       }}
     >
       {isOpen ? (
-        <>
-      <Box display={'flex'} alignItems={'center'} justifyContent={'space-between'} gap={48}>
-      <Emoji  mb={8} text={emoji} fontSize="8xl" />
-      {title === t("page-stablecoins-algorithmic") && (
-
-        <Disclaimer disclaimer={t("page-stablecoins-algorithmic-disclaimer")} />
-        
-       )}
-      </Box>
-      
-      
-        </>  
+        <Emoji mb={8} text={emoji} fontSize="8xl" />
       ) : (
         <>
           <StyledEmoji emoji={emoji} />
@@ -228,7 +217,6 @@ const GridItem = ({
         {isOpen && (
           <div>
               <OpenTitle title={title} />
-              
             <Body>{description}</Body>
             <Row>
               {pros && (
