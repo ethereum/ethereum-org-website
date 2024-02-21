@@ -109,7 +109,7 @@ type Props = BasePageProps & {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("get-eth")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDataUpdateDate = getLastModifiedDateByPath(
     "src/data/exchangesByCountry.ts"
@@ -478,7 +478,7 @@ const GetEthPage = ({
         descriptionKey="page-get-eth:page-get-eth-use-your-eth-dapps"
         image={dapps}
         alt={t("page-index:page-index-sections-individuals-image-alt")}
-        maxImageWidth={600}
+        imageWidth={600}
       >
         <Box>
           <ButtonLink href="/dapps/">

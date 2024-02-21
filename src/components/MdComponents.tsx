@@ -21,7 +21,7 @@ import {
 import type { ChildOnlyProp } from "@/lib/types"
 
 import ButtonDropdown, {
-  type IProps as ButtonDropdownProps,
+  type ButtonDropdownProps,
 } from "@/components/ButtonDropdown"
 import { ButtonLink } from "@/components/Buttons"
 import Contributors from "@/components/Contributors"
@@ -61,7 +61,7 @@ export const commonHeadingProps = (id?: string): HeadingProps => ({
   ...headingPropsForAnchor(id),
 })
 
-const IdAnchor: React.FC<{ id?: string }> = ({ id }) => {
+const IdAnchor = ({ id }: { id?: string }) => {
   if (!id) return null
   return (
     <Link

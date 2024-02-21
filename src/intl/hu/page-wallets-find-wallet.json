@@ -50,11 +50,11 @@
   "page-find-wallet-features": "Jellemzők",
   "page-find-wallet-security": "Biztonság",
   "page-find-wallet-smart-contract": "Smart contract",
-  "page-find-wallet-check-out": "Nézd meg",
+  "page-find-wallet-check-out": "Nézze meg",
   "page-find-wallet-info-updated-on": "információ utolsó frissítésének dátuma",
   "page-find-wallet-showing-all-wallets": "Az összes tárca megjelenítése",
   "page-find-wallet-showing": "Mutatás ",
-  "page-find-wallet-wallets": "tárcák",
+  "page-find-wallet-wallets": "tárca",
   "page-find-wallet-iOS": "iOS",
   "page-find-wallet-android": "Android",
   "page-find-wallet-linux": "Linux",
@@ -90,5 +90,6 @@
   "page-find-wallet-browser-desc": "Tárcák böngészőbővítményekkel",
   "page-find-wallet-device": "Eszköz",
   "page-find-choose-to-compare": "Válassza ki az összehasonlításhoz",
-  "page-find-wallet-choose-features": "Válasszon a funkciók közül"
+  "page-find-wallet-choose-features": "Válasszon a funkciók közül",
+  "page-find-wallet-reset-filters": "Szűrők törlése"
 }

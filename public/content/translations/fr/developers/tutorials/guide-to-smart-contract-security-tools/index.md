@@ -25,7 +25,7 @@ Chaque technique comporte ses avantages et ses inconvénients, et trouve son uti
 | ------------------ | --------- | ----------------------------- | --------- | -------------- | ------------- |
 | Analyse statique   | Slither   | CLI & scripts                 | secondes  | modérément     | faible        |
 | Fuzzing            | Echidna   | Propriétés Solidity           | minutes   | rarement       | aucun         |
-| Symbolic Execution | Manticore | Propriétés Solidity & scripts | en heures | aucun\*        | aucun         |
+| Symbolic Execution | Manticore | Propriétés Solidity & scripts | en heures | aucun\*      | aucun         |
 
 \* si tous les chemins sont analysés sans coupure
 
@@ -53,7 +53,7 @@ Pour tester et vérifier efficacement votre code, vous devez identifier les zone
 - [Évaluation Rapide des Risques](https://infosec.mozilla.org/guidelines/risk/rapid_risk_assessment.html) (notre approche préférée lorsque le temps se fait court)
 - [Guide de modélisation des menaces du système centralisé de données](https://csrc.nist.gov/publications/detail/sp/800-154/draft) (aka NIST 800-154)
 - [Modélisation des fils de discussion Shostack](https://www.amazon.com/Threat-Modeling-Designing-Adam-Shostack/dp/1118809998)
-- [STRIDE](<https://wikipedia.org/wiki/STRIDE_(security)>) / [DREAD](<https://wikipedia.org/wiki/DREAD_(risk_assessment_model)>)
+- [STRIDE](https://wikipedia.org/wiki/STRIDE_(security)) / [DREAD](https://wikipedia.org/wiki/DREAD_(risk_assessment_model))
 - [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
 - [Utilisation des affirmations](https://blog.regehr.org/archives/1091)
 

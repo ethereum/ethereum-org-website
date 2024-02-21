@@ -7,15 +7,15 @@ import Emoji from "./Emoji"
 import OldHeading from "./OldHeading"
 import Text from "./OldText"
 
-export interface IBoxItem {
+export interface BoxItem {
   emoji: string
   title: string
   description: string
   matomo: MatomoEventOptions
 }
 
-export interface IProps {
-  items: Array<IBoxItem>
+export type BoxGridProps = {
+  items: Array<BoxItem>
 }
 
 // Represent string as 32-bit integer
@@ -40,7 +40,7 @@ const colors = [
   "gridPurple",
 ]
 
-const BoxGrid: React.FC<IProps> = ({ items }) => {
+const BoxGrid = ({ items }: BoxGridProps) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
   return (

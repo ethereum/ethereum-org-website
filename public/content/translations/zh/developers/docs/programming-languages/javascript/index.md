@@ -4,7 +4,7 @@ description: 学习如何使用并通过基于 JavaScript 的项目及工具参�
 lang: zh
 ---
 
-JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有一个 [团队](https://github.com/ethereumjs) 致力于尽可能多地在以太坊引入 JavaScript。
+JavaScript是以太坊生态中最受欢迎的语言之一。 事实上，有一个 [团队](https://github.com/ethereumjs) 致力于尽可能多地在以太坊引入 JavaScript。
 
 有机会在[堆栈的所有级别](/developers/docs/ethereum-stack/)使用 JavaScript（或接近）。
 
@@ -12,9 +12,9 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 ### JavaScript API 库 {#javascript-api-libraries}
 
-如果您想要写入 JavaScript 来查询区块链、发送交易等，则最方便的方法是使用 [JavaScript API 库](/developers/docs/apis/javascript/)。 这些 API 允许开发者轻松与[以太坊网络节点](/developers/docs/nodes-and-clients/)交互。
+如果你想要写入 JavaScript 来查询区块链、发送交易等，则最方便的方法是使用 [JavaScript API 库](/developers/docs/apis/javascript/)。 这些 API 允许开发者轻松与[以太坊网络节点](/developers/docs/nodes-and-clients/)交互。
 
-您可以使用这些库与以太坊上的智能合约交互，因此只需要使用 JavaScript 与既有合约交互就可以构建一个 dapp。
+你可以使用这些库与以太坊上的智能合约交互，因此只需要使用 JavaScript 与既有合约交互就可以构建一个 dapp。
 
 **参阅：**
 
@@ -34,7 +34,7 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 有用 JavaScript 实现的[以太坊虚拟机](/developers/docs/evm/)。 它支持最新的分叉（fork）规则。 分叉规则是指因计划的升级而对 EVM 进行的改造。
 
-它被拆分成各种 JavaScript 软件包，以便您可以更好地了解：
+它被拆分成各种 JavaScript 软件包，以便你可以更好地了解：
 
 - 帐户
 - 区块
@@ -42,9 +42,9 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 - 交易
 - 更多...
 
-这将有助于您理解像“一个帐户的数据结构是什么？”这样的问题。
+这将有助于你理解像“一个帐户的数据结构是什么？”这样的问题。
 
-如果您倾向于阅读代码，下面的 JavaScript 代码可以很好地成为通读文档的替代方案。
+如果你倾向于阅读代码，下面的 JavaScript 代码可以很好地成为通读文档的替代方案。
 
 **参阅 monorepo**  
 [`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
@@ -53,7 +53,7 @@ JavaScript 是以太坊生态中最受欢迎的语言之一。 事实上，有�
 
 目前正在开发的 Ethereumjs 客户端允许你发掘以太坊客户端如何使用你能理解的语言 (JavaScript) 工作！
 
-它曾经在独立的[`存储库`](https://github.com/ethereumjs/ethereumjs-client)中托管，然而，后来它被作为一个包整合进了 EthereumVM monorepo。
+它曾经在独立的[`存储库`](https://github.com/ethereumjs/ethereumjs-client)中托管，然而，后来作为一个包整合进了 EthereumVM monorepo。
 
 **参阅客户端**  
 [`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)

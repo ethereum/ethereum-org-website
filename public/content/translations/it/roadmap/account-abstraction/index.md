@@ -117,7 +117,7 @@ I portafogli di contratti intelligenti sono già disponibili, ma sono necessari 
 - ["Perché l'astrazione del conto è una svolta per le dapp" da Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - ["Astrazione del conto ELI5" da Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Note di "Strada all'Astrazione del Conto" di Vitalik](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Post del blog di Vitalik sui portafogli di recupero sociale](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Post del blog di Vitalik sui portafogli di recupero sociale](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [Note sull'EIP-2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [Documentazione sull'EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
 - [Note sull'EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

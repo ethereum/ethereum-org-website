@@ -27,7 +27,7 @@ const NavLink = (props: LinkProps) => (
   />
 )
 
-interface IDropdownContext {
+type DropdownContext = {
   isOpen: boolean
   toggle: () => void
   close: () => void
@@ -37,18 +37,14 @@ interface IDropdownContext {
   ) => void
 }
 
-const DropdownContext = React.createContext<IDropdownContext | null>(null)
+const DropdownContext = React.createContext<DropdownContext | null>(null)
 
-export interface IProps {
+export type NavDropdownProps = {
   children?: React.ReactNode
   section: ISection
 }
 
-const NavDropdown: React.FC<IProps> & {
-  Item: typeof Item
-  Link: typeof BaseLink
-  Title: typeof Title
-} = ({ children, section }) => {
+const NavDropdown = ({ children, section }: NavDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const ref = createRef<HTMLLIElement>()
@@ -134,12 +130,12 @@ const NavDropdown: React.FC<IProps> & {
   )
 }
 
-interface IItemProp {
+type ItemProps = {
   children?: React.ReactNode
   isLast?: boolean
 }
 
-const Item: React.FC<IItemProp> = ({ children, isLast = false, ...rest }) => {
+const Item = ({ children, isLast = false, ...rest }: ItemProps) => {
   const context = useContext(DropdownContext)
 
   return (
@@ -159,11 +155,11 @@ const Item: React.FC<IItemProp> = ({ children, isLast = false, ...rest }) => {
   )
 }
 
-interface ITitleProps {
+type TitleProps = {
   children?: React.ReactNode
 }
 
-const Title: React.FC<ITitleProps> = (props) => {
+const Title = (props: TitleProps) => {
   return (
     <Box
       as="span"
@@ -179,8 +175,4 @@ const Title: React.FC<ITitleProps> = (props) => {
   )
 }
 
-NavDropdown.Item = Item
-NavDropdown.Link = NavLink
-NavDropdown.Title = Title
-
-export default NavDropdown
+export default Object.assign(NavDropdown, { Link: NavLink, Item, Title })

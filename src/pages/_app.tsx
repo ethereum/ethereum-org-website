@@ -28,9 +28,9 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   // Use the layout defined at the page level, if available
   const getLayout = Component.getLayout ?? ((page) => page)
 
-  useLocaleDirection()
+  const direction = useLocaleDirection()
 
-  const theme = extendBaseTheme(customTheme)
+  const theme = extendBaseTheme({ direction, ...customTheme })
 
   return (
     <>

@@ -2,6 +2,7 @@ import { ReportsModel } from "@crowdin/crowdin-api-client"
 
 import i18nConfig from "../../i18n.config.json"
 
+export const OLD_CONTENT_DIR = "src/content"
 export const CONTENT_DIR = "public/content"
 export const TRANSLATIONS_DIR = "public/content/translations"
 export const TRANSLATED_IMAGES_DIR = "/content/translations"
@@ -10,6 +11,7 @@ export const INTL_JSON_DIR = "src/intl"
 
 // i18n
 export const DEFAULT_LOCALE = "en"
+export const FAKE_LOCALE = "default"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
 const BUILD_LOCALES = process.env.BUILD_LOCALES
 export const LOCALES_CODES = BUILD_LOCALES

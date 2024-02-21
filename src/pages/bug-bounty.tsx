@@ -328,7 +328,7 @@ const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("bug-bounty")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -470,7 +470,7 @@ const BugBountiesPage = () => {
               <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
                 {t("page-upgrades-bug-bounty-submit")}
               </StyledButton>
-              <StyledButton variant="outline" to="#rules">
+              <StyledButton variant="outline" to="#rules" isSecondary>
                 {t("page-upgrades-bug-bounty-rules")}
               </StyledButton>
             </ButtonRow>

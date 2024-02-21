@@ -77,7 +77,7 @@ Intellectual property (IP) is a big problem in traditional science: from being s
 In the same way that NFTs can pass revenue for future transactions back to the original creator, you can establish transparent value attribution chains to reward researchers, governing bodies (like DAOs), or even the subjects whose data is collected.
 
 [IP-NFTs](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) can also function as a key to a decentralized data repository of the research experiments being undertaken, and plug into NFT and [DeFi](/defi/) financialization (from fractionalization to lending pools and value appraisal). It also allows natively on-chain entities such as DAOs like [VitaDAO](https://www.vitadao.com/) to conduct research directly on-chain.
-The advent of non-transferable ["soulbound" tokens](https://vitalik.ca/general/2022/01/26/soulbound.html) may also play an important role in DeSci by allowing individuals to prove their experience and credentials linked to their Ethereum address.
+The advent of non-transferable ["soulbound" tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) may also play an important role in DeSci by allowing individuals to prove their experience and credentials linked to their Ethereum address.
 
 ### Data storage, access and architecture {#data-storage}
 
@@ -93,22 +93,18 @@ Explore projects and join the DeSci community.
 
 - [DeSci.Global: global events and meetup calendar](https://desci.global)
 - [Blockchain for Science Telegram](https://t.me/BlockchainForScience)
-- [Molecule: Fund and get funded for your research projects](https://discover.molecule.to/)
+- [Molecule: Fund and get funded for your research projects](https://www.molecule.xyz/)
 - [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
 - [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
 - [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
 - [dClimate API: query climate data collected by a decentralized community](https://api.dclimate.net/)
 - [DeSci Foundation: DeSci publishing tool builder](https://descifoundation.org/)
 - [DeSci.World: one-stop shop for users to view, engage with decentralized science](https://desci.world)
-- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/dao)
+- [OceanDAO: DAO governed funding for data-related science](https://oceanprotocol.com/)
 - [Opscientia: open decentralized science workflows](https://opsci.io/research/)
-- [LabDAO: fold a protein in-silico](https://alphafodl.vercel.app/)
 - [Bio.xyz: get funded for your biotech DAO or desci project](https://www.bio.xyz/)
-- [ResearchHub: post a scientific result and engage in a conversation with peers](https://www.researchhub.com/)
-- [VitaDAO: receive funding through sponsored research agreements for longevity research](https://www.vitadao.com/)
-- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [Active Inference Lab](https://www.activeinference.org/)
+- [Fleming Protocol: open-source data economy that fuels collaborative biomedical discovery](http://flemingprotocol.io/)
+- [Active Inference Institute](https://www.activeinference.org/)
 - [CureDAO: Community-Owned Precision Health Platform](https://docs.curedao.org/)
 - [IdeaMarkets: enabling decentralized scientific credibility](https://ideamarket.io/)
 - [DeSci Labs](https://www.desci.com/)
@@ -122,9 +118,8 @@ We welcome suggestions for new projects to list - please look at our [listing po
 - [The case for DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Guide to DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
 - [Decentralized science resources](https://www.vincentweisser.com/decentralized-science)
-- [Molecule’s Biopharma IP-NFTs - A Technical Description](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
+- [Molecule’s Biopharma IP-NFTs - A Technical Description](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Building Trustless Systems of Science by Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
-- [The Emergence of Biotech DAOs](https://molecule.to/blog/the-emergence-of-biotech-daos)
 - [Paul Kohlhaas - DeSci: The Future of Decentralized Science (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
 - [An Active Inference Ontology for Decentralized Science: from Situated Sensemaking to the Epistemic Commons](https://zenodo.org/record/6320575)
 - [DeSci: The Future of Research by Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)

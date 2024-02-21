@@ -65,5 +65,5 @@ Assista Justin Drake explicando os benefícios da prova de participação em rel
 ## Leitura adicional {#further-reading}
 
 - [Filosofia de design da prova de participação de Vitalik](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
-- [Perguntas frequentes sobre a prova de participação de Vitalik](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Perguntas frequentes sobre a prova de participação de Vitalik](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 - [Vídeo "Simplesmente Explicado" sobre pos vs pow](https://www.youtube.com/watch?v=M3EFi_POhps)

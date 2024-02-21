@@ -51,6 +51,7 @@ import DogeImage from "@/public/doge-computer.png"
 import EthHomeImage from "@/public/eth-home-icon.png"
 import HeroImage from "@/public/heroes/layer-2-hub-hero.jpg"
 import DebankImage from "@/public/layer-2/debank.png"
+import growthepieImage from "@/public/layer-2/growthepie.png"
 import L2BEATImage from "@/public/layer-2/l2beat.jpg"
 import OptimisticRollupImage from "@/public/layer-2/optimistic_rollup.png"
 import RollupImage from "@/public/layer-2/rollup-2.png"
@@ -60,13 +61,10 @@ import ZKRollupImage from "@/public/layer-2/zk_rollup.png"
 import DAOImage from "@/public/use-cases/dao-2.png"
 import WhatIsEthereumImage from "@/public/what-is-ethereum.png"
 
-interface ContentBoxProps extends BoxProps {
+type ContentBoxProps = BoxProps & {
   isLightGrayBg?: boolean
 }
-const ContentBox: React.FC<ContentBoxProps> = ({
-  isLightGrayBg,
-  ...rest
-}: ContentBoxProps) => (
+const ContentBox = ({ isLightGrayBg, ...rest }: ContentBoxProps) => (
   <Box
     px={8}
     py={12}
@@ -115,7 +113,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage("/layer-2")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {
@@ -202,6 +200,13 @@ const Layer2Page = () => {
         link: "https://l2beat.com",
         image: L2BEATImage,
         alt: "L2BEAT",
+      },
+      {
+        title: "growthepie",
+        description: t("layer-2-tools-growthepie-description"),
+        link: "https://growthepie.xyz",
+        image: growthepieImage,
+        alt: "growthepie",
       },
       {
         title: "L2 Fees",
@@ -665,7 +670,7 @@ const Layer2Page = () => {
             <i>- Vitalik Buterin </i>
           </ListItem>
           <ListItem>
-            <InlineLink to="https://vitalik.ca/general/2021/01/05/rollup.html">
+            <InlineLink to="https://vitalik.eth.limo/general/2021/01/05/rollup.html">
               {t("an-incomplete-guide-to-rollups")}
             </InlineLink>{" "}
             <i>- Vitalik Buterin</i>

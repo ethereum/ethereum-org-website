@@ -6,7 +6,7 @@ lang: fr
 
 # Ponts de connexion blockchain {#prerequisites}
 
-_Le Web3 a évolué en un écosystème de solutions blockchain L1 et de mise à l'échelle L2, chacune ayant des avantages et des inconvénients. À mesure qu'augmente le nombre de protocoles blockchain, [la demande de déplacement d'actifs entre les chaînes](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>) augmente aussi. Pour répondre à cette demande, nous avons besoin de ponts._
+_Le Web3 a évolué en un écosystème de solutions blockchain L1 et de mise à l'échelle L2, chacune ayant des avantages et des inconvénients. À mesure qu'augmente le nombre de protocoles blockchain, [la demande de déplacement d'actifs entre les chaînes](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)) augmente aussi. Pour répondre à cette demande, nous avons besoin de ponts._
 
 <Divider />
 
@@ -30,7 +30,7 @@ Les ponts existent pour connecter les blockchains, permettant le transfert d'inf
 
 Les ponts permettent :
 
-- le transfert inter-chaînes d'actifs et d'informations
+- le transfert inter-chaînes d'actifs et d'informations.
 - aux dapps d'accéder aux points forts de diverses blockchains, ce qui renforce leurs capacités (les protocoles disposant désormais d'un plus grand espace de conception pour l'innovation).
 - aux utilisateurs d'accéder à de nouvelles plateformes et de tirer parti des avantages de différentes chaînes.
 - aux développeurs de différents écosystèmes de blockchain de collaborer et de créer de nouvelles plateformes pour les utilisateurs.

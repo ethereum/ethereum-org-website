@@ -2,13 +2,14 @@ import { useRouter } from "next/router"
 import {
   Badge,
   Box,
+  type BoxProps,
   Divider as ChakraDivider,
   Flex,
-  FlexProps,
-  HeadingProps,
+  type FlexProps,
+  type HeadingProps,
   ListItem as ChakraListItem,
-  ListItemProps,
-  ListProps,
+  type ListItemProps,
+  type ListProps,
   OrderedList as ChakraOrderedList,
   UnorderedList as ChakraUnorderedList,
   useToken,
@@ -73,7 +74,9 @@ const Divider = () => (
   />
 )
 
-const ContentContainer = (props: ChildOnlyProp) => (
+type ContentContainerProps = Pick<BoxProps, "children" | "dir">
+
+const ContentContainer = (props: ContentContainerProps) => (
   <Flex
     justify={"space-between"}
     w="full"
@@ -206,7 +209,11 @@ export const docsComponents = {
 interface DocsLayoutProps
   extends Pick<
       MdPageContent,
-      "slug" | "tocItems" | "lastUpdatedDate" | "crowdinContributors"
+      | "slug"
+      | "tocItems"
+      | "lastUpdatedDate"
+      | "crowdinContributors"
+      | "contentNotTranslated"
     >,
     ChildOnlyProp {
   frontmatter: DocsFrontmatter
@@ -219,6 +226,7 @@ export const DocsLayout = ({
   tocItems,
   lastUpdatedDate,
   crowdinContributors,
+  contentNotTranslated,
 }: DocsLayoutProps) => {
   const isPageIncomplete = !!frontmatter.incomplete
   const { asPath: relativePath } = useRouter()
@@ -237,7 +245,7 @@ export const DocsLayout = ({
           <Translation id="page-developers-docs:banner-page-incomplete" />
         </BannerNotification>
       )}
-      <ContentContainer>
+      <ContentContainer dir={contentNotTranslated ? "ltr" : "unset"}>
         <SideNav path={relativePath} />
         <Content>
           <H1 id="top">{frontmatter.title}</H1>
@@ -265,7 +273,7 @@ export const DocsLayout = ({
           {isPageIncomplete && <CallToContribute editPath={absoluteEditPath} />}
           <BackToTop />
           <FeedbackCard isArticle />
-          <DocsNav relativePath={relativePath} />
+          <DocsNav contentNotTranslated={contentNotTranslated} />
         </Content>
         {tocItems && (
           <TableOfContents

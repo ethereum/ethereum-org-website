@@ -32,7 +32,7 @@ Se você perder as suas chaves, elas não poderão ser recuperadas, e as chaves 
 
 As carteiras de contratos inteligentes são a solução para esses problemas, mas atualmente são difíceis de programar porque, no final, qualquer lógica que elas implementem precisa ser traduzida em um conjunto de transações EOA antes que possam ser processadas pelo Ethereum. A abstração de conta permite que contratos inteligentes iniciem as próprias transações. Dessa forma, qualquer lógica que o usuário queira implementar poderá ser codificada na própria carteira de contrato inteligente e executada no Ethereum.
 
-Em última análise, a abstração de contas melhora o suporte a carteiras de contratos inteligentes, tornando-as mais fáceis de criar e mais seguras de usar. No final, com a abstração de conta, os usuários podem aproveitar todos os benefícios do Ethereum sem precisar conhecer ou se preocupar com a tecnologia subjacente.
+Na realidade, é a abstração de contas que melhora o suporte a carteiras de contratos inteligentes, tornando-as mais fáceis de criar e mais seguras de usar. No final, com a abstração de conta, os usuários podem aproveitar todos os benefícios do Ethereum sem precisar conhecer ou se preocupar com a tecnologia subjacente.
 
 ## Além das frases sementes {#beyond-seed-phrases}
 
@@ -47,8 +47,8 @@ Por exemplo, as chaves de backup podem ser adicionadas a uma carteira para que, 
 - **Autorização multisig**: você pode compartilhar credenciais de autorização entre várias pessoas ou dispositivos confiáveis. Em seguida, o contrato pode ser configurado de modo que as transações superiores a um valor predefinido exijam autorização de uma proporção específica (por exemplo, 3/5) das partes confiáveis. Por exemplo, transações de alto valor podem exigir a aprovação de um dispositivo móvel e de uma carteira de hardware, ou assinaturas de contas distribuídas a familiares confiáveis.
 - **Congelamento de conta**: se um dispositivo for perdido ou comprometido, a conta pode ser bloqueada a partir de outro dispositivo autorizado, protegendo os ativos do usuário.
 - **Recuperação de conta**: perdeu um dispositivo ou esqueceu uma senha? No paradigma atual, isso significa que os seus ativos podem ser congelados para sempre. Com uma carteira de contrato inteligente, você pode definir algumas contas pré-aprovadas que podem autorizar novos dispositivos e redefinir o acesso.
-- **Definir limites de transação**: especifique limites diários de quanto valor pode ser transferido da conta em um dia/semana/mês. Isso significa que, se um invasor obtiver acesso à sua conta, ele não poderá ficar com tudo de uma vez e você terá oportunidades de congelar e redefinir o acesso.
-- **Criar listas de permissões**: permita transações apenas para endereços específicos, que você sabe que são seguros. Isso significa que, _mesmo_ em caso de roubo da sua chave privada, o invasor não poderia enviar fundos para contas de destino não autorizadas. Essas listas de permissão exigiriam várias assinaturas para alterá-las, de modo que um invasor não poderia adicionar o endereço dele à lista, a menos que tivesse acesso a diversas das suas chaves de backup.
+- **Definição de limites de transações**: especifique limites diários de transferência de valores da conta em um dia/semana/mês. Isso significa que, se um invasor obtiver acesso à sua conta, ele não poderá ficar com tudo de uma vez e você terá oportunidades de congelar e redefinir o acesso.
+- **Criação de listas de permissões**: só permita transações para determinados endereços tidos como seguros. Isso significa que, _mesmo_ em caso de roubo da sua chave privada, o invasor não poderia enviar fundos para contas de destino não autorizadas. Essas listas de permissão exigiriam várias assinaturas para alterá-las, de modo que um invasor não poderia adicionar o endereço dele à lista, a menos que tivesse acesso a diversas das suas chaves de backup.
 
 ## Melhor experiência do usuário {#better-user-experience}
 
@@ -117,7 +117,7 @@ As carteiras de contratos inteligentes já estão disponíveis, mas são necess�
 - ["Por que a abstração de contas é um agente de mudança para dApps", Devcon Bogota](https://www.youtube.com/watch?v=OwppworJGzs)
 - ["Abstração de conta ELI5", Devcon Bogota](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [Notas sobre o "Caminho para abstração de contas", Vitalik](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [Publicação do blog de Vitalik sobre carteiras de recuperação social](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [Publicação do blog de Vitalik sobre carteiras de recuperação social](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [Notas EIP-2938](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [Documentação EIP-2938](https://eips.ethereum.org/EIPS/eip-2938)
 - [Notas EIP-4337](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

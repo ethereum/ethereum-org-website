@@ -71,7 +71,7 @@ Die Ausführungsebene beschäftigt sich mit dem Ausführen von Transaktionen, de
 - [Wege zum Zustandsverfall](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Vorschläge für Verkel- und Zustandsverfall](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Verlaufsmanagement](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle-Bäume](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Verkle-Bäume](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Datenverfügbarkeits-Sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Client-Entwicklung {#client-development}
@@ -124,7 +124,7 @@ Die sicheren und leistungsfähigen Brücken sind ein bestimmter Bereich der Eben
 - [Einführung in Blockchain-Brücken](/bridges/)
 - [Vitalik zu Brücken](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [Artikel zu Blockchain-Brücken](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Der Wert von Brücken](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [Der Wert von Brücken](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
 
 #### Aktuelle Forschung {#recent-research-3}
 
@@ -156,7 +156,7 @@ Das Sharding war auf der Ethereum-Blockchain lange Teil des Entwicklungs-Fahrpla
 
 #### Aktuelle Forschung {#recent-research-5}
 
-- [ecdsa zu FGPAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [ecdsa auf FPGAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Sicherheit {#security}
 
@@ -346,7 +346,6 @@ Die Tools für Ethereum-Entwickler verbessern sich rasant. In diesem Bereich gib
 - [Entwickler-Frameworks](/developers/docs/frameworks/)
 - [Tools-Liste für Entwickler der Konsensebene](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Tokenstandards](/developers/docs/standards/tokens/)
-- [Biastek: Tools für Ethereum](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub: EVM-Tools](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Aktuelle Forschung {#recent-research-17}

@@ -294,7 +294,7 @@ Para certos valores de `P` e `w`, a função `pow(x, w, P)` pode ter muitas coli
 Dado que `P` é primo, então um `w` apropriado para uma função hash de exponenciação modular pode ser escolhida usando o seguinte resultado:
 
 > Observação 3. Considere `P` um primo; `w` e `P-1` são relativamente primos, se e somente se para todos `a` e `b` em `Z/PZ`:
->
+> 
 > <center>
 >   `aʷ mod P ≡ bʷ mod P` se e somente se `a mod P ≡ b mod P`
 > </center>

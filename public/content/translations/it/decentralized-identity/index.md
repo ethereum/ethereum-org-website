@@ -109,7 +109,7 @@ Ecco un esempio per dimostrare il funzionamento in pratica delle attestazioni su
 
 ### Token vincolati e identità {#soulbound}
 
-I [token vincolati](https://vitalik.ca/general/2022/01/26/soulbound.html) (NFT non trasferibili), potrebbero essere utilizzati per raccogliere informazioni univoche, relative a un portafoglio specifico. Ciò, effettivamente, crea un'identità univoca sulla catena, vincolata a un indirizzo di Ethereum in particolare, che potrebbe includere i token rappresentanti obiettivi (ad esempio, concludere un certo corso online o superare una soglia di punteggio in un gioco), o la partecipazione della community.
+I [token vincolati](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT non trasferibili), potrebbero essere utilizzati per raccogliere informazioni univoche, relative a un portafoglio specifico. Ciò, effettivamente, crea un'identità univoca sulla catena, vincolata a un indirizzo di Ethereum in particolare, che potrebbe includere i token rappresentanti obiettivi (ad esempio, concludere un certo corso online o superare una soglia di punteggio in un gioco), o la partecipazione della community.
 
 ## Benefici dell'identità decentralizzata {#benefits-of-decentralized-identity}
 
