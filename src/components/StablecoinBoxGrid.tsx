@@ -196,7 +196,7 @@ const GridItem = ({
       <div>
         {isOpen && (
           <div>
-              <OpenTitle title={title} />
+            <OpenTitle title={title} />
             <Body>{description}</Body>
             <Row>
               {pros && (
