@@ -32,19 +32,14 @@ export const isHrefActive = (
   href: string,
   pathname: string,
   isPartiallyActive?: boolean
-) => {
-  // remove any potential trailing slash to compare the paths correctly
-  const cleanHref = href.replace(/\/+$/, "")
-
-  return isPartiallyActive
-    ? pathname.startsWith(cleanHref)
-    : pathname === cleanHref
-}
+) => (isPartiallyActive ? pathname.startsWith(href) : pathname === href)
 
 export const isHash = (href: string): boolean => href.startsWith("#")
 
 export const getFullUrl = (locale: string | undefined, path: string) =>
-  new URL(join(locale || DEFAULT_LOCALE, path), SITE_URL).href.replace(
-    /\/$/,
-    ""
-  )
+  addSlashes(new URL(join(locale || DEFAULT_LOCALE, path), SITE_URL).href)
+
+export const addSlashes = (href: string): string => {
+  if (isExternal(href)) return href
+  return join("/", href, "/")
+}

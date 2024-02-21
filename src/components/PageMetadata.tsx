@@ -2,6 +2,7 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
+import { filterRealLocales } from "@/lib/utils/translations"
 import { getFullUrl } from "@/lib/utils/url"
 
 import { SITE_URL } from "@/lib/constants"
@@ -33,8 +34,10 @@ const PageMetadata = ({
   canonicalUrl,
   author,
 }: PageMetadataProps) => {
-  const { locale, locales, asPath } = useRouter()
+  const { locale, locales: rawLocales, asPath } = useRouter()
   const { t } = useTranslation()
+
+  const locales = filterRealLocales(rawLocales)
 
   const desc = description || t("site-description")
   const siteTitle = t("site-title")
@@ -44,13 +47,7 @@ const PageMetadata = ({
   const path = asPath.replace(/[\?\#].*/, "")
   const slug = path.split("/")
 
-  /**
-   * Set canonical URL w/ language path to avoid duplicate content
-   * If English, remove language path
-   * Remove trailing slash
-   * @example ethereum.org/about/ -> ethereum.org/about
-   * @example ethereum.org/pt-br/web3/ -> ethereum.org/pt-br/web3
-   */
+  // Set canonical URL w/ language path to avoid duplicate content
   const url = getFullUrl(locale, path)
   const canonical = canonicalUrl || url
 
@@ -102,16 +99,14 @@ const PageMetadata = ({
         />
       ))}
       <link rel="canonical" key={canonical} href={canonical} />
-      {locales
-        ?.filter((loc) => loc !== locale)
-        .map((loc) => (
-          <link
-            key={loc}
-            rel="alternate"
-            hrefLang={loc}
-            href={getFullUrl(loc, path)}
-          />
-        ))}
+      {locales.map((loc) => (
+        <link
+          key={loc}
+          rel="alternate"
+          hrefLang={loc}
+          href={getFullUrl(loc, path)}
+        />
+      ))}
     </Head>
   )
 }
