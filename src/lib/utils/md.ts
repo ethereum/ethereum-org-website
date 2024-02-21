@@ -47,7 +47,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     // Upgrade (2/2) ✅
     "/roadmap/beacon-chain",
     "/roadmap/merge",
-    // Developer docs (0/95)
+    // Developer docs (0/96)
     "/developers/docs/",
     "/developers/docs/accounts",
     "/developers/docs/apis/backend",
@@ -136,6 +136,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/standards",
     "/developers/docs/standards/tokens",
     "/developers/docs/standards/tokens/erc-20",
+    "/developers/docs/standards/tokens/erc-223",
     "/developers/docs/standards/tokens/erc-721",
     "/developers/docs/standards/tokens/erc-777",
     "/developers/docs/standards/tokens/erc-1155",
