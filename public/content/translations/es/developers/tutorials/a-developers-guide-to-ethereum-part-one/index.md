@@ -41,7 +41,7 @@ Hay muchas maneras de describir Ethereum, pero en su esencia es una cadena de bl
 
 Cada [bloque](/developers/docs/blocks/) tiene una referencia al bloque anterior; el `parentHash` es el hash a ese bloque previo.
 
-<div class="featured">Nota: Ethereum hace un uso regular de las <a href="https://wikipedia.org/wiki/Hash_function">funciones hash</a> para producir valores de tamaño fijo («hashes»). Los hashes desempeñan un importante papel en Ethereum; por ahora, puede considerarlos como identificadores únicos.</div>
+<FeaturedText>Nota: Ethereum hace un uso regular de las <a href="https://wikipedia.org/wiki/Hash_function">funciones hash</a> para producir valores de tamaño fijo («hashes»). Los hashes desempeñan un importante papel en Ethereum; por ahora, puede considerarlos como identificadores únicos.</FeaturedText>
 
 ![Un diagrama que representa a la cadena de bloques incluyendo datos dentro de cada bloque](./blockchain-diagram.png)
 
@@ -57,7 +57,7 @@ Este nuevo conjunto de tecnologías descentralizadas ha generado nuevas herramie
 
 Los desarrolladores de Python que quieran interactuar con Ethereum seguramente quieran usar [Web3.py](https://web3py.readthedocs.io/). Web3.py es una biblioteca que simplifica la forma en la que puede conectarse a un nodo de Ethereum para luego enviar y recibir datos de él.
 
-<div class="featured">Nota: «nodo de Ethereum» y «cliente de Ethereum» se usan de forma indistinta. En cualquier caso, se refiere al software que ejecuta un participante de la red Ethereum. Este software puede leer datos de bloques, recibir actualizaciones cuando se agregan nuevos bloques a la cadena, transmitir nuevas transacciones y más. Técnicamente, el cliente es el software y el nodo es la computadora que ejecuta el software.</div>
+<FeaturedText>Nota: «nodo de Ethereum» y «cliente de Ethereum» se usan de forma indistinta. En cualquier caso, se refiere al software que ejecuta un participante de la red Ethereum. Este software puede leer datos de bloques, recibir actualizaciones cuando se agregan nuevos bloques a la cadena, transmitir nuevas transacciones y más. Técnicamente, el cliente es el software y el nodo es la computadora que ejecuta el software.</FeaturedText>
 
 Los [clientes de Ethereum](/developers/docs/nodes-and-clients/) pueden configurarse para que sean accesibles por [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP o Websockets, por lo que Web3.py necesitará reflejar esta configuración. Web3.py se refiere a estas opciones de conexión como **proveedores**. Tendrá que elegir uno de los tres proveedores para vincular la instancia de Web3.py a su nodo.
 
