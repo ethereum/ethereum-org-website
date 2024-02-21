@@ -125,7 +125,7 @@ A konszenzus- és végrehajtási kliensek párhuzamosan futnak. Össze kell kapc
 
 A kontrollfolyamat összefoglalása az alábbiakban látható, zárójelben a vonatkozó hálózati stackkel.
 
-##### Amikor a konszenzuskliens nem terjeszt elő blokkot:
+### Amikor a konszenzuskliens nem terjeszt elő blokkot:
 
 - A konszenzuskliens blokkot kap a blokkpletyka-protokollon keresztül (konszenzus p2p)
 - A konszenzuskliens előzetesen validálja a blokkot, azaz biztosítja, hogy az érvényes feladótól érkezett, helyes metaadatokkal
@@ -134,7 +134,7 @@ A kontrollfolyamat összefoglalása az alábbiakban látható, zárójelben a vo
 - A végrehajtási réteg visszaadja a validációs adatokat a konszenzus rétegnek, a blokk validáltnak tekinthető (helyi RPC kapcsolat)
 - A konszenzus réteg hozzáadja a blokkot a saját blokkláncának fejéhez és tanúsítja azt, a tanúsítást a hálózaton keresztül küldi szét (konszenzus p2p)
 
-##### Amikor a konszenzuskliens blokkot terjeszt elő:
+### Amikor a konszenzuskliens blokkot terjeszt elő:
 
 - A konszenzuskliens értesítést kap arról, hogy ő a következő blokkelőterjesztő (konszenzus p2p)
 - A konszenzusréteg meghívja a `blokk létrehozása` metódust a végrehajtási kliensben (helyi RPC)
