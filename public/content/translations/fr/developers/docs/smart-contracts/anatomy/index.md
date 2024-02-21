@@ -1,6 +1,6 @@
 ---
 title: Anatomie des contrats intelligents
-description: "Examen approfondi des composantes d'un contrat intelligent : les fonctions, les données et les variables."
+description: 'Examen approfondi des composantes d''un contrat intelligent : les fonctions, les données et les variables.'
 lang: fr
 ---
 

@@ -135,4 +135,4 @@ Les « DAO » sont des organisations autonomes décentralisées. Ces groupes t
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Communauté axée sur le financement du développement d'Ethereum_
 - [Guilde Raid](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collectif de constructeurs Web3_
 
-À chaque fois et quelle que soit la façon dont vous contribuez à ethereum.org, pensez à respecter le [code de conduite](/community/code-of-conduct) !
+À chaque fois et quelle que soit la façon dont vous contribuez à ethereum.org, pensez à respecter le [code de conduite](/community/code-of-conduct)!

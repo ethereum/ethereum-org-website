@@ -44,17 +44,8 @@ const PageMetadata = ({
   const path = asPath.replace(/[\?\#].*/, "")
   const slug = path.split("/")
 
-  /**
-   * Set canonical URL w/ language path to avoid duplicate content
-   * If English, remove language path
-   * Remove trailing slash
-   * @example ethereum.org/about/ -> ethereum.org/about
-   * @example ethereum.org/pt-br/web3/ -> ethereum.org/pt-br/web3
-   */
-  const url = new URL(
-    join(locale === DEFAULT_LOCALE ? "" : locale!, path),
-    SITE_URL
-  ).href.replace(/\/$/, "")
+  // Set canonical URL w/ language path to avoid duplicate content
+  const url = new URL(join(locale!, path), SITE_URL).href
   const canonical = canonicalUrl || url
 
   /* Set fallback ogImage based on path */
