@@ -81,7 +81,7 @@ const TutorialMetadata = ({
         {hasSource && (
           <Box>
             <Emoji fontSize="sm" me={2} text=":books:" />
-            <InlineLink to={frontmatter.sourceUrl}>
+            <InlineLink href={frontmatter.sourceUrl}>
               {frontmatter.source}
             </InlineLink>
           </Box>

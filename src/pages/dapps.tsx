@@ -1,4 +1,4 @@
-import { type ComponentPropsWithRef, useEffect, useRef, useState } from "react"
+import { type ComponentPropsWithRef,useEffect, useRef, useState } from "react"
 import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -107,15 +107,16 @@ import dai from "@/public/dapps/stabledai.png"
 import status from "@/public/dapps/status.png"
 import superrare from "@/public/dapps/superrare.png"
 import synthetix from "@/public/dapps/synthetix.png"
-import uniswapec from "@/public/dapps/uni.png"
-import uniswap from "@/public/dapps/uni.png"
+import {
+  default as uniswap,
+  default as uniswapec,
+} from "@/public/dapps/uni.png"
 import xmtp from "@/public/dapps/xmtp.png"
 import yearn from "@/public/dapps/yearn.png"
 import zapper from "@/public/dapps/zapper.png"
 import zerion from "@/public/dapps/zerion.png"
 import developers from "@/public/developers-eth-blocks.png" // Handled inside Callout => height=200
-import doge from "@/public/doge-computer.png" // HERO, full? 624px
-import ogImage from "@/public/doge-computer.png" // PageMetadata, src only
+import { default as doge, default as ogImage } from "@/public/doge-computer.png" // HERO, full? 624px
 import oneinch from "@/public/exchanges/1inch.png"
 import magicians from "@/public/magicians.png"
 import wallet from "@/public/wallet.png" // width=300
@@ -1859,7 +1860,7 @@ const DappsPage = () => {
           <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             {t("page-dapps-magic-behind-dapps-description")}
           </Text>
-          <InlineLink to="/what-is-ethereum/">
+          <InlineLink href="/what-is-ethereum/">
             {t("page-dapps-magic-behind-dapps-link")}
           </InlineLink>
         </Flex>

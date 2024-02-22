@@ -67,7 +67,7 @@ const Event = ({ event, language, type }: EventProps) => {
         </Text>
       </GridItem>
       <GridItem>
-        <InlineLink to={calendarLink} onClick={() => matomoEvent(type)}>
+        <InlineLink href={calendarLink} onClick={() => matomoEvent(type)}>
           {title}
         </InlineLink>
       </GridItem>

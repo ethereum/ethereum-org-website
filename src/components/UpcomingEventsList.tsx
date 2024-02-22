@@ -86,7 +86,7 @@ const UpcomingEventsList = () => {
     return (
       <InfoBanner emoji=":information_source:">
         {t("page-community-upcoming-events-no-events")}{" "}
-        <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
+        <InlineLink href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json">
           {t("page-community-please-add-to-page")}
         </InlineLink>
       </InfoBanner>

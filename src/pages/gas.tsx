@@ -260,7 +260,7 @@ const GasPage = () => {
             <Text>{t("page-gas-what-causes-high-gas-fees-text-3")}</Text>
             <Text>
               {t("page-gas-want-to-dive-deeper")}{" "}
-              <InlineLink to="/developers/docs/gas/">
+              <InlineLink href="/developers/docs/gas/">
                 {t("page-gas-check-out-the-developer-docs")}
               </InlineLink>
             </Text>

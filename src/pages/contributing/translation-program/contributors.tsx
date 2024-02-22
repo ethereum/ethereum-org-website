@@ -150,7 +150,7 @@ const Contributors = () => {
         </Text>
         <Text>
           {t("page-languages:page-languages-interested")}{" "}
-          <InlineLink to="/contributing/translation-program/">
+          <InlineLink href="/contributing/translation-program/">
             {t("page-languages:page-languages-learn-more")}
           </InlineLink>
           .
@@ -178,7 +178,7 @@ const Contributors = () => {
         </SimpleGrid>
         <Text>
           {t("page-languages:page-languages-interested")}{" "}
-          <InlineLink to="/contributing/translation-program/">
+          <InlineLink href="/contributing/translation-program/">
             {t("page-languages:page-languages-learn-more")}
           </InlineLink>
           .

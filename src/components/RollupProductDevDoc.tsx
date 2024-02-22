@@ -1,4 +1,3 @@
-import React from "react"
 import { Box, Flex, Heading, ListItem, UnorderedList } from "@chakra-ui/react"
 
 import { layer2Data, Rollups, RollupType } from "@/data/layer-2/layer-2"
@@ -38,17 +37,17 @@ const RollupProductDevDoc = ({ rollupType }: RollupProductDevDocProps) => {
                   )}
                   <UnorderedList>
                     <ListItem>
-                      <InlineLink to={website}>
+                      <InlineLink href={website}>
                         <Translation id="rollup-component-website" />
                       </InlineLink>
                     </ListItem>
                     <ListItem>
-                      <InlineLink to={developerDocs}>
+                      <InlineLink href={developerDocs}>
                         <Translation id="rollup-component-developer-docs" />
                       </InlineLink>
                     </ListItem>
                     <ListItem>
-                      <InlineLink to={l2beat}>
+                      <InlineLink href={l2beat}>
                         <Translation id="rollup-component-technology-and-risk-summary" />
                       </InlineLink>
                     </ListItem>
