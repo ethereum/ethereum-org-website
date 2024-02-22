@@ -1,6 +1,7 @@
 import { ComponentProps } from "react"
 import { Box, Text } from "@chakra-ui/react"
 
+import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
 
@@ -11,6 +12,12 @@ interface GlossaryDefinitionProps {
 }
 
 const DEFAULT_NS = "glossary"
+
+// Override the default `a` mapping to prevent displaying the glossary tooltip
+// in the glossary definition
+const components = {
+  a: InlineLink,
+}
 
 const GlossaryDefinition = ({
   term,
@@ -27,10 +34,20 @@ const GlossaryDefinition = ({
   return (
     <Box textAlign="left">
       <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
-        <Translation id={term + "-term"} options={options} />
+        <Translation
+          id={term + "-term"}
+          options={options}
+          // @ts-ignore
+          components={components}
+        />
       </OldHeading>
       <Text {...textStyles}>
-        <Translation id={term + "-definition"} options={options} />
+        <Translation
+          id={term + "-definition"}
+          options={options}
+          // @ts-ignore
+          components={components}
+        />
       </Text>
     </Box>
   )
