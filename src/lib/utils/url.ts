@@ -1,6 +1,11 @@
-import path from "path"
+import { join } from "path"
 
-import { DISCORD_PATH, MAIN_CONTENT_ID } from "@/lib/constants"
+import {
+  DEFAULT_LOCALE,
+  DISCORD_PATH,
+  MAIN_CONTENT_ID,
+  SITE_URL,
+} from "@/lib/constants"
 
 export const isDiscordInvite = (href: string): boolean =>
   href.includes(DISCORD_PATH) && !href.includes("http")
@@ -31,7 +36,10 @@ export const isHrefActive = (
 
 export const isHash = (href: string): boolean => href.startsWith("#")
 
+export const getFullUrl = (locale: string | undefined, path: string) =>
+  addSlashes(new URL(join(locale || DEFAULT_LOCALE, path), SITE_URL).href)
+
 export const addSlashes = (href: string): string => {
   if (isExternal(href)) return href
-  return path.join("/", href, "/")
+  return join("/", href, "/")
 }
