@@ -38,7 +38,6 @@ import PillarImage from "@/public/wallets/pillar.png"
 import RabbyWalletImage from "@/public/wallets/rabbywallet.png"
 import RainbowImage from "@/public/wallets/rainbow.png"
 import SafeImage from "@/public/wallets/safe.png"
-import SequenceImage from "@/public/wallets/sequence.png"
 import TahoImage from "@/public/wallets/taho.png"
 import TokenPocketImage from "@/public/wallets/tokenpocket.png"
 import TorusImage from "@/public/wallets/torus.png"
@@ -1461,54 +1460,6 @@ const walletData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://www.aktionariat.com/faq/en#wallet",
-  },
-  {
-    last_updated: "2022-08-21",
-    name: "Sequence",
-    image: SequenceImage,
-    brand_color: "#000000",
-    url: "https://www.sequence.xyz",
-    wallet_live_date: "2021-11-04",
-    active_development_team: true,
-    languages_supported: ["en"],
-    twitter: "https://twitter.com/0xsequence",
-    discord: "https://discord.gg/sequence",
-    reddit: "https://www.reddit.com/r/0xSequence/",
-    telegram: "",
-    ios: false,
-    android: false,
-    linux: false,
-    windows: false,
-    macOS: false,
-    firefox: true,
-    chromium: true,
-    hardware: false,
-    open_source: true,
-    repo_url: "https://github.com/0xsequence/wallet-contracts",
-    non_custodial: true,
-    security_audit: [
-      "https://docs.sequence.build/wallet-contracts/contract-audits",
-    ],
-    scam_protection: true,
-    hardware_support: false,
-    walletconnect: true,
-    rpc_importing: false,
-    nft_support: true,
-    connect_to_dapps: true,
-    staking: false,
-    swaps: true,
-    multichain: true,
-    layer_2: false,
-    gas_fee_customization: false,
-    ens_support: true,
-    erc_20_support: true,
-    eip_1559_support: true,
-    buy_crypto: false,
-    withdraw_crypto: false,
-    multisig: true,
-    social_recovery: false,
-    onboard_documentation: "https://support.sequence.xyz/",
-    documentation: "https://docs.sequence.xyz/",
   },
   {
     last_updated: "2022-08-21",
