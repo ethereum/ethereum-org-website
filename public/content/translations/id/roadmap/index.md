@@ -3,7 +3,7 @@ title: Peta Perjalanan Ethereum
 description: Jalan menuju peningkatan skalabilitas, keamanan, dan keberlanjutan Ethereum.
 lang: id
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /heroes/roadmap-hub-hero.jpg
 alt: "Peta Perjalanan Ethereum"
 summaryPoints:
 buttons:

@@ -4,6 +4,8 @@ description: Podstawowe standardy, do których dążymy w przestrzeniach ethereu
 lang: pl
 ---
 
+# Kodeks postępowania {#conduct-intro}
+
 ## Misja {#mission}
 
 Rozwijanie i utrzymanie najbardziej obszernego i dostępnego centrum wiedzy na temat Ethereum.

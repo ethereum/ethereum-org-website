@@ -4,7 +4,7 @@ description: A zero-knowledge bizonyítékok nem technikai bemutatása kezdők s
 lang: hu
 ---
 
-## Mik azok a zero-knowledge (nullaismeret-alapú) bizonyítékok? {#what-are-zk-proofs}
+# Mik azok a zero-knowledge (nullaismeret-alapú) bizonyítékok? {#what-are-zk-proofs}
 
 A zero-knowledge bizonyíték annak módja, hogy egy állítás érvényességét úgy igazoljuk, hogy magát az állítást nem fedjük fel. A bizonyító próbálja az állítást elfogadtatni, miközben az ellenőrző felelős annak validálásáért.
 

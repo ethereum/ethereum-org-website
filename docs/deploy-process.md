@@ -94,3 +94,9 @@ staging O - - - - - - - O
 
 dev     O - - O - - - - O
 ```
+
+## More about the Release Candidate QA process
+
+The main idea behind the community QA process is to focus on the [current release changelog](https://github.com/ethereum/ethereum-org-website/releases) and check that new features or fixes applied are working as expected. During QA sessions, some notes could also be shared if we're looking for specific things to be tested.
+
+If you find any bug, please report it on the [#website-bugs](https://discord.com/channels/714888181740339261/727898649006309377) Discord channel.

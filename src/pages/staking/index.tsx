@@ -367,6 +367,7 @@ const StakingPage = ({
       <PageMetadata
         title={t("page-staking-meta-title")}
         description={t("page-staking-meta-description")}
+        image="/upgrades/upgrade_rhino.png"
       />
       <HeroStatsWrapper>
         <PageHero content={heroContent} />
