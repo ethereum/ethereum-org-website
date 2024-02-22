@@ -59,10 +59,13 @@ export type Layout = keyof LayoutMappingType
 
 export type Lang =
   | "en"
+  | "am"
   | "ar"
   | "az"
+  | "be"
   | "bg"
   | "bn"
+  | "bs"
   | "ca"
   | "cs"
   | "da"
@@ -71,6 +74,7 @@ export type Lang =
   | "es"
   | "fa"
   | "fi"
+  | "fil"
   | "fr"
   | "gl"
   | "gu"
@@ -78,6 +82,7 @@ export type Lang =
   | "hi"
   | "hr"
   | "hu"
+  | "hy-am"
   | "id"
   | "ig"
   | "it"
@@ -85,13 +90,15 @@ export type Lang =
   | "ka"
   | "kk"
   | "km"
+  | "kn"
   | "ko"
   | "lt"
   | "ml"
   | "mr"
   | "ms"
-  | "nl"
   | "nb"
+  | "ne-np"
+  | "nl"
   | "pcm"
   | "ph"
   | "pl"
@@ -106,6 +113,7 @@ export type Lang =
   | "sw"
   | "ta"
   | "th"
+  | "tk"
   | "tr"
   | "uk"
   | "ur"
@@ -155,7 +163,8 @@ export type RawQuestion = {
 
 export type QuestionBank = Record<string, RawQuestion>
 export type QuestionKey = keyof typeof allQuestionData
-export type AnswerKey = typeof allQuestionData[QuestionKey]["answers"][number]["id"]
+export type AnswerKey =
+  (typeof allQuestionData)[QuestionKey]["answers"][number]["id"]
 
 export type Question = RawQuestion & {
   id: QuestionKey
@@ -192,7 +201,10 @@ export type QuizKey = keyof typeof allQuizData
 type HasScoredPerfect = boolean
 type QuestionsCorrect = number
 
-export type CompletedQuizzes = Record<QuizKey, [HasScoredPerfect, QuestionsCorrect]>
+export type CompletedQuizzes = Record<
+  QuizKey,
+  [HasScoredPerfect, QuestionsCorrect]
+>
 
 export type UserStats = {
   score: number
@@ -237,6 +249,73 @@ export type LocaleContributions = {
   data: FileContributorData[]
 }
 
+// Crowdin translation progress
+export type ProjectProgressData = {
+  languageId: string
+  words: {
+    total: number
+    approved: number
+  }
+}
+
+export type LocaleDisplayInfo = {
+  localeOption: string
+  sourceName: string
+  targetName: string
+  englishName: string
+  approvalProgress: number
+  wordsApproved: number
+  isBrowserDefault?: boolean
+}
+
+type TranslatedStats = {
+  tmMatch: number
+  default: number
+  total: number
+}
+
+export type AllTimeData = {
+  name: string
+  url: string
+  unit: string
+  dateRange: {
+    from: string
+    to: string
+  }
+  currency: string
+  mode: string
+  totalCosts: number
+  totalTMSavings: number
+  totalPreTranslated: number
+  data: Array<{
+    user: {
+      id: number
+      username: string
+      fullName: string
+      userRole: string
+      avatarUrl: string
+      preTranslated: number
+      totalCosts: number
+    }
+    languages: Array<{
+      language: {
+        id: string
+        name: string
+        userRole: string
+        tmSavings: number
+        preTranslate: number
+        totalCosts: number
+      }
+      translated: TranslatedStats
+      targetTranslated: TranslatedStats
+      translatedByMt: TranslatedStats
+      approved: TranslatedStats
+      translationCosts: TranslatedStats
+      approvalCosts: TranslatedStats
+    }>
+  }>
+}
+
 // GitHub contributors
 export type Commit = {
   commit: {
@@ -275,8 +354,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-    items: TocNodeType[]
-  }
+      items: TocNodeType[]
+    }
 
 export type ToCItem = {
   title: string
@@ -342,12 +421,12 @@ export type TimestampedData<T> = {
 
 export type MetricDataValue<Data, Value> =
   | {
-    error: string
-  }
+      error: string
+    }
   | {
-    data: Data
-    value: Value
-  }
+      data: Data
+      value: Value
+    }
 
 export type EtherscanNodeResponse = {
   result: {
@@ -411,52 +490,4 @@ export type CommunityConference = {
   description: string
   startDate: string
   endDate: string
-}
-
-type TranslatedStats = {
-  tmMatch: number
-  default: number
-  total: number
-}
-
-export type AllTimeData = {
-  name: string
-  url: string
-  unit: string
-  dateRange: {
-    from: string
-    to: string
-  }
-  currency: string
-  mode: string
-  totalCosts: number
-  totalTMSavings: number
-  totalPreTranslated: number
-  data: Array<{
-    user: {
-      id: number
-      username: string
-      fullName: string
-      userRole: string
-      avatarUrl: string
-      preTranslated: number
-      totalCosts: number
-    }
-    languages: Array<{
-      language: {
-        id: string
-        name: string
-        userRole: string
-        tmSavings: number
-        preTranslate: number
-        totalCosts: number
-      }
-      translated: TranslatedStats
-      targetTranslated: TranslatedStats
-      translatedByMt: TranslatedStats
-      approved: TranslatedStats
-      translationCosts: TranslatedStats
-      approvalCosts: TranslatedStats
-    }>
-  }>
 }

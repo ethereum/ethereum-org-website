@@ -85,7 +85,7 @@ O Ethereum é fluido por natureza, por isso, suas equipes e produtos vêm e vão
 - garantir que todos os dapps listados continuem atendendo a nossos critérios
 - verificar se não há produtos sugeridos que atendam mais aos nossos critérios do que os atualmente listados
 
-Você pode nos ajudar com isso, verificando e nos informando. [Abra um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) ou envie um email para[website@ethereum.org](mailto:website@ethereum.org)
+Você pode nos ajudar com isso, verificando e nos informando. [Abra um tíquete](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) ou envie um e-mail para[website@ethereum.org](mailto:website@ethereum.org)
 
 _Estamos também investigando opções de votação para que a comunidade possa indicar suas preferências e destacar os melhores produtos disponíveis para recomendarmos._
 
@@ -93,7 +93,7 @@ _Estamos também investigando opções de votação para que a comunidade possa 
 
 ## Adicione seu produto {#add-your-product}
 
-Se você quiser adicionar um dapp ao ethereum.org e ele atender aos critérios, crie um tíquete no GitHub.
+Se você quiser adicionar um dapp ao ethereum.org e ele atender aos critérios, abra um tíquete no GitHub.
 
 <ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_dapp.yaml">
   Criar um novo problema

@@ -37,7 +37,7 @@ Com o design do mecanismo atual, para reduzir o tempo de finalização, é neces
 
 O mecanismo de consenso atual combina atestações de diversos validadores, conhecidos como "comitês", para reduzir o número de mensagens que cada validador precisa processar para validar um bloco. Cada validador tem a oportunidade de atestar em cada época (32 espaços), mas em cada espaço, apenas um subconjunto de validadores, conhecido como uma atestação de "comitê". Eles fazem isso ao se dividir em sub-redes, nas quais alguns validadores são selecionados para serem "agregadores". Esses agregadores combinam, em uma única assinatura agregada, todas as assinaturas que observam de outros validadores na respectiva sub-rede. O agregador que inclui o maior número de contribuições individuais passa a assinatura agregada ao proponente do bloco, que a inclui no bloco juntamente com a assinatura agregada dos demais comitês.
 
-Esse processo oferece capacidade suficiente para cada validador votar em cada época, porque "32 espaços _ 64 comitês _ 256 validadores por comitê = 524.288 validadores por época". No momento da redação deste artigo (fevereiro de 2023), há aproximadamente 513.000 validadores ativos.
+Esse processo oferece capacidade suficiente para cada validador votar em cada época, porque "32 espaços * 64 comitês * 256 validadores por comitê = 524.288 validadores por época". No momento da redação deste artigo (fevereiro de 2023), há aproximadamente 513.000 validadores ativos.
 
 Nesse esquema, só é possível que cada validador vote em um bloco se distribuir as respectivas atestações por toda a época. Entretanto, há potencialmente maneiras de aprimorar o mecanismo para que _cada validador tenha a chance de atestar em cada espaço_.
 </ExpandableCard>

@@ -45,13 +45,13 @@ Usaremos um exemplo de negociação de arbitragem para ilustrar os benefícios d
 
 Se um token estiver sendo negociado mais alto na `troca A` do que na `troca B`, você pode aproveitar a diferença de preço para obter lucro. No entanto, você só pode fazer isso se tiver capital suficiente para financiar a transação (ou seja, comprar o token da `troca B` e vendê-lo na `troca A`).
 
-Em um cenário em que você não tem fundos suficientes para cobrir a negociação, um empréstimo rápido pode ser o ideal. Os [empréstimos relâmpagos](/defi/#flash-loans) são altamente técnicos, mas a ideia básica é que você pode emprestar ativos (sem garantias) e devolvê-los dentro de _uma_ transação.
+Em um cenário em que você não tem fundos suficientes para cobrir a negociação, um empréstimo rápido pode ser o ideal. Os [empréstimos relâmpagos](/defi/#flash-loans) são altamente técnicos, mas a ideia básica é que você pode emprestar ativos (sem garantias) e devolvê-los dentro de *uma* transação.
 
 Voltando ao nosso exemplo inicial, um trader de arbitragem pode fazer um grande empréstimo relâmpago, comprar tokens da `troca B`, vendê-los na `troca A`, pagar o capital + juros, e manter o lucro, dentro da mesma transação. Essa lógica complexa requer a combinação de chamadas para vários contratos, o que não seria possível se os contratos inteligentes não tivessem interoperabilidade.
 
 ## Exemplos de composabilidade na Ethereum {#composability-in-ethereum}
 
-### Troca de tokens {#token-swaps}
+### Trocas de tokens {#token-swaps}
 
 Se você criar um dapp que exige que as transações sejam pagas em ETH, você pode permitir que os usuários paguem em outros tokens ERC-20 integrando a lógica de troca de token. O código converterá automaticamente o token do usuário em ETH antes que o contrato execute a função chamada.
 

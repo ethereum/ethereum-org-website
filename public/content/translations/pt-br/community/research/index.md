@@ -124,7 +124,7 @@ Uma área específica da camada 2 que exige mais pesquisa e desenvolvimento são
 - [Introdução às pontes de blockchain](/bridges/)
 - [Vitalik sobre pontes](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [Artigo de pontes de blockchain](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Valor bloqueado em pontes](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [Valor bloqueado em pontes](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
 
 #### Pesquisa recente {#recent-research-3}
 
@@ -152,11 +152,11 @@ A fragmentação do blockchain do Ethereum faz parte do roadmap de desenvolvimen
 
 #### Leitura de apoio {#background-reading-5}
 
-- [Ethereum na ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
+- [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)
 
 #### Pesquisa recente {#recent-research-5}
 
-- [ecsda em FGPAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [ecdsa em FPGAs](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Segurança {#security}
 
@@ -346,7 +346,6 @@ As ferramentas para desenvolvedores do Ethereum têm melhorado rapidamente. Há 
 - [Frameworks do desenvolvedor](/developers/docs/frameworks/)
 - [Lista de ferramentas do desenvolvedor de consenso](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Padrões de token](/developers/docs/standards/tokens/)
-- [Biastek: ferramentas Ethereum](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub: ferramentas EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Pesquisa recente {#recent-research-17}

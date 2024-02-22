@@ -7,6 +7,7 @@ import AlphaWalletImage from "@/public/wallets/alpha.png"
 import AmbireImage from "@/public/wallets/ambire.png"
 import ApexImage from "@/public/wallets/apex.png"
 import ArgentImage from "@/public/wallets/argent.png"
+import AuroxImage from "@/public/wallets/aurox.png"
 import BitcoindotcomImage from "@/public/wallets/bitcoindotcom.png"
 import BitkeepImage from "@/public/wallets/bitkeep.png"
 import BlockWalletImage from "@/public/wallets/blockwallet.png"
@@ -2711,6 +2712,54 @@ const walletData: WalletData[] = [
     onboard_documentation: "https://www.xdefi.io/support/",
     documentation:
       "https://docs.xdefi.io/xdefi-wallet-v2-draft/technical-docs/extension-integration",
+  },
+  {
+    last_updated: "2023-10-30",
+    name: "Aurox Wallet",
+    image: AuroxImage,
+    brand_color: "#1F47FF",
+    url: "https://getaurox.com/wallet",
+    wallet_live_date: "2022-12-06",
+    active_development_team: true,
+    languages_supported: ["en"],
+    twitter: "https://twitter.com/getaurox",
+    discord: "https://aurox.app/discord",
+    reddit: "",
+    telegram: "",
+    ios: false,
+    android: false,
+    linux: false,
+    windows: false,
+    macOS: false,
+    firefox: false,
+    chromium: true,
+    hardware: false,
+    open_source: true,
+    repo_url: "https://github.com/GetAurox/Aurox-Wallet",
+    non_custodial: true,
+    security_audit: ["https://skynet.certik.com/projects/aurox"],
+    scam_protection: true,
+    hardware_support: true,
+    walletconnect: false,
+    rpc_importing: true,
+    nft_support: true,
+    connect_to_dapps: true,
+    staking: false,
+    swaps: true,
+    multichain: true,
+    layer_2: true,
+    gas_fee_customization: true,
+    ens_support: true,
+    erc_20_support: true,
+    eip_1559_support: true,
+    buy_crypto: false,
+    withdraw_crypto: false,
+    multisig: false,
+    social_recovery: false,
+    onboard_documentation:
+      "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
+    documentation:
+      "https://docs.getaurox.com/product-docs/aurox-ecosystem/what-is-the-aurox-ecosystem",
   },
 ]
 

@@ -575,7 +575,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 检索映射的元素要难一些。 映射中的元素位置通过以下方式计算：
 
 ```js
-keccack(LeftPad32(key, 0), LeftPad32(map position, 0))
+keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
 这意味着要检索 pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] 上的存储，我们需要通过以下方法计算位置：

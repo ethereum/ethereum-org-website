@@ -31,7 +31,7 @@ export const getRequiredNamespacesForPage = (
   path: string,
   layout?: string | undefined
 ) => {
-  const baseNamespaces = ["common"]
+  const baseNamespaces = ["common", "page-languages"]
 
   const requiredNamespacesForPath = getRequiredNamespacesForPath(path)
   const requiredNamespacesForLayout = getRequiredNamespacesForLayout(layout)
@@ -61,7 +61,6 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path === "/contributing/translation-program/contributors") {
     primaryNamespace = "page-contributing-translation-program-contributors"
-    requiredNamespaces = [...requiredNamespaces, "page-languages"]
   }
 
   if (path.startsWith("/community")) {
@@ -129,10 +128,6 @@ const getRequiredNamespacesForPath = (path: string) => {
     primaryNamespace = "page-get-eth"
   }
 
-  if (path.startsWith("/languages")) {
-    primaryNamespace = "page-languages"
-  }
-
   if (path.startsWith("/roadmap/vision")) {
     primaryNamespace = "page-roadmap-vision"
     requiredNamespaces = [...requiredNamespaces, "page-upgrades-index"]
@@ -140,7 +135,7 @@ const getRequiredNamespacesForPath = (path: string) => {
 
   if (path.startsWith("/gas")) {
     primaryNamespace = "page-gas"
-    requiredNamespaces = [...requiredNamespaces, "page-gas"]
+    requiredNamespaces = [...requiredNamespaces, "page-gas", "page-community"]
   }
 
   if (path.startsWith("/what-is-ethereum")) {
