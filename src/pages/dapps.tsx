@@ -1351,10 +1351,7 @@ const DappsPage = () => {
       <Content>
         <StyledH2>{t("common:get-started")}</StyledH2>
         <Text>
-          <Translation id="page-dapps:page-dapps-get-started-subtitle" />{" "}
-          <GlossaryTooltip termKey="transaction-fee">
-            {t("transaction-fees")}
-          </GlossaryTooltip>
+          <Translation id="page-dapps:page-dapps-get-started-subtitle" />
         </Text>
         <Row>
           <StepBoxContainer>
