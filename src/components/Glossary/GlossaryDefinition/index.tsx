@@ -19,10 +19,10 @@ const GlossaryDefinition = ({ term, size = "md" }: GlossaryDefinitionProps) => {
   return (
     <Box>
       <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
-        <Translation id={"glossary:" + term + "-term"} />
+        <Translation id={"glossary-tooltip:" + term + "-term"} />
       </OldHeading>
       <Text {...textStyles}>
-        <Translation id={"glossary:" + term + "-definition"} />
+        <Translation id={"glossary-tooltip:" + term + "-definition"} />
       </Text>
     </Box>
   )
