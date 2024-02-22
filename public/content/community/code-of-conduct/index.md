@@ -4,6 +4,8 @@ description: The basic standards that we strive for across ethereum.org spaces.
 lang: en
 ---
 
+# Code of conduct {#code-of-conduct}
+
 ## Mission {#mission}
 
 To develop and maintain the most comprehensive and accessible knowledge hub for Ethereum.
