@@ -4,6 +4,8 @@ description: Guide to use consistent terminology in content writing
 lang: en
 ---
 
+# Content standardization {#content-standardization}
+
 This style guide aims to standardize certain aspects of writing content to make the contribution process smoother.
 
 ## Use American English {#american-english}

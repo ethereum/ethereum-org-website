@@ -5,7 +5,7 @@ hideEditButton: true
 lang: id
 ---
 
-## Aksi mendatang {#events}
+# Aksi mendatang {#events}
 
 **Setiap bulan, ada aksi besar Ethereum di seluruh dunia.** Pertimbangkanlah untuk menghadiri salah satunya di dekat area Anda untuk bertemu dengan lebih banyak orang di komunitas, mendapatkan informasi tentang lowongan pekerjaan, dan mengembangkan keahlian baru.
 
