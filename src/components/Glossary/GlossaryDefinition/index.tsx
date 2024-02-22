@@ -37,16 +37,14 @@ const GlossaryDefinition = ({
         <Translation
           id={term + "-term"}
           options={options}
-          // @ts-ignore
-          components={components}
+          transform={components}
         />
       </OldHeading>
       <Text {...textStyles}>
         <Translation
           id={term + "-definition"}
           options={options}
-          // @ts-ignore
-          components={components}
+          transform={components}
         />
       </Text>
     </Box>
