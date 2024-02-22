@@ -13,7 +13,15 @@ const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
   const isLargeScreen = useBreakpointValue({ base: false, lg: true })
 
   return isLargeScreen ? (
-    <Tooltip content={<GlossaryDefinition term={termKey} size="sm" />}>
+    <Tooltip
+      content={
+        <GlossaryDefinition
+          term={termKey}
+          size="sm"
+          options={{ ns: "glossary-tooltip" }}
+        />
+      }
+    >
       <Text
         as="u"
         textDecorationStyle="dotted"
