@@ -5,7 +5,7 @@ lang: pl
 hideEditButton: true
 ---
 
-## Nadchodzące wydarzenia {#events}
+# Nadchodzące wydarzenia {#events}
 
 **Co miesiąc, na całym świecie, mają miejsce różne wydarzenia i eventy Ethereum.** Weź pod uwagę możliwość wzięcia udziału w jednym z nich, niedaleko Ciebie, poznaj różne ścieżki kariery i rozwijaj swoje umiejętności.
 

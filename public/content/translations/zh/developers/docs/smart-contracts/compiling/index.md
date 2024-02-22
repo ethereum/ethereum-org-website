@@ -1,11 +1,11 @@
 ---
 title: 编译智能合约
-description: 解释您为什么需要编译智能合约以及编译实际上做了什么。
+description: 解释你为什么需要编译智能合约以及编译实际上做了什么。
 lang: zh
 incomplete: true
 ---
 
-您需要编译您的合约，以便您的 web 应用程序和以太坊虚拟机能够理解它。
+你需要编译你的合约，以便你的 web 应用程序和以太坊虚拟机能够理解它。
 
 ## 前提条件 {#prerequisites}
 
@@ -13,7 +13,7 @@ incomplete: true
 
 ## 以太坊虚拟机 {#the-evm}
 
-要使[以太坊虚拟机](/developers/docs/evm/)能够运行您的合约，您的合约必须被编译为**字节码**。 编译过程把如下代码：
+要使[以太坊虚拟机](/developers/docs/evm/)能够运行你的合约，你的合约必须被编译为**字节码**。 编译过程把如下代码：
 
 ```solidity
 pragma solidity 0.4.24;
@@ -35,13 +35,13 @@ PUSH1 0x80 PUSH1 0x40 MSTORE PUSH1 0x4 CALLDATASIZE LT PUSH2 0x41 JUMPI PUSH1 0x
 
 ## Web 应用程序 {#web-applications}
 
-编译器还将生成您需要的**应用程序二进制接口 (ABI)** ，以便您的应用程序能够理解合约并调用合约的功能。
+编译器还将生成你需要的**应用程序二进制接口 (ABI)** ，以便你的应用程序能够理解合约并调用合约的功能。
 
 ABI 是一份 JSON 文件，描述了部署的合约及这个智能合约的函数。 这在 web2 和 web3 之间的鸿沟上架起交流的桥梁
 
-[Javascript 客户端库](/developers/docs/apis/javascript/)将读取**应用程序二进制接口 (ABI)**，以便您在 Web 应用程序接口中调用您的智能合约。
+[Javascript 客户端库](/developers/docs/apis/javascript/)将读取**应用程序二进制接口 (ABI)**，以便你在 Web 应用程序接口中调用你的智能合约。
 
-以下是 ERC-20 代币合约的应用程序二进制接口。 ERC-20 是您可以在以太坊交易的代币。
+以下是 ERC-20 代币合约的应用程序二进制接口。 ERC-20 是你可以在以太坊交易的代币。
 
 ```json
 [
