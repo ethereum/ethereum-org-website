@@ -642,7 +642,9 @@ const Layer2Page = () => {
           </Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-4-title")}`}>
-          <Text>{t("layer-2-faq-question-4-description-1")}</Text>
+          <Text>
+            <Translation id="page-layer-2:layer-2-faq-question-4-description-1" />
+          </Text>
           <Text>
             <Translation id="page-layer-2:layer-2-faq-question-4-description-2" />
           </Text>
