@@ -4,6 +4,8 @@ description: Directives et exigences pour garantir la qualité des matériaux de
 lang: fr
 ---
 
+# Ajout de ressources de conception {#adding-design-resources}
+
 Toute personne peut suggérer de nouveaux matériaux de conception à la page [Design et UX dans le web3](/developers/docs/design-and-ux/).
 
 Il est important de noter que l'objectif de cette page est de fournir une aide aux utilisateurs aspirant à devenir des concepteurs web3. Cette section n'est pas destinée à faire la publicité de vos services, produits ou plateformes.

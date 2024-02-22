@@ -4,6 +4,8 @@ description: As normas básicas que buscamos nos espaços do ethereum.org.
 lang: pt-br
 ---
 
+# Código de Conduta {#conduct-intro}
+
 ## Missão {#mission}
 
 Desenvolver e manter o centro de conhecimento mais abrangente e acessível para o Ethereum.

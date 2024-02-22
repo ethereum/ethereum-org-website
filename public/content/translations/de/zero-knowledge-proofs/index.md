@@ -4,7 +4,7 @@ description: Eine nicht-technische Einführung in Null-Wissen-Beweise für Anfä
 lang: de
 ---
 
-## Was sind Null-Wissen-Beweise? {#what-are-zk-proofs}
+# Was sind Null-Wissen-Beweise? {#what-are-zk-proofs}
 
 Ein Null-Wissen-Beweis ist eine Methode, um die Gültigkeit einer Aussage zu beweisen, ohne die Aussage selbst offenzulegen. Der „Beweisanführer“ ist die Partei, die versucht, eine Aussage zu beweisen, während der „Verifizierer“ für die Validierung der Aussage verantwortlich ist.
 
