@@ -4,6 +4,8 @@ description: Les normes de base que nous nous efforçons de respecter dans les e
 lang: fr
 ---
 
+# Code de conduite {#conduct-intro}
+
 ## Mission {#mission}
 
 Développer et maintenir le centre de connaissances le plus complet et le plus accessible pour Ethereum.
