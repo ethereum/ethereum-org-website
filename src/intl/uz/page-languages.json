@@ -1,4 +1,12 @@
 {
+  "page-languages-h1": "Til Yordami",
+  "page-languages-want-more-link": "Tarjima dasturi",
+  "page-languages-filter-label": "Filtr roʻyxati",
+  "page-languages-filter-placeholder": "Filtrlash uchun yozing",
+  "page-languages-browser-default": "Brauzer standarti",
+  "page-languages-translated": "tarjima qilingan",
+  "page-languages-words": "soʻzlar",
+  "page-languages-recruit-community": "Bizga ethereum.org tarjimasiga yordam bering.",
   "language-ar": "Arab",
   "language-az": "Ozarbayjon",
   "language-bg": "Bolgar",

@@ -1,37 +1,42 @@
-import React from "react"
-import { Icon, Text, Center, Flex } from "@chakra-ui/react"
+import { useRouter } from "next/router"
 import { FaGithub } from "react-icons/fa"
-import Emoji from "./Emoji"
-import Link from "./Link"
+import { Center, Flex, Icon } from "@chakra-ui/react"
 
-export interface GitHubRepo {
+import Emoji from "./Emoji"
+import { BaseLink, LinkProps } from "./Link"
+import Text from "./OldText"
+
+type GitHubRepo = {
   stargazerCount: number
   url: string
 }
 
-export interface IProps {
+type GitStarsProps = Omit<LinkProps, "to" | "href"> & {
   gitHubRepo: GitHubRepo
-  className?: string
   hideStars: boolean
 }
 
-const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
-  // Stringify with commas
-  let starsString = gitHubRepo.stargazerCount.toString()
-  const rgx = /(\d+)(\d{3})/
-  while (rgx.test(starsString)) {
-    starsString = starsString.replace(rgx, "$1,$2")
-  }
+const GitStars = ({ gitHubRepo, hideStars, ...props }: GitStarsProps) => {
+  const { locale } = useRouter()
+  // Use Intl.NumberFormat to format the number for locale
+  const starsString = Intl.NumberFormat(locale, {
+    compactDisplay: "short",
+  }).format(gitHubRepo.stargazerCount)
 
   return (
-    <Link className={className} to={gitHubRepo.url} hideArrow>
+    <BaseLink
+      href={gitHubRepo.url}
+      hideArrow
+      ms="auto"
+      textDecoration="none"
+      {...props}
+    >
       <Flex
         background="lightBorder"
         textDecoration="none"
         border="1px solid"
         borderColor="lightBorder"
         borderRadius="base"
-        float="right"
         color="text"
         _hover={{
           boxShadow: "0 0 1px var(--eth-colors-primary-base)",
@@ -62,7 +67,7 @@ const GitStars: React.FC<IProps> = ({ gitHubRepo, className, hideStars }) => {
           </>
         )}
       </Flex>
-    </Link>
+    </BaseLink>
   )
 }
 

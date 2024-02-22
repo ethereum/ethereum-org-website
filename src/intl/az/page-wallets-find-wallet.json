@@ -49,7 +49,7 @@
   "page-find-wallet-token-support": "Token dəstəyi",
   "page-find-wallet-features": "Xüsusiyyətləri",
   "page-find-wallet-security": "Təhlükəsizlik",
-  "page-find-wallet-smart-contract": "Ağıllı müqavilələr",
+  "page-find-wallet-smart-contract": "Ağıllı müqavilə",
   "page-find-wallet-check-out": "Yoxlayın",
   "page-find-wallet-info-updated-on": "məlumat yeniləndi",
   "page-find-wallet-showing-all-wallets": "Bütün pulqabılar göstərilir",
@@ -81,12 +81,15 @@
   "page-find-wallet-feature-filters": "Xüsusiyyət filtrləri",
   "page-find-wallet-footnote-1": "Bu səhifədə qeyd olunan pulqabıları rəsmi olaraq təsdiqlənməyib və yalnız məlumat məqsədləri üçün verilir.",
   "page-find-wallet-footnote-2": "Onların təsvirləri pulqabı layihələrinin özləri tərəfindən verilmişdir.",
-  "page-find-wallet-footnote-3": "Məhsullarımızı bu səhifəmizdəki kriteriyalara əsasən əlavə edirik<a href=\"/contributing/adding-products/\">siyahı siyasəti</a>pulqabı əlavə etməyimizi istəyirsinizsə,<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub-da problemdən şikayət edin</a>.",
+  "page-find-wallet-footnote-3": "Məhsullarımızı <a href=\"/contributing/adding-wallets/\">siyahı siyasəti</a> səhifəmizdəki kriteriyalara əsasən əlavə edirik. Pulqabı əlavə etməyimizi istəyirsinizsə,<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub-da problemdən şikayət edin</a>.",
   "page-find-wallet-mobile": "Mobil",
   "page-find-wallet-mobile-desc": "Mobil tətbiqləri olan pulqabılar",
   "page-find-wallet-desktop": "Masaüstü kompüter",
   "page-find-wallet-desktop-desc": "Masaüstü tətbiqləri olan pulqabılar",
   "page-find-wallet-browser": "Brauzer",
   "page-find-wallet-browser-desc": "Brauzer uzantıları olan pulqabılar",
-  "page-find-wallet-device": "Cihazlar"
+  "page-find-wallet-device": "Cihazlar",
+  "page-find-choose-to-compare": "Müqayisə etmək üçün seçin",
+  "page-find-wallet-choose-features": "Xüsusiyyətləri seçin",
+  "page-find-wallet-reset-filters": "Filtrləri sıfırlayın"
 }

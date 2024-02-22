@@ -25,7 +25,7 @@
   "page-find-wallet-connect-to-dapps": "Подключиться к децентрализованным приложениям",
   "page-find-wallet-connect-to-dapps-desc": "Кошельки, которые подключаются к приложениям, построенным на сети Ethereum",
   "page-find-wallet-staking": "Стейкинг",
-  "page-find-wallet-staking-desc": "Обменивайте ETH непосредственно с кошелька",
+  "page-find-wallet-staking-desc": "Выполняйте стейкинг ETH непосредственно из кошелька",
   "page-find-wallet-swaps": "Обмены",
   "page-find-wallet-swaps-desc": "Обменивайте токены ERC-20 непосредственно в кошельке",
   "page-find-wallet-layer-2": "Уровень 2",
@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Фильтры функций",
   "page-find-wallet-footnote-1": "Кошельки, перечисленные на этой странице, не являются официально подтвержденными и представлены исключительно в информационных целях.",
   "page-find-wallet-footnote-2": "Их описания были предоставлены самими проектами кошельков.",
-  "page-find-wallet-footnote-3": "Мы добавляем продукты на эту страницу на основе критериев <a href=\"/contributing/adding-products/\">политики листинга</a>. Если вы хотите, чтобы мы добавили кошелек, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">сообщите о проблеме в GitHub</a>.",
+  "page-find-wallet-footnote-3": "Мы добавляем продукты на эту страницу на основе критериев <a href=\"/contributing/adding-wallets/\">политики листинга</a>. Если вы хотите, чтобы мы добавили кошелек, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">сообщите о проблеме в GitHub</a>.",
   "page-find-wallet-mobile": "На мобильном",
   "page-find-wallet-mobile-desc": "Кошельки с мобильными приложениями",
   "page-find-wallet-desktop": "На настольном ПК",
@@ -89,5 +89,7 @@
   "page-find-wallet-browser": "Браузер",
   "page-find-wallet-browser-desc": "Кошельки с расширениями для браузеров",
   "page-find-wallet-device": "Устройство",
-  "page-find-choose-to-compare": "Выбрать для сравнения"
+  "page-find-choose-to-compare": "Выбрать для сравнения",
+  "page-find-wallet-choose-features": "Выберите функции",
+  "page-find-wallet-reset-filters": "Сбросить фильтры"
 }

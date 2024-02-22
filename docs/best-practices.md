@@ -6,9 +6,9 @@ _Please read carefully if adding or altering any written language content_
 
 How to prepare your content for translation depends on whether you're working on a simple Markdown/MDX page or a React component page.
 
-**- MDX pages (`/src/content/page/`)**
+**- MDX pages (`public/content/page/`)**
 
-Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `/src/content/` with the name of the page, then place index markdown file (ie. `index.md`) within the new folder.
+Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `public/content/` with the name of the page, then place index markdown file (ie. `index.md`) within the new folder.
 
 **- React component page**
 
@@ -52,7 +52,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `gatsby-plugin-react-i18next`
+- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `next-i18next`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
@@ -66,7 +66,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - **Method two: `t()`**
 
     ```tsx
-    import { useTranslation } from "gatsby-plugin-react-i18next"
+    import { useTranslation } from "next-i18next"
 
     // Utilize anywhere in JS using
     const { t } = useTranslation()
@@ -85,7 +85,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 // Example
 import React, { useState, useEffect } from "react"
 
-const ComponentName: React.FC = (props) => {
+const ComponentName = () => {
   // useState hook for managing state variables
   const [greeting, setGreeting] = useState("")
 
@@ -102,45 +102,58 @@ export default ComponentName
 
 ## Styling
 
-- `src/theme.ts` - Declares site color themes, breakpoints and other constants (try to utilize these colors first)
-- We use [emotion](https://emotion.sh/)
+We use [Chakra UI](https://chakra-ui.com/).
 
-  - Tagged template literals are used to style custom components
+`src/@chakra-ui/theme.ts` - Holds all the theme configuration. This is where you can find the colors, fonts, component themes, variants, etc.
 
-  ```tsx
-  // Example of styling syntax using emotion
+- Wrappers or layout divs
 
-  import styled from "@emotion/styled"
+Use the [native layouts components](https://chakra-ui.com/docs/components/box)
 
-  const GenericButton = styled.div`
-    width: 200px;
-    height: 50px;
-  `
-  const PrimaryButton = styled(GenericButton)`
-    background: blue;
-  `
-  const SecondaryButton = styled(GenericButton)`
-    background: red;
-  `
+```tsx
+<Stack direction='row'>
+```
 
-  // These are each components, capitalized by convention, and can be used within JSX code
-  // ie: <PrimaryButton>Text</PrimaryButton>
-  ```
+Center things using the `<Center />` component
 
-- Values from `src/theme.ts` are automatically passed as a prop object to styled components
+```tsx
+<Center h="100px">
+```
 
-  ```tsx
-  // Example of theme.ts usage
+- Group buttons using `<ButtonGroup />` or `<Wrap />`
 
-  import styled from "@emotion/styled"
+```tsx
+<ButtonGroup variant='outline' spacing={2}>
+  <Button>Button 1</Button>
+  <Button>Button 2</Button>
+</ButtonGroup>
 
-  const Container = styled.div`
-    background: ${(props) => props.theme.colors.background};
-    @media (max-width: ${(props) => props.theme.breakpoints.s}) {
-      font-size: #{(props) => props.theme.fontSized.s};
-    }
-  `
-  ```
+// or
+<Wrap spacing={2}>
+  <WrapItem><Button variant="outline">Button 1</Button></WrapItem>
+  <WrapItem><Button variant="outline">Button 2</Button></WrapItem>
+</Wrap>
+```
+
+- Breakpoints
+
+Use [the Chakra default breakpoints](https://chakra-ui.com/docs/styled-system/theme#breakpoints).
+
+```tsx
+<Container display={{ base: "block", sm: "flex" }} />
+```
+
+- Theme colors
+
+```tsx
+<Text color="primary.base" bg="background.base" />
+```
+
+> Note the dotted notation. In Chakra, the values are referred to as "semantic tokens" and the new theme applies a nested structure of like tokens for better organization. See [semanticTokens.ts](../src/@chakra-ui/semanticTokens.ts)
+
+> Note 2: all the previous colors defined in the old theme `src/theme.ts` were
+> ported into the new theme for compatibility reasons. Those colors will
+> transition out of the codebase as we adopt the DS colors.
 
 - [Framer Motion](https://www.framer.com/motion/) - An open source and production-ready motion library for React on the web, used for our animated designs
 - **Emojis**: We use [Twemoji](https://twemoji.twitter.com/), an open-source emoji set created by Twitter. These are hosted by us, and used to provide a consistent experience across operating systems.
@@ -154,80 +167,20 @@ import Emoji from "./Emoji"
 ```
 
 - **Icons**: We use [React Icons](https://react-icons.github.io/react-icons/)
-  - `src/components/Icon.ts` is the component used to import icons to be used
-  - If an icon you want to use is not listed you will need to add it to this file
-
-`src/components/Icon.ts`:
+  with [Chakra UI Icon component](https://chakra-ui.com/docs/components/icon/usage)
 
 ```tsx
-// Example of how to add new icon not listed
-import { ZzIconName } from "react-icons/zz"
+import { Icon } from "@chakra-ui/react"
+import { BsQuestionSquareFill } from "react-icons/bs"
 
-// Then add to IconContext.Provider children:
-{
-  name === "alias" && <ZzIconName />
-}
+// wrap your imported icon with the `Icon` component from Chakra UI
+;<Icon as={BsQuestionSquareFill} />
 ```
 
-From React component:
+## Using custom `Image` component
+
+[Next Image](https://nextjs.org/docs/pages/api-reference/components/image) is the component of choice to handle responsive images. However, we use a custom version of this component that is properly optimized with Chakra. This way we can use style props from Chakra but still be able to forward common or Next Image-specific props to the component for correct usage and rendering.
 
 ```tsx
-// Example of icon use
-import Icon from "./Icon"
-
-// Within JSX:
-;<Icon name="alias" />
-```
-
-## Image loading and API calls using GraphQL
-
-- [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST, if possible/practical). Utilizes static page queries that run at build time, not at run time, optimizing performance.
-- Image loading example:
-
-```tsx
-import { graphql } from "gatsby"
-
-export const query = graphql`
-  query {
-    hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 800
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-  }
-`
-// These query results get passed as an object `props.data` to your component
-```
-
-- API call example:
-
-```tsx
-import { graphql } from "gatsby"
-
-export const repoInfo = graphql`
-  fragment repoInfo on GitHub_Repository {
-    stargazerCount
-    languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
-      nodes {
-        name
-      }
-    }
-    url
-  }
-`
-export const query = graphql`
-  query {
-    hardhatGitHub: github {
-      repository(owner: "nomiclabs", name: "hardhat") {
-        ...repoInfo
-      }
-    }
-  }
-`
-// These query results get passed as an object `props.data` to your component
+import { Image } from "@/components/Image"
 ```

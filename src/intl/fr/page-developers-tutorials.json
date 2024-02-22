@@ -24,5 +24,6 @@
   "page-tutorial-intermediate": "Intermédiaire",
   "page-tutorial-advanced": "Avancé",
   "page-find-wallet-try-removing": "Essayez de supprimer une ou deux fonctionnalités",
-  "page-find-wallet-clear": "Réinitialiser les filtres"
+  "page-find-wallet-clear": "Réinitialiser les filtres",
+  "page-tutorials-env-banner": "Ne pas exécuter l'<code>.env</code>! Il est vivement déconseillé d'exposer ses données personnelles figurant dans ce fichier<code>.env</code> ou de les partager avec d'autres personnes, car cela pourrait compromette la confidentialité de vos données personnelles. Si vous utilisez déjà un modèle de sécurité rigide, ajoutez votre<code>.env</code> au fichier <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>."
 }

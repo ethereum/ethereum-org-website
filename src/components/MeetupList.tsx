@@ -1,31 +1,29 @@
-// Libraries
-import React, { useState } from "react"
+import { useState } from "react"
 import { sortBy } from "lodash"
 import {
   Box,
   Flex,
-  Input,
   LinkBox,
   LinkOverlay,
   List,
   ListItem,
-  Text,
   useColorModeValue,
   useToken,
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-// Components
-import Emoji from "./Emoji"
-import InfoBanner from "./InfoBanner"
-import Link from "./Link"
-import Translation from "./Translation"
+import Emoji from "@/components/Emoji"
+import InfoBanner from "@/components/InfoBanner"
+import Input from "@/components/Input"
+import InlineLink, { BaseLink } from "@/components/Link"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
-// Data
-import meetups from "../data/community-meetups.json"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-// Utils
-import { trackCustomEvent } from "../utils/matomo"
+import meetups from "@/data/community-meetups.json"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
 
 export interface Meetup {
   title: string
@@ -50,12 +48,11 @@ const filterMeetups = (query: string): Array<Meetup> => {
 // sort meetups by country and then by city
 const sortedMeetups: Array<Meetup> = sortBy(meetups, ["emoji", "location"])
 
-export interface IProps {}
-
 // TODO create generalized CardList / TableCard
 // TODO prop if ordered list or unordered
-const MeetupList: React.FC<IProps> = () => {
+const MeetupList = () => {
   const [searchField, setSearchField] = useState<string>("")
+  const { flipForRtl } = useRtlFlip()
   const filteredMeetups = filterMeetups(searchField)
   const listBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
   const listItemBoxShadow = useColorModeValue(
@@ -77,21 +74,9 @@ const MeetupList: React.FC<IProps> = () => {
   return (
     <Box>
       <Input
+        mb={6}
         onChange={handleSearch}
         placeholder={"Search by meetup title or location"}
-        display="block"
-        mr="auto"
-        ml="auto"
-        mb={6}
-        border="1px solid"
-        borderColor="searchBorder"
-        color="text"
-        bg="searchBackground"
-        p={2}
-        borderRadius="base"
-        w="100%"
-        _focus={{ outline: "auto 1px" }}
-        _placeholder={{ color: "text200" }}
         aria-describedby="input-instruction"
       />
       {/* hidden for attachment to input only */}
@@ -117,30 +102,36 @@ const MeetupList: React.FC<IProps> = () => {
               bg: "tableBackgroundHover",
             }}
           >
-            <Flex flex="1 1 75%" mr={4}>
-              <Box mr={4} opacity="0.4">
+            <Flex flex="1 1 75%" me={4}>
+              <Box me={4} opacity="0.4">
                 {idx + 1}
               </Box>
               <Box>
                 <LinkOverlay
-                  as={Link}
+                  as={BaseLink}
                   href={meetup.link}
                   textDecor="none"
                   color="text"
                   hideArrow
+                  isExternal
                 >
                   {meetup.title}
                 </LinkOverlay>
               </Box>
             </Flex>
             <Flex
-              textAlign="right"
+              textAlign="end"
               alignContent="flex-start"
               flex="1 1 25%"
-              mr={4}
+              me={4}
               flexWrap="wrap"
             >
-              <Emoji text={meetup.emoji} boxSize={4} mr={2} />
+              <Emoji
+                text={meetup.emoji}
+                boxSize={4}
+                me={2}
+                lineHeight="unset"
+              />
               <Text mb={0} opacity={"0.6"}>
                 {meetup.location}
               </Text>
@@ -149,8 +140,10 @@ const MeetupList: React.FC<IProps> = () => {
               as="span"
               _after={{
                 content: '"↗"',
-                ml: 0.5,
-                mr: 1.5,
+                ms: 0.5,
+                me: 1.5,
+                transform: flipForRtl,
+                display: "inline-block",
               }}
             ></Box>
           </LinkBox>
@@ -160,9 +153,9 @@ const MeetupList: React.FC<IProps> = () => {
         {!filteredMeetups.length && (
           <InfoBanner emoji=":information_source:">
             <Translation id="page-community-meetuplist-no-meetups" />{" "}
-            <Link to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
+            <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
               <Translation id="page-community-please-add-to-page" />
-            </Link>
+            </InlineLink>
           </InfoBanner>
         )}
       </Box>

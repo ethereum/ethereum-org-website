@@ -1,21 +1,19 @@
-import React from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
-import { Flex, List } from "@chakra-ui/react"
+import { Flex, FlexProps, List } from "@chakra-ui/react"
 
 import NavDropdown from "./Dropdown"
-import { getDirection } from "../../utils/translations"
-
-import { Lang } from "../../utils/languages"
+// import { getDirection } from "../../utils/translations"
+// import { Lang } from "../../utils/languages"
 import { ISections } from "./types"
 
-export interface IProps {
+export type MenuProps = FlexProps & {
   path: string
   sections: ISections
 }
 
-const Menu: React.FC<IProps> = ({ path, sections }) => {
-  const { language } = useI18next()
-  const direction = getDirection(language as Lang)
+const Menu = ({ path, sections, ...props }: MenuProps) => {
+  // const { locale } = useRouter()
+  const direction = "ltr"
+  // const direction = getDirection(language as Lang)
   const shouldShowSubNav = path.includes("/developers/")
 
   const { useEthereum, learn, ...restSections } = sections
@@ -23,8 +21,14 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
   const [start, basics, protocol] = learn.items
 
   return (
-    <Flex as={List} alignItems="center" m={0} gap={{ base: 3, xl: 6 }}>
-      <NavDropdown section={useEthereum} hasSubNav={shouldShowSubNav}>
+    <Flex
+      as={List}
+      alignItems="center"
+      m={0}
+      gap={{ base: 3, xl: 6 }}
+      {...props}
+    >
+      <NavDropdown section={useEthereum}>
         {useEthereum.items.map((item, index) => (
           <NavDropdown.Item
             key={index}
@@ -37,8 +41,8 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
         ))}
       </NavDropdown>
 
-      <NavDropdown section={learn} hasSubNav={shouldShowSubNav}>
-        <Flex flexDir={direction === "rtl" ? "row-reverse" : "row"}>
+      <NavDropdown section={learn}>
+        <Flex flexDir={direction === "ltr" ? "row" : "row-reverse"}>
           <Flex flexDir="column" gap={4}>
             {[start, basics].map((section, index) => (
               <List m={0} key={index}>
@@ -75,11 +79,7 @@ const Menu: React.FC<IProps> = ({ path, sections }) => {
         const section = restSections[sectionKey]
 
         return (
-          <NavDropdown
-            key={sectionKey}
-            section={section}
-            hasSubNav={shouldShowSubNav}
-          >
+          <NavDropdown key={sectionKey} section={section}>
             {section.items.map((item, index) => (
               <NavDropdown.Item
                 key={index}
