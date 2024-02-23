@@ -4,7 +4,7 @@ description: Uno sguardo dettagliato all'algoritmo di Dagger-Hashimoto.
 lang: it
 ---
 
-Dagger-Hashimoto era l'implementazione e specifica di ricerca originale per l'algoritmo di mining di Ethereum. Dagger-Hashimoto è stato sostituito da [Ethash](#ethash). Il mining sarà disattivato completamente dopo [La Fusione](/updates/merge), a partire dalla quale Ethereum sarà invece protetto usando un meccanismo di [proof-of-stake](/developers/docs/consensus-mechanisms/pos).
+Dagger-Hashimoto era l'implementazione e specifica di ricerca originale per l'algoritmo di mining di Ethereum. Dagger-Hashimoto è stato sostituito da [Ethash](#ethash). Il mining sarà disattivato completamente dopo [La Fusione](/roadmap/merge/), a partire dalla quale Ethereum sarà invece protetto usando un meccanismo di [proof-of-stake](/developers/docs/consensus-mechanisms/pos).
 
 ## Prerequisiti {#prerequisites}
 
