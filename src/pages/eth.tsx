@@ -1,16 +1,16 @@
-import {
-  Box,
-  Flex,
-  Heading,
-  ListItem,
-  UnorderedList,
-  type FlexProps,
-  type HeadingProps,
-} from "@chakra-ui/react"
 import { GetStaticProps } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentProps } from "react"
+import {
+  Box,
+  Flex,
+  type FlexProps,
+  Heading,
+  type HeadingProps,
+  ListItem,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
@@ -36,8 +36,8 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import ethCat from "@/public/eth-gif-cat.png"
 import eth from "@/public/eth.png"
+import ethCat from "@/public/eth-gif-cat.png"
 import defi from "@/public/finance_transparent.png"
 import ethereum from "@/public/what-is-ethereum.png"
 
