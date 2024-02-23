@@ -476,7 +476,6 @@ const WalletTable = ({
                             <Icon as={DevicesIcon} fontSize="2xl" />
 
                             <Text
-                              hideBelow="sm"
                               fontSize="1rem !important"
                               fontWeight="normal !important"
                             >
@@ -489,7 +488,6 @@ const WalletTable = ({
                             <Icon as={LanguagesIcon} fontSize="2xl" />
 
                             <Text
-                              hideBelow="sm"
                               fontSize="1rem !important"
                               fontWeight="normal !important"
                             >
