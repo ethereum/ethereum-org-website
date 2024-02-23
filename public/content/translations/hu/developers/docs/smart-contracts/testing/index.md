@@ -37,7 +37,7 @@ incomplete: true
 - [Solidity and Truffle Continuous Integration Setup](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– A Travis vagy a Circle CI telepítése a Truffle-höz, valamint hasznos tesztelési pluginok._
 - [Testing products overview](/developers/tutorials/guide-to-smart-contract-security-tools/) _– A külöböző tesztelési termékek bemutatása és összehasonlítása._
 - [Echinda használata okosszerződés teszteléshez](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [A Manticore használata okosszerződés bugok felderítésére](/developers/tutorials/how-to-use-manticor-to-find-smart-contract-bugs/)
+- [A Manticore használata okosszerződés bugok felderítésére](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [A Slither használata okosszerződés bugok felderítésére](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Solidity szerződés mockup-ok teszteléshez](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Truffle Test migráció az OpenZeppelin Teszt környezetbe](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)

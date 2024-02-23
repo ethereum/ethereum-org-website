@@ -42,7 +42,7 @@ incomplete: true
 - [Configurare de integrare continuă cu Solidity și Truffle](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– Cum se configurează Travis sau Circle CI pentru testare Truffle împreună cu plugin-uri utile._
 - [Prezentare generală a produselor de testare](/developers/tutorials/guide-to-smart-contract-security-tools/) _– O prezentare generală și o comparație a diferitelor produse de testare._
 - [Cum se folosește Echidna pentru a testa contractele inteligente](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Cum se folosește Manticore pentru a depista bug-uri în contractele inteligente](/developers/tutorials/how-to-use-manticor-to-find-smart-contract-bugs/)
+- [Cum se folosește Manticore pentru a depista bug-uri în contractele inteligente](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
 - [Cum se folosește Slither pentru a depista bug-uri în contractele inteligente](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
 - [Cum să simulaţi contracte Solidity pentru testare](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Cum să migraţi de la Testele Truffle la mediul de testare OpenZeppelin](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
