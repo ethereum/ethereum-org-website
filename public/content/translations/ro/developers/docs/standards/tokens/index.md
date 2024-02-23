@@ -20,7 +20,7 @@ Iată câteva dintre cele mai populare standarde de token-uri pe Ethereum:
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - O interfață standard pentru tokenuri fungibile (interschimbabile), cum ar fi tokenurile de vot, tokenurile de miză sau monedele virtuale.
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - O interfață standard pentru tokenuri nefungibile, cum ar fi un act de proprietate pentru opere de artă sau o melodie.
-- [ERC-777](/developers/docs/docs/standards/tokens/erc-777/) - ERC-777 permite utilizatorilor să construiască funcționalități suplimentare pe lângă tokenuri, cum ar fi un contract de mixare, pentru o mai mare confidențialitate a tranzacțiilor, sau o funcție de recuperare de urgență ca să vă salveze dacă vă pierdeți cheile private.
+- [ERC-777](/developers/docs/standards/tokens/erc-777/) - ERC-777 permite utilizatorilor să construiască funcționalități suplimentare pe lângă tokenuri, cum ar fi un contract de mixare, pentru o mai mare confidențialitate a tranzacțiilor, sau o funcție de recuperare de urgență ca să vă salveze dacă vă pierdeți cheile private.
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - ERC-1155 permite efectuarea mai eficientă a tranzacțiilor și gruparea tranzacțiilor – economisind astfel costurile. Acest standard de tokenuri facilitează crearea de tokenuri de utilitate (cum ar fi $BNB sau $BAT) și de tokenuri nefungibile, cum ar fi CryptoPunks.
 
 ## Referințe suplimentare {#further-reading}
