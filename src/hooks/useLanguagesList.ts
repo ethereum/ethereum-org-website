@@ -7,7 +7,7 @@ import { languages } from "@/lib/utils/translations"
 // Get a list of lang codes with their translated names as values
 export const useLanguagesList = () => {
   const { t } = useTranslation("page-languages")
-  const languagesList = [{}]
+  const languagesList: {}[] = []
 
   for (const lang in languages) {
     const langMetadata = {
