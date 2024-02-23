@@ -82,7 +82,7 @@ Os seguintes projetos baseados na Ethereum usam ferramentas mencionadas nesta p�
 ## Comunidade de discussão Python {#python-community-contributors}
 
 - [Comunidade Discord Python Ethereum](https://discord.gg/9zk7snTfWe) Para discussões sobre Web3.py e outros frameworks Python
-- [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>) Para discussão sobre programação de contrato inteligente com Vyper
+- [Vyper Discord](https://discord.gg/SdvKC79cJk) Para discussão sobre programação de contrato inteligente com Vyper
 
 ## Demais listas agregadas {#other-aggregated-lists}
 
