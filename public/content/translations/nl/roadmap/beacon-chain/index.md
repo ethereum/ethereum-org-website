@@ -27,7 +27,7 @@ Het doel van de Beacon Chain zal in de loop van de tijd veranderen, maar het is 
 
 De Beacon Chain zal [Proof-of-Stake](/developers/docs/consensus-mechanisms/pos/) introduceren bij Ethereum. Dit is een nieuwe manier waarbij u kunt helpen om Ethereum veilig te houden. Zie het als iets dat voor iedereen toegankelijk is en wat Ethereum beter maakt en waarmee je tegelijk meer ETH verdiend. In de praktijk betekent het dat het uw betrokkenheid vergt door het staken van ETH om zo de validatorsoftware te activeren. Als validator verwerkt u transacties en creëert u nieuwe blokken in de keten.
 
-Sstaken en een validator worden is makkelijker dan [mining](/developers/docs/mining/) (hoe het huidige netwerk nu beveiligd wordt). Hopelijk zal dit helpen om Ethereum op langere termijn veilig te maken. Hoe meer mensen meewerken aan het netwerk, hoe meer het zal decentraliseren en hoe veiliger het zal worden.
+Sstaken en een validator worden is makkelijker dan [mining](/developers/docs/consensus-mechanisms/pow/mining/) (hoe het huidige netwerk nu beveiligd wordt). Hopelijk zal dit helpen om Ethereum op langere termijn veilig te maken. Hoe meer mensen meewerken aan het netwerk, hoe meer het zal decentraliseren en hoe veiliger het zal worden.
 
 <InfoBanner emoji=":money_bag:">
 Als u geïnteresseerd bent om een validator te worden en de Beacon Chain te beveiligen, <a href="/staking/">hier vindt u meer informatie over staken</a>.
