@@ -318,7 +318,12 @@ const FindWalletPage = () => {
             },
           }}
         >
-          <WalletTable filters={filters} walletData={randomizedWalletData} />
+          <WalletTable
+            filters={filters}
+            resetFilters={resetFilters}
+            resetWalletFilter={resetWalletFilter}
+            walletData={randomizedWalletData}
+          />
         </Box>
       </Flex>
     </Flex>

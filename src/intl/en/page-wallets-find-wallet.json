@@ -94,5 +94,7 @@
   "page-find-wallet-choose-features": "Choose features",
   "page-find-wallet-reset-filters": "Reset filters",
   "page-find-wallet-visit-website": "Visit website",
-  "page-find-wallet-social-links": "Links"
+  "page-find-wallet-social-links": "Links",
+  "page-find-wallet-empty-results-title": "No results",
+  "page-find-wallet-empty-results-desc": "There are no wallets matching your criteria, try removing some filters."
 }

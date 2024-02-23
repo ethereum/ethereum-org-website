@@ -42,6 +42,8 @@ import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
+import { WalletEmptyState } from "./WalletEmptyState"
+
 import { useLanguagesList } from "@/hooks/useLanguagesList"
 
 const Container = (props: TableProps) => (
@@ -296,10 +298,17 @@ const thirdCol = "thirdCol"
 
 export interface WalletTableProps {
   filters: Record<string, boolean>
+  resetFilters: () => void
+  resetWalletFilter: React.MutableRefObject<() => void>
   walletData: WalletData[]
 }
 
-const WalletTable = ({ filters, walletData }: WalletTableProps) => {
+const WalletTable = ({
+  filters,
+  resetFilters,
+  resetWalletFilter,
+  walletData,
+}: WalletTableProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const {
     featureDropdownItems,
@@ -391,151 +400,159 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
           />
         </Th>
       </WalletContentHeader>
-      {filteredWallets.map((wallet, idx) => {
-        const deviceLabels: Array<string> = []
+      {filteredWallets.length === 0 && (
+        <WalletEmptyState
+          resetFilters={resetFilters}
+          resetWalletFilter={resetWalletFilter}
+        />
+      )}
 
-        wallet.ios && deviceLabels.push(t("page-find-wallet-iOS"))
-        wallet.android && deviceLabels.push(t("page-find-wallet-android"))
-        wallet.linux && deviceLabels.push(t("page-find-wallet-linux"))
-        wallet.windows && deviceLabels.push(t("page-find-wallet-windows"))
-        wallet.macOS && deviceLabels.push(t("page-find-wallet-macOS"))
-        wallet.chromium && deviceLabels.push(t("page-find-wallet-chromium"))
-        wallet.firefox && deviceLabels.push(t("page-find-wallet-firefox"))
-        wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
+      {filteredWallets.length > 0 &&
+        filteredWallets.map((wallet, idx) => {
+          const deviceLabels: Array<string> = []
 
-        const walletPersonas = getWalletPersonas(wallet)
-        const supportedLanguages = getSupportedLanguages(
-          wallet.languages_supported,
-          languagesList
-        )
+          wallet.ios && deviceLabels.push(t("page-find-wallet-iOS"))
+          wallet.android && deviceLabels.push(t("page-find-wallet-android"))
+          wallet.linux && deviceLabels.push(t("page-find-wallet-linux"))
+          wallet.windows && deviceLabels.push(t("page-find-wallet-windows"))
+          wallet.macOS && deviceLabels.push(t("page-find-wallet-macOS"))
+          wallet.chromium && deviceLabels.push(t("page-find-wallet-chromium"))
+          wallet.firefox && deviceLabels.push(t("page-find-wallet-firefox"))
+          wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
 
-        return (
-          <WalletContainer key={wallet.key}>
-            <Wallet
-              onClick={() => {
-                updateMoreInfo(wallet.key)
-                // Log "more info" event only on expanding
-                wallet.moreInfo &&
-                  trackCustomEvent({
-                    eventCategory: "WalletMoreInfo",
-                    eventAction: `More info wallet`,
-                    eventName: `More info ${wallet.name}`,
-                  })
-              }}
-            >
-              <Td lineHeight="revert">
-                <Flex justifyContent="space-between" alignItems="center">
-                  <FlexInfo w={{ base: "100%", md: "auto" }}>
-                    {/* Wallet image */}
-                    <Box w="56px">
-                      <Image
-                        src={wallet.image}
-                        alt=""
-                        objectFit="contain"
-                        boxSize="56px"
-                      />
-                    </Box>
+          const walletPersonas = getWalletPersonas(wallet)
+          const supportedLanguages = getSupportedLanguages(
+            wallet.languages_supported,
+            languagesList
+          )
 
-                    <Box w={{ base: "100%", md: "auto" }}>
-                      <Stack gap={5}>
-                        <Text>{wallet.name}</Text>
+          return (
+            <WalletContainer key={wallet.key}>
+              <Wallet
+                onClick={() => {
+                  updateMoreInfo(wallet.key)
+                  // Log "more info" event only on expanding
+                  wallet.moreInfo &&
+                    trackCustomEvent({
+                      eventCategory: "WalletMoreInfo",
+                      eventAction: `More info wallet`,
+                      eventName: `More info ${wallet.name}`,
+                    })
+                }}
+              >
+                <Td lineHeight="revert">
+                  <Flex justifyContent="space-between" alignItems="center">
+                    <FlexInfo w={{ base: "100%", md: "auto" }}>
+                      {/* Wallet image */}
+                      <Box w="56px">
+                        <Image
+                          src={wallet.image}
+                          alt=""
+                          objectFit="contain"
+                          boxSize="56px"
+                        />
+                      </Box>
 
-                        {/* Wallet Personas supported */}
-                        <Flex gap={1.5}>
-                          {walletPersonas.map((persona) => (
-                            <Tag
-                              key={persona}
-                              label={t(persona).toUpperCase()}
-                            />
-                          ))}
-                        </Flex>
+                      <Box w={{ base: "100%", md: "auto" }}>
+                        <Stack gap={5}>
+                          <Text>{wallet.name}</Text>
 
-                        {/* Device labels */}
-                        <Flex
-                          alignItems="center"
-                          gap={3}
-                          display={deviceLabels.length > 0 ? "flex" : "none"}
-                        >
-                          <Icon as={DevicesIcon} fontSize="2xl" />
+                          {/* Wallet Personas supported */}
+                          <Flex gap={1.5}>
+                            {walletPersonas.map((persona) => (
+                              <Tag
+                                key={persona}
+                                label={t(persona).toUpperCase()}
+                              />
+                            ))}
+                          </Flex>
 
-                          <Text
-                            hideBelow="sm"
-                            fontSize="1rem !important"
-                            fontWeight="normal !important"
+                          {/* Device labels */}
+                          <Flex
+                            alignItems="center"
+                            gap={3}
+                            display={deviceLabels.length > 0 ? "flex" : "none"}
                           >
-                            {deviceLabels.join(" · ")}
-                          </Text>
-                        </Flex>
+                            <Icon as={DevicesIcon} fontSize="2xl" />
 
-                        {/* Supported languages */}
-                        <Flex alignItems="center" gap={3}>
-                          <Icon as={LanguagesIcon} fontSize="2xl" />
+                            <Text
+                              hideBelow="sm"
+                              fontSize="1rem !important"
+                              fontWeight="normal !important"
+                            >
+                              {deviceLabels.join(" · ")}
+                            </Text>
+                          </Flex>
 
-                          <Text
-                            hideBelow="sm"
-                            fontSize="1rem !important"
-                            fontWeight="normal !important"
-                          >
-                            {formatSupportedLanguages(supportedLanguages)}
-                          </Text>
-                        </Flex>
+                          {/* Supported languages */}
+                          <Flex alignItems="center" gap={3}>
+                            <Icon as={LanguagesIcon} fontSize="2xl" />
 
-                        {/* Wallet Website (desktop) */}
-                        <Box display={{ base: "none", md: "block" }} w="auto">
-                          <ButtonLink
-                            to={wallet.url}
-                            variant="outline"
-                            w="auto"
-                            isExternal
-                          >
-                            {t("page-find-wallet-visit-website")}
-                          </ButtonLink>
-                        </Box>
-                      </Stack>
-                    </Box>
-                  </FlexInfo>
+                            <Text
+                              hideBelow="sm"
+                              fontSize="1rem !important"
+                              fontWeight="normal !important"
+                            >
+                              {formatSupportedLanguages(supportedLanguages)}
+                            </Text>
+                          </Flex>
 
-                  <FlexInfoCenter>
-                    <Box>
-                      <Icon
-                        as={wallet.moreInfo ? MdExpandLess : MdExpandMore}
-                        color="primary.base"
-                        fontSize={{ base: "5xl", md: "4xl" }}
-                      />
-                    </Box>
-                  </FlexInfoCenter>
-                </Flex>
-                {/* Wallet Website (mobile) */}
-                <Box
-                  display={{ base: "block", md: "none" }}
-                  mt={6}
-                  w="100%"
-                  ps={1}
-                  pe={3}
-                >
-                  <ButtonLink
-                    to={wallet.url}
-                    variant="outline"
+                          {/* Wallet Website (desktop) */}
+                          <Box display={{ base: "none", md: "block" }} w="auto">
+                            <ButtonLink
+                              to={wallet.url}
+                              variant="outline"
+                              w="auto"
+                              isExternal
+                            >
+                              {t("page-find-wallet-visit-website")}
+                            </ButtonLink>
+                          </Box>
+                        </Stack>
+                      </Box>
+                    </FlexInfo>
+
+                    <FlexInfoCenter>
+                      <Box>
+                        <Icon
+                          as={wallet.moreInfo ? MdExpandLess : MdExpandMore}
+                          color="primary.base"
+                          fontSize={{ base: "5xl", md: "4xl" }}
+                        />
+                      </Box>
+                    </FlexInfoCenter>
+                  </Flex>
+                  {/* Wallet Website (mobile) */}
+                  <Box
+                    display={{ base: "block", md: "none" }}
+                    mt={6}
                     w="100%"
-                    isExternal
+                    ps={1}
+                    pe={3}
                   >
-                    {t("page-find-wallet-visit-website")}
-                  </ButtonLink>
-                </Box>
-              </Td>
-            </Wallet>
+                    <ButtonLink
+                      to={wallet.url}
+                      variant="outline"
+                      w="100%"
+                      isExternal
+                    >
+                      {t("page-find-wallet-visit-website")}
+                    </ButtonLink>
+                  </Box>
+                </Td>
+              </Wallet>
 
-            {wallet.moreInfo && (
-              <WalletMoreInfo
-                wallet={wallet}
-                filters={filters}
-                idx={idx}
-                featureDropdownItems={featureDropdownItems}
-              />
-            )}
-          </WalletContainer>
-        )
-      })}
+              {wallet.moreInfo && (
+                <WalletMoreInfo
+                  wallet={wallet}
+                  filters={filters}
+                  idx={idx}
+                  featureDropdownItems={featureDropdownItems}
+                />
+              )}
+            </WalletContainer>
+          )
+        })}
     </Container>
   )
 }
