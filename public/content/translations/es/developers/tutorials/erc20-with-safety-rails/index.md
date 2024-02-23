@@ -24,7 +24,7 @@ Si quieres ver el código fuente completo:
 
 ## Creando un contrato ERC-20 {#creating-an-erc-20-contract}
 
-Antes de agregar la funcionalidad del riel de seguridad, necesitamos un contrato ERC-20. En este artículo usaremos [el Asistente de Contratos de OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/wizard). Ábrelo en otra ventana del navegador y sigue estas instrucciones:
+Antes de agregar la funcionalidad del riel de seguridad, necesitamos un contrato ERC-20. En este artículo usaremos [el Asistente de Contratos de OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/wizard). Ábrelo en otra ventana del navegador y sigue estas instrucciones:
 
 1. Selecciona **ERC-20**.
 2. Ingresa estos ajustes:
