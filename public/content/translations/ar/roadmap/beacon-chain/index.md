@@ -72,5 +72,5 @@ summaryPoint3: قدمت سلسلة المنارة منطق إجماع الآرا
 
 ## قراءة إضافية
 
-- [المزيد عن ترقيات إثيريوم في المستقبل](/roapmap/vision)
+- [المزيد عن ترقيات إثيريوم في المستقبل](/roadmap/vision/)
 - [المزيد عن إثبات الحصة](/developers/docs/consensus-mechanisms/pos)
