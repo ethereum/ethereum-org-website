@@ -18,7 +18,7 @@ Ilmu pengetahuan terpusat (DeSci) adalah gerakan yang bertujuan untuk membangun 
 
 DeSci bertujuan untuk menciptakan ekosistem di mana para ilmuwan mendapatkan insentif untuk berbagi penelitian mereka dan menerima pengakuan atas karya mereka, sambil memungkinkan siapa pun untuk dengan mudah mengakses dan berkontribusi pada penelitian tersebut. DeSci membuat gagasan bahwa pengetahuan ilmiah harus dapat dilihat oleh semua orang dan bahwa proses penelitian ilmiah harus transparan. DeSci menciptakan model penelitian ilmiah yang lebih terdesentralisasi dan disebarkan, sehingga lebih tahan terhadap sensor dan kontrol oleh otoritas pusat. DeSci berharap menciptakan lingkungan di mana gagasan baru dan tidak konvensional dapat berkembang dengan desentralisasi akses ke pendanaan, perangkat ilmiah, dan saluran komunikasi.
 
-Sains terdesentralisasi memungkinkan sumber pendanaan yang lebih beragam (dari [DAO](/dao/), [sumbangan kuadratik](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) hingga crowdfunding dan lainnya), akses data dan metode yang lebih mudah diakses, dan memberikan insentif untuk produktibilitas.
+Dengan ilmu terdesentralisasi, dapat diperoleh sumber pendanaan yang lebih beragam (dari [DAO](/dao/), [sumbangan kuadratik](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) hingga pendanaan kolektif dan lainnya), data dan metode yang lebih mudah diakses, serta dengan memberikan insentif untuk keterulangan.
 
 ### Juan Benet - Gerakan DeSci
 
@@ -103,7 +103,7 @@ Jelajahi proyek-proyek dan bergabunglah dengan komunitas DeSci.
 - [OceanDAO: Pendanaan yang diatur oleh DAO untuk ilmu pengetahuan terkait data](https://oceanprotocol.com/dao)
 - [Opscientia: alur kerja ilmu pengetahuan terbuka dan terdesentralisasi](https://opsci.io/research/)
 - [LabDAO: Melipat protein secara in-silico](https://alphafodl.vercel.app/)
-- [Bio.xyz: dapatkan pendanaan untuk proyek bioteknologi atau proyek DeSci Anda melalui DAO](https://www.molecule.to/)
+- [Bio.xyz: dapatkan pendanaan untuk proyek bioteknologi atau proyek DeSci Anda melalui DAO](https://www.bio.xyz/)
 - [ResearchHub: Unggah hasil ilmiah dan terlibat dalam percakapan dengan rekan-rekan sejawat](https://www.researchhub.com/)
 - [VitaDAO: Terima pendanaan melalui perjanjian penelitian yang disponsori untuk penelitian kelangsungan hidup](https://www.vitadao.com/)
 - [Fleming Protocol: ekonomi data sumber terbuka yang mendukung penemuan biomedis kolaboratif](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

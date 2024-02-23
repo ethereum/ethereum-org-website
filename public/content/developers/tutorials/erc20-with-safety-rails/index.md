@@ -23,7 +23,7 @@ If you want to see the complete source code:
 
 ## Creating an ERC-20 contract {#creating-an-erc-20-contract}
 
-Before we can add the safety rail functionality we need an ERC-20 contract. In this article we'll use [the OpenZeppelin Contracts Wizard](https://docs.openzeppelin.com/contracts/4.x/wizard). Open it in another browser and follow these instructions:
+Before we can add the safety rail functionality we need an ERC-20 contract. In this article we'll use [the OpenZeppelin Contracts Wizard](https://docs.openzeppelin.com/contracts/5.x/wizard). Open it in another browser and follow these instructions:
 
 1. Select **ERC20**.
 2. Enter these settings:
@@ -92,7 +92,7 @@ We want to add these requirements to the function:
 
 - The `to` address cannot equal `address(this)`, the address of the ERC-20 contract itself.
 - The `to` address cannot be empty, it has to be either:
-  - An externally owned accounts (EOA). We can't check if an address is an EOA directly, but we can check an address's ETH balance. EOAs almost always have a balance, even if they are no longer used - it's difficult to clear them to the last wei.
+  - An externally owned account (EOA). We can't check if an address is an EOA directly, but we can check an address's ETH balance. EOAs almost always have a balance, even if they are no longer used - it's difficult to clear them to the last wei.
   - A smart contract. Testing if an address is a smart contract is a bit harder. There is an opcode that checks the external code length, called [`EXTCODESIZE`](https://www.evm.codes/#3b), but it is not available directly in Solidity. We have to use [Yul](https://docs.soliditylang.org/en/v0.8.15/yul.html), which is EVM assembly, for it. There are other values we could use from Solidity ([`<address>.code` and `<address>.codehash`](https://docs.soliditylang.org/en/v0.8.15/units-and-global-variables.html#members-of-address-types)), but they cost more.
 
 Lets go over the new code line by line:
@@ -209,4 +209,4 @@ This is a cleanup function, so presumably we don't want to leave any tokens. Ins
 
 ## Conclusion {#conclusion}
 
-This is not a perfect solution - there is no perfect solution for the "user made a mistake" problem. However, using these kind of checks can at least prevent some mistakes. The ability to freeze accounts, while dangerous, can be used to limit the damage of certain hacks by denying the hacker the stolen funds.
+This is not a perfect solution - there is no perfect solution for the "user made a mistake" problem. However, using these kinds of checks can at least prevent some mistakes. The ability to freeze accounts, while dangerous, can be used to limit the damage of certain hacks by denying the hacker the stolen funds.

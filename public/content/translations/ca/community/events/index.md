@@ -4,7 +4,7 @@ description: Com involucrar-se amb la comunitat Ethereum.
 lang: ca
 ---
 
-## Pròxims esdeveniments {#events}
+# Pròxims esdeveniments {#events}
 
 **Cada mes, hi ha un gran nombre d'esdeveniments Ethereum a tot el món.** Teniu en consideració assistir a un que estigui a prop per conèixer més gent dins la comunitat, descobrir oportunitats de feina i desenvolupar noves habilitats.
 

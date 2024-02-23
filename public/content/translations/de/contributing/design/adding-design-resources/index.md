@@ -4,6 +4,8 @@ description: Richtlinien und Anforderungen zur Gewährleistung der Qualität von
 lang: de
 ---
 
+# Design-Ressourcen hinzufügen {#adding-design-resources}
+
 Jeder kann neue Designmaterialien für die Seite [Design und UX in web3](/developers/docs/design-and-ux/) vorschlagen.
 
 Seien Sie sich bewusst, dass der Schwerpunkt dieser Seite darauf liegt, angehenden web3-Designern einen Mehrwert zu bieten. Der Designbereich ist nicht dazu da, um für Ihre Dienstleistungen, Produkte oder Plattformen zu werben.

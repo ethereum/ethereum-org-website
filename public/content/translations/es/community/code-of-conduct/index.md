@@ -4,6 +4,8 @@ description: Los estándares básicos por los que nos esforzamos en todos los es
 lang: es
 ---
 
+# Código de conducta {#conduct-intro}
+
 ## Misión {#mission}
 
 Desarrollar y mantener el centro de conocimiento más completo y accesible para Ethereum.

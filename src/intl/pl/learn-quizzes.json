@@ -155,7 +155,7 @@
   "d001-a-label": "Portfel mobilny",
   "d001-a-explanation": "Portfele mobilne przechowują klucze prywatne na urządzeniu mobilnym, które zazwyczaj posiada połączenie z internetem i może być zagrożone przez inne oprogramowanie.",
   "d001-b-label": "Portfel sprzętowy",
-  "d001-b-explanation": "Klucze prywatne portfela sprzętowego są przechowywane na dedykowanym urządzeniu, które może być przechowywane bez internetu oraz są odizolowane od innych aplikacji na Twoich urządzeniach.",
+  "d001-b-explanation": "Klucze prywatne portfela sprzętowego są przechowywane na przeznaczonym do tego urządzeniu, które może być odcięte od internetu, oraz są odizolowane od innych aplikacji na Twoich urządzeniach.",
   "d001-c-label": "Portfel internetowy",
   "d001-c-explanation": "Portfele internetowe są mniej bezpieczne niż portfele sprzętowe, ponieważ klucze prywatne są przechowywane na urządzeniu podłączonym do internetu.",
   "d001-d-label": "Portfel komputerowy",
