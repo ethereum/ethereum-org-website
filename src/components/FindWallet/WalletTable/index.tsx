@@ -354,7 +354,7 @@ const WalletTable = ({
             classNamePrefix="react-select"
             options={[
               {
-                label: t("page-find-choose-to-compare"),
+                label: t("page-find-wallet-choose-to-compare"),
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
@@ -371,7 +371,7 @@ const WalletTable = ({
             classNamePrefix="react-select"
             options={[
               {
-                label: t("page-find-choose-to-compare"),
+                label: t("page-find-wallet-choose-to-compare"),
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
@@ -388,7 +388,7 @@ const WalletTable = ({
             classNamePrefix="react-select"
             options={[
               {
-                label: t("page-find-choose-to-compare"),
+                label: t("page-find-wallet-choose-to-compare"),
                 options: [...filteredFeatureDropdownItems],
               },
             ]}
