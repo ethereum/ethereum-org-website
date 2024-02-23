@@ -58,7 +58,7 @@ lang: zh-tw
 
 ## 目前進度 {#current-progress}
 
-單一時隙最終確定性目前處於研究階段， 預計幾年內都不會上線，可能在[沃克爾尔樹](/roadmap/verkle-trees/)、[Danksharding](/roadmap/danksharding]) 等其他重大升級發佈之後發佈。
+單一時隙最終確定性目前處於研究階段， 預計幾年內都不會上線，可能在[沃克爾尔樹](/roadmap/verkle-trees/)、[Danksharding](/roadmap/danksharding/) 等其他重大升級發佈之後發佈。
 
 ## 了解更多 {#further-reading}
 
