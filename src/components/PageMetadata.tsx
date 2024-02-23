@@ -2,9 +2,10 @@ import Head from "next/head"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
+import { getOgImage } from "@/lib/utils/metadata"
 import { filterRealLocales } from "@/lib/utils/translations"
 import { getFullUrl } from "@/lib/utils/url"
-import { getOgImage } from "@/lib/utils/metadata"
+
 import { SITE_URL } from "@/lib/constants"
 
 type NameMeta = {
