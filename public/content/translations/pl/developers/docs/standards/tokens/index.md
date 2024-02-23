@@ -29,5 +29,5 @@ _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę 
 
 - [Lista kontrolna integracji tokenów](/developers/tutorials/token-integration-checklist/) _– lista kontrolna rzeczy, które należy wziąć pod uwagę podczas interakcji z tokenami._
 - [Zrozumienie inteligentnego kontraktu tokena ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– wprowadzenie do wdrożenie pierwszego inteligentnego kontraktu w sieci testowej Ethereum._
-- [Przenoszenie i zatwierdzanie tokenów ERC20 z inteligentnego kontraktu Solidity](/developers/tutorials/transfers-and-approval-of-erc20-tokens-from-a-solidity-smart-contract/) _– jak używać inteligentnego kontraktu do interakcji z tokenem przy użyciu języka Solidity._
+- [Przenoszenie i zatwierdzanie tokenów ERC20 z inteligentnego kontraktu Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– jak używać inteligentnego kontraktu do interakcji z tokenem przy użyciu języka Solidity._
 - [Wdrażanie rynku ERC721 [przewodnik]](/developers/tutorials/how-to-implement-an-erc721-market/) _– jak wystawiać tokenizowane przedmioty na sprzedaż na zdecentralizowanej tablicy ogłoszeń._
