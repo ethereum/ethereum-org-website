@@ -36,10 +36,13 @@ export const isHrefActive = (
 
 export const isHash = (href: string): boolean => href.startsWith("#")
 
-export const getFullUrl = (locale: string | undefined, path: string) =>
-  addSlashes(new URL(join(locale || DEFAULT_LOCALE, path), SITE_URL).href)
+// remove any query params or hashes from the path
+export const cleanPath = (path: string): string => path.replace(/[$#].+$/, "")
 
 export const addSlashes = (href: string): string => {
   if (isExternal(href)) return href
   return join("/", href, "/")
 }
+
+export const getFullUrl = (locale: string | undefined, path: string) =>
+  addSlashes(new URL(join(locale || DEFAULT_LOCALE, path), SITE_URL).href)

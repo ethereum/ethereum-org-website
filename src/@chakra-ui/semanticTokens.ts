@@ -105,6 +105,12 @@ const semanticTokens = {
         "linear-gradient(102.7deg, rgba(185, 185, 241, 0.2) 0%, rgba(84, 132, 234, 0.2) 51.56%, rgba(58, 142, 137, 0.2) 100%)",
     },
   },
+  shadows: {
+    menu: {
+      accordion:
+        "0px 2px 2px 0px rgba(0, 0, 0, 0.12) inset, 0px -3px 2px 0px rgba(0, 0, 0, 0.14) inset",
+    },
+  },
 }
 
 export default semanticTokens
