@@ -130,7 +130,7 @@ const FindWalletPage = () => {
     setRandomizedWalletData(
       supportedLocaleWallets.concat(noSupportedLocaleWallets)
     )
-  }, [noSupportedLocaleWallets, supportedLocaleWallets])
+  }, [])
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
