@@ -31,5 +31,5 @@ _Cunoașteți o resursă a comunității care v-a ajutat? Editaţi această pagi
 
 - [Lista de verificare pentru integrarea tokenurilor](/developers/tutorials/token-integration-checklist/) _– O listă de verificare a elementelor de luat în considerare atunci când interacționaţi cu tokenurile._
 - [Înțelegerea contractului inteligent de tokenuri ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– O introducere în implementarea primului dvs. contract inteligent într-o rețea de testare Ethereum._
-- [Transferuri și aprobare de tokenuri ERC20 dintr-un contract inteligent Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contracct/) _- Cum să utilizaţi un contract inteligent pentru a interacționa cu un token folosind limbajul Solidity._
+- [Transferuri și aprobare de tokenuri ERC20 dintr-un contract inteligent Solidity](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _- Cum să utilizaţi un contract inteligent pentru a interacționa cu un token folosind limbajul Solidity._
 - [Implementarea unei piețe ERC721 [un ghid al modalităţilor de a o realiza]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Cum să puneţi la vânzare articole tokenizate pe un panou de anunțuri descentralizate._
