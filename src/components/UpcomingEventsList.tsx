@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 
@@ -9,6 +10,7 @@ import EventCard from "@/components/EventCard"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 
+import { formatDate } from "@/lib/utils/date"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import communityConferences from "@/data/community-events"
@@ -19,6 +21,7 @@ type OrderedUpcomingEvent = CommunityConference & {
 }
 
 const UpcomingEventsList = () => {
+  const { locale = "" } = useRouter()
   const { t } = useTranslation("page-community")
   const eventsPerLoad = 10
   const [orderedUpcomingEvents, setOrderedUpcomingEvents] = useState<
@@ -56,10 +59,11 @@ const UpcomingEventsList = () => {
     const formattedEvents = orderedEvents.map((event) => {
       const dateRange =
         event.startDate === event.endDate
-          ? dateParse(event.startDate).toLocaleDateString()
-          : `${dateParse(event.startDate).toLocaleDateString()} - ${dateParse(
-              event.endDate
-            ).toLocaleDateString()}`
+          ? formatDate(dateParse(event.startDate), locale)
+          : `${formatDate(dateParse(event.startDate), locale)} - ${formatDate(
+              dateParse(event.endDate),
+              locale
+            )}`
 
       const details = `${event.description}`
 
