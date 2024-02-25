@@ -266,6 +266,8 @@ The major difference is that bug bounty programs are open to the wider developer
 
 #### Static analysis tools {#static-analysis-tools}
 
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - Rust-based static analyzer specifically designed for Web3 smart contract security and development. It takes a bird's eye view over your smart contracts, traversing the Abstract Syntax Trees (AST) to pinpoint suspected vulnerabilities. Aderyn prints out these potential issues in an easy-to-consume markdown format.
+
 - **[Slither](https://github.com/crytic/slither)** - _Python-based Solidity static analysis framework for finding vulnerabilities, enhancing code comprehension, and writing custom analyses for smart contracts._
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter for enforcing style and security best practices for the Solidity smart contract programming language._
