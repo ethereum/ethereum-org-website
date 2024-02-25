@@ -78,7 +78,7 @@ The usual method is to write small unit tests using mock data that the contract 
 
 Unfortunately, unit testing is minimally effective for improving smart contract security when used in isolation. A unit test might prove a function executes properly for mock data, but unit tests are only as effective as the tests that are written. This makes it difficult to detect missed edge cases and vulnerabilities that could break the safety of your smart contract.
 
-A better approach is to combine unit testing with property-based testing performed using [static and dynamic analysis](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). Static analysis relies on low-level representations, such as [control flow graphs](https://en.wikipedia.org/wiki/Control-flow_graph) and [abstract syntax trees](https://deepsource.io/glossary/ast/) to analyze reachable program states and execution paths. Meanwhile, dynamic analysis techniques, such as fuzzing, execute contract code with random input values to detect operations that violate security properties.
+A better approach is to combine unit testing with property-based testing performed using [static and dynamic analysis](/developers/docs/smart-contracts/testing/#static-dynamic-analysis). Static analysis relies on low-level representations, such as [control flow graphs](https://en.wikipedia.org/wiki/Control-flow_graph) and [abstract syntax trees](https://deepsource.io/glossary/ast/) to analyze reachable program states and execution paths. Meanwhile, dynamic analysis techniques, such as [smart contract fuzzing](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry), execute contract code with random input values to detect operations that violate security properties.
 
 [Formal verification](/developers/docs/smart-contracts/formal-verification) is another technique for verifying security properties in smart contracts. Unlike regular testing, formal verification can conclusively prove the absence of errors in a smart contract. This is achieved by creating a formal specification that captures desired security properties and proving that a formal model of the contracts adheres to this specification.
 
@@ -112,7 +112,7 @@ The existence of audits and bug bounties doesn’t excuse your responsibility to
 
 - Use a [development environment](/developers/docs/frameworks/) for testing, compiling, deploying smart contracts
 
-- Run your code through basic code analysis tools, such as Mythril and Slither. Ideally, you should do this before each pull request is merged and compare differences in output
+- Run your code through basic code analysis tools, such as, [Cyfrin Aaderyn](https://cyfrin.io/tools/aderyn), Mythril and Slither. Ideally, you should do this before each pull request is merged and compare differences in output
 
 - Ensure your code compiles without errors, and the Solidity compiler emits no warnings
 
@@ -126,7 +126,7 @@ Designing secure access controls, implementing function modifiers, and other sug
 
 While Ethereum smart contracts are immutable by default, it is possible to achieve some degree of mutability by using upgrade patterns. Upgrading contracts is necessary in cases where a critical flaw renders your old contract unusable and deploying new logic is the most feasible option.
 
-Contract upgrade mechanisms work differently, but the “proxy pattern” is one of the more popular approaches for upgrading smart contracts. Proxy patterns split an application’s state and logic between _two_ contracts. The first contract (called a ‘proxy contract’) stores state variables (e.g., user balances), while the second contract (called a ‘logic contract’) holds the code for executing contract functions.
+Contract upgrade mechanisms work differently, but the “proxy pattern” is one of the more popular approaches for upgrading smart contracts. [Proxy patterns](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern) split an application’s state and logic between _two_ contracts. The first contract (called a ‘proxy contract’) stores state variables (e.g., user balances), while the second contract (called a ‘logic contract’) holds the code for executing contract functions.
 
 Accounts interact with the proxy contract, which dispatches all function calls to the logic contract using the [`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries) low-level call. Unlike a regular message call, `delegatecall()` ensures the code running at the logic contract’s address is executed in the context of the calling contract. This means the logic contract will always write to the proxy’s storage (instead of its own storage) and the original values of `msg.sender` and `msg.value` are preserved.
 
@@ -448,7 +448,7 @@ For instance, an attacker could artificially pump the spot price of an asset by 
 
 ##### How to prevent oracle manipulation
 
-The minimum requirement to avoid oracle manipulation is to use a decentralized oracle network that queries information from multiple sources to avoid single points of failure. In most cases, decentralized oracles have built-in cryptoeconomic incentives to encourage oracle nodes to report correct information, making them more secure than centralized oracles.
+The minimum requirement to [avoid oracle manipulation](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples) is to use a decentralized oracle network that queries information from multiple sources to avoid single points of failure. In most cases, decentralized oracles have built-in cryptoeconomic incentives to encourage oracle nodes to report correct information, making them more secure than centralized oracles.
 
 If you plan on querying an on-chain oracle for asset prices, consider using one that implements a time-weighted average price (TWAP) mechanism. A [TWAP oracle](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles) queries the price of an asset at two different points in time (which you can modify) and calculates the spot price based on the average obtained. Choosing longer time periods protects your protocol against price manipulation since large orders executed recently cannot impact asset prices.
 
@@ -488,6 +488,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[CertiK](https://www.certik.com/)** - _Blockchain security firm pioneering the use of cutting-edge formal Verification technology on smart contracts and blockchain networks._
 
+- **[Cyfrin](https://cyfrin.com)** - _Industry-leading Smart contract security auditing, educatio and tools. Helping protect the world's biggest protocols.
+  
 - **[Trail of Bits](https://www.trailofbits.com/)** - _Cybersecurity company that combines security research with an attacker mentality to reduce risk and fortify code._
 
 - **[PeckShield](https://peckshield.com/)** - _Blockchain security company offering products and services for the security, privacy, and usability of the entire blockchain ecosystem._
@@ -543,6 +545,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** - _Fourteen-part checklist created to standardize the security of smart contracts for developers, architects, security reviewers and vendors._
 
 ### Tutorials on smart contract security {#tutorials-on-smart-contract-security}
+
+- [Cyfrin Updraft - Smart contracts security and Auditing full course] (https://updraft.cyfrin.io/courses/security)
 
 - [How to write secure smart contracts](/developers/tutorials/secure-development-workflow/)
 
