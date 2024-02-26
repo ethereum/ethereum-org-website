@@ -68,6 +68,10 @@ export const WalletMoreInfo = ({
       headingLabel: t("page-find-wallet-smart-contract"),
       sectionName: "smart_contract",
     },
+    {
+      headingLabel: t("page-find-wallet-advanced"),
+      sectionName: "advanced",
+    },
   ]
 
   return (
