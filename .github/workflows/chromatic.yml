@@ -39,4 +39,4 @@ jobs:
         with:
           projectToken: fee8e66c9916
           # 👇 Only fail if Storybook contains stories that error
-          exitZeroOnChanges: true
+          exitZeroOnChanges: truest
