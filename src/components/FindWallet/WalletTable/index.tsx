@@ -1,11 +1,11 @@
 import { ReactNode } from "react"
 import { useTranslation } from "next-i18next"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
-import Select from "react-select"
+// import Select from "react-select"
 import {
   Box,
   calc,
-  chakra,
+  // chakra,
   Flex,
   FlexProps,
   forwardRef,
@@ -151,91 +151,93 @@ const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
   />
 ))
 
-const ChakraSelect = chakra((props: { className?: string }) => (
-  <Select {...props} />
-))
+// TODO: remove
+// const ChakraSelect = chakra((props: { className?: string }) => (
+//   <Select {...props} />
+// ))
 
-const StyledSelect = (props) => (
-  <ChakraSelect
-    w="full"
-    sx={{
-      ".react-select": {
-        "&__control": {
-          bg: "searchBackground",
-          border: "1px",
-          borderColor: "text",
-          cursor: "pointer",
-          pe: "0.3rem",
-          transition: "0.5s all",
+// TODO: remove
+// const StyledSelect = (props) => (
+//   <ChakraSelect
+//     w="full"
+//     sx={{
+//       ".react-select": {
+//         "&__control": {
+//           bg: "searchBackground",
+//           border: "1px",
+//           borderColor: "text",
+//           cursor: "pointer",
+//           pe: "0.3rem",
+//           transition: "0.5s all",
 
-          ".react-select__value-container": {
-            ".react-select__single-value": {
-              color: "text",
-            },
-          },
+//           ".react-select__value-container": {
+//             ".react-select__single-value": {
+//               color: "text",
+//             },
+//           },
 
-          ".react-select__indicators": {
-            ".react-select__indicator-separator": {
-              bg: "none",
-            },
-            ".react-select__indicator": {
-              color: "text",
-              p: 0,
-            },
-          },
+//           ".react-select__indicators": {
+//             ".react-select__indicator-separator": {
+//               bg: "none",
+//             },
+//             ".react-select__indicator": {
+//               color: "text",
+//               p: 0,
+//             },
+//           },
 
-          "&:hover, &--is-focused": {
-            bg: "primary.base",
-            borderColor: "primary.base",
+//           "&:hover, &--is-focused": {
+//             bg: "primary.base",
+//             borderColor: "primary.base",
 
-            ".react-select__value-container": {
-              ".react-select__single-value": {
-                color: "background.base",
-              },
-            },
+//             ".react-select__value-container": {
+//               ".react-select__single-value": {
+//                 color: "background.base",
+//               },
+//             },
 
-            ".react-select__indicators": {
-              ".react-select__indicator": {
-                color: "background.base",
-              },
-            },
-          },
-        },
+//             ".react-select__indicators": {
+//               ".react-select__indicator": {
+//                 color: "background.base",
+//               },
+//             },
+//           },
+//         },
 
-        "&__placeholder": {
-          color: "text200",
-        },
+//         "&__placeholder": {
+//           color: "text200",
+//         },
 
-        "&__single-value, &__menu, &__input": {
-          color: "text",
-        },
+//         "&__single-value, &__menu, &__input": {
+//           color: "text",
+//         },
 
-        "&__menu": {
-          bg: "searchBackground",
-        },
+//         "&__menu": {
+//           bg: "searchBackground",
+//         },
 
-        "&__option": {
-          "&:hover, &--is-focused": {
-            bg: "selectHover",
-          },
-          _active: {
-            bg: "selectActive",
-            color: "buttonColor !important",
-          },
+//         "&__option": {
+//           "&:hover, &--is-focused": {
+//             bg: "selectHover",
+//           },
+//           _active: {
+//             bg: "selectActive",
+//             color: "buttonColor !important",
+//           },
 
-          "&--is-selected": {
-            bg: "primary.base",
-            color: "buttonColor",
-            _hover: {
-              bg: "primary.base",
-            },
-          },
-        },
-      },
-    }}
-    {...props}
-  />
-)
+//           "&--is-selected": {
+//             bg: "primary.base",
+//             color: "buttonColor",
+//             _hover: {
+//               bg: "primary.base",
+//             },
+//           },
+//         },
+//       },
+//     }}
+//     {...props}
+//   />
+// )
 
 const FlexInfo = (props: FlexProps) => (
   <Flex
@@ -291,10 +293,11 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
   />
 )
 
+// TODO: remove
 // Constants
-const firstCol = "firstCol"
-const secondCol = "secondCol"
-const thirdCol = "thirdCol"
+// const firstCol = "firstCol"
+// const secondCol = "secondCol"
+// const thirdCol = "thirdCol"
 
 export interface WalletTableProps {
   filters: Record<string, boolean>
@@ -312,16 +315,19 @@ const WalletTable = ({
   const { t } = useTranslation("page-wallets-find-wallet")
   const {
     featureDropdownItems,
-    filteredFeatureDropdownItems,
+    // TODO: remove
+    // filteredFeatureDropdownItems,
     filteredWallets,
-    setFirstFeatureSelect,
-    setSecondFeatureSelect,
-    setThirdFeatureSelect,
-    updateDropdown,
+    // TODO: remove
+    // setFirstFeatureSelect,
+    // setSecondFeatureSelect,
+    // setThirdFeatureSelect,
+    // updateDropdown,
     updateMoreInfo,
-    firstFeatureSelect,
-    secondFeatureSelect,
-    thirdFeatureSelect,
+    // TODO: remove
+    // firstFeatureSelect,
+    // secondFeatureSelect,
+    // thirdFeatureSelect,
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
   const languagesList = useLanguagesList()
@@ -345,7 +351,8 @@ const WalletTable = ({
             </Text>
           )}
         </Th>
-        <Th>
+        {/* TODO: remove */}
+        {/* <Th>
           <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
             {t("page-find-wallet-choose-features")}
           </Text>
@@ -364,8 +371,8 @@ const WalletTable = ({
             defaultValue={firstFeatureSelect}
             isSearchable={false}
           />
-        </Th>
-        <Th>
+        </Th> */}
+        {/* <Th>
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
@@ -381,8 +388,8 @@ const WalletTable = ({
             defaultValue={secondFeatureSelect}
             isSearchable={false}
           />
-        </Th>
-        <Th>
+        </Th> */}
+        {/* <Th>
           <StyledSelect
             className="react-select-container"
             classNamePrefix="react-select"
@@ -398,7 +405,7 @@ const WalletTable = ({
             defaultValue={thirdFeatureSelect}
             isSearchable={false}
           />
-        </Th>
+        </Th> */}
       </WalletContentHeader>
       {filteredWallets.length === 0 && (
         <WalletEmptyState

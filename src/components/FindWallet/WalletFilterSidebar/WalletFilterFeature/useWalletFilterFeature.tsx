@@ -134,21 +134,23 @@ export const useWalletFilterFeature = ({
       ],
     },
     {
-      title: t("page-find-wallet-security"),
+      title: `${t("page-find-wallet-buy-crypto")} / ${t(
+        "page-find-wallet-sell-for-fiat"
+      )}`,
       items: [
         {
-          title: t(walletFilterData.open_source.title),
-          icon: OpenSourceWalletIcon,
-          description: t(walletFilterData.open_source.description),
-          filterKey: walletFilterData.open_source.filterKey,
+          title: t(walletFilterData.buy_crypto.title),
+          icon: BuyCryptoIcon,
+          description: t(walletFilterData.buy_crypto.description),
+          filterKey: walletFilterData.buy_crypto.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: t(walletFilterData.non_custodial.title),
-          icon: NonCustodialIcon,
-          description: t(walletFilterData.non_custodial.description),
-          filterKey: walletFilterData.non_custodial.filterKey,
+          title: t(walletFilterData.withdraw_crypto.title),
+          icon: WithdrawCryptoIcon,
+          description: t(walletFilterData.withdraw_crypto.description),
+          filterKey: walletFilterData.withdraw_crypto.filterKey,
           showOptions: undefined,
           options: [],
         },
@@ -256,23 +258,21 @@ export const useWalletFilterFeature = ({
       ],
     },
     {
-      title: `${t("page-find-wallet-buy-crypto")} / ${t(
-        "page-find-wallet-sell-for-fiat"
-      )}`,
+      title: t("page-find-wallet-security"),
       items: [
         {
-          title: t(walletFilterData.buy_crypto.title),
-          icon: BuyCryptoIcon,
-          description: t(walletFilterData.buy_crypto.description),
-          filterKey: walletFilterData.buy_crypto.filterKey,
+          title: t(walletFilterData.open_source.title),
+          icon: OpenSourceWalletIcon,
+          description: t(walletFilterData.open_source.description),
+          filterKey: walletFilterData.open_source.filterKey,
           showOptions: undefined,
           options: [],
         },
         {
-          title: t(walletFilterData.withdraw_crypto.title),
-          icon: WithdrawCryptoIcon,
-          description: t(walletFilterData.withdraw_crypto.description),
-          filterKey: walletFilterData.withdraw_crypto.filterKey,
+          title: t(walletFilterData.non_custodial.title),
+          icon: NonCustodialIcon,
+          description: t(walletFilterData.non_custodial.description),
+          filterKey: walletFilterData.non_custodial.filterKey,
           showOptions: undefined,
           options: [],
         },

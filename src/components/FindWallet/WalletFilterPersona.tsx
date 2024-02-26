@@ -10,9 +10,9 @@ import {
 // import Translation from "@/components/Translation"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { useWalletPersonas } from "../../../../hooks/useWalletPersonas"
+import { useWalletPersonas } from "../../hooks/useWalletPersonas"
 
-const WalletFilterProfile = ({
+const WalletFilterPersona = ({
   resetFilters,
   setFilters,
   selectedPersona,
@@ -114,4 +114,4 @@ const WalletFilterProfile = ({
   )
 }
 
-export default WalletFilterProfile
+export default WalletFilterPersona

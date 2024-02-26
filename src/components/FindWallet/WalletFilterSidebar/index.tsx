@@ -11,7 +11,7 @@ import {
   useTheme,
 } from "@chakra-ui/react"
 
-import WalletFilterProfile from "@/components/FindWallet/WalletFilterSidebar/WalletFilterFeature"
+import WalletFilterFeature from "@/components/FindWallet/WalletFilterSidebar/WalletFilterFeature"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -124,7 +124,7 @@ const WalletFilterSidebar = ({
           },
         }}
       >
-        <WalletFilterProfile
+        <WalletFilterFeature
           resetWalletFilter={resetWalletFilter}
           filters={filters}
           updateFilterOption={updateFilterOption}
