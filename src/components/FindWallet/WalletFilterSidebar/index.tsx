@@ -14,7 +14,6 @@ import {
 } from "@chakra-ui/react"
 
 import WalletFilterProfile from "@/components/FindWallet/WalletFilterSidebar/WalletFilterFeature"
-import WalletFilterPersonas from "@/components/FindWallet/WalletFilterSidebar/WalletFilterProfile"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -118,9 +117,6 @@ const WalletFilterSidebar = ({
             },
           }}
         >
-          <FilterTab eventName="show user personas">
-            {t("page-find-wallet-profile-filters")}
-          </FilterTab>
           <FilterTab eventName="show feature filters">
             {t("page-find-wallet-feature-filters")} (
             {Object.values(filters).reduce((acc, filter) => {
@@ -169,14 +165,6 @@ const WalletFilterSidebar = ({
           },
         }}
       >
-        <TabPanel>
-          <WalletFilterPersonas
-            resetFilters={resetFilters}
-            setFilters={setFilters}
-            selectedPersona={selectedPersona}
-            setSelectedPersona={setSelectedPersona}
-          />
-        </TabPanel>
         <TabPanel>
           <WalletFilterProfile
             resetWalletFilter={resetWalletFilter}
