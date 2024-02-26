@@ -204,17 +204,26 @@ const FindWalletPage = () => {
         </Center>
       </Flex>
 
-      <OldHeading as="h3" fontSize="xl" fontWeight="bold" lineHeight={1.4}>
-        {t("page-find-wallet-personas-title")}
-      </OldHeading>
+      <Box px={{ md: 4, "2xl": 0 }}>
+        <OldHeading
+          as="h3"
+          fontSize="xl"
+          fontWeight="bold"
+          lineHeight={1.4}
+          mb={3}
+        >
+          {t("page-find-wallet-personas-title")}
+        </OldHeading>
 
-      <WalletFilterPersona
-        resetFilters={resetFilters}
-        setFilters={setFilters}
-        selectedPersona={selectedPersona}
-        setSelectedPersona={setSelectedPersona}
-      />
+        <WalletFilterPersona
+          resetFilters={resetFilters}
+          setFilters={setFilters}
+          selectedPersona={selectedPersona}
+          setSelectedPersona={setSelectedPersona}
+        />
+      </Box>
 
+      {/* Mobile filters menu */}
       <Hide above="lg">
         <Box
           display={{ base: "block", lg: "none" }}
@@ -291,54 +300,56 @@ const FindWalletPage = () => {
         </Drawer>
       </Hide>
 
-      <Flex pt={4} pb={6} gap={6}>
-        <Show above="lg">
-          <WalletFilterSidebar
-            maxW="330px"
-            top={NAV_BAR_PX_HEIGHT}
-            {...{
-              filters,
-              resetWalletFilter,
-              updateFilterOption,
-              updateFilterOptions,
-              resetFilters,
-              selectedPersona,
-              setFilters,
-              setSelectedPersona,
-            }}
-          />
-        </Show>
-        <Box
-          w="full"
-          sx={{
-            scrollbarWidth: "thin",
-            scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
+      <Box px={{ md: 4, "2xl": 0 }}>
+        <Flex pt={4} pb={6} gap={6}>
+          <Show above="lg">
+            <WalletFilterSidebar
+              maxW="330px"
+              top={NAV_BAR_PX_HEIGHT}
+              {...{
+                filters,
+                resetWalletFilter,
+                updateFilterOption,
+                updateFilterOptions,
+                resetFilters,
+                selectedPersona,
+                setFilters,
+                setSelectedPersona,
+              }}
+            />
+          </Show>
+          <Box
+            w="full"
+            sx={{
+              scrollbarWidth: "thin",
+              scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
 
-            "::-webkit-scrollbar": {
-              width: 2,
-            },
-            "::-webkit-scrollbar-track": {
-              bg: "background.base",
-            },
-            "::-webkit-scrollbar-thumb": {
-              bgColor: "lightBorder",
-              borderRadius: "base",
-              border: "2px solid",
-              borderColor: "background.base",
-            },
-            table: {
-              m: 0,
-            },
-          }}
-        >
-          <WalletTable
-            filters={filters}
-            resetFilters={resetFilters}
-            resetWalletFilter={resetWalletFilter}
-            walletData={randomizedWalletData}
-          />
-        </Box>
-      </Flex>
+              "::-webkit-scrollbar": {
+                width: 2,
+              },
+              "::-webkit-scrollbar-track": {
+                bg: "background.base",
+              },
+              "::-webkit-scrollbar-thumb": {
+                bgColor: "lightBorder",
+                borderRadius: "base",
+                border: "2px solid",
+                borderColor: "background.base",
+              },
+              table: {
+                m: 0,
+              },
+            }}
+          >
+            <WalletTable
+              filters={filters}
+              resetFilters={resetFilters}
+              resetWalletFilter={resetWalletFilter}
+              walletData={randomizedWalletData}
+            />
+          </Box>
+        </Flex>
+      </Box>
     </Flex>
   )
 }
