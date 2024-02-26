@@ -25,6 +25,7 @@ import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 import BannerNotification from "@/components/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { Button } from "@/components/Buttons"
+import WalletFilterPersona from "@/components/FindWallet/WalletFilterPersona"
 import WalletFilterSidebar from "@/components/FindWallet/WalletFilterSidebar"
 import WalletTable from "@/components/FindWallet/WalletTable"
 import { FilterBurgerIcon } from "@/components/icons/wallets/FilterBurgerIcon"
@@ -203,6 +204,17 @@ const FindWalletPage = () => {
         </Center>
       </Flex>
 
+      <OldHeading as="h3" fontSize="xl" fontWeight="bold" lineHeight={1.4}>
+        {t("page-find-wallet-personas-title")}
+      </OldHeading>
+
+      <WalletFilterPersona
+        resetFilters={resetFilters}
+        setFilters={setFilters}
+        selectedPersona={selectedPersona}
+        setSelectedPersona={setSelectedPersona}
+      />
+
       <Hide above="lg">
         <Box
           display={{ base: "block", lg: "none" }}
@@ -259,7 +271,7 @@ const FindWalletPage = () => {
               <DrawerCloseButton />
             </DrawerHeader>
             <DrawerBody position="relative">
-              <WalletFilterSidebar
+              {/* <WalletFilterSidebar
                 position="absolute"
                 inset={2}
                 overflow="auto"
@@ -273,13 +285,13 @@ const FindWalletPage = () => {
                   setFilters,
                   setSelectedPersona,
                 }}
-              />
+              /> */}
             </DrawerBody>
           </DrawerContent>
         </Drawer>
       </Hide>
 
-      <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} gap={6}>
+      <Flex pt={4} pb={6} gap={6}>
         <Show above="lg">
           <WalletFilterSidebar
             maxW="330px"
