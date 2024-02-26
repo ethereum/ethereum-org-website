@@ -25,6 +25,7 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Sirato](https://www.web3labs.com/sirato)
 - [EthVM](https://www.ethvm.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
+- [lazy-etherscan](https://github.com/woxjro/lazy-etherscan)
 
 ## Data {#data}
 
