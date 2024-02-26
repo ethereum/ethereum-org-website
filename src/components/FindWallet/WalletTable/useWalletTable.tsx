@@ -51,7 +51,7 @@ export const useWalletTable = ({
       label: t("page-find-wallet-rpc-importing"),
       value: t("page-find-wallet-rpc-importing"),
       filterKey: "rpc_importing",
-      category: "feature",
+      category: "advanced",
     },
     {
       label: t("page-find-wallet-nft-support"),
@@ -87,7 +87,7 @@ export const useWalletTable = ({
       label: t("page-find-wallet-gas-fee-customization"),
       value: t("page-find-wallet-gas-fee-customization"),
       filterKey: "gas_fee_customization",
-      category: "feature",
+      category: "advanced",
     },
     {
       label: t("page-find-wallet-ens-support"),
@@ -99,7 +99,7 @@ export const useWalletTable = ({
       label: t("page-find-wallet-token-importing"),
       value: t("page-find-wallet-token-importing"),
       filterKey: "erc_20_support",
-      category: "feature",
+      category: "advanced",
     },
     {
       label: t("page-find-wallet-fee-optimization"),
