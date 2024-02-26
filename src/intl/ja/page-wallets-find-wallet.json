@@ -75,7 +75,6 @@
   "page-find-wallet-developer-desc": "デベロッパーで、分散型アプリ(Dapp)の開発とテストに使用できるウォレットを希望",
   "page-find-wallet-filters": "フィルター",
   "page-find-wallet-active": "アクティブ",
-  "page-find-wallet-feature-filters": "機能",
   "page-find-wallet-footnote-1": "このページに記載されているウォレットは公式に推奨するものではなく、情報提供のみを目的として提供されています。",
   "page-find-wallet-footnote-2": "ウォレットの説明文は、それぞれのウォレットプロジェクト側より提供されたものです。",
   "page-find-wallet-footnote-3": "イーサリアムの<a href=\"/contributing/adding-wallets/\">掲載ポリシー</a>に基づいて、ウォレットを本ページに追加しています。新たなウォレットの追加をご希望の場合は、<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHubで問題を提起してください</a>。",

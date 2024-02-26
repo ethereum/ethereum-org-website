@@ -75,7 +75,6 @@
   "page-find-wallet-developer-desc": "Ви розробник, і вам потрібен гаманець для розробки та тестування децентралізованих програм.",
   "page-find-wallet-filters": "Фільтри",
   "page-find-wallet-active": "активний",
-  "page-find-wallet-feature-filters": "Фільтри функцій",
   "page-find-wallet-footnote-1": "Гаманці, перераховані на цій сторінці, не є офіційно схваленими, і надаються тільки в інформаційних цілях.",
   "page-find-wallet-footnote-2": "Їхні описи були надані самими проєктами гаманців.",
   "page-find-wallet-footnote-3": "Ми додаємо продукти на цю сторінку згідно з критеріями нашої <a href=\"/contributing/adding-wallets/\">політики лістингу</a>. Якщо ви хочете, щоб ми додали гаманець, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">створіть запит на GitHub</a>.",

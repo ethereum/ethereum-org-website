@@ -78,7 +78,6 @@
   "page-find-wallet-developer-desc": "Wallets that help develop and test dapps.",
   "page-find-wallet-filters": "Filters",
   "page-find-wallet-active": "active",
-  "page-find-wallet-feature-filters": "Filters",
   "page-find-wallet-footnote-1": "Wallets listed on this page are not official endorsements, and are provided for informational purposes only.",
   "page-find-wallet-footnote-2": "Their descriptions have been provided by the wallet projects themselves.",
   "page-find-wallet-footnote-3": "We add products to this page based on criteria in our <a href=\"/contributing/adding-wallets/\">listing policy</a>. If you'd like us to add a wallet, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">raise an issue in GitHub</a>.",

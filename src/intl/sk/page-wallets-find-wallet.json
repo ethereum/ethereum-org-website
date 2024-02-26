@@ -75,7 +75,6 @@
   "page-find-wallet-developer-desc": "Ste vývojár a potrebujete peňaženku na tvorbu a testovanie dapps",
   "page-find-wallet-filters": "Filtre",
   "page-find-wallet-active": "spustiť",
-  "page-find-wallet-feature-filters": "Filtre vlastností",
   "page-find-wallet-footnote-1": "Peňaženky uvedené na tejto stránke niesu oficiálne schválené a sú zobrazené len na informatívne účely.",
   "page-find-wallet-footnote-2": "Ich popisy boli poskytnuté priamo ich prevádzkovateľmi.",
   "page-find-wallet-footnote-3": "Produkty na tejto stránke pridávame na základe ktitérií našej <a href=\"/contributing/adding-wallets/\">politiky</a>. Pokiaľ si želáte pridať peňaženku, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">dajte nám vedieť v GitHub</a>.",

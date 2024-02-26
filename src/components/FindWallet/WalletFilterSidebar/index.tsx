@@ -76,7 +76,7 @@ const WalletFilterSidebar = ({
           borderBottomColor="primary.base"
         >
           <Box>
-            {t("page-find-wallet-feature-filters")} (
+            {t("page-find-wallet-filters")} (
             {Object.values(filters).reduce((acc, filter) => {
               if (filter) {
                 acc += 1

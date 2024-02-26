@@ -75,7 +75,6 @@
   "page-find-wallet-developer-desc": "Jesteś deweloperem i potrzebujesz portfela do rozwijania i testowania zdecentralizowanych aplikacji",
   "page-find-wallet-filters": "Filtry",
   "page-find-wallet-active": "aktywny",
-  "page-find-wallet-feature-filters": "Filtry funkcji",
   "page-find-wallet-footnote-1": "Wyszczególnienie portfeli na tej stronie nie stanowi ich oficjalnej aprobaty i portfele te podano wyłącznie do celów informacyjnych.",
   "page-find-wallet-footnote-2": "Ich opisy zostały dostarczone przez projekty portfelowe.",
   "page-find-wallet-footnote-3": "Produkty dodajemy do tej strony na podstawie kryteriów określonych w naszych <a href=\"/contributing/adding-wallets/\">zasadach </a>. Jeśli chcesz, abyśmy dodali jakiś portfel, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">prześlij zgłoszenie w GitHub</a>.",

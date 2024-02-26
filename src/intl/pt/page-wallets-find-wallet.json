@@ -75,7 +75,6 @@
   "page-find-wallet-developer-desc": "É um programador e precisa de uma carteira para ajudar a desenvolver e testar dapps",
   "page-find-wallet-filters": "Filtros",
   "page-find-wallet-active": "ativo",
-  "page-find-wallet-feature-filters": "Filtros de características",
   "page-find-wallet-footnote-1": "As carteiras listadas nesta página não são recomendações oficiais e são fornecidas apenas para fins informativos.",
   "page-find-wallet-footnote-2": "As suas descrições foram fornecidas pelos próprios projetos de carteiras.",
   "page-find-wallet-footnote-3": "Adicionamos produtos a esta página com base nos critérios da nossa <a href=\"/contributing/adding-wallets/\">política de admissão</a>. Se pretender que adicionemos uma carteira, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">levante uma questão no GitHub</a>.",

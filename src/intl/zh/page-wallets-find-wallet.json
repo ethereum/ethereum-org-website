@@ -75,7 +75,6 @@
   "page-find-wallet-developer-desc": "你是一位开发者，需要一种钱包帮助你开发和测试去中心化应用程序",
   "page-find-wallet-filters": "筛选",
   "page-find-wallet-active": "活跃",
-  "page-find-wallet-feature-filters": "功能筛选",
   "page-find-wallet-footnote-1": "本页所列钱包并非官方认可，仅供参考。",
   "page-find-wallet-footnote-2": "钱包描述由钱包项目自行提供。",
   "page-find-wallet-footnote-3": "我们根据我们<a href=\"/contributing/adding-wallets/\">上架政策</a>中的标准将产品添加到本页面。如果你希望我们添加钱包，<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">请在 GitHub 中提出问题</a>。",

@@ -75,7 +75,6 @@
   "page-find-wallet-developer-desc": "Sei uno sviluppatore e necessiti di un portafoglio che ti aiuti a sviluppare e testare dapp",
   "page-find-wallet-filters": "Filtri",
   "page-find-wallet-active": "attivi",
-  "page-find-wallet-feature-filters": "Filtri di funzionalità",
   "page-find-wallet-footnote-1": "I portafogli elencati su questa pagina non sono sponsorizzazioni ufficiali e sono messi a disposizione per soli scopi informativi.",
   "page-find-wallet-footnote-2": "Le loro descrizioni sono state fornite dagli stessi progetti dei portafogli.",
   "page-find-wallet-footnote-3": "Aggiungiamo prodotti a questa pagina secondo i criteri nella nostra <a href=\"/contributing/adding-products/\">politica di elencazione</a>. Se vorresti che aggiungessimo un portafoglio, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">apri un ticket su GitHub</a>.",

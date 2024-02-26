@@ -75,7 +75,6 @@
   "page-find-wallet-developer-desc": "Anda adalah pengembang dan membutuhkan dompet untuk membantu mengembangkan dan menguji dapps",
   "page-find-wallet-filters": "Filter",
   "page-find-wallet-active": "aktif",
-  "page-find-wallet-feature-filters": "Fitur filter",
   "page-find-wallet-footnote-1": "Dompet yang tercantum di halaman ini bukan dukungan resmi, dan disediakan hanya untuk tujuan informasi.",
   "page-find-wallet-footnote-2": "Deskripsi mereka telah disediakan oleh proyek dompet itu sendiri.",
   "page-find-wallet-footnote-3": "Kami menambahkan produk ke halaman ini berdasarkan kriteria dalam <a href=\"/contributing/adding-wallets/\">kebijakan pendaftaran</a> kami. Jika Anda menginginkan penambahan dompet dari kami, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">ajukan persoalan ini di GitHub</a>.",

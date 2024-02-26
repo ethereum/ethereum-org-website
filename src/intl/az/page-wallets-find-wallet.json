@@ -75,7 +75,6 @@
   "page-find-wallet-developer-desc": "Siz tərtibatçısınız və tətbiqləri inkişaf etdirmək və sınaqdan keçirmək üçün pulqabına ehtiyacınız var",
   "page-find-wallet-filters": "Filtrlər",
   "page-find-wallet-active": "aktiv",
-  "page-find-wallet-feature-filters": "Xüsusiyyət filtrləri",
   "page-find-wallet-footnote-1": "Bu səhifədə qeyd olunan pulqabıları rəsmi olaraq təsdiqlənməyib və yalnız məlumat məqsədləri üçün verilir.",
   "page-find-wallet-footnote-2": "Onların təsvirləri pulqabı layihələrinin özləri tərəfindən verilmişdir.",
   "page-find-wallet-footnote-3": "Məhsullarımızı <a href=\"/contributing/adding-wallets/\">siyahı siyasəti</a> səhifəmizdəki kriteriyalara əsasən əlavə edirik. Pulqabı əlavə etməyimizi istəyirsinizsə,<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub-da problemdən şikayət edin</a>.",
