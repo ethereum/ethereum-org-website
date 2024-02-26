@@ -3,11 +3,9 @@ import { BsArrowCounterclockwise } from "react-icons/bs"
 import {
   Box,
   Center,
+  Flex,
   Icon,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
+  Stack,
   Tabs,
   type TabsProps,
   useTheme,
@@ -18,35 +16,6 @@ import WalletFilterProfile from "@/components/FindWallet/WalletFilterSidebar/Wal
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { FiltersType } from "@/pages/wallets/find-wallet"
-
-const FilterTab = ({
-  eventName,
-  ...rest
-}: {
-  children: React.ReactNode
-  eventName: string
-}) => (
-  <Tab
-    onClick={() => {
-      trackCustomEvent({
-        eventCategory: "WalletFilterSidebar",
-        eventAction: `WalletFilterSidebar tab clicked`,
-        eventName,
-      })
-    }}
-    _hover={{
-      bg: "selectHover",
-    }}
-    sx={{
-      "&[aria-selected=true]": {
-        _hover: {
-          bg: "primary.base",
-        },
-      },
-    }}
-    {...rest}
-  />
-)
 
 type WalletFilterSidebarProps = Omit<TabsProps, "children"> & {
   filters: FiltersType
@@ -98,26 +67,15 @@ const WalletFilterSidebar = ({
       {...tabsProps}
     >
       <Box position="sticky" top={top ?? 0}>
-        <TabList
+        <Flex
+          justifyContent="space-between"
+          alignItems="center"
+          px={6}
+          py={2}
           borderBottom="1px solid"
           borderBottomColor="primary.base"
-          bg="background.base"
-          sx={{
-            ".chakra-tabs__tab": {
-              flex: 1,
-              fontSize: "0.9rem",
-              letterSpacing: "0.02rem",
-              py: "0.9rem",
-              _first: {
-                borderTopStartRadius: "lg",
-              },
-              _last: {
-                borderTopEndRadius: "lg",
-              },
-            },
-          }}
         >
-          <FilterTab eventName="show feature filters">
+          <Box>
             {t("page-find-wallet-feature-filters")} (
             {Object.values(filters).reduce((acc, filter) => {
               if (filter) {
@@ -126,36 +84,37 @@ const WalletFilterSidebar = ({
               return acc
             }, 0)}
             )
-          </FilterTab>
-        </TabList>
+          </Box>
+
+          <Center
+            as="button"
+            color="primary.base"
+            fontSize="xs"
+            gap={1}
+            _hover={{
+              color: "selectHover",
+            }}
+            onClick={() => {
+              resetFilters()
+              resetWalletFilter.current()
+              trackCustomEvent({
+                eventCategory: "WalletFilterReset",
+                eventAction: `WalletFilterReset clicked`,
+                eventName: `reset filters`,
+              })
+            }}
+          >
+            <Icon
+              as={BsArrowCounterclockwise}
+              aria-hidden="true"
+              fontSize="sm"
+            />
+            {t("page-find-wallet-reset-filters").toUpperCase()}
+          </Center>
+        </Flex>
       </Box>
-      <Center
-        as="button"
-        borderRadius="base"
-        color="primary.base"
-        fontSize="xs"
-        gap={1}
-        mx="auto"
-        mt="0.55rem"
-        py={0.5}
-        px={1}
-        _hover={{
-          color: "selectHover",
-        }}
-        onClick={() => {
-          resetFilters()
-          resetWalletFilter.current()
-          trackCustomEvent({
-            eventCategory: "WalletFilterReset",
-            eventAction: `WalletFilterReset clicked`,
-            eventName: `reset filters`,
-          })
-        }}
-      >
-        <Icon as={BsArrowCounterclockwise} aria-hidden="true" fontSize="sm" />
-        {t("page-find-wallet-reset-filters").toUpperCase()}
-      </Center>
-      <TabPanels
+
+      <Stack
         m={0}
         sx={{
           ".chakra-tabs__tab-panel": {
@@ -165,15 +124,13 @@ const WalletFilterSidebar = ({
           },
         }}
       >
-        <TabPanel>
-          <WalletFilterProfile
-            resetWalletFilter={resetWalletFilter}
-            filters={filters}
-            updateFilterOption={updateFilterOption}
-            updateFilterOptions={updateFilterOptions}
-          />
-        </TabPanel>
-      </TabPanels>
+        <WalletFilterProfile
+          resetWalletFilter={resetWalletFilter}
+          filters={filters}
+          updateFilterOption={updateFilterOption}
+          updateFilterOptions={updateFilterOptions}
+        />
+      </Stack>
     </Tabs>
   )
 }
