@@ -280,7 +280,7 @@ const FindWalletPage = () => {
               <DrawerCloseButton />
             </DrawerHeader>
             <DrawerBody position="relative">
-              {/* <WalletFilterSidebar
+              <WalletFilterSidebar
                 position="absolute"
                 inset={2}
                 overflow="auto"
@@ -294,7 +294,7 @@ const FindWalletPage = () => {
                   setFilters,
                   setSelectedPersona,
                 }}
-              /> */}
+              />
             </DrawerBody>
           </DrawerContent>
         </Drawer>
