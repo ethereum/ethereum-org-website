@@ -96,7 +96,9 @@ const TranslationBanner = ({
                 {t("translation-banner-button-translate-page")}
               </ButtonLink>
             </Box>
-            {!isPageContentEnglish && (
+            {/* Todo: Reimplement once fixed */}
+            {/* Issue: https://github.com/ethereum/ethereum-org-website/issues/12292 */}
+            {/* {!isPageContentEnglish && (
               <Box>
                 <ButtonLink
                   to={originalPagePath}
@@ -110,7 +112,7 @@ const TranslationBanner = ({
                   {t("translation-banner-button-see-english")}
                 </ButtonLink>
               </Box>
-            )}
+            )} */}
           </Flex>
         </Flex>
         <CloseButton
