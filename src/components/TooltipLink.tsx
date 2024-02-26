@@ -18,7 +18,7 @@ interface Props {
  * inside of our MD files. The native link syntax has a better UX with Crowdin
  * translations.
  */
-function MdLink(props: Props) {
+function TooltipLink(props: Props) {
   const { href } = props
   if (!href) {
     return <InlineLink {...props} />
@@ -38,4 +38,4 @@ function MdLink(props: Props) {
   return <InlineLink {...props} />
 }
 
-export default MdLink
+export default TooltipLink

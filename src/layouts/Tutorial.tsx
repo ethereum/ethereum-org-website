@@ -35,9 +35,9 @@ import {
   Heading3 as MdHeading3,
   Heading4 as MdHeading4,
 } from "@/components/MdComponents"
-import MdLink from "@/components/MdLink"
 import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
+import TooltipLink from "@/components/TooltipLink"
 import TutorialMetadata from "@/components/TutorialMetadata"
 import YouTube from "@/components/YouTube"
 
@@ -144,7 +144,7 @@ const KBD = (props) => {
 }
 
 export const tutorialsComponents = {
-  a: MdLink,
+  a: TooltipLink,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,

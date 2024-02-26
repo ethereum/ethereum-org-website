@@ -27,9 +27,9 @@ import { ButtonLink } from "@/components/Buttons"
 import Contributors from "@/components/Contributors"
 import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
-import MdLink from "@/components/MdLink"
 import OldHeading from "@/components/OldHeading"
 import { mdxTableComponents } from "@/components/Table"
+import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
 
 import GlossaryTooltip from "./Glossary/GlossaryTooltip"
@@ -148,7 +148,7 @@ export const HR = () => (
 
 // All base html element components
 export const htmlElements = {
-  a: MdLink,
+  a: TooltipLink,
   div: Box,
   h1: Heading1,
   h2: Heading2,
