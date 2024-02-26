@@ -62,6 +62,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
+**Catapulta -** **_Multi-chain smart contracts deployment tool, automate verifications in block explorers, keep track deployed smart contracts and share deployment reports, plug-n-play for Foundry and Hardhat projects._**
+
+- [Website](https://catapulta.sh/)
+- [Documentation](https://catapulta.sh/docs)
+- [Github](https://github.com/catapulta-sh)
+
 **Tenderly -** **_Web3 development platform that enables blockchain developers to build, test, debug, monitor, and operate smart contracts and improve dapp UX._**
 
 - [Website](https://tenderly.co/)
