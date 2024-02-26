@@ -37,8 +37,15 @@ const LanguagePicker = ({
   menuState,
   ...props
 }: LanguagePickerProps) => {
-  const { t, refs, disclosure, filterValue, setFilterValue, filteredNames } =
-    useLanguagePicker(handleClose, menuState)
+  const {
+    t,
+    refs,
+    disclosure,
+    filterValue,
+    setFilterValue,
+    filteredNames,
+    handleInputFocus,
+  } = useLanguagePicker(handleClose, menuState)
   const { inputRef, firstItemRef, noResultsRef, footerRef } = refs
   const { onClose } = disclosure
 
@@ -137,6 +144,7 @@ const LanguagePicker = ({
                     e.stopPropagation()
                   }
                 }}
+                onFocus={handleInputFocus}
               />
               <InputRightElement
                 hideBelow="md"

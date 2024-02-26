@@ -39,18 +39,4 @@
     }
   ],
   "description": "Ethereum is a global, decentralized platform for money and new kinds of applications. On Ethereum, you can write code that controls money, and build applications accessible anywhere in the world.",
-  "screenshots": [
-    {
-      "src": "/assets/manifest-homepage-screenshot.png",
-      "type": "image/png",
-      "sizes": "2048x1734",
-      "form_factor": "wide"
-    },
-    {
-      "src": "/assets/manifest-homepage-screenshot-mobile.png",
-      "type": "image/png",
-      "sizes": "1290x2195",
-      "form_factor": "narrow"
-    }
-  ]
 }

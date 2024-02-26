@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Box, type BoxProps, Flex, Text } from "@chakra-ui/react"
+import { Box, type BoxProps, Text, UnorderedList } from "@chakra-ui/react"
 import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
 import { Button } from "@/components/Buttons"
@@ -31,11 +31,15 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
       <NavigationMenu.Root
         dir={direction}
         orientation="horizontal"
-        delayDuration={500}
         onValueChange={handleSectionChange}
       >
         <NavigationMenu.List asChild>
-          <Flex id={MAIN_NAV_ID} as="ul" listStyleType="none">
+          <UnorderedList
+            id={MAIN_NAV_ID}
+            display="flex"
+            listStyleType="none"
+            m="0"
+          >
             {SECTION_LABELS.map((sectionKey) => {
               const { label, items } = sections[sectionKey]
               const isActive = activeSection === sectionKey
@@ -95,7 +99,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                 </NavigationMenu.Item>
               )
             })}
-          </Flex>
+          </UnorderedList>
         </NavigationMenu.List>
 
         <NavigationMenu.Viewport />

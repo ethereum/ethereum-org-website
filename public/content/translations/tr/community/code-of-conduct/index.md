@@ -4,6 +4,8 @@ description: Ethereum.org alanlarında ulaşmaya çalıştığımız basit stand
 lang: tr
 ---
 
+# Davranış kuralları {#conduct-intro}
+
 ## Misyon {#mission}
 
 Ethereum için en kapsayıcı ve erişilebilir bilgi merkezini kurmak ve sürdürmek.
