@@ -1,14 +1,8 @@
 import React from "react"
-import {
-  Box,
-  Checkbox,
-  Flex,
-  Heading,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { Box, Checkbox, Flex, Heading } from "@chakra-ui/react"
 
-// import Translation from "@/components/Translation"
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getPersonaBorderColor } from "@/lib/utils/wallets"
 
 import { useWalletPersonas } from "../../hooks/useWalletPersonas"
 
@@ -19,14 +13,6 @@ const WalletFilterPersona = ({
   setSelectedPersona,
 }) => {
   const personas = useWalletPersonas()
-
-  // TODO: remove
-  const getContainerBg = (idx: number) =>
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    useColorModeValue(
-      selectedPersona === idx ? "primary100" : "chakra-subtle-bg",
-      selectedPersona === idx ? "primary900" : "black400"
-    )
 
   return (
     <Flex
@@ -43,10 +29,9 @@ const WalletFilterPersona = ({
             alignItems="flex-start"
             padding={2}
             mb={2}
-            background={getContainerBg(idx)}
             borderRadius="base"
             border="1px solid"
-            borderColor="lightBorder"
+            borderColor={getPersonaBorderColor(selectedPersona, idx)}
             cursor="pointer"
             transition="0.5s all"
             _hover={{

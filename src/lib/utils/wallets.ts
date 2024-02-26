@@ -84,3 +84,7 @@ export const formatSupportedLanguages = (supportedLanguages: string[]) => {
     rest > 0 ? `+ ${rest}` : ""
   }`
 }
+
+export const getPersonaBorderColor = (selectedPersona: number, idx: number) => {
+  return selectedPersona === idx ? "primary.base" : "lightBorder"
+}
