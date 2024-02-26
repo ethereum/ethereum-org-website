@@ -1,33 +1,34 @@
 import { useTranslation } from "next-i18next"
 
+// TODO: remove unused icons
 // Icons
-import {
-  BuyCryptoIcon,
-  ConnectDappsIcon,
-  EIP1559Icon,
-  ENSSupportIcon,
-  ERC20SupportIcon,
-  GasFeeCustomizationIcon,
-  HardwareIcon,
-  HardwareSupportIcon,
-  Layer2Icon,
-  MultisigIcon,
-  NFTSupportIcon,
-  NonCustodialIcon,
-  OpenSourceWalletIcon,
-  RPCImportingIcon,
-  SocialRecoverIcon,
-  StakingIcon,
-  SwapIcon,
-  WalletConnectIcon,
-  WithdrawCryptoIcon,
-} from "../components/icons/wallets"
+// import {
+//   BuyCryptoIcon,
+//   ConnectDappsIcon,
+//   EIP1559Icon,
+//   ENSSupportIcon,
+//   ERC20SupportIcon,
+//   GasFeeCustomizationIcon,
+//   HardwareIcon,
+//   HardwareSupportIcon,
+//   Layer2Icon,
+//   MultisigIcon,
+//   NFTSupportIcon,
+//   NonCustodialIcon,
+//   OpenSourceWalletIcon,
+//   RPCImportingIcon,
+//   SocialRecoverIcon,
+//   StakingIcon,
+//   SwapIcon,
+//   WalletConnectIcon,
+//   WithdrawCryptoIcon,
+// } from "../components/icons/wallets"
 
 // Types
 interface Personas {
   title: string
   description: string
-  featureHighlight: { label: string; icon: JSX.Element }[]
+  featureHighlight: { label: string }[]
   presetFilters: {
     android: boolean
     ios: boolean
@@ -64,79 +65,60 @@ export const useWalletPersonas = () => {
   const filterLabels = {
     hardware: {
       label: t("page-find-wallet-hardware"),
-      icon: <HardwareIcon />,
     },
     open_source: {
       label: t("page-find-wallet-open-source"),
-      icon: <OpenSourceWalletIcon />,
     },
     non_custodial: {
       label: t("page-find-wallet-non-custodial"),
-      icon: <NonCustodialIcon />,
     },
     hardware_support: {
       label: t("page-find-wallet-hardware-wallet-support"),
-      icon: <HardwareSupportIcon />,
     },
     walletconnect: {
       label: t("page-find-wallet-walletconnect"),
-      icon: <WalletConnectIcon />,
     },
     rpc_importing: {
       label: t("page-find-wallet-rpc-importing"),
-      icon: <RPCImportingIcon />,
     },
     nft_support: {
       label: t("page-find-wallet-nft-support"),
-      icon: <NFTSupportIcon />,
     },
     connect_to_dapps: {
       label: t("page-find-wallet-connect-to-dapps"),
-      icon: <ConnectDappsIcon />,
     },
     staking: {
       label: t("page-find-wallet-staking"),
-      icon: <StakingIcon />,
     },
     swaps: {
       label: t("page-find-wallet-swaps"),
-      icon: <SwapIcon />,
     },
     layer_2: {
       label: t("page-find-wallet-layer-2"),
-      icon: <Layer2Icon />,
     },
     gas_fee_customization: {
       label: t("page-find-wallet-gas-fee-customization"),
-      icon: <GasFeeCustomizationIcon />,
     },
     ens_support: {
       label: t("page-find-wallet-ens-support"),
-      icon: <ENSSupportIcon />,
     },
     buy_crypto: {
       label: t("page-find-wallet-buy-crypto"),
-      icon: <BuyCryptoIcon />,
     },
     withdraw_crypto: {
       label: t("page-find-wallet-sell-for-fiat"),
-      icon: <WithdrawCryptoIcon />,
     },
     multisig: {
       label: t("page-find-wallet-multisig"),
-      icon: <MultisigIcon />,
     },
     social_recovery: {
       label: t("page-find-wallet-social-recovery"),
-      icon: <SocialRecoverIcon />,
     },
     erc_20_support: {
       label: t("page-find-wallet-token-support"),
-      icon: <ERC20SupportIcon />,
     },
     eip_1559_support: {
       label: t("page-find-wallet-fee-optimization"),
-      icon: <EIP1559Icon />,
     },
   }
   const personas: Personas[] = [
