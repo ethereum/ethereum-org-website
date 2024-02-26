@@ -295,4 +295,4 @@ O código fonte deste tutorial pode ser encontrado [aqui](https://github.com/Eth
 
 Você pode também estar interessado em:
 
-- [Testando contratos inteligentes com Waffle](/developers/tutorials/testing-smart-contract-with-waffle/)
+- [Testando contratos inteligentes com Waffle](/developers/tutorials/waffle-test-simple-smart-contract/)

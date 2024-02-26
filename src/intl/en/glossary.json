@@ -1,6 +1,6 @@
 {
   "51%-attack-term": "51% attack",
-  "51%-attack-definition": "A type of attack on a decentralized <a href=\"/glossary/#network\">network</a> where a group gains control of the majority of <a href=\"/glossary/#node\">nodes</a>. This would allow them to defraud the blockchain by reversing <a href=\"/glossary/#transaction\">transactions</a> and double spending <a href=\"ether\">ether</a> and other tokens.",
+  "51%-attack-definition": "A type of attack on a decentralized <a href=\"/glossary/#network\">network</a> where a group gains control of the majority of <a href=\"/glossary/#node\">nodes</a>. This would allow them to defraud the blockchain by reversing <a href=\"/glossary/#transaction\">transactions</a> and double spending <a href=\"eth\">ether</a> and other tokens.",
   "account-term": "Account",
   "account-definition": "An object containing an <a href=\"/glossary/#address\">address</a>, balance, <a href=\"/glossary/#nonce\">nonce</a>, and optional storage and code. An account can be a <a href=\"/glossary/#contract-account\">contract account</a> or an <a href=\"/glossary/#eoa\">externally owned account (EOA)</a>. <br/><br/><a href=\"/developers/docs/accounts\">More on Ethereum accounts</a>.",
   "address-term": "Address",

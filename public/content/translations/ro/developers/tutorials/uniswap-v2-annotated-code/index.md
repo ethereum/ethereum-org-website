@@ -743,7 +743,7 @@ Aceasta este funcția principală a fabricii, să creeze un schimb în pereche �
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Vrem ca adresa noului schimb să fie deterministă, încât să poată fi calculată în avans off-chain (acest lucrul poate fi util pentru [tranzacțiile de nivel 2](/developers/docs/layer-2-scaling/)). Pentru a face aceasta, avem nevoie de o ordine consecventă a adreselor tokenurilor, indiferent de ordinea în care le-am primit, de aceea le sortăm aici.
+Vrem ca adresa noului schimb să fie deterministă, încât să poată fi calculată în avans off-chain (acest lucrul poate fi util pentru [tranzacțiile de nivel 2](/developers/docs/scaling/)). Pentru a face aceasta, avem nevoie de o ordine consecventă a adreselor tokenurilor, indiferent de ordinea în care le-am primit, de aceea le sortăm aici.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
