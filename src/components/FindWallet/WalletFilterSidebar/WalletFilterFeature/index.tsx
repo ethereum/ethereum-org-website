@@ -94,6 +94,7 @@ const WalletFilterFeature = ({
                   px={4}
                   borderRadius={1}
                   _hover={{ color: "primary.hover" }}
+                  minW="max-content"
                 >
                   <AccordionButton
                     color="inherit"
@@ -104,7 +105,7 @@ const WalletFilterFeature = ({
                     _hover={{ background: "transparent" }}
                   >
                     <Box as="span" flex={1}>
-                      {filterOption.title}
+                      <Text>{filterOption.title}</Text>
                     </Box>
                     <AccordionIcon
                       color="primary.base"
