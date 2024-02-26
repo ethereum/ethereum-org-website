@@ -295,4 +295,4 @@ Sumber kode untuk tutorial ini bisa ditemukan [di sini](https://github.com/EthWo
 
 Tutorial yang mungkin juga Anda minati:
 
-- [Menguji kontrak pintar dengan Waffle](/developers/tutorials/waffle-test-simple-smart-contract//)
+- [Menguji kontrak pintar dengan Waffle](/developers/tutorials/waffle-test-simple-smart-contract/)
