@@ -38,19 +38,11 @@ const WalletFilterProfile = ({
     )
 
   return (
-    <Flex direction="column" gap={4} p={{ base: 4, sm: 0 }}>
-      <Box
-        as="span"
-        m={0}
-        fontWeight="normal"
-        fontSize="sm"
-        p="0 1.2rem"
-        lineHeight="1.3rem"
-        textAlign="center"
-        color="secondary"
-      >
-        <Translation id="page-wallets-find-wallet:page-find-wallet-persona-desc" />
-      </Box>
+    <Flex
+      direction={{ base: "column", md: "row" }}
+      gap={4}
+      p={{ base: 4, sm: 0 }}
+    >
       {personas.map((persona, idx) => {
         return (
           <Flex
@@ -174,8 +166,9 @@ const WalletFilterProfile = ({
                     },
                   }}
                 >
-                  <span aria-hidden="true">{feature.icon}</span>
-                  <span>{feature.label}</span>
+                  {/* TODO: remove icon and label */}
+                  {/* <span aria-hidden="true">{feature.icon}</span>
+                  <span>{feature.label}</span> */}
                 </ListItem>
               ))}
             </UnorderedList>
