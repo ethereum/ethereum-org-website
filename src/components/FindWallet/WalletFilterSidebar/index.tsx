@@ -66,7 +66,7 @@ const WalletFilterSidebar = ({
       }}
       {...tabsProps}
     >
-      <Box position="sticky" top={top ?? 0}>
+      <Box position="sticky" top={top ?? 0} zIndex={1}>
         <Flex
           justifyContent="space-between"
           alignItems="center"
@@ -74,6 +74,7 @@ const WalletFilterSidebar = ({
           py={2}
           borderBottom="1px solid"
           borderBottomColor="primary.base"
+          bg="background.base"
         >
           <Box>
             {t("page-find-wallet-filters")} (
