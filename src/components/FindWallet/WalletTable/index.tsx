@@ -1,11 +1,9 @@
 import { ReactNode } from "react"
 import { useTranslation } from "next-i18next"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
-// import Select from "react-select"
 import {
   Box,
   calc,
-  // chakra,
   Flex,
   FlexProps,
   forwardRef,
@@ -151,94 +149,6 @@ const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
   />
 ))
 
-// TODO: remove
-// const ChakraSelect = chakra((props: { className?: string }) => (
-//   <Select {...props} />
-// ))
-
-// TODO: remove
-// const StyledSelect = (props) => (
-//   <ChakraSelect
-//     w="full"
-//     sx={{
-//       ".react-select": {
-//         "&__control": {
-//           bg: "searchBackground",
-//           border: "1px",
-//           borderColor: "text",
-//           cursor: "pointer",
-//           pe: "0.3rem",
-//           transition: "0.5s all",
-
-//           ".react-select__value-container": {
-//             ".react-select__single-value": {
-//               color: "text",
-//             },
-//           },
-
-//           ".react-select__indicators": {
-//             ".react-select__indicator-separator": {
-//               bg: "none",
-//             },
-//             ".react-select__indicator": {
-//               color: "text",
-//               p: 0,
-//             },
-//           },
-
-//           "&:hover, &--is-focused": {
-//             bg: "primary.base",
-//             borderColor: "primary.base",
-
-//             ".react-select__value-container": {
-//               ".react-select__single-value": {
-//                 color: "background.base",
-//               },
-//             },
-
-//             ".react-select__indicators": {
-//               ".react-select__indicator": {
-//                 color: "background.base",
-//               },
-//             },
-//           },
-//         },
-
-//         "&__placeholder": {
-//           color: "text200",
-//         },
-
-//         "&__single-value, &__menu, &__input": {
-//           color: "text",
-//         },
-
-//         "&__menu": {
-//           bg: "searchBackground",
-//         },
-
-//         "&__option": {
-//           "&:hover, &--is-focused": {
-//             bg: "selectHover",
-//           },
-//           _active: {
-//             bg: "selectActive",
-//             color: "buttonColor !important",
-//           },
-
-//           "&--is-selected": {
-//             bg: "primary.base",
-//             color: "buttonColor",
-//             _hover: {
-//               bg: "primary.base",
-//             },
-//           },
-//         },
-//       },
-//     }}
-//     {...props}
-//   />
-// )
-
 const FlexInfo = (props: FlexProps) => (
   <Flex
     gap={4}
@@ -293,12 +203,6 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
   />
 )
 
-// TODO: remove
-// Constants
-// const firstCol = "firstCol"
-// const secondCol = "secondCol"
-// const thirdCol = "thirdCol"
-
 export interface WalletTableProps {
   filters: Record<string, boolean>
   resetFilters: () => void
@@ -351,61 +255,6 @@ const WalletTable = ({
             </Text>
           )}
         </Th>
-        {/* TODO: remove */}
-        {/* <Th>
-          <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
-            {t("page-find-wallet-choose-features")}
-          </Text>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-wallet-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setFirstFeatureSelect, firstCol)
-            }}
-            defaultValue={firstFeatureSelect}
-            isSearchable={false}
-          />
-        </Th> */}
-        {/* <Th>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-wallet-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setSecondFeatureSelect, secondCol)
-            }}
-            defaultValue={secondFeatureSelect}
-            isSearchable={false}
-          />
-        </Th> */}
-        {/* <Th>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-wallet-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setThirdFeatureSelect, thirdCol)
-            }}
-            defaultValue={thirdFeatureSelect}
-            isSearchable={false}
-          />
-        </Th> */}
       </WalletContentHeader>
       {filteredWallets.length === 0 && (
         <WalletEmptyState
