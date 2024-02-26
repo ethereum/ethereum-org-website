@@ -146,7 +146,7 @@ const FileContributors = ({
           <Skeleton isLoaded={!loading}>
             <Text m={0} color="text200">
               <Translation id="last-edit" />:{" "}
-              {lastContributor.user && (
+              {lastContributor.user?.url && (
                 <InlineLink to={lastContributor.user.url}>
                   @{lastContributor.user.login}
                 </InlineLink>
