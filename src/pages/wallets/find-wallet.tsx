@@ -130,7 +130,7 @@ const FindWalletPage = () => {
     setRandomizedWalletData(
       supportedLocaleWallets.concat(noSupportedLocaleWallets)
     )
-  }, [noSupportedLocaleWallets, supportedLocaleWallets])
+  }, [])
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
@@ -319,7 +319,12 @@ const FindWalletPage = () => {
             },
           }}
         >
-          <WalletTable filters={filters} walletData={randomizedWalletData} />
+          <WalletTable
+            filters={filters}
+            resetFilters={resetFilters}
+            resetWalletFilter={resetWalletFilter}
+            walletData={randomizedWalletData}
+          />
         </Box>
       </Flex>
     </Flex>
