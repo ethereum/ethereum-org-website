@@ -8,6 +8,7 @@ import {
   Stack,
   Tabs,
   type TabsProps,
+  Text,
   useTheme,
 } from "@chakra-ui/react"
 
@@ -76,16 +77,17 @@ const WalletFilterSidebar = ({
           borderBottomColor="primary.base"
           bg="background.base"
         >
-          <Box>
-            {t("page-find-wallet-filters")} (
-            {Object.values(filters).reduce((acc, filter) => {
-              if (filter) {
-                acc += 1
-              }
-              return acc
-            }, 0)}
-            )
-          </Box>
+          <Text fontWeight="bold" lineHeight={1.6}>
+            {`${t("page-find-wallet-filters")} (${Object.values(filters).reduce(
+              (acc, filter) => {
+                if (filter) {
+                  acc += 1
+                }
+                return acc
+              },
+              0
+            )})`}
+          </Text>
 
           <Center
             as="button"
