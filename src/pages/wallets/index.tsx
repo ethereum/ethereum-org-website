@@ -30,6 +30,7 @@ import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import { Simulator } from "@/components/Simulator"
 import { SIMULATOR_ID } from "@/components/Simulator/constants"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -311,7 +312,9 @@ const WalletsPage = () => {
           <Text>{t("page-wallets-accounts-addresses-desc")}</Text>
           <ul>
             <li>
-              <Text>{t("page-wallets-ethereum-account")}</Text>
+              <Text>
+                <Translation id="page-wallets:page-wallets-ethereum-account" />
+              </Text>
             </li>
             <li>
               <Text>{t("page-wallets-accounts-ethereum-addresses")}</Text>
@@ -415,7 +418,7 @@ const WalletsPage = () => {
             <ChecklistItem
               key="1"
               emoji=":white_check_mark:"
-              title={t("page-wallets-seed-phrase")}
+              title={<Translation id="page-wallets:page-wallets-seed-phrase" />}
               description={t("page-wallets-seed-phrase-desc")}
             >
               <Text>{t("page-wallets-seed-phrase-example")}</Text>
