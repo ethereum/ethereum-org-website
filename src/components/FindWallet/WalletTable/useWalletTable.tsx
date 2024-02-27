@@ -102,12 +102,6 @@ export const useWalletTable = ({
       category: "advanced",
     },
     {
-      label: t("page-find-wallet-fee-optimization"),
-      value: t("page-find-wallet-fee-optimization"),
-      filterKey: "eip_1559_support",
-      category: "feature",
-    },
-    {
       label: t("page-find-wallet-buy-crypto"),
       value: t("page-find-wallet-buy-crypto"),
       filterKey: "buy_crypto",

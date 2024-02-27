@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Ví hỗ trợ Dịch vụ Định danh Ethereum (ENS)",
   "page-find-wallet-token-importing": "Nhập token",
   "page-find-wallet-token-importing-desc": "Nhập được bất kì token ERC-20 nào để sử dụng trong ví",
-  "page-find-wallet-fee-optimization": "Tối ưu hóa chi phí",
   "page-find-wallet-fee-optimization-desc": "Hỗ trợ cơ chế giao thức loại 2 để tối ưu hóa phí gas và phí hoàn trả cho gas bị thừa khi giao dịch",
   "page-find-wallet-buy-crypto": "Mua tiền điện tử",
   "page-find-wallet-buy-crypto-desc": "Hỗ trợ mua tiền điện tử trực tiếp bằng tiền pháp định trong ví \n *Lưu ý: việc mua bán tiền điện tử phụ thuộc vào chế tài pháp lý từng khu vực cụ thể",

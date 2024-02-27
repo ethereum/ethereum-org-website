@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Portafogli che supportano l’Ethereum Name Service (ENS)",
   "page-find-wallet-token-importing": "Importazione token",
   "page-find-wallet-token-importing-desc": "Importa qualsiasi token ERC-20 da usare nel portafoglio",
-  "page-find-wallet-fee-optimization": "Ottimizzazione delle commissioni",
   "page-find-wallet-fee-optimization-desc": "Supporta transazioni di tipo 2 per commissioni di gas ottimizzate e rimborsi di commissioni per il gas inutilizzato",
   "page-find-wallet-buy-crypto": "Acquista criptovalute",
   "page-find-wallet-buy-crypto-desc": "Acquista criptovalute con valute legali direttamente nel portafoglio\n*Nota: l'acquisto di criptovalute potrebbe variare da regione a regione",

@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Ethereum İsim Servisi'ni (ENS) destekleyen cüzdanlar",
   "page-find-wallet-token-importing": "Jeton içe aktarma",
   "page-find-wallet-token-importing-desc": "Cüzdanda kullanmak için herhangi bir ERC-20 jetonunu içe aktarın",
-  "page-find-wallet-fee-optimization": "Ücret optimizasyonu",
   "page-find-wallet-fee-optimization-desc": "Optimize edilmiş gaz ücretleri için destek tipi 2 işlemleri ve kullanılmayan gaz için ücret iadeleri",
   "page-find-wallet-buy-crypto": "Kripto al",
   "page-find-wallet-buy-crypto-desc": "Doğrudan cüzdandan emirle kripto para satın al \n *Not: Kripto para satın almak bölgeye özgü olabilir",

@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "이더리움 네임 서비스(ENS)를 지원하는 지갑",
   "page-find-wallet-token-importing": "토큰 가져오기",
   "page-find-wallet-token-importing-desc": "지갑에서 사용할 ERC-20 토큰 가져오기",
-  "page-find-wallet-fee-optimization": "수수료 최적화",
   "page-find-wallet-fee-optimization-desc": "최적화된 가스 수수료에 대한 2종 거래 및 미사용 가스에 대한 수수료 환불을 지원",
   "page-find-wallet-buy-crypto": "암호화폐 구매",
   "page-find-wallet-buy-crypto-desc": "지갑에서 직접 법정 화폐로 암호화폐 구매 \n *참고: 암호화폐 구매는 지역별로 다를 수 있음",

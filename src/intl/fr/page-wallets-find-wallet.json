@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Portefeuilles qui prennent en charge l'Ethereum Name Service (ENS)",
   "page-find-wallet-token-importing": "Importation de jetons",
   "page-find-wallet-token-importing-desc": "Importer n'importe quel jeton ERC-20 à utiliser dans le portefeuille",
-  "page-find-wallet-fee-optimization": "Optimisation des frais",
   "page-find-wallet-fee-optimization-desc": "Prise en charge des transactions de type 2 pour des frais de gaz optimisés et des remboursements de frais de gaz non utilisés",
   "page-find-wallet-buy-crypto": "Achetez des cryptomonnaies",
   "page-find-wallet-buy-crypto-desc": "Acheter des cryptomonnaies avec fiat directement dans le portefeuille \n *Note : l'achat de cryptomonnaies peut être spécifique a la région",

@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "วอลเล็ทที่สามารถใช้บริการชื่ออีเธอเรียม (ENS)",
   "page-find-wallet-token-importing": "การนำเข้าโทเค็น",
   "page-find-wallet-token-importing-desc": "นำเข้าโทเค็น ERC-20 ที่จะใช้ในวอลเล็ท",
-  "page-find-wallet-fee-optimization": "เพิ่มประสิทธิภาพค่าธรรมเนียม",
   "page-find-wallet-fee-optimization-desc": "สามารถทำธุรกรรมประเภท 2 สำหรับค่าธรรมเนียมแก๊สที่เหมาะสมและคืนค่าธรรมเนียมแก๊สที่ไม่ได้ใช้",
   "page-find-wallet-buy-crypto": "ซื้อเงินดิจิทัล",
   "page-find-wallet-buy-crypto-desc": "ซื้อเงินดิจิทัลด้วยเงินตราโดยตรงในวอลเล็ท \n *หมายเหตุ: ความสามารถซื้อเงินดิจิทัลอาจจะขึ้นอยู่กับภูมิภาค",

@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "支持以太坊域名服务 (ENS) 的钱包",
   "page-find-wallet-token-importing": "导入代币",
   "page-find-wallet-token-importing-desc": "导入任何 ERC-20 代币，以便在钱包中使用",
-  "page-find-wallet-fee-optimization": "费用优化",
   "page-find-wallet-fee-optimization-desc": "支持第 2 类交易，以优化燃料费和并退还未使用燃料的费用",
   "page-find-wallet-buy-crypto": "购买加密货币",
   "page-find-wallet-buy-crypto-desc": "直接在钱包中使用法币购买加密货币\n *注意：购买加密货币可能因地区而异",

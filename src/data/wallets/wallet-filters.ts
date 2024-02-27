@@ -127,11 +127,6 @@ const walletFilterData: { [key: string]: WalletFilter } = {
     description: "page-find-wallet-token-importing-desc",
     filterKey: "erc_20_support",
   },
-  eip_1559_support: {
-    title: "page-find-wallet-fee-optimization",
-    description: "page-find-wallet-fee-optimization-desc",
-    filterKey: "eip_1559_support",
-  },
   buy_crypto: {
     title: "page-find-wallet-buy-crypto",
     description: "page-find-wallet-buy-crypto-desc",

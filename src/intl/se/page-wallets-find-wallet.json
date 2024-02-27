@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Plånböcker med stöd för Ethereum Name Service (ENS)",
   "page-find-wallet-token-importing": "Import av token",
   "page-find-wallet-token-importing-desc": "Importera valfri ERC-20-token att använda i plånboken",
-  "page-find-wallet-fee-optimization": "Optimering av avgifter",
   "page-find-wallet-fee-optimization-desc": "Stöd typ 2-transaktioner för optimerade gasavgifter och återbetalning av avgifter för oanvänd gas",
   "page-find-wallet-buy-crypto": "Köpa krypto",
   "page-find-wallet-buy-crypto-desc": "Köp krypto med fiat direkt i plånboken \n *Notera: att köpa krypto kan vara regionspecifikt",
