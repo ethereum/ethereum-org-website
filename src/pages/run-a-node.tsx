@@ -491,7 +491,9 @@ const RunANodePage = () => {
           background="runNodeGradient2"
           forceOpen
         >
-          <Text>{t("page-run-a-node-who-copy-1")}</Text>
+          <Text>
+            <Translation id="page-run-a-node:page-run-a-node-who-copy-1" />
+          </Text>
           <Text>{t("page-run-a-node-who-copy-2")}</Text>
           <Text>{t("page-run-a-node-who-copy-3")}</Text>
           <StrongParagraph>
@@ -581,7 +583,7 @@ const RunANodePage = () => {
                 {t("page-run-a-node-getting-started-software-section-3a")}
               </Text>
               <Text>
-                {t("page-run-a-node-getting-started-software-section-3b")}
+                <Translation id="page-run-a-node:page-run-a-node-getting-started-software-section-3b" />
               </Text>
             </ColumnFill>
             <ColumnNarrow>

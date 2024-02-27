@@ -179,7 +179,8 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     path.startsWith("/wallets/") ||
     path.startsWith("/get-eth/") ||
     path.startsWith("/stablecoins/") ||
-    path.startsWith("/staking/")
+    path.startsWith("/staking/") ||
+    path.startsWith("/run-a-node/")
   ) {
     requiredNamespaces = [...requiredNamespaces, "glossary-tooltip"]
   }
