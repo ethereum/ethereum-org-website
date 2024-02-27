@@ -41,7 +41,7 @@ Danksharding ist der Weg, auf dem Ethereum zu >100000 Transaktionen pro Sekunde 
 
 ## Aktueller Fortschritt {#current-progress}
 
-PBS ist in einer fortgeschrittenen Phase der Forschung, aber es gibt immer noch ein paar wichtige Designfragen, die gelöst werden müssen, bevor es in Ethereum Clients implementiert werden kann. Es gibt noch keine endgültige Spezifikation. Das heißt, dass PBS wahrscheinlich noch mindestens ein Jahr oder länger entfernt ist. Informieren Sie sich über den neuesten [Forschungsstand](https://notes.ethereum.org/@vbuterin/pbs_zensur_resistance).
+PBS ist in einer fortgeschrittenen Phase der Forschung, aber es gibt immer noch ein paar wichtige Designfragen, die gelöst werden müssen, bevor es in Ethereum Clients implementiert werden kann. Es gibt noch keine endgültige Spezifikation. Das heißt, dass PBS wahrscheinlich noch mindestens ein Jahr oder länger entfernt ist. Informieren Sie sich über den neuesten [Forschungsstand](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance).
 
 ## Weiterführende Informationen {#further-reading}
 

@@ -106,7 +106,7 @@
   "page-run-a-node-staking-description": "على الرغم من أنه غير مطلوب، مع عقدة قيد التشغيل أنت أقرب خطوة إلى تجميد عملات إثير الخاصة بك لكسب المكافآت والمساعدة في المساهمة في مكون مختلف من مكونات أمان إثيريوم.",
   "page-run-a-node-staking-link": "تجميد عملات إثير",
   "page-run-a-node-staking-plans-title": "هل تخطط لتجميد العملات؟",
-  "page-run-a-node-staking-plans-description": "لتعظيم كفاءة المصادق من المفضل استخدام 16 جيجابايت من الذاكرة العشوائية، ولكن استخدام 32 جيجا يعتبر أفضل، مع استخدام وحدة معالجة مركزية بتقييم يزيد علي 6667 وفق ما يرد علي موقع <a href=\\\"https://cpubenchmark.net\\\" target=\\\"_blank\\\">cpubenchmark.net</a>. من الموصي به أيضاً أن يتمكن المراهن من الوصول إلي سرعة عالية وغير محدودة للانترنت ولكنه لا يعتبر خيار إجباري.",
+  "page-run-a-node-staking-plans-description": "لتعظيم كفاءة المصادق من المفضل استخدام 16 جيجابايت من الذاكرة العشوائية، ولكن استخدام 32 جيجا يعتبر أفضل، مع استخدام وحدة معالجة مركزية بتقييم يزيد علي 6667 وفق ما يرد علي موقع <a href=\"https://cpubenchmark.net\" target=\"_blank\">cpubenchmark.net</a>. من الموصي به أيضاً أن يتمكن المراهن من الوصول إلي سرعة عالية وغير محدودة للانترنت ولكنه لا يعتبر خيار إجباري.",
   "page-run-a-node-staking-plans-ethstaker-link-label": "كيفية التسوّق لأجهزة برنامج المدقق لإثيريوم",
   "page-run-a-node-staking-plans-ethstaker-link-description": "EthStaker يتناول المزيد من التفاصيل لمدة ساعة خاصة",
   "page-run-a-node-sovereignty-title": "السيادة",

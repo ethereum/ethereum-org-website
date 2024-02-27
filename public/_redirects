@@ -72,9 +72,9 @@
 
 /en/dart/ /en/developers/docs/programming-languages/dart/ 301!
 
-/developers/docs/mining/ /en/developers/docs/consensus-mechanisms/pow/mining/ 301!
+/developers/docs/consensus-mechanisms/pow/mining/ /en/developers/docs/consensus-mechanisms/pow/mining/ 301!
 
-/en/developers/docs/mining/ /en/developers/docs/consensus-mechanisms/pow/mining/ 301!
+/en/developers/docs/consensus-mechanisms/pow/mining/ /en/developers/docs/consensus-mechanisms/pow/mining/ 301!
 
 /*/beginners /:splat/what-is-ethereum/ 301!
 
@@ -148,7 +148,7 @@
 
 /*/eth2 /:splat/upgrades/ 301!
 
-/*/developers/docs/layer-2-scaling /:splat/developers/docs/scaling 301!
+/*/developers/docs/scaling /:splat/developers/docs/scaling 301!
 
 /*/developers/docs/scaling/layer-2-rollups /:splat/developers/docs/scaling 301!
 

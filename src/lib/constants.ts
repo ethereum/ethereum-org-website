@@ -1,5 +1,7 @@
 import { ReportsModel } from "@crowdin/crowdin-api-client"
 
+import { NavSectionKey } from "@/components/Nav/types"
+
 import i18nConfig from "../../i18n.config.json"
 
 export const OLD_CONTENT_DIR = "src/content"
@@ -102,4 +104,17 @@ export const DEVELOPER_FEATURES = [
   "connect_to_dapps",
   "gas_fee_customization",
   "erc_20_support",
+]
+
+/**
+ * Navigation
+ */
+
+// Determines the order of sections in the menu
+export const SECTION_LABELS: NavSectionKey[] = [
+  "learn",
+  "use",
+  "build",
+  "participate",
+  "research",
 ]
