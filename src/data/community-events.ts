@@ -350,6 +350,15 @@ const communityConferences: CommunityConference[] = [
     description: "This conference will bring together Web3 enthusiasts from all over Nigeria and beyond. Here, community meets technology for three days of intensive Networking and Learning experiences.",
   },
   {
+    title: "ETHSafari",
+    startDate: "2024-09-09",
+    endDate: "2024-09-15",
+    to: "https://ethsafari.xyz/",
+    location: "Nairobi & Kilifi, Kenya",
+    description:
+      "Welcome to the largest Ethereum event happening in Africa! Join the BlockTrain from Nairobi to celebrate an ETH-festival held underneath ancient Boabab trees in Kilifi.",
+  },
+  {
     title: "TOKEN2049",
     startDate: "2024-09-18",
     endDate: "2024-09-19",

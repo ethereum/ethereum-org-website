@@ -103,7 +103,7 @@ Erkunden Sie Projekte und werden Sie Teil der DeSci-Gemeinschaft.
 - [OceanDAO: DAO regelte die Finanzierung der datenbezogenen Wissenschaft](https://oceanprotocol.com/dao)
 - [OpScientia: offene dezentrale wissenschaftliche Workflows](https://opsci.io/research/)
 - [LabDAO: Falten eines Proteins in Silizium](https://alphafodl.vercel.app/)
-- [Bio.xyz: Erhalten Sie Mittel für Ihr Biotech-DAO oder desci-Projekt](https://www.molecule.to/)
+- [Bio.xyz: Erhalten Sie Mittel für Ihr Biotech-DAO oder desci-Projekt](https://www.bio.xyz/)
 - [ResearchHub: Poste ein wissenschaftliches Ergebnis und führe ein Gespräch mit Partnern](https://www.researchhub.com/)
 - [VitaDAO: Langfristige Forschung finanziert durch gesponserte Forschungsverträge](https://www.vitadao.com/)
 - [Flamming-Protokoll: Open-Source-Datenwirtschaft, die die kollaborative biomedizinische Entdeckung fördert](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

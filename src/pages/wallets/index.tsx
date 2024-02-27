@@ -134,7 +134,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage("/wallets")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {
@@ -267,6 +267,7 @@ const WalletsPage = () => {
       <PageMetadata
         title={t("page-wallets-meta-title")}
         description={t("page-wallets-meta-description")}
+        image="/wallets/wallet-hero.png"
       />
       <PageHero content={heroContent} isReverse />
       <GrayContainer>

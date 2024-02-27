@@ -5,6 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   Center,
+  Heading,
   ListItem,
   UnorderedList,
   useColorModeValue,
@@ -103,18 +104,21 @@ const Subtitle = (props: ChildOnlyProp) => (
 
 const SloganGradient = (props: ChildOnlyProp) => (
   <Box
-    fontWeight="extrabold"
-    fontSize={{ base: "2.5rem", lg: "5xl" }}
-    lineHeight="xs"
     maxW="720px"
     mt="4"
-    mb="0"
     bgClip="text"
     overflow="auto"
     sx={{ WebkitBackgroundClip: "text", WebkitTextFillColor: "transparent" }}
     bg="upgradesGradient"
   >
-    <Text>{props.children}</Text>
+    <Heading
+      as="h1"
+      fontSize={{ base: "2.5rem", lg: "5xl" }}
+      fontWeight="800"
+      mb="1.45rem"
+    >
+      {props.children}
+    </Heading>
   </Box>
 )
 
@@ -328,7 +332,7 @@ const sortBountyHuntersFn = (a: BountyHuntersArg, b: BountyHuntersArg) => {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("bug-bounty")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -470,7 +474,7 @@ const BugBountiesPage = () => {
               <StyledButton to="https://forms.gle/Gnh4gzGh66Yc3V7G8">
                 {t("page-upgrades-bug-bounty-submit")}
               </StyledButton>
-              <StyledButton variant="outline" to="#rules">
+              <StyledButton variant="outline" to="#rules" isSecondary>
                 {t("page-upgrades-bug-bounty-rules")}
               </StyledButton>
             </ButtonRow>

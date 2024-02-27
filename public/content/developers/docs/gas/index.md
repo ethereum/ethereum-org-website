@@ -119,22 +119,6 @@ The Ethereum [scalability upgrades](/roadmap/) should ultimately address some of
 
 Layer 2 scaling is a primary initiative to greatly improve gas costs, user experience and scalability. [More on layer 2 scaling](/developers/docs/scaling/#layer-2-scaling).
 
-## What was the London Upgrade / EIP-1559? {#what-was-the-london-upgrade-eip-1559}
-
-Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at full capacity. As a result, users often had to wait for demand to reduce to get included in a block, which led to a poor user experience. The London Upgrade introduced variable-sized blocks to Ethereum.
-
-The way transaction fees on the Ethereum network were calculated changed with [the London Upgrade](/history/#london) of August 2021. Before the London upgrade, fees were calculated without separating `base` and `priority` fees, as follows:
-
-Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,000 units, and the gas price is 200 gwei.
-
-The total fee would have been: `Gas units (limit) * Gas price per unit` i.e `21,000 * 200 = 4,200,000 gwei` or 0.0042 ETH
-
-The implementation of [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) in the London Upgrade made the transaction fee mechanism more complex, but made gas fees more predictable, resulting in a more efficient transaction fee market. Users can submit transactions with a `maxFeePerGas` corresponding to how much they are willing to pay for the transaction to be executed, knowing that they will not pay more than the market price for gas (`baseFeePerGas`), and get any extra, minus their tip, refunded.
-
-This video explains EIP-1559 and the benefits it brings:
-
-<YouTube id="MGemhK9t44Q" />
-
 ## Monitoring gas fees {#moitoring-gas-fees}
 
 If you want to monitor gas prices, so you can send your ETH for less, you can use many different tools such as:

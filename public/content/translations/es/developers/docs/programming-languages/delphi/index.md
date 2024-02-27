@@ -5,11 +5,11 @@ lang: es
 incomplete: true
 ---
 
-<div class="featured">
+<FeaturedText>
 
 Aprende cómo desarrollar para Ethereum usando el lenguaje de programación Delphi
 
-</div>
+</FeaturedText>
 
 Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprovechan las ventajas de las criptomonedas y la tecnología de blockchain. Estas dapps pueden ser fiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones financieras. Estas aplicaciones pueden ser descentralizadas, lo que significa que ninguna entidad o persona las controla y, por lo tanto, son prácticamente imposibles de censurar.
 
