@@ -76,6 +76,34 @@ export const NAV_BAR_PX_HEIGHT = "75px"
 export const FROM_QUERY = "from"
 
 // Wallets features
+export const WALLETS_FILTERS_DEFAULT = {
+  android: false,
+  ios: false,
+  linux: false,
+  windows: false,
+  macOS: false,
+  firefox: false,
+  chromium: false,
+  hardware: false,
+  open_source: false,
+  non_custodial: false,
+  hardware_support: false,
+  walletconnect: false,
+  rpc_importing: false,
+  nft_support: false,
+  connect_to_dapps: false,
+  staking: false,
+  swaps: false,
+  layer_2: false,
+  gas_fee_customization: false,
+  ens_support: false,
+  erc_20_support: false,
+  buy_crypto: false,
+  withdraw_crypto: false,
+  multisig: false,
+  social_recovery: false,
+}
+
 export const NEW_TO_CRYPTO_FEATURES = [
   "connect_to_dapps",
   "layer_2",

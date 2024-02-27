@@ -46,7 +46,7 @@ import {
 
 import { WalletData } from "@/data/wallets/wallet-data"
 
-import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
+import { NAV_BAR_PX_HEIGHT, WALLETS_FILTERS_DEFAULT } from "@/lib/constants"
 
 import HeroImage from "@/public/wallets/wallet-hero.png"
 
@@ -62,35 +62,7 @@ const Subtitle = ({ children }: ChildOnlyProp) => (
   </Text>
 )
 
-const filterDefault = {
-  android: false,
-  ios: false,
-  linux: false,
-  windows: false,
-  macOS: false,
-  firefox: false,
-  chromium: false,
-  hardware: false,
-  open_source: false,
-  non_custodial: false,
-  hardware_support: false,
-  walletconnect: false,
-  rpc_importing: false,
-  nft_support: false,
-  connect_to_dapps: false,
-  staking: false,
-  swaps: false,
-  layer_2: false,
-  gas_fee_customization: false,
-  ens_support: false,
-  erc_20_support: false,
-  buy_crypto: false,
-  withdraw_crypto: false,
-  multisig: false,
-  social_recovery: false,
-}
-
-export type FiltersType = typeof filterDefault
+export type FiltersType = typeof WALLETS_FILTERS_DEFAULT
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -116,7 +88,7 @@ const FindWalletPage = () => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const resetWalletFilter = useRef(() => {})
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
-  const [filters, setFilters] = useState(filterDefault)
+  const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
 
   const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
