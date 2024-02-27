@@ -14,7 +14,7 @@ summaryPoint3: A tool to drastically scale ecological benefit assets like verifi
 
 ## What is ReFi? {#what-is-refi}
 
-**Regenerative finance (ReFi)** is a set of tools and ideas built on top of blockchains, that aim to create economies which are regenerative, rather than extractive or exploitative. Eventually, extractive systems deplete the resources available and collapse; without regenerative mechanisms, they lack resilience. ReFi operates on the assumption that the creation of monetary value must be decoupled from the unsustainable extraction of resources from our planet and communities.
+**Regenerative finance (ReFi)** is a set of tools and ideas built on top of [blockchains](/glossary/#blockchain), that aim to create economies which are regenerative, rather than extractive or exploitative. Eventually, extractive systems deplete the resources available and collapse; without regenerative mechanisms, they lack resilience. ReFi operates on the assumption that the creation of monetary value must be decoupled from the unsustainable extraction of resources from our planet and communities.
 
 Instead, ReFi aims to solve environmental, communal, or social problems by creating regenerative cycles. These systems create value for participants while simultaneously benefiting ecosystems and communities.
 
@@ -22,7 +22,7 @@ One of the foundations of ReFi is the concept of regenerative economics pioneere
 
 ![Eight interconnected principles](refi-regenerative-economy-diagram.png)
 
-ReFi projects realize these principles using [smart contracts](/developers/docs/smart-contracts/) and [decentralized finance (DeFi)](/defi/) applications to incentivize regenerative behaviors, e.g. restoring degraded ecosystems, and facilitate large-scale collaboration on global issues such as climate change and biodiversity loss.
+ReFi projects realize these principles using [smart contracts](/glossary/#smart-contract) and [decentralized finance (DeFi)](/glossary/#defi) applications to incentivize regenerative behaviors, e.g. restoring degraded ecosystems, and facilitate large-scale collaboration on global issues such as climate change and biodiversity loss.
 
 ReFi also overlaps with the [decentralized science (DeSci)](/desci/) movement, which uses Ethereum as a platform to finance, create, review, credit, store, and disseminate scientific knowledge. DeSci tools could become useful for developing verifiable standards and practices for implementing and monitoring regenerative activities like planting trees, removing plastic from the ocean, or restoring a degraded ecosystem.
 
