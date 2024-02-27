@@ -5,7 +5,7 @@ lang: de
 hideEditButton: true
 ---
 
-## Kommende Veranstaltungen {#events}
+# Kommende Veranstaltungen {#events}
 
 **Jeden Monat finden auf der ganzen Welt große Ethereum-Veranstaltungen statt.** Besuchen Sie doch eine Veranstaltung in Ihrer Nähe, so lernen Sie andere aus der Community kennen und können sich über mögliche Karrierechancen informieren und neue Kompetenzen aufbauen.
 

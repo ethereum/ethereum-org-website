@@ -1,4 +1,12 @@
 {
+  "page-languages-h1": "Kalbos palaikymas",
+  "page-languages-want-more-link": "Vertimo programa",
+  "page-languages-filter-label": "Filtrų sąrašas",
+  "page-languages-filter-placeholder": "Filtro tipas",
+  "page-languages-browser-default": "Numatytoji naršyklė",
+  "page-languages-translated": "išversta",
+  "page-languages-words": "žodžiai",
+  "page-languages-recruit-community": "Padėkite mums išversti puslapį ethereum.org.",
   "language-ar": "Arabų",
   "language-bg": "Bulgarų",
   "language-bn": "Bengalų",

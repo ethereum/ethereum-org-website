@@ -19,7 +19,7 @@ lang: zh
 title="什么是 ARB？"
 contentPreview=''>
 
-Arbitrum 是一个开发和管理 <a href="/developers/docs/scaling/optimistic-rollup/">乐观卷叠</a> 的组织。 最初，Arbitrum 是一家以营利为目的的公司，但后来采取了去中心化步骤。 在这一过程中，他们发行了可交易的<a href="/dao/#token-based-membership">治理代币</a>。
+Arbitrum 是一个开发和管理 <a href="/developers/docs/scaling/optimistic-rollups/">乐观卷叠</a> 的组织。 最初，Arbitrum 是一家以营利为目的的公司，但后来采取了去中心化步骤。 在这一过程中，他们发行了可交易的<a href="/dao/#token-based-membership">治理代币</a>。
 
 </ExpandableCard>
 
