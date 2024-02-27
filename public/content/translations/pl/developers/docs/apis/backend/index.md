@@ -12,7 +12,7 @@ Jeśli chcesz użyć określonego języka programowania do połączenia z węzł
 
 ## Warunki wstępne {#prerequisites}
 
-Pomocne może być zrozumienie [stosu Ethereum](/developers/docs/ethereum-stack/) i [klientów Ethereum](/docs/nodes-and-clients/).
+Pomocne może być zrozumienie [stosu Ethereum](/developers/docs/ethereum-stack/) i [klientów Ethereum](/developers/docs/nodes-and-clients/).
 
 ## Dlaczego warto użyć biblioteki? {#why-use-a-library}
 

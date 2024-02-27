@@ -1,5 +1,5 @@
 ---
-title: Light Clients
+title: Leichte Clients
 description: Einführung zu leichten Clients von Ethereum.
 lang: de
 ---

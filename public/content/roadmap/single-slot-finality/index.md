@@ -58,7 +58,7 @@ The problem with scaling aggregation by growing the number of validators per sub
 
 ## Current progress {#current-progress}
 
-SSF is in the research phase. It is not expected to ship for several years, likely after other substantial upgrades such as [Verkle trees](/roadmap/verkle-trees/) and [Danksharding](/roadmap/danksharding]).
+SSF is in the research phase. It is not expected to ship for several years, likely after other substantial upgrades such as [Verkle trees](/roadmap/verkle-trees/) and [Danksharding](/roadmap/danksharding/).
 
 ## Further reading {#further-reading}
 

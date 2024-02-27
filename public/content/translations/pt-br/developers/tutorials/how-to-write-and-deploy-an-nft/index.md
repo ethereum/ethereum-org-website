@@ -7,7 +7,7 @@ tags:
   - "Alchemy"
   - "Solidity"
   - "contratos inteligentes"
-skill: beginner
+skill: intermediate
 lang: pt-br
 published: 2021-04-22
 ---
@@ -16,7 +16,7 @@ Com os NFTs trazendo a blockchain aos olhos do público, agora é uma excelente 
 
 A Alchemy tem muito orgulho por estar no espaço NFT com os maiores nomes incluindo Makersplace (recentemente atingiu a marca de 69 milhões de doláres em vendas de artes digitais), Dapper Labs (criadores do NBA Top Shot e Crypto Kitties), OpenSea (o maior mercado de NFT do mundo), Zora, Super Rare, NFTfi, Foundation, Enjin, Origin Protocol, Immutable e muito mais.
 
-Neste tutorial, veremos como criar e implantar um contrato inteligente ERC-721 na rede de teste Goerli usando [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) e [Alchemy](https://alchemy.com/signup/eth) (não se preocupe se você não entender o que isso significa — vamos explicar!).
+Neste tutorial, nós vamos criar e implantar um contrato inteligente ERC-721 na rede de teste Sepolia usando [MetaMask](https://metamask.io/), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/), [Pinata](https://pinata.cloud/) e [Alquimia](https://alchemy.com/signup/eth) (não se preocupe caso não entender o que tudo isso significa — explicaremos tudo!).
 
 Na parte 2 deste tutorial, veremos como podemos usar nosso contrato inteligente para gerar NFT, e na Parte 3, explicaremos como ver seu NFT no MetaMask.
 
@@ -30,15 +30,15 @@ Neste tutorial, também aproveitaremos as ferramentas de desenvolvedor da Alchem
 
 ## Etapa 2: Criar seu aplicativo (e chave de API) {#make-api-key}
 
-Assim que criar uma conta na Alchemy, você pode gerar uma chave de API criando um "app". Isso nos permitirá fazer solicitações na rede de teste Goerli. Confira [este guia](https://docs.alchemyapi.io/guides/choosing-a-network) se você está curioso para aprender mais sobre as redes de teste.
+Assim que criar uma conta na Alchemy, você pode gerar uma chave de API criando um "app". Isso nos permitirá fazer solicitações à rede de teste Sepolia. Confira [este guia](https://docs.alchemyapi.io/guides/choosing-a-network) se você está curioso para aprender mais sobre as redes de teste.
 
 1. Vá até a página "Create App" no painel da Alchemy, passe o mouse sobre a palavra "Apps" na barra de navegação e clique em "Create App"
 
 ![Crie seu aplicativo](./create-your-app.png)
 
-2. Nomeie seu aplicativo (escolhemos “Meu primeiro NFT!”), faça uma breve descrição dele, selecione “Ethereum” para a cadeia e escolha “Goerli” para sua rede. Desde a fusão, as outras redes de teste foram descontinuadas.
+2. Nomeie seu app (nós escolhemos “Meu primeiro NFT!”), ofereça uma breve descrição, selecione “Ethereum” para a rede e escolha “Sepolia” para sua rede. Desde a fusão, as outras redes de teste foram descontinuadas.
 
-![Configure e publique seu aplicativo](./configure-and-publish-your-app.png)
+![Configure e publique seu aplicativo](./alchemy-explorer-sepolia.png)
 
 3. Clique em "Create App", e é isso e tudo! Seu app deveria aparecer na tabela abaixo.
 
@@ -46,13 +46,13 @@ Assim que criar uma conta na Alchemy, você pode gerar uma chave de API criando 
 
 Precisamos de uma conta Ethereum para enviar e receber transações. Para este tutorial, usaremos uma carteira virtual no navegador, a MetaMask, para gerenciar o endereço da sua conta Ethereum. Se você quiser entender mais sobre como as transações no Ethereum funcionam, confira [esta página](/developers/docs/transactions/) na Fundação Ethereum.
 
-Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download.html). Quando você estiver criando uma conta, ou se já tiver uma conta, certifique-se de mudar para a “Rede de teste Goerli”, no canto superior direito (para que não estejamos lidando com dinheiro real).
+Você pode baixar e criar uma conta MetaMask gratuitamente [neste link](https://metamask.io/download.html). Quando você estiver criando uma conta, ou se você já tiver uma, certifique-se de mudar para a “Sepolia Test Network” no canto superior direito (para que não lidemos com dinheiro real).
 
-![Defina Goerli como sua rede](./metamask-goerli.png)
+![Defina Sepolia como sua rede](./metamask-goerli.png)
 
 ## Etapa 4: Adicionar ether de um faucet {#step-4-add-ether-from-a-faucet}
 
-Para implementar nosso contrato inteligente na rede de teste, precisaremos de alguns ETHs de imitação. Para obter ETH, você pode acessar [Goerli Faucet](https://goerlifaucet.com/) hospedado pela Alchemy, fazer login e inserir o endereço da sua conta, clicar em "Send Me ETH". Você deveria ver o ETH na sua conta MetaMask logo depois!
+Para implementar nosso contrato inteligente na rede de teste, precisaremos de alguns ETHs de imitação. Para obter ETH, você pode acessar a [Torneira da Sepolia](https://sepoliafaucet.com/) hospedada pela Alchemy, fazer login, inserir o endereço da sua conta e clicar em "Enviar-me ETH". Você deveria ver o ETH na sua conta MetaMask logo depois!
 
 ## Etapa 5: Verificar seu saldo {#check-balance}
 
@@ -87,7 +87,7 @@ Não importa realmente como você responde às questões de instalação; aqui e
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-
+    
     {
       "name": "my-nft",
       "version": "1.0.0",
@@ -234,14 +234,12 @@ Então crie um arquivo `.env` no diretório raiz do nosso projeto e adicione sua
 
 Seu arquivo `.env` ficará assim:
 
-    API_URL="https://eth-goerli.g.alchemy.com/v2/your-api-key"
+    API_URL="https://eth-sepolia.g.alchemy.com/v2/your-api-key"
     PRIVATE_KEY="your-metamask-private-key"
 
 Para realmente conectá-las ao nosso código, referenciaremos essas variáveis em nosso arquivo hardhat.config.js na etapa 13.
 
-<InfoBanner isWarning={true}>
-No faça commit do <code>.env</code>! Por favor, tenha certeza de nunca compartilhar ou expor seu arquivo <code>.env</code> com ninguém, pois estará comprometendo suas partes secretas ao fazê-lo. Se estiver usando um controle de versão, adicione seu <code>.env</code> ao arquivo <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
-</InfoBanner>
+<EnvWarningBanner />
 
 ## Etapa 12: Instalar o Ethers.js {#install-ethers}
 
@@ -249,7 +247,7 @@ Ethers.js é uma biblioteca que facilita a interação e o envio de solicitaçõ
 
 Hardhat torna muito fácil a integração de [plugins](https://hardhat.org/plugins/), para ferramentas adicionais e funcionalidades extendidas. Aproveitaremos o [plugin Ethers](https://hardhat.org/plugins/nomiclabs-hardhat-ethers.html) para implantação de contratos. ([Ethers.js](https://github.com/ethers-io/ethers.js/) tem alguns métodos de implantação de contratos bastante claros).
 
-No diretório do seu projeto, digite:
+No diretório do projeto, digite:
 
     npm install --save-dev @nomiclabs/hardhat-ethers ethers@^5.0.0
 
@@ -269,10 +267,10 @@ Atualize seu hardhat.config.js para ficar assim:
     const { API_URL, PRIVATE_KEY } = process.env;
     module.exports = {
        solidity: "0.8.1",
-       defaultNetwork: "goerli",
+       defaultNetwork: "sepolia",
        networks: {
           hardhat: {},
-          goerli: {
+          sepolia: {
              url: API_URL,
              accounts: [`0x${PRIVATE_KEY}`]
           }
@@ -287,7 +285,7 @@ Na linha de comando, execute:
 
     npx hardhat compile
 
-Você pode receber o aviso "SPDX license identifier not provided in source file", mas não há necessidade de se preocupar com isso. Esperamos que tudo mais esteja bem! Se não, você sempre pode enviar uma mensagem no [discord Alchemy](https://discord.gg/u72VCg3).
+Você pode receber o aviso do identificador de licença SPDX não fornecido no arquivo fonte, mas não há necessidade de se preocupar com isso. Esperemos que tudo mais esteja bem! Se não, você sempre pode enviar uma mensagem no [discord Alchemy](https://discord.gg/u72VCg3).
 
 ## Etapa 15: Escrever nosso script de implantação {#write-deploy}
 
@@ -317,7 +315,7 @@ A Hardhat fez um trabalho incrível ao explicar o que cada uma dessas linhas de 
 
     const MyNFT = await ethers.getContractFactory("MyNFT");
 
-Uma ContractFactory em ethers.js é uma abstração usada para implantar novos contratos inteligentes, então, MyNFT aqui representa uma fábrica para instâncias do nosso contrato NFT. Ao usar o plug-in hardhat-ethers, as instâncias ContractFactory e Contract são conectadas ao primeiro signatário por padrão.
+Uma ContractFactory em ethers.js é uma abstração usada para implantar novos contratos inteligentes, então a MyNFT aqui representa uma fábrica para instâncias do nosso contrato NFT. Ao usar o plug-in hardhat-ethers, as instâncias ContractFactory e Contract são conectadas ao primeiro signatário por padrão.
 
     const myNFT = await MyNFT.deploy();
 
@@ -327,26 +325,26 @@ Ao chamar deploy() em uma ContractFactory, a implantação se iniciará e retorn
 
 Finalmente estamos prontos para implantar o nosso contrato inteligente! Navegue de volta para a raiz do diretório do seu projeto e, na linha de comando, execute:
 
-    npx hardhat --network goerli run scripts/deploy.js
+    npx hardhat --network sepo lia run scripts/deploy.js
 
 Você deverá ver algo assim:
 
     Contrato implantado no endereço: 0x4C5266cCc4b3F426965d2f51b6D910325a0E7650
 
-Se nós formos ao [Goerli etherscan](https://goerli.etherscan.io/) e procurarmos pelo endereço do nosso contrato, conseguiremos ver que ele foi implantado com sucesso. Se você não conseguir ver o endereço imediatamente, aguarde um momento, pois pode demorar algum tempo. A transação ficará parecida com isto:
+Se nós formos ao [Sepolia etherscan](https://sepolia.etherscan.io/) e procurarmos o endereço do nosso contrato, poderemos ver que ele foi implantado com sucesso. Se você não puder ver o endereço imediatamente, por favor, aguarde um momento, pois pode levar algum tempo. A transação ficará parecida com isto:
 
-![Veja o seu endereço de transação no Etherscan](./etherscan-goerli-contract-creation.png)
+![Veja o seu endereço de transação no Etherscan](./etherscan-sepoila-contract-creation.png)
 
 O endereço do remetente (From) deve corresponder ao seu endereço da conta MetaMask e o endereço do destinatário (To) deve dizer "Contract Creation". Se clicarmos na transação, veremos o nosso endereço de contrato no campo "To":
 
-![Veja o seu endereço de contrato no Etherscan](./etherscan-goerli-tx-details.png)
+![Veja o seu endereço de contrato no Etherscan](./etherscan-sepolia-tx-details.png)
 
 Sim! Você acabou de implantar seu contrato inteligente NFT na cadeia Ethereum (testnet)!
 
-Para entender o que está acontecendo nos bastidores, vamos navegar até a guia Explorer no [painel do Alchemy](https://dashboard.alchemyapi.io/explorer). Se você tem vários aplicativos Alchemy, certifique-se de filtrar por app e selecionar "MyNFT".
+Para entender o que está acontecendo nos bastidores, vamos navegar até a guia Explorer no [painel do Alchemy](https://dashboard.alchemyapi.io/explorer). Se você tem vários aplicativos Alchemy certifique-se de filtrar por app e selecionar "MyNFT".
 
 ![Exibir chamadas feitas "em segundo plano" com o Explorer Dashboard do Alquimia](./alchemy-explorer-goerli.png)
 
-Aqui você verá um punhado de chamadas JSON-RPC que Hardhat/Ethers fizeram em segundo plano para nós quando chamamos a função .deploy() . Duas chamadas importantes aqui são [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), que é o pedido para realmente escrever nosso contrato inteligente na cadeia Goerli e [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash) que é um pedido para ler informações sobre nossa transação, conforme o hash (um padrão típico ao enviar transações). Para saber mais sobre o envio de transações, confira [este tutorial](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) sobre como enviar transações usando a Web3.
+Aqui você verá um punhado de chamadas JSON-RPC que Hardhat/Ethers fizeram em segundo plano para nós quando chamamos a função .deploy() . Dois importantes pontos a destacar aqui são [eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction), que é a solicitação para realmente escrever nosso contrato inteligente na cadeia Sepolia, e [eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash), que é uma solicitação para ler informações sobre nossa transação dado o hash (um padrão típico ao enviar transações). Para saber mais sobre o envio de transações, confira [este tutorial](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) sobre como enviar transações usando a web3.
 
 Isso é tudo para a Parte 1 deste tutorial. Na [Parte 2, interagiremos com o nosso contrato inteligente cunhando um NFT](/developers/tutorials/how-to-mint-an-nft/), e na [Parte 3, mostraremos como ver o seu NFT na sua carteira Ethereum](/developers/tutorials/how-to-view-nft-in-metamask/)!

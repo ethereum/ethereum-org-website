@@ -12,15 +12,15 @@ lang: ja
 
 ## ライブラリの中身 {#whats-in-a-library}
 
-スマートコントラクトライブラリには、通常、2 種類のビルディングブロックがあります。コントラクトに追加できる再利用可能な振る舞いと、さまざまな標準の実装です。
+スマートコントラクトライブラリには、通常、2種類のビルディングブロックがあります。コントラクトに追加できる再利用可能な振る舞いと、さまざまな標準の実装です。
 
 ### 振る舞い {#behaviors}
 
-スマートコントラクトを記述していると、コントラクト内の保護された操作を行うために*管理者*アドレスを割り当てたり、予期せぬ問題が発生した場合に緊急用の*一時停止*ボタンを追加したりと、似たようなパターンを何度も書くことになる可能性があります。
+スマートコントラクトを記述していると、コントラクト内の保護された操作を行うために_管理者_アドレスを割り当てたり、予期せぬ問題が発生した場合に緊急用の_一時停止_ボタンを追加したりと、似たようなパターンを何度も書くことになる可能性があります。
 
-スマートコントラクトライブラリは通常、Solidity で[ライブラリ](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries)または[継承](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance)を介して、これらの振る舞いを再利用できる実装を提供します。
+スマートコントラクトライブラリは通常、Solidityで[ライブラリ](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries)または[継承](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance)を介して、これらの振る舞いを再利用できる実装を提供します。
 
-例として、[OpenZeppelin のコントラクトライブラリ](https://github.com/OpenZeppelin/openzeppelin-contracts)の[`Ownable contract`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol)を簡易にしたバージョンを以下に示します。これは、あるアドレスをコントラクトの所有者として指定し、その所有者のみにメソッドへのアクセスを制限する modifier を提供するコードです。
+例として、[OpenZeppelinのコントラクトライブラリ](https://github.com/OpenZeppelin/openzeppelin-contracts)の[`Ownable contract`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/v3.2.0/contracts/access/Ownable.sol)を簡易にしたバージョンを以下に示します。これは、あるアドレスをコントラクトの所有者として指定し、その所有者のみにメソッドへのアクセスを制限するmodifierを提供するコードです。
 
 ```solidity
 contract Ownable {
@@ -56,13 +56,13 @@ contract MyContract is Ownable {
 
 [構成可能性と相互運用性](/developers/docs/smart-contracts/composability/)を促進するために、イーサリアムコミュニティは**ERC**の形式でいくつかの標準を定義しました。 詳細については、 [標準](/developers/docs/standards/)セクションを参照してください。
 
-ERC をコントラクトの一部として組み込む場合、独自の ERC をロールアウトするよりも、標準の実装を探すことをお勧めします。 最も一般的な ERC の実装は、多くのスマートコントラクトライブラリに含まれています。 例えば、どこにでもある[ERC20 代替可能トークン標準](/developers/tutorials/understand-the-erc-20-token-smart-contract/)は[HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md)、[DappSys](https://github.com/dapphub/ds-token/)と[OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20)で見つかります。 さらに、ERC によっては ERC 自体の一部として標準実装を提供することもあります。
+ERCをコントラクトの一部として組み込む場合、独自のERCをロールアウトするよりも、標準の実装を探すことをお勧めします。 最も一般的なERCの実装は、多くのスマートコントラクトライブラリに含まれています。 例えば、どこにでもある[ERC20代替可能トークン標準](/developers/tutorials/understand-the-erc-20-token-smart-contract/)は[HQ20](https://github.com/HQ20/contracts/blob/master/contracts/token/README.md)、[DappSys](https://github.com/dapphub/ds-token/)と[OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/erc20)で見つかります。 さらに、ERCによってはERC自体の一部として標準実装を提供することもあります。
 
-特筆すべきは、一部の ERC はスタンドアロンではなく、他の ERC に機能を追加するものであるということです。 例えば、 [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) はユーザビリティを向上させるために ERC20 に拡張機能を追加します。
+特筆すべきは、一部のERCはスタンドアロンではなく、他のERCに機能を追加するものであるということです。 例えば、 [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) はユーザビリティを向上させるためにERC20に拡張機能を追加します。
 
 ## ライブラリの追加方法 {#how-to}
 
-プロジェクトにライブラリを含める具体的な手順については、必ずそのライブラリのドキュメントを参照してください。 複数の Solidity コントラクトライブラリは`npm`を使用してパッケージ化されていますので、`npm install`を実行するだけで済みます。 コントラクトを[コンパイル](/developers/docs/smart-contracts/compiling/)するためのほとんどのツールは、`node_modules`でスマートコントラクトライブラリを調べます。そのため、以下のように指定できます。
+プロジェクトにライブラリを含める具体的な手順については、必ずそのライブラリのドキュメントを参照してください。 複数のSolidityコントラクトライブラリは`npm`を使用してパッケージ化されていますので、`npm install`を実行するだけで済みます。 コントラクトを[コンパイル](/developers/docs/smart-contracts/compiling/)するためのほとんどのツールは、`node_modules`でスマートコントラクトライブラリを調べます。そのため、以下のように指定できます。
 
 ```solidity
 // This will load the @openzeppelin/contracts library from your node_modules
@@ -73,7 +73,7 @@ contract MyNFT is ERC721 {
 }
 ```
 
-使用するメソッドに関係なく、ライブラリを含む場合は[言語](/developers/docs/smart-contracts/languages/)のバージョンを常に気に留めておくようにしてください。 たとえば、Solidity 0.5 でコントラクトを書いている場合は、Solidity 0.6 のライブラリを使用することはできません。
+使用するメソッドに関係なく、ライブラリを含む場合は[言語](/developers/docs/smart-contracts/languages/)のバージョンを常に気に留めておくようにしてください。 たとえば、Solidity 0.5でコントラクトを書いている場合は、Solidity 0.6のライブラリを使用することはできません。
 
 ## ライブラリの利用時 {#when-to-use}
 
@@ -98,15 +98,20 @@ contract MyNFT is ERC721 {
 - [ドキュメント](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-**HQ20 - \*\***_実世界向けの完全な機能を備えた分散アプリケーションの構築を支援する、コントラクト、ライブラリ、サンプルを含む Solidity プロジェクト。_\*\*
+**HQ20 - ****_実世界向けの完全な機能を備えた分散アプリケーションの構築を支援する、コントラクト、ライブラリ、サンプルを含むSolidityプロジェクト。_**
 
 - [GitHub](https://github.com/HQ20/contracts)
 
+**サードウェブSolidity SDK -** **_カスタムスマートコントラクトを効率的に構築するために必要なツールを提供_**
+
+- [ドキュメント](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
+
 ## 関連トピック {#related-tutorials}
 
-- [イーサリアムデベロッパーのためのセキュリティに関する考慮事項](/developers/docs/smart-contracts/security/) _-スマートコントラクトの構築時のセキュリティに関する考慮事項(ライブラリの使用を含む)_
-- [ERC-20 トークンスマートコントラクトを理解する](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-複数のライブラリで提供される ERC20 標準のチュートリアル_
+- [イーサリアムデベロッパーのためのセキュリティに関する考慮事項](/developers/docs/smart-contracts/security/) _- スマートコントラクト構築時のセキュリティに関する考慮事項(ライブラリの使用を含む)_
+- [ERC-20トークンスマートコントラクトを理解する](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- 複数のライブラリで提供されるERC20標準のチュートリアル_
 
 ## さらに学びたい方へ {#further-reading}
 
-_イーサリアムを学ぶために利用したコミュニティリソースはありますか？ もしあればページを編集して追加してください！_
+_役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_

@@ -212,7 +212,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const data = await cachedFetchBeaconchainData()
 
@@ -367,6 +367,7 @@ const StakingPage = ({
       <PageMetadata
         title={t("page-staking-meta-title")}
         description={t("page-staking-meta-description")}
+        image="/upgrades/upgrade_rhino.png"
       />
       <HeroStatsWrapper>
         <PageHero content={heroContent} />
@@ -442,7 +443,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
@@ -463,7 +464,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
@@ -479,7 +480,7 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "solo-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
@@ -512,7 +513,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
@@ -530,7 +531,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
@@ -543,7 +544,7 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "saas-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
@@ -579,7 +580,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
@@ -600,7 +601,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
@@ -613,7 +614,7 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "pool-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>

@@ -244,11 +244,15 @@ lang: en
 
 ## L {#section-l}
 
+<GlossaryDefinition term="layer-1" />
+
 <GlossaryDefinition term="layer-2" />
 
 <GlossaryDefinition term="library" />
 
 <GlossaryDefinition term="light-client" />
+
+<GlossaryDefinition term="liquidity" />
 
 <GlossaryDefinition term="lmd-ghost" />
 
@@ -258,7 +262,11 @@ lang: en
 
 <GlossaryDefinition term="mainnet" />
 
+<GlossaryDefinition term="max-fee-per-gas" />
+
 <GlossaryDefinition term="merkle-patricia-tree" />
+
+<GlossaryDefinition term="merkle-root" />
 
 <GlossaryDefinition term="message" />
 
@@ -288,7 +296,11 @@ lang: en
 
 ## O {#section-o}
 
+<GlossaryDefinition term="off-chain" />
+
 <GlossaryDefinition term="ommer" />
+
+<GlossaryDefinition term="on-chain" />
 
 <GlossaryDefinition term="optimistic-rollup" />
 

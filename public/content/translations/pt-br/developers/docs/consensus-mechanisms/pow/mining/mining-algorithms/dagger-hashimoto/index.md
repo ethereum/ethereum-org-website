@@ -4,7 +4,7 @@ description: O algoritmo Dagger-Hashimoto em detalhes
 lang: pt-br
 ---
 
-Dagger-Hashimoto foi a implementação original de pesquisa e especificação para o algoritmo de mineração do Ethereum. Dagger-Hashimoto foi substituído por [Ethash](#ethash). A mineração foi completamente desligada na [Fusão](/updates/merge) no dia 15 de setembro de 2022. Desde então, o Ethereum foi protegido usando um mecanismo [prova de participação](/developers/docs/consensus-mechanisms/pos). Esta página é para fins históricos. As informações aqui não são mais relevantes para o Ethereum posterior à Fusão.
+Dagger-Hashimoto foi a implementação original de pesquisa e especificação para o algoritmo de mineração do Ethereum. Dagger-Hashimoto foi substituído por [Ethash](#ethash). A mineração foi completamente desligada na [Fusão](/roadmap/merge/) no dia 15 de setembro de 2022. Desde então, o Ethereum foi protegido usando um mecanismo [prova de participação](/developers/docs/consensus-mechanisms/pos). Esta página é para fins históricos. As informações aqui não são mais relevantes para o Ethereum posterior à Fusão.
 
 ## Pré-Requisitos {#prerequisites}
 
@@ -294,7 +294,7 @@ Para certos valores de `P` e `w`, a função `pow(x, w, P)` pode ter muitas coli
 Dado que `P` é primo, então um `w` apropriado para uma função hash de exponenciação modular pode ser escolhida usando o seguinte resultado:
 
 > Observação 3. Considere `P` um primo; `w` e `P-1` são relativamente primos, se e somente se para todos `a` e `b` em `Z/PZ`:
->
+> 
 > <center>
 >   `aʷ mod P ≡ bʷ mod P` se e somente se `a mod P ≡ b mod P`
 > </center>
