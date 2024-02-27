@@ -3,7 +3,7 @@ title: Ethereum yol haritası
 description: Ethereum için daha ölçeklenebilir, güvenli ve sürdürülebilir olmanın yolu.
 lang: tr
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /heroes/roadmap-hub-hero.jpg
 alt: "Ethereum yol haritası"
 summaryPoints:
 buttons:
@@ -61,7 +61,7 @@ Ethereum; ölçeklenebilirliğini, güvenliğini ya da sürdürülebilirliğini 
 
 Yol haritası çoğunlukla, araştırmacı ve geliştirmecilerin yıllar süren çalışmasının ürünüdür çünkü protokol oldukça tekniktir, ancak motive olmuş kişiler katılabilir. Fikirler genellikle [ethresear.ch](https://ethresear.ch/), [Ethereum sihirbazları](https://ethereum-magicians.org/) gibi forumlarda veya Eth Ar&Ge discord sunucusunda tartışma başlıkları olarak ortaya atılır. Yeni keşfedilmiş sistem açıklarına karşı tepkiler, uygulama katmanında çalışan organizasyonlardan (merkeziyetsiz uygulama ve borsalar) öneriler ya da son kullanıcılar için bilinen ihtilaflar (ücretler veya işlem hızları gibi) olabilir. Bu fikirler olgunlaştığında [Ethereum İyileştirme Önerileri](https://eips.ethereum.org/) olarak önerilebilirler. Herhangi bir zamanda topluluk içinden fikir sunulması için bu, tümüyle halka açık biçimde yapılır.
 
-[Ethereum yönetişimi hakkında daha fazlası](/yönetişim/)
+[Ethereum yönetişimi hakkında daha fazlası](/governance/)
 
 </RoadmapImageContent>
 

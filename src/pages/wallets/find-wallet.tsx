@@ -142,6 +142,7 @@ const FindWalletPage = () => {
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
+        image="/wallets/wallet-hero.png"
       />
 
       <BannerNotification shouldShow={true}>

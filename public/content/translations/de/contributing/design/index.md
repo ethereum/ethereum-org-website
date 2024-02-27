@@ -12,7 +12,7 @@ Letztendlich ist das eine großartige Möglichkeit, ein vielfältiges und beeind
 
 ## Wie kann ich etwas beitragen?
 
-### <Emoji text=":one:" size={1} /> Geben Sie Feedback zu frühen Design-Prototypen {#design-critique}
+### <Emoji text=":one:" size={1} /> &nbsp;Geben Sie Feedback zu frühen Design-Prototypen {#design-critique}
 
 Manchmal brauchen wir Hilfe beim Testen unserer "rohen" Ideen. Das ist eine großartige Möglichkeit, auch ohne technische Kenntnisse einen Beitrag zu leisten.
 
@@ -20,7 +20,7 @@ Manchmal brauchen wir Hilfe beim Testen unserer "rohen" Ideen. Das ist eine gro�
 2. Sie werden durch die Entwürfe geführt und können über die Kommentarfunktion Feedback geben.
 3. Das Ergebnis wird in einem GitHub-Issue geteilt und dann vom Team abgeschlossen.
 
-### <Emoji text=":two:" size={1} /> Teilnahme an Umfragen {#answer-surveys}
+### <Emoji text=":two:" size={1} /> &nbsp;Teilnahme an Umfragen {#answer-surveys}
 
 Geben Sie Feedback zu unserer Website:
 
@@ -28,7 +28,7 @@ Geben Sie Feedback zu unserer Website:
 2. Klicken Sie auf das Feedback-Widget in der rechten unteren Ecke und beantworten Sie Fragen zum Design und zum Inhalt.
 3. Konzentrieren Sie sich auf die Fragen zum freien Format.
 
-### <Emoji text=":three:" size={1} /> Finden Sie designbezogene Probleme auf der Website und melden Sie diese. {#report-design-issues}
+### <Emoji text=":three:" size={1} /> &nbsp;Finden Sie designbezogene Probleme auf der Website und melden Sie diese. {#report-design-issues}
 
 Ethereum.org ist eine schnell wachsende Website mit vielen Funktionen und Inhalten. Einige der Benutzeroberflächen können leicht veraltet sein oder verbessert werden. Wenn Ihnen ein solches Problem auffällt, melden Sie es bitte, damit wir darauf aufmerksam werden.
 
@@ -36,7 +36,7 @@ Ethereum.org ist eine schnell wachsende Website mit vielen Funktionen und Inhalt
 2. Machen Sie Screenshots und Notizen, wenn Sie visuelle oder UX-Probleme sehen.
 3. Melden Sie die gefundenen Probleme in einem [Fehlerbericht](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 
-### <Emoji text=":four:" size={1} /> Designänderungen vorschlagen {#propose-design-changes}
+### <Emoji text=":four:" size={1} /> &nbsp;Designänderungen vorschlagen {#propose-design-changes}
 
 Wenn Sie sich mit Design-Herausforderungen wohlfühlen, können Sie unser GitHub Issues Board besuchen und nach [designbezogenen Issues](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) filtern.
 
@@ -45,7 +45,7 @@ Wenn Sie sich mit Design-Herausforderungen wohlfühlen, können Sie unser GitHub
 3. Schlagen Sie die Lösung in dem entsprechenden GitHub-Thema vor oder erstellen Sie ein [neues Thema](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request).
 4. Warten Sie auf die Überprüfung durch das Designteam.
 
-### <Emoji text=":five:" size={1} /> Das Designsystem gemeinsam aufbauen {#Contribute-to-design-system}
+### <Emoji text=":five:" size={1} /> &nbsp;Das Designsystem gemeinsam aufbauen {#Contribute-to-design-system}
 
 Mit unserem Designsystem macht das Entwerfen von ethereum.org Spaß und ist einfach. Wenn Sie ein erfahrener Designer sind, können Sie uns helfen, viele Komponenten für die Website vorzubereiten.
 
@@ -56,7 +56,7 @@ Mit unserem Designsystem macht das Entwerfen von ethereum.org Spaß und ist einf
 5. Das Designteam wird es dann überprüfen.
 6. Das Designteam wird die Änderungen in die Hauptdatei einarbeiten und die Datei in der Community veröffentlichen.
 
-### <Emoji text=":six:" size={1} /> Verfassen Sie designbezogene Inhalte auf der Website. {#write-design-articles}
+### <Emoji text=":six:" size={1} /> &nbsp;Verfassen Sie designbezogene Inhalte auf der Website. {#write-design-articles}
 
 Die Ethereum-Entwickler-Community ist stark, aber die Design-Community hinkt etwas hinterher. Wenn Sie ein Designer mit Web3-Kenntnissen sind, ziehen Sie bitte in Erwägung, Ihre Erkenntnisse mit der größeren Community zu teilen, damit wir alle gemeinsam wachsen und uns verbessern können; wir haben eine [Seite über Design für Ethereum](/developers/docs/design-and-ux/), zu der Sie beitragen können. Sie können auch unsere [Richtline zur Listung](/contributing/design/adding-design-resources) ansehen.
 
@@ -66,7 +66,7 @@ Die Ethereum-Entwickler-Community ist stark, aber die Design-Community hinkt etw
 4. Sobald die Anfrage genehmigt ist, schreiben Sie den Inhalt.
 5. Reichen Sie ihn im entsprechenden GH-Thema ein.
 
-### <Emoji text=":seven:" size={1} /> Gestalten Sie neue Illustrationen. {#prepare-illustrations}
+### <Emoji text=":seven:" size={1} /> &nbsp;Gestalten Sie neue Illustrationen. {#prepare-illustrations}
 
 Visualisierungen sind eines der wirkungsvollsten Instrumente zur Erklärung abstrakter Themen. Der Einsatz von Diagrammen und Infografiken birgt ein enormes Potenzial. Schließlich kann ein Bild mehr als tausend Worte sagen.
 

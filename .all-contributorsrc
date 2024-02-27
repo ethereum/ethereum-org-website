@@ -1521,7 +1521,7 @@
       "login": "sassal",
       "name": "sassal",
       "avatar_url": "https://avatars0.githubusercontent.com/u/9276959?v=4",
-      "profile": "https//twitter.com/sassal0x",
+      "profile": "https://twitter.com/sassal0x",
       "contributions": [
         "content"
       ]
@@ -8830,7 +8830,7 @@
       "login": "joonspoon",
       "name": "June Clarke ",
       "avatar_url": "https://avatars.githubusercontent.com/u/302478?v=4",
-      "profile": "jointheleague.org",
+      "profile": "https://www.jointheleague.org/",
       "contributions": [
         "doc"
       ]
@@ -8839,7 +8839,7 @@
       "login": "slf188",
       "name": "菲利",
       "avatar_url": "https://avatars.githubusercontent.com/u/49417481?v=4",
-      "profile": "huggingface.co/slf188",
+      "profile": "https://huggingface.co/slf188",
       "contributions": [
         "doc"
       ]
@@ -11082,6 +11082,33 @@
       "profile": "https://github.com/jennyg0",
       "contributions": [
         "code"
+      ]
+    },
+    {
+      "login": "Molotov-Eugene",
+      "name": "Eugene",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95471552?v=4",
+      "profile": "https://github.com/Molotov-Eugene",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "rimtaex",
+      "name": "RimTaeX",
+      "avatar_url": "https://avatars.githubusercontent.com/u/155366533?v=4",
+      "profile": "https://github.com/rimtaex",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "zarifpour",
+      "name": "Daniel Zarifpour",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16494335?v=4",
+      "profile": "http://zarifpour.xyz",
+      "contributions": [
+        "content"
       ]
     }
   ],

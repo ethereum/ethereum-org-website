@@ -91,7 +91,7 @@ const FeedbackWidget = () => {
   const surveyUrl = useSurvey(feedbackSubmitted)
 
   const bottomOffset = useMemo(() => {
-    const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
+    const pathsWithBottomNav = ["/staking/", "/dao/", "/defi/", "/nft/"]
     const CONDITIONAL_OFFSET = 6.75
     let offset = 0
     pathsWithBottomNav.forEach((path) => {
