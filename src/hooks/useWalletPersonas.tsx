@@ -55,7 +55,6 @@ interface Personas {
     withdraw_crypto: boolean
     multisig: boolean
     social_recovery: boolean
-    eip_1559_support: boolean
   }
 }
 
@@ -117,9 +116,6 @@ export const useWalletPersonas = () => {
     erc_20_support: {
       label: t("page-find-wallet-token-support"),
     },
-    eip_1559_support: {
-      label: t("page-find-wallet-fee-optimization"),
-    },
   }
   const personas: Personas[] = [
     {
@@ -131,7 +127,6 @@ export const useWalletPersonas = () => {
         filterLabels.ens_support,
         filterLabels.erc_20_support,
         filterLabels.buy_crypto,
-        filterLabels.eip_1559_support,
       ],
       presetFilters: {
         android: false,
@@ -159,7 +154,6 @@ export const useWalletPersonas = () => {
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
-        eip_1559_support: true,
       },
     },
     {
@@ -196,7 +190,6 @@ export const useWalletPersonas = () => {
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
-        eip_1559_support: false,
       },
     },
     {
@@ -229,7 +222,6 @@ export const useWalletPersonas = () => {
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
-        eip_1559_support: false,
       },
     },
     {
@@ -240,7 +232,6 @@ export const useWalletPersonas = () => {
         filterLabels.connect_to_dapps,
         filterLabels.gas_fee_customization,
         filterLabels.erc_20_support,
-        filterLabels.eip_1559_support,
       ],
       presetFilters: {
         android: false,
@@ -268,7 +259,6 @@ export const useWalletPersonas = () => {
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
-        eip_1559_support: true,
       },
     },
     {
@@ -308,7 +298,6 @@ export const useWalletPersonas = () => {
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
-        eip_1559_support: false,
       },
     },
   ]

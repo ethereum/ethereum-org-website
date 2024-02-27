@@ -225,15 +225,6 @@ export const useWalletFilterFeature = ({
           showOptions: undefined,
           options: [],
         },
-        // TODO: remove
-        {
-          title: t(walletFilterData.eip_1559_support.title),
-          icon: EIP1559Icon,
-          description: t(walletFilterData.eip_1559_support.description),
-          filterKey: walletFilterData.eip_1559_support.filterKey,
-          showOptions: undefined,
-          options: [],
-        },
       ],
     },
     {

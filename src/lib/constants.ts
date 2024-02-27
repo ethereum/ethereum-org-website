@@ -82,7 +82,6 @@ export const NEW_TO_CRYPTO_FEATURES = [
   "ens_support",
   "erc_20_support",
   "buy_crypto",
-  "eip_1559_support",
 ]
 
 export const NFTS_FEATURES = ["nft_support", "layer_2", "connect_to_dapps"]
@@ -94,7 +93,6 @@ export const FINANCE_FEATURES = [
   "connect_to_dapps",
   "gas_fee_customization",
   "erc_20_support",
-  "eip_1559_support",
 ]
 
 export const DEVELOPER_FEATURES = [
