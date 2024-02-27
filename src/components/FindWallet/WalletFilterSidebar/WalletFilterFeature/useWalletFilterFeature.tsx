@@ -10,7 +10,6 @@ import {
   BuyCryptoIcon,
   ConnectDappsIcon,
   DesktopIcon,
-  EIP1559Icon,
   ENSSupportIcon,
   ERC20SupportIcon,
   GasFeeCustomizationIcon,

@@ -5,7 +5,6 @@ import { useTranslation } from "next-i18next"
 // import {
 //   BuyCryptoIcon,
 //   ConnectDappsIcon,
-//   EIP1559Icon,
 //   ENSSupportIcon,
 //   ERC20SupportIcon,
 //   GasFeeCustomizationIcon,
