@@ -61,6 +61,8 @@
   "events-definition": "Allows the use of <a href=\"/glossary/#evm\">EVM</a> logging facilities. <a href=\"/glossary/#dapp\">Dapps</a> can listen for events and use them to trigger JavaScript callbacks in the user interface. <a href=\"/developers/docs/smart-contracts/anatomy/#events-and-logs\">More on events and logs</a>",
   "execution-layer-term": "Execution layer",
   "execution-layer-definition": "Ethereum's execution layer is the network of <a href=\"/glossary/#execution-client\">execution clients</a>.",
+  "finality-term": "Finality",
+  "finality-definition": "Finality is the guarantee that a set of transactions before a given time will not change and can't be reverted. <a href=\"/developers/docs/consensus-mechanisms/pos/#finality\">More on proof-of-stake finality</a>.",
   "fork-term": "Fork",
   "fork-definition": "A change in protocol causing the creation of an alternative chain or a temporal divergence into two potential block paths.",
   "fraud-proof-term": "Fraud proof",
