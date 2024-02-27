@@ -743,7 +743,7 @@ Bu, fabrikanın ana işlevidir, yani iki ERC-20 token'ı arasında bir eş takas
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Zincir dışında önceden hesaplanabilmesi için yeni takasın adresinin deterministik olmasını istiyoruz (bu, [katman 2 işlemleri](/developers/docs/layer-2-scaling/) için yararlı olabilir). Bunu yapabilmek için onları aldığımız sıraya bakmaksızın jeton adreslerinin tutarlı bir sırasına sahip olmamız gerekir, bu yüzden de onları burada sıralarız.
+Zincir dışında önceden hesaplanabilmesi için yeni takasın adresinin deterministik olmasını istiyoruz (bu, [katman 2 işlemleri](/developers/docs/scaling/) için yararlı olabilir). Bunu yapabilmek için onları aldığımız sıraya bakmaksızın jeton adreslerinin tutarlı bir sırasına sahip olmamız gerekir, bu yüzden de onları burada sıralarız.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');

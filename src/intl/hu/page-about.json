@@ -22,5 +22,15 @@
   "page-about-p-6": "A bevezetésre váró feladataink.",
   "page-about-p-7": "Befejezett feladatok.",
   "page-about-p-8": "Fejlesztési javaslatod van az ethereum.org-al kapcsolatban? Szívesen együttműködnénk!",
-  "page-what-is-ethereum-energy-consumption-chart-legend": "Éves energiafogyasztás TWh/évben"
+  "page-what-is-ethereum-energy-consumption-chart-legend": "Éves energiafogyasztás TWh/évben",
+  "page-upgrades-post-merge-banner-governance-ood": "Az oldalon található tartalmak egy része a beolvadás után már nem naprakész. Ha szeretne segíteni, kérjük, küldjön egy bejelentést (PR-t).",
+  "energy-consumption-chart-global-data-centers-label": "Globális adatközpontok",
+  "energy-consumption-chart-airbnb-label": "AirBnB",
+  "energy-consumption-gold-mining-cbeci-label": "Aranybányászat",
+  "energy-consumption-chart-btc-pow-label": "BTC PoW",
+  "energy-consumption-chart-netflix-label": "Netflix",
+  "energy-consumption-chart-eth-pow-label": "ETH PoW",
+  "energy-consumption-chart-gaming-us-label": "Számítógépes játék (USA)",
+  "energy-consumption-chart-paypal-label": "PayPal",
+  "energy-consumption-chart-eth-pos-label": "ETH PoS"
 }

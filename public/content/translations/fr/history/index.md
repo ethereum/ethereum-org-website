@@ -310,9 +310,10 @@ La fourche Istanbul a :
 
 La fourche Constantinople a :
 
-- protégé la blockchain d'un blocage avant [l'implémentation de la preuve d'enjeu](#beacon-chain-genesis)  ;
-- optimisé le coût de [gaz](/glossary/#gas) certaines actions dans l'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ;
-- ajouté la possibilité d'interagir avec des adresses qui n'ont pas encore été créées.
+- Réduit les récompenses pour le [minage des blocs](/developers/docs/consensus-mechanisms/pow/mining/) de 3 à 2 ETH.
+- S'assurer que la blockchain ne se fige pas avant [la mise en œuvre de la preuve d'enjeu](#beacon-chain-genesis).
+- optimisé le coût de [gaz](/glossary/#gas) de certaines actions dans l'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine) ;
+- Ajouté la possibilité d'interagir avec des adresses qui n'ont pas encore été créées.
 
 [Lire l'annonce de l'Ethereum Foundation](https://blog.ethereum.org/2019/02/22/ethereum-constantinople-st-petersburg-upgrade-announcement/)
 
@@ -322,7 +323,7 @@ La fourche Constantinople a :
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>Optimise le coût de certaines actions en chaîne.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>vous permet d'interagir avec des adresses qui n'ont pas encore été créées.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>optimise le coût de certaines actions en chaîne.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>s'assure que la blockchain ne gèle pas &#39;avant la preuve d'enjeu.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>s'assure que la blockchain ne gèle pas &#39;avant la preuve d'enjeu et réduit les récompenses de 3 à 2 ETH par bloc.</em></li>
 </ul>
 
 </ExpandableCard>

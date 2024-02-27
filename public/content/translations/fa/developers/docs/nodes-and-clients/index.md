@@ -233,8 +233,6 @@ Erigon که قبلاً به عنوان Erigon شناخته می‌شد، یک ف
 
 `geth --syncmode "light"`
 
-برای جزئیات بیشتر آموزش [اجرای گره‌ی سبک geth](/developers/tutorials/run-light-node-geth/) را مشاهده کنید.
-
 **تنظیم همگام‌سازی کامل با آرشیو در [Besu](https://besu.hyperledger.org/)**
 
 `besu --sync-mode=FULL`
@@ -312,5 +310,4 @@ Erigon که قبلاً به عنوان Erigon شناخته می‌شد، یک ف
 
 ## آموزش‌های مرتبط {#related-tutorials}
 
-- [اجرای یک گره با geth](/developers/tutorials/run-light-node-geth/) _- چگونه geth را بارگیری، نصب و اجرا کنیم. Covering syncmodes, the JavaScript console, and more._
 - [Raspberry Pi 4 خود را فقط با اتصال کارت MicroSD به یک گره‌ی اعتبارسنج تبدیل کنید - راهنمای نصب](/developers/tutorials/run-node-raspberry-pi/) _- Raspberry Pi 4 خود را متصل کنید، یک کابل اترنت وصل کنید، دیسک SSD را وصل کنید و دستگاه را روشن کنید تا Raspberry Pi 4 را به یک گره‌ی کامل اتریوم که لایه‌ی اجرا (شبکه‌ی اصلی) و / یا لایه‌ی اجماع (زنجیره‌ی بیکن / اعتبارسنج) را اجرا می‌کند تبدیل کنید._
