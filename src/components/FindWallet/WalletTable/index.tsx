@@ -300,7 +300,11 @@ const WalletTable = ({
                 }}
               >
                 <Td lineHeight="revert">
-                  <Flex justifyContent="space-between" alignItems="center">
+                  <Flex
+                    justifyContent="space-between"
+                    alignItems="center"
+                    w="100%"
+                  >
                     <FlexInfo w={{ base: "100%", md: "auto" }}>
                       {/* Wallet image */}
                       <Box w="56px">
@@ -317,7 +321,7 @@ const WalletTable = ({
                           <Text>{wallet.name}</Text>
 
                           {/* Wallet Personas supported */}
-                          <Flex gap={1.5}>
+                          <Flex gap={1.5} wrap="wrap">
                             {walletPersonas.map((persona) => (
                               <Tag
                                 key={persona}
