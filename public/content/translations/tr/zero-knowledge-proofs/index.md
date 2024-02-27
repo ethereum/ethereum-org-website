@@ -4,7 +4,7 @@ description: Yeni başlayanlar için sıfır bilgili ispatlara teknik olmayan bi
 lang: tr
 ---
 
-## Sıfır bilgili ispatlar nelerdir? {#what-are-zk-proofs}
+# Sıfır bilgili ispatlar nelerdir? {#what-are-zk-proofs}
 
 Sıfır bilgili ispat, ifadenin kendisini açığa çıkarmadan bir ifadenin geçerliliğini kanıtlamanın bir yoludur. "Kanıtlayıcı", bir iddiayı kanıtlamaya çalışan taraftır, "doğrulayıcı" ise iddiayı doğrulamaktan sorumludur.
 

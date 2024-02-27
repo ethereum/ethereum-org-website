@@ -7,7 +7,7 @@ import { DEFAULT_LOCALE, TRANSLATED_IMAGES_DIR } from "../constants"
 export const getFallbackEnglishPath = (path: string) => {
   const splittedPath = path.split("translations/")
 
-  return join(splittedPath[0], splittedPath[1].split("/").slice(1).join("/"))
+  return join(splittedPath[0], ...splittedPath[1].split("/").slice(1))
 }
 
 // If content is in english, remove en/ prefix so filepath can be read correctly

@@ -151,7 +151,7 @@ Dort finden Sie die Versionsseiten der Clients, auf denen Sie die vorgefertigten
 ##### Clients auf Ausführungsebene
 
 - [Besu](https://github.com/hyperledger/besu/releases)
-- [Erigon](https://github.com/ledgerwatch/erigon#usage) (Bietet keine vorgefertigte Binärdatei, muss kompiliert werden)
+- [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
 

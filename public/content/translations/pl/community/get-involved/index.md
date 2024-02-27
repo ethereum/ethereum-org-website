@@ -28,7 +28,7 @@ Czy masz doświadczenie w matematyce, kryptografii lub ekonomii? Może zainteres
 - Napisz lub zrecenzuj Propozycję Ulepszenia Ethereum
   - Napisz EIP
     1. Przedstaw swój pomysł na [Ethereum Magicians](https://ethereum-magicians.org)
-    2. Przeczytaj [EIP-1](https://eip.ethereum.org/EIPS/eip-1) — **Tak, jest to _cały_ dokument.**
+    2. Przeczytaj [EIP-1](https://eips.ethereum.org/EIPS/eip-1) — **Tak, jest to _cały_ dokument.**
     3. Postępuj zgodnie z instrukcjami w EIP-1. Odwołaj się do niego podczas pisania wersji wstępnej.
   - Dowiedz się jak zostać [edytorem EIP](https://eips.ethereum.org/EIPS/eip-5069)
     - Możesz już teraz recenzować EIP! Zobacz [otwarte pull requesty (PR) z tagiem `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Przekaż techniczną opinię na temat linku `discussion-to`.

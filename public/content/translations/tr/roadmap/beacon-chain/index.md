@@ -28,7 +28,7 @@ summaryPoint3: İşaret Zinciri ve mutabakat mantığını ve şimdilerde Ethere
 
 İşaret Zinciri, Ethereum'a [Hisse İspatını](/developers/docs/consensus-mechanisms/pos/) tanıttı. Bu, Ethereum'u güvende tutar ve süreç doğrulayıcılarına daha fazla ETH kazandırır. Pratikte hisseleme, doğrulayıcı yazılımını aktive etmek için ETH'nin hisselenmesini içerir. Bir paydaş olarak, zincirde yeni bloklar oluşturan ve doğrulayan yazılımı çalıştırırsınız.
 
-Hisseleme [ madenciliğin](/developers/docs/mining/) eskiden yaptığına benzer bir amaca hizmet eder, ancak birçok yönden farklıdır. Madencilik güçlü donanım, enerji harcaması gibi büyük ön harcamalar gerektiriyordu ve ölçeklendirilmiş ekonomilere sebep oluyor ve merkeziyetçiliği teşvik ediyordu. Madencilik ayrıca varlıkları teminat olarak kitlemeye gerek duymuyordu ve protokolün uğranan saldırıdan sonra gerekli kişilere gerekli ceza vermesini de sınırlandırıyordu.
+Hisseleme [ madenciliğin](/developers/docs/consensus-mechanisms/pow/mining/) eskiden yaptığına benzer bir amaca hizmet eder, ancak birçok yönden farklıdır. Madencilik güçlü donanım, enerji harcaması gibi büyük ön harcamalar gerektiriyordu ve ölçeklendirilmiş ekonomilere sebep oluyor ve merkeziyetçiliği teşvik ediyordu. Madencilik ayrıca varlıkları teminat olarak kitlemeye gerek duymuyordu ve protokolün uğranan saldırıdan sonra gerekli kişilere gerekli ceza vermesini de sınırlandırıyordu.
 
 Hisse ispatına geçiş Ethereum'u, iş ispatına kıyasla, çok daha güvenli ve merkeziyetsiz hale getirdi. Ağa katılan insan sayısı arttıkça, mevcut ağ bir o kadar merkeziyetsiz ve saldırılara karşı daha da güvende olur.
 

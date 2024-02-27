@@ -331,7 +331,7 @@ type RunANodeCard = {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/run-a-node")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -446,6 +446,7 @@ const RunANodePage = () => {
       <PageMetadata
         title={t("page-run-a-node-title")}
         description={t("page-run-a-node-meta-description")}
+        image="/run-a-node/ethereum-inside.png"
       />
       <HeroContainer>
         <Box pb="8">
@@ -802,7 +803,7 @@ const RunANodePage = () => {
               >
                 {t("page-run-a-node-community-link-1")}
               </ButtonLink>
-              <ButtonLink to="/community/online/" variant="outline">
+              <ButtonLink to="/community/online/" variant="outline" isSecondary>
                 {t("page-run-a-node-community-link-2")}
               </ButtonLink>
             </ButtonContainer>

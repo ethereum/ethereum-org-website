@@ -10,7 +10,7 @@ Pentru a implementa un contract inteligent, trebuie doar să trimiteţi o tranza
 
 ## Condiții prealabile {#prerequisites}
 
-Ar trebui să înțelegeţi [rețelele Ethereum](/developers/docs/networks/), [tranzacțiile](/developers/docs/transactions/) și [anatomia contractelor inteligente](/developers/docs/smart-contract/anatomy/) înainte de a implementa contracte inteligente.
+Ar trebui să înțelegeţi [rețelele Ethereum](/developers/docs/networks/), [tranzacțiile](/developers/docs/transactions/) și [anatomia contractelor inteligente](/developers/docs/smart-contracts/anatomy/) înainte de a implementa contracte inteligente.
 
 Implementarea unui contract costă de asemenea ether (ETH), deci ar trebui să vă familiarizaţi cu [gazul și taxele](/developers/docs/gas/) pe Ethereum.
 

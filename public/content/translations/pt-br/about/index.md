@@ -104,7 +104,7 @@ Nós usamos um conjunto de [princípios de design](/contributing/design-principl
 
 Construímos e lançamos um [sistema de design](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) para enviar funcionalidades mais rapidamente e permitir que os membros da comunidade participem do design aberto do ethereum.org.
 
-Quer se envolver?[Acompanhe no Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [assuntos no GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) e junte-se à conversa em nosso [canal #design no Discord](https://discord.gg/ethereum-org).
+Quer se envolver?[Acompanhe no Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), [assuntos no GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) e junte-se à conversa em nosso [canal #design no Discord](https://discord.gg/bKycYhVUwV).
 
 ## Guia de estilo {#style-guide}
 
