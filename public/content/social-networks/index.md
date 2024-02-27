@@ -15,17 +15,17 @@ Social networks play a massive role in our daily communications and interactions
 
 ## What are decentralized social networks? {#what-are-decentralized-social-networks}
 
-Decentralized social networks are blockchain-based platforms that allow users to exchange information as well as publish and distribute content to audiences. Because these applications run on the blockchain, they are capable of being decentralized and resistant to censorship and undue control.
+Decentralized social networks are [blockchain-based](/glossary/#blockchain) platforms that allow users to exchange information as well as publish and distribute content to audiences. Because these applications run on the blockchain, they are capable of being decentralized and resistant to censorship and undue control.
 
 Many decentralized social networks exist as alternatives to established social media services, such as Facebook, LinkedIn, Twitter, and Medium. But blockchain-powered social networks have a number of features that put them ahead of traditional social platforms.
 
 ### How do decentralized social networks work? {#decentralized-social-networks-overview}
 
-Decentralized social networks are a class of [decentralized applications (dapps)](/dapps/)—applications powered by [smart contracts](/developers/docs/smart-contracts/) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
+Decentralized social networks are a class of [decentralized applications (dapps)](/dapps/)—applications powered by [smart contracts](/glossary/#smart-contract) deployed on the blockchain. The contract code serves as the backend for these apps and defines their business logic.
 
 Traditional social media platforms rely on databases to store user information, program code, and other forms of data. But this creates single points-of-failure and introduces significant risk. For instance, Facebook's servers infamously [went offline for hours](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact) last year, cutting off users from the platform.
 
-Decentralized social networks exist on a peer-to-peer network comprising thousands of nodes around the globe. Even if some nodes fail, the network will run uninterrupted, making applications resistant to failures and outages.
+Decentralized social networks exist on a [peer-to-peer network](/glossary/#peer-to-peer-network) comprising thousands of nodes around the globe. Even if some nodes fail, the network will run uninterrupted, making applications resistant to failures and outages.
 
 Using decentralized storage systems like [the InterPlanetary File System (IPFS)](https://ipfs.io/), social networks built on Ethereum can protect user information from exploitation and malicious use. No one will sell your personal information to advertisers, neither will hackers be able to steal your confidential details.
 
@@ -41,9 +41,9 @@ Many blockchain-based social platforms have native tokens that power monetizatio
 
 4. As dapps running on the Ethereum network, which is sustained by a global, peer-to-peer network of nodes, decentralized social networks are less susceptible to server downtime and outages.
 
-5. Decentralized social platforms offer an improved monetization framework for content creators via non-fungible tokens (NFTs), in-app crypto payments, and more.
+5. Decentralized social platforms offer an improved monetization framework for content creators via [non-fungible tokens (NFTs)](/glossary/#nft), in-app crypto payments, and more.
 
-6. Decentralized social networks afford users a high level of privacy and anonymity. For instance, an individual can sign in to an Ethereum-based social network using an ENS profile or wallet—without having to share personally identifiable information (PII), such as names, email addresses, etc.
+6. Decentralized social networks afford users a high level of privacy and anonymity. For instance, an individual can sign in to an Ethereum-based social network using an [ENS](/glossary/#ens) profile or [wallet](/glossary/#wallet)—without having to share personally identifiable information (PII), such as names, email addresses, etc.
 
 7. Decentralized social networks rely on decentralized storage, not centralized databases, which are considerably better for safeguarding user data.
 
@@ -61,21 +61,21 @@ Users can send short messages called "Peeps", which cannot be deleted or modifie
 
 [Mirror](https://mirror.xyz/) is a web3-enabled writing platform that aims to be decentralized and user-owned. Users can read and write for free on Mirror by simply connecting their wallets. Users can also collect writing and subscribe to their favorite writers.
 
-Posts published on Mirror are permanently stored on Arweave, a decentralized storage platform, and can be minted as collectable [non-fungible tokens (NFTs)](/nft/) known as Writing NFTs. Writing NFTs are completely free for writers to create, and collection happens on an Ethereum L2 — making transactions inexpensive, fast, and environmentally friendly.
+Posts published on Mirror are permanently stored on Arweave, a decentralized storage platform, and can be minted as collectable [non-fungible tokens (NFTs)](/nft/) known as Writing NFTs. Writing NFTs are completely free for writers to create, and collection happens on an Ethereum [L2](/glossary/#layer-2) — making transactions inexpensive, fast, and environmentally friendly.
 
 ### MINDS {#minds}
 
 [MINDS](https://www.minds.com/) is one of the most used decentralized social networks. It works like Facebook and has racked up millions of users already.
 
-Users use the platform's native ERC-20 token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
+Users use the platform's native [ERC-20](/glossary/#erc-20) token $MIND to pay for items. Users can also earn $MIND tokens by publishing popular content, contributing to the ecosystem, and referring others to the platform.
 
 ## Web2 social networks on Ethereum {#web2-social-networks-and-ethereum}
 
-[Web3](/web3/) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
+[Web3](/glossary/#web3) native social platforms aren't the only ones trying to incorporate blockchain technology into social media. Many centralized platforms are also planning to integrate Ethereum into their infrastructure:
 
 ### Reddit {#reddit}
 
-Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are [ERC-20 tokens](/developers/docs/standards/tokens/erc-20/) that users can earn by posting quality content and contributing to online communities (subreddits). You can redeem these tokens within a subreddit to [get exclusive privileges and perks](https://www.reddit.com/community-points/). For this project, Reddit is working with Arbitrum, a [layer 2](/layer-2/) rollup designed to scale Ethereum transactions.
+Reddit has [touted Community Points](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users), which are [ERC-20 tokens](/developers/docs/standards/tokens/erc-20/) that users can earn by posting quality content and contributing to online communities (subreddits). You can redeem these tokens within a subreddit to [get exclusive privileges and perks](https://www.reddit.com/community-points/). For this project, Reddit is working with Arbitrum, a [layer 2](/glossary/#layer-2) rollup designed to scale Ethereum transactions.
 
 The program is already live, with the r/CryptoCurrency subreddit [running its version of Community Points called "Moons"](https://www.reddit.com/r/CryptoCurrency/wiki/moons_wiki). Per the official description, Moons "reward posters, commenters, and moderators for their contributions to the subreddit." Because these tokens are on the blockchain (users receive them in wallets), they are independent of Reddit and cannot be taken away.
 
