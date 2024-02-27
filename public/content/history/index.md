@@ -172,6 +172,20 @@ Altair was the first major network upgrade that had an exact rollout time. Every
 
 The London upgrade introduced [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), which reformed the transaction fee market, along with changes to how gas refunds are handled and the [Ice Age](/glossary/#ice-age) schedule.
 
+#### What was the London Upgrade / EIP-1559? {#eip-1559}
+
+Before the London Upgrade, Ethereum had fixed-sized blocks. In times of high network demand, these blocks operated at full capacity. As a result, users often had to wait for demand to reduce to get included in a block, which led to a poor user experience. The London Upgrade introduced variable-sized blocks to Ethereum.
+
+The way transaction fees on the Ethereum network were calculated changed with [the London Upgrade](/history/#london) of August 2021. Before the London upgrade, fees were calculated without separating `base` and `priority` fees, as follows:
+
+Let's say Alice had to pay Bob 1 ETH. In the transaction, the gas limit is 21,000 units, and the gas price is 200 gwei.
+
+The total fee would have been: `Gas units (limit) * Gas price per unit` i.e `21,000 * 200 = 4,200,000 gwei` or 0.0042 ETH
+
+The implementation of [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) in the London Upgrade made the transaction fee mechanism more complex, but made gas fees more predictable, resulting in a more efficient transaction fee market. Users can submit transactions with a `maxFeePerGas` corresponding to how much they are willing to pay for the transaction to be executed, knowing that they will not pay more than the market price for gas (`baseFeePerGas`), and get any extra, minus their tip, refunded.
+
+This video explains EIP-1559 and the benefits it brings: [EIP-1559 Explained](https://www.youtube.com/watch?v=MGemhK9t44Q)
+
 - [Are you a dapp developer? Be sure to upgrade your libraries and tooling.](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/london-ecosystem-readiness.md)
 - [Read the Ethereum Foundation announcement](https://blog.ethereum.org/2021/07/15/london-mainnet-announcement/)
 - [Read the Ethereum Cat Herder's explainer](https://medium.com/ethereum-cat-herders/london-upgrade-overview-8eccb0041b41)

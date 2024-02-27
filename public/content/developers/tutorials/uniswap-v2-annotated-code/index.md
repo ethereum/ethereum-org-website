@@ -755,7 +755,7 @@ This is the main function of the factory, to create a pair exchange between two 
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-We want the address of the new exchange to be deterministic, so it can be calculated in advance off chain (this can be useful for [layer 2 transactions](/developers/docs/layer-2-scaling/)).
+We want the address of the new exchange to be deterministic, so it can be calculated in advance off chain (this can be useful for [layer 2 transactions](/developers/docs/scaling/)).
 To do this we need to have a consistent order of the token addresses, regardless of the order in which we have received them, so we sort them here.
 
 ```solidity

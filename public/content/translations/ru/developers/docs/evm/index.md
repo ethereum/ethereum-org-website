@@ -10,7 +10,7 @@ lang: ru
 
 ## Прежде чем начать {#prerequisites}
 
-Некоторые базовые знания в информатике, например термины [байт](https://wikipedia.org/wiki/Byte), [память](https://wikipedia.org/wiki/Computer_memory) и [стек](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>), необходимы для понимания работы EVM. Также было бы полезно ознакомиться с такими понятиями криптографии и блокчейна, как [хэш-функции](https://wikipedia.org/wiki/Cryptographic_hash_function) и [дерево Меркла](https://wikipedia.org/wiki/Merkle_tree).
+Некоторые базовые знания в информатике, например термины [байт](https://wikipedia.org/wiki/Byte), [память](https://wikipedia.org/wiki/Computer_memory) и [стек](https://wikipedia.org/wiki/Stack_(abstract_data_type)), необходимы для понимания работы EVM. Также было бы полезно ознакомиться с такими понятиями криптографии и блокчейна, как [хэш-функции](https://wikipedia.org/wiki/Cryptographic_hash_function) и [дерево Меркла](https://wikipedia.org/wiki/Merkle_tree).
 
 ## От реестра к машине состояний {#from-ledger-to-state-machine}
 
@@ -64,6 +64,7 @@ EVM работает как [стековая машина](https://wikipedia.or
 - [evmone](https://github.com/ethereum/evmone) — _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) — _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) — _C++_
+- [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Дополнительные ресурсы {#further-reading}
 

@@ -51,6 +51,7 @@ import DogeImage from "@/public/doge-computer.png"
 import EthHomeImage from "@/public/eth-home-icon.png"
 import HeroImage from "@/public/heroes/layer-2-hub-hero.jpg"
 import DebankImage from "@/public/layer-2/debank.png"
+import growthepieImage from "@/public/layer-2/growthepie.png"
 import L2BEATImage from "@/public/layer-2/l2beat.jpg"
 import OptimisticRollupImage from "@/public/layer-2/optimistic_rollup.png"
 import RollupImage from "@/public/layer-2/rollup-2.png"
@@ -201,6 +202,13 @@ const Layer2Page = () => {
         alt: "L2BEAT",
       },
       {
+        title: "growthepie",
+        description: t("layer-2-tools-growthepie-description"),
+        link: "https://growthepie.xyz",
+        image: growthepieImage,
+        alt: "growthepie",
+      },
+      {
         title: "L2 Fees",
         description: t("layer-2-tools-l2fees-description"),
         link: "https://l2fees.info",
@@ -245,6 +253,7 @@ const Layer2Page = () => {
       <PageMetadata
         title={t("layer-2-hero-title")}
         description={t("layer-2-metadata-description")}
+        image="/heroes/layer-2-hub-hero.jpg"
       />
       {/* Hero Section */}
       <HubHero {...heroContent} />

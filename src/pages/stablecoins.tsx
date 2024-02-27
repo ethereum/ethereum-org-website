@@ -291,6 +291,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
     {
       title: t("page-stablecoins-algorithmic"),
       description: t("page-stablecoins-algorithmic-description"),
+      disclaimer: t("page-stablecoins-algorithmic-disclaimer"),
       emoji: ":chart_with_downwards_trend:",
       pros: [
         t("page-stablecoins-algorithmic-pro-1"),
@@ -403,6 +404,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       <PageMetadata
         title={t("page-stablecoins-title")}
         description={t("page-stablecoins-meta-description")}
+        image="/stablecoins/hero.png"
       />
       <PageHero isReverse content={heroContent} />
       <Divider />
@@ -521,7 +523,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <Box>
                       <ButtonLink
                         variant="outline"
-                        to="https://kb.oasis.app/help/what-is-dai"
+                        to="https://www.coinbase.com/price/dai#WhatIsDaiDAI"
+                        isSecondary
                       >
                         {t("page-stablecoins-dai-banner-learn-button")}
                       </ButtonLink>
@@ -563,7 +566,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <ButtonLink
                       mb={4}
                       me={4}
-                      to="https://matcha.xyz/markets/ETH/USDC"
+                      to="https://matcha.xyz/tokens/ethereum/0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48"
                     >
                       {t("page-stablecoins-usdc-banner-swap-button")}
                     </ButtonLink>
@@ -572,6 +575,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
                     <ButtonLink
                       variant="outline"
                       to="https://www.coinbase.com/usdc"
+                      isSecondary
                     >
                       {t("page-stablecoins-usdc-banner-learn-button")}
                     </ButtonLink>
@@ -597,6 +601,9 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               <Icon ms={2} fill="'text" name="info" boxSize={4} />
             </Tooltip>
           </H3>
+          <InfoBanner emoji="⚠️" isWarning>
+              {t("page-stablecoins-algorithmic-disclaimer")}
+          </InfoBanner>
           <Text>
             {t("page-stablecoins-top-coins-intro")}{" "}
             {t("page-stablecoins-top-coins-intro-code")}
@@ -640,7 +647,12 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             <ButtonLink to="/dapps/">
               {t("page-stablecoins-explore-dapps")}
             </ButtonLink>
-            <ButtonLink variant="outline" to="/defi/" whiteSpace="normal">
+            <ButtonLink
+              variant="outline"
+              to="/defi/"
+              whiteSpace="normal"
+              isSecondary
+            >
               {t("page-stablecoins-more-defi-button")}
             </ButtonLink>
           </Flex>
@@ -705,20 +717,21 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             />
           ))}
         </Grid>
-        <InfoBanner isWarning shouldCenter>
-          <H3 mt={0} mb={4}>
-            {t("page-stablecoins-research-warning-title")}
-          </H3>
-          {t("page-stablecoins-research-warning")}
-        </InfoBanner>
       </Content>
       <Divider />
       <Content id="how">
         <H2 mt={0}>{t("page-stablecoins-types-of-stablecoin")}</H2>
+        <InfoBanner emoji="⚠️" isWarning>
+          <H3 mt={0} mb={4}>
+            {t("page-stablecoins-research-warning-title")}
+          </H3>
+          {t("page-stablecoins-algorithmic-disclaimer")}
+        </InfoBanner>
         <StablecoinBoxGrid items={features} />
       </Content>
       <Box id="tools" py={12} px={8} w="full">
         <H2>{t("page-stablecoins-tools-title")}</H2>
+        
         <Flex
           alignItems="flex-start"
           width="full"
@@ -737,7 +750,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           >
             <ProductList
               actionLabel={t("page-stablecoins:page-dapps-ready-button")}
-              category="Dashboards & Education"
+              category={t("page-stablecoins-category-dashboard-and-education")}
               content={toolsData}
             />
           </Box>
