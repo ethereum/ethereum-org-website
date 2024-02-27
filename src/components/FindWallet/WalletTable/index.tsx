@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import {
@@ -217,6 +218,7 @@ const WalletTable = ({
   walletData,
 }: WalletTableProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
+  const { locale } = useRouter()
   const {
     featureDropdownItems,
     // TODO: remove
@@ -279,7 +281,8 @@ const WalletTable = ({
           const walletPersonas = getWalletPersonas(wallet)
           const supportedLanguages = getSupportedLanguages(
             wallet.languages_supported,
-            languagesList
+            languagesList,
+            locale!
           )
 
           return (

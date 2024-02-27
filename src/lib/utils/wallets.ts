@@ -62,9 +62,17 @@ export const getWalletPersonas = (wallet: WalletData) => {
 // Get a list of wallet supported languages with native title
 export const getSupportedLanguages = (
   walletSupportedLanguages: string[],
-  languages: {}[]
+  languages: {}[],
+  locale: string
 ) => {
   const supportedLanguages = [] as string[]
+
+  // current locale should appear first on the list, this manipulates the array to move it to the top if needed
+  const localeIndex = walletSupportedLanguages.findIndex(
+    (current) => current === locale
+  )
+  walletSupportedLanguages.splice(localeIndex, 1)
+  walletSupportedLanguages.unshift(locale)
 
   walletSupportedLanguages.forEach((supportedLanguage) => {
     for (const [key, value] of Object.entries(languages)) {

@@ -94,7 +94,8 @@ const WalletFilterFeature = ({
                   px={4}
                   borderRadius={1}
                   _hover={{ color: "primary.hover" }}
-                  minW="max-content"
+                  // TODO: fix sidebar width
+                  // minW="max-content"
                 >
                   <AccordionButton
                     color="inherit"
