@@ -340,10 +340,18 @@ const StakingHierarchy = () => {
         </Header>
         <Glyph glyphIcon={StakingGlyphTokenWalletIcon} />
         <Content>
-          <p>{t("page-staking-hierarchy-pools-p1")}</p>
-          <p>{t("page-staking-hierarchy-pools-p2")}</p>
-          <p>{t("page-staking-hierarchy-pools-p3")}</p>
-          <p>{t("page-staking-hierarchy-pools-p4")}</p>
+          <p>
+            <Translation id="page-staking:page-staking-hierarchy-pools-p1" />
+          </p>
+          <p>
+            <Translation id="page-staking:page-staking-hierarchy-pools-p2" />
+          </p>
+          <p>
+            <Translation id="page-staking:page-staking-hierarchy-pools-p3" />
+          </p>
+          <p>
+            <Translation id="page-staking:page-staking-hierarchy-pools-p4" />
+          </p>
           <ButtonLink
             to="/staking/pools/"
             onClick={() => {

@@ -46,7 +46,7 @@ import rhino from "@/public/upgrades/upgrade_rhino.png"
 type BenefitsType = {
   title: string
   emoji: string
-  description: string
+  description: ReactNode
   linkText?: string
   to?: string
 }
@@ -151,7 +151,7 @@ const CardGrid = (props: ChildOnlyProp) => (
 const StyledCard = (props: {
   title: string
   emoji: string
-  description: string
+  description: ReactNode
   key: number
   children: ReactNode
 }) => (
@@ -249,7 +249,9 @@ const StakingPage = ({
     {
       title: t("page-staking-benefits-1-title"),
       emoji: "💰",
-      description: t("page-staking-benefits-1-description"),
+      description: (
+        <Translation id="page-staking:page-staking-benefits-1-description" />
+      ),
     },
     {
       title: t("page-staking-benefits-2-title"),
@@ -386,7 +388,9 @@ const StakingPage = ({
               <H2 id={tocItems.whatIsStaking.id}>
                 {tocItems.whatIsStaking.title}
               </H2>
-              <Text>{t("page-staking-description")}</Text>
+              <Text>
+                <Translation id="page-staking:page-staking-description" />
+              </Text>
               <Text>
                 <InlineLink href="/get-eth/">
                   {t("page-staking-section-what-link")}
@@ -485,14 +489,10 @@ const StakingPage = ({
                   </OldHeading>
                   <ul>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-solo-requirements-li1"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li1" />
                     </li>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-solo-requirements-li2"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li2" />
                     </li>
                     <li>
                       <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li3" />
@@ -549,19 +549,13 @@ const StakingPage = ({
                   </OldHeading>
                   <ul>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-saas-requirements-li1"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-saas-requirements-li1" />
                     </li>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-saas-requirements-li2"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-saas-requirements-li2" />
                     </li>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-saas-requirements-li3"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-saas-requirements-li3" />
                     </li>
                   </ul>
                 </div>
@@ -585,13 +579,13 @@ const StakingPage = ({
                   </OldHeading>
                   <ul>
                     <li>
-                      {t("page-staking-section-comparison-pools-rewards-li1")}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li1" />
                     </li>
                     <li>
-                      {t("page-staking-section-comparison-pools-rewards-li2")}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li2" />
                     </li>
                     <li>
-                      {t("page-staking-section-comparison-pools-rewards-li3")}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li3" />
                     </li>
                   </ul>
                 </div>
@@ -606,10 +600,10 @@ const StakingPage = ({
                   </OldHeading>
                   <ul>
                     <li>
-                      {t("page-staking-section-comparison-pools-risks-li1")}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-risks-li1" />
                     </li>
                     <li>
-                      {t("page-staking-section-comparison-pools-risks-li2")}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-risks-li2" />
                     </li>
                   </ul>
                 </div>
@@ -619,14 +613,10 @@ const StakingPage = ({
                   </OldHeading>
                   <ul>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-pools-requirements-li1"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-requirements-li1" />
                     </li>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-pools-requirements-li2"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-requirements-li2" />
                     </li>
                   </ul>
                 </div>
