@@ -1,5 +1,3 @@
-import { useEffect } from "react"
-import { merge } from "lodash"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {

@@ -35,7 +35,7 @@ export async function fetchTranslationCostsReport(
     dateFrom: FIRST_CROWDIN_CONTRIBUTION_DATE,
     dateTo,
     languageId: crowdinLangCode,
-    // @ts-ignore
+    // @ts-expect-error Not part of the Crowdin schema type, which is deprecated anyway
     fileIds: [fileId],
   }
 

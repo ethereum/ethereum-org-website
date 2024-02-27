@@ -28,11 +28,11 @@ const CopyToClipboard = ({
       text: () => text,
     })
 
-    clipboard.on("success", (e) => {
+    clipboard.on("success", () => {
       afterCopy()
     })
 
-    clipboard.on("error", (e) => {
+    clipboard.on("error", () => {
       console.log("error: failed to copy text")
     })
 

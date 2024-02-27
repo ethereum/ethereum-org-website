@@ -111,7 +111,7 @@ const CentralizedExchanges = ({
         className="react-select-container"
         classNamePrefix="react-select"
         options={selectOptions}
-        onChange={handleSelectChange as any} // TODO: Fix typing
+        onChange={handleSelectChange as unknown} // TODO: Fix typing
         placeholder={placeholderString}
       />
       {!hasSelectedCountry && (

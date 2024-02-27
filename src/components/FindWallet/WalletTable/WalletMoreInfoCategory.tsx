@@ -6,12 +6,12 @@ import walletFilterData from "../../../data/wallets/wallet-filters"
 import Text from "../../OldText"
 import Tooltip from "../../Tooltip"
 
-import { DropdownOption } from "./useWalletTable"
+import { DropdownOption, WalletMoreInfoData } from "./useWalletTable"
 
 interface WalletMoreInfoCategoryProps {
-  wallet: any
+  wallet: WalletMoreInfoData
   orderedFeatureDropdownItems: DropdownOption[]
-  headingLabel: any
+  headingLabel: string
   sectionName: string
 }
 

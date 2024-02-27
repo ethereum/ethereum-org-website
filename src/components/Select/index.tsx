@@ -8,10 +8,15 @@ import {
 interface SelectProps
   extends Omit<ChakraSelectProps, "defaultValue">,
     Pick<ThemingProps<"Select">, "variant"> {
-  defaultValue?: { label: string; value: string; [x: string]: any }
-  onChange(selectedOption: any | ""): void
+  defaultValue?: { label: string; value: string; [x: string]: unknown }
+  onChange(selectedOption: unknown | ""): void
   placeholder?: string
-  options: Record<string, any>[]
+  options: Array<{
+    value: string
+    label: string
+    optGroupLabel?: string
+    options?: Array<{ label: string; value: string }>
+  }>
 }
 
 const Select = (props: SelectProps) => {
@@ -38,7 +43,7 @@ const Select = (props: SelectProps) => {
     setSelectedOption(selectedValue)
 
     const selectedOptionData = flatObject.find(
-      (option) => option.value === selectedValue
+      (option) => option?.value === selectedValue
     )
 
     if (!selectedOptionData && !isPlaceholder) return
@@ -62,7 +67,7 @@ const Select = (props: SelectProps) => {
       {options.map((option, idx) => {
         return Object.hasOwn(option, "options") ? (
           <optgroup key={idx} label={option.optGroupLabel}>
-            {option.options.map(({ label, value }) => (
+            {option?.options?.map(({ label, value }) => (
               <option key={value} value={value}>
                 {label}
               </option>

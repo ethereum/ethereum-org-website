@@ -1,4 +1,3 @@
-import { join } from "path"
 
 import React, { useState } from "react"
 import { GetStaticProps } from "next"
@@ -53,7 +52,7 @@ const LanguagesPage = () => {
     setKeyword("")
   }
   const searchString = t("page-languages-filter-placeholder")
-  let translationsCompleted: Array<I18nLocale> = []
+  const translationsCompleted: Array<I18nLocale> = []
 
   for (const lang in languages) {
     const langMetadata = {

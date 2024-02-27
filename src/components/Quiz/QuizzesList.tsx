@@ -7,8 +7,6 @@ import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import allQuizzesData from "@/data/quizzes"
 
-import Translation from "../Translation"
-
 import QuizItem from "./QuizItem"
 
 type QuizzesListProps = {

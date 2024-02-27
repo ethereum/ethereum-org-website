@@ -28,7 +28,6 @@ const Translation = ({ id, options }: TranslationProps) => {
   const translatedText = t(id, options)
 
   // Use `htmr` to parse html content in the translation text
-  // @ts-ignore
   return htmr(translatedText, { transform })
 }
 

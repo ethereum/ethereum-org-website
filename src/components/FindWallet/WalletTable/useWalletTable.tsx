@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { Dispatch, SetStateAction, useState } from "react"
 import { Icon } from "@chakra-ui/react"
 
 import { WalletTableProps } from "@/components/FindWallet/WalletTable"
@@ -25,6 +25,8 @@ import {
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
+import { WalletData } from "@/data/wallets/wallet-data"
+
 export interface DropdownOption {
   label: string
   value: string
@@ -34,6 +36,8 @@ export interface DropdownOption {
 }
 
 export type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
+
+export type WalletMoreInfoData = WalletData & { moreInfo: boolean; key: string }
 
 type UseWalletTableProps = Pick<WalletTableProps, "filters" | "walletData"> & {
   t: (x: string) => string
@@ -173,7 +177,7 @@ export const useWalletTable = ({
     },
   ]
 
-  const [walletCardData, setWalletData] = useState(
+  const [walletCardData, setWalletData] = useState<WalletMoreInfoData[]>(
     walletData.map((wallet) => {
       return { ...wallet, moreInfo: false, key: wallet.name }
     })
@@ -231,7 +235,7 @@ export const useWalletTable = ({
       .filter((item) => item[1])
       .map((item) => item[0])
 
-    for (let item of mobileFiltersTrue) {
+    for (const item of mobileFiltersTrue) {
       if (wallet[item]) {
         mobileCheck = true
         break
@@ -240,7 +244,7 @@ export const useWalletTable = ({
       }
     }
 
-    for (let item of desktopFiltersTrue) {
+    for (const item of desktopFiltersTrue) {
       if (wallet[item]) {
         desktopCheck = true
         break
@@ -249,7 +253,7 @@ export const useWalletTable = ({
       }
     }
 
-    for (let item of browserFiltersTrue) {
+    for (const item of browserFiltersTrue) {
       if (wallet[item]) {
         browserCheck = true
         break
@@ -258,7 +262,7 @@ export const useWalletTable = ({
       }
     }
 
-    for (let item of hardwareFiltersTrue) {
+    for (const item of hardwareFiltersTrue) {
       if (wallet[item]) {
         hardwareCheck = true
         break
@@ -296,9 +300,9 @@ export const useWalletTable = ({
    *
    * This method gets the elements with the className, adds a fade class to fade icons out, after 0.5s it will then update state for the dropdown with the selectedOption, and then remove the fade class to fade the icons back in. Then it will send a matomo event for updating the dropdown.
    */
-  const updateDropdown = (
-    selectedOption: DropdownOption,
-    stateUpdateMethod: Function,
+  const updateDropdown = <D extends DropdownOption>(
+    selectedOption: D,
+    stateUpdateMethod: Dispatch<SetStateAction<D>>,
     className: ColumnClassName
   ) => {
     const domItems: HTMLCollectionOf<Element> =

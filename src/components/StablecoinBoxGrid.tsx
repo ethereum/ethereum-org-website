@@ -289,8 +289,8 @@ const StablecoinBoxGrid = ({ items }: StablecoinBoxGridProps) => {
       maxW="100%"
     >
       {items.map((item, idx) => {
-        let columnNumber = 1
-        let rowNumber = 1
+        const columnNumber = 1
+        const rowNumber = 1
         const colorIdx = hashCode(item.emoji) % colors.length
         const color = colors[colorIdx]
         return (

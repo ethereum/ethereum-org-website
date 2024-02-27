@@ -94,7 +94,7 @@ const Nav = () => {
             ms={{ base: 3, xl: 8 }}
           >
             <Menu hideBelow="md" sections={linkSections} />
-            <Flex alignItems="center"/*  justifyContent="space-between" */>
+            <Flex alignItems="center" /*  justifyContent="space-between" */>
               <Search {...searchModalDisclosure} />
               {/* Desktop */}
               <HStack hideBelow="md" gap="0">

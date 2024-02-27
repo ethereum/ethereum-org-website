@@ -510,7 +510,7 @@ const RunANodePage = () => {
               contentPreview={preview}
               title={title}
               // TODO: make a11y svgs (using <title>)
-              // @ts-ignore
+              // @ts-expect-error alt does not exist as a valid prop
               alt={alt}
               svg={image}
               key={title}
@@ -551,7 +551,7 @@ const RunANodePage = () => {
             <ColumnNarrow>
               <Terminal
                 // TODO: make a11y svgs (using <title>)
-                // @ts-ignore
+                // @ts-expect-error alt does not exist as a valid prop
                 alt={t("page-run-a-node-glyph-alt-terminal")}
               />
             </ColumnNarrow>
@@ -561,7 +561,7 @@ const RunANodePage = () => {
             <ColumnNarrow>
               <Dappnode
                 // TODO: make a11y svgs (using <title>)
-                // @ts-ignore
+                // @ts-expect-error alt does not exist as a valid prop
                 alt={t("page-run-a-node-glyph-alt-dappnode")}
               />
             </ColumnNarrow>
@@ -587,7 +587,7 @@ const RunANodePage = () => {
             <ColumnNarrow>
               <Dapptap
                 // TODO: make a11y svgs (using <title>)
-                // @ts-ignore
+                // @ts-expect-error alt does not exist as a valid prop
                 alt={t("page-run-a-node-glyph-alt-phone")}
               />
             </ColumnNarrow>
@@ -660,7 +660,7 @@ const RunANodePage = () => {
           <SvgTitle>
             <HardwareGlyphIcon
               // TODO: make a11y svgs (using <title>)
-              // @ts-ignore
+              // @ts-expect-error alt does not exist as a valid prop
               alt={t("page-run-a-node-glyph-alt-hardware")}
             />
             <H3>{t("page-run-a-node-build-your-own-hardware-title")}</H3>
@@ -732,7 +732,7 @@ const RunANodePage = () => {
           <SvgTitle>
             <DownloadGlyphIcon
               // TODO: make a11y svgs (using <title>)
-              // @ts-ignore
+              // @ts-expect-error alt does not exist as a valid prop
               alt={t("page-run-a-node-glyph-alt-software")}
             />
             <H3>{t("page-run-a-node-build-your-own-software")}</H3>

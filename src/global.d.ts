@@ -5,7 +5,7 @@ export {}
 declare global {
   interface Window {
     // Used by matomo
-    _paq: any
+    _paq: unknown
     dev: boolean
   }
 

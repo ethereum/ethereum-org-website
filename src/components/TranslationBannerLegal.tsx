@@ -23,7 +23,7 @@ const TranslationBannerLegal = ({
 }: TranslationBannerLegalProps) => {
   // Default to isOpen being false, and let the useEffect set this.
   const [isOpen, setIsOpen] = useState(false)
-  const [cardBoxShadow, text] = useToken("colors", ["cardBoxShadow", "text"])
+  const text = useToken("colors", "text")
 
   useEffect(() => {
     if (

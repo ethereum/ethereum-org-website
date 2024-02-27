@@ -49,6 +49,8 @@ const getIconFromName = (
 ): ComponentType<SVGProps<SVGElement>> => {
   const {
     [imageName + "GlyphIcon"]: Icon,
+    // TODO: research better import alternative, else remove this TODO comment
+    // eslint-disable-next-line @typescript-eslint/no-var-requires
   } = require("@/components/icons/staking")
   return Icon
 }

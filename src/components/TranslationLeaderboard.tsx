@@ -15,9 +15,9 @@ import Emoji from "./Emoji"
 import Text from "./OldText"
 
 export type TranslationLeaderboardProps = {
-  monthData: any
-  quarterData: any
-  allTimeData: any
+  monthData: unknown
+  quarterData: unknown
+  allTimeData: unknown
 }
 
 const Button = (props) => {
@@ -123,8 +123,11 @@ const TranslationLeaderboard = ({
   )
 
   const leaderboardData = {
+    // @ts-expect-error monthData not typed from JSON
     monthData: sortAndFilterData(monthData.data),
+    // @ts-expect-error quarterData not typed from JSON
     quarterData: sortAndFilterData(quarterData.data),
+    // @ts-expect-error allTimeData not typed from JSON
     allTimeData: sortAndFilterData(allTimeData.data),
   }
 

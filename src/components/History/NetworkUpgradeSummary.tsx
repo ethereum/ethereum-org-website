@@ -33,7 +33,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   // calculate date format only on the client side to avoid hydration issues
   useEffect(() => {
-    const date = new Date(dateTimeAsString as any)
+    const date = new Date(dateTimeAsString)
     const formattedDate = date.toLocaleString(locale, {
       timeZone: "UTC",
       month: "short",

@@ -6,7 +6,7 @@ declare module "@emotion/react" {
   export interface Theme {
     // TODO: to be defined better when we implement a UI lib
     isDark: boolean
-    colors: any
+    colors: unknown
     fonts: {
       monospace: string
     }

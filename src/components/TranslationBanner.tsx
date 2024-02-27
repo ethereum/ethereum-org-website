@@ -7,8 +7,6 @@ import type { Lang } from "@/lib/types"
 
 import { isLangRightToLeft } from "@/lib/utils/translations"
 
-import { DEFAULT_LOCALE } from "../lib/constants"
-
 import { ButtonLink } from "./Buttons"
 import Emoji from "./Emoji"
 

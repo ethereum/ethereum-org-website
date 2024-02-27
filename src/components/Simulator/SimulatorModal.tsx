@@ -20,7 +20,6 @@ export const SimulatorModal = ({
   isOpen,
   onClose,
   children,
-  size,
   ...restProps
 }: SimulatorModalProps) => {
   return (

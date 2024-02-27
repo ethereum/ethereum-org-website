@@ -25,7 +25,6 @@ export type ExpandableInfoProps = ChakraProps & {
   contentPreview: ReactNode
   background: BackgroundProps["background"]
   forceOpen?: boolean
-  className?: string
 }
 
 const ExpandableInfo = ({
@@ -35,7 +34,6 @@ const ExpandableInfo = ({
   children,
   background,
   forceOpen,
-  className,
   ...props
 }: ExpandableInfoProps) => {
   const { isOpen, getButtonProps, getDisclosureProps } = useDisclosure({
