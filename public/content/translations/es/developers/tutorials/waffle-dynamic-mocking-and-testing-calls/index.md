@@ -295,4 +295,4 @@ El código fuente de este tutorial puedes econtrarlo [aquí](https://github.com/
 
 Otros tutoriales que podrían interesarte:
 
-- [Probar contratos inteligentes con Waffle](/developers/tutorials/waffle-test-simple-smart-contract//)
+- [Probar contratos inteligentes con Waffle](/developers/tutorials/waffle-test-simple-smart-contract/)
