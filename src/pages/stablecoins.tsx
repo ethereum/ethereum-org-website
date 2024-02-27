@@ -34,6 +34,7 @@ import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -308,19 +309,27 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
   const tokens = [
     {
       emoji: ":globe_showing_americas:",
-      description: t("page-stablecoins-stablecoins-feature-1"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-1" />
+      ),
     },
     {
       emoji: ":chart_with_upwards_trend:",
-      description: t("page-stablecoins-stablecoins-feature-2"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-2" />
+      ),
     },
     {
       emoji: ":handshake:",
-      description: t("page-stablecoins-stablecoins-feature-3"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-3" />
+      ),
     },
     {
       emoji: ":key:",
-      description: t("page-stablecoins-stablecoins-feature-4"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-4" />
+      ),
     },
   ]
 
@@ -438,8 +447,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           mb={8}
         >
           <Box w="full" margin={{ base: "auto 0", lg: "0 2rem 0" }}>
-            {tokens.map((token) => (
-              <Box key={token.description} minWidth="full" my={2}>
+            {tokens.map((token, index) => (
+              <Box key={index} minWidth="full" my={2}>
                 <HorizontalCard
                   emoji={token.emoji}
                   description={token.description}
@@ -602,7 +611,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             </Tooltip>
           </H3>
           <InfoBanner emoji="⚠️" isWarning>
-              {t("page-stablecoins-algorithmic-disclaimer")}
+            {t("page-stablecoins-algorithmic-disclaimer")}
           </InfoBanner>
           <Text>
             {t("page-stablecoins-top-coins-intro")}{" "}
@@ -731,7 +740,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       </Content>
       <Box id="tools" py={12} px={8} w="full">
         <H2>{t("page-stablecoins-tools-title")}</H2>
-        
+
         <Flex
           alignItems="flex-start"
           width="full"
