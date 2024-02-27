@@ -295,4 +295,4 @@ Waffle 的文档可在[此处](https://ethereum-waffle.readthedocs.io/)获得。
 
 您可能还感兴趣的教程：
 
-- [使用 Waffle 测试智能合约](/developers/tutorials/testing-smart-contract-with-waffle/)
+- [使用 Waffle 测试智能合约](/developers/tutorials/waffle-test-simple-smart-contract/)

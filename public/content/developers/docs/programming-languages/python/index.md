@@ -82,7 +82,7 @@ The following Ethereum-based projects use tools mentioned on this page. The rela
 ## Python Community discussion {#python-community-contributors}
 
 - [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe) for Web3.py and other Python framework discussion
-- [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>) for Vyper smart contract programming discussion
+- [Vyper Discord](https://discord.gg/SdvKC79cJk) for Vyper smart contract programming discussion
 
 ## Other aggregated lists {#other-aggregated-lists}
 
