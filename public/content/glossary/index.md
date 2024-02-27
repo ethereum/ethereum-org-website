@@ -324,6 +324,8 @@ lang: en
 
 <GlossaryDefinition term="pow" />
 
+<GlossaryDefinition term="proto-danksharding" />
+
 <GlossaryDefinition term="public-key" />
 
 <Divider />
