@@ -90,5 +90,6 @@
   "page-find-wallet-browser-desc": "브라우저 확장 기능이 있는 지갑",
   "page-find-wallet-device": "기기",
   "page-find-choose-to-compare": "비교하도록 선택",
-  "page-find-wallet-choose-features": "기능 선택"
+  "page-find-wallet-choose-features": "기능 선택",
+  "page-find-wallet-reset-filters": "필터 초기화"
 }

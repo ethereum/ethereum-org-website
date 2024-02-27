@@ -1,6 +1,7 @@
 import * as React from "react"
 import { Center, ListItem, Stack, Text, UnorderedList } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
 import Link from "../Link"
 
 type LinkType = typeof Link
@@ -24,9 +25,9 @@ type Story = StoryObj<typeof meta>
 const MockParagraph = ({ to }: { to?: string }) => (
   <Text>
     Text body normal. Ethereum is open access to digital money and data-friendly
-    services for everyone – no matter your background or location. It's a{" "}
-    <Link to={to}>community-built</Link> technology behind the cryptocurrency
-    ether (ETH) and thousands of applications you can use today.
+    services for everyone &ndash; no matter your background or location.
+    It&apos;s a <Link to={to}>community-built</Link> technology behind the
+    cryptocurrency ether (ETH) and thousands of applications you can use today.
   </Text>
 )
 
@@ -49,9 +50,10 @@ export const LinkList: Story = {
     <Stack spacing="6">
       <Text>
         Text body normal. Ethereum is open access to digital money and
-        data-friendly services for everyone – no matter your background or
-        location. It's a community-built technology behind the cryptocurrency
-        ether (ETH) and thousands of applications you can use today.
+        data-friendly services for everyone &ndash; no matter your background or
+        location. It&apos;s a community-built technology behind the
+        cryptocurrency ether (ETH) and thousands of applications you can use
+        today.
       </Text>
       <UnorderedList>
         {Array.from({ length: 9 }).map((_, idx) => (

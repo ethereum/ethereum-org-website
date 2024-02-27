@@ -1,35 +1,36 @@
-import React from "react"
+import { useTranslation } from "next-i18next"
 import {
-  Box,
   Avatar,
+  Box,
   Flex,
-  LinkOverlay,
   LinkBox,
-  useColorModeValue,
-  VisuallyHidden,
+  LinkOverlay,
   List,
   ListItem,
+  useColorModeValue,
+  VisuallyHidden,
 } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Emoji from "./Emoji"
-import { BaseLink } from "./Link"
-import Translation from "./Translation"
+import Emoji from "@/components/Emoji"
+import { BaseLink } from "@/components/Link"
 
-const githubUrl = `https://github.com/`
+import { GITHUB_URL } from "@/lib/constants"
 
-export interface Person {
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
+type Person = {
   name: string
-  username?: string | null
+  username: string
   score: number
 }
 
-export interface IProps {
-  content: Array<Person>
+type LeaderboardProps = {
+  content: Person[]
   limit?: number
 }
 
-const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
+const Leaderboard = ({ content, limit = 100 }: LeaderboardProps) => {
+  const { flipForRtl } = useRtlFlip()
   const colorModeStyles = useColorModeValue(
     {
       listBoxShadow: "tableBox.light",
@@ -43,7 +44,7 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
     }
   )
 
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-bug-bounty")
 
   return (
     <List
@@ -51,19 +52,16 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
       boxShadow={colorModeStyles.listBoxShadow}
       w="100%"
       mb={8}
-      ml={0}
+      ms={0}
       aria-label={t("page-upgrades-bug-bounty-leaderboard-list")}
     >
       {content
         .filter((_, idx) => idx < limit)
-        .map((item, idx) => {
-          const { name, username, score } = item
-
-          const hasGitHub = username !== ""
-          const avatarImg = hasGitHub
-            ? `${githubUrl}${username}.png?size=40`
-            : "https://github.com/random.png?size=40"
+        .map(({ name, username, score }, idx) => {
+          const hasGitHub = !!username
+          const avatarImg = GITHUB_URL + (username || "random") + ".png?size=40"
           const avatarAlt = hasGitHub ? `${username} GitHub avatar` : ""
+
           let emoji: string | null = null
           if (idx === 0) {
             emoji = ":trophy:"
@@ -73,15 +71,8 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
             emoji = ":3rd_place_medal:"
           }
 
-          const PLACE_WORDS = [
-            "first",
-            "second",
-            "third",
-            "fourth",
-            "fifth",
-          ] as const
           return (
-            <ListItem mb={0}>
+            <ListItem key={username} mb={0}>
               <LinkBox
                 key={idx}
                 display="flex"
@@ -98,21 +89,21 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                   background: "tableBackgroundHover",
                 }}
               >
-                <Box mr={4} opacity="0.4">
+                <Box me={4} opacity="0.4">
                   {idx + 1}
                 </Box>
                 <Avatar
                   src={avatarImg}
                   name={avatarAlt}
-                  mr={4}
+                  me={4}
                   h={10}
                   w={10}
                   display={{ base: "none", xs: "block" }}
                 />
-                <Flex flex="1 1 75%" direction="column" mr={8}>
+                <Flex flex="1 1 75%" direction="column" me={8}>
                   <LinkOverlay
                     as={BaseLink}
-                    href={hasGitHub ? `${githubUrl}${username}` : "#"}
+                    href={hasGitHub ? `${GITHUB_URL}${username}` : "#"}
                     textDecor="none"
                     color="text"
                     hideArrow
@@ -127,19 +118,20 @@ const Leaderboard: React.FC<IProps> = ({ content, limit = 100 }) => {
                   </LinkOverlay>
 
                   <Box fontSize="sm" color={colorModeStyles.scoreColor}>
-                    {score}{" "}
-                    <Translation id="page-upgrades-bug-bounty-leaderboard-points" />
+                    {score} {t("page-upgrades-bug-bounty-leaderboard-points")}
                   </Box>
                 </Flex>
-                {emoji && <Emoji mr={8} fontSize="2xl" text={emoji} />}
+                {emoji && <Emoji me={8} fontSize="2xl" text={emoji} />}
                 <Box
                   as="span"
                   _after={{
                     content: '"↗"',
-                    ml: 0.5,
-                    mr: 1.5,
+                    ms: 0.5,
+                    me: 1.5,
+                    transform: flipForRtl,
+                    display: "inline-block",
                   }}
-                ></Box>
+                />
               </LinkBox>
             </ListItem>
           )

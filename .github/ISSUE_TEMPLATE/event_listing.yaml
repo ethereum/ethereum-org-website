@@ -1,0 +1,69 @@
+name: Event listing
+description: Request an Ethereum event for listing
+title: Event listing
+labels: ["event :calendar:"]
+body:
+  - type: input
+    id: event_listing_name
+    attributes:
+      label: Event/Meetup Name
+      description: Name for the event to be listed
+    validations:
+      required: true
+  - type: input
+    id: event_listing_website
+    attributes:
+      label: Website
+      description: Publicly available website URL to get more information about the event
+    validations:
+      required: true
+  - type: input
+    id: event_listing_location
+    attributes:
+      label: Location (City/Country, or Remote)
+      description: Geographic location of in-person event, or "Remote" for a virtual event
+    validations:
+      required: true
+  - type: input
+    id: event_listing_description
+    attributes:
+      label: Description
+      description: Brief description of event
+    validations:
+      required: true
+  - type: input
+    id: event_listing_start_date
+    attributes:
+      label: "Start date: (yyyy-mm-dd)"
+      description: Start date of event in yyyy-mm-dd format
+    validations:
+      required: true
+  - type: input
+    id: event_listing_end_date
+    attributes:
+      label: "End date: (yyyy-mm-dd)"
+      description: End date of event in yyyy-mm-dd format
+    validations:
+      required: true
+  - type: textarea
+    id: event_listing_additional_context
+    attributes:
+      label: Additional context
+      description: Add any other context about the event here
+  - type: markdown
+    attributes:
+      value: |
+        **Note:**
+        Events will be only added on the "Upcoming events" table if all fields above are completed, pending approval
+  - type: markdown
+    attributes:
+      value: |
+        **Want to contribute?**
+        We love contributions from the Ethereum community! Please comment on an issue if you're interested in helping out with a PR.
+  - type: checkboxes
+    id: event_listing_work_on
+    attributes:
+      label: Would you like to work on this issue?
+      options:
+        - label: "Yes"
+          required: false
