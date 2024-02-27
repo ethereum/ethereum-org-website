@@ -173,6 +173,7 @@ const FindWalletPage = () => {
         </Center>
       </Flex>
 
+      {/* Wallet Personas */}
       <Box px={{ base: 4, "2xl": 0 }}>
         <OldHeading
           as="h3"
