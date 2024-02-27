@@ -55,7 +55,7 @@ One of the best ways to see the potential of DeFi is to understand the problems 
 
 Bitcoin in many ways was the first DeFi application. Bitcoin lets you really own and control value and send it anywhere around the world. It does this by providing a way for a large number of people, who don't trust each other, to agree on a ledger of accounts without the need for a trusted intermediary. Bitcoin is open to anyone and no one has the authority to change its rules. Bitcoin's rules, like its scarcity and its openness, are written into the technology. It's not like traditional finance where governments can print money that devalues your savings and companies can shut down markets.
 
-Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyone has access. But it also makes this digital money programmable, using [smart contracts](/glossary#smart-contract), so you can go beyond storing and sending value.
+Ethereum builds on this. Like Bitcoin, the rules can't change on you and everyone has access. But it also makes this digital money programmable, using [smart contracts](/glossary/#smart-contract), so you can go beyond storing and sending value.
 
 <YouTube id="qFBYB4W2tqU" />
 
@@ -90,7 +90,7 @@ There's a decentralized alternative to most financial services. But Ethereum als
 
 ### Send money around the globe quickly {#send-money}
 
-As a blockchain, Ethereum is designed for sending transactions in a secure and global way. Like Bitcoin, Ethereum makes sending money around the world as easy as sending an email. Just enter your recipient's [ENS name](/nft/#nft-domains) (like bob.eth) or their account address from your wallet and your payment will go directly to them in minutes (usually). To send or receive payments, you will need a [wallet](/wallets/).
+As a blockchain, Ethereum is designed for sending transactions in a secure and global way. Like Bitcoin, Ethereum makes sending money around the world as easy as sending an email. Just enter your recipient's [ENS name](/glossary/#ens) (like bob.eth) or their account address from your wallet and your payment will go directly to them in minutes (usually). To send or receive payments, you will need a [wallet](/wallets/).
 
 <ButtonLink to="/dapps/?category=finance">
   See payment dapps
@@ -100,7 +100,7 @@ As a blockchain, Ethereum is designed for sending transactions in a secure and g
 
 You can also stream money over Ethereum. This lets you pay someone their salary by the second, giving them access to their money whenever they need it. Or rent something by the second like a storage locker or electric scooter.
 
-And if you don't want to send or stream [ETH](/eth/) because of how much its value can change, there are alternative currencies on Ethereum: stablecoins.
+And if you don't want to send or stream [ETH](/glossary/#ether) because of how much its value can change, there are alternative currencies on Ethereum: [stablecoins](/glossary/#stablecoin).
 
 <Divider />
 
@@ -133,7 +133,7 @@ There are many advantages to using a decentralized lender...
 
 Today, lending and borrowing money all revolves around the individuals involved. Banks need to know whether you're likely to repay a loan before lending.
 
-Decentralized lending works without either party having to identify themselves. Instead, the borrower must put up collateral that the lender will automatically receive if their loan is not repaid. Some lenders even accept NFTs as collateral. NFTs are a deed to a unique asset, like a painting. [More on NFTs](/nft/)
+Decentralized lending works without either party having to identify themselves. Instead, the borrower must put up collateral that the lender will automatically receive if their loan is not repaid. Some lenders even accept [NFTs](/glossary/#nft) as collateral. NFTs are a deed to a unique asset, like a painting. [More on NFTs](/nft/)
 
 This allows you to borrow money without credit checks or handing over private information.
 
@@ -180,7 +180,7 @@ You can earn interest on your crypto by lending it and see your funds grow in re
 
 - You lend your 100 Dai, a [stablecoin](/stablecoins/), to a product like Aave.
 - You receive 100 Aave Dai (aDai) which is a token that represents your loaned Dai.
-- Your aDai will increase based on the interest rates and you can see your balance growing in your wallet. Dependent on the APR, your wallet balance will read something like 100.1234 after a few days or even hours!
+- Your aDai will increase based on the interest rates and you can see your balance growing in your wallet. Dependent on the [APR](/glossary/#apr), your wallet balance will read something like 100.1234 after a few days or even hours!
 - You can withdraw an amount of regular Dai that's equal to your aDai balance at any time.
 
 <ButtonLink to="/dapps/?category=finance">
