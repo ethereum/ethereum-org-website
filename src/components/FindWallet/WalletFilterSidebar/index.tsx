@@ -12,17 +12,17 @@ import {
   useTheme,
 } from "@chakra-ui/react"
 
+import { WalletFilter } from "@/lib/types"
+
 import WalletFilterFeature from "@/components/FindWallet/WalletFilterSidebar/WalletFilterFeature"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { FiltersType } from "@/pages/wallets/find-wallet"
-
 type WalletFilterSidebarProps = Omit<TabsProps, "children"> & {
-  filters: FiltersType
+  filters: WalletFilter
   resetWalletFilter: React.MutableRefObject<() => void>
   resetFilters: () => void
-  setFilters: React.Dispatch<React.SetStateAction<FiltersType>>
+  setFilters: React.Dispatch<React.SetStateAction<WalletFilter>>
   selectedPersona: number
   setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
   updateFilterOption: (key: any) => void

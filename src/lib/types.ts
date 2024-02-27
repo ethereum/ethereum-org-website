@@ -21,6 +21,8 @@ import { SimulatorNav } from "@/components/Simulator/interfaces"
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
 
+import { WALLETS_FILTERS_DEFAULT } from "./constants"
+
 import { layoutMapping } from "@/pages/[...slug]"
 
 // Credit: https://stackoverflow.com/a/52331580
@@ -491,3 +493,6 @@ export type CommunityConference = {
   startDate: string
   endDate: string
 }
+
+// Wallets
+export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT

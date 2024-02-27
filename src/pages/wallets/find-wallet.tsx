@@ -62,8 +62,6 @@ const Subtitle = ({ children }: ChildOnlyProp) => (
   </Text>
 )
 
-export type FiltersType = typeof WALLETS_FILTERS_DEFAULT
-
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
 
@@ -122,7 +120,7 @@ const FindWalletPage = () => {
 
   const resetFilters = () => {
     setSelectedPersona(NaN)
-    setFilters(filterDefault)
+    setFilters(WALLETS_FILTERS_DEFAULT)
   }
 
   return (
