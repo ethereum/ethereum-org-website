@@ -15,6 +15,7 @@ import type {
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ButtonLink, { ButtonLinkProps } from "@/components/Buttons/ButtonLink"
 import Card from "@/components/Card"
+import DencunBanner from "@/components/DencunBanner"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import LeftNavBar from "@/components/LeftNavBar"
@@ -369,6 +370,7 @@ const StakingPage = ({
         description={t("page-staking-meta-description")}
         image="/upgrades/upgrade_rhino.png"
       />
+      <DencunBanner />
       <HeroStatsWrapper>
         <PageHero content={heroContent} />
         <StakingStatsBox data={data} />
