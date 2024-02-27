@@ -18,7 +18,7 @@ A DAO is a collectively-owned, blockchain-governed organization working towards 
 
 DAOs allow us to work with like-minded folks around the globe without trusting a benevolent leader to manage the funds or operations. There is no CEO who can spend funds on a whim or CFO who can manipulate the books. Instead, blockchain-based rules baked into the code define how the organization works and how funds are spent.
 
-They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organization has a voice, and everything happens transparently on-chain.
+They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organization has a voice, and everything happens transparently [on-chain](/glossary/#on-chain).
 
 ## Why do we need DAOs? {#why-dao}
 
@@ -46,7 +46,7 @@ To help this make more sense, here's a few examples of how you could use a DAO:
 
 ## How do DAOs work? {#how-daos-work}
 
-The backbone of a DAO is its smart contract, which defines the rules of the organization and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead, the group makes decisions collectively, and payments are automatically authorized when votes pass.
+The backbone of a DAO is its [smart contract](/glossary/#smart-contract), which defines the rules of the organization and holds the group's treasury. Once the contract is live on Ethereum, no one can change the rules except by a vote. If anyone tries to do something that's not covered by the rules and logic in the code, it will fail. And because the treasury is defined by the smart contract too that means no one can spend the money without the group's approval either. This means that DAOs don't need a central authority. Instead, the group makes decisions collectively, and payments are automatically authorized when votes pass.
 
 This is possible because smart contracts are tamper-proof once they go live on Ethereum. You can't just edit the code (the DAOs rules) without people noticing because everything is public.
 
@@ -85,7 +85,7 @@ In many DAOs, transactions will be automatically executed if a quorum of members
 
 ### Multisig governance {#governance-example}
 
-While DAOs may have thousands of voting members, funds can live in a wallet shared by 5-20 active community members who are trusted and usually doxxed (public identities known to the community). After a vote, the multisig signers execute the will of the community.
+While DAOs may have thousands of voting members, funds can live in a [wallet](/glossary/#wallet) shared by 5-20 active community members who are trusted and usually doxxed (public identities known to the community). After a vote, the [multisig](/glossary/#multisig) signers execute the will of the community.
 
 ## DAO laws {#dao-laws}
 
@@ -101,7 +101,7 @@ There are different models for DAO membership. Membership can determine how voti
 
 ### Token-based membership {#token-based-membership}
 
-Usually fully permissionless, depending on the token used. Mostly these governance tokens can be traded permissionlessly on a decentralized exchange. Others must be earned through providing liquidity or some other ‘proof-of-work’. Either way, simply holding the token grants access to voting.
+Usually fully [permissionless](/glossary/#permissionless), depending on the token used. Mostly these governance tokens can be traded permissionlessly on a [decentralized exchange](/glossary/#dex). Others must be earned through providing liquidity or some other ‘proof-of-work’. Either way, simply holding the token grants access to voting.
 
 _Typically used to govern broad decentralized protocols and/or tokens themselves._
 
@@ -123,11 +123,11 @@ _Typically used for more closer-knit, human-centric organizations like charities
 
 Reputation represents proof of participation and grants voting power in the DAO. Unlike token or share-based membership, reputation-based DAOs don't transfer ownership to contributors. Reputation cannot be bought, transferred or delegated; DAO members must earn reputation through participation. On-chain voting is permissionless and prospective members can freely submit proposals to join the DAO and request to receive reputation and tokens as a reward in exchange for their contributions.
 
-_Typically used for decentralized development and governance of protocols and dapps, but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc._
+_Typically used for decentralized development and governance of protocols and [dapps](/glossary/#dapp), but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc._
 
 #### A famous example {#reputation-example}
 
-[DXdao](https://DXdao.eth.link) – DXdao is a global sovereign collective building and governing decentralized protocols and applications since 2019. It leverages reputation-based governance and holographic consensus to coordinate and manage funds, meaning no one can buy their way into influencing its future.
+[DXdao](https://DXdao.eth.link) – DXdao is a global sovereign collective building and governing decentralized protocols and applications since 2019. It leverages reputation-based governance and [holographic consensus](/glossary/#holographic-consensus) to coordinate and manage funds, meaning no one can buy their way into influencing its future.
 
 ## Join / start a DAO {#join-start-a-dao}
 
