@@ -275,10 +275,14 @@ const WhatIsEthereumPage = ({
       eventName: "Cryptocurrency tab",
       content: (
         <>
-          <Text>{t("page-what-is-ethereum-cryptocurrency-tab-content-1")}</Text>
-          <Text>{t("page-what-is-ethereum-cryptocurrency-tab-content-2")}</Text>
+          <Text>
+            <Translation id="page-what-is-ethereum:page-what-is-ethereum-cryptocurrency-tab-content-1" />
+          </Text>
+          <Text>
+            <Translation id="page-what-is-ethereum:page-what-is-ethereum-cryptocurrency-tab-content-2" />
+          </Text>
           <Text mb="0">
-            {t("page-what-is-ethereum-cryptocurrency-tab-content-3")}
+            <Translation id="page-what-is-ethereum:page-what-is-ethereum-cryptocurrency-tab-content-3" />
           </Text>
         </>
       ),
@@ -597,8 +601,12 @@ const WhatIsEthereumPage = ({
             </Width40>
             <Width60>
               <H2>{t("page-what-is-ethereum-who-runs-ethereum-title")}</H2>
-              <Text>{t("page-what-is-ethereum-who-runs-ethereum-desc-1")}</Text>
-              <Text>{t("page-what-is-ethereum-who-runs-ethereum-desc-2")}</Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-who-runs-ethereum-desc-1" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-who-runs-ethereum-desc-2" />
+              </Text>
               <ButtonRow>
                 <ButtonLink to="/run-a-node/">
                   {t("page-what-is-ethereum-run-a-node")}
@@ -618,8 +626,12 @@ const WhatIsEthereumPage = ({
               <Text>
                 <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-1" />
               </Text>
-              <Text>{t("page-what-is-ethereum-smart-contract-desc-2")}</Text>
-              <Text>{t("page-what-is-ethereum-smart-contract-desc-3")}</Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-2" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-3" />
+              </Text>
               <ButtonRow>
                 <ButtonLink to="/smart-contracts/">
                   {t("page-what-is-ethereum-more-on-smart-contracts")}
@@ -660,7 +672,9 @@ const WhatIsEthereumPage = ({
             </Width40>
             <Width60>
               <H2>{t("page-what-is-ethereum-energy-title")}</H2>
-              <Text>{t("page-what-is-ethereum-energy-desc-1")}</Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-1" />
+              </Text>
               <Text>
                 <Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-2" />
               </Text>
