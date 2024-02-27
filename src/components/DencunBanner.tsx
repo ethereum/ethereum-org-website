@@ -27,12 +27,12 @@ const DencunBanner = () => {
         </Tooltip>
         . Node operators must update client software to a supported version to
         prepare.{" "}
-        {/* <Link
-          href="#TODO-link-blog-announcement-when-ready"
+        <Link
+          href="https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement"
           color="background.base !important"
         >
           Learn more
-        </Link> */}
+        </Link>
       </Text>
     </DismissableBanner>
   )
