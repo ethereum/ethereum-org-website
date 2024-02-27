@@ -108,7 +108,7 @@ Browser extensions like Chrome extensions or Add-ons for Firefox can augment use
 
 ### Level up your knowledge {#level-up-your-knowledge}
 
-One of the biggest reasons people get scammed in crypto generally is a lack of understanding. For example, if you don't understand that the Ethereum network is decentralized and owned by no one, then it's easy to fall prey to someone pretending to be a customer service agent that promises to return your lost ETH in exchange for your private keys. Educating yourself on how Ethereum works is a worthwhile investment.
+One of the biggest reasons people get scammed in crypto generally is a lack of understanding. For example, if you don't understand that the Ethereum network is decentralized and owned by no one, then it's easy to fall prey to someone pretending to be a customer service agent that promises to return your lost ETH in exchange for your [private keys](/glossary/#private-key). Educating yourself on how Ethereum works is a worthwhile investment.
 
 <DocLink to="/what-is-ethereum/">
   What is Ethereum?
@@ -151,7 +151,7 @@ Keeping private keys offline massively reduces the risk of being hacked, even if
 Accidentally sending crypto to the wrong wallet address is a common mistake. **A transaction sent on Ethereum is irreversible.** Unless you know the address owner and can convince them to send you your fund back, there will be no way for you to retrieve your funds.
 
 Always make sure the address you are sending to exactly matches the desired recipient's address before sending a transaction.
-It is also recommended when interacting with a smart contract to read the transaction message before signing.
+It is also recommended when interacting with a [smart contract](/glossary/#smart-contract) to read the transaction message before signing.
 
 ### Set smart contract spend limits {#spend-limits}
 
@@ -215,7 +215,7 @@ As a general rule, staff will never communicate with you through private, unoffi
 
 ### 'Eth2' token scam {#eth2-token-scam}
 
-In the run-up to [The Merge](/roadmap/merge/), scammers took advantage of the confusion around the term 'Eth2' to try and get users to redeem their ETH for an 'ETH2' token. There is no 'ETH2', and no other legitimate token was introduced with The Merge. The ETH that you owned before The Merge is the same ETH now. There is **no need to take any action related to your ETH to account for the switch from proof-of-work to proof-of-stake**.
+In the run-up to [The Merge](/roadmap/merge/), scammers took advantage of the confusion around the term 'Eth2' to try and get users to redeem their ETH for an 'ETH2' token. There is no 'ETH2', and no other legitimate token was introduced with The Merge. The ETH that you owned before The Merge is the same ETH now. There is **no need to take any action related to your ETH to account for the switch from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos)**.
 
 Scammers may appear as "support", telling you that if you deposit your ETH, you will receive back 'ETH2'. There is no [official Ethereum support](/community/support/), and there is no new token. Never share your wallet seed phrase with anyone.
 
@@ -261,7 +261,7 @@ Some things to remember:
 
 ### Airdrop scams {#airdrop-scams}
 
-Airdrop scams involve a scam project airdropping an asset (NFT, token) into your wallet and sending you to a scam website to claim the airdropped asset. You will get prompted to sign in with your Ethereum wallet and "approve" a transaction when attempting to claim. This transaction compromises your account by sending your public and private keys to the scammer. An alternative form of this scam may have you confirm a transaction that sends funds to the scammer's account.
+Airdrop scams involve a scam project airdropping an asset ([NFT](/glossary/#nft), token) into your wallet and sending you to a scam website to claim the airdropped asset. You will get prompted to sign in with your Ethereum wallet and "approve" a transaction when attempting to claim. This transaction compromises your account by sending your public and private keys to the scammer. An alternative form of this scam may have you confirm a transaction that sends funds to the scammer's account.
 
 [More on airdrop scams](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
