@@ -384,13 +384,7 @@ const WalletTable = ({
                     </FlexInfoCenter>
                   </Flex>
                   {/* Wallet Website (mobile) */}
-                  <Box
-                    display={{ base: "block", md: "none" }}
-                    mt={6}
-                    w="100%"
-                    ps={1}
-                    pe={3}
-                  >
+                  <Box display={{ base: "block", md: "none" }} mt={6} w="100%">
                     <ButtonLink
                       to={wallet.url}
                       variant="outline"
