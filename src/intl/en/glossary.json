@@ -279,6 +279,8 @@
   "public-goods-definition": "Public goods are things everyone can use for free, like parks or clean air, and using them doesn’t stop others from using them too. Governments often provide these because businesses usually won’t, since they can’t easily charge people for using them.",
   "private-chain-term": "Private chain",
   "private-chain-definition": "A fully private blockchain is one with permissioned access, not publicly available for use.",
+  "poap-term": "POAP",
+  "poap-definition": "Proof of Attendance Protocol is used to create a digital collectible (NFT) that proves you attended a specific event or activity.",
   "pos-term": "Proof-of-stake (PoS)",
   "pos-definition": "A method by which a cryptocurrency blockchain protocol aims to achieve distributed <a href=\"/glossary/#consensus\">consensus</a>. PoS asks users to prove ownership of a certain amount of cryptocurrency (their \"stake\" in the network) in order to be able to participate in the validation of transactions. <a href=\"/developers/docs/consensus-mechanisms/pos/\">More on proof-of-stake</a>.",
   "pow-term": "Proof-of-work (PoW)",

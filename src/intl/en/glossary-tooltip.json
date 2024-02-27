@@ -103,6 +103,8 @@
   "permissionless-definition": "No permission or approval is needed to use a system like Ethereum and nobody can stop you from using it. It's open 24/7 for everyone to participate.",
   "private-key-term": "Private key",
   "private-key-definition": "A private key is a secret code that proves you own your digital money and lets you spend it, like a PIN for your account. <strong>DO NOT SHARE IT</strong>.",
+  "poap-term": "POAP",
+  "poap-definition": "Proof of Attendance Protocol is used to create a digital collectible (NFT) that proves you attended a specific event or activity.",
   "pos-term": "Proof-of-stake (PoS)",
   "pos-definition": "A method by which a cryptocurrency blockchain protocol aims to achieve distributed <a href=\"/glossary/#consensus\">consensus</a>. PoS asks users to prove ownership of a certain amount of cryptocurrency (their \"stake\" in the network) in order to be able to participate in the validation of transactions. <a href=\"/developers/docs/consensus-mechanisms/pos/\">More on proof-of-stake</a>.",
   "public-goods-term": "Public goods",

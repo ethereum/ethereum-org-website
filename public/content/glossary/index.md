@@ -320,6 +320,8 @@ lang: en
 
 <GlossaryDefinition term="private-chain" />
 
+<GlossaryDefinition term="poap" />
+
 <GlossaryDefinition term="pos" />
 
 <GlossaryDefinition term="pow" />
