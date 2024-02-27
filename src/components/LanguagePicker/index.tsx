@@ -37,8 +37,15 @@ const LanguagePicker = ({
   menuState,
   ...props
 }: LanguagePickerProps) => {
-  const { t, refs, disclosure, filterValue, setFilterValue, filteredNames } =
-    useLanguagePicker(handleClose, menuState)
+  const {
+    t,
+    refs,
+    disclosure,
+    filterValue,
+    setFilterValue,
+    filteredNames,
+    handleInputFocus,
+  } = useLanguagePicker(handleClose, menuState)
   const { inputRef, firstItemRef, noResultsRef, footerRef } = refs
   const { onClose } = disclosure
 
@@ -71,7 +78,7 @@ const LanguagePicker = ({
         {/* Mobile Close bar */}
         <Flex
           justifyContent="end"
-          hideFrom="lg" // TODO: Confirm breakpoint after nav-menu PR merged
+          hideFrom="md"
           position="sticky"
           zIndex="sticky"
           top="0"
@@ -137,9 +144,10 @@ const LanguagePicker = ({
                     e.stopPropagation()
                   }
                 }}
+                onFocus={handleInputFocus}
               />
               <InputRightElement
-                hideBelow="lg" // TODO: Confirm breakpoint after nav-menu PR merged
+                hideBelow="md"
                 cursor="text"
               >
                 <Kbd

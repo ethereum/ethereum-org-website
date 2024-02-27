@@ -225,5 +225,4 @@ Az interneten rengeteg utasítás és információ található az Ethereum klien
 
 ## Kapcsolódó útmutatók {#related-tutorials}
 
-- [Csomópont futtatása Geth-tel](/developers/tutorials/run-light-node-geth/) _– Hogyan lehet letölteni, telepíteni és futtatni a Geth-et. Lefedi a szinkronizációs módokat, a JavaScript konzolt és még sok mást._
 - [Alakítsd át a Raspberry Pi 4-edet egy Eth 1.0 vagy egy Eth 2.0 csomóponttá csak a MicroSD kártya flashelésével - Telepítési útmutató](/developers/tutorials/run-node-raspberry-pi/) _– Flasheld a Raspberry Pi 4-et, csatlakoztass egy ethernet kábelt, csatlakoztasd az SSD-t, és kapcsold be az eszközt, hogy a Raspberry Pi 4 teljes Ethereum 1.0 vagy Ethereum 2.0 csomópontokká (beacon chain / validátor) váljon._

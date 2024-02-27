@@ -200,4 +200,4 @@ Si la prueba sale bien, nos garantizará que se ha revertido la transacción. Si
 
 - [Probar ERC20 con Waffle](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
 - [Waffle: Llamadas dinámicas de simulación y prueba de contratos](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
-- [Tutorial de Waffle "Hola, Mundo" con hardhat y ethers](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)
+- [Tutorial de Waffle "Hola, Mundo" con hardhat y ethers](/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers//)

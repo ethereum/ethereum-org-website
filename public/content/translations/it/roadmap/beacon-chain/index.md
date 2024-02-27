@@ -28,7 +28,7 @@ Beacon Chain è il nome dato a un libro mastro di conti che hanno condotto e coo
 
 La Beacon Chain ha introdotto la [proof of stake](/developers/docs/consensus-mechanisms/pos/) in Ethereum. Questo mantiene sicura Ethereum e consente ai validatori di guadagnare più ETH nel processo. In pratica, lo staking prevede di puntare ETH per poter attivare il software del validatore. Come staker, esegui il software che crea e convalida i nuovi blocchi nella catena.
 
-Lo staking serve a uno scopo simile a quello del [mining](/developers/docs/mining/), ma è differente in molti modi. Il mining richiedeva ingenti spese iniziali sotto forma di hardware potente e consumi energetici, risultando in economie di scala e promuovendo la centralizzazione. Il mining, inoltre, non prevedeva alcun requisito di bloccare le risorse come garanzie, limitando la capacità del protocollo di punire gli utenti malevoli dopo un attacco.
+Lo staking serve a uno scopo simile a quello del [mining](/developers/docs/consensus-mechanisms/pow/mining/), ma è differente in molti modi. Il mining richiedeva ingenti spese iniziali sotto forma di hardware potente e consumi energetici, risultando in economie di scala e promuovendo la centralizzazione. Il mining, inoltre, non prevedeva alcun requisito di bloccare le risorse come garanzie, limitando la capacità del protocollo di punire gli utenti malevoli dopo un attacco.
 
 La transizione al proof of stake ha reso Ethereum significativamente più sicura e decentralizzata rispetto al proof of work. Più persone parteciperanno alla rete, più questa diventerà decentralizzata e protetta dagli attacchi.
 

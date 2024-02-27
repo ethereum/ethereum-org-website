@@ -294,4 +294,4 @@ Kod źródłowy dla tego samouczka można znaleźć [tutaj](https://github.com/E
 
 Samouczki mogą być interesujące:
 
-- [Testowanie inteligentnych kontraktów z Waffle](/developers/tutorials/testing-smart-contract-with-waffle/)
+- [Testowanie inteligentnych kontraktów z Waffle](/developers/tutorials/waffle-test-simple-smart-contract/)

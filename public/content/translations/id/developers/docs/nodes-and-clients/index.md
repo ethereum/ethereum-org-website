@@ -231,8 +231,6 @@ Perhatikan dokumentasi klien atau halaman bantuan untuk menemukan mode sinkronis
 
 `geth --syncmode "light"`
 
-Untuk detail lebih lanjut, lihat tutorialnya di [menjalankan node ringan Geth](/developers/tutorials/run-light-node-geth/).
-
 **Menyiapkan sinkronisasi penuh dengan arsip di [Besu](https://besu.hyperledger.org/)**
 
 `besu --sync-mode=FULL`
@@ -310,5 +308,4 @@ Ada banyak informasi tentang klien Ethereum di internet. Berikut adalah beberapa
 
 ## Tutorial terkait {#related-tutorials}
 
-- [Menjalankan Node dengan Geth](/developers/tutorials/run-light-node-geth/) _– Cara mengunduh, menginstal, dan menjalankan Geth. Covering syncmodes, the JavaScript console, and more._
 - [Ubah Raspberry Pi 4 Anda menjadi node validator cukup dengan mem-flash kartu MicroSD – Panduan instalasi](/developers/tutorials/run-node-raspberry-pi/) _– Flash Raspberry Pi 4, colokkan kabel ethernet, hubungkan SSD dan nyalakan perangkat untuk mengubah Raspberry Pi 4 menjadi node penuh Ethereum yang menjalankan lapisan eksekusi (Jaringan Utama) dan / atau lapisan konsensus (Rantai Suar / validator)._

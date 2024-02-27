@@ -209,7 +209,7 @@ Jeśli dopiero zapoznajesz się z Ethereum i nie kodowałeś jeszcze w językach
 **Yul+**
 
 - Niskopoziomowe, bardzo wydajne rozszerzenie do Yul.
-- Początkowo zaprojektowany na potrzeby kontraktu typu [optymistyczna wartość zbiorcza](/docs/layer-2-scaling/#rollups-and-sidechains).
+- Początkowo zaprojektowany na potrzeby kontraktu typu [optymistyczna wartość zbiorcza](/developers/docs/scaling/).
 - Yul+ można postrzegać jako eksperymentalną propozycję ulepszenia Yul, dodającą do niego nowe funkcje.
 
 ### Ważne linki {#important-links-2}
