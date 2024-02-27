@@ -71,8 +71,14 @@ export const useLanguagePicker = (
       const fallbackSource =
         intlSource !== localeOption ? intlSource : englishName
       const i18nKey = "language-" + localeOption.toLowerCase()
-      const i18nSource = t(i18nKey)
-      const sourceName = i18nSource === i18nKey ? fallbackSource : i18nSource
+      const i18nSource = t(i18nKey) // Falls back to English namespace if not found
+
+      // If i18nSource (fetched from `language-{locale}` in current namespace)
+      // is not translated (output === englishName), or not available
+      // (output === i18nKey), use the Intl.DisplayNames result as fallback
+      const sourceName = [i18nKey, englishName].includes(i18nSource)
+        ? fallbackSource
+        : i18nSource
 
       // Get "target" display name (Language choice displayed in that language)
       const fallbackTarget = new Intl.DisplayNames([localeOption], {
