@@ -225,5 +225,4 @@ W Internecie jest wiele instrukcji i informacji o klientach Ethereum, tutaj jest
 
 ## Powiązane samouczki {#related-tutorials}
 
-- [Uruchamianie węzła za pomocą Geth](/developers/tutorials/run-light-node-geth/) _– Jak pobrać, zainstalować i uruchomić Geth. Omówienie trybów synchronizacji, konsoli JavaScript i więcej._
 - [Turn your Raspberry Pi 4 into an Eth 1.0 or Eth 2.0 node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)._

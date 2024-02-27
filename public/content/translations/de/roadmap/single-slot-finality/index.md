@@ -58,7 +58,7 @@ Das Problem mit dem Skalieren von Aggregationen mit einer Erhöhung der Validato
 
 ## Aktueller Fortschritt {#current-progress}
 
-SSF ist in der Forschungsphase. Es ist nicht zu erwarten, dass es in den nächsten Jahren entsendet werden kann, wahrscheinlich wird dies erst nach anderen wesentlichen Verbesserungen wie [Verkle Bäumen](/roadmap/verkle-trees/) und [Danksharding](/roadmap/danksharding]) passieren können.
+SSF ist in der Forschungsphase. Es ist nicht zu erwarten, dass es in den nächsten Jahren entsendet werden kann, wahrscheinlich wird dies erst nach anderen wesentlichen Verbesserungen wie [Verkle Bäumen](/roadmap/verkle-trees/) und [Danksharding](/roadmap/danksharding/) passieren können.
 
 ## Weiterführende Informationen {#further-reading}
 

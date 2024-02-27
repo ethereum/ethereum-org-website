@@ -32,7 +32,7 @@ Wprowadził on mechanizm konsensusu (lub „warstwę konsensusu”), który zaj�
 
 Łańcuch śledzący wprowadził do Ethereum mechanizm [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). Zapewnia to bezpieczeństwo Ethereum i daje walidatorom więcej ETH w tym procesie. W praktyce staking polega na stakowaniu ETH w celu aktywowania oprogramowania walidatora. Jako staker używasz oprogramowania, które tworzy i waliduje nowe bloki w łańcuchu.
 
-Staking służy podobnym celom, co kiedyś [wydobywanie](/developers/docs/mining/), ale różni się pod wieloma względami. Wydobywanie wymagało dużych nakładów początkowych w postaci potężnego sprzętu i zużycia energii, co skutkowało ekonomią skali i sprzyjało centralizacji. Wydobywanie nie wiązało się również z wymogiem blokowania aktywów jako zabezpieczenia, co ograniczało możliwości protokołu w zakresie karania wrogich podmiotów po ataku.
+Staking służy podobnym celom, co kiedyś [wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/), ale różni się pod wieloma względami. Wydobywanie wymagało dużych nakładów początkowych w postaci potężnego sprzętu i zużycia energii, co skutkowało ekonomią skali i sprzyjało centralizacji. Wydobywanie nie wiązało się również z wymogiem blokowania aktywów jako zabezpieczenia, co ograniczało możliwości protokołu w zakresie karania wrogich podmiotów po ataku.
 
 Przejście na proof-of-stake sprawiło, że sieć Ethereum stała się znacznie bezpieczniejsza i zdecentralizowana w porównaniu z proof-of-work. Im więcej osób uczestniczy w sieci, tym staje się ona bardziej zdecentralizowana i lepiej zabezpieczona przed atakami.
 

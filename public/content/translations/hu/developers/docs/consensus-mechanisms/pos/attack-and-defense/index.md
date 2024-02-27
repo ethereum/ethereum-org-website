@@ -8,7 +8,7 @@ A tolvajok és szabotőrök folyamatosan keresik a lehetőséget, hogy megtámad
 
 ## Előfeltételek {#prerequisites}
 
-A [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) alapszintű ismerete szükséges. Hasznos lesz továbbá, ha alapszintű ismeretekkel rendelkezel az Ethereum [ösztönzési réteg](/developers/docs/docs/consensus-mechanisms/pos/rewards-and-penalties) és az elágazásválasztási algoritmus, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper) működéséről.
+A [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) alapszintű ismerete szükséges. Hasznos lesz továbbá, ha alapszintű ismeretekkel rendelkezel az Ethereum [ösztönzési réteg](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) és az elágazásválasztási algoritmus, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper) működéséről.
 
 ## Mit akarnak a támadók? {#what-do-attackers-want}
 
