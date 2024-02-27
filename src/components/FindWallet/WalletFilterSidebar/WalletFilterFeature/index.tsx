@@ -86,7 +86,7 @@ const WalletFilterFeature = ({
                   as="h3"
                   color="primary.base"
                   borderBottom={isExpanded ? "1px" : "none"}
-                  borderColor="currentColor"
+                  borderColor="body.light"
                   fontSize="lg"
                   fontWeight={600}
                   lineHeight={1.4}
@@ -105,7 +105,7 @@ const WalletFilterFeature = ({
                     _hover={{ background: "transparent" }}
                   >
                     <Box as="span" flex={1}>
-                      <Text>{filterOption.title}</Text>
+                      <Text color="text">{filterOption.title}</Text>
                     </Box>
                     <AccordionIcon
                       color="primary.base"
