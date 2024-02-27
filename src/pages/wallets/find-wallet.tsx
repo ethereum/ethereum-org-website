@@ -304,7 +304,7 @@ const FindWalletPage = () => {
         <Flex pt={4} pb={6} gap={6}>
           <Show above="lg">
             <WalletFilterSidebar
-              maxW="330px"
+              w={{ md: "330px" }}
               top={NAV_BAR_PX_HEIGHT}
               {...{
                 filters,
