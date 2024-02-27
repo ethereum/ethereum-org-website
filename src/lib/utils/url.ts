@@ -1,4 +1,11 @@
-import { DISCORD_PATH, MAIN_CONTENT_ID } from "@/lib/constants"
+import { join } from "path"
+
+import {
+  DEFAULT_LOCALE,
+  DISCORD_PATH,
+  MAIN_CONTENT_ID,
+  SITE_URL,
+} from "@/lib/constants"
 
 export const isDiscordInvite = (href: string): boolean =>
   href.includes(DISCORD_PATH) && !href.includes("http")
@@ -25,13 +32,17 @@ export const isHrefActive = (
   href: string,
   pathname: string,
   isPartiallyActive?: boolean
-) => {
-  // remove any potential trailing slash to compare the paths correctly
-  const cleanHref = href.replace(/\/+$/, "")
-
-  return isPartiallyActive
-    ? pathname.startsWith(cleanHref)
-    : pathname === cleanHref
-}
+) => (isPartiallyActive ? pathname.startsWith(href) : pathname === href)
 
 export const isHash = (href: string): boolean => href.startsWith("#")
+
+// remove any query params or hashes from the path
+export const cleanPath = (path: string): string => path.replace(/[$#].+$/, "")
+
+export const addSlashes = (href: string): string => {
+  if (isExternal(href)) return href
+  return join("/", href, "/")
+}
+
+export const getFullUrl = (locale: string | undefined, path: string) =>
+  addSlashes(new URL(join(locale || DEFAULT_LOCALE, path), SITE_URL).href)

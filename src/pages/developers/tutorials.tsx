@@ -84,7 +84,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/developers/tutorials"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -217,6 +217,7 @@ const TutorialPage = ({
         )}
       />
       <Heading
+        as="h1"
         fontStyle="normal"
         fontWeight="semibold"
         fontFamily="monospace"

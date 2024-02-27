@@ -743,7 +743,7 @@ Ini adalah fungsi utama dari pabrik, untuk membuat bursa pasangan di antara dua 
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Kita menginginkan alamat dari bursa baru yang bersifat deterministik, sehingga dapat dihitung sebelum di luar rantai (dapat bermanfaat untuk [transaksi lapisan ke-2](/developers/docs/layer-2-scaling/)). Untuk melakukan hal tersebut, kita perlu memiliki urutan alamat token yang konsisten, terlepas dari urutan di mana kita menerimanya, sehingga kita memilahnya di sini.
+Kita menginginkan alamat dari bursa baru yang bersifat deterministik, sehingga dapat dihitung sebelum di luar rantai (dapat bermanfaat untuk [transaksi lapisan ke-2](/developers/docs/scaling/)). Untuk melakukan hal tersebut, kita perlu memiliki urutan alamat token yang konsisten, terlepas dari urutan di mana kita menerimanya, sehingga kita memilahnya di sini.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');

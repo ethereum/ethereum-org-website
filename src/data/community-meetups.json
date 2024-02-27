@@ -1,5 +1,11 @@
 [
   {
+    "title": "Web3 Family",
+    "emoji": ":es:",
+    "location": "Barcelona",
+    "link": "https://www.meetup.com/web3family/"
+  },
+  {
     "title": "CryptoCanal",
     "emoji": ":nl:",
     "location": "Amsterdam",
@@ -436,5 +442,11 @@
     "emoji": ":belgium:",
     "location": "Brussels",
     "link": "https://dao.brussels/"
+  },
+  {
+    "title": "Ethereum Edmonton Meetup",
+    "emoji": ":canada:",
+    "location": "Edmonton",
+    "link": "https://www.meetup.com/ethereum-edmonton-meetup/"
   }
 ]

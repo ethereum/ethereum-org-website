@@ -101,7 +101,6 @@ import rotki from "@/public/dapps/rotki.png"
 import rubic from "@/public/dapps/rubic.png"
 import sablier from "@/public/dapps/sablier.png"
 import set from "@/public/dapps/set.png"
-import skiff from "@/public/dapps/skiff.png"
 import spatial from "@/public/dapps/spatial.png"
 import spruce from "@/public/dapps/spruce.png"
 import dai from "@/public/dapps/stabledai.png"
@@ -116,7 +115,6 @@ import zapper from "@/public/dapps/zapper.png"
 import zerion from "@/public/dapps/zerion.png"
 import developers from "@/public/developers-eth-blocks.png" // Handled inside Callout => height=200
 import doge from "@/public/doge-computer.png" // HERO, full? 624px
-import ogImage from "@/public/doge-computer.png" // PageMetadata, src only
 import oneinch from "@/public/exchanges/1inch.png"
 import magicians from "@/public/magicians.png"
 import wallet from "@/public/wallet.png" // width=300
@@ -434,7 +432,7 @@ interface Categories {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/dapps")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -1139,13 +1137,6 @@ const DappsPage = () => {
       image: xmtp,
       alt: t("page-dapps-xmtp-logo-alt"),
     },
-    {
-      title: "Skiff",
-      description: t("page-dapps-dapp-description-skiff"),
-      link: "https://skiff.com/",
-      image: skiff,
-      alt: t("page-dapps-skiff-logo-alt"),
-    },
   ]
 
   const identity = [
@@ -1342,8 +1333,8 @@ const DappsPage = () => {
     <Page>
       <PageMetadata
         title={t("common:decentralized-applications-dapps")}
-        description={t("common:page-dapps-desc")}
-        image={ogImage.src}
+        description={t("page-dapps-desc")}
+        image="/doge-computer.png"
       />
       <PageHero content={heroContent} />
       <Divider />

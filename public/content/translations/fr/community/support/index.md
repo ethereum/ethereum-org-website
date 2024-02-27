@@ -30,7 +30,7 @@ Vous rencontrez un problème avec votre portefeuille ? La plupart des portefeuil
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Cette liste est non-exhaustive. Vous avez besoin d'aide pour trouver l'assistance pour un portefeuille spécifique ? Rejoignez le [Discord Ethereum.org](https://discord.gg/ethereum-org) et nous essaierons de vous aider._
+_Cette liste est non-exhaustive. Vous avez besoin d'aide pour trouver l'assistance pour un portefeuille spécifique ? Rejoignez le [Discord ethereum.org](https://discord.gg/ethereum-org) et nous tenterons de vous aider._
 
 Vous êtes à la recherche d'un portefeuille Ethereum ? [Explorez notre liste complète de portefeuilles Ethereum](/wallets/find-wallet/).
 
@@ -39,7 +39,7 @@ Vous êtes à la recherche d'un portefeuille Ethereum ? [Explorez notre liste co
 Le développement d'une application décentralisée peut être difficile. Voici quelques espaces axés sur leur création, avec des développeurs Ethereum chevronnés qui seront heureux de vous faire part de leur expérience.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [Discord CryptoDevs](https://discord.gg/Z9TA39m8Yu)
+- [Discord CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
@@ -53,7 +53,7 @@ Votre question concerne un outil, un projet ou une bibliothèque en particulier 
 
 Voici quelques exemples connus :
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)

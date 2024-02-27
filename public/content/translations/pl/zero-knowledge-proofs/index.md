@@ -4,7 +4,7 @@ description: Nietechniczne wprowadzenie do dowodów wiedzy zerowej dla początku
 lang: pl
 ---
 
-## Czym są dowody wiedzy zerowej? {#what-are-zk-proofs}
+# Czym są dowody wiedzy zerowej? {#what-are-zk-proofs}
 
 Dowód o wiedzy zerowej to sposób na udowodnienie ważności stwierdzenia bez ujawniania samego stwierdzenia. „Udowadniający” jest stroną próbującą udowodnić twierdzenie, podczas gdy „weryfikator” jest odpowiedzialny za walidację twierdzenia.
 

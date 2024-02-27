@@ -6,7 +6,7 @@ lang: de
 
 # Ethereum Leitfäden
 
-Wollen Sie Ihre Ethereum Reise starten? Ethereum ist kein Unternehmen mit einem Skript-gebundenen Helpdesk, aber diese praktischen Anleitungen helfen Ihnen zu lernen, wie Sie anfangen können.
+Möchten Sie Ihre Ethereum Reise starten? Unsere praktischen Leitfäden führen Sie Schritt für Schritt durch den Einstieg und erleichtern Ihnen den Umgang mit dieser neuen Technologie.
 
 ## Erste Schritte
 
@@ -16,14 +16,12 @@ Wollen Sie Ihre Ethereum Reise starten? Ethereum ist kein Unternehmen mit einem 
 
 ## Grundlagen zur Sicherheit
 
-1. [Wie man einen Smart-Contract-Zugriff widerrufen kann](/guides/how-to-revoke-token-access/) - Falls Sie plötzlich eine Transaktion in ihrer Wallet sehen, welche sie nicht initiiert haben, wird Ihnen diese Anleitung erklären, wie Sie das in Zukunft verhindern können.
+1. [Wie man einen Smart-Contract-Zugriff widerrufen kann](/guides/how-to-revoke-token-access/) – Falls Sie plötzlich eine Transaktion in Ihrer Wallet sehen, die Sie nicht initiiert haben, finden Sie in diesem Leitfaden eine Anleitung, wie sich das in Zukunft verhinden lässt.
+
+2. [Wie man betrügerische Token (Scam-Token) erkennt](/guides/how-to-id-scam-tokens/) – Was scams sind, welche Taktiken dabei eingesetzt werden und wie man sie erkennen kann, um sich zu schützen und nicht betrogen zu werden.
 
 ## Ethereum verwenden
 
 1. [Wie man Token in Layer 2 überführt](/guides/how-to-use-a-bridge/) - Sind Ethereum-Transaktionen zu teuer? Betrachten Sie den Wechsel auf sogenannte Layer-2 Skalierungslösungen.
 
 2. [Wie man Token tauscht](/guides/how-to-swap-tokens/) - Wollen Sie Ihre Token gegen andere austauschen? Dieser simple Leitfaden zeigt Ihnen, wie Sie das machen.
-
-## Dezentralisierte Denkfähigkeiten
-
-Sobald Sie eine Wallet haben und einige der Features genutzt haben, verstehen Sie mehr über Ethereum, indem Sie sich fragen: "_Warum_ ist das eigentlich so wichtig?" Was macht Geld so wertvoll, wenn es niemand kontrolliert? Was ist Vertrauen? Trägt das zur Freiheit bei? Welche Arten von neuen Governance- und Organisationsstrukturen ermöglicht Ethereum? Diese und weitere Fragen werden offen in Gemeinschaften wie [Kernel](https://www.kernel.community/) diskutiert.

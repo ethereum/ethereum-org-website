@@ -4,7 +4,7 @@ description:
 lang: fr
 ---
 
-Vous devez déployer vos contrats intelligents afin qu'ils soient disponibles pour les utilisateurs sur un réseau Ethereum.
+Vous devez déployer votre contrat intelligent afin qu'il soit disponible pour les utilisateurs sur un réseau Ethereum.
 
 Déployer un contrat intelligent consiste à envoyer sur la blockchain une transaction contenant le code du contrat intelligent compilé sans spécifier de destinataire.
 
@@ -20,16 +20,14 @@ Enfin, comme vous devrez compiler votre contrat avant de le déployer, assurez-v
 
 ### Ce dont vous aurez besoin {#what-youll-need}
 
-- Le bytecode du contrat, généré par la [compilation](/developers/docs/smart-contracts/compiling/).
+- Le bytecode de votre contrat - il est généré par la [compilation](/developers/docs/smart-contracts/compiling/).
 - Des ethers pour le gaz. Vous fixerez votre limite de gaz comme pour les autres transactions, mais sachez que les déploiements de contrats nécessitent beaucoup plus de gaz qu'un simple transfert d'ethers.
 - Un script de déploiement ou un plugin.
 - l'accès à un [nœud Ethereum](/developers/docs/nodes-and-clients/), soit en créant le vôtre, soit en vous connectant à un nœud public, soit via un [service de nœuds](/developers/docs/nodes-and-clients/nodes-as-a-service/) avec une clé d'API
 
 ### Étapes pour déployer un contrat intelligent {#steps-to-deploy}
 
-Les étapes spécifiques dépendront des outils que vous utilisez. Par exemple, consultez la [documentation Hardhat pour deployer des contrats](https://hardhat.org/guides/deploying.html) ou la [documentation Truffle sur les réseaux et le déploiement d'applications](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment). Ce sont deux des outils les plus populaires pour le déploiement de contrats intelligents, qui impliquent la rédaction d'un script pour gérer les étapes de déploiement.
-
-Une fois déployé, votre contrat aura une adresse Ethereum comme les autres [comptes](/developers/docs/accounts/).
+Les étapes spécifiques dépendent du cadre de développement en question. Par exemple, vous pouvez consulter la [documentation de Hardhat sur le déploiement de vos contrats](https://hardhat.org/guides/deploying.html) ou [la documentation de Foundry sur le déploiement et la vérification d'un contrat intelligent](https://book.getfoundry.sh/forge/deploying). Une fois déployé, votre contrat aura une adresse Ethereum comme les autres [comptes](/developers/docs/accounts/) et pourra être vérifié à l'aide [d'outils de vérification du code source](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Outils connexes {#related-tools}
 
@@ -50,12 +48,6 @@ Une fois déployé, votre contrat aura une adresse Ethereum comme les autres [co
 - [Documentation sur le déploiement de contrats](https://hardhat.org/guides/deploying.html)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
-
-**Truffle -** **_ Environnement de développement, infrastructure de test, pipeline de construction et autres outils_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [Documentation sur les réseaux et le déploiement d'applications](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
-- [GitHub](https://github.com/trufflesuite/truffle)
 
 **thirdweb - _Déployez facilement n'importe quel contrat sur n'importe quelle chaîne compatible EVM en une seule commande_**
 

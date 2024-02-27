@@ -37,7 +37,6 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import eth from "@/public/eth.png"
-import ogImage from "@/public/eth.png"
 import ethCat from "@/public/eth-gif-cat.png"
 import defi from "@/public/finance_transparent.png"
 import ethereum from "@/public/what-is-ethereum.png"
@@ -266,7 +265,7 @@ const CentralActionCard = (props: ComponentProps<typeof ActionCard>) => (
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/eth")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -385,7 +384,7 @@ const EthPage = () => {
       <PageMetadata
         title={t("page-eth-whats-eth-meta-title")}
         description={t("page-eth-whats-eth-meta-desc")}
-        image={ogImage.src}
+        image="/eth.png"
       />
       <Content>
         <HeroContainer>

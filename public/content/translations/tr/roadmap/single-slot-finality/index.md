@@ -58,7 +58,7 @@ Bugünün taahhüt mekanizması kesinlik aracı (doğrulayıcıların 2/3'ünün
 
 ## Güncel ilerleme {#current-progress}
 
-SSF araştırma aşamasında. Birkaç yıl daha gelmesi beklenmiyor, muhtemelen çok aşamalı yükseltmelerden, [(Verkle ağaçları](/roadmap/verkle-trees/) ve [Danksharding](/roadmap/danksharding]) gibi) sonra.
+SSF araştırma aşamasında. Birkaç yıl daha gelmesi beklenmiyor, muhtemelen çok aşamalı yükseltmelerden, [(Verkle ağaçları](/roadmap/verkle-trees/) ve [Danksharding](/roadmap/danksharding/) gibi) sonra.
 
 ## Daha fazla bilgi {#further-reading}
 
