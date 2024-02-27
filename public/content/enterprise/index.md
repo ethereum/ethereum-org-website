@@ -72,7 +72,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 ### Tooling and libraries {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Data Analytics Platform_
-- [Sirato](https://www.web3labs.com/sirato) _a data and analytics platform for public and private Ethereum compatible networks by Web3 Labs_
+- [Chainlens](https://www.chainlens.com/) _a data and analytics platform for public and private Ethereum compatible networks by Web3 Labs_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _a toolkit for private transactions_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _a transaction signing application to be used with a web3 provider_
 - [Tenderly](https://tenderly.co/) _a Data Platform providing real-time analytics, alerting and monitoring with support for private networks_

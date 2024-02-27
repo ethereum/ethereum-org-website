@@ -68,7 +68,7 @@ Különféle szervezetek számtalan együttműködésen alapuló erőfeszítést
 ### Eszközök és könyvtárak {#tooling-and-libraries}
 
 - Az [Alethio](https://explorer.aleth.io/) _egy Ethereum adatelemzési platform_
-- A [Sirato](https://www.web3labs.com/sirato) _egy adat és elemzési platform publikus és privát, Ethereum kompatibilis hálózatokhoz, melyet a Web3 Labs fejlesztett_
+- A [Chainlens](https://www.chainlens.com/) _egy adat és elemzési platform publikus és privát, Ethereum kompatibilis hálózatokhoz, melyet a Web3 Labs fejlesztett_
 - Az [Ernst & Young Nightfall](https://github.com/EYBlockchain/nightfall) _ egy eszköztár privát tranzakciókhoz_
 - Az [EthSigner](https://github.com/ConsenSys/ethsigner) _egy tranzakció aláírási alkalmazás, amelyet egy web3 szolgáltatóval kell használni_
 - A [Tenderly](https://tenderly.co/) _egy adatplatform, mely valós idejű elemzéseket, figyelmeztetéseket és monitorozást kínál támogatással együtt privát láncoknak._

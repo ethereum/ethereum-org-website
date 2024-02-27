@@ -68,7 +68,7 @@ Diferentes organizaciones han emprendido iniciativas de colaboración para que E
 ### Herramientas y bibliotecas {#tooling-and-libraries}
 
 - [Alethio:](https://explorer.aleth.io/) _plataforma de análisis de datos de Ethereum_
-- [Sirato](https://www.web3labs.com/sirato)_es una plataforma de datos y análisis para redes públicas y privadas de Web3 Labs compatibles con Ethereum._
+- [Chainlens](https://www.chainlens.com/)_es una plataforma de datos y análisis para redes públicas y privadas de Web3 Labs compatibles con Ethereum._
 - [Ernst & Nightfall's "Nightfall"](https://github.com/EYBlockchain/nightfall) _: un conjunto de herramientas para realizar transacciones privadas_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _: una aplicación de firmado de transacción para utilizarse con un proveedor de web3_
 - [Anteriormente](https://tenderly.co/) _era una plataforma de datos que proporciona análisis en tiempo real, alertas y monitoreo con soporte para redes privadas._
