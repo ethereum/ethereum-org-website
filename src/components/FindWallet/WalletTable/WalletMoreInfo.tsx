@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import {
@@ -10,7 +11,11 @@ import {
   Text,
 } from "@chakra-ui/react"
 
+import { Lang } from "@/lib/types"
+
 import InlineLink, { LinkProps } from "@/components/Link"
+
+import { getLocaleFormattedDate } from "@/lib/utils/time"
 
 import { DropdownOption } from "./useWalletTable"
 import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
@@ -44,6 +49,7 @@ export const WalletMoreInfo = ({
   featureDropdownItems,
 }: WalletMoreInfoProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
+  const { locale } = useRouter()
   const walletHasFilter = (filterKey) => {
     return wallet[filterKey] === true
   }
@@ -179,9 +185,12 @@ export const WalletMoreInfo = ({
             </Flex>
 
             <Text as="i">
-              {`${wallet.name} ${t("page-find-wallet-info-updated-on")} ${
+              {`${wallet.name} ${t(
+                "page-find-wallet-info-updated-on"
+              )} ${getLocaleFormattedDate(
+                locale as Lang,
                 wallet.last_updated
-              }`}
+              )}`}
             </Text>
           </Stack>
         </Box>
