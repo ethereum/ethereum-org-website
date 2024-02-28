@@ -59,7 +59,7 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   },
   hardware: {
     title: "page-find-wallet-hardware",
-    description: "page-find-wallet-hardware-desc",
+    description: "",
     filterKey: "hardware",
   },
   open_source: {
