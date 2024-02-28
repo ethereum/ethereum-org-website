@@ -496,3 +496,25 @@ export type CommunityConference = {
 
 // Wallets
 export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
+
+// Historical upgrades
+type NetworkUpgradeDetails = {
+  blockNumber?: number
+  epochNumber?: number
+  slotNumber?: number
+} & (
+  | {
+      isPending: true
+      dateTimeAsString?: string
+      ethPriceInUSD?: never
+      waybackLink?: never
+    }
+  | {
+      ethPriceInUSD: number
+      waybackLink: string
+      dateTimeAsString: string
+      isPending?: never
+    }
+)
+
+export type NetworkUpgradeData = Record<string, NetworkUpgradeDetails>
