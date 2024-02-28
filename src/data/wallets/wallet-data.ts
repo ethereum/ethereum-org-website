@@ -94,7 +94,7 @@ export interface WalletData {
 
 const walletData: WalletData[] = [
   {
-    last_updated: "June 22, 2022",
+    last_updated: "2022-06-22",
     name: "Keystone",
     image: KeystoneImage,
     brand_color: "#ffffff",
@@ -142,7 +142,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "June 22, 2022",
+    last_updated: "2022-06-22",
     name: "Coin98",
     image: Coin98Image,
     brand_color: "#ffffff",
@@ -200,7 +200,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "June 22, 2022",
+    last_updated: "2022-06-22",
     name: "Loopring wallet",
     image: LoopringImage,
     brand_color: "#ffffff",
@@ -249,7 +249,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "June 22, 2022",
+    last_updated: "2022-06-22",
     name: "AirGap wallet",
     image: AirgapImage,
     brand_color: "#50249F",
@@ -296,7 +296,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "June 22, 2022",
+    last_updated: "2022-06-22",
     name: "Argent",
     image: ArgentImage,
     brand_color: "#ffffff",
@@ -344,7 +344,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "November 15, 2022",
+    last_updated: "2022-11-15",
     name: "Coinbase Wallet",
     image: CoinbaseImage,
     brand_color: "#0052FF",
@@ -390,7 +390,7 @@ const walletData: WalletData[] = [
     // note: "Community contribution, let's follow up with Coinbase",
   },
   {
-    last_updated: "June 22, 2022",
+    last_updated: "2022-06-22",
     name: "Frame",
     image: FrameImage,
     brand_color: "#222021",
@@ -436,7 +436,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "June 22, 2022",
+    last_updated: "2022-06-22",
     name: "MetaMask",
     image: MetaMaskImage,
     brand_color: "#ffffff",
@@ -526,7 +526,7 @@ const walletData: WalletData[] = [
     documentation: "https://docs.safe.global/",
   },
   {
-    last_updated: "June 22, 2022",
+    last_updated: "2022-06-22",
     name: "Coin wallet",
     image: CoinwalletImage,
     brand_color: "#ffffff",
@@ -597,7 +597,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "August 23, 2023",
+    last_updated: "2023-8-23",
     name: "Ambire",
     image: AmbireImage,
     brand_color: "#aa6aff",
@@ -643,7 +643,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "June 23, 2022",
+    last_updated: "2022-06-23",
     name: "ZenGo",
     image: ZengoImage,
     brand_color: "#35C4BA",
@@ -688,7 +688,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "June 24, 2022",
+    last_updated: "2022-06-24",
     name: "imToken",
     image: imTokenImage,
     brand_color: "#098de6",
@@ -803,7 +803,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "June 24, 2022",
+    last_updated: "2022-06-24",
     name: "FoxWallet",
     image: FoxWalletImage,
     brand_color: "#ffffff",
@@ -848,7 +848,7 @@ const walletData: WalletData[] = [
     documentation: "https://hc.foxwallet.com/docs/faq",
   },
   {
-    last_updated: "June 24, 2022",
+    last_updated: "2022-06-24",
     name: "Pillar",
     image: PillarImage,
     brand_color: "#7501D9",
@@ -896,7 +896,7 @@ const walletData: WalletData[] = [
     documentation: "https://help.pillar.fi/en/",
   },
   {
-    last_updated: "June 24, 2022",
+    last_updated: "2022-06-24",
     name: "MEW wallet",
     image: MewImage,
     brand_color: "#05C0A5",
@@ -942,7 +942,7 @@ const walletData: WalletData[] = [
     documentation: "https://help.myetherwallet.com/en/",
   },
   {
-    last_updated: "June 24, 2022",
+    last_updated: "2022-06-24",
     name: "Unstoppable wallet",
     image: UnstoppableWalletImage,
     brand_color: "#ffbe43",
@@ -988,7 +988,7 @@ const walletData: WalletData[] = [
     documentation: "https://unstoppable.money/faq",
   },
   {
-    last_updated: "June 24, 2022",
+    last_updated: "2022-06-24",
     name: "MyEtherWallet",
     image: MyEtherWalletImage,
     brand_color: "#ffffff",
@@ -1034,7 +1034,7 @@ const walletData: WalletData[] = [
     documentation: "https://help.myetherwallet.com/en/",
   },
   {
-    last_updated: "June 24, 2022",
+    last_updated: "2022-06-24",
     name: "AlphaWallet",
     image: AlphaWalletImage,
     brand_color: "#ffffff",
@@ -1080,7 +1080,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "June 24, 2022",
+    last_updated: "2022-06-24",
     name: "Guarda",
     image: GuardaImage,
     brand_color: "#ffffff",
@@ -1126,7 +1126,7 @@ const walletData: WalletData[] = [
     documentation: "https://support.guarda.com/",
   },
   {
-    last_updated: "June 24, 2022",
+    last_updated: "2022-06-24",
     name: "Bridge wallet",
     image: BridgeWalletImage,
     brand_color: "#ffffff",
@@ -1172,7 +1172,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "September 14, 2022",
+    last_updated: "2022-9-14",
     name: "Torus Wallet",
     image: TorusImage,
     brand_color: "#0364ff",
@@ -1219,7 +1219,7 @@ const walletData: WalletData[] = [
     mpc: true,
   },
   {
-    last_updated: "July 18, 2022",
+    last_updated: "2022-7-18",
     name: "TokenPocket",
     image: TokenPocketImage,
     brand_color: "#2980fe",
@@ -1276,7 +1276,7 @@ const walletData: WalletData[] = [
     documentation: "https://help.tokenpocket.pro/developer-en/",
   },
   {
-    last_updated: "June 30, 2022",
+    last_updated: "2022-6-30",
     name: "Rainbow",
     image: RainbowImage,
     brand_color: "#001A4D",
