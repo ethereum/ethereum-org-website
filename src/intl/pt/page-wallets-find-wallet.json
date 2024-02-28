@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Carteiras que suportam o Serviço de Nomes Ethereum (ENS)",
   "page-find-wallet-token-importing": "Importação de tokens",
   "page-find-wallet-token-importing-desc": "Importar qualquer token ERC-20 para utilizar na carteira",
-  "page-find-wallet-fee-optimization-desc": "Suporte a transações do tipo 2 para taxas de gás otimizadas e reembolsos de taxas para gás não utilizado",
   "page-find-wallet-buy-crypto": "Comprar moeda digital",
   "page-find-wallet-buy-crypto-desc": "Comprar moeda digital com moeda fiduciária diretamente na carteira \n *Nota: a compra de moeda digital pode ser específica da região",
   "page-find-wallet-sell-for-fiat": "Vender por moeda fiduciária",

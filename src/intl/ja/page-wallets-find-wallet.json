@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "イーサリアム・ネーム・サービス(ENS)対応ウォレット",
   "page-find-wallet-token-importing": "トークンのインポート",
   "page-find-wallet-token-importing-desc": "ERC-20トークンをインポートし、ウォレットで使用",
-  "page-find-wallet-fee-optimization-desc": "最適化されたガス代のType 2トランザクション、未使用のガス代の払い戻し",
   "page-find-wallet-buy-crypto": "暗号資産の購入",
   "page-find-wallet-buy-crypto-desc": "ウォレットを使って法定通貨で暗号通貨を購入\n *注: 地域によっては暗号通貨を購入できない場合があります。",
   "page-find-wallet-sell-for-fiat": "法定通貨への換金",

@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Peňaženky, ktoré podporujú službu Ethereum Name Service (ENS), ktorá umožňuje zobrazenie vami zvoleného mena, ako názvu účtu namiesto kombinácie čísel a písmen",
   "page-find-wallet-token-importing": "Importovanie tokenov",
   "page-find-wallet-token-importing-desc": "Importujte do peňaženky akýkoľvek ERC-20 token",
-  "page-find-wallet-fee-optimization-desc": "Podpora transakcií druhého typu, ktoré umožňujú optimalizáciu sieťových poplatkov a refundáciu nepoužitých sieťových poplatkov",
   "page-find-wallet-buy-crypto": "Nakúp kryptomeny",
   "page-find-wallet-buy-crypto-desc": "Nákup kryptomien za bežné peniaze priamo v peňaženke * Upozornenie: nákup kryptomien môže byť regionálne obmedzený",
   "page-find-wallet-sell-for-fiat": "Predaj za bežné peniaze",

@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Mga wallet na sumusuporta sa Ethereum Name Service (ENS)",
   "page-find-wallet-token-importing": "Pag-import ng token",
   "page-find-wallet-token-importing-desc": "Mag-import ng anumang ERC-20 token na gagamitin sa wallet",
-  "page-find-wallet-fee-optimization-desc": "Suportahan ang 2 uri ng transaksyon para sa mga na-optimize na bayarin sa gas, at refund ng bayarin para sa hindi nagamit na gas",
   "page-find-wallet-buy-crypto": "Bumili ng crypto",
   "page-find-wallet-buy-crypto-desc": "Bumili ng crypto gamit ang fiat nang direkta sa wallet\n*Tandaan: Ang pagbili ng crypto ay maaaring partikular sa rehiyon",
   "page-find-wallet-sell-for-fiat": "Ibenta para sa fiat",

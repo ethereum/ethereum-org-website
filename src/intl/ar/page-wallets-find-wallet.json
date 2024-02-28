@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "المحافظ التي تدعم خدمة اسم الإيثيريوم (ENS)",
   "page-find-wallet-token-importing": "استيراد الرمز المميز",
   "page-find-wallet-token-importing-desc": "قم باستيراد أي رمز ERC-20 مميز لاستخدامه في المحفظة",
-  "page-find-wallet-fee-optimization-desc": "دعم معاملات النوع 2 لرسوم الغاز المحسّنة، واسترداد رسم الغاز غير المستخدم",
   "page-find-wallet-buy-crypto": "شراء العملات المشفرة",
   "page-find-wallet-buy-crypto-desc": "شراء العملات المشفرة باستخدام العملات الورقية مباشرة في المحفظة \n *ملاحظة: قد يكون شراء العملات المشفرة محددًا بالمنطقة",
   "page-find-wallet-sell-for-fiat": "بيع مقابل العملات الورقية",

@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Tárcák, melyek támogatják az Ethereum névszolgáltatást (ENS)",
   "page-find-wallet-token-importing": "Tokenimportálás",
   "page-find-wallet-token-importing-desc": "Bármilyen ERC-20 tokenek importálása a tárcába",
-  "page-find-wallet-fee-optimization-desc": "Támogatja a 2. típusú tranzakciókat az optimális díjak és a nem használt gáz visszatérítése érdekében",
   "page-find-wallet-buy-crypto": "Kripto vásárlása",
   "page-find-wallet-buy-crypto-desc": "Kriptovásárlás hagyományos pénzért közvetlenül a tárcában \n *Megjegyzés: a kriptovásárlás a helyi szabályozástól függ",
   "page-find-wallet-sell-for-fiat": "Eladás hagyományos pénzért",

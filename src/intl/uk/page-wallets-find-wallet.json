@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Гаманці з підтримкою Ethereum Name Service (ENS)",
   "page-find-wallet-token-importing": "Імпорт токенів",
   "page-find-wallet-token-importing-desc": "Імпорт будь-яких токенів ERC-20 для використання в гаманці",
-  "page-find-wallet-fee-optimization-desc": "Підтримка транзакцій типу 2 для оптимізації комісії за газ і повернення комісії за невикористаний газ",
   "page-find-wallet-buy-crypto": "Купити криптовалюту",
   "page-find-wallet-buy-crypto-desc": "Купівля криптовалюти за фіатні кошти прямо в гаманці \n * Примітка. Можливість купити криптовалюту може залежати від регіону.",
   "page-find-wallet-sell-for-fiat": "Продати за фіатні гроші",

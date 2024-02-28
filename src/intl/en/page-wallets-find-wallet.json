@@ -36,7 +36,6 @@
   "page-find-wallet-ens-support-desc": "Wallets that support Ethereum Name Service (ENS)",
   "page-find-wallet-token-importing": "Token importing",
   "page-find-wallet-token-importing-desc": "Import any ERC-20 token to use in the wallet",
-  "page-find-wallet-fee-optimization-desc": "Support type 2 transactions for optimized gas fees, and fee refunds for unused gas",
   "page-find-wallet-buy-crypto": "Buy crypto",
   "page-find-wallet-buy-crypto-desc": "Buy crypto with fiat directly in the wallet \n *Note: buying crypto may be region specific",
   "page-find-wallet-sell-for-fiat": "Sell for fiat",

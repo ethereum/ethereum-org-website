@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Кошельки, поддерживающие службу имен Ethereum Name Service (ENS)",
   "page-find-wallet-token-importing": "Импорт токена",
   "page-find-wallet-token-importing-desc": "Импортируйте любой токен ERC-20 для использования в кошельке",
-  "page-find-wallet-fee-optimization-desc": "Поддержка транзакций типа 2 для оптимизированной платы за газ и возврата платы за неиспользованный газ",
   "page-find-wallet-buy-crypto": "Купить криптовалюту",
   "page-find-wallet-buy-crypto-desc": "Покупайте криптовалюту за фиатные деньги прямо в кошельке \n * Примечание: покупка криптовалюты может зависеть от региона",
   "page-find-wallet-sell-for-fiat": "Продать за фиатные деньги",

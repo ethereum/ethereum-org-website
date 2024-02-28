@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Ethereumin nimipalvelun (ENS) kanssa yhteensopivat lompakot",
   "page-find-wallet-token-importing": "Rahakkeiden tuonti",
   "page-find-wallet-token-importing-desc": "Tuo mikä tahansa ERC-20-rahake käytettäväksi lompakossa",
-  "page-find-wallet-fee-optimization-desc": "Tukee kakkostyypin transaktioiden gas-kustannuksen optimointia sekä palkkioiden palautusta käyttämättömän gasin osalta.",
   "page-find-wallet-buy-crypto": "Osta kryptovaluuttaa",
   "page-find-wallet-buy-crypto-desc": "Osta kryptoja perinteisillä (fiat) valuutoilla suoraan lompakollasi.",
   "page-find-wallet-sell-for-fiat": "Myy saadaksesi perinteisiä valuuttoja",

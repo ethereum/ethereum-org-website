@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Novčanici koji podržavaju Ethereum uslugu imenovanja (ENS)",
   "page-find-wallet-token-importing": "Uvoz tokena",
   "page-find-wallet-token-importing-desc": "Uvezite bilo koji ERC-20 token za uporabu u vašem novčaniku",
-  "page-find-wallet-fee-optimization-desc": "Podrška za transakcije tipa 2 za optimizaciju troškova goriva i povrata trokova za neiskorišteno gorivo",
   "page-find-wallet-buy-crypto": "Kupite kripto",
   "page-find-wallet-buy-crypto-desc": "Kupite kripto fiat novcem izravno iz novčanika \n *Napomena: može biti ovisno o regiji",
   "page-find-wallet-sell-for-fiat": "Prodajte za fiat novac",

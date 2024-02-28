@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "支援以太坊名稱服務 (ENS) 的錢包",
   "page-find-wallet-token-importing": "代幣匯入",
   "page-find-wallet-token-importing-desc": "匯入任何 ERC-20 代幣以便於錢包內使用",
-  "page-find-wallet-fee-optimization-desc": "支持第二類交易使燃料費用最佳化並退還未使用之燃料費用",
   "page-find-wallet-buy-crypto": "購買加密貨幣",
   "page-find-wallet-buy-crypto-desc": "在錢包中直接使用法定貨幣購買加密貨幣\n*備注：購買加密貨幣可能因地區而異",
   "page-find-wallet-sell-for-fiat": "出售換取法定貨幣",

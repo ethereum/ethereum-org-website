@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "যে ওয়ালেটগুলো ইথেরিয়াম নেম সার্ভিস (ENS) সাপোর্ট করে",
   "page-find-wallet-token-importing": "টোকেন ইমপোর্টিং",
   "page-find-wallet-token-importing-desc": "ওয়ালেট এ ব্যবহারের জন্য যেকোনো ERC-20 টোকেন ইমপোর্ট করুন",
-  "page-find-wallet-fee-optimization-desc": "অপ্টিমাইজড গ্যাস ফি এবং অব্যবহৃত গ্যাসের ফি ফেরতের জন্য টাইপ 2 ট্রানজ্যাকশন সাপোর্ট করে",
   "page-find-wallet-buy-crypto": "ক্রিপ্টোকারেন্সি কিনুন",
   "page-find-wallet-buy-crypto-desc": "ওয়ালেটে সরাসরি ফিয়াট মুদ্রার মাধ্যমে ক্রিপ্টোকারেন্সি কিনুন \n *দ্রষ্টব্য: ক্রিপ্টোকারেন্সি ক্রয় নির্দিষ্ট অঞ্চল ভিত্তিক হতে পারে",
   "page-find-wallet-sell-for-fiat": "ফিয়াটের জন্য বিক্রি করুন",

@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Портфейли, поддържащи Обслужване на Имена в Етереум (ENS)",
   "page-find-wallet-token-importing": "Внос на токени",
   "page-find-wallet-token-importing-desc": "Импортирайте който и да е ERC-20 токен, за да го използвате в портфейла",
-  "page-find-wallet-fee-optimization-desc": "Поддръжка на трансакции от тип 2 за оптимизиране на таксите за газ и възстановяване на средствата за неизползван газ",
   "page-find-wallet-buy-crypto": "Купете криптовалута",
   "page-find-wallet-buy-crypto-desc": "Купете криптовалута с фиатни средства директно в портфейла \n *Бележка: купуването на криптовалута може да зависи от региона",
   "page-find-wallet-sell-for-fiat": "Продайте за фиатни валути",

@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Portfele obsługujące Ethereum Name Service (ENS)",
   "page-find-wallet-token-importing": "Importowanie tokenów",
   "page-find-wallet-token-importing-desc": "Import dowolnego tokena ERC-20 do użycia w portfelu",
-  "page-find-wallet-fee-optimization-desc": "Obsługa transakcji typu 2 dla zoptymalizowanych opłat za gaz oraz zwroty opłat za niewykorzystany gaz",
   "page-find-wallet-buy-crypto": "Zakup kryptowalut",
   "page-find-wallet-buy-crypto-desc": "Zakup kryptowalut za walutę fiducjarną bezpośrednio w portfelu \n * Uwaga: możliwość zakupu kryptowalut zależy od regionu",
   "page-find-wallet-sell-for-fiat": "Sprzedaż za walutę fiducjarną",

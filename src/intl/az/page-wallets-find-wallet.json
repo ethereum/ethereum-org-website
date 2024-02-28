@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Ethereum Name Service-i (ENS) dəstəkləyən pulqabılar",
   "page-find-wallet-token-importing": "Token idxalı",
   "page-find-wallet-token-importing-desc": "Pulqabıda istifadə etmək üçün istənilən ERC-20 tokenini idxal edin",
-  "page-find-wallet-fee-optimization-desc": "Optimallaşdırılmış qaz haqları üçün 2-ci növ əməliyyatları və istifadə olunmamış qaz üçün geri ödənişi dəstəkləyin",
   "page-find-wallet-buy-crypto": "Kriptovalyuta alın",
   "page-find-wallet-buy-crypto-desc": "Fiat ilə kriptovalyutanı birbaşa pulqabıdan alın\n *Qeyd: kriptovalyutanın alınması hər ölkədə fərqli ola bilər",
   "page-find-wallet-sell-for-fiat": "Fiata satılır",

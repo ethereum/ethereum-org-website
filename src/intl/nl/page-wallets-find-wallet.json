@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Portemonnees die Ethereum Name Service (ENS) ondersteunen",
   "page-find-wallet-token-importing": "Token importeren",
   "page-find-wallet-token-importing-desc": "Importeer eender welke ERC-20 token om te gebruiken in de portemonnee",
-  "page-find-wallet-fee-optimization-desc": "Ondersteuning van type 2-transacties voor geoptimaliseerde gaskosten en restitutie van kosten voor ongebruikt gas",
   "page-find-wallet-buy-crypto": "Koop crypto",
   "page-find-wallet-buy-crypto-desc": "Koop crypto met fiat direct in de portemonnee \n *Let op: crypto kopen kan regiospecifiek zijn",
   "page-find-wallet-sell-for-fiat": "Verkopen voor fiat",

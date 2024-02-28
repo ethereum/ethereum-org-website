@@ -35,7 +35,6 @@
   "page-find-wallet-ens-support-desc": "Dompet yang menyokong Perkhidmatan Nama Ethereum (ENS)",
   "page-find-wallet-token-importing": "Mengimport token",
   "page-find-wallet-token-importing-desc": "Import sebarang token ERC-20 untuk digunakan dalam dompet",
-  "page-find-wallet-fee-optimization-desc": "Menyokong transaksi jenis 2 untuk fi gas yang dioptimumkan, dan bayaran balik fi untuk gas yang tidak digunakan",
   "page-find-wallet-buy-crypto": "Beli kripto",
   "page-find-wallet-buy-crypto-desc": "Beli kripto dengan fiat terus dalam dompet \n *Nota: pembelian kripto mungkin adalah berdasarkan rantau",
   "page-find-wallet-sell-for-fiat": "Jual untuk fiat",
