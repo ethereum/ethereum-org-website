@@ -365,6 +365,7 @@ const WalletTable = ({
                               variant="outline"
                               w="auto"
                               isExternal
+                              size="sm"
                             >
                               {t("page-find-wallet-visit-website")}
                             </ButtonLink>
@@ -390,6 +391,7 @@ const WalletTable = ({
                       variant="outline"
                       w="100%"
                       isExternal
+                      size="sm"
                     >
                       {t("page-find-wallet-visit-website")}
                     </ButtonLink>
