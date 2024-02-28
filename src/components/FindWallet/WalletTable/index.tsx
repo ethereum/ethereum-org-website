@@ -305,7 +305,7 @@ const WalletTable = ({
                     alignItems="center"
                     w="100%"
                   >
-                    <FlexInfo w={{ base: "100%", md: "auto" }}>
+                    <FlexInfo w={{ base: "100%", md: "auto" }} ps={0}>
                       {/* Wallet image */}
                       <Box w={{ base: "24px", sm: "56px" }}>
                         <Image
