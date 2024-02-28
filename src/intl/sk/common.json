@@ -181,6 +181,7 @@
   "nav-find-wallet-description": "Peňaženky, ktoré umožňujú používať kryptomeny",
   "nav-find-wallet-label": "Vyberte si peňaženku",
   "nav-gas-fees-description": "Ako sa vypočítavajú poplatky za transakcie ETH",
+  "nav-gas-fees-label": "Poplatky",
   "nav-get-eth-description": "Na používanie aplikácií Ethereum potrebujete ether (ETH)",
   "nav-get-started-description": "Vaše prvé kroky pri používaní Etherea",
   "nav-governance-description": "Proces aktualizácie protokolu Etherea",

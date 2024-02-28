@@ -1209,13 +1209,6 @@ const DappsPage = () => {
 
   const bridges = [
     {
-      title: "Multichain",
-      description: t("page-dapps-dapp-description-multichain"),
-      link: "https://multichain.xyz/",
-      image: multichain,
-      alt: t("page-dapps-multichain-logo-alt"),
-    },
-    {
       title: "Rubic",
       description: t("page-dapps-dapp-description-rubic"),
       link: "https://rubic.exchange/",
