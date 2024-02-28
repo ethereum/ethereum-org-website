@@ -130,7 +130,7 @@ const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
   <Grid
     ref={ref}
     cursor="pointer"
-    py="25px"
+    py={4}
     px={{ base: 4, lg: 1 }}
     sx={{
       p: {
@@ -317,8 +317,10 @@ const WalletTable = ({
                       </Box>
 
                       <Box w={{ base: "100%", md: "auto" }}>
-                        <Stack gap={5}>
-                          <Text>{wallet.name}</Text>
+                        <Stack>
+                          <Stack mb={6}>
+                            <Text>{wallet.name}</Text>
+                          </Stack>
 
                           {/* Wallet Personas supported */}
                           <Flex gap={1.5} wrap="wrap">
@@ -330,41 +332,46 @@ const WalletTable = ({
                             ))}
                           </Flex>
 
-                          {/* Device labels */}
-                          <Flex
-                            alignItems="center"
-                            gap={3}
-                            display={deviceLabels.length > 0 ? "flex" : "none"}
-                          >
-                            <Icon as={DevicesIcon} fontSize="2xl" />
-
-                            <Text
-                              fontSize="1rem !important"
-                              fontWeight="normal !important"
+                          <Stack gap={2} mb={3}>
+                            {/* Device labels */}
+                            <Flex
+                              alignItems="center"
+                              gap={3}
+                              display={
+                                deviceLabels.length > 0 ? "flex" : "none"
+                              }
                             >
-                              {deviceLabels.join(" · ")}
-                            </Text>
-                          </Flex>
+                              <Icon as={DevicesIcon} fontSize="2xl" />
 
-                          {/* Supported languages */}
-                          <Flex alignItems="center" gap={3}>
-                            <Icon as={LanguagesIcon} fontSize="2xl" />
+                              <Text
+                                fontSize="1rem !important"
+                                fontWeight="normal !important"
+                              >
+                                {deviceLabels.join(" · ")}
+                              </Text>
+                            </Flex>
 
-                            <Text
-                              fontSize="1rem !important"
-                              fontWeight="normal !important"
-                            >
-                              {formatSupportedLanguages(supportedLanguages)}
-                            </Text>
-                          </Flex>
+                            {/* Supported languages */}
+                            <Flex alignItems="center" gap={3}>
+                              <Icon as={LanguagesIcon} fontSize="2xl" />
 
-                          {/* Wallet Website (desktop) */}
+                              <Text
+                                fontSize="1rem !important"
+                                fontWeight="normal !important"
+                              >
+                                {formatSupportedLanguages(supportedLanguages)}
+                              </Text>
+                            </Flex>
+                          </Stack>
+
+                          {/* Wallet Website Button (desktop) */}
                           <Box display={{ base: "none", md: "block" }} w="auto">
                             <ButtonLink
                               to={wallet.url}
                               variant="outline"
                               w="auto"
                               isExternal
+                              size="sm"
                             >
                               {t("page-find-wallet-visit-website")}
                             </ButtonLink>
@@ -383,13 +390,14 @@ const WalletTable = ({
                       </Box>
                     </FlexInfoCenter>
                   </Flex>
-                  {/* Wallet Website (mobile) */}
+                  {/* Wallet Website Button (mobile) */}
                   <Box display={{ base: "block", md: "none" }} mt={6} w="100%">
                     <ButtonLink
                       to={wallet.url}
                       variant="outline"
                       w="100%"
                       isExternal
+                      size="sm"
                     >
                       {t("page-find-wallet-visit-website")}
                     </ButtonLink>
