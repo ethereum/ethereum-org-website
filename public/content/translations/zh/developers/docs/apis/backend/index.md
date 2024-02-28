@@ -1,6 +1,6 @@
 ---
 title: 后端应用程序接口库
-description: 以太坊客户端应用程序接口的介绍，使您能够从您的应用程序中与区块链进行交互。
+description: 以太坊客户端应用程序接口的介绍，使你能够从你的应用程序中与区块链进行交互。
 lang: zh
 ---
 
@@ -8,15 +8,15 @@ lang: zh
 
 为此，每种以太坊客户端都实现了 [JSON-RPC](/developers/docs/apis/json-rpc/) 规范，因而应用程序可以依赖一组统一的[方法](/developers/docs/apis/json-rpc/#json-rpc-methods)。
 
-如果您想使用特定的编程语言去连接以太坊的节点，您可自行选择，但是在社区中已有几个方便的库，可以更方便地实现应用程序与以太坊的连接。 通过这些库，开发者可以方便地写下直观的一行函数来初始化（后端的）JSON RPC 请求并用于与以太坊进行交互。
+如果你想使用特定的编程语言去连接以太坊的节点，你可自行选择，但是在社区中已有几个方便的库，可以更方便地实现应用程序与以太坊的连接。 通过这些库，开发者可以方便地写下直观的一行函数来初始化（后端的）JSON RPC 请求并用于与以太坊进行交互。
 
 ## 前置要求 {#prerequisites}
 
-了解[以太坊堆栈](/developers/docs/ethereum-stack/)和[以太坊客户端](/developers/docs/nodes-and-clients/)可能会对您有所帮助。
+了解[以太坊堆栈](/developers/docs/ethereum-stack/)和[以太坊客户端](/developers/docs/nodes-and-clients/)可能会对你有所帮助。
 
 ## 为什么要使用库？ {#why-use-a-library}
 
-这些库降低了与一个以太坊节点交互的复杂性。 它们还提供实用的函数（例如：将 ETH 转化为 Gwei），而作为开发者，您可以花费更少的时间来处理以太坊客户端的复杂问题，从而将更多的时间集中于处理您的应用程序的独特功能。
+这些库降低了与一个以太坊节点交互的复杂性。 它们还提供实用的函数（例如：将 ETH 转化为 Gwei），而作为开发者，你可以花费更少的时间来处理以太坊客户端的复杂问题，从而将更多的时间集中于处理你的应用程序的独特功能。
 
 ## 可用的库 {#available-libraries}
 
@@ -149,7 +149,7 @@ lang: zh
 - [相关文档](https://docs.chainbase.com/)
 - [Discord](https://discord.gg/Wx6qpqz4AF)
 
-**GetBlock -** **_用于 Web3 开发的区块链服务_**
+**GetBlock -** **_ 用于 Web3 开发的区块链即服务_**
 
 - [GetBlock.io](https://getblock.io/)
 - [相关文档](https://getblock.io/docs/)
@@ -161,10 +161,10 @@ lang: zh
 - [GitHub](https://github.com/BlockPILabs)
 - [Discord](https://discord.com/invite/xTvGVrGVZv)
 
-**Tokenview -** **_通用多加密区块链应用程序接口平台。_**
+**Tokenview -** **_ 通用多重加密区块链应用程序接口平台。_**
 
 - [services.tokenview.io](https://services.tokenview.io/)
-- [相关文档](https://services.tokeniew/docs?type=api)
+- [相关文档](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
 ## 延伸阅读 {#further-reading}

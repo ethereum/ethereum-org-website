@@ -7,7 +7,7 @@ incomplete: false
 
 <FeaturedText>了解如何使用基于 Ruby 的项目和工具为以太坊进行开发。</FeaturedText>
 
-使用以太坊来创建去中心化应用程序，发挥加密货币和区块链技术的优势。 这些去中心化应用程序可以无需信任，这意味着在部署到以太坊后，它们将始终按程序设定运行。 去中心化应用程序可以控制数字资产，从而创建新类型的金融应用程序。 它们可以是去中心化的，即没有任何单一实体或个人控制它们，而且它们几乎不可能被审查。
+使用以太坊来创建去中心化应用程序，发挥加密货币和区块链技术的优势。 这些去中心化应用程序可以去信任，这意味着在部署到以太坊后，它们将始终按程序设定运行。 去中心化应用程序可以控制数字资产，从而创建新类型的金融应用程序。 它们可以是去中心化的，即没有任何单一实体或个人控制它们，而且它们几乎不可能被审查。
 
 ## 智能合约和 Solidity 语言入门 {#getting-started-with-smart-contracts-and-solidity}
 
@@ -17,7 +17,7 @@ incomplete: false
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [编写您的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [编写你的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## 初学者文章 {#beginner-articles}
