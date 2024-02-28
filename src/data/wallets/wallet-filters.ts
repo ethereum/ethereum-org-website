@@ -44,7 +44,7 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   },
   browser: {
     title: "page-find-wallet-browser",
-    description: "page-find-wallet-browser-desc",
+    description: "",
     filterKey: undefined,
   },
   firefox: {
