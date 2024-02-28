@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-2": "Olaryň beýany gapjyk taslamalarynyň özleri tarapyndan üpjün edildi.",
   "page-find-wallet-footnote-3": "<a href=\"/contributing/adding-wallets/\">Sanaw goşmak boýunça syýasatymyzdaky</a> talaplara laýyklykda bu sahypa önümleri goşýarys. Gapjyk goşmagymyzy isleseňiz, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub-da bir mesele gozgaň</a>.",
   "page-find-wallet-mobile": "Mobil",
-  "page-find-wallet-mobile-desc": "Mobil programmalary bolan gapjyklar",
   "page-find-wallet-desktop": "Iş stoly",
   "page-find-wallet-desktop-desc": "Iş stoly programmalary bolan gapjyklar",
   "page-find-wallet-browser": "Brauzer",

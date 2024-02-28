@@ -80,6 +80,12 @@ export const WalletMoreInfo = ({
     },
   ]
 
+  // Format last updated date with current locale
+  const walletLastUpdated = getLocaleFormattedDate(
+    locale as Lang,
+    wallet.last_updated
+  )
+
   return (
     <Box mt={4} w="full">
       <SimpleGrid
@@ -97,7 +103,7 @@ export const WalletMoreInfo = ({
           height="full"
         />
 
-        {/* Sections */}
+        {/* Category sections */}
         <Box>
           <Flex
             direction={{ base: "column", xl: "row" }}
@@ -187,10 +193,7 @@ export const WalletMoreInfo = ({
             <Text as="i">
               {`${wallet.name} ${t(
                 "page-find-wallet-info-updated-on"
-              )} ${getLocaleFormattedDate(
-                locale as Lang,
-                wallet.last_updated
-              )}`}
+              )} ${walletLastUpdated}`}
             </Text>
           </Stack>
         </Box>

@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-2": "Onların təsvirləri pulqabı layihələrinin özləri tərəfindən verilmişdir.",
   "page-find-wallet-footnote-3": "Məhsullarımızı <a href=\"/contributing/adding-wallets/\">siyahı siyasəti</a> səhifəmizdəki kriteriyalara əsasən əlavə edirik. Pulqabı əlavə etməyimizi istəyirsinizsə,<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub-da problemdən şikayət edin</a>.",
   "page-find-wallet-mobile": "Mobil",
-  "page-find-wallet-mobile-desc": "Mobil tətbiqləri olan pulqabılar",
   "page-find-wallet-desktop": "Masaüstü kompüter",
   "page-find-wallet-desktop-desc": "Masaüstü tətbiqləri olan pulqabılar",
   "page-find-wallet-browser": "Brauzer",

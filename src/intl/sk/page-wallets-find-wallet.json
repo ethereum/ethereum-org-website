@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-2": "Ich popisy boli poskytnuté priamo ich prevádzkovateľmi.",
   "page-find-wallet-footnote-3": "Produkty na tejto stránke pridávame na základe ktitérií našej <a href=\"/contributing/adding-wallets/\">politiky</a>. Pokiaľ si želáte pridať peňaženku, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">dajte nám vedieť v GitHub</a>.",
   "page-find-wallet-mobile": "Mobil",
-  "page-find-wallet-mobile-desc": "Peňaženky s mobilnými aplikáciami",
   "page-find-wallet-desktop": "Počítač",
   "page-find-wallet-desktop-desc": "Peňaženky s počítačovými aplikáciami",
   "page-find-wallet-browser": "Internetový prehliadač",

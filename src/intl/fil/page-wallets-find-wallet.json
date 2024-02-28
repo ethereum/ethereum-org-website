@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-2": "Ibinigay ang mga paglalarawan ng mga ito ng mga proyekto ng wallet mismo.",
   "page-find-wallet-footnote-3": "Nagdaragdag kami ng mga produkto sa page na ito base sa pamantayan sa aming <a href=\"/contributing/adding-wallets/\">patakaran sa paglilista</a>. Kung gusto mong magdagdag kami ng wallet, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">maghain ng isyu sa GitHub</a>.",
   "page-find-wallet-mobile": "Mobile",
-  "page-find-wallet-mobile-desc": "Mga wallet na may mga mobile app",
   "page-find-wallet-desktop": "Desktop",
   "page-find-wallet-desktop-desc": "Mga wallet na may mga desktop app",
   "page-find-wallet-browser": "Browser",

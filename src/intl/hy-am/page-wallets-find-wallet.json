@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-2": "Դրանց նկարագրությունը տրվել է դրանց հիմքում ընկած նախագծերի կողմից",
   "page-find-wallet-footnote-3": "Մենք արտադրանքի անուն ավելացնում ենք հիմնվելով <a href=\"/contributing/adding-wallets/\">ցուցակագրման քաղաքականության </a> չափանիշների վրա: Եթե ցանկանում եք, որ մենք այդ ցուցակում որևէ դրամապանակ ավելացնենք <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">Գիթհաբում բարձրացրեք այդ հարցը</a>:",
   "page-find-wallet-mobile": "Բջջային",
-  "page-find-wallet-mobile-desc": "Բջջային հավելվածներով Դրամապանակներ",
   "page-find-wallet-desktop": "Դեսքթոփ",
   "page-find-wallet-desktop-desc": "Դեքսթոփ հավելվածով դրամապանակներ",
   "page-find-wallet-browser": "Բրաուզեր",

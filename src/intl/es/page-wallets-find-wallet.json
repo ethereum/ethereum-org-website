@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-2": "Los propios proyectos de carteras han facilitado su descripción.",
   "page-find-wallet-footnote-3": "Añadimos productos a esta página en función de los criterios de nuestra <a href=\"/contributing/adding-wallets/\">política de listado</a>. Si quiere que añadamos una cartera, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">cree una incidencia en GitHub</a>.",
   "page-find-wallet-mobile": "Versión para móvil",
-  "page-find-wallet-mobile-desc": "Wallets con aplicaciones mobiles",
   "page-find-wallet-desktop": "Versión para escritorio",
   "page-find-wallet-desktop-desc": "Carteras con aplicaciones para escritorio",
   "page-find-wallet-browser": "Navegador",

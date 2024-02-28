@@ -2,14 +2,14 @@ import type { TranslationKey } from "@/lib/types"
 
 interface WalletFilter {
   title: TranslationKey
-  filterKey: string | undefined
+  filterKey?: string
   description: TranslationKey | ""
 }
 
 const walletFilterData: { [key: string]: WalletFilter } = {
   mobile: {
     title: "page-find-wallet-mobile",
-    description: "page-find-wallet-mobile-desc",
+    description: "",
     filterKey: undefined,
   },
   android: {

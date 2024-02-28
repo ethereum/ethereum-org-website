@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-2": "تم توفير أوصافها من خلال مشاريع المحفظة نفسها.",
   "page-find-wallet-footnote-3": "نضيف منتجات إلى هذه الصفحة بناءً على المعايير الواردة في <a href=\"/contributing/adding-wallets/\">سياسة العرض</a>. إذا كنت تريد إضافة محفظة، <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">فقدِّم تذكرة مشكلة في GitHub</a>.",
   "page-find-wallet-mobile": "جوال",
-  "page-find-wallet-mobile-desc": "محافظ مع تطبيقات الجوال",
   "page-find-wallet-desktop": "سطح المكتب",
   "page-find-wallet-desktop-desc": "محافظ مع تطبيقات سطح المكتب",
   "page-find-wallet-browser": "المتصفح",
