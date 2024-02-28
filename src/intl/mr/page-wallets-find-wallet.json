@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "आम्ही आमच्या <a href=\"/contributing/adding-wallets/\">सूची धोरण</a> मधील निकषांवर आधारित या पृष्ठावर उत्पादने जोडतो. तुम्हाला आम्ही वॉलेट जोडायचे असल्यास, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub मध्ये समस्या मांडा</a> सुचवा.",
   "page-find-wallet-mobile": "मोबाईल",
   "page-find-wallet-desktop": "डेस्कटॉप",
-  "page-find-wallet-desktop-desc": "डेस्कटॉप अॅप्ससह पाकीट",
   "page-find-wallet-browser": "ब्राउझर",
   "page-find-wallet-browser-desc": "ब्राउझर विस्तारांसह वॅलेटं",
   "page-find-wallet-device": "डिव्हाइस",

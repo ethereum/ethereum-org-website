@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "Tunaongeza bidhaa kwenye ukurasa huu kwa kutazama msingi wa <a href=\"/contributing/adding-wallets/\">sera za orodha</a>. Kama ungependa tuongeze pochi, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">andika pendekezo kwenye GitHub</a>.",
   "page-find-wallet-mobile": "Rununu",
   "page-find-wallet-desktop": "Tarakilishi",
-  "page-find-wallet-desktop-desc": "Pochi zenye programu za kompyuta",
   "page-find-wallet-browser": "Kivinjari",
   "page-find-wallet-browser-desc": "Pochi zenye viendelezi vya kivinjari",
   "page-find-wallet-device": "Kifaa",

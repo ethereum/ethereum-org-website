@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "យើងបន្ថែមផលិតផលទៅទំព័រនេះដោយផ្អែកលើលក្ខណៈវិនិច្ឆ័យនៅក្នុង <a href=\"/contributing/adding-wallets/\">គោលការណ៍ចុះបញ្ជីរបស់យើង</a>។ ប្រសិនបើអ្នកចង់ឱ្យយើងបន្ថែមកាបូបមួយ <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">សូមលើកបញ្ហាមួយនៅក្នុង GitHub</a>.",
   "page-find-wallet-mobile": "ទូរស័ព្ទដៃ",
   "page-find-wallet-desktop": "កំ​ព្យូ​ទ័​រ",
-  "page-find-wallet-desktop-desc": "កាបូប​ជាមួយកម្មវិធីកុំព្យូទ័រ",
   "page-find-wallet-browser": "កម្ម​វិធី​រុក​រក",
   "page-find-wallet-browser-desc": "កាបូប​ដែល​បន្ថែមលើកម្មវិធីរុករក",
   "page-find-wallet-device": "ឧបករណ៍",

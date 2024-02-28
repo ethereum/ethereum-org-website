@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "Προσθέτουμε προϊόντα σε αυτή τη σελίδα με βάση κριτήρια στην <a href=\"/contributing/adding-wallets/\">πολιτική καταχώρησης</a>. Αν θέλετε να προσθέσουμε ένα πορτοφόλι, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">δημιουργήστε ένα ζήτημα στο GitHub</a>.",
   "page-find-wallet-mobile": "Κινητής συσκευής",
   "page-find-wallet-desktop": "Σταθερού υπολογιστή",
-  "page-find-wallet-desktop-desc": "Πορτοφόλια με εφαρμογή για υπολογιστή",
   "page-find-wallet-browser": "Φυλλομετρητής",
   "page-find-wallet-browser-desc": "Πορτοφόλια με επεκτάσεις για φυλλομετρητή",
   "page-find-wallet-device": "Συσκευή",

@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "เราเพิ่มเติมผลิตภัณฑ์ในหน้านี้ตามเกณฑ์ใน<a href=\"/contributing/adding-wallets/\">นโยบายการลงรายการ</a>ของเรา หากคุณต้องการให้เราเติมวอลเล็ท <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">กรุณาแจ้งปัญหาใน GitHub</a>",
   "page-find-wallet-mobile": "โทรศัพท์มือถือ",
   "page-find-wallet-desktop": "เดสก์ทอป",
-  "page-find-wallet-desktop-desc": "วอลเล็ทที่มีแอปคอมพิวเตอร์",
   "page-find-wallet-browser": "บราวเซอร์",
   "page-find-wallet-browser-desc": "วอลเล็ทที่มีส่วนขยายบราวเซอร์",
   "page-find-wallet-device": "อุปกรณ์",

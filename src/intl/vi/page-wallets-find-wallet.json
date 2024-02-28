@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "Chúng tôi thêm sản phẩm vào trang này dựa trên các tiêu chí trong <a href=\"/contributing/adding-wallets/\">chính sách niêm yết của chúng tôi</a>. Nếu bạn muốn chúng tôi thống kê thêm, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">hãy báo cáo trong GitHub</a>.",
   "page-find-wallet-mobile": "Di động",
   "page-find-wallet-desktop": "Máy tính để bàn",
-  "page-find-wallet-desktop-desc": "Ví mà có trên ứng dụng cho máy tính để bàn",
   "page-find-wallet-browser": "Trình duyệt",
   "page-find-wallet-browser-desc": "Ví với các tiện ích trình duyệt",
   "page-find-wallet-device": "Thiết bị",

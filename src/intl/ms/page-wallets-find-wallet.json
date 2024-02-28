@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "Kami menambah produk kepada halaman ini berdasarkan kriteria dalam <a href=\"/contributing/adding-wallets/\">dasar penyenaraian</a>. Jika anda ingin kami menambah suatu dompet, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">bangkitkan isu di GitHub</a>.",
   "page-find-wallet-mobile": "Mudah Alih",
   "page-find-wallet-desktop": "Desktop",
-  "page-find-wallet-desktop-desc": "Dompet dengan aplikasi desktop",
   "page-find-wallet-browser": "Pelayar",
   "page-find-wallet-browser-desc": "Dompet dengan sambungan pelayar",
   "page-find-wallet-device": "Peranti",

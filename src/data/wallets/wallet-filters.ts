@@ -24,7 +24,7 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   },
   desktop: {
     title: "page-find-wallet-desktop",
-    description: "page-find-wallet-desktop-desc",
+    description: "",
     filterKey: undefined,
   },
   linux: {

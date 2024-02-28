@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "<a href=\"/contributing/adding-wallets/\">리스팅 정책</a>의 기준에 따라 이 페이지에 제품을 추가합니다. 지갑을 추가하려면 <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub에 문제를 제출</a>하세요.",
   "page-find-wallet-mobile": "모바일",
   "page-find-wallet-desktop": "데스크톱",
-  "page-find-wallet-desktop-desc": "데스트톱 앱이 있는 지갑",
   "page-find-wallet-browser": "브라우저",
   "page-find-wallet-browser-desc": "브라우저 확장 기능이 있는 지갑",
   "page-find-wallet-device": "기기",

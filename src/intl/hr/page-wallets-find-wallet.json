@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "Na ovu stranicu dodajemo proizvode temeljem kriterija iz naše <a href=\"/contributing/adding-wallets/\">politike uvrštenja</a>. Ako želite da dodamo novčanik, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">rehistrirajte problem na GitHub-u</a>.",
   "page-find-wallet-mobile": "Mobitel",
   "page-find-wallet-desktop": "Desktop",
-  "page-find-wallet-desktop-desc": "Novčanici s računalnim aplikacijama",
   "page-find-wallet-browser": "Preglednik",
   "page-find-wallet-browser-desc": "Novčanici s ekstenzijama za preglednike",
   "page-find-wallet-device": "Uređaj",

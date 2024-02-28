@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "我們根據<a href=\"/contributing/adding-wallets/\">上市政策</a>中的標準將產品新增到本頁面。如果你希望我們新增錢包，<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">請在 GitHub 中提出問題</a>。",
   "page-find-wallet-mobile": "行動裝置",
   "page-find-wallet-desktop": "桌上型電腦",
-  "page-find-wallet-desktop-desc": "有桌面應用程式的錢包",
   "page-find-wallet-browser": "瀏覽器",
   "page-find-wallet-browser-desc": "有瀏覽器擴充功能的錢包",
   "page-find-wallet-device": "裝置",

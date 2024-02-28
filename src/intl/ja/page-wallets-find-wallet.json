@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "イーサリアムの<a href=\"/contributing/adding-wallets/\">掲載ポリシー</a>に基づいて、ウォレットを本ページに追加しています。新たなウォレットの追加をご希望の場合は、<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHubで問題を提起してください</a>。",
   "page-find-wallet-mobile": "モバイル",
   "page-find-wallet-desktop": "デスクトップ",
-  "page-find-wallet-desktop-desc": "デスクトップアプリのウォレット",
   "page-find-wallet-browser": "ブラウザ",
   "page-find-wallet-browser-desc": "ブラウザ拡張機能付きウォレット",
   "page-find-wallet-device": "デバイス",

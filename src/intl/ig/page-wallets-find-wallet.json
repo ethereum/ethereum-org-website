@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "Anyị na-etinye ngwaahịa na ibe akwụkwọ a site na usoro anyi dị na <a href=\"/contributing/adding-wallets/\">ndepụta amụma</a>. Ọ bụrụ na ị ga-achọ ka anyị tinye kwa obere akpa, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">welite okwu Ń GitHub</a>.",
   "page-find-wallet-mobile": "Npanaka",
   "page-find-wallet-desktop": "Kọmpụta eji eme ihe na tebụl",
-  "page-find-wallet-desktop-desc": "Obere akpa nwere ngwa kọmpụta nke eji eme ihe na tebụl",
   "page-find-wallet-browser": "Ihe nchọgharị",
   "page-find-wallet-browser-desc": "Obere akpa nke nwere mgbati ihe nchọgharị",
   "page-find-wallet-device": "Ngwaọrụ",

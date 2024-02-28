@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "Ние добавяме продукти на тази страница на базата на критерия на нашата <a href=\"/contributing/adding-wallets/\"> политика за списъците </a>. Ако искате да добавим портфейл <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">направете запитване в GitHub</a>.",
   "page-find-wallet-mobile": "Мобилен",
   "page-find-wallet-desktop": "Десктоп",
-  "page-find-wallet-desktop-desc": "Портфейли с приложения за десктоп",
   "page-find-wallet-browser": "Браузър",
   "page-find-wallet-browser-desc": "Портфейли с разширения за браузър",
   "page-find-wallet-device": "Устройство",

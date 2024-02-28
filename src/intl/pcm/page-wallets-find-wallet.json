@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "Wi add products to dis page based on di kriteria wey dey inside awa<a href=\"/contributing/adding-wallets/\"> listin policy</a>. If yu go like add new wallet,<a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\"> yu fit raise issue for di GitHub</a>.",
   "page-find-wallet-mobile": "Mobile",
   "page-find-wallet-desktop": "Desktop",
-  "page-find-wallet-desktop-desc": "Wallets wey get desktop apps",
   "page-find-wallet-browser": "Browser",
   "page-find-wallet-browser-desc": "Wallets wey get browser Eksepshon",
   "page-find-wallet-device": "Device",

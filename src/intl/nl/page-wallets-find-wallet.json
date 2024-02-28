@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "We voegen producten toe aan deze pagina op basis van criteria in ons <a href=\"/contributing/adding-products/\">lijstbeleid</a>. Als je wilt dat we een portemonnee toevoegen, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">meld dit dan via GitHub</a>.",
   "page-find-wallet-mobile": "Mobiel",
   "page-find-wallet-desktop": "Desktop",
-  "page-find-wallet-desktop-desc": "Portemonnees met desktop apps",
   "page-find-wallet-browser": "Browser",
   "page-find-wallet-browser-desc": "Portemonnees met browserextensies",
   "page-find-wallet-device": "Apparaat",

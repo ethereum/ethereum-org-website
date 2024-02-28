@@ -78,7 +78,6 @@
   "page-find-wallet-footnote-3": "ما بر اساس شاخص‌هایی که در <a href=\"/contributing/adding-wallets/\"> سیاست‌گذاری لیستینگ</a> آورده شده است، محصولات را در این صفحه اضافه می‌کنیم. اگر مایل هستید تا کیف پولی را اضافه کنیم، <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">یک موضوع در گیت‌هاب</a> باز کنید.",
   "page-find-wallet-mobile": "تلفن همراه",
   "page-find-wallet-desktop": "کامپیوتر",
-  "page-find-wallet-desktop-desc": "کیف پول‌هایی با برنامه‌‌‌های کامپیوتر",
   "page-find-wallet-browser": "مرورگر",
   "page-find-wallet-browser-desc": "کیف پول‌هایی با افزونه‌‌های مروگر",
   "page-find-wallet-device": "دستگاه",
