@@ -1,6 +1,6 @@
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
-import { Box, Heading, HStack, Icon, Stack } from "@chakra-ui/react"
+import { Box, Flex, Heading, Icon, Stack } from "@chakra-ui/react"
 
 import {
   GreenCheckProductGlyphIcon,
@@ -29,35 +29,28 @@ export const WalletMoreInfoCategory = ({
   const { t } = useTranslation("page-wallets-find-wallet")
 
   return (
-    <Box width="full" mt={4} _first={{ mt: 2 }}>
-      <Heading
-        as="h4"
-        lineHeight={1.4}
-        fontSize="md"
-        fontWeight={500}
-        mx="0.2rem"
-        mb={2}
-      >
+    <Box mx={4}>
+      {/* Category label */}
+      <Heading as="h4" lineHeight={1.4} fontSize="md" fontWeight={500} mb={2}>
         {headingLabel}
       </Heading>
+
+      {/* Supported features */}
       <Stack gap={2} wrap="wrap">
         {orderedFeatureDropdownItems.map((feature) => {
           const featureColor = wallet[feature.filterKey!] ? "text" : "secondary"
 
           if (feature.category === sectionName)
             return (
-              <HStack
+              <Flex
                 key={feature.label}
-                spacing="0.2rem"
+                gap="0.2rem"
                 fontSize="0.9rem"
                 lineHeight={1}
-                p="0.2rem"
-                mx={4}
-                width="200px"
+                width={{ base: "auto", xl: "full" }}
                 sx={{
                   p: {
                     color: featureColor,
-                    flex: "none",
                     mb: 0,
                   },
                   "span + p": {
@@ -81,7 +74,9 @@ export const WalletMoreInfoCategory = ({
                   fontSize="1rem"
                   color={featureColor}
                 />
-                <p>{feature.label}</p>
+
+                <Text lineHeight={1}>{feature.label}</Text>
+
                 <Tooltip
                   content={
                     <Text lineHeight={1.2}>
@@ -91,7 +86,7 @@ export const WalletMoreInfoCategory = ({
                 >
                   <Icon as={MdInfoOutline} color={featureColor} />
                 </Tooltip>
-              </HStack>
+              </Flex>
             )
         })}
       </Stack>

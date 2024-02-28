@@ -6,8 +6,8 @@ import {
   Heading,
   Icon,
   SimpleGrid,
+  Stack,
   Text,
-  VStack,
 } from "@chakra-ui/react"
 
 import InlineLink, { LinkProps } from "@/components/Link"
@@ -75,26 +75,34 @@ export const WalletMoreInfo = ({
   ]
 
   return (
-    <Box>
+    <Box w="full">
       <SimpleGrid templateColumns="65px auto">
+        {/* Border gradient */}
+        <Box
+          bgGradient={`linear(to-b, ${wallet.brand_color} 0%, rgba(217, 217, 217, 0) 97.4%)`}
+          m="auto"
+          width={1}
+          height="full"
+        />
+
+        {/* Sections */}
         <Box>
-          <Box
-            bgGradient={`linear(to-b, ${wallet.brand_color} 0%, rgba(217, 217, 217, 0) 97.4%)`}
-            m="auto"
-            width={1}
-            height="full"
-          />
-        </Box>
-        <Box>
-          {walletInfoSections.map((section, idx) => (
-            <WalletMoreInfoCategory
-              key={idx}
-              wallet={wallet}
-              orderedFeatureDropdownItems={orderedFeatureDropdownItems}
-              {...section}
-            />
-          ))}
-          <VStack
+          <Flex
+            direction={{ base: "column", xl: "row" }}
+            gap={{ base: 4, xl: 0 }}
+          >
+            {walletInfoSections.map((section, idx) => (
+              <WalletMoreInfoCategory
+                key={idx}
+                wallet={wallet}
+                orderedFeatureDropdownItems={orderedFeatureDropdownItems}
+                {...section}
+              />
+            ))}
+          </Flex>
+
+          {/* Links section */}
+          <Stack
             as={Text}
             color="text300"
             fontSize="sm"
@@ -102,6 +110,7 @@ export const WalletMoreInfo = ({
             wrap="wrap"
             alignItems="flex-start"
             my={8}
+            ps={4}
             spacing={4}
           >
             {/* Social icons */}
@@ -167,7 +176,7 @@ export const WalletMoreInfo = ({
                 wallet.last_updated
               }`}
             </Text>
-          </VStack>
+          </Stack>
         </Box>
       </SimpleGrid>
     </Box>
