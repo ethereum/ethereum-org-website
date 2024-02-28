@@ -80,7 +80,7 @@ export const WalletMoreInfo = ({
         templateColumns={{
           base: "38px auto",
           md: "94px auto",
-          lg: "70px auto",
+          lg: "74px auto",
         }}
       >
         {/* Border gradient */}
@@ -115,7 +115,8 @@ export const WalletMoreInfo = ({
             justifyContent="space-between"
             wrap="wrap"
             alignItems="flex-start"
-            my={8}
+            mt={6}
+            mb={8}
             ps={4}
             spacing={4}
           >

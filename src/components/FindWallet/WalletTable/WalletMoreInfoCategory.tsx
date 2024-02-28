@@ -1,6 +1,15 @@
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
-import { Box, Flex, Heading, Icon, Stack } from "@chakra-ui/react"
+import {
+  Box,
+  Flex,
+  Heading,
+  Icon,
+  ListIcon,
+  ListItem,
+  Stack,
+  UnorderedList,
+} from "@chakra-ui/react"
 
 import {
   GreenCheckProductGlyphIcon,
@@ -29,24 +38,37 @@ export const WalletMoreInfoCategory = ({
   const { t } = useTranslation("page-wallets-find-wallet")
 
   return (
-    <Box mx={{ base: 0, md: 0, lg: 3 }}>
+    <Box mx={{ base: 0, md: 0, lg: 2 }}>
       {/* Category label */}
       <Heading as="h4" lineHeight={1.4} fontSize="md" fontWeight={500} mb={2}>
         {headingLabel}
       </Heading>
 
       {/* Supported features */}
-      <Stack gap={2} wrap="wrap">
+      <UnorderedList m={0}>
         {orderedFeatureDropdownItems.map((feature) => {
           const featureColor = wallet[feature.filterKey!] ? "text" : "secondary"
 
+          const FeatureIcon = () => (
+            <Icon
+              as={
+                wallet[feature.filterKey!]
+                  ? GreenCheckProductGlyphIcon
+                  : WarningProductGlyphIcon
+              }
+              fontSize="1rem"
+              color={featureColor}
+            />
+          )
+
           if (feature.category === sectionName)
             return (
-              <Flex
+              <ListItem
                 key={feature.label}
-                gap="0.2rem"
                 fontSize="0.9rem"
-                lineHeight={1}
+                listStyleType="none"
+                display="flex"
+                mb={2}
                 width={{ base: "auto", xl: "full" }}
                 sx={{
                   p: {
@@ -65,17 +87,11 @@ export const WalletMoreInfoCategory = ({
                   },
                 }}
               >
-                <Icon
-                  as={
-                    wallet[feature.filterKey!]
-                      ? GreenCheckProductGlyphIcon
-                      : WarningProductGlyphIcon
-                  }
-                  fontSize="1rem"
-                  color={featureColor}
-                />
+                <ListIcon as={FeatureIcon}></ListIcon>
 
-                <Text lineHeight={1}>{feature.label}</Text>
+                <Text px="0.2rem" lineHeight={1}>
+                  {feature.label}
+                </Text>
 
                 <Tooltip
                   content={
@@ -86,10 +102,10 @@ export const WalletMoreInfoCategory = ({
                 >
                   <Icon as={MdInfoOutline} color={featureColor} />
                 </Tooltip>
-              </Flex>
+              </ListItem>
             )
         })}
-      </Stack>
+      </UnorderedList>
     </Box>
   )
 }

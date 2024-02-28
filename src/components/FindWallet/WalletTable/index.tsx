@@ -305,20 +305,23 @@ const WalletTable = ({
                     alignItems="center"
                     w="100%"
                   >
-                    <FlexInfo w={{ base: "100%", md: "auto" }} ps={0}>
+                    <FlexInfo
+                      w={{ base: "100%", md: "auto" }}
+                      ps={{ base: 0, md: 1.5 }}
+                    >
                       {/* Wallet image */}
-                      <Box w={{ base: "24px", sm: "56px" }}>
+                      <Box w={{ base: "24px", md: "56px" }}>
                         <Image
                           src={wallet.image}
                           alt=""
                           objectFit="contain"
-                          boxSize={{ base: "24px", sm: "56px" }}
+                          boxSize={{ base: "24px", md: "56px" }}
                         />
                       </Box>
 
                       <Box w={{ base: "100%", md: "auto" }}>
                         <Stack>
-                          <Stack mb={{ base: 4, sm: 6 }}>
+                          <Stack mb={{ base: 4, md: 6 }}>
                             <Text>{wallet.name}</Text>
                           </Stack>
 
@@ -332,7 +335,7 @@ const WalletTable = ({
                             ))}
                           </Flex>
 
-                          <Stack gap={2} mb={{ base: 0, sm: 3 }}>
+                          <Stack gap={2} mb={{ base: 0, md: 3 }}>
                             {/* Device labels */}
                             <Flex
                               alignItems="center"
