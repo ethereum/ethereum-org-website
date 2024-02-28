@@ -29,7 +29,7 @@ export const WalletMoreInfoCategory = ({
   const { t } = useTranslation("page-wallets-find-wallet")
 
   return (
-    <Box mx={4}>
+    <Box mx={{ base: 0, md: 0, lg: 3 }}>
       {/* Category label */}
       <Heading as="h4" lineHeight={1.4} fontSize="md" fontWeight={500} mb={2}>
         {headingLabel}

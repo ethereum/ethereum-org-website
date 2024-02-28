@@ -75,12 +75,18 @@ export const WalletMoreInfo = ({
   ]
 
   return (
-    <Box w="full">
-      <SimpleGrid templateColumns="65px auto">
+    <Box mt={4} w="full">
+      <SimpleGrid
+        templateColumns={{
+          base: "38px auto",
+          md: "94px auto",
+          lg: "70px auto",
+        }}
+      >
         {/* Border gradient */}
         <Box
           bgGradient={`linear(to-b, ${wallet.brand_color} 0%, rgba(217, 217, 217, 0) 97.4%)`}
-          m="auto"
+          mx="auto"
           width={1}
           height="full"
         />
