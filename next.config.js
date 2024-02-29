@@ -44,6 +44,7 @@ module.exports = (phase, { defaultConfig }) => {
           source: "/(.*?)",
           headers: [
             {
+              // See https://nextjs.org/docs/pages/api-reference/next-config-js/headers#x-frame-options
               key: "X-Frame-Options",
               value: "deny",
             },
