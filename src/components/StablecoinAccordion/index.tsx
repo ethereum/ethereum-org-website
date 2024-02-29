@@ -125,7 +125,7 @@ const StablecoinAccordion = () => {
           <InfoBanner emoji=":light_bulb:">
             <H4>{t("page-stablecoins-accordion-swap-editors-tip")}</H4>
             <Text>{t("page-stablecoins-accordion-swap-editors-tip-copy")}</Text>
-            <ButtonLink to="/wallets/find-wallet/?filters=has_card_deposits,has_dex_integrations">
+            <ButtonLink to="/wallets/find-wallet/">
               {t("page-stablecoins-accordion-swap-editors-tip-button")}
             </ButtonLink>
           </InfoBanner>
