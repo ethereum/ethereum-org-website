@@ -64,7 +64,7 @@ const WalletFilterFeature = ({
       as={VStack}
       allowMultiple
       reduceMotion
-      spacing={4}
+      spacing={2}
       alignItems="normal"
       p={{ base: 4, sm: 0 }}
       // Workaround to not having a dedicated prop to all items open by default
@@ -113,9 +113,11 @@ const WalletFilterFeature = ({
                     />
                   </AccordionButton>
                 </Heading>
+
                 <AccordionPanel as={List} p={0} m={0}>
                   {filterOption.items.map((item, itemIdx) => {
                     const LabelIcon = item.icon
+
                     return (
                       <Box
                         key={itemIdx}

@@ -100,6 +100,7 @@ const FindWalletPage = () => {
     setRandomizedWalletData(
       supportedLocaleWallets.concat(noSupportedLocaleWallets)
     )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   const updateFilterOption = (key) => {

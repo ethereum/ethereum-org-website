@@ -12,7 +12,7 @@
   "page-find-wallet-open-source": "Open source",
   "page-find-wallet-open-source-desc": "Open-source software lets anyone audit the integrity and security of the application",
   "page-find-wallet-self-custody": "Self custody",
-  "page-find-wallet-non-custodial": "Non-custodial",
+  "page-find-wallet-non-custodial": "Personal ownership",
   "page-find-wallet-non-custodial-desc": "Wallets that do not control your private keys",
   "page-find-wallet-hardware-wallet-support": "Hardware wallet support",
   "page-find-wallet-hardware-wallet-support-desc": "Wallets that can connect to hardware wallet for better security",
