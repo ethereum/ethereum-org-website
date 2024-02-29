@@ -321,7 +321,7 @@ const WalletTable = ({
 
                       <Box w={{ base: "100%", md: "auto" }}>
                         <Stack>
-                          <Stack mb={{ base: 4, md: 6 }}>
+                          <Stack mb={3}>
                             <Text>{wallet.name}</Text>
                           </Stack>
 
