@@ -40,7 +40,7 @@ export const WalletMoreInfoCategory = ({
   return (
     <Box mx={{ base: 0, md: 0, lg: 2 }}>
       {/* Category label */}
-      <Heading as="h4" lineHeight={1.4} fontSize="md" fontWeight={500} mb={2}>
+      <Heading as="h4" lineHeight={1.4} fontSize="md" fontWeight="bold" mb={2}>
         {headingLabel}
       </Heading>
 
