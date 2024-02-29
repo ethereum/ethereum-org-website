@@ -109,7 +109,7 @@ export const getStaticProps = (async ({ locale }) => {
   const stablecoins = {
     USDT: { type: FIAT, url: "https://tether.to/" },
     USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
-    DAI: { type: CRYPTO, url: "https://kb.oasis.app/help/what-is-dai" },
+    DAI: { type: CRYPTO, url: "https://makerdao.com/en/" },
     BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
     PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
     TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
@@ -618,7 +618,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             {t("page-stablecoins-top-coins-intro-code")}
           </Text>
         </Box>
-        <Box px={8} py={4} width="full" overflowX="scroll">
+        <Box px={8} py={4} width="full" overflowX="auto">
           <StablecoinsTable
             columns={tableColumns}
             content={markets}

@@ -37,7 +37,7 @@ export const useStablecoinAccordion = () => {
     {
       title: "Loopring",
       image: loopringImg,
-      link: "https://loopring.org",
+      link: "https://loopring.io/#/pro",
       alt: t("loopring-logo"),
     },
     {
@@ -84,13 +84,6 @@ export const useStablecoinAccordion = () => {
       alt: t("gitcoin-logo"),
     },
     {
-      title: t("page-stablecoins-accordion-earn-project-community"),
-      image: makerImg,
-      link: "https://makerdao.world/en/resources/",
-      description: t("page-stablecoins-accordion-earn-project-2-description"),
-      alt: t("makerdao-logo"),
-    },
-    {
       title: t("page-stablecoins-accordion-earn-project-bug-bounties"),
       image: ethImg,
       link: "/bug-bounty/",
@@ -123,12 +116,6 @@ export const useStablecoinAccordion = () => {
       image: coinmamaImg,
       link: "https://coinmama.com",
       alt: t("coinmama-logo"),
-    },
-    {
-      title: "Bittrex",
-      image: bittrexImg,
-      link: "https://global.bittrex.com",
-      alt: t("bittrex-logo"),
     },
     {
       title: "Binance",
