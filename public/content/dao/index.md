@@ -14,7 +14,7 @@ summaryPoint3: A safe place to commit funds to a specific cause.
 
 ## What are DAOs? {#what-are-daos}
 
-A DAO is a collectively-owned, blockchain-governed organization working towards a shared mission.
+A DAO is a collectively-owned organization working towards a shared mission.
 
 DAOs allow us to work with like-minded folks around the globe without trusting a benevolent leader to manage the funds or operations. There is no CEO who can spend funds on a whim or CFO who can manipulate the books. Instead, blockchain-based rules baked into the code define how the organization works and how funds are spent.
 
@@ -40,9 +40,9 @@ This opens up so many new opportunities for global collaboration and coordinatio
 
 To help this make more sense, here's a few examples of how you could use a DAO:
 
-- A charity – you could accept donations from anyone in the world and vote on which causes to fund.
-- Collective ownership – you could purchase physical or digital assets and members can vote on how to use them.
-- Ventures and grants – you could create a venture fund that pools investment capital and votes on ventures to back. Repaid money could later be redistributed amongst DAO-members.
+- **A charity** – you could accept donations from anyone in the world and vote on which causes to fund.
+- **Collective ownership** – you could purchase physical or digital assets and members can vote on how to use them.
+- **Ventures and grants** – you could create a venture fund that pools investment capital and votes on ventures to back. Repaid money could later be redistributed amongst DAO-members.
 
 ## How do DAOs work? {#how-daos-work}
 
@@ -50,15 +50,11 @@ The backbone of a DAO is its [smart contract](/glossary/#smart-contract), which 
 
 This is possible because smart contracts are tamper-proof once they go live on Ethereum. You can't just edit the code (the DAOs rules) without people noticing because everything is public.
 
-<DocLink to="/smart-contracts/">
-  More on smart contracts
-</DocLink>
-
 ## Ethereum and DAOs {#ethereum-and-daos}
 
 Ethereum is the perfect foundation for DAOs for a number of reasons:
 
-- Ethereum’s own consensus is distributed and established enough for organizations to trust the network.
+- Ethereum’s own consensus is decentralized and established enough for organizations to trust the network.
 - Smart contract code can’t be modified once live, even by its owners. This allows the DAO to run by the rules it was programmed with.
 - Smart contracts can send/receive funds. Without this you'd need a trusted intermediary to manage group funds.
 - The Ethereum community has proven to be more collaborative than competitive, allowing for best practices and support systems to emerge quickly.
@@ -150,7 +146,6 @@ _Typically used for decentralized development and governance of protocols and [d
 ### DAO Articles {#dao-articles}
 
 - [What's a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
-- [The DAO Handbook](https://daohandbook.xyz)
 - [House of DAOs](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [What is a DAO and what is it for?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [How to Start a DAO-Powered Digital Community](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
