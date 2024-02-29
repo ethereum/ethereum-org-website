@@ -23,7 +23,6 @@ import {
 import { ChildOnlyProp } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
-import { useWalletTable } from "@/components/FindWallet/WalletTable/useWalletTable"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
@@ -44,6 +43,7 @@ import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 import { WalletEmptyState } from "./WalletEmptyState"
 
 import { useLanguagesList } from "@/hooks/useLanguagesList"
+import { useWalletTable } from "@/hooks/useWalletTable"
 
 const Container = (props: TableProps) => (
   <Table

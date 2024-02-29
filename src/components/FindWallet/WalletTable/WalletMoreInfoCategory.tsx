@@ -20,7 +20,7 @@ import walletFilterData from "../../../data/wallets/wallet-filters"
 import Text from "../../OldText"
 import Tooltip from "../../Tooltip"
 
-import { DropdownOption } from "./useWalletTable"
+import { DropdownOption } from "@/hooks/useWalletTable"
 
 interface WalletMoreInfoCategoryProps {
   wallet: any

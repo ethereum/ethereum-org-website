@@ -17,8 +17,9 @@ import InlineLink, { LinkProps } from "@/components/Link"
 
 import { getLocaleFormattedDate } from "@/lib/utils/time"
 
-import { DropdownOption } from "./useWalletTable"
 import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
+
+import { DropdownOption } from "@/hooks/useWalletTable"
 
 interface WalletMoreInfoProps {
   wallet: Record<string, any>
