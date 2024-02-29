@@ -4,6 +4,7 @@ const { i18n } = require("./next-i18next.config")
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS || 2)
 
+// See https://nextjs.org/docs/app/building-your-application/configuring/content-security-policy
 const ContentSecurityPolicy = `
   frame-ancestors 'none';
 `
