@@ -22,7 +22,7 @@ import {
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { useWalletFilterFeature } from "./useWalletFilterFeature"
+import { useWalletFilterFeature } from "@/hooks/useWalletFilterFeature"
 
 const FilterToggle = ({
   ariaLabel,
