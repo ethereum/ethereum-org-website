@@ -23,7 +23,7 @@ const WalletFilterPersona = ({
   const filterBg = useColorModeValue("chakra-subtle-bg", "black400")
 
   return (
-    <Flex direction={{ base: "column", md: "row" }} gap={4}>
+    <Flex direction={{ base: "column", lg: "row" }} gap={4}>
       {personas.map((persona, idx) => {
         return (
           <CheckboxGroup key={persona.title}>
@@ -34,6 +34,7 @@ const WalletFilterPersona = ({
               padding={2}
               mb={2}
               bg={filterBg}
+              w="100%"
               borderRadius="base"
               border="1px solid"
               borderColor={getPersonaBorderColor(selectedPersona, idx)}
