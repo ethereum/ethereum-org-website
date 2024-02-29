@@ -3,7 +3,7 @@ import { useEffect, useState } from "react"
 import { useTranslation } from "next-i18next"
 import { Icon } from "@chakra-ui/react"
 
-import { WalletFilterFeatureProps } from "../components/FindWallet/WalletFilterSidebar/WalletFilterFeature"
+import { WalletFilterFeatureProps } from "../components/FindWallet/WalletFilterFeature"
 import {
   BrowserIcon,
   BuyCryptoIcon,

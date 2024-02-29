@@ -14,7 +14,7 @@ import {
 
 import { WalletFilter } from "@/lib/types"
 
-import WalletFilterFeature from "@/components/FindWallet/WalletFilterSidebar/WalletFilterFeature"
+import WalletFilterFeature from "@/components/FindWallet/WalletFilterFeature"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
