@@ -68,16 +68,19 @@ export const getSupportedLanguages = (
   const supportedLanguages = [] as string[]
 
   // current locale should appear first on the list, this manipulates the array to move it to the top if needed
-  const localeIndex = walletSupportedLanguages.findIndex(
-    (current) => current === locale
-  )
-  walletSupportedLanguages.splice(localeIndex, 1)
-  walletSupportedLanguages.unshift(locale)
+  const supportsCurrentLocale = (current) => current === locale
+  const localeIndex = walletSupportedLanguages.findIndex(supportsCurrentLocale)
+
+  if (localeIndex >= 0) {
+    walletSupportedLanguages.splice(localeIndex, 1)
+    walletSupportedLanguages.unshift(locale)
+  }
 
   walletSupportedLanguages.forEach((supportedLanguage) => {
-    for (const [key, value] of Object.entries(languages)) {
-      if (value[supportedLanguage])
+    for (const [_, value] of Object.entries(languages)) {
+      if (value[supportedLanguage]) {
         supportedLanguages.push(value[supportedLanguage])
+      }
     }
   })
 
