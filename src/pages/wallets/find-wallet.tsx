@@ -181,6 +181,7 @@ const FindWalletPage = () => {
           fontSize="xl"
           fontWeight="bold"
           lineHeight={1.4}
+          mt={0}
           mb={3}
         >
           {t("page-find-wallet-personas-title")}
