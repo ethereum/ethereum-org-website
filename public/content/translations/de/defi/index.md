@@ -47,7 +47,7 @@ Um das wahre Potenzial von DeFi erkennen zu können, ist es wichtig, die aktuell
 | Märkte sind rund um die Uhr geöffnet.                                                                                           | Märkte schließen, da es Beschränkungen für die Arbeitszeit von Angestellten gibt.                                                                                 |
 | Basiert auf dem Transparenzprinzip – jeder kann die Daten eines Produktes einsehen und überprüfen, wie das System funktioniert. | Finanzinstitute sind wie geschlossene Bücher: Es ist nicht möglich, ihre Kredithistorie, Aufzeichnungen der verwalteten Vermögenswerte oder Ähnliches einzusehen. |
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   DeFi-Apps entdecken
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Das klingt merkwürdig... „Warum würde ich mein Geld programmieren wollen?“
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Machen Sie sich mit unseren Vorschlägen für DeFi-Anwendungen vertraut und testen sie, wenn Sie neu bei Ethereum sind.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink to="/dapps/?category=finance#explore">
     DeFi-Apps entdecken
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ Für fast alle Finanzdienstleistungen gibt es dezentrale Alternativen. Ethereum 
 
 Als Blockchain ist Ethereum für sichere und globale Transaktionen konzipiert. Wie auch Bitcoin macht Ethereum das weltweite Senden von Geld so einfach wie das Versenden einer E-Mail. Geben Sie einfach den [ENS-Namen](/nft/#nft-domains) des Empfängers (z. B. bob.eth) oder die Account-Adresse der Wallet ein und schon geht die Zahlung (typischerweise) innerhalb von Minuten direkt beim Empfänger ein. Zum Senden oder Empfangen von Zahlungen ist eine [Wallet](/wallets/) erforderlich.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Siehe Zahlungs-dApps
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Es gibt zwei etablierte Möglichkeiten, um Geld von dezentralen Anbietern zu lei
 - Peer-to-Peer, das heißt der Kreditnehmer leiht direkt von einem bestimmten Kreditgeber.
 - Pool-basiert, das heißt Kreditgeber stellen Geldmittel (Liquidität) für einen Pool bereit, aus dem Kreditnehmer die Mittel leihen können.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Siehe Lending-dApps
 </ButtonLink>
 
@@ -183,7 +183,7 @@ Sie können Ihrer Krypto in Echtzeit beim Wachsen zusehen, indem Sie sie verleih
 - Ihr aDai steigt auf Grundlage der Zinssätze an und Sie können Ihr Guthaben in Ihrer Wallet wachsen sehen. Abhängig vom APR können Sie in Ihrer Wallet nach ein paar Tagen oder sogar Stunden ein Guthaben von beispielsweise 100,1234 ablesen.
 - Sie können dann jederzeit normales Dai in Höhe Ihres aDai-Guthabens abheben.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Zu Lending-dApps
 </ButtonLink>
 
@@ -211,7 +211,7 @@ Auf Ethereum gibt es Tausende Token. Der Handel mit verschiedenen Token erfolgt 
 
 Wenn Sie zum Beispiel die No-Loss-Lotterie PoolTogether (wie oben beschrieben) nutzen möchten, benötigen Sie einen Token wie Dai oder USDC. An diesen DEXs können Sie Ihr ETH gegen solche Token eintauschen. Sobald Sie fertig sind, ist es wieder möglich, diese Token zurückzutauschen.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Zu Token-Handesplätzen
 </ButtonLink>
 
@@ -223,7 +223,7 @@ Für Trader, die sich mehr Kontrolle wünschen, gibt es fortgeschrittenere Optio
 
 Wenn Sie sich für einen zentralen Handelsplatz entscheiden, müssen Sie Ihre Assets vor dem Handeln zuerst hinterlegen und darauf vertrauen, dass der Anbieter diese sicher verwahrt. Während Ihre Assets bei dem Anbieter hinterlegt sind, sind sie dem Risiko von Hackerangriffen ausgesetzt.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Zu Trading-dApps
 </ButtonLink>
 
@@ -235,7 +235,7 @@ Auf Ethereum gibt es auch Produkte für das Portfoliomanagement, deren Ziel es i
 
 Ein gutes Beispiel ist der [DeFi Pulse Index Fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). Es handelt sich um einen Fonds, der automatisch ein Rebalancing durchführt, um sicherzustellen, dass Ihr Portfolio immer [die besten DeFi-Token nach Marktkapitalisierung](https://www.coingecko.com/en/defi) enthält. Sie werden niemals irgendwelche Details verwalten müssen und können jederzeit Abhebungen aus dem Fonds tätigen.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Zu Investment-dApps
 </ButtonLink>
 
@@ -249,7 +249,7 @@ Ethereum ist die ideale Platform für Crowdfunding:
 - Das System ist transparent, so dass Spendensammler beweisen können, wie viel Geld gesammelt wurde. Es lässt sich sogar nachverfolgen, wie die Mittel später ausgegeben werden.
 - Spendensammler können automatische Erstattungen einrichten, wenn es beispielsweise eine bestimmte Frist und einen Mindestbetrag gibt, die bzw. der nicht eingehalten oder erreicht wird.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Zu Crowdfunding-dApps
 </ButtonLink>
 
@@ -276,7 +276,7 @@ Eine dezentralisierte Versicherung zielt darauf ab, Versicherungen billiger und 
 
 Bei Ethereum-Produkten gibt es wie auch bei jeder anderen Software Fehler und Exploits. Derzeit liegt beispielsweise bei vielen Versicherungsprodukten in diesem Bereich der Schwerpunkt auf dem Schutz der Benutzer vor finanziellen Verlusten. Es gibt jedoch Projekte, die damit beginnen, einen Versicherungsschutz für alles Unwägbarkeiten aufzubauen, die das Leben uns bescheren kann. Ein gutes Beispiel ist die Ernteversicherung von Etherisc. Es wird versucht, [Kleinbauern in Kenia gegen Dürren und Überschwemmungen abzusichern](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Dezentrale Versicherungen können Landwirten, denen herkömmliche Versicherungen oft zu teuer sind, einen erschwinglichen Versicherungsschutz bieten.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Zu Versicherungs-dApps
 </ButtonLink>
 
@@ -286,7 +286,7 @@ Bei Ethereum-Produkten gibt es wie auch bei jeder anderen Software Fehler und Ex
 
 Bei all diesen Entwicklungen brauchen Sie einen Weg, um alle Ihre Investitionen, Darlehen und Trades im Auge zu behalten. Es gibt eine Reihe von Produkten, mit denen Sie alle Ihre DeFi-Aktivitäten zentral koordinieren können. Das ist der Vorteil der offenen Architektur von DeFi. Teams können Schnittstellen entwickeln, über die Sie nicht nur Ihr Guthaben für alle Produkte sehen, sondern zusätzlich auch deren Funktionen nutzen können. Das finden Sie vielleicht nützlich, wenn Sie sich umfassender mit DeFi vertraut machen.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Zu Portfolio-dApps
 </ButtonLink>
 

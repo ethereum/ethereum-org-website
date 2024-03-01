@@ -47,7 +47,7 @@ summaryPoint3: オープンソース技術に基づき、誰でもプログラ�
 | 市場は常にオープンしています。                                                                             | 従業員の休息のため、市場が閉じる時間があります。                                                     |
 | 誰もが製品データを見て、システムがどのように機能しているかを調べることができる、透明性の高いシステムです。 | 金融機関はクローズド・ブックであり、融資の履歴や運用資産の記録などを見せてもらうことはできません。   |
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   分散型金融(DeFi)アプリを探す
 </ButtonLink>
 
@@ -65,7 +65,7 @@ summaryPoint3: オープンソース技術に基づき、誰でもプログラ�
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>イーサリアムを初めて使う方にお勧めの分散型金融(DeFi)アプリケーション</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink to="/dapps/?category=finance#explore">
     分散型金融(DeFi)アプリを探す
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ summaryPoint3: オープンソース技術に基づき、誰でもプログラ�
 
 イーサリアムはブロックチェーンとして、安全かつグローバルな方法でトランザクションを行うために設計されています。 ビットコイン同様、イーサリアムは世界中にお金を送ることが、メールを送るように簡単にできます。 受信者の[イーサリアム・ネーム・サービス(ENS)名](/nft/#nft-domains) (例: bob.eth)またはウォレットのアカウントアドレスを入力するだけで、通常、数分後には支払いが直接相手に届きます。 支払いの送受信には、 [ウォレット](/wallets/)が必要です。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   支払いの分散型アプリ(Dapp)を見る
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Dai や USDC のようなコインの価値変動は、1 ドルで数セント�
 - ピアツーピア: 借り手が特定の貸し手から直接借りることを意味します。
 - プールベース: 借り手が借り入れることができるプールに、貸し手が資金(流動性)を提供する方法です。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   融資分散型アプリ(Dapp)を見る
 </ButtonLink>
 
@@ -183,7 +183,7 @@ ETH を売却(課税対象)することなく、必要な資金を借り入れ�
 - aDai は金利に基づいて増加し、あなたのウォレットで残高が増えていくのを見ることができます。 年換算利回りに応じて、数日後、あるいは数時間後にウォレットの残高が 100.1234 のように表示されます。
 - aDai 残高と同額の通常の Dai をいつでも引き出すことができます。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   貸付サービスの分散型アプリ(Dapp)を見る
 </ButtonLink>
 
@@ -211,7 +211,7 @@ PoolTogether のような損失のない宝くじは、楽しく革新的な新�
 
 例えば、上述の損失のない宝くじ PoolTogether を利用したい場合、Dai や USDC などのトークンが必要になります。 これらの分散型取引所では、自分の ETH をそれらのトークンと交換し、終了後また ETH に戻すことができます。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   トークン交換所を見る
 </ButtonLink>
 
@@ -223,7 +223,7 @@ PoolTogether のような損失のない宝くじは、楽しく革新的な新�
 
 中央集権的な取引所を利用する場合は、取引を行う前に資産を預けて、その資産の管理を任せなければなりません。 中央の取引所はハッカーにとって魅力的なターゲットであるため、資産が預けられている間はリスクがあります。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   トレード分散型アプリ(Dapp)を見る
 </ButtonLink>
 
@@ -235,7 +235,7 @@ PoolTogether のような損失のない宝くじは、楽しく革新的な新�
 
 その良い例が、[分散型金融 Pulse インデックスファンド(DPI)](https://defipulse.com/blog/defi-pulse-index/)です。 これは、常に[時価総額上位の分散型金融(DeFi)トークン](https://www.coingecko.com/en/defi)がポートフォリオに含まれるよう、自動的に入れ替える（リバランスする）ファンドです。 細かい管理をする必要がなく、好きな時にファンドから引き出すことができます。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   投資分散型アプリ(Dapp)を見る
 </ButtonLink>
 
@@ -249,7 +249,7 @@ PoolTogether のような損失のない宝くじは、楽しく革新的な新�
 - 透明性があるため、資金調達者がどれだけの資金を調達したかを証明できます。 あとでどのように資金が使われているかを追跡することもできます。
 - 出資者は、例えば、特定の期限や最低金額が達成されなかった場合、自動的に返金されるように設定することができます。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   クラウドファンディング分散型アプリ(Dapp)を見る
 </ButtonLink>
 
@@ -276,7 +276,7 @@ PoolTogether のような損失のない宝くじは、楽しく革新的な新�
 
 他のソフトウェアと同様、イーサリアム製品は、バグや不正搾取の問題があります。 そのため、現在のところ、この分野の保険商品の多くは、ユーザーが資金を失うことを防ぐことに重点を置いています。 しかし、人生で起こりうるあらゆることを補償するプロジェクトが始まっています。 その良い例が、[ケニアの零細農家を干ばつや洪水から守ることを目的とした](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc)Etherisc の生産物保証です。 分散型の保険は、従来の保険では値段が高過ぎて手がでないことが多い農民に、より安価な保険を提供することができます。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   保険分散型アプリ(Dapp)見る
 </ButtonLink>
 
@@ -286,7 +286,7 @@ PoolTogether のような損失のない宝くじは、楽しく革新的な新�
 
 多くのことが行われているため、すべての投資、ローン、取引を記録する方法が必要になります。 すべての分散型金融(DeFi)アクティビティを 1 つの場所で管理できる製品が多数あります。 これが分散型金融(DeFi)のオープンアーキテクチャーの魅力です。 製品すべての残高を確認できるだけでなく、その機能を利用できるインターフェースを構築することができます。 分散型金融(DeFi)をより深く知るための参考にしてみてください。
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   ポートフォリオ分散型アプリ(Dapp)を見る
 </ButtonLink>
 

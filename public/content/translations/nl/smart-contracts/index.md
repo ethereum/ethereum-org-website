@@ -65,7 +65,7 @@ Ze kunnen berekeningen uitvoeren, valuta creëren, gegevens opslaan, NFT's minte
 - [Stablecoins](/stablecoins/)
 - [Creëren en distribueren van unieke digitale activa](/nft/)
 - [Een automatische, open wisselkoers](/get-eth/#dex)
-- [Gedecentraliseerde gaming](/dapps/?category=gaming)
+- [Gedecentraliseerde gaming](/dapps/?category=gaming#explore)
 - [Een verzekeringsbeleid dat automatisch uitbetaalt](https://etherisc.com/)
 - [Een standaard waarmee mensen aangepaste, interoperabele valuta's kunnen maken](/developers/docs/standards/tokens/)
 

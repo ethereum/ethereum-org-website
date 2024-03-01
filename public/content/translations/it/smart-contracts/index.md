@@ -65,7 +65,7 @@ Possono eseguire calcoli, creare valuta, memorizzare dati, coniare NFT, inviare 
 - [Stablecoin](/stablecoins/)
 - [Creare e distribuire risorse digitali uniche](/nft/)
 - [Una piattaforma di cambio di valute automatica e aperta](/get-eth/#dex)
-- [Giochi decentralizzati](/dapps/?category=gaming)
+- [Giochi decentralizzati](/dapps/?category=gaming#explore)
 - [Una polizza assicurativa che paga automaticamente](https://etherisc.com/)
 - [Uno standard che consente la creazione di valute personalizzate e interoperabili](/developers/docs/standards/tokens/)
 

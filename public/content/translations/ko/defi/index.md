@@ -47,7 +47,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 | 시장이 항상 열려 있습니다.                                                                               | 직원들에게 휴식이 필요하기 때문에 시장이 문을 닫습니다.                                      |
 | 투명성을 기반으로 구축되었으며, 누구나 제품 데이터를 보고 시스템이 어떻게 작동하는지 검사할 수 있습니다. | 금융 기관은 알 수 없는 미스터리입니다. 대출 내역, 관리 자산에 대한 기록 등을 볼 수 없습니다. |
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   디파이 앱 둘러보기
 </ButtonLink>
 
@@ -65,7 +65,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>이더리움이 처음이시면 디파이 애플리케이션에 대한 제안을 살펴보세요.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink to="/dapps/?category=finance#explore">
     디파이 앱 둘러보기
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 이더리움은 블록체인으로서 안전하고 글로벌하게 트랜잭션을 전송할 수 있도록 설계되었습니다. 비트코인과 마찬가지로 이더리움은 이메일을 보내는 것만큼 쉽게 전 세계로 돈을 송금할 수 있습니다. 수령인의 [ENS 이름](/nft/#nft-domains)(예: bob.eth) 또는 지갑의 계정 주소를 입력하기만 하면 몇 분 안에 수취인에게 직접 지급됩니다(보통은). 지불금을 보내거나 받으려면 [지갑](/wallets/)이 필요합니다.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   결제 디앱 보기
 </ButtonLink>
 
@@ -123,7 +123,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 - P2P, 대출자가 직접 특정 대출 기관에서 직접 대출하는 방식.
 - 대출 기관에서 자산을 대출자가 대출할 수 있는 풀로 지급하는(유동성) 풀 기반.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   대출용 디앱 보기
 </ButtonLink>
 
@@ -183,7 +183,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 - 이자율에 따라 aDai는 증가하고 지갑에서 잔고가 늘어가는 걸 보실 수 있습니다. 연이율에 따라 지갑 잔고는 며칠 또는 심지어 몇 시간 후에 100.1234와 같은 수치가 되어 있을 겁니다!
 - 언제든지 aDai 잔액과 동일한 금액의 일반 다이를 인출할 수 있습니다.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   대출 디앱 보기
 </ButtonLink>
 
@@ -211,7 +211,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 예를 들어, 무손실 복권 풀투게더(위에서 설명함)를 사용하려면 다이 또는 USDC와 같은 토큰이 필요합니다. 이런 DEX를 사용하면 ETH를 토큰으로 교환할 수 있고 끝나면 반대로 토큰을 ETH로 교환할 수 있습니다.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   토큰 거래소 보기
 </ButtonLink>
 
@@ -223,7 +223,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 중앙화 거래소를 이용하면 거래 전에 자산을 예치해야 하고, 그 자산을 책임질 거래소를 신뢰해야 합니다. 자산이 예치되어 있으면 중앙화 거래소는 해커에게 매력적인 대상이기 때문에 자산이 위험합니다.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   거래 디앱 보기
 </ButtonLink>
 
@@ -235,7 +235,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 좋은 예가 [디파이 펄스 인덱스 펀드(DPI)](https://defipulse.com/blog/defi-pulse-index/)입니다. 이 펀드는 포트폴리오에 항상 [시가총액 기준 상위 디파이 토큰](https://www.coingecko.com/en/defi)이 포함되도록 자동으로 편입 종목을 재조정합니다. 세부 사항을 관리할 필요가 없으며 원할 때마다 펀드에서 인출할 수 있습니다.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   투자 디앱 보기
 </ButtonLink>
 
@@ -249,7 +249,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 - 투명하기 때문에 모금자가 얼마나 많은 돈이 모였는지 증명할 수 있습니다. 심지어 나중에 자금이 어떻게 사용되는지 추후에 추적할 수 있습니다.
 - 예를 들면 모금자는 구체적인 기한과 최소 금액이 충족되지 않는 경우 자동 환불을 설정할 수 있습니다.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   크라우드 펀딩 디앱 보기
 </ButtonLink>
 
@@ -276,7 +276,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 이더리움 제품은 다른 소프트웨어와 마찬가지로 버그와 악용에 시달릴 수 있습니다. 그래서 현재 이 분야의 많은 보험 상품들은 자금 손실로부터 사용자를 보호하는 데 초점을 맞추고 있습니다. 그러나 살면서 발생할 수 있는 모든 사안으로 보장 범위를 확장하는 프로젝트가 있습니다. 이것의 좋은 예는 [케냐의 소규모 농부들을 가뭄과 홍수로부터 보호하는 것](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc)을 목표로 하는 이더리스크의 농작물 보험입니다. 탈중앙화 보험은 종종 일반적인 보험에서 제외되는 농부들에게 더 저렴한 보험을 제공할 수 있습니다.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   보험 디앱 보기
 </ButtonLink>
 
@@ -286,7 +286,7 @@ summaryPoint3: 누구나 프로그래밍할 수 있는 오픈 소스 기술을 �
 
 많은 일이 진행됨에 따라 모든 투자, 대출 및 거래를 추적할 수 있는 방법이 필요할 것입니다. 한 곳에서 디파이 활동을 조율할 수 있는 여러 제품이 있습니다. 이것이 디파이의 개방형 아키텍처의 아름다움입니다. 팀에서 여러 제품 간의 잔액을 볼 수 있는 인터페이스를 구축할 수 있을 뿐만 아니라 기능을 사용할 수도 있습니다. 디파이에 대해 더 알아갈 수록 이것이 유용할 것입니다.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   포트폴리오 디앱 보기
 </ButtonLink>
 
