@@ -391,11 +391,6 @@ const StakingPage = ({
               <Text>
                 <Translation id="page-staking:page-staking-description" />
               </Text>
-              <Text>
-                <InlineLink href="/get-eth/">
-                  {t("page-staking-section-what-link")}
-                </InlineLink>
-              </Text>
             </Box>
             <Box>
               <H2 id={tocItems.whyStakeYourEth.id}>
@@ -663,26 +658,8 @@ const StakingPage = ({
               <H2 id={tocItems.further.id}>{tocItems.further.title}</H2>
               <ul>
                 <li>
-                  <InlineLink href="https://vitalik.eth.limo/general/2020/11/06/pos2020.html">
-                    {t("page-staking-further-reading-1-link")}
-                  </InlineLink>{" "}
-                  -{" "}
-                  <i>
-                    {t("page-staking-further-reading-author-vitalik-buterin")}
-                  </i>
-                </li>
-                <li>
                   <InlineLink href="https://notes.ethereum.org/9l707paQQEeI-GPzVK02lA?view#">
                     {t("page-staking-further-reading-2-link")}
-                  </InlineLink>{" "}
-                  -{" "}
-                  <i>
-                    {t("page-staking-further-reading-author-vitalik-buterin")}
-                  </i>
-                </li>
-                <li>
-                  <InlineLink href="https://vitalik.eth.limo/general/2017/12/31/pos_faq.html">
-                    {t("page-staking-further-reading-3-link")}
                   </InlineLink>{" "}
                   -{" "}
                   <i>
@@ -704,11 +681,6 @@ const StakingPage = ({
                 <li>
                   <InlineLink href="https://www.attestant.io/posts/">
                     {t("page-staking-further-reading-6-link")}
-                  </InlineLink>
-                </li>
-                <li>
-                  <InlineLink href="https://kb.beaconcha.in/">
-                    {t("page-staking-further-reading-7-link")}
                   </InlineLink>
                 </li>
                 <li>
