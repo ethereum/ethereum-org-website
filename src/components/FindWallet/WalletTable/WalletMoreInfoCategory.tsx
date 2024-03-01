@@ -2,12 +2,10 @@ import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 import {
   Box,
-  Flex,
   Heading,
   Icon,
   ListIcon,
   ListItem,
-  Stack,
   UnorderedList,
 } from "@chakra-ui/react"
 
@@ -15,10 +13,10 @@ import {
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
+import Text from "@/components/OldText"
+import Tooltip from "@/components/Tooltip"
 
-import walletFilterData from "../../../data/wallets/wallet-filters"
-import Text from "../../OldText"
-import Tooltip from "../../Tooltip"
+import walletFilterData from "@/data/wallets/wallet-filters"
 
 import { DropdownOption } from "@/hooks/useWalletTable"
 

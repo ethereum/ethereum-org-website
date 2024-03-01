@@ -89,9 +89,9 @@ export const getSupportedLanguages = (
 
 export const formatSupportedLanguages = (supportedLanguages: string[]) => {
   const numberOfSupportedLanguages = supportedLanguages.length
-  const rest = numberOfSupportedLanguages - 2
+  const rest = numberOfSupportedLanguages - 5
 
-  return `${supportedLanguages.slice(0, 2).join(", ")} ${
+  return `${supportedLanguages.slice(0, 5).join(", ")} ${
     rest > 0 ? `+ ${rest}` : ""
   }`
 }
