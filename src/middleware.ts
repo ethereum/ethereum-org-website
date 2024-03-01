@@ -33,14 +33,18 @@ export async function middleware(req: NextRequest) {
   }
 
   if (req.nextUrl.locale === FAKE_LOCALE) {
-    // Apparently `localeDetection` does not work when using the faked locale
-    // hack. So, detect the locale manually
+    // Apparently, the built-in `localeDetection`from Next does not work when
+    // using the faked locale hack. So, we need to detect the locale manually
     const localeDetected = detectLocale(req.headers.get("accept-language"))
     const locale = localeDetected || DEFAULT_LOCALE
 
-    return NextResponse.redirect(
-      new URL(`/${locale}${req.nextUrl.pathname}`, req.url),
-      { status: 301 }
-    )
+    const redirectUrl = new URL(`/${locale}${req.nextUrl.pathname}`, req.url)
+
+    // Add trailing slash if it's not present
+    if (!redirectUrl.pathname.endsWith("/")) {
+      redirectUrl.pathname = redirectUrl.pathname + "/"
+    }
+
+    return NextResponse.redirect(redirectUrl, { status: 301 })
   }
 }
