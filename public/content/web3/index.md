@@ -100,10 +100,6 @@ Traditionally, you would create an account for every platform you use. For examp
 
 Web3 solves these problems by allowing you to control your digital identity with an Ethereum address and [Ethereum Name Service (ENS)](/glossary/#ens) profile. Using an Ethereum address provides a single login across platforms that is secure, censorship-resistant, and anonymous.
 
-<ButtonLink to="https://login.xyz/">
-  Sign-in with Ethereum
-</ButtonLink>
-
 ### Native payments {#native-payments}
 
 Web2's payment infrastructure relies on banks and payment processors, excluding people without bank accounts or those who happen to live within the borders of the wrong country.
