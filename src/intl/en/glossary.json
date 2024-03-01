@@ -237,6 +237,8 @@
   "message-definition": "An <a href=\"/glossary/#internal-transaction\">internal transaction</a> that is never serialized and only sent within the <a href=\"/glossary/#evm\">EVM</evm>.",
   "message-call-term": "Message call",
   "message-call-definition": "The act of passing a <a href=\"/glossary/#message\">message</a> from one account to another. If the destination account is associated with <a href=\"/glossary/#evm\">EVM</a> code, then the VM will be started with the state of that object and the message acted upon.",
+  "mev-term": "MEV",
+  "mev-definition": "A mechanism prioritizing certain actions on a blockchain for a fee, influencing outcomes and the order of transactions.",
   "mining-term": "Mining",
   "mining-definition": "The process of repeatedly hashing a block header while incrementing a <a href=\"/glossary/#nonce\">nonce</a> until the result contains an arbitrary number of leading binary zeros. This is the process by which new <a href=\"/glossary/#block\">blocks</a> are added to a proof-of-work blockchain. This was how Ethereum was secured before it moved to proof-of-stake.",
   "miner-term": "Miner",
