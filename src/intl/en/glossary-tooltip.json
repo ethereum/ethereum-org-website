@@ -151,6 +151,8 @@
   "validity-proof-definition": "A security model for certain <a href=\"/glossary/#layer-2\">layer 2</a> solutions where, to increase speed, transactions are rolled up into batches and submitted to Ethereum in a single transaction. The transaction computation is done off-chain and then supplied to the main chain with a proof of their validity. This method increases the amount of transactions possible while maintaining security. Some <a href=\"/glossary/#rollups\">rollups</a> use <a href=\"/glossary/#fraud-proof\">fraud proof</a>. <a href=\"/developers/docs/scaling/zk-rollups/\">More on zero-knowledge rollups</a>.",
   "wallet-term": "Wallet",
   "wallet-definition": "A wallet is a digital tool to store, send, and receive digital currency, like a virtual purse for your online money. <a href=\"/wallets/\">More on Ethereum wallets</a>.",
+  "web2-term": "Web2",
+  "web2-definition": "Is the current internet, focused on user-generated content and social media that are controlled by few companies. Web3 is a crypto belief that users should control their data and transactions instead.",
   "web3-term": "Web3",
   "web3-definition": "Web3 is the new internet with blockchain, where users control their data and transactions, not companies. No need to share any personal information. <a href=\"/web3/\">More on web3</a>.",
   "wei-term": "Wei",
