@@ -287,6 +287,8 @@
   "pow-definition": "A piece of data (the proof) that requires significant computation to find. <a href=\"/developers/docs/consensus-mechanisms/pow/\">More on proof-of-work</a>.",
   "public-key-term": "Public key",
   "public-key-definition": "A number, derived via a one-way function from a <a href=\"/glossary/#private-key\">private key</a>, which can be shared publicly and used by anyone to verify a digital signature made with the corresponding private key.",
+  "quadratic-voting-term": "Quadratic voting",
+  "quadratic-voting-definition": "Is a voting method where voters express how strongly they feel about issues. It allows voters to show not just preference, but also the intensity of their preference.",
   "receipt-term": "Receipt",
   "receipt-definition": "Data returned by an Ethereum client to represent the result of a particular <a href=\"/glossary/#transaction\">transaction</a>, including a <a href=\"/glossary/#hash\">hash</a> of the transaction, its <a href=\"/glossary/#block\">block</a> number, the amount of <a href=\"/glossary/#gas\">gas</a> used, and, in case of deployment of a <a href=\"/glossary/#smart-contract\">smart contract</a>, the <a href=\"/glossary/#address\">address</a> of the contract.",
   "recovery-phrase-term": "Seed phrase/recovery phrase",

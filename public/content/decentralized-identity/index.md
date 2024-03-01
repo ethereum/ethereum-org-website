@@ -33,6 +33,47 @@ An identifier is a piece of information that acts as a pointer to a particular i
 
 These traditional examples of identifiers are issued, held and controlled by central entities. You need permission from your government to change your name or from a social media platform to change your handle.
 
+## Benefits of decentralized identity {#benefits-of-decentralized-identity}
+
+1. Decentralized identity increases individual control of identifying information. Decentralized identifiers and attestations can be verified without relying on centralized authorities and third-party services.
+
+2. Decentralized identity solutions facilitates a trustless, seamless, and privacy-protecting method for verifying and managing user identity.
+
+3. Decentralized identity harnesses blockchain technology, which creates trust between different parties and provides cryptographic guarantees to prove the validity of attestations.
+
+4. Decentralized identity makes identity data portable. Users store attestations and identifiers in a mobile wallet and can share with any party of their choice. Decentralized identifiers and attestations are not locked into the database of the issuing organization.
+
+5. Decentralized identity should work well with emerging [zero-knowledge](/glossary/#zk-proof) technologies that will enable individuals to prove they own or have done something without revealing what that thing is. This could become a powerful way to combine trust and privacy for applications such as voting.
+
+6. Decentralized identity enables [anti-Sybil](/glossary/#anti-sybil) mechanisms to identify when one individual human is pretending to be multiple humans to game or spam some system.
+
+## Decentralized identity use-cases {#decentralized-identity-use-cases}
+
+Decentralized identity has many potential use-cases:
+
+### 1. Universal logins {#universal-dapp-logins}
+
+Decentralized identity can help replace password-based logins with decentralized authentication. Service providers can issue attestations to users, which can be stored in an Ethereum wallet. An example attestation would be an [NFT](/glossary/#nft) granting the holder access to an online community.
+
+A [Sign-In with Ethereum](https://login.xyz/) function would then enable servers to confirm the user's Ethereum account and fetch the required attestation from their account address. This means users can access platforms and websites without having to memorize long passwords and improves the online experience for users.
+
+### 2. KYC authentication {#kyc-authentication}
+
+Using many online services requires individuals to provide attestations and credentials, such as a driving license or national passport. But this approach is problematic because private user information can be compromised and service providers cannot verify the authenticity of the attestation.
+
+Decentralized identity allows companies to skip on conventional [Know-Your-Customer (KYC)](https://en.wikipedia.org/wiki/Know_your_customer) processes and authenticate user identities via Verifiable Credentials. This reduces the cost of identity management and prevents the use of fake documentation.
+
+### 3. Voting and online communities {#voting-and-online-communities}
+
+Online voting and social media are two novel applications for decentralized identity. Online voting schemes are susceptible to manipulation, especially if malicious actors create false identities to vote. Asking individuals to present on-chain attestations can improve the integrity of online voting processes.
+
+Decentralized identity can help create online communities that are free of fake accounts. For example, each user might have to authenticate their identity using an on-chain identity system, like the Ethereum Name Service, reducing the possibility of bots.
+
+### 4. Anti-Sybil protection {#sybil-protection}
+
+Sybil attacks refer to individual humans tricking a system into thinking they are multiple people to increase their influence. Grant-giving applications that use [quadratic voting](/glossary/#quadratic-voting) are vulnerable to these Sybil attacks because the value of a grant is increased when more individuals vote for it, incentivizing users to split their contributions across many identities. Decentralized identities help to prevent this by raising the burden on each participant to prove that they are really human, although often without having to reveal specific private information.
+
+
 ## What are attestations? {#what-are-attestations}
 
 An attestation is a claim made by one entity about another entity. If you live in the United States, the driver's license issued to you by the Department of Motor Vehicles (one entity) attests that you (another entity) are legally allowed to drive a car.
@@ -111,46 +152,6 @@ Here's an example to show how on-chain attestations might work in practice:
 
 [Soulbound tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([non-transferable NFTs](/glossary/#nft)) could be used to collect information unique to a specific wallet. This effectively creates a unique on-chain identity bound to a particular Ethereum address that could include tokens representing achievements (e.g. finishing some specific online course or passing a threshold score in a game) or community participation.
 
-## Benefits of decentralized identity {#benefits-of-decentralized-identity}
-
-1. Decentralized identity increases individual control of identifying information. Decentralized identifiers and attestations can be verified without relying on centralized authorities and third-party services.
-
-2. Decentralized identity solutions facilitates a trustless, seamless, and privacy-protecting method for verifying and managing user identity.
-
-3. Decentralized identity harnesses blockchain technology, which creates trust between different parties and provides cryptographic guarantees to prove the validity of attestations.
-
-4. Decentralized identity makes identity data portable. Users store attestations and identifiers in a mobile wallet and can share with any party of their choice. Decentralized identifiers and attestations are not locked into the database of the issuing organization.
-
-5. Decentralized identity should work well with emerging [zero-knowledge](/glossary/#zk-proof) technologies that will enable individuals to prove they own or have done something without revealing what that thing is. This could become a powerful way to combine trust and privacy for applications such as voting.
-
-6. Decentralized identity enables [anti-Sybil](/glossary/#anti-sybil) mechanisms to identify when one individual human is pretending to be multiple humans to game or spam some system.
-
-## Decentralized identity use-cases {#decentralized-identity-use-cases}
-
-Decentralized identity has many potential use-cases:
-
-### 1. Universal logins {#universal-dapp-logins}
-
-Decentralized identity can help replace password-based logins with [decentralized authentication](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/). Service providers can issue attestations to users, which can be stored in an Ethereum wallet. An example attestation would be an [NFT](/glossary/#nft) granting the holder access to an online community.
-
-A [Sign-In with Ethereum](https://login.xyz/) function would then enable servers to confirm the user's Ethereum account and fetch the required attestation from their account address. This means users can access platforms and websites without having to memorize long passwords and improves the online experience for users.
-
-### 2. KYC authentication {#kyc-authentication}
-
-Using many online services requires individuals to provide attestations and credentials, such as a driving license or national passport. But this approach is problematic because private user information can be compromised and service providers cannot verify the authenticity of the attestation.
-
-Decentralized identity allows companies to skip on conventional [Know-Your-Customer (KYC)](https://en.wikipedia.org/wiki/Know_your_customer) processes and authenticate user identities via Verifiable Credentials. This reduces the cost of identity management and prevents the use of fake documentation.
-
-### 3. Voting and online communities {#voting-and-online-communities}
-
-Online voting and social media are two novel applications for decentralized identity. Online voting schemes are susceptible to manipulation, especially if malicious actors create false identities to vote. Asking individuals to present on-chain attestations can improve the integrity of online voting processes.
-
-Decentralized identity can help create online communities that are free of fake accounts. For example, each user might have to authenticate their identity using an on-chain identity system, like the Ethereum Name Service, reducing the possibility of bots.
-
-### 4. Anti-Sybil protection {#sybil-protection}
-
-Sybil attacks refer to individual humans tricking a system into thinking they are multiple people to increase their influence. [Grant-giving applications](https://gitcoin.co/grants/) that use [quadratic voting](https://www.radicalxchange.org/concepts/plural-voting/) are vulnerable to these Sybil attacks because the value of a grant is increased when more individuals vote for it, incentivizing users to split their contributions across many identities. Decentralized identities help to prevent this by raising the burden on each participant to prove that they are really human, although often without having to reveal specific private information.
-
 ## Use decentralized identity {#use-decentralized-identity}
 
 There are many ambitious projects using Ethereum as a foundation for decentralized identity solutions:
@@ -160,7 +161,6 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - **[Ethereum Attestation Service (EAS)](https://attest.sh/)** - _A decentralized ledger/protocol for making on-chain or off-chain attestations about anything._
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _A decentralized, open-source social identity network seeking to reform identity verification through the creation and analysis of a social graph._
-- **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _A decentralized digital identity aggregator._
 - **[walt.id](https://walt.id)** — _Open source decentralized identity and wallet infrastructure that enables developers and organizations to leverage self-sovereign identity and NFTs/SBTs._
 
 ## Further reading {#further-reading}
