@@ -4,15 +4,15 @@ description: 維護以太坊安全
 lang: zh-tw
 ---
 
-# 以太坊安全性及詐騙防範 \{#introduction}
+# 以太坊安全性及詐騙防範 {#introduction}
 
 隨著人們對加密貨幣的興趣不斷增長，在使用加密貨幣時學習最佳實務作法，變得非常重要。 加密貨幣雖然很有趣、令人感到興奮，但也存在重大風險。 事前稍微做點功课，將能降低這些風險。
 
 <Divider />
 
-## 網路安全基本入門 \{#web-security}
+## 網路安全基本入門 {#web-security}
 
-### 使用強式密碼 \{#use-strong-passwords}
+### 使用強式密碼 {#use-strong-passwords}
 
 [80%以上被駭客攻擊的帳戶，都由於密碼不够强或密码被盜用](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/)。 字元、數字和符號的長串組合機制，最能確保帳戶安全。
 
@@ -26,7 +26,7 @@ lang: zh-tw
 
 另一個常見的錯誤是使用容易透過[社交工程](<https://wikipedia.org/wiki/Social_engineering_(security)>)猜中或發現的密碼。 在密碼中使用母親娘家姓、子女或寵物的名字或出生日期，都是不安全的做法，會增加密碼遭駭的風險。
 
-#### 良好密碼實務： \{#good-password-practices}
+#### 良好密碼實務： {#good-password-practices}
 
 - 只要密碼產生器或填寫的表單允許，密碼越長越好
 - 混用大小寫字母、數字及符號
@@ -35,11 +35,11 @@ lang: zh-tw
 
 [更多建立強式密碼的相關資訊](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
 
-### 各帳戶使用不同的密碼 \{#use-unique-passwords}
+### 各帳戶使用不同的密碼 {#use-unique-passwords}
 
 如果資料外洩，強式密碼無法提供應有的保護性。 [Have I Been Pwned](https://haveibeenpwned.com) 網站能讓你根據其資料庫，查看你的帳戶是否涉入任何資料外洩事件。 如果涉入其中，**應立即更換密碼**。 各帳戶使用不同的密碼時，即使一個密碼被破解，也較不會被駭客存取所有帳戶。
 
-### 使用密碼管理器 \{#use-password-manager}
+### 使用密碼管理器 {#use-password-manager}
 
 <InfoBanner emoji=":bulb:">
   <div>
@@ -51,14 +51,14 @@ lang: zh-tw
 
 ![使用密碼管理器的範例](./passwordManager.png)
 
-#### 試試密碼管理員： \{#try-password-manager}
+#### 試試密碼管理員： {#try-password-manager}
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
 - [1Password](https://1password.com/)
 - 或查看其他[推薦的密碼管理員](https://www.privacytools.io/secure-password-manager)
 
-### 使用雙因素驗證 \{#two-factor-authentication}
+### 使用雙因素驗證 {#two-factor-authentication}
 
 要驗證你就是使用者本人，有幾種獨特的證明方式可用。 這些就是所謂的**因素**，主要有三種因素：
 
@@ -82,7 +82,7 @@ lang: zh-tw
   </div>
 </InfoBanner>
 
-#### 安全金鑰 \{#security-keys}
+#### 安全金鑰 {#security-keys}
 
 想進一步使用雙因素驗證的人，考慮使用安全金鑰。 安全金鑰是一種實體硬體驗證裝置，運作方式與驗證工具應用程式相同。 使用安全金鑰是雙因素驗證最安全的方式。 許多這些金鑰都使用 FIDO 通用第二因素 (U2F) 標準。 [深入了解 FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/)。
 
@@ -90,11 +90,11 @@ lang: zh-tw
 
 <YouTube id="m8jlnZuV1i4" start="3479" />
 
-### 解除安裝瀏覽器擴充功能 \{#uninstall-browser-extensions}
+### 解除安裝瀏覽器擴充功能 {#uninstall-browser-extensions}
 
 Chrome 擴充功能或 Firefox 附加元件等瀏覽器擴充功能，能增強瀏覽器實用功能並改善使用體驗，但也存在風險。 大多數瀏覽器擴充功能，皆預設請求「讀取和變更網站資料」的存取權限，如此一來，其幾乎能對你的資料為所欲為。 Chrome 擴充功能總會自動更新，因此原本安全的擴充元件，之後可能會更新並加入惡意程式碼。 多數瀏覽器擴充功能都不會試圖竊取你的資料，但你應該知道它是辦得到的。
 
-#### 使用以下方式維持安全性： \{#browser-extension-safety}
+#### 使用以下方式維持安全性： {#browser-extension-safety}
 
 - 安裝瀏覽器擴充功能時，只接受信任的來源
 - 移除不使用的瀏覽器擴充功能
@@ -104,9 +104,9 @@ Chrome 擴充功能或 Firefox 附加元件等瀏覽器擴充功能，能增強�
 
 <Divider />
 
-## 加密貨幣安全性基本入門 \{#crypto-security}
+## 加密貨幣安全性基本入門 {#crypto-security}
 
-### 提升你的知識 \{#level-up-your-knowledge}
+### 提升你的知識 {#level-up-your-knowledge}
 
 人們在加密貨幣方面受騙上當，其中一個頭號原因就是缺乏暸解。 例如，如果你不了解以太坊網路為去中心化、非任何人所有，當有人偽裝成客服人員承諾返還你遺失的以太幣，藉機索取你的私密金鑰，便很容易落入圈套。 增加對以太坊運作方式的知識，是一項很值得的投資。
 
@@ -119,9 +119,9 @@ Chrome 擴充功能或 Firefox 附加元件等瀏覽器擴充功能，能增強�
 </DocLink>
 <Divider />
 
-## 錢包安全性 \{#wallet-security}
+## 錢包安全性 {#wallet-security}
 
-### 不要洩露你的私密金鑰 \{#protect-private-keys}
+### 不要洩露你的私密金鑰 {#protect-private-keys}
 
 **無論任何原因，絕對不要分享私密金鑰！**
 
@@ -131,28 +131,28 @@ Chrome 擴充功能或 Firefox 附加元件等瀏覽器擴充功能，能增強�
   什麼是以太坊錢包?
 </DocLink>
 
-#### 不要拍攝你的種子助記詞/私密金鑰的螢幕擷取畫面 \{#screenshot-private-keys}
+#### 不要拍攝你的種子助記詞/私密金鑰的螢幕擷取畫面 {#screenshot-private-keys}
 
 拍下種子助記詞或私密金鑰的螢幕擷取畫面，有同步到雲端上的風險，可能為駭客開方便之門。 從雲端獲取私密金鑰是駭客常用的攻擊手法。
 
-### 使用硬體錢包 \{#use-hardware-wallet}
+### 使用硬體錢包 {#use-hardware-wallet}
 
 硬體錢包讓人能離線儲存私密金鑰。 硬體錢包被視為儲存私密金鑰最安全的錢包選擇：私密金鑰永不連網且完全儲存在本機裝置上。
 
 讓私密金鑰保持在離線狀態，即使駭客掌握你的電腦，也能大幅減少駭客入侵的風險。
 
-#### 試試硬體錢包： \{#try-hardware-wallet}
+#### 試試硬體錢包： {#try-hardware-wallet}
 
 - [Ledger](https://www.ledger.com/)
 - [Trezor](https://trezor.io/)
 
-### 發送交易前仔細檢查 \{#double-check-transactions}
+### 發送交易前仔細檢查 {#double-check-transactions}
 
 不小心將加密貨幣發送到錯誤的錢包地址是一種常見錯誤。 **在以太坊上發送的交易是不可逆的。**除非你認識地址所有者並能說服他們把你的資金退回來，否則你將沒有辦法找回你的資金。
 
 發送交易之前，務必確保發送的地址與接收人的地址完全匹配。 此外，與智慧型合約進行互動時，建議在簽名前閱讀交易訊息。
 
-### 設定智慧型合約支出限額 \{#spend-limits}
+### 設定智慧型合約支出限額 {#spend-limits}
 
 與智慧型合約進行互動時，不允許無支出限額。 若無支出限額，智慧型合約將能掏空你的錢包。 相反，將支出限額僅設定為交易需要的金額。
 
@@ -162,7 +162,7 @@ Chrome 擴充功能或 Firefox 附加元件等瀏覽器擴充功能，能增強�
 
 <Divider />
 
-## 常見的詐騙手法 \{#common-scams}
+## 常見的詐騙手法 {#common-scams}
 
 詐騙者總是想方設法從你身上騙走你的資金。 完全阻止詐騙者是不可能的，但若曉得其大多數採用的技術，能降低其成功率。 雖然騙局層出不窮，但通常本質相同。 唯一的應對方法是，請記住：
 
@@ -170,19 +170,19 @@ Chrome 擴充功能或 Firefox 附加元件等瀏覽器擴充功能，能增強�
 - 沒有人會給你免費或打折的以太幣
 - 沒有人需要獲取你的私密金鑰或個人資訊
 
-### 贈獎詐騙 \{#giveaway}
+### 贈獎詐騙 {#giveaway}
 
 加密貨幣中最常見的騙局之一是贈獎詐騙。 贈獎詐騙有多種形式，但一般前提是，如果你將以太幣發送到所提供的錢包地址，你將會收到雙倍的以太幣。 *因此，它也稱為買一送一詐騙。*
 
 這些騙局通常規定了領取贈獎的有限時間，促使人作出錯誤的決策並製造一種虛假的緊迫感。
 
-#### 社交媒體駭客攻擊 \{#social-media-hacks}
+#### 社交媒體駭客攻擊 {#social-media-hacks}
 
 最出名的一次發生在 2020 年 7 月，當時很多知名人士和組織的 Twitter 帳戶被破解。 駭客同一時間使用被盜的帳戶發布了比特幣贈送活動。 雖然這些欺騙性推文很快被察覺並且刪除，但駭客仍僥倖逃脫，取走 11 個比特幣（或截至 2021 年 9 月的 500,000 美元）。
 
 ![Twitter 上的一個詐騙案例](./appleTwitterScam.png)
 
-#### 名人贈獎活動 \{#celebrity-giveaway}
+#### 名人贈獎活動 {#celebrity-giveaway}
 
 名人贈獎活動是贈獎詐騙的另一種常見形式。 詐騙者會錄製名人的採訪影片或會議演講，並在 YouTube 上進行直播 — 看起來好像名人正在接受直播採訪影片，支援加密貨幣贈送活動。
 
@@ -192,7 +192,7 @@ Chrome 擴充功能或 Firefox 附加元件等瀏覽器擴充功能，能增強�
 
 ![YouTube 上的一個詐騙案例](./youtubeScam.png)
 
-### 支援服務騙局 \{#support-scams}
+### 支援服務騙局 {#support-scams}
 
 加密貨幣是一種相對年輕且被誤解的技術。 有一種常見的騙局就是利用這一點，稱為支援服務騙局，詐騙者針對受歡迎的加密貨幣錢包、交易所或區塊鏈，冒充成支援人員。
 
@@ -212,7 +212,7 @@ Chrome 擴充功能或 Firefox 附加元件等瀏覽器擴充功能，能增強�
   </div>
 </InfoBanner>
 
-### 「以太坊 2」代幣騙局 \{#eth2-token-scam}
+### 「以太坊 2」代幣騙局 {#eth2-token-scam}
 
 在[合併](/roadmap/merge/)的準備階段，詐騙者曾試圖利用「以太坊 2」這個詞製造混淆，讓使用者將以太幣兌換成「以太坊 2」代幣。 但根本沒有所謂的「以太坊 2」，合併後也未導入任何其他合法代幣。 合併前擁有的以太幣，和現在是同一個以太幣。 **從工作量證明過渡到權益證明，無需採取任何與以太幣有關措施進行相應的說明**。
 
@@ -220,7 +220,7 @@ Chrome 擴充功能或 Firefox 附加元件等瀏覽器擴充功能，能增強�
 
 _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣（即 Rocket Pool 的 rETH、Lido 的 stETH、Coinbase 的 ETH2），但這些都不需要「遷移過去」。_
 
-### 網路钓鱼詐騙 \{#phishing-scams}
+### 網路钓鱼詐騙 {#phishing-scams}
 
 網路钓鱼詐騙是另一種越來越常見的詐騙手段，詐騙者會利用它試圖竊取錢包中的資金。
 
@@ -234,7 +234,7 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 
 [更多避免網路釣魚詐騙的相關資訊](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
 
-### 加密貨幣交易經紀人詐騙 \{#broker-scams}
+### 加密貨幣交易經紀人詐騙 {#broker-scams}
 
 這些假冒加密貨幣交易經紀人自稱是專業的加密貨幣經紀人，他們會提議收取金錢，代表你投資。 這種提議通常伴隨著回報承諾，但這些回報不切實際。 詐騙者收到錢後可能會誘導你，要你拿出更多資金以免錯過更多投資收益，他們也可能完全銷聲匿跡。
 
@@ -244,7 +244,7 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 
 ![YouTube 上的交易經紀人詐騙案例](./brokerScam.png)
 
-### 加密礦池詐騙 \{#mining-pool-scams}
+### 加密礦池詐騙 {#mining-pool-scams}
 
 2022 年 9 月起，已再也無法在以太坊上挖礦。 但是，礦池騙局仍然存在。 礦池騙局中，有人會主動聯繫你，聲稱加入以太坊礦池就能獲得豐厚的回報。 詐騙者會提出要求，並一直與你保持聯繫，不善罷甘休。 基本上，詐騙者會試圖讓你相信，當你加入以太坊礦池時，你的加密貨幣將用來建立以太幣，你將以以太幣的形式獲得紅利。 但你的加密貨幣結果只能獲得微薄的回報。 這只是為了引誘你投入更多的資金。 最終，所有資金會傳送到不明的地址，詐騙者要嘛人間蒸發，要嘛在某些情況下繼續保持聯繫，就像最近一個案例一樣。
 
@@ -258,7 +258,7 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 
 [有人在礦池騙局中損失了 20 萬美元](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
-### 空投騙局 \{#airdrop-scams}
+### 空投騙局 {#airdrop-scams}
 
 空投騙局是指詐騙者設局將某個資產（非同質化代幣、代幣），空投到你的錢包裡，然後發送一個詐騙性網站，讓你取得這些空投的資產。 當你嘗試領取資產，會提示你使用自己的以太坊錢包登入，並「核准」一筆交易。 但這筆交易會損害你的帳戶，將公開金鑰和私密金鑰都傳送給詐騙者。 另一種形式，可能是請你確認一筆能將資金轉移到詐騙者帳戶的交易。
 
@@ -266,23 +266,23 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 
 <Divider />
 
-## 衍生閱讀 \{#further-reading}
+## 衍生閱讀 {#further-reading}
 
-### 網路安全 \{#reading-web-security}
+### 網路安全 {#reading-web-security}
 
 - [不該以簡訊進行雙因素驗證的原因](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [高達 3 百萬台裝置被含有惡意軟體的 Chrome 與 Edge 附加元件所感染](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [如何建立一個永遠記得住的強式密碼](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [什麼是安全金鑰？](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
 
-### 加密貨幣安全 \{#reading-crypto-security}
+### 加密貨幣安全 {#reading-crypto-security}
 
 - [保護自己，保護資金](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
 - [維持加密貨幣安全性的 4 種方式](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
 - [全民必修安全指南](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [加密貨幣安全性：密碼與驗證](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 
-### 防詐騙指引 \{#reading-scam-education}
+### 防詐騙指引 {#reading-scam-education}
 
 - [指南：如何識別詐騙性代幣](/guides/how-to-id-scam-tokens/)
 - [保障安全：常見騙局](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_

@@ -4,7 +4,7 @@ description: Podstawowe informacje, których potrzebujesz, aby zrozumieć zużyc
 lang: pl
 ---
 
-# Wydatki energetyczne Ethereum \{#proof-of-stake-energy}
+# Wydatki energetyczne Ethereum {#proof-of-stake-energy}
 
 Ethereum jest zielonym blockchainem. Mechanizm konsensusu Ethereum — [proof-of-stake](/developers/docs/consensus-mechanisms/pos) — wykorzystuje ETH zamiast [energii do zabezpieczenia sieci](/developers/docs/consensus-mechanisms/pow). Zużycie energii przez Ethereum wynosi około [0,0026 TWh/rok](https://carbon-ratings.com/eth-report-2022) w całej globalnej sieci.
 
@@ -39,13 +39,13 @@ Powyższa tabela i wykres zawierają również porównania do Bitcoina i proof-o
 
 Na stronie [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum) można przeglądać szacunki zużycia energii i emisji dwutlenku węgla dla wielu branż.
 
-## Szacunki na transakcję \{#per-transaction-estimates}
+## Szacunki na transakcję {#per-transaction-estimates}
 
 Wiele artykułów szacuje wydatek energetyczny blockchainów „za transakcję”. Może to być mylące, ponieważ energia wymagana do zaproponowania i walidacji bloku jest niezależna od liczby transakcji w nim zawartych. Jednostka wydatku energetycznego na transakcję sugeruje, że mniejsza liczba transakcji prowadziłaby do mniejszych wydatków energetycznych i odwrotnie, co nie jest prawdą. Ponadto szacunki na transakcję są bardzo wrażliwe na sposób definiowania przepustowości transakcji blockchainu, a modyfikowanie tej definicji może być wykorzystywane do zwiększania lub zmniejszania wartości.
 
 Na przykład w Ethereum przepustowość transakcji to nie tylko przepustowość warstwy podstawowej — to także suma przepustowości transakcji wszystkich jej pakietów zbiorczych „[warstwy 2](/layer-2/)”. Warstwy 2 nie są zwykle uwzględniane w obliczeniach, ale wzięcie pod uwagę dodatkowej energii zużywanej przez sekwencery (mało) i liczby przetwarzanych przez nie transakcji (dużo) prawdopodobnie drastycznie zmniejszyłoby szacunki na transakcję. Jest to jeden z powodów, dla których porównania zużycia energii na transakcję na różnych platformach mogą być mylące.
 
-## Dług emisyjny Ethereum \{#carbon-debt}
+## Dług emisyjny Ethereum {#carbon-debt}
 
 Wydatek energetyczny Ethereum jest bardzo niski, ale nie zawsze tak było. Ethereum pierwotnie wykorzystywało mechanizm proof-of-work, który wiązał się ze znacznie większymi obciążeniami środowiskowymi niż obecny mechanizm proof-of-stake.
 
@@ -55,7 +55,7 @@ Od samego początku Ethereum planowało wdrożyć mechanizm konsensusu proof-of-
 
 CCRI szacuje, że Połączenie zmniejszyło roczne zużycie energii elektrycznej przez Ethereum o ponad **99,988%**. Podobnie, ślad węglowy Ethereum został zmniejszony o około **99,992%** (z 11.016.000 do 870 ton CO2e). Aby przedstawić to w perspektywie, redukcja emisji jest jak przejście z wysokości wieży Eiffla do małej plastikowej zabawkowej figurki, jak pokazano na powyższej ilustracji. W wyniku tego obciążenia środowiskowe związane z zabezpieczaniem sieci są drastycznie zmniejszone. Jednocześnie uważa się, że poprawiło się bezpieczeństwo sieci.
 
-## Ekologiczna warstwa aplikacji \{#green-applications}
+## Ekologiczna warstwa aplikacji {#green-applications}
 
 Podczas gdy zużycie energii przez Ethereum jest bardzo niskie, istnieje również pokaźna, rosnąca i bardzo aktywna społeczność zajmująca się [**finansami regeneracyjnymi (ReFi)**](/refi/). Aplikacje ReFi wykorzystują komponenty DeFi do tworzenia aplikacji finansowych, które mają pozytywny wpływ na środowisko. ReFi jest częścią szerszego ruchu [„solarpunk”](https://en.wikipedia.org/wiki/Solarpunk), który jest ściśle powiązany z Ethereum i ma na celu połączenie postępu technologicznego z ochroną środowiska. Zdecentralizowana, niewymagająca uprawnień i złożona natura Ethereum sprawia, że jest to idealna warstwa bazowa dla społeczności ReFi i solarpunk.
 
@@ -65,7 +65,7 @@ Natywne platformy Web3 do finansowania dóbr publicznych, takie jak [Gitcoin](ht
   Jeśli uważasz, że ta strona może być dokładniejsza, zgłoś problem lub PR. Statystyki na tej stronie są szacunkami opartymi na danych, które są dostępne publicznie — nie stanowią one oficjalnego oświadczenia ani obietnicy ze strony zespołu ethereum.org lub Fundacji Ethereum.
 </InfoBanner>
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 - [Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum)
 - [Raport Białego Domu na temat blockchainów proof-of-work](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
@@ -75,7 +75,7 @@ Natywne platformy Web3 do finansowania dóbr publicznych, takie jak [Gitcoin](ht
 - [Połączenie — wpływ na zużycie energii elektrycznej i ślad węglowy sieci Ethereum](https://carbon-ratings.com/eth-report-2022) — _CCRI_
 - [Zużycie energii przez Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
-## Powiązane tematy \{#related-topics}
+## Powiązane tematy {#related-topics}
 
 - [Wizja Ethereum](/roadmap/vision/)
 - [Łańcuch śledzący](/roadmap/beacon-chain)

@@ -4,7 +4,7 @@ description:
 lang: zh
 ---
 
-## 介绍 \{#introduction}
+## 介绍 {#introduction}
 
 用于多种代币管理的合约标准接口。 单个部署的合约可以包括同质化代币、非同质化代币或其他配置（如半同质化代币）的任何组合。
 
@@ -14,11 +14,11 @@ lang: zh
 
 [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155) 中对 ERC-1155 代币进行了全面的描述。
 
-## 前提条件 \{#prerequisites}
+## 前提条件 {#prerequisites}
 
 为了更好地理解这一页面的内容，我们建议您先阅读[代币标准](/developers/docs/standards/tokens/)、[ERC-20](/developers/docs/standards/tokens/erc-20/) 和 [ERC-721](/developers/docs/standards/tokens/erc-721/)。
 
-## ERC-1155 的功能和特点： \{#body}
+## ERC-1155 的功能和特点： {#body}
 
 - [批量传输](#batch_transfers)：通过一次合约调用传输多种资产。
 - [批量余额](#batch_balance)：在一次调用中获取多个资产的余额。
@@ -27,7 +27,7 @@ lang: zh
 - [支持非同质化代币](#nft_support)：如果供应量仅为 1，将其作为非同质化代币处理。
 - [安全转账规则](#safe_transfer_rule)：安全转账规则集。
 
-### 批量传输 \{#batch-transfers}
+### 批量传输 {#batch-transfers}
 
 批量传输与常规 ERC-20 传输非常相似。 让我们看看常规 ERC-20 `transferFrom` 函数：
 
@@ -53,7 +53,7 @@ ERC-1155 中唯一的区别是我们将值作为数组传递，同时也传递�
 
 在 ERC-1155 中，我们只有 `transferFrom`，没有 `transfer`。 要像常规的 `transfer`一样使用它，只需将 "from" 地址设为调用该函数的地址。
 
-### 批量余额 \{#batch-balance}
+### 批量余额 {#batch-balance}
 
 相应的 ERC-20 `balanceOf` 调用同样具有支持批处理的相应函数。 作为对比，这是 ERC-20 版本：
 
@@ -80,7 +80,7 @@ function balanceOfBatch(
 ]
 ```
 
-### 批量审批 \{#batch-approval}
+### 批量审批 {#batch-approval}
 
 ```solidity
 // ERC-1155
@@ -101,7 +101,7 @@ function isApprovedForAll(
 
 这是考虑到简洁性而故意设计的。 您只能批准一个地址的所有代币。
 
-### 接收钩子 \{#receive-hook}
+### 接收钩子 {#receive-hook}
 
 ```solidity
 function onERC1155BatchReceived(
@@ -121,11 +121,11 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 当接收合约返回这一值时，意味着合约知道如何处理 ERC-1155 代币并接受转账。 太好了，代币不会再卡在合约中了！
 
-### 支持非同质化代币 \{#nft-support}
+### 支持非同质化代币 {#nft-support}
 
 当供应量仅为 1 时，代币本质上就是一个非同质化的代币 (NFT)。 按照 ERC-721 的标准，您可以定义一个元数据网址。 客户端可以读取并修改网址，请参阅[这里](https://eips.ethereum.org/EIPS/eip-1155#metadata)。
 
-### 安全转账规则 \{#safe-transfer-rule}
+### 安全转账规则 {#safe-transfer-rule}
 
 在前面的解释中，我们已经提到过一些安全转账规则。 现在我们来看一下最重要的规则：
 
@@ -138,7 +138,7 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 _注意_：包括钩子在内的所有批处理函数也均作为非批处理的版本存在。 这样做是为了提高燃料效率，考虑到只转移一种资产可能仍然是最常用的方式。 简洁起见，我们没有在这里介绍这些非批处理的版本，包括安全转账规则。 名称是相同的，只需移除 'Batch'。
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [EIP-1155：多代币标准](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155：OpenZeppelin 文档](https://docs.openzeppelin.com/contracts/3.x/erc1155)

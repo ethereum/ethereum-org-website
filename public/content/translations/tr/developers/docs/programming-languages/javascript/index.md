@@ -8,9 +8,9 @@ JavaScript, Ethereum ekosistemindeki en popüler diller arasındadır. Hatta Eth
 
 Yığının her seviyesinde JavaScript (veya benzer bir şey) yazma [fırsatları bulunur](/developers/docs/ethereum-stack/).
 
-## Ethereum ile etkileşime gir \{#interact-with-ethereum}
+## Ethereum ile etkileşime gir {#interact-with-ethereum}
 
-### Javascript API kütüphaneleri \{#javascript-api-libraries}
+### Javascript API kütüphaneleri {#javascript-api-libraries}
 
 Eğer blok zincirini sorgulamak için JavaScript yazmak isterseniz, işlemleri göndermenin ve daha fazlasını yapmanın en uygun yolu bir [JavaScript API kütüphanesi kullanmaktır](/developers/docs/apis/javascript/). Bu API'ler, geliştiricilerin [ Ethereum ağındaki düğümlerle](/developers/docs/nodes-and-clients/) kolayca etkileşim kurmasına olanak tanır.
 
@@ -22,15 +22,15 @@ Bu kütüphaneleri Ethereum'daki akıllı sözleşmelerle etkileşim kurmak içi
 - [Ethers.js](https://docs.ethers.io/) _– JavaScript ve TypeScript'te Ethereum cüzdan uygulamasına yardımcı araçları içerir._
 - [viem](https://viem.sh) – Ethereum ile etkileşime geçmek için düşük seviye durumsuz temeller sağlayan Ethereum için bir TypeScript arayüzü.
 
-### Akıllı sözleşmeler \{#smart-contracts}
+### Akıllı sözleşmeler {#smart-contracts}
 
 Eğer bir JavaScript geliştiricisiyseniz ve kendi akıllı sözleşmenizi yazmak istiyorsanız, [Solidity](https://solidity.readthedocs.io) ile bilgi sahibi olmak isteyebilirsiniz. Bu en popüler akıllı sözleşme dilidir ve sözdizimsel olarak JavaScript'e benzer, bu da öğrenmeyi kolaylaştırabilir.
 
 [Akıllı sözleşmeler](/developers/docs/smart-contracts/) hakkında daha fazla bilgi.
 
-## Protokolü anlamak \{#understand-the-protocol}
+## Protokolü anlamak {#understand-the-protocol}
 
-### Ethereum sanal makinesi \{#the-ethereum-virtual-machine}
+### Ethereum sanal makinesi {#the-ethereum-virtual-machine}
 
 [Ethereum'un sanal makinesinin](/developers/docs/evm/) bir JavaScript uygulaması bulunuyor. Bu uygulama, en güncel çatallanma kurallarını destekler. Çatallanma kuralları, planlanan yükseltmelerin bir sonucu olarak EVM'de yapılan değişiklikleri ifade eder.
 
@@ -49,7 +49,7 @@ Kodu okumayı tercih ediyorsanız, JavaScript belgelerimizi okumak sizin için h
 **Şu monorepo'ya (tek depo) göz atın:**  
 [`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
 
-### Düğümler ve istemciler \{#nodes-and-clients}
+### Düğümler ve istemciler {#nodes-and-clients}
 
 Ethereum istemcilerinin nasıl çalıştığını anladığınız bir dilde inceleyebileceğiniz bir Ethereumjs istemcisi geliştirilmektedir; JavaScript!
 
@@ -58,7 +58,7 @@ Daha önce bağımsız bir [`kılavuzda`](https://github.com/ethereumjs/ethereum
 **Şu istemciye göz atın:**  
 [`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
-## Diğer projeler \{#other-projects}
+## Diğer projeler {#other-projects}
 
 Ethereum JavaScript alanında aşağıdakiler de dahil olmak üzere pek çok başka şey oluyor:
 
@@ -68,6 +68,6 @@ Ethereum JavaScript alanında aşağıdakiler de dahil olmak üzere pek çok ba�
 
 [EthereumJS deposunda](https://github.com/ethereumjs) en çok ilginizi çeken şeyleri inceleyin
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_

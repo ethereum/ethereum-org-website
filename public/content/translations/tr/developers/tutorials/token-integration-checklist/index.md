@@ -33,13 +33,13 @@ Bu kontrol listesini takip etmek amacıyla token için Slither'den bu çıktıy�
 - slither-prop . --contract ContractName # requires configuration, and use of Echidna and Manticore
 ```
 
-## Genel hususlar \{#general-considerations}
+## Genel hususlar {#general-considerations}
 
 - **Sözleşmede bir güvenlik incelemesi var.** Güvenlik incelemesi olmayan sözleşmelerle etkileşimde bulunmaktan kaçının. Değerlendirmenin uzunluğunu ("çaba düzeyi" olarak da bilinir), güvenlik firmasının itibarını, bulguların sayısını ve ciddiyetini kontrol edin.
 - **Geliştiricilerle iletişime geçtiniz.** Ekiplerini bir olay hakkında uyarmanız gerekebilir. Uygun sözleşmeleri [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts) üzerinde arayın.
 - **Kritik duyurular için bir güvenlik posta listeleri var.** Ekipleri, kritik sorunlar bulunduğunda veya yükseltmeler gerçekleştiğinde kullanıcılara (sizin gibi!) bilgi vermelidir.
 
-## ERC uygunluğu \{#erc-conformity}
+## ERC uygunluğu {#erc-conformity}
 
 Slither bir token'ın diğer birçok ERC standardına uyumluğunu gözden geçiren faydalı bir araç olan [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance)'yi bulundurur. Şunları gözden geçirmek için slither-check-erc kullanın:
 
@@ -58,14 +58,14 @@ Son olarak, otomatik olarak tanımlanması zor olan belirli özellikler vardır.
 - **Transfer and transferFrom bir ücret almamalıdır.** Deflasyonist token'lar beklenmedik davranışlara yol açabilir.
 - **Token'dan kazanılan potansiyel faiz dikkate alınır.** Bazı token'lar, token sahiplerine faiz dağıtır. Bu faiz, dikkate alınmadığı takdirde sözleşmede sıkışıp kalabilir.
 
-## Sözleşme kompozisyonu \{#contract-composition}
+## Sözleşme kompozisyonu {#contract-composition}
 
 - **Sözleşme, gereksiz karmaşıklığı önler.** Token basit bir sözleşme olmalıdır; karmaşık kodlu bir token, daha yüksek bir inceleme standardı gerektirir. Karmaşık kodu tanımlamak için Slither'ın [insan-özet yazıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) kullanın.
 - **Sözleşme, SafeMath kullanır.** SafeMath kullanmayan sözleşmeler, daha yüksek bir inceleme standardı gerektirir. SafeMath kullanımı için sözleşmeyi elle inceleyin.
 - **Sözleşmenin yalnızca birkaç token ile ilgili olmayan fonksiyonu vardır.** Token ile ilgili olmayan fonksiyonlar, sözleşmede sorun çıkma olasılığını artırır. Sözleşmede kullanılan kodu geniş olarak gözden geçirmek için Slither'ın [sözleşme-özet yazıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) kullanın.
 - **Token'ın yalnızca bir adresi vardır.** Bakiye güncellemeleri için birden fazla giriş noktasına sahip tokenler, adrese göre dahili muhasebeyi bozabilir (örn. `balances[token_address][msg.sender]` gerçek bakiyeyi yansıtmayabilir).
 
-## Sahip ayrıcalıkları \{#owner-privileges}
+## Sahip ayrıcalıkları {#owner-privileges}
 
 - **Token yükseltilemez.** Yükseltilebilir sözleşmeler zamanla kurallarını değiştirebilir. Sözleşmenin yükseltilebilir olup olmadığını belirlemek için Slither'ın [insan-özet yazıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) kullanın.
 - **Sahip, sınırlı basım kabiliyetine sahiptir.** Kötü niyetli veya saldırıya uğramış sahipler basım kabiliyetlerini istismar edebilir. Basım kabiliyetlerini gözden geçirmek için Slither'ın [insan-özet yazıcısını](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) kullanın ve kodu elle incelemeyi düşünün.
@@ -73,7 +73,7 @@ Son olarak, otomatik olarak tanımlanması zor olan belirli özellikler vardır.
 - **Sahip, sözleşmeyi kara listeye alamaz.** Kötü niyetli veya güvenliği ihlal eden sahipler, token'lara dayanan sözleşmeleri bir kara listeyle tuzağa düşürebilir. Kara listeye alma özelliklerini elle tanımlayın.
 - **Token'ın arkasındaki ekip biliniyor ve kötüye kullanımdan sorumlu tutulabilir.** İsimsiz geliştirme ekipleriyle yapılan veya yasal sığınma alanlarında bulunan sözleşmeler, daha yüksek bir inceleme standardı gerektirmelidir.
 
-## Token nadirliği \{#token-scarcity}
+## Token nadirliği {#token-scarcity}
 
 Token kıtlığı sorunlarına yönelik incelemeler, manuel inceleme gerektirir. Şu koşullar için kontrol edin:
 

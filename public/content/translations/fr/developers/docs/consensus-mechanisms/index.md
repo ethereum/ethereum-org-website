@@ -6,17 +6,17 @@ lang: fr
 
 Le terme « mécanisme de consensus » est souvent utilisé familièrement pour désigner les protocoles de preuve d'enjeu, de preuve de travail ou de preuve d'autorité. Cependant, il ne s'agit que de composantes des mécanismes de consensus qui protègent contre les attaques Sybil. Les mécanismes de consensus désignent la pile complète des idées, protocoles et incitations qui permettent à un ensemble de nœuds distribués de se mettre d'accord sur l'état d'une blockchain.
 
-## Prérequis \{#prerequisites}
+## Prérequis {#prerequisites}
 
 Pour mieux comprendre cette page, nous vous recommandons de commencer par lire cette [introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Qu'est-ce que le consensus ? \{#what-is-consensus}
+## Qu'est-ce que le consensus ? {#what-is-consensus}
 
 Par consensus, nous voulons dire qu'un accord général a été trouvé. Prenons le cas d'un groupe de personnes qui vont au cinéma. S'il n'existe pas de désaccord sur le choix du film, alors un consensus se dégage. En cas de désaccord, le groupe doit avoir les moyens de décider du film à voir. Dans un cas extrême, le groupe finira par se séparer.
 
 En ce qui concerne la blockchain Ethereum, parvenir à un consensus signifie qu'au moins 66 % des nœuds du réseau sont d'accord sur l'état global du réseau.
 
-## Qu'est-ce qu'un mécanisme de consensus ? \{#what-is-a-consensus-mechanism}
+## Qu'est-ce qu'un mécanisme de consensus ? {#what-is-a-consensus-mechanism}
 
 Le terme de mécanisme de consensus se réfère à toute la pile des protocoles, des incitations et des idées qui permettent à un réseau de nœuds de se mettre d'accord sur l'état d'une blockchain.
 
@@ -28,37 +28,37 @@ Certains concepts sont importants pour des consensus qui ne sont pas expliciteme
 
 Ces composantes forment ensemble le mécanisme de consensus.
 
-## Types de mécanismes de consensus \{#types-of-consensus-mechanisms}
+## Types de mécanismes de consensus {#types-of-consensus-mechanisms}
 
-### Basé sur la preuve de travail \{#proof-of-work}
+### Basé sur la preuve de travail {#proof-of-work}
 
 Tout comme Bitcoin, Ethereum a utilisé un protocole de consensus basé sur la **preuve de travail (PoW)**.
 
-#### Création de blocs \{#pow-block-creation}
+#### Création de blocs {#pow-block-creation}
 
 Les mineurs sont en concurrence pour créer de nouveaux blocs remplis de transactions traitées. Le gagnant partage le nouveau bloc avec le reste du réseau et gagne de l'ETH récemment frappé. La course est gagnée par la machine qui est en mesure de résoudre un puzzle mathématique le plus rapidement. Cela produit le lien cryptographique entre le bloc actuel et le bloc qui s'est déroulé avant. Résoudre ce puzzle est le travail dans la « preuve de travail ». La chaîne canonique est alors déterminée par une règle de choix de fourche qui sélectionne l'ensemble des blocs qui ont eu le plus de travail pour les miner.
 
-#### Sécurité \{#pow-security}
+#### Sécurité {#pow-security}
 
 La sécurité du réseau est assurée par le fait qu'il vous faudrait 51 % de la puissance de calcul du réseau pour frauder la chaîne. Cela nécessitant d'énormes investissements en équipement et en énergie, vous risqueriez de dépenser plus que ce que vous pourriez gagner.
 
 En savoir plus sur la [preuve de travail](/developers/docs/consensus-mechanisms/pow/)
 
-### Basé sur la preuve d'enjeu \{#proof-of-stake}
+### Basé sur la preuve d'enjeu {#proof-of-stake}
 
 Ethereum utilise désormais un protocole de consensus basé sur la **preuve d'enjeu (PoS)**.
 
-#### Création de blocs \{#pos-block-creation}
+#### Création de blocs {#pos-block-creation}
 
 Les validateurs créent des blocs. Un validateur est sélectionné aléatoirement dans chaque créneau pour être le proposeur de bloc. Leur client de consensus demande alors un paquet de transactions sous forme de « charge utile d'exécution » à leur client d'exécution jumelé. Ils l'enveloppent dans des données de consensus pour former un bloc, qu'ils envoient aux autres nœuds du réseau Ethereum. Cette production de blocs est récompensée en ETH. Dans de rares cas, lorsque plusieurs blocs possibles existent pour un seul créneau, ou que les nœuds entendent parler de blocs à différents moments, l'algorithme de choix de fourche choisit le bloc qui forme la chaîne avec le plus grand poids d'attestations (où le poids est le nombre de validateurs attestant de l'échelle de leur solde ETH).
 
-#### Sécurité \{#pos-security}
+#### Sécurité {#pos-security}
 
 Un système de preuve d'enjeu est sécurisé économiquement dans la mesure où un attaquant qui tente de prendre le contrôle de la chaîne doit détruire une quantité massive d'ETH. Un système de récompenses encourage les validateurs individuels à se comporter honnêtement et les pénalités dissuadent les validateurs d’agir de manière malveillante.
 
 En savoir plus sur la [preuve de travail](/developers/docs/consensus-mechanisms/pos/)
 
-### Un guide visuel \{#types-of-consensus-video}
+### Un guide visuel {#types-of-consensus-video}
 
 En savoir plus sur les différents types de mécanismes de consensus utilisés sur Ethereum :
 
@@ -66,7 +66,7 @@ En savoir plus sur les différents types de mécanismes de consensus utilisés s
 <YouTube id="ojxfbN78WFQ" />
 }
 
-### Résistance à l'attaque Sybil et sélection en chaîne \{#sybil-chain}
+### Résistance à l'attaque Sybil et sélection en chaîne {#sybil-chain}
 
 La preuve de travail et la preuve d’enjeu ne sont pas des protocoles de consensus, mais on les appelle souvent ainsi par souci de simplicité. Ce sont en fait des mécanismes de résistance à l'attaque Sybil et des sélecteurs d'auteurs de bloc ; ils permettent de décider qui est l'auteur du dernier bloc. Un autre composant important est l'algorithme de sélection de chaînes (alias choix de fourche) qui permet aux nœuds de choisir un unique bloc correct en tête de chaîne dans des scénarios où plusieurs blocs se trouveraient dans la même position.
 
@@ -76,7 +76,7 @@ La **Résistance à l'attaque Sybil** mesure comment un protocole s'oppose contr
 
 Ethereum utilise un mécanisme de consensus connu sous le nom de [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/) qui combine la preuve d'enjeu [Casper FFG](https://arxiv.org/abs/1710.09437) avec la [règle de choix de fourche GHOST](https://arxiv.org/abs/2003.03052).
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [Qu'est-ce qu'un algorithme de consensus de la blockchain ?](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
 - [Qu'est-ce que le Consensus de Nakamoto ? Guide complet du débutant](https://blockonomi.com/nakamoto-consensus/)
@@ -86,7 +86,7 @@ Ethereum utilise un mécanisme de consensus connu sous le nom de [Gasper](/devel
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
-## Thèmes connexes \{#related-topics}
+## Thèmes connexes {#related-topics}
 
 - [Preuve de travail](/developers/docs/consensus-mechanisms/pow/)
 - [Minage](/developers/docs/consensus-mechanisms/pow/mining/)

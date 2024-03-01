@@ -30,15 +30,15 @@ Ve henüz yapmadıysanız, bu öğreticiyi tamamlamak ve blok zincirinde herhang
 
 Lafı fazla uzatmadan başlayalım!
 
-## NFT Yapma 101 \{#making-nfts-101}
+## NFT Yapma 101 {#making-nfts-101}
 
 Herhangi bir koda bakmaya başlamadan önce, bir NFT yapmanın nasıl çalıştığını anlamak önemlidir. İki adım içerir:
 
-### Ethereum blok zincirinde bir NFT akıllı sözleşmesi yayınlayın \{#publish-nft}
+### Ethereum blok zincirinde bir NFT akıllı sözleşmesi yayınlayın {#publish-nft}
 
 İki NFT akıllı iletişim standardı arasındaki en büyük fark, ERC-1155'in çok token'lı bir standart olması ve toplu işlevsellik içermesi; ERC-721'in ise tek token'lı bir standart olması ve bu nedenle bir seferde yalnızca bir token'ın aktarılmasını desteklemesidir.
 
-### Basma fonksiyonunu çağırın \{#minting-function}
+### Basma fonksiyonunu çağırın {#minting-function}
 
 Genellikle, bu mint (basma) fonksiyonu, parametre olarak iki değişken girmenizi gerektirir: İlk olarak, yeni basılmış NFT'nizi alacak adresi belirten `recipient` ve ikinci olarak NFT'nin meta verilerini açıklayan bir JSON belgesine çözümlenen bir dize olan NFT'nin `tokenURI`'ı.
 
@@ -50,7 +50,7 @@ Bu öğreticide çağıracağımız ERC-721 NFT akıllı sözleşmesinin [bağla
 
 Harika, şimdi bir NFT yapmanın nasıl çalıştığını anladığımıza göre, başlangıç ​​dosyalarımızı klonlayalım!
 
-## Başlangıç ​​dosyalarını klonlayın \{#clone-the-starter-files}
+## Başlangıç ​​dosyalarını klonlayın {#clone-the-starter-files}
 
 İlk olarak, bu proje için başlangıç ​​dosyalarını almak için [nft-minter-tutorial GitHub deposuna](https://github.com/alchemyplatform/nft-minter-tutorial) gidin. Bu depoyu yerel ortamınıza klonlayın.=
 
@@ -63,11 +63,11 @@ Ardından, kod düzenleyicinizde `minter-starter-files` kopyanızı açın ve ar
 
 Yazacağımız tüm kodlar `src` klasörünün altında yer alacaktır. Projemize Web3 işlevselliği kazandırmak için `Minter.js` bileşenini düzenleyeceğiz ve ek javascript dosyaları yazacağız.
 
-## 2. Adım: Başlangıç ​​dosyalarımıza göz atın \{#step-2-check-out-our-starter-files}
+## 2. Adım: Başlangıç ​​dosyalarımıza göz atın {#step-2-check-out-our-starter-files}
 
 Kodlamaya başlamadan önce, başlangıç ​​dosyalarında bizim için nelerin sağlandığını kontrol etmek önemlidir.
 
-### React projenizi çalıştırın \{#get-your-react-project-running}
+### React projenizi çalıştırın {#get-your-react-project-running}
 
 Tarayıcımızda React projesini çalıştırarak başlayalım. React'in güzelliği, projemizi tarayıcımızda çalıştırdıktan sonra, kaydettiğimiz tüm değişikliklerin tarayıcımızda canlı olarak güncellenmesidir.
 
@@ -88,7 +88,7 @@ Bunu yapmak, tarayıcınızda projemizin ön ucunu göreceğiniz http://localhos
 
 "Connect Wallet" (Cüzdanı Bağla) veya "Mint NFT" (NFT Bas) düğmelerinE tıklamayı denerseniz, çalışmadıklarını fark edeceksiniz. Çünkü hâlâ işlevlerini kodlamamız gerekiyor! :\)
 
-### Minter.js bileşeni \{#minter-js}
+### Minter.js bileşeni {#minter-js}
 
 **NOT:** `nft-minter` klasöründe değil, `minter-starter-files` klasöründe olduğunuzdan emin olun!
 
@@ -195,21 +195,21 @@ React'teki diğer tüm bileşenler için bir kapsayıcı görevi gören ana bile
 
 Artık ne üzerinde çalıştığımızı anladığımıza göre, Ethereum cüzdanımızı oluşturalım!
 
-## : Ethereum cüzdanınızı kurun \{#set-up-your-ethereum-wallet}
+## : Ethereum cüzdanınızı kurun {#set-up-your-ethereum-wallet}
 
 Kullanıcıların akıllı sözleşmenizle etkileşime girebilmeleri için Ethereum cüzdanlarını merkeziyetsiz uygulamanıza bağlamaları gerekir.
 
-### MetaMask'i indirin \{#download-metamask}
+### MetaMask'i indirin {#download-metamask}
 
 Bu öğretici için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcıda sanal bir cüzdan olan MetaMask'ı kullanacağız. Ethereum'daki işlemlerin nasıl çalıştığı hakkında daha fazla bilgi edinmek istiyorsanız, [bu sayfaya](/developers/docs/transactions/) bakın.
 
 [Buradan](https://metamask.io/download.html) ücretsiz olarak bir MetaMask hesabı indirebilir ve oluşturabilirsiniz. Bir hesap oluşturuyorsanız veya zaten bir hesabınız varsa, sağ üstteki "Ropsten Test Ağı"na geçtiğinizden emin olun \(böylece gerçek parayla uğraşmayız\).
 
-### Bir Musluktan ether ekleyin \{#add-ether-from-faucet}
+### Bir Musluktan ether ekleyin {#add-ether-from-faucet}
 
 NFT'lerimizi basmak (veya Ethereum blok zincirindeki herhangi bir işlemi imzalamak) için biraz sahte Eth'e ihtiyacımız olacak. Eth almak için [Ropsten musluğuna](https://faucet.ropsten.be/) gidebilir ve Ropsten hesap adresinizi girip "Send Ropsten Eth"e (Ropsten Eth Gönder) tıklayabilirsiniz Kısa bir süre sonra MetaMask hesabınızda Eth'i görmelisiniz!
 
-### Bakiyenizi kontrol edin \{#check-your-balance}
+### Bakiyenizi kontrol edin {#check-your-balance}
 
 Bakiyemizin yerinde olduğundan emin olmak için [Alchemy'nin düzenleyici aracını](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) kullanarak bir [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) isteği oluşturalım. Bu, cüzdanımızdaki Eth miktarını döndürür. MetaMask hesap adresinizi girdikten ve "Send Request"e tıkladıktan sonra aşağıdaki gibi bir yanıt görmelisiniz:
 
@@ -221,13 +221,13 @@ Bakiyemizin yerinde olduğundan emin olmak için [Alchemy'nin düzenleyici arac�
 
 Vay be! Tüm sahte paramız yerli yerinde! <Emoji text=":money_mouth_face:" size={1} />
 
-## MetaMask'i kullanıcı arayüzünüze bağlayın \{#connect-metamask-to-your-UI}
+## MetaMask'i kullanıcı arayüzünüze bağlayın {#connect-metamask-to-your-UI}
 
 Artık MetaMask cüzdanımız kurulduğuna göre, merkeziyetsiz uygulamamızı ona bağlayalım!
 
 [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) paradigmasını kurala bağlamak istediğimiz için merkeziyetsiz uygulamamızın mantığını, verilerini ve kurallarını yönetmek amacıyla fonksiyonlarımızı içeren ayrı bir dosya oluşturacağız ve ardından bu fonksiyonları ön ucumuza (Minter.js bileşenimiz) aktaracağız.
 
-### `connectWallet` fonksiyonu \{#connect-wallet-function}
+### `connectWallet` fonksiyonu {#connect-wallet-function}
 
 Bunu yapmak için `src` dizininizde `utils` adında yeni bir klasör oluşturalım ve içine tüm cüzdan ve akıllı sözleşme etkileşim fonksiyonlarımızı içerecek `interact.js` adlı bir dosya ekleyelim.
 
@@ -289,7 +289,7 @@ Bir deneme/yakalama döngüsü kullanarak, `[window.ethereum.request({ method: "
 - Kullanıcı bağlanmayı seçerse, `method: "eth_requestAccounts"`, kullanıcının merkeziyetsiz uygulamaya bağlı tüm hesap adreslerini içeren bir dizi döndürür. Toplamda, `connectWallet` fonksiyonumuz bu dizideki _ilk_ `address`'i içeren bir JSON nesnesi \(9. satıra bakın\) ve kullanıcıdan akıllı sözleşmeye bir mesaj yazmasını isteyen bir `status` mesajı döndürür.
 - Kullanıcı bağlantıyı reddederse, JSON nesnesi, döndürülen `address` için boş bir dize ve kullanıcının bağlantıyı reddettiğini yansıtan bir `status` mesajı içerir.
 
-### Minter.js UI Bileşeninize connectWallet fonksiyonu ekleyin \{#add-connect-wallet}
+### Minter.js UI Bileşeninize connectWallet fonksiyonu ekleyin {#add-connect-wallet}
 
 Şimdi bu `connectWallet` fonksiyonunu yazdığımıza göre, onu `Minter.js.` bileşenimize bağlayalım.
 
@@ -335,7 +335,7 @@ Ardından, sayfayı yenilemeyi deneyin... Garip. Cüzdan düğmemiz zaten bağl�
 
 Ama merak etmeyin! `getCurrentWalletConnected` adlı bir fonksiyonu uygulayarak bunu kolayca düzeltebiliriz; bu, bir adresin merkeziyetsiz uygulamamıza zaten bağlı olup olmadığını kontrol edecek ve kullanıcı arayüzünü buna göre güncelleyecektir!
 
-### GetCurrentWalletConnected fonksiyonu \{#get-current-wallet}
+### GetCurrentWalletConnected fonksiyonu {#get-current-wallet}
 
 `interact.js` dosyanıza aşağıdaki `getCurrentWalletConnected` fonksiyonunu ekleyin:
 
@@ -412,7 +412,7 @@ Dikkat edin, `walletAddress` ve `status` durum değişkenlerimizi güncellemek i
 
 Bu kodu ekledikten sonra tarayıcı penceremizi yenilemeyi deneyin. Düğme, bağlı olduğunuzu söylemeli ve yeniledikten sonra bile bağlı cüzdanınızın adresinin bir önizlemesini göstermelidir!
 
-### AddWalletListener'ı uygulayın \{#implement-add-wallet-listener}
+### AddWalletListener'ı uygulayın {#implement-add-wallet-listener}
 
 Merkeziyetsiz uygulama cüzdanı kurulumumuzun son adımı, örneğin kullanıcı bağlantısını keserek veya hesap değiştirerek cüzdanımızın durumunu değiştirdiğinde kullanıcı arayüzümüzün güncellenmesi için cüzdan dinleyicisini uygulamaktır.
 
@@ -463,7 +463,7 @@ useEffect(async () => {
 
 İşte oldu! Cüzdan fonksiyonlarımızın tümünü programlamayı tamamladık! Cüzdanımız kurulduğuna göre, şimdi NFT'mizi nasıl basacağımızı bulalım!
 
-## NFT Meta Verileri 101 \{#nft-metadata-101}
+## NFT Meta Verileri 101 {#nft-metadata-101}
 
 Bu öğreticinin 0. Adımında bahsettiğimiz NFT meta verilerini hatırlayın; dijital varlık, ad, açıklama ve diğer nitelikler gibi özelliklere sahip olmasını sağlayarak bir NFT'ye hayat verirler.
 
@@ -477,11 +477,11 @@ Bu meta verileri bir JSON nesnesi olarak yapılandırmamız ve saklamamız gerek
 
 Meta verilerimizi IPFS'de depolamak için, uygun bir IPFS API'si ve araç takımı olan [Pinata](https://pinata.cloud/)'yı kullanacağız. Bir sonraki adımda, bunun tam olarak nasıl yapılacağını açıklayacağız!
 
-## Meta verilerinizi IPFS'ye sabitlemek için Pinata'yı kullanın \{#use-pinata-to-pin-your-metadata-to-IPFS}
+## Meta verilerinizi IPFS'ye sabitlemek için Pinata'yı kullanın {#use-pinata-to-pin-your-metadata-to-IPFS}
 
 [Pinata](https://pinata.cloud/) hesabınız yoksa, [buradan](https://pinata.cloud/signup) ücretsiz bir hesap için kaydolun ve e-postanızla hesabınızı doğrulamak için adımları tamamlayın.
 
-### Pinata API anahtarınızı oluşturun \{#create-pinata-api-key}
+### Pinata API anahtarınızı oluşturun {#create-pinata-api-key}
 
 [https://pinata.cloud/keys](https://pinata.cloud/keys) sayfasına gidin, ardından üst kısımdaki "New Key" (Yeni Anahtar) düğmesini seçin, Yönetici widget'ını ayarlayın etkinleştirin ve anahtarınızı adlandırın.
 
@@ -489,7 +489,7 @@ Ardından, API bilgilerinizi içeren bir açılır pencere gösterilecektir. Bun
 
 Artık anahtarımız ayarlandığına göre onu kullanabilmek için projemize ekleyelim.
 
-### Bir .env dosyası oluşturun \{#create-a-env}
+### Bir .env dosyası oluşturun {#create-a-env}
 
 Pinata anahtarımızı ve sırrımızı bir ortam dosyasında güvenle saklayabiliriz. Proje dizininize [dotenv paketini](https://www.npmjs.com/package/dotenv) yükleyelim.
 
@@ -516,7 +516,7 @@ REACT_APP_PINATA_SECRET = <pinata-api-secret>
 
 Dosyayı kaydettikten sonra JSON meta verilerinizi IPFS'ye yüklemek için fonksiyonu yazmaya başlamaya hazırsınız!
 
-### PinJSONToIPFS'yi uygulayın \{#pin-json-to-ipfs}
+### PinJSONToIPFS'yi uygulayın {#pin-json-to-ipfs}
 
 Neyse ki, Pinata'nın [özellikle JSON verilerini IPFS'ye yüklemek için bir API'si](https://pinata.cloud/documentation#PinJSONToIPFS) ve axios örneğiyle bazı ufak değişiklikler yaparak birlikte kullanabileceğimiz uygun bir JavaScript'i var.
 
@@ -575,19 +575,19 @@ Ardından, `pinJSONToIPFS` API'lerine bir POST isteği yapmak için girişi olar
 
 `connectWallet` fonksiyon dönüş türlerimizde olduğu gibi, durum değişkenlerimizi ve kullanıcı arayüzünü güncellemek amacıyla parametrelerini kullanabilmemiz için JSON nesneleri döndürüyoruz.
 
-## Akıllı sözleşmenizi yükleyin \{#load-your-smart-contract}
+## Akıllı sözleşmenizi yükleyin {#load-your-smart-contract}
 
 Artık `pinJSONToIPFS` fonksiyonumuz aracılığıyla NFT meta verilerimizi IPFS'ye yüklemenin bir yolu olduğuna göre, `mintNFT` fonksiyonunu çağırabilmemiz için akıllı sözleşmemizin bir örneğini yüklemenin bir yoluna ihtiyacımız olacak.
 
 Daha önce bahsettiğimiz gibi, bu öğreticide [bu mevcut NFT akıllı sözleşmesini](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE) kullanacağız; ancak, bunu nasıl yaptığımızı öğrenmek veya kendiniz yapmak istiyorsanız, diğer ["Bir NFT Nasıl Oluşturulur?"](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft) öğreticimize göz atmanızı şiddetle tavsiye ederiz.
 
-### Sözleşme ABI'ı \{#contract-abi}
+### Sözleşme ABI'ı {#contract-abi}
 
 Dosyalarımızı yakından incelediyseniz, `src` dizinimizde bir `contract-abi.json` dosyası olduğunu fark etmişsinizdir. Bir sözleşmenin hangi fonksiyonu çağıracağını belirlemek ve fonksiyonun beklediğiniz biçimde veri döndürmesini sağlamak için bir ABI gereklidir.
 
 Ayrıca Ethereum blok zincirine bağlanmak ve akıllı sözleşmemizi yüklemek için bir Alchemy API anahtarına ve Alchemy Web3 API'sine ihtiyacımız olacak.
 
-### Alchemy API anahtarınızı oluşturun \{#create-alchemy-api}
+### Alchemy API anahtarınızı oluşturun {#create-alchemy-api}
 
 Henüz bir Alchemy hesabınız yoksa, [buradan ücretsiz kaydolun.](https://alchemy.com/?a=eth-org-nft-minter)
 
@@ -611,7 +611,7 @@ REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 
 Artık sözleşme ABI'ımız ve Alchemy API anahtarımız olduğuna göre, [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) kullanarak akıllı sözleşmemizi yüklemeye hazırız.
 
-### Alchemy Web3 uç noktanızı ve sözleşmenizi ayarlayın \{#setup-alchemy-endpoint}
+### Alchemy Web3 uç noktanızı ve sözleşmenizi ayarlayın {#setup-alchemy-endpoint}
 
 Öncelikle, henüz sahip değilseniz ana dizine giderek [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)'ü yüklemeniz gerekir: terminalde `nft-minter-tutorial`:
 
@@ -645,7 +645,7 @@ const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
 
 Her ikisine de sahip olduğumuzda, mint fonksiyonumuzu kodlamaya başlamaya hazırız!
 
-## mintNFT fonksiyonunu uygulayın \{#implement-the-mintnft-function}
+## mintNFT fonksiyonunu uygulayın {#implement-the-mintnft-function}
 
 `interact.js` dosyanızın içinde, NFT'mizi aynı adla basacak olan `mintNFT` fonksiyonumuzu tanımlayalım.
 
@@ -657,7 +657,7 @@ Fonksiyonumuzun üç girdisi, dijital varlığımızın `url`'si, `name`'i ve `d
 export const mintNFT = async (url, name, description) => {}
 ```
 
-### Girdi hatası işleme \{#input-error-handling}
+### Girdi hatası işleme {#input-error-handling}
 
 Doğal olarak, girdi parametrelerimiz doğru değilse bu fonksiyondan çıkmak için fonksiyonun başlangıcında bir tür girdi hatası işlemeye sahip olmak mantıklıdır. Fonksiyonumuzun içine aşağıdaki kodu ekleyelim:
 
@@ -675,7 +675,7 @@ export const mintNFT = async (url, name, description) => {
 
 Girdi parametrelerinden herhangi biri boş bir dizeyse, o zaman `success` boolean'ın false olduğu bir JSON nesnesi döndürürüz ve `status` dizesi, Kullanıcı Arayüzündeki tüm alanların eksiksiz olması gerektiğini aktarır.
 
-### Meta verileri IPFS'ye yükleyin \{#upload-metadata-to-ipfs}
+### Meta verileri IPFS'ye yükleyin {#upload-metadata-to-ipfs}
 
 Meta verilerimizin doğru şekilde biçimlendirildiğini öğrendikten sonraki adım, onu bir JSON nesnesi olarak paketlemek ve yazdığımız `pinJSONToIPFS` aracılığıyla IPFS'ye yüklemektir!
 
@@ -832,7 +832,7 @@ export const mintNFT = async (url, name, description) => {
 
 Bu dev bir fonksiyon! Şimdi, `mintNFT` fonksiyonumuzu `Minter.js` bileşenimize bağlamamız gerekiyor...
 
-## MintNFT'yi Minter.js ön ucumuza bağlayın \{#connect-our-frontend}
+## MintNFT'yi Minter.js ön ucumuza bağlayın {#connect-our-frontend}
 
 `Minter.js` dosyanızı açın ve en üstteki `import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";` satırını şu şekilde güncelleyin:
 
@@ -853,13 +853,13 @@ const onMintPressed = async () => {
 }
 ```
 
-## NFT'nizi yayındaki bir web sitesinde yayınlayın \{#deploy-your-NFT}
+## NFT'nizi yayındaki bir web sitesinde yayınlayın {#deploy-your-NFT}
 
 Kullanıcıların etkileşim kurması için projenizi yayınlamaya hazır mısınız? Minter'ınızı canlı bir web sitesine dağıtmak için [bu öğreticiye](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online) göz atın.
 
 Son bir adım...
 
-## Blok zinciri dünyasını kasıp kavurun \{#take-the-blockchain-world-by-storm}
+## Blok zinciri dünyasını kasıp kavurun {#take-the-blockchain-world-by-storm}
 
 Şaka yapıyorum, öğreticiyi tamamladınız!
 

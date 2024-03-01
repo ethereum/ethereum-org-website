@@ -4,7 +4,7 @@ description: The policy we use when adding a staking products or services to eth
 lang: en
 ---
 
-# Adding staking products or services \{#adding-staking-products-or-services}
+# Adding staking products or services {#adding-staking-products-or-services}
 
 We want to make sure we list the best resources possible while keeping users safe and confident.
 
@@ -18,7 +18,7 @@ We currently list staking products and services on the following pages:
 
 Proof-of-stake on the Beacon Chain has been live since December 1, 2020. While staking is still relatively new, we've tried to create a fair and transparent framework for consideration on ethereum.org but the listing criteria will change and evolve over time, and is ultimately at the discretion of the ethereum.org website team.
 
-## The decision framework \{#the-decision-framework}
+## The decision framework {#the-decision-framework}
 
 The decision to list a product on ethereum.org is not dependent on any one factor. Multiple criteria are considered together when deciding to list a product or service. The more of these criteria are met, the more likely it is to be listed.
 
@@ -31,7 +31,7 @@ The decision to list a product on ethereum.org is not dependent on any one facto
 
 Currently, we are only listing products or services in these categories.
 
-### Criteria for inclusion \{#criteria-for-inclusion}
+### Criteria for inclusion {#criteria-for-inclusion}
 
 Staking products or services submissions will be assessed by the following criteria:
 
@@ -59,7 +59,7 @@ Staking products or services submissions will be assessed by the following crite
 
 - i.e. Linux, macOS, Windows, iOS, Android
 
-#### Software and smart contracts \{#software-and-smart-contracts}
+#### Software and smart contracts {#software-and-smart-contracts}
 
 For any custom software or smart contracts involved:
 
@@ -83,7 +83,7 @@ For any custom software or smart contracts involved:
 - If not, are there plans to create a security bug bounty?
 - This is used to determine the products "bug bounty" score.
 
-#### Node or client tooling \{#node-or-client-tooling}
+#### Node or client tooling {#node-or-client-tooling}
 
 For software products related to node or client setup, management or migration:
 
@@ -92,7 +92,7 @@ For software products related to node or client setup, management or migration:
 - Which clients are supported? Can the user choose?
 - This is used to determine the products "multi-client" score.
 
-#### Staking as a service \{#staking-as-a-service}
+#### Staking as a service {#staking-as-a-service}
 
 For [staking-as-a-service listings](/staking/saas/) (i.e. delegated node operation):
 
@@ -117,7 +117,7 @@ For [staking-as-a-service listings](/staking/saas/) (i.e. delegated node operati
 - As of last edit, Prysm is the consensus layer client being run by a majority of node operators, which is dangerous for the network. If any CL client is currently being used by over 33% of the network, we request data related to its usage.
 - This is used to determine the products "diverse clients" score.
 
-#### Staking pool \{#staking-pool}
+#### Staking pool {#staking-pool}
 
 For [pooled staking services](/staking/pools/):
 
@@ -147,7 +147,7 @@ For [pooled staking services](/staking/pools/):
 - As of last edit, Prysm is the consensus layer client being run by a majority of node operators, which is dangerous for the network. If any CL client is currently being used by over 33% of the network, we request data related to its usage.
 - This is used to determine the products "diverse clients" score.
 
-### Other criteria: the nice-to-haves \{#other-criteria}
+### Other criteria: the nice-to-haves {#other-criteria}
 
 **What user interfaces are supported?**
 
@@ -161,13 +161,13 @@ For [pooled staking services](/staking/pools/):
 
 - This gives us an idea of the reach of your service so far.
 
-## How we display results \{#product-ordering}
+## How we display results {#product-ordering}
 
 The [criteria for inclusion](#criteria-for-inclusion) above are used to calculate a cumulative score for each product or service. This is used as a means of sorting and showcasing products that meet certain objective criteria. The more criteria that evidence is provided for, the higher a product will be sorted, with ties being randomized on load.
 
 The code logic and weights for these criteria are currently contained in [this JavaScript component](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) in our repo.
 
-## Add your product or service \{#add-product}
+## Add your product or service {#add-product}
 
 If you want to add a staking product or service to ethereum.org, create an issue on GitHub.
 

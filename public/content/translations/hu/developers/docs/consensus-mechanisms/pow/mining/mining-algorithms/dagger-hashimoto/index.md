@@ -6,11 +6,11 @@ lang: hu
 
 A Dagger-Hashimoto volt az Ethereum bányászati algoritmusának eredeti fejlesztési implementációja és specifikációja. A Dagger-Hashimoto algoritmust az [Ethash](#ethash) váltotta le. A bányászatot teljesen kikapcsolták az [egyesítés (Merge)](/updates/merge) frissítés életbe lépésekor, 2022. szeptember 15-én. Azóta az Ethereumot a [proof-of-stake (letéti igazolás)](/developers/docs/consensus-mechanisms/pos) mechanizmusa biztosítja. Ez az oldal elavult témákat tartalmaz, amelyek többé már nem relevánsak az egyesítés (Merge) utáni Ethereummal kapcsolatban.
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 A jelen téma könnyebb megértéséhez javasoljuk, hogy tekintse meg a [proof-of-work konszenzus](/developers/docs/consensus-mechanisms/pow), a [bányászat](/developers/docs/consensus-mechanisms/pow/mining), és a [bányászati algoritmusok](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms) témáit.
 
-## Dagger-Hashimoto \{#dagger-hashimoto}
+## Dagger-Hashimoto {#dagger-hashimoto}
 
 A Dagger-Hashimoto két célt szolgál:
 
@@ -21,7 +21,7 @@ Egy újabb módosítással meghatározhatjuk, hogyan tud egy harmadik célt is k
 
 **A teljes lánc tárolása**: a bányászathoz a teljes blokklánc státuszát le kell tárolni (az Ethereum státuszfa szabálytalan struktúrája miatt talán lehetséges ennek megrövidítése, főleg a gyakori szerződéseknél, de ezt minimalizálni szeretnénk).
 
-## DAG létrehozása \{#dag-generation}
+## DAG létrehozása {#dag-generation}
 
 Az algoritmus kódját pythonban alább találja. Először az `encode_int` kódot adjuk meg, hogy a megadott pontosságú nem aláírt egész számokat sztringekké alakítsa. Ennek fordítottja is megadásra kerül:
 
@@ -60,7 +60,7 @@ def dbl_sha3(x):
     return decode_int(utils.sha3(utils.sha3(x)))
 ```
 
-### Parameters \{#parameters}
+### Parameters {#parameters}
 
 Az algoritmushoz a következő paramétereket használjuk:
 
@@ -84,7 +84,7 @@ params = {
 
 A `P` ebben az esetben egy olyan prímszám, hogy a `log₂(P)` éppen csak kisebb legyen, mint 512, ami az 512 bithez kapcsolódik, amit a számok reprezentálására használunk. Érdemes megjegyezni, hogy a DAG-nek csak a második felét kell eltárolni, így a RAM-igény 1 GB-tól indul és 441 MB-tal növekszik évente.
 
-### Dagger-gráfépítés \{#dagger-graph-building}
+### Dagger-gráfépítés {#dagger-graph-building}
 
 A dagger-gráfépítési függvényt a következőképpen definiáljuk:
 
@@ -105,7 +105,7 @@ Lényegében a gráfot egy egyszerű csomópontként kezdi (`sha3(seed)`), és i
 
 Ez az algoritmus a számelmélet számos eredményén alapszik. Az alábbi függelékben megtalálhatja az erről szóló beszélgetést.
 
-## Könnyű kliens általi értékelés \{#light-client-evaluation}
+## Könnyű kliens általi értékelés {#light-client-evaluation}
 
 Ez a gráfkonstrukció arra való, hogy a gráf minden csomópontja újraépíthető legyen egy kis számú csomópontból álló alfa segítségével, és csak kevés kiegészítő memória kelljen hozzá. Vegye figyelembe, hogy ha k=1, akkor az alfastruktúra csak az értékek egy olyan lánca, ami a DAG első eleméig tart.
 
@@ -133,7 +133,7 @@ def quick_calc(params, seed, p):
 
 Lényegében ez a fenti algoritmus átirata, ami kiveszi a teljes DAG számítási ciklusát, és a korábbi csomópontkereső függvényt cseréli le egy rekurzív hívásra vagy egy cache-keresőre. Érdemes megjegyezni, hogy `k=1` esetén a cache szükségtelen, bár egy további optimalizálással a DAG első néhány ezer értékét előre kiszámítja, és statikus cache-ként tárolja a számításokhoz; ennek kódmegvalósítását tekintse meg a függelékben.
 
-## A DAG-ek dupla puffere \{#double-buffer}
+## A DAG-ek dupla puffere {#double-buffer}
 
 Egy teljes kliensben 2 DAG [_dupla pufferét_](https://wikipedia.org/wiki/Multiple_buffering) használják, melyet a fenti képlet ad meg. Az elképzelés szerint a DAG-eket minden `epochtime` (korszakban) blokkszámonként készítik a fenti paramétereknek megfelelően. Ahelyett, hogy a kliens a legutóbbi DAG-et használná, az eggyel korábbit veszi figyelembe. Ennek előnye az, hogy a DAG-eket le lehet cserélni idővel anélkül, hogy a bányászoknak hirtelen az összes adatot újra kellene számolniuk. Máskülönben felmerül egy hirtelen, átmeneti lelassulás esélye a láncfeldolgozásnak, ami drasztikusan növeli a centralizációt. Így megnő az 51%-os támadás kockázata is az adat újraszámítása előtti percekben.
 
@@ -174,7 +174,7 @@ def get_daggerset(params, block):
                          "block_number": seedset["back_number"]}}
 ```
 
-## Hashimoto \{#hashimoto}
+## Hashimoto {#hashimoto}
 
 Az eredeti Hashimoto lényege, hogy a blokkláncot adathalmazként használja, és olyan számítást végez, amely kiválaszt N indexet a blokkláncból, összegyűjti a tranzakciókat ezeken az indexeken, elvégzi a XOR-t ezekre az adatokra, és visszaadja az eredmény hashét. Thaddeus Dryja eredeti algoritmusa, Pythonra átfordítva a konzisztencia érdekében, így néz ki:
 
@@ -211,7 +211,7 @@ def quick_hashimoto(seed, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-## Bányászat és ellenőrzés \{#mining-and-verifying}
+## Bányászat és ellenőrzés {#mining-and-verifying}
 
 Most vezessük be mindezt a bányászati algoritmusba:
 
@@ -254,15 +254,15 @@ Emellett érdemes megjegyezni, hogy a Dagger-Hashimoto a blokkfejlécre egyéb k
 - A kétszintű ellenőrzéshez a blokkfejlécnek tartalmaznia kell a nonce-t és az sha3 előtti köztes értéket
 - Valahol a blokkfejlécnek tárolnia kell a jelenlegi seed-halmaz sha3-ját
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 _Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_
 
-## Függelék \{#appendix}
+## Függelék {#appendix}
 
 Mint fentebb említettük, a DAG generálásához használt RNG a számelmélet néhány eredményére támaszkodik. Először is biztosítjuk, hogy a `picker` változó alapjául szolgáló Lehmer RNG széles periódussal rendelkezik. Másodszor, megmutatjuk, hogy a `pow(x,3,P)` nem fogja `x` kódot `1` vagy `P-1` értékre leképezni, feltéve, hogy `x ∈ [2,P-2]`. Végül megmutatjuk, hogy a `pow(x,3,P)` alacsony ütközési rátával rendelkezik, ha hash függvényként kezeljük.
 
-### Lehmer véletlenszám-generátor \{#lehmer-random-number}
+### Lehmer véletlenszám-generátor {#lehmer-random-number}
 
 Bár a `produce_dag` függvénynek nem kell torzítatlan véletlen számokat produkálnia, és potenciális veszélyt jelent, hogy a `seed**i % P` csak néhány értéket vesz fel. Ez előnyt jelenthet azoknak a bányászoknak, akik felismerik a mintát, miközben mások nem.
 
@@ -287,7 +287,7 @@ A DAG első cellájának (az `init` feliratú változó) hozzárendelésekor kis
 
 > 2. megfigyelés. Legyen `x` a `ℤ/Pℤ` multiplikatív csoport tagja egy biztonságos `P` prímszámhoz, és legyen `w` egy természetes szám. Ha `x mod P ≠ 1 mod P` és `x mod P ≠ P-1 mod P`, valamint `w mod P ≠ P-1 mod P` és `w mod P ≠ 0 mod P`, akkor `xʷ mod P ≠ 1 mod P` és `xʷ mod P ≠ P-1 mod P`
 
-### Moduláris exponenciálás hashfüggvényként \{#modular-exponentiation}
+### Moduláris exponenciálás hashfüggvényként {#modular-exponentiation}
 
 A `P` és `w` bizonyos értékei esetén a `pow(x, w, P)` függvénynek sok ütközése lehet. Például a `pow(x,9,19)` csak `{1,18}` értékeket vesz fel.
 
@@ -303,7 +303,7 @@ Adott, hogy `P` prímszám, akkor egy megfelelő `w` moduláris exponenciálási
 
 Abban a speciális esetben, ha `P` egy biztonságos prímszám, ahogyan azt választottuk, akkor `P-1` csak 1, 2, `(P-1)/2` és `P-1` faktorokkal rendelkezik. Mivel `P` > 7, tudjuk, hogy 3 relatív prím a `P-1`-hez, ezért `w=3` kielégíti a fenti tételt.
 
-## Hatékonyabb cache-alapú kiértékelő algoritmus \{#cache-based-evaluation}
+## Hatékonyabb cache-alapú kiértékelő algoritmus {#cache-based-evaluation}
 
 ```python
 def quick_calc(params, seed, p):

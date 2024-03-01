@@ -5,7 +5,7 @@ lang: pt-br
 incomplete: true
 ---
 
-## Visão geral dos padrões \{#standards-overview}
+## Visão geral dos padrões {#standards-overview}
 
 A comunidade Ethereum adotou vários padrões que ajudam a manter projetos (tais como [Ethereum clients](/developers/docs/nodes-and-clients/) e carteiras) interoperáveis entre implementações, e asseguram que os contratos inteligentes e os dapps permaneçam compostos.
 
@@ -20,7 +20,7 @@ Normalmente, os padrões são apresentados como [Propostas de melhorias do Ether
 - [Coordenação de desenvolvimento do protocolo de governança do Ethereum e atualização da rede](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 de Março 23 - Hudson Jameson_
 - [Lista de reprodução de todas as reuniões de Ethereum Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Playlist)_
 
-## Tipos de padrões \{#types-of-standards}
+## Tipos de padrões {#types-of-standards}
 
 Existem 3 tipos de EIP:
 
@@ -37,7 +37,7 @@ Além disso, o acompanhamento padrão é subdividido em 4 categorias:
 
 Encontre informações mais detalhadas sobre esses tipos e categorias diferentes em [EIP-1](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 
-### Padrões de token \{#token-standards}
+### Padrões de token {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - Uma interface padrão para tokens fungíveis (intermutáveis), como tokens de votação, tokens de staking ou moedas virtuais.
   - [ERC-1363:](https://eips.ethereum.org/EIPS/eip-1363)define uma interface de token para tokens ERC-20 que suportam a execução do código destinatário após a transferência (ou transferFrom), ou o código do gastador após a aprovação
@@ -51,7 +51,7 @@ Encontre informações mais detalhadas sobre esses tipos e categorias diferentes
 
 Aprenda mais sobre [padrões de token](/developers/docs/standards/tokens/).
 
-## Leitura adicional \{#further-reading}
+## Leitura adicional {#further-reading}
 
 - [Propostas de Melhorias do Ethereum (EIPs)](/eips/)
 

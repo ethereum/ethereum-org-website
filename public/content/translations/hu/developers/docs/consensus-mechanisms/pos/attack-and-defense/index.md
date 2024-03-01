@@ -6,11 +6,11 @@ lang: hu
 
 A tolvajok és szabotőrök folyamatosan keresik a lehetőséget, hogy megtámadják az Ethereum kliensszoftverét. Ez az oldal ismerteti az Ethereum konszenzusrétegét érő ismert támadási vektorokat, és felvázolja, hogyan lehet ezeket a támadásokat kivédeni. Az ezen az oldalon található információk egy [hosszabb változatból](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs) származnak.
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 A [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) alapszintű ismerete szükséges. Hasznos lesz továbbá, ha alapszintű ismeretekkel rendelkezel az Ethereum [ösztönzési réteg](/developers/docs/docs/consensus-mechanisms/pos/rewards-and-penalties) és az elágazásválasztási algoritmus, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper) működéséről.
 
-## Mit akarnak a támadók? \{#what-do-attackers-want}
+## Mit akarnak a támadók? {#what-do-attackers-want}
 
 Gyakori tévhit, hogy egy sikeres támadó képes új ethert generálni, vagy tetszőleges számlákról ethert lehívni. Egyik sem lehetséges, mivel minden tranzakciót a hálózat összes végrehajtási kliense hajtja végre. A tranzakcióknak meg kell felelniük az érvényesség alapvető feltételeinek (például a tranzakciókat a feladó privát kulcsa írja alá, a feladónak elegendő egyenleggel kell rendelkeznie stb. Az eredménynek három osztálya van, amelyet egy támadó reálisan megcélozhat: átszervezés, dupla véglegesség vagy a véglegesség késleltetése.
 
@@ -24,9 +24,9 @@ A szociális réteg elleni támadás célja lehet az Ethereumba vetett közbizal
 
 Miután megállapítottuk, hogy egy ellenfél miért támadhatja meg az Ethereumot, a következő szakaszok azt vizsgálják meg, hogy _hogyan_ lehet ezt megtenni.
 
-## Támadási módszerek \{#methods-of-attack}
+## Támadási módszerek {#methods-of-attack}
 
-### Nulladik rétegbeli támadások \{#layer-0}
+### Nulladik rétegbeli támadások {#layer-0}
 
 Először is, azok a személyek, akik nem vesznek részt aktívan az Ethereumban (a kliensszoftver futtatásával), a társadalmi réteget (nulladik réteg) célozva támadhatnak. A nulladik réteg az alap, amelyre az Ethereum épül, és mint ilyen, potenciális támadási felületet jelent, amelynek következményei a stack többi részére is kihatnak. Néhány példa:
 
@@ -45,15 +45,15 @@ Egy másik fontos megerősítés a társadalmi réteg támadásaival szemben az 
 
 Végezetül fontos, hogy az Ethereum közösség nyitott és befogadó maradjon minden résztvevő számára. A zártkörű közösségek különösen sebezhetőek a társadalmi támadásokkal szemben, mivel könnyű „mi és ők” narratívákat építeni. A törzsiség és a mérgező maximalizmus árt a közösségnek és aláássa a nulladik réteg biztonságát. A hálózat biztonságában érdekelt ether-tagok úgy tekintsék az online és személyes találkozásokat, mint ami közvetlenül hozzájárul az Ethereum nulladik rétegének biztonságához.
 
-### A protokoll megtámadása \{#attacking-the-protocol}
+### A protokoll megtámadása {#attacking-the-protocol}
 
 Bárki futtathatja az Ethereum kliensszoftverét. Ahhoz, hogy egy validátor hozzáadjon egy klienshez, a felhasználónak 32 ethert kell betennie a letéti szerződésbe. A validátor lehetővé teszi a felhasználó számára, hogy aktívan részt vegyen az Ethereum hálózatának biztonságában azáltal, hogy új blokkokat javasol és tanúsít. A validátornak mostantól van egy olyan hangja, amellyel befolyásolhatja a blokklánc jövőbeli tartalmát – teheti ezt becsületesen, és a jutalmak révén növelheti az ether egyenlegét, vagy megpróbálhatja a folyamatot a saját előnyére manipulálni, kockáztatva a letétjét. A támadás egyik módja az, hogy a teljes letét nagyobb hányadát halmozzák fel, majd ezt arra használják, hogy a becsületes validálókat túlszavazzák. Minél nagyobb a támadó által ellenőrzött letét aránya, annál nagyobb a szavazóereje, különösen bizonyos gazdasági mérföldköveknél, amelyeket később megvizsgálunk. A legtöbb támadó azonban nem lesz képes elegendő ethert felhalmozni ahhoz, hogy ilyen módon támadjon, így ehelyett finom technikákat kell alkalmazniuk, hogy manipulálják a becsületes többséget, hogy egy bizonyos módon cselekedjen.
 
 Alapvetően minden kis letétes támadás a validátor kétféle hibás viselkedésének variációja: az alulaktivitás (nem vagy későn tesznek javaslatot) vagy a túlaktivitás (túl sokszor tesznek javaslatot egy sloton belül). Legegyszerűbb formájukban ezeket a műveleteket az elágazásválasztó algoritmus és az ösztönző réteg könnyen kezeli, de vannak okos módszerek arra, hogy a támadók előnyére játszhassák ki a rendszert.
 
-### Kis mennyiségű ETH-t használó támadások \{#attacks-by-small-stakeholders}
+### Kis mennyiségű ETH-t használó támadások {#attacks-by-small-stakeholders}
 
-#### Átszervezések (reorg) \{#reorgs}
+#### Átszervezések (reorg) {#reorgs}
 
 Több cikk is ismertette az Ethereum elleni olyan támadásokat, amelyek a teljes feltett ether csak kis hányadával érnek el reorgokat vagy végleges késleltetést. Ezek a támadások általában arra épülnek, hogy a támadó visszatart valamilyen információt a többi validátor elől, majd valamilyen árnyalt módon és/vagy egy alkalmas pillanatban kiadja azt. Céljuk általában az, hogy kiszorítsanak egy vagy több becsületes blokkot a kanonikus láncból. Egy tanulmány, [Neuder et al 2020](https://arxiv.org/pdf/2102.02247.pdf), megmutatta, hogy egy támadó validátor hogyan hozhat létre és tanúsíthat egy blokkot (`B`) egy adott `n+1` slothoz, de tartózkodhat attól, hogy azt a hálózat más csomópontjainak továbbítsa. Ehelyett a következő `n+2` slotig megtartják az igazolt blokkot. Egy becsületes validátor egy blokkot (`C`) javasol a `n+2` slotba. Ezzel szinte egyidejűleg a támadó kiadhatja a visszatartott blokkját (`B`) és az arra vonatkozó visszatartott tanúsítványait, és a `n+2` slotra leadott szavazataival azt is tanúsíthatja, hogy `B` a lánc feje, ezzel gyakorlatilag tagadva a becsületes `C` blokk létezését. Amikor az őszinte `D` blokk felszabadul, az elágazásválasztó algoritmus úgy látja, hogy a `B` tetejére épülő `D` nehezebb, mint a `C`-re épülő `D`. A támadónak tehát sikerült eltávolítania a `n+2` slotban lévő becsületes `C` blokkot a kanonikus láncból egy 1 blokkos ex ante reorg segítségével. [Egy támadónak a tét 34%-ával](https://www.youtube.com/watch?v=6vzXwwk12ZE) nagyon jó esélye van arra, hogy sikerrel járjon ebben a támadásban, amint azt [ebben a jegyzetben](https://notes.ethereum.org/plgVdz-ORe-fGjK06BZ_3A#Fork-choice-by-block-slot-pair) kifejtettük. Elméletileg azonban ezt a támadást kisebb letétekkel is meg lehetne kísérelni. [Neuder et al 2020](https://arxiv.org/pdf/2102.02247.pdf) leírta, hogy ez a támadás 30%-os letét mellett is működik, de később kimutatták, hogy [2%-os letét mellett is életképes](https://arxiv.org/pdf/2009.04987.pdf), majd [egyetlen validátor](https://arxiv.org/abs/2110.10086#) esetén is, a következő fejezetben vizsgált kiegyensúlyozási technikák segítségével.
 
@@ -85,21 +85,21 @@ A lavinatámadást az LMD-GHOST elágazásválasztó algoritmus LMD része enyh�
 
 Az elágazásválasztási szabály számos más lehetséges jövőbeli frissítése is létezik, amelyek növelhetik a előterjesztő-erősítés által nyújtott biztonságot. Az egyik a [nézetösszevonás](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739), ahol a tanúsítók `n` másodperccel egy slot kezdete előtt befagyasztják az elágazásválasztásról alkotott nézetüket, és a javaslattevő ezután segít szinkronizálni a lánc nézetét a hálózaton. Egy másik lehetséges fejlesztés az [ egy sloton belüli véglegesség (single-slot finality)](https://notes.ethereum.org/@vbuterin/single_slot_finality), amely az üzenet időzítésén alapuló támadások ellen véd azáltal, hogy a láncot egyetlen slot után véglegesíti.
 
-#### Véglegesség késleltetése \{#finality-delay}
+#### Véglegesség késleltetése {#finality-delay}
 
 [Az a cikk](https://econcs.pku.edu.cn/wine2020/wine2020/Workshop/GTiB20_paper_8.pdf), amely először írta le az alacsony költségű, egyetlen blokkot érintő reorg támadást, leírt egy végső késleltetés (liveness failure) nevű támadást is, amely arra támaszkodik, hogy a támadó egy korszakkal határos blokk javaslattevője. Ez azért kritikus, mert ezek a korszakhatár blokkok lesznek az ellenőrző pontok, amelyeket a Casper FFG a lánc egyes részeinek véglegesítéséhez használ. A támadó egyszerűen visszatartja a blokkját, amíg elegendő becsületes validátor nem használja FFG-szavazatát az előző korszakhatárblokk javára, mint az aktuális véglegesítési cél. Ezután kiadja a visszatartott blokkot. Ők tanúsítják a blokkjukat, és a fennmaradó becsületes validátorok is ezt teszik, különböző célellenőrzési pontokkal rendelkező elágazásokat hozva létre. Ha jól időzítették, akkor megakadályozzák a véglegességet, mert nem lesz 2/3-os szupertöbbség, amely bármelyik elágazást tanúsítja. Minél kisebb a letét, annál pontosabb időzítésre van szükség, mivel a támadó kevesebb tanúsítást ellenőriz közvetlenül, és annál kisebb az esélye annak, hogy a támadó ellenőrzi a validátort, amely a korszakhatárblokkot javasolja.
 
-#### Nagy hatótávolságú támadások \{#long-range-attacks}
+#### Nagy hatótávolságú támadások {#long-range-attacks}
 
 Létezik egy, a proof-of-stake blokkláncokra jellemző támadási osztály is, amelynek lényege, hogy a genezisblokkban részt vevő validátor fenntartja a blokklánc egy különálló elágazását a helyes blokklánc mellett, és végül meggyőzi az őszinte validátorhalmazt, hogy később egy alkalmas időpontban váltson át rá. Ez a fajta támadás nem lehetséges az Ethereumon, mivel a véglegességi eszköz (finality gadget) biztosítja, hogy az összes validátor rendszeres időközönként (ellenőrzőpontok) megegyezzen a becsületes lánc állapotáról. Ez az egyszerű mechanizmus semlegesíti a nagy hatótávolságú támadókat, mivel az Ethereum kliensei egyszerűen nem fogják a véglegesített blokkokat újraszervezni. A hálózathoz csatlakozó új csomópontok úgy teszik ezt, hogy keresnek egy megbízható legutóbbi állapot hash-t (egy [gyenge szubjektivitás](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) ellenőrzőpontot), és azt használják pszeudo-genezis blokkként, amelyre építkeznek. Ez egy „bizalmi bejáratot” hoz létre a hálózatba belépő új csomópont számára, mielőtt az elkezdené ellenőrizni az információkat saját maga számára.
 
-#### Szolgáltatásmegtagadás (DoS) \{#denial-of-service}
+#### Szolgáltatásmegtagadás (DoS) {#denial-of-service}
 
 Az Ethereum proof-of-stake mechanizmusa minden egyes slotban egyetlen validátort választ ki a teljes validátorkészletből, aki blokkajánló lesz. Ezt egy nyilvánosan ismert függvény segítségével lehet kiszámítani, és egy támadó számára lehetséges, hogy a következő blokkelőterjesztőt beazonosítsa. Ezután a támadó eláraszthatja szeméttel (spam) a blokkelőterjesztőt, hogy megakadályozza, hogy információt cseréljen a társaival. A hálózat többi része számára úgy tűnne, hogy a blokkelőterjesztő offline, és a slot egyszerűen üresen marad. Ez egyfajta cenzúra lehet bizonyos validátorokkal szemben, megakadályozva őket abban, hogy információt adjanak hozzá a blokklánchoz. Az egyetlen, titkos vezető kiválasztás (SSLE) vagy az egynél több titkos vezető kiválasztás megvalósítása csökkenti a szolgáltatásmegtagadás (DoS) kockázatát, mivel mindig csak a blokkelőterjesztő tudja, hogy kiválasztották, és nem ismerhető meg előre. Ez még nem valósult meg, de aktív [kutatás-fejlesztési](https://ethresear.ch/t/secret-non-single-leader-election/11789) terület.
 
 Mindezek alapján elmondható, hogy kis letétekkel nehéz sikeresen megtámadni az Ethereumot. Az itt leírt életképes támadásokhoz idealizált elágasztásválasztó algoritmusra, valószínűtlen hálózati körülményekre van szükség, vagy a támadási vektorokat már lezárták az kliensszoftver javításokkal. Ez nem zárja ki a lehetőséget, de a kisebbségi letéttel rendelkező támadó hatékonyságát meghatározza az, hogy milyen szintű technikai képességekkel bír, a konszenzusréteg ismerete és a szerencse. A támadó szempontjából az lehet a legjobb megoldás, ha minél több ethert halmoz fel, és a teljes letét többségi hányadával próbál elérni valamit.
 
-### A támadók a teljes letét >=33%-át használják \{#attackers-with-33-stake}
+### A támadók a teljes letét >=33%-át használják {#attackers-with-33-stake}
 
 Az eddig említett összes támadás sikerének valószínűsége megnő, ha a támadónak több letétbe helyezett ether áll rendelkezésére, amivel szavazhat, és több validálót választhat, akik blokkokat javasolhatnak az egyes slotokban. Egy rosszindulatú validátor ezért arra törekedhet, hogy minél több letétbe helyezett ether irányítson.
 
@@ -109,7 +109,7 @@ Az inaktivitási elszivárgás célja, hogy a lánc ismét véglegesedjen. A tá
 
 Feltételezve, hogy az Ethereum-hálózat aszinkron (az üzenetek küldése és fogadása között késések vannak), egy támadó, aki a teljes letét 34%-át ellenőrzi, kétszeres véglegesítést okozhat. Ez azért van, mert a támadó kétértelművé teheti, ha őt választják blokkelőterjesztőnek, majd duplán szavazhat az összes validátorával. Ez olyan helyzetet teremt, amelyben a blokkláncnak egy olyan elágazása létezik, amely mellett a letétbe helyezett ether 34%-a szavazott. Mindkét elágazásra csak a fennmaradó validátorok 50%-ának kell szavaznia, hogy mindkét elágazást szupertöbbség támogassa, és így mindkét lánc véglegesíthető (mivel a támadó validátorok 34%-a + a fennmaradó 66% fele = 67% mindkét elágazásnál). Az egymással versengő blokkokat a becsületes validátorok kb. 50%-ának kellene megkapnia, így ez a támadás csak akkor életképes, ha a támadónak bizonyos fokú ellenőrzése van a hálózaton terjedő üzenetek időzítése felett, így a becsületes validátorok felét rá tudja kényszeríteni az egyes láncokra. A támadónak szükségszerűen el kellene pusztítania a teljes letétjét (kb. 10 millió ether 34%-a a mai validátor halmazt figyelembe véve), hogy elérje ezt a kettős véglegességet, mivel a validátorok 34%-a egyszerre kétszer szavazna – ez egy súlyos és kizárással járó büntetés maximális korrelációval. Ezzel a támadással szemben az a magas költség áll, hogy a teljes letétbe helyezett ether 34%-át el kell pusztítani. A támadásból való kilábaláshoz az Ethereum közösségnek „sávon kívül” kell koordinálnia, és meg kellene állapodnia abban, hogy az egyik elágazást követi, a másikat pedig figyelmen kívül hagyja.
 
-### A támadók a teljes letét kb. 50%-át használják \{#attackers-with-50-stake}
+### A támadók a teljes letét kb. 50%-át használják {#attackers-with-50-stake}
 
 A letétbe helyezett ether 50%-ánál a validátorok egy rosszindulatú csoportja elméletileg két egyforma méretű elágazásra oszthatná a láncot, majd egyszerűen felhasználhatná a teljes 50%-os letétjét arra, hogy a becsületes validátorok csoportjával ellentétesen szavazzon, így fenntartva a két elágazást és megakadályozva a véglegesítést. A két elágazáson az inaktivitási elszivárgása végül mindkét lánc véglegesítéséhez vezet. Ezen a ponton az egyetlen lehetőség a közösségi helyreállítás.
 
@@ -117,11 +117,11 @@ Nagyon valószínűtlen, hogy a validátorok egy ellenséges csoportja következ
 
 A teljes letét >50%-ánál a támadó uralni tudta az elágazásválasztó algoritmust. Ebben az esetben a támadó képes lenne a többségi szavazattal tanúsítani, ami elegendő kontrollt adna neki ahhoz, hogy rövid átrendeződéseket hajtson végre anélkül, hogy becsületes klienseket kellene becsapnia. A becsületes validálók követnék ezt a példát, mivel az ő elágazásválasztó algoritmusuk is a támadó által preferált láncot látná a legnehezebbnek, így a lánc véglegesedhetne. Ez lehetővé teszi a támadó számára, hogy bizonyos tranzakciókat cenzúrázzon, rövidtávú átszervezéseket végezzen, és a blokkok önérdekű átrendezésével profitot (MEV) szerezzen. Ez ellen a többségi részesedés hatalmas költsége (az írás idején ez kb. 19 milliárd dollár) ad védelmet, amelyet egy támadó kockáztat, mivel a társadalmi réteg közbeléphet, és elfogadhat egy becsületes kisebbségi elágazást, ami drámaian leértékeli a támadó részesedését.
 
-### A támadók a teljes letét >=66%-át használják \{#attackers-with-66-stake}
+### A támadók a teljes letét >=66%-át használják {#attackers-with-66-stake}
 
 Egy támadó, aki az összes letétbe helyezett ether 66%-ával vagy többel rendelkezik, véglegesítheti a preferált láncot anélkül, hogy a becsületes validálókat kényszerítenie kellene. A támadók egyszerűen megszavazhatják a preferált elágazást, majd véglegesíthetik azt, mert tisztességtelen szupertöbbséggel szavazhatnak. A szupertöbbség birtokosaként a támadó irányítaná a véglegesített blokkok tartalmát, hatalmában állna költeni, visszatekerni és újrakölteni, cenzúrázni bizonyos tranzakciókat és tetszés szerint átszervezni a láncot. Azzal, hogy a támadó további ethert vásárol, hogy 51% helyett 66%-ot ellenőrizzen, megszerzi a képességet, hogy utólagos reorgokat és végleges visszafordításokat hajtson végre (azaz megváltoztassa a múltat és ellenőrizze a jövőt is). Az egyetlen igazi védekezés a hatalmas költség, a teljes letétbe helyezett ether 66%-a, és a közösségi rétegre támaszkodva egy alternatív elágazás elfogadásának koordinálása. Ezt a következő részben részletesebben is megvizsgáljuk.
 
-## Emberek: az utolsó védelmi vonal \{#people-the-last-line-of-defense}
+## Emberek: az utolsó védelmi vonal {#people-the-last-line-of-defense}
 
 Ha a tisztességtelen validátoroknak sikerül véglegesíteniük a lánc általuk preferált verzióját, az Ethereum közösség nehéz helyzetbe kerül. A kanonikus lánc tartalmaz egy tisztességtelen szakaszt a történetébe beépítve, míg a becsületes validátorok büntetést kaphatnak, ha egy alternatív (becsületes) láncot tanúsítanak. Vegye figyelembe, hogy egy véglegesített, de hibás lánc a többségi kliens hibájából is adódhat. Végül a végső megoldás az, hogy a közösségi (nulladik) rétegre hagyatkozunk.
 
@@ -135,7 +135,7 @@ A vezetés már önmagában is bonyolult téma. Egy tisztességtelen véglegesí
 
 Mindazonáltal van valami kielégítő abban, hogy a végső megoldás a való világban található. Végső soron, még e fenomenális technológiai rendszer ellenére is, ha a legrosszabb valaha is bekövetkezne, a valódi embereknek kellene koordinálniuk a kiutat.
 
-## Összegzés \{#summary}
+## Összegzés {#summary}
 
 Ez az oldal azt vizsgálta, hogy a támadók milyen módon próbálhatják meg kihasználni az Ethereum proof-of-stake konszenzus protokollját. A reorgokat és a véglegesítés késleltetését a teljes letétbe helyezett ether növekvő arányú támadók esetében vizsgáltuk. Összességében a gazdagabb támadóknak nagyobb esélyük van a sikerre, mivel a letétjük szavazati joggal jár, amellyel befolyásolni tudják a jövőbeli blokkok tartalmát. Bizonyos küszöbértékeknél a támadó ereje növekszik:
 
@@ -153,7 +153,7 @@ Létezik egy sor kifinomultabb támadás is, amelyekhez kis mennyiségű letétb
 
 A 34%-os, 51%-os vagy 66%-os támadások sávon kívüli társadalmi koordinációt igényelnek a megoldásához. Bár ez valószínűleg fájdalmas lenne a közösség számára, a sávon kívüli válaszadás képessége erős visszatartó erőt jelent a támadóknak. Az Ethereum közösségi rétege a végső biztosíték – egy technikailag sikeres támadást még mindig ki lehet iktatni azzal, hogy a közösség elfogad egy becsületes elágazást. A támadó és az Ethereum közösség versenyt futna – a 66%-os támadásra költött dollármilliárdokat egy sikeres közösségi koordináció eltörölné, ha elég gyorsan végzik, így a támadó rengeteg nem likvid etherrel egy tisztességtelen láncon, amelyet az Ethereum közösség figyelmen kívül hagy. Alacsony a valószínűsége, hogy ez a támadónak végül nyereséget hoz, ezért hatékony visszatartóerőt jelent. Ezért olyan fontos a szorosan összehangolt értékekkel rendelkező, összetartó közösségi réteg fenntartása.
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [A jelen írás részletesebb verziója](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [Vitalik az elszámolási véglegességről](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)

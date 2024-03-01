@@ -5,9 +5,9 @@ lang: hu
 incomplete: true
 ---
 
-## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel \{#getting-started-with-smart-contracts-and-solidity}
+## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel {#getting-started-with-smart-contracts-and-solidity}
 
-## Oktatóanyagok \{#tutorials}
+## Oktatóanyagok {#tutorials}
 
 - [Flutter és blokklánc – Hello World Dapp](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) átvezeti Önt a kezdeti lépéseken:
   1.  A [Truffle fejlesztői környezet](https://www.trufflesuite.com/) telepítése
@@ -18,7 +18,7 @@ incomplete: true
 - Ha ennél kevesebb ideje van, akkor talán tetszeni fog az [Egy blokklánc decentralizált alkalmazás építése a Flutterrel és a Darttal az Ethereumon](https://www.youtube.com/watch?v=jaMFEOCq_1s) videó, amely csak húsz percet veszi igénybe
 - [A MetaMask integrációja a Flutter alkalmazásban](https://youtu.be/8qzVDje3IWk) – ez a rövid videó bemutatja, hogyan kell a MetaMaskot beintegrálni a Flutter alkalmazásokba
 
-## Munka Ethereum kliensekkel \{#working-with-ethereum-clients}
+## Munka Ethereum kliensekkel {#working-with-ethereum-clients}
 
 Az Ethereumot decentralizált alkalmazások (dappok) fejlesztésére használhatja, amelyek a kriptovaluták és a blokklánc-technológia nyújtotta összes előnyét kiélvezhetik. A Darthoz legalább két könyvtárat tartanak karban, hogy a [JSON RPC API-t](/developers/docs/apis/json-rpc/) használja az Ethereumra.
 

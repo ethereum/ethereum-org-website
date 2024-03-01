@@ -4,7 +4,7 @@ lang: pt-br
 description: Os princípios por trás das decisões de design e conteúdo do ethereum.org
 ---
 
-# Nossos princípios de design \{#contributing-to-ethereumorg-}
+# Nossos princípios de design {#contributing-to-ethereumorg-}
 
 <Emoji text=":wave:" size={1} /> Olá, bem-vindo aos princípios de design do ethereum.org. Isso faz parte de um processo em curso para desenvolver e melhorar o ethereum.org.
 
@@ -12,13 +12,13 @@ Nossos fundamentos orientam a aparência e percepção do site e do conteúdo de
 
 Leia isso antes de [contribuir para o ethereum.org](/contributing/).
 
-## Quais são os nossos princípios de design? \{#ways-to-contribute}
+## Quais são os nossos princípios de design? {#ways-to-contribute}
 
 Não se preocupe, eles são muito simples! **Os princípios de design** são um conjunto de diretrizes a que nos referimos ao projetar (isto é, criar, manter ou atualizar) algo.
 
 No contexto do ethereum.org, esses princípios de “design” são a base do que queremos que o site represente e projete para o mundo. Eles são ambiciosos **e** funcionais ao mesmo tempo. Não se trata apenas da _aparência_ do site, mas também como ele _funciona_ e até mesmo como faz alguém _se sentir._ Tudo isso, desde as cores dos "layouts" de página até a forma como falamos sobre o Ethereum no site, deve ser orientado por esses princípios.
 
-## Os princípios na prática \{#how-decisions-about-the-site-are-made}
+## Os princípios na prática {#how-decisions-about-the-site-are-made}
 
 Vejamos um exemplo. Um dos princípios é a Credibilidade, o que significa que queremos que os visitantes do site _sintam_ e _saibam_ que o site é confiável — assim como todo o ecossistema do Ethereum. Com base nesse princípio, temos 3 "sub-princípios" funcionais que acreditamos serem medidas viáveis para tornar o site confiável:
 
@@ -32,9 +32,9 @@ Portanto, quando estamos tomando decisões de design ou de redação, podemos re
 - _"Como e onde estamos mostrando o tamanho e a atividade do ecossistema?"_
 - _"As novas contribuições propostas por um membro da comunidade que estou revisando são consistentes com o design e o texto atuais do site?"_
 
-## Os fundamentos de design do ethereum.org \{#contributors}
+## Os fundamentos de design do ethereum.org {#contributors}
 
-### 1. Inspirador \{#1-inspirational}
+### 1. Inspirador {#1-inspirational}
 
 O site deve inspirar os usuários a sonhar com a maneira como o Ethereum pode mudar o mundo. Ele deve motivar as pessoas a explorar, brincar e mexer com as ferramentas e aplicativos do ecossistema Ethereum.
 
@@ -43,7 +43,7 @@ O site deve inspirar os usuários a sonhar com a maneira como o Ethereum pode mu
 
 Direção Visual • Conteúdo
 
-### 2. Universal \{#2-universal}
+### 2. Universal {#2-universal}
 
 O Ethereum é um projeto global, descentralizado, e nosso público reflete isso. O site deve aspirar ser acessível a todos e sensível às diversas culturas do mundo.
 
@@ -53,7 +53,7 @@ O Ethereum é um projeto global, descentralizado, e nosso público reflete isso.
 
 Sistemas de escrita • Uso de cores • Direção visual • Conteúdo
 
-### 3. Uma boa história \{#3-a-good-story}
+### 3. Uma boa história {#3-a-good-story}
 
 O site deve funcionar como uma boa história. Os visitantes estão em uma jornada e o conteúdo que você contribui faz parte disso. Suas contribuições devem se encaixar em uma narrativa clara: com início (introdução/ponto de partida), meio (conjunto de aprendizados e informações) e fim (links para recursos relevantes ou próximos passos).
 
@@ -62,7 +62,7 @@ O site deve funcionar como uma boa história. Os visitantes estão em uma jornad
 
 Jornadas do usuário • Conteúdo
 
-### 4. Confiável \{#4-credible}
+### 4. Confiável {#4-credible}
 
 As pessoas podem estar procurando descobrir o ecossistema Ethereum ou podem ser céticas a respeito dele. Tenha consciência dessa responsabilidade na forma como você se comunica. Certifique-se de que esses dois tipos de pessoas saiam com maior confiança no ecossistema Ethereum.
 
@@ -72,7 +72,7 @@ As pessoas podem estar procurando descobrir o ecossistema Ethereum ou podem ser 
 
 Direção Visual • Conteúdo
 
-### 5. Melhoria colaborativa \{#5-collaborative-improvement}
+### 5. Melhoria colaborativa {#5-collaborative-improvement}
 
 O site é o produto de muitos colaboradores, assim como o ecossistema como um todo.
 
@@ -84,7 +84,7 @@ O site é o produto de muitos colaboradores, assim como o ecossistema como um to
 
 Você pode ver nossos princípios de design em ação [em nosso site](/).
 
-## Enviar comentários \{#give-feedback}
+## Enviar comentários {#give-feedback}
 
 **Compartilhe seus comentários sobre este documento!** Um de nossos princípios propostos é a “**Melhoria Colaborativa**”, ou seja, queremos o site seja o produto de muitos colaboradores. Portanto, no espírito desse princípio, queremos compartilhar esses princípios de design com a comunidade Ethereum.
 

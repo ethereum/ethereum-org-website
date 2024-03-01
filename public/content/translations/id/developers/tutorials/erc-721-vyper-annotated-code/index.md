@@ -11,13 +11,13 @@ skill: beginner
 published: 2021-04-01
 ---
 
-## Pendahuluan \{#introduction}
+## Pendahuluan {#introduction}
 
 Standar [ERC-721](/developers/docs/standards/tokens/erc-721/) digunakan untuk memegang kepemilikan Token yang Tak Dapat Dipertukarkan (NFT). Token [ERC-20](/developers/docs/standards/tokens/erc-20/) berperilaku sebagai komoditas, karena tidak ada perbedaan antara token individu. Sebaliknya, token ERC-721 dirancang untuk aset yang serupa tetapi tidak sama, seperti [kartun kucing](https://www.cryptokitties.co/) atau judul untuk bagian dari real estate yang berbeda.
 
 Dalam artikel ini kita akan menganalisa [kontrak ERC-721 Ryuya Nakamura](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy). Kontrak ini ditulis dalam [Vyper](https://vyper.readthedocs.io/en/latest/index.html), bahasa kontrak seperti Python yang dirancang untuk lebih menyulitkan penulisan kode yang tidak aman ketimbang yang ada di Solidity.
 
-## Kontrak \{#contract}
+## Kontrak {#contract}
 
 ```python
 # @dev Implementation of ERC-721 non-fungible token standard.
@@ -37,7 +37,7 @@ Antarmuka ERC-721 dibangun dalam bahasa Vyper. [Anda dapat melihat definisi kode
 
 Baris pertama mengimpor antarmuka, dan baris kedua menunjukkan bahwa kita mengimplementasikannya di sini.
 
-### Antarmuka ERC721Receiver \{#receiver-interface}
+### Antarmuka ERC721Receiver {#receiver-interface}
 
 ```python
 # Interface for the contract called by safeTransferFrom()
@@ -79,7 +79,7 @@ Untuk menghindari kejadian di mana kontrak secara tidak sengaja menerima transfe
 
 Fungsi ini merupakan sebuah `view`, yang berarti dapat membaca status blockchain tersebut, tetapi tidak dapat memodifikasinya.
 
-### Aksi \{#events}
+### Aksi {#events}
 
 [Aksi](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) dipancarkan untuk memberitahu aksi kepada pengguna dan server yang ada di luar blockchain. Perhatikan bahwa konten aksi tidak tersedia untuk kontrak di blockchain.
 
@@ -133,7 +133,7 @@ Terkadang ada gunanya memiliki _operator_ yang dapat mengelola semua token akun 
 
 Nilai `approved` memberi tahu kita apakah aksi merupakan persetujuan, atau penarikan dari persetujuan.
 
-### Variabel State \{#state-vars}
+### Variabel State {#state-vars}
 
 Variabel ini berisi state token saat ini: yang mana yang tersedia dan siapa yang memilikinya. Kebanyakan dari ini merupakan objek `HashMap`, [pemetaan satu arah yang ada di antara dua jenis](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
@@ -183,11 +183,11 @@ ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000
 
 [ERC-165](https://eips.ethereum.org/EIPS/eip-165) menentukan mekanisme pada kontrak untuk mengungkapkan cara agar aplikasi dapat berkomunikasi dengannya, ke ERC mana yang akan ia sesuaikan. Dalam kasus ini, kontrak menyesuaikan dengan ERC-165 dan ERC-721.
 
-### Fungsi \{#functions}
+### Fungsi {#functions}
 
 Ini adalah fungsi-fungsi yang benar-benar mengimplementasikan ERC-721.
 
-#### Konstruktor \{#constructor}
+#### Konstruktor {#constructor}
 
 ```python
 @external
@@ -212,7 +212,7 @@ Di Python, dan di Vyper, Anda juga dapat membuat komentar dengan menentukan stri
 
 Untuk mengakses variable status, Anda menggunakan `self.<variable name>` (sekali lagi, sama seperti di Python).
 
-#### Lihat Fungsi \{#views}
+#### Lihat Fungsi {#views}
 
 Berikut adalah fungsi-fungsi yang tidak mengubah state blockchain, dan karenanya dapat dieksekusikan secara bebas jika dipanggil secara eksternal. Jika fungsi tampilan dipanggil oleh sebuah kontrak, fungsi tersebut masih harus dieksekusi di setiap node dan karena itu terkena biaya gas.
 
@@ -311,7 +311,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 Fungsi ini memeriksa jika `_operator` diizinkan mengelola semua token milik `_owner` dalam kontrak ini. Dikarenakan dapat terjadi multioperator, ini merupakan HashMap dua tingkat.
 
-#### Fungsi Transfer Pembantu \{#transfer-helpers}
+#### Fungsi Transfer Pembantu {#transfer-helpers}
 
 Fungsi-fungsi berikut mengimplementasikan operasi yang merupakan bagian pentransferan atau pengelolaan token.
 
@@ -428,7 +428,7 @@ Kita memiliki fungsi internal ini karena ada dua cara untuk mentransfer token (r
 
 Untuk memancarkan aksi dalam Vyper, Anda menggunakan pernyataan `log` ([lihat di sini untuk selengkapnya](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 
-#### Fungsi Transfer \{#transfer-funs}
+#### Fungsi Transfer {#transfer-funs}
 
 ```python
 
@@ -551,7 +551,7 @@ def setApprovalForAll(_operator: address, _approved: bool):
     log ApprovalForAll(msg.sender, _operator, _approved)
 ```
 
-#### Cetak Token Baru dan Hancurkan Token Yang Sudah Ada \{#mint-burn}
+#### Cetak Token Baru dan Hancurkan Token Yang Sudah Ada {#mint-burn}
 
 Akun yang membuat kontrak adalah `minter`, pengguna super yang diotorisasi untuk mencetak NFT baru. Namun, bahkan pencetak tidak diizinkan untuk membakar token yang sudah ada. Hanya pemiliklah, atau entitas yang diotorisasi oleh pemilik, yang dapat melakukannya.
 
@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 Siapa pun yang diizinkan untuk mentransfer sebuah token diizinkan untuk membakarnya. Sekalipun pembakaran tampak sama dengan transfer ke alamat kosong, alamat nolnya tidak benar-benar menerima token. Ini memungkinkan kita untuk membebaskan semua penyimpanan yang digunakan untuk token, yang dapat mengurangi biaya gas transaksi.
 
-# Menggunakan Kontrak ini \{#using-contract}
+# Menggunakan Kontrak ini {#using-contract}
 
 Berlawanan dengan Solidity, Vyper tidak memiliki warisan. Ini adalah pilihan rancangan yang disengaja untuk membuat kode lebih jelas dan karena itu lebih mudah untuk diamankan. Jadi, untuk membuat kontrak ERC-721 Vyper Anda, Anda mengambil [kontrak ini](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) dan memodifikasinya untuk mengimplementasikan logika bisnis yang Anda inginkan.
 
-# Kesimpulan \{#conclusion}
+# Kesimpulan {#conclusion}
 
 Sebagai tinjauan, berikut adalah beberapa dari pokok pikiran terpenting dalam kontrak ini:
 

@@ -4,7 +4,7 @@ lang: en
 description: Our criteria for listing developer tools on ethereum.org
 ---
 
-# Adding developer tools \{#contributing-to-ethereumorg-}
+# Adding developer tools {#contributing-to-ethereumorg-}
 
 We want to make sure we list the best developer resources possible so that people can build with confidence and have the support they need.
 
@@ -14,7 +14,7 @@ We currently list developer tools throughout our [developer portal](/developers/
 
 **Feel free to suggest new additions to appropriate pages.**
 
-## How we decide \{#ways-to-contribute}
+## How we decide {#ways-to-contribute}
 
 Developer tool submissions will be assessed by the following criteria:
 
@@ -46,13 +46,13 @@ Many projects in the Ethereum space are open source. We are more likely to list 
 
 ---
 
-## Product Ordering \{#product-ordering}
+## Product Ordering {#product-ordering}
 
 Unless products are specifically ordered otherwise, such as alphabetically, products will be displayed from least to most recently added to the page. In other words, the newest products get added to the bottom of the list.
 
 ---
 
-## Add your developer tool \{#how-decisions-about-the-site-are-made}
+## Add your developer tool {#how-decisions-about-the-site-are-made}
 
 If you want to add a developer tool to ethereum.org and it meets the criteria, create an issue on GitHub.
 

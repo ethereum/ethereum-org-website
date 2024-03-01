@@ -43,7 +43,7 @@ interface IERC20 {
 
 Hier wird Zeile für Zeile erklärt, wofür die einzelnen Funktionen da sind. Danach stellen wir eine einfache Implementierung eines ERC-20-Tokens vor.
 
-## Getters \{#getters}
+## Getters {#getters}
 
 ```solidity
 function totalSupply() external view returns (uint256);
@@ -63,7 +63,7 @@ function allowance(address owner, address spender) external view returns (uint25
 
 Der ERC-20-Standard ermöglicht es einer Adresse, einer anderen Adresse eine Genehmigung zu erteilen, um Token von ihr abrufen zu können. Dieser Getter gibt die verbleibende Anzahl an Token zurück, die der `Spender` im Namen des `Owner` ausgeben darf. Diese Funktion ist ein Getter und ändert den Zustand des Vertrags nicht. Sie sollte standardmäßig 0 zurückgeben.
 
-## Funktionen \{#functions}
+## Funktionen {#functions}
 
 ```solidity
 function transfer(address recipient, uint256 amount) external returns (bool);
@@ -83,7 +83,7 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 
 Verschiebt die `Anzahl` an Token vom `Sender` zum `Recipient`, also Empfänger, unter Verwendung des Genehmigungsmechanismus. Der Betrag wird dann von der Vergütung des Abfragers abgezogen. Diese Funktion löst das Ereignis `Transfer` aus.
 
-## Ereignisse \{#events}
+## Ereignisse {#events}
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
@@ -99,7 +99,7 @@ event Approval(address indexed owner, address indexed spender, uint256 value);
 
 Dieses Ereignis wird ausgegeben, wenn die Anzahl an Token (`value`) vom `Owner`, also Eigentümer, zur Verwendung durch den `Spender` genehmigt wurde.
 
-## Eine einfache Implementierung von ERC-20-Token \{#a-basic-implementation-of-erc-20-tokens}
+## Eine einfache Implementierung von ERC-20-Token {#a-basic-implementation-of-erc-20-tokens}
 
 Im Folgenden finden Sie einen sehr einfachen Code, den Sie als Grundlage für Ihren ERC-20-Token verwenden können:
 

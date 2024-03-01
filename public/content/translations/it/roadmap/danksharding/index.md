@@ -9,11 +9,11 @@ summaryPoints:
   - In seguito, il Dansharding completo diffonderà la responsabilità di verificare i blob di dati tra i sottoinsiemi di nodi, ridimensionando ulteriormente Ethereum, a oltre 100.000 transazioni al secondo.
 ---
 
-# Danksharding \{#danksharding}
+# Danksharding {#danksharding}
 
 Il **Danksharding** è il metodo tramite cui Ethereum diventa una blockchain realmente scalabile ma, per arrivarci, sono necessari diversi aggiornamenti del protocollo. Il **Proto-Danksharding** è un passaggio intermedio, lungo tale percorso. Entrambi mirano a rendere le transazioni sul Livello 2 quanto più possibile economiche per gli utenti e dovrebbero ridimensionare Ethereum a >100.000 transazioni al secondo.
 
-## Cos'è il Proto-Danksharding? \{#what-is-protodanksharding}
+## Cos'è il Proto-Danksharding? {#what-is-protodanksharding}
 
 Il Proto-Danksharding, anche noto come [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), è un metodo per i [rollup](/layer2/#rollups) per aggiungere dati più economici ai blocchi. Il nome proviene dai due ricercatori che hanno proposto l'idea: Protolambda e Dankrad Feist. Al momento, i rollup sono limitati, relativamente all'economicità a cui possono compiere le transazioni degli utenti, dal fatto che pubblicano le proprie transazioni in `CALLDATA`. Ciò è costoso poiché è elaborato da tutti i nodi di Ethereum e risiede per sempre sulla catena, anche se i rollup necessitano dei dati soltanto per un breve periodo. Il Proto-Danksharding introduce i blob di dati, inviabili e collegabili ai blocchi. I dati in tali blob non sono accessibili all'EVM e sono eliminati automaticamente dopo un periodo di tempo fisso (1-3 mesi). Ciò significa che i rollup possono inviare i propri dati in modo molto più economico, trasferendo i risparmi agli utenti finali nella forma di transazioni più economiche.
 
@@ -33,15 +33,15 @@ I rollup pubblicano gli impegni ai dati delle proprie transazioni on chain e, in
 </ExpandableCard>
 }
 
-### Come sono verificati i dati dei blob? \{#how-are-blobs-verified}
+### Come sono verificati i dati dei blob? {#how-are-blobs-verified}
 
 I rollup pubblicano le transazioni che eseguono nei blob di dati. Inoltre, pubblicano un "impegno" ai dati. Lo fanno fissando una funzione polinomiale ai dati. Questa è valutabile su vari punti. Ad esempio, se definiamo una funzione estremamente semplice `f(x) = 2x-1`, possiamo valutarla per `x = 1`, `x = 2`, `x = 3`, che danno i risultati `1, 3, 5`. Un dimostratore applica la stessa funzione ai dati, valutandoli sugli stessi punti. Se i dati originali vengono modificati, la funzione non sarà identica e quindi i valori non sono valutati in ciascun punto. In realtà, l'impegno e la prova sono più complicati poiché sono avvolti in funzioni crittografiche.
 
-### Cos'è KZG? \{#what-is-kzg}
+### Cos'è KZG? {#what-is-kzg}
 
 KGZ sta per Kate-Zaverucha-Goldberg, i nomi dei tre [autori originali](https://link.springer.com/chapter/10.1007/978-3-642-17373-8_11) di uno schema che riduce un blob di dati a un piccolo ["impegno" crittografico](https://dankradfeist.de/ethereum/2020/06/16/kate-polynomial-commitments.html). Il blob di dati inviato da un rollup dev'essere verificato per assicurarsi che il rollup si stia comportando correttamente. Ciò richiede la ri-esecuzione delle transazioni nel blob da un dimostratore, per verificare che l'impegno sia valido. Questo equivale, concettualmente, al metodo con cui i client d'esecuzione verificano la validità delle transazioni di Ethereum sul livello 1, utilizzando le prove di Merkle. KZG è una prova alternativa che adatta un'equazione polinomiale ai dati. L'impegno valuta la polinomiale a determinati punti di dati segreti. Un dimostratore si adatterebbe alla stessa polinomiale sui dati, valutandola agli stessi valori e verificando che i risultati corrispondano. Questo è un modo per verificare che sia compatibile con le tecniche di conoscenza zero, utilizzate da alcuni rollup ed, eventualmente, da altre parti del protocollo di Ethereum.
 
-### Cos'è la cerimonia KZG? \{#what-is-a-kzg-ceremony}
+### Cos'è la cerimonia KZG? {#what-is-a-kzg-ceremony}
 
 Una cerimonia KZG è un metodo, per molte persone da tutta la community di Ethereum, di generare una stringa casuale segreta di numeri, utilizzabile per verificare dei dati. È molto importante che tale stringa di numeri non sia nota e non possa essere ricreata da nessuno. Per assicurarlo, ogni partecipante alla cerimonia riceve una stringa dal partecipante precedente. Quindi, possono creare dei nuovi valori casuali (ad esempio, consentendo al proprio browser di misurare il movimento del proprio mouse) e mischiandoli con il valore precedente. Quindi, inviano il valore al partecipante successivo e lo eliminano dalla propria macchina locale. Finché una persona nella cerimonia lo fa onestamente, il valore finale sarà sconosciuto a un utente malevolo. La cerimonia KZG dell'EIP-4844 è stata aperta al pubblico e decine di migliaia di persone hanno partecipato per aggiungere la propria entropia. Affinché la cerimonia sia compromessa, il 100% di questi partecipanti avrebbe dovuto essere attivamente disonesto. Dalla prospettiva dei partecipanti, se sanno di essere onesti, non è necessario fidarsi di nessun altro, poiché sanno di aver protetto la cerimonia (soddisfacendo individualmente il requisito del partecipante onesto "1 di N").
 
@@ -65,7 +65,7 @@ Se qualcuno conoscesse le posizioni casuali utilizzate per l'impegno, sarebbe fa
   Né il Danksharding, né il Proto-Danksharding seguono il modello di "frammentazione" tradizionale, che mirava alla divisione della blockchain in più parti. Le catene di frammenti non fanno più parte della tabella di marcia. Invece, il Danksharding utilizza il campionamento dei dati distribuiti tra blob, per ridimensionare Ethereum. Ciò è molto più semplice da implementare. Questo modello, talvolta, è stato indicato come "frammentazione dei dati".
 </InfoBanner>
 
-## Cos'è il Danksharding? \{#what-is-danksharding}
+## Cos'è il Danksharding? {#what-is-danksharding}
 
 Il Danksharding è la piena realizzazione del ridimensionamento del rollup, avviata con il Proto-Danksharding. Il Dankshaarding comporterà enormi quantità di spazio su Ethereum, dove i rollup potranno riversare i dati compressi delle loro transazioni. Ciò significa che Ethereum potrà supportare centinaia di rollup individuali con facilità, rendendo realtà milioni di transazioni al secondo.
 
@@ -87,11 +87,11 @@ Il campionamento della disponibilità dei dati è necessario perché i validator
 </ExpandableCard>
 }
 
-### Stato attuale \{#current-progress}
+### Stato attuale {#current-progress}
 
 Il Danksharding completo dista svariati anni. Tuttavia, il Proto-Danksharding dovrebbe arrivare relativamente presto. Al momento della scrittura (Feb 2023), la cerimonia KZG è ancora aperta e finora ha attirato oltre 50.000 collaboratori. L'[EIP](https://eips.ethereum.org/EIPS/eip-4844) per il Proto-Danksharding è matura, le specifiche sono concordate e i client hanno implementato dei prototipi, attualmente in fase di prova e preparazione alla produzione. La prossima fase è implementare le modifiche su una rete di prova pubblica. Puoi tenerti aggiornato utilizzando la [lista di controllo di prontezza dell'EIP-4844](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status).
 
-### Letture consigliate \{#further-reading}
+### Letture consigliate {#further-reading}
 
 - [Note sul Proto-Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
 - [Note di Dankrad sul Danksharding](https://notes.ethereum.org/@dankrad/new_sharding)

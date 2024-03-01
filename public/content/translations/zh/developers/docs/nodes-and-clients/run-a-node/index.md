@@ -9,13 +9,13 @@ sidebarDepth: 2
 
 注意，在[合并](/roadmap/merge)之后，运行以太坊节点需要两种客户端，即**执行层 (EL) **客户端和**共识层 (CL) **客户端。 本页面将展示如何安装、配置和连接这两种客户端以运行以太坊节点。
 
-## 前提条件 \{#prerequisites}
+## 前提条件 {#prerequisites}
 
 你应该明白什么是以太坊节点，以及你可能想要运行客户端的原因。 [节点和客户端](/developers/docs/nodes-and-clients/)涵盖了这一主题。
 
 如果你不熟悉运行节点这一主题，或者正在寻找技术含量较低的方式，建议你先参阅我们为了便于用户理解而编撰的[运行以太坊节点](/run-a-node)简介。
 
-## 选择一种方式 \{#choosing-approach}
+## 选择一种方式 {#choosing-approach}
 
 要启动自己的以太坊节点，第一步是选择你的运行方式。 根据要求和各种可能性，你必须选择客户端实现（执行客户端和共识客户端）、环境（硬件、系统）和客户端设置参数。
 
@@ -31,9 +31,9 @@ sidebarDepth: 2
 
 ![客户端设置](./diagram.png)
 
-### 运行环境和硬件设施 \{#environment-and-hardware}
+### 运行环境和硬件设施 {#environment-and-hardware}
 
-#### 本地或云端 \{#local-vs-cloud}
+#### 本地或云端 {#local-vs-cloud}
 
 以太坊客户端能够在消费级电脑上运行，并且不需要任何专用硬件，例如矿机。 因此，你可以根据需要选择多种节点部署方案。 简而言之，我们考虑在本地物理计算机和云端服务器上运行节点：
 
@@ -50,7 +50,7 @@ sidebarDepth: 2
 
 上面两种方案各有优点，总结如上。 如果你正在寻找云端解决方案，除了许多传统云计算服务商外，还有一些专注于部署以太坊节点的服务商， 查看[节点即服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)，了解有关托管节点的更多选项。
 
-#### 硬件 \{#hardware}
+#### 硬件 {#hardware}
 
 不过，一个抗审查的去中心化网络不应该依赖于云服务提供商。 而且，在自己的本地硬件上运行节点对该生态系统来说更健康。 从[估算数据](https://www.ethernodes.org/networkType/Hosting)来看，在云端运行大部分节点可能引发单点故障。
 
@@ -58,7 +58,7 @@ sidebarDepth: 2
 
 使用自己的硬件非常容易。 一般人可以选择一些简单的选项，技术水平较高的人士则可以在高级设置当中进行抉择。 接下来，我们了解一下在你的机器上运行以太坊客户端的要求和方法。
 
-#### 要求 \{#requirements}
+#### 要求 {#requirements}
 
 硬件要求因客户端不同而异，但通常不是很高，因为节点只需保持同步即可。 不要将其与需要更多算力的挖矿混淆。 不过，功能更强大的硬件的确可以优化同步时间和性能。
 
@@ -101,26 +101,26 @@ sidebarDepth: 2
 
 对于共识客户端，空间要求也取决于客户端实现和启用的功能（例如验证者、罚没者），但通常需要另外 200GB 磁盘空间存储信标数据。 由于验证者数量巨大，带宽负载也会增加。 你可以[在此分析中找到关于共识客户端要求的详细信息](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e)。
 
-#### 即插即用解决方案 \{#plug-and-play}
+#### 即插即用解决方案 {#plug-and-play}
 
 即插即用解决方案是使用自身硬件运行节点的最简单方式。 来自供应商的预配置机器提供最简洁的体验：订购、连接、运行。 一切都已预配置好并自动运行，你可以通过直观的指南和仪表板监测和控制软件。
 
 - [DappNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### 在单板计算机上运行以太坊 \{#ethereum-on-a-single-board-computer}
+#### 在单板计算机上运行以太坊 {#ethereum-on-a-single-board-computer}
 
 运行以太坊节点的一种经济简便的方法是使用单板计算机，甚至可以使用 ARM 架构的单板机，如树莓派。 [ARM 上的以太坊](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/)为树莓派和其他 ARM 单板机提供便于运行的多种执行客户端和共识客户端映像。
 
 这类小型、实惠且高效的设备非常适合在家中运行节点，但请记住它们的性能有限。
 
-## 启动节点 \{#spinning-up-node}
+## 启动节点 {#spinning-up-node}
 
 实际的客户端设置可以使用自动启动器完成，或者通过直接设置客户端软件手动完成。
 
 对于初级用户，推荐的方法是使用启动器，这种软件可以指导你完成安装并自动执行客户端设置过程。 但是，如果你有一些终端使用经验，手动设置步骤应该很容易完成。
 
-### 引导式设置 \{#automatized-setup}
+### 引导式设置 {#automatized-setup}
 
 一些用户友好的项目旨在改善客户端设置体验。 这些启动器提供自动客户端安装和配置，有些甚至提供图形界面用于引导式设置和监测客户端。
 
@@ -132,13 +132,13 @@ sidebarDepth: 2
 - [NiceNode](https://www.nicenode.xyz/) - 提供简便用户体验的启动器，可在你的计算机上运行节点。 只需选择客户端并单击几下即可启动它们。 仍在开发中。
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) - 节点设置工具，使用 CLI 向导自动生成 Docker 配置。 由 Nethermind 使用 Go 编写。
 
-### 手动客户端设置 \{#manual-setup}
+### 手动客户端设置 {#manual-setup}
 
 另一种选择是手动下载、验证和配置客户端软件。 即使一些客户端提供图形界面，手动设置仍然需要一些基本的终端使用技能，但它可以提供更多功能。
 
 如上所述，设置自己的以太坊节点需要运行一对共识客户端和执行客户端。 一些客户端可能包括另一类型的轻客户端，并且无需任何其他软件即可同步。 但是，完全去信任验证需要同时实现这两种客户端。
 
-#### 获取客户端软件 \{#getting-the-client}
+#### 获取客户端软件 {#getting-the-client}
 
 首先，你需要获取自己喜欢的[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)和[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)软件。
 
@@ -183,7 +183,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### 客户端设置 \{#client-setup}
+#### 客户端设置 {#client-setup}
 
 安装、下载或编译客户端软件后，你就可以运行它了。 这仅意味着必须使用正确的配置执行客户端。 客户端提供丰富的配置选项，你可以通过它们启用各种功能。
 
@@ -195,7 +195,7 @@ sha256sum teku-22.6.1.tar.gz
 
 要了解如何运行具有基本配置的执行客户端，请见下一节中的示例。
 
-#### 启动执行客户端 \{#starting-the-execution-client}
+#### 启动执行客户端 {#starting-the-execution-client}
 
 启动以太坊客户端软件之前，请最后检查环境是否已就绪。 例如，请确保：
 
@@ -217,7 +217,7 @@ sha256sum teku-22.6.1.tar.gz
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### 运行执行客户端 \{#running-an-execution-client}
+#### 运行执行客户端 {#running-an-execution-client}
 
 本节将指导你启动执行客户端。 它仅提供基本配置示例，该示例将使用以下设置启动客户端：
 
@@ -298,7 +298,7 @@ Nethermind 相关文档提供了有关运行 Nethermind 和共识客户端的[�
 
 执行客户端将启动其核心功能及所选端点，并开始寻找对等节点。 成功发现对等节点后，该客户端开始同步。 执行客户端将等待来自共识客户端的连接。 当客户端成功同步到最新状态时，最新的区块链数据将可用。
 
-#### 启动共识客户端 \{#starting-the-consensus-client}
+#### 启动共识客户端 {#starting-the-consensus-client}
 
 共识客户端必须以正确的端口配置启动，才能与执行客户端建立本地远程过程调用连接。 它在运行时必须使用公开的执行客户端端口作为配置参数。
 
@@ -371,7 +371,7 @@ teku --network mainnet \
 
 当共识客户端连接到执行客户端读取存款合约并识别验证者时，它也连接到其他对等信标节点并开始从创世块同步共识时隙。 信标节点达到当前时段后，信标应用程序接口将可供验证者使用。 了解关于[信标节点应用程序接口](https://eth2docs.vercel.app/)的更多信息。
 
-### 添加验证者 \{#adding-validators}
+### 添加验证者 {#adding-validators}
 
 共识客户端充当验证者要连接的信标节点。 每种共识客户端都有自己的验证者软件，后者在各自的相关文档中都有详细描述。
 
@@ -381,7 +381,7 @@ teku --network mainnet \
 
 研读[质押页面](/staking)以了解质押选项概述。
 
-### 使用节点 \{#using-the-node}
+### 使用节点 {#using-the-node}
 
 执行客户端提供[远程过程调用应用程序接口端点](/developers/docs/apis/json-rpc/)；在以太坊网络上，你可以通过多种方式使用这些端点提交交易、与智能合约交互或部署智能合约：
 
@@ -393,7 +393,7 @@ teku --network mainnet \
 
 共识客户端都公开一个[信标应用程序接口](https://ethereum.github.io/beacon-APIs)，可用于检查共识客户端的状态，或者通过使用 [Curl](https://curl.se) 等工具发送请求来下载区块和共识数据。 更多相关信息可在每种共识客户端的相关文档中找到。
 
-#### 访问远程过程调用 \{#reaching-rpc}
+#### 访问远程过程调用 {#reaching-rpc}
 
 执行客户端 JSON-RPC 的默认端口是 `8545`，但可以在配置中修改本地端点的端口。 默认情况下，远程过程调用接口只能在计算机的本地主机上访问。 为了让该端口可被远程访问，你可以通过将地址改为 `0.0.0.0` 公开它。 这样就可以通过本地网络或公共互联网协议地址访问该端口。 大多数情况下，你还需要在路由器上设置端口转发。
 
@@ -409,11 +409,11 @@ teku --network mainnet \
 
 最后，访问内部网络最流行的方式之一是通过虚拟专用网连接。 根据你的用例和需要访问节点的用户数，也许可以选择安全的虚拟专用网连接。 [OpenVPN](https://openvpn.net/) 是一种功能完善的安全套接层虚拟专用网，它使用行业标准安全套接字层/传输层安全协议实现了开放式系统互联二层或三层安全网络扩展，支持基于证书、智能卡和/或用户名/密码凭据的灵活客户端身份验证方法，并允许用户或群组特定的访问控制策略（使用应用于虚拟专用网虚拟接口的防火墙规则）。
 
-### 运行节点 \{#operating-the-node}
+### 运行节点 {#operating-the-node}
 
 你应该定期监控你的节点，确保它正常运行。 你可能还需要偶尔对它进行维护。
 
-#### 保持节点在线 \{#keeping-node-online}
+#### 保持节点在线 {#keeping-node-online}
 
 你的节点不必一直在线，但你应该尽可能让节点保持在线，使其与网络保持同步。 你可以将其关闭以重新启动，但请记住：
 
@@ -423,11 +423,11 @@ teku --network mainnet \
 
 *但是，共识层的验证者节点就需要一直在线。*验证者节点离线将影响所有依赖它的服务。 如果你是为了*质押*而运行节点，应该尽可能地减少停机时间。
 
-#### 创建客户端服务 \{#creating-client-services}
+#### 创建客户端服务 {#creating-client-services}
 
 考虑创建一个在启动时自动运行客户端的服务。 例如，在 Linux 服务器上，最佳做法是创建一种服务，例如使用 `systemd`，为有限权限的用户执行配置正确的客户端并自动重启。
 
-#### 更新客户端 \{#updating-clients}
+#### 更新客户端 {#updating-clients}
 
 你应该通过安装最新的安全补丁、功能和[以太坊改进提案](/eips/)，让客户端软件更新到最新版本。 特别是在[硬分叉](/history/)之前，确保运行正确的客户端版本。
 
@@ -437,17 +437,17 @@ teku --network mainnet \
 
 每种客户端实现都有一个人类可读的版本字符串，该字符串在点对点协议中使用但也可以从命令行访问。 该版本字符串让用户可以检查他们运行的客户端版本是否正确，并支持区块浏览器和用来量化网络上特定客户端分布的其他分析工具。 有关版本字符串的更多信息，请参阅各客户端相关文档。
 
-#### 运行额外服务 \{#running-additional-services}
+#### 运行额外服务 {#running-additional-services}
 
 运行自己的节点，可以让你使用需要直接访问以太坊客户端远程过程调用的服务。 这些服务构建在以太坊上，如[二层网络解决方案](/developers/docs/scaling/#layer-2-scaling)、钱包后端、区块浏览器、开发者工具和其他以太坊基础设施。
 
-#### 监测节点 \{#monitoring-the-node}
+#### 监测节点 {#monitoring-the-node}
 
 为了正确监测节点，请考虑收集指标。 客户端提供了指标端点，因此你可以获得有关节点的全面数据。 使用 [InfluxDB](https://www.influxdata.com/get-influxdb/) 或 [Prometheus](https://prometheus.io/) 等工具创建数据库，并且可以在 [Grafana](https://grafana.com/) 等软件中将其可视化并转换成图表。 在可视化节点和整个网络时，Grafana 有许多设置和各种仪表版可供使用。 例如，查看[有关监测 Geth 的教程](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/)。
 
 在监测过程中，请务必密切关注机器的性能。 在节点初始同步期间，客户端软件可能会占用大量 CPU 和内存资源。 除了 Grafana，你也可以使用操作系统自带的 `htop` 或 `uptime` 等工具来监测节点。
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [以太坊质押指南](https://github.com/SomerEsat/ethereum-staking-guides) _ – Somer Esat，定期更新_
 - [指南 | 如何在主网上为以太坊质押设置验证者](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _– CoinCashew，定期更新_
@@ -458,7 +458,7 @@ teku --network mainnet \
 - [在以太坊主网上运行 Hyperledger Besu 节点：优点、要求和设置](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi，2020 年 5 月 7 日_
 - [部署具有监测堆栈的 Nethermind 以太坊客户端](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth，2020 年 7 月 8 日_
 
-## 相关主题 \{#related-topics}
+## 相关主题 {#related-topics}
 
 - [节点和客户端](/developers/docs/nodes-and-clients/)
 - [区块](/developers/docs/blocks/)

@@ -12,7 +12,7 @@ summaryPoint2: Os NFTs estão dando mais poder do que nunca aos criadores de con
 summaryPoint3: Desenvolvido por contratos inteligentes na blockchain Ethereum.
 ---
 
-## O que são NFTs? \{#what-are-nfts}
+## O que são NFTs? {#what-are-nfts}
 
 NFTs são tokens que são individualmente exclusivos. Cada NFT contém diferentes propriedades (não-fungíveis) e é comprovadamente escasso. Isto é diferente de tokens como ERC-20, em que cada token em um conjunto é idêntico e tem as mesmas propriedades ('fungível'). Você não se importa com a nota de dólar específica que tem em sua carteira, porque todas são idênticas e têm o mesmo valor. Entretanto, você _se importa_ com o NFT específico que tem, porque todos têm propriedades individuais que os distinguem dos demais ("não fungíveis").
 
@@ -22,13 +22,13 @@ A exclusividade de cada NFT permite a tokenização de itens como arte, colecion
 <YouTube id="Xdkkux6OxfM" />
 }
 
-## A Internet de ativos \{#internet-of-assets}
+## A Internet de ativos {#internet-of-assets}
 
 Os NFTs e Ethereum resolvem alguns dos problemas que existem na internet atualmente. À medida que tudo se torna mais digital, há uma necessidade de replicar as propriedades de itens físicos, como escassez, exclusividade e prova de propriedade. de uma maneira não controlada por uma organização central. Por exemplo, com os NFTs, você pode ser titular de um mp3 de música que não é específico do aplicativo de música de uma empresa, ou pode ter um identificador de rede social que pode ser vendido ou trocado, mas que não pode ser arbitrariamente retirado de você por um provedor de plataforma.
 
 Veja como é uma Internet de NFTs comparada à Internet que a maioria de nós usa atualmente...
 
-### Uma comparação \{#nft-comparison}
+### Uma comparação {#nft-comparison}
 
 | Uma Internet NFT                                                                                                                                                 | A Internet hoje                                                                                                                                                             |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,13 +39,13 @@ Veja como é uma Internet de NFTs comparada à Internet que a maioria de nós us
 | Os criadores de conteúdo podem vender o trabalho deles em qualquer lugar e acessar um mercado global.                                                            | Os criadores dependem da infraestrutura e da distribuição das plataformas que utilizam. Essas normalmente estão sujeitas a termos de utilização e a restrições geográficas. |
 | Os criadores de NFT podem manter os direitos de propriedade sobre seu próprio trabalho e programar os royalties diretamente no contrato do NFT.                  | As plataformas, como os serviços de streaming de música, retêm a maior parte dos lucros das vendas.                                                                         |
 
-## Como funcionam os NFTs? \{#how-nfts-work}
+## Como funcionam os NFTs? {#how-nfts-work}
 
 Como qualquer token emitido no Ethereum, NFTs são emitidos por um contrato inteligente. O contrato inteligente está em conformidade com uma das diversas normas NFT (geralmente ERC-721 ou ERC-1155) que definem as funções do contrato. O contrato pode criar ("mintar") NFTs e atribuí-los a um proprietário específico. A propriedade é definida no contrato por meio do mapeamento de NFTs específicos a endereços específicos. O NFT tem um identificador (ID) e normalmente metadados associados que fazem com que o token específico seja exclusivo.
 
 Quando alguém cria ou minta um NFT, o que a pessoa está fazendo é executar uma função do contrato inteligente que atribui um NFT específico ao respectivo endereço. Essas informações são armazenadas no armazenamento do contrato, que faz parte do blockchain. O criador do contrato pode escrever lógica adicional no contrato, por exemplo, para limitar o fornecimento total ou definir um royalty a ser pago ao criador sempre que um token é transferido.
 
-## Para que servem os NFTs? \{#nft-use-cases}
+## Para que servem os NFTs? {#nft-use-cases}
 
 NFTs são utilizados para diversos fins, inclusive:
 
@@ -76,7 +76,7 @@ Este site também tem um nome de domínio alternativo fornecido por NFTs, **ethe
 <Divider />
 }
 
-### Segurança do NFT \{#nft-security}
+### Segurança do NFT {#nft-security}
 
 A segurança do Ethereum vem da prova de participação. O sistema foi projetado para desincentivar economicamente ações maliciosas, o que faz com que o Ethereum seja à prova de adulteração. É isso que possibilita a existência dos NFTs. Assim que o bloco que contém a sua transação de NFT é finalizado, um invasor teria que gastar milhões de ETH para alterá-lo. Qualquer pessoa que execute o software Ethereum poderá detectar imediatamente a adulteração desonesta de um NFT, e o agente mal-intencionado será penalizado economicamente e expulso.
 
@@ -86,7 +86,7 @@ Os problemas de segurança relacionados aos NFTs são, na maioria das vezes, rel
   Mais sobre segurança
 </ButtonLink>
 
-## Leitura adicional \{#further-reading}
+## Leitura adicional {#further-reading}
 
 - [Um guia sobre NFTs para iniciantes](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, janeiro de 2020_
 - [Rastreador de NFT Etherscan](https://etherscan.io/nft-top-contracts)

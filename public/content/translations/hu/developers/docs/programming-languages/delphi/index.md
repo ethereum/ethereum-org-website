@@ -15,7 +15,7 @@ Használj Ethereumot decentralizált alkalmazások (avagy "dappok") fejlesztés�
 
 Fejlesszen decentralizált alkalmazásokat Ethereumra, és lépjen interakcióba okosszerződésekkel a Delphi programozási nyelv használatával!
 
-## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel \{#getting-started-with-smart-contracts-and-the-solidity-language}
+## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Tegye meg az első lépést, hogy integrálja a Delphi-t az Ethereummal**
 
@@ -26,7 +26,7 @@ Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg az [ethereum.or
 - [Írd meg az első Okosszerződésed](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Tanuld meg a Solidity fordítását és telepítését](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Referenciák és hivatkozások kezdők számára \{#beginner-references-and-links}
+## Referenciák és hivatkozások kezdők számára {#beginner-references-and-links}
 
 **Bevezetés a Delphereum könyvtárba**
 
@@ -40,13 +40,13 @@ Szükséged van egy még kezdetlegesebb alapozóra? Tekintsd meg az [ethereum.or
 - [3 perces okosszerződés és Delphi - Első rész](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
 - [3 perces okosszerződés és Delphi - Második rész](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## Köztes cikkek \{#intermediate-articles}
+## Köztes cikkek {#intermediate-articles}
 
 - [Egy Ethereumon aláírt üzenetaláírás generálása Delphi-ben](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [Ether átutalás Delphi-vel](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [ERC-20 token átutalás Delphi-vel](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
-## Speciális használati minták \{#advanced-use-patterns}
+## Speciális használati minták {#advanced-use-patterns}
 
 - [Delphi és az Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum és Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)

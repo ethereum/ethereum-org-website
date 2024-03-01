@@ -4,7 +4,7 @@ description: Pagrindinė informacija, kurios reikia pradedant naudoti Ethereum.
 lang: lt
 ---
 
-# Ethereum naudojimas \{#using-ethereum}
+# Ethereum naudojimas {#using-ethereum}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: lt
 
 </FeaturedText>
 
-## Kaip naudoti su Ethereum sukurtą programą \{#how-to-use-an-application-built-on-ethereum}
+## Kaip naudoti su Ethereum sukurtą programą {#how-to-use-an-application-built-on-ethereum}
 
 Geriausias būdas pradėti naudoti Ethereum – pasinerti į ją iškart!
 

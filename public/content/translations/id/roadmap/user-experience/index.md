@@ -9,7 +9,7 @@ template: roadmap
 
 Menggunakan Ethereum perlu disederhanakan; mulai dari mengelola kunci dan dompet hingga memulai transaksi. Untuk memfasilitasi adopsi massal, Ethereum harus secara drastis meningkatkan kemudahan penggunaan, sehingga pengguna dapat merasakan akses tanpa izin dan tanpa sensor ke Ethereum dengan pengalaman tanpa gesekan dalam menggunakan aplikasi Web2.
 
-## Di luar frasa benih \{#no-more-seed-phrases}
+## Di luar frasa benih {#no-more-seed-phrases}
 
 Akun Ethereum dilindungi oleh sepasang kunci yang digunakan untuk mengidentifikasi akun (kunci publik) dan menandatangani pesan (kunci pribadi). Kunci pribadi seperti kata sandi utama; kunci ini memungkinkan akses penuh ke akun Ethereum. Ini adalah cara pengoperasian yang berbeda untuk orang-orang yang lebih akrab dengan bank dan aplikasi Web2 yang mengelola akun atas nama pengguna. Agar Ethereum dapat mencapai adopsi massal tanpa bergantung pada pihak ketiga yang tersentralisasi, harus ada cara yang mudah dan tanpa gesekan bagi pengguna untuk menjaga aset mereka dan tetap mengontrol data mereka tanpa harus memahami kriptografi kunci publik-pribadi dan manajemen kunci.
 
@@ -31,7 +31,7 @@ Ada beberapa peningkatan yang akan membuat menjalankan node jauh lebih mudah dan
 
 Dengan peningkatan ini, hambatan untuk menjalankan sebuah simpul dikurangi menjadi nol secara efektif. Pengguna akan mendapatkan keuntungan dari akses yang aman dan tanpa izin ke Ethereum tanpa harus mengorbankan ruang disk atau CPU yang signifikan di komputer atau ponsel mereka, dan tidak perlu bergantung pada pihak ketiga untuk akses data atau jaringan ketika mereka menggunakan aplikasi.
 
-## Kemajuan saat ini \{#current-progress}
+## Kemajuan saat ini {#current-progress}
 
 Dompet kontrak pintar sudah tersedia, tetapi lebih banyak peningkatan diperlukan untuk membuatnya terdesentralisasi dan tanpa izin. EIP-4337 adalah proposal matang yang tidak memerlukan perubahan apa pun pada protokol Ethereum. Kontrak pintar utama yang diperlukan untuk EIP-4337 digunakan pada bulan Maret 2023.
 

@@ -4,7 +4,7 @@ lang: sl
 description: Kako prispevati k ethereum.org prevajalskemu programu?
 ---
 
-# Prevajalski program \{#translation-program}
+# Prevajalski program {#translation-program}
 
 Prevajalski program je skupno prizadevanje za prevod ethereum.org v različne jezike, z namenom narediti stran bolj dostopno milijardam neangleško govorečih ljudi po svetu.
 
@@ -20,7 +20,7 @@ Naš napredek do zdaj:
   Prevzemite svoj POAP žeton! Če ste prevajali ethereum.org v letu 2021, vas čaka edinstven POAP. <a href="/contributing/#poap">Več o POAP-ih</a>
 </InfoBanner>
 
-## Misija in vizija \{#mission-and-vision}
+## Misija in vizija {#mission-and-vision}
 
 Ethereum skupnost želi biti globalna in vključevalna, vendar veliko njene vsebine poskrbi le za angleško govoreče in izpušča 6 milijard neangleško govorečih po celem svetu. Da bi ethereum.org lahko deloval kot portal v Ethereum za svetovno skupnost verjamemo, da je zagotavljanje Ethereum vsebin za neangleško govoreče v njihovih domačih jezikih ključnega pomena.
 
@@ -40,7 +40,7 @@ Ethereum.org prevajalski program želi narediti Ethereum dostopen za vse, s prev
 - Podpora deljenja znanja prek jezikov za ustvarjanje bolj informirane in izobražene Ethereum skupnosti
 - Povečanje Ethereumove vključljivosti in dostopnosti z odstranitvijo jezikovnih ovir, ki preprečujejo neangleško govorečim pridružitev ekosistemu
 
-## Kako prevajate? \{#how-to-translate}
+## Kako prevajate? {#how-to-translate}
 
 1. **[Pridružite se našemu projektu na Crowdinu](https://crowdin.com/project/ethereum-org/)**  
    Morali se boste prijaviti v vaš Crowdin račun ali ga ustvariti, če ga še nimate. Vse kar je potrebno za prijavo, je le e-poštni naslov in geslo.
@@ -99,7 +99,7 @@ Hvala za vaše sodelovanje pri ethereum.org prevajalskem programu!
   <a href="/contributing/translation-program/faq/">Prevajanje ethereum.org FAQ</a>
 </InfoBanner>
 
-## Viri \{#resources}
+## Viri {#resources}
 
 **Orodja**
 
@@ -125,7 +125,7 @@ Da boste na tekočem z napredkom prevajalskega programa, sledite [blogu Ethereum
 - [Julij 2020 posodobitev mejnikov](https://blog.ethereum.org/2020/07/29/ethdotorg-translation-milestone/)
 - [Avgust 2019 zagon prevajalskega programa](https://blog.ethereum.org/2019/08/20/translating-ethereum-for-our-global-community/)
 
-## Prevajanje Ethereum Launchpada za zastavljanje \{#staking-launchpad}
+## Prevajanje Ethereum Launchpada za zastavljanje {#staking-launchpad}
 
 Naša prevajalska skupnost prav tako dela na [Launchpad za zastavljanje](https://launchpad.ethereum.org/en/). Ta je v pomoč vsem, ki želijo nastaviti Ethereum validator in pomagati pri zavarovanju Ethereum omrežja. Launchpad je trenutno na voljo v 17 jezikih.
 

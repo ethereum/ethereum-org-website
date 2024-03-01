@@ -8,11 +8,11 @@ lang: it
 Il Proof of Work non è più il meccanismo di consenso alla base di Ethereum, il che significa che il mining è stato disattivato. Invece, Ethereum è protetto dai validatori che mettono ETH in staking. Puoi iniziare fin da subito a mettere in staking i tuoi ETH. Leggi di più su <a href='/roadmap/merge/'>La Fusione</a>, il <a href='/developers/docs/consensus-mechanisms/pos/'>proof-of-stake</a> e lo <a href='/staking/'>staking</a>. Questa pagina è solo per interesse storico.
 </InfoBanner>
 
-## Prerequisiti \{#prerequisites}
+## Prerequisiti {#prerequisites}
 
 Per comprendere meglio questa pagina, consigliamo innanzi tutto di leggere [transazioni](/developers/docs/transactions/), [blocchi](/developers/docs/blocks/) e [Proof of Work](/developers/docs/consensus-mechanisms/pow/).
 
-## Cos'è il mining in Ethereum? \{#what-is-ethereum-mining}
+## Cos'è il mining in Ethereum? {#what-is-ethereum-mining}
 
 Il mining è il processo di creazione di un blocco di transazioni, da aggiungere alla blockchain Ethereum nell'architettura ormai obsoleta di Proof of Work.
 
@@ -22,7 +22,7 @@ Minare ether = Proteggere la Rete
 
 Il mining è la linfa vitale di qualsiasi blockchain basata sul Proof of Work. Prima della transizione al Proof of Stake, i miner di Ethereum (computer che eseguono software) usavano il loro tempo e la loro capacità di calcolo per elaborare transazioni e produrre blocchi.
 
-## Perché esistono i miner? \{#why-do-miners-exist}
+## Perché esistono i miner? {#why-do-miners-exist}
 
 Nei sistemi decentralizzati come Ethereum, dobbiamo assicurarci che tutti concordino sull'ordine delle transazioni. In questo i miner aiutavano risolvendo complessi enigmi di calcolo con lo scopo di produrre blocchi, tenendo la rete al sicuro dagli attacchi.
 
@@ -30,7 +30,7 @@ Nei sistemi decentralizzati come Ethereum, dobbiamo assicurarci che tutti concor
 
 In precedenza, chiunque poteva minare sulla rete Ethereum usando il proprio computer. Tuttavia, non tutti potevano estrarre ether (ETH) in modo redditizio. In gran parte dei casi, i miner dovevano acquistare hardware dedicato e avere accesso a fonti energetiche convenienti. Per il computer medio, era improbabile guadagnare abbastanza ricompense dei blocchi da coprire i costi associati al mining.
 
-### Costi del mining \{#cost-of-mining}
+### Costi del mining {#cost-of-mining}
 
 - I costi potenziali dell'hardware necessario per costruire e mantenere una piattaforma di mining
 - I costi elettrici per alimentarla
@@ -39,7 +39,7 @@ In precedenza, chiunque poteva minare sulla rete Ethereum usando il proprio comp
 
 Per approfondire ulteriormente la redditività del mining, usa un apposito calcolatore, come quello messo a disposizione da [Etherscan](https://etherscan.io/ether-mining-calculator).
 
-## Come avveniva il mining delle transazioni Ethereum \{#how-ethereum-transactions-were-mined}
+## Come avveniva il mining delle transazioni Ethereum {#how-ethereum-transactions-were-mined}
 
 Quanto segue fornisce una panoramica di come erano minate le transazioni, nel proof-of-work di Ethereum. Una descrizione analoga di questo processo per il proof-of-stake di Ethereum, si può trovare [qui](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos).
 
@@ -56,13 +56,13 @@ Quanto segue fornisce una panoramica di come erano minate le transazioni, nel pr
 
 Il mining di ogni transazione (cioè l'inclusione in un nuovo blocco e la prima propagazione) avviene una volta sola, ma la transazione viene eseguita e verificata da ogni partecipante nel processo di avanzamento dello stato canonico dell'EVM. Questa è una delle regole fondamentali della blockchain: **non ti fidare, verifica**.
 
-## Blocchi ommer (zio) \{#ommer-blocks}
+## Blocchi ommer (zio) {#ommer-blocks}
 
 L'estrazione di blocchi basata sul proof-of-work era solo probabilistica, il che significa che a volte due blocchi validi venivano pubblicati simultaneamente a causa della latenza della rete. In questo caso, il protocollo doveva determinare la catena più lunga (e quindi più "valida") garantendo al tempo stesso un trattamento equo dei miner, ricompensando parzialmente il blocco valido proposto non incluso. Ciò incoraggiava l'ulteriore decentralizzazione della rete in quanto i piccoli miner, che potevano trovarsi ad affrontare una latenza più elevata, potevano comunque generare rendimenti tramite ricompense per blocchi [ommer](/glossary/#ommer).
 
 "Ommer" è il termine preferito, neutro dal punto di vista del genere, per lo stesso livello di un blocco padre, ma a volte viene anche indicato come "zio". **Da quando Ethereum è passato alla proof-of-stake, i blocchi ommer non vengono più estratti** poiché in ogni slot viene eletto solo un proponente. Questo cambiamento può essere osservato nel [grafico storico](https://ycharts.com/indicators/ethereum_uncle_rate) dei blocchi ommer estratti.
 
-## Demo visiva \{#a-visual-demo}
+## Demo visiva {#a-visual-demo}
 
 Austin ti guiderà attraverso il mining e la blockchain basata sul proof-of-work.
 
@@ -70,13 +70,13 @@ Austin ti guiderà attraverso il mining e la blockchain basata sul proof-of-work
 <YouTube id="zcX7OJ-L8XQ" />
 }
 
-## L'algoritmo di mining \{#mining-algorithm}
+## L'algoritmo di mining {#mining-algorithm}
 
 La Rete Principale di Ethereum ha sempre e solo usato un algoritmo di mining: ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash). Ethash era il successore di un algoritmo di R&S originale, noto come ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/).
 
 [Maggiori informazioni sugli algoritmi di mining](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 
-## Argomenti correlati \{#related-topics}
+## Argomenti correlati {#related-topics}
 
 - [Gas](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)

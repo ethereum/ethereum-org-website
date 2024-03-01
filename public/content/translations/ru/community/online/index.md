@@ -4,11 +4,11 @@ description: Список программ грантов в рамках эко
 lang: ru
 ---
 
-# Онлайн-сообщества \{#online-communities}
+# Онлайн-сообщества {#online-communities}
 
 Сотни тысяч энтузиастов Ethereum собираются на этих онлайн-форумах, чтобы делиться новостями, обсуждать последние разработки, технические вопросы и представления о будущем.
 
-## Форумы \{#forums}
+## Форумы {#forums}
 
 {
 {
@@ -36,7 +36,7 @@ lang: ru
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> — самая влиятельная доска сообщений, посвященная исследованиям в криптоэкономике</SocialListItem>
 }
 
-## Комнаты чата \{#chat-rooms}
+## Комнаты чата {#chat-rooms}
 
 {
 {
@@ -70,7 +70,7 @@ lang: ru
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *— децентрализованный форум вопросов и ответов*</SocialListItem>
 }
 
-## YouTube и Twitter \{#youtube-and-twitter}
+## YouTube и Twitter {#youtube-and-twitter}
 
 {
 {

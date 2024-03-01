@@ -8,7 +8,7 @@ summaryPoints:
   - Kunci yang hilang dan terbuka dapat dipulihkan dengan menggunakan beberapa cadangan
 ---
 
-# Abstraksi akun \{#account-abstraction}
+# Abstraksi akun {#account-abstraction}
 
 Pengguna berinteraksi dengan Ethereum menggunakan **[akun yang dimiliki secara eksternal (EOA)](/glossary/#eoa)**. Ini adalah satu-satunya cara untuk memulai transaksi atau mengeksekusi kontrak pintar. Hal ini membatasi bagaimana pengguna dapat berinteraksi dengan Ethereum. Misalnya, menyulitkan untuk melakukan banyak transaksi dan mengharuskan pengguna untuk selalu menjaga saldo ETH untuk menutupi gas.
 
@@ -34,7 +34,7 @@ Dompet kontrak pintar adalah solusi untuk masalah ini, tetapi saat ini sulit unt
 
 Pada akhirnya, abstraksi akun meningkatkan dukungan untuk dompet kontrak pintar, membuatnya lebih mudah dibuat dan lebih aman digunakan. Pada akhirnya, dengan abstraksi akun, pengguna dapat menikmati semua manfaat Ethereum tanpa harus mengetahui atau peduli dengan teknologi yang mendasarinya.
 
-## Di luar frasa benih \{#beyond-seed-phrases}
+## Di luar frasa benih {#beyond-seed-phrases}
 
 Akun-akun saat ini diamankan menggunakan kunci pribadi yang dihitung dari frasa benih. Setiap orang yang memiliki akses ke frase benih dapat dengan mudah menemukan kunci pribadi yang melindungi sebuah akun dan mendapatkan akses ke semua aset yang dilindunginya. Jika kunci pribadi dan frase benih hilang, maka tidak akan pernah bisa dipulihkan dan aset yang dikontrolnya akan dibekukan selamanya. Mengamankan frase benih ini sangat sulit, bahkan bagi pengguna yang sudah ahli sekalipun, dan phishing frasa benih merupakan salah satu cara yang paling umum dilakukan untuk menipu para pengguna.
 
@@ -50,7 +50,7 @@ Sebagai contoh, kunci cadangan dapat ditambahkan ke dompet sehingga jika Anda ke
 - **Tetapkan batas transaksi**: tentukan ambang batas harian berapa banyak nilai yang dapat ditransfer dari akun dalam satu hari/minggu/bulan. Ini berarti jika penyerang mendapatkan akses ke akun Anda, mereka tidak dapat menguras semuanya sekaligus dan Anda memiliki kesempatan untuk membekukan dan mengatur ulang akses.
 - **Buat daftar putih**: hanya mengizinkan transaksi ke alamat tertentu yang Anda ketahui aman. Ini berarti bahwa _meskipun_ kunci pribadi Anda dicuri, penyerang tidak dapat mengirimkan dana ke akun tujuan yang tidak masuk dalam daftar putih. Daftar putih ini akan membutuhkan beberapa tanda tangan untuk mengubahnya sehingga penyerang tidak dapat menambahkan alamat mereka sendiri ke dalam daftar kecuali mereka memiliki akses ke beberapa kunci cadangan Anda.
 
-## Pengalaman pengguna yang lebih baik \{#better-user-experience}
+## Pengalaman pengguna yang lebih baik {#better-user-experience}
 
 Abstraksi akun memungkinkan pengalaman **pengguna yang lebih baik secara keseluruhan** serta **peningkatan keamanan** karena menambahkan dukungan untuk dompet kontrak pintar di tingkat protokol. Alasan yang paling penting untuk hal ini adalah akan memberi pengembang kontrak pintar, dompet, dan aplikasi lebih banyak kebebasan untuk berinovasi pada pengalaman pengguna dengan cara yang mungkin belum dapat kita antisipasi. Beberapa peningkatan nyata yang akan datang bersama dengan abstraksi akun termasuk penggabungan transaksi untuk kecepatan dan efisiensi. Sebagai contoh, pertukaran sederhana seharusnya merupakan operasi sekali klik, tetapi saat ini memerlukan penandatanganan beberapa transaksi untuk menyetujui pengeluaran token individu sebelum pertukaran dieksekusi. Abstraksi akun menghilangkan gesekan tersebut dengan mengizinkan penggabungan transaksi. Selain itu, transaksi yang digabungkan dapat menyetujui dengan tepat nilai token yang tepat yang diperlukan untuk setiap transaksi dan kemudian mencabut persetujuan setelah transaksi selesai, memberikan keamanan tambahan.
 
@@ -72,7 +72,7 @@ Menarik juga untuk mempertimbangkan bagaimana pembelian dapat berubah dengan abs
 
 Ini hanyalah beberapa contoh bagaimana pengalaman pengguna dapat ditingkatkan dengan abstraksi akun, tetapi akan ada lebih banyak lagi yang belum kami bayangkan. Abstraksi akun membebaskan pengembang dari batasan EOA saat ini, memungkinkan mereka untuk membawa aspek-aspek yang baik dari web2 ke dalam web3 tanpa mengorbankan hak milik dan meretas secara kreatif pada pengalaman pengguna baru yang kreatif.
 
-## Bagaimana abstraksi akun akan diimplementasikan? \{#how-will-aa-be-implemented}
+## Bagaimana abstraksi akun akan diimplementasikan? {#how-will-aa-be-implemented}
 
 Dompet kontrak pintar sudah ada saat ini, namun sulit untuk diimplementasikan karena EVM tidak mendukungnya. Sebaliknya, mereka mengandalkan pembungkusan kode yang relatif rumit di sekitar transaksi Ethereum standar. Ethereum dapat mengubah hal ini dengan mengizinkan kontrak pintar untuk memulai transaksi, menangani logika yang diperlukan dalam kontrak pintar Ethereum, bukan di luar rantai. Menambahkan logika ke dalam kontrak pintar juga meningkatkan desentralisasi Ethereum karena menghilangkan kebutuhan untuk "relayers" yang dikelola oleh pengembang dompet guna menerjemahkan pesan yang ditandatangani oleh pengguna ke dalam transaksi Ethereum reguler.
 
@@ -116,11 +116,11 @@ Perhatikan bahwa EIP-3074 saat ini tidak aktif. Komunitas saat ini lebih menyuka
 </ExpandableCard>
 }
 
-## Kemajuan saat ini \{#current-progress}
+## Kemajuan saat ini {#current-progress}
 
 Dompet kontrak pintar sudah tersedia, tetapi lebih banyak peningkatan diperlukan untuk membuatnya terdesentralisasi dan tanpa izin. EIP-4337 adalah proposal matang yang tidak memerlukan perubahan apa pun pada protokol Ethereum, sehingga sangat mungkin untuk diimplementasikan dengan cepat. Namun, peningkatan yang mengubah protokol Ethereum saat ini tidak dalam pengembangan aktif, sehingga perubahan tersebut mungkin membutuhkan waktu lebih lama untuk dikirimkan. Hal ini juga memungkinkan bahwa abstraksi akun dicapai dengan cukup baik oleh EIP-4337 sehingga tidak ada perubahan protokol yang diperlukan.
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 - [erc4337.io](https://www.erc4337.io/)
 - [Diskusi panel abstraksi akun dari Devcon Bogota](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)

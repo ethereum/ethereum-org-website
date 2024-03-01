@@ -7,27 +7,27 @@ sidebarDepth: 2
 
 Ethereum düğümünün davranışı, çalıştırdığı istemci yazılımı tarafından kontrol edilir. Her biri farklı dillerde ayrı takımlar tarafından geliştirilen ve sürdürülen birden çok kullanılabilir seviyede Ethereum istemcisi bulunmaktadır. İstemciler, istemcilerin birbiriyle kesintisiz biçimde iletişim kuracağı, aynı fonksiyonelliğe sahip olacağı ve eş değer bir kullanıcı deneyimi sunacağı ortak özellikler üzerine kurulmuştur. Ancak, şu anda düğümler arasında istemcilerin dağıtımı ağ güçlendirmenin tam potansiyeline erişmesi için yeterince eşit değildir. İdeal olarak kullanıcılar ağa olabildiğince istemci çeşitliliği getirmek için farklı istemciler arasında aşağı yukarı eşit olarak dağılırlar.
 
-## Ön koşullar \{#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Düğümlerin ve istemcilerin ne olduğu konusunda henüz bir fikriniz yoksa, [düğümler ve istemciler](/developers/docs/nodes-and-clients/) kısmına bakın. [Yürütme](/glossary/#execution-layer) ve [mutabakat](/glossary/#consensus-layer) katmanları sözlükte tanımlanmıştır.
 
-## Neden birden fazla istemci var? \{#why-multiple-clients}
+## Neden birden fazla istemci var? {#why-multiple-clients}
 
 Birden fazla, bağımsız geliştirilen ve sürdürülen istemci bulunmaktadır çünkü istemci çeşitliliği ağı saldırılara ve hatalara karşı daha dayanıklı hale getirir. Birden fazla istemci Ethereum'a özel bir güçtür - diğer blok zincirler tek bir istemcinin yanılmazlığına güvenir. Ancak, sadece birden fazla istemci olması yetmez, topluluk tarafından benimsenmiş ve toplam aktif düğümlerin onların arasında neredeyse eş olarak dağıtılmış olması gerekir.
 
-## İstemci çeşitliliği neden önemli? \{#client-diversity-importance}
+## İstemci çeşitliliği neden önemli? {#client-diversity-importance}
 
 Birçok bağımsız geliştirilen ve sürdürülen istemci olması merkeziyetsiz bir ağın iyi durumu için hayatidir. Hadi sebeplerini öğrenelim.
 
-### Hatalar \{#bugs}
+### Hatalar {#bugs}
 
 Tekil bir istemcideki hata Ethereum düğümlerinin azınlık bir kısmını temsil ediyorken ağ için daha küçük bir risktir. Birçok istemci arasında kabaca eşit bir düğüm dağılımı ile, çoğu istemcinin paylaşılan bir sorundan muzdarip olma olasılığı düşüktür ve sonuç olarak ağ daha sağlamdır.
 
-### Saldırılara karşı dayanıklılık \{#resilience}
+### Saldırılara karşı dayanıklılık {#resilience}
 
 İstemci çeşitliliği saldırılara karşı da dayanıklılık sağlar. Örneğin, [spesifik bir istemciyi](https://twitter.com/vdWijden/status/1437712249926393858) zincirin özel bir dalına doğru kandıran bir saldırının başarılı olma ihtimali düşüktür çünkü diğer istemcilerin aynı şekilde saldırılabilir olması muhtemel değildir ve normal zincir bozulmamış şekilde durur. Düşük istemci çeşitliliği, baskın istemciye yönelik bir saldırıyla ilişkilendirilen riski arttırır. İstemci çeşitliliği, ağdaki kötü niyetli saldırılara karşı önemli bir savunma olduğunu zaten kanıtlamıştır, örneğin 2016'daki Şanghay hizmet reddi saldırısı, saldırganların baskın istemciyi (Geth) blok başına on binlerce kez yavaş bir disk girdi/çıktı işlemi yürütmesi için kandırabilmeleri nedeniyle mümkün oldu. Çünkü açığı paylaşmayan alternatif istemciler de çevrimiçiydi, Geth'teki açık kapatılırken Ethereum saldırıya karşı koymayı ve çalışmaya devam etmeyi başarmıştı.
 
-### Hisse kanıtı nihayeti \{#finality}
+### Hisse kanıtı nihayeti {#finality}
 
 Ethereum düğümlerinin %33'ünden fazlasına sahip olan bir fikir birliği katmanındaki bir açık fikir birliği katmanının kesinleşmesini engelleyebilirdi, yani kullanıcılar işlemlerin bir noktada geri alınmayacağına veya değiştirilmeyeceğine güvenemezdi. Bu özellikle DeFi gibi Ethereum üzerinde inşa edilmiş birçok uygulama için bayağı sıkıntılı olurdu.
 
@@ -35,11 +35,11 @@ Ethereum düğümlerinin %33'ünden fazlasına sahip olan bir fikir birliği kat
 
 Bunlar muhtemel olmayan senaryolar olsa da, Ethereum ekosistemi istemcilerin aktif düğümler arasındaki dağıtımını eşitleyerek riski azaltabilir. İdeal olarak, hiçbir fikir birliği istemcisi, toplam düğümlerin %33'lük bir kısmına sahip olamaz.
 
-### Ortak sorumluluk \{#responsibility}
+### Ortak sorumluluk {#responsibility}
 
 Çoğunluk istemciye sahip olmanın bir insan maliyeti de vardır. Küçük bir geliştirme ekibine aşırı baskı ve sorumluluk yükler. İstemci çeşitliliği ne kadar azsa, çoğunluk istemciyi koruyan geliştiricilerin sorumluluk yükü o kadar büyük olur. Bu sorumluluğu birden fazla ekibe yaymak, hem Ethereum'un düğüm ağının hem de insan ağının durumu için için iyidir.
 
-## Mevcut istemci çeşitliliği \{#current-client-diversity}
+## Mevcut istemci çeşitliliği {#current-client-diversity}
 
 ![İstemci çeşitliliğini gösteren pasta grafiği](./client-diversity.png) _[ethernodes.org](https://ethernodes.org) ve [clientdiversity.org](https://clientdiversity.org/) diyagram verisi_
 
@@ -49,15 +49,15 @@ Yürütüm katmanı verileri 23/01/2022 tarihinde [Ethernodes](https://ethernode
 
 Fikir birliği katmanı için güncel istemci çeşitliliği verileri artık [clientdiversity.org](https://clientdiversity.org/) adresinde mevcuttur.
 
-## Yürütüm katmanı \{#execution-layer}
+## Yürütüm katmanı {#execution-layer}
 
 Şimdiye kadar, istemci çeşitliliği etrafındaki konuşmalar esas olarak fikir birliği katmanına odaklandı. Ancak, yürütüm istemcisi [Geth](https://geth.ethereum.org) şu anda tüm düğümlerin yaklaşık %85'ini oluşturmaktadır. Bu yüzde, fikir birliği istemcileri için olduğu gibi aynı nedenlerle sorunludur. Örneğin, Geth'de işlemlerin ele alınmasını veya yürütme yüklerinin oluşturulmasını etkileyen bir hata fikir birliği istemcilerinin sıkıntılı veya hatalı işlemleri sonlandırmasına yol açabilir. Bundan dolayı, Ethereum daha eşit bir yürütüm katmanı dağılımı ile, ideal olarak hiçbir istemcinin ağın %33'ünden fazlasını temsil etmediği bir durum ile daha sağlıklı olurdu.
 
-## Azınlık istemcisi kullanın \{#use-minority-client}
+## Azınlık istemcisi kullanın {#use-minority-client}
 
 İstemci çeşitliliğini ele almak, azınlık istemcileri seçmek için bireysel kullanıcılardan daha fazlasını gerektirir - madencilik/doğrulayıcı havuzları ve büyük dapp'ler ve borsalar gibi kurumların da istemcileri değiştirmesini gerektirir. Ancak tüm kullanıcılar tüm mevcut Ethereum yazılımlarının kullanımını normalleştirerek mevcut eşitsizliği ortadan kaldırmaya katkı sağlayabilirler. Birleşimden sonra, tüm düğüm operatörlerinin, bir yürütüm istemcisi ve bir fikir birliği istemcisi çalıştırmaları gerekecektir. Aşağıda önerilen istemci kombinasyonlarını seçmek, istemci çeşitliliğini artırmaya yardımcı olacaktır.
 
-### Yürütüm istemcileri \{#execution-clients}
+### Yürütüm istemcileri {#execution-clients}
 
 [Besu](https://www.hyperledger.org/use/besu)
 
@@ -67,7 +67,7 @@ Fikir birliği katmanı için güncel istemci çeşitliliği verileri artık [cl
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
-### Mutabakat istemcileri \{#consensus-clients}
+### Mutabakat istemcileri {#consensus-clients}
 
 [Nimbus](https://nimbus.team/)
 
@@ -81,7 +81,7 @@ Fikir birliği katmanı için güncel istemci çeşitliliği verileri artık [cl
 
 Teknik kullanıcılar azınlık istemcileri için daha fazla öğretici ve doküman yazarak ve düğüm yöneten yakınlarını baskın istemcilerden ayrılmaya yönlendirerek bu süreci hızlandırmaya yardımcı olabilirler. Bir azınlık fikir birliği katmanına geçiş için kılavuzlar [clientdiversity.org](https://clientdiversity.org/) adresinde mevcuttur.
 
-## İstemci çeşitliliği gösterge panelleri \{#client-diversity-dashboards}
+## İstemci çeşitliliği gösterge panelleri {#client-diversity-dashboards}
 
 Birden fazla gösterge paneli yürütüm ve fikir birliği katmanları için gerçek zamanlı istemci çeşitliliği istatisikleri verir.
 
@@ -93,7 +93,7 @@ Birden fazla gösterge paneli yürütüm ve fikir birliği katmanları için ger
 - [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
-## Daha fazla okuma \{#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Ethereum'un fikir birliği katmanında istemci çeşitliliği](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
 - [Ethereum Birleşimi: Çoğunluk istemcisini sorumluluğunu alarak çalıştırın!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, 24 Mart 2022_
@@ -103,7 +103,7 @@ Birden fazla gösterge paneli yürütüm ve fikir birliği katmanları için ger
 - [Ethereum Çeşitliliği ve Bunun İçin Nasıl Çözüm Buluruz (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
-## İlgili konular \{#related-topics}
+## İlgili konular {#related-topics}
 
 - [Bir Ethereum düğümü çalıştırın](/run-a-node/)
 - [Düğümler ve istemciler](/developers/docs/nodes-and-clients/)

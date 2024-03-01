@@ -79,7 +79,7 @@ MyWaffleProject
 └── package.json
 ```
 
-### Ora parliamo di alcuni di questi file: \{#now-lets-talk}
+### Ora parliamo di alcuni di questi file: {#now-lets-talk}
 
 - Greeter.sol - il nostro Smart Contract scritto in Solidity;
 
@@ -126,7 +126,7 @@ describe("Greeter", function () {
 })
 ```
 
-### Il prossimo passaggio consiste nel compilare il contratto ed eseguire test: \{#compiling-and-testing}
+### Il prossimo passaggio consiste nel compilare il contratto ed eseguire test: {#compiling-and-testing}
 
 I test di Waffle usano Mocha (un framework di test) con Chai (una libreria di asserzione). È sufficiente eseguire `npx hardhat test` e attendere che compaia il messaggio seguente.
 
@@ -134,7 +134,7 @@ I test di Waffle usano Mocha (un framework di test) con Chai (una libreria di as
 ✓ Should return the new greeting once it's changed
 ```
 
-### Finora tutto bene, adesso aggiungiamo un po' di complessità al nostro progetto <Emoji text=":slightly_smiling_face:" size={1}/> \{#adding-complexity}
+### Finora tutto bene, adesso aggiungiamo un po' di complessità al nostro progetto <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
 Immagina una situazione in cui qualcuno aggiunge una stringa vuota come formula di saluto. Non sarebbe un bel saluto, vero?  
 Assicuriamoci che non succeda:
@@ -195,7 +195,7 @@ Eseguiamo di nuovo i test:
 
 Congratulazioni! Ce l'hai fatta :)
 
-### Conclusioni \{#conclusion}
+### Conclusioni {#conclusion}
 
 Abbiamo realizzato un semplice progetto con Waffle, Hardhat ed ethers.js. Abbiamo imparato come configurare un progetto, aggiungere un test e implementare nuove funzionalità.
 

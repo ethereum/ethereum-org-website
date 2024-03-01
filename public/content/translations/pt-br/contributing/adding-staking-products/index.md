@@ -4,7 +4,7 @@ description: A política que usamos ao adicionar participações em produtos e s
 lang: pt-br
 ---
 
-# Adicionando participação em produtos e serviços \{#adding-staking-products-or-services}
+# Adicionando participação em produtos e serviços {#adding-staking-products-or-services}
 
 Queremos ter certeza de que listamos os melhores recursos possíveis, mantendo os usuários seguros e confiantes.
 
@@ -18,7 +18,7 @@ Atualmente, listamos participações em produtos e serviços nas seguintes pági
 
 A prova de participação na Beacon Chain está ativa desde 1 de dezembro de 2020. Embora fazer participações (staking) seja algo relativamente novo, tentamos criar uma estrutura justa e transparente a ser considerada no ethereum.org, porém, os critérios de listagem vão mudar e evoluir com o tempo e, em última análise, ficarão a critério da equipe do ethereum.org.
 
-## O framework de decisão \{#the-decision-framework}
+## O framework de decisão {#the-decision-framework}
 
 A decisão de listar um produto no ethereum.org não depende de um único fator. Vários critérios são considerados em conjunto ao decidir listar um produto ou serviço. Quanto esses critérios ou mais forem atendidos, maior será a probabilidade de eles serem listados.
 
@@ -31,7 +31,7 @@ A decisão de listar um produto no ethereum.org não depende de um único fator.
 
 Atualmente, estamos listando apenas produtos ou serviços nessas categorias.
 
-### Critérios para inclusão \{#criteria-for-inclusion}
+### Critérios para inclusão {#criteria-for-inclusion}
 
 As submissões de produtos ou serviços de participação serão avaliadas pelos seguintes critérios:
 
@@ -54,7 +54,7 @@ As submissões de produtos ou serviços de participação serão avaliadas pelos
 
 - ou seja, Linux, macOS, Windows, iOS, Android
 
-#### Sistemas e contratos Inteligentes \{#software-and-smart-contracts}
+#### Sistemas e contratos Inteligentes {#software-and-smart-contracts}
 
 Para qualquer sistema personalizado ou contrato inteligente envolvido:
 
@@ -78,7 +78,7 @@ Para qualquer sistema personalizado ou contrato inteligente envolvido:
 - Caso contrário, há planos para criar uma recompensa por bugs na segurança?
 - Isso é usado para determinar a pontuação de "recompensa por bugs encontrados" dos produtos.
 
-#### Ferramenta de nó ou cliente \{#node-or-client-tooling}
+#### Ferramenta de nó ou cliente {#node-or-client-tooling}
 
 Para produtos de software relacionados à configuração de nó ou cliente, gerenciamento ou migração:
 
@@ -87,7 +87,7 @@ Para produtos de software relacionados à configuração de nó ou cliente, gere
 - Quais clientes são suportados? O usuário pode escolher?
 - Isso é usado para determinar a pontuação dos produtos "multicliente".
 
-#### Participação sobre Serviço \{#staking-as-a-service}
+#### Participação sobre Serviço {#staking-as-a-service}
 
 Para [listagens de participação como serviço](/staking/saas/) (ou seja, operação de nó delegado):
 
@@ -112,7 +112,7 @@ Para [listagens de participação como serviço](/staking/saas/) (ou seja, opera
 - Na última edição, o Prysm é o cliente da camada de consenso executado pela maioria dos nós operadores, o que é perigoso para a rede. Se um cliente atualmente estiver usando mais de 33% da rede, solicitamos os dados relacionados a esse uso.
 - Isso é usado para determinar a pontuação de “diversidade de clientes” dos produtos.
 
-#### Pool de Participação \{#staking-pool}
+#### Pool de Participação {#staking-pool}
 
 Para [serviços de participação (stake) em pool](/staking/pools/):
 
@@ -142,7 +142,7 @@ Para [serviços de participação (stake) em pool](/staking/pools/):
 - Na última edição, o Prysm é o cliente da camada de concenso executado pela maioria dos nós operadores, o que é perigoso para a rede. Se qualquer cliente CL está atualmente sendo usado acima de 33% da rede, ele pede os dados relacionados para o uso.
 - Isso é usado para determinar a pontuação de "clientes distintos" dos produtos.
 
-### Outros critérios: os bons para ter \{#other-criteria}
+### Outros critérios: os bons para ter {#other-criteria}
 
 **Quais interfaces de usuário são suportadas?**
 
@@ -156,13 +156,13 @@ Para [serviços de participação (stake) em pool](/staking/pools/):
 
 - Isso nos dá uma ideia do alcance do seu serviço até agora.
 
-## Como exibimos os resultados \{#product-ordering}
+## Como exibimos os resultados {#product-ordering}
 
 Os [critérios de inclusão](#criteria-for-inclusion) acima são usados para calcular a pontuação acumulada para cada produto ou serviço. Isso é usado como meio de classificação e apresentação de produtos que atendem a determinados critérios objetivos. Quanto mais critérios forem fornecidos para essa evidência, maior será a classificação de um produto, com ligações carregadas aleatoriamente.
 
 Atualmente, a lógica e os valores do código para esses critérios estão contidos [neste componente JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) em nosso repositório.
 
-## Adicione seu produto ou serviço \{#add-product}
+## Adicione seu produto ou serviço {#add-product}
 
 Se você quiser adicionar uma participação (stake) de produto ou serviço ao ethereum.org, crie um tíquete no GitHub.
 

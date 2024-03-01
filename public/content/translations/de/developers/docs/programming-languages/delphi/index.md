@@ -15,7 +15,7 @@ Sie können mit Ethereum dezentrale Anwendungen (oder "dApps") erstellen, die vo
 
 Erstellen Sie dezentrale Anwendungen auf Ethereum und interagieren Sie mit Smart Contracts in der Programmiersprache Delphi.
 
-## Erste Schritte mit Smart Contracts und der Solidity-Sprache \{#getting-started-with-smart-contracts-and-the-solidity-language}
+## Erste Schritte mit Smart Contracts und der Solidity-Sprache {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Erste Schritte bei der Integration von Delphi mit Ethereum**
 
@@ -26,7 +26,7 @@ Benötigen Sie für den Einstieg erst einmal allgemeinere Informationen? Dann em
 - [Den ersten Smart Contract schreiben](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Kompilieren und Bereitstellen von Solidity Code lernen](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Referenzen und Links für Einsteiger \{#beginner-references-and-links}
+## Referenzen und Links für Einsteiger {#beginner-references-and-links}
 
 **Einführung der Delphereum-Bibliothek**
 
@@ -40,13 +40,13 @@ Benötigen Sie für den Einstieg erst einmal allgemeinere Informationen? Dann em
 - [Ein 3-minütiger Smart Contract und Delphi – Teil 1](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
 - [Ein 3-minütiger Smart Contract und Delphi – Teil 2](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## Artikel für Fortgeschrittene \{#intermediate-articles}
+## Artikel für Fortgeschrittene {#intermediate-articles}
 
 - [Ethereum-signierte Nachrichten-Signatur in Delphi erstellen](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [Ether mit Delphi übertragen](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [ERC-20-Token mit Delphi übertragen](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
-## Fortgeschrittene Nutzungsmuster \{#advanced-use-patterns}
+## Fortgeschrittene Nutzungsmuster {#advanced-use-patterns}
 
 - [Delphi und Ethereum Name Service (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum und Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)

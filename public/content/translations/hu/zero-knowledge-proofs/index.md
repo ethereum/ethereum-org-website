@@ -4,7 +4,7 @@ description: A zero-knowledge bizonyítékok nem technikai bemutatása kezdők s
 lang: hu
 ---
 
-## Mik azok a zero-knowledge (nullaismeret-alapú) bizonyítékok? \{#what-are-zk-proofs}
+## Mik azok a zero-knowledge (nullaismeret-alapú) bizonyítékok? {#what-are-zk-proofs}
 
 A zero-knowledge bizonyíték annak módja, hogy egy állítás érvényességét úgy igazoljuk, hogy magát az állítást nem fedjük fel. A bizonyító próbálja az állítást elfogadtatni, miközben az ellenőrző felelős annak validálásáért.
 
@@ -14,7 +14,7 @@ A zero-knowledge bizonyíték először egy 1985-ös, „[Az interaktív bizony�
 
 A zero-knowledge bizonyítékok az elmúlt években tovább fejlődtek, és ma már számos valódi alkalmazásban használjuk ezeket.
 
-## Miért kellenek a zero-knowledge bizonyítékok? \{#why-zero-knowledge-proofs-are-important}
+## Miért kellenek a zero-knowledge bizonyítékok? {#why-zero-knowledge-proofs-are-important}
 
 A zero-knowledge bizonyítékok az alkalmazott kriptográfia egyik áttörése, mivel az egyének számára jobb információbiztonságot ígérnek. Gondoljon bele, hogyan bizonyít egy állítást (pl. „X ország állampolgára vagyok”) egy másik félnek (pl. egy szolgáltatásnyújtónak). Bizonyítékot kell adnia ahhoz, hogy az állítását alátámassza, mint az útlevelét vagy a vezetői engedélyét.
 
@@ -24,7 +24,7 @@ A zero-knowledge bizonyítékok megoldják ezt a problémát, mert az állítás
 
 A korábbi példánál maradva a nemzetiséget egyedül a zero-knowledge bizonyítékkal kell igazolnia. Az ellenőrző csak azt nézi meg, hogy a bizonyíték bizonyos jellemzői igazak, hogy meggyőződjön az állítás igaz voltáról.
 
-## Hogyan működik a zero-knowledge bizonyíték? \{#how-do-zero-knowledge-proofs-work}
+## Hogyan működik a zero-knowledge bizonyíték? {#how-do-zero-knowledge-proofs-work}
 
 A zero-knowledge bizonyíték által úgy igazolódik egy állítás igazsága, hogy abból bármi kiderülne vagy abból a módból, ahogy az igazolva lett. Ehhez a zero-knowledge protokollok olyan algoritmusokat használnak, melyek adatokat dolgoznak fel és válaszként igaz vagy hamis eredményt adnak.
 
@@ -48,7 +48,7 @@ A fenti egy interaktív zero-knowledge bizonyítékstruktúrát ír le. A korai 
 
 Ennek illusztrálására egy jó példa Jean-Jacques Quisquater híres [Ali Baba barlangtörténete](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave). A történetben Peggy (a bizonyító) bizonyítani akarja Victornak (az ellenőrzőnek), hogy tudja a titkos jelszót, ami kinyitja a varázsajtót, de nem akarja elárulni, mi az.
 
-### Nem interaktív zero-knowledge bizonyítékok \{#non-interactive-zero-knowledge-proofs}
+### Nem interaktív zero-knowledge bizonyítékok {#non-interactive-zero-knowledge-proofs}
 
 Miközben forradalmi, az interaktív bizonyítás hasznossága behatárolt, mert a két félnek elérhetőnek kell lennie és többször kell kapcsolatba lépniük. Még akkor is, ha az ellenőrző meggyőződött a bizonyító őszinteségéről, a bizonyíték ekkor még nem lesz elérhető a független ellenőrzésre (egy új bizonyítékot kell küldeni, ami egy újabb üzenetváltás).
 
@@ -60,9 +60,9 @@ A nem interaktív bizonyítás lecsökkenti a szükséges kommunikációt, így 
 
 A nem interaktív bizonyítékok áttörést hoztak a ZK technológiának és a ma létező bizonyítórendszerek fejlesztését hozták el. Az alábbiakban áttekintjük ezeket a bizonyítéktípusokat:
 
-### A zero-knowledge bizonyítékok típusai \{#types-of-zero-knowledge-proofs}
+### A zero-knowledge bizonyítékok típusai {#types-of-zero-knowledge-proofs}
 
-#### ZK-SNARKs \{#zk-snarks}
+#### ZK-SNARKs {#zk-snarks}
 
 ZK-SNARK a rövidítés a **zero-knowledge tömörített nem interaktív érv ismeretre (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge)**. A ZK-SNARK protokoll a következő jellemzőkkel bír:
 
@@ -82,7 +82,7 @@ A korábban említett megosztott kulcs nyilvános paraméterekre hivatkozik, ame
 
 A bizalmat igénylő összetétel esetén a felhasználónak bíznia kell a résztvevőkben, amikor azok létrehozzák a paramétereket. Ugyanakkor a ZK-STARK-ok kifejlesztése lehetővé tette a bizonyító protokolloknak, hogy bizalomigénytől mentes felállásban is működjenek.
 
-#### ZK-STARKs \{#zk-starks}
+#### ZK-STARKs {#zk-starks}
 
 ZK-STARK a rövidítés a **zero-knowledge skálázható transzparens érv ismeretre (Zero-Knowledge Scalable Transparent Argument of Knowledge)**. A ZK-STARK-ok hasonlítanak a ZK-SNARK-okra, kivéve, hogy:
 
@@ -92,9 +92,9 @@ ZK-STARK a rövidítés a **zero-knowledge skálázható transzparens érv ismer
 
 ZK-STARK-ok nagyobb bizonyítékokat készítenek, mint a ZK-SNARK-ok, ezért magasabb az ellenőrzési költség. Ugyanakkor bizonyos esetekben (mint nagy adathalmazok bizonyítása) a ZK-STARK-ok mégis költséghatékonyabbak a ZK-SNARK-okhoz képest.
 
-## A zero-knowledge bizonyítékok alkalmazási területei \{#use-cases-for-zero-knowledge-proofs}
+## A zero-knowledge bizonyítékok alkalmazási területei {#use-cases-for-zero-knowledge-proofs}
 
-### Anonim fizetések \{#anonymous-payments}
+### Anonim fizetések {#anonymous-payments}
 
 A bankkártyafizetések sokszor láthatók több fél számára is, beleértve a fizetési szolgáltatót, a bankokat és más érdekelteket (pl. kormányzati hatóságok). Míg a pénzügyi felügyeletnek vannak előnyei az illegális tevékenységek feltárásában, közben aláássa a hétköznapi emberek magánéletét.
 
@@ -106,19 +106,19 @@ A zero-knowledge technológiát bedolgozva a protokollba, a privát jelleget vé
 
 A zero-knowledge bizonyítékokat arra is használják, hogy a nyilvános blokkláncokon anonimmá tegyék a tranzakciókat. Erre a Tornado Cash a példa, ami egy decentralizált, nem felügyelt szolgáltatás, ami privát tranzakciókat tesz lehetővé az Ethereumon. Ez a megoldás zero-knowledge bizonyítékokat használ, hogy elfedje a tranzakció adatait és pénzügyi titoktartást garantál. Sajnos, mivel ezek tetszőlegesen választható adatvédő eszközök, ezért rögtön illegális tevékenységet sejtetnek. Ennek megoldására a privát jellegű adatok védelme végül alapvetővé kell váljon a nyilvános blokkláncokon.
 
-### A személyazonosság védelme \{#identity-protection}
+### A személyazonosság védelme {#identity-protection}
 
 A jelenlegi személyazonosságot kezelő rendszerek veszélyeztetik a személyes információkat. A zero-knowledge bizonyítékok segíthetnek az egyéneknek azonosítani magukat, miközben megvédik az adataikat.
 
 Ezek kiemelten fontosak a [decentralizált személyazonosság](/decentralized-identity/) kontextusában. A decentralizált személyazonosság (vagy független személyazonosság) lehetővé teszi, hogy az egyén kontrollálja a személyes azonosítóihoz való hozzáférést. Az állampolgárság igazolása adóazonosító vagy útlevéladatok felfedése nélkül egy jó példa arra, hogy a zero-knowledge technológia hogyan teszi lehetővé a decentralizált személyazonosság-ellenőrzést.
 
-### Hitelesítés \{#authentication}
+### Hitelesítés {#authentication}
 
 Az online szolgáltatások használatához igazolni kell a személyazonosságot és a hozzáférési jogot az adott platformhoz. Ez gyakran az olyan személyes adatok megadásával történik, mint név, e-mail-cím, születési dátum stb. Emellett hosszú jelszavakat kell megjegyezni, de a hozzáférés akár el is veszhet.
 
 A zero-knowledge bizonyítékok ugyanakkor leegyszerűsíthetik az azonosítást a platformok és a felhasználók számára is. Amint a ZK-bizonyíték elkészült a nyilvános inputok (pl. a platformtagságot tanúsító adat) és privát inputok (pl. a személy adatai) használatával, akkor a felhasználó egyszerűen azzal igazolja magát, amikor a szolgáltatást használni akarja. Ez javítja a felhasználói tapasztalatot, illetve mentesíti a szervezeteket, hogy nagy adag személyes információt tároljanak.
 
-### Igazolható kalkuláció \{#verifiable-computation}
+### Igazolható kalkuláció {#verifiable-computation}
 
 Az igazolható kalkuláció egy másik alkalmazása a ZK technológiának, hogy fejlessze a blokklánc kialakítását. Az igazolható kalkuláció által a kalkulációt másik entitás is végezheti, miközben az igazolható eredményeket fenntartjuk. A másik fél átadja az eredményeket a bizonyítékkal együtt, ami igazolja, hogy a program megfelelően futott.
 
@@ -142,7 +142,7 @@ Itt jön a képbe az igazolható kalkuláció. Amikor egy csomópont feldolgoz e
 
 [A zero-knowledge rollupok](/developers/docs/scaling/zk-rollups) és [a validiumok](/developers/docs/scaling/validium/) két olyan láncon kívüli, skálázási megoldás, amely érvényességi bizonyítékot ad, hogy a skálázás biztonságos legyen. Ezek a protokollok ezernyi tranzakciót dolgoznak fel láncon kívül és bizonyítékot adnak az Ethereumnak ellenőrzési célból. Amint a bizonyíték ellenőrzésre kerül, az eredményeket azonnal be lehet tenni a láncba, így az Ethereum több tranzakciót tud kezelni anélkül, hogy az alapréteg számítási kapacitását növelni kellene.
 
-### A vesztegetés és összejátszás lehetőségének csökkentése a láncon belüli szavazásnál \{#secure-blockchain-voting}
+### A vesztegetés és összejátszás lehetőségének csökkentése a láncon belüli szavazásnál {#secure-blockchain-voting}
 
 A blokklánc szavazási sémái számos kedvező vonással bírnak: teljesen auditálható, nem támadható, ellenáll a cenzúrának és nem kötik földrajzi megszorítások. De még ezek sem immunisak az **összejátszás** problémájára.
 
@@ -156,7 +156,7 @@ A láncon belüli szavazás kiteszi a kvadratikus finanszírozást az összeját
 
 Szerencsére újabb megoldások, mint amilyen a MACI (Minimum összejátszás-ellenes infrastruktúra/Minimum Anti-Collusion Infrastructure), zero-knowledge bizonyítékokat használ, hogy a láncon belüli szavazás ellenálló legyen a vesztegetéssel és összejátszással szemben. A MACI okosszerződésekből és szkriptekből áll, és lehetővé teszi egy központi adminisztrátor (a koordinátor) számára, hogy aggregálja a szavazatokat és kiszámolja az eredményeket, _anélkül_, hogy felfedné az egyéni szavazatok tartalmát. Még így is bizonyítani lehet, hogy a szavazatokat megfelelően számolták össze, illetve egy adott illető részt vette-e a szavazáson.
 
-#### Hogyan működik a MACI a zero-knowledge bizonyítékokkal? \{#how-maci-works-with-zk-proofs}
+#### Hogyan működik a MACI a zero-knowledge bizonyítékokkal? {#how-maci-works-with-zk-proofs}
 
 Először a koordinátor aktiválja a MACI szerződést az Ethereumon, majd a felhasználók jelentkezhetnek a szavazásra (regisztrálják a nyilvános kulcsukat az okosszerződésben). A felhasználók úgy szavaznak, hogy a nyilvános kulcsukkal titkosított üzenetet küldenek az okosszerződésnek (az érvényes szavazatot a legfrissebb nyilvános kulccsal kell aláírni, egyéb kritériumok mellett). Majd a koordinátor feldolgozza az összes üzenetet a szavazás lezárultával, megszámlálja azokat, és igazolja az eredményt a láncon.
 
@@ -178,29 +178,29 @@ Ha a koordinátor jóhiszeműen jár el, akkor a MACI egy kiváló eszköz arra,
 
 [Bővebben a MACI-ról](https://privacy-scaling-explorations.github.io/maci/).
 
-## A zero-knowledge bizonyítékok hátulütői \{#drawbacks-of-using-zero-knowledge-proofs}
+## A zero-knowledge bizonyítékok hátulütői {#drawbacks-of-using-zero-knowledge-proofs}
 
-### Hardverköltségek \{#hardware-costs}
+### Hardverköltségek {#hardware-costs}
 
 A zero-knowledge bizonyítékok generálása nagyon összetett kalkulációt igényel, amit specializált gépeken lehet a legjobban elvégezni. Mivel ezek drágák, ezért nem elérhetők a hétköznapi emberek számára. Emellett a technológiát használó alkalmazásoknak ezt a költséget bele kell kalkulálniuk az áraikba, így megnövelik a felhasználók költségeit is.
 
-### A bizonyíték ellenőrzésének költsége \{#proof-verification-costs}
+### A bizonyíték ellenőrzésének költsége {#proof-verification-costs}
 
 A bizonyítékok ellenőrzése is összetett kalkulációt igényel és megnöveli a technológia bevezetésének költségét az alkalmazásokban. Ez a költség még inkább releváns a bizonyítási kalkuláció kontextusában. Például a ZK-rollupok kb. 500 000 gázt fizetnek, hogy egyetlen ZK-SNARK bizonyítékot ellenőrizzenek az Ethereumon, a ZK-STARK-ok pedig még ennél is többe kerülnek.
 
-### Bizalmi feltételezések \{#trust-assumptions}
+### Bizalmi feltételezések {#trust-assumptions}
 
 A ZK-SNARK-ban a CRS (nyilvános paraméterek) egyszer kerül létrehozásra és azt újrahasználhatják a felek, akik részt akarnak venni a zero-knowledge protokollban. A nyilvános paramétereket egy bizalmat igénylő összetételi ceremónia révén hozzák létre, ahol a résztvevőkről feltételezzük, hogy jóhiszeműek.
 
 A felhasználók azonban nem tudják ellenőrizni a résztvevők jóhiszeműségét, meg kell bízniuk a fejlesztőkben. A ZK-STARK-ok mentesek az ilyen bizalomigénytől, mivel a véletlenszerűség nyilvánosan igazolható. Eközben a kutatók dolgoznak a ZK-SNARK-ok bizalomigénynélküli verzióján, hogy növeljék a bizonyítási mechanizmus biztonságát.
 
-### A kvantumszámítógép fenyegetései \{#quantum-computing-threats}
+### A kvantumszámítógép fenyegetései {#quantum-computing-threats}
 
 A ZK-SNARK elliptikus görbe alapú kriptográfiát ([ECDSA](/glossary/#ecdsa)) használ a titkosításra. Ez az algoritmus most biztonságos, de a kvantumszámítógépek meg tudják majd törni ezt a biztonsági modellt a jövőben.
 
 A ZK-STARK immunis a kvantumszámítógépek fenyegetésére, mert ütközésálló hash-függvényeket használ a titkosításra. Ezt az algoritmust nehezebb feltörni a kvantumszámítógépnek, nem úgy, mint a nyilvános-privát kulcs párosát, melyet az elliptikusgörbe-alapú kriptográfia használ.
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [Az informatikus egy koncepciót 5 nehézségi szinten tár fel | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) – _Wired YouTube channel_
 - [A zero-knowledge bizonyítékok alkalmazási területeinek áttekintése](https://appliedzkp.org/#Projects) — _Privacy and Scaling Explorations Team_

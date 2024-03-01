@@ -4,7 +4,7 @@ description: Introduzione ai concetti fondamentali di Ethereum per sviluppatori 
 lang: it
 ---
 
-## Cos'è una blockchain? \{#what-is-a-blockchain}
+## Cos'è una blockchain? {#what-is-a-blockchain}
 
 Una blockchain si può descrivere come un database pubblico che viene aggiornato e condiviso fra molti computer in una rete.
 
@@ -24,7 +24,7 @@ Guarda Anders che spiega gli hash nelle blockchain:
 <YouTube id="_160oMzblY8" />
 }
 
-## Cos'è Ethereum? \{#what-is-ethereum}
+## Cos'è Ethereum? {#what-is-ethereum}
 
 Ethereum è una blockchain con un computer incorporato. È la base per la creazione di app e organizzazioni in un modo decentralizzato, senza autorizzazioni e resistente alla censura.
 
@@ -34,7 +34,7 @@ Le richieste di calcolo sono dette richieste di transazione; il registro di tutt
 
 I meccanismi crittografici assicurano che una volta verificate come valide e aggiunte alla blockchain, le transazioni non possano essere successivamente manomesse. Inoltre, gli stessi meccanismi assicurano che tutte le transazioni siano firmate ed eseguite con "permessi" appropriati (nessuno dovrebbe poter inviare risorse digitali dal conto di Alice, tranne la stessa Alice).
 
-## Cos'è un ether? \{#what-is-ether}
+## Cos'è un ether? {#what-is-ether}
 
 **Ether (ETH)** è la criptovaluta nativa di Ethereum. Lo scopo di ETH è consentire un mercato per il calcolo. Un mercato di questo tipo fornisce un incentivo economico affinché i partecipanti verifichino ed eseguano le richieste di transazione e forniscano risorse di calcolo alla rete.
 
@@ -44,7 +44,7 @@ L'importo di ETH pagato corrisponde alle risorse necessarie a eseguire il calcol
 
 L'ETH è inoltre usato per fornire sicurezza cripto-economica alla rete in tre modi principali: 1) è usato come un mezzo per ricompensare i validatori che propongono i blocchi o segnalano i comportamenti disonesti degli altri validatori; 2) è messo in staking dai validatori, fungendo da garanzia contro i comportamenti disonesti: se i validatori tentano di comportarsi in modo malevolo, i loro ETH possono esser distrutti; 3) è usato per ponderare i 'voti' per i blocchi appena proposti, alimentando la parte di scelta della diramazione del meccanismo di consenso.
 
-## Cosa sono i contratti intelligenti? \{#what-are-smart-contracts}
+## Cosa sono i contratti intelligenti? {#what-are-smart-contracts}
 
 In pratica, i partecipanti non scrivono nuovo codice ogni volta che desiderano richiedere un calcolo sull'EVM. Piuttosto, gli sviluppatori dell'applicazione caricano i programmi (frammenti di codice riutilizzabili) nello stato EVM e gli utenti richiedono di eseguire questi frammenti di codice con parametri variabili. Chiamiamo i programmi caricati a ed eseguiti dai contratti intelligenti della rete.
 
@@ -54,37 +54,37 @@ Qualsiasi sviluppatore può creare un contratto intelligente e renderlo pubblico
 
 Dunque, con i contratti intelligenti, gli sviluppatori possono creare e distribuire arbitrariamente app e servizi rivolti agli utenti, come: mercati, strumenti finanziari, giochi, etc.
 
-## Terminologia \{#terminology}
+## Terminologia {#terminology}
 
-### Blockchain \{#blockchain}
+### Blockchain {#blockchain}
 
 La sequenza di tutti i blocchi che sono stati salvati nella rete Ethereum in tutta la sua storia. È chiamata in questo modo perché ciascun blocco contiene un riferimento a quello precedente, il che aiuta a mantenere un ordine tra tutti i blocchi (e quindi a livello della storia precisa).
 
-### ETH \{#eth}
+### ETH {#eth}
 
 **Ether (ETH)** è la criptovaluta nativa di Ethereum. Gli utenti pagano ETH ad altri utenti perché le loro richieste di esecuzione di codice vengano soddisfatte.
 
 [Maggiori informazioni su ETH](/developers/docs/intro-to-ether/)
 
-### EVM \{#evm}
+### EVM {#evm}
 
 La Macchina Virtuale di Ethereum è il computer virtuale globale il cui stato è concordato e memorizzato da ogni partecipante alla rete Ethereum. Ogni partecipante può richiedere l'esecuzione di codice arbitrario all'EVM; l'esecuzione di codice cambia lo stato dell'EVM.
 
 [Maggiori informazioni sull'EVM](/developers/docs/evm/)
 
-### Nodi \{#nodes}
+### Nodi {#nodes}
 
 Le macchine fisiche reali che conservano lo stato dell'EVM. I nodi comunicano tra di loro per propagare informazioni sullo stato dell'EVM e sui cambiamenti di stato. Ogni utente può inoltre richiedere l'esecuzione del codice trasmettendo una richiesta di esecuzione di codice da un nodo. La rete Ethereum è l'insieme di tutti i nodi Ethereum e delle loro comunicazioni.
 
 [Maggiori informazioni sui nodi](/developers/docs/nodes-and-clients/)
 
-### Conti \{#accounts}
+### Conti {#accounts}
 
 Dove sono conservati gli ETH. Gli utenti possono inizializzare i conti, depositare ETH nei conti e trasferire ETH dai propri conti ad altri utenti. I conti e i loro saldi sono archiviati in una grande tabella nell'EVM; sono parte dello stato complessivo dell'EVM.
 
 [Di più sui conti](/developers/docs/accounts/)
 
-### Transazioni \{#transactions}
+### Transazioni {#transactions}
 
 "Richiesta di transazione" è il termine formale per indicare una richiesta di esecuzione del codice sull'EVM, mentre una "transazione" è una richiesta di transazione portata a termine e il cambiamento associato nello stato dell'EVM. Qualunque utente può trasmettere una richiesta di transazione alla rete da un nodo. Affinché la richiesta di transazione influenzi lo stato dell'EVM concordato, deve essere convalidata, eseguita e "inviata alla rete" da un altro nodo. L'esecuzione di codice innesca un cambiamento di stato dell'EVM; al salvataggio della transazione, questo cambiamento di stato viene trasmesso a tutti i nodi della rete. Alcuni esempi di transazione:
 
@@ -94,25 +94,25 @@ Dove sono conservati gli ETH. Gli utenti possono inizializzare i conti, deposita
 
 [Maggiori informazioni sulle transazioni](/developers/docs/transactions/)
 
-### Blocchi \{#blocks}
+### Blocchi {#blocks}
 
 Il volume di transazioni è molto alto, quindi le transazioni sono "salvate" in lotti, o blocchi. I blocchi generalmente contengono da decine a centinaia di transazioni.
 
 [Maggiori informazioni sui blocchi](/developers/docs/blocks/)
 
-### Contratti intelligenti \{#smart-contracts}
+### Contratti intelligenti {#smart-contracts}
 
 Uno snippet di codice riutilizzabile (programma) che uno sviluppatore pubblica nello stato dell'EVM. Chiunque può richiedere che il codice del contratto intelligente sia eseguito effettuando una richiesta di transazione. Poiché gli sviluppatori possono scrivere applicazioni arbitrarie eseguibili nell'EVM (giochi, mercati, strumenti finanziari, etc.) pubblicando i contratti intelligenti, questi sono anche spesso detti [dapp, o App Decentralizzate](/developers/docs/dapps/).
 
 [Di più sui contratti intelligenti](/developers/docs/smart-contracts/)
 
-## Letture consigliate \{#further-reading}
+## Letture consigliate {#further-reading}
 
 - [Ethereum Whitepaper](/whitepaper/)
 - [How does Ethereum work, anyway?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway) - _Preethi Kasireddy_ (**NB** questa risorsa è ancora preziosa ma tieni presente che è antecedente a [ La Fusione](/roadmap/merge) e quindi si riferisce ancora al meccanismo proof-of-work di Ethereum: attualmente Ethereum è protetta da un meccanismo [proof-of-stake](/developers/docs/consensus-mechanisms/pos))
 
 _Conosci una risorsa della community che ti è stata utile? Modifica questa pagina e aggiungila!_
 
-## Tutorial correlati \{#related-tutorials}
+## Tutorial correlati {#related-tutorials}
 
 - [Una guida per sviluppatori a Ethereum, parte 1](/developers/tutorials/a-developers-guide-to-ethereum-part-one/) _– Un'esplorazione di Ethereum pensata per i principianti usando Python e web3.py_

@@ -6,7 +6,7 @@ lang: pl
 
 Web2 odnosi się do wersji Internetu znanej dziś przez większość z nas. Internet zdominowany przez firmy, które świadczą usługi w zamian za dane osobowe. Web3, w kontekście Ethereum, odwołuje się do zdecentralizowanych aplikacji, które działają w łańcuchu bloków. Są to aplikacje, które umożliwiają każdemu uczestniczenie bez zarabiania na jego danych osobowych.
 
-## Korzyści Web3 \{#web3-benefits}
+## Korzyści Web3 {#web3-benefits}
 
 Wielu programistów Web3 zdecydowało się budować aplikacje ze względu na nieodłączną decentralizację Ethereum:
 
@@ -15,7 +15,7 @@ Wielu programistów Web3 zdecydowało się budować aplikacje ze względu na nie
 - Płatności są realizowane za pomocą natywnego tokenu, etheru (ETH).
 - Ethereum jest kompletne w sensie Turinga, co oznacza, że ​​możesz zaprogramować praktycznie wszystko.
 
-## Praktyczne porównania \{#practical-comparisons}
+## Praktyczne porównania {#practical-comparisons}
 
 | Web2                                                                                            | Web3                                                                                                                 |
 | ----------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
@@ -25,7 +25,7 @@ Wielu programistów Web3 zdecydowało się budować aplikacje ze względu na nie
 
 To nie oznacza, że wszystkie usługi muszą zostać przekształcone w aplikacje zdecentralizowane. Te przykłady ilustrują główne różnice między usługami web2 i web3.
 
-## Ograniczenia sieci Web3 \{#web3-limitations}
+## Ograniczenia sieci Web3 {#web3-limitations}
 
 Web3 ma teraz pewne ograniczenia:
 
@@ -33,7 +33,7 @@ Web3 ma teraz pewne ograniczenia:
 - UX — interakcja z aplikacjami web3 może wymagać dodatkowych kroków, oprogramowania i edukacji. Może to stanowić przeszkodę w akceptacji.
 - Koszt — najbardziej udane aplikacje umieszczają bardzo małe części swojego kodu w blockchainie, ponieważ jest to kosztowne.
 
-## Centralizacja a decentralizacja \{#centralization-vs-decentralization}
+## Centralizacja a decentralizacja {#centralization-vs-decentralization}
 
 W tabeli poniżej wymieniono pewne zalety i wady scentralizowanych i zdecentralizowanych sieci cyfrowych.
 
@@ -49,7 +49,7 @@ W tabeli poniżej wymieniono pewne zalety i wady scentralizowanych i zdecentrali
 
 Zauważ, że są to ogólne wzorce, które mogą nie być prawdziwe w każdej sieci. Ponadto w rzeczywistości stopień, w jakim sieć jest scentralizowana/zdecentralizowana, należy do pewnego zakresu; żadna sieć nie jest całkowicie scentralizowana lub całkowicie zdecentralizowana.
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 - [Znaczenie decentralizacji](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) _6 lutego 2017 - Vitalik Buterin_
 - [Dlaczego decentralizacja ma znaczenie](https://medium.com/s/story/why-decentralization-matters-5e3f79f7638e) _18 lutego 2018 - Chris Dixon_

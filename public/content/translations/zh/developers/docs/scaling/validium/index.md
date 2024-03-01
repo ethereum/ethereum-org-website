@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 Validium 是一种[扩容解决方案](/developers/docs/scaling/)，使用[零知识卷叠](/developers/docs/scaling/zk-rollups/)等有效性证明来执行交易的完整性，但它不在以太坊主网上存储交易数据。 虽然链下数据可用性是一种折衷方案，但它可以显著提升可扩展性（Validium 每秒可以处理[约 9000 笔交易，甚至更多](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)）。
 
-## 前提条件 \{#prerequisites}
+## 前提条件 {#prerequisites}
 
 你应该已经阅读并理解关于[以太坊扩容](/developers/docs/scaling/)和[二层网络](/layer-2)的页面。
 
-## 什么是 Validium？ \{#what-is-validium}
+## 什么是 Validium？ {#what-is-validium}
 
 Validium 是使用链下数据可用性和计算的扩展解决方案，旨在通过在以太坊主网外处理交易来提高吞吐量。 与零知识卷叠（ZK 卷叠）一样，Validium 发布[零知识证明](/glossary/#zk-proof)以便在以太坊上验证链下交易。 这样可以防止无效的状态转换并增强 Validium 链的安全保障。
 
@@ -23,7 +23,7 @@ Validium 是使用链下数据可用性和计算的扩展解决方案，旨在�
 
 这是 Validium 和零知识卷叠之间的主要区别，它们在数据可用性范围内的位置不同。 两种解决方案处理数据存储的方式不同，这会对安全性和去信任产生影响。
 
-## Validium 如何与以太坊交互？ \{#how-do-validiums-interact-with-ethereum}
+## Validium 如何与以太坊交互？ {#how-do-validiums-interact-with-ethereum}
 
 Validium 是建立在现有以太坊链上的扩容协议。 虽然它在链下执行交易，但 Validium 链由部署在主网上的一系列智能合约管理，包括：
 
@@ -33,31 +33,31 @@ Validium 是建立在现有以太坊链上的扩容协议。 虽然它在链下�
 
 Validium 还依赖以太坊主链实现：
 
-### 结算 \{#settlement}
+### 结算 {#settlement}
 
 在父链验证其有效性之前，无法完全确认在 Validium 上执行的交易。 所有在 Validium 上进行的业务最终都必须在主网上结算。 以太坊区块链还为 Validium 用户提供了“结算保障”，这意味着一旦提交到链上，链下交易就不能逆转或改变。
 
-### 安全性 \{#security}
+### 安全性 {#security}
 
 作为结算层的以太坊也保证 Validium 上状态转换的有效性。 在 Validium 链上执行的链下交易通过以太坊基础层上的智能合约进行验证。
 
 如果链上验证者合约断定证明无效，则交易被拒绝。 这意味着运营商必须满足以太坊协议执行的有效性条件，然后才能更新 Validium 的状态。
 
-## Validium 如何运作？ \{#how-does-validium-work}
+## Validium 如何运作？ {#how-does-validium-work}
 
-### 交易 \{#transactions}
+### 交易 {#transactions}
 
 用户向运营商提交交易，运营商是负责在 Validium 链上执行交易的节点。 一些 Validium 可能采用单个运营商来执行链，或者依靠[权益证明 (PoS)](/developers/docs/consensus-mechanisms/pos/) 机制轮换运营商。
 
 运营商将交易聚合成一个批次并发送到证明线路进行证明。 证明线路接受交易批次（及其他相关数据）作为输入，并输出验证操作正确执行的有效性证明。
 
-### 状态承诺 \{#state-commitments}
+### 状态承诺 {#state-commitments}
 
 Validium 的状态被哈希处理成默克尔树，其根存储在以太坊的主合约中。 默克尔根又称为状态根，作为对 Validium 上当前帐户状态和余额的加密承诺。
 
 要执行状态更新，运营商必须（在执行交易后）计算一个新的状态根并将提交给链上合约。 如果有效性证明得到证实，提出的状态被接受，Validium 切换到新的状态根。
 
-### 存款和提款 \{#deposits-and-withdrawals}
+### 存款和提款 {#deposits-and-withdrawals}
 
 用户通过在链上合约中存入以太币（或任何与以太坊意见征求兼容的代币），将资金从以太坊转移到 Validium。 该合约将存款事件转发到链下 Validium，并向用户在 Validium 上的地址存入与其存款相同的金额。 运营商还将此存款交易添加到新批次中。
 
@@ -65,13 +65,13 @@ Validium 的状态被哈希处理成默克尔树，其根存储在以太坊的�
 
 作为一种抗审查机制，Validium 协议允许用户直接退出 Validium 合约，无需通过运营商。 在这种情况下，用户需要向验证者合约提供默克尔证明，证明帐户包含在状态根中。 如果证明被接受，用户可以调用主合约的提款函数，从 Validium 中提取他们的资金。
 
-### 批量提交 \{#batch-submission}
+### 批量提交 {#batch-submission}
 
 执行一批交易后，运营商向验证者合约提交相关有效性证明，并向主合约提出新的状态根。 如果证明是有效的，则主合约更新 Validium 的状态并最终确定批次中交易的结果。
 
 与零知识卷叠不同，Validium 上的区块生产者不需要发布交易批次的交易数据（仅发布区块头）。 这使得 Validium 成为一个纯粹的链下扩容协议，而不是在以太坊主链（例如 `calldata`）上发布状态数据的“混合”扩容协议（即[二层网络](/layer-2/)）。
 
-### 数据可用性 \{#data-availability}
+### 数据可用性 {#data-availability}
 
 如上所述，Validium 利用一个链下数据可用性模型，运营商通过该模型将所有交易数据存储在以太坊主网之外。 Validium 的低链上数据足迹提升了可扩展性（吞吐量不受以太坊数据处理能力的限制），并降低了用户费用（发布 `calldata` 的成本降低）。
 
@@ -83,7 +83,7 @@ Validium 中的数据可用性管理器通过签署每个 Validium 批次来证�
 
 Validium 的数据可用性管理方法不同。 一些依赖受信任方存储状态数据，而另一些则使用随机指定的验证者。
 
-#### 数据可用性委员会 (DAC) \{#data-availability-committee}
+#### 数据可用性委员会 (DAC) {#data-availability-committee}
 
 为了保证链下数据的可用性，一些 Validium 解决方案指定了一组受信任的实体（统称为数据可用性委员会 (DAC)）来存储状态副本并提供数据可用性证明。 由于成员较少，数据可用性委员会更容易实施并且需要较少的协调。
 
@@ -91,7 +91,7 @@ Validium 的数据可用性管理方法不同。 一些依赖受信任方存储�
 
 [更多关于 Validium 中数据可用性委员会的信息](https://medium.com/starkware/data-availability-e5564c416424)。
 
-#### 绑定数据可用性 \{#bonded-data-availability}
+#### 绑定数据可用性 {#bonded-data-availability}
 
 其他 Validium 要求负责存储离线数据的参与者在承担其角色之前在智能合约中质押（即锁定）代币。 这种质押作为“保证金”，保证数据可用性管理者之间采取的诚实行为并减少信任假设。 如果这些参与者不能证明数据的可用性，那么保证金就会被惩没。
 
@@ -99,7 +99,7 @@ Validium 的数据可用性管理方法不同。 一些依赖受信任方存储�
 
 [更多关于 Validium 中绑定数据可用性的信息](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)。
 
-## Volitions 和 Validium \{#volitions-and-validium}
+## Volitions 和 Validium {#volitions-and-validium}
 
 Validium 提供了诸多好处，但也进行了折衷（最值得注意的是数据可用性）。 但是，与许多扩容解决方案一样，Validium 适合特定的用例，这就是 Volitions 方案出现的原因。
 
@@ -107,7 +107,7 @@ Volitions 结合了零知识卷叠和 Validium 链，它允许用户在两种扩
 
 去中心化交易所 (DEX) 可能更喜欢使用 Validium 的可扩展和私有基础设施进行大额交易。 它还可以为需要零知识卷叠更高安全性保证和去信任性的用户使用零知识卷叠。
 
-## Validium 和以太坊虚拟机的兼容性 \{#validiums-and-evm-compatibility}
+## Validium 和以太坊虚拟机的兼容性 {#validiums-and-evm-compatibility}
 
 与零知识卷叠一样，Validium 最适合简单的应用，例如代币交换和支付。 鉴于在零知识证明线路中证明[以太坊虚拟机](/developers/docs/evm/)指令的开销很大，因此在 Validium 之间很难为通用计算和智能合约执行提供支持。
 
@@ -117,21 +117,21 @@ Volitions 结合了零知识卷叠和 Validium 链，它允许用户在两种扩
 
 [更多关于零知识以太坊虚拟机的信息](https://www.alchemy.com/overviews/zkevm)。
 
-## Validium 如何扩展以太坊？ \{#scaling-ethereum-with-validiums}
+## Validium 如何扩展以太坊？ {#scaling-ethereum-with-validiums}
 
-### 1. 链下数据存储 \{#off-chain-data-storage}
+### 1. 链下数据存储 {#off-chain-data-storage}
 
 二层网络扩容项目（例如乐观卷叠和零知识卷叠）通过将部分交易数据发布到一层网络，牺牲了纯链下扩容协议（例如 [Plasma](/developers/docs/scaling/plasma/)）的无限可扩展性来换取安全性。 然而，这意味着卷叠的可扩展性属性受到以太坊主网上数据带宽的限制（因此，[数据分片](/roadmap/danksharding/)提议要提高以太坊的数据存储容量）。
 
 Validium 实现了可扩展性，它将所有交易数据保存在链下并且在将状态更新传送到以太坊主链时仅发布状态承诺（和有效性证明）。 然而，有效性证明的存在为 Validium 提供了比其他纯链下扩容解决方案（包括 Plasma 和[侧链](/developers/docs/scaling/sidechains/)）更高的安全保障。 通过减少以太坊在验证链下交易之前必须处理的数据量，Validium 设计极大地提升了主网上的吞吐量。
 
-### 2. 递归证明 \{#recursive-proofs}
+### 2. 递归证明 {#recursive-proofs}
 
 递归证明是一种有效性证明，它验证其他证明的有效性。 这些“证明的证明”的生成方式如下：通过以递归方式聚合多个证明直到创建一个可验证所有先前证明的最终证明，即递归证明。 递归证明通过增加每个有效性证明可以验证的交易数量来提升区块链处理速度。
 
 通常，Validium 运营商提交到以太坊作验证用途的每个有效性证明都会验证单个区块的完整性。 而一个递归证明可用来同时确认几个 Validium 区块的有效性 — 这是可能的，因为证明线路能够以递归方式将几个区块证明聚合成一个最终证明。 如果链上验证者合约接受递归证明，则所有底层区块都会立即最终确定。
 
-## Validium 的优缺点 \{#pros-and-cons-of-validium}
+## Validium 的优缺点 {#pros-and-cons-of-validium}
 
 | 优点                                                                 | 缺点                                                                                                        |
 | -------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- |
@@ -142,7 +142,7 @@ Validium 实现了可扩展性，它将所有交易数据保存在链下并且�
 | 适用于特定用例，例如优先考虑交易隐私和可扩展性的交易或区块链游戏。   | 可以防止用户提取资金，因为生成所有权的默克尔证明需要链下数据始终可用。                                      |
 | 链下数据可用性提升了吞吐量并增强了可扩展性。                         | 安全模型依赖于信任假设和加密经济激励措施，与完全依赖加密安全机制的零知识卷叠不同。                          |
 
-### 使用 Validium/Volitions \{#use-validium-and-volitions}
+### 使用 Validium/Volitions {#use-validium-and-volitions}
 
 许多项目提供 Validium 和 Volitions 实现，你可以将它们集成到自己的去中心化应用程序中：
 
@@ -156,7 +156,7 @@ Validium 实现了可扩展性，它将所有交易数据保存在链下并且�
 - [相关文档](https://docs.zksync.io/zkevm/#what-is-zkporter)
 - [网站](https://zksync.io/)
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [Validium 和二层 2 x 2 矩阵 — 第 99 期](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [零知识卷叠与 Validium](https://blog.matter-labs.io/zkrollup-vs-validium-starkex-5614e38bc263)

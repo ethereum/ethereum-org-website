@@ -13,11 +13,11 @@ summaryPoints:
   - Zredukuj zakres koniecznego zaufania i zachowaj kontrolę nad swoimi kluczami
 ---
 
-## Czym są usługi stakingowe? \{#what-is-staking-as-a-service}
+## Czym są usługi stakingowe? {#what-is-staking-as-a-service}
 
 Usługi stakingowe („SaaS”) reprezentują kategorię usług stakingowych, w których użytkownik deponuje własne 32 ETH dla walidatora, ale deleguje operacje węzła do zewnętrznego operatora. Proces ten zwykle wymaga bycia przeprowadzonym przez początkową konfigurację, w tym generowanie kluczy i depozyt, a następnie przesłanie kluczy podpisujących do operatora. Dzięki temu usługa może obsługiwać Twój walidator w Twoim imieniu, zwykle za miesięczną opłatą.
 
-## Dlaczego warto postawić na usługę? \{#why-stake-with-a-service}
+## Dlaczego warto postawić na usługę? {#why-stake-with-a-service}
 
 Protokół Ethereum nie wspiera natywnie delegowania stawek, więc stworzone zostały te usługi, aby zaspokoić zapotrzebowanie. Jeśli masz dostępne na poczet stakingu 32 ETH, ale nie czujesz się komfortowo z obsługą sprzętu, usługi SaaS pozwalają Ci na zdelegowanie tych czynności, podczas gdy Ty nadal możesz uzyskiwać natywne nagrody za blok.
 
@@ -31,7 +31,7 @@ Protokół Ethereum nie wspiera natywnie delegowania stawek, więc stworzone zos
 <StakingComparison page="saas" />
 }
 
-## Co wziąć pod uwagę \{#what-to-consider}
+## Co wziąć pod uwagę {#what-to-consider}
 
 Powstaje coraz więcej dostawców SaaS, którzy pomogą Ci stakować Twoje ETH, ale każdy z nich ma swoje własne korzyści i ryzyka. Wszystkie opcje SaaS wymagają dodatkowych założeń dotyczących zaufania w porównaniu do domowego stakingu. Opcje SaaS mogą zawierać dodatkowy kod opakowujący klienta Ethereum, który nie będzie otwarty lub skontrolowany. SaaS ma również niekorzystny wpływ na decentralizację sieci. W zależności od konfiguracji możesz nie mieć możliwości kontrolowania swojego walidatora — operator może działać nieuczciwie, używając twojego ETH.
 
@@ -41,7 +41,7 @@ Wskaźniki atrybutów są użyte poniżej, aby zasygnalizować godne uwagi mocne
 <StakingConsiderations page="saas" />
 }
 
-## Poznaj dostawców usług stakingowych \{#saas-providers}
+## Poznaj dostawców usług stakingowych {#saas-providers}
 
 Poniżej znajduje się paru dostępnych dostawców SaaS. Skorzystaj z powyższych wskaźników, które oprowadzą cię z tymi usługami
 
@@ -65,7 +65,7 @@ Należy pamiętać o znaczeniu wspierania [różnorodności klientów](/develope
 
 Masz sugestię dostawcy usług stakingowych, którego pominęliśmy? Zapoznaj się z naszymi [zasadami umieszczania produktów na liście](/contributing/adding-staking-products/), aby sprawdzić, czy są one odpowiednie i przesłać je do recenzji.
 
-## Często zadawane pytania \{#faq}
+## Często zadawane pytania {#faq}
 
 {
 <ExpandableCard title="Kto posiada moje klucze?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
@@ -107,6 +107,6 @@ Skontaktuj się z indywidualnym dostawcą SaaS, aby uzyskać więcej informacji 
 </ExpandableCard>
 }
 
-## Dodatkowo przeczytaj \{#further-reading}
+## Dodatkowo przeczytaj {#further-reading}
 
 - [Ocena usług stakingu](https://www.attestant.io/posts/evaluating-staking-services/) — _Jim McDonald 2020 r._

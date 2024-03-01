@@ -12,17 +12,17 @@ Wenn Sie sich über JavaScript mit einem Ethereum-Node verbinden möchten, ist d
 
 Bitte beachten Sie, dass seit [der Zusammenführung](/roadmap/merge/) zwei verbundene Teile von Ethereum-Software benötigt werden, um einen Knoten zu betreiben. Ein Ausführungsclient und ein Konsensclient. Bitte stellen Sie sicher, dass Ihr Knoten sowohl über einen Ausführungs- als auch einen Konsensclient verfügt. Wenn sich Ihr Knoten nicht auf einem lokalen Rechner (Ihr Knoten läuft z. B. auf einer AWS-Instanz) befindet, müssen Sie die IP-Adressen im Tutorial entsprechend anpassen. Für weitere Informationen schauen Sie sich unsere Seite zum [Betreiben eines Knotens](/developers/docs/nodes-and-clients/run-a-node/) an.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Sie müssen JavaScript verstehen. Zusätzlich ist es hilfreich, wenn Sie den [Ethereum-Stack](/developers/docs/ethereum-stack/) und [Ethereum-Clients](/developers/docs/nodes-and-clients/) ebenfalls verstehen.
 
-## Warum eine Programmbibliothek verwenden? \{#why-use-a-library}
+## Warum eine Programmbibliothek verwenden? {#why-use-a-library}
 
 Mit diesen Programmbibliotheken lässt sich die direkte Interaktion mit einem Ethereum-Node erheblich vereinfachen. Zudem bieten sie Dienstprogrammfunktionen (z. B. Umwandlung von ETH zu GWei), so dass Sie als Entwickler weniger Zeit damit verbringen, Probleme mit Ethereum-Clients zu lösen, und sich auf die einzigartigen Funktionen Ihrer Applikation konzentrieren können.
 
-## Eigenschaften von Programmbibliotheken \{#library-features}
+## Eigenschaften von Programmbibliotheken {#library-features}
 
-### Verbindung mit Ethereum-Nodes \{#connect-to-ethereum-nodes}
+### Verbindung mit Ethereum-Nodes {#connect-to-ethereum-nodes}
 
 Sie können sich über einen Provider und diese Bibliotheken mit Ethereum verbinden und die Daten auslesen – über JSON-RPC, INFURA, Etherscan, Alchemy oder MetaMask.
 
@@ -70,7 +70,7 @@ Sobald die Einrichtung abgeschlossen ist, können Sie folgende Abfragen für die
 - Netzwerk-ID
 - und weitere...
 
-### Wallet-Funktionalität \{#wallet-functionality}
+### Wallet-Funktionalität {#wallet-functionality}
 
 Diese Programmbibliotheken bieten Ihnen die Funktionalität, um Wallets zu erstellen, Schlüssel zu verwalten und Transaktionen zu signieren.
 
@@ -153,7 +153,7 @@ Einmal eingerichtet, können Sie:
 - Transaktionen signieren
 - und weitere...
 
-### Mit den Funktionen von Smart Contracts interagieren \{#interact-with-smart-contract-functions}
+### Mit den Funktionen von Smart Contracts interagieren {#interact-with-smart-contract-functions}
 
 JavaScript-Client-Bibliotheken ermöglichen Ihrer Anwendung, Smart Contract-Funktionen aufzurufen. Dafür lesen sie die Application Binary Interface (ABI) eines kompilierten Vertrags.
 
@@ -215,7 +215,7 @@ Dies bedeutet Sie können:
 - Sie können einen Vertrag bereitstellen.
 - Und mehr...
 
-### Dienstprogrammfunktionen \{#utility-functions}
+### Dienstprogrammfunktionen {#utility-functions}
 
 Die Dienstprogrammfunktionen stellen Ihnen praktische Verknüpfungen bereit, die das Entwickeln mit Ethereum erleichtern.
 
@@ -237,7 +237,7 @@ ethers.utils.formatEther(balance)
 - [Web3js-Dienstprogrammfunktionen](https://docs.web3js.org/api/web3-utils)
 - [Ethers-Dienstprogrammfunktionen](https://docs.ethers.io/v5/api/utils/)
 
-## Verfügbare Programmbibliotheken \{#available-libraries}
+## Verfügbare Programmbibliotheken {#available-libraries}
 
 **Web3.js –** **_Ethereum-JavaScript-API_**
 
@@ -281,16 +281,16 @@ ethers.utils.formatEther(balance)
 - [Dokumentation](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 _Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
-## Verwandte Themen \{#related-topics}
+## Verwandte Themen {#related-topics}
 
 - [Knotenpunkte und Clients](/developers/docs/nodes-and-clients/)
 - [Entwicklungs-Frameworks](/developers/docs/frameworks/)
 
-## Ähnliche Tutorials \{#related-tutorials}
+## Ähnliche Tutorials {#related-tutorials}
 
 - [Web3js einrichten, um die Ethereum-Blockchain in JavaScript zu nutzen](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Leitfaden für die Einrichtung von web3.js in Ihrem Projekt._
 - [Aufruf eines intelligenten Vertrags mit JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Mit dem DAI-Token können Sie die Funktion „Verträge aufrufen“ mit JavaScript verwenden._

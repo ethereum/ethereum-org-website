@@ -6,15 +6,15 @@ lang: de
 
 Sie müssen in Ihrem Projekt nicht jeden Smart Contract von Grund auf neu erstellen. Es gibt viele Open-Source-Smart-Contract-Bibliotheken, die wiederverwendbare Bausteine für Ihr Projekt bereitstellen. Damit müssen Sie das Rad nicht neu erfinden.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Bevor wir in die Smart-Contract-Bibliothek einsteigen, ist es ratsam, sich mit den Grundlagen der Smart-Contract-Struktur vertraut zu machen. Falls noch nicht geschehen, sehen Sie sich die [Smart-Contract-Anatomie](/developers/docs/smart-contracts/anatomy/) an.
 
-## Was beinhaltet eine Bibliothek \{#whats-in-a-library}
+## Was beinhaltet eine Bibliothek {#whats-in-a-library}
 
 Normalerweise finden Sie zwei Arten von Erstellungsblöcken in einer Smart Contract Bibliothek: wiederverwendbare Verhaltensweisen, die Sie Ihren Verträgen hinzufügen können, und die Implementierungen verschiedener Standards.
 
-### Verhaltensweisen \{#behaviors}
+### Verhaltensweisen {#behaviors}
 
 Wenn Sie einen Smart Contract schreiben, ist es wahrscheinlich das Sie immer wieder dieselben Muster erstellen, zum Beispiel das Zuweisen einer _Admin_-Adresse, um geschützte Vorgänge in einem Vertrag auszuführen, oder das Hinzufügen einer Notfall-_Unterbrechungs_-Schaltfläche, falls ein unvorhergesehenes Problem auftritt.
 
@@ -52,7 +52,7 @@ contract MyContract is Ownable {
 
 Ein weiteres gängiges Beispiel ist [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) oder [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html). Das sind Bibliotheken (im Gegensatz zu Basisverträgen), die arithmetische Funktionen mit Überlaufprüfungen bereitstellen, die von der Sprache nicht bereitgestellt werden. Es empfiehlt sich, eine dieser Bibliotheken anstelle von nativen arithmetischen Operationen zu verwenden, um Ihren Vertrag vor Überläufen zu schützen, die katastrophale Folgen haben können!
 
-### Standards \{#standards}
+### Standards {#standards}
 
 Um die [Komponierbarkeit und Interoperabilität](/developers/docs/smart-contracts/composability/) zu erleichtern, hat die Ethereum-Community mehrere Standards in Form von **ERCs** definiert. Weitere Informationen hierzu finden Sie im Abschnitt [Standards](/developers/docs/standards/).
 
@@ -60,7 +60,7 @@ Wenn Sie einen ERC in Ihre Verträge aufnehmen, sollten Sie nach Standardimpleme
 
 Es ist erwähnenswert, dass einige ERCs nicht eigenständig sind, sondern Ergänzungen zu anderen ERCs sind. Zum Beispiel fügt [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) eine Erweiterung zu ERC20 hinzu, um die Benutzerfreundlichkeit zu verbessern.
 
-## So fügen Sie eine Bibliothek hinzu \{#how-to}
+## So fügen Sie eine Bibliothek hinzu {#how-to}
 
 Beziehen Sie sich immer auf die Dokumentation der Bibliothek, die Sie einbinden, um genaue Anweisungen zur Einbindung in Ihr Projekt zu bekommen. Viele Solidity-Vertragsbibliotheken werden mit `npm` gepackt, sodass Sie sie einfach `npm install` benutzen können. Die meisten Anwendungen zum [Kompilieren](/developers/docs/smart-contracts/compiling/) von Verträgen prüfen Ihre `node_modules` für Smart-Contract-Bibliotheken, sodass Sie Folgendes tun können:
 
@@ -75,7 +75,7 @@ contract MyNFT is ERC721 {
 
 Unabhängig von der verwendeten Methode sollten Sie beim Einbinden einer Bibliothek immer die [Sprachversion](/developers/docs/smart-contracts/languages/) im Auge behalten. Sie können beispielsweise keine Bibliothek für Solidity 0.6 verwenden, wenn Sie Ihre Verträge in Solidity 0.5 schreiben.
 
-## Wann verwendet man eine Bibliothek? \{#when-to-use}
+## Wann verwendet man eine Bibliothek? {#when-to-use}
 
 Wenn Sie eine Smart-Contract-Bibliothek für Ihr Projekt nutzen, bietet das gleich mehrere Vorteile. In erster Linie sparen Sie Zeit, denn die Bibliothek stellt fertige Bausteine zur Verfügung stellt, die Sie einfach in Ihr System integrieren können, anstatt sie selbst schreiben zu müssen.
 
@@ -85,7 +85,7 @@ Die Verwendung von Smart-Contract-Bibliotheken birgt jedoch das Risiko, dass Sie
 
 Schließlich sollten Sie bei der Entscheidung, ob Sie eine Bibliothek integrieren möchten, ihren Gesamtnutzen berücksichtigen. Eine weit verbreitete Version hat den Vorteil, dass sie eine größere Community hat und Fehler schneller erkannt werden. Beim Erstellen von Smart Contracts sollte Sicherheit sollte Ihr Hauptaugenmerk sein.
 
-## Verwandte Tools \{#related-tools}
+## Verwandte Tools {#related-tools}
 
 **OpenZeppelin Contracts –** **_Gängigste Bibliothek für die sichere Entwicklung von Smart Contracts_ **
 
@@ -107,11 +107,11 @@ Schließlich sollten Sie bei der Entscheidung, ob Sie eine Bibliothek integriere
 - [Dokumentation](https://portal.thirdweb.com/solidity/)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
-## Ähnliche Tutorials \{#related-tutorials}
+## Ähnliche Tutorials {#related-tutorials}
 
 - [Sicherheitsüberlegungen für Ethereum-Entwickler](/developers/docs/smart-contracts/security/) _– Ein Tutorial zu Sicherheitsüberlegungen beim Erstellen von Smart Contracts, einschließlich der Bibliotheksnutzung_
 - [Den intelligenten Vertrag des ERC-20-Token verstehen](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Tutorial zum ERC20-Standard, bereitgestellt von mehreren Bibliotheken_
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 _Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_

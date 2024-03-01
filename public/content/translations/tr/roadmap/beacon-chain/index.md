@@ -14,17 +14,17 @@ summaryPoint3: İşaret Zinciri ve mutabakat mantığını ve şimdilerde Ethere
   İşaret Zinciri 1 Aralık 2020'de geldi ve hisse ispatını Ethereumun mutabakat mekanizması olarak 15 Eylül 2022'de Birleşim yükseltmesiyle resmileştirdi.
 </UpgradeStatus>
 
-## İşaret Zinciri Nedir? \{#what-is-the-beacon-chain}
+## İşaret Zinciri Nedir? {#what-is-the-beacon-chain}
 
 İşaret Zinciri 2020'de hayata geçirilmiş olan hisse ispatı blok zincirinin orijinal adıdır. Ethereum Markette ulaşılabilir hale gelmeden önce Hisse ispatı mutabakatı mantığının sağlam ve sürdürülebilir olduğundan emin olmak için oluşturuldu. Bu yüzden, Ethereum'un iş ispatı ile birlikte çalıştırıldı. İşaret zinciri boş bloklardan oluşan bir zincirdi, ancak Ethereumda İş ispatından ve hisse ispatına geçiş İşaret Zincirinin tanıtılmasına ve Yürütüm İstemcilerinden gelen işlem verilerinin kabul edilmesine, blokların paket haline getirilmesine ve bir blok zincirin içine hisse ispatı ve mutabakat mantığıyla organize edilmesine yol açtı. Aynı zamanda, orijinal Ethereum Müşterileri madenciliklerini, blok yayılmalarını ve Mutabakat mantıklarını kapattılar ve bunları tamamen İşaret Zincirine bıraktılar. Bu olay [Birleşim](/roadmap/merge/) olarak bilinir. Birleşim olduğunda, artık ikili blok zincirler yoktu. Onun yerine, sadece bir hisse ispatı Ethereumu vardı ve bu artık düğüm başına iki farklı istemci gerektiriyor. İşaret Zinciri artık fikir birliği katmanı, fikir birliği istemcileri için eşler arası bir ağ ve blok dedikodusu ve mutabakat mantığını hallediyor. Dedikodu ve işlemlerin uygulanmasından, Ethereum'un duruşunu yönetmekten sorumlu. Bu iki katman birbirleriyle Motor API'sını kullanarak iletişim kurabilirler.
 
-## İşaret Zinciri Ne Yapar? \{#what-does-the-beacon-chain-do}
+## İşaret Zinciri Ne Yapar? {#what-does-the-beacon-chain-do}
 
 İşaret Zinciri Ethereum [paydaşlar](/staking/) ağını oluşturan ve koordine eden hesap defterlerine verilen addır, bunlardan önce ise hissedarlar gerçek Ethereum bloklarını doğrulamaya başlamışlardı. Ama, İşaret Zinciri işlemleri ilerletmez ya da akıllı sözleşme etkileşimlerini halletmez çünkü bu işlemler Yürütüm Katmanında yapılmaktadır. İşaret Zinciri, blok ve tasdik işlemleri, çatallanma seçim algoritmasını çalıştırma ve ödül ve cezaları yönetme gibi şeylerden sorumludur. [Düğüm mimarisi sayfamızda](/developers/docs/nodes-and-clients/node-architecture/#node-comparison) daha fazlasını okuyun.
 
-## İşaret Zinciri etkisi \{#beacon-chain-features}
+## İşaret Zinciri etkisi {#beacon-chain-features}
 
-### Staking ile Tanışın \{#introducing-staking}
+### Staking ile Tanışın {#introducing-staking}
 
 İşaret Zinciri, Ethereum'a [Hisse İspatını](/developers/docs/consensus-mechanisms/pos/) tanıttı. Bu, Ethereum'u güvende tutar ve süreç doğrulayıcılarına daha fazla ETH kazandırır. Pratikte hisseleme, doğrulayıcı yazılımını aktive etmek için ETH'nin hisselenmesini içerir. Bir paydaş olarak, zincirde yeni bloklar oluşturan ve doğrulayan yazılımı çalıştırırsınız.
 
@@ -38,7 +38,7 @@ Ve hisse ispatını mutabakat mekanizması olarak kullanmak, [ şuan sahip oldu�
   Eğer doğrulayıcı olmakla ve Ethereum'un güvenliğini sağlamaya yardımcı olmakla ilgileniyorsanız, <a href="/staking/">hisseleme ile ilgili daha fazla şey öğrenin</a>.
 </InfoBanner>
 
-### Parçalama için ayarlamalar \{#setting-up-for-sharding}
+### Parçalama için ayarlamalar {#setting-up-for-sharding}
 
 İşaret Zinciri, Ethereum Ana Ağı ile birleştiğinden beri, Ethereum topluluğu ağı ölçeklendirmeye başladı.
 
@@ -48,11 +48,11 @@ Bu sorumluluk, madencilerin ağa karşı hiçbir yükümlülüğünün olmadığ
 
 [Parçalama hakkında daha fazlası](/roadmap/danksharding/)
 
-## Yükseltmeler arasındaki ilişki \{#relationship-between-upgrades}
+## Yükseltmeler arasındaki ilişki {#relationship-between-upgrades}
 
 Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret Zincirinin diğer yükseltmeleri nasıl etkilediğini özetleyelim.
 
-### İşaret Zinciri ve Birleşim \{#merge-and-beacon-chain}
+### İşaret Zinciri ve Birleşim {#merge-and-beacon-chain}
 
 İlk başta İşaret Zinciri, Ethereum Ana Ağı'ndan ayrıydı, ancak 2022'de birleştirildi.
 
@@ -60,7 +60,7 @@ Ethereum yükseltmelerinin tamamı bir şekilde ilişkilidir. İşaret Zincirini
   Birleştirme
 </ButtonLink>
 
-### Parçalar ve İşaret Zinciri \{#shards-and-beacon-chain}
+### Parçalar ve İşaret Zinciri {#shards-and-beacon-chain}
 
 Parçalama, Ethereum ekosistemine yalnızca bir Hisse İspatı mutabakat mekanizması ile güvenli bir şekilde girebilir. İşare Zinciri Ana Ağ ile "bireleşerek" Ethereum'un daha da ölçeklenmesine yardımcı olmak için parçalamanın önünü açan hisselemeyi tanıttı.
 

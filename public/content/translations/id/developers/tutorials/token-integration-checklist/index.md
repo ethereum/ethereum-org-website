@@ -33,13 +33,13 @@ Untuk mengikuti daftar periksa ini, Anda mungkin ingin memiliki output ini dari 
 - slither-prop . --contract ContractName # memerlukan konfigurasi, dan menggunakan Echidna dan Manticore
 ```
 
-## Pertimbangan umum \{#general-considerations}
+## Pertimbangan umum {#general-considerations}
 
 - **Kontrak memiliki ulasan keamanan.** Hindari berinteraksi dengan kontrak yang ulasan keamanannya kurang. Lihat durasi penilaiannya (alias "level upaya"), reputasi dari lembaga keamanan, dan jumlah serta keparahan temuannya.
 - **Anda telah menghubungi pengembang.** Anda mungkin perlu mengingatkan tim mereka akan suatu insiden. Cari kontak yang sesuai di [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts).
 - **Mereka memiliki milis keamanan untuk pengumuman penting.** Tim mereka harus menasihati penggunan (seperti Anda!) saat masalah genting ditemukan atau saat peningkatan terjadi.
 
-## Kesesuaian dengan ERC \{#erc-conformity}
+## Kesesuaian dengan ERC {#erc-conformity}
 
 Slither memasukkan utilitas, [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance), yang mengulas kesesuaian token dengan banyak standar ERC terkait. Gunakan slither-check-erc untuk mengulas bahwa:
 
@@ -58,14 +58,14 @@ Akhirnya, ada beberapa karakteristik yang sulit dikenali secara otomatis. Ulas k
 - **Transfer dan transferFrom tidak boleh memungut biaya.** Token deflasi bisa menyebabkan perilaku tak terduga.
 - **Potensi bunga yang diperoleh dari token diperhitungkan.** Beberapa token mendistribusikan bunga ke pemegang token. Bunga ini mungkin terjebak dalam kontrak jika tidak diperhitungkan.
 
-## Komposisi kontrak \{#contract-composition}
+## Komposisi kontrak {#contract-composition}
 
 - **Kontrak menghindari kerumitan yang tidak diperlukan.** Token seharusnya adalah kontrak sederhana; token dengan kode kompleks memerlukan standar yang lebih tinggi untuk diulas. Gunakan [printer ringkasan manusia](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) Slither untuk mengidentifikasi kode yang rumit.
 - **Kontrak menggunakan SafeMath.** Kontrak yang tidak menggunakan SafeMath memerlukan standar yang lebih tinggi untuk diulas. Periksa kontrak secara manual untuk penggunaan SafeMath.
 - **Kontrak hanya memiliki beberapa fungsi yang tidak terkait token.** Fungsi yang tidak terkait token meningkatkan kemungkinan timbulnya masalah dalam kontrak. Gunakan [printer ringkasan kontrak](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) Slither untuk mengulas secara luas kode yang digunakan dalam kontrak.
 - **Token hanya memiliki satu alamat.** Token dengan beberapa titik masuk untuk pembaharuan saldo bisa merusak pembukuan internal yang didasarkan pada alamat (contohnya, `balances[token_address][msg.sender]` mungkin tidak mencerminkan saldo sebenarnya).
 
-## Hak istimewa pemilik \{#owner-privileges}
+## Hak istimewa pemilik {#owner-privileges}
 
 - **Token tidak dapat ditingkatkan.** Kontrak yang dapat ditingkatkan bisa mengubah aturannya seiring dengan waktu. Gunakan [printer ringkasan manusia](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) Slither untuk menentukan apakah kontrak dapat ditingkatkan.
 - **Pemilik memiliki kemampuan pencetakan terbatas.** Pemilik yang jahat atau membahayakan bisa menyalahgunakan kemampuan pencetakan. Gunakan [printer ringkasan manusia](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) Slither untuk mengulas kemampuan pencetakan, dan pertimbangkan meninjau kodenya secara manual.
@@ -73,7 +73,7 @@ Akhirnya, ada beberapa karakteristik yang sulit dikenali secara otomatis. Ulas k
 - **Pemilik tidak dapat membuat kontrak masuk dalam daftar hitam.** Pemilik yang jahat atau membahayakan bisa memerangkap kontrak yang mengandalkan token dengan daftar hitam. Kenali fitur pembuatan daftar hitam secara manual.
 - **Tim di belakang token dikenal dan bisa dimintai pertanggungjawaban untuk penyalahgunaan.** Kontrak dengan tim pengembangan anonim, atau yang tinggal di tempat perlindungan hukum memerlukan peninjauan dengan standar yang lebih tinggi.
 
-## Kelangkaan token \{#token-scarcity}
+## Kelangkaan token {#token-scarcity}
 
 Ulasan untuk masalah kelangkaan token memerlukan ulasan manual. Periksalah untuk menemukan kondisi ini:
 

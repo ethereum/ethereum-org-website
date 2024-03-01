@@ -27,11 +27,11 @@ Bu öğreticinin [2. bölümünde](https://docs.alchemy.com/docs/interacting-wit
 
 Herhangi bir noktada sorularınız varsa, [Alchemy Discord](https://discord.gg/gWuC7zB)'da bize ulaşmaktan çekinmeyin!
 
-## Adım 1: Ethereum ağına bağlanın \{#step-1}
+## Adım 1: Ethereum ağına bağlanın {#step-1}
 
 Ethereum zincirine istek göndermenin birçok yolu vardır. Basit olması için, kendi düğümlerimizi çalıştırmak zorunda kalmadan Ethereum zinciriyle iletişim kurmamıza izin veren bir blok zinciri geliştirici platformu ve API olan Alchemy'de ücretsiz bir hesap kullanacağız. Platform ayrıca, akıllı sözleşme dağıtımımızda arka planda neler olup bittiğini anlamak için bu öğreticide yararlanacağımız izleme ve analitik için geliştirici araçlarına sahiptir. Henüz bir Alchemy hesabınız yoksa, [buradan ücretsiz kaydolabilirsiniz](https://dashboard.alchemyapi.io/signup).
 
-## Adım 2: Uygulamanızı (ve API anahtarınızı) oluşturun \{#step-2}
+## Adım 2: Uygulamanızı (ve API anahtarınızı) oluşturun {#step-2}
 
 Bir Alchemy hesabı oluşturduktan sonra, bir uygulama yaratarak bir API anahtarı oluşturabilirsiniz. Bu, Goerli test ağına taleplerde bulunmamızı sağlayacaktır. Eğer test ağlarına aşina değilseniz, [bu sayfaya](/developers/docs/networks/) bakınız.
 
@@ -45,7 +45,7 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama yaratarak bir API anahtar
 
 3. "Create app"e (Uygulama oluştur) tıklamanız yeterlidir! Uygulamanız aşağıdaki tabloda görünmelidir.
 
-## Adım 3: Bir Ethereum hesabı oluşturun (adres) \{#step-3}
+## Adım 3: Bir Ethereum hesabı oluşturun (adres) {#step-3}
 
 İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacımız var. Bu eğitim için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcı üstü bir sanal cüzdan olan MetaMask'i kullanacağız. [İşlemler](/developers/docs/transactions/) üzerine dahası.
 
@@ -53,11 +53,11 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama yaratarak bir API anahtar
 
 ![metamask ropsten örneği](./metamask-ropsten-example.png)
 
-## Adım 4: Bir Musluktan ether ekleyin \{#step-4}
+## Adım 4: Bir Musluktan ether ekleyin {#step-4}
 
 Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte Eth'ye ihtiyacımız olacak. Eth alabilmek için [Goerli musluğuna](https://goerlifaucet.com/) gidip Alchemy hesabınıza giriş yapın ve cüzdan adresinizi girin, sonra da "Bana Eth gönder"e tıklayın. Ağ trafiği nedeniyle sahte Eth'nizi almanız biraz zaman alabilir. (Bunu yazarken denediğimizde, 30 dakika civarı sürdü) Eth'yi kısa süre içinde MetaMask hesabınızda görmelisiniz!
 
-## Adım 5: Bakiyenizi kontrol edin \{#step-5}
+## Adım 5: Bakiyenizi kontrol edin {#step-5}
 
 Bakiyemizin yerinde olduğundan emin olmak için [Alchemy düzenleyici arayıcını](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) kullanarak bir [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) talebi oluşturalım. Bu, cüzdanımızdaki ETH miktarını döndürür. MetaMask hesap adresinizi girdikten ve "Send Request"e tıkladıktan sonra aşağıdaki gibi bir yanıt görmelisiniz:
 
@@ -69,7 +69,7 @@ Bakiyemizin yerinde olduğundan emin olmak için [Alchemy düzenleyici arayıcı
 >
 > Vay be! Tüm sahte paramız yerli yerinde <Emoji text=":money_mouth_face:" size={1} />.
 
-## Adım 6: Projemizi başlatın \{#step-6}
+## Adım 6: Projemizi başlatın {#step-6}
 
 Öncelikle projemiz için bir klasör oluşturmamız gerekecek. Komut satırınıza gidin ve şunu yazın:
 
@@ -113,7 +113,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 
 package.json'ı onayladıktan sonra hazırız!
 
-## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview)'i indirin \{#step-7}
+## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview)'i indirin {#step-7}
 
 Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Bu geliştiricilere canlı zincirde dağıtmadan önce akıllı sözleşmelerini ve merkeziyetsiz uygulamalarını geliştirirken yardımcı olur.
 
@@ -125,7 +125,7 @@ npm install --save-dev hardhat
 
 [Kurulum talimatları](https://hardhat.org/getting-started/#overview) hakkında daha fazla ayrıntı için bu sayfaya göz atın.
 
-## Adım 8: Hardhat projesi oluşturun \{#step-8}
+## Adım 8: Hardhat projesi oluşturun {#step-8}
 
 Proje klasörümüzün içinde şunu yürütün:
 
@@ -155,7 +155,7 @@ Quit
 
 Bu, bizim için bir `hardhat.config.js` dosyası oluşturacak ve burada projemiz için tüm ayarları belirteceğiz (adım 13'te).
 
-## Adım 9: Proje klasörleri ekleyin \{#step-9}
+## Adım 9: Proje klasörleri ekleyin {#step-9}
 
 Projemizi düzenli tutmak için iki yeni klasör oluşturacağız. Komut satırınızda projenizin kök dizinine gidin ve şunu yazın:
 
@@ -167,7 +167,7 @@ mkdir scripts
 - `contracts/` merhaba dünya akıllı sözleşme kod dosyamızı tutacağımız yerdir
 - `scripts/`, sözleşmemizi dağıtmak ve etkileşim kurmak için komut dosyalarını tutacağımız yerdir
 
-## Adım 10: Sözleşmemizi yazın \{#step-10}
+## Adım 10: Sözleşmemizi yazın {#step-10}
 
 Ne zaman kod yazmaya başlayacağınızı merak ediyor olabilirsiniz. Evet, Adım 10'a kadar geldik.
 
@@ -206,7 +206,7 @@ contract HelloWorld {
 
 Bu, oluşturulduktan sonra bir mesaj depolayan ve `update` fonksiyonu çağrılarak güncellenebilen süper basit bir akıllı sözleşmedir.
 
-## Adım 11: MetaMask ve Alchemy'i projenize bağlayın \{#step-11}
+## Adım 11: MetaMask ve Alchemy'i projenize bağlayın {#step-11}
 
 Bir MetaMask cüzdanı ile Alchemy hesabı oluşturduk ve akıllı sözleşmemizi yazdık, şimdi üçünü birleştirme zamanı.
 
@@ -242,7 +242,7 @@ Bunları kodumuza gerçekten bağlamak için, adım 13'te `hardhat.config.js` do
 <code>.env</code> doyasını taahhüt etmeyin! Lütfen <code>.env</code> dosyanızı asla kimseyle paylaşmadığınızdan veya ifşa etmediğinizden emin olun, çünkü bunu yaparken sırlarınızı tehlikeye atıyorsunuz. Sürüm kontrolü kullanıyorsanız, <code>.env</code> dosyanızı bir <a href="https://git-scm.com/docs/gitignore">gitignore</a> dosyasına ekleyin.
 </InfoBanner>
 
-## Adım 12: Ethers.js'yi kurun \{#step-12-install-ethersjs}
+## Adım 12: Ethers.js'yi kurun {#step-12-install-ethersjs}
 
 Ethers.js, [standart JSON-RPC yöntemlerini](/developers/docs/apis/json-rpc/) daha kullanıcı dostu yöntemlerle birleştirerek Ethereum'la etkileşimde bulunmayı ve Ethereum'a istek göndermeyi kolaylaştıran bir kütüphanedir.
 
@@ -256,7 +256,7 @@ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 Bir sonraki adımda `hardhat.config.js`'mizde de ether'lara ihtiyacımız olacak.
 
-## Adım 13: hardhat.config.js'yi güncelleyin \{#step-13-update-hardhatconfigjs}
+## Adım 13: hardhat.config.js'yi güncelleyin {#step-13-update-hardhatconfigjs}
 
 Şimdiye kadar birkaç bağımlılık ve eklenti ekledik, şimdi projemizin bunların hepsini tanıması için `hardhat.config.js`'yi güncellememiz gerekiyor.
 
@@ -284,7 +284,7 @@ module.exports = {
 }
 ```
 
-## Adım 14: Sözleşmemizi derleyin \{#step-14-compile-our-contracts}
+## Adım 14: Sözleşmemizi derleyin {#step-14-compile-our-contracts}
 
 Şimdiye kadar yaptığımız her şeyin çalıştığından emin olmak için sözleşmemizi derleyelim. `compile` görevi, yerleşik hardhat görevlerden biridir.
 
@@ -296,7 +296,7 @@ npx hardhat compile
 
 `SPDX license identifier not provided in source file` uyarısı (Kaynak dosyada verilmeyen SPDX lisans tanımlayıcısı) alabilirsiniz, ancak bunun için endişelenmenize gerek yok, geri kalan her şey düzgün olacaktır! Düzgün değilse, istediğiniz zaman [Alchemy discord](https://discord.gg/u72VCg3)'da mesaj gönderebilirsiniz.
 
-## Adım 15: Dağıtım komut dosyamızı yazın \{#step-15-write-our-deploy-scripts}
+## Adım 15: Dağıtım komut dosyamızı yazın {#step-15-write-our-deploy-scripts}
 
 Artık sözleşmemiz yazıldığına ve yapılandırma dosyamız kullanıma hazır olduğuna göre, sözleşme dağıtım komut dosyanızı yazmanın zamanı geldi.
 
@@ -332,7 +332,7 @@ const hello_world = await HelloWorld.deploy();
 
 Bir `ContractFactory` üzerinde `deploy()` öğesinin çağrılması, dağıtımı başlatır ve bir `Contract` olarak çözümlenen bir `Promise` döndürür. Bu, akıllı sözleşme fonksiyonlarımızın her biri için bir yöntemi olan nesnedir.
 
-## Adım 16: Sözleşmemizi dağıtın \{#step-16-deploy-our-contract}
+## Adım 16: Sözleşmemizi dağıtın {#step-16-deploy-our-contract}
 
 Sonunda akıllı sözleşmemizi uygulamaya hazırız! Komut satırına gidin ve şunu yürütün:
 

@@ -4,7 +4,7 @@ description: Jelajahi keuntungan kerangka kerja ini dan bandingkan dengan opsi y
 lang: id
 ---
 
-## Pengantar kerangka kerja \{#introduction-to-frameworks}
+## Pengantar kerangka kerja {#introduction-to-frameworks}
 
 Membangun dapp yang lengkap membutuhkan kepingan teknologi yang berbeda. Kerangka kerja perangkat lunak mencakup banyak fitur yang dibutuhkan atau menyediakan sistem plugin mudah untuk memilih peralatan yang Anda inginkan.
 
@@ -16,11 +16,11 @@ Kerangka kerja tersedia dengan banyak fungsionalitas non-konvensional, seperti:
 - Konfigurasi untuk menghubungkan ke jaringan Ethereum dan menggunakan kontrak, baik ke instance yang berjalansecara lokal, atau salah satu dari jaringan publik Ethereum.
 - Pendistribusian aplikasi terdesentralisasi - integrasi dengan opsi penyimpanan seperti IPFS.
 
-## Prasyarat \{#prerequisites}
+## Prasyarat {#prerequisites}
 
 Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca pengantar kami tentang [dapps](/developers/docs/dapps/) dan [tumpukan Ethereum](/developers/docs/ethereum-stack/).
 
-## Kerangka kerja yang tersedia \{#available-frameworks}
+## Kerangka kerja yang tersedia {#available-frameworks}
 
 **Truffle -** **_Lingkungan pengembangan, kerangka kerja pengujian, pipeline pengembangan, dan peralatan lainnya._**
 
@@ -69,10 +69,10 @@ Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
-## Topik terkait \{#related-topics}
+## Topik terkait {#related-topics}
 
 - [Siapkan lingkungan pengembangan lokal](/developers/local-environment/)

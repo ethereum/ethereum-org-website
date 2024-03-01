@@ -8,11 +8,11 @@ isOutdated: true
 
 Aby Ethereum działało w sposób zdecentralizowany, potrzebuje rozproszonej sieci węzłów, która może weryfikować bloki i dane transakcji. Potrzebujesz aplikacji znanej jako klient, aby „uruchomić węzeł”.
 
-## Wymagania wstępne \{#prerequisites}
+## Wymagania wstępne {#prerequisites}
 
 Powinieneś zrozumieć koncepcję zdecentralizowanej sieci, zanim zagłębisz się w nią i uruchomisz własną instancję klienta Ethereum. Spójrz na nasze [wprowadzenie do Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Czym są węzły i klienci? \{#what-are-nodes-and-clients}
+## Czym są węzły i klienci? {#what-are-nodes-and-clients}
 
 „Węzeł” odnosi się do oprogramowania znanego jako klient. Klient jest implementacją Ethereum, która za zadanie ma weryfikację wszystkich transakcji w kolejnych blokach, utrzymywać bezpieczeństwo sieci i poprawność danych.
 
@@ -22,35 +22,35 @@ Wiele [implementacji klientów Ethereum](/developers/docs/nodes-and-clients/#exe
 
 ![Klient Eth1x](./client-diagram.png) Uproszczony schemat funkcji klienta Ethereum.
 
-## Typy węzłów \{#node-types}
+## Typy węzłów {#node-types}
 
 Jeśli chcesz uruchomić swój własny węzeł, powinieneś zrozumieć, że istnieją różne typy węzłów, które zużywają dane w inny sposób. W rzeczywistości klienci mogą uruchamiać 3 różne typy węzłów — lekki, pełny i archiwalny. Istnieją również opcje różnych strategii synchronizacji, które umożliwiają szybszą synchronizację. Synchronizacja odnosi się do tego, jak szybko może uzyskać najbardziej aktualne informacje o stanie Ethereum.
 
-### Pełny węzeł \{#full-node}
+### Pełny węzeł {#full-node}
 
 - Przechowuje pełne dane blockchainu.
 - Uczestniczy w walidacji bloków, weryfikuje wszystkie bloki i stany.
 - Wszystkie stany mogą pochodzić z pełnego węzła.
 - Obsługuje sieć i dostarcza dane na żądanie.
 
-### Lekki węzeł \{#light-node}
+### Lekki węzeł {#light-node}
 
 - Przechowuje łańcuch nagłówków i żąda wszystkiego innego.
 - Potrafi zweryfikować poprawność danych względem korzeni stanu w nagłówkach bloków.
 - Przydatne dla urządzeń o niskiej przepustowości, takich jak urządzenia wbudowane lub telefony komórkowe, które nie stać na przechowywanie gigabajtów danych blockchainu.
 
-### Węzeł archiwum \{#archive-node}
+### Węzeł archiwum {#archive-node}
 
 - Przechowuje wszystko w pełnym węźle i buduje archiwum stanów historycznych. Potrzebne, jeśli chcesz zapytać o coś takiego jak saldo konta w bloku #4 000,000.
 - Dane te reprezentują jednostki terabajtów, co sprawia, że ​​węzły archiwów są mniej atrakcyjne dla przeciętnych użytkowników, ale mogą być przydatne w przypadku usług takich jak eksploratory bloków, dostawcy portfeli i analizy łańcuchów.
 
 Synchronizowanie klientów w dowolnym trybie innym niż archiwum spowoduje wyczyszczenie danych łańcucha bloków. Oznacza to, że nie ma archiwum wszystkich stanów historycznych, ale cały węzeł jest w stanie budować je na żądanie.
 
-## Dlaczego należy uruchomić węzeł Ethereum? \{#why-should-i-run-an-ethereum-node}
+## Dlaczego należy uruchomić węzeł Ethereum? {#why-should-i-run-an-ethereum-node}
 
 Uruchomienie węzła pozwala Ci bezspornie i prywatnie korzystać z Ethereum podczas wspierania ekosystemu.
 
-### Korzyści dla Ciebie \{#benefits-to-you}
+### Korzyści dla Ciebie {#benefits-to-you}
 
 Prowadzenie własnego węzła umożliwia korzystanie z Ethereum w sposób naprawdę prywatny, samowystarczalny i pozbawiony zaufania. Nie musisz ufać sieci, ponieważ możesz samodzielnie zweryfikować dane ze swoim klientem. „Nie ufaj, sprawdź” jest popularną mantrą blockchainu.
 
@@ -60,7 +60,7 @@ Prowadzenie własnego węzła umożliwia korzystanie z Ethereum w sposób napraw
 
 ![Jak uzyskać dostęp do Ethereum za pośrednictwem aplikacji i węzłów](./nodes.png)
 
-### Korzyści dla sieci \{#network-benefits}
+### Korzyści dla sieci {#network-benefits}
 
 Różnorodny zestaw węzłów jest ważny dla zdrowia, bezpieczeństwa i odporności operacyjnej Ethereum.
 
@@ -69,9 +69,9 @@ Różnorodny zestaw węzłów jest ważny dla zdrowia, bezpieczeństwa i odporno
 
 Jeśli uruchomisz pełny węzeł, korzysta z niego cała sieć Ethereum.
 
-## Uruchamianie własnego węzła \{#running-your-own-node}
+## Uruchamianie własnego węzła {#running-your-own-node}
 
-### Projekty \{#projects}
+### Projekty {#projects}
 
 [**Wybierz klienta i postępuj zgodnie z jego instrukcjami**](#clients)
 
@@ -83,14 +83,14 @@ Jeśli uruchomisz pełny węzeł, korzysta z niego cała sieć Ethereum.
 
 - [dappnode.io](https://dappnode.io)
 
-### Źródła \{#resources}
+### Źródła {#resources}
 
 - [Uruchamianie pełnych węzłów Ethereum: kompletny przewodnik](https://medium.com/coinmonks/running-ethereum-full-nodes-a-guide-for-the-barely-motivated-a8a13e7a0d31) _7 listopada 2019 r. – Justin Leroux_
 - [Schemat konfiguracji węzła](https://dev.to/5chdn/ethereum-node-configuration-modes-cheat-sheet-25l8) _5 stycznia, 2019 – Afryka Schoeden_
 - [Jak zainstalować i uruchomić węzeł Geth](https://www.quiknode.io/guides/infrastructure/how-to-install-and-run-a-geth-node) _4 października 2020 r. – Sahil Sen_
 - [Jak zainstalować i uruchomić węzeł OpenEthereum (poprzednio węzeł parzystości)](https://www.quiknode.io/guides/infrastructure/how-to-run-a-openethereum-ex-parity-client-node) _22 września 2020 r. – Sahil Sen_
 
-## Alternatywy \{#alternatives}
+## Alternatywy {#alternatives}
 
 Uruchamianie własnego węzła może być trudne i nie zawsze musisz uruchamiać własną instancję. W tym przypadku możesz użyć zewnętrznego dostawcy API, takiego jak [Infura](https://infura.io), [Alchemia](https://alchemyapi.io) lub [QuikNode](https://www.quiknode.io). Alternatywnie [ArchiveNode](https://archivenode.io/) to wspierany przez społeczność węzeł archiwizacji, który ma nadzieję na przekazanie danych archiwalnych w blockchain Ethereum niezależnym programistom, którzy w przeciwnym razie nie mogli sobie na nie pozwolić.
 
@@ -98,7 +98,7 @@ Jeśli ktoś uruchamia węzeł Ethereum z publicznym API w Twojej społeczności
 
 Z drugiej strony, jeśli uruchamiasz klienta, możesz podzielić się nim ze znajomymi, którzy mogą tego potrzebować.
 
-## Klienci \{#execution-clients}
+## Klienci {#execution-clients}
 
 Ethereum jest zaprojektowany do oferowania różnych klientów, stworzonych przez różne zespoły przy użyciu różnych języków programowania. Dzięki temu sieć jest silniejsza i bardziej zróżnicowana. Idealnym celem jest osiągnięcie różnorodności bez zdominowania przez żadnego klienta w celu zmniejszenia pojedynczych punktów niepowodzenia.
 
@@ -114,15 +114,15 @@ W tabeli przedstawiono podsumowanie poszczególnych klientów. Wszystkie z nich 
 
 Więcej informacji o obsługiwanych sieciach znajdziesz w rozdziale [Sieci Ethereum](/developers/docs/networks/).
 
-### Zalety różnych implementacji \{#advantages-of-different-implementations}
+### Zalety różnych implementacji {#advantages-of-different-implementations}
 
 Każdy klient ma unikalne przypadki i zalety, więc powinieneś wybrać jeden na podstawie własnych preferencji. Różnorodność pozwala implementacjom skupić się na różnych funkcjach i odbiorcach. Możesz wybrać klienta na podstawie funkcji, wsparcia, języka programowania lub licencji.
 
-#### Go Ethereum \{#geth}
+#### Go Ethereum {#geth}
 
 Go Ethereum (w skrócie Geth) jest jedną z oryginalnych implementacji protokołu Ethereum. Obecnie jest to najbardziej rozpowszechniony klient z największą bazą użytkowników i różnorodnością narzędzi dla użytkowników i programistów. Jest napisany w Go, w pełni open source i licencjonowany na mocy GNU LGPL v3.
 
-#### OpenEthereum \{#openethereum}
+#### OpenEthereum {#openethereum}
 
 OpenEthereum jest szybkim, bogatym w funkcje i zaawansowanym klientem Ethereum opartym na CLI. Został zbudowany w celu zapewnienia niezbędnej infrastruktury dla szybkich i niezawodnych usług, które wymagają szybkiej synchronizacji i maksymalnego czasu pracy. Celem OpenEthereum jest być najszybszy, najlżejszy i najbezpieczniejszy klient Ethereum. Zapewnia czystą, modułową bazę kodową pozwalającą na:
 
@@ -132,7 +132,7 @@ OpenEthereum jest szybkim, bogatym w funkcje i zaawansowanym klientem Ethereum o
 
 OpenEthereum jest rozwijany przy użyciu najnowocześniejszego języka programowania Rust i licencjonowanego na licencji GPLv3.
 
-#### Nethermind \{#nethermind}
+#### Nethermind {#nethermind}
 
 Nethermind to implementacja Ethereum stworzona za pomocą stosu technologicznego C# .NET, działająca na wszystkich głównych platformach, w tym ARM. Oferuje ona wspaniałe wyniki dzięki:
 
@@ -142,11 +142,11 @@ Nethermind to implementacja Ethereum stworzona za pomocą stosu technologicznego
 
 Nethermind ma również [dokładną dokumentację](https://docs.nethermind.io), silne wsparcie dla programistów, społeczność online i wsparcie 24/7 dostępne dla użytkowników premium.
 
-#### Besu \{#besu}
+#### Besu {#besu}
 
 Hyperledger Besu to klient Ethereum klasy korporacyjnej dla sieci publicznych i autoryzowanych. Obsługuje wszystkie funkcje sieci głównej Ethereum, od śledzenia do GraphQL, ma rozbudowany monitoring i jest obsługiwany przez ConsenSys, zarówno w otwartych kanałach społecznościowych, jak i poprzez komercyjne umowy SLA dla przedsiębiorstw. Jest napisany w Java i jest licencjonowany Apache 2.0.
 
-### Tryb synchronizacji \{#sync-modes}
+### Tryb synchronizacji {#sync-modes}
 
 - Pełna – pobiera wszystkie bloki (w tym nagłówki, transakcje i paragony) i generuje stan łańcucha bloków stopniowo poprzez wykonanie każdego bloku.
 - Szybka (domyślna) – pobiera wszystkie bloki (w tym nagłówki, transakcje i paragony), weryfikuje wszystkie nagłówki i pobiera stan i weryfikuje go w nagłówkach.
@@ -165,23 +165,23 @@ Typ synchronizacji określasz podczas konfiguracji, na przykład:
 
 `trinity --sync-from-checkpoint eth://block/byhash/0xa65877df954e1ff2012473efee8287252eee956c0d395a5791f1103a950a1e21?score=15,835,269,727,022,672,760,774`
 
-## Sprzęt \{#hardware}
+## Sprzęt {#hardware}
 
 Wymagania sprzętowe różnią się w zależności od klienta, ale zazwyczaj nie są wysokie, ponieważ węzeł musi po prostu pozostać zsynchronizowany. Nie należy mylić tego z wydobywaniem, które wymaga dużo większej mocy obliczeniowej. Jednak czas synchronizacji i wydajność poprawiają się dzięki mocniejszemu sprzętowi. W zależności od Twoich potrzeb i pragnień, Ethereum można uruchomić na Twoim komputerze, serwerze domowym, komputerach jednopłytowych lub wirtualnych serwerach prywatnych w chmurze.
 
 Prostym sposobem na uruchomienie własnego węzła jest użycie wtyczek „plug and play”, takich jak [DAppNode](https://dappnode.io/). Zapewnia sprzęt do uruchamiania klientów i aplikacji od nich zależnych z prostym interfejsem użytkownika.
 
-### Wymagania \{#requirements}
+### Wymagania {#requirements}
 
 Przed zainstalowaniem klienta upewnij się, że komputer ma wystarczającą ilość zasobów, aby go uruchomić. Poniżej znajdują się minimalne i zalecane wymagania, jednak kluczowym elementem jest przestrzeń dyskowa. Synchronizacja blockchainu Ethereum jest bardzo intensywna pod kątem wejścia/wyjścia. Najlepiej mieć dysk półprzewodnikowy (SSD). Aby uruchomić klienta Ethereum na dysku twardym, potrzebujesz co najmniej 8 GB pamięci RAM jako pamięci podręcznej.
 
-#### Minimalne wymagania \{#recommended-specifications}
+#### Minimalne wymagania {#recommended-specifications}
 
 - Procesor z 2+ rdzeniami
 - Minimum 4 GB RAM z SSD, 8 GB+ jeśli masz HDD
 - Przepustowość 8 Mbit/s
 
-#### Zalecane specyfikacje \{#recommended-specifications}
+#### Zalecane specyfikacje {#recommended-specifications}
 
 - Szybki procesor z ponad 4 rdzeniami
 - 16 GB+ RAM
@@ -199,17 +199,17 @@ W zależności od tego, które oprogramowanie i tryb synchronizacji mają być u
 
 Te wykresy pokazują, jak zawsze zmieniają się wymagania dotyczące przechowywania. Aby uzyskać najbardziej aktualne dane dla Geth i Parity, zobacz [pełną synchronizację danych](https://etherscan.io/chartsync/chaindefault) i [archiwum danych synchronizacji](https://etherscan.io/chartsync/chainarchive).
 
-### Ethereum na komputerze jednopłytowym \{#ethereum-on-a-single-board-computer}
+### Ethereum na komputerze jednopłytowym {#ethereum-on-a-single-board-computer}
 
 Najbardziej wygodnym i tanim sposobem uruchomienia węzła Ethereum jest korzystanie z jednego komputera z architekturą ARM jak Raspberry Pi. [Ethereum na ARM](https://twitter.com/EthereumOnARM) dostarcza obrazy klientów Geth, Parity, Nethereumd i Besu. Oto prosty samouczek [jak zbudować i skonfigurować klienta ARM](/developers/tutorials/run-node-raspberry-pi/).
 
 Małe, niedrogie i wydajne urządzenia, takie jak te, są idealne do uruchomienia węzła w domu.
 
-## Klienci Eth2 \{#consensus-clients}
+## Klienci Eth2 {#consensus-clients}
 
 Pojawili się nowi klienci obsługujący [aktualizacje Eth2](/roadmap/beacon-chain/). Będą obsługiwać łańcuch śledzący i wspierać nowy mechanizm konsensusu [proof-of-stake](/developers/docs/consensus-mechanisms/pos/).
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 W Internecie jest wiele instrukcji i informacji o klientach Ethereum, tutaj jest kilka, które mogą być pomocne.
 
@@ -218,12 +218,12 @@ W Internecie jest wiele instrukcji i informacji o klientach Ethereum, tutaj jest
 - [Analizowanie wymagań sprzętowych dla Ethereum w pełni zweryfikowany węzeł](https://medium.com/coinmonks/analyzing-the-hardware-requirements-to-be-an-ethereum-full-validated-node-dc064f167902) _– Albert Palau, 24 września 2018 r._
 - [Uruchomienie węzła Besu na Ethereum Mainnet: Korzyści, Wymagania i Ustawienia](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7 maja 2020_
 
-## Powiązane tematy \{#related-topics}
+## Powiązane tematy {#related-topics}
 
 - [Bloki](/developers/docs/blocks/)
 - [Sieci](/developers/docs/networks/)
 
-## Powiązane samouczki \{#related-tutorials}
+## Powiązane samouczki {#related-tutorials}
 
 - [Uruchamianie węzła za pomocą Geth](/developers/tutorials/run-light-node-geth/) _– Jak pobrać, zainstalować i uruchomić Geth. Omówienie trybów synchronizacji, konsoli JavaScript i więcej._
 - [Turn your Raspberry Pi 4 into an Eth 1.0 or Eth 2.0 node just by flashing the MicroSD card – Installation guide](/developers/tutorials/run-node-raspberry-pi/) _– Flash your Raspberry Pi 4, plug in an ethernet cable, connect the SSD disk and power up the device to turn the Raspberry Pi 4 into a full Ethereum 1.0 node or an Ethereum 2.0 node (beacon chain / validator)._

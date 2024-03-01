@@ -13,7 +13,7 @@ summaryPoints:
   - Nem kell másban megbíznia, és az eszközeihez tartozó kulcsok mindig az Ön kontrollja alatt állnak
 ---
 
-## Mi az az önálló letétbe helyezés? \{#what-is-solo-staking}
+## Mi az az önálló letétbe helyezés? {#what-is-solo-staking}
 
 Az önálló letétbe helyezés (solo staking) során a felhasználó egy [Ethereum csomópontot működtet](/run-a-node/) az internethez csatlakozva, letétbe helyez 32 ETH-t, hogy aktiváljon egy [validátort](#faq), így közvetlenül részt tud venni a hálózat konszenzusfolyamatában.
 
@@ -25,7 +25,7 @@ Az önálló letétbe helyezők azért felelnek, hogy a kliensek futásához sz�
 
 Az önálló letétbe helyező közvetlenül a protokolltól kap jutalmakat azért, hogy a validátora megfelelően működik és online van.
 
-## Miért legyek önálló letétbe helyező? \{#why-stake-solo}
+## Miért legyek önálló letétbe helyező? {#why-stake-solo}
 
 Az önálló letétbe helyezés több felelősséggel jár, de teljes kontrollt biztosít a pénzeszközök és a staking felállítás felett.
 
@@ -35,7 +35,7 @@ Az önálló letétbe helyezés több felelősséggel jár, de teljes kontrollt 
   <Card title="Hálózatbiztonság" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Megfontolások, mielőtt belevágna az önálló stakingbe \{#considerations-before-staking-solo}
+## Megfontolások, mielőtt belevágna az önálló stakingbe {#considerations-before-staking-solo}
 
 Bármennyire is szeretnénk, hogy az önálló letétbe helyezés elérhető és kockázatmentes legyen mindenkinek, ez nem a valóság. Mielőtt belevágna, komoly gyakorlati megfontolásokkal kell szembenéznie.
 
@@ -87,7 +87,7 @@ Az inaktív állapot miatti büntetéstől különbözik a <em>súlyos bünteté
 <StakingComparison page="solo" />
 }
 
-## Hogyan működik \{#how-it-works}
+## Hogyan működik {#how-it-works}
 
 {
 <StakingHowSoloWorks />
@@ -99,7 +99,7 @@ Bármikor kiléphet a validátor szerepéből, így nem kell online lennie, és 
 
 [Bővebben a letétbe helyezés visszavonásáról](/staking/withdrawals/)
 
-## Induljon el a Staking Launchpad segítségével \{#get-started-on-the-staking-launchpad}
+## Induljon el a Staking Launchpad segítségével {#get-started-on-the-staking-launchpad}
 
 A Staking Launchpad egy nyílt forráskódú alkalmazás, ami segít a letétbe helyezés folyamatában. Végigvezeti Önt a szükséges lépéseken, mint a kliensek kiválasztása, a kulcsok létrehozása és az ETH letétbe helyezése a letéti szerződésbe. Egy ellenőrzőlistán is végigveheti, hogy minden a rendelkezésre áll, hogy biztonsággal működjön a validátora.
 
@@ -107,7 +107,7 @@ A Staking Launchpad egy nyílt forráskódú alkalmazás, ami segít a letétbe 
 <StakingLaunchpadWidget />
 }
 
-## Mit kell figyelembe venni a csomópont- és kliensbeállító eszközöknél \{#node-tool-considerations}
+## Mit kell figyelembe venni a csomópont- és kliensbeállító eszközöknél {#node-tool-considerations}
 
 Az önálló letétbe helyezést segítő eszközök és szolgáltatások száma egyre növekszik, de mindnél áll fent kockázat, és ugyanúgy mind előnyökkel is jár.
 
@@ -117,7 +117,7 @@ Alább különböző jellemzők mentén mutatjuk be a jelentős erősségeket va
 <StakingConsiderations page="solo" />
 }
 
-## Fedezze fel a csomópont- és kliensbeállító eszközöket \{#node-and-client-tools}
+## Fedezze fel a csomópont- és kliensbeállító eszközöket {#node-and-client-tools}
 
 Számos olyan opció érhető el, amely biztosan kielégíti minden igényét. A fenti jellemzőket használva megértheti az alábbi eszközökben rejlő lehetőségeket.
 
@@ -143,13 +143,13 @@ Ezek alternatív eszközök a [Staking Deposit CLI](https://github.com/ethereum/
 
 Hiányolja valamelyik letétbe helyezési eszközt? Ha a [terméklistázó szabályzat](/contributing/adding-staking-products/) alapján úgy véli, hogy egy adott eszköz illeszkedne ide, akkor jelezze felénk.
 
-## Nézze meg az önálló letétbe helyezés útmutatóit \{#staking-guides}
+## Nézze meg az önálló letétbe helyezés útmutatóit {#staking-guides}
 
 {
 <StakingGuides />
 }
 
-## Gyakran ismételt kérdések \{#faq}
+## Gyakran ismételt kérdések {#faq}
 
 Ezek a leggyakrabban felmerülő kérdések a letétbe helyezés kapcsán, melyről érdemes Önnek is tudnia.
 
@@ -233,7 +233,7 @@ A teljes egyenleg visszavonásához végig kell menni a validátorkiléptetési 
 </ExpandableCard>
 }
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [Ethereum letétbe helyezési jegyzék](https://www.staking.directory/) – _Eridian és Spacesider_
 - [Az Ethereum-kliens diverzitásának problémája](https://hackernoon.com/ethereums-client-diversity-problem) – _@emmanuelawosika 2022._

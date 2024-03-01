@@ -6,11 +6,11 @@ lang: es
 
 Una cuenta Ethereum con un saldo en ether (ETH), que permite realizar transacciones en Ethereum. Los usuarios pueden controlar las cuentas, o bien se pueden implementar como contratos inteligentes.
 
-## Requisitos previos \{#prerequisites}
+## Requisitos previos {#prerequisites}
 
 Para ayudarle a entender mejor esta página, recomendamos que lea nuestra [Introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Tipos de cuenta \{#types-of-account}
+## Tipos de cuenta {#types-of-account}
 
 Ethereum tiene dos tipos de cuenta:
 
@@ -22,7 +22,7 @@ Ambos tipos de cuenta tienen la habilidad de:
 - Recibir, almacenar y enviar ETH y tokens
 - Interactuar con contratos inteligentes implementados
 
-### Diferencias principales \{#key-differences}
+### Diferencias principales {#key-differences}
 
 **Titularidad externa (Externally-owned)**
 
@@ -38,7 +38,7 @@ Ambos tipos de cuenta tienen la habilidad de:
 - Las transacciones de cuentas externas a una cuenta de contrato pueden activar código, que a su vez realiza muchas acciones diferentes, como transferir tokens o incluso crear un nuevo contrato
 - Las cuentas de contrato no tienen claves privadas. En su lugar, están controlados por la lógica del código de contrato inteligente
 
-## Información detallada de una cuenta \{#an-account-examined}
+## Información detallada de una cuenta {#an-account-examined}
 
 Las cuentas Ethereum tienen cuatro campos:
 
@@ -49,7 +49,7 @@ Las cuentas Ethereum tienen cuatro campos:
 
 ![Un diagrama que muestra la creación de una cuenta](./accounts.png) _Diagrama adaptado de [Ethereum EVM ilustrado](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Cuentas de titularidad externa y pares de claves \{#externally-owned-accounts-and-key-pairs}
+## Cuentas de titularidad externa y pares de claves {#externally-owned-accounts-and-key-pairs}
 
 Una cuenta está formada por un par criptográfico de claves: pública y privada. Estas claves ayudan a probar que una transacción fue realmente firmada por el remitente y prevenir falsificaciones. Tu clave privada es lo que utilizas para firmar transacciones, así que garantiza la custodia de los fondos relacionados con tu cuenta. Realmente nunca se almacenan criptomonedas, sino que se dispone de claves privadas: los fondos están siempre en la cadena de bloques de Ethereum.
 
@@ -57,7 +57,7 @@ Esto evita que actores maliciosos difundan transacciones falsas a la red, ya que
 
 Si Alice quiere enviar ether desde su propia cuenta a la cuenta de Bob, Alice necesita crear una solicitud de transacción y enviarla a la red para su posterior verificación. El uso que Ethereum hace de la criptografía de la clave pública asegura que Alice pueda comprobar que ella ha iniciado originalmente la solicitud de transacción. Sin mecanismos criptográficos, una adversaria maliciosa llamada Eve podría emitir públicamente una solicitud similar a “enviar 5 ETH de la cuenta de Alice a la cuenta de Eve” y nadie podría verificar que no procede de Alice.
 
-## Creación de una cuenta \{#account-creation}
+## Creación de una cuenta {#account-creation}
 
 Cuando se quiere crear una cuenta, la mayoría de las bibliotecas generan una clave privada aleatoria.
 
@@ -90,7 +90,7 @@ Es posible obtener nuevas claves públicas a partir de nuestra clave privada, pe
 
 Necesitas una clave privada para firmar mensajes y transacciones, lo que genera una firma. A continuación, otros pueden utilizar la firma para derivar la clave pública y autenticar así al autor del mensaje. En tu aplicación, puedes utilizar una biblioteca javascript para enviar transacciones a la red.
 
-## Cuentas de contrato \{#contract-accounts}
+## Cuentas de contrato {#contract-accounts}
 
 Las cuentas de contrato también poseen una dirección hexadecimal de 42 caracteres:
 
@@ -100,17 +100,17 @@ Ejemplo:
 
 La dirección del contrato se asigna cuando un contrato se implementa en la cadena de bloques de Ethereum. La dirección se obtiene de la dirección del creador y del número de transacciones enviadas desde esa dirección (el «nonce»).
 
-## Claves de validador \{#validators-keys}
+## Claves de validador {#validators-keys}
 
 También hay otro tipo de clave en Ethereum, introducida cuando Ethereum cambió de prueba de trabajo a prueba de participación basada en el consenso. Se trata de las claves «BLS» y se utilizan para identificar validadores. Estas claves pueden añadirse eficientemente para reducir el ancho de banda necesario para que la red llegue al consenso. Sin esta agregación de claves, la participación mínima de un validador sería mucho mayor.
 
 [Más sobre las claves validadoras](/developers/docs/consensus-mechanisms/pos/keys/).
 
-## Una nota sobre las carteras \{#a-note-on-wallets}
+## Una nota sobre las carteras {#a-note-on-wallets}
 
 Una cuenta no es una cartera. Una cuenta consiste en un par de claves para una cuenta de Ethereum que pertenece a un usuario. Una cartera es una interfaz o aplicación que le permite interactuar con su cuenta de Ethereum.
 
-## Una demostración visual \{#a-visual-demo}
+## Una demostración visual {#a-visual-demo}
 
 En el siguiente vídeo Austin le guiará por las funciones hash y los pares de claves.
 
@@ -122,13 +122,13 @@ En el siguiente vídeo Austin le guiará por las funciones hash y los pares de c
 <YouTube id="9LtBDy67Tho" />
 }
 
-## Para seguir leyendo \{#further-reading}
+## Para seguir leyendo {#further-reading}
 
 - [Claves para entender las cuentas de Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/)-etherscan
 
 _¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
 
-## Temas relacionados \{#related-topics}
+## Temas relacionados {#related-topics}
 
 - [Contratos inteligentes](/developers/docs/smart-contracts/)
 - [Transacciones](/developers/docs/transactions/)

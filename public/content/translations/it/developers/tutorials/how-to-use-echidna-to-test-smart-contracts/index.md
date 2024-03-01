@@ -15,11 +15,11 @@ source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 
-## Installazione \{#installation}
+## Installazione {#installation}
 
 Echidna è installabile tramite docker o usando il binario pre-compilato.
 
-### Echidna tramite docker \{#echidna-through-docker}
+### Echidna tramite docker {#echidna-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
@@ -35,15 +35,15 @@ solc-select 0.5.11
 cd /home/training
 ```
 
-### Binario \{#binary}
+### Binario {#binary}
 
 [https://github.com/crytic/echidna/releases/tag/v1.4.0.0](https://github.com/crytic/echidna/releases/tag/v1.4.0.0)
 
-## Introduzione al fuzzing basato sulla proprietà \{#introduction-to-property-based-fuzzing}
+## Introduzione al fuzzing basato sulla proprietà {#introduction-to-property-based-fuzzing}
 
 Echidna è un fuzzer basato sulla proprietà, che abbiamo descritto nei nostri post del blog precedenti ([1](https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/), [2](https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/), [3](https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/)).
 
-### Fuzzing \{#fuzzing}
+### Fuzzing {#fuzzing}
 
 Il [fuzzing](https://wikipedia.org/wiki/Fuzzing) è una ben nota tecnica nella community della sicurezza. Consiste nel generare input più o meno casualmente per trovare i bug nel programma. I fuzzer per il software tradizionale (come [AFL](http://lcamtuf.coredump.cx/afl/) o [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) sono noti per essere strumenti efficienti per trovare i bug.
 
@@ -53,7 +53,7 @@ Oltre alla generazione di input puramente casuale, esistono molte tecniche e str
 - Generare l'input rispettando un vincolo strutturale. Ad esempio, se il tuo input contiene un'intestazione con un checksum, avrà senso lasciare che il fuzzer generi input a convalida del checksum.
 - Usare input noti per generarne di nuovi: se hai accesso a un grande dataset di input validi, il tuo fuzzer può generarne di nuovi, anziché iniziare da zero la generazione. In genere sono detti _seed_.
 
-### Fuzzing basato sulla proprietà \{#property-based-fuzzing}
+### Fuzzing basato sulla proprietà {#property-based-fuzzing}
 
 Echidna appartiene a una famiglia specifica di fuzzer: il fuzzing basato sulla proprietà, ampiamente ispirato da [QuickCheck](https://wikipedia.org/wiki/QuickCheck). In contrasto al fuzzer classico che prova a trovare i crash, Echidna prova a rompere le invarianti definite dall'utente.
 
@@ -63,7 +63,7 @@ Negli smart contract, le invarianti sono funzioni di Solidity, che possono rappr
 - Macchina di stato errata: i token sono trasferibili mentre il contratto è in pausa.
 - Aritmetica errata: l'utente può sottovalutare il proprio saldo e ottenere token gratuiti illimitati.
 
-### Testare una proprietà con Echidna \{#testing-a-property-with-echidna}
+### Testare una proprietà con Echidna {#testing-a-property-with-echidna}
 
 Vedremo come testare un contratto intelligente con Echidna. L'obiettivo è il seguente smart contract [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol):
 
@@ -88,7 +88,7 @@ Presumeremo che questo token debba avere le seguenti proprietà:
 - Chiunque può avere al massimo 1.000 token
 - Il token non è trasferibile (non è un token ERC20)
 
-### Scrivi una proprietà \{#write-a-property}
+### Scrivi una proprietà {#write-a-property}
 
 Le proprietà di Echidna sono funzioni di Solidity. Una proprietà deve:
 
@@ -122,7 +122,7 @@ contract TestToken is Token{
 
 [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol) implementa la proprietà ed eredita dal token.
 
-### Avviare un contratto \{#initiate-a-contract}
+### Avviare un contratto {#initiate-a-contract}
 
 Echidna necessita di un [costruttore](/developers/docs/smart-contracts/anatomy/#constructor-functions) senza argomento. Se il tuo contratto necessita di un'inizializzazione specifica, devi farlo nel costruttore.
 
@@ -133,7 +133,7 @@ Esistono degli indirizzi specifici in Echidna:
 
 Non necessitiamo di alcuna inizializzazione particolare nel nostro esempio corrente, di conseguenza il nostro costruttore è vuoto.
 
-### Eseguire Echidna \{#run-echidna}
+### Eseguire Echidna {#run-echidna}
 
 Echidna è avviato con:
 
@@ -147,7 +147,7 @@ Se contract.sol contiene più contratti, puoi specificare l'obiettivo:
 echidna-test contract.sol --contract MyContract
 ```
 
-### Riepilogo: Testare una proprietà \{#summary-testing-a-property}
+### Riepilogo: Testare una proprietà {#summary-testing-a-property}
 
 Di seguito è riepilogata l'esecuzione di Echidna nel nostro esempio:
 
@@ -174,7 +174,7 @@ echidna_balance_under_1000: failed!💥
 
 Echidna ha individuato che la proprietà è violata se `backdoor` viene chiamata.
 
-## Filtrare le funzioni da chiamare durante una campagna di fuzzing \{#filtering-functions-to-call-during-a-fuzzing-campaign}
+## Filtrare le funzioni da chiamare durante una campagna di fuzzing {#filtering-functions-to-call-during-a-fuzzing-campaign}
 
 Vedremo come filtrare le funzioni da sottoporre a fuzzing. L'obiettivo è il seguente smart contract:
 
@@ -236,7 +236,7 @@ echidna_state4: passed! 🎉
 Seed: -3684648582249875403
 ```
 
-### Funzioni di filtraggio \{#filtering-functions}
+### Funzioni di filtraggio {#filtering-functions}
 
 Echidna fa fatica a trovare la sequenza corretta per testare questo contratto perché le due funzioni di reset (`reset1` e `reset2`) imposteranno tutte le variabili di stato su `false`. Tuttavia, possiamo usare una funzionalità speciale di Echidna per inserire nella blacklist la funzione di reset o nella whitelist solo le funzioni `f`, `g`, `h` e `i`.
 
@@ -257,7 +257,7 @@ filterFunctions: ["f", "g", "h", "i"]
 - `filterBlacklist` è `true` di default.
 - Il filtraggio sarà eseguito solo per nome (senza parametri). Se hai `f()` e `f(uint256)`, il filtro `"f"` abbinerà entrambe le funzioni.
 
-### Eseguire Echidna \{#run-echidna-1}
+### Eseguire Echidna {#run-echidna-1}
 
 Per eseguire Echidna con un file di configurazione `blacklist.yaml`:
 
@@ -274,7 +274,7 @@ echidna_state4: failed!
 
 Echidna troverà la sequenza di transazioni per falsificare la proprietà quasi immediatamente.
 
-### Riepilogo: Filtrare le funzioni \{#summary-filtering-functions}
+### Riepilogo: Filtrare le funzioni {#summary-filtering-functions}
 
 Echidna può inserire le funzioni di blacklist o whitelist da chiamare durante una campagna di fuzzing usando:
 
@@ -290,7 +290,7 @@ echidna-test contract.sol --config config.yaml
 
 Echidna avvia una campagna di fuzzing inserendo `f1`, `f2` e `f3` nella blacklist o solo chiamandole, in base al valore del booleano `filterBlacklist`.
 
-## Come testare l'affermazione di Solidity con Echidna \{#how-to-test-soliditys-assert-with-echidna}
+## Come testare l'affermazione di Solidity con Echidna {#how-to-test-soliditys-assert-with-echidna}
 
 In questo breve tutorial, mostreremo come usare Echidna per testare il controllo dell'affermazione nei contratti. Supponiamo di avere un contratto come questo:
 
@@ -307,7 +307,7 @@ contract Incrementor {
 }
 ```
 
-### Scrivere un'asserzione \{#write-an-assertion}
+### Scrivere un'asserzione {#write-an-assertion}
 
 Vogliamo assicurarci che `tmp` sia minore o uguale al `counter` dopo averne restituita la differenza. Potremmo scrivere una proprietà di Echidna, ma dovremmo memorizzare da qualche parte il valore `tmp`. Invece, potremmo usare un'asserzione come questa:
 
@@ -324,7 +324,7 @@ contract Incrementor {
 }
 ```
 
-### Eseguire Echidna \{#run-echidna-2}
+### Eseguire Echidna {#run-echidna-2}
 
 Per abilitare il test di insuccesso dell'asserzione, crea un [file di configurazione di Echidna](https://github.com/crytic/echidna/wiki/Config) `config.yaml`:
 
@@ -348,7 +348,7 @@ Seed: 1806480648350826486
 
 Come puoi vedere, Echidna segnala alcuni insuccessi dell'asserzione nella funzione `inc`. Aggiungere più di un'asserzione per funzione è possibile, ma Echidna non può dire quale sia fallita.
 
-### Quando e come usare le asserzioni \{#when-and-how-use-assertions}
+### Quando e come usare le asserzioni {#when-and-how-use-assertions}
 
 Le asserzioni sono utilizzabili come alternative a proprietà esplicite, specialmente se le condizioni per il controllo sono direttamente correlate all'uso corretto della stessa operazione `f`. Aggiungere le asserzioni dopo il codice farà sì che il controllo abbia luogo immediatamente dopo la sua esecuzione:
 
@@ -384,7 +384,7 @@ In generale, consigliamo di seguire i [consigli di John Regehr](https://blog.reg
 
 Infine, consigliamo di **non usare** `require` al posto di `assert`, poiché Echidna non potrà rilevarlo (ma il contratto si ripristinerà ugualmente).
 
-### Riepilogo: Controllo dell'asserzione \{#summary-assertion-checking}
+### Riepilogo: Controllo dell'asserzione {#summary-assertion-checking}
 
 Quanto segue riepiloga l'esecuzione di Echidna nel nostro esempio:
 
@@ -415,7 +415,7 @@ Seed: 1806480648350826486
 
 Echidna ha trovato che l'asserzione in `inc` può fallire se questa funzione è chiamata diverse volte con grandi argomenti.
 
-## Raccogliere e modificare un corpus di Echidna \{#collecting-and-modifying-an-echidna-corpus}
+## Raccogliere e modificare un corpus di Echidna {#collecting-and-modifying-an-echidna-corpus}
 
 Vedremo come raccogliere e usare un corpus di transazioni con Echidna. L'obiettivo è il seguente smart contract [`magic.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol):
 
@@ -450,7 +450,7 @@ Seed: 2221503356319272685
 
 Tuttavia, possiamo comunque usare Echidna per raccogliere il corpus mentre si esegue questa campagna di fuzzing.
 
-### Raccogliere un corpus \{#collecting-a-corpus}
+### Raccogliere un corpus {#collecting-a-corpus}
 
 Per abilitare la raccolta, crea la cartella di un corpus:
 
@@ -518,7 +518,7 @@ Echidna non è ancora in grado di trovare i valori magici corretti, ma possiamo 
 
 Chiaramente, questo input non innescherà il fallimento nella nostra proprietà. Tuttavia, nel prossimo passaggio, vedremo come modificarlo a tale scopo.
 
-### Seeding di un corpus \{#seeding-a-corpus}
+### Seeding di un corpus {#seeding-a-corpus}
 
 Echidna necessita di un po' di aiuto per poter affrontare la funzione `magic`. Copieremo e modificheremo l'input per usare parametri idonei a tale scopo:
 
@@ -544,7 +544,7 @@ Seed: -7293830866560616537
 
 Questa volta, ha scoperto che la proprietà è immediatamente violata.
 
-## Individuare le transazioni ad alto consumo di gas \{#finding-transactions-with-high-gas-consumption}
+## Individuare le transazioni ad alto consumo di gas {#finding-transactions-with-high-gas-consumption}
 
 Vedremo come individuare le transazioni con un alto consumo di gas con Echidna. L'obiettivo è il seguente smart contract:
 
@@ -583,7 +583,7 @@ echidna_test: passed! 🎉
 Seed: 2320549945714142710
 ```
 
-### Misurare il Consumo di Gas \{#measuring-gas-consumption}
+### Misurare il Consumo di Gas {#measuring-gas-consumption}
 
 Per abilitare il consumo di gas con Echidna, crea un file di configurazione `config.yaml`:
 
@@ -598,7 +598,7 @@ seqLen: 2
 estimateGas: true
 ```
 
-### Esegui Echidna \{#run-echidna-3}
+### Esegui Echidna {#run-echidna-3}
 
 Una volta creato il file di configurazione, possiamo eseguire Echidna come segue:
 
@@ -619,7 +619,7 @@ Seed: -325611019680165325
 
 - Il gas mostrato è una stima fornita da [HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-).
 
-### Filtrare le Chiamate di Riduzione del Gas \{#filtering-out-gas-reducing-calls}
+### Filtrare le Chiamate di Riduzione del Gas {#filtering-out-gas-reducing-calls}
 
 Il tutorial precedente sulle **funzioni di filtraggio da chiamare durante una campagna di fuzzing**, mostra come rimuovere alcune funzioni dal tuo test.  
 Questo può esser critico per ottenere una stima accurata del gas. Considera l'esempio seguente:
@@ -677,7 +677,7 @@ push used a maximum of 40839 gas
 check used a maximum of 1484472 gas
 ```
 
-### Sommario: Individuare le transazioni ad alto consumo di gas \{#summary-finding-transactions-with-high-gas-consumption}
+### Sommario: Individuare le transazioni ad alto consumo di gas {#summary-finding-transactions-with-high-gas-consumption}
 
 Echidna può trovare le transazioni ad alto consumo di gas usando l'opzione di configurazione `estimateGas`:
 

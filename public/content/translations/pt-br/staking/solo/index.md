@@ -13,7 +13,7 @@ summaryPoints:
   - Remova a confiança e nunca desista do controle das chaves dos seus fundos
 ---
 
-## O que é staking individual? \{#what-is-solo-staking}
+## O que é staking individual? {#what-is-solo-staking}
 
 O staking individual é o ato de [executar um nó Ethereum](/run-a-node/) conectado à Internet e depositar 32 ETH para ativar um [validador](#faq), dando a você a capacidade de participar diretamente do consenso da rede.
 
@@ -25,7 +25,7 @@ Os stakers individuais são responsáveis por operar o hardware necessário para
 
 Um staker individual recebe recompensas diretamente do protocolo por manter seu validador funcionando corretamente e on-line.
 
-## Por que fazer staking individual? \{#why-stake-solo}
+## Por que fazer staking individual? {#why-stake-solo}
 
 A participação individual vem com mais responsabilidades, mas fornece o máximo de controle sobre seus fundos e configuração de participação.
 
@@ -35,7 +35,7 @@ A participação individual vem com mais responsabilidades, mas fornece o máxim
   <Card title="Segurança de rede" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Considerações antes de fazer staking individual \{#considerations-before-staking-solo}
+## Considerações antes de fazer staking individual {#considerations-before-staking-solo}
 
 Por mais que desejemos que o staking individual fosse acessível e sem riscos para todos, isso não é a realidade. Existem algumas considerações práticas e sérias a serem lembradas antes de optar por fazer staking individual de seu ETH.
 
@@ -87,7 +87,7 @@ Diferente das penalidades de inatividade por estar off-line, <em>o corte</em> é
 <StakingComparison page="solo" />
 }
 
-## Como funciona \{#how-it-works}
+## Como funciona {#how-it-works}
 
 {
 <StakingHowSoloWorks />
@@ -99,7 +99,7 @@ Se desejar, você pode parar suas atividades como um validador, o que elimina a 
 
 [Mais sobre saques de participação](/staking/withdrawals/)
 
-## Comece a usar o Staking Launchpad \{#get-started-on-the-staking-launchpad}
+## Comece a usar o Staking Launchpad {#get-started-on-the-staking-launchpad}
 
 O Staking Launchpad é um aplicativo de código aberto que o ajudará a se tornar um staker. Ele o guiará na escolha de seus clientes, gerará suas chaves e depositará seu ETH no contrato de depósito de staking. Uma lista de verificação é fornecida para garantir que você cobriu tudo para configurar seu validador com segurança.
 
@@ -107,7 +107,7 @@ O Staking Launchpad é um aplicativo de código aberto que o ajudará a se torna
 <StakingLaunchpadWidget />
 }
 
-## O que considerar com ferramentas de configuração de nó e cliente \{#node-tool-considerations}
+## O que considerar com ferramentas de configuração de nó e cliente {#node-tool-considerations}
 
 Há um número crescente de ferramentas e serviços para ajudá-lo a fazer staking individualmente de seu ETH, mas cada um vem com diferentes riscos e benefícios.
 
@@ -117,7 +117,7 @@ Os indicadores de atributo são usados abaixo para sinalizar pontos fortes ou fr
 <StakingConsiderations page="solo" />
 }
 
-## Explore as ferramentas de configuração de nós e clientes \{#node-and-client-tools}
+## Explore as ferramentas de configuração de nós e clientes {#node-and-client-tools}
 
 Há uma variedade de opções disponíveis para ajudá-lo na sua configuração. Use os indicadores acima para guiá-lo pelas ferramentas abaixo.
 
@@ -143,13 +143,13 @@ Essas ferramentas podem ser utilizadas como uma alternativa à [Staking Deposit 
 
 Alguma sugestão de ferramenta de participação que não mencionamos? Leia a nossa [política de listagem de produtos](/contributing/adding-staking-products/) para ver se a sugestão é pertinente e para enviá-la para análise.
 
-## Explore os guias de staking individual \{#staking-guides}
+## Explore os guias de staking individual {#staking-guides}
 
 {
 <StakingGuides />
 }
 
-## Perguntas frequentes \{#faq}
+## Perguntas frequentes {#faq}
 
 Apresentamos algumas das perguntas mais comuns sobre staking (participação) que vale a pena saber.
 
@@ -233,7 +233,7 @@ Para desbloquear e receber todo o seu saldo de volta, você deve concluir o proc
 </ExpandableCard>
 }
 
-## Leitura adicional \{#further-reading}
+## Leitura adicional {#further-reading}
 
 - [Problema de diversidade de clientes da Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Ajudando a diversidade dos clientes](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_

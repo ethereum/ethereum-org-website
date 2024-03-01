@@ -10,11 +10,11 @@ Eine Sidechain ist eine separate Blockchain, die parallel zum Ethereum Mainnet l
 
 Was eine Sidechain besonders spannend macht, ist die Tatsache, dass die Kette genauso funktioniert wie die Hauptkette von Ethereum, da sie auf [dem EVM](/developers/docs/evm/) basiert. Sie nutzt nicht Ethereum, sie ist Ethereum. Das bedeutet, wenn Sie Ihre [dApp](/developers/docs/dapps/) auf einer Sidechain verwenden wollen, müssen Sie nur Ihren Code auf dieser Sidechain bereitstellen. Sie sieht aus, fühlt sich an und verhält sich wie Mainnet - Sie schreiben Verträge in Solidity und interagieren mit der Kette über die Web3 API.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Sie sollten ein gutes Grundwissen über alle grundlegenden Themen und ein umfassendes Verständnis der [Ethereum-Skalierung](/developers/docs/scaling/) haben.
 
-## Vor- und Nachteile \{#pros-and-cons}
+## Vor- und Nachteile {#pros-and-cons}
 
 | Vorteile                                               | Kontra                                                                                                                     |
 | ------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------- |
@@ -22,7 +22,7 @@ Sie sollten ein gutes Grundwissen über alle grundlegenden Themen und ein umfass
 | Unterstützt allgemeine Berechnung, ist EVM-Kompatibel. | Verwendet einen separaten Konsensmechanismus. Nicht durch Layer 1 gesichert (technisch gesehen ist es also nicht Layer 2). |
 |                                                        | Ein Quorum von Sidechain Validatoren kann Betrug begehen.                                                                  |
 
-### Sidechains verwenden \{#use-sidechains}
+### Sidechains verwenden {#use-sidechains}
 
 Mehrere Projekte bieten Implementierungen von Sidechains, die Sie in Ihre dApps integrieren können:
 
@@ -30,7 +30,7 @@ Mehrere Projekte bieten Implementierungen von Sidechains, die Sie in Ihre dApps 
 - [Skale](https://skale.network/)
 - [Gnosis-Chain (ehemals xDai)](https://www.xdaichain.com/)
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [Skalieren von Ethereum dApps durch Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 

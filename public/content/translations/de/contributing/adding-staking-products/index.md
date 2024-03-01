@@ -4,7 +4,7 @@ description: Richtlinien, die wir beim Hinzufügen von Staking-Produkten oder -D
 lang: de
 ---
 
-# Staking-Produkte oder -Services hinzufügen \{#adding-staking-products-or-services}
+# Staking-Produkte oder -Services hinzufügen {#adding-staking-products-or-services}
 
 Wir möchten sicherstellen, dass wir die bestmöglichen Ressourcen auflisten und gleichzeitig die Sicherheit und das Vertrauen der Nutzer gewährleisten.
 
@@ -18,7 +18,7 @@ Auf den folgenden Seiten finden Sie eine Liste der Staking-Produkte und Services
 
 Der Proof-of-Stake wurde am 1. Dezember 2020 auf der Beacon Chain eingeführt. Das Staking ist ein noch relativ neues Verfahren. Dennoch haben wir versucht, einen fairen und transparenten Rahmen für die Berücksichtigung auf ethereum.org zu schaffen. Die Kriterien für die Auflistung werden sich jedoch im Laufe der Zeit ändern und weiterentwickeln und liegen letztendlich im Ermessen des ethereum.org-Website-Teams.
 
-## Der Entscheidungsrahmen \{#the-decision-framework}
+## Der Entscheidungsrahmen {#the-decision-framework}
 
 Die Entscheidung, ein Produkt auf ethereum.org zu listen, ist von mehrern Faktoren abhängig. Mehrer Kriterien werden bei der Entscheidung über die Aufnahme eines Produkts oder einer Dienstleistung gemeinsam berücksichtigt. Je mehr dieser Kriterien erfüllt sind, umso wahrscheinlicher ist eine Aufnahme in die Liste.
 
@@ -31,7 +31,7 @@ Die Entscheidung, ein Produkt auf ethereum.org zu listen, ist von mehrern Faktor
 
 Derzeit sind nur Produkte oder Dienstleistungen in diesen Kategorien aufgeführt.
 
-### Aufnahmekriterien \{#criteria-for-inclusion}
+### Aufnahmekriterien {#criteria-for-inclusion}
 
 Die eingereichten Staking-Produkte oder Services werden anhand von folgenden Kriterien bewertet:
 
@@ -59,7 +59,7 @@ Die eingereichten Staking-Produkte oder Services werden anhand von folgenden Kri
 
 - z. B. Linux, macOS, Windows, iOS, Android
 
-#### Software und Smart Contracts \{#software-and-smart-contracts}
+#### Software und Smart Contracts {#software-and-smart-contracts}
 
 Für jegliche benutzerdefinierte Software oder Smart Contracts:
 
@@ -83,7 +83,7 @@ Für jegliche benutzerdefinierte Software oder Smart Contracts:
 - Wenn nicht, ist die Zahlung einer Prämie für entdeckte Sicherheitslücken geplant?
 - Das wird verwendet, um die "Bug Bounty"-Punktzahl des Produkts zu ermitteln.
 
-#### Node- oder Client-Tool \{#node-or-client-tooling}
+#### Node- oder Client-Tool {#node-or-client-tooling}
 
 Für Softwareprodukte im Zusammenhang mit der Einrichtung, Verwaltung oder Migration von Nodes oder Clients:
 
@@ -92,7 +92,7 @@ Für Softwareprodukte im Zusammenhang mit der Einrichtung, Verwaltung oder Migra
 - Welche Clients werden unterstützt? Kann der Nutzer wählen?
 - Das wird zur Ermittlung der "Multi-Client"-Bewertung des Produkts verwendet.
 
-#### Staking als Service \{#staking-as-a-service}
+#### Staking als Service {#staking-as-a-service}
 
 Für [Staking-as-a-Service-Listings](/staking/saas/) (d. h. delegierter Node-Betrieb):
 
@@ -117,7 +117,7 @@ Für [Staking-as-a-Service-Listings](/staking/saas/) (d. h. delegierter Node-Bet
 - Seit der letzten Bearbeitung wird vowiegend Prysm als Konsensebenen-Client von den Knotenbetreibern verwendet. Das ist gefährlich für Netzwerk. Wenn ein CL-Client derzeit von mehr als 33 % des Netzes genutzt wird, fordern wir Daten zur Nutzung an.
 - Auf dieser Grundlage wird für das Produkt der Aspekt "Diverse Clients" bewertet.
 
-#### Staking-Pool \{#staking-pool}
+#### Staking-Pool {#staking-pool}
 
 Für [Staking-Services im Pool](/Staking/pools/):
 
@@ -147,7 +147,7 @@ Für [Staking-Services im Pool](/Staking/pools/):
 - Seit der letzten Bearbeitung wird vowiegend Prysm als Konsensebenen-Client von den Knotenbetreibern verwendet. Das ist gefährlich für Netzwerk. Wenn ein CL-Client derzeit von mehr als 33 % des Netzes genutzt wird, fordern wir Daten zur Nutzung an.
 - Auf dieser Grundlage wird für das Produkt der Aspekt "Diverse Clients" bewertet.
 
-### Weitere Kriterien: optionale Aspekte \{#other-criteria}
+### Weitere Kriterien: optionale Aspekte {#other-criteria}
 
 **Welche Benutzeroberflächen werden unterstützt?**
 
@@ -161,13 +161,13 @@ Für [Staking-Services im Pool](/Staking/pools/):
 
 - Das gibt uns einen Eindruck von der bisherigen Reichweite Ihres Services.
 
-## So erfolgt die Anzeige von Ergebnissen \{#product-ordering}
+## So erfolgt die Anzeige von Ergebnissen {#product-ordering}
 
 Die [Kriterien für die Aufnahme](#criteria-for-inclusion) werden verwendet, um eine kumulative Punktzahl für jedes Produkt oder jeden Service zu berechnen. Das dient dazu, Produkte, die bestimmte objektive Kriterien erfüllen, zu sortieren und zu präsentieren. Je mehr Kriterien belegt werden, desto höher fällt die Bewertung eines Produkts aus. Gleichstände werden dabei nach dem Zufallsprinzip gewertet.
 
 Die Codelogik und die Gewichtungen für diese Kriterien sind derzeit in [dieser JavaScript-Komponente](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) in unserem Repo enthalten.
 
-## Ihr Produkt oder Ihren Service hinzufügen \{#add-product}
+## Ihr Produkt oder Ihren Service hinzufügen {#add-product}
 
 Wenn Sie ein Staking-Produkt oder einen Staking-Service zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
 

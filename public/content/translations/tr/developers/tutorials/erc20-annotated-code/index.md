@@ -10,13 +10,13 @@ skill: beginner
 published: 2021-03-09
 ---
 
-## Giriş \{#introduction}
+## Giriş {#introduction}
 
 Ethereum'un en yaygın kullanımlarından biri, bir grubun bir anlamda kendi para birimi olan ticareti yapılabilen bir token oluşturmasıdır. Bu token'lar genelde bir standarda, yani [ERC-20](/developers/docs/standards/tokens/erc-20/)'ye uyumludur. Bu standart, tüm ERC-20 token'larıyla çalışan likidite havuzları ve cüzdanlar gibi araçlar yazmayı mümkün kılar. Bu makalede [OpenZeppelin Solidity ERC20 uygulamasını](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol) ve [arayüz tanımını](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) analiz edeceğiz.
 
 Bu, açıklanmış kaynak koddur. Eğer ERC-20 kullanmak isterseniz, [bu öğreticiyi okuyun](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
-## Arayüz \{#the-interface}
+## Arayüz {#the-interface}
 
 ERC-20 gibi bir standardın amacı, cüzdanlar ve merkeziyetsiz borsalar gibi uygulamalar arasında birlikte çalışabilen birçok token uygulamasına izin vermektir. Bunu sağlamak için, bir [arayüz](https://www.geeksforgeeks.org/solidity-basics-of-interface/) oluştururuz. Token sözleşmesini kullanması gereken herhangi bir kod, arayüzde aynı tanımları kullanabilir ve onu kullanan tüm token sözleşmeleriyle uyumlu olarak, MetaMask gibi bir cüzdan, etherscan.io gibi bir dapp veya likidite havuzu gibi farklı bir sözleşme olabilir.
 
@@ -184,7 +184,7 @@ Son olarak `transferFrom`, harcayan tarafından ödeneği gerçekten harcamak i�
 
 Bu olaylar, ERC-20 sözleşmesinin durumu değiştiğinde yayılır.
 
-## Asıl Sözleşme \{#the-actual-contract}
+## Asıl Sözleşme {#the-actual-contract}
 
 Bu, [buradan alınan](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol) ERC-20 standardını uygulayan asıl sözleşmedir. Olduğu gibi kullanılması için yapılmamıştır, ancak onu kullanılabilir bir hâle getirmek için [kalıtım](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) şeklinde alabilirsiniz.
 
@@ -195,7 +195,7 @@ pragma solidity >=0.6.0 <0.8.0;
 
 &nbsp;
 
-### İfadeleri İçe Aktarın \{#import-statements}
+### İfadeleri İçe Aktarın {#import-statements}
 
 Yukarıdaki arayüz tanımlarına ek olarak, sözleşme tanımı diğer iki dosyayı içe aktarır:
 
@@ -241,7 +241,7 @@ Bu yorum, sözleşmenin amacını açıklar.
 
 ```
 
-### Sözleşme Tanımı \{#contract-definition}
+### Sözleşme Tanımı {#contract-definition}
 
 ```solidity
 contract ERC20 is Context, IERC20 {
@@ -259,7 +259,7 @@ Bu satır, bu durumda OpenGSN için yukarıdaki `IERC20`'den ve `Context`'ten ka
 
 Bu satır `SafeMath` kütüphanesini `uint256` türüne bağlar. Bu kütüphaneyi [burada](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol) bulabilirsiniz.
 
-### Değişken Tanımları \{#variable-definitions}
+### Değişken Tanımları {#variable-definitions}
 
 Bu tanımlar, sözleşmenin durum değişkenlerini belirtir. Değişkenler `private` olarak bildirilir, ancak bu yalnızca blok zincirindeki diğer sözleşmelerin onları okuyamayacağı anlamına gelir. _Blok zinciri üzerinde sır yoktur_, her düğümdeki yazılım her bloktaki her sözleşmenin durumunu bulundurur. Kural olarak, durum değişkenleri `_<something>` olarak isimlendirilir.
 
@@ -303,7 +303,7 @@ Bir yandan, ethereum'un kayan nokta veya kesirli değişkenleri yoktur. Diğer t
 
 Uygulamalar token bakiyesini nasıl göstereceklerini bilmelidir. Bir kullanıcının 3.141.000.000.000.000.000 wei'si varsa, bu 3,14 ETH midir? 31.41 ETH? 3,141 ETH? Ether durumunda, ETH'ye 10^18 wei olarak tanımlanır ancak kendi token'ınız için farklı bir değer seçebilirsiniz. Eğer token'ı bölmek mantıklı gelmiyorsa sıfır değerinde bir `_decimals` kullanabilirsiniz. ETH ile aynı standardı kullanmak istiyorsanız, **18** değerini kullanın.
 
-### Yapıcı \{#the-constructor}
+### Yapıcı {#the-constructor}
 
 ```solidity
     /**
@@ -324,7 +324,7 @@ Uygulamalar token bakiyesini nasıl göstereceklerini bilmelidir. Bir kullanıc�
 
 Yapıcı, sözleşme ilk oluşturulduğunda çağrılır. Kural olarak, fonksiyon parametreleri `<something>_` olarak isimlendirilir.
 
-### Kullanıcı Arayüzü Fonksiyonları \{#user-interface-functions}
+### Kullanıcı Arayüzü Fonksiyonları {#user-interface-functions}
 
 ```solidity
     /**
@@ -372,7 +372,7 @@ Dönüş türü `string memory`'dir, yani bellekte depolanan bir dize döndürü
 
 Bu durumda, `memory` en iyi seçenektir.
 
-### Token Bilgisini Okuyun \{#read-token-information}
+### Token Bilgisini Okuyun {#read-token-information}
 
 Bunlar, toplam arz veya bir hesabın bakiyesi gibi token hakkında bilgi sağlayan fonksiyonlardır.
 
@@ -400,7 +400,7 @@ Bunlar, toplam arz veya bir hesabın bakiyesi gibi token hakkında bilgi sağlay
 
 Bir hesabın bakiyesini okuyun. Herkesin başka birinin hesap bakiyesini almasına izin verildiğini unutmayın. Zaten her düğümde mevcut olduğu için bu bilgiyi saklamaya çalışmanın bir anlamı yoktur. _Blok zincirinde sır yoktur._
 
-### Token Transfer Edin \{#transfer-tokens}
+### Token Transfer Edin {#transfer-tokens}
 
 ```solidity
     /**
@@ -428,11 +428,11 @@ Bir hesabın bakiyesini okuyun. Herkesin başka birinin hesap bakiyesini alması
 
 Normalde Solidity'de mesajı gönderen için `msg.sender` kullanırız. Ancak bu, [OpenGSN](http://opengsn.org/)'i bozar. Eğer token'ımızla ether'sız işlemlere izin vermek istiyorsak, `_msgSender()` kullanmalıyız. Normal işlemler için `msg.sender` döndürür, ancak ether'sız işlemler için mesajı ileten sözleşmeyi değil, orijinal imzalayanı döndürür.
 
-### Ödenek Fonksiyonları \{#allowance-functions}
+### Ödenek Fonksiyonları {#allowance-functions}
 
 Bunlar, ödenek fonksiyonlarını uygulayan fonksiyonlardır: `allowance`, `approve`, `transferFrom`, ve `_approve`. Ek olarak OpenZeppelin uygulaması, güvenliği artıran bazı özellikleri içerecek şekilde temel standardın ötesine geçer: `increaseAllowance` ve `decreaseAllowance`.
 
-#### Ödenek fonksiyonu \{#allowance}
+#### Ödenek fonksiyonu {#allowance}
 
 ```solidity
     /**
@@ -445,7 +445,7 @@ Bunlar, ödenek fonksiyonlarını uygulayan fonksiyonlardır: `allowance`, `appr
 
 `allowance` fonksiyonu herkesin herhangi bir ödeneği kontrol etmesini sağlar.
 
-#### Onaylama fonksiyonu \{#approve}
+#### Onaylama fonksiyonu {#approve}
 
 ```solidity
     /**
@@ -473,7 +473,7 @@ Bu işlev, bir ödenek oluşturmak için çağrılır. Yukarıdaki `transfer` fo
 
 Durum değişikliklerinin meydana geldiği yerlerin sayısını en aza indirmek için dahili fonksiyonları kullanıyoruz. _Durumu_ değiştiren herhangi bir fonksiyon, güvenlik için denetlenmesi gereken potansiyel bir güvenlik riskidir. Bu şekilde daha az hata yapma ihtimalimiz olur.
 
-#### transferFrom fonksiyonu \{#transferFrom}
+#### transferFrom fonksiyonu {#transferFrom}
 
 Bu, bir harcama yapanın bir ödenek harcamak için çağırdığı fonksiyondur. Bunun için iki işlem gerekir: harcanan tutarı transfer edin ve ödeneği bu tutar kadar azaltın.
 
@@ -507,7 +507,7 @@ Bu, bir harcama yapanın bir ödenek harcamak için çağırdığı fonksiyondur
     }
 ```
 
-#### OpenZeppelin güvenlik eklemeleri \{#openzeppelin-safety-additions}
+#### OpenZeppelin güvenlik eklemeleri {#openzeppelin-safety-additions}
 
 Sıfırdan farklı başka bir değere sıfırdan farklı bir ödenek ayarlamak tehlikelidir, çünkü başkalarının değil, yalnızca kendi işlemlerinizin sırasını siz kontrol edersiniz. Saf olan Alice ve dürüst olmayan Bill olmak üzere iki kullanıcınız olduğunu hayal edin. Alice, Bill'den beş token'a mal olduğunu düşündüğü bir hizmet istiyor, bu yüzden Bill'e beş token'lık bir ödenek veriyor.
 
@@ -583,11 +583,11 @@ B:
     }
 ```
 
-### Token Bilgilerini Değiştiren Fonksiyonlar \{#functions-that-modify-token-information}
+### Token Bilgilerini Değiştiren Fonksiyonlar {#functions-that-modify-token-information}
 
 Bunlar asıl işi yapan dört fonksiyondur: `_transfer`, `_mint`, `_burn` ve `_approve`.
 
-#### \_transfer fonksiyonu \{#\_transfer}
+#### \_transfer fonksiyonu {#\_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Bunlar aslında aktarımı yapan hatlardır. Aralarında **hiçbir şey** olmad�
 
 Son olarak, bir `Transfer` olayı yayın. Olaylara akıllı sözleşmelerle erişilemez, ancak blok zincirinin dışında çalışan kod, olayları dinleyebilir ve bunlara tepki verebilir. Örneğin bir cüzdan, sahibinin ne zaman daha fazla token aldığını takip edebilir.
 
-#### \_mint ve \_burn fonksiyonları \{#\_mint-and-\_burn}
+#### \_mint ve \_burn fonksiyonları {#\_mint-and-\_burn}
 
 Bu iki fonksiyon (`_mint` and `_burn`) toplam token arzını düzenler. Bunlar dahilidir ve bu sözleşmede onları çağıran bir fonksiyon yoktur, bu nedenle yalnızca sözleşmeden devralırsanız ve hangi koşullar altında yeni token'lar basacağınıza veya mevcut token'ları yakacağınıza karar vermek için kendi mantığınızı eklerseniz kullanışlıdırlar.
 
@@ -706,7 +706,7 @@ Toplam token sayısı değiştiğinde `_totalSupply`'ı güncellediğinizden emi
 
 `_burn` fonksiyonu, diğer yöne gitmesi dışında `_mint` ile hemen hemen aynıdır.
 
-#### \_approve fonksiyonu \{#\_approve}
+#### \_approve fonksiyonu {#\_approve}
 
 Bu aslında ödenekleri belirten fonksiyondur. Sahibin, kendi mevcut bakiyesinden daha yüksek bir ödenek belirlemesine izin verdiğini unutmayın. Bakiye, ödenek oluşturulduğundaki bakiyeden farklı olabileceği transfer sırasında kontrol edildiği için bu sorun yaratmaz.
 
@@ -741,7 +741,7 @@ Bir `Approval` olayı yayın. Uygulamanın nasıl yazıldığına bağlı olarak
 
 ```
 
-### Ondalık Değişkenini Düzenleyin \{#modify-the-decimals-variable}
+### Ondalık Değişkenini Düzenleyin {#modify-the-decimals-variable}
 
 ```solidity
 
@@ -760,7 +760,7 @@ Bir `Approval` olayı yayın. Uygulamanın nasıl yazıldığına bağlı olarak
 
 Bu fonksiyon, kullanıcı arabirimlerine miktarın nasıl yorumlanacağını söylemek için kullanılan `_decimals` değişkenini değiştirir. Yapıcıdan çağırmalısınız. Daha sonraki herhangi bir noktada onu çağırmak sahtekârlık olur ve uygulamalar bununla başa çıkmak için tasarlanmamıştır.
 
-### Kancalar \{#hooks}
+### Kancalar {#hooks}
 
 ```solidity
 
@@ -784,7 +784,7 @@ Bu fonksiyon, kullanıcı arabirimlerine miktarın nasıl yorumlanacağını sö
 
 Bu, aktarımlar sırasında çağrılacak kanca fonksiyonudur. Bu örnekte kanca fonksiyonu boş ancak ihtiyaç duyarsanız fonksiyon içeriğini doldurabilirsiniz.
 
-# Sonuç \{#conclusion}
+# Sonuç {#conclusion}
 
 İnceleme için, bu sözleşmedeki en önemli fikirlerden bazıları şunlardır (bence sizinki muhtemelen değişebilir):
 

@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Ein Archivierungsknoten ist eine Instanz eines Ethereum-Clients, die für den Aufbau eines Archives aller vergangenen Zustände konfiguriert ist. Er ist ein hilfreiches Tool für bestimmte Anwendungsfälle, jedoch könnte der schwieriger zu betreiben sein als ein vollständiger Knoten.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Sie sollten das Konzept eines [Ethereum-Knotens](/developers/docs/nodes-and-clients/), [seines Aufbaus](/developers/docs/nodes-and-clients/node-architecture/), [seiner Synchronisierungsstrategien](/developers/docs/nodes-and-clients/#sync-modes) und wie man ihn [betreibt](/developers/docs/apis/json-rpc/) und [nutzt](/developers/docs/nodes-and-clients/run-a-node/), verstehen.
 
@@ -68,13 +68,13 @@ Für mehr Stabilität und Sicherheit bei der Prävention gegen die Beschädigung
 
 Während der ersten Synchronisierung führen Clients im Archivierungsmodus jede Transaktion seit der Genesis aus. Die Ausführungsgeschwindigkeit ist vor allem limitiert durch die CPU, daher kann eine schnellere CPU dazu beitragen, die erste Synchronisierung zu beschleunigen. Bei einem durchschnittlichen Computer kann die erste Synchronisierung bis zu einem Monat dauern.
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [Ethereum vollständiger Knoten vs Archivierungsknoten](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node) - _QuickNode, September 2022_
 - [Building Your Own Ethereum Archive Node](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09) - _Thomas Jay Rush, August 2021_
 - [How to set up Erigon, Erigon’s RPC and TrueBlocks (scrape and API) as services](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, aktualisiert September 2022_
 
-## Verwandte Themen \{#related-topics}
+## Verwandte Themen {#related-topics}
 
 - [Knotenpunkte und Clients](/developers/docs/nodes-and-clients/)
 - [Einen Knoten betreiben](/developers/docs/nodes-and-clients/run-a-node/)

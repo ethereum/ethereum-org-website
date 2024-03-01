@@ -16,7 +16,7 @@ Actualment, els NFT estan prenent el món de l'art digital i dels objectes de co
 
 Si Andy Warhol hagués nascut a finals dels noranta, probablement hauria encunyat la Sopa de Campbell com un NFT. Només és qüestió de temps que Kanye faci una sèrie de Yeezys a Ethereum. I, algun dia, la titularitat del vostre cotxe es podria demostrar amb un NFT.
 
-## Què és un NFT? \{#what-are-nfts}
+## Què és un NFT? {#what-are-nfts}
 
 Els NFT són tókens que poden ser utilitzats per a representar la propietat d'objectes únics. Ens permeten tokenitzar coses com ara obres d'art, col·leccionables o inclús propietats immobiliàries. Només poden tenir un titular oficial alhora i estan protegits per la cadena de blocs d'Ethereum; ningú no pot modificar el títol de propietat o copiar/enganxar un nou NFT en el medi existent.
 
@@ -28,13 +28,13 @@ Els objectes fungibles, d'altra banda, poden ser intercanviats perquè el seu va
 <YouTube id="Xdkkux6OxfM" />
 }
 
-## L'internet d'actius \{#internet-of-assets}
+## L'internet d'actius {#internet-of-assets}
 
 Els NFT i Ethereum solucionen alguns dels problemes que existeixen actualment a internet. Mentre tot es torna més digital, existeix la necessitat de replicar les propietats d'elements físics com ara l'escassetat, la singularitat i la prova de titularitat. Per no parlar que els objectes digitals sovint funcionen només en el context dels seus productes. Per exemple, no podeu revendre un mp3 d'iTunes que ja heu comprat o no podeu intercanviar els punts de fidelitat d'una empresa per crèdit d'una altra empresa inclús si existeix un mercat per a això.
 
 Així és com es veu una internet de NFT comparada amb la internet que la majoria de nosaltres utilitza avui en dia...
 
-### Una comparativa \{#nft-comparison}
+### Una comparativa {#nft-comparison}
 
 | Una internet de NFT                                                                                                                                                                                                                              | La internet actual                                                                                                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,7 +45,7 @@ Així és com es veu una internet de NFT comparada amb la internet que la majori
 | Els creadors poden retenir els drets de propietat del seu propi treball i reclamar drets de revenda directament.                                                                                                                                 | Les plataformes, com ara serveis de música en temps real, retenen la majoria dels beneficis de les vendes.                                                                                                                    |
 | Els objectes poden ser utilitzats de formes molt sorprenents. Per exemple, podeu utilitzar obres d'art digitals com a garantia d'un prèstec descentralitzat.                                                                                     |                                                                                                                                                                                                                               |
 
-### Exemples d'NFT \{#nft-examples}
+### Exemples d'NFT {#nft-examples}
 
 El món dels NFT és relativament nou. En teoria, l'abast dels NFT és per tot allò que és únic i que necessita una titularitat demostrable. Aquí teniu alguns exemples d'NFT que existeixen avui en dia, perquè us feu una idea:
 
@@ -57,23 +57,23 @@ El món dels NFT és relativament nou. En teoria, l'abast dels NFT és per tot a
 - [Un nom de domini](https://app.ens.domains/name/ethereum.eth)
 - [Un tiquet que us dona accés a un esdeveniment o un cupó](https://www.yellowheart.io/)
 
-### Exemples d'ethereum.org \{#ethereum-org-examples}
+### Exemples d'ethereum.org {#ethereum-org-examples}
 
 Utilitzem els NFT per a retornar els nostres contribuïdors i tenim, fins i tot, el nostre propi nom de domini en NFT.
 
-#### POAP (protocol de prova d'assistència o «Proof of attendance protocol», en anglès) \{#poaps}
+#### POAP (protocol de prova d'assistència o «Proof of attendance protocol», en anglès) {#poaps}
 
 Si contribuïu a ethereum.org, podeu reclamar un NFT POAP. Són col·leccionables que demostren que heu participat en un esdeveniment. Algunes trobades sobre criptomonedes han utilitzat els POAP com a tiquet pels seus esdeveniments. [Més informació sobre les contribucions](/contributing/#poap).
 
 ![POAP d'ethereum.org](./poap.png)
 
-#### ethereum.eth \{#ethereum-dot-eth}
+#### ethereum.eth {#ethereum-dot-eth}
 
 Aquest lloc web té un nom de domini alternatiu impulsat pels NFT, **ethereum.eth**. La nostra adreça `.org` és gestionada centralment mitjançant un sistema de proveïdor de nom de domini (DNS, en anglès), mentre que el `.eth` d'ethereum està registrat a Ethereum mitjançant el Servei de Noms d'Ethereum (ENS, en anglès). És de la nostra propietat i la gestionem nosaltres mateixos. [Feu-hi una ullada al nostre registre ENS](https://app.ens.domains/name/ethereum.eth)
 
 [Més informació sobre l'ENS](https://app.ens.domains)
 
-## Com funcionen els NFT? \{#how-nfts-work}
+## Com funcionen els NFT? {#how-nfts-work}
 
 Els NFT són diferents dels tókens ERC-20, com ara DAI o LINK, en els quals cada token individual és completament únic i no és divisible. Els NFT donen la capacitat d'assignar o reclamar titularitat de qualsevol peça única de dades digitals, una titularitat rastrejable mitjançant l'ús de la cadena de blocs d'Ethereum com a registre públic. Un NFT és un encunyat d'objectes digitals com a representació d'actius digitals o no digitals. Per exemple, un NFT podria representar:
 
@@ -126,7 +126,7 @@ I si _creeu_ un NFT:
 - Podeu guanyar comissions cada vegada que sigui venut.
 - Podeu vendre'l en qualsevol mercat NFT o entre parells. No esteu lligat a cap plataforma i no necessiteu cap intermediari.
 
-### Escassetat \{#scarcity}
+### Escassetat {#scarcity}
 
 El creador d'un NFT decideix l'escassetat dels seus actius.
 
@@ -134,13 +134,13 @@ Per exemple, penseu en un tiquet per a un esdeveniment esportiu. Així com l'org
 
 En aquests casos, cada NFT tindria un identificador únic (com un codi de barres en un tiquet tradicional), amb un sol propietari. L'escassetat prevista de l'NFT importa, i depèn del creador. Un creador pot tenir la intenció de fer cada NFT completament únic per a crear escassetat o pot tenir les seves raons per produir molts milers de rèpliques. Recordeu, aquesta informació és totalment pública.
 
-### Comissions \{#royalties}
+### Comissions {#royalties}
 
 Alguns NFT pagaran automàticament comissions als seus creadors quan siguin venuts. És encara un concepte en desenvolupament, però és un dels més potents. Els propietaris originals d' [EulerBeats Originals](https://eulerbeats.com/) guanyen un 8% de comissions cada cop que es ven l'NFT. I algunes plataformes, com ara [Foundation](https://foundation.app) i [Zora](https://zora.co/), donen comissions als seus artistes.
 
 Les comissions són completament automàtiques; per tant, els creadors només han de seure i guanyar comissions mentre el seu treball es ven de persona a persona. De moment, calcular-les és un procès molt manual i hi manca exactitud; a molts creadors no se'ls paga el que mereixen. Si el vostre NFT disposa d'una comissió programada, mai no la perdreu.
 
-## Per què són utilitzats els NFT? \{#nft-use-cases}
+## Per què són utilitzats els NFT? {#nft-use-cases}
 
 Aquí teniu més informació sobre alguns del més casos d'ús i visions desenvolupats dels NFT d'Ethereum.
 
@@ -154,7 +154,7 @@ Aquí teniu més informació sobre alguns del més casos d'ús i visions desenvo
 <Divider />
 }
 
-### Com poden maximitzar els creadors els seus beneficis \{#nfts-for-creators}
+### Com poden maximitzar els creadors els seus beneficis {#nfts-for-creators}
 
 L'ús més gran d'NFT avui en dia és en el regne del contingut digital. L'explicació és senzilla: aquesta indústria actualment està trencada. Els creadors de contingut veuen com els seus beneficis i el seu potencial de guanys se'ls estan empassant les plataformes.
 
@@ -171,7 +171,7 @@ Quan venen els seus continguts, els fons van directament a ells. Si el nou propi
   </ButtonLink>
 </InfoBanner>
 
-#### El problema de copiar/enganxar \{#nfts-copy-paste}
+#### El problema de copiar/enganxar {#nfts-copy-paste}
 
 La gent que està en contra sovint planteja el fet que els NFT «són ximples», en general juntament amb una captura de pantalla d'una obra d'art NFT. «Mireu, ara tinc aquesta imatge gratis!» diuen autocomplaent-se.
 
@@ -185,7 +185,7 @@ Tenir la titularitat d'un objecte real verificable sempre tindrà més valor que
 <Divider />
 }
 
-### Potenciar el potencial de joc \{#nft-gaming}
+### Potenciar el potencial de joc {#nft-gaming}
 
 Els NFT han atret molt d'interès per part dels desenvolupadors de jocs. Poden proporcionar registres de titularitat per a objectes d'un joc, alimentar les economies d'un joc i aportar molts beneficis als jugadors.
 
@@ -210,7 +210,7 @@ Decentraland, un joc de realitat virtual, fins it ot us permet comprar NFT que r
 <Divider />
 }
 
-### Fer que les adreces d'Ethereum siguin més fàcils de recordar \{#nft-domains}
+### Fer que les adreces d'Ethereum siguin més fàcils de recordar {#nft-domains}
 
 L'ENS utilitza els NFT per donar a la vostra adreça Ethereum un nom més fàcil de recordar com ara `mywallet.eth`. Això vol dir que podeu demanar a qualsevol que us enviï ETH via `mywallet.eth` en comptes de `0x123456789...`.
 
@@ -226,7 +226,7 @@ Els vostres noms d'ENS poden:
 <Divider />
 }
 
-### Objectes físics \{#nft-physical-items}
+### Objectes físics {#nft-physical-items}
 
 La tokenització d'objectes físics no està encara tan desenvolupada com els seus homòlegs digitals. Però hi ha un munt de projectes que exploren la tokenització de propietats immobiliàries o articles de moda únics, entre d'altres.
 
@@ -238,11 +238,11 @@ Amb actius valuosos, com ara cotxes i propietats representables a Ethereum, pode
 <Divider />
 }
 
-### Els NFT i les DeFi \{#nfts-and-defi}
+### Els NFT i les DeFi {#nfts-and-defi}
 
 El món dels NFT i el món de les [finances descentralitzades (DeFi)](/defi/) comencen a treballar plegats en un nombre de qüestions interessants.
 
-#### Préstecs avalats per NFT \{#nft-backed-loans}
+#### Préstecs avalats per NFT {#nft-backed-loans}
 
 Hi ha aplicacions DeFi que us permeten demanar diners en préstec utilitzant una garantia. Per exemple, utilitzeu com a garantia 10 ETH i podeu demanar en préstec 5000 DAI ([una criptomoneda](/stablecoins/)). Aquest tràmit garanteix que el prestador serà reemborsat; si el prestatari no torna els DAI, la garantia s'envia al prestador. No obstant això, no tothom posseeix suficients criptomonedes per usar-les com a garantia.
 
@@ -250,7 +250,7 @@ En el seu lloc, els projectes estan començant a explorar l'ús dels NFT com a g
 
 A més, no és gaire difícil a Ethereum, perquè ambdós mons (NFT i DeFi) comparteixen la mateixa infraestructura.
 
-#### Propietat fraccionada \{#fractional-ownership}
+#### Propietat fraccionada {#fractional-ownership}
 
 Els creadors d'NFT poden crear també «accions» per als seus NFT. Així, donen l'oportunitat als inversors i als seguidors de tenir una part de l'NFT sense haver de comprar-lo tot complet. D'aquesta forma, s'hi afegeixen moltes més oportunitats als encunyadors i col·leccionistes d'NFT per igual.
 
@@ -275,7 +275,7 @@ Com ja hem dit abans, és un espai emergent. Els NFT, les DAO o els tókens frac
 <Divider />
 }
 
-## Ethereum i els NFT \{#ethereum-and-nfts}
+## Ethereum i els NFT {#ethereum-and-nfts}
 
 Ethereum fa possible que els NFT funcionin a causa d'una sèrie de raons:
 
@@ -285,7 +285,7 @@ Ethereum fa possible que els NFT funcionin a causa d'una sèrie de raons:
 - Tots els productes Ethereum comparteixen el mateix «backend». Dit d'una altra manera, tots els productes Ethereum poden entendre's fàcilment els uns amb els altres; això fa que els NFT siguin fàcils de moure entre productes. Podeu comprar un NFT en un producte i vendre'l fàcilment en un altre. Com a creador, podeu llistar els vostres NFT en múltiples productes alhora; cada producte tindrà la informació de titularitat més actualitzada en cada moment.
 - Ethereum mai no cau, per la qual cosa els vostres tókens sempre estaran disponibles a la venda.
 
-## L'impacte mediambiental dels NFT \{#environmental-impact-nfts}
+## L'impacte mediambiental dels NFT {#environmental-impact-nfts}
 
 Els NFT estan creixent en popularitat i això significa que també estan sota un escrutini creixent, especialment al voltant de la seva petjada de carboni.
 
@@ -297,7 +297,7 @@ Volem aclarir alguns punts:
 
 Per ampliar-ne la informació ens haurem de posar més tècnics, per això tingueu una mica de paciència...
 
-### No culpeu els NFT \{#nft-qualities}
+### No culpeu els NFT {#nft-qualities}
 
 Tot el sistema NFT funciona a causa del fet que Ethereum és segura i descentralitzada.
 
@@ -307,7 +307,7 @@ Segur vol dir que ningú pot copiar/enganxar el vostre NFT o robar-lo.
 
 Aquestes qualitats d'Ethereum fan que sigui possible posseir la titularitat d'articles digitals únics i d'aconseguir un preu correcte pels vostres continguts. Però tot això té un cost. Les cadenes de blocs com Bitcoin i Ethereum actualment consumeixen molta energia a causa del fet que en fa falta molta per mantenir aquestes qualitats. Si fos fàcil reescriure la història d'Ethereum per robar NFT o criptomonedes, el sistema col·lapsaria.
 
-#### El treball d'encunyar el vostre NFT \{#minting-nfts}
+#### El treball d'encunyar el vostre NFT {#minting-nfts}
 
 Quan encunyeu un NFT, han de succeir certes coses:
 
@@ -320,7 +320,7 @@ Totes aquestes tasques les fan els miners. I permeten a la resta de la xarxa ten
 
 [Més informació sobre la mineria](/developers/docs/consensus-mechanisms/pow/)
 
-#### Protegir el vostre NFT amb la mineria \{#securing-nfts}
+#### Protegir el vostre NFT amb la mineria {#securing-nfts}
 
 La dificultat de la mineria ve del fet que comporta un munt de poder de computació per a crear nous blocs a la cadena. És important recalcar que els blocs es creen de manera coherent, no només quan es necessiten. Es creen cada 12 segons aproximadament.
 
@@ -328,7 +328,7 @@ Això és important per fer que Ethereum sigui a prova de manipulació, una de l
 
 Això vol dir, tanmateix, que constantment s'ha d'estar utilitzant energia computacional. També significa que un bloc que contingui 0 transaccions d'NFT tindrà aproximadament la mateixa empremta de carboni, ja que es consumirà energia computacional per crear-lo. Altres transaccions sense NFT ompliran els blocs.
 
-#### Les cadenes de blocs consumeixen molta energia actualment \{#blockchains-intensive}
+#### Les cadenes de blocs consumeixen molta energia actualment {#blockchains-intensive}
 
 Per tant, sí, hi ha una empremta de carboni associada a la creació de blocs mitjançant la mineria; i això també és un problema per a les cadenes com Bitcoin, però no és directament culpa dels NFT.
 
@@ -338,13 +338,13 @@ I ho som. Ethereum està evolucionant per fer l'ús d'Ethereum (i, com a resulta
 
 No estem aquí per defensar l'empremta mediambiental de la mineria, sinó que volem explicar com estan canviant les coses a millor.
 
-### Un futur més verd... \{#a-greener-future}
+### Un futur més verd... {#a-greener-future}
 
 Durant tot aquest temps que Ethereum ha existit, el consum energètic de la mineria ha estat un gran àmbit d'atenció per als desenvolupadors i els investigadors. I la visió sempre ha estat reemplaçar-la el més aviat possible. [Més informació sobre la visió d'Ethereum](/roadmap/vision/)
 
 Aquesta visió s'està lliurant ara mateix.
 
-#### Un Ethereum més verd \{#greener-ethereum}
+#### Un Ethereum més verd {#greener-ethereum}
 
 Ethereum està passant actualment per una sèrie de millores que reemplaçaran la mineria amb [les participacions](/staking/). Això traurà l'energia computacional com a mecanisme de seguretat i reduirà la petjada de carboni d'Ethereum en ~99,95%<sup>[^1]</sup>. En aquest món, els participants comprometen fons en lloc de poder computacional per protegir la xarxa.
 
@@ -360,7 +360,7 @@ _Hem aportat la comparació bàsica de Visa perquè tingueu una base per compren
 
 _És important també recordar que Ethereum fa més que només transaccions financeres, és una plataforma per a aplicacions; per tant, una comparació més justa podria ser amb moltes companyies o industries incloent-hi Visa, AWS i d'altres!_
 
-#### Terminis \{#timelines}
+#### Terminis {#timelines}
 
 El procés ja ha començat. [La cadena de balisa](/roadmap/beacon-chain/), la primera millora, llençada el desembre de 2020. Proporciona la base per a les participacions permetent als apostadors accedir al sistema. El següent pas rellevant per a l'eficiència energètica és fusionar la cadena actual, la que està protegida pels miners, amb la cadena de balisa, on la mineria no és necessària. Els terminis poden no ser exactes en aquest punt, però s'estima que succeirà en algun moment de 2022. Aquest procés es coneix com La Fusió (anteriorment anomenada l'acoblament). [Més informació sobre la fusió](/roadmap/merge/).
 
@@ -368,11 +368,11 @@ El procés ja ha començat. [La cadena de balisa](/roadmap/beacon-chain/), la pr
   Més informació sobre les millores d'Ethereum
 </ButtonLink>
 
-## Construir amb NFT \{#build-with-nfts}
+## Construir amb NFT {#build-with-nfts}
 
 La majoria dels NFT són construïts utilitzant un estàndard conegut com a [ERC-721](/developers/docs/standards/tokens/erc-721/). No obstant això, hi ha altres estàndards que us podrien interessar. L'estàndard [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) permet tókens semifungibles, cosa que és particularment útil en el món dels jocs. Més recentment, l'[EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) ha estat proposat per fer l'encunyament d'NFT molt més eficient. Aquest estàndard us permet encunyar tants com vulgueu en una sola transacció!
 
-## Llegir-ne més \{#further-reading}
+## Llegir-ne més {#further-reading}
 
 - [Dades sobre l'art criptogràfic](https://cryptoart.io/data) – Richard Chen, actualitzat automàticament
 - [OpenSea: la bíblia sobre els NFT](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, 10 de gener de 2020_
@@ -385,11 +385,11 @@ La majoria dels NFT són construïts utilitzant un estàndard conegut com a [ERC
 <Divider />
 }
 
-### Notes a peu de pàgina i fonts \{#footnotes-and-sources}
+### Notes a peu de pàgina i fonts {#footnotes-and-sources}
 
 Tot això explica com hem arribat a les nostres estimacions energètiques mencionades abans. Aquestes estimacions s'apliquen a la xarxa com a una totalitat i no estan reservades només al procés de creació, compra o venda d'NFT.
 
-#### 1. Un 99,95% de reducció d'energia de la mineria \{#fn-1}
+#### 1. Un 99,95% de reducció d'energia de la mineria {#fn-1}
 
 La reducció del consum energètic del 99,95% d'un sistema protegit per miners a un sistema protegit per participacions es calcula utilitzant les següents fonts d'informació:
 
@@ -409,13 +409,13 @@ Per tant, en total, Ethereum consumeix en proves de participació al voltant de 
 
 Això és una reducció d'almenys el 99,95% del total de la despesa energètica de l'estimació de Digiconomist dels 44,49 TWh per any que els actuals miners d'Ethereum consumeixen.
 
-#### 2. Consum energètic de Visa \{#fn-2}
+#### 2. Consum energètic de Visa {#fn-2}
 
 El cost de les 100.000 transaccions de Visa és de 149 kWh - [Despesa energètica mitjana de la xarxa Bitcoin per transacció comparada amb la xarxa Visa el 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
 
 Cap a finals de setembre de 2020 havien processat 140.839.000.000 transaccions - [Informes financers de Visa del quart trimestre de 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
 
-#### 3. Despesa energètica per 100.000 transaccions en una xarxa de prova de participació fragmentada \{#fn-3}
+#### 3. Despesa energètica per 100.000 transaccions en una xarxa de prova de participació fragmentada {#fn-3}
 
 S'estima que les millores en l'escalabilitat permetran la xarxa processar entre 25.000 i 100.000 transaccions per segon, amb [un màxim teòric de moment de 100.000](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
 

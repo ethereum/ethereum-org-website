@@ -134,7 +134,7 @@ Quindi ora abbiamo il nostro DEX con tutta la riserva di token disponibile. Il c
 - `buy`: l'utente può inviare ether e ricevere token in cambio
 - `sell`: l'utente può decidere di inviare token per ottenere ether
 
-## La funzione buy \{#the-buy-function}
+## La funzione buy {#the-buy-function}
 
 Scriviamo la funzione buy. Prima di tutto dovremo controllare l'ammontare di ether che il messaggio contiene e verificare che i contratti abbiano abbastanza token e che il messaggio abbia alcuni ether al suo interno. Se il contratto ha abbastanza token, invierà il numero dei token all'utente ed emetterà l'evento `Bought`.
 
@@ -157,7 +157,7 @@ Se l'acquisto va a buon fine, dovremmo vedere due eventi nella transazione: l'ev
 
 ![Due eventi nella transazione: Transfer e Bought](./transfer-and-bought-events.png)
 
-## La funzione sell \{#the-sell-function}
+## La funzione sell {#the-sell-function}
 
 La funzione responsabile della vendita implica che l'utente abbia prima approvato l'importo chiamando la funzione approve. Per approvare il trasferimento occorre che il token ERC20Basic istanziato dal DEX sia chiamato dall'utente. È possibile farlo ottenere chiamando prima la funzione `token()` del contratto DEX per recuperare l'indirizzo in cui DEX ha distribuito il contratto ERC20Basic chiamato `token`. Creiamo quindi un'istanza di quel contratto nella nostra sessione e chiamiamo la sua funzione `approve`. Siamo quindi in grado di chiamare la funzione `sell` della DEX e scambiare nuovamente i nostri token con ether. Ad esempio, ecco come appare in una sessione interattiva di Brownie:
 

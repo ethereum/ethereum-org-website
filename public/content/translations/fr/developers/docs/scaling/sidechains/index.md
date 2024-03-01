@@ -9,11 +9,11 @@ Une chaîne latérale est une blockchain séparée qui fonctionne indépendammen
 
 Les chaînes parallèles sacrifient également une certaine mesure de décentralisation ou de sécurité pour atteindre un débit élevé ([trilemme de la scalabilité](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Ethereum s'engage toutefois à évoluer sans compromettre la décentralisation et la sécurité, comme indiqué dans sa [déclaration de vision](/roadmap/vision/) pour les mises à niveau.
 
-## Comment fonctionnent les chaînes latérales ? \{#how-do-sidechains-work}
+## Comment fonctionnent les chaînes latérales ? {#how-do-sidechains-work}
 
 Les chaines parallèles sont des blockchains indépendantes, avec des historiques, des feuilles de route de développement et des considérations de conception différents. Même si une chaîne latérale peut partager certaines similitudes en termes de surface avec Ethereum, elle possède plusieurs caractéristiques distinctives.
 
-### Algorithmes de consensus \{#consensus-algorithms}
+### Algorithmes de consensus {#consensus-algorithms}
 
 L'un des points qui rend les chaînes latérales uniques (c'est-à-dire différentes d'Ethereum) est l'algorithme de consensus utilisé. Les chaines latérales ne comptent pas sur Ethereum pour obtenir un consensus et peuvent choisir des protocoles de consensus alternatifs qui répondent à leurs besoins. Quelques exemples d'algorithmes de consensus utilisés sur les chaînes latérales incluent :
 
@@ -23,7 +23,7 @@ L'un des points qui rend les chaînes latérales uniques (c'est-à-dire différe
 
 Tout comme Ethereum, les chaînes latérales ont des nœuds qui vérifient et traitent les transactions, produisent des blocs et stockent l'état de la blockchain. Les validateurs sont également responsables du maintien du consensus à travers le réseau et de sa sécurisation contre les attaques malveillantes.
 
-#### Paramètres des blocs \{#block-parameters}
+#### Paramètres des blocs {#block-parameters}
 
 Ethereum place des limites sur [le temps de bloc](/developers/docs/blocks/#block-time) (à savoir le temps qu'il faut pour produire de nouveaux blocs) et sur [la taille des blocs](/developers/docs/blocks/#block-size) (à savoir la quantité de données contenues par bloc libellé en gaz). Inversement, les chaînes latérales adoptent souvent des paramètres différents, tels que des temps de blocs plus rapides et des limites de gaz plus élevées, pour atteindre un débit élevé, des transactions rapides et de faibles frais.
 
@@ -31,7 +31,7 @@ Bien que cela présente certains avantages, cela a des implications critiques po
 
 Pour que les blockchains s'échelonnent sans nuire à la décentralisation, exécuter un nœud doit être ouvert à tout le monde — pas nécessairement aux parties qui disposent de matériel spécialisé. C'est pourquoi des efforts sont en cours pour s'assurer que tout le monde peut [exécuter un nœud complet](/developers/docs/nodes-and-clients/#why-should-i-run-an-ethereum-node) sur le réseau Ethereum.
 
-### Compatibilité EVM \{#evm-compatibility}
+### Compatibilité EVM {#evm-compatibility}
 
 Certaines chaînes latérales sont compatibles avec l'EVM et sont capables d'exécuter des contrats développés pour la [Machine virtuelle Ethereum (EVM)](/developers/docs/evm/). Les chaînes latérales compatibles avec l'EVM prennent en charge les contrats intelligents [écrits en Solidity](/developers/docs/smart-contracts/languages/), ainsi que d'autres langages de contrats intelligents EVM, ce qui signifie que les contrats intelligents écrits pour le réseau principal Ethereum fonctionneront également sur les chaînes latérales compatibles avec l'EVM.
 
@@ -41,13 +41,13 @@ Comme les chaînes latérales sont compatibles avec l'EVM, elles sont considér�
 
 Cependant, comme expliqué précédemment, l'utilisation d'une chaîne latérale implique des compromis importants. Chaque chaîne latérale est responsable de sa sécurité et n'hérite pas des propriétés de sécurité d'Ethereum. Cela augmente la possibilité de comportements malveillants qui peuvent affecter les utilisateurs ou mettre leurs fonds en péril.
 
-### Mouvement des actifs \{#asset-movement}
+### Mouvement des actifs {#asset-movement}
 
 Afin qu'une blockchain séparée devienne une chaîne latérale vers le réseau principal Ethereum, elle a besoin de la capacité de faciliter le transfert des actifs depuis et vers le réseau principal Ethereum. Cette interopérabilité avec Ethereum est obtenue à l'aide d'un pont de connexion blockchain. [Les ponts](/bridges/) utilisent des contrats intelligents déployés sur le réseau principal Ethereum et une chaîne latérale pour contrôler la connexion des fonds entre eux.
 
 Alors que les ponts aident les utilisateurs à déplacer les fonds entre Ethereum et la chaîne parallèle, les actifs ne sont pas déplacés physiquement entre les deux chaînes. Au lieu de cela, le transfert des actifs entre les chaînes est effectué en utilisant les mécanismes de création (mint) et de destruction (burn). En savoir plus sur [comment les ponts fonctionnent](/developers/docs/bridges/#how-do-bridges-work).
 
-## Avantages et inconvénients des chaînes latérales \{#pros-and-cons-of-sidechains}
+## Avantages et inconvénients des chaînes latérales {#pros-and-cons-of-sidechains}
 
 | Avantages                                                                                                                                                              | Inconvénients                                                                                                                                                                                |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -56,7 +56,7 @@ Alors que les ponts aident les utilisateurs à déplacer les fonds entre Ethereu
 | Les chaines parallèles utilisent différents modèles de consensus pour traiter efficacement les transactions et réduire les frais de transaction pour les utilisateurs. | Les chaînes latérales nécessitent une confiance plus élevée quant à son fonctionnement (par exemple, un quorum de validateurs malveillants de la chaîne latérale peut commettre une fraude). |
 | Les chaînes latérales compatibles avec l'EVM permettent aux dApps d'élargir leur écosystème.                                                                           |                                                                                                                                                                                              |
 
-### Chaînes latérales que vous pouvez utiliser \{#use-sidechains}
+### Chaînes latérales que vous pouvez utiliser {#use-sidechains}
 
 Plusieurs projets fournissent des implémentations de chaînes latérales que vous pouvez intégrer dans vos dApps :
 
@@ -66,7 +66,7 @@ Plusieurs projets fournissent des implémentations de chaînes latérales que vo
 - [Loom Network](https://loomx.io/)
 - [Metis Andromeda](https://www.metis.io/)
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [Scaling Ethereum dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 février 2018, Georgios Konstantopoulos_
 

@@ -6,15 +6,15 @@ lang: ro
 
 Nu este nevoie să scrieţi începând de la zero fiecare contract inteligent din proiect. Există multe biblioteci de contracte inteligente open source disponibile, care oferă elemente de construcție reutilizabile pentru proiectul dvs., care vă pot scuti de a reinventa roata.
 
-## Condiții prealabile \{#prerequisites}
+## Condiții prealabile {#prerequisites}
 
 Înainte de a folosi bibliotecile cu contracte inteligente, este o idee bună să înţelegeţi bine structura unui contract inteligent. Treceţi în revistă [anatomia contractelor inteligente](/developers/docs/smart-contracts/anatomy/) dacă nu aţi făcut-o deja.
 
-## Ce conține o bibliotecă \{#whats-in-a-library}
+## Ce conține o bibliotecă {#whats-in-a-library}
 
 De obicei puteţi găsi două tipuri de elemente de bază în bibliotecile de contracte inteligente: comportamente reutilizabile pe care le puteţi adăuga la contractele dvs. și implementări ale diferitelor standarde.
 
-### Comportamente \{#behaviors}
+### Comportamente {#behaviors}
 
 Atunci când scrieţi contracte inteligente, este foarte probabil să vă pomeniţi că scrieţi din nou şi din nou modele similare, cum ar fi atribuirea unei adrese de _administrator_ pentru a efectua operațiuni protejate într-un contract sau adăugarea unui buton de _pauză_ de urgență în cazul apariţiei unei probleme neașteptate.
 
@@ -52,7 +52,7 @@ contract MyContract is Ownable {
 
 Un alt exemplu popular este [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) sau [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html). Acestea sunt biblioteci (spre deosebire de contractele de bază), care oferă funcții aritmetice cu verificări de depășire a numărului întreg, care nu sunt furnizate de limbaj. Este bine să vă obişnuiţi să utilizaţi oricare dintre aceste biblioteci în locul operațiilor aritmetice native pentru a vă proteja contractul împotriva valorilor numerice peste maximul permis, care pot avea consecințe dezastruoase!
 
-### Standarde \{#standards}
+### Standarde {#standards}
 
 Pentru a facilita [combinabilitatea și interoperabilitatea](/developers/docs/smart-contracts/composability/), comunitatea Ethereum a definit mai multe standarde sub formă de **ERC**-uri. Puteţi citi mai multe despre acestea în secțiunea [standarde](/developers/docs/standards/).
 
@@ -60,7 +60,7 @@ Atunci când includeţi un ERC în contractele dvs., este bine să căutaţi imp
 
 Merită menționat faptul că unele ERC-uri nu sunt independente, ci sunt completări la alte ERC-uri. De exemplu, [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) adaugă o extensie la ERC20 pentru a-i îmbunătății posibilitatea de întrebuințare.
 
-## Cum se adaugă o bibliotecă \{#how-to}
+## Cum se adaugă o bibliotecă {#how-to}
 
 Consultaţi întotdeauna documentația bibliotecii pe care o includeţi pentru a afla instrucțiunile specifice privind modul de a o introduce în proiectul dvs. Sunt ambalate mai multe biblioteci de contracte Solidity folosind `npm`, astfel încât să le puteţi instala numai cu comanda `npm install`. Majoritatea instrumentelor pentru [compilarea](/developers/docs/smart-contracts/compiling/) contractelor vor căuta în `node_modules` bibliotecile de contracte inteligente, deci puteţi acţiona precum urmează:
 
@@ -75,7 +75,7 @@ contract MyNFT is ERC721 {
 
 Indiferent de metoda pe care o utilizaţi atunci când includeţi o bibliotecă, uitaţi-vă întotdeauna care este versiunea [limbajului](/developers/docs/smart-contracts/languages/). De exemplu, nu puteţi utiliza o bibliotecă pentru Solidity 0.6 dacă scrieţi contractele în Solidity 0.5.
 
-## Când se folosește \{#when-to-use}
+## Când se folosește {#when-to-use}
 
 Utilizarea unei biblioteci de contracte inteligente pentru proiectul dvs. are mai multe avantaje. În primul rând, faceţi economie de timp, întrucât vă furnizează elemente de construcție gata de utilizat pe care le puteţi include în sistem, mai degrabă decât să le programaţi singur.
 
@@ -85,7 +85,7 @@ Totuși, folosirea bibliotecilor de contracte inteligente prezintă riscul inclu
 
 În ultimul rând, atunci când decideţi să includeţi o bibliotecă, ţineţi cont de gradul de utilizare a acesteia în ansamblu. O bibliotecă adoptată pe scară largă are avantajele unei mai mari comunităţi, deci sunt mai mulți ochi care caută probleme. Securitatea ar trebui să fie preocuparea dvs. principală atunci când construiţi aplicații cu contractele inteligente!
 
-## Instrumente corelate \{#related-tools}
+## Instrumente corelate {#related-tools}
 
 **Contractele OpenZeppelin -** **_Cea mai populară bibliotecă pentru dezvoltarea de contracte inteligente securizate._**
 
@@ -102,11 +102,11 @@ Totuși, folosirea bibliotecilor de contracte inteligente prezintă riscul inclu
 
 - [GitHub](https://github.com/HQ20/contracts)
 
-## Tutoriale corelate \{#related-tutorials}
+## Tutoriale corelate {#related-tutorials}
 
 - [Considerații de securitate pentru dezvoltatorii Ethereum](/developers/docs/smart-contracts/security/) _– Un tutorial privind considerațiile de securitate la construirea contractelor inteligente, inclusiv gradul de utilizare a bibliotecilor._
 - [Înțelegerea contractului inteligent token ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Tutorial privind standardul ERC20, oferit de mai multe biblioteci._
 
-## Referințe suplimentare \{#further-reading}
+## Referințe suplimentare {#further-reading}
 
 _Cunoaşteţi o resursă comunitară care v-a ajutat? Editaţi această pagină și adăugaţi-o!_

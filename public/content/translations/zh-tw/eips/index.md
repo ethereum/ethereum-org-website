@@ -4,15 +4,15 @@ description: 你需要知道的以太坊改進提案基本知識
 lang: zh-tw
 ---
 
-# 以太坊改進提案 (EIP) 簡介 \{#introduction-to-ethereum-improvement-proposals}
+# 以太坊改進提案 (EIP) 簡介 {#introduction-to-ethereum-improvement-proposals}
 
-## 什麼是以太坊改進提案？ \{#what-are-eips}
+## 什麼是以太坊改進提案？ {#what-are-eips}
 
 [以太坊改進提案 (EIP)](https://eips.ethereum.org/) 是一種標準，用於指定以太坊的潛在新功能或流程。 以太坊改進提案中包含擬定變更的技術規格，相當於以太坊社群的「真相來源」。 以太坊的網路更新和應用程式標準乃透過以太坊改進提案流程商討和制定。
 
 以太坊社群的任何人皆可建立以太坊改進提案。 [EIP-1](https://eips.ethereum.org/EIPS/eip-1) 中附有以太坊改進提案撰寫準則。 以太坊改進提案主要應簡明介紹技術規範並概述變更誘因。 以太坊改進提案作者負責在社群內尋求共識並記錄不同意見。 由於提出優秀以太坊改進提案的技術門檻很高，根據過往經驗，大部分以太坊改進提案的作者都是應用程式或者協定開發者。
 
-## 以太坊改進提案為什麼很重要？ \{#why-do-eips-matter}
+## 以太坊改進提案為什麼很重要？ {#why-do-eips-matter}
 
 以太坊改進提案對於確定如何實作變更以及確保將變更記錄在以太坊上至關重要。 人們依之擬定變更、針對變更展開辯論並採納更新。 [有多種類型的以太坊改進提案](https://eips.ethereum.org/EIPS/eip-1#eip-types)，包括核心以太坊改進提案（針對影響共識且要求進行網路升級的低層級協議變更，如 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)）和以太坊提案請求（針對應用程式標準，如 [EIP-20](https://eips.ethereum.org/EIPS/eip-20) 和 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)）。
 
@@ -20,7 +20,7 @@ lang: zh-tw
 
 以太坊改進提案提供變更的技術規範，不僅如此，以太坊還以其為單位推行治理舉措：任何人皆可擬定以太坊改進提案，然後社群中的各個利害關係人將對此展開辯論，以確定是否應將其作為標准採納或包含在網路升級中。 由於非核心以太坊改進提案不一定被所有應用程式採納（例如，可以建立不實作 EIP-20 的同質化代幣），而核心以太坊改進提案必須被廣泛採納（因全數節點必須升級才能成為同一網路的一部分），與非核心以太坊改進提案相比，核心以太坊改進提案需要社群內達成更廣泛的共識。
 
-## 以太坊改進提案演進史 \{#history-of-eips}
+## 以太坊改進提案演進史 {#history-of-eips}
 
 [以太坊改進提案 (EIP) GitHub 資源庫](https://github.com/ethereum/EIPs)於 2015 年 10 月建立。 以太坊改進提案流程基於[比特幣改進提案 (BIP)](https://github.com/bitcoin/bips) 流程，而後者又是基於 [Python 增強提案 (PEP)](https://www.python.org/dev/peps/) 流程。
 
@@ -50,7 +50,7 @@ lang: zh-tw
 
 完整的標準化流程以及圖表請見 [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 
-## 瞭解更多 \{#learn-more}
+## 瞭解更多 {#learn-more}
 
 若有興趣進一步瞭解以太坊改進提案，請參閱[以太坊改進提案網站](https://eips.ethereum.org/)和 [EIP-1](https://eips.ethereum.org/EIPS/eip-1)。 以下為一些實用連結：
 
@@ -58,11 +58,11 @@ lang: zh-tw
 - [所有以太坊改進提案類型的說明](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [所有以太坊改進提案狀態的說明](https://eips.ethereum.org/EIPS/eip-1#eip-process)
 
-## 參與方式 \{#participate}
+## 參與方式 {#participate}
 
 所有人皆可建立以太坊改進提案。 提交提案前必須閱讀 [EIP-1](https://eips.ethereum.org/EIPS/eip-1)，其中概述了以太坊改進提案流程以及撰寫以太坊改進提案的方法；並至[以太坊魔術師](https://ethereum-magicians.org/)徵求意見回饋，提交草案之前應先在這裡與社群討論提案。
 
-## 參考資料 \{#references}
+## 參考資料 {#references}
 
 <cite class="citation">
 

@@ -12,11 +12,11 @@ Cependant, quand Ethereum est passé de la [preuve de travail](/developers/docs/
 
 Ce nouveau type de clé utilise le **schéma de signature** [Boneh-Lyn-Shacham (BLS)](https://wikipedia.org/wiki/BLS_digital_signature). BLS permet une agrégation très efficace des signatures mais permet également l'ingénierie inverse des clés individuelles des validateurs agrégées et est idéal pour gérer les actions entre validateurs.
 
-## Les deux types de clés de validateur \{#two-types-of-keys}
+## Les deux types de clés de validateur {#two-types-of-keys}
 
 Avant le passage à la preuve d'enjeu, les utilisateurs d'Ethereum ne disposaient que d'une seule clé privée basée sur la courbe elliptique pour accéder à leurs fonds. Avec l'introduction de la preuve d'enjeu, les utilisateurs qui souhaitaient être des stakers individuels avaient également besoin d'une **clé de validateur** et d'une **clé de retrait**.
 
-### La clé de validateur \{#validator-key}
+### La clé de validateur {#validator-key}
 
 La clé de signature du validateur est constituée de deux éléments :
 
@@ -35,13 +35,13 @@ Cette flexibilité a l'avantage de déplacer très rapidement les clés de signa
 
 La **clé publique de validation** est incluse dans les données de transaction lorsqu'un utilisateur dépose l'ETH dans le contrat de dépôt du staking. Ceci est connu sous le nom de _données de dépôt_, et il permet à Ethereum d'identifier le validateur.
 
-### Identifiants de retrait \{#withdrawal-credentials}
+### Identifiants de retrait {#withdrawal-credentials}
 
 Chaque validateur possède une propriété appelée _identifiants de retrait_. Ce champ de 32 octets commence soit par un `0x00`, représentant les identifiants de retrait BLS, soit par un `0x01`, représentant des identifiants qui pointent vers une adresse d'exécution.
 
 Les validateurs avec des clés BLS commençant par `0x00` doivent mettre à jour ces identifiants pour les diriger vers une adresse d'exécution afin d'activer les paiements de solde excédentaire ou le retrait complet de la mise. Cela peut être fait en fournissant une adresse d'exécution dans les données de dépôt lors de la génération initiale de la clé, _OU_ en utilisant ultérieurement la clé de retrait pour signer et diffuser un message `BLSToExecutionChange`.
 
-### La clé de retrait \{#withdrawal-key}
+### La clé de retrait {#withdrawal-key}
 
 La clé de retrait sera nécessaire pour mettre à jour les justificatifs de retrait afin de les orienter vers une adresse d'exécution, si elle n'est pas définie lors du dépôt initial. Cela permettra de commencer à traiter les paiements de solde excédentaire et permettra également aux utilisateurs de retirer intégralement leur ETH mis en jeu.
 
@@ -56,7 +56,7 @@ La séparation des clés de validateur des clés de comptes Ethereum permet à p
 
 ![schéma de la clé de validateur](validator-key-schematic.png)
 
-## Dérivation des clés à partir d'une phrase de récupération \{#deriving-keys-from-seed}
+## Dérivation des clés à partir d'une phrase de récupération {#deriving-keys-from-seed}
 
 Si chaque mise en jeu de 32 ETH nécessitait un nouvel ensemble de 2 clés complètement indépendantes, la gestion des clés deviendrait rapidement ingérable, en particulier pour les utilisateurs gérant plusieurs validateurs. Au lieu de cela, plusieurs clés de validateur peuvent être dérivées d'un seul secret commun et le stockage de ce seul secret permet d'accéder à plusieurs clés de validateur.
 
@@ -90,7 +90,7 @@ Chaque branche est séparée par un `/`, donc `m/2` signifie commencer avec la c
 
 ![logique de la clé de validateur](multiple-keys.png)
 
-## En savoir plus \{#further-reading}
+## En savoir plus {#further-reading}
 
 - [Article de blog de l'Ethereum Foundation par Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 BLS12-381 génération de clé](https://eips.ethereum.org/EIPS/eip-2333)

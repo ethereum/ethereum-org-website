@@ -4,7 +4,7 @@ description: La politica che usiamo quando aggiungiamo prodotti o servizi di sta
 lang: it
 ---
 
-# Aggiungere prodotti o servizi di staking \{#adding-staking-products-or-services}
+# Aggiungere prodotti o servizi di staking {#adding-staking-products-or-services}
 
 Vogliamo assicurarci di elencare le migliori risorse possibili, mantenendo gli utenti al sicuro.
 
@@ -18,7 +18,7 @@ Attualmente, elenchiamo i prodotti e i servizi di staking sulle seguenti pagine:
 
 Il proof-of-stake sulla Beacon Chain è attivo dal 1° dicembre 2020. Sebbene lo staking sia relativamente nuovo, abbiamo provato a creare un meccanismo equo e trasparente per la considerazione su ethereum.org, ma i criteri per l'inclusione nell'elenco cambieranno ed evolveranno col tempo e, in ultima analisi, saranno a discrezione del team del sito web di ethereum.org.
 
-## Il meccanismo decisionale \{#the-decision-framework}
+## Il meccanismo decisionale {#the-decision-framework}
 
 La decisione di elencare un prodotto su ethereum.org non dipende da un unico fattore. Nel decidere se elencare un prodotto o servizio, vengono considerati diversi criteri. Più questi criteri sono soddisfatti e più è probabile che venga elencato.
 
@@ -31,7 +31,7 @@ La decisione di elencare un prodotto su ethereum.org non dipende da un unico fat
 
 Al momento elenchiamo solo i prodotti e i servizi in queste categorie.
 
-### Criteri per l'inclusione \{#criteria-for-inclusion}
+### Criteri per l'inclusione {#criteria-for-inclusion}
 
 Le proposte di prodotti o servizi di staking saranno valutate secondo i seguenti criteri:
 
@@ -59,7 +59,7 @@ Le proposte di prodotti o servizi di staking saranno valutate secondo i seguenti
 
 - ossia Linux, macOS, Windows, iOS, Android
 
-#### Software e contratti intelligenti \{#software-and-smart-contracts}
+#### Software e contratti intelligenti {#software-and-smart-contracts}
 
 Per qualsiasi software personalizzato o contratto intelligente coinvolto:
 
@@ -83,7 +83,7 @@ Per qualsiasi software personalizzato o contratto intelligente coinvolto:
 - Altrimenti, ci sono piani per creare un programma di ricompense per la ricerca dei bug di sicurezza?
 - Questo serve a determinare il punteggio di "ricerca dei bug" dei prodotti.
 
-#### Strumenti del nodo o del client \{#node-or-client-tooling}
+#### Strumenti del nodo o del client {#node-or-client-tooling}
 
 Per i prodotti del software correlati alla configurazione, alla gestione o alla migrazione del nodo o del client:
 
@@ -92,7 +92,7 @@ Per i prodotti del software correlati alla configurazione, alla gestione o alla 
 - Quali client sono supportati? L'utente può scegliere?
 - Questo serve a determinare il punteggio "multi-client" dei prodotti.
 
-#### Staking come servizio \{#staking-as-a-service}
+#### Staking come servizio {#staking-as-a-service}
 
 Per gli [elenchi di staking-as-a-service](/staking/saas/) (cioè operazioni del nodo delegato):
 
@@ -117,7 +117,7 @@ Per gli [elenchi di staking-as-a-service](/staking/saas/) (cioè operazioni del 
 - A partire dall'ultima modifica, Prysm è il client di livello di consenso eseguito da una maggioranza di operatori di nodi, il che è pericoloso per la rete. Se un client CL è attualmente utilizzato da oltre il 33% della rete, richiediamo i dati correlati al suo utilizzo.
 - Questo serve a determinare il punteggio dei prodotti con "client diversi".
 
-#### Pool di staking \{#staking-pool}
+#### Pool di staking {#staking-pool}
 
 Per i [servizi di staking in pool](/staking/pools/):
 
@@ -147,7 +147,7 @@ Per i [servizi di staking in pool](/staking/pools/):
 - A partire dall'ultima modifica, Prysm è il client di livello di consenso eseguito da una maggioranza di operatori di nodi, il che è pericoloso per la rete. Se un client CL è attualmente utilizzato da oltre il 33% della rete, richiediamo i dati correlati al suo utilizzo.
 - Questo serve a determinare il punteggio dei prodotti con "client diversi".
 
-### Altri criteri: gli aspetti preferibili \{#other-criteria}
+### Altri criteri: gli aspetti preferibili {#other-criteria}
 
 **Quali interfacce utente sono supportate?**
 
@@ -161,13 +161,13 @@ Per i [servizi di staking in pool](/staking/pools/):
 
 - Questo ci da un'idea del raggio d'azione del tuo servizio finora.
 
-## Come mostriamo i risultati \{#product-ordering}
+## Come mostriamo i risultati {#product-ordering}
 
 I [criteri di inclusione](#criteria-for-inclusion) di cui sopra vengono utilizzati per calcolare un punteggio cumulativo per ciascun prodotto o servizio. Questo viene utilizzato come mezzo per selezionare e mostrare prodotti che soddisfano determinati criteri oggettivi. Più criteri sono disponibili con le relative prove, più il prodotto sarà in cima all'elenco, mentre i pareggi saranno randomizzati al caricamento.
 
 La logica del codice e le ponderazioni per questi criteri sono attualmente contenute in [questo componente JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) nel nostro repository.
 
-## Aggiungi il tuo prodotto o servizio \{#add-product}
+## Aggiungi il tuo prodotto o servizio {#add-product}
 
 Se desideri aggiungere un prodotto o servizio di staking su ethereum.org, crea un ticket su GitHub.
 

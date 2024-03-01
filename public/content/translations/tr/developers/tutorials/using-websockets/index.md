@@ -16,7 +16,7 @@ published: 2020-12-01
 
 Bu, Ethereum blok zincirine talepte bulunmak için WebSocket'leri ve Alchemy'yi kullanmak için giriş seviyesinde bir kılavuzdur.
 
-## WebSocket'ler ile HTTP Karşılaştırması \{#websockets-vs-http}
+## WebSocket'ler ile HTTP Karşılaştırması {#websockets-vs-http}
 
 HTTP'den farklı olarak WebSocket'ler ile belirli bilgiler istediğinizde sürekli olarak istekte bulunmanız gerekmez. WebSocket'ler (doğru yapılırsa), sizin için bir ağ bağlantısı sağlar ve değişiklikleri dinler.
 
@@ -24,7 +24,7 @@ Herhangi bir ağ bağlantısında olduğu gibi, bir WebSocket'in kesintisiz olar
 
 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), yapılandırma gerektirmeden WebSocket arızaları ve yeniden denemeler için otomatik olarak işleme ekler.
 
-## Deneyin \{#try-it-out}
+## Deneyin {#try-it-out}
 
 WebSocket'leri test etmenin en kolay yolu, [wscat](https://github.com/websockets/wscat) gibi WebSocket istekleri yapmak için bir komut satırı aracı yüklemektir. Şunlar gibi istekleri wscat kullanarak gönderebilirsiniz:
 
@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ```
 
-## WebSocket'ler nasıl kullanılır \{#how-to-use-websockets}
+## WebSocket'ler nasıl kullanılır {#how-to-use-websockets}
 
 Başlamak için uygulamanızın WebSocket URL'sini kullanarak bir WebSocket açın. Uygulamanızın WebSocket URL'sini [gösterge panelinizde](https://dashboard.alchemyapi.io/) uygulama sayfasını açıp "View Key"e (Anahtarı Görüntüle) tıklayarak bulabilirsiniz. Uygulamanızın WebSocket URL'sinin, HTTP istekleri URL'sinden farklı olduğunu, ancak her ikisinin de "View Key"e tıklanarak bulunabileceğini unutmayın.
 
@@ -47,7 +47,7 @@ Başlamak için uygulamanızın WebSocket URL'sini kullanarak bir WebSocket aç�
 
 [Alchemy API Referansında](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) listelenen API'lerden herhangi biri WebSocket aracılığıyla kullanılabilir. Bunu yapmak için, HTTP POST isteğinin gövdesi olarak gönderilecek yükün aynısını kullanın, bunun yerine bu yükü WebSocket aracılığıyla gönderin.
 
-## Web3 ile \{#with-web3}
+## Web3 ile {#with-web3}
 
 Web3 gibi bir istemci kütüphanesi kullanırken WebSocket'lere geçiş yapmak basittir. Web3 istemcinizi başlatırken HTTP URL'si yerine WebSocket URL'sini iletin. Örneğin:
 
@@ -57,26 +57,26 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## Abonelik API \{#subscription-api}
+## Abonelik API {#subscription-api}
 
 Bir WebSocket aracılığıyla bağlanıldığınızda, iki ek yöntem kullanabilirsiniz: `eth_subscribe` ve `eth_unsubscribe`. Bu yöntemler, belirli olayları dinlemenizi ve anında haberdar olmanızı sağlar.
 
-### `eth_subscribe` \{#eth-subscribe}
+### `eth_subscribe` {#eth-subscribe}
 
 Belirtilen olaylar için yeni bir abonelik oluşturur. [`eth_subscribe` hakkında daha fazla bilgi edinin](https://docs.alchemy.com/reference/eth-subscribe).
 
-#### Parametreler \{#parameters}
+#### Parametreler {#parameters}
 
 1. Abonelik türleri
 2. Opsiyonel parametreler
 
 İlk argüman, dinlenecek olayın türünü belirtir. İkinci argüman, ilk argümana bağlı olan ek seçenekleri içerir. Farklı açıklama türleri, seçenekleri ve olay yükleri aşağıda açıklanmıştır.
 
-#### Dönüşler \{#returns}
+#### Dönüşler {#returns}
 
 Abonelik ID'si: Bu ID, alınan tüm etkinliklere eklenecektir ve ayrıca `eth_unsubscribe` kullanılarak aboneliği iptal etmek için de kullanılabilir.
 
-#### Abonelik etkinlikleri \{#subscription-events}
+#### Abonelik etkinlikleri {#subscription-events}
 
 Abonelik aktifken, aşağıdaki alanlara sahip nesneler olan olayları alacaksınız:
 
@@ -86,7 +86,7 @@ Abonelik aktifken, aşağıdaki alanlara sahip nesneler olan olayları alacaksı
   - `subscription`: Bu aboneliği oluşturan `eth_subscription` çağrısı tarafından döndürülen abonelik ID'si.
   - `result`: İçeriği abonelik türüne göre değişen bir nesne.
 
-#### Abonelik türleri \{#subscription-types}
+#### Abonelik türleri {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
@@ -209,7 +209,7 @@ Konu belirteçlerine ilişkin bazı örnekler:
 
 ```
 
-### `eth_unsubscribe` \{#eth-unsubscribe}
+### `eth_unsubscribe` {#eth-unsubscribe}
 
 Başka bir olayın gönderilmemesi için mevcut bir aboneliği iptal eder.
 

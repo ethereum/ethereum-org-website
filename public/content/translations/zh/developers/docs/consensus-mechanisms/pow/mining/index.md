@@ -8,11 +8,11 @@ lang: zh
 工作量证明不再是以太坊共识机制的基础，这意味着挖矿已终结。 取而代之的是，以太坊将由质押了以太币的验证者保护。 你可以立即开始质押以太币。 阅读更多关于<a href='/roadmap/merge/'>合并</a>、<a href='/developers/docs/consensus-mechanisms/pos/'>权益证明</a>和<a href='/staking/'>质押</a>的信息。 此页面仅展示历史内容。
 </InfoBanner>
 
-## 前提条件 \{#prerequisites}
+## 前提条件 {#prerequisites}
 
 为了更好地了解此页面，推荐先阅读[交易](/developers/docs/transactions/)、[区块](/developers/docs/blocks/)和[工作量证明](/developers/docs/consensus-mechanisms/pow/)。
 
-## 以太坊挖矿是什么？ \{#what-is-ethereum-mining}
+## 以太坊挖矿是什么？ {#what-is-ethereum-mining}
 
 挖矿是指创建要添加到以太坊区块链的交易块的过程，在以太坊现已弃用的工作量证明架构中进行。
 
@@ -22,7 +22,7 @@ lang: zh
 
 挖矿是任何工作量证明区块链的命脉。 在过渡到权益证明之前，以太坊矿工，即运行软件的计算机，利用它的时间和算力处理交易并产生区块。
 
-## 为什么存在矿工？ \{#why-do-miners-exist}
+## 为什么存在矿工？ {#why-do-miners-exist}
 
 在以太坊这样的去中心化系统中，需要确保每个人都同意交易的顺序。 矿工通过解决计算难题来产生区块并保护网络免受攻击，从而帮助实现这一目标。
 
@@ -30,7 +30,7 @@ lang: zh
 
 以前任何人都能使用他们的计算机在以太坊网络上挖矿。 然而，并非每个人都可以通过挖矿实现以太币 (ETH) 获利。 在大多数情况下，矿工必须购买专用计算机硬件，并且能够获得廉价能源。 普通计算机不太可能获得足够的区块奖励来支付相关的挖矿成本。
 
-### 挖矿成本 \{#cost-of-mining}
+### 挖矿成本 {#cost-of-mining}
 
 - 建造和维护矿机所需硬件的潜在成本
 - 矿机的电力成本
@@ -39,7 +39,7 @@ lang: zh
 
 要进一步探索挖矿收益，请使用挖矿收益计算器，例如 [Etherscan](https://etherscan.io/ether-mining-calculator) 提供的挖矿收益计算器。
 
-## 如何挖掘以太坊交易 \{#how-ethereum-transactions-were-mined}
+## 如何挖掘以太坊交易 {#how-ethereum-transactions-were-mined}
 
 以下内容将简要介绍如何在以太坊工作量证明中挖掘交易。 在[这里](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos)可以找到对以太坊权益证明中该过程的类比介绍。
 
@@ -56,13 +56,13 @@ lang: zh
 
 每个交易都只会被挖掘（首次包含在新区块中并传播）一次，但在推进规范以太坊虚拟机状态的过程中，每个参与者都会执行和验证交易。 这凸显出区块链的核心准则之一：**不信任，就验证**。
 
-## 叔块 \{#ommer-blocks}
+## 叔块 {#ommer-blocks}
 
 基于工作量证明的区块挖掘是概率性的，这意味着有时由于网络延迟而同时公布了两个有效的区块。 在这种情况下，协议必须确定最长链(因此大多数即是最“有效的”)，同时针对已提交但未被包含的有效区块，给予矿工部分奖励以确保公平。 这促使网络进一步去中心化，因为小矿工群体可能面临更大的延迟，但仍然可以通过[叔块](/glossary/#ommer)奖励获得收益。
 
 对于父区块的同级区块来说，“ommer”一词不分性别，因而为首选，但有时也被称为“uncle”（叔）。 **因为以太坊切换到权益证明机制后，叔块就不会被挖掘了**，因为每个时隙中只选择了一名提议者。 通过查看被挖掘叔块的[历史图表](https://ycharts.com/indicators/ethereum_uncle_rate)，你可以看到这种变化。
 
-## 直观演示 \{#a-visual-demo}
+## 直观演示 {#a-visual-demo}
 
 跟随 Austin 了解挖矿和工作量证明区块链。
 
@@ -70,13 +70,13 @@ lang: zh
 <YouTube id="zcX7OJ-L8XQ" />
 }
 
-## 挖矿算法 \{#mining-algorithm}
+## 挖矿算法 {#mining-algorithm}
 
 以太坊主网只使用过一种挖矿算法 -[“Ethash”](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/)。 Ethhash 是一种初始研发挖矿算法[“Dagger-Hashimoto”](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/)的后续版本。
 
 [有关挖矿算法的更多信息](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)。
 
-## 相关主题 \{#related-topics}
+## 相关主题 {#related-topics}
 
 - [燃料](/developers/docs/gas/)
 - [以太坊虚拟机](/developers/docs/evm/)

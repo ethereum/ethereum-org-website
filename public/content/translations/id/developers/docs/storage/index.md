@@ -17,9 +17,9 @@ Ketika mempertimbangkan opsi penyimpanan terdesentralisasi (dStorage), ada beber
 - Desentralisasi
 - Konsensus
 
-## Mekanisme persistensi / struktur insentif \{#persistence-mechanism}
+## Mekanisme persistensi / struktur insentif {#persistence-mechanism}
 
-### Berbasis blockchain \{#blockchain-based}
+### Berbasis blockchain {#blockchain-based}
 
 Agar sepotong data bertahan selamanya, kita perlu menggunakan mekanisme persistensi. Misalnya, di Ethereum, mekanisme persistensi adalah keseluruhan rantai yang perlu diperhitungkan ketika menjalankan node. Bagian data terbaru dilekatkan pada ujung rantai, dan terus berkembang - yang mengharuskan setiap node mereplikasi semua data yang tersemat.
 
@@ -34,7 +34,7 @@ Platform dengan persistensi berbasis blockchain:
 - Ethereum
 - [Arweave](https://www.arweave.org/)
 
-### Berbasis kontrak \{#contract-based}
+### Berbasis kontrak {#contract-based}
 
 Persistensi **berbasis kontrak** memiliki intuisi bahwa data tidak dapat direplikasi oleh setiap node dan disimpan selamanya, dan sebagai gantinya harus dipelihara dengan kesepakatan kontrak. Ini adalah kesepakatan yang dibuat dengan berbagai node yang telah berjanji untuk menampung sepotong data dalam satu periode waktu. Dananya harus dikembalikan atau diperbarui setiap kali node tidak dapat lagi mempertahankan keberadaan data.
 
@@ -47,7 +47,7 @@ Platform dengan persistensi berbasis kontrak:
 - [Storj](https://storj.io/)
 - [0Chain](https://0chain.net/)
 
-### Pertimbangan tambahan \{#additional-consideration}
+### Pertimbangan tambahan {#additional-consideration}
 
 IPFS adalah sistem terdistribusi untuk menyimpan dan mengakses berkas, situs web, aplikasi, dan data. Ia tidak memiliki skema insentif bawaan, tetapi dapat sebagai gantinya digunakan dengan apa pun dari solusi insentif berbasis kontrak di atas untuk persistensi yang berjangka waktu lebih lama. Cara lain untuk mempertahankan data pada IPFS adalah bekerja dengan layanan penyematan, yang akan "menyematkan" data Anda untuk Anda. Anda bahkan dapat menjalankan node IPFS Anda sendiri dan berkontribusi terhadap jaringan untuk mempertahankan data Anda dan/atau orang lain tanpa biaya!
 
@@ -56,11 +56,11 @@ IPFS adalah sistem terdistribusi untuk menyimpan dan mengakses berkas, situs web
 - [web3.storage](https://web3.storage/) _(layanan penyematan IPFS/Filecoin)_
 - [Infura](https://infura.io/product/ipfs) _(layanan pinning IPFS)_
 
-## Retensi data \{#data-retention}
+## Retensi data {#data-retention}
 
 Untuk mempertahankan data, sistem harus memiliki beberapa jenis mekanisme untuk memastikan data dipertahankan.
 
-### Mekanisme tantangan \{#challenge-mechanism}
+### Mekanisme tantangan {#challenge-mechanism}
 
 Salah satu cara populer untuk memastikan data dipertahankan, adalah dengan menggunakan beberapa jenis tantangan kriptografik yang diterbitkan ke node untuk memastikan datanya masih ada. Cara sederhananya adalah mencari bukti akses Arweave. Mereka mengeluarkan tantangan terhadap node untuk melihat apakah node memiliki data baik di blok terbaru dan di blok acak yang dibuat sebelumnya. Jika node tidak dapat memberikan jawaban, mereka diberi penalti.
 
@@ -71,7 +71,7 @@ Jenis dStorage dengan mekanisme tantangan:
 - Arweave
 - Filecoin
 
-### Desentralisasi \{#decentrality}
+### Desentralisasi {#decentrality}
 
 Tidak ada peralatan yang bagus untuk mengukur tingkat desentralisasi platform, tapi secara umum, Anda mungkin ingin menggunakan peralatan yang tidak memiliki beberapa bentuk KYC untuk menyediakan bukti bahwa peralatan itu tidak terpusat.
 
@@ -84,7 +84,7 @@ Peralatan desentralisasi tanpa KYC:
 - IPFS
 - Ethereum
 
-### Konsensus \{#consensus}
+### Konsensus {#consensus}
 
 Kebanyakan peralatan ini memiliki versi [mekanisme konsensus](/developers/docs/consensus-mechanisms/)sendiri tetapi secara umum, peralatan ini didasarkan pada [**bukti kerja (PoW)**](/developers/docs/consensus-mechanisms/pow/) atau [**bukti taruhan (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
@@ -100,7 +100,7 @@ Berbasis PoS:
 - Filecoin
 - 0Chain
 
-## Peralatan terkait \{#related-tools}
+## Peralatan terkait {#related-tools}
 
 **IPFS - _Sistem File InterPlanetary adalah penyimpanan terdesentralisasi dan sistem referensi file untuk Ethereum._**
 
@@ -161,13 +161,13 @@ Berbasis PoS:
 - [Dokumentasi](https://developers.ceramic.network/learn/welcome/)
 - [GitHub](https://github.com/ceramicnetwork/js-ceramic/)
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 - [Apa itu Penyimpanan Terdesentralisasi?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [Mematahkan Lima Mitos Umum tentang Penyimpanan Terdesentralisasi](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
-## Topik terkait \{#related-topics}
+## Topik terkait {#related-topics}
 
 - [Kerangka kerja pengembangan](/developers/docs/frameworks/)

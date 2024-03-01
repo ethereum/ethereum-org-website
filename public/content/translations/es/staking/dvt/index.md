@@ -4,7 +4,7 @@ description: La tecnología de valor distribuido (o DVT) permite la operación d
 lang: es
 ---
 
-# Tecnología de validador distribuido \{#distributed-validator-technology}
+# Tecnología de validador distribuido {#distributed-validator-technology}
 
 La tecnología de validador distribuido (DVT) es un enfoque para la seguridad del validador que reparte la gestión de claves y la firma de responsabilidades entre varias partes, para reducir puntos únicos de fallo, e incrementar la resiliencia del validador.
 
@@ -12,21 +12,21 @@ Esto lo hace mediante la **división de la clave privada** usada para asegurar u
 
 ![Un diagrama que muestra cómo una sola clave de validador se está distribyendo en nodos múltiples con componentes variados.](./dvt-cluster.png)
 
-## ¿Por qué necesitamos la DVT? \{#why-do-we-need-dvt}
+## ¿Por qué necesitamos la DVT? {#why-do-we-need-dvt}
 
-### Seguridad \{#security}
+### Seguridad {#security}
 
 Los validadores generan dos pares de claves público-privadas: claves validadoras para participar en un consenso y claves de retiro para acceder a fondos. Mientras que los validadores pueden asegurar claves de retirada en almacenamiento en frío, las claves privadas de los validadores deben estar en línea constantemente. Si una clave privada del validador se ve afectada, un atacante puede controlar el validador, lo que potencialmente conduce a un recorte o a la pérdida de un participante ETH. DVT puede ayudar a mitigar este riesgo. He aquí la forma de hacerlo:
 
 Mediante el uso de DVT, los participantes pueden participar en la apuesta mientras mantienen la clave privada del validador en el almacenamiento en frío. Esto se consigue cifrando la clave original y completa del validador, para después dividirla en claves compartidas. Las claves compartidas en línea y se distribuyen a múltiples nodos que permiten la operación distribuida del validador. Esto es posible porque los validadores de Ethereum utilizan firmas BLS que son aditivas, lo que significa que la clave completa puede ser reconstruida sumando sus partes componentes. Esto permite al participante mantener la clave «maestra» del validador completa y original de forma segura sin conexión.
 
-### No existen puntos únicos de fallo. \{#no-single-point-of-failure}
+### No existen puntos únicos de fallo. {#no-single-point-of-failure}
 
 Cuando un validador se divide entre distintos operarios y equipos, puede soportar fallos puntuales del hardware y del software sin desconectarse. Además, se puede reducir el riesgo de fallos utilizando distintas configuraciones para el hardware y el software en los nodos de un clúster. Esta capacidad de recuperación no está a disposición de las configuraciones de validador de nodo único: se origina en la capa DVT.
 
 En caso de que uno de los componentes de una máquina en un clúster dejara de funcionar (por ejemplo, si hubiera cuatro operadores en un clúster de validador y uno de ellos utilizara un cliente determinado que presentara un fallo), el resto se encargaría de que el validador siguiera funcionando.
 
-### Descentralización \{#decentralization}
+### Descentralización {#decentralization}
 
 La situación ideal para Ethereum es contar con el mayor número posible de validadores operados de forma independiente. Sin embargo, un número reducido de proveedores de participaciones ha adquirido gran popularidad y representa una parte considerable del total de ETH apostado en la red. La DVT puede conseguir que estos operadores sigan existiendo al tiempo que mantiene la descentralización de la participación. Esto se debe a que las claves de cada validador se reparten entre muchas máquinas y para que un validador se vuelva malicioso se requeriría una mayor confabulación.
 
@@ -42,7 +42,7 @@ Sin la DVT es más sencillo que los proveedores de participación admitan sólo 
 6. **Mejora la diversidad** (cliente, centro de datos, ubicación, reglamentación, etc.).
 7. **Aumenta la seguridad** de la gestión de claves del validador.
 
-## ¿Cómo funciona la DVT? \{#how-does-dvt-work}
+## ¿Cómo funciona la DVT? {#how-does-dvt-work}
 
 Una solución DVT contiene los siguientes componentes:
 
@@ -54,21 +54,21 @@ Una solución DVT contiene los siguientes componentes:
 
 Los validadores distribuidos incorporan tolerancia a fallos y pueden continuar funcionando incluso si algunos de los nodos individuales se desconecta. Esto quiere decir que el clúster es resiliente aun en el caso de que alguno de los nodos que lo integran resulte ser malicioso o perezoso.
 
-## Casos de uso de DVT \{#dvt-use-cases}
+## Casos de uso de DVT {#dvt-use-cases}
 
 La DVT tiene implicaciones importantes para la industria de las participaciones en general:
 
-### Participación en solitario \{#solo-stakers}
+### Participación en solitario {#solo-stakers}
 
 La TVD además habilita la participación sin custodia, al permitir que usted distribuya sus claves de validador entre nodos remotos, mientras mantenga la clave totalmente desconectada. Esto significa que los participantes domésticos no necesariamente deben invertir en hardware, mientras que la distribución de fragmentos de clave puede ayudar a fortalecerlos frente a posibles hackeos.
 
-### Participación como servicio (SaaS) \{#saas}
+### Participación como servicio (SaaS) {#saas}
 
 Los operadores (como las participaciones agrupadas y los participantes institucionales) que gestionan muchos validadores pueden utilizar la DVT para reducir su riesgo. Al distribuir su infraestructura, pueden añadir redundancia a sus operaciones y diversificar los tipos de hardware que utilizan.
 
 La DVT comparte la responsabilidad de la gestión de claves entre varios nodos, lo que significa que también se pueden compartir algunos costes operativos. La DVT también puede reducir el riesgo operativo y los costes de seguro para los proveedores de participaciones.
 
-### Reservas de participación \{#staking-pools}
+### Reservas de participación {#staking-pools}
 
 Debido a las configuraciones estándar de los validadores, las participaciones agrupadas y los proveedores de participaciones líquidas se ven obligados a tener distintos niveles de confianza de un único operador, ya que las ganancias y las pérdidas se comparten con todo el grupo. También dependen de los operadores para salvaguardar las claves de firma porque, hasta ahora, no tenían otra opción.
 
@@ -78,13 +78,13 @@ Al aprovechar la DVT, se reduce significativamente la confianza requerida de los
 
 Otro beneficio de minimizar la confianza de un solo operador es que las participaciones agrupadas pueden permitir una participación más abierta y sin permiso. Al hacerlo, los servicios pueden reducir su riesgo y apoyar la descentralización de Ethereum al usar ambos conjuntos de operadores, organizados y de acceso libre, por ejemplo, al hacer combinar operadores doméstricos o participantes menores con otros más grandes.
 
-## Desventajas potenciales de usar DVT \{#potential-drawbacks-of-using-dvt}
+## Desventajas potenciales de usar DVT {#potential-drawbacks-of-using-dvt}
 
 - **Componente adicional**: introducir un nodo DVT añade otra parte propensa a ser vulnerable o no funcionar. Una forma de mitigarlo es intentar múltiples implementaciones de un nodo DVT, lo que significa múltiples clientes DVT (similar a como existen múltiples clientes para las capas de consenso y ejecución).
 - Los **costes operativos**: como DVT distribuye el validador entre múltiples partes, se requieren más nodos para operar en lugar de un sólo nodo, lo que incrementa los costes operativos.
 - **Latencia potencialmente mayor**: dado que DVT utiliza un protocolo de consenso para lograrlo entre múltiples nodos operando un validador, puede potencialmente incorporar una mayor latencia.
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [Especificiones de un validador distribuido Ethereum (detalladas)](https://github.com/ethereum/distributed-validator-specs)
 - [Especificaciones técnicas de un validador distribuido Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)

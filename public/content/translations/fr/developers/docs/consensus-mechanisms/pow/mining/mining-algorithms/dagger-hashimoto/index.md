@@ -6,11 +6,11 @@ lang: fr
 
 Dagger-Hashimoto représentait l'implémentation et la spécification originales de recherche pour l'algorithme de minage d'Ethereum. Dagger-Hashimoto a été remplacé par [Ethash](#ethash). Le minage a été complètement arrêté avec [La Fusion](/updates/merge) du 15 septembre 2022. Depuis lors, Ethereum a été sécurisé en utilisant à la place un mécanisme de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos). Cette page a un intérêt historique - l'information fournie n'est plus pertinente depuis La Fusion Ethereum.
 
-## Prérequis \{#prerequisites}
+## Prérequis {#prerequisites}
 
 Pour mieux comprendre cette page, nous vous recommandons de lire d'abord le [consensus de preuve de travail](/developers/docs/consensus-mechanisms/pow), [le minage](/developers/docs/consensus-mechanisms/pow/mining), et [les algorithmes de minage](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
 
-## Dagger-Hashimoto \{#dagger-hashimoto}
+## Dagger-Hashimoto {#dagger-hashimoto}
 
 Dagger-Hashimoto vise à satisfaire deux objectifs :
 
@@ -21,7 +21,7 @@ Avec une modification supplémentaire, et si cela vous intéresse, nous vous sp�
 
 **Le stockage de chaîne complète** : le minage doit nécessiter un stockage de l'état de la blockchain complète (en raison de la structure irrégulière de la tentative d'état d'Ethereum, nous nous attendons à ce qu'un certain raccourcissement soit possible, en particulier pour certains contrats souvent utilisés tout en minimisant ceci).
 
-## Génération DAG \{#dag-generation}
+## Génération DAG {#dag-generation}
 
 Le code de l'algorithme sera défini ci-dessous en Python. Premièrement, nous donnons un `encode_int` pour le marquage des entiers non signés de précision spécifiés aux chaînes de caractères. L'inverse est également donné :
 
@@ -60,7 +60,7 @@ def dbl_sha3(x):
     return decode_int(utils.sha3(utils.sha3(x)))
 ```
 
-### Paramètres \{#parameters}
+### Paramètres {#parameters}
 
 Les paramètres utilisés pour l'algorithme sont :
 
@@ -84,7 +84,7 @@ params = {
 
 Dans ce cas `P` est une prime choisie telle que `log₂(P)` soit juste un peu en deçà de 512, qui correspond aux 512 bits que nous utilisons pour représenter nos nombres. Notez que seule la dernière moitié du DAG doit être stockée, ainsi le besoin de mémoire commence de fait à 1 Go et augmente de 441 Mo par an.
 
-### Construction graphique Dagger \{#dagger-graph-building}
+### Construction graphique Dagger {#dagger-graph-building}
 
 La construction graphique Dagger primitive est définie comme suit :
 
@@ -105,7 +105,7 @@ Essentiellement, cela commence par un graphique en tant que nœud unique, `sha3(
 
 Cet algorithme repose sur plusieurs résultats de la théorie des nombres. Consultez l'annexe ci-dessous à des fins de discussion.
 
-## Évaluation du client allégé \{#light-client-evaluation}
+## Évaluation du client allégé {#light-client-evaluation}
 
 La construction du graphique ci-dessus vise à permettre à chaque nœud du graphique d'être reconstruit en calculant une sous-arborescence d'un petit nombre de nœuds et en ne nécessitant qu'une petite quantité de mémoire auxiliaire. Notez qu'avec k=1, la sous-arborescence n'est qu'une chaîne de valeurs allant jusqu'au premier élément du DAG.
 
@@ -133,7 +133,7 @@ def quick_calc(params, seed, p):
 
 Il s'agit essentiellement d'une réécriture de l'algorithme ci-dessus qui supprime la boucle de calcul des valeurs pour l'ensemble du DAG et remplace la précédente recherche du nœud par un appel récursif ou une recherche de cache. Notez que pour `k=1` le cache n'est pas nécessaire, bien qu'une optimisation supplémentaire calcule au préalable en fait les premiers milliers de valeurs du DAG et conserve cela en tant que cache statique pour les calculs ; voir l'annexe pour une implémentation de code de cette fonction.
 
-## Double tampon de DAG \{#double-buffer}
+## Double tampon de DAG {#double-buffer}
 
 Dans un client complet, un [_double tampon_](https://wikipedia.org/wiki/Multiple_buffering) de 2 DAG produit par la formule ci-dessus est utilisé. L'idée est que les DAG produisent tous les nombres de blocs `epochtime` selon les paramètres ci-dessus. Au lieu d'utiliser le dernier DAG produit, le client utilise le précédent. L'avantage est qu'il permet aux DAG d'être remplacés au fil du temps sans avoir besoin d'incorporer une étape où les mineurs devraient soudainement recalculer toutes les données. Sinon, il existe un risque de ralentissement brutal et temporaire du traitement en chaîne à intervalles réguliers et d'augmentation spectaculaire de la centralisation. Ainsi, il existe un risque d'attaques de 51% au cours de ces quelques minutes avant que toutes les données ne soient recalculées.
 
@@ -174,7 +174,7 @@ def get_daggerset(params, block):
                          "block_number": seedset["back_number"]}}
 ```
 
-## Hashimoto \{#hashimoto}
+## Hashimoto {#hashimoto}
 
 L'idée derrière le Hashimoto original est d'utiliser la blockchain comme jeu de données, effectuant un calcul qui sélectionne N indices de la blockchain, rassemble les transactions sur ces indices, exécute un XOR de ces données, et retourne le hachage du résultat. L'algorithme original de Thaddeus Dryja, traduit en Python pour la cohérence, est le suivant :
 
@@ -211,7 +211,7 @@ def quick_hashimoto(seed, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-## Minage et vérification \{#mining-and-verifying}
+## Minage et vérification {#mining-and-verifying}
 
 Maintenant, mettons tout cela ensemble dans l'algorithme de minage :
 
@@ -254,15 +254,15 @@ Notez également que Dagger-Hashimoto impose des exigences supplémentaires à l
 - Pour que la vérification de deux couches fonctionne, un en-tête de bloc doit avoir à la fois la valeur nonce et la valeur moyenne pré-sha3
 - Quelque part, un en-tête de bloc doit stocker la sha3 de l'actuel ensemble de données
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
-## Annexe \{#appendix}
+## Annexe {#appendix}
 
 Comme mentionné ci-dessus, le RNG utilisé pour la génération de DAG repose sur des résultats tirés de la théorie des nombres. Premièrement, nous fournissons l'assurance que le RNG Lehmer qui est la base de la variable `picker` dispose d'une période longue. Deuxièmement, nous montrons que `pow(x,3,P)` ne fera pas correspondre `x` à `1` ou `P-1` fourni `x ∈ [2,P-2]` pour commencer. Enfin, nous montrons que `pow(x,3,P)` a un faible taux de collision lorsqu'il est traité comme une fonction de hachage.
 
-### Générateur de nombre aléatoire Lehmer \{#lehmer-random-number}
+### Générateur de nombre aléatoire Lehmer {#lehmer-random-number}
 
 Alors que la fonction `produce_dag` n'a pas besoin de produire des nombres aléatoires impartiaux, une menace potentielle est que `seed**i % P` prenne uniquement une poignée de valeurs. Cela pourrait être un avantage pour les mineurs qui reconnaissent le modèle par rapport à ceux qui ne le font pas.
 
@@ -287,7 +287,7 @@ Lorsque nous assignons la première cellule dans le DAG (la variable étiquetée
 
 > Observation 2. Laissons `x` être membre du groupe multiplicateur `ℤ/Pℤ` pour un nombre premier sûr `P`, et laissons `w` être un nombre naturel. Si `x mod P ≠ 1 mod P` et `x mod P ≠ P-1 mod P`, tout comme `w mod P ≠ P-1 mod P` et `w mod P ≠ 0 mod P`, alors `xʷ mod P ≠ 1 mod P` et `xʷ mod P ≠ P-1 mod P`
 
-### Exponentiation modulaire comme fonction de hachage \{#modular-exponentiation}
+### Exponentiation modulaire comme fonction de hachage {#modular-exponentiation}
 
 Pour certaines valeurs de `P` et `w`, la fonction `pow(x, w, P)` peut présenter de nombreuses collisions. Par exemple, `pow(x,9,19)` ne prend que les valeurs `{1,18}`.
 
@@ -303,7 +303,7 @@ Ainsi, étant donné que `P` est un nombre premier et que `w` est relativement p
 
 Dans le cas spécial ou `P` est un nombre premier sûr comme nous l'avons sélectionné, alors `P-1` n'aura que les facteurs 1, 2, `(P-1)/2` et `P-1`. Puisque `P` > 7, nous savons que 3 est relativement premier à `P-1`, donc `w=3` satisfait la proposition ci-dessus.
 
-## Algorithme d'évaluation basé sur un cache plus efficace \{#cache-based-evaluation}
+## Algorithme d'évaluation basé sur un cache plus efficace {#cache-based-evaluation}
 
 ```python
 def quick_calc(params, seed, p):

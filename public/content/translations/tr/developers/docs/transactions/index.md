@@ -6,11 +6,11 @@ lang: tr
 
 İşlemler, hesaplardan kriptografik olarak imzalanmış talimatlardır. Bir hesap, Ethereum ağının durumunu güncellemek için bir işlem başlatacaktır. En basit işlem ETH'yi bir hesaptan diğerine aktarmaktır.
 
-## Ön koşullar \{#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamanıza yardımcı olmak için önce [Hesaplar](/developers/docs/accounts/) ve [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) bölümlerini okumanızı öneririz.
 
-## İşlem ne demek? \{#whats-a-transaction}
+## İşlem ne demek? {#whats-a-transaction}
 
 Bir Ethereum işlemi, harici olarak sahiplenilmiş bir hesap tarafından başlatılan bir eylemi ifade eder, başka bir deyişle, bir sözleşme değil, bir insan tarafından yönetilen bir hesap. Örneğin Bob, Alice'e 1 ETH gönderirse, Bob'un hesabı borçlandırılmalı ve Alice'inki alacaklandırılmalıdır. Bu durum değiştirme eylemi bir işlem içinde gerçekleşir.
 
@@ -104,7 +104,7 @@ Yanıt örneği:
 
 İmza hash değeri ile işlemin göndericiden geldiği ve ağa gönderildiği kriptografik olarak kanıtlanabilir.
 
-### Veri alanı \{#the-data-field}
+### Veri alanı {#the-data-field}
 
 İşlemlerin büyük bir çoğunluğu, bir sözleşmeye dıştan sahiplenilmiş bir hesaptan erişir. Çoğu sözleşme Solidity ile yazılmıştır ve veri alanlarını [uygulama ikili arayüzü (ABI)](/glossary/#abi) ile uyumlu olacak şekilde yorumlar.
 
@@ -125,7 +125,7 @@ Verinin geri kalanı:
 
 ABI koşullarına göre, tamsayı değerleri (20 bayt tamsayılar olan adresler gibi) ABI içinde 32 bayt kelimelerin önü sıfırlarla doldurulmuş şekilde bulunurlar. Yani `to` adresinin [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279) olduğunu biliyoruz. `value` ise 0x3b0559f4 = 990206452'dir.
 
-## İşlem türleri \{#types-of-transactions}
+## İşlem türleri {#types-of-transactions}
 
 Ethereum'da birkaç farklı işlem türü vardır:
 
@@ -133,7 +133,7 @@ Ethereum'da birkaç farklı işlem türü vardır:
 - Sözleşme dağıtım işlemleri: Veri alanının sözleşme kodu için kullanıldığı, "to"' (gönderilen adres) adresi olmayan bir işlem.
 - Bir sözleşmenin yürütümü: dağıtılmış akıllı sözleşme ile etkileşime geçen bir işlem. Bu durumda, "to" adresi akıllı sözleşme adresidir.
 
-### Gaz hakkında \{#on-gas}
+### Gaz hakkında {#on-gas}
 
 Belirtildiği gibi, işlemlerin yürütülmesi [gaz](/developers/docs/gas/) harcar. Basit transfer işlemleri 21.000 birim Gaz gerektirir.
 
@@ -159,7 +159,7 @@ Gaz, herhangi bir akıllı sözleşme etkileşimi için de gereklidir.
 
 İşlemde kullanılmayan gaz, kullanıcı hesabına iade edilir.
 
-## İşlem yaşam döngüsü \{#transaction-lifecycle}
+## İşlem yaşam döngüsü {#transaction-lifecycle}
 
 İşlem gönderildikten sonra aşağıdakiler gerçekleşir:
 
@@ -168,13 +168,13 @@ Gaz, herhangi bir akıllı sözleşme etkileşimi için de gereklidir.
 3. Bir doğrulayıcı, işlemi doğrulamak ve "başarılı" olarak değerlendirmek için işleminizi seçmeli ve bir bloka eklemelidir.
 4. Zaman geçtikçe işleminizi taşıyan blok önce "kanıtlanmış" sonrasında "sonlandırılmış" şeklinde güncellenecektir. Bu yükseltmeler işleminizin başarılı olduğunu ve asla değiştirilemeyeceğini daha netleştirir. Bir blok "sonlandırıldıktan" sonra sadece milyarlarca dolar maliyetinde ağ seviyesinde bir saldırı ile değiştirilebilir.
 
-## Görsel bir demo \{#a-visual-demo}
+## Görsel bir demo {#a-visual-demo}
 
 Austin'in işlemlerde, gazda ve madencilikte size yol göstermesini izleyin.
 
 <YouTube id="er-0ihqFQB0" />
 
-## Yazılan İşlem Zarfı \{#typed-transaction-envelope}
+## Yazılan İşlem Zarfı {#typed-transaction-envelope}
 
 Ethereum'un başlangıçta işlemler için tek bir formatı vardı. Her işlem, adres, değer, veri, v, r ve s için nonce, gaz fiyatı, gaz limiti içeriyordu. Bu alanlar [RLP ile şifrelenmiştir](/developers/docs/data-structures-and-encoding/rlp/), şuna benzer bir şekilde görünür:
 
@@ -191,13 +191,13 @@ Burada alanlar şu şekilde tanımlanır:
 - `TransactionType` - toplam 128 olası işlem türü için 0 ile 0x7f arasında bir sayı.
 - `TransactionPayload` - işlem türü tarafından tanımlanan rastgele bir bayt dizisi.
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [EIP-2718: Yazılan İşlem Zarfı](https://eips.ethereum.org/EIPS/eip-2718)
 
 _Size yardımcı olan bir topluluk kaynağı mı biliyorsunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## İlgili konular \{#related-topics}
+## İlgili konular {#related-topics}
 
 - [Hesaplar](/developers/docs/accounts/)
 - [Ethereum sanal makinesi (EVM)](/developers/docs/evm/)

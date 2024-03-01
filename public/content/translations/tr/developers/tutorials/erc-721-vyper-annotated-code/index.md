@@ -11,13 +11,13 @@ skill: beginner
 published: 2021-04-01
 ---
 
-## Giriş \{#introduction}
+## Giriş {#introduction}
 
 [ERC-721](/developers/docs/standards/tokens/erc-721/) standardı, Değiştirilemez Token'ların (NFT) sahipliğini tutmak için kullanılır. [ERC-20](/developers/docs/standards/tokens/erc-20/) token'ları, bireysel token'lar arasında bir fark olmadığı için bir emtia gibidir. Bunun aksine ERC-721 token'ları, farklı [kedi karikatürleri](https://www.cryptokitties.co/) veya farklı gayrimenkul parçalarına verilen unvanlar gibi benzer ancak aynı olmayan varlıklar için tasarlanmıştır.
 
 Bu makalede [Ryuya Nakamura'nın ERC-721 sözleşmesini](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) analiz edeceğiz. Bu sözleşme, güvensiz kod yazmayı Solidity'de olduğundan daha zorlaştırmak için dizayn edilmiş Python benzeri bir sözleşme dili olan [Vyper](https://vyper.readthedocs.io/en/latest/index.html) ile yazılmıştır.
 
-## Sözleşme \{#contract}
+## Sözleşme {#contract}
 
 ```python
 # @dev Implementation of ERC-721 non-fungible token standard.
@@ -37,7 +37,7 @@ ERC-721 arayüzü, Vyper dilinde yerleşiktir. [Kod tanımlamasını burada gör
 
 İlk satır, arayüzü içe aktarır ve ikincisi onu burada uyguladığımızı belirtir.
 
-### ERC721Receiver Arayüzü \{#receiver-interface}
+### ERC721Receiver Arayüzü {#receiver-interface}
 
 ```python
 # Interface for the contract called by safeTransferFrom()
@@ -79,7 +79,7 @@ Bir sözleşmenin yanlışlıkla bir transferi kabul ettiği durumları önlemek
 
 Bu işlev bir `view`'dur, yani blok zincirinin durumunu okuyabilir, ancak değiştiremez.
 
-### Etkinlikler \{#events}
+### Etkinlikler {#events}
 
 [Olaylar](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) blok zincirinin dışındaki kullanıcıları ve sunucuları bilgilendirmek için yayınlanır. Olayların içeriğinin blok zincirindeki sözleşmeler için mevcut olmadığını unutmayın.
 
@@ -133,7 +133,7 @@ Bir hesabın, adeta bir vekaletname gibi belirli bir türdeki (belirli bir sözl
 
 `approved` değeri bize etkinliğin bir onay için mi yoksa bir onayın geri çekilmesi için mi olduğunu söyler.
 
-### Durum Değişkenleri \{#state-vars}
+### Durum Değişkenleri {#state-vars}
 
 Bu değişkenler, token'ların mevcut durumunu içerir: hangilerinin mevcut olduğu ve onlara kimin sahip olduğu. Bunların çoğu, [iki tür arasında var olan tek yönlü eşleştirmeler](https://vyper.readthedocs.io/en/latest/types.html#mappings) olan `HashMap` nesneleridir.
 
@@ -183,11 +183,11 @@ ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000
 
 [ERC-165](https://eips.ethereum.org/EIPS/eip-165), uygulamaların kendisiyle nasıl iletişim kurabileceğini ve hangi ERC'lere uyduğunu ifşa etmek için bir sözleşme için bir mekanizma belirtir. Bu durumda sözleşme ERC-165 ve ERC-721'e uygundur.
 
-### Fonksiyonlar \{#functions}
+### Fonksiyonlar {#functions}
 
 Bunlar, ERC-721'i gerçekten uygulayan fonksiyonlardır.
 
-#### Yapıcı \{#constructor}
+#### Yapıcı {#constructor}
 
 ```python
 @external
@@ -212,7 +212,7 @@ Python'da ve Vyper'da, çok satırlı bir dize (`"""` ile başlayan ve biten) be
 
 Durum değişkenlerine erişmek için `self.<variable name>` kullanırsınız (yine Python'da olduğu gibi).
 
-#### Fonksiyonları gör \{#views}
+#### Fonksiyonları gör {#views}
 
 Bunlar blok zincirinin durumunu değiştirmeyen fonksiyonlardır ve bu nedenle dışarıdan çağrıldıklarında ücretsiz olarak yürütülebilirler. Görünüm fonksiyonları bir sözleşme ile çağrılırsa, yine de her düğümde yürütülmeleri gerekir ve bu nedenle gaz harcarlar.
 
@@ -311,7 +311,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 Bu fonksiyon, `_operator`'un bu sözleşmedeki tüm `_owner` token'larını yönetmesine izin verilip verilmediğini kontrol eder. Birden fazla operatör olabileceğinden, bu iki seviyeli bir HashMap'tir.
 
-#### Transfer Yardımcı Fonksiyonları \{#transfer-helpers}
+#### Transfer Yardımcı Fonksiyonları {#transfer-helpers}
 
 Bu fonksiyonlar, token'ları transfer etmenin veya yönetmenin parçası olan işlemleri uygular.
 
@@ -428,7 +428,7 @@ Token'ları aktarmanın iki yolu olduğu için (düzenli ve güvenli) bu dahili 
 
 Vyper'da bir olay yaymak için `log` ifadesi kullanırsınız ([daha fazla detay için buraya bakınız](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 
-#### Transfer Fonksiyonları \{#transfer-funs}
+#### Transfer Fonksiyonları {#transfer-funs}
 
 ```python
 
@@ -551,7 +551,7 @@ def setApprovalForAll(_operator: address, _approved: bool):
     log ApprovalForAll(msg.sender, _operator, _approved)
 ```
 
-#### Yeni Token'lar Basma ve Mevcut Olanları Yok Etme \{#mint-burn}
+#### Yeni Token'lar Basma ve Mevcut Olanları Yok Etme {#mint-burn}
 
 Sözleşmeyi oluşturan hesap, yeni NFT'leri basmaya yetkili süper kullanıcı olan `minter`'dır. Ancak, onun bile mevcut token'ları yakmasına izin verilmez. Bunu yalnızca mal sahibi veya mal sahibi tarafından yetkilendirilmiş bir varlık yapabilir.
 
@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 Bir token'ı transfer etmesine izin verilen herkesin onu yakmasına izin verilir. Bir yakma işlemi, sıfır adresine aktarıma eş değer görünse de, sıfır adresi aslında token'ı almaz. Bu, token için kullanılan tüm depolama alanını boşaltmamızı sağlar ve bu da işlemin gasz maliyetini azaltabilir.
 
-# Bu Sözleşmeyi Kullanmak \{#using-contract}
+# Bu Sözleşmeyi Kullanmak {#using-contract}
 
 Solidity'nin aksine, Vyper'ın kalıtımı yoktur. Bu, kodu daha net hâle getirmek ve dolayısıyla güvenliğini sağlamak için bilinçli bir tasarım seçimidir. Bu nedenle, kendi Vyper ERC-721 sözleşmenizi oluşturmak için [bu sözleşmeyi](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) alın ve istediğiniz iş mantığını uygulamak için değiştirin.
 
-# Sonuç \{#conclusion}
+# Sonuç {#conclusion}
 
 İnceleme için, bu sözleşmedeki en önemli fikirlerden bazıları şunlardır:
 

@@ -4,7 +4,7 @@ lang: zh
 description: 开发者工具上架 ethereum.org 的标准
 ---
 
-# 添加开发者工具 \{#contributing-to-ethereumorg-}
+# 添加开发者工具 {#contributing-to-ethereumorg-}
 
 我们想要确保上架的开发者资源是最好的，以便人们可以充满信心地进行开发并获得所需的支持。
 
@@ -14,7 +14,7 @@ description: 开发者工具上架 ethereum.org 的标准
 
 **请随时去适当的页面提出新的建议。**
 
-## 我们如何做出决定 \{#ways-to-contribute}
+## 我们如何做出决定 {#ways-to-contribute}
 
 提交的开发者工具将按照以下标准进行评估：
 
@@ -46,13 +46,13 @@ description: 开发者工具上架 ethereum.org 的标准
 
 ---
 
-## 产品排序 \{#product-ordering}
+## 产品排序 {#product-ordering}
 
 除非指定产品按特定方式排序，如按字母顺序排序，否则产品将默认从最早到最近添加到页面的顺序显示。 换句话说，最新的产品被添加到列表的底部。
 
 ---
 
-## 添加您的开发者工具 \{#how-decisions-about-the-site-are-made}
+## 添加您的开发者工具 {#how-decisions-about-the-site-are-made}
 
 如果您想向 ethereum.org 添加开发者工具并且它符合标准，请在 GitHub 上创建提议。
 

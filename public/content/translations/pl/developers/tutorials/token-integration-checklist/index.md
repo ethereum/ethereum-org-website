@@ -33,13 +33,13 @@ Aby postępować zgodnie z tą listą kontrolną, będziesz chciał uzyskać dan
 - slither-prop . --contract ContractName # requires configuration, and use of Echidna and Manticore
 ```
 
-## Uwagi ogólne \{#general-considerations}
+## Uwagi ogólne {#general-considerations}
 
 - **Kontrakt obejmuje przegląd bezpieczeństwa.** Unikaj interakcji z umowami, które nie mają przeglądu bezpieczeństwa. Sprawdź długość oceny (inaczej „poziom nakładu pracy”), reputację firmy zabezpieczającej oraz liczbę i wagę ustaleń.
 - **Skontaktowałeś się z programistami.** Może być konieczne powiadomienie ich zespołu o incydencie. Poszukaj odpowiednich kontaktów na [blockchain-security-contacts](https://github.com/crytic/blockchain-security-contacts).
 - **Mają listę dyskusyjną dotyczącą bezpieczeństwa dla krytycznych ogłoszeń.** Ich zespół powinien informować użytkowników (takich jak Ty!) w przypadku wykrycia krytycznych problemów lub aktualizacji.
 
-## Zgodność ERC \{#erc-conformity}
+## Zgodność ERC {#erc-conformity}
 
 Slither zawiera narzędzie [slither-check-erc](https://github.com/crytic/slither/wiki/ERC-Conformance), które sprawdza zgodność tokenu z wieloma powiązanymi ERC standardami. Użyj slither-check-erc, aby sprawdzić, czy:
 
@@ -58,14 +58,14 @@ Wreszcie istnieją pewne cechy, które trudno zidentyfikować automatycznie. Spr
 - **Transfer i transferFrom nie powinny wiązać się z opłatami.** Tokeny deflacyjne mogą prowadzić do nieoczekiwanego zachowania.
 - **Potencjalne odsetki uzyskane z tokena są brane pod uwagę.** Niektóre tokeny rozdzielają odsetki na posiadaczy tokenów. Te odsetki mogą zostać zablokowane w kontrakcie, jeśli nie zostanie on wzięty pod uwagę.
 
-## Kompozycja kontraktu \{#contract-composition}
+## Kompozycja kontraktu {#contract-composition}
 
 - **Kontrakt pozwala uniknąć niepotrzebnej złożoności.** Token powinien być prostą umową; token ze złożonym kodem wymaga wyższego standardu weryfikacji. Użyj [drukarki podsumowań ludzkich](https://github.com/crytic/slither/wiki/Printer-documentation#human-summary) Slithera, aby zidentyfikować złożony kod.
 - **Kontrakt korzysta z SafeMath.** Kontrakty, które nie korzystają z SafeMath, wymagają wyższego standardu weryfikacji. Sprawdź umowę ręcznie pod kątem użycia SafeMath.
 - **Kontrakt ma tylko kilka funkcji niezwiązanych z tokenem.** Funkcje niezwiązane z tokenem zwiększają prawdopodobieństwo wystąpienia problemu w kontrakcie. Skorzystaj z [drukarki podsumowań kontraktów](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) Slithera, aby ogólnie zapoznać się z kodem użytym w kontrakcie.
 - **Token ma tylko jeden adres.** Tokeny z wieloma punktami wejścia do aktualizacji salda mogą zepsuć wewnętrzną księgowość na podstawie adresu (np. `balances[token_address][msg.sender]` może nie odzwierciedlać faktycznego salda).
 
-## Uprawnienia właściciela \{#owner-privileges}
+## Uprawnienia właściciela {#owner-privileges}
 
 - **Tokenu nie można uaktualnić.** Umowy z możliwością uaktualnienia mogą z czasem zmienić swoje zasady. Użyj [drukarki podsumowania ludzkiego](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) Slithera, aby określić, czy kontrakt można uaktualnić.
 - **Właściciel ma ograniczone możliwości bicia tokenów.** Złośliwi lub nieuczciwi właściciele mogą nadużywać możliwości bicia tokenów. Użyj [drukarki podsumowania ludzkiego](https://github.com/crytic/slither/wiki/Printer-documentation#contract-summary) Slithera, aby przejrzeć możliwości wybijania tokenów i rozważ ręczne przejrzenie kodu.
@@ -73,7 +73,7 @@ Wreszcie istnieją pewne cechy, które trudno zidentyfikować automatycznie. Spr
 - **Właściciel nie może umieścić kontraktu na czarnej liście.** Złośliwi lub nieuczciwi właściciele mogą za pomocą czarnej listy blokować umowy oparte na tokenach Ręczne identyfikowanie funkcji czarnej listy.
 - **Zespół odpowiedzialny za token jest znany i może zostać pociągnięty do odpowiedzialności za nadużycia.** Umowy z anonimowymi zespołami programistów lub przebywającymi w legalnych schroniskach powinny wymagać wyższego standardu weryfikacji.
 
-## Niedobór tokenów \{#token-scarcity}
+## Niedobór tokenów {#token-scarcity}
 
 Przeglądy pod kątem problemów związanych z niedoborem tokenów wymagają ręcznego sprawdzenia. Sprawdź te warunki:
 

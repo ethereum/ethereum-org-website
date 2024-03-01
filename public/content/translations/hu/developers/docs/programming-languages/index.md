@@ -8,7 +8,7 @@ Egy általános félreértés az, hogy a fejlesztőknek [okosszerződéseket](/d
 
 Az Ethereum és a közössége befogadja az nyílt forráskódot. Közösségi projekteket – kliens implementációkat, API-okat, fejlesztési keretrendszereket, tesztelő eszközöket – sokféle különböző nyelven is megtalálhat.
 
-## Válasszon nyelvet \{#data}
+## Válasszon nyelvet {#data}
 
 Válasszon nyelvet, hogy megtalálja a kapcsolódó projekteket, anyagokat és a virtuális közösségeket:
 
@@ -22,7 +22,7 @@ Válasszon nyelvet, hogy megtalálja a kapcsolódó projekteket, anyagokat és a
 - [Ethereum Ruby-fejlesztők számára](/developers/docs/programming-languages/ruby/)
 - [Ethereum Rust fejlesztőknek](/developers/docs/programming-languages/rust/)
 
-### Mi a helyzet, ha az én nyelvem nem támogatott \{#other-lang}
+### Mi a helyzet, ha az én nyelvem nem támogatott {#other-lang}
 
 Ha egy másik programozói nyelvhez szeretne forrásokat megjeleníteni vagy egy virtuális közösséget feltüntetni, akkor úgy kérhet új oldalt, hogy [egy „problémát” (issue) nyit](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 

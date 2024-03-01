@@ -4,11 +4,11 @@ description: 以太坊生态系统的资助方案清单。
 lang: zh
 ---
 
-# 在线社区 \{#online-communities}
+# 在线社区 {#online-communities}
 
 数十万以太坊爱好者齐聚这些在线论坛，分享消息、谈论近来的发展、热烈讨论技术问题并畅想未来。
 
-## 论坛 \{#forums}
+## 论坛 {#forums}
 
 {
 {
@@ -36,7 +36,7 @@ lang: zh
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> - 最具影响力的加密经济研究留言板</SocialListItem>
 }
 
-## 聊天室 \{#chat-rooms}
+## 聊天室 {#chat-rooms}
 
 {
 {
@@ -70,7 +70,7 @@ lang: zh
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- 去中心化问答论坛_</SocialListItem>
 }
 
-## YouTube 和 Twitter \{#youtube-and-twitter}
+## YouTube 和 Twitter {#youtube-and-twitter}
 
 {
 {

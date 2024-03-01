@@ -4,7 +4,7 @@ description: Die Richtlinie, die wir beim Hinzufügen von Quiz zu ethereum.org a
 lang: de
 ---
 
-# Quizze \{#quizzes}
+# Quizze {#quizzes}
 
 Quizfragen bieten den Nutzern die Möglichkeit, sich selbst zu testen. So können sie feststellen, ob sie den Inhalt der Seite, die sie gerade gelesen haben, verstanden haben. Die Fragen sollten sich nur auf den Inhalt der Seite beziehen und nicht nach Informationen fragen, die nicht auf der Seite erwähnt werden.
 

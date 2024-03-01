@@ -4,7 +4,7 @@ description: Explore as vantagens de frameworks e compare as opções disponíve
 lang: pt-br
 ---
 
-## Introdução aos frameworks \{#introduction-to-frameworks}
+## Introdução aos frameworks {#introduction-to-frameworks}
 
 Criar um aplicativo completo requer diferentes peças de tecnologia. Os frameworks de software incluem muitos dos recursos necessários ou fornecem sistemas de plugins fáceis para escolher as ferramentas que você deseja.
 
@@ -16,11 +16,11 @@ Esses frameworks vêm com muitas funcionalidades prontas para usar, como:
 - Configuração para se conectar a redes Ethereum e implantar contratos, seja para uma instância em execução local ou uma das redes públicas da Ethereum.
 - Distribuição descentralizada de aplicativos - integrações com opções de armazenamento como o IPFS.
 
-## Pré-requisitos \{#prerequisites}
+## Pré-requisitos {#prerequisites}
 
 Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa introdução aos [dapps](/developers/docs/dapps/) e a [pilha de Ethereum](/developers/docs/ethereum-stack/).
 
-## Frameworks disponíveis \{#available-frameworks}
+## Frameworks disponíveis {#available-frameworks}
 
 **Truffle -\*\***_Um ambiente de desenvolvimento, teste de framework, compilação e outras ferramentas._\*\*
 
@@ -91,10 +91,10 @@ Antes de mergulhar em frameworks, recomendamos que você primeiro leia a nossa i
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-## Leitura adicional \{#further-reading}
+## Leitura adicional {#further-reading}
 
 _Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_
 
-## Tópicos relacionados \{#related-topics}
+## Tópicos relacionados {#related-topics}
 
 - [Configure um ambiente de desenvolvimento](/developers/local-environment/)

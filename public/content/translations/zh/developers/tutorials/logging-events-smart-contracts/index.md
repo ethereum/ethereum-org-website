@@ -17,7 +17,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 在 solidity 中，[事件](/developers/docs/smart-contracts/anatomy/#events-and-logs)是智能合约可触发的调度信号。 去中心化应用程序或其他任何连接到以太坊 JSON-PRC 应用程序接口的程序，都可以监听这些事件并执行相应操作。 还可以为事件编制索引，便于以后可以搜索事件历史。
 
-## 事件 \{#events}
+## 事件 {#events}
 
 在撰写本文时，以太坊区块链上最常见的事件是当有人转移代币时由 ERC20 代币触发的转账事件。
 

@@ -15,11 +15,11 @@ source: セキュアなコントラクトの構築
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
 ---
 
-## インストール \{#installation}
+## インストール {#installation}
 
 Echidna は、Docker またはコンパイル済みのバイナリを使用してインストールします。
 
-### Docker から Echidna をインストールする \{#echidna-through-docker}
+### Docker から Echidna をインストールする {#echidna-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
@@ -35,15 +35,15 @@ solc-select 0.5.11
 cd /home/training
 ```
 
-### バイナリの入手先 \{#binary}
+### バイナリの入手先 {#binary}
 
 [https://github.com/crytic/echidna/releases/tag/v1.4.0.0](https://github.com/crytic/echidna/releases/tag/v1.4.0.0)
 
-## プロパティベースのファジングとは \{#introduction-to-property-based-fuzzing}
+## プロパティベースのファジングとは {#introduction-to-property-based-fuzzing}
 
 Echidna は、プロパティベースのファザーです。これについては、以前のブログ投稿（[1](https://blog.trailofbits.com/2018/03/09/echidna-a-smart-fuzzer-for-ethereum/)、[2](https://blog.trailofbits.com/2018/05/03/state-machine-testing-with-echidna/)、[3](https://blog.trailofbits.com/2020/03/30/an-echidna-for-all-seasons/)）を参照してください。
 
-### ファジング \{#fuzzing}
+### ファジング {#fuzzing}
 
 [ファジング ](https://wikipedia.org/wiki/Fuzzing)は、セキュリティコミュニティでよく知られているテクニックです。 ファジングでは、ある程度ランダムな入力を生成してプログラムのバグを発見します。 通常のソフトウェアを対象とするファザー（[AFL](http://lcamtuf.coredump.cx/afl/)や[LibFuzzer](https://llvm.org/docs/LibFuzzer.html)など）は、効率的にバグを特定できるツールであると評価されています。
 
@@ -53,7 +53,7 @@ Echidna は、プロパティベースのファザーです。これについて
 - 構造上の制約を考慮した入力を生成する。 例えば、入力にチェックサム付のヘッダーが含まれている場合、ファザーにチェックサムを検証する入力を生成させることも有益です。
 - 既知の入力に基づいて新たな入力を生成する。大規模な有効な入力のデータセットにアクセスできる場合、まったくランダムに生成するのではなく、それらに基づいて新たな入力を生成することができます。 この場合、参照するデータを*シード*と呼びます。
 
-### プロパティベースのファジング \{#property-based-fuzzing}
+### プロパティベースのファジング {#property-based-fuzzing}
 
 Echidna は、プロパティに基づくファジングを実行するファザーであり、[QuickCheck](https://wikipedia.org/wiki/QuickCheck)の影響を強く受けたプログラムです。 クラッシュを監視する従来のファザーとは異なり、Echidna では、ユーザー定義の不変条件を壊そうとします。
 
@@ -63,7 +63,7 @@ Echidna は、プロパティに基づくファジングを実行するファザ
 - 不適切な状態マシン：コントラクトの一次停止中に、トークンを送信できる。
 - 不適切な計算: ユーザーは残高をアンダーフローし無制限に無料トークンを取得できる。
 
-### Echidna を使って、プロパティをテストする \{#testing-a-property-with-echidna}
+### Echidna を使って、プロパティをテストする {#testing-a-property-with-echidna}
 
 それでは、Echidna を使ってスマートコントラクトをテストする方法を見てみましょう。 対象は、[ `token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol)のスマートコントラクトです。
 
@@ -88,7 +88,7 @@ contract Token{
 - ユーザーは、最大 1000 トークンを所持できる
 - このトークン（ERC-20 トークンではない）は、送信不可である
 
-### プロパティを記述する \{#write-a-property}
+### プロパティを記述する {#write-a-property}
 
 Echidna のプロパティは、Solidity の関数です。 プロパティは、以下の条件を満たす必要があります：
 
@@ -122,7 +122,7 @@ contract TestToken is Token{
 
 [`token.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/token.sol)は、プロパティを実装し、このトークンを継承します。
 
-### コントラクトを開始する \{#initiate-a-contract}
+### コントラクトを開始する {#initiate-a-contract}
 
 Echidna では、引数なしの[コンストラクタ](/developers/docs/smart-contracts/anatomy/#constructor-functions)が必要です。 コントラクトにおいて特定の初期化が必要な場合、コンストラクタ上で実行する必要があります。
 
@@ -133,7 +133,7 @@ Echidna には、いくつかの特定のアドレスが含まれます：
 
 このチュートリアルでは特定の初期化を実行する必要がないため、コンストラクタは空になります。
 
-### Echidna を実行する \{#run-echidna}
+### Echidna を実行する {#run-echidna}
 
 以下のコードで、Echidna を起動します：
 
@@ -147,7 +147,7 @@ contract.sol に複数のコントラクトが含まれる場合、実行した�
 $ echidna-test contract.sol --contract MyContract
 ```
 
-### プロパティテストのまとめ \{#summary-testing-a-property}
+### プロパティテストのまとめ {#summary-testing-a-property}
 
 以下は、このチュートリアルにおける Echidna の実行をまとめたものです。
 
@@ -174,7 +174,7 @@ echidna_balance_under_1000: failed!💥
 
 Echidna は、 `backdoor`が呼び出された場合、このプロパティが侵害されることを確認しました。
 
-## ファジング中に呼び出す関数を絞り込む \{#filtering-functions-to-call-during-a-fuzzing-campaign}
+## ファジング中に呼び出す関数を絞り込む {#filtering-functions-to-call-during-a-fuzzing-campaign}
 
 ファジングの対象となる関数を絞り込む方法を見ていきましょう。 以下のスマートコントラクトを対象とします：
 
@@ -236,7 +236,7 @@ echidna_state4: passed! 🎉
 Seed: -3684648582249875403
 ```
 
-### 対象の関数を絞り込む \{#filtering-functions}
+### 対象の関数を絞り込む {#filtering-functions}
 
 2 つのリセット関数（`reset1`と`reset2`）がすべての状態変数を`false`に設定するため、Echidna はこのコントラクトをテストするための正しいシーケンスを見つけられません。 しかし Echidna では、リセット関数をブラックリストに含めるか、 `f`、`g`、 `h`、および `i`の関数のみをホワイトリストに含める特別の機能が利用できます。
 
@@ -257,7 +257,7 @@ filterFunctions: ["f", "g", "h", "i"]
 - `filterBlacklist`の初期値は`true`です。
 - 絞り込みは、名前のみ（パラメータなし）で実行されます。 `f()`と`f(uint256)`の両方が含まれる場合、`"f"`で絞り込むと両方の関数がヒットします。
 
-### Echidna を実行する \{#run-echidna-1}
+### Echidna を実行する {#run-echidna-1}
 
 設定ファイル `blacklist.yaml` に従って Echidna を実行するには、以下のようにします：
 
@@ -274,7 +274,7 @@ echidna_state4: failed!💥
 
 Echidna は、プロパティを false にするトランザクションのシーケンスを瞬時に特定します。
 
-### 対象の関数を絞り込む作業のまとめ \{#summary-filtering-functions}
+### 対象の関数を絞り込む作業のまとめ {#summary-filtering-functions}
 
 Echidna では、ファジングで呼び出す機能を絞り込むために、ブラックリストあるいはホワイトリストの関数を使用します：
 
@@ -290,7 +290,7 @@ $ echidna-test contract.sol --config config.yaml
 
 Echidna は、`filterBlacklist`のブール値に基づき、`f1`、`f2`、および `f3`の関数をブラックリストに含めるか、これらの関数のみを呼び出してファジングを実行します。
 
-## Echidna で Solidity のアサーションをテストする方法 \{#how-to-test-soliditys-assert-with-echidna}
+## Echidna で Solidity のアサーションをテストする方法 {#how-to-test-soliditys-assert-with-echidna}
 
 次の短いチュートリアルでは、Echidna を使って、コントラクトに含まれるアサーションをテストします。 以下のようなコントラクトを想定します：
 
@@ -307,7 +307,7 @@ contract Incrementor {
 }
 ```
 
-### アサーションを記述する \{#write-an-assertion}
+### アサーションを記述する {#write-an-assertion}
 
 引き算を実行した後に、`tmp`の値が`counter`の値以下であることを確認したいとします。 Echidna のプロパティで記述することもできますが、`tmp`値をどこかに格納する必要があります。 これには、以下のようなアサーションを用いることができます：
 
@@ -324,7 +324,7 @@ contract Incrementor {
 }
 ```
 
-### Echidna を実行する \{#run-echidna-2}
+### Echidna を実行する {#run-echidna-2}
 
 アサーションの失敗をテストできるようにするには、[Echidna の設定ファイル](https://github.com/crytic/echidna/wiki/Config)として `config.yaml` を作成します：
 
@@ -348,7 +348,7 @@ Seed: 1806480648350826486
 
 このように、Echidna では、アサーション違反の一部を`inc`関数で報告します。 1 つの関数に対し複数のアサーションを含めることは可能ですが、どのアサーションが失敗したのか区別できなくなります。
 
-### アサーションをいつ、どのように使用すべきか \{#when-and-how-use-assertions}
+### アサーションをいつ、どのように使用すべきか {#when-and-how-use-assertions}
 
 アサーションは、特にチェックしたい条件が`f`という特定の操作を適切に用いることと直接関係する場合に、プロパティを明示しない代替手段として用いることができます。 コードにアサーションを追加することで、このコードを実行した直後に強制的にチェックが実行されます。
 
@@ -384,7 +384,7 @@ function echidna_assert_after_f() public returns (bool) {
 
 最後に、`assert`の代わりに`require`を用いるのは**避けてください**。Echidna では require を検出できません。（ただしこの場合でも、コントラクトは元に戻されます）。
 
-### アサーションチェックのまとめ \{#summary-assertion-checking}
+### アサーションチェックのまとめ {#summary-assertion-checking}
 
 以下は、この例における Echidna の実行をまとめたものです：
 
@@ -415,7 +415,7 @@ Seed: 1806480648350826486
 
 Echidna は、`inc`のアサーションにつき、この関数が大きな引数で複数回呼び出された場合に違反となりうることを発見しました。
 
-## Echidna コーパスを収集、修正する \{#collecting-and-modifying-an-echidna-corpus}
+## Echidna コーパスを収集、修正する {#collecting-and-modifying-an-echidna-corpus}
 
 次に、Echidna を使ってトランザクションのコーパスを収集し、これを利用する方法について見ていきましょう。 対象は、[`magic.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/example/magic.sol)のスマートコントラクトです。
 
@@ -450,7 +450,7 @@ Seed: 2221503356319272685
 
 ただし Echidna では、ファジングの実行中もコーパスを収集することができます。
 
-### コーパスを収集する \{#collecting-a-corpus}
+### コーパスを収集する {#collecting-a-corpus}
 
 コーパスを収集するには、まずコーパスのディレクトリを作成します：
 
@@ -518,7 +518,7 @@ $ echidna-test magic.sol --config config.yaml
 
 言うまでもなく、この入力はプロパティ違反をトリガーしません。 しかし、次のステップでこれを修正することができます。
 
-### コーパスをシードする \{#seeding-a-corpus}
+### コーパスをシードする {#seeding-a-corpus}
 
 Echidna を`magic`関数に対応するように設定する必要があります。 この入力が適切なパラメータを使用できるように、コピーし、変更します。
 
@@ -544,7 +544,7 @@ Seed: -7293830866560616537
 
 今回は、プロパティ違反がただちに検出されました。
 
-## ガス消費量が多いトンラザクションを見つける \{#finding-transactions-with-high-gas-consumption}
+## ガス消費量が多いトンラザクションを見つける {#finding-transactions-with-high-gas-consumption}
 
 ガス消費量が多いトランザクションを特定するために、Echidna を使用する方法について見ていきましょう。 対象は、次のスマートコントラクトです：
 
@@ -583,7 +583,7 @@ echidna_test: passed! 🎉
 Seed: 2320549945714142710
 ```
 
-### ガス消費量を測定する \{#measuring-gas-consumption}
+### ガス消費量を測定する {#measuring-gas-consumption}
 
 Ethidna でガスの消費量を確認できるようにするには、 `config.yaml`を以下のように設定します：
 
@@ -598,7 +598,7 @@ seqLen: 2
 estimateGas: true
 ```
 
-### Echidna を実行する \{#run-echidna-3}
+### Echidna を実行する {#run-echidna-3}
 
 設定が完了したら、次のように Echidna を実行します：
 
@@ -619,7 +619,7 @@ Seed: -325611019680165325
 
 - 表示されたガス量は、[HEVM](https://github.com/dapphub/dapptools/tree/master/src/hevm#hevm-)による見積もりです。
 
-### ガス量を削減する呼び出しを対象外にする \{#filtering-out-gas-reducing-calls}
+### ガス量を削減する呼び出しを対象外にする {#filtering-out-gas-reducing-calls}
 
 **ファジング実行時に呼び出す関数を絞り込む方法**のチュートリアルでは、特定の関数をテストの対象外にする方法を示しました。  
 この作業は、ガス量を正確に見積もる上で非常に重要です。 以下の例を検討してみましょう：
@@ -677,7 +677,7 @@ push used a maximum of 40839 gas
 check used a maximum of 1484472 gas
 ```
 
-### ガス消費量が高いトランザクションを見つける作業のまとめ \{#summary-finding-transactions-with-high-gas-consumption}
+### ガス消費量が高いトランザクションを見つける作業のまとめ {#summary-finding-transactions-with-high-gas-consumption}
 
 Echidna では、`estimateGas`の設定オプションを使用してガス消費量の多いトランザクションを特定することができます：
 

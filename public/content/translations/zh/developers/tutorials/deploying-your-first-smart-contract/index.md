@@ -19,7 +19,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 别担心，作为我们的第一个智能合约，我们会将其部署在[本地测试网络](/developers/docs/networks/)上，因此您不需要任何开销就可以随意部署和运行它。
 
-## 编写合约 \{#writing-our-contract}
+## 编写合约 {#writing-our-contract}
 
 第一步[访问 Remix](https://remix.ethereum.org/)并创建一个新文件。 在 Remix 界面的左上角添加一个新文件，并输入所需的文件名。
 
@@ -58,7 +58,7 @@ contract Counter {
 
 第一个简单的智能合约到此结束。 正如您所知，它看上去像是 Java 或 C++ 这样的面向对象编程 (OOP) 语言中的一个类。 现在可以运行我们的合约了。
 
-## 部署合约 \{#deploying-our-contract}
+## 部署合约 {#deploying-our-contract}
 
 当我们写了第一个智能合约后，我们现在可以将它部署在区块链中并运行它。
 

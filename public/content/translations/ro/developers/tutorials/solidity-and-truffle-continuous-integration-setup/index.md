@@ -20,7 +20,7 @@ Integrarea continuă (CI) cu Truffle este excelentă pentru dezvoltare, odată c
 
 Vom folosi [Truffle Metacoin Box](https://www.trufflesuite.com/boxes/metacoin) pentru a ne configura integrarea continuă. Puteți să alegeți fie Travis CI, fie Circle CI.
 
-## Configurarea Travis CI \{#setting-up-travis-ci}
+## Configurarea Travis CI {#setting-up-travis-ci}
 
 Adăugarea [Travis CI](https://travis-ci.org/) este simplă. Va trebui doar să adăugați un fișier de configurare `.travis.yml` în directorul rădăcină al proiectului:
 
@@ -40,7 +40,7 @@ script:
 
 Ne vom limita pentru moment la lucrurile simple și vom executa doar scriptul de testare care execută testele unitare Truffle. Dar avem o problemă, și anume că pe mașina Travis CI nu va fi disponibil un blockchain. Soluția cea mai simplă este de a `npm instala ganache-cli` și de a-l executa pur și simplu înainte de test. Puteți face acest lucru adăugând un script „bash” cu linia npx `ganache-cli > /dev/null` înainte de apelarea `npx truffle test`. Iată [exemplul complet de script bash](https://github.com/gorgos/Truffle-CI-Example/blob/master/scripts/run_tests.sh).
 
-## Configurarea Circle CI \{#setting-up-circle-ci}
+## Configurarea Circle CI {#setting-up-circle-ci}
 
 [CircleCi](https://circleci.com/) necesită un fișier mai lung de configurare. Comanda suplimentară [`npm ci`](https://docs.npmjs.com/cli/ci.html) este efectuată automat în Travis. Aceasta instalează dependențele mai rapid și mai securizat decât o face `npm install`. Vom folosi din nou același script din versiunea Travis pentru a executa ganache-cli înainte de teste.
 
@@ -98,18 +98,18 @@ workflows:
             - dependencies
 ```
 
-## Adăugarea plugin-ului „eth-gas-reporter” \{#adding-the-eth-gas-reporter-plugin}
+## Adăugarea plugin-ului „eth-gas-reporter” {#adding-the-eth-gas-reporter-plugin}
 
 Plugin-ul „eth-gas-reporter” este foarte util pentru a ține evidența costurilor de gaz ale funcțiilor contractului dvs. inteligent. Dacă aveți acest plugin în CI, se va dovedi și mai util pentru a afișa „diff-urile” atunci când adăugați „pull request-uri".
 
-### Etapa 1: Instalarea plugin-ului „eth-gas-reporter” și „codechecks” \{#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
+### Etapa 1: Instalarea plugin-ului „eth-gas-reporter” și „codechecks” {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
 
 ```bash
 $ npm install --save-dev eth-gas-reporter
 $ npm install --save-dev @codechecks/client
 ```
 
-### Etapa 2: Adăugați plugin-ul la setările „mocha” în interiorul fișierului „truffle-config.js” \{#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
+### Etapa 2: Adăugați plugin-ul la setările „mocha” în interiorul fișierului „truffle-config.js” {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
 
 [Iată opțiunile](https://github.com/cgewecke/eth-gas-reporter#options)
 
@@ -125,21 +125,21 @@ module.exports = {
 };
 ```
 
-### Etapa 3: Adăugați „codechecks.yml” în directorul rădăcină al proiectului dvs. \{#step-3-add-a-codechecksyml-to-your-projects-root-directory}
+### Etapa 3: Adăugați „codechecks.yml” în directorul rădăcină al proiectului dvs. {#step-3-add-a-codechecksyml-to-your-projects-root-directory}
 
 ```yml
 checks:
   - name: eth-gas-reporter/codechecks
 ```
 
-### Etapa 4: Executați „codechecks” după comanda „test” \{#step-4-run-codechecks-after-the-test-command}
+### Etapa 4: Executați „codechecks” după comanda „test” {#step-4-run-codechecks-after-the-test-command}
 
 ```bash
 - npm test
 - npx codechecks
 ```
 
-### Etapa 5: Creați un cont „Codechecks” \{#step-5-create-a-codechecks-account}
+### Etapa 5: Creați un cont „Codechecks” {#step-5-create-a-codechecks-account}
 
 - Creați un cont cu [Codechecks](http://codechecks.io/).
 - Add the GitHub repo to it.
@@ -150,11 +150,11 @@ Asta e tot. Iar acum veți găsi un raport atractiv despre schimbările costuril
 
 ![Exemple de rapoarte de gaz](./gas-reports.png)
 
-## Adăugarea plugin-ului „solidity-coverage” \{#adding-the-solidity-coverage-plugin}
+## Adăugarea plugin-ului „solidity-coverage” {#adding-the-solidity-coverage-plugin}
 
 Cu plugin-ul „solidity-coverage” puteți să verificați la câte dintre căile de cod se referă testele dumneavoastră. Dacă îl adăugați la CI, va fi foarte comod de utilizat, odată configurat.
 
-### Etapa 1: Creați un proiect „metacoin” și instalați instrumentele „coverage” \{#step-1-create-a-metacoin-project-and-install-coverage-tools}
+### Etapa 1: Creați un proiect „metacoin” și instalați instrumentele „coverage” {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
 npm install --save-dev truffle
@@ -162,7 +162,7 @@ npm install --save-dev coveralls
 npm install --save-dev solidity-coverage
 ```
 
-### Etapa 2: Adăugați „solidity-coverage” la matricea plugin-urilor din truffle-config.js \{#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}
+### Etapa 2: Adăugați „solidity-coverage” la matricea plugin-urilor din truffle-config.js {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}
 
 ```js
 module.exports = {
@@ -171,7 +171,7 @@ module.exports = {
 }
 ```
 
-### Etapa 3: Adăugați comenzile „coverage” la fișierul „.travis.yml” sau la „config.yml" al Circle CI \{#step-3-add-the-coverage-commands-to-the-travisyml-or-circle-ci-configyml}
+### Etapa 3: Adăugați comenzile „coverage” la fișierul „.travis.yml” sau la „config.yml" al Circle CI {#step-3-add-the-coverage-commands-to-the-travisyml-or-circle-ci-configyml}
 
 ```bash
 - npx truffle run coverage
@@ -180,7 +180,7 @@ module.exports = {
 
 Plugin-ul „coverage” al Solidity își pornește propriul „ganache-cli”, de aceea nu trebuie să ne facem griji în această privință. Totuși, nu înlocuiți comanda de testare obișnuită, întrucât „coverage” al „ganache-cli” funcționează diferit și nu înlocuiește deci rularea testelor unitare obișnuite.
 
-### Etapa 4: Adăugați un „repository” la „coveralls” \{#step-4-add-repository-to-coveralls}
+### Etapa 4: Adăugați un „repository” la „coveralls” {#step-4-add-repository-to-coveralls}
 
 - Creați un cont cu [Coveralls](https://coveralls.io/).
 - Add the GitHub repo to it.
@@ -188,7 +188,7 @@ Plugin-ul „coverage” al Solidity își pornește propriul „ganache-cli”,
 
 ![Exemplu de „coverall”](./coverall.png)
 
-## Sugestii suplimentare \{#further-ideas}
+## Sugestii suplimentare {#further-ideas}
 
 - [MythX](https://mythx.io/): Cu „MythX” puteți analiza securitatea contractului dvs. inteligent în mod automat. Prin urmare, este foarte logic să îl [adăugați la CI-ul dvs](https://blog.mythx.io/howto/mythx-and-continuous-integration-part-1-circleci/).
 - [Linting](https://wikipedia.org/wiki/Lint_%28software%29): Good code can be enforced to some degree with linting tools. [Eslint](https://eslint.org/) works great for JavaScript, is [easy to setup](https://eslint.org/docs/user-guide/getting-started), while [Solhint](https://protofire.github.io/solhint/) can be used for Solidity.

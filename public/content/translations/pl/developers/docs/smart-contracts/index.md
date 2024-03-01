@@ -10,11 +10,11 @@ lang: pl
 
 Inteligentne kontrakty są rodzajem [konta Ethereum](/developers/docs/accounts/). Oznacza to, że mają one saldo i mogą wysyłać transakcje przez sieć. Jednak nie są one kontrolowane przez użytkownika, zamiast tego są wdrażane do sieci i uruchamiane w sposób zaprogramowany. Konta użytkowników mogą następnie wchodzić w interakcję z inteligentnym kontraktem poprzez przesyłanie transakcji, które wykonują funkcję zdefiniowaną w inteligentnym kontrakcie. Inteligentne kontrakty mogą definiować reguły, tak jak zwykłe kontrakty, i automatycznie egzekwować je za pośrednictwem kodu.
 
-## Warunki wstępne \{#prerequisites}
+## Warunki wstępne {#prerequisites}
 
 Upewnij się, że zapoznałeś się z [kontami](/developers/docs/accounts/), [transakcjami](/developers/docs/transactions/) i
 
-## Cyfrowy automat do sprzedaży \{#a-digital-vending-machine}
+## Cyfrowy automat do sprzedaży {#a-digital-vending-machine}
 
 Być może najlepszą metaforą dla inteligentnego kontraktu jest automat do sprzedaży opisany przez Nicka Szabo. Przy odpowiednich nakładach gwarantowany jest określony wynik.
 
@@ -63,7 +63,7 @@ contract VendingMachine {
 
 Podobnie jak automat sprzedający eliminuje potrzebę zatrudniania pracownika sprzedawcy, inteligentne kontrakty mogą zastąpić pośredników w wielu branżach.
 
-## Nie wymaga pozwolenia \{#permissionless}
+## Nie wymaga pozwolenia {#permissionless}
 
 Każdy może napisać inteligentny kontrakt i wdrożyć go do sieci. Musisz tylko nauczyć się kodowania w [języku inteligentnego kontraktu](/developers/docs/smart-contracts/languages/) i mieć wystarczająco dużo ETH, aby go wdrożyć. Wdrożenie inteligentnego kontraktu jest transakcją techniczną, więc musisz zapłacić Koszty gazu związane z wdrożeniem kontraktów są jednak znacznie wyższe.
 
@@ -76,19 +76,19 @@ Ethereum ma przyjazne dla deweloperów języki do pisania inteligentnych kontrak
 
 Muszą one jednak zostać skompilowane przed ich uruchomieniem, tak aby maszyna wirtualna Ethereum mogła zinterpretować i przechowywać kontrakt. [Więcej na temat kompilacji](/developers/docs/smart-contracts/compiling/)
 
-## Kompozycyjność – o wzajemnej zależności komponentów \{#composability}
+## Kompozycyjność – o wzajemnej zależności komponentów {#composability}
 
 Inteligentne kontrakty są publiczne w Ethereum i można je uznać za otwarte API. Oznacza to, że możesz wywoływać inne inteligentne kontrakty w swoim własnym inteligentnym kontrakcie, aby znacznie rozszerzyć zakres możliwości. Kontrakty mogą nawet wdrażać inne kontrakty.
 
 Dowiedz się więcej o [kompozycyjności kontraktów inteligentnych](/developers/docs/smart-contracts/composability/).
 
-## Ograniczenia \{#limitations}
+## Ograniczenia {#limitations}
 
 Same inteligentne kontrakty nie mogą uzyskać informacji o zdarzeniach z „prawdziwego świata”, ponieważ nie mogą wysyłać żądań HTTP. Jest to celowe, ponieważ poleganie na informacjach z zewnątrz mogłoby zagrozić konsensusowi, który jest ważny dla bezpieczeństwa i decentralizacji.
 
 Istnieją sposoby na obejście tego za pomocą [wyroczni](/developers/docs/oracles/).
 
-## Zasoby inteligentnych kontraktów \{#smart-contract-resources}
+## Zasoby inteligentnych kontraktów {#smart-contract-resources}
 
 **Kontrakty OpenZeppelin –** **<em x-id="4">biblioteka do bezpiecznego tworzenia inteligentnych kontraktów.</em>**
 
@@ -101,7 +101,7 @@ Istnieją sposoby na obejście tego za pomocą [wyroczni](/developers/docs/oracl
 - [Dappsys](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 - [Inteligentne kontrakty: technologia blockchain, która zastąpi prawników](https://blockgeeks.com/guides/smart-contracts/) <em x-id="4">– Blockgeeks</em>
 - [Najlepsze praktyki opracowywania inteligentnych kontraktów](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– 10 listopada 2019 r. – Yos Riady_

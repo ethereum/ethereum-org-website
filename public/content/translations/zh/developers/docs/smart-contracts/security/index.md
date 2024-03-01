@@ -12,23 +12,23 @@ lang: zh
 
 上述几个事件迫使开发者必须付诸努力，构建安全、稳健、恢复力强的智能合约。 智能合约安全性是每个开发者都需要学习和研究的严肃问题。 本指南将介绍针对以太坊开发者的安全性注意事项，并研究增强智能合约安全性的资源。
 
-## 前言 \{#prerequisites}
+## 前言 {#prerequisites}
 
 在开始研究安全性问题之前，请确保自己已经熟悉[智能合约开发的基础知识](/developers/docs/smart-contracts/)。
 
-## 安全以太坊智能合约的构建准则 \{#smart-contract-security-guidelines}
+## 安全以太坊智能合约的构建准则 {#smart-contract-security-guidelines}
 
-### 1. 设计合理的访问控制 \{#design-proper-access-controls}
+### 1. 设计合理的访问控制 {#design-proper-access-controls}
 
 在智能合约中，带有 `public` 或 `external` 标记的函数可以被任何外部帐户 (EOA) 或者合约帐户调用。 如果你希望他人与你的合约交互，就必须为函数指定公共可见性。 然而，标记为 `private` 的函数只能被智能合约内部的函数调用，外部帐户无法调用。 为每个网络用户提供合约函数的访问权限会造成问题，尤其是当这种访问意味着任何人都能执行敏感操作（比如铸币）的情况。
 
 为了防止未经授权使用智能合约函数，有必要实现安全访问控制。 访问控制机制将使用智能合约中某些特定函数的能力限定给经过核准的实体，例如负责管理合约的帐户。 两种模式有助于在智能合约中实现访问控制，**所有权模式**和**基于角色的控制**：
 
-#### 所有权模式 \{#ownable-pattern}
+#### 所有权模式 {#ownable-pattern}
 
 在所有权模式中，在合约创建过程中将地址设置为合约的“所有者”。 受保护的函数都分配有 `OnlyOwner` 修饰符，这样可以确保合约在执行函数之前验证调用地址的身份。 从合约所有者以外的其他地址调用受保护的函数，始终会被回滚，阻止不必要的访问。
 
-#### 基于角色的访问控制 \{#role-based-access-control}
+#### 基于角色的访问控制 {#role-based-access-control}
 
 在智能合约中将一个地址注册成 `Owner` 会引入中心化风险，并代表一种单点故障。 如果所有者的帐户密钥已泄露，攻击者就可以攻击其拥有的合约。 这就是采用基于角色的访问控制模式及多个管理帐户可能是更好方案的原因。
 
@@ -40,7 +40,7 @@ lang: zh
 
 使用多重签名进行访问控制增加了额外一层安全性保障，因为需要多方同意才能对目标合约执行操作。 如果有必要使用所有权模式，这种方法尤其有用，因为攻击者或内部作恶者操控敏感的合约函数以达到恶毒目的会更加困难。
 
-### 2. 使用 require()、assert() 和 revert() 语句保护合约操作 \{#use-require-assert-revert}
+### 2. 使用 require()、assert() 和 revert() 语句保护合约操作 {#use-require-assert-revert}
 
 如上所述，一旦智能合约部署到区块链上，任何人都可以调用其中的公共函数。 由于无法事先知道外部帐户将如何与合约交互，因此最好在部署之前实施内部安全措施以防出现有问题的操作。 可以通过使用 `require()`、`assert()` 和 `revert()` 语句强制执行智能合约中的正确行为，在执行不满足某些要求时触发异常并回滚状态变化。
 
@@ -70,7 +70,7 @@ contract VendingMachine {
 }
 ```
 
-### 3. 测试智能合约并验证代码正确性 \{#test-smart-contracts-and-verify-code-correctness}
+### 3. 测试智能合约并验证代码正确性 {#test-smart-contracts-and-verify-code-correctness}
 
 鉴于在[以太坊虚拟机](/developers/docs/evm/)中运行的代码的不可变性，智能合约在开发阶段需要更高水平的质量评估。 对合约进行大量测试并观察是否存在任何意外结果，将显著增强合约的安全性并为用户提供长远保护。
 
@@ -82,17 +82,17 @@ contract VendingMachine {
 
 [形式化验证](/developers/docs/smart-contracts/formal-verification)是另一项验证智能合约安全属性的技术。 与常规测试不同，形式化验证能够确证智能合约中没有错误。 这是通过制定细致描述安全属性的形式化规范并证明智能合约的形式化模型符合这一规范来实现的。
 
-### 4. 申请代码独立审核 \{#get-independent-code-reviews}
+### 4. 申请代码独立审核 {#get-independent-code-reviews}
 
 在测试智能合约后，最好请其他人检查源代码是否存在安全问题。 虽然测试无法发现智能合约中的所有缺陷，但进行独立审核能增加发现漏洞的可能性。
 
-#### 审计 \{#audits}
+#### 审计 {#audits}
 
 进行独立代码审核的方式之一是委托执行智能合约审计。 审计员是确保智能合约安全、没有质量缺陷和设计错误的关键所在。
 
 尽管如此，你也不应将审计看作终极方案。 智能合约审计无法发现所有漏洞并且主要是为了额外增加一轮审核，这有助于检测到开发者在最初的开发和测试中遗漏的问题。 你还应遵循[与审计员合作的最佳做法](https://twitter.com/tinchoabbate/status/1400170232904400897)（例如正确记录代码并添加行内注释），让智能合约审计发挥最大作用。
 
-#### 漏洞奖励 \{#bug-bounties}
+#### 漏洞奖励 {#bug-bounties}
 
 执行外部代码审查的另一种方法是设立漏洞奖励计划。 漏洞奖励是一种经济奖励，提供给发现应用程序中漏洞的个人（通常是白帽黑客）。
 
@@ -100,7 +100,7 @@ contract VendingMachine {
 
 一种实用策略是按有风险资金数额的比例设置漏洞奖励计划的报酬金额。 这种方法被描述成“[比例漏洞奖励](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)”，通过提供经济激励让大家负责任地披露而非利用漏洞。
 
-### 5. 智能合约开发过程中遵循最佳做法 \{#follow-smart-contract-development-best-practices}
+### 5. 智能合约开发过程中遵循最佳做法 {#follow-smart-contract-development-best-practices}
 
 即使审计和漏洞奖励存在，你也有责任编写高质量的代码。 遵循正确的设计和开发流程是良好的智能合约安全性的开端：
 
@@ -118,11 +118,11 @@ contract VendingMachine {
 
 - 正确记录代码（使用 [NatSpec](https://solidity.readthedocs.io/en/develop/natspec-format.html)），并用易于理解的语言描述合约架构的细节。 这将使其他人更容易审计和审核你的代码。
 
-### 6. 实施可靠的灾难恢复计划 \{#implement-disaster-recovery-plans}
+### 6. 实施可靠的灾难恢复计划 {#implement-disaster-recovery-plans}
 
 设计安全的访问控制、使用函数修饰符以及其他建议能够提高智能合约的安全性，但这些并不能排除恶意利用的可能性。 构建安全的智能合约需要“做好失败准备”，并制定好应变计划有效地应对攻击。 适当的灾难恢复计划应包括以下部分或全部内容：
 
-#### 合约升级 \{#contract-upgrades}
+#### 合约升级 {#contract-upgrades}
 
 虽然以太坊智能合约默认是不可变的，但通过使用升级模式可以实现一定程度的可变性。 如果重大缺陷导致合约不可用并且部署新逻辑是最可行的选择，有必要升级合约。
 
@@ -134,7 +134,7 @@ contract VendingMachine {
 
 [更多关于升级合约的信息](/developers/docs/smart-contracts/upgrading/)。
 
-#### 紧急停止 \{#emergency-stops}
+#### 紧急停止 {#emergency-stops}
 
 如上所述，大量审计和测试不可能发现智能合约中的所有漏洞。 无法修补在部署后出现的代码漏洞，因为你无法更改运行在智能合约中的代码。 而且，升级机制（如代理模式）可能需要时间来实现（它们往往需要多方批准），这只会给攻击者更多的时间来造成更大的破坏。
 
@@ -198,7 +198,7 @@ contract EmergencyStop {
 
 紧急停止功能的应用，为处理智能合约中的严重漏洞提供了一种有效的权宜之计。 然而，这也意味着用户更需要相信开发者不会为自身利益激活这一功能。 为此，将紧急停止的控制权去中心化，使其受到链上投票机制、时间锁的约束或者需要来自多重签名钱包的批准，都是潜在的解决方案。
 
-#### 事件监测 \{#event-monitoring}
+#### 事件监测 {#event-monitoring}
 
 [事件](https://docs.soliditylang.org/en/v0.8.15/contracts.html#events)允许用户跟踪对智能合约函数的调用并监测状态变量的变化。 最理想的做法是将智能合约编写为能够在某一方采取对安全至关重要的操作（如提取资金）时发出一个事件。
 
@@ -206,7 +206,7 @@ contract EmergencyStop {
 
 你也可以选择一种现成的监测工具，只要有人与你的合约交互，就会自动转发警报。 这些工具将允许你根据不同的触发器创建自定义警报，如交易量、函数调用的频率或相关具体函数。 例如，你可以编写一个警报，当单笔交易的提款金额超过特定阈值时触发。
 
-### 7. 设计安全的治理系统 \{#design-secure-governance-systems}
+### 7. 设计安全的治理系统 {#design-secure-governance-systems}
 
 你可能想要通过将核心智能合约的控制权转交给社区成员来去中心化你的应用。 在这种情况下，智能合约系统将包括一个治理模块 — 一种允许社区成员通过链上治理系统批准管理行为的机制。 例如，将代理合约升级为新实现的提案可能由代币持有人投票。
 
@@ -216,7 +216,7 @@ contract EmergencyStop {
 
 更多关于[设计安全的治理系统](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/)和[去中心化自治组织中的不同投票机制](https://hackernoon.com/governance-is-the-holy-grail-for-daos)的信息。
 
-### 8. 将代码的复杂性降到最低 \{#reduce-code-complexity}
+### 8. 将代码的复杂性降到最低 {#reduce-code-complexity}
 
 传统的软件开发者熟悉 KISS（“保持简单、保持愚蠢”）原则，该原则建议不要将不必要的复杂性带入到软件设计中。 这与长期以来的见解“复杂的系统有着复杂的失败方式”不谋而合，而且复杂系统更容易出现代价高昂的错误。
 
@@ -224,9 +224,9 @@ contract EmergencyStop {
 
 另一个常见的建议是通过将业务逻辑拆分到多个合约中，编写小型函数并保持合约模块化。 编写更简单的代码不仅仅会减少智能合约中的攻击面，还让推理整个系统的正确性并及早发现可能的设计错误变得更加容易。
 
-### 9. 防范常见的智能合约漏洞 \{#mitigate-common-smart-contract-vulnerabilities}
+### 9. 防范常见的智能合约漏洞 {#mitigate-common-smart-contract-vulnerabilities}
 
-#### 重入攻击 \{#reentrancy}
+#### 重入攻击 {#reentrancy}
 
 以太坊虚拟机不允许并发，这意味着消息调用中涉及的两个合约不能同时运行。 外部调用暂停调用合约的执行和内存，直到调用返回，此时执行正常进行。 该过程可以正式描述为将[控制流](https://www.computerhope.com/jargon/c/contflow.htm)转向另一个合约。
 
@@ -353,7 +353,7 @@ contract MutexPattern {
 
 还可以使用[拉取支付](https://docs.openzeppelin.com/contracts/4.x/api/security#PullPayment) 系统，该系统要求用户从智能合约中提取资金，而不是使用将资金发送到帐户的“推送支付”系统。 这样就消除了意外触发未知地址中代码的可能性（还可以防止某些拒绝服务攻击）。
 
-#### 整数下溢和溢出 \{#integer-underflows-and-overflows}
+#### 整数下溢和溢出 {#integer-underflows-and-overflows}
 
 当算术运算的结果超出可接受的值范围，导致其“滚动”到可表示的最小值，整数溢出发生。 例如，`uint8` 只能存储最大为 2^-1=255 的值。 算术运算的结果如果大于 `255`，即溢出并重置 `Uint` 为`0`，这类似于汽车里程表，一旦达到最大里程 (999999) 示数就重置为 0。
 
@@ -434,7 +434,7 @@ contract Attack {
 
 从 0.8.0 版开始，Solidity 编译器禁用导致整数下溢和溢出的代码。 然而，用较低编译器版本编译的合约应当对涉及算术运算的函数执行检查，或者使用检查是否发生下溢/溢出的库（例如 [SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math)）。
 
-#### 预言机操纵 \{#oracle-manipulation}
+#### 预言机操纵 {#oracle-manipulation}
 
 [预言机](/developers/docs/oracles/)获取链下信息并将这些信息发送到链上供智能合约使用。 通过预言机，你可以设计出和链下系统（资本市场）交互的智能合约，极大地拓展它们的应用。
 
@@ -452,9 +452,9 @@ contract Attack {
 
 如果你打算通过查询链上预言机获得资产价格，考虑使用实施了时间加权平均价格 (TWAP) 机制的预言机。 [时间加权平均价格预言机](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles)查询资产在两个不同时间点（可以修改）的价格，并计算出基于所得平均值的现货价格。 选择较长的时间段可以保护协议免受价格操纵，因为最近执行的大宗订单无法影响资产价格。
 
-## 面向开发者的智能合约安全性资源 \{#smart-contract-security-resources-for-developers}
+## 面向开发者的智能合约安全性资源 {#smart-contract-security-resources-for-developers}
 
-### 用于分析智能合约和验证代码正确性的工具 \{#code-analysis-tools}
+### 用于分析智能合约和验证代码正确性的工具 {#code-analysis-tools}
 
 - **[测试工具和程序库](/developers/docs/smart-contracts/testing/#testing-tools-and-libraries)** - _为智能合约进行单元测试、静态分析和动态分析的行业标准工具和程序库集合。_
 
@@ -468,13 +468,13 @@ contract Attack {
 
 - **[ABI 编码器](https://abi.hashex.org/)** - _免费在线服务，用于编码您的 Solidity 合约函数和构造函数参数。_
 
-### 智能合约监测工具 \{#smart-contract-monitoring-tools}
+### 智能合约监测工具 {#smart-contract-monitoring-tools}
 
 - **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/sentinel)** - _一种用于自动监测和响应智能合约中事件、函数和交易参数的工具。_
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _一种在智能合约或钱包发生异常或意外事件时，为你获取实时通知的工具。_
 
-### 智能合约的安全管理工具 \{#smart-contract-administration-tools}
+### 智能合约的安全管理工具 {#smart-contract-administration-tools}
 
 - **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/admin)** - _进行智能合约管理的管理界面，包括控制访问、升级和暂停功能。_
 
@@ -482,7 +482,7 @@ contract Attack {
 
 - **[OpenZeppelin Contracts](https://docs.openzeppelin.com/contracts/4.x/)** - _用于实现管理功能的合约库，包括管理合约所有权、升级、访问限制、治理、可暂停等功能。_
 
-### 智能合约审计服务 \{#smart-contract-auditing-services}
+### 智能合约审计服务 {#smart-contract-auditing-services}
 
 - **[ConsenSys Diligence](https://consensys.net/diligence/)** - _为整个区块链生态系统中的项目提供帮助的智能合约审计服务，确保其协议可直接发布并为保护用户而构建。_
 
@@ -506,7 +506,7 @@ contract Attack {
 
 - **[Code4rena](https://code4rena.com/)** - _竞争性审计平台，激励智能合约安全专家查找漏洞，帮助提高 web3 的安全性。_
 
-### 漏洞奖励平台 \{#bug-bounty-platforms}
+### 漏洞奖励平台 {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _智能合约和去中心化金融项目的漏洞奖励平台，安全研究人员在该平台上审查代码、披露漏洞、获得报酬并使加密应用更加安全。_
 
@@ -514,7 +514,7 @@ contract Attack {
 
 - **[HackenProof](https://hackenproof.com/)** - _针对加密项目（去中心化金融、智能合约、钱包、中心化交易所等）的专业级漏洞奖励平台，借助这一平台，安全专家可提供漏洞诊断服务，研究人员会因为提供经过验证的相关漏洞报告获得报酬。_
 
-### 已知智能合约漏洞及利用情况的刊物 \{#common-smart-contract-vulnerabilities-and-exploits}
+### 已知智能合约漏洞及利用情况的刊物 {#common-smart-contract-vulnerabilities-and-exploits}
 
 - **[ConsenSys：已知的智能合约攻击](https://consensys.github.io/smart-contract-best-practices/attacks/)** - _针对最重要的合约漏洞提供适合初学者的解释，多数案例提供了代码示例。_
 
@@ -522,7 +522,7 @@ contract Attack {
 
 - **[Rekt](https://rekt.news/)** - _定期更新的著名加密领域黑客攻击和漏洞利用范例刊物，不提供详细的事后分析报告。_
 
-### 智能合约安全学习难点 \{#challenges-for-learning-smart-contract-security}
+### 智能合约安全学习难点 {#challenges-for-learning-smart-contract-security}
 
 - **[Awesome BlockSec CTF](https://github.com/blockthreat/blocksec-ctfs)** - _精选区块链安全攻防、实战、[夺旗](https://www.webopedia.com/definitions/ctf-event/amp/)竞赛和解决方案的文章列表。_
 
@@ -530,7 +530,7 @@ contract Attack {
 
 - **[Ethernaut](https://ethernaut.openzeppelin.com/)** - _基于 Web3 和 Solidity 的实战演练，其中每个等级都是一个需要“攻破”的智能合约。_
 
-### 确保智能合约安全的最佳做法 \{#smart-contract-security-best-practices}
+### 确保智能合约安全的最佳做法 {#smart-contract-security-best-practices}
 
 - **[ConsenSys：以太坊智能合约安全最佳实践](https://consensys.github.io/smart-contract-best-practices/)** - _保护以太坊智能合约安全的完整指南列表。_
 
@@ -542,7 +542,7 @@ contract Attack {
 
 - **[智能合约安全验证标准](https://github.com/securing/SCSVS)** - _旨在确立智能合约安全性标准的第十四部分检查清单，面向开发者、架构师、安全审核者和供应商。_
 
-### 智能合约安全性教程 \{#tutorials-on-smart-contract-security}
+### 智能合约安全性教程 {#tutorials-on-smart-contract-security}
 
 - [如何编写安全的智能合约](/developers/tutorials/secure-development-workflow/)
 

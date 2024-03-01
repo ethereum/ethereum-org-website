@@ -10,15 +10,15 @@ Pentru ca o aplicație software să interacționeze cu blockchain-ul Ethereum (a
 
 Dacă vreţi să utilizaţi un anumit limbaj de programare pentru a vă conecta la un nod Ethereum, există mai multe biblioteci practice în cadrul ecosistemului care facilitează acest lucru. Cu aceste biblioteci, programatorii pot scrie metode intuitive şi scurte pentru a inițializa cererile JSON RPC (în culise) care interacționează cu Ethereum.
 
-## Condiții prealabile \{#prerequisites}
+## Condiții prealabile {#prerequisites}
 
 Ar putea fi util să înțelegeți [Stiva Ethereum](/developers/docs/ethereum-stack/) și [ Clienții Ethereum](/developers/docs/nodes-and-clients/).
 
-## De ce să folosiţi o bibliotecă? \{#why-use-a-library}
+## De ce să folosiţi o bibliotecă? {#why-use-a-library}
 
 Aceste biblioteci elimină o mare parte din complexitatea interacțiunii directe cu un nod Ethereum. Ele oferă şi funcții utilitare (cum ar fi conversia din ETH în Gwei), astfel încât, ca programator, să petreceţi mai mult timp axându-vă pe funcționalitatea unică a aplicației dvs. decât încercând să vă descurcaţi cu complexitatea clienților Ethereum.
 
-## Biblioteci disponibile \{#available-libraries}
+## Biblioteci disponibile {#available-libraries}
 
 **Alchemy -** **_Platforma de dezvoltare Ethereum._**
 
@@ -111,16 +111,16 @@ Aceste biblioteci elimină o mare parte din complexitatea interacțiunii directe
 - [Documentație](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
-## Referințe suplimentare \{#further-reading}
+## Referințe suplimentare {#further-reading}
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editați această pagină și adăugați-o!_
 
-## Subiecte corelate \{#related-topics}
+## Subiecte corelate {#related-topics}
 
 - [Noduri și clienți](/developers/docs/nodes-and-clients/)
 - [Framework-uri pentru dezvoltare](/developers/docs/frameworks/)
 
-## Tutoriale corelate \{#related-tutorials}
+## Tutoriale corelate {#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
 - [Apelarea unui contract inteligent din JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Folosind tokenul DAI, vezi cum să apelezi funcțiile contractelor, folosind JavaScript._

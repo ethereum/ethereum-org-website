@@ -4,7 +4,7 @@ lang: it
 description: I nostri criteri per elencare gli strumenti per sviluppatori su ethereum.org
 ---
 
-# Aggiunta di strumenti per sviluppatori \{#contributing-to-ethereumorg-}
+# Aggiunta di strumenti per sviluppatori {#contributing-to-ethereumorg-}
 
 Vogliamo assicurarci di elencare le migliori risorse possibili per sviluppatori, in modo tale che gli utenti possano lavorare con fiducia e ottenere il supporto necessario.
 
@@ -14,7 +14,7 @@ Attualmente elenchiamo gli strumenti per gli sviluppatori in tutto il nostro [po
 
 **Sentiti libero di suggerire nuove risorse nelle pagine appropriate.**
 
-## Come decidiamo \{#ways-to-contribute}
+## Come decidiamo {#ways-to-contribute}
 
 Le nuove proposte di strumenti per sviluppatori saranno valutate secondo i seguenti criteri:
 
@@ -46,13 +46,13 @@ Molti progetti nel mondo di Ethereum sono di tipo open source. Siamo maggiorment
 
 ---
 
-## Ordine dei prodotti \{#product-ordering}
+## Ordine dei prodotti {#product-ordering}
 
 A meno che i prodotti non siano specificamente ordinati in modo diverso, ad esempio alfabeticamente, i prodotti saranno mostrati per data crescente di aggiunta alla pagina. In altre parole, i prodotti più nuovi sono aggiunti in fondo all'elenco.
 
 ---
 
-## Aggiungi il tuo strumento per sviluppatori \{#how-decisions-about-the-site-are-made}
+## Aggiungi il tuo strumento per sviluppatori {#how-decisions-about-the-site-are-made}
 
 Se vuoi aggiungere a ethereum.org uno strumento per sviluppatori che soddisfa i criteri, crea un ticket su GitHub.
 

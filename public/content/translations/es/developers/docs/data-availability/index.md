@@ -8,11 +8,11 @@ lang: es
 
 La **disponibilidad de datos** se refiere a la confianza que un usuario puede tener en que los datos necesarios para verificar un bloque estén realmente disponibles para todos los participantes de la red. Para los nodos completos en la capa 1 de Ethereum, esto es relativamente simple; el nodo completo descarga una copia de todos los datos en cada bloque: los datos _deben_ estar disponibles para que la descarga sea posible. Un bloque con datos faltantes sería descartado en lugar de ser agregado a la cadena de bloques. Esto es la "disponibilidad de datos en cadena" y es una característica de las cadenas de bloques monolíticas. Los nodos completos no pueden ser engañados para aceptar transacciones inválidas porque descargan y ejecutan cada transacción por sí mismos. Sin embargo, en el caso de las cadenas de bloques modulares, los rollups de capa 2 y los clientes ligeros, el panorama de la disponibilidad de datos es más complejo, lo cual requiere de procedimientos de verificación más sofisticados.
 
-## Prerrequisitos \{#prerequisites}
+## Prerrequisitos {#prerequisites}
 
 Debe tener una buena comprensión de los [fundamentos de la cadena de bloques](/developers/docs/intro-to-ethereum/), especialmente de los [mecanismos de consenso](/developers/docs/consensus-mechanisms/). Esta página también asume que el lector está familiarizado con [bloques](/developers/docs/blocks/), [transacciones](/developers/docs/transactions/), [nodos](/developers/docs/nodes-and-clients/), [soluciones de escalabilidad](/developers/docs/scaling/) y otros temas relevantes.
 
-## El problema de la disponibilidad de datos \{#the-data-availability-problem}
+## El problema de la disponibilidad de datos {#the-data-availability-problem}
 
 El problema de la disponibilidad de datos es la necesidad de demostrar a toda la red que la forma resumida de algunos datos de transacción que se están agregando a la cadena de bloques realmente representa un conjunto de transacciones válidas, pero hacerlo sin requerir que todos los nodos descarguen todos los datos. Todos los datos de transacción son necesarios para verificar de manera independiente los bloques, pero requerir que todos los nodos descarguen todos los datos de transacción es un obstáculo para el escalamiento. Las soluciones al problema de disponibilidad de datos buscan proporcionar garantías suficientes de que todos los datos de transacción estuvieron disponibles para que los participantes de la red que no descargan y almacenan los datos los pudieran verificar.
 
@@ -20,21 +20,21 @@ Los [nodos ligeros](/developers/docs/nodes-and-clients/light-clients) y los [rol
 
 La disponibilidad de datos también es una preocupación fundamental para futuros clientes ["sin estado" (stateless)](/roadmap/statelessness) de Ethereum que no necesiten descargar ni almacenar datos de estado para verificar bloques. Los clientes sin estado aún necesitan estar seguros de que los datos estén disponibles _en algún lugar_ y que han sido procesados correctamente.
 
-## Soluciones de disponibilidad de datos \{#data-availability-solutions}
+## Soluciones de disponibilidad de datos {#data-availability-solutions}
 
-### Muestreo de disponibilidad de datos (DAS) \{#data-availability-sampling}
+### Muestreo de disponibilidad de datos (DAS) {#data-availability-sampling}
 
 El muestreo de disponibilidad de datos (DAS) es una forma en la que la red verifica que los datos están disponibles sin ejercer demasiada presión sobre ningún nodo individual. Cada nodo (incluidos los nodos que no realizan staking) descarga un pequeño subconjunto seleccionado al azar de los datos totales. La descarga exitosa de las muestras confirma con alto grado de confianza que todos los datos están disponibles. Esto se basa en la codificación de borrado de datos, que expande un conjunto dado de datos con información redundante (la forma en que se hace esto es ajustando una función conocida como un _polinomio_ sobre los datos y evaluando ese polinomio en puntos adicionales). Esto permite que los datos originales se recuperen a partir de los datos redundantes cuando sea necesario. Una consecuencia de esta creación de datos es que, si _cualquiera_ de los datos originales no está disponible, _la mitad_ de los datos expandidos terminará faltando. La cantidad de muestras de datos descargadas por cada nodo puede ajustarse de manera que sea _extremadamente_ probable que al menos uno de los fragmentos de datos muestreados por cada cliente falte _si_ menos de la mitad de los datos está realmente disponible.
 
 El DAS se va a utilizar para garantizar que los operadores de rollups pongan a disposición sus datos de transacciones luego de que se haya implementado [EIP-4844](/roadmap/danksharding). Los nodos de Ethereum van a tomar muestras aleatorias de los datos de transacción proporcionados en blobs utilizando el esquema de redundancia explicado anteriormente para asegurarse de que existan todos los datos. La misma técnica también podría emplearse para estar seguros de que los productores de bloques estén poniendo a disposición todos sus datos, garantizando así la seguridad de los clientes ligeros. De manera similar, bajo la [separación entre constructor/generador de bloques y proponente](/roadmap/pbs), solo el generador de bloques estaría obligado a procesar un bloque completo, mientras que otros validadores harían la verificación utilizando el muestreo de disponibilidad de datos.
 
-### Comités de disponibilidad de datos \{#data-availability-committees}
+### Comités de disponibilidad de datos {#data-availability-committees}
 
 Los Comités de Disponibilidad de Datos (DAC) son entidades de confianza que proporcionan o certifican la disponibilidad de datos. Los DAC pueden ser utilizados en lugar del Muestreo de Disponibilidad de Datos [o en combinación con él](https://hackmd.io/@vbuterin/sharding_proposal#Why-not-use-just-committees-and-not-DAS) . Las garantías de seguridad que vienen con los comités dependen de la configuración específica. Ethereum utiliza subconjuntos de validadores seleccionados al azar para dar fe de la disponibilidad de datos para nodos ligeros, por ejemplo.
 
 Algunos validiums también utilizan DAC. El DAC es un conjunto de nodos confiables que almacenan copias de datos sin conexión. El DAC está obligado a poner los datos a disposición en caso de disputa. Los miembros del DAC también publican atestaciones o certificaciones en la cadena para demostrar que los datos mencionados están efectivamente disponibles. Algunos validiums reemplazan los DAC con un sistema de validadores de prueba de participación (PoS). Aquí, cualquier persona puede convertirse en un validador y almacenar datos fuera de la cadena. Sin embargo, deben proporcionar una "garantía o fianza", que se deposita en un contrato inteligente. En caso de comportamiento malicioso, como que el validador retenga los datos, la garantía puede acuchillarse (cortarse). Los comités de disponibilidad de datos basados en la prueba de participación son considerablemente más seguros que los DAC regulares porque incentivan directamente el comportamiento honesto.
 
-## Disponibilidad de datos y nodos ligeros \{#data-availability-and-light-nodes}
+## Disponibilidad de datos y nodos ligeros {#data-availability-and-light-nodes}
 
 Los [nodos ligeros](/developers/docs/nodes-and-clients/light-clients) necesitan validar que los encabezados de los bloques que reciben son correctos sin descargar los datos de dichos bloques. El precio de ser tan ligeros es la incapacidad de verificar de forma independiente los encabezados de los bloques mediante la reejecución de transacciones de manera local, como lo hacen los nodos completos.
 
@@ -52,7 +52,7 @@ Incluso en este escenario, ataques que retengan solo unos pocos bytes podrían p
 
 **Nota:** El DAS y las pruebas de fraude aún no se implementaron en los clientes ligeros de Ethereum en prueba de participación, pero están contemplados dentro del plan de desarrollo, probablemente en forma de pruebas basadas en ZK-SNARK. Actualmente los clientes ligeros usan una forma de DAC: verifican las identidades del comité de sincronización y luego confían en los encabezados de bloque firmados que reciben.
 
-## Disponibilidad de datos y rollups de capa 2 \{#data-availability-and-layer-2-rollups}
+## Disponibilidad de datos y rollups de capa 2 {#data-availability-and-layer-2-rollups}
 
 Las [soluciones de escalabilidad de capa 2](/layer-2/), como los [rollups](/glossary/#rollups), reducen los costos de transacción y aumentan la capacidad de procesamiento de Ethereum gracias a que procesan transacciones fuera de la cadena. Las transacciones de los rollups se comprimen y son publicadas en lotes en Ethereum. Los lotes representan en una sola transacción en Ethereum miles de transacciones individuales realizadas fuera de la cadena. Esto reduce la congestión en la capa base y disminuye las tarifas para los usuarios.
 
@@ -62,7 +62,7 @@ Los [rollups optimistas](/developers/docs/scaling/optimistic-rollups/) publican 
 
 Los [rollups de conocimiento cero (ZK)](/developers/docs/scaling/zk-rollups) no necesitan publicar los datos de la transacción, ya que las [pruebas de validez de conocimiento cero](/glossary/#zk-proof) garantizan la corrección de las transiciones de estado. Sin embargo, la disponibilidad de datos sigue siendo un problema porque no podemos garantizar la funcionalidad del rollup de ZK (o interactuar con él) sin acceso a sus datos de estado. Por ejemplo, los usuarios no pueden conocer sus saldos si un operador retiene detalles sobre el estado del rollup. Además, no pueden realizar actualizaciones de estado utilizando la información contenida en un bloque recién agregado.
 
-## Disponibilidad de datos frente a capacidad de recuperación de datos \{#data-availability-vs-data-retrievability}
+## Disponibilidad de datos frente a capacidad de recuperación de datos {#data-availability-vs-data-retrievability}
 
 La disponibilidad de datos es diferente de la capacidad de recuperación de datos. La disponibilidad de datos es la garantía de que los nodos completos han podido acceder y verificar el conjunto completo de transacciones asociadas con un bloque específico. No es necesario que los datos sean accesibles para siempre.
 
@@ -70,7 +70,7 @@ La recuperabilidad de datos es la capacidad de los nodos para recuperar _informa
 
 El protocolo principal de Ethereum se ocupa principalmente de la disponibilidad de datos, no de su capacidad de recuperación. La capacidad de recuperación de datos puede ser proporcionada por una pequeña población de nodos de archivo ejecutados por terceros, o puede distribuirse a través de la red utilizando el almacenamiento de archivos descentralizado, como la [Portal Network](https://www.ethportal.net/).
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [¿Qué es la disponibilidad de datos?](https://medium.com/blockchain-capital-blog/wtf-is-data-availability-80c2c95ded0f)
 - [¿Qué es la disponibilidad de datos?](https://coinmarketcap.com/alexandria/article/what-is-data-availability)

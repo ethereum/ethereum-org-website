@@ -18,7 +18,7 @@ Ethereum ist bereits eine leistungsstarke Plattform für die globale Koordinieru
 
 **Um mehr über frühere Upgrades von Ethereum zu erfahren, besuchen Sie bitte unsere [History](/history/) Seite**
 
-## Welche Veränderungen stehen bei Ethereum an? \{#what-changes-are-coming}
+## Welche Veränderungen stehen bei Ethereum an? {#what-changes-are-coming}
 
 Die Ethereum-Roadmap beschreibt die spezifischen Verbesserungen, die in Zukunft am Protokoll vorgenommen werden sollen. Insgesamt wird die Roadmap den Ethereum-Nutzern folgende Vorteile bringen:
 
@@ -53,7 +53,7 @@ Die Ethereum-Roadmap beschreibt die spezifischen Verbesserungen, die in Zukunft 
   />
 </CardGrid>
 
-## Warum braucht Ethereum eine Roadmap? \{#why-does-ethereum-need-a-roadmap}
+## Warum braucht Ethereum eine Roadmap? {#why-does-ethereum-need-a-roadmap}
 
 Ethereum erhält regelmäßig Upgrades, die seine Skalierbarkeit, Sicherheit oder Nachhaltigkeit verbessern. Eine der Hauptstärken von Ethereum ist die Anpassung an neue Ideen, die aus Forschung und Entwicklung hervorgehen. Die Anpassungsfähigkeit gibt Ethereum die Flexibilität, sich neuen Herausforderungen zu stellen und mit den fortschrittlichsten technologischen Durchbrüchen Schritt zu halten.
 
@@ -72,23 +72,23 @@ Die Roadmap ist vor allem das Ergebnis jahrelanger Arbeit von Forschern und Entw
 
 </InfoBanner>
 
-## Wird sich die Roadmap von Ethereum im Laufe der Zeit ändern? \{#will-ethereums-roadmap-change-over-time}
+## Wird sich die Roadmap von Ethereum im Laufe der Zeit ändern? {#will-ethereums-roadmap-change-over-time}
 
 Ja - ganz sicherlich. Die Roadmap ist der aktuelle Plan für das Upgrade von Ethereum, der sowohl kurzfristige als auch zukünftige Pläne umfasst. Wir gehen davon aus, dass sich die Roadmap ändern wird, wenn neue Informationen und Technologien verfügbar werden.
 
 Betrachten Sie die Roadmap von Ethereum als eine Reihe von Absichten zur Verbesserung von Ethereum; sie ist die beste Hypothese der Kernforscher und -entwickler über den optimalen Weg zur Weiterentwicklung von Ethereum.
 
-## Wann wird die Roadmap fertiggestellt sein? \{#when-will-the-roadmap-be-finished}
+## Wann wird die Roadmap fertiggestellt sein? {#when-will-the-roadmap-be-finished}
 
 Ethereum wird einige Upgrades in den nächsten sechs Monaten implementieren (z.B. Staking withdrawals); andere haben eine geringere Priorität und werden wahrscheinlich erst in den nächsten 5-10 Jahren implementiert (z.B. Quantum Resistenz). Der genaue Zeitplan für die verschiedenen Upgrades lässt sich nur schwer vorhersagen, da an vielen Punkten der Roadmap parallel gearbeitet wird und die Entwicklung unterschiedlich schnell verläuft. Die Dringlichkeit einer Aufrüstung kann sich auch im Laufe der Zeit in Abhängigkeit von externen Faktoren ändern (z. B. kann ein plötzlicher Sprung in der Leistung und Verfügbarkeit von Quantencomputern die Dringlichkeit einer quantenresistenten Kryptographie erhöhen).
 
 Eine Möglichkeit, die Entwicklung von Ethereum zu betrachten, ist die Vergleichung mit der biologischen Evolution. Ein Netzwerk, das in der Lage ist, sich an neue Herausforderungen anzupassen und fit zu bleiben, wird eher erfolgreich sein als eines, das sich gegen Veränderungen sträubt, obwohl mit zunehmender Leistung, Skalierbarkeit und Sicherheit des Netzwerks immer weniger Änderungen am Protokoll erforderlich sein werden.
 
-## Muss ich etwas tun, wenn es ein Upgrade gibt? \{#do-i-have-to-do-anything-when-there-is-an-upgrade}
+## Muss ich etwas tun, wenn es ein Upgrade gibt? {#do-i-have-to-do-anything-when-there-is-an-upgrade}
 
 Upgrades haben in der Regel keine Auswirkungen auf die Endnutzer, außer dass sie ein besseres Nutzererlebnis, ein sichereres Protokoll und vielleicht mehr <i>Optionen</i> für die Interaktion mit Ethereum bieten. Endnutzer sind nicht verpflichtet, sich aktiv an einem Upgrade zu beteiligen, und müssen auch nichts zur Sicherung ihrer Assets tun. Die Betreiber von Nodes müssen ihre Clients aktualisieren, um sich auf ein Upgrade vorzubereiten. Einige Upgrades können zu Änderungen für Anwendungsentwickler führen. So können beispielsweise Aktualisierungen des Zeitablaufs dazu führen, dass Anwendungsentwickler historische Daten aus neuen Quellen abrufen.
 
-## Was ist mit The Verge, The Splurge, usw.? \{#what-about-the-verge-splurge-etc}
+## Was ist mit The Verge, The Splurge, usw.? {#what-about-the-verge-splurge-etc}
 
 [Vitalik Buterin schlug eine Vision für die Ethereum-Roadmap](https://twitter.com/VitalikButerin/status/1588669782471368704) vor, die in mehrere Kategorien unterteilt war, die durch ihre Auswirkungen auf die Ethereum-Architektur miteinander verbunden sind. Sie enthielt:
 
@@ -101,11 +101,11 @@ Upgrades haben in der Regel keine Auswirkungen auf die Endnutzer, außer dass si
 
 Wir haben uns entschieden, diese Terminologie nicht zu verwenden, weil wir ein einfacheres und nutzerzentrierteres Modell verwenden wollten. Obwohl wir eine nutzerzentrierte Sprache verwenden, bleibt die Vision dieselbe wie die von Vitalik vorgeschlagene.
 
-## Wie verhält es sich mit Sharding? \{#what-about-sharding}
+## Wie verhält es sich mit Sharding? {#what-about-sharding}
 
 Beim Sharding wird die Ethereum-Blockchain so aufgeteilt, dass Untergruppen von Validatoren nur für einen Bruchteil der Gesamtdaten verantwortlich sind. Ursprünglich sollte Ethereum auf diese Weise skaliert werden. Allerdings haben sich die Rollups auf Layer 2 viel schneller entwickelt als erwartet und haben bereits eine Menge an Skalierung gebracht, und sie werden noch viel mehr leisten, wenn Proto-Danksharding implementiert ist. Das bedeutet, dass "Shard Chains" nicht mehr benötigt werden und von der Roadmap gestrichen wurden.
 
-## Suchen Sie nach spezifischen technischen Upgrades? \{#looking-for-specific-technical-upgrades}
+## Suchen Sie nach spezifischen technischen Upgrades? {#looking-for-specific-technical-upgrades}
 
 - [Danksharding](/roadmap/danksharding) - Danksharding macht Layer-2-Rollups für Benutzer wesentlich billiger, indem es Ethereum-Blöcken "Blobs" von Daten hinzufügt.
 - [Staking withdrawals](/staking/withdrawals) - Das Shanghai/Capella-Upgrade ermöglichte Auszahlungen für die Staking-Funktion auf Ethereum, so dass die Leute ihre investierten ETH freischalten konnten.

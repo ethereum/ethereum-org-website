@@ -4,13 +4,13 @@ description: 桥梁使用户能够跨不同的区块链转移他们的资金
 lang: zh
 ---
 
-# 区块链桥 \{#prerequisites}
+# 区块链桥 {#prerequisites}
 
 _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解决方案组成的生态系统，每个解决方案都具有独特的功能和权衡。 随着区块链协议数量的增加，[跨链移动资产的需求也随之增加](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>)。  为了满足这一需求，我们需要桥接。_
 
 <Divider />
 
-## 什么是桥梁？ \{#what-are-bridges}
+## 什么是桥梁？ {#what-are-bridges}
 
 区块链桥就像我们在真实世界所知道的桥梁一样。 就像真实桥梁连结两个物理位置一样，区块链桥梁连接两个区块链生态系统。 桥梁通过传递信息和资产，促进区块链之间的通信。
 
@@ -20,7 +20,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 但是，如果你想使用不同的区块链进行类似的兑换，你会怎么做？ 假设你想用以太坊主网的以太币兑换 [Arbitrum](https://arbitrum.io/) 上的以太币。 就像我们为欧元进行的货币兑换一样，我们需要一种机制将我们的以太币从以太坊转移到 Arbitrum。 桥梁使这种交易成为可能。 在本例中，[Arbitrum 有一个原生桥梁](https://bridge.arbitrum.io/)，可以将以太币从主网转移到 Arbitrum。
 
-## 我们为什么需要桥梁？ \{#why-do-we-need-bridges}
+## 我们为什么需要桥梁？ {#why-do-we-need-bridges}
 
 所有区块链都有其局限性。 为了使以太坊实现扩展，跟上需求，就必须进行卷叠。 或者，像 Solana 和 Avalanche 这样的一层网络具有不同的设计，以实现更高的吞吐量，但代价是去中心化。
 
@@ -39,23 +39,23 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 <Divider />
 
-## 桥梁用例 \{#bridge-use-cases}
+## 桥梁用例 {#bridge-use-cases}
 
 以下是你可以使用桥梁的一些场景：
 
-### 降低交易费 \{#transaction-fees}
+### 降低交易费 {#transaction-fees}
 
 假设你在以太坊主网上有以太币，但想要以较少的交易费探索不同的去中心化应用程序。 通过将你的以太币从主网桥接到以太坊二层网络卷叠，你可以享受更低的交易费用。
 
-### 其他区块链上的去中心化应用程序 \{#dapps-other-chains}
+### 其他区块链上的去中心化应用程序 {#dapps-other-chains}
 
 如果你一直在以太坊主网上使用 Aave 借出泰达币，但在 Polygon 上使用 Aave 借出泰达币的利率更高。
 
-### 探索区块链生态系统 \{#explore-ecosystems}
+### 探索区块链生态系统 {#explore-ecosystems}
 
 如果你在以太坊主网上有以太币，而你想探索山寨币一层网络来尝试他们的原生应用程序。 你可以使用桥梁将你的以太币从以太坊主网转移到山寨币一层网络。
 
-### 拥有原生加密资产 \{#own-native}
+### 拥有原生加密资产 {#own-native}
 
 如果你只有以太坊网络资产但想拥有原生比特币， 你可以先兑换得到以太坊上的 BTC - WBTC（Wrapped Bitcoin）， 但 WBTC 是以太坊网络上的 ERC-20 代币，仍不是原生比特币。 然后你可以通过跨链桥，将资产从以太坊网络跨到比特币网络， 即将 WBTC 转换为原生 BTC。 或者，你可能拥有以太币并希望在以太坊去中心化金融协议中使用。 用于以太坊网络的 DeFi 协议中。
 
@@ -65,7 +65,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 <Divider />
 
-## 桥梁类型 \{#types-of-bridge}
+## 桥梁类型 {#types-of-bridge}
 
 桥梁具有各种设计和复杂程度。 一般来说，桥梁分为两类：需信任桥梁和去信任桥梁。
 
@@ -95,7 +95,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 <Divider />
 
-## 使用桥梁的风险 \{#bridge-risk}
+## 使用桥梁的风险 {#bridge-risk}
 
 桥梁正处于开发的早期阶段， 很可能尚未发现最佳桥梁设计。 与任何类型的桥梁互动都有风险：
 
@@ -121,7 +121,7 @@ _Web3 已经发展成为一个由一层网络区块链和二层网络扩展解�
 
 <Divider />
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [EIP-5164：跨链执行](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658)_2022 年 6 月 18 日 - Brendan Asselstine_
 - [二层网络桥梁风险框架](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _2022 年 7 月 5 日 - Bartek Kiepuszewski_

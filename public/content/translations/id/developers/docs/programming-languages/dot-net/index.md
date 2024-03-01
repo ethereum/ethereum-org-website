@@ -13,7 +13,7 @@ Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang men
 
 Buatlah aplikasi terdesentralisasi di atas Ethereum dan berinteraksilah dengan kontrak pintar menggunakan peralatan dan bahasa dari teknologi tumpukan Microsoft - Mendukung C#, # Visual Basic .NET, F#, dengan peralatan seperti VSCode dan Visual Studio, di .NET Framework/.NET Core/.NET Standard. Gunakan blockchain Ethereum di Azure menggunakan Blockchain Microsoft Azure dalam hitungan menit. Bawa kecintaan Anda terhadap .NET ke Ethereum!
 
-## Mulai menggunakan kontrak pintar dan bahasa Solidity \{#getting-started-with-smart-contracts-and-the-solidity-language}
+## Mulai menggunakan kontrak pintar dan bahasa Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Ambil langkah awal untuk mengintegrasikan .NET dengan Ethereum**
 
@@ -24,7 +24,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Tulis Kontrak Pintar Pertama Anda](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Pelajari Cara Mengompilasi dan Menggunakan Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Referensi dan tautan untuk pemula \{#beginner-references-and-links}
+## Referensi dan tautan untuk pemula {#beginner-references-and-links}
 
 **Memperkenalkan pustaka Nethereum dan VS Code Solidity**
 
@@ -45,7 +45,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
   - Transfer ether ke Akun [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... Dan banyak lagi!
 
-## Artikel tingkat menengah \{#intermediate-articles}
+## Artikel tingkat menengah {#intermediate-articles}
 
 - [Daftar Buku Kerja/Contoh Nethereum](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Gunakan Testchain Pengembangan Anda Sendiri](https://github.com/Nethereum/Testchains)
@@ -58,13 +58,13 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 - [Kaleido dan Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum dan Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## Pola penggunaan tingkat lanjut \{#advanced-use-patterns}
+## Pola penggunaan tingkat lanjut {#advanced-use-patterns}
 
 - [Azure Key Vault dan Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Arsitektur referensi backend Nethereum Ujo](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## Proyek, peralatan, dan hal menyenangkan lainnya dari .NET \{#dot-net-projects-tools-and-other-fun-stuff}
+## Proyek, peralatan, dan hal menyenangkan lainnya dari .NET {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](http://playground.nethereum.com/) - _Kompilasikan, buat, dan jalankan snippet kode Nethereum di browser_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Codegen Nethereum dengan UI di Blazor_
@@ -76,13 +76,13 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 Ingin mencari informasi tambahan? Kunjungi [ethereum.org/developers](/developers/).
 
-## Kontributor komunitas .NET \{#dot-net-community-contributors}
+## Kontributor komunitas .NET {#dot-net-community-contributors}
 
 Di Nethereum, kami biasanya berkumpul di [Gitter](https://gitter.im/Nethereum/Nethereum) di mana semua orang bisa bertanya/menjawab pertanyaan, meminta bantuan, atau sekadar berbicang santai. Jangan sungkan untuk melakukan PR atau membuka masalah di [repositori GitHub Nethereum](https://github.com/Nethereum), atau sekadar menjelajahi berbagai sisi/sampel proyek yang kami miliki. Anda juga dapat menemukan kami di [Discord](https://discord.gg/jQPrR58FxX)!
 
 Di Nethermind, mari berbincang lewat [Gitter](https://gitter.im/nethermindeth/nethermind). Untuk PR atau masalah, lihat [repositori GitHub Nethermind](https://github.com/NethermindEth/nethermind).
 
-## Daftar artikel lainnya \{#other-aggregated-lists}
+## Daftar artikel lainnya {#other-aggregated-lists}
 
 [Situs Resmi Nethereum](https://nethereum.com/)  
 [Situs Resmi Nethermind](https://nethermind.io/)

@@ -4,25 +4,25 @@ description: Introducere despre modul în care se iau deciziile cu privire la Et
 lang: ro
 ---
 
-# Introducere despre guvernanța în Ethereum \{#introduction}
+# Introducere despre guvernanța în Ethereum {#introduction}
 
 _Dacă nimeni nu deține Ethereum, cum se iau deciziile cu privire la modificările trecute și viitoare ale lui Ethereum? Guvernanța în Ethereum se referă la procesul care permite luarea unor astfel de decizii_
 
 <Divider />
 
-## Ce este guvernanța? \{#what-is-governance}
+## Ce este guvernanța? {#what-is-governance}
 
 Guvernanța reprezintă sistemele existente care permit luarea deciziilor. Într-o structură organizațională tipică, echipa executivă sau un consiliu de administrație poate avea ultimul cuvânt în luarea deciziilor. Sau poate că acționarii votează propunerile de a adopta schimbări. Într-un sistem politic, oficialii aleși pot adopta o legislație care încearcă să reprezinte dorințele alegătorilor lor.
 
-## Guvernanța descentralizată \{#decentralized-governance}
+## Guvernanța descentralizată {#decentralized-governance}
 
 Nicio persoană nu deține sau controlează protocolul Ethereum, totuși trebuie luate decizii cu privire la punerea în aplicare a schimbărilor pentru a asigura cât mai bine longevitatea și prosperitatea rețelei. Întrucât nu este proprietatea nimănui, guvernanța organizațională tradițională este o soluție incompatibilă.
 
-## Guvernanța în Ethereum \{#ethereum-governance}
+## Guvernanța în Ethereum {#ethereum-governance}
 
 Guvernanța în Ethereum este procesul prin care se fac modificările protocolului. Este important să subliniem faptul că acest proces nu este legat de modul în care oamenii și aplicațiile utilizează protocolul - Ethereum este fără permisiuni. Oricine, de oriunde din lume, poate participa la activitățile on-chain. Nu există reguli care să stabilească cine poate sau nu să construiască o aplicație sau să trimită o tranzacție. Cu toate acestea, există un proces prin care se pot propune modificări ale protocolului de bază, pe care rulează aceste aplicații. Deoarece atât de mulți oameni depind de stabilitatea lui Ethereum, există un prag de coordonare foarte ridicat pentru modificările de bază, inclusiv procese sociale și tehnice, pentru a se asigura că orice modificări aduse proiectului Ethereum sunt sigure și sprijinite pe scară largă de către comunitate
 
-### Guvernanța on-chain în comparație cu guvernanța off-chain \{#on-chain-vs-off-chain}
+### Guvernanța on-chain în comparație cu guvernanța off-chain {#on-chain-vs-off-chain}
 
 Tehnologia blockkchain permite noi capacități de guvernanță, cunoscute sub numele de guvernanță on-chain. Guvernanța on-chain este atunci când propunerile de modificare a protocolului sunt decise prin votul părților interesate, de obicei de deținătorii unui token de guvernanță, iar votul are loc pe blockchain. Cu anumite forme de guvernanță on-chain, modificările propuse la protocol sunt deja scrise în cod și sunt implementate automat dacă părțile interesate aprobă modificările.
 
@@ -38,7 +38,7 @@ _În timp ce, la nivel de protocol, guvernanța în Ethereum este off-chain, în
 
 <Divider />
 
-## Cine este implicat? \{#who-is-involved}
+## Cine este implicat? {#who-is-involved}
 
 În [comunitatea Ethereum](/community/) există mai multe părți interesate, fiecare jucând un rol în procesul de guvernanță. Pornind de la părțile interesate cele mai îndepărtate de protocol și făcând un zoom înainte, avem:
 
@@ -54,7 +54,7 @@ _Notă: orice persoană poate face parte din mai multe dintre aceste grupuri (de
 
 <Divider />
 
-## Ce este un EIP? \{#what-is-an-eip}
+## Ce este un EIP? {#what-is-an-eip}
 
 Un proces important folosit în guvernanța Ethereum este cel al sugerării de **Propuneri de îmbunătățire pentru Ethereum (EIP-uri)**. EIP-urile sunt standarde care specifică potențiale caracteristici sau procese noi pentru Ethereum. Oricine din comunitatea Ethereum poate crea un EIP. De exemplu, niciunul dintre autorii EIP-721, EIP-ul care a standardizat NFT-urile, nu a lucrat direct la dezvoltarea protocolului Ethereum.
 
@@ -64,7 +64,7 @@ Un proces important folosit în guvernanța Ethereum este cel al sugerării de *
 
 <Divider />
 
-## Procedura oficială \{#formal-process}
+## Procedura oficială {#formal-process}
 
 Procedura oficială de introducere a unor modificări ale Protocolului Ethereum este următoarea:
 
@@ -86,17 +86,17 @@ Procedura oficială de introducere a unor modificări ale Protocolului Ethereum 
 
 Acest parcurs, deși foarte simplificat, oferă o imagine de ansamblu a etapelor semnificative pentru activarea unei modificări de protocol pe Ethereum. Iar acum haideți să aruncăm o privire la factorii informali care intervin în cadrul acestui proces.
 
-## Procesul informal \{#informal-process}
+## Procesul informal {#informal-process}
 
-### Înțelegerea a ceea ce s-a realizat anterior \{#prior-work}
+### Înțelegerea a ceea ce s-a realizat anterior {#prior-work}
 
 Campionii EIP-ului ar trebui să se familiarizeze cu realizările și propunerile anterioare înainte de a crea un EIP care să poată fi luat în considerare în mod serios pentru a fi implementat pe Mainnet-ul Ethereum. În acest fel, EIP-ul sperăm că aduce ceva nou, care nu a mai fost respins înainte. Cele trei locuri principale pentru a se informa despre aceasta sunt [depozitarul EIP-ului](https://github.com/ethereum/eips), [Ethereum Magicians](https://ethereum-magicians.org/) și [ethresear.ch](https://ethresear.ch/).
 
-### Grupuri de lucru \{#working-groups}
+### Grupuri de lucru {#working-groups}
 
 Este puțin probabil ca proiectul inițial al unui EIP să fie implementat pe Mainnet-ul Ethereum fără editări sau modificări. În general, Campionii EIP-urilor vor lucra cu un subset de Dezvoltatori de protocoale pentru a-şi specifica, implementa, testa, itera și finaliza propunerea. Din punct de vedere istoric, grupurile acestea de lucru au necesitat mai multe luni (și uneori ani!) de muncă. În mod similar, pentru astfel de schimbări, campionii EIP-ului ar trebui să implice din timp dezvoltatori relevanți de aplicații/instrumente în eforturile lor de a colecta feedback-ul utilizatorilor finali și de a atenua orice riscuri în implementare.
 
-### Consensul comunității \{#community-consensus}
+### Consensul comunității {#community-consensus}
 
 În timp ce unele EIP-uri sunt îmbunătățiri tehnice simple, cu nuanțe minime, altele sunt mai complexe și sunt în mod inerent compromisuri care vor afecta diferite părți interesate în moduri diferite. Acest lucru înseamnă că unele EIP-uri ajung să fie mai controversate în cadrul comunității decât altele.
 
@@ -108,13 +108,13 @@ Dincolo de securitatea rețelei Ethereum, o importanță semnificativă a fost a
 
 <Divider />
 
-## Gestionarea dezacordurilor \{#disagreements}
+## Gestionarea dezacordurilor {#disagreements}
 
 Faptul că multe părți interesate au motivații și convingeri diferite înseamnă că dezacordurile nu sunt neobișnuite.
 
 În general, dezacordurile sunt tratate prin discuții îndelungate în cadrul forumurilor publice pentru a înțelege rădăcina problemei și pentru a permite oricui să își spună părerea. De obicei, un grup cedează sau se ajunge la un compromis. În cazul în care un grup se simte suficient de puternic, impunerea forțată a unei anumite schimbări ar putea duce la o divizare în lanț. O divizare a lanțului apare atunci când unele părți interesate protestează față de punerea în aplicare a unei schimbări de protocol, ceea ce duce la versiuni diferite și incompatibile ale protocolului de operare, din care rezultă două blockchain-uri distincte.
 
-### Forkul DAO \{#dao-fork}
+### Forkul DAO {#dao-fork}
 
 Un fork sau o bifurcare se produce atunci când trebuie efectuate actualizări sau modificări tehnice majore în rețea și trebuie modificate „regulile" protocolului. [Clienții Ethereum](/developers/docs/nodes-and-clients/) trebuie să-și actualizeze software-ul pentru a implementa noile reguli de forking.
 
@@ -138,7 +138,7 @@ Aflați mai multe despre pirateria DAO:
 
 <Divider />
 
-### Utilitatea forkingului \{#forking-utility}
+### Utilitatea forkingului {#forking-utility}
 
 Forkingul în Ethereum/Ethereum Classic este un exemplu excelent de bifurcare utilă. Am avut două grupuri care au fost în dezacord suficient de puternic între ele în privința unor valori fundamentale pentru a considera că meritau riscurile ce ar fi decurs din acele măsuri anume.
 
@@ -146,7 +146,7 @@ Capacitatea de a crea un fork în fața unor diferențe politice, filosofice sau
 
 <Divider />
 
-## Dezvoltarea Lanțului Beacon \{#beacon-chain}
+## Dezvoltarea Lanțului Beacon {#beacon-chain}
 
 Procesul de guvernanță în Ethereum sacrifică adesea viteza și eficiența în favoarea deschiderii și incluziunii. Pentru accelerarea dezvoltării lanțului Beacon, acesta a fost lansat separat de pe rețeaua Ethereum bazată pe dovada-muncii și urmează propriile sale practici de guvernanță.
 
@@ -160,7 +160,7 @@ Când Lanțul Beacon se va uni cu nivelul execuției în Ethereum, procesul de g
 
 <Divider />
 
-## Cum pot să mă implic? \{#get-involved}
+## Cum pot să mă implic? {#get-involved}
 
 - [Propuneți un EIP](/eips/#participate)
 - [Discutați propunerile actuale](https://ethereum-magicians.org/)
@@ -170,7 +170,7 @@ Când Lanțul Beacon se va uni cu nivelul execuției în Ethereum, procesul de g
 - [Contribuiți la dezvoltarea clienților](/developers/docs/nodes-and-clients/#execution-clients)
 - [Programul de ucenicie pentru dezvoltatorii de bază](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
-## Referințe suplimentare \{#further-reading}
+## Referințe suplimentare {#further-reading}
 
 Guvernanța în Ethereum nu este definită rigid. Diverși participanți ai comunității au perspective diferite în această privință. Iată câteva dintre acestea:
 

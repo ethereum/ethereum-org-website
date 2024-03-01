@@ -4,11 +4,11 @@ description: Birleşim'in ETH arzını nasıl etkilediğinin analizi
 lang: tr
 ---
 
-# Birleşim ETH arzını nasıl etkiledi \{#how-the-merge-impacts-ETH-supply}
+# Birleşim ETH arzını nasıl etkiledi {#how-the-merge-impacts-ETH-supply}
 
 Birleşim, Ethereum ağının iş ispatından hisse ispatına geçişini teslim eder, bu olay Eylül 2022'de gerçekleşmiştir. ETH'nin dağıtım methodu bu geçişten sonra değişmiştir. Öncesinde ETH iki kaynaktan dağıtılıyordu: yürütüm katmanı (ör. Ana Ağ) ve fikir birliği katmanı (ör. İşaret Zinciri). Birleşim'den beri yürütüm katmanındaki dağıtım yapılmamaktadır. Hadi açıklayalım.
 
-## ETH dağıtımının bileşenleri \{#components-of-eth-issuance}
+## ETH dağıtımının bileşenleri {#components-of-eth-issuance}
 
 ETH arzını iki parçaya ayırabiliriz: dağıtma ve yakma.
 
@@ -27,19 +27,19 @@ title="ETH dağıtımı &quot;çok uzun, okumadım&quot;">
 
 </Card>
 
-## Birleşim öncesi (tarihsel) \{#pre-merge}
+## Birleşim öncesi (tarihsel) {#pre-merge}
 
-### Yürütüm katmanı dağıtımı \{#el-issuance-pre-merge}
+### Yürütüm katmanı dağıtımı {#el-issuance-pre-merge}
 
 İş ispatı bünyesinde madenciler sadece yürütüm katmanıyla etkileşime girerdi ve bir sonraki bloku çözen ilk madenci blok ödülüyle ödüllendirilirdi. 2019'da gerçekleşen [Constantinople yükseltmesinden](/history/#constantinople) beri bu ödül blok başına 2 ETH idi. Madenciler en uzun/kurallı zincirde yer almayan geçerli [ommer](/glossary/#ommer) blokların yayınlanması sonucunda da ödüllendirilirdi. Bu ödüller ommer blok başına en fazla 1.75 ETH idi ve kurallı bloka verilen ödüle _ek olarak_ verilirdi. Madencilik süreci ekonomik olarak maliyetliydi ve sürdürülebilmesi zamanında yüksek düzeyde ETH dağıtımı gerekliydi.
 
-### Fikir birliği katmanı dağıtımı \{#cl-issuance-pre-merge}
+### Fikir birliği katmanı dağıtımı {#cl-issuance-pre-merge}
 
 [İşaret Zinciri](/history/#beacon-chain-genesis) 2020'de yürürlüğe girdi. Madenciler yerine hisseleme ispatı kullanan doğrulayıcılar tarafından güvence altına alındı. Zincir, Ana Ağ'da (yürütüm katmanında) akıllı kontratlara tek yönlü ETH yatıran Ethereum kullanıcıları tarafından önyüklendi. İşaret Zinciri Ana Ağı dinleyerek kullanıcılara yeni zincirde aynı miktarda ETH yatırdı. Birleşim gerçekleşene kadar İşaret Zinciri'nin doğrulayıcıları işlemleri işlemiyordu, doğrulayıcı havuzunun durumu hakkındaki mutabakata varıyordu.
 
 İşaret Zincirindeki doğrulayıcılar zincirin durumunu onayladıklarına ve blok önerdiklerinde ETH ile ödüllendirilir. Ödüller (veya cezalar) doğrulayıcı performansına dayanarak her dönemde (6,4 dakikada bir) hesaplanır ve dağıtılır. Doğrulayıcı ödülleri eskiden iş ispatı üzerine dağıtılan madenci ödüllerine kıyasla **çok** düşüktür (her 13,5 saniyede 2 ETH).
 
-### Birleşim öncesi dağıtım analizi \{#pre-merge-issuance-breakdown}
+### Birleşim öncesi dağıtım analizi {#pre-merge-issuance-breakdown}
 
 Toplam ETH arzı: **~120.520.000 ETH** (Birleşim gerçekleştiğinde Eylül 2022'deki veriler)
 
@@ -61,13 +61,13 @@ Dağıtımın <strong>~%88,7'i</strong> yürütüm katmanındaki madencilere gid
 <strong>~%11,3'i</strong> fikir birliği katmanındaki paydaşlara dağıtılıyordu (0,52/4,61 * 100)
 </InfoBanner>
 
-## Birleşim sonrası (günümüz) \{#post-merge}
+## Birleşim sonrası (günümüz) {#post-merge}
 
-### Yürütüm katmanı dağıtımı \{#el-issuance-post-merge}
+### Yürütüm katmanı dağıtımı {#el-issuance-post-merge}
 
 Birleşimden sonra yürütüm katmanı dağıtımı sıfırdır. Güncel mutabakat kuralları çerçevesinde iş ispatı artık geçerli bir blok üretim yöntemi olmaktan çıkmıştır. Tüm yürütüm katmanı aktiviteleri, hisse ispatı doğrulayıcıları tarafından yayınlanan ve kanıtlanan işaret blokları altında toplanmıştır. Kanıtlama ve işaret blokları yayınlama ödülleri fikir birliği katmanında ayrıca hesaplanır.
 
-### Fikir birliği katmanı dağıtımı \{#cl-issuance-post-merge}
+### Fikir birliği katmanı dağıtımı {#cl-issuance-post-merge}
 
 Fikir birliği katmanı dağıtımı, Birleşim öncesinde olduğu gibi, blok öneren ve kanıtlayan doğrulayıcılara küçük ödüller vererek devam eder. Doğrulayıcı ödülleri, fikir birliği katmanında yönetilen _doğrulayıcı bakiyelerinde_ birikmeye devam eder. Bu Ethereum hesapları ayrıdır ve Ana Ağ üzerinde işlem yapabilen diğer hesapların aksine ("uygulama" hesapları) bunlar diğer Ethereum adresleriyle özgürce işlem yapamaz. Bu hesaplardaki fonlar yalnızca belirlenmiş bir yürütme adresine çekilebilir.
 
@@ -79,7 +79,7 @@ Toplam doğrulayıcıların nerdeyse %0,33'ü belirli bir gün içerisinde çık
 
 Daha fazla doğrulayıcı parasını çektikçe, hisselenmiş yüksek miktarda ETH'nin kasıtlı ve eş zamanlı olarak çekilmesini ve istikrar bozulmasını önlemek için mevcut doğrulayıcı sayısı minimum 4 olacak şekilde git gide düşecektir.
 
-### Birleşim sonrası enflasyon analizi \{#post-merge-inflation-breakdown}
+### Birleşim sonrası enflasyon analizi {#post-merge-inflation-breakdown}
 
 - Toplam ETH arzı: **~120.520.000 ETH** (Birleşim gerçekleştiğinde Eylül 2022'deki veriler)
 - Yürütüm katmanı dağıtımı: **0**
@@ -90,7 +90,7 @@ Toplam yıllıklaştırılmış dağıtım oranı: <strong>~%0,52</strong><br/><
 ETH dağıtımındaki net azalma: <strong>~%88,7</strong> ((%4,61 - %0,52)/%4,61 * 100)
 </InfoBanner>
 
-## <Emoji text=":fire:" size="1" />Yakma \{#the-burn}
+## <Emoji text=":fire:" size="1" />Yakma {#the-burn}
 
 ETH dağıtımının karşısındaki güç ETH yakma oranıdır. Ethereum üzerinde bir işlemin gerçekleştirilebilmesi için, bir minimum ücret (ana ücret) ödenmelidir ve bu fiyat ağ aktivitesine bağlı olarak sürekli olarak dalgalanır (bloktan bloka). Bu ücret ETH olarak ödenir ve işlemin geçerli olarak kabul edilmesi için _zorunludur_. Bu ücret, işlem sırasında _yakılır_ ve dolaşımdan kaldırılır.
 
@@ -100,7 +100,7 @@ ETH dağıtımının karşısındaki güç ETH yakma oranıdır. Ethereum üzeri
 
 London yükseltmesinde uygulanan ücret yakımına ek olarak doğrulayıcılar çevrimdışı olmaları sebebiyle ceza alabilir, hatta daha kötüsü, belirli kurallara uymayarak ağın güvenliğini tehdit ettikleri için paralarının bir kısmını kaybedebilir ve atılabilirler. Bu cezalar doğrulayıcı bakiyelerinde azaltma ile sonuçlanabilir ve bu bakiyeler başka hesaplara ödül olarak verilmeden yakılır/dolaşımdan kaldırılır.
 
-### Deflasyon için ortalama gaz ücretinin hesaplanması \{#calculating-average-gas-price-for-deflation}
+### Deflasyon için ortalama gaz ücretinin hesaplanması {#calculating-average-gas-price-for-deflation}
 
 Yukarıda da bahsedildiği gibi, belirli bir günde dağıtılan ETH miktarı, hisselenmiş toplam ETH miktarına bağlıdır. Bu yazı yazıldığı sırada bu miktar ortalama günlük 1700 ETH idi.
 
@@ -128,7 +128,7 @@ Bunu basitçe `X`'in fonksiyonu olarak yazabiliriz:
 
 Örneğin `X` (günlük ETH dağıtımı), toplamda hisselenmiş ETH'ye bağlı olarak 1800'e çıkarsa, `f(X)` (dağıtımı dengelemek için gereken gwei) `17 gwei ` olacaktır (2 anlamlı basamak kullanılarak)
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Birleşim](/roadmap/merge/)
 - [Ultrasound.money](https://ultrasound.money/) - _Gerçek zamanlı ETH dağıtımını ve yakımını gösteren tablolara erişebilirsiniz_

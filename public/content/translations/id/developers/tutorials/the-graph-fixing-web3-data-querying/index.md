@@ -18,7 +18,7 @@ sourceUrl: https://soliditydeveloper.com/thegraph
 
 Kali ini kita akan melihat lebih dekat The Graph yang pada dasarnya menjadi bagian dari tumpukan standar untuk mengembangkan Dapp pada tahun lalu. Mari lihat bagaimana kita akan melakukan prosesnya secara tradisional...
 
-## Tanpa The Graph... \{#without-the-graph}
+## Tanpa The Graph... {#without-the-graph}
 
 Mari kita memulai dengan contoh sederhana untuk tujuan ilustrasi. Kita semua menyukai game, jadi bayangkan game sederhana di mana pengguna memasang taruhan:
 
@@ -83,7 +83,7 @@ Anda bisa melihat bagaimana ini tidak optimal:
 
 Sekarang, mari kita lihat solusi yang lebih baik.
 
-## Perkenalkan, ini GraphQL \{#let-me-introduce-to-you-graphql}
+## Perkenalkan, ini GraphQL {#let-me-introduce-to-you-graphql}
 
 Pertama, mari kita bicara tentang GraphQL, yang semula dirancang dan diimplementasikan oleh Facebook. Anda mungkin sudah mengenal model API Rest tradisional. Sekarang bayangkan sebaliknya, Anda bisa menulis kueri untuk data yang persis Anda inginkan:
 
@@ -97,7 +97,7 @@ Kedua gambar cukup menangkap inti GraphQL. Dengan kueri di sebelah kanan, kita b
 
 Sekarang dengan pengetahuan itu, mari akhirnya masuk ke dalam ruang blockchain dan The Graph.
 
-## Apa itu The Graph? \{#what-is-the-graph}
+## Apa itu The Graph? {#what-is-the-graph}
 
 Sebuah blockchain adalah basis data terdesentralisasi, tapi berbeda dari basis data umumnya, kita tidak memiliki bahasa kueri untuk basis data ini. Solusi untuk mengambil data sulit atau benar-benar mustahil. The Graph adalah protokol terdesentralisasi untuk mengindeks dan membuat kueri data blockchain. Dan Anda mungkin telah menebaknya, blockchain menggunakan GraphQL sebagai bahasa kuerinya.
 
@@ -105,7 +105,7 @@ Sebuah blockchain adalah basis data terdesentralisasi, tapi berbeda dari basis d
 
 Contoh penggunaan adalah cara paling baik untuk memahami sesuatu, jadi mari kita gunakan The Graph untuk contoh GameContract kita.
 
-## Bagaimana membuat Subgraph \{#how-to-create-a-subgraph}
+## Bagaimana membuat Subgraph {#how-to-create-a-subgraph}
 
 Definisi bagaimana mengindeks data disebut subgraph. Subgraph memerlukan tiga komponen:
 
@@ -113,7 +113,7 @@ Definisi bagaimana mengindeks data disebut subgraph. Subgraph memerlukan tiga ko
 2. Schema (`schema.graphql`)
 3. Mapping (`mapping.ts`)
 
-### Manifest (`subgraph.yaml`) \{#manifest}
+### Manifest (`subgraph.yaml`) {#manifest}
 
 Manifestasi adalah file konfigurasi kita dan menentukan:
 
@@ -157,7 +157,7 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-### Schema (`schema.graphql`) \{#schema}
+### Schema (`schema.graphql`) {#schema}
 
 Skema adalah definisi data GraphQL. Skema akan memungkinkan Anda menentukan entitas mana yang ada dan jenisnya. Jenis yang didukung The Graph adalah
 
@@ -188,7 +188,7 @@ type Player @entity {
 }
 ```
 
-### Mapping (`mapping.ts`) \{#mapping}
+### Mapping (`mapping.ts`) {#mapping}
 
 File pemetaan dalam The Graph menentukan fungsi kita yang mengubah aksi selanjutnya ke dalam entitas. File ini ditulis dalam AssemblyScript, subset dari Typescript. Ini berarti bisa dikompilasi ke dalam WASM (WebAssembly) untuk eksekusi pemetaan yang lebih efisien dan portabel.
 
@@ -240,7 +240,7 @@ export function handleNewBet(event: PlacedBet): void {
 }
 ```
 
-## Menggunakannya pada Frontend \{#using-it-in-the-frontend}
+## Menggunakannya pada Frontend {#using-it-in-the-frontend}
 
 Dengan menggunakan sesuatu seperti Apollo Boost, Anda bisa dengan mudah mengintegrasikan The Graph dalam Dapp React Anda (atau Apollo-Vue). Khususnya ketika menggunakan kail React dan Apollo, mengambil data sesederhana menulis kueri GraphQl tunggal dalam komponen Anda. Pengaturan umumnya mungkin tampak seperti ini:
 
@@ -291,19 +291,19 @@ React.useEffect(() => {
 
 Tapi kita kehilangan satu keping teka-teki terakhirnya dan itu adalah server. Anda bisa entah menjalankannya sendiri atau menggunakan layanan berhost.
 
-## Server The Graph \{#the-graph-server}
+## Server The Graph {#the-graph-server}
 
-### Penjelajah Graph: Layanan berhost \{#graph-explorer-the-hosted-service}
+### Penjelajah Graph: Layanan berhost {#graph-explorer-the-hosted-service}
 
 Cara termudahnya adalah menggunakan layanan berhost. Ikuti instruksinya [di sini](https://thegraph.com/docs/deploy-a-subgraph) untuk menggunakan subgraph. Untuk penggunaan pada banyak proyek, Anda bisa menemukan subgraph yang ada dalam penjelajah di https://thegraph.com/explorer/.
 
 ![Penjelajah Graph](./thegraph-explorer.png)
 
-### Menjalankan node milik Anda sendiri \{#running-your-own-node}
+### Menjalankan node milik Anda sendiri {#running-your-own-node}
 
 Sebagai alternatif, Anda bisa menjalankan node Anda sendiri: https://github.com/graphprotocol/graph-node#quick-start. Satu alasan untuk melakukan ini adalah mungkin karena menggunakan jaringan yang tidak didukung oleh layanan berhost. Saat ini jaringan yang didukung adalah Jaringan Utama, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI, dan Sokol.
 
-## Masa depan terdesentralisasi \{#the-decentralized-future}
+## Masa depan terdesentralisasi {#the-decentralized-future}
 
 GraphQL mendukung penyiaran maupun aksi berikutnya yang baru dibuat. Ini belum sepenuhnya didukung oleh The Graph, tapi itu akan dirilis segera.
 

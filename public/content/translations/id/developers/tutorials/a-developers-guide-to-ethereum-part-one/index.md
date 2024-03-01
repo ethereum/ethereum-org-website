@@ -15,7 +15,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 Jadi, Anda pernah mendengar hal-hal tentang Ethereum dan siap untuk melanjutkan perjalanan yang menakjubkan memasuki lubang kelinci? Postingan ini akan membahas dengan cepat beberapa dasar-dasar blockchain, lalu membawa Anda berinteraksi dengan node Ethereum yang disimulasi – membaca data blok, memeriksa saldo akun, dan mengirim transaksi. Sepanjang perjalanan, kita akan menyoroti perbedaan antara cara tradisional dalam membuat aplikasi dan paradigma terdesentralisasi baru ini.
 
-## Prasyarat (perangkat lunak) \{#soft-prerequisites}
+## Prasyarat (perangkat lunak) {#soft-prerequisites}
 
 Postingan ini bertujuan agar dapat diakses oleh berbagai pengembang. [Peralatan Python](/developers/docs/programming-languages/python/) akan dilibatkan, tetapi hanya sebagai kendaraan bagi ide – bukan masalah jika Anda bukan seorang pengembang Python. Namun, saya akan membuat beberapa asumsi tentang apa yang telah Anda ketahui, sehingga kita dapat dengan cepat beralih dari informasi rinci Ethereum.
 
@@ -26,7 +26,7 @@ Asumsi:
 - Versi Python 3.6 atau yang lebih baru diinstal di mesin Anda (penggunaan [lingkungan virtual](https://realpython.com/effective-python-environment/#virtual-environments) sangat direkomendasikan), dan
 - Anda telah menggunakan `pip`, instaler paket Python. Sekali lagi, jika salah satu dari asumsi ini tidak benar, atau Anda tidak berencana untuk membuat kembali kode dalam artikel ini, Anda kemungkinan masih dapat mengikuti penjelasannya dengan baik.
 
-## Blockchain, secara singkat \{#blockchains-briefly}
+## Blockchain, secara singkat {#blockchains-briefly}
 
 Ada banyak cara untuk mendeskripsikan Ethereum, tetapi pada intinya ini adalah sebuah blockchain. Blockchain terbuat dari kumpulan blok, jadi mari mulai dari sana. Dalam istilah paling sederhana, setiap blok di blockchain Ethereum hanya merupakan beberapa metadata dan sebuah daftar transaksi. Dalam format JSON, itu tampak seperti ini:
 
@@ -55,7 +55,7 @@ Struktur data ini bukanlah hal yang baru, tetapi aturan (maksudnya protokol peer
 
 Satu-satunya cara agar blockchain memverifikasi bahwa uang tersebut benar-benar dikirim dari seorang pengguna ke pengguna lainnya adalah dengan menggunakan mata uang asli dari (maksudnya yang dibuat dan dikelola oleh) blockchain tersebut. Di Ethereum, mata uang ini disebut ether, dan blockchain Ethereum hanya berisi catatan saldo akun yang resmi.
 
-## Sebuah paradigma baru \{#a-new-paradigm}
+## Sebuah paradigma baru {#a-new-paradigm}
 
 Tumpukan teknologi terdesentralisasi yang baru ini telah memunculkan peralatan pengembang yang baru. Peralatan seperti ini ada dalam banyak bahasa pemrograman, tetapi kita akan membahasnya melalui lensa Python. Untuk mengulanginya: meskipun Python bukanlah bahasa pilihan Anda, seharusnya tidak menjadi masalah memahami penjelasan artikel ini.
 
@@ -81,7 +81,7 @@ w3.eth.get_block('latest')
 w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 ```
 
-## Instalasi \{#installation}
+## Instalasi {#installation}
 
 Dalam panduan ini, kita hanya akan berkerja di dalam penerjemah Python. Kita tidak akan membuat direktori, file, kelas, atau fungsi apa pun.
 
@@ -109,7 +109,7 @@ pip install 'web3[tester]'
 
 Anda siap untuk langkah berikutnya!
 
-## Putar kotak pasir \{#spin-up-a-sandbox}
+## Putar kotak pasir {#spin-up-a-sandbox}
 
 Buka lingkungan Python yang baru dengan menjalankan `ipython` di terminal Anda. Ini dapat dibandingkan dengan menjalankan `python`, tetapi hadir dengan lebih banyak fitur spesial.
 
@@ -129,7 +129,7 @@ Anda sedang melihat cangkang Python interaktif. Pada dasarnya, ini adalah sandbo
 In [1]: from web3 import Web3
 ```
 
-## Memperkenalkan modul Web3 \{#introducing-the-web3-module}
+## Memperkenalkan modul Web3 {#introducing-the-web3-module}
 
 Selain menjadi gerbang masuk ke Ethereum, modul [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api) menawarkan beberapa fungsi yang praktis. Mari kita telusuri beberapa di antaranya.
 
@@ -158,7 +158,7 @@ Out[3]: Decimal('0.5')
 
 Metode utilitas lainnya di modul Web3 memasukkan pengubah format data (misalnya, [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)), pembantu alamat (misalnya, [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)), dan fungsi hash (misalnya, [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak)). Beberapa di antaranya akan dibahas nanti dalam seri. Untuk melihat semua metode dan properti yang tersedia, manfaatkan fitur pelengkap otomatis IPython dengan mengetik `Web3`. dan menekan tombol tab dua kali setelah tanda titik.
 
-## Berbicara dengan rantai \{#talk-to-the-chain}
+## Berbicara dengan rantai {#talk-to-the-chain}
 
 Metode praktis memang menarik, tetapi mari beralih ke blockchain. Langkah berikutnya adalah mengonfigurasi Web3.py untuk berkomunikasi dengan node Ethereum. Di sini kita memiliki opsi untuk menggunakan penyedia IPC, HTTP, atau Websocket.
 
@@ -183,7 +183,7 @@ In [4]: w3 = Web3(Web3.EthereumTesterProvider())
 
 Sekarang Anda siap untuk berselancar di atas rantai! Itu bukanlah sesuatu yang dikatakan orang-orang. Saya baru membuat itu. Mari ikuti sebuah tur singkat.
 
-## Tur singkat \{#the-quick-tour}
+## Tur singkat {#the-quick-tour}
 
 Pertama-tama, pemeriksaan kewarasan:
 
@@ -194,7 +194,7 @@ Out[5]: True
 
 Karena kita menggunakan penyedia penguji, ini bukanlah tes yang sangat berharga, tetapi jika gagal, kemungkinannya Anda mengetik sesuatu dengan salah ketika membuat instance variabel `w3`. Periksa ulang apakah Anda memasukkan tanda kurung dalam, misalnya, `Web3.EthereumTesterProvider()`.
 
-## Pemberhentian tur #1: [akun](/developers/docs/accounts/) \{#tour-stop-1-accounts}
+## Pemberhentian tur #1: [akun](/developers/docs/accounts/) {#tour-stop-1-accounts}
 
 Untuk kemnyamanan, penyedia penguji membuat beberapa akun dan memuatnya terlbih dahulu dengan ether pengujian.
 
@@ -225,7 +225,7 @@ Out[8]: Decimal('1000000')
 
 Satu juta ether pengujian — itu masih tidak terlalu buruk.
 
-## Pemberhentian tur #2: data blok \{#tour-stop-2-block-data}
+## Pemberhentian tur #2: data blok {#tour-stop-2-block-data}
 
 Mari mengintip state dari blockchain yang disimulasikan ini:
 
@@ -246,7 +246,7 @@ Banyak informasi tentang sebuah blok dikembalikan, tetapi hanya beberapa hal yan
 - `transactions` adalah sebuah daftar kosong, untuk alasan yang sama: kita belum melakukan apa pun. Blok pertama ini merupakan sebuah **blok kosong**, hanya untuk memulai rantainya.
 - Perhatikan bahwa `parentHash` hanya merupakan sekelompok bita kosong. Ini menandakan bahwa ini adalah blok pertama dalam rantai, yang juga dikenal sebagai **blok genesis**.
 
-## Pemberhentian tur #3: [transaksi](/developers/docs/transactions/) \{#tour-stop-3-transactions}
+## Pemberhentian tur #3: [transaksi](/developers/docs/transactions/) {#tour-stop-3-transactions}
 
 Kita akan terhenti pada blok nol sampai ada transaksi yang akan ditambang, jadi mari kita memberikannya satu transaksi. Kirim sejumlah ether pengujian dari satu akun ke akun lainnya:
 
@@ -298,6 +298,6 @@ Yang terakhir ini tampak baik! Saldonya bertambah dari 1.000.000 ke 1.000.003 et
 <FeaturedText>Catatan: Pada jaringan publik, biaya transaksi bervariasi sesuai dengan permintaan jaringan dan seberapa cepat Anda menginginkan sebuah transaksi diproses. Jika Anda tertarik dengan analisa bagaimana biaya dihitung, lihat posting saya sebelumnya tentang <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">bagaimana transaksi dimasukkan ke dalam sebuah blok</a>.</FeaturedText>
 }
 
-## Dan bernafaslah \{#and-breathe}
+## Dan bernafaslah {#and-breathe}
 
 Kita telah ada di sini untuk beberapa saat, sehingga ini tampaknya tempat yang baik untuk beristirahat sejenak. Perjalanan yang menakjubkan kita terus berlanjut, dan kita akan melanjutkan analisa dalam bagian kedua dari seri panduan ini. Beberapa konsep yang berikutnya akan dibahas: menghubungkan dengan sebuah node asli, kontrak pintar, dan token. Punya pertanyaan tindak lanjut? Beri tahu saya! Umpan balik Anda akan memengaruhi ke mana kita akan pergi dari sini. Permintaan diterima melalui [Twitter](https://twitter.com/wolovim).

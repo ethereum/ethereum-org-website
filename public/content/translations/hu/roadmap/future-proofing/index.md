@@ -9,7 +9,7 @@ template: roadmap
 
 Az útiterv néhány eleme nem feltétlenül a skálázáshoz vagy a biztonsághoz tartozik, hanem stabilizálja és a jövőben is megbízhatóvá teszi az Ethereumot.
 
-## A kvantumnak való ellenállóság \{#quantum-resistance}
+## A kvantumnak való ellenállóság {#quantum-resistance}
 
 A kriptográfia egy része, amely a jelenlegi Ethereumot biztosítja, veszélybe kerül, ahogy a kvantum számítástechnika valósággá válik. Habár a kvantum számítógépek valószínűleg évtizedekre vannak attól, hogy valódi veszélyt jelentsenek a modern kriptográfiának, az Ethereumot úgy építik, hogy évszázadokig működjön. Tehát az [Ethereumot ellenállóvá kell tenni a kvantummal](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) szemben, amilyen gyorsan csak lehet.
 
@@ -21,7 +21,7 @@ A [KZG elköteleződési sémák](/roadmap/danksharding/#what-is-kzg) számos he
 <ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Tudjon meg többet a KZG-ről és a bizalmat igénylő összeállításról</ButtonLink>
 }
 
-## Egyszerűbb és hatékonyabb Ethereum \{#simpler-more-efficient-ethereum}
+## Egyszerűbb és hatékonyabb Ethereum {#simpler-more-efficient-ethereum}
 
 A komplexitás teret ad a hibáknak vagy a sebezhetőségnek, amit a támadók ki tudnak használni. Ezért a útitervnek része az Ethereum leegyszerűsítése, valamint az olyan kódok eltávolítása, amelyek szükségtelenek vagy amelyeket már most tovább lehet fejleszteni. A jól átlátható, egyszerű kódbázis könnyebb fenntarthatóságot tesz lehetővé a fejlesztők számára.
 
@@ -29,7 +29,7 @@ Számos fejlesztést fognak eszközölni az [Ethereum Virtuális Géppel (EVM)](
 
 Hasonlóan, az Ethereum-kliensek más részeit is frissíteni lehet. Például a végrehajtási és konszenzusos kliensek más adattömörítést használnak. Könnyebb és intuitívabb a kliensek közötti adatmegosztás, ha a sémák egységesek az egész hálózaton keresztül.
 
-## Jelenlegi helyzet \{#current-progress}
+## Jelenlegi helyzet {#current-progress}
 
 Az Ethereum jövőbiztossá tételét szolgáló legtöbb ilyen fejlesztés még kutatási fázisban van, és több év is kellhet a bevezetésükhöz. Az olyan fejlesztések, mint a SELF-DESTRUCT eltávolítása, valamint a végrehajtási és konszenzusos kliensben lévő tömörítési séma egységesítése valószínűleg hamarabb megtörténik, mint a kvantumnak ellenálló kriptográfia megvalósítása.
 

@@ -4,7 +4,7 @@ description:
 lang: de
 ---
 
-## Einführung \{#introduction}
+## Einführung {#introduction}
 
 **Was ist ein Token?**
 
@@ -24,13 +24,13 @@ Diese mächtigen Eigenschaften von Ethereum sollten in einem stabilen Standard b
 
 Der ERC-20 führt einen Standard für Fungible Token ein. Mit anderen Worten, sie haben eine Eigenschaft, bei der jeder Token in Bezug auf Typ und Wert anderen Token entspricht. Zum Beispiel verhält sich ein ERC-20-Token genau wie der ETH. Das bedeutet, dass ein Token immer dem Wert aller anderen Token entspricht.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 - [Konten](/developers/docs/accounts)
 - [Smart Contracts](/developers/docs/smart-contracts/)
 - [Token-Standards](/developers/docs/standards/tokens/)
 
-## Hauptteil \{#body}
+## Hauptteil {#body}
 
 Der im November 2015 von Fabian Vogelsteller eingereichte ERC-20-Antrag (Ethereum Request for Comments 20) ist ein Token-Standard, der eine API für Tokens innerhalb von Smart Contracts implementiert.
 
@@ -45,7 +45,7 @@ Wenn ein Smart Contract die folgenden Methoden und Ereignisse implementiert, kan
 
 Von [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
-### Methoden \{#methods}
+### Methoden {#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -59,18 +59,18 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### Events \{#events}
+### Events {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
 event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 ```
 
-### Beispiele \{#web3py-example}
+### Beispiele {#web3py-example}
 
 Sehen wir uns an, wie wichtig ein Standard ist, um uns die Überprüfung jedes ERC-20-Token-Vertrags auf Ethereum zu erleichtern. Wir benötigen lediglich das Contract Application Binary Interface (ABI), um eine Schnittstelle zu einem beliebigen ERC-20-Token zu erstellen. Wie Sie unten sehen können, werden wir ein vereinfachtes ABI verwenden, um es zu einem Beispiel mit geringer Reibung zu machen.
 
-#### Web3.py Beispiel \{#web3py-example}
+#### Web3.py Beispiel {#web3py-example}
 
 Stellen Sie zuerst sicher, dass Sie [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python-Bibliothek installiert haben:
 
@@ -141,7 +141,7 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Token](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)

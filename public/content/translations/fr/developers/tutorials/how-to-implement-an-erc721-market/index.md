@@ -22,7 +22,7 @@ Tout cela a changé avec internet. Le nombre de personnes en mesure de voir un t
 
 Avec la blockchain, ces marchés sont appelés à changer une fois de plus. Laissez-moi vous montrer comment.
 
-## Monétisation \{#monetization}
+## Monétisation {#monetization}
 
 Le business model d'un forum public de petites annonces sur la blockchain devra être différent de celui d'Ebay et d'une entreprise.
 
@@ -38,7 +38,7 @@ Je sens juste ici une occasion de faire des affaires. Il est facile de mettre en
 
 Je suis ravi de m'atteler à la tâche. Jetons un coup d'oeil au code.
 
-## Implémentation \{#implementation}
+## Implémentation {#implementation}
 
 Il y a quelque temps, nous avons lancé un [référentiel de sources ouvertes](https://github.com/HQ20/contracts?ref=hackernoon.com) avec des exemples de concrétiser d'opportunités commerciales et d'autres goodies, veuillez y jeter un coup d'œil.
 
@@ -138,7 +138,7 @@ function cancelTrade(uint256 _trade)
 
 C’est tout. Vous êtes arrivé à la fin de l'implémentation. Il est assez surprenant de constater à quel point certains concepts commerciaux sont compacts lorsqu'ils sont exprimés en code, et c'est l'un de ces cas. Consultez le contrat complet [dans notre référentiel](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
-## Conclusion \{#conclusion}
+## Conclusion {#conclusion}
 
 Les forums de petites annonces sont une configuration de marché commune qui s'est développée massivement avec internet, au point de devenir un business model extrêmement populaire avec quelques acteurs gagnants en situation de monopole.
 

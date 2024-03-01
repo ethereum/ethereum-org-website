@@ -9,11 +9,11 @@ A sidechain is a separate blockchain that runs independent of Ethereum and is co
 
 Sidechains also sacrifice some measure of decentralization or security to achieve high throughput ([scalability trilemma](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Ethereum is, however, committed to scaling without compromising on decentralization and security as outlined in its [vision statement](/roadmap/vision/) for upgrades.
 
-## How do sidechains work? \{#how-do-sidechains-work}
+## How do sidechains work? {#how-do-sidechains-work}
 
 Sidechains are independent blockchains, with different histories, development roadmaps, and design considerations. While a sidechain may share some surface-level similarities with Ethereum, it has several distinctive features.
 
-### Consensus algorithms \{#consensus-algorithms}
+### Consensus algorithms {#consensus-algorithms}
 
 One of the qualities that make sidechains unique (i.e., different from Ethereum) is the consensus algorithm used. Sidechains don't rely on Ethereum for consensus and can choose alternative consensus protocols that suit their needs. Some examples of consensus algorithms used on sidechains include:
 
@@ -23,7 +23,7 @@ One of the qualities that make sidechains unique (i.e., different from Ethereum)
 
 Like Ethereum, sidechains have validating nodes that verify and process transactions, produce blocks, and store the blockchain state. Validators are also responsible for maintaining consensus across the network and securing it against malicious attacks.
 
-#### Block parameters \{#block-parameters}
+#### Block parameters {#block-parameters}
 
 Ethereum places limits on [block times](/developers/docs/blocks/#block-time) (i.e., the time it takes to produce new blocks) and [block sizes](/developers/docs/blocks/#block-size) (i.e., the amount of data contained per block denominated in gas). Conversely, sidechains often adopt different parameters, such as faster block times and higher gas limits, to achieve high throughput, fast transactions, and low fees.
 
@@ -31,7 +31,7 @@ While this has some benefits, it has critical implications for network decentral
 
 For blockchains to scale without harming decentralization, running a node must be open to everyone—not necessarily parties with specialized hardware. This is why efforts are underway to ensure everyone can [run a full node](/developers/docs/nodes-and-clients/#why-should-i-run-an-ethereum-node) on the Ethereum network.
 
-### EVM compatibility \{#evm-compatibility}
+### EVM compatibility {#evm-compatibility}
 
 Some sidechains are EVM-compatible and are able to execute contracts developed for the [Ethereum Virtual Machine (EVM)](/developers/docs/evm/). EVM-compatible sidechains support smart contracts [written in Solidity](/developers/docs/smart-contracts/languages/), as well as other EVM smart contract languages, which means smart contracts written for Ethereum Mainnet will also work on EVM-compatible sidechains.
 
@@ -41,13 +41,13 @@ Because sidechains are EVM-compatible, they are considered a useful [scaling sol
 
 However, as explained previously, using a sidechain involves significant trade-offs. Each sidechain is responsible for its security and doesn't inherit Ethereum's security properties. This increases the possibility of malicious behavior which can affect your users or put their funds at risk.
 
-### Asset movement \{#asset-movement}
+### Asset movement {#asset-movement}
 
 In order for a separate blockchain to become a sidechain to Ethereum Mainnet it needs the ability to facilitate the transfer of assets from and to Ethereum Mainnet. This interoperability with Ethereum is achieved using a blockchain bridge. [Bridges](/bridges/) use smart contracts deployed on Ethereum Mainnet and a sidechain to control the bridging of funds between them.
 
 While bridges help users move funds between Ethereum and the sidechain, the assets are not physically moved across the two chains. Instead, mechanisms that typically involve minting and burning are used for transferring value across chains. More on [how bridges work](/developers/docs/bridges/#how-do-bridges-work).
 
-## Pros and cons of sidechains \{#pros-and-cons-of-sidechains}
+## Pros and cons of sidechains {#pros-and-cons-of-sidechains}
 
 | Pros                                                                                                                        | Cons                                                                                                             |
 | --------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- |
@@ -56,7 +56,7 @@ While bridges help users move funds between Ethereum and the sidechain, the asse
 | Sidechains use different consensus models to efficiently process transactions and lower transaction fees for users.         | Sidechains require higher trust assumptions (e.g., a quorum of malicious sidechain validators can commit fraud). |
 | EVM-compatible sidechains allow dapps to expand their ecosystem.                                                            |                                                                                                                  |
 
-### Use Sidechains \{#use-sidechains}
+### Use Sidechains {#use-sidechains}
 
 Multiple projects provide implementations of sidechains that you can integrate into your dapps:
 
@@ -66,7 +66,7 @@ Multiple projects provide implementations of sidechains that you can integrate i
 - [Loom Network](https://loomx.io/)
 - [Metis Andromeda](https://www.metis.io/)
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [Scaling Ethereum dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 

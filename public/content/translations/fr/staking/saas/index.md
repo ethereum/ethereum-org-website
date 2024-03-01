@@ -13,11 +13,11 @@ summaryPoints:
   - Réduire la confiance et conserver la garde de vos clés de retrait
 ---
 
-## Qu'est-ce que la mise en jeu en tant que service ? \{#what-is-staking-as-a-service}
+## Qu'est-ce que la mise en jeu en tant que service ? {#what-is-staking-as-a-service}
 
 Staking as a service ("la mise en jeu en tant que service, ou SaaS”) est une catégorie de services de mise en jeu au sein de laquelle vous déposez vos propres 32 ETH pour un validateur, mais déléguez les opérations de nœuds à un opérateur tiers. Ce processus implique généralement d'être guidé à travers la configuration initiale, y compris la génération de clés et le dépôt, puis de télécharger vos clés de signature à l'opérateur. Cela permet au service d'exploiter votre validateur en votre nom, généralement moyennant des frais mensuels.
 
-## Pourquoi miser via un service? \{#why-stake-with-a-service}
+## Pourquoi miser via un service? {#why-stake-with-a-service}
 
 Le protocole Ethereum ne soutient pas nativement la délégation de mise en jeu. Ces services ont donc été construits pour répondre à cette demande. Si vous avez 32 ETH à miser, mais que vous ne vous sentez pas à l'aise avec le matériel, les services SaaS vous permettent de déléguer la partie complexe pendant que vous gagnez des récompenses de bloc natif.
 
@@ -31,7 +31,7 @@ Le protocole Ethereum ne soutient pas nativement la délégation de mise en jeu.
 <StakingComparison page="saas" />
 }
 
-## Ce que vous devez prendre en compte \{#what-to-consider}
+## Ce que vous devez prendre en compte {#what-to-consider}
 
 Il existe un nombre croissant de fournisseurs de services SaaS pour vous aider à miser votre ETH, mais chacun présente ses propres avantages et risques. Toutes les options SaaS requièrent des hypothèses de confiance supplémentaires par rapport à la mise en jeu individuelle depuis le domicile. Les options Saas peuvent contenir du code supplémentaire qui n'est ni ouvert ni auditable, pour les clients Ethereum. Le SaaS a également un effet préjudiciable sur la décentralisation du réseau. Selon la configuration, il se peut que vous ne contrôliez pas votre validateur - l'opérateur pourrait agir malhonnêtement en utilisant votre ETH.
 
@@ -41,7 +41,7 @@ Les indicateurs sont listés ci-dessous pour signaler les forces ou faiblesses n
 <StakingConsiderations page="saas" />
 }
 
-## Explorer les fournisseurs de services de mise en jeu \{#saas-providers}
+## Explorer les fournisseurs de services de mise en jeu {#saas-providers}
 
 Vous trouverez ci-dessous quelques fournisseurs SaaS disponibles. Utilisez les indicateurs ci-dessus pour vous guider à travers les outils ci-dessous
 
@@ -65,7 +65,7 @@ Veuillez noter l'importance de choisir un service qui prend au sérieux [la dive
 
 Avez-vous une suggestion concernant un fournisseur de mise en jeu en tant que service que nous avons manqué ? Consultez notre [politique de liste de produits](/contributing/adding-staking-products/) pour voir s'il conviendrait, et le soumettre à examen.
 
-## Questions fréquemment posées \{#faq}
+## Questions fréquemment posées {#faq}
 
 {
 <ExpandableCard title="Qui détient mes clés?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
@@ -107,7 +107,7 @@ Communiquez avec un fournisseur individuel de SaaS pour obtenir davantage de dé
 </ExpandableCard>
 }
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [L'Annuaire de la mise en jeu sur Ethereum.](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Helping Client Diversity](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

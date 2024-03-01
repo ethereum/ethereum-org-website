@@ -17,9 +17,9 @@ When looking at decentralized storage (dStorage) options, there are a few things
 - Decentrality
 - Consensus
 
-## Persistence mechanism / incentive structure \{#persistence-mechanism}
+## Persistence mechanism / incentive structure {#persistence-mechanism}
 
-### Blockchain-based \{#blockchain-based}
+### Blockchain-based {#blockchain-based}
 
 For a piece of data to persist forever, we need to use a persistence mechanism. For example, on Ethereum, the persistence mechanism is that the whole chain needs to be accounted for when running a node. New pieces of data get tacked onto the end of the chain, and it continues to grow - requiring every node to replicate all the embedded data.
 
@@ -34,7 +34,7 @@ Platforms with blockchain-based persistence:
 - Ethereum
 - [Arweave](https://www.arweave.org/)
 
-### Contract-based \{#contract-based}
+### Contract-based {#contract-based}
 
 **Contract-based** persistence has the intuition that data cannot be replicated by every node and stored forever, and instead must be upkept with contract agreements. These are agreements made with multiple nodes that have promised to hold a piece of data for a period of time. They must be refunded or renewed whenever they run out to keep the data persisted.
 
@@ -50,7 +50,7 @@ Platforms with contract-based persistence:
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
 
-### Additional considerations \{#additional-consideration}
+### Additional considerations {#additional-consideration}
 
 IPFS is a distributed system for storing and accessing files, websites, applications, and data. It doesn't have a built-in incentive scheme, but can instead be used with any of the contract-based incentive solutions above for longer-term persistence. Another way to persist data on IPFS is to work with a pinning service, which will "pin" your data for you. You can even run your own IPFS node and contribute to the network to persist your and/or other's data for free!
 
@@ -64,11 +64,11 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 
 SWARM is a decentralized data storage and distribution technology with a storage incentive system and a storage rent price oracle.
 
-## Data retention \{#data-retention}
+## Data retention {#data-retention}
 
 In order to retain data, systems must have some sort of mechanism to make sure data is retained.
 
-### Challenge mechanism \{#challenge-mechanism}
+### Challenge mechanism {#challenge-mechanism}
 
 One of the most popular ways to make sure data is retained, is to use some type of cryptographic challenge that is issued to the nodes to make sure they still have the data. A simple one is looking at Arweave's proof-of-access. They issue a challenge to the nodes to see if they have the data at both the most recent block and a random block in the past. If the node can't come up with the answer, they are penalized.
 
@@ -81,7 +81,7 @@ Types of dStorage with a challenge mechanism:
 - Crust Network
 - 4EVERLAND
 
-### Decentrality \{#decentrality}
+### Decentrality {#decentrality}
 
 There aren't great tools to measure the level of decentralization of platforms, but in general, you'll want to use tools that don't have some form of KYC to provide evidence they are not centralized.
 
@@ -96,7 +96,7 @@ Decentralized tools without KYC:
 - Crust Network
 - 4EVERLAND
 
-### Consensus \{#consensus}
+### Consensus {#consensus}
 
 Most of these tools have their own version of a [consensus mechanism](/developers/docs/consensus-mechanisms/) but generally they are based on either [**proof-of-work (PoW)**](/developers/docs/consensus-mechanisms/pow/) or [**proof-of-stake (PoS)**](/developers/docs/consensus-mechanisms/pos/).
 
@@ -112,7 +112,7 @@ Proof-of-stake based:
 - 0Chain
 - Crust Network
 
-## Related tools \{#related-tools}
+## Related tools {#related-tools}
 
 **IPFS - _InterPlanetary File System is a decentralized storage and file referencing system for Ethereum._**
 
@@ -198,13 +198,13 @@ Proof-of-stake based:
 - [Documentation](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [What Is Decentralized Storage?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [Busting Five Common Myths about Decentralized Storage](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics \{#related-topics}
+## Related topics {#related-topics}
 
 - [Development frameworks](/developers/docs/frameworks/)

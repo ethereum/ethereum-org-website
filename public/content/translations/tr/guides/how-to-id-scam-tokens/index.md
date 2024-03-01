@@ -4,7 +4,7 @@ description: Dolandırıcılık token'larını, kendilerini nasıl meşru göste
 lang: tr
 ---
 
-# Dolandırıcılık token'ları nasıl tespit edilir \{#identify-scam-tokens}
+# Dolandırıcılık token'ları nasıl tespit edilir {#identify-scam-tokens}
 
 Ethereum'un en yaygın kullanımlarından biri, bir grubun bir anlamda kendi para birimi olan ticareti yapılabilen bir token oluşturmasıdır. Bu token'ları genelde bir standarda uyar, [ERC-20](/developers/docs/standards/tokens/erc-20/). Ancak, değer getiren meşru kullanım şekilleri bulunan her yerde, söz konusu değeri kendisi için çalmaya çalışan suçlular bulunur.
 
@@ -37,7 +37,7 @@ Hali hazırda Ethereum üzerinde bulunan bir ERC-20 token'ının sarılı bir ve
 </ExpandableCard>
 }
 
-## Dolandırıcılık token'ları nasıl çalışır? \{#how-do-scam-tokens-work}
+## Dolandırıcılık token'ları nasıl çalışır? {#how-do-scam-tokens-work}
 
 Ethereum'un tüm meselesi merkeziyetsizliktir. Bu varlıklarınıza el koyabilecek veya bir akıllı sözleşme yayımlamanızı engelleyecek bir merkezi otorite bulunmadığı anlamına gelir. Ancak, ayrıca dolandırıcıların da istedikleri herhangi bir akıllı sözleşmeyi yayımlayabilecekleri anlamına gelir.
 
@@ -53,7 +53,7 @@ contentPreview=''>
 
 Spesifik olarak, Arbitrum `ARB` sembolünü kullanan bir sözleşme yayımladı. Ancak bu diğer kişilerin benzer veya tam olarak aynı sembolü kullanan bir sözleşme yayımlamasını engellemez. Sözleşmeyi yazan kişi sözleşmenin ne yapacağına karar verir.
 
-## Meşru görünme \{#appearing-legitimate}
+## Meşru görünme {#appearing-legitimate}
 
 Meşru görünmek için dolandırıcılık token'ı oluşturanların kullandığı bazı hileler vardır.
 
@@ -67,13 +67,13 @@ Meşru görünmek için dolandırıcılık token'ı oluşturanların kullandığ
 
 - **Meşru transferler**. _Meşru sahipler bir dolandırıcılık token'ını diğerlerine transfer etmek için para ödemezdi, yani transferler varsa meşru olmalı, değil mi?_ **Yanlış**. `Transfer` olayları ERC-20 sözleşmesi tarafından üretilir. Bir dolandırıcı sözleşmeyi bu olayları kolayca oluşturacak biçimde yazabilir.
 
-## Dolandırıcı web siteleri \{#websites}
+## Dolandırıcı web siteleri {#websites}
 
 Dolandırıcılar ayrıca gayet ikna edici web siteleri, hatta bazen aynı kullanıcı arayüzlerine sahip, ancak göze çarpmayan hileler içeren gerçek sitelerin birebir sahtelerini bile oluşturabilirler. Bazı örnekleri meşru görünen dış bağlantıların kullanıcıları dış bir dolandırıcılık sitesine yollaması, kullanıcıyı anahtarlarını ifşa etmeye yönlendiren veya saldırganın hesabına fon gönderten yanlış yönergeler olabilir.
 
 Bundan kaçınmak için en iyi yol ziyaret ettiğiniz sitelerin URL'sini dikkatlice kontrol etmeniz ve bilinen gerçek sitelerin adreslerini yer işaretlerinize kaydetmenizdir. Bunun sayesinde, yazım hataları yapmadan veya dış bağlantılara bağlı kalmadan yer işaretlerinizden gerçek siteye erişebilirsiniz.
 
-## Kendinizi nasıl korursunuz? \{#protect-yourself}
+## Kendinizi nasıl korursunuz? {#protect-yourself}
 
 1. **Sözleşme adresini kontrol edin**. Meşru token'lar meşru organizasyonlardan gelir ve sözleşme adreslerini organizasyonun web sitesinden görebilirsiniz. Örneğin, [`ARB` için meşru adresleri buradan görebilirsiniz](https://docs.arbitrum.foundation/deployment-addresses#token).
 
@@ -93,7 +93,7 @@ Bu `wARB` token'ının muhtemelen meşru olmadığını gösteren başka bir kan
 
    ![Etherscan'de dolandırıcılık token'ı](./etherscan-scam.png)
 
-## Sonuç \{#conclusion}
+## Sonuç {#conclusion}
 
 Dünya'da değer oldukça, bu değeri kendisi için çalmaya çalışan dolandırıcılar olacaktır ve merkeziyetsiz bir dünyada kendiniz hariç sizi koruyacak kimse yoktur. Umuyoruz ki, dolandırıcılıklar ile meşru token'ları ayrıştırmak için bu maddeleri hatırlarsınız:
 

@@ -8,21 +8,21 @@ lang: ja
 
 イーサリアムアカウントは異なるネットワークすべてで使用できますが、アカウント残高とトランザクション履歴はメインネットから継承されません。 テスト目的に利用可能なネットワークと、テストネットの ETH を取得する方法を知っておくと有用です。 セキュリティの観点から、一般にはメインネットのアカウントをテストネットで再利用すること(またはその逆)は推奨されません。
 
-## 前提知識 \{#prerequisites}
+## 前提知識 {#prerequisites}
 
 テストネットワークは試用目的として、安価で安全なイーサリアムを提供します。それぞれのネットワークを読み進める前に、[イーサリアムの基本](/developers/docs/intro-to-ethereum/)を理解する必要があります。
 
-## パブリックネットワーク \{#public-networks}
+## パブリックネットワーク {#public-networks}
 
 パブリックネットワークは、インターネット接続で世界中の誰でもアクセスできます。 誰でも公開ブロックチェーン上でトランザクションを読み取りまたは作成し、実行されているトランザクションを検証できます。 ピア間のコンセンサスにより、トランザクションとネットワークの状態を追加するかが決まります。
 
-### イーサリアムメインネット \{#ethereum-mainnet}
+### イーサリアムメインネット {#ethereum-mainnet}
 
 メインネットは、プライマリ、パブリックのイーサリアム本番環境のブロックチェーンであり、実際の価値を持つトランザクションが分散台帳上で実行されています。
 
 ユーザーと取引所が ETH 価格について話す場合は、メインネットの ETH を指しています。
 
-### イーサリアムテストネット \{#ethereum-testnets}
+### イーサリアムテストネット {#ethereum-testnets}
 
 メインネットに加えて、パブリックのテストネットがあります。 このテストネットは、プロトコルやスマートコントラクトのデベロッパーが、メインネットへデプロイする前に、実際の運用環境でプロトコルの更新や将来的なスマートコントラクトの双方をテストするためのネットワークです。 これは一般のウェブ開発における、本番とステージングサーバと同じようなものと考えてください。
 
@@ -36,7 +36,7 @@ lang: ja
 
 現在クライアントデベロッパーによってメンテナンスされているパブリックのテストネットは、Sepolia と Goerli の 2 つです。 Sepolia は、コントラクトやアプリケーションのデベロッパーのためのネットワークで、アプリケーションのテストに使用されます。 Goerli は、プロトコルのデベロッパーがネットワークのアップグレードをテストしたり、ステーカーがバリデータの実行をテストしたりするために使用されるネットワークです。
 
-#### Sepolia(セポリア) \{#sepolia}
+#### Sepolia(セポリア) {#sepolia}
 
 **Sepolia はアプリケーション開発に推奨されるデフォルトのテストネットです。** Sepolia ネットワークは、許可型のバリデータセットを使用しています。 また、まだ新しいものであるため、ステートや履歴などデータ量が少ないことも特徴です。 そのため、ネットワークを素早く同期でき、ノードを実行するのに必要なストレージ容量が少なくて済みます。 これは、ノードを素早く起動してネットワークと直接やり取りしたい場合に便利です。
 
@@ -59,7 +59,7 @@ lang: ja
 - [Coinbase Wallet フォーセット | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia フォーセット](https://sepoliafaucet.com/)
 
-#### Goerli(ゴエリ) _(長期サポート)_ \{#goerli}
+#### Goerli(ゴエリ) _(長期サポート)_ {#goerli}
 
 _注: [Goerli テストネットは廃止予定となっており](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)、2023 年に[Holesovice](https://github.com/eth-clients/holesovice)に置き換わります。 アプリケーションの Sepolia への移行をご検討ください。_
 
@@ -88,11 +88,11 @@ Goerli は、バリデーションやステーキングのテストを行うた�
 
 Goerli テストネットでバリデータを起動するには、ethstaker の["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/)を使用してください。
 
-### レイヤー 2 テストネット \{#layer-2-testnets}
+### レイヤー 2 テストネット {#layer-2-testnets}
 
 [レイヤー 2(L2)](/layer-2/)は、イーサリアムのスケーリングソリューションの総称であり、 レイヤー 2 はイーサリアムを拡張し、またイーサリアムのセキュリティ保証を継承する独立したブロックチェーンです。 レイヤー 2 のテストネットは、通常、パブリックイーサリアムのテストネットと対になっています。
 
-#### Arbitrum Goerli \{#arbitrum-goerli}
+#### Arbitrum Goerli {#arbitrum-goerli}
 
 [Arbitrum](https://arbitrum.io/)のテストネット。
 
@@ -100,7 +100,7 @@ Goerli テストネットでバリデータを起動するには、ethstaker の
 
 - [Chainlink フォーセット](https://faucets.chain.link/)
 
-#### Optimistic Goerli \{#optimistic-goerli}
+#### Optimistic Goerli {#optimistic-goerli}
 
 [Optimism](https://www.optimism.io/)のテストネット。
 
@@ -109,7 +109,7 @@ Goerli テストネットでバリデータを起動するには、ethstaker の
 - [Paradigm faucet](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
-#### Starknet Goerli \{#starknet-goerli}
+#### Starknet Goerli {#starknet-goerli}
 
 [Starknet](https://www.starknet.io)のテストネット
 
@@ -117,28 +117,28 @@ Goerli テストネットでバリデータを起動するには、ethstaker の
 
 - [Starknet フォーセット](https://faucet.goerli.starknet.io)
 
-## プライベートネットワーク \{#private-networks}
+## プライベートネットワーク {#private-networks}
 
 イーサリアムネットワークは、ノードがパブリックネットワーク(メインネットやテストネット) に接続されていない場合は、プライベートネットワークとなります。 ここでのプライベートとは、保護されており安全という意味ではなく、他のネットワークから分離されているという意味です。
 
-### 開発フレームワーク \{#development-networks}
+### 開発フレームワーク {#development-networks}
 
 イーサリアムアプリケーションを構築する場合は、プライベートネットワークで実行して、デプロイする前に動作確認をすることをお勧めします。 自身のコンピュータ上でローカルサーバを作成し、Web 開発するのと同様に、ローカルのブロックチェーンインスタンスを作成し、開発中の分散型アプリ(Dapp)をテストできます。 プライベートネットワークでのテストは、パブリックテストネットよりもはるかに高速に反復処理を行うことができます。
 
 これをサポートするためのプロジェクトやツールがあります。 [開発ネットワーク](/developers/docs/development-networks/)の詳細をご覧ください。
 
-### コンソーシアムネットワーク \{#consortium-networks}
+### コンソーシアムネットワーク {#consortium-networks}
 
 コンセンサスプロセスは、信頼される事前定義された一連のノードにより制御されます。 例えば、既知の学術機関のプライベートネットワークが単一ノードを管理し、ブロックはネットワークの署名者数のしきい値により検証されます。
 
 パブリックイーサリアムネットワークがパブリックなインターネットだとすると、コンソーシアムネットワークはプライベートなイントラネットと考えることができます。
 
-## 関連ツール \{#related-tools}
+## 関連ツール {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _ウォレットとプロバイダを適切なチェーン ID とネットワーク ID に接続する EVM ネットワークのリスト_
 - [EVM ベースのチェーン](https://github.com/ethereum-lists/chains) *Chainlist*を動かすチェーンメタデータの GitHub リポジトリ
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 - [提案: 予測可能なイーサリアムテストネットのライフサイクル](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [イーサリアムテストネットの進化](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

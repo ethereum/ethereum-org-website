@@ -8,7 +8,7 @@ Geliştiricilerin, Ethereum üzerinde inşa etmek için [akıllı sözleşmeler]
 
 Ethereum ve topluluğu açık kaynak ile iç içecidir. Geniş bir dil yelpazesinde topluluk projeleri; istemci uygulamaları, API'ler, geliştirme çerçeveleri, test araçları bulabilirsiniz.
 
-## Dilinizi seçin \{#data}
+## Dilinizi seçin {#data}
 
 Projeler, kaynaklar ve sanal topluluklar bulmak için tercih ettiğiniz programlama dilini seçin:
 
@@ -22,7 +22,7 @@ Projeler, kaynaklar ve sanal topluluklar bulmak için tercih ettiğiniz programl
 - [Ruby geliştiricileri için Ethereum](/developers/docs/programming-languages/ruby/)
 - [Rust Geliştiricileri için Ethereum](/developers/docs/programming-languages/rust/)
 
-### Konuştuğunuz dil desteklenmiyorsa \{#other-lang}
+### Konuştuğunuz dil desteklenmiyorsa {#other-lang}
 
 Eğer ek bir programlama dili için kaynaklara yönlendirmek veya sanal bir topluluğa işaret etmek istiyorsanız [bir konu açarak](https://github.com/ethereum/ethereum-org-website/issues/new/choose) yeni bir sayfa talep edebilirsiniz.
 

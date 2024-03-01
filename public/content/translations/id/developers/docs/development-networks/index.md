@@ -8,11 +8,11 @@ Ketika menyusun aplikasi Ethereum dengan kontrak pintar, Anda ingin menjalankann
 
 Mirip dengan cara Anda menjalankan server lokal di komputer Anda untuk pengembangan web, Anda bisa menggunakan jaringan pengembangan untuk membuat instance blockchain lokal guna menguji dapp. Jaringan pengembangan Ethereum ini menyediakan fitur yang memungkinkan pengulangan lebih cepat daripada testnet publik (contohnya, Anda tidak perlu menangani perolehan ETH dari keran testnet).
 
-## Prasyarat \{#prerequisites}
+## Prasyarat {#prerequisites}
 
 Anda harus memahami [dasar-dasar tentang tumpukan Ethereum](/developers/docs/ethereum-stack/) dan [jaringan Ethereum](/developers/docs/networks/) sebelum menyelami jaringan pengembangan.
 
-## Apa yang dimaksud jaringan pengembangan? \{#what-is-a-development-network}
+## Apa yang dimaksud jaringan pengembangan? {#what-is-a-development-network}
 
 Jaringan pengembangan pada dasarnya adalah klien Ethereum (implementasi Ethereum) yang didesain secara khusus untuk pengembangan lokal.
 
@@ -24,11 +24,11 @@ Anda _dapat_ [menjalankan node](/developers/docs/nodes-and-clients/#running-your
 - Secara instan menambang blok dengan tiap transaksi yang diterima, secara berurutan dan tanpa penundaan
 - Fungsionalitas pembuatan log dan melakukan debug yang disempurnakan
 
-## Peralatan yang tersedia \{#available-projects}
+## Peralatan yang tersedia {#available-projects}
 
 **Catatan**: Sebagian besar [kerangka kerja pengembangan](/developers/docs/frameworks/) menyertakan jaringan pengembangan bawaan. Kami menyarankan memulai dengan kerangka kerja untuk [menyiapkan lingkungan pengembangan lokal Anda](/developers/local-environment/).
 
-### Ganache \{#ganache}
+### Ganache {#ganache}
 
 Dengan cepat menjalankan blockchain Ethereum pribadi yang bisa Anda gunakan untuk menjalankan pengujian, mengeksekusi perintah, dan memeriksa state, sambil mengontrol bagaimana rantai bekerja.
 
@@ -38,7 +38,7 @@ Ganache menyediakan aplikasi desktop (UI Ganache), serta peralatan baris perinta
 - [GitHub](https://github.com/trufflesuite/ganache)
 - [Dokumentasi](https://www.trufflesuite.com/docs/ganache/overview)
 
-### Jaringa Hardhat \{#hardhat-network}
+### Jaringa Hardhat {#hardhat-network}
 
 Jaringan Ethereum lokal yang didesain untuk pengembangan. Jaringan ini memungkinkan Anda menggunakan kontrak, menjalankan pengujian, dan melakukan debug kode Anda
 
@@ -47,11 +47,11 @@ Jaringan Hardhat tersedia dengan Hardhat bawaan, sebuah lingkungan pengembangan 
 - [Situs web](https://hardhat.org/)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
-## Topik terkait \{#related-topics}
+## Topik terkait {#related-topics}
 
 - [Kerangka kerja pengembangan](/developers/docs/frameworks/)
 - [Menyiapkan lingkungan pengembangan lokal](/developers/local-environment/)

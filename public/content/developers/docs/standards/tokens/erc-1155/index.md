@@ -4,7 +4,7 @@ description:
 lang: en
 ---
 
-## Introduction \{#introduction}
+## Introduction {#introduction}
 
 A standard interface for contracts that manage multiple token types. A single deployed contract may include any combination of fungible tokens, non-fungible tokens or other configurations (e.g. semi-fungible tokens).
 
@@ -14,11 +14,11 @@ The idea is simple and seeks to create a smart contract interface that can repre
 
 The ERC-1155 token is described fully in [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
-## Prerequisites \{#prerequisites}
+## Prerequisites {#prerequisites}
 
 To better understand this page, we recommend you first read about [token standards](/developers/docs/standards/tokens/), [ERC-20](/developers/docs/standards/tokens/erc-20/), and [ERC-721](/developers/docs/standards/tokens/erc-721/).
 
-## ERC-1155 Functions and Features: \{#body}
+## ERC-1155 Functions and Features: {#body}
 
 - [Batch Transfer](#batch_transfers): Transfer multiple assets in a single call.
 - [Batch Balance](#batch_balance): Get the balances of multiple assets in a single call.
@@ -27,7 +27,7 @@ To better understand this page, we recommend you first read about [token standar
 - [NFT Support](#nft_support): If supply is only 1, treat it as NFT.
 - [Safe Transfer Rules](#safe_transfer_rule): Set of rules for secure transfer.
 
-### Batch Transfers \{#batch-transfers}
+### Batch Transfers {#batch-transfers}
 
 The batch transfer works very similar to regular ERC-20 transfers. Let's look at the regular ERC-20 `transferFrom` function:
 
@@ -53,7 +53,7 @@ The only difference in ERC-1155 is that we pass the values as an array and we al
 
 In ERC-1155 we only have `transferFrom`, no `transfer`. To use it like a regular `transfer`, just set the from address to the address that's calling the function.
 
-### Batch Balance \{#batch-balance}
+### Batch Balance {#batch-balance}
 
 The respective ERC-20 `balanceOf` call likewise has its partner function with batch support. As a reminder, this is the ERC-20 version:
 
@@ -80,7 +80,7 @@ For example given `_ids=[3, 6, 13]` and `_owners=[0xbeef..., 0x1337..., 0x1111..
 ]
 ```
 
-### Batch Approval \{#batch-approval}
+### Batch Approval {#batch-approval}
 
 ```solidity
 // ERC-1155
@@ -101,7 +101,7 @@ Reading the current status can be done via `isApprovedForAll`. As you can see, i
 
 This is intentionally designed with simplicity in mind. You can only approve everything for one address.
 
-### Receive Hook \{#receive-hook}
+### Receive Hook {#receive-hook}
 
 ```solidity
 function onERC1155BatchReceived(
@@ -121,11 +121,11 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 When the receiving contract returns this value, it is assumed the contract accepts the transfer and knows how to handle the ERC-1155 tokens. Great, no more stuck tokens in a contract!
 
-### NFT Support \{#nft-support}
+### NFT Support {#nft-support}
 
 When the supply is just one, the token is essentially a non-fungible token (NFT). And as is standard for ERC-721, you can define a metadata URL. The URL can be read and modified by clients, see [here](https://eips.ethereum.org/EIPS/eip-1155#metadata).
 
-### Safe Transfer Rule \{#safe-transfer-rule}
+### Safe Transfer Rule {#safe-transfer-rule}
 
 We've touched on a few safe transfer rules already in the previous explanations. But let's look at the most important of the rules:
 
@@ -138,7 +138,7 @@ We've touched on a few safe transfer rules already in the previous explanations.
 
 _Note_: All batch functions including the hook also exist as versions without batch. This is done for gas efficiency, considering transferring just one asset will likely still be the most commonly used way. We've left them out for simplicity in the explanations, including safe transfer rules. The names are identical, just remove the 'Batch'.
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [EIP-1155: Multi Token Standard](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Openzeppelin Docs](https://docs.openzeppelin.com/contracts/3.x/erc1155)

@@ -8,7 +8,7 @@ summaryPoints:
   - Las claves perdidas y expuestas se pueden recuperar usando múltiples copias de seguridad.
 ---
 
-# Abstracción de Cuenta \{#account-abstraction}
+# Abstracción de Cuenta {#account-abstraction}
 
 Los usuarios interactúan con Ethereum usando **[cuentas de propiedad externa (o EOA)](/glossary/#eoa)**. Esta es la única forma de empezar una transacción o generar un contrato inteligente. Esto limita cómo los usuarios pueden interactuar con Ethereum. Por ejemplo, dificulta la creación de transacciones en lote y requiere que los usuarios siempre mantengan un saldo en ETH para costear el gas.
 
@@ -34,7 +34,7 @@ Las carteras de contrato inteligente son la solución a este problema, aunque ho
 
 En última instancia, la abstracción de la cuenta respalda a las carteras de contrato inteligente, simplificando su construir y protegiendo su uso. Con la abstracción de cuenta, los usuarios pueden disfrutar de todos los beneficios de Ethereum sin tener que conocer ni preocuparse por los detalles tecnológicos.
 
-## Más allá de las fases semilla \{#beyond-seed-phrases}
+## Más allá de las fases semilla {#beyond-seed-phrases}
 
 Las cuentas de la actualidad son seguras porque usan claves privadas que son calculadas a partir de fases semilla. Cualquier persona que tenga acceso a una fase semilla puede fácilmente descubrir la clave privada que protege una cuenta y acceder a todos los activos que protege. Si se pierden una clave privada y una frase semilla, nunca podrá recuperarlas y los activos que controlaban se congelarán para siempre. Es complejo proteger estas frases semilla, incluso para los usuarios más expertos; la estafa de la frase semilla es una de las formas más comunes de fraude electrónico.
 
@@ -50,7 +50,7 @@ Por ejemplo, se pueden añadir claves de copia de seguridad a la cartera por si 
 - **Establecer limites de transacción**: especificar umbrales diarios dependiendo de cuánto valor se pueda transferir desde la cuenta en un día/mes/año. Esto significa que si un intruso acede a su cuenta, no podrá sacar todo de una vez y usted tendrá ocasiones de congelar y restablecer el acceso.
 - **Crear listas blancas**: solo permite realizar transacciones a ciertas direcciones que se sepa que son seguras con certeza. Esto significa que _incluso en caso de que_ le robaran su clave privada, el intruso no podría enviar fondos a las cuentas destinatarias que no estén en la lista blanca. Para modificar estas listas blancas se requerirían múltiples firmas, de modo que el intruso no pudiera añadir su propia dirección a la lista, a menos que tuviese acceso a varias de sus claves de copias de seguridad.
 
-## Mejor experiencia de usuario \{#better-user-experience}
+## Mejor experiencia de usuario {#better-user-experience}
 
 La abstracción de cuenta permite una **mejor experiencia global de usuario** así como una **seguridad mejorada**, porque añade la compatibilidad con carteras de contrato inteligente dentro del protocolo. La razón más importante de esto es que proveerá a desarrolladores de contratos inteligentes, billeteras y aplicaciones, mayor libertad para innovar en la experiencia de usuario en formas que aún no logramos anticipar. Algunas mejoras obvias que traerá la abstracción de cuenta incluyen la agrupación de transacciones para aumentar la velocidad y la eficiencia. Por ejemplo, un simple intercambio debería ser una sencilla operación, pero hoy requiere la firma de múltiples transacciones para aprobar el uso de tókenes individuales antes del intercambio. La abstracción de cuenta elimina esa fricción al permitir las transacciones agrupadas. Además, las transacciones agrupadas podrían aprobar el valor exacto de los tókenes requeridos para cada transacción y anular las aprobaciones una vez completada la transacción, proporcionando seguridad adicional.
 
@@ -72,7 +72,7 @@ También es interesante considerar cómo las compras podrían cambiar con la abs
 
 Estos son solo algunos ejemplos de cómo las experiencias de usuario podrían pasar al siguiente nivel con la abstracción de cuenta, pero habrá muchos más que todavía no hemos imaginado. La abstracción de cuenta libera a los desarrolladores de las limitaciones de los EOA actuales, permitiéndoles aprovechar las ventajas de web2 a web3 sin sacrificar la custodia propia y además piratear creativamente nuevas experiencias de usuario.
 
-## ¿Cómo se implementará la abstracción de cuenta? \{#how-will-aa-be-implemented}
+## ¿Cómo se implementará la abstracción de cuenta? {#how-will-aa-be-implemented}
 
 Las carteras de contrato inteligente existen actualmente, pero es un desafío implementarlas debido a que la EVM no las admite. En cambio, se basan en proteger un código relativamente complejo con transacciones estándar de Ethereum. Ethereum puede cambiar esto al permitir que contratos inteligentes inicien transacciones, controlando la lógica necesaria en los contratos inteligentes de Ethereum en vez de fuera de la cadena. Al colocar la lógica en los contratos inteligentes se aumenta la descentralización de Ethereum, ya que elimina la necesidad de «repetidores» ejecutados por desarrolladores de carteras para traducir mensajes firmados por el usuario de transacciones regulares de Ethereum.
 
@@ -116,11 +116,11 @@ Tenga en cuenta que EIP-3074 no está activo actualmente. La comunidad ahora est
 </ExpandableCard>
 }
 
-## Progreso actual \{#current-progress}
+## Progreso actual {#current-progress}
 
 Las billeteras de contrato inteligente ya están disponibles, pero existen más actualizaciones necesarias para hacerlas todo lo descentralizadas y sin permisos como sea posible. El EIP-4337 es una propuesta madura que no requiere ningún cambio en el protocolo de Ethereum, así que es posible que se pueda implementar prontamente. Sin embargo, las actualizaciones que alteran el protocolo de Ethereum no se encuentran en desarrollo activo en este momento, por lo que esos cambios pueden llevar bastante tiempo en enviarse. También es posible que la abstracción de cuenta se realice de forma suficientemente buena con el EIP-4337 y así no se requieran cambios de protocolo.
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [erc4337.io](https://www.erc4337.io/)
 - [Panel de debate sobre la abstracción de cuenta en Devcon, Bogotá](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)

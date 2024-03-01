@@ -8,20 +8,20 @@ lang: en
 published: 2021-04-06
 ---
 
-## Send Token Using ethers.js(5.0) \{#send-token}
+## Send Token Using ethers.js(5.0) {#send-token}
 
-### In This Tutorial You'll Learn How To \{#you-learn-about}
+### In This Tutorial You'll Learn How To {#you-learn-about}
 
 - Import ethers.js
 - Transfer token
 - Set gas price according to the network traffic situation
 
-### To-Get-Started \{#to-get-started}
+### To-Get-Started {#to-get-started}
 
 To get started, we must first import the ethers.js library into our javascript
 Include ethers.js(5.0)
 
-### Installing \{#install-ethersjs}
+### Installing {#install-ethersjs}
 
 ```shell
 /home/ricmoo> npm install --save ethers
@@ -45,7 +45,7 @@ ES3(UMD) in the Browser
 ></script>
 ```
 
-### Parameters \{#param}
+### Parameters {#param}
 
 1. **`contract_address`**: Token contract address (contract address is needed when the token you want to transfer is not ether)
 2. **`send_token_amount`**: The amount you want to send to the receiver
@@ -53,15 +53,15 @@ ES3(UMD) in the Browser
 4. **`send_account`**: The sender's address
 5. **`private_key`**: Private key of the sender to sign the transaction and actually transfer the tokens
 
-## Notice \{#notice}
+## Notice {#notice}
 
 `signTransaction(tx)` is removed because `sendTransaction()` does it internally.
 
-## Sending Procedures \{#procedure}
+## Sending Procedures {#procedure}
 
-### 1. Connect to network (testnet) \{#connect-to-network}
+### 1. Connect to network (testnet) {#connect-to-network}
 
-#### Set Provider (Infura) \{#set-provider}
+#### Set Provider (Infura) {#set-provider}
 
 Connect to Ropsten testnet
 
@@ -69,29 +69,29 @@ Connect to Ropsten testnet
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. Create wallet \{#create-wallet}
+### 2. Create wallet {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Connect Wallet to net \{#connect-wallet-to-net}
+### 3. Connect Wallet to net {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. Get current gas price \{#get-gas}
+### 4. Get current gas price {#get-gas}
 
 ```javascript
 window.ethersProvider.getGasPrice() // gasPrice
 ```
 
-### 5. Define Transaction \{#define-transaction}
+### 5. Define Transaction {#define-transaction}
 
 These variables defined below are dependent on `send_token()`
 
-### Transaction parameters \{#transaction-params}
+### Transaction parameters {#transaction-params}
 
 1. **`send_account`**: address of the token sender
 2. **`to_address`**: address of the token receiver
@@ -112,7 +112,7 @@ const tx = {
 }
 ```
 
-### 6. Transfer \{#transfer}
+### 6. Transfer {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
@@ -121,7 +121,7 @@ walletSigner.sendTransaction(tx).then((transaction) => {
 })
 ```
 
-## How to use it \{#how-to-use}
+## How to use it {#how-to-use}
 
 ```javascript
 let private_key =
@@ -144,11 +144,11 @@ send_token(
 )
 ```
 
-### Success! \{#success}
+### Success! {#success}
 
 ![image of transaction done successfully](./successful-transaction.png)
 
-## send_token() \{#send-token-method}
+## send_token() {#send-token-method}
 
 ```javascript
 function send_token(

@@ -12,7 +12,7 @@ summaryPoint2: NFT zinawapatia waundaji wa maudhui nguvu zaidi kuliko zamani.
 summaryPoint3: Inaendeshwa na mikataba erevu kwenye mnyororo wa bloku wa Ethereum.
 ---
 
-## What are NFTs? \{#what-are-nfts}
+## What are NFTs? {#what-are-nfts}
 
 NFT ni tokeni zilizo na ubinafsi wa kipekee. Kila NTF ina sifa tofauti (haziwezi kuigwa) na ni chache. Hii ni tofauti na tokeni kama ERC-20 ambapo kila tokeni kwenye kikundi hufanana na huwa na sifa sawa ('inaweza kuigwa'). Hujali bili ya dola mahususi uliyo nayo kwenye pochi yako kwa sababu zote zinafanana na thamani zao ni sawa. Hata hivyo, _unajali_ tokeni ya kidijitali unayomiliki, kwa sababu zote huwa na sifa zao za binafsi na unaweza kuzitofautisha kutoka kwen ye nyingine ('haziwezi kuigwa').
 
@@ -22,13 +22,13 @@ Upekee wa kila tokeni za kidijitali zisizoweza kuigwa ni kuwezesha ishara ya vit
 <YouTube id="Xdkkux6OxfM" />
 }
 
-## Mtandao wa mali \{#internet-of-assets}
+## Mtandao wa mali {#internet-of-assets}
 
 Tokeni zisizoweza kuigwa na Ethereum husuluhisha shida zinazokuwepo kwenye intaneti leo. Kwa kuwa kila kitu kinakuwa cha kidijitali, kuna haja ya kuiga sifa za vitu halisi kama uhaba, upekee na ushahidi wa umiliki. kwa njia isiyoweza kudhibitiwa na mashirika yasiyogatuliwa. Kwa mfano, ukiwa na tokeni za kidijitali zisizoigwa, unaweza kumiliki muziki wa sampuli ya MP3 ambao hauko kwenye programu ya muziki maalum au unaweza kumiliki tovuti ya mtandao wa kijamii ambao unaweza kuuza ama kubadilishana lakini hauwezi kuchukuliwa kihohela kutoka kwako na mtoaji jukwaa.
 
 Hivi ndivyo mtandao wa NFT unafanya kazi ukilinganisha na intaneti ambao wengi wengi tunatumia leo...
 
-### Ulinganisho \{#nft-comparison}
+### Ulinganisho {#nft-comparison}
 
 | Intaneti/Mtandao wa NFT                                                                                                                             | Intaneti ya leo                                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,13 +39,13 @@ Hivi ndivyo mtandao wa NFT unafanya kazi ukilinganisha na intaneti ambao wengi w
 | Waunda maudhui wanaweza kuuza kazi zao sehemu yoyote na kufikia soko la ulimwengu mzima.                                                            | Waundaji wanategemea miundombinu na usambazaji wa majukwaa wanayotumia. Mara nyingi hili hufuata sheria na masharit na vizuizi vya kijiografia. |
 | Watengenezaji wa tokeni zisizoigwa wanaweza kuhifadhi haki za kazi na mirabaha ya programu zao moja kwa moja kwenye mkataba wa tokeni zisizoigwa.   | Majukwaa kama ya huduma za kutiririsha muziki, yanapata faida nyingi kutoka kwenye mauzo.                                                       |
 
-## NFT zinafanyaje kazi? \{#how-nfts-work}
+## NFT zinafanyaje kazi? {#how-nfts-work}
 
 Kama aina yeyote ya tokeni inayotolewa kwenye Ethereum, tokeni zisizoigwa zinatolewa na mkataba erevu. Mkataba erevu hutimiza moja viwango kadhaa vya tokeni zisizoigwa (haswa ERC-721 au ERC-1155) ambavyo hufafanua kazi ya mkataba huo. Mkataba huu unaweza kuunda ('kuzalisha') tokeni zisizoigwa na kuzipa kwa mmiliki maalum. Umiliki unafafanuliwa kwenye mkataba kwa kuweka tokeni zisizoigwa kwenye anwani maalum. Tokeni isiyoigwa ina kitambulisho na kwa kawaida ina maelezo ya data ambayo hufanya tokeni hii mahususi kuwa ya kipekee.
 
 Mtu anapotengeneza ama kuzalisha tokeni zisizoigwa, anatekeleza kazi ndani ya mkataba erevu ambao huteua tokeni isiyoigwa kwenye anwani yake. Habari hii huhifadhiwa hifadhi ya mkataba wake ambayo ni sehemu ya mnyororo wa bloku. Mtengenezaji wa mkataba anaweza kuandika mantiki zaidi kwenye mkataba, kwa mfano, kuweka kiwango cha usambazaji ama kufafanua mrabaha utakaolipwa kwa mtengenezaji kila mara tokeni zinapohamishwa.
 
-## NFT zinatumika kufanya nini? \{#nft-use-cases}
+## NFT zinatumika kufanya nini? {#nft-use-cases}
 
 Tokeni zisizoigwa hutumika kwa mambo mengi, ikiwa ni pamoja na:
 
@@ -76,7 +76,7 @@ Tovuti hii pia inatumia jina mbadala la kikoa linaloendeshwa na NFT, **ethereum.
 <Divider />
 }
 
-### Usalama wa NFT \{#nft-security}
+### Usalama wa NFT {#nft-security}
 
 Usalama wa Ethereum unakuja kutokana na ushahidi wa hisa. Mfumo huu umebuniwa ili uweze kuondoa vitendo ya kihasidi kiuchumi na basi kuifanya Ethereum sugu kwa uharibifu. Hii ndiyo inayofanya tokeni zisizoigwa kuwezekana. Mara tu bloku yenye muamala wako wa NFT inapokamilika, inaweza kugharimu mshambulizi mamilioni ya ETH kuibadilisha. Mtu yeyote anayetumia programu ya Ethereum anaweza kujua haraka mambo yasiyofaa ya kuhitilafiana na NFT, na mtu huyu mbaya atatozwa malipo na kuondolewa.
 
@@ -86,7 +86,7 @@ Maswala ya usalama yanayohusiana na NFT sana sana yanahusiana na utapeli wa kutu
   Maelezo zaidi kuhusu usalama
 </ButtonLink>
 
-## Soma zaidi \{#further-reading}
+## Soma zaidi {#further-reading}
 
 - [Mwongozo wa wa mwanafunzi wa NFT](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Januari 2020_
 - [Mfuatliliaji EtherscanNFT](https://etherscan.io/nft-top-contracts)

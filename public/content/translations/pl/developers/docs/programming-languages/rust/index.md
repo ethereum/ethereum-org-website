@@ -11,7 +11,7 @@ incomplete: true
 
 Użyj Ethereum do tworzenia zdecentralizowanych aplikacji (lub „dappów”), które wykorzystują zalety kryptowaluty i technologii blockchain. Te zdecentralizowane aplikacje mogą być godne zaufania, co oznacza, że ​​po wdrożeniu w Ethereum zawsze będą działać zgodnie z programem. Mogą kontrolować zasoby cyfrowe w celu tworzenia nowych rodzajów aplikacji finansowych. Mogą być zdecentralizowane, co oznacza, że ​​nie kontroluje ich żadna pojedyncza jednostka ani osoba i są prawie niemożliwe do cenzurowania.
 
-## Pierwsze kroki z smart kontraktami i językiem Solidity \{#getting-started-with-smart-contracts-and-solidity}
+## Pierwsze kroki z smart kontraktami i językiem Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Zrób pierwsze kroki aby zintegrować Rust z Ethereum**
 
@@ -22,7 +22,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [Napisz swój pierwszy Inteligentny kontrakt](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Dowiedz się, jak skompilować i wdrożyć Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Artykuły dla początkujących \{#beginner-articles}
+## Artykuły dla początkujących {#beginner-articles}
 
 - [Wybór klienta Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Klient Ethereum Rust](https://wiki.parity.io/Setup)
@@ -30,9 +30,9 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [Wprowadzenie do inteligentnych kontraktów z klientem Parity Ethereum](https://wiki.parity.io/Smart-Contracts)
 - [Samouczek krok po kroku, jak pisać umowy w Rust Wasm dla Kovan](https://github.com/paritytech/pwasm-tutorial)
 
-## Artykuły dla średniozaawansowanych \{#intermediate-articles}
+## Artykuły dla średniozaawansowanych {#intermediate-articles}
 
-## Przykłady zaawansowane \{#advanced-use-patterns}
+## Przykłady zaawansowane {#advanced-use-patterns}
 
 - [biblioteka zewnętrzna pwasm_ethereum do interakcji z siecią podobną do Ethereum](https://github.com/openethereum/pwasm-ethereum)
 - [Zbuduj zdecentralizowany czat używając JavaScript i Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
@@ -40,7 +40,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 - [Pierwsze kroki z Enigma - w języku programowania Rust](https://blog.enigma.co/getting-started-with-discovery-the-rust-programming-language-4d1e0b06de15)
 - [Wprowadzenie do tajnych kontraktów](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 
-## Projekty i Narzędzia Rust \{#rust-projects-and-tools}
+## Projekty i Narzędzia Rust {#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Kolekcja zewnętrznych źródeł interakcji z siecią podobną do ethereum._
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
@@ -52,7 +52,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 
 Szukasz więcej zasobów? Zajrzyj na [ethereum.org/developers.](/developers/)
 
-## Współtwórcy społeczności Rust \{#rust-community-contributors}
+## Współtwórcy społeczności Rust {#rust-community-contributors}
 
 - [Ethereum WebAssembly](https://gitter.im/ewasm/Lobby)
 - [Oasis Gitter](https://gitter.im/Oasis-official/Lobby)

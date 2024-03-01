@@ -12,7 +12,7 @@ summaryPoint2: NFT memberi lebih banyak kuasa kepada pencipta kandungan dari seb
 summaryPoint3: Didayakan oleh kontrak pintar pada blok rantai Ethereum.
 ---
 
-## Apakah itu NFT? \{#what-are-nfts}
+## Apakah itu NFT? {#what-are-nfts}
 
 NFT ialah token yang unik dari segi tersendiri. Setiap NFT mempunyai sifat berbeza (tidak sepiawai) dan terbukti terhad. Ini berbeza daripada token lain seperti ERC-20 iaitu setiap token dalam set adalah sama dan serupa sifatnya ('sepiawai'). Kita tidak kisah tentang wang kertas yang spesifik di dalam dompet fizikal kita, kerana semuanya serupa dan sama nilainya. Bagaimanapun, kita _tentu_ akan kisah tentang NFT spesifik yang dimiliki, kerana kesemua aset mempunyai sifat tersendiri yang membezakan satu NFT dari yang lain ('tidak sepiawai').
 
@@ -22,13 +22,13 @@ Keunikan setiap NFT membolehkan benda seperti karya seni, item koleksi ataupun h
 <YouTube id="Xdkkux6OxfM" />
 }
 
-## Aset Internet \{#internet-of-assets}
+## Aset Internet {#internet-of-assets}
 
 NFT dan Ethereum menyelesaikan beberapa masalah yang wujud dalam internet hari ini. Apabila segala-galanya menghampiri digitalisasi, terdapat keperluan untuk meniru sifat item fizikal seperti kekurangan, keunikan dan bukti pemilikan. dengan cara yang tidak dikawal oleh satu organisasi pusat. Sebagai contoh, dengan NFT, anda boleh memiliki muzik mp3 yang tidak spesifik hanya kepada aplikasi muzik milik sebuah syarikat, atau anda boleh memiliki nama pengguna di media sosial yang anda boleh tukarkan atau jual, tetapi penyedia platform tidak boleh merampasnya daripada anda.
 
 Beginilah rupa internet NFT jika dibandingkan dengan internet yang kita guna masa kini...
 
-### Satu perbandingan \{#nft-comparison}
+### Satu perbandingan {#nft-comparison}
 
 | Internet NFT                                                                                                                           | Internet masa kini                                                                                                                                                       |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -39,13 +39,13 @@ Beginilah rupa internet NFT jika dibandingkan dengan internet yang kita guna mas
 | Pencipta kandungan boleh menjual karya mereka di mana-mana dan boleh mengakses pasaran global.                                         | Pencipta kandungan bergantung kepada pengagihan dan infrastruktur platform yang mereka guna. Semua ini seringkali tertakluk pada terma dan syarat juga batasan geografi. |
 | Pencipta NFT boleh mengekalkan hak pemilikan ke atas hasil kerja mereka, dan boleh menetapkan royalti terus dalam kontrak NFT mereka.  | Platform seperti perkhidmatan penstriman muzik mengekalkan sebahagian besar keuntungan daripada penjualan.                                                               |
 
-## Bagaimana NFT berfungsi? \{#how-nfts-work}
+## Bagaimana NFT berfungsi? {#how-nfts-work}
 
 Seperti mana-mana token yang dikeluarkan di Ethereum, NFT juga dikeluarkan melalui kontrak pintar. Kontrak pintar ini mematuhi satu daripada beberapa piawai NFT (Biasanya ERC-721 atau ERC-1155) yang mentakrifkan fungsi kontrak itu. Kontrak itu boleh mencipta ('menempa') NFT dan memperuntukkan NFT itu kepada pemilik tertentu. Pemilikan ditakrifkan dalam kontrak dengan memetakan NFT tertentu kepada alamat tertentu. Setiap NFT mempunyai ID dan biasanya metadata yang dikaitkan dengannya menjadikan token itu unik.
 
 Apabila seseorang mencipta atau menempa NFT, mereka sebenarnya melaksanakan fungsi didalam kontrak pintar yang menetapkan sesuatu NFT kepada alamat spesifik. Maklumat ini disimpan dalam storan kontrak, iaitu sebahagian daripada blok rantai. Pencipta kontrak boleh menetapkan logik tambahan ke dalam kontrak, contohnya mengehadkan jumlah bekalan atau menentukan royalti untuk dibayar kepada pencipta setiap kali token itu dipindahkan.
 
-## Apakah kegunaan NFT? \{#nft-use-cases}
+## Apakah kegunaan NFT? {#nft-use-cases}
 
 NFT digunakan untuk banyak perkara, termasuk:
 
@@ -76,7 +76,7 @@ Laman web ini juga mempunyai nama domain alternatif yang didayakan oleh NFT, **e
 <Divider />
 }
 
-### Keselamatan NFT \{#nft-security}
+### Keselamatan NFT {#nft-security}
 
 Keselamatan Ethereum adalah berasaskan bukti penaruhan. Sistem ini direka untuk menghalang tindakan berniat jahat secara ekonomi, menjadikan Ethereum kalis usikan. Ini yang membolehkan NFT wujud. Setelah blok yang mengandungi transaksi NFT anda dimuktamadkan, penyerang memerlukan berjuta-juta ETH untuk mengubahnya. Sesiapa yang menjalankan perisian Ethereum akan dapat mengesan usikan yang tidak jujur pada NFT secara serta-merta, dan pelaku jahat itu akan dihukum dari segi ekonomi dan dibuang.
 
@@ -86,7 +86,7 @@ Isu keselamatan berhubung dengan NFT paling kerap berkaitan dengan penipuan panc
   Maklumat lanjut tentang keselamatan
 </ButtonLink>
 
-## Bacaan lanjut \{#further-reading}
+## Bacaan lanjut {#further-reading}
 
 - [Panduan pengguna baharu untuk NFT](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, Januari 2020_
 - [Penjejak NFT Etherscan](https://etherscan.io/nft-top-contracts)

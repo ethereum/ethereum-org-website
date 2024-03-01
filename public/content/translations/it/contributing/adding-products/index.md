@@ -4,7 +4,7 @@ description: La politica che applichiamo quando aggiungiamo le dapp a ethereum.o
 lang: it
 ---
 
-# Aggiungere prodotti su Ethereum \{#adding-products}
+# Aggiungere prodotti su Ethereum {#adding-products}
 
 Chiunque può suggerire nuove dapp ai contenuti su ethereum.org, ove appropriato. **No, non elencheremo la tua dapp sulla nostra pagina home** 😜
 
@@ -30,16 +30,16 @@ In generale, **ethereum.org vuole fornire una "esperienza di adesione senza prob
 
 Ecco il nostro quadro decisionale più nel dettaglio. Sentiti libero di fornire feedback o suggerire modifiche.
 
-## Il quadro decisionale \{#decision-framework}
+## Il quadro decisionale {#decision-framework}
 
-### Criteri per l'inclusione: gli elementi imprescindibili \{#criteria-for-inclusion-the-must-haves}
+### Criteri per l'inclusione: gli elementi imprescindibili {#criteria-for-inclusion-the-must-haves}
 
 - **Un prodotto testato per la sicurezza** – Attraverso un controllo, un team di sicurezza interno o altri metodi, la sicurezza del prodotto deve essere testata in modo affidabile. Questo riduce il rischio per gli utenti e ci dimostra che prendi la sicurezza sul serio.
 - **Il prodotto deve essere "live" da almeno 6 mesi** – Questo è un altro indice di sicurezza. 6 mesi sono un buon periodo di tempo per individuare bug critici o utilizzi impropri.
 - **Gestito da un team attivo** – Aiuta ad assicurare la qualità e garantire che gli utenti riceveranno supporto in caso di richieste.
 - **Elenco d'informazioni oneste e accurate** - Ci si aspetta che ogni elenco suggerito dai progetti sia fornito con informazioni oneste e accurate. I prodotti che falsificano le informazioni per l'inserimento, come la dichiarazione che il prodotto è "open source" quando invece non lo è, saranno rimossi.
 
-### Criteri per la classificazione: gli aspetti preferenziali \{#criteria-for-ranking-the-nice-to-haves}
+### Criteri per la classificazione: gli aspetti preferenziali {#criteria-for-ranking-the-nice-to-haves}
 
 La tua dapp potrebbe non essere elencata su ethereum.org in evidenza con le altre a causa dei seguenti criteri.
 
@@ -53,7 +53,7 @@ La tua dapp potrebbe non essere elencata su ethereum.org in evidenza con le altr
 - **Open source** – Il codice dovrebbe essere accessibile e dovresti accettare PR dalla comunità nel complesso.
 - **Comunità** – Hai una comunità dedicata, ad esempio su Discord, in cui gli utenti possono interagire con il tuo team per ricevere supporto o suggerire nuove funzionalità.
 
-## Criteri nella pratica \{#criteria-in-practice}
+## Criteri nella pratica {#criteria-in-practice}
 
 Più criteri soddisfi, più probabilità ci sono che il tuo prodotto venga elencato su ethereum.org.
 
@@ -70,15 +70,15 @@ Si tratta di una decisione di design che spetta a ethereum.org.
 
 Ma stai sereno, **saranno presenti dei collegmenti ad altri siti web che classificano altre dapp**
 
-### Ordine dei prodotti \{#product-ordering}
+### Ordine dei prodotti {#product-ordering}
 
 A meno che non vengano ordinati specificamente in modo diverso, ad esempio alfabeticamente, i prodotti saranno mostrati in ordine di inserimento nella pagina, dal più recente al meno recente. In altre parole, i prodotti più nuovi sono aggiunti in fondo all'elenco.
 
-### Termini di utilizzo \{#terms-of-use}
+### Termini di utilizzo {#terms-of-use}
 
 Ti invitiamo anche a consultare i nostri [termini di utilizzo](/terms-of-use/). Le informazioni su ethereum.org sono fornite esclusivamente a fini di informazione generale.
 
-## Manutenzione \{#maintenance}
+## Manutenzione {#maintenance}
 
 In linea con la natura fluida di Ethereum, team e prodotti vanno e vengono e l'innovazione avviene quotidianamente, quindi effettueremo controlli di routine dei nostri contenuti per:
 
@@ -91,7 +91,7 @@ _Stiamo anche studiando altre opzioni da votare, in modo tale che la comunità p
 
 ---
 
-## Aggiungi il tuo prodotto \{#add-your-product}
+## Aggiungi il tuo prodotto {#add-your-product}
 
 Se desideri aggiungere una dapp a ethereum.org che soddisfa i criteri, crea un ticket su GitHub.
 

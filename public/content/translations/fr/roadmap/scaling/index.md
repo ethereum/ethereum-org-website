@@ -18,17 +18,17 @@ Ethereum est mis à l'échelle à l'aide de [couches 2](/layer-2/#rollups) (éga
   </ul>
 </InfoBanner>
 
-## Rendre les données moins onéreuses \{#making-data-cheaper}
+## Rendre les données moins onéreuses {#making-data-cheaper}
 
 Les rollups collectent un grand nombre de transactions, les exécutent et soumettent les résultats à Ethereum. Ceci génère un maximum de données qui doivent être publiquement disponibles, pour que quiconque puisse exécuter les transactions et vérifier que l'opérateur du rollup soit intègre. Si une personne constate une divergence, cette dernière peut être contestée.
 
-### Proto-Danksharding \{#proto-danksharding}
+### Proto-Danksharding {#proto-danksharding}
 
 Les données rollup sont stockées en permanence sur Ethereum, ce qui est coûteux. Plus de 90 % des frais de transaction assumés par les utilisateurs sur les rollups sont dus à ce stockage de données. Pour réduire les coûts de transaction, il est possible de déplacer les données vers un nouveau stockage temporaire appelé « blob » - Binary Large Object/Large Objet Binaire. Les blobs sont moins chers car temporaires ; ils sont supprimés d'Ethereum une fois leur nécessité devenue obsolète. Le stockage des données rollup à long terme devient la responsabilité des personnes qui en ont besoin, telles que les opérateurs rollup, les bourses, les services d'indexation, etc. L'ajout de transactions blob à Ethereum fait partie d'une mise à niveau connue sous le terme « Proto-Danksharding ». Solution prévue d'être déployée dans un avenir très proche, peut-être vers la fin de l'année 2023.
 
 Une fois que les transactions blob seront devenues partie intégrante du protocole Ethereum via Proto-Danksharding, il sera possible d'ajouter de nombreux blobs aux blocs Ethereum. Il s’agira d’une autre augmentation substantielle (>100x) du débit d’Ethereum et d’une réduction des coûts de transaction.
 
-### Danksharding \{#danksharding}
+### Danksharding {#danksharding}
 
 La deuxième étape de l'expansion des données blob est compliquée car elle nécessite de nouvelles méthodes pour vérifier que les données rollup sont disponibles sur le réseau et repose sur des validateurs séparant leurs responsabilités de création de blocs et de proposition de blocs. Cela nécessite également un moyen de prouver cryptographiquement que les validateurs ont vérifié de petits sous-ensembles de données blob.
 
@@ -38,7 +38,7 @@ Cette seconde étape est nommée [« Danksharding »](/roadmap/danksharding/). I
 <ButtonLink variant="outline-color" to="/roadmap/danksharding/">En savoir plus sur la fragmentation</ButtonLink>
 }
 
-## Décentraliser les rollups \{#decentralizing-rollups}
+## Décentraliser les rollups {#decentralizing-rollups}
 
 [Les rollups](/layer-2) permettent déjà la mise à l'échelle d'Ethereum. Un[ riche écosystème de projets rollups](https://l2beat.com/scaling/tvl) permet aux utilisateurs d'effectuer des transactions rapidement et à moindre coût, avec divers niveaux de garantie de sécurité. Cependant, les rollups ont été initiés en utilisant des séquenceurs centralisés (ordinateurs qui effectuent l'ensemble du traitement et l'agrégation des transactions avant de les soumettre à Ethereum). Cette approche est vulnérable à la censure car, en d'autres termes, les opérateurs-séquenceurs peuvent être sanctionnés, soudoyés ou corrompus. Parallèlement,[ les rollups fluctuent](https://l2beat.com) de la façon dont ils valident les données entrantes. La meilleure voie possible, consiste à ce que les « provers/ceux qui prouvent » soumettent des preuves de fraude ou de validité, mais tous les rollups n'ont pas encore atteint ce niveau. Même ceux qui utilisent des preuves de validité/fraude font appel à un petit groupe de « provers » réputés. Par conséquent, la prochaine étape cruciale dans la mise à l'échelle d'Ethereum consiste à répartir la responsabilité de l'exécution des séquenceurs et des provers, parmi davantage de personnes.
 
@@ -46,6 +46,6 @@ Cette seconde étape est nommée [« Danksharding »](/roadmap/danksharding/). I
 <ButtonLink variant="outline-color" to="/developers/docs/scaling/">Plus d'infos sur les rollups</ButtonLink>
 }
 
-## Progrès actuels \{#current-progress}
+## Progrès actuels {#current-progress}
 
 La solution Proto-Danksharding sera probablement l’un des premiers éléments de la feuille de route à mettre en œuvre. Les étapes de calcul décentralisé nécessaires à sa mise en place sont déjà entamées, et plusieurs clients ont établi des prototypes qui gèrent les données blob. Or, la mise en œuvre complète de la solution Danksharding reste peu évidente avant plusieurs années, tant celle-ci dépend de la réalisation de plusieurs autres éléments de la feuille de route devant être concrétisés en première instance. La décentralisation de l'infrastructure de rollup sera probablement un processus progressif : il existe de nombreux rollups différents qui construisent des systèmes légèrement différents et seront entièrement décentralisés à des rythmes différents.

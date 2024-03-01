@@ -6,17 +6,17 @@ lang: it
 
 Eseguire un nodo completo è il metodo più privato, decentralizzato, senza fiducia e resistente alle censura per interagire con Ethereum. Con un nodo completo mantieni la tua copia della blockchain che può essere interrogata istantaneamente e ottieni l'accesso diretto alla rete peer-to-peer di Ethereum. Tuttavia, eseguire un nodo completo richiede una significativa quantità di memoria, archiviazione e CPU. Ciò significa che non è fattibile per tutti eseguire il proprio nodo. Esistono diverse soluzioni sulla tabella di marcia di Ethereum, inclusa l'assenza di stato, ma mancano diversi anni alla loro implementazione. La risposta nel breve termine è barattare alcuni dei vantaggi dell'esecuzione di un nodo completo per grandi miglioramenti delle prestazioni che consentono l'esecuzione di nodi con requisiti hardware molto ridotti. I nodi che permettono tale compromesso sono noti come nodi leggeri.
 
-## Cos'è un client leggero \{#what-is-a-light-client}
+## Cos'è un client leggero {#what-is-a-light-client}
 
 Un nodo leggero è un nodo che esegue il software di un client leggero. Invece di mantenere copie locali dei dati della blockchain e verificare in modo indipendente tutte le modifiche, richiedono i dati necessari a qualche fornitore. Il fornitore potrebbe essere una connessione diretta a un nodo completo o tramite qualche server RPC centralizzato. I dati sono quindi verificati dal nodo leggero, consentendogli di tenere il passo con la testa della catena. Il nodo leggero elabora soltanto le intestazioni del blocco, scaricando solo occasionalmente i contenuti effettivi del blocco. I nodi possono variare nella propria leggerezza, a seconda delle combinazioni di software del client leggero o completo che eseguono. Ad esempio, la configurazione più leggera sarebbe eseguire un client di esecuzione leggero e un client di consenso leggero. È inoltre probabile che molti nodi sceglieranno di eseguire client di consenso leggeri con client di esecuzione completi, o viceversa.
 
-## Come funzionano i client leggeri? \{#how-do-light-clients-work}
+## Come funzionano i client leggeri? {#how-do-light-clients-work}
 
 Quando Ethereum ha iniziato a utilizzare il meccanismo di consenso basato sul proof-of-stake, è stata introdotta una nuova struttura specificamente per supportare i client leggeri. Opera selezionando casualmente un sottoinsieme di 512 validatori ogni 1,1 giorni affinché agisca da **commissione di sincronizzazione**. La commissione di sincronizzazione firma l'intestazione dei blocchi recenti. L'intestazione di ogni blocco contiene la firma aggregata dei validatori nella commissione di sincronizzazione e un "bitfield" che mostra quali validatori hanno firmato e quali no. Ogni intestazione, inoltre, include un elenco dei validatori che si prevede parteciperanno alla firma del blocco successivo. Ciò significa che un client leggero può vedere rapidamente se la commissione di sincronizzazione abbia autorizzato i dati ricevuti, nonché verificare che la commissione di sincronizzazione sia quella autentica confrontando quella da cui riceve l'autorizzazione con quella che avrebbe dovuto aspettarsi secondo il blocco precedente. Così, il client leggero può continuare ad aggiornare la propria conoscenza dell'ultimo blocco di Ethereum senza scaricare effettivamente il blocco, ma soltanto l'intestazione contenente le informazioni sintetiche.
 
 Sul livello di esecuzione non esiste un'unica specifica per un client di esecuzione leggero. La portata di un client di esecuzione leggero può variare da una "modalità leggera" di un client di esecuzione completo, dotato di tutte le funzionalità di rete e dell'EVM di un nodo completo ma che verifica soltanto le intestazioni del blocco, senza scaricare i dati associati, o può essere un client più ridotto che fa fortemente affidamento sull'inoltro delle richieste a un fornitore RPC per interagire con Ethereum.
 
-## Perché i client leggeri sono importanti? \{#why-are-light-clients-important}
+## Perché i client leggeri sono importanti? {#why-are-light-clients-important}
 
 I client leggeri sono importanti perché consentono agli utenti di verificare i dati in entrata piuttosto che fidarsi ciecamente del fatto che il fornitore dei dati sia corretto e onesto, utilizzando soltanto una minuscola frazione delle risorse di calcolo di un nodo completo. I dati ricevuti dai client leggeri sono controllabili rispetto alle intestazioni dei blocchi che sanno essere stati firmati da almeno 2/3 di un insieme casuale di 512 validatori di Ethereum. Questa è una prova molto forte del fatto che i dati siano corretti.
 
@@ -26,7 +26,7 @@ Facciamo un semplice esempio. Immagina di voler controllare il saldo del tuo con
 
 Un client leggero affronta tale problema. Anche in questo caso richiedi i dati a qualche fornitore esterno, ma quando li ricevi sono dotati di una prova che il tuo nodo leggero può verificare rispetto alle informazioni ricevute nell'intestazione del blocco. Ciò significa che Ethereum sta verificando la correttezza dei tuoi dati invece di quelli di qualche operatore fidato.
 
-## Quali innovazioni sono consentite dai client leggeri? \{#what-innovations-do-light-clients-enable}
+## Quali innovazioni sono consentite dai client leggeri? {#what-innovations-do-light-clients-enable}
 
 Il principale vantaggio dei client leggeri è che consentono a più persone di accedere a Ethereum in modo indipendente, con requisiti di hardware trascurabili e minima dipendenza da terze parti. Ciò è un bene per gli utenti, poiché possono verificare i propri dati, ed è un bene per la rete poiché aumenta il numero e la diversità dei nodi che verificano la catena.
 
@@ -38,7 +38,7 @@ Anche i rollup di Ethereum beneficerebbero dei client leggeri. Uno dei grandi pr
 
 I client leggeri potrebbero essere anche utilizzati per aggiornare i portafogli di Ethereum. Invece di fidarsi dei dati forniti da un fornitore RPC, il tuo portafoglio potrebbe verificare direttamente i dati presentati a te utilizzando un client leggero incorporato. Ciò aggiungerebbe sicurezza al tuo portafoglio. Se il tuo fornitore RPC è stato disonesto e ti ha fornito dei dati errati, il client leggero incorporato potrebbe dirtelo!
 
-## Qual è lo stato attuale dello sviluppo dei client leggeri? \{#current-state-of-development}
+## Qual è lo stato attuale dello sviluppo dei client leggeri? {#current-state-of-development}
 
 Esistono vari client leggeri in via di sviluppo, tra cui client leggeri di esecuzione, di consenso e combinati di esecuzione/consenso. Queste sono le implementazioni di client leggeri note nel momento in cui viene scritta questa pagina:
 
@@ -53,7 +53,7 @@ Inoltre, c'è molto lavoro da fare per migliorare il modo in cui i client legger
 
 Altri punti della [tabella di marcia](/roadmap/) come gli [alberi di Verkle](/roadmap/verkle-trees/) e l'[assenza di stato](/roadmap/statelessness/) renderanno infine le garanzie di sicurezza dei client leggeri equivalenti a quelle dei client completi.
 
-## Letture consigliate \{#further-reading}
+## Letture consigliate {#further-reading}
 
 - [Zsolt Felfodhi sui client leggeri di Geth](https://www.youtube.com/watch?v=EPZeFXau-RE)
 - [Etan Kissling sull'interconnessione dei client leggeri](https://www.youtube.com/watch?v=85MeiMA4dD8)

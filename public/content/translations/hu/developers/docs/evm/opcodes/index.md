@@ -4,7 +4,7 @@ description: Az Ethereum Virtuális Gép összes elérhető operációs kódja.
 lang: hu
 ---
 
-## Áttekintés \{#overview}
+## Áttekintés {#overview}
 
 Ez az EVM referenciaoldalának [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes) frissített változata. A [Sárga könyvből](https://ethereum.github.io/yellowpaper/paper.pdf), a [Jello könyvből](https://jellopaper.org/evm/) és a [geth](https://github.com/ethereum/go-ethereum) implementációból származik. Ez egy mindenki számára elérhető referencia, de nem feltétlen szigorú. Ha biztosra szeretne menni, akkor használja a Jello könyvet vagy egy kliens implementációját.
 

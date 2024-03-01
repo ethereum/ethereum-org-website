@@ -4,7 +4,7 @@ lang: fr
 description: Instructions et conseils pour les traducteurs d'ethereum.org
 ---
 
-# Guide de style pour la traduction d'ethereum.org \{#style-guide}
+# Guide de style pour la traduction d'ethereum.org {#style-guide}
 
 Le guide de style pour la traduction d'ethereum.org contient les principales recommandations, directives et astuces pour ceux qui nous aident à traduire le site.
 
@@ -12,13 +12,13 @@ Ce document sert de guide général et n'est spécifique à aucune langue.
 
 Si vous avez des questions, des suggestions ou des commentaires, n'hésitez pas à nous contacter à l'adresse translations@ethereum.org, à envoyer un message à @ethdotorg sur Crowdin ou à [rejoindre notre serveur Discord](https://discord.gg/ethereum-org), où vous pourrez nous envoyer un message dans le salon #translations ou contacter l'un des membres de l'équipe.
 
-## Utiliser Crowdin \{#using-crowdin}
+## Utiliser Crowdin {#using-crowdin}
 
 Vous pouvez trouver les instructions de base pour rejoindre le projet sur Crowdin et sur l'utilisation de l'éditeur en ligne de la plateforme sur la [page du programme de traduction](/contributing/translation-program/#how-to-translate).
 
 Si vous souhaitez en savoir plus sur Crowdin et sur certaines de ses fonctionnalités avancées, la [base de connaissances de Crowdin](https://support.crowdin.com/online-editor/) contient de nombreux guides approfondis et des aperçus de toutes les fonctionnalités de Crowdin.
 
-## Capturer l'essence du message \{#capturing-the-essence}
+## Capturer l'essence du message {#capturing-the-essence}
 
 Lors de la traduction du contenu d'ethereum.org, évitez les traductions littérales.
 
@@ -28,7 +28,7 @@ Chaque langue a ses règles grammaticales, ses conventions et sa syntaxe. Lors d
 
 Au lieu de traduire le texte original mot pour mot, il est recommandé de lire la phrase entière et de l'adapter aux conventions de la langue de destination.
 
-## Formel vs. informel \{#formal-vs-informal}
+## Formel vs. informel {#formal-vs-informal}
 
 Nous utilisons la forme formelle (le vouvoiement), car elle est toujours polie et appropriée pour tous les visiteurs.
 
@@ -36,13 +36,13 @@ La forme formelle nous évite de paraître non officiels ou offensants et foncti
 
 À la deuxième personne, la plupart des langues indo-européennes et afro-asiatiques utilisent des pronoms personnels spécifiques au sexe, qui distinguent les hommes et les femmes. Lorsque nous nous adressons à l'utilisateur ou que nous utilisons un pronom possessif, nous pouvons éviter de supposer le sexe du visiteur avec la forme formelle, étant donné qu'elle est généralement applicable et cohérente, quelle que soit la façon dont il s'identifie.
 
-## Signification et vocabulaire simples et clairs \{#simple-vocabulary}
+## Signification et vocabulaire simples et clairs {#simple-vocabulary}
 
 Notre objectif est de rendre le contenu du site accessible au plus grand nombre de personnes possible.
 
 La plupart du temps, il suffit d'utiliser des mots courts et simples qui sont faciles à comprendre. S'il y a plusieurs traductions possibles pour un certain mot, le meilleur choix sera souvent le mot le plus court reflétant clairement le sens.
 
-## Système d'écriture \{#writing-system}
+## Système d'écriture {#writing-system}
 
 Ethereum.org est disponible en plusieurs langues qui utilisent des systèmes d'écriture (ou des scripts) différents du système latin.
 
@@ -54,7 +54,7 @@ Une idée reçue courante voudrait qu'« Ethereum » soit toujours écrit en l
 
 **Ceci ne s'applique pas aux langues au sein desquelles il existe une règle proscrivant la traduction des noms propres.**
 
-## Traduction des métadonnées de la page \{#translating-metadata}
+## Traduction des métadonnées de la page {#translating-metadata}
 
 Certaines pages contiennent des métadonnées comme « title », « lang », « description », « sidebar », etc.
 
@@ -72,7 +72,7 @@ Voici quelques exemples de codes de langue pour les langues les plus parlées :
 - Hindi - hi
 - Espagnol - es
 
-## Titres des articles externes \{#external-articles}
+## Titres des articles externes {#external-articles}
 
 Certaines chaînes de caractères contiennent des titres d'articles externes. La plupart de nos pages de documentation pour développeurs contiennent des liens vers des articles externes pour de plus amples détails. Les chaînes de caractères contenant les titres des articles doivent être traduites, quelle que soit la langue de l'article, afin d'assurer une expérience utilisateur plus cohérente pour les visiteurs qui consultent la page dans leur langue.
 
@@ -80,7 +80,7 @@ Pour vous aider à les repérer, vous trouverez ci-dessous quelques exemples de 
 
 ![Titres des articles dans sidebar.png](./article-titles-in-sidebar.png) ![Titres des articles dans editor.png](./article-titles-in-editor.png)
 
-## Avertissements Crowdin \{#crowdin-warnings}
+## Avertissements Crowdin {#crowdin-warnings}
 
 Crowdin a une fonctionnalité intégrée qui avertit les traducteurs lorsqu'ils sont sur le point de faire une erreur. Crowdin vous en avertira automatiquement avant d'enregistrer votre traduction si vous oubliez d'inclure une balise de la source, de traduire des éléments qui ne devraient pas être traduits, d'ajouter plusieurs espaces consécutifs, d'oublier la ponctuation de fin, etc. Si un tel avertissement s'affiche, veuillez revenir en arrière et vérifier la traduction proposée.
 
@@ -88,7 +88,7 @@ Crowdin a une fonctionnalité intégrée qui avertit les traducteurs lorsqu'ils 
 
 Voici un exemple d'avertissement Crowdin lorsque vous oubliez d'ajouter une balise à votre traduction : ![Exemple d'un avertissement dans Crowdin](./crowdin-warning-example.png)
 
-## Gérer les balises et les extraits de code \{#dealing-with-tags}
+## Gérer les balises et les extraits de code {#dealing-with-tags}
 
 Une grande partie du contenu de la source contient des balises et des variables, surlignées en jaune dans l'éditeur Crowdin. Elles remplissent différentes fonctions et doivent être utilisées correctement.
 
@@ -158,7 +158,7 @@ Dans l'exemple ci-dessous, vous pouvez voir que survoler la balise `<0>` nous pe
 
 ![Exemple de balises ambiguës.png](./example-of-ambiguous-tags.png)
 
-## Formes courtes, formes complètes et abréviations \{#short-vs-full-forms}
+## Formes courtes, formes complètes et abréviations {#short-vs-full-forms}
 
 De nombreuses abréviations sont utilisées sur le site, comme dApps, NFT, DAO, DeFi, etc. Ces abréviations sont couramment utilisées en anglais et les visiteurs du site web les connaissent généralement.
 
@@ -170,7 +170,7 @@ Exemple de la manière de traduire « dApps » :
 
 - Applications décentralisées (dApps) → _Forme complète traduite (abréviation anglaise entre parenthèses)_
 
-## Termes sans traduction établie \{#terms-without-established-translations}
+## Termes sans traduction établie {#terms-without-established-translations}
 
 Certains termes peuvent ne pas avoir de traduction bien définie dans les autres langues et être largement connus sous leur forme anglaise. Ces termes incluent principalement des concepts récents, comme proof-of-work, proof-of-stake, Beacon Chain, staking, etc.
 
@@ -180,7 +180,7 @@ Lorsque vous traduisez ces termes, soyez créatifs, utilisez des traductions des
 
 **Le fait de traduire ces termes, plutôt que de les laisser en anglais, permettra à cette nouvelle terminologie de se généraliser à l'avenir, à mesure que de plus en plus de personnes utiliseront Ethereum et les technologies associées. Si nous voulons faire connaître ce domaine à plus de personnes à travers le monde, nous devons fournir une terminologie compréhensible dans un maximum de langues, quitte à la créer nous-mêmes.**
 
-## Boutons et appels à l'action (CTA) \{#buttons-and-ctas}
+## Boutons et appels à l'action (CTA) {#buttons-and-ctas}
 
 Le site contient de nombreux boutons, qui doivent être traduits différemment des autres contenus.
 
@@ -190,7 +190,7 @@ Les traductions des boutons doivent être aussi courtes que possible pour évite
 
 ![Comment repérer un bouton.png](./how-to-find-a-button.png)
 
-## Traduire de manière inclusive \{#translating-for-inclusivity}
+## Traduire de manière inclusive {#translating-for-inclusivity}
 
 Les visiteurs d'ethereum.org viennent de partout dans le monde et d'horizons différents. Le langage du site web devrait donc être neutre, accueillant pour tout le monde et inclusif.
 
@@ -200,7 +200,7 @@ Une autre forme d'inclusivité consiste à faire en sorte que la traduction s'ad
 
 Enfin, le langage doit être adapté à tous les publics et tous les âges.
 
-## Traductions spécifiques à une langue \{#language-specific-translations}
+## Traductions spécifiques à une langue {#language-specific-translations}
 
 Lors de la traduction, plutôt que de calquer simplement la source, il est important de suivre les règles de grammaire, les conventions et le formatage en vigueur dans votre langue. Le texte source suit les règles et conventions de la grammaire anglaise, qui ne sont pas applicables dans beaucoup d'autres langues.
 
@@ -208,7 +208,7 @@ Vous devez donc avoir les règles de votre langue en tête afin de traduire corr
 
 Voici quelques exemples de ce à quoi vous devrez faire attention :
 
-### Ponctuation et mise en forme \{#punctuation-and-formatting}
+### Ponctuation et mise en forme {#punctuation-and-formatting}
 
 **Majuscules**
 
@@ -247,7 +247,7 @@ Voici quelques exemples de ce à quoi vous devrez faire attention :
 - En anglais, le trait d'union (-) est utilisé pour joindre des mots ou différentes parties d'un mot, tandis que le tiret (–) est utilisé pour indiquer un intervalle ou une pause.
 - Beaucoup de langues ont des règles différentes concernant les tirets et les traits d'union qui doivent être respectées.
 
-### Formats \{#formats}
+### Formats {#formats}
 
 **Nombres**
 
@@ -284,7 +284,7 @@ Voici quelques exemples de ce à quoi vous devrez faire attention :
 - En règle générale, veuillez garder la même unité de mesure que dans le texte source. Si votre pays utilise un autre système, vous pouvez inclure la conversion entre parenthèses.
 - Outre la localisation des unités de mesure, il est également important de tenir compte des différences dans la façon dont les langues abordent ces unités. La différence principale est l'espacement entre le nombre et l'unité, qui peut différer selon la langue. Par exemple, on observe cette différence entre 100kB, 100 kB, 50ºF et 50 ºF.
 
-## Conclusion \{#conclusion}
+## Conclusion {#conclusion}
 
 Traduire ethereum.org constitue une excellente occasion de découvrir les différents aspects d'Ethereum.
 

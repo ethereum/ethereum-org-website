@@ -6,7 +6,7 @@ lang: es
 
 Cuando se trata de configurar un [ IDE (Entorno de Desarrollo Integrado)](https://wikipedia.org/wiki/Integrated_development_environment), programar aplicaciones en Ethereum es similar a programar cualquier otro proyecto de software. Hay muchas opciones para elegir, por eso, al final del día, elija el IDE o editor de código que mejor se ajuste a sus preferencias. Probablemente la mejor opción de IDE para su desarrollo de Ethereum es el IDE que ya usa para el desarrollo tradicional de software.
 
-## IDE basados en la Web \{#web-based-ides}
+## IDE basados en la Web {#web-based-ides}
 
 Si te planteas jugar un poco con el código antes de [configurar un entorno de desarrollo local](/developers/local-environment/), estas aplicaciones web están diseñadas a medida para el desarrollo de contratos inteligentes de Ethereum.
 
@@ -30,7 +30,7 @@ Si te planteas jugar un poco con el código antes de [configurar un entorno de d
 
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
-## IDEs de escritorio \{#desktop-ides}
+## IDEs de escritorio {#desktop-ides}
 
 La mayoría de los IDE establecidos han desarrollado complementos para mejorar la experiencia de desarrollo de Ethereum. Como mínimo, proporcionan resaltado de sintaxis para [lenguajes de contratos inteligentes](/developers/docs/smart-contracts/languages/).
 
@@ -58,13 +58,13 @@ La mayoría de los IDE establecidos han desarrollado complementos para mejorar l
 - [Descargar](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
-## Complementos y extensiones \{#plugins-extensions}
+## Complementos y extensiones {#plugins-extensions}
 
 - [solidity:](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) Lenguaje Solidity de Ethereum para Visual Studio Code
 - [Solidity + Hardhat para VS Code:](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) Soporte para Solidity y Hardhat por el equipo de Hardhat
 - [Prettier Solidity:](https://github.com/prettier-solidity/prettier-plugin-solidity) Formateador de código con Prettier
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [IDE de Ethereum:](https://www.alchemy.com/list-of/web3-ides-on-ethereum)_ Lista de Alchemy de IDE de Ethereum_
 

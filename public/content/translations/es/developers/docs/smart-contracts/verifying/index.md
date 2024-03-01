@@ -8,7 +8,7 @@ Los [contratos inteligentes](/developers/docs/smart-contracts/) están diseñado
 
 Es importante hacer la distinción entre "verificación del código fuente" y "[verificación formal](/developers/docs/smart-contracts/formal-verification/)". La verificación del código fuente, que se va a explicar en detalle a continuación, hace referencia a constatar que el código fuente proporcionado de un contrato inteligente en un lenguaje de alto nivel (por ejemplo, Solidity) se compila en el mismo bytecode que se va a ejecutar en la dirección del contrato. Por el otro lado, la verificación formal hace referencia a verificar la corrección de un contrato inteligente, lo que significa que el contrato se comporta según lo esperado. Aunque depende del contexto, generalmente la verificación de contratos se refiere a la verificación del código fuente.
 
-## ¿Qué es la verificación del código fuente? \{#what-is-source-code-verification}
+## ¿Qué es la verificación del código fuente? {#what-is-source-code-verification}
 
 Antes de implementar un contrato inteligente en la [Máquina virtual de Ethereum (EVM)](/developers/docs/evm/), los desarrolladores [compilan](/developers/docs/smart-contracts/compiling/) el código fuente del contrato, el cual consiste en instrucciones [escritas en Solidity](/developers/docs/smart-contracts/languages/) u otro lenguaje de programación de alto nivel, en bytecode. Dado que la EVM no puede interpretar instrucciones de alto nivel, es necesario compilar el código fuente a bytecode (es decir, instrucciones de bajo nivel para la máquina) para ejecutar la lógica del contrato en la EVM.
 
@@ -16,7 +16,7 @@ La verificación del código fuente implica comparar el código fuente de un con
 
 La verificación de un contrato inteligente permite investigar lo que hace un contrato a través del lenguaje de alto nivel en el que está escrito, sin necesidad de leer código de máquina. Las funciones, los valores y generalmente los nombres de las variables y los comentarios suelen permanecer iguales en el código fuente original que se compila e implementa. Esto facilita mucho la lectura del código. La verificación del código fuente también permite la documentación del código, para que los usuarios finales sepan para qué está diseñado un contrato inteligente.
 
-### ¿Qué es una verificación completa? \{#full-verification}
+### ¿Qué es una verificación completa? {#full-verification}
 
 Existen partes del código fuente que no afectan al bytecode compilado, como los comentarios o los nombres de variables. Eso significa que dos códigos fuente con nombres de variables diferentes y comentarios diferentes podrían verificar el mismo contrato. Con eso, un actor malicioso podría agregar comentarios engañosos o proporcionar nombres confusos a las variables dentro del código fuente y hacer que el contrato se verifique con un código fuente diferente al código fuente original.
 
@@ -26,9 +26,9 @@ El archivo de metadatos contiene información sobre la compilación del contrato
 
 Este tipo de verificación que utiliza el hash de metadatos se denomina **"[verificación completa](https://docs.sourcify.dev/docs/full-vs-partial-match/)"** (también conocida como "verificación perfecta"). Si los hashes de los metadatos no coinciden o no se tienen en cuenta en la verificación, se trataría de una "coincidencia parcial", la cual actualmente es la forma más común de verificar contratos. De esta forma, sin la verificación completa, se corre el riesgo de que se [inserte código malicioso](https://samczsun.com/hiding-in-plain-sight/) que no se refleje en el código fuente verificado. La mayoría de los desarrolladores no son conscientes de la verificación completa y no guardan el archivo de metadatos de su compilación, por lo que hasta ahora la verificación parcial ha sido el método estándar para verificar contratos.
 
-## ¿Por qué es importante la verificación del código fuente? \{#importance-of-source-code-verification}
+## ¿Por qué es importante la verificación del código fuente? {#importance-of-source-code-verification}
 
-### No necesidad de confianza \{#trustlessness}
+### No necesidad de confianza {#trustlessness}
 
 La no necesidad de confianza ("truslessness") es posiblemente la premisa más importante para los contratos inteligentes y las [aplicaciones descentralizadas (dApps)](/developers/docs/dapps/). Los contratos inteligentes son "inmutables" y no pueden ser modificados; un contrato solo va a ejecutar la lógica comercial definida en el código en el momento de la implementación. Esto significa que los desarrolladores y las empresas no pueden manipular el código de un contrato luego de implementarlo en Ethereum.
 
@@ -38,13 +38,13 @@ Los proyectos disminuyen las suposiciones de confianza al hacer público el cód
 
 Las herramientas de verificación de código fuente proporcionan garantías de que los archivos de código fuente de un contrato inteligente coinciden con el código de emsamblaje. El resultado es un ecosistema sin confianza, donde los usuarios no confían ciegamente en terceros y en su lugar verifican el código antes de depositar fondos en un contrato.
 
-### Seguridad del usuario \{#user-safety}
+### Seguridad del usuario {#user-safety}
 
 Con los contratos inteligentes, generalmente hay mucho dinero en juego. Esto requiere garantías de seguridad más altas y la verificación de la lógica de un contrato inteligente antes de utilizarlo. El problema es que los desarrolladores inescrupulosos pueden engañar a los usuarios insertando código malicioso en un contrato inteligente. Sin verificación, los contratos inteligentes maliciosos pueden tener [puertas traseras](https://www.trustnodes.com/2018/11/10/concerns-rise-over-backdoored-smart-contracts), mecanismos de control de acceso controvertidos, vulnerabilidades explotables y otras cosas que ponen en riesgo la seguridad de los usuarios y que podrían pasar desapercibidas.
 
 Publicar los archivos de código fuente de un contrato inteligente facilita que las personas interesadas, como los auditores, evalúen el contrato en busca de posibles vectores de ataque. Con múltiples partes verificando de manera independiente un contrato inteligente, los usuarios tienen garantías más sólidas de su seguridad.
 
-## Cómo verificar el código fuente de los contratos inteligentes de Ethereum \{#source-code-verification-for-ethereum-smart-contracts}
+## Cómo verificar el código fuente de los contratos inteligentes de Ethereum {#source-code-verification-for-ethereum-smart-contracts}
 
 [Implementar un contrato inteligente en Ethereum](/developers/docs/smart-contracts/deploying/) requiere enviar una transacción con una carga útil de datos (código bytecode compilado) a una dirección especial. La carga útil de datos se genera compilando el código fuente, junto con los [argumentos constructor](https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor) de la instancia del contrato que se adjuntan a la carga útil de datos en la transacción. La compilación es determinista, lo que significa que siempre produce la misma salida (es decir, el bytecode del contrato) si se utilizan los mismos archivos fuente y ajustes de compilación (como por ejemplo la versión del compilador, el optimizador, etc).
 
@@ -64,11 +64,11 @@ Verificar un contrato inteligente básicamente consta de los siguientes pasos:
 
 Tenga en cuenta que esta es una descripción simplificada de la verificación y existen muchas excepciones que no funcionarían de esta manera, como sería el caso de tener [variables inmutables](https://docs.sourcify.dev/docs/immutables/).
 
-## Herramientas de verificación de código fuente \{#source-code-verification-tools}
+## Herramientas de verificación de código fuente {#source-code-verification-tools}
 
 El proceso tradicional de verificar contratos puede ser complejo. Es por eso que tenemos herramientas para verificar el código fuente de los contratos inteligentes implementados en Ethereum. Estas herramientas automatizan gran parte de la verificación del código fuente y también curan contratos verificados en beneficio de los usuarios.
 
-### Etherscan \{#etherscan}
+### Etherscan {#etherscan}
 
 Aunque es mayormente conocido como un [explorador de cadena de bloques de Ethereum](/developers/docs/data-and-analytics/block-explorers/), Etherscan también ofrece un [servicio de verificación de código fuente](https://etherscan.io/verifyContract) para desarrolladores y usuarios de contratos inteligentes.
 
@@ -80,7 +80,7 @@ Etherscan es la herramienta más utilizada para verificar contratos. Sin embargo
 
 [Más información sobre la verificación de contratos en Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 
-### Sourcify \{#sourcify}
+### Sourcify {#sourcify}
 
 [Sourcify](https://sourcify.dev/#/verifier) es otra herramienta para verificar contratos que es de código abierto y descentralizada. Sourcify no es un explorador de bloques y solo verifica contratos en [distintas redes basadas en la Máquina virtual de Ethereum](https://docs.sourcify.dev/docs/chains). Sourcify actúa como una infraestructura pública sobre la cual otras herramientas pueden construir, y tiene como objetivo permitir interacciones con contratos más amigables para los humanos utilizando la [Interfaz Binaria de Aplicación (ABI, por sus siglas en inglés)](/developers/docs/smart-contracts/compiling/#web-applications) y comentarios [NatSpec](/developers/docs/smart-contracts/compiling/#web-applications) que se encuentran en el archivo de metadatos.
 
@@ -90,7 +90,7 @@ Además, también se pueden recuperar los archivos de código fuente a través d
 
 [Más información sobre la verificación de contratos en Sourcify](https://blog.soliditylang.org/2020/06/25/sourcify-faq/).
 
-### Antiguamente \{#tenderly}
+### Antiguamente {#tenderly}
 
 La plataforma [Tenderly](https://tenderly.co/) permite a los desarrolladores de Web3 crear, probar, monitorear y operar contratos inteligentes. Al combinar herramientas de depuración con observabilidad y bloques de construcción de infraestructura, Tenderly ayuda a los desarrolladores a acelerar el desarrollo de contratos inteligentes. Para habilitar por completo las funciones de Tenderly, los desarrolladores deben realizar la [verificación del código fuente](https://docs.tenderly.co/monitoring/contract-verification) utilizando varios métodos.
 
@@ -102,6 +102,6 @@ Cuando verifica contratos a través del Panel, necesita importar el archivo fuen
 
 Usar el complemento de Hardhat para Tenderly permite tener un mayor control sobre el proceso de verificación con menos esfuerzo, lo que permite elegir entre la verificación automática (sin código) y la verificación manual (basada en código).
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [Verificación del código fuente de un contrato](https://programtheblockchain.com/posts/2018/01/16/verifying-contract-source-code/)

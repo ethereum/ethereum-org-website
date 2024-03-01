@@ -14,9 +14,9 @@ Les récompenses et les pénalités sont comptabilisées une fois par période.
 
 Continuez pour plus de détails...
 
-## Récompenses et pénalités \{#rewards}
+## Récompenses et pénalités {#rewards}
 
-### Récompenses \{#rewards}
+### Récompenses {#rewards}
 
 Les validateurs reçoivent des récompenses lorsqu'ils effectuent des votes cohérents avec la majorité des autres validateurs, lorsqu'ils proposent des blocs et lorsqu'ils participent à des comités de synchronisation. La valeur des récompenses à chaque époque est calculée à partir d'une `base_reward`. Il s'agit de l'unité de base à partir de laquelle les autres récompenses sont calculées. La `base_reward` représente la récompense moyenne reçue par un validateur dans des conditions optimales par période. Ceci est calculé à partir du solde effectif du validateur et du nombre total de validateurs actifs comme suit :
 
@@ -54,7 +54,7 @@ Une récompense additionnelle est prévue pour promouvoir les attestations rapid
 
 Les proposeurs de blocs reçoivent `8 / 64 * base_reward` pour **chaque attestation valide** incluse dans le bloc, donc la valeur réelle de la récompense évolue avec le nombre de validateurs attestant. Les proposeurs de blocs peuvent également augmenter leur récompense en incluant des preuves de comportement malhonnête d'autres validateurs dans le bloc qu'ils proposent. Ces récompenses sont les « carottes » qui encouragent l'honnêteté des validateurs. Un proposeur de bloc qui inclut une pénalité sera récompensé par le montant de `slashed_validators_effective_balance / 512`.
 
-### Pénalités \{#penalties}
+### Pénalités {#penalties}
 
 Jusqu'à présent, nous avons pris en compte les validateurs qui agissent conformément aux règles, mais qu'en est-il des validateurs qui ne votent pas en temps voulu pour la tête, la source et la cible, ou qui le font lentement ?
 
@@ -62,7 +62,7 @@ Les pénalités pour avoir manqué les votes de cible et de source sont égales 
 
 Pour en savoir plus sur les récompenses et les pénalités, consultez les [spécifications de consensus](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Les récompenses et les pénalités ont été ajustées lors de la mise à niveau Bellatrix - regardez Danny Ryan et Vitalik en discuter dans cette vidéo [Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
-## Sanction \{#slashing}
+## Sanction {#slashing}
 
 Le « slashing » est une action plus sévère qui entraîne la suppression forcée d'un validateur du réseau et la perte associée de leur ether mis en jeu. Il existe trois façons dont un validateur peut être « slashé » (sanctionné), toutes impliquant la proposition ou l'attestation malhonnête de blocs :
 
@@ -72,13 +72,13 @@ Le « slashing » est une action plus sévère qui entraîne la suppression forc
 
 Si ces actions sont détectées, le validateur est sanctionné. Cela signifie que 1/32 de leur ether mis en jeu (jusqu'à un maximum d'1 ether) est immédiatement brûlé, puis une période de suppression de 36 jours commence. Pendant cette période de suppression, la mise du validateur diminue progressivement. À mi-parcours (jour 18), une pénalité supplémentaire est appliquée, dont l'ampleur varie en fonction de l'ether mis en jeu total de tous les validateurs sanctionnés au cours des 36 jours précédant l'événement de « slash ». Cela signifie que lorsque davantage de validateurs sont sanctionnés, l'ampleur de la pénalité augmente. Le slash maximum est le solde effectif total de tous les validateurs slashés (c'est-à-dire que s'il y a beaucoup de validateurs slashés, ils pourraient perdre la totalité de leur mise). D'autre part, un seul événement de « slash » isolé ne brûle qu'une petite partie de la mise du validateur. Cette pénalité intermédiaire qui varie en fonction du nombre de validateurs sanctionnés est appelée « pénalité de corrélation ».
 
-## Fuite d’inactivité \{#inactivity-leak}
+## Fuite d’inactivité {#inactivity-leak}
 
 Si la couche de consensus a passé plus de quatre périodes sans se finaliser, un protocole d'urgence appelé « fuite d'inactivité » est activé. Le but ultime de la fuite d'inactivité est de créer les conditions nécessaires pour que la chaîne retrouve sa finalité. Comme expliqué précédemment, la finalité nécessite une majorité de 2/3 de l'ether mis en jeu total pour s'entendre sur les points de contrôle source et cible. Si les validateurs représentant plus d'1/3 du total des validateurs se déconnectent ou ne soumettent pas les attestations correctes, il n'est pas possible pour une supermajorité des 2/3 de finaliser les points de contrôle. La fuite d'inactivité permet à la mise participant aux validateurs inactifs de s'épuiser progressivement jusqu'à ce qu'ils contrôlent moins d'un tiers de la mise totale, permettant ainsi aux validateurs actifs restants de finaliser la chaîne. Cependant, quelle que soit la taille du groupe de validateurs inactifs, les validateurs actifs restants finiront par contrôler plus de 2/3 des ETH en jeu. La perte d'ETH est une forte incitation pour les validateurs inactifs à se réactiver dès que possible ! Un scénario de fuite d'inactivité a été rencontré sur le réseau de test Medalla lorsque moins de 66 % des validateurs actifs ont pu parvenir à un consensus sur la tête actuelle de la blockchain. La fuite d'inactivité a été activée et la finalité a finalement été retrouvée !
 
 La récompense, la pénalité et le mécanisme de sanction du mécanisme de consensus encouragent les validateurs individuels à se comporter correctement. Cependant, de ces choix de conception émerge un système qui encourage fortement une répartition égale des validateurs entre plusieurs clients, et devrait fortement décourager la domination d’un seul client.
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [Améliorer Ethereum : la couche d'incitations](https://eth2book.info/altair/part2/incentives)
 - [Incitations dans le protocole Casper hybride d'Ethereum](https://arxiv.org/pdf/1903.04205.pdf)

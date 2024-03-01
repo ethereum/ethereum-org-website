@@ -4,11 +4,11 @@ description: Lista dotacji dostępnych dla projektów w ekosystemie Ethereum.
 lang: pl
 ---
 
-# Społeczności internetowe \{#online-communities}
+# Społeczności internetowe {#online-communities}
 
 Setki tysięcy entuzjastów Ethereum gromadzi się na tych forach internetowych, aby dzielić się wiadomościami, rozmawiać o ostatnich postępach, omawiać kwestie techniczne i wyobrażać sobie przyszłość.
 
-## Fora \{#forums}
+## Fora {#forums}
 
 {
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> — wszystko o Ethereum</SocialListItem>
@@ -35,7 +35,7 @@ Setki tysięcy entuzjastów Ethereum gromadzi się na tych forach internetowych,
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> — najbardziej wpływowa tablica ogłoszeń dla badań kryptoekonomicznych</SocialListItem>
 }
 
-## Czaty \{#chat-rooms}
+## Czaty {#chat-rooms}
 
 {
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> — społeczność skoncentrowana na oferowaniu wsparcia w zarządzaniu projektami rozwoju Ethereum</SocialListItem>
@@ -68,7 +68,7 @@ Setki tysięcy entuzjastów Ethereum gromadzi się na tych forach internetowych,
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _— zdecentralizowane forum pytań i odpowiedzi_</SocialListItem>
 }
 
-## YouTube i Twitter \{#youtube-and-twitter}
+## YouTube i Twitter {#youtube-and-twitter}
 
 {
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Fundacja Ethereum</Link> — Bądź na bieżąco z najnowszymi informacjami od Fundacji Ethereum</SocialListItem>

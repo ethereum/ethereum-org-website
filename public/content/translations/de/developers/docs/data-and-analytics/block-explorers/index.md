@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 Block-Explorer sind das Portal zu den Daten von Ethereum. Sie können darüber Echtzeitdaten zu Blöcken, Transaktionen, Minern, Konten und anderen Aktivitäten in der Chain sehen.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Sie sollten das Basiskonzept von Ethereum verstehen, damit Sie die Daten, die Sie über einen Block-Explorer erhalten, sinnvoll nutzen können. Beginnen Sie mit [einer Einführung in Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Dienste \{#services}
+## Dienste {#services}
 
 - [Etherscan](https://etherscan.io/) -_Auch in Chinesisch, Koreanisch, Russisch und Japanisch verfügbar_
 - [Beaconcha.in](https://beaconcha.in/)
@@ -26,13 +26,13 @@ Sie sollten das Basiskonzept von Ethereum verstehen, damit Sie die Daten, die Si
 - [EthVM](https://www.ethvm.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 
-## Daten \{#data}
+## Daten {#data}
 
 Ethereum ist von Grund auf transparent und damit ist auch alles überprüfbar. Block-Explorer bieten eine Oberfläche, um diese Informationen zu erhalten. Das gilt sowohl für das Ethereum-Netzwerk als auch für die Testnets, wenn Sie diese Daten benötigen. Die Daten werden in Ausführungsdaten und Konsensdaten unterteilt. Die Ausführungsdaten beziehen sich auf die Transaktionen, die in einem bestimmten Block ausgeführt wurden. Die Konsensdaten beziehen sich auf die Blöcke selbst und die Validatoren, die sie vorgeschlagen haben.
 
 Im Folgenden finden Sie eine Zusammenfassung der Arten von Daten, die Sie über einem Block-Explorer erhalten können:
 
-### Ausführungsdaten \{#execution-data}
+### Ausführungsdaten {#execution-data}
 
 Neue Blöcke werden alle 12 Sekunden zu Ethereum hinzugefügt (es sei denn, ein Block-Proposer verpasst seinen Zug), so dass den Block-Explorern ein nahezu konstanter Datenstrom hinzugefügt wird. Blöcke enthalten viele wichtige Daten, die Sie vielleicht hilfreich finden:
 
@@ -56,7 +56,7 @@ Neue Blöcke werden alle 12 Sekunden zu Ethereum hinzugefügt (es sei denn, ein 
 - Parent Hash - Der Hash des Blocks, der vor dem aktuellen Block kam
 - StateRoot - Der Wurzelhash des Merkle-Baums, der den gesamten Zustand des Systems speichert
 
-### Ressourcen \{#gas}
+### Ressourcen {#gas}
 
 Block-Explorer geben nicht nur Informationen zum Ressourcenverbrauch in Transkationen und Blöcken an, manche zeigen auch Informationen zu den aktuell im Netzwerk gültigen Ressourcenpreisen an. Das hilft Ihnen dabei, die Nutzung des Netzwerks zu verstehen, sichere Transaktionen auszuführen und nicht mehr Ressourcen zu beanspruchen als notwendig. Suchen Sie nach APIs, die Ihnen helfen können, diese Informationen in die Produktschnittstelle zu integrieren. Ressourcenspezifische Datenabdeckungen:
 
@@ -67,7 +67,7 @@ Block-Explorer geben nicht nur Informationen zum Ressourcenverbrauch in Transkat
 - Verträge, die Gas verbrauchen - mit anderen Worten: beliebte Produkte, die im Netz viel genutzt werden
 - Konten, die Gas ausgeben - mit anderen Worten, häufige Nutzer des Netzes
 
-### Transaktionen \{#transactions}
+### Transaktionen {#transactions}
 
 Block-Explorer werden häufig eingesetzt, um den Status der Transaktionen abzurufen. Das liegt an dem Detailgrad, den sie bieten und der zusätzliche Sicherheit bietet. Die Transaktionsdetails enthalten Folgendes:
 
@@ -91,7 +91,7 @@ Block-Explorer werden häufig eingesetzt, um den Status der Transaktionen abzuru
 - Nonce - Die Transaktionsnummer für die Absenderadresse`"from"` (denken Sie daran, dass diese bei 0 beginnt, so dass eine Nonce von `100` die 101ste Transaktion wäre, die von diesem Konto übermittelt wurde)
 - Eingabedaten - Alle zusätzlichen Informationen, die für die Transaktion erforderlich sind
 
-### Konten \{#accounts}
+### Konten {#accounts}
 
 Es gibt viele Daten, auf die Sie über ein Konto zugreifen können. Daher wird häufig empfohlen, mehrere Konten zu verwenden, damit Ihr Vermögen und Ihre Assets nicht so leicht nachverfolgt werden können. Außerdem werden weitere Lösungen entwickelt, um Transaktionen und Kontoaktivitäten sicherer und privater zu gestalten. Im Folgenden finden Sie die Daten, die für Konten verfügbar sind:
 
@@ -114,7 +114,7 @@ Smart-Contract-Konten verfügen über die gleichen Daten wie ein Benutzerkonto, 
 - Vertragserstellungscode - Der kompilierte Bytecode des Smart Contracts – wird erstellt, wenn Sie einen in Solidity oder Vyper usw. geschriebenen Smart Contract kompilieren
 - Vertragsereignisse - Eine Historie der im Smart Contract aufgerufenen Methoden – im Grunde eine Möglichkeit zu sehen, wie der Vertrag verwendet wird und wie oft
 
-### Token \{#tokens}
+### Token {#tokens}
 
 Token sind eine Art von Vertrag und enthalten ähnliche Daten wie ein Smart Contract. Doch dadurch, dass sie einen Wert haben und gehandelt werden können, weisen sie zusätzliche Datenpunkte auf:
 
@@ -128,7 +128,7 @@ Token sind eine Art von Vertrag und enthalten ähnliche Daten wie ein Smart Cont
 - Vertragsadresse - Die Adresse des Tokens, die im Mainnet bereitgestellt wurde
 - Nachkommastellen - ERC-20-Token sind teilbar und haben Nachkommastellen
 
-### Netzwerk \{#network}
+### Netzwerk {#network}
 
 Einige Blockdaten geben Aufschluss über den Zustand von Ethereum im Allgemeinen.
 
@@ -138,9 +138,9 @@ Einige Blockdaten geben Aufschluss über den Zustand von Ethereum im Allgemeinen
 - Gesamtes ETH-Angebot - Anzahl der im Umlauf befindlichen ETH - neue ETH werden bei der Erstellung jedes Blocks in Form von Block-Prämien geschaffen
 - Marktkapitalisierung - Berechnung des Preises\*Angebot
 
-## Daten der Konsensebene \{#consensus-layer-data}
+## Daten der Konsensebene {#consensus-layer-data}
 
-### Epoche \{#epoch}
+### Epoche {#epoch}
 
 Aus Sicherheitsgründen werden am Ende jeder Epoche (alle 6,4 Minuten) zufällig ausgewählte Gruppen von Validatoren gebildet. Epochendaten enthalten:
 
@@ -155,7 +155,7 @@ Aus Sicherheitsgründen werden am Ende jeder Epoche (alle 6,4 Minuten) zufällig
 - Durchschnittliches Guthaben der Validatoren - Durchschnittliches Guthaben der aktiven Validatoren
 - Slots - Anzahl der in der Epoche enthaltenen Slots (Slots beinhalten einen gültigen Block)
 
-### Slot \{#slot}
+### Slot {#slot}
 
 Slots sind Möglichkeiten für die Blockerstellung. Folgende Daten sind zu Slots verfügbar:
 
@@ -180,7 +180,7 @@ Slots sind Möglichkeiten für die Blockerstellung. Folgende Daten sind zu Slots
 - Slashings - Anzahl der Strafen, die an die Proposer von Blöcken oder an die Attestierer vergeben wurden
 - Abstimmungen - Die Validatoren, die für den Block in diesem Slot gestimmt haben
 
-### Blöcke \{#blocks-1}
+### Blöcke {#blocks-1}
 
 Proof-of-Stake unterteilt die Zeit in Slots und Epochen. Damit gibt es neue Daten:
 
@@ -189,7 +189,7 @@ Proof-of-Stake unterteilt die Zeit in Slots und Epochen. Damit gibt es neue Date
 - Slot - Der Slot, in dem der Block vorgeschlagen wurde
 - Attestierungen - Die Anzahl der im Slot enthaltenen Attestierungen - Attestierungen sind wie Stimmen, die anzeigen, dass der Block bereit ist, in die Beacon Chain aufgenommen zu werden
 
-### Validatoren \{#validators}
+### Validatoren {#validators}
 
 Validatoren sind dafür verantwortlich, Blöcke vorzuschlagen und sie innerhalb der Slots zu bestätigen.
 
@@ -205,7 +205,7 @@ Validatoren sind dafür verantwortlich, Blöcke vorzuschlagen und sie innerhalb 
 - Attestierungen - Die Attestierungen, die der Validator vorgelegt hat
 - Einzahlungen - Die Absenderadresse, der Transaktionshash, die Blocknummer, der Zeitstempel, der Betrag und der Status der vom Validator getätigten Staking-Einzahlungen
 
-### Beglaubigungen \{#attestations}
+### Beglaubigungen {#attestations}
 
 Attestierungen sind „Ja“-Stimmen für die Aufnahme von Blöcken in die Chain. Ihre Daten beziehen sich auf eine Aufzeichnung der Attestierung und der bestätigenden Validatoren.
 
@@ -218,7 +218,7 @@ Attestierungen sind „Ja“-Stimmen für die Aufnahme von Blöcken in die Chain
 - Target - Zeigt auf die letzte Epochengrenze
 - Signature
 
-### Netzwerk \{#network-1}
+### Netzwerk {#network-1}
 
 Die Daten der obersten Ebene der Konsensebene umfassen Folgendes:
 
@@ -229,7 +229,7 @@ Die Daten der obersten Ebene der Konsensebene umfassen Folgendes:
 - Staked ETH - Höhe der im Netzwerk gestakten ETH
 - Durchschnittliches Guthaben - Durchschnittliches ETH-Guthaben der Validatoren
 
-## Block Explorer \{#block-explorers}
+## Block Explorer {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) - ein Block-Explorer, mit dem Sie Daten für Ethereum Mainnet und Goerli Testnetz abrufen können
 - [Beaconcha.in](https://beaconcha.in/) - ein Open-Source-Block-Explorer für Ethereum Mainnet und Goerli Testnetz
@@ -238,11 +238,11 @@ Die Daten der obersten Ebene der Konsensebene umfassen Folgendes:
 - [Ethplorer](https://ethplorer.io/) - ein Block-Explorer mit Fokus auf Token für das Ethereum Mainnet und das Kovan Testnetz
 - [Rantom](https://rantom.app/) - Ein krypto-freundlicher Open-Source-Dienst, der in seine dezentrale Finanzplattform (DeFi)& integriert ist Visualisierung des Transaktionsvolumens von NFTs für einen detaillierten Überblick
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
 
-## Verwandte Themen \{#related-topics}
+## Verwandte Themen {#related-topics}
 
 - [Transaktionen](/developers/docs/transactions/)
 - [Konten](/developers/docs/accounts/)

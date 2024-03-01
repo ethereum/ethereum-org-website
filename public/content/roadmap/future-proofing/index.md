@@ -9,7 +9,7 @@ template: roadmap
 
 Some parts of the roadmap are not necessarily required for scaling or securing Ethereum in the near-term, but set Ethereum up for stability and reliability far into the future.
 
-## Quantum resistance \{#quantum-resistance}
+## Quantum resistance {#quantum-resistance}
 
 Some of the cryptography securing present-day Ethereum will be compromised when quantum computing becomes a reality. Although quantum computers are probably decades away from being a genuine threat to modern cryptography, Ethereum is being built to be secure for centuries to come. This means making [Ethereum quantum resistant](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) as soon as possible.
 
@@ -21,7 +21,7 @@ The [“KZG” commitment schemes](/roadmap/danksharding/#what-is-kzg) used in s
 <ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Read about KZG and trusted setups</ButtonLink>
 }
 
-## Simpler and more efficient Ethereum \{#simpler-more-efficient-ethereum}
+## Simpler and more efficient Ethereum {#simpler-more-efficient-ethereum}
 
 Complexity creates opportunities for bugs or vulnerabilities that can be exploited by attackers. Therefore, part of the roadmap is simplifying Ethereum and removing code that has hung around through various upgrades but is no longer needed or can now be improved upon. A leaner, simpler codebase is easier for developers to maintain and reason about.
 
@@ -29,7 +29,7 @@ There are several updates that will be made to the [Ethereum Virtual Machine (EV
 
 Similarly, there are updates that can be made to other parts of present-day Ethereum clients. One example is that current execution and consensus clients use a different type of data compression. It will be much easier and more intuitive to share data between clients when the compression scheme is unified across the whole network.
 
-## Current progress \{#current-progress}
+## Current progress {#current-progress}
 
 Most of the upgrades required for future-proofing Ethereum are still in the research phase and may be several years away from being implemented. Upgrades such as removing SELF-DESTRUCT and harmonizing the compression scheme used in the execution and consensus clients are likely to come sooner than quantum resistant cryptography.
 

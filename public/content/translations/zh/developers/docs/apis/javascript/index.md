@@ -12,17 +12,17 @@ lang: zh
 
 请注意，[合并](/roadmap/merge/)后，运行节点需要两种互联的以太坊软件 - 执行客户端和共识客户端。 请确保你的节点同时包含执行客户端和共识客户端。 如果你的节点不在本地计算机上（例如，你的节点在 AWS 实例上运行），请相应地更新教程中的 IP 地址。 有关更多信息，请参阅我们关于[运行节点](/developers/docs/nodes-and-clients/run-a-node/)的页面。
 
-## 前提条件 \{#prerequisites}
+## 前提条件 {#prerequisites}
 
 除了了解 JavaScript 外，了解[以太坊堆栈](/developers/docs/ethereum-stack/)和[以太坊客户端](/developers/docs/nodes-and-clients/)也许是有帮助的。
 
-## 为什么要使用库？ \{#why-use-a-library}
+## 为什么要使用库？ {#why-use-a-library}
 
 这些库降低了与一个以太坊节点直接交互的复杂性。 它们还提供实用功能（例如：将以太币转换为 Gwei），因此作为开发者，你可以花费更少的时间处理以太坊客户端的复杂问题，而将更多的时间集中于处理应用程序的独特功能。
 
-## 库功能 \{#library-features}
+## 库功能 {#library-features}
 
-### 连接到以太坊节点 \{#connect-to-ethereum-nodes}
+### 连接到以太坊节点 {#connect-to-ethereum-nodes}
 
 使用提供程序，这些库允许你连接到以太坊并读取它的数据，不管是通过 JSON-RPC、INFURA、Etherscan、Alchemy 还是 Metamask。
 
@@ -70,7 +70,7 @@ var web3 = new Web3(
 - 网络 ID
 - 以及更多...
 
-### 钱包功能 \{#wallet-functionality}
+### 钱包功能 {#wallet-functionality}
 
 这些库为你提供了创建钱包、管理密匙和签署交易的功能。
 
@@ -150,7 +150,7 @@ wallet.sendTransaction(tx)
 - 签署交易
 - 以及更多...
 
-### 与智能合约交互的方法 \{#interact-with-smart-contract-functions}
+### 与智能合约交互的方法 {#interact-with-smart-contract-functions}
 
 JavaScript 客户端库允许你的应用程序通过读取已编译合约的应用程序二进制接口 (ABI) 来调用智能合约函数。
 
@@ -212,7 +212,7 @@ contract Test {
 - 部署一个合约
 - 以及更多...
 
-### 实用功能 \{#utility-functions}
+### 实用功能 {#utility-functions}
 
 这些实用功能为你提供了方便的快捷操作，让以太坊的构建变得更轻松一些。
 
@@ -234,7 +234,7 @@ ethers.utils.formatEther(balance)
 - [Web3js 实用功能](https://docs.web3js.org/api/web3-utils)
 - [Ethers 实用功能](https://docs.ethers.io/v5/api/utils/)
 
-## 可用的库 \{#available-libraries}
+## 可用的库 {#available-libraries}
 
 **Web3.js -** **_以太坊 JavaScript API。_**
 
@@ -278,16 +278,16 @@ ethers.utils.formatEther(balance)
 - [相关文档](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
-## 相关主题 \{#related-topics}
+## 相关主题 {#related-topics}
 
 - [节点和客户端](/developers/docs/nodes-and-clients/)
 - [开发框架](/developers/docs/frameworks/)
 
-## 相关教程 \{#related-tutorials}
+## 相关教程 {#related-tutorials}
 
 - [设置 Web3js 以在 JavaScript 中使用以太坊区块链](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– 在项目中设置 web3.js 的说明。_
 - [在 JavaScript 中调用智能合约](/developers/tutorials/calling-a-smart-contract-from-javascript/) _使用 DAI 代币，从而借助 JavaScript 调用合约函数。_

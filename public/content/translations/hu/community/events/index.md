@@ -5,7 +5,7 @@ lang: hu
 hideEditButton: true
 ---
 
-## Közelgő események \{#events}
+## Közelgő események {#events}
 
 **Minden hónapban részt vehet Ethereum-eseményeken a világ bármely pontján.** Vegyen részt egy Önhöz közel eső eseményen, hogy találkozzon a közösség tagjaival, megismerje a munkalehetőségeket és új képességeket fejlesszen.
 
@@ -15,7 +15,7 @@ hideEditButton: true
 
 A lista nem teljeskörű, a közösség tagjai frissítik. Tudomása van egy tervezett Ethereum-eseményről? [Kérjük, adja hozzá!](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)
 
-## Ethereum-találkozók \{#meetups}
+## Ethereum-találkozók {#meetups}
 
 Nem talál olyan eseményt, amely jó lenne Önnek? Próbáljon meg elmenni egy találkozóra. Ezek kisebb események, melyeket az Ethereum-rajongók szerveznek, hogy az Ethereum iránt érdeklődők összegyűljenek, beszélgessenek az Ethereumról, megismerjék az új fejlesztéseket.
 

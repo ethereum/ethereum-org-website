@@ -18,7 +18,7 @@ sourceUrl: https://soliditydeveloper.com/thegraph
 
 Tym razem przyjrzymy się bliżej protokołowi The Graph, który zasadniczo stał się częścią standardowego stosu do tworzenia aplikacji dapps w zeszłym roku. Zobaczmy najpierw, jak zrobilibyśmy rzeczy w tradycyjny sposób...
 
-## Bez The Graph... \{#without-the-graph}
+## Bez The Graph... {#without-the-graph}
 
 Przejdźmy więc do prostego przykładu w celach ilustracyjnych. Wszyscy lubimy gry, więc wyobraźmy sobie prostą grę z użytkownikami zakładów:
 
@@ -83,7 +83,7 @@ Możesz zobaczyć, że to nieoptymalne:
 
 Spójrzmy teraz na lepsze rozwiązanie.
 
-## Pozwól, że przedstawię Ci GraphQL \{#let-me-introduce-to-you-graphql}
+## Pozwól, że przedstawię Ci GraphQL {#let-me-introduce-to-you-graphql}
 
 Najpierw porozmawiajmy o GraphQL, pierwotnie zaprojektowanym i zaimplementowanym przez Facebooka. Być może znasz tradycyjny model Rest API. Teraz wyobraź sobie, że zamiast tego możesz napisać zapytanie dla dokładnie tych danych, które chciałeś:
 
@@ -97,7 +97,7 @@ Te dwa obrazy w dużym stopniu oddają istotę GraphQL. Za pomocą zapytania po 
 
 Teraz, mając tę ​​wiedzę, w końcu wskoczmy w przestrzeń blockchain i The Graph.
 
-## Co to jest The Graph? \{#what-is-the-graph}
+## Co to jest The Graph? {#what-is-the-graph}
 
 Blockchain to zdecentralizowana baza danych, ale w przeciwieństwie do tego, co zwykle ma miejsce, nie mamy języka zapytań dla tej bazy danych. Rozwiązania do odzyskiwania danych są bolesne lub całkowicie niemożliwe. The Graph to zdecentralizowany protokół do indeksowania i odpytywania danych blockchain. I mogłeś się domyślić, że używa GraphQL jako języka zapytań.
 
@@ -105,7 +105,7 @@ Blockchain to zdecentralizowana baza danych, ale w przeciwieństwie do tego, co 
 
 Przykłady są zawsze najlepsze, aby coś zrozumieć, więc użyjmy The Graph dla naszego przykładu GameContract.
 
-## Jak stworzyć Subgraph \{#how-to-create-a-subgraph}
+## Jak stworzyć Subgraph {#how-to-create-a-subgraph}
 
 Definicja sposobu indeksowania danych nazywana jest subgraph. Wymaga trzech komponentów:
 
@@ -113,7 +113,7 @@ Definicja sposobu indeksowania danych nazywana jest subgraph. Wymaga trzech komp
 2. Schemat (schema.graphql)
 3. Mapping (mapping.ts)
 
-### Manifest (subgraf.yaml) \{#manifest}
+### Manifest (subgraf.yaml) {#manifest}
 
 Manifest jest naszym plikiem konfiguracyjnym i definiuje:
 
@@ -157,7 +157,7 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-### Schemat (schema.graphql) \{#schema}
+### Schemat (schema.graphql) {#schema}
 
 Schematem jest definicja danych GraphQL. Pozwoli to na zdefiniowanie istniejących obiektów i ich typów. Obsługiwane typy z wykresu to
 
@@ -188,7 +188,7 @@ type Player @entity {
 }
 ```
 
-### Mapping (mapping.ts) \{#mapping}
+### Mapping (mapping.ts) {#mapping}
 
 Plik mapowania na wykresie definiuje nasze funkcje, które przekształcają przychodzące zdarzenia w podmioty. Jest napisany w AssemblyScript, podzbiorze Typescript. Oznacza to, że może być skompilowany w WASM (WebAssembly) dla bardziej wydajnego i przenośnego wykonywania mapowania.
 
@@ -240,7 +240,7 @@ export function handleNewBet(event: PlacedBet): void {
 }
 ```
 
-## Używanie go w frontendzie \{#using-it-in-the-frontend}
+## Używanie go w frontendzie {#using-it-in-the-frontend}
 
 Używając czegoś takiego jak Apollo Boost, możesz łatwo zintegrować The Graph z React Dapp (lub Apollo-Vue). Zwłaszcza gdy używasz hooków React i Apollo, pobieranie danych jest tak proste, jak napisanie pojedynczego zapytania GraphQl w twoim komponencie. Typowa konfiguracja może wyglądać tak:
 
@@ -291,19 +291,19 @@ React.useEffect(() => {
 
 Ale brakuje nam ostatniego elementu układanki, a jest nim serwer. Możesz uruchomić go samodzielnie lub skorzystać z usługi hostowanej.
 
-## Serwer The Graph \{#the-graph-server}
+## Serwer The Graph {#the-graph-server}
 
-### Graph Explorer: usługa hostowana \{#graph-explorer-the-hosted-service}
+### Graph Explorer: usługa hostowana {#graph-explorer-the-hosted-service}
 
 Najprostszym sposobem jest skorzystanie z usługi hostowanej. Postępuj zgodnie z instrukcjami [tutaj](https://thegraph.com/docs/deploy-a-subgraph), aby wdrożyć subgraf. W przypadku wielu projektów można znaleźć istniejące podgrafy w eksploratorze pod adresem https://thegraph.com/explorer/.
 
 ![The Graph-Explorer](./thegraph-explorer.png)
 
-### Uruchamianie własnego węzła \{#running-your-own-node}
+### Uruchamianie własnego węzła {#running-your-own-node}
 
 Alternatywnie możesz uruchomić własny węzeł: https://github.com/graphprotocol/graph-node#quick-start. Jednym z powodów, aby to zrobić, może być korzystanie z sieci, która nie jest obsługiwana przez hostowaną usługę. Obecnie obsługiwane są sieć główna, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI i Sokol.
 
-## Zdecentralizowana przyszłość \{#the-decentralized-future}
+## Zdecentralizowana przyszłość {#the-decentralized-future}
 
 GraphQL obsługuje również strumienie dla nowo przychodzących zdarzeń. Nie jest to jeszcze w pełni obsługiwane przez The Graph, ale zostanie wkrótce wydane.
 

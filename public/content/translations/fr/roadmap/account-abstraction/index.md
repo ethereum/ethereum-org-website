@@ -8,7 +8,7 @@ summaryPoints:
   - Les clés perdues ou exposées peuvent être récupérées en faisant plusieurs sauvegardes
 ---
 
-# Abstraction de comptes \{#account-abstraction}
+# Abstraction de comptes {#account-abstraction}
 
 Les utilisateurs interagissent sur Ethereum en utilisant des **[ comptes détenus en externe (EOA)](/glossary/#eoa)**. C'est la seule façon de démarrer une transaction ou d'exécuter un contrat intelligent. Ce qui restreint la façon dont les utilisateurs peuvent interagir sur Ethereum. Par exemple, il est difficile d'exécuter des lots de transactions si les utilisateurs ne disposent pas d'un solde d'ETH suffisant pour couvrir les frais de gaz.
 
@@ -34,7 +34,7 @@ Les portefeuilles de contrats intelligents sont la solution à ces problèmes, m
 
 Finalement, l'abstraction de compte améliore le support des portefeuilles de contrats intelligents, les rendant plus faciles à développer et plus sûrs à utiliser. En fin de compte, avec l'abstraction de compte, les utilisateurs peuvent profiter de tous les avantages d'Ethereum sans avoir besoin de connaître ou de se soucier de la technologie sous-jacente.
 
-## En finir avec les phrases de récupération \{#beyond-seed-phrases}
+## En finir avec les phrases de récupération {#beyond-seed-phrases}
 
 Les comptes d'aujourd'hui sont sécurisés en utilisant des clés privées calculées à partir de phrases de récupération. Toute personne ayant accès à une phrase de récupération peut facilement découvrir la clé privée protégeant un compte et gagner l'accès à tous les actifs qu'il contient. Si une clé privée et une phrase de récupération sont perdues, elles ne pourront jamais être récupérées et les actifs qu'elles contrôlent seront figés à jamais. La sécurisation de ces phrases de récupération est compliquée, même pour les utilisateurs expérimentés, et l'hameçonnage de phrases de récupération est l'une des méthodes les plus courantes utilisées pour arnaquer les utilisateurs.
 
@@ -50,7 +50,7 @@ Par exemple, des clés de secours peuvent être ajoutées à un portefeuille afi
 - **Définir des limites de transaction**: Spécifiez des seuils quotidiens pour la valeur maximale pouvant être transférée depuis le compte par jour/semaine/mois. Cela signifie que si un attaquant prend le contrôle de votre compte, il ne pourra pas tout vider d'un coup, et vous aurez l'occasion de geler et de réinitialiser l'accès.
 - **Créer des listes blanches** : n'autorisez que les transactions vers certaines adresses que vous savez être sûres. Cela signifie que _même si_ votre clé privée était volée, l'attaquant ne pourrait pas envoyer de fonds vers des comptes de destination qui ne sont pas sur la liste blanche. Ces listes blanches nécessiteraient plusieurs signatures pour être modifiées, de sorte qu'un attaquant ne pourrait pas ajouter sa propre adresse à la liste à moins d'avoir accès à plusieurs de vos clés de sauvegarde.
 
-## Meilleure expérience utilisateur \{#better-user-experience}
+## Meilleure expérience utilisateur {#better-user-experience}
 
 L'abstraction de compte permet une **meilleure expérience utilisateur globale** ainsi qu'une **sécurité améliorée** car elle ajoute la prise en charge des portefeuilles de contrats intelligents. au niveau du protocole. La raison la plus importante est que cela offrira aux développeurs de contrats intelligents, de portefeuilles et d’applications beaucoup plus de liberté pour innover en matière d’expérience utilisateur d’une manière que nous ne pouvons peut-être pas encore anticiper. Quelques améliorations évidentes qui accompagneront l'abstraction de compte incluent le regroupement des transactions pour plus de rapidité et d'efficacité. Par exemple, un simple échange devrait être une opération en un clic, mais aujourd'hui, il faut signer plusieurs transactions pour approuver les dépenses de chaque jeton individuellement avant que l'échange ne soit exécuté. L'abstraction de compte élimine cette friction en autorisant le regroupement des transactions. De plus, la transaction groupée pourrait approuver précisément la bonne valeur de jetons requise pour chaque transaction, puis révoquer les approbations après la finalisation de la transaction, offrant ainsi une sécurité supplémentaire.
 
@@ -72,7 +72,7 @@ Il est également intéressant de réfléchir à la manière, dont les achats po
 
 Ce ne sont là que quelques exemples, de la manière dont l’expérience utilisateur pourrait être améliorée grâce à l’abstraction des comptes, mais il y en a bien d’autres que nous n’avons pas encore imaginés. L'abstraction de compte libère les développeurs des contraintes des EOA actuels, leur permet d'intégrer les bons aspects du web2 dans le web3 sans sacrifier leur propre sécurité, et pirater de manière créative de nouvelles expériences utilisateur inventives.
 
-## Comment l'abstraction des comptes sera-t-elle mise en œuvre ? \{#how-will-aa-be-implemented}
+## Comment l'abstraction des comptes sera-t-elle mise en œuvre ? {#how-will-aa-be-implemented}
 
 Aujourd'hui, les portefeuilles de contrats intelligents existent mais sont difficiles à mettre en œuvre car l'EVM ne les prend pas en charge. À la place, ils s’appuient sur un code relativement complexe autour des transactions standard d'Ethereum. Ethereum peut changer cela en permettant aux contrats intelligents d'initier des transactions, adoptant une logique nécessaire dans les contrats intelligents d'Ethereum plutôt que hors chaîne. L'addition de logique dans les contrats intelligents augmente également la décentralisation d'Ethereum, car elle élimine le besoin de « relais » gérés par les développeurs de portefeuilles, pour traduire les messages signés par l'utilisateur lors des transactions régulières Ethereum.
 
@@ -116,11 +116,11 @@ Notez qu'EIP-3074 n'est pas actif actuellement. La communauté favorise actuelle
 </ExpandableCard>
 }
 
-## Progrès actuels \{#current-progress}
+## Progrès actuels {#current-progress}
 
 Des portefeuilles de contrats intelligents sont déjà disponibles, mais d'autres améliorations sont nécessaires pour les rendre aussi décentralisés et sans autorisation que possible. L'EIP-4337 est une proposition mûre qui ne nécessite aucune modification du protocole Ethereum, il est donc possible qu'elle soit mise en œuvre rapidement. Toutefois, les mises à jour qui modifient le protocole d'Ethereum ne sont actuellement pas en cours de développement actif, de sorte que ces changements peuvent prendre beaucoup plus de temps à être déployés. Il est également possible que l'abstraction des comptes soit suffisamment bien réalisée par l'EIP-4337 pour qu'aucun changement de protocole ne soit jamais nécessaire.
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [erc4337.io](https://www.erc4337.io/)
 - [Débat sur l'abstraction des comptes à Devcon Bogota](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)

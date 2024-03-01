@@ -4,13 +4,13 @@ lang: it
 description: I nostri criteri per elencare risorse di contenuto su ethereum.org
 ---
 
-# Aggiungere risorse di contenuto \{#adding-content-resources}
+# Aggiungere risorse di contenuto {#adding-content-resources}
 
 Non possiamo sperare di coprire ogni singolo aspetto di Ethereum, quindi proviamo a mostrare le risorse più brillanti tra articoli, tutorial, newsletter, schede di lavoro e altri contenuti creati dalla community. In questo modo, spesso si forniscono informazioni più approfondite sugli argomenti a cui gli utenti potrebbero essere interessati.
 
 Se ci sono risorse di contenuto che pensi dovrebbero essere aggiunte a una pagina, sentiti libero di suggerirle ove appropriato.
 
-## Come decidiamo \{#how-we-decide}
+## Come decidiamo {#how-we-decide}
 
 Le risorse di apprendimento saranno valutate sulla base dei seguenti criteri:
 
@@ -23,7 +23,7 @@ Le risorse di apprendimento saranno valutate sulla base dei seguenti criteri:
 
 ---
 
-## Aggiungere le proprie risorse di contenuto \{#add-your-content-resource}
+## Aggiungere le proprie risorse di contenuto {#add-your-content-resource}
 
 Se desideri aggiungere a ethereum.org una risorsa di contenuto che soddisfa i criteri, crea un ticket su GitHub.
 

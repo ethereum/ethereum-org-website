@@ -4,7 +4,7 @@ description:
 lang: ja
 ---
 
-## はじめに \{#introduction}
+## はじめに {#introduction}
 
 **トークンとは何か？**
 
@@ -24,13 +24,13 @@ lang: ja
 
 ERC-20 規格は、代替性トークンを扱うための標準規格です。つまりこの規格では、ひとつのトークンが、その種類および値において他のトークンとまったく同じであるというプロパティを持たせることができます。 例えば、ERC-20 トークンは ETH とまったく同様に動作します。つまり、1 トークンは、現在および将来において常に、他のひとつのトークンと同等になります。
 
-## 前提知識 \{#prerequisites}
+## 前提知識 {#prerequisites}
 
 - [アカウント](/developers/docs/accounts)
 - [スマートコントラクト](/developers/docs/smart-contracts/)
 - [トークンの基準](/developers/docs/standards/tokens/)
 
-## 規格の概要 \{#body}
+## 規格の概要 {#body}
 
 ERC-20（Ethereum Request for Comments 20）は、スマートコントラクト内にトークン API として実装できるトークン規格として、ファビアン・ヴォゲルステラー氏により 2015 年 11 月に提案されました。
 
@@ -45,7 +45,7 @@ ERC-20 は、以下のような機能を提供します:
 
 [EIP-20](https://eips.ethereum.org/EIPS/eip-20)から引用：
 
-### メソッド \{#methods}
+### メソッド {#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -59,18 +59,18 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### イベント \{#events}
+### イベント {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
 event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 ```
 
-### 実例： \{#web3py-example}
+### 実例： {#web3py-example}
 
 イーサリアムの ERC-20 トークンコントラクトのコードを詳しく見ることで、これらの規格がイーサリアムのシンプルさを保証する上でどれだけ重要なのかを理解しておきましょう。 ERC-20 トークンを扱うインターフェイスを開発するには、当該コントラクトのアプリケーション・バイナリー・インターフェイス（ABI）を用いればよいです。 理解しやすいように、以下では簡略化した ABI を用いています。
 
-#### Web3.py の実例： \{#web3py-example}
+#### Web3.py の実例： {#web3py-example}
 
 まず、 Python のライブラリから[Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation)をインストール済みであることを確認してください:
 
@@ -141,7 +141,7 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 - [EIP-20：ERC-20 トークン規格](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - トークン](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)

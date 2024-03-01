@@ -4,11 +4,11 @@ lang: tr
 description: Ethereum.org Çeviri Programı hakkında sık sorulan sorular
 ---
 
-# Ethereum.org çeviri rehberi \{#translating-ethereum-guide}
+# Ethereum.org çeviri rehberi {#translating-ethereum-guide}
 
 Çeviri Programında yeniyseniz ve başlamakta tereddüt ediyorsanız, başlamanıza yardımcı olabilecek bazı SSS'ler burada bulunuyor. En yaygın soruların cevaplarını bulmak için bu rehberi kullanın.
 
-## Ethereum.org'u çevirdiğim için ücret alabilir miyim? \{#compensation}
+## Ethereum.org'u çevirdiğim için ücret alabilir miyim? {#compensation}
 
 Ethereum.org açık kaynaklı bir web sitesidir; bu, herkesin dahil olup katkıda bulunabileceği anlamına gelir.
 
@@ -20,7 +20,7 @@ Bu nedenle Çeviri Programı açık ve gönüllü olup katılım ücrete tabi de
 
 Katkıda bulunanların Ethereum ekosisteminde başarılı olmalarını sağlamak için her türlü çabayı gösteriyoruz; [POAP'ler sunmak](/contributing/translation-program/acknowledgements/#poap), [çevirmen sertifikası](/contributing/translation-program/acknowledgements/#certificate) ve ayrıca [Çeviri Lider Tabloları](/contributing/translation-program/acknowledgements/) ve [sitede tüm çevirmenlerimizin listelenmesi](/contributing/translation-program/contributors/) gibi pek çok parasal olmayan teşvik mevcuttur.
 
-## `<HTML tags>` bulunan dizgileri nasıl çevirebilirim? \{#tags}
+## `<HTML tags>` bulunan dizgileri nasıl çevirebilirim? {#tags}
 
 Her dizgi saf yazı biçiminde yazılmamıştır. HTML etiketleri gibi farklı karakterler bulunduran dizgiler mevcuttur (`<0>`, `</0>`). Bu, genelde hyperlink veya cümle ortasında alternatif stil yaratmak için kullanılır.
 
@@ -33,7 +33,7 @@ Dilinizde daha doğal olması için dizgideki etiketlerin yerlerini değiştireb
 
 Etiketler ve kod parçacıklarıyla ilgili daha ayrıntılı bilgi için lütfen [ethereum.org Çeviri Stili Rehberine](/contributing/translation-program/translators-guide/#dealing-with-tags) bakın.
 
-## Dizgiler nerede yaşar? \{#strings}
+## Dizgiler nerede yaşar? {#strings}
 
 Bazen kaynak dizgileri doğru bir çeviri sağlamanız için yeterli olmayabilir.
 
@@ -44,7 +44,7 @@ Bazen kaynak dizgileri doğru bir çeviri sağlamanız için yeterli olmayabilir
 
 ![Bağlam için eklenmiş örnek bir ekran görüntüsü](./source-string-2.png)
 
-## Nasıl yorum bırakabilir veya soru sorabilirim? Bir sorun veya yazım hatası işaretlemek istiyorum... \{#comment}
+## Nasıl yorum bırakabilir veya soru sorabilirim? Bir sorun veya yazım hatası işaretlemek istiyorum... {#comment}
 
 Dikkat gerektiren özel bir dizgiyi işaretlemek istiyorsanız, yorum yapmaktan çekinmeyin.
 
@@ -54,7 +54,7 @@ Dikkat gerektiren özel bir dizgiyi işaretlemek istiyorsanız, yorum yapmaktan 
 
 ![Yorumların ve sorunların nasıl yapılacağının gösterimi](./comment-issue.png)
 
-## Çeviri Belleği (ÇB) nedir? \{#translation-memory}
+## Çeviri Belleği (ÇB) nedir? {#translation-memory}
 
 Çeviri Belleği (ÇB), Crowdin'in önceden çevrilmiş tüm dizgileri [ethereum.org](http://ethereum.org/) üzerinde depolayan bir özelliğidir. Bir dizgi çevirildiğinde, otomatik olarak proje ÇB'mize kaydedilir. Bu, zaman kazanmanıza yardımcı olacak yararlı bir araç olabilir!
 
@@ -63,7 +63,7 @@ Dikkat gerektiren özel bir dizgiyi işaretlemek istiyorsanız, yorum yapmaktan 
 
 ![Çeviri belleğinin ekran görüntüsü](./translation-memory.png)
 
-## Crowdin sözlüğünü nasıl kullanırım? \{#glossary}
+## Crowdin sözlüğünü nasıl kullanırım? {#glossary}
 
 Ethereum terminolojisi, yeni teknoloji terimleri genelde birçok dilde çevrilmediği için çeviri işimizin diğer önemli bir kısmıdır. Ayrıca, farklı bağlamlarda farklı anlamlar içeren bazı terimler bulunur. [Ethereum terminolojisi hakkında daha fazla bilgi](#terminology)
 
@@ -81,7 +81,7 @@ Crowdin sözlüğü, terim ve anlamların açıklanması için en iyi yerdir. S�
 
 ![Crowdin'e bir sözlük teriminin nasıl ekleneceğini gösteren ekran görüntüsü](./add-glossary-term.png)
 
-### Terminoloji çeviri politikası \{#terminology}
+### Terminoloji çeviri politikası {#terminology}
 
 _İsimler için (markalar, şirketler, kişiler) ve yeni teknik terimler (İşaret Zinciri, parça zincirleri vb.)_
 
@@ -100,13 +100,13 @@ Size tanıdık olmayan bir kelimeyle karşılaştığınızda yapmanızı önerd
 
 Çeviriler, SEO zorlukları ve gereksiz kafa karışıklığına sebep olabileceği için marka, şirket, ve personel isimlerini çevirmeden bırakmanızı öneririz.
 
-## İnceleme süreci nasıl işliyor? \{#review-process}
+## İnceleme süreci nasıl işliyor? {#review-process}
 
 Çevirilerimizde belirli bir kalite ve tutarlılık düzeyi sağlamak için, dünyanın en büyük dil hizmeti sağlayıcılarından biri olan [Acolad](https://www.acolad.com/) ile çalışıyoruz. Acolad'in 20.000 profesyonel dil uzmanı vardır, bu da ihtiyaç duyduğumuz her dil ve içerik türü için profesyonel inceleyiciler sağlayabilecekleri anlamına gelir.
 
 İnceleme süreci basittir; belirli bir [içerik grubu](/contributing/translation-program/content-buckets) %100 çevrildiğinde, o içerik grubu için bir inceleme siparişi veririz. İnceleme süreci doğrudan Crowdin'de gerçekleşir. İnceleme tamamlandıktan sonra, web sitesini çevrilmiş içerikle güncelleriz.
 
-## Kendi dilimde nasıl içerik eklerim? \{#adding-foreign-language-content}
+## Kendi dilimde nasıl içerik eklerim? {#adding-foreign-language-content}
 
 Şu anda, İngilizce olmayan tüm içerik doğrudan İngilizce kaynak içerikten çevrilmektedir ve İngilizce'de olmayan herhangi bir içerik başka dillere eklenemez.
 
@@ -114,6 +114,6 @@ Ethereum.org için yeni içerik önermek için GitHub'da [konu açabilirsiniz](h
 
 Yakın gelecekte İngilizce olmayan içerik eklenmesi için destek eklemeyi planlıyoruz.
 
-## İletişime geçin \{#contact}
+## İletişime geçin {#contact}
 
 Bunların hepsini okuduğunuz için teşekkürler. Umarız bu, programımıza katılmamıza yardımcı olmuştur. Soru sormak ve diğer çevirmenlerle işbirliği yapmak için [Discord translation channel](https://discord.gg/ethereum-org)'a katılmaktan çekinmeyin veya translations@ethereum.org adresinden bize ulaşın!

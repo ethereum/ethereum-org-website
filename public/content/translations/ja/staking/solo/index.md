@@ -13,7 +13,7 @@ summaryPoints:
   - 信頼せず、必ず自分の資金の鍵を自己管理すること
 ---
 
-## ソロステーキングとは \{#what-is-solo-staking}
+## ソロステーキングとは {#what-is-solo-staking}
 
 ソロステーキングとは、インターネットに接続された[イーサリアムノードを稼働](/run-a-node/)させ、32 ETH を預け入れ、[バリデータ](#faq)を起動し、ネットワークのコンセンサスに直接参加できるようになることです。
 
@@ -23,7 +23,7 @@ summaryPoints:
 
 ソロステーカーは、オンラインでバリデータを適切に稼働させ続けることで、プロトコルから直接報酬を受け取ることができます。
 
-## ソロステーキングの利点 \{#why-stake-solo}
+## ソロステーキングの利点 {#why-stake-solo}
 
 ソロステーキングはより多くの責任を伴いますが、資金とステーキングのセットアップをご自身で最大限に制御することができます。
 
@@ -39,7 +39,7 @@ summaryPoints:
   </Card>
 </CardGrid>
 
-## ソロステーキングを行う前に考慮すべきこと \{#considerations-before-staking-solo}
+## ソロステーキングを行う前に考慮すべきこと {#considerations-before-staking-solo}
 
 ソロステーキングが誰にでも利用しやすく、リスクが無ければ良いのですが、現実はそうではありません。 ETH のソロステーキングを選択する前に、真剣かつ実践的に考慮すべき点がいくつかあります。
 
@@ -75,7 +75,7 @@ summaryPoints:
 
 <StakingComparison page="solo" />
 
-## 仕組み \{#how-it-works}
+## 仕組み {#how-it-works}
 
 <StakingHowSoloWorks />
 
@@ -83,13 +83,13 @@ summaryPoints:
 
 上海アップグレード後は、ご希望であれば、報酬だけでなく、ステーキングも引き出すことができるようになります。
 
-## ステーキングランチパッドを開始する \{#get-started-on-the-staking-launchpad}
+## ステーキングランチパッドを開始する {#get-started-on-the-staking-launchpad}
 
 ステーキングランチパッドは、ステーキングを始めるのに便利なオープンソースアプリケーションです。 クライアントの選択、鍵の生成、ステーキングデポジットのコントラクトへの ETH の預け入れを案内してくれるアプリケーションです。 バリデータを安全にセットアップするためのチェックリストが提供されています。
 
 <StakingLaunchpadWidget />
 
-## ノードとクライアントのセットアップツールで考慮すべきこと \{#node-tool-considerations}
+## ノードとクライアントのセットアップツールで考慮すべきこと {#node-tool-considerations}
 
 ETH のソロステーキングを支援するツールやサービスは増えていますが、それぞれに異なるリスクと利点があります。
 
@@ -97,7 +97,7 @@ ETH のソロステーキングを支援するツールやサービスは増え�
 
 <StakingConsiderations page="solo" />
 
-## ノードとクライアントのセットアップツールの検討 \{#node-and-client-tools}
+## ノードとクライアントのセットアップツールの検討 {#node-and-client-tools}
 
 セットアップに役立つ様々なオプションが用意されています。 上記の指標を参考に、ツールを選択してください。
 
@@ -117,11 +117,11 @@ ETH のソロステーキングを支援するツールやサービスは増え�
 
 ここに記載すべきステーキングツールをご存知の場合は [製品掲載ポリシー](/contributing/adding-staking-products/)を確認し、記載すべきかどうかをご確認の上、レビューに提出してください。
 
-## ソロステーキングガイドを探索 \{#staking-guides}
+## ソロステーキングガイドを探索 {#staking-guides}
 
 <StakingGuides />
 
-## よくある質問 \{#faq}
+## よくある質問 {#faq}
 
 これらは、ステーキングについての最も一般的な質問のいくつかで、知っておく価値があるものです。
 
@@ -188,7 +188,7 @@ ETH のソロステーキングを支援するツールやサービスは増え�
 </ExpandableCard>
 }
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 - [イーサリアムのクライアント多様性問題](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [クライアントの多様性の支援](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_

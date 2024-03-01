@@ -12,13 +12,13 @@ published: 2021-01-13
 
 Acest tutorial vă va ajuta să configurați monitorizarea nodului dvs. Geth ca să-i înțelegeți performanțele și să identificați posibilele probleme.
 
-## Condiții prealabile \{#prerequisites}
+## Condiții prealabile {#prerequisites}
 
 - Trebuie să știți deja să rulați o instanță de Geth.
 - Ar fi util să aveți câteva cunoștințe elementare de terminal în Linux, deoarece majoritatea etapelor și exemplelor sunt din acest mediu.
 - Consultați acest videoclip cu prezentarea generală a setului de metrici Geth: [Monitorizarea unei infrastructuri Ethereum de Péter Szilágyi](https://www.youtube.com/watch?v=cOBab8IJMYI).
 
-## Stiva de monitorizare \{#monitoring-stack}
+## Stiva de monitorizare {#monitoring-stack}
 
 Un client Ethereum colectează numeroase date care se pot citi sub forma unei baze de date cronologice. Pentru a face monitorizarea mai ușoară, puteți introduce aceste date într-un software de vizualizare a datelor. Sunt disponibile mai multe opțiuni:
 
@@ -33,7 +33,7 @@ De asemenea, există [Geth Prometheus Exporter](https://github.com/hunterlong/ge
 
 În acest tutorial vă vom configura clientul Geth pentru a împinge date către InfluxDB, care va crea cu ele o bază de date, apoi Grafana pentru a crea o vizualizare grafică a acestora. Dacă executați manual acest proces, vă va ajuta să îl înțelegeți mai bine, să îl modificați și să îl implementați în diferite medii.
 
-## Configurarea InfluxDB \{#setting-up-influxdb}
+## Configurarea InfluxDB {#setting-up-influxdb}
 
 Întâi și-ntâi să descărcăm și să instalăm InfluxDB. Pe [pagina de lansare a InfluxDB](https://portal.influxdata.com/downloads/) găsim mai multe opțiuni de instalare. Alegeți-o pe cea potrivită mediului dumneavoastră. O puteți instala și dintr-un [repository](https://repos.influxdata.com/) (depozitar). De exemplu, pentru distribuția bazată pe Debian:
 
@@ -82,7 +82,7 @@ exit
 
 Acum InfluxDB funcționează și este configurat să stocheze metricile Geth.
 
-## Pregătirea Geth \{#preparing-geth}
+## Pregătirea Geth {#preparing-geth}
 
 După configurarea unei baze de date, trebuie să activăm colectarea metricilor în Geth. Mare atenție la `METRICS AND STATS OPTIONS` din `geth --help`. Acolo vom găsi mai multe opțiuni, iar în cazul nostru vrem ca Geth să împingă („push”) date în InfluxDB. Configurarea de bază specifică atât punctul final unde InfluxDB este accesibil, cât și autentificarea pentru bazele de date.
 
@@ -99,7 +99,7 @@ use geth
 show measurements
 ```
 
-## Configurarea Grafana \{#setting-up-grafana}
+## Configurarea Grafana {#setting-up-grafana}
 
 În următoarea etapă vom instala Grafana, care va interpreta grafic datele. Urmați procesul de instalare pentru mediul dvs. din documentația Grafana. Aveți grijă să instalați versiunea OSS, dacă nu doriți altfel. Exemple de etape de instalare pentru distribuțiile Debian care utilizează depozitarul:
 

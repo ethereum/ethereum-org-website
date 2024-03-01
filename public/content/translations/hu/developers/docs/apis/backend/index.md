@@ -10,15 +10,15 @@ Erre a célra minden Ethereum-kliens implementálja a [JSON-RPC](/developers/doc
 
 Ha egy bizonyos programnyelvet szeretnél használni, hogy csatlakozz egy Ethereum csomóponttal, akkor fejleszd ki a saját megoldásodat, de ugyanakkor számos kényelmes könyvtár létezik az ökoszisztémán belül, melyek megkönnyítik ezt. Ezekkel a könyvtárakkal a fejlesztők intuitív, egysoros metódusokat írhatnak, hogy kezdeményezzenek egy JSON RPC kérést (a háttérben), mely interakcióba lép az Ethereummal.
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 Érdemes lehet előbb alaposan megismerni az [Ethereum stacket](/developers/docs/ethereum-stack/) és az [Ethereum-klienseket](/developers/docs/nodes-and-clients/).
 
-## Miért használj egy könyvtárat? \{#why-use-a-library}
+## Miért használj egy könyvtárat? {#why-use-a-library}
 
 Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóponthoz történő közvetlen csatlakozással jár. Ezenkívül használati függvényeket is szolgáltatnak (pl.: ETH konvertálása Gwei-be), így fejlesztőként kevesebb időt kell az Ethereum kliensek bonyodalmaival foglalkoznod és több időd jut egyedi funkcionalitást kialakítani az alkalmazásodnak.
 
-## Elérhető könyvtárak \{#available-libraries}
+## Elérhető könyvtárak {#available-libraries}
 
 **Alchemy -** **_Ethereum Fejlesztési Platform._**
 
@@ -167,16 +167,16 @@ Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóp
 - [Dokumentáció](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 _Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
 
-## Kapcsolódó témák \{#related-topics}
+## Kapcsolódó témák {#related-topics}
 
 - [ Csomópontok és kliensek](/developers/docs/nodes-and-clients/)
 - [Fejlesztői keretrendszerek](/developers/docs/frameworks/)
 
-## Kapcsolódó útmutatók \{#related-tutorials}
+## Kapcsolódó útmutatók {#related-tutorials}
 
 - [Web3js beállítása az Ethereum-blokklánc használatához JavaScriptben](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Útmutató a web3.js projektben való beállításához.._
 - [Okosszerződés hívása JavaScriptből](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– A DAI token használatával tekintse meg, hogyan hívhat be szerződéseket a JavaScript segítségével._

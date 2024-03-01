@@ -16,7 +16,7 @@ published: 2020-12-01
 
 这是有关使用 WebSocket 和 Alchemy 向以太坊区块链发出请求的入门级指南。
 
-## WebSocket 与 HTTP \{#websockets-vs-http}
+## WebSocket 与 HTTP {#websockets-vs-http}
 
 与 HTTP 不同的是，使用 WebSocket，您无需要需要特定信息时持续进行请求。 WebSocket 为您维护网络连接（如果操作正确）并侦听变化。
 
@@ -24,7 +24,7 @@ published: 2020-12-01
 
 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) 自动添加对 WebSocket 连接失败的处理并重试，无需进行配置。
 
-## 试试看 \{#try-it-out}
+## 试试看 {#try-it-out}
 
 测试 WebSocket 最简单的方式是安装命令行工具来进行 WebSocket 请求，例如[wscat](https://github.com/websockets/wscat)。 使用 wscat，您可以发送如下请求：
 
@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ```
 
-## 如何使用 WebSocket \{#how-to-use-websockets}
+## 如何使用 WebSocket {#how-to-use-websockets}
 
 首先，使用应用的 WebSocket URL 打开 WebSocket 您可以在[您的仪表板](https://dashboard.alchemyapi.io/)中打开应用的页面并点击“View Key”来找到您的应用的 WebSocket URL。 请注意，您的应用的 WebSocket URL 与其 HTTP 请求的 URL 不同，但两者都可以通过点击“View Key”找到。
 
@@ -47,7 +47,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 [Alchemy API 参考](https://docs.alchemyapi.io/documentation/alchemy-api-reference/)中列出的的任何 API 都可以通过 WebSocket 使用。 为此，请使用与 HTTP POST 请求正文相同的有效载荷，而不是通过 WebSocket 发送该有效负载。
 
-## 使用 Web3 \{#with-web3}
+## 使用 Web3 {#with-web3}
 
 在使用像 Web3 这样的客户端库时过渡到 WebSocket 是很简单的。 在实例化您的 Web3 客户端时，只需传递 WebSocket URL 而不是 HTTP URL。 例如：
 
@@ -57,26 +57,26 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## 订阅 API \{#subscription-api}
+## 订阅 API {#subscription-api}
 
 当通过 WebSocket 连接时，您可以使用两个额外的方法：`eth_subscribe`和`eth_unsubscribe`。 这些方法将允许您侦听特定事件并立即收到通知。
 
-### `eth_subscribe` \{#eth-subscribe}
+### `eth_subscribe` {#eth-subscribe}
 
 为指定的事件创建新的订阅。 [详细了解 `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe)。
 
-#### 参数 \{#parameters}
+#### 参数 {#parameters}
 
 1. 订阅类型
 2. 可选参数
 
 第一个参数指定要侦听的事件类型。 第二个参数包含其他选项，具体取决于第一个参数。 不同的描述类型，其选项和事件有效载荷描述如下。
 
-#### 返回 \{#returns}
+#### 返回 {#returns}
 
 订阅 ID：此 ID 将附加到任何收到的事件 并且也可用于通过`eth_unsubscribe`取消订阅。
 
-#### 订阅事件 \{#subscription-events}
+#### 订阅事件 {#subscription-events}
 
 当订阅处于活动状态时，您将收到包含以下字段的对象事件：
 
@@ -86,7 +86,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
   - `subscription`：由创建此订阅的`eth_subscription`调用返回的订阅 ID。
   - `result`：其内容因订阅类型而异的对象。
 
-#### 订阅类型 \{#subscription-types}
+#### 订阅类型 {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
@@ -209,7 +209,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 ```
 
-### `eth_unsubscribe` \{#eth-unsubscribe}
+### `eth_unsubscribe` {#eth-unsubscribe}
 
 取消一个现有的订阅，以便不再发送任何事件。
 

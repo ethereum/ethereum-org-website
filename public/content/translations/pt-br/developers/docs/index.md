@@ -8,23 +8,23 @@ O objetivo dessa documentação é ajudar você a criar utilizando o Ethereum. E
 
 Este é um esforço da comunidade de código aberto, então, não hesite em sugerir novos tópicos, adicionar novo conteúdo e fornecer exemplos sempre que você julgar ser útil. Toda a documentação é editável através do GitHub. Se não souber como, [siga estas instruções](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md).
 
-## Módulos de desenvolvimento \{#development-modules}
+## Módulos de desenvolvimento {#development-modules}
 
 Se esta é sua primeira tentativa de desenvolvimento com o Ethereum, recomendamos começar do início e ir avançando como se fosse um livro.
 
-### Tópicos fundamentais \{#foundational-topics}
+### Tópicos fundamentais {#foundational-topics}
 
 {
 <DeveloperDocsLinks headerId="foundational-topics" />
 }
 
-### Pilha Ethereum \{#ethereum-stack}
+### Pilha Ethereum {#ethereum-stack}
 
 {
 <DeveloperDocsLinks headerId="ethereum-stack" />
 }
 
-### Avançado \{#advanced}
+### Avançado {#advanced}
 
 {
 <DeveloperDocsLinks headerId="advanced" />

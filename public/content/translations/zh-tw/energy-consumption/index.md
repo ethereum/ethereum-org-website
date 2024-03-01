@@ -4,7 +4,7 @@ description: 了解以太坊能耗時的必要基本資訊。
 lang: zh-tw
 ---
 
-# 以太坊的能耗 \{#proof-of-stake-energy}
+# 以太坊的能耗 {#proof-of-stake-energy}
 
 以太坊是講求綠色環保的區塊鏈。 以太坊的[權益證明](/developers/docs/consensus-mechanisms/pos)共識機制，使用以太幣而非[能源來維持網路的安全性](/developers/docs/consensus-mechanisms/pow)。 以太坊全球網路的能耗約為[每年 0.0026 太瓦／時](https://carbon-ratings.com/eth-report-2022)。
 
@@ -37,13 +37,13 @@ lang: zh-tw
 
 你可以在[劍橋區塊鏈網路永續性指標的官網](https://ccaf.io/cbnsi/ethereum)，瀏覽許多產業的能耗與碳排放估計值。
 
-## 每筆交易能耗估計值 \{#per-transaction-estimates}
+## 每筆交易能耗估計值 {#per-transaction-estimates}
 
 許多文章估算了區塊鏈「每筆交易」的能耗。 這可能會產生誤導，因為提出和驗證區塊所需的能量與其中的交易數量無關。 每筆交易每個單位的能耗，意味著交易越少，能耗越少，反之亦然，但事實並非如此。 此外，每筆交易的估計值，很大程度上取決於區塊鏈的交易吞吐量是如何定義的，並且可以透過調整這個定義來使估計值看起來更大或更小。
 
 例如，在以太坊上，交易吞吐量不僅是基礎層的交易吞吐量，也是所有「[二層網路](/layer-2/)」卷軸之交易吞吐量的總和。 二層網絡通常不列入計算，但考慮排序者消耗的其他能量（少量）及其處理的交易量（大量），很可能會大幅降低每筆交易的估計值。 這就是比較跨平台每筆交易能耗的數據時，可能產生誤導的原因之一。
 
-## 以太坊的碳債 \{#carbon-debt}
+## 以太坊的碳債 {#carbon-debt}
 
 目前以太坊的能耗非常低，但並非一直都是如此。 以太坊一開始使用工作量證明，其環境成本比現在的權益證明機制大了許多。
 
@@ -53,7 +53,7 @@ lang: zh-tw
 
 根據 CCRI 估算，合併使以太坊年度電力消耗降低了 **99.988%** 以上。 同樣，以太坊碳足跡減少了約 **99.992%**（從 11,016,000 噸減至 870 噸二氧化碳當量）。 正確來看，減少的碳排放就如同從艾菲爾鐵塔的高度下降到小塑膠玩偶的高度，如上圖所示。 因此，保護以太坊網路的環境成本大幅降低。 同時，網路的安全性相信也已得到改善。
 
-## 綠色應用程式層 \{#green-applications}
+## 綠色應用程式層 {#green-applications}
 
 即使以太坊能耗極低，以太坊上仍有穩定成長及高度活躍的[**再生金融 (ReFi)**](/refi/) 廣大社群。 再生金融應用程式使用去中心化金融組件，來建構具有積極外部影響、進而使環境受益的金融應用程式。 再生金融是[「solarpunk」](https://en.wikipedia.org/wiki/Solarpunk)這項廣大運動的一部分，該運動與以太坊緊密結合，目標是將技術進步與環境管理結合。 以太坊去中心化、無需許可，且具有可組合性，這些特性使其成為再生金融和 solarpunk 社群理想的基礎層。
 
@@ -63,7 +63,7 @@ lang: zh-tw
   如果你認為此頁內容能更加準確，請提出議題或提取請求 (PR)。 呈現在此頁面上的統計數據皆是基於公開數據的估計值 - 它們不代表 ethereum.org 團隊或以太坊基金會的官方聲明或承諾。
 </InfoBanner>
 
-## 了解更多 \{#further-reading}
+## 了解更多 {#further-reading}
 
 - [劍橋區塊鏈網路永續性指標](https://ccaf.io/cbnsi/ethereum)
 - [美國白宮對工作量證明區塊鏈所作的調查報告](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
@@ -73,7 +73,7 @@ lang: zh-tw
 - [合併 - 對以太坊網路電力消耗及碳足跡之影響](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [以太坊的能耗](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
-## 相關主題 \{#related-topics}
+## 相關主題 {#related-topics}
 
 - [以太坊的展望](/roadmap/vision/)
 - [信標鏈（Beacon Chain）](/roadmap/beacon-chain)

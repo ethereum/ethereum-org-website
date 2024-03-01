@@ -8,11 +8,11 @@ lang: tr
 
 **Veri kullanılabilirliği**, bir kullanıcının bir bloğu doğrulamak için gereken verinin gerçekten tüm ağ katılımcıları için kullanılabilir olduğu konusundaki güvencesini ifade eder. Ethereum'un 1. katmanındaki tam düğümler için bu nispeten basittir; tam düğüm her bloğun içindeki verinin bir kopyasını indirir - indirmenin _mümkün_ olabilmesi için veri kullanılabilir olmalıdır. Verileri eksik olan bir blok, blokzincire eklenmek yerine reddedilir. Bu "zincir üstünde veri kullanılabilirliği" olarak adlandırılır ve monolitik blokzincirlerin bir özelliğidir. Tam düğümler, her işlemi indirir ve kendi kendilerine gerçekleştirir, bu nedenle bunları kandırıp geçersiz işlemleri kabul ettirmek mümkün değildir. Ancak modüler blokzincirler, katman 2 toplamaları ve hafif istemciler için veri kullanılabilirliği daha karmaşıktır ve daha sofistike doğrulama prosedürleri gerektirebilir.
 
-## Ön koşullar \{#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Özellikle [mutabakat mekanizmaları](/developers/docs/consensus-mechanisms/) başta olmak üzere, [blokzincirin temellerine](/developers/docs/intro-to-ethereum/) hakim olmanız gerekir. Ayrıca, bu sayfa okuyucunun [bloklar](/developers/docs/blocks/), [işlemler](/developers/docs/transactions/), [düğümler](/developers/docs/nodes-and-clients/), [ölçeklendirme çözümleri](/developers/docs/scaling/) ve diğer ilgili konular hakkında bilgi sahibi olduğunu kabul eder.
 
-## Veri Kullanılabilirliği Sorunu \{#the-data-availability-problem}
+## Veri Kullanılabilirliği Sorunu {#the-data-availability-problem}
 
 Veri kullanılabilirliği sorunu, blokzincire eklenen bazı işlem verilerinin özetlenmiş şeklinin gerçekten geçerli işlemler kümesini temsil ettiğini tüm ağa kanıtlama ihtiyacını ifade eder, ancak tüm düğümlerin tüm verileri indirmesi gerekmeksizin bunu yapma ihtiyacını ortadan kaldırır. Tam işlem verileri blokları bağımsız olarak doğrulamak için gereklidir ancak tüm düğümlerin tüm işlem verilerini indirmesi, ölçeklendirme açısından bir engel oluşturur. Veri kullanılabilirliği sorununun çözümleri, tüm işlem verilerinin kendileri için veriyi indirip depolamayan ağ katılımcılarına doğrulama için mevcut olduğuna dair yeterli güvence sağlamayı hedefler.
 
@@ -20,21 +20,21 @@ Veri kullanılabilirliği sorunu, blokzincire eklenen bazı işlem verilerinin �
 
 Veri kullanılabilirliği ayrıca ["durumsuz"](/roadmap/statelessness) Ethereum istemcileri için de kritik bir endişedir. Bu istemciler, blokları doğrulamak için durum verilerini indirmek ve depolamak zorunda olmadıklarından veri kullanılabilirliği önemlidir. Durumsuz istemciler yine de verilerin _bir şekilde_ kullanılabilir olduğundan ve doğru şekilde işlendiğinden emin olmak zorundadır.
 
-## Veri Kullanılabilirliği Çözümleri \{#data-availability-solutions}
+## Veri Kullanılabilirliği Çözümleri {#data-availability-solutions}
 
-### Veri kullanılabilirliği örneklemesi (DAS) \{#data-availability-sampling}
+### Veri kullanılabilirliği örneklemesi (DAS) {#data-availability-sampling}
 
 Veri Kullanılabilirliği Örneklemesi (DAS), ağ için herhangi bir düğüme çok fazla yük bindirmeden verilerin kullanılabilir olup olmadığını kontrol etmenin bir yoludur. Her düğüm (hisseleme yapmayan düğümler dahil), toplam verinin küçük, rastgele seçilmiş bir alt kümesini indirir. Örneklerin başarıyla indirilmesi, tüm verilerin mevcut olduğu konusunda yüksek bir güvence sağlar. Bu, veri kümesini gereksiz bilgiyle genişleten (bu işlem, verinin üzerinde bir polinom olarak bilinen bir işlevi sığdırmak ve bu _polinomu_ ek noktalarda değerlendirmek yoluyla yapılır) veri silme kodlamasına dayanır. Bu, gerektiğinde orijinal verinin gereksiz veriden geri kazanılmasına olanak tanır. Bu veri oluşturma sürecinin bir sonucu, orijinal verilerden _herhangi_ biri mevcut değilse, genişletilmiş verinin _yarısının_ eksik olmasıdır! Her düğüm tarafından indirilen veri örneklerinin miktarı, her bir istemcinin örnekleme yoluyla örneklenen veri parçalarının en az yarısının gerçekten mevcut olmadığı durumlarda _bile_ eksik olması olasılığı _son derece yüksek_ olacak şekilde ayarlanabilir.
 
 DAS, [EIP-4844](/roadmap/danksharding) uygulandıktan sonra toplama operatörlerinin işlem verilerini kullanılabilir hale getirmesini sağlamak için kullanılacaktır. Ethereum düğümleri, tüm verilerin mevcut olmasını sağlamak için yukarıda açıklanan yedekleme şemasını kullanarak örneklemelerle sağlanan işlem verilerini rastgele örnekleyecektir. Aynı teknik, blok üreticilerinin tüm verilerini güvenli açık istemcilerin kullanımına açık hale getirmek için kullanılabilir. Benzer şekilde, [önerici-oluşturucu ayrımı](/roadmap/pbs) altında, sadece blok oluşturucunun tüm bloğu işlemesi gerekecek, diğer doğrulayıcılar veri kullanılabilirliği örneklemesi kullanarak doğrulama yapacaklardır.
 
-### Veri kullanılabilirliği kurulları \{#data-availability-committees}
+### Veri kullanılabilirliği kurulları {#data-availability-committees}
 
 Veri Kullanılabilirliği Kurulları (DAC'ler), veri kullanılabilirliğini sağlayan veya onaylayan güvenilir taraflardır. DAC'ler, DAS'ın yerine veya DAS [ile birlikte](https://hackmd.io/@vbuterin/sharding_proposal#Why-not-use-just-committees-and-not-DAS) kullanılabilir. Kurullarla birlikte gelen güvenlik güvenceleri, belirli bir yapılandırmaya dayalıdır. Ethereum, örneğin açık istemciler için veri kullanılabilirliğini doğrulamak üzere rastgele örneklenmiş doğrulayıcı alt kümelerini kullanır.
 
 Bazı validiumlar da DAC'leri kullanır. DAC, verilerin kopyalarını çevrimdışı olarak depolayan güvenilir bir düğüm kümesidir. DAC, bir anlaşmazlık durumunda verileri kullanıma sunmak zorundadır. DAC üyeleri, bahsi geçen verinin gerçekten mevcut olduğunu kanıtlamak için zincir üstünde tasdikler yayımlar. Bazı validiumlar, DAC'leri bir hisse ispatı (PoS) doğrulayıcı sistemiyle değiştirir. Burada, herkes bir doğrulayıcı olabilir ve veriyi zincir dışında depolayabilir. Ancak bir "bono" sağlamaları gerekmektedir, bu da bir akıllı sözleşmeye yatırılır. Doğrulayıcının verileri saklaması gibi bir kötü niyetli davranış durumunda bono kesilebilir. Hisse ispatı veri kullanılabilirliği kurulları, dürüst davranışı doğrudan teşvik ettikleri için normal DAC'lere göre daha güvenlidir.
 
-## Veri kullanılabilirliği ve hafif düğümler \{#data-availability-and-light-nodes}
+## Veri kullanılabilirliği ve hafif düğümler {#data-availability-and-light-nodes}
 
 [Hafif düğümler](/developers/docs/nodes-and-clients/light-clients), aldıkları blok başlıklarını blok verilerini indirmeden doğrulamak zorundadır. Bu hafifliğin maliyeti, tam düğümlerin yaptığı gibi yerel olarak işlemleri yeniden çalıştırarak blok başlıklarını bağımsız olarak doğrulayamamalarıdır.
 
@@ -52,7 +52,7 @@ Bu senaryoda bile, yalnızca birkaç baytı saklayan saldırılar, rastgele veri
 
 **Not:** DAS ve sahtecilik kanıtları hisse ispatı Ethereum hafif istemcileri için henüz uygulanmamıştır ancak bunlar yol haritasında bulunmaktadır ve muhtemelen ZK-SNARK tabanlı kanıtlar şeklinde gerçekleşecektir. Günümüzdeki hafif istemciler, bir tür DAC'ye dayalıdır: senkronizasyon kurulunun kimliklerini doğrular ve ardından aldıkları imzalı blok başlıklarına güvenirler.
 
-## Veri kullanılabilirliği ve katman 2 toplamaları \{#data-availability-and-layer-2-rollups}
+## Veri kullanılabilirliği ve katman 2 toplamaları {#data-availability-and-layer-2-rollups}
 
 [Toplamalar](/glossary/#rollups) gibi [katman 2 ölçeklendirme çözümleri](/layer-2/), işlemleri zincir dışında işleyerek Ethereum'un işlem maliyetlerini azaltır ve işlem hacmini artırır. Toplama işlemleri, sıkıştırılıp yığınlar halinde Ethereum'da yayımlanır. Yığınlar, zincir dışındaki binlerce ayrı işlemi Ethereum'da tek bir işlemi olarak gösterir. Bu, temel katman üzerindeki sıkışıklığı azaltır ve kullanıcılar için ücretleri düşürür.
 
@@ -62,7 +62,7 @@ Ancak, Ethereum'da yayımlanan "özet" işlemlere, sadece önerilen durum deği�
 
 [Sıfır bilgili (ZK) toplamalar](/developers/docs/scaling/zk-rollups), durum geçişlerinin doğruluğunu garanti eden [sıfır bilgili doğruluk kanıtları](/glossary/#zk-proof) nedeniyle işlem verilerini yayımlamaya ihtiyaç duymaz. Ancak, durum verilerine erişimiz olmadan ZK toplamasının işlevselliğini garanti edemeyeceğimiz (veya etkileşime giremeyeceğimiz) için veri kullanılabilirliği hala bir sorundur. Örneğin, bir operatör toplamanın durumu hakkındaki ayrıntıları saklarsa, kullanıcılar bakiyelerini bilemezler. Ayrıca, yeni eklenen bir bloktaki bilgileri kullanarak durum güncellemeleri gerçekleştiremezler.
 
-## Veri kullanılabilirliği ile veri alınabilirliği karşılaştırması \{#data-availability-vs-data-retrievability}
+## Veri kullanılabilirliği ile veri alınabilirliği karşılaştırması {#data-availability-vs-data-retrievability}
 
 Veri kullanılabilirliği ile veri alınabilirliği farklı kavramlardır. Veri kullanılabilirliği, tam düğümlerin belirli bir blokla ilişkilendirilen tam işlem kümesine erişebildiği ve doğrulayabildiğine ilişkin güvenceye verilen isimdir. Ancak bu, verilerin sonsuza dek kullanılabilir olduğu anlamına gelmez.
 
@@ -70,7 +70,7 @@ Veri alınabilirliği, düğümlerin blokzincirden _geçmişe ilişkin bilgileri
 
 Çekirdek Ethereum protokolü, veri alınabilirliği yerine daha çok veri kullanılabilirliği ile ilgilidir. Veri alınabilirliği, üçüncü taraflar tarafından işletilen küçük bir arşiv düğümleri popülasyonu tarafından sağlanabilir veya [Portal Ağı](https://www.ethportal.net/) gibi merkezi olmayan dosya depolama kullanılarak ağa yayılabilir.
 
-## Daha fazla okuma \{#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Veri Kullanılabilirliği nedir?](https://medium.com/blockchain-capital-blog/wtf-is-data-availability-80c2c95ded0f)
 - [Veri Kullanılabilirliği nedir?](https://coinmarketcap.com/alexandria/article/what-is-data-availability)

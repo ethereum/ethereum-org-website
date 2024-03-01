@@ -24,13 +24,13 @@ You'll need an Alchemy account to complete this tutorial. [Sign up for a free ac
 
 If you have questions at any point, feel free to reach out in the [Alchemy Discord](https://discord.gg/gWuC7zB)!
 
-## Part 1 - Create and Deploy your Smart Contract using Hardhat \{#part-1}
+## Part 1 - Create and Deploy your Smart Contract using Hardhat {#part-1}
 
-### Connect to the Ethereum network \{#connect-to-the-ethereum-network}
+### Connect to the Ethereum network {#connect-to-the-ethereum-network}
 
 There are many ways to make requests to the Ethereum chain. For simplicity, we'll use a free account on Alchemy, a blockchain developer platform and API that allows us to communicate with the Ethereum chain without running a node ourselves. Alchemy also has developer tools for monitoring and analytics; we'll take advantage of these in this tutorial to understand what's going on under the hood in our smart contract deployment.
 
-### Create your app and API key \{#create-your-app-and-api-key}
+### Create your app and API key {#create-your-app-and-api-key}
 
 Once you've created an Alchemy account, you can generate an API key by creating an app. This will allow you to make requests to the Goerli testnet. If you're not familiar with testnets you can [read Alchemy's guide to choosing a network](https://docs.alchemyapi.io/guides/choosing-a-network).
 
@@ -46,20 +46,20 @@ _Note: be sure to select **Goerli**, or this tutorial won't work._
 
 Click **Create app**. Your app will appear in the table below.
 
-### Create an Ethereum account \{#create-an-ethereum-account}
+### Create an Ethereum account {#create-an-ethereum-account}
 
 You need an Ethereum account to send and receive transactions. We'll use MetaMask, a virtual wallet in the browser that lets users manage their Ethereum account address.
 
 You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right (so that we’re not dealing with real money).
 
-### Step 4: Add ether from a Faucet \{#step-4-add-ether-from-a-faucet}
+### Step 4: Add ether from a Faucet {#step-4-add-ether-from-a-faucet}
 
 To deploy your smart contract to the test network, you'll need some fake ETH. To get ETH on the Goerli network, go to a Goerli faucet and enter your Goerli account address. Note that Goerli faucets can be a bit unreliable recently - see the [test networks page](/developers/docs/networks/#goerli) for a list of options to try:
 
 _Note: due to network congestion, this might take a while._
 ``
 
-### Step 5: Check your Balance \{#step-5-check-your-balance}
+### Step 5: Check your Balance {#step-5-check-your-balance}
 
 To double-check the ETH is in your wallet, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of ETH in our wallet. To learn more check out [Alchemy's short tutorial on how to use the composer tool](https://youtu.be/r6sjRxBZJuU).
 
@@ -73,7 +73,7 @@ Enter you input your MetaMask account address and click **Send Request**. You wi
 
 Phew! Our fake money is all there.
 
-### Step 6: Initialize our project \{#step-6-initialize-our-project}
+### Step 6: Initialize our project {#step-6-initialize-our-project}
 
 First, we'll need to create a folder for our project. Navigate to your command line and input the following.
 
@@ -116,7 +116,7 @@ About to write to /Users/.../.../.../hello-world/package.json:
 
 Approve the package.json and we’re good to go!
 
-### Step 7: Download Hardhat \{#step-7-download-hardhat}
+### Step 7: Download Hardhat {#step-7-download-hardhat}
 
 Hardhat is a development environment to compile, deploy, test, and debug your Ethereum software. It helps developers when building smart contracts and dapps locally before deploying to the live chain.
 
@@ -128,7 +128,7 @@ npm install --save-dev hardhat
 
 Check out this page for more details on [installation instructions](https://hardhat.org/getting-started/#overview).
 
-### Step 8: Create Hardhat project \{#step-8-create-hardhat-project}
+### Step 8: Create Hardhat project {#step-8-create-hardhat-project}
 
 Inside our `hello-world` project folder, run:
 
@@ -158,7 +158,7 @@ Quit
 
 This will generate a `hardhat.config.js` file in the project. We'll use this later in the tutorial to specify the setup for our project.
 
-### Step 9: Add project folders \{#step-9-add-project-folders}
+### Step 9: Add project folders {#step-9-add-project-folders}
 
 To keep the project organized, let's create two new folders. In the command line, navigate to the root directory of your `hello-world` project and type:
 
@@ -170,7 +170,7 @@ mkdir scripts
 - `contracts/` is where we’ll keep our hello world smart contract code file
 - `scripts/` is where we’ll keep scripts to deploy and interact with our contract
 
-### Step 10: Write our contract \{#step-10-write-our-contract}
+### Step 10: Write our contract {#step-10-write-our-contract}
 
 You might be asking yourself, when are we going to write code? It's time!
 
@@ -217,7 +217,7 @@ contract HelloWorld {
 
 This is a basic smart contract that stores a message upon creation. It can be updated by calling the `update` function.
 
-### Step 11: Connect MetaMask & Alchemy to your project \{#step-11-connect-metamask-alchemy-to-your-project}
+### Step 11: Connect MetaMask & Alchemy to your project {#step-11-connect-metamask-alchemy-to-your-project}
 
 We’ve created a MetaMask wallet, Alchemy account, and written our smart contract, now it’s time to connect the three.
 
@@ -251,7 +251,7 @@ PRIVATE_KEY = "your-metamask-private-key"
 
 To actually connect these to our code, we’ll reference these variables in our `hardhat.config.js` file on step 13.
 
-### Step 12: Install Ethers.js \{#step-12-install-ethersjs}
+### Step 12: Install Ethers.js {#step-12-install-ethersjs}
 
 Ethers.js is a library that makes it easier to interact and make requests to Ethereum by wrapping [standard JSON-RPC methods](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc) with more user friendly methods.
 
@@ -263,7 +263,7 @@ In your project directory type:
 npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 ```
 
-### Step 13: Update hardhat.config.js \{#step-13-update-hardhat.configjs}
+### Step 13: Update hardhat.config.js {#step-13-update-hardhat.configjs}
 
 We’ve added several dependencies and plugins so far, now we need to update `hardhat.config.js` so that our project knows about all of them.
 
@@ -292,7 +292,7 @@ module.exports = {
 }
 ```
 
-### Step 14: Compile our contract \{#step-14-compile-our-contract}
+### Step 14: Compile our contract {#step-14-compile-our-contract}
 
 To make sure everything is working so far, let’s compile our contract. The `compile` task is one of the built-in hardhat tasks.
 
@@ -304,7 +304,7 @@ npx hardhat compile
 
 You might get a warning about `SPDX license identifier not provided in source file`, but no need to worry about that — hopefully everything else looks good! If not, you can always message in the [Alchemy discord](https://discord.gg/u72VCg3).
 
-### Step 15: Write our deploy script \{#step-15-write-our-deploy-script}
+### Step 15: Write our deploy script {#step-15-write-our-deploy-script}
 
 Now that our contract is written and our configuration file is good to go, it’s time to write our contract deploy script.
 
@@ -341,7 +341,7 @@ const hello_world = await HelloWorld.deploy()
 
 Calling `deploy()` on a `ContractFactory` will start the deployment, and return a `Promise` that resolves to a `Contract` object. This is the object that has a method for each of our smart contract functions.
 
-### Step 16: Deploy our contract \{#step-16-deploy-our-contract}
+### Step 16: Deploy our contract {#step-16-deploy-our-contract}
 
 We’re finally ready to deploy our smart contract! Navigate to the command line and run:
 
@@ -373,11 +373,11 @@ To understand what’s going on under the hood, let’s navigate to the Explorer
 
 Here you’ll see a handful of JSON-RPC methods that Hardhat/Ethers made under the hood for us when we called the `.deploy()` function. Two important methods here are [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), which is the request to write our contract onto the Goerli chain, and [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), which is a request to read information about our transaction given the hash. To learn more about sending transactions, check out [our tutorial on sending transactions using Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
-## Part 2: Interact with your Smart Contract \{#part-2-interact-with-your-smart-contract}
+## Part 2: Interact with your Smart Contract {#part-2-interact-with-your-smart-contract}
 
 Now that we've successfully deployed a smart contract to the Goerli network let's learn how to interact with it.
 
-### Create a interact.js file \{#create-a-interactjs-file}
+### Create a interact.js file {#create-a-interactjs-file}
 
 This is the file where we'll write our interaction script. We'll be using the Ethers.js library that you previously installed in Part 1.
 
@@ -391,7 +391,7 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY
 const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
 ```
 
-### Update your .env file \{#update-your-env-file}
+### Update your .env file {#update-your-env-file}
 
 We will be using new environment variables, so we need to define them in the `.env`file that [we created earlier](#step-11-connect-metamask-&-alchemy-to-your-project).
 
@@ -408,7 +408,7 @@ PRIVATE_KEY = "<your-metamask-private-key>"
 CONTRACT_ADDRESS = "0x<your contract address>"
 ```
 
-### Grab your contract ABI \{#grab-your-contract-ABI}
+### Grab your contract ABI {#grab-your-contract-ABI}
 
 Our contract [ABI (Application Binary Interface)](/glossary/#abi) is the interface to interact with our smart contract. Hardhat automatically generates an ABI and saves it in `HelloWorld.json`. To use the ABI, we'll need to parse out the contents by adding the following lines of code to our `interact.js` file:
 
@@ -429,7 +429,7 @@ To see your ABI printed to the console, navigate to your terminal and run:
 npx hardhat run scripts/interact.js
 ```
 
-### Create an instance of your contract \{#create-an-instance-of-your-contract}
+### Create an instance of your contract {#create-an-instance-of-your-contract}
 
 To interact with our contract, we need to create a contract instance in our code. To do so with Ethers.js, we'll need to work with three concepts:
 
@@ -461,7 +461,7 @@ const helloWorldContract = new ethers.Contract(
 
 Learn more about Providers, Signers, and Contracts in the [ethers.js documentation](https://docs.ethers.io/v5/).
 
-### Read the init message \{#read-the-init-message}
+### Read the init message {#read-the-init-message}
 
 Remember when we deployed our contract with the `initMessage = "Hello world!"`? We are now going to read that message stored in our smart contract and print it to the console.
 
@@ -489,7 +489,7 @@ The message is: Hello world!
 
 Congrats! You've just successfully read smart contract data from the Ethereum blockchain, way to go!
 
-### Update the message \{#update-the-message}
+### Update the message {#update-the-message}
 
 Instead of just reading the message, we can also update the message saved in our smart contract using the `update` function! Pretty cool, right?
 
@@ -513,7 +513,7 @@ main()
 
 Note that on line 11, we make a call to `.wait()` on the returned transaction object. This ensures that our script waits for the transaction to get mined on the blockchain before exiting the function. If the `.wait()` call isn't included, the script may not see the updated `message` value in the contract.
 
-### Read the new message \{#read-the-new-message}
+### Read the new message {#read-the-new-message}
 
 You should be able to repeat the [previous step](#read-the-init-message) to read the updated `message` value. Take a moment and see if you can make the changes necessary to print out that new value!
 
@@ -571,13 +571,13 @@ The new message is: This is the new message.
 
 While running that script, you may notice that the `Updating the message...` step takes a while to load before the new message loads. That is due to the mining process; if you are curious about tracking transactions while they are being mined, visit the [Alchemy mempool](https://dashboard.alchemyapi.io/mempool) to see the status of a transaction. If the transaction is dropped, it's also helpful to check [Goerli Etherscan](https://goerli.etherscan.io) and search for your transaction hash.
 
-## Part 3: Publish your Smart Contract to Etherscan \{#part-3-publish-your-smart-contract-to-etherscan}
+## Part 3: Publish your Smart Contract to Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
 You did all the hard work of bringing your smart contract to life; now it's time to share it with the world!
 
 By verifying your smart contract on Etherscan, anyone can view your source code and interact with your smart contract. Let's get started!
 
-### Step 1: Generate an API Key on your Etherscan account \{#step-1-generate-an-api-key-on-your-etherscan-account}
+### Step 1: Generate an API Key on your Etherscan account {#step-1-generate-an-api-key-on-your-etherscan-account}
 
 An Etherscan API Key is necessary to verify that you own the smart contract you are trying to publish.
 
@@ -601,9 +601,9 @@ CONTRACT_ADDRESS = "your-contract-address"
 ETHERSCAN_API_KEY = "your-etherscan-key"
 ```
 
-### Hardhat-deployed smart contracts \{#hardhat-deployed-smart-contracts}
+### Hardhat-deployed smart contracts {#hardhat-deployed-smart-contracts}
 
-#### Install hardhat-etherscan \{#install-hardhat-etherscan}
+#### Install hardhat-etherscan {#install-hardhat-etherscan}
 
 Publishing your contract to Etherscan using Hardhat is straightforward. You will first need to install the `hardhat-etherscan` plugin to get started. `hardhat-etherscan` will automatically verify the smart contract's source code and ABI on Etherscan. To add this, in the `hello-world` directory run:
 
@@ -640,7 +640,7 @@ module.exports = {
 }
 ```
 
-#### Verify your smart contract on Etherscan \{#verify-your-smart-contract-on-etherscan}
+#### Verify your smart contract on Etherscan {#verify-your-smart-contract-on-etherscan}
 
 Ensure all files are saved and all `.env` variables are correctly configured.
 
@@ -666,13 +666,13 @@ https://goerli.etherscan.io/address/<contract-address>#contracts
 
 Congrats! Your smart contract code is on Etherescan!
 
-### Check out your smart contract on Etherscan! \{#check-out-your-smart-contract-on-etherscan}
+### Check out your smart contract on Etherscan! {#check-out-your-smart-contract-on-etherscan}
 
 When you navigate to the link provided in your terminal, you should be able to see your smart contract code and ABI published on Etherscan!
 
 **Wahooo - you did it champ! Now anyone can call or write to your smart contract! We can't wait to see what you build next!**
 
-## Part 4 - Integrating your smart contract with the frontend \{#part-4-integrating-your-smart-contract-with-the-frontend}
+## Part 4 - Integrating your smart contract with the frontend {#part-4-integrating-your-smart-contract-with-the-frontend}
 
 By the end of this tutorial, you'll know how to:
 
@@ -684,7 +684,7 @@ For this dapp, we'll be using [React](https://reactjs.org/) as our frontend fram
 
 As a prerequisite, you should have a beginner-level understanding of React. If not, we recommend completing the official [Intro to React tutorial](https://reactjs.org/tutorial/tutorial.html).
 
-### Clone the starter files \{#clone-the-starter-files}
+### Clone the starter files {#clone-the-starter-files}
 
 First, go to the [hello-world-part-four GitHub repository](https://github.com/alchemyplatform/hello-world-part-four-tutorial) to get the starter files for this project and clone this repository to your local machine.
 
@@ -697,11 +697,11 @@ Next, open your copy of `starter-files` to your favorite code editor, and then n
 
 All of the code we'll write will live under the `src` folder. We'll be editing the `HelloWorld.js` component and the `util/interact.js` JavaScript files to give our project Web3 functionality.
 
-### Check out the starter files \{#check-out-the-starter-files}
+### Check out the starter files {#check-out-the-starter-files}
 
 Before we start coding, let's explore what is provided to us in the starter files.
 
-#### Get your react project running \{#get-your-react-project-running}
+#### Get your react project running {#get-your-react-project-running}
 
 Let's start by running the React project in our browser. The beauty of React is that once we have our project running in our browser, any changes we save will be updated live in our browser.
 
@@ -722,7 +722,7 @@ Doing so should open [http://localhost:3000/](http://localhost:3000/) in your br
 
 If you try clicking either button, you'll notice that they don't work—that's because we still need to program their functionality.
 
-#### The `HelloWorld.js` component \{#the-helloworld-js-component}
+#### The `HelloWorld.js` component {#the-helloworld-js-component}
 
 Let's go back into the `src` folder in our editor and open the `HelloWorld.js` file. It's super important that we understand everything in this file, as it is the primary React component we will be working on.
 
@@ -852,7 +852,7 @@ If you go to the `App.js` file, which is the main component in React that acts a
 
 Last but not least, let's check out one more file provided for you, the `interact.js` file.
 
-#### The `interact.js` file \{#the-interact-js-file}
+#### The `interact.js` file {#the-interact-js-file}
 
 Because we want to prescribe to the [M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) paradigm, we'll want a separate file that contains all our functions to manage the logic, data, and rules of our dapp, and then be able to export those functions to our frontend \(our `HelloWorld.js` component\).
 
@@ -885,7 +885,7 @@ The four unimplemented functions after our `helloWorldContract` object do the fo
 
 Now that we understand what we're working with, let's figure out how to read from our smart contract!
 
-### Step 3: Read from your smart contract \{#step-3-read-from-your-smart-contract}
+### Step 3: Read from your smart contract {#step-3-read-from-your-smart-contract}
 
 To read from your smart contract, you'll need to successfully set up:
 
@@ -896,7 +896,7 @@ To read from your smart contract, you'll need to successfully set up:
 
 This may sounds like a lot of steps, but don't worry! We'll walk you through how to do each of them step-by-step! :\)
 
-#### Establish an API connection to the Ethereum chain \{#establish-an-api-connection-to-the-ethereum-chain}
+#### Establish an API connection to the Ethereum chain {#establish-an-api-connection-to-the-ethereum-chain}
 
 So remember how in Part 2 of this tutorial, we used our [Alchemy Web3 key to read from our smart contract](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? You'll also need an Alchemy Web3 key in your dapp to read from the chain.
 
@@ -939,11 +939,11 @@ Above, we first imported the Alchemy key from our `.env` file and then passed ou
 
 With this endpoint ready, it's time to load our smart contract!
 
-#### Loading your Hello World smart contract \{#loading-your-hello-world-smart-contract}
+#### Loading your Hello World smart contract {#loading-your-hello-world-smart-contract}
 
 To load your Hello World smart contract, you'll need its contract address and ABI, both of which can be found on Etherscan if you completed [Part 3 of this tutorial.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
-#### How to get your contract ABI from Etherscan \{#how-to-get-your-contract-abi-from-etherscan}
+#### How to get your contract ABI from Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 
 If you skipped Part 3 of this tutorial, you can use the HelloWorld contract with address [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). It's ABI can be found [here](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
 
@@ -991,7 +991,7 @@ export const helloWorldContract = new web3.eth.Contract(
 
 Now that we have our contract loaded, we can implement our `loadCurrentMessage` function!
 
-#### Implementing `loadCurrentMessage` in your `interact.js` file \{#implementing-loadCurrentMessage-in-your-interact-js-file}
+#### Implementing `loadCurrentMessage` in your `interact.js` file {#implementing-loadCurrentMessage-in-your-interact-js-file}
 
 This function is super simple. We're going make a simple async web3 call to read from our contract. Our function will return the message stored in the smart contract:
 
@@ -1024,11 +1024,11 @@ Before we dive into our listener, let's check out what we have so far! Save your
 
 You'll notice that the current message no longer says "No connection to the network." Instead it reflects the message stored in the smart contract. Sick!
 
-#### Your UI should now reflect the message stored in the smart contract \{#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
+#### Your UI should now reflect the message stored in the smart contract {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
 
 Now speaking of that listener...
 
-#### Implement `addSmartContractListener` \{#implement-addsmartcontractlistener}
+#### Implement `addSmartContractListener` {#implement-addsmartcontractlistener}
 
 If you think back to the `HelloWorld.sol` file we wrote in [Part 1 of this tutorial series](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), you'll recall that there is a smart contract event called `UpdatedMessages` that is emitted after our smart contract's `update` function is invoked \(see lines 9 and 27\):
 
@@ -1111,21 +1111,21 @@ Now that we're able to read from our smart contract, it would be great to figure
 
 So, next we'll tackle setting up our Ethereum wallet \(MetaMask\) and then connecting it to our dapp!
 
-### Step 4: Set up your Ethereum wallet \{#step-4-set-up-your-ethereum-wallet}
+### Step 4: Set up your Ethereum wallet {#step-4-set-up-your-ethereum-wallet}
 
 To write anything to the Ethereum chain, users must sign transactions using their virtual wallet's private keys. For this tutorial, we’ll use [MetaMask](https://metamask.io/), a virtual wallet in the browser used to manage your Ethereum account address, as it makes this transaction signing super easy for the end-user.
 
 If you want to understand more about how transactions on Ethereum work, check out [this page](/developers/docs/transactions/) from the Ethereum foundation.
 
-#### Download MetaMask \{#download-metamask}
+#### Download MetaMask {#download-metamask}
 
 You can download and create a MetaMask account for free [here](https://metamask.io/download.html). When you are creating an account, or if you already have an account, make sure to switch over to the “Goerli Test Network” in the upper right \(so that we’re not dealing with real money\).
 
-#### Add ether from a Faucet \{#add-ether-from-a-faucet}
+#### Add ether from a Faucet {#add-ether-from-a-faucet}
 
 To sign a transaction on the Ethereum blockchain, we’ll need some fake Eth. To get Eth you can go to the [FaucETH](https://fauceth.komputing.org) and enter your Goerli account address, click “Request funds”, then select “Ethereum Testnet Goerli” in the dropdown and finally click “Request funds” button again. You should see Eth in your MetaMask account soon after!
 
-#### Check your Balance \{#check-your-balance}
+#### Check your Balance {#check-your-balance}
 
 To double check our balance is there, let’s make an [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) request using [Alchemy’s composer tool](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). This will return the amount of Eth in our wallet. After you input your MetaMask account address and click “Send Request”, you should see a response like this:
 
@@ -1137,11 +1137,11 @@ To double check our balance is there, let’s make an [eth_getBalance](https://d
 
 Phew! Our fake money is all there! 🤑
 
-### Step 5: Connect MetaMask to your UI \{#step-5-connect-metamask-to-your-UI}
+### Step 5: Connect MetaMask to your UI {#step-5-connect-metamask-to-your-UI}
 
 Now that our MetaMask wallet is set up, let's connect our dapp to it!
 
-#### The `connectWallet` function \{#the-connectWallet-function}
+#### The `connectWallet` function {#the-connectWallet-function}
 
 In our `interact.js`file, let's implement the `connectWallet` function, which we can then call in our `HelloWorld.js` component.
 
@@ -1203,7 +1203,7 @@ Using a try/catch loop, we'll try to connect to MetaMask by calling[`window.ethe
 
 Now that we've written this `connectWallet` function, the next step is to call it to our `HelloWorld.js`component.
 
-#### Add the `connectWallet` function to your `HelloWorld.js` UI Component \{#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
+#### Add the `connectWallet` function to your `HelloWorld.js` UI Component {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
 
 Navigate to the `connectWalletPressed` function in `HelloWorld.js`, and update it to the following:
 
@@ -1233,7 +1233,7 @@ Next, try refreshing the page... this is strange. Our wallet button is prompting
 
 However, have no fear! We easily can address that (get it?) by implementing `getCurrentWalletConnected`, which will check if an address is already connected to our dapp and update our UI accordingly!
 
-#### The `getCurrentWalletConnected` function \{#the-getcurrentwalletconnected-function}
+#### The `getCurrentWalletConnected` function {#the-getcurrentwalletconnected-function}
 
 Update your `getCurrentWalletConnected` function in the `interact.js` file to the following:
 
@@ -1308,7 +1308,7 @@ Now that you've added this code, let's try refreshing our browser window.
 
 Niceeeee! The button should say that you're connected, and show a preview of your connected wallet's address - even after you refresh!
 
-#### Implement `addWalletListener` \{#implement-addwalletlistener}
+#### Implement `addWalletListener` {#implement-addwalletlistener}
 
 The final step in our dapp wallet setup is implementing the wallet listener so our UI updates when our wallet's state changes, such as when the user disconnects or switches accounts.
 
@@ -1367,7 +1367,7 @@ useEffect(async () => {
 
 And that's it! We've successfully completed programming all of our wallet functionality! Now onto our last task: updating the message stored in our smart contract!
 
-### Step 6: Implement the `updateMessage` function \{#step-6-implement-the-updateMessage-function}
+### Step 6: Implement the `updateMessage` function {#step-6-implement-the-updateMessage-function}
 
 Alrighty fam, we've arrived at the home stretch! In the `updateMessage` of your `interact.js` file, we're going to do the following:
 
@@ -1377,7 +1377,7 @@ Alrighty fam, we've arrived at the home stretch! In the `updateMessage` of your 
 
 This won't take very long; let's finish this dapp!
 
-#### Input error handling \{#input-error-handling}
+#### Input error handling {#input-error-handling}
 
 Naturally, it makes sense to have some sort of input error handling at the start of the function.
 
@@ -1404,7 +1404,7 @@ export const updateMessage = async (address, message) => {
 
 Now that it have proper input error handling, it's time to sign the transaction via MetaMask!
 
-#### Signing our transaction \{#signing-our-transaction}
+#### Signing our transaction {#signing-our-transaction}
 
 If you're already comfortable with traditional web3 Ethereum transactions, the code we write next will be very familiar. Below your input error handling code, add the following to `updateMessage`:
 
@@ -1513,7 +1513,7 @@ export const updateMessage = async (address, message) => {
 
 Last but not least, we need to connect our `updateMessage` function to our `HelloWorld.js` component.
 
-#### Connect `updateMessage` to the `HelloWorld.js` frontend \{#connect-updatemessage-to-the-helloworld-js-frontend}
+#### Connect `updateMessage` to the `HelloWorld.js` frontend {#connect-updatemessage-to-the-helloworld-js-frontend}
 
 Our `onUpdatePressed` function should make an await call to the imported `updateMessage` function and modify the `status` state variable to reflect whether our transaction succeeded or failed:
 
@@ -1530,7 +1530,7 @@ It's super clean and simple. And guess what... YOUR DAPP IS COMPLETE!!!
 
 Go ahead and test out the **Update** button!
 
-### Make your own custom dapp \{#make-your-own-custom-dapp}
+### Make your own custom dapp {#make-your-own-custom-dapp}
 
 Wooooo, you made it to the end of the tutorial! To recap, you learned how to:
 

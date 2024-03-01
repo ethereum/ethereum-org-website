@@ -11,13 +11,13 @@ skill: beginner
 published: 2021-04-01
 ---
 
-## Introducere \{#introduction}
+## Introducere {#introduction}
 
 Se utilizează standardul [ERC-721](/developers/docs/standards/tokens/erc-721/) pentru a deține proprietatea asupra tokenurilor nefungibile (NFT-uri). Tokenurile [ERC-20](/developers/docs/standards/tokens/erc-20/) se comportă ca o marfă, deoarece nu există nicio diferență între tokenurile individuale. Spre deosebire de acestea, tokenurile ERC-721 sunt concepute pentru active care sunt similare, dar nu identice, cum ar fi diverse [caricaturi de pisici](https://www.cryptokitties.co/) sau titluri pentru diferite proprietăți imobiliare.
 
 În acest articol vom analiza [contractul ERC-721 al lui Ryuya Nakamura](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy). Acest contract este scris în [Vyper](https://vyper.readthedocs.io/en/latest/index.html), un limbaj de contracte asemănător cu Python, destinat să facă mai dificilă scrierea de cod nesecurizat decât în Solidity.
 
-## Contractul \{#contract}
+## Contractul {#contract}
 
 ```python
 # @dev Implementation of ERC-721 non-fungible token standard.
@@ -37,7 +37,7 @@ Interfața ERC-721 este încorporată în limbajul Vyper. [Puteți vedea defini�
 
 Prima linie importă interfața, iar a doua specifică faptul că o implementăm aici.
 
-### Interfața ERC721Receiver \{#receiver-interface}
+### Interfața ERC721Receiver {#receiver-interface}
 
 ```python
 # Interface for the contract called by safeTransferFrom()
@@ -79,7 +79,7 @@ Pentru a preveni cazurile în care un contract acceptă din greșeală un transf
 
 Această funcție este un `view` (o vizualizare), adică poate citi starea blockchain-ului, fără a o putea modifica.
 
-### Evenimente \{#events}
+### Evenimente {#events}
 
 [Evenimentele](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) sunt emise pentru a informa utilizatorii și serverele din afara blockchain-ului despre evenimente. De reținut că în blockchain conținutul evenimentelor nu este disponibil pentru contracte.
 
@@ -133,7 +133,7 @@ Uneori este util să existe un _operator_ care să poată gestiona toate tokenur
 
 Valoarea `approved` (aprobată) ne spune dacă evenimentul se referă la o aprobare sau la retragerea unei aprobări.
 
-### Variabilele de stare \{#state-vars}
+### Variabilele de stare {#state-vars}
 
 Aceste variabile conțin starea actuală a tokenurilor: care dintre ele sunt disponibile și cine le deține. Acestea sunt în mare parte obiecte `HashMap`, [mapări unidirecționale care există între două tipuri](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
@@ -183,11 +183,11 @@ ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000
 
 [ERC-165](https://eips.ethereum.org/EIPS/eip-165) specifică un mecanism prin care un contract să dezvăluie modul în care aplicațiile pot să comunice cu acesta, cu care se conformează ERC-urile. În cazul nostru, contractul este în conformitate cu ERC-165 și ERC-721.
 
-### Funcțiile \{#functions}
+### Funcțiile {#functions}
 
 Acestea sunt funcțiile care implementează efectiv ERC-721
 
-#### Constructorul \{#constructor}
+#### Constructorul {#constructor}
 
 ```python
 @external
@@ -212,7 +212,7 @@ Atât în Python, cât și în Vyper, puteți să creați un comentariu, prin sp
 
 Pentru a accesa variabilele de stare, utilizați `self.<variable name>` (din nou, la fel ca în Python).
 
-#### Funcțiile „view” (de vizualizare) \{#views}
+#### Funcțiile „view” (de vizualizare) {#views}
 
 Funcțiile acestea nu modifică starea blockchain-ului, deci pot fi executate gratuit dacă sunt apelate din exterior. Funcțiile „view” costă gaz dacă sunt apelate de un contract, acesta deoarece trebuie să le execute fiecare nod.
 
@@ -311,7 +311,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 Această funcție controlează dacă în acest contract `_operator`-ul este autorizat să gestioneze toate tokenurile `_owner`-ului. Întrucât pot exista mai mulți operatori, acesta este un HashMap cu două niveluri.
 
-#### Funcții ajutătoare pentru transferuri \{#transfer-helpers}
+#### Funcții ajutătoare pentru transferuri {#transfer-helpers}
 
 Aceste funcții implementează operațiuni care fac parte din transferul sau gestionarea tokenurilor.
 
@@ -428,7 +428,7 @@ Avem următoarea funcție internă deoarece există două moduri de a transfera 
 
 Pentru a emite un eveniment în Vyper, utilizați o instrucțiune `log` ([uitați-vă aici pentru a afla mai multe detalii](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 
-#### Funcțiile de transfer \{#transfer-funs}
+#### Funcțiile de transfer {#transfer-funs}
 
 ```python
 
@@ -551,7 +551,7 @@ def setApprovalForAll(_operator: address, _approved: bool):
     log ApprovalForAll(msg.sender, _operator, _approved)
 ```
 
-#### Emiterea de jetoane noi și distrugerea celor existente \{#mint-burn}
+#### Emiterea de jetoane noi și distrugerea celor existente {#mint-burn}
 
 Contul care a creat contractul este `minter`-ul, super-utilizatorul care este autorizat să emită noi NFT-uri. Cu toate acestea, nici chiar el nu este autorizat să ardă tokenurile existente. O poate face numai proprietarul sau o entitate autorizată de acesta.
 
@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 Oricine este autorizat să transfere un token este autorizat să îl și ardă. În timp ce arderea pare echivalentul unui transfer la adresa zero, această adresă nu primește de fapt tokenul. Aceasta ne permite să eliberăm tot spațiul de stocare folosit pentru token, ceea ce poate reduce costul de gaz al tranzacției.
 
-# Utilizarea acestui contract \{#using-contract}
+# Utilizarea acestui contract {#using-contract}
 
 Spre deosebire de Solidity, Vyper nu are funcția de moștenire. Aceasta este o opțiune deliberată de concepție, pentru a conferi claritate codului, facilitându-i prin aceasta securizarea. Deci, pentru a vă crea propriul contract Vyper ERC-721, porniți de la [acest contract](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) și modificați-l pentru a implementa logica operațională pe care o doriți.
 
-# Concluzie \{#conclusion}
+# Concluzie {#conclusion}
 
 În recapitulare, iată câteva din cele mai importante idei din acest contract:
 

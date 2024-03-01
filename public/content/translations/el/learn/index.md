@@ -3,7 +3,7 @@ title: Μάθηση
 lang: el
 ---
 
-# Μάθετε για το Ethereum \{#learn-about-ethereum}
+# Μάθετε για το Ethereum {#learn-about-ethereum}
 
 **Καλώς ήρθατε στο [ethereum.org/el/learn](/el/learn/), μια συλλογή πληροφοριών που θα σας βοηθήσουν να μάθετε περισσότερα για το Ethereum.** Αυτή η σελίδα περιλαμβάνει τεχνικά και μη τεχνικά άρθρα, οδηγούς και άλλα βοηθήματα. Εάν είστε εντελώς καινούργιοι στο Ethereum, [προτείνουμε να ξεκινήσετε εδώ](/el/what-is-ethereum/).
 
@@ -23,7 +23,7 @@ lang: el
 - [What’s new in ETH 2.0](https://eth2.news) _Ένα τακτικό ενημερωτικό δελτίο για την ανάπτυξη του ETH 2.0_
 - [ETHGlobal](https://ethglobal.co) _Μία σειρά Ethereum hackathon - παρακολουθήστε ένα κοντά σας!_
 
-## Τα βασικά του Ethereum \{#ethereum-basics}
+## Τα βασικά του Ethereum {#ethereum-basics}
 
 Καινούργιοι στο Ethereum; Αυτά τα άρθρα και βοηθήματα είναι ένα καλό μέρος για να ξεκινήσετε.
 
@@ -33,7 +33,7 @@ lang: el
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 
-## Πώς λειτουργεί το Ethereum \{#how-ethereum-works}
+## Πώς λειτουργεί το Ethereum {#how-ethereum-works}
 
 Επεξηγήσεις υψηλού επιπέδου σχετικά με την λειτουργία του Ethereum και την τεχνολογία blockchain γενικά.
 
@@ -42,26 +42,26 @@ lang: el
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
 
-## Smart Contracts \{#smart-contracts}
+## Smart Contracts {#smart-contracts}
 
 Ένα "smart contract" είναι απλά ένα κομμάτι κώδικα που τρέχει στο Ethereum. Ονομάζεται "contract" επειδή ο κώδικας που τρέχει σε Ethereum μπορεί να ελέγξει πολύτιμα πράγματα όπως το ETH ή άλλα ψηφιακά στοιχεία.
 
 - Θέλετε να μάθετε πώς να προγραμματίζετε στο Ethereum με smart contracts; [ethereum.org/el/developers](/el/developers/)
 
-## Απόδειξη της Εργασίας ("proof-of-work") και Εξόρυξη ("Mining") \{#proof-of-work-and-mining}
+## Απόδειξη της Εργασίας ("proof-of-work") και Εξόρυξη ("Mining") {#proof-of-work-and-mining}
 
 Το Ethereum χρησιμοποιεί επί του παρόντος ένα σύστημα που ονομάζεται "Απόδειξη της Εργασίας". Αυτό επιτρέπει στο δίκτυο του Ethereum να συμφωνήσει για την κατάσταση όλων των πληροφοριών που καταγράφονται στο blockchain του Ethereum και ταυτόχρονα εμποδίζει οικονομικές επιθέσεις συγκεκριμένου τύπου.
 
 Στο ETH 2.0, το Ethereum θα μετακινηθεί σε ένα διαφορετικό σύστημα που ονομάζεται " Απόδειξη του Πονταρίσματος" (“proof-of-stake”). [Διαβάστε περισσότερα για το ETH 2.0 παρακάτω](#consensus-layer-upgrades).
 
-## Πελάτες και κόμβοι \{#clients-and-nodes}
+## Πελάτες και κόμβοι {#clients-and-nodes}
 
 Το δίκτυο του Ethereum αποτελείται από πολλούς κόμβους, καθένας εκ των οποίων διαθέτει συμβατό λογισμικό πελάτη. Υπάρχουν δύο πελάτες που χρησιμοποιούνται από την πλειονότητα των κόμβων: [Geth](https://geth.ethereum.org/) (γραμμένος σε Go) και [Parity](https://www.parity.io/ethereum/) (γραμμένος σε Rust).
 
 - Θέλετε να μάθετε πώς να τρέχετε έναν δικό σας κόμβο; → [ethereum.org/el/developers](/el/developers/#clients--running-your-own-node/)
 - [Πλήρης κατάλογος όλων των πελατών του Ethereum](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
-## Βελτίωση της κλιμάκωσης του Ethereum \{#improving-ethereums-scalability}
+## Βελτίωση της κλιμάκωσης του Ethereum {#improving-ethereums-scalability}
 
 Υπάρχουν πολλές προσπάθειες σε εξέλιξη για να καταστεί το Ethereum πιο "κλιμακούμενο" βελτιώνοντας την ταχύτητα και τη συνολική απόδοση συναλλαγών. Γενικά, αυτές ταξινομούνται σε λύσεις "Layer 1" και "Layer 2".
 
@@ -72,33 +72,33 @@ lang: el
 - [Making Sense of Layer 2](https://medium.com/l4-media/making-sense-of-ethereums-layer-2-scaling-solutions-state-channels-plasma-and-truebit-22cb40dcc2f4) _Feb 12, 2018 - Josh Stark_
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) _Jan 18, 2019 - Hunter Hillman, Steven McKie, and Eric Olszewski_
 
-### Κανάλια Πληρωμής & Κατάστασης \{#payment--state-channels}
+### Κανάλια Πληρωμής & Κατάστασης {#payment--state-channels}
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 
-### Πλευρικές αλυσίδες \{#sidechains}
+### Πλευρικές αλυσίδες {#sidechains}
 
 - [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 
-### Πλάσμα \{#plasma}
+### Πλάσμα {#plasma}
 
 - [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) _Feb 7, 2019 - Daniel Goldman_
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - A learning resource for the Plasma framework](https://www.learnplasma.org/en/)
 
-## ETH 2.0 \{#consensus-layer-upgrades}
+## ETH 2.0 {#consensus-layer-upgrades}
 
 Το ETH 2.0 (επίσης γνωστό και ως "Serenity") αναφέρεται στην επόμενη σημαντική αναβάθμιση του βασικού πρωτοκόλλου του Ethereum. Συνδυάζει αρκετές βελτιώσεις στο βασικό πρωτόκολλο του Ethereum ("Layer 1").
 
 - [8 Teams Are Sprinting to Build the Next Generation of Ethereum](https://www.coindesk.com/next-gen-buidlers-the-8-teams-working-on-ethereum-2-0) _Dec 9, 2018 - Christine Kim_
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 
-## ETH 1.x \{#execution-layer-upgrades}
+## ETH 1.x {#execution-layer-upgrades}
 
 Το ETH 1.x είναι το όνομα ενός συνόλου αναβαθμίσεων στο υπάρχον πρωτόκολλο του Ethereum. Ο στόχος είναι να συνεχίσει να βελτιώνεται και να διατηρείται το Ethereum όσο το ETH 2.0 αναπτύσσεται και υλοποιείται.
 
-## Κρυπτοοικονομικά \{#cryptoeconomics}
+## Κρυπτοοικονομικά {#cryptoeconomics}
 
 Τα "κρυπτοοικονομικά" είναι η πρακτική επιστήμη της δημιουργίας κατανεμημένων συστημάτων, όπου οι ιδιότητες αυτών των συστημάτων εξασφαλίζονται με οικονομικά κίνητρα και όπου οι οικονομικοί μηχανισμοί είναι εγγυημένοι από την κρυπτογράφηση. Είναι ο γενικός όρος για την πρακτική του σχεδιασμού και κλιμάκωσης blockchains όπως το Ethereum και το Bitcoin.
 
@@ -106,7 +106,7 @@ lang: el
 - [Intro to Cryptoeconomics](https://www.youtube.com/watch?v=F0FCI8GxO5I) _(Video) Aug 19, 2018 - Karl Floersch_
 - [Making Sense of Cryptoeconomics](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) _Nov 16 2017 - Josh Stark_
 
-## Κριτική και σκεπτικισμός \{#critique-and-skepticism}
+## Κριτική και σκεπτικισμός {#critique-and-skepticism}
 
 Κριτικές απόψεις για το Ethereum και τα Κρυπτονομίσματα.
 

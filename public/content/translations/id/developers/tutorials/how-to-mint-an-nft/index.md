@@ -21,7 +21,7 @@ Semuanya mencetak NFT mereka menggunakan API efektif Alchemy. Dalam tutorial ini
 
 Ayo mulai!
 
-## Langkah 1: Instal web3 \{#install-web3}
+## Langkah 1: Instal web3 {#install-web3}
 
 Jika Anda mengikuti tutorial pertama tentang membuat kontrak pintar NFT Anda, Anda telah memiliki pengalaman menggunakan Ethers.js. Web3 sama dengan Ethers, karena merupakan pustaka yang digunakan untuk membuat permintaan ke rantai blok Ethereum dengan lebih mudah. Dalam tutorial ini, kami akan menggunakan [Web3 Alchemy](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), yang merupakan pustaka web3 yang ditingkatkan yang menawarkan percobaan ulang otomatis dan dukungan WebSocket yang kokoh.
 
@@ -31,7 +31,7 @@ Dalam direktori beranda proyek Anda jalankan:
 npm install @alch/alchemy-web3
 ```
 
-## Langkah 2: Buat berkas mint-nft.js \{#create-mintnftjs}
+## Langkah 2: Buat berkas mint-nft.js {#create-mintnftjs}
 
 Inside your scripts directory, create a mint-nft.js file and add the following lines of code:
 
@@ -42,7 +42,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Langkah 3: Ambil ABI kontrak Anda \{#contract-abi}
+## Langkah 3: Ambil ABI kontrak Anda {#contract-abi}
 
 ABI (Antarmuka Biner Aplikasi) kontrak kita adalah antarmuka untuk berinteraksi dengan kontrak pintar kita. Anda dapat belajar lebih banyak tentang ABI Kontrak [di sini](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat secara otomatis membuat ABI untuk kita dan menyimpannya dalam berkas MyNFT.json. Untuk menggunakan ini, kita perlu mengurai kontennya dengan menambahkan barisan kode berikut ke berkas mint-nft.js kita:
 
@@ -62,7 +62,7 @@ Untuk menjalankan mint-nft.js dan melihat ABI Anda yang dicetak ke konsol, navig
 node scripts/mint-nft.js
 ```
 
-## Langkah 4: Konfigurasikan metadata untuk NFT Anda dengan menggunakan IPFS \{#config-meta}
+## Langkah 4: Konfigurasikan metadata untuk NFT Anda dengan menggunakan IPFS {#config-meta}
 
 Jika Anda ingat dari tutorial di Bagian 1, fungsi kontrak pintar mintNFT kita memasukkan parameter tokenURI yang seharusnya mengurai dokumen JSON yang mendeskripsikan metadata NFT — merupakan bagian yang menghidupkan NFT, yang memungkinkannya memiliki properti yang dapat dikonfigurasikan, seperti nama, deskripsi, gambar, dan atribut lainnya.
 
@@ -110,7 +110,7 @@ Setelah Anda selesai mengedit berkas jsonnya, simpan dan unggah ke Pinata, denga
 
 ![Cara mengunggah nft-metadata.json Anda ke Pinata](./uploadPinata.gif)
 
-## Langkah 5: Buat instance kontrak Anda \{#instance-contract}
+## Langkah 5: Buat instance kontrak Anda {#instance-contract}
 
 Sekarang, untuk berinteraksi dengan kontrak kita, kita perlu membuat instance-nya dalam kode kita. Untuk melakukannya, kita perlu akun kontrak kita yang bisa didapat dari penyebaran atau [Etherscan](https://ropsten.etherscan.io/) dengan mencari alamat yang Anda gunakan untuk menyebar kontrak.
 
@@ -126,7 +126,7 @@ const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
 
-## Langkah 6: Perbarui berkas .env \{#update-env}
+## Langkah 6: Perbarui berkas .env {#update-env}
 
 Sekarang, untuk membuat dan mengirim transaksi ke rantai Ethereum, kita akan menggunakan alamat akun Ethereum publik Anda untuk mendapatkan nonce akun (akan dijelaskan di bawah).
 
@@ -138,7 +138,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## Langkah 7: Buat transaksi Anda \{#create-txn}
+## Langkah 7: Buat transaksi Anda {#create-txn}
 
 Pertama, mari tentukan fungsi yang bernama `mintNFT(tokenData)` dan buat transaksi kita dengan melakukan yang berikut ini:
 
@@ -187,7 +187,7 @@ Berkas mint-nft.js Anda seharusnya tampak seperti ini sekarang:
    }​
 ```
 
-## Langkah 8: Tandatangani transaksi \{#sign-txn}
+## Langkah 8: Tandatangani transaksi {#sign-txn}
 
 Sekarang kita telah membuat transaksi kita, kita perlu menandatanganinya untuk mengirimkannya. Di sini adalah di mana kita akan menggunakan kunci pribadi kita.
 
@@ -245,7 +245,7 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## Langkah 9: Panggil mintNFT dan jalankan simpul mint-nft.js \{#call-mintnft-fn}
+## Langkah 9: Panggil mintNFT dan jalankan simpul mint-nft.js {#call-mintnft-fn}
 
 Masih ingat dengan metadata.json yang Anda unggah ke Pinata? Dapatkan kode hashnya dari Pinata dan kosongkan yang berikut sebagai parameter pada mintNFT fungsi `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 

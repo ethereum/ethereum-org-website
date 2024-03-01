@@ -8,11 +8,11 @@ Kâhinler, blokzincir harici (zincir dışındaki) veri kaynaklarından veri çe
 
 Akıllı sözleşmelere zincir dışı veri girdilerini kullanarak yürütme olanağı tanımak, merkeziyetsiz uygulamaların değerini artırır. Örneğin merkeziyetsiz tahmin piyasaları, kullanıcı tahminlerini doğrulayabilecekleri çıktılar hakkında bilgi sağlamak için kâhinlere güvenir. Alice'in, bir sonraki ABD başkanının kim olacağına dair 20 ETH bahis oynadığını varsayalım. Bu durumda, tahmin piyasası merkeziyetsiz uygulamasının seçim sonuçlarını onaylamak ve Alice'in ödeme almak için uygun olup olmadığını belirleyebilmek için bir kâhine ihtiyacı vardır.
 
-## Ön koşullar \{#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bu sayfa, okuyucunun [düğümler](/developers/docs/nodes-and-clients/), [mutabakat mekanizmaları](/developers/docs/consensus-mechanisms/) ve [Ethereum Sanal Makinesi](/developers/docs/evm/) dahil olmak üzere Ethereum'un temellerine aşina olduğunu varsayar. Ayrıca [akıllı sözleşmelere](/developers/docs/smart-contracts/), [akıllı sözleşme anatomisine](/developers/docs/smart-contracts/anatomy/) ve özellikle de [olaylara](/glossary/#events) hakim olmalısınız.
 
-## Blokzincir kâhini nedir? \{#what-is-a-blockchain-oracle}
+## Blokzincir kâhini nedir? {#what-is-a-blockchain-oracle}
 
 Kâhinler; harici bilgileri (yani zincir dışında depolanan bilgiler) tedarik eden, doğrulayan ve blokzincirde çalışan akıllı sözleşmelere ileten uygulamalardır. Kâhinler, zincir dışındaki verileri "çekip" Ethereum'da yayımlamanın dışında bilgileri blokzincirden alıp harici sistemlere de "iletebilir". İkinci kullanıma bir örnek, kullanıcının ücretini Ethereum üzerinden göndermesinin ardından akıllı kilidi açan bir kâhin olabilir.
 
@@ -20,7 +20,7 @@ Kâhinler, blokzincirlerdeki akıllı sözleşmeleri zincir dışındaki veri sa
 
 Kâhinler, veri kaynağına ( bir veya birden fazla kaynak) güven modellerine (merkezi ya da merkeziyetsiz) ve sistem mimarisine (hemen-okuma, yayımlama-abone olma ve istek-yanıt) göre farklılık gösterir. Ayrıca kâhinleri zincir üstündeki sözleşmeler (girdi kâhinleri) tarafından kullanılmak üzere harici veri alıp almadıklarına, blokzincirden zincir dışındaki uygulamalara (çıkış kâhinleri) bilgi gönderip göndermemelerine veya zincir dışında hesaplama gerçekleştirip gerçekleştirmemelerine (hesaplama kâhinleri) dayalı olarak da birbirinden ayırabiliriz.
 
-## Akıllı sözleşmelerin neden kâhinlere ihtiyacı vardır? \{#why-do-smart-contracts-need-oracles}
+## Akıllı sözleşmelerin neden kâhinlere ihtiyacı vardır? {#why-do-smart-contracts-need-oracles}
 
 Geliştiricilerin çoğu, akıllı sözleşmeleri blokzincir üzerinde spesifik adreslerde çalışan basit kod parçaları olarak görür. Bununla birlikte, akıllı sözleşmelere ilişkin daha [genel bir görüş](/smart-contracts/); belirli koşullar yerine getirildiğinde taraflar arasındaki anlaşmaları yürürlüğe koyabilen, kendi kendini yürüten yazılım programları olduğu şeklindedir ve "akıllı sözleşmeler" terimi de buradan gelir.
 
@@ -42,7 +42,7 @@ Bunu yapmak için kâhin, tipik olarak zincir üstünde yürütülen bir akıll�
 
 Bir blokzincir kâhini, temel olarak blokzincir ile dış çevre arasındaki bilgi açığını ''hibrid akıllı sözleşmeler'' oluşturarak kapatır. Hibrit akıllı sözleşme, zincir üstünde sözleşme kodu ile zincir dışında altyapıların bir kombinasyonuna dayanarak işleyen bir sözleşmedir. Giriş bölümünde açıklanan merkeziyetsiz tahmin piyasaları, hibrit akıllı sözleşmelerin harika bir örneğidir. Diğer örnekler arasında, bir kâhin kümesinin belirli bir hava olayının gerçekleştiğine karar vermesi durumunda ödeme yapan mahsul sigortası akıllı sözleşmeleri sayılabilir.
 
-## Kâhin sorunu nedir? \{#the-oracle-problem}
+## Kâhin sorunu nedir? {#the-oracle-problem}
 
 Akıllı sözleşmelere zincir dışından verilere erişim olanağı sağlamak, bir varlığın (veya birden fazla varlığın) dış kaynaklı bilgileri bir işlemin veri yükünde depolamak suretiyle bu bilgileri blokzincire dahil ederek kolaylıkla gerçekleştirilebilir. Ancak bu, yeni sorunları beraberinde getirir:
 
@@ -60,9 +60,9 @@ Farklı kâhinler, kâhin sorununun çözümüne farklı yaklaşımlar gösterir
 
 3. **Teşvik uyumluluğu**: Bir kâhin, zincir dışı veri sağlayıcılarını akıllı sözleşmelere doğru bilgi göndermeye teşvik etmelidir. Teşvik uyumluluğu, _dayandırılabilirlik_ ve _hesap verebilirlik_ unsurlarını içerir. Dayandırılabilirlik, harici bir bilgi parçasını sağlayıcısıyla ilişkilendirmeye olanak tanırken hesap verebilirlik, veri sağlayıcılarını verdikleri bilgiye bağlar; böylece sağladıkları bilginin kalitesine göre ödüllendirilebilecekleri veya cezalandırılabilecekleri bir yapı oluşturur.
 
-## Blokzincir kâhin hizmeti nasıl çalışır? \{#how-does-a-blockchain-oracle-service-work}
+## Blokzincir kâhin hizmeti nasıl çalışır? {#how-does-a-blockchain-oracle-service-work}
 
-### Kullanıcılar \{#users}
+### Kullanıcılar {#users}
 
 Kullanıcılar, belirli aksiyonları tamamlayabilmek için blokzincir dışı bilgiye ihtiyaç duyan varlıklardır (örneğin akıllı sözleşmeler). Bir kâhin hizmetinin temel iş akışı, kullanıcının kâhin sözleşmesine veri isteği göndermesiyle başlar. Veri istekleri genellikle aşağıdaki soruların bazılarını veya tamamını cevaplar:
 
@@ -76,7 +76,7 @@ Kullanıcılar, belirli aksiyonları tamamlayabilmek için blokzincir dışı bi
 
 5. Gönderimleri süzmek ve raporları tek bir değerde toplamak için hangi yöntem uygulanmalıdır?
 
-### Kâhin sözleşmesi \{#oracle-contract}
+### Kâhin sözleşmesi {#oracle-contract}
 
 Kâhin sözleşmesi, kâhin hizmetinin zincir üstü bileşenidir; diğer sözleşmelerden gelen veri isteklerini dinler, veri sorgulamalarını kâhin düğümlerine aktarır ve geri gelen verileri müşteri sözleşmelerinde yayımlar. Bu sözleşme, döndürülen veri noktalarında bazı hesaplamalar yaparak isteyen sözleşmeye göndermek üzere toplu bir değer de üretebilir.
 
@@ -196,7 +196,7 @@ contract Oracle {
 }
 ```
 
-### Kâhin düğümleri \{#oracle-nodes}
+### Kâhin düğümleri {#oracle-nodes}
 
 Kâhin düğümü, kâhin hizmetinin zincir dışı unsurudur; üçüncül partilerde kurulmuş API'ler gibi dış kaynaklardan bilgi çeker ve bu bilgileri, akıllı sözleşmelerin tüketimi için zincir üzerine yerleştirir. Kâhin düğümleri, zincir üstündeki kâhin sözleşmelerinden gelen olayları dinler ve günlükte açıklanan görevi tamamlama aşamasına geçer.
 
@@ -204,15 +204,15 @@ Kâhin düğümleri için yaygın bir görev; bir API hizmetine [HTTP GET](https
 
 Hesaplama kâhinleri ayrıca, gaz masrafı ve blok hacim sınırlamaları göz önüne alındığında zincir üstünde yürütmesi kullanışsız olacak yoğun hesaplama görevlerinin yerine getirilmesi için zincir dışı düğümlere güvenir. Örneğin kâhin düğümü, kanıtlanabilir rastgele bir figürü (örneğin blokzincir tabanlı oyunlar için) oluşturmakla görevlendirilebilir.
 
-## Kâhin tasarım kalıpları \{#oracle-design-patterns}
+## Kâhin tasarım kalıpları {#oracle-design-patterns}
 
 Kâhinler, _anında okuma_, _yayımlama-abonelik_ ve _istek-yanıt_ gibi farklı türlerde olur; bunların ikincisi ve üçüncüsü Ethereum akıllı sözleşmeleri arasında en popüler olanlarıdır. Aşağıda, iki tür kâhin hizmetine ilişkin kısa bir açıklama bulunmaktadır:
 
-### Yayımlama-abonelik kâhinleri \{#publish-subscribe-oracles}
+### Yayımlama-abonelik kâhinleri {#publish-subscribe-oracles}
 
 Bir yayımlama-abonelik mekanizması üzerine kurulu kâhin hizmeti, diğer sözleşmelerin düzenli olarak bilgi almak için "veri akışını" kullanmasını sağlar. Bu durumdaki verinin sık sık değişmesi beklenir, bu nedenle istemci sözleşmelerinin, kâhinin depolamasındaki verilerde yapılacak güncellemelerini dinlemesi gerekir. Kullanıcılara en son ETH-USD fiyat bilgisini sağlayan bir kâhin, bu konuda harika bir örnektir.
 
-### İstek-yanıt kâhinleri \{#request-response-oracles}
+### İstek-yanıt kâhinleri {#request-response-oracles}
 
 Bir istek-yanıt kurulumu, istemci sözleşmesinin yayımlama-abonelik kâhini tarafından sağlanmış olan veri dışındaki keyfi verileri de talep edebilmesini sağlar. İstek-yanıt kâhinleri aşağıdaki durumlar için idealdir:
 
@@ -224,25 +224,25 @@ Yayımlama-abonelik modellerinden daha karmaşık olsa da, istek-yanıt kâhinle
 
 Veri sorgulamaları başlatan kullanıcılar, zincir dışı kaynaktan bilgi alma maliyetini karşılamak zorundadır. Ayrıca istemci sözleşmesinin, kâhin sözleşmesinin istekte belirtilen geri çağırma fonksiyonu aracılığıyla gelen cevabı döndürmesiyle ortaya çıkan gaz maliyetlerini de karşılaması gerekecektir.
 
-## Kâhin türleri \{#types-of-oracles}
+## Kâhin türleri {#types-of-oracles}
 
-### Merkezi kâhinler \{#centralized-oracles}
+### Merkezi kâhinler {#centralized-oracles}
 
 Merkezi kâhin, zincir dışı bilgiyi toplamaktan ve kâhinin sözleşme verilerini talebe göre güncellemekten sorumlu olan tek bir varlık tarafından kontrol edilir. Merkezi kâhinler tek bir doğruluk kaynağına dayandıkları için verimlidir. Sahipli veri kümelerinin doğrudan sahipleri tarafından geniş çapta kabul gören bir imza ile yayımlandığı durumlarda bile tercih edilebilirler. Bununla birlikte, merkezi kâhin kullanmak çeşitli sorunları da beraberinde getirir.
 
-#### Düşük doğruluk garantileri \{#low-correctness-guarantees}
+#### Düşük doğruluk garantileri {#low-correctness-guarantees}
 
 Merkezi kâhinler söz konusu olduğunda sağlanan bilginin doğru olup olmadığını onaylamanın bir yolu yoktur. Kâhin sağlayıcı "saygın" olabilir ancak bu birilerinin hırsızlık yapması ya da bir hacker'ın sistemi kurcalaması ihtimallerini ortadan kaldırmaz. Kâhin yozlaşmış bir hale gelirse, akıllı sözleşmeler kötü veriler üzerinde çalışacaktır.
 
-#### Yetersiz kullanılabilirlik \{#poor-availability}
+#### Yetersiz kullanılabilirlik {#poor-availability}
 
 Merkezi kâhinler zincir dışı verilerin diğer akıllı sözleşmeler için erişilebilir kılınmasını her zaman garanti etmez. Sağlayıcı servisi kapatmaya karar verirse ya da bir hacker kâhinin zincir dışı bileşenini ele geçirirse, akıllı sözleşmeniz bir hizmet reddi saldırısına (DoS) maruz kalma riski altında olur.
 
-#### Zayıf teşvik uyumluluğu \{#poor-incentive-compatibility}
+#### Zayıf teşvik uyumluluğu {#poor-incentive-compatibility}
 
 Merkezi kâhinler genellikle kötü tasarlanmıştır veya veri sağlayıcının doğru/değiştirilmemiş bilgi göndermesi için var olmayan teşviklere sahiptir. Kâhine hizmetleri için ödeme yapmak dürüst davranışı teşvik edebilir, ancak bu yeterli olmayabilir. Büyük miktarda değeri kontrol eden akıllı sözleşmelerle, kâhin verisini manipüle etmenin getirisi her zamankinden daha fazladır.
 
-### Merkezi olmayan kâhinler \{#decentralized-oracles}
+### Merkezi olmayan kâhinler {#decentralized-oracles}
 
 Merkezi olmayan kâhinler, tek başarısızlık noktalarını ortadan kaldırarak merkezi kâhinlerin tabi olduğu sınırlamaların üstesinden gelmek için tasarlanmıştır. Merkezi olmayan bir kâhin hizmeti, zincir dışı verileri bir akıllı sözleşmeye göndermeden önce üzerinde mutabakat sağlayan eşler arası bir ağdaki birden çok katılımcıyı içerir.
 
@@ -250,11 +250,11 @@ Merkezi olmayan bir kâhin (ideal olarak) izin ve güven gerektirmez olmalı ve 
 
 Merkezi olmayan kâhinleri kullanmak aşağıdaki faydaları beraberinde getirir:
 
-### Yüksek doğruluk garantileri \{#high-correctness-guarantees}
+### Yüksek doğruluk garantileri {#high-correctness-guarantees}
 
 Merkezi olmayan kâhinler, veri doğruluğunu farklı yaklaşımlar kullanarak elde etmeye çalışır. Buna, geri döndürülen bilginin özgünlüğünü ve bütünlüğünü tasdikleyecek kanıtlar kullanmak ve birden çok şahsın zincir dışı verinin doğruluğu üzerinde anlaşmasını şart koşmak dahildir.
 
-#### Özgünlük kanıtları \{#authenticity-proofs}
+#### Özgünlük kanıtları {#authenticity-proofs}
 
 Özgünlük kanıtları, dış kaynaklardan alınan bilginin bağımsız doğrulamasını mümkün kılan kriptografik mekanizmalardır. Bu kanıtlar, bilginin kaynağını doğrulayabilir ve alımdan sonra veri üzerindeki muhtemel oynamaları tespit edebilir.
 
@@ -266,7 +266,7 @@ Merkezi olmayan kâhinler, veri doğruluğunu farklı yaklaşımlar kullanarak e
 
 Merkezi olmayan kâhinlerin belirli sınıfları, kâhin düğümü operatörlerinin TEE tasdikleri sağlamasını gerektirir. Bu, bir kullanıcı için düğüm operatörünün kâhin istemcisinin bir örneğini güvenilir yürütme ortamında çalıştırdığını doğrular. TEE'ler dış süreçlerin bir uygulamanın kodunu ve verilerini değiştirmesini veya okumasını önler; dolayısıyla bu tasdikler, kâhin düğümünün bilgiyi bütün ve gizli tuttuğunu kanıtlar.
 
-#### Bilginin mutabakata dayalı olarak doğrulanması \{#consensus-based-validation-of-information}
+#### Bilginin mutabakata dayalı olarak doğrulanması {#consensus-based-validation-of-information}
 
 Merkezi kâhinler akıllı sözleşmelere veri sağlarken tek bir doğruluk kaynağına güvenirler, bu da isabetsiz bilgilerin yayınlanma ihtimalini ortaya çıkarır. Merkezi olmayan kâhinler bu sorunu zincir dışı bilgiyi sorgulamak için birden fazla kâhin düğümüne dayanarak çözerler. Merkezi olmayan kâhinler, birden fazla kaynaktan alınan verileri karşılaştırarak zincir üzerindeki sözleşmelere geçersiz bilgiler sağlanma riskini düşürür.
 
@@ -292,7 +292,7 @@ Schelling noktası mekanizmalarını kullanan diğer kâhin örnekleri arasında
 
 Schelling noktası mekanizmaları, zincir üzerindeki ayak izini minimize ederken (tek bir işlem gönderilmesi gerekir) aynı anda merkeziyetsizliği de garanti ettikleri için çekicidir. İkincisi, gönderilen cevaplar listesindeki düğümlerin orta/ortalama değeri oluşturan algoritmaya aktarılmadan önce tamamlanması gerektiği için mümkündür.
 
-### Kullanılabilirlik \{#availability}
+### Kullanılabilirlik {#availability}
 
 Merkezi olmayan kâhin hizmetleri, akıllı sözleşmelere yüksek zincir dışı veri kullanılabilirliği sağlar. Bu, hem zincir dışı bilgi kaynağının hem de bilgiyi zincir üstünde aktarmaktan sorumlu olan düğümlerin merkeziyetsizleştirilmesi ile gerçekleşir.
 
@@ -300,7 +300,7 @@ Kâhin sözleşmesi diğer sözleşmelerden sorgular yürütmek için birden faz
 
 Aynı zamanda hisse tabanlı kâhinlerin veri isteklerine çabuk cevap veremeyen düğüm operatörlerini kesmesi de mümkündür. Bu, kâhin düğümlerinin hata toleransı altyapısına yatırım yapmasını ve zamanında veri sağlamasını önemli ölçüde teşvik eder.
 
-### İyi teşvik uyumluluğu \{#good-incentive-compatibility}
+### İyi teşvik uyumluluğu {#good-incentive-compatibility}
 
 Merkezi olmayan kâhinler, kâhin düğümleri arasında [Bizans](https://en.wikipedia.org/wiki/Byzantine_fault) davranışını önlemek için çeşitli teşvik tasarımları uygular. Özellikle, _dayandırılabilirlik_ ve _hesap verebilirliğe_ sahiptirler:
 
@@ -308,11 +308,11 @@ Merkezi olmayan kâhinler, kâhin düğümleri arasında [Bizans](https://en.wik
 
 2. Merkezi olmayan kâhinler, önceden açıklandığı üzere düğümlerin bildirdikleri verinin doğruluğuna olan güvenleri üzerine bir hisse koymasını gerektirebilir. Eğer iddia doğru çıkarsa, bu hisse dürüst hizmet karşılığı verilen ödüller ile birlikte geri dönebilir. Ancak bilginin yanlış olduğu durumda da kesilebilir, bu da bir ölçüde hesap verilebilirlik sağlar.
 
-## Kâhinlerin akıllı sözleşmelerde uygulama alanları \{#applications-of-oracles-in-smart-contracts}
+## Kâhinlerin akıllı sözleşmelerde uygulama alanları {#applications-of-oracles-in-smart-contracts}
 
 Ethereum'da kâhinler için yaygın kullanım alanları aşağıdadır:
 
-### Finansal verileri alma \{#retrieving-financial-data}
+### Finansal verileri alma {#retrieving-financial-data}
 
 [Merkeziyetsiz finans](/defi/) (DeFi) uygulamaları, eşler arası borç verme, borç alma ve varlık takasına olanak tanır. Bu genelde takas oranı verileri (kripto paraların itibari değerlerini hesaplamak ya da iki jetonun fiyatını karşılaştırmak için) ve sermaye piyasaları verilerini (altın ya da Amerikan doları gibi jetonlaştırılmış varlıkların değerlerini hesaplamak için) de kapsayan farklı finansal bilgileri almayı gerektirir.
 
@@ -356,7 +356,7 @@ contract PriceConsumerV3 {
 }
 ```
 
-### Doğrulanabilir rastgelelik oluşturma \{#generating-verifiable-randomness}
+### Doğrulanabilir rastgelelik oluşturma {#generating-verifiable-randomness}
 
 Blokzincir tabanlı oyunlar veya piyango şemaları gibi belirli blokzincir uygulamalarının etkili bir şekilde çalışması için yüksek düzeyde öngörülemezlik ve rastgelelik gerekir. Fakat blokzincirlerin belirleyici yürütümü, herhangi bir rastgelelik kaynağını ortadan kaldırır.
 
@@ -366,13 +366,13 @@ Rastgele değeri zincir dışında oluşturup zincir üstünde göndermek mümk�
 
 Zincir dışında bilgi işlem için tasarlanmış kâhinler bu sorunu, sürecin tahmin edilemezliğini tasdik eden kriptografik kanıtlarla birlikte zincir üstünde yayımladıkları zincir dışı rastgele sonuçları güvenli bir şekilde oluşturarak çözerler. Bunun bir örneği, tahmin edilemez sonuçlara dayanan uygulamalar için güvenilir akıllı sözleşmeler oluşturmak açısından kullanışlı, kanıtlanabilir şekilde adil ve kurcalanamaz bir rastgele sayı oluşturucusu (RNG) olan [Chainlink VRF](https://docs.chain.link/docs/chainlink-vrf/)'dir (Onaylanabilir Rastgele Fonksiyon). Bir diğer örnek ise, Quantum rastgele sayı oluşturucusu (QRNG) görevi gören[API3 QRNG](https://docs.api3.org/explore/qrng/)'dir. Kuantum fenomeni bazlı herkese açık bir Web3 RNG yöntemidir ve Avustralya Ulusal Üniversitesi'nin (ANU) izniyle hizmet vermektedir.
 
-### Olaylar için sonuçlar alma \{#getting-outcomes-for-events}
+### Olaylar için sonuçlar alma {#getting-outcomes-for-events}
 
 Kahinler sayesinde gerçek hayat olaylarına tepkiler verebilen bir akıllı sözleşme kolaylıkla oluşturulabilir. Kahin servisleri, sözleşmelerin zincir dışındaki harici API'lere bağlanmasını ve o veri kaynaklarından bilgi toplayabilmesini sağlayarak bunu mümkün kılar. Örnek olarak, daha önceden bahsedilmiş olan tahmin merkeziyetsiz uygulaması, kâhinlerin güvenilir bir zincir dışı kaynaktan (örneğin, Associated Press) seçim sonuçlarını döndürmesini isteyebilir.
 
 Gerçek hayattan alınmış sonuçlara sayalı verileri almak için kâhinleri kullanmak, merkeziyetsiz sigorta uygulamalarını da kapsayan başka yenilikçi kullanım alanlarının da önünü açar. Kullanıcılara ödeme yapan bir sigorta akıllı sözleşmesi, etkin bir şekilde çalışabilmek için doğru bilgiye (hava durumu verileri, felaket raporları vs.) ihtiyaç duyacaktır.
 
-### Akıllı sözleşmeleri otomatikleştirme \{#automating-smart-contracts}
+### Akıllı sözleşmeleri otomatikleştirme {#automating-smart-contracts}
 
 Popüler açıklamaların aksine, akıllı sözleşmeler otomatik olarak çalışmaz; sözleşmenin kodunu çalıştırabilmek için bir dışarıdan sahip olunan hesap (EOA) ya da başka bir sözleşme hesabı doğru fonksiyonları tetiklemelidir. Çoğu durumda, sözleşmenin fonksiyonlarının büyük kısmı herkese açıktır ve EOA'lar ve diğer sözleşmeler tarafından çağrılabilir.
 
@@ -384,7 +384,7 @@ Bazı merkezi olmayan kâhin ağları, zincir dışı kâhin düğümlerinin kul
 
 Akıllı sözleşmeler için olağan bakım görevlerini güvenin asgariye indirildiği ve merkeziyetsizleştirilmiş bir şekilde dış kaynak kullanımı yoluyla tamamlamaya yönelik seçenekler sunan Chainlink'in [ Keeper Ağı](https://chain.link/keepers) buna bir örnektir. Sözleşmenizi Keeper ile uyumlu hale getirme ve Upkeep hizmetini kullanma hakkında daha fazla bilgi edinmek için resmi [Keeper dokümantasyonunu](https://docs.chain.link/docs/chainlink-keepers/introduction/) okuyun.
 
-## Blokzincir kâhinlerini kullanın \{#use-blockchain-oracles}
+## Blokzincir kâhinlerini kullanın {#use-blockchain-oracles}
 
 Ethereum merkeziyetsiz uygulamanıza entegre edebileceğiniz birden fazla kâhin uygulaması mevcuttur:
 
@@ -404,7 +404,7 @@ Ethereum merkeziyetsiz uygulamanıza entegre edebileceğiniz birden fazla kâhin
 
 **[API3 DAO](https://www.api3.org/)** - _API3 DAO, akıllı sözleşmeler için merkezi olmayan bir çözümde daha fazla kaynak şeffaflığı, güvenlik ve ölçeklenebilirlik sağlayan birinci taraf kâhin çözümleri sunar._
 
-## Daha fazla okuma \{#further-reading}
+## Daha fazla okuma {#further-reading}
 
 **Makaleler**
 

@@ -13,13 +13,13 @@ summaryPoints:
   - 流動性トークンを自分のウォレットで保有
 ---
 
-## ステーキングプールとは \{#what-are-staking-pools}
+## ステーキングプールとは {#what-are-staking-pools}
 
 ステーキングプールとは、少量の ETH を持つ人達が協力して、バリデータ鍵セットの有効化に必要な 32 ETH を取得する方法です。 プール機能はプロトコル上、ネイティブでサポートされていないため、別途ソリューションを構築され、需要に対応しています。
 
 一部のプールはスマートコントラクトを使用して運営されており、資金をコントラクトに預けると、コントラクトは管理者による承認を必要とせず、トラストレスにステークを管理・追跡し、預け入れ資金を表すトークンを発行します。 その他のプールは、スマートコントラクトを使用せず、オフチェーンで仲介されます。
 
-## ステーキングプールの利点 \{#why-stake-with-a-pool}
+## ステーキングプールの利点 {#why-stake-with-a-pool}
 
 [ステーキング入門](/staking/)で概説したメリットに加えて、 プールへのステーキングには数多くの注目すべき利点があります。
 
@@ -37,7 +37,7 @@ summaryPoints:
 
 <StakingComparison page="pools" />
 
-## 考慮すべき事項 \{#what-to-consider}
+## 考慮すべき事項 {#what-to-consider}
 
 ステーキングプール、または委任ステーキングは、イーサリアムプロトコルではネイティブでサポートされていませんが、32 ETH 未満のステーキングを行う需要を考慮し、ステーキングプールのソリューションの数が増えてきています。
 
@@ -47,7 +47,7 @@ summaryPoints:
 
 <StakingConsiderations page="pools" />
 
-## ステーキングプールを探す \{#explore-staking-pools}
+## ステーキングプールを探す {#explore-staking-pools}
 
 セットアップにはさまざまなオプションが用意されています。 上記の指標を参考に、下記のツールをご利用ください。
 
@@ -59,7 +59,7 @@ summaryPoints:
 
 ここに記載すべきステーキングツールをご存知の場合は [製品掲載ポリシー](/contributing/adding-staking-products/)を確認し、記載すべきかどうかをご確認の上、レビューに提出してください。
 
-## よくある質問 \{#faq}
+## よくある質問 {#faq}
 
 {
 <ExpandableCard title="報酬を獲得するには">
@@ -86,7 +86,7 @@ summaryPoints:
 </ExpandableCard>
 }
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 - [Rocket Pool でステーキング - ステーキングの概要](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool ドキュメント_
 - [Lido でイーサリアムをステーキング](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido ヘルプドキュメント_

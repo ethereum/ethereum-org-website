@@ -4,7 +4,7 @@ description: Scopri i vari modi in cui puoi contribuire a ethereum.org
 lang: it
 ---
 
-# Contribuire a ethereum.org \{#contributing-to-ethereumorg}
+# Contribuire a ethereum.org {#contributing-to-ethereumorg}
 
 Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-source. Quindi, se vuoi contribuire a migliorare [il nostro portale per Ethereum](/about/), ecco come puoi fare.
 
@@ -13,7 +13,7 @@ Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-s
   <a href="#poap">Maggiori informazioni sui POAP</a>
 </InfoBanner>
 
-## Modi per contribuire \{#ways-to-contribute}
+## Modi per contribuire {#ways-to-contribute}
 
 - [Lavora su un ticket aperto](https://github.com/ethereum/ethereum-org-website/issues) _– Attività che abbiamo identificato come necessarie_
 - [Unisciti al programma di traduzione](/contributing/translation-program/) _– Aiutaci a offrire ethereum.org in nuove lingue_
@@ -35,7 +35,7 @@ Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-s
 
 _Hai domande?_ Consulta il nostro [server Discord](https://discord.gg/ethereum-org)
 
-## Come lavorare su ethereum.org \{#how-to-update-content}
+## Come lavorare su ethereum.org {#how-to-update-content}
 
 Che tu stia contribuendo al sito, creando contenuti o lavorando su ticket aperti, avrai bisogno di un profilo di [GitHub](https://github.com).
 
@@ -53,7 +53,7 @@ Prima di contribuire, assicurati di avere familiarità con:
 - la nostra [guida di stile](/contributing/style-guide/)
 - il nostro [codice di condotta](/community/code-of-conduct)
 
-## Come vengono prese le decisioni sul sito \{#how-decisions-about-the-site-are-made}
+## Come vengono prese le decisioni sul sito {#how-decisions-about-the-site-are-made}
 
 Le decisioni sui singoli PR, l'evoluzione del design e gli aggiornamenti principali sono effettuati da un team facente capo al sistema di Ethereum. Questo team include manager del progetto, sviluppatori, designer, marketing e comunicazioni, oltre a esperti settoriali. I contributi della community vengono utilizzati come base per ogni decisione: ti invitiamo quindi a porre domande tramite segnalazioni, inviare PR o contattare il team:
 
@@ -61,21 +61,21 @@ Le decisioni sui singoli PR, l'evoluzione del design e gli aggiornamenti princip
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Server Discord](https://discord.gg/ethereum-org)
 
-### Due parole sul plagio \{#plagiarism}
+### Due parole sul plagio {#plagiarism}
 
 Quando contribuisci a contenuti o artefatti su ethereum.org, usa unicamente il tuo lavoro o contenuti originali che sei autorizzato a usare. Molti progetti nell'ecosistema di Ethereum usano licenze open source che consentono la condivisione libera delle informazioni. Tuttavia, se non riesci a trovare queste informazioni, non tentare di aggiungerle su ethereum.org. Ogni richiesta di invio ritenuta plagio sarà rifiutata.
 
-## L'open source è una novità per te? \{#new-to-open-source}
+## L'open source è una novità per te? {#new-to-open-source}
 
 Abbiamo una barriera bassa per l'inserimento di problemi sul nostro repository di GitHub specificamente progettato per gli sviluppatori nuovi all'open source, etichettata [buon primo ticket](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
-## Richiedi il tuo POAP da collaboratore \{#poap}
+## Richiedi il tuo POAP da collaboratore {#poap}
 
 Se il tuo contributo viene inserito su ethereum.org, conieremo per te un POAP di collaboratore univoco. Un token del Protocollo di Prova di Partecipazione (POAP) è una prova sulla catena che attesta che hai contribuito a migliorare l'ecosistema.
 
 [Maggiori informazioni sui POAP](https://www.poap.xyz/)
 
-### Come richiederlo \{#how-to-claim}
+### Come richiederlo {#how-to-claim}
 
 1. Unisciti al nostro [server Discord](https://discord.gg/ethereum-org).
 2. Incolla un link al tuo contributo nel [canale](https://discord.com/channels/714888181740339261/804005643211898911) `# | poaps`.
@@ -84,7 +84,7 @@ Se il tuo contributo viene inserito su ethereum.org, conieremo per te un POAP di
 
 Dovresti usare solo portafogli autosufficienti per rivendicare i POAP. Non usare conti di scambio o altri conti di cui non possiedi le chiavi private, poiché non ti consentiranno di accedere a e di gestire i tuoi POAP.
 
-## Collaboratori \{#contributors}
+## Collaboratori {#contributors}
 
 {
 <Contributors />

@@ -8,11 +8,11 @@ Lors du lancement d'Ethereum, la preuve d'enjeu avait encore besoin de beaucoup 
 
 Cette page décrit les raisons pour lesquelles Ethereum est passé de la preuve de travail à la preuve d'enjeu, ainsi que les compromis qui en découlent.
 
-## Sécurité \{#security}
+## Sécurité {#security}
 
 Les chercheurs d'Ethereum considèrent que la preuve d'enjeu est plus sûre que la preuve de travail. Cependant, elle n'a été mise en œuvre que récemment pour le réseau principal Ethereum et elle est moins éprouvée que la preuve de travail. Les sections suivantes présentent les avantages et les inconvénients du modèle de sécurité de la preuve d'enjeu par rapport à celui de la preuve de travail.
 
-### Coût de l'attaque \{#cost-to-attack}
+### Coût de l'attaque {#cost-to-attack}
 
 Dans la preuve d'enjeu, les validateurs sont tenus de mettre en dépôt (« mise ») au moins 32 ETH dans un contrat intelligent. Ethereum peut détruire l'éther mis en jeu pour punir les validateurs qui se comportent mal. Pour parvenir à un consensus, il faut qu'au moins 66 % du total d'éthers mis en jeu votent en faveur d'un ensemble particulier de blocs. Les blocs approuvés par >=66 % des participants deviennent « finalisés », ce qui signifie qu'ils ne peuvent pas être supprimés ou réorganisés.
 
@@ -26,19 +26,19 @@ D'autres attaques, telles que les attaques 51 % ou la réversion de la finalité
 
 Comparons cela avec le mécanisme de preuve de travail. Le coût du lancement d’une attaque contre la preuve de travail Ethereum était le coût de la possession constante de >50 % du taux de hachage total du réseau. Cela équivalait au coût du matériel et aux frais de fonctionnement nécessaires pour disposer d'une puissance de calcul suffisante pour surpasser régulièrement les autres mineurs dans le calcul des solutions de preuve de travail. Ethereum était principalement exploité à l'aide de GPU plutôt que d'ASIC, ce qui permettait de réduire les coûts (même si Ethereum était resté sur une preuve de travail, l'exploitation minière ASIC serait peut-être devenue plus populaire). Un attaquant devrait acheter beaucoup de matériel et payer pour l'électricité nécessaire afin d'attaquer un réseau Ethereum basé sur la preuve de travail, mais le coût total serait inférieur au coût nécessaire pour accumuler suffisamment d'ETH pour lancer une attaque. Une attaque à 51 % est ~[20 fois](https://youtu.be/1m12zgJ42dI?t=1562) moins chère sur la preuve de travail que sur la preuve d'enjeu. Si l'attaque était détectée et que la chaîne effectuait une séparation pour supprimer leurs altérations, l'attaquant pourrait utiliser à nouveau le même matériel pour attaquer la nouvelle fourche.
 
-### Complexité \{#complexity}
+### Complexité {#complexity}
 
 La preuve d'enjeu est beaucoup plus complexe que la preuve de travail. Cela pourrait être un argument en faveur de la preuve de travail, car il est plus difficile de créer accidentellement des bogues ou des effets non désirés dans des protocoles plus simples. Cependant, des années de recherche et de développement, de simulations et de mises en œuvre de réseaux d'essai ont permis de maîtriser cette complexité. Le protocole de preuve d'enjeu a été mis en œuvre indépendamment par cinq équipes distinctes (sur chacune des couches d'exécution et de consensus) dans cinq langages de programmation, ce qui permet de se prémunir contre les bogues de clients.
 
 Pour développer et tester en toute sécurité la logique de consensus de la preuve d'enjeu, la chaîne Beacon a été lancée deux ans avant que la preuve d'enjeu ne soit mise en œuvre sur le réseau principal Ethereum. La Chaine phare a agi comme un bac à sable pour les tests de preuve d'enjeu, car c'était une blockchain active appliquant la logique de consensus de preuve d'enjeu mais sans toucher aux transactions Ethereum réelles - en faisant seulement consensus avec elle-même. Une fois que cela a été stable et sans bug pendant un temps suffisant, la Chain phare a été « fusionnée » avec le réseau principal d'Ethereum. Tout cela a contribué à maîtriser la complexité de la preuve d'enjeu au point que le risque de conséquences non anticipées ou de bugs du client était très faible.
 
-### Surface d'attaque \{#attack-surface}
+### Surface d'attaque {#attack-surface}
 
 La preuve d'enjeu est plus complexe que la preuve de travail, ce qui signifie qu'il y a davantage de vecteurs d'attaque potentiels à gérer. Au lieu d'un réseau pair-à-pair reliant les clients, il y en a deux, chacun mettant en œuvre un protocole distinct. Le fait qu'un validateur spécifique soit présélectionné pour proposer un bloc dans chaque créneau crée un risque de déni de service lorsque de grandes quantités de trafic réseau mettent ce validateur spécifique hors ligne.
 
 Les attaquants peuvent également programmer avec soin la publication de leurs blocs ou attestations de manière à ce qu'ils soient reçus par une certaine proportion du réseau honnête, l'incitant ainsi à voter d'une certaine manière. Finalement, un attaquant peut simplement accumuler suffisamment d'ETH en vue de le mettre en jeu et de dominer le mécanisme de consensus. Chacun de ces [vecteurs d'attaque a des défenses associées](/developers/docs/consensus-mechanisms/pos/attack-and-defense), mais ils n'existent pas pour être défendus sous preuve de travail.
 
-## Décentralisation \{#decentralization}
+## Décentralisation {#decentralization}
 
 La preuve d'enjeu est plus décentralisée que la preuve de travail, car la course au matériel de minage a tendance à exclure les individus et les petites organisations en raison des coûts élevés. Si n'importe qui peut techniquement se lancer dans le minage avec un matériel modeste, ses chances de recevoir une quelconque récompense sont infimes par rapport aux opérations de minage institutionnelles. Avec la preuve d'enjeu, le coût de la mise en jeu et le pourcentage de rendement sur cette mise sont les mêmes pour tout le monde. Les frais de fonctionnement d'un validateur s'élèvent actuellement à 32 ETH.
 
@@ -46,17 +46,17 @@ D'un autre côté, l'invention des produits dérivés de mise en jeu liquide a c
 
 Pour Ethereum, la meilleure option consiste à faire fonctionner les validateurs localement, sur des ordinateurs personnels, afin de maximiser la décentralisation. Cela explique pourquoi Ethereum résiste aux changements qui augmentent les exigences matérielles pour le fonctionnement d'un nœud/validateur.
 
-## Développement durable \{#sustainability}
+## Développement durable {#sustainability}
 
 La preuve d'enjeu est une manière peu gourmande en carbone de sécuriser la blockchain. Dans le cadre de la preuve de travail, les mineurs sont en concurrence pour obtenir le droit de miner un bloc. Les mineurs sont plus performants lorsqu'ils peuvent effectuer des calculs plus rapidement, ce qui incite à investir dans le matériel et la consommation d'énergie. C'est ce qui a été observé pour Ethereum avant de passer à la preuve d'enjeu. Peu avant le passage à la preuve d'enjeu, Ethereum consommait environ 78 TWh/an, soit autant qu'un petit pays. Cependant, le passage à la preuve d'enjeu a permis de réduire cette dépense énergétique de ~99,98 %. La preuve d'enjeu a fait d'Ethereum une plateforme économe en énergie et à faible émission de carbone.
 
 [En savoir plus sur la consommation d'énergie d'Ethereum](/energy-consumption)
 
-## Émission \{#issuance}
+## Émission {#issuance}
 
 L'Ethereum basé sur la preuve d'enjeu peut financer sa sécurité en émettant beaucoup moins de jetons que l'Ethereum basé sur la preuve de travail, car les validateurs n'ont pas à payer des coûts élevés en électricité. Par conséquent, ETH peut réduire son inflation ou même devenir déflationniste lorsque de grandes quantités d'ETH sont brûlées. Les niveaux d'inflation plus faibles signifient que la sécurité d'Ethereum est moins coûteuse qu'elle ne l'était avec la preuve de travail.
 
-## Davantage qu'un apprenant visuel ? \{#visual-learner}
+## Davantage qu'un apprenant visuel ? {#visual-learner}
 
 Regardez Justin Drake expliquer les avantages de la preuve d'enjeu par rapport à la preuve de travail :
 
@@ -64,7 +64,7 @@ Regardez Justin Drake expliquer les avantages de la preuve d'enjeu par rapport �
 <YouTube id="1m12zgJ42dI" />
 }
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [La philosophie de conception de la preuve d'enjeu par Vitalik](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
 - [Les FAQ de Vitalik sur la preuve d'enjeu](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)

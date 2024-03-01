@@ -15,11 +15,11 @@ lang: ja
 
 開発中の新しい言語に興味があり、テストに協力したいとお考えの場合は、Fe というまだ登場したばかりのスマートコントラクト言語を試してみることができます。
 
-## 前提知識 \{#prerequisites}
+## 前提知識 {#prerequisites}
 
 プログラミング言語、特に JavaScript や Python の知識は、スマートコントラクト言語の違いを理解するのに役立ちます。 また、スマートコントラクトをコンセプトとして理解し、言語比較を深く掘り下げることをお勧めします。 [スマートコントラクトの紹介](/developers/docs/smart-contracts/)
 
-## Solidity \{#solidity}
+## Solidity {#solidity}
 
 - スマートコントラクトを実装するためのオブジェクト指向の高級言語
 - C++に強い影響を受けた中括弧を使ってブロックを表現する言語
@@ -29,7 +29,7 @@ lang: ja
   - ライブラリ(他のオブジェクト指向言語における静的クラスで定義された静的関数のように、さまざまなコントラクトから呼び出すことができる再利用可能なコードを作成できる)
   - 複雑なユーザー定義型
 
-### 参照すべきリンク \{#important-links}
+### 参照すべきリンク {#important-links}
 
 - [ドキュメント](https://docs.soliditylang.org/en/latest/)
 - [Solidity 言語ポータル](https://soliditylang.org/)
@@ -40,7 +40,7 @@ lang: ja
 - [Solidity ブログ](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
 
-### コントラクトのコード例 \{#example-contract}
+### コントラクトのコード例 {#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -83,7 +83,7 @@ contract Coin {
 
 この例は、Solidity のコントラクト構文がどのようなものか理解するのに役立つでしょう。 関数と変数のより詳細な説明については、[ドキュメント](https://docs.soliditylang.org/en/latest/contracts.html)を参照してください。
 
-## Vyper \{#vyper}
+## Vyper {#vyper}
 
 - Python 的なプログラミング言語
 - 強い型付け
@@ -101,7 +101,7 @@ contract Coin {
 
 詳細については、[Vyper のドキュメント](https://vyper.readthedocs.io/en/latest/index.html)を参照してください。
 
-### 参照すべきリンク \{#important-links-1}
+### 参照すべきリンク {#important-links-1}
 
 - [ドキュメント](https://vyper.readthedocs.io)
 - [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
@@ -116,7 +116,7 @@ contract Coin {
 - [人気を博している Vyper のスマートコントラクトの例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [素晴らしい Vyper の厳選されたリソース](https://github.com/spadebuilders/awesome-vyper)
 
-### 例 \{#example}
+### 例 {#example}
 
 ```python
 # Open Auction
@@ -205,7 +205,7 @@ def endAuction():
 
 この例は、Vyper のコントラクト構文がどのようなものか理解するのに役立つでしょう。 関数と変数のより詳細な説明については、[ドキュメント](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)を参照してください。
 
-## Yul と Yul+ \{#yul}
+## Yul と Yul+ {#yul}
 
 イーサリアムを使い始めたばかりで、スマートコントラクト言語を使ってコードを書いたことがない場合は、Solidity や Vyper を利用することをお勧めします。 Yul や Yul+を検討するのは、スマートコントラクトのセキュリティの最善の方法や、EVM との連携の具体的な内容に精通してからにしてください。
 
@@ -221,14 +221,14 @@ def endAuction():
 - コントラクトの[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups/)のために設計された
 - Yul に新しい機能を追加した実験的なアップグレード案として捉えることができる
 
-### 参照すべきリンク \{#important-links-2}
+### 参照すべきリンク {#important-links-2}
 
 - [Yul のドキュメント](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+のドキュメント](https://github.com/fuellabs/yulp)
 - [Yul+ Playground](https://yulp.fuel.sh/)
 - [Yul+の紹介記事](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### コントラクトのコード例 \{#example-contract-2}
+### コントラクトのコード例 {#example-contract-2}
 
 以下の簡単な例では、べき乗関数を実装しています。 `solc --strict-assembly --bin input.yul`を使用してコンパイルすることができます。 この例は、input.yul に記述されます。
 
@@ -253,14 +253,14 @@ def endAuction():
 
 スマートコントラクトの経験が豊富な場合は、Yul による[ERC20 の完全な実装](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)をご覧ください。
 
-## Fe \{#fe}
+## Fe {#fe}
 
 - イーサリアム仮想マシン(EVM)向けの静的型付け言語
 - Python と Rust の影響を受けている
 - イーサリアムのエコシステムに不慣れなデベロッパーでも簡単に学習できる言語であることを目標としている
 - Fe の開発は未だ初期段階にあり、2021 年 1 月にアルファ版がリリースされた
 
-### 参照すべきリンク \{#important-links-3}
+### 参照すべきリンク {#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
 - [Fe に関するアナウンス](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
@@ -268,7 +268,7 @@ def endAuction():
 - [Fe の Discord チャット](https://discord.com/invite/ywpkAXFjZH)
 - [Twitter](https://twitter.com/official_fe)
 
-### コントラクトのコード例 \{#example-contract-3}
+### コントラクトのコード例 {#example-contract-3}
 
 Fe で実装されたシンプルなコントラクトのコード例を以下に示します。
 
@@ -291,34 +291,34 @@ contract GuestBook:
 
 ```
 
-## 選択方法 \{#how-to-choose}
+## 選択方法 {#how-to-choose}
 
 他のプログラミング言語と同様に、個人的な好みだけでなく、行いたいことに最適なツールを選択することが重要です。
 
 まだどの言語も試していない場合に考慮すべき事項をいくつか紹介します。
 
-### Solidity の長所 \{#solidity-advantages}
+### Solidity の長所 {#solidity-advantages}
 
 - 初心者向けに、多くのチュートリアルや学習ツールが用意されている。 詳細については、[コーディングで学ぶ](/developers/learning-tools/)セクションを参照
 - 優れた開発ツールが利用可能
 - Solidity には大きなデベロッパーコミュニティがあり、質問に対する答えをすぐに見つけることができる
 
-### Vyper の長所 \{#vyper-advatages}
+### Vyper の長所 {#vyper-advatages}
 
 - Python デベロッパーが、スマートコントラクトの記述を始めるのに最適な方法である
 - Vyper の機能の数は絞られているため、アイデアから素早くプロトタイプを構築可能
 - Vyper は監査が容易で、最大限に人間が読めるようにすることを目指している
 
-### Yul と Yul+の長所 \{#yul-advantages}
+### Yul と Yul+の長所 {#yul-advantages}
 
 - シンプルで機能的な低レベル言語
 - 生の EVM に近づくことができ、コントラクトのガス使用量を最適化するのに役立つ
 
-## 言語比較 \{#language-comparisons}
+## 言語比較 {#language-comparisons}
 
 コントラクトのライフサイクル、インターフェイス、演算子、データ構造、関数、制御フローなどの基本的な構文の比較については、 [Auditless によるチートシート](https://reference.auditless.com/cheatsheet/)を参照してください。
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 - [OpenZeppelin による Solidity コントラクトライブラリ](https://docs.openzeppelin.com/contracts)
 - [Solidity by Example](https://solidity-by-example.org)

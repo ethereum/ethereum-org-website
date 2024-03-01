@@ -23,11 +23,11 @@ To use Ethereum on Arm to turn a Raspberry Pi into an Ethereum node, the followi
 - A case with heatsink and fan
 - USB keyboard, Monitor and HDMI cable (micro-HDMI) (Optional)
 
-## Why run Ethereum on ARM? \{#why-run-ethereum-on-arm}
+## Why run Ethereum on ARM? {#why-run-ethereum-on-arm}
 
 ARM boards are very affordable, flexible, small computers. They are good choices for running Ethereum nodes because they can be bought cheaply, configured so that all their resources focus just on the node, making them efficient, they consume low amounts of power and are physically small so they can fit unobtrusively in any home. It is also very easy to spin up nodes because the Raspberry Pi's MicroSD can simply be flashed with a prebuilt image, with no downloading or building software required.
 
-## How does it work? \{#how-does-it-work}
+## How does it work? {#how-does-it-work}
 
 The Raspberry Pi's memory card is flashed with a prebuilt image. This image contains everything needed to run an Ethereum node. With a flashed card, all the user needs to do is power-on the Raspberry Pi. All the processes required to run the node are automatically started. This works because the memory card contains a Linux-based operating system (OS) on top of which system-level processes are automatically run that turn the unit into an Ethereum node.
 
@@ -35,7 +35,7 @@ Ethereum cannot be run using the popular Raspberry Pi Linux OS "Raspbian" becaus
 
 **Images take care of all the necessary steps**, from setting up the environment and formatting the SSD disk to installing and running the Ethereum software as well as starting the blockchain synchronization.
 
-## Note on execution and consensus clients \{#note-on-execution-and-consensus-clients}
+## Note on execution and consensus clients {#note-on-execution-and-consensus-clients}
 
 The Ethereum on Arm image includes prebuilt execution and consensus clients as services. An Ethereum node requires both clients to be synced and running. You are only required to download and flash the image and then start the services. The image is preloaded with the following execution clients:
 
@@ -52,7 +52,7 @@ and the following consensus clients:
 
 You should choose one of each to run - all execution clients are compatible with all consensus clients. If you do not explicitly select a client, the node will fall back to its defaults - Geth and Lighthouse - and run them automatically when the board is powered up. You must open port 30303 on your router so Geth can find and connect to peers.
 
-## Downloading the Image \{#downloading-the-image}
+## Downloading the Image {#downloading-the-image}
 
 The Raspberry Pi 4 Ethereum image is a "plug and play" image that automatically installs and sets up both the execution and consensus clients, configuring them to talk to each other and connect to the Ethereum network. All the user needs to do is start their processes using a simple command.
 
@@ -66,7 +66,7 @@ shasum -a 256 ethonarm_22.04.00.img.zip
 
 Note that images for Rock 5B and Odroid M1 boards are available at the Ethereum-on-Arm [downloads page](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/download-and-install.html).
 
-## Flashing the MicroSD \{#flashing-the-microsd}
+## Flashing the MicroSD {#flashing-the-microsd}
 
 The MicroSD card that will be used for the Raspberry Pi should first be inserted into a desktop or laptop so it can be flashed. Then, the following terminal commands will flash the downloaded image onto the SD card:
 
@@ -87,7 +87,7 @@ sudo dd bs=1M if=ethonarm_22.04.00.img of=/dev/<sdxx> conv=fdatasync status=prog
 
 The card is now flashed, so it can be inserted into the Raspberry Pi.
 
-## Start the node \{#start-the-node}
+## Start the node {#start-the-node}
 
 With the SD card inserted into the Raspberry Pi, connect the ethernet cable and SSD then switch the power on. The OS will boot up and automatically start performing the preconfigured tasks that turn the Raspberry Pi into an Ethereum node, including installing and building the client software. This will probably take 10-15 minutes.
 
@@ -123,7 +123,7 @@ With the Geth and Lighthouse services running and synced, your Raspberry Pi is n
 
 Geth is preconfigured to report metrics to a Grafana dashboard which can be viewed in the browser. More advanced users might wish to use this feature to monitor the health of their node by navigating to `ipaddress:3000`, passing `user: admin` and `passwd: ethereum`.
 
-## Validators \{#validators}
+## Validators {#validators}
 
 A validator can also be optionally added to the consensus client. The validator software allows your node to participate actively in consensus and provides the network with cryptoeconomic security. You get rewarded for this work in ETH. To run a validator, you must first have 32 ETH, which must be deposited into the deposit contract. **This is a long-term commitment - it is not yet possible to withdraw this ETH!**. The deposit can be made by following the step-by-step guide on the [Launchpad](https://launchpad.ethereum.org/). Do this on a desktop/laptop, but do not generate keys — this can be done directly on the Raspberry Pi.
 
@@ -154,16 +154,16 @@ sudo systemctl start lighthouse-validator
 
 Congratulations, you now have a full Ethereum node and validator running on a Raspberry Pi!
 
-## More details \{#more-details}
+## More details {#more-details}
 
 This page gave an overview of how to set up a Geth-Lighthouse node and validator using Raspberry Pi. More detailed instructions are available on the [Ethereum-on-Arm website](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/index.html).
 
-## Feedback appreciated \{#feedback-appreciated}
+## Feedback appreciated {#feedback-appreciated}
 
 We know the Raspberry Pi has a massive user base that could have a very positive impact on the health of the Ethereum network.
 Please dig into the details in this tutorial, try running on testnets, check out the Ethereum on Arm GitHub, give feedback, raise issues and pull requests and help advance the technology and documentation!
 
-## References \{#references}
+## References {#references}
 
 1. https://ubuntu.com/download/raspberry-pi
 2. https://wikipedia.org/wiki/Port_forwarding

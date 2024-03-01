@@ -13,13 +13,13 @@ summaryPoint3: Token und NFTs erschaffen neue Wege zur Monetarisierung von Inhal
 
 Soziale Netzwerke spielen in unserer täglichen Kommunikation und Interaktion eine große Rolle. Allerdings hat die zentralisierte Kontrolle dieser Plattformen viele Probleme verursacht: Datenpannen, Server-Ausfälle, Ausschluss Einzelner, Zensur und Verstöße gegen die Privatsphäre sind einige der Kompromisse, die soziale Medien häufig machen. Um diese Probleme zu bekämpfen, bauen Entwickler soziale Netzwerke auf Ethereum auf. Dezentralisierte soziale Netzwerke können viele der Probleme der traditionellen sozialen Netzwerk-Plattformen beheben und die allgemeine Erfahrung der Benutzer verbessern.
 
-## Was sind dezentralisierte soziale Netzwerke? \{#what-are-decentralized-social-networks}
+## Was sind dezentralisierte soziale Netzwerke? {#what-are-decentralized-social-networks}
 
 Dezentralisierte soziale Netzwerke sind Blockchain-basierte Plattformen, die es Benutzern ermöglichen, Informationen auszutauschen sowie Inhalte zu veröffentlichen und zu verteilen. Da diese Anwendungen auf der Blockchain laufen, sind sie dezentral und widerstandsfähig gegen Zensur und übermäßige Kontrolle.
 
 Viele dezentrale soziale Netzwerke existieren als Alternative zu schon etablierten Social-Media-Diensten wie Facebook, LinkedIn, Twitter und Medium. Aber soziale Netzwerke, die über die Blockchain laufen, verfügen über eine Reihe von Funktionen, die sie traditionellen sozialen Plattformen überlegen machen.
 
-### Wie funktionieren dezentralisierte soziale Netzwerke? \{#decentralized-social-networks-overview}
+### Wie funktionieren dezentralisierte soziale Netzwerke? {#decentralized-social-networks-overview}
 
 Dezentralisierte soziale Netzwerke sind eine Art von [dezentralisierten Anwendungen (dapps)](/dapps/), die mit [Smart Contracts](/developers/docs/smart-contracts/) betrieben werden und auf der Blockchain laufen. Der Vertragscode dient als Backend für diese Apps und definiert ihre Geschäftslogik.
 
@@ -31,7 +31,7 @@ Mit der Verwendung von dezentralisierten Speichersystemen, wie [dem InterPlaneta
 
 Viele Blockchain-basierte soziale Plattformen haben native Token, die die Monetarisierung ohne Werbeeinnahmen antreiben. Benutzer können diese Token kaufen, um auf bestimmte Funktionen zugreifen zu können, In-App-Käufe abzuschließen oder ihre liebsten Content-Ersteller zu unterstützen.
 
-## Vorteile dezentralisierter sozialer Netzwerke \{#benefits}
+## Vorteile dezentralisierter sozialer Netzwerke {#benefits}
 
 1. Dezentralisierte soziale Netzwerke sind zensurresistent und offen für alle. Dies bedeutet, dass Benutzer nicht willkürlich gebannt, von der Plattform ausgeschlossen oder eingeschränkt werden können.
 
@@ -47,33 +47,33 @@ Viele Blockchain-basierte soziale Plattformen haben native Token, die die Moneta
 
 7. Dezentralisierte soziale Netzwerke basieren auf dezentralisierter Speicherung und nicht auf zentralisierten Datenbanken, die wesentlich besser für die Sicherung von Benutzerdaten sind.
 
-## Dezentralisierte soziale Netzwerke auf Ethereum \{#ethereum-social-networks}
+## Dezentralisierte soziale Netzwerke auf Ethereum {#ethereum-social-networks}
 
 Das Ethereum-Netzwerk ist aufgrund der Beliebtheit seiner Token (ERC-20/ERC-721) und seiner enormen Benutzerbasis zum bevorzugten Werkzeug für Entwickler geworden. Hier sind einige Beispiele für Ethereum-basierte soziale Netzwerke:
 
-### Peepeth \{#peepeth}
+### Peepeth {#peepeth}
 
 [Peepeth](https://peepeth.com/) ist eine Microblogging-Plattform, ähnlich wie Twitter. Sie läuft auf der Ethereum-Blockchain und verwendet IPFS zur Speicherung von Benutzerdaten.
 
 Benutzer können kurze Nachrichten, „Peeps" genannt, senden, die nicht gelöscht oder geändert werden können. Ohne die App zu verlassen, können Sie auf der Plattform Unterstützung in Ether (ETH) sammeln oder jemand anderem eine Unterstützung zukommen lassen.
 
-### Mirror \{#mirror}
+### Mirror {#mirror}
 
 [Mirror](https://mirror.xyz/) ist eine web3-fähige Schreib-Plattform. Sie soll dezentralisiert sein und den Benutzern gehören. Benutzer können kostenlos auf Mirror lesen und schreiben, indem sie einfach ihre Wallets verbinden. Benutzer können auch Abfassungen sammeln und ihre Lieblingsschriftsteller abonnieren.
 
 Auf Mirror veröffentlichte Beiträge werden dauerhaft auf Arweave, einer dezentralen Speicherplattform, gespeichert und können als Sammlerstücke [nicht-fungible Token (NFTs)](/nft/) mit dem Namen „Writing NFTs" geprägt werden. Das Schreiben von NFTs ist für Autoren völlig kostenlos und das Sammeln geschieht auf Ethereum L2. Das macht Transaktionen kostengünstig, schnell und umweltfreundlich.
 
-### MINDS \{#minds}
+### MINDS {#minds}
 
 [MINDS](https://www.minds.com/) ist eines der am häufigsten genutzten dezentralisierten sozialen Netzwerke. Es funktioniert wie Facebook und hat bereits Millionen von Benutzern gewonnen.
 
 Benutzer verwenden das native ERC-20-Token $MIND der Plattform, um für Artikel zu bezahlen. Benutzer können außerdem $MIND-Token verdienen, indem sie populäre Inhalte veröffentlichen, zum Ökosystem beitragen und andere auf die Plattform verweisen.
 
-## Soziale Web2-Netzwerke auf Ethereum \{#web2-social-networks-and-ethereum}
+## Soziale Web2-Netzwerke auf Ethereum {#web2-social-networks-and-ethereum}
 
 Native soziale [Web3](/web3/)-Plattformen sind nicht die einzigen, die versichern, Blockchain--Technologien in Social Media zu integrieren. Viele zentralisierte Plattformen planen auch, Ethereum in ihre Infrastruktur zu integrieren:
 
-### Reddit \{#reddit}
+### Reddit {#reddit}
 
 Auf Reddit gibt es [Community-Punkte](https://cointelegraph.com/news/reddit-to-reportedly-tokenize-karma-points-and-onboard-500m-new-users). Es handelt sich dabei um [ERC-20-Token](/developers/docs/standards/tokens/erc-20/), die Nutzer verdienen können, indem sie hochwertigen Inhalt veröffentlichen oder zu Online-Communitys (Subreddits) beitragen. Man kann diese Token innerhalb eines Subreddits verdienen, um [exklusive Privilegien zu erhalten](https://www.reddit.com/community-points/). Für dieses Projekt arbeitet Reddit mit Arbitrum zusammen, einem [Layer 2](/layer-2/)-Rollup für die Skalierung von Ethereum-Transaktionen.
 
@@ -81,24 +81,24 @@ Das Programm ist bereits im Subreddit r/CryptoCurrency aktiv, [diese Version lä
 
 Nach Abschluss einer Beta-Phase auf dem Rinkeby-Testnet, sind Reddit Community-Punkte jetzt auf [Arbitrum Nova](https://nova.arbitrum.io/), einer Blockchain, die die Eigenschaftern einer [Sidechain](/developers/docs/scaling/sidechains/) und eines [optimistischen Rollups](/developers/docs/scaling/optimistic-rollups/) besitzt. Neben der Verwendung von Community-Punkten zum Freischalten spezieller Funktionen können Nutzer sie auch auf Börsen gegen Papierwährung tauschen. Außerdem bestimmt die Anzahl der Community-Punkte, die ein Benutzer besitzt, seinen Einfluss auf den Entscheidungsprozess innerhalb der Community.
 
-### Twitter \{#twitter}
+### Twitter {#twitter}
 
 Im Januar 2021 hat Twitter Blue [Unterstützung für NFTs](https://mashable.com/article/twitter-blue-nft-profile-picture)eingeführt, die es Benutzern erlaubt, ihre Wallets zu verbinden und NFTs als Profilbilder anzuzeigen. Zum Zeitpunkt des Schreibens hat das Social-Media-Unternehmen auch [Pläne angekündigt](https://www.theverge.com/2021/8/16/22627435/twitter-bluesky-lead-jay-graber-decentralized-social-web), ein dezentralisiertes soziales Netzwerk für die Zukunft zu schaffen.
 
-### Instagram \{#instagram}
+### Instagram {#instagram}
 
 Im Mai 2022 [kündigte Instagram die Unterstützung für NFTs](https://about.instagram.com/blog/announcements/instagram-digital-collectibles) auf Ethereum und Polygon an. Benutzer können NFTs direkt an Instagram schicken, indem sie ihre Ethereum-Wallet verbinden.
 
-## Nutzen Sie dezentralisierte soziale Netzwerke \{#use-decentralized-social-networks}
+## Nutzen Sie dezentralisierte soziale Netzwerke {#use-decentralized-social-networks}
 
 - **[Status.im](https://status.im/)** - _Status ist eine sichere Messaging-App, die quelloffen ist und Peer-to-Peer-Protokolle sowie Ende-zu-Ende-Verschlüsselung verwendet, um Ihre Nachrichten vor Dritten zu schützen._
 - **[Mirror.xyz](https://mirror.xyz/)** - _Mirror ist eine dezentralisierte, eigene Publishing-Plattform basierend auf Ethereum, die hilft, Ideen zu finanzieren, Inhalte zu monetarisieren und wertvolle Communitys aufzubauen._
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol ist ein zusammengesetztes und dezentralisiertes soziales Diagramm, welches Erstellern dabei hilft, das Eigentumsrecht ihres Inhalts zu behalten/zu übernehmen._
 - **[Farcaster](https://farcaster.xyz/)** - _Farcaster ist ein ausreichend dezentralisiertes soziales Netzwerk. Es ist ein offenes Protokoll, das viele Clients unterstützen kann, genau wie E-Mail._
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
-### Artikel \{#articles}
+### Artikel {#articles}
 
 - [Dezentralisierung sozialer Medien: eine Anleitung zum Web3 Social Stack](https://www.coinbase.com/blog/decentralizing-social-media-a-guide-to-the-web3-social-stack) - _Coinbase Ventures_
 - [Soziale Netzwerke sind die nächste große Dezentralisierungsmöglichkeit](https://www.coindesk.com/tech/2021/01/22/social-networks-are-the-next-big-decentralization-opportunity/) — _Ben Goertzel_
@@ -108,13 +108,13 @@ Im Mai 2022 [kündigte Instagram die Unterstützung für NFTs](https://about.ins
 - [Soziale Netzwerke kommen auf die Blockchain](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
 - [Ausreichende Dezentralisierung für soziale Netzwerke](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
-### Videos \{#videos}
+### Videos {#videos}
 
 - [Dezentralisierte Social Media erklärt](https://www.youtube.com/watch?v=UdT2lpcGvcQ) — _Coinmarketcap_
 - [DeSo Blockchain möchte Social Media dezentralisieren](https://www.youtube.com/watch?v=SG2HUiVp0rE) — _Bloomberg Technology_
 - [Die Zukunft von dezentralisierten Social Media mit Balaji Srinivasan, Vitalik Buterin, Juan Benet](https://www.youtube.com/watch?v=DTxE9KV3YrE) — _ETHGlobal_
 
-### Communities \{#communities}
+### Communities {#communities}
 
 - [Status Discord-Server](https://discord.com/invite/3Exux7Y)
 - [Mirror Discord-Server](https://discord.com/invite/txuCHcE8wV)

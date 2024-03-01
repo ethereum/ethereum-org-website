@@ -12,7 +12,7 @@ summaryPoint2: Een poging om Ethereum te benutten voor het oplossen van wereldwi
 summaryPoint3: Een middel om activa met ecologisch voordeel, zoals geverifieerde koolstofkredieten, drastisch op te schalen
 ---
 
-## Wat is ReFi? \{#what-is-refi}
+## Wat is ReFi? {#what-is-refi}
 
 **Regeneratieve financiën (ReFi)** is een set hulpmiddelen en ideeën gebouwd bovenop blockchains, met als doel het creëren van economieën die regeneratief zijn in plaats van extractief of exploitatief. Op termijn putten extractieve systemen de beschikbare bronnen uit en storten ze in elkaar; zonder regeneratieve mechanismen ontbreekt het hen aan veerkracht. ReFi steunt op het principe dat de creatie van geldwaarde losgekoppeld moet worden van de onduurzame extractie van grondstoffen van onze planeet en samenleving.
 
@@ -26,7 +26,7 @@ ReFi-projecten realiseren deze principes door gebruik te maken van [slimme contr
 
 ReFi overlapt ook met de [gedecentraliseerde wetenschap (DeSci)](/desci/)-beweging, die Ethereum gebruikt als platform om wetenschappelijke kennis te financieren, creëren, evalueren, erkennen, bewaren en verspreiden. DeSci-tools kunnen nuttig worden voor de ontwikkeling van verifieerbare standaarden en werkwijzen voor het implementeren en monitoren van regeneratieve activiteiten, zoals bomen planten, verwijderen van plastic uit de oceaan of herstellen van een gedegradeerd ecosysteem.
 
-## Tokenisatie van koolstofkredieten \{#tokenization-of-carbon-credits}
+## Tokenisatie van koolstofkredieten {#tokenization-of-carbon-credits}
 
 De **[vrijwillige koolstofmarkt (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** is een mechanisme voor het financieren van projecten die een verifieerbare, positieve impact hebben op koolstofuitstoot, hetzij door huidige emissies te reduceren, of door broeikasgassen die al werden uitgestoten uit de atmosfeer te verwijderen. Deze projecten krijgen een activum genaamd "koolstofkrediet" nadat ze geverifieerd zijn, dat ze kunnen verkopen aan personen en organisaties die klimaatactie willen steunen.
 
@@ -50,7 +50,7 @@ ReFi-projecten gebruiken blockchaintechnologie om veel van de problemen in de tr
 - **Handelsactiviteit vindt plaats zonder tussenpersonen**, die hoge kosten aanrekenen. Digitale koolstofkredieten vertegenwoordigen een [kostenreductie van 62% in vergelijking met traditionele kredieten](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne), volgens de gegevens van een analysebureau.
 - **De DCM is schaalbaar** en kan tegemoetkomen aan de vraag van zowel personen als multinationals.
 
-### Belangrijkste onderdelen van de DCM \{#key-components-dcm}
+### Belangrijkste onderdelen van de DCM {#key-components-dcm}
 
 Vier hoofdcomponenten vormen het huidige landschap van de DCM:
 
@@ -65,7 +65,7 @@ Sommige, zoals [Klima Infinity](https://www.klimadao.finance/infinity) en [Senke
 
 4. De onderliggende rails en infrastructuur die het opschalen van de impact en de efficiëntie van de hele aanvoerketen van de koolstofmarkt mogelijk maken. [KlimaDAO](http://klimadao.finance/) levert liquiditeit als een publiek goed (door iedereen toe te laten om koolstofkredieten te kopen of te verkopen tegen een transparante prijs), stimuleert een verhoogde capaciteit van koolstofmarkten en afboekingen via beloningen, en levert klantvriendelijke, interoperationele tools om toegang te krijgen tot gegevens over, en voor het verwerven en afboeken van, een breed scala aan getokeniseerde koolstofkredieten.
 
-## ReFi voorbij koolstofmarkten \{#refi-beyond}
+## ReFi voorbij koolstofmarkten {#refi-beyond}
 
 Hoewel er momenteel een grote nadruk ligt op koolstofmarkten in het algemeen, en met name op de transitie van de VCM naar de DCM in dit veld, is de term "ReFi" niet strikt beperkt tot koolstof. Naast koolstofkredieten kunnen andere milieuactiva worden ontwikkeld en getokeniseerd, wat betekent dat andere negatieve externaliteiten ook in de basislagen van toekomstige economische systemen ingeprijst kunnen worden. Bovendien kan het regeneratieve aspect van dit economische model worden toegepast op andere domeinen, zoals het financieren van publieke goederen via kwadratische financieringsplatformen zoals [Gitcoin](https://gitcoin.co/). Organisaties die gebouwd zijn op het principe van open participatie en eerlijke verdeling van hulpbronnen, geven iedereen de macht om geld door te sluizen naar zowel open-source softwareprojecten, als educatieve, milieu-, en gemeenschapsgedreven projecten.
 

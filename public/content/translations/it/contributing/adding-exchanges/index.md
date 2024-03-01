@@ -4,7 +4,7 @@ description: La politica che usiamo per l'aggiunta di piattaforme di scambio su 
 lang: it
 ---
 
-# Aggiungere piattaforme di scambio su Ethereum \{#adding-ethereum-exchanges}
+# Aggiungere piattaforme di scambio su Ethereum {#adding-ethereum-exchanges}
 
 Chiunque è libero di suggerire nuove piattaforme di scambio su ethereum.org.
 
@@ -18,7 +18,7 @@ Alla luce di ciò, abbiamo bisogno di ottenere alcune informazioni specifiche qu
 
 **NOTA:** Se vuoi inserire uno scambio decentralizzato, dai un'occhiata alla nostra [politica per l'inserimento di portafogli e dapp](/contributing/adding-products/).
 
-## Di cosa abbiamo bisogno \{#what-we-need}
+## Di cosa abbiamo bisogno {#what-we-need}
 
 - Le limitazioni geografiche applicate alla piattaforma di scambio
 - Le valute che gli utenti possono usare per acquistare ETH
@@ -31,7 +31,7 @@ Occorre inoltre fornire ad ethereum.org la sicurezza che la piattaforma di scamb
 
 ---
 
-## Aggiungi la tua piattaforma di scambio \{#add-exchange}
+## Aggiungi la tua piattaforma di scambio {#add-exchange}
 
 Se desideri aggiungere una piattaforma di scambio a ethereum.org, crea un ticket su GitHub.
 

@@ -10,11 +10,11 @@ lang: zh
 
 数据可用性非常重要，因为如果我们不能使用可用数据重现变化，从区块链的角度看，该变化是不存在的。 如果能够获取区块数据，验证节点就可以使用它们自己的以太坊世界状态重新执行交易而无需信任，并独立验证每个区块的正确性。
 
-## 前言 \{#prerequisites}
+## 前言 {#prerequisites}
 
 你应该很好地理解[区块链基础知识](/developers/docs/intro-to-ethereum/)，尤其是[共识机制](/developers/docs/consensus-mechanisms/)。 本页面还假设读者熟悉[区块](/developers/docs/blocks/)、[交易](/developers/docs/transactions/)、[节点](/developers/docs/nodes-and-clients/)、[扩容解决方案](/developers/docs/scaling/)和其他相关主题。
 
-## 什么是数据可用性？ \{#what-is-data-availability}
+## 什么是数据可用性？ {#what-is-data-availability}
 
 数据可用性保证区块提议者发布区块的所有交易数据并且交易数据对于其他网络参与者可用。 以太坊交易在[区块](/developers/docs/blocks/)中处理。 这些区块连接在一起形成“区块链”。
 
@@ -25,7 +25,7 @@ lang: zh
 
 提出新区块时，区块生产者必须发布整个区块，包括交易数据（包含在区块体中）。 然后，参与共识的节点可以下载区块的数据并重新执行交易以确认其有效性。 如果没有验证交易的节点，区块提议者可以在区块中插入恶意交易并逃脱惩罚。
 
-### 数据可用性问题 \{#the-data-availability-problem}
+### 数据可用性问题 {#the-data-availability-problem}
 
 我们可以把数据可用性难题概括为一个问题：“我们如何验证一个新产生区块的数据是否可用？”。 数据可用性非常重要，因为以太坊的安全在于假设全节点可以获取区块数据。
 
@@ -45,7 +45,7 @@ lang: zh
 
 无状态性有望提升以太坊的安全性、可扩展性和长期可持续性。 由于对验证节点的硬件要求较低，更多验证者可以加入网络并保护网络免受恶意参与者的侵害。
 
-### 数据可用性与数据可检索性 \{#data-availability-vs-data-retrievability}
+### 数据可用性与数据可检索性 {#data-availability-vs-data-retrievability}
 
 数据可用性不同于数据可检索性。 数据可用性是指区块被提出以便添加到区块链时，节点下载区块交易数据的能力。 换句话说，数据可用性与区块尚未达成共识时相关。
 
@@ -57,9 +57,9 @@ lang: zh
 
 [更多关于数据可检索性问题解决方案的信息](https://notes.ethereum.org/@vbuterin/data_sharding_roadmap#Who-would-store-historical-data-under-sharding)。
 
-## 为什么数据可用性很重要？ \{#why-is-data-availability-important}
+## 为什么数据可用性很重要？ {#why-is-data-availability-important}
 
-### 区块链安全 \{#blockchain-security}
+### 区块链安全 {#blockchain-security}
 
 数据可用性对于区块链安全至关重要，否则“数据隐藏攻击”将变得司空见惯。 当区块生产者发布一个区块但不共享用于构建区块的交易数据时，数据隐藏攻击就会发生。
 
@@ -67,11 +67,11 @@ lang: zh
 
 区块数据对全节点的可见性非常重要，因为轻客户端等其他网络参与者依赖全节点来验证网络的状态。 与全节点不同，轻客户端只检查区块头，不下载区块体。 因此，数据可用性相关规则确保全节点可以验证区块并避免区块链遭到破坏。
 
-### 去中心化的可扩展性 \{#decentralized-scalability}
+### 去中心化的可扩展性 {#decentralized-scalability}
 
 [以太坊的目标是扩展计算而不牺牲去中心化和安全性](/roadmap/vision/)。 由于单层区块链架构的限制，数据可用性对于实现去中心化的可扩展性至关重要。
 
-#### 数据可用性和二层网络扩容 \{#data-availability-and-layer-2-scaling}
+#### 数据可用性和二层网络扩容 {#data-availability-and-layer-2-scaling}
 
 [二层网络扩容解决方案](/layer-2/)（例如[卷叠](/glossary/#rollups)）通过在以太坊主执行层之外执行交易来扩展网络的吞吐量并减少延迟。 链下交易在压缩后分批次发布到以太坊上 — 数千笔交易可以在链下进行，但是以太坊需处理与每个提交批次相关的*一笔*链上交易。 这就缓解了基础层上的拥塞并减少了用户的费用，同时保证了更快捷的交易。
 
@@ -83,15 +83,15 @@ lang: zh
 
 例如，如果运营者隐瞒了卷叠状态的细节，用户就无法知道自己的余额。 而且，用户也不能使用新添加区块中的信息来执行状态更新。
 
-## 区块链中数据可用性系统的类型 \{#types-of-data-availability-systems-in-blockchains}
+## 区块链中数据可用性系统的类型 {#types-of-data-availability-systems-in-blockchains}
 
-### 链上数据可用性 \{#on-chain-data-availability}
+### 链上数据可用性 {#on-chain-data-availability}
 
 解决数据可用性问题的标准解决方案是，强制区块生产者在链上发布所有交易数据并让验证节点下载。 链上数据可用性是“单层区块链”的一个特征，可在单个层上管理数据可用性、交易执行和共识。 通过在整个网络上冗余存储状态数据，以太坊协议确保节点可以获取所需数据来重现交易、验证状态更新并标记无效的状态转换。
 
 然而，链上数据可用性带来了可扩展性瓶颈。 单层区块链处理速度一般比较慢，因为节点必须下载每一个区块并且重新执行相同的交易。 它还需要全节点存储数量不断增长的状态 — 这种趋势会影响去中心化。 如果以太坊的状态数量激增，验证者必须购买更大的机器，这可能会减少愿意运行验证节点的人数。
 
-### 链下数据可用性 \{#off-chain-data-availability}
+### 链下数据可用性 {#off-chain-data-availability}
 
 链下数据可用性系统将数据存储移至区块链以外：区块生产者不在链上发布交易数据，而是提供一种加密承诺来证明数据的可用性。 [模块化区块链](https://celestia.org/learn/basics-of-modular-blockchains/modular-and-monolithic-blockchains/)采用了这种方法。在模块化区块链中，区块链管理一些任务（例如交易执行和共识），同时把其他任务（例如数据可用性）分流到另一层。
 
@@ -101,11 +101,11 @@ lang: zh
 
 因为链下存储存在的问题，有些扩容解决方案将交易数据存储在父区块链（如以太坊）上。 例如，乐观卷叠和零知识卷叠不存储交易数据，而是使用以太坊主网作为数据可用性层。
 
-## 数据可用性问题有哪些解决方案？ \{#solutions-to-data-availability-problem}
+## 数据可用性问题有哪些解决方案？ {#solutions-to-data-availability-problem}
 
 如上所述，数据可用性问题涉及验证新提出区块的交易数据可用性的能力。 该问题的解决方案采用了一些机制来保证数据可用性。
 
-### 数据可用性采样 \{#data-availability-sampling}
+### 数据可用性采样 {#data-availability-sampling}
 
 数据可用性采样是一种保证数据可用性的加密机制。 数据可用性采样允许区块链节点验证所提出区块的数据是否可用，而无需下载整个区块。
 
@@ -115,7 +115,7 @@ lang: zh
 
 [更多关于数据可用性采样的信息。](https://hackmd.io/@vbuterin/sharding_proposal#ELI5-data-availability-sampling)
 
-#### 数据可用性证明 \{#data-availability-proofs}
+#### 数据可用性证明 {#data-availability-proofs}
 
 虽然数据可用性采样可以在统计学上保证区块可用性，但恶意节点仍然可以隐藏一些数据。 数据可用性采样技术只能证明大部分区块数据是可用的，但不能证明整个区块是可用的。 即使区块生产者隐藏少量交易数据也能造成非常大的伤害。
 
@@ -127,7 +127,7 @@ lang: zh
 
 [更多关于数据可用性证明的信息。](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
-### 数据可用性委员会 \{#data-availability-committees}
+### 数据可用性委员会 {#data-availability-committees}
 
 纯 Validium 将交易数据在链下存储到区块生产者，在一定程度上使它们中心化。 这削弱了去中心化和安全性，因为区块生产者可以通过隐藏交易数据来发布无效交易并隐藏卷叠的真实状态。
 
@@ -135,7 +135,7 @@ lang: zh
 
 [更多关于数据可用性委员会的信息。](https://medium.com/starkware/data-availability-e5564c416424)
 
-### 权益证明数据可用性委员会 \{#proof-of-stake-data-availability-committees}
+### 权益证明数据可用性委员会 {#proof-of-stake-data-availability-committees}
 
 虽然数据可用性委员会要优于 Validium 的现状，但信任假设仍然存在。 如果数据可用性委员会与区块生产者串通一气隐藏交易数据，怎么办？ 数据可用性委员会规模通常不大，这增加了串通的风险以及外部参与者破坏该团体的可能性。
 
@@ -145,7 +145,7 @@ lang: zh
 
 [更多关于权益证明数据可用性委员会的信息。](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
 
-## 以太坊和数据可用性的未来 \{#ethereum-and-the-future-of-data-availability}
+## 以太坊和数据可用性的未来 {#ethereum-and-the-future-of-data-availability}
 
 虽然卷叠可以通过链下计算来扩大吞吐量，但它们的容量受到底层区块链的数据吞吐量限制。 如果卷叠使用以太坊作为数据可用性层，就必须增加它的数据存储和处理能力。
 
@@ -157,7 +157,7 @@ lang: zh
 
 为了解决这个问题，以太坊较新的扩容提案，如 [Danksharding](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)，依靠数据可用性采样来验证二进制大对象的全部内容是否被网络看到。 该系统减轻了单个节点直接下载和验证的负担。
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [到底什么是数据可用性？](https://medium.com/blockchain-capital-blog/wtf-is-data-availability-80c2c95ded0f)
 - [什么是数据可用性？](https://coinmarketcap.com/alexandria/article/what-is-data-availability)

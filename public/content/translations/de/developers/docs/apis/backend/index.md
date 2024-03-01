@@ -10,15 +10,15 @@ Zu diesem Zweck implementiert jeder Ethereum-Client die [JSON-RPC](/developers/d
 
 Wenn Sie eine bestimmte Programmiersprache verwenden möchten, um sich mit einem Ethereum-Knoten zu verbinden, können Sie auf eine der komfortablen Bibliotheken in diesem Ökosystem zurückgreifen, die Ihnen das Leben erleichtern. Mit diesen Programmbibliotheken können Entwickler intuitive, einzeilige Methoden schreiben, um JSON-RPC-Anfragen („unter der Haube“) zu initialisieren, die mit Ethereum interagieren.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Es könnte hilfreich sein, den [Ethereum-Stack](/developers/docs/ethereum-stack/) und die [Ethereum-Clients](/developers/docs/nodes-and-clients/) zu verstehen.
 
-## Warum eine Bibliothek verwenden? \{#why-use-a-library}
+## Warum eine Bibliothek verwenden? {#why-use-a-library}
 
 Durch Abstraktion vereinfachen diese Programmbibliotheken die komplexe direkte Interaktion mit einem Ethereum-Knoten. Zudem bieten sie auch Dienstprogrammfunktionen (z. B. ETH in GWei umwandeln), so dass Sie als Entwickler weniger Zeit mit den Problemstellungen der Ethereum-Clients verbringen müssen und sich stärker auf die einzigartige Funktion Ihrer Anwendung konzentrieren können.
 
-## Verfügbare Bibliotheken \{#available-libraries}
+## Verfügbare Bibliotheken {#available-libraries}
 
 **Alchemy-\*\***_Ehereum-Entwicklungsplattform_\*\*
 
@@ -167,16 +167,16 @@ Durch Abstraktion vereinfachen diese Programmbibliotheken die komplexe direkte I
 - [Dokumentation](https://services.tokeniew/docs?type=api)
 - [Github](https://github.com/Tokenview)
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 _Sie kennen Community-Resourcen die Ihnen geholfen haben? Bearbeiten Sie diese Seite und fügen Sie sie hinzu!_
 
-## Verwandte Themen \{#related-topics}
+## Verwandte Themen {#related-topics}
 
 - [Knotenpunkte und Clients](/developers/docs/nodes-and-clients/)
 - [Entwicklungs-Frameworks](/developers/docs/frameworks/)
 
-## Ähnliche Tutorials \{#related-tutorials}
+## Ähnliche Tutorials {#related-tutorials}
 
 - [Web3js einrichten, um die Ethereum-Blockchain in JavaScript zu nutzen](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Leitfaden für die Einrichtung von web3.js in Ihrem Projekt._
 - [Aufruf eines intelligenten Vertrags mit JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Mit dem DAI-Token können Sie die Funktion „Verträge aufrufen“ mit JavaScript verwenden._

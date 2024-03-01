@@ -96,7 +96,7 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 在下一部分中，我们会调用 `balance Of` 函数来检索当前的代币数量，此时这两个地址的代币数量都被冻结。
 
-## 调用：从智能合约读取值 \{#call-reading-value-from-a-smart-contract}
+## 调用：从智能合约读取值 {#call-reading-value-from-a-smart-contract}
 
 第一个例子，将调用“常量（constant）”方法并且在 EVM 中执行这个智能合约方法，并不发送任何交易。 为此我们将读取一个地址的 ECR20 余额。 [阅读关于 ECR20 代币的文章](/developers/tutorials/understand-the-erc-20-token-smart-contract/)。
 
@@ -114,7 +114,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 
 请记住，DAI ERC20 有 18 位小数，这意味着您需要移除 18 个零才能获得正确的数额。 uint256 将以字符串形式返回，因为 Javascript 不处理大数值。 如果不确定，请了解我们关于 bignumber.js 的教程[如何在 JS 中处理大数](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/)。
 
-## 发送：将交易发送给智能合约函数 \{#send-sending-a-transaction-to-a-smart-contract-function}
+## 发送：将交易发送给智能合约函数 {#send-sending-a-transaction-to-a-smart-contract-function}
 
 对于第二个示例，我们将调用 DAI 智能合约的 transfer 函数，发送 10 个 DAI 到第二个地址。 transfer 函数接受两个参数：收件人地址和转账代币的数量：
 

@@ -8,7 +8,7 @@ Web2, bugün bir çoğumuzun bildiği internet sürümünü ifade eder. Kişisel
 
 Yeni başlayanlar için daha uygun bir kaynak mı arıyorsunuz? [web3'e girişimize](/web3/) bakın.
 
-## Web3'ün faydaları \{#web3-benefits}
+## Web3'ün faydaları {#web3-benefits}
 
 Birçok Web3 geliştiricisi, Ethereum'un yerleşik merkeziyetsizliği nedeniyle dapp'ler oluşturmaya karar verdi:
 
@@ -17,7 +17,7 @@ Birçok Web3 geliştiricisi, Ethereum'un yerleşik merkeziyetsizliği nedeniyle 
 - Ödemeler, yerel token olan ether (ETH) aracılığıyla yapılır.
 - Ethereum turing testini geçer yani Ethereum'la istediğiniz neredeyse her şeyi programlayabilirsiniz.
 
-## Pratik karşılaştırmalar \{#practical-comparisons}
+## Pratik karşılaştırmalar {#practical-comparisons}
 
 | Web2                                                                                    | Web3                                                                                                                     |
 | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -27,7 +27,7 @@ Birçok Web3 geliştiricisi, Ethereum'un yerleşik merkeziyetsizliği nedeniyle 
 
 Bu, tüm hizmetlerin bir dapp'ee dönüştürülmesi gerektiği anlamına gelmez. Bu örnekler, web2 ve web3 hizmetleri arasındaki temel farklı açıklamaktadır.
 
-## Web3 sınırlamaları \{#web3-limitations}
+## Web3 sınırlamaları {#web3-limitations}
 
 Web3'ün şu anda bazı sınırlamaları var:
 
@@ -36,7 +36,7 @@ Web3'ün şu anda bazı sınırlamaları var:
 - Erişilebilirlik - modern web tarayıcılarındaki entegrasyon eksikliği, web3'ü birçok kullanıcı için daha az erişilebilir kılar.
 - Maliyet – çoğu başarılı dapp, pahalı olduğu için kodlarının çok küçük kısımlarını blok zincirine koyar.
 
-## Merkezilik ve Merkeziyetsizlik karşılaştırması \{#centralization-vs-decentralization}
+## Merkezilik ve Merkeziyetsizlik karşılaştırması {#centralization-vs-decentralization}
 
 Aşağıdaki tabloda, merkezi ve merkeziyetsiz dijital ağların geniş kapsamlı avantaj ve dezavantajlarından bazılarını listeledik.
 
@@ -52,7 +52,7 @@ Aşağıdaki tabloda, merkezi ve merkeziyetsiz dijital ağların geniş kapsaml�
 
 Bunların, her ağda geçerli olmayabilecek genel kalıplar olduğunu unutmayın. Ayrıca, gerçekte bir ağın merkezileşme/merkeziyetsizlik derecesi bir spektrumda yer alır; hiçbir ağ tamamen merkezileştirilmiş veya tamamen merkeziyetsiz değildir.
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Web3 nedir?](/web3/) - _ethereum.org_
 - [Bir Web 3.0 uygulamasının mimarisi](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_

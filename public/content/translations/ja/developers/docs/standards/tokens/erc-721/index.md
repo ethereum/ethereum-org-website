@@ -4,7 +4,7 @@ description:
 lang: ja
 ---
 
-## はじめに \{#introduction}
+## はじめに {#introduction}
 
 **非代替性トークン（NFT）とは**
 
@@ -16,13 +16,13 @@ ERC-721 は、NFT に対する標準規格です。つまり、この種類の�
 
 はい！ すべての NFT は、`tokenid`と呼ばれる`unit256`変数を持つため、ERC-721 を伴うコントラクトでは、`contract adress, unit 256 tokenid`のペアはグローバルに固有でなければなりません。 その上で、各 Dapp では、`tokenid`の入力から、ゾンビ、武器、スキル、あるいは可愛い子猫といったクールな画像を出力する「コンバーター」を搭載することができます。
 
-## 前提知識 \{#prerequisites}
+## 前提知識 {#prerequisites}
 
 - [アカウント](/developers/docs/accounts/)
 - [スマートコントラクト](/developers/docs/smart-contracts/)
 - [トークン規格](/developers/docs/standards/tokens/)
 
-## 規格の概要 \{#body}
+## 規格の概要 {#body}
 
 ERC-721（Ethereum Request for Comments 721）は、ウィリアム・エントリケン氏、ディーター・シャーリー氏、ジェイコブ・エバンス氏、ナスタシア・サックス氏により 2018 年 1 月に提案された、スマートコントラクト内で非代替性トークン（NFT）を取り扱うための API を実装するための規格です。
 
@@ -32,7 +32,7 @@ ERC-721（Ethereum Request for Comments 721）は、ウィリアム・エント�
 
 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)から引用：
 
-### メソッド \{#methods}
+### メソッド {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ ERC-721（Ethereum Request for Comments 721）は、ウィリアム・エント�
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### イベント \{#events}
+### イベント {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -54,11 +54,11 @@ ERC-721（Ethereum Request for Comments 721）は、ウィリアム・エント�
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### 例 \{#web3py-example}
+### 例 {#web3py-example}
 
 イーサリアムネットワークにおける ERC-721 トークンコントラクトを詳しく検討することで、ネットワークをシンプルにする上でこれらの規格がいかに重要であるかが理解できるでしょう。 ERC-721 トークンを対象とするインターフェイスを開発するには、コントラクトのアブリケーション・バイナリ・インターフェイス（ABI）があれば十分です。 これからつまずかないように簡略化された ABI を使用した例をお見せします。
 
-#### Web3.py の例 \{#web3py-example}
+#### Web3.py の例 {#web3py-example}
 
 最初に、 Python ライブラリの[Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation)がインストールされていることを確認してください:
 
@@ -225,7 +225,7 @@ birth_logs = w3.eth.getLogs({
 recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## 人気が高い NFT の実例： \{#popular-nfts}
+## 人気が高い NFT の実例： {#popular-nfts}
 
 - [イーサスキャン NFT トラッカー](https://etherscan.io/tokens-nft)は、イーサリアムにおける NFT の取引量ランキングです。
 - [クリプトキティーズ](https://www.cryptokitties.co/)は、クリプトキティーと呼ばれる愛らしい生物を育て、収集するゲームです。
@@ -236,7 +236,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [ゴッズ・アンチェインド・カード](https://godsunchained.com/)は、イーサリアムブロックチェーン上の TCG で、NFT を使ってゲーム内アセットに真の所有権を提供しています。
 - [ボアード・エイプ・ヨット・クラブ](https://boredapeyachtclub.com)は、10,000 個の固有 NFT のコレクションであると同時にいわゆるレアな美術作品であり、同クラブの会員証であるトークンでもあります。会員は、初回特典に加えて、コミュニティ活動を行うことでより多くの特典を受け取ることができます。
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 - [EIP-721：ERC-721 非代替性トークン（NFT）規格](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 のドキュメンテーション](https://docs.openzeppelin.com/contracts/3.x/erc721)

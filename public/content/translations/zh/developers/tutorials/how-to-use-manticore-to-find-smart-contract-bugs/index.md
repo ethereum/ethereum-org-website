@@ -17,11 +17,11 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 本教程的目的是展示如何使用 Manticore 自动发现智能合约中的漏洞。
 
-## 安装 \{#installation}
+## 安装 {#installation}
 
 Manticore 需要使用 python 3.6。 它可以通过 pip 或使用 docker 来安装。
 
-### 使用 docker 的 Manticore \{#manticore-through-docker}
+### 使用 docker 的 Manticore {#manticore-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
@@ -37,7 +37,7 @@ solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### 使用 pip 的 Manticore \{#manticore-through-pip}
+### 使用 pip 的 Manticore {#manticore-through-pip}
 
 ```bash
 pip3 install --user manticore
@@ -45,7 +45,7 @@ pip3 install --user manticore
 
 建议采用 solc 0.5.11。
 
-### 运行脚本 \{#running-a-script}
+### 运行脚本 {#running-a-script}
 
 使用 python 3 运行一个 python 脚本：
 
@@ -53,9 +53,9 @@ pip3 install --user manticore
 python3 script.py
 ```
 
-## 动态符号化执行简介 \{#introduction-to-dynamic-symbolic-execution}
+## 动态符号化执行简介 {#introduction-to-dynamic-symbolic-execution}
 
-### Nutshell 中的动态符号化执行 \{#dynamic-symbolic-execution-in-a-nutshell}
+### Nutshell 中的动态符号化执行 {#dynamic-symbolic-execution-in-a-nutshell}
 
 动态符号化执行(DSE)是一种程序分析技术，用于探究具有高度语义意识的状态空间。 这项技术是基于 "程序路径"的发现 ，以一种称为`path predicates`的数学公式表示。 就概念来说，这种技术对路径预测的操作分为两步：
 
@@ -64,7 +64,7 @@ python3 script.py
 
 这种方法不会产生误报，因为所有被识别的程序状态都可以在具体执行过程中被触发。 例如，如果分析发现了一个整数溢出，就可以保证它是可重现的
 
-### 路径预测示例 \{#path-predicate-example}
+### 路径预测示例 {#path-predicate-example}
 
 为了了解 DSE 如何工作，请考虑以下示例：
 
@@ -85,7 +85,7 @@ f(uint a).
 
 每个路径预测都是一个数学公式，可以传递给所谓的 [SMT 求解器](https://wikipedia.org/wiki/Satisfiability_modulo_theories)，求解器将尝试解方程式。 对于`路径1`，求解器会说，可以用`a=65`探索路径。 对于`路径2`，求解器可以给`a`指定一个 65 以外的任何值，例如`a=0`。
 
-### 验证属性 \{#verifying-properties}
+### 验证属性 {#verifying-properties}
 
 Manticore 允许完全控制每个路径的所有执行情况。 因此，它允许您在几乎任何东西上添加任意限制。 这种控制允许在合约上创建财产。
 
@@ -127,7 +127,7 @@ function safe_add(uint a, uint b) returns(uint c){
 
 因此，DSE 是一个强大的工具，可以验证您代码的任意限制。
 
-## 在 Manticore 下运行 \{#running-under-manticore}
+## 在 Manticore 下运行 {#running-under-manticore}
 
 我们将看到如何探索使用 Manticore API 的智能合约。 目标是以下智能合约[`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol)：
 
@@ -143,7 +143,7 @@ contract Simple {
 }
 ```
 
-### 运行一个独立的探索方式 \{#run-a-standalone-exploration}
+### 运行一个独立的探索方式 {#run-a-standalone-exploration}
 
 您可以通过以下命令直接在智能合约上运行 Manticore（`project`可以是一个 Solidity 文件，或者是项目目录）：
 
@@ -192,11 +192,11 @@ _检索摘要 f(!=65)表示使用不同于 65 的任何值调用的调用的 f�
 
 如果您想要快速的代码检查，请使用`--quick-mode`标志（它禁用 bug 检测器、gas 计算...）
 
-### 通过 API 操纵智能合约 \{#manipulate-a-smart-contract-through-the-api}
+### 通过 API 操纵智能合约 {#manipulate-a-smart-contract-through-the-api}
 
 本节介绍如何通过 Manticore Python API 操纵智能合约的细节。 您可以使用 python 扩展名`*.py`创建新文件，并通过将 API 命令（下面将介绍其基础内容）添加到这个文件中来写入必要的代码，然后使用`$ python3 *.py`命令运行它。 您也可以直接在 python 控制台中执行下面的指令，使用`$python3`命令来运行控制台。
 
-### 创建帐户 \{#creating-accounts}
+### 创建帐户 {#creating-accounts}
 
 首先，您要通过以下命令启动一个新的区块链：
 
@@ -229,18 +229,18 @@ contract Simple {
 contract_account = m.solidity_create_contract(source_code, owner=user_account)
 ```
 
-#### 概览 \{#summary}
+#### 概览 {#summary}
 
 - 可以使用 [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account) 和 [m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract) 创建用户账户和合约账户。
 
-### 执行交易 \{#executing-transactions}
+### 执行交易 {#executing-transactions}
 
 Manticore 支持两种类型的交易：
 
 - 原始交易：已探索所有函数
 - 命名交易：只探索一个函数
 
-#### 原始交易 \{#raw-transaction}
+#### 原始交易 {#raw-transaction}
 
 使用 [m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction) 执行原始交易：
 
@@ -269,7 +269,7 @@ m.transaction(caller=user_account,
 
 如果数据是象征性的，Manticore 将在交易执行期间探索合约中的所有函数。 查看[Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/)文章中的回退函数解释，对于理解函数选择的工作原理会有所帮助。
 
-#### 命名交易 \{#named-transaction}
+#### 命名交易 {#named-transaction}
 
 函数可以通过其的名称执行。 要使用 user_account 中的符号值以及 0 ether 执行`f(uint var)`，请使用：
 
@@ -280,13 +280,13 @@ contract_account.f(symbolic_var, caller=user_account, value=0)
 
 如果没有指定交易的`value`，则默认为 0。
 
-#### 概览 \{#summary-1}
+#### 概览 {#summary-1}
 
 - 交易的参数可以是具体的或抽象的
 - 原始交易将探索所有函数
 - 函数可以通过其名称来调用
 
-### 工作区 \{#workspace}
+### 工作区 {#workspace}
 
 `m.workspace`目录用作所有生成的文件的输出目录：
 
@@ -294,11 +294,11 @@ contract_account.f(symbolic_var, caller=user_account, value=0)
 print("Results are in {}".format(m.workspace))
 ```
 
-### 终止探索 \{#terminate-the-exploration}
+### 终止探索 {#terminate-the-exploration}
 
 要停止探索，请使用 [m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize)。 一旦这个方法被调用，就不应该再发送任何交易，而且 Manticore 会针对所探索的每一条路径生成测试案例。
 
-### 总结：在 Manticore 下运行 \{#summary-running-under-manticore}
+### 总结：在 Manticore 下运行 {#summary-running-under-manticore}
 
 将所有先前的步骤放在一起，我们就会得到：
 
@@ -322,7 +322,7 @@ m.finalize() # stop the exploration
 
 以上所有代码都可以在[`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)中找到。
 
-## 获取投掷路径 \{#getting-throwing-paths}
+## 获取投掷路径 {#getting-throwing-paths}
 
 我们现在将为路径生成特定的输入，以在`f()`中引发异常。 目标仍为以下智能合约 [`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol)。
 
@@ -337,7 +337,7 @@ contract Simple {
 }
 ```
 
-### 使用状态信息 \{#using-state-information}
+### 使用状态信息 {#using-state-information}
 
 执行的每个路径都有其区块链的状态。 此状态要么是准备就绪，要么是被终止了，也就是说，它达到了 THROW 或 REVERT 指令状态。
 
@@ -363,7 +363,7 @@ data = state.platform.transactions[0].return_data
 data = ABI.deserialize("uint", data)
 ```
 
-### 如何生成测试案例 \{#how-to-generate-testcase}
+### 如何生成测试案例 {#how-to-generate-testcase}
 
 使用 [m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase) 生成测试案例：
 
@@ -371,7 +371,7 @@ data = ABI.deserialize("uint", data)
 m. generate_testcase(state, 'BugFound')
 ```
 
-### 概览 \{#summary-2}
+### 概览 {#summary-2}
 
 - 您可以使用 m.all_states 对状态进行迭代
 - `state.platform.get_balance(account.adds)`返回帐户余额
@@ -379,7 +379,7 @@ m. generate_testcase(state, 'BugFound')
 - `transaction.return_data`是返回的数据
 - `m.generate_testcase(state, name)`为状态生成输入
 
-### 总结：获取抛出路径 \{#summary-getting-throwing-path}
+### 总结：获取抛出路径 {#summary-getting-throwing-path}
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -407,7 +407,7 @@ for state in m.terminated_states:
 
 _注意我们可以生成一个更简单的脚本，因为所有由 terminated_state 返回的状态在其结果中都有 REVERT 或 INVALID：这个例子只是为了演示如何操作 API。_
 
-## 添加限制 \{#adding-constraints}
+## 添加限制 {#adding-constraints}
 
 我们将看到如何对探索加以约束。 我们将作出这样的假设：`f()`的文档指出，该函数从未在`a == 65`的情况下被调用，因此任何`a == 65`的错误都不是真正的错误。 目标仍为以下智能合约[`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol)：
 
@@ -422,7 +422,7 @@ contract Simple {
 }
 ```
 
-### 运算符 \{#operators}
+### 运算符 {#operators}
 
 [运算符](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py)模块使约束操作变得简便，除此之外，它还提供了其他功能：
 
@@ -445,11 +445,11 @@ from manticore.core.smtlib import Operators
 last_return = operators.CONCAT(256,*last_return)
 ```
 
-### 约束 \{#state-constraint}
+### 约束 {#state-constraint}
 
 您可以在全局范围内或针对某个特定的状态使用约束。
 
-#### 全局约束 \{#state-constraint}
+#### 全局约束 {#state-constraint}
 
 使用 `m.constrain(constraint)` 添加全局约束。 例如，您可以从一个符号地址调用合约，并将这个地址约束为特定的值：
 
@@ -462,11 +462,11 @@ m.transaction(caller=user_account,
               value=0)
 ```
 
-#### 状态约束 \{#state-constraint}
+#### 状态约束 {#state-constraint}
 
 使用 [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) 为一个特定状态添加约束。 该约束可用来在探索状态后对其进行约束，以检查状态上的某些属性。
 
-### 检查约束 \{#checking-constraint}
+### 检查约束 {#checking-constraint}
 
 使用`solver.check(state.constracts)`来了解约束是否仍然可行。 例如，以下代码将 symbolic_value 限定为不等于 65 ，并检查状态是否仍然可行。
 
@@ -476,7 +476,7 @@ if solver.check(state.constraints):
     # state is feasible
 ```
 
-### 摘要：添加限制因素 \{#summary-adding-constraints}
+### 摘要：添加限制因素 {#summary-adding-constraints}
 
 通过在前面的代码中添加约束，我们获得：
 

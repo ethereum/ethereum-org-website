@@ -10,7 +10,7 @@ lang: en
 
 [Ethash](https://github.com/ethereum/wiki/wiki/Ethash) is a modified version of the [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto) algorithm. Ethash proof-of-work is [memory hard](https://wikipedia.org/wiki/Memory-hard_function), which was thought to make the algorithm ASIC resistant. Ethash ASICs were eventually developed but GPU mining was still a viable option until proof-of-work was switched off. Ethash is still used to mine other coins on other non-Ethereum proof-of-work networks.
 
-## How does Ethash work? \{#how-does-ethash-work}
+## How does Ethash work? {#how-does-ethash-work}
 
 Memory hardness is achieved with a proof of work algorithm that requires choosing subsets of a fixed resource dependent on the nonce and block header. This resource (a few gigabytes in size) is called a DAG. The DAG is changed every 30000 blocks, a ~125-hour window called an epoch (roughly 5.2 days) and takes a while to generate. Since the DAG only depends on block height, it can be pre-generated, but if it's not the client needs to wait until the end of this process to produce a block. If clients do not pre-generate and cache DAGs ahead of time the network may experience massive block delay on each epoch transition. Note that the DAG does not need to be generated for verifying the proof-of-work essentially allowing for verification with both low CPU and small memory.
 
@@ -23,7 +23,7 @@ The general route that the algorithm takes is as follows:
 
 The large dataset is updated once every 30000 blocks, so the vast majority of a miner's effort will be reading the dataset, not making changes to it.
 
-## Definitions \{#definitions}
+## Definitions {#definitions}
 
 We employ the following definitions:
 
@@ -42,7 +42,7 @@ CACHE_ROUNDS = 3                  # number of rounds in cache production
 ACCESSES = 64                     # number of accesses in hashimoto loop
 ```
 
-### The use of 'SHA3' \{#sha3}
+### The use of 'SHA3' {#sha3}
 
 Ethereum's development coincided with the development of the SHA3 standard, and the
 standards process made a late change in the padding of the finalized hash algorithm, so that Ethereum's
@@ -51,7 +51,7 @@ to as "Keccak-256" and "Keccak-512" in other contexts. See discussion, e.g. [her
 
 Please keep that in mind as "sha3" hashes are referred to in the description of the algorithm below.
 
-## Parameters \{#parameters}
+## Parameters {#parameters}
 
 The parameters for Ethash's cache and dataset depend on the block number. The cache size and dataset size both grow linearly; however, we always take the highest prime below the linearly growing threshold in order to reduce the risk of accidental regularities leading to cyclic behavior.
 
@@ -73,7 +73,7 @@ def get_full_size(block_number):
 
 Tables of dataset and cache size values are provided in the appendix.
 
-## Cache generation \{#cache-generation}
+## Cache generation {#cache-generation}
 
 Now, we specify the function for producing a cache:
 
@@ -97,7 +97,7 @@ def mkcache(cache_size, seed):
 
 The cache production process involves first sequentially filling up 32 MB of memory, then performing two passes of Sergio Demian Lerner's _RandMemoHash_ algorithm from [_Strict Memory Hard Hashing Functions_ (2014)](http://www.hashcash.org/papers/memohash.pdf). The output is a set of 524288 64-byte values.
 
-## Data aggregation function \{#date-aggregation-function}
+## Data aggregation function {#date-aggregation-function}
 
 We use an algorithm inspired by the [FNV hash](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function) in some cases as a non-associative substitute for XOR. Note that we multiply the prime with the full 32-bit input, in contrast with the FNV-1 spec which multiplies the prime with one byte (octet) in turn.
 
@@ -110,7 +110,7 @@ def fnv(v1, v2):
 
 Please note, even the yellow paper specifies fnv as v1\*(FNV_PRIME ^ v2), all current implementations consistently use the above definition.
 
-## Full dataset calculation \{#full-dataset-calculation}
+## Full dataset calculation {#full-dataset-calculation}
 
 Each 64-byte item in the full 1 GB dataset is computed as follows:
 
@@ -136,7 +136,7 @@ def calc_dataset(full_size, cache):
     return [calc_dataset_item(cache, i) for i in range(full_size // HASH_BYTES)]
 ```
 
-## Main loop \{#main-loop}
+## Main loop {#main-loop}
 
 Now, we specify the main "hashimoto"-like loop, where we aggregate data from the full dataset in order to produce our final value for a particular header and nonce. In the code below, `header` represents the SHA3-256 _hash_ of the RLP representation of a _truncated_ block header, that is, of a header excluding the fields **mixHash** and **nonce**. `nonce` is the eight bytes of a 64 bit unsigned integer in big-endian order. So `nonce[::-1]` is the eight-byte little-endian representation of that value:
 
@@ -178,7 +178,7 @@ Essentially, we maintain a "mix" 128 bytes wide, and repeatedly sequentially fet
 
 If the output of this algorithm is below the desired target, then the nonce is valid. Note that the extra application of `sha3_256` at the end ensures that there exists an intermediate nonce which can be provided to prove that at least a small amount of work was done; this quick outer PoW verification can be used for anti-DDoS purposes. It also serves to provide statistical assurance that the result is an unbiased, 256-bit number.
 
-## Mining \{#mining}
+## Mining {#mining}
 
 The mining algorithm is defined as follows:
 
@@ -193,7 +193,7 @@ def mine(full_size, dataset, header, difficulty):
     return nonce
 ```
 
-## Defining the seed hash \{#seed-hash}
+## Defining the seed hash {#seed-hash}
 
 In order to compute the seed hash that would be used to mine on top of a given block, we use the following algorithm:
 
@@ -207,11 +207,11 @@ In order to compute the seed hash that would be used to mine on top of a given b
 
 Note that for smooth mining and verifying, we recommend pre-computing future seedhashes and datasets in a separate thread.
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Appendix \{#appendix}
+## Appendix {#appendix}
 
 The following code should be prepended if you are interested in running the above python spec as code.
 
@@ -263,7 +263,7 @@ def isprime(x):
     return True
 ```
 
-### Data Sizes \{#data-sizes}
+### Data Sizes {#data-sizes}
 
 The following lookup tables provide approximately 2048 tabulated epochs of data sizes and cache sizes.
 

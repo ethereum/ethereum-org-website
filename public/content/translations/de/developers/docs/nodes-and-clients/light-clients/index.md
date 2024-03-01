@@ -6,17 +6,17 @@ lang: de
 
 Der Betrieb eines vollständigen Knotens ist die vertrauenswürdigste, dezentralste, privateste und zensurresistenteste Möglichkeit, um mit Ethereum zu interagieren. Mit einem vollständigen Knoten können Sie Ihre eigene Kopie der Blockchain behalten. Auf dieser können sie Abfragen direkt ausführen und Sie haben einen direkten Zugriff auf das Peer-to-Peer-Netzwerk von Ethereum. Jedoch erfordert der Betrieb eines vollständigen Knotens eine signifikante Menge an Arbeitsspeicher, Speicherplatz und CPU. Das bedeutet, dass es nicht für jeden möglich ist seinen eigenen Knoten zu betreiben. Es gibt mehrere Lösungen dazu in der Ethereum-Roadmap, dazu gehört auch die Zustandslosigkeit, jedoch sind diese noch Jahre von ihrer Implementierung entfernt. Die kurzfristige Lösung dazu ist, einige Vorteile eines vollständigen Knotens mit großen Leistungsverbesserungen, die es ermöglichen einen Knoten mit sehr geringen Hardware-Anforderungen zu betreiben, einzutauschen. Knoten, die diesen Kompromiss erzielen, werden leichte Knoten (Light Nodes) genannt.
 
-## Was ist ein leichter Client \{#what-is-a-light-client}
+## Was ist ein leichter Client {#what-is-a-light-client}
 
 Ein leichter Knoten ist ein Knoten, der auf der Software eines leichten Clients betrieben werden kann. Statt lokale Kopien der gesamten Daten der Blockchain zu speichern und unabhängig alle Änderungen mitzuverfolgen, fragen sie die notwendigen Daten von irgendeinem Anbieter ab. Der Anbieter könnte eine direkte Verbindung zu einem vollständigen Knoten oder irgendein zentraler RPC-Server sein. Die Daten werden dann vom leichten Knoten verifiziert. Dadurch kann er mit der Spitze der Blockchain mithalten. Der leichte Knoten verarbeitet nur Block-Header und lädt gelegentlich die echten Inhalte des Blocks herunter. Je nach Kombination von leichter und vollständiger Client-Software können Knoten in ihrer Leichtigkeit variieren. Zum Beispiel würde die leichteste Konfiguration darin bestehen, einen leichten Ausführungs-, sowie Konsensclient zu betreiben. Es ist auch wahrscheinlich, dass viele Knoten sich entscheiden, einen leichten Konsensclient mit einem vollen Ausführungsclient oder andersherum zu betreiben.
 
-## Wie funktionieren leichte Clients? \{#how-do-light-clients-work}
+## Wie funktionieren leichte Clients? {#how-do-light-clients-work}
 
 Als Ethereum damit begann, einen auf Proof-of-Stake basierenden Konsensmechanismus zu nutzen, wurde neue Infrastruktur, vor allem für leichte Clients, aufgebaut. Das funktioniert, indem alle 1,1 Tage eine Teilmenge von 512 Validatoren als **Synchronisierungskomitee** ausgewählt werden. Das Synchronisierungskomitee unterschreibt den Header von den letzten Blöcken. Jeder Block-Header beinhaltet die gesammelten Unterschriften der Validatoren im Synchronisierungskomitee und ein „Bitfeld“, das zeigt, welche Validatoren unterschrieben haben und welche nicht. Jeder Header beinhaltet auch eine Liste von Validatoren, von denen erwartet wird, den nächsten Block zu unterschreiben. Das bedeutet, dass ein leichter Client schnell sehen kann, dass das Synchronisierungskomitee den empfangenen Daten zustimmt und dass sie auch überprüfen können, ob das Synchronisierungskomitee das Original ist, indem sie die empfangenen mit den im letzten Block erwarteten Daten vergleichen. So kann der leichte Client sein Wissen über den letzten Ethereum-Block immer wieder erneuern, ohne den Block selbst, sondern nur den Header, herunterzuladen.
 
 Auf der Ausführungsebene gibt es keine einzige Spezifikation für einen leichten Ausführungsclient. Der Anwendungsbereich eines leichten Ausführungsclients kann ein „leichter Modus“ eines vollständigen Ausführungsclients sein, der über das gesamte EVM und alle Netzwerkfunktionen eines vollständigen Knotens verfügt, jedoch nur die Block Header verifiziert. Es kann jedoch auch ein stärker zerlegter Client sein, der sich stark darauf stützt, Anfragen an einen RPC-Anbieter weiterzuleiten, um mit Ethereum zu interagieren.
 
-## Warum sind leichte Clients so wichtig? \{#why-are-light-clients-important}
+## Warum sind leichte Clients so wichtig? {#why-are-light-clients-important}
 
 Leichte Clients sind wichtig, da sie Nutzern ermöglichen, eingehende Daten zu verifizieren, statt der Echtheit der Daten des Anbieters blind zu vertrauen. Dabei benötigen sie nur einen Bruchteil der rechnerischen Ressourcen eines vollständigen Knotens. Die Daten, die leichte Clients empfangen, können anhand von Block-Headern überprüft werden, von denen sie wissen, dass mindestens 2/3 einer zufälligen Menge von 512 Ethereum-Validatoren richtig unterschrieben wurden. Das ist ein sehr starker Beweis dafür, dass die Daten korrekt sind.
 
@@ -26,7 +26,7 @@ Lassen Sie uns ein einfaches Beispiel nehmen. Stellen Sie sich vor, Sie wollen d
 
 Ein leichter Client behebt dieses Problem. Sie können die Daten immer noch von einem externen Anbieter abfragen, sobald Sie jedoch die Daten erhalten, kommen diese mit einem Beweis, den Ihr leichter Knoten anhand der Informationen, die er vom Block-Header erhalten hat, überprüft. Statt eines vertrauten Betreibers wird Ethereum die Richtigkeit Ihrer Daten überprüfen.
 
-## Welche Innovationen ermöglichen leichte Clients? \{#what-innovations-do-light-clients-enable}
+## Welche Innovationen ermöglichen leichte Clients? {#what-innovations-do-light-clients-enable}
 
 Der Hauptvorteil von leichten Clients ist, dass mehr Menschen unabhängigen Zugriff auf Ethereum bekommen können. Dabei sind die Hardware-Anforderungen überschaubar und die Abhängigkeit von Dritten minimal. Das ist gut für Nutzer, da diese ihre eigenen Daten verifizieren können, und gut für das Netzwerk, da es mehr und vielfältige Knoten gibt, die die Blockchain verifizieren.
 
@@ -38,7 +38,7 @@ Ethereum-Rollups würden ebenfalls von leichten Clients profitieren. Eines der g
 
 Leichte Clients könnten auch dazu verwendet werden, Ethereum-Wallets zu aktualisieren. Anstatt den von einem RPC-Provider bereitgestellten Daten zu vertrauen, könnte Ihre Wallet die Ihnen präsentierten Daten direkt mit einem eingebetteten leichten Client verifizieren. Dies würde die Sicherheit Ihrer Wallet erhöhen. Wenn Ihr RPC-Anbieter unehrlich war und Ihnen falsche Daten geliefert hat, könnte der eingebettete leichte Client Sie darüber informieren!
 
-## Wie ist der aktuelle Stand der Entwicklung von leichten Clients? \{#current-state-of-development}
+## Wie ist der aktuelle Stand der Entwicklung von leichten Clients? {#current-state-of-development}
 
 Es befinden sich mehrere leichte Clients in der Entwicklung, darunter Ausführungs-, Konsens- und kombinierte Ausführungs-/Konsens-Light-Clients. Dies sind die Light-Client-Implementierungen, von denen wir zum Zeitpunkt der Erstellung dieser Seite wissen:
 
@@ -53,7 +53,7 @@ Es wird auch intensiv daran gearbeitet, die Art und Weise zu verbessern, wie lei
 
 Andere [Roadmap-Elemente](/roadmap/) wie [Verkle-Bäume](/roadmap/verkle-trees/) und [Zustandslosigkeit](/roadmap/statelessness/) werden schließlich dazu führen, dass die Sicherheitsgarantien von leichten Clients denen von vollständigen Clients entsprechen.
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [Zsolt Felfodhi über Geth Light Clients](https://www.youtube.com/watch?v=EPZeFXau-RE)
 - [Etan Kissling über die Vernetzung von Light Clients](https://www.youtube.com/watch?v=85MeiMA4dD8)

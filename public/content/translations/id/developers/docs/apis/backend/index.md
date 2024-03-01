@@ -10,15 +10,15 @@ Untuk keperluan ini, setiap klien Ethereum mengimplementasikan spesifikasi [JSON
 
 Jika Anda ingin menggunakan bahasa pemrograman tertentu untuk terhubung dengan node Ethereum, ada banyak pustaka praktis di dalam ekosistem yang membuatnya lebih mudah. Dengan pustaka ini, pengembang dapat menulis metode satu baris yang intuitif untuk memulai permintaan JSON-RPC (di bawah tenda) yang berinteraksi dengan Ethereum.
 
-## Prasyarat \{#prerequisites}
+## Prasyarat {#prerequisites}
 
 Mungkin akan membantu memahami [tumpukan Ethereum](/developers/docs/ethereum-stack/) dan [klien Ethereum](/developers/docs/nodes-and-clients/).
 
-## Mengapa menggunakan pustaka? \{#why-use-a-library}
+## Mengapa menggunakan pustaka? {#why-use-a-library}
 
 Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan node Ethereum. Pustaka juga menyediakan fungsi utilitas (seperti mengubah ETH ke Gwei) sehingga pengembang dapat menghemat waktu dalam menangani kerumitan klien Ethereum dan dapat lebih memusatkan perhatian pada fungsi unik aplikasi Anda.
 
-## Pustaka yang tersedia \{#available-libraries}
+## Pustaka yang tersedia {#available-libraries}
 
 **Alchemy -** **_Platform Pengembangan Ethereum._**
 
@@ -96,16 +96,16 @@ Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan nod
 - [Dokumentasi](https://docs.tatum.io/)
 - [Discord](https://discord.gg/EDmW3kjTC9)
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
-## Topik terkait \{#related-topics}
+## Topik terkait {#related-topics}
 
 - [Node dan klien](/developers/docs/nodes-and-clients/)
 - [Kerangka kerja pengembangan](/developers/docs/frameworks/)
 
-## Tutorial terkait \{#related-tutorials}
+## Tutorial terkait {#related-tutorials}
 
 - [Menyiapkan Web3js untuk menggunakan blockchain Ethereum dalam JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instruksi untuk menyiapkan web3.js dalam proyek Anda._
 - [Memanggil kontrak pintar dari JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Menggunakan token DAI, lihat cara memanggil fungsi kontrak menggunakan JavaScript._

@@ -35,7 +35,7 @@ Fiecare tehnică are avantaje și capcane și va fi utilă în [anumite cazuri](
 
 **Manticore** efectuează analiza cu „cea mai mare pondere”. Ca și Echidna, Manticore verifică proprietățile furnizate de utilizator. Va avea nevoie de mai mult timp pentru a rula, dar poate dovedi validitatea unei proprietăți și nu va raporta alarme false.
 
-## Flux de lucru sugerat \{#suggested-workflow}
+## Flux de lucru sugerat {#suggested-workflow}
 
 Începeți cu detectoarele încorporate în Slither pentru a vă asigura că nu este prezent niciun bug simplu la momentul respectiv, și nici nu va fi introdus ulterior. Utilizați Slither pentru a verifica proprietățile legate de moștenire (inheritance), dependențele variabilelor și problemele structurale. Pe măsură ce crește codul de bază, utilizați Echidna pentru a testa proprietățile mai complexe ale mașinii de stare. Revizitați Slither ca să dezvoltați verificări personalizate pentru protecțiile indisponibile în Solidity, cum ar fi protecția împotriva suprascrierii unei funcții. În cele din urmă, utilizați Manticore ca să efectuați verificări specifice ale proprietăților de importanță majoră pentru securitate, cum ar fi operațiile aritmetice.
 
@@ -46,7 +46,7 @@ Fiecare tehnică are avantaje și capcane și va fi utilă în [anumite cazuri](
 
 **O observație despre testele unitare**. Testele unitare sunt necesare pentru a construi software de înaltă calitate. Totuși, aceste tehnici nu sunt cele mai potrivite pentru a găsi defectele de securitate. Ele sunt utilizate de obicei pentru a testa comportamentul pozitiv al codului (adică, codul funcționează conform așteptărilor în context normal), iar defectele de securitate tind să se regăsească în cazuri limită pe care dezvoltatorii nu le-au luat în considerare. În studiul nostru de zeci de analize de securitate a contractelor inteligente, asigurarea testelor unitare [nu a avut niciun efect asupra numărului sau gravității defectelor de securitate](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/) pe care le-am găsit în codul clientului nostru.
 
-## Determinarea proprietăților de securitate \{#determining-security-properties}
+## Determinarea proprietăților de securitate {#determining-security-properties}
 
 Pentru a vă testa și verifica în mod eficient codul, trebuie să identificați zonele care necesită atenție. Întrucât resursele pe care le cheltuiți pentru securitate sunt limitate, este important să stabiliți părțile slabe sau de mare valoare din baza de cod pentru a vă optimiza măsurile. Este de ajutor modelarea pericolelor. Luați inițiativa să examinați:
 
@@ -57,7 +57,7 @@ Pentru a vă testa și verifica în mod eficient codul, trebuie să identificaț
 - [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
 - [Utilizarea aserțiunilor](https://blog.regehr.org/archives/1091)
 
-### Componente \{#components}
+### Componente {#components}
 
 Dacă știți ce anume doriți să verificați, aceasta că va ajuta și să selectați instrumentul potrivit.
 
@@ -86,7 +86,7 @@ Dintre domeniile mari adesea relevante pentru contractele inteligente menționă
 - **Conformitatea cu standardele.** Standardele Ethereum (de exemplu, ERC20) au o serie lungă de defecte de concepție. Fiți conștienți de limitările standardului pe care vă bazați.
   - Slither, Echidna și Manticore vă vor ajuta să detectați devierile de la un anumit standard.
 
-### Fișă de selecție a instrumentelor \{#tool-selection-cheatsheet}
+### Fișă de selecție a instrumentelor {#tool-selection-cheatsheet}
 
 | Componente                   | Instrumente                 | Exemple                                                                                                                                                                                                                                                           |
 | ---------------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

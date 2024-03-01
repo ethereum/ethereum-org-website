@@ -6,15 +6,15 @@ lang: hu
 
 Az okosszerződés egy olyan program, mely egy cím alatt fut az Ethereumon. Adatokból és függvényekből állnak, melyeket végre lehet hajtani bemenő tranzakciók által. Ez az áttekintés az okosszerződések felépítéséről szól.
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 Először tekintse meg az [okosszerződésekről](/developers/docs/smart-contracts/) szóló cikket. Ez a dokumentum feltételezi, hogy már jártas a programozási nyelvekben, mint a JavaScript vagy a Python.
 
-## Adat \{#data}
+## Adat {#data}
 
 Minden szerződésadatot hozzá kell rendelni egy lokációhoz, mely lehet a `storage` vagy a `memory`. Költséges a tárhelyet módosítani egy okosszerződésben, tehát érdemes fontolóra venni, hogy hol legyen az adat.
 
-### Tárhely \{#storage}
+### Tárhely {#storage}
 
 Az állandó adatokat tárolásnak nevezzük, és állapotváltozók reprezentálják őket. Ezeket az értékeket permanensen a blokkláncon tároljuk. Deklarálnia kell a típust, hogy a szerződés számon tudja tartani, hogy mekkora tárhelyre lesz szüksége a blokkláncon az átfordításkor.
 
@@ -52,13 +52,13 @@ További magyarázatért tekintse meg az alábbi dokumentumokat:
 - [Vyper típusok megtekintése](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [Solidity típusok megtekintése](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### Memória \{#memory}
+### Memória {#memory}
 
 Memóriaváltozóknak nevezzük azokat az értékeket, melyek csak a szerződésfunkció végrehajtása alatt tárolódnak. Mivel nem kell őket permanensen a blokkláncon tárolni, így sokkal olcsóbb a használatuk.
 
 Tudjon meg többet az EVM adattárolási módszeréről a [Solidity dokumentációból](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack) (a „Storage, Memory and the Stack” szekcióból).
 
-### Környezeti változók \{#environment-variables}
+### Környezeti változók {#environment-variables}
 
 A szerződésben meghatározott változók mellett van néhány speciális globális változó is. Elsősorban a blokklánccal vagy az aktuális tranzakcióval kapcsolatos információk nyújtására szolgálnak.
 
@@ -69,7 +69,7 @@ Példák:
 | `block.timestamp` | uint256            | Jelenlegi blokk korszak időbélyege  |
 | `msg.sender`      | address            | Az üzenet küldője (jelenlegi hívás) |
 
-## Függvények \{#functions}
+## Függvények {#functions}
 
 A legegyszerűbben megfogalmazva, a függvények információkat kaphatnak vagy információkat állíthatnak be válaszul a bejövő tranzakciókra.
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - Ez `public` módon lett deklarálva, így mindenki hozzáfér
 - Nem `view` módon lett deklarálva, így módosíthatja a szerződésállapotot
 
-### Nézet (view) függvények \{#view-functions}
+### Nézet (view) függvények {#view-functions}
 
 Ezek a függvények azt ígérik, hogy nem módosítják a szerződés adatainak állapotát. Általános példák a „getter” függvények – ezeket használhatja például egy felhasználó egyenlegének lekérdezésére.
 
@@ -131,7 +131,7 @@ Mi számít állapotmódosításnak:
 7. Alacsony szintű hívások.
 8. Egysoros assembly használata, mely bizonyos opkódot tartalmaz.
 
-### Konstruktor függvények \{#constructor-functions}
+### Konstruktor függvények {#constructor-functions}
 
 A `constructor` csak egyszer fut le, amikor a szerződést először telepítik. Mint a `constructor` számos osztályalapú programozási nyelv esetében, ezek a függvények gyakran inicializálják az állapotváltozókat a meghatározott értékeikre.
 
@@ -158,7 +158,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### Beépített függvények \{#built-in-functions}
+### Beépített függvények {#built-in-functions}
 
 A szerződésben meghatározott függvények és változók mellett van néhány speciális beépített függvény is. A legnyilvánvalóbb példák:
 
@@ -167,7 +167,7 @@ A szerződésben meghatározott függvények és változók mellett van néhány
 
 Ez lehetőséget ad a szerződéseknek, hogy ETH-t küldjenek más számláknak.
 
-## Függvények írása \{#writing-functions}
+## Függvények írása {#writing-functions}
 
 A függvénynek szüksége van:
 
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 Egy kész szerződés nagyjából így nézne ki. Itt a `constructor` függvény biztosítja a `dapp_name` változó kezdeti értékét.
 
-## Események és naplózások \{#events-and-logs}
+## Események és naplózások {#events-and-logs}
 
 Az eseményeken keresztül tud kommunikálni az okosszerződés és a frontend vagy más feliratkozó alkalmazás. Amikor egy tranzakciót kibányásztak, az okosszerződések eseményeket bocsáthatnak ki és naplófájlokat írhatnak a blokkláncra, melyet a frontend fel tud dolgozni.
 
-## Jegyzetekkel ellátott példák \{#annotated-examples}
+## Jegyzetekkel ellátott példák {#annotated-examples}
 
 Íme néhány példa, amelyet Solidity-ben írtak. Ha szeretne megismerkedni a kóddal, akkor kipróbálhatja a [Remixben](http://remix.ethereum.org).
 
-### Hello world \{#hello-world}
+### Hello world {#hello-world}
 
 ```solidity
 // A Solidity verziószámát írja elő szemantikailag.
@@ -246,7 +246,7 @@ contract HelloWorld {
 }
 ```
 
-### Token \{#token}
+### Token {#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### Egyedi digitális eszköz \{#unique-digital-asset}
+### Egyedi digitális eszköz {#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -639,19 +639,19 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 Tekintse meg a Solidity és a Vyper dokumentációit az okosszerződések teljesebb áttekintésért:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## Kapcsolódó témák \{#related-topics}
+## Kapcsolódó témák {#related-topics}
 
 - [Okosszerződések](/developers/docs/smart-contracts/)
 - [Ethereum virtuális gép](/developers/docs/evm/)
 
-## Kapcsolódó útmutatók \{#related-tutorials}
+## Kapcsolódó útmutatók {#related-tutorials}
 
 - [A szerződések méretének csökkentése, hogy ne okozzon gondot a méretkorlát](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Gyakorlati tanácsok az okosszerződés méretének redukálására._
 - [Okosszerződések adatnaplózása az események mentén](/developers/tutorials/logging-events-smart-contracts/) _– Bevezetés az okossszerződések eseményeibe, s azok használata az adatnaplózáshoz._

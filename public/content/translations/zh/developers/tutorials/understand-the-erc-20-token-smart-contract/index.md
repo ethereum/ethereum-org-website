@@ -42,7 +42,7 @@ interface IERC20 {
 
 下面逐行解释每个函数的用途。 在这之后，我们将展示一个 ERC-20 通证的简单实现。
 
-## 取值器 \{#getters}
+## 取值器 {#getters}
 
 ```solidity
 function totalSupply() external view returns (uint256);
@@ -62,7 +62,7 @@ function allowance(address owner, address spender) external view returns (uint25
 
 ERC-20 标准使一个地址能够允许另一个地址从中检索通证。 此取值器返回允许`spender`代表`owner`花费的剩余通证数量。 此函数是一个取值器，不会修改合约的状态，并且默认应返回 0。
 
-## 函数 \{#functions}
+## 函数 {#functions}
 
 ```solidity
 function transfer(address recipient, uint256 amount) external returns (bool);
@@ -82,7 +82,7 @@ function transferFrom(address sender, address recipient, uint256 amount) externa
 
 使用余量机制将通证的`amount`从`sender`移动到`recipient`。 然后从调用者的余量中扣除该数额。 此函数发出`Transfer`事件。
 
-## 事件 \{#events}
+## 事件 {#events}
 
 ```solidity
 event Transfer(address indexed from, address indexed to, uint256 value);
@@ -98,7 +98,7 @@ event Approval(address indexed owner, address indexed spender, uint256 value);
 
 当`owner`批准要由`spender`使用的通证数量(`value`)时，将发出此事件。
 
-## ERC-20 通证的基本实现 \{#a-basic-implementation-of-erc-20-tokens}
+## ERC-20 通证的基本实现 {#a-basic-implementation-of-erc-20-tokens}
 
 下面是 ERC-20 通证的最简单代码：
 

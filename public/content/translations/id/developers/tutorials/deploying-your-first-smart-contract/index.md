@@ -20,7 +20,7 @@ Saya kira Anda bersemangat seperti kami untuk [menyebarkan](/developers/docs/sma
 
 Jangan khawatir, karena ini adalah kontrak pintar pertama kita, kita akan menggunakannya pada [jaringan percobaan lokal](/developers/docs/networks/), sehingga tidak memerlukan biaya apa pun untuk menggunakan dan bermain dengannya selama yang Anda mau.
 
-## Menulis kontrak kita \{#writing-our-contract}
+## Menulis kontrak kita {#writing-our-contract}
 
 Langkah pertama adalah [kunjungi Remix](https://remix.ethereum.org/) dan buat file baru. Pada bagian atas kiri antarmuka Remix, tambahkan file baru dan masukkan nama yang Anda inginkan.
 
@@ -59,7 +59,7 @@ Jika Anda terbiasa dengan pemrograman, Anda bisa dengan mudah menebak apa yang d
 
 Itulah kontrak pintar sederhana pertama kita. Seperti yang Anda ketahui, ini tampak seperti kelas dari bahasa OOP seperti Java atau C++. Sekarang saatnya bermain dengan kontrak kita.
 
-## Menyebarkan kontrak kita \{#deploying-our-contract}
+## Menyebarkan kontrak kita {#deploying-our-contract}
 
 Saat menulis kontrak pintar pertama kita, kita akan menggunakannya ke blockchain agar dapat berinteraksi dengannya.
 

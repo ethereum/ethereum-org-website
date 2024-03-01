@@ -4,7 +4,7 @@ description: La politica che applichiamo quando aggiungiamo un portafoglio a eth
 lang: it
 ---
 
-# Aggiungere portafogli \{#adding-wallets}
+# Aggiungere portafogli {#adding-wallets}
 
 Vogliamo assicurarci di mostrare una varietà di portafogli che coprano il panorama ricco di funzioni dei portafogli così che gli utenti possano navigare su Ethereum in sicurezza.
 
@@ -17,9 +17,9 @@ Chiunque può suggerire un nuovo portafoglio. I portafogli sono attualmente elen
 
 I portafogli sono in rapido cambiamento su Ethereum. Abbiamo provato a creare un meccanismo equo per la disamina su ethereum.org, ma i criteri elencati cambieranno ed evolveranno col tempo.
 
-## Il quadro decisionale \{#the-decision-framework}
+## Il quadro decisionale {#the-decision-framework}
 
-### Criteri per l'inclusione: gli elementi imprescindibili \{#the-must-haves}
+### Criteri per l'inclusione: gli elementi imprescindibili {#the-must-haves}
 
 - **Un prodotto testato per la sicurezza**: che sia tramite il controllo, un team di sicurezza interno, la codifica open source, o qualche altro metodo, la sicurezza del tuo portafoglio dev'essere attendibile. Questo riduce il rischio per gli utenti e ci dimostra che prendi la sicurezza sul serio.
 - **Un portafoglio dev'esser stato "attivo" per oltre sei mesi O rilasciato da un gruppo con una comprovata esperienza**; anche questa è un'indicazione di sicurezza. 6 mesi sono un buon periodo di tempo per individuare bug critici o utilizzi impropri. Chiediamo sei mesi per aiutare a filtrare le biforcazioni i cui progetti sono abbandonati rapidamente.
@@ -27,7 +27,7 @@ I portafogli sono in rapido cambiamento su Ethereum. Abbiamo provato a creare un
 - **Elenco d'informazioni oneste e accurate** - Ci si aspetta che ogni elenco suggerito dai progetti sia fornito con informazioni oneste e accurate. I prodotti che falsificano le informazioni in elenco, ad esempio dichiarando che il proprio prodotto è "open source" quando non lo è, saranno rimossi.
 - **Punto di contatto**: un punto di contatto per il portafoglio ci aiuterà molto a ottenere informazioni accurate quando sono apportate delle modifiche. Questo continuerà ad aggiornare ethereum in modo gestibile, raccogliendo le informazioni future.
 
-### Altri criteri: gli aspetti preferibili \{#the-nice-to-haves}
+### Altri criteri: gli aspetti preferibili {#the-nice-to-haves}
 
 - **Accessibile globalmente**: il tuo portafoglio non presenta limitazioni geografiche o requisiti KYC che escludono certe persone dall'accedere al tuo servizio.
 - **Disponibile in più lingue**: il tuo portafoglio è tradotto in più lingue, il che consente agli utenti di tutto il mondo di accedervi.
@@ -53,7 +53,7 @@ I portafogli sono in rapido cambiamento su Ethereum. Abbiamo provato a creare un
 - **Team di supporto dedicato**: il tuo portafoglio ha un team di supporto dedicato a cui gli utenti possono rivolgersi quando si verificano problemi.
 - **Risorse/documentazione didattiche**: il tuo prodotto dovrebbe avere un'esperienza di adesione ben progettata per aiutare a istruire gli utenti. In alternativa, dovrebbe offrire contenuti di supporto come articoli o video.
 
-## Aggiungere un portafoglio \{#adding-a-wallet}
+## Aggiungere un portafoglio {#adding-a-wallet}
 
 Se desideri aggiungere un portafoglio a ethereum.org, crea un ticket su GitHub.
 
@@ -61,7 +61,7 @@ Se desideri aggiungere un portafoglio a ethereum.org, crea un ticket su GitHub.
   Crea un ticket
 </ButtonLink>
 
-## Manutenzione \{#maintenance}
+## Manutenzione {#maintenance}
 
 In linea con la natura fluida di Ethereum, team e prodotti vanno e vengono e l'innovazione avviene quotidianamente, quindi effettueremo controlli di routine dei nostri contenuti per:
 
@@ -70,6 +70,6 @@ In linea con la natura fluida di Ethereum, team e prodotti vanno e vengono e l'i
 
 Ethereum.org è mantenuto dalla comunità open source e ci affidiamo a essa per mantenere aggiornato questo elenco. Se noti che delle informazioni sui portafogli elencati devono essere aggiornate, sei pregato di [aprire un ticket](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) o una [richiesta di pull](https://github.com/ethereum/ethereum-org-website/pulls)!
 
-## Condizioni d'uso \{#terms-of-use}
+## Condizioni d'uso {#terms-of-use}
 
 Sei anche pregato di fare riferimento ai [termini d'utilizzo](/terms-of-use/). Le informazioni su ethereum.org sono fornite esclusivamente a fini di informazione generale.

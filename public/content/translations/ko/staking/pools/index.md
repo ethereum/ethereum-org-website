@@ -12,13 +12,13 @@ summaryPoints:
   - 자신의 지갑에 유동성 토큰을 보관하세요.
 ---
 
-## 스테이킹 풀이란 무엇인가요? \{#what-are-staking-pools}
+## 스테이킹 풀이란 무엇인가요? {#what-are-staking-pools}
 
 스테이킹 풀은 적은 양의 ETH를 가진 많은 사람이 검증자 키의 세트를 활성화하기 위해 필요한 32 ETH를 얻을 수 있게 하는 협업 방식입니다. 풀링 기능은 프로토콜 내에서 기본적으로 지원되지 않으므로 솔루션은 이러한 요구 사항을 해결하기 위해 별도로 구축되었습니다.
 
 일부 풀은 자금을 계약에 예치할 수 있는 스마트 계약을 사용하여 운영되며, 이 계약은 귀하의 스테이킹을 신뢰 없이 관리 및 추적하고 이 가치를 나타내는 토큰을 발행합니다. 다른 풀에는 스마트 계약이 포함되지 않을 수 있으며 대신 오프체인에서 중개됩니다.
 
-## 풀로 스테이킹하는 이유는 무엇인가요? \{#why-stake-with-a-pool}
+## 풀로 스테이킹하는 이유는 무엇인가요? {#why-stake-with-a-pool}
 
 풀을 통한 스테이킹에는 [스테이킹 소개](/staking/)에서 설명한 이점 외에도 뚜렷한 장점이 많습니다.
 
@@ -38,7 +38,7 @@ summaryPoints:
 <StakingComparison page="pools" />
 }
 
-## 고려 사항 \{#what-to-consider}
+## 고려 사항 {#what-to-consider}
 
 풀 스테이킹 또는 대리 스테이킹은 이더리움 프로토콜이 기본적으로 지원하는 기능은 아니지만, 32 ETH보다 적은 금액을 스테이킹하는 사람들의 수요에 따라 점점 더 많은 솔루션이 구축되었습니다.
 
@@ -50,7 +50,7 @@ summaryPoints:
 <StakingConsiderations page="pools" />
 }
 
-## 스테이킹 풀 살펴보기 \{#explore-staking-pools}
+## 스테이킹 풀 살펴보기 {#explore-staking-pools}
 
 설정에 도움이 되는 다양한 옵션이 있습니다. 위의 지표를 사용하여 아래 도구에 대한 안내를 받으세요.
 
@@ -64,7 +64,7 @@ summaryPoints:
 
 저희가 놓친 스테이킹 풀을 제안하고 싶으신가요? 이더리움 [제품 나열 정책](/contributing/adding-staking-products/)을 확인하고 정책에 맞는 제품인 경우 검토를 위해 제출해 주세요.
 
-## 자주 묻는 질문 \{#faq}
+## 자주 묻는 질문 {#faq}
 
 {
 <ExpandableCard title="보상은 어떻게 받을 수 있나요?">
@@ -91,7 +91,7 @@ summaryPoints:
 </ExpandableCard>
 }
 
-## 더 읽을거리 \{#further-reading}
+## 더 읽을거리 {#further-reading}
 
 - [Rocket Pool을 통한 스테이킹 - 스테이킹 개요](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool 문서_
 - [Lido를 통한 이더리움 스테이킹](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido 도움말 문서_

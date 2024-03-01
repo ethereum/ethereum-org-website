@@ -21,13 +21,13 @@ Las retiradas de participaciones se habilitarán con la actualización de Shangh
 
 **Los pagos de recompensas del saldo excedente** de más de 32 ETH se enviará automática y regularmente a una dirección de retirada vinculada a cada validador, una vez proporcionada por el usuario. Los usuarios también pueden **dejar de apostar por completo**, desbloqueando todo su saldo del validador.
 
-## Recompensas de participaciones \{#staking-rewards}
+## Recompensas de participaciones {#staking-rewards}
 
 Los pagos de recompensas se procesan automáticamente para cuentas de validadores activas con un saldo efectivo máximo de 32 ETH.
 
 Cualquier saldo por encima de 32 ETH ganado a través de recompensas no contribuye realmente al capital inicial, ni aumenta el peso de este validador en la red y, por lo tanto, se retira automáticamente como un pago de recompensa cada pocos días. Aparte de proporcionar una dirección de retiro una vez, estas recompensas no requieren ninguna acción del operador validador. Todo esto se inicia en la capa de consenso, por lo tanto no se requiere gas (tarifa de transacción) en ningún paso.
 
-### ¿Cómo hemos llegado hasta aquí? \{#how-did-we-get-here}
+### ¿Cómo hemos llegado hasta aquí? {#how-did-we-get-here}
 
 En los últimos años, Ethereum se ha sometido a varias actualizaciones de red que han hecho la transición a una red protegida por ETH en sí, en lugar de la minería con alto consumo nergético como era antes. Participar en el consenso en Ethereum se denomina ahora «participar», ya que los participantes han bloqueado voluntariamente ETH, poniéndolos «en juego» por la capacidad de participar en la red. Los usuarios que sigan las reglas serán recompensados, mientras que los intentos de hacer trampa podrán penalizarse.
 
@@ -35,13 +35,13 @@ Desde el lanzamiento del contrato de depósito de participación en noviembre de
 
 Antes de la actualización Shanghai/Capella, no se podía usar o acceder a sus ETH apostados. Pero ahora, puede optar por recibir automáticamente sus recompensas en una cuenta elegida y también puede retirar sus ETH apostados cuando quiera.
 
-### ¿Cómo me preparo? \{#how-do-i-prepare}
+### ¿Cómo me preparo? {#how-do-i-prepare}
 
 {
 <WithdrawalsTabComparison />
 }
 
-### Avisos importantes \{#important-notices}
+### Avisos importantes {#important-notices}
 
 Proporcionar una dirección de retirada es un paso obligatorio para cualquier cuenta de validdor antes de que sea elegible para que se retiren ETH de su saldo.
 
@@ -51,7 +51,7 @@ Proporcionar una dirección de retirada es un paso obligatorio para cualquier cu
 
 Mientras tanto <strong>no hay ninguna amenaza para sus fondos</strong> por no proporcionar esto, asumiendo que su frase mnemónica/de recuperación esté segura fuera de línea, y no se vea afectada de ninguna manera. Si no agrega las credenciales de retirada, simplemente dejará los ETH bloqueados en la cuenta del validador como ha estado hasta que se proporcione una dirección de retirada.
 
-## Salir completamente de la apuesta \{#exiting-staking-entirely}
+## Salir completamente de la apuesta {#exiting-staking-entirely}
 
 Antes de que _los_ fondos puedan transferirse fuera del saldo de una cuenta de validación, es necesario proporcionar una dirección de retirada.
 
@@ -61,7 +61,7 @@ El proceso de un validador que sale de la apuesta lleva un tiempo variable, en f
 
 Una vez que una cuenta se marca como «retirable» y se proporcionan las credenciales de retirada, no hay nada más que el usuario deba hacer aparte de esperar. Los proponentes de bloques barren de forma automática y continua las cuentas en busca de fondos que reúnan las condiciones de salida, y el saldo de su cuenta se transferirá en su totalidad (también conocido como «retirada completa») durante el próximo <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>barrido</a>.
 
-## ¿Cuándo se habilitarán las retiradas de apuestas? \{#when}
+## ¿Cuándo se habilitarán las retiradas de apuestas? {#when}
 
 ¡Las retiradas de apuestas ya están hablitadas! La funcionalidad de retirada se ha habilitado como parte de la actualización Shanghai/Capella que se lanzó el 12 de abril de 2023.
 
@@ -70,11 +70,11 @@ La actualización Shanghai/Capella habilitó previamente que los ETH apostados s
 - [Más sobre la historia de Ethereum](/history/)
 - [Más sobre la hoja de ruta de Ethereum](/roadmap/)
 
-## ¿Cómo funcionan los pagos de las retiradas? \{#how-do-withdrawals-work}
+## ¿Cómo funcionan los pagos de las retiradas? {#how-do-withdrawals-work}
 
 La elegibilidad de un validador dado para una retirada o no, viene determinada por el estado de la cuenta del validador. No se necesita ninguna entrada de usuario en un momento dado para determinar si una cuenta debe tener una retirada iniciada o no (todo el proceso lo realiza automáticamente la capa de consenso en un bucle continuo).
 
-### ¿Es más bien de los que aprende viendo? \{#visual-learner}
+### ¿Es más bien de los que aprende viendo? {#visual-learner}
 
 Lea la explicación sobre retirads de apuestas en Ethereum hecha por Finematics:
 
@@ -82,7 +82,7 @@ Lea la explicación sobre retirads de apuestas en Ethereum hecha por Finematics:
 <YouTube id="RwwU3P9n3uo" />
 }
 
-### «Barrido» del validador \{#validator-sweeping}
+### «Barrido» del validador {#validator-sweeping}
 
 Cuando un validador está programado para proponer el siguiente bloque, se requiere construir una cola de retirada, de hasta 16 retiradas elegibles. Para ello se empieza originariamente con el índice del validador 0, que determina si hay una retirada elegible para esta cuenta según las reglas del protocolo y se añade a la cola, si existe. El validador establecido para proponer el siguiente bloque lo tomará ahí donde el último lo haya dejado y irá procesando las órdenes de manera indefinida.
 
@@ -92,7 +92,7 @@ Ahora en lugar del 1 al 12, imagine que el reloj tiene de 0 hasta N <em>(el núm
 La manecilla en el reloj apunta hacia el siguiente validador que necesita ser verificado antes de permitirle retiradas. Empieza a partir de 0, y avanza todo el camino alrededor sin saltarse ninguna cuenta. Cuando se alcance el último validador, el ciclo continúa volviendo al principio.
 </InfoBanner>
 
-#### Cómo comprobar si una cuenta es elegible para retirada \{#checking-an-account-for-withdrawals}
+#### Cómo comprobar si una cuenta es elegible para retirada {#checking-an-account-for-withdrawals}
 
 Mientras un proponente barre posibles retiradas a través de validadores, cada validador que se revisa se evalúa, a tenor de una pequeña serie de preguntas, para determinar si debe activarse una retirada, y de ser así, cuántos ETH se deberían retirar.
 
@@ -105,11 +105,11 @@ En el transcurso del ciclo de vida de un validador, solo hay dos acciones que pu
 - Proporcionar credenciales de retirada para habilitar cualquier forma de retirada
 - Salir de la red, que provocará una retirada completa
 
-### Gas gratis \{#gas-free}
+### Gas gratis {#gas-free}
 
 Este enfoque a las retiradas de apuestas evita que los participantes tengan que presentar manualmente una transacción solicitando la retirada de una cantidad particular de ETH. Esto también significa que no se requiere **ningún gas (comisión de transacción)** y que las retiradas tampoco compiten por el espacio de bloque existente de la capa de ejecución.
 
-### ¿Con qué frecuencia obtendré mis recompensas de participación? \{#how-soon}
+### ¿Con qué frecuencia obtendré mis recompensas de participación? {#how-soon}
 
 Se pueden procesar un máximo de 16 retiradas en un solo bloque. A ese ritmo, se pueden procesar 115.200 retiradas de validadores al día (asumiendo que no se pierda el turno). Como se mencionó anteriormente, se omitirá a los validadores sin retiradas elegibles, lo que reducirá el tiempo para finalizar el barrido.
 
@@ -129,7 +129,7 @@ Ampliando este cálculo podemos estimar el tiempo que llevará el procesar un n�
 
 Como puede ver, cuantos más validadores esten en la red, más se ralentiza el proceso. Un aumento en las vacantes podría ralentizar esto proporcionalmente, pero esto generalmente representará el lado más lento de los posibles resultados.
 
-## Preguntas más frecuentes \{#faq}
+## Preguntas más frecuentes {#faq}
 
 {
 <ExpandableCard
@@ -228,7 +228,7 @@ No. Una vez que un validador ha salido y su saldo total se ha retirado, cualquie
 </ExpandableCard>
 }
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [Retiradas en la plataforma de lanzamiento de participaciones](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: La cadena de baliza impulsa las retiradas como operaciones](https://eips.ethereum.org/EIPS/eip-4895)

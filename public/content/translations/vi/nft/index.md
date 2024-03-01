@@ -12,7 +12,7 @@ summaryPoint2: NFT đang mang lại nhiều quyền lực hơn cho người tạ
 summaryPoint3: Được hỗ trợ bởi các hợp đồng thông minh trên chuỗi khối Ethereum.
 ---
 
-## What are NFTs? \{#what-are-nfts}
+## What are NFTs? {#what-are-nfts}
 
 NFT là các token độc nhất. Mỗi NFT có các thuộc tính khác nhau (không thể thay thế) và sở hữu tính khan hiếm có thể chứng minh được. Nó khác các loại token như ERC-20 mà mỗi token trong một tệp đều giống nhau y đúc và có cùng các thuộc tính ('thay thế được'). Bạn đâu để ý tờ tiền nào cùng 1 loại đang nằm trong ví của mình, bởi vì tờ tiền cùng loại cũng giống nhau và có giá trị bằng nhau. Tuy nhiên, bạn _phải_ để ý bạn đang sở hữu loại NFT nào, bởi vì chúng đều có các thuộc tính riêng khác nhau ('không thể thay thế').
 
@@ -22,13 +22,13 @@ Tính độc nhất của mỗi NFT cho phép chuyển hóa nhiều thứ như t
 <YouTube id="Xdkkux6OxfM" />
 }
 
-## Internet của tài sản \{#internet-of-assets}
+## Internet của tài sản {#internet-of-assets}
 
 NFT và Ethereum giải quyết một số vấn đề mà đang hiện tại tồn tại trên mạng. Trong bối cảnh mọi thứ dần trở nên số hóa, việc mô phỏng những tính chất của các món đồ vật lý như tính khan hiếm, sự đặc trưng, và chứng từ sở hữu là một nhu cầu cần thiết. bằng một cách mà không bị kiểm soát bởi một tổ chức tập trung. Ví dự như, với NFT, bạn có thể sở hữu một tệp nhạc mp3 mà không phụ thuộc vào một ứng dụng bất kỳ của một công ty nào, hoặc bạn có thể sở hữu một cái tên trên mạng xã hội có thể bán được hoặc hoán đổi được, mà không bị một nhà cung cấp nền tảng nào tùy tiện tước đi.
 
 Sau đây là một phép so sánh giữa Internet của NFT và Internet mà hầu hết chúng ta dang dùng ngày nay...
 
-### Một phép so sánh \{#nft-comparison}
+### Một phép so sánh {#nft-comparison}
 
 | Internet của NFT                                                                                                                                            | Internet ngày nay                                                                                                                                                                                          |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,13 +39,13 @@ Sau đây là một phép so sánh giữa Internet của NFT và Internet mà h�
 | Các nhà sáng tạo nội dung có thể bán sản phẩm của họ ở bất kì đâu và có thể tiếp cận với một thị trường toàn cầu.                                           | Các nhà sáng tạo nội dung dựa vào cơ sở hạ tầng và hệ thống phân phối của những nền tảng mà họ sử dụng. Phương thức này thường chịu những hạn chế liên quan đến điều khoản sử dụng và các giới hạn địa lý. |
 | Nhà sáng tạo NFT có thể giữ quyền sở hữu với các tác phẩm của mình, và thiết lập phí bản quyền thẳng trong hợp đồng NFT.                                    | Các nền tảng, ví dụ như các dịch vụ phát trực tuyến âm nhạc, nắm giữ phần lớn lợi nhuận từ việc bán sản phẩm.                                                                                              |
 
-## NFT hoạt động như thế nào? \{#how-nfts-work}
+## NFT hoạt động như thế nào? {#how-nfts-work}
 
 Như token bất kì nào được phân phối trên Ethereum, NFT được phân phối bởi một hợp đồng thông minh. Hợp đồng thông minh tuân thủ một vài tiêu chuẩn NFT (thường là ERC-721 hoặc ERC-1155) có chức năng xác định tính năng của hợp đồng đó. Hợp đồng đó có thể tạo ra ('khởi tạo') nhiều NFT và phân bổ chúng cho một chủ sở hữu riêng biệt. Quyền sở hữu được định sẵn trong hợp đồng bằng cách liên kết các NFT cụ thể tới từng địa chỉ cụ thể. NFT có một mã ID và cũng thường có siêu dữ liệu liên kết làm cho token đó trở nên độc nhất.
 
 Khi ai đó tạo ra hoặc khởi tạo một NFT, họ thường dùng một phương trình trong hợp đồng thông mình mà phân bổ một NFT cụ thể đó tới địa chỉ của họ. Thông tin này được lưu trữ trong kho của hợp đồng đó, mà cũng là một phần của chuỗi khối. Người sáng tạo ra hợp đồng có thể viết thêm logic vào trong hợp đồng, ví dụ như giới hạn tổng số lượng hay xác định một phí bản quyền cần trả cho người sáng tạo đó mỗi lần một token được chuyển đi.
 
-## NFT được dùng để làm gì? \{#nft-use-cases}
+## NFT được dùng để làm gì? {#nft-use-cases}
 
 NFT được dùng cho nhiều thứ, bao gồm:
 
@@ -76,7 +76,7 @@ Trang web này cũng có một tên miền thay thế được vận hành bởi
 <Divider />
 }
 
-### Bảo mật NFT \{#nft-security}
+### Bảo mật NFT {#nft-security}
 
 Tính bảo mật của Ethereum đến từ cơ chế đồng thuận bằng chứng cổ phần. Hệ thống được thiết kế để ngăn chặn các hành động phá hoại kinh tế, giúp Ethereum chống được mạo danh. Đây là thứ làm cho NFT trở nên khả thi. Sau khi khối chứa giao dịch NFT của bạn được xác thực xong, kẻ tấn công sẽ tốn hàng triệu ETH để thay đổi. Bất kỳ ai chạy phần mềm Ethereum sẽ ngay lập tức có thể phát hiện tình trạng gian lận bất hợp pháp của NFT đó và kẻ tình nghi sẽ bị phạt tiền và cấm cửa vĩnh viễn.
 
@@ -86,7 +86,7 @@ Các vấn đề bảo mật liên quan đến NFT thường ít hay nhiều li�
   Tìm hiểu thêm về bảo mật
 </ButtonLink>
 
-## Đọc thêm \{#further-reading}
+## Đọc thêm {#further-reading}
 
 - [Hướng dẫn nhập môn cho NFT](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, tháng 01, 2020_
 - [Công cụ theo dõi EtherscanNFT](https://etherscan.io/nft-top-contracts)

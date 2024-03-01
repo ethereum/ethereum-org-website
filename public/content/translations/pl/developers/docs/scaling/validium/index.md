@@ -8,11 +8,11 @@ sidebarDepth: 3
 
 Używa dowodów ważności takich jak [pakiety zbiorcze ZK](#zk-rollups), ale dane nie są przechowywane na głównej warstwie 1 łańcucha Ethereum. Może to prowadzić do 10k transakcji na sekundę na łańcuch validium i wiele łańcuchów może być uruchomionych równolegle.
 
-## Warunki wstępne \{#prerequisites}
+## Warunki wstępne {#prerequisites}
 
 Musisz dobrze się orientować we wszystkich podstawowych tematach i mieć zaawansowaną wiedzę na temat [skalowania Ethereum](/developers/docs/scaling/). Wdrażanie rozwiązań skalowania takich jak Validium jest trudnym tematem, ponieważ technologia nie jest jeszcze sprawdzona w boju i nadal jest badana i rozwijana.
 
-## Plusy i minusy \{#pros-and-cons}
+## Plusy i minusy {#pros-and-cons}
 
 | Zalety                                                                                                                                    | Wady                                                                                                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -20,7 +20,7 @@ Musisz dobrze się orientować we wszystkich podstawowych tematach i mieć zaawa
 | Niepodatność na niektóre ataki gospodarcze, z którymi borykają się systemy oparte na oszustwach w zastosowaniach o wysokiej wartości.     | Wysoka moc obliczeniowa wymagana do generowania dowodów ZK; nieopłacalna dla zastosowań o niskiej wydajności.                                                                      |
 |                                                                                                                                           | Dłuższy czas osiągnięcia subiektywnej nieodwołalności (10-30 min na wygenerowanie dowodu ZK) (ale szybsze osiągnięcie pełnej nieodwołalności, ponieważ nie ma opóźnień w sporach). |
 
-### Wykorzystanie Validium \{#use-validium}
+### Wykorzystanie Validium {#use-validium}
 
 Wiele projektów zapewnia implementacje Validium, które można zintegrować z twoimi aplikacjami zdecentralizowanymi:
 
@@ -28,7 +28,7 @@ Wiele projektów zapewnia implementacje Validium, które można zintegrować z t
 - [Matter Labs zkPorter](https://matter-labs.io/)
 - [Loopring](https://loopring.org/#/)
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 - [Validium And The Layer 2 Two-By-Two – Issue No. 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 

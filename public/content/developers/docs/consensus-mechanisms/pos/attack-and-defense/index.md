@@ -6,11 +6,11 @@ lang: en
 
 Thieves and saboteurs are constantly seeking opportunities to attack Ethereum’s client software. This page outlines the known attack vectors on Ethereum’s consensus layer and outlines how those attacks can be defended. The information on this page is adapted from a [longer form version](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs).
 
-## Prerequisites \{#prerequisites}
+## Prerequisites {#prerequisites}
 
 Some basic knowledge of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) is required. Also, it will be helpful to have a basic understanding of Ethereum's [incentive layer](/developers/docs/consensus-mechanisms/pos/rewards-and-penalties) and fork-choice algorithm, [LMD-GHOST](/developers/docs/consensus-mechanisms/pos/gasper).
 
-## What do attackers want? \{#what-do-attackers-want}
+## What do attackers want? {#what-do-attackers-want}
 
 A common misconception is that a successful attacker can generate new ether, or drain ether from arbitrary accounts. Neither of these are possible because all transactions are executed by all the execution clients on the network. They must satisfy basic conditions of validity (e.g. transactions are signed by sender’s private key, sender has sufficient balance, etc) or else they simply revert. There are three classes of outcome that an attacker might realistically target: reorgs, double finality or finality delay.
 
@@ -24,9 +24,9 @@ An attack on the social layer might aim to undermine public trust in Ethereum, d
 
 Having established why an adversary might attack Ethereum, the following sections examine _how_ they might go about it.
 
-## Methods of Attack \{#methods-of-attack}
+## Methods of Attack {#methods-of-attack}
 
-### Layer 0 Attacks \{#layer-0}
+### Layer 0 Attacks {#layer-0}
 
 First of all, individuals that are not actively participating in Ethereum (by running client software) can attack by targeting the social layer (Layer 0). Layer 0 is the foundation upon which Ethereum is built, and as such it represents a potential surface for attacks with consequences that ripple through the rest of the stack. Some examples might include:
 
@@ -45,15 +45,15 @@ Another important fortification against social layer attacks is a clear mission 
 
 Finally, it is critical that the Ethereum community remains open and welcoming to all participants. A community with gatekeepers and exclusivity is one especially vulnerable to social attack because it is easy to build “us and them” narratives. Tribalism and toxic maximalism hurt the community and erode Layer 0 security. Ethereans with a vested interest in the security of the network should view their conduct online and in meatspace as a direct contributor to the security of Ethereum’s Layer 0.
 
-### Attacking the protocol \{#attacking-the-protocol}
+### Attacking the protocol {#attacking-the-protocol}
 
 Anyone can run Ethereum’s client software. To add a validator to a client, a user is required to stake 32 ether into the deposit contract. A validator allows a user to actively participate in Ethereum’s network security by proposing and attesting to new blocks. The validator now has a voice they can use to influence the future contents of the blockchain - they can do so honestly and grow their stash of ether via rewards or they can try to manipulate the process to their own advantage, risking their stake. One way to mount an attack is to accumulate a greater proportion of the total stake and then use it to outvote honest validators. The greater the proportion of the stake controlled by the attacker the greater their voting power, especially at certain economic milestones that we will explore later. However, most attackers will not be able to accumulate sufficient ether to attack in this way, so instead they have to use subtle techniques to manipulate the honest majority into acting a certain way.
 
 Fundamentally, all small-stake attacks are subtle variations on two types of validator misbehavior: under-activity (failing to attest/propose or doing so late) or over-activity (proposing/attesting too many times in a slot). In their most vanilla forms these actions are easily handled by the fork-choice algorithm and incentive layer, but there are clever ways to game the system to an attacker’s advantage.
 
-### Attacks using small amounts of ETH \{#attacks-by-small-stakeholders}
+### Attacks using small amounts of ETH {#attacks-by-small-stakeholders}
 
-#### reorgs \{#reorgs}
+#### reorgs {#reorgs}
 
 Several papers have explained attacks on Ethereum that achieve reorgs or finality delay with only a small proportion of the total staked ether. These attacks generally rely upon the attacker withholding some information from other validators and then releasing it in some nuanced way and/or at some opportune moment. They usually aim to displace some honest block(s) from the canonical chain. [Neuder et al 2020](https://arxiv.org/pdf/2102.02247.pdf) showed how an attacking validator can create and attest to a block (`B`) for a particular slot `n+1` but refrain from propagating it to other nodes on the network. Instead, they hold on to that attested block until the next slot `n+2`. An honest validator proposes a block (`C`) for slot `n+2`. Almost simultaneously, the attacker can release their withheld block (`B`) and their withheld attestations for it, and also attest to `B` being the head of the chain with their votes for slot `n+2`, effectively denying the existence of honest block `C`. When honest block `D` is released, the fork choice algorithm sees `D` building on top of `B` being heavier than `D` building on `C`. The attacker has therefore managed to remove the honest block `C` in slot `n+2` from the canonical chain using a 1-block ex ante reorg. [An attacker with 34%](https://www.youtube.com/watch?v=6vzXwwk12ZE) of the stake has a very good chance of succeeding in this attack, as explained [in this note](https://notes.ethereum.org/plgVdz-ORe-fGjK06BZ_3A#Fork-choice-by-block-slot-pair). In theory, though, this attack could be attempted with smaller stakes. [Neuder et al 2020](https://arxiv.org/pdf/2102.02247.pdf) described this attack working with a 30% stake, but it was later shown to be viable with [2% of the total stake](https://arxiv.org/pdf/2009.04987.pdf) and then again for a [single validator](https://arxiv.org/abs/2110.10086#) using balancing techniques we will examine in the next section.
 
@@ -85,21 +85,21 @@ The avalanche attack is mitigated by the LMD portion of the LMD-GHOST fork choic
 
 There are several other potential future upgrades to the fork choice rule that could add to the security provided by proposer-boost. One is [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739), where attesters freeze their view of the fork choice `n` seconds before the beginning of a slot and the proposer then helps to synchronize the view of the chain across the network. Another potential upgrade is [single-slot finality](https://notes.ethereum.org/@vbuterin/single_slot_finality), which protects against attacks based on message timing by finalizing the chain after just one slot.
 
-#### Finality Delay \{#finality-delay}
+#### Finality Delay {#finality-delay}
 
 [The same paper](https://econcs.pku.edu.cn/wine2020/wine2020/Workshop/GTiB20_paper_8.pdf) that first described the low-cost single block reorg attack also described a finality delay (a.k.a “liveness failure”) attack that relies on the attacker being the block proposer for an epoch-boundary block. This is critical because these epoch boundary blocks become the checkpoints that Casper FFG uses to finalize portions of the chain. The attacker simply withholds their block until enough honest validators use their FFG votes in favor of the previous epoch-boundary block as the current finalization target. Then they release their withheld block. They attest to their block and the remaining honest validators do too creating forks with different target checkpoints. If they timed it just right, they will prevent finality because there will not be a 2/3 supermajority attesting to either fork. The smaller the stake, the more precise the timing needs to be because the attacker controls fewer attestations directly, and the lower the odds of the attacker controlling the validator proposing a given epoch-boundary block.
 
-#### Long range attacks \{#long-range-attacks}
+#### Long range attacks {#long-range-attacks}
 
 There is also a class of attack specific to proof-of-stake blockchains that involves a validator that participated in the genesis block maintaining a separate fork of the blockchain alongside the honest one, eventually convincing the honest validator set to switch over to it at some opportune time much later. This type of attack is not possible on Ethereum because of the finality gadget that ensures all validators agree on the state of the honest chain at regular intervals (“checkpoints”). This simple mechanism neutralizes long range attackers because Ethereum clients simply will not reorg finalized blocks. New nodes joining the network do so by finding a trusted recent state hash (a “[weak subjectivity](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) checkpoint”) and using it as a pseudo-genesis block to build on top of. This creates a ‘trust gateway’ for a new node entering the network before it can start to verify information for itself.
 
-#### Denial of Service \{#denial-of-service}
+#### Denial of Service {#denial-of-service}
 
 Ethereum’s PoS mechanism picks a single validator from the total validator set to be a block proposer in each slot. This can be computed using a publicly known function and it is possible for an adversary to identify the next block proposer slightly in advance of their block proposal. Then, the attacker can spam the block proposer to prevent them swapping information with their peers. To the rest of the network, it would appear that the block proposer was offline and the slot would simply go empty. This could be a form of censorship against specific validators, preventing them from adding information to the blockchain. Implementing single secret leader elections (SSLE) or non-single secret leader elections will mitigate DoS risks because only the block proposer ever knows they have been selected and the selection is not knowable in advance. This is not yet implemented, but is an active area of [research and development](https://ethresear.ch/t/secret-non-single-leader-election/11789).
 
 All of this points to the fact that it is very difficult to successfully attack Ethereum with a small stake. The viable attacks that have been described here require an idealized fork-choice algorithm, improbable network conditions, or the attack vectors have already been closed with relatively minor patches to the client software. This, of course, does not rule out the possibility of zero-days existing out in the wild, but it does demonstrate the extremely high bar of technical aptitude, consensus layer knowledge and luck required for a minority-stake attacker to be effective. From an attacker’s perspective their best bet might be to accumulate as much ether as possible and to return armed with a greater proportion of the total stake.
 
-### Attackers using >= 33% of the total stake \{#attackers-with-33-stake}
+### Attackers using >= 33% of the total stake {#attackers-with-33-stake}
 
 All of the attacks mentioned previously in this article become more likely to succeed when the attacker has more staked ether to vote with, and more validators that might be chosen to propose blocks in each slot. A malicious validator might therefore aim to control as much staked ether as possible.
 
@@ -109,7 +109,7 @@ The purpose of the inactivity leak is to get the chain finalizing again. However
 
 Assuming that the Ethereum network is asynchronous (i.e. there are delays between messages being sent and received), an attacker controlling 34% of the total stake could cause double finality. This is because the attacker can equivocate when they are chosen to be a block producer, then double vote with all of their validators. This creates a situation where a fork of the blockchain exists, each with 34% of the staked ether voting for it. Each fork only requires 50% of the remaining validators to vote in its favor for both forks to be supported by a supermajority, in which case both chains can finalize (because 34% of attackers validators + half of remaining 66% = 67% on each fork). The competing blocks would each have to be received by about 50% of the honest validators so this attack is viable only when the attacker has some degree of control over the timing of messages propagating over the network so that they can nudge half the honest validators onto each chain. The attacker would necessarily destroy their entire stake (34% of ~10 million ether with today’s validator set) to achieve this double finality because 34% of their validators would be double-voting simultaneously - a slashable offense with the maximum correlation penalty. The defense against this attack is the very large cost of destroying 34% of the total staked ether. Recovering from this attack would require the Ethereum community to coordinate “out-of-band” and agree to follow one or other of the forks and ignore the other.
 
-### Attackers using ~50% of the total stake \{#attackers-with-50-stake}
+### Attackers using ~50% of the total stake {#attackers-with-50-stake}
 
 At 50% of the staked ether, a mischievous group of validators could theoretically split the chain into two equally sized forks and then simply use their entire 50% stake to vote contrarily to the honest validator set, thereby maintaining the two forks and preventing finality. The inactivity leak on both forks would eventually lead both chains to finalize. At this point, the only option is to fall back on a social recovery.
 
@@ -117,11 +117,11 @@ It is very unlikely that an adversarial group of validators could consistently c
 
 At >50% of the total stake the attacker could dominate the fork choice algorithm. In this case, the attacker would be able to attest with the majority vote, giving them sufficient control to do short reorgs without needing to fool honest clients. The honest validators would follow suit because their fork choice algorithm would also see the attacker’s favored chain as the heaviest, so the chain could finalize. This enables the attacker to censor certain transactions, do short-range reorgs and extract maximum MEV by reordering blocks in their favor. The defense against this is the huge cost of a majority stake (currently just under $19 billion USD) which is put at risk by an attacker because the social layer is likely to step in and adopt an honest minority fork, devaluing the attacker’s stake dramatically.
 
-### Attackers using >=66% of the total stake \{#attackers-with-66-stake}
+### Attackers using >=66% of the total stake {#attackers-with-66-stake}
 
 An attacker with 66% or more of the total staked ether can finalize their preferred chain without having to coerce any honest validators. The attacker can simply vote for their preferred fork and then finalize it, simply because they can vote with a dishonest supermajority. As the supermajority stakeholder, the attacker would always control the contents of the finalized blocks, with the power to spend, rewind and spend again, censor certain transactions and reorg the chain at will. By purchasing additional ether to control 66% rather than 51%, the attacker is effectively buying the ability to do ex post reorgs and finality reversions (i.e. change the past as well as control the future). The only real defenses here are the enormous cost of 66% of the total staked ether, and the option to fall back to the social layer to coordinate adoption of an alternative fork. We can explore this in more detail in the next section.
 
-## People: the last line of defense \{#people-the-last-line-of-defense}
+## People: the last line of defense {#people-the-last-line-of-defense}
 
 If the dishonest validators manage to finalize their preferred version of the chain, the Ethereum community is put in a difficult situation. The canonical chain includes a dishonest section baked into its history, while honest validators can end up being punished for attesting to an alternative (honest) chain. Note that a finalized but incorrect chain could also arise from a bug in a majority client. In the end, the ultimate fallback is to rely on the social layer - Layer 0 - to resolve the situation.
 
@@ -135,7 +135,7 @@ Governance is already a complicated topic. Managing a Layer-0 emergency response
 
 Nevertheless, there is something fairly satisfying in the final fallback sitting in meatspace. Ultimately, even with this phenomenal stack of technology above us, if the worst were ever to happen real people would have to coordinate their way out of it.
 
-## Summary \{#summary}
+## Summary {#summary}
 
 This page explored some of the ways attackers might attempt to exploit Ethereum’s proof-of-stake consensus protocol. Reorgs and finality delays were explored for attackers with increasing proportions of the total staked ether. Overall, a richer attacker has more chance of success because their stake translates to voting power they can use to influence the contents of future blocks. At certain threshold amounts of staked ether, the attacker’s power levels up:
 
@@ -153,7 +153,7 @@ Overall, despite these potential attack vectors the risk of a successful attack 
 
 34%, 51% or 66% attacks would likely require out-of-band social coordination to resolve. While this would likely be painful for the community, the ability for a community to respond out-of-band is a strong disincentive for an attacker. The Ethereum social layer is the ultimate backstop - a technically successful attack could still be neutered by the community agreeing to adopt an honest fork. There would be a race between the attacker and the Ethereum community - the billions of dollars spent on a 66% attack would probably be obliterated by a successful social coordination attack if it was delivered quickly enough, leaving the attacker with heavy bags of illiquid staked ether on a known dishonest chain ignored by the Ethereum community. The likelihood that this would end up being profitable for the attacker is sufficiently low as to be an effective deterrent. This is why investment in maintaining a cohesive social layer with tightly aligned values is so important.
 
-## Further Reading \{#further-reading}
+## Further Reading {#further-reading}
 
 - [More detailed version of this page](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [Vitalik on settlement finality](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)

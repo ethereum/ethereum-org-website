@@ -4,7 +4,7 @@ description: La politique que nous appliquons pour ajouter des échanges sur eth
 lang: fr
 ---
 
-# Ajouter des échanges Ethereum \{#adding-ethereum-exchanges}
+# Ajouter des échanges Ethereum {#adding-ethereum-exchanges}
 
 N'importe qui est libre de proposer l'ajout de nouveaux échanges (c'est-à-dire des intermédiaires d'échange) sur ethereum.org.
 
@@ -18,7 +18,7 @@ Dans cette optique, nous avons besoin d'informations spécifiques lorsque vous p
 
 **REMARQUE :** Si vous souhaitez lister un échange décentralisé, jetez un œil à notre [politique d'ajout de portefeuilles et de DApps](/contributing/adding-products/).
 
-## Ce dont nous avons besoin \{#what-we-need}
+## Ce dont nous avons besoin {#what-we-need}
 
 - Les restrictions géographiques qui s'appliquent à l'échange. Les restrictions géographiques associées à l'échange doivent être détaillées sur une page ou une section spécifique du site web de l'échange.
 - Les devises que les utilisateurs peuvent choisir pour acheter des ETH
@@ -31,7 +31,7 @@ Cela permet également à ethereum.org d'avoir confiance en la légitimité et l
 
 ---
 
-## Ajout de votre échange \{#add-exchange}
+## Ajout de votre échange {#add-exchange}
 
 Si vous souhaitez ajouter un échange sur ethereum.org, créez un ticket sur GitHub.
 

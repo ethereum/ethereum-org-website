@@ -14,7 +14,7 @@ summaryPoint4: A beolvadás nagyjából 99,95%-kal csökkentette az Ethereum ene
   A beolvadás 2022. szeptember 15-én ment végbe. Ezzel lezárult az Ethereum áttérése a proof-of-stake konszenzusra, így hivatalosan is elhagyta a proof-of-work mechanizmust, és nagyjából 99,95%-kal csökkentette az energiafogyasztását.
 </UpgradeStatus>
 
-## Mi volt a beolvadás? \{#what-is-the-merge}
+## Mi volt a beolvadás? {#what-is-the-merge}
 
 A beolvadás az Ethereum eredeti végrehajtási rétegének (a [genezis](/history/#frontier) óta létező fő hálózatnak) az összeolvadása volt az új proof-of-stake konszenzusréteggel, a Beacon lánccal. Ezzel szükségtelenné vált az energiaintenzív bányászat, és megnyílt a hálózat biztosításának lehetősége letétbe helyezett ETH felhasználásával. Igazán izgalmas lépés volt ez az Ethereum jövőképének – nagyobb méretezhetőség, biztonság és fenntarthatóság – megvalósítása felé vezető úton.
 
@@ -26,7 +26,7 @@ A [Beacon lánc](/roadmap/beacon-chain/) és a [fő hálózat](/glossary/#mainne
 
 Képzeljük el, hogy az Ethereum egy űrhajó, amely még azelőtt felszállt, hogy igazán készen állt volna a csillagközi utazásra. A Beacon lánccal a közösség egy új hajtóművet és egy erősebb hajótestet épített. Jelentős tesztelést követően eljött az ideje, hogy a régi hajtóművet menet közben kicseréljék az újra. Ezzel az új, hatékonyabb hajtómű beolvadt a már meglévő hajóba, megteremtve a lehetőséget, hogy súlyos fényéveket tegyen meg, és nyakába vegye az univerzumot.
 
-## Összeolvadás a fő hálózattal \{#merging-with-mainnet}
+## Összeolvadás a fő hálózattal {#merging-with-mainnet}
 
 A proof-of-work mechanizmus biztosította az Ethereum-főhálózatot a születésétől a beolvadásig. Ez tette lehetővé, hogy az általunk jól ismert Ethereum-blokklánc 2015 júliusában az összes ismerős funkciójával együtt (tranzakciók, okosszerződések, számlák stb.) létrejöjjön.
 
@@ -42,7 +42,7 @@ Az előzmények nem vesztek el a beolvadással. Ahogy a fő hálózat egyesült 
 A proof-of-stake mechanizmus átvétele megváltoztatta az Ether kibocsátásának módját. Tudjon meg többet: <a href="/roadmap/merge/issuance/">Ether-kibocsátás a beolvadás előtt és után</a>.
 </InfoBanner>
 
-### Felhasználók és tulajdonosok \{#users-holders}
+### Felhasználók és tulajdonosok {#users-holders}
 
 **A beolvadás nem hozott változást a tulajdonosok/felhasználók számára.**
 
@@ -52,7 +52,7 @@ Annak ellenére, hogy lecserélte a proof-of-work mechanizmust, az Ethereum öss
 
 [Az Ethereum biztonságáról bővebben](/security/#eth2-token-scam)
 
-### Csomópont-operátorok és dapp-fejlesztők \{#node-operators-dapp-developers}
+### Csomópont-operátorok és dapp-fejlesztők {#node-operators-dapp-developers}
 
 {
 <ExpandableCard
@@ -113,15 +113,15 @@ További információért nézze meg Tim Beiko blog postját: <a href="https://b
 </ExpandableCard>
 }
 
-## A beolvadás és az energiafogyasztás \{#merge-and-energy}
+## A beolvadás és az energiafogyasztás {#merge-and-energy}
 
 A beolvadás a proof-of-work végét jelentette az Ethereum számára, valamint egy fenntarthatóbb, környezetbarátabb Ethereum kezdetét. Az Ethereum energiafogyasztása nagyjából 99,95%-kal csökkent, ezzel az Ethereum zöld blokklánc lett. Tudjon meg többet az [Ethereum energiafogyasztásáról](/energy-consumption/).
 
-## A beolvadás és a méretezhetőség \{#merge-and-scaling}
+## A beolvadás és a méretezhetőség {#merge-and-scaling}
 
 A beolvadás a további méretezhetőségi fejlesztések lehetőségét is megteremtette, amelyek a proof-of-work konszenzus mellett lehetetlenek voltak, egy lépéssel közelebb hozva az Ethereumot az [Ethereum-jövőképben](/roadmap/vision/) felvázolt méretezési, biztonsági és fenntarthatósági célok eléréséhez.
 
-## Téveszmék a beolvadásról \{#misconceptions}
+## Téveszmék a beolvadásról {#misconceptions}
 
 {
 <ExpandableCard
@@ -196,7 +196,7 @@ Az APR értéke szándékosan dinamikus, segítségével a letétesek által alk
 </ExpandableCard>
 }
 
-## Mi történt az „Eth2”-vel? \{#eth2}
+## Mi történt az „Eth2”-vel? {#eth2}
 
 Az „Eth2” kifejezést elhagytuk. Miután az „Eth1” és az „Eth2” egyetlen láncban egyesült, már nincs szükség arra, hogy különbséget tegyünk két Ethereum-hálózat között. Csak egy Ethereum maradt.
 
@@ -209,11 +209,11 @@ Ezek a terminológiai módosítások csak az elnevezési szabályokat változtat
 
 [Tudjon meg többet az „Eth2” átnevezéséről](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## A frissítések közötti kapcsolat \{#relationship-between-upgrades}
+## A frissítések közötti kapcsolat {#relationship-between-upgrades}
 
 Az Ethereum-frissítések némileg összefüggnek egymással. Foglaljuk össze hát, hogy a beolvadás hogyan viszonyul a többi frissítéshez.
 
-### A beolvadás és a Beacon lánc \{#merge-and-beacon-chain}
+### A beolvadás és a Beacon lánc {#merge-and-beacon-chain}
 
 A beolvadás a Beacon lánc hivatalos átvételét jelenti az eredeti fő hálózat végrehajtási rétegéhez tartozó új konszenzusrétegként. A beolvadás óta a validátorok feladata az Ethereum-főhálózat biztosítása, és a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) rendszerű bányászat már nem érvényes módszer a blokkok előállítására.
 
@@ -223,13 +223,13 @@ Ehelyett a blokkokra azok a validáló csomópontok tesznek javaslatot, amelyek 
   A Beacon Chain
 </ButtonLink>
 
-### A beolvadás és a Shanghai frissítés \{#merge-and-shanghai}
+### A beolvadás és a Shanghai frissítés {#merge-and-shanghai}
 
 Hogy leegyszerűsítsük az áttérést a proof-of-stake mechanizmusra, és maximalizáljuk az összpontosítást erre a feladatra, a beolvadás nem tartalmazott bizonyos várt funkciókat, mint például a letétbe helyezett ETH lehívásának lehetőségét. Ez a funkció külön vált elérhetővé a Shanghai/Capella frissítéssel.
 
 A kíváncsibbak többet megtudhatnak arról, hogy [Mi történik A Beolvadás után](https://youtu.be/7ggwLccuN5s?t=101), méghozzá Vitalik 2021. áprilisi ETHGlobal eseményen tartott előadásából.
 
-### A beolvadás és a szilánkolás \{#merge-and-data-sharding}
+### A beolvadás és a szilánkolás {#merge-and-data-sharding}
 
 Az eredeti terv szerint a beolvadás előtt dolgozták volna ki a láncszilánkolást (sharding) a méretezhetőség megoldására. Azonban a [2. rétegű méretezési megoldások](/layer-2/) elterjedésével a prioritás eltolódott afelé, hogy előbb a proof-of-stake leváltsa a proof-of-work rendszert.
 
@@ -239,7 +239,7 @@ A szilánkolással kapcsolatos tervek gyorsan fejlődnek, ám a 2. rétegű tech
   Szilánkolás (sharding)
 </ButtonLink>
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 {
 <MergeArticleList />

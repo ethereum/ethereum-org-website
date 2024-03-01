@@ -10,13 +10,13 @@ skill: beginner
 published: 2021-03-09
 ---
 
-## Introduzione \{#introduction}
+## Introduzione {#introduction}
 
 Uno degli utilizzi più comuni di Ethereum è quello di permettere a un gruppo di persone di creare un token scambiabile, che potremmo definire la loro valuta. In genere questi token seguono uno standard, l'[ERC-20](/developers/docs/standards/tokens/erc-20/). Questo standard permette di scrivere gli strumenti, come pool di liquidità e wallet, compatibili con tutti i token ERC-20. In questo articolo analizzeremo l'[Implementazione di ERC20 in Solidity su OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), nonché la [definizione dell'interfaccia](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 Qui parliamo del codice sorgente annotato. Se vuoi implementare ERC-20, [leggi questo tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
-## L'interfaccia \{#the-interface}
+## L'interfaccia {#the-interface}
 
 Lo scopo di uno standard come ERC-20 è quello di consentire molte implementazioni di token che siano interoperabili tra le varie applicazioni, quali wallet e scambi decentralizzati. A tale scopo, creiamo un'[interfaccia](https://www.geeksforgeeks.org/solidity-basics-of-interface/). Ogni codice che necessita di usare il contratto del token può avvalersi delle stesse definizioni nell'interfaccia ed essere compatibile con tutti i contratti del token che la usano, che si tratti di un portafoglio come MetaMask, una dApp come etherscan.io o un contratto diverso, come un pool di liquidità.
 
@@ -184,7 +184,7 @@ Infine, `transferFrom` è usata dallo spender per spendere concretamente il marg
 
 Questi eventi sono emessi quando lo stato del contratto ERC-20 cambia.
 
-## Il Contratto effettivo \{#the-actual-contract}
+## Il Contratto effettivo {#the-actual-contract}
 
 Si tratta del contratto vero e proprio che implementa lo standard ERC-20, [preso da qui](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol). Non è destinato a essere utilizzato così com'è, ma puoi [ereditare](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm) la sua struttura ed estenderla per ottenere un qualcosa di utilizzabile.
 
@@ -195,7 +195,7 @@ pragma solidity >=0.6.0 <0.8.0;
 
 &nbsp;
 
-### Dichiarazioni relative all'importazione \{#import-statements}
+### Dichiarazioni relative all'importazione {#import-statements}
 
 Oltre alle definizioni d'interfaccia summenzionate, la definizione del contratto importa altri due file:
 
@@ -241,7 +241,7 @@ Questo commento spiega lo scopo del contratto.
 
 ```
 
-### Composizione del contratto \{#contract-definition}
+### Composizione del contratto {#contract-definition}
 
 ```solidity
 contract ERC20 is Context, IERC20 {
@@ -259,7 +259,7 @@ Questa riga specifica l'eredità, in questo caso da `IERC20` da sopra e `Context
 
 Questa riga allega la libreria `SafeMath` al tipo `uint256`. Puoi trovare questa libreria [qui](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol).
 
-### Definizioni delle variabili \{#variable-definitions}
+### Definizioni delle variabili {#variable-definitions}
 
 Queste definizioni specificano le variabili di stato del contratto. Queste variabili sono dichiarate come `private`, ma ciò significa solo che gli altri contratti sulla blockchain non possono leggerle. _Non ci sono segreti sulla blockchain_, il software su ogni nodo ha lo stato di ciascun contratto in ogni blocco. Per convenzione, le variabili di stato sono denominate `_<something>`.
 
@@ -303,7 +303,7 @@ La soluzione è tenere traccia degli interi e, al posto del token reale, contare
 
 Le applicazioni devono sapere come mostrare il saldo di token. Se un utente ha 3.141.000.000.000.000.000 wei, vuol dire che ha in mano 3,14 ETH? O forse 31,41 ETH? O magari 3.141 ETH? Nel caso dell'ether, è definito a 10^18 wei per ETH, ma per il tuo token, puoi selezionare un valore differente. Se dividere il token non ha senso, puoi usare un valore `_decimals` di zero. Se vuoi usare lo stesso standard come ETH, usa il valore **18**.
 
-### Il costruttore \{#the-constructor}
+### Il costruttore {#the-constructor}
 
 ```solidity
     /**
@@ -324,7 +324,7 @@ Le applicazioni devono sapere come mostrare il saldo di token. Se un utente ha 3
 
 Il costruttore viene chiamato alla prima creazione del contratto. Per convenzione, i parametri della funzione sono denominati `<something>_`.
 
-### Funzioni dell'interfaccia utente \{#user-interface-functions}
+### Funzioni dell'interfaccia utente {#user-interface-functions}
 
 ```solidity
     /**
@@ -372,7 +372,7 @@ Il tipo di restituzione è `string memory`, a significare che la restituzione è
 
 In questo caso, `memory` è la scelta migliore.
 
-### Informazioni di lettura del token \{#read-token-information}
+### Informazioni di lettura del token {#read-token-information}
 
 Queste sono funzioni che forniscono informazioni sul token, la fornitura totale o il saldo di un conto.
 
@@ -400,7 +400,7 @@ La funzione `totalSupply` restituisce la fornitura totale di token.
 
 Leggi il saldo di un conto. Nota che chiunque può ottenere il saldo del conto di qualcun altro. Non ha senso provare a nascondere queste informazioni, perché sono comunque disponibili su ogni nodo. _Non ci sono segreti sulla blockchain._
 
-### Trasferire token \{#transfer-tokens}
+### Trasferire token {#transfer-tokens}
 
 ```solidity
     /**
@@ -428,11 +428,11 @@ La funzione `_transfer` fa il lavoro effettivo. È una funzione privata, chiamab
 
 Normalmente, in Solidity usiamo `msg.sender` per il mittente del messaggio. Tuttavia, ciò corrompe [OpenGSN](http://opengsn.org/). Se vogliamo consentire transazioni senza ether con il nostro token, dobbiamo usare `_msgSender()`. Restituisce `msg.sender` per le transazioni normali, ma per quelle senza ether restituisce il firmatario originale e non il contratto che ha trasmesso il messaggio.
 
-### Funzioni di tolleranza \{#allowance-functions}
+### Funzioni di tolleranza {#allowance-functions}
 
 Sono le funzioni che implementano il margine di tolleranza: `allowance`, `approve`, `transferFrom` e `_approve`. Inoltre, l'implementazione di OpenZeppelin va oltre lo standard di base e include alcune funzionalità che migliorano la sicurezza: `increaseAllowance` e `decreaseAllowance`.
 
-#### La funzione di tolleranza \{#allowance}
+#### La funzione di tolleranza {#allowance}
 
 ```solidity
     /**
@@ -445,7 +445,7 @@ Sono le funzioni che implementano il margine di tolleranza: `allowance`, `approv
 
 La funzione `allowance` consente a chiunque di verificare qualsiasi margine di tolleranza.
 
-#### La funzione di approvazione \{#approve}
+#### La funzione di approvazione {#approve}
 
 ```solidity
     /**
@@ -473,7 +473,7 @@ Questa funzione viene chiamata per creare un margine di tolleranza. È simile al
 
 Usiamo le funzioni interne per minimizzre il numero di posti in cui si verificano cambi di stato. _Qualsiasi_ funzione che cambia stato costituisce un potenziale rischio di sicurezza, che va controllato per sicurezza. Così facendo riduciamo il rischio di conseguenze negative.
 
-#### La funzione transferFrom \{#transferFrom}
+#### La funzione transferFrom {#transferFrom}
 
 È la funzione chiamata dallo spender per spendere un margine di tolleranza. Richiede due operazioni: trasferire l'importo speso e ridurre il margine di tolleranza in misura pari allo stesso importo.
 
@@ -507,7 +507,7 @@ La funzione `a.sub(b, "message")` produce due azioni. Innanzi tutto calcola `a-b
     }
 ```
 
-#### Aggiunte di sicurezza di OpenZeppelin \{#openzeppelin-safety-additions}
+#### Aggiunte di sicurezza di OpenZeppelin {#openzeppelin-safety-additions}
 
 È pericoloso impostare un margine di tolleranza diverso da zero su un altro valore diverso da zero, perché puoi controllare solo l'ordine delle tue transazioni, ma non di quelle altrui. Immagina che ci siano due utenti: Alice, una ragazza ingenua, e Bill, un uomo disonesto. Alice vuole ricevere da Bill un servizio che secondo lei costa cinque token, quindi concede a Bill un margine di tolleranza di cinque token.
 
@@ -583,11 +583,11 @@ La funzione `a.add(b)` è un'aggiunta sicura. Nell'improbabile caso in cui `a`+`
     }
 ```
 
-### Funzioni che modificano le informazioni del token \{#functions-that-modify-token-information}
+### Funzioni che modificano le informazioni del token {#functions-that-modify-token-information}
 
 Queste sono le quattro funzioni che effettuano il lavoro effettivo: `_transfer`, `_mint`, `_burn` e `_approve`.
 
-#### La funzione \_transfer \{#\_transfer}
+#### La funzione \_transfer {#\_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ Queste sono le righe che effettuano concretamente il trasferimento. Nota che non
 
 Infine, emetti un evento `Transfer`. Gli eventi non sono accessibili agli smart contract, ma il codice eseguito al di fuori della blockchain può ascoltarli e reagire a essi. Ad esempio, un portafoglio può tracciare la ricezione di altri token da parte del proprietario.
 
-#### Le funzioni \_mint e \_burn \{#\_mint-and-\_burn}
+#### Le funzioni \_mint e \_burn {#\_mint-and-\_burn}
 
 Queste due funzioni (`_mint` e `_burn`) modificano la fornitura totale di token. Sono interne e non esiste alcuna funzione che le chiami in questo contratto, quindi sono utili solo se erediti dal contratto e aggiungi la tua logica per decidere a quali condizioni coniare nuovi token o bruciare quelli esistenti.
 
@@ -706,7 +706,7 @@ Assicurati di aggiornare `_totalSupply` quando il numero totale di token cambia.
 
 La funzione `_burn` è quasi identica a `_mint`, con la differenza che va in senso opposto.
 
-#### La funzione \_approve \{#\_approve}
+#### La funzione \_approve {#\_approve}
 
 Questa è la funzione che specifica concretamente i margini di tolleranza. Nota che consente a un proprietario di specificare una tolleranza superiore al saldo corrente del proprietario. Questo non è un problema, poiché il saldo è controllato al momento del trasferimento, quando potrebbe differire dal saldo alla creazione del margine di tolleranza.
 
@@ -741,7 +741,7 @@ Emette un evento `Approval`. In base a come è scritta l'applicazione, il contra
 
 ```
 
-### Modificare la variabile dei decimali \{#modify-the-decimals-variable}
+### Modificare la variabile dei decimali {#modify-the-decimals-variable}
 
 ```solidity
 
@@ -760,7 +760,7 @@ Emette un evento `Approval`. In base a come è scritta l'applicazione, il contra
 
 Questa funzione modifica la variabile `_decimals`, usata per indicare alle interfacce utente come interpretare l'importo. Suggeriamo di chiamarla dal costruttore. Sarebbe disonesto chiamarla in qualsiasi punto successivo e le applicazioni non sono progettate per gestirla.
 
-### Hook \{#hooks}
+### Hook {#hooks}
 
 ```solidity
 
@@ -784,7 +784,7 @@ Questa funzione modifica la variabile `_decimals`, usata per indicare alle inter
 
 Questa è la funzione hook da chiamare durante i trasferimenti. Qui è vuota, ma se hai bisogno di fare qualcosa, basta sovrascriverla.
 
-# Conclusioni \{#conclusion}
+# Conclusioni {#conclusion}
 
 A titolo di ripasso, ecco alcune delle idee più importanti in questo contrato (a mio parere, probabilmente il tuo sarà diverso):
 

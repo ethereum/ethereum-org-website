@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 Eksploratory bloków są twoim portalem do danych Ethereum. Możesz ich użyć, aby zobaczyć dane w czasie rzeczywistym o blokach, transakcjach, górnikach, kontach i innych aktywnościach w łańcuchu dostaw.
 
-## Warunki wstępne \{#prerequisites}
+## Warunki wstępne {#prerequisites}
 
 Powinieneś zrozumieć podstawowe pojęcia Ethereum, abyś mógł zrozumieć dane, które daje Ci eksplorator bloków. Zacznij od [wprowadzenia do Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Usługi \{#services}
+## Usługi {#services}
 
 - [Etherscan](https://etherscan.io/) – _dostępne również w języku chińskim, koreańskim, rosyjskim i japońskim_
 - [Etherchain](https://www.etherchain.org/)
@@ -20,13 +20,13 @@ Powinieneś zrozumieć podstawowe pojęcia Ethereum, abyś mógł zrozumieć dan
 - [Blockscout](https://blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
 
-## Dane \{#data}
+## Dane {#data}
 
 Ethereum jest zgodnie z projektem przezroczyste, więc wszystko jest możliwe do zweryfikowania. Eksploratory bloków zapewniają interfejs do uzyskania tych informacji. Dotyczy to zarówno głównej sieci Ethereum, jak i sieci testowych, jeśli potrzebujesz tych danych.
 
 Oto podsumowanie typów danych, które możesz uzyskać z eksploratora bloków.
 
-### Bloki \{#blocks}
+### Bloki {#blocks}
 
 Nowe bloki są dodawane do Ethereum co ~12 sekund (może się to wahać), istnieje niemal stały strumień danych, które zostają dodane do eksploratorów bloków. Bloki zawierają wiele ważnych danych, które mogą okazać się przydatne:
 
@@ -63,7 +63,7 @@ Eksploratory bloków dostarczają informacji o blokach-wujach, takie jak:
 - Kto wydobył.
 - Nagroda ETH.
 
-### Paliwo \{#gas}
+### Paliwo {#gas}
 
 Eksploratory bloków nie tylko dostarczą Ci danych o zużyciu gazu w transakcjach i blokach, ale niektóre z nich podadzą Ci informacje o aktualnych cenach gazu w sieci. Pomoże to zrozumieć użycie sieci, przesłać bezpieczne transakcje i nadmiernie nie wydawać pieniędzy na gaz. Poszukaj API, które pomogą Ci uzyskać te informacje w interfejsie Twojego produktu. Dane odnoszące się do danego gazu obejmują:
 
@@ -74,7 +74,7 @@ Eksploratory bloków nie tylko dostarczą Ci danych o zużyciu gazu w transakcja
 - Kontrakty, które zużywają gaz – innymi słowy popularne produkty, które widzą wiele zastosowań w sieci.
 - Konta wydające gaz – innymi słowy częstych użytkowników sieci.
 
-### Transakcje \{#transactions}
+### Transakcje {#transactions}
 
 Eksploratory bloków stały się powszechnym miejscem, w którym ludzie mogą śledzić postęp swoich transakcji. Dzieje się tak, ponieważ poziom szczegółowości, który możesz uzyskać zapewnia dodatkową pewność. Dane transakcji obejmują:
 
@@ -98,7 +98,7 @@ Eksploratory bloków stały się powszechnym miejscem, w którym ludzie mogą ś
 - Nonce – numer transakcji dla adresu `od` (pamiętaj, że zaczyna się on od 0, więc nonce `100` byłby faktycznie 101. transakcją zgłoszoną przez to konto.
 - Dane wejściowe – wszelkie dodatkowe informacje wymagane przez transakcję.
 
-### Konta \{#accounts}
+### Konta {#accounts}
 
 Istnieje mnóstwo danych, które możesz uzyskać na temat konta. Dlatego często zaleca się używanie wielu kont, aby Twoje aktywa i wartość nie były łatwe do śledzenia. Istnieją również pewne rozwiązania, które sprawią, że transakcje i operacje na kontach będą bardziej prywatne. Oto dane, które są dostępne dla kont:
 
@@ -121,7 +121,7 @@ Konta inteligentnych kontraktów mają wszystkie dane, które będzie mieć kont
 - Kod tworzenia kontraktu – skompilowany kod bajtowy inteligentnego kontraktu – utworzony podczas kompilacji inteligentnego kontraktu napisanego w Solidity lub Vyper itp.
 - Wydarzenia kontraktu – historia metod wywołanych w inteligentnym kontrakcie. Zasadniczo sposób na sprawdzenie, w jaki sposób i jak często kontrakt jest wykorzystywany.
 
-### Tokeny \{#tokens}
+### Tokeny {#tokens}
 
 Token jest rodzajem kontraktu, więc będzie mieć dane podobne do inteligentnego kontraktu. Ponieważ jednak tokeny mają wartość i mogą być przedmiotem obrotu, mają dodatkowe punkty danych:
 
@@ -135,7 +135,7 @@ Token jest rodzajem kontraktu, więc będzie mieć dane podobne do inteligentneg
 - Adres kontraktu – adres tokenu, który został wysłany do sieci głównej.
 - Miejsca dziesiętne – tokeny ERC-20 są podzielne i mają miejsca dziesiętne.
 
-### Sieć \{#network}
+### Sieć {#network}
 
 Oczywiście są pewne dane, które mówią o stanie sieci. Są one dość specyficzne dla mechanizmu konsensusu proof-of-work Ethereum. Gdy Ethereum przejdzie do Eth2, niektóre z tych danych będą zbędne
 
@@ -147,13 +147,13 @@ Oczywiście są pewne dane, które mówią o stanie sieci. Są one dość specyf
 - Całkowita podaż ETH – liczba ETH w obiegu – pamiętaj, że nowy ETH powstaje dzięki utworzeniu każdego bloku w formie nagród za bloki.
 - Pułap rynkowy – obliczenie ceny\*podaży.
 
-## Dane Eth2 \{#consensus-layer-data}
+## Dane Eth2 {#consensus-layer-data}
 
 Ulepszenia Eth2 są nadal w fazie rozwoju, ale warto wspomnieć o niektórych punktach danych, które eksplorery będą mogły Ci dostarczyć. W rzeczywistości wszystkie te dane są obecnie dostępne dla sieci testowych.
 
 Jeśli brak Ci wiedzy o Eth2, sprawdź [nasz przegląd ulepszeń Eth2](/roadmap/).
 
-### Epoka \{#epoch}
+### Epoka {#epoch}
 
 Pierwsza aktualizacja Eth2, łańcuch śledzący Eth2, stworzy komitety walidatorów, które są losowo przydzielane na koniec każdej epoki (co 6,4 minuty) ze względów bezpieczeństwa. Dane dotyczące epoki obejmują:
 
@@ -168,7 +168,7 @@ Pierwsza aktualizacja Eth2, łańcuch śledzący Eth2, stworzy komitety walidato
 - Średni bilans walidatora – średni bilans dla aktywnych walidatorów.
 - Sloty – liczba slotów w epoce (sloty zawierają jeden ważny blok).
 
-### Slot \{#slot}
+### Slot {#slot}
 
 Sloty to możliwości tworzenia bloków, dane dostępne dla każdego slotu obejmują:
 
@@ -193,7 +193,7 @@ Sloty to możliwości tworzenia bloków, dane dostępne dla każdego slotu obejm
 - Ograniczenia – liczba kar nałożonych na wnioskodawców bloków lub poświadczających.
 - Głosy - walidatorzy, którzy głosowali za blokiem w tym slocie.
 
-### Bloki \{#blocks-1}
+### Bloki {#blocks-1}
 
 W Eth2 bloki działają inaczej, ponieważ górnicy są zastępowani przez walidatorów, a łańcuch śledzący wprowadza sloty i epoki do Ethereum. Więc oznacza to nowe dane!
 
@@ -202,7 +202,7 @@ W Eth2 bloki działają inaczej, ponieważ górnicy są zastępowani przez walid
 - Slot – slot, w którym zaproponowano blok.
 - Poświadczenia – liczba poświadczeń zawartych w slocie. Poświadczenia są jak głosy wskazujące, że blok jest gotowy do przejścia do łańcucha śledzącego.
 
-### Walidatorzy \{#validators}
+### Walidatorzy {#validators}
 
 Walidatorzy są odpowiedzialni za proponowanie bloków i poświadczanie ich w slotach.
 
@@ -218,7 +218,7 @@ Walidatorzy są odpowiedzialni za proponowanie bloków i poświadczanie ich w sl
 - Poświadczenia – poświadczenia przedstawione przez walidatora.
 - Depozyty – adres „od”, hash transakcji, numeru bloku, znacznik czasu, kwota i status depozytu zestakowanego przez walidatora.
 
-### Poświadczenia \{#attestations}
+### Poświadczenia {#attestations}
 
 Poświadczenia to głosy za włączeniem bloków do łańcucha. Ich dane odnoszą się do zapisu poświadczenia i walidatorów poświadczających
 
@@ -231,7 +231,7 @@ Poświadczenia to głosy za włączeniem bloków do łańcucha. Ich dane odnosz�
 - Cel – wskazuje na na ostatnią granicę epoki.
 - Podpis.
 
-### Sieć \{#network-1}
+### Sieć {#network-1}
 
 Dane najwyższego poziomu Eth2 obejmują:
 
@@ -242,7 +242,7 @@ Dane najwyższego poziomu Eth2 obejmują:
 - Zestakowane ETH – ilość ETH zestakowana w sieci.
 - Średni bilans – średni bilans ETH walidatorów.
 
-## Eksploratory bloków \{#block-explorers}
+## Eksploratory bloków {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) – eksplorator bloków, którego możesz użyć do pobrania danych dla głównej sieci Ethereum, sieci testowej Ropsten, sieci testowej Kovan, sieci testowej Rinkeby i sieci testowej Goerli.
 - [Blockscout](https://blockscout.com/) – koncentruje się na następujących sieciach:
@@ -256,16 +256,16 @@ Dane najwyższego poziomu Eth2 obejmują:
 - [Ethplorer](https://ethplorer.io/) – eksplorator bloków z naciskiem na tokeny dla sieci głównej Ethereum i testnetu Kovan.
 - [Blockchair](https://blockchair.com/ethereum) – najbardziej prywatny eksplorator Ethereum. Także dla sortowania i filtrowania danych (mempool).
 
-## Eksploratory bloków Eth2 \{#beacon-chain-block-explorers}
+## Eksploratory bloków Eth2 {#beacon-chain-block-explorers}
 
 - [https://beaconcha.in/](https://beaconcha.in/)
 - [https://beaconscan.com/](https://beaconscan.com/)
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
 
-## Powiązane tematy \{#related-topics}
+## Powiązane tematy {#related-topics}
 
 - [Wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/)
 - [Transakcje](/developers/docs/transactions/)

@@ -4,13 +4,13 @@ description: How to get involved in the Ethereum community.
 lang: en
 ---
 
-# How can I get involved? \{#get-involved}
+# How can I get involved? {#get-involved}
 
 The Ethereum community includes people of many different backgrounds and skillsets. Whether you’re a developer, an artist, or an accountant, there are ways to get involved. Here’s a list of suggestions that might help you get started.
 
 Start by reading about the ethereum.org mission and values in our [code of conduct](/community/code-of-conduct).
 
-## Developers <Emoji text=":computer:" size={1} />‍ \{#developers}
+## Developers <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Learn about and try Ethereum at [ethereum.org/developers/](/developers/)
 - [Find a bounty on Gitcoin](https://gitcoin.co/), work on a small or large technical issue, earn crypto!
@@ -21,7 +21,7 @@ Start by reading about the ethereum.org mission and values in our [code of condu
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
 - Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
 
-## Researchers & Academics <Emoji text=":mag:" size={1} />‍ \{#researchers-and-academics}
+## Researchers & Academics <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
 Do you have a background in mathematics, cryptography, or economics? You might be interested in some of the cutting-edge work being done within the Ethereum ecosystem:
 
@@ -42,61 +42,61 @@ Do you have a background in mathematics, cryptography, or economics? You might b
 
 [Explore more active areas of research](/community/research/).
 
-## Non-technical skillsets <Emoji text=":briefcase:" size={1} />‍ \{#non-technical}
+## Non-technical skillsets <Emoji text=":briefcase:" size={1} />‍ {#non-technical}
 
 If you’re not a developer, it can be hard to know where to start in Ethereum. Here are a few suggestions, along with resources for specific professional backgrounds.
 
-### Organize a meetup in your city \{#meetups}
+### Organize a meetup in your city {#meetups}
 
 - Not sure how to start? The [BUIDL network](https://consensys.net/developers/buidlnetwork/) can help.
 
-### Write content about Ethereum \{#write-content}
+### Write content about Ethereum {#write-content}
 
 - Ethereum needs good writers who can explain its value in plain language
 - Not ready to publish your own articles? Consider contributing to the existing content on community resources, or [propose new content for ethereum.org](/contributing/)!
 
-### Offer to take notes for community calls \{#take-notes}
+### Offer to take notes for community calls {#take-notes}
 
 - There are many open-source community calls, and having notetakers is a huge help. If you’re interested, join the [Ethereum Cat Herders discord](https://discord.com/invite/Nz6rtfJ8Cu), and introduce yourself!
 
-### Translate Ethereum content into your native language \{#translate-ethereum}
+### Translate Ethereum content into your native language {#translate-ethereum}
 
 - ethereum.org maintains a Translation Program that translates the website, and other resources, into many different languages
 - Find out how to get involved [here](/contributing/translation-program)
 
-### Run a node \{#run-a-node}
+### Run a node {#run-a-node}
 
 Join thousands of node operators in helping to further decentralize Ethereum.
 
 - [More on how to run a node](/developers/docs/nodes-and-clients/run-a-node/)
 
-### Stake your ETH \{#staking}
+### Stake your ETH {#staking}
 
 By staking your ETH you can earn rewards whilst helping to secure the Ethereum network.
 
 - [More on staking](/staking/)
 
-### Support projects \{#support-projects}
+### Support projects {#support-projects}
 
 The Ethereum ecosystem is on a mission to fund public goods and impactful projects. With very small donations you can show your support and allow important work to be realized.
 
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
-## Financial professionals & Accountants <Emoji text=":chart_with_upwards_trend:" size={1} />‍ \{#financial-professionals}
+## Financial professionals & Accountants <Emoji text=":chart_with_upwards_trend:" size={1} />‍ {#financial-professionals}
 
 - Ethereum is home to the “Decentralized Finance” ecosystem - a network of protocols and applications that offer an alternative financial system. If you’re a financial professional, check out some DeFi apps at [DeFi Llama](https://defillama.com/) or [DeFiPrime](https://defiprime.com)
 - Accountant? Assets on Ethereum - ETH, tokens, DeFi, etc - introduce many novel accounting issues. You could start by checking out some projects that aim to help users of cryptocurrency solve their bookkeeping & accounting challenges, like [Rotki](https://rotki.com/)
 
-## Product Managers <Emoji text=":fountain_pen:" size={1} />‍ \{#product-managers}
+## Product Managers <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
 - The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) or [MetaCartel](https://www.metacartel.org/)
 
-## Marketing <Emoji text=":megaphone:" size={1} />‍ \{#marketing}
+## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
 - There are many marketing and communications positions in the Ethereum ecosystem!
 
-## Ethereum jobs \{#ethereum-jobs}
+## Ethereum jobs {#ethereum-jobs}
 
 **Want to find a job working in Ethereum?**
 
@@ -116,7 +116,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [Ethereum Jobs](https://startup.jobs/ethereum-jobs)
 - [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
-## Join a DAO \{#decentralized-autonomous-organizations-daos}
+## Join a DAO {#decentralized-autonomous-organizations-daos}
 
 "DAOs" are decentralized autonomous organizations. These groups leverage Ethereum technology to facilitate organization and collaboration. For instance, for controlling membership, voting on proposals, or managing pooled assets. While DAOs are still experimental, they offer opportunities for you to find groups that you identify with, find collaborators, and grow your impact on the Ethereum community. [More on DAOs](/dao/)
 

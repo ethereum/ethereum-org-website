@@ -9,11 +9,11 @@ published: 2021-05-01
 lang: it
 ---
 
-## Introduzione \{#introduction}
+## Introduzione {#introduction}
 
 [Uniswap v2](https://uniswap.org/whitepaper.pdf) può creare un mercato di scambio tra due token ERC-20. In questo articolo guarderemo al codice sorgente per i contratti che implementano questo protocollo e vedremo perché sono scritti così.
 
-### Cosa fa Uniswap? \{#what-does-uniswap-do}
+### Cosa fa Uniswap? {#what-does-uniswap-do}
 
 Fondamentalmente, esistono due tipi di utenti: fornitori di liquidità e trader.
 
@@ -25,15 +25,15 @@ Quando i fornitori di liquidità vogliono restituite le proprie risorse, possono
 
 [Fai clic qui per una descrizione completa](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
-### Perché v2? Perché non v3? \{#why-v2}
+### Perché v2? Perché non v3? {#why-v2}
 
 [Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) è un aggiornamento molto più complicato della v2. È più facile imparare prima la v2 e poi passare alla v3.
 
-### Contratti principali e contratti periferici \{#contract-types}
+### Contratti principali e contratti periferici {#contract-types}
 
 Uniswap v2 è diviso in due componenti, una principale e una periferica. Questa divisione consente ai contratti principali, che detengono le risorse e dunque _devono_ essere sicuri, di essere più semplici e facili da controllare. Tutte le funzionalità aggiuntive richieste dai trader possono essere fornite dai contratti periferici.
 
-## Flussi di dati e di controllo \{#flows}
+## Flussi di dati e di controllo {#flows}
 
 Questo è il flusso di dati e controllo che si verifica quando esegui le tre azioni principali di Uniswap:
 
@@ -41,72 +41,72 @@ Questo è il flusso di dati e controllo che si verifica quando esegui le tre azi
 2. Aggiungi liquidità al mercato e vieni ricompensato con token di liquidità ERC-20 di pari valore
 3. Bruci token di liquidità di ERC-20 e ne ottieni altri, con uno scambio in pari che consente lo scambio ai trader
 
-### Scambio \{#swap-flow}
+### Scambio {#swap-flow}
 
 Questo è il flusso più comune, usato dai trader:
 
-#### Chiamante \{#caller}
+#### Chiamante {#caller}
 
 1. Fornisce un'indennità nell'importo da scambiare al conto periferico.
 2. Chiama una delle tante funzioni di scambio del contratto periferico (che dipende dal fatto che ETH sia o meno coinvolto, se il trader specifica l'importo di token da depositare o l'importo di token da riprendere, etc.). Ogni funzione di scambio accetta un `path`, un insieme di scambi da attraversare.
 
-#### Nel contratto periferico (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02-sol}
+#### Nel contratto periferico (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
 
 3. Identifica l'importo necessario da scambiare su ogni scambio lungo il percorso.
 4. Itera sul percorso. Per ogni scambio lungo il percorso, invia il token di input e poi chiama la funzione di `swap` dello scambio. In gran parte dei casi, l'indirizzo di destinazione per i token è lo scambio in pari successivo nel percorso. Nello scambio finale è presente l'indirizzo fornito dal trader.
 
-#### Nel contratto principale (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-2}
+#### Nel contratto principale (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
 
 5. Verifica che il contratto principale non raggiri il sistema e possa mantenere liquidità sufficiente dopo lo scambio.
 6. Vede quanti token aggiuntivi abbiamo, in aggiunta alle riserve note. Quell'importo è il numero di token di input ricevuti da scambiare.
 7. Invia i token d'output alla destinazione.
 8. Chiama `_update` per aggiornare gli importi della riserva
 
-#### Di nuovo nel contratto periferico (UniswapV2Router02.sol) \{#back-in-the-periphery-contract-uniswapv2router02-sol}
+#### Di nuovo nel contratto periferico (UniswapV2Router02.sol) {#back-in-the-periphery-contract-uniswapv2router02-sol}
 
 9. Esegue ogni pulizia necessaria (ad esempio, brucia i token di WET per riottenere ETH da inviare al trader)
 
-### Aggiungere liquidità \{#add-liquidity-flow}
+### Aggiungere liquidità {#add-liquidity-flow}
 
-#### Chiamante \{#caller-2}
+#### Chiamante {#caller-2}
 
 1. Fornisce un'indennità negli importi da aggiungere al pool di liquidità al conto periferico.
 2. Chiama una delle funzioni `addLiquidity` del contratto periferico.
 
-#### Nel contratto periferico (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02sol-2}
+#### Nel contratto periferico (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
 
 3. Crea un nuovo scambio in pari se necessario
 4. Se c'è uno scambio in pari esistente, calcola l'importo di token da aggiungere. Questo dovrebbe essere un valore identico per entrambi i token, quindi lo stesso rapporto di token nuovi a quelli esistenti.
 5. Controlla se gli importi sono accettabili (i chiamanti possono specificare un importo minimo al di sotto del quale preferiscono non aggiungere liquidità)
 6. Chiama il contratto principale.
 
-#### Nel contratto principale (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-2}
+#### Nel contratto principale (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
 
 7. Conia token di liquditià e li invia al chiamante
 8. Chiama `_update` per aggiornare gli importi della riserva
 
-### Rimuovere la liquidità \{#remove-liquidity-flow}
+### Rimuovere la liquidità {#remove-liquidity-flow}
 
-#### Chiamante \{#caller-3}
+#### Chiamante {#caller-3}
 
 1. Fornisce un'indennità dei token di liquidità da bruciare in cambio dei token sottostanti al conto periferico.
 2. Chiama una delle funzioni `removeLiquidity` del contratto periferico.
 
-#### Nel contratto periferico (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02sol-3}
+#### Nel contratto periferico (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
 
 3. Invia i token di liquidità allo scambio in pari
 
-#### Nel contratto principale (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-3}
+#### Nel contratto principale (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
 
 4. Invia all'indirizzo di destinazione i token sottostanti in proporzione ai token bruciati. Ad esempio, se ci sono 1000 token A nel pool, 500 token B e 90 token di liquidità e riceviamo 9 token da bruciare, stiamo bruciando il 10% dei token di liquidità, quindi restituiamo all'utente 100 token A e 50 token B.
 5. Brucia i token di liquidità
 6. Chiama `_update` per aggiornare gli importi della riserva
 
-## I contratti principali \{#core-contracts}
+## I contratti principali {#core-contracts}
 
 Questi sono i contratti sicuri che detengono la liquidità.
 
-### UniswapV2Pair.sol \{#UniswapV2Pair}
+### UniswapV2Pair.sol {#UniswapV2Pair}
 
 [Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) implementa il pool reale che scambia i token. È la funzionalità principale di Uniswap.
 
@@ -144,7 +144,7 @@ Molti calcoli nel contratto di pool richiedono l'uso di frazioni. Tuttavia, le f
 
 Ulteriori dettagli su questa libreria sono disponibili [più in avanti nel documento](#FixedPoint).
 
-#### Variabili \{#pair-vars}
+#### Variabili {#pair-vars}
 
 ```solidity
     uint public constant MINIMUM_LIQUIDITY = 10**3;
@@ -212,7 +212,7 @@ Ecco un semplice esempio. Nota che, per semplicità, la tabella contiene solo tr
 
 Man mano che i trader forniscono più token0, il valore relativo di token1 aumenta, e viceversa, in basel all'offerta e alla domanda.
 
-#### Bloccare \{#pair-lock}
+#### Bloccare {#pair-lock}
 
 ```solidity
     uint private unlocked = 1;
@@ -246,7 +246,7 @@ In un modificatore `_;` è la chiamata alla funzione originale (con tutti i para
 
 Al ritorno della funzione principale, rilascia il blocco.
 
-#### Funzioni varie \{#pair-misc}
+#### Funzioni varie {#pair-misc}
 
 ```solidity
     function getReserves() public view returns (uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast) {
@@ -279,7 +279,7 @@ Esistono due modi in cui una chiamata di trasferimento ERC-20 può segnalare il 
 
 Se una di queste condizioni si verifica, ripristina.
 
-#### Eventi \{#pair-events}
+#### Eventi {#pair-events}
 
 ```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
@@ -307,7 +307,7 @@ Questo evento è emesso quando un trader scambia un token per l'altro. Ancora, i
 
 Infine, `Sync` è emesso ogni volta che i token sono aggiunti o prelevati, indipendentemente dal motivo, per fornire le ultime informazioni sulla riserva (e dunque sul tasso di cambio).
 
-#### Funzioni di configurazione \{#pair-setup}
+#### Funzioni di configurazione {#pair-setup}
 
 Queste funzioni dovrebbero essere chiamate una volta che il nuovo scambio in pari è configurato.
 
@@ -330,7 +330,7 @@ Il costruttore si assicura che terremo traccia dell'indirizzo della factory che 
 
 Questa funzione consente alla factory (e solo a essa) di specificare i due token ERC-20 che questa coppia scambierà.
 
-#### Funzioni di aggiornamento interno \{#pair-update-internal}
+#### Funzioni di aggiornamento interno {#pair-update-internal}
 
 ##### \_update
 
@@ -451,7 +451,7 @@ Usa la funzione `UniswapV2ERC20._mint` per creare realmente i token aggiuntivi d
 
 Se non c'è alcuna commissione con `kLast` impostato a zero (se non è già così). Alla scrittura di questo contratto, era presente una [funzionalità di rimborso del gas](https://eips.ethereum.org/EIPS/eip-3298), che incoraggiava i contratti a ridurre le dimensioni complessive dello stato di Ethereum, azzerando l'archiviazione non necessaria. Questo codice ottiene quel rimborso, se possibile.
 
-#### Funzioni accessibili esternamente \{#pair-external}
+#### Funzioni accessibili esternamente {#pair-external}
 
 Nota che, sebbene ogni transazione o contratto _possa_ chiamare queste funzioni, sono progettate per essere chiamate dal contratto periferico. Se le chiami direttamente, non potrai barare sullo scambio in pari, ma potresti perdere valore a causa di un errore.
 
@@ -680,7 +680,7 @@ In quel caso ci sono due soluzioni:
 }
 ```
 
-### UniswapV2Factory.sol \{#UniswapV2Factory}
+### UniswapV2Factory.sol {#UniswapV2Factory}
 
 [Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) crea gli scambi in pari.
 
@@ -798,7 +798,7 @@ Salva le informazioni della nuova copia nelle variabili di stato ed emetti un ev
 
 Queste due funzioni consentono a `feeSetter` di controllare il destinatario della commissione (se presente) e di modificare `feeSetter` a un nuovo indirizzo.
 
-### UniswapV2ERC20.sol \{#UniswapV2ERC20}
+### UniswapV2ERC20.sol {#UniswapV2ERC20}
 
 [Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementa il token di liquidità ERC-20. È simile al [contratto ERC-20 di OpenZeppelin](/developers/tutorials/erc20-annotated-code), quindi spiegherò solo le differenze: la funzionalità `permit`.
 
@@ -884,15 +884,15 @@ Dal digest e la firma, otteniamo l'indirizzo firmato usando [ecrecover](https://
 
 Se è tutto corretto, trattala come [un'approvazione di ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
 
-## I contratti periferici \{#periphery-contracts}
+## I contratti periferici {#periphery-contracts}
 
 I contratti periferici sono l'API (interfaccia del programma applicativo) per Uniswap. Sono disponibili per le chiamate esterne, da altri contratti o dalle applicazioni decentralizzate. Potresti chiamare i contratti principali direttamente, ma è più complicato e potresti perdere del valore se commetti un errore. I contratti principali contengono prove solo per assicurarsi di evitare truffe, non controlli di integrità per chiunque altro. Questi ultimi sono contenuti nei contratti periferici, in modo da essere aggiornabili all'occorrenza.
 
-### UniswapV2Router01.sol \{#UniswapV2Router01}
+### UniswapV2Router01.sol {#UniswapV2Router01}
 
 [Questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) presenta dei problemi e [non deve più essere usato](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Fortunatamente, i contratti periferici sono privi di stato e non detengono alcuna risorsa, quindi è facile deprecarli e suggerire alle persone di usare invece il sostituto, `UniswapV2Router02`.
 
-### UniswapV2Router02.sol \{#UniswapV2Router02}
+### UniswapV2Router02.sol {#UniswapV2Router02}
 
 In gran parte dei casi puoi usare Uniswap tramite [questo contratto](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Puoi vedere come usarlo [qui](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
@@ -947,7 +947,7 @@ Il costruttore si limita a impostare le variabili di stato immutabili.
 
 Questa funzione viene chiamata quando riscattiamo i token dal contratto WETH in ETH. Solo il contratto WTH che usiamo può farlo.
 
-#### Aggiungere liquidità \{#add-liquidity}
+#### Aggiungere liquidità {#add-liquidity}
 
 Queste funzioni aggiungono token allo scambio in pari, il che accresce il pool di liquidità.
 
@@ -1131,7 +1131,7 @@ Per depositare l'ETH, il contratto lo avvolge prima in WETH e quindi trasferisce
 
 L'utente ci ha già inviato gli ETH, quindi se ne avanzano (perché l'altro token ha un valore inferiore di quanto l'utente pensasse), dobbiamo emettere un rimborso.
 
-#### Rimuovere liquidità \{#remove-liquidity}
+#### Rimuovere liquidità {#remove-liquidity}
 
 Queste funzioni rimuoveranno la liquidità e ripagheranno il fornitore di liquidità.
 
@@ -1292,7 +1292,7 @@ Questa funzione è utilizzabile per token aventi commissioni di trasferimento o 
 
 La funzione finale combina le commissioni di archiviazione con le meta-transazioni.
 
-#### Scambio \{#trade}
+#### Scambio {#trade}
 
 ```solidity
     // **** SCAMBIO ****
@@ -1650,15 +1650,15 @@ Queste sono le stesse varianti usate per i token normali, che però chiamano `_s
 
 Queste funzioni sono solo proxy che chiamano le [funzioni UniswapV2Library](#uniswapV2library).
 
-### UniswapV2Migrator.sol \{#UniswapV2Migrator}
+### UniswapV2Migrator.sol {#UniswapV2Migrator}
 
 Questo contratto era usato per migare gli scambi dalla vecchia v1 alla v2. Ora che sono stati migrati, non è più rilevante.
 
-## Le librerie \{#libraries}
+## Le librerie {#libraries}
 
 La [libreria di SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) è ben documentata, quindi non serve documentarla qui.
 
-### Math \{#Math}
+### Math {#Math}
 
 Questa libreria contiene alcune funzioni matematiche che normalmente non sono necessarie nel codice di Solidity e che quindi non fanno parte del linguaggio.
 
@@ -1703,7 +1703,7 @@ Non dovremmo mai avere bisogno della radice quadrata di zero. Le radici quadrate
 }
 ```
 
-### Frazioni a punto fisso (UQ112x112) \{#FixedPoint}
+### Frazioni a punto fisso (UQ112x112) {#FixedPoint}
 
 Questa libreria gestisce le frazioni, che normalmente non sono parte dell'aritmetica di Ethereum. Lo fa codificando il numero _x_ come _x\*2^112_. Questo ci permette di usare gli opcode di addizione e sottrazione originali senza alcuna modifica.
 
@@ -1740,7 +1740,7 @@ Poiché y è `uint112`, il suo valore massimo può essere 2^112-1. Quel numero �
 
 Se dividiamo due valori `UQ112x112`, il risultato non è più moltiplicato per 2^112. Quindi, invece, prendiamo un intero come denominatore. Avremmo dovuto usare un trucco simile per la moltiplicazione, ma non abbiamo necessità di moltiplicare i valori di `UQ112x112`.
 
-### UniswapV2Library \{#uniswapV2library}
+### UniswapV2Library {#uniswapV2library}
 
 Questa libreria è usata solo per i contratti periferici
 
@@ -1862,7 +1862,7 @@ Questa funzione fa approssimativamente la stessa cosa, ma ottiene l'importo in u
 
 Queste due funzioni gestiscono l'identificazione dei valori quando è necessario passare per diversi scambi in pari.
 
-### Transfer Helper \{#transfer-helper}
+### Transfer Helper {#transfer-helper}
 
 [Questa libreria](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) aggiunge controlli di successo relativi ai trasferimenti di ERC-20 ed Ethereum per trattare un ripristino e una restituzione di valore `false` allo stesso modo.
 
@@ -1947,7 +1947,7 @@ Questa funzione implementa la [funzionalità transferFrom dell'ERC-20](https://e
 
 Questa funzione trasferisce ether a un conto. Ogni chiamata a un contratto diverso può tentare di inviare ether. Poiché non dobbiamo realmente chiamare alcuna funzione, non inviamo alcun dato con la chiamata.
 
-## Conclusioni \{#conclusion}
+## Conclusioni {#conclusion}
 
 Questo è un articolo lungo di circa 50 pagine. Se sei arrivato fin qui, congratulazioni! Speriamo di aver esposto chiaramente alcuni aspetti relativi alla scrittura di un'applicazione reale (e non brevi programmi campione) e che ora tu sia in grado di scrivere contratti per le tue esigenze.
 

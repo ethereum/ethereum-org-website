@@ -18,7 +18,7 @@ sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 
 În acest tutorial vom construi o aplicație DeFi cu Solidity în care utilizatorii pot depune un token ERC20 în contractul inteligent „FarmToken”, iar acesta va emite și va transfera tokenuri „Farm Token” către utilizatori. Utilizatorii își pot retrage ulterior tokenurile ERC20 prin arderea de tokenuri„Farm Token” de pe contractul inteligent „FarmToken”, iar tokenurile ERC20 le vor fi transferate înapoi.
 
-## Instalați Truffle și Ganache \{#install-truffle-and-ganache}
+## Instalați Truffle și Ganache {#install-truffle-and-ganache}
 
 Dacă aceasta este prima dată când scrieți un contract inteligent, va trebui să vă configurați mediul. Vom folosi două instrumente: [Truffle](https://www.trufflesuite.com/) și [Ganache](https://www.trufflesuite.com/ganache).
 
@@ -44,7 +44,7 @@ Acestea vor crea un proiect gol pentru dezvoltarea și implementarea contractelo
 
 - `truffle-config.js`: Fișier de configurare Truffle
 
-## Creați tokenul ERC20 \{#create-the-erc20-token}
+## Creați tokenul ERC20 {#create-the-erc20-token}
 
 Mai întâi trebuie să creăm tokenul ERC20 pe care îl vom folosi pentru a miza în contractul inteligent. Pentru a ne crea tokenul fungibil, va trebui mai întâi să instalăm biblioteca OpenZeppelin. Această bibliotecă include implementări ale unor standarde precum ERC20 și ERC721. Pentru a o instala, executați comanda:
 
@@ -90,7 +90,7 @@ constructor (string memory name_, string memory symbol_) public {
 }
 ```
 
-## Compilați tokenul ERC20 \{#compile-the-erc20-token}
+## Compilați tokenul ERC20 {#compile-the-erc20-token}
 
 Pentru a ne compila contractul inteligent, trebuie mai întâi să verificăm versiunea compilatorului Solidity. Puteți verifica aceasta executând comanda:
 
@@ -123,7 +123,7 @@ Acum ne putem compila contractul inteligent prin rularea următoarei comenzi:
 truffle compile
 ```
 
-## Implementați tokenul ERC20 \{#deploy-erc20-token}
+## Implementați tokenul ERC20 {#deploy-erc20-token}
 
 Abia acum, după compilare, ne putem implementa tokenul.
 
@@ -175,7 +175,7 @@ Executând comenzile de mai sus, vom vedea că prima adresă are de fapt 1 milio
 
 _Prima adresă are 1000000 de tokenuri „MyTokens”_
 
-## Creați contractul inteligent „FarmToken” \{#create-farmtoken-smart-contract}
+## Creați contractul inteligent „FarmToken” {#create-farmtoken-smart-contract}
 
 Contractul inteligent „FarmToken” va avea 3 funcții:
 
@@ -468,7 +468,7 @@ Pentru a rula scriptul, introduceţi comanda: `truffle exec .\scripts\withdrawMy
 
 _rezultatul comenzii „withdrawMyTokenFromTokenFarm.js”_
 
-## Referințe \{#references}
+## Referințe {#references}
 
 [Contracte - Documente OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/)
 

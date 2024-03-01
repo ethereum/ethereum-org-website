@@ -17,7 +17,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Dans Solidity, [les événements](/developers/docs/smart-contracts/anatomy/#events-and-logs) envoient des signaux que les contrats intelligents peuvent lancer. Les dApps, ou tout autre élément connecté à l'API Ethereum JSON-RPC, peuvent écouter ces événements et agir en conséquence. Un événement peut également être indexé de sorte que son historique soit consultable ultérieurement.
 
-## Évènements \{#events}
+## Évènements {#events}
 
 L'événement le plus courant sur la blockchain Ethereum au moment de l'écriture de cet article est l'événement de 'Transfer' qui est émis par les jetons ERC20 lorsque quelqu'un transfère des jetons.
 

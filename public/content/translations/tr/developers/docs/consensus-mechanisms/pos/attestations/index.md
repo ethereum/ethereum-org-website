@@ -6,7 +6,7 @@ lang: tr
 
 Bir doğrulayıcının her dönemde bir tasdik oluşturması, imzalaması ve yayınlaması beklenir. Bu sayfa tasdiklerin ne gibi göründüğünü ve fikir birliği istemcileri arasında nasıl işlendiğini ve iletildiğini belirtir.
 
-## Tasdik nedir? \{#what-is-an-attestation}
+## Tasdik nedir? {#what-is-an-attestation}
 
 Her [dönemde](/glossary/#epoch) (6,4 dakika) bir doğrulayıcı ağa bir tasdik önerir. Bu tasdik, dönemdeki spesifik bir yuva içindir. Tasdikin amacı doğrulayıcının zincir görüşü yani spesifik olarak en son haklı görülen blok ile mevcut dönemdeki ilk blok (`source` ve `target` kontrol noktaları olarak bilinir) için oy vermektir. Bu bilgi tüm katılım sağlayan doğrulayıcılar için birleştirilir ve ağın blok zincirin mevcut durumu üzerinde mutabakata varmasını sağlar.
 
@@ -28,7 +28,7 @@ Tasdikleyici bir doğrulayıcı için ilk görev `data` inşasıdır. Bu `data` 
 
 Son olarak, doğrulayıcı tasdiki imzalar ve ağa yayınlar.
 
-### Toplanmış tasdik \{#aggregated-attestation}
+### Toplanmış tasdik {#aggregated-attestation}
 
 Bu veriyi ağ üzerinde her bir doğrulayıcı için dolaştırmanın önemli bir ek masrafı vardır. Sonuç olarak, tekil doğrulayıcılardan gelen tasdikler daha geniş olarak yayınlanmadan önce alt ağlar içerisinde toplanır. Bu, imzaların birlikte toplanmalarını içerir; bu sayede, yayınlanan bir tasdik, mutabakat `data`'sını ve tüm doğrulayıcıların `data` ile mutabakatta olduğu tüm imzaları birleştiren tek bir imzadan oluşur. Bu `aggregation_bits` kullanılarak kontrol edilebilir çünkü bu kendi komitesindeki (kimliği `data` içinde bulunur) her bir doğrulayıcının endeksini sağlar, bu da tekil imzaları sorgulamak için kullanılabilir.
 
@@ -36,7 +36,7 @@ Her dönemde her bir alt ağdaki doğrulayıcı `aggregator` olarak seçilir. To
 
 Bir doğrulayıcı blok önericisi olmak için seçildiğinde yeni bloktaki en son yuvaya kadar alt ağlardaki tasdik toplamlarını paketler.
 
-### Tasdik dahil etme yaşam döngüsü \{#attestation-inclusion-lifecycle}
+### Tasdik dahil etme yaşam döngüsü {#attestation-inclusion-lifecycle}
 
 1. Oluşum
 2. Yayım
@@ -48,37 +48,37 @@ Tasdik yaşam döngüsü aşağıdaki şemada belirtilmiştir:
 
 ![tasdik yaşam döngüsü](./attestation_schematic.png)
 
-## Ödüller \{#rewards}
+## Ödüller {#rewards}
 
 Doğrulayıcılar tasdikler bildirdikleri için ödül alırlar. Tasdik ödülü iki değişkene bağlıdır, `base reward` ve `inclusion delay`. Dahil etme gecikmesi için en iyi durum 1'e eşit olmasıdır.
 
 `attestation reward = 7/8 x base reward x (1/inclusion delay)`
 
-### Ana ödül \{#base-reward}
+### Ana ödül {#base-reward}
 
 Ana ödül tasdik veren doğrulayıcıların ve onların etkili hisselenmiş ether bakiyelerine göre hesaplanır:
 
 `base reward = validator effective balance x 2^6 / SQRT(Effective balance of all active validators)`
 
-#### Dahil etme gecikmesi \{#inclusion-delay}
+#### Dahil etme gecikmesi {#inclusion-delay}
 
 Doğrulayıcıların zincirin başı üzerine oylama yaptığı zamanda (`block n`), `block n+1` henüz önerilmemişti. Sonuç olarak tasdikler doğal olarak **bir blok sonra** dahil edilmektedir yani zincirin başı olan `block n` üzerinde oylayan tüm tasdikler `block n+1` içinde dahil edilmiştir ve **dahil etme gecikmesi** 1'dir. Eğer dahil etme gecikmesi iki yuvaya katlanırsa, tasdik ödülü yarılanır çünkü tasdik ödülünü hesaplamak için ana ödül dahil etme gecikmesinin tersi ile çarpılır.
 
-### Tasdik senaryoları \{#attestation-scenarios}
+### Tasdik senaryoları {#attestation-scenarios}
 
-#### Kayıp Oylayan Doğrulayıcı \{#missing-voting-validator}
+#### Kayıp Oylayan Doğrulayıcı {#missing-voting-validator}
 
 Doğrulayıcıların tasdiklerini bildirmeleri için maksimum 1 dönemleri vardır. Eğer dönem 0'da tasdik kaçırıldıysa, dönem 1'de dahil etme gecikmesi ile bildirebilirler.
 
-#### Kayıp Toplayıcı \{#missing-aggregator}
+#### Kayıp Toplayıcı {#missing-aggregator}
 
 Dönem başına toplam 16 Toplayıcı bulunmaktadır. Ek olarak, rastgele doğrulayıcılar **256 dönem için 2 alt ağa** abone olurlar ve toplayıcıların kayıp olduğu bir duruma karşı yedek olarak davranırlar.
 
-#### Kayıp blok önericisi \{#missing-block-proposer}
+#### Kayıp blok önericisi {#missing-block-proposer}
 
 Bazı durumlarda şanslı bir toplayıcının aynı zamanda blok önericisi olabileceğini unutmayın. Eğer tasdik blok önericisi kaybolduğu için dahil edilmeseydi, sıradaki blok önericisi toplanmış tasdiki alıp sıradaki bloka dahil edebilirdi. Ancak, **dahil etme gecikmesi** bir artardı.
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Vitalik'in açıklamalı mutabakat özelliklerindeki tasdikler](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [Eth2book.info içindeki tasdikler](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)

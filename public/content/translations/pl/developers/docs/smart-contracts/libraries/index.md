@@ -6,15 +6,15 @@ lang: pl
 
 Nie musisz pisać każdego inteligentnego kontraktu w swoim projekcie od zera. Istnieje wiele bibliotek open source inteligentnych kontraktów. Można w nich znaleźć elementy do utworzenia Twojego projektu, więc nie musisz wymyślać koła od nowa.
 
-## Warunki wstępne \{#prerequisites}
+## Warunki wstępne {#prerequisites}
 
 Przed przejściem do bibliotek inteligentnych kontraktów warto dobrze poznać strukturę inteligentnego kontraktu. Zapoznaj się z [anatomią inteligentnego kontraktu](/developers/docs/smart-contracts/anatomy/), jeśli jeszcze tego nie zrobiłeś.
 
-## Co jest w bibliotece \{#whats-in-a-library}
+## Co jest w bibliotece {#whats-in-a-library}
 
 W bibliotekach inteligentnych kontraktów zwykle można znaleźć dwa rodzaje elementów konstrukcyjnych: zachowania wielokrotnego użytku, które możesz dodać do swoich kontraktów, oraz implementacje różnych standardów.
 
-### Zachowania \{#behaviors}
+### Zachowania {#behaviors}
 
 Podczas pisania inteligentnych kontraktów masz sporą szansę, że będziesz w nieskończoność zapisywać podobne wzorce, na przykład przypisywanie adresu _administratora_ w celu wykonania chronionych operacji w kontrakcie lub dodawanie awaryjnego przycisku _pauzy_ na wypadek nieoczekiwanego problemu.
 
@@ -52,7 +52,7 @@ contract MyContract is Ownable {
 
 Innym popularnym przykładem jest [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) lub [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html). Są to biblioteki (w przeciwieństwie do kontraktów podstawowych), które zapewniają niedostarczane przez język funkcje arytmetyczne z kontrolą przepełnienia. Dobrą praktyką jest używanie którejkolwiek z tych bibliotek zamiast rodzimych operacji arytmetycznych w celu ochrony kontraktu przed przepełnieniami, co może mieć katastrofalne skutki!
 
-### Standardy \{#standards}
+### Standardy {#standards}
 
 Aby ułatwić [komponowalność i interoperacyjność](/developers/docs/smart-contracts/composability/), społeczność Ethereum zdefiniowała kilka standardów w postaci **ERC **. Więcej o nich można przeczytać w sekcji [standardy](/developers/docs/standards/).
 
@@ -60,7 +60,7 @@ W przypadku uwzględniania ERC w swoich kontraktach lepiej poszukać implementac
 
 Warto wspomnieć, że niektóre ERC nie są samodzielne, ale stanowią uzupełnienie innych ERC. Na przykład [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) dodaje rozszerzenie do ERC20 w celu poprawy jego użyteczności.
 
-## Jak dodać bibliotekę \{#how-to}
+## Jak dodać bibliotekę {#how-to}
 
 Zawsze zapoznaj się z dokumentacją dołączanej biblioteki, aby uzyskać szczegółowe instrukcje, jak uwzględnić ją w swoim projekcie. Kilka bibliotek kontraktów Solidity jest spakowanych za pomocą aplikacji `npm`, więce można po prostu użyć polecenia `npm install`. Większość narzędzi do [kompilowania](/developers/docs/smart-contracts/compiling/) kontraktów będzie szukać bibliotek kontraktów inteligentnych w Twoich `node_modules`, więc możesz wykonać następujące czynności:
 
@@ -75,7 +75,7 @@ contract MyNFT is ERC721 {
 
 Niezależnie od używanej metody, dołączając bibliotekę, zawsze uważaj na wersję [językową](/developers/docs/smart-contracts/languages/). Na przykład, nie możesz użyć biblioteki dla Solidity 0.6, jeśli piszesz swoje kontrakty w Solidity 0.5.
 
-## Kiedy użyć \{#when-to-use}
+## Kiedy użyć {#when-to-use}
 
 Korzystanie z biblioteki inteligentnych kontraktów w projekcie ma kilka zalet. Przede wszystkim oszczędza czas, dostarczając gotowe do użycia bloki konstrukcyjne, które możesz dołączyć do swojego systemu, zamiast samodzielnie je kodować.
 
@@ -85,7 +85,7 @@ Jednak korzystanie z bibliotek inteligentnych kontraktów niesie ze sobą ryzyko
 
 Na koniec, podejmując decyzję o włączeniu biblioteki, weź pod uwagę jej ogólne wykorzystanie. Biblioteka przyjęta powszechnie ma zalety wynikające z większej społeczności i większej liczby osób wyszukujących w niej problemy. Bezpieczeństwo powinno być Twoim głównym celem podczas tworzenia za pomocą inteligentnych kontraktów!
 
-## Powiązane narzędzia \{#related-tools}
+## Powiązane narzędzia {#related-tools}
 
 **Kontrakty OpenZeppelin —** **_najpopularniejsza biblioteka do bezpiecznego tworzenia inteligentnych kontraktów._ **
 
@@ -102,11 +102,11 @@ Na koniec, podejmując decyzję o włączeniu biblioteki, weź pod uwagę jej og
 
 - [GitHub](https://github.com/HQ20/contracts)
 
-## Powiązane samouczki \{#related-tutorials}
+## Powiązane samouczki {#related-tutorials}
 
 - [Zagadnienia bezpieczeństwa dla programistów Ethereum](/developers/docs/smart-contracts/security/) _– samouczek na temat zagadnień bezpieczeństwa podczas tworzenia inteligentnych kontraktów, z uwzględnieniem korzystania z bibliotek._
 - [Informacje o kontraktach inteligentnych tokena ERC-20](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _— samouczek dotyczący standardu ERC20 oferowanego przez wiele bibliotek._
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_

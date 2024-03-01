@@ -4,7 +4,7 @@ description: Les ponts permettent aux utilisateurs de déplacer leurs fonds à t
 lang: fr
 ---
 
-# Ponts de connexion blockchain \{#prerequisites}
+# Ponts de connexion blockchain {#prerequisites}
 
 _Le Web3 a évolué en un écosystème de solutions blockchain L1 et de mise à l'échelle L2, chacune ayant des avantages et des inconvénients. À mesure qu'augmente le nombre de protocoles blockchain, [la demande de déplacement d'actifs entre les chaînes](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>) augmente aussi. Pour répondre à cette demande, nous avons besoin de ponts._
 
@@ -12,7 +12,7 @@ _Le Web3 a évolué en un écosystème de solutions blockchain L1 et de mise à 
 <Divider />
 }
 
-## Que sont les ponts ? \{#what-are-bridges}
+## Que sont les ponts ? {#what-are-bridges}
 
 Les ponts blockchain fonctionnent comme les ponts que nous connaissons dans le monde physique. De même qu'un pont physique relie deux lieux physiques, un pont blockchain relie deux écosystèmes blockchain. Les ponts facilitent la communication entre les blockchains par le transfert d'informations et d'actifs.
 
@@ -22,7 +22,7 @@ Vous êtes originaire des États-Unis et vous prévoyez un voyage en Europe. Vou
 
 Mais, que feriez-vous si vous vouliez faire le même échange pour utiliser une blockchain différente ? Disons que vous voulez échanger des ETH du réseau principal Ethereum contre des ETH d'[Arbitrum](https://arbitrum.io/). À l'instar de l'échange de devises que nous avons effectué pour les euros, nous avons besoin d'un mécanisme pour transférer nos ETH d'Ethereum vers Arbitrum. Les ponts permettent de telles transactions. Dans ce cas, [Arbitrum a un pont natif](https://bridge.arbitrum.io/) qui peut transférer des ETH du Mainnet vers Arbitrum.
 
-## Pourquoi avons-nous besoin de ponts ? \{#why-do-we-need-bridges}
+## Pourquoi avons-nous besoin de ponts ? {#why-do-we-need-bridges}
 
 Toutes les blockchains ont leurs limites. Pour qu'Ethereum puisse évoluer et répondre à la demande, il a fallu procéder à des rollups. Alternativement, des L1 comme Solana ou Avalanche sont conçues différemment pour permettre un débit plus élevé mais au prix de la décentralisation.
 
@@ -43,23 +43,23 @@ Les ponts permettent :
 <Divider />
 }
 
-## Exemple d'utilisation d'un pont \{#bridge-use-cases}
+## Exemple d'utilisation d'un pont {#bridge-use-cases}
 
 Voici quelques scénarios où vous pouvez utiliser un pont :
 
-### Des frais de transactions moins élevés \{#transaction-fees}
+### Des frais de transactions moins élevés {#transaction-fees}
 
 Disons que vous avez de l'ETH sur le réseau principal Ethereum mais que vous voulez des frais de transaction moins élevés pour explorer différentes dapps. En transférant votre ETH du réseau principal à un rollup L2 d'Ethereum, vous pouvez bénéficier de frais de transaction moins élevés.
 
-### Dapps sur d'autres blockchains \{#dapps-other-chains}
+### Dapps sur d'autres blockchains {#dapps-other-chains}
 
 Si vous utilisez Aave sur le réseau principal Ethereum pour prêter des USDT mais que le taux d'intérêt pour prêter des USDT en utilisant Aave sur Polygon est plus élevé.
 
-### Explorer les écosystèmes blockchain \{#explore-ecosystems}
+### Explorer les écosystèmes blockchain {#explore-ecosystems}
 
 Si vous avez des ETH sur le réseau principal Ethereum et que vous voulez explorer un L1 alternatif pour essayer leurs dapps natives. Vous pouvez utilisez un pont pour transférer vos ETH du réseau principal Ethereum vers le L1.
 
-### Posséder des actifs crypto natifs \{#own-native}
+### Posséder des actifs crypto natifs {#own-native}
 
 Disons que vous voulez posséder des bitcoins (BTC) natifs, mais que vous n'avez des fonds que sur le réseau principal Ethereum. Pour vous exposer aux BTC sur Ethereum, vous pouvez acheter des Wrapped Bitcoin (WBTC). Cependant, le WBTC est un jeton ERC-20 natif du réseau Ethereum, ce qui signifie qu'il s'agit d'une version Ethereum de Bitcoin et non de l'actif original sur la blockchain Bitcoin. Pour posséder des BTC natifs, vous devez basculer vos actifs d'Ethereum à Bitcoin en utilisant un pont. Cela permettra de relier votre WBTC et de le convertir en BTC natif. Vous pouvez également posséder des BTC et vouloir les utiliser dans les protocoles Ethereum DeFi. Pour cela, il faudrait faire le pont dans l'autre sens, de BTC à WBTC, qui peut ensuite être utilisé comme actif sur Ethereum.
 
@@ -71,7 +71,7 @@ Disons que vous voulez posséder des bitcoins (BTC) natifs, mais que vous n'avez
 <Divider />
 }
 
-## Type de pont \{#types-of-bridge}
+## Type de pont {#types-of-bridge}
 
 Les ponts présentent de nombreux types de conceptions et de subtilités. En général, les ponts se divisent en deux catégories : les ponts sans risque et les ponts risqués.
 
@@ -103,7 +103,7 @@ De nombreuses solutions de transition adoptent des modèles entre ces deux extr�
 <Divider />
 }
 
-## Risques liés à l'utilisation de ponts \{#bridge-risk}
+## Risques liés à l'utilisation de ponts {#bridge-risk}
 
 Les ponts en sont aux premiers stades de développement. Il est probable que le design optimal des ponts n'ait pas encore été découvert. Interagir avec n'importe quel type de pont comporte des risques :
 
@@ -131,7 +131,7 @@ Les ponts sont essentiels pour l'accueil des utilisateurs sur les L2 d'Ethereum,
 <Divider />
 }
 
-## En savoir plus \{#further-reading}
+## En savoir plus {#further-reading}
 
 - [EIP-5164 : Exécution en chaines croisées](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 juin 2022 - Brendan Asselstine_
 - [L2Bridge Risk Framework](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 juillet 2022 - Bartek Kiepuszewski_

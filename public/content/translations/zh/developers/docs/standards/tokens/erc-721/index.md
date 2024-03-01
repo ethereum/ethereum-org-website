@@ -4,7 +4,7 @@ description:
 lang: zh
 ---
 
-## 介绍 \{#introduction}
+## 介绍 {#introduction}
 
 **什么是非同质化代币？**
 
@@ -16,13 +16,13 @@ ERC-721 为 NFT 引入了一个标准，换言之，这种类型的代币是独�
 
 是的。 所有 NFTs 都有一个 `uint256` 变量，名为 `tokenId`，所以对于任何 ERC-721 合约，这对值`contract address, tokenId` 必须是全局唯一的。 也就是说，去中心化应用程序可以有一个“转换器”， 使用 `tokenId` 作为输入并输出一些很酷的事物图像，例如僵尸、武器、技能或神奇的小猫咪！
 
-## 前提条件 \{#prerequisites}
+## 前提条件 {#prerequisites}
 
 - [帐户](/developers/docs/accounts/)
 - [智能合约](/developers/docs/smart-contracts/)
 - [代币标准](/developers/docs/standards/tokens/)
 
-## 正文 \{#body}
+## 正文 {#body}
 
 ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter Shirley、Jacob Evans、Nastassia Sachs 在 2018 年 1 月提出，是一个在智能合约中实现代币 API 的非同质化代币标准。
 
@@ -32,7 +32,7 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
 
 来自[ EIP-721 ](https://eips.ethereum.org/EIPS/eip-721)：
 
-### 方法 \{#methods}
+### 方法 {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### 事件 \{#events}
+### 事件 {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -54,11 +54,11 @@ ERC-721（Ethereum Request for Comments 721），由 William Entriken、Dieter S
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### 示例 \{#web3py-example}
+### 示例 {#web3py-example}
 
 让我们看看一个标准是多么重要，它使我们能够简单地在以太坊上检查任何 ERC-721 代币合约。 我们只需要合约的应用程序二进制接口（ABI）就可以创造任何 ERC-721 代币的接口。 下面我们将使用一个简化的应用程序二进制接口，让例子变得更为简单。
 
-#### Web3.py 示例 \{#web3py-example}
+#### Web3.py 示例 {#web3py-example}
 
 首先，请确保您已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
 
@@ -225,7 +225,7 @@ birth_logs = w3.eth.getLogs({
 recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## 热门的 NFT \{#popular-nfts}
+## 热门的 NFT {#popular-nfts}
 
 - [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) 列出了以太坊上交易量最大的 NFT。
 - [CryptoKitties](https://www.cryptokitties.co/) 是一个围绕着我们称之为加密猫的可繁殖、可收藏和可爱的生物游戏。
@@ -236,7 +236,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Gods Unchained Cards](https://godsunchained.com/) 是以太坊区块链上的一款集换式卡牌游戏，它使用非同质化代币来为游戏中的资产提供真实所有权。
 - [无聊猿游艇俱乐部](https://boredapeyachtclub.com)是一件由 10,000 个独一无二的非同质化代币构成的收藏品，也是一件非常罕见的艺术品，它作为俱乐部会员资格代币，可为成员提供多种特权和福利，而且在社区的努力下，这些特权和福利还会随着时间的推移不断增加。
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [EIP-721：ERC-721 非同质化代币标准](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 文档](https://docs.openzeppelin.com/contracts/3.x/erc721)

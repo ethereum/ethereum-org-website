@@ -4,7 +4,7 @@ description: 以太坊虛擬機可用的所有作業碼清單。
 lang: zh-tw
 ---
 
-## 概觀 \{#overview}
+## 概觀 {#overview}
 
 本文是以太坊虛擬機參考頁面的更新版本，網址為：[wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes)。 同樣取自[黃皮書](https://ethereum.github.io/yellowpaper/paper.pdf)、[Jello Paper](https://jellopaper.org/evm/) 和 [geth](https://github.com/ethereum/go-ethereum) 實作。 本文意圖成为方便參考的頁面，但並非特別嚴謹。 若你想確定正確性並了解每種邊界案例（指僅在極端工作參數下才會發生的問題或情況），建議使用 Jello Paper 或用戶端實作。
 

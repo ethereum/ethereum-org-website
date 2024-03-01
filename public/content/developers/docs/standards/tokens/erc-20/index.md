@@ -4,7 +4,7 @@ description:
 lang: en
 ---
 
-## Introduction \{#introduction}
+## Introduction {#introduction}
 
 **What is a Token?**
 
@@ -27,13 +27,13 @@ The ERC-20 introduces a standard for Fungible Tokens, in other words, they have 
 the same (in type and value) as another Token. For example, an ERC-20 Token acts just like the ETH, meaning that 1 Token
 is and will always be equal to all the other Tokens.
 
-## Prerequisites \{#prerequisites}
+## Prerequisites {#prerequisites}
 
 - [Accounts](/developers/docs/accounts)
 - [Smart Contracts](/developers/docs/smart-contracts/)
 - [Token standards](/developers/docs/standards/tokens/)
 
-## Body \{#body}
+## Body {#body}
 
 The ERC-20 (Ethereum Request for Comments 20), proposed by Fabian Vogelsteller in November 2015, is a Token Standard that
 implements an API for tokens within Smart Contracts.
@@ -50,7 +50,7 @@ will be responsible to keep track of the created tokens on Ethereum.
 
 From [EIP-20](https://eips.ethereum.org/EIPS/eip-20):
 
-### Methods \{#methods}
+### Methods {#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -64,20 +64,20 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### Events \{#events}
+### Events {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
 event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 ```
 
-### Examples \{#web3py-example}
+### Examples {#web3py-example}
 
 Let's see how a Standard is so important to make things simple for us to inspect any ERC-20 Token Contract on Ethereum.
 We just need the Contract Application Binary Interface (ABI) to create an interface to any ERC-20 Token. As you can
 see below we will use a simplified ABI, to make it a low friction example.
 
-#### Web3.py Example \{#web3py-example}
+#### Web3.py Example {#web3py-example}
 
 First, make sure you have installed [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python library:
 
@@ -148,7 +148,7 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [EIP-20: ERC-20 Token Standard](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Tokens](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)

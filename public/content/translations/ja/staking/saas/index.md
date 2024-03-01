@@ -13,11 +13,11 @@ summaryPoints:
   - 信頼せず、必ず引き出し鍵を必ず保持すること
 ---
 
-## ステーキングサービスとは \{#what-is-staking-as-a-service}
+## ステーキングサービスとは {#what-is-staking-as-a-service}
 
 ステーキング・アズ・ア・サービス(SaaS)は、バリデータになるための 32 ETH を預け入れ、ノードの運用については、サードパーティに委任できるステーキングサービスのことです。 このプロセスでは通常、鍵の生成と預け入れを伴う初期セットアップを案内され、署名鍵をオペレータにアップロードします。 これは、通常は月額手数料で、バリデータの運用を代行するサービスです。
 
-## サービスを使ってステークする利点 \{#why-stake-with-a-service}
+## サービスを使ってステークする利点 {#why-stake-with-a-service}
 
 イーサリアムのプロトコルは、ステーキングの委任をネイティブにはサポートしないため、これらのサービスは需要を満たすために作られたものです。 ステーキングする 32 ETH はあるものの、ハードウェアを扱うのが苦手な場合、ステーキング・アズ・ア・サービス(SaaS)を利用すると、難しい部分を委任しながらネイティブブロックの報酬を得ることができます。
 
@@ -36,7 +36,7 @@ summaryPoints:
 
 <StakingComparison page="saas" />
 
-## 考慮すべき事項 \{#what-to-consider}
+## 考慮すべき事項 {#what-to-consider}
 
 ETH のステーキングを支援するステーキング・アズ・ア・サービス(SaaS)プロバイダーは増えていますが、それぞれ異なるリスクと利点があります。
 
@@ -44,7 +44,7 @@ ETH のステーキングを支援するステーキング・アズ・ア・サ�
 
 <StakingConsiderations page="saas" />
 
-## ステーキングサービスプロバイダーを探す \{#saas-providers}
+## ステーキングサービスプロバイダーを探す {#saas-providers}
 
 下記は、利用可能なステーキング・アズ・ア・サービス(SaaS)プロバイダーです。 上記の指標を参考に、これらのサービスをご利用ください。
 
@@ -62,7 +62,7 @@ ETH のステーキングを支援するステーキング・アズ・ア・サ�
 
 ここに記載すべきステーキング・アズ・ア・サービス(SaaS)プロバイダーをご存知の場合は [製品掲載ポリシー](/contributing/adding-staking-products/)を確認し、記載すべきかどうかをご確認の上、レビューに提出してください。
 
-## よくある質問 \{#faq}
+## よくある質問 {#faq}
 
 {
 <ExpandableCard title="鍵の保有者" eventCategory="SaasStaking" eventName="clicked who holds my keys">
@@ -92,6 +92,6 @@ SaaS プロバイダーを利用することは、ノードの運用を誰かに
 </ExpandableCard>
 }
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 - [ステーキングサービスの評価](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

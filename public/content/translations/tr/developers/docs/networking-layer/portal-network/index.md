@@ -12,7 +12,7 @@ Portal Ağı, hafif düğümler için veriye erişilebilirlik problemini, gerekl
 
 [Düğümler ve istemciler](/developers/docs/nodes-and-clients/) hakkında daha fazla bilgi
 
-## Portal Ağına neden ihtiyacımız var? \{#why-do-we-need-portal-network}
+## Portal Ağına neden ihtiyacımız var? {#why-do-we-need-portal-network}
 
 Ethereum düğümleri, ethereum blokzincirlerinde kendi tam veya kısmi kopyalarını saklar. Bu yerel kopya, işlemleri doğrulamak ve düğümün doğru zinciri izlediğinden emin olmak için kullanılır. Yerel olarak depolanan bu veriler, herhangi başka bir oluşuma güvenmeye ihtiyaç duymadan, düğümlerin gelen verilerin doğruluğunu ve geçerliliğini bağımsız olarak doğrulamasına imkan tanır.
 
@@ -22,7 +22,7 @@ Bu, düğümleri çalıştırmanın yüksek maliyetli olduğu anlamına gelir; �
 
 Portal Ağı, hafif düğümlerin verilerini alırken tam düğümlere güvenmek durumunda kalmasını veya tam düğümlerin üzerindeki iş yükünü önemli ölçüde arttırmasını gerektirmeyen alternatif bir yol sunmayı amaçlar. Bu, Ethereum düğümlerinin ağ genelinde veri paylaşmasına olanak tanıyan yeni bir yolu devreye alarak gerçekleştirilir.
 
-## Portal Ağı nasıl çalışır? \{#how-does-portal-network-work}
+## Portal Ağı nasıl çalışır? {#how-does-portal-network-work}
 
 Ethereum düğümleri, birbirleriyle nasıl iletişim kuracaklarını tanımlayan katı protokollere sahiptir. Yürütüm istemcileri, [DevP2P](/developers/docs/networking-layer/#devp2p) olarak bilinen bir dizi alt protokol kullanarak iletişim kurarken fikir birliği istemcileri [libP2P](/developers/docs/networking-layer/#libp2p) adlı farklı bir alt protokol yığını kullanır. Bunlar, düğümler arasında iletilebilecek veri türlerini tanımlar.
 
@@ -61,7 +61,7 @@ Aşağıdaki diyagram, Portal Ağı tarafından sunulabilecek mevcut istemcileri
 
 ![portal ağı tablosu](portal-network-table2.png)
 
-## Varsayılan istemci çeşitliliği \{#client-diversity-as-default}
+## Varsayılan istemci çeşitliliği {#client-diversity-as-default}
 
 Portal Ağı geliştiricileri aynı zamanda bir tasarım tercihinde bulunarak ilk günden itibaren üç ayrı Portal Ağı istemcisi geliştirme kararı almıştır.
 
@@ -75,7 +75,7 @@ Birden fazla bağımsız istemci uygulamasına sahip olmak, Ethereum ağının d
 
 Eğer bir istemci sorun veya kırılganlıklar yaşıyorsa, diğer istemciler düzgün şekilde çalışmaya devam edebilirler, bu da tek başarısızlık noktasını engeller. Ek olarak çeşitli istemci uygulamaları inovasyon ve rekabeti teşvik eder, bu da gelişimi beraberinde getirir ve ekosistemdeki tekdüzelik riskini azaltır.
 
-## Daha fazla bilgi \{#futher-reading}
+## Daha fazla bilgi {#futher-reading}
 
 - [Portal Ağı (Devcon Bogota'daki Piper Merriam)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [Portal Ağı discord](https://discord.gg/6XFs56cX)

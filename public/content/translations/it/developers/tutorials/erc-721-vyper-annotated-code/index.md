@@ -11,13 +11,13 @@ skill: beginner
 published: 2021-04-01
 ---
 
-## Introduzione \{#introduction}
+## Introduzione {#introduction}
 
 Lo standard [ERC-721](/developers/docs/standards/tokens/erc-721/) è utilizzato per determinare la proprietà di un Token Non Fungibile (NFT). I token [ERC-20](/developers/docs/standards/tokens/erc-20/) si comportano come una commodity, perché non c'è differenza tra i token individuali. Al contrario, i token ERC-721 sono progettati per risorse simili ma non identiche, come diversi [cat cartoon](https://www.cryptokitties.co/) o titoli di diverse proprietà immobiliari.
 
 In questo articolo analizzeremo [il contratto ERC-721 di Ryuya Nakamura](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy). Questo contratto è scritto in [Vyper](https://vyper.readthedocs.io/en/latest/index.html), un linguaggio per contratti simile a Python, pensato per rendere più difficile scrivere codice non sicuro rispetto a Solidity.
 
-## Il contratto \{#contract}
+## Il contratto {#contract}
 
 ```python
 # @dev Implementation of ERC-721 non-fungible token standard.
@@ -37,7 +37,7 @@ L'interfaccia ERC-721 è creata nel linguaggio Vyper. [Puoi vedere qui la defini
 
 La prima riga importa l'interfaccia, la seconda specifica che la stiamo implementando qui.
 
-### L'interfaccia ERC721Receiver \{#receiver-interface}
+### L'interfaccia ERC721Receiver {#receiver-interface}
 
 ```python
 # Interface for the contract called by safeTransferFrom()
@@ -79,7 +79,7 @@ Per impedire casi la possibilità che un contratto accetti accidentalmente un tr
 
 Questa funzione è una `view`, ovvero può leggere lo stato della blockchain, ma non modificarlo.
 
-### Eventi \{#events}
+### Eventi {#events}
 
 Gli [eventi](https://media.consensys.net/technical-introduction-to-events-and-logs-in-ethereum-a074d65dd61e) sono emessi per informare gli utenti e i server al di fuori della blockchain degli eventi. Nota che il contenuto degli eventi non è disponibile per i contratti sulla blockchain.
 
@@ -133,7 +133,7 @@ Talvolta, è utile avere un _operatore_, che possa gestire tutti i token di un c
 
 Il valore `approved` ci comunica se l'evento è per un'approvazione, o la revoca di un'approvazione.
 
-### Variabili di stato \{#state-vars}
+### Variabili di stato {#state-vars}
 
 Queste variabili contengono lo stato corrente dei token: quali sono disponibili e chi li possiede. Gran parte di questi sono oggetti di `HashMap`, [mappature unidirezionali che esistono tra due tipi](https://vyper.readthedocs.io/en/latest/types.html#mappings).
 
@@ -183,11 +183,11 @@ ERC721_INTERFACE_ID: constant(bytes32) = 0x0000000000000000000000000000000000000
 
 [ERC-165](https://eips.ethereum.org/EIPS/eip-165) specifica un meccanismo con cui un contratto può rivelare come le applicazioni possono comunicare con esso, a quali ERC è conforme. In questo caso, il contratto è conforme a ERC-165 ed ERC-721.
 
-### Funzioni \{#functions}
+### Funzioni {#functions}
 
 Queste sono le funzioni che implementano effettivamente ERC-721.
 
-#### Costruttore \{#constructor}
+#### Costruttore {#constructor}
 
 ```python
 @external
@@ -212,7 +212,7 @@ Su Python e su Vyper, puoi anche creare un commento specificando una stringa su 
 
 Per accedere alle variabili di stato, si usa `self.<variable name>` (di nuovo, come in Python).
 
-#### Funzioni di visualizzazione \{#views}
+#### Funzioni di visualizzazione {#views}
 
 Sono funzioni che non modificano lo stato della blockchain e dunque sono eseguibili liberamente se chiamate esternamente. Se le funzioni di visualizzazione sono chiamate da un contratto, devono comunque esser eseguite su ogni nodo e, dunque, costano gas.
 
@@ -311,7 +311,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 
 Questa funzione verifica se `_operator` può gestire tutti i token del `_owner` in questo contratto. Poiché possono esserci diversi operatori, si tratta di un HashMap a due livelli.
 
-#### Funzioni d'aiuto al trasferimento \{#transfer-helpers}
+#### Funzioni d'aiuto al trasferimento {#transfer-helpers}
 
 Queste funzioni implementano operazioni che fanno parte del trasferimento o della gestione dei token.
 
@@ -428,7 +428,7 @@ Abbiamo questa funzione interna perché esistono due modi per trasferire i token
 
 Per emettere un evento su Vyper, si usa una dichiarazione di `log` ([vedi qui per ulteriori dettagli](https://vyper.readthedocs.io/en/latest/event-logging.html#event-logging)).
 
-#### Funzioni di trasferimento \{#transfer-funs}
+#### Funzioni di trasferimento {#transfer-funs}
 
 ```python
 
@@ -551,7 +551,7 @@ def setApprovalForAll(_operator: address, _approved: bool):
     log ApprovalForAll(msg.sender, _operator, _approved)
 ```
 
-#### Conia nuovi token e distruggi token esistenti \{#mint-burn}
+#### Conia nuovi token e distruggi token esistenti {#mint-burn}
 
 Il conto che ha creato il contratto è il `minter`, il super utente autorizzato a coniare nuovi NFT. Tuttavia, nemmeno lui è autorizzato a bruciare i token esistenti. Può farlo solo il proprietario, o un'entità da autorizzata dal proprietario.
 
@@ -614,11 +614,11 @@ def burn(_tokenId: uint256):
 
 Chiunque è autorizzato a trasferire un token, può bruciarlo. Anche se bruciare un token appare equivalente a trasferirlo all'indirizzo zero, l'indirizzo zero non riceve realmente il token. Ciò ci consente di liberare tutta l'archiviazione usata per il token, riducendo il costo del gas della transazione.
 
-# Usare questo contratto \{#using-contract}
+# Usare questo contratto {#using-contract}
 
 A differenza di Solidity, Vyper non ha un ereditarietà. Si tratta di una scelta progettuale deliberata per rendere il codice più chiaro e quindi più facile da proteggere. Quindi, per creare il tuo contratto ERC-721 in Vyper, prendi [questo contratto](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy) e lo modifichi per implementare la logica di business che desideri.
 
-# Conclusione \{#conclusion}
+# Conclusione {#conclusion}
 
 Per ripasso presentiamo alcune delle idee più importanti in questo contratto:
 

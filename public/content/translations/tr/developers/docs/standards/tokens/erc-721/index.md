@@ -4,7 +4,7 @@ description:
 lang: tr
 ---
 
-## Giriş \{#introduction}
+## Giriş {#introduction}
 
 **Değiştirilemeyen Token nedir?**
 
@@ -16,13 +16,13 @@ ERC-721, NFT için bir standart getirir, başka bir deyişle, bu Token türü be
 
 Evet! Tüm NFT'ler `tokenId` denilen bir `uint256` değişkenine sahiptir, yani herhangi bir ERC-721 sözleşmesi için, `sözleşme adresi, uint256 tokenId` çifti küresel olarak eşsiz olmalıdır. Bununla birlikte, bir dapp girdi olarak `tokenId` kullanan ve çıktı olarak da zombiler, silahlar, yetenekler ya da muhteşem kedicikler gibi havalı bir şeyin görüntüsünü veren bir "dönüştürücüye" sahip olabilir!
 
-## Ön Koşullar \{#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 - [Hesaplar](/developers/docs/accounts/)
 - [Akıllı Sözleşmeler](/developers/docs/smart-contracts/)
 - [Token standartları](/developers/docs/standards/tokens/)
 
-## Şablon \{#body}
+## Şablon {#body}
 
 William Entriken, Dieter Shirley, Jacob Evans ve Nastassia Sachs tarafından Ocak 2018'de önerilen ERC-721 (Ethereum Yorum Talebi 721), Akıllı Sözleşmeler içindeki token'lar için bir API uygulayan bir Değiştirilebilir Token Standardıdır.
 
@@ -32,7 +32,7 @@ Bir Akıllı Sözleşme aşağıdaki yöntemleri ve olayları uygularsa, ERC-721
 
 [EIP-721](https://eips.ethereum.org/EIPS/eip-721)'den:
 
-### Yöntemler \{#methods}
+### Yöntemler {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Bir Akıllı Sözleşme aşağıdaki yöntemleri ve olayları uygularsa, ERC-721
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### Olaylar \{#events}
+### Olaylar {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -54,11 +54,11 @@ Bir Akıllı Sözleşme aşağıdaki yöntemleri ve olayları uygularsa, ERC-721
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### Örnekler \{#web3py-example}
+### Örnekler {#web3py-example}
 
 Ethereum'daki herhangi bir ERC-721 Token Sözleşmesini incelememizi basitleştirmek için bir Standart'ın ne kadar önemli olduğunu görelim. Herhangi bir ERC-721 token'a arayüz oluşturmak için sadece sözleşmenin Uygulama İkili Arayüzü'ne (ABI) ihtiyacımız var. Aşağıda görebileceğiniz gibi az sürtünmeli bir örnek olması için basitleştirilmiş bir ABI kullanacağız.
 
-#### Web3.py Örneği \{#web3py-example}
+#### Web3.py Örneği {#web3py-example}
 
 İlk olarak, [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python kütüphanesini kurduğunuzdan emin olun:
 
@@ -225,7 +225,7 @@ birth_logs = w3.eth.get_logs({
 recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## Popüler NFT'ler \{#popular-nfts}
+## Popüler NFT'ler {#popular-nfts}
 
 - [Etherscan NFT Tracker](https://etherscan.io/tokens-nft), aktarım hacmine göre Ethereum üzerindeki en yüksek NFT'leri sıralar.
 - [CryptoKitties](https://www.cryptokitties.co/) yetiştirilebilen, toplanabilen ve aşırı şirin olan CryptoKitties dediğimiz yaratıklar çevresinde gelişen bir oyundur.
@@ -236,7 +236,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Gods Unchained Cards](https://godsunchained.com/), oyun içi varlıklara gerçek sahiplik getirmek için NFT'leri kullanan Ethereum blok zinciri üzerindeki bir Kart Ticareti Oyunudur.
 - [Bored Ape Yacht Club](https://boredapeyachtclub.com), kanıtlanabilir derecede ender bir sanat eseri olmasının yanı sıra, kulübe üyelik simgesi olarak hareket eden ve topluluk çabalarının sonucu olarak zamanla artan üye avantajları ve faydaları sağlayan 10.000 benzersiz NFT'den oluşan bir koleksiyondur.
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [EIP-721: ERC-721 Değiştirilemez Token Standardı](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 Belgeleri](https://docs.openzeppelin.com/contracts/3.x/erc721)

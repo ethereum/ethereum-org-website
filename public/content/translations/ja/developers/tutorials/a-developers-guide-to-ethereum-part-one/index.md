@@ -14,7 +14,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 これまで耳にしてきたイーサリアムの世界へ飛び込む準備はできましたか? この投稿では、ブロックチェーンの基礎について簡単に説明し、次に、シミュレートされたイーサリアムノードと対話(ブロックデータの読み取り、アカウント残高の確認、トランザクションの送信)する方法について説明します。 その過程で、アプリを構築する従来の方法とこの新しい分散型パラダイムの違いに焦点を当てます。
 
-## 前提条件(ソフト) \{#soft-prerequisites}
+## 前提条件(ソフト) {#soft-prerequisites}
 
 この投稿は、幅広いデベロッパーに参照していただきたいと考えています。 [ Python ツール](/developers/docs/programming-languages/python/)を使用しますが、これらは概念を伝える手段にすぎませんので、Python デベロッパーでなくても問題ありません。 しかし、ここでは皆さんが Python についての知識があることを前提に話を進めますので、すぐにイーサリアムに特化した部分の説明に移ります。
 
@@ -25,7 +25,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 - Python バージョン 3.6 以降がマシンにインストールされている([仮想環境](https://realpython.com/effective-python-environment/#virtual-environments)の使用を強くお勧めします)
 - Python のパッケージインストーラーである`pip`を使用したことがある これらのうちあてはまらないものがある方、あるいはこの記事にあるコードを実行することがない方でも十分に理解できる内容です。
 
-## ブロックチェーンについて \{#blockchains-briefly}
+## ブロックチェーンについて {#blockchains-briefly}
 
 イーサリアムを説明する方法はたくさんありますが、その中心となるのはブロックチェーンです。 ブロックチェーンは一連のブロックで構成されています。まずはその説明から始めましょう。 簡単に言うと、イーサリアムブロックチェーンの各ブロックは、数値などのメタデータとトランザクションのリストにすぎません。 JSON 形式では、次のようになります。
 
@@ -51,7 +51,7 @@ _ブロックチェーンは基本的にはリンクリストであり、各ブ�
 
 ブロックチェーンにおいて、あるユーザーから別のユーザーに本当に送金されたのかを検証するための唯一の手段は、そのブロックチェーンに固有の(そのブロックチェーンで作成され管理される)通貨を使用することです。 イーサリアムでは、この通貨は「イーサ(ETH)」と呼ばれます。イーサリアムブロックチェーンには、アカウント残高に関する唯一の公式な記録が含まれています。
 
-## 新しいパラダイム \{#a-new-paradigm}
+## 新しいパラダイム {#a-new-paradigm}
 
 この新しい分散型技術スタックは、新しいデベロッパーツールを生み出しました。 このようなツールは多くのプログラミング言語に存在しますが、今回は Python を例にとって説明します。 繰り返しになりますが、Python 以外の言語をご使用の場合でも、内容を理解するのはそれほど難しいことではありません。
 
@@ -75,7 +75,7 @@ w3.eth.get_block('latest')
 w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 ```
 
-## インストール \{#installation}
+## インストール {#installation}
 
 このチュートリアルでは、Python インタプリタ内で作業します。 ディレクトリ、ファイル、クラス、関数は作成しません。
 
@@ -101,7 +101,7 @@ $ pip install 'web3[tester]'
 
 これで準備完了です。
 
-## サンドボックスの起動 \{#spin-up-a-sandbox}
+## サンドボックスの起動 {#spin-up-a-sandbox}
 
 ターミナルで`ipython`を実行し、新しい Python 環境を開きます。 これは、`python`を実行することに相当しますが、より多くの機能を使用できます。
 
@@ -121,7 +121,7 @@ In [1]:
 In [1]: from web3 import Web3
 ```
 
-## Web3 モジュールの紹介 \{#introducing-the-web3-module}
+## Web3 モジュールの紹介 {#introducing-the-web3-module}
 
 [Web3](https://web3py.readthedocs.io/en/stable/overview.html#base-api)モジュールはイーサリアムへの入り口であるだけでなく、便利な関数も提供しています。 いくつか見ていきましょう。
 
@@ -150,7 +150,7 @@ Out[3]: Decimal('0.5')
 
 Web3 モジュールのその他のユーティリティメソッドとしては、データ形式のコンバータ(例: [`toHex`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toHex)) 、アドレスヘルパー(例: [`isAddress`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.isAddress)) 、ハッシュ関数(例: [`keccak`](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.keccak))が挙げられます。 これらについては、この連載の後半で取り上げます。 利用可能なすべてのメソッドとプロパティを表示するには、`Web3.`と入力し、 ピリオドの後でタブキーを 2 回押して IPython の自動補完機能を利用してください。
 
-## チェーンとの通信 \{#talk-to-the-chain}
+## チェーンとの通信 {#talk-to-the-chain}
 
 便利な手法も素晴らしいですが、ブロックチェーンの話に移りましょう。 次のステップでは、Web3.py がイーサリアムノードと通信するように設定します。 ここでは、IPC、HTTP、または WebSocket プロバイダーを使用することができます。
 
@@ -175,7 +175,7 @@ In [4]: w3 = Web3(Web3.EthereumTesterProvider())
 
 これで「チェーンサーフィン」をする準備ができました! そのような呼び方をする人はいないと思いますが、 そう呼ぶことにしました。 さあ、クイックツアーを始めましょう。
 
-## クイックツアー \{#the-quick-tour}
+## クイックツアー {#the-quick-tour}
 
 最初に、正常に接続できているかサニティチェックをします。
 
@@ -186,7 +186,7 @@ Out[5]: True
 
 テスタープロバイダーを使用しているため、これはあまり有用なテストではありませんが、失敗した場合は、`w3`変数をインスタンス化するときに間違った入力をした可能性があります。 内側の括弧、つまり`Web3.EthereumTesterProvider()`が含まれていることを再確認してください。
 
-## ツアー #1: [アカウント](/developers/docs/accounts/) \{#tour-stop-1-accounts}
+## ツアー #1: [アカウント](/developers/docs/accounts/) {#tour-stop-1-accounts}
 
 テスタープロバイダーでは便宜上、複数のアカウントが作成されており、テスト用の ETH が入金されています。
 
@@ -217,7 +217,7 @@ Out[8]: Decimal('1000000')
 
 テスト用とはいえ 100 万 ETH です。依然として素晴らしい額です。
 
-## ツアー #2: ブロックデータ \{#tour-stop-2-block-data}
+## ツアー #2: ブロックデータ {#tour-stop-2-block-data}
 
 このシミュレートされたブロックチェーンの状態を見てみましょう。
 
@@ -238,7 +238,7 @@ Out[9]: AttributeDict({
 - まだ何も作業を行っていないため、同じ理由で、`transactions`は空のリストになります。 最初のブロックは**空のブロック**であり、チェーンを開始するためだけに使用されています。
 - `parentHash`は、単なる一連の空バイトである点に注意してください。 これは、**始まりのブロック**とも呼ばれる、チェーンの最初のブロックであることを意味します。
 
-## ツアー #3: [トランザクション](/developers/docs/transactions/) \{#tour-stop-3-transactions}
+## ツアー #3: [トランザクション](/developers/docs/transactions/) {#tour-stop-3-transactions}
 
 保留中のトランザクションが存在するまで、ゼロのブロックで止まっているので、トランザクションを作成してみましょう。 あるアカウントから別のアカウントに、テスト用の ETH(ether)を少し送金します。
 
@@ -290,6 +290,6 @@ Out[13]: 1000003000000000000000000
 
 <FeaturedText>注: パブリックネットワークにおいてトランザクションフィーは、ネットワークの需要やどれだけ迅速にトランザクションを処理する必要があるのかによって変動します。 フィー(手数料)の計算方法の内訳に興味がある場合は、<a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">ブロックに含まれるトランザクションの仕組み</a>に関する以前の投稿をご覧ください。</FeaturedText>
 
-## ちょっと一息 \{#and-breathe}
+## ちょっと一息 {#and-breathe}
 
 しばらく続けたので、ここで一息つきたいところです。 イーサリアムの世界はまだまだ続き、この連載の第 2 回へと探索は続きます。 今後のコンセプト: 実際のノードへの接続、スマートコントラクト、トークン。 質問はありますか? 教えてください! 皆様からのご意見は、今後の活動に反映させていきます。 [Twitter](https://twitter.com/wolovim)でリクエストを受け付けています。

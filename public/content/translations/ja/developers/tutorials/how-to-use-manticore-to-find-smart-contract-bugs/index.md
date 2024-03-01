@@ -17,11 +17,11 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 このチュートリアルでは、Manticore を使用してスマートコントラクトのバグを自動で特定する方法を学びます。
 
-## インストール \{#installation}
+## インストール {#installation}
 
 Manticore を使用するには、Python 3.6 が必要です。 pip でインストールすることも、Docker を使用してインストールすることもできます。
 
-### Docker で Manticore をインストールする場合 \{#manticore-through-docker}
+### Docker で Manticore をインストールする場合 {#manticore-through-docker}
 
 ```bash
 docker pull trailofbits/eth-security-toolbox
@@ -37,7 +37,7 @@ solc-select 0.5.11
 cd /home/trufflecon/
 ```
 
-### pip で Manticore をインストールする場合 \{#manticore-through-pip}
+### pip で Manticore をインストールする場合 {#manticore-through-pip}
 
 ```bash
 pip3 install --user manticore
@@ -45,7 +45,7 @@ pip3 install --user manticore
 
 solc 0.5.11 を推奨します。
 
-### スクリプトを実行する \{#running-a-script}
+### スクリプトを実行する {#running-a-script}
 
 Python 3 では、以下の Python スクリプトを実行します：
 
@@ -53,9 +53,9 @@ Python 3 では、以下の Python スクリプトを実行します：
 python3 script.py
 ```
 
-## 動的シンボリック実行の概要 \{#introduction-to-dynamic-symbolic-execution}
+## 動的シンボリック実行の概要 {#introduction-to-dynamic-symbolic-execution}
 
-### 動的シンボリック実行とは何か \{#dynamic-symbolic-execution-in-a-nutshell}
+### 動的シンボリック実行とは何か {#dynamic-symbolic-execution-in-a-nutshell}
 
 動的シンボリック実行（DSE）は、高度な意味認識に基づき状態空間を探索するプログラム解析手法です。 この手法は、`path predicates`と呼ばれる数式で表される「プログラム・パス」を発見するものです。 概念的には、この手法は 2 つのステップによりパス述語を操作します：
 
@@ -64,7 +64,7 @@ python3 script.py
 
 このアプローチでは、具体値で実行する際に、特定されたすべてのプログラムの状態をトリガーしうるという意味で誤検出が発生しません。 例えば、解析において整数のオーバーフローが特定された場合、このオーバーフローは確実に再現可能です。
 
-### パス述語の具体例 \{#path-predicate-example}
+### パス述語の具体例 {#path-predicate-example}
 
 DSE の仕組みを理解するために、以下の例を考えてみましょう。
 
@@ -85,7 +85,7 @@ function f(uint a){
 
 それぞれのパス述語は、いわゆる[SMT ソルバー](https://wikipedia.org/wiki/Satisfiability_modulo_theories)に投入できる数式であり、SMT ソルバーはこの等式を解決しようとします。 `第1のパス`では、ソルバーは、このパスが`a = 65`で探索可能だと返します。 `第2のパス`では、ソルバーは、`a`に対し、65 以外の任意の値を与えることができます（例： `a = 0`）。
 
-### プロパティを検証する \{#verifying-properties}
+### プロパティを検証する {#verifying-properties}
 
 Manticore では、各パスの実行全体を完全に制御できます。 このため、ほぼすべての事項に対して任意の制限を加えることができます。 この制御を通じて、コントラクトのプロパティを作成することができます。
 
@@ -127,7 +127,7 @@ function safe_add(uint a, uint b) returns(uint c){
 
 このように、DSE はコード上の任意の制限について検証できるパワフルなツールです。
 
-## Manticore で実行する \{#running-under-manticore}
+## Manticore で実行する {#running-under-manticore}
 
 以下に、Manticore API を用いて、スマートコントラクトを探索する方法を紹介します。 対象となるスマートコントラクトは、[`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol)です。
 
@@ -143,7 +143,7 @@ contract Simple {
 }
 ```
 
-### スタンドアロンの探索を実行する \{#run-a-standalone-exploration}
+### スタンドアロンの探索を実行する {#run-a-standalone-exploration}
 
 以下のコマンドから、スマートコントラクト上で直接 Manticore を実行できます（`project`は、Solidity ファイルでもプロジェクトディレクトリでも構いません）。
 
@@ -192,11 +192,11 @@ _探索サマリーにおける「f(!=65)」は、f が 65 以外の値で呼び
 
 高速な探索を行いたい場合は、`--quick-mode`フラグを使用してください（バグ検出、ガス代計算等が省略されます）。
 
-### Manticore API を使ってスマートコントラクトを操作する \{#manipulate-a-smart-contract-through-the-api}
+### Manticore API を使ってスマートコントラクトを操作する {#manipulate-a-smart-contract-through-the-api}
 
 このセクションでは、Manticore Python API を使ってスマートコントラクトを操作する方法について詳しく説明します。 Python の拡張子である`*.py`を持つ新規ファイルを作成し、API コマンド（基本知識については以下で説明します）をファイルに追加して必要なコードを書いてから、`$ python3 *.py`コマンドで実行します。 また、Python のコンソールから直接コマンドを実行することもできます。コンソールを起動する際のコマンドは、`$ python3`です。
 
-### アカウントを作成する \{#creating-accounts}
+### アカウントを作成する {#creating-accounts}
 
 まず、以下のコマンドを持つ新規のブロックチェーンを立ち上げる必要があります。
 
@@ -229,18 +229,18 @@ contract Simple {
 contract_account = m.solidity_create_contract(source_code, owner=user_account)
 ```
 
-#### まとめ \{#summary}
+#### まとめ {#summary}
 
 - [m.create_account](https://manticore.readthedocs.io/en/latest/evm.html?highlight=create_account#manticore.ethereum.ManticoreEVM.create_account)と[m.solidity_create_contract](https://manticore.readthedocs.io/en/latest/evm.html?highlight=solidity_create#manticore.ethereum.ManticoreEVM.create_contract)を使用して、ユーザーアカウントとコントラクトアカウントを作成できます。
 
-### トランザクションを実行する \{#executing-transactions}
+### トランザクションを実行する {#executing-transactions}
 
 Manticore は、2 種類のトランザクションに対応しています：
 
 - 生トランザクション：すべての関数を探索します。
 - 名前付きトランザクション：1 つの関数だけを探索します。
 
-#### 生トランザクション \{#raw-transaction}
+#### 生トランザクション {#raw-transaction}
 
 生トランザクションは、[m.transaction](https://manticore.readthedocs.io/en/latest/evm.html?highlight=transaction#manticore.ethereum.ManticoreEVM.transaction)で実行されます。
 
@@ -269,7 +269,7 @@ m.transaction(caller=user_account,
 
 データがシンボリック値の場合、Manticore は、トランザクションの実行時にコントラクトに含まれるすべての関数を探索します。 関数がどのように選択されるかを理解するには、[Hands on the Ethernaut CTF](https://blog.trailofbits.com/2017/11/06/hands-on-the-ethernaut-ctf/)の記事におけるフォールバック関数についての説明を参照してください。
 
-#### 名前付きトランザクション \{#named-transaction}
+#### 名前付きトランザクション {#named-transaction}
 
 関数は、名前から実行できます。 `f(uint var)`につき、シンボリック値を用いて、user_account から、0 ether で実行する場合、以下を使用します：
 
@@ -280,13 +280,13 @@ contract_account.f(symbolic_var, caller=user_account, value=0)
 
 トランザクションの`value`を指定しない場合、デフォルトでは 0 になります。
 
-#### まとめ \{#summary-1}
+#### まとめ {#summary-1}
 
 - トランザクションの引数は、具体値またはシンボリック値のどちらでもよい。
 - 生トランザクションは、すべての関数を探索する。
 - 関数は、名前で呼び出すことができる。
 
-### ワークスペース \{#workspace}
+### ワークスペース {#workspace}
 
 `m.workspace`は、生成されたすべてのファイルにおける出力ディレクトリとして使用されるディレクトリです。
 
@@ -294,11 +294,11 @@ contract_account.f(symbolic_var, caller=user_account, value=0)
 print("Results are in {}".format(m.workspace))
 ```
 
-### 探索を終了する \{#terminate-the-exploration}
+### 探索を終了する {#terminate-the-exploration}
 
 探索を停止するには、[m.finalize()](https://manticore.readthedocs.io/en/latest/evm.html?highlight=finalize#manticore.ethereum.ManticoreEVM.finalize)を使用します。 このメソッドが呼び出された時点で、さらにトランザクションは送信されなくなり、Manticore は探索済みの各パスにつきテストケースを生成します。
 
-### Manticore を使った実行のまとめ \{#summary-running-under-manticore}
+### Manticore を使った実行のまとめ {#summary-running-under-manticore}
 
 上記のステップをまとめると、以下のようになります：
 
@@ -322,7 +322,7 @@ m.finalize() # stop the exploration
 
 紹介したすべてのコードは、[`example_run.py`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example_run.py)でアクセスできます。
 
-## スローイングパスを取得する \{#getting-throwing-paths}
+## スローイングパスを取得する {#getting-throwing-paths}
 
 次に、 `f()`において例外を発生させるパスに対する、特定のインプットを生成します。 ここでも、対象となるスマートコントラクトは[`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol)です。
 
@@ -337,7 +337,7 @@ contract Simple {
 }
 ```
 
-### 状態情報を使用する \{#using-state-information}
+### 状態情報を使用する {#using-state-information}
 
 実行された各パスには、それぞれのブロックチェーンの状態が含まれています。 状態は、ready または killed のどちらかです。killed は、THROW または REVERT に達したことを意味します。
 
@@ -363,7 +363,7 @@ data = state.platform.transactions[0].return_data
 data = ABI.deserialize("uint", data)
 ```
 
-### テストケースの生成方法 \{#how-to-generate-testcase}
+### テストケースの生成方法 {#how-to-generate-testcase}
 
 テストケースを生成するには、「[m.generate_testcase(state, name)](https://manticore.readthedocs.io/en/latest/evm.html?highlight=generate_testcase#manticore.ethereum.ManticoreEVM.generate_testcase)」を使用します。
 
@@ -371,7 +371,7 @@ data = ABI.deserialize("uint", data)
 m.generate_testcase(state, 'BugFound')
 ```
 
-### まとめ \{#summary-2}
+### まとめ {#summary-2}
 
 - 状態は、m.all_states でイテレートできる
 - `state.platform.get_balance(account.address)`は、アカウント残高を返す
@@ -379,7 +379,7 @@ m.generate_testcase(state, 'BugFound')
 - `transaction.return_data`は、返されたデータを示す
 - `m.generate_testcase(state, name)`は、状態に対する入力を生成する
 
-### スローイングパス取得のまとめ \{#summary-getting-throwing-path}
+### スローイングパス取得のまとめ {#summary-getting-throwing-path}
 
 ```python
 from manticore.ethereum import ManticoreEVM
@@ -407,7 +407,7 @@ for state in m.terminated_states:
 
 _terminated_state が返したすべての状態は結果の値が REVERT または INVALID であるため、上記よりも簡略なスクリプトを作成することもできました。上記のスクリプト例は、Manticore API の操作方法を説明することを目的としたものです。_
 
-## 制約を追加する \{#adding-constraints}
+## 制約を追加する {#adding-constraints}
 
 次に、探索を制限する方法について確認しましょう。 ここでは、`f()`のドキュメンテーションにおいて、この関数は決して`a == 65`で呼び出されることはないと記載されていると想定します。このため、`a == 65`のバグは、実際にはバグではありません。 ここでも、対象のスマートコントラクトは[`example.sol`](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/manticore/examples/example.sol)です。
 
@@ -422,7 +422,7 @@ contract Simple {
 }
 ```
 
-### 演算子 \{#operators}
+### 演算子 {#operators}
 
 [演算子](https://github.com/trailofbits/manticore/blob/master/manticore/core/smtlib/operators.py)モジュールは、制約を容易に操作する上で役立ちます。特に、以下の操作を提供します：
 
@@ -445,11 +445,11 @@ from manticore.core.smtlib import Operators
 last_return = Operators.CONCAT(256, *last_return)
 ```
 
-### 制約 \{#state-constraint}
+### 制約 {#state-constraint}
 
 制約の対象は、グローバルあるいは特定の状態のみのどちらでも構いません。
 
-#### グローバル制約 \{#state-constraint}
+#### グローバル制約 {#state-constraint}
 
 グローバル制約を追加するには、`m.constraint(constraint)`を使用します。 例えば以下のように、シンボリックアドレスからコントラクトを呼び出し、このアドレスを特定の値に制限することができます：
 
@@ -462,11 +462,11 @@ m.transaction(caller=user_account,
               value=0)
 ```
 
-#### 状態に対する制約 \{#state-constraint}
+#### 状態に対する制約 {#state-constraint}
 
 特定の状態に対して制約を追加するには、[state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain)を使用します。 特定の状態における一部のプロパティをチェックしてから、状態に制限を追加することができます。
 
-### 制約を確認する \{#checking-constraint}
+### 制約を確認する {#checking-constraint}
 
 制約が実行可能かどうかを確認するには、`solver.check(state.constraints)`を使用します。 例えば以下では、symbolic_value が「65」以外の値でなければならないという制約を追加した上で、状態が実行可能かどうかをチェックします。
 
@@ -476,7 +476,7 @@ if solver.check(state.constraints):
     # state is feasible
 ```
 
-### 制約追加のまとめ \{#summary-adding-constraints}
+### 制約追加のまとめ {#summary-adding-constraints}
 
 これまでのコードに制約を追加すると、以下のようになります：
 

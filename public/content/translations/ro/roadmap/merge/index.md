@@ -15,7 +15,7 @@ summaryPoint4: Fuziunea a redus consumul de energie al Ethereum cu aproximativ 9
   Fuziunea a avut loc în 15 septembrie 2022. Aceasta a finalizat tranziția Ethereum la consensul cu dovada mizei, scoțând din uz oficial dovada muncii și reducând consumul de energie cu aproximativ 99,95%.
 </UpgradeStatus>
 
-## Ce este Fuziunea? \{#what-is-the-merge}
+## Ce este Fuziunea? {#what-is-the-merge}
 
 Fuziunea a reprezentat combinarea stratului de execuție original al Ethereum (Rețeaua principală care a existat încă de la [geneză](/history/#frontier)) cu noul strat de consens cu dovada mizei, Lanțul Beacon. Acesta a eliminat nevoie de minare cu un consum mare de energie și, în schimb, a permis ca rețeaua să fie securizată folosind miza ETH. Realizarea viziunii Ethereum a fost un pas cu adevărat extraordinar: mai multă scalabilitate, mai multă securitate și mai multă durabilitate.
 
@@ -27,7 +27,7 @@ Inițial, [Lanțul Beacon](/roadmap/beacon-chain/) a fost lansat separat de [Re�
 
 Imaginează-ți Ethereum ca o navă spațială care a fost lansată înainte de a fi fost foarte bine pregătită pentru o călătorie interstelară. Prin Lanțul Beacon, comunitatea a construit un motor nou și o carenă întărită. După efectuarea unor teste majore, a venit timpul pentru schimbarea motorului vechi cu cel nou în timpul călătoriei. Aceasta e permis fuziunea motorului nou, mai eficient în nava existentă, ceea ce a dus la câștigarea unui număr mare de ani lumină și la cucerirea universului.
 
-## Fuzionarea cu Mainnet \{#merging-with-mainnet}
+## Fuzionarea cu Mainnet {#merging-with-mainnet}
 
 Dovada muncii a securizat Rețeaua principală Ethereum de la geneză până la Fuziune. Aceasta a permis blockchainului Ethereum pe care îl cunoaștem cu toții să vadă lumina zilei în iulie 2015, cu toate funcțiile sale familiare: tranzacții, contracte inteligente, conturi etc.
 
@@ -43,7 +43,7 @@ Niciun istoric nu a fost pierdut în Fuziune. Când Rețeaua principală a fuzio
 Această tranziție la dovada mizei a schimbat felul în care este emis eterul. Aflați mai multe despre <a href="/roadmap/merge/issuance/">emiterea de eter înainte și după Fuziune</a>.
 </InfoBanner>
 
-### Utilizatori și deținători \{#users-holders}
+### Utilizatori și deținători {#users-holders}
 
 **Fuziunea nu a schimbat nimic pentru deținători/uilizatori.**
 
@@ -53,7 +53,7 @@ _Acest lucru trebuie repetat_: în calitate de utilizator sau deținător de ETH
 
 [Mai multe despre securitatea Ethereum](/security/#eth2-token-scam)
 
-### Operatorii de noduri și dezvoltatorii de aplicații \{#node-operators-dapp-developers}
+### Operatorii de noduri și dezvoltatorii de aplicații {#node-operators-dapp-developers}
 
 {
 <ExpandableCard
@@ -107,15 +107,15 @@ Pentru mai multe informații, consultați această postare a lui Tim Beiko despr
 </ExpandableCard>
 }
 
-## Fuziunea și consumul de energie \{#merge-and-energy}
+## Fuziunea și consumul de energie {#merge-and-energy}
 
 Fuziunea a marcat finalul dovezii muncii pentru Ethereum și începutul unei ere Ethereum mai durabile, mai favorabile pentru mediu. Consumul de energie al Ethereum a scăzut cu aproximativ 99,95%, transformând Ethereum într-un blockchain verde. Află mai multe despre [Consumul de energie al Ethereum](/energy-consumption/).
 
-## Fuziunea și scalarea \{#merge-and-scaling}
+## Fuziunea și scalarea {#merge-and-scaling}
 
 De asemenea, Fuziunea a creat posibilitatea pentru și mai multe modernizări de scalabilitate care nu erau posibile în sistemul cu dovada muncii, aducând Ethereum cu un pas mai aproape de a atinge amploarea, securitatea și durabilitatea descrise în [Viziunea Ethereum](/roadmap/vision/).
 
-## Neînțelegeri despre Fuziune \{#misconceptions}
+## Neînțelegeri despre Fuziune {#misconceptions}
 
 {
 <ExpandableCard
@@ -191,7 +191,7 @@ APR este dinamic în mod intenționat, permițând stakerilor să găsească un 
 </ExpandableCard>
 }
 
-## Ce s-a întâmplat cu „Eth2”? \{#eth2}
+## Ce s-a întâmplat cu „Eth2”? {#eth2}
 
 Termenul „Eth” a devenit perimat. După fuzionarea „Eth1” și „Eth2” într-un singur lanț, nu mai există nevoia de a distinge între două rețele Ethereum. Există doar Ethereum.
 
@@ -204,11 +204,11 @@ Aceste actualizări ale terminologiei modifică numai convențiile pentru denumi
 
 [Aflați mai multe despre noua denumire 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## Relațiile dintre actualizări \{#relationship-between-upgrades}
+## Relațiile dintre actualizări {#relationship-between-upgrades}
 
 Toate actualizările Ethereum se află într-o anumită corelație. Să recapitulăm cum este corelată Fuziunea cu celelalte actualizări.
 
-### Fuziunea și Lanțul Beacon \{#merge-and-beacon-chain}
+### Fuziunea și Lanțul Beacon {#merge-and-beacon-chain}
 
 Fuziunea reprezintă adoptarea formală a Lanțului Beacon ca noul strat de consens pentru stratul de execuție original al Rețelei principale. De la Fuziune, validatorii sunt alocați pentru a securiza Rețeaua principală Ethereum, iar minarea pe [dovada muncii](/developers/docs/consensus-mechanisms/pow/) nu mai este un mijloc valid de producere a blocurilor.
 
@@ -218,13 +218,13 @@ Fuziunea reprezintă adoptarea formală a Lanțului Beacon ca noul strat de cons
   Lanțul Beacon
 </ButtonLink>
 
-### Fuziunea și actualizarea Shanghai \{#merge-and-shanghai}
+### Fuziunea și actualizarea Shanghai {#merge-and-shanghai}
 
 Pentru a simplifica și maximiza o tranziție rapidă și de succes la dovada mizei, modernizarea Fuziune nu a inclus anumite funcții anticipate, precum posibilitatea de a retrage ETH mizat. Actualizarea Shanghai este planificată să urmeze Fuziunii, ceea ce va permite stakerilor să efectueze retragerea.
 
 Rămâi la curent cu [planificarea actualizării Shanghai pe GitHub](https://github.com/ethereum/pm/issues/450) sau pe [Blogul pentru cercetare și dezvoltare al Fundației Ethereum](https://blog.ethereum.org/category/research-and-development/). Curioșii pot afla mai multe despre [Ce se întâmplă după Fuziune](https://youtu.be/7ggwLccuN5s?t=101), o prezentare efectuată de Vitalik la evenimentul ETHGlobal din aprilie 2021.
 
-### Fuziunea și fragmentarea \{#merge-and-data-sharding}
+### Fuziunea și fragmentarea {#merge-and-data-sharding}
 
 Inițial, se prevedea ca fragmentarea să fie implementată înainte ca Fuziunea să rezolve problema scalabilității. Cu toate acestea, odată cu avântul [nivelului 2 al soluțiilor de scalare](/layer-2/), prioritatea s-a mutat pe schimbarea dovezii muncii cu dovada mizei.
 
@@ -234,7 +234,7 @@ Planurile pentru fragmentare evoluează rapid, dar, având în vedere apariția 
   Fragmentarea
 </ButtonLink>
 
-## Referințe suplimentare \{#further-reading}
+## Referințe suplimentare {#further-reading}
 
 {
 <MergeArticleList />

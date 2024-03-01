@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Un nodo de archivo es una instancia de un cliente Ethereum configurado para construir un archivo de todos los estados históricos. Es una herramienta útil para ciertos casos de uso, pero podría ser más difícil de ejecutar que un nodo completo.
 
-## Requisitos previos \{#prerequisites}
+## Requisitos previos {#prerequisites}
 
 Debería entender el concepto de un [nodo en Ethereum](/developers/docs/nodes-and-clients/), [su arquitectura](/developers/docs/nodes-and-clients/node-architecture/), [estrategias de sincronización](/developers/docs/nodes-and-clients/#sync-modes), prácticas de [ejecución](/developers/docs/nodes-and-clients/run-a-node/) y [usarlas](/developers/docs/apis/json-rpc/).
 
@@ -68,13 +68,13 @@ Para una mayor estabilidad y seguridad en la prevención de la corrupción accid
 
 Durante la sincronización inicial, los clientes en modo de archivo ejecutarán todas las transacciones desde el origen. La velocidad de ejecución está limitada principalmente por la CPU, por lo que una CPU más rápida puede ayudar con el tiempo de sincronización inicial. En un ordenador de usuario normal, la sincronización inicial puede tardar hasta un mes.
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [Nodo completo de Ethereum frente a nodo de archivo](https://www.quicknode.com/guides/infrastructure/ethereum-full-node-vs-archive-node), _QuickNode, septiembre de 2022_
 - [Construya su propio nodo de archivo de Ethereum](https://tjayrush.medium.com/building-your-own-ethereum-archive-node-72c014affc09), _Thomas Jay Rush, agosto de 2021_
 - [Cómo configurar Erigon, el RPC de Erigon y TrueBlocks (scrape y API) como servicios](https://magnushansson.xyz/blog_posts/crypto_defi/2022-01-10-Erigon-Trueblocks) _– Magnus Hansson, actualizado en septiembre de 2022_
 
-## Temas relacionados \{#related-topics}
+## Temas relacionados {#related-topics}
 
 - [ Nodos y clientes](/developers/docs/nodes-and-clients/)
 - [Ejecución de un nodo](/developers/docs/nodes-and-clients/run-a-node/)

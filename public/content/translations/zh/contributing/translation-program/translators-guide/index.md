@@ -4,7 +4,7 @@ lang: zh
 description: 适用于 Ethereum.org 翻译人员的说明和技巧
 ---
 
-# Ethereum.org 翻译风格指南 \{#style-guide}
+# Ethereum.org 翻译风格指南 {#style-guide}
 
 Ehereum.org 翻译风格指南包含一些最重要的指南、说明和翻译技巧，帮助我们对网站进行本地化。
 
@@ -12,13 +12,13 @@ Ehereum.org 翻译风格指南包含一些最重要的指南、说明和翻译�
 
 如果您有任何问题、建议或反馈，请随时通过 translations@ethereum.org 与我们联系，在 Crowdin 上向 @ethdotorg 发送消息，或 [ 加入我们的 Discord](https://discord.gg/ethereum-org)，您可以在其中通过#translations 频道向我们发送消息或联系任何团队成员。
 
-## 使用 Crowdin \{#using-crowdin}
+## 使用 Crowdin {#using-crowdin}
 
 您可以在[翻译计划页面](/contributing/translation-program/#how-to-translate)上找到有关如何在 Crowdin 中加入项目以及如何使用 Crowdin 在线编辑器的基本说明。
 
 如果您想了解更多关于 Crowdin 并使用它的一些高级功能，[Crowdin 知识库](https://support.crowdin.com/online-editor/)包含很多所有 Crowdin 功能的深入指南和概述。
 
-## 抓取信息的实质内容 \{#capturing-the-essence}
+## 抓取信息的实质内容 {#capturing-the-essence}
 
 当翻译 ethereum.org 内容时，避免直译。
 
@@ -28,7 +28,7 @@ Ehereum.org 翻译风格指南包含一些最重要的指南、说明和翻译�
 
 建议您阅读整个句子并对其进行调整以适应目标语言的惯例，而不是逐字翻译源文本。
 
-## 正式与非正式 \{#formal-vs-informal}
+## 正式与非正式 {#formal-vs-informal}
 
 我们使用正式的地址形式，这对所有访客来说始终是礼貌和适当的。
 
@@ -36,13 +36,13 @@ Ehereum.org 翻译风格指南包含一些最重要的指南、说明和翻译�
 
 大多数印欧语和亚非语语言使用特定性别的第二人称人称代词，以区分男性和女性。 在称呼用户或使用所有格代词时，我们可以避免假设访问者的性别，因为正式的地址形式通常适用且一致，无论他们如何识别。
 
-## 简单明了的词汇和意思 \{#simple-vocabulary}
+## 简单明了的词汇和意思 {#simple-vocabulary}
 
 我们的目标是让尽可能多的人能够理解网站上的内容。
 
 在大多数情况下，这可以通过使用易于理解的简短单词轻松实现。 如果您的语言中具有相同含义的某个单词有多种可能的翻译，那么最好的选择通常是清楚地反映含义的最短单词。
 
-## 书写系统 \{#writing-system}
+## 书写系统 {#writing-system}
 
 Ethereum.org 提供多种语言版本，使用替代拉丁文的书写系统（或书写脚本）。
 
@@ -54,7 +54,7 @@ Ethereum.org 提供多种语言版本，使用替代拉丁文的书写系统（�
 
 **以上规则不适用于通常不应翻译专有名词的语言。**
 
-## 翻译页面元数据 \{#translating-metadata}
+## 翻译页面元数据 {#translating-metadata}
 
 某些页面包含页面上的元数据，例如“title”、“lang”、“description”、“sidebar”等。
 
@@ -72,7 +72,7 @@ Ethereum.org 提供多种语言版本，使用替代拉丁文的书写系统（�
 - 印地语 - hi
 - 西班牙语 - es
 
-## 外文标题 \{#external-articles}
+## 外文标题 {#external-articles}
 
 一些字符串包含外部文章的标题。 我们的大多数开发人员文档页面都包含指向外部文章的链接，以供进一步阅读。 无论文章的语言如何，都需要翻译包含文章标题的字符串，以确保以他们的语言查看页面的访问者获得更一致的用户体验。
 
@@ -80,7 +80,7 @@ Ethereum.org 提供多种语言版本，使用替代拉丁文的书写系统（�
 
 ![Sidebar.png 中的文章标题](./article-titles-in-sidebar.png) ![Editor.png 中的文章标题](./article-titles-in-editor.png)
 
-## Crowdin 警告 \{#crowdin-warnings}
+## Crowdin 警告 {#crowdin-warnings}
 
 Crowdin 有一个内置功能，可以在翻译人员即将出错时发出警告。 在保存翻译之前，如果您忘记在译文中加上原文中的标签、翻译了不应翻译的元素、添加了多个连续的空格、忘记结尾标点等，Crowdin 会自动提醒您。 如果您看到这样的警告，请返回并仔细检查建议的翻译。
 
@@ -88,7 +88,7 @@ Crowdin 有一个内置功能，可以在翻译人员即将出错时发出警告
 
 当您忘记在翻译中添加标签时出现 Crowdin 警告的示例： ![Crowdin 警告示例](./crowdin-warning-example.png)
 
-## 处理标签和代码片段 \{#dealing-with-tags}
+## 处理标签和代码片段 {#dealing-with-tags}
 
 许多源内容包含标签和变量，它们在 Crowdin 编辑器中以黄色突出显示。 它们具有不同的功能，应该正确处理。
 
@@ -158,7 +158,7 @@ nonce - _不可翻译的文本_
 
 ![模棱两可的 tags.png 的示例](./example-of-ambiguous-tags.png)
 
-## 简短与完整形式/缩写 \{#short-vs-full-forms}
+## 简短与完整形式/缩写 {#short-vs-full-forms}
 
 网站上使用了很多缩写，例如 dApp、NFT、DAO、DeFi 等。 这些缩写通常用于英语，并且大多数网站访问者都熟悉它们。
 
@@ -170,7 +170,7 @@ nonce - _不可翻译的文本_
 
 - Decentralized applications (dapps) → _完整的翻译形式 (括号中为英文缩写)_
 
-## 没有既定翻译的术语 \{#terms-without-established-translations}
+## 没有既定翻译的术语 {#terms-without-established-translations}
 
 某些术语在其他语言中可能没有既定翻译，并且以原始英语术语而广为人知。 这些术语主要包括较新的概念，如工作量证明、权益证明、信标链、质押等。
 
@@ -180,7 +180,7 @@ nonce - _不可翻译的文本_
 
 **大多数术语应该翻译而不是将其中一些保留英文的原因是，随着越来越多的人开始使用以太坊和相关技术，这种新术语将在未来变得更加普遍。 如果我们想让来自世界各地的更多人加入这个领域，我们需要以尽可能多的语言提供易于理解的术语，即使我们需要自行创建它。**
 
-## 按钮与行动号召 \{#buttons-and-ctas}
+## 按钮与行动号召 {#buttons-and-ctas}
 
 网站包含许多按钮，其翻译方式应与其他内容不同。
 
@@ -190,7 +190,7 @@ nonce - _不可翻译的文本_
 
 ![如何查找按钮 .png](./how-to-find-a-button.png)
 
-## 翻译包容性 \{#translating-for-inclusivity}
+## 翻译包容性 {#translating-for-inclusivity}
 
 Ethereum.org 的访问者来自世界各地和不同的背景。 因此，网站上的语言应该是中立的，欢迎所有人而不是排他性的。
 
@@ -200,7 +200,7 @@ Ethereum.org 的访问者来自世界各地和不同的背景。 因此，网站
 
 最后，语言应该适合所有大众和年龄段的读者。
 
-## 特定语言的翻译 \{#language-specific-translations}
+## 特定语言的翻译 {#language-specific-translations}
 
 翻译时，重要的是要遵循你的语言中使用的语法规则、约定和格式，而不是从源复制。 源文本遵循英语语法规则和约定，而这不适用于许多其他语言。
 
@@ -208,7 +208,7 @@ Ethereum.org 的访问者来自世界各地和不同的背景。 因此，网站
 
 一些需要特别注意的例子：
 
-### 标点、格式 \{#punctuation-and-formatting}
+### 标点、格式 {#punctuation-and-formatting}
 
 **大写**
 
@@ -247,7 +247,7 @@ Ethereum.org 的访问者来自世界各地和不同的背景。 因此，网站
 - 在英语中，连字符 (-) 用于连接单词或单词的不同部分，而破折号 (-) 用于表示范围或停顿。
 - 许多语言对使用连字符和破折号有不同的规则，应遵守这些规则。
 
-### 格式 \{#formats}
+### 格式 {#formats}
 
 **数字**
 
@@ -284,7 +284,7 @@ Ethereum.org 的访问者来自世界各地和不同的背景。 因此，网站
 - 作为一般规则，请根据来源保留计量单位。 如果您所在的国家/地区使用不同的系统，您可以将转换包括在括号中。
 - 除了度量单位的本地化之外，注意语言处理这些单位的方式的差异也很重要。 主要区别在于数字和单位之间的间距，可以根据语言而有所不同。 这方面的示例包括 100kB 与 100 kB 或 50ºF 与 50ºF。
 
-## 总结 \{#conclusion}
+## 总结 {#conclusion}
 
 翻译 ethereum.org 是了解以太坊不同方面的绝佳机会。
 

@@ -18,7 +18,7 @@ sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 
 在本教程中，我们将使用 Solidity 构建一个去中心化金融应用程序。用户可以将 ERC20 代币存入智能合约，然后铸造流动性矿池代币并将这些代币转给他们。 用户之后可以通过消耗智能合约上的流动性矿池代币来赎回他们的 ERC20 代币，然后 ERC20 代币将会转回给他们。
 
-## 安装 Truffle 和 Ganache \{#install-truffle-and-ganache}
+## 安装 Truffle 和 Ganache {#install-truffle-and-ganache}
 
 如果这是您第一次编写智能合约，您需要搭建您的环境。 我们将使用两个工具：[Truffle](https://www.trufflesuite.com/) 和 [Ganache](https://www.trufflesuite.com/ganache)。
 
@@ -44,7 +44,7 @@ truffle init
 
 - `truffle-config.js`：Truffle 配置文件
 
-## 创建 ERC20 代币 \{#create-the-erc20-token}
+## 创建 ERC20 代币 {#create-the-erc20-token}
 
 首先，我们需要创建 ERC20 代币，用于在智能合约上质押。 要创建同质化代币，我们首先需要安装 OpenZeppelin 库。 该库包含 ERC20 和 ERC721 等标准的实现。 如需安装，请运行以下命令：
 
@@ -90,7 +90,7 @@ constructor (string memory name_, string memory symbol_) public {
 }
 ```
 
-## 编译 ERC20 代币 \{#compile-the-erc20-token}
+## 编译 ERC20 代币 {#compile-the-erc20-token}
 
 要编译我们的智能合约，我们必须首先检查我们的 solidity 编译器版本。 可以通过运行以下命令来检查：
 
@@ -123,7 +123,7 @@ compilers: {
 truffle compile
 ```
 
-## 部署 ERC20 代币 \{#deploy-erc20-token}
+## 部署 ERC20 代币 {#deploy-erc20-token}
 
 编译后，我们现在便可以部署代币了。
 
@@ -175,7 +175,7 @@ truffle console
 
 _第一个地址有 1000000 MyToken_
 
-## 创建 FarmToken 智能合约 \{#create-farmtoken-smart-contract}
+## 创建 FarmToken 智能合约 {#create-farmtoken-smart-contract}
 
 FarmToken 智能合约将包含 3 个函数：
 
@@ -468,7 +468,7 @@ module.exports = async function (callback) {
 
 _withdrawMyTokenFromTokenFarm.js 的输出_
 
-## 参考文献 \{#references}
+## 参考文献 {#references}
 
 [合约 - OpenZepelin 文档](https://docs.openzeppelin.com/contracts/3.x/)
 

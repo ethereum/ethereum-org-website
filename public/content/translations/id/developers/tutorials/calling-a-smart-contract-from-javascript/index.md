@@ -96,7 +96,7 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Selanjutnya kita akan memanggil fungsi `balanceOf` untuk mengambil jumlah token saat ini yang dimiliki kedua alamat tersebut.
 
-## Call: Membaca nilai dari kontrak pintar \{#call-reading-value-from-a-smart-contract}
+## Call: Membaca nilai dari kontrak pintar {#call-reading-value-from-a-smart-contract}
 
 Contoh pertama akan memanggil metode "konstan" dan mengeksekusi metode kontrak pintarnya dalam EVM tanpa mengirim transaksi apa pun. Untuk ini, kita akan membaca saldo ERC20 dari sebuah alamat. [Baca artikel kami tentang token ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/).
 
@@ -114,7 +114,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 
 Ingat bahwa ERC20 DAI memliki 18 desimal yang berarti Anda harus menghapus 18 nol untuk mendapatkan hasil yang benar. uint256 are returned as strings as JavaScript does not handle big numeric values. Apabila Anda tidak yakin [cara menangani angka besar dalam JS, lihat tutorial tentang bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
-## Kirim: Mengirim transaksi kepada fungsi kontrak pintar \{#send-sending-a-transaction-to-a-smart-contract-function}
+## Kirim: Mengirim transaksi kepada fungsi kontrak pintar {#send-sending-a-transaction-to-a-smart-contract-function}
 
 Untuk contoh kedua kita akan memanggil fungsi transfer dari kontrak pintar DAI untuk mengirim 10 DAI ke alamat kedua kita. Fungsi transfer menerima dua parameter: alamat penerima dan jumlah token yang ditransfer:
 

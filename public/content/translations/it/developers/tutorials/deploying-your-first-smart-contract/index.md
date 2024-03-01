@@ -19,7 +19,7 @@ Sicuramente sarai entusiasta almeno quanto noi di [distribuire](/developers/docs
 
 Non preoccuparti, essendo il nostro primo smart contract, lo distribuiremo su una [rete locale di prova](/developers/docs/networks/) così che non ti costi nulla distribuirlo e giocarci quanto vuoi.
 
-## Scrittura del contratto \{#writing-our-contract}
+## Scrittura del contratto {#writing-our-contract}
 
 Il primo passaggio consiste nel [visitare Remix](https://remix.ethereum.org/) e creare un nuovo file. Nella parte in alto a sinistra dell'interfaccia di Remix, aggiungi un nuovo file e inserisci il nome che preferisci.
 
@@ -58,7 +58,7 @@ Se sei familiare con la programmazione, puoi facilmente intuire cosa faccia ques
 
 Questo è tutto per il nostro primo semplice Smart Contract. Come forse saprai, somiglia un po' un linguaggio di OOP (Programmazione Orientata agli Oggetti), come Java o C++. Ora è il momento di sperimentare con il contratto.
 
-## Distribuzione del contratto \{#deploying-our-contract}
+## Distribuzione del contratto {#deploying-our-contract}
 
 Una volta scritto il nostro primo Smart Contract, è il momento di distribuirlo sulla blockchain per potervi interagire.
 

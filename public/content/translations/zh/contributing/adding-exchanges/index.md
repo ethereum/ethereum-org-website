@@ -4,7 +4,7 @@ description: 向 ethereum.org 添加交易所时适用的政策
 lang: zh
 ---
 
-# 添加以太坊交易所 \{#adding-ethereum-exchanges}
+# 添加以太坊交易所 {#adding-ethereum-exchanges}
 
 任何人都可以在 ethereum.org 上自由推荐新的交易所。
 
@@ -18,7 +18,7 @@ lang: zh
 
 **请注意：**如果您想上架一个去中心化交易所，请查看我们[关于上架钱包和去中心化应用程序的政策](/contributing/adding-products/)。
 
-## 我们需要的信息 \{#what-we-need}
+## 我们需要的信息 {#what-we-need}
 
 - 适用于交易所的地域限制
 - 用户可以用哪些货币来购买以太币
@@ -31,7 +31,7 @@ lang: zh
 
 ---
 
-## 添加您的交易所 \{#add-exchange}
+## 添加您的交易所 {#add-exchange}
 
 如果您想向 ethereum.org 添加交易所，请在 GitHub 上创建提议。
 

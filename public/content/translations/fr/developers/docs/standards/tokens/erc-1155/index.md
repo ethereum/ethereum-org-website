@@ -4,7 +4,7 @@ description:
 lang: fr
 ---
 
-## Introduction \{#introduction}
+## Introduction {#introduction}
 
 Une interface standard pour les contrats qui gèrent plusieurs types de jetons. Un seul contrat déployé peut intégrer une combinaison de jetons fongibles, de jetons non fongibles ou encore d'autres configurations (par exemple des jetons semi-fongibles).
 
@@ -14,11 +14,11 @@ L'idée est simple et cherche à créer une interface de contrat intelligent qui
 
 Le jeton ERC-1155 est décrit dans les détails dans [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
-## Prérequis \{#prerequisites}
+## Prérequis {#prerequisites}
 
 Pour mieux comprendre cette page, nous vous recommandons de commencer par lire celles concernant [les normes de jeton](/developers/docs/standards/tokens/), [ERC-20](/developers/docs/standards/tokens/erc-20/), et [ERC-721](/developers/docs/standards/tokens/erc-721/).
 
-## Fonctions et fonctionnalités ERC-1155 : \{#body}
+## Fonctions et fonctionnalités ERC-1155 : {#body}
 
 - [Transfert par lot](#batch_transfers) : Transférer plusieurs actifs en un seul appel.
 - [Solde par lot](#batch_balance) : Obtenez les soldes de plusieurs actifs en un seul appel.
@@ -27,7 +27,7 @@ Pour mieux comprendre cette page, nous vous recommandons de commencer par lire c
 - [Support NFT](#nft_support) : Si l'échange est unique, le traiter comme NFT.
 - [Règles de transfert sécurisées](#safe_transfer_rule) : Ensemble de règles pour sécuriser un transfert.
 
-### Transferts par lot \{#batch-transfers}
+### Transferts par lot {#batch-transfers}
 
 Les transferts par lot fonctionnent de la même façon que les transferts réguliers ERC-20. Examinons la fonction régulière `transferFrom` ERC-20 :
 
@@ -53,7 +53,7 @@ La seule différence avec ERC-1155 est que nous passons les valeurs en tant que 
 
 Dans l'ERC-1155, nous n'avons que `transferFrom` et non `transfert`. Pour l'utiliser comme un `transfer` régulier, il suffit de définir l'adresse d'expéditeur sur l'adresse qui appelle la fonction.
 
-### Solde par lot \{#batch-balance}
+### Solde par lot {#batch-balance}
 
 L'appel ERC-20 `balanceOf` dispose également de sa fonction de partenaire avec le support par lots. Pour rappel, ceci est la version ERC-20 :
 
@@ -80,7 +80,7 @@ Par exemple, pour les données `_ids=[3, 6, 13]` et `_owners=[0xbeef..., 0x1337.
 ]
 ```
 
-### Approbation par lot \{#batch-approval}
+### Approbation par lot {#batch-approval}
 
 ```solidity
 // ERC-1155
@@ -101,7 +101,7 @@ La lecture du statut actuel peut être exécutée via `isApprovedForAll`. Comme 
 
 Cela a été conçu intentionnellement en gardant à l'esprit le principe de simplicité. Vous ne pouvez tout approuver que pour une seule adresse.
 
-### Recevoir un crochet \{#receive-hook}
+### Recevoir un crochet {#receive-hook}
 
 ```solidity
 function onERC1155BatchReceived(
@@ -121,11 +121,11 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 Lorsque le contrat de réception renvoie cette valeur, cela suppose que le contrat accepte le transfert et sait gérer les jetons ERC-1155. Génial, plus aucun jeton coincé dans un contrat !
 
-### Prise en charge NFT \{#nft-support}
+### Prise en charge NFT {#nft-support}
 
 Lorsque la fourniture est unique, le jeton est essentiellement un jeton non fongible (NFT). Et comme c'est la norme pour ERC-721, vous pouvez définir une URL de métadonnées. L'URL peut être lue et modifiée par les clients, voir [ici](https://eips.ethereum.org/EIPS/eip-1155#metadata).
 
-### Règle de transfert sécurisé \{#safe-transfer-rule}
+### Règle de transfert sécurisé {#safe-transfer-rule}
 
 Nous avons déjà abordé quelques règles de transfert sécurisé dans les explications précédentes. Mais concentrons-nous sur les règles les plus importantes :
 
@@ -138,7 +138,7 @@ Nous avons déjà abordé quelques règles de transfert sécurisé dans les expl
 
 _Note_ : Toutes les fonctions par lot, y compris le crochet, existent également en tant que versions sans lot. Cela renforce l'efficacité du carburant étant donné que le transfert d'un seul actif reste probablement la méthode la plus couramment utilisée. Nous les avons laissés à l'écart par souci de simplicité dans les explications, y compris des règles de transfert sécurisé. Les noms sont identiques, il suffit de supprimer le lot ('Batch)'.
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [Norme de multijeton ERC-1155](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155 : Documentation Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)

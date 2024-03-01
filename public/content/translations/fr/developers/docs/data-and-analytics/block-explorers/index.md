@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 Les explorateurs de blocs sont votre portail vers les données Ethereum. Vous pouvez les utiliser pour voir les données en temps réel sur les blocs, les transactions, les mineurs, les comptes et toute autre activité de la chaîne.
 
-## Prérequis \{#prerequisites}
+## Prérequis {#prerequisites}
 
 Pour que les données fournies par un explorateur de blocs aient du sens, vous devez avoir compris les concepts de base d'Ethereum. Commencez par lire la page [Introduction à Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Services \{#services}
+## Services {#services}
 
 - [Etherscan](https://etherscan.io/) - _Également disponible en chinois, coréen, russe et japonais_
 - [Beaconcha.in](https://beaconcha.in/)
@@ -26,13 +26,13 @@ Pour que les données fournies par un explorateur de blocs aient du sens, vous d
 - [EthVM](https://www.ethvm.com/)
 - [Explorateurs de bloc DexGuru](https://ethereum.dex.guru/)
 
-## Données \{#data}
+## Données {#data}
 
 De part sa conception, Ethereum est transparent, tout est donc vérifiable. Les explorateurs de blocs fournissent l'interface pour obtenir les informations, à la fois pour le réseau principal Ethereum (mainnet) et pour les réseaux de test (testnets), si besoin est. Les données sont divisées en données d'exécution et de consensus. Les données d'exécution se réfèrent aux transactions qui ont été exécutées dans un bloc spécifique. Les données de consensus se réfèrent aux blocs eux-mêmes et aux validateurs qui les ont proposés.
 
 Voici un résumé des types de données que vous pouvez obtenir d'un explorateur de blocs.
 
-### Données d'exécution \{#execution-data}
+### Données d'exécution {#execution-data}
 
 De nouveaux blocs sont ajoutés à Ethereum toutes les 12 secondes (à moins qu'un explorateur de bloc ne manque son tour), afin qu'un flux de données quasi constant soit ajouté aux explorateurs de blocs. Les blocs contiennent de nombreuses données importantes qui peuvent vous être utiles :
 
@@ -56,7 +56,7 @@ De nouveaux blocs sont ajoutés à Ethereum toutes les 12 secondes (à moins qu'
 - Parent hash (hash parent) - Le hachage du bloc qui est arrivé avant le bloc actuel
 - StateRoot - Le hash racine de Merkle trie qui stocke l'état complet du système
 
-### Gaz \{#gas}
+### Gaz {#gas}
 
 Non seulement les explorateurs de blocs fournissent des données relatives à l'utilisation du gaz dans les transactions et dans les blocs, mais certains vous donneront aussi des informations sur les prix actuels du gaz sur le réseau. Cela vous aidera à comprendre l'utilisation du réseau, à soumettre des transactions sûres et à ne pas trop dépenser en gaz. Recherchez les API qui peuvent vous aider à obtenir ces informations dans l'interface de votre produit. Les données concernant le gaz comprennent :
 
@@ -67,7 +67,7 @@ Non seulement les explorateurs de blocs fournissent des données relatives à l'
 - Contrats qui consomment du gaz - en d'autres termes, des produits populaires qui voient beaucoup d'utilisation sur le réseau
 - Comptes qui dépensent du gaz - en d'autres termes, des utilisateurs fréquents du réseau
 
-### Transactions \{#transactions}
+### Transactions {#transactions}
 
 De plus en plus d'utilisateurs tirent parti des explorateurs de blocs pour suivre les progrès de leurs transactions. En effet, le niveau de détail qui peut être obtenu offre davantage de certitudes. Les données relatives aux transactions sont les suivantes :
 
@@ -91,7 +91,7 @@ De plus en plus d'utilisateurs tirent parti des explorateurs de blocs pour suivr
 - Nonce - Le numéro de transaction pour l'adresse `from` (gardez à l'esprit que cela commence à 0 donc un nonce de `100` serait en fait la 101e transaction soumise par ce compte
 - Input data (données d'entrée) - Toutes les informations supplémentaires requises par la transaction
 
-### Comptes \{#accounts}
+### Comptes {#accounts}
 
 Il est possible d'accéder à de nombreuses données concernant un compte. C'est pourquoi il est souvent conseillé d'utiliser plusieurs comptes afin qu'il soit difficile de traquer vos capitaux et leur valeur. Plusieurs solutions sont aussi développées dans le but de rendre les transactions et l'activité d'un compte plus privée. Mais les données disponibles sur les comptes sont les suivantes :
 
@@ -114,7 +114,7 @@ Les comptes de contrats intelligents possèdent toutes les données d'un compte 
 - Contract creation code (code de création de contrat) - Le bytecode compilé du contrat intelligent, créé lorsque vous compilez un contrat intelligent écrit en Solidity ou Vyper, etc.
 - Contract events (événements du contrat) - Une histoire des méthodes appelées dans le contrat intelligent, essentiellement un moyen de voir comment le contrat est utilisé et combien de fois
 
-### Jetons \{#tokens}
+### Jetons {#tokens}
 
 Les jetons sont un type de contrat, donc ils auront des données similaires à un contrat intelligent. Mais comme ils ont une valeur et peuvent être échangés, ils comportent des données supplémentaires :
 
@@ -128,7 +128,7 @@ Les jetons sont un type de contrat, donc ils auront des données similaires à u
 - Contract address (adresse du contrat) - L'adresse du jeton qui a été déployé sur le réseau principal
 - Decimals (décimales) - Les jetons ERC-20 sont divisibles et ont des décimales
 
-### Réseau \{#network}
+### Réseau {#network}
 
 Certaines données de bloc sont préoccupées par la santé d'Ethereum de manière plus globale.
 
@@ -138,9 +138,9 @@ Certaines données de bloc sont préoccupées par la santé d'Ethereum de maniè
 - Total ETH supply (fourniture totale d'ETH) - Nombre d'ETH en circulation - souvenez-vous que de nouveaux ETH sont créés avec la création de chaque bloc sous la forme de récompenses de blocs
 - Market cap (capitalisation boursière) - Calcul du prix\*approvisionnement
 
-## Données de couche de consensus \{#consensus-layer-data}
+## Données de couche de consensus {#consensus-layer-data}
 
-### Période \{#epoch}
+### Période {#epoch}
 
 Pour des raisons de sécurité, des comités aléatoires de validateurs sont créés à la fin de chaque epoch (toutes les 6,4 minutes). Les données de l'epoch incluent les éléments suivants :
 
@@ -155,7 +155,7 @@ Pour des raisons de sécurité, des comités aléatoires de validateurs sont cr�
 - Average Validator balance (solde Moyen du Validateur) - Solde moyen pour les validateurs actifs
 - Slots (créneaux) - Nombre de créneaux inclus dans l'epoch (les créneaux incluent un bloc valide)
 
-### Créneau \{#slot}
+### Créneau {#slot}
 
 Les créneaux sont des opportunités de création de blocs. Les données disponibles pour chaque créneau comprennent les éléments suivants :
 
@@ -180,7 +180,7 @@ Les créneaux sont des opportunités de création de blocs. Les données disponi
 - Slashings (taillades) - Nombre de pénalités accordées aux promoteurs de blocs ou d'attestations
 - Votes - Les validateurs qui ont voté pour le bloc de ce créneau
 
-### Blocs \{#blocks-1}
+### Blocs {#blocks-1}
 
 Le Proof-of-stake (la preuve de mise en jeu) divise le temps en créneaux et époques. Cela engendre donc de nouvelles données !
 
@@ -189,7 +189,7 @@ Le Proof-of-stake (la preuve de mise en jeu) divise le temps en créneaux et ép
 - Slot (emplacement) - L'emplacement dans lequel le bloc a été proposé
 - Attestations - Le nombre d'attestations incluses dans le créneau — les attestations sont comme des votes qui indiquent que le bloc est prêt à aller à la Beacon Chain (Chaîne phare)
 
-### Validateurs \{#validators}
+### Validateurs {#validators}
 
 Les validateurs doivent proposer des blocs et attester de leur conformité dans les créneaux.
 
@@ -205,7 +205,7 @@ Les validateurs doivent proposer des blocs et attester de leur conformité dans 
 - Attestations - Les attestations que le validateur a fournies
 - Deposits (dépôts) - L'adresse, le hachage de la transaction, le numéro de bloc, l'horodatage, le montant et le statut du dépôt de staking effectué par le validateur
 
-### Attestations \{#attestations}
+### Attestations {#attestations}
 
 Les attestations sont des votes positifs pour inclure les blocs dans la chaîne. Leurs données portent sur leur enregistrement et les validateurs qui les ont émises.
 
@@ -218,7 +218,7 @@ Les attestations sont des votes positifs pour inclure les blocs dans la chaîne.
 - Target (cible) - Points à la dernière frontière de l'epoch
 - Signature
 
-### Réseau \{#network-1}
+### Réseau {#network-1}
 
 Les données de couches de consensus de haut niveau comprennent les éléments suivants :
 
@@ -229,7 +229,7 @@ Les données de couches de consensus de haut niveau comprennent les éléments s
 - Staked ETH (ETH absorbé) - Quantité d'ETH misé dans le réseau
 - Average balance (solde moyen) - Solde moyen ETH des validateurs
 
-## Explorateurs de bloc \{#block-explorers}
+## Explorateurs de bloc {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) - un explorateur de blocs que vous pouvez utiliser pour récupérer des données pour le réseau principal Ethereum et le réseau de test Goerli
 - [Beaconcha.in](https://beaconcha.in/) - un explorateur de blocs open source pour le réseau principal Ethereum et le réseau de test Goerli
@@ -238,11 +238,11 @@ Les données de couches de consensus de haut niveau comprennent les éléments s
 - [Ethplorer](https://ethplorer.io/) - un explorateur de blocs avec une focalisation sur les jetons pour le réseau principal Ethereum et le réseau de test Kovan
 - [Rantom](https://rantom.app/) - Un service crypto-friendly open-source, intégré à sa plateforme de finance décentralisée (DeFi) & Visualisation du volume de transactions des NFT pour une vision détaillée
 
-## En savoir plus \{#further-reading}
+## En savoir plus {#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
-## Sujets connexes \{#related-topics}
+## Sujets connexes {#related-topics}
 
 - [Transactions](/developers/docs/transactions/)
 - [Comptes](/developers/docs/accounts/)

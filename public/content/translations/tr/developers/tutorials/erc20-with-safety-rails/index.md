@@ -9,7 +9,7 @@ skill: beginner
 published: 2022-08-15
 ---
 
-## Giriş \{#introduction}
+## Giriş {#introduction}
 
 Ethereum ile ilgili en güzel şeylerden biri, işlemlerinizi değiştirebilecek veya geri alabilecek merkezi herhangi bir otoritenin olmamasıdır. Ethereum ile ilgili en büyük sorunlardan biri, kullanıcı hatalarını veya yasa dışı işlemleri geri alma yetkisine sahip merkezi bir otoritenin olmamasıdır. Bu makalede, kullanıcıların [ERC-20](/developers/docs/standards/tokens/erc-20/) jetonlarıyla yaptıkları bazı yaygın hataların yanı sıra; kullanıcıların bu hatalardan kaçınmasına yardımcı olan veya merkezi bir otoriteye bir miktar yetki veren (örneğin hesapları dondurmak için) ERC-20 sözleşmelerinin nasıl oluşturulacağını öğreneceksiniz.
 
@@ -22,7 +22,7 @@ Bütün kaynak kodunu görmek isterseniz:
 3. Github deposunu kopyalayın `https://github.com/qbzzt/20220815-erc20-safety-rails`.
 4. **Sözleşmeler > erc20-safety-rails.sol** öğesini açın.
 
-## ERC-20 sözleşmesi oluşturma \{#creating-an-erc-20-contract}
+## ERC-20 sözleşmesi oluşturma {#creating-an-erc-20-contract}
 
 Güvenlik önlemi işlevini eklemeden önce bize bir ERC-20 sözleşmesi lazım. Bu makalede [OpenZeppelin'in Sözleşme Sihirbazı'nı](https://docs.openzeppelin.com/contracts/4.x/wizard) kullanacağız. Başka bir sekmede açın ve şu yönergeleri izleyin:
 
@@ -42,9 +42,9 @@ Güvenlik önlemi işlevini eklemeden önce bize bir ERC-20 sözleşmesi lazım.
 4. Şimdi tamamen işlevsel bir ERC-20 sözleşmemiz var. İçeri aktarılan kodu görmek için `.deps` > `npm`'yi genişletebilirsiniz.
 5. Bir ERC-20 sözleşmesi olarak işlev gördüğünü anlamak için sözleşmeyi derleyin, dağıtın ve sözleşmeyle oynayın. Remix'in nasıl kullanıldığını öğrenmek istiyorsanız [bu rehberi kullanın](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
 
-## Yaygın hatalar \{#common-mistakes}
+## Yaygın hatalar {#common-mistakes}
 
-### Hatalar \{#the-mistakes}
+### Hatalar {#the-mistakes}
 
 Kullanıcılar bazen jetonları yanlış adrese gönderir. Ne yapmak istediklerini anlamak için zihinlerini okuyamasak da sık sık meydana gelen ve tespit edilmesi kolay olan iki hata türü vardır:
 
@@ -52,7 +52,7 @@ Kullanıcılar bazen jetonları yanlış adrese gönderir. Ne yapmak istedikleri
 
 2. Jetonları harici bir [dışarıdan sahip olunan hesaba](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs) veya [akıllı sözleşmeye](/developers/docs/smart-contracts) karşılık gelmeyen boş bir adrese göndermek. Bunun ne sıklıkla gerçekleştiğine dair istatistiklere sahip olmasam da [tek bir olay 20.000.000 jetona mal olabilir.](https://gov.optimism.io/t/message-to-optimism-community-from-wintermute/2595).
 
-### Transferleri önleme \{#preventing-transfers}
+### Transferleri önleme {#preventing-transfers}
 
 OpenZeppelin ERC-20 sözleşmesi, jeton aktarılmadan önce çağrılan bir `_beforeTokenTransfer`
 
@@ -89,7 +89,7 @@ Solidity'ye pek aşina değilseniz işlevin bazı kısımları sizin için yeni 
 
 Bu satır, sözleşmenin veya ona sahip olan devraldığımız sözleşmelerin `_beforeTokenTransfer` işlevini çağırır. Bu durumda, bahsettiğimiz sadece `ERC-20`'dir, `Ownable` bu kancaya sahip değildir. Halihazırda `ERC20._beforeTokenTransfer` hiçbir şey yapmasa da, gelecekte işlevsellik eklenmesi durumunda onu çağırabiliriz (ve sonra, dağıtımdan sonra sözleşmeler değişmediği için sözleşmeyi yeniden dağıtmaya karar veririz).
 
-### Gereksinimlerin kodlanması \{#coding-the-requirements}
+### Gereksinimlerin kodlanması {#coding-the-requirements}
 
 Aşağıdaki gereksinimleri işleve eklemek istiyoruz:
 
@@ -121,7 +121,7 @@ Biz bir adresin sözleşme olup olmadığını bu şekilde kontrol ederiz. Yul'd
 
 Son olarak sırada, boş adresler için gerçek kontrolümüz var.
 
-## Yönetici erişimi \{#admin-access}
+## Yönetici erişimi {#admin-access}
 
 Hataları geri alabilen bir yöneticiye sahip olmak bazen faydalı olabilir. Kötüye kullanım olasılığını azaltmak için bu yönetici bir [çoklu imza](https://blog.logrocket.com/security-choices-multi-signature-wallets/) olabilir, böylece birden fazla kişinin bir eylem üzerinde anlaşması gerekir. Bu makale içerisinde iki yönetici özelliğinden bahsedeceğiz:
 
@@ -139,7 +139,7 @@ OpenZeppelin, yönetici erişimini etkinleştirmek için iki çeşit mekanizma s
 
 Basit olması için biz bu makalede `Ownable`'ı kullanacağız.
 
-### Sözleşmeleri dondurma ve çözme \{#freezing-and-thawing-contracts}
+### Sözleşmeleri dondurma ve çözme {#freezing-and-thawing-contracts}
 
 Sözleşmeleri dondurmak ve çözmek, birtakım değişiklikler gerektirir:
 
@@ -185,7 +185,7 @@ Hesap önceden dondurulmuşsa, eski haline döndürün. Aksi takdirde, dondurun 
        require(!frozenAccounts[from], "The account is frozen");
   ```
 
-### Varlık temizlemesi \{#asset-cleanup}
+### Varlık temizlemesi {#asset-cleanup}
 
 Bu sözleşmede tutulan ERC-20 jetonlarını serbest bırakmak için ait oldukları jeton sözleşmesinde [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) veya [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve) işlevlerinden birini çağırmamız gerekir. Bu durumda ödenekler için gaz harcamaya gerek yoktur, doğrudan transfer edebiliriz.
 
@@ -210,6 +210,6 @@ Bu, adresi aldığımızda bir sözleşme için nesne oluşturma söz dizimidir.
 
 Bu bir temizleme işlevidir, bu yüzden muhtemelen herhangi bir jeton bırakmak istemeyiz. Bakiyeyi kullanıcıdan manuel olarak almak yerine süreci otomatikleştirebiliriz.
 
-## Sonuç \{#conclusion}
+## Sonuç {#conclusion}
 
 Anlattığımız süreç mükemmel bir çözüm değildir, zaten "kullanıcı bir hata yaptı" sorunları için mükemmel bir çözüm de yoktur. Ancak bu tür kontrollerin kullanılması en azından bazı hataları önleyebilir. Hesapları dondurma yeteneği, tehlikeli olmakla birlikte belirli hacker'ların çaldığı fonları reddederek hacker'ların yarattığı zararı sınırlandırmak için kullanılabilir.

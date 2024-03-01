@@ -6,11 +6,11 @@ lang: it
 
 Un conto di Ethereum è un'entità con un saldo in ether (ETH) che può inviare transazioni su Ethereum. I conti sono controllabili da utenti o distribuibili come contratti intelligenti.
 
-## Prerequisiti \{#prerequisites}
+## Prerequisiti {#prerequisites}
 
 Per aiutarti a comprendere meglio questa pagina ti consigliamo prima di leggere l'[introduzione a Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Tipi di conto \{#types-of-account}
+## Tipi di conto {#types-of-account}
 
 Ethereum ha due tipi di conto:
 
@@ -22,7 +22,7 @@ Entrambi i tipi di conto hanno l'abilità di:
 - Ricevere, conservare e inviare ETH e token
 - Interagire con i contratti intelligenti distribuiti
 
-### Differenze fondamentali \{#key-differences}
+### Differenze fondamentali {#key-differences}
 
 **Posseduti esternamente**
 
@@ -38,7 +38,7 @@ Entrambi i tipi di conto hanno l'abilità di:
 - Le transazioni da un conto esterno al conto di un contratto possono innescare un codice che può eseguire molte azioni differenti, come trasferire token o persino creare un nuovo contratto
 - I conti del contratto non hanno chiavi private. Invece, sono controllati dalla logica del codice del contratto intelligente
 
-## Esaminando un conto \{#an-account-examined}
+## Esaminando un conto {#an-account-examined}
 
 I conti di Ethereum hanno quattro campi:
 
@@ -49,7 +49,7 @@ I conti di Ethereum hanno quattro campi:
 
 ![Un diagramma che mostra la composizione di un conto](./accounts.png) _Diagramma adattato da [Ethereum EVM illustrato](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## I conti posseduti esternamente e le coppie di chiavi \{#externally-owned-accounts-and-key-pairs}
+## I conti posseduti esternamente e le coppie di chiavi {#externally-owned-accounts-and-key-pairs}
 
 Un conto si compone di una coppia crittografica di chiavi: pubblica e privata. Aiutano a provare che una transazione è stata realmente firmata dal mittente e prevenire le falsificazioni. La tua chiave privata è ciò che usi per firmare le transazioni, quindi ti concede la custodia dei fondi associati al tuo conto. Non possiedi mai realmente le criptovalute, possiedi le chiavi private; i fondi sono sempre nel registro mastro di Ethereum.
 
@@ -57,7 +57,7 @@ Questo impedisce ai malintenzionati di trasmettere false transazioni perché puo
 
 Se Alice desidera inviare ether dal proprio conto a quello di Bob, deve creare una richiesta di transazione e inviarla alla rete per la verifica. L'uso di Ethereum della crittografia a chiave pubblica assicura che Alice possa provare che abbia originariamente avviato la richiesta di transazione. Senza i meccanismi crittografici, un utente malintenzionato "Eve", potrebbe semplicemente trasmettere pubblicamente una richiesta che somigli a "inviare 5 ETH dal conto di Alice al conto di Eve" e nessuno potrebbe verificare che non fosse provenuta da Alice.
 
-## Creazione del conto \{#account-creation}
+## Creazione del conto {#account-creation}
 
 Quando vuoi creare un conto, gran parte delle librerie genererà una chiave privata casuale.
 
@@ -90,7 +90,7 @@ Account generato 0x5e97870f263700f46aa00d967821199b9bc5a120
 
 Necessiti di una chiave privata per firmare i messaggi e le transazioni che producono una firma. Gli altri possono quindi prendere la firma per derivare la tua chiave pubblica, provando l'autore del messaggio. Nella tua applicazione, puoi usare una libreria javascript per inviare le transazioni alla rete.
 
-## Conti del contratto \{#contract-accounts}
+## Conti del contratto {#contract-accounts}
 
 Inoltre, i conti del contratto contengono un indirizzo esadecimale da 42 caratteri:
 
@@ -100,17 +100,17 @@ Esempio:
 
 L'indirizzo del contratto è solitamente dato alla distribuzione di un contratto alla Blockchain di Ethereum. L’indirizzo deriva da quello del creatore e dal numero di transazioni inviate da tale indirizzo (il “nonce”).
 
-## Chiavi del validatore \{#validators-keys}
+## Chiavi del validatore {#validators-keys}
 
 Esiste inoltre un altro tipo di chiave su Ethereum, introdotto quando Ethereum è passato dal consenso basato sul proof-of-work al proof-of-stake. Queste sono le chiavi 'BLS' e sono usate per identificare i validatori. Queste chiavi possono esser aggregate efficientemente per ridurre la larghezza di banda necessaria affinché la rete raggiunga il consenso. Senza questa chiave, l'aggregazione della quota minima per un validatore saremme molto maggiore.
 
 [Di più sulle chiavi del validatore](/developers/docs/consensus-mechanisms/pos/keys/).
 
-## Una nota sui portafogli \{#a-note-on-wallets}
+## Una nota sui portafogli {#a-note-on-wallets}
 
 Un conto non è un portafoglio. Un conto è la coppia di chiavi per un conto di Ethereum di proprietà dell'utente. Un portafoglio è un'interfaccia o un'applicazione che ti consente di interagire col tuo conto di Ethereum.
 
-## Dimostrazione visiva \{#a-visual-demo}
+## Dimostrazione visiva {#a-visual-demo}
 
 Fatti guidare da Austin attraverso le funzionalità di hash e le coppie di chiavi.
 
@@ -122,13 +122,13 @@ Fatti guidare da Austin attraverso le funzionalità di hash e le coppie di chiav
 <YouTube id="9LtBDy67Tho" />
 }
 
-## Ulteriori letture \{#further-reading}
+## Ulteriori letture {#further-reading}
 
 - [Capire i conti di Ethereum](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
 _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_
 
-## Argomenti correlati \{#related-topics}
+## Argomenti correlati {#related-topics}
 
 - [Contratti intelligenti](/developers/docs/smart-contracts/)
 - [Transazioni](/developers/docs/transactions/)

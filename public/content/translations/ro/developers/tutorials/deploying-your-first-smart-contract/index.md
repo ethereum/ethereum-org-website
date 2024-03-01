@@ -20,7 +20,7 @@ Cred că sunteţi la fel de entuziasmat ca noi să [implementaţi](/developers/d
 
 Nu vă faceți griji, deoarece este primul nostru contract inteligent, îl vom implementa pe o [rețea locală de testare](/developers/docs/networks/), astfel încât să nu vă coste nimic să îl implementați și să încercați tot ce doriți cu el.
 
-## Cum ne scriem contractul \{#writing-our-contract}
+## Cum ne scriem contractul {#writing-our-contract}
 
 Primul pas este să vizitaţi [Remix](https://remix.ethereum.org/) și să creaţi un fișier nou. În partea din stânga sus a interfeței Remix, adaugaţi un nou fișier și introduceţi numele dorit al fișierului.
 
@@ -59,7 +59,7 @@ Dacă sunteţi obişnuit să programaţi, vă puteţi da seama uşor ce face ace
 
 Este tot ce avem de făcut pentru primul nostru contract inteligent simplu. După cum ştiţi probabil, arată ca o clasă din limbajele OOP, cum ar fi Java sau C++. A sosit momentul să facem încercări cu contractul nostru.
 
-## Implementarea contractului nostru \{#deploying-our-contract}
+## Implementarea contractului nostru {#deploying-our-contract}
 
 Acum, că ne-am scris primul contract inteligent, îl implementăm în blockchain pentru a putea face încercări cu el.
 

@@ -6,7 +6,7 @@ lang: ro
 
 Web2 se referă la versiunea internetului pe care cei mai mulţi dintre noi o cunoaștem astăzi. Un internet dominat de companii care furnizează servicii în schimbul datelor dvs. personale. Web3, în contextul Ethereum, se referă la aplicații descentralizate care rulează pe blockchain. Acestea sunt aplicații care permit oricui să participe fără să-și monetizeze datele personale.
 
-## Beneficii Web3 \{#web3-benefits}
+## Beneficii Web3 {#web3-benefits}
 
 Mulți programatori Web3 au ales să construiască aplicații dapp din cauza descentralizării inerente a lui Ethereum:
 
@@ -15,7 +15,7 @@ Mulți programatori Web3 au ales să construiască aplicații dapp din cauza des
 - Plățile sunt încorporate prin tokenul nativ, ether-ul (ETH).
 - Ethereum este turing-complet, ceea ce înseamnă că puteţi programa aproape orice.
 
-## Comparații practice \{#practical-comparisons}
+## Comparații practice {#practical-comparisons}
 
 | Web2                                                                                                  | Web3                                                                                                                     |
 | ----------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
@@ -25,7 +25,7 @@ Mulți programatori Web3 au ales să construiască aplicații dapp din cauza des
 
 Acest lucru nu înseamnă că toate serviciile trebuie transformate într-o aplicație dapp. Aceste exemple sunt ilustrative pentru a arăta diferențele principale dintre serviciile web2 și web3.
 
-## Limitările Web3 \{#web3-limitations}
+## Limitările Web3 {#web3-limitations}
 
 Web3 are câteva limitări chiar în acest moment:
 
@@ -34,7 +34,7 @@ Web3 are câteva limitări chiar în acest moment:
 - Accesibilitate – lipsa capacității de integrare în browserele web moderne face ca web3 să fie mai puțin accesibil pentru majoritatea utilizatorilor.
 - Cost – cele mai reușite aplicații dapp pun porțiuni foarte mici din codul lor pe blockchain, pentru că este scump.
 
-## Centralizarea în comparaţie cu descentralizarea \{#centralization-vs-decentralization}
+## Centralizarea în comparaţie cu descentralizarea {#centralization-vs-decentralization}
 
 În tabelul de mai jos enumerăm câteva dintre avantajele și dezavantajele generale ale rețelelor digitale centralizate și descentralizate.
 
@@ -50,7 +50,7 @@ Web3 are câteva limitări chiar în acest moment:
 
 Rețineţi că acestea sunt modele generale care s-ar putea să nu fie valabile în fiecare rețea. Mai mult, în realitate gradul de centralizare/descentralizare a unei reţele variază în funcție de un întreg spectru de factori; nicio rețea nu este complet centralizată sau complet descentralizată.
 
-## Referințe suplimentare \{#further-reading}
+## Referințe suplimentare {#further-reading}
 
 - [What is Web3?](/web3/) - _ethereum.org_
 - [The Architecture of a Web 3.0 application](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_

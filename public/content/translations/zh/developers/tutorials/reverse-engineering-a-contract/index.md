@@ -12,7 +12,7 @@ skill: advanced
 published: 2021-12-30
 ---
 
-## 简介 \{#introduction}
+## 简介 {#introduction}
 
 _区块链上没有秘密_，发生的一切都是持续的、可验证的、公开的。 理想情况下，[应将智能合约的源代码发布到 Etherscan 上进行验证](https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code)。 然而，[情况并非总是如此](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code)。 在本文中，你将研究一份没有源代码的合约 [`0x2510c039cc3b061d79e564b38836da87e31b342f`](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f)，从而学习如何对合约进行逆向工程。
 
@@ -20,7 +20,7 @@ _区块链上没有秘密_，发生的一切都是持续的、可验证的、公
 
 为了能够理解本文，你应当已经了解以太坊虚拟机基础知识，并至少对以太坊虚拟机汇编器有几分熟悉。 [点击此处了解这些主题](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e)。
 
-## 准备可执行代码 \{#prepare-the-executable-code}
+## 准备可执行代码 {#prepare-the-executable-code}
 
 你可以在 Etherscan 上获得合约的操作码，操作如下：点击 **Contract** 选项卡，然后**切换至 Opcodes 视图**。 你将看到每行有一条操作码。
 
@@ -44,7 +44,7 @@ _区块链上没有秘密_，发生的一切都是持续的、可验证的、公
 
 我们需要此函数提供十六进制值，因为跳转（`JUMP` 和 `JUMPI`）之前压入的值也是十六进制的。
 
-## 入口点 (0x00) \{#the-entry-point-0x00}
+## 入口点 (0x00) {#the-entry-point-0x00}
 
 智能合约总会从第一个字节开始执行。 下面是代码的开始部分：
 
@@ -66,7 +66,7 @@ _区块链上没有秘密_，发生的一切都是持续的、可验证的、公
 
 ![这部分代码的流程图](flowchart-entry.png)
 
-### 0x5E 处的处理程序（用于非应用程序二进制接口数据调用） \{#the-handler-at-0x5e-for-non-abi-call-data}
+### 0x5E 处的处理程序（用于非应用程序二进制接口数据调用） {#the-handler-at-0x5e-for-non-abi-call-data}
 
 | 偏移量 | 操作码       |
 | -----: | ------------ |
@@ -160,7 +160,7 @@ _区块链上没有秘密_，发生的一切都是持续的、可验证的、公
 
 ![入口点流程图](flowchart-entry.png)
 
-## 0x7C 的处理程序 \{#the-handler-at-0x7c}
+## 0x7C 的处理程序 {#the-handler-at-0x7c}
 
 我特意没有将此处理程序的作用写入标题中。 重点不是教你这个特定的合约如何运作，而是如何对合约进行逆向工程。 你和我一样，都通过观察代码了解该合约的作用。
 
@@ -252,7 +252,7 @@ _区块链上没有秘密_，发生的一切都是持续的、可验证的、公
 
 因此在调用之后，我们将返回数据复制到缓冲区 0x80 - 0x80+RETURNDATASIZE，如果调用成功，我们将准确地 `RETURN` 该缓冲区。
 
-### DELEGATECALL 失败 \{#delegatecall-failed}
+### DELEGATECALL 失败 {#delegatecall-failed}
 
 如果执行到此处，即到达 0xC0，意味着我们调用的合约已回滚。 由于我们只是该合约的代理，我们希望返回相同的数据并且也回滚。
 
@@ -267,7 +267,7 @@ _区块链上没有秘密_，发生的一切都是持续的、可验证的、公
 
 ![调用代理流程图](flowchart-proxy.png)
 
-## 应用程序二进制接口调用 \{#abi-calls}
+## 应用程序二进制接口调用 {#abi-calls}
 
 如果调用数据长度为四个字节或更多，这可能是一个有效的应用程序二进制接口调用。
 
@@ -302,7 +302,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 
 ![应用程序二进制接口调用流程图](flowchart-abi.png)
 
-## splitter() \{#splitter}
+## splitter() {#splitter}
 
 | 偏移量 | 操作码       | 堆栈                          |
 | -----: | ------------ | ----------------------------- |
@@ -342,7 +342,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 |    134 | PUSH2 0x00e4 | 0xE4 0xA0 |
 |    137 | JUMP         | 0xA0      |
 
-### E4 代码 \{#the-e4-code}
+### E4 代码 {#the-e4-code}
 
 这是我们第一次看到这些行，但它们与其他方法是共享的（见下文）。 所以我们将调用堆栈 X 中的值，记住在 `splitter()` 中此 X 的值是 0xA0。
 
@@ -361,7 +361,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 
 对于 `splitter()` 方法，将返回我们作为代理的地址。 `RETURN` 返回 0x80-0x9F 之间的缓冲区，这是我们写入此数据的位置（上面的偏移量 0x130）。
 
-## currentWindow() \{#currentwindow}
+## currentWindow() {#currentwindow}
 
 偏移量 0x158-0x163 中的代码与我们在 `splitter()` 中看到的 0x103-0x10E 中的代码相同（除 `JUMPI` 目标地址外），因此我们知道 `currentWindow ()` 也不是 `payable`。
 
@@ -375,7 +375,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 |    16C | DUP2         | 0xDA Storage[1] 0xDA |
 |    16D | JUMP         | Storage[1] 0xDA      |
 
-### DA 代码 \{#the-da-code}
+### DA 代码 {#the-da-code}
 
 此代码也与其他方法共享。 所以我们将调用堆栈 Y 中的值，并且记住在 `currentWindow()` 中这个 Y 的值是 Storage[1]。
 
@@ -397,7 +397,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 
 其余部分已在[上面](#the-e4-code)解释过。 所以跳转到 0xDA，将栈顶 (Y) 的值写入 0x80-0x9F，并返回该值。 对于 `currentWindow()` 方法，返回 Storage[1]。
 
-## merkleRoot() \{#merkleroot}
+## merkleRoot() {#merkleroot}
 
 偏移量 0xED-0xF8 中的代码与我们在 `splitter()` 中看到的 0x103-0x10E 中的代码相同（除 `JUMPI` 目标地址外），因此我们知道 `merkleRoot ()` 也不是 `payable`。
 
@@ -413,7 +413,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 
 [我们已经弄清楚了](#the-da-code)跳转后会发生什么。 嗯，`merkleRoot()` 返回 Storage[0]。
 
-## 0x81e580d3 \{#0x81e580d3}
+## 0x81e580d3 {#0x81e580d3}
 
 偏移量 0x138-0x143 中的代码与我们在 `splitter()` 中看到的 0x103-0x10E 中的代码相同（除 `JUMPI` 目标地址外），因此我们知道此函数也不是 `payable`。
 
@@ -517,7 +517,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 
 我们已经知道[偏移量 0xDA 处的代码](#the-da-code)执行的操作，它将栈顶值返回给调用者。 所以此函数将查找表中的值返回给调用者。
 
-## 0x1f135823 \{#0x1f135823}
+## 0x1f135823 {#0x1f135823}
 
 偏移量 0xC4-0xCF 中的代码与我们在 `splitter()` 中看到的 0x103-0x10E 中的代码相同（除 `JUMPI` 目标地址外），因此我们知道此函数也不是 `payable`。
 
@@ -533,7 +533,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 
 我们已经知道[偏移量 0xDA 处的代码](#the-da-code)执行的操作，它将栈顶值返回给调用者。 所以此函数返回 `Value*`。
 
-### 方法摘要 \{#method-summary}
+### 方法摘要 {#method-summary}
 
 你觉得自己现在理解合约了？ 我认为没有。 目前为止，我们使用了以下方法：
 
@@ -548,7 +548,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 
 但是我们知道 Storage[3] 中的合约还提供了其他功能。 也许如果我们知道该合约是什么，它就会给我们一条线索。 值得庆幸的是，这是区块链，一切都是已知的，至少理论上是这样。 我们没有看到任何设置 Storage[3] 的方法，所以它一定是由构造函数设置的。
 
-## 构造函数 \{#the-constructor}
+## 构造函数 {#the-constructor}
 
 当我们[查看合约](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f)时，我们还可以看到创建它的交易。
 
@@ -556,7 +556,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 
 如果我们点击该交易，然后点击 **State** 选项卡，我们可以看到参数的初始值。 具体来讲，我们可以看到 Storage[3] 包含 [0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761](https://etherscan.io/address/0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761)。 该合约必须包含缺少的功能。 我们可以借助我们正在研究的合约中使用的相同工具来理解它。
 
-## 代理合约 \{#the-proxy-contract}
+## 代理合约 {#the-proxy-contract}
 
 借助我们用于上述初始合约的相同技术，我们可以看到该合约在以下情况回滚：
 
@@ -582,7 +582,7 @@ Etherscan 指出 `1C` 是一个未知操作码，因为[它是在 Etherscan 编�
 
 在剩下方法中，其中一个是 `claim(<params>)`，另一个是`isClaimed(<params>)`，所以此合约看起来像一个空投合约。 我们可以[尝试使用反编译器](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761)，而不是逐个操作码查看其余代码，反编译器会为此合约中的以下三个函数生成有用的结果。 其他合约的逆向工程留给读者作为练习。
 
-### scaleAmountByPercentage \{#scaleamountbypercentage}
+### scaleAmountByPercentage {#scaleamountbypercentage}
 
 这是反编译器为此函数提供的结果：
 
@@ -600,7 +600,7 @@ def unknown8ffb5c97(uint256 _param1, uint256 _param2) payable:
 
 最后，此函数返回一个调整后的值。
 
-### claim \{#claim}
+### claim {#claim}
 
 反编译器创建的代码很复杂，并不是所有代码都与我们相关。 这里将跳过其中一些内容，专注于我认为提供有用信息的行
 
@@ -675,7 +675,7 @@ def unknown2e7ba6ef(uint256 _param1, uint256 _param2, uint256 _param3, array _pa
 
 ![声明交易](claim-tx.png)
 
-### 1e7df9d3 \{#1e7df9d3}
+### 1e7df9d3 {#1e7df9d3}
 
 此函数和上面的 [`claim`](#claim) 非常相似。 它也检查默克尔证明，尝试将以太币转账到第一个参数，并生成相同类型的日志项。
 
@@ -741,6 +741,6 @@ def unknown1e7df9d3(uint256 _param1, uint256 _param2, array _param3) payable:
 
 所以它看起来像一个声明所有窗口的 `claim` 变体。
 
-## 总结 \{#conclusion}
+## 总结 {#conclusion}
 
 现在，你应该知道如何通过操作码或反编译器（当它有效时）理解没有源代码的智能合约。 从本文的篇幅明显可以看出，对合约进行逆向工程并非易事，但在安全性至关重要的系统中，能够验证合约是否按承诺运作是一项重要技能。

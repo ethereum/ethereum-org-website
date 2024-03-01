@@ -4,11 +4,11 @@ description: Perincian tentang bagaimana Penggabungan mempengaruhi pasokan ETH
 lang: id
 ---
 
-# Bagaimana Penggabungan mempengaruhi pasokan ETH \{#how-the-merge-impacts-ETH-supply}
+# Bagaimana Penggabungan mempengaruhi pasokan ETH {#how-the-merge-impacts-ETH-supply}
 
 Penggabungan mewakili transisi jaringan Ethereum dari bukti kerja ke bukti taruhan yang terjadi pada bulan September 2022. Cara ETH diterbitkan mengalami perubahan pada saat masa transisi tersebut. Sebelumnya, ETH baru telah diterbitkan dari dua sumber: lapisan eksekusi (yaitu. Jaringan Utama) dan lapisan konsensus (yaitu. Rantai Suar). Sejak Penggabungan, penerbitan pada lapisan eksekusi sekarang menjadi nol. Mari kita uraikan hal ini.
 
-## Komponen penerbitan ETH \{#components-of-eth-issuance}
+## Komponen penerbitan ETH {#components-of-eth-issuance}
 
 Kita dapat memecah pasokan ETH menjadi dua kekuatan utama: penerbitan dan pembakaran.
 
@@ -27,19 +27,19 @@ title="Ringkasan penerbitan ETH">
 
 </Card>
 
-## Pra-penggabungan (historis) \{#pre-merge}
+## Pra-penggabungan (historis) {#pre-merge}
 
-### Penerbitan lapisan eksekusi \{#el-issuance-pre-merge}
+### Penerbitan lapisan eksekusi {#el-issuance-pre-merge}
 
 Pada bukti kerja, penambang hanya berinteraksi dengan lapisan eksekusi dan mendapatkan reward blok jika mereka adalah penambang pertama yang menyelesaikan blok berikutnya. Sejak [peningkatan Constantinople](/history/#constantinople) pada tahun 2019, rewardnya adalah 2 ETH per blok. Para penambang juga diberi imbalan dengan menerbitkan blok [ommer](/glossary/#ommer), yang merupakan blok valid yang tidak berakhir di rantai terpanjang/kanonik. Imbalan ini maksimal sebesar 1,75 ETH per ommer, dan _sebagai tambahan untuk_ imbalan yang diterbitkan dari blok kanonik. Proses penambangan adalah kegiatan yang intensif secara ekonomi, yang secara historis membutuhkan tingkat penerbitan ETH yang tinggi untuk mempertahankannya.
 
-### Penerbitan lapisan konsensus \{#cl-issuance-pre-merge}
+### Penerbitan lapisan konsensus {#cl-issuance-pre-merge}
 
 [Rantai Suar](/history/#beacon-chain-genesis) mulai beroperasi pada tahun 2020. Alih-alih penambang, ini diamankan oleh validator menggunakan bukti taruhan. Rantai ini di-bootstrap oleh pengguna Ethereum yang menyetor ETH satu arah ke dalam kontrak pintar di Jaringan Utama (lapisan eksekusi), yang kemudian didengarkan oleh Rantai Suar, dan mengkreditkan pengguna dengan jumlah ETH yang sama di rantai yang baru. Hingga Penggabungan terjadi, validator Rantai Suar tidak memproses transaksi dan pada dasarnya mencapai konsensus tentang keadaan kumpulan validator itu sendiri.
 
 Validator di Rantai Suar diberi imbalan dengan ETH karena telah membuktikan status rantai dan mengusulkan blok. Imbalan (atau penalti) dihitung dan didistribusikan pada setiap jangka waktu (setiap 6,4 menit) berdasarkan kinerja validator. Imbalan validator **secara signifikan** lebih kecil daripada imbalan penambangan yang sebelumnya dikeluarkan di bawah bukti kerja (2 ETH setiap ~13,5 detik), karena mengoperasikan simpul validasi tidak terlalu membutuhkan biaya yang besar sehingga tidak membutuhkan imbalan yang tinggi.
 
-### Pembagian penerbitan sebelum penggabungan \{#pre-merge-issuance-breakdown}
+### Pembagian penerbitan sebelum penggabungan {#pre-merge-issuance-breakdown}
 
 Total pasokan ETH: **~120.520.000 ETH** (saat Penggabungan pada September 2022)
 
@@ -61,13 +61,13 @@ Total pasokan ETH: **~120.520.000 ETH** (saat Penggabungan pada September 2022)
 <strong>~11,3%</strong> diterbitkan kepada para penaruh pada lapisan konsensus (0,52 / 4,61 * 100)
 </InfoBanner>
 
-## Setelah penggabungan (saat ini) \{#post-merge}
+## Setelah penggabungan (saat ini) {#post-merge}
 
-### Penerbitan lapisan eksekusi \{#el-issuance-post-merge}
+### Penerbitan lapisan eksekusi {#el-issuance-post-merge}
 
 Penerbitan lapisan eksekusi sejak Penggabungan adalah nol. Bukti kerja bukan lagi cara yang valid untuk produksi blok berdasarkan aturan konsensus yang telah ditingkatkan. Seluruh aktivitas lapisan eksekusi dikemas ke dalam "blok suar", yang dipublikasikan dan diakui oleh validator bukti taruhan. Imbalan untuk membuktikan dan menerbitkan blok suar dihitung secara terpisah pada lapisan konsensus.
 
-### Penerbitan lapisan konsensus \{#cl-issuance-post-merge}
+### Penerbitan lapisan konsensus {#cl-issuance-post-merge}
 
 Penerbitan lapisan konsensus berlanjut hingga hari ini seperti sebelum Penggabungan, dengan imbalan kecil untuk validator yang menyetujui dan mengusulkan blok. Imbalan validator terus mengalir ke _saldo validator_ yang dikelola di dalam lapisan konsensus. Berbeda dengan akun saat ini (akun "eksekusi"), yang dapat melakukan transaksi di Jaringan Utama, akun Ethereum ini terpisah dan tidak dapat bertransaksi secara bebas dengan akun Ethereum lainnya. Dana di akun-akun ini hanya dapat ditarik ke satu alamat eksekusi yang ditentukan.
 
@@ -79,7 +79,7 @@ Kira kira sekitar 0,33% dari total jumlah validator dapat keluar dalam satu hari
 
 Seiring bertambahnya validator yang menarik diri, jumlah maksimum validator yang keluar akan secara bertahap berkurang menjadi minimum empat untuk sengaja mencegah jumlah ETH yang dipertaruhkan besar dan mengganggu yang ditarik secara bersamaan.
 
-### Pembagian inflasi setelah penggabungan \{#post-merge-inflation-breakdown}
+### Pembagian inflasi setelah penggabungan {#post-merge-inflation-breakdown}
 
 - Total pasokan ETH: **~120.520.000 ETH** (saat Penggabungan pada September 2022)
 - Penerbitan lapisan eksekusi: **0**
@@ -90,7 +90,7 @@ Tingkat penerbitan tahunan total: <strong>~0,52%</strong><br/><br/>
 Pengurangan bersih dalam penerbitan ETH tahunan: <strong>~88,7%</strong> ((4,61% - 0,52%) / 4,61% * 100)
 </InfoBanner>
 
-## <Emoji text=":fire:" size="1" /> Pembakaran \{#the-burn}
+## <Emoji text=":fire:" size="1" /> Pembakaran {#the-burn}
 
 Kekuatan berlawanan dengan penerbitan ETH adalah tingkat pembakaran ETH. Untuk sebuah transaksi dieksekusi di Ethereum, biaya minimum (dikenal sebagai "biaya dasar") harus dibayarkan, yang terus berfluktuasi (dari blok ke blok) tergantung pada aktivitas jaringan. Biaya tersebut dibayarkan dalam bentuk ETH dan _wajib_ agar transaksi dianggap sah. Biaya ini akan _dibakar_ selama proses transaksi, mengeluarkannya dari sirkulasi.
 
@@ -100,7 +100,7 @@ Pembakaran biaya diaktifkan dengan <a href="/history/#london">peningkatan London
 
 Selain pembakaran biaya yang diimplementasikan oleh peningkatan London, validator juga dapat dikenakan denda karena tidak aktif, atau bahkan lebih buruk lagi, mereka dapat dipotong karena melanggar aturan tertentu yang mengancam keamanan jaringan. Penalti ini mengakibatkan pengurangan ETH dari saldo validator tersebut, yang tidak langsung diberikan sebagai imbalan kepada akun lain, secara efektif dibakar/mengeluarkannya dari sirkulasi.
 
-### Menghitung harga gas rata-rata untuk deflasi \{#calculating-average-gas-price-for-deflation}
+### Menghitung harga gas rata-rata untuk deflasi {#calculating-average-gas-price-for-deflation}
 
 Seperti yang dibahas di atas, jumlah ETH yang diterbitkan dalam satu hari tertentu tergantung pada total ETH yang dipertaruhkan. Pada saat penulisan ini, jumlahnya kira-kira adalah 1700 ETH per hari.
 
@@ -128,7 +128,7 @@ Kita bisa menyederhanakan dan menulisnya sebagai fungsi dari `X`:
 
 Jadi, sebagai contoh, jika `X` (penerbitan ETH harian) meningkat menjadi 1800 berdasarkan total ETH yang dipertaruhkan, maka `f(X)` (harga gwei yang diperlukan untuk menutupi seluruh penerbitan) akan menjadi `17 gwei` (menggunakan 2 angka penting)
 
-## Bacaan lebih Lanjut \{#further-reading}
+## Bacaan lebih Lanjut {#further-reading}
 
 - [Penggabungan](/roadmap/merge/)
 - [Ultrasound.money](https://ultrasound.money/) - _Dasbor yang tersedia untuk memvisualisasikan penerbitan dan pembakaran ETH secara real-time_

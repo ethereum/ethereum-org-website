@@ -6,15 +6,15 @@ lang: ro
 
 Un contract inteligent este un program care rulează la o adresă pe Ethereum. Este alcătuit din date și funcții care pot fi executate la primirea unei tranzacții. Iată o imagine de ansamblu a ceea ce constituie un contract inteligent.
 
-## Condiții prealabile \{#prerequisites}
+## Condiții prealabile {#prerequisites}
 
 Aveţi grijă să citiţi mai întâi despre [contractele inteligente](/developers/docs/smart-contracts/). Acest document presupune că sunteţi deja familiarizat cu limbaje de programarea precum JavaScript sau Python.
 
-## Datele \{#data}
+## Datele {#data}
 
 Toate datele dintr-un contract trebuie alocate unei locații: fie de `stocare`, fie de `memorie`. Este costisitor de modificat locul de stocare într-un contract inteligent, deci trebuie să hotărâţi unde să vă plasaţi datele.
 
-### Stocare \{#storage}
+### Stocare {#storage}
 
 Datele persistente sunt denumite stocare și sunt reprezentate de variabilele de stare. Aceste valori sunt stocate permanent pe blockchain. Trebuie să declaraţi de ce tip sunt, astfel încât contractul să poată ţine socoteala spaţiului de stocare de care are nevoie pe blockchain atunci când compilează.
 
@@ -52,13 +52,13 @@ Pentru mai multe explicații, consultaţi documentele:
 - [Vedeţi tipurile Vyper](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [Vedeţi tipurile Solidity](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### Memorie \{#memory}
+### Memorie {#memory}
 
 Valorile care sunt stocate numai pe durata de viață a executării unei funcții contractuale se numesc variabile de memorie. Deoarece acestea nu sunt stocate permanent pe blockchain, sunt mult mai ieftin de utilizat.
 
 Aflaţi mai multe informații despre modul în care EVM stochează datele (stocare, memorie și stivă) în [documentația Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-### Variabile de mediu \{#environment-variables}
+### Variabile de mediu {#environment-variables}
 
 În plus față de variabilele pe care le definiţi în contract, există câteva variabile globale speciale. Acestea sunt utilizate în principal pentru a furniza informații despre blockchain sau tranzacția curentă.
 
@@ -69,7 +69,7 @@ Exemple:
 | `block.timestamp` | uint256                | Marca temporală actuală a epocii blocului |
 | `msg.sender`      | address                | Expeditorul mesajului (apel curent)       |
 
-## Funcții \{#functions}
+## Funcții {#functions}
 
 În exprimare simplistă, funcțiile pot obține informații sau pot seta informații ca răspuns la tranzacțiile primite.
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - Este declarat `public`, ceea ce înseamnă că oricine îl poate accesa
 - Nu este declarat `view`, astfel încât să poată modifica starea contractului
 
-### Funcții de vizualizare \{#view-functions}
+### Funcții de vizualizare {#view-functions}
 
 Aceste funcții promit să nu modifice starea datelor contractului. Exemplele obişnuite sunt funcțiile „getter” (de obținere) – s-ar putea să utilizaţi acest lucru pentru a primi soldul unui utilizator, de exemplu.
 
@@ -131,7 +131,7 @@ Ce se consideră ca modificator de stare:
 7. Folosirea de apeluri de nivel inferior.
 8. Utilizarea ansamblului în linie care conține anumite opcoduri.
 
-### Funcții constructor \{#constructor-functions}
+### Funcții constructor {#constructor-functions}
 
 Funcțiile `constructor` sunt executate o singură dată, la prima implementare a contractului. Precum `constructor`-ul din multe limbaje de programare bazate pe clase, aceste funcții inițializează adesea variabilele de stare la valorile lor specificate.
 
@@ -158,7 +158,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### Funcții încorporate \{#built-in-functions}
+### Funcții încorporate {#built-in-functions}
 
 În plus față de variabilele și funcțiile pe care le definiţi în contract, există câteva funcții speciale încorporate. Cel mai evident exemplu este:
 
@@ -167,7 +167,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 
 Acestea permit contractelor să trimită ETH către alte conturi.
 
-## Scrierea de funcții \{#writing-functions}
+## Scrierea de funcții {#writing-functions}
 
 Funcția dvs. are nevoie de:
 
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 Un contract complet ar putea arăta astfel. Aici funcția `constructor` furnizează o valoare inițială pentru variabila `dapp_name`.
 
-## Evenimente și jurnale \{#events-and-logs}
+## Evenimente și jurnale {#events-and-logs}
 
 Evenimentele vă permit să comunicaţi cu contractul dvs. inteligent din frontend sau din alte aplicații cu abonare. Când o tranzacție este minată, contractele inteligente pot emite evenimente și pot scrie jurnale în blockchain, pe care frontend-ul le poate procesa.
 
-## Exemple adnotate \{#annotated-examples}
+## Exemple adnotate {#annotated-examples}
 
 Acestea sunt câteva exemple scrise în Solidity. Dacă doriţi să vă jucaţi cu codul, puteţi interacționa cu el în [Remix](http://remix.ethereum.org).
 
-### Hello world \{#hello-world}
+### Hello world {#hello-world}
 
 ```solidity
 // Specifică versiunea Solidity, utilizând versiuni semantice.
@@ -246,7 +246,7 @@ contract HelloWorld {
 }
 ```
 
-### Token \{#token}
+### Token {#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### Activ digital unic \{#unique-digital-asset}
+### Activ digital unic {#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -639,19 +639,19 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Referințe suplimentare \{#further-reading}
+## Referințe suplimentare {#further-reading}
 
 Consultaţi documentația Solidity și Vyper pentru a vedea o prezentare mai completă a contractelor inteligente:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## Subiecte corelate \{#related-topics}
+## Subiecte corelate {#related-topics}
 
 - [Contracte inteligente](/developers/docs/smart-contracts/)
 - [Mașina Virtuală Ethereum](/developers/docs/evm/)
 
-## Tutoriale corelate \{#related-tutorials}
+## Tutoriale corelate {#related-tutorials}
 
 - [Reducerea contractelor pentru a contracara limita de mărime a contractului](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Câteva sfaturi practice pentru reducerea dimensiunii contractului dvs. inteligent._
 - [Înregistrarea datelor din contracte inteligente cu evenimente](/developers/tutorials/logging-events-smart-contracts/) _– O introducere despre evenimentele contractelor inteligente și cum le puteţi utiliza pentru a înregistra date._

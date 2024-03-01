@@ -13,11 +13,11 @@ summaryPoints:
   - Verminder het vertrouwen en bewaar zelf uw opnamesleutels
 ---
 
-## Wat is staking-as-a-service? \{#what-is-staking-as-a-service}
+## Wat is staking-as-a-service? {#what-is-staking-as-a-service}
 
 Staking-as-a-service ("SaaS") is een categorie van stakingdiensten waarbij u uw eigen 32 ETH stort voor een validator, maar node-activiteiten naar een externe operator worden gedelegeerd. Dit proces omvat meestal een begeleiding door de initiële set-up, inclusief sleutelgeneratie en storting, met daarna het uploaden van uw ondertekeningssleutels naar de operator. Hiermee kan de service uw validator namens u beheren, meestal tegen een maandelijkse vergoeding.
 
-## Waarom staken met een service? \{#why-stake-with-a-service}
+## Waarom staken met een service? {#why-stake-with-a-service}
 
 Het Ethereum-protocol ondersteunt zelf geen stake-delegering, daarom zijn deze diensten gebouwd om aan deze vraag te voldoen. Als u 32 ETH hebt om te staken, maar u zich niet op uw gemak voelt om met hardware om te gaan, kunt u met SaaS-diensten het moeilijke deel delegeren terwijl u eigen blokbeloningen verdient.
 
@@ -38,7 +38,7 @@ Het Ethereum-protocol ondersteunt zelf geen stake-delegering, daarom zijn deze d
 <StakingComparison page="saas" />
 }
 
-## Wat te overwegen \{#what-to-consider}
+## Wat te overwegen {#what-to-consider}
 
 Er is een groeiend aantal staking-as-a-service providers om u te helpen uw ETH te staken, maar elk met verschillende risico's en voordelen.
 
@@ -48,7 +48,7 @@ Attribuutindicatoren worden hieronder gebruikt om opmerkelijke of zwakke punten 
 <StakingConsiderations page="saas" />
 }
 
-## Verken staking-serviceproviders \{#saas-providers}
+## Verken staking-serviceproviders {#saas-providers}
 
 Hieronder staat een aantal beschikbare SaaS-providers. Gebruik bovenstaande indicatoren om u te helpen door de onderstaande services te gaan
 
@@ -70,7 +70,7 @@ Houd rekening met het belang van het ondersteunen van <a href="/developers/docs/
 
 Heeft u een suggestie voor een staking-as-a-service provider die we gemist hebben? Bekijk ons [productlijstbeleid](/contributing/adding-staking-products/) om te zien of het een goede fit is en om het ter beoordeling in te dienen.
 
-## Veelgestelde vragen \{#faq}
+## Veelgestelde vragen {#faq}
 
 {
 <ExpandableCard title="Wie heeft mijn sleutels?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
@@ -100,6 +100,6 @@ Neem contact op met de individuele SaaS-providers voor meer informatie over gara
 </ExpandableCard>
 }
 
-## Verder lezen \{#further-reading}
+## Verder lezen {#further-reading}
 
 - [Evaluating Staking Services](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

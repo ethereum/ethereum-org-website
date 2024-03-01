@@ -14,7 +14,7 @@ RLP を使用して辞書をエンコードするのに、次の 2 つの正規�
 - `[[k1,v1],[k2,v2]...]`のように辞書順にキーを並べて使用する
 - イーサリアムのように上位レベルのパトリシア・ツリー・エンコーディングを使用する
 
-## 定義 \{#definition}
+## 定義 {#definition}
 
 RLP エンコーディング関数は、アイテムを取ります。 アイテムは次のように定義されます。
 
@@ -66,7 +66,7 @@ def to_binary(x):
         return to_binary(int(x / 256)) + chr(x % 256)
 ```
 
-## いくつかの例 \{#examples}
+## いくつかの例 {#examples}
 
 - 文字列「dog」= [ 0x83, 'd', 'o', 'g' ]
 - リスト [ "cat", "dog" ] = `[ 0xc8, 0x83, 'c', 'a', 't', 0x83, 'd', 'o', 'g' ]`
@@ -79,7 +79,7 @@ def to_binary(x):
 - 3 の[集合論的表現](http://en.wikipedia.org/wiki/Set-theoretic_definition_of_natural_numbers) `[ [], [[]], [ [], [[]] ] ] = [ 0xc7, 0xc0, 0xc1, 0xc0, 0xc3, 0xc0, 0xc1, 0xc0 ]`
 - 文字列「Lorem ipsum dolor sit amet, consectetur adipisicing elit」= `[ 0xb8, 0x38, 'L', 'o', 'r', 'e', 'm', ' ', ... , 'e', 'l', 'i', 't' ]`
 
-## RLP デコードディング \{#rlp-decoding}
+## RLP デコードディング {#rlp-decoding}
 
 RLP エンコーディング規則とプロセスに従って、RLP デコードの入力は、バイナリデータ配列とみなされます。 RLP のデコーディングプロセスは、次のようになります。
 
@@ -150,12 +150,12 @@ def to_integer(b):
         return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
 ```
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 - [イーサリアムの RLP](https://medium.com/coinmonks/data-structure-in-ethereum-episode-1-recursive-length-prefix-rlp-encoding-decoding-d1016832f919)
 - [イーサリアムの内部: RLP](https://medium.com/coinmonks/ethereum-under-the-hood-part-3-rlp-decoding-df236dc13e58)
 - [Coglio, A. (2020). ACL2 のイーサリアムの再帰的な長さのプレフィックス arXiv preprint arXiv:2009.13769.](https://arxiv.org/abs/2009.13769)
 
-## 関連トピック \{#related-topics}
+## 関連トピック {#related-topics}
 
 - [パトリシア・マークル・ツリー](/developers/docs/data-structures-and-encoding/patricia-merkle-trie)

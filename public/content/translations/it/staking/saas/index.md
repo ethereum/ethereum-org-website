@@ -13,11 +13,11 @@ summaryPoints:
   - Riduce la fiducia e mantiene la custodia delle tue chiavi di prelievo
 ---
 
-## Cos'è lo staking come un servizio? \{#what-is-staking-as-a-service}
+## Cos'è lo staking come un servizio? {#what-is-staking-as-a-service}
 
 Lo staking come un servizio ("SaaS") rappresenta una categoria di servizi di staking in cui depositi i tuoi 32 ETH per un validatore, ma deleghi le operazioni del nodo a un operatore di terze parti. Solitamente questo processo coinvolge la guida alla configurazione iniziale, inclusa la generazione della chiave e il deposito e il successivo caricamento delle tue chiavi di firma all'operatore. Questo consente al servizio di operare il tuo validatore per tuo conto, solitamente per una commissione mensile.
 
-## Perché mettere in staking con un servizio? \{#why-stake-with-a-service}
+## Perché mettere in staking con un servizio? {#why-stake-with-a-service}
 
 Il protocollo di Ethereum non supporta nativamente la delegazione dello staking, quindi questi servizi sono stati creati per soddisfare questa domanda. Se hai 32 ETH da mettere in staking, ma non hai dimestichezza con l'hardware, i servizi di SaaS ti consentono di delegare la parte hardware e ottenere le ricompense del blocco nativo.
 
@@ -31,7 +31,7 @@ Il protocollo di Ethereum non supporta nativamente la delegazione dello staking,
 <StakingComparison page="saas" />
 }
 
-## Cosa considerare \{#what-to-consider}
+## Cosa considerare {#what-to-consider}
 
 Esiste un numero crescente di fornitori di SaaS per aiutarti a mettere i tuoi ETH in staking, ma tutti hanno i propri vantaggi e rischi. Tutte le opzioni dei SaaS richiedono ipotesi di fiducia aggiuntive rispetto allo staking domestico. Le opzioni di SaaS potrebbero contenere del codice aggiuntivo, avvolto dai client di Ethereum, che non è aperto o verificabile. I SaaS hanno inoltre un effetto negativo sulla decentralizzazione della rete. A seconda della configurazione, potresti non controllare il tuo validatore; l'operatore potrebbe agire in modo disonesto, utilizzando i tuoi ETH.
 
@@ -41,7 +41,7 @@ Gli indicatori d'attributo sono usati di seguito per segnalare notevoli punti di
 <StakingConsiderations page="saas" />
 }
 
-## Esplora i fornitori del servizio di staking \{#saas-providers}
+## Esplora i fornitori del servizio di staking {#saas-providers}
 
 Di seguito alcuni fornitori di SaaS disponibili. Usa i suddetti indicatori per orientarti tra questi servizi
 
@@ -65,7 +65,7 @@ Ricorda l'importanza di supportare la [diversità del client](/developers/docs/n
 
 Hai un suggerimento per un fornitore di staking come servizio che abbiamo dimenticato? Dai un'occhiata alla nostra [politica di elenco dei prodotti](/contributing/adding-staking-products/) per verificare l'idoneità e sottoporcelo.
 
-## Domande frequenti \{#faq}
+## Domande frequenti {#faq}
 
 {
 <ExpandableCard title="Chi detiene le mie chiavi?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
@@ -107,6 +107,6 @@ Contatta il singolo fornitore di SaaS per ulteriori dettagli su qualsiasi opzion
 </ExpandableCard>
 }
 
-## Approfondimenti \{#further-reading}
+## Approfondimenti {#further-reading}
 
 - [Valutare i servizi di Staking](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

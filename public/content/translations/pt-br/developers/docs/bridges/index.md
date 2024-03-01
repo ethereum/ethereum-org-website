@@ -6,7 +6,7 @@ lang: pt-br
 
 Com a proliferação de soluções de blockchains L1 e de [dimensionamento](/developers/docs/scaling/) L2, junto com um número cada vez maior de aplicativos descentralizados cross-chain, a necessidade de comunicação e de movimentação de ativos entre as chains tornou-se uma parte essencial da infraestrutura das redes. Há diferentes tipos de bridges para ajudar a tornar isso possível.
 
-## Necessidade de bridges \{#need-for-bridges}
+## Necessidade de bridges {#need-for-bridges}
 
 Bridges existem para conectar redes blockchain. Elas permitem conectividade e interoperabilidade entre blockchains.
 
@@ -14,7 +14,7 @@ Blockchains existem em ambientes isolados, o que significa que não há maneira 
 
 Bridges oferecem uma maneira de os ambientes isolados de blockchain se conectarem entre si. Eles estabelecem uma rota de transporte entre blockchains na qual tokens, mensagens, dados arbitrários, e até mesmo chamadas de [contratos inteligentes](/developers/docs/smart-contracts/) podem ser transferidos de uma cadeia para outra.
 
-## Benefícios das bridges \{#benefits-of-bridges}
+## Benefícios das bridges {#benefits-of-bridges}
 
 De maneira simples, as bridges desbloqueiam numerosos casos de uso, já que possibilitam que as redes blockchain troquem dados e movam ativos entre si.
 
@@ -28,7 +28,7 @@ Para os desenvolvedores, as bridges habilitam o seguinte:
 - colaboração entre desenvolvedores de vários ecossistemas blockchain para desenvolver novos produtos.
 - atrair usuários e comunidades de vários ecossistemas para seus dapps.
 
-## Como as bridges funcionam? \{#how-do-bridges-work}
+## Como as bridges funcionam? {#how-do-bridges-work}
 
 Embora haja muitos [tipos de desenhos de bridge](https://blog.li.fi/what-are-blockchain-bridges-and-how-can-we-classify-them-560dc6ec05fa), há três maneiras principais de facilitar a transferência de ativos entre as cadeias:
 
@@ -36,7 +36,7 @@ Embora haja muitos [tipos de desenhos de bridge](https://blog.li.fi/what-are-blo
 - **Burn and mint**: faz o burn dos ativos na cadeia de origem e faz a mintagem de ativos na cadeia de destino.
 - **Atomic swaps**: troca ativos na cadeia de origem por ativos na cadeia de destino com terceiros.
 
-## Tipos de bridge \{#bridge-types}
+## Tipos de bridge {#bridge-types}
 
 Geralmente, as bridges podem ser classificadas como um dos seguintes tipos:
 
@@ -45,7 +45,7 @@ Geralmente, as bridges podem ser classificadas como um dos seguintes tipos:
 - **Bridges para o envio de mensagens generalizadas**: estas bridges podem transferir ativos, juntamente com mensagens e dados arbitrários entre cadeias. Exemplos: Nomad e LayerZero.
 - **Redes de liquidez**: o objetivo principal destas bridges é a transferência de ativos de uma cadeia para outra através de atomic swaps. Geralmente, elas não suportam o envio de mensagens entre cadeias. Exemplos: Connext e Hop.
 
-## Vantagens e desvantagens a considerar \{#trade-offs}
+## Vantagens e desvantagens a considerar {#trade-offs}
 
 Com bridges, não há soluções perfeitas. Em vez disso, existem apenas compromissos feitos para cumprir uma finalidade. Desenvolvedores e usuários podem avaliar bridges com base nos seguintes fatores:
 
@@ -65,7 +65,7 @@ Para avaliar bridges não confiáveis baseadas em outros fatores, temos de divid
 - **Bridges para o envio de mensagens generalizadas –** Estas bridges apresentam excelente segurança e a capacidade de transferir dados mais complexos entre cadeias. Normalmente, também apresentam uma boa relação custo-benefício. No entanto, estes pontos fortes geralmente afetam a conectividade para clientes leves de bridge (ex: IBC) e apresentam desvantagens em termos de velocidade para bridges otimistas (ex: Nomad) que usam provas de fraude.
 - **Redes de liquidez –** Estas bridges usam atomic swaps para a transferência de ativos e são sistemas verificados localmente (ou seja, elas usam os validadores dos blockchains subjacentes para verificar transações). Como resultado, apresentam grande segurança e velocidade. Além disso, elas são consideradas relativamente eficazes em termos de custos e oferecem uma boa conectividade. No entanto, a maior desvantagem é sua incapacidade de enviar dados mais complexos, já que elas não suportam o envio de mensagens cross-chain.
 
-## Riscos com bridges \{#risk-with-bridges}
+## Riscos com bridges {#risk-with-bridges}
 
 As bridges são responsáveis pelos três principais [maiores hacks em DeFi](https://rekt.news/leaderboard/) e ainda estão nos estágios iniciais de desenvolvimento. Usar qualquer bridge traz os seguintes riscos:
 
@@ -74,11 +74,11 @@ As bridges são responsáveis pelos três principais [maiores hacks em DeFi](htt
 - **Risco de contraparte**: algumas bridges utilizam um design confiável que requer que os usuários confiem em que os validadores não roubarão fundos dos usuários. A necessidade de os usuários confiarem nesses atores externos os expõe a riscos como rug pull, censura e outras atividades maliciosas.
 - **Problemas existentes**: dado que as bridges estão em fase inicial de desenvolvimento, existem muitas perguntas não respondidas relacionadas a como as bridges irão funcionar em diferentes condições de mercado, como tempos de congestionamento de rede e durante eventos imprevistos, como ataques a nível de rede ou estados de rollback. Esta incerteza comporta certos riscos, cujo grau ainda é desconhecido.
 
-## Como os dApps podem usar bridges? \{#how-can-dapps-use-bridges}
+## Como os dApps podem usar bridges? {#how-can-dapps-use-bridges}
 
 Aqui estão algumas aplicações práticas que os desenvolvedores podem considerar sobre as bridges e levar seus dApps cross-chain:
 
-### Como integrar bridges \{#integrating-bridges}
+### Como integrar bridges {#integrating-bridges}
 
 Para desenvolvedores, há muitas maneiras adicionar suporte a bridges:
 
@@ -101,7 +101,7 @@ Dito isto, os agregadores de bridge também têm as suas limitações. Por exemp
 
 Se um dapp for integrar uma bridge ou um agregador, existem diferentes opções com base no do grau de integração pretendido. Por exemplo, se for apenas uma integração front-end para melhorar a experiência de integração do usuário, um dapp integraria o widget. No entanto, se a integração é para conhecer mais em detalhes estratégias cross-chain, como staking, yield farming etc, o dapp integra o SDK ou API.
 
-### Como implantar um dapp em múltiplas cadeias \{#deploying-a-dapp-on-multiple-chains}
+### Como implantar um dapp em múltiplas cadeias {#deploying-a-dapp-on-multiple-chains}
 
 Para implantar um dapp em várias cadeias, os desenvolvedores podem usar plataformas de desenvolvimento como [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/) etc. Normalmente, essas plataformas vêm com plugins compostos que podem habilitar dapps para cross-chain. Por exemplo, os desenvolvedores podem usar um proxy de implantação determinístico oferecido pelo [plugin hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
 
@@ -111,7 +111,7 @@ Para implantar um dapp em várias cadeias, os desenvolvedores podem usar platafo
 - [Como criar um marketplace de NFT cross-chain](https://youtu.be/WZWCzsB1xUE)
 - [Moralis: Como criar dapps NFT cross-chain](https://www.youtube.com/watch?v=ehv70kE1QYo)
 
-### Como monitorar atividades de contrato entre cadeias \{#monitoring-contract-activity-across-chains}
+### Como monitorar atividades de contrato entre cadeias {#monitoring-contract-activity-across-chains}
 
 Para monitorar atividades de contrato entre cadeias, os desenvolvedores podem usar subgraphs e plataformas de desenvolvedores, como Tenderly, para acompanhar os contratos inteligentes em tempo real. Tais plataformas também têm ferramentas que oferecem melhor funcionalidade de monitoramento de dados para atividades cross-chain, tais como a busca por [eventos emitidos por contratos](https://docs.soliditylang.org/en/v0.8.14/contracts.html?highlight=events#events) etc.
 
@@ -120,7 +120,7 @@ Para monitorar atividades de contrato entre cadeias, os desenvolvedores podem us
 - [The Graph](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
 
-## Leitura adicional \{#further-reading}
+## Leitura adicional {#further-reading}
 
 - [Blockchain Bridges](/bridges/) – ethereum.org
 - [Blockchain Bridges: Building Networks of Cryptonetworks](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) 8 set., 2021 – Dmitriy Berenzon

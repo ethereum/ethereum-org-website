@@ -19,7 +19,7 @@ L'intégration continue (CI) avec Truffle est idéale pour le développement une
 
 Nous utiliserons la [Truffle Metacoin Box](https://www.trufflesuite.com/boxes/metacoin) pour configurer notre intégration continue. Vous pouvez choisir entre Travis CI ou Circle CI.
 
-## Configuration de Travis CI \{#setting-up-travis-ci}
+## Configuration de Travis CI {#setting-up-travis-ci}
 
 Ajouter [Travis CI](https://travis-ci.org/) est très simple. Vous n'avez qu'à ajouter un fichier de configuration `.travis.yml` au dossier racine du projet :
 
@@ -39,7 +39,7 @@ script:
 
 Pour le moment, nous allons garder ça de façon aussi simple que possible et lancerons uniquement le script de test qui exécute les tests unitaires Truffle. Mais nous avons un problème : il n'y a pas de blockchain disponible sur la machine Travis CI. Un simple correctif à cela consiste à lancer `npm install ganache-cli` et simplement l'exécuter avant le test. Vous pouvez le faire en ajoutant un script bash avec la ligne npx `ganache-cli > /dev/null` et avant l'appel `npx truffle test`. L'[exemple complet du script bash](https://github.com/gorgos/Truffle-CI-Example/blob/master/scripts/run_tests.sh).
 
-## Configuration de Circle CI \{#setting-up-circle-ci}
+## Configuration de Circle CI {#setting-up-circle-ci}
 
 [CircleCi](https://circleci.com/) nécessite un fichier de configuration plus long. La commande supplémentaire [`npm ci`](https://docs.npmjs.com/cli/ci.html) se fait automatiquement dans Travis. Elle installe les dépendances plus rapidement et de manière plus sécurisée que ne le fait `npm install`. Nous utilisons à nouveau le même script de la version Travis pour exécuter ganache-cli avant les tests.
 
@@ -97,18 +97,18 @@ workflows:
             - dependencies
 ```
 
-## Ajout du plugin eth-gas-reporter \{#adding-the-eth-gas-reporter-plugin}
+## Ajout du plugin eth-gas-reporter {#adding-the-eth-gas-reporter-plugin}
 
 Le plugin eth-gas-reporter est utile pour garder une trace des coûts de gaz de vos fonctions de contrat intelligent. L'avoir dans votre CI sera plus utile pour afficher des « diffs » lors de l'ajout de pull requests.
 
-### Étape 1 : Installez le plugin eth-gas-reporter et Codechecks \{#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
+### Étape 1 : Installez le plugin eth-gas-reporter et Codechecks {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
 
 ```bash
 npm install --save-dev eth-gas-reporter
 npm install --save-dev @codechecks/client
 ```
 
-### Étape 2 : Ajoutez le plugin aux paramètres mocha dans votre truffle-config.js \{#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
+### Étape 2 : Ajoutez le plugin aux paramètres mocha dans votre truffle-config.js {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
 
 [Voir les options](https://github.com/cgewecke/eth-gas-reporter#options)
 
@@ -124,21 +124,21 @@ module.exports = {
 };
 ```
 
-### Étape 3 : Ajouter un codechecks.yml à la racine de votre projet \{#step-3-add-a-codechecksyml-to-your-projects-root-directory}
+### Étape 3 : Ajouter un codechecks.yml à la racine de votre projet {#step-3-add-a-codechecksyml-to-your-projects-root-directory}
 
 ```yml
 checks:
   - name: eth-gas-reporter/codechecks
 ```
 
-### Étape 4 : Exécutez des Codechecks après la commande de test \{#step-4-run-codechecks-after-the-test-command}
+### Étape 4 : Exécutez des Codechecks après la commande de test {#step-4-run-codechecks-after-the-test-command}
 
 ```bash
 - npm test
 - npx codechecks
 ```
 
-### Étape 5 : Créer un compte Codechecks \{#step-5-create-a-codechecks-account}
+### Étape 5 : Créer un compte Codechecks {#step-5-create-a-codechecks-account}
 
 - Créez un compte [Codechecks](http://codechecks.io/).
 - Ajoutez-y le dépôt GitHub.
@@ -149,17 +149,17 @@ C’est tout. Vous retrouverez maintenant un bon rapport sur les changements dan
 
 ![Exemple de rapports de gaz](./gas-reports.png)
 
-## Ajout du plugin solidity-coverage \{#adding-the-solidity-coverage-plugin}
+## Ajout du plugin solidity-coverage {#adding-the-solidity-coverage-plugin}
 
 Avec le plugin solidity-coverage vous pouvez vérifier combien de chemins de code sont couverts par vos tests. Ajouter ceci à votre CI rend son utilisation très pratique une fois qu'il est configuré.
 
-### Étape 1 : Créer un projet Metacoin et installez des outils de couverture \{#step-1-create-a-metacoin-project-and-install-coverage-tools}
+### Étape 1 : Créer un projet Metacoin et installez des outils de couverture {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
 npm install --save-dev truffle coveralls solidity-coverage
 ```
 
-### Étape 2 : Ajouter solidity-coverage au tableau des plugins dans truffle-config.js \{#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}
+### Étape 2 : Ajouter solidity-coverage au tableau des plugins dans truffle-config.js {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}
 
 ```js
 module.exports = {
@@ -168,7 +168,7 @@ module.exports = {
 }
 ```
 
-### Étape 3 : Ajouter les commandes de couverture au fichier .travis.yml ou Circle CI config.yml \{#step-3-add-the-coverage-commands-to-the-travisyml-or-circle-ci-configyml}
+### Étape 3 : Ajouter les commandes de couverture au fichier .travis.yml ou Circle CI config.yml {#step-3-add-the-coverage-commands-to-the-travisyml-or-circle-ci-configyml}
 
 ```bash
 - npx truffle run coverage
@@ -177,7 +177,7 @@ module.exports = {
 
 La coverage de Solidity démarre sa propre ganache-cli, pour que nous n'ayons pas à nous en occuper. Cependant, ne remplacez pas la commande de test standard, le coverage de la ganache-cli fonctionne différemment et ne remplace donc pas les tests unitaires réguliers.
 
-### Étape 4 : Ajouter un dépôt à Coveralls \{#step-4-add-repository-to-coveralls}
+### Étape 4 : Ajouter un dépôt à Coveralls {#step-4-add-repository-to-coveralls}
 
 - Créez un compte [Coveralls](https://coveralls.io/).
 - Ajoutez-y le dépôt GitHub.
@@ -185,7 +185,7 @@ La coverage de Solidity démarre sa propre ganache-cli, pour que nous n'ayons pa
 
 ![Exemple Coverall](./coverall.png)
 
-## Plus d'idées \{#further-ideas}
+## Plus d'idées {#further-ideas}
 
 - [MythX](https://mythx.io/) : Avec MythX, vous pouvez analyser automatiquement la sécurité de votre contrat intelligent. Il est donc très logique d'[ajouter ceci à votre CI](https://blog.mythx.io/howto/mythx-and-continuous-integration-part-1-circleci/).
 - [Linting](https://wikipedia.org/wiki/Lint_%28software%29) : Un bon code peut être appliqué dans une certaine mesure avec des outils de linting. [Eslint](https://eslint.org/) fonctionne parfaitement pour JavaScript, est [facile à installer](https://eslint.org/docs/user-guide/getting-started), tandis que [Solhint](https://protofire.github.io/solhint/) peut être utilisé pour Solidity.

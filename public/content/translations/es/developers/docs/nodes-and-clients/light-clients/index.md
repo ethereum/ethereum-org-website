@@ -6,17 +6,17 @@ lang: es
 
 Ejecutar un nodo completo es la forma mas fiable, privada, descentralizada y resistente a censura de interactuar con Ethereum. Con los nodos completos usted mantiene su propia copia de la cadena de bloques la cual puede consultar instantáneamente y conseguir acceso directo a la red P2P de Ethereum. De igual forma, ejecutar un nodo completo requiere una significante cantidad de memoria, espacio y CPU. Esto significa que ejecutar su propio nodo no es factible para todo el mundo. Hay varias soluciones a esto en la hoja de ruta de Ethereum, incluida la opción «sin estado», aunque aún están lejos de implementarse. La respuesta a corto plazo es el intercambio de algunos de los beneficios que conlleva el ejecutar un nodo completo para lograr grandes mejoras de rendimiento y permitir que los nodos se ejecuten en dispositivos con pocos requisitos. A los nodos que hacen esta compensación se les denomina nodos ligeros.
 
-## ¿Qué es un cliente ligero? \{#what-is-a-light-client}
+## ¿Qué es un cliente ligero? {#what-is-a-light-client}
 
 Un nodo ligero es un nodo que ejecuta un software de cliente ligero. En vez de guardar localmente las copias de los datos de la cadena de bloques y de comprobar de forma independiente todos los cambios realizados, solicitan los datos necesarios a algún proveedor. El proveedor puede ser una conexión directa a un nodo completo o a través de un servidor RPC centralizado. Seguidamente, el nodo ligero comprueba los datos, lo que le permite mantenerse sincronizado con la cabeza de la cadena. Los nodos ligeros solo procesan los encabezados de los bloques, descargando solo ocasionalmente el contenido actual del bloque. Los nodos pueden variar en su ligereza, dependiendo de la combinación de clientes ligeros y clientes completos que estén ejecutando. Por ejemplo, la configuración más ligera sería la ejecución de un cliente de ejecución ligero y un cliente de consenso ligero. También es probable que varios nodos opten por ejecutar clientes de consenso ligeros con clientes de ejecución completos, o viceversa.
 
-## ¿Cómo funcionan los clientes ligeros? \{#how-do-light-clients-work}
+## ¿Cómo funcionan los clientes ligeros? {#how-do-light-clients-work}
 
 Cuando Ethereum comenzó a utilizar un mecanismo de consenso basado en la prueba de participación, se introdujeron nuevas infraestructuras, especialmente para brindar apoyo a clientes ligeros. Un subconjunto de 512 validadores selecciona aleatoriamente su manera de funcionamiento cada 1,1 días para que actúen como **comité de sincronización**. El comité de sincronización firma los encabezado de los recientes bloques. Cada encabezado de los bloques contiene la firma agregada de los validadores que están en el comité de sincronización y un «campo de bits» que permite mostrar qué validadores firmaron y quiénes no lo hicieron. Cada encabezado tambien incluye la lista de los validadores que esperan poder participar en la siguiente firma de bloque. Esto significa que un cliente ligero puede ver rapidamente que el comité de sincronización ha firmado en los datos que ellos reciben, y ellos tambien pueden revisar que el comité de sincronizacion es genuino comparando el bloque que recibieron, con el que les fue dicho que esperaban en el bloque anterior. De esta manera, el cliente ligero puede seguir informándose de los últimos bloques de Ethereum sin la necesidad de descargar el bloque en sí, sólo el encabezado que contiene la información resumida.
 
 En la capa de ejecución no hay ninguna especificación para los clientes de ejecución ligeros. El alcance de un cliente de ejecución ligero puede variar desde un «modo ligero» a uno de cliente de ejecución completa que contiene toda las funcionalidades de la EVM y de las redes de un nodo completo, pero que solo verifica los encabezados de los bloques, sin descargar ningún dato asociado, o puede ser mas un cliente despojado que solo gestione los pedidos de un proveedor RPC para interactuar con Ethereum.
 
-## ¿Por qué son importantes los clientes ligeros? \{#why-are-light-clients-important}
+## ¿Por qué son importantes los clientes ligeros? {#why-are-light-clients-important}
 
 Los clientes ligeros importan porque ellos le permiten a los usuarios verificar los datos entrantes, en lugar de confiar ciegamente en que los datos de un proveedor sean correctos y honestos, mientras solo usan una pequeña fracción del poder computacional de un nodo completo. Los datos que un cliente ligero recibe se pueden comprobar cotejándolos con los encabezados de los bloques que sepan a ciencia cierta que han firmado por al menos 2/3 partes del conjunto aleatorio de 512 validadores de Ethereum. Esto corrobora poderosamente que los datos son correctos.
 
@@ -26,7 +26,7 @@ Tomemos un sencillo ejemplo. Imagine que quiere revisar el saldo de su cuenta. P
 
 Un cliente ligero aborda este problema. Usted aún solicita datos de un proveedor externo, pero cuando los recibe, vienen con una prueba de que su cliente ligero puede comparar la información recibida en el encabezado del bloque. Esto significa que Ethereum está verificando que sus datos son correctos en vez de hacerlo otro operador de confianza.
 
-## ¿Qué innovaciones traen consigo los clientes ligeros? \{#what-innovations-do-light-clients-enable}
+## ¿Qué innovaciones traen consigo los clientes ligeros? {#what-innovations-do-light-clients-enable}
 
 El principal beneficio de los clientes ligeros es permitir el acceso a Ethereum a más personas independientemente de que tengan un hardware que no cumpla con los requisitos y una dependencia mínima de terceros. Esto es bueno para los usuarios porque ellos pueden verificar sus propios datos y es bueno para la red porque incrementa el número y diversidad de nodos que están verificando la cadena.
 
@@ -38,7 +38,7 @@ Los rollups (o acumulaciones) también podrían beneficiarse de los clientes lig
 
 Los clientes ligeros también pueden servir para actualizar carteras de Ethereum. En vez de confiar en la información proporcionada por un proveedor RPC, su cartera podría comprobar directamente la información que se le presenta a través de un cliente ligero incorporado. Además, esto añadiría seguridad a su cartera. Si su proveedor RPC actuara fraudulentamente y le proporcionara datos incorrectos, el cliente ligero incorporado podría avisarle de ello.
 
-## ¿Cúal es el estado actual de desarrollo de clientes ligeros? \{#current-state-of-development}
+## ¿Cúal es el estado actual de desarrollo de clientes ligeros? {#current-state-of-development}
 
 Se está desarrollando una cantidad considerable de clientes ligeros, incluidos los clientes de ejecución y de consenso, junto con los clientes ligeros de ejecución y consenso combinados. Estas son las implementaciones de clientes ligeros que conocemos al cierre de edición de esta página:
 
@@ -53,7 +53,7 @@ También se ha realizado un inmenso esfuerzo por mejorar la manera en que los cl
 
 Otros elementos en la [hoja de ruta](/roadmap/) como [árbol de Verkle](/roadmap/verkle-trees/) y [sin estado](/roadmap/statelessness/) aportarán con el tiempo la misma garantía de seguridad de los clientes ligeros a los clientes completos.
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [Cliente ligero Geth con Zsolt Felfodhi](https://www.youtube.com/watch?v=EPZeFXau-RE)
 - [Esteblecimiento de redes de clientes ligeros con Etan Kissling](https://www.youtube.com/watch?v=85MeiMA4dD8)

@@ -10,23 +10,23 @@ skill: intermediate
 published: 2022-04-01
 ---
 
-## はじめに \{#introduction}
+## はじめに {#introduction}
 
 この記事では、[オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups)とは何か、オプティミスティック・ロールアップにおけるトランザクションコスト、および、様々なコスト構造に応じてイーサリアム・メインネット上の様々な事項をいかに最適化すべきかについて学びます。 さらに、この最適化の実装方法についても紹介します。
 
-### 開示情報 \{#full-disclosure}
+### 開示情報 {#full-disclosure}
 
 筆者は、[Optimism](https://www.optimism.io/)のフルタイム従業員であり、この記事に含まれる実例はすべて Optimism で実行されます。 ただし、紹介するテクニックは他のロールアップでも問題なく実行できます。
 
-### 用語 \{#terminology}
+### 用語 {#terminology}
 
 ロールアップの議論において、「レイヤー 1」は、イーサリアムネットワークの本番環境であるメインネットを指します。 「レイヤー 2」(L2)という用語は、ロールアップまたはセキュリティのために L1 に依存しているが、そのほとんどをオフチェーンで処理する他のシステムに使用されます。
 
-## L2 上のトランザクションコストをさらに引き下げる方法 \{#how-can-we-further-reduce-the-cost-of-L2-transactions}
+## L2 上のトランザクションコストをさらに引き下げる方法 {#how-can-we-further-reduce-the-cost-of-L2-transactions}
 
 [オプティミスティック・ロールアップ](/developers/docs/scaling/optimistic-rollups)では、すべてのユーザーが過去のトランザクションを参照し、現在の状態が正しいことを検証できるように、過去のすべてのトランザクション記録を保存する必要があります。 イーサリアムメインネットにデータを書き込む最も安価な方法は、コールデータとして書き込む方法です。 [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-)と[Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups)はいずれも、コールデータのソリューションを採用しています。
 
-### L2 トランザクションのコスト \{#cost-of-l2-transactions}
+### L2 トランザクションのコスト {#cost-of-l2-transactions}
 
 L2 トランザクションのコストは、以下の 2 つの要素で構成されます：
 
@@ -37,7 +37,7 @@ L2 トランザクションのコストは、以下の 2 つの要素で構成�
 
 1 バイトのコールデータのコストは、4 ガス (0 バイトの場合) または 16 ガス (それ以外) のいずれかです。 EVM で最も費用が高い操作のひとつは、ストレージへの書き込みです。 L2 上で 32 バイトのワードを書き込む場合、最大コストは 22100 ガスです。 現在のレートでは、22.1 gwei になります。 したがって、1 つのコールデータをゼロバイトに節約できれば、約 200 バイトをストレージに書き込むことができ、まだお釣りが来ます。
 
-### ABI \{#the-abi}
+### ABI {#the-abi}
 
 大多数のトランザクションは、外部所有アカウントからコントラクトにアクセスします。 ほとんどのコントラクトは Solidity で書かれており、データフィールドは[アプリケーション・バイナリ・インターフェイス（ABI） ](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding)で解釈されます。
 
@@ -59,11 +59,11 @@ L2 トランザクションのコストは、以下の 2 つの要素で構成�
 
 通常、L1 上で 160 ガスを浪費するのは無視できる範囲です。 1 件のトランザクションには最低でも[21,000 ガス](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed)が必要であるため、追加の 0.8%はほとんど問題になりません。 しかし、L2 では問題になります。 L2 におけるほぼすべてのコストは、L1 への書き込みで発生します。 トランザクションのコールデータに加えて、トランザクションのヘッダー（送信先アドレス、署名など）で 109 バイトが必要になります。 従って、L2 おける総コストは`109*16+576+160=2480`となり、浪費分が全体の 6.5%に達するのです。
 
-## 送信先を限定しない場合のコスト削減方法 \{#reducing-costs-when-you-dont-control-the-destination}
+## 送信先を限定しない場合のコスト削減方法 {#reducing-costs-when-you-dont-control-the-destination}
 
 送信先のコントラクトを制御できない場合でも、[こちら](https://github.com/qbzzt/ethereum.org-20220330-shortABI)のようなソリューションを活用できます。 関連するファイルを確認しておきましょう。
 
-### Token.sol \{#token.sol}
+### Token.sol {#token.sol}
 
 [これ](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol)は、送信先のコントラクトです。 標準的な ERC-20 コントラクトですが、機能が 1 つ追加されています。 `faucet`関数により、すべてのユーザーがトークンを取得できるようになっています。 本番環境の ERC-20 コントラクトでは使えませんが、テスト環境では有益でしょう。
 
@@ -78,7 +78,7 @@ L2 トランザクションのコストは、以下の 2 つの要素で構成�
 
 [こちら](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8)で、このコントラクトのデプロイ実例を確認できます。
 
-### CalldataInterpreter.sol \{#calldatainterpreter.sol}
+### CalldataInterpreter.sol {#calldatainterpreter.sol}
 
 [これ](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol)は、より短いコールデータでトランザクションを呼び出すことが想定されているコントラクトです。 一行ずつ見ていきましょう。
 
@@ -240,7 +240,7 @@ Solidity コントラクトへの呼び出しがどの関数の署名とも一�
 }       // contract CalldataInterpreter
 ```
 
-### test.js \{#test.js}
+### test.js {#test.js}
 
 [この JavaScript による単体テスト](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js)では、このメカニズムを使用する方法（および、メカニズムが適切に動作していることをを確認する方法）を示します。 ここでは、[Chai](https://www.chaijs.com/)および[Ethers](https://docs.ethers.io/v5/)についてよく理解しているという前提に基づき、特にコントラクトに関連する部分のみを説明します。
 
@@ -328,7 +328,7 @@ const transferTx = {
 })      // describe
 ```
 
-### 例 \{#example}
+### 例 {#example}
 
 これらのファイルにつき、自ら実行せず、どのように動作するのか確認したい場合は、以下のリンクにアクセスしてください：
 
@@ -338,13 +338,13 @@ const transferTx = {
 4. [`OrisUselessToken.approve()`](https://kovan-optimistic.etherscan.io/tx/1410747)の呼び出し。 処理が`msg.sender`に依存しているため、この呼び出しは、直接トークンコントラクトで行う必要があります。
 5. [`transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748)の呼び出し。
 
-## 送信先コントラクトを制限する場合にコストを削減する方法 \{#reducing-the-cost-when-you-do-control-the-destination-contract}
+## 送信先コントラクトを制限する場合にコストを削減する方法 {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
 送信先コントラクトを制限できる場合、コールデータのインタープリタが信頼されるため、`msg.sender`チェックを省略する関数を作成することができます。 [`control-contract`のブランチから、動作例を確認できます](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract)。
 
 コントラクトが外部のトランザクションのみに応答する場合、1 つのコントラクトのみで対応することができます。 しかし、この方法では[コンポーザビリティ](/developers/docs/smart-contracts/composability/)が失われます。 通常の ERC-20 の呼び出しに応答するコントラクトと、短いコールデータを持つトランザクションに応答するコントラクトを共に用意する方が優れた方法だと言えます。
 
-### Token.sol \{#token.sol-2}
+### Token.sol {#token.sol-2}
 
 この例では、`Token.sol`を修正します。 これにより、このプロキシだけが呼び出せる一連の関数を設定することができます。 以下は、追加の関数です：
 
@@ -442,7 +442,7 @@ ERC-20 コントラクトは、許可されたプロキシの身元を知る必�
 1. `onlyProxy()`で修正されており、他のユーザーが管理権限を持たない。
 2. 追加のパラメータとして、通常`msg.sender`であるアドレスを取得する。
 
-### CalldataInterpreter.sol \{#calldatainterpreter.sol-2}
+### CalldataInterpreter.sol {#calldatainterpreter.sol-2}
 
 コールデータのインタープリタは、送信先を限定しない場合とほぼ同一ですが、プロキシの関数では`msg.sender`パラメータを受け取るため、`transfer`のアローワンスが必要ない点が異なります。
 
@@ -476,7 +476,7 @@ ERC-20 コントラクトは、許可されたプロキシの身元を知る必�
         }
 ```
 
-### Test.js \{#test.js-2}
+### Test.js {#test.js-2}
 
 送信先を限定しない場合とは、いくつかの点が異なります。
 
@@ -538,7 +538,7 @@ XPath: /pre[38]/code
 
 新たに追加した 2 つの関数をテストします。 `transferFromTx`のアドレスには、アローワンスの提供元と受領者という 2 つパラメータが要求される点に注意してください。
 
-### 実例 \{#example-2}
+### 実例 {#example-2}
 
 これらのファイルにつき、自ら実行せず、どのように動作するのか確認したい場合は、以下のリンクにアクセスしてください：
 
@@ -550,6 +550,6 @@ XPath: /pre[38]/code
 6. [`approveProxy()`の呼び出し](https://kovan-optimistic.etherscan.io/tx/1475419)。
 7. [`transferFromProxy()`の呼び出し](https://kovan-optimistic.etherscan.io/tx/1475421)。 この呼び出しは、他のアドレスとは異なるアドレスからのものであることに注意してください (`signer`の代わりに`poorSigner`) 。
 
-## まとめ \{#conclusion}
+## まとめ {#conclusion}
 
 [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92)と[Arbitrum](https://developer.offchainlabs.com/docs/special_features)はどちらも、L1 に書き込まれるコールデータのサイズを削減し、トランザクションコストを抑える方法を提供することを目指しています。 インフラプロバイダーが汎用性が高いソリューションを追求する一方で、デベロッパの能力には限界があります。 Dapp のデベロッパーは、開発するアプリケーションについて具体的な知識を持つため、汎用性のソリューションよりも効率的にコールデータの最適化を実現できるのです。 この記事が、皆さんのニーズに合わせた理想的なソリューションを見出す上で役立つことを願っています。

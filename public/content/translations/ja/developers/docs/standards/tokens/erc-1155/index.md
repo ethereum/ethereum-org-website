@@ -4,7 +4,7 @@ description:
 lang: ja
 ---
 
-## はじめに \{#introduction}
+## はじめに {#introduction}
 
 さまざまな種類のトークンを管理するコントラクトにおける標準的なインターフェイスです。 デプロイされたひとつのコントラクトには、代替性トークン、非代替性トークン、あるいはその他の種類のトークン（例：半代替性トークン）を含めることができます。
 
@@ -14,11 +14,11 @@ lang: ja
 
 ERC-1155 トークンの詳細な説明については、[EIP-1155](https://eips.ethereum.org/EIPS/eip-1155)を参照してください。
 
-## 前提知識 \{#prerequisites}
+## 前提知識 {#prerequisites}
 
 このページをよく理解するには、まず[トークン規格](/developers/docs/standards/tokens/)、[ERC-20](/developers/docs/standards/tokens/erc-20/)、[ERC-721](/developers/docs/standards/tokens/erc-721/)について理解しておく必要があります。
 
-## ERC-1155 の機能と特長: \{#body}
+## ERC-1155 の機能と特長: {#body}
 
 - [バッチ転送](#batch-transfers)：1 回の呼び出しで複数のアセットを転送します。
 - [バッチ残高](#batch-balance)：1 回の呼び出しで、複数の資産の残高を取得します。
@@ -27,7 +27,7 @@ ERC-1155 トークンの詳細な説明については、[EIP-1155](https://eips
 - [NFT に対応](#nft-support)：供給トークンの数が 1 の場合、NFT として扱います。
 - [安全な転送ルール](#safe-transfer-rule)：セキュアな転送のためのルールセットです。
 
-### バッチ転送 \{#batch-transfers}
+### バッチ転送 {#batch-transfers}
 
 この規格におけるバッチ転送は、通常の ERC-20 の場合とほぼ同様です。 まず、通常の ERC-20 規格における`transferFrom`関数を確認しておきましょう:
 
@@ -53,7 +53,7 @@ ERC-1155 における唯一の違いは、値を配列として渡し、さら�
 
 ERC-1155 では、`transfer`は存在せず、`transferFrom`のみ利用できます。 通常の`transfer`のように使用するには、 関数を呼び出すアドレスを from address として設定すればよいです。
 
-### バッチ残高 \{#batch-balance}
+### バッチ残高 {#batch-balance}
 
 同様に、ERC-20 における`balanceOf`の呼び出しも、バッチ処理に対応した機能が追加されています。 確認のために、まず ERC-20 の関数を見ておきましょう:
 
@@ -80,7 +80,7 @@ function balanceOfBatch(
 ]
 ```
 
-### バッチ承認 \{#batch-approval}
+### バッチ承認 {#batch-approval}
 
 ```solidity
 // ERC-1155
@@ -101,7 +101,7 @@ function isApprovedForAll(
 
 これは、シンプルさを実現するために敢えて採用された設計です。 ひとつのアドレスに対し、すべて承認することだけが可能です。
 
-### 受信フック \{#receive-hook}
+### 受信フック {#receive-hook}
 
 ```solidity
 function onERC1155BatchReceived(
@@ -121,11 +121,11 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 受信側のコントラクトがこの値を返すと、コントラクトがこの転送を受け入れ、ERC-1155 のトークンに対する処理方法を理解していると見なされます。 これにより、コントラクト内部で未処理のトークンが溜まっていくことがなくなります！
 
-### NFT のサポート \{#nft-support}
+### NFT のサポート {#nft-support}
 
 供給されるトークンの数が 1 である場合、このトークンは事実上非代替性トークン（NFT）だと言えます。 ERC-721 規格と同じように、メタデータの URL を定義することが可能です。 この URL は、クライアントによる読み取り／変更が可能です。[こちら](https://eips.ethereum.org/EIPS/eip-1155#metadata)をご覧ください。
 
-### 安全転送ルール \{#safe-transfer-rule}
+### 安全転送ルール {#safe-transfer-rule}
 
 すでに他の記事において、いくつかの安全転送ルールについて紹介しました。 ここでは、最も重要なルールについて確認しておきましょう:
 
@@ -138,7 +138,7 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 _注記_：フックを含むすべてのバッチ関数は、バッチ処理ではない通常バージョンの関数としても存在します。 これは、実際にはひとつの資産のみを転送するケースが最も一般的になると予想されるために、ガスの効率性を考慮した設計上の選択です。 この記事では、安全転送ルールの場合も含めて、簡潔な説明のためにバッチ関数のみを取り上げました。 各関数の名称は、「Batch」を削除すれば同一です。
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 - [ERC-1155：マルチトークン規格](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155：Openzeppelin のドキュメンテーション](https://docs.openzeppelin.com/contracts/3.x/erc1155)

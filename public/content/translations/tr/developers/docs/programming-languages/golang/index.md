@@ -11,7 +11,7 @@ incomplete: true
 
 Ethereum'u, merkeziyetsiz uygulamalar (veya "dapp'ler") oluşturmak için kullanın. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Merkeziyetsizdirler, yani uçtan uca bir ağda çalışırlar ve tek bir hata noktası yoktur. Hiçbir tekil varlık veya şahıs onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır. Yeni tür uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler.
 
-## Akıllı sözleşmeler ve Solidity dilini öğrenmeye başlangıç \{#getting-started-with-smart-contracts-and-solidity}
+## Akıllı sözleşmeler ve Solidity dilini öğrenmeye başlangıç {#getting-started-with-smart-contracts-and-solidity}
 
 **Go ve Ethereum'u entegre etmek için ilk adımlarınızı atın**
 
@@ -23,7 +23,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Solidity'i nasıl derleyeceğinizi ve dağıtacağınızı öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [Sözleşme Öğreticisi](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
-## Başlangıç Seviyesi Makaleler ve Kitaplar \{#beginner-articles-and-books}
+## Başlangıç Seviyesi Makaleler ve Kitaplar {#beginner-articles-and-books}
 
 - [Ethereum İstemcinizi Seçmek](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Geth ile Başlarken](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
@@ -32,7 +32,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Go ile Ethereum Akıllı Sözleşmelerini Test Etmek ve Dağıtmak için Adım Adım Rehber](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [eKitap: Go ile Ethereum Geliştirme](https://goethereumbook.org/) - _Go ile Ethereum uygulamaları geliştirin_
 
-## Orta Seviye Makaleler ve Belgeler \{#intermediate-articles-and-docs}
+## Orta Seviye Makaleler ve Belgeler {#intermediate-articles-and-docs}
 
 - [Go Ethereum Belgeleri](https://geth.ethereum.org/docs/) - _Resmi Ethereum Golang belgeleri_
 - [Erigon'un Programcı Kılavuzu](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _Durum ağacını, çoklu ispatları ve işlem sürecini içeren resimli bir rehber_
@@ -44,7 +44,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Go ile Ethereum üzerindeki Solidity sözleşmelerinin birim testi](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Geth'i bir kütüphane olarak kullanmak için hızlı bir kaynak](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
-## İleri Düzey Kullanım Şekilleri \{#advanced-use-patterns}
+## İleri Düzey Kullanım Şekilleri {#advanced-use-patterns}
 
 - [GETH ile Simüle Edilen Arka Uç](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [Ethereum ve Quorum Kullanan Hizmet Blok Zinciri Uygulamaları](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
@@ -52,7 +52,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Mobil İstemciler: Kütüphaneler ve Inproc Ethereum Düğümleri](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [Yerel merkeziyetsiz uygulamalar: Ethereum sözleşmeleri ile Go bağları](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-## Go projeleri ve araçları \{#go-projects-and-tools}
+## Go projeleri ve araçları {#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Ethereum protokolünün resmi Go uygulaması_
 - [Go Ethereum Kodu Analizi](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Go Ethereum kaynak kodunun incelenmesi ve analizi_
@@ -70,7 +70,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 
 Daha fazla kaynak mı arıyorsunuz? Göz atın: [ethereum.org/developers](/developers/).
 
-## Go topluluğuna katkıda bulunanlar \{#go-community-contributors}
+## Go topluluğuna katkıda bulunanlar {#go-community-contributors}
 
 - [Geth Discord](https://discordapp.com/invite/nthXNEv)
 - [Geth Gist](https://gitter.im/ethereum/go-ethereum)
@@ -80,7 +80,7 @@ Daha fazla kaynak mı arıyorsunuz? Göz atın: [ethereum.org/developers](/devel
 - [Ethereum Gitter](https://gitter.im/ethereum/home)
 - [Geth hafif İstemci Gitter](https://gitter.im/ethereum/light-client)
 
-## Diğer toplu listeler \{#other-aggregated-lists}
+## Diğer toplu listeler {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
 - [Consensys: Ethereum Geliştirici Araçlarının Eksiksiz Listesi](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub kaynağı](https://github.com/ConsenSys/ethereum-developer-tools-list)

@@ -8,7 +8,7 @@ Spesso, si crede erroneamente che gli sviluppatori debbano scrivere i [contratti
 
 Ethereum e la sua community adottano l'open source. È possibile trovare progetti della community, cioè implementazioni di client, API, framework di sviluppo, strumenti di test, in un'ampia gamma di linguaggi.
 
-## Scegli il linguaggio che preferisci \{#data}
+## Scegli il linguaggio che preferisci {#data}
 
 Seleziona il linguaggio di programmazione che preferisci per trovare progetti, risorse e community virtuali:
 
@@ -22,7 +22,7 @@ Seleziona il linguaggio di programmazione che preferisci per trovare progetti, r
 - [Ethereum per sviluppatori Ruby](/developers/docs/programming-languages/ruby/)
 - [Ethereum per sviluppatori Rust](/developers/docs/programming-languages/rust/)
 
-### Cosa succede se il mio linguaggio non è supportato \{#other-lang}
+### Cosa succede se il mio linguaggio non è supportato {#other-lang}
 
 Se vuoi collegarti alle risorse o puntare a una community virtuale per un linguaggio di programmazione aggiuntivo, puoi richiedere una nuova pagina [aprendo una segnalazione](https://github.com/ethereum/ethereum-org-website/issues/new/choose).
 

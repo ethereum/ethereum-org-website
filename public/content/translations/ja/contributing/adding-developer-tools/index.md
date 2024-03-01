@@ -4,7 +4,7 @@ lang: ja
 description: ethereum.orgデベロッパー向けツールへの掲載基準
 ---
 
-# デベロッパー向けツールの追加 \{#contributing-to-ethereumorg-}
+# デベロッパー向けツールの追加 {#contributing-to-ethereumorg-}
 
 デベロッパーの皆様への開発をサポートするため、可能な限り最良のデベロッパー向けリソースを掲載したいと考えています。
 
@@ -14,7 +14,7 @@ description: ethereum.orgデベロッパー向けツールへの掲載基準
 
 **掲載に適切なページと新しいツールの追加をご提案ください。**
 
-## 掲載基準 \{#ways-to-contribute}
+## 掲載基準 {#ways-to-contribute}
 
 申請されたデベロッパー向けツールは、以下の基準に基づいて審査されます。
 
@@ -46,13 +46,13 @@ description: ethereum.orgデベロッパー向けツールへの掲載基準
 
 ---
 
-## 掲載時の表示順序 \{#product-ordering}
+## 掲載時の表示順序 {#product-ordering}
 
 アルファベット順など特に指定がない限り、製品はページに古いものから順に掲載されます。 つまり、新しい製品はリストの一番下に追加されます。
 
 ---
 
-## 追加方法 \{#how-decisions-about-the-site-are-made}
+## 追加方法 {#how-decisions-about-the-site-are-made}
 
 本基準を満たしたツールの ethereum.org への掲載をご希望の場合は、GitHub で問題を作成してください。
 

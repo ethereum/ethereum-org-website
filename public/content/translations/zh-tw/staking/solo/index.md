@@ -13,7 +13,7 @@ summaryPoints:
   - 消除信任依賴，永遠不需放棄對資金金鑰的控制權
 ---
 
-## 什麼是單獨質押？ \{#what-is-solo-staking}
+## 什麼是單獨質押？ {#what-is-solo-staking}
 
 單獨質押指執行一個連線至網際網路的[以太坊節點](/run-a-node/)並存入 32 個以太幣，以啟用一個[驗證者](#faq)，使你能夠直接參與網路共識。
 
@@ -25,7 +25,7 @@ summaryPoints:
 
 單獨質押者保持驗證者的正常上線運作，即可直接從協定獲得酬勞。
 
-## 為什麼需要單獨質押？ \{#why-stake-solo}
+## 為什麼需要單獨質押？ {#why-stake-solo}
 
 單獨質押需要承擔更多責任，但可以實現對資金和質押設置的最大控制。
 
@@ -35,7 +35,7 @@ summaryPoints:
   <Card title="網路安全" emoji="🔐" description="單獨質押是最有影響力的質押方式。 以你自己的家用硬體執行驗證程式，可以強化以太坊協定的穩定性、分散性和安全性。" />
 </CardGrid>
 
-## 單獨質押前的注意事項 \{#considerations-before-staking-solo}
+## 單獨質押前的注意事項 {#considerations-before-staking-solo}
 
 儘管我們希望每個人都可以在沒有風險的情況下進行單獨質押，但這並不現實。 在選擇單獨質押以太幣之前，你必須留意一些實際而嚴肅的考量因素。
 
@@ -85,7 +85,7 @@ summaryPoints:
 
 <StakingComparison page="solo" />
 
-## 運作原理 \{#how-it-works}
+## 運作原理 {#how-it-works}
 
 <StakingHowSoloWorks />
 
@@ -95,13 +95,13 @@ summaryPoints:
 
 [更多關於提取質押代幣的資訊](/staking/withdrawals/)
 
-## 開始使用質押啟動面板 \{#get-started-on-the-staking-launchpad}
+## 開始使用質押啟動面板 {#get-started-on-the-staking-launchpad}
 
 質押啟動面板是一個開放原始碼應用程式，可以幫助你成為質押者。 它會指引你選擇用戶端、產生金鑰，並將你的以太幣存入質押存款合約。 它會提供一份檢查清單，確認你已完成所有內容，可安全地設定驗證者。
 
 <StakingLaunchpadWidget />
 
-## 使用節點和用戶端設定工具時需要考量的事項 \{#node-tool-considerations}
+## 使用節點和用戶端設定工具時需要考量的事項 {#node-tool-considerations}
 
 有越來越多的工具和服務可以幫助你單獨質押以太幣，其風險和收益各有不同。
 
@@ -109,7 +109,7 @@ summaryPoints:
 
 <StakingConsiderations page="solo" />
 
-## 探索節點和用戶端設定工具 \{#node-and-client-tools}
+## 探索節點和用戶端設定工具 {#node-and-client-tools}
 
 有多種方案可以幫你完成設定。 請運用上述指標來幫助你了解以下工具。
 
@@ -129,11 +129,11 @@ summaryPoints:
 
 關於我們遺漏的質押工具，你有什麼推薦嗎？ 請參閱我們的[產品刊登政策](/contributing/adding-staking-products/)，如果合適，請提交以供審核。
 
-## 探索單獨質押指南 \{#staking-guides}
+## 探索單獨質押指南 {#staking-guides}
 
 <StakingGuides />
 
-## 常見問題 \{#faq}
+## 常見問題 {#faq}
 
 以下是關於質押的一些最常見問題，建議仔細閱讀。
 
@@ -217,7 +217,7 @@ summaryPoints:
 </ExpandableCard>
 }
 
-## 延伸閱讀 \{#further-reading}
+## 延伸閱讀 {#further-reading}
 
 - [以太坊用戶端的多元化問題](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [幫助用戶端多元化](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_

@@ -4,7 +4,7 @@ lang: en
 hideEditButton: true
 ---
 
-# Privacy Policy \{#privacy-policy}
+# Privacy Policy {#privacy-policy}
 
 **1. General information**
 

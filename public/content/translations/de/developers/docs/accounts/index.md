@@ -6,11 +6,11 @@ lang: de
 
 Ein Ethereum-Konto ist eine Entität mit einem Ether(ETH)-Guthaben, welche Transaktionen bei Ethereum durchführen kann. Konten können benutzerkontrolliert oder als intelligenter Vertrag bereitgestellt werden.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Als Vorbereitung auf die Inhalte dieser Seite empfehlen wir Ihnen, zunächst unsere [Einführung in Ethereum](/developers/docs/intro-to-ethereum/) zu lesen.
 
-## Kontotypen \{#types-of-account}
+## Kontotypen {#types-of-account}
 
 Ethereum hat zwei Kontotypen:
 
@@ -22,7 +22,7 @@ Beide Kontotypen haben die Möglichkeit
 - ETH und Token zu empfangen, zu halten und zu versenden,
 - mit bereitgestellten, intelligenten Verträgen zu interagieren.
 
-### Wesentliche Unterschiede \{#key-differences}
+### Wesentliche Unterschiede {#key-differences}
 
 **Externer Besitz**
 
@@ -38,7 +38,7 @@ Beide Kontotypen haben die Möglichkeit
 - Transaktionen von einem externen Konto auf ein Vertragskonto können einen Code auslösen, der viele verschiedene Aktionen ausführt, z. B. die Übertragung von Token oder sogar die Erstellung eines neuen Vertrags.
 - Vertragskonten haben keine privaten Schlüssel. Stattdessen werden sie durch die Logik vom Smart Contract Code gesteuert.
 
-## Analyse eines Kontos \{#an-account-examined}
+## Analyse eines Kontos {#an-account-examined}
 
 Ethereum-Konten haben vier Bereiche:
 
@@ -49,7 +49,7 @@ Ethereum-Konten haben vier Bereiche:
 
 ![Ein Diagramm, das die Funktionsweise eines Kontos zeigt](./accounts.png) _Diagramm angepasst von [Ethereum EVM illustriert](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Externe Konten und Schlüsselpaare \{#externally-owned-accounts-and-key-pairs}
+## Externe Konten und Schlüsselpaare {#externally-owned-accounts-and-key-pairs}
 
 Ein Konto besteht aus einem kryptographischen Schlüsselpaar: öffentlich und privat. Sie tragen zum Nachweis bei, dass eine Transaktion tatsächlich vom Absender unterzeichnet wurde, und verhindern Fälschungen. Deinen privaten Schlüssel verwendest du, um Transaktionen zu unterzeichnen; so gewährt er dir die Obhut über das mit deinem Konto verbundene Guthaben. Man besitzt nie wirklich Kryptowährung, sondern private Schlüssel – das Geld ist immer auf Ethereums Hauptbuch (ledger).
 
@@ -57,7 +57,7 @@ Dies hindert böswillige Akteure daran, gefälschte Transaktionen zu übertragen
 
 Wenn Alice Ether von ihrem Konto an das Konto von Bob senden möchte, muss sie eine Transaktionsanfrage erstellen und zur Verifizierung an das Netzwerk senden. Ethereums Verwendung von Kryptographie mit öffentlichem Schlüssel stellt sicher, dass Alice nachweisen kann, dass sie ursprünglich die Transaktionsanfrage initiiert hat. Ohne kryptographische Mechanismen könnte Eve, ein böswilliger Akteur, einfach öffentlich eine Anfrage senden, die so aussieht wie „sende 5 ETH von Alices Konto auf Eves Konto", und niemand wäre in der Lage zu überprüfen, dass sie nicht von Alice kommt.
 
-## Kontoerstellung \{#account-creation}
+## Kontoerstellung {#account-creation}
 
 Wenn du ein Konto erstellst, werden die meisten "libraries" dir einen zufälligen, privaten Schlüssel generieren.
 
@@ -90,7 +90,7 @@ Es ist möglich, neue öffentliche Schlüssel von deinem privaten Schlüssel abz
 
 Du benötigst einen privaten Schlüssel, um Nachrichten und Transaktionen zu signieren, die eine Signatur nach außen anzeigen. Andere können dann die Unterschrift verwenden, um deinen öffentlichen Schlüssel abzuleiten und den Autor der Nachricht zu verifizieren. In deiner App kannst du eine Javascript-Bibliothek verwenden, um Transaktionen ins Netzwerk zu senden.
 
-## Vertragskonten \{#contract-accounts}
+## Vertragskonten {#contract-accounts}
 
 Vertragskonten haben eine 42-stellige, hexadezimale Adresse:
 
@@ -100,17 +100,17 @@ Beispiel:
 
 Die Vertragsadresse wird in der Regel angegeben, wenn ein Vertrag an die Ethereum Blockchain versendet wird. Diese Adresse stammt von der Erstelleradresse und der Anzahl der Transaktionen, die von dieser Adresse versendet werden (die „nonce“).
 
-## Schlüssel für Validatoren \{#validators-keys}
+## Schlüssel für Validatoren {#validators-keys}
 
 Es gibt einen weiteren Schlüsseltyp in Ethereum, der mit dem Wechsel von Proof-of-Work zu Proof-of-Stake für den Konsensmechanismus eingeführt wurde. Dieser nennt sich BLS-Schlüssel und wird verwendet, um Validatoren zu identifizieren. Diese Schlüssel lassen sich sehr effizient aggregieren, um die Bandbreite zu reduzieren, die das Netzwerk benötigt, um einen Konsens zu erzielen. Ohne diese Schlüsselaggregation wäre der minimale Stake für Validatoren viel höher.
 
 [Mehr über Schlüssel für Validatoren](/developers/docs/consensus-mechanisms/pos/keys/).
 
-## Ein Hinweis zu Wallets \{#a-note-on-wallets}
+## Ein Hinweis zu Wallets {#a-note-on-wallets}
 
 Ein Konto ist kein Wallet. Ein Konto ist das Schlüsselpaar für ein Ethereum-Konto, das dem Benutzer gehört. Eine Wallet ist eine Schnittstelle oder Anwendung, über die Sie mit Ihrem Ethereum-Konto interagieren können.
 
-## Eine visuelle Demo \{#a-visual-demo}
+## Eine visuelle Demo {#a-visual-demo}
 
 Austin führt Sie durch Hash-Funktionen und Schlüsselpaare.
 
@@ -122,13 +122,13 @@ Austin führt Sie durch Hash-Funktionen und Schlüsselpaare.
 <YouTube id="9LtBDy67Tho" />
 }
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [Ethereum Accounts verstehen](https://info.etherscan.com/understanding-ethereum-accounts/) – Etherscan
 
 _Gibt es Community-Resourcen, die Sie hilfreich fanden? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._
 
-## Verwandte Themen \{#related-topics}
+## Verwandte Themen {#related-topics}
 
 - [Smart Contracts](/developers/docs/smart-contracts/)
 - [Transaktionen](/developers/docs/transactions/)

@@ -4,15 +4,15 @@ description: イーサリアムを安全に利用するために
 lang: ja
 ---
 
-# イーサリアムのセキュリティと詐欺対策 \{#introduction}
+# イーサリアムのセキュリティと詐欺対策 {#introduction}
 
 仮想通貨への関心が高まるにつれ、仮想通貨を使用する際の最善の方法を学ぶことは非常に大切です。 仮想通貨は楽しくてエキサイティングなものですが、深刻なリスクもあります。 事前に少し学んでおくと、これらのリスクを軽減できます。
 
 <Divider />
 
-## ウェブセキュリティ入門 \{#web-security}
+## ウェブセキュリティ入門 {#web-security}
 
-### 強力なパスワードの使用 \{#use-strong-passwords}
+### 強力なパスワードの使用 {#use-strong-passwords}
 
 [アカウントのハッキングの 80%以上は、パスワードの脆弱さ、またはパスワードが盗まれることにより起こっています](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/) 。 文字、数字、記号の長い組み合わせを用いて、アカウントを安全に保ちましょう。
 
@@ -26,7 +26,7 @@ lang: ja
 
 もう一つのよくある間違いは、簡単に推測される、もしくは [ソーシャルエンジニアリング](<https://wikipedia.org/wiki/Social_engineering_(security)>)を通して見つけることができるパスワードを使用することです。 パスワードに母親の旧姓、子供やペットの名前、生年月日を含めることは安全ではなく、ハッキングされるリスクが大きくなります。
 
-#### パスワードのグッド・プラクティス: \{#good-password-practices}
+#### パスワードのグッド・プラクティス: {#good-password-practices}
 
 - パスワードジェネレータや入力フォームで許可される最長のパスワードを使用
 - 大文字、小文字、数字、記号を組み合わせる
@@ -35,11 +35,11 @@ lang: ja
 
 [より強力なパスワードの作成の詳細](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
 
-### パスワードの使い回しをしない \{#use-unique-passwords}
+### パスワードの使い回しをしない {#use-unique-passwords}
 
 強力なパスワードであっても、情報漏洩によってパスワードが漏れた場合には保護されません。 [Have I Been Pwned](https://haveibeenpwned.com)というウェブサイトで、データベースに保存されている情報漏洩にあなたのアカウントが含まれているかどうかを調べることができます。 検索の結果、もしそのデータベースにあなたのアカウントがあれば、**パスワードをすぐに変更してください**。 すべてのアカウントで異なるパスワードにしておくと、いずれかのパスワードが漏洩したときに、ハッカーにすべてのアカウントにアクセスされるリスクを低減します。
 
-### パスワードマネージャーの使用 \{#use-password-manager}
+### パスワードマネージャーの使用 {#use-password-manager}
 
 <InfoBanner emoji=":bulb:">
   <div>
@@ -51,14 +51,14 @@ lang: ja
 
 ![パスワードマネージャーの使用例](./passwordManager.png)
 
-#### パスワードマネージャー: \{#try-password-manager}
+#### パスワードマネージャー: {#try-password-manager}
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
 - [1Password](https://1password.com/)
 - または、他の[推奨パスワードマネージャー](https://www.privacytools.io/secure-password-manager)を確認してください
 
-### 二要素認証の使用 \{#two-factor-authentication}
+### 二要素認証の使用 {#two-factor-authentication}
 
 あなたが紛れもなくご本人であることを証明するため、認証にはさまざまな証明方法があります。 これらは **認証要素** として知られており、主に次の三要素があります。
 
@@ -77,7 +77,7 @@ lang: ja
   </div>
 </InfoBanner>
 
-#### セキュリティキー \{#security-keys}
+#### セキュリティキー {#security-keys}
 
 二要素認証(2FA)をさらに強化させたい場合は、セキュリティキーの使用を検討してください。 セキュリティキーは、認証アプリと同じように動作する物理的なハードウェア認証デバイスです。 セキュリティキーの使用は、二要素認証(2FA)で最も安全な方法です。 これらのキーの多くは、FIDO ユニバーサル第二認証要素(U2F)規格を利用しています。 FIDO ユニバーサル第二認証要素(U2F)についての詳細は[こちら](https://www.yubico.com/authentication-standards/fido-u2f/)をご覧ください。
 
@@ -85,11 +85,11 @@ FIDO ユニバーサル第二認証要素(U2F)の詳細に関する動画
 
 <YouTube id="m8jlnZuV1i4" start="3479" />
 
-### ブラウザ拡張機能のアンインストール \{#uninstall-browser-extensions}
+### ブラウザ拡張機能のアンインストール {#uninstall-browser-extensions}
 
 Chrome 拡張機能や Firefox のアドオンなどのブラウザ拡張機能は、便利なブラウザ機能を強化し、ユーザーエクスペリエンスを向上させることができますが、リスクが伴います。 デフォルトでは、ほとんどのブラウザ拡張機能は「サイトデータの読み取りと変更」の権限を要求し、データに対してほとんど何でもできるようにします。 Chrome 拡張機能は常に自動的に更新されるため、以前は安全であった拡張機能であっても、悪意のあるコードを含むように更新されてしまう可能性があります。 ほとんどのブラウザ拡張機能は、データを盗もうとしていませんが、それらができるということを認識しておく必要があります。
 
-#### 安全性を確保するためのヒント: \{#browser-extension-safety}
+#### 安全性を確保するためのヒント: {#browser-extension-safety}
 
 - 信頼できるソースからのみブラウザ拡張機能をインストール
 - 未使用のブラウザ拡張機能を削除
@@ -99,9 +99,9 @@ Chrome 拡張機能や Firefox のアドオンなどのブラウザ拡張機能�
 
 <Divider />
 
-## 仮想通貨セキュリティ入門 \{#crypto-security}
+## 仮想通貨セキュリティ入門 {#crypto-security}
 
-### 知識のレベルアップ \{#level-up-your-knowledge}
+### 知識のレベルアップ {#level-up-your-knowledge}
 
 一般的に、仮想通貨で詐欺の被害に遭ってしまう最大の理由の 1 つは理解の不足です。 例えば、イーサリアムネットワークが分散化されており、イーサリアムを所有する者はいないことを理解していないと、カスタマーサービスエージェントを装う者に「秘密鍵を教えると失われた ETH が返ってくる」というような嘘に簡単に騙されてしまいます。 イーサリアムの仕組みについての知識を得ることは大切です。
 
@@ -114,9 +114,9 @@ Chrome 拡張機能や Firefox のアドオンなどのブラウザ拡張機能�
 </DocLink>
 <Divider />
 
-## ウォレットのセキュリティ \{#wallet-security}
+## ウォレットのセキュリティ {#wallet-security}
 
-### 絶対に秘密鍵を他人に教えない \{#protect-private-keys}
+### 絶対に秘密鍵を他人に教えない {#protect-private-keys}
 
 **どんな理由があっても、秘密鍵は絶対に他人に教えないでください!**
 
@@ -126,28 +126,28 @@ Chrome 拡張機能や Firefox のアドオンなどのブラウザ拡張機能�
   イーサリアムウォレットとは
 </DocLink>
 
-#### シードフレーズ/秘密鍵のスクリーンショットを撮らない \{#screenshot-private-keys}
+#### シードフレーズ/秘密鍵のスクリーンショットを撮らない {#screenshot-private-keys}
 
 シードフレーズや秘密鍵のスクリーンショットを撮ると、スクリーンショットがクラウドに同期され、ハッカーにアクセスされる危険性があります。 クラウドから秘密鍵を取得することは、ハッカーよく行う攻撃ベクトルです。
 
-### ハードウェアウォレットの使用 \{#use-hardware-wallet}
+### ハードウェアウォレットの使用 {#use-hardware-wallet}
 
 ハードウェアウォレットは秘密鍵をオフラインで保存します。 これらは秘密鍵を保存するための最も安全なウォレットオプションと考えられています。秘密鍵はインターネットに接続されることなく、デバイス上で完全にローカルな状態に保持されます。
 
 秘密鍵をオフラインで保存すると、たとえハッカーがコンピュータをコントロールしたとしても、秘密鍵がハッキングされるリスクを大幅に軽減します。
 
-#### ハードウェアウォレット: \{#try-hardware-wallet}
+#### ハードウェアウォレット: {#try-hardware-wallet}
 
 - [Ledger](https://www.ledger.com/)
 - [Trezor](https://trezor.io/)
 
-### 送信前にトランザクションを再確認 \{#double-check-transactions}
+### 送信前にトランザクションを再確認 {#double-check-transactions}
 
 誤ったウォレットアドレスに仮想通貨を送信してしまうことはよくある間違いです。 **イーサリアム上でトランザクションを送ると取り消しができません。**送信先のアドレスの所有者を知っていて、あなたが送金した額を返金してくれるように説得することができなければ、失ったお金を取り戻すことはできません。
 
 トランザクションを送信する前に、送信先アドレスが、意図する受信者のアドレスと正確に一致することを常に確認してください。 また、スマートコントラクトを使ってやり取りする場合にも、署名する前にトランザクションメッセージを読むことをお勧めします。
 
-### スマートコントラクトの使用限度額を設定 \{#spend-limits}
+### スマートコントラクトの使用限度額を設定 {#spend-limits}
 
 スマートコントラクトとやり取りする際は、出金限度額を無制限にしないでください。 出金限度額を無制限にすると、スマートコントラクトがあなたのウォレットの資産をゼロにしてしまう可能性があります。 トランザクションに必要な金額のみを限度額に設定してください。
 
@@ -157,7 +157,7 @@ Chrome 拡張機能や Firefox のアドオンなどのブラウザ拡張機能�
 
 <Divider />
 
-## 代表的な詐欺 \{#common-scams}
+## 代表的な詐欺 {#common-scams}
 
 詐欺師は常に資金を奪う方法を探しています。 詐欺を完全に阻止することは不可能ですが、最も使用されている手法に注意を向けることで、手口を見抜くことができます。 詐欺には多くのバリエーションがありますが、一般的には同じようなパターンです。 少なくとも、次のことにご留意ください。
 
@@ -165,19 +165,19 @@ Chrome 拡張機能や Firefox のアドオンなどのブラウザ拡張機能�
 - 無料または割り引かれた ETH を誰かがくれるはずはない
 - 秘密鍵や個人情報を教えない
 
-### プレゼント詐欺 \{#giveaway}
+### プレゼント詐欺 {#giveaway}
 
 暗号通貨の最も一般的な詐欺の 1 つは、プレゼント詐欺です。 プレゼント詐欺は多くの手口がありますが、一般的な方法は、指定されたウォレットアドレスに ETH を送金すると、ETH が 2 倍になって返ってくるというものです。 *口座確認のために仮想通貨を送ると、2 倍にしてプレゼントするなどの手口です。*
 
 通常、これらの詐欺は、無料のプレゼントに対して時間制限を設け、意思決定を鈍らせ、偽りの緊急性を装います。
 
-#### ソーシャルメディアのハッキング \{#social-media-hacks}
+#### ソーシャルメディアのハッキング {#social-media-hacks}
 
 この種の詐欺で注目を集めたのは、2020 年 7 月に著名な有名人や組織の Twitter アカウントがハッキングされ、 ハッカーが著名人を騙りハッキングしたアカウントでビットコインのプレゼント告知を投稿した事件です。 詐欺のツイートはすぐに気づかれて削除されましたが、ハッカーは 11 ビットコイン(2021 年 9 月時点で 50 万ドル)を持ち逃げしました。
 
 ![Twitterでの詐欺行為](./appleTwitterScam.png)
 
-#### 著名人からのプレゼント \{#celebrity-giveaway}
+#### 著名人からのプレゼント {#celebrity-giveaway}
 
 著名人からのプレゼントもよくある詐欺の手法の 1 つです。 詐欺師は、著名人のビデオインタビューや講演会を使い、YouTube でライブ配信します。著名人があたかもライブで暗号通貨のプレゼントのインタビューをしているかのように見せかけます。
 
@@ -187,7 +187,7 @@ Chrome 拡張機能や Firefox のアドオンなどのブラウザ拡張機能�
 
 ![YouTubeでの詐欺行為](./youtubeScam.png)
 
-### サポート詐欺 \{#support-scams}
+### サポート詐欺 {#support-scams}
 
 暗号通貨は比較的歴史が浅く、誤解されやすい技術です。 この点を悪用した詐欺が、人気のあるウォレット、取引所、またはブロックチェーンのサポート担当者をかたる、なりすましサポート詐欺です。
 
@@ -207,7 +207,7 @@ Chrome 拡張機能や Firefox のアドオンなどのブラウザ拡張機能�
   </div>
 </InfoBanner>
 
-### 「ETH2」トークン詐欺 \{#eth2-token-scam}
+### 「ETH2」トークン詐欺 {#eth2-token-scam}
 
 [マージ](/roadmap/merge/)の準備段階で、「ETH2」という用語の混乱を悪用し、ユーザーに ETH を「ETH2」トークンとして取引させようとする詐欺が横行しました。 マージにより導入された「ETH2」や他の新しいトークンなどはありません。 マージ前に所有していた ETH は、現在も何も変わることなく、同じ ETH です。 **ETH に関しては、プルーフ・オブ・ワークからプルーフ・オブ・ステークへの移行によって必要となる対応は一切ありません**。
 
@@ -215,7 +215,7 @@ ETH を入金すれば「ETH2」が戻ってくるという「サポート担当
 
 _注: ステークされた ETH を表す、Rocket Pool の rETH、Lido の stETH、Coinbase の ETH2 などデリバティブトークン/ティッカーがありますが、これらは「移行」が必要なものではありません。_
 
-### フィッシング詐欺 \{#phishing-scams}
+### フィッシング詐欺 {#phishing-scams}
 
 フィッシング詐欺もまた、ウォレットの資金を盗む手法として一般的になっています。
 
@@ -229,7 +229,7 @@ _注: ステークされた ETH を表す、Rocket Pool の rETH、Lido の stET
 
 [フィッシング詐欺の回避策の詳細](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
 
-### 暗号通貨取引ブローカー詐欺 \{#broker-scams}
+### 暗号通貨取引ブローカー詐欺 {#broker-scams}
 
 暗号通貨取引ブローカー詐欺師は、暗号通貨ブローカーの専門家を名乗って、あなたの代わりにお金を運用すると言って近づき、 非現実的な運用益を保証してきます。 詐欺師は資金を受け取った後、さらなる投資利益を見逃さないように追加の資金を送るよう求めたり、時には忽然と姿を消す場合もあります。
 
@@ -239,7 +239,7 @@ _注: ステークされた ETH を表す、Rocket Pool の rETH、Lido の stET
 
 ![YouTubeでの取引ブローカー詐欺](./brokerScam.png)
 
-### 暗号通貨マイニングプール詐欺 \{#mining-pool-scams}
+### 暗号通貨マイニングプール詐欺 {#mining-pool-scams}
 
 2022 年 9 月現在、イーサリアムのマイニングはできなくなりましたが、 マイニングプール詐欺は依然として存在しています。 マイニングプール詐欺では、一方的に連絡をよこし、イーサリアムのマイニングプールに参加することで大きな利益が得られると勧誘してきます。 詐欺師は勧誘を続け、たとえどれだけ時間がかかっても連絡を取り続けます。 イーサリアムのマイニングプール参加時に「ETH を作るためにあなたの暗号通貨を使用し、配当金は ETH で支払われる」と説得してきます。 参加することで多少の利益を得ることはできますが、 これはより多額の投資をさせるための手口にすぎません。 最終的に、あなたの資金は見知らぬアドレスに送金され、詐欺師は姿を消します。一方、最近の事件では連絡を取り続けるケースも見られます。
 
@@ -253,7 +253,7 @@ _注: ステークされた ETH を表す、Rocket Pool の rETH、Lido の stET
 
 [マイニングプール詐欺で 20 万ドル損失](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
-### エアドロップ詐欺 \{#airdrop-scams}
+### エアドロップ詐欺 {#airdrop-scams}
 
 エアドロップ詐欺は、あなたのウォレットに資産(NFT やトークン)をエアドロップし、エアドロップされた資産を受け取るために詐欺ウェブサイトに誘導するという手法です。 受け取ろうとすると、イーサリアムウォレットでサインインし、トランザクションを「承認 」するよう促されます。 このトランザクションによって、公開鍵と秘密鍵が詐欺師に送信されてしまい、あなたのアカウントが危険な状態に晒されてしまいます。 この種の詐欺の別の手口として、詐欺師のアカウントに送金するトランザクションを承認させるものもあります。
 
@@ -261,23 +261,23 @@ _注: ステークされた ETH を表す、Rocket Pool の rETH、Lido の stET
 
 <Divider />
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
-### ウェブセキュリティ \{#reading-web-security}
+### ウェブセキュリティ {#reading-web-security}
 
 - [二要素認証に SMS を使用すべきではない理由](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [マルウェアが含まれる Chrome と Edge の悪質なアドオンにより最大 300 万台のデバイスが感染](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [忘れない強力なパスワードを作成する方法](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [セキュリティキーとは](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
 
-### 暗号資産のセキュリティ \{#reading-crypto-security}
+### 暗号資産のセキュリティ {#reading-crypto-security}
 
 - [自分自身と資金の保護](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
 - [暗号通貨で安全を保つ 4 つの方法](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
 - [超初心者とそうでない人のためのセキュリティガイド](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [暗号通貨のセキュリティ: パスワードと認証](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 
-### 詐欺被害にあわないために \{#reading-scam-education}
+### 詐欺被害にあわないために {#reading-scam-education}
 
 - [安全に利用: よくある詐欺](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
 - [詐欺の回避](https://bitcoin.org/en/scams) - _Bitcoin.org_

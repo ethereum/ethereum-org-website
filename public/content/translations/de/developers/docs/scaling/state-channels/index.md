@@ -8,11 +8,11 @@ sidebarDepth: 3
 
 Zustandskanäle ermöglichen es den Teilnehmern, `x` Transaktionen außerhalb der Kette durchzuführen, während nur zwei Transaktionen auf der Kette an das Ethereum-Netzwerk übermittelt werden. Dies ermöglicht einen extrem hohen Transaktionsdurchsatz.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Sie sollten ein gutes Verständnis aller grundlegenden Themen und ein umfassendes Verständnis für [Ethereum-Skalierung](/developers/docs/scaling/) haben. Die Implementierung von Skalierungslösungen wie Kanäle ist ein fortgeschrittenes Thema, da die Technologie weniger erprobt ist und weiter erforscht und entwickelt wird.
 
-## Kanäle \{#channels}
+## Kanäle {#channels}
 
 Die Teilnehmer müssen einen Teil von Ethereums Zustand wie eine ETH-Einlage in einen Multisig-Vertrag einschließen. Ein Multisig-Vertrag ist eine Art von Vertrag, der die Unterschriften (und damit die Vereinbarung) mehrerer privater Schlüssel zum Ausführen erfordert.
 
@@ -26,7 +26,7 @@ Das Sperren des Zustands ist die erste Transaktion und öffnet den Channel. Die 
 
 Zurzeit gibt es zwei Arten von Kanälen: Zustandskanäle und Zahlungskanäle.
 
-## Zustandskanäle \{#state-channels}
+## Zustandskanäle {#state-channels}
 
 Der Zustandskanal lässt sich vielleicht am besten anhand eines Beispiels erklären, z. B. einem Tic-Tac-Toe-Spiel:
 
@@ -36,11 +36,11 @@ Der Zustandskanal lässt sich vielleicht am besten anhand eines Beispiels erklä
 
 3. Wenn es einen Gewinner gibt, schließen sie den Channel, indem sie den endgültigen Status (Eine Liste der Transaktionen) an den Richter-Smart-Contract übermitteln und hierfür nur einmal die Transaktionsgebühr zahlen müssen. Der Richter stellt sicher, dass dieser „endgültige Zustand“ von beiden Parteien unterzeichnet wird und wartet einige Zeit, um sicherzustellen, dass niemand das Ergebnis rechtmäßig herausfordern kann, um dann den 1ETH Award an die Gewinnerin Alice auszuzahlen.
 
-## Zahlungskanäle \{#payment-channels}
+## Zahlungskanäle {#payment-channels}
 
 Vereinfachte Zustandskanäle, die sich nur mit Zahlungen befassen (z. B. ETH-Überweisungen). Sie erlauben Off-Chain-Transfers zwischen zwei Teilnehmern, solange die Nettosumme ihrer Transfers die hinterlegten Token nicht überschreitet.
 
-## Vor- und Nachteile \{#channels-pros-and-cons}
+## Vor- und Nachteile {#channels-pros-and-cons}
 
 | Vorteile                                                                                | Kontra                                                                                                                                                                                        |
 | --------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,7 +49,7 @@ Vereinfachte Zustandskanäle, die sich nur mit Zahlungen befassen (z. B. ETH-Üb
 | Niedrigste Kosten pro Transaktion - gut für laufende Mikrozahlungen                     | Guthaben werden zur vorübergehenden Einlagerung in offenen Zahlungskanälen benötigt                                                                                                           |
 |                                                                                         | Eine offene Teilnahme wird nicht unterstützt.                                                                                                                                                 |
 
-## Zustandskanal verwenden \{#use-state-channels}
+## Zustandskanal verwenden {#use-state-channels}
 
 Mehrere Projekte bieten Implementierungen von Zustandskanälen, die Sie in Ihre dApps integrieren können:
 
@@ -59,7 +59,7 @@ Mehrere Projekte bieten Implementierungen von Zustandskanälen, die Sie in Ihre 
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 **Zustandskanäle**
 

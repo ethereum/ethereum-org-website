@@ -151,7 +151,7 @@ Deci, acum avem DEX-ul nostru, care are toate rezervele de tokenuri disponibile.
 - `buy`: Utilizatorul poate trimite ether și obține tokenuri în schimb
 - `sell`: Utilizatorul poate decide să trimită tokenuri pentru a obține ether în schimb
 
-## Funcția de cumpărare \{#the-buy-function}
+## Funcția de cumpărare {#the-buy-function}
 
 Hai să codificăm funcția de cumpărare. Mai întâi va trebui să verificăm cantitatea de ether pe care o conține mesajul și să verificăm dacă contractele dețin suficiente tokenuri și dacă mesajul are ether. În cazul în care contractul deține suficiente tokenuri, acesta va trimite numărul de tokenuri utilizatorului și va emite evenimentul `"Bought"`(cumpărat).
 
@@ -174,7 +174,7 @@ function buy() payable public {
 
 ![Două evenimente în tranzacție: „Transfer” și „Bought”](./transfer-and-bought-events.png)
 
-## Funcția de vânzare \{#the-sell-function}
+## Funcția de vânzare {#the-sell-function}
 
 Funcția responsabilă pentru vânzare, „sell” va solicita mai întâi utilizatorului să aprobe suma apelând în prealabil funcția „approve”. Atunci când funcția „sell” este apelată, vom verifica dacă transferul de la adresa apelantului la adresa contractului a avut succes și vom trimite ether-ul înapoi la adresa apelantului.
 

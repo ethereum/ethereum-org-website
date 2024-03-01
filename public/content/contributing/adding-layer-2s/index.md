@@ -4,7 +4,7 @@ description: The policy we use when adding a layer 2 to ethereum.org
 lang: en
 ---
 
-# Adding layer 2s \{#adding-layer-2}
+# Adding layer 2s {#adding-layer-2}
 
 We want to make sure we list the best resources possible so users can navigate the layer 2 space in a safe and confident manner.
 
@@ -18,9 +18,9 @@ We currently list L2s on the following pages:
 
 Layer 2 is a relatively new and exciting paradigm for Ethereum. We've tried to create a fair framework for consideration on ethereum.org but the listing criteria will change and evolve over time.
 
-## The decision framework \{#decision-framework}
+## The decision framework {#decision-framework}
 
-### Criteria for inclusion: the must-haves \{#criteria-for-inclusion-the-must-haves}
+### Criteria for inclusion: the must-haves {#criteria-for-inclusion-the-must-haves}
 
 **Listing on L2BEAT**
 
@@ -70,7 +70,7 @@ _We do not consider other scaling solutions that don't use Ethereum for data ava
 
 - Listed projects require a working block explorer to allow users to easily navigate the chain.
 
-### Other criteria: the nice-to-haves \{#nice-to-haves}
+### Other criteria: the nice-to-haves {#nice-to-haves}
 
 **Exchange support for the project**
 
@@ -88,7 +88,7 @@ _We do not consider other scaling solutions that don't use Ethereum for data ava
 
 - Do any wallets support the L2 natively?
 
-## Add your layer 2 \{#add-exchange}
+## Add your layer 2 {#add-exchange}
 
 If you want to add a layer 2 to ethereum.org, create an issue on GitHub.
 

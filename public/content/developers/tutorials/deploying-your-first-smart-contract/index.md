@@ -15,7 +15,7 @@ I guess you are as excited as us to [deploy](/developers/docs/smart-contracts/de
 
 Don’t worry, as it’s our first smart contract, we’ll deploy it on a [local test network](/developers/docs/networks/) so it does not cost anything for you to deploy and play as much as you’d like with it.
 
-## Writing our contract \{#writing-our-contract}
+## Writing our contract {#writing-our-contract}
 
 First step is to [visit Remix](https://remix.ethereum.org/) and create a new file. On the upper left part of the Remix interface add a new file and enter the file name you want.
 
@@ -54,7 +54,7 @@ If you’re used to programming you can easily guess what this program does. Her
 
 This is all for our first simple smart contract. As you may know, it looks like a class from OOP (Object-Oriented Programming) languages like Java or C++. It’s now time to play with our contract.
 
-## Deploying our contract \{#deploying-our-contract}
+## Deploying our contract {#deploying-our-contract}
 
 As we wrote our very first smart contract, we’ll now deploy it to the blockchain to be able to play with it.
 

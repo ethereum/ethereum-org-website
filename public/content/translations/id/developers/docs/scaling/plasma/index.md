@@ -8,11 +8,11 @@ sidebarDepth: 3
 
 Rantai plasma adalah blockchain terpisah yang ditambatkan ke rantai Ethereum utama, dan menggunakan bukti penipuan (seperti [rollup Optimistic](/developers/docs/scaling/layer-2-rollups/#optimistic-rollups)) untuk menengahi perselisihan. Rantai ini kadang disebut sebagai rantai "anak" karena pada dasarnya rantai ini adalah salinan Jaringan Utama Ethereum yang lebih kecil. Pohon Merkel memungkinkan pembuatan tumpukan tak terbatas dari rantai-rantai ini yang dapat bekerja untuk melepas muatan bandwidth dari rantai induk (termasuk Jaringan Utama). Mereka memperoleh keamanannya melalui [bukti penipuan](/glossary/#fraud-proof), dan setiap rantai anak memiliki mekanisme sendiri untuk validasi blok.
 
-## Prasyarat \{#prerequisites}
+## Prasyarat {#prerequisites}
 
 Anda harus memiliki pemahaman yang baik tentang semua topik dasar dan pemahaman tingkat tinggi tentang [penskalaan Ethereum](/developers/docs/scaling/). Menerapkan solusi penskalaan seperti Plasma adalah topik lanjutan karena teknologinya kurang teruji, dan masih terus diteliti dan dikembangkan.
 
-## Pro dan kontra \{#pros-and-cons}
+## Pro dan kontra {#pros-and-cons}
 
 | Pro                                                                                                                                    | Kontra                                                                                                                                                                                |
 | -------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -21,7 +21,7 @@ Anda harus memiliki pemahaman yang baik tentang semua topik dasar dan pemahaman 
 |                                                                                                                                        | Mengandalkan satu atau lebih operator untuk menyimpan data dan menyajikannya berdasarkan permintaan.                                                                                  |
 |                                                                                                                                        | Penarikan tertunda beberapa hari untuk memungkinkan sanggahan. Untuk aset yang dapat dipertukarkan, hal ini dapat dikurangi oleh penyedia likuiditas, tetapi ada biaya modal terkait. |
 
-### Gunakan Plasma \{#use-plasma}
+### Gunakan Plasma {#use-plasma}
 
 Beberapa proyek menyediakan implementasi Plasma yang dapat Anda integrasikan ke dalam dapp Anda:
 
@@ -30,7 +30,7 @@ Beberapa proyek menyediakan implementasi Plasma yang dapat Anda integrasikan ke 
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 - [Belajar tentang Plasma](https://www.learnplasma.org/en/)
 

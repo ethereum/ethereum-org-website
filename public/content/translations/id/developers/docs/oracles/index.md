@@ -7,11 +7,11 @@ incomplete: true
 
 Oracle adalah pengumpan data yang menghubungkan Ethereum ke informasi dunia nyata off-chain, sehingga Anda dapat membuat kueri data dalam kontrak pintar Anda. Sebagai contoh, dapp pasar prediksi menggunakan oracle untuk menyelesaikan pembayaran berdasarkan kejadian. Pasar prediksi mungkin meminta Anda untuk mempertaruhkan ETH siapa yang akan menjadi presiden Amerika Serikat berikutnya. Mereka akan menggunakan oracle untuk mengonfirmasi hasilnya dan membayar kepada para pemenang.
 
-## Prasyarat \{#prerequisites}
+## Prasyarat {#prerequisites}
 
 Pastikan Anda sudah familiar dengan [node](/developers/docs/nodes-and-clients/), [mekanisme konsensus](/developers/docs/consensus-mechanisms/), dan [anatomi kontrak pintar](/developers/docs/smart-contracts/anatomy/), khususnya aksi.
 
-## Apa itu oracle \{#what-is-an-oracle}
+## Apa itu oracle {#what-is-an-oracle}
 
 Oracle merupakan sebuah jembatan yang menghubungkan antara blockchain dan dunia nyata. Oracle bertindak sebagai API on-chain yang dapat Anda tanya untuk mendapatkan informasi tentang kontrak pintar Anda. Ini bisa berupa apa saja mulai dari informasi harga hingga laporan cuaca. Oracle dapat juga bersifat dua arah, yang digunakan untuk "mengirim" data ke dunia nyata.
 
@@ -21,23 +21,23 @@ Tonton Patrick menjelaskan Oracle:
 <YouTube id="ZJfkNzyO7-U" start="10" />
 }
 
-## Mengapa oracle dibutuhkan? \{#why-are-they-needed}
+## Mengapa oracle dibutuhkan? {#why-are-they-needed}
 
 Dengan blockchain seperti Ethereum, Anda membutuhkan setiap node di jaringan untuk dapat memutar ulang setiap transaksi dan berakhir dengan hasil yang sama, yang terjamin. API mengenalkan data yang berpotensi menjadi variabel. Jika Anda mengirimkan ETH sesuai nilai $USD yang disetujui menggunakan API harga, kueri akan kembali dengan hasil yang berbeda setiap harinya. Belum lagi, API bisa diretas atau tidak digunakan lagi. Jika ini terjadi, node di jaringan tidak akan bisa berkesesuaian dengan state Ethereum saat ini, yang secara efektif melanggar [konsensus](/developers/docs/consensus-mechanisms/).
 
 Oracle menyelesaikan masalah ini dengan mencatatkan data pada blockchain. Jadi node mana saja yang memutar ulang transaksi akan menggunakan data sama yang tidak bisa dirubah yang dicatatkan untuk dilihat semua orang. Untuk melakukan ini, oracle biasanya terdiri dari kontrak pintar dan beberapa komponen off-chain yang dapat meminta API, lalu mengirim transaksi secara berkala untuk memperbarui data kontrak pintar.
 
-### Masalah oracle \{#oracle-problem}
+### Masalah oracle {#oracle-problem}
 
 Seperti yang kami sebutkan, transaksi Ethereum tidak dapat mengakses data off-chain secara langsung. Pada saat yang sama, mengandalkan satu sumber kebenaran untuk menyediakan data tidaklah aman dan melanggar desentralisasi sebuah kontrak pintar. Ini dikenal sebagai masalah oracle.
 
 Kita dapat menghindari masalah oracle dengan menggunakan oracle terdesentralisasi yang menarik data dari berbagai sumber data; jika sata sumber data diretas atau gagal, kontrak pintar akan tetap berfungsi sebagaimana mestinya.
 
-### Keamanan \{#security}
+### Keamanan {#security}
 
 Oracle seaman sumber datanya. Jika dapp menggunakan Uniswap sebagai oracle untuk pengumpan harga ETH/DAI-nya, penyerang dapat memindahkan harga di Uniswap untuk memanipulasi kemampuan dapp dalam memahami harga terkini. Contoh cara melawannya adalah [sistem pengumpan](https://developer.makerdao.com/feeds/) seperti yang digunakan oleh MakerDAO, yang menyusun data harga dari banyak pengumpan harga eksternal ketimbang hanya bergantung pada satu sumber.
 
-### Arsitektur \{#architecture}
+### Arsitektur {#architecture}
 
 Ini adalah sebuah contoh arsitektur Oracle sederhana, tetapi masih ada lebih banyak cara dari pada hanya ini untuk memicu komputasi off-chain.
 
@@ -52,7 +52,7 @@ Langkah berikutnya mungkin membuat jaringan node ini melakukan pemanggilan terha
 
 [Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) telah meningkatkan metodologi ini dengan membuat jaringan oracle off-chain berkomunikasi satu sama lain, secara kriptografi menandatangani respons mereka, mengumpulkan respons off-chain mereka, dan hanya mengirim satu transaksi on-chain dengan hasilnya. Dengan cara ini, lebih sedikit gas terpakai, tetapi Anda masih mendapatkan jaminan data terdesentralisasi karena setiap node telah menandatangani bagian transaksi mereka, yang membuatnya tidak dapat diubah oleh node yang mengirimkan transaksi. Kebijakan eskalasi melakukan fungsinya jika node tidak melakukan transaksi, dan node berikutnya mengirimkan transaksi.
 
-## Penggunaan \{#usage}
+## Penggunaan {#usage}
 
 Dengan menggunakan layanan seperti Chainlink, Anda dapat memberi referensi data terdesentralisasi on-chain yang telah ditarik dari dunia nyata dan dikumpulkan. Ini seperti kepemilikan umum, tetapi untuk data terdesentralisasi. Anda dapat juga membangun jaringan oracle modular sendiri untuk mendapatkan data yang disesuaikan yang Anda cari. Selain itu, Anda dapat melakukan komputasi off-chain dan sekaligus mengirimkan informasi ke dunia nyata. Chainlink memiliki infrastruktur bawaan untuk:
 
@@ -62,7 +62,7 @@ Dengan menggunakan layanan seperti Chainlink, Anda dapat memberi referensi data 
 
 Ini adalah contoh cara mendapatkan harga ETH terbaru di dalam kontrak pintar Anda dengan menggunakan sebuah pengumpan harga Chainlink:
 
-### Pengumpan Data Chainlink \{#chainlink-data-feeds}
+### Pengumpan Data Chainlink {#chainlink-data-feeds}
 
 ```solidity
 pragma solidity ^0.6.7;
@@ -102,7 +102,7 @@ contract PriceConsumerV3 {
 
 [Lihat dokumen](https://docs.chain.link/docs/get-the-latest-price)
 
-### Chainlink VRF \{#chainlink-vrf}
+### Chainlink VRF {#chainlink-vrf}
 
 Chainlink VRF (Verifiable Random Function) adalah sumber keacakan yang terbukti adil dan terverifikasi yang dirancang untuk kontrak pintar. Para pengembang kontrak pintar dapat menggunakan Chainlink VRF sebagai random number generation (RNG) yang tahan perubahan untuk membangun kontrak pintar handal untuk aplikasi apa pun yang mengandalkan hasil yang tidak terprediksi:
 
@@ -162,7 +162,7 @@ contract RandomNumberConsumer is VRFConsumerBase {
 }
 ```
 
-### Penjaga Chainlink \{#chainlink-keepers}
+### Penjaga Chainlink {#chainlink-keepers}
 
 Kontrak pintar tidak dapat memicu atau memulai fungsinya sendiri pada waktu arbitrari atau dalam kondisi arbitrari. Perubahan state hanya akan terjadi ketika akun lainnya memulai transaksi (seperti pengguna, oracle, atau kontrak). [Jaringan Penjaga Chainlink](https://docs.chain.link/docs/chainlink-keepers/introduction/) menyediakan opsi bagi kontrak pintar untuk men-outsource tugas pemeliharaan reguler dalam cara yang terpercaya, sederhana, dan terdesentralisasi.
 
@@ -215,12 +215,12 @@ contract Counter is KeeperCompatibleInterface {
 
 Setelah menyebarkan kontrak yang kompatibel dengan Penjaga, Anda harus mendaftarkan kontrak untuk [Upkeep](https://docs.chain.link/docs/chainlink-keepers/register-upkeep/) dan membiayainya dengan LINK, untuk memberitahu Jaringan Penjaga tentang kontrak Anda, sehingga pemeliharaan Anda dilakukan secara berkelanjutan.
 
-### Proyek Penjaga \{#keepers}
+### Proyek Penjaga {#keepers}
 
 - [Penjaga Chainlink](https://keepers.chain.link/)
 - [Jaringan Keep3r](https://docs.keep3r.network/)
 
-### Pemanggilan API Chainlink \{#chainlink-api-call}
+### Pemanggilan API Chainlink {#chainlink-api-call}
 
 [Pemanggilan API Chainlink](https://docs.chain.link/docs/make-a-http-get-request) merupakan cara termudah untuk mendapatkan data dari dunia off-chain dengan cara tradisional yang memfungsikan web: pemanggilan API. Melakukan satu instance ini dan hanya memiliki satu oracle akan membuatnya terpusat secara alami. Agar benar-benar terdesentralisasi, platform kontrak pintar perlu menggunakan banyak node yang ditemukan di [pasar data eksternal](https://market.link/).
 
@@ -297,7 +297,7 @@ contract APIConsumer is ChainlinkClient {
 
 Anda dapat mempelajari lebih lanjut tentang penerapan Chainlink dengan membaca [Blog pengembang Chainlink](https://blog.chain.link/tag/developers/).
 
-## Layanan Oracle \{#other-services}
+## Layanan Oracle {#other-services}
 
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
@@ -305,7 +305,7 @@ Anda dapat mempelajari lebih lanjut tentang penerapan Chainlink dengan membaca [
 - [Paralink](https://paralink.network/)
 - [Dos.Network](https://dos.network/)
 
-### Membuat sebuah oracle kontrak pintar \{#build-an-oracle-smart-contract}
+### Membuat sebuah oracle kontrak pintar {#build-an-oracle-smart-contract}
 
 Ini adalah suatu contoh kontrak oracle oleh Pedro Costa. Anda dapat menemukan penjelasan lebih lanjut di artikelnya: [Mengimplementasikan Oracle Blockchain di Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e).
 
@@ -423,7 +423,7 @@ contract Oracle {
 
 _Kami ingin lebih banyak dokumentasi tentang pembuatan sebuah oracle kontrak pintar. Jika Anda dapat membantu, buat sebuah PR!_
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 **Artikel**
 

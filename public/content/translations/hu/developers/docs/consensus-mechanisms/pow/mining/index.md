@@ -8,11 +8,11 @@ lang: hu
 A proof-of-work (munkaigazolás) már nem az Ethereum konszenzusmechanizmus alapja, tehát a bányászatot kikapcsolták. Ehelyett az Ethereumot úgy biztosítják a validátorok, hogy letétbe helyeznek ETH-t. Ön is letétbe helyezheti a rendelkezésére álló ETH-t. Tudjon meg többet a <a href='/roadmap/merge/'>egyesítés (Merge)</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>proof-of-stake (letéti igazolás)</a> és <a href='/staking/'>letétbe helyezés</a> témákról. Ez az oldal csak elavult témákat tartalmaz.
 </InfoBanner>
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 Javasoljuk, hogy olvassa el a [tranzakciók](/developers/docs/transactions/), [blokkok](/developers/docs/blocks/) és a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) oldalakat is.
 
-## Mi az az Ethereum bányászat? \{#what-is-ethereum-mining}
+## Mi az az Ethereum bányászat? {#what-is-ethereum-mining}
 
 A bányászat az a tevékenység, amikor tranzakciókból álló blokkokat hoznak létre, hogy azokat hozzáadják az Ethereum-blokklánchoz abban a proof-of-work architektúrában, melyet már kivezettek az Ethereumból.
 
@@ -22,7 +22,7 @@ Ether bányászata = A hálózat biztosítása
 
 A bányászat a proof-of-work blokkláncok lényege. Az Ethereum-bányászok – szoftvert futtató számítógépek – az idejüket és számítási kapacitásukat fordították a tranzakciók feldolgozására és blokkok létrehozására a proof-of-stake mechanizmus bevezetése előtt.
 
-## Miért léteznek a bányászok? \{#why-do-miners-exist}
+## Miért léteznek a bányászok? {#why-do-miners-exist}
 
 Az Ethereumhoz hasonló decentralizált rendszerek esetében biztosítanunk kell, hogy mindenki egyetért a tranzakciók sorrendjében. A bányászok segítettek, hogy ez megtörténjen úgy, hogy számítás szempontjából nehéz rejtvényeket oldottak meg azért, hogy blokkokat hozhassanak létre, amely így megvédte a hálózatot a támadásoktól.
 
@@ -30,7 +30,7 @@ Az Ethereumhoz hasonló decentralizált rendszerek esetében biztosítanunk kell
 
 Korábban bárki bányászhatott az Ethereum hálózaton a számítógépét használva. Ugyanakkor nem mindenkit tudott nyereségesen bányászni ethert (ETH). A legtöbb esetben a bányászoknak dedikált számítógépes hardvereket kellett szerezniük, és hozzá kellett férniük az energiaforrásokhoz. Egy átlagos számítógép nem valószínű, hogy elég blokkjutalmat tudott szerezni, hogy fedezze a bányászat költségeit.
 
-### A bányászat költsége \{#cost-of-mining}
+### A bányászat költsége {#cost-of-mining}
 
 - Annak a hardvernek a valószínű költsége, mely a bányászati eszköz felépítéséhez és fenntartásához szükséges
 - A bányászati eszközt működtető elektromosság költsége
@@ -39,7 +39,7 @@ Korábban bárki bányászhatott az Ethereum hálózaton a számítógépét has
 
 A bányászat nyereségességét olyan bányászati kalkulátor segítségével ellenőrizheti, mint amilyen az [Etherscan](https://etherscan.io/ether-mining-calculator) oldalon is található.
 
-## Hogyan bányászták ki az Ethereum-tranzakciókat \{#how-ethereum-transactions-were-mined}
+## Hogyan bányászták ki az Ethereum-tranzakciókat {#how-ethereum-transactions-were-mined}
 
 A következőkben a tranzakciók bányászatáról olvashat egy áttekintés az Ethereum proof-of-work mechanizmusa idejéből. Az Ethereum proof-of-stake mechanizmusára vonatkozó leírást [itt](/developers/docs/consensus-mechanisms/pos/#transaction-execution-ethereum-pos) találja.
 
@@ -56,13 +56,13 @@ A következőkben a tranzakciók bányászatáról olvashat egy áttekintés az 
 
 Minden tranzakciót egyszer bányásznak ki (blokkba foglalják és első alkalommal közvetítik), de minden résztvevő végrehajtja és érvényesíti azokat a kanonikus EVM-állapot előrevitelének folyamatában. Ez kiemeli a blokklánc egyik központi mantráját: **Nem kell megbíznia senkiben. Csak ellenőrizni.**.
 
-## Ommer (nagybácsi) blokkok \{#ommer-blocks}
+## Ommer (nagybácsi) blokkok {#ommer-blocks}
 
 A proof-of-work mechanizmusban végzett blokkbányászat valószínűségen alapult, tehát néha a hálózati késedelem miatt két érvényes blokkot is publikáltak egyszerre. Ebben az esetben a protokoll kiválasztotta a leghosszabb láncot (amelyik érvényesebb volt), miközben díjazta azt a bányászt is egy részleges jutalommal, akinek nem került be a javasolt blokkja. Ez bátorította a hálózat decentralizációját, mert a kisebb bányászok, akiknél nagyobb volt a csúszás, még mindig tudtak nyereséget szerezni az [ommer](/glossary/#ommer) blokkok jutalmából.
 
 Az „ommer” kifejezés a szülőblokk testvérblokkjának semleges formája, de néha nagybácsi/uncle formában is hivatkoznak rá. **Mióta az Ethereum átállt a proof-of-stake mechanizmusra, többé nincsenek ommer blokkok**, mivel csak egy előterjesztő van minden slotban. Ezt a változást megtekintheti a kibányászott ommer blokkok [előzményábráján](https://ycharts.com/indicators/ethereum_uncle_rate) is.
 
-## Egy vizuális bemutató \{#a-visual-demo}
+## Egy vizuális bemutató {#a-visual-demo}
 
 Tekintse meg, ahogy Austin elmagyarázza a bányászatot és a proof-of-work blokkláncot.
 
@@ -70,13 +70,13 @@ Tekintse meg, ahogy Austin elmagyarázza a bányászatot és a proof-of-work blo
 <YouTube id="zcX7OJ-L8XQ" />
 }
 
-## A bányászati algoritmus \{#mining-algorithm}
+## A bányászati algoritmus {#mining-algorithm}
 
 Az Ethereum főhálózat csak egy bányászati algoritmust használt: [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/). Az Ethash volt az utódja az eredeti kutatási-fejlesztési algoritmusnak, melyet [Dagger-Hashimoto-nak](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/) neveztek.
 
 [Bővebben a bányászati algoritmusokról](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 
-## Kapcsolódó témák \{#related-topics}
+## Kapcsolódó témák {#related-topics}
 
 - [Gáz](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)

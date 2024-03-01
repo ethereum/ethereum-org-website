@@ -5,7 +5,7 @@ lang: ro
 incomplete: true
 ---
 
-## Instrumente și biblioteci de testare \{#testing-tools-and-libraries}
+## Instrumente și biblioteci de testare {#testing-tools-and-libraries}
 
 **Waffle -** **_Un framework pentru dezvoltarea și testarea avansată a contractelor inteligente (bazat pe ethers.js)._**
 
@@ -37,7 +37,7 @@ incomplete: true
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers)
 - [Documentație](https://docs.openzeppelin.com/test-helpers)
 
-## Tutoriale corelate \{#related-tutorials}
+## Tutoriale corelate {#related-tutorials}
 
 - [Configurare de integrare continuă cu Solidity și Truffle](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– Cum se configurează Travis sau Circle CI pentru testare Truffle împreună cu plugin-uri utile._
 - [Prezentare generală a produselor de testare](/developers/tutorials/guide-to-smart-contract-security-tools/) _– O prezentare generală și o comparație a diferitelor produse de testare._
@@ -48,6 +48,6 @@ incomplete: true
 - [Cum să migraţi de la Testele Truffle la mediul de testare OpenZeppelin](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [Cum să testaţi contractele după ce acestea au fost implementate într-o rețea](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
 
-## Referințe suplimentare \{#further-reading}
+## Referințe suplimentare {#further-reading}
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editaţi această pagină și adăugaţi-o!_

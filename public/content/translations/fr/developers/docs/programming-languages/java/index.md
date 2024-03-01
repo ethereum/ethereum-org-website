@@ -11,7 +11,7 @@ incomplete: true
 
 Utilisez Ethereum pour créer des applications décentralisées (ou "DApps") qui tirent parti de la technologie de la blockchain et des cryptomonnaies. Ces DApps sont dignes de confiance, ce qui signifie que dès qu'elles sont déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune personne ni entité ne les contrôle et qu'il est pratiquement impossible de les censurer.
 
-## Premiers pas avec les contrats intelligents et le langage Solidity \{#getting-started-with-smart-contracts-and-solidity}
+## Premiers pas avec les contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Première étapes pour intégrer Java à Ethereum**
 
@@ -22,7 +22,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [Écrire votre premier contrat intelligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Apprendre à compiler et à déployer avec Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Travailler avec des clients Ethereum \{#working-with-ethereum-clients}
+## Travailler avec des clients Ethereum {#working-with-ethereum-clients}
 
 Apprenez à utiliser [Web3J](https://github.com/web3j/web3j) et Hyperledger Besu, deux des principaux clients Ethereum Java.
 
@@ -35,17 +35,17 @@ Apprenez à utiliser [Web3J](https://github.com/web3j/web3j) et Hyperledger Besu
 - [Exécuter un nœud Hyperledger Besu (Pantheon) dans les tests d'intégration Java](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
 - [Mémo Web3j](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
-## Articles intermédiaires \{#intermediate-articles}
+## Articles intermédiaires {#intermediate-articles}
 
 - [Gestion du stockage avec IPFS dans une application Java](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
 - [Gestion des jetons ERC20 avec Web3j dans Java](https://kauri.io/article/d13e911bbf624108b1d5718175a5e0a0/manage-erc20-tokens-in-java-with-web3j)
 - [Web3j Transaction Managers](https://kauri.io/article/4cb780bb4d0846438d11885a25b6d7e7/web3j-transaction-managers)
 
-## Modèles d'utilisation avancés \{#advanced-use-patterns}
+## Modèles d'utilisation avancés {#advanced-use-patterns}
 
 - [Utiliser Eventeum pour construire un cache de données de contrat intelligent Java](https://kauri.io/article/fe81ee9612eb4e5a9ab72790ef24283d/using-eventeum-to-build-a-java-smart-contract-data-cache)
 
-## Outils et projets Java \{#java-projects-and-tools}
+## Outils et projets Java {#java-projects-and-tools}
 
 - [Hyperledger Besu (Pantheon) (Client Ethereum)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Bibliothèque pour interagir avec les clients Ethereum)](https://github.com/web3j/web3j)
@@ -54,7 +54,7 @@ Apprenez à utiliser [Web3J](https://github.com/web3j/web3j) et Hyperledger Besu
 
 Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers.](/developers/)
 
-## Contributeurs de la communauté Java \{#java-community-contributors}
+## Contributeurs de la communauté Java {#java-community-contributors}
 
 - [IO Builders](https://io.builders)
 - [Kauri](https://kauri.io)

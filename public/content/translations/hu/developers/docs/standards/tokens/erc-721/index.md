@@ -4,7 +4,7 @@ description:
 lang: hu
 ---
 
-## Bevezetés \{#introduction}
+## Bevezetés {#introduction}
 
 **Mi az a nem felcserélhető token?**
 
@@ -16,13 +16,13 @@ Az ERC-721 bevezeti az NFT szabványt, vagyis ez a token típus egyedi és kül�
 
 Igen! Minden NFT-nek van egy `uint256` változója `tokenId` néven, így minden ERC-721 szerződéshez tartozó `contract address-nek és a uint256 tokenId-nek` globálisan egyedinek kell lennie. Mondjuk egy dappnak lehet egy "konvertere", mely a `tokenId` változót használja bemenetre és kimenetként valami menő dolog képét adja vissza például zombikat, fegyvereket, képességeket vagy csodálatos kiscicákat!
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 - [Számlák](/developers/docs/accounts/)
 - [Okosszerződések](/developers/docs/smart-contracts/)
 - [Token szabványok](/developers/docs/standards/tokens/)
 
-## Törzs \{#body}
+## Törzs {#body}
 
 Az ERC-721 (Ethereum Request for Comments 721), melyet William Entriken, Dieter Shirley, Jacob Evans és Nastassia Sachs javasolt 2018 januárjában, egy nem felcserélhető token szabványt vezet be, mely egy token API-t implementál az okosszerződéseken belül.
 
@@ -32,7 +32,7 @@ Ha egy okosszerződés implementálja a következő metódusokat és eseményeke
 
 Az [EIP-721-ből](https://eips.ethereum.org/EIPS/eip-721):
 
-### Metódusok \{#methods}
+### Metódusok {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Az [EIP-721-ből](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### Események \{#events}
+### Események {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -54,11 +54,11 @@ Az [EIP-721-ből](https://eips.ethereum.org/EIPS/eip-721):
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### Példák \{#web3py-example}
+### Példák {#web3py-example}
 
 Nézzük meg, miért olyan fontos egy szabvány, hogy egyszerűbbé tegye számunkra azt, hogy bármely ERC-721 token szerződést megtekinthessük az Ethereumon. Csak a szerződés Application Binary Interface-ére (ABI) lesz szükség, hogy egy felületet készítsünk bármely ERC-721 tokennek. Ahogy lentebb látni fogod, egy egyszerűsített ABI-t használunk, hogy egy egyszerűbb példával éljünk.
 
-#### Web3.py példa \{#web3py-example}
+#### Web3.py példa {#web3py-example}
 
 Először győződj meg arról, hogy a [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python könyvtár telepítve van:
 
@@ -225,7 +225,7 @@ birth_logs = w3.eth.getLogs({
 recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## Népszerű NFT-k \{#popular-nfts}
+## Népszerű NFT-k {#popular-nfts}
 
 - [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) legnagyobb forgalommal rendelkező NFT-k listája az Ethereumon.
 - [CryptoKitties](https://www.cryptokitties.co/) egy játék, mely pároztatható, gyűjthető és imádnivaló lényekről szól, melyeket CryptoKittinek nevezünk.
@@ -234,13 +234,13 @@ recent_births = [get_event_data(ck_extra_events_abi[1], log)["args"] for log in 
 - [Unstoppable Domains](https://unstoppabledomains.com/) egy San Francisco székhelyű vállalat, mely domain neveket fejleszt a blokkláncra. A blokklánc domainek a kriptovaluta-címeket ember által is olvasható nevekre cserélik, és használhatók cenzúra-ellenálló weboldalakhoz is.
 - [Gods Unchained Cards](https://godsunchained.com/) egy TCG az Ethereum blokkláncon, mely NFT-ket használ, hogy valódi tulajdonjogot biztosítson a játékon belüli eszközökre.
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [ERC-721: Nem Felcserélhető Token Szabvány](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 Dokumentáció](https://docs.openzeppelin.com/contracts/3.x/erc721)
 - [OpenZeppelin - ERC-721 Implementáció](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC721/ERC721.sol)
 
-## Kapcsolódó témák \{#related-topics}
+## Kapcsolódó témák {#related-topics}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/)
 - [ERC-777](/developers/docs/standards/tokens/erc-777/)

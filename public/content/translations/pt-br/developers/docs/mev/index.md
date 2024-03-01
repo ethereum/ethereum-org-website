@@ -6,15 +6,15 @@ lang: pt-br
 
 Valor Máximo Extraível (MEV, na sigla em inglês) expressa o valor máximo que pode ser extraído da produção de blocos que excede a recompensa padrão do bloco e sua taxa de gás através da inclusão, exclusão e alteração da ordem de transações em um determinado bloco.
 
-## Valor máximo extraível \{#miner-extractable-value}
+## Valor máximo extraível {#miner-extractable-value}
 
 O valor máximo extraível foi aplicado pela primeira vez no contexto de [prova de trabalho](/developers/docs/consensus-mechanisms/pow/) e inicialmente referido como "valor extraível do minerador". Isto porque na prova de trabalho, os mineradores controlam a inclusão, exclusão e ordenação das transações. No entanto, desde a transição para a prova de participação por meio do [The Merge (A Fusão)](/roadmap/merge), os validadores têm sido responsáveis por essas funções, e a mineração não faz mais parte do protocolo Ethereum. Como os métodos de extração de valor ainda existem, o termo "valor máximo extraível" agora é usado.
 
-## Pré-Requisitos \{#prerequisites}
+## Pré-Requisitos {#prerequisites}
 
 Certifique-se de estar familiarizado com [transações](/developers/docs/transactions/), [blocos](/developers/docs/blocks/), [prova de participação](/developers/docs/consensus-mechanisms/pos) e [gás](/developers/docs/gas/). Conhecer outros detalhes como [dapps](/dapps/) ou [DeFi](/defi/) também seria útil.
 
-## Extração via MEV \{#mev-extraction}
+## Extração via MEV {#mev-extraction}
 
 Em teoria, o MEV é revertido inteiramente para os validadores porque eles são a única parte que pode garantir a execução de uma oportunidade lucrativa de MEV. Na prática, porém, uma grande parte do MEV é extraída por participantes independentes da rede chamados "buscadores". Os buscadores executam algoritmos complexos nos dados da blockchain para detectar oportunidades de MEV lucrativas e usam bots para enviar automaticamente essas transações rentáveis para a rede.
 
@@ -22,25 +22,25 @@ Os validadores recebem uma parte do valor total do MEV de qualquer maneira, porq
 
 Com isso, para algumas oportunidades de MEV altamente competitivas, como [arbitragem DEX](#mev-examples-dex-arbitrage), os buscadores podem ter que pagar 90% ou até mais de sua receita total de MEV, em taxas de gás para o validador, porque muitas pessoas querem executar a mesma operação de arbitragem lucrativa. Isto porque a única maneira de garantir que a sua transação de arbitragem seja executada é submetendo a transação com o preço de gás mais elevado.
 
-### Redução do consumo de gás dos contratos (gas golfing) \{#mev-extraction-gas-golfing}
+### Redução do consumo de gás dos contratos (gas golfing) {#mev-extraction-gas-golfing}
 
 Esta dinâmica fez do "gas-golfing" — o fato de programar as transações para que elas usem a menor quantidade de gás possível — una vantagem competitiva, porque ela permite que os buscadores fixem um preço de gás superior sem deixar de manter as taxas de gás constantes (já que as taxas de gás = preço do gás \* gás usado).
 
 Algumas técnicas de "gas-golfing" conhecidas incluem: o uso de endereços que começam com uma longa série de zeros (por exemplo, [0x0000000000C521824EaFf97Eac7B73B084ef9306](https://etherscan.io/address/0x0000000000c521824eaff97eac7b73b084ef9306)), já que consomem menos espaço (e, portanto, gás); e deixar pequenos saldos de token de [ERC-20](/developers/docs/standards/tokens/erc-20/) em contratos, já que é mais caro inicializar um slot de armazenamento (o que acontece se o saldo for 0) que atualizá-lo. Encontrar mais técnicas para reduzir o uso de gás é uma área ativa de pesquisa entre pesquisadores.
 
-### Frontrunners generalizados \{#mev-extraction-generalized-frontrunners}
+### Frontrunners generalizados {#mev-extraction-generalized-frontrunners}
 
 Em vez de programar algoritmos complexos para detectar oportunidades de MEV rentáveis, alguns buscadores executam frontrunners generalizados. Frontrunners generalizados são bots que assistem o mempool para detectar transações rentáveis. O frontrunner copiará o código da transação potencialmente rentável, substituirá os endereços pelo endereço do frontrunner, e executará a transação localmente para corroborar se a transação modificada resulta em lucro para o endereço do frontrunner. Se a transação for de fato rentável, o frontrunner enviará a transação modificada com o endereço substituído e um preço de gás mais alto, escolhendo a transação original (frontrunning) e obtendo a MEV do buscador original.
 
-### Flashbots \{#mev-extraction-flashbots}
+### Flashbots {#mev-extraction-flashbots}
 
 Flashbots é um projeto independente que estende clientes de execução com um serviço que permite aos buscadores submeterem transações MEV aos validadores sem revelá-las ao mempool público. Isto evita que transações sejam executadas por frontrunners generalizados.
 
-## Exemplos de MEV \{#mev-examples}
+## Exemplos de MEV {#mev-examples}
 
 O MEV surge na blockchain de diferentes maneiras.
 
-### Arbitragem DEX \{#mev-examples-dex-arbitrage}
+### Arbitragem DEX {#mev-examples-dex-arbitrage}
 
 A arbitragem em [exchanges descentralizadas](/glossary/#dex) (DEX) é a oportunidade mais simples e mais conhecida de MEV. Por conseguinte, é também a mais competitiva.
 
@@ -48,7 +48,7 @@ Isso funciona assim: se dois DEXes estão oferecendo um token a dois preços dif
 
 [Aqui está um exemplo](https://etherscan.io/tx/0x5e1657ef0e9be9bc72efefe59a2528d0d730d478cfc9e6cdd09af9f997bb3ef4) de uma transação de arbitragem lucrativa onde um buscador transformou 1.00 ETH em 1.045 ETH aproveitando os diferentes preços do par ETH/DAI no Uniswap vs. Sushiswap.
 
-### Liquidações \{#mev-examples-liquidations}
+### Liquidações {#mev-examples-liquidations}
 
 As liquidações do protocolo de empréstimo oferecem outra oportunidade conhecida de MEV.
 
@@ -60,7 +60,7 @@ O valor das garantias de quem pede o emprestado flutua, assim como sua capacidad
 
 Os buscadores competem para analisar os dados da blockchain o mais rápido possível para determinar quais mutuários podem ser liquidados e ser o primeiro a enviar uma transação de liquidação e coletar a taxa de liquidação para si mesmos.
 
-### Sandwich trading \{#mev-examples-sandwich-trading}
+### Sandwich trading {#mev-examples-sandwich-trading}
 
 Sandwich trading é outro método comum de extração MEV.
 
@@ -70,7 +70,7 @@ Um buscador pode calcular o efeito de preço aproximado desta grande negociaçã
 
 No entanto, o método sandwich é mais arriscado, pois não é atômico (ao contrário da arbitragem DEX, como descrito acima) e é propenso a um [ataque "salmonela"](https://github.com/Defi-Cartel/salmonella).
 
-### MEV com NFT \{#mev-examples-nfts}
+### MEV com NFT {#mev-examples-nfts}
 
 O MEV no espaço de NFT é um fenômeno emergente e não é necessariamente lucrativo.
 
@@ -80,23 +80,23 @@ Por exemplo, se há o lançamento de um NFT popular e um buscador quer um determ
 
 Um exemplo proeminente de NFT com MEV ocorreu quando um buscador gastou US$ 7 milhões para [comprar](https://etherscan.io/address/0x650dCdEB6ecF05aE3CAF30A70966E2F395d5E9E5) cada Cryptopunk ao preço mínimo. Um pesquisador de blockchain [explicou no Twitter](https://twitter.com/IvanBogatyy/status/1422232184493121538) como o comprador trabalhou com um provedor de MEV para manter a compra em segredo.
 
-### A cauda longa \{#mev-examples-long-tail}
+### A cauda longa {#mev-examples-long-tail}
 
 Arbitragem DEX, liquidações e o método sandwich trading são todos oportunidades de MEV muito conhecidas e são improváveis de serem lucrativas para novos buscadores. No entanto, há uma longa cauda de oportunidades de MEV menos conhecidas. MEV com NFT é, indiscutivelmente, uma dessas oportunidades.
 
 Os buscadores que estão apenas começando talvez consigam ter mais sucesso procurando MEV nesta cauda mais longa. O [quadro de trabalhos MEV](https://github.com/flashbots/mev-job-board) do Flashbot enumera algumas oportunidades emergentes.
 
-## Efeitos do MEV \{#effects-of-mev}
+## Efeitos do MEV {#effects-of-mev}
 
 Nem tudo sobre o MEV é negativo. Há consequências positivas e negativas com respeito ao MEV no Ethereum.
 
-### As vantagens \{#effects-of-mev-the-good}
+### As vantagens {#effects-of-mev-the-good}
 
 Muitos projetos DeFi dependem de atores economicamente racionais para assegurar a utilidade e a estabilidade dos seus protocolos. Por exemplo, a arbitragem DEX garante que os usuários obtenham os melhores preços corretos por seus totens, e os protocolos de empréstimo dependem de liquidações rápidas quando os mutuários caem abaixo das proporções de garantia para garantir que os mutuários recebam de volta.
 
 Sem buscadores racionais procurando e corrigindo as ineficiências econômicas e aproveitando os incentivos econômicos dos protocolos, os protocolos de DeFI e dApps podem, em geral, não ser tão robustos como são hoje.
 
-### As desvantagens \{#effects-of-mev-the-bad}
+### As desvantagens {#effects-of-mev-the-bad}
 
 Na camada de aplicativo, algumas formas de MEV, como o método "sandwich trading", resultam em uma experiência inequivocamente pior para os usuários. Usuários que sofrem o método "sandwich trading" enfrentam maior slippage (derrapagem) e uma pior execução nas suas transações.
 
@@ -106,7 +106,7 @@ Além do que está acontecendo _nos_ blocos, o MEV pode ter efeitos prejudiciais
 
 Essa possibilidade de reorganização da blockchain foi [previamente explorada na blockchain Bitcoin](https://dl.acm.org/doi/10.1145/2976749.2978408). Como a recompensa de bloco do Bitcoin é reduzida pela metade e as recompensas de transação representam uma parte cada vez maior da recompensa do bloco, surgem situações nas quais é mais economicamente racional para os mineradores desistirem da recompensa do próximo bloco e, em vez disso, minarem novamente blocos passados com taxas mais elevadas. Com o crescimento do MEV, o mesmo tipo de situação poderia ocorrer com o Ethereum, ameaçando a integridade da blockchain.
 
-## Estado do MEV \{#state-of-mev}
+## Estado do MEV {#state-of-mev}
 
 A extração MEV teve um grande crescimento no início de 2021, o que resultou em preços de gás extremamente elevados nos primeiros meses do ano. O surgimento do relé MEV de Flashbots reduziu a efetividade dos frontrunners generalizados e tirou os leilões de preço de gás da cadeia, baixando os preços do gás para os utilizadores comuns.
 
@@ -114,11 +114,11 @@ Enquanto muitos buscadores ainda estão ganhando um bom dinheiro com o MEV, à m
 
 Por outro lado, a transição da prova de trabalho para prova de participação e o esforço contínuo para escalar o Ethereum usando rollups mudam todo o panorama do MEV de maneiras que ainda não estão claras. Ainda não se sabe bem de que maneira ter proponentes de bloco garantidos conhecidos com pouca antecedência altera a dinâmica da extração de MEV em comparação com o modelo probabilístico na prova de trabalho ou como isso será interrompido quando [a eleição de líder secreto único](https://ethresear.ch/t/secret-non-single-leader-election/11789) e [a tecnologia de validador distribuído](/staking/dvt/) forem implementados. Da mesma forma, resta saber quais são as oportunidades de MEV existentes quando a maioria das atividades do usuário é transferida do Ethereum para seus rollups e fragmentos de camada 2.
 
-## MEV na prova de participação (PoS) do Ethereum \{#mev-in-ethereum-proof-of-stake}
+## MEV na prova de participação (PoS) do Ethereum {#mev-in-ethereum-proof-of-stake}
 
 Conforme explicado, o MEV tem implicações negativas para a experiência geral do usuário e para a segurança da camada de consenso. Mas a transição do Ethereum para um consenso de prova de participação (denominado "A Fusão") introduz potencialmente novos riscos relacionados ao MEV:
 
-### Centralização do validador \{#validator-centralization}
+### Centralização do validador {#validator-centralization}
 
 No Ethereum pós-fusão, os validadores (tendo feito depósitos de segurança de 32 ETH) chegam a um consenso sobre a validade dos blocos adicionados à Beacon Chain. Como 32 ETH podem estar fora do alcance de muitos, [entrar em um staking pool](/staking/pools/) pode ser uma opção mais viável. No entanto, uma distribuição saudável de [stakers individuais](/staking/solo/) é ideal, pois mitiga a centralização dos validadores e melhora a segurança do Ethereum.
 
@@ -128,7 +128,7 @@ Staking pools maiores provavelmente terão mais recursos para investir em otimiz
 
 Com menos recursos à sua disposição, os stakers individuais podem ser incapazes de lucrar com oportunidades de MEV. Isso pode aumentar a pressão sobre validadores independentes para se unirem a staking pools poderosas para aumentar os ganhos, reduzindo a descentralização no Ethereum.
 
-### Mempools autorizados \{#permissioned-mempools}
+### Mempools autorizados {#permissioned-mempools}
 
 Em resposta aos ataques "sandwiching" e "frontrunning", os traders podem começar a realizar negócios off-chain com validadores para privacidade de transação. Em vez de enviar uma potencial transação MEV para o mempool público, o trader a envia diretamente ao validador, que a inclui em um bloco e divide os lucros com o trader.
 
@@ -138,7 +138,7 @@ Mempools autorizados também acelerariam os riscos de centralização descritos 
 
 A luta contra esses problemas relacionados ao MEV no Ethereum pós-Fusão é uma área central de pesquisa. Até hoje, duas soluções propostas para reduzir o impacto negativo do MEV na descentralização e na segurança do Ethereum, depois da Fusão são **Separação Proponente-Construtor (PBS)** e **Builder API**.
 
-### Separação Proponente/Construtor \{#proposer-builder-separation}
+### Separação Proponente/Construtor {#proposer-builder-separation}
 
 Em ambas prova de trabalho e prova de participação, um nó que cria um bloco o propõe para ser adicionado à cadeia para outros nós que participam do consenso. Um novo bloco se torna parte da cadeia canônica depois que outro minerador constrói com base nele (na prova de trabalho) ou recebe atestados da maioria dos validadores (na prova de participação).
 
@@ -150,7 +150,7 @@ Em PBS, um construtor de blocos cria um pacote de transações e faz um lance pa
 
 O design de PBS atual usa um [esquema commit-reveal](https://gitcoin.co/blog/commit-reveal-scheme-on-ethereum/) no qual os construtores só publicam um compromisso criptográfico com o conteúdo de um bloco (header do bloco), juntamente com seus lances. Após aceitar o lance vencedor, o proponente cria uma proposta de bloco assinado que inclui o cabeçalho do bloco. O construtor do bloco deve publicar o corpo completo do bloco após ver a proposta do bloco assinado, e também deve receber [atestações](/glossary/#attestation) suficientes dos validadores antes de ser finalizado.
 
-#### Como a separação proponente-construtor atenua o impacto do MEV? \{#how-does-pbs-curb-mev-impact}
+#### Como a separação proponente-construtor atenua o impacto do MEV? {#how-does-pbs-curb-mev-impact}
 
 O protocolo de separação proponente-construtor reduz o efeito do MEV sobre o consenso removendo a extração MEV da alçada dos validadores. Em vez disso, são os construtores de blocos que executam hardware especializado que irão capturar oportunidades MEV no futuro.
 
@@ -160,7 +160,7 @@ A separação proponente-construtor também reduz os riscos de centralização d
 
 De forma similar, os validadores não têm que confiar que os construtores não vão reter os corpos de blocos ou publicar blocos inválidos porque o pagamento é incondicional. A taxa do validador ainda processa mesmo que o bloco proposto esteja indisponível ou seja declarado inválido por outros validadores. No último caso, o bloco é simplesmente descartado, forçando o construtor de blocos a perder todas as taxas de transação e a receita MEV.
 
-### Builder API \{#builder-api}
+### Builder API {#builder-api}
 
 Embora a separação proponente-construtor prometa reduzir os efeitos da extração do MEV, a sua implementação requer alterações no protocolo de consenso. Especificamente, a regra de [escolha de fork](/developers/docs/consensus-mechanisms/pos/#fork-choice) na Beacon Chain precisaria ser atualizada. A [Builder API](https://github.com/ethereum/builder-specs) é uma solução temporária destinada a fornecer uma implementação funcional da separação proponente-construtor, embora com hipóteses mais confiáveis.
 
@@ -188,7 +188,7 @@ O MEV Boost mantém o mesmo funcionamento do leilão original de Flashbots, embo
 
 O retransmissor ainda é responsável por validar pacotes de transações antes de passá-los para o proponente. No entanto, o MEV Boost introduz **escrows** responsáveis por fornecer [disponibilidade de dados](/developers/docs/data-availability/) ao armazenar corpos de blocos enviados por construtores e cabeçalhos de bloco enviados por validadores. Aqui, um validador conectado a um relay pede por payloads de execução disponíveis e usa o algoritmo de ordenação MEV Boost para selecionar o cabeçalho de payload com as maiores ofertas + valores MEV.
 
-#### Como a Builder API atenua o impacto do MEV? \{#how-does-builder-api-curb-mev-impact}
+#### Como a Builder API atenua o impacto do MEV? {#how-does-builder-api-curb-mev-impact}
 
 O principal benefício da Builder API é o seu potencial de democratizar o acesso a oportunidades de MEV. O uso de esquemas commit-revel elimina suposições de confiança e reduz as barreiras de entrada para os validadores que procuram se beneficiar com o MEV. Isso deve reduzir a pressão sobre os participantes individuais para se integrarem com grandes staking pools a fim de aumentar os lucros MEV.
 
@@ -200,14 +200,14 @@ Alguns projetos, como MEV Boost, usam a Builder API como parte de uma estrutura 
 
 2. O software da Builder API é de código aberto, o que permite que qualquer pessoa ofereça serviços de construtor de bloco. Isso significa que os usuários não são forçados a usar nenhum construtor de blocos em particular e melhora a neutralidade e a ausência de permissão do Ethereum. Além disso, os traders em busca de MEV não contribuirão inadvertidamente para a centralização por usar canais de transação particulares.
 
-## Recursos relacionados \{#related-resources}
+## Recursos relacionados {#related-resources}
 
 - [Documentação sobre Flashbots (links em inglês)](https://docs.flashbots.net/)
 - [Flashbots GitHub](https://github.com/flashbots/pm)
 - [MEV-Explore](https://explore.flashbots.net/) _Painéis e explorador de transações ao vivo de transações MEV_
 - [mevboost.org](https://www.mevboost.org/) - _Rastreador com estatísticas em tempo real para relays MEV-Boost e construtores de blocos_
 
-## Leitura adicional \{#further-reading}
+## Leitura adicional {#further-reading}
 
 - [Valor extraível da mineração (MEV)?](https://blog.chain.link/what-is-miner-extractable-value-mev/)
 - [MEV e Mim](https://www.paradigm.xyz/2021/02/mev-and-me)

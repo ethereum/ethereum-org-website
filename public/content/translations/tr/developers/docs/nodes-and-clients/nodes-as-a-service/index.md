@@ -5,15 +5,15 @@ lang: tr
 sidebarDepth: 2
 ---
 
-## Giriş \{#Introduction}
+## Giriş {#Introduction}
 
 Kendi [Ethereum düğümünüzü](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) çalıştırmak, özellikle başlarken veya hızlı ölçeklendirme yaparken zor olabilir. Sizin için optimize edilmiş düğüm altyapılarını çalıştıran [bir dizi hizmet](#popular-node-services) vardır, böylece bunun yerine uygulamanızı veya ürününüzü geliştirmeye odaklanabilirsiniz. Düğüm hizmetlerinin nasıl çalıştığını, bunları kullanmanın artılarını ve eksilerini açıklayacağız ve başlamakla ilgileniyorsanız sağlayıcıları listeleyeceğiz.
 
-## Ön Koşullar \{#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 Düğümlerin ve istemcilerin ne olduğu konusunda henüz bir fikriniz yoksa, [Düğümler ve istemciler](/developers/docs/nodes-and-clients/) kısmına göz atın.
 
-## Hissedarlar \{#stakoooooooooooooors}
+## Hissedarlar {#stakoooooooooooooors}
 
 Solo paydaşlar üçüncü taraf sağlayıcıları kullanmak yerine kendi altyapı sistemlerini çalıştırmalıdır. Yani bunun anlamı yürütüm istemcisi ile birleştirilmiş fikir birliği istemcisini çalıştırmaktır. [Birleşim'den](/roadmap/merge) önce sadece mutabakat istemcisini çalıştırıp merkezi bir sağlayıcı kullanarak yürütüm istemcisi kullanmak mümkündü. Ancak artık bu mümkün değil, solo paydaş iki istemciyi birlikte çalıştırmak zorundadır. Yalnız bu süreci kolaylaştırmak için bazı hizmetler var.
 
@@ -21,7 +21,7 @@ Solo paydaşlar üçüncü taraf sağlayıcıları kullanmak yerine kendi altyap
 
 Aşağıda açıklanan servisler hisselenmeyen düğümler içindir.
 
-## Düğüm hizmetleri nasıl çalışır? \{#how-do-node-services-work}
+## Düğüm hizmetleri nasıl çalışır? {#how-do-node-services-work}
 
 Düğüm hizmeti sağlayıcıları, siz uğraşmayın diye sahne arkasında sizin için dağıtılmış düğüm istemcileri çalıştırır.
 
@@ -35,19 +35,19 @@ Neredeyse tüm düğüm hizmetlerini entegre etmek aşırı derecede kolaydır: 
 
 Düğüm hizmetlerinin özel anahtarlarınızı veya bilgilerinizi saklamadığını ve saklamaması gerektiğini unutmamak önemlidir.
 
-## Bir düğüm hizmeti kullanmanın faydaları nelerdir? \{#benefits-of-using-a-node-service}
+## Bir düğüm hizmeti kullanmanın faydaları nelerdir? {#benefits-of-using-a-node-service}
 
 Bir düğüm hizmeti kullanmanın asıl faydası, düğümlere bakım yapmak ve yönetmek için mühendislik zamanı harcamanın gerekmemesidir. Bu, altyapı bakımı konusunda endişelenmek yerine ürününüzü oluşturmaya odaklanmanıza olanak tanır.
 
 Kendi düğümlerinizi çalıştırmak, depolamadan bant genişliğine ve mühendisliğe harcanan değerli zamana kadar çok pahalıya mal olabilir. Ölçeklendirirken daha fazla düğüm başlatmak, düğümleri en son sürümlere yükseltmek ve durum tutarlılığını sağlamak gibi şeyler, istediğiniz web3 ürününde kaynak oluşturma ve harcama konusundan sizi uzaklaştırabilir.
 
-## Bir Düğüm Hizmeti kullanmanın eksileri nelerdir? \{#cons-of-using-a-node-service}
+## Bir Düğüm Hizmeti kullanmanın eksileri nelerdir? {#cons-of-using-a-node-service}
 
 Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileştirirsiniz. Bu nedenle, merkeziyetsizliğe son derecede önem veren projeler, üçüncü bir tarafa dış kaynak sağlamak yerine kendi kendini barındıran düğümleri tercih edebilir.
 
 [Kendi düğümünüzü çalıştırmanın faydaları](/developers/docs/nodes-and-clients/#benefits-to-you) hakkında daha fazlasını okuyun.
 
-## Popüler düğüm hizmetleri \{#popular-node-services}
+## Popüler düğüm hizmetleri {#popular-node-services}
 
 İşte en popüler Ethereum düğüm sağlayıcılarından bazılarının bir listesi, eksik olanları eklemekten çekinmeyin! Her düğüm hizmeti, ücretsiz veya ücretli katmanlara ek olarak farklı avantajlar ve özellikler sunar, bir karar vermeden önce hangisinin ihtiyaçlarınıza en uygun olduğunu araştırmalısınız.
 
@@ -372,15 +372,15 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
   - Kripto ile Ödeme
   - Ekstra davranış gereksinimleri için harici destek
 
-## Daha fazla okuma \{#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Ethereum düğüm hizmetleri listesi](https://ethereumnodes.com/)
 
-## İlgili konular \{#related-topics}
+## İlgili konular {#related-topics}
 
 - [ Düğümler ve İstemciler](/developers/docs/nodes-and-clients/)
 
-## İlgili öğreticiler \{#related-tutorials}
+## İlgili öğreticiler {#related-tutorials}
 
 - [Alchemy kullanarak Ethereum geliştirmeye başlangıç](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Web3 ve Alchemy kullanarak işlem gönderme kılavuzu](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

@@ -6,15 +6,15 @@ lang: hu
 
 Nem kell minden okosszerződést a nulláról megírni. Számos nyílt forráskódú okosszerződés könyvtár áll rendelkezésedre, amelyek újrafelhasználható építőelemeket kínálnak a projektedhez, így megkímélnek attól, hogy újra fel kelljen találni a kereket.
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 Mielőtt belevetnéd magad az okosszerződés könyvtárakba, érdemes tisztában lenned az okosszerződések felépítésével. Irány az [okosszerződés anatómia](/developers/docs/smart-contracts/anatomy/) cikk, ha még nem olvastad el.
 
-## Mi van egy könyvtárban \{#whats-in-a-library}
+## Mi van egy könyvtárban {#whats-in-a-library}
 
 Az okosszerződés könyvtárakban általában kétféle építőelem található: újrafelhasználható eljárások, amelyeket hozzáadhatsz a szerződéseidhez, valamint különféle szabványok megvalósítása.
 
-### Eljárások \{#behaviors}
+### Eljárások {#behaviors}
 
 Okosszerződés írás közben jó esély van rá, hogy újra és újra hasonló minták megírásán találod magad, mint például hozzárendelsz egy _admin_ címet védett operációk véghezviteléhez, vagy egy vészeseti _szünet_ gombot adsz hozzá egy váratlan esemény miatt.
 
@@ -52,7 +52,7 @@ contract MyContract is Ownable {
 
 Egy másik népszerű példa a [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) vagy a [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html). Ezek olyan könyvtárak (szemben az alapszerződésekkel), amelyek számtani függvényeket biztosítanak túlcsordulás-ellenőrzésekkel, amelyeket a nyelv nem biztosít. Jó gyakorlat ezeknek a könyvtáraknak az alkalmazása a natív számtani műveletek helyett, hogy megvédd a szerződésed a túlcsordulástól, amelynek katasztrofális következményei lehetnek!
 
-### Szabványok \{#standards}
+### Szabványok {#standards}
 
 Hogy elősegítsük az [összeilleszthetőséget és az interoperabilitást](/developers/docs/smart-contracts/composability/), az Ethereum közösség számos szabványt vezetett be **ERC-k** formájában. Többet olvashatsz róluk a [szabványok](/developers/docs/standards/) részben.
 
@@ -60,7 +60,7 @@ Amikor egy ERC-t szeretnél betenni a szerződésedbe, célszerű a standard meg
 
 Érdemes megemlíteni, hogy egyes ERC-k nem önállóak, hanem kiegészítenek más ERC-ket. Például az [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) kiterjeszti az ERC20-as szabványt a használhatóság javítása érdekében.
 
-## Hogyan lehet könyvtárt hozzáadni \{#how-to}
+## Hogyan lehet könyvtárt hozzáadni {#how-to}
 
 Mindig nézd át a könyvtár dokumentációját, amit használsz a projektedben specifikus instrukciókért arról, hogyan kell használni. Számos Solidity szerződés könyvtár az `npm` használatával van csomagolva, így elég csak `npm install` módon telepíteni őket. A legtöbb szerződés [fordító](/developers/docs/smart-contracts/compiling/) eszköz végig nézi a `node_modules` mappát okosszerződés könyvtárak után kutatva, így megteheted a következőt:
 
@@ -75,7 +75,7 @@ contract MyNFT is ERC721 {
 
 Az általad használt módszertől függetlenül, ha könyvtárat importálsz be, mindig ellenőrizd le a [nyelv](/developers/docs/smart-contracts/languages/) verziót. Például nem használhatsz könyvtárat a Solidity 0.6-hoz, ha a szerződéseidet a Solidity 0.5-ben írod.
 
-## Mikor használjuk \{#when-to-use}
+## Mikor használjuk {#when-to-use}
 
 Egy okosszerződés könyvtár használatának számos előnye van. Először is, időt takarít meg azzal, hogy használatra kész építőelemeket biztosít, amelyeket beépíthetsz a rendszeredbe, ahelyett, hogy saját magadnak kellene leprogramozni őket.
 
@@ -85,7 +85,7 @@ Az okosszerződés könyvtárak használata azonban azt a kockázatot hordozza m
 
 Végül, amikor eldöntöd, hogy felveszel-e egy könyvtárat, vedd figyelembe annak általános használatát. Egy széles körben elfogadott szerződés előnye, hogy nagyobb a közössége, és többen tudnak foglalkozni a problémákkal. A biztonság legyen az elsődleges szempont okosszerződés fejlesztéskor!
 
-## Kapcsolódó eszközök \{#related-tools}
+## Kapcsolódó eszközök {#related-tools}
 
 **OpenZeppelin Contracts -** **_A legnépszerűbb könyvtár biztonságos okosszerződés fejlesztéshez._**
 
@@ -107,11 +107,11 @@ Végül, amikor eldöntöd, hogy felveszel-e egy könyvtárat, vedd figyelembe a
 - [Dokumentáció](https://portal.thirdweb.com/solidity/)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
-## Kapcsolódó útmutatók \{#related-tutorials}
+## Kapcsolódó útmutatók {#related-tutorials}
 
 - [Security considerations for Ethereum developers](/developers/docs/smart-contracts/security/) _– Egy biztonsági megfontolásokról szóló útmutató okosszerződés-fejlesztéshez könyvtárhasználattal._
 - [Az ERC-20 tokenes okosszerződés megértése](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _-Útmutató az ERC20 szabványról több könyvtáron keresztül._
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 _Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_

@@ -8,23 +8,23 @@ lang: zh-tw
 
 此為開源社群的一項工作，歡迎在你認為有所幫助時提出新主題、增添新內容並提供範例。 所有文檔均可透過 GitHub 進行編輯 – 如果你不確定如何操作，[請遵循相關說明](https://github.com/ethereum/ethereum-org-website/blob/dev/docs/editing-markdown.md)。
 
-## 發展模組 \{#development-modules}
+## 發展模組 {#development-modules}
 
 若這是你初次嘗試進行以太坊開發，我們建議你從頭開始並進行全面學習。
 
-### 基礎主題 \{#foundational-topics}
+### 基礎主題 {#foundational-topics}
 
 {
 <DeveloperDocsLinks headerId="foundational-topics" />
 }
 
-### 以太坊權益質押 \{#ethereum-stack}
+### 以太坊權益質押 {#ethereum-stack}
 
 {
 <DeveloperDocsLinks headerId="ethereum-stack" />
 }
 
-### 進階 \{#advanced}
+### 進階 {#advanced}
 
 {
 <DeveloperDocsLinks headerId="advanced" />

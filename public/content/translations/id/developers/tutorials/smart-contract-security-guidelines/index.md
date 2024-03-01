@@ -15,11 +15,11 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 
 Ikuti rekomendasi tingkat tinggi ini untuk membuat kontrak pintar yang lebih aman.
 
-## Pedoman desain \{#design-guidelines}
+## Pedoman desain {#design-guidelines}
 
 Desain sebuah kontrak harus dibahas sebelumnya, sebelum menulis baris kode apa pun.
 
-### Dokumentasi dan spesifikasi \{#documentation-and-specifications}
+### Dokumentasi dan spesifikasi {#documentation-and-specifications}
 
 Dokumentasi dapat ditulis pada tingkat yang berbeda, dan harus diperbarui saat mengimplementasikan kontrak:
 
@@ -27,11 +27,11 @@ Dokumentasi dapat ditulis pada tingkat yang berbeda, dan harus diperbarui saat m
 - **Diagram skema dan arsitektural**, mencakup interaksi kontrak dan mesin sistem state. [Printer Slither](https://github.com/crytic/slither/wiki/Printer-documentation) bisa membantu membuat skema ini.
 - **Dokumentasi kode yang lengkap**, [format Natspec](https://solidity.readthedocs.io/en/develop/natspec-format.html) bisa digunakan untuk Solidity.
 
-### Komputasi on-chain vs off-chain \{#on-chain-vs-off-chain-computation}
+### Komputasi on-chain vs off-chain {#on-chain-vs-off-chain-computation}
 
 - **Pertahankan sebanyak mungkin kode secara off-chain.** Jaga lapisan on-chain tetap berukuran kecil. Proses data sebelumnya dengan kode off-chain sedemikian rupa sehingga verifikasi on-chain menjadi sederhana. Apakah Anda memerlukan daftar yang berurutan? Urutkan daftarnya secara offchain, lalu hanya periksa urutannya secara onchain.
 
-### Kemungkinan peningkatan \{#upgradeability}
+### Kemungkinan peningkatan {#upgradeability}
 
 Kami membahas berbagai solusi kemungkinan peningkatan di [postingan blog kami](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/). Buat pilihan secara sengaja untuk mendukung kemungkinan peningkatan atau tidak, sebelum menulis kode apa pun. Keputusan ini akan memengaruhi cara Anda membangun kode kami. Secara umum, kami menyarankan:
 
@@ -42,49 +42,49 @@ Kami membahas berbagai solusi kemungkinan peningkatan di [postingan blog kami](h
   - Di mana kunci disimpan dan bagaimana mengaksesnya
   - Cara memeriksa penggunaan! Kembangkan dan uji skrip setelah penggunaan.
 
-## Panduan implementasi \{#implementation-guidelines}
+## Panduan implementasi {#implementation-guidelines}
 
 **Usahakan kesederhanaan.** Selalu gunakan solusi yang paling sederhana yang cocok dengan tujuan Anda. Setiap anggota tim Anda harus mampu memahami solusi Anda.
 
-### Komposisi fungsi \{#function-composition}
+### Komposisi fungsi {#function-composition}
 
 Arsitektur basis kode Anda harus membuat kode Anda mudah diulas. Hindari pilihan arsitektural yang mengurangi kemampuan penalaran tentang kebenarannya.
 
 - **Pisahkan logika sistem Anda**, entah melalui beberapa kontrak atau dengan mengelompokkan fungsi yang sama (sebagai contoh, otentikasi, aritmatika, ...).
 - **Tulis fungsi kecil, dengan tujuan yang jelas.** Ini akan mendukung pengulasan yang lebih mudah dan memungkinkan pengujian komponen individual.
 
-### Warisan \{#inheritance}
+### Warisan {#inheritance}
 
 - **Jaga warisan tetap dapat dikelola.** Warisan harus digunakan untuk membagi logika, namun, proyek Anda harus bertujuan meminimalisir kedalaman dan lebar pohon warisan.
 - **Gunakan [printer warisan](https://github.com/crytic/slither/wiki/Printer-documentation#inheritance-graph) Slither untuk memeriksa hierarki kontrak.** Printer warisan akan membantu Anda meninjau ukuran hierarkinya.
 
-### Aksi \{#events}
+### Aksi {#events}
 
 - **Buat log semua operasi penting.** Aksi akan membantu melakukan debug kontrak saat pengembangannya, dan mengawasinya setelah penggunaan.
 
-### Hindari kesalahan umum \{#avoid-known-pitfalls}
+### Hindari kesalahan umum {#avoid-known-pitfalls}
 
 - **Ketahuilah masalah keamanan yang paling umum.** Ada banyak sumber daya online untuk mempelajari tentang masalah yang umum, seperti [Ethernaut CTF](https://ethernaut.openzeppelin.com/), [Tangkap Ether](https://capturetheether.com/), atau [Kontrak yang tidak begitu pintar](https://github.com/crytic/not-so-smart-contracts/).
 - **Ketahuilah bagian peringatan di [dokumentasi Solidity](https://solidity.readthedocs.io/en/latest/).** Bagian peringatan akan memberi tahu Anda tentang perilaku bahasa yang tidak jelas.
 
-### Dependensi \{#dependencies}
+### Dependensi {#dependencies}
 
 - **Gunakan pustaka yang teruji baik.** Mengimpor kode dari pustaka yang teruji baik akan mengurangi kemungkinan Anda menulis kode yang memiliki bug. Jika Anda mau menulis kontrak ERC20, gunakan [OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/contracts/token/ERC20).
 - **Gunakan manajer dependensi, hindari menyalin-menempelkan kode.** Jika Anda mengandalkan sumber eksternal, maka Anda harus terus memperbaruinya agar sesuai dengan sumber aslinya.
 
-### Pengujian dan verifikasi \{#testing-and-verification}
+### Pengujian dan verifikasi {#testing-and-verification}
 
 - **Tulis tes unit yang lengkap.** Rangkaian tes ekstensif penting dalam membangun perangkat lunak berkualitas tinggi.
 - **Tulis pemeriksaan dan properti kustom [Slither](https://github.com/crytic/slither), [Echidna](https://github.com/crytic/echidna) dan [Manticore.](https://github.com/trailofbits/manticore)** Peralatan terotomatisasi akan menolong memastikan kontrak Anda aman. Ulas keseluruhan panduan ini untuk belajar cara menulis pemeriksaan dan properti yang efisien.
 - **Gunakan [crytic.io](https://crytic.io/).** Crytic terintegrasi dengan GitHub, memberikan akses ke detektor Slither privat, dan menjalankan pemeriksaan properti kustom dari Echidna.
 
-### Solidity \{#solidity}
+### Solidity {#solidity}
 
 - **Pilih Solidty 0.5 daripada 0.4 dan 0.6.** Menurut pendapat kami, Solidity 0.5 lebih aman dan memiliki praktik bawaan yang lebih baik daripada 0.4. Solidity 0.6 telah terbukti sangat tidak stabil untuk produksi dan butuh waktu agar lebih matang.
 - **Gunakan rilis stabil untuk mengompilasi; gunakan rilis terbaru untuk memeriksa peringatan.** Periksa apakah kode Anda tidak memiliki masalah yang dilaporkan dengan versi pengompilasi terbaru. Namun, Solidity memiliki siklus rilis yang cepat dan memiliki riwayat bug pengompilasi, jadi kami tidak menyarankan versi terbaru untuk penggunaannya (lihat [rekomendasi versi solc](https://github.com/crytic/slither/wiki/Detector-Documentation#recommendation-33) Slither).
 - **Jangan gunakan perakitan sebaris.** Perakitan memerlukan keahlian EVM. Jangan menulis kode EVM jika Anda belum _menguasai_ yellow paper.
 
-## Pedoman penggunaan \{#deployment-guidelines}
+## Pedoman penggunaan {#deployment-guidelines}
 
 Setelah kontrak dikembangkan dan digunakan:
 

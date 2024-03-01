@@ -21,11 +21,11 @@ Bu, Ethereum geliştirmeye başlamak için bir başlangıç rehberidir. Bu eğit
 
 Sizi Alchemy'ye kaydolmaktan ilk web3 komut dosyanızı yazmaya götüreceğiz! Blok zinciri geliştirme deneyimi gerekmez!
 
-## 1. Ücretsiz Alchemy Hesabı için Üye Olun \{#sign-up-for-a-free-alchemy-account}
+## 1. Ücretsiz Alchemy Hesabı için Üye Olun {#sign-up-for-a-free-alchemy-account}
 
 Alchemy ile bir hesap oluşturmak kolaydır, [buradan ücretsiz üye olun](https://auth.alchemyapi.io/signup).
 
-## 2. Bir Alchemy Uygulaması Oluşturun \{#create-an-alchemy-app}
+## 2. Bir Alchemy Uygulaması Oluşturun {#create-an-alchemy-app}
 
 Ethereum zinciriyle iletişim kurmak ve Alchemy'nin ürünlerini kullanmak amacıyla isteklerinizi doğrulamak için bir API anahtarına ihtiyacınız var.
 
@@ -43,7 +43,7 @@ Ayrıca, "Apps"in (Uygulamalar) üzerine gelip birini seçerek mevcut API anahta
 
 ![Bir kullanıcıya API anahtarlarının nasıl alınacağını gösteren GIF](./pull-api-keys.gif)
 
-## 3. Komut Satırından İstekte Bulunun \{#make-a-request-from-the-command-line}
+## 3. Komut Satırından İstekte Bulunun {#make-a-request-from-the-command-line}
 
 JSON-RPC ve curl kullanarak Alchemy aracılığıyla Ethereum blok zinciriyle etkileşim kurun.
 
@@ -71,7 +71,7 @@ _**NOT:** [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchem
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
-## 4. Web3 İstemcinizi kurun \{#set-up-your-web3-client}
+## 4. Web3 İstemcinizi kurun {#set-up-your-web3-client}
 
 **Mevcut bir istemciniz varsa,** API anahtarınızla mevcut düğüm sağlayıcı URL'nizi bir Alchemy URL'si olarak değiştirin: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -102,7 +102,7 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
-## 5. İlk Web3 Komut Dosyanızı Yazın! \{#write-your-first-web3-script}
+## 5. İlk Web3 Komut Dosyanızı Yazın! {#write-your-first-web3-script}
 
 Şimdi web3 programlamasına ufak bir dalış yapmak için Ethereum Mainnet'ten en son blok numarasını yazdıran basit bir komut dosyası yazacağız.
 

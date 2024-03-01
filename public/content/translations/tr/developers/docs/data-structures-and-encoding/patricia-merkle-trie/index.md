@@ -9,11 +9,11 @@ Merkle Patricia Dijital Ağacı, tüm `(key, value)` bağlamalarını depolamak 
 
 Merkle Patricia Dijital Ağacı tamamen belirleyicidir, yani aynı `(key, value)` bağlamalarına sahip olan dijital ağaçların son bayta kadar tamamen aynı olacağı garanti edilir. Bu, aynı kök karmasına sahip oldukları anlamına gelir ve ekleme, arama ve silme işlemleri için `O(log(n))` verimliliğini sağlar. Ayrıca, kırmızı-siyah ağaçlar gibi daha karmaşık karşılaştırma tabanlı alternatiflere göre anlaşılması ve kodlanması daha kolaydır.
 
-## Ön koşullar \{#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamak için [karmalar](https://en.wikipedia.org/wiki/Hash_function), [Merkle ağaçları](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) ve [serileştirme](https://en.wikipedia.org/wiki/Serialization) hakkında temel düzeyde bilgi sahibi olmak faydalı olabilir.
 
-## Temel taban dijital ağaçları \{#basic-radix-tries}
+## Temel taban dijital ağaçları {#basic-radix-tries}
 
 Temel bir taban dijital ağacında her düğüm aşağıdaki şekilde görünür:
 
@@ -68,11 +68,11 @@ Bir saldırganın var olmayan bir `(path, value)` çiftinin kanıtını sunması
 
 Bir taban ağacının atomik birimini (örneğin tek bir onaltılık karakter veya 4 bitlik bir ikili sayı) "nibble" olarak adlandıracağız. Yukarıda açıklandığı gibi, bir seferde bir nibble boyunca bir yol üzerinde gezinirken düğümler maksimum olarak 16 alt öğeye atıfta bulunabilirken ancak bir `value` öğesi içerebilir. Bu nedenle onları, uzunluğu 17 olan bir dizi olarak gösteririz. 17 öğeli bu dizileri "dal düğümleri" olarak adlandırıyoruz.
 
-## Merkle Patricia Önek Ağacı \{#merkle-patricia-trees}
+## Merkle Patricia Önek Ağacı {#merkle-patricia-trees}
 
 Taban dijital ağaçları, büyük bir kısıtlamaya tabidir: bu ağaçlar verimsizdir. Ethereum'daki olduğu gibi, yolun 64 karakter uzunluğunda (`bytes32` içindeki nibble sayısı) olduğu durumda bir `(path, value)` bağlaması depolamak istiyorsanız, her karakter için bir seviye depolamak için bir kilobayttan fazla ekstra alan gerekecektir ve her arama veya silme işlemi, 64 adımın tamamından geçecektir. Aşağıda açıklanan Patricia dijital ağacı bu sorunu çözer.
 
-### Optimizasyon \{#optimization}
+### Optimizasyon {#optimization}
 
 Merkle Patricia dijital ağacındaki bir düğüm aşağıdaki şekillerden biri gibi gözükür:
 
@@ -89,7 +89,7 @@ Bununla birlikte, yukarıdaki optimizasyondan iki anlam çıkıyor.
 
 Nibble'larda yolların üzerinden geçerken geçmemiz gereken nibble sayısının tek olduğu durumlar olabilir ancak bunun nedeni, tüm verilerin `bytes` biçiminde depolanmasıdır. Örneğin, nibble `1` ile nibble `01` (her ikisi de `<01>` olarak depolanmalıdır) arasında ayrım yapmak mümkün değildir. Tek sayıda uzunluğu belirtmek için kısmi yola önek olarak bir bayrak verilir.
 
-### Özellik: İsteğe bağlı sonlandırıcılı onaltılık dizinin sıkıştırılmış kodlaması \{#specification}
+### Özellik: İsteğe bağlı sonlandırıcılı onaltılık dizinin sıkıştırılmış kodlaması {#specification}
 
 Yukarıda açıklandığı gibi, hem _tek ve çift kalan kısmi yol uzunluğu_ hem de _yaprak ve uzantı düğümü_ işaretlemesi, herhangi bir 2 öğeli düğümün kısmi yolunun ilk nibble'ında bulunur. Bu, aşağıdaki sonuçları verir:
 
@@ -158,7 +158,7 @@ Merkle Patricia dijital ağacında bir düğüm almak için genişletilmiş kod:
         return get_helper(node,path2)
 ```
 
-### Örnek Dijital Ağaç \{#example-trie}
+### Örnek Dijital Ağaç {#example-trie}
 
 Dört yol/değer çifti içeren bir dijital ağaç istediğimizi varsayalım: `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
 
@@ -185,7 +185,7 @@ Bir düğüme başka bir düğüm içinde başvurulduğunda, dahil edilenler `H(
 
 Bir dijital ağacı güncellerken _eğer_ yeni oluşturulan düğümün uzunluğu >= 32 ise, `(keccak 256 (x), x)` anahtar/değer çiftini kalıcı bir arama tablosunda saklamanız gerektiğini unutmayın. Bununla birlikte düğüm bundan daha kısaysa, f (x) = x işlevi tersine çevrilebilir olduğundan hiçbir şeyin depolanmasına gerek yoktur.
 
-## Ethereum'da Dijital Ağaçlar \{#tries-in-ethereum}
+## Ethereum'da Dijital Ağaçlar {#tries-in-ethereum}
 
 Ethereum'ün yürütüm katmanındaki tüm merkle ağaçları, Merkle Patricia Dijital Ağacını kullanır.
 
@@ -195,11 +195,11 @@ Bir blok başlığında bu dijital ağaçların 3'ünden 3 kök vardır.
 2.  işlemKökü (transactionsRoot)
 3.  makbuzKökü (receiptsRoot)
 
-### Durum Dijital Ağacı \{#state-trie}
+### Durum Dijital Ağacı {#state-trie}
 
 Bir adet genel durum dijital ağacı vardır ve bu, bir istemci bir bloğu her işlediğinde güncellenir. İçindeki `path` her zaman şudur: `keccak 256 (ethereumAddress)` ve `value` her zaman şudur: `rlp(ethereumAccount)`. Bir Ethereum `account`'u 4 öğeli bir `[nonce,balance,storageRoot,codeHash]` dizisidir. Bu noktada, bu `storageRoot` öğesinin başka bir patricia dijital ağacının kökü olduğunu belirtmekte fayda vardır:
 
-### Depolama Dijital Ağacı \{#storage-trie}
+### Depolama Dijital Ağacı {#storage-trie}
 
 Depolama dijital ağacı, _tüm_ sözleşme verilerinin bulunduğu yerdir. Her bir hesap için ayrı bir depolama dijital ağacı vardır. Verilen bir adresteki belirli depolama konumlarındaki değerleri alabilmek için depolama adresi, depoda depolanan verilerin tam sayı konumu ve blok kimliği gereklidir. Bunlar daha sonra JSON-RPC API'sinde tanımlanan `eth_getStorageAt` öğesine bağımsız değişkenler olarak yapıştırılabilir, ör. `0x295a70b2de5e3953354a6a8344e616ed314d7251` adresi için depolama yuvası 0'daki verileri almak amacıyla:
 
@@ -235,7 +235,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 Not: Bir Ethereum hesabının `storageRoot`'u, eğer bir sözleşme hesabı değilse varsayılan olarak boştur.
 
-### İşlem Dijital Ağacı \{#transaction-trie}
+### İşlem Dijital Ağacı {#transaction-trie}
 
 Her blok için ayrı bir işlem dijital ağacı vardır ve aynı şekilde `(key, value)` çiftlerini saklar. Buradaki yol: aşağıdakiler tarafından belirlenen bir değere karşılık gelen anahtarı temsil eden `rlp(transactionIndex)`'dir:
 
@@ -248,13 +248,13 @@ else:
 
 Bununla ilgili daha fazla bilgiyi [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) belgelerinde bulabilirsiniz.
 
-### Makbuz Dijital Ağaçları \{#receipts-trie}
+### Makbuz Dijital Ağaçları {#receipts-trie}
 
 Her bloğun kendi makbuz dijital ağacı vardır. Burada `path`: `rlp(transactionIndex)`'dir. `transactionIndex`, çıkarıldığı blok içerisindeki indeksidir. Makbuz dijital ağacı hiçbir zaman güncellenmez. İşlemler dijital ağacına benzer şekilde güncel ve eski makbuzlar mevcuttur. Makbuzlar dijital ağacı içerisinde belirli bir makbuzu sorgulamak için bloktaki işlemin indeksi, makbuz yükü ve işlem türü gereklidir. Döndürülen makbuz, `TransactionType` ve `ReceiptPayload`'un birleşimi olarak tanımlanan `Receipt` türünde ya da `rlp([status, cumulativeGasUsed, logsBloom, logs])` olarak tanımlanan `LegacyReceipt` türünde olabilir.
 
 Bununla ilgili daha fazla bilgiyi [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) belgelerinde bulabilirsiniz.
 
-## Daha Fazla Okuma \{#further-reading}
+## Daha Fazla Okuma {#further-reading}
 
 - [Değiştirilmiş Merkle Patricia Dijital Ağacı - Ethereum bir durumu nasıl kaydeder?](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
 - [Ethereum'da Merkle işlemi](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)

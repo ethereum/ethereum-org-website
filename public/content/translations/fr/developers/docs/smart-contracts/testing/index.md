@@ -8,33 +8,33 @@ Les blockchains publiques comme Ethereum sont immuables, ce qui rend difficile l
 
 Pour ces raisons, tester les contrats intelligents avant [le déploiement](/developers/docs/smart-contracts/deploying/) sur le réseau principal est une exigence minimale pour la [sécurité](/developers/docs/smart-contracts/security/). Il existe de nombreuses techniques pour tester les contrats et évaluer la justesse du code ; ce que vous choisissez dépend de vos besoins. Néanmoins, une suite de tests composée d'outils et d'approches différents est idéale pour attraper des défauts de sécurité mineurs et majeurs dans le code contractuel.
 
-## Prérequis \{#prerequisites}
+## Prérequis {#prerequisites}
 
 Cette page explique comment tester les contrats intelligents avant le déploiement sur le réseau Ethereum. Cela suppose que vous êtes familier avec les [contrats intelligents](/developers/docs/smart-contracts/).
 
-## Qu'est-ce que le test de contrats intelligents ? \{#what-is-smart-contract-testing}
+## Qu'est-ce que le test de contrats intelligents ? {#what-is-smart-contract-testing}
 
 Les tests de contrats intelligents sont le processus de vérification que le code d'un contrat intelligent fonctionne comme prévu. Les tests sont utiles pour vérifier si un contrat intelligent particulier satisfait aux exigences de fiabilité, d'utilisabilité et de sécurité.
 
 Bien que les méthodes de test soient différentes, la plupart des méthodes de test nécessitent l'exécution d'un contrat intelligent avec un petit échantillon de données qu'il est censé gérer. Si le contrat produit des résultats corrects pour les données d'échantillonnage, il est supposé fonctionner correctement. La plupart des outils de test fournissent des ressources pour écrire et exécuter des [cas de test](https://en.m.wikipedia.org/wiki/Test_case) pour vérifier si une exécution de contrats correspond aux résultats attendus.
 
-### Pourquoi est-il important de tester les contrats intelligents ? \{#importance-of-testing-smart-contracts}
+### Pourquoi est-il important de tester les contrats intelligents ? {#importance-of-testing-smart-contracts}
 
 Comme les contrats intelligents gèrent souvent les actifs financiers de grande valeur, des erreurs de programmation mineures peuvent entraîner et entraînent souvent des [pertes massives pour les utilisateurs](https://rekt.news/leaderboard/). Des tests rigoureux peuvent toutefois vous aider à découvrir rapidement les défauts d'un code de contrats intelligents et à les corriger avant de se lancer sur le réseau principal.
 
 Tant qu'il est possible de mettre à jour un contrat si un bogue est découvert, les mises à jour sont complexes et peuvent [entraîner des erreurs](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/) si elles sont mal gérées. La mise à niveau d'un contrat annule encore le principe de l'immutabilité et charge les utilisateurs avec des hypothèses de confiance supplémentaires. Inversement, un plan complet de test de votre contrat atténue les risques de sécurité des contrats intelligents et réduit le besoin d'effectuer des mises à niveau logiques complexes après le déploiement.
 
-## Méthodes pour tester les contrats intelligents \{#methods-for-testing-smart-contracts}
+## Méthodes pour tester les contrats intelligents {#methods-for-testing-smart-contracts}
 
 Les méthodes de test des contrats intelligents sur Ethereum se distinguent en deux grandes catégories : **les tests automatisés** et les **tests manuels**. Les tests automatisés et les tests manuels offrent des avantages et des compromis uniques, mais vous pouvez combiner les deux pour créer un plan solide pour l'analyse de vos contrats.
 
-### Les tests automatisés \{#automated-testing}
+### Les tests automatisés {#automated-testing}
 
 Les tests automatisés utilisent des outils qui vérifient automatiquement un code de contrats intelligents pour détecter des erreurs dans l'exécution. L'avantage des tests automatisés vient de l'utilisation de [scripts](https://www.techtarget.com/whatis/definition/script?amp=1) pour guider l'évaluation des fonctionnalités contractuelles. Les tests scriptés peuvent être programmés aux fins d'une exécution répétée avec une intervention humaine minimale, rendant les tests automatisés plus efficaces que les approches manuelles de test.
 
 Les tests automatisés sont particulièrement utiles lorsque les tests sont répétitifs et prennent du temps ; difficile à exécuter manuellement ; sensible aux erreurs humaines ; ou nécessitant une évaluation des fonctions critiques du contrat. Mais les outils de test automatisés peuvent avoir des inconvénients : ils peuvent manquer certains bogues et produire beaucoup de [faux positifs](https://www.contrastsecurity.com/glossary/false-positive). Par conséquent, l'association des tests automatisés avec des tests manuels pour les contrats intelligents est idéale.
 
-### Les tests manuels \{#manual-testing}
+### Les tests manuels {#manual-testing}
 
 Les tests manuels sont aidés par l'homme et impliquent l'exécution de chaque cas de test dans votre suite de tests l'un après l'autre lors de l'analyse de la justesse des contrats intelligents. Ceci est différent des tests automatisés, où vous pouvez exécuter simultanément plusieurs tests isolés sur un contrat et obtenir un rapport montrant tous les échecs et réussissant les tests.
 
@@ -42,15 +42,15 @@ Les tests manuels peuvent être effectués par un seul individu, suivant un plan
 
 Des tests manuels efficaces requièrent des ressources considérables (compétences, temps, argent et efforts), et il est possible, en raison d'erreurs humaines, de manquer certaines erreurs lors de l'exécution des tests. Mais les tests manuels peuvent aussi être bénéfiques — par exemple, un test humain (p. ex. un vérificateur) peut utiliser l'intuition pour détecter les cas où un outil de test automatique manquerait.
 
-## Les méthodes de test automatiques pour les contrats intelligents \{#automated-testing-for-smart-contracts}
+## Les méthodes de test automatiques pour les contrats intelligents {#automated-testing-for-smart-contracts}
 
-### Tests unitaires \{#unit-testing-for-smart-contracts}
+### Tests unitaires {#unit-testing-for-smart-contracts}
 
 Les tests unitaires évaluent séparément les fonctions contractuelles et vérifient que chaque composant fonctionne correctement. Un test unitaire est simple, rapide à exécuter et donne une idée précise de ce qui s'est mal passé si le test échoue.
 
 Les tests unitaires sont utiles pour vérifier que les fonctions retournent les valeurs attendues et que le stockage du contrat est correctement mis à jour après l'exécution de la fonction. En outre, l'exécution de tests unitaires après avoir apporté des modifications à une base de code de contrats garantit que l'ajout de nouvelles logiques n'introduit pas d'erreurs. Voici quelques directives pour exécuter des tests unitaires efficaces :
 
-#### Lignes directrices pour le test unitaire des contrats intelligents \{#unit-testing-guidelines}
+#### Lignes directrices pour le test unitaire des contrats intelligents {#unit-testing-guidelines}
 
 ##### 1. Comprendre la logique et le flux de travail de vos contrats
 
@@ -145,7 +145,7 @@ Les frameworks de test unitaires pour les contrats intelligents Solidity sont di
 - **[Exécution de tests unitaires avec Ape](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Exécution de tests unitaires avec Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 
-### Tests d'intégration \{#integration-testing-for-smart-contracts}
+### Tests d'intégration {#integration-testing-for-smart-contracts}
 
 Alors que les tests unitaires déboguent les fonctions du contrat de manière isolée, les tests d'intégration évaluent les composants d'un contrat intelligent dans son ensemble. Les tests d'intégration peuvent détecter les problèmes liés aux appels intercontractuels ou aux interactions entre différentes fonctions dans le même contrat intelligent. Par exemple, les tests d'intégration peuvent aider à vérifier si des choses comme [l'héritage](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) et l'injection de dépendance fonctionnent correctement.
 
@@ -153,13 +153,13 @@ Les tests d'intégration sont utiles si votre contrat adopte une architecture mo
 
 La blockchain forkée se comportera de la même manière que le réseau principal et aura des comptes avec des états et des soldes associés. Mais cela ne fonctionne que comme un environnement de développement local en bac à sable, ce qui signifie que vous n'aurez pas besoin d'un véritable ETH pour les transactions, par exemple, vos changements n'affecteront pas non plus le véritable protocole Ethereum.
 
-### Fuzzing orienté propriétés \{#property-based-testing-for-smart-contracts}
+### Fuzzing orienté propriétés {#property-based-testing-for-smart-contracts}
 
 Les tests basés sur les propriétés sont le processus permettant de vérifier qu'un contrat intelligent satisfait à une propriété définie. Les propriétés affirment des faits sur le comportement d'un contrat qui devraient rester vrais dans différents scénarios. Un exemple de propriété de contrat intelligent pourrait être « Les opérations arithmétiques dans le contrat ne soupassent ou ne dépassent jamais ».
 
 **L'analyse statique** et **l'analyse dynamique** sont deux techniques communes pour exécuter des tests basés sur la propriété, et les deux peuvent vérifier que le code d'un programme (un contrat intelligent dans ce cas) satisfait certaines propriétés prédéfinies. Certains outils de test fondés sur la propriété sont fournis avec des règles prédéfinies sur les propriétés de contrat attendues et vérifient le code par rapport à ces règles, tandis que d'autres vous permettent de créer des propriétés personnalisées pour un contrat intelligent.
 
-#### Analyse statique \{#static-analysis}
+#### Analyse statique {#static-analysis}
 
 Un analyseur statique prend comme intrants le code source d'un contrat intelligent et les résultats indiquant si un contrat satisfait ou non une propriété. Contrairement à l’analyse dynamique, l’analyse statique n’implique pas d’exécuter un contrat pour l’analyser à des fins d'exactitude. L'analyse statique explique plutôt tous les chemins possibles qu'un contrat intelligent pourrait prendre pendant l'exécution (c'est-à-dire en examinant la structure du code source pour déterminer ce que cela signifierait pour l'opération des contrats à l'exécution).
 
@@ -167,7 +167,7 @@ Un analyseur statique prend comme intrants le code source d'un contrat intellige
 
 Dans la plupart des cas, l'analyse statique est utile pour détecter les problèmes de sécurité tels que l'utilisation de constructions non sûres, les erreurs de syntaxe, ou les violations des normes de codage dans un code de contrats. Cependant, les analyseurs statiques sont généralement peu sains lorsqu'ils détectent des vulnérabilités plus profondes et peuvent produire des faux positifs excessifs.
 
-#### Analyse dynamique \{#dynamic-analysis}
+#### Analyse dynamique {#dynamic-analysis}
 
 L'analyse dynamique génère des entrées symboliques (par exemple, en [exécution symbolique](https://en.m.wikipedia.org/wiki/Symbolic_execution)) ou des entrées concrètes (par ex. dans [fuzzing](https://owasp.org/www-community/Fuzzing)) vers les fonctions d'un contrat intelligent pour voir si une trace d'exécution enfreint des propriétés spécifiques. Cette forme de tests fondés sur des propriétés diffère des tests unitaires dans ces cas de tests couvrant plusieurs scénarios et un programme gère la génération de cas de test.
 
@@ -181,7 +181,7 @@ Le fuzzing est utile pour évaluer un mécanisme de validation des entrées des 
 
 3. **Les tests unitaires prouvent qu'un contrat s'exécute correctement pour des données d'échantillon, mais si le contrat s'exécute correctement pour des entrées en dehors de l'échantillon reste inconnu.** Les tests de propriété exécutent un contrat cible avec de multiples variations d'une valeur d'entrée donnée pour trouver des traces d'exécution qui causent des défaillances d'assertion. Ainsi, un test de propriété fournit plus de garanties qu'un contrat s'exécute correctement pour une vaste classe de données d'intrants.
 
-### Lignes directrices pour l'exécution de tests fondés sur les propriétés pour les contrats intelligents \{#running-property-based-tests}
+### Lignes directrices pour l'exécution de tests fondés sur les propriétés pour les contrats intelligents {#running-property-based-tests}
 
 L'exécution de tests basés sur les propriétés commence généralement par la définition d'une propriété (par ex. absence de [dépassements d'entier](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) ou de collections de propriétés que vous voulez vérifier dans un contrat intelligent. Vous pouvez également avoir besoin de définir une plage de valeurs dans laquelle le programme peut générer des données pour les entrées de transaction lors de l'écriture de tests de propriété.
 
@@ -194,11 +194,11 @@ Une fois configuré correctement, l'outil de test de propriété exécutera vos 
 - **[Exécution symbolique de contrats intelligents avec Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Exécution symbolique de contrats intelligents avec Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
-## Test manuel pour les contrats intelligents \{#manual-testing-for-smart-contracts}
+## Test manuel pour les contrats intelligents {#manual-testing-for-smart-contracts}
 
 Les tests manuels des contrats intelligents arrivent souvent plus tard dans le cycle de développement après avoir exécuté des tests automatisés. Un système évalue le contrat intelligent comme un produit totalement intégré pour voir s'il se déroule comme spécifié dans les exigences techniques.
 
-### Tester les contrats sur une blockchain locale \{#testing-on-local-blockchain}
+### Tester les contrats sur une blockchain locale {#testing-on-local-blockchain}
 
 Alors que les tests automatisés effectués dans un environnement de développement local peuvent fournir des informations de débogage utiles, vous aimeriez savoir comment votre contrat intelligent se comporte dans un environnement de production. Cependant, le déploiement dans la chaîne principale Ethereum entraîne des frais de gaz, sans parler du fait que vous ou vos utilisateurs pouvez perdre de l'argent si votre contrat intelligent comporte toujours des bogues.
 
@@ -208,7 +208,7 @@ Exécuter des contrats sur une blockchain locale pourrait être utile comme une 
 
 [En savoir plus sur les réseaux de développement.](/developers/docs/development-networks/)
 
-### Tests de contrats sur les réseaux de test \{#testing-contracts-on-testnets}
+### Tests de contrats sur les réseaux de test {#testing-contracts-on-testnets}
 
 Un réseau de test fonctionne exactement comme le réseau principal d'Ethereum, sauf qu'il utilise Ether (ETH) sans valeur de monde réel. Déployer votre contrat sur un [réseau de test](/developers/docs/networks/#ethereum-testnets) signifie que n'importe qui peut interagir avec lui (par exemple, via le frontend de la DAPP) sans mettre en péril les fonds.
 
@@ -218,7 +218,7 @@ Déployer sur un réseau de test après avoir testé sur une blockchain locale e
 
 [En savoir plus sur les réseaux de test Ethereum.](/developers/docs/development-networks/#public-beacon-testchains)
 
-## Test contre vérification formelle \{#testing-vs-formal-verification}
+## Test contre vérification formelle {#testing-vs-formal-verification}
 
 Bien que les tests permettent de confirmer qu'un contrat renvoie les résultats attendus pour certaines entrées de données, ils ne peuvent pas prouver de manière concluante la même chose pour les entrées non utilisées lors des tests. Tester un contrat intelligent ne peut donc pas garantir « l'exactitude fonctionnelle » (c'est-à-dire qu'il ne peut pas montrer qu'un programme se comporte comme requis pour _tous_ les ensembles de valeurs d'entrée).
 
@@ -230,7 +230,7 @@ Contrairement aux tests, la vérification formelle peut être utilisée pour vé
 
 [En savoir plus sur la vérification formelle des contrats intelligents.](/developers/docs/smart-contracts/formal-verification)
 
-## Tester vs audits et récompenses de bugs \{#testing-vs-audits-bug-bounties}
+## Tester vs audits et récompenses de bugs {#testing-vs-audits-bug-bounties}
 
 Comme mentionné, des tests rigoureux peuvent rarement garantir l'absence de bogues dans un contrat ; les approches de vérification formelle peuvent fournir des garanties plus fortes d'exactitude, mais elles sont actuellement difficiles à utiliser et entraînent des coûts considérables.
 
@@ -242,9 +242,9 @@ Inversement, un programme de prime aux bogues implique généralement d'offrir u
 
 La principale différence est que les programmes de primes aux bogues sont ouverts à la communauté plus large des développeurs et des hackers et attirent une large classe de hackers éthiques et de professionnels de la sécurité indépendants possédant des compétences et une expérience uniques. Cela peut être un avantage par rapport aux audits de contrats intelligents qui reposent principalement sur des équipes qui peuvent posséder une expertise plus limitée ou étroite.
 
-## Outils de test et bibliothèques \{#testing-tools-and-libraries}
+## Outils de test et bibliothèques {#testing-tools-and-libraries}
 
-### Outils pour tests unitaires \{#unit-testing-tools}
+### Outils pour tests unitaires {#unit-testing-tools}
 
 - **[couverture Solidity](https://github.com/sc-forks/solidity-coverage)** - _Outil de couverture de code pour les contrats intelligents écrits en Solidity._
 
@@ -262,15 +262,15 @@ La principale différence est que les programmes de primes aux bogues sont ouver
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _framework de développement et de test basé sur Python pour les contrats intelligents ciblant la Machine virtuelle Ethereum._
 
-### Outils de test fondés sur les propriétés \{#property-based-testing-tools}
+### Outils de test fondés sur les propriétés {#property-based-testing-tools}
 
-#### Outils d'analyse statique \{#static-analysis-tools}
+#### Outils d'analyse statique {#static-analysis-tools}
 
 - **[Slither](https://github.com/crytic/slither)** - _Python- Cadre d'analyse statique basé sur Solidity pour rechercher des vulnérabilités, améliorer la compréhension du code et rédiger des analyses personnalisées pour les contrats intelligents._
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter pour l'application du style et des meilleures pratiques de sécurité pour le langage de programmation du contrat intelligent Solidity._
 
-#### Outils d'analyse dynamique \{#dynamic-analysis-tools}
+#### Outils d'analyse dynamique {#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _Fuzzer de contrat rapide pour détecter les vulnérabilités des contrats intelligents grâce à des tests basés sur les propriétés._
 
@@ -282,7 +282,7 @@ La principale différence est que les programmes de primes aux bogues sont ouver
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble est un outil de vérification du langage de spécification et du temps d'exécution qui vous permet d'annoter des contrats intelligents avec des propriétés qui vous permettent de tester automatiquement les contrats avec des outils tels que Diligence Fuzzing ou MythX._
 
-## Tutoriels connexes \{#related-tutorials}
+## Tutoriels connexes {#related-tutorials}
 
 - [Une vue d'ensemble et une comparaison de produits de test différents](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [Comment utiliser Echidna pour tester les contrats intelligents](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
@@ -291,7 +291,7 @@ La principale différence est que les programmes de primes aux bogues sont ouver
 - [Comment simuler des contrats Solidity pour les tests](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [Comment exécuter des tests unitaires dans Solidity en utilisant Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [Un guide détaillé pour tester les contrats intelligents Ethereum](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
 - [Comment tester les contrats intelligents ethereum](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)

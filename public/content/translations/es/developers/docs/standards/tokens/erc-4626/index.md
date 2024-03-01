@@ -4,7 +4,7 @@ description: Un estándar para las bóvedas de rendimiento.
 lang: es
 ---
 
-## Introducción \{#introduction}
+## Introducción {#introduction}
 
 ERC-4626 es un estándar para optimizar y unificar los parámetros técnicos de las bóvedas que otorgan rendimiento. Proporciona una API estándar para las bóvedas de rendimiento tokenizadas que representan acciones de un único token ERC-20 subyacente. ERC-4626 también esboza una extensión opcional para las bóvedas tokenizadas que usan ERC-20, ofreciendo funcionalidad básica para depósitos, retiros de tokens y lectura de saldos.
 
@@ -16,15 +16,15 @@ ERC-4626 en bóvedas de rendimiento reducirá el esfuerzo de integración y desb
 
 El token ERC-4626 se describe en detalle en [EIP-4626](https://eips.ethereum.org/EIPS/eip-4626).
 
-## Prerrequisitos \{#prerequisites}
+## Prerrequisitos {#prerequisites}
 
 Para comprender mejor esta página, recomendamos leer primero sobre [estándares de token](/developers/docs/standards/tokens/) y [ERC-20](/developers/docs/standards/tokens/erc-20/).
 
-## Funciones y características de ERC-4626: \{#body}
+## Funciones y características de ERC-4626: {#body}
 
-### Métodos \{#methods}
+### Métodos {#methods}
 
-#### asset \{#asset}
+#### asset {#asset}
 
 ```solidity
 function asset() public view returns (address)
@@ -32,7 +32,7 @@ function asset() public view returns (address)
 
 Esta función devuelve la dirección del token subyacente utilizado en la bóveda para contabilidad, depósito y retiro.
 
-#### totalAssets \{#totalassets}
+#### totalAssets {#totalassets}
 
 ```solidity
 function totalAssets() public view returns (uint256)
@@ -40,7 +40,7 @@ function totalAssets() public view returns (uint256)
 
 Esta función devuelve la cantidad total de activos subyacentes que se poseen en la bóveda.
 
-#### convertToShares \{#convertoshares}
+#### convertToShares {#convertoshares}
 
 ```solidity
 function convertToShares(uint256 assets) public view returns (uint256 shares)
@@ -48,7 +48,7 @@ function convertToShares(uint256 assets) public view returns (uint256 shares)
 
 Esta función devuelve la cantidad de `shares` (acciones) que serían intercambiadas por la bóveda por la cantidad de `assets` (activos) proporcionados.
 
-#### convertToAssets \{#convertoassets}
+#### convertToAssets {#convertoassets}
 
 ```solidity
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
@@ -56,7 +56,7 @@ function convertToAssets(uint256 shares) public view returns (uint256 assets)
 
 Esta función devuelve la cantidad de `assets` que serían intercambiados por la bóveda por la cantidad de `shares` proporcionadas.
 
-#### maxDeposit \{#maxdeposit}
+#### maxDeposit {#maxdeposit}
 
 ```solidity
 function maxDeposit(address receiver) public view returns (uint256)
@@ -64,7 +64,7 @@ function maxDeposit(address receiver) public view returns (uint256)
 
 Esta función devuelve la cantidad máxima de activos subyacentes que pueden depositarse en una sola llamada de depósito ([`deposit`](#deposit)) por parte del `receiver` (receptor).
 
-#### previewDeposit \{#previewdeposit}
+#### previewDeposit {#previewdeposit}
 
 ```solidity
 function previewDeposit(uint256 assets) public view returns (uint256)
@@ -72,7 +72,7 @@ function previewDeposit(uint256 assets) public view returns (uint256)
 
 Esta función permite a los usuarios simular los efectos de su depósito en el bloque actual.
 
-#### deposit \{#deposit}
+#### deposit {#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
@@ -80,7 +80,7 @@ function deposit(uint256 assets, address receiver) public returns (uint256 share
 
 Esta función deposita `assets` de los tokens subyacentes en la bóveda y otorga la propiedad de acciones (`shares`) al receptor (`receiver`).
 
-#### maxMint \{#maxmint}
+#### maxMint {#maxmint}
 
 ```solidity
 function maxMint(address receiver) public view returns (uint256)
@@ -88,7 +88,7 @@ function maxMint(address receiver) public view returns (uint256)
 
 Esta función devuelve la cantidad máxima de acciones que pueden mintearse en una sola llamada de [`mint`](#mint) (minteo) por parte del receptor (`receiver`).
 
-#### previewMint \{#previewmint}
+#### previewMint {#previewmint}
 
 ```solidity
 function previewMint(uint256 shares) public view returns (uint256)
@@ -96,7 +96,7 @@ function previewMint(uint256 shares) public view returns (uint256)
 
 Esta función permite a los usuarios simular los efectos de su minteo en el bloque actual.
 
-#### mint \{#mint}
+#### mint {#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
@@ -104,7 +104,7 @@ function mint(uint256 shares, address receiver) public returns (uint256 assets)
 
 Esta función mintea exactamente `shares` acciones de la bóveda al `receiver` depositando `assets` de los tokens subyacentes.
 
-#### maxWithdraw \{#maxwithdraw}
+#### maxWithdraw {#maxwithdraw}
 
 ```solidity
 function maxWithdraw(address owner) public view returns (uint256)
@@ -112,7 +112,7 @@ function maxWithdraw(address owner) public view returns (uint256)
 
 Esta función devuelve la cantidad máxima de activos subyacentes que se pueden retirar del saldo del propietario (`owner`) con una única llamada a [`withdraw`](#withdraw) (retiro).
 
-#### previewWithdraw \{#previewwithdraw}
+#### previewWithdraw {#previewwithdraw}
 
 ```solidity
 function previewWithdraw(uint256 assets) public view returns (uint256)
@@ -120,7 +120,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256)
 
 Esta función permite a los usuarios simular los efectos de su retiro en el bloque actual.
 
-#### withdraw \{#withdraw}
+#### withdraw {#withdraw}
 
 ```solidity
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
@@ -128,7 +128,7 @@ function withdraw(uint256 assets, address receiver, address owner) public return
 
 Esta función quema `shares` del `owner` y envía exactamente `assets` token de la bóveda al `receiver`.
 
-#### maxRedeem \{#maxredeem}
+#### maxRedeem {#maxredeem}
 
 ```solidity
 function maxRedeem(address owner) public view returns (uint256)
@@ -136,7 +136,7 @@ function maxRedeem(address owner) public view returns (uint256)
 
 Esta funcion retorna la cantidad máxima de acciones que pueden ser reclamadas del saldo del `owner` a traves de una llamada a [`redeem`](#redeem) (canjeo o reclamo).
 
-#### previewRedeem \{#previewredeem}
+#### previewRedeem {#previewredeem}
 
 ```solidity
 function previewRedeem(uint256 shares) public view returns (uint256)
@@ -144,7 +144,7 @@ function previewRedeem(uint256 shares) public view returns (uint256)
 
 Esta función permite a los usuarios simular el efecto de su canjeo en el bloque actual.
 
-#### redeem \{#redeem}
+#### redeem {#redeem}
 
 ```solidity
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
@@ -152,7 +152,7 @@ function redeem(uint256 shares, address receiver, address owner) public returns 
 
 Esta función canjea un número específico de `shares` del `owner` y envía `assets` del token subyacente de la bóveda al `receiver`.
 
-#### totalSupply \{#totalsupply}
+#### totalSupply {#totalsupply}
 
 ```solidity
 function totalSupply() public view returns (uint256)
@@ -160,7 +160,7 @@ function totalSupply() public view returns (uint256)
 
 Devuelve el número total de acciones no canjeadas de la bóveda en circulación.
 
-#### balanceOf \{#balanceof}
+#### balanceOf {#balanceof}
 
 ```solidity
 function balanceOf(address owner) public view returns (uint256)
@@ -168,7 +168,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 Devuelve la cantidad total de acciones de la bóveda que el `owner` tiene actualmente.
 
-### Eventos \{#events}
+### Eventos {#events}
 
 #### Evento de depósito
 
@@ -201,7 +201,7 @@ event Withdraw(
 
 Donde `sender` es el usuario que desencadenó el retiro e intercambió `shares`, en posesión de `owner`, por `assets`. `receiver` es el usuario que recibió los `assets` retirados.
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [EIP-4626: estándar de bóveda tokenizada](https://eips.ethereum.org/EIPS/eip-4626)
 - [ERC-4626: repositorio de GitHub](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)

@@ -8,7 +8,7 @@ Ethereum ile tasarımda yeni misiniz? Burası sizin için doğru yer. Ethereum t
 
 Önce web3 hakkında biraz daha temel bilgi edinmek ister misiniz? [**Bilgi merkezi**](/learn/)'ne göz atın.
 
-## Kullanıcı araştırması ile başlayalım \{#Start-with-user-research}
+## Kullanıcı araştırması ile başlayalım {#Start-with-user-research}
 
 Etkili tasarım, görsel olarak çekici kullanıcı arayüzleri yaratmanın ötesinde bir anlam ifade eder. Kullanıcı ihtiyaçları, hedefleri ve itici faktörleri hakkında derin bir anlayış kazandırır. Bu yüzden, işlerini bilinçli ve bir amaca yönelik gerçekleştirdiklerinden emin olmaları için tüm tasarımcılara, [**çift karolu süreç**](<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)>) gibi bir tasarım sürecini benimsemelerini şiddetle tavsiye ediyoruz.
 
@@ -17,7 +17,7 @@ Etkili tasarım, görsel olarak çekici kullanıcı arayüzleri yaratmanın öte
 - [Web3'te Kullanıcı Deneyimi Kararlarına Nasıl Yaklaşılır?](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - Nicel ile nitel araştırmaya ve ikisi arasındaki farklara kısa bir genel bakış (video, 6 dak.)
 - [Web3'te kullanıcı deneyimi araştırmacısı olmak](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - Web3'te kullanıcı deneyimi araştırmacısı olmaya dair kişisel bir bakış açısı
 
-## Web3'te araştırma çalışmaları \{#Research-in-web3}
+## Web3'te araştırma çalışmaları {#Research-in-web3}
 
 Bu, web3'te yapılmış ve tasarım ve ürün kararlarını vermenize yardım edebilecek veya kendi çalışmanızı yürütürken ilham kaynağı olabilecek kullanıcı araştırmalarının özenle hazırlanmış bir listesidir.
 
@@ -35,7 +35,7 @@ Bu, web3'te yapılmış ve tasarım ve ürün kararlarını vermenize yardım ed
 - [Metaverse: Kullanıcı Araştırması Raporu](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)
 - [Safariye Çıkmak: Metaverse'teki Kullanıcıları Araştırmak](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (video, 27 dak.)
 
-## Web3 için tasarım \{#Design-for-web3}
+## Web3 için tasarım {#Design-for-web3}
 
 - [Web3 Tasarım Prensipleri](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - Blokzincir tabanlı merkeziyetsiz uygulamalar için bir kullanıcı deneyimi kuralları çerçevesi
 - [Blokzincir Tasarım İlkeleri](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - IBM blokzincir tasarım ekibi tarafından alınan dersler
@@ -44,7 +44,7 @@ Bu, web3'te yapılmış ve tasarım ve ürün kararlarını vermenize yardım ed
 - [W3design.io](https://w3design.io/) - Ekosistemdeki farklı projelerin Kullanıcı Deneyimi akışlarından oluşturulan bir kütüphane
 - [Neueux.com](https://neueux.com/apps) - Kullanıcı akışları üzerine çeşitli filtreleme seçenekleri içeren bir Kullanıcı Arayüzü kütüphanesi
 
-## Web3 Tasarım Vaka Çalışmaları \{#Design-case-studies}
+## Web3 Tasarım Vaka Çalışmaları {#Design-case-studies}
 
 - [Nasıl daha iyi web3 hata mesajları yazılır?](https://medium.com/@JonCrabb/how-to-design-better-web3-error-messages-bd96e12fa582)
 - [Defi tasarım ipuçları](https://medium.com/@JonCrabb/defi-design-tips-vol-12-8600f4374714)
@@ -53,14 +53,14 @@ Bu, web3'te yapılmış ve tasarım ve ürün kararlarını vermenize yardım ed
 - [OpenSea üzerinden NFT satmak](https://builtformars.com/case-studies/opensea)
 - [Cüzdan Kullanıcı Deneyimi sökümü, cüzdanların nasıl değişmesi gerektiğine ilişkin açıklama](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (video, 20 dak.)
 
-## Tasarım Ödülleri \{#Bounties}
+## Tasarım Ödülleri {#Bounties}
 
 - [Dework](https://app.dework.xyz/bounties)
 - [Gitcoin](https://bounties.gitcoin.co/explorer)
 - [Buildbox hackhaton'ları](https://gitcoin.co/hackathons)
 - [ETHGlobal](https://ethglobal.com/)
 
-## Tasarım DAO'ları ve toplulukları \{#Design-DAOs-and-communities}
+## Tasarım DAO'ları ve toplulukları {#Design-DAOs-and-communities}
 
 Profesyonel, topluluk destekli organizasyonlara veya tasarım gruplarına katılın, diğer üyeler ile tasarım ve araştırma konuları ve trendlerini tartışın.
 
@@ -72,7 +72,7 @@ Profesyonel, topluluk destekli organizasyonlara veya tasarım gruplarına katıl
 - [web3trends.org](https://web3trends.org/)
 - [Açık Kaynaklı Web3Design](https://www.web3designers.org/)
 
-## Tasarım Sistemleri \{#Design-systems}
+## Tasarım Sistemleri {#Design-systems}
 
 - [Optimism Design](https://www.figma.com/@oplabs) (Figma)
 - [Ethereum.org Tasarım sistemi](https://www.figma.com/@ethdotorg) (Figma)

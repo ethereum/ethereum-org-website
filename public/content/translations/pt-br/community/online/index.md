@@ -4,11 +4,11 @@ description: Uma listagem dos programas de recompensas por meio do ecossistema E
 lang: pt-br
 ---
 
-# Comunidades online \{#online-communities}
+# Comunidades online {#online-communities}
 
 Centenas de milhares de entusiastas do Ethereum se reúnem nestes fóruns na Internet para compartilhar notícias, falar sobre avanços recentes, debater problemas técnicos e imaginar o futuro.
 
-## Fóruns \{#forums}
+## Fóruns {#forums}
 
 {
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> – tudo sobre o Ethereum</SocialListItem>
@@ -35,7 +35,7 @@ Centenas de milhares de entusiastas do Ethereum se reúnem nestes fóruns na Int
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Pesquisa Ethereum</Link> – o painel de mensagens mais influente para pesquisa criptoeconômica</SocialListItem>
 }
 
-## Salas de bate-papo \{#chat-rooms}
+## Salas de bate-papo {#chat-rooms}
 
 {
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> –Comunidade orientada em torno da oferta de apoio à gestão de projetos para o desenvolvimento do Ethereum</SocialListItem>
@@ -68,7 +68,7 @@ Centenas de milhares de entusiastas do Ethereum se reúnem nestes fóruns na Int
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _ — fórum descentralizado de perguntas e respostas_</SocialListItem>
 }
 
-## YouTube e Twitter \{#youtube-and-twitter}
+## YouTube e Twitter {#youtube-and-twitter}
 
 {
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> – Mantenha-se atualizado com as últimas novidades da Ethereum Foundation</SocialListItem>

@@ -5,15 +5,15 @@ lang: zh
 sidebarDepth: 2
 ---
 
-## 简介 \{#Introduction}
+## 简介 {#Introduction}
 
 运行自己的 [以太坊](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients)节点可能会比较困难，特别是在刚开始时或在快速扩展时。 [许多服务](#popular-node-services)都可以为你运行优化的节点基础设施，藉此，你可以专注于开发你的应用程序或产品。 我们将解释节点服务运行的原理以及它们的优缺点，并列出供应商，如果有兴趣，就着手开始吧。
 
-## 前提条件 \{#prerequisites}
+## 前提条件 {#prerequisites}
 
 如果你还不了解什么是节点和客户端，请查看[节点和客户端](/developers/docs/nodes-and-clients/)。
 
-## 质押人 \{#stakoooooooooooooors}
+## 质押人 {#stakoooooooooooooors}
 
 单独的质押人必须运行自己的基础设施，而不是依赖第三方提供商。 这意味着运行一个执行客户端和一个共识客户端。 在[合并](/roadmap/merge)之前，可以只运行共识客户端并通过中心化的提供商来获取执行数据；但现在已不存在这种情况——单独的质押人必须同时运行两种客户端。 但是，有一些服务可以简化这个过程。
 
@@ -21,7 +21,7 @@ sidebarDepth: 2
 
 本页描述的服务适用于非质押节点。
 
-## 节点服务运作原理 \{#how-do-node-services-work}
+## 节点服务运作原理 {#how-do-node-services-work}
 
 节点服务提供商在幕后为你运行分布式节点客户端，因此你无需自己运行。
 
@@ -35,19 +35,19 @@ sidebarDepth: 2
 
 值得注意的是，节点服务不存储也不应该存储你的私钥或信息。
 
-## 使用节点服务的好处是什么？ \{#benefits-of-using-a-node-service}
+## 使用节点服务的好处是什么？ {#benefits-of-using-a-node-service}
 
 使用节点服务的主要好处是不需要耗费工程时间来自己维护和管理节点。 这样，你就能够专注于构建自己的产品，而不必担心基础设施维护。
 
 无论是存储或带宽方面，还是宝贵的工程时间，运行自己的节点代价非常高昂。 在扩容时运行更多节点、将节点升级到最新版本以及确保状态一致性等等，这些事情让用户无法集中精力构建并将资源应用于自己喜爱的 Web3 产品上。
 
-## 使用节点服务的缺点是什么？ \{#cons-of-using-a-node-service}
+## 使用节点服务的缺点是什么？ {#cons-of-using-a-node-service}
 
 使用节点服务，你产品的基础设施部分走向了中心化。 因此，可能更喜欢对那些极为注重去中心化的项目采用自我托管节点，而不是外包给第三方。
 
 详细了解[运行自己节点的好处](/developers/docs/nodes-and-clients/#benefits-to-you)。
 
-## 主流节点服务 \{#popular-node-services}
+## 主流节点服务 {#popular-node-services}
 
 下面列出了一些最受欢迎的以太坊节点服务提供商，如有遗漏，欢迎随时补充！ 每种节点服务除了免费或付费层级外，还提供各种好处和功能。做出决定之前，你应该调查哪些服务最符合自己的需求。
 
@@ -372,15 +372,15 @@ sidebarDepth: 2
   - 加密货币支付
   - 可满足更多行为需求的外部支持
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [以太坊节点服务列表](https://ethereumnodes.com/)
 
-## 相关主题 \{#related-topics}
+## 相关主题 {#related-topics}
 
 - [节点和客户端](/developers/docs/nodes-and-clients/)
 
-## 相关教程 \{#related-tutorials}
+## 相关教程 {#related-tutorials}
 
 - [使用 Alchemy 开始以太坊开发](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [关于使用 Web3 和 Alchemy 发送交易的指南](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

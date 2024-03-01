@@ -4,7 +4,7 @@ description: Ang pangunahing impormasyong kailangan mo para maunawaan ang pagkon
 lang: fil
 ---
 
-# Paggamit ng enerhiya ng Ethereum \{#proof-of-stake-energy}
+# Paggamit ng enerhiya ng Ethereum {#proof-of-stake-energy}
 
 Ang Ethereum ay isang "green" na blockchain. Ang consensus mechanism ng Ethereum na [patunay ng stake](/developers/docs/consensus-mechanisms/pos) ay gumagamit ng ETH sa halip na [enerhiya upang i-secure ang network](/developers/docs/consensus-mechanisms/pow). Ang kinokonsumong enerhiya ng Ethereum ay humigit-kumulang [~0.0026 TWh/taon](https://carbon-ratings.com/eth-report-2022) sa buong pandaigdigang network.
 
@@ -39,13 +39,13 @@ Kasama rin sa talahanayan at chart sa itaas ang mga pagkukumpara sa Bitcoin at s
 
 Puwede kang mag-browse ng mga pagtatantya ng kinokonsumong enerhiya at carbon emission para sa maraming industriya sa [site ng Cambridge Blockchain Network Sustainability Index](https://ccaf.io/cbnsi/ethereum).
 
-## Mga pagtatantya kada transaksyon \{#per-transaction-estimates}
+## Mga pagtatantya kada transaksyon {#per-transaction-estimates}
 
 Tinatantya ng maraming artikulo ang ginagamit na enerhiya ng mga blockchain kada transaksyon. Maaari itong makalito dahil ang enerhiyang kailangan para mag-propose at mag-validate ng isang block ay hindi nakasalalay sa bilang ng mga transaksyon dito. Sa unit na kada transaksyon ng paggamit ng enerhiya, ipinagpapalagay na mas maliit ang magagamit na enerhiya kapag mas kaunti ang mga transaksyon at vice-versa, na hindi naman totoo. Gayundin, ang mga pagtatantya na kada transaksyon ay napakasensitibo sa kung paano tinutukoy ang throughput ng transaksyon ng isang blockchain, at maaaring dayain ang definition na ito para magmukhang mas malaki o maliit ang halaga.
 
 Halimbawa, sa Ethereum, ang transaction throughput ay hindi lang sa base layer - ito rin ang kabuuang halaga ng throughput ng transaksyon ng lahat ng "[layer 2](/layer-2/)" rollup nito. Hindi karaniwang isinasama ang mga layer 2 sa mga kalkulasyon, pero kapag isinaalang-alang ang karagdagang enerhiyang kinokonsumo ng mga sequencer (maliit) at ang bilang ng mga transaksyong ipinoproseso ng mga ito (malaki), lubhang liliit ang mga pagtatantya na kada transaksyon. Isa ito sa mga dahilan kung bakit maaaring makalito ang pagkukumpara ng kinokonsumong enerhiya ng mga platform kada transaksyon.
 
-## Ang carbon debt ng Ethereum \{#carbon-debt}
+## Ang carbon debt ng Ethereum {#carbon-debt}
 
 Nakapakaunti ng enerhiyang ginagamit ng Ethereum, pero hindi ito palaging ganito. Dati, gumagamit ang Ethereum ng patunay ng gawain na may mas malaking environmental cost kaysa sa kasalukuyang mekanismong patunay ng stake.
 
@@ -55,7 +55,7 @@ Sa simula pa lang, pinlano ng Ethereum na magpatupad ng consensus mechanism na b
 
 Ayon sa pagtatantya ng CCRI, binawasan ng The Merge ang kinokonsumong enerhiya kada taon ng Ethereum ng mahigit **99.988%**. Gayundin, ang carbon footprint ng Ethereum ay nabawasan ng mga **99.992%** (naging 870 mula sa mula sa 11,016,000 tonnes CO2e). Upang maisalarawan ito, ipagpalagay na ang pagkabawas ng mga emission ay parang paglipat sa taas ng maliit na toy figure mula sa taas ng Eiffel Tower, gaya ng ipinapakita sa figure sa itaas. Bilang resulta, malaki ang mababawas sa environmental cost ng pag-secure sa network. Gayundin, pinaniniwalang napaigting ang seguridad ng network.
 
-## Isang green na application layer \{#green-applications}
+## Isang green na application layer {#green-applications}
 
 Bagama't napakaliit ng kinokonsumong enerhiya ng Ethereum, mayroon ding mahalaga, lumalaki, at napakaaktibong komunidad ng [**regenerative finance (ReFi)**](/refi/) na nabubuo sa Ethereum. Ang mga ReFi application ay gumagamit ng mga DeFi component upang lumikha ng mga pinansyal na application na may positibong epekto sa kalikasan. Ang ReFi ay bahagi ng mas malawakang kilusang ["solarpunk"](https://en.wikipedia.org/wiki/Solarpunk) na malapit na nauugnay sa Ethereum at naglalayong pagsamahin ang teknolohikal na pag-unlad at pangangalaga sa kalikasan. Ang Ethereum ay decentralized, permissionless, at composable, kaya naman naaangkop itong base layer para sa mga komunidad ng ReFi at solarpunk.
 
@@ -65,7 +65,7 @@ Ang mga public goods funding platform na native sa Web3 tulad ng [Gitcoin](https
   Kung sa tingin mo ay mas mapapatumpak pa ang page na ito, maghain ng isyu o pull request (PR). Ang stats sa page na ito ay mga pagtatantya batay sa data na available sa publiko - hindi kumakatawan ang mga ito sa isang opisyal na pahayag o pangako mula sa ethereum.org team, o sa Ethereum Foundation.
 </InfoBanner>
 
-## Karagdagang pagbabasa \{#further-reading}
+## Karagdagang pagbabasa {#further-reading}
 
 - [Indeks ng Sustainable Network ng Cambridge Blockchain](https://ccaf.io/cbnsi/ethereum)
 - [Ulat mula sa White House tungkol sa mga blockchain na patunay ng gawain](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
@@ -75,7 +75,7 @@ Ang mga public goods funding platform na native sa Web3 tulad ng [Gitcoin](https
 - [The Merge - Mga Epekto sa Pagkonsumo ng Kuryente at Carbon Footprint ng Ethereum Network](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Ang kinokonsumong enerhiya ng Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
 
-## Related topics \{#related-topics}
+## Related topics {#related-topics}
 
 - [Ang mithiin ng Ethereum](/roadmap/vision/)
 - [Ang Beacon Chain](/roadmap/beacon-chain)

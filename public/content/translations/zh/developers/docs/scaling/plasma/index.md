@@ -10,7 +10,7 @@ Plasma 链是一个锚定到以太坊主网的独立区块链，但却在链下�
 
 利用 Merkle 树可以创建这些链的无限堆栈，可以从父链（包括以太坊主网）分流带宽。 然而，虽然这些链从以太坊获取一些安全性（通过欺诈证明），但其安全性和效率受到若干设计限制的影响。
 
-## 前提条件 \{#prerequisites}
+## 前提条件 {#prerequisites}
 
 你应该对所有基础主题有很好的了解，并对[以太坊扩容](/developers/docs/scaling/)有较高层次的理解。
 
@@ -24,7 +24,7 @@ Plasma 合约除了其他功能之外，还有一项功能是作为[链梁](/dev
 
 Plasma 框架的基本组成部分包括：
 
-### 链下计算 \{#off-chain-computation}
+### 链下计算 {#off-chain-computation}
 
 以太坊的当前处理速度限制为每秒 ~15-20 个交易，降低了短期内处理更多用户的扩容可能性。 这个问题之所以存在，主要是因为以太坊的[共识机制](/developers/docs/consensus-mechanisms/) 需要许多对等节点来验证对区块链状态的每次更新。
 
@@ -34,7 +34,7 @@ Plasma 假设以太坊主网不需要验证所有交易。 相反，我们可以
 
 链下计算是必要的，因为 Plasma 链可以优化速度和成本。 例如，一个 Plasma 链可能，而且大多数情况下都使用单个“运营商”来管理交易的排序和执行。 由于只有一个实体验证交易，plasma 链上的处理速度比以太坊主网更快。
 
-### 状态承诺 \{#state-commitments}
+### 状态承诺 {#state-commitments}
 
 虽然 Plasma 在链下执行交易，但它们是在以太坊主执行层上结算的，否则，Plasma 链无法从以太坊的安全保证中受益。 但是在不知道 Plasma 链状态的情况下完成链下交易会破坏安全模型并让无效交易扩散。 这就是为什么运营商，即负责在 Plasma 链上生产区块的实体，需要定期在以太坊上发布“状态承诺”。
 
@@ -44,17 +44,17 @@ Merkle 根是能够压缩大量信息的密码原语。 Merkle 根（在此情�
 
 Merkle 根对于向以太坊提供有关链下状态的信息非常重要。 你可以将 Merkle 根视为“保存点”：运营商表示，“这是 Plasma 链在 x 时间点的状态，这是 Merkle 根作为证明。” 运营商使用 Merkle 根对 Plasma 链的*当前状态*进行承诺，这就是为什么它被称为“状态承诺”。
 
-### 入口和出口 \{#entries-and-exits}
+### 入口和出口 {#entries-and-exits}
 
 为了让以太坊用户利用 Plasma，需要有一种机制在主网和 Plasma 链之间转移资金。 但是，我们不能随意将以太币发送到 Plasma 链上的地址 — 这些链是不兼容的，因此交易要么失败，要么导致资金损失。
 
 Plasma 使用在以太坊上运行的主合约来处理用户的入口和出口。 该主合约还负责跟踪状态承诺（前面已解释）并通过欺诈证明惩罚不诚实行为（稍后将详细介绍）。
 
-#### 进入 plasma 链 \{#entering-the-plasma-chain}
+#### 进入 plasma 链 {#entering-the-plasma-chain}
 
 要进入 Plasma 链，Alice（用户）必须在 Plasma 合约中存入以太币或任何 ERC-20 代币。 监视合约存款的 Plasma 运营商重新创建与 Alice 的初始存款相等的金额，并将其释放到她在 Plasma 链上的地址。 Alice 需要证明在子链上收到资金，然后才能使用这些资金进行交易。
 
-#### 退出 plasma 链 \{#exiting-the-plasma-chain}
+#### 退出 plasma 链 {#exiting-the-plasma-chain}
 
 由于几个原因，退出 plasma 链比进入它更复杂。 最大的问题是，虽然以太坊有关于 Plasma 链状态的信息，但它无法验证信息是否真实。 恶意用户可能会做出不正确的断言（“我有 1000 个以太币”）并提供虚假证据来支持该声明而侥幸逃脱。
 
@@ -70,7 +70,7 @@ Plasma 使用在以太坊上运行的主合约来处理用户的入口和出口�
 
 如果在没有任何人提供欺诈证明的情况下经过挑战期，Alice 的取款请求被认为是有效的，允许她从以太坊上的 Plasma 合约中取回存款。
 
-### 争议仲裁 \{#dispute-arbitration}
+### 争议仲裁 {#dispute-arbitration}
 
 与任何区块链一样，Plasma 链需要一种机制确保交易的完整性，防止参与者的恶意行为（例如，资金双重支付）。 为此，plasma 链使用欺诈证明来仲裁有关状态转换有效性的争议并惩罚不良行为。 欺诈证明可作为一种机制，Plasma 子链通过它向父链或根链提出申诉。
 
@@ -80,7 +80,7 @@ Plasma 使用在以太坊上运行的主合约来处理用户的入口和出口�
 
 如果 Bob 挑战成功，Alice 的取款请求将被取消。 但是，这种方法依赖于 Bob 监视链中取款请求的能力。 如果 Bob 离线，那么一旦挑战期过去，Alice 就可以处理恶意取款。
 
-## plasma 中的大规模退出问题 \{#the-mass-exit-problem-in-plasma}
+## plasma 中的大规模退出问题 {#the-mass-exit-problem-in-plasma}
 
 当大量用户试图同时退出 Plasma 链时，就会出现大规模退出问题。 为什么会出现这个问题与 Plasma 的最大问题之一有关：**数据不可用**。
 
@@ -104,7 +104,7 @@ Plasma 链主要存储与运营商的交易数据，**不在主网上发布任�
 
 尽管退出游戏在理论上听起来不错，但现实生活中的大规模退出可能会引发以太坊本身的全网拥塞。 除了损害以太坊的功能外，协调不善的大规模退出意味着用户可能无法在运营商耗尽 Plasma 链上的每个帐户之前提取资金。
 
-## Plasma 的优缺点 \{#pros-and-cons-of-plasma}
+## Plasma 的优缺点 {#pros-and-cons-of-plasma}
 
 | 优点                                                                                                                               | 缺点                                                                                                  |
 | ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------- |
@@ -114,41 +114,41 @@ Plasma 链主要存储与运营商的交易数据，**不在主网上发布任�
 | 通过将计算和存储转移到链下来减少以太坊主网的负载。                                                                                 | 为了等待挑战期，提款会延迟几天。 对于同质化资产，流动性提供者可以缓解这种情况，但存在相关的资本成本。 |
 |                                                                                                                                    | 如果太多用户同时尝试退出，可能会导致以太坊主网堵塞。                                                  |
 
-## Plasma 与第 2 层网络扩容协议 \{#plasma-vs-layer-2}
+## Plasma 与第 2 层网络扩容协议 {#plasma-vs-layer-2}
 
 虽然 Plasma 曾被视为对以太坊有用的扩容解决方案，但后来它被弃用，取而代之的是[二层网络 (L2) 扩容协议](/layer-2/)。 二层网络扩容解决方案解决了 Plasma 的几个问题：
 
-### 效率 \{#efficiency}
+### 效率 {#efficiency}
 
 [零知识卷叠](/developers/docs/scaling/zk-rollups)为在链下处理的每批交易的有效性生成加密证明。 这样可以防止用户（和运营商）推进的无效状态转换，因而不再需要挑战期和退出游戏。 这也意味着用户不必通过定期关注链来保护其资金安全。
 
-### 支持智能合约 \{#support-for-smart-contracts}
+### 支持智能合约 {#support-for-smart-contracts}
 
 Plasma 框架的另一个问题是[无法支持以太坊智能合约的执行](https://ethresear.ch/t/why-smart-contracts-are-not-feasible-on-plasma/2598/4)。 因此，Plasma 的大多数实现主要是用于简单的支付或 ERC-20 代币交换。
 
 相反，乐观卷叠与[以太坊虚拟机](/developers/docs/evm/)兼容，并且可以运行以太坊原生[智能合约](/developers/docs/smart-contracts/)，使其成为扩展[去中心化应用程序](/developers/docs/dapps/)的有用且*安全*的解决方案。 同样，正在计划[创建以太坊虚拟机的零知识实现 (zkEVM)](https://ethresear.ch/t/a-zk-evm-specification/11549)，让零知识卷叠能够处理任意逻辑并执行智能合约。
 
-### 数据不可用 \{#data-unavailability}
+### 数据不可用 {#data-unavailability}
 
 如前所述，Plasma 存在数据可用性问题。 如果恶意运营商在 Plasma 链上推进了无效转换，用户将无法挑战它，因为运营商可以扣留创建欺诈证明所需的数据。 卷叠强制运营商在以太坊上发布交易数据，允许任何人验证链的状态并在必要时创建欺诈证明，从而解决了这个问题。
 
-### 大规模退出问题 \{#mass-exit-problem}
+### 大规模退出问题 {#mass-exit-problem}
 
 零知识卷叠和乐观卷叠均以不同方式解决了 Plasma 的大规模退出问题。 例如，零知识卷叠依靠加密机制来确保运营商在任何情况下都无法窃取用户的资金。
 
 同样，乐观卷叠对提款实施了延迟期，在延迟期任何人都可以提出挑战并阻止恶意提款请求。 虽然这类似于 Plasma，但不同之处在于验证者可以访问创建欺诈证明所需的数据。 因此，卷叠用户无需在慌乱中“争先恐后”地迁移到以太坊主网。
 
-## Plasma、侧链、分片技术之间有什么区别？ \{#plasma-sidechains-sharding}
+## Plasma、侧链、分片技术之间有什么区别？ {#plasma-sidechains-sharding}
 
 Plasma、侧链、分片技术有一定的相似度，因为它们都以某种方式连接到以太坊主网。 然而，连接到以太坊主网的级别和强度有所不同，这影响了这些扩容方案的安全属性。
 
-### Plasma 与侧链 \{#plasma-vs-sidechains}
+### Plasma 与侧链 {#plasma-vs-sidechains}
 
 [侧链](/developers/docs/scaling/sidechains/)是一条独立运行的区块链，通过双向桥梁连接到以太坊主网。 [桥梁](/bridges/)允许用户在两条区块链之间兑换代币以便在侧链进行交易，这缓解了以太坊主网上的拥塞并提升了可扩展性。 侧链采用独立的共识机制，它们通常比以太坊主网小得多。 因此，将资产桥接到这些区块链会增加风险；由于侧链模型中缺少从以太坊主网继承的安全保障，在侧链受到攻击时用户会面临资金损失的风险。
 
 相反，Plasma 链的安全性源自以太坊主网。 这让它们明显比侧链更安全。 侧链和 Plasma 链都可以采用不同的共识协议。但区别是 Plasma 链在以太坊主网上发布每个区块的默克尔根。 区块根是小段信息，可用来验证在 Plasma 链上进行的交易相关信息。 如果 Plasma 链遭到攻击，用户可以用适当的证据安全地将资金撤回到主网。
 
-### Plasma 与分片 \{#plasma-vs-sharding}
+### Plasma 与分片 {#plasma-vs-sharding}
 
 Plasma 链和分片链都定期向以太坊主网发布加密证明。 但是，两者具有不同的安全属性。
 
@@ -158,7 +158,7 @@ Plasma 不同于此，因为主网只接收最少量的子链状态信息。 这
 
 **注意**：以太坊区块链分片已经不再包含在路线图中。 它已被卷叠及 [Danksharding](/roadmap/danksharding) 扩容方案所取代。
 
-### 使用 Plasma \{#use-plasma}
+### 使用 Plasma {#use-plasma}
 
 许多项目提供 Plasma 实现，你可以将它们集成到自己的去中心化应用程序中：
 
@@ -167,7 +167,7 @@ Plasma 不同于此，因为主网只接收最少量的子链状态信息。 这
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [学习 Plasma](https://www.learnplasma.org/en/)
 - [关于何为“共享安全”以及它为何如此重要的简单提示](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)

@@ -6,11 +6,11 @@ lang: zh
 
 一个以太坊帐户是一个具有以太币 (ETH) 余额的实体，可以在以太坊上发送交易。 帐户可以由用户控制，也可以作为智能合约部署。
 
-## 前提条件 \{#prerequisites}
+## 前提条件 {#prerequisites}
 
 为了帮助你更好地理解这个页面，我们建议你首先阅读我们的[以太坊简介](/developers/docs/intro-to-ethereum/)。
 
-## 帐户类型 \{#types-of-account}
+## 帐户类型 {#types-of-account}
 
 以太坊有两种帐户类型：
 
@@ -22,7 +22,7 @@ lang: zh
 - 接收、持有和发送 ETH 和 token
 - 与已部署的智能合约进行交互
 
-### 主要区别 \{#key-differences}
+### 主要区别 {#key-differences}
 
 **外部持有**
 
@@ -38,7 +38,7 @@ lang: zh
 - 从外部帐户向合约帐户发起的交易能触发可执行多种操作的代码，例如转移代币甚至创建新合约
 - 合约帐户没有私钥。 相反，它们由智能合约代码逻辑控制
 
-## 理解帐户 \{#an-account-examined}
+## 理解帐户 {#an-account-examined}
 
 以太坊帐户有四个字段：
 
@@ -49,7 +49,7 @@ lang: zh
 
 ![显示帐户组成部分的图表](./accounts.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## 外部持有的帐户和密钥对 \{#externally-owned-accounts-and-key-pairs}
+## 外部持有的帐户和密钥对 {#externally-owned-accounts-and-key-pairs}
 
 帐户由公钥和私钥加密对组成。 它们有助于证明交易实际上是由发送者签名的，并防止伪造。 你的私钥是你用来签名交易的密钥，所以它保障你对与自己帐户相关的资金进行管理。 你从未真正持有加密货币，你持有私钥 – 资金总是在以太坊的账本上。
 
@@ -57,7 +57,7 @@ lang: zh
 
 如果 Alice 想要从她自己的帐户发送 ETH 到 Bob 的帐户，Alice 需要创建交易请求并将其发送到网络进行验证。 以太坊对公钥加密的使用确保了 Alice 可以证明她最初发起了交易请求。 没有加密机制，恶意对手 Eve 可以简单地公开广播一个看起来像“从 Alice 的帐户发送 5 ETH 到 Eve 帐户”的请求。而且没有人能够证实请求不是由 Alice 发送。
 
-## 帐户创建 \{#account-creation}
+## 帐户创建 {#account-creation}
 
 当你想要创建一个帐户时，大多数库将生成一个随机的私钥。
 
@@ -90,7 +90,7 @@ WARN [10-28|16:19:09.306] Please remember your password!
 
 你需要一个私钥来签署消息和交易并输出签名。 然后其他人可以使用签名获取你的公钥，证明信息的作者。 在你的应用程序中，可以使用 javascript 库向网络发送交易。
 
-## 合约帐户 \{#contract-accounts}
+## 合约帐户 {#contract-accounts}
 
 合约帐户也有一个 42 个字符组成的十六进制地址：
 
@@ -100,17 +100,17 @@ WARN [10-28|16:19:09.306] Please remember your password!
 
 合约地址通常在将合约部署到以太坊区块链时给出。 地址产生自创建人的地址和从创建人地址发送的交易数量（“nonce”）。
 
-## 验证者密钥 \{#validators-keys}
+## 验证者密钥 {#validators-keys}
 
 以太坊还有一另种类型的密钥，它们是在以太坊从工作量证明过渡到权益证明共识时引入的。 它们是“BLS”密钥，用来识别验证者。 这些密钥可以有效地聚合，减少网络达成共识所需要的带宽。 没有这种密钥集合，验证者的最小质押金额将会高出许多。
 
 [更多关于验证者密钥的信息](/developers/docs/consensus-mechanisms/pos/keys/)。
 
-## 关于钱包的说明 \{#a-note-on-wallets}
+## 关于钱包的说明 {#a-note-on-wallets}
 
 帐户和钱包不同。 帐户是用户拥有的以太坊帐户的密钥对。 钱包是界面或应用程序，可以让你与以太坊帐户交互。
 
-## 视频演示 \{#a-visual-demo}
+## 视频演示 {#a-visual-demo}
 
 跟随 Austin 了解哈希函数和密钥对。
 
@@ -122,13 +122,13 @@ WARN [10-28|16:19:09.306] Please remember your password!
 <YouTube id="9LtBDy67Tho" />
 }
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [了解以太坊帐户](https://info.etherscan.com/understanding-ethereum-accounts/) - etherscan
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
-## 相关主题 \{#related-topics}
+## 相关主题 {#related-topics}
 
 - [智能合约](/developers/docs/smart-contracts/)
 - [交易](/developers/docs/transactions/)

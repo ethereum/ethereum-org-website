@@ -14,9 +14,9 @@ Minden jutalom és büntetés korszakonként egyszer kerül alkalmazásra.
 
 Tekintse meg a további részleteket
 
-## Jutalmak és büntetések \{#rewards}
+## Jutalmak és büntetések {#rewards}
 
-### Jutalmak \{#rewards}
+### Jutalmak {#rewards}
 
 A validátorok jutalomban részesülnek, ha a többi validátorral összhangban adnak szavazatokat, ha blokkokat javasolnak, és ha részt vesznek a szinkronizáló bizottságokban. A jutalmak értékét minden egyes korszakban egy `base_reward` (alapjutalom) alapján számítják ki. Ez az alapegység, amelyből a többi jutalmat számolják. A `base_reward` az egy validátor által optimális körülmények között kapott átlagos jutalom korszakonként. Ezt a validátor tényleges egyenlegéből és az aktív validátorok teljes számából számítják ki:
 
@@ -54,7 +54,7 @@ A gyors tanúsítások ösztönzésére további jutalom jár. Ez az `inclusion_
 
 A blokkot javaslók `8 / 64 * base_reward` jutalmat kapnak **minden egyes, a blokkban szereplő érvényes tanúsításért **, így a jutalom tényleges értéke a tanúsító validátorok számával növekszik. A blokkot javaslók növelhetik jutalmukat azáltal is, hogy a javasolt blokkjukba más validátorok helytelen viselkedésére vonatkozó bizonyítékokat is beillesztenek. Ezek azok az ösztönzők, amelyek a validátorokat őszinteségre motiválják. A súlyos büntetést tartalmazó blokkelőterjesztő a `slashed_validators_effective_balance / 512` értékkel jutalmazzák.
 
-### Büntetések \{#penalties}
+### Büntetések {#penalties}
 
 Eddig a jól viselkedő validátorokat vettük figyelembe, de mi a helyzet azokkal, akik nem vagy csak lassan teszik meg a fej-, forrás- és célszavazatokat?
 
@@ -62,7 +62,7 @@ A cél- és forrásszavazatok elmaradásáért járó büntetés megegyezik azza
 
 Tudjon meg többet a jutalmakról és büntetésekről a [konszenzusspecifikációból](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). A jutalmakat és büntetéseket a Bellatrix frissítéssel módosították – nézze meg Danny Ryan és Vitalik beszélgetését erről ebben a [Peep an EIP videóban](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
-## Súlyos büntetés (slashing) \{#slashing}
+## Súlyos büntetés (slashing) {#slashing}
 
 A súlyos büntetés (slash) egy komoly akció, amely eltávolítja a validátort a hálózatból, s a letétbe helyezett ethert is elveszti. Három oka lehet egy validátor súlyos megbüntetésének, amelyek mindegyike a blokkok rosszhiszemű felajánlását vagy tanúsítását jelenti:
 
@@ -72,13 +72,13 @@ A súlyos büntetés (slash) egy komoly akció, amely eltávolítja a validátor
 
 Ha ezeket a műveleteket észlelik, a validátort súlyosan megbüntetik. Ez azt jelenti, hogy a letétbe helyezett etherük 1/32-ét (maximum 1 etherig) azonnal elégetik, majd egy 36 napos eltávolítási időszak kezdődik. Ezen eltávolítási időszak alatt a validátor letétje fokozatosan elszivárog. Félidőben (18. nap) további büntetést kap, amelynek nagysága a büntetés előtti 36 napban az összes megbüntetett (slashed) validátor összes letétbe helyezett etherének nagyságával arányos. Ez azt jelenti, hogy ha több validátor kap súlyos büntetést és kizárást, akkor a büntetés mértéke növekszik. A maximális büntetés az összes megbüntetett validátor teljes tényleges egyenlege (ha sok validátor kap súlyos büntetést, akkor elveszíthetik a teljes letétjüket). Másrészt egyetlen, elszigetelt súlyos büntetés a validátor letétjének csak kis részét égeti el. Ezt a középtájt kiszabott extra büntetést, amely a megbüntetett validátorok számával skálázódik, korrelációs büntetésnek nevezzük.
 
-## Inaktivitási elszivárgás \{#inactivity-leak}
+## Inaktivitási elszivárgás {#inactivity-leak}
 
 Ha a konszenzusréteg több mint négy korszakot tölt el véglegesítés nélkül, akkor egy „inaktivitási szivárgás” vészhelyzeti protokoll aktiválódik. Az inaktivitási elszivárgás célja, hogy megteremtse a lánc véglegessé válásához szükséges feltételeket. A véglegességhez a teljes feltett ether 2/3-os többsége szükséges ahhoz, hogy a forrás- és célellenőrzési pontok megegyezzenek. Ha a validátorok több mint 1/3-a offline állapotba kerül, vagy nem küld helyes tanúsításokat, akkor nem lehetséges, hogy a 2/3-os szupertöbbség véglegesítse az ellenőrzési pontokat. Az inaktivitási kiszivárgás lehetővé teszi, hogy az inaktív validátorok letétje fokozatosan elszivárogjon addig, amíg a hozzájuk tartozó letét 1/3 alá csökkent, így a megmaradt aktív validátorok véglegesíthetik a láncot. Bármilyen nagy legyen inaktív validátorok csoportja, a megmaradó aktív validátorok végül a letét >2/3-át birtokolják. A letét elvesztése erősen ösztönzi az inaktív érvényesítőket arra, hogy minél hamarabb újra aktiválódjanak. A Medalla teszthálózaton életbe lépett már az inaktivitási elszivárgás, amikor is az aktív validátorok < 66%-a képes volt konszenzusra jutni a blokklánc aktuális fejével kapcsolatban. Az inaktivitási elszivárgás aktiválódott, és a véglegesség végül helyreállt.
 
 A konszenzusmechanizmus jutalom-, büntetés- és súlyos büntetési konstrukciója arra ösztönzi a validálókat, hogy jóhiszeműen viselkedjenek. Ezekből a tervezési döntésekből következik, hogy a rendszer érdekében a validátoroknak egyenlően kell eloszlaniuk a kliens között, és fel kell oldani az egyetlen kliens dominanciáját.
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [Ethereum frissítés: Az ösztönzési réteg](https://eth2book.info/altair/part2/incentives)
 - [Ösztönzők az Ethereum hibrid Casper-protokolljában](https://arxiv.org/pdf/1903.04205.pdf)

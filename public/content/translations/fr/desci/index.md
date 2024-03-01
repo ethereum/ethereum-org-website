@@ -12,7 +12,7 @@ summaryPoint2: Technologie qui permet aux scientifiques de recueillir des fonds,
 summaryPoint3: S'appuie sur le mouvement science en libre accès.
 ---
 
-## Qu'est-ce que la science décentralisée (DeSci) ? \{#what-is-desci}
+## Qu'est-ce que la science décentralisée (DeSci) ? {#what-is-desci}
 
 La science décentralisée (DeSci) est un mouvement qui vise à construire une infrastructure publique en vue du financement, de la création, de l'examen, de l'attribution de crédits, du stockage et de la diffusion des connaissances scientifiques de manière juste et équitable en utilisant la pile Web3.
 
@@ -26,7 +26,7 @@ La science décentralisée permet d'accéder à des sources de financement plus 
 <YouTube id="5ORvbCIW39o" />
 }
 
-## En quoi la DeSci fait avancer la science \{#desci-improves-science}
+## En quoi la DeSci fait avancer la science {#desci-improves-science}
 
 Liste non exhaustive des principaux problèmes rencontrés par la science et comment la science décentralisée peut aider à les résoudre
 
@@ -41,21 +41,21 @@ Liste non exhaustive des principaux problèmes rencontrés par la science et com
 | Vous êtes détenteur de la propriété intellectuelle (PI) que vous créez et diffusez ces créations dans le respect de conditions transparentes.             | Votre institution d'origine est propriétaire de la PI que vous générez. L'accès à la PI n'est pas transparent.                             |
 | Partagez toutes les recherches, y compris les données issues de recherches infructueuses, en basculant toutes les étapes sur la chaîne.                   | Le biais de publication veut que les chercheurs soient plus susceptibles de partager des expériences qui ont donné des résultats positifs. |
 
-## Ethereum et la DeSci \{#ethereum-and-desci}
+## Ethereum et la DeSci {#ethereum-and-desci}
 
 Pour développer des applications, un système scientifique décentralisé exigera une sécurité renforcée, des coûts monétaires et de transaction minimaux et un écosystème riche. Ethereum fournit tout ce qui est nécessaire pour construire une pile scientifique décentralisée.
 
-## Exemples d'utilisation de la DeSci \{#use-cases}
+## Exemples d'utilisation de la DeSci {#use-cases}
 
 La DeSci met en place les outils scientifiques nécessaires pour faire basculer le milieu universitaire du Web2 vers le digital. Vous trouverez ci-dessous un échantillon d'exemples d'utilisation que le Web3 peut offrir à la communauté scientifique.
 
-### Publications \{#publishing}
+### Publications {#publishing}
 
 Comme chacun le sait, les publications scientifiques posent problème car elles sont gérées par des maisons d'édition qui s'appuient sur le travail gratuit de scientifiques, de réviseurs et d'éditeurs pour produire des articles, mais qui facturent ensuite des frais d'édition exorbitants. Le public, qui a généralement financé indirectement le travail et les coûts de publication à travers les taxes et les impôts qu'il paie, ne peut souvent pas accéder à ce même travail sans payer l'éditeur à nouveau. Le montant total des frais de publication d'articles scientifiques individuels est souvent à cinq chiffres ($USD), ce qui sape le concept même de connaissance scientifique en tant que [bien public](https://www.econlib.org/library/Enc/PublicGoods.html) tout en permettant à un petit groupe d'éditeurs d'engranger d'énormes profits.
 
 Il existe des plateformes d'acès libre et gratuit sous forme de serveurs de pré-impression [comme ArXiv](https://arxiv.org/). Le contrôle qualité , de même que les [mécanismes anti-sybil](https://csrc.nist.gov/glossary/term/sybil_attack), font défaut sur ces plateformes, qui ne suivent généralement pas les paramètres de niveau article, ce qui signifie qu'ils ne sont généralement utilisés que pour faire connaître un travail avant de le soumettre à un éditeur classique. SciHub permet également d'accéder gratuitement aux articles publiés, mais pas légalement, et seulement après que les éditeurs ont été réglés et ont lié l'œuvre à une législation stricte sur le droit d'auteur. Les données et articles scientifiques accessibles associés à un mécanisme de légitimité et à un modèle incitatif intégrés manquent donc cruellement. Le Web3 offre les outils nécessaire pour construire un tel système.
 
-### Reproductibilité et réplicabilité \{#reproducibility-and-replicability}
+### Reproductibilité et réplicabilité {#reproducibility-and-replicability}
 
 La reproductibilité et la réplicabilité sont les fondements des découvertes scientifiques de qualité.
 
@@ -64,7 +64,7 @@ La reproductibilité et la réplicabilité sont les fondements des découvertes 
 
 Avec les nouveaux outils Web3 natifs, reproductibilité et réplicabilité sont à la base des découvertes. Le tissu technologique universitaire peut s'imprégner d'une science de qualité. Le Web3 offre la possibilité de créer des attestations pour chaque composant d'analyse : les données brutes, le moteur de calcul et le résultat de l'application. Les systèmes fonctionnant sur le mode du consensus ont ceci de fabuleux que lorsqu'un réseau de confiance est créé pour préserver ces composants, chaque participant au réseau peut être chargé de la reproduction du calcul et de la validation de chaque résultat.
 
-### Financement \{#funding}
+### Financement {#funding}
 
 Dans le cadre du modèle de financement actuel de la science, des personnes ou des groupes de scientifiques présentent des demandes de financement écrites à des organismes de financement. Un petit groupe de personnes de confiance notent les candidats, puis les interrogent avant d'attribuer des fonds à une fraction d'entre eux. Ce modèle, qui crée des goulets d'étranglement susceptibles de retarder de plusieurs années le traitement des demandes de subvention, est réputé être très vulnérable à l'orientation, aux intérêts personnels et à la politique du comité d’étude.
 
@@ -72,7 +72,7 @@ Des études ont montré que les comités d'étude des demandes de subventions on
 
 Le Web3 a le potentiel d'ébranler ce modèle de financement dépassé en expérimentant différents modèles d'incitation développés par les DAO et le Web3 dans l'ensemble. [Le financement rétroactif de biens publics](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [le financement quadratique](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), la [gouvernance de DAO](https://www.antler.co/blog/daos-and-web3-governance) et les [structures incitatives basées sur l'utilisation de jetons](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) sont quelques-uns des outils Web3 qui pourraient révolutionner le financement de la science.
 
-### Propriété et développement de la PI \{#ip-ownership}
+### Propriété et développement de la PI {#ip-ownership}
 
 La propriété intellectuelle (PI) pose problème dans la science traditionnelle : cantonnée aux universités ou inutilisée dans les entreprises de biotechnologie, elle est de surcroît et comme chacun le sait difficile à évaluer. Le Web3 est cependant particulièrement performant en matière de propriété des actifs numériques (notamment des données scientifiques ou des articles), grâce au recours aux [jetons non fongibles (NFTs)](/nft/).
 
@@ -80,7 +80,7 @@ De la même manière que les NFT peuvent transmettre les recettes de futures tra
 
 Les [NFT liés à la PI](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) peuvent également servir de clé d'accès à un référentiel de données décentralisé relatif aux expériences de recherche en cours, et puiser dans les NFT et le financement de la [DeFi](/defi/) (de la fractionalisation aux groupes de prêt et à l'estimation de la valeur). Ils permettent également aux entités nativement en chaîne, telles que les DAO comme [VitaDAO](https://www.vitadao.com/), de mener des recherches directement en chaîne. Les [jetons « soulbound » non transférables](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) peuvent également jouer un rôle important en matière de DeSci en permettant aux individus d'apporter la preuve de leur expérience et leurs identifiants liés à leur adresse Ethereum.
 
-### Stockage de données, accès et architecture \{#data-storage}
+### Stockage de données, accès et architecture {#data-storage}
 
 Les données scientifiques peuvent être rendues beaucoup plus accessibles en utilisant les modèles Web3, sachant que le stockage distribué permet aux recherches et études de survivre à des événements cataclysmiques.
 
@@ -88,7 +88,7 @@ Le tout doit reposer sur un système accessible par toute identité décentralis
 
 Les solutions Web 3 flexibles axées sur les données prennent en charge les scénarios ci-dessus et fournissent les bases d'une science réellement ouverte, où les chercheurs peuvent créer des biens publics sans autorisation d'accès ni frais. Les solutions Web3 relatives aux données publiques telles qu'IPFS, Arweave et Filecoin sont optimisées pour la décentralisation. dClimate, par exemple, fournit un accès universel aux données climatiques et météorologiques, y compris à partir de stations météo et de modèles climatiques prédictifs.
 
-## Participer \{#get-involved}
+## Participer {#get-involved}
 
 Explorer les projets et rejoindre la communauté DeSci.
 
@@ -116,7 +116,7 @@ Explorer les projets et rejoindre la communauté DeSci.
 
 Nous accueillons volontiers les suggestions de nouveaux projets à répertorier - veuillez consulter notre [politique d'inscription](/contributing/adding-desci-projects/) pour commencer !
 
-## En savoir plus \{#further-reading}
+## En savoir plus {#further-reading}
 
 - [DeSci Wiki par Jocelynn Pearl et Ultrarare](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 - [Un guide sur la biotech décentralisée par Jocelynn Pearl pour a16z future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
@@ -132,7 +132,7 @@ Nous accueillons volontiers les suggestions de nouveaux projets à répertorier 
 - [Financement de la science (Épilogue : la DeSci et les nouvelles primitives dans les cryptomonnaies) par Nadia](https://nadia.xyz/science-funding)
 - [La décentralisation perturbe développement des médicaments](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
 
-### Vidéos \{#videos}
+### Vidéos {#videos}
 
 - [Qu'est-ce que la science décentralisée ?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Conversation entre Vitalik Buterin et le scientifique Aubrey de Grey sur le croisement entre recherche sur la longévité et cryptomonnaie](https://www.youtube.com/watch?v=x9TSJK1widA)

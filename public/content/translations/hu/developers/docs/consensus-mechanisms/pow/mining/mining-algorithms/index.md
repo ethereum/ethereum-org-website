@@ -10,11 +10,11 @@ A proof-of-work (munkaigazolás) már nem az Ethereum konszenzusmechanizmus alap
 
 Az Ethereum-bányászat egy Ethash nevű algoritmust használt. k az algoritmusnak az a lényege, hogy a bányász megpróbál egy nonce értéket találni nagy számítási kapacitás révén, hogy a létrejövő hash kisebb legyen, mint a kiszámolt nehézség határértéke. Ez a nehézségi szint dinamikusan változtatható, így a blokkok létrehozása rendszeresen meg tud történni.
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 A jelen téma könnyebb megértéséhez javasoljuk, hogy előbb tekintse meg a [proof-of-work konszenzusról](/developers/docs/consensus-mechanisms/pow) és a [bányászatról](/developers/docs/consensus-mechanisms/pow/mining) szóló oldalakat.
 
-## Dagger Hashimoto \{#dagger-hashimoto}
+## Dagger Hashimoto {#dagger-hashimoto}
 
 A Dagger Hashimoto az Ethereum-bányászat korábbi algoritmusa volt a fejlesztés idején, melyet az Ethash váltott le. Ez két különböző algoritmus, a Dagger és a Hashimoto, összeolvadása volt. Ezt a fejlesztés idején használták, és az Ethereum főhálózat bevezetésekor már az Ethash működött.
 
@@ -26,12 +26,12 @@ A Dagger-Hashimoto a Dagger és a Hashimoto algoritmusok módosított változat�
 
 Bővebben a [Dagger-Hashimoto-ról](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto).
 
-## Ethash \{#ethash}
+## Ethash {#ethash}
 
 Az Ethash az a bányászati algoritmus, melyet az Ethereum főhálózaton használtak a ma már kivezetett proof-of-work architektúrában. Az Ethash az új neve a Dagger-Hashimoto egy specifikus verziójának, mivel azt jelentősen megváltoztatták, de mégis megmaradtak az alapvető elvei az elődjének. Az Ethereum-főhálózat csak az Ethasht használta, mivel Dagger-Hashimoto a kutatás-fejlesztés idején működött, és még a bányászat megkezdése előtt lecserélték.
 
 [Bővebben az Ethashről](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 _Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_

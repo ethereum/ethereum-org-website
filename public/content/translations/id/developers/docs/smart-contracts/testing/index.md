@@ -5,7 +5,7 @@ lang: id
 incomplete: true
 ---
 
-## Peralatan pengujian dan pustaka \{#testing-tools-and-libraries}
+## Peralatan pengujian dan pustaka {#testing-tools-and-libraries}
 
 **Waffle -** **_Sebuah kerangka kerja untuk pengembangan dan pengujian kontrak pintar tingkat lanjut (berdasarkan pada ethers.js)._**
 
@@ -32,7 +32,7 @@ incomplete: true
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers)
 - [Dokumentasi](https://docs.openzeppelin.com/test-helpers)
 
-## Tutorial terkait \{#related-tutorials}
+## Tutorial terkait {#related-tutorials}
 
 - [Pengaturan Integrasi Berkelanjutan Solidity dan Truffle](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– Cara menyiapkan Travis atau Circle CI untuk pengujian Truffle bersama dengan plugin yang berguna._
 - [Gambaran umum produk pengujian](/developers/tutorials/guide-to-smart-contract-security-tools/) _– Gambaran umum dan perbandingan dari produk pengujian berbeda._
@@ -43,6 +43,6 @@ incomplete: true
 - [Cara berpindah dari Uji Truffle ke Lingkungan Uji OpenZeppelin](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [Cara menguji kontrak setelah digunakan di jaringan](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

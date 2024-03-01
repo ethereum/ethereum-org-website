@@ -4,7 +4,7 @@ description: Den grunnleggende informasjonen du trenger for å forstå ETH.
 lang: nb
 ---
 
-# Hva er ether (ETH)? \{#what-is-ether-eth}
+# Hva er ether (ETH)? {#what-is-ether-eth}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: nb
 
 </FeaturedText>
 
-## Hva er ETH, og hvordan får jeg tak i det? \{#what-is-eth-and-how-do-i-get-it}
+## Hva er ETH, og hvordan får jeg tak i det? {#what-is-eth-and-how-do-i-get-it}
 
 Ether, eller ETH, er Ethereums egen valuta. Det er "digitale penger" som kan sendes over Internett umiddelbart og rimelig, og kan også brukes i mange [Ethereum-baserte applikasjoner](/dapps/).
 

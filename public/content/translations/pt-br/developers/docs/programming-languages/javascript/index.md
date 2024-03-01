@@ -8,9 +8,9 @@ O JavaScript está entre as linguagens mais populares no ecossistema Ethereum. D
 
 Existem oportunidades para escrever JavaScript (ou algo parecido) em [todos os níveis de pilhas](/developers/docs/ethereum-stack/).
 
-## Interagir com Ethereum \{#interact-with-ethereum}
+## Interagir com Ethereum {#interact-with-ethereum}
 
-### Bibliotecas de API JavaScript \{#javascript-api-libraries}
+### Bibliotecas de API JavaScript {#javascript-api-libraries}
 
 Se você deseja escrever JavaScript para consultar a blockchain, enviar transações e muito mais, a maneira mais conveniente para fazer isso é usando uma [biblioteca de API JavaScript](/developers/docs/apis/javascript/). Estas APIs permitem que os desenvolvedores interajam facilmente com os [nós da rede Ethereum](/developers/docs/nodes-and-clients/).
 
@@ -21,15 +21,15 @@ Você pode usar essas bibliotecas para interagir com contratos inteligentes na E
 - [Web3.js](https://web3js.readthedocs.io/)
 - [Ethers.js - Implementação completa de uma carteira Ethereum e utilidades em JavaScript e TypeScript.](https://docs.ethers.io/)
 
-### Smart Contracts \{#smart-contracts}
+### Smart Contracts {#smart-contracts}
 
 Se você for um desenvolvedor JavaScript que deseja escrever seu próprio contrato inteligente, você pode querer se familiarizar com [Solidity](https://solidity.readthedocs.io). Esta é a linguagem de contrato inteligente mais popular e é sintaticamente semelhante ao JavaScript, o que pode torná-la mais fácil de aprender.
 
 Mais nos [contratos inteligentes](/developers/docs/smart-contracts/).
 
-## Entender o protocolo \{#understand-the-protocol}
+## Entender o protocolo {#understand-the-protocol}
 
-### A Máquina Virtual da Ethereum \{#the-ethereum-virtual-machine}
+### A Máquina Virtual da Ethereum {#the-ethereum-virtual-machine}
 
 Há uma implementação JavaScript da [máquina virtual da Ethereum](/developers/docs/evm/). Apoia as regras de fork (bifurcação) mais recentes. As regras de bifurcação referem-se a alterações feitas na EVM como resultado de melhorias planejadas.
 
@@ -48,14 +48,14 @@ Se você prefere ler código, esse JavaScript poderia ser uma ótima alternativa
 **Confira o monorepo**  
 [`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
 
-### Nós e clientes \{#nodes-and-clients}
+### Nós e clientes {#nodes-and-clients}
 
 Há um cliente Ethereumjs no desenvolvimento. Isso permitirá que você procure em como os clientes da Ethereum trabalham em uma linguagem que você entenda.
 
 **Confira o monorepo**  
 [`ethereumjs`](https://github.com/ethereumjs/ethereumjs-client)
 
-## Outros projetos \{#other-projects}
+## Outros projetos {#other-projects}
 
 Há também muitas outras coisas acontecendo na terra da Ethereum JavaScript, incluindo:
 
@@ -65,6 +65,6 @@ Há também muitas outras coisas acontecendo na terra da Ethereum JavaScript, in
 
 Explore o que mais lhe interessa no [repositório EthereumJS](https://github.com/ethereumjs)
 
-## Leitura adicional \{#further-reading}
+## Leitura adicional {#further-reading}
 
 _Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_

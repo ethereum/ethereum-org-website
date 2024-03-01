@@ -21,13 +21,13 @@ Wypłaty ze stakingu zostały włączone wraz z aktualizacją Shanghai/Capella, 
 
 **Wypłaty nagród za nadwyżkę salda** powyżej 32 ETH będą automatycznie i regularnie wysyłane na adres wypłaty powiązany z każdym walidatorem, po podaniu go przez użytkownika. Użytkownicy mogą również **całkowicie opuścić stakowanie**, odblokowując prz tym ich pełne saldo walidatora.
 
-## Nagrody ze stakingu \{#staking-rewards}
+## Nagrody ze stakingu {#staking-rewards}
 
 Wypłaty nagród są automatycznie przetwarzane dla aktywnych kont walidatorów z maksymalnym efektywnym saldem 32 ETH.
 
 Każde saldo powyżej 32 ETH zarobione dzięki nagrodom w rzeczywistości nie przyczynia się do kapitału ani nie zwiększa wagi tego walidatora w sieci, a zatem jest automatycznie wypłacane jako nagroda co kilka dni. Poza jednorazowym podaniem adresu wypłaty, nagrody te nie wymagają żadnych działań ze strony operatora walidatora. Wszystko to jest inicjowane w warstwie konsensusu, więc na żadnym etapie nie jest wymagany gaz (opłata transakcyjna).
 
-### Jak się tutaj znaleźliśmy? \{#how-did-we-get-here}
+### Jak się tutaj znaleźliśmy? {#how-did-we-get-here}
 
 W ciągu ostatnich kilku lat Ethereum przeszło kilka modernizacji sieci, przechodząc na sieć zabezpieczoną przez samo ETH, zamiast energochłonnego wydobycia, jak to było kiedyś. Uczestnictwo w konsensusie Ethereum jest obecnie znane jako „staking”, ponieważ uczestnicy dobrowolnie zablokowali ETH, stawiając je „na szali” w zamian za możliwość uczestnictwa w sieci. Użytkownicy, którzy przestrzegają zasad, zostaną nagrodzeni, podczas gdy próby oszukiwania mogą zostać ukarane.
 
@@ -35,13 +35,13 @@ Od czasu uruchomienia kontraktu depozytowego stakingowego w listopadzie 2020 r. 
 
 Przed aktualizacją Shanghai/Capella nie można było używać ani uzyskiwać dostępu do zestakowanego ETH. Jednakże teraz możesz zdecydować się na automatyczne otrzymywanie nagród na wybrane konto, a także możesz wypłacić zestakowane ETH, kiedy tylko chcesz.
 
-### Jak się przygotować? \{#how-do-i-prepare}
+### Jak się przygotować? {#how-do-i-prepare}
 
 {
 <WithdrawalsTabComparison />
 }
 
-### Ważne informacje \{#important-notices}
+### Ważne informacje {#important-notices}
 
 Podanie adresu wypłaty jest wymaganym krokiem dla każdego konta walidatora, zanim będzie ono uprawnione do wypłaty ETH ze swojego salda.
 
@@ -51,7 +51,7 @@ Podanie adresu wypłaty jest wymaganym krokiem dla każdego konta walidatora, za
 
 Nie ma <strong>żadnego zagrożenia dla twoich funduszy w międzyczasie</strong> za niedostarczenie tego, zakładając, że twoja fraza mnemoniczna/odzyskiwania pozostała bezpieczna offline i nie została w żaden sposób naruszona. Brak dodania danych uwierzytelniających do wypłaty spowoduje po prostu zablokowanie ETH na koncie walidatora do czasu podania adresu do wypłaty.
 
-## Całkowite wyjście ze stakingu \{#exiting-staking-entirely}
+## Całkowite wyjście ze stakingu {#exiting-staking-entirely}
 
 Podanie adresu wypłaty jest wymagane, zanim _jakiekolwiek_ środki będą mogły zostać przelane z salda konta walidatora.
 
@@ -61,7 +61,7 @@ Proces wychodzenia walidatora ze stakingu zajmuje różną ilość czasu, w zale
 
 Po oznaczeniu konta jako „wypłacalne” i podaniu danych uwierzytelniających do wypłaty użytkownik nie musi nic więcej robić poza czekaniem. Konta są automatycznie i stale przenoszone przez wnioskodawców bloków pod kątem kwalifikujących się wycofanych środków, a saldo konta zostanie przelane w całości (znane również jako „pełna wypłata”) podczas następnej sesji <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>przeniesienia</a>.
 
-## Kiedy wypłaty ze stakingu są możliwe? \{#when}
+## Kiedy wypłaty ze stakingu są możliwe? {#when}
 
 Wypłaty ze stakingu są już dostępne! Funkcja wypłat została włączona w ramach aktualizacji Shanghai/Capella, która miała miejsce 12 kwietnia 2023 r.
 
@@ -70,11 +70,11 @@ Aktualizacja Shanghai/Capella umożliwiła odzyskanie wcześniej zestakowanych E
 - [Więcej o historii Ethereum](/history/)
 - [Więcej o planie działania Ethereum](/roadmap/)
 
-## Jak działają wypłaty środków? \{#how-do-withdrawals-work}
+## Jak działają wypłaty środków? {#how-do-withdrawals-work}
 
 To, czy dany walidator kwalifikuje się do wypłaty, czy nie, zależy od stanu samego konta walidatora. Żadne dane wejściowe użytkownika nie są potrzebne w żadnym momencie, aby określić, czy konto powinno mieć zainicjowaną wypłatę, czy nie — cały proces jest wykonywany automatycznie przez warstwę konsensusu w ciągłej pętli.
 
-### Jesteś raczej wzrokowcem? \{#visual-learner}
+### Jesteś raczej wzrokowcem? {#visual-learner}
 
 Sprawdź to wyjaśnienie dotyczące wypłat ze stakingu Ethereum przez Finematics:
 
@@ -82,7 +82,7 @@ Sprawdź to wyjaśnienie dotyczące wypłat ze stakingu Ethereum przez Finematic
 <YouTube id="RwwU3P9n3uo" />
 }
 
-### Walidator „przesunięcia” \{#validator-sweeping}
+### Walidator „przesunięcia” {#validator-sweeping}
 
 Gdy walidator ma zaproponować następny blok, musi utworzyć kolejkę wypłat, składającą się z maksymalnie 16 kwalifikujących się wypłat. Odbywa się to poprzez pierwotne rozpoczęcie od indeksu walidatora 0, określając, czy istnieje kwalifikująca się wypłata dla tego konta zgodnie z zasadami protokołu i dodanie jej do kolejki, jeśli tak. Walidator ustawiony na proponowanie następnego bloku będzie kontynuował w miejscu, w którym poprzedni został pozostawiony, postępując w kolejności w nieskończoność.
 
@@ -92,7 +92,7 @@ Teraz zamiast od 1 do 12, wyobraź sobie, że zegar ma od 0 do N <em>(całkowita
 Wskazówka na zegarze wskazuje następny walidator, który należy sprawdzić pod kątem kwalifikujących się wypłat. Zaczyna od 0 i postępuje dookoła, nie pomijając żadnego konta. Po osiągnięciu ostatniego walidatora cykl jest kontynuowany od początku.
 </InfoBanner>
 
-#### Sprawdzanie konta pod kątem wypłat \{#checking-an-account-for-withdrawals}
+#### Sprawdzanie konta pod kątem wypłat {#checking-an-account-for-withdrawals}
 
 Podczas gdy wnioskodawca przegląda walidatory pod kątem możliwych wypłat, każdy sprawdzany walidator jest oceniany pod kątem krótkiej serii pytań w celu ustalenia, czy należy uruchomić wypłatę, a jeśli tak, to ile ETH należy wypłacić.
 
@@ -105,11 +105,11 @@ Istnieją tylko dwa działania podejmowane przez operatorów walidatorów w trak
 - Podanie danych uwierzytelniających do wypłaty, aby umożliwić dowolną formę wypłaty
 - Wyjście z sieci, które spowoduje całkowitą wypłatę
 
-### Bez gazu \{#gas-free}
+### Bez gazu {#gas-free}
 
 Takie podejście do wypłat ze stakingu pozwala uniknąć konieczności ręcznego przesyłania transakcji z żądaniem wypłaty określonej kwoty ETH. Oznacza to, że **nie jest wymagany gaz (opłata transakcyjna)**, a wypłaty również nie konkurują o istniejącą przestrzeń blokową warstwy wykonawczej.
 
-### Jak często będę otrzymywać nagrody ze stakingu? \{#how-soon}
+### Jak często będę otrzymywać nagrody ze stakingu? {#how-soon}
 
 W jednym bloku może zostać przetworzonych maksymalnie 16 wypłat. W tym tempie można przetworzyć 115200 wypłat z walidatora dziennie (zakładając, że nie zostaną pominięte żadne sloty). Jak wspomniano powyżej, walidatory bez kwalifikujących się wypłat zostaną pominięte, skracając czas do zakończenia przesunięcia.
 
@@ -129,7 +129,7 @@ Rozszerzając te obliczenia, możemy oszacować czas potrzebny na przetworzenie 
 
 Jak widać, spowalnia to wraz ze wzrostem liczby walidatorów w sieci. Wzrost liczby pominiętych slotów może proporcjonalnie spowolnić ten proces, ale generalnie będzie to wolniejsza strona możliwych wyników.
 
-## Najczęściej zadawane pytania (FAQ) \{#faq}
+## Najczęściej zadawane pytania (FAQ) {#faq}
 
 {
 <ExpandableCard
@@ -228,7 +228,7 @@ Nie. Po wyjściu walidatora i wypłaceniu jego pełnego salda wszelkie dodatkowe
 </ExpandableCard>
 }
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 - [Wypłaty Staking Launchpad](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Wypłaty z łańcucha śledzącego jako operacje](https://eips.ethereum.org/EIPS/eip-4895)

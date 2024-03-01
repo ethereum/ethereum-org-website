@@ -18,16 +18,16 @@ Optimism（またはその他の L2）上で L1 のアセットを使用する�
 
 以上が、[Optimism における標準ブリッジ](https://community.optimism.io/docs/developers/bridge/standard-bridge)の仕組みです。 この記事では、このブリッジ機能について Solidity 上で適切に作成したソースコードを確認しながら、その仕組みを学びます。
 
-## 制御フロー \{#control-flows}
+## 制御フロー {#control-flows}
 
 ブリッジは、2 つのメインフローで構成されます：
 
 - L1 から L2 への入金
 - L2 から L1 への出金
 
-### 入金フロー \{#deposit-flow}
+### 入金フロー {#deposit-flow}
 
-#### L1 \{#deposit-flow-layer-1}
+#### L1 {#deposit-flow-layer-1}
 
 1. ERC-20 を入金する場合、入金者はブリッジに対し、入金額を使用するためのアローワンスを与えます。
 2. 入金者は、L1 ブリッジ（`depositERC20`、`depositERC20To`、 `depositETH`あるいは `depositETHTo`）を呼び出します。
@@ -36,7 +36,7 @@ Optimism（またはその他の L2）上で L1 のアセットを使用する�
    - ERC-20 トークンの場合：アセットは、入金者が提供するアローワンスを使用して、ブリッジ自体に送信されます。
 4. L1 のブリッジが、クロスドメインのメッセージメカニズムを通じて、L2 のブリッジ上で`finalizeDeposit`を呼び出します。
 
-#### L2 \{#deposit-flow-layer-2}
+#### L2 {#deposit-flow-layer-2}
 
 5. L2 のブリッジは、`finalizeDeposit`の呼び出しにつき、以下が適切であることを確認します：
    - クロスドメインのメッセージ・コントラクトからの呼び出しであること。
@@ -46,26 +46,26 @@ Optimism（またはその他の L2）上で L1 のアセットを使用する�
    - L2 のコントラクトが、（[ERC-165 を使用した](https://eips.ethereum.org/EIPS/eip-165)）適切なインターフェイスをサポートすると報告していること。
 7. L2 のコントラクトが適切であると確認できた場合は、適切なアドレスに対して希望する量のトークンをミントするために、そのコントラクトを呼び出してください。 そうでない場合は、出金プロセスを開始して、ユーザーが L1 上のトークンを請求できるようにします。
 
-### 出金フロー \{#withdrawal-flow}
+### 出金フロー {#withdrawal-flow}
 
-#### L2 \{#withdrawal-flow-layer-2}
+#### L2 {#withdrawal-flow-layer-2}
 
 1. 出金者は、L2 のブリッジ（`withdraw`または`withdrawTo`）を呼び出します 。
 2. L2 のブリッジは、`msg.sender`が所有する適切な数のトークンをバーンします。
 3. L2 のブリッジは、クロスドメインのメッセージ・メカニズムを利用して、L1 のブリッジ上で、 `finalizeETHWithdrawal`または`finalizeERC20Withdrawal`を呼び出します。
 
-#### L1 \{#withdrawal-flow-layer-1}
+#### L1 {#withdrawal-flow-layer-1}
 
 4. L1 のブリッジは、`finalizeETHWithdraw`または`finalizeERC20Withdral`の呼び出しにつき、以下が適切であるかを確認します：
    - クロスドメインのメッセージ・メカニズムを経由していること。
    - L2 のブリッジで作成されていること。
 5. L1 のブリッジは、適切な資産（ETH または ERC-20）を適切なアドレスに送信します。
 
-## レイヤー 1 のコード \{#layer-1-code}
+## レイヤー 1 のコード {#layer-1-code}
 
 以下は、イーサリアム・メインネット（L1）で実行されるコードです。
 
-### IL1ERC20Bridge \{#IL1ERC20Bridge}
+### IL1ERC20Bridge {#IL1ERC20Bridge}
 
 このインターフェイスは、[こちら](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol)で定義されています。 このインターフェイスには、ERC-20 トークンをブリッジするために必要な機能と定義が含まれます。
 
@@ -221,7 +221,7 @@ Optimism における出金（および、他の L2 から L1 へのメッセー
 1. L2 でトランザクションを開始する。
 2. L1 で、トランザクションを確定／クレームする。 L1 でのトランザクションは、L2 でのトランザクションに対する[異議申し立て期間](https://community.optimism.io/docs/how-optimism-works/#fault-proofs) が終了した後で実行可能になります。
 
-### IL1StandardBridge \{#il1standardbridge}
+### IL1StandardBridge {#il1standardbridge}
 
 このインターフェイスは、[こちら](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol)で定義されています。 このブリッジには、ETH を対象とするイベントおよび関数の定義が含まれています。 これらの定義は、ERC-20 トークンを対象とする`IL1ERC20Bridge`の定義とほぼ同一です。
 
@@ -302,7 +302,7 @@ interface IL1StandardBridge is IL1ERC20Bridge {
 }
 ```
 
-### CrossDomainEnabled \{#crossdomainenabled}
+### CrossDomainEnabled {#crossdomainenabled}
 
 [このコントラクト](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol)は、[L1](#the-l1-bridge-contract)および[L2](#the-l2-bridge-contract)の両方のブリッジにおいて継承され、相手のレイヤーに対してメッセージを送信します。
 
@@ -438,7 +438,7 @@ contract CrossDomainEnabled {
 
 このケースでは、Slither が当該情報を把握する方法を持たない場合でも、`getCrossDomainMessenger()`が信頼できるアドレスを返すと分かっているため、リエントランシーについて心配する必要はありません。
 
-### L1 上のブリッジコントラクト \{#the-l1-bridge-contract}
+### L1 上のブリッジコントラクト {#the-l1-bridge-contract}
 
 このコントラクトのソースコードは、[こちら](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol)で入手してください。
 
@@ -884,11 +884,11 @@ ETH を送信するには、`msg.value`で wei 金額を指定して、受領者
 
 このブリッジは、従来の実装から変更されています。 以前の実装から現在の実装に移行した際に、すべての資産を移転させる必要がありました。 ERC-20 トークンについては、移転のみが可能でした。 一方、ETH をコントラクトに移転するには、そのコントラクトの承認が必要であり、これは`donateETH`で実行できます。
 
-## L2 上の ERC-20 トークン \{#erc-20-tokens-on-l2}
+## L2 上の ERC-20 トークン {#erc-20-tokens-on-l2}
 
 ERC-20 トークンを標準ブリッジに適合させるためには、標準ブリッジ*のみが*トークンをミントできるようにする必要があります。 これが必要になるのは、各ブリッジにおいて、Optimism 上で流通するトークンの数が L1 のブリッジコントラクト内でロックされたトークンの数と一致することを保証する必要があるためです。 L2 上のトークンが多すぎる場合、L2 上のアセット L1 にブリッジして戻すことができないユーザーが発生します。 この場合、信頼できるブリッジが存在せず、事実上、[部分準備銀行制度](https://www.investopedia.com/terms/f/fractionalreservebanking.asp)を生み出すことになってしまいます。 一方、L1 上でのトークンが多くなりすぎると、L2 トークンをバーンしない限りトークンをリリースできなくなるため、ブリッジコントラクト内の一部のトークンは永遠にロックされた状態になってしまいます。
 
-### IL2StandardERC20 \{#il2standarderc20}
+### IL2StandardERC20 {#il2standarderc20}
 
 標準ブリッジを使用する L2 上のすべての ERC-20 トークンは、標準ブリッジが必要とする関数およびイベントが搭載された[このインターフェイス](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol)を提供する必要があります。
 
@@ -927,7 +927,7 @@ interface IL2StandardERC20 is IERC20, IERC165 {
 
 トークンをミント (作成) およびバーン (破棄) するための関数とイベントです。 トークン数が適切である（L1 上でロックされたトークン数と一致する）ことを保証するため、これらの関数を実行できるのはこのブリッジのみである必要があります。
 
-### L2StandardERC20 \{#L2StandardERC20}
+### L2StandardERC20 {#L2StandardERC20}
 
 [これは](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol)、`IL2StandardERC20`インターフェイスの実装です。 カスタムロジックが必要ない場合は、常にこの関数を用いてください。
 
@@ -1016,7 +1016,7 @@ L2 のブリッジは、ERC-165 を健全性チェックとして用いて、資
 
 `_mint`および`_burn`は、実際には、[OpenZeppelin で作成した ERC-20 コントラクト](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn)で定義されています。 トークンをミント／バーンできる条件は、ERC-20 を使用する方法と同じように多種多様であるため、このコントラクトは単純に外部に露出していないのです。
 
-## L2 ブリッジのコード \{#l2-bridge-code}
+## L2 ブリッジのコード {#l2-bridge-code}
 
 これは、Optimism でブリッジを実行するコードです。 このコントラクトのソースコードは、[こちら](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol)から入手できます。
 
@@ -1269,7 +1269,7 @@ L2 のトークンアドレスが間違っており、検知可能なエラー�
 }
 ```
 
-## まとめ \{#conclusion}
+## まとめ {#conclusion}
 
 標準ブリッジは、アセットを移転する上で最も柔軟なメカニズムです。 しかし、汎用性が高いため、必ずしも使いやすいメカニズムではない場合もあります。 特に出金については、大部分のユーザーは、異議申し立て期間が存在せず、出金を最終確認するために Merkle プルーフを必要としない[サードパーティーのブリッジ](https://www.optimism.io/apps/bridges)を使いたいと考えるでしょう。
 

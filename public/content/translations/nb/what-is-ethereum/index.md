@@ -4,7 +4,7 @@ description: Veiledning, ressurser og verktøy for de som er helt ny til Ethereu
 lang: nb
 ---
 
-# Hva er Ethereum? \{#what-is-ethereum}
+# Hva er Ethereum? {#what-is-ethereum}
 
 Ny til Ethereum? Du er på rett sted. La oss starte med en generell oversikt.
 

@@ -4,11 +4,11 @@ description: Analyse de l'impact de La Fusion sur l'offre d'ETH
 lang: fr
 ---
 
-# Impact de La Fusion sur l'offre d'ETH \{#how-the-merge-impacts-ETH-supply}
+# Impact de La Fusion sur l'offre d'ETH {#how-the-merge-impacts-ETH-supply}
 
 La Fusion a marqué la transition du réseau Ethereum de la preuve de travail à la preuve d'enjeu, qui a eu lieu en septembre 2022. La manière dont l'ETH est émis a subi des changements lors de cette transition. Auparavant, de nouveaux ETH étaient émis à partir de deux sources : la couche d'exécution (c'est-à-dire Réseau principal) et la couche de consensus (c'est-à-dire la chaîne phare). Depuis La Fusion, l'émission sur la couche d'exécution est désormais nulle. Analysons cela en détail.
 
-## La répartition de l'émission d'ETH \{#components-of-eth-issuance}
+## La répartition de l'émission d'ETH {#components-of-eth-issuance}
 
 Nous pouvons diviser l'offre d'ETH en deux composantes principales : l'émission et la destruction en le brulant.
 
@@ -27,19 +27,19 @@ title="Résumé de l'émission d'ETH">
 
 </Card>
 
-## Avant la fusion (historique) \{#pre-merge}
+## Avant la fusion (historique) {#pre-merge}
 
-### Émission de la couche d'exécution \{#el-issuance-pre-merge}
+### Émission de la couche d'exécution {#el-issuance-pre-merge}
 
 En preuve de travail, les mineurs n'interagissaient qu'avec la couche d'exécution et étaient récompensés par des récompenses de bloc, si et seulement s'ils étaient les premiers mineurs à résoudre le nouveau bloc. Depuis [la mise à jour Constantinople](/history/#constantinople) en 2019, cette récompense était de 2 ETH par bloc. Les mineurs étaient également récompensés pour la publication de blocs [oncle](/glossary/#ommer), qui étaient des blocs valides mais qui n'avaient pas abouti à la chaîne la plus longue/canonique. Ces récompenses étaient plafonnées à 1,75 ETH par bloc oncle et _s'ajoutaient à_ la récompense émise à partir du bloc canonique. Le processus de minage était une activité économiquement intensive, qui nécessitait historiquement des niveaux élevés d'émission d'ETH pour être soutenu.
 
-### Émission de la couche de consensus \{#cl-issuance-pre-merge}
+### Émission de la couche de consensus {#cl-issuance-pre-merge}
 
 La [Chaîne phare](/history/#beacon-chain-genesis) est entrée en service en 2020. Au lieu de mineurs, elle est sécurisée par des validateurs utilisant la preuve d'enjeu. Cette chaîne a été lancée grâce aux utilisateurs d'Ethereum qui déposaient de l'ETH de manière unidirectionnelle dans un contrat intelligent sur le réseau principal (la couche d'exécution), que la Chaîne phare écoute, en créditant l'utilisateur d'une quantité égale d'ETH sur la nouvelle chaîne. Jusqu'à ce que La Fusion ait lieu, les validateurs de la Chaîne phare ne traitaient pas les transactions et avaient seulement comme mission d'établir un consensus sur l'état du groupe de validateurs lui-même.
 
 Les validateurs de la Chaîne phare sont récompensés en ETH pour attester de l'état de la chaîne et proposer des blocs. Les récompenses (ou les pénalités) sont calculées et distribuées à chaque période (toutes les 6,4 minutes) en fonction des performances des validateurs. Les récompenses des validateurs sont **nettement** moins élevées que les récompenses de minage qui étaient précédemment émises sous la preuve de travail (2 ETH toutes les ~13,5 secondes), car l'exploitation d'un nœud de validation n'est pas aussi économiquement intense et ne nécessite donc ni ne garantit une récompense aussi élevée.
 
-### Répartition de l'émission avant la fusion \{#pre-merge-issuance-breakdown}
+### Répartition de l'émission avant la fusion {#pre-merge-issuance-breakdown}
 
 Offre totale d'ETH : **~120 520 000 ETH** (au moment de La Fusion en septembre 2022)
 
@@ -61,13 +61,13 @@ Offre totale d'ETH : **~120 520 000 ETH** (au moment de La Fusion en septembre 2
 <strong>~11,3 %</strong> étaient émis aux validateurs de la couche de consensus (0,52 / 4,61 * 100)
 </InfoBanner>
 
-## Après la fusion (à présent) \{#post-merge}
+## Après la fusion (à présent) {#post-merge}
 
-### Émission de la couche d'exécution \{#el-issuance-post-merge}
+### Émission de la couche d'exécution {#el-issuance-post-merge}
 
 L'émission de la couche d'exécution depuis La Fusion est nulle. La preuve de travail n'est plus un moyen valide de production de blocs selon les nouvelles règles de consensus. Toute l'activité de la couche d'exécution est regroupée dans des « blocs de phare », qui sont publiés et attestés par les validateurs de la preuve d'enjeu. Les récompenses pour l'attestation et la publication des blocs de phare sont comptabilisées séparément sur la couche de consensus.
 
-### Émission de la couche de consensus \{#cl-issuance-post-merge}
+### Émission de la couche de consensus {#cl-issuance-post-merge}
 
 L'émission de la couche de consensus se poursuit aujourd'hui comme avant La Fusion, avec des récompenses pour les validateurs qui attestent et proposent des blocs. Les récompenses des validateurs continuent de s'accumuler sur _les soldes des validateurs_ qui sont gérés au sein de la couche de consensus. Contrairement aux comptes actuels (« comptes d'exécution »), qui peuvent effectuer des transactions sur le réseau principal, ces comptes Ethereum séparés ne peuvent pas effectuer librement des transactions avec d'autres comptes Ethereum. Les fonds de ces comptes ne peuvent être retirés que vers une seule adresse d'exécution préalablement spécifiée.
 
@@ -79,7 +79,7 @@ Environ 0,33 % du nombre total de validateurs peuvent sortir en une journée don
 
 À mesure que davantage de validateurs se retirent, le nombre maximum de validateurs sortants sera progressivement réduit à un minimum de quatre pour empêcher intentionnellement de grandes quantités d'ETH en jeu d'être retirées simultanément, ce qui pourrait provoquer des perturbations majeures.
 
-### Répartition de l'inflation après la fusion \{#post-merge-inflation-breakdown}
+### Répartition de l'inflation après la fusion {#post-merge-inflation-breakdown}
 
 - Offre totale d'ETH : **~120 520 000 ETH** (au moment de La Fusion en septembre 2022)
 - Émission de la couche d'exécution : **0**
@@ -90,7 +90,7 @@ Taux d'émission annualisé total : <strong>~0,52 %</strong><br/><br/>
 Réduction nette de l'émission annuelle d'ETH : <strong>~88,7 %</strong> ((4,61 % - 0,52 %) / 4,61 % * 100)
 </InfoBanner>
 
-## <Emoji text=":fire:" size="1" />La destruction par brûlage \{#the-burn}
+## <Emoji text=":fire:" size="1" />La destruction par brûlage {#the-burn}
 
 La force opposée à l'émission d'ETH est le taux auquel l'ETH est brûlé. Pour qu'une transaction soit exécutée sur Ethereum, des frais minimum (appelés « frais de base ») doivent être payés, qui fluctuent continuellement (de bloc à bloc) en fonction de l'activité du réseau. Les frais sont payés en ETH et sont _nécessaires_ pour que la transaction soit considérée comme valide. Ces frais sont _brûlés_ pendant le processus de transaction, les retirant ainsi de la circulation.
 
@@ -100,7 +100,7 @@ La combustion des frais a été mise en place avec <a href="/history/#london">la
 
 En plus de la combustion des frais mise en œuvre par la mise à niveau London, les validateurs peuvent également subir des pénalités s'ils sont hors ligne, ou pire, ils peuvent être sanctionnés pour avoir enfreint des règles spécifiques qui menacent la sécurité du réseau. Ces pénalités entraînent une réduction d'ETH du solde du validateur, qui n'est alors pas directement donné à un autre compte, ce qui équivaut à le brûler/le retirer de la circulation.
 
-### Calcul de la moyenne du prix du gaz pour être déflationniste \{#calculating-average-gas-price-for-deflation}
+### Calcul de la moyenne du prix du gaz pour être déflationniste {#calculating-average-gas-price-for-deflation}
 
 Comme discuté précédemment, la quantité d'ETH émise en une journée donnée dépend de la totalité des ETH mis en jeu. Au moment de l'écriture de ses lignes, cela représente environ 1 700 ETH/jour.
 
@@ -128,7 +128,7 @@ Nous pouvons simplifier et écrire ceci comme une fonction de `X` :
 
 Ainsi, par exemple, si `X` (l'émission quotidienne d'ETH) augmente à 1 800 en fonction de la totalité des ETH mis en jeu, `f(X)` (le gwei requis pour compenser toute l'émission) serait alors de `17 gwei` (en utilisant 2 chiffres significatifs)
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [La Fusion](/roadmap/merge/)
 - [Ultrasound.money](https://ultrasound.money/) - _Tableaux de bord disponibles pour visualiser l'émission et la destruction d'ETH en temps réel_

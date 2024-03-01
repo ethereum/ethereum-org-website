@@ -4,11 +4,11 @@ description: イーサリアムエコシステムの助成プログラムリス�
 lang: ja
 ---
 
-# オンラインコミュニティ \{#online-communities}
+# オンラインコミュニティ {#online-communities}
 
 何十万人ものイーサリアム愛好家がこれらのオンラインフォーラムに集まり、ニュースを共有し、最近の開発や技術的な問題を議論し、未来を想像しています。
 
-## フォーラム \{#forums}
+## フォーラム {#forums}
 
 {
 {
@@ -36,7 +36,7 @@ lang: ja
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> - 暗号経済研究の最も影響力のある掲示板</SocialListItem>
 }
 
-## チャットルーム \{#chat-rooms}
+## チャットルーム {#chat-rooms}
 
 {
 {
@@ -70,7 +70,7 @@ lang: ja
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- 分散型の質疑応答フォーラム_</SocialListItem>
 }
 
-## YouTube と Twitter \{#youtube-and-twitter}
+## YouTube と Twitter {#youtube-and-twitter}
 
 {
 {

@@ -13,7 +13,7 @@ source: Membuat kontrak yang aman
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
-## Daftar periksa pengembangan kontrak pintar \{#smart-contract-development-checklist}
+## Daftar periksa pengembangan kontrak pintar {#smart-contract-development-checklist}
 
 Berikut adalah proses tingkat tinggi yang kami sarankan untuk diikuti sementara Anda menulis kontrak pintar Anda.
 
@@ -49,7 +49,7 @@ Akhirnya, waspadalah terhadap masalah yang tidak dapat dengan mudah ditemukan ol
 - Operasi kriptografis
 - Interaksi berisiko dengan komponon DeFi eksternal
 
-## Minta bantuan \{#ask-for-help}
+## Minta bantuan {#ask-for-help}
 
 [Jam kerja Ethereum](https://calendly.com/dan-trailofbits/ethereum-office-hours) dimulai setiap Selasa sore. Sesi berdurasi 1 jam dan 1 lawan 1 ini adalah kesempatan untuk mengajukan pertanyaan apa pun kepada kami tentang keamanan, penyelesaian masalah menggunakan peralatan kami, dan mendapatkan umpan balik dari para ahli tentang pendekatan yang Anda pakai saat ini. Kami akan menolong Anda memahami panduan ini.
 

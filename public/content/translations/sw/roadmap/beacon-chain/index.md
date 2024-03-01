@@ -15,15 +15,15 @@ summaryPoint4: Unaweza kua unaitambua hii kama "Awamu 0" kwenye mipango ya kitaa
     Mnyororo wa Kioleza ulisafirishwa Disemba 1 saa sita mchana wakati wa ulimwengu ulioratibiwa. Kujifunza zaidi, <a href="https://beaconscan.com/">chunguza taarifa</a>. Kama unataka kuhalalisha mnyororo, unaweza <a href="/staking/">kuweka ETH yako kama hisa</a>.
 </UpgradeStatus>
 
-## Myororo wa Kioleza ni nini? \{#what-does-the-beacon-chain-do}
+## Myororo wa Kioleza ni nini? {#what-does-the-beacon-chain-do}
 
 Mnyororo wa Beacon utaendeleza mwenendo wa kutanua mtandao wake wa [shards](/roadmap/danksharding/) na [wanahisa](/staking/). Lakini haitakua kama [mtandao mkuu wa Ethereum](/glossary/#mainnet) wa leo. Inaweza kuhimili akaunti au mikataba mahiri.
 
 Jukumu ya mnyororo wa Kioleza litabadilika baada ya mda ila sehemu ya msingi ya [usalama, kuendeleza na ubadilikaji wa Ethereum tunayoijenga](/roadmap/vision/).
 
-## Sura za mnyororo wa Kioleza \{#beacon-chain-features}
+## Sura za mnyororo wa Kioleza {#beacon-chain-features}
 
-### Kuanzisha hisa \{#introducing-staking}
+### Kuanzisha hisa {#introducing-staking}
 
 Mnyororo wa Kioleza utaingiza [uthibitisho-wa-hisa](/developers/docs/consensus-mechanisms/pos/) kwenye Ethereum. Hii ndio njia mpya ya wewe kusaidia Ethereum kua salama. Ifikirie kama faida kw jamii ambayo itafanya Ethereum kua na afya na kukutenegenezea hela zaidi wakati wa mchakato. Kiuhalisia, itahusisha wewe kuweka hisa za ETH ili kuamsha programu. Kama mthibitishaji utafanya mchakato wa shughuli za pesa na utaunda vitalu vipya kwenye mnyororo.
 
@@ -35,17 +35,17 @@ Kama ungependa kua mthibitishaji na kusaidia kulinda mnyororo wa Kioleza, <a hre
 
 Hili pia ni badiliko muhumu kwa ajili ya uboreshaji wa Eth2:[minyororo ya vigae](/roadmap/danksharding/).
 
-### Maandalizi ya minyororo ya shards \{#setting-up-for-shard-chains}
+### Maandalizi ya minyororo ya shards {#setting-up-for-shard-chains}
 
 Baada ya mtandao mkuu kuungana na mnyororo wa Kioleza, Uboreshaji utakaofuata utaanzisha minyororo ya shard kwenda kwenye mtandao wa uthibitisho-wa-hisa. Hizi "shards" zitaongeza nafasi kwenye mtandao na kuendeleza kasi za shughuli kwa kutanua mtandao kufikia minyororo ya vitalu 64. Mnyororo Kioleza ni hatua ya kwanza muhimu katika uanzilishi wa minyororo ya shard, hii ni kwasababu inahitaji hisa ili kufanya kazi kwa usalama.
 
 Mwishowe mnyororo Kioleza utakua na wajibu wa kugawa ruhusa kwa wanahisa bila mpangilio ili kuthibitisha minyororo ya vigae. Hii ni funguo ya kuweka ugumu kwa wanahisa ili wasiungane na kuteka nyara shard. Vizuri basi, hii inamaanisha [wanachini ya 1 katika nafasi trilioni](https://medium.com/@chihchengliang/minimum-committee-size-explained-67047111fa20).
 
-## Mahusiano kati ya visasisho \{#relationship-between-upgrades}
+## Mahusiano kati ya visasisho {#relationship-between-upgrades}
 
 Visasisho vyote vya Eth2 vinahusiana kwa kiasi fulani. Basi hebu tukumbushe jinsi mnyororo wa Beacon(Kioleza) unavyoathiri visasisho vingine.
 
-### Mtandao mkuu na mnyororo Kioleza \{#mainnet-and-beacon-chain}
+### Mtandao mkuu na mnyororo Kioleza {#mainnet-and-beacon-chain}
 
 Mnyororo Kioleza, mwanzoni, itakuwa imetengana na Mtandao mkuu wa Ethereum tunaotumia leo hii. Lakini mwishowe vitaunganishwa. Mpango ni "kuunganisha" Mtandao Mkuu kwenye mfumo wa uthibitisho-wa-hisa amabao Mnyororo Kioleza unaudhibiti na kuuratibu.
 
@@ -53,7 +53,7 @@ Mnyororo Kioleza, mwanzoni, itakuwa imetengana na Mtandao mkuu wa Ethereum tunao
     Unganisha
 </ButtonLink>
 
-### Vigae na Mnyororo Kioleza \{#shards-and-beacon-chain}
+### Vigae na Mnyororo Kioleza {#shards-and-beacon-chain}
 
 Minyororo ya Vigae itakua salama kuingia katika ikolojia ya Ethereum pale tu utaratibu wa makubaliano kwenye uthibitisho-wa-hisa utakapochukua nafasi. Mnyororo Kioleza utaanzisha hisa, ikitengeneza njia ili uboreshwaji wa mnyororo-kigae ufuate.
 
@@ -65,7 +65,7 @@ Minyororo ya Vigae itakua salama kuingia katika ikolojia ya Ethereum pale tu uta
 <Divider />
 }
 
-## Ingiliana na Mnyororo Kioleza \{#interact-with-beacon-chain}
+## Ingiliana na Mnyororo Kioleza {#interact-with-beacon-chain}
 
 {
 <BeaconChainActions />

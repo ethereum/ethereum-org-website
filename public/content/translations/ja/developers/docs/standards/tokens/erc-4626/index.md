@@ -4,7 +4,7 @@ description: 利回りボールトを対象とする規格。
 lang: ja
 ---
 
-## はじめに \{#introduction}
+## はじめに {#introduction}
 
 ERC-4626 は、利回りボールトの技術的なパラメータを最適化し、統一するための規格です。 この規格は、ボールトに含まれる単一の ERC-20 トークンをどれだけ所有しているかを示すトークン化利回りボールトを作成するための標準 API を提供します。 ERC-4626 はさらに、ERC-20 に基づくトークン化ボールトのオプション拡張機能として、トークンの預入／引出および残高の読み取りといった基本的な機能を提供します。
 
@@ -16,15 +16,15 @@ ERC-4626 は、利回りボールトの技術的なパラメータを最適化�
 
 ERC-4626 トークンの詳細については、[EIP-4626](https://eips.ethereum.org/EIPS/eip-4626)をご覧ください。
 
-## 前提知識 \{#prerequisites}
+## 前提知識 {#prerequisites}
 
 この記事をよく理解するには、まず[トークン規格](/developers/docs/standards/tokens/)および[ERC-20](/developers/docs/standards/tokens/erc-20/)に目を通すことをおすすめします。
 
-## ERC-4626 の機能と特長: \{#body}
+## ERC-4626 の機能と特長: {#body}
 
-### メソッド \{#methods}
+### メソッド {#methods}
 
-#### asset \{#asset}
+#### asset {#asset}
 
 ```solidity
 function asset() public view returns (address)
@@ -32,7 +32,7 @@ function asset() public view returns (address)
 
 この関数は、会計処理、入金、および引出のために当該ボールトが使用される原資トークンのアドレスを返します。
 
-#### totalAssets \{#totalassets}
+#### totalAssets {#totalassets}
 
 ```solidity
 function totalAssets() public view returns (uint256)
@@ -40,7 +40,7 @@ function totalAssets() public view returns (uint256)
 
 この関数は、当該ボールトで所有される原資産の総額を返します。
 
-#### convertToShares \{#convertoshares}
+#### convertToShares {#convertoshares}
 
 ```solidity
 function convertToShares(uint256 assets) public view returns (uint256 shares)
@@ -48,7 +48,7 @@ function convertToShares(uint256 assets) public view returns (uint256 shares)
 
 この関数は、当該ボールトに提供された`assets`の量に対して交換される`shares`の量を返します。
 
-#### convertToAssets \{#convertoassets}
+#### convertToAssets {#convertoassets}
 
 ```solidity
 function convertToAssets(uint256 shares) public view returns (uint256 assets)
@@ -56,7 +56,7 @@ function convertToAssets(uint256 shares) public view returns (uint256 assets)
 
 この関数は、当該ボールトに提供された`shares`の量に対して交換される`assets`の量を返します。
 
-#### maxDeposit \{#maxdeposit}
+#### maxDeposit {#maxdeposit}
 
 ```solidity
 function maxDeposit(address receiver) public view returns (uint256)
@@ -64,7 +64,7 @@ function maxDeposit(address receiver) public view returns (uint256)
 
 この関数は、`receiver`が 1 回の[`deposit`](#deposit)呼び出しで入金できる原資産の上限を返します。
 
-#### previewDeposit \{#previewdeposit}
+#### previewDeposit {#previewdeposit}
 
 ```solidity
 function previewDeposit(uint256 assets) public view returns (uint256)
@@ -72,7 +72,7 @@ function previewDeposit(uint256 assets) public view returns (uint256)
 
 この関数は、入金が現在のブロックに対してどのような影響をもたらすかをシミュレーションします。
 
-#### 入金 \{#deposit}
+#### 入金 {#deposit}
 
 ```solidity
 function deposit(uint256 assets, address receiver) public returns (uint256 shares)
@@ -80,7 +80,7 @@ function deposit(uint256 assets, address receiver) public returns (uint256 share
 
 この関数は、原資産トークンの`assets`をボールトに入金し、受信者に`shares`の所有権を付与します。
 
-#### maxMint \{#maxmint}
+#### maxMint {#maxmint}
 
 ```solidity
 function maxMint(address receiver) public view returns (uint256)
@@ -88,7 +88,7 @@ function maxMint(address receiver) public view returns (uint256)
 
 この関数は、`receiverによる1回の`の呼び出しにより、ミント可能なシェア数の上限を返します。
 
-#### previewMint \{#previewmint}
+#### previewMint {#previewmint}
 
 ```solidity
 function previewMint(uint256 shares) public view returns (uint256)
@@ -96,7 +96,7 @@ function previewMint(uint256 shares) public view returns (uint256)
 
 この関数は、現在のブロックにおける当該ミントの影響をシミュレーションします。
 
-#### mint(ミント) \{#mint}
+#### mint(ミント) {#mint}
 
 ```solidity
 function mint(uint256 shares, address receiver) public returns (uint256 assets)
@@ -104,7 +104,7 @@ function mint(uint256 shares, address receiver) public returns (uint256 assets)
 
 この関数は、原資産トークンの`assets`を預け入れることで、`recevier`のボールトに対して特定の量の`shares`をミントします。
 
-#### maxWithdraw \{#maxwithdraw}
+#### maxWithdraw {#maxwithdraw}
 
 ```solidity
 function maxWithdraw(address owner) public view returns (uint256)
@@ -112,7 +112,7 @@ function maxWithdraw(address owner) public view returns (uint256)
 
 この関数は、1 回の[`withdraw`](#withdraw)呼び出しにより、`owner`残高から引き出し可能な原資産アセットの上限を返します。
 
-#### previewWithdraw \{#previewwithdraw}
+#### previewWithdraw {#previewwithdraw}
 
 ```solidity
 function previewWithdraw(uint256 assets) public view returns (uint256)
@@ -120,7 +120,7 @@ function previewWithdraw(uint256 assets) public view returns (uint256)
 
 この関数は、当該引き出しが現在のブロックに与える影響をシミュレーションします。
 
-#### 引き出し \{#withdraw}
+#### 引き出し {#withdraw}
 
 ```solidity
 function withdraw(uint256 assets, address receiver, address owner) public returns (uint256 shares)
@@ -128,7 +128,7 @@ function withdraw(uint256 assets, address receiver, address owner) public return
 
 この関数は、`owner`が所有する`shares`をバーンし、正確に一致した`assets`トークンをボールトから`receiver`に送信します。
 
-#### maxRedeem \{#maxredeem}
+#### maxRedeem {#maxredeem}
 
 ```solidity
 function maxRedeem(address owner) public view returns (uint256)
@@ -136,7 +136,7 @@ function maxRedeem(address owner) public view returns (uint256)
 
 この関数は、[`redeem`](#redeem)の呼び出しにより、`owner`の残高から受け取ることができるシェアの上限を返します。
 
-#### previewRedeem \{#previewredeem}
+#### previewRedeem {#previewredeem}
 
 ```solidity
 function previewRedeem(uint256 shares) public view returns (uint256)
@@ -144,7 +144,7 @@ function previewRedeem(uint256 shares) public view returns (uint256)
 
 この関数は、シェアの受け取りが現在のブロックに与える影響をシミュレーションします。
 
-#### redeem \{#redeem}
+#### redeem {#redeem}
 
 ```solidity
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
@@ -152,7 +152,7 @@ function redeem(uint256 shares, address receiver, address owner) public returns 
 
 この関数は、一定量の`shares`を`owner`から回収し、原資トークンの`assets`をボールトから`receiver`に送信します。
 
-#### totalSupply \{#totalsupply}
+#### totalSupply {#totalsupply}
 
 ```solidity
 function totalSupply() public view returns (uint256)
@@ -160,7 +160,7 @@ function totalSupply() public view returns (uint256)
 
 ボールト内で流通している未償還のシェアの合計数を返します。
 
-#### balanceOf \{#balanceof}
+#### balanceOf {#balanceof}
 
 ```solidity
 function balanceOf(address owner) public view returns (uint256)
@@ -168,7 +168,7 @@ function balanceOf(address owner) public view returns (uint256)
 
 `owner`が現在ボールトで所有しているシェアの総数を返します。
 
-### イベント \{#events}
+### イベント {#events}
 
 #### 入金イベント
 
@@ -201,7 +201,7 @@ event Withdraw(
 
 このコードにおける`sender`とは、出金をトリガーし、`owner`が所有する`shares`を`assets`と交換するユーザーです。 `receiver`は、出金された`assets`を受け取ったユーザーです。
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 - [EIP-4626: トークン化ボールト規格](https://eips.ethereum.org/EIPS/eip-4626)
 - [ERC-4626: GitHub リポジトリ](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)

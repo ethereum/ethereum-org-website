@@ -6,7 +6,7 @@ sidebarDepth: 1
 isOutdated: true
 ---
 
-# Az Ethereum története \{#the-history-of-ethereum}
+# Az Ethereum története {#the-history-of-ethereum}
 
 Az Ethereum blokklánc összes fontos mérföldkövének, forkjának és frissítésének idővonala.
 
@@ -26,15 +26,15 @@ Ezek a szabályváltoztatások átmeneti törést okozhatnak a hálózatban. Új
 <Divider />
 }
 
-## 2020 \{#2020}
+## 2020 {#2020}
 
-### Beacon Chain genesis \{#beacon-chain-genesis}
+### Beacon Chain genesis {#beacon-chain-genesis}
 
 {
 <NetworkUpgradeSummary name="beaconChainGenesis" />
 }
 
-#### Összefoglaló \{#beacon-chain-genesis-summary}
+#### Összefoglaló {#beacon-chain-genesis-summary}
 
 A [Beacon Chain](/roadmap/beacon-chain/) biztonságos elindításához 16384 darab 32 ETH-nyi letétre volt szükség. Ez november 27.-én történt meg, vagyis a Beacon Chain a blokkok létrehozását december 1.-jén kezdte meg 2020-ban. Ez az [Eth2 vízió](/roadmap/vision/) elérésének fontos első lépése.
 
@@ -46,13 +46,13 @@ A [Beacon Chain](/roadmap/beacon-chain/) biztonságos elindításához 16384 dar
 
 ---
 
-### A letétbe helyezési szerződés aktiválása \{#staking-deposit-contract}
+### A letétbe helyezési szerződés aktiválása {#staking-deposit-contract}
 
 {
 <NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 }
 
-#### Összefoglaló \{#deposit-contract-summary}
+#### Összefoglaló {#deposit-contract-summary}
 
 A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#staking) rendszerét az Ethereum ökoszisztémában. Bár [főhálózati](/glossary/#mainnet) szerződés, közvetlenül befolyásolta egy fontos [Eth2 frissítés](/roadmap/), a [Beacon Chain](/roadmap/beacon-chain/) indításának ütemezését.
 
@@ -64,13 +64,13 @@ A letétbe helyezési szerződés bemutatta a [letétbe helyezés](/glossary/#st
 
 ---
 
-### Muir Glacier \{#muir-glacier}
+### Muir Glacier {#muir-glacier}
 
 {
 <NetworkUpgradeSummary name="muirGlacier" />
 }
 
-#### Összefoglaló \{#muir-glacier-summary}
+#### Összefoglaló {#muir-glacier-summary}
 
 A Muir Glacier nevű fork késleltetést vezetett be a [nehézségi bombához](/glossary/#difficulty-bomb). A blokknehézség növelése a [proof-of-work](/developers/docs/consensus-mechanisms/pow/) konszenzus-mechanizmusában azzal fenyegetett, hogy az Ethereum használhatósága csökkenni fog, mert a tranzakciók küldése és a dappok használata több időt fog igénybe venni.
 
@@ -89,15 +89,15 @@ A Muir Glacier nevű fork késleltetést vezetett be a [nehézségi bombához](/
 <Divider />
 }
 
-## 2019 \{#2019}
+## 2019 {#2019}
 
-### Istanbul \{#istanbul}
+### Istanbul {#istanbul}
 
 {
 <NetworkUpgradeSummary name="istanbul" />
 }
 
-#### Összefoglaló \{#istanbul-summary}
+#### Összefoglaló {#istanbul-summary}
 
 Az Istanbul fork:
 
@@ -124,13 +124,13 @@ Az Istanbul fork:
 
 ---
 
-### Constantinople \{#constantinople}
+### Constantinople {#constantinople}
 
 {
 <NetworkUpgradeSummary name="constantinople" />
 }
 
-#### Összefoglaló \{#constantinople-summary}
+#### Összefoglaló {#constantinople-summary}
 
 A Constantinople fork:
 
@@ -155,15 +155,15 @@ A Constantinople fork:
 <Divider />
 }
 
-## 2017 \{#2017}
+## 2017 {#2017}
 
-### Byzantium \{#byzantium}
+### Byzantium {#byzantium}
 
 {
 <NetworkUpgradeSummary name="byzantium" />
 }
 
-#### Összefoglaló \{#byzantium-summary}
+#### Összefoglaló {#byzantium-summary}
 
 A Byzantium fork:
 
@@ -194,15 +194,15 @@ A Byzantium fork:
 <Divider />
 }
 
-## 2016 \{#2016}
+## 2016 {#2016}
 
-### Spurious Dragon \{#spurious-dragon}
+### Spurious Dragon {#spurious-dragon}
 
 {
 <NetworkUpgradeSummary name="spuriousDragon" />
 }
 
-#### Összefoglaló \{#spurious-dragon-summary}
+#### Összefoglaló {#spurious-dragon-summary}
 
 A Spurious Dragon fork volt a második válasz a szolgáltatás megtagadásos (DoS) támagásokkal szemben a hálózaton (2016 szeptember/október), mely az alábbiakat tartalmazta:
 
@@ -225,13 +225,13 @@ A Spurious Dragon fork volt a második válasz a szolgáltatás megtagadásos (D
 
 ---
 
-### Tangerine whistle \{#tangerine-whistle}
+### Tangerine whistle {#tangerine-whistle}
 
 {
 <NetworkUpgradeSummary name="tangerineWhistle" />
 }
 
-#### Összefoglaló \{#tangerine-whistle-summary}
+#### Összefoglaló {#tangerine-whistle-summary}
 
 A Tangerine Whistle fork volt a első válasz a szolgáltatás megtagadásos (DoS) támagásokkal szemben a hálózaton (2016 szeptember/október), mely az alábbiakat tartalmazta:
 
@@ -250,13 +250,13 @@ A Tangerine Whistle fork volt a első válasz a szolgáltatás megtagadásos (Do
 
 ---
 
-### DAO fork \{#dao-fork}
+### DAO fork {#dao-fork}
 
 {
 <NetworkUpgradeSummary name="daoFork" />
 }
 
-#### Összefoglaló \{#dao-fork-summary}
+#### Összefoglaló {#dao-fork-summary}
 
 A DAO fork volt a válasz a [2016-os DAO támadásra](https://www.coindesk.com/understanding-dao-hack-journalists), amikor egy sérülékeny [DAO](/glossary/#dao) szerződésből 3.6 millió ETH-et ürítettek le a támadás során. A fork átmozgatta a pénzt a hibás szerződésből egy [új szerződésbe](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754), aminek csak egyetlen funkciója van: kiutalás. Bárki aki veszteséget szenvedett el kiutalhatott 1 ETH-et, minden tárcájukban lévő 100 DAO tokenre.
 
@@ -268,13 +268,13 @@ Némely bányász nem volt hajlandó forkolni, mivel a DAO incidens nem a protok
 
 ---
 
-### Homestead \{#homestead}
+### Homestead {#homestead}
 
 {
 <NetworkUpgradeSummary name="homestead" />
 }
 
-#### Összefoglaló \{#homestead-summary}
+#### Összefoglaló {#homestead-summary}
 
 A Homestead fork, mely a jövőbe tekintett. Számos protokoll változtatást tartalmazott és egy hálózati változtatást, mely lehetővé tette az Ethereum számára a további hálózati változtatásokat.
 
@@ -294,15 +294,15 @@ A Homestead fork, mely a jövőbe tekintett. Számos protokoll változtatást ta
 <Divider />
 }
 
-## 2015 \{#2015}
+## 2015 {#2015}
 
-### Frontier thawing \{#frontier-thawing}
+### Frontier thawing {#frontier-thawing}
 
 {
 <NetworkUpgradeSummary name="frontierThawing" />
 }
 
-#### Összefoglaló \{#frontier-thawing-summary}
+#### Összefoglaló {#frontier-thawing-summary}
 
 A frontier thawing fork megszüntette az 5,000-es [gáz](/glossary/#gas) limitet egy [blokkra](/glossary/#block) és beállította az alapértelmezett gáz árat 51 [gweire](/glossary/#gwei). Ez lehetővé tette a tranzakciók létrejöttét – a tranzakciók 21,000 gázt igényeltek.
 
@@ -310,13 +310,13 @@ A frontier thawing fork megszüntette az 5,000-es [gáz](/glossary/#gas) limitet
 
 ---
 
-### Frontier \{#frontier}
+### Frontier {#frontier}
 
 {
 <NetworkUpgradeSummary name="frontier" />
 }
 
-#### Összefoglaló \{#frontier-summary}
+#### Összefoglaló {#frontier-summary}
 
 A Frontier egy működő, de teljesen leegyszerűsített implementációja volt az Ethereum projektnek. Az sikeres Olympic tesztelési fázist követte. A műszaki felhasználóknak készült, kimondottan fejlesztőknek. A [blokkoknak](/glossary/#block) egy 5000-es [gáz](/glossary/#gas) limit volt beállítva. Ez a ‘kiolvasztási’ időszak lehetővé tette a bányászok számára, hogy elindítsák a tevékenységüket és a korai felhasználóknak, hogy telepítsék a klienseiket anélkül, hogy 'sietniük' kellene.
 
@@ -326,9 +326,9 @@ A Frontier egy működő, de teljesen leegyszerűsített implementációja volt 
 <Divider />
 }
 
-## 2014 \{#2014}
+## 2014 {#2014}
 
-### Ether eladás \{#ether-sale}
+### Ether eladás {#ether-sale}
 
 {
 <NetworkUpgradeSummary name="etherSale" />
@@ -340,7 +340,7 @@ A hivatalos Ether eladás 42 napig tartott. BTC-vel tudtál fizetni.
 
 ---
 
-### Sárga könyv kiadása \{#yellowpaper}
+### Sárga könyv kiadása {#yellowpaper}
 
 {
 <NetworkUpgradeSummary name="yellowpaperRelease" />
@@ -354,9 +354,9 @@ A Sárga Könyv, melynek a szerzője Dr. Gavin Wood, az Ethereum protokoll műsz
 <Divider />
 }
 
-## 2013 \{#2013}
+## 2013 {#2013}
 
-### A fehérkönyv kiadása \{#whitepaper}
+### A fehérkönyv kiadása {#whitepaper}
 
 {
 <NetworkUpgradeSummary name="yellowpaperRelease" />

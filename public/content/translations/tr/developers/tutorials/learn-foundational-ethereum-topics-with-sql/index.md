@@ -19,7 +19,7 @@ Bu öğretici, [Dune Analytics](https://dune.xyz/home) tarafından sağlanan bir
 
 Zincir üstü veriler, Ethereum'u bir ağ ve bir bilgi işlem gücü ekonomisi olarak anlamamıza yardımcı olabilir ve bugün Ethereum'un karşılaştığı zorlukları (yani artan gaz fiyatları) ve daha da önemlisi ölçeklendirme çözümleri hakkındaki tartışmaları anlamak için bir temel görevi görebilir.
 
-### İşlemler \{#transactions}
+### İşlemler {#transactions}
 
 Bir kullanıcının Ethereum'daki yolculuğu, kullanıcı tarafından kontrol edilen bir hesabı veya ETH bakiyesi olan bir varlığı başlatmakla başlar. İki hesap türü vardır: Kullanıcı kontrollü hesap veya bir akıllı sözleşme (bkz. [ethereum.org](/developers/docs/accounts/)).
 
@@ -63,19 +63,19 @@ FROM temp_table
 
 Bu, Etherscan'in işlem sayfasında sağlanan bilgilerin aynısını verecektir. Karşılaştırma olarak, burada iki kaynak vardır:
 
-#### Etherscan \{#etherscan}
+#### Etherscan {#etherscan}
 
 ![](./etherscan_view.png)
 
 [Etherscan üzerinde Ethereum Vakfı'nın sözleşme sayfası.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
-#### Dune Analytics \{#dune-analytics}
+#### Dune Analytics {#dune-analytics}
 
 ![](./dune_view.png)
 
 Gösterge panelini [burada](https://duneanalytics.com/paulapivat/Learn-Ethereum) bulabilirsiniz. Sorguyu görmek için tabloya tıklayın (yukarıya da bakın).
 
-### İşlemleri Parçalara Ayırma \{#breaking_down_transactions}
+### İşlemleri Parçalara Ayırma {#breaking_down_transactions}
 
 Gönderilen bir işlem, şunlar da dahil olmak üzere çeşitli bilgiler içerir ([kaynak](/developers/docs/transactions/)):
 
@@ -104,7 +104,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Bloklar \{#blocks}
+### Bloklar {#blocks}
 
 Her işlem Ethereum sanal makinesinin ([EVM](/developers/docs/evm/)) durumunu değiştirir ([kaynak](/developers/docs/transactions/)). İşlemler doğrulanmak üzere ağa yayınlanır ve bir bloğa dahil edilir. Her işlem bir blok numarası ile ilişkilendirilir. Verileri görmek için belirli bir blok numarasını sorgulayabiliriz: 12396854 (bu yazı itibariyle Ethereum Vakfı işlemleri arasında en son blok, 11/5/21).
 
@@ -211,7 +211,7 @@ FROM temp_table
 
 2016'dan bu yana günlük üretilen ortalama blok sayısı, 5.874 olarak bu sayının biraz üzerindedir. Alternatif olarak, 86.400 saniyenin 5874 ortalama bloğa bölünmesi 14,7 saniyeye veya her 15 saniyede bir yaklaşık bir bloğa denk gelir.
 
-### Gaz \{#gas}
+### Gaz {#gas}
 
 Bloklar boyut olarak sınırlıdır. Maksimum blok boyutu dinamiktir ve ağ talebine göre 12.500.000 ila 25.000.000 birim arasında değişir. Limitler, keyfi olarak çok büyük blok boyutlarınının disk alanı ve hız gereksinimleri ([kaynak](/developers/docs/blocks/)) açısından tam düğümlere baskı uygulamasını engellemek için gereklidir.
 
@@ -263,7 +263,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Özet \{#summary}
+### Özet {#summary}
 
 Bu öğretici ile, temel Ethereum kavramlarını ve zincir üzerindeki verileri sorgulayarak ve bunlarla uğraşarak Ethereum blok zincirinin nasıl çalıştığını anlıyoruz.
 

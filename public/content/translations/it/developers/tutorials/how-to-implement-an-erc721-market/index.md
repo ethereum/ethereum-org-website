@@ -22,7 +22,7 @@ Con Internet è cambiato tutto. Il numero di persone che potevano vedere una det
 
 Con la blockchain questi mercati sono destinati a cambiare di nuovo, vediamo come.
 
-## Monetizzazione \{#monetization}
+## Monetizzazione {#monetization}
 
 Il modello di business di una bacheca di annunci su blockchain pubblica sarà diverso da quello di Ebay e simili.
 
@@ -38,7 +38,7 @@ Sento odore di business. Una bacheca di annunci senza costi di gestione può fac
 
 Io sono felice di occuparmi della programmazione. Diamo un'occhiata al codice.
 
-## Implementazione \{#implementation}
+## Implementazione {#implementation}
 
 Un po' di tempo fa abbiamo iniziato un [repository open source](https://github.com/HQ20/contracts?ref=hackernoon.com) con implementazioni di esempio e altre cose interessanti, consiglio di dare una sbirciata.
 
@@ -138,7 +138,7 @@ function cancelTrade(uint256 _trade)
 
 Ecco qua. Siamo giunti alla fine dell'implementazione. È sorprendente come alcuni concetti di business siano compatti quando vengono espressi con codice, e questo è uno di questi esempi. Guarda il contratto completo [nel nostro repo](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
-## Conclusione \{#conclusion}
+## Conclusione {#conclusion}
 
 Le bacheche di annunci sono una configurazione di mercato comune che ha preso piede rapidamente con Internet, diventando un modello di business incredibilmente popolare, con alcuni monopoli che si sono accaparrati il segmento di mercato.
 

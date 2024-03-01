@@ -13,13 +13,13 @@ summaryPoints:
   - Mantenha os tokens participados na sua carteira
 ---
 
-## O que são pools de participação? \{#what-are-staking-pools}
+## O que são pools de participação? {#what-are-staking-pools}
 
 Os pools de participação são uma abordagem colaborativa para permitir que muitos com quantidades menores de ETH obtenham os 32 ETH necessários para ativar um conjunto de chaves de validador. A funcionalidade de pooling não é nativamente suportada no protocolo, então soluções foram construídas separadamente para resolver essa necessidade.
 
 Alguns pools operam usando contratos inteligentes, onde os fundos podem ser depositados em um contrato, que gerencia e controla com necessidade mínima de confiança seu stake, e lhe emite um token que representa esse valor. Outros pools podem não envolver contratos inteligentes e, em vez disso, são mediadas fora da cadeia.
 
-## Por que fazer participação com um pool? \{#why-stake-with-a-pool}
+## Por que fazer participação com um pool? {#why-stake-with-a-pool}
 
 Além dos benefícios delineados em nossa [introdução ao staking](/staking/), fazer stake em um pool traz alguns benefícios distintos.
 
@@ -33,7 +33,7 @@ Além dos benefícios delineados em nossa [introdução ao staking](/staking/), 
 <StakingComparison page="pools" />
 }
 
-## O que considerar \{#what-to-consider}
+## O que considerar {#what-to-consider}
 
 Staking delegado ou em pools não é nativamente suportado pelo protocolo Ethereum, mas dada a demanda para que os usuários façam staking com menos de 32 ETH, um número crescente de soluções para servir esta demanda foram construídas.
 
@@ -49,7 +49,7 @@ Os indicadores de atributo são usados abaixo para sinalizar notáveis pontos fo
 <StakingConsiderations page="pools" />
 }
 
-## Explore pools de participação \{#explore-staking-pools}
+## Explore pools de participação {#explore-staking-pools}
 
 Há uma variedade de opções disponíveis para ajudá-lo na sua configuração. Use os indicadores acima para guiá-lo pelas ferramentas abaixo.
 
@@ -65,7 +65,7 @@ Observe a importância de escolher um serviço que leve a sério a [diversidade 
 
 Alguma sugestão de ferramenta de participação que não mencionamos? Leia a nossa [política de listagem de produtos](/contributing/adding-staking-products/) para ver se a sugestão é pertinente e para enviá-la para análise.
 
-## Perguntas frequentes \{#faq}
+## Perguntas frequentes {#faq}
 
 {
 <ExpandableCard title="Como ganho recompensas?">
@@ -93,7 +93,7 @@ Algumas opções de pooling são mais descentralizadas do que outras quando se t
 </ExpandableCard>
 }
 
-## Leitura adicional \{#further-reading}
+## Leitura adicional {#further-reading}
 
 - [Fazendo stake com a Rocket Pool – Visão global de staking](https://docs.rocketpool.net/guides/staking/overview.html) - _Documentação do Rocket Pool_
 - [Staking Ethereum com Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Documentação de ajuda Lido_

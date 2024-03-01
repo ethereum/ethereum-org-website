@@ -10,11 +10,11 @@ Si bien la inmutabilidad es necesaria para no requerir de confianza, la descentr
 
 Sin embargo, investigación más profunda en la mejora de los contratos inteligentes llevó a la introducción de diversos patrones de actualización. Estos patrones de actualización permiten a los desarrolladores actualizar los contratos inteligentes (manteniendo la inmutabilidad) colocando lógica empresarial en diferentes contratos.
 
-## Requisitos previos \{#prerequisites}
+## Requisitos previos {#prerequisites}
 
 Debe contar con un buen entendimiento de los [contratos inteligentes](/developers/docs/smart-contracts/), la [anatomía de los contratos inteligentes](/developers/docs/smart-contracts/anatomy/) y la [Máquina virtual de Ethereum (EVM)](/developers/docs/evm/). Esta guía también asume que los lectores tengan conocimiento sobre programación de contratos inteligentes.
 
-## ¿Qué es la actualización de un contrato inteligente? \{#what-is-a-smart-contract-upgrade}
+## ¿Qué es la actualización de un contrato inteligente? {#what-is-a-smart-contract-upgrade}
 
 La actualización de un contrato inteligente implica cambiar la lógica empresarial de un contrato inteligente a la vez que se preserva el estado del contrato. Es importante aclarar que la capacidad de actualización y la mutabilidad no son lo mismo, especialmente en el contexto de contratos inteligentes.
 
@@ -32,7 +32,7 @@ Esto se puede llevar a cabo a través de los siguientes métodos:
 
 5. Utilizando el patrón de diamante para delegar llamadas de funciones de un contrato proxy a contratos de lógica.
 
-### Mecanismo de actualización 1: migración del contrato \{#contract-migration}
+### Mecanismo de actualización 1: migración del contrato {#contract-migration}
 
 La migración de contratos se basa en el uso de versiones, que consiste en crear y gestionar estados únicos del mismo software. La migración de un contrato implica implementar una nueva instancia de un contrato inteligente existente y la transferencia del almacenamiento y los saldos al nuevo contrato.
 
@@ -44,7 +44,7 @@ La migración de contratos es una medida relativamente sencilla y segura para ac
 
 [Más sobre la migración de contratos.](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
 
-### Mecanismo de actualización 2: separación de datos \{#data-separation}
+### Mecanismo de actualización 2: separación de datos {#data-separation}
 
 Otro método para actualizar contratos inteligentes es separar la lógica empresarial y el almacenamiento de datos en contratos diferentes. Esto significa que los usuarios interactúan con el contrato de lógica, mientras que los datos se almacenan en el contrato de almacenamiento.
 
@@ -58,7 +58,7 @@ Utilizar este método de actualización requiere actualizar la dirección del co
 
 El patrón de separación de datos es posiblemente más fácil de implementar en comparación con la migración de contratos. Sin embargo, hay que gestionar varios contratos e implementar esquemas de autorización complejos para proteger los contratos inteligentes de actualizaciones maliciosas.
 
-### Mecanismo de actualización 3: patrones de proxy \{#proxy-patterns}
+### Mecanismo de actualización 3: patrones de proxy {#proxy-patterns}
 
 El patrón de proxy también utiliza la separación de datos para mantener la lógica empresarial y los datos en contratos diferentes. Sin embargo, en un patrón de proxy, el contrato de almacenamiento (llamado proxy) llama al contrato de lógica durante la ejecución del código. Esto es una inversión del método de separación de datos, donde el contrato de lógica llama al contrato de almacenamiento.
 
@@ -88,7 +88,7 @@ Los patrones de proxy son un método popular para actualizar los contratos intel
 
 [Más información sobre los patrones de proxy](https://blog.openzeppelin.com/proxy-patterns/).
 
-### Mecanismo de actualización 4: patrón de estrategia \{#strategy-pattern}
+### Mecanismo de actualización 4: patrón de estrategia {#strategy-pattern}
 
 Esta técnica está influenciada por el [patrón de estrategia](https://en.wikipedia.org/wiki/Strategy_pattern), que fomenta la creación de programas de software que interactúan con otros programas para implementar funciones específicas. Aplicar el patrón de estrategia al desarrollo de Ethereum significaría crear un contrato inteligente que llame a las funciones de otros contratos.
 
@@ -100,7 +100,7 @@ Aunque es similar al patrón de proxy explicado anteriormente, el patrón de est
 
 El principal inconveniente es que este patrón es principalmente útil para implementar actualizaciones menores. Además, si el contrato principal se ve comprometido (por ejemplo, a través de un hackeo), no podrá usar este método de actualización.
 
-### Mecanismo de actualización 5: patrón de diamante \{#diamond-pattern}
+### Mecanismo de actualización 5: patrón de diamante {#diamond-pattern}
 
 El patrón de diamante puede considerarse una mejora en el patrón de proxy. Los patrones de diamante difieren de los patrones de proxy porque el contrato de proxy de diamante puede delegar llamadas de función a más de un contrato de lógica.
 
@@ -118,7 +118,7 @@ El patrón de actualización de diamante tiene algunas ventajas sobre los patron
 
 [Más información sobre el patrón de diamante](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w).
 
-## Pros y contras de la actualización de los contratos inteligentes \{#pros-and-cons-of-upgrading-smart-contracts}
+## Pros y contras de la actualización de los contratos inteligentes {#pros-and-cons-of-upgrading-smart-contracts}
 
 | Ventajas                                                                                                                                                  | Desventajas                                                                                                                                                                            |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -128,7 +128,7 @@ El patrón de actualización de diamante tiene algunas ventajas sobre los patron
 | Las actualizaciones de contratos dan a los desarrolladores más espacio para experimentar con diferentes funciones y mejorar las dapps con el tiempo.      | La oportunidad de actualizar los contratos inteligentes puede animar a los desarrolladores a lanzar proyectos más rápido sin hacer la debida diligencia durante la fase de desarrollo. |
 |                                                                                                                                                           | El control de acceso inseguro o la centralización en los contratos inteligentes pueden facilitar que los actores maliciosos realicen actualizaciones no autorizadas.                   |
 
-## Consideraciones para actualizar los contratos inteligentes \{#considerations-for-upgrading-smart-contracts}
+## Consideraciones para actualizar los contratos inteligentes {#considerations-for-upgrading-smart-contracts}
 
 1. Utilice mecanismos seguros de control de acceso/autorización para evitar actualizaciones no autorizadas de contratos inteligentes, especialmente si se utilizan patrones de proxy, patrones de estrategia o separación de datos. Un ejemplo es restringir el acceso a la función de actualización, de modo que solo el propietario del contrato pueda invocarlo.
 
@@ -142,21 +142,21 @@ El patrón de actualización de diamante tiene algunas ventajas sobre los patron
 
 Los timelocks dan a los usuarios algo de tiempo para salir del sistema si no están de acuerdo con un cambio propuesto (por ejemplo, una actualización de lógica o nuevos esquemas de tarifas). Sin timelocks, los usuarios deben confiar en que los desarrolladores no implementen cambios arbitrarios en un contrato inteligente sin previo aviso. La desventaja de los timelocks es que restringen la capacidad de parchear rápidamente las vulnerabilidades.
 
-## Recursos \{#resources}
+## Recursos {#resources}
 
 **OpenZeppelin Upgrades Plugins: _Conjunto de herramientas para implementar y asegurar contratos inteligentes actualizables. _**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
 - [Documentación](https://docs.openzeppelin.com/upgrades)
 
-## Tutoriales \{#tutorials}
+## Tutoriales {#tutorials}
 
 - [Actualización de sus contratos inteligentes | Tutorial de YouTube](https://www.youtube.com/watch?v=bdXJmWajZRY) por Patrick Collins
 - [Tutorial de migración de contratos inteligentes de Ethereum](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd) por Austin Griffith
 - [Uso del patrón de proxy UUPS para actualizar contratos inteligentes](https://blog.logrocket.com/author/praneshas/) por Pranesh A.S
 - [Tutorial de Web3: Escribir un contrato inteligente actualizable (proxy) usando OpenZeppelin](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916) por fangjun.eth
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [El estado de las actualizaciones de contratos inteligentes](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/) por Santiago Palladino
 - [Múltiples formas de actualizar un contrato inteligente de Solidity](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/): Blog Crypto Market Pool

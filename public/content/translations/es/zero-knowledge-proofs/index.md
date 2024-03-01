@@ -4,7 +4,7 @@ description: Introducción no técnica a pruebas de conocimiento cero para princ
 lang: es
 ---
 
-## ¿Qué son las pruebas de conocimiento cero? \{#what-are-zk-proofs}
+## ¿Qué son las pruebas de conocimiento cero? {#what-are-zk-proofs}
 
 Una prueba de conocimiento cero es una forma de probar la validez de una sentencia sin revelar la sentencia en sí. El "probador" (también conocido como tirador de pruebas) es la parte que intenta probar o demostrar una afirmación, mientras que el "verificador" es el responsable de validarla.
 
@@ -14,7 +14,7 @@ Las pruebas de conocimiento cero aparecieron por primera vez en el paper de 1985
 
 Las pruebas de conocimiento cero han mejorado con los años y ahora se están utilizando en varias aplicaciones del mundo real.
 
-## ¿Por qué necesitamos pruebas de conocimiento cero? \{#why-zero-knowledge-proofs-are-important}
+## ¿Por qué necesitamos pruebas de conocimiento cero? {#why-zero-knowledge-proofs-are-important}
 
 Las pruebas de conocimiento cero representaron un gran avance en la criptografía aplicada, ya que prometieron mejorar la seguridad de la información para las personas. Considere cómo podría demostrar un afirmación (por ejemplo, “Soy ciudadano de un país X”) a otra parte (por ejemplo, un proveedor de servicios). Tendría que proporcionar evidencia para respaldar su afirmación, como un pasaporte nacional o una licencia de conducir.
 
@@ -24,7 +24,7 @@ Las pruebas de conocimiento cero resuelven este problema eliminando la necesidad
 
 Volviendo a nuestro ejemplo anterior, la única evidencia que usted necesita para probar su declaración de ciudadanía es una prueba de conocimiento cero. El verificador solo tiene que comprobar si ciertas propiedades de la prueba son verdaderas para estar convencido de que la sentencia subyacente también es verdadera.
 
-## ¿Cómo funcionan las pruebas de conocimiento cero? \{#how-do-zero-knowledge-proofs-work}
+## ¿Cómo funcionan las pruebas de conocimiento cero? {#how-do-zero-knowledge-proofs-work}
 
 Una prueba de conocimiento cero le permite probar la validez de una declaración sin compartir el contenido de la declaración o revelar cómo descubrió la verdad. Para que esto sea posible, los protocolos de conocimiento cero se basan en algoritmos que toman algunos datos como entrada y devuelven como resultado "true" (verdadero) o "false" (falso).
 
@@ -48,7 +48,7 @@ Lo anterior describe la estructura de una "prueba interactiva de conocimiento ce
 
 Un buen ejemplo que ilustra cómo funcionan las pruebas interactivas es la famosa [historia de la cueva de Ali Baba](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave) de Jean-Jacques Quisquatter. En la historia, Peggy (el probador) quiere demostrar a Victor (el verificador) que conoce la frase secreta para abrir una puerta mágica sin revelar la frase.
 
-### Pruebas de conocimiento cero no interactivas \{#non-interactive-zero-knowledge-proofs}
+### Pruebas de conocimiento cero no interactivas {#non-interactive-zero-knowledge-proofs}
 
 Si bien las pruebas interactivas fueron revolucionarias, tenían una utilidad limitada, ya que exigían que las dos partes estuvieran disponibles e interactuaran repetidamente. Incluso si un verificador estuviera convencido de la honestidad de un probador, la prueba no estaría disponible para la verificación independiente (calcular una nueva prueba implica un nuevo conjunto de mensajes entre el probador y el verificador).
 
@@ -60,9 +60,9 @@ La demostración no interactiva reduce la comunicación entre el probador y el v
 
 Las pruebas no interactivas representaron un avance para la tecnología de conocimiento cero e impulsaron el desarrollo de los sistemas de prueba que se usan en la actualidad. Analizaremos estos tipos de prueba a continuación:
 
-### Tipos de pruebas de conocimiento cero \{#types-of-zero-knowledge-proofs}
+### Tipos de pruebas de conocimiento cero {#types-of-zero-knowledge-proofs}
 
-#### ZK-SNARK \{#zk-snarks}
+#### ZK-SNARK {#zk-snarks}
 
 ZK-SNARK es el acrónimo en inglés de **argumento de conocimiento sucinto no interactivo de conocimiento cero** (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge). El protocolo ZK-SNARK tiene las siguientes cualidades:
 
@@ -82,7 +82,7 @@ El [cálculo de varias partes (CMP)](https://en.wikipedia.org/wiki/Secure_multi-
 
 Las configuraciones de confianza requieren que los usuarios confíen en los participantes en la generación de parámetros. Sin embargo, el desarrollo de ZK-STARK ha permitido protocolos de prueba que funcionen con una configuración sin confianza.
 
-#### ZK-STARK \{#zk-starks}
+#### ZK-STARK {#zk-starks}
 
 ZK-STARK es el acrónimo en inglés de **argumento de conocimiento transparente escalable de conocimiento cero** (Zero-Knowledge Scalable Transparent Argument of Knowledge). Los ZK-STARK son similares a los ZK-SNARK, salvo que son:
 
@@ -92,9 +92,9 @@ ZK-STARK es el acrónimo en inglés de **argumento de conocimiento transparente 
 
 Los ZK-STARK producen pruebas más grandes que los ZK-SNARK, lo que significa que generalmente tienen gastos de verificación más altos. Sin embargo, hay casos (como probar grandes conjuntos de datos) en los que los ZK-STARK pueden ser más rentables que los ZK-SNARK.
 
-## Casos de uso para las pruebas de conocimiento cero \{#use-cases-for-zero-knowledge-proofs}
+## Casos de uso para las pruebas de conocimiento cero {#use-cases-for-zero-knowledge-proofs}
 
-### Pagos anónimos \{#anonymous-payments}
+### Pagos anónimos {#anonymous-payments}
 
 Los pagos con tarjeta de crédito a menudo son visibles para varias partes, incluyendo el proveedor de pagos, los bancos y otras partes interesadas (por ejemplo, las autoridades gubernamentales). Si bien la vigilancia financiera tiene beneficios para identificar la actividad ilegal, también quebranta la privacidad de los ciudadanos ordinarios.
 
@@ -106,19 +106,19 @@ Al tener la tecnología de conocimiento cero en el protocolo, las redes de caden
 
 Las pruebas de conocimiento cero también se están aplicando a anonimizar transacciones en cadenas de bloques públicas. Un ejemplo es Tornado Cash, un servicio descentralizado y no custodiado que permite a los usuarios realizar transacciones privadas en Ethereum. Tornado Cash utiliza pruebas de conocimiento cero para ocultar los detalles de la transacción y garantizar la privacidad financiera. Desafortunadamente, debido a que se trata de herramientas de privacidad "opt-in", se asocian con actividades ilícitas. Para superar esto, la privacidad eventualmente debe convertirse en la opción predeterminada en las cadenas de bloques públicas.
 
-### Protección de la identidad \{#identity-protection}
+### Protección de la identidad {#identity-protection}
 
 Los sistemas actuales de gestión de identidad ponen en peligro la información personal. Las pruebas de conocimiento cero pueden ayudar a los individuos a validar la identidad al tiempo que protegen los detalles sensibles.
 
 Las pruebas de conocimiento cero son particularmente útiles en el contexto de la [identidad descentralizada](/decentralized-identity/). La identidad descentralizada (también descrita como "identidad autosoberana") da al individuo la capacidad de controlar el acceso a los identificadores personales. La demostración de su ciudadanía sin revelar su identificación fiscal o los datos de su pasaporte es un buen ejemplo de cómo la tecnología de conocimiento cero permite la identidad descentralizada.
 
-### Autenticación \{#authentication}
+### Autenticación {#authentication}
 
 Usar servicios en línea requiere probar su identidad y el derecho a acceder a esas plataformas. Esto requiere a menudo proporcionar información personal, como nombres, direcciones de correo electrónico, fechas de nacimiento, etc. También puede que necesite memorizar contraseñas largas o arriesgarse a perder acceso.
 
 Las pruebas de conocimiento cero, sin embargo, pueden simplificar la autenticación tanto para plataformas como para usuarios. Una vez que se ha generado una prueba de conocimiento cero utilizando entradas públicas (por ejemplo, datos que certifiquen la membresía del usuario en la plataforma) y entradas privadas (por ejemplo, los datos del usuario), el usuario puede simplemente presentarla para autenticar su identidad cuando necesite acceder al servicio. Esto mejora la experiencia de los usuarios y libera a las organizaciones de la necesidad de almacenar grandes cantidades de información de los usuarios.
 
-### Cómputo verificable \{#verifiable-computation}
+### Cómputo verificable {#verifiable-computation}
 
 El cómputo o cálculo verificable es otra aplicación de tecnología de conocimiento cero para mejorar los diseños de las cadenas de bloques. El cómputo verificable nos permite externalizar el cálculo a otra entidad manteniendo al mismo tiempo resultados verificables. La entidad envía el resultado junto con una prueba que verifica que el programa se ejecutó correctamente.
 
@@ -142,7 +142,7 @@ Aquí es donde entra en juego el cálculo verificable. Cuando un nodo ejecuta un
 
 Los [rollups de conocimiento cero](/developers/docs/scaling/zk-rollups) y los [validiums](/developers/docs/scaling/validium/) son dos soluciones de escalado fuera de cadena que utilizan las pruebas de validez para proporcionar escalabilidad segura. Estos protocolos ejecutan miles de transacciones fuera de la cadena y presentan pruebas para su verificación en Ethereum. Estos resultados se pueden aplicar inmediatamente una vez verificada la prueba, lo que permite a Ethereum procesar más transacciones sin aumentar el cálculo en la capa base.
 
-### Reducir el soborno y el complot en la votación en cadena \{#secure-blockchain-voting}
+### Reducir el soborno y el complot en la votación en cadena {#secure-blockchain-voting}
 
 Los esquemas de votación de la cadena de bloques tienen muchas características favorables: son totalmente auditables, son seguros contra los ataques, son resistentes a la censura y están libres de restricciones geográficas. Pero, aun así, no son inmunes al problema del **complot**.
 
@@ -156,7 +156,7 @@ El uso de la votación en cadena hace que el financiamiento cuadrático sea susc
 
 Afortunadamente, soluciones más recientes como MACI (Minimum Anti-Collusion Infrastructure) están usando las pruebas de conocimiento cero para hacer votaciones en cadena (por ejemplo, mecanismos de financiación cuadrática) resistentes al soborno y a la colusión. La MACI es un conjunto de contratos inteligentes y scripts que permiten a un administrador central (llamado "coordinador") sumar los votos y recontar resultados _sin_ revelar detalles sobre cómo votó cada individuo. Aun así, todavía es posible verificar que las votaciones se contabilizaron correctamente o confirmar que un individuo en particular participó en la ronda de votaciones.
 
-#### ¿Cómo funciona la MACI con las pruebas de conocimiento cero? \{#how-maci-works-with-zk-proofs}
+#### ¿Cómo funciona la MACI con las pruebas de conocimiento cero? {#how-maci-works-with-zk-proofs}
 
 Al principio, el coordinador implementa el contrato de MACI en Ethereum, después de lo cual los usuarios pueden registrarse para votar (registrando su clave pública en el contrato inteligente). Los usuarios votan enviando mensajes cifrados con su clave pública al contrato inteligente (un voto válido debe estar firmado con la clave pública más reciente asociada a la identidad del usuario, entre otros criterios). Después, el coordinador procesa todos los mensajes una vez finalizado el período de votación, cuenta los votos y verifica los resultados en cadena.
 
@@ -178,29 +178,29 @@ Pero en los casos en que el coordinador sea honesto, la MACI representa una herr
 
 [Obtenga más información sobre la MACI](https://privacy-scaling-explorations.github.io/maci/).
 
-## Inconvenientes del uso de las pruebas de conocimiento cero \{#drawbacks-of-using-zero-knowledge-proofs}
+## Inconvenientes del uso de las pruebas de conocimiento cero {#drawbacks-of-using-zero-knowledge-proofs}
 
-### Costos de hardware \{#hardware-costs}
+### Costos de hardware {#hardware-costs}
 
 Generar pruebas de conocimiento cero implica cálculos muy complejos que se realizan mejor en máquinas especializadas. Como estas máquinas son caras, a menudo están fuera del alcance de las personas comunes. Además, las aplicaciones que quieran utilizar tecnología de conocimiento cero deben tener en cuenta los costos de hardware, lo cual puede aumentar los costos para los usuarios finales.
 
-### Costos de verificación de pruebas \{#proof-verification-costs}
+### Costos de verificación de pruebas {#proof-verification-costs}
 
 La verificación de pruebas también requiere un cálculo complejo e incrementa los costos de la implementación de tecnología de conocimiento cero en las aplicaciones. Este costo es particularmente relevante en el contexto del cómputo de pruebas. Por ejemplo, los rollups de conocimiento cero pagan ~ 500.000 de gas para verificar una única prueba ZK-SNARK en Ethereum (los ZK-STARK tienen tarifas aún más altas).
 
-### Presunciones de confianza \{#trust-assumptions}
+### Presunciones de confianza {#trust-assumptions}
 
 En ZK-SNARK, la Cadena de Referencia Común (parámetros públicos) se genera una vez y está disponible para reutilizarla para las partes que deseen participar en el protocolo de conocimiento cero. Los parámetros públicos se crean a través de una ceremonia de establecimiento o configuración de confianza, donde se supone que los participantes son honestos.
 
 Pero en realidad no hay forma de que los usuarios evalúen la honestidad de los participantes y los usuarios tienen que creer en los desarrolladores. Los ZK-STARK están libres de presunciones de confianza, ya que el aleatoriedad utilizada en la generación de la cadena es verificable públicamente. Entretanto, los investigadores están trabajando en la creación de configuraciones sin confianza para los ZK-SNARK con el fin de aumentar la seguridad de los mecanismos de prueba.
 
-### Amenazas de la informática cuántica \{#quantum-computing-threats}
+### Amenazas de la informática cuántica {#quantum-computing-threats}
 
 ZK-SNARK utiliza criptografía de curva elíptica ([ECDSA](/glossary/#ecdsa)) para el cifrado. Si bien el algoritmo ECDSA es seguro por ahora, el desarrollo de computadoras cuánticas podría romper su modelo de seguridad en el futuro.
 
 ZK-STARK se considera inmune a la amenaza de la informática cuántica, ya que utiliza para el cifrado hashes resistentes a la colisión. A diferencia de los pares de claves públicas-privadas utilizados en la criptografía de curva elíptica, el hashing resistente a la colisión es más difícil de romper para los algoritmos de informática cuántica.
 
-## Para mayor información \{#further-reading}
+## Para mayor información {#further-reading}
 
 - [Científico informático explica un concepto en 5 niveles de dificultad | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Canal de YouTube de Wired_
 - [Descripción general de casos de uso de las pruebas de conocimiento cero](https://appliedzkp.org/#Projects) — _Equipo de Privacy and Scaling Explorations_

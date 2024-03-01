@@ -4,7 +4,7 @@ description: Los puentes permiten a los usuarios, mover sus fondos a través de 
 lang: es
 ---
 
-# Puentes en el blockchain \{#prerequisites}
+# Puentes en el blockchain {#prerequisites}
 
 _La Web3 ha evolucionado a un ecosistema de cadenas de bloques L1 y soluciones de escalado L2, cada uno diseñado con capacidades y compensaciones particulares. A medida que aumenta el número de protocolos en las cadenas de bloques, también lo hace [la demanda de mover activos por las diferentes cadenas](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Para satisfacer esta demanda, necesitamos puentes (bridges)._
 
@@ -12,7 +12,7 @@ _La Web3 ha evolucionado a un ecosistema de cadenas de bloques L1 y soluciones d
 <Divider />
 }
 
-## ¿Qué son los puentes? \{#what-are-bridges}
+## ¿Qué son los puentes? {#what-are-bridges}
 
 Los puentes de las cadenas de bloques funcionan como los puentes que conocemos en el mundo físico. Así como un puente físico conecta dos ubicaciones físicas, un puente de cadena de bloques conecta dos ecosistemas de cadena de bloques. Los puentes facilitan la comunicación entre las cadenas de bloques a través de la transferencia de información y activos.
 
@@ -22,7 +22,7 @@ Usted es de los Estados Unidos y está planeando un viaje a Europa. Tiene dólar
 
 Pero, ¿qué hace si quiere realizar un intercambio similar para usar una cadena de bloques diferente? Digamos que quiere cambiar ETH de la Red principal de Ethereum por ETH en [Arbitrum](https://arbitrum.io/). Al igual que el cambio de divisas que hicimos para obtener euros, necesitamos un mecanismo para mover nuestro ETH de Ethereum a Arbitrum. Los puentes hacen posible tal transacción. En este caso, [Arbitrum tiene un puente nativo](https://bridge.arbitrum.io/) que puede transferir ETH de la Red principal a Arbitrum.
 
-## ¿Por qué necesitamos puentes? \{#why-do-we-need-bridges}
+## ¿Por qué necesitamos puentes? {#why-do-we-need-bridges}
 
 Todas las cadenas de bloques tienen sus limitaciones. Para que Ethereum escale y se mantenga al día con la demanda, ha requerido de rollups. Alternativamente, los L1 como Solana y Avalanche están diseñados de forma diferente para permitir una mayor velocidad en las transacciones, pero a costa de la descentralización.
 
@@ -43,23 +43,23 @@ Los puentes permiten:
 <Divider />
 }
 
-## Casos de uso de los puentes \{#bridge-use-cases}
+## Casos de uso de los puentes {#bridge-use-cases}
 
 Los siguientes son algunos escenarios donde puede usar un puente:
 
-### Menores comisiones por transacción \{#transaction-fees}
+### Menores comisiones por transacción {#transaction-fees}
 
 Digamos que tiene ETH en la Red principal de Ethereum y quiere comisiones de transacción más bajas para explorar diferentes DApps. Utilizando un puente para llevar su ETH de la Red principal de Ethereum a un roll-up L2 de Ethereum, podrá disfrutar de comisiones de transacción más bajas.
 
-### DApps en otras cadenas de bloques \{#dapps-other-chains}
+### DApps en otras cadenas de bloques {#dapps-other-chains}
 
 Si ha estado usando Aave en la Red principal de Ethereum para prestar USDT, pero la tasa de interés para prestarlos usando Aave en Polygon es más alta.
 
-### Explorar ecosistemas de cadenas de bloques \{#explore-ecosystems}
+### Explorar ecosistemas de cadenas de bloques {#explore-ecosystems}
 
 Si tiene ETH en la Red principal de Ethereum y quiere explorar una alternativa L1 para probar sus DApps nativas, puede utilizar un puente para transferir su ETH de la Red principal de Ethereum a la L1 alternativa.
 
-### Tener activos crypto nativos \{#own-native}
+### Tener activos crypto nativos {#own-native}
 
 Digamos que quiere tener Bitcoin (BTC), pero solo tiene fondos en la Red principal de Ethereum. Para obtener exposición a BTC en Ethereum, puede comprar Wrapped Bitcoin (WBTC). Sin embargo, WBTC es un token ERC-20 nativo de la red Ethereum, lo que significa que es una versión Ethereum de Bitcoin y no el activo original de la cadena de bloques de Bitcoin. Para tener BTC nativo, usted tendría que trasladar sus activos de Ethereum a Bitcoin usando un puente. Esto trasladará entre redes su WBTC y lo convertirá en BTC nativo. También podría poseer BTC y querer usarlo en los protocolos DeFi de Ethereum. Esto requeriría un puente pero al revés, desde el BTC hasta WBTC, que luego puede ser utilizado como un activo en Ethereum.
 
@@ -71,7 +71,7 @@ Digamos que quiere tener Bitcoin (BTC), pero solo tiene fondos en la Red princip
 <Divider />
 }
 
-## Tipos de puente \{#types-of-bridge}
+## Tipos de puente {#types-of-bridge}
 
 Los puentes tienen muchos tipos de diseños y complejidades. Generalmente encontramos dos categorías: puentes de confianza (trusted) y puentes sin confianza o que no la necesitan (trustless).
 
@@ -103,7 +103,7 @@ Muchas soluciones de puente adoptan modelos entre estos dos extremos con diferen
 <Divider />
 }
 
-## Riesgo al utilizar puentes \{#bridge-risk}
+## Riesgo al utilizar puentes {#bridge-risk}
 
 Los puentes se encuentran en las primeras etapas de desarrollo. Es probable que todavía no se haya descubierto el diseño óptimo de estos. Interactuar con cualquier tipo de puente conlleva riesgos:
 
@@ -131,7 +131,7 @@ Los puentes son cruciales para incorporar a los usuarios a las L2 de Ethereum e 
 <Divider />
 }
 
-## Para seguir leyendo \{#further-reading}
+## Para seguir leyendo {#further-reading}
 
 - [EIP-5164: Ejecución entre cadenas (cross-chain)](https://ethereum-magicians.org/t/eip-5164-cross-chain-execution/9658) _18 de junio de 2022 - Brendan Asselstine_
 - [Marco de riesgos L2Bridge](https://gov.l2beat.com/t/l2bridge-risk-framework/31) _5 de julio de 2022 - Bartek Kiepuszewski_

@@ -18,7 +18,7 @@ Ethereum è già una potente piattaforma per il coordinamento globale, ma è anc
 
 **Per conoscere gli aggiornamenti precedenti a Ethereum, vi preghiamo di visita la nostra pagina [Cronologia](/history/)**
 
-## Quali cambiamenti stanno arrivando su Ethereum? \{#what-changes-are-coming}
+## Quali cambiamenti stanno arrivando su Ethereum? {#what-changes-are-coming}
 
 La tabella di marcia Ethereum delinea i miglioramenti specifici che saranno apportati al protocollo in futuro. Nel complesso, la tabella di marcia apporterà i seguenti vantaggi agli utenti di Ethereum:
 
@@ -53,7 +53,7 @@ La tabella di marcia Ethereum delinea i miglioramenti specifici che saranno appo
   />
 </CardGrid>
 
-## Perché Ethereum necessita di una tabella di marcia? \{#why-does-ethereum-need-a-roadmap}
+## Perché Ethereum necessita di una tabella di marcia? {#why-does-ethereum-need-a-roadmap}
 
 Ethereum riceve aggiornamenti regolari che migliorano la sua scalabilità, sicurezza o sostenibilità. Uno dei punti di forza di Ethereum è l'adattamento man mano che nuove idee emergono dalla ricerca e sviluppo. L'adattabilità offre a Ethereum la flessibilità per affrontare le sfide emergenti e tenere il passo con le innovazioni tecnologiche più avanzate.
 
@@ -72,23 +72,23 @@ La tabella di marcia è principalmente il risultato di anni di lavoro da parte d
 
 </InfoBanner>
 
-## La tabella di marcia di Ethereum cambierà nel tempo? \{#will-ethereums-roadmap-change-over-time}
+## La tabella di marcia di Ethereum cambierà nel tempo? {#will-ethereums-roadmap-change-over-time}
 
 Sì, quasi definitivamente. La tabella di marcia è l'attuale piano per l'aggiornamento di Ethereum, che copre sia i piani a breve termine che quelli futuri. Ci aspettiamo che la tabella di marcia cambi man mano che saranno disponibili nuove informazioni e tecnologie.
 
 Pensa alla tabella di marcia di Ethereum come a una serie di intenzioni per migliorare Ethereum; è l'ipotesi migliore dei ricercatori e sviluppatori centrali del percorso ottimale di Ethereum.
 
-## Quando terminerà la tabella di marcia? \{#when-will-the-roadmap-be-finished}
+## Quando terminerà la tabella di marcia? {#when-will-the-roadmap-be-finished}
 
 Ethereum implementerà alcuni aggiornamenti nei prossimi sei mesi (ad es. prelievi dallo staking); altri sono meno prioritari e probabilmente non saranno attuati per i prossimi 5-10 anni (ad esempio resistenza quantistica). Dare tempi precisi per ogni aggiornamento è complicato poichémolti elementi della tabella di marcia vengono elaborati in parallelo e sviluppati a velocità diverse. L'urgenza di un aggiornamento può anche cambiare nel tempo a seconda di fattori esterni (ad es. un salto avanti improvviso nelle prestazioni e nella disponibilità di computer quantistici può rendere più urgente la crittografia a resistenza quantistica).
 
 Un modo in cui pensare allo sviluppo di Ethereum è per analogia all'evoluzione biologica. Una rete in grado di adattarsi alle nuove sfide e di mantenere l'idoneità ha più probabilità di successo rispetto una che oppone resistenza al cambiamento, anche se man mano che la rete diventa sempre più performante, scalabile e sicura, richeiderà meno modifiche al protocollo.
 
-## Devo fare qualcosa quando c'è un aggiornamento? \{#do-i-have-to-do-anything-when-there-is-an-upgrade}
+## Devo fare qualcosa quando c'è un aggiornamento? {#do-i-have-to-do-anything-when-there-is-an-upgrade}
 
 Gli aggiornamenti tendono a non influenzare gli utenti finali e forniscono migliori esperienze utente e un protocollo più sicuro e forze più modalità di <i>opzioni</i> interazione con Ethereum. Gli usi finali non sono tenuti a partecipare attivamente a un aggiornamento, né sono tenuti a fare nulla per garantire i loro beni. Gli operatori dei nodi dovranno aggiornare i loro client per prepararsi a un aggiornamento. Alcuni aggiornamenti possono portare a modifiche per gli sviluppatori di applicazioni. Ad esempio, gli aggiornamenti della scadenza della cronologia possono indurre gli sviluppatori di applicazioni a prendere i dati storici da nuove fonti.
 
-## Che cosa sono l'Orlo, lo Spreco, ecc.? \{#what-about-the-verge-splurge-etc}
+## Che cosa sono l'Orlo, lo Spreco, ecc.? {#what-about-the-verge-splurge-etc}
 
 [Vitalik Buterin ha proposto una visione per la tabella di marcia di Ethereum](https://twitter.com/VitalikButerin/status/1588669782471368704) che è stata organizzata in diverse categorie legate dai loro effetti sull'architettura di Ethereum. Tale visione comprendeva:
 
@@ -101,11 +101,11 @@ Gli aggiornamenti tendono a non influenzare gli utenti finali e forniscono migli
 
 Abbiamo deciso di non utilizzare questa terminologia perché volevamo utilizzare un modello più semplice e incentrato sull'utente. Sebbene utilizziamo un linguaggio incentrato sugli utenti, la visione resta la stessa proposta da Vitalik.
 
-## Cos'è la frammentazione? \{#what-about-sharding}
+## Cos'è la frammentazione? {#what-about-sharding}
 
 La frammentazione consiste nella divisione della blockchain di Ethereum, così che dei sottoinsiemi di validatori siano responsabili soltanto per una frazione dei dati totali. Questo doveva essere il metodo originariamente inteso per il ridimensionamento di Ethereum. Tuttavia, i rollup di livello 2 si sono sviluppati molto più velocemente del previsto, fornendo già un grande ridimensionamento, e ne forniranno molto altro dopo l'implementazione del Proto-Danksharding. Ciò significa che le "catene di frammenti" non sono più necessarie e sono state rimosse dalla tabella di marcia.
 
-## Cerchi aggiornamenti tecnici specifici? \{#looking-for-specific-technical-upgrades}
+## Cerchi aggiornamenti tecnici specifici? {#looking-for-specific-technical-upgrades}
 
 - [Danksharding](/roadmap/danksharding) - Il Danksharding rende i rollup di livello 2 molto più economici, aggiungendo dei "blob" di dati ai blocchi di Ethereum.
 - [Prelievi di Staking](/staking/withdrawals): L'aggiornamento di Shanghai/Capella ha consentito i prelievi di staking su Ethereum, consentendo alle persone di sbloccare i propri ETH in staking.

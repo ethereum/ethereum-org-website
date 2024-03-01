@@ -23,7 +23,7 @@ Acest tutorial îi ajută pe cititori să înțeleagă conceptele fundamentale a
 
 Datele on-chain ne pot face să înțelegem Ethereum, rețeaua, economisirea puterii de calcul și acestea ar trebui să servească drept bază pentru înțelegerea problemelor actuale de soluționat în Ethereum (și anume, creșterea prețului gazului) și în special a discuțiilor despre soluțiile de scalare.
 
-### Tranzacții \{#transactions}
+### Tranzacții {#transactions}
 
 Călătoria pe Ethereum începe prin inițializarea unui cont controlat de utilizator sau a unei entități ce dispune de un sold de ETH. Există două tipuri de conturi - conturile controlate de utilizator sau contractele inteligente (a se vedea [ethereum.org](/developers/docs/accounts/)).
 
@@ -67,19 +67,19 @@ FROM temp_table
 
 Această interogare va produce informații similare cu cele furnizate pe pagina de tranzacții Etherscan. Pentru a le compara, iată cele două surse:
 
-#### Etherscan \{#etherscan}
+#### Etherscan {#etherscan}
 
 ![etherscan_view](./etherscan_view.png)
 
 [Pagina contractului EF pe Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
-#### Dune Analytics \{#dune-analytics}
+#### Dune Analytics {#dune-analytics}
 
 ![dune_view](./dune_view.png)
 
 Puteți vedea tabloul de bord [aici](https://duneanalytics.com/paulapivat/Learn-Ethereum). Dați clic pe tabel pentru a vedea interogarea (a se vedea și cele de mai sus).
 
-### Analiza conținutului tranzacțiilor \{#breaking_down_transactions}
+### Analiza conținutului tranzacțiilor {#breaking_down_transactions}
 
 O tranzacție transmisă include mai multe informații, inclusiv ([sursă](/developers/docs/transactions/)):
 
@@ -107,7 +107,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Blocuri \{#blocks}
+### Blocuri {#blocks}
 
 Fiecare tranzacție va schimba starea mașinii virtuale Ethereum ([EVM](/developers/docs/evm/)) ([sursă](/developers/docs/transactions/)). Tranzacțiile sunt difuzate în rețea pentru a fi verificate și incluse într-un bloc. Fiecare tranzacție este asociată unui număr de bloc. Putem să vedem datele interogând un anumit număr de bloc: 12396854 (cel mai recent bloc dintre tranzacțiile Fundației Ethereum la data scrierii acestui articol, 5/11/2021).
 
@@ -215,7 +215,7 @@ FROM temp_table
 
 Numărul mediu de blocuri produse zilnic din 2016 depășește ușor estimarea și anume este de 5.874. Ca altă metodă, dacă împărțim 86400 de secunde la 5.874 de blocuri medii, rezultă 14,7 secunde sau aproximativ un bloc la fiecare 15 secunde.
 
-### Gaz \{#gas}
+### Gaz {#gas}
 
 Blocurile au o dimensiune limitată. Miner-ii și rețeaua stabilesc în mod colectiv o limită de gaz pentru fiecare bloc, pentru a evita ca blocurile ce au dimensiuni mari în mod arbitar să streseze un nod complet atât în ceea ce privește spațiul pe disc, cât și viteza necesară ([sursă](/developers/docs/blocks/)).
 
@@ -267,7 +267,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Rezumat \{#summary}
+### Rezumat {#summary}
 
 Acest tutorial ne ajută să înțelegem conceptele fundamentale ale lui Ethereum și cum funcționează blockchain-ul Ethereum, interogând și obișnuindu-ne cu datele on-chain.
 

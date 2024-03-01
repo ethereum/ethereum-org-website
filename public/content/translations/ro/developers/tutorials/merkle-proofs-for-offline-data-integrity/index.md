@@ -11,7 +11,7 @@ lang: ro
 published: 2021-12-30
 ---
 
-## Introducere \{#introduction}
+## Introducere {#introduction}
 
 Ideal ar fi să stocăm totul în memoria Ethereum, stocată pe mii de computere, cu o mare accesibilitate (adică datele nu pot fi cenzurate) și integritate (adică datele nu pot fi modificate într-un mod neautorizat), dar stocarea unui cuvânt de 32 de octeți costă de obicei 20.000 de gaz. Acum, când scriu aceste rânduri, acest cost este echivalentul a 6,60 dolari. La 21 de cenți pe octet, acest preț este prea mare pentru mulți utilizatori.
 
@@ -19,7 +19,7 @@ To solve this problem the Ethereum ecosystem developed [many alternative ways to
 
 În acest articol veți învăța **cum** să asigurați integritatea datelor fără a stoca datele pe blockchain, folosind [dovezile Merkle](https://computersciencewiki.org/index.php/Merkle_proof).
 
-## Cum funcționează? \{#how-does-it-work}
+## Cum funcționează? {#how-does-it-work}
 
 În teorie, am putea stoca hash-ul datelor pe lanț și trimite toate datele în tranzacțiile care le solicită. Totuși, și acest lucru rămâne prea scump. Un octet de date la o tranzacție costă aproape 16 gaz, actualmente cam jumătate de cent, sau circa 5 dolari pe kilooctet. La 5.000 de dolari pe megaoctet, acest lucru este tot prea scump pentru mulți utilizatori, chiar și fără costul suplimentar al hashing-ului de date.
 
@@ -31,15 +31,15 @@ Hash-ul rădăcină este singura parte care trebuie să fie stocată în lanț. 
 
 ![Dovada valorii lui C](proof-c.png)
 
-## Implementarea \{#implementation}
+## Implementarea {#implementation}
 
 [Exemplul de cod este furnizat aici](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity).
 
-### Codul off-chain \{#off-chain-code}
+### Codul off-chain {#off-chain-code}
 
 În acest articol folosim JavaScript pentru calculele off-chain. Majoritatea aplicațiilor descentralizate îşi au componenta off-chain în JavaScript.
 
-#### Crearea rădăcinii Merkle \{#creating-the-merkle-root}
+#### Crearea rădăcinii Merkle {#creating-the-merkle-root}
 
 Mai întâi trebuie să furnizăm rădăcina Merkle lanțului.
 
@@ -128,7 +128,7 @@ const getMerkleRoot = (inputArray) => {
 
 Pentru a obține rădăcina, urcați până când rămâne doar o singură valoare.
 
-#### Crearea unei dovezi Merkle \{#creating-a-merkle-proof}
+#### Crearea unei dovezi Merkle {#creating-a-merkle-proof}
 
 O dovadă Merkle reprezintă valorile de la care împreună se va genera un hash și valoarea care trebuie dovedită pentru a obține înapoi rădăcina Merkle. Valoarea de dovedit este adesea disponibilă din alte date, așa că prefer să o furnizez separat decât făcând parte din cod.
 
@@ -165,7 +165,7 @@ Obținem hash-ul valorilor `(v[0],v[1])`, `(v[2],v[3]) etc. Deci, pentru valoril
 }   // getMerkleProof
 ```
 
-### Codul on-chain \{#off-chain-code}
+### Codul on-chain {#off-chain-code}
 
 În sfârșit, avem codul care verifică dovada. Codul on-chain este scris în [Solidity](https://docs.soliditylang.org/en/v0.8.11/). Optimizarea este mult mai importantă aici, deoarece gazul este relativ scump.
 
@@ -226,13 +226,13 @@ Această funcție generează o pereche de hash-uri. Este doar traducerea în Sol
 
 În limbaj matematic, verificarea dovezilor Merkle arată astfel: `H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`. Acest cod îl pune în aplicare.
 
-## Dovezile Merkle și rollup-urile nu se potrivesc \{#merkle-proofs-and-rollups}
+## Dovezile Merkle și rollup-urile nu se potrivesc {#merkle-proofs-and-rollups}
 
 Merkle proofs don't work well with [rollups](/developers/docs/scaling/#rollups). Motivul este că rollup-urile scriu toate datele tranzacției pe L1, dar le procesează pe L2. Prețul trimiterii unei dovezi Merkle cu o tranzacție este în medie de 638 de gaz pe nivel (în prezent, un octet în datele de apel costă 16 gaz dacă nu este zero și 4 dacă este zero). Presupunând că avem 1024 de cuvinte de date, o dovadă Merkle necesită zece niveluri, adică un total de 6380 de gaz.
 
 Privind, de exemplu, la [Optimism](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m), scrierea gazului L1 costă în jur de 100 gwei, iar gazul L2 costă 0,001 gwei (acesta este prețul normal și poate crește odată cu congestia). Așadar, pentru costul unui gaz L1 putem cheltui o sută de mii de gaz pentru procesarea L2. Considerând că nu suprascriem stocarea, putem scrie aproximativ cinci cuvinte în L2 pentru prețul unui gaz L1. Pentru o singură dovadă Merkle, putem scrie toate cele 1024 de cuvinte în memorie (presupunând că acestea pot fi calculate în lanț pentru început, și nu furnizate într-o tranzacție) și ne rămâne încă cea mai mare parte din gaz.
 
-## Concluzie \{#conclusion}
+## Concluzie {#conclusion}
 
 În lumea reală, probabil că nu veți implementa niciodată arbori Merkle pe cont propriu. Pot fi folosite biblioteci binecunoscute și auditate și este în general preferabil să nu implementați primitive criptografice pe cont propriu. Acum sper că înțelegeți mai bine dovezile Merkle și puteți decide când merită să fie folosite.
 

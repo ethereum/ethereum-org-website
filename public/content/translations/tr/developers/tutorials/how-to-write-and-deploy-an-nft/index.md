@@ -22,13 +22,13 @@ Bu öğreticinin 2. Bölümünde, bir NFT'yi basmak için akıllı sözleşmemiz
 
 Ve elbette, herhangi bir noktada sorunuz olursa, [Alchemy Discord](https://discord.gg/gWuC7zB)'dan bize ulaşmaktan veya [Alchemy'nin NFT API belgelerini](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api) ziyaret etmekten çekinmeyin!
 
-## Adım 1: Ethereum ağına bağlanın \{#connect-to-ethereum}
+## Adım 1: Ethereum ağına bağlanın {#connect-to-ethereum}
 
 Ethereum blok zincirine istek göndermenin birçok yolu vardır, ancak işleri kolaylaştırmak için, kendi düğümlerimizi çalıştırmak zorunda kalmadan Ethereum zinciri ile iletişim kurmamızı sağlayan bir blok zinciri geliştirici platformu ve API'si olan[Alchemy](https://alchemy.com/signup/eth)'de ücretsiz bir hesap kullanacağız.
 
 Bu eğitimde, akıllı sözleşme dağıtımımızda perde arkasında neler olup bittiğini anlamak için Alchemy'nin izleme ve analitik geliştirici araçlarından da yararlanacağız. Henüz bir Alchemy hesabınız yoksa, [buradan](https://alchemy.com/signup/eth) ücretsiz kaydolabilirsiniz.
 
-## Adım 2: Uygulamanızı (ve API anahtarınızı) oluşturun \{#make-api-key}
+## Adım 2: Uygulamanızı (ve API anahtarınızı) oluşturun {#make-api-key}
 
 Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anahtarı oluşturabilirsiniz. Bu, Sepolia test ağına istekte bulunmamıza izin verecektir. Eğer test ağları hakkında daha fazlasını öğrenmeye meraklıysanız [bu rehbere](https://docs.alchemyapi.io/guides/choosing-a-network) göz atın.
 
@@ -42,7 +42,7 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anah
 
 3. "Uygulama oluştur"u tıklayın, işte bu kadar! Uygulamanız aşağıdaki tabloda görünmelidir.
 
-## Adım 3: Bir Ethereum hesabı oluşturun (adres) \{#create-eth-address}
+## Adım 3: Bir Ethereum hesabı oluşturun (adres) {#create-eth-address}
 
 İşlem göndermek ve almak için bir Ethereum hesabına ihtiyacımız var. Bu eğitim için, Ethereum hesap adresinizi yönetmek için kullanılan tarayıcı üstü bir sanal cüzdan olan MetaMask'i kullanacağız. Ethereum'daki işlemlerin nasıl çalıştığı hakkında daha fazla bilgi edinmek istiyorsanız, Ethereum Vakfı'nın [bu sayfasına](/developers/docs/transactions/) göz atın.
 
@@ -50,11 +50,11 @@ Bir Alchemy hesabı oluşturduktan sonra, bir uygulama oluşturarak bir API anah
 
 ![Sepolia'yı ağınız olarak ayarlayın](./metamask-goerli.png)
 
-## Adım 4: Bir Musluktan ether ekleyin \{#step-4-add-ether-from-a-faucet}
+## Adım 4: Bir Musluktan ether ekleyin {#step-4-add-ether-from-a-faucet}
 
 Akıllı sözleşmemizi test ağına dağıtmak için biraz sahte ETH'ye ihtiyacımız olacak. ETH alabilmek için Alchemy tarafından barındırılan [Sepolia Musluğuna](https://sepoliafaucet.com/) gidin, hesabınızın adresini girin, sonra da "Bana ETH gönder"e tıklayın. Kısa bir süre sonra MetaMask hesabınızda ETH'yi görmelisiniz!
 
-## Adım 5: Bakiyenizi kontrol edin \{#check-balance}
+## Adım 5: Bakiyenizi kontrol edin {#check-balance}
 
 Bakiyemizin yerinde olduğundan emin olmak için [Alchemy düzenleyici arayıcını](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D) kullanarak bir [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) talebi oluşturalım. Bu, cüzdanımızdaki ETH miktarını döndürür. MetaMask hesap adresinizi girdikten ve "Send Request"e tıkladıktan sonra aşağıdaki gibi bir yanıt görmelisiniz:
 
@@ -64,7 +64,7 @@ Bakiyemizin yerinde olduğundan emin olmak için [Alchemy düzenleyici arayıcı
 
 Vay be! Tüm sahte paramız yerli yerinde.
 
-## Adım 6: Projemizi başlatın \{#initialize-project}
+## Adım 6: Projemizi başlatın {#initialize-project}
 
 Öncelikle projemiz için bir klasör oluşturmamız gerekecek. Komut satırınıza gidin ve şunu yazın:
 
@@ -102,7 +102,7 @@ Kurulum sorularına nasıl cevap verdiğiniz çok önemli değil; referans olmas
 
 package.json'ı onaylayın ve artık hazırız!
 
-## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview)'i kurun \{#install-hardhat}
+## Adım 7: [Hardhat](https://hardhat.org/getting-started/#overview)'i kurun {#install-hardhat}
 
 Hardhat, Ethereum yazılımınızı derlemek, dağıtmak, test etmek ve hatalarını ayıklamak için bir geliştirme ortamıdır. Bu geliştiricilere canlı zincirde dağıtmadan önce akıllı sözleşmelerini ve merkeziyetsiz uygulamalarını geliştirirken yardımcı olur.
 
@@ -112,7 +112,7 @@ my-nft projemizin içinde şunu yürütün:
 
 [Kurulum talimatları](https://hardhat.org/getting-started/#overview) hakkında daha fazla ayrıntı için bu sayfaya göz atın.
 
-## Adım 8: Hardhat projesi oluşturun \{#create-hardhat-project}
+## Adım 8: Hardhat projesi oluşturun {#create-hardhat-project}
 
 Proje klasörümüzün içinde şunu yürütün:
 
@@ -136,7 +136,7 @@ Daha sonra bir karşılama mesajı ve ne yapmak istediğinizi seçme seçeneği 
 
 Bu, bizim için bir hardhat.config.js dosyası oluşturacak ve burada projemiz için tüm ayarları belirteceğiz (adım 13'te).
 
-## Adım 9: Proje klasörleri ekleyin \{#add-project-folders}
+## Adım 9: Proje klasörleri ekleyin {#add-project-folders}
 
 Projemizi düzenli tutmak için iki yeni klasör oluşturacağız. Komut satırınızda projenizin kök dizinine gidin ve şunu yazın:
 
@@ -147,7 +147,7 @@ Projemizi düzenli tutmak için iki yeni klasör oluşturacağız. Komut satır�
 
 - scripts/, akıllı sözleşmemizle dağıtmak ve etkileşim kurmak için komut dosyalarını tutacağımız yerdir
 
-## Adım 10: Sözleşmemizi yazın \{#write-contract}
+## Adım 10: Sözleşmemizi yazın {#write-contract}
 
 Artık ortamımız hazır olduğuna göre, daha heyecan verici şeylere geçelim: _akıllı sözleşme kodumuzu yazmak!_
 
@@ -212,7 +212,7 @@ Son olarak, bir NFT basmamızı sağlayan `mintNFT(address recipient, string mem
 
 `mintNFT`, devralınan ERC-721 kitaplığından bazı yöntemleri çağırır ve nihayetinde yeni basılmış NFT'nin kimliğini temsil eden bir sayı döndürür.
 
-## Adım 11: MetaMask ve Alchemy'i projenize bağlayın \{#connect-metamask-and-alchemy}
+## Adım 11: MetaMask ve Alchemy'i projenize bağlayın {#connect-metamask-and-alchemy}
 
 Artık bir MetaMask cüzdanı ile Alchemy hesabı oluşturduğumuza ve akıllı sözleşmemizi yazdığımıza göre, üçünü birbirine bağlamanın zamanı geldi.
 
@@ -243,7 +243,7 @@ Bunları kodumuza gerçekten bağlamak için adım 13'te hardhat.config.js dosya
 <EnvWarningBanner />
 }
 
-## Adım 12: Ethers.js'yi kurun \{#install-ethers}
+## Adım 12: Ethers.js'yi kurun {#install-ethers}
 
 Ethers.js, [standart JSON-RPC yöntemlerini](/developers/docs/apis/json-rpc/) daha kullanıcı dostu yöntemlerle birleştirerek Ethereum'la etkileşimde bulunmayı ve Ethereum'a istek göndermeyi kolaylaştıran bir kütüphanedir.
 
@@ -255,7 +255,7 @@ Proje klasörünüzde şunu yazın:
 
 Bir sonraki adımda hardhat.config.js'mizde de ether'lere ihtiyacımız olacak.
 
-## Adım 13: hardhat.config.js'yi güncelleyin \{#update-hardhat-config}
+## Adım 13: hardhat.config.js'yi güncelleyin {#update-hardhat-config}
 
 Şimdiye kadar birkaç bağımlılık ve eklenti ekledik, şimdi projemizin bunların hepsini tanıması için hardhat.config.js'yi güncellememiz gerekiyor.
 
@@ -279,7 +279,7 @@ Hardhat.config.js dosyanızı şöyle görünecek şekilde güncelleyin:
        },
     }
 
-## Adım 14: Sözleşmemizi derleyin \{#compile-contract}
+## Adım 14: Sözleşmemizi derleyin {#compile-contract}
 
 Şimdiye kadar yaptığımız her şeyin çalıştığından emin olmak için sözleşmemizi derleyelim. Derleme görevi, yerleşik hardhat görevlerden biridir.
 
@@ -289,7 +289,7 @@ Komut satırından şunu yürütün:
 
 Kaynak dosyada verilmeyen SPDX lisans tanımlayıcısı hakkında bir uyarı alabilirsiniz, ancak bunun için endişelenmenize gerek yok, geri kalan her şey düzgün olacaktır! Düzgün değilse, istediğiniz zaman [Alchemy discord](https://discord.gg/u72VCg3)'da mesaj gönderebilirsiniz.
 
-## Adım 15: Dağıtım komut dosyamızı yazın \{#write-deploy}
+## Adım 15: Dağıtım komut dosyamızı yazın {#write-deploy}
 
 Artık sözleşmemiz yazıldığına ve yapılandırma dosyamız kullanıma hazır olduğuna göre, sözleşme dağıtım komut dosyanızı yazmanın zamanı geldi.
 
@@ -323,7 +323,7 @@ Ethers.js'deki ContractFactory, yeni akıllı sözleşmeleri dağıtmak için ku
 
 Bir ContractFactory üzerinde deploy() öğesinin çağrılması, dağıtımı başlatır ve bir çözümlendiğinde Sözleşme oluşturacak bir Söz döndürür. Bu, akıllı sözleşme fonksiyonlarımızın her biri için bir yöntemi olan nesnedir.
 
-## Adım 16: Sözleşmemizi dağıtın \{#deploy-contract}
+## Adım 16: Sözleşmemizi dağıtın {#deploy-contract}
 
 Sonunda akıllı sözleşmemizi uygulamaya hazırız! Proje dizininizin kök dizinine geri dönün ve komut satırında şunu çalıştırın:
 

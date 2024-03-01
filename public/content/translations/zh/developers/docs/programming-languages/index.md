@@ -8,7 +8,7 @@ lang: zh
 
 以太坊及其社区拥抱开源。 您可以找到各种语言的社区项目 - 客户端实现、API、开发框架、测试工具。
 
-## 选择您的语言 \{#data}
+## 选择您的语言 {#data}
 
 选择您使用的编程语言以便查找项目、资源和虚拟社区：
 
@@ -22,7 +22,7 @@ lang: zh
 - [面向 Ruby 开发者的以太坊资源](/developers/docs/programming-languages/ruby/)
 - [面向 Rust 开发者的以太坊资源](/developers/docs/programming-languages/rust/)
 
-### 如果不支持我的语言怎么办 \{#other-lang}
+### 如果不支持我的语言怎么办 {#other-lang}
 
 如果您想链接到资源或指向额外编程语言的虚拟社区，您可以通过[提出问题](https://github.com/ethereum/ethereum-org-website/issues/new/choose) 来申请新页面。
 

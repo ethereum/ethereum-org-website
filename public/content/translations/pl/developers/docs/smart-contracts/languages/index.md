@@ -13,11 +13,11 @@ Dwa najbardziej aktywne i obsługiwane języki to:
 
 Bardziej doświadczeni programiści mogą również użyć Yul, pośredniego języka dla [wirtualnej maszyny Ethereum](/developers/docs/evm/), lub Yul+, rozszerzenia Yul.
 
-## Warunki wstępne \{#prerequisites}
+## Warunki wstępne {#prerequisites}
 
 Wcześniejsza znajomość języków programowania, zwłaszcza JavaScript lub Python, może pomóc w zrozumieniu różnic w językach inteligentnych kontraktów. Zalecamy również zrozumienie inteligentnych kontraktów jako koncepcji przed zbytnim zagłębieniem się w porównania języków. [Wprowadzenie do inteligentnych kontraktów](/developers/docs/smart-contracts/).
 
-## Solidity \{#solidity}
+## Solidity {#solidity}
 
 - Wpłynęły na niego języki C++, Python i JavaScript.
 - Typowanie statyczne (typ zmiennej jest znany w czasie kompilacji).
@@ -26,7 +26,7 @@ Wcześniejsza znajomość języków programowania, zwłaszcza JavaScript lub Pyt
   - Biblioteki (można utworzyć kod wielokrotnego użytku, który można wywoływać z różnych kontraktów — jak funkcje statyczne w klasie statycznej w innych językach programowania obiektowego).
   - Złożone typy zdefiniowane przez użytkownika.
 
-### Ważne linki \{#important-links}
+### Ważne linki {#important-links}
 
 - [Dokumentacja](https://docs.soliditylang.org/en/latest/)
 - [Portal poświęcony językowi Solidity](https://soliditylang.org/)
@@ -36,7 +36,7 @@ Wcześniejsza znajomość języków programowania, zwłaszcza JavaScript lub Pyt
 - [Ściągawka](https://reference.auditless.com/cheatsheet)
 - [Blog poświęcony Solidity](https://blog.soliditylang.org/)
 
-### Przykładowy kontrakt \{#example-contract}
+### Przykładowy kontrakt {#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -79,7 +79,7 @@ contract Coin {
 
 Ten przykład powinien dać wyobrażenie o składni kontraktu Solidity. Bardziej szczegółowy opis funkcji i zmiennych znajdziesz [w dokumentacji](https://docs.soliditylang.org/en/latest/contracts.html).
 
-## Vyper \{#vyper}
+## Vyper {#vyper}
 
 - Pythonowy język programowania
 - Silne typowanie
@@ -96,7 +96,7 @@ Ten przykład powinien dać wyobrażenie o składni kontraktu Solidity. Bardziej
 
 Aby uzyskać więcej informacji, [przeczytaj artykuł o podstawach Vypera](https://vyper.readthedocs.io/en/latest/index.html).
 
-### Ważne linki \{#important-links-1}
+### Ważne linki {#important-links-1}
 
 - [Dokumentacja](https://vyper.readthedocs.io)
 - [Vyper w przykładach](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
@@ -105,7 +105,7 @@ Aby uzyskać więcej informacji, [przeczytaj artykuł o podstawach Vypera](https
 - [Ściągawka](https://reference.auditless.com/cheatsheet)
 - [Aktualizacja 8 stycznia 2020 r](https://blog.ethereum.org/2020/01/08/update-on-the-vyper-compiler)
 
-### Przykład \{#example}
+### Przykład {#example}
 
 ```python
 # Open Auction
@@ -196,7 +196,7 @@ def endAuction():
 
 Ten przykład powinien dać wyobrażenie o składni kontraktu Vyper. Aby uzyskać bardziej szczegółowy opis funkcji i zmiennych, [zobacz dokumentację](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
-## Yul i Yul+ \{#yul}
+## Yul i Yul+ {#yul}
 
 Jeśli dopiero zapoznajesz się z Ethereum i nie kodowałeś jeszcze w językach kontraktów inteligentnych, zalecamy rozpoczęcie pracy od Solidity lub Vyper. Zajrzyj do Yul lub Yul+ dopiero po zapoznaniu się z najlepszymi praktykami w zakresie bezpieczeństwa inteligentnych kontraktów i specyfiką pracy z EVM.
 
@@ -212,14 +212,14 @@ Jeśli dopiero zapoznajesz się z Ethereum i nie kodowałeś jeszcze w językach
 - Początkowo zaprojektowany na potrzeby kontraktu typu [optymistyczna wartość zbiorcza](/docs/layer-2-scaling/#rollups-and-sidechains).
 - Yul+ można postrzegać jako eksperymentalną propozycję ulepszenia Yul, dodającą do niego nowe funkcje.
 
-### Ważne linki \{#important-links-2}
+### Ważne linki {#important-links-2}
 
 - [Dokumentacja Yul](https://docs.soliditylang.org/en/latest/yul.html)
 - [Dokumentacja Yul+](https://github.com/fuellabs/yulp)
 - [Yul+ Playground](https://yulp.fuel.sh/)
 - [Post wprowadzający do Yul+](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### Przykładowy kontrakt \{#example-contract-2}
+### Przykładowy kontrakt {#example-contract-2}
 
 Poniższy prosty przykład implementuje funkcję potęgową. Można go skompilować, używając `solc --strict-assembly --bin input.yul`. Przykład należy zapisać w pliku input.yul.
 
@@ -244,34 +244,34 @@ Poniższy prosty przykład implementuje funkcję potęgową. Można go skompilow
 
 Jeśli masz już duże doświadczenie w inteligentnych kontraktach, pełną implementację ERC20 w Yul znajdziesz [tutaj](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
-## Jak wybrać \{#how-to-choose}
+## Jak wybrać {#how-to-choose}
 
 Podobnie jak w przypadku każdego innego języka programowania, najczęściej chodzi o wybór odpowiedniego narzędzia do danej pracy, jak również o osobiste preferencje.
 
 Oto kilka rzeczy do rozważenia, jeśli nie próbowałeś jeszcze żadnego z języków:
 
-### Co jest wspaniałego w Solidity? \{#solidity-advantages}
+### Co jest wspaniałego w Solidity? {#solidity-advantages}
 
 - Jeśli dopiero zaczynasz, jest tam wiele samouczków i narzędzi do nauki. Więcej informacji zawiera artykuł [Ucz się przez kodowanie](/developers/learning-tools/).
 - Dostępne dobre narzędzia programistyczne.
 - Solidity ma dużą społeczność programistów, co oznacza, że ​​najprawdopodobniej szybko znajdziesz odpowiedzi na swoje pytania.
 
-### Co jest wspaniałego w Vyper? \{#vyper-advatages}
+### Co jest wspaniałego w Vyper? {#vyper-advatages}
 
 - Świetny sposób na rozpoczęcie pracy dla programistów Pythona, którzy chcą pisać inteligentne kontrakty.
 - Vyper ma mniejszą liczbę funkcji, dzięki czemu świetnie nadaje się do szybkiego prototypowania pomysłów.
 - Vyper ma być łatwy do skontrolowania i w największym stopniu czytelny dla człowieka.
 
-### Co jest wspaniałego w Yul i Yul+? \{#yul-advantages}
+### Co jest wspaniałego w Yul i Yul+? {#yul-advantages}
 
 - Uproszczony i funkcjonalny język niskiego poziomu.
 - Pozwala zbliżyć się do pierwotnej EVM, co może pomóc zoptymalizować zużycie gazu w Twoich kontraktach.
 
-## Porównania języków \{#language-comparisons}
+## Porównania języków {#language-comparisons}
 
 Aby porównać podstawową składnię, cykl życia kontraktu, interfejsy, operatory, struktury danych, funkcje, przepływ kontroli itd., sprawdź tę [ściągawkę firmy Auditless](https://reference.auditless.com/cheatsheet/)
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 - [Biblioteka Kontraktów Solidity autorstwa OpenZeppelin](https://docs.openzeppelin.com/contracts)
 - [Solidity w przykładach](https://solidity-by-example.org)

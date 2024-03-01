@@ -85,7 +85,7 @@ MyWaffleProject
 └── package.json
 ```
 
-### 现在让我们来谈谈其中一些文件： \{#now-lets-talk}
+### 现在让我们来谈谈其中一些文件： {#now-lets-talk}
 
 - Greeter.sol - 我们的智能合约是用 solidity 编写的；
 
@@ -132,7 +132,7 @@ describe("Greeter", function () {
 })
 ```
 
-### 下一步是编译我们的合约并运行测试： \{#compiling-and-testing}
+### 下一步是编译我们的合约并运行测试： {#compiling-and-testing}
 
 Waffle 测试使用 Mocha（测试框架）与 Chai（一个断言库）。 您只需运行 `npx hardhat test` 并等待以下消息出现。
 
@@ -140,7 +140,7 @@ Waffle 测试使用 Mocha（测试框架）与 Chai（一个断言库）。 您�
 ✓ Should return the new greeting once it's changed（更改后应立即返回新问候语）
 ```
 
-### 到目前为止，一切看起来都很好，让我们为我们的项目增加一些复杂性吧 <Emoji text=":slightly_smiling_face:" size={1}/> \{#adding-complexity}
+### 到目前为止，一切看起来都很好，让我们为我们的项目增加一些复杂性吧 <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
 想象一下这种情况，有人添加了一个空字符串作为问候语。 这不是一种热情的问候，对吗？  
 让我们确保这一点不会发生：
@@ -201,7 +201,7 @@ greeting = _greeting;
 
 恭喜！ 您做到了:)
 
-### 结论 \{#conclusion}
+### 结论 {#conclusion}
 
 我们使用 Waffle、Hardhat 和 ethers.js 制作了一个简单的项目。 我们学习了如何设置项目、添加测试和实现新功能。
 

@@ -8,27 +8,27 @@ isOutdated: true
 
 A orákulumok olyan adatcsatornák, amelyek összekapcsolják az Ethereumot az off-chain, valós információkkal, így le tudod kérdezni az adatokat az okosszerződéseidben. Például a hírpiac dappok orákulumokat használnak, hogy az események alapján elszámolják a kifizetéseket. Egy hírpiacon lehetőséged van ETH-ben fogadni, hogy például ki lesz az Egyesül Államok elnöke. Egy orákulumot fognak használni, hogy megerősítsék a kimenetelt és kifizessék a nyerteseket.
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 Érdemes tisztában lenned a [csomópontok](/developers/docs/nodes-and-clients/), [konszenzus mechanizmusok](/developers/docs/consensus-mechanisms/), és a [okosszerződés anatómia](/developers/docs/smart-contracts/anatomy/) témakörökkel, különösen az eseményekkel.
 
-## Mi az az orákulum \{#what-is-an-oracle}
+## Mi az az orákulum {#what-is-an-oracle}
 
 Az orákulum egy áthidalás a blokklánc és külvilág között. On-chain API-ként viselkednek, melyekről lekérdezhetsz információkat az okosszerződéseidbe. Ez lehet bármi az árfolyam információktól egészen az időjárási adatokig.
 
-## Miért van rájuk szükség? \{#why-are-they-needed}
+## Miért van rájuk szükség? {#why-are-they-needed}
 
 Az Ethereumhoz hasonló blokkláncoknál fontos, hogy a hálózat összes csomópontja minden tranzakciót visszajátszhasson, és ugyanazzal az eredménnyel járjon, garantáltan. Az API-ok potenciálisan változó adatokat adnak. Ha valakinek egy ETH összeget küldenél egy előre leegyeztetett $USD árfolyam alapján egy árfolyam API segítségével, a lekérdezés más eredményt adna vissza különböző napokon. Nem is beszélve arról, hogy az API-t meg lehet hackelni vagy elavulttá válhat. Ha ez megtörténik, akkor a hálózat csomópontjai nem tudnának egyetérteni az Ethereum jelenlegi állapota felett, tehát lényegében szétbomlana a [konszenzus.](/developers/docs/consensus-mechanisms/).
 
 Az orákulumok megoldják ezt a problémát úgy, hogy az adatot a blokkláncra juttatják. Tehát minden, a tranzakciót visszajátszó csomópont ugyanazokat a megváltoztathatatlan adatokat fogja használni, amelyeket mindenki láthat. Ehhez az orákulum általában egy okosszerződésből és néhány olyan off-chain komponensből áll, amelyek lekérdezhetik az API-okat, majd időszakonként tranzakciókat küldenek az okosszerződés adatainak frissítésére.
 
-### Biztonság \{#security}
+### Biztonság {#security}
 
 Egy orákulum annyira biztonságos, mint az adatforrása(i). Ha egy dapp a Uniswap-et használja orákulumként az ETH/DAI árfolyam adathoz, egy támadónak lehetősége van az árfolyamot manipulálni a Uniswap-en, hogy módosítsa a dapp értelmezését a jelenlegi árfolyamról. Egy példa ennek megakadályozására [egy feed rendszer](https://developer.makerdao.com/feeds/), mint amit a MakerDAO is használ, amely számos külső árfolyam feed adatait gyűjti össze ahelyett, hogy csak egyetlen forrásra támaszkodna.
 
-## Használat \{#usage}
+## Használat {#usage}
 
-### Orákulum, mint szolgáltatás \{#oracles-as-a-service}
+### Orákulum, mint szolgáltatás {#oracles-as-a-service}
 
 A Chainlinkhez hasonló szolgáltatások orákulum mint szolgáltatás jellegű megoldásokat kínálnak. Megvan az infrastruktúrájuk, hogy olyan dolgokat csinálj, mint:
 
@@ -74,13 +74,13 @@ contract PriceConsumerV3 {
 
 [Dokumentáció megtekintése](https://docs.chain.link/docs/get-the-latest-price)
 
-#### Orákulum szolgáltatások \{#other-services}
+#### Orákulum szolgáltatások {#other-services}
 
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
 - [Provable](https://provable.xyz/)
 
-### Orákulum okosszerződés építése \{#build-an-oracle-smart-contract}
+### Orákulum okosszerződés építése {#build-an-oracle-smart-contract}
 
 Itt egy példa Pedro Costától egy orákulum szerződésre. További megjegyzéseket találhatsz ebben a cikkben: [Blokklánc orákulum implementálása Ethereumon](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e).
 
@@ -198,7 +198,7 @@ contract Oracle {
 
 _Nagyon örülnénk még több orákulum okosszerződésekről szóló dokumentációnak. Ha tudsz segíteni, készíts egy PR-t!_
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [Decentralised Oracles: a comprehensive overview](https://medium.com/fabric-ventures/decentralised-oracles-a-comprehensive-overview-d3168b9a8841) –_Julien Thevenard_
 - [Implementing a Blockchain Oracle on Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e) –_Pedro Costa_

@@ -17,9 +17,9 @@ Merkeziyetsiz depolama (dStorage) seçeneklerine bakarken, kullanıcının göz 
 - Merkeziyetsizlik
 - Mutabakat
 
-## Kalıcılık mekanizması / teşvik yapısı \{#persistence-mechanism}
+## Kalıcılık mekanizması / teşvik yapısı {#persistence-mechanism}
 
-### Blok zinciri tabanlı \{#blockchain-based}
+### Blok zinciri tabanlı {#blockchain-based}
 
 Bir veri parçasının sonsuza kadar kalıcı olması için bir kalıcılık mekanizması kullanmamız gerekir. Örneğin Ethereum'daki kalıcılık mekanizması, bir düğüm çalıştırılırken tüm zincirin hesaba katılması gerekmesidir. Yeni veri parçaları zincirin sonuna katılır ve zincir büyümeye devam eder: Bu da her düğümün gömülü verinin tamamını kopyalamasını gerektirir.
 
@@ -34,7 +34,7 @@ Blok zinciri tabanlı kalıcılığa sahip platformlar:
 - Ethereum
 - [Arweave](https://www.arweave.org/)
 
-### Sözleşme tabanlı \{#contract-based}
+### Sözleşme tabanlı {#contract-based}
 
 **Sözleşme tabanlı** kalıcılık, verinin her düğüm tarafından kopyalanıp sonsuza kadar depolanamayacağını öngörür, buna göre bunun yerine sözleşme anlaşmaları ile idame edilmelidir. Bunlar, belirli bir süre için bir veri parçasını tutma sözü veren birden fazla düğümle yapılan sözleşmelerdir. Verilerin kalıcı olmasını sağlamak için bittiklerinde iade edilmeleri veya yenilenmeleri gerekir.
 
@@ -50,7 +50,7 @@ Sözleşme tabanlı kalıcılığa sahip platformlar:
 - [Swarm](https://www.ethswarm.org/)
 - [4EVERLAND](https://www.4everland.org/)
 
-### Göz önüne almanız gereken ek kavramlar \{#additional-consideration}
+### Göz önüne almanız gereken ek kavramlar {#additional-consideration}
 
 IPFS; dosyaları, web sitelerini, uygulamaları ve verileri depolamaya ve bunlara erişmeye yarayan dağıtılmış bir sistemdir. Dahili bir teşvik düzenine sahip değildir ama bunun yerine yukarıdaki sözleşme esaslı teşvik çözümlerinin herhangi biriyle daha uzun süreli kalıcılık için kullanılabilir. IPFS üzerinde veriyi kalıcı kılmanın başka bir yolu ise verinizi sizin için "iliştirecek" bir iliştirme hizmeti ile çalışmaktır. Kendinizin ve/veya başkalarının verilerini kalıcı kılmak için kendi IPFS düğümünüzü bile çalıştırıp ağa katkı sağlayabilirsiniz!
 
@@ -64,11 +64,11 @@ IPFS; dosyaları, web sitelerini, uygulamaları ve verileri depolamaya ve bunlar
 
 SWARM, bir depolama teşvik sistemi ve bir depolama fiyatı kahinine sahip merkeziyetsiz bir veri depolama dağıtım teknolojisidir.
 
-## Veri tutma \{#data-retention}
+## Veri tutma {#data-retention}
 
 Sistemlerin verileri tutmak için verilerin tutulduğundan emin olmalarını sağlayan bir tür mekanizmaya sahip olmaları gerekir.
 
-### Zorluk mekanizması \{#challenge-mechanism}
+### Zorluk mekanizması {#challenge-mechanism}
 
 Verilerin tutulduğundan emin olmanın en popüler yollarından biri, hâlâ verilere sahip olduklarından emin olmak için düğümlere verilen bir tür kriptografik sorgulama kullanmaktır. Arweave'in erişim ispatına bakarak basit bir yöntemi görebilirsiniz. Hem en son blokta hem de geçmişte rastgele bir blokta verilere sahip olup olmadıklarını görmek için düğümlere bir meydan okuma gönderirler. Düğüm, cevabı bulamazsa cezalandırılır.
 
@@ -81,7 +81,7 @@ Bir meydan okuma mekanizmasına sahip dStorage türleri:
 - Crust Network
 - 4EVERLAND
 
-### Merkeziyetsizlik \{#decentrality}
+### Merkeziyetsizlik {#decentrality}
 
 Platformların merkeziyetsizlik düzeyini ölçmek için pek iyi araçlar olmasa da merkezileştirilmediklerini kanıtlamak için bir tür KYC içermeyen araçlar kullanmanız iyi olur.
 
@@ -96,7 +96,7 @@ KYC'siz merkeziyetsiz araçlar:
 - Crust Network
 - 4EVERLAND
 
-### Mutabakat \{#consensus}
+### Mutabakat {#consensus}
 
 Bu araçların çoğu kendi [mutabakat mekanizması](/developers/docs/consensus-mechanisms/) versiyonuna sahiptir ancak genellikle ya [**iş ispatı (PoW)**](/developers/docs/consensus-mechanisms/pow/) ya da [**hisse ispatı (PoS)**](/developers/docs/consensus-mechanisms/pos/) üzerine kuruludur.
 
@@ -112,7 +112,7 @@ Hisse ispatı tabanlı:
 - 0Chain
 - Crust Network
 
-## İlgili araçlar \{#related-tools}
+## İlgili araçlar {#related-tools}
 
 **IPFS - _InterPlanetary File System (Gezegenler Arası Dosya Sistemi), Ethereum için merkeziyetsiz bir depolama ve dosya referans sistemidir._**
 
@@ -198,13 +198,13 @@ Hisse ispatı tabanlı:
 - [Dokümanlar](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Merkeziyetsiz Depolama Nedir?](https://coinmarketcap.com/alexandria/article/what-is-decentralized-storage-a-deep-dive-by-filecoin) - _CoinMarketCap_
 - [Merkeziyetsiz Depolamayla İlgili Beş Yaygın Mitin Çürütülmesi](https://www.storj.io/blog/busting-five-common-myths-about-decentralized-storage) - _Storj_
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## İlgili konular \{#related-topics}
+## İlgili konular {#related-topics}
 
 - [Geliştirme çerçeveleri](/developers/docs/frameworks/)

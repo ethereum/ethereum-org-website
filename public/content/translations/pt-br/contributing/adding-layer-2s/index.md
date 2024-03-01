@@ -4,7 +4,7 @@ description: A política que usamos ao adicionar uma camada 2 ao ethereum.org
 lang: pt-br
 ---
 
-# Adicionando Camada 2S \{#adding-layer-2}
+# Adicionando Camada 2S {#adding-layer-2}
 
 Queremos garantir que listamos os melhores recursos possíveis para que os usuários possam navegar no espaço da camada 2 de maneira segura e confiante.
 
@@ -18,9 +18,9 @@ Atualmente, listamos as 2LS nas seguintes páginas:
 
 Camada 2 é um paradigma relativamente novo e empolgante para o Ethereum. Tentamos criar uma estrutura justa a ser considerada no ethereum.org, mas os critérios listados mudarão e evoluirão com o tempo.
 
-## A estrutura de decisão \{#decision-framework}
+## A estrutura de decisão {#decision-framework}
 
-### Critérios para inclusão: os obrigatórios \{#criteria-for-inclusion-the-must-haves}
+### Critérios para inclusão: os obrigatórios {#criteria-for-inclusion-the-must-haves}
 
 **Listando na L2BEAT**
 
@@ -70,7 +70,7 @@ _Não consideramos outras soluções de dimensionamento que não usam o Ethereum
 
 - Os projetos listados exigem um explorador de blocos de trabalho para permitir aos usuários navegar facilmente pela cadeia.
 
-### Outros critérios: o que é importante ter \{#nice-to-haves}
+### Outros critérios: o que é importante ter {#nice-to-haves}
 
 **Suporte ao câmbio para o projeto**
 
@@ -88,7 +88,7 @@ _Não consideramos outras soluções de dimensionamento que não usam o Ethereum
 
 - Alguma carteira oferece suporte L2 nativamente?
 
-## Adicione sua camada 2 \{#add-exchange}
+## Adicione sua camada 2 {#add-exchange}
 
 Se você deseja adicionar a camada 2 ao ethereum.org, crie um tíquete no GitHub.
 

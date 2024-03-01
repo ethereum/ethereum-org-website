@@ -11,7 +11,7 @@ lang: zh
 published: 2021-12-30
 ---
 
-## 简介 \{#introduction}
+## 简介 {#introduction}
 
 理想的情况下，我们想要将所有东西存储在以太坊存储器中。这些数据存储于数以千计的计算机中 且有极高的可用性（数据不会被审查）和完整性（不能在未经授权的情况下修改数据）， 但存储一个 32 字节的词一般需要花费 20,000 燃料。 在撰写此教程时，该费用 等于 6.60 美元。 每字节 21 美分对许多应用程序来说都过于昂贵。
 
@@ -19,7 +19,7 @@ published: 2021-12-30
 
 本篇文章中，您将学习**如何**在以下情况下确保数据的完整性：不将数据存储在区块链上，而是使用 [Merkle 证明](https://computersciencewiki.org/index.php/Merkle_proof)。
 
-## 工作原理 \{#how-does-it-work}
+## 工作原理 {#how-does-it-work}
 
 理论上，我们只需要存储链上数据的哈希值，然后将所有数据发送到需要这些数据的交易中。 但是，这会非常昂贵。 1 字节的数据通过交易发送的成本约 16 个燃料，目前约 0.5 美分，或每千字节约 5 美元。 每兆字节 5,000 美元，这对于许多应用程序来说仍然太昂贵，而且还没有加上对数据进行哈希计算的费用。
 
@@ -31,15 +31,15 @@ published: 2021-12-30
 
 ![C 值证明](proof-c.png)
 
-## 实现 \{#implementation}
+## 实现 {#implementation}
 
 [此处提供示例代码](https://github.com/qbzzt/merkle-proofs-for-offline-data-integrity)。
 
-### 链下代码 \{#off-chain-code}
+### 链下代码 {#off-chain-code}
 
 在这篇文章中，我们使用 JavaScript 进行链下计算。 大多数去中心化应用程序的 JavaScript 中都有链下组件。
 
-#### 创建默克尔根 \{#creating-the-merkle-root}
+#### 创建默克尔根 {#creating-the-merkle-root}
 
 首先，我们需要向区块链提供默克尔根。
 
@@ -128,7 +128,7 @@ const getMerkleRoot = (inputArray) => {
 
 要到达根，一直上升到只剩下一个值的层级。
 
-#### 创建一个默克尔证明 \{#creating-a-merkle-proof}
+#### 创建一个默克尔证明 {#creating-a-merkle-proof}
 
 默克尔证明是与要证明的值一起哈希处理以便返回默克尔根的值。 要证明的值往往来自其他数据，因此这里更愿意单独提供，而不是作为代码的一部分。
 
@@ -165,7 +165,7 @@ const getMerkleProof = (inputArray, n) => {
 }   // getMerkleProof
 ```
 
-### 链上代码 \{#on-chain-code}
+### 链上代码 {#on-chain-code}
 
 最后，我们有核查证明的代码。 链上代码用 [Solidity](https://docs.soliditylang.org/en/v0.8.11/) 语言编写。 优化在这里更为重要，因为燃料费相对昂贵。
 
@@ -230,13 +230,13 @@ contract MerkleProof {
 
 用数学符号表示，默克尔证明的验证看起来像这样：`H(proof_n, H(proof_n-1, H(proof_n-2, ... H(proof_1, H(proof_0, value))...)))`。 此代码实现了默克尔证明。
 
-## 默克尔证明和卷叠很难混淆 \{#merkle-proofs-and-rollups}
+## 默克尔证明和卷叠很难混淆 {#merkle-proofs-and-rollups}
 
 默克尔证明对[卷叠](/developers/docs/scaling/#rollups)的作用不大。 原因在于，卷叠将所有交易数据写入一层网络，但在二层网络进行处理。 发送交易的默克尔证明的成本平均达到每个层级 638 个燃料（目前，如果字节不为零，调用数据中一个字节花费 16 个燃料，如果为零，则花费 4 个燃料）。 如果我们的数据包含 1024 个字，默克尔证明需要 10 个层级，或者总共 6380 个燃料。
 
 举一个[乐观卷叠](https://public-grafana.optimism.io/d/9hkhMxn7z/public-dashboard?orgId=1&refresh=5m)的示例，写入一层网络的燃料成本约为 100 gwei，写入二层网络的成本为 0.001 gwei（这里按正常价格计，成本可能因为网络拥塞而增加）。 所以对于一层网络上 1 个燃料的成本，我们可能需要在二层网络上花费 10 万个燃料的处理费用。 假定我们不用重写存储，这意味着我们可以用一个一层网络燃料的价格将大约五个字写入二层网络的存储中。 对于单个默克尔证明，我们可以将全部 1024 个字写入存储（假定它们可以在链上计算出来，而不是在交易中提供），并且还剩下大部分燃料。
 
-## 总结 \{#conclusion}
+## 总结 {#conclusion}
 
 在现实中，你可能永远不会独立实现默克尔树。 有很多广为人知并经过审核的程序库可供使用，一般来说，最好不要自己独立实现加密基元。 但我希望你们现在能够更好地理解默克尔证明，并能够决定何时值得使用。
 

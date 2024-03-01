@@ -10,7 +10,7 @@ Tenga en cuenta que la finalidad de esta página es proporcionar valor a los usu
 
 Para asegurar que mantenemos un standard alto de información y promover información valiosa hemos establecido un listado de políticas:
 
-## Estudios de Investigación y Tableros \{#Research-studies}
+## Estudios de Investigación y Tableros {#Research-studies}
 
 1. Metodología de Sólida
 
@@ -28,7 +28,7 @@ a. El tema de la investigación debe de ser relacionado a diseñadores web3 y ab
 
 a. El objetivo principal del texto debería ser el compartir perspectivas en lugar de fomentar un proyecto o empresa específicos.
 
-## Artículos \{#Articles}
+## Artículos {#Articles}
 
 1. La importancia para los diseñadores/investigadores de Web3 y los casos de uso de diseños comunes en Web3.
 
@@ -46,7 +46,7 @@ c. La escritura debería de ser concisa y directa.
 
 a. La principal meta del artículo debería de ser compartir conocimiento por encima de promover un proyecto particular o compañía.
 
-## Comunidades / DAOs \{#Communities-and-DAOs}
+## Comunidades / DAOs {#Communities-and-DAOs}
 
 1. El sitio web debe indicar de forma clara como ingresar a la DAO/Comunidad
 

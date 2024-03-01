@@ -8,7 +8,7 @@ lang: zh
 
 要部署一个智能合约，只需发送一个包含编译后的智能合约代码的以太坊交易，而不需要指定任何收件人。
 
-## 前置要求 \{#prerequisites}
+## 前置要求 {#prerequisites}
 
 在部署智能合约之前，您需要理解[以太坊网络](/developers/docs/networks/), [交易](/developers/docs/transactions/)和[详解智能合约](/developers/docs/smart-contracts/anatomy/)。
 
@@ -16,22 +16,22 @@ lang: zh
 
 最后，您需要在部署之前编译您的合约，所以请确保您已经阅读了[编译智能合约](/developers/docs/smart-contracts/compiling/)。
 
-## 如何部署智能合约 \{#how-to-deploy-a-smart-contract}
+## 如何部署智能合约 {#how-to-deploy-a-smart-contract}
 
-### 您所需要的 \{#what-youll-need}
+### 您所需要的 {#what-youll-need}
 
 - 您的合约字节码 – 这是通过[编译](/developers/docs/smart-contracts/compiling/)获得的。
 - 用作燃料的以太币 – 像其他交易一样，您需要设定燃料限制，这样就知道部署合约比简单的以太币交易需要更多的燃料。
 - 一个部署脚本或插件。
 - 通过以下方式之一可以访问[以太坊节点](/developers/docs/nodes-and-clients/)：运行自己的节点、连接到公共节点或使用[节点服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)的应用程序接口应用程序接口密钥。
 
-### 部署智能合约的步骤 \{#steps-to-deploy}
+### 部署智能合约的步骤 {#steps-to-deploy}
 
 所涉及的具体步骤将取决于您使用的工具。 例如，查看[关于部署合约的安全帽文档](https://hardhat.org/guides/deploying.html)或[关于网络和应用程序部署的 Truffle 文档](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)。 这是两个最受欢迎的智能合约部署工具，它们涉及到编写脚本来处理部署步骤。
 
 一旦部署，您的合约将有一个以太坊地址，就像其它[帐户](/developers/docs/accounts/)一样。
 
-## 相关工具 \{#related-tools}
+## 相关工具 {#related-tools}
 
 **Remix - _Remix 集成开发环境可以开发、部署和管理类似区块链的以太坊智能合约。_**
 
@@ -61,21 +61,21 @@ lang: zh
 
 - [相关文档](https://portal.thirdweb.com/deploy/)
 
-## 相关教程 \{#related-tutorials}
+## 相关教程 {#related-tutorials}
 
 - [部署你的第一个智能合约](/developers/tutorials/deploying-your-first-smart-contract/) _ – 介绍如何在以太坊测试网络上部署你的第一个智能合约。_
 - [Hello World | 智能合约教程](/developers/tutorials/hello-world-smart-contract/) _ – 一门便于学习的教程，介绍如何在以太坊上创建和部署基本智能合约。_
 - [在 Solidity 中与其它合约交互](/developers/tutorials/interact-with-other-contracts-from-solidity/) _——如何从现有合约中部署智能合约并与之交互。_
 - [如何减少合约的大小](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- 如何减少合约的大小使其保持在限制之下并节省燃料_
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
 - [使用安全帽部署合约](https://hardhat.org/guides/deploying.html) - _Nomic Labs_
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_
 
-## 相关主题 \{#related-topics}
+## 相关主题 {#related-topics}
 
 - [开发框架](/developers/docs/frameworks/)
 - [运行以太坊节点](/developers/docs/nodes-and-clients/run-a-node/)

@@ -6,7 +6,7 @@ lang: en
 
 A validator is expected to create, sign and broadcast an attestation during every epoch. This page outlines what these attestations look like and how they are processed and communicated between consensus clients.
 
-## What is an attestation? \{#what-is-an-attestation}
+## What is an attestation? {#what-is-an-attestation}
 
 Every [epoch](/glossary/#epoch) (6.4 minutes) a validator proposes an attestation to the network. The attestation is for a specific slot in the epoch. The purpose of the attestation is to vote in favor of the validator's view of the chain, in particular the most recent justified block and the first block in the current epoch (known as `source` and `target` checkpoints). This information is combined for all participating validators, enabling the network to reach consensus about the state of the blockchain.
 
@@ -28,7 +28,7 @@ Once the `data` is built, the validator can flip the bit in `aggregation_bits` c
 
 Finally, the validator signs the attestation and broadcasts it to the network.
 
-### Aggregated attestation \{#aggregated-attestation}
+### Aggregated attestation {#aggregated-attestation}
 
 There is a substantial overhead associated with passing this data around the network for every validator. Therefore, the attestations from individual validators are aggregated within subnets before being broadcast more widely. This includes aggregating signatures together so that an attestation that gets broadcast includes the consensus `data` and a single signature formed by combining the signatures of all the validators that agree with that `data`. This can be checked using `aggregation_bits` because this provides the index of each validator in their committee (whose ID is provided in `data`) which can be used to query individual signatures.
 
@@ -36,7 +36,7 @@ In each epoch a validator in each subnet is selected to be the `aggregator`. The
 
 When a validator is selected to be a block proposer they package aggregate attestations from the subnets up to the latest slot in the new block.
 
-### Attestation inclusion lifecycle \{#attestation-inclusion-lifecycle}
+### Attestation inclusion lifecycle {#attestation-inclusion-lifecycle}
 
 1. Generation
 2. Propagation
@@ -48,7 +48,7 @@ The attestation lifecycle is outlined in the schematic below:
 
 ![attestation lifecycle](./attestation_schematic.png)
 
-## Rewards \{#rewards}
+## Rewards {#rewards}
 
 Validators are rewarded for submitting attestations. The attestation reward depends on the participation flags (source, target and head), the base reward and the participation rate.
 
@@ -60,31 +60,31 @@ The best scenario occurs when all three flags are true, in which case a validato
 
 The flag attesting rate is measured using the sum of effective balances of all attesting validators for the given flag compared the total active effective balance.
 
-### Base reward \{#base-reward}
+### Base reward {#base-reward}
 
 The base reward is calculated according to the number of attesting validators and their effective staked ether balances:
 
 `base reward = validator effective balance x 2^6 / SQRT(Effective balance of all active validators)`
 
-#### Inclusion delay \{#inclusion-delay}
+#### Inclusion delay {#inclusion-delay}
 
 At the time when the validators voted on the head of the chain (`block n`), `block n+1` was not proposed yet. Therefore attestations naturally get included **one block later** so all attestations who voted on `block n` being the chain head got included in `block n+1` and, the **inclusion delay** is 1. If the inclusion delay doubles to two slots, the attestation reward halves, because to calculate the attestation reward the base reward is multiplied by the reciprocal of the inclusion delay.
 
-### Attestation scenarios \{#attestation-scenarios}
+### Attestation scenarios {#attestation-scenarios}
 
-#### Missing Voting Validator \{#missing-voting-validator}
+#### Missing Voting Validator {#missing-voting-validator}
 
 Validators have a maximum of 1 epoch to submit their attestation. If the attestation was missed in epoch 0, they can submit it with an inclusion delay in epoch 1.
 
-#### Missing Aggregator \{#missing-aggregator}
+#### Missing Aggregator {#missing-aggregator}
 
 There are 16 Aggregators per epoch in total. In addition, random validators subscribe to **two subnets for 256 epochs** and serve as a backup in case aggregators are missing.
 
-#### Missing block proposer \{#missing-block-proposer}
+#### Missing block proposer {#missing-block-proposer}
 
 Note that in some cases a lucky aggregator may also become the block proposer. If the attestation was not included because the block proposer has gone missing, the next block proposer would pick the aggregated attestation up and include it into the next block. However, the **inclusion delay** will increase by one.
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [Attestations in Vitalik's annotated consensus spec](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [Attestations in eth2book.info](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)

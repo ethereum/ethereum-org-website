@@ -4,7 +4,7 @@ description: Eine nicht-technische Einführung in Null-Wissen-Beweise für Anfä
 lang: de
 ---
 
-## Was sind Null-Wissen-Beweise? \{#what-are-zk-proofs}
+## Was sind Null-Wissen-Beweise? {#what-are-zk-proofs}
 
 Ein Null-Wissen-Beweis ist eine Methode, um die Gültigkeit einer Aussage zu beweisen, ohne die Aussage selbst offenzulegen. Der „Beweisanführer“ ist die Partei, die versucht, eine Aussage zu beweisen, während der „Verifizierer“ für die Validierung der Aussage verantwortlich ist.
 
@@ -14,7 +14,7 @@ Null-Wissen-Beweise erschienen erstmals 1985 in einem Artikel, „[Die Wissensko
 
 Null-Wissen-Beweise haben sich im Laufe der Jahre verbessert und werden jetzt in mehreren realen Anwendungen eingesetzt.
 
-## Warum brauchen wir Null-Wissen-Beweise? \{#why-zero-knowledge-proofs-are-important}
+## Warum brauchen wir Null-Wissen-Beweise? {#why-zero-knowledge-proofs-are-important}
 
 Null-Wissen-Beweise stellten einen Durchbruch in der angewandten Kryptografie dar, da sie versprachen, die Sicherheit von Informationen für Einzelpersonen zu verbessern. Überlegen Sie, wie Sie einen Anspruch (z. B. „Ich bin Bürger des Landes X“) gegenüber einer anderen Partei (z. B. einem Diensteanbieter) nachweisen könnten. Sie müssten „Beweise“ liefern, um Ihre Behauptung zu untermauern, wie zum Beispiel einen nationalen Pass oder einen Führerschein.
 
@@ -24,7 +24,7 @@ Null-Wissen-Beweise lösen dieses Problem, indem sie die Notwendigkeit beseitige
 
 Zurück zu unserem vorherigen Beispiel: Der einzige Beweis, den Sie benötigen, um Ihren Anspruch auf Staatsbürgerschaft zu beweisen, ist ein Null-Wissen-Beweis. Der Verifizierer muss nur prüfen, ob bestimmte Eigenschaften des Beweises zutreffen, um davon überzeugt zu sein, dass die zugrunde liegende Aussage auch zutrifft.
 
-## Wie funktionieren die Null-Wissen-Beweise? \{#how-do-zero-knowledge-proofs-work}
+## Wie funktionieren die Null-Wissen-Beweise? {#how-do-zero-knowledge-proofs-work}
 
 Ein Null-Wissen-Beweis ermöglicht es Ihnen, die Wahrheit einer Aussage zu beweisen, ohne den Inhalt der Aussage zu teilen oder zu enthüllen, wie Sie die Wahrheit entdeckt haben. Um dies zu ermöglichen, stützen sich Null-Wissen-Protokolle auf Algorithmen, die einige Daten als Eingabe verwenden und „wahr“ oder „falsch“ als Ausgabe zurückgeben.
 
@@ -48,7 +48,7 @@ Das Obige beschreibt die Struktur eines „interaktiven Null-Wissen-Beweises“.
 
 Ein gutes Beispiel dafür, wie interaktive Beweise funktionieren, ist die berühmte [Höhlengeschichte Ali Baba](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave) von Jean-Jacques Quisquater. In der Geschichte will Peggy (die Beweisführerin) Victor (dem Prüfer) beweisen, dass sie den geheimen Satz kennt, um eine magische Tür zu öffnen, ohne den Satz preiszugeben.
 
-### Nicht-interaktive Null-Wissen-Beweise \{#non-interactive-zero-knowledge-proofs}
+### Nicht-interaktive Null-Wissen-Beweise {#non-interactive-zero-knowledge-proofs}
 
 Während die interaktive Prüfung revolutionär war, hatte sie nur begrenzten Nutzen, da sie erforderte, dass die beiden Parteien verfügbar waren und wiederholt interagierten. Selbst wenn ein Verifizierer von der Ehrlichkeit eines Beweisführers überzeugt wäre, wäre der Beweis für eine unabhängige Verifizierung nicht verfügbar (die Berechnung eines neuen Beweises erforderte einen neuen Satz von Nachrichten zwischen dem Beweisführer und dem Verifizierer).
 
@@ -60,9 +60,9 @@ Die nicht-interaktive Beweisführung reduziert die Kommunikation zwischen Beweis
 
 Nicht-interaktive Beweise stellten einen Durchbruch für die Null-Wissen-Technologie dar und förderten die Entwicklung von Beweissystemen, die heute verwendet werden. Wir diskutieren im Folgenden diese Beweistypen:
 
-### Arten von Null-Wissen-Beweisen \{#types-of-zero-knowledge-proofs}
+### Arten von Null-Wissen-Beweisen {#types-of-zero-knowledge-proofs}
 
-#### ZK-SNARKs \{#zk-snarks}
+#### ZK-SNARKs {#zk-snarks}
 
 ZK-SNARK ist ein Akronym für **Zero-Knowledge Succinct Non-Interactive Argument of Knowledge**. Das ZK-SNARK-Protokoll hat folgende Eigenschaften:
 
@@ -82,7 +82,7 @@ Der zuvor erwähnte „gemeinsame Schlüssel“ bezieht sich auf öffentliche Pa
 
 Vertrauenswürdige Einrichtungen erfordern, dass Benutzer den Teilnehmern in der Parametererzeugung vertrauen. Die Entwicklung von ZK-STARKs hat jedoch die Entwicklung von Beweisprotokollen ermöglicht, die ohne vertrauenswürdige Einrichtungen auskommen.
 
-#### ZK-STARKs \{#zk-starks}
+#### ZK-STARKs {#zk-starks}
 
 ZK-STARK ist ein Akronym für **Zero-Knowledge Scalable Transparent Argument of Knowledge**. ZK-STARKs ähneln ZK-SNARKs, außer dass sie Folgendes sind:
 
@@ -92,9 +92,9 @@ ZK-STARK ist ein Akronym für **Zero-Knowledge Scalable Transparent Argument of 
 
 ZK-STARKs erzeugen größere Beweise als ZK-SNARKs, was in der Regel zu höheren Verifikationsaufwänden führt. Es gibt jedoch Fälle (wie z. B. der Nachweis großer Datensätze), in denen ZK-STARKs im Vergleich zu ZK-SNARKs kosteneffektiver sein können.
 
-## Anwendungsfälle für Null-Wissen-Beweise \{#use-cases-for-zero-knowledge-proofs}
+## Anwendungsfälle für Null-Wissen-Beweise {#use-cases-for-zero-knowledge-proofs}
 
-### Anonyme Zahlungen \{#anonymous-payments}
+### Anonyme Zahlungen {#anonymous-payments}
 
 Kreditkartenzahlungen sind oft für mehrere Parteien sichtbar, einschließlich des Zahlungsanbieters, Banken und anderer interessierter Parteien (z. B. Regierungsbehörden). Obwohl die finanzielle Überwachung Vorteile hat, um illegale Aktivitäten zu identifizieren, untergräbt sie auch die Privatsphäre gewöhnlicher Bürger.
 
@@ -106,19 +106,19 @@ Durch die Integration von Null-Wissen-Technologie in das Protokoll ermöglichen 
 
 Null-Wissen-Beweise werden auch auf die Anonymisierung von Transaktionen auf öffentlichen Blockchains angewendet. Ein Beispiel ist Tornado Cash, ein dezentraler, nicht depotführender Dienst, der es Benutzern ermöglicht, private Transaktionen auf Ethereum durchzuführen. Tornado Cash verwendet Null-Wissen-Beweise, um Transaktionsdetails zu verschleiern und die finanzielle Privatsphäre zu gewährleisten. Da es sich hierbei um „Opt-in“-Datenschutz-Tools handelt, werden sie leider mit illegalen Aktivitäten in Verbindung gebracht. Um dies zu überwinden, muss der Datenschutz schließlich zum Standard auf öffentlichen Blockchains werden.
 
-### Identitätsschutz \{#identity-protection}
+### Identitätsschutz {#identity-protection}
 
 Aktuelle Identitätsmanagementsysteme setzen persönliche Informationen einem Risiko aus. Null-Wissen-Beweise können Einzelpersonen dabei helfen, Identitäten zu validieren und gleichzeitig vertrauliche Details zu schützen.
 
 Null-Wissen-Beweise sind besonders nützlich im Zusammenhang mit [dezentraler Identität](/decentralized-identity/). Dezentralisierte Identität (auch als „selbstbestimmte Identität“ bezeichnet) gibt dem Individuum die Möglichkeit, den Zugriff auf persönliche Identifikatoren zu kontrollieren. Die Möglichkeit, seine Staatsbürgerschaft nachzuweisen, ohne seine Steuer-ID oder Passdetails preiszugeben, ist ein gutes Beispiel dafür, wie die Null-Wissen-Technologie eine dezentralisierte Identität ermöglicht.
 
-### Authentifizierung \{#authentication}
+### Authentifizierung {#authentication}
 
 Die Nutzung von Online-Diensten erfordert den Nachweis Ihrer Identität und Ihres Rechts, auf diese Plattformen zuzugreifen. Dies erfordert oft die Angabe von persönlichen Informationen wie Namen, E-Mail-Adressen, Geburtsdaten und so weiter. Sie müssen möglicherweise auch lange Passwörter auswendig lernen oder riskieren, den Zugriff zu verlieren.
 
 Null-Wissen-Beweise können jedoch die Authentifizierung sowohl für Plattformen als auch für Benutzer vereinfachen. Sobald ein ZK-Beweis unter Verwendung öffentlicher Eingaben (z. B. Daten, die die Mitgliedschaft des Benutzers auf der Plattform bestätigen) und privater Eingaben (z. B. die Benutzerdetails) generiert wurde, kann der Benutzer diesen einfach vorlegen, um seine Identität bei Zugriff auf den Dienst zu authentifizieren. Dies verbessert die Erfahrung für Benutzer und befreit Organisationen von der Notwendigkeit, große Mengen an Benutzerinformationen zu speichern.
 
-### Verifizierbare Berechnung \{#verifiable-computation}
+### Verifizierbare Berechnung {#verifiable-computation}
 
 Verifizierbare Berechnung ist eine weitere Anwendung der Null-Wissen-Technologie zur Verbesserung des Blockchain Designs. Verifizierbare Berechnung ermöglicht es uns, Berechnungen an eine andere Einheit auszulagern, während wir verifizierbare Ergebnisse aufrechterhalten. Die Entität reicht das Ergebnis zusammen mit einem Beweis ein, der bestätigt, dass das Programm korrekt ausgeführt wurde.
 
@@ -142,7 +142,7 @@ Hier kommt verifizierbare Berechnung ins Spiel. Wenn ein Node außerhalb von Eth
 
 [Null-Wissen-Rollups](/developers/docs/scaling/zk-rollups) und [Validiums](/developers/docs/scaling/validium/) sind zwei Skalierungslösungen außerhalb der Blockchain, die Gültigkeitsnachweise verwenden, um eine sichere Skalierbarkeit zu ermöglichen. Diese Protokolle führen tausende von Transaktionen außerhalb von Ethereum aus und reichen Nachweise zur Überprüfung auf Ethereum ein. Sobald der Nachweis verifiziert ist, können diese Ergebnisse sofort angewendet werden, was Ethereum ermöglicht, mehr Transaktionen zu verarbeiten, ohne die Berechnung auf der Basisschicht zu erhöhen.
 
-### Verringerung von Bestechung und Kollusion bei On-Chain-Abstimmungen \{#secure-blockchain-voting}
+### Verringerung von Bestechung und Kollusion bei On-Chain-Abstimmungen {#secure-blockchain-voting}
 
 Blockchain-Abstimmungssysteme haben viele vorteilhafte Eigenschaften: Sie sind vollständig überprüfbar, sicher gegen Angriffe, widerstandsfähig gegen Zensur und frei von geografischen Einschränkungen. Aber selbst On-Chain-Wahlsysteme sind nicht immun gegen das Problem der **Absprachen**.
 
@@ -156,7 +156,7 @@ Die Verwendung von On-Chain-Abstimmungen macht quadratische Finanzierungen anfä
 
 Glücklicherweise verwenden neuere Lösungen wie MACI (Minimum Anti-Collusion Infrastructure) Null-Wissen-Beweise, um On-Chain-Abstimmungen (z. B. quadratische Finanzierungsmechanismen) widerstandsfähig gegen Bestechung und Absprachen zu machen. MACI ist eine Reihe von intelligenten Verträgen und Skripten, die es einem zentralen Administrator (als „Koordinator“ bezeichnet) ermöglichen, Stimmen zusammenzufassen und Ergebnisse zu zählen, _ohne_ Einzelheiten darüber preiszugeben, wie jeder Einzelne abgestimmt hat. Trotzdem ist es immer noch möglich zu überprüfen, ob die Stimmen korrekt gezählt wurden, oder zu bestätigen, dass eine bestimmte Person an der Abstimmungsrunde teilgenommen hat.
 
-#### Wie arbeitet MACI mit Null-Wissen-Beweisen? \{#how-maci-works-with-zk-proofs}
+#### Wie arbeitet MACI mit Null-Wissen-Beweisen? {#how-maci-works-with-zk-proofs}
 
 Zu Beginn stellt der Koordinator den MACI-Vertrag auf Ethereum bereit, danach können sich Benutzer für die Abstimmung anmelden (indem sie ihren öffentlichen Schlüssel im Smart Contract registrieren). Benutzer geben Stimmen ab, indem sie mit ihrem öffentlichen Schlüssel verschlüsselte Nachrichten an den Smart Contract senden (eine gültige Stimme muss unter anderem mit dem neuesten öffentlichen Schlüssel signiert werden, der mit der Identität des Benutzers verknüpft ist). Anschließend verarbeitet der Koordinator alle Nachrichten nach Ablauf der Abstimmungsperiode, zählt die Stimmen aus und verifiziert die Ergebnisse in der Kette.
 
@@ -178,29 +178,29 @@ Aber in Fällen, in denen der Koordinator ehrlich bleibt, stellt MACI ein mächt
 
 [Erfahren Sie mehr über MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
 
-## Nachteile der Verwendung von Null-Wissen-Beweisen \{#drawbacks-of-using-zero-knowledge-proofs}
+## Nachteile der Verwendung von Null-Wissen-Beweisen {#drawbacks-of-using-zero-knowledge-proofs}
 
-### Kosten für Hardware \{#hardware-costs}
+### Kosten für Hardware {#hardware-costs}
 
 Das Generieren von Null-Wissen-Beweisen beinhaltet sehr komplexe Berechnungen, die am besten auf spezialisierten Maschinen durchgeführt werden. Da diese Maschinen teuer sind, sind sie oft nicht erschwinglich für Einzelpersonen. Darüber hinaus müssen Anwendungen, die Null-Wissen-Technologie verwenden möchten, Hardwarekosten einkalkulieren – was die Kosten für Endbenutzer erhöhen kann.
 
-### Kosten der Nachweisprüfung \{#proof-verification-costs}
+### Kosten der Nachweisprüfung {#proof-verification-costs}
 
 Die Überprüfung von Beweisen erfordert auch komplexe Berechnungen und erhöht die Kosten für die Implementierung von Zero-Knowledge-Technologie in Anwendungen. Diese Kosten sind besonders relevant im Zusammenhang mit dem Nachweis von Berechnungen. Beispielsweise zahlen ZK-Rollups ~500.000 Gas, um einen einzelnen ZK-SNARK-Beweis auf Ethereum zu verifizieren, wobei ZK-STARKs noch höhere Gebühren verlangen.
 
-### Vertrauensannahme \{#trust-assumptions}
+### Vertrauensannahme {#trust-assumptions}
 
 In ZK-SNARK wird der Common Reference String (öffentliche Parameter) einmal generiert und steht zur Wiederverwendung für Parteien zur Verfügung, die am Null-Wissen-Protokoll teilnehmen möchten. Öffentliche Parameter werden über eine vertrauenswürdige Einrichtungszeremonie erstellt, bei der von den Teilnehmern angenommen wird, dass sie ehrlich sind.
 
 Aber es gibt wirklich keine Möglichkeit für Benutzer, die Ehrlichkeit der Teilnehmer einzuschätzen. Die Benutzer müssen die Entwickler beim Wort nehmen. ZK-STARKs sind frei von Vertrauensannahmen, da die bei der Generierung der Zeichenfolge verwendete Zufälligkeit öffentlich überprüfbar ist. Inzwischen arbeiten Forscher an nicht vertrauenswürdigen Setups für ZK-SNARKs, um die Sicherheit von Nachweismechanismen zu erhöhen.
 
-### Bedrohungen durch Quantencomputing \{#quantum-computing-threats}
+### Bedrohungen durch Quantencomputing {#quantum-computing-threats}
 
 ZK-SNARK verwendet Elliptische-Kurven-Kryptografie ([ECDSA](/glossary/#ecdsa)) zur Verschlüsselung. Während der ECDSA-Algorithmus vorerst sicher ist, könnte die Entwicklung von Quantencomputern sein Sicherheitsmodell in Zukunft durchbrechen.
 
 ZK-STARK gilt als immun gegen die Bedrohung durch Quantencomputer, da es kollisionsresistente Hashes zur Verschlüsselung verwendet. Im Gegensatz zu öffentlich-privaten Schlüsselpaaren, die in der Elliptischen-Kurven-Kryptografie verwendet werden, ist kollisionsresistentes Hashing für Quantencomputing-Algorithmen schwieriger zu knacken.
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [Informatiker erklärt ein Konzept in 5 Schwierigkeitsgraden | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) – _Wired YouTube-Kanal_
 - [Übersicht über Anwendungsfälle für Null-Wissen-Beweise](https://appliedzkp.org/#Projects) – _Team für Datenschutz- und Skalierungsuntersuchungen_

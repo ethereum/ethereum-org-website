@@ -4,11 +4,11 @@ lang: sl
 description: Kako pomagati pri prevajanju ethereum.org
 ---
 
-# Vodnik za prevajanje ethereum.org \{#translating-ethereum-guide}
+# Vodnik za prevajanje ethereum.org {#translating-ethereum-guide}
 
 Če ste novi v prevajalskem programu in se še obotavljate, so tukaj FAQ - pogosto zastavljena vprašanja, ki vam lahko pomagajo pri začetku. Uporabite ta vodnik, da najdete odgovore do najpogostejših poizvedb.
 
-## Kako prevedem te nize z `<HTML tags>`? \{#tags}
+## Kako prevedem te nize z `<HTML tags>`? {#tags}
 
 Ni vsak niz napisan v čisti besedni obliki. Obstajajo nekateri nizi, ki so sestavljeni iz mešanih skript, kot so HTML tagi (`<0>`, `</0>`). Te se po navadi uporabljajo za hiperpovezave ali alternativno oblikovanje v sredini stavka.
 
@@ -19,7 +19,7 @@ Ni vsak niz napisan v čisti besedni obliki. Obstajajo nekateri nizi, ki so sest
 
 Lahko premaknete položaj tagov znotraj niza, da bo bolje zvenel v vašem jeziku – le prepričajte se, da ste premaknili celoten tag.
 
-## Kje živijo nizi? \{#strings}
+## Kje živijo nizi? {#strings}
 
 Pogosto le izvorni niz morda ne bo dovolj, da bi lahko zagotovili natančen prevod.
 
@@ -30,7 +30,7 @@ Pogosto le izvorni niz morda ne bo dovolj, da bi lahko zagotovili natančen prev
 
 ![Primer posnetka zaslona za kontekst](./source-string-2.png)
 
-## Kako lahko podam komentar ali postavim vprašanje? Rad bi označil težavo ali napako... \{#comment}
+## Kako lahko podam komentar ali postavim vprašanje? Rad bi označil težavo ali napako... {#comment}
 
 Če želite označiti določen niz, ki potrebuje pregled, lahko oddate komentar.
 
@@ -39,7 +39,7 @@ Pogosto le izvorni niz morda ne bo dovolj, da bi lahko zagotovili natančen prev
 
 ![Prikaz, kako ustvariti komentarje in označiti težave](./comment-issue.png)
 
-## Kaj je pomnilnik prevodov (TM)? \{#translation-memory}
+## Kaj je pomnilnik prevodov (TM)? {#translation-memory}
 
 Pomnilnik prevodov (TM) je funkcija orodja Crowdin, ki shrani vse predhodne prevedene nize na strani [ethereum.org](http://ethereum.org/). Ko je niz preveden, se samodejno shrani v TM našega projekta. To je lahko uporabno orodje, ki vam pomaga prihraniti vaš čas!
 
@@ -48,7 +48,7 @@ Pomnilnik prevodov (TM) je funkcija orodja Crowdin, ki shrani vse predhodne prev
 
 ![Posnetek zaslona pomnilnika prevodov](./translation-memory.png)
 
-## Kako uporabljam Crowdin slovar? \{#glossary}
+## Kako uporabljam Crowdin slovar? {#glossary}
 
 Ethereum terminologija je naslednji ključni del našega prevajalskega dela, saj novi tehnološki izrazi pogosto še ne bodo lokalizirani v veliko jezikov. Prav tako obstajajo izrazi, ki imajo različne pomene v različnih kontekstih. [Več o prevajanju Ethereum terminologije](#terminology)
 
@@ -66,7 +66,7 @@ Crowdin slovar je najboljše mesto za razjasnitev izrazov in definicij. Obstajat
 
 ![Posnetek zaslona, ki prikazuje kako dodati izraz v slovar v Crowdinu](./add-glossary-term.png)
 
-### Politika prevajanja terminologije \{#terminology}
+### Politika prevajanja terminologije {#terminology}
 
 _Za imena (znamk, podjetij, ljudi) in nove tehnološke izraze (Eth2, oddajniška veriga, itd.)_
 
@@ -85,6 +85,6 @@ Tukaj so naši predlogi za primere, ko najdete izraz, ki vam ni poznan:
 
 Priporočamo, da pustite imena znamk, podjetij in osebja neprevedene, saj bi prevod lahko povzročil nepotrebno zmedo in SEO težave.
 
-## Kontaktirajte nas \{#contact}
+## Kontaktirajte nas {#contact}
 
 Hvala, da ste vse to prebrali. Upamo, da vam je v pomoč pri uvajanju v naš program. Pridružite se našemu [Discord prevajalskemu kanalu](https://discord.gg/TkJFaewsaM) za kakršnakoli vprašanja in sodelovanje z ostalimi prevajalci!

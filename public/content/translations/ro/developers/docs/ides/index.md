@@ -6,7 +6,7 @@ lang: ro
 
 Când vine vorba de configurarea unui [mediu de dezvoltare integrat (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), programarea aplicațiilor pe Ethereum este similară cu programarea oricărui proiect software. Există multe opțiuni din care puteți alege, așa că, în final, alegeți IDE-ul sau editorul de cod care corespunde cel mai bine preferințelor dvs. Cel mai probabil este că cea mai bună alegere de IDE pentru dezvoltarea Ethereum este IDE-ul pe care îl folosiți deja pentru dezvoltarea de software tradițional.
 
-## IDE-uri bazate pe web \{#web-based-ides}
+## IDE-uri bazate pe web {#web-based-ides}
 
 Dacă doriţi să vă jucaţi cu codurile înainte de a [configura un mediu de dezvoltare local](/developers/local-environment/), aceste aplicații web sunt personalizate special pentru dezvoltarea contractelor inteligente Ethereum.
 
@@ -27,7 +27,7 @@ Dacă doriţi să vă jucaţi cu codurile înainte de a [configura un mediu de d
 
 - [Solidity starter](https://replit.com/@replit/Solidity-starter-beta)
 
-## IDE pentru desktop \{#desktop-ides}
+## IDE pentru desktop {#desktop-ides}
 
 Majoritatea IDE-urilor consacrate au construit plug-inuri pentru creşterea satisfacţiei la dezvoltarea Ethereum. Acestea oferă cel puțin evidențierea sintaxei pentru [limbajele contractelor inteligente](/developers/docs/smart-contracts/languages/).
 
@@ -55,11 +55,11 @@ Majoritatea IDE-urilor consacrate au construit plug-inuri pentru creşterea sati
 - [Descărcare](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
-## Plugin-uri și extensii \{#plugins-extensions}
+## Plugin-uri și extensii {#plugins-extensions}
 
 - [Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Limbajul Ethereum Solidity pentru Visual Studio Code
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Formator de cod folosind prettier
 
-## Referințe suplimentare \{#further-reading}
+## Referințe suplimentare {#further-reading}
 
 _Cunoașteți o resursă a comunității care v-a ajutat? Editați această pagină și adăugați-o!_

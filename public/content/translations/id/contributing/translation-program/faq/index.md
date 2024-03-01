@@ -4,11 +4,11 @@ lang: id
 description: Pertanyaan yang paling sering diajukan tentang Program Penerjemahan ethereum.org
 ---
 
-# Panduan menerjemahkan ethereum.org \{#translating-ethereum-guide}
+# Panduan menerjemahkan ethereum.org {#translating-ethereum-guide}
 
 Jika Anda baru mengenal Program Penerjemahan dan ragu-ragu untuk memulai, berikut adalah beberapa Pertanyaan yang Sering Diajukan yang dapat membantu Anda memulai. Gunakan panduan ini untuk menemukan jawaban atas pertanyaan yang paling umum.
 
-## Bagiamana cara menerjemahkan string dengan `<HTML tags>`? \{#tags}
+## Bagiamana cara menerjemahkan string dengan `<HTML tags>`? {#tags}
 
 Tidak setiap string ditulis dalam bentuk teks murni. Ada beberapa string yang terdiri dari skrip campuran seperti tag HTML (`<0>`, `</0>`). Ini umumnya untuk hyperlink atau gaya alternatif di tengah sebuah kalimat.
 
@@ -19,7 +19,7 @@ Tidak setiap string ditulis dalam bentuk teks murni. Ada beberapa string yang te
 
 Anda dapat memindahkan posisi tag yang ada di dalam string untuk membuatnya lebih natural dalam bahasa Anda – pastikan untuk memindahkan seluruh tag.
 
-## Di mana posisi string? \{#strings}
+## Di mana posisi string? {#strings}
 
 Sering kali string sumber saja mungkin tidak cukup bagi Anda untuk memberikan terjemahan yang akurat.
 
@@ -30,7 +30,7 @@ Sering kali string sumber saja mungkin tidak cukup bagi Anda untuk memberikan te
 
 ![Contoh tangkapan layar ditambahkan untuk konteks](./source-string-2.png)
 
-## Bagaimana cara meninggalkan komentar atau mengajukan pertanyaan? Saya ingin menandai sebuah masalah atau salah ketik... \{#comment}
+## Bagaimana cara meninggalkan komentar atau mengajukan pertanyaan? Saya ingin menandai sebuah masalah atau salah ketik... {#comment}
 
 Jika Anda ingin menaikkan bendera pada string tertentu yang memerlukan perhatian, silakan berikan komentar.
 
@@ -40,7 +40,7 @@ Jika Anda ingin menaikkan bendera pada string tertentu yang memerlukan perhatian
 
 ![Menampilkan cara membuat komentar dan masalah](./comment-issue.png)
 
-## Apa Itu Translation Memory (TM)? \{#translation-memory}
+## Apa Itu Translation Memory (TM)? {#translation-memory}
 
 Translation Memory (TM) adalah sebuah fitur Crowdin yang menyimpan semua string yang telah diterjemahkan sebelumnya di [ethereum.org](http://ethereum.org/). Ketika sebuah string diterjemahkan, maka string tersebut akan otomatis disimpan ke dalam TM proyek kami. Ini bisa menjadi alat yang berguna untuk membantu Anda menghemat waktu!
 
@@ -49,7 +49,7 @@ Translation Memory (TM) adalah sebuah fitur Crowdin yang menyimpan semua string 
 
 ![Tangkapan layar dari translation memory](./translation-memory.png)
 
-## Bagaimana cara menggunakan glosarium Crowdin? \{#glossary}
+## Bagaimana cara menggunakan glosarium Crowdin? {#glossary}
 
 Terminologi Ethereum adalah bagian pentng lainnya dari pekerjaan terjemahan kami karena sering kali istilah teknologi baru belum dilokalkan dalam banyak bahasa. Juga, ada istilah yang memiliki arti berbeda dalam konteks yang berbeda. [Selengkapnya tentang menerjemahkan terminologi Ethereum](#terminology)
 
@@ -67,7 +67,7 @@ Glosarium Crowdin adalah tempat terbaik untuk klarifikasi istilah dan definisi. 
 
 ![Sebuah tangkapan layar menunjukkan cara menambahkan istilah glosarium ke Crowdin](./add-glossary-term.png)
 
-### Kebijakan terjemahan terminologi \{#terminology}
+### Kebijakan terjemahan terminologi {#terminology}
 
 _Untuk nama (merek, perusahaan, orang) dan istilah teknologi baru (Eth2, rantai suar, dll.)_
 
@@ -86,7 +86,7 @@ Inilah yang kami sarankan, ketika menemukan istilah yang tidak Anda kenal:
 
 Kami menyarankan agar Anda membiarkan nama merek, perusahaan, dan personel tidak diterjemahkan karena terjemahannya dapat menyebabkan kebingungan yang tidak perlu dan kesulitan SEO.
 
-## Bagaimana cara saya menambahkan konten dalam bahasa saya? \{#adding-foreign-language-content}
+## Bagaimana cara saya menambahkan konten dalam bahasa saya? {#adding-foreign-language-content}
 
 Saat ini, semua konten selain bahasa Inggris diterjemahkan secara langsung dari konten sumber bahasa Inggris, dan konten mana pun yang tidak ada dalam bahasa Inggris tidak dapat ditambahkan ke bahasa lainnya.
 
@@ -94,6 +94,6 @@ Untuk mengusulkan konten baru ke ethereum.org, Anda dapat [membuat masalah](http
 
 Kami berencana menambahkan dukungan untuk konten selain bahasa Inggris dalam waktu dekat ini.
 
-## Hubungi kami \{#contact}
+## Hubungi kami {#contact}
 
 Terima kasih telah membaca semua ini. Semoga ini membantu Anda untuk mengikuti program kami. Silakan bergabung dengan [kanal terjemahan Discord](https://discord.gg/ethereum-org) kami untuk mengajukan pertanyaan dan berkolaborasi dengan penerjemah lain, atau untuk menghubungi kami di translations@ethereum.org!

@@ -8,21 +8,21 @@ Ethereum-Netzwerke sind Gruppen von verbundenen Computern, die über das Ethereu
 
 Ihr Ethereum-Konto funktioniert in den verschiedenen Netzwerken, aber Ihr Kontostand und Ihr Transaktionsverlauf werden nicht vom Ethereum-Mainnet übernommen. Für Testzwecke ist es nützlich zu wissen, welche Netzwerke verfügbar sind und wie man Testnet-ETH erhält, um sich auszuprobieren. Generell ist es aus Sicherheitsgründen nicht empfehlenswert, Mainnet-Konten in Testnets wiederzuverwenden oder umgekehrt.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Sie sollten die [Grundlagen von Ethereum](/developers/docs/intro-to-ethereum/) verstehen, bevor Sie sich über die verschiedenen Netzwerke informieren, denn die Testnetzwerke bieten Ihnen eine billige, sichere Version von Ethereum, mit der Sie Dinge ausprobieren können.
 
-## Öffentliche Netzwerke \{#public-networks}
+## Öffentliche Netzwerke {#public-networks}
 
 Öffentliche Netzwerke sind für jedermann auf der Welt mit einer Internetverbindung zugänglich. Jeder kann Transaktionen in einer öffentlichen Blockchain lesen oder erstellen und die ausgeführten Transaktionen validieren. Der Konsens zwischen den Peers entscheidet über die Aufnahme von Transaktionen und den Zustand des Netzwerks.
 
-### Ethereum-Mainnet \{#ethereum-mainnet}
+### Ethereum-Mainnet {#ethereum-mainnet}
 
 Mainnet ist die primäre öffentliche Ethereum-Produktions-Blockchain, bei der Transaktionen mit tatsächlichem Wert im dezentralisierten Ledger stattfinden.
 
 Wenn Menschen und Börsen ETH-Preise diskutieren, sprechen sie über Mainnet ETH.
 
-### Ethereum-Testnets \{#ethereum-testnets}
+### Ethereum-Testnets {#ethereum-testnets}
 
 Zusätzlich zum Mainnet gibt es öffentliche Testnetze. Dabei handelt es sich um Netzwerke, die von Protokollentwicklern oder Smart-Contract-Entwicklern eingesetzt werden, um sowohl Protokoll-Upgrades als auch potenzielle Smart Contracts in einer produktionsähnlichen Umgebung zu testen, bevor sie ins Mainnet gelangen. Stelle dir dies als Analog zur Produktion im Vergleich zu Staging-Servern vor.
 
@@ -36,7 +36,7 @@ ETH in Testnets soll keinen wirklichen Wert haben. Es wurden jedoch Märkte für
 
 Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, sind Sepolia und Goerli. Sepolia ist ein Netz für Smart Contract- und Anwendungsentwickler zum Testen ihrer Anwendungen. Das Goerli-Netz ermöglicht es Protokollentwicklern, Netzwerk-Upgrades zu testen, bzw. erlaubt es Stakern, laufende Validatoren zu testen.
 
-#### Sepolia \{#sepolia}
+#### Sepolia {#sepolia}
 
 **Sepolia ist das empfohlene Standard-Testnet für die Anwendungsentwicklung**. Das Sepolia-Netz verwendet ein berechtigtes Validator-Set. Es ist relativ neu, d. h. der Status und Verlauf sind beide recht klein. Das bedeutet, dass das Netzwerk schnell zu synchronisieren ist und dass der Betrieb eines Knotens weniger Speicherplatz erfordert. Das ist nützlich für Benutzer, die schnell einen Knoten einrichten und direkt mit dem Netzwerk interagieren möchten.
 
@@ -63,7 +63,7 @@ Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, 
 - [Infura Sepolia-Faucet](https://www.infura.io/faucet)
 - [Chainstack Sepolia-Faucet](https://faucet.chainstack.com/sepolia-faucet)
 
-#### Goerli _(Langzeit-Support)_ \{#goerli}
+#### Goerli _(Langzeit-Support)_ {#goerli}
 
 _Hinweis: [Das Goerli-Testnetz ist veraltet](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17) und wird 2023 durch [Holesovice](https://github.com/eth-clients/holesovice) ersetzt. Sie sollten die Migration Ihrer Anwendungen auf Sepolia in Erwägung ziehen._
 
@@ -92,11 +92,11 @@ Goerli ist ein Testnet zum Testen, Validieren und Staking. Das Goerli-Netzwerk i
 
 Um einen Validator im Goerli-Testnet zu starten, verwenden Sie das [Launchpad "cheap goerli validator"](https://goerli.launchpad.ethstaker.cc/en/) von ethstaker.
 
-### Layer-2-Testnets \{#layer-2-testnets}
+### Layer-2-Testnets {#layer-2-testnets}
 
 [Layer-2 (L2)](/layer-2/) ist ein Sammelbegriff, der eine bestimmte Gruppe von Ethereum-Skalierungslösungen beschreibt. Ein Layer-2 ist eine separate Blockchain, die Ethereum erweitert und die Sicherheitsgarantien von Ethereum erbt. Layer-2-Testnets sind in der Regel eng mit öffentlichen Ethereum-Testnets gekoppelt.
 
-#### Arbitrum Goerli \{#arbitrum-goerli}
+#### Arbitrum Goerli {#arbitrum-goerli}
 
 Ein Testnet für [Arbitrum](https://arbitrum.io/).
 
@@ -104,7 +104,7 @@ Ein Testnet für [Arbitrum](https://arbitrum.io/).
 
 - [Chainlink-Faucet](https://faucets.chain.link/)
 
-#### Optimistic Goerli \{#optimistic-goerli}
+#### Optimistic Goerli {#optimistic-goerli}
 
 Ein Testnet für [Optimism](https://www.optimism.io/).
 
@@ -113,28 +113,28 @@ Ein Testnet für [Optimism](https://www.optimism.io/).
 - [Paradigm-Faucet](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
-## Private Netzwerke \{#private-networks}
+## Private Netzwerke {#private-networks}
 
 Ein Ethereum-Netzwerk ist ein privates Netzwerk, wenn seine Knoten nicht mit einem öffentlichen Netzwerk verbunden sind (d. h. Mainnet oder ein Testnet). In diesem Zusammenhang bedeutet privat nur reserviert oder isoliert statt geschützt oder sicher.
 
-### Entwicklungsnetzwerke \{#development-networks}
+### Entwicklungsnetzwerke {#development-networks}
 
 Um eine Ethereum-Anwendung zu entwickeln, ist es ratsam, sie in einem privaten Netzwerk auszuführen, um zu sehen, wie sie funktioniert, bevor Sie sie in der Blockchain einsetzen. Ähnlich wie Sie auf Ihrem Computer einen lokalen Server für die Webentwicklung erstellen, können Sie eine lokale Blockchain-Instanz erstellen, um Ihre dApp zu testen. Das ermöglicht eine wesentlich schnellere Iteration als ein öffentliches Testnet.
 
 Es gibt Projekte und Tools, die dabei hilfreich sind. Erfahren Sie mehr über [Entwicklungsnetzwerke](/developers/docs/development-networks/).
 
-### Konsortium-Netzwerke \{#consortium-networks}
+### Konsortium-Netzwerke {#consortium-networks}
 
 Der Konsensprozess wird von einer vordefinierten Gruppe von Knoten gesteuert, die vertrauenswürdig sind. Zum Beispiel ein privates Netzwerk bekannter akademischer Institutionen, die jeweils einen einzelnen Knoten stellen, wodurch Blöcke mit einer Schwelle von Unterzeichnern innerhalb des Netzwerks validiert werden.
 
 Wenn ein öffentliches Ethereum-Netzwerk wie das öffentliche Internet ist, dann ist ein Konsortialnetzwerk wie ein privates Intranet.
 
-## Verwandte Tools \{#related-tools}
+## Verwandte Tools {#related-tools}
 
 - [Chain-Liste](https://chainlist.org/) _Liste der EVM-Netzwerke, um Wallets und Anbieter mit der entsprechenden Chain-ID und Netzwerk-ID zu verbinden_
 - [EVM-basierte Chains](https://github.com/ethereum-lists/chains) _GitHub Repo der Chain-Metadaten, die die Chain-Liste_ unterstützen
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [Vorschlag: vorhersehbarer Ethereum-Testnet-Lebenszyklus](https://ethereum-magicians.org/t/proposal-predictable-ethereum-testnet-lifecycle/11575/17)
 - [Die Evolution der Ethereum-Testnets](https://etherworld.co/2022/08/19/the-evolution-of-ethereum-testnet/)

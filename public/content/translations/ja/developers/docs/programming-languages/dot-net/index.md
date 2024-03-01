@@ -13,7 +13,7 @@ incomplete: true
 
 Microsoft のテクノロジースタックのツールと言語を使用して、イーサリアム上に分散型アプリケーションを構築し、スマートコントラクトとやり取りできます。.NET Framework/.NET Core/.NET Standard にまたがり、VSCode と Visual Studio などのツールにより、C#、# Visual Basic、.NET、F#をサポートしています。 Microsoft Azure Blockchain を使用して、Azure 上にイーサリアムブロックチェーンを数分でデプロイできます。 イーサリアムに.NET の愛を届けよう！
 
-## スマートコントラクトと Solidity 言語を使い始める \{#getting-started-with-smart-contracts-and-the-solidity-language}
+## スマートコントラクトと Solidity 言語を使い始める {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **.NET をイーサリアムに統合するための最初のステップを踏み出してみましょう。**
 
@@ -24,7 +24,7 @@ Microsoft のテクノロジースタックのツールと言語を使用して�
 - [初めてのスマートコントラクトを記述する](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity のコンパイルとデプロイの方法を学ぶ](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## 初級者向けの参照文献とリンク \{#beginner-references-and-links}
+## 初級者向けの参照文献とリンク {#beginner-references-and-links}
 
 **Nethereum ライブラリと VS Code Solidity の紹介**
 
@@ -45,7 +45,7 @@ Microsoft のテクノロジースタックのツールと言語を使用して�
   - アカウントへの Ether の送金 [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... などなど！
 
-## 中級者向けの記事 \{#intermediate-articles}
+## 中級者向けの記事 {#intermediate-articles}
 
 - [Nethereum のワークブックとサンプルリスト](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [独自の開発テストチェーンをデプロイする](https://github.com/Nethereum/Testchains)
@@ -58,13 +58,13 @@ Microsoft のテクノロジースタックのツールと言語を使用して�
 - [Kaleido と Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum と Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## 高度なユースケース \{#advanced-use-patterns}
+## 高度なユースケース {#advanced-use-patterns}
 
 - [Azure Key Vault と Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum のバックエンドリファレンスアーキテクチャ](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## .NET プロジェクト、ツール、その他 \{#dot-net-projects-tools-and-other-fun-stuff}
+## .NET プロジェクト、ツール、その他 {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](http://playground.nethereum.com/) - _ブラウザでの Nethereum コードスニペットのコンパイル、作成、実行_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Blazor の UI を使用した Nethereum のコード生成_
@@ -76,13 +76,13 @@ Microsoft のテクノロジースタックのツールと言語を使用して�
 
 もっとリソースをお探しですか？ [ethereum.org/developers](/developers/)をご確認ください。
 
-## .NET コミュニティコントリビューター \{#dot-net-community-contributors}
+## .NET コミュニティコントリビューター {#dot-net-community-contributors}
 
 Nethereum では、主に[Gitter](https://gitter.im/Nethereum/Nethereum)を活用しています。ここでは誰でも、質問、質問への回答、支援要請などを行えます。単なる雑談も歓迎です。 [Nethereum の Github リポジトリ](https://github.com/Nethereum)では、リクエストのプルや問題のオープンが可能です。参加者のサイドプロジェクトやサンプルプロジェクトを閲覧することもできます。 また、その他に[Discord](https://discord.gg/jQPrR58FxX)もご利用いただけます。
 
 Nethermind を初めて利用する際に支援が必要な場合は、[Discord](http://discord.gg/PaCMRFdvWT)にご参加ください。 デベロッパーが常駐しており、ご質問に回答します。 また、[Nethermind GitHub リポジトリ](https://github.com/NethermindEth/nethermind)でのリクエストのプルや問題のオープンも、いつでも行えます。
 
-## その他のリスト \{#other-aggregated-lists}
+## その他のリスト {#other-aggregated-lists}
 
 [Nethereum の公式サイト](https://nethereum.com/)  
 [Nethermind の公式サイト](https://nethermind.io/)

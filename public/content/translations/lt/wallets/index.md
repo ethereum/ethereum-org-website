@@ -4,7 +4,7 @@ description: Pagrindinė informacija, kurios reikia pradedant naudoti Ethereum p
 lang: lt
 ---
 
-# Ethereum piniginės \{#ethereum-wallets}
+# Ethereum piniginės {#ethereum-wallets}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: lt
 
 </FeaturedText>
 
-## Kas yra Ethereum piniginė ir kokią turėčiau naudoti? \{#what-is-an-ethereum-wallet-and-which-one-should-i-use}
+## Kas yra Ethereum piniginė ir kokią turėčiau naudoti? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
 Piniginės – tai programos, kuriose lengva saugoti bei siųsti [ETH](/eth/) ir sąveikauti su kitomis [Ethereum sukurtomis programomis](/dapps/).
 

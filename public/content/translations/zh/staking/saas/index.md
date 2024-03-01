@@ -13,11 +13,11 @@ summaryPoints:
   - 降低信任并保持你对提款密钥的控制权
 ---
 
-## 什么是质押即服务？ \{#what-is-staking-as-a-service}
+## 什么是质押即服务？ {#what-is-staking-as-a-service}
 
 质押即服务 (“SaaS") 代表一类质押服务，采用这种服务的用户会存入 32 个以太币用于验证者，但是将节点运营委托给第三方运营商执行。 这个过程通常需要你按引导完成初始设置，包括密钥生成和存款，然后将你的签名密钥上传给运营商。 这项服务将代表你运行验证者，通常按月收费。
 
-## 为什么需要质押服务？ \{#why-stake-with-a-service}
+## 为什么需要质押服务？ {#why-stake-with-a-service}
 
 以太坊协议本身并不支持质押委托，于是这类服务便为了满足这一需求而建。 如果你有 32 个以太币需要质押，但是没有合适的硬件设备，那么质押即服务可以使你在使用运营商硬件设施的同时获得区块奖励。
 
@@ -29,7 +29,7 @@ summaryPoints:
 
 <StakingComparison page="saas" />
 
-## 需考虑事项 \{#what-to-consider}
+## 需考虑事项 {#what-to-consider}
 
 为了满足人们质押以太币的需求，质押即服务提供商的数量不断增长，但每位提供商的优势与风险不尽相同。 相比于自行质押，所有质押即服务方案都需要进一步的信任假设。 质押即服务方案可能使用更多代码包装以太坊客户端，而且这些代码未公开且不可审计。 质押即服务还会对网络去中心化造成有害影响。 取决于设置情况，你可能无法控制自己的验证者 - 运营者在使用你的以太币时可能会缺失诚信。
 
@@ -37,7 +37,7 @@ summaryPoints:
 
 <StakingConsiderations page="saas" />
 
-## 探索质押服务提供商 \{#saas-providers}
+## 探索质押服务提供商 {#saas-providers}
 
 以下是一些可用的质押即服务提供商。 你可以利用上述指标来辅助你选择。
 
@@ -55,7 +55,7 @@ summaryPoints:
 
 想要推荐其他未提到的质押即服务提供商吗？ 可以查看我们的[产品上线政策](/contributing/adding-staking-products/)，确定你推荐的质押工具是否合适，合适的话，请提交以供审核。
 
-## 常见问题 \{#faq}
+## 常见问题 {#faq}
 
 {
 <ExpandableCard title="谁拥有我的密钥？" eventCategory="SaasStaking" eventName="clicked who holds my keys">
@@ -97,7 +97,7 @@ BLS 提款密钥用于签署一次性信息，声明质押奖励和退出的资�
 </ExpandableCard>
 }
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [以太坊质押目录](https://www.staking.directory/) - _Eridian 和 Spacesider_
 - [评估质押服务](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

@@ -11,19 +11,19 @@ lang: id
 published: 2021-04-06
 ---
 
-## Kirimkan Token Menggunakan ethers.js(5.0) \{#send-token}
+## Kirimkan Token Menggunakan ethers.js(5.0) {#send-token}
 
-### Dalam Tutorial Ini, Anda Akan Belajar Cara \{#you-learn-about}
+### Dalam Tutorial Ini, Anda Akan Belajar Cara {#you-learn-about}
 
 - Mengimpor ethers.js
 - Mentransfer token
 - Menetapkan harga gas sesuai dengan kondisi lalu lintas jaringan
 
-### Untuk Memulai \{#to-get-started}
+### Untuk Memulai {#to-get-started}
 
 Untuk memulai, kita harus terlebih dahulu mengimpor pustaka ethers.js ke dalam Include ethers.js(5.0) javascript kita
 
-### Menginstal \{#install-ethersjs}
+### Menginstal {#install-ethersjs}
 
 ```shell
 /home/ricmoo> npm install --save ethers
@@ -47,7 +47,7 @@ ES3 (UMD) di Peramban
 ></script>
 ```
 
-### Parameter \{#param}
+### Parameter {#param}
 
 1. **`contract_address`**: Akun kontrak token (akun kontrak diperlukan ketika token yang ingin Anda transfer bukan merupakan ether)
 2. **`send_token_amount`**: Jumlah yang ingin Anda kirimkan ke penerima
@@ -55,15 +55,15 @@ ES3 (UMD) di Peramban
 4. **`send_account`**: Alamat pengirim
 5. **`private_key`**: Kunci pribadi dari pengirim untuk menandatangani transaksi dan benar-benar mentransfer token
 
-## Pemberitahuan \{#notice}
+## Pemberitahuan {#notice}
 
 `signTransaction(tx)` dihilangkan karena `sendTransaction()` dilakukan secara internal.
 
-## Prosedur Mengirim \{#procedure}
+## Prosedur Mengirim {#procedure}
 
-### 1. Hubungkan ke jaringan (jaringan percobaan) \{#connect-to-network}
+### 1. Hubungkan ke jaringan (jaringan percobaan) {#connect-to-network}
 
-#### Tetapkan Penyedia (Infura) \{#set-provider}
+#### Tetapkan Penyedia (Infura) {#set-provider}
 
 Hubungkan ke jaringan percobaan Ropsten
 
@@ -71,29 +71,29 @@ Hubungkan ke jaringan percobaan Ropsten
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. Buat dompet \{#create-wallet}
+### 2. Buat dompet {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. Hubungkan Dompet ke net \{#connect-wallet-to-net}
+### 3. Hubungkan Dompet ke net {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. Dapatkan harga gas saat ini \{#get-gas}
+### 4. Dapatkan harga gas saat ini {#get-gas}
 
 ```javascript
 window.ethersProvider.getGasPrice() // gasPrice
 ```
 
-### 5. Tentukan Transaksi \{#define-transaction}
+### 5. Tentukan Transaksi {#define-transaction}
 
 Variabel-variabel ini yang ditentukan di bawah bergantung pada `send_token()`
 
-### Parameter transaksi \{#transaction-params}
+### Parameter transaksi {#transaction-params}
 
 1. **`send_account`**: alamat pengirim token
 2. **`to_address`**: alamat penerima token
@@ -114,7 +114,7 @@ const tx = {
 }
 ```
 
-### 6. Transfer \{#transfer}
+### 6. Transfer {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
@@ -123,7 +123,7 @@ walletSigner.sendTransaction(tx).then((transaction) => {
 })
 ```
 
-## Cara menggunakannya \{#how-to-use}
+## Cara menggunakannya {#how-to-use}
 
 ```javascript
 let private_key =
@@ -146,11 +146,11 @@ send_token(
 )
 ```
 
-### Sukses! \{#success}
+### Sukses! {#success}
 
 ![gambar transaksi berhasil](./successful-transaction.png)
 
-## send_token() \{#send-token-method}
+## send_token() {#send-token-method}
 
 ```javascript
 function send_token(

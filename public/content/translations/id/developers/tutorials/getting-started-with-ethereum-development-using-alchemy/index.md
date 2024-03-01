@@ -22,11 +22,11 @@ Ini adalah panduan bagi pemula untuk memulai pengembangan Ethereum. Untuk tutori
 
 Kami akan memandu Anda mulai dari mendaftar di Alchemy hingga menulis skrip web3 pertama Anda! Pengalaman pengembangan blockchain tidak diperlukan!
 
-## 1. Mendaftar Akun Alchemy Secara Gratis \{#sign-up-for-a-free-alchemy-account}
+## 1. Mendaftar Akun Alchemy Secara Gratis {#sign-up-for-a-free-alchemy-account}
 
 Membuat akun Alchemy itu mudah, [daftar secara gratis di sini](https://auth.alchemyapi.io/signup).
 
-## 2. Membuat Aplikasi Alchemy \{#create-an-alchemy-app}
+## 2. Membuat Aplikasi Alchemy {#create-an-alchemy-app}
 
 Untuk berkomunikasi dengan rantai Ethereum dan menggunakan produk-produk Alchemy, Anda memerlukan kunci API untuk mengotentikasi permintaan Anda.
 
@@ -44,7 +44,7 @@ Anda juga bisa menarik kunci API yang sudah ada dengan mengarahkan kursor ke "Ap
 
 ![Gif yang menampilkan ke pengguna bagaimana cara menarik kunci API](./pull-api-keys.gif)
 
-## 3. Membuat permintaan dari Baris Perintah \{#make-a-request-from-the-command-line}
+## 3. Membuat permintaan dari Baris Perintah {#make-a-request-from-the-command-line}
 
 Berinteraksi dengan blockchain Ethereum melalui Alchemy menggunakan JSON-RPC dan curl.
 
@@ -72,7 +72,7 @@ _**NOTE:** Replace [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainn
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
-## 4. Menyiapkan Client Web3 Anda \{#set-up-your-web3-client}
+## 4. Menyiapkan Client Web3 Anda {#set-up-your-web3-client}
 
 **Jika Anda sudah memiliki klien,** ganti URL penyedia node Anda saat ini ke URL Alchemy dengan kunci API Anda: `“https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -103,7 +103,7 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
-## 5. Tulis Skrip Web3 pertama Anda! \{#write-your-first-web3-script}
+## 5. Tulis Skrip Web3 pertama Anda! {#write-your-first-web3-script}
 
 Sekarang untuk membuat tangan kita kotor dengan sedikit pemrograman web3, kita akan menulis skrip sederhana yang mencetak nomor blok terakhir dari Jaringan Utama Ethereum.
 

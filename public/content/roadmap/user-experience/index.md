@@ -9,7 +9,7 @@ template: roadmap
 
 Using Ethereum needs to be simplified; from managing keys and wallets to initiating transactions. To facilitate mass adoption, Ethereum must drastically increase the ease of use, allowing users to experience permissionless and censorship-resistant access to Ethereum with the frictionless experience of using Web2 apps.
 
-## Beyond seed phrases \{#no-more-seed-phrases}
+## Beyond seed phrases {#no-more-seed-phrases}
 
 Ethereum accounts are protected by a pair of keys used to identify accounts (public key) and sign messages (private key). A private key is like a master password; it allows complete access to an Ethereum account. This is a different way of operating for people more familiar with banks and Web2 apps which manage accounts on a user's behalf. For Ethereum to reach mass adoption without relying on centralized third parties, there must be a straightforward, frictionless way for a user to take custody of their assets and keep control of their data without having to understand public-private key cryptography and key management.
 
@@ -31,7 +31,7 @@ There are several upgrades that will make running nodes far easier and far less 
 
 With these upgrades, the barriers to running a node are reduced to effectively zero. Users will benefit from secure, permissionless access to Ethereum without having to sacrifice noticeable disk space or CPU on their computer or mobile phone, and will not have to rely on third parties for data or network access when they use apps.
 
-## Current progress \{#current-progress}
+## Current progress {#current-progress}
 
 Smart contract wallets are already available, but more upgrades are required to make them as decentralized and permissionless as possible. EIP-4337 is a mature proposal that does not require any changes to Ethereum's protocol. The main smart contract required for EIP-4337 was deployed in March 2023.
 

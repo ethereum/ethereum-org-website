@@ -4,15 +4,15 @@ description: As informações básicas de que você precisa para entender as EIP
 lang: pt-br
 ---
 
-# Introdução às Propostas de Melhorias do Ethereum (EIPs) \{#introduction-to-ethereum-improvement-proposals}
+# Introdução às Propostas de Melhorias do Ethereum (EIPs) {#introduction-to-ethereum-improvement-proposals}
 
-## O que são EIPs? \{#what-are-eips}
+## O que são EIPs? {#what-are-eips}
 
 [Propostas de Melhorias do Ethereum (EIPs)](https://eips.ethereum.org/) são padrões especificando novos recursos ou processos potenciais para o Ethereum. As EIPs contêm especificações técnicas para as mudanças propostas e agem como a "fonte da verdade" para a comunidade. Atualizações de rede e padrões de aplicativos para Ethereum são discutidos e desenvolvidos através do processo EIP.
 
 Qualquer um da comunidade Ethereum tem a capacidade de criar uma EIP. Diretrizes para escrever EIPs estão incluídas na [EIP 1](https://eips.ethereum.org/EIPS/eip-1). Uma EIP deve fornecer principalmente uma especificação técnica concisa com um pouco de motivação. O autor da EIP é responsável por obter consenso dentro da comunidade e documentar opiniões alternativas. Dada a alta barreira técnica para enviar uma EIP bem-elaborada, historicamente, a maioria dos autores de EIP são geralmente desenvolvedores de aplicativos ou protocolos.
 
-## Por que as EIPs são importantes? \{#why-do-eips-matter}
+## Por que as EIPs são importantes? {#why-do-eips-matter}
 
 As EIPs desempenham um papel central em como as mudanças acontecem e são documentadas no Ethereum. São a forma de as pessoas proporem, debaterem e adoptarem alterações. Existem [diferentes tipos de EIPs](https://eips.ethereum.org/EIPS/eip-1#eip-types), incluindo EIPs centrais para alterações de protocolo de baixo nível, que afetam o consenso e exigem uma atualização de rede como [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) e ERCs para padrões de aplicativos como [EIP-20](https://eips.ethereum.org/EIPS/eip-20) e [EIP-721](https://eips.ethereum.org/EIPS/eip-721).
 
@@ -20,7 +20,7 @@ Cada atualização de rede consiste em um conjunto de EIPs que precisam ser impl
 
 Além de fornecer uma especificação técnica para mudanças, as EIPs são a unidade em torno da qual a governança acontece no Ethereum: qualquer um pode propor uma EIP e, em seguida, vários stakeholders da comunidade discutirão para determinar se ela deve ser adotada como padrão ou incluída em uma melhoria da rede. Como as EIPs não centrais não precisam ser adotadas por todos os aplicativos (por exemplo, é possível criar um token diferente do ERC20), embora as EIPs centrais devam ser amplamente adotadas (porque todos os nós devem ser atualizados para se manterem parte da mesma rede), as EIPs centrais exigem um consenso mais amplo dentro da comunidade do que as EIPs não centrais.
 
-## Histórico de EIPs \{#history-of-eips}
+## Histórico de EIPs {#history-of-eips}
 
 O repositório Github [Propostas de Melhorias do Ethereum (EIPs)](https://github.com/ethereum/EIPs) foi criado em outubro de 2015. O processo EIP é baseado no processo de [Propostas de Melhorias do Bitcoin (BIPs)](https://github.com/bitcoin/bips) que, por sua vez, é baseado no processo [Propostas de Melhorias do Python (PEPs)](https://www.python.org/dev/peps/).
 
@@ -50,7 +50,7 @@ Os editores de EIP decidem quando uma proposta está pronta para se tornar uma E
 
 O processo completo de padronização, juntamente com o gráfico, é descrito em [EIP-1](https://eips.ethereum.org/EIPS/eip-1)
 
-## Saiba mais \{#learn-more}
+## Saiba mais {#learn-more}
 
 Se você estiver interessado em ler mais sobre EIPs, confira o [site sobre EIPs](https://eips.ethereum.org/) e [EIP-1](https://eips.ethereum.org/EIPS/eip-1). Aqui estão alguns links úteis:
 
@@ -58,11 +58,11 @@ Se você estiver interessado em ler mais sobre EIPs, confira o [site sobre EIPs]
 - [Uma descrição de todos os tipos de EIP](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [Uma descrição de todos os status de EIP](https://eips.ethereum.org/EIPS/eip-1#eip-process)
 
-## Participar \{#participate}
+## Participar {#participate}
 
 Qualquer pessoa pode criar uma EIP. Antes de enviar uma proposta, é necessário ler a [EIP-1](https://eips.ethereum.org/EIPS/eip-1), que descreve o processo de EIP, como escrever uma EIP e solicitar feedback sobre no fórum [Ethereum Magicians](https://ethereum-magicians.org/), no qual as propostas são discutidas primeiro com a comunidade antes de um plano ser enviado.
 
-## Referências \{#references}
+## Referências {#references}
 
 <cite class="citation">
 

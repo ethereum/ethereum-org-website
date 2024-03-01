@@ -9,11 +9,11 @@ sidebarDepth: 2
 
 默克尔帕特里夏树是完全确定性的，这意味着有相同 `(key, value)` 对的字典树肯定是完全相同的，就连最后一个字节也相同。 这代表它们有着相同的根哈希，让插入、查找和删除操作具有难以企及的 `O(log(n))` 效率。 此外，相较于更复杂的基于比较的其他字典树（如红黑树），默克尔帕特里夏树更易于理解和编码。
 
-## 前提条件 \{#prerequisites}
+## 前提条件 {#prerequisites}
 
 为了更好地理解本文，具备以下基础知识将有所帮助：[哈希](https://en.wikipedia.org/wiki/Hash_function)、[默克尔树](https://en.wikipedia.org/wiki/Merkle_tree)、[字典树](https://en.wikipedia.org/wiki/Trie)和[序列化](https://en.wikipedia.org/wiki/Serialization)。
 
-## 基数树 \{#basic-radix-tries}
+## 基数树 {#basic-radix-tries}
 
 在一个基数树中，每个节点如下所示：
 
@@ -68,11 +68,11 @@ sidebarDepth: 2
 
 我们把基数树的原子单位（例如单个十六进制字符或 4 位二进制数）称为“半字节”。 如上文所述，以半字节为单位遍历路径时，节点最多可指向 16 个子节点，不过还包含一个 `value` 元素。 因此，我们把它们表示为具有长度的数组。 我们把这些有 17 个元素的数组称为“分支节点”。
 
-## 默克尔帕特里夏树 \{#merkle-patricia-trees}
+## 默克尔帕特里夏树 {#merkle-patricia-trees}
 
 基数树有一个主要限制：效率低下。 如果你想将一个 `(path, value)` 对存储在路径长度为 64 个字符（`bytes32` 中的半字节数）的位置（如以太坊中），我们需要超过一千字节的额外空间将每个字符存储一个层级，并且每次查询或删除都需要执行完整的 64 个步骤。 下文介绍的帕特里夏字典树可以解决这个问题。
 
-### 优化 \{#optimization}
+### 优化 {#optimization}
 
 默克尔帕特里夏树的节点可以是以下任意一种：
 
@@ -89,7 +89,7 @@ sidebarDepth: 2
 
 当以半字节遍历路径时，最后我们可能需要遍历奇数个半字节，但是所有数据都需要以 `bytes` 格式存储。 两者之间是无法区分的，例如，半字节 `1` 和半字节 `01`（两者都必须存储为 `<01>`）。 要指定奇数个半字节的长度，这部分路径要使用标记位作为前缀。
 
-### 规范：带有可选终止符的十六进制序列的压缩编码 \{#specification}
+### 规范：带有可选终止符的十六进制序列的压缩编码 {#specification}
 
 如上文所述，*剩余部分路径长度为奇数 vs 偶数*和*叶节点 vs 扩展节点*的标记位位于任意双元素节点中部分路径的第一个半字节。 从而产生以下结果：
 
@@ -158,7 +158,7 @@ sidebarDepth: 2
         return get_helper(node,path2)
 ```
 
-### 前缀树示例 \{#example-trie}
+### 前缀树示例 {#example-trie}
 
 假定我们想要包含四个路径/值对 `('do', 'verb')`、`('dog', 'puppy')`、`('doge', 'coin')`、`('horse', 'stallion')` 的前缀树。
 
@@ -185,7 +185,7 @@ sidebarDepth: 2
 
 请注意，更新前缀树时，*如果*新创建节点的长度 >= 32，则需要将键/值对 `(keccak256(x), x)` 存储在一个持久的查询表中。 然而，如果节点比这短，则不需要存储任何数据，因为函数 f(x) = x 是可逆的。
 
-## 以太坊中的前缀树 \{#tries-in-ethereum}
+## 以太坊中的前缀树 {#tries-in-ethereum}
 
 以太坊执行层中的所有默克尔树均使用默克尔帕特里夏树。
 
@@ -195,11 +195,11 @@ sidebarDepth: 2
 2.  transactionsRoot
 3.  receiptsRoot
 
-### 状态树 \{#state-trie}
+### 状态树 {#state-trie}
 
 有一个全局状态字典树，每次客户端处理一个区块时它都会更新。 其中，`path` 始终为：`keccak256(ethereumAddress)`，`value` 始终为：`rlp(ethereumAccount)`。 更具体地说，一个以太坊 `account` 是包含 4 个元素的数组：`[nonce,balance,storageRoot,codeHash]`。 关于这一点值得注意的是，`storageRoot` 是另一个帕特里夏字典树的根：
 
-### 存储树 \{#storage-trie}
+### 存储树 {#storage-trie}
 
 存储树是*所有*合同数据存放之处。 每个帐户都有一棵单独的存储树。 要用给定地址在特定的存储位置检索值，需要存储地址、存储器中存储数据的整数位置，以及区块 ID。 之后，这些数据可以作为参数传入 JSON-RPC 应用程序接口中定义的 `eth_getStorageAt`，例如用于检索地址 `0x295a70b2de5e3953354a6a8344e616ed314d7251` 的存储插槽 0 中的数据：
 
@@ -233,7 +233,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### 交易树 \{#transaction-trie}
+### 交易树 {#transaction-trie}
 
 每个区块都有一个独立的交易字典树，也用于存储 `(key, value)` 对。 路径为：`rlp(transactionIndex)`，代表了对应一个值的键，值由以下决定：
 
@@ -246,13 +246,13 @@ else:
 
 关于这个问题的更多信息可以在 [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) 文档中找到。
 
-### 收据树 \{#receipts-trie}
+### 收据树 {#receipts-trie}
 
 每个区块都有自己的收据树。 此处的 `path` 是：`rlp(transactionIndex)`。 `transactionIndex` 是它在挖矿区块中的索引。 收据字典树从不更新。 与交易字典树类似，它也有当前和以前的收据。 为了在收据字典树中查询特定的收据，需要提供区块中交易的索引、收据有效载荷以及交易类型。 返回的收据可以是 `Receipt` 类型，定义为 `transaction type` 和 `transaction payload` 的串接，也可以是 `LegacyReceipt` 类型，定义为 `rlp([status, cumulativeGasUsed, logsBloom, logs])`。
 
 关于这个问题的更多信息可以在 [EIP 2718](https://eips.ethereum.org/EIPS/eip-2718) 文档中找到。
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [修改后的默克尔帕特里夏字典树 — 如何保存以太坊状态](https://medium.com/codechain/modified-merkle-patricia-trie-how-ethereum-saves-a-state-e6d7555078dd)
 - [以太坊中的默克尔树](https://blog.ethereum.org/2015/11/15/merkling-in-ethereum/)

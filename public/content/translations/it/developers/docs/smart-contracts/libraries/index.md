@@ -6,15 +6,15 @@ lang: it
 
 Non devi scrivere ogni contratto intelligente nel tuo progetto da zero. Esistono molte librerie open source di contratti intelligenti che forniscono blocchi di programmazione riutilizzabili per il tuo progetto, che possono salvarti dal dover reinventare la ruota.
 
-## Prerequisiti \{#prerequisites}
+## Prerequisiti {#prerequisites}
 
 Prima di saltare alle librerie dei contratti intelligenti, è una buona idea avere una buona comprensione della struttura di un contratto intelligente. Consulta l'[anatomia dei contratti intelligenti](/developers/docs/smart-contracts/anatomy/), se ancora non l'hai fatto.
 
-## Cosa contiene una libreria \{#whats-in-a-library}
+## Cosa contiene una libreria {#whats-in-a-library}
 
 Solitamente, puoi trovare due tipi di blocchi di programmazione nelle librerie dei contratti intelligenti: comportamenti riutilizzabili che puoi aggiungere ai tuoi contratti e implementazioni di vari standard.
 
-### Comportamenti \{#behaviors}
+### Comportamenti {#behaviors}
 
 Scrivendo i contratti intelligenti, è possibile che ti troverai a scrivere sempre gli stessi schemi, come assegnare un indirizzo _admin_ per svolgere le operazioni protette in un contratto, o aggiungere un pulsante d'emergenza _pause_ nel caso di un problema imprevisto.
 
@@ -52,7 +52,7 @@ contract MyContract is Ownable {
 
 Un altro esempio noto è [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) o [DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html). Sono librerie (e non contratti di base) che forniscono funzioni aritmetiche con controlli dell'overflow che non vengono offerti dal linguaggio. È buona pratica usare una di queste librerie al posto delle operazioni aritmetiche native per proteggere un contratto dagli overflow, che possono avere conseguenze disastrose.
 
-### Standard \{#standards}
+### Standard {#standards}
 
 Per facilitare la [componibilità e l'interoperabilità](/developers/docs/smart-contracts/composability/), la community di Ethereum ha definito diversi standard nella forma di **ERC**. Puoi leggere di più nella sezione dedicata agli [standard](/developers/docs/standards/).
 
@@ -60,7 +60,7 @@ Se desideri includere un ERC all'interno di un contratto, è consigliabile cerca
 
 Vale la pena ricordare che alcuni ERC non sono singoli, ma sono aggiunte di altri ERC. Per esempio, [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) aggiunge un'estensione a ERC20 per migliorarne l'utilizzabilità.
 
-## Come aggiungere una libreria \{#how-to}
+## Come aggiungere una libreria {#how-to}
 
 Consulta sempre la documentazione della libreria che decidi di utilizzare per avere istruzioni specifiche su come includerla nel tuo progetto. Molte librerie dei contratti Solidity sono create con `npm`, quindi puoi usare semplicemente `npm install` per installarle. Gran parte degli strumenti per [compilare](/developers/docs/smart-contracts/compiling/) i contratti, cercherà le librerie dei contratti intelligenti nei tuoi `node_modules`, quindi puoi fare quanto segue:
 
@@ -75,7 +75,7 @@ contract MyNFT is ERC721 {
 
 Indipendentemente dal metodo utilizzato, includendo una libreria, tieni sempre d'occhio la versione della [lingua](/developers/docs/smart-contracts/languages/). Ad esempio non puoi usare una libreria per Solidity 0.6 se stai scrivendo i contratti in Solidity 0.5.
 
-## Quando usare una libreria \{#when-to-use}
+## Quando usare una libreria {#when-to-use}
 
 Usare la libreria di un contratto intelligente per il tuo progetto ha diversi benefici. Prima di tutto, fa risparmiare tempo perché fornisce blocchi di programmazione pronti all'uso che puoi includere nel sistema e che non devi programmare autonomamente.
 
@@ -85,7 +85,7 @@ Tuttavia, l'uso delle librerie dei contratti intelligenti comporta il rischio di
 
 Infine, per decidere se includere una libreria, considera l'uso generale che ne vorresti fare. Una libreria ampiamente adottata ha il vantaggio di avere alla base una community più grande e più occhi che la controllano alla ricerca di problemi. La sicurezza dovrebbe essere la tua preoccupazione principale, quando sviluppi i contratti intelligenti!
 
-## Strumenti correlati \{#related-tools}
+## Strumenti correlati {#related-tools}
 
 **OpenZeppelin Contracts**: **_La libreria più popolare per lo sviluppo sicuro di contratti intelligenti._**
 
@@ -107,11 +107,11 @@ Infine, per decidere se includere una libreria, considera l'uso generale che ne 
 - [Documentazione](https://portal.thirdweb.com/solidity/)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
-## Tutorial correlati \{#related-tutorials}
+## Tutorial correlati {#related-tutorials}
 
 - [Security considerations for Ethereum developers](/developers/docs/smart-contracts/security/): _Un tutorial sulle considerazioni sulla sicurezza durante lo sviluppo dei contratti intelligenti, incluso l'uso della libreria._
 - [Understand the ERC-20 token smart contract](/developers/tutorials/understand-the-erc-20-token-smart-contract/): _Tutorial sullo standard ERC20, fornito da diverse librerie._
 
-## Letture consigliate \{#further-reading}
+## Letture consigliate {#further-reading}
 
 _Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_

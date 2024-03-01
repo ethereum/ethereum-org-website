@@ -4,13 +4,13 @@ description: Cómo participar en la comunidad Ethereum.
 lang: es
 ---
 
-# ¿Cómo puedo participar? \{#get-involved}
+# ¿Cómo puedo participar? {#get-involved}
 
 La comunidad Ethereum incluye a personas de diferentes orígenes y habilidades. Desarrolladores, artistas, contables... hay muchas formas de involucrarse. He aquí una lista de sugerencias para ayudarle a empezar.
 
 Le sugerimos que comience enterándose de la misión y los valores de ethereum.org en nuestro [código de conducta](/community/code-of-conduct).
 
-## Desarrolladores <Emoji text=":computer:" size={1} /> \{#developers}
+## Desarrolladores <Emoji text=":computer:" size={1} /> {#developers}
 
 - Aprenda y pruebe Ethereum en [ethereum.org/developers/](/developers/)
 - [Encuentre una recompensa en Gitcoin](https://gitcoin.co/), ¡solucione problemas técnicos sencillos o complejos y gane criptomonedas!
@@ -21,7 +21,7 @@ Le sugerimos que comience enterándose de la misión y los valores de ethereum.o
 - [Web3Bridge](https://www.web3bridge.com/): únase a la iniciativa de la inspiradora comunidad web3 para buscar, formar y apoyar a cientos de desarrolladores y miembros de la comunidad en toda África.
 - Únase a [Ethereum Cat Herders en Discord](https://discord.io/EthCatHerders)
 
-## Investigadores y académicos <Emoji text=":mag:" size={1} /> \{#researchers-and-academics}
+## Investigadores y académicos <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 ¿Domina las matemáticas, la criptografía o la economía? Puede interesarle alguno de los trabajos pioneros que se están haciendo dentro del ecosistema Ethereum:
 
@@ -42,61 +42,61 @@ Le sugerimos que comience enterándose de la misión y los valores de ethereum.o
 
 [Explore más áreas de investigación activas](/community/research/).
 
-## Competencias no técnicas <Emoji text=":briefcase:" size={1} /> \{#non-technical}
+## Competencias no técnicas <Emoji text=":briefcase:" size={1} /> {#non-technical}
 
 Si no es desarrollador, puede ser difícil saber por dónde empezar en Ethereum. He aquí algunas sugerencias, completadas con recursos para perfiles profesionales específicos.
 
-### Organice un encuentro en su ciudad \{#meetups}
+### Organice un encuentro en su ciudad {#meetups}
 
 - ¿No sabe cómo empezar? La [red BUIDL](https://consensys.net/developers/buidlnetwork/) puede ser útil.
 
-### Escriba contenido sobre Ethereum \{#write-content}
+### Escriba contenido sobre Ethereum {#write-content}
 
 - Ethereum necesita buenos escritores que puedan explicar su valor en un lenguaje sencillo.
 - ¿Aún no está listo para publicar sus propios artículos? Contemple la posibilidad de añadir contenidos a los ya existentes sobre recursos de la comunidad [EthHub](/contributing/) o de proponer nuevos contenidos para ethereum.org.
 
-### Ofrézcase a elaborar actas de reuniones comunitarias \{#take-notes}
+### Ofrézcase a elaborar actas de reuniones comunitarias {#take-notes}
 
 - Hay muchas reuniones comunitarias de código abierto, y contar con actas de las reuniones es de gran ayuda. Si le interesa el tema, únase al [ canal Discord Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) y preséntese.
 
-### Traduzca el contenido de Ethereum a su idioma materno \{#translate-ethereum}
+### Traduzca el contenido de Ethereum a su idioma materno {#translate-ethereum}
 
 - Ethereum.org posee un programa de traducción que traduce el sitio web y otros recursos a muchos idiomas diferentes.
 - Descubra [aquí](/contributing/translation-program) cómo puede participar.
 
-### Ejecute un nodo \{#run-a-node}
+### Ejecute un nodo {#run-a-node}
 
 Únase a miles de operadores de nodos para ayudar a descentralizar aún más Ethereum.
 
 - [Más información sobre cómo ejecutar un nodo.](/developers/docs/nodes-and-clients/run-a-node/)
 
-### Apueste su ETH \{#staking}
+### Apueste su ETH {#staking}
 
 Al apostar sus ETH, puede ganar recompensas mientras ayuda a proteger la red Ethereum.
 
 - [Más acerca de las apuestas (staking).](/staking/)
 
-### Apoyo a proyectos \{#support-projects}
+### Apoyo a proyectos {#support-projects}
 
 El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proyectos con gran repercusión. A través de donaciones muy pequeñas puede mostrar su apoyo y permitir que se realice un trabajo importante.
 
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
-## Profesionales financieros y contables <Emoji text=":chart_with_upwards_trend:" size={1} /> \{#financial-professionals}
+## Profesionales financieros y contables <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
 - Ethereum es la sede del ecosistema de «Finanzas descentralizadas», es decir, una red de protocolos y aplicaciones que ofrecen un sistema financiero alternativo. Si usted es un profesional de las Finanzas, eche un vistazo a algunas aplicaciones DeFi en [DeFiLlama](https://defillama.com/) o [DeFiPrime](https://defiprime.com).
 - ¿Contable? Los activos en Ethereum (ETH, tókenes, DeFi, etc.) tratan de muchos y novedosos asuntos de contabilidad. Podría empezar por revisar algunos proyectos que tienen como objetivo ayudar a los usuarios de criptomonedas a ocuparse de su contabilidad y complejidades de la contabilidad, como [Rotki](https://rotki.com/).
 
-## Gestores de producto <Emoji text=":fountain_pen:" size={1} />‍ \{#product-managers}
+## Gestores de producto <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
 - ¡El ecosistema Ethereum necesita su valía! Muchas empresas están contratando a personal para puestos de gestión de productos. Si quiere empezar contribuyendo a un proyecto de código abierto, póngase en contacto con [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [MetaCartel](https://www.metacartel.org/).
 
-## Marketing <Emoji text=":megaphone:" size={1} />‍ \{#marketing}
+## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
 - ¡Hay muchos puestos de marketing y comunicaciones disponibles en el ecosistema de Ethereum!
 
-## Vacantes de empleo en Ethereum \{#ethereum-jobs}
+## Vacantes de empleo en Ethereum {#ethereum-jobs}
 
 **¿Quiere trabajar en Ethereum?**
 
@@ -115,7 +115,7 @@ El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proye
 - [Vacantes de empleo en Ethereum](https://startup.jobs/ethereum-jobs)
 - [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
-## Únase a una DAO \{#decentralized-autonomous-organizations-daos}
+## Únase a una DAO {#decentralized-autonomous-organizations-daos}
 
 Las «DAO» son organizaciones autónomas descentralizadas. Estos grupos aprovechan la tecnología de Ethereum para facilitar la organización y la colaboración. Por ejemplo, para controlar las adhesiones de miembros, votar sobre propuestas o administrar activos agrupados. Aunque las DAO aún están en fase experimental, ofrecen oportunidades para que encuentre grupos con los que se identifique, contacte con colaboradores y aumente su impacto en la comunidad Ethereum. [Más información sobre las DAO.](/dao/)
 

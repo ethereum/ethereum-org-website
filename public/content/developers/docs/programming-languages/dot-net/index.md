@@ -13,7 +13,7 @@ Use Ethereum to create decentralized applications (or "dapps") that utilize the 
 
 Build decentralized applications on top of Ethereum and interact with smart contracts using tools and languages from the Microsoft technology stack - Supporting C#, # Visual Basic .NET, F#, on tooling such as VSCode and Visual Studio, across .NET Framework/.NET Core/.NET Standard. Deploy an Ethereum blockchain on Azure using Microsoft Azure Blockchain in minutes. Bring the love of .NET to Ethereum!
 
-## Getting started with smart contracts and the Solidity language \{#getting-started-with-smart-contracts-and-the-solidity-language}
+## Getting started with smart contracts and the Solidity language {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Take your first steps to integrating .NET with Ethereum**
 
@@ -24,7 +24,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Write your First Smart Contract](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Beginner references and links \{#beginner-references-and-links}
+## Beginner references and links {#beginner-references-and-links}
 
 **Introducing the Nethereum library and VS Code Solidity**
 
@@ -45,7 +45,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
   - Transfer ether to an Account [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... And more!
 
-## Intermediate articles \{#intermediate-articles}
+## Intermediate articles {#intermediate-articles}
 
 - [Nethereum Workbook/Sample List](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Deploy Your Own Development Testchains](https://github.com/Nethereum/Testchains)
@@ -58,13 +58,13 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Kaleido and Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum and Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## Advanced use patterns \{#advanced-use-patterns}
+## Advanced use patterns {#advanced-use-patterns}
 
 - [Azure Key Vault And Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum backend reference architecture](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## .NET projects, tools and other fun stuff \{#dot-net-projects-tools-and-other-fun-stuff}
+## .NET projects, tools and other fun stuff {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum Playground](http://playground.nethereum.com/) - _Compile, create, and run Nethereum code snippets in browser_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Nethereum codegen with UI in Blazor_
@@ -76,13 +76,13 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
-## .NET community contributors \{#dot-net-community-contributors}
+## .NET community contributors {#dot-net-community-contributors}
 
 At Nethereum, we mostly hang out on [Gitter](https://gitter.im/Nethereum/Nethereum) where everyone is welcome to ask/answer questions, get help, or just chill. Feel free to do a PR or open an issue on the [Nethereum GitHub repository](https://github.com/Nethereum), or just browse through the many side/sample projects we have. You can also find us on [Discord](https://discord.gg/jQPrR58FxX)!
 
 If you are new to Nethermind and need help getting started, join our [Discord](http://discord.gg/PaCMRFdvWT). Our developers are on hand to answer your questions. Don't hesitate to open a PR or raise any issues on the [Nethermind GitHub repository](https://github.com/NethermindEth/nethermind).
 
-## Other aggregated lists \{#other-aggregated-lists}
+## Other aggregated lists {#other-aggregated-lists}
 
 [Official Nethereum Site](https://nethereum.com/)  
 [Official Nethermind Site](https://nethermind.io/)

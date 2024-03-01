@@ -6,15 +6,15 @@ lang: zh
 
 您无需从头开始编写项目中的每一个智能合约 我们有许多开源代码的智能合约库可为您的项目提供可重复利用的构建块，从而使您不必重新开始。
 
-## 前置要求 \{#prerequisites}
+## 前置要求 {#prerequisites}
 
 在我们跳转到智能合约库之前，清楚地了解一个智能合约的构成是一个不错的主意。 如果尚未进行智能合约的了解，请直接点击[智能合约](/developers/docs/smart-contracts/anatomy/)。
 
-## 资料库中的内容 \{#whats-in-a-library}
+## 资料库中的内容 {#whats-in-a-library}
 
 您通常可以在智能合约库中找到两种构建模块：可以添加到合约中的可复用代码，与各种标准的实现。
 
-### 行为 \{#behaviors}
+### 行为 {#behaviors}
 
 当编写智能合约时，您很可能会发现自己在写重复的代码。 比如说在智能合约中指派一个*管理员*地址执行受保护的操作，或添加一个紧急*暂停*按钮以应对预料不到的问题。
 
@@ -52,7 +52,7 @@ contract MyContract is Ownable {
 
 另一个比较受欢迎的例子是 [SafeMath](https://docs.openzeppelin.com/contracts/3.x/utilities#math) 或[DsMath](https://dappsys.readthedocs.io/en/latest/ds_math.html)。 这些库（与基础合约不同）提供了语言本身不具有的带有溢出检查的算术函数。 使用这些库而不是本地的算术操作可以来防止您的合约出现溢出错误，这些错误可能会导致灾难性的后果！
 
-### 标准 \{#standards}
+### 标准 {#standards}
 
 为了促进[可组合性和互操作性](/developers/docs/smart-contracts/composability/)，以太坊社区已经以**以太坊意见征求**的形式定义了几个标准。 您可以在[标准](/developers/docs/standards/)部分阅读更多关于他们的信息。
 
@@ -60,7 +60,7 @@ contract MyContract is Ownable {
 
 值得一提的是，一些以太坊意见征求不是独立的，而是对其他以太坊意见征求的补充。 例如， [ERC2612](https://eips.ethereum.org/EIPS/eip-2612) 为 ERC20 添加了一个扩展，以提高其可用性。
 
-## 如何添加库 \{#how-to}
+## 如何添加库 {#how-to}
 
 始终参考您所包含的库的文档，以获得关于如何将其包含在您的项目中的具体说明 一些 Solidity 合约库使用 `npm` 来打包，所以您可以直接 `npm` 安装它们。 大多数[编译](/developers/docs/smart-contracts/compiling/)合约的工具会在您的 node_modules 中查找智能合约库，所以您可以做以下工作。
 
@@ -75,7 +75,7 @@ contract MyNFT is ERC721 {
 
 无论您使用哪种方法，当包括一个库时，总是要注意[语言](/developers/docs/smart-contracts/languages/)的版本。 例如，如果您用 Solidity 0.5 编写您的合约，您就不能使用 Solidity 0.6 的库。
 
-## 何时使用 \{#when-to-use}
+## 何时使用 {#when-to-use}
 
 为您的项目使用智能合约库有几个好处。 首先，它为您提供了现成的构建模块，您可以将其纳入您的系统，而不必自己编码，从而节省了您的时间。
 
@@ -85,7 +85,7 @@ contract MyNFT is ERC721 {
 
 最后，在决定是否包括一个库时，要考虑其总体使用情况。 一个被广泛采用的方案的好处是有一个更大的社区和更多的眼睛来关注它的问题。 在使用智能合约进行建设时，安全应该是您的首要关注点！
 
-## 相关工具 \{#related-tools}
+## 相关工具 {#related-tools}
 
 **OpenZeppelin 合约-** **_安全的智能合约开发库。_**
 
@@ -107,11 +107,11 @@ contract MyNFT is ERC721 {
 - [相关文档](https://portal.thirdweb.com/solidity/)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
 
-## 相关教程 \{#related-tutorials}
+## 相关教程 {#related-tutorials}
 
 - [以太坊开发者的安全考虑](/developers/docs/smart-contracts/security/) _- 构建智能合约时的安全考虑教程，包括库的使用。_
 - [了解 ERC-20 代币智能合约](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- 关于 ERC20 标准的教程，由多个库提供。_
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_

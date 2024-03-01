@@ -79,7 +79,7 @@ MyWaffleProject
 └── package.json
 ```
 
-### Acum să vorbim despre unele dintre aceste fișiere: \{#now-lets-talk}
+### Acum să vorbim despre unele dintre aceste fișiere: {#now-lets-talk}
 
 - Greeter.sol - contractul nostru inteligent scris în solidity;
 
@@ -126,7 +126,7 @@ describe("Greeter", function () {
 })
 ```
 
-### La pasul următor ne vom compila contractul și vom rula testele: \{#compiling-and-testing}
+### La pasul următor ne vom compila contractul și vom rula testele: {#compiling-and-testing}
 
 Testele Waffle folosesc Mocha (un framework de testare) cu Chai (o bibliotecă de afirmații). Trebuie doar să rulați `testul npx hardhat` și să așteptați să apară următorul mesaj.
 
@@ -134,7 +134,7 @@ Testele Waffle folosesc Mocha (un framework de testare) cu Chai (o bibliotecă d
 ✓ Should return the new greeting once it's changed
 ```
 
-### Lucrurile merg grozav până acum, haideți să facem proiectul puțin mai complex<Emoji text=":slightly_smiling_face:" size={1}/> \{#adding-complexity}
+### Lucrurile merg grozav până acum, haideți să facem proiectul puțin mai complex<Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
 Imaginați-vă cum ar fi ca cineva să adauge un string gol ca salut. Nu ar fi un salut călduros, nu?  
 Să avem grijă ca acest lucru să nu se întâmple:
@@ -195,7 +195,7 @@ Să rulăm din nou testele:
 
 Felicitări! Ați reușit :)
 
-### Concluzie \{#conclusion}
+### Concluzie {#conclusion}
 
 Am făcut un proiect simplu cu Waffle, Hardhat și ethers.js. Am învățat cum să configurăm un proiect, să adăugăm un test și să implementăm noi funcționalități.
 

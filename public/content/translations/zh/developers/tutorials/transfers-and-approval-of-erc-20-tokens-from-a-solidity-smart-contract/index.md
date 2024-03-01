@@ -78,7 +78,7 @@ contract DEX {
 - `buy`：用户可以发送 ETH 并在交易所中获得通证
 - `sell`：用户可以决定发送通证换回 ETH
 
-## buy 函数 \{#the-buy-function}
+## buy 函数 {#the-buy-function}
 
 让我们编写 buy 函数的代码。 我们首先需要检查消息中包含的 ETH 数量，并验证合约中是否拥有足够的通证，以及消息中是否有一些 ETH。 如果合约拥有足够的通证，它将会向用户发送通证数量，并发出`Bought`事件。
 
@@ -105,7 +105,7 @@ XPath: /pre[3]/code
 
 ![交易中的两个事件：Transfer和Bought](./transfer-and-bought-events.png)
 
-## sell 函数 \{#the-sell-function}
+## sell 函数 {#the-sell-function}
 
 负责卖出的函数将首先要求用户事先通过调用 approve 函数来批准金额。 要批准转账，用户需要调用由去中心化交易所 (DEX) 实例化的 ERC20Basic 代币。 为此，首先需要调用去中心化交易所 (DEX) 合约的 `token()` 函数来检索 DEX 部署名为 `token` 的 ERC20Basic 合约的地址。 然后，我们需要在会话中创建该合约的实例并调用它的 `approve` 函数。 接着，我们可以调用 DEX 的 `sell` 函数并将我们的代币换成以太币。 例如，该过程在交互式 Brownie 会话中显示如下：
 

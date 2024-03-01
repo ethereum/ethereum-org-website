@@ -17,16 +17,16 @@ Per usare le risorse del L1 su Optimism (o su qualsiasi altro L2), le risorse de
 
 Questo è il modo in cui funziona il [ponte standard di Optimism](https://community.optimism.io/docs/developers/bridge/standard-bridge). In questo articolo esaminiamo il codice sorgente di quel ponte, per vedere come funziona e per studiarlo come un esempio di codice di Solidity ben scritto.
 
-## Flussi di controllo \{#control-flows}
+## Flussi di controllo {#control-flows}
 
 Il ponte ha due flussi principali:
 
 - Deposito (da L1 a L2)
 - Prelievo (da L2 a L1)
 
-### Flusso di deposito \{#deposit-flow}
+### Flusso di deposito {#deposit-flow}
 
-#### Livello 1 \{#deposit-flow-layer-1}
+#### Livello 1 {#deposit-flow-layer-1}
 
 1. In caso di deposito di un ERC-20, il depositante concede al ponte un'indennità per spendere l'importo depositato
 2. Il depositante chiama il ponte L1 (`depositERC20`, `depositERC20To`, `depositETH`, o `depositETHTo`)
@@ -35,7 +35,7 @@ Il ponte ha due flussi principali:
    - ERC-20: la risorsa è trasferita dal ponte a sé stessa, usando l'indennità fornita dal depositante
 4. Il ponte L1 usa il meccanismo di messaggio interdominio per chiamare `finalizeDeposit` sul ponte L2
 
-#### Livello 2 \{#deposit-flow-layer-2}
+#### Livello 2 {#deposit-flow-layer-2}
 
 5. Il ponte L2 verifica che la chiamata a `finalizeDeposit` sia legittima:
    - Proviene dal contratto di messaggistica interdominio
@@ -45,26 +45,26 @@ Il ponte ha due flussi principali:
    - Il contratto L2 segnala che supporta l'interfaccia corretta ([che usa ERC-165](https://eips.ethereum.org/EIPS/eip-165)).
 7. Se il contratto L2 è quello corretto, chiamalo per coniare il numero di token appropriato all'indirizzo corretto. Altrimenti, avvia un processo di prelievo per consentire all'utente di rivendicare i token su L1.
 
-### Flusso di prelievo \{#withdrawal-flow}
+### Flusso di prelievo {#withdrawal-flow}
 
-#### Livello 2 \{#withdrawal-flow-layer-2}
+#### Livello 2 {#withdrawal-flow-layer-2}
 
 1. Il prelevante chiama il ponte L2 (`withdraw` o `withdrawTo`)
 2. Il ponte L2 brucia il giusto numero di token appartenente a `msg.sender`
 3. Il ponte L2 usa il meccanismo di messaggio interdominio per chiamare `finalizeETHWithdrawal` o `finalizeERC20Withdrawal` sul ponte L1
 
-#### Livello 1 \{#withdrawal-flow-layer-1}
+#### Livello 1 {#withdrawal-flow-layer-1}
 
 4. Il ponte L1 verifica che la chiamata a `finalizeETHWithdrawal` o `finalizeERC20Withdrawal` sia legittima:
    - Proviene dal meccanismo di messaggistica interdominio
    - Originariamente proveniva dal ponte su L2
 5. Il ponte L1 trasferisce la risorsa appropriata (ETH o ERC-20) all'indirizzo appropriato
 
-## Codice del Livello 1 \{#layer-1-code}
+## Codice del Livello 1 {#layer-1-code}
 
 Questo è il codice eseguito su L1, la rete principale di Ethereum.
 
-### IL1ERC20Bridge \{#IL1ERC20Bridge}
+### IL1ERC20Bridge {#IL1ERC20Bridge}
 
 [Quest'interfaccia è definita qui](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol). Include le funzioni e definizioni richieste per collegare i token ERC-20.
 
@@ -220,7 +220,7 @@ I prelievi (e altri messaggi da L2 a L1) su Optimism sono processi in due fasi:
 1. Una transazione di avvio su L2.
 2. Una transazione di finalizzazione o rivendicazione su L1. Questa transazione deve verificarsi dopo il [periodo di contestazione dell'errore](https://community.optimism.io/docs/how-optimism-works/#fault-proofs) perché la transazione di L2 termini.
 
-### IL1StandardBridge \{#il1standardbridge}
+### IL1StandardBridge {#il1standardbridge}
 
 [Quest'interfaccia è definita qui](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol). Questo file contiene le definizioni dell'evento e la funzione per ETH. Queste definizioni sono molto simili a quelle definite nel precedente `IL1ERC20Bridge` per ERC-20.
 
@@ -301,7 +301,7 @@ Questo evento è quasi identico alla versione di ERC-20 (`ERC20DepositInitiated`
 }
 ```
 
-### CrossDomainEnabled \{#crossdomainenabled}
+### CrossDomainEnabled {#crossdomainenabled}
 
 [Questo contratto](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol) è ereditato da entrambi i ponti ([L1](#the-l1-bridge-contract) e [L2](#the-l2-bridge-contract)) per inviare i messaggi all'altro livello.
 
@@ -437,7 +437,7 @@ Infine, la funzione che invia un messaggio all'altro livello.
 
 In questo caso, non ci preoccupiamo della rientranza, sappiamo che `getCrossDomainMessenger()` restituisce un indirizzo affidabile, anche se Slither non ha modo di saperlo.
 
-### Il contratto del ponte di L1 \{#the-l1-bridge-contract}
+### Il contratto del ponte di L1 {#the-l1-bridge-contract}
 
 [Il codice sorgente di questo contratto è qui](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol).
 
@@ -883,11 +883,11 @@ Aggiorna la struttura dei dati di `deposits`.
 
 Vi è stata un'implementazione precedente del ponte. Quando ci siamo spostati a questa nuova implementazione, abbiamo dovuto spostare tutte le risorse. I token ERC-20 possono essere semplicemente spostati. Al contrario, per trasferire ETH a un contratto, serve l'approvazione di quel contratto, e proprio questo a cui serve `donateETH`.
 
-## Token ERC-20 sul L2 \{#erc-20-tokens-on-l2}
+## Token ERC-20 sul L2 {#erc-20-tokens-on-l2}
 
 Perché un token ERC-20 si adatti al ponte standard, deve consentire al ponte standard, e _solo_ al ponte standard, di coniare il token. Questo è necessario perché i ponti devono assicurare che il numero di token in circolazione su Optimism sia pari al numero di token bloccati nel contratto del ponte del L1. Se esistono troppi token su L2, alcuni utenti non potrebbero ricollegare le proprie risorse al L1. Invece di un ponte fidato, ricreeremmo essenzialmente la [riserva frazionaria bancaria](https://www.investopedia.com/terms/f/fractionalreservebanking.asp). Se esistono troppi token su L1, alcuni di questi rimarrebbero bloccati nel contratto del ponte per sempre, perché non esiste modo di rilasciarli senza bruciare token del L2.
 
-### IL2StandardERC20 \{#il2standarderc20}
+### IL2StandardERC20 {#il2standarderc20}
 
 Ogni token ERC-20 sul L2 che usa il ponte standard deve presentare [quest'interfaccia](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol), che ha le funzioni e gli eventi necessari al ponte standard.
 
@@ -926,7 +926,7 @@ Questa funzione fornisce l'indirizzo del token L1, collegato a questo contratto.
 
 Funzioni ed eventi per coniare (creare) e bruciare (distruggere) i token. Il ponte dovrebbe esser la sola entità capace d'eseguire queste funzioni per assicurare che il numero di token sia corretto (pari al numero di token bloccati su L1).
 
-### L2StandardERC20 \{#L2StandardERC20}
+### L2StandardERC20 {#L2StandardERC20}
 
 [Questa è la nostra implementazione dell'interfaccia di `IL2StandardERC20`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol). A meno che tu non necessiti di qualche tipo di logica personalizzata, dovresti usare questa.
 
@@ -1015,7 +1015,7 @@ Solo il ponte L2 può coniare e bruciare le risorse.
 
 `_mint` e `_burn` sono in realtà definiti nel [contratto ERC-20 di OpenZeppelin](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn). Quel contratto non li espone esternamente, perché le condizioni per coniare e bruciare token sono tanto varie quanto il numero di metodi per usare ERC-20.
 
-## Codice del ponte di L2 \{#l2-bridge-code}
+## Codice del ponte di L2 {#l2-bridge-code}
 
 Questo è il codice che esegue il ponte su Optimism. [Il codice sorgente di questo contratto è qui](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol).
 
@@ -1268,7 +1268,7 @@ Se un utente ha commesso un errore rilevabile usando l'indirizzo del token L2 er
 }
 ```
 
-## Conclusioni \{#conclusion}
+## Conclusioni {#conclusion}
 
 Il ponte standard è il meccanismo più flessibile per i trasferimenti di risorse. Tuttavia, essendo così generico, non è sempre il metodo più facile da usare. Specialmente per i prelievi, gran parte degli utenti preferisce usare [ponti di terze parti](https://www.optimism.io/apps/bridges) che non attendono il periodo di contestazione dell'errore e non richiedono una prova di Merkle per finalizzare il prelievo.
 

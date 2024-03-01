@@ -5,9 +5,9 @@ lang: ja
 incomplete: true
 ---
 
-## スマートコントラクトと Solidity を使い始める \{#getting-started-with-smart-contracts-and-solidity}
+## スマートコントラクトと Solidity を使い始める {#getting-started-with-smart-contracts-and-solidity}
 
-## チュートリアル \{#tutorials}
+## チュートリアル {#tutorials}
 
 - [Flutter とブロックチェーン – Hello World dapp](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/)で、開始手順を段階的に説明しています。
   1.  [Truffle 開発スイート](https://www.trufflesuite.com/)をインストールする
@@ -18,7 +18,7 @@ incomplete: true
 - 時間がない場合は、[イーサリアムでの Flutter と Dart を使用したブロックチェーンの分散型アプリの構築](https://www.youtube.com/watch?v=jaMFEOCq_1s)をご覧ください。このビデオはわずか 20 分です。
 - [Flutter アプリケーションへの MetaMask の統合](https://youtu.be/8qzVDje3IWk) - この短いビデオでは、Flutter アプリケーションに MetaMask を統合する手順を段階的に説明しています。
 
-## イーサリアムクライアントの操作 \{#working-with-ethereum-clients}
+## イーサリアムクライアントの操作 {#working-with-ethereum-clients}
 
 イーサリアムを使用して、仮想通貨とブロックチェーン技術の利点を活用した分散型アプリケーション (「dapp」) を作成します。 現在、少なくとも、Dart でイーサリムの[JSON RPC API](/developers/docs/apis/json-rpc/)が利用できるライブラリが 2 つメンテナンスされています。
 

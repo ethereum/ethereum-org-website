@@ -10,11 +10,11 @@ lang: tr
 
 Ethereum madencilik dönemi Ethereum 1.0 için bir iş ispatı algoritması olan Ethash'i kullanmıştır. Algoritmanın temel tasarımı, bir madencinin kaba kuvvet hesaplaması kullanarak belirli bir nonce değeri bulmasıdır. Bu bulunan değer sayesinde, oluşturulan karma değeri belli bir zorluk seviyesinin altında kalacaktır. Böylece madenci, bu nonce değeriyle iş ispatını oluşturarak yeni bir blok ekler. Bu zorluk seviyesi dinamik olarak ayarlanabilir, böylece blok üretiminin düzenli bir aralıkta gerçekleşmesine olanak tanınır.
 
-## Ön koşullar \{#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamak için, önce [iş kanıtı konsensus](/developers/docs/consensus-mechanisms/pow)u ve [madencilik](/developers/docs/consensus-mechanisms/pow/mining) konularını okumanızı öneririz.
 
-## Dagger Hashimoto \{#dagger-hashimoto}
+## Dagger Hashimoto {#dagger-hashimoto}
 
 Dagger Hashimoto, Ethash'ın yerini aldığı Ethereum madenciliği için öncü bir araştırma algoritmasıydı. İki farklı algoritmanın birleşimiydi: Dagger ve Hashimoto. Sadece bir araştırma uygulaması olarak kaldı ve Ethereum Ana Ağı başlatıldığında, Ethereum 1.0 için iş ispatı algoritması yani Ethash çalıştırıldığında geçerliliği kalmadı.
 
@@ -26,12 +26,12 @@ Dagger-Hashimoto, Dagger ve Hashimoto algoritmalarının değiştirilmiş versiy
 
 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto) hakkında daha fazlası.
 
-## Ethash \{#ethash}
+## Ethash {#ethash}
 
 Ethash, güncelde kullanımdan kalkmış bir iş ispatı mimarisinin altında gerçek Ethereum Ana Ağı'nda kullanılan madencilik algoritmasıydı. Ethash, algoritma önemli ölçüde güncellendikten sonra Dagger-Hashimoto'nun belirli bir versiyonuna verilen yeni bir isimdi, ancak yine de selefinin temel ilkelerini devraldı. Ethereum Ana Ağı yalnızca Ethash'ı kullandı - Dagger Hashimoto, Ethereum ana ağında madenciliğin başlamasından önce geçerliliğini yitirmiş madencilik algoritmasının bir ArGe sürümüydü.
 
 [Ethash hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
 
-## Daha fazla okuma \{#further-reading}
+## Daha fazla okuma {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_

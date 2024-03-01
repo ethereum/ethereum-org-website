@@ -12,11 +12,11 @@ lang: zh
 
 这种新型密钥使用 [**Boneh-Lyn-Shacham (BLS)** 签名方案](https://wikipedia.org/wiki/BLS_digital_signature)。 BLS 能够对签名进行高效聚合，同时允许对聚合的单个验证者密钥进行逆向工程，它对于管理验证者之间的行动非常理想。
 
-## 两种类型的验证者密钥 \{#two-types-of-keys}
+## 两种类型的验证者密钥 {#two-types-of-keys}
 
 在转换到权益证明之前，以太坊用户只有一个基于椭圆曲线的私钥来访问他们的资金。 随着权益证明的引入，那些希望成为单独质押人的用户也需要一个**验证者密钥**和一个**提款密钥**。
 
-### 验证者密钥 \{#validator-key}
+### 验证者密钥 {#validator-key}
 
 验证者的签名密钥由两个元素组成：
 
@@ -35,13 +35,13 @@ lang: zh
 
 当用户把以太币存入到质押存款合约时，**验证者公钥**会被包含在交易数据中。 这被称为*存款数据*，它让以太坊可以识别验证者。
 
-### 提款凭证 \{#withdrawal-credentials}
+### 提款凭证 {#withdrawal-credentials}
 
 每个验证者都有一个被称为*提款凭证*的属性。 此 32 字节字段的开头要么是 `0x00`，表示 BLS 提款凭证，要么是 `0x01`，表示指向执行地址的凭证。
 
 具有 `0x00` BLS 密钥的验证者必须更新这些凭证，使其指向执行地址，以便激活从质押进行超额余额支付或全额提款。 这可以通过在初始密钥生成期间在存款数据中提供执行地址，*或者*通过稍后使用提款密钥签署并广播 `BLSToExecutionChange` 信息来实现。
 
-### 提款密钥 \{#withdrawal-key}
+### 提款密钥 {#withdrawal-key}
 
 更新提款凭证需要更新提款密钥以指向执行地址（如果在初始存款期间没有设置的话）。 这将使超额余额支付得以开始处理，并且还将允许用户全额提取其质押的以太币。
 
@@ -56,7 +56,7 @@ lang: zh
 
 ![验证者密钥示意图](validator-key-schematic.png)
 
-## 从助记词派生密钥 \{#deriving-keys-from-seed}
+## 从助记词派生密钥 {#deriving-keys-from-seed}
 
 如果每次质押 32 个以太币都需要一套新的 2 个完全独立的密钥，那么密钥管理将很快变得难以操作，特别是对于运行多个验证者的用户来说。 相反，多个验证者密钥可以从一个共同的密钥进行派生，并且存储这个密钥就能允许访问多个验证者密钥。
 
@@ -90,7 +90,7 @@ master_key / purpose / coin_type / account / change / address_index
 
 ![验证者密钥逻辑](multiple-keys.png)
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [由 Carl Beekhuizen 发表的以太坊基金会博客](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 BLS12-381 密钥生成](https://eips.ethereum.org/EIPS/eip-2333)

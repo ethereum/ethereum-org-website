@@ -18,17 +18,17 @@ Az Ethereum skálázása a [layer 2s](/layer-2/#rollups) második blokkláncrét
   </ul>
 </InfoBanner>
 
-## Az adatok olcsóbbá tétele \{#making-data-cheaper}
+## Az adatok olcsóbbá tétele {#making-data-cheaper}
 
 A összevont tranzakciók sok tranzakciót gyűjtenek össze, végrehajtják azokat és az eredményt az Ethereumra küldik. Ez rengeteg adatot jelent, amelyet nyíltan elérhetővé kell tenni bárki számára, hogy lefuttathassa a tranzakciókat és ellenőrizze, hogy az összevont tranzakció operátora jóhiszeműen járt el. Ha valaki talál egy eltérést, akkor megkérdőjelezheti azt.
 
-### Proto-Danksharding \{#proto-danksharding}
+### Proto-Danksharding {#proto-danksharding}
 
 A összevont tranzakciós adatok tartósan az Ethereumon maradnak, ami drága. Az összevont tranzakciók tranzakciós költségeinek több mint 90%-át az adattárolás teszi ki. A tranzakciós költségek csökkentéséhez az adatot egy új átmeneti blob tárhelyre mozgathatjuk. A blob olcsóbb, mert nem tartós; törölhetők az Ethereumról, amint már nincs rájuk szükség. A összevont tranzakciós adatok hosszú távon azoknak a felelősségébe tartoznak, akiknek szükségük van azokra, mint az összevont tranzakciós operátorok, tőzsdék, indexáló szolgáltatások stb. Az Ethereum blob-tranzakcióval való kiegészítése a „Proto-Danksharding” néven ismert frissítés része. Viszonylag hamar, 2023 végére várható, hogy a frissítés bevezetésre kerül.
 
 Miután a blob-tranzakció a protokoll részévé válik a Proto-Dankshardingon keresztül, számos blobot lehet majd hozzáadni az Ethereum-blokkokhoz. Ez egy újabb jelentős (több mint 100×) skálázási lehetőség az Ethereum tranzakcióátvitelét illetően és a költségek csökkentésére.
 
-### Dank-féle párhuzamos futtatás (Danksharding) \{#danksharding}
+### Dank-féle párhuzamos futtatás (Danksharding) {#danksharding}
 
 A blobadatok kiterjesztésének második szintje bonyolult, mert új módszer kell annak ellenőrzésére, hogy az összevont tranzakcióadatok a hálózaton vannak, és arra támaszkodik, hogy a validátor felelősségi körei szétválnak a blokk építésre és javaslattételre. Kell hozzá egy olyan módszer is, amely kriptográfiailag bizonyítja, hogy a validátor igazolta a blobadat egy kis részét.
 
@@ -38,7 +38,7 @@ Ez a második lépés a [Danksharding](/roadmap/danksharding/). Valószínűleg 
 <ButtonLink variant="outline-color" to="/roadmap/danksharding/">Bővebben a Dankshardingról</ButtonLink>
 }
 
-## Az összevont tranzakciók decentralizálása \{#decentralizing-rollups}
+## Az összevont tranzakciók decentralizálása {#decentralizing-rollups}
 
 Az [összevont tranzakciók](/layer-2) már most is gondoskodnak az Ethereum méretezhetőségéről. Az [összevont tranzakciós projektek gazdag ökoszisztémája](https://l2beat.com/scaling/tvl) teszi lehetővé, hogy a felhasználó gyorsabban és olcsóbban indítson tranzakciót, a biztonsági garanciák széles körét kiélvezve. Ugyanakkor az összevont tranzakciók centralizált szekvenszert használnak (ami feldolgozza a tranzakciókat és aggregálja azokat, mielőtt az Ethereumra küldené). Ez lehetővé teszi a cenzúrát, mivel a szekvenszeroperátorokat meg lehet büntetni, vesztegetni vagy máshogy veszélyeztetni. Emellett az [összevont tranzakciók eltérnek abban](https://l2beat.com), hogyan validálják a bejövő adatokat. A legjobb az, ha a bizonyítók csalási bizonyítékot vagy érvényességi bizonyítékot adnak be, de nem minden összevont tranzakció tart még itt. Még ahol léteznek is ilyen érvényesítési/csalásbiztos összevont tranzakciók, ott is csak kevés bizonyítót használnak. Ezért a következő fontos lépés az Ethereum skálázásban, hogy elossza a szekvenszer és a bizonyító felelősségét több emberre.
 
@@ -46,6 +46,6 @@ Az [összevont tranzakciók](/layer-2) már most is gondoskodnak az Ethereum mé
 <ButtonLink variant="outline-color" to="/developers/docs/scaling/">Bővebben az összevont tranzakciókról</ButtonLink>
 }
 
-## Jelenlegi helyzet \{#current-progress}
+## Jelenlegi helyzet {#current-progress}
 
 A Proto-Danksharding valószínűleg az egyik legkorábbi útiterv lesz, ami megvalósul. A felállításához szükséges decentralizált számítási lépések már úton vannak, és számos kliens épített prototípust a blobadatok kezelésére. A teljes Danksharding valószínűleg több év múlva fog megvalósulni, mivel több más útitervelem kifejlesztése is szükséges hozzá. Az összevont tranzakciók infrastruktúrájának decentralizálása egy fokozatos folyamat lesz – több különböző összevont tranzakció létezik, amelyek kicsit más felállásban működnek, és más rátán fogják tudni elvégezni a decentralizálást.

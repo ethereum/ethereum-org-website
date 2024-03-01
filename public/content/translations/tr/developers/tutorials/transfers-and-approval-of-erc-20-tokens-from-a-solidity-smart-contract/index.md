@@ -134,7 +134,7 @@ Artık kendi DEX'imize sahibiz ve DEX'imiz mevcut tüm token rezervlerine sahip.
 - `buy`: Kullanıcı ether gönderip karşılığında token alabilir
 - `sell`: Kullanıcı token göndererek karşılığında ether almayı seçebilir
 
-## "Buy" Fonksiyonu \{#the-buy-function}
+## "Buy" Fonksiyonu {#the-buy-function}
 
 "Buy" fonksiyonunu kodlayalım. İlk olarak, mesajın içerdiği ether miktarını kontrol etmemiz; sözleşmenin yeterli token'a sahip olduğunu ve mesajın ether içerdiğini doğrulamamız gerekir. Eğer sözleşme yeterli token'a sahipse token miktarını kullanıcıya gönderecek ve `Bought` olayını yayacaktır.
 
@@ -157,7 +157,7 @@ function buy() payable public {
 
 ![İşlemdeki iki olay: Transfer ve Bought](./transfer-and-bought-events.png)
 
-## "Sell" fonksiyonu \{#the-sell-function}
+## "Sell" fonksiyonu {#the-sell-function}
 
 Satıştan sorumlu olan fonksiyon, ilk olarak kullanıcının önceden doğrulama fonksiyonunu çağırarak miktarı doğrulamış olmasını gerektirecektir. Aktarımı onaylamak, DEX tarafından somutlaştırılan ERC20Basic token'ınını kullanıcı tarafından çağrılmasını gerektirir. Bu, DEX'in `token` adlı ERC20Basic sözleşmesini dağıttığı adresi almak için önce DEX sözleşmesinin `token()` fonksiyonunu çağırarak başarılabilir. Ardından, oturumumuzda bu sözleşmenin bir örneğini oluşturur ve `onay` fonksiyonunu çağırırız. Ardından, DEX'in `sell` fonksiyonunu çağırabilir ve token'larımızı ether için geri değiştirebiliriz. Örneğin, etkileşimli bir kek oturumunda bu, şöyle görünür:
 

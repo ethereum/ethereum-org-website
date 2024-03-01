@@ -16,7 +16,7 @@ _Esta imagen se ha tomado de geth.ethereum.org y utiliza el logotipo de Geth par
 
 Para que esta estructura de dos clientes funcione, los clientes de consenso deben poder pasar grupos de transacciones al cliente de ejecución. Para comprobar y validar que las transacciones no infringen ninguna norma de Ethereum y que la actualización propuesta del estado de Ethereum es correcta, el cliente ejecuta las transacciones localmente. Asimismo, cuando se selecciona el nodo para producir bloques, el cliente de consenso debe poder solicitar a Geth grupos de transacciones para incluirlos en el nuevo bloque y ejecutarlos para actualizar el estado global. Esta comunicación entre clientes se gestiona mediante una conexión RPC local que utiliza la [ Engine API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md).
 
-## ¿Qué hace el cliente de ejecución? \{#execution-client}
+## ¿Qué hace el cliente de ejecución? {#execution-client}
 
 El cliente de ejecución es responsable de la gestión de transacciones, el protocolo de intercambio de información de transacciones, la gestión de estados y el soporte de la máquina virtual de Ethereum ([EVM](/developers/docs/evm/)). Sin embargo, **no** es responsable de la construcción de bloques, del intercambio de información entre bloques o del manejo de la lógica de consenso. Son competencia del cliente de consenso.
 
@@ -29,19 +29,19 @@ Resumiendo, el cliente de ejecución es:
 - una puerta de acceso de los usuarios a Ethereum
 - donde está la máquina virtual de Ethereum, el estado de Ethereum y el grupo de transacciones.
 
-## ¿Qué hace el cliente de consenso? \{#consensus-client}
+## ¿Qué hace el cliente de consenso? {#consensus-client}
 
 El cliente de consenso se ocupa de toda la lógica que permite a un nodo mantenerse sincronizado con la red Ethereum. Esto incluye la recepción de bloques de pares y la ejecución de un algoritmo de elección de bifurcación para garantizar que el nodo siga siempre la cadena con mayor acumulación de certificaciones (ponderada por los saldos efectivos de los validadores). Al igual que el cliente de ejecución, los clientes de consenso tienen su propia red P2P a través de la cual comparten bloques y certificaciones.
 
 El cliente de consenso no participa en la certificación ni en la propuesta de bloques; de ello se encarga un validador, un complemento opcional del cliente de consenso. Un cliente de consenso sin validador sólo se mantiene al día con la cabeza de la cadena, permitiendo que el nodo permanezca sincronizado. Esto permite a un usuario realizar transacciones con Ethereum utilizando su cliente de ejecución, con la seguridad de que se encuentre en la cadena correcta.
 
-## Validadores \{#validators}
+## Validadores {#validators}
 
 Los operadores de nodos pueden añadir un validador a sus clientes de consenso depositando 32 ETH en el contrato de depósito. El cliente validador viene incluido con el cliente de consenso y puede añadirse a un nodo en cualquier momento. Los validadores se encargan de las certificaciones y las propuestas de bloques. Permiten a un nodo acumular recompensas o perder ETH mediante penalizaciones o recortes. La ejecución del software validador también hace que un nodo pueda seleccionarse para proponer un nuevo bloque.
 
 [Más información sobre las participaciones](/staking/).
 
-## Componentes de una comparación de nodos \{#node-comparison}
+## Componentes de una comparación de nodos {#node-comparison}
 
 | Cliente de ejecución                                               | Cliente de consenso                                                            | Validador                                      |
 | ------------------------------------------------------------------ | ------------------------------------------------------------------------------ | ---------------------------------------------- |
@@ -52,7 +52,7 @@ Los operadores de nodos pueden añadir un validador a sus clientes de consenso d
 | Crea una carga útil de ejecución                                   | Realiza un seguimiento de la aleatoriedad acumulada en RANDAO                  | Se puede recortar                              |
 | Expone la API JSON-RPC para interactuar con Ethereum               | Realiza un seguimiento de la justificación y la finalización                   |                                                |
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [Prueba de participación](/developers/docs/consensus-mechanisms/pos)
 - [Propuesta de bloque](/developers/docs/consensus-mechanisms/pos/block-proposal)

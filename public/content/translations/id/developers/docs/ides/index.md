@@ -6,7 +6,7 @@ lang: id
 
 Ketika berkaitan dengan menyiapkan [lingkungan pengembangan terintegrasi (IDE)](https://wikipedia.org/wiki/Integrated_development_environment), memprogram aplikasi di Ethereum sama dengan pemrograman proyek perangkat lunak lainnya. Ada banyak opsi untuk dipilih, jadi pada akhirnya, pilihlah IDE atau editor kode yang paling sesuai dengan preferensi Anda. Sangat mungkin pilihan IDE terbaik untuk pengembangan Ethereum Anda adalah IDE yang telah Anda gunakan untuk pengembangan perangkat lunak tradisional.
 
-## IDE berbasis web \{#web-based-ides}
+## IDE berbasis web {#web-based-ides}
 
 Jika Anda ingin mengutak-atik kode sebelum [menyiapkan lingkungan pengembangan lokal](/developers/local-environment/), aplikasi web ini dibuat secara kustom untuk pengembangan kontrak pintar Ethereum.
 
@@ -27,7 +27,7 @@ Jika Anda ingin mengutak-atik kode sebelum [menyiapkan lingkungan pengembangan l
 
 - [Starter Solidity](https://replit.com/@replit/Solidity-starter-beta)
 
-## IDE desktop \{#desktop-ides}
+## IDE desktop {#desktop-ides}
 
 IDE yang paling mapan memiliki plugin untuk meningkatkan pengalaman pengembangan Ethereum. Paling sedikit, mereka menyediakan penyorotan sintaksis untuk [bahasa kontrak pintar](/developers/docs/smart-contracts/languages/).
 
@@ -55,11 +55,11 @@ IDE yang paling mapan memiliki plugin untuk meningkatkan pengalaman pengembangan
 - [Unduh](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
-## Plugin dan ekstensi \{#plugins-extensions}
+## Plugin dan ekstensi {#plugins-extensions}
 
 - [solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Bahasa Solidity Ethereum untuk Visual Studio Code
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Pemformat kode dengan menggunakan prettier
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_

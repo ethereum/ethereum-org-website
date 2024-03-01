@@ -17,7 +17,7 @@ Bu makalede, birden fazla kez kullanılması olası olan herhangi bir parametre 
 
 Makaleyi atlayıp doğrudan kaynak kodunu görmek istiyorsanız [buraya](https://github.com/qbzzt/20220915-all-you-can-cache) tıklayabilirsiniz. Geliştirme yığını [Foundry](https://book.getfoundry.sh/getting-started/installation)'dir.
 
-## Genel tasarım \{#overall-design}
+## Genel tasarım {#overall-design}
 
 Kolay anlaşılması için tüm işlem parametrelerinin 32 bayt uzunluğunda ve `uint256` tipinde olduğunu varsayacağız. Bir işlem aldığımızda parametreleri şu şekilde ayrıştıracağız:
 
@@ -34,7 +34,7 @@ Kolay anlaşılması için tüm işlem parametrelerinin 32 bayt uzunluğunda ve 
    | 0x12,0xAC             |            0x02AC |
    | 0x2D,0xEA, 0xD6       |          0x0DEAD6 |
 
-## Önbellek manipülasyonu \{#cache-manipulation}
+## Önbellek manipülasyonu {#cache-manipulation}
 
 Önbellek [`Cache.sol`](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/Cache.sol) içinde uygulanır. Hadi satır satır inceleyelim.
 
@@ -306,7 +306,7 @@ Eğer buraya geldiysek, 16\*256<sup>15</sup>'ten az olmayan bir anahtar aldık d
 }  // Cache
 ```
 
-### Önbelleği test etme \{#testing-the-cache}
+### Önbelleği test etme {#testing-the-cache}
 
 Foundry'nin faydalarından biri de, testleri [testleri Solidity'de yazmanıza izin vermesidir](https://book.getfoundry.sh/forge/tests), bu sayede birim testi yazma kolaylaşır. `Cache` sınıfı için olan testler [buradadır](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/Cache.t.sol). Test kodu, testlerin kendileri de bu eğilimde olduğu gibi kendini tekrar eden bir konu olduğu için bu belge sadece ilgi çekici kısımları anlatacaktır.
 
@@ -665,11 +665,11 @@ Bu fonksiyon, 5 değer gönderir. Beşinci değerin görmezden gelindiğini bili
 
 ```
 
-## Bir örnek uygulama \{#a-sample-app}
+## Bir örnek uygulama {#a-sample-app}
 
 Solidity'de test yazmak çok güzeldir fakat günün sonunda bir merkeziyetsiz uygulamanın kullanışlı olabilmesi için zincirin dışından talepleri işleyebilmesi gerekir. Bu belge "Bir Kez Yaz, Çok Kez Oku" anlamına gelen `WORM` ile bir merkeziyetsiz uygulamada önbelleğe almanın nasıl kullanacağını gösterir. Eğer bir anahtar henüz yazılmamışsa, ona bir değer yazabilirsiniz. Eğer anahtar çoktan yazılmışsa, bir geri dönüş alırsınız.
 
-### Sözleşme \{#the-contract}
+### Sözleşme {#the-contract}
 
 [Sözleşme budur](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/src/WORM.sol). Genel olarak `Cache` ve `CacheTest` ile çoktan yapmış olduğumuz şeyleri tekrar ediyor olduğu için sadece ilgi çekici olan kısımları ele alacağız.
 
@@ -708,7 +708,7 @@ ABI spesifikasyonlarına uymadığımız için `writeEntryCached` öğesini ça�
 
 Okuma fonksiyonu bir `view`'dır, yani bir işleme ihtiyaç duymaz ve gaz harcamaz. Sonuç olarak, parametre için önbelleği kullanmanın bir faydası yoktur. Görünüm fonksiyonlarında daha basit olan standart mekanizmayı kullanmak en iyisidir.
 
-### Test kodu \{#the-testing-code}
+### Test kodu {#the-testing-code}
 
 [ Bu, sözleşmenin test kodudur](https://github.com/qbzzt/20220915-all-you-can-cache/blob/main/test/WORM.t.sol). Yine sadece ilgi çekici olan kısma bakalım.
 
@@ -758,7 +758,7 @@ Düşük seviye `<address>.call()` fonksiyonunu kullanmamız sebebiyle, `vm.expe
 
 Kodun Foundry'de [bir olayı doğru ifade ettiğini](https://book.getfoundry.sh/cheatcodes/expect-emit) bu şekilde doğrularız.
 
-### İstemci \{#the-client}
+### İstemci {#the-client}
 
 Solidity testleriyle sahip olamayacağınız tek şey, kendi uygulamanıza kesip yapıştırabileceğiniz JavaScript kodudur. O kodu yazmak için [Optimism'in](https://www.optimism.io/) yeni test ağı olan [Optimism Goerli](https://community.optimism.io/docs/useful-tools/networks/#optimism-goerli)'ye WORM dağıttım. [`0xd34335b1d818cee54e3323d3246bd31d94e6a78a`](https://goerli-optimism.etherscan.io/address/0xd34335b1d818cee54e3323d3246bd31d94e6a78a) adresindedir.
 
@@ -845,7 +845,7 @@ Solidity test kodunda olduğu gibi, önbelleğe alınmış bir fonksiyonu normal
 
 Girdileri okumak için normal mekanizmayı kullanabiliriz. Parametre önbelleklemesini `view` fonksiyonlarıyla kullanmaya gerek yoktur.
 
-## Sonuç \{#conclusion}
+## Sonuç {#conclusion}
 
 Bu belgedeki kod, bir kavram ispatıdır; amaç, fikrin anlaşılmasını kolaylaştırmaktır. Oluşturmaya hazır bir sistem için biraz ilave işlevsellik eklemek isteyebilirsiniz:
 

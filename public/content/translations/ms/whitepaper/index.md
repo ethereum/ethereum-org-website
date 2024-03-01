@@ -6,7 +6,7 @@ sidebarDepth: 2
 hideEditButton: true
 ---
 
-# Kertas Putih Ethereum \{#ethereum-whitepaper}
+# Kertas Putih Ethereum {#ethereum-whitepaper}
 
 _Kertas pengenalan ini pada asalnya diterbitkan pada tahun 2014 oleh Vitalik Buterin, pengasas [Ethereum](/what-is-ethereum/), sebelum pelancaran projek pada tahun 2015. Perlu diambil perhatian bahawa Ethereum, seperti banyak projek perisian sumber terbuka yang didorong oleh komuniti, telah berkembang sejak penubuhan awalnya._
 
@@ -14,19 +14,19 @@ _Walaupun berusia beberapa tahun, kami mengekalkan kertas ini kerana ia terus be
 
 [Penyelidik dan ahli akademik yang mahukan versi sejarah atau asli kertas putih [dari Disember 2014] harus menggunakan PDF ini.](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
 
-## Kontrak Pintar Generasi Seterusnya dan Platform Aplikasi Ternyahpusat \{#a-next-generation-smart-contract-and-decentralized-application-platform}
+## Kontrak Pintar Generasi Seterusnya dan Platform Aplikasi Ternyahpusat {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
 Pembangunan Bitcoin oleh Satoshi Nakamoto pada tahun 2009 sering digelar sebagai pembangunan radikal dalam bidang wang dan mata wang, menjadi contoh pertama aset digital yang tidak mempunyai sokongan atau "[nilai intrinsik](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)" dan pada masa yang sama, tiada pengeluar atau pengawal berpusat. Walau bagaimanapun, bahagian lain eksperimen Bitcoin yang mungkin lebih penting lagi, ialah teknologi blok rantai yang mendasari sebagai alat konsensus teragih. Perhatian telah mula berganjak dengan pantas ke arah aspek lain Bitcoin ini. Penggunaan alternatif teknologi blok rantai yang biasa dipuji termasuk menggunakan aset digital pada blok rantai untuk mewakili mata wang tersuai dan instrumen kewangan ("[syiling berwarna](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)"), pemilikan peranti fizikal yang mendasari ("[harta pintar](https://en.bitcoin.it/wiki/Smart_Property)"), aset tidak sepiawai seperti nama domain ("[Namecoin](http://namecoin.org)"), serta aplikasi lebih kompleks yang melibatkan aset digital dikawal terus oleh secebis kod yang melaksanakan peraturan arbitrari ("[kontrak pintar](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)") atau "[organisasi berautonomi ternyahpusat](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)" (decentralized autonomous organization, DAO) berasaskan blok rantai. Ethereum berhasrat untuk menyediakan blok rantai dengan bahasa pengaturcaraan yang Turing Lengkap sepenuhnya yang boleh digunakan untuk membuat "kontrak" yang boleh digunakan untuk mengekod fungsi peralihan keadaan arbitrari, membolehkan pengguna mencipta mana-mana sistem yang diterangkan di atas, serta banyak lagi yang belum kita bayangkan, hanya dengan menulis logik dalam beberapa baris kod.
 
-## Pengenalan Bitcoin dan Konsep Sedia Ada \{#introduction-to-bitcoin-and-existing-concepts}
+## Pengenalan Bitcoin dan Konsep Sedia Ada {#introduction-to-bitcoin-and-existing-concepts}
 
-### Sejarah \{#history}
+### Sejarah {#history}
 
 Konsep mata wang digital ternyahpusat, serta aplikasi alternatif seperti daftar hartanah, telah wujud selama beberapa dekad. Protokol e-tunai tanpa nama pada 1980-an dan 1990-an, kebanyakannya bergantung pada primitif kriptografi yang dikenali sebagai pembutaan Chaumian, telah menyediakan mata wang dengan tahap privasi yang tinggi, tetapi protokol itu sebahagian besarnya gagal mendapat daya tarikan kerana pergantungan terhadap perantara berpusat. Pada tahun 1998, [b-money](http://www.weidai.com/bmoney.txt) Wei Dai menjadi cadangan pertama untuk memperkenalkan idea mencipta wang melalui penyelesaian teka-teki pengkomputeran serta konsensus ternyahpusat, tetapi cadangan itu tidak cukup butiran tentang cara konsensus ternyahpusat itu benar-benar dapat dilaksanakan. Pada tahun 2005, Hal Finney memperkenalkan konsep "[bukti kerja boleh guna semula](https://nakamotoinstitute.org/finney/rpow/)", satu sistem yang menggunakan idea daripada b-money bersama-sama dengan teka-teki Hashcash Adam Back yang sukar dikira untuk mencipta konsep bagi mata wang kripto, tetapi sekali lagi tidak berjaya disempurnakan kerana bergantung pada pengkomputeran yang dipercayai sebagai bahagian belakang. Pada tahun 2009, mata wang ternyahpusat buat kali pertama dilaksanakan secara praktik oleh Satoshi Nakamoto, menggabungkan primitif yang ditubuhkan untuk menguruskan pemilikan melalui kriptografi kunci awam dengan algoritma konsensus bagi menjejaki pemilik syiling, dikenali sebagai "bukti kerja".
 
 Mekanisme di sebalik bukti kerja merupakan satu kejayaan dalam bidang ini kerana ia menyelesaikan dua masalah pada masa yang sama. Pertama, ia menyediakan algoritma konsensus yang ringkas dan berkesan pada tahap yang sederhana, membolehkan nod dalam rangkaian bersetuju secara kolektif dengan satu set kemas kini asli kepada keadaan lejar Bitcoin. Kedua, ia menyediakan mekanisme untuk membolehkan kemasukan percuma ke dalam proses konsensus, menyelesaikan masalah politik iaitu memutuskan siapa yang dapat mempengaruhi konsensus, sambil menghalang serangan Sybil pada masa yang sama. Ia melakukan ini dengan menggantikan halangan penyertaan yang formal, seperti keperluan untuk didaftarkan sebagai entiti unik dalam senarai tertentu, dengan halangan ekonomi - berat satu nod dalam proses pengundian konsensus secara langsung berkadar dengan kuasa pengkomputeran yang dibawa oleh nod. Sejak itu, pendekatan alternatif telah dicadangkan yang dikenali sebagai _bukti taruhan_, mengira berat nod sebagai berkadar dengan pegangan mata wang dan bukan sumber pengiraan; perbincangan merit relatif kedua-dua pendekatan adalah di luar skop kertas ini tetapi perlu ambil perhatian bahawa kedua-dua pendekatan boleh digunakan untuk berfungsi sebagai tulang belakang mata wang kripto.
 
-### Bitcoin Sebagai Sistem Peralihan Keadaan \{#bitcoin-as-a-state-transition-system}
+### Bitcoin Sebagai Sistem Peralihan Keadaan {#bitcoin-as-a-state-transition-system}
 
 ![Peralihan keadaan Ethereum](./ethereum-state-transition.png)
 
@@ -74,7 +74,7 @@ Fungsi peralihan keadaan `APPLY(S,TX) -> S'` boleh ditakrifkan secara kasar sepe
 
 Separuh pertama bagi langkah pertama menghalang penghantar transaksi daripada membelanjakan syiling yang tidak wujud, separuh kedua bagi langkah pertama menghalang penghantar transaksi daripada membelanjakan syiling orang lain, dan langkah kedua menguatkuasakan pemuliharaan nilai. Untuk menggunakan ini sebagai pembayaran, protokol adalah seperti berikut. Andaikan Alice mahu mengirim 11.7 BTC kepada Bob. Pertama sekali, Alice akan mencari satu set UTXO tersedia yang dia miliki berjumlah sehingga sekurang-kurangnya 11.7 BTC. Pada hakikatnya, Alice tidak akan berjaya mendapatkan tepat-tepat 11.7 BTC; andaikan bahawa jumah terkecil yang dia boleh dapat ialah 6+4+2=12. Kemudian, dia membuat transaksi dengan tiga input dan dua output. Output pertama ialah 11.7 BTC dengan alamat Bob sebagai pemilik, dan output kedua ialah "baki" 0.3 BTC selebihnya, dengan pemilik ditetapkan sebagai Alice sendiri.
 
-### Perlombongan \{#mining}
+### Perlombongan {#mining}
 
 ![Blok Ethereum](./ethereum-blocks.png)
 
@@ -104,7 +104,7 @@ Untuk lebih memahami tujuan perlombongan, mari kita mengkaji hal yang berlaku se
 
 Setelah langkah (1) telah berlaku, selepas beberapa minit seseorang pelombong akan memasukkan transaksi itu dalam blok, andaikan blok nombor 270000. Selepas kira-kira satu jam, lima blok lagi akan ditambah kepada rantaian selepas blok itu, dengan setiap blok tersebut menunjuk kepada transaksi itu secara tidak langsung dan dengan itu "mengesahkannya". Pada ketika ini, pedagang akan menerima bayaran sebagai muktamad dan menyampaikan produk; oleh sebab kita mengandaikan bahawa ini ialah barangan digital, pengiriman adalah segera. Sekarang, penyerang mencipta satu lagi transaksi menghantar 100 BTC kepada dirinya sendiri. Jika penyerang hanya melepaskan transaksi itu ke luar, transaksi tidak akan diproses; pelombong akan cuba menjalankan `APPLY(S,TX)` dan perasan bahawa `TX` menggunakan UTXO yang tidak lagi berada dalam keadaan tersebut. Jadi sebaliknya, penyerang mencipta satu “cabang” blok rantai, bermula dengan perlombongan blok 270000 versi lain yang menunjuk kepada blok 269999 yang sama sebagai induk tetapi dengan transaksi baharu menggantikan yang lama. Oleh sebab data blok berbeza, bukti kerja perlu diulang. Tambahan pula, blok 270000 versi baharu milik penyerang itu mempunyai cincangan yang berbeza, jadi blok asal 270001 hingga 270005 tidak "menunjuk" padanya; dengan itu, rantaian asal dan rantaian baharu miik penyerang adalah berasingan sepenuhnya. Peraturannya adalah bahawa dalam cabang, blok rantai terpanjang dianggap benar, jadi pelombong yang sah akan mengusahakan rantaian 270005 manakala penyerang sahaja yang mengusahakan rantaian 270000. Jika penyerang ingin membuat blok rantainya yang paling panjang, dia perlu mempunyai kuasa pengiraan yang melebihi gabungan semua pelombong lain pada rangkaian untuk mengejar (maka, "serangan 51%").
 
-### Pohon Merkle \{#merkle-trees}
+### Pohon Merkle {#merkle-trees}
 
 ![SPV dalam Bitcoin](./spv-bitcoin.png)
 
@@ -116,7 +116,7 @@ Ciri kebolehskalaan penting Bitcoin ialah blok disimpan dalam struktur data pelb
 
 Protokol pohon Merkle boleh dikatakan penting untuk kelestarian jangka panjang. "Nod penuh" dalam rangkaian Bitcoin, yang menyimpan dan memproses keseluruhan setiap blok, mengambil kira-kira 15 GB ruang cakera dalam rangkaian Bitcoin pada April 2014, dan berkembang lebih daripada satu gigabait sebulan. Pada masa ini, ini boleh digunakan untuk sesetengah komputer desktop dan bukan telefon, dan kemudian pada masa depan hanya syarikat dan peminat hobi yang boleh mengambil bahagian. Protokol yang dikenali sebagai "pengesahan pembayaran ringkas" (SPV) membolehkan kelas nod lain wujud, dikenali sebagai "nod cerah", yang memuat turun pengepala blok, mengesahkan bukti kerja pada pengepala blok, dan kemudian memuat turun hanya "cabang" yang berkaitan dengan transaksi yang berkenaan dengannya. Ini membolehkan nod cerah menentukan dengan jaminan keselamatan yang kuat tentang status mana-mana transaksi Bitcoin, dan baki semasa, sambil memuat turun hanya sebahagian kecil daripada keseluruhan blok rantai.
 
-### Aplikasi Blok Rantai Alternatif \{#alternative-blockchain-applications}
+### Aplikasi Blok Rantai Alternatif {#alternative-blockchain-applications}
 
 Idea untuk mengambil idea blok rantai asas dan menggunakannya dalam konsep lain juga mempunyai sejarah yang panjang. Pada tahun 2005, Nick Szabo menghasilkan konsep "[hak milik hartanah selamat dengan kuasa pemilik](https://nakamotoinstitute.org/secure-property-titles/)", dokumen yang menerangkan cara "kemajuan baru dalam teknologi pangkalan data replika" akan membolehkan sistem berasaskan blok rantai untuk menyimpan daftar bagi pemilik tanah, mewujudkan rangka kerja rumit termasuk konsep seperti rumah ladang, pemilikan buruk dan cukai tanah Georgia. Walau bagaimanapun, malangnya tiada sistem pangkalan data replikasi berkesan pada masa itu, oleh itu protokol tersebut tidak pernah dilaksanakan. Selepas 2009, bagaimanapun, apabila konsensus ternyahpusat Bitcoin telah dibangunkan, beberapa aplikasi alternatif mula muncul dengan cepat.
 
@@ -128,7 +128,7 @@ Oleh itu, secara umum, terdapat dua pendekatan untuk membina protokol konsensus:
 
 Pendekatan berasaskan Bitcoin, sebaliknya, mempunyai kelemahan bahawa ia tidak mewarisi ciri pengesahan pembayaran yang dipermudahkan Bitcoin. SPV berfungsi untuk Bitcoin kerana ia boleh menggunakan kedalaman blok rantai sebagai proksi untuk kesahihan; pada satu tahap apabila leluhur transaksi adalah cukup lama, boleh dikatakan bahawa ia merupakan sebahagian daripada keadaan. Meta-protokol berasaskan blok rantai pula tidak boleh memaksa blok rantai untuk mengecualikan transaksi yang tidak sah dalam konteks protokol sendiri. Oleh itu, pelaksanaan meta-protokol SPV yang selamat perlu mengimbas balik sehingga permulaan blok rantai Bitcoin untuk menentukan sama ada transaksi tertentu sah. Pada masa ini, semua pelaksanaan "cerah" bagi meta-protokol berasaskan Bitcoin bergantung pada pelayan yang dipercayai untuk menyediakan data, boleh dikatakan hasil yang sangat suboptimum terutamanya apabila salah satu tujuan utama mata wang kripto adalah untuk menghapuskan keperluan bagi kepercayaan.
 
-### Skrip \{#scripting}
+### Skrip {#scripting}
 
 Walaupun tanpa sebarang sambungan, protokol Bitcoin sebenarnya memudahkan versi yang lemah konsep "kontrak pintar". UTXO dalam Bitcoin boleh dimiliki bukan sahaja oleh kekunci awam, tetapi juga oleh skrip yang lebih rumit dinyatakan dalam bahasa pengaturcaraan berasaskan timbunan mudah. Dalam paradigma ini, perbelanjaan transaksi yang membelanjakan UTXO mesti menyediakan data yang memuaskan skrip. Malah, walaupun mekanisme pemilikan utama awam asas dilaksanakan melalui skrip: skrip mengambil tandatangan lengkung eliptik sebagai input, mengesahkannya terhadap transaksi dan alamat yang memiliki UTXO, dan mengembalikan 1 jika pengesahan berjaya dan 0 sebaliknya. Skrip lain yang seringkali lebih rumit wujud untuk pelbagai kes penggunaan tambahan. Sebagai contoh, seseorang boleh membina skrip yang memerlukan tandatangan daripada dua kekunci daripada tiga kekunci peribadi yang diberikan untuk mengesahkan ("berbilang tandatangan"), persediaan yang berguna untuk akaun korporat, akaun simpanan selamat dan beberapa situasi eskrow saudagar. Skrip juga boleh digunakan untuk membayar baunti untuk penyelesaian kepada masalah pengiraan, dan kita juga boleh membina skrip yang mengatakan sesuatu seperti "Bitcoin UTXO adalah milik anda jika anda boleh memberikan bukti SPV bahawa anda menghantar transaksi Dogecoin denominasi ini kepada saya", pada dasarnya membenarkan pertukaran silang mata wang kripto yang ternyahpusat.
 
@@ -141,11 +141,11 @@ Walau bagaimanapun, bahasa penskripan seperti yang dilaksanakan dalam Bitcoin me
 
 Oleh itu, kita melihat tiga pendekatan untuk membina aplikasi lanjutan di atas mata wang kripto: membina blok rantai baharu, menggunakan skrip di atas Bitcoin, dan membina protokol meta di atas Bitcoin. Membina blok rantai baru membolehkan kebebasan tanpa had dalam membina set ciri, tetapi akan mengorbankan kos masa pembangunan, usaha ikatan but dan keselamatan. Menggunakan skrip adalah mudah dilaksanakan dan diseragamkan, tetapi sangat terhad dari segi keupayaan, dan meta-protokol, walaupun mudah, mengalami kelemahan dalam kebolehskalaan. Dengan Ethereum, kami berhasrat untuk membina rangka kerja alternatif yang memudahkan pembangunan serta sifat pelanggan cerah yang lebih kuat, sementara pada masa yang sama membolehkan aplikasi berkongsi persekitaran ekonomi dan keselamatan blok rantai.
 
-## Ethereum \{#ethereum}
+## Ethereum {#ethereum}
 
 Hasrat Ethereum adalah untuk mewujudkan protokol alternatif bagi membina aplikasi ternyahpusat, menyediakan set keseimbangan berbeza yang kami percaya akan sangat berguna untuk kelas besar aplikasi ternyahpusat, dengan penekanan khusus kepada situasi di mana masa pembangunan pesat, keselamatan untuk aplikasi yang kecil dan jarang digunakan, dan keupayaan aplikasi yang berbeza untuk berinteraksi dengan sangat efisien, adalah penting. Ethereum melakukan ini dengan membina sesuatu yang pada dasarnya lapisan asas abstrak terhebat: blok rantai dengan bahasa pengaturcaraan Lengkap Turing, membolehkan sesiapa sahaja untuk menulis kontrak pintar dan aplikasi ternyahpusat yang membolehkan mereka membuat peraturan arbitrari sendiri untuk pemilikan, format transaksi dan fungsi peralihan keadaan. Versi Namecoin yang paling ringkas boleh ditulis dalam dua baris kod, dan protokol lain seperti mata wang dan sistem reputasi boleh dibina di bawah dua puluh baris. Kontrak pintar, "kotak" cryptografi yang mengandungi nilai dan hanya membuka kunci jika syarat tertentu dipenuhi, juga boleh dibina di atas platform, dengan jauh lebih kuasa daripada yang ditawarkan oleh skrip Bitcoin kerana kuasa tambahan Kelengkapan Turing, kesedaran nilai, kesedaran blok rantai dan keadaan.
 
-### Ethereum Accounts \{#ethereum-accounts}
+### Ethereum Accounts {#ethereum-accounts}
 
 Di Ethereum, keadaan ini terdiri daripada objek yang dipanggil "akaun", dengan setiap akaun mempunyai alamat 20 bit dan peralihan keadaan menjadi pemindahan langsung nilai dan maklumat antara akaun. Akaun Ethereum mengandungi empat bidang:
 
@@ -158,7 +158,7 @@ Di Ethereum, keadaan ini terdiri daripada objek yang dipanggil "akaun", dengan s
 
 Perhatikan bahawa "kontrak" dalam Ethereum tidak boleh dilihat sebagai sesuatu yang perlu "dipenuhi" atau "dipatuhi"; sebaliknya, ia lebih seperti "ejen berautonomi" yang hidup di dalam persekitaran pelaksanaan Ethereum, sentiasa melaksanakan sekeping kod tertentu apabila ditandakan oleh mesej atau transaksi, dan mempunyai kawalan langsung ke atas keseimbangan Ether mereka sendiri dan stor utama/nilai mereka sendiri untuk menjejaki pembolehubah yang berterusan.
 
-### Mesej dan Transaksi \{#messages-and-transactions}
+### Mesej dan Transaksi {#messages-and-transactions}
 
 Istilah "transaksi" digunakan dalam Ethereum untuk merujuk kepada pakej data yang ditandatangani yang menyimpan mesej yang akan dihantar daripada akaun milik luar. Transaksi mengandungi:
 
@@ -173,7 +173,7 @@ Tiga medan pertama ialah bidang standard yang diharapkan dalam mana-mana mata wa
 
 Medan `STARTGAS` dan `GASPRICE` adalah penting bagi model anti-penafian perkhidmatan Ethereum. Untuk mengelakkan gelung tak terhingga atau berniat jahat atau pembaziran pengiraan lain dalam kod, setiap transaksi perlu menetapkan had bilangan langkah pengiraan pelaksanaan kod yang boleh digunakan. Unit asas pengiraan ialah "gas"; biasanya, langkah pengiraan dikenakan kos 1 gas, tetapi sesetengah operasi menelan kos gas yang lebih tinggi kerana lebih mahal dari segi kuasa pengiraan, atau meningkatkan jumlah data yang mesti disimpan sebagai sebahagian daripada keadaan. Terdapat juga fi 5 gas untuk setiap bait dalam data transaksi. Hasrat sistem fi adalah untuk memerlukan penyerang membayar secara berkadar bagi setiap sumber yang mereka telan, termasuk pengiraan, jalur lebar dan storan; oleh itu, apa-apa transaksi yang menyebabkan rangkaian memakan jumlah yang lebih besar daripada mana-mana sumber-sumber ini mesti mempunyai fi gas kira-kira berkadar dengan kenaikan.
 
-### Mesej \{#messages}
+### Mesej {#messages}
 
 Kontrak mempunyai keupayaan untuk menghantar mesej kepada kontrak lain. Mesej ialah objek maya yang tidak pernah bersiri dan wujud hanya dalam persekitaran pelaksanaan Ethereum. Mesej mengandungi:
 
@@ -187,7 +187,7 @@ Pada asasnya, mesej adalah seperti transaksi, kecuali ia dihasilkan oleh kontrak
 
 Ambil perhatian bahawa elaun gas yang diperuntukkan oleh transaksi atau kontrak terpakai kepada jumlah gas yang digunakan oleh transaksi itu dan semua sub-pelaksanaan. Sebagai contoh, jika seorang pelaku luaran A menghantar transaksi kepada B dengan 1000 gas, dan B menggunakan 600 gas sebelum menghantar mesej kepada C, dan pelaksanaan dalaman C menggunakan 300 gas sebelum kembali, maka B boleh menghabiskan 100 lagi gas sebelum kehabisan gas.
 
-### Fungsi Peralihan Keadaan Ethereum \{#ethereum-state-transition-function}
+### Fungsi Peralihan Keadaan Ethereum {#ethereum-state-transition-function}
 
 ![Peralihan keadaan Ether](./ether-state-transition.png)
 
@@ -220,7 +220,7 @@ Jika tiada kontrak pada akhir penerimaan transaksi, maka jumlah fi transaksi han
 
 Ambil perhatian bahawa mesej berfungsi setara dengan transaksi dari segi pembalikan: jika pelaksanaan mesej kehabisan gas, maka pelaksanaan mesej itu, dan semua pelaksanaan lain yang dicetuskan oleh pelaksanaan itu, dibalikkan, tetapi pelaksanaan induk tidak perlu dibalikkan. Ini bermakna bahawa ia adalah "selamat" bagi kontrak untuk memanggil kontrak lain, seolah-olah A memanggil B dengan G gas, kemudian pelaksanaan A dijamin kehilangan maksimum G gas. Akhir sekali, ambil perhatian bahawa terdapat satu kod operasi, `CREATE`, yang mencipta kontrak; mekanik pelaksanaannya biasanya serupa dengan `CALL`, dengan pengecualian bahawa output pelaksanaan menentukan kod kontrak yang baru dicipta.
 
-### Pelaksanaan Kod \{#code-execution}
+### Pelaksanaan Kod {#code-execution}
 
 Kod dalam kontrak Ethereum ditulis dalam bahasa bytecode berasaskan tindanan tahap rendah, yang disebut sebagai "kod mesin maya Ethereum" atau "kod EVM". Kod ini terdiri daripada satu siri bait, di mana setiap bait mewakili operasi. Secara umum, pelaksanaan kod ialah gelung tak terhingga yang terdiri daripada pelaksanaan operasi berulang kali di pembilang program semasa (yang bermula pada sifar) dan kemudian meningkatkan pembilang program dengan satu, sehingga mencapai penghujung kod atau ralat atau arahan `STOP` atau `RETURN` dikesan. Operasi ini mempunyai akses kepada tiga jenis ruang di mana untuk menyimpan data:
 
@@ -232,7 +232,7 @@ Kod juga boleh mencapai nilai, penghantar dan data mesej masuk, serta data penge
 
 Model pelaksanaan formal kod EVM adalah mudah. Walaupun mesin maya Ethereum berjalan, keadaan pengiraan penuh boleh ditakrifkan oleh tuple `(block_state, transaction, message, code, memory, stack, pc, gas)`, di mana `block_state` ialah keadaan global yang mengandungi semua akaun dan termasuk baki dan storan. Pada permulaan setiap pusingan pelaksanaan, arahan semasa ditemui dengan mengambil `pc`th bait `code` (atau 0 jika `pc >= len(code)`), dan setiap arahan mempunyai definisi sendiri dari segi kesan kepada tuple. Sebagai contoh, `ADD` pop dua item daripada tindanan dan menolak jumlah item itu, mengurangkan `gas` sebanyak 1 dan kenaikan `pc` sebanyak 1, dan `SSTORE` pop dua item tertinggi daripada tindanan dan memasukkan item kedua ke dalam storan kontrak di indeks yang dinyatakan oleh item pertama. Walaupun terdapat banyak cara untuk mengoptimumkan pelaksanaan mesin maya Ethereum melalui kompilasi sesempat masa, pelaksanaan asas Ethereum boleh dilakukan dalam beberapa ratus baris kod.
 
-### Blok rantai dan Perlombongan \{#blockchain-and-mining}
+### Blok rantai dan Perlombongan {#blockchain-and-mining}
 
 ![Ethereum diagram blok gunaan](./ethereum-apply-block-diagram.png)
 
@@ -251,11 +251,11 @@ Pendekatan mungkin kelihatan sangat tidak cekap pada pandangan pertama, kerana i
 
 Satu soalan yang biasa ditanya ialah "di mana" kod kontrak dilaksanakan, dari segi perkakasan fizikal. Ini mempunyai jawapan yang mudah: proses melaksanakan kod kontrak adalah sebahagian daripada definisi fungsi peralihan keadaan, yang merupakan sebahagian daripada algoritma pengesahan blok, jadi jika transaksi ditambah ke blok `B` pelaksanaan kod yang dihasilkan oleh transaksi itu akan dilaksanakan oleh semua nod, sekarang dan pada masa akan datang, yang memuat turun dan mengesahkan blok `B`.
 
-## Aplikasi \{#applications}
+## Aplikasi {#applications}
 
 Secara umum, terdapat tiga jenis aplikasi di atas Ethereum. Kategori pertama ialah aplikasi kewangan, menyediakan pengguna dengan cara yang lebih berkuasa untuk menguruskan dan mengikat kontrak menggunakan wang mereka. Ini termasuk sub-matawang, derivatif kewangan, kontrak lindung nilai, dompet simpanan, wasiat, dan akhirnya beberapa kelas kontrak pekerjaan berskala penuh. Kategori kedua ialah aplikasi separa kewangan, di mana wang terlibat tetapi terdapat juga bahagian bukan monetari berat untuk perkara yang sedang dilakukan; contohnya baunti yang dikuat kuasa secara kendiri untuk penyelesaian masalah pengiraan. Akhirnya, terdapat aplikasi seperti pengundian dalam talian dan tadbir urus ternyahpusat yang bukan bersifat kewangan sama sekali.
 
-### Sistem Token \{#token-systems}
+### Sistem Token {#token-systems}
 
 Sistem token di blok rantai mempunyai banyak aplikasi sama ada sub-matawang yang mewakili aset seperti USD atau emas kepada saham syarikat, token individu yang mewakili harta pintar, kupon selamat yang tidak boleh dipalsukan, dan malah terdapat sistem token tanpa nilai konvensional, digunakan sebagai sistem titik untuk insentif. Sistem Token sebenarnya mudah untuk dilaksanakan dalam Ethereum. Hal utama yang perlu difahami adalah bahawa semua mata wang, atau sistem token, pada dasarnya ialah sebuah pangkalan data dengan satu operasi: menolak X unit dari A dan memberikan X unit kepada B, dengan proviso bahawa (i) A mempunyai sekurang-kurangnya X unit sebelum transaksi dan (2) transaksi diluluskan oleh A. Untuk melaksanakan sistem token, anda hanya perlu melaksanakan logik ini ke dalam kontrak.
 
@@ -270,7 +270,7 @@ def send(to, value):
 
 Ini pada dasarnya merupakan pelaksanaan literal bagi fungsi peralihan keadaan "sistem perbankan" yang diterangkan lebih lanjut di atas dalam dokumen ini. Beberapa baris tambahan kod perlu ditambah untuk menyediakan langkah awal mengedar unit mata wang dahulu dan beberapa kes pinggiran lain, dan sebaik-baiknya fungsi akan ditambah untuk membiarkan kontrak lain membuat pertanyaan bagi baki sesuatu alamat. Tetapi itu sahaja yang perlu difahami. Secara teorinya, sistem token berasaskan Ethereum yang bertindak sebagai sub-matawang berpotensi termasuk satu lagi ciri penting yang tiada bagi mata wang meta berasaskan Bitcoin atas rantaian: keupayaan untuk membayar fi transaksi terus dengan mata wang itu. Cara ini boleh dilaksanakan adalah bahawa kontrak akan mengekalkan baki Ether yang akan digunakan untuk membayar alik Ether yang terlibat dalam pembayaran fi kepada penghantar, dan ia akan mengisi semula baki ini dengan mengumpul unit mata wang dalaman yang dipungut daripada fi dan menjualnya dalam lelongan berterusan. Oleh itu, pengguna perlu "mengaktifkan" akaun mereka dengan Ether, tetapi apabila Ether berada di sana ia boleh diguna semula kerana kontrak akan membayar balik setiap kali.
 
-### Derivatif kewangan dan Mata wang Nilai stabil \{#financial-derivatives-and-stable-value-currencies}
+### Derivatif kewangan dan Mata wang Nilai stabil {#financial-derivatives-and-stable-value-currencies}
 
 Derivatif kewangan ialah aplikasi yang paling biasa bagi "kontrak pintar", dan salah satu yang paling mudah untuk dilaksanakan dalam kod. Cabaran utama dalam melaksanakan kontrak kewangan adalah bahawa kebanyakan kontrak tersebut memerlukan rujukan kepada penanda harga luaran; sebagai contoh, aplikasi yang sangat diingini ialah kontrak pintar yang melindung nilai terhadap ketidaktentuan Ether (atau mata wang kripto lain) berhubung dengan dolar AS, tetapi melakukan ini memerlukan kontrak untuk mengetahui nilai ETH/USD. Cara paling mudah untuk melakukan ini ialah melalui kontrak "suapan data" yang dikekalkan oleh pihak tertentu (contohnya NASDAQ) direka supaya pihak itu mempunyai keupayaan untuk mengemas kini kontrak seperti yang diperlukan, dan menyediakan antara muka yang membolehkan kontrak lain menghantar mesej kepada kontrak itu dan mendapatkan kembali respons yang menyediakan harga.
 
@@ -285,7 +285,7 @@ Kontrak sedemikian akan mempunyai potensi besar dalam perdagangan kripto. Salah 
 
 Walau bagaimanapun, dalam amalan sebenar, pengeluar tidak sentiasa boleh dipercayai, dan dalam beberapa kes infrastruktur perbankan terlalu lemah, atau terlalu bersikap menentang, untuk membolehkan kewujudan perkhidmatan sedemikian. Derivatif kewangan menyediakan alternatif. Di sini, bukan pengeluar tunggal yang menyediakan dana untuk membuat sandaran aset, sebaliknya, pasaran spekulator yang ternyahpusat akan memainkan peranan itu, membuat pertaruhan bahawa harga aset rujukan kriptografi (contohnya ETH) akan naik. Tidak seperti pengeluar, spekulator tidak mempunyai pilihan untuk mungkir berhubung dengan perjanjian tersebut kontrak lindung nilai memegang dana mereka dalam eskrow. Ambil perhatian bahawa pendekatan ini tidak ternyahpusat sepenuhnya, kerana sumber yang dipercayai masih diperlukan untuk menyediakan penanda harga, walaupun ini dikatakan masih merupakan peningkatan besar dari segi mengurangkan keperluan infrastruktur (bukan seperti pengeluar, mengeluarkan suapan harga tidak memerlukan lesen dan boleh dikategorikan sebagai pertuturan bebas) dan mengurangkan potensi untuk penipuan.
 
-### Sistem Identiti dan Reputasi \{#identity-and-reputation-systems}
+### Sistem Identiti dan Reputasi {#identity-and-reputation-systems}
 
 Mata wang kripto alternatif yang terawal, [Namecoin](http://namecoin.org/), cuba menggunakan blok rantai seperti Bitcoin untuk menyediakan sistem pendaftaran nama, iaitu pengguna boleh mendaftar nama mereka dalam pangkalan data awam bersama data lain. Kes penggunaan utama yang dipetik adalah untuk sistem [DNS](https://wikipedia.org/wiki/Domain_Name_System), nama domain pemetaan seperti "bitcoin.org" (atau, dalam kes Namecoin, "bitcoin.bit") ke alamat IP. Kes penggunaan lain termasuk pengesahan e-mel dan sistem reputasi yang berpotensi lebih maju. Berikut ialah kontrak asas untuk menyediakan sistem pendaftaran nama seperti Namecoin di Ethereum:
 
@@ -297,7 +297,7 @@ def register(name, value):
 
 Kontrak ini sangat mudah; semua itu ialah pangkalan data dalam rangkaian Ethereum yang boleh ditambah data, tetapi tidak diubah suai atau dikeluarkan daripadanya. Sesiapa sahaja boleh mendaftar nama dengan beberapa nilai, dan pendaftaran itu kemudian melekat selama-lamanya. Kontrak pendaftaran nama yang lebih canggih juga akan mempunyai "klausa fungsi" yang membolehkan kontrak lain untuk menanyakannya, serta mekanisme bagi "pemilik" (iaitu pendaftar pertama) nama untuk menukar data atau pemilikan pemindahan. Seseorang juga boleh menambah reputasi dan fungsi web boleh dipercayai di bahagian atas.
 
-### Storan Fail Ternyahpusat \{#decentralized-file-storage}
+### Storan Fail Ternyahpusat {#decentralized-file-storage}
 
 Sepanjang beberapa tahun yang lalu, muncul beberapa permulaan storan fail dalam talian yang popular, iaitu paling menonjol ialah Dropbox, mencari untuk membenarkan pengguna memuat naik sandaran pemacu keras mereka dan mempunyai perkhidmatan menyimpan sandaran dan membolehkan pengguna mengaksesnya sebagai pertukaran untuk yuran bulanan. Walau bagaimanapun, pada ketika ini pasaran storan fail pada masa yang agak tidak cekap; melihat sepintas lalu pelbagai penyelesaian sedia ada menunjukkan bahawa, terutamanya pada tahap "lembah luar biasa" 20-200 GB iaitu tiada kuota percuma atau diskaun tahap syarikat bermula, harga bulanan untuk kos storan fail arus perdana adalah sedemikian rupa sehingga anda membayar lebih daripada kos keseluruhan pemacu keras dalam satu bulan. Kontrak Ethereum boleh membenarkan pembangunan ekosistem storan fail yang terdesentralisasi, iaitu pengguna individu boleh mendapatkan kuantiti kecil wang dengan menyewa pemacu keras mereka sendiri dan ruang yang tidak digunakan boleh digunakan untuk terus memacu pengurangan kos storan fail.
 
@@ -305,7 +305,7 @@ Perkara utama yang menyokong peranti sedemikian ialah sesuatu yang kami namakan 
 
 Satu ciri penting protokol ialah, walaupun ia mungkin kelihatan seperti seseorang mempercayai banyak nod rawak tidak membuat keputusan untuk melupakan fail, seseorang boleh mengurangkan risiko itu kepada hampir sifar dengan membahagikan fail kepada banyak keping melalui perkongsian rahsia, dan menonton kontrak untuk melihat setiap keping masih dalam pemilikan beberapa nod. Jika kontrak masih membayar wang, iaitu menyediakan bukti kriptografi bahawa seseorang di luar sana masih menyimpan fail.
 
-### Organisasi Autonomi Terdesentralisasi \{#decentralized-autonomous-organizations}
+### Organisasi Autonomi Terdesentralisasi {#decentralized-autonomous-organizations}
 
 Konsep umum "organisasi autonomi terdesentralisasi ialah entiti maya yang mempunyai" set tertentu ahli atau pemegang saham yang, mungkin dengan majoriti 67%, mempunyai hak untuk membelanjakan dana entiti dan mengubah suai kodnya. Ahli secara kolektif memutuskan cara organisasi perlu memperuntukkan dana. Kaedah untuk memperuntukkan dana DAO boleh terdiri daripada ganjaran, gaji kepada mekanisme yang lebih eksotik seperti mata wang dalaman untuk kerja ganjaran. Ini pada dasarnya meniru perangkap undang-undang syarikat tradisional atau bukan keuntungan tetapi menggunakan hanya teknologi blok rantai kriptografi untuk penguatkuasaan. Setakat ini banyak perbincangan tentang DAO telah wujud di sekitar model "kapitalis" bagi "perbadanan autonomi terdesentralisasi" (DAC) dengan pemegang saham menerima dividen dan saham yang boleh didagangkan; sebagai alternatif, mungkin digambarkan sebagai "komuniti autonomi terdesentralisasi", iaitu semua ahli akan mempunyai bahagian yang sama dalam membuat keputusan dan memerlukan 67% daripada ahli sedia ada untuk bersetuju menambah atau mengeluarkan ahli. Keperluan bahawa seseorang hanya boleh mempunyai satu keahlian kemudian perlu dikuatkuasakan secara kolektif oleh kumpulan.
 
@@ -319,7 +319,7 @@ Kontrak itu kemudian akan mempunyai klausa bagi setiap satu daripada ini. Ia aka
 
 Model alternatif adalah untuk sebuah syarikat terdesentralisasi, iaitu mana-mana akaun boleh mempunyai sifar atau lebih saham, dan dua pertiga saham diperlukan untuk membuat keputusan. Rangka lengkap akan melibatkan fungsi pengurusan aset, keupayaan untuk membuat tawaran membeli atau menjual saham, dan keupayaan untuk menerima tawaran (sebaik-baiknya dengan mekanisme pemadanan pesanan dalam kontrak). Delegasi juga akan wujud gaya Demokrasi Cecair, menyamaratakan konsep a "lembaga pengarah".
 
-### Permohonan Tambahan \{#further-applications}
+### Permohonan Tambahan {#further-applications}
 
 **1. Dompet simpanan**. Katakan bahawa Alice mahu menyimpan dana dengan selamat, tetapi bimbang bahawa dia akan kehilangannya atau seseorang akan menggodam kunci peribadi dia. Dia meletakkan Ether dalam kontrak dengan Bob, bank, seperti berikut:
 
@@ -343,9 +343,9 @@ Biasanya, 1% sehari cukup untuk Alice, dan jika Alice mahu membuat pengeluaran l
 
 **8. Pasaran terdesentralisasi pada rantaian**, menggunakan sistem identiti dan reputasi sebagai asas.
 
-## Pelbagai Dan Kebimbangan \{#miscellanea-and-concerns}
+## Pelbagai Dan Kebimbangan {#miscellanea-and-concerns}
 
-### Pelaksanaan GHOST yang diubah suai \{#modified-ghost-implementation}
+### Pelaksanaan GHOST yang diubah suai {#modified-ghost-implementation}
 
 Protokol "Greedy Heaviest Observed Subtree" (GHOST) ialah inovasi pertama yang diperkenalkan oleh Yonatan Sompolinsky dan Aviv Zohar pada [Disember 2013](https://eprint.iacr.org/2013/881.pdf). Motivasi di sebalik GHOST ialah blok rantai dengan masa pengesahan cepat kini menderita akibat pengurangan keselamatan kerana kadar basi yang tinggi - kerana blok mengambil masa tertentu untuk disebarkan melalui rangkaian, jika pelombong A melombong blok dan kemudian pelombong B melombong blok lain sebelum blok pelombong A merambat kepada B, blok pelombong B akan akhirnya dibazirkan dan tidak akan menyumbang kepada keselamatan rangkaian. Tambahan pula, terdapat isu pemusatan: jika pelombong A ialah kumpulan perlombongan dengan 30% kuasa cincangan dan B mempunyai 10% kuasa cincangan, A akan mempunyai risiko menghasilkan blok basi 70% daripada masa (sejak 30% masa A yang lain menghasilkan blok terakhir dan sebagainya akan mendapat data perlombongan serta-merta) manakala B akan mempunyai risiko menghasilkan blok basi 90% daripada masa. Oleh itu, jika selang blok cukup pendek untuk kadar basi menjadi tinggi, A akan lebih cekap hanya dengan keutamaan daripada saiznya. Dengan kedua-dua kesan ini digabungkan, blok rantai yang menghasilkan blok dengan cepat mungkin membawa kepada satu kumpulan perlombongan yang mempunyai peratusan cukup besar bagi kuasa cincangan rangkaian untuk mempunyai kawalan de facto ke atas proses perlombongan.
 
@@ -363,7 +363,7 @@ Ethereum melaksanakan versi mudah GHOST yang hanya turun tujuh tahap. Khususnya,
 
 Versi terhad GHOST ini, dengan bapa saudara yang boleh dimasukkan hanya sehingga 7 generasi, telah digunakan untuk dua sebab. Pertama, GHOST tanpa had akan memasukkan terlalu banyak komplikasi dalam pengiraan yang bapa saudara bagi blok tertentu adalah sah. Kedua, GHOST tanpa had dengan pampasan seperti yang digunakan dalam Ethereum mengeluarkan insentif untuk pelombong kepada lombong pada rantaian utama dan bukan rantaian penyerang awam.
 
-### Yuran \{#fees}
+### Yuran {#fees}
 
 Oleh sebab setiap transaksi yang diterbitkan dalam blok rantai mengenakan kos yang diperlukan untuk memuat turun dan mengesahkannya pada rangkaian, terdapat keperluan untuk beberapa mekanisme kawal selia, biasanya melibatkan fi transaksi, untuk mengelakkan penyalahgunaan. Pendekatan lalai, yang digunakan dalam Bitcoin, adalah untuk mempunyai yuran sukarelawan semata-mata, bergantung kepada pelombong untuk bertindak sebagai penjaga pintu dan menetapkan minimum dinamik. Pendekatan ini telah diterima sangat baik dalam komuniti Bitcoin terutamanya kerana ia "berasaskan pasaran", membolehkan bekalan dan permintaan antara pelombong dan penghantar transaksi menentukan harga. Walau bagaimanapun, masalah dengan jalan fikiran ini ialah pemprosesan transaksi bukanlah pasaran; walaupun menarik secara intuitif untuk mentafsirkan pemprosesan transaksi sebagai perkhidmatan yang ditawarkan oleh pelombong kepada penghantar, pada hakikatnya setiap transaksi yang disertakan oleh pelombong perlu diproses oleh setiap nod dalam rangkaian, jadi sebahagian besar daripada kos pemprosesan transaksi ditanggung oleh pihak ketiga dan bukan pelombong yang membuat keputusan sama ada untuk memasukkannya atau tidak. Oleh itu, masalah tragedi biasa amat mungkin berlaku.
 
@@ -394,7 +394,7 @@ floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)
 
 Terdapat satu lagi faktor yang menghalang saiz blok besar dalam Bitcoin: blok yang besar akan mengambil masa lebih lama untuk disebarkan, dan dengan itu mempunyai kebarangkalian yang lebih tinggi untuk menjadi basi. Di Ethereum, blok yang kuat menggunakan gas juga boleh mengambil masa yang lebih lama untuk menyebarkan kedua-duanya kerana ia secara fizikal lebih besar dan kerana mereka mengambil masa lebih lama untuk memproses peralihan keadaan transaksi kepada mengesahkan. Penghalang kelewatan ini merupakan pertimbangan penting dalam Bitcoin, tetapi kurang dalam Ethereum kerana protokol GHOST; oleh itu, bergantung pada had blok dikawal selia menyediakan asas yang lebih stabil.
 
-### Pengiraan Dan Kesempurnaan Turing \{#computation-and-turing-completeness}
+### Pengiraan Dan Kesempurnaan Turing {#computation-and-turing-completeness}
 
 Satu nota penting ialah mesin maya Ethereum adalah Turing-lengkap; ini bermakna kod EVM boleh mengekodkan sebarang pengiraan yang boleh difikirkan, termasuk penggelungan tak terhingga. Kod EVM membolehkan penggelungan dalam dua cara. Pertama, terdapat arahan `JUMP` yang membolehkan program ini melompat ke tempat sebelumnya dalam kod, dan arahan `JUMPI` untuk melakukan lompatan bersyarat, membolehkan pernyataan seperti `while x < 27: x = x * 2`. Kedua, kontrak boleh memanggil kontrak lain, berpotensi membolehkan penggelungan melalui rekursi. Ini secara semula jadi membawa kepada masalah: bolehkah pengguna berniat jahat pada dasarnya menutup pelombong dan nod penuh turun dengan memaksa mereka masuk ke dalam gelung tak terhingga? Isu ini timbul kerana masalah dalam sains komputer yang dikenali sebagai masalah terhenti: tiada cara untuk memberitahu, dalam kes umum, sama ada program tertentu akan terhenti atau tidak.
 
@@ -418,7 +418,7 @@ C50: (run one step of a program and record the change in storage)
 
 Sekarang, hantar transaksi kepada A. Oleh itu, dalam 51 transaksi, kami mempunyai kontrak yang mengambil 2<sup>50</sup> langkah pengiraan. Pelombong boleh cuba mengesan bom logik itu lebih awal dengan mengekalkan nilai bersama setiap kontrak yang menyatakan bilangan maksimum langkah pengiraan yang boleh diambil, dan mengira ini untuk kontrak yang memanggil kontrak lain secara berulang-ulang, tetapi itu memerlukan pelombong untuk melarang kontrak yang mencipta kontrak lain (kerana penciptaan dan pelaksanaan semua 26 kontrak di atas dengan mudah boleh digulung menjadi satu kontrak). Satu lagi perkara yang bermasalah ialah medan alamat mesej adalah boleh ubah, jadi secara umumnya ia mungkin mustahil untuk memberitahu kontrak lain bahawa kontrak yang diberikan akan dipanggil lebih awal. Oleh itu, secara keseluruhannya, kami mempunyai kesimpulan yang mengejutkan: Kesempurnaan Turing amat mudah untuk diuruskan, dan kekurangan Kesempurnaan Turing sama-sama sukar untuk diurus melainkan kawalan yang sama tepat dilakukan - tetapi dalam kes itu, mengapakah tidak membiarkan sahaja protokol itu menjadi Turing lengkap?
 
-### Mata Wang Dan Pengeluaran \{#currency-and-issuance}
+### Mata Wang Dan Pengeluaran {#currency-and-issuance}
 
 Rangkaian Ethereum termasuk mata wang terbina dalam sendiri, Ether, yang berfungsi untuk dua tujuan iaitu menyediakan lapisan kecairan utama untuk membolehkan pertukaran cekap antara pelbagai jenis aset digital dan, lebih penting lagi, menyediakan mekanisme untuk membayar fi transaksi. Untuk kemudahan dan untuk mengelakkan pertikaian pada masa depan (lihat perbahasan mBTC/uBTC/satoshi semasa dalam Bitcoin), denominasi akan dilabel awal:
 
@@ -456,7 +456,7 @@ Model pertumbuhan bekalan linear kekal mengurangkan risiko sesuatu yang dilihat 
 
 Harap maklum bahawa pada masa akan datang, kemungkinan Ethereum akan bertukar kepada model bukti taruhan untuk keselamatan, mengurangkan keperluan pengeluaran ke suatu tempat antara sifar dan 0.05X setahun. Sekiranya organisasi Ethereum kehilangan pembiayaan atau atas apa-apa sebab lain hilang, kami meninggalkan "kontrak sosial" terbuka: sesiapa sahaja mempunyai hak untuk mewujudkan versi calon masa depan Ethereum, dengan syarat bahawa kuantiti Ether mesti sama dengan `60102216 * (1.198 + 0.26 * n)` iaitu `n` ialah bilangan tahun selepas blok genesis. Pencipta bebas untuk menjual kepada orang ramai atau sebaliknya memberikan beberapa atau semua perbezaan antara pengembangan bekalan yang didorong oleh PoS dan pengembangan bekalan yang dibenarkan maksimum untuk membayar pembangunan. Naik taraf calon yang tidak mematuhi kontrak sosial boleh dipaksa menjadi versi patuh.
 
-### Pemusatan Perlombongan \{#mining-centralization}
+### Pemusatan Perlombongan {#mining-centralization}
 
 Algoritma perlombongan Bitcoin berfungsi dengan mempunyai pelombong mengira SHA256 pada versi pengepala blok yang sedikit diubah suai berjuta-juta kali secara berulang-ulang, sehingga akhirnya satu nod datang dengan versi yang cincangannya kurang daripada sasaran (kini sekitar 2<sup>192</sup>). Walau bagaimanapun, algoritma perlombongan ini terdedah kepada dua bentuk pemusatan. Pertama, ekosistem perlombongan telah dikuasai oleh ASIC (litar bersepadu khusus aplikasi), cip komputer direka untuk, dan oleh itu beribu-ribu kali lebih cekap pada, tugas tertentu perlombongan Bitcoin. Ini bermakna bahawa perlombongan Bitcoin tidak lagi merupakan usaha yang sangat terdesentralisasi dan egalitarian, memerlukan berjuta-juta dolar modal untuk mengambil bahagian secara berkesan. Kedua, kebanyakan pelombong Bitcoin sebenarnya tidak melakukan pengesahan blok tempatan; sebaliknya, mereka bergantung pada kumpulan perlombongan berpusat untuk menyediakan pengepala blok. Masalah ini boleh dikatakan lebih teruk: pada masa penulisan ini, tiga kolam perlombongan teratas secara tidak langsung mengawal kira-kira 50% kuasa pemprosesan dalam rangkaian Bitcoin, walaupun ini dikurangkan oleh hakikat bahawa pelombong boleh beralih ke kolam perlombongan lain jika kolam atau gabungan cuba serangan 51%.
 
@@ -464,7 +464,7 @@ Niat semasa di Ethereum ialah menggunakan algoritma perlombongan iaitu pelombong
 
 Model ini belum diuji, dan mungkin terdapat kesukaran di sepanjang jalan dalam mengelakkan pengoptimuman bijak tertentu apabila menggunakan pelaksanaan kontrak sebagai algoritma perlombongan. Walau bagaimanapun, satu ciri menarik yang ketara bagi algoritma ini ialah ia membenarkan sesiapa sahaja untuk "meracun telaga", dengan memperkenalkan sejumlah besar kontrak ke dalam blok rantai khusus direka untuk menghalang ASIC tertentu. Insentif ekonomi wujud bagi pengeluar ASIC menggunakan helah sedemikian untuk menyerang satu sama lain. Oleh itu, penyelesaian yang sedang kita bangunkan akhirnya merupakan penyelesaian manusia ekonomi adaptif dan bukannya penyelesaian teknikal semata-mata.
 
-### Kebolehskalaan \{#scalability}
+### Kebolehskalaan {#scalability}
 
 Satu kebimbangan umum mengenai Ethereum ialah isu kebolehskalaan. Seperti Bitcoin, Ethereum mengalami kecacatan bahawa setiap transaksi perlu diproses oleh setiap nod dalam rangkaian. Dengan Bitcoin, saiz blok rantai semasa terletak pada kira-kira 15 GB, berkembang sebanyak kira-kira 1 MB sejam. Jika rangkaian Bitcoin telah memproses 2000 transaksi Visa sesaat, ia akan berkembang sebanyak 1 MB setiap tiga saat (1 GB per jam, 8 TB setiap tahun). Ethereum mungkin mengalami corak pertumbuhan yang sama, semakin teruk dengan hakikat bahawa akan terdapat banyak aplikasi selain blok rantai Ethereum dan bukan sahaja mata wang seperti yang berlaku pada Bitcoin, tetapi diperbaiki oleh hakikat bahawa nod penuh Ethereum perlu menyimpan hanya keadaan dan bukannya seluruh sejarah blok rantai.
 
@@ -474,21 +474,21 @@ Dalam jangka masa terdekat, Ethereum akan menggunakan dua strategi tambahan bagi
 
 Satu lagi, lebih canggih, serangan akan melibatkan pelombong berniat jahat menerbitkan blok tidak lengkap, jadi maklumat penuh tidak wujud untuk menentukan sama ada blok adalah sah atau tidak. Penyelesaian kepada ini ialah protokol tindak balas cabaran: nod pengesahan mengeluarkan "cabaran" dalam bentuk indeks transaksi sasaran, dan setelah menerima nod, nod cerah menganggap blok itu sebagai tidak dipercayai sehingga nod lain, sama ada pelombong atau pengesah lain, menyediakan subset nod Patricia sebagai bukti kesahan.
 
-## Kesimpulan \{#conclusion}
+## Kesimpulan {#conclusion}
 
 Protokol Ethereum pada asalnya diilhamkan sebagai versi dinaik taraf daripada mata wang kripto, menyediakan ciri-ciri lanjutan seperti eskrow pada blok rantai, had pengeluaran, kontrak kewangan, pasaran perjudian dan seperti melalui bahasa pengaturcaraan yang sangat umum. Protokol Ethereum tidak akan "menyokong" mana-mana aplikasi secara langsung, tetapi kewujudan bahasa pengaturcaraan Turing yang lengkap bermakna bahawa kontrak sewenang-wenangnya boleh dibuat secara teori untuk sebarang jenis transaksi atau aplikasi. Walau bagaimanapun, perkara yang lebih menarik mengenai Ethereum, ialah protokol Ethereum bergerak jauh melebihi mata wang sahaja. Protokol-protokol berkenaan storan fail terdesentralisasi, pengiraan terdesentralisasi dan pasaran ramalan terdesentralisasi, antara berpuluh-puluh konsep lain, mempunyai potensi untuk meningkatkan kecekapan industri pengiraan, dan memberikan rangsangan besar kepada protokol setara yang lain dengan menambah untuk kali pertama lapisan ekonomi. Akhirnya, terdapat juga pelbagai aplikasi yang tidak mempunyai apa-apa kaitan dengan wang sama sekali.
 
 Konsep fungsi peralihan keadaan sewenang-wenang seperti yang dilaksanakan oleh protokol Ethereum menyediakan platform dengan potensi unik; berbanding menjadi protokol tertutup, protokol tujuan tunggal bertujuan untuk pelbagai aplikasi dalam storan data, perjudian atau kewangan, Ethereum adalah terbuka mengikut reka bentuk, dan kami percaya bahawa ia sangat sesuai untuk berkhidmat sebagai lapisan asas bagi sebilangan besar protokol kewangan dan bukan kewangan pada tahun-tahun akan datang.
 
-## Nota dan Bacaan Lanjut \{#notes-and-further-reading}
+## Nota dan Bacaan Lanjut {#notes-and-further-reading}
 
-### Nota \{#notes}
+### Nota {#notes}
 
 1. Seorang pembaca canggih mungkin mendapati bahawa sebenarnya alamat Bitcoin ialah cincangan kunci awam lengkung eliptik, dan bukan kunci awam itu sendiri. Walau bagaimanapun, ia sebenarnya adalah benar-benar sempurna sah terminologi kriptografi untuk merujuk kepada cincangan kunci awam sebagai kunci awam itu sendiri. Ini kerana kriptografi Bitcoin boleh dianggap sebagai algoritma tandatangan digital tersuai, iaitu kunci awam terdiri daripada cincangan kunci awam ECC, tandatangan terdiri daripada kunci awam ECC yang terangkai dengan tandatangan ECC, dan algoritma pengesahan melibatkan pemeriksaan kunci awam ECC dalam tandatangan berbanding cincangan kunci awam ECC yang disediakan sebagai kunci awam dan kemudian mengesahkan tandatangan ECC berbanding kunci awam ECC.
 2. Secara teknikal, median daripada 11 blok sebelumnya.
 3. Secara dalaman, 2 dan "CHARLIE" ialah kedua-dua nombor <sup>[fn3](#nota)</sup>, dengan yang terakhir besar dalam perwakilan asas 256. Nombor boleh sekurang-kurangnya 0 dan paling banyak 2<sup>256</sup>-1.
 
-### Further Reading \{#further-reading}
+### Further Reading {#further-reading}
 
 1. [Nilai intrinsik](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)
 2. [Hartanah pintar](https://en.bitcoin.it/wiki/Smart_Property)

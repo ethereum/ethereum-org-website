@@ -4,7 +4,7 @@ lang: en
 description: A collection of tips and important considerations for setting up a translation program
 ---
 
-# Translation Program Playbook \{#translation-program-playbook}
+# Translation Program Playbook {#translation-program-playbook}
 
 English is one of the most spoken languages in the world and is by far the world’s most studied language. As English is the most common language used on the internet – especially on social media – and multilingual programming languages are scarce, the majority of content in the blockchain space is natively written in English.
 
@@ -16,7 +16,7 @@ Providing multilingual content is a simple and effective way of growing your glo
 
 This guide aims to address the common challenges and misconceptions about content localization. It provides a step-by-step guide to managing content, the translation and review process, quality assurance, translator outreach, and other vital aspects of the localization process.
 
-## Content Management \{#content-management}
+## Content Management {#content-management}
 
 Translation content management refers to the process of automating the translation workflow, which removes the need for repetitive manual work, improves efficiency and quality, allows for better control, and enables collaboration.
 
@@ -32,7 +32,7 @@ Read more about content management:
 
 [Phrase on multilingual content management](https://phrase.com/blog/posts/multilingual-content-management/)
 
-### Translation Management Software \{#translation-management-software}
+### Translation Management Software {#translation-management-software}
 
 There are many translation management systems and localization tools, and the choice of software depends mainly on your needs.
 
@@ -109,7 +109,7 @@ Read more about translation management software:
 
 [Gengo’s list of 16 best translation management systems](https://gengo.com/translator-product-updates/16-best-translation-management-systems/)
 
-## Workflow \{#workflow}
+## Workflow {#workflow}
 
 In the translation space, translation workflow can mean a couple of different things, both somewhat interrelated, and important considerations for your project.
 
@@ -198,7 +198,7 @@ Read more about translation workflows:
 
 [RixTrans on the translation workflow](https://www.rixtrans.com/translation-workflow)
 
-## Terminology Management \{#terminology-management}
+## Terminology Management {#terminology-management}
 
 Establishing a clear plan on how to handle terminology is one of the most important steps to ensure the quality and consistency of your translations and save your translators time.
 
@@ -222,7 +222,7 @@ Read more about terminology management:
 
 [Clear Words Translation on what is terminology management and why it matters](http://clearwordstranslations.com/language/en/what-is-terminology-management/)
 
-### Translation Memory and Glossary \{#tm-and-glossary}
+### Translation Memory and Glossary {#tm-and-glossary}
 
 The Translation Memory and Glossary are important tools in the translation industry and something most language service providers rely on.
 
@@ -262,7 +262,7 @@ This means that all repetitive and similar content would have to be manually tra
 
 _Do you want to use the ethereum.org translation memory and glossary in your project? Reach out to us at translations@ethereum.org._
 
-## Translator Outreach \{#translator-outreach}
+## Translator Outreach {#translator-outreach}
 
 **Working with a language service provider**
 
@@ -306,7 +306,7 @@ Platforms like Twitter can also be helpful for onboarding new community members 
 
 The Linux Foundation has created an extensive report on the [2020 FOSS open-source contributor survey](https://www.linuxfoundation.org/wp-content/uploads/2020FOSSContributorSurveyReport_121020.pdf), analyzing open-source contributors and their motivations.
 
-## Conclusion \{#conclusion}
+## Conclusion {#conclusion}
 
 This document contains some key considerations every translation program should be aware of. It is by no means an exhaustive guide, though it can help anyone with no experience in the translation industry organize a translation program for their project.
 

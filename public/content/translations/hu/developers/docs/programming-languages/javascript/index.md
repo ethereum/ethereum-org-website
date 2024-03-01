@@ -8,9 +8,9 @@ A Javascript a legnépszerűbb nyelvek között van az Ethereum ökoszisztémáb
 
 Lehetőség van JavaScriptet írni (vagy valami hasonlót) a [stack összes szintjén](/developers/docs/ethereum-stack/).
 
-## Interakció az Ethereummal \{#interact-with-ethereum}
+## Interakció az Ethereummal {#interact-with-ethereum}
 
-### JavaScript API könyvtárak \{#javascript-api-libraries}
+### JavaScript API könyvtárak {#javascript-api-libraries}
 
 Ha JavaScriptet szeretne írni a blokklánc lekérdezéséhez, tranzakció küldéséhez vagy máshoz, akkor ennek a legkézenfekvőbb módja egy [JavaScript API könyvtár](/developers/docs/apis/javascript/) használata. Ezek az API-k lehetővé teszik a fejlesztőknek, hogy interakcióba lépjenek az [Ethereum-hálózat csomópontjaival](/developers/docs/nodes-and-clients/).
 
@@ -22,15 +22,15 @@ Ezekkel a könyvtárakkal okosszerződésekkel léphet kapcsolatba az Ethereumon
 - [Ethers.js](https://docs.ethers.io/) _– tartalmaz egy Ethereum tárca implementációt és más segédprogramokat JavaScriptben és TypeScriptben._
 - [viem](https://viem.sh) – egy TypeScript interfész az Ethereumhoz, amely alacsony szintű, státuszmentes alapokat biztosít az Ethereummal való interakcióhoz.
 
-### Okosszerződések \{#smart-contracts}
+### Okosszerződések {#smart-contracts}
 
 Ha Ön Javascript-fejlesztő, és szeretné megírni saját okosszerződését, akkor érdemes megismerkednie a [Solidity-vel](https://solidity.readthedocs.io). Ez a legnépszerűbb okosszerződésnyelv, és szintaktikailag hasonló a JavaScript-hez, ami miatt könnyebb lehet elsajátítani azt.
 
 Többet az [okosszerződésekről](/developers/docs/smart-contracts/).
 
-## Értse meg a protokollt \{#understand-the-protocol}
+## Értse meg a protokollt {#understand-the-protocol}
 
-### Az Ethereum virtuális gép (EVM) \{#the-ethereum-virtual-machine}
+### Az Ethereum virtuális gép (EVM) {#the-ethereum-virtual-machine}
 
 Az [Ethereum virtuális géphez](/developers/docs/evm/) létezik egy JavaScript-implementáció is. Támogatja a legfrissebb elágazási (fork) szabályokat. Az elágazási szabályok az EVM-en végzett tervezett frissítésekből adódó szabályok.
 
@@ -49,7 +49,7 @@ Ha inkább el szeretné olvasni a kódot, ez a JavaScript nagyszerű alternatív
 **Nézze meg a kapcsolódó mappát**  
 [`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
 
-### Csomópontok és kliensek \{#nodes-and-clients}
+### Csomópontok és kliensek {#nodes-and-clients}
 
 Az Ethereumjs kliens aktív fejlesztés alatt áll, így Önnek lehetősége van elmélyedni abban, hogyan működnek az Ethereum-kliensek az Ön által ismert nyelven: JavaScript-ben!
 
@@ -58,7 +58,7 @@ Korábban egy különálló [`mappában`](https://github.com/ethereumjs/ethereum
 **Nézze meg a klienst**  
 [`ethereumjs-client`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
-## Egyéb projektek \{#other-projects}
+## Egyéb projektek {#other-projects}
 
 Rengeteg más dolog is zajlik az Ethereum JavaScript világában, mint például:
 
@@ -68,6 +68,6 @@ Rengeteg más dolog is zajlik az Ethereum JavaScript világában, mint például
 
 Mélyedjen bele abba, ami a leginkább érdekli a [EthereumJS mappában](https://github.com/ethereumjs)
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 _Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_

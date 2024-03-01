@@ -6,15 +6,15 @@ lang: it
 
 Un contratto intelligente è un programma eseguito a un indirizzo su Ethereum. È composto di dati e funzioni che entrano in esecuzione appena si riceve una transazione. Ecco una panoramica di cosa compone un contratto intelligente.
 
-## Prerequisiti \{#prerequisites}
+## Prerequisiti {#prerequisites}
 
 Prima, assicurati di aver letto a riguardo dei [contratti intelligenti](/developers/docs/smart-contracts/). Questa pagina presuppone che si conoscano i linguaggi di programmazione come JavaScript o Python.
 
-## Dati \{#data}
+## Dati {#data}
 
 Tutti i dati del contratto devono essere assegnati a una posizione: `storage` oppure ` memory`. Modificare l'archiviazione in un contratto intelligente è dispendioso, devi quindi considerare dove dovrebbero risiedere i tuoi dati.
 
-### Storage \{#storage}
+### Storage {#storage}
 
 I dati persistenti sono detti storage (o spazio di archiviazione) e sono rappresentati da variabili di stato. Questi valori sono memorizzati permanentemente nella blockchain. È necessario dichiarare il tipo così che il contratto possa tenere traccia di quanto storage è necessario sulla blockchain quando viene compilato.
 
@@ -52,13 +52,13 @@ Per ulteriori spiegazioni, consulta la documentazione:
 - [Vedi Vyper types](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [Vedi Solidity types](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### Memory \{#memory}
+### Memory {#memory}
 
 I valori che vengono memorizzati solo per la durata di esecuzione di una funzione di contratto sono detti variabili di memoria. Dal momento che non sono memorizzati in modo permanente sulla blockchain, sono molto più economici da usare.
 
 Scopri di più su come l'EVM memorizza i dati (Archiviazione, Memoria e lo Stack), nella [documentazione di Solidity](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-### Variabili d'ambiente \{#environment-variables}
+### Variabili d'ambiente {#environment-variables}
 
 Oltre alle variabili che vengono definite nel contratto, sono presenti alcune variabili globali speciali. Vengono utilizzate principalmente per fornire informazioni sulla blockchain o sulla transazione corrente.
 
@@ -69,7 +69,7 @@ Esempi:
 | `block.timestamp` | uint256                | Data/ora dell'epoca del blocco corrente    |
 | `msg.sender`      | address                | Mittente del messaggio (chiamata corrente) |
 
-## Funzioni \{#functions}
+## Funzioni {#functions}
 
 In termini estremamente semplici, le funzioni possono ottenere informazioni o impostarle in risposta alle transazioni in arrivo.
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - È dichiarato `public` e quindi chiunque può accedervi
 - Non è dichiarato `view`, quindi può modificare lo stato del contratto
 
-### Funzioni view \{#view-functions}
+### Funzioni view {#view-functions}
 
 Queste funzioni promettono di non modificare lo stato dei dati del contratto. Tra gli esempi più comuni vi sono le funzioni "getter": puoi usarle ad esempio per ricevere un saldo dell'utente.
 
@@ -131,7 +131,7 @@ Ecco cosa è considerato modifica dello stato:
 7. Utilizzo di chiamate di basso livello.
 8. Utilizzo di assembly inline contenente determinati opcode.
 
-### Funzioni constructor \{#constructor-functions}
+### Funzioni constructor {#constructor-functions}
 
 Quando il contratto viene distribuito per la prima volta, le funzioni `constructor` sono eseguite solo una volta. Come accade per `constructor` in molti linguaggi di programmazione basati su classi, queste funzioni spesso inizializzano le variabili di stato ai valori specificati.
 
@@ -158,7 +158,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### Funzioni integrate \{#built-in-functions}
+### Funzioni integrate {#built-in-functions}
 
 Oltre alle variabili che vengono definite nel contratto, sono presenti alcune funzioni speciali integrate. L'esempio più evidente è:
 
@@ -167,7 +167,7 @@ Oltre alle variabili che vengono definite nel contratto, sono presenti alcune fu
 
 Queste, consentono ai contratti di inviare ETH agli altri conti.
 
-## Scrivere funzioni \{#writing-functions}
+## Scrivere funzioni {#writing-functions}
 
 Una funzione ha bisogno di:
 
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 Un contratto completo potrebbe avere questa forma. Qui la funzione `constructor` fornisce un valore iniziale per la variabile `dapp_name`.
 
-## Eventi e log \{#events-and-logs}
+## Eventi e log {#events-and-logs}
 
 Gli eventi ti consentono di comunicare con il tuo contratto intelligente dal tuo frontend o da altre applicazioni che prevedono un'iscrizione. Quando una transazione è minata, i contratti intelligenti possono emettere eventi e scrivere registri alla blockchain, che il frontend può poi elaborare.
 
-## Esempi commentati \{#annotated-examples}
+## Esempi commentati {#annotated-examples}
 
 Questi sono alcuni esempi scritti in Solidity. Se vuoi sperimentare con il codice, puoi interagire con questi esempi in [Remix](http://remix.ethereum.org).
 
-### Hello world \{#hello-world}
+### Hello world {#hello-world}
 
 ```solidity
 // Specifica la versione di Solidity, utilizzando il controllo delle versioni semantico.
@@ -246,7 +246,7 @@ contract HelloWorld {
 }
 ```
 
-### Token \{#token}
+### Token {#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### Risorsa digitale univoca \{#unique-digital-asset}
+### Risorsa digitale univoca {#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -639,19 +639,19 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Letture consigliate \{#further-reading}
+## Letture consigliate {#further-reading}
 
 Dai un'occhiata alla documentazione di Solidity e Vyper per una panoramica più complessa dei contratti intelligenti:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## Argomenti correlati \{#related-topics}
+## Argomenti correlati {#related-topics}
 
 - [Contratti intelligenti](/developers/docs/smart-contracts/)
 - [Macchina virtuale Ethereum](/developers/docs/evm/)
 
-## Tutorial correlati \{#related-tutorials}
+## Tutorial correlati {#related-tutorials}
 
 - [Ridimensionare i contratti per contrastare il limite di dimensioni del contratto](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/): _Alcuni consigli pratici per ridurre le dimensioni del tuo contratto intelligente._
 - [Registrare dati dai contratti intelligenti con gli eventi](/developers/tutorials/logging-events-smart-contracts/): _Un'introduzione agli eventi dei contratti intelligenti e a come puoi usarli per registrare i dati._

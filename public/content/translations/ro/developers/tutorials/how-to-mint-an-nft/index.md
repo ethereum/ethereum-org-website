@@ -21,7 +21,7 @@ Toți și-au emis NFT-urile folosind puternicul API al Alchemy. În acest tutori
 
 Să începem!
 
-## Etapa 1: Instalarea web3 \{#install-web3}
+## Etapa 1: Instalarea web3 {#install-web3}
 
 Dacă ați urmat primul tutorial privind crearea contractului inteligent NFT, aveţi deja experienţă în utilizarea Ethers.js. Web3 este similar cu Ethers, întrucât este o bibliotecă utilizată pentru a facilita crearea de cereri către blockchain-ul Ethereum. În acest tutorial vom folosi [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), o bibliotecă Web3 îmbunătățită, care oferă reîncercări automate și o compatibilitate robustă cu WebSocket.
 
@@ -31,7 +31,7 @@ Dacă ați urmat primul tutorial privind crearea contractului inteligent NFT, av
 npm install @alch/alchemy-web3
 ```
 
-## Etapa 2: Crearea unui fișier mint-nft.js \{#create-mintnftjs}
+## Etapa 2: Crearea unui fișier mint-nft.js {#create-mintnftjs}
 
 În interiorul directorului dvs. de scripturi, creați un fișier mint-nft.js și adăugați următoarele linii de cod:
 
@@ -42,7 +42,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Etapa 3: Obţinerea ABI-ului contractului dvs. \{#contract-abi}
+## Etapa 3: Obţinerea ABI-ului contractului dvs. {#contract-abi}
 
 ABI-ul contractului nostru (Application Binary Interface) („Interfața binară a aplicației”) este interfața de interacțiune cu contractul nostru inteligent. Puteți afla mai multe despre ABI-urile de contract [aici](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat ne generează automat un ABI și îl salvează în fișierul MyNFT.json. În vederea folosirii acestuia, va trebui să-i analizăm conținutul prin adăugarea următoarelor linii de cod în fișierul nostru mint-nft.js:
 
@@ -62,7 +62,7 @@ Pentru a rula mint-nft.js și pentru a vedea ABI-ul imprimat în consolă, navig
 node scripts/mint-nft.js
 ```
 
-## Etapa 4: Configurarea metadatelor pentru NFT utilizând IPFS \{#config-meta}
+## Etapa 4: Configurarea metadatelor pentru NFT utilizând IPFS {#config-meta}
 
 Dacă vă amintiți din tutorialul nostru din Partea 1, funcția noastră de contract inteligent mintNFT primește un parametru tokenURI care ar trebui să rezolve la un document JSON care descrie metadatele NFT-ului— și care este de fapt ceea ce dă viață NFT-ului, permițându-i să aibă proprietăți configurabile, cum ar fi un nume, o descriere, o imagine și alte atribute.
 
@@ -110,7 +110,7 @@ După ce ați terminat de editat fișierul json, salvați-l și încărcați-l �
 
 ![Cum să vă încărcați nft-metadata.json în Pinata](./uploadPinata.gif)
 
-## Etapa 5: Crearea unei instanțe a contractului \{#instance-contract}
+## Etapa 5: Crearea unei instanțe a contractului {#instance-contract}
 
 În continuare, pentru a interacționa cu contractul nostru, trebuie să creăm o instanță a acestuia în codul nostru. Ca să facem acest lucru, vom avea nevoie de adresa contractului, care poate fi obținută fie din implementare, fie din [Etherscan](https://ropsten.etherscan.io/), căutând adresa pe care ați folosit-o pentru implementarea acestuia.
 
@@ -126,7 +126,7 @@ const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
 
-## Etapa 6: Actualizarea fișierului .env \{#update-env}
+## Etapa 6: Actualizarea fișierului .env {#update-env}
 
 Mai departe, pentru a crea și a trimite tranzacții în lanțul Ethereum, vom folosi adresa publică a contului dvs. Ethereum pentru a obține nonce-ul contului (vom explica mai jos).
 
@@ -138,7 +138,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## Etapa 7: Crearea unei tranzacții \{#create-txn}
+## Etapa 7: Crearea unei tranzacții {#create-txn}
 
 În primul rând, să definim o funcție numită `minfNFT(tokenData)` și să creăm tranzacția noastră procedând astfel:
 
@@ -187,7 +187,7 @@ Fișierul dvs. mint-nft.js ar trebui să arate astfel acum:
    }​
 ```
 
-## Etapa 8: Semnarea tranzacției \{#sign-txn}
+## Etapa 8: Semnarea tranzacției {#sign-txn}
 
 După ce ne-am creat tranzacția, trebuie să o semnăm pentru a o trimite. Aici urmează să folosim cheia noastră privată.
 
@@ -245,7 +245,7 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## Etapa 9: Apelarea mintNFT și rularea nodului contract-interact.js \{#call-mintnft-fn}
+## Etapa 9: Apelarea mintNFT și rularea nodului contract-interact.js {#call-mintnft-fn}
 
 Vă amintiți de „metadata.json” pe care ați încărcat-o în Pinata? Obțineți codul său hash din Pinata și treceți-l ca parametru la funcția mintNFT `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 

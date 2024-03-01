@@ -12,7 +12,7 @@ sourceUrl: https://docs.tellor.io/tellor/
 
 Pop Quiz: Your protocol is just about finished, but it needs an oracle to get access to off chain data...What do you do?
 
-## (Soft) Prerequisites \{#soft-prerequisites}
+## (Soft) Prerequisites {#soft-prerequisites}
 
 This post aims to make accessing an oracle feed as simple and straightforward as possible. That said, we're assuming the following about your coding skill-level to focus on the oracle aspect.
 
@@ -24,7 +24,7 @@ Assumptions:
 
 Tellor is a live and open-sourced oracle ready for implementation. This beginner's guide is here to showcase the ease with which one can get up and running with Tellor, providing your project with a fully decentralized and censorship-resistant oracle.
 
-## Overview \{#overview}
+## Overview {#overview}
 
 Tellor is an oracle system where parties can request the value of an offchain data point (e.g. BTC/USD) and reporters compete to add this value to an onchain data-bank, accessible by all Ethereum smart contracts. The inputs to this data-bank are secured by a network of staked reporters. Tellor utilizes crypto-economic incentive mechanisms, rewarding honest data submissions by reporters and punishing bad actors through the issuance of Tellor’s token, Tributes (TRB), and a dispute mechanism.
 
@@ -34,7 +34,7 @@ In this tutorial we'll go over:
 - Walk through a simple example.
 - List out testnet addresses of networks you currently can test Tellor on.
 
-## UsingTellor \{#usingtellor}
+## UsingTellor {#usingtellor}
 
 The first thing you'll want to do is install the basic tools necessary for using Tellor as your oracle. Use [this package](https://github.com/tellor-io/usingtellor) to install the Tellor User Contracts:
 
@@ -44,7 +44,7 @@ Once installed this will allow your contracts to inherit the functions from the 
 
 Great! Now that you've got the tools ready, let's go through a simple exercise where we retrieve the bitcoin price:
 
-### BTC/USD Example \{#btcusd-example}
+### BTC/USD Example {#btcusd-example}
 
 Inherit the UsingTellor contract, passing the Tellor address as a constructor argument:
 

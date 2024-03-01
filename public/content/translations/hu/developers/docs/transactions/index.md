@@ -6,11 +6,11 @@ lang: hu
 
 A tranzakciók számlákból származó kriptográfiailag aláírt instrukciók. Egy számla tranzakciót indíthat, hogy frissítse az Ethereum hálózat állapotát. A legegyszerűbb tranzakció az ETH átutalása egyik számláról a másikra.
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 Ennek az oldalnak a jobb megértése érdekében javasoljuk, hogy először a [Számlák](/developers/docs/accounts/) és a [bevezetés az Ethereumba](/developers/docs/intro-to-ethereum/) című cikkeinket olvassa el.
 
-## Mi az a tranzakció? \{#whats-a-transaction}
+## Mi az a tranzakció? {#whats-a-transaction}
 
 Az Ethereum-tranzakció egy külső tulajdonú számla által kezdeményezett tevékenységre utal, más szóval egy számla, amelyet egy ember, nem pedig egy szerződés kezel. Például, ha Bob elküld Alice-nek 1 ETH-et, akkor Bob számláját terhelni kell, Alice számlájára pedig jóvá kell írni az összeget. Ez az állapotot megváltoztató művelet egy tranzakción belül történik.
 
@@ -104,7 +104,7 @@ Példa válasz:
 
 Az aláírás hash-sel a tranzakcióról kriptográfiailag be lehet bizonyítani, hogy a küldőtől jött és így továbbították a hálózatra.
 
-### Az adatmező \{#the-data-field}
+### Az adatmező {#the-data-field}
 
 A tranzakciók többsége egy szerződést ér el egy külső tulajdonú számláról. A legtöbb szerződést Solidity nyelven írják, az adatmezőt az [alkalmazás bináris interfész (ABI)](/glossary/#abi) alapján lehet értelmezni.
 
@@ -125,7 +125,7 @@ Az adat többi része:
 
 Az ABI specifikáció szerint az integer értékek (mint a címek, amelyek 20 bájt hosszú integerek) az ABI-ban 32 bájt hosszan jelennek meg, nullákkal az elején. Így tudjuk, hogy a `to` (fogadó) cím a [`4f6742badb049791cd9a37ea913f2bac38d01279`](https://etherscan.io/address/0x4f6742badb049791cd9a37ea913f2bac38d01279). Az `value` (érték) pedig 0x3b0559f4 = 990206452.
 
-## Tranzakciótípusok \{#types-of-transactions}
+## Tranzakciótípusok {#types-of-transactions}
 
 Az Ethereumon található néhány tranzakciótípus:
 
@@ -133,7 +133,7 @@ Az Ethereumon található néhány tranzakciótípus:
 - Szerződést telepítő tranzakciók: ahol nincs „to” vagyis fogadó cím, és az adatmezőket a szerződéskódra használják.
 - A szerződés végrehajtása: olyan tranzakció, amely egy telepített okosszerződéssel kapcsolódik. Ekkor a „to” vagyis fogadó cím az okosszerződés címe.
 
-### A gázról \{#on-gas}
+### A gázról {#on-gas}
 
 Ahogy korábban említettük, a tranzakciók [gáz](/developers/docs/gas/)költséget igényelnek a lefutáshoz. Egy egyszerű átutalás 21 000 gázegységet igényel.
 
@@ -159,7 +159,7 @@ Az okosszerződéses interakciók is gázt igényelnek.
 
 A tranzakcióban fel nem használt összes gáz visszakerül a felhasználó számlájára.
 
-## Tranzakció-életciklus \{#transaction-lifecycle}
+## Tranzakció-életciklus {#transaction-lifecycle}
 
 Amikor valaki elküld egy tranzakciót, a következő történik:
 
@@ -168,7 +168,7 @@ Amikor valaki elküld egy tranzakciót, a következő történik:
 3. A validátornak ki kell választania a tranzakciót és bele kell foglalnia egy blokkba, hogy hitelesítse és „sikeresnek” minősítse.
 4. Az idő múlásával a tranzakciót tartalmazó adott blokk a hitelesítettből a véglegesített állapotba jut. Ezek a frissítések biztossá teszik, hogy a tranzakció sikeres és többé nem lehet megváltoztatni. Amint a blokk végleges lesz, csak egy hálózatszintű támadás tudja megváltoztatni, ami sok milliárd dollárba kerülne a támadó részéről.
 
-## Vizuális bemutató \{#a-visual-demo}
+## Vizuális bemutató {#a-visual-demo}
 
 Kövesse végig, ahogy Austin bemutatja a tranzakciókat, a gázt és a bányászatot.
 
@@ -176,7 +176,7 @@ Kövesse végig, ahogy Austin bemutatja a tranzakciókat, a gázt és a bányás
 <YouTube id="er-0ihqFQB0" />
 }
 
-## Beírt tranzakciógöngyöleg \{#typed-transaction-envelope}
+## Beírt tranzakciógöngyöleg {#typed-transaction-envelope}
 
 Az Ethereum eredetileg egyetlen formátummal rendelkezett a tranzakciókat illetően. Minden tranzakcióban a következő értékek voltak jelen: nonce, gázdíj, gázkorlátozás, a fogadó címe, az érték, adatok, v, r és s. Ezek a mezők [RLP-kódolásúak](/developers/docs/data-structures-and-encoding/rlp/), hogy így nézzenek ki:
 
@@ -193,13 +193,13 @@ Ahol a mezők jelentése:
 - `TransactionType` – egy szám 0 és 0x7f között, összesen 128 lehetséges tranzakciótípusra.
 - `TransactionPayload` – tetszőleges bájtsor, amelyet a tranzakció típusa határoz meg.
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [EIP-2718: Tranzakciógöngyöleg](https://eips.ethereum.org/EIPS/eip-2718)
 
 _Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_
 
-## Kapcsolódó témák \{#related-topics}
+## Kapcsolódó témák {#related-topics}
 
 - [Számlák](/developers/docs/accounts/)
 - [Ethereum virtuális gép (EVM)](/developers/docs/evm/)

@@ -4,7 +4,7 @@ description: Niet-Engelse bronnen om te leren over Ethereum
 lang: nl
 ---
 
-# Taalbronnen \{#language-resources}
+# Taalbronnen {#language-resources}
 
 De Ethereum-gemeenschap is mondiaal en bestaat uit miljoenen niet-Engelse sprekers.
 
@@ -14,15 +14,15 @@ Als u liever in uw moedertaal leest of iemand kent die geen Engels spreekt, kunt
 
 Weet u van een educatieve bron in uw taal? [Open een probleem](https://github.com/ethereum/ethereum-org-website/issues/new/choose) om het aan de lijst toe te voegen!
 
-## Bronnen van Ethereum.org \{#ethereum-org}
+## Bronnen van Ethereum.org {#ethereum-org}
 
 Ethereum.org wordt vertaald in meer dan 40 talen die u kunt vinden op onze [taalpagina](/languages).
 
 Als u tweetalig bent en ons wilt helpen meer mensen te bereiken, kunt u ook betrokken raken bij het [vertalingsprogramma van ethereum.org](/contributing/translation-program/#translation-program) en ons helpen met het vertalen van de website.
 
-## Gemeenschapsbronnen \{#community}
+## Gemeenschapsbronnen {#community}
 
-### Braziliaans Portugees \{#br-pt}
+### Braziliaans Portugees {#br-pt}
 
 **Nieuws**
 
@@ -40,7 +40,7 @@ Als u tweetalig bent en ons wilt helpen meer mensen te bereiken, kunt u ook betr
 - [Cointimes](http://www.cointimes.com.br/) - nieuws en voorlichting over cryptocurrency
 - [Web3 startpakket](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - een gids die de meest gestelde en fundamentele crypto-vragen beantwoordt
 
-### Chinees \{#zh}
+### Chinees {#zh}
 
 **Algemene bronnen**
 
@@ -67,28 +67,28 @@ Als u tweetalig bent en ons wilt helpen meer mensen te bereiken, kunt u ook betr
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - een WeChat-account, met uitleg over cryptografie, veiligheid, enz.
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - een WeChat-account, met uitleg van zk-technologie
 
-### Tsjechisch \{#cs}
+### Tsjechisch {#cs}
 
 - [Gwei.cz](https://gwei.cz) - lokale gemeenschap rond Web3, maakt educatieve inhoud, organiseert online en persoonlijke evenementen
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - Ethereum-gids voor beginners
 - [DAO Příručka](https://dao.gwei.cz/) - beginnersgids voor DAO's
 - [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - beheers Ethereum in het Tsjechisch
 
-### Frans \{#fr}
+### Frans {#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) - Ethereum France organiseert evenementen, maakt content en moedigt discussies rond Ethereum aan
 - [Ethereum.fr](https://ethereum.fr/) - nieuws en voorlichting over Ethereum
 - [BanklessFR](https://banklessfr.substack.com/) - Bankless-nieuwsbrief in het Frans
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - cryptocurrency-forum met een Ethereum-subpagina
 
-### Duits \{#de}
+### Duits {#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - met gebruik van Solidity
 - [Microsoft Learn (slimme contracten)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - slimme Ethereum-contracten schrijven met Solidity
 - [Microsoft Learn (Ethereum-netwerken)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - verbinding maken met Ethereum-netwerken en deze inzetten
 - [Microsoft Learn (blockchains)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - kennismaking met blockchain-ontwikkeling
 
-### Italiaans \{#it}
+### Italiaans {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - Ethereum-voorlichting, -evenementen en -nieuws, gericht op slimme contracten en blockchaintechnologie
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - Ethereum-podcast in het Italiaans
@@ -96,11 +96,11 @@ Als u tweetalig bent en ons wilt helpen meer mensen te bereiken, kunt u ook betr
 - [Microsoft Learn (slimme contracten)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - meer informatie over schrijven van slimme contracten met Solidity
 - [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - maak een gebruikersinterface met gedecentraliseerde applicaties
 
-### Russisch \{#ru}
+### Russisch {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) - voorlichtingsruimte voor web3-builders
 
-### Spaans \{#es}
+### Spaans {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - cursussen, evenementen en blog over blockchain, DeFi en governance
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - Ethereum-gids voor beginners in het Spaans
@@ -110,18 +110,18 @@ Als u tweetalig bent en ons wilt helpen meer mensen te bereiken, kunt u ook betr
 - [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - leer hoe slimme DeFi-contracten werken in Solidity en maak uw eigen Automated Market Maker
 - [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - Niet-technische blockchain-cursus, van beginner tot geavanceerd. Leer alles over crypto en Ethereum.
 
-### Turks \{#tr}
+### Turks {#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - cursus gericht op blockchain en cryptocurrency
 - [De grote hernoeming: wat is er gebeurd met Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - Turkse vertaling van de blogpost over de grote hernoeming, met uitleg van de afstandneming van 'Eth2'-terminologie
 
-### Vietnamees \{#vi}
+### Vietnamees {#vi}
 
 - [Tino Groep](https://wiki.tino.org/ethereum-la-gi/) - overzicht van Ethereum, dapps, portemonnees en FAQ's
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - webplatform met subpagina's met nieuws en voorlichting over Ethereum
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - cryptocurrency-portaal met nieuws en educatieve inhoud over Ethereum
 
-### Japans \{#ja}
+### Japans {#ja}
 
 - [Japan Virtual en Crypto Assets Exchange Association](https://jvcea.or.jp/)
 - [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)

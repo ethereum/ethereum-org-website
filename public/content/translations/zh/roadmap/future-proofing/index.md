@@ -9,7 +9,7 @@ template: roadmap
 
 路线图的部分内容并不是对于以太坊的短期扩展或保护而言必不可少，但可以为以太坊长期稳定性和可靠性奠定基础。
 
-## 量子抗性 \{#quantum-resistance}
+## 量子抗性 {#quantum-resistance}
 
 当量子计算成为现实时，目前一些用于保护以太坊安全的加密技术将会受到威胁。 尽管量子计算机可能还需要几十年才能对现代加密技术构成真正的威胁，但以太坊的构建方式要保证以太坊在未来几个世纪内都保持安全。 这意味着要尽快使[以太坊具备量子抗性](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/)。
 
@@ -19,7 +19,7 @@ template: roadmap
 
 <ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> 阅读了解 KZG 和可信设置的相关内容。</ButtonLink>
 
-## 简化以太坊，提高以太坊效率 \{#simpler-more-efficient-ethereum}
+## 简化以太坊，提高以太坊效率 {#simpler-more-efficient-ethereum}
 
 复杂性会导致出现可以被攻击者利用的错误或漏洞。 因此，路线图的一部分是简化以太坊，并删除那些在各种升级后留存但不再需要或可以改进的代码。 更精简、更简单的代码库更容易被开发者维护和推理。
 
@@ -27,7 +27,7 @@ template: roadmap
 
 同样，现有以太坊客户端的其他部分也可以进行更新。 例如，目前执行和共识客户端使用不同类型的数据压缩。 当整个网络统一压缩方案时，客户端之间共享数据将变得更加简单直观。
 
-## 当前进展 \{#current-progress}
+## 当前进展 {#current-progress}
 
 为防止以太坊未来被淘汰而需要进行的大部分升级仍处于研究阶段，可能需要数年时间才能实现。 删除 SELF-DESTRUCT 指令和统一执行和共识客户端中使用的压缩方案等升级，可能会比抗量子加密技术更早实现。
 

@@ -13,13 +13,13 @@ summaryPoints:
   - Conservez vos jetons de staking dans votre propre portefeuille
 ---
 
-## Que sont les groupes d'enjeu ? \{#what-are-staking-pools}
+## Que sont les groupes d'enjeu ? {#what-are-staking-pools}
 
 Les groupes d'enjeux offrent une approche collaborative permettant à de nombreuses personnes ayant de petites quantités d'ETH de rassembler les 32 ETH nécessaires pour activer un jeu de clés de validateur. Le concept de groupes d'enjeux n'est pas pris en charge de manière native par le protocole. Des solutions ont donc été élaborées séparément pour répondre à ce besoin.
 
 Certains pools fonctionnent à l'aide de contrats intelligents, dans lesquels les fonds peuvent être déposés. Ceux-ci gèrent et suivent votre mise en jeu sans intermédiaire de confiance, et vous remettent un jeton représentant la valeur de votre mise. D'autres pools n'utilisent pas de contrats intelligents et sont, au contraire, gérés hors chaîne.
 
-## Pourquoi miser via un pool ? \{#why-stake-with-a-pool}
+## Pourquoi miser via un pool ? {#why-stake-with-a-pool}
 
 En plus des avantages que nous avons décrits dans notre [introduction à la mise en jeu](/staking/), la mise en jeu mutualisée offre un certain nombres d'avantages spécifiques.
 
@@ -33,7 +33,7 @@ En plus des avantages que nous avons décrits dans notre [introduction à la mis
 <StakingComparison page="pools" />
 }
 
-## Éléments importants \{#what-to-consider}
+## Éléments importants {#what-to-consider}
 
 La mise en jeu mutualisée ou déléguée n'est pas prise en charge nativement par le protocole Ethereum, mais compte tenu de la demande des utilisateurs de miser moins de 32 ETH, un nombre croissant de solutions ont été construites pour répondre à cette demande.
 
@@ -49,7 +49,7 @@ Les indicateurs d'attributs sont utilisés ci-dessous pour signaler des forces o
 <StakingConsiderations page="pools" />
 }
 
-## Explorez les pools de mise en jeu \{#explore-staking-pools}
+## Explorez les pools de mise en jeu {#explore-staking-pools}
 
 De nombreuses options sont disponible pour vous aider dans votre configuration. Utilisez les indicateurs ci-dessus pour vous guider à travers les outils ci-dessous.
 
@@ -65,7 +65,7 @@ Veuillez noter l'importance de choisir un service qui prend au sérieux [la dive
 
 Vous souhaitez suggérer un outil de mise en jeu que nous avons manqué ? Consultez notre [politique de liste de produits](/contributing/adding-staking-products/) pour voir s'il conviendrait, et le soumettre à examen.
 
-## Questions fréquemment posées \{#faq}
+## Questions fréquemment posées {#faq}
 
 {
 <ExpandableCard title="Comment puis-je gagner des récompenses ?">
@@ -93,7 +93,7 @@ Certaines options de mise en commun sont plus décentralisées que d'autres conc
 </ExpandableCard>
 }
 
-## Lectures complémentaires \{#further-reading}
+## Lectures complémentaires {#further-reading}
 
 - [L'Annuaire de la mise en jeu sur Ethereum.](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Staking with Rocket Pool - Staking Overview](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool docs_

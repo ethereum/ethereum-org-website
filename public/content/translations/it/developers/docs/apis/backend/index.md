@@ -10,15 +10,15 @@ Per questo scopo, ogni client di Ethereum implementa la specifica [JSON-RPC](/de
 
 Se desideri utilizzare un linguaggio di programmazione specifico per connetterti a un nodo Ethereum, sviluppa una soluzione personalizzata, ma tieni presente che ci sono già molte librerie all'interno dell'ecosistema che possono facilitarti la vita. Con queste librerie, gli sviluppatori possono scrivere metodi a una riga intuitivi per inizializzare le richieste RPC JSON (under the hood) che interagiscono con Ethereum.
 
-## Prerequisiti \{#prerequisites}
+## Prerequisiti {#prerequisites}
 
 Potrebbe essere utile comprendere meglio lo [stack di Ethereum](/developers/docs/ethereum-stack/) e[i client di Ethereum](/developers/docs/nodes-and-clients/).
 
-## Perché usare una libreria? \{#why-use-a-library}
+## Perché usare una libreria? {#why-use-a-library}
 
 Queste librerie eliminano buona parte della complessità legata al dover interagire direttamente con un nodo Ethereum. Forniscono inoltre funzioni di utilità (ad esempio conversione da ETH a Gwei) in modo da ridurre il tempo necessario per districarsi tra le complessità dei client Ethereum e potersi concentrare sulle funzionalità uniche dell'applicazione.
 
-## Librerie disponibili \{#available-libraries}
+## Librerie disponibili {#available-libraries}
 
 **Alchemy -** **_Piattaforma di sviluppo Ethereum_**
 
@@ -167,16 +167,16 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 - [Documentazione](https://services.tokeniew/docs?type=api)
 - [Github](https://github.com/Tokenview)
 
-## Letture consigliate \{#further-reading}
+## Letture consigliate {#further-reading}
 
 _Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
-## Argomenti correlati \{#related-topics}
+## Argomenti correlati {#related-topics}
 
 - [ Nodi e client](/developers/docs/nodes-and-clients/)
 - [Quadri di sviluppo](/developers/docs/frameworks/)
 
-## Tutorial correlati \{#related-tutorials}
+## Tutorial correlati {#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per impostare web3.js in un progetto._
 - [Calling a Smart Contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando il token DAI, impara come funzionano i contratti di chiamata con JavaScript_

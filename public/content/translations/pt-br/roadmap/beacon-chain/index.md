@@ -14,17 +14,17 @@ summaryPoint3: A Beacon Chain introduziu a lógica de consenso e o protocolo de 
   A Beacon Chain foi lançada em 1º de Dezembro de 2020 e formalizou a prova de participação como mecanismo de consenso da Ethereum, com a atualização da Fusão em 15 de setembro de 2022.
 </UpgradeStatus>
 
-## O que é a Beacon Chain? \{#what-is-the-beacon-chain}
+## O que é a Beacon Chain? {#what-is-the-beacon-chain}
 
 Beacon Chain é o nome do blockchain de prova de participação original que foi lançado em 2020. Ela foi criada para garantir que a lógica de consenso de prova de participação era sólida e sustentável antes de implementá-la na rede principal do Ethereum. Portanto, ela existia paralelamente à prova de trabalho do Ethereum. Beacon Chain era uma cadeia de blocos '"vazios", mas para desativar a prova de trabalho e ativar a prova de participação no Ethereum era necessário instruir a Beacon Chain a aceitar dados de transação de clientes de execução, agrupá-los em blocos e depois organizá-los em um blockchain usando um mecanismo de consenso com base em prova de participação. Ao mesmo tempo, os nós da rede original do Ethereum desligaram sua lógica de consenso, propagação de blocos e mineração, passando essas funções para a Beacon Chain. Este evento ficou conhecido como [The Merge](/roadmap/merge/). Após a Fusão, não havia mais dois blockchains. Em vez disso, havia apenas um Ethereum de prova de participação, que agora exige dois clientes diferentes por nó. Agora, a Beacon Chain é a camada de consenso, uma rede ponto a ponto de clientes de consenso que processa a lógica de consenso e transmissão de blocos, enquanto os clientes originais formam a camada de execução, responsável pela transmissão e execução de transações e pelo gerenciamento do estado do Ethereum. As duas camadas podem se comunicar mutuamente por meio da Engine API.
 
-## O que a Beacon Chain faz? \{#what-does-the-beacon-chain-do}
+## O que a Beacon Chain faz? {#what-does-the-beacon-chain-do}
 
 Beacon Chain é o nome dado a um registro de contas que orientava e coordenava a rede de [stakers](/participantes/) do Ethereum antes que começassem a validar blocos reais do Ethereum. Entretanto, não processa transações nem interações de contratos inteligentes, pois isso é feito na camada de execução. A Beacon Chain é responsável por atividades como processamento de blocos e atestações, executação do algoritmo de escolha de bifurcação e gerenciamento de recompensas e penalidades. Leia mais em nossa [página de arquitetura de nós](/developers/docs/nodes-and-clients/node-architecture/#node-comparison).
 
-## O impacto da Beacon Chain \{#beacon-chain-features}
+## O impacto da Beacon Chain {#beacon-chain-features}
 
-### Participação (staking) \{#introducing-staking}
+### Participação (staking) {#introducing-staking}
 
 A Beacon Chain introduziu a [prova de participação](/developers/docs/consensus-mechanisms/pos/) no Ethereum. Isso mantém o Ethereum protegido e os validadores recebem mais ETH no processo. Na prática, você precisará participar com os seus ETH para ativar o software de validador. Como participante, você executa o software que cria e valida novos blocos na cadeia.
 
@@ -38,7 +38,7 @@ E utilizar a prova de participação como mecanismo de consenso é um componente
   Se você estiver interessado em se tornar um validador e ajudar a manter o Ethereum seguro, <a href="/staking/">saiba mais sobre o conceito de participação</a>.
 </InfoBanner>
 
-### Preparação para a fragmentação \{#setting-up-for-sharding}
+### Preparação para a fragmentação {#setting-up-for-sharding}
 
 Desde que a Beacon Chain se fundiu à rede principal original do Ethereum, a comunidade Ethereum começou tentar dimensionar a rede.
 
@@ -48,11 +48,11 @@ Essa responsabilidade contrasta com a prova de trabalho, em que os mineradores n
 
 [Mais sobre fragmentação](/roadmap/danksharding/)
 
-## Relação entre as melhorias \{#relationship-between-upgrades}
+## Relação entre as melhorias {#relationship-between-upgrades}
 
 As melhorias do Ethereum estão, de certa forma, relacionadas. Vamos recapitular como a Beacon Chain afeta as outras melhorias.
 
-### Beacon Chain e A Fusão \{#merge-and-beacon-chain}
+### Beacon Chain e A Fusão {#merge-and-beacon-chain}
 
 No começo, a Beacon Chain existia separadamente da rede principal do Ethereum, mas ocorreu uma fusão em 2022.
 
@@ -60,7 +60,7 @@ No começo, a Beacon Chain existia separadamente da rede principal do Ethereum, 
   A integração
 </ButtonLink>
 
-### Fragmentos e a Beacon Chain \{#shards-and-beacon-chain}
+### Fragmentos e a Beacon Chain {#shards-and-beacon-chain}
 
 As cadeias de fragmentação apenas podem ser introduzidas no ecossistema Ethereum por meio do estabelecimento de um mecanismo de consenso de prova de participação. A Beacon Chain introduziu a participação, que se "fundiu" com a rede principal, abrindo caminho para a fragmentação, de forma a ajudar a dimensionar ainda mais o Ethereum.
 

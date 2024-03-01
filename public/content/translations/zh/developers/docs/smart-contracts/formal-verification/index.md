@@ -10,13 +10,13 @@ lang: zh
 
 在智能合约中实现后，形式化验证能证明合约的业务逻辑符合预先定义的规范。 相比于其他评估合约代码正确性的方法（例如测试），形式化验证能够更有力地保障智能合约功能正确。
 
-## 什么是形式化验证？ \{#what-is-formal-verification}
+## 什么是形式化验证？ {#what-is-formal-verification}
 
 形式化验证是指根据形式化规范评估系统正确性的过程。 简言之，形式化验证让我们可以检查系统的行为是否满足某些要求（即，系统按照我们的想法运作）。
 
 系统（本例中的智能合约）的预期行为使用形式化建模来描述，而规范语言为创建形式化属性提供支持。 然后，形式化验证技术可以验证合约的实现是否符合其规范，并提供合约正确性的数学证明。 当合约符合其规范时，则称其“功能正确”、“设计正确”或“构建正确”。
 
-### 什么是形式化模型？ \{#what-is-a-formal-model}
+### 什么是形式化模型？ {#what-is-a-formal-model}
 
 在计算机科学中，[形式化模型](https://en.wikipedia.org/wiki/Model_of_computation)是指对计算过程的数学描述。 程序抽象成数学函数（方程），模型描述给定输入时如何计算函数的输出。
 
@@ -30,7 +30,7 @@ lang: zh
 
 低级模型被视为理想模型，因为它们体现着智能合约在以太坊执行环境（即[以太坊虚拟机](/developers/docs/evm/)）中的实际执行。 低级建模技术在确立智能合约的重要安全属性和检测潜在漏洞方面特别有用。
 
-### 什么是形式化规范？ \{#what-is-a-formal-specification}
+### 什么是形式化规范？ {#what-is-a-formal-specification}
 
 规范简单来说是指特定系统必须满足的技术要求。 在编程中，规范代表程序执行的总体思路（即程序应该做什么）。
 
@@ -40,7 +40,7 @@ lang: zh
 
 在开发安全的智能合约实现时，形式化规范非常重要。 无法实现不变量或者在执行过程中属性被违反的合约容易出现漏洞，可能会损害功能或者受到恶意的利用。
 
-## 智能合约形式化规范的类型 \{#formal-specifications-for-smart-contracts}
+## 智能合约形式化规范的类型 {#formal-specifications-for-smart-contracts}
 
 形式化规范支持对程序执行的正确性进行数学推理。 与形式化模型一样，形式化规范能够详尽描述合约实现的高级属性或低级行为。
 
@@ -48,7 +48,7 @@ lang: zh
 
 智能合约的形式化规范可以大致分类为**高级**或**低级**规范。 无论属于哪一类，规范都必须充分明确地描述被分析系统的属性。
 
-### 高级规范 \{#high-level-specifications}
+### 高级规范 {#high-level-specifications}
 
 顾名思义，高级规范（又称为“面向模型的规范”）描述程序的高级行为。 高级规范把智能合约建模成一个[有限状态机](https://en.wikipedia.org/wiki/Finite-state_machine) (FSM)，有限状态机可以通过执行操作在不同的状态之间转换并使用时间逻辑定义有限状态机模型的形式化属性。
 
@@ -60,7 +60,7 @@ lang: zh
 
 活性属性断言“好事终究会发生”，并涉及到合约通过不同状态的能力。 活性属性的一个例子是“流动性”，指的是合约在收到请求把余额转账给用户的能力。 如果违反了该属性，用户将不能提取存入合约的资产，就像在 [Parity 钱包事件](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html)中发生的情况一样。
 
-### 低级规范 \{#low-level-specifications}
+### 低级规范 {#low-level-specifications}
 
 高级规范以合约的有限状态模型作为起点，并定义该模型的所需属性。 相比之下，低级规范（又称为“面向属性的规范”）通常把程序（智能合约）建模成由数学函数集合组成的系统，并描述这类系统的正确行为。
 
@@ -68,7 +68,7 @@ lang: zh
 
 低级形式化规范可以作为霍尔式属性或执行路径中的不变量来给出。
 
-### 霍尔式属性 \{#hoare-style-properties}
+### 霍尔式属性 {#hoare-style-properties}
 
 [霍尔逻辑](https://en.wikipedia.org/wiki/Hoare_logic)提供了一套形式化规则来推理程序（包括智能合约）的正确性。 霍尔式属性使用霍尔三元组 {_P_}_c_{_Q_} 表示，其中 _c_ 代表程序，_P_ 和 _Q_ 是 _c_（即程序）状态的谓词，它们正式描述成*前置条件*和*后置条件*。
 
@@ -84,7 +84,7 @@ lang: zh
 
 `require` 语句表示前置条件或不变量并通常用来验证用户的输入，而 `assert` 捕捉安全所需的后置条件。 例如，通过使用 `require` 作为前置条件检查调用此函数的帐户的身份，可以实现正确的函数访问控制（安全属性示例）。 同样，可以通过使用 `assert` 来确认函数执行后的合约状态，防止违反合约中状态变量允许值的不变量（例如，流通的代币总数）。
 
-### 执行轨迹级属性 \{#trace-level-properties}
+### 执行轨迹级属性 {#trace-level-properties}
 
 基于执行轨迹的规范描述导致合约在不同状态之间转换的操作以及这些操作之间的关系。 如前所述，执行轨迹是以特定方式改变合约状态的操作次序。
 
@@ -102,9 +102,9 @@ lang: zh
 
 执行轨迹级属性的示例可以是*“没有存入资金的用户无法对提案投票”*或*“未对提案投票的用户始终应该可以要求退款”*。 这两个属性断言优先执行次序（在存入资金*之前*无法投票和给提案投票*之后*无法要求退款）。
 
-## 智能合约的形式化验证技术 \{#formal-verification-techniques}
+## 智能合约的形式化验证技术 {#formal-verification-techniques}
 
-### 模型检查 \{#model-checking}
+### 模型检查 {#model-checking}
 
 模型检查是一种形式化验证技术，它使用一种算法根据规范检查智能合约的形式化模型。 在模型检查中，智能合约通常表示为状态转换系统，而允许的合约状态的属性使用时间逻辑来定义。
 
@@ -116,7 +116,7 @@ lang: zh
 
 模型检查使用状态空间探索，其中涉及构造智能合约的所有可能状态以及尝试找到导致违反属性的可达状态。 然而，这可能导致无限多个状态（称为“状态爆炸问题”），因此模型检查器依靠抽象技术来实现智能合约的高效分析。
 
-### 定理证明 \{#theorem-proving}
+### 定理证明 {#theorem-proving}
 
 定理证明是一种程序（包括智能合约）正确性的数学推理方法。 它涉及将合约系统的模型以及其规范转换成数学公式（逻辑语句）。
 
@@ -128,7 +128,7 @@ lang: zh
 
 因此，往往需要人类的帮助来指导定理证明器推导出正确性证明。 在定理证明中使用人力，使得它的使用成本明显高于模型检查，模型检查是完全自动化的。
 
-### 符号执行 \{#symbolic-execution}
+### 符号执行 {#symbolic-execution}
 
 符号执行是一种通过使用*符号值*（例如 `x > 5`）而不是*具体值*（例如 `x == 5`）执行函数来分析智能合约的方法。 作为一种形式化验证技术，符号执行用来形式化推理合约代码中的执行轨迹级属性。
 
@@ -156,15 +156,15 @@ function safe_add(uint x, uint y) returns(uint z){
 
 导致整数溢出的执行轨迹需要满足公式：`z = x + y AND (z >= x) AND (z=>y) AND (z < x OR z < y)`，不太可能对该公式求解，因此，它作为函数 `safe_add` 永远不会溢出的数学证明。
 
-### 为什么对智能合约进行形式化验证？ \{#benefits-of-formal-verification}
+### 为什么对智能合约进行形式化验证？ {#benefits-of-formal-verification}
 
-#### 可靠性需要 \{#need-for-reliability}
+#### 可靠性需要 {#need-for-reliability}
 
 形式化验证用来评估安全至上的系统的正确性，这类系统如果失败，将产生灾难性后果，例如死亡、受伤或者经济损失。 智能合约是具有高价值的应用程序，控制着大量价值，设计上的小错误将导致[用户蒙受难以挽回的损失](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/)。 然而，在部署前形式化验证合约，可以增加一些保障，确保合约在区块链上运行后表现如同预期一样。
 
 可靠性是所有智能合约渴求的一种品质，尤其是因为部署在以太坊虚拟机 (EVM) 上的代码通常是不可更改的。 由于发布后的升级不容易获得，并且合约可靠性是需要保证的，因此形式化验证必不可少。 形式化验证能够发现棘手的问题，例如整数下溢和溢出、重入攻击和糟糕的燃料优化，审计人员和测试人员可能会漏掉这些问题。
 
-#### 证明功能的正确性 \{#prove-functional-correctness}
+#### 证明功能的正确性 {#prove-functional-correctness}
 
 程序测试是最常见的证明智能合约满足某些要求的方法。 程序测试使用一些期望合约处理的样本数据来执行合约并分析合约的行为。 如果合约根据样本数据返回预期的结果，那么开发者就有了其正确性的客观证明。
 
@@ -174,13 +174,13 @@ function safe_add(uint x, uint y) returns(uint z){
 
 通过形式化验证，验证合约的业务逻辑是否满足要求的问题就变成一个能被证明或否定的数学命题。 通过形式化证明一个命题，我们可以使用有限的步骤验证无数个测试用例。 通过这种方式，形式化验证有更好的前景，可以证明依据规划合约的功能正确。
 
-#### 理想的验证目标 \{#ideal-verification-targets}
+#### 理想的验证目标 {#ideal-verification-targets}
 
 验证目标描述要进行形式化验证的系统。 形式化验证最好用于“嵌入式系统”（简单的小型软件组成一个大系统）。 形式化验证也非常适合规则很少的专业化领域，因为更容易修改验证领域特有属性的工具。
 
 智能合约至少在某种程度上符合这两项要求。 例如，以太坊合约不大，这让它们更适合形式化验证。 同样，以太坊虚拟机遵循简单规则，指定和验证在以太坊虚拟机中运行的程序的语义属性更简单。
 
-### 更快的开发周期 \{#faster-development-cycle}
+### 更快的开发周期 {#faster-development-cycle}
 
 形式化验证技术，例如模型检查和符号执行，通常比常规智能合约代码分析（在测试或审计期间执行）更高效。 这是因为形式化验证依赖于符号值来测试断言（“如果用户尝试提取 _n_ 个以太币将如何？”） 与之不同的是，测试使用具体值（“如果用户尝试提取 5 个以太币将如何？”）。
 
@@ -188,29 +188,29 @@ function safe_add(uint x, uint y) returns(uint z){
 
 形式化验证还可以通过减少代价高昂的设计错误，改进构造去中心化应用程序的过程。 通过升级合约（在可能的情况下）来修复漏洞需要大量重写代码库以及更多的开发工作。 形式化验证可以检测到合约实现中许多可能被测试人员和审计人员漏掉的错误，并在部署合约前提供充分的机会来修复这些问题。
 
-## 形式化验证的缺点 \{#drawbacks-of-formal-verification}
+## 形式化验证的缺点 {#drawbacks-of-formal-verification}
 
-### 人工成本 \{#cost-of-manual-labor}
+### 人工成本 {#cost-of-manual-labor}
 
 形式化验证，尤其是需要人为引导证明器来推导出正确性证明的半自动化验证，需要大量人力。 此外，制定形式化规范是一项复杂的活动，需要高水平技能。
 
 这些因素（人力和技能）让形式化验证相比于评估合约正确性的普通方法（如测试和审计），要求更高且和成本更大。 尽管如此，考虑到智能合约实现中出现错误的代价，支付全面验证审计的费用也是很实际的。
 
-### 漏报 \{#false-negatives}
+### 漏报 {#false-negatives}
 
 形式化验证只能检查智能合约的执行是否符合形式化规范。 因此，确保规范能正确地描述智能合约的预期行为非常重要。
 
 如果规范编写拙劣，形式化验证审计则无法检测到违反属性，导致易受攻击的执行。 在这种情况下，开发者可能错误地假定合约没有漏洞。
 
-### 性能问题 \{#performance-issues}
+### 性能问题 {#performance-issues}
 
 形式化验证会遇到一些性能问题。 例如，在模型检查和符号检查中分别遇到的状态爆炸和路径爆炸问题会影响验证过程。 此外，形式化验证工具通常在底层使用 SMT 求解器和其他约束求解器，这些求解器依赖于计算密集型过程。
 
 而且，程序验证器并不是总能确定一个属性（描述成一个逻辑公式）是否能被满足（“[可判定性问题](https://en.wikipedia.org/wiki/Decision_problem)”），因为一个程序也许永远不会终止。 因此，即便合约的规范合理，也可能无法证明合约的一些属性。
 
-## 以太坊智能合约的形式化验证工具 \{#formal-verification-tools}
+## 以太坊智能合约的形式化验证工具 {#formal-verification-tools}
 
-### 用于制定形式化规范的规范语言 \{#specification-languages}
+### 用于制定形式化规范的规范语言 {#specification-languages}
 
 **Act**：_Act 允许存储更新、前置条件/后置条件、合约不变量的规范。 其工具套件也具有证明后端，可通过 Coq、SMT 求解器或 hevm 证明许多属性。_
 
@@ -225,7 +225,7 @@ function safe_add(uint x, uint y) returns(uint z){
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
-### 用于检查正确性的程序验证器 \{#program-verifiers}
+### 用于检查正确性的程序验证器 {#program-verifiers}
 
 **Certora Prover** - _Certora Prover 是一种检查智能合约代码正确性的自动形式化验证工具。 它使用 CVL（Certora 验证语言）编写规范，并组合使用静态分析和约束求解检测属性违反。_
 
@@ -245,7 +245,7 @@ function safe_add(uint x, uint y) returns(uint z){
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [相关文档](https://jellopaper.org/)
 
-### 定理证明的逻辑框架 \{#theorem-provers}
+### 定理证明的逻辑框架 {#theorem-provers}
 
 **Isabelle** - _Isabelle/HOL 是一个证明助手，允许使用形式化语言表示数学公式并且提供工具来证明这些公式。 主要应用于数学证明的形式化，特别是形式化验证，它包括证明计算机硬件和软件的正确性以及证明计算机语言和协议的属性。_
 
@@ -257,7 +257,7 @@ function safe_add(uint x, uint y) returns(uint z){
 - [GitHub](https://github.com/coq/coq)
 - [相关文档](https://coq.github.io/doc/v8.13/refman/index.html)
 
-### 用于检测智能合约中易受攻击模式的基于符号执行的工具 \{#symbolic-execution-tools}
+### 用于检测智能合约中易受攻击模式的基于符号执行的工具 {#symbolic-execution-tools}
 
 **Manticore** - _种基于符号执行的工具，用于分析以太坊虚拟机的字节码分析工具。_
 
@@ -273,7 +273,7 @@ function safe_add(uint x, uint y) returns(uint z){
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [相关文档](https://mythril-classic.readthedocs.io/en/develop/)
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [智能合约的形式化验证是如何运作的](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
 - [形式化验证如何确保智能合约无懈可击](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)

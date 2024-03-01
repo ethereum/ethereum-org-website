@@ -11,13 +11,13 @@ template: roadmap
 
 我們還可以做一些改進來提高交易審查難度，方法是讓區塊提交者無法獲知區塊的實際內容，以及無法找尋新的方法來識別用戶端的審查。 同時完成這些改進即相當於實現權益證明協定升級，如此，使用者（從個人到企業）將即刻對其在以太坊上的應用程式、資料和資產充滿信心。
 
-## 質押提款 \{#staking-withdrawals}
+## 質押提款 {#staking-withdrawals}
 
 從工作量證明到權益證明的升級始於以太坊先驅將他們的以太幣「質押」到存款合約中。 質押的以太幣用於保護網路安全， 但無法解套並退還給使用者。 權益證明升級的一個關鍵環節是，允許使用者取出以太幣。 提款是全功能權益證明協定的關鍵組成部分，除此之外，允許提款對以太坊的安全性也很有益，因為它允許質押者將以太幣獎勵用於其他非質押用途。 這意味著想要流動性的使用者不必依賴流動性質押衍生品 (LSD)，以免加劇以太坊的中心化。 此次升級預計於 2023 年 4 月 12 日完成。
 
 <ButtonLink variant="outline-color" to="/staking/withdrawals/">閱讀提款的相關資訊</ButtonLink>
 
-## 對抗攻擊 \{#defending-against-attacks}
+## 對抗攻擊 {#defending-against-attacks}
 
 除新增提款功能外，我們還可以對以太坊[權益證明](/developers/docs/consensus-mechanisms/pos/)協定進行其他改進。 其中之一是 [view-merge](https://ethresear.ch/t/view-merge-as-a-replacement-for-proposer-boost/13739)，這是一種更安全的分叉選擇演算法，可讓某些複雜類型的攻擊實作難度加大。
 
@@ -25,7 +25,7 @@ template: roadmap
 
 <ButtonLink variant="outline-color" to="/roadmap/single-slot-finality/">閱讀單一時隙最終確定性的相關資訊</ButtonLink>
 
-## 對抗審查 \{#defending-against-censorship}
+## 對抗審查 {#defending-against-censorship}
 
 去中心化可避免驗證者個人或小團體影響力過大。 新的質押技術有助於確保以太坊的驗證者盡可能保持去中心化，同時保護他們免遭硬體、軟體及網路故障。 這包括跨多個節點共擔驗證者職責的軟體， 被稱為**分散式驗證者技術 (DVT)**。 分散式驗證者技術允許多台電腦共同參與驗證，增強了冗餘性和容錯能力，所以質押池被鼓勵使用分散式驗證者技術。 它還將驗證者金鑰拆分到多個系統中，而不是讓單個操作員運行多個驗證者。 這使得不誠實的操作員更難協調對以太坊的攻擊。 總結來說，分散式驗證者技術的理念是以*群體*而非個體的方式運行驗證者，從而獲得安全優勢。
 
@@ -37,12 +37,12 @@ template: roadmap
 
 <ButtonLink variant="outline-color" to="/roadmap/pbs/">閱讀提交者-建置者分離的相關資訊</ButtonLink>
 
-## 保護驗證者 \{#protecting-validators}
+## 保護驗證者 {#protecting-validators}
 
 經驗老道的攻擊者可能有辦法識別下一輪的驗證者，透過傳送垃圾訊息阻止他們提交區塊，這被稱為**阻斷服務 (DoS)** 攻擊。 實作[**秘密領導者選舉 (SLE)**](/roadmap/secret-leader-election) 可以阻止區塊提交者提前獲知區塊內容，從而防範此類攻擊。 其作用原理為：不斷變換代表候選區塊提交者的一組加密承諾，並使用其順序來確定驗證者，以便只有驗證者預先知道自己的順序。
 
 <ButtonLink variant="outline-color" to="/roadmap/secret-leader-election">閱讀秘密領導者選舉的相關資訊</ButtonLink>
 
-## 目前進度 \{#current-progress}
+## 目前進度 {#current-progress}
 
 以太坊開發藍圖上的安全升級正處於研究的後期階段，但預計一段時間內還不會實作。 至於 view-merge、提交者-建置者分離、單一時隙最終確定性和秘密領導者選舉，下一步是最終確定規範並開始建置原型。

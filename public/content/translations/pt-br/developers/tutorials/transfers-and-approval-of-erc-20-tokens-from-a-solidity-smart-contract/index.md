@@ -135,7 +135,7 @@ Agora temos nosso DEX, que tem seu próprio token reserva disponível. O contrat
 - `buy`: o usuário pode enviar ether e obter tokens em troca
 - `sell`: o usuário pode decidir enviar tokens para recuperar ether
 
-## A função de compra \{#the-buy-function}
+## A função de compra {#the-buy-function}
 
 Vamos programar a função de compra. Primeiro, precisaremos verificar a quantidade de ether que a mensagem contém e verificar se os contratos possuem tokens suficientes e se a mensagem tem algum ether. Se o contrato possui tokens suficientes, enviará o número de tokens para o usuário e emitirá o evento `Bought`.
 
@@ -158,7 +158,7 @@ No caso de a compra ser bem-sucedida, devemos ver dois eventos na transação: o
 
 ![Dois eventos na transação: transferência e compra](./transfer-and-bought-events.png)
 
-## A função de venda \{#the-sell-function}
+## A função de venda {#the-sell-function}
 
 A função responsável pela venda primeiro exigirá que o usuário tenha aprovado o valor, chamando a função approve antecipadamente. Approving the transfer requires the ERC20Basic token instantiated by the DEX to be called by the user. This can be achieved by first calling the DEX contract's `token()` function to retrieve the address where DEX deployed the ERC20Basic contract called `token`. Then we create an instance of that contract in our session and call its `approve` function. Then we are able to call the DEX's `sell` function and swap our tokens back for ether. For example, this is how this looks in an interactive brownie session:
 

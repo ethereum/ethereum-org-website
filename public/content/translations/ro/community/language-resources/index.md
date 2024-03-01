@@ -4,7 +4,7 @@ description: Resurse care nu sunt în limba engleză pentru a afla despre Ethere
 lang: ro
 ---
 
-# Resurse lingvistice \{#language-resources}
+# Resurse lingvistice {#language-resources}
 
 Comunitatea Ethereum este mondială și este formată din milioane de persoane care nu vorbesc limba engleză.
 
@@ -14,15 +14,15 @@ Dacă preferați să citiți în limba dvs. maternă sau cunoașteți pe cineva 
 
 Cunoașteți o resursă educațională în limba dumneavoastră? [Semnalați o problemă](https://github.com/ethereum/ethereum-org-website/issues/new/choose) pentru a o adăuga în listă!
 
-## Resursele Ethereum.org \{#ethereum-org}
+## Resursele Ethereum.org {#ethereum-org}
 
 Ethereum.org este tradus nativ în peste 40 de limbi pe care le puteți găsi pe [pagina noastră de limbi](/languages).
 
 Dacă sunteți bilingv și doriți să ne ajutați să ajungem la mai mulți oameni, vă puteți implica de asemenea în [Programul de traducere ethereum.org](/contributing/translation-program/#translation-program) ca să ne ajutați să traducem site-ul web.
 
-## Resursele comunității \{#community}
+## Resursele comunității {#community}
 
-### Portugheză braziliană \{#br-pt}
+### Portugheză braziliană {#br-pt}
 
 **Știri**
 
@@ -40,7 +40,7 @@ Dacă sunteți bilingv și doriți să ne ajutați să ajungem la mai mulți oam
 - [Cointimes](http://www.cointimes.com.br/) - știri și educație despre criptomonede
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - un ghid care răspunde la cele mai frecvente și fundamentale întrebări referitoare la cripto
 
-### Chineză \{#zh}
+### Chineză {#zh}
 
 **Resurse generale**
 
@@ -67,21 +67,21 @@ Dacă sunteți bilingv și doriți să ne ajutați să ajungem la mai mulți oam
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - a WeChat account, explaining cryptography, security, etc.
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - a WeChat account, explaining zk technology
 
-### Franceză \{#fr}
+### Franceză {#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) - Ethereum France organizează evenimente, creează conținut și încurajează discuțiile legate de Ethereum
 - [Ethereum.fr](https://ethereum.fr/) - știri și educație despre Ethereum
 - [BanklessFR](https://banklessfr.substack.com/) - Buletin informativ în limba franceză al blogului Bankless
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - forum de criptomonede cu o subpagină Ethereum
 
-### Germană \{#de}
+### Germană {#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - utilizarea Solidity
 - [Microsoft Learn (contracte inteligente)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - scrierea de contracte inteligente în Ethereum cu Solidity
 - [Microsoft Learn (rețele Ethereum)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - conectarea și implementarea rețelelor Ethereum
 - [Microsoft Learn (blockchain-uri)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - intrarea în dezvoltarea de blockchain-uri
 
-### Italiană \{#it}
+### Italiană {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - educație, evenimente și știri despre Ethereum, vizând contractele inteligente și tehnologia blockchain
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - Podcast Ethereum în limba italiană
@@ -89,7 +89,7 @@ Dacă sunteți bilingv și doriți să ne ajutați să ajungem la mai mulți oam
 - [Microsoft Learn (Contracte inteligente)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - învățați cum să scrieți contracte inteligente folosind Solidity
 - [Microsoft Learn (dApp-uri)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - creați o interfață de utilizator cu aplicații descentralizate
 
-### Spaniolă \{#es}
+### Spaniolă {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - blockchain, DeFi și cursuri de guvernanță, evenimente și blog
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - ghid Ethereum pentru începători în limba spaniolă
@@ -98,18 +98,18 @@ Dacă sunteți bilingv și doriți să ne ajutați să ajungem la mai mulți oam
 - [Curs de introducere în securitatea Ethereum și piratare](https://youtube.com/playlist?list=PLTqiwJDd_R8yHOvteko_DmUxUTMHnlfci) - înțelegerea vulnerabilităților comune și a problemelor de securitate din contractele inteligente reale
 - [Curs de introducere în dezvoltarea DeFi](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - învățați cum funcționează contractele inteligente DeFi în Solidity și creați propriul dvs. Automated Market Maker (AMM)
 
-### Turcă \{#tr}
+### Turcă {#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - curs orientat pe blockchain și criptomonede
 - [The great renaming: what happened to Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - Turkish translation of the great renaming blog post, explaining the move away from 'Eth2' terminology
 
-### Vietnameză \{#vi}
+### Vietnameză {#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - prezentarea generală a lui Ethereum, dApp-uri, portofele și întrebări frecvente
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - platformă web cu subpagini pentru știri și educație despre Ethereum
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - portal de criptomonede cu știri și conținut educațional despre Ethereum
 
-### Japanese \{#ja}
+### Japanese {#ja}
 
 - [Japan Virtual and Crypto assets Exchange Association](https://jvcea.or.jp/)
 - [Japan Cryptoasset Business Association](https://cryptocurrency-association.org/)

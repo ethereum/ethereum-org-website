@@ -20,7 +20,7 @@ Chyba jesteś tak samo podekscytowany jak my [wdrażaniem](/developers/docs/smar
 
 Nie martw się, ponieważ jest to nasz pierwszy inteligentny kontrakt, wdrożymy go w [lokalnej sieci testowej](/developers/docs/networks/), więc wdrożenie nic nie kosztuje i możesz bawić się nim tyle, ile chcesz.
 
-## Pisanie kontraktu \{#writing-our-contract}
+## Pisanie kontraktu {#writing-our-contract}
 
 Pierwszym krokiem jest [odwiedzenie Remix](https://remix.ethereum.org/) i utworzenie nowego pliku. W lewej górnej części interfejsu Remix dodaj nowy plik i wprowadź żądaną nazwę pliku.
 
@@ -58,7 +58,7 @@ Jeśli masz doświadczenie w programowaniu, możesz łatwo odgadnąć, co robi t
 
 To wszystko dotyczy naszego pierwszego prostego inteligentnego kontraktu. Jak możesz wiedzieć, wygląda to na klasę z języków programowania obiektowego takich jak Java lub C++. Nadszedł czas, aby pobawić się naszym kontraktem.
 
-## Wdrażanie kontraktu \{#deploying-our-contract}
+## Wdrażanie kontraktu {#deploying-our-contract}
 
 Ponieważ napisaliśmy pierwszy inteligentny kontrakt, teraz wdrożymy go w blockchainie, aby móc się nim bawić.
 

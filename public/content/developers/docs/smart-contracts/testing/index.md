@@ -8,33 +8,33 @@ Public blockchains like Ethereum are immutable, making it difficult to change a 
 
 For these reasons, testing smart contracts before [deploying](/developers/docs/smart-contracts/deploying/) to Mainnet is a minimum requirement for [security](/developers/docs/smart-contracts/security/). There are many techniques for testing contracts and evaluating code correctness; what you choose depends on your needs. Nevertheless, a test suite made up of different tools and approaches is ideal for catching both minor and major security flaws in contract code.
 
-## Prerequisites \{#prerequisites}
+## Prerequisites {#prerequisites}
 
 This page explains how to test smart contracts before deploying on the Ethereum network. It assumes you're familiar with [smart contracts](/developers/docs/smart-contracts/).
 
-## What is smart contract testing? \{#what-is-smart-contract-testing}
+## What is smart contract testing? {#what-is-smart-contract-testing}
 
 Smart contract testing is the process of verifying that the code of a smart contract works as expected. Testing is useful for checking if a particular smart contract satisfies requirements for reliability, usability, and security.
 
 Although approaches vary, most testing methods require executing a smart contract with a small sample of the data it is expected to handle. If the contract produces correct results for sample data, it is assumed to be functioning properly. Most testing tools provide resources for writing and executing [test cases](https://en.m.wikipedia.org/wiki/Test_case) to check if a contracts execution matches the expected results.
 
-### Why is it important to test smart contracts? \{#importance-of-testing-smart-contracts}
+### Why is it important to test smart contracts? {#importance-of-testing-smart-contracts}
 
 As smart contracts often manage high-value financial assets, minor programming errors can and often lead to [massive losses for users](https://rekt.news/leaderboard/). Rigorous testing can, however, help you discover defects and issues in a smart contract's code early and fix them before launching on Mainnet.
 
 While it is possible to upgrade a contract if a bug is discovered, upgrades are complex and can [result in errors](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/) if handled improperly. Upgrading a contract further negates the principle of immutability and burdens users with additional trust assumptions. Conversely, a comprehensive plan for testing your contract mitigates smart contract security risks and reduces the need to perform complex logic upgrades after deploying.
 
-## Methods for testing smart contracts \{#methods-for-testing-smart-contracts}
+## Methods for testing smart contracts {#methods-for-testing-smart-contracts}
 
 Methods for testing Ethereum smart contracts fall under two broad categories: **automated testing** and **manual testing**. Automated testing and manual testing offer unique benefits and tradeoffs, but you can combine both to create a robust plan for analyzing your contracts.
 
-### Automated testing \{#automated-testing}
+### Automated testing {#automated-testing}
 
 Automated testing uses tools that automatically check a smart contracts code for errors in execution. The benefit of automated testing comes from using [scripts](https://www.techtarget.com/whatis/definition/script?amp=1) to guide the evaluation of contract functionalities. Scripted tests can be scheduled to run repeatedly with minimal human intervention, making automated testing more efficient than manual approaches to testing.
 
 Automated testing is particularly useful when tests are repetitive and time-consuming; difficult to carry out manually; susceptible to human error; or involve evaluating critical contract functions. But automated testing tools can have drawbacks—they may miss certain bugs and produce many [false positives](https://www.contrastsecurity.com/glossary/false-positive). Hence, pairing automated testing with manual testing for smart contracts is ideal.
 
-### Manual testing \{#manual-testing}
+### Manual testing {#manual-testing}
 
 Manual testing is human-aided and involves executing each test case in your test suite one after the other when analyzing a smart contracts correctness. This is unlike automated testing where you can simultaneously run multiple isolated tests on a contract and get a report showing all failing and passing tests.
 
@@ -42,15 +42,15 @@ Manual testing can be carried out by a single individual following a written tes
 
 Effective manual testing requires considerable resources (skill, time, money, and effort), and it is possible—due to human error—to miss certain errors while executing tests. But manual testing can also be beneficial—for example, a human tester (e.g., an auditor) may use intuition to detect edge cases that an automated testing tool would miss.
 
-## Automated testing for smart contracts \{#automated-testing-for-smart-contracts}
+## Automated testing for smart contracts {#automated-testing-for-smart-contracts}
 
-### Unit testing \{#unit-testing-for-smart-contracts}
+### Unit testing {#unit-testing-for-smart-contracts}
 
 Unit testing evaluates contract functions separately and checks that each component works correctly. Good unit tests should be simple, quick to run and provide a clear idea of what went wrong if tests fail.
 
 Unit tests are useful for checking that functions return expected values and that contract storage is updated properly after function execution. Moreover, running unit tests after making changes to a contracts codebase ensures adding new logic does not introduce errors. Below are some guidelines for running effective unit tests:
 
-#### Guidelines for unit testing smart contracts \{#unit-testing-guidelines}
+#### Guidelines for unit testing smart contracts {#unit-testing-guidelines}
 
 ##### 1. Understand your contracts business logic and workflow
 
@@ -145,7 +145,7 @@ Unit testing frameworks for Solidity smart contracts come in different languages
 - **[Running unit tests with Ape](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Running unit tests with Hardhat](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 
-### Integration testing \{#integration-testing-for-smart-contracts}
+### Integration testing {#integration-testing-for-smart-contracts}
 
 While unit testing debugs contract functions in isolation, integration tests evaluate the components of a smart contract as a whole. Integration testing can detect issues arising from cross-contract calls or interactions between different functions in the same smart contract. For example, integration tests can help check if things like [inheritance](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) and dependency injection work properly.
 
@@ -153,13 +153,13 @@ Integration testing is useful if your contract adopts a modular architecture or 
 
 The forked blockchain will behave similarly to Mainnet and have accounts with associated states and balances. But it only acts as a sandboxed local development environment, meaning you won't need real ETH for transactions, for example, nor will your changes affect the real Ethereum protocol.
 
-### Property-based testing \{#property-based-testing-for-smart-contracts}
+### Property-based testing {#property-based-testing-for-smart-contracts}
 
 Property-based testing is the process of checking that a smart contract satisfies some defined property. Properties assert facts about a contract’s behavior that are expected to remain true in different scenarios—an example of a smart contract property could be "Arithmetic operations in the contract never overflow or underflow."
 
 **Static analysis** and **dynamic analysis** are two common techniques for executing property-based testing, and both can verify that the code for a program (a smart contract in this case) satisfies some predefined property. Some property-based testing tools come with predefined rules about expected contract properties and check the code against those rules, while others allow you to create custom properties for a smart contract.
 
-#### Static analysis \{#static-analysis}
+#### Static analysis {#static-analysis}
 
 A static analyzer takes as input the source code of a smart contract and outputs results declaring whether a contract satisfies a property or not. Unlike dynamic analysis, static analysis doesn't involve executing a contract to analyze it for correctness. Static analysis instead reasons about all the possible paths that a smart contract could take during execution (i.e., by examining the structure of the source code to determine what it would mean for the contracts operation at runtime).
 
@@ -167,7 +167,7 @@ A static analyzer takes as input the source code of a smart contract and outputs
 
 In most cases, static analysis is useful for detecting safety issues like use of unsafe constructs, syntax errors, or violations of coding standards in a contracts code. However, static analyzers are known to be generally unsound at detecting deeper vulnerabilities, and may produce excessive false positives.
 
-#### Dynamic analysis \{#dynamic-analysis}
+#### Dynamic analysis {#dynamic-analysis}
 
 Dynamic analysis generates symbolic inputs (e.g., in [symbolic execution](https://en.m.wikipedia.org/wiki/Symbolic_execution)) or concrete inputs (e.g., in [fuzzing](https://owasp.org/www-community/Fuzzing)) to a smart contracts functions to see if any execution trace(s) violates specific properties. This form of property-based testing differs from unit tests in that test cases cover multiple scenarios and a program handles the generation of test cases.
 
@@ -181,7 +181,7 @@ Fuzzing is useful for evaluating a smart contracts input validation mechanism si
 
 3. **Unit tests prove a contract executes correctly for sample data, but whether the contract executes correctly for inputs outside the sample remains unknown.** Property tests execute a target contract with multiple variations of a given input value to find execution traces that cause assertion failures. Thus, a property test provides more guarantees that a contract executes correctly for a broad class of input data.
 
-### Guidelines for running property-based testing for smart contracts \{#running-property-based-tests}
+### Guidelines for running property-based testing for smart contracts {#running-property-based-tests}
 
 Running property-based testing typically starts with defining a property (e.g., absence of [integer overflows](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)) or collection of properties that you want to verify in a smart contract. You may also need to define a range of values within which the program can generate data for transaction inputs when writing property tests.
 
@@ -194,11 +194,11 @@ Once configured properly, the property testing tool will execute your smart cont
 - **[Symbolic execution of smart contracts with Manticore](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Symbolic execution of smart contracts with Mythril](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
-## Manual testing for smart contracts \{#manual-testing-for-smart-contracts}
+## Manual testing for smart contracts {#manual-testing-for-smart-contracts}
 
 Manual testing of smart contracts often comes later in the development cycle after running automated tests. This form of testing evaluates the smart contract as one fully integrated product to see if it performs as specified in the technical requirements.
 
-### Testing contracts on a local blockchain \{#testing-on-local-blockchain}
+### Testing contracts on a local blockchain {#testing-on-local-blockchain}
 
 While automated testing performed in a local development environment can provide useful debugging information, you'll want to know how your smart contract behaves in a production environment. However, deploying to the main Ethereum chain incurs gas fees—not to mention that you or your users can lose real money if your smart contract still has bugs.
 
@@ -208,7 +208,7 @@ Running contracts on a local blockchain could be useful as a form of manual inte
 
 [More on development networks.](/developers/docs/development-networks/)
 
-### Testing contracts on testnets \{#testing-contracts-on-testnets}
+### Testing contracts on testnets {#testing-contracts-on-testnets}
 
 A test network or testnet works exactly like Ethereum Mainnet, except that it uses Ether (ETH) with no real-world value. Deploying your contract on a [testnet](/developers/docs/networks/#ethereum-testnets) means anyone can interact with it (e.g., via the dapp's frontend) without putting funds at risk.
 
@@ -218,7 +218,7 @@ Deploying on a testnet after testing on a local blockchain is ideal since the fo
 
 [More on Ethereum testnets.](/developers/docs/development-networks/#public-beacon-testchains)
 
-## Testing vs. formal verification \{#testing-vs-formal-verification}
+## Testing vs. formal verification {#testing-vs-formal-verification}
 
 While testing helps confirm that a contract returns the expected results for some data inputs, it cannot conclusively prove the same for inputs not used during tests. Testing a smart contract, therefore, cannot guarantee "functional correctness" (i.e., it cannot show that a program behaves as required for _all_ sets of input values).
 
@@ -230,7 +230,7 @@ Unlike testing, formal verification can be used to verify a smart contracts exec
 
 [More on formal verification for smart contracts.](/developers/docs/smart-contracts/formal-verification)
 
-## Testing vs audits and bug bounties \{#testing-vs-audits-bug-bounties}
+## Testing vs audits and bug bounties {#testing-vs-audits-bug-bounties}
 
 As mentioned, rigorous testing can rarely guarantee the absence of bugs in a contract; formal verification approaches can provide stronger assurances of correctness but are currently difficult to use and incur considerable costs.
 
@@ -242,9 +242,9 @@ Conversely, a bug bounty program usually involves involves offering a financial 
 
 The major difference is that bug bounty programs are open to the wider developer/hacker community and attract a broad class of ethical hackers and independent security professionals with unique skills and experience. This may be an advantage over smart contract audits that mainly rely on teams who may possess limited or narrow expertise.
 
-## Testing tools and libraries \{#testing-tools-and-libraries}
+## Testing tools and libraries {#testing-tools-and-libraries}
 
-### Unit testing tools \{#unit-testing-tools}
+### Unit testing tools {#unit-testing-tools}
 
 - **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** - _Code coverage tool for smart contracts written in Solidity._
 
@@ -262,15 +262,15 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _Python-based development and testing framework for smart contracts targeting the Ethereum Virtual Machine._
 
-### Property-based testing tools \{#property-based-testing-tools}
+### Property-based testing tools {#property-based-testing-tools}
 
-#### Static analysis tools \{#static-analysis-tools}
+#### Static analysis tools {#static-analysis-tools}
 
 - **[Slither](https://github.com/crytic/slither)** - _Python-based Solidity static analysis framework for finding vulnerabilities, enhancing code comprehension, and writing custom analyses for smart contracts._
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter for enforcing style and security best practices for the Solidity smart contract programming language._
 
-#### Dynamic analysis tools \{#dynamic-analysis-tools}
+#### Dynamic analysis tools {#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _Fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._
 
@@ -282,7 +282,7 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble is a specification language and runtime verification tool that allows you to annotate smart contracts with properties that allow you to automatically test the contracts with tools such as Diligence Fuzzing or MythX._
 
-## Related tutorials \{#related-tutorials}
+## Related tutorials {#related-tutorials}
 
 - [An overview and comparison of different testing products](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
 - [How to use Echidna to test smart contracts](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
@@ -291,7 +291,7 @@ The major difference is that bug bounty programs are open to the wider developer
 - [How to mock Solidity contracts for testing](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
 - [How to run unit tests in Solidity using Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [An in-depth guide to testing Ethereum smart contracts](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
 - [How to test ethereum smart contracts](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)

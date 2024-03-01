@@ -13,7 +13,7 @@ Usa Ethereum per creare applicazioni decentralizzate (dette "dapp") che sfruttan
 
 Crea applicazioni decentralizzate basate su Ethereum e interagisci con i contratti intelligenti utilizzando strumenti e linguaggi dallo stack della tecnologia di Microsoft: Supporto C#. # Visual Basic .NET, F#, con strumenti come VSCode e Visual Studio, su .NET Framework/.NET Core/.NET Standard. Distribuisci una blockchain Ethereum su Azure usando Microsoft Azure Blockchain in pochi minuti. Porta .NET su Ethereum!
 
-## Primi passi con i contratti intelligenti e il linguaggio Solidity \{#getting-started-with-smart-contracts-and-the-solidity-language}
+## Primi passi con i contratti intelligenti e il linguaggio Solidity {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Operazioni di base per integrare .NET con Ethereum**
 
@@ -24,7 +24,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Scrivi il tuo Primo Contratto Intelligente](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Learn How to Compile and Deploy Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Riferimenti e link per principianti \{#beginner-references-and-links}
+## Riferimenti e link per principianti {#beginner-references-and-links}
 
 **Introduzione alla libreria Nethereum e VS Code Solidity**
 
@@ -45,7 +45,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
   - Trasferisci Ether in un Conto [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... e molto altro!
 
-## Articoli di livello intermedio \{#intermediate-articles}
+## Articoli di livello intermedio {#intermediate-articles}
 
 - [Nethereum Workbook/Sample List](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [Deploy Your Own Development Testchains](https://github.com/Nethereum/Testchains)
@@ -58,13 +58,13 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Kaleido and Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum and Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## Modelli d'uso avanzati \{#advanced-use-patterns}
+## Modelli d'uso avanzati {#advanced-use-patterns}
 
 - [Azure Key Vault And Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum backend reference architecture](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## Progetti .NET, strumenti e altre risorse interessanti \{#dot-net-projects-tools-and-other-fun-stuff}
+## Progetti .NET, strumenti e altre risorse interessanti {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Playground Nethereum](http://playground.nethereum.com/) - _Compila, crea ed esegui frammenti di codice Nethereum nel browser_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _Codegen Nethereum con interfaccia utente in Blazor_
@@ -76,13 +76,13 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 
 Cerchi altre risorse? Dai un'occhiata a [ethereum.org/developers](/developers/).
 
-## Collaboratori della community .NET \{#dot-net-community-contributors}
+## Collaboratori della community .NET {#dot-net-community-contributors}
 
 Per Nethereum, scambiamo opinioni per lo più su [Gitter](https://gitter.im/Nethereum/Nethereum), dove tutti possono chiedere o rispondere a domande, cercare aiuto o semplicemente consultare informazioni. Sentiti libero di effettuare una PR o di aprire una segnalazione sul [repository di GitHub di Nethereum](https://github.com/Nethereum) o, semplicemente, di sfogliare i molti progetti secondari/di esempio disponibili. Ci trovi anche su [Discord](https://discord.gg/jQPrR58FxX)!
 
 Se sei nuovo su Nethermind e necessiti d'aiuto per iniziare, unisciti al nostro [Discord](http://discord.gg/PaCMRFdvWT). I nostri sviluppatori sono a disposizione per rispondere alle tue domande. Non esitare ad aprire una PR o a sollevare qualsiasi dubbio sulla [repository di GitHub di Nethermind](https://github.com/NethermindEth/nethermind).
 
-## Altri elenchi aggregati \{#other-aggregated-lists}
+## Altri elenchi aggregati {#other-aggregated-lists}
 
 [Official Nethereum Site](https://nethereum.com/)  
 [Official Nethermind Site](https://nethermind.io/)

@@ -5,7 +5,7 @@ lang: de
 incomplete: true
 ---
 
-## Testtools und Bibliotheken \{#testing-tools-and-libraries}
+## Testtools und Bibliotheken {#testing-tools-and-libraries}
 
 **Waffle – **_Ein Framework für fortgeschrittene Smart-Contract-Entwicklungen und Tests (basierend auf ethers.js)_\*\*
 
@@ -32,7 +32,7 @@ incomplete: true
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers)
 - [Dokumentation](https://docs.openzeppelin.com/test-helpers)
 
-## Verwandte Tutorials \{#related-tutorials}
+## Verwandte Tutorials {#related-tutorials}
 
 - [Solidity and Truffle Continuous Integration Setup](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _ – So richten Sie Travis oder Circle CI für Trüffel-Tests zusammen mit nützlichen Plugins ein._
 - [Übersicht über Testprodukte](/developers/tutorials/guide-to-smart-contract-security-tools/) _ – Eine Übersicht und ein Vergleich verschiedener Testprodukte_
@@ -43,6 +43,6 @@ incomplete: true
 - [So migrieren Sie von Truffle-Tests zur OpenZeppelin-Testumgebung](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [So testen Sie Verträge, nachdem sie in einem Netzwerk bereitgestellt wurden](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 _Kennen Sie eine Community-Ressource, die Ihnen geholfen hat? Bearbeiten Sie diese Seite und fügen Sie sie hinzu._

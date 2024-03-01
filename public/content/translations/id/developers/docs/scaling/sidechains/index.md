@@ -10,11 +10,11 @@ Sidechain adalah blockchain terpisah yang berjalan secara paralel dengan Jaringa
 
 Apa yang membuat sidechain sangat menarik adalah bahwa rantai tersebut bekerja sama seperti rantai Ethereum utama karena didasarkan pada [EVM](/developers/docs/evm/). Sidechain tidak menggunakan Ethereum, sidechain adalah Ethereum. Ini berarti jika Anda ingin menggunakan [dapp](/developers/docs/dapps/) di sidechain, ini hanyalah masalah penggunaan kode Anda ke sidechain ini. Sidechain terlihat, terasa, dan bertindak seperti Jaringan Utama – Anda menulis kontrak di Solidity, dan berinteraksi dengan rantai melalui API Web3.
 
-## Prasyarat \{#prerequisites}
+## Prasyarat {#prerequisites}
 
 Anda harus memiliki pemahaman yang baik tentang semua topik dasar dan pemahaman tingkat tinggi tentang [penskalaan Ethereum](/developers/docs/scaling/).
 
-## Pro dan kontra \{#pros-and-cons}
+## Pro dan kontra {#pros-and-cons}
 
 | Pro                                                           | Kontra                                                                                                             |
 | ------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
@@ -22,7 +22,7 @@ Anda harus memiliki pemahaman yang baik tentang semua topik dasar dan pemahaman 
 | Mendukung komputasi umum, memiliki kompatibilitas dengan EVM. | Menggunakan mekanisme konsensus terpisah. Tidak diamankan oleh lapisan 1 (jadi secara teknis ini bukan lapisan 2). |
 |                                                               | Kuorum validator sidechain dapat melakukan penipuan.                                                               |
 
-### Gunakan Sidechain \{#use-sidechains}
+### Gunakan Sidechain {#use-sidechains}
 
 Beberapa proyek menyediakan implementasi sidechain yang dapat Anda integrasikan ke dalam dapp Anda:
 
@@ -30,7 +30,7 @@ Beberapa proyek menyediakan implementasi sidechain yang dapat Anda integrasikan 
 - [POA Network](https://www.poa.network/)
 - [Gnosis Chain (sebelumnya xDai)](https://www.xdaichain.com/)
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 - [Penskalaan Dapp Ethereum melalui Sidechain](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _8 Feb 2018 - Georgios Konstantopoulos_
 

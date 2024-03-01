@@ -10,7 +10,7 @@ Seien Sie sich bewusst, dass der Schwerpunkt dieser Seite darauf liegt, angehend
 
 Um sicherzustellen, dass wir einen hohen Informationsstandard aufrechterhalten und wertvolle Einblicke fördern, haben wir eine Listing-Policy eingeführt:
 
-## Research-Studien und Dashboards \{#Research-studies}
+## Research-Studien und Dashboards {#Research-studies}
 
 1. Solide Methodik
 
@@ -28,7 +28,7 @@ a. Das Forschungsthema sollte für Web3-Designer relevant sein und gängige Desi
 
 a. Das primäre Ziel des Textes sollte die Vermittlung von Erkenntnissen sein und nicht die Werbung für ein bestimmtes Projekt oder Unternehmen.
 
-## Artikel \{#Articles}
+## Artikel {#Articles}
 
 1. Relevanz für Web3-Designer/-Forscher und bekannte Web3-Designanwendungsfälle
 
@@ -46,7 +46,7 @@ c. Der Text sollte prägnant und auf den Punkt gebracht sein.
 
 a. Das Hauptziel des Artikels sollte die Vermittlung von Erkenntnissen und nicht die Werbung für ein bestimmtes Projekt oder Unternehmen sein.
 
-## Communities/DAOs \{#Communities-and-DAOs}
+## Communities/DAOs {#Communities-and-DAOs}
 
 1. Die Website muss klar angeben, wie man der DAO/Community beitreten kann
 

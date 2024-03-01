@@ -19,13 +19,13 @@ Felicitări! Ați ajuns la cea mai scurtă și mai simplă parte a seriei noastr
 
 Ca şi condiţie prealabilă, ar trebui să aveți deja instalat MetaMask pe mobil, care să includă și contul în care v-ați emis NFT-ul — puteți obține aplicația gratuit pe [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) sau [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
 
-## Etapa 1: Configurați rețeaua pe Ropsten \{#set-network-to-ropsten}
+## Etapa 1: Configurați rețeaua pe Ropsten {#set-network-to-ropsten}
 
 În partea superioară a aplicației, apăsați butonul „Wallet” („Portofel”), după care vi se va cere să selectați o rețea. Deoarece NFT-ul nostru a fost emis în rețeaua Ropsten, va trebui să selectați Ropsten ca rețea.
 
 ![Cum să setați Ropsten ca rețeaua dvs. pe MetaMask Mobile](./goerliMetamask.gif)
 
-## Etapa 2: Adăugarea obiectului de colecție la MetaMask \{#add-nft-to-metamask}
+## Etapa 2: Adăugarea obiectului de colecție la MetaMask {#add-nft-to-metamask}
 
 Odată ce vă aflați în rețeaua Ropsten, selectați fila „Collectibles” („Obiecte de colecție”) din dreapta și adăugați adresa contractului inteligent NFT și ID-ul jetonului ERC-721 al NFT-ului dvs. — pe care ar trebui să le găsiți pe Etherscan pe baza hash-ului tranzacției din NFT-ul dvs. implementat în Partea 2 a tutorialului nostru.
 

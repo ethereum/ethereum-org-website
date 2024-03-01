@@ -8,9 +8,9 @@ JavaScript はイーサリアムのエコシステムで最も人気のある言
 
 [スタックのすべてのレベル](/developers/docs/ethereum-stack/)で、JavaScript (または近似の言語) で記述できる機会があります。
 
-## イーサリアムとのやりとり \{#interact-with-ethereum}
+## イーサリアムとのやりとり {#interact-with-ethereum}
 
-### JavaScript API ライブラリ \{#javascript-api-libraries}
+### JavaScript API ライブラリ {#javascript-api-libraries}
 
 JavaScript でブロックチェーンへのクエリやトランザクションの送信などを行うための最も便利な方法は、[JavaScript API ライブラリ](/developers/docs/apis/javascript/)を使用することです。 このライブラリの API を使用すると、デベロッパーは[イーサリアムネットワークのノード](/developers/docs/nodes-and-clients/)と簡単にやり取りできます。
 
@@ -22,15 +22,15 @@ JavaScript でブロックチェーンへのクエリやトランザクション
 - [Ethers.js](https://docs.ethers.io/) - _JavaScript と TypeScript での完全なイーサリアムウォレットの実装とユーティリティを含む_
 - [viem](https://viem.sh) – イーサリアム用の TypeScript インターフェイスで、イーサリアムとやり取りする低レベルのステートレスプリミティブを提供します。
 
-### スマートコントラクト \{#smart-contracts}
+### スマートコントラクト {#smart-contracts}
 
 独自のスマートコントラクトを作成したいと考えている JavaScript デベロッパーは、[Solidity](https://solidity.readthedocs.io)について熟知することをお勧めします。 これは最も人気のあるスマートコントラクト言語であり、構文的には JavaScript に似ているため、比較的簡単に習得できる可能性があります。
 
 詳細については、[スマートコントラクト](/developers/docs/smart-contracts/)をご確認ください。
 
-## プロトコルの理解 \{#understand-the-protocol}
+## プロトコルの理解 {#understand-the-protocol}
 
-### イーサリアム仮想マシン \{#the-ethereum-virtual-machine}
+### イーサリアム仮想マシン {#the-ethereum-virtual-machine}
 
 [イーサリアム仮想マシン](/developers/docs/evm/)の JavaScript 実装を利用できます。 これは、最新のフォークルールをサポートしています。 フォークルールとは、計画されたアップグレードの結果として EVM に加えられた変更のことです。
 
@@ -49,7 +49,7 @@ JavaScript でブロックチェーンへのクエリやトランザクション
 **モノリポを調べる**  
 [`ethereumjs`](https://github.com/ethereumjs/ethereumjs-vm)
 
-### ノードとクライアント \{#nodes-and-clients}
+### ノードとクライアント {#nodes-and-clients}
 
 Ethereumjs クライアントは活発に開発されており、JavaScript で書かれたイーサリアムクライアントの仕組みを詳しく学ぶことができます。
 
@@ -58,7 +58,7 @@ Ethereumjs クライアントは活発に開発されており、JavaScript で�
 **クライアントを調べる**  
 [`ethereumjs`](https://github.com/ethereumjs/ethereumjs-monorepo/tree/master/packages/client)
 
-## 他のプロジェクト \{#other-projects}
+## 他のプロジェクト {#other-projects}
 
 イーサリアムの JavaScript 界隈では、その他にも、以下を含めた多くのプロジェクトが進められています。
 
@@ -68,6 +68,6 @@ Ethereumjs クライアントは活発に開発されており、JavaScript で�
 
 [EthereumJS リポジトリ](https://github.com/ethereumjs)で、最も興味があるものについて詳細に調査してみてください。
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 _役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_

@@ -5,7 +5,7 @@ lang: ja
 sidebarDepth: 1
 ---
 
-# イーサリアムの歴史 \{#the-history-of-ethereum}
+# イーサリアムの歴史 {#the-history-of-ethereum}
 
 イーサリアムブロックチェーンの主要なマイルストーン、フォーク、アップデートをすべてまとめたタイムラインです。
 
@@ -26,15 +26,15 @@ sidebarDepth: 1
 
 <Divider />
 
-## 2023 年 \{#2023}
+## 2023 年 {#2023}
 
-### 上海(_予定_) \{#shanghai}
+### 上海(_予定_) {#shanghai}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} />タイムスタンプ: Apr-12-2023 22:27:35 +UTC<br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />ブロック番号: TBD<br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: TBD<br />
 
 <!-- <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/">ethereum.org on waybackmachine</a> -->
 
-#### 要約 \{#shanghai-summary}
+#### 要約 {#shanghai-summary}
 
 上海アップグレードにより、実行レイヤーへのステーキングの引き出しが可能になります。 カペラのアップグレードと並行して、ブロックは引き出し操作を受け付けられるようになり、ステーカーはビーコンチェーンから実行レイヤーに ETH を引き出せるようになります。
 
@@ -54,13 +54,13 @@ sidebarDepth: 1
 
 ---
 
-### カペラ(_予定_) \{#capella}
+### カペラ(_予定_) {#capella}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} />タイムスタンプ: Apr-12-2023 22:27:35 +UTC<br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />エポック番号: 194048(スロット 6209536)<br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: TBD<br />
 
 <!-- <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/en/">ethereum.org on waybackmachine</a> -->
 
-#### 要約 \{#capella-summary}
+#### 要約 {#capella-summary}
 
 カペラのアップグレードは、コンセンサスレイヤー(ビーコンチェーン)に対する 3 番目の主要なアップグレードであり、ステーキングの引き出しが可能になります。 カペラは、実行レイヤーで行われる上海のアップグレードと同時に行われ、お互いに同期して引き出し機能を有効にします。
 
@@ -73,13 +73,13 @@ sidebarDepth: 1
 
 <Divider />
 
-## 2022 年 \{#2022}
+## 2022 年 {#2022}
 
-### パリ(マージ) \{#paris}
+### パリ(マージ) {#paris}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /><code>Sep-15-2022 06:42:42 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />ブロック番号: <a href="https://etherscan.io/block/15537394">15537394</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: $1,472 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220915075314/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#paris-summary}
+#### 要約 {#paris-summary}
 
 パリのアップグレードは、58750000000000000000000 の[最終合計難易度](/glossary/#terminal-total-difficulty)に到達した時点でプルーフ・オブ・ワークのブロックチェーンによってトリガーされました。 2022 年 9 月 15 日にブロック 15537393 で発生し、次のブロックでパリのアップグレードがトリガーされたものです。 パリは、[マージ](/upgrades/merge/)への移行でした。主要な変更は、[プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow)のマイニングアルゴリズムと関連するコンセンサスロジックをオフにして、代わりに[プルーフ・オブ・ステーク](/developers/docs/consensus-mechanisms/pos)をオンにするというものでした。 パリ自体は、[実行クライアント](/developers/docs/nodes-and-clients/#execution-clients)へのアップグレード(コンセンサスレイヤーのベラトリックスに相当)であり、接続されている[コンセンサスクライアント](/developers/docs/nodes-and-clients/#consensus-clients)からの指示を可能にしましたが、 これにより、[エンジン API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)と称される新しい一連の内部 API メソッドを有効にする必要がありました。 このアップグレードは間違いなく、 [ホームステッド](#homestead)以来、イーサリアム史上最も重要なものとなりました。
 
@@ -96,11 +96,11 @@ sidebarDepth: 1
 
 ---
 
-### ベラトリックス \{#bellatrix}
+### ベラトリックス {#bellatrix}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /><code>Sep-06-2022 11:34:47 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />エポック番号: 144,896<br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: $1,558 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220906112525/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#bellatrix-summary}
+#### 要約 {#bellatrix-summary}
 
 ベラトリックスのアップグレードは、[ビーコンチェーン](/upgrades/beacon-chain)で 2 番目にスケジュールされたアップグレードで、 [マージ](/upgrades/merge/)へ向けてチェーンを準備しました。 これにより、バリデータのペナルティを、非アクティブおよびスラッシング可能な違反に対して完全な値にしました。 ベラトリックスには、マージ向けチェーンと、最後のプルーフ・オブ・ワークのブロックから最初のプルーフ・オブ・ステークのブロックへの移行を準備するためのフォーク選択ルールのアップデートも含まれます。 このアップグレードで、コンセンサスクライアントに 58750000000000000000000000 の[最終合計難易度](/glossary/#terminal-total-difficulty)を認識させます。
 
@@ -108,11 +108,11 @@ sidebarDepth: 1
 
 ---
 
-### グレイ・グレイシャー \{#gray-glacier}
+### グレイ・グレイシャー {#gray-glacier}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />ブロック番号: <a href="https://etherscan.io/block/15050000">15,050,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: $1,069 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#gray-glacier-summary}
+#### 要約 {#gray-glacier-summary}
 
 グレイ・グレイシャー・ネットワークのアップグレードによって、[ディフィカルティボム](/glossary/#difficulty-bomb)は 3 ヶ月延期となりました。 これが今回のアップグレードで導入された唯一の変更であり、[アロー・グレイシャー](#arrow-glacier)と[ミュア・グレーシャー](#muir-glacier)と似た性質のアップグレードとなります。 [ビザンチウム](#byzantium)、[コンスタンティノープル](#constantinople)、[ロンドン](#london)のネットワークアップグレードで同様の変更が実施されています。
 
@@ -128,13 +128,13 @@ sidebarDepth: 1
 
 <Divider />
 
-## 2021 年 \{#2021}
+## 2021 年 {#2021}
 
-### アロー・グレイシャー \{#arrow-glacier}
+### アロー・グレイシャー {#arrow-glacier}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />ブロック番号: <a href="https://etherscan.io/block/13773000">13,773,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: $4111 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#arrow-glacier-summary}
+#### 要約 {#arrow-glacier-summary}
 
 アロー・グレイシャーのネットワークのアップグレードにより、[ディフィカルティボム](/glossary/#difficulty-bomb)は数ヶ月延期されました。 これが今回のアップグレードで導入された唯一の変更であり、[ミュア・グレイシャー](#muir-glacier)と似た性質のアップグレードとなります。 同様の変更は、[ビザンチウム](#byzantium)、[コンスタンティノープル](#constantinople)および[ロンドン](#london)のネットワークアップグレードで行われています。
 
@@ -151,17 +151,17 @@ sidebarDepth: 1
 
 ---
 
-### アルタイル \{#altair}
+### アルタイル {#altair}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />エポック番号: 74,240<br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: $4024 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#altair-summary}
+#### 要約 {#altair-summary}
 
 アルタイルのアップグレードは、 [ビーコンチェーン](/upgrades/beacon-chain)で最初に計画されたアップグレードです。 ライトクライアントをサポートするための「同期委員会」を追加しました。また、マージに向けた開発が進むにつれて、バリデータの非アクティブ化とスラッシングのペナルティが増加しました。
 
 - [アルタイルのアップデート仕様を読む](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />豆知識 \{#altair-fun-fact}
+#### <emoji text=":tada:" size={1} me="0.5rem" />豆知識 {#altair-fun-fact}
 
 アルタイルは、正確な実装時間があらかじめ設定された最初の主要なネットワークアップグレードでした。 それまでのアップグレードはすべて、ブロックタイムにばらつきがあるプルーフ・オブ・ワーク・チェーン上のブロック番号に基づいていました。 ビーコンチェーンは、プルーフ・オブ・ワークを必要としない代わりに、バリデータがブロックを提案できる 32 秒の「スロット」からなる時間ベースのエポックシステムで動作します。 こうした理由から、エポック 74,240 に到達してアルタイルが実装されるタイミングを把握することができたのです。
 
@@ -169,11 +169,11 @@ sidebarDepth: 1
 
 ---
 
-### ロンドン \{#london}
+### ロンドン {#london}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/12965000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $2621 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#london-summary}
+#### 要約 {#london-summary}
 
 ロンドンのアップグレードでは、 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)を導入し、トランザクションフィーの市場を改革するとともに、ガスの払い戻し方法や[氷河期](/glossary/#ice-age)のスケジュールを変更しました。
 
@@ -195,11 +195,11 @@ sidebarDepth: 1
 
 ---
 
-### ベルリン \{#berlin}
+### ベルリン {#berlin}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/12244000">12,244,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $2454 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#berlin-summary}
+#### 要約 {#berlin-summary}
 
 ベルリンアップグレードにより、特定の EVM 活動に対するガスコストが最適化され、複数処理タイプへのサポートが向上しました。
 
@@ -219,13 +219,13 @@ sidebarDepth: 1
 
 <Divider />
 
-## 2020 年 \{#2020}
+## 2020 年 {#2020}
 
-### ビーコンチェーンの誕生 \{#beacon-chain-genesis}
+### ビーコンチェーンの誕生 {#beacon-chain-genesis}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ビーコンチェーンのブロック番号: <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $586.23 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#beacon-chain-genesis-summary}
+#### 要約 {#beacon-chain-genesis-summary}
 
 [ビーコンチェーン](/upgrades/beacon-chain/)を安全にリリースするためには、32ETH をデポジットするステーキング参加者が 16384 に達することが必要条件でした。 11 月 27 日にこの数に到達したことで、2020 年 12 月 1 日にビーコンチェーンがブロックを生産することになりました。 これは、[イーサリアムのビジョン](/roadmap/vision/)を達成するための重要な第一歩です。
 
@@ -237,11 +237,11 @@ sidebarDepth: 1
 
 ---
 
-### ステーキングのデポジットコントラクトのデプロイ \{#staking-deposit-contract}
+### ステーキングのデポジットコントラクトのデプロイ {#staking-deposit-contract}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Oct-14-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/11052984">11,052,984</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $379.04 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#deposit-contract-summary}
+#### 要約 {#deposit-contract-summary}
 
 ステーキングのデポジットコントラクトによって、イーサリアムエコシステムに[ステーキング](/glossary/#staking)が導入されました。 [メインネット](/glossary/#mainnet)上のコントラクトですが、重要な[イーサリアムアップグレード](/upgrades/beacon-chain/)である[ビーコンチェーン](/upgrades/)の立ち上げスケジュールに大きな影響を与えました。
 
@@ -253,11 +253,11 @@ sidebarDepth: 1
 
 ---
 
-### ミュア・グレイシャー \{#muir-glacier}
+### ミュア・グレイシャー {#muir-glacier}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/9200000">9,200,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $127.18 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#muir-glacier-summary}
+#### 要約 {#muir-glacier-summary}
 
 ミュア・グレイシャーのフォークでは、[ディフィカルティボム](/glossary/#difficulty-bomb)の順延が導入されました。 [プルーフ・オブ・ワーク](/developers/docs/consensus-mechanisms/pow/)合意メカニズムのブロック難易度の上昇は、トランザクションの送信や Dapps の使用にかかる待ち時間を増加させることで、イーサリアムの使い勝手を低下させる恐れがありました。
 
@@ -274,13 +274,13 @@ sidebarDepth: 1
 
 <Divider />
 
-## 2019 年 \{#2019}
+## 2019 年 {#2019}
 
-### イスタンブール (Istanbul) \{#istanbul}
+### イスタンブール (Istanbul) {#istanbul}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/9069000">9,069,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $151.06 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#istanbul-summary}
+#### 要約 {#istanbul-summary}
 
 イスタンブールのフォーク
 
@@ -307,11 +307,11 @@ sidebarDepth: 1
 
 ---
 
-### コンスタンティノープル \{#constantinople}
+### コンスタンティノープル {#constantinople}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/7280000">7,280,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $136.29 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#constantinople-summary}
+#### 要約 {#constantinople-summary}
 
 コンスタンティノープルのフォーク
 
@@ -334,13 +334,13 @@ sidebarDepth: 1
 
 <Divider />
 
-## 2017 年 \{#2017}
+## 2017 年 {#2017}
 
-### ビザンチウム \{#byzantium}
+### ビザンチウム {#byzantium}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/4370000">4,370,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $334.23 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#byzantium-summary}
+#### 要約 {#byzantium-summary}
 
 ビザンチウムのフォーク
 
@@ -369,13 +369,13 @@ sidebarDepth: 1
 
 <Divider />
 
-## 2016 年 \{#2016}
+## 2016 年 {#2016}
 
-### スプリニアスドラゴン (Spurious Dragon) \{#spurious-dragon}
+### スプリニアスドラゴン (Spurious Dragon) {#spurious-dragon}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/2675000">2,675,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $9.84 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#spurious-dragon-summary}
+#### 要約 {#spurious-dragon-summary}
 
 スプリニアスドラゴンのフォークは、サービス拒否(DoS)攻撃に対する第 2 弾の対策でした。下記にその一部をご紹介します。
 
@@ -398,11 +398,11 @@ sidebarDepth: 1
 
 ---
 
-### タンジェリンホイッスル \{#tangerine-whistle}
+### タンジェリンホイッスル {#tangerine-whistle}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/2463000">2,463,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#tangerine-whistle-summary}
+#### 要約 {#tangerine-whistle-summary}
 
 タンジェリンホイッスルのフォークは、サービス拒否(DoS)攻撃に対する第 1 弾の対策でした。下記にその一部をご紹介します。
 
@@ -421,11 +421,11 @@ sidebarDepth: 1
 
 ---
 
-### DAO フォーク \{#dao-fork}
+### DAO フォーク {#dao-fork}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/1920000">1,920,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $12.54 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#dao-fork-summary}
+#### 要約 {#dao-fork-summary}
 
 DAO フォークは、安全でない[自律分散型組織(DAO)](/glossary/#dao)のコントラクトが、1 回のハッキングによって、360 万以上の ETH を流出させた[2016 年の DAO 攻撃](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/)に対する対策でした。 フォークにより、欠陥のあるコントラクトから[新しいコントラクト](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)に資金が移されました。その際に使用した関数が withdraw です。 資金を失った人がウォレット内の 100DAO トークンごとに 1ETH を引き出せるようにしました。
 
@@ -437,11 +437,11 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ---
 
-### ホームステッド \{#homestead}
+### ホームステッド {#homestead}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/1150000">1,150,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#homestead-summary}
+#### 要約 {#homestead-summary}
 
 未来を見据えたホームステッドのフォークで、 一部のプロトコル変更とネットワーク変更が含まれていたことで、イーサリアムはネットワークの追加アップグレードを行うことができました。
 
@@ -459,13 +459,13 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 <Divider />
 
-## 2015 年 \{#2015}
+## 2015 年 {#2015}
 
-### フロンティアソーイング \{#frontier-thawing}
+### フロンティアソーイング {#frontier-thawing}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/200000">200,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $1.24 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#frontier-thawing-summary}
+#### 要約 {#frontier-thawing-summary}
 
 フロンティアソーイングのフォークでは、1[ブロック](/glossary/#gas)あたり 5,000 の[ガス](/glossary/#block)リミットが解除され、デフォルトのガス価格が 51[gwei](/glossary/#gwei)に設定されました。 その結果、21,000 のガスが必要となるトランザクションが可能になりました。 [ディフィカルティボム](/glossary/#difficulty-bomb)は、[プルーフ・オブ・ステーク](/glossary/#pos)にハードフォークするために導入されました。
 
@@ -474,11 +474,11 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ---
 
-### フロンティア \{#frontier}
+### フロンティア {#frontier}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: N/A<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
-#### 要約 \{#frontier-summary}
+#### 要約 {#frontier-summary}
 
 フロンティアは稼動していましたが、イーサリアムプロジェクトのベアボーン実装でした。 フオリンピックのテストフェーズの成功を受けて実装されたものであり、 技術系ユーザー、特にデベロッパー向けに開発されたものでした。 [ブロック](/glossary/#block)の[ガス](/glossary/#gas)リミットは、5,000 でした。 この「解凍」期間があったおかげで、マイナーはオペレーションを開始し、アーリーアダプターは「急ぐ」必要もなくクライアントをインストールすることができました。
 
@@ -486,9 +486,9 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 <Divider />
 
-## 2014 年 \{#2014}
+## 2014 年 {#2014}
 
-### イーサの販売 \{#ether-sale}
+### イーサの販売 {#ether-sale}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> 2014 年 7 月 22 日～ 9 月 2 日<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
@@ -498,7 +498,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ---
 
-### イエローペーパーのリリース \{#yellowpaper}
+### イエローペーパーのリリース {#yellowpaper}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> 2014 年 4 月 1 日<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
@@ -508,9 +508,9 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 <Divider />
 
-## 2013 年 \{#2013}
+## 2013 年 {#2013}
 
-### ホワイトペーパーのリリース \{#whitepaper}
+### ホワイトペーパーのリリース {#whitepaper}
 
 <emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> 2013 年 11 月 27 日<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 

@@ -5,7 +5,7 @@ lang: pl
 hideEditButton: true
 ---
 
-## Nadchodzące wydarzenia \{#events}
+## Nadchodzące wydarzenia {#events}
 
 **Co miesiąc, na całym świecie, mają miejsce różne wydarzenia i eventy Ethereum.** Weź pod uwagę możliwość wzięcia udziału w jednym z nich, niedaleko Ciebie, poznaj różne ścieżki kariery i rozwijaj swoje umiejętności.
 
@@ -15,7 +15,7 @@ hideEditButton: true
 
 Ta lista to dopiero początek tego, co szykuje nasza społeczność. Jeśli wiesz o wydarzeniu, które jeszcze się na niej nie znajduje, możesz dodać je sam/-a [tutaj](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
 
-## Spotkania Ethereum Meetups \{#meetups}
+## Spotkania Ethereum Meetups {#meetups}
 
 Nie możesz znaleźć spotkania, które Cię interesuje? Spróbuj dołączyć do spotkania Ethereum Meetups! Ethereum Meetups to mniejsze wydarzenia organizowane przez entuzjastów sieci Ethereum — szansa dla ludzi zainteresowanych tą siecią, żeby spotkać się, porozmawiać i dowiedzieć się więcej o najnowszych rozwiązaniach technologicznych.
 

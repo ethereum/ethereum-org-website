@@ -4,7 +4,7 @@ description: Den grundläggande information du behöver för att komma igång me
 lang: se
 ---
 
-# Använda Ethereum \{#use-ethereum-applications}
+# Använda Ethereum {#use-ethereum-applications}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: se
 
 </FeaturedText>
 
-## Hur du använder en app byggd på Ethereum \{#how-to-use-an-application-built-on-ethereum}
+## Hur du använder en app byggd på Ethereum {#how-to-use-an-application-built-on-ethereum}
 
 Det bästa sättet att komma igång med Ethereum är att hoppa rakt in!
 

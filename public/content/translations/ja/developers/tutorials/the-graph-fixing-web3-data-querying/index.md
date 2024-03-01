@@ -18,7 +18,7 @@ sourceUrl: https://soliditydeveloper.com/thegraph
 
 今回は、The Graph について詳しく見ていきます。The Grash は昨年、分散型アプリケーション(Dapp)を開発するために欠かせない標準スタックの一部となりました。 まずは、従来のやり方から見ていきましょう。
 
-## The Graph を使わない例 \{#without-the-graph}
+## The Graph を使わない例 {#without-the-graph}
 
 それでは、説明のために簡単な例から始めます。 私たちは皆、ゲームが好きなので、ユーザーが賭けをする次の簡単なゲームを考えてみましょう。
 
@@ -83,7 +83,7 @@ GameContract.events.BetPlaced({
 
 では、より良い解決策を見ていきましょう。
 
-## GraphQL の紹介 \{#let-me-introduce-to-you-graphql}
+## GraphQL の紹介 {#let-me-introduce-to-you-graphql}
 
 最初に GraphQL について説明します。GraphQL は、もともとフェイスブック社によって設計され、実装されました。 従来の Rest API モデルについては、ご存知かもしれません。 では、今度は次のように必要なデータを正確に取得できるクエリを作成できると想像してみてください。
 
@@ -95,7 +95,7 @@ GameContract.events.BetPlaced({
 
 この知識をもとに、ブロックチェーン空間と The Graph の世界に入って行きましょう。
 
-## The Graph とは \{#what-is-the-graph}
+## The Graph とは {#what-is-the-graph}
 
 ブロックチェーンは、分散型データベースですが、通常のデータベースとは対照的に、データベースに対するクエリ言語がありません。 データを取得することにおいては、苦痛を伴うか不可能かのどちらかです。 The Graph は、ブロックチェーンデータのインデックス作成とクエリを行うための分散型プロトコルです。 ご想像の通り The Graph は、GraphQL をクエリ言語として使用しています。
 
@@ -103,7 +103,7 @@ GameContract.events.BetPlaced({
 
 何かを理解するには例を見るのが最善なので、先ほどの GameContract で The Graph を使ってみましょう。
 
-## サブグラフの作成方法 \{#how-to-create-a-subgraph}
+## サブグラフの作成方法 {#how-to-create-a-subgraph}
 
 サブグラフは、データにインデックスを作成する方法を定義するものです。 定義には、次の 3 つのコンポーネントが必要です。
 
@@ -111,7 +111,7 @@ GameContract.events.BetPlaced({
 2. スキーマ(`schema.graphql`)
 3. マッピング(`mapping.ts`)
 
-### マニフェスト(`subgraph.yaml`) \{#manifest}
+### マニフェスト(`subgraph.yaml`) {#manifest}
 
 マニフェストは設定ファイルであり、次のことを定義します。
 
@@ -155,7 +155,7 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-### スキーマ(`schema.graphql`) \{#schema}
+### スキーマ(`schema.graphql`) {#schema}
 
 スキーマは、GraphQL のデータ定義です。 必要なエンティティとタイプを定義することができます。 The Graph でサポートされているタイプは、次のとおりです。
 
@@ -186,7 +186,7 @@ type Player @entity {
 }
 ```
 
-### マッピング(`mapping.ts`) \{#mapping}
+### マッピング(`mapping.ts`) {#mapping}
 
 The Graph のマッピングファイルは、受信したイベントをエンティティに変換する関数を定義します。 Typescript のサブセットである AssemblyScript で書きます。 これは、より効率化され、よりポータブル化されたマッピングの実行を実現するため、WebAssembly(WASM)にコンパイルされます。
 
@@ -238,7 +238,7 @@ export function handleNewBet(event: PlacedBet): void {
 }
 ```
 
-## フロントエンドでの使用 \{#using-it-in-the-frontend}
+## フロントエンドでの使用 {#using-it-in-the-frontend}
 
 Apollo Boost などを使うと、The Graph を React(または Apollo-Vue)の分散型アプリケーション(Dapp)に簡単に統合できます。 特に React フックと Apollo を使用する場合は、コンポーネントに単一の GraphQL クエリを記述するのと同じくらいデータの取得が簡単です。 典型的な設定は次のようになります。
 
@@ -289,19 +289,19 @@ React.useEffect(() => {
 
 しかし、最後のパズルの 1 つが欠けています。それがサーバーについてです。 自分のノードでサーバーを実行することも、ホストサービスを使用することもできます。
 
-## The Graph サーバー \{#the-graph-server}
+## The Graph サーバー {#the-graph-server}
 
-### Graph エクスプローラー: ホストサービス \{#graph-explorer-the-hosted-service}
+### Graph エクスプローラー: ホストサービス {#graph-explorer-the-hosted-service}
 
 最も簡単な方法は、ホストサービスを利用することです。 [こちらの手順](https://thegraph.com/docs/deploy-a-subgraph)に従ってサブグラフをデプロイします。 エクスプローラー(https://thegraph.com/explorer/)では、さまざまなプロジェクト向けに既存のサブグラフを探せます。
 
 ![The Graphエクスプローラー](./thegraph-explorer.png)
 
-### 自分のノードで実行 \{#running-your-own-node}
+### 自分のノードで実行 {#running-your-own-node}
 
 もう一つの方法として、次のように自分のノードで実行することもできます。 https://github.com/graphprotocol/graph-node#quick-start これにより、ホストサービスでサポートされていないネットワークで使用することができます。 現在サポートされいるネットワークは、Mainnet、Kovan、Rinkeby、Ropsten、Goerli、PoA-Core、xDAI、Sokol です。
 
-## 非中央集権型の未来 \{#the-decentralized-future}
+## 非中央集権型の未来 {#the-decentralized-future}
 
 GraphQL は、新しく受信するイベントのストリームもサポートしています。 The Graph では、完全にはサポートされていませんが、近々リリースされる予定です。
 

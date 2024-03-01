@@ -4,7 +4,7 @@ description: 用以了解以太坊的非英文資源
 lang: zh-tw
 ---
 
-# 語言資源 \{#language-resources}
+# 語言資源 {#language-resources}
 
 以太坊社群為全球性社群，包含數以百萬計的非英語人士。
 
@@ -14,15 +14,15 @@ lang: zh-tw
 
 知道以你的語言撰寫的教育資源？ [請創建議題](https://github.com/ethereum/ethereum-org-website/issues/new/choose)，以將其添加到列表！
 
-## Ethereum.org 資源 \{#ethereum-org}
+## Ethereum.org 資源 {#ethereum-org}
 
 Ethereum.org 已翻譯為 40 多種語言，你可以在我們的[語言頁面](/languages)上找到這些語言。
 
 如果你會使用兩種語言，而且想幫助我們宣傳，讓更多人知道，你也可以參與 [ethereum.org 翻譯計劃](/contributing/translation-program/#translation-program)，幫助我們翻譯該網站。
 
-## 社群資源 \{#community}
+## 社群資源 {#community}
 
-### 巴西葡萄牙語 \{#br-pt}
+### 巴西葡萄牙語 {#br-pt}
 
 **新聞**
 
@@ -40,7 +40,7 @@ Ethereum.org 已翻譯為 40 多種語言，你可以在我們的[語言頁面](
 - [Cointimes](http://www.cointimes.com.br/) - 提供有關加密貨幣的新聞和教育資源
 - [Web3 starter pack](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - 提供有關加密貨幣最常見和最基礎問題解答的指南
 
-### 中文 \{#zh}
+### 中文 {#zh}
 
 **通用資源**
 
@@ -67,28 +67,28 @@ Ethereum.org 已翻譯為 40 多種語言，你可以在我們的[語言頁面](
 - [安比實驗室](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - 一個解釋說明密碼學和安全等內容的微信公眾號
 - [星想法](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - 一個解釋說明零知識技術的微信公眾號
 
-### 捷克語 \{#cs}
+### 捷克語 {#cs}
 
 - [Gwei.cz](https://gwei.cz) - 有關 Web3 的當地社群，產出教育內容、舉辦線上和線下活動
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - 以太坊新手指南
 - [DAO Příručka](https://dao.gwei.cz/) - 去中心化自治組織新手指南
 - [精通以太坊](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - 捷克語版《精通以太坊》
 
-### 法語 \{#fr}
+### 法語 {#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) - Ethereum France 組織各種活動、產出內容並鼓勵圍繞以太坊展開討論
 - [Ethereum.fr](https://ethereum.fr/) - 提供有關以太坊的新聞和教育資源
 - [BanklessFR](https://banklessfr.substack.com/) - Bankless 法語版新聞通訊
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - 以太坊子頁面上的加密貨幣論壇
 
-### 德語 \{#de}
+### 德語 {#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - 使用 Solidity
 - [Microsoft Learn（智慧型合約）](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/)- 用 Solidity 撰寫以太坊智慧型合約
 - [Microsoft Learn（以太坊網路）](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/)- 連接並部署以太坊網路
 - [Microsoft Learn（區塊鏈）](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/)- 進入區塊鏈開發
 
-### 義大利語 \{#it}
+### 義大利語 {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - 提供以太坊教育資源、活動和新聞，專注於智慧型合約和區塊鏈技術
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - 以太坊義大利語播客
@@ -96,11 +96,11 @@ Ethereum.org 已翻譯為 40 多種語言，你可以在我們的[語言頁面](
 - [Microsoft Learning（智慧型合約）](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/)- 學習用 Solidity 撰寫智慧型合約
 - [Microsoft Learn（去中心化應用程式）](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/)- 使用去中心化應用程式建立使用者介面
 
-### 俄語 \{#ru}
+### 俄語 {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) -Web3 建造者的教育空間
 
-### 西班牙語 \{#es}
+### 西班牙語 {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - 區塊鏈、去中心化金融、管理體系課程、活動和部落格
 - [Cointegraph](https://es.cointelegraph.com/ethereum-for-beginners) - 西班牙語版《以太坊新手指南》
@@ -110,18 +110,18 @@ Ethereum.org 已翻譯為 40 多種語言，你可以在我們的[語言頁面](
 - [去中心化金融開發課程介紹](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - 了解去中心化金融智慧型合約如何在 Solidity 中運作，並創建自己的自動化做市商應用
 - [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - 由淺入深的非技術性區塊鏈教學 學習所有有關加密貨幣和以太坊的知識。
 
-### 土耳其語 \{#tr}
+### 土耳其語 {#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - 專注於區塊鍊和加密貨幣的課程
 - [偉大的重命名：以太坊 2 發生了什麼？](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/)-《偉大的重命名》博文的土耳其語譯作，解釋了「以太坊 2」術語的變化
 
-### 越南語 \{#vi}
+### 越南語 {#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - 以太坊、去中心化應用程式、錢包和常見問題的概述
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - 以太坊新聞和教育子頁面的網頁平台
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - 提供以太坊新聞和教育內容的加密貨幣入口網站
 
-### 日語 \{#ja}
+### 日語 {#ja}
 
 - [日本網路和虛擬貨幣資產交易組織](https://jvcea.or.jp/)
 - [日本虛擬資產商業組織](https://cryptocurrency-association.org/)

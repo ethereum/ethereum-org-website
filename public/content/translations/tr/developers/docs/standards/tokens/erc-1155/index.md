@@ -4,7 +4,7 @@ description:
 lang: tr
 ---
 
-## Giriş \{#introduction}
+## Giriş {#introduction}
 
 Birden çok token türünü yöneten sözleşmeler için standart bir arayüz. Dağıtılan tek bir sözleşme; değiştirilebilir token, değiştirilemez token veya diğer yapılandırmaların (örneğin yarı-değişebilir token) herhangi bir kombinasyonunu içerebilir.
 
@@ -14,11 +14,11 @@ Basit bir fikirdir: Herhangi bir sayıda değiştirilebilir ve değiştirilemez 
 
 ERC-1155 token'ı, [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155)'te tam olarak açıklanmıştır.
 
-## Ön Koşullar \{#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamak için öncelikle [token standartları](/developers/docs/standards/tokens/), [ERC-20](/developers/docs/standards/tokens/erc-20/) ve [ERC-721](/developers/docs/standards/tokens/erc-721/) hakkında okuma yapmanızı öneririz.
 
-## ERC-1155 Fonksiyonları ve Özellikleri: \{#body}
+## ERC-1155 Fonksiyonları ve Özellikleri: {#body}
 
 - [Toplu Aktarım](#batch_transfers): Tek bir aramada birden çok varlığı aktarın.
 - [Toplu Bakiye](#batch_balance): Birden fazla varlığın bakiyesini tek bir çağrıda alın.
@@ -27,7 +27,7 @@ Bu sayfayı daha iyi anlamak için öncelikle [token standartları](/developers/
 - [NFT Desteği](#nft_support): Arz yalnızca 1 ise, bunu NFT olarak düşünün.
 - [Güvenli Aktarım Kuralları](#safe_transfer_rule): Güvenli aktarım için birtakım kurallar.
 
-### Toplu Aktarımlar \{#batch-transfers}
+### Toplu Aktarımlar {#batch-transfers}
 
 Toplu aktarım, normal ERC-20 aktarımlarına çok benzer şekilde çalışır. Normal ERC-20 `transferFrom` fonksiyonuna bakalım:
 
@@ -53,7 +53,7 @@ ERC-1155'teki tek fark, değerleri bir dizi olarak geçirmemiz ve ayrıca bir di
 
 ERC-1155'de sadece `transferFrom` bulunur, `transfer` yoktur. Normal bir `transfer` gibi kullanmak için, gönderen adresini fonksiyonu çağıran adrese ayarlayın.
 
-### Toplu Bakiye \{#batch-balance}
+### Toplu Bakiye {#batch-balance}
 
 İlgili ERC-20 `balanceOf` çağrısı da aynı şekilde toplu destekli ortak fonksiyonuna sahiptir. Bir hatırlatma olarak, ERC-20 sürümü şudur:
 
@@ -80,7 +80,7 @@ Bakiye çağrısı için daha da basit şekilde tek bir aramada birden fazla bak
 ]
 ```
 
-### Toplu Onay \{#batch-approval}
+### Toplu Onay {#batch-approval}
 
 ```solidity
 // ERC-1155
@@ -101,7 +101,7 @@ Mevcut durumun okunması `isApprovedForAll` üzerinden yapılabilir. Gördüğü
 
 Bu kasıtlı olarak basitlik göz önünde bulundurularak tasarlanmıştır. Her şeyi yalnızca bir adres için onaylayabilirsiniz.
 
-### Alma Kancası \{#receive-hook}
+### Alma Kancası {#receive-hook}
 
 ```solidity
 function onERC1155BatchReceived(
@@ -121,11 +121,11 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 Alıcı sözleşme bu değeri döndürdüğünde, sözleşmenin aktarımı kabul ettiği ve ERC-1155 token'larını nasıl kullanacağını bildiği varsayılır. Harika, artık bir sözleşmede sıkışmış token'lar yok!
 
-### NFT Desteği \{#nft-support}
+### NFT Desteği {#nft-support}
 
 Arz yalnızca bir olduğunda, token esasen bir değiştirilemez token'dır (NFT). Ve ERC-721 için standart olduğu gibi, bir meta veri URL'si tanımlayabilirsiniz. URL istemciler tarafından okunabilir ve modifiye edilebilir, [burada](https://eips.ethereum.org/EIPS/eip-1155#metadata) görebilirsiniz.
 
-### Güvenli Aktarım Kuralı \{#safe-transfer-rule}
+### Güvenli Aktarım Kuralı {#safe-transfer-rule}
 
 Birkaç güvenli aktarım kuralına daha önceki açıklamalarda değinmiştik. Ama kuralların en önemlisine bir bakalım:
 
@@ -138,7 +138,7 @@ Birkaç güvenli aktarım kuralına daha önceki açıklamalarda değinmiştik. 
 
 _Not_: Kanca dahil tüm toplu fonksiyonlar, toplu olmayan sürümler olarak da mevcuttur. Bu, yalnızca bir varlığın aktarılmasının muhtemelen hâlâ en yaygın kullanılan yol olacağı düşünülerek, gaz verimliliği için yapılır. Güvenli aktarım kuralları da dahil olmak üzere açıklamalarda basitlik için bunlardan bahsetmedik. İsimler aynıdır: Sadece "Batch"i kaldırın.
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [EIP-1155: Çoklu Token Standardı](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Openzeppelin Belgeleri](https://docs.openzeppelin.com/contracts/3.x/erc1155)

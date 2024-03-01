@@ -6,15 +6,15 @@ lang: pt-br
 
 Um contrato inteligente (smart contract) é um programa executado em um endereço na Ethereum. Eles são compostos por dados e funções que podem ser executadas ao receber uma transação. Veja aqui uma visão geral do que compõe um contrato inteligente.
 
-## Pré-requisitos \{#prerequisites}
+## Pré-requisitos {#prerequisites}
 
 Não deixe de ler sobre [contratos inteligentes](/developers/docs/smart-contracts/). Este documento presume que você já está familiarizado com linguagens de programação como JavaScript ou Python.
 
-## Dados \{#data}
+## Dados {#data}
 
 Quaisquer dados de contrato devem ser atribuídos a um local: seja para `armazenamento` ou `memória`. É caro modificar o armazenamento em um contrato inteligente, então você precisa considerar onde seus dados devem estar no ar.
 
-### Armazenamento \{#storage}
+### Armazenamento {#storage}
 
 Dados persistentes são referidos como armazenamento e são representados por variáveis de estado. Esses valores são armazenados permanentemente na blockchain. É necessário declarar o tipo para que o contrato possa manter um registro de quanto espaço na blockchain será necessário quando ele compilar.
 
@@ -52,13 +52,13 @@ Para mais explicação, dê uma olhada na documentação:
 - [Veja tipos de Vyper](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [Veja tipos de Solidity](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### Memória \{#memory}
+### Memória {#memory}
 
 Valores que são armazenados apenas para a duração da execução da função de contratos são chamadas de variáveis de memória. Como estes não são armazenados permanentemente na blockchain, são muito mais baratos de usar.
 
 Saiba mais sobre como a EVM armazena dados (Storage, Memória e Stack) em [Solidity docs](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack).
 
-### Variáveis de ambiente \{#environment-variables}
+### Variáveis de ambiente {#environment-variables}
 
 Além das variáveis definidas no seu contrato, existem algumas variáveis globais especiais. Elas são usadas principalmente para fornecer informações sobre a blockchain (cadeia de blocos) ou transação atual.
 
@@ -69,7 +69,7 @@ Exemplos:
 | `block.timestamp` | uint256                | Data/hora de início do bloco atual    |
 | `msg.sender`      | endereço               | Remetente da mensagem (chamada atual) |
 
-## Funções \{#functions}
+## Funções {#functions}
 
 Da forma mais simplista, funções podem obter informação ou um conjunto de informações em resposta a entrada de transações.
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - É declarado `público`, o que significa que qualquer um pode acessá-lo
 - Não é declarada a `visão`, então ela pode modificar o estado do contrato
 
-### Ver funções \{#view-functions}
+### Ver funções {#view-functions}
 
 Essas funções prometem não modificar o estado dos dados do contrato. Exemplos comuns são funções "obter" – você pode usar isso para receber o saldo de um usuário, por exemplo.
 
@@ -131,7 +131,7 @@ O que é considerado como modificar estado:
 7. Usando chamadas de baixo nível.
 8. Usando montagem em linha que contém certos códigos.
 
-### Funções construtor \{#constructor-functions}
+### Funções construtor {#constructor-functions}
 
 `construtor` funções são executadas apenas uma vez quando o contrato é implantado pela primeira vez. Como o `construtor` em muitas linguagens de programação baseadas em classe, essas funções geralmente inicializam variáveis de estado para seus valores especificados.
 
@@ -158,7 +158,7 @@ def __init__(_beneficiary: endereço, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### Funções integradas \{#built-in-functions}
+### Funções integradas {#built-in-functions}
 
 Além das variáveis definidas no seu contrato, existem algumas variáveis globais especiais. O exemplo mais óbvio é:
 
@@ -167,7 +167,7 @@ Além das variáveis definidas no seu contrato, existem algumas variáveis globa
 
 Estes permitem contratos para enviar ETH para outras contas.
 
-## Funções utilitárias \{#writing-functions}
+## Funções utilitárias {#writing-functions}
 
 Sua função precisa:
 
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 Um contrato completo pode parecer algo assim. Aqui a função `construtor` fornece um valor inicial para a variável `dapp_name`.
 
-## Eventos e registros \{#events-and-logs}
+## Eventos e registros {#events-and-logs}
 
 Eventos permitem que você se comunique com seu contrato inteligente na interface do seu site ou de outros aplicativos de assinatura. Quando uma transação é minerada, os contratos inteligentes podem emitir eventos e escrever registros na blockchain que o frontend pode então processar.
 
-## Exemplos anotados \{#annotated-examples}
+## Exemplos anotados {#annotated-examples}
 
 Estes são alguns exemplos escritos em Solidity. Se você quiser brincar com o código, pode interagir com eles no [Remix](http://remix.ethereum.org).
 
-### Olá, mundo \{#hello-world}
+### Olá, mundo {#hello-world}
 
 ```solidity
 // Especifica a versão do Solidity usando a versão semântica.
@@ -246,7 +246,7 @@ contract HelloWorld {
 }
 ```
 
-### Token \{#token}
+### Token {#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### Asset digital único \{#unique-digital-asset}
+### Asset digital único {#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10.
@@ -637,19 +637,19 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## Leitura adicional \{#further-reading}
+## Leitura adicional {#further-reading}
 
 Confira a documentação do Solidity e do Vyper para uma visão geral mais completa dos contratos inteligentes:
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## Tópicos relacionados \{#related-topics}
+## Tópicos relacionados {#related-topics}
 
 - [Smart Contracts](/developers/docs/smart-contracts/)
 - [Máquina Virtual Ethereum](/developers/docs/evm/)
 
-## Tutoriais relacionados \{#related-tutorials}
+## Tutoriais relacionados {#related-tutorials}
 
 - [Diminuir contratos para enfrentar o limite de tamanho do contrato](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _– Algumas dicas práticas para reduzir o tamanho de seu contrato inteligente._
 - [Registrando dados de contratos inteligentes com eventos](/developers/tutorials/logging-events-smart-contracts/) _– Uma introdução aos eventos de contratos inteligentes e como você pode usá-los para registrar dados._

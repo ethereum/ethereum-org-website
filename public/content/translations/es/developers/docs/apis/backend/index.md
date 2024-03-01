@@ -10,15 +10,15 @@ Para este propósito, cada cliente de Ethereum implementa la especificación [JS
 
 Si deseas utilizar un lenguaje de programación específico para conectarte a un nodo Ethereum, inicia tu propia solución y ten en cuenta que hay varias bibliotecas dentro del ecosistema que lo hacen mucho más fácil. Mediante estas bibliotecas, los desarrolladores pueden escribir métodos intuitivos de una línea para iniciar solicitudes JSON RPC (de manera invisible), que interactúan con Ethereum.
 
-## Requisitos previos \{#prerequisites}
+## Requisitos previos {#prerequisites}
 
 Comprender la [pila de Ethereum](/developers/docs/ethereum-stack/) y los [clientes de Ethereum](/developers/docs/nodes-and-clients/) puede resultar útil.
 
-## ¿Por qué usar una biblioteca? \{#why-use-a-library}
+## ¿Por qué usar una biblioteca? {#why-use-a-library}
 
 Estas bibliotecas eliminan en gran parte la complejidad de interactuar directamente con un nodo Ethereum. También proporcionan funciones útiles (por ejemplo, convertir ETH a Gwei) de modo que, como desarrollador, puedas dedicar menos tiempo a lidiar con las complejidades de los clientes de Ethereum y centrarte más en las características únicas de tu aplicación.
 
-## Bibliotecas disponibles \{#available-libraries}
+## Bibliotecas disponibles {#available-libraries}
 
 **Alchemy:** **_Plataforma de desarrollo de Ethereum._**
 
@@ -167,16 +167,16 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 - [Documentación](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
-## Temas relacionados \{#related-topics}
+## Temas relacionados {#related-topics}
 
 - [ Nodos y clientes](/developers/docs/nodes-and-clients/)
 - [Entornos de desarrollo](/developers/docs/frameworks/)
 
-## Tutoriales relacionados \{#related-tutorials}
+## Tutoriales relacionados {#related-tutorials}
 
 - [Configurar Web3js para utilizar la cadena de bloques de Ethereum en Javascript:](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _Instrucciones para configurar web3.js en su proyecto._
 - [Invocar un contrato inteligente desde JavaScript:](/developers/tutorials/calling-a-smart-contract-from-javascript/) _ con el token DAI, vea cómo invocar funciones de contratos usando Javascript._

@@ -96,7 +96,7 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Dans la partie suivante, nous allons appeler la fonction `balanceOf` pour récupérer la quantité actuelle de jetons que les deux adresses détiennent.
 
-## Appel : Lire la valeur d'un contrat intelligent \{#call-reading-value-from-a-smart-contract}
+## Appel : Lire la valeur d'un contrat intelligent {#call-reading-value-from-a-smart-contract}
 
 Le premier exemple appelle une méthode « constante » et exécute sa méthode de contrat intelligent dans l'EVM sans envoyer de transaction. Pour cela, nous allons lire le solde ERC20 d'une adresse. [Lisez notre article sur les jetons ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/).
 
@@ -114,7 +114,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 
 N'oubliez pas que le DAI ERC20 comporte 18 décimales, ce qui signifie que vous devez supprimer 18 zéros pour obtenir le montant correct. Les uint256 sont retournés sous forme de chaînes de caractères, car JavaScript ne gère pas les grandes valeurs numériques. Si vous ne savez pas [comment traiter les grands nombres dans JS, consultez notre tutoriel sur bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
-## Envoyer : Envoi d'une transaction à une fonction de contrat intelligent \{#send-sending-a-transaction-to-a-smart-contract-function}
+## Envoyer : Envoi d'une transaction à une fonction de contrat intelligent {#send-sending-a-transaction-to-a-smart-contract-function}
 
 Pour le deuxième exemple, nous allons appeler la fonction de transfert du contrat intelligent DAI pour envoyer 10 DAI à notre deuxième adresse. La fonction de transfert accepte deux paramètres : l'adresse du destinataire et le montant du jeton à transférer.
 

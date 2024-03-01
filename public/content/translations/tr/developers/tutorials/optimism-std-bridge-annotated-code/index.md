@@ -17,16 +17,16 @@ Optimism'de (veya başka herhangi bir K2'de) K1 varlıklarını kullanmak için 
 
 [Optimism standart köprüsü](https://community.optimism.io/docs/developers/bridge/standard-bridge) bu şekilde çalışır. Bu makalede, nasıl çalıştığını görmek için bu köprünün kaynak kodunu gözden geçireceğiz ve onu iyi yazılmış bir Solidity kodu örneği olarak inceleyeceğiz.
 
-## Kontrol akışları \{#control-flows}
+## Kontrol akışları {#control-flows}
 
 Köprünün iki ana akışı vardır:
 
 - Yatırma (K1'den K2'ye)
 - Çekme (K2'den K1'e)
 
-### Yatırma akışı \{#deposit-flow}
+### Yatırma akışı {#deposit-flow}
 
-#### Katman 1 \{#deposit-flow-layer-1}
+#### Katman 1 {#deposit-flow-layer-1}
 
 1. Bir ERC-20 yatırılıyorsa, yatırımcı köprüye yatırılan tutarı harcaması için bir ödenek verir
 2. Yatıran, K1 köprüsünü (`depositERC20`, `depositERC20To`, `depositETH` veya `depositETHTo`) çağırır
@@ -35,7 +35,7 @@ Köprünün iki ana akışı vardır:
    - ERC-20: Varlık, yatıran tarafından sağlanan ödenek kullanılarak köprü tarafından kendisine devredilir
 4. K1 köprüsü, K2 köprüsünde `finalizeDeposit`'i çağırmak için etki alanları arası mesaj mekanizmasını kullanır
 
-#### Katman 2 \{#deposit-flow-layer-2}
+#### Katman 2 {#deposit-flow-layer-2}
 
 5. Katman 2 köprüsü, `finalizeDeposit` çağrısının meşru olduğunu doğrular:
    - Etki alanları arası mesaj sözleşmesinden geldi
@@ -45,26 +45,26 @@ Köprünün iki ana akışı vardır:
    - K2 sözleşmesi, doğru arayüzü ([ERC-165 kullanarak](https://eips.ethereum.org/EIPS/eip-165)) desteklediğini bildirir.
 7. K2 sözleşmesi doğruysa, uygun adrese uygun sayıda token basması için onu çağırın. Değilse, kullanıcının K1'deki token'ları talep etmesine izin vermek için bir para çekme işlemi başlatın.
 
-### Çekme akışı \{#withdrawal-flow}
+### Çekme akışı {#withdrawal-flow}
 
-#### Katman 2 \{#withdrawal-flow-layer-2}
+#### Katman 2 {#withdrawal-flow-layer-2}
 
 1. Çeken kişi K2 köprüsünü çağırır (`draw` veya `withdrawTo`)
 2. K2 köprüsü, `msg.sender`'a ait uygun sayıda token'ı yakar
 3. K2 köprüsü, K1 köprüsünde `finalizeETHWithdrawal` veya `finalizeERC20Withdrawal`'ı çağırmak için etki alanları arası mesaj mekanizmasını kullanır
 
-#### Katman 1 \{#withdrawal-flow-layer-1}
+#### Katman 1 {#withdrawal-flow-layer-1}
 
 4. K1 köprüsü, `finalizeETHWithdrawal` veya `finalizeERC20Withdrawal` çağrısının meşru olduğunu doğrular:
    - Etki alanları arası mesaj mekanizmasından geldi
    - Aslen K2'deki köprüdendi
 5. K1 köprüsü, uygun varlığı (ETH veya ERC-20) uygun adrese aktarır
 
-## Katman 1 kodu \{#layer-1-code}
+## Katman 1 kodu {#layer-1-code}
 
 Bu, Ethereum Mainnet K1 üzerinde çalışan koddur.
 
-### IL1ERC20Bridge \{#IL1ERC20Bridge}
+### IL1ERC20Bridge {#IL1ERC20Bridge}
 
 [Bu arayüz burada tanımlanmıştır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol). ERC-20 token'larını köprülemek için gereken fonksiyonları ve tanımları içerir.
 
@@ -220,7 +220,7 @@ Optimism'de çekme işlemleri (ve K2'den K1'e diğer tüm mesajlar) iki adımlı
 1. K2 üzerinde başlatıcı işlem.
 2. K1 üzerinde sonlandırıcı veya talep eden bir işlem. Bu işlemin, biten K2 işlemi için olan [hata meydan okuması süresinden](https://community.optimism.io/docs/how-optimism-works/#fault-proofs) sonra gerçekleşmesi gerekir.
 
-### IL1StandardBridge \{#il1standardbridge}
+### IL1StandardBridge {#il1standardbridge}
 
 [Bu arayüz burada tanımlanmıştır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol). Bu dosya ETH için olay ve fonksiyon tanımlamalarını içerir. Bu tanımlamalar ERC-20 için yukarıdaki `IL1ERC20Bridge`'de belirlenenlere gayet benzerler.
 
@@ -301,7 +301,7 @@ Bu olay ERC-20 versiyonunun (`ERC20DepositInitiated`) neredeyse aynısıdır, te
 }
 ```
 
-### CrossDomainEnabled \{#crossdomainenabled}
+### CrossDomainEnabled {#crossdomainenabled}
 
 [Bu sözleşme](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol) iki köprü tarafından da ([K1](#the-l1-bridge-contract) ve [K2](#the-l2-bridge-contract)) diğer katmana mesajlar göndermek için kalıtım ile alınmıştır.
 
@@ -437,7 +437,7 @@ Son olarak, fonksiyon diğer katmana bir mesaj gönderir.
 
 Bu durumda yeniden giriş hakkında kaygılı değiliz, Slither'ın bunu bilmesi mümkün olmasa bile `getCrossDomainMessenger()` öğesinin güvenilir bir adres döndürdüğünü biliyoruz.
 
-### K1 köprü sözleşmesi \{#the-l1-bridge-contract}
+### K1 köprü sözleşmesi {#the-l1-bridge-contract}
 
 [Bu sözleşmenin kaynak kodu buradadır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol).
 
@@ -883,11 +883,11 @@ Bu fonksiyon, ERC-20 token'ları için gerekli değişikliklerle birlikte yukar�
 
 Köprünün daha önce bir uygulaması vardı. Uygulamadan buna geçtiğimizde, tüm varlıkları taşımak zorunda kaldık. ERC-20 token'ları sadece taşınabilir. Ancak, ETH'yi bir sözleşmeye aktarmak için o sözleşmenin onayına ihtiyacınız var ve bu da `donateETH`'in bize sağladığı şeydir.
 
-## K2 üzerinde ERC-20 Token'ları \{#erc-20-tokens-on-l2}
+## K2 üzerinde ERC-20 Token'ları {#erc-20-tokens-on-l2}
 
 Bir ERC-20 token'ının standart köprüye sığması için standart köprünün, _sadece ama sadece_ standart köprünün token basmasına izin vermesi gerekir. Bu, köprülerin Optimism üzerinde dolaşan token sayısının K1 köprü sözleşmesi içinde kilitli token sayısına eşit olduğundan emin olması gerektiği için gereklidir. K2'de çok fazla token varsa, bazı kullanıcılar varlıklarını K1'e geri köprüleyemez. Güvenilir bir köprü yerine, esasen [kısmi rezerv bankacılığını](https://www.investopedia.com/terms/f/fractionalreservebanking.asp) yeniden yaratmış olurduk. K1'de çok fazla token varsa, bu token'lardan bazıları köprü sözleşmesinin içinde sonsuza kadar kilitli kalır çünkü K2 token'larını yakmadan onları serbest bırakmanın bir yolu yoktur.
 
-### IL2StandardERC20 \{#il2standarderc20}
+### IL2StandardERC20 {#il2standarderc20}
 
 Standart köprüyü kullanan K2 üzerindeki her ERC-20 token'ının, standart köprünün ihtiyaç duyduğu fonksiyonlara ve olaylara sahip olan [bu arayüzü](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol) sağlaması gerekir.
 
@@ -926,7 +926,7 @@ Bu fonksiyon, bu sözleşmeye köprülenen K1 token'ının adresini sağlar. Ter
 
 Token'ları basmak (oluşturmak) ve yakmak (yok etmek) için fonksiyonlar ve olaylar. Köprü, token sayısının doğru (K1'de kilitli token sayısına eşit) olduğundan emin olmak için bu fonksiyonları çalıştırabilen tek varlık olmalıdır.
 
-### L2StandardERC20 \{#L2StandardERC20}
+### L2StandardERC20 {#L2StandardERC20}
 
 [Bu, `IL2StandardERC20` arayüzü uygulamamızdır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol). Bir tür özel mantığa ihtiyacınız yoksa, bunu kullanmalısınız.
 
@@ -1015,7 +1015,7 @@ Yalnızca K2 köprüsünün varlıkları basmasına ve yakmasına izin verilir.
 
 `_mint` ve `_burn` aslında [OpenZeppelin ERC-20 sözleşmesinde](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn) tanımlanmıştır. Bu sözleşme onları harici olarak ifşa etmez, çünkü token'ları basma ve yakma koşulları, ERC-20'yi kullanma yollarının sayısı kadar çeşitlidir.
 
-## K2 Köprü Kodu \{#l2-bridge-code}
+## K2 Köprü Kodu {#l2-bridge-code}
 
 Bu, Optimism üzerindeki köprüyü çalıştıran koddur. [Bu sözleşmenin kaynağı buradadır](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol).
 
@@ -1268,7 +1268,7 @@ Bir kullanıcı yanlış Katman 2 token adresini kullanarak tespit edilebilir bi
 }
 ```
 
-## Sonuç \{#conclusion}
+## Sonuç {#conclusion}
 
 Standart köprü, varlık aktarımları için en esnek mekanizmadır. Ancak çok genel olduğu için her zaman kullanması en kolay olan mekanizma değildir. Özellikle çekimler için, çoğu kullanıcı meydan okuma süresini beklemeyen ve çekimi sonlandırmak için bir Merkle ispatı gerektirmeyen [üçüncü parti köprüleri](https://www.optimism.io/apps/bridges) kullanmayı tercih eder.
 

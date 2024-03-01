@@ -10,31 +10,31 @@ lang: ja
 
 [JSON-RPC](https://www.jsonrpc.org/specification)は、ステートレスで軽量なリモートプロシージャコール(RPC)プロトコルです。 いくつかのデータ構造とその処理に関するルールを定義しています。 トランスポートに依存しないため、同じプロセス内だけでなく、ソケット経由、HTTP 経由など、さまざまなメッセージパッシング環境で利用できます。 データ形式としては、JSON(RFC 4627)を使用します。
 
-## クライアントの実装 \{#client-implementations}
+## クライアントの実装 {#client-implementations}
 
 各イーサリアムクライアントでは、JSON-RPC 仕様を実装する際に異なるプログラミング言語を使用できます。 特定のプログラミング言語に関連する詳細については、各[クライアントのドキュメント](/developers/docs/nodes-and-clients/#execution-clients)を参照してください。 最新の API サポート情報についても、各クライアントのドキュメントを確認することをお勧めします。
 
-## 便利なライブラリ \{#convenience-libraries}
+## 便利なライブラリ {#convenience-libraries}
 
 JSON-RPC API を介してイーサリアムクライアントと直接やり取りすることもできますが、dapp デベロッパーの作業が多くの場合に簡単になるオプションもあります。 [JavaScript](/developers/docs/apis/javascript/#available-libraries)と[バックエンド API](/developers/docs/apis/backend/#available-libraries)には、JSON-RPC API の上にラッパーを提供する多くのライブラリが存在します。 これらのライブラリを使用することで、デベロッパーは任意のプログラミング言語による直感的な 1 行のメソッドを作成するだけで、イーサリアムとやり取りする JSON-RPC リクエストを(内部的に)初期化できるようになります。
 
-## コンセンサスクライアント API \{#consensus-clients}
+## コンセンサスクライアント API {#consensus-clients}
 
 このページでは、主にイーサリアムの実行クライアントで使用される JSON-RPC API について説明します。 しかし、コンセンサスクライアントには、ユーザーがノードについての情報のクエリを行える RPC API が用意されており、ビーコンブロック、ビーコンの状態、その他のコンセンサス関連の情報を直接ノードにリクエストできます。 この API については 、[ビーコン API のウェブページ](https://ethereum.github.io/beacon-APIs/#/)に記載されています。
 
 内部 API は、ノード内のクライアント間通信にも使用されます。 つまり、コンセンサスクライアントと実行クライアントとの間のデータ交換を可能にします。 これは「Engine API」と呼ばれており、仕様は[Github](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)で参照できます。
 
-## 実行クライアントの仕様 \{#spec}
+## 実行クライアントの仕様 {#spec}
 
 [GitHub 上で JSON-RPC API の全仕様を読む](https://github.com/ethereum/execution-apis)。
 
-## 慣例 \{#conventions}
+## 慣例 {#conventions}
 
-### 16 進数のエンコーディング \{#hex-encoding}
+### 16 進数のエンコーディング {#hex-encoding}
 
 フォーマットされていないバイト配列とそのバイト数という、2 つのキーデータ型が JSON で渡されます。 どちらも 16 進数エンコーディングで渡されますが、フォーマットの要件は異なります。
 
-#### バイト数 \{#quantities-encoding}
+#### バイト数 {#quantities-encoding}
 
 バイト数(整数、数字)をエンコーディングする際は、接頭辞「0x」の 16 進数でエンコードするのが最も簡潔です。ただし、ゼロは「0x0」と表記する必要があります。
 
@@ -46,7 +46,7 @@ JSON-RPC API を介してイーサリアムクライアントと直接やり取�
 - 誤り: 0x0400(先頭にゼロは入力できません)
 - 誤り: ff(接頭辞は 0x でなければなりません)
 
-### フォーマットされていないデータ \{#unformatted-data-encoding}
+### フォーマットされていないデータ {#unformatted-data-encoding}
 
 フォーマットされていないデータ(バイト配列、アカウントアドレス、ハッシュ、バイトコード配列)をエンコードする場合、16 進数としてエンコードし、接頭辞を「0x」とし、1 バイトごとに 2 桁の 16 進数でエンコードします。
 
@@ -58,7 +58,7 @@ JSON-RPC API を介してイーサリアムクライアントと直接やり取�
 - 誤り: 0xf0f0f(偶数でなければなりません)
 - 誤り: 004200(接頭辞が 0x でなければなりません)
 
-### デフォルトのブロックパラメータ \{#default-block}
+### デフォルトのブロックパラメータ {#default-block}
 
 以下のメソッドには、追加のデフォルトブロックパラメータがあります。
 
@@ -83,7 +83,7 @@ JSON-RPC API を介してイーサリアムクライアントと直接やり取�
 
 このページでは、コマンドラインツールである[curl](https://curl.se)を使用した、各 JSON-RPC API エンドポイントの使用方法の例を紹介します。 各エンドポイントの使用例は、[curl の使用例](#curl-examples)セクションで確認できます。 ページの下方には、Geth ノード、JSON-RPC API、curl を使用したスマートコントラクトのコンパイルとデプロイの[エンドツーエンドの例](#usage-example)もあります。
 
-## Curl の使用例 \{#curl-examples}
+## Curl の使用例 {#curl-examples}
 
 以下に、[curl](https://curl.se)でイーサリアムノードへのリクエストを行うことによって JSON-RPC API を使用する例をいくつか示します。 それぞれの例には、エンドポイントの説明、パラメータ、戻り値の型、使用方法の範例が含まれています。
 
@@ -93,18 +93,18 @@ curl リクエストは、コンテンツタイプに関するエラーメッセ
 curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],"id":67}' 127.0.0.1:8545
 ```
 
-## ゴシップ、状態、履歴 \{#gossip-state-history}
+## ゴシップ、状態、履歴 {#gossip-state-history}
 
 少数のコア JSON-RPC メソッドは、イーサリアムネットワークからのデータを必要とします。該当メソッドは、*ゴシップ、状態、履歴*という、3 つの主要カテゴリーに明確に分類できます。 各メソッドは、セクションにあるリンクからジャンプするか、目次でメソッドの全リストを調べることで見つけられます。
 
-### ゴシップメソッド \{#gossip-methods}
+### ゴシップメソッド {#gossip-methods}
 
 > チェーンの先頭までたどるメソッドです。 これにより、トランザクションがどのようにネットワークを進み、ブロックへたどり着くのか、また、クライアントがどのようにして新しいブロックについての情報を得るのかがわかります。
 
 - [eth_blockNumber](#eth_blocknumber)
 - [eth_sendRawTransaction](#eth_sendrawtransaction)
 
-### 状態メソッド \{#state_methods}
+### 状態メソッド {#state_methods}
 
 > このメソッドは、すべての保存データの現在の状態を報告します。 「状態」は、RAM 内の 1 つの大きな共有部分です。アカウントの残高、コントラクトデータ、ガスの推定値が含まれています。
 
@@ -115,7 +115,7 @@ curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","metho
 - [eth_call](#eth_call)
 - [eth_estimateGas](#eth_estimategas)
 
-### 履歴メソッド \{#history_methods}
+### 履歴メソッド {#history_methods}
 
 > このメソッドは、各ブロックの履歴レコードを始まりのブロックまでさかのぼって取得します。 これは、1 つの大きな追加専用ファイルのようなもので、すべてのブロックヘッダー、ブロックボディ、アンクルブロック、トランザクションレシートが含まれます。
 
@@ -132,9 +132,9 @@ curl -H "Content-Type: application/json" -X POST --data '{"jsonrpc":"2.0","metho
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
 
-## JSON-RPC API メソッド \{#json-rpc-methods}
+## JSON-RPC API メソッド {#json-rpc-methods}
 
-### web3_clientVersion \{#web3_clientversion}
+### web3_clientVersion {#web3_clientversion}
 
 現在のクライアントバージョンを返します。
 
@@ -159,7 +159,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_clientVersion","params":[],
 }
 ```
 
-### web3_sha3 \{#web3_sha3}
+### web3_sha3 {#web3_sha3}
 
 標準の SHA3-256 ではなく、指定されたデータの Keccak-256\_\_を返します。
 
@@ -188,7 +188,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"web3_sha3","params":["0x68656c6c
 }
 ```
 
-### net_version \{#net_version}
+### net_version {#net_version}
 
 現在のネットワーク ID を返します。
 
@@ -219,7 +219,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_version","params":[],"id":67
 }
 ```
 
-### net_listening \{#net_listening}
+### net_listening {#net_listening}
 
 クライアントのネットワーク接続のリッスンがアクティブな場合に、`true`を返します。
 
@@ -244,7 +244,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_listening","params":[],"id":
 }
 ```
 
-### net_peerCount \{#net_peercount}
+### net_peerCount {#net_peercount}
 
 クライアントに現在接続されているピアの数を返します。
 
@@ -269,7 +269,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"net_peerCount","params":[],"id":
 }
 ```
 
-### eth_protocolVersion \{#eth_protocolversion}
+### eth_protocolVersion {#eth_protocolversion}
 
 現在のイーサリアムプロトコルのバージョンを返します。 このメソッドは、[Geth では利用できないこと](https://github.com/ethereum/go-ethereum/pull/22064#issuecomment-788682924)に注意してください。
 
@@ -294,7 +294,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_protocolVersion","params":[]
 }
 ```
 
-### eth_syncing \{#eth_syncing}
+### eth_syncing {#eth_syncing}
 
 同期ステータスに関するデータを含むオブジェクトか、`false`を返します。
 
@@ -378,7 +378,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_syncing","params":[],"id":1}
 }
 ```
 
-### eth_coinbase \{#eth_coinbase}
+### eth_coinbase {#eth_coinbase}
 
 クライアントのコインベースアドレスを返します。
 
@@ -403,7 +403,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_coinbase","params":[],"id":6
 }
 ```
 
-### eth_chainId \{#eth_chainId}
+### eth_chainId {#eth_chainId}
 
 リプレイ保護されたトランザクションの署名に使われるチェーン ID を返します。
 
@@ -428,7 +428,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_chainId","params":[],"id":67
 }
 ```
 
-### eth_mining \{#eth_mining}
+### eth_mining {#eth_mining}
 
 クライアントの新規ブロックのマイニングがアクティブな場合に、`true`を返します。 プルーフ・オブ・ワークのネットワークに対してのみ `true`を返します。[マージ](/roadmap/merge/)以降、一部のクライアントでは使用できない場合があります。
 
@@ -453,7 +453,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_mining","params":[],"id":71}
 }
 ```
 
-### eth_hashrate \{#eth_hashrate}
+### eth_hashrate {#eth_hashrate}
 
 ノードがマイニングしている 1 秒あたりのハッシュの数を返します。 プルーフ・オブ・ワークのネットワークに対してのみ `true`を返します。[マージ](/roadmap/merge/)以降、一部のクライアントでは使用できない場合があります。
 
@@ -478,7 +478,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_hashrate","params":[],"id":7
 }
 ```
 
-### eth_gasPrice \{#eth_gasprice}
+### eth_gasPrice {#eth_gasprice}
 
 現在のガス価格の見積りを wei で返します。 例えば、Besu クライアントではデフォルトで、最新の 100 ブロックを検査し、ガスのユニット価格における中央値を返します。
 
@@ -503,7 +503,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_gasPrice","params":[],"id":7
 }
 ```
 
-### eth_accounts \{#eth_accounts}
+### eth_accounts {#eth_accounts}
 
 クライアントが所有するアドレスのリストを返します。
 
@@ -528,7 +528,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1
 }
 ```
 
-### eth_blockNumber \{#eth_blocknumber}
+### eth_blockNumber {#eth_blocknumber}
 
 最も新しいブロックの番号を返します。
 
@@ -553,7 +553,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id
 }
 ```
 
-### eth_getBalance \{#eth_getbalance}
+### eth_getBalance {#eth_getbalance}
 
 指定されたアドレスのアカウントの残高を返します。
 
@@ -583,7 +583,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBalance","params":["0x407
 }
 ```
 
-### eth_getStorageAt \{#eth_getstorageat}
+### eth_getStorageAt {#eth_getstorageat}
 
 指定されたアドレスのストレージの位置の値を返します。
 
@@ -650,7 +650,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
 
-### eth_getTransactionCount \{#eth_gettransactioncount}
+### eth_getTransactionCount {#eth_gettransactioncount}
 
 アドレスから*送信*されたトランザクションの数を返します。
 
@@ -683,7 +683,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionCount","params
 }
 ```
 
-### eth_getBlockTransactionCountByHash \{#eth_getblocktransactioncountbyhash}
+### eth_getBlockTransactionCountByHash {#eth_getblocktransactioncountbyhash}
 
 指定されたブロックハッシュに一致するブロック内のトランザクションの数を返します。
 
@@ -712,7 +712,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByHa
 }
 ```
 
-### eth_getBlockTransactionCountByNumber \{#eth_getblocktransactioncountbynumber}
+### eth_getBlockTransactionCountByNumber {#eth_getblocktransactioncountbynumber}
 
 指定されたブロック番号に一致するブロックのトランザクションの数を返します。
 
@@ -743,7 +743,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockTransactionCountByNu
 }
 ```
 
-### eth_getUncleCountByBlockHash \{#eth_getunclecountbyblockhash}
+### eth_getUncleCountByBlockHash {#eth_getunclecountbyblockhash}
 
 指定されたブロックハッシュに一致するブロックのアンクルの数を返します。
 
@@ -772,7 +772,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockHash","p
 }
 ```
 
-### eth_getUncleCountByBlockNumber \{#eth_getunclecountbyblocknumber}
+### eth_getUncleCountByBlockNumber {#eth_getunclecountbyblocknumber}
 
 指定されたブロック番号に一致するブロック内のアンクルの数を返します。
 
@@ -803,7 +803,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleCountByBlockNumber",
 }
 ```
 
-### eth_getCode \{#eth_getcode}
+### eth_getCode {#eth_getcode}
 
 指定されたアドレスのコードを返します。
 
@@ -836,7 +836,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getCode","params":["0xa94f53
 }
 ```
 
-### eth_sign \{#eth_sign}
+### eth_sign {#eth_sign}
 
 この署名メソッドは、イーサリアム固有の署名を次のように計算します。`sign(keccak256("\x19Ethereum Signed Message:\n" + len(message) + message)))`。
 
@@ -866,7 +866,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sign","params":["0x9b2055d37
 }
 ```
 
-### eth_signTransaction \{#eth_signtransaction}
+### eth_signTransaction {#eth_signtransaction}
 
 [eth_sendRawTransaction](#eth_sendrawtransaction)を使用して、ネットワークに後から送信可能なトランザクションに署名します。
 
@@ -900,7 +900,7 @@ curl -X POST --data '{"id": 1,"jsonrpc": "2.0","method": "eth_signTransaction","
 }
 ```
 
-### eth_sendTransaction \{#eth_sendtransaction}
+### eth_sendTransaction {#eth_sendtransaction}
 
 データフィールドにコードが含まれている場合は、新しいメッセージコールトランザクションまたはコントラクト作成を行います。また、`from`で指定されたアカウントを使ってデータフィールドに署名します。
 
@@ -948,7 +948,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{
 }
 ```
 
-### eth_sendRawTransaction \{#eth_sendrawtransaction}
+### eth_sendRawTransaction {#eth_sendrawtransaction}
 
 署名されたトランザクションについて、新規メッセージ呼び出しのトランザクションの作成、またはコントラクトの作成を行います。
 
@@ -981,7 +981,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_sendRawTransaction","params"
 }
 ```
 
-### eth_call \{#eth_call}
+### eth_call {#eth_call}
 
 ブロックチェーン上にトランザクションを作成せずに、即座に新規メッセージ呼び出しを実行できます。 読み取り専用のスマートコントラクト関数を実行するために頻繁に使われます(例えば、ERC-20 コントラクトの`balanceOf`など)。
 
@@ -1015,7 +1015,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_call","params":[{see above}]
 }
 ```
 
-### eth_estimateGas \{#eth_estimategas}
+### eth_estimateGas {#eth_estimategas}
 
 トランザクションの完了に必要なガスの推定値を計算して返します。 このトランザクションはブロックチェーンに追加されません。 推定値は、EVM の仕組みやノードのパフォーマンスなどのさまざまな理由により、トランザクションによって実際に使われるガス量を大幅に上回る可能性があることに注意してください。
 
@@ -1040,7 +1040,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_estimateGas","params":[{see 
 }
 ```
 
-### eth_getBlockByHash \{#eth_getblockbyhash}
+### eth_getBlockByHash {#eth_getblockbyhash}
 
 ハッシュを使用して、ブロックに関する情報を返します。
 
@@ -1117,7 +1117,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByHash","params":["0
 }
 ```
 
-### eth_getBlockByNumber \{#eth_getblockbynumber}
+### eth_getBlockByNumber {#eth_getblockbynumber}
 
 ブロック番号を使用して、ブロックに関する情報を返します。
 
@@ -1144,7 +1144,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getBlockByNumber","params":[
 
 結果については、[eth_getBlockByHash](#eth_getblockbyhash)を参照してください。
 
-### eth_getTransactionByHash \{#eth_gettransactionbyhash}
+### eth_getTransactionByHash {#eth_gettransactionbyhash}
 
 トランザクションハッシュを使用して、リクエストされたトランザクションに関する情報を返します。
 
@@ -1203,7 +1203,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByHash","param
 }
 ```
 
-### eth_getTransactionByBlockHashAndIndex \{#eth_gettransactionbyblockhashandindex}
+### eth_getTransactionByBlockHashAndIndex {#eth_gettransactionbyblockhashandindex}
 
 ブロックのハッシュとトランザクションのインデックスの位置を使用して、トランザクションに関する情報を返します。
 
@@ -1230,7 +1230,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockHashAnd
 
 結果については、[eth_getTransactionByHash](#eth_gettransactionbyhash)を参照してください。
 
-### eth_getTransactionByBlockNumberAndIndex \{#eth_gettransactionbyblocknumberandindex}
+### eth_getTransactionByBlockNumberAndIndex {#eth_gettransactionbyblocknumberandindex}
 
 ブロック番号とトランザクションのインデックスの位置を使用して、トランザクションに関する情報を返します。
 
@@ -1257,7 +1257,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberA
 
 結果については、[eth_getTransactionByHash](#eth_gettransactionbyhash)を参照してください。
 
-### eth_getTransactionReceipt \{#eth_gettransactionreceipt}
+### eth_getTransactionReceipt {#eth_gettransactionreceipt}
 
 トランザクションのハッシュを使用して、トランザクションのレシートを返します。
 
@@ -1324,7 +1324,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionReceipt","para
 }
 ```
 
-### eth_getUncleByBlockHashAndIndex \{#eth_getunclebyblockhashandindex}
+### eth_getUncleByBlockHashAndIndex {#eth_getunclebyblockhashandindex}
 
 ハッシュとアンクルインデックスの位置を使用して、ブロックのアンクルに関する情報を返します。
 
@@ -1353,7 +1353,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockHashAndIndex"
 
 **注**: アンクルには、個々のトランザクションは含まれていません。
 
-### eth_getUncleByBlockNumberAndIndex \{#eth_getunclebyblocknumberandindex}
+### eth_getUncleByBlockNumberAndIndex {#eth_getunclebyblocknumberandindex}
 
 ブロック番号とアンクルのインデックスの位置を使用して、ブロックのアンクルに関する情報を返します。
 
@@ -1382,7 +1382,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getUncleByBlockNumberAndInde
 
 結果については、[eth_getBlockByHash](#eth_getblockbyhash)を参照してください。
 
-### eth_newFilter \{#eth_newfilter}
+### eth_newFilter {#eth_newfilter}
 
 (ログの)状態変更を通知するために、フィルターオプションに基づいてフィルターオブジェクトを作成します。 状態変更を確認するには、[eth_getFilterChanges](#eth_getfilterchanges)を呼び出します。
 
@@ -1435,7 +1435,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newFilter","params":[{"topic
 }
 ```
 
-### eth_newBlockFilter \{#eth_newblockfilter}
+### eth_newBlockFilter {#eth_newblockfilter}
 
 新しいブロックの到着を通知するために、ノードにフィルターを作成します。 状態変更を確認するには、[eth_getFilterChanges](#eth_getfilterchanges)を呼び出します。
 
@@ -1456,7 +1456,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newBlockFilter","params":[],
 }
 ```
 
-### eth_newPendingTransactionFilter \{#eth_newpendingtransactionfilter}
+### eth_newPendingTransactionFilter {#eth_newpendingtransactionfilter}
 
 新しい保留中のトランザクションの到着を通知するために、ノードにフィルターを作成します。 状態変更を確認するには、[eth_getFilterChanges](#eth_getfilterchanges)を呼び出します。
 
@@ -1477,7 +1477,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_newPendingTransactionFilter"
 }
 ```
 
-### eth_uninstallFilter \{#eth_uninstallfilter}
+### eth_uninstallFilter {#eth_uninstallfilter}
 
 指定された ID を使用して、フィルターをアンインストールします。 ウォッチが不要になったら、必ず呼び出す必要があります。 また、フィルターは一定期間、[eth_getFilterChanges](#eth_getfilterchanges)を使用してリクエストされなければタイムアウトします。
 
@@ -1506,7 +1506,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_uninstallFilter","params":["
 }
 ```
 
-### eth_getFilterChanges \{#eth_getfilterchanges}
+### eth_getFilterChanges {#eth_getfilterchanges}
 
 フィルターのポーリングメソッド。最後のポーリング以降に発生したログの配列を返します。
 
@@ -1558,7 +1558,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterChanges","params":[
 }
 ```
 
-### eth_getFilterLogs \{#eth_getfilterlogs}
+### eth_getFilterLogs {#eth_getfilterlogs}
 
 指定された ID のフィルターに一致する、すべてのログの配列を返します。
 
@@ -1583,7 +1583,7 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getFilterLogs","params":["0x
 
 結果については、[eth_getFilterChanges](#eth_getfilterchanges)を参照してください。
 
-### eth_getLogs \{#eth_getlogs}
+### eth_getLogs {#eth_getlogs}
 
 指定されたフィルターオブジェクトに一致する、すべてのログの配列を返します。
 
@@ -1618,9 +1618,9 @@ curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getLogs","params":[{"topics"
 
 結果については、[eth_getFilterChanges](#eth_getfilterchanges)を参照してください。
 
-## 使用例 \{#usage-example}
+## 使用例 {#usage-example}
 
-### JSON_RPC を使用してコントラクトをデプロイする \{#deploying-contract}
+### JSON_RPC を使用してコントラクトをデプロイする {#deploying-contract}
 
 このセクションでは、RPC インターフェースのみを使用してコントラクトをデプロイする方法について、実例を交えて説明します。 コントラクトをデプロイする際には、複雑さを抽象化できる別の方法があります。例えば、RPC インターフェースを基盤としたライブラリ([web3.js](https://web3js.readthedocs.io/)、[web3.py](https://github.com/ethereum/web3.py)など)を使用できます。 通常、抽象化すると簡単に理解できるようになり、エラーも起こりにくくなります。それでも、内部の仕組みを知っておくことで、理解を深めることができます。
 
@@ -1696,7 +1696,7 @@ curl --data '{"jsonrpc":"2.0","method": "eth_getTransactionReceipt", "params": [
 
 これで、コントラクトが`0x4d03d617d700cf81935d7f797f4e2ae719648262`に作成されました。 レシートの代わりに null の結果が得られた場合は、トランザクションがまだブロックに含まれていないことを意味します。 しばらく待ってから、自分のマイナーが実行中になっていることを確認してから再試行してください。
 
-#### スマートコントラクトとのやりとり \{#interacting-with-smart-contract}
+#### スマートコントラクトとのやりとり {#interacting-with-smart-contract}
 
 この例では、`eth_sendTransaction`を使用して、コントラクトの`multiply`メソッドにトランザクションを送信します。
 
@@ -1757,7 +1757,7 @@ web3.sha3("Print(uint256)")
 
 ここまで、最も一般的なタスクをいくつか簡単に紹介し、JSON-RPC を直接使用するための方法を実例を交えて説明しました。
 
-## 関連トピック \{#related-topics}
+## 関連トピック {#related-topics}
 
 - [JSON-RPC の仕様](http://www.jsonrpc.org/specification)
 - [ ノードとクライアント](/developers/docs/nodes-and-clients/)

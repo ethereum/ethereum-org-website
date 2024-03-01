@@ -15,7 +15,7 @@ sourceUrl: https://docs.tellor.io/tellor/
 
 小测验：您的协议即将完成，但它需要一个预言机来访问链下数据......您该怎么做？
 
-## （软）前提条件 \{#soft-prerequisites}
+## （软）前提条件 {#soft-prerequisites}
 
 这篇文章旨在解释如何让访问预言机数据馈送变得简单易行。 这就是说，我们假定您具备一定的编码技能水平，下文侧重于讲述预言机方面。
 
@@ -27,7 +27,7 @@ sourceUrl: https://docs.tellor.io/tellor/
 
 Tellor 是一种可供直接实现的开源预言机。 本初学者教程旨在展示如何轻松地运行 Tellor，为您的项目提供一个完全去中心化的、抗审查的预言机。
 
-## 概述 \{#overview}
+## 概述 {#overview}
 
 Tellor 是一种预言机系统，参与者可以在该系统中请求链下数据点（例如 BTC/USD）的值，提供者相互竞争将该值添加到链上数据库中，使得所有以太坊智能合约都可以访问该值。 该数据库的输入由质押提供者网络提供保护。 Tellor 利用加密经济激励机制，奖励提供者诚实的数据提交行为，并通过发行 Tellor 的代币、Tribute (TRB) 和争议机制来惩罚不良行为者。
 
@@ -37,7 +37,7 @@ Tellor 是一种预言机系统，参与者可以在该系统中请求链下数�
 - 讲解一个简单示例。
 - 列出目前可以测试 Tellor 的网络的测试网地址。
 
-## 使用 Tellor \{#usingtellor}
+## 使用 Tellor {#usingtellor}
 
 首先安装一些基本工具，以便将 Tellor 作为预言机。 使用[此软件包](https://github.com/tellor-io/usingtellor)安装 Tellor 用户合约：
 
@@ -47,7 +47,7 @@ Tellor 是一种预言机系统，参与者可以在该系统中请求链下数�
 
 很好！ 既然您已经准备好工具了，我们来完成一个简单的练习来获取比特币价格：
 
-### BTC/USD 示例 \{#btcusd-example}
+### BTC/USD 示例 {#btcusd-example}
 
 继承 UsingTellor 合约，将 Tellor 的地址作为构造函数的参数：
 

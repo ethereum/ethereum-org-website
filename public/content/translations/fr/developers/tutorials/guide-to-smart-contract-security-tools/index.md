@@ -35,7 +35,7 @@ Chaque technique comporte ses avantages et ses inconvénients, et trouve son uti
 
 **Manticore** effectue l'analyse la plus poussée. Comme Echidna, Manticore vérifie les propriétés fournies par l'utilisateur. Il lui faudra plus de temps pour fonctionner, mais peut approuver la validité d'une propriété et ne signalera pas de fausses alertes.
 
-## Flux de travail conseillé \{#suggested-workflow}
+## Flux de travail conseillé {#suggested-workflow}
 
 Commencez avec les détecteurs intégrés de Slither pour vous assurer qu'aucun bogue mineur n'est présent ou ne sera introduit plus tard. Utilisez Slither pour vérifier les propriétés liées aux héritages, aux dépendances variables et aux problèmes structurels. Au fur et à mesure que le code base grossit, utilisez Echidna pour tester des propriétés plus complexes de la machine d'état. Revisitez Slither pour développer des contrôles personnalisés pour les protections non présentes dans Solidity comme la protection contre le remplacement d'une fonction. Enfin, utiliser Manticore pour effectuer des vérifications ciblées de propriétés critiques de sécurité, par exemple des opérations arithmétiques.
 
@@ -46,7 +46,7 @@ Commencez avec les détecteurs intégrés de Slither pour vous assurer qu'aucun 
 
 **Note sur les tests unitaires**. Les tests unitaires sont nécessaires pour construire des logiciels de haute qualité. Cependant, ces techniques ne sont pas les mieux adaptées pour trouver des failles de sécurité. Ils sont généralement utilisés pour tester les comportements positifs du code (c.-à-d. que le code fonctionne comme prévu dans un contexte normal), tandis que les défauts de sécurité tendent à résider dans des cas particuliers que les développeurs ne considéraient pas. Dans notre étude de dizaines d'examens sur la sécurité des contrats intelligents, [la couverture des tests unitaires n'a eu aucun effet sur le nombre ou la gravité des failles de sécurité](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/) que nous avons trouvés dans le code de notre client.
 
-## Détermination des propriétés de sécurité \{#determining-security-properties}
+## Détermination des propriétés de sécurité {#determining-security-properties}
 
 Pour tester et vérifier efficacement votre code, vous devez identifier les zones qui nécessitent une attention particulière. Comme vos ressources consacrées à la sécurité sont limitées, il est important d’optimiser vos efforts pour déterminer la portée des parties faibles ou de grande valeur de votre code base. La modélisation des menaces peut vous aider. Envisagez la révision :
 
@@ -57,7 +57,7 @@ Pour tester et vérifier efficacement votre code, vous devez identifier les zone
 - [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
 - [Utilisation des affirmations](https://blog.regehr.org/archives/1091)
 
-### Composants \{#components}
+### Composants {#components}
 
 Savoir ce que vous voulez vérifier vous aidera également à sélectionner le bon outil.
 
@@ -86,7 +86,7 @@ Les grands domaines qui sont souvent pertinents pour les contrats intelligents c
 - **Conformité standard.** Les normes Ethereum (par exemple ERC20) ont un historique de défauts dans leur conception. Soyez conscient des limites de la norme sur laquelle vous vous appuyez.
   - Slither, Echidna et Manticore vous aideront à détecter les écarts par rapport à une norme donnée.
 
-### Fiche mémo de sélection d’outils \{#tool-selection-cheatsheet}
+### Fiche mémo de sélection d’outils {#tool-selection-cheatsheet}
 
 | Composant               | Outils                      | Exemples                                                                                                                                                                                                                                                        |
 | ----------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

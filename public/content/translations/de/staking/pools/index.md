@@ -13,13 +13,13 @@ summaryPoints:
   - Halten Sie Staking-Token in Ihrer eigenen Wallet
 ---
 
-## Was sind Staking-Pools? \{#what-are-staking-pools}
+## Was sind Staking-Pools? {#what-are-staking-pools}
 
 Staking-Pools sind ein kollaborativer Ansatz, um es vielen Menschen mit kleineren ETH-Beträgen zu ermöglichen, die 32 ETH zu erhalten, die zur Aktivierung eines Satzes von Validator-Schlüsseln erforderlich sind. Die Pooling-Funktionalität wird innerhalb des Protokolls nicht nativ unterstützt, daher wurden separate Lösungen entwickelt, um diesen Bedarf zu decken.
 
 Einige Pools arbeiten mit Smart Contracts, bei denen Gelder in einen Vertrag eingezahlt werden können, der Ihren Einsatz (Stake) vertrauenswürdig verwaltet und verfolgt und Ihnen einen Token ausstellt, der diesen Wert widerspiegelt. Andere Pools beinhalten möglicherweise keine Smart Contracts und werden stattdessen außerhalb der Chain vermittelt.
 
-## Warum in einem Pool staken? \{#why-stake-with-a-pool}
+## Warum in einem Pool staken? {#why-stake-with-a-pool}
 
 Zusätzlich zu den Vorteilen, die wir in unserer [Einführung zum Staking](/staking/) beschrieben haben, bietet das Staking mit einem Pool einige konkrete Vorteile.
 
@@ -33,7 +33,7 @@ Zusätzlich zu den Vorteilen, die wir in unserer [Einführung zum Staking](/stak
 <StakingComparison page="pools" />
 }
 
-## Bitte beachten \{#what-to-consider}
+## Bitte beachten {#what-to-consider}
 
 Gepooltes oder delegiertes Staking wird vom Ethereum-Protokoll nicht nativ unterstützt, aber angesichts der Nachfrage nach Benutzern, weniger als 32 ETH einzusetzen, wurde eine wachsende Zahl von Lösungen entwickelt, um diesen Bedarf zu befriedigen.
 
@@ -49,7 +49,7 @@ Attributindikatoren werden unten verwendet, um auf nennenswerte Stärken oder Sc
 <StakingConsiderations page="pools" />
 }
 
-## Staking-Pools entdecken \{#explore-staking-pools}
+## Staking-Pools entdecken {#explore-staking-pools}
 
 Es gibt eine Vielzahl von Optionen, die Ihnen bei der Einrichtung helfen. Anhand der Indikatoren oben können Sie die Tools unten besser beurteilen.
 
@@ -65,7 +65,7 @@ Hinweis: Es ist wichtig, einen Dienst zu wählen, der [Client-Diversität](/deve
 
 Haben Sie einen Vorschlag für einen Staking-Tool, der noch fehlt? Machen Sie sich mit unserer [Richtlinie zum Aufführen von Produkten](/contributing/adding-staking-products/) vertraut, um beurteilen zu können, ob Ihr Vorschlag geeignet ist. Senden Sie ihn uns dann zur Prüfung zu.
 
-## Häufig gestellte Fragen \{#faq}
+## Häufig gestellte Fragen {#faq}
 
 {
 <ExpandableCard title="Wie erhalte ich Belohnungen?">
@@ -93,7 +93,7 @@ Einige Pooling-Optionen sind im Hinblick auf die Nodes, die sie unterstützen, s
 </ExpandableCard>
 }
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [Staking mit Rocket Pool – Staking-Übersicht](https://docs.rocketpool.net/guides/staking/overview.html) – _RocketPool-Dokumentation_
 - [Staking von Ethereum mit Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido Hilfedokumente_

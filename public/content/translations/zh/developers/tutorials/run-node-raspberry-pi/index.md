@@ -28,11 +28,11 @@ postMergeBannerTranslation: page-upgrades-post-merge-banner-tutorial-ood
 - 带散热片和风扇的外壳
 - USB 键盘、显示器和 HDMI 数据线（微型 HDMI）（可选）
 
-## 为什么要在 ARM 上运行以太坊？ \{#why-run-ethereum-on-arm}
+## 为什么要在 ARM 上运行以太坊？ {#why-run-ethereum-on-arm}
 
 ARM 单板机是一种便宜、灵活的小型计算机。 它们价格低廉、效率高、可配置成将全部资源专用于节点、能耗低、体积小，可以很顺利地安装在任何家庭中，因此成为运行以太坊节点的不二之选。 启动节点也非常容易，因为树莓派的 MicroSD 卡可以简单地使用预建映像刷写，无需下载或构建软件。
 
-## 工作原理 \{#how-does-it-work}
+## 工作原理 {#how-does-it-work}
 
 使用预先构建的映像刷写树莓派的内存卡。 此映像包含了运行以太坊节点所需的一切。 在刷写完内存卡后，用户只需要启动树莓派即可。 运行节点所需的所有进程自动启动。 这是可行的，因为内存卡中有基于 Linux 的操作系统，系统级进程在此操作系统上自动运行，将树莓派转变成以太坊节点。
 
@@ -40,7 +40,7 @@ ARM 单板机是一种便宜、灵活的小型计算机。 它们价格低廉、
 
 **映像负责处理所有必要的步骤**，包括从设置环境和格式化固态磁盘，到安装和运行以太坊软件，以及启动区块链同步。
 
-## 执行客户端和共识客户端说明 \{#note-on-execution-and-consensus-clients}
+## 执行客户端和共识客户端说明 {#note-on-execution-and-consensus-clients}
 
 Ethereum on Arm 相关文档解释了如何设置执行客户端*或*共识客户端，两个以太坊测试网（Kiln 和 Ropsten）除外。 这种可选性只有在以太坊从工作量证明过渡到权益证明（称为[合并](/roadmap/merge)）之前才有可能。
 
@@ -48,7 +48,7 @@ Ethereum on Arm 相关文档解释了如何设置执行客户端*或*共识客�
 合并后，将无法单独运行执行客户端和共识客户端 — 它们必须成对运行。 因此，在本教程中，我们将在以太坊测试网 (Kiln) 上运行一对执行客户端和共识客户端。
 </InfoBanner>
 
-## Kiln 树莓派 4 映像 \{#the-kiln-raspberry-pi-4-image}
+## Kiln 树莓派 4 映像 {#the-kiln-raspberry-pi-4-image}
 
 Kiln 是一个专门用于测试合并的公共测试网。 Ethereum on Arm 团队开发了一个映像，让用户可以在这个合并测试网上快速启动一对以太坊客户端。 Kiln 合并已经发生，但该网络仍在运行，因此可用于本教程。 Kiln 上的以太币没有实际价值。
 
@@ -64,7 +64,7 @@ shasum -a 256 ethonarm_kiln_22.03.01.img.zip
 
 请注意，对于没有树莓派但有 AWS 帐户的用户，提供的 ARM 实例可以运行相同的映像。 说明和 AWS 映像可从 Ethereum on Arm (https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html) 下载。
 
-## 刷写 MicroSD 卡 \{#flashing-the-microsd}
+## 刷写 MicroSD 卡 {#flashing-the-microsd}
 
 首先，应将用于树莓派的 MicroSD 卡插入台式机或笔记本电脑中，以便可以刷写。 接着，在终端执行以下命令，将下载的映像刷写到 SD 卡中：
 
@@ -85,7 +85,7 @@ sudo dd bs=1M if=ethonarm_kiln_22.03.01.img of=/dev/mmcblk0 conv=fdatasync statu
 
 现在 SD 卡已刷写完成，可以将其插入树莓派中了。
 
-## 启动节点 \{#start-the-node}
+## 启动节点 {#start-the-node}
 
 将 SD 卡插入树莓派后，连接以太网电缆和固态硬盘，然后打开电源。 操作系统将启动并自动执行预先配置好的任务，包括安装和构建客户端软件，从而将树莓派转变成以太坊节点。 此过程大约需要 10-15 分钟。
 
@@ -114,7 +114,7 @@ sudo journalctl -u lh-geth-beacon -f
 
 [Ethereum on Arm 相关文档](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html#id2)中提供有每一对客户端组合的特定服务名称。 它们可用于更新此处提供的命令，以用于任何客户端组合。
 
-## 验证者 \{#validators}
+## 验证者 {#validators}
 
 为了运行验证者，必须首先访问 32 个测试网以太币，它们必须存入 Kiln 存款合约。 这可以按照 [Kiln 启动板](https://kiln.launchpad.ethereum.org/en/)上的分步指南来完成。 在台式机/笔记本电脑上执行此操作，但不要生成密钥 — 密钥生成可以直接在树莓派上完成。
 
@@ -143,11 +143,11 @@ sudo systemctl start lh-geth-validator
 
 恭喜，你现在拥有运行在树莓派上的以太坊全节点和验证者！
 
-## 感谢反馈 \{#feedback-appreciated}
+## 感谢反馈 {#feedback-appreciated}
 
 我们知道树莓派拥有庞大的用户群体，能对以太坊网络的健康产生非常积极的影响。 请深入了解本教程中的详细信息，尝试在其他测试网甚至以太坊主网上运行，查看 Ethereum on Arm GitHub，提供反馈，提出问题并拉取请求，并帮助改进技术和相关文档！
 
-## 参考文献 \{#references}
+## 参考文献 {#references}
 
 1. https://ubuntu.com/download/raspberry-pi
 2. https://wikipedia.org/wiki/Port_forwarding

@@ -10,7 +10,7 @@ lang: tr
 
 [Ethash](https://github.com/ethereum/wiki/wiki/Ethash), [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto) algoritmasının değiştirilmiş bir versiyonudur. Ethash iş ispatı[bellek zor](https://wikipedia.org/wiki/Memory-hard_function) bir işlemdir, bunun algoritmayı ASIC dirençli hale getirdiği düşünülür. Sonunda Ethash ASICleri geliştirildi fakat GPU madenciliği iş ispatı durdurulana kadar hâlâ geçerli bir seçenekti. Ethash, Ethereum olmayan iş ispatı ağlarında hâlâ diğer paraların madenciliğini yapmak için kullanılmaktadır.
 
-## Ethash nasıl çalışır? \{#how-does-ethash-work}
+## Ethash nasıl çalışır? {#how-does-ethash-work}
 
 Bellek sertliği, nonce ve blok başlığına bağlı olarak sabit bir kaynağın alt kümelerinin seçilmesini gerektiren bir iş kanıtı algoritması ile elde edilir. Bu kaynağa (birkaç gigabayt boyutunda) DAG adı verilir. DAG, her 30000 blokta bir değiştirilir, bu devir olarak adlandırılan 125 saatlik bir penceredir (kabaca 5,2 gün) ve oluşturulması biraz zaman alır. DAG yalnızca blok yüksekliğine bağlı olduğundan, önceden oluşturulabilir, ancak böyle değilse, müşterinin bir blok oluşturmak için bu sürecin sonuna kadar beklemesi gerekir. İstemciler DAG'leri önceden oluşturup önbelleğe almazsa, ağ her bir dönem geçişinde büyük blok gecikmesi yaşayabilir. DAG'nin, hem düşük CPU hem de küçük bellek ile doğrulamaya izin veren iş kanıtının doğrulanması için oluşturulması gerekmediğini unutmayın.
 
@@ -23,7 +23,7 @@ Algoritmanın izlediği genel rota aşağıdaki gibidir:
 
 Büyük veri kümesi her 30000 blokta bir güncellenir, bu nedenle bir madencinin çabasının büyük çoğunluğu veri kümesini okumak olacak, değişiklik yapmak değil.
 
-## Tanımlamalar \{#definitions}
+## Tanımlamalar {#definitions}
 
 Aşağıdaki tanımları kullanıyoruz:
 
@@ -42,13 +42,13 @@ CACHE_ROUNDS = 3                  # number of rounds in cache production
 ACCESSES = 64                     # number of accesses in hashimoto loop
 ```
 
-### 'SHA3' kullanımı \{#sha3}
+### 'SHA3' kullanımı {#sha3}
 
 Ethereum'un gelişimi, SHA3 standardının geliştirilmesiyle çakıştı ve standartlar süreci, sonlandırılmış karma algoritmanın dolgusunda geç bir değişiklik yaptı, böylece Ethereum'un "sha3_256" ve "sha3_512" karmaları standart sha3 karmaları değil, diğer bağlamlarda "Keccak-256" ve "Keccak-512" olarak genellikle atıfta bulunulan bir değişkendir. Tartışmaya ör. [buradan](https://eips.ethereum.org/EIPS-1803), [buradan](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) ve [buradan bakabilirsiniz](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
 Lütfen aşağıdaki algoritmanın açıklamasında "sha3" karmalarına atıfta bulunulduğunu unutmayın.
 
-## Parametreler \{#parameters}
+## Parametreler {#parameters}
 
 Ethash'in önbelleği ve veri kümesi parametreleri, blok numarasına bağlıdır. Önbellek boyutu ve veri kümesi boyutu doğrusal olarak büyür; bununla birlikte, döngüsel davranışa yol açan tesadüfi düzenlilik riskini azaltmak için her zaman doğrusal olarak büyüyen eşiğin altındaki en yüksek asal değeri alırız.
 
@@ -70,7 +70,7 @@ def get_full_size(block_number):
 
 Veri kümesi ve önbellek boyutu değerleri tabloları ekte verilmiştir.
 
-## Önbellek üretimi \{#cache-generation}
+## Önbellek üretimi {#cache-generation}
 
 Şimdi, bir önbellek üretme fonksiyonunu belirtiyoruz:
 
@@ -94,7 +94,7 @@ def mkcache(cache_size, seed):
 
 Önbellek üretim süreci, önce 32 MB belleğin sırayla doldurulmasını, ardından Sergio Demian Lerner'in [_Strict Memory Hard Hashing Functions_'tan (2014)](http://www.hashcash.org/papers/memohash.pdf) _RandMemoHash_ algoritmasının iki geçişini gerçekleştirmeyi içerir. Çıktı, 524288 64 baytlık bir değer kümesidir.
 
-## Veri toplama fonksiyonu \{#date-aggregation-function}
+## Veri toplama fonksiyonu {#date-aggregation-function}
 
 Bazı durumlarda XOR için, ilişkisel olmayan bir ikame olarak, [FNV karması](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)ndan esinlenen bir algoritma kullanıyoruz. Asal değeri sırayla bir bayt (sekizli) ile çarpan FNV-1 spesifikasyonunun aksine, asal değeri tam 32 bit girişle çarptığımızı unutmayın.
 
@@ -107,7 +107,7 @@ def fnv(v1, v2):
 
 Lütfen sarı kağıdın fnv'yi v1\*(FNV_PRIME ^ v2) olarak belirttiğine dikkat edin, tüm mevcut uygulamalar tutarlı bir şekilde yukarıdaki tanımı kullanır.
 
-## Tam veri kümesi hesaplaması \{#full-dataset-calculation}
+## Tam veri kümesi hesaplaması {#full-dataset-calculation}
 
 Tam 1 GB veri kümesindeki her 64 baytlık öğe aşağıdaki gibi hesaplanır:
 
@@ -133,7 +133,7 @@ def calc_dataset(full_size, cache):
     return [calc_dataset_item(cache, i) for i in range(full_size // HASH_BYTES)]
 ```
 
-## Ana döngü \{#main-loop}
+## Ana döngü {#main-loop}
 
 Şimdi, belirli bir başlık ve nonce için nihai değerimizi üretmek için tüm veri kümesinden verileri topladığımız ana "hashimoto" benzeri döngüyü belirtiyoruz. Aşağıdaki kodda, `başlık`, kesilmiş bir \_ _ blok başlığı, yani **mixHash** ve **nonce** alanlarını hariç tutan bir başlığının RLP temsilinin SHA3-256 \_karmasını_ temsil eder. `nonce`, büyük endian düzende 64 bitlik işaretsiz bir tamsayının sekiz baytıdır. Yani `nonce[::-1]` bu değerin sekiz baytlık küçük endian temsilidir:
 
@@ -175,7 +175,7 @@ Esasen, 128 bayt genişliğinde bir "karışım" sürdürüyoruz ve art arda tam
 
 Bu algoritmanın çıktısı istenen hedefin altındaysa nonce geçerlidir. Sondaki fazladan `sha3_256` uygulamasının, en azından küçük bir miktar işin yapıldığını kanıtlamak için sağlanabilecek bir ara nonce'nin var olmasını sağladığına dikkat edin; bu hızlı dış iş kanıtı doğrulaması, DDoS karşıtı amaçlar için kullanılabilir. Ayrıca sonucun tarafsız, 256 bitlik bir sayı olduğuna dair istatistiksel güvence sağlamaya da hizmet eder.
 
-## Madencilik \{#mining}
+## Madencilik {#mining}
 
 Madencilik algoritması şu şekilde tanımlanır:
 
@@ -190,7 +190,7 @@ def mine(full_size, dataset, header, difficulty):
     return nonce
 ```
 
-## Tohum karmasını tanımlama \{#seed-hash}
+## Tohum karmasını tanımlama {#seed-hash}
 
 Belirli bir bloğun üzerinde madencilik yapmak için kullanılacak tohum karmasını hesaplamak için aşağıdaki algoritmayı kullanırız:
 
@@ -204,11 +204,11 @@ Belirli bir bloğun üzerinde madencilik yapmak için kullanılacak tohum karmas
 
 Sorunsuz madencilik ve doğrulama için, gelecekteki tohum karmalarını ve veri kümelerini ayrı bir iş parçacığında önceden hesaplamanızı öneririz.
 
-## Daha fazla okuma \{#further-reading}
+## Daha fazla okuma {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## Ek \{#appendix}
+## Ek {#appendix}
 
 Yukarıdaki python spesifikasyonunu kod olarak çalıştırmakla ilgileniyorsanız, aşağıdaki kod, başa eklenmelidir.
 
@@ -260,7 +260,7 @@ def isprime(x):
     return True
 ```
 
-### Veri boyutları \{#data-sizes}
+### Veri boyutları {#data-sizes}
 
 Aşağıdaki arama tabloları, yaklaşık 2048 veri ve önbellek boyutlu dönemleri sunar.
 

@@ -16,7 +16,7 @@ summaryPoint3: Sunt acționate de contractele inteligente pe blockchain-ul Ether
 
 Dacă Andy Warhol s-ar fi născut la sfârșitul anilor '90, probabil că ar fi bătut Campbell's Soup ca NFT. Este doar o chestiune de timp până când Kanye va pune o pereche de Yeezys pe Ethereum. Și într-o bună zi, v-ați putea dovedi proprietatea asupra mașinii cu un NFT.
 
-## Ce este un NFT? \{#what-are-nfts}
+## Ce este un NFT? {#what-are-nfts}
 
 NFT-urile sunt tokenuri pe care le putem folosi pentru a reprezenta proprietatea asupra unor elemente unice. Acestea ne permit să tokenizăm lucruri precum arta, obiectele de colecție și chiar bunurile imobiliare. Ele pot avea doar un singur proprietar oficial și sunt protejate de blockchain-ul Ethereum – nimeni nu poate să modifice înregistrarea proprietății sau să copieze/insereze un nou NFT.
 
@@ -28,13 +28,13 @@ Elementele fungibile, pe de altă parte, pot fi schimbate, pentru că ceea ce le
 <YouTube id="Xdkkux6OxfM" />
 }
 
-## Internetul activelor \{#internet-of-assets}
+## Internetul activelor {#internet-of-assets}
 
 NFT-urile și Ethereum rezolvă unele dintre problemele care există în prezent pe internet. Pe măsură ce totul devine mai digital, este necesar să se reproducă proprietățile obiectelor fizice, precum raritatea, unicitatea și dovada proprietății. Ca să nu mai vorbim de faptul că produsele digitale funcționează adesea numai în contextul produsului lor. De exemplu, nu puteți revinde un mp3 iTunes pe care l-ați achiziționat sau nu puteți schimba punctele de loialitate ale unei companii pe creditul altei platforme, chiar dacă există o piață pentru aceasta.
 
 Iată cum arată un internet al NFT-urilor în comparație cu internetul pe care majoritatea dintre noi îl folosim astăzi...
 
-### O comparație \{#nft-comparison}
+### O comparație {#nft-comparison}
 
 | Un internet NFT                                                                                                                                                                                                                                 | Internetul de astăzi                                                                                                                                                                                                                   |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -45,7 +45,7 @@ Iată cum arată un internet al NFT-urilor în comparație cu internetul pe care
 | Creatorii își pot păstra drepturile de proprietate asupra propriei opere și pot solicita redevențe în mod direct.                                                                                                                               | Platformele, cum ar fi serviciile de streaming muzical, rețin majoritatea profiturilor din vânzări.                                                                                                                                    |
 | Elementele pot fi utilizate în moduri surprinzătoare. De exemplu, puteți utiliza arta digitală ca garanție într-un împrumut descentralizat.                                                                                                     |                                                                                                                                                                                                                                        |
 
-### Exemple de NFT-uri \{#nft-examples}
+### Exemple de NFT-uri {#nft-examples}
 
 Lumea NFT-urilor este relativ nouă. Teoretic, domeniul de aplicare a NFT-urilor este tot ceea ce este unic și necesită o proprietate demonstrabilă. Iată câteva exemple de NFT-uri care există astăzi, ca să vă faceți o idee:
 
@@ -57,23 +57,23 @@ Lumea NFT-urilor este relativ nouă. Teoretic, domeniul de aplicare a NFT-urilor
 - [Un nume de domeniu](https://app.ens.domains/name/ethereum.eth)
 - [Un bilet care vă oferă acces la un eveniment sau un cupon](https://www.yellowheart.io/)
 
-### exemple ethereum.org \{#ethereum-org-examples}
+### exemple ethereum.org {#ethereum-org-examples}
 
 Folosim NFT-uri pentru a ne răsplăti colaboratorii și avem chiar propriul nostru nume de domeniu NFT.
 
-#### POAP-uri (Protocol de dovadă a prezenței) \{#poaps}
+#### POAP-uri (Protocol de dovadă a prezenței) {#poaps}
 
 În cazul în care contribuiți la ethereum.org, puteți revendica un POAP NFT. Acestea sunt obiecte de colecție care dovedesc că ați participat la un eveniment. Unele reuniuni crypto au folosit POAP-urile ca un fel de bilet de intrare la evenimentele lor. [Mai multe despre modurile de a contribui](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 
-#### ethereum.eth \{#ethereum-dot-eth}
+#### ethereum.eth {#ethereum-dot-eth}
 
 Acest site are un nume de domeniu alternativ acţionat de NFT-uri **ethereum.eth**. Adresa noastră `.org` este gestionată la nivel central de un furnizor de sistem de nume de domeniu (DNS), în timp ce ethereum`.eth` este înregistrată pe Ethereum prin intermediul Ethereum Name Service (ENS). Și este deținută și administrată de noi. [Verificați dosarul nostru ENS](https://app.ens.domains/name/ethereum.eth)
 
 [Mai multe despre ENS](https://app.ens.domains)
 
-## Cum funcționează NFT-urile? \{#how-nfts-work}
+## Cum funcționează NFT-urile? {#how-nfts-work}
 
 NFT-urile sunt diferite de tokenurile ERC-20, cum ar fi DAI sau LINK, prin faptul că fiecare token individual este complet unic și nu este divizibil. NFT-urile oferă posibilitatea de a atribui sau de a revendica dreptul de proprietate asupra oricărui set unic de date digitale ce poate fi urmărit prin utilizarea blockchain-ului Ethereum ca registru public. Un NFT este emis din obiecte digitale ca o reprezentare a activelor digitale sau non-digitale. De exemplu, un NFT ar putea reprezenta:
 
@@ -126,7 +126,7 @@ Cu alte cuvinte, putem spune că, dacă _dețineți_ un NFT:
 - Puteți să câștigați redevențe de fiecare dată când este vândut.
 - Îl puteți vinde pe orice piață de NFT-uri sau direct între participanți (peer-to-peer). Nu sunteți blocat pe nicio platformă și nu vă trebuie niciun intermediar.
 
-### Raritatea \{#scarcity}
+### Raritatea {#scarcity}
 
 Cel care a creat un NFT decide cât de rar este activul său.
 
@@ -134,13 +134,13 @@ Să luăm ca exemplu un bilet la un eveniment sportiv. Tot aşa cum organizatoru
 
 În astfel de cazuri fiecare NFT tot va avea un identificator unic (în genul unui cod de bare pe un „bilet” tradițional), cu un singur proprietar. Caracterul intenţionat limitat al NFT-ului contează și este la discreția creatorului său. Creatorul ar putea să facă unic fiecare NFT în mod intenţionat pentru a crea o penurie sau să aibă alte motive ca să creeze câteva mii de duplicate. Nu trebuie să uităm că toate acestea sunt informații publice.
 
-### Redevențe \{#royalties}
+### Redevențe {#royalties}
 
 Unele NFT-uri vor plăti în mod automat redevențe creatorilor lor atunci când sunt vândute. Conceptul este încă în curs de dezvoltare, însă este unul dintre cele mai puternice. De exemplu, proprietarii originali ai [EulerBeats Originals](https://eulerbeats.com/) câștigă o redevență de 8% la fiecare vânzare a unui NFT. Iar o serie de platforme, cum ar fi [Foundation](https://foundation.app) și [Zora](https://zora.co/), oferă redevențe pentru artiștii lor.
 
 Aceasta se petrece complet automat, deci creatorii nu au decât să stea liniștiți și să câştige redevențe în momentul în care opera lor este vândută de la o persoană la alta. În momentul de față, calculul redevențelor se face de manieră foarte manuală și nu are precizia necesară – mulți creatori nu sunt plătiți așa cum merită. Atunci când NTF-ul dvs. este programat pentru redevențe, nu veți pierde niciodată nimic.
 
-## La ce se utilizează NFT-urile? \{#nft-use-cases}
+## La ce se utilizează NFT-urile? {#nft-use-cases}
 
 Uitaţi câteva informații suplimentare despre unele cazuri de utilizare și viziuni mai bine dezvoltate pentru utilizarea NTF-urilor pe Ethereum.
 
@@ -154,7 +154,7 @@ Uitaţi câteva informații suplimentare despre unele cazuri de utilizare și vi
 <Divider />
 }
 
-### Maximizarea veniturilor creatorilor \{#nfts-for-creators}
+### Maximizarea veniturilor creatorilor {#nfts-for-creators}
 
 NFT-urile sunt utilizate cel mai mult în ziua de azi în lumea conținutului digital. Aceasta se întâmplă deoarece industria de azi este falimentară. Creatorii de conținut privesc cum le dispar profiturile şi potenţialul de câştig înghiţite de platformele care le publică acel conținut.
 
@@ -171,7 +171,7 @@ Odată ce conținutul este vândut, fondurile le revin în mod direct. Și chiar
   </ButtonLink>
 </InfoBanner>
 
-#### Problema copierii/inserării \{#nfts-copy-paste}
+#### Problema copierii/inserării {#nfts-copy-paste}
 
 Pesimiștii aduc în discuție faptul că NFT-urile sunt „o stupiditate”, de obicei alături de o imagine care îi arată făcând o captură de ecran a unui NFT de artă. „Iată, acum am această imagine pe gratis!” spun ei cu aroganță.
 
@@ -185,7 +185,7 @@ Proprietatea asupra lucrului real verificabil are o valoare mai mare decât dac�
 <Divider />
 }
 
-### Stimularea potențialului de joc \{#nft-gaming}
+### Stimularea potențialului de joc {#nft-gaming}
 
 NFT-urile au stârnit un mare interes din partea dezvoltatorilor de jocuri. NFT-urile pot să ofere dovezi de proprietate asupra elementelor din jocuri, să alimenteze economiile în jocuri și să aducă numeroase beneficii jucătorilor.
 
@@ -210,7 +210,7 @@ Jocul de realitate virtuală Decentraland vă oferă chiar posibilitatea să cum
 <Divider />
 }
 
-### Cum se realizează adrese Ethereum mai ușor de reținut \{#nft-domains}
+### Cum se realizează adrese Ethereum mai ușor de reținut {#nft-domains}
 
 Serviciul de nume din Ethereum folosește NFT-uri pentru a vă crea o adresă Ethereum cu un nume mai ușor de reținut, precum `mywallet.eth`. Aceasta înseamnă că puteți cere cuiva să vă trimită ETH prin `mywallet.eth` în loc de `0x123456789.....`.
 
@@ -226,7 +226,7 @@ Numele dvs. ENS poate:
 <Divider />
 }
 
-### Elemente fizice \{#nft-physical-items}
+### Elemente fizice {#nft-physical-items}
 
 Tokenizarea elementelor fizice nu este încă tot la fel de dezvoltată ca și cea a omologilor lor digitali. Însă există o mulțime de proiecte care explorează tokenizarea bunurilor imobiliare, a articolelor de modă unicat și altele.
 
@@ -238,11 +238,11 @@ Cu active valoroase ca mașinile și proprietățile care pot fi reprezentate pe
 <Divider />
 }
 
-### NFT-uri și DeFi \{#nfts-and-defi}
+### NFT-uri și DeFi {#nfts-and-defi}
 
 Lumea NFT-ului și cea a [finanțelor descentralizate (DeFi)](/defi/) încep să colaboreze într-o serie de moduri interesante.
 
-#### Împrumuturi garantate de NFT-uri \{#nft-backed-loans}
+#### Împrumuturi garantate de NFT-uri {#nft-backed-loans}
 
 Există aplicații DeFi care vă permit să luaţi bani cu împrumut bani folosind garanții. De exemplu, garantați 10 ETH pentru a putea împrumuta 5000 DAI ([un stablecoin](/stablecoins/)). Acest lucru garantează că împrumutătorul îşi va primi banii înapoi – dacă împrumutatul nu rambursează DAI, garanția este trimisă împrumutătorului. Totuși, nu oricine are suficiente cripto pe care să le folosească drept garanție.
 
@@ -250,7 +250,7 @@ Există aplicații DeFi care vă permit să luaţi bani cu împrumut bani folosi
 
 Iar această modalitate nu este greu de realizat pe Ethereum, pentru că ambele lumi (NFT-urile și DeFi) împart aceeași infrastructură.
 
-#### Proprietatea fracționată \{#fractional-ownership}
+#### Proprietatea fracționată {#fractional-ownership}
 
 Creatorii de NFT-uri pot de asemenea să creeze „acțiuni” pentru NFT-ul lor. Acest lucru oferă investitorilor și fanilor posibilitatea să dețină o parte dintr-un NFT fără a fi nevoie să îl cumpere în întregime. Acest lucru deschide și mai multe oportunități, atât pentru creatorii de NFT-uri, cât și pentru colecționari.
 
@@ -275,7 +275,7 @@ Așa cum am menționat, acesta este un domeniu în creștere. NFT-urile, organiz
 <Divider />
 }
 
-## Ethereum și NFT-urile \{#ethereum-and-nfts}
+## Ethereum și NFT-urile {#ethereum-and-nfts}
 
 Ethereum face posibilă funcționarea NFT-urilor din mai multe motive:
 
@@ -285,7 +285,7 @@ Ethereum face posibilă funcționarea NFT-urilor din mai multe motive:
 - Toate produsele Ethereum au în comun același „backend”. Cu alte cuvinte, toate produsele Ethereum pot să se înțeleagă cu ușurință între ele – acest lucru face ca NFT-urile să fie portabile între produse. Puteți cumpăra un NFT pentru un produs și îl puteți vinde cu ușurință pentru un alt produs. În calitate de creator, puteți să vă listați NFT-urile simultan pe mai multe produse – fiecare produs va avea cele mai recente informații privind proprietatea.
 - Ethereum nu se prăbușește niciodată, ceea ce înseamnă că tokenurile dvs. vor fi întotdeauna disponibile pentru vânzare.
 
-## Impactul NFT-urilor asupra mediului \{#environmental-impact-nfts}
+## Impactul NFT-urilor asupra mediului {#environmental-impact-nfts}
 
 NFT-urile cresc în popularitate, ceea ce înseamnă că sunt de asemenea supuse unei analize tot mai riguroase – în special asupra amprentei lor de carbon.
 
@@ -297,7 +297,7 @@ Pentru a clarifica mai multe lucruri:
 
 Pentru a explica mai departe, va trebui să intrăm în aspecte mai tehnice, așa că aveți răbdare cu noi...
 
-### Nu dați vina pe NFT-uri \{#nft-qualities}
+### Nu dați vina pe NFT-uri {#nft-qualities}
 
 Întregul ecosistem NFT funcționează pentru că Ethereum este descentralizat și sigur.
 
@@ -307,7 +307,7 @@ Securizat, însemnând că nimeni nu poate să vă copieze/insereze NFT-ul sau s
 
 Aceste calități ale lui Ethereum vă permit să posedați digital elemente unice și să obțineți un preț corect pentru conținutul dvs. Dar aceasta implică un cost. Blockchain-urile precum Bitcoin și Ethereum, sunt mari consumatoare de energie chiar acum, deoarece este nevoie de multă energie pentru a păstra aceste calități. Dacă era ușor ca istoria Ethereum să fie rescrisă pentru a fura NFT-uri sau criptomonede, sistemul s-ar prăbuși.
 
-#### Munca depusă pentru emiterea unui NFT \{#minting-nfts}
+#### Munca depusă pentru emiterea unui NFT {#minting-nfts}
 
 Atunci când emiteți un NFT, trebuie să aibă loc următoarele:
 
@@ -320,7 +320,7 @@ Toate aceste sarcini sunt efectuate de miner-i. Și aceștia informează restul 
 
 [Aflați mai multe despre minare](/developers/docs/consensus-mechanisms/pow/)
 
-#### Securizarea NFT-ului prin minare \{#securing-nfts}
+#### Securizarea NFT-ului prin minare {#securing-nfts}
 
 Dificultatea minării provine din faptul că este necesară multă putere de calcul pentru a crea noi blocuri în lanț. Important este faptul că blocurile sunt create în mod constant, nu numai atunci când sunt necesare. Acestea sunt create la un interval de aproximativ 12 secunde.
 
@@ -328,7 +328,7 @@ Acesta este un lucru important pentru a face Ethereum imposibil de falsificat, u
 
 Totuși, acest lucru înseamnă că puterea de calcul trebuie să fie folosită în mod constant. Aceasta mai înseamnă că un bloc care conține 0 tranzacții NFT va continua să aibă aproape aceeași amprentă de carbon, pentru că tot va fi consumată puterea de calcul pentru a-l crea. Alte tranzacții non-NFT vor umple blocurile.
 
-#### În acest moment blockchain-urile consumă multă energie \{#blockchains-intensive}
+#### În acest moment blockchain-urile consumă multă energie {#blockchains-intensive}
 
 Deci da, există o amprentă de carbon asociată cu crearea de blocuri prin minare – și aceasta este o problemă şi pentru lanțuri cum ar fi Bitcoin – dar nu este direct generată de NFT-uri.
 
@@ -338,13 +338,13 @@ O mare parte din minerit utilizează surse regenerabile de energie sau energie n
 
 Rolul nostru nu este de a pleda pentru amprenta de mediu a minării, ci vrem să explicăm în ce fel lucrurile se schimbă în bine.
 
-### Un viitor mai ecologic... \{#a-greener-future}
+### Un viitor mai ecologic... {#a-greener-future}
 
 De când există Ethereum, consumul de energie pentru minare a fost în centrul atenției dezvoltatorilor și cercetătorilor. Și viziunea consta în înlocuirea acestuia cât mai curând posibil. [Mai multe despre viziunea Ethereum](/roadmap/vision/)
 
 Viziunea se concretizează chiar acum.
 
-#### Un Ethereum mai ecologic \{#greener-ethereum}
+#### Un Ethereum mai ecologic {#greener-ethereum}
 
 Ethereum parcurge în prezent o serie de actualizări care vor înlocui minarea cu [mizarea](/staking/). Aceasta va elimina puterea de calcul ca mecanism de securitate și va reduce amprenta de carbon a lui Ethereum cu ~99,95%<sup>[^1]</sup>. În această lume, staker-ii alocă fonduri în locul puterii de calcul pentru securizarea rețelei.
 
@@ -360,7 +360,7 @@ _V-am oferit o comparație elementară cu Visa pentru a vă ajuta să înțelege
 
 _Este important să ne amintim că Ethereum nu doar efectuează tranzacții financiare, ci este o platformă pentru aplicații, așa că o comparație mai corectă ar fi cu mai multe companii/industrii, inclusiv Visa, AWS și multe altele!_
 
-#### Desfășurarea în timp \{#timelines}
+#### Desfășurarea în timp {#timelines}
 
 Procesul a început deja. [Lanțul Beacon](/roadmap/beacon-chain/), prima actualizare a fost lansată în decembrie 2020. Acesta oferă fundamentul pentru mizare, permițând stakerilor să intre în sistem. Pasul următor, important pentru eficiența energetică, este fuzionarea lanțului actual, cel securizat de miner-i, cu Lanțul Beacon, unde nu mai este nevoie de minare. Deocamdată, termenele de implementare nu pot fi exacte, dar se estimează că acest lucru se va întâmpla la un moment dat în 2022. Procesul este cunoscut sub numele de fuziune (cunoscut anterior sub numele de andocare). [Aflați mai multe despre fuziune](/roadmap/merge/).
 
@@ -368,11 +368,11 @@ Procesul a început deja. [Lanțul Beacon](/roadmap/beacon-chain/), prima actual
   Mai multe despre actualizările Ethereum
 </ButtonLink>
 
-## Construiți cu NFT-uri \{#build-with-nfts}
+## Construiți cu NFT-uri {#build-with-nfts}
 
 Cele mai multe NFT-uri sunt construite cu ajutorul unui standard coerent cunoscut sub numele de [ERC-721](/developers/docs/standards/tokens/erc-721/). Totuși, există și alte standarde pe care ați putea dori să le analizați. Standardul [ERC-1155](https://blog.enjincoin.io/erc-1155-the-crypto-item-standard-ac9cf1c5a226) permite tokenurile semi-fungibile, care sunt deosebit de utile în lumea jocurilor. Mai recent, [EIP-2309](https://eips.ethereum.org/EIPS/eip-2309) a fost propus pentru a crește mult eficiența emiterii NFT-urilor. Acest standard vă permite să creați cât de multe tokenuri doriți într-o singură tranzacție!
 
-## Referințe suplimentare \{#further-reading}
+## Referințe suplimentare {#further-reading}
 
 - [Date legate de arta cripto](https://cryptoart.io/data) – Richard Chen, actualizate automat
 - [OpenSea: Biblia NFT](https://opensea.io/blog/guides/non-fungible-tokens/) – _Devin Fizner, 10 ianuarie 2020_
@@ -385,11 +385,11 @@ Cele mai multe NFT-uri sunt construite cu ajutorul unui standard coerent cunoscu
 <Divider />
 }
 
-### Note de subsol și surse \{#footnotes-and-sources}
+### Note de subsol și surse {#footnotes-and-sources}
 
 Aceasta explică felul în care am ajuns la estimările noastre energetice de mai sus. Aceste estimări se aplică rețelei ca întreg și nu se rezumă doar la procesul de creare, cumpărare sau vânzare de NFT-uri.
 
-#### 1. 99,95% de reducere a energiei pentru minare \{#fn-1}
+#### 1. 99,95% de reducere a energiei pentru minare {#fn-1}
 
 Această reducere de 99,95% a consumului de energie de la un sistem securizat prin minare la un sistem securizat prin mizare se calculează folosind următoarele surse de date:
 
@@ -409,13 +409,13 @@ Restul validatorilor sunt gestionați de către staker-i de custodie, cum ar fi 
 
 Aceasta este o reducere de cel puțin 99,95% a consumului total de energie din estimarea Digiconomist de 44,94 TWh pe an pe care miner-ii Ethereum o consumă actualmente.
 
-#### 2. Consumul de energie al Visa \{#fn-2}
+#### 2. Consumul de energie al Visa {#fn-2}
 
 Costul a 100.000 de tranzacții Visa este de 149 kWh - [Consumul mediu de energie pe tranzacție al rețelei Bitcoin în comparație cu rețeaua VISA în 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
 
 La sfârșitul anului încheiat în septembrie 2020 au procesat 140.839.000.000 de tranzacții – [Raportul financiar Visa pentru trimestrul IV 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)
 
-#### 3. Consumul de energie pentru 100.000 de tranzacții pe o rețea de fragmente de dovada-mizei. \{#fn-3}
+#### 3. Consumul de energie pentru 100.000 de tranzacții pe o rețea de fragmente de dovada-mizei. {#fn-3}
 
 Se estimează că actualizările de scalabilitate vor permite rețelei să proceseze între 25.000 și 100.000 de tranzacții pe secundă, [,100.000 fiind maximul teoretic în acest moment](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698).
 

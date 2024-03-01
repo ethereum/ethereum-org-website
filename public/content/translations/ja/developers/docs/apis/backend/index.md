@@ -10,15 +10,15 @@ lang: ja
 
 もし特定のプログラミング言語を使用してイーサリアムノードに接続したい場合には、独自のソリューションのほかに公開されている既存のライブライを使用することでより簡単に実装できます。 これらのライブラリにより、デベロッパーは直感的な 1 行のメソッドを作成するだけで、イーサリアムとやり取りする JSON-RPC リクエストを (内部的に) 初期化できるようになります。
 
-## 前提知識 \{#prerequisites}
+## 前提知識 {#prerequisites}
 
 [イーサリアムスタック](/developers/docs/ethereum-stack/) と [イーサリアムクライアント](/developers/docs/nodes-and-clients/)も内容を理解するのに役立ちます。
 
-## ライブラリの利点 \{#why-use-a-library}
+## ライブラリの利点 {#why-use-a-library}
 
 これらのライブラリは、イーサリアムノードと直接やり取りする複雑な大部分を抽象化します。 また、ユーティリティ関数 (ETH を Gwei に変換する関数など) も提供されています。そのため、デベロッパーは複雑なイーサリアムクライアントの作業に費やす時間を削減でき、自身のアプリケーションの独自機能の開発作業に専念できます。
 
-## 利用可能なライブラリ \{#available-libraries}
+## 利用可能なライブラリ {#available-libraries}
 
 **Alchemy -** **_イーサリアム開発プラットフォーム_**
 
@@ -167,16 +167,16 @@ lang: ja
 - [ドキュメント](https://services.tokeniew/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 _役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
 
-## 関連トピック \{#related-topics}
+## 関連トピック {#related-topics}
 
 - [ ノードとクライアント](/developers/docs/nodes-and-clients/)
 - [開発フレームワーク](/developers/docs/frameworks/)
 
-## 関連チュートリアル \{#related-tutorials}
+## 関連チュートリアル {#related-tutorials}
 
 - [Javascript でイーサリアムブロックチェーンを使用するための Web3js のセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトで web3.js をセットアップするための手順。_
 - [JavaScript からスマートコントラクトを呼び出す](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI トークンを使って、JavaScript からスマートコントラクトを呼び出す方法を確認する。_

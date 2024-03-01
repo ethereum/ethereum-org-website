@@ -4,7 +4,7 @@ description: Grunnleggende informasjon du trenger for å komme i gang med Ethere
 lang: nb
 ---
 
-# Ethereum-lommebøker \{#ethereum-wallets}
+# Ethereum-lommebøker {#ethereum-wallets}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: nb
 
 </FeaturedText>
 
-## Hva er en Ethereum-lommebok, og hvilken burde jeg bruke? \{#what-is-an-ethereum-wallet-and-which-one-should-i-use}
+## Hva er en Ethereum-lommebok, og hvilken burde jeg bruke? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 
 Lommebøker er applikasjoner som gjør det enkelt å holde og sende ut [ETH](/eth/), i tillegg til å samhandle med [applikasjoner bygget på Ethereum](/dapps/).
 

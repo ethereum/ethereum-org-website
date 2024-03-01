@@ -4,13 +4,13 @@ description: Eine Auflistung der Förderprogramme im gesamten Ethereum-Ökosyste
 lang: de
 ---
 
-# Ethereum-Finanzierungshilfen \{#ethereum-grants}
+# Ethereum-Finanzierungshilfen {#ethereum-grants}
 
 Die unten aufgelisteten Programme bieten eine Vielzahl von Finanzierungshilfen für Projekte, die den Erfolg und das Wachstum des Ethereum-Ökosystems fördern. Nutzen Sie die Liste als Leitfaden, um Finanzierungsmöglichkeiten zu finden und zu beantragen, die Ihr nächstes Ethereum-Projekt zu einem Erfolg machen.
 
 Diese Liste wird von unserer Community verwaltet. Wenn Informationen fehlen oder falsch sind, bearbeiten Sie diese Seite gerne.
 
-## Das weitere Ethereum-Ökosystem \{#broad-ethereum-ecosystem}
+## Das weitere Ethereum-Ökosystem {#broad-ethereum-ecosystem}
 
 Diese Programme unterstützen das breit gefächerte Ethereum-Ökosystem, indem sie Finanzierungen für zahlreiche Projekte bereitstellen. Dazu gehören unter anderem Lösungen zu Skalierbarkeit, Community-Aufbau, Sicherheit und Privatsphäre. Diese Fördermaßnahmen sind nicht spezifisch für eine bestimmte Ethereum-Plattform und sind ein guter Ausgangspunkt, wenn Sie unsicher sind.
 
@@ -23,7 +23,7 @@ Diese Programme unterstützen das breit gefächerte Ethereum-Ökosystem, indem s
 - [Crunchbase für Web3-Grants](https://www.cryptoneur.xyz/web3-grants) - _Filter und suche nach Grants nach Kategorie, Anwendungsfall, Betrag und mehr. Hilf anderen dabei, die richtige Zuwendung zu finden._
 - [Akademische Stipendien](https://esp.ethereum.foundation/academic-grants) – _Stipendien zur Untstützung akademischer Arbeiten in Bezug auf Ethereum_
 
-## Projektspezifisch \{#project-specific}
+## Projektspezifisch {#project-specific}
 
 Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklung und Erprobung ihrer eigenen Technologie geschaffen.
 
@@ -41,13 +41,13 @@ Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklun
 - [Uniswap-Zuschussprogramm](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)-Community_
 - [Web3-Förderung](https://web3grants.net) – _Eine umfangreiche Liste von Web3-/Krypto-verwandten Förderprogrammen_
 
-## Quadratische Finanzierung \{#quadratic-funding}
+## Quadratische Finanzierung {#quadratic-funding}
 
 Die Open-Source-Wurzeln von Ethereum haben zur Entwicklung eines interessanten neuen Finanzierungsmodells geführt: die quadratische Finanzierung. Dieses Modell hat das Potenzial die Art und Weise zu verbessern, wie wir in Zukunft alle Arten von öffentlichen Gütern finanzieren. Die quadratische Finanzierung stellt sicher, dass die Projekte mit dem größten individuellen Bedarf auch die meisten Mittel erhalten. Mit anderen Worten: Projekte, die das Leben der meisten Menschen verbessern können. [Mehr zur quadratischen Finanzierung.](/defi/#quadratic-funding)
 
 - [Gitcoin](https://gitcoin.co/grants)
 - [clr.fund](https://clr.fund/)
 
-## Arbeiten in Ethereum \{#work-in-ethereum}
+## Arbeiten in Ethereum {#work-in-ethereum}
 
 Sind Sie noch nicht bereit, Ihr eigenes Projekt zu starten? Es gibt Hunderte von Unternehmen, die aktiv nach engagierten Personen suchen, die im Ethereum-Ökosystem arbeiten und einen Beitrag dazu leisten wollen. Sind Sie an weiteren Informationen interessiert? [Suche nach Jobs mit Bezug zu Ethereum](/community/get-involved/#ethereum-jobs)

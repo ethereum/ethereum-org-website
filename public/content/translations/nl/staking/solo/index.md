@@ -13,7 +13,7 @@ summaryPoints:
   - Verwijder vertrouwen en geef nooit de controle over de sleutels tot uw geld op
 ---
 
-## Wat is solo staking? \{#what-is-solo-staking}
+## Wat is solo staking? {#what-is-solo-staking}
 
 Solo staking is de handeling van het [uitvoeren van een Ethereum-node](/run-a-node/) aangesloten op het internet en het storten van 32 ETH om een [validator](#faq)te activeren, wat u de mogelijkheid geeft om rechtstreeks deel te nemen aan netwerkconsensus.
 
@@ -23,7 +23,7 @@ Solo stakers zijn verantwoordelijk voor het bedienen van de hardware die nodig i
 
 Een solo staker ontvangt beloningen rechtstreeks uit het protocol voor het goed en online laten functioneren van zijn/haar validator.
 
-## Waarom solo staken? \{#why-stake-solo}
+## Waarom solo staken? {#why-stake-solo}
 
 Solo staking brengt meer verantwoordelijkheid met zich mee, maar geeft u maximale controle over uw geld en staking-installatie.
 
@@ -39,7 +39,7 @@ Solo staking brengt meer verantwoordelijkheid met zich mee, maar geeft u maximal
   </Card>
 </CardGrid>
 
-## Overwegingen voordat u begint met solo staking \{#considerations-before-staking-solo}
+## Overwegingen voordat u begint met solo staking {#considerations-before-staking-solo}
 
 We zouden heel graag willen dat solo staking toegankelijk en risicovrij zou zijn voor iedereen, maar dit is niet de realiteit. Er zijn enkele praktische en serieuze overwegingen om in gedachten te houden voordat u kiest voor het solo staken van uw ETH.
 
@@ -77,7 +77,7 @@ We zouden heel graag willen dat solo staking toegankelijk en risicovrij zou zijn
 <StakingComparison page="solo" />
 }
 
-## Hoe het werkt \{#how-it-works}
+## Hoe het werkt {#how-it-works}
 
 {
 <StakingHowSoloWorks />
@@ -87,7 +87,7 @@ Indien ooit gewenst, kunt u stoppen als validator; hiermee hoeft u niet meer onl
 
 Na de Shanghai upgrade kunnen gebruikers zowel hun beloningen als hun stake opnemen als ze dat willen.
 
-## Aan de slag met het Staking Launchpad \{#get-started-on-the-staking-launchpad}
+## Aan de slag met het Staking Launchpad {#get-started-on-the-staking-launchpad}
 
 Het Staking Launchpad is een open-source applicatie die u helpt om een staker te worden. Het begeleidt u bij het kiezen van uw clients, het genereren van uw sleutels en het storten van uw ETH op het staking-stortingscontract. Er is een checklist beschikbaar om er zeker van te zijn dat u alles heeft ingevuld om uw validator veilig in te stellen.
 
@@ -95,7 +95,7 @@ Het Staking Launchpad is een open-source applicatie die u helpt om een staker te
 <StakingLaunchpadWidget />
 }
 
-## Wat te overwegen met tools voor nodes en client-instelling \{#node-tool-considerations}
+## Wat te overwegen met tools voor nodes en client-instelling {#node-tool-considerations}
 
 Er is een groeiend aantal tools en services om u te helpen als solo staker van uw ETH, maar elk heeft verschillende risico's en voordelen.
 
@@ -105,7 +105,7 @@ Attribuutindicatoren worden hieronder gebruikt om opmerkelijke sterke of zwakke 
 <StakingConsiderations page="solo" />
 }
 
-## Onderzoek tools voor nodes en de instelling van clients \{#node-and-client-tools}
+## Onderzoek tools voor nodes en de instelling van clients {#node-and-client-tools}
 
 Er zijn verschillende opties beschikbaar om u te helpen met uw installatie. Gebruik bovenstaande indicatoren om u door de onderstaande tools heen te leiden.
 
@@ -129,13 +129,13 @@ Deze tools worden gebruikt als een alternatief voor de [Staking Deposit CLI](htt
 
 Heeft u een voorstel voor een staking tool die we hebben gemist? Bekijk ons [productlijstbeleid](/contributing/adding-staking-products/) om te zien of het een goede fit zou zijn en om het ter beoordeling in te dienen.
 
-## Bekijk solo staking-handleidingen \{#staking-guides}
+## Bekijk solo staking-handleidingen {#staking-guides}
 
 {
 <StakingGuides />
 }
 
-## Veelgestelde vragen \{#faq}
+## Veelgestelde vragen {#faq}
 
 Dit zijn enkele van de meest voorkomende vragen over staking die de moeite waard zijn om te weten.
 
@@ -202,7 +202,7 @@ Offline boetes zijn evenredig aan hoeveel andere validators er tegelijkertijd of
 </ExpandableCard>
 }
 
-## Verder lezen \{#further-reading}
+## Verder lezen {#further-reading}
 
 - [Ethereum's Client Diversity Problem](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Helping Client Diversity](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_

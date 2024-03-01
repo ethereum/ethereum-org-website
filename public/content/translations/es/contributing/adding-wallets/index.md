@@ -4,7 +4,7 @@ description: La política que utilizamos al agregar billeteras a ethereum.org
 lang: es
 ---
 
-# Cómo añadir carteras \{#adding-wallets}
+# Cómo añadir carteras {#adding-wallets}
 
 Queremos asegurarnos de mostrar una variedad de billeteras para abarcar el panorama de billeteras tan abundante en funciones, de modo que los usuarios puedan explorar Ethereum de manera segura.
 
@@ -17,9 +17,9 @@ Todos pueden sugerir una nueva billetera. Actualmente, puede ver las billeteras 
 
 Las billeteras cambian rápidamente en Ethereum. Hemos intentado crear un marco de trabajo justo para su consideración en ethereum.org, pero los criterios de listado cambiarán y evolucionarán con el tiempo.
 
-## El marco de decisión \{#the-decision-framework}
+## El marco de decisión {#the-decision-framework}
 
-### Criterios para la inclusión: los aspectos obligatorios \{#the-must-haves}
+### Criterios para la inclusión: los aspectos obligatorios {#the-must-haves}
 
 - **Un producto con seguridad analizada**: ya sea a través de una auditoría, un equipo interno de seguridad, código abierto o algún otro método, su cartera debe estar segura y protegida. Esto reduce el riesgo para nuestros usuarios y nos muestra que usted se toma la seguridad en serio.
 - **Una billetera que ha estado “en funcionamiento” por más de seis meses O cuyos publicadores sean un organización con un historial de buena reputación**: este es otro indicador de seguridad. Seis meses es un buen parámetro temporal para que se hayan descubierto errores y vulnerabilidades críticos. Exigimos seis meses para ayudar a filtrar las bifurcaciones que se abandonan rápidamente como proyectos.
@@ -27,7 +27,7 @@ Las billeteras cambian rápidamente en Ethereum. Hemos intentado crear un marco 
 - **Información honesta y precisa de los listados**: se espera que cualquier contenido sugerido de proyectos proporcione información honesta y precisa. Se eliminarán aquellos productos que falsifiquen información de listado, como al declarar que su producto es “de código abierto” cuando no lo es.
 - **Un punto de contacto**: un punto de contacto para la billetera ayudará considerablemente a los usuarios a obtener información precisa cuando se realicen cambios. Esto seguirá actualizando a ethereum.org de forma adecuada al recopilar futura información.
 
-### Otros criterios: los aspectos deseables \{#the-nice-to-haves}
+### Otros criterios: los aspectos deseables {#the-nice-to-haves}
 
 - **Acceso global**: su billetera no tiene limitaciones geográficas ni requisitos de KYC (conozca a su cliente) que no permiten a determinadas personas acceder a su servicio.
 - **Disponibilidad en varios idiomas**: su billetera se tradujo a varios idiomas y permite que usuarios de todo el mundo puedan acceder a ella.
@@ -53,7 +53,7 @@ Las billeteras cambian rápidamente en Ethereum. Hemos intentado crear un marco 
 - **Equipo de soporte dedicado**: su billetera tiene un equipo de soporte dedicado al que los usuarios pueden acudir cuando tienen problemas.
 - **Documentación/recursos educativos**: su producto debe presentar una experiencia de incorporcación correctamente diseñada para ayudar y educar a los usuarios. O prueba de cómo hacer contenido como artículos o vídeos.
 
-## Agregar una billetera \{#adding-a-wallet}
+## Agregar una billetera {#adding-a-wallet}
 
 Si quiere agregar una billetera a ethereum.org, cree una incidencia en GitHub.
 
@@ -61,7 +61,7 @@ Si quiere agregar una billetera a ethereum.org, cree una incidencia en GitHub.
   Crear una incidencia
 </ButtonLink>
 
-## Mantenimiento \{#maintenance}
+## Mantenimiento {#maintenance}
 
 Al igual que la naturaleza fluida de Ethereum, los equipos y productos vienen y van y la innovación sucede diariamente, así realizaremos comprobaciones de rutina de nuestro contenido para:
 
@@ -70,6 +70,6 @@ Al igual que la naturaleza fluida de Ethereum, los equipos y productos vienen y 
 
 La comunidad abierta es quien mantiene a ethereum.org y dependemos de ella para ayudar a actualizar Ethereum. Si nota que es necesario actualizar algún dato acerca de las billeteras incluidas en la lista, [abra una incidencia](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) o una [solicitud de incorporación de cambios](https://github.com/ethereum/ethereum-org-website/pulls).
 
-## Condiciones de uso \{#terms-of-use}
+## Condiciones de uso {#terms-of-use}
 
 Consulte también nuestros [términos de uso](/terms-of-use/). La información sobre ethereum.org se proporciona únicamente con fines de información general.

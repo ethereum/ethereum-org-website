@@ -8,7 +8,7 @@ I [contratti intelligenti](/developers/docs/smart-contracts/) sono progettati pe
 
 È importante operare una distinzione tra "verifica del codice sorgente" e "[verifica formale](/developers/docs/smart-contracts/formal-verification/)". La verifica del codice sorgente, che sarà spiegata nel dettaglio di seguito, si riferisce alla verifica che un dato codice sorgente di un contratto intelligente in un linguaggio di alto livello (es. Solidity) si compili allo stesso bytecode da eseguire all'indirizzo del contratto. Tuttavia, la verifica formale descrive la verifica della correttezza di un contratto intelligente, ossia che il contratto si comporti come previsto. Sebbene dipenda dal contesto, la verifica del contratto si riferisce solitamente alla verifica del codice sorgente.
 
-## Cos'è la verifica del codice sorgente? \{#what-is-source-code-verification}
+## Cos'è la verifica del codice sorgente? {#what-is-source-code-verification}
 
 Prima di distribuire un contratto intelligente nella [Macchina Virtuale di Ethereum (EVM)](/developers/docs/evm/), gli sviluppatori [compilano](/developers/docs/smart-contracts/compiling/) il codice sorgente del contratto – le istruzioni [scritte in Solidity](/developers/docs/smart-contracts/languages/) o in un altro linguaggio di programmazione di alto livello – al bytecode. Poiché l'EVM non può interpretare le istruzioni di alto livello, compilare il codice sorgente al bytecode (cioè, al basso livello, le istruzioni macchina) è necessario per eseguire la logica del contratto nell'EVM.
 
@@ -16,7 +16,7 @@ La verifica del codice sorgente consiste nel confrontare il codice sorgente di u
 
 La verifica del contratto intelligente consente di studiare cosa faccia un contratto tramite il linguaggio di livello superiore in cui è scritto senza dover leggere il codice macchina. Le funzioni, i valori e solitamente i nomi delle variabili e i commenti restano uguali al codice sorgente originale compilato e distribuito. Questo semplifica molto la lettura del codice. La verifica del codice sorgente, inoltre, prevede la documentazione del codice, così che gli utenti finali sappiano per cosa sia progettato un contratto intelligente.
 
-### Cos'è la verifica completa? \{#full-verification}
+### Cos'è la verifica completa? {#full-verification}
 
 Esistono delle parti del codice sorgente che non influenzano il bytecode compilato, quali commenti o nomi delle variabili. Ciò significa che due codici sorgente con nomi delle variabili e commenti differenti sarebbero entrambi capaci di verificare lo stesso contratto. Così, un utente malevolo può aggiungere commenti ingannevoli o dare nomi di variabili fuorvianti nel codice sorgente e far verificare il contratto con un codice sorgente differente da quello originale.
 
@@ -26,9 +26,9 @@ Il file dei metadati contiene le informazioni sulla compilazione del contratto, 
 
 Questo tipo di verifica che sfrutta l'hash dei metadati è noto come **"[verifica completa](https://docs.sourcify.dev/docs/full-vs-partial-match/)"** (o "verifica perfetta"). Se gli hash dei metadati non corrispondono o non sono considerati nella verifica, sarebbe una "corrispondenza parziale", attualmente il metodo più comune per verificare i contratti. È possibile [inserire del codice malevolo](https://samczsun.com/hiding-in-plain-sight/) che non sarebbe riflesso nel codice sorgente verificato senza la verifica completa. Gran parte degli sviluppatori non è a conoscenza della verifica completa e non conserva il file dei metadati della propria compilazione, per cui finora la verifica parziale è stata il metodo utilizzato di fatto per la verifica dei contratti.
 
-## Perché la verifica del codice sorgente è importante? \{#importance-of-source-code-verification}
+## Perché la verifica del codice sorgente è importante? {#importance-of-source-code-verification}
 
-### Mancanza di fiducia \{#trustlessness}
+### Mancanza di fiducia {#trustlessness}
 
 La mancanza di fiducia è senza dubbio la più grande premessa per i contratti intelligenti e le [applicazioni decentralizzate (dapp)](/developers/docs/dapps/). I contratti intelligenti sono "immutabili" e inalterabili; un contratto eseguirà la logica aziendale definita nel codice soltanto al momento della distribuzione. Ciò significa che sviluppatori e imprese non possono manomettere il codice di un contratto dopo la distribuzione su Ethereum.
 
@@ -38,13 +38,13 @@ I progetti riducono le ipotesi di fiducia pubblicando il codice sorgente dei pro
 
 Gli strumenti di verifica del codice sorgente forniscono garanzie che i file del codice sorgente di un contratto intelligente corrispondano al codice assembly. Il risultato è un ecosistema senza fiducia, in cui gli utenti non si fidano ciecamente di terze parti e verificano piuttosto il codice prima di depositare fondi in un contratto.
 
-### Sicurezza degli utenti \{#user-safety}
+### Sicurezza degli utenti {#user-safety}
 
 Con i contratti intelligenti, solitamente è in gioco molto denaro. Questo richiede maggiori garanzie di sicurezza e la verifica della logica di un contratto intelligente prima del suo utilizzo. Il problema è che gli sviluppatori disonesti possono ingannare gli utenti inserendo del codice malevolo in un contratto intelligente. Senza verifiche, i contratti intelligenti malevoli possono contenere delle [backdoor](https://www.trustnodes.com/2018/11/10/concerns-rise-over-backdoored-smart-contracts), meccanismi di controllo dell'accesso controversi, vulnerabilità sfruttabili e altri aspetti che mettono a repentaglio la sicurezza dell'utente, che passerebbero inosservati.
 
 Pubblicare i file del codice sorgente di un contratto intelligente rende più semplice per coloro che sono interessati, come i revisori, valutare il contratto per individuare potenziali vettori d'attacco. Con molte parti che verificano indipendentemente un contratto intelligente, gli utenti hanno maggiori garanzie della sua sicurezza.
 
-## Come verificare il codice sorgente per i contratti intelligenti di Ethereum \{#source-code-verification-for-ethereum-smart-contracts}
+## Come verificare il codice sorgente per i contratti intelligenti di Ethereum {#source-code-verification-for-ethereum-smart-contracts}
 
 La [distribuzione di un contratto intelligente su Ethereum](/developers/docs/smart-contracts/deploying/) richiede l'invio di una transazione con il un payload di dati (bytecode compilato) a un indirizzo specifico. Il payload di dati è generato compilando il codice sorgente, più gli [argomenti del costruttore](https://docs.soliditylang.org/en/v0.8.14/contracts.html#constructor) dell'istanza del contratto aggiunti al payload di dati nella transazione. La compilazione è deterministica, il che significa che produce sempre lo stesso risultato (cioè, il bytecode del contratto) se sono utilizzati gli stessi file sorgente e le stesse impostazioni di compilazione (es. versione del compilatore, ottimizzatore).
 
@@ -64,11 +64,11 @@ La verifica di un contratto intelligente comporta fondamentalmente i seguenti pa
 
 Nota che questa è una descrizione semplicistica della verifica e che esistono molte eccezioni che non funzionerebbero, come avere delle [variabili immutabili](https://docs.sourcify.dev/docs/immutables/).
 
-## Strumenti di verifica del codice sorgente \{#source-code-verification-tools}
+## Strumenti di verifica del codice sorgente {#source-code-verification-tools}
 
 Il tradizionale processo di verifica dei contratti può essere complesso. Per questo abbiamo strumenti per la verifica del codice sorgente per i contratti intelligenti distribuiti su Ethereum. Questi automatizzano buona parte della verifica del codice sorgente, oltre a curare i contratti verificati per i benefici degli utenti.
 
-### Etherscan \{#etherscan}
+### Etherscan {#etherscan}
 
 Sebbene per lo più conosciuto come un [esploratore della blockchain di Ethereum](/developers/docs/data-and-analytics/block-explorers/), Etherscan offre anche un [servizio di verifica del codice sorgente](https://etherscan.io/verifyContract) per sviluppatori e utenti dei contratti intelligenti.
 
@@ -80,7 +80,7 @@ Etherscan è lo strumento più utilizzato per verificare i contratti. Tuttavia, 
 
 [Maggiori informazioni sulla verifica dei contratti su Etherscan](https://medium.com/etherscan-blog/verifying-contracts-on-etherscan-f995ab772327).
 
-### Sourcify \{#sourcify}
+### Sourcify {#sourcify}
 
 [Sourcify](https://sourcify.dev/#/verifier) è un altro strumento, open source e decentralizzato, per verificare i contratti. Non è un esploratore di blocchi e verifica i contratti soltanto su [diverse reti basate sull'EVM](https://docs.sourcify.dev/docs/chains). Agisce da infrastruttura pubblica per la costruzione di altri strumenti e mira a consentire interazioni con i contratti più intuitive, utilizzando i commenti [ABI](/developers/docs/smart-contracts/compiling/#web-applications) e [NatSpc](https://docs.soliditylang.org/en/v0.8.15/natspec-format.html) che si trovano nel file dei metadati.
 
@@ -90,7 +90,7 @@ Inoltre, è anche possibile recuperare i file del codice sorgente via IPFS, poic
 
 [Maggiori informazioni sulla verifica dei contratti su Sourcify](https://blog.soliditylang.org/2020/06/25/sourcify-faq/).
 
-### Tenderly \{#tenderly}
+### Tenderly {#tenderly}
 
 La [piattaforma Tenderly](https://tenderly.co/) consente agli sviluppatori in Web3 di creare, testare, monitorare e gestire i contratti intelligenti. Combinando strumenti di debug con osservabilità e blocchi di costruzione dell'infrastruttura, Tenderly aiuta gli sviluppatori ad accelerare lo sviluppo dei contratti intelligenti. Per abilitare appieno le funzionalità di Tenderly, gli sviluppatori devono [eseguire la verifica del codice sorgente](https://docs.tenderly.co/monitoring/contract-verification) utilizzando svariati metodi.
 
@@ -102,7 +102,7 @@ Verificando i contratti tramite il Pannello di controllo, devi importare il file
 
 L'utilizzo del plugin Hardhat di Tenderly consente di avere maggiore controllo sul processo di verifica con minori sforzi, consentendoti di scegliere tra una verifica automatica (senza codice) e manuale (basata sul codice).
 
-## Letture consigliate \{#further-reading}
+## Letture consigliate {#further-reading}
 
 - [Come verificare il codice sorgente dei contratti intelligenti di Ethereum](https://developpaper.com/how-to-verify-the-source-code-of-ethereum-smart-contract/)
 - [Verificare il codice sorgente del contratto](https://programtheblockchain.com/posts/2018/01/16/verifying-contract-source-code/)

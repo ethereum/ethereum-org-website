@@ -12,7 +12,7 @@ summaryPoint2: Technologie die wetenschappers in staat stelt om financiering te 
 summaryPoint3: Bouwt op de open wetenschap-beweging.
 ---
 
-## Wat is gedecentraliseerde wetenschap (DeSci)? \{#what-is-desci}
+## Wat is gedecentraliseerde wetenschap (DeSci)? {#what-is-desci}
 
 Gedecentraliseerde wetenschap (DeSci) is een beweging die als doel heeft om op eerlijke en rechtvaardige manier publieke infrastructuur op te bouwen voor financiering, creatie, beoordeling, erkenning, opslag en verspreiding van wetenschappelijke kennis door gebruik te maken van de Web3-stack.
 
@@ -26,7 +26,7 @@ Gedecentraliseerde wetenschap voorziet in nieuwe soorten financieringsbronnen (v
 <YouTube id="5ORvbCIW39o" />
 }
 
-## Hoe DeSci de wetenschap verbetert \{#desci-improves-science}
+## Hoe DeSci de wetenschap verbetert {#desci-improves-science}
 
 Een onvolledige lijst van belangrijke problemen in de wetenschap en hoe gedecentraliseerde wetenschap kan helpen bij het aanpakken van deze kwesties
 
@@ -41,21 +41,21 @@ Een onvolledige lijst van belangrijke problemen in de wetenschap en hoe gedecent
 | Je bezit het intellectuele eigendom (IP) dat je genereert en verspreidt het volgens transparante voorwaarden.                                   | Je thuisinstituut is eigenaar van het IP-adres dat je genereert. Toegang tot het IP is niet transparant.                                |
 | Deling van al het onderzoek, met inbegrip van de gegevens uit mislukte inspanningen, door alle stappen in de keten te zetten.                   | Publicatiebias betekent dat onderzoekers meer de neiging hebben om experimenten te delen die succesvolle resultaten hebben opgeleverd.  |
 
-## Ethereum en DeSci \{#ethereum-and-desci}
+## Ethereum en DeSci {#ethereum-and-desci}
 
 Een gedecentraliseerd wetenschappelijk systeem vereist robuuste beveiliging, minimale monetaire en transactiekosten en een breed ecosysteem voor aanvraagontwikkeling. Ethereum biedt alles aan wat nodig is om een gedecentraliseerde wetenschappelijke stack te bouwen.
 
-## DeSci-toepassingsscenario's \{#use-cases}
+## DeSci-toepassingsscenario's {#use-cases}
 
 DeSci bouwt de wetenschappelijke toolset voor het onboarden van Web2-academica naar de digitale wereld. Hieronder staat een lijst van toepassingen die Web3 kan bieden aan de wetenschappelijke gemeenschap.
 
-### Publicatie \{#publishing}
+### Publicatie {#publishing}
 
 Publicatie van wetenschap is befaamd problematisch omdat het wordt beheerd door uitgeverijen die afhankelijk zijn van onbetaald werk van wetenschappers, beoordelaars en redacteuren om de documenten te genereren, maar daarvoor vervolgens buitensporige publicatiekosten berekenen. Het publiek, dat meestal indirect voor het werk en de publicatiekosten heeft betaald door middel van belastingen, heeft vaak geen toegang tot datzelfde werk zonder de uitgever opnieuw te betalen. De totale kosten voor het publiceren van individuele wetenschappelijke documenten zijn vaak vijfcijferig ($ USD), wat het hele concept van wetenschappelijke kennis als [publiek goed](https://www.econlib.org/library/Enc/PublicGoods.html) ondermijnt, terwijl er door een kleine groep uitgevers enorme winsten gemaakt worden.
 
 Gratis en vrij toegankelijke platformen bestaan in de vorm van proefdrukservers, [zoals ArXiv](https://arxiv.org/). Deze platformen hebben echter geen kwaliteitscontrole, [anti-sybil mechanismen](https://csrc.nist.gov/glossary/term/sybil_attack), en volgen in het algemeen geen maatstaven op artikelniveau, wat betekent dat ze meestal alleen worden gebruikt om werk te publiceren voordat ze worden ingediend bij een traditionele uitgever. SciHub maakt gepubliceerde documenten ook gratis toegankelijk, maar niet legaal, en alleen nadat de uitgevers hun betaling al hebben gekregen en het werk hebben beschermd via strenge auteursrechtenwetgeving. Hierdoor resteert een belangrijke kloof voor toegankelijke wetenschappelijke documenten en gegevens met een geïntegreerd legitimatiemechanisme en stimulansenmodel. De hulpmiddelen voor het bouwen van een dergelijk systeem bestaan in Web3.
 
-### Reproduceerbaarheid en herhaalbaarheid \{#reproducibility-and-replicability}
+### Reproduceerbaarheid en herhaalbaarheid {#reproducibility-and-replicability}
 
 Reproduceerbaarheid en herhaalbaarheid vormen de basis voor kwalitatieve wetenschappelijke ontdekkingen.
 
@@ -64,7 +64,7 @@ Reproduceerbaarheid en herhaalbaarheid vormen de basis voor kwalitatieve wetensc
 
 Nieuwe op Web3 gebaseerde tools kunnen ervoor zorgen dat reproduceerbaarheid en herhaalbaarheid de basis vormen van ontdekkingen. We kunnen hoogwaardige wetenschap verweven in de technologische structuur van de academische wereld. Web3 biedt de mogelijkheid om attesten af te geven voor elke analysecomponent: de onverwerkte gegevens, de berekeningskracht en het toepassingsresultaat. Het mooie van consensussystemen is, dat wanneer er een vertrouwd netwerk gemaakt wordt voor het onderhouden van deze componenten, elke deelnemer van dit netwerk verantwoordelijk gehouden kan worden voor het reproduceren van de berekening en het valideren van elk resultaat.
 
-### Financiering \{#funding}
+### Financiering {#funding}
 
 Het huidige standaard model voor het financieren van wetenschap is dat personen of groepen van wetenschappers schriftelijke aanvragen indienen bij een financieringsinstantie. Een kleine groep van vertrouwde personen rangschikken de aanvragen en interviewen de kandidaten voordat er financiering toegewezen word aan een klein deel van de aanvragers. Afgezien nog van de creatie van knelpunten die leiden tot wel jaren van wachttijd tussen het moment van aanvraag en ontvangst van een subsidie, staat dit model bekend om de hoge kwetsbaarheid in termen van bevooroordeling, zelfinteresse en de politieke inslag van het evaluatiepanel.
 
@@ -72,7 +72,7 @@ Onderzoek heeft uitgewezen dat evaluatiepanels voor subsidies hun taak van selec
 
 Web3 heeft het potentieel dit gebroken financieringsmodel te doorbreken via experimentatie met verschillende stimulansenmodellen, grotendeels ontwikkeld door DAO's en Web3. [Retroactieve financiering van publieke goederen](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [kwadratische financiering](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO bestuur](https://www.antler.co/blog/daos-and-web3-governance) en [getokeniseerde stimulansstructuren](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) zijn enkele van de Web3-tools die de wetenschappelijke financiering zouden kunnen revolutioniseren.
 
-### IP-eigendom en -ontwikkeling \{#ip-ownership}
+### IP-eigendom en -ontwikkeling {#ip-ownership}
 
 Intellectueel eigendom (IP) is een groot probleem in traditionele wetenschap: van vastzitten in universiteiten of ongebruikt blijven in biotechs, tot het feit dat het heel moeilijk is om het de juiste waarde te geven. Eigendom van digitale activa (zoals wetenschappelijke gegevens of artikelen) is echter iets wat Web3 bijzonder goed doet met het gebruik van [niet-fungibele tokens (NFT)](/nft/).
 
@@ -80,7 +80,7 @@ Net zoals NFT's de inkomsten van toekomstige transacties terug kunnen doorgeven 
 
 [IP-NFT's](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) kunnen ook dienst doen als de sleutel voor een gedecentraliseerde databank van de onderzoeksexperimenten die worden ondernomen, en aansluiten bij NFT en [DeFi](/defi/) financialisering (van fractionalisatie tot kredietpools en waardebepaling). Het maakt het ook mogelijk voor on-chain entiteiten zoals DAO's, bijvoorbeeld [VitaDAO](https://www.vitadao.com/), om onderzoek direct on-chain uit te voeren. De komst van niet-overdraagbare ["soulbound" tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) speelt mogelijk ook een belangrijke rol in DeSci door personen de kans te geven hun ervaringen en de aan hun Ethereum-adres gekoppelde toegangsgegevens te bewijzen.
 
-### Gegevensopslag, toegang en architectuur \{#data-storage}
+### Gegevensopslag, toegang en architectuur {#data-storage}
 
 Wetenschappelijke gegevens kunnen veel toegankelijker worden gemaakt met het gebruik van Web3-patronen, en gedistribueerde gegevensopslag zorgt ervoor dat onderzoek catastrofale gebeurtenissen kan overleven.
 
@@ -88,7 +88,7 @@ Het uitgangspunt moet een systeem zijn dat toegankelijk is voor eender welke ged
 
 Flexibele Web3-dataoplossingen ondersteunen de hierboven vermelde scenario's en vormen de basis voor daadwerkelijk Open Wetenschap, waarbij wetenschappers publieke goederen kunnen creëren zonder toegangsrechten of -kosten. Openbare Web3-dataoplossingen zoals IPFS, Arweave en Filecoin zijn geoptimaliseerd voor decentralisatie. dClimate biedt bijvoorbeeld universele toegang tot klimaat- en weergegevens, inclusief van weerstations en voorspellende klimaatmodellen.
 
-## Doe mee \{#get-involved}
+## Doe mee {#get-involved}
 
 Verken projecten en word lid van de DeSci-gemeenschap.
 
@@ -116,7 +116,7 @@ Verken projecten en word lid van de DeSci-gemeenschap.
 
 We verwelkomen suggesties voor nieuwe projecten om op de lijst te zetten - bekijk ons [lijstopnamebeleid](/contributing/adding-desci-projects/) om te beginnen!
 
-## Lees verder \{#further-reading}
+## Lees verder {#further-reading}
 
 - [DeSci Wiki van Jocelynn Pearl en Ultrarare](https://docs.google.com/document/d/1aQC6zn-eXflSmpts0XGE7CawbUEHwnL6o-OFXO52PTc/edit#)
 - ['A guide to decentralized biotech' van Jocelynn Pearl voor a16z Future](https://future.a16z.com/a-guide-to-decentralized-biotech/)
@@ -132,7 +132,7 @@ We verwelkomen suggesties voor nieuwe projecten om op de lijst te zetten - bekij
 - ['Science Funding (Epilogue: DeSci and new crypto primitives)' van Nadia](https://nadia.xyz/science-funding)
 - [Decentralisation is Disrupting Drug Development](https://medium.com/id-theory/decentralisation-is-disrupting-drug-development-28b5ba5d447f)
 
-### Video's \{#videos}
+### Video's {#videos}
 
 - [Wat is gedecentraliseerde wetenschap?](https://www.youtube.com/watch?v=-DeMklVWNdA)
 - [Gesprek tussen Vitalik Buterin en wetenschapper Aubrey de Gray over het snijvlak van langlevenonderzoek en crypto](https://www.youtube.com/watch?v=x9TSJK1widA)

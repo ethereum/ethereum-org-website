@@ -17,11 +17,11 @@ Sin embargo, los sistemas tradicionales de gestión de identidad dependen de int
 
 Para resolver estos problemas, hemos descentralizado los sistemas de identidad utilizando cadenas de bloques públicas como Ethereum. La identidad descentralizada permite a los individuos administrar la información relacionada con su identidad. Con soluciones de identidad descentralizada, _tú_ puede crear identificadores y reclamar y mantener sus certificados sin depender de autoridades centralizadas como proveedores de servicios o gobiernos.
 
-## Qué es la identidad? \{#what-is-identity}
+## Qué es la identidad? {#what-is-identity}
 
 Identidad significa el sentido del yo como individuo, definido por características únicas. La identidad se refiere a ser un _individuo_, es decir, una entidad humana única. La identidad también refiere entidades no humanas, como una organización o autoridad.
 
-## ¿Qué son los identificadores? \{#what-are-identifiers}
+## ¿Qué son los identificadores? {#what-are-identifiers}
 
 Un identificador es una pieza de información que actúa como un indicador a una identidad o identidad en particular. Los identificadores comunes incluyen:
 
@@ -33,13 +33,13 @@ Un identificador es una pieza de información que actúa como un indicador a una
 
 Estos ejemplos tradicionales de identificadores son emitidos, sostenidos y controlados por entidades centrales. Se necesita permiso del Gobierno para cambiar su nombre o el de una plataforma de redes sociales para cambiar el nombre de usuario.
 
-## ¿Qué son los certificados? \{#what-are-attestations}
+## ¿Qué son los certificados? {#what-are-attestations}
 
 Un certificado es una afirmación hecha por una entidad acerca de otra entidad. Si vive en Estados Unidos, su carné de conducir emitido por el Department of Motor Vehicles (una entidad) certifica que usted (otra entidad) está legalmente autorizado a conducir un coche.
 
 Los certificados son diferentes de los identificadores. Un certificado _contiene_ identificadores que hacen referencia a una identidad en particular, y hace una afirmación relacionada con esta identidad. Por lo tanto, su carné de conducir tiene identificadores (nombre, fecha de nacimiento, dirección), pero también es una afirmación sobre su derecho legal a conducir.
 
-### ¿Qué son los identificadores descentralizados? \{#what-are-decentralized-identifiers}
+### ¿Qué son los identificadores descentralizados? {#what-are-decentralized-identifiers}
 
 Los identificadores tradicionales como tu nombre jurídico o dirección de correo electrónico dependen de terceros: gobiernos y proveedores de correo electrónico. Los identificadores descentralizados (DID) son diferentes: no son emitidos, administrados o controlados por ninguna entidad central.
 
@@ -47,21 +47,21 @@ Los identificadores descentralizados son emitidos, mantenidos y controlados por 
 
 Los identificadores descentralizados se almacenan en las cadenas de bloques o redes entre pares. Esto hace a los DIDs [globalmente únicos, resolubles con alta disponibilidad, y criptográficamente verificables](https://w3c-ccg.github.io/did-primer/). Un identificador descentralizado puede ser asociado con diferentes entidades, incluyendo personas, organizaciones o instituciones gubernamentales.
 
-## ¿Qué hace que los identificadores descentralizados sean posibles? \{#what-makes-decentralized-identifiers-possible}
+## ¿Qué hace que los identificadores descentralizados sean posibles? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infraestructura de clave pública (ICP) \{#public-key-infrastructure}
+### 1. Infraestructura de clave pública (ICP) {#public-key-infrastructure}
 
 La infraestructura de clave pública (ICP) es una medida de seguridad de la información que genera una [clave pública](/glossary/#public-key) y una [clave privada](/glossary/#private-key) para una entidad. La criptografía de clave pública se utiliza en las redes de cadena de bloques para autenticar las identidades del usuario y demostrar la propiedad de los activos digitales.
 
 Algunos identificadores descentralizados, como una cuenta de Ethereum, tienen claves públicas y privadas. La clave pública identifica al controlador de la cuenta, mientras que las claves privadas pueden firmar y descifrar mensajes para esta cuenta. Los ICP proporcionan pruebas necesarias para autenticar entidades y prevenir la suplantación y el uso de identidades falsas, utilizando [firmas criptográficas](https://andersbrownworth.com/blockchain/public-private-keys/) para verificar todas las reclamaciones.
 
-### 2. Almacenes de datos descentralizados \{#decentralized-datastores}
+### 2. Almacenes de datos descentralizados {#decentralized-datastores}
 
 Una cadena de bloques sirve como un registro de datos verificables: un repositorio de información abierto, sin confianza y descentralizado. La existencia de cadenas de bloques públicas elimina la necesidad de almacenar identificadores en registros centralizados.
 
 Si alguien necesita confirmar la validez de un identificador descentralizado, puede buscar la clave pública asociada en la cadena de bloques. Esto es diferente de los identificadores tradicionales que requieren de terceros para autenticarse.
 
-## ¿Cómo hacen los identificadores descentralizados para generar certificaciones descentralizadas? \{#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
+## ¿Cómo hacen los identificadores descentralizados para generar certificaciones descentralizadas? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
 
 La identidad descentralizada es la idea de que la información relacionada con la identidad debe ser autocontrolada, privada y portátil, siendo sus cimientos los identificadores descentralizados y los certificados.
 
@@ -73,11 +73,11 @@ Los identificadores descentralizados son la razón por la que se pueden autocont
 
 Los identificadores descentralizados también son cruciales para proteger la privacidad de la información personal a través de la identidad descentralizada. Por ejemplo, si un individuo envía una prueba de un certificado (un carné de conducir), el grupo de verificación no necesita verificar la validez de la información en la prueba. En cambio, el verificador solo necesita garantías criptográficas de la autenticidad del certificado y de la identidad de la organización emisora para determinar si la prueba es válida.
 
-## Tipos de certificados en identidad descentralizada \{#types-of-attestations-in-decentralized-identity}
+## Tipos de certificados en identidad descentralizada {#types-of-attestations-in-decentralized-identity}
 
 La forma en que se almacena y recupera la información de los certificados en un ecosistema de identidad basado en Ethereum es diferente de la gestión tradicional de la identidad. He aquí una visión general de los diversos enfoques para emitir, almacenar y verificar los certificados en sistemas de identidad descentralizados:
 
-### Certificados fuera de cadena \{#off-chain-attestations}
+### Certificados fuera de cadena {#off-chain-attestations}
 
 Un problema que conlleva el almacenamiento de certificados en la cadena es que pueden contener información que los individuos quieren mantener privados. La naturaleza pública de la cadena de bloques de Ethereum no facilita el almacenamiento de tales certificados.
 
@@ -89,13 +89,13 @@ Este es un escenario hipotético para explicar los certificados fuera de la cade
 
 2. Bob solicita un empleo y quiere demostrar sus cualificaciones académicas a un empleador, por lo que comparte la certificación desde su cartera. La compañía (el verificador) puede confirmar la validez del certificado comprobando el CPI del emisor (es decir, su clave pública en Ethereum).
 
-### Certificaciones fuera de cadena con acceso permanente \{#offchain-attestations-with-persistent-access}
+### Certificaciones fuera de cadena con acceso permanente {#offchain-attestations-with-persistent-access}
 
 Bajo este sistema, los cerficados se transforman en un archivo JSON y son almacenados off-chain (idealmente en una [plataforma de cloud descentralizada](/developers/docs/storage/) como IPFS o Swarm). Sin embargo, un [hash](/glossary/#hash) del archivo JSON se almacena en cadena y se enlaza con un CPI mediante un registro en la cadena. El CPI asociado podría ser el del emisor del certificado o el destinatario.
 
 Este enfoque permite que las certificaciones obtengan permanencia basada en la cadena de bloques, manteniendo la información de reclamaciones cifrada y verificable. También permite la divulgación selectiva, ya que el titular de la clave privada puede descifrar la información.
 
-### Certificados en la cadena \{#onchain-attestations}
+### Certificados en la cadena {#onchain-attestations}
 
 Los certificados en la cadena se mantienen en [contratos inteligentes](/developers/docs/smart-contracts/) en la cadena de bloques de Ethereum. El contrato inteligente (actuando como un registro) enlazará un certificado a un identificador descentralizado correspondiente en la cadena (una clave pública).
 
@@ -107,11 +107,11 @@ He aquí un ejemplo que ilustra cómo podrían funcionar en la práctica los cer
 
 3. El contrato inteligente de venta de acciones puede comprobar el contrato de registro para ver las identidades de los compradores examinados, haciendo posible que el contrato inteligente determine quién está autorizado a comprar acciones y quién no.
 
-### Los tókenes Souldbound y la identidad \{#soulbound}
+### Los tókenes Souldbound y la identidad {#soulbound}
 
 [Los tókenes Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT no transferibles) pueden utilizarse para recopilar información única en una cartera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección particular de Ethereum que podría incluir tókenes representando logros (ej. terminar algún curso en línea específico o pasar un umbral de puntuación en un juego) o participación en la comunidad.
 
-## Beneficios de una identidad descentralizada \{#benefits-of-decentralized-identity}
+## Beneficios de una identidad descentralizada {#benefits-of-decentralized-identity}
 
 1. La identidad descentralizada aumenta el control individual de la información identificativa. Los identificadores y certificados descentralizados pueden ser verificados sin depender de autoridades centralizadas o servicios de terceros.
 
@@ -125,33 +125,33 @@ He aquí un ejemplo que ilustra cómo podrían funcionar en la práctica los cer
 
 6. La identidad descentralizada permite aplicar mecanismos AntiSybil que detecten cuando un humano individual pretende ser varios humanos diferentes para jugar o hacer spam en algún sistema.
 
-## Casos de uso de identidad descentralizada \{#decentralized-identity-use-cases}
+## Casos de uso de identidad descentralizada {#decentralized-identity-use-cases}
 
 La identidad descentralizada tiene muchos casos potenciales de uso:
 
-### 1. Inicio de sesión universal \{#universal-dapp-logins}
+### 1. Inicio de sesión universal {#universal-dapp-logins}
 
 La identidad descentralizada puede ayudar a reemplazar los inicios de sesión basados en contraseña con [autenticación descentralizada](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/). Los proveedores de servicios pueden emitir certificados a los usuarios, los cuales pueden ser almacenados en una cartera de Ethereum. Un certificado de ejemplo sería un [NFT](/nft/) que otorga al titular acceso a una comunidad en línea.
 
 Una función [de inicio de sesión con Ethereum](https://login.xyz/) habilitaría entonces a los servidores para confirmar la cuenta de Ethereum del usuario y obtener la verificación necesaria desde la dirección de su cuenta. Esto significa que los usuarios pueden acceder a plataformas y sitios web sin tener que memorizar contraseñas largas y mejorar la experiencia en línea de los usuarios.
 
-### 2. Autenticación KYC \{#kyc-authentication}
+### 2. Autenticación KYC {#kyc-authentication}
 
 El uso de muchos servicios en línea requiere que los individuos proporcionen certificados y credenciales, como un carné de conducir o pasaporte nacional. Pero este enfoque es problemático porque la información privada de los usuarios puede verse comprometida y los proveedores de servicios no pueden verificar la autenticidad del certificado.
 
 La identidad descentralizada permite a las empresas saltarse a los procesos [Conozca a Su Cliente (KYC)](https://en.wikipedia.org/wiki/Know_your_customer) convencionales y autenticar identidades de usuario a través de credenciales verificables. Esto reduce el coste de la gestión de la identidad y evita el uso de documentación falsa.
 
-### 3. Votaciones y comunidades en línea \{#voting-and-online-communities}
+### 3. Votaciones y comunidades en línea {#voting-and-online-communities}
 
 Las votaciones en línea y las redes sociales son dos nuevas aplicaciones para la identidad descentralizada. Los esquemas de votación en línea son susceptibles de manipulación, especialmente si los actores maliciosos crean identidades falsas para votar. Pedir a las personas que presenten certificaciones en la cadena puede mejorar la integridad de los procesos de votación en línea.
 
 La identidad descentralizada puede ayudar a crear comunidades en línea libres de falsas cuentas. Por ejemplo, cada usuario podría tener que autenticar su identidad utilizando un sistema de identidad en la cadena, como el Ethereum Name Service, reduciendo la posibilidad de bots.
 
-### 4. Protección AntiSybil \{#sybil-protection}
+### 4. Protección AntiSybil {#sybil-protection}
 
 Los ataques Sybil se refieren a seres humanos individuales engañando a un sistema para que piensen que son múltiples personas para aumentar así su influencia. [Las aplicaciones de concesión de subvenciones](https://gitcoin.co/grants/) que utilizan [votación cuadrática](https://www.radicalxchange.org/concepts/plural-voting/) son vulnerables a estos ataques de Sybil, porque el valor de una subvención aumenta cuando más personas votan por ella, incentivando a los usuarios a dividir sus contribuciones a través de muchas identidades. Las identidades descentralizadas ayudan a evitar esto aumentando la carga sobre cada participante para demostrar que son realmente humanos, aunque a menudo sin tener que revelar información privada específica.
 
-## Usos de la identidad descentralizada \{#use-decentralized-identity}
+## Usos de la identidad descentralizada {#use-decentralized-identity}
 
 Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones de identidad descentralizada:
 
@@ -163,9 +163,9 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _Un agregador de identidad digital descentralizado._
 - **[walt.id](https://walt.id)**: _ infraestructura de cartera e identidad descentralizadas de código abierto que permiten a los desarrolladores y organizaciones aprovechar la identidad autosoberana y los NFT/SBT._
 
-## Para profundizar sobre el tema \{#further-reading}
+## Para profundizar sobre el tema {#further-reading}
 
-### Artículos \{#articles}
+### Artículos {#articles}
 
 - [Casos de Uso de la cadena de bloques: Blockchain in Digital Identity](https://consensys.net/blockchain-use-cases/digital-identity/) — _ConsenSys_
 - [¿Qué es Ethereum ERC725? Administración propia y soberana de identidades en la cadena de bloques](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Ciudad de Sam_
@@ -173,7 +173,7 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 - [¿Qué es la identidad descentralizada y por qué merece tu atención?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 - [Introducción a la identidad descentralizada](https://walt.id/white-paper/digital-identity), _Dominik Beron_
 
-### Vídeos \{#videos}
+### Vídeos {#videos}
 
 - [Identidad descentralizada (bonificación de sesión Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Un vídeo muy aclarador de la identidad descentralizada explicado por Andreas_
 - [Iniciar sesión con Ethereum e Identity descentralizada con Ceramic, IDX, React, y 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutorial de YouTube sobre la construcción de un sistema de gestión de identidad para crear, leer, y actualizar el perfil de un usuario usando su cartera Ethereum por Nader Dabit_
@@ -181,7 +181,7 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 - [Internet fuera de la cadena: Credenciales descentralizadas y verificables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 presentación de Evin McMullen
 - [Credenciales verificables explicadas](https://www.youtube.com/watch?v=ce1IdSr-Kig), Vídeo explicativo de YouTube con una demostración realizada por Tamino Baumann
 
-### Comunidades \{#communities}
+### Comunidades {#communities}
 
 - [ERC-725 Alianza en GitHub](https://github.com/erc725alliance) — _Partidarios del estándar ERC725 para gestionar la identidad en la cadena de bloques Ethereum_
 - [Servidor SpruceID Discord](https://discord.com/invite/Sf9tSFzrnt) — _Comunidad para entusiastas y desarrolladores que trabajan en SpruceID con Ethereum_

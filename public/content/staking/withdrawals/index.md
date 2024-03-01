@@ -21,13 +21,13 @@ Staking withdrawals were enabled with the Shanghai/Capella upgrade which occurre
 
 **Reward payments of excess balance** over 32 ETH will automatically and regularly be sent to a withdrawal address linked to each validator, once provided by the user. Users can also **exit staking entirely**, unlocking their full validator balance.
 
-## Staking rewards \{#staking-rewards}
+## Staking rewards {#staking-rewards}
 
 Reward payments are automatically processed for active validator accounts with a maxed out effective balance of 32 ETH.
 
 Any balance above 32 ETH earned through rewards does not actually contribute to principal, or increase the weight of this validator on the network, and is thus automatically withdrawn as a reward payment every few days. Aside from providing a withdrawal address one time, these rewards do not require any action from the validator operator. This is all initiated on the consensus layer, thus no gas (transaction fee) is required at any step.
 
-### How did we get here? \{#how-did-we-get-here}
+### How did we get here? {#how-did-we-get-here}
 
 Over the past few years Ethereum has undergone several network upgrades transitioning to a network secured by ETH itself, instead of energy-intensive mining as it once was. Participating in consensus on Ethereum is now known as "staking", as participants have voluntarily locked up ETH, placing it "at stake" for the ability to participate in the network. Users who follow the rules will be rewarded, while attempts to cheat can be penalized.
 
@@ -35,13 +35,13 @@ Since the launch of the staking deposit contract in November 2020, some brave Et
 
 Before the Shanghai/Capella upgrade, you couldn't use or access your staked ETH. But now, you can opt-in to automatically receive your rewards into a chosen account, and you can also withdraw your staked ETH whenever you want.
 
-### How do I prepare? \{#how-do-i-prepare}
+### How do I prepare? {#how-do-i-prepare}
 
 {
 <WithdrawalsTabComparison />
 }
 
-### Important notices \{#important-notices}
+### Important notices {#important-notices}
 
 Providing a withdrawal address is a required step for any validator account before it will be eligible to have ETH withdrawn from its balance.
 
@@ -51,7 +51,7 @@ Providing a withdrawal address is a required step for any validator account befo
 
 There is <strong>no threat to your funds in the meantime</strong> for not providing this, assuming your mnemonic/seed phrase has remained safe offline, and has not been compromised in any way. Failure to add withdrawal credentials will simply leave the ETH locked in the validator account as it has been until a withdrawal address is provided.
 
-## Exiting staking entirely \{#exiting-staking-entirely}
+## Exiting staking entirely {#exiting-staking-entirely}
 
 Providing a withdrawal address is required before _any_ funds can be transferred out of a validator account balance.
 
@@ -61,7 +61,7 @@ The process of a validator exiting from staking takes variable amounts of time, 
 
 Once an account is flagged as "withdrawable", and withdrawal credentials have been provided, there is nothing more a user needs to do aside from wait. Accounts are automatically and continuously swept by block proposers for eligible exited funds, and your account balance will be transferred in full (also known as a "full withdrawal") during the next <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>sweep</a>.
 
-## When are staking withdrawals enabled? \{#when}
+## When are staking withdrawals enabled? {#when}
 
 Staking withdrawals are live! Withdrawal functionality was enabled as part of the Shanghai/Capella upgrade which occurred on April 12, 2023.
 
@@ -70,11 +70,11 @@ The Shanghai/Capella upgrade enabled previously staked ETH to be reclaimed into 
 - [More on Ethereum history](/history/)
 - [More on the Ethereum roadmap](/roadmap/)
 
-## How do withdrawal payments work? \{#how-do-withdrawals-work}
+## How do withdrawal payments work? {#how-do-withdrawals-work}
 
 Whether a given validator is eligible for a withdrawal or not is determined by the state of the validator account itself. No user input is needed at any given time to determine whether an account should have a withdrawal initiated or not—the entire process is done automatically by the consensus layer on a continuous loop.
 
-### More of a visual learner? \{#visual-learner}
+### More of a visual learner? {#visual-learner}
 
 Check out this explanation of Ethereum staking withdrawals by Finematics:
 
@@ -82,7 +82,7 @@ Check out this explanation of Ethereum staking withdrawals by Finematics:
 <YouTube id="RwwU3P9n3uo" />
 }
 
-### Validator "sweeping" \{#validator-sweeping}
+### Validator "sweeping" {#validator-sweeping}
 
 When a validator is scheduled to propose the next block, it is required to build a withdrawal queue, of up to 16 eligible withdrawals. This is done by originally starting with validator index 0, determining if there is an eligible withdrawal for this account per the rules of the protocol, and adding it to the queue if there is. The validator set to propose the following block will pick up where the last one left off, progressing in order indefinitely.
 
@@ -92,7 +92,7 @@ Now instead of 1 through 12, imagine the clock has 0 through N <em>(the total nu
 The hand on the clock points to the next validator that needs to be checked for eligible withdrawals. It starts at 0, and progresses all the way around without skipping any accounts. When the last validator is reached, the cycle continues back at the beginning.
 </InfoBanner>
 
-#### Checking an account for withdrawals \{#checking-an-account-for-withdrawals}
+#### Checking an account for withdrawals {#checking-an-account-for-withdrawals}
 
 While a proposer is sweeping through validators for possible withdrawals, each validator being checked is evaluated against a short series of questions to determine if a withdrawal should be triggered, and if so, how much ETH should be withdrawn.
 
@@ -105,11 +105,11 @@ There are only two actions that are taken by validator operators during the cour
 - Provide withdrawal credentials to enable any form of withdrawal
 - Exit from the network, which will trigger a full withdrawal
 
-### Gas free \{#gas-free}
+### Gas free {#gas-free}
 
 This approach to staking withdrawals avoids requiring stakers to manually submit a transaction requesting a particular amount of ETH to be withdrawn. This means there is **no gas (transaction fee) required**, and withdrawals also do not compete for existing execution layer block space.
 
-### How frequently will I get my staking rewards? \{#how-soon}
+### How frequently will I get my staking rewards? {#how-soon}
 
 A maximum of 16 withdrawals can be processed in a single block. At that rate, 115,200 validator withdrawals can be processed per day (assuming no missed slots). As noted above, validators without eligible withdrawals will be skipped, decreasing the time to finish the sweep.
 
@@ -129,7 +129,7 @@ Expanding this calculation, we can estimate the time it will take to process a g
 
 As you see this slows down as more validators are on the network. An increase in missed slots could slow this down proportionally, but this will generally represent the slower side of possible outcomes.
 
-## Frequently asked questions \{#faq}
+## Frequently asked questions {#faq}
 
 {
 <ExpandableCard
@@ -228,7 +228,7 @@ No. Once a validator has exited and its full balance has been withdrawn, any add
 </ExpandableCard>
 }
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [Staking Launchpad Withdrawals](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895: Beacon chain push withdrawals as operations](https://eips.ethereum.org/EIPS/eip-4895)

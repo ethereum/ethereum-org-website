@@ -5,19 +5,19 @@ lang: hu
 sidebarDepth: 2
 ---
 
-# Ethereum fehérkönyv \{#ethereum-whitepaper}
+# Ethereum fehérkönyv {#ethereum-whitepaper}
 
 _Ezt a bemutató kiadványt eredetileg 2013-ban adta ki Vitalik Buterin, az [Ethereum](/what-is-ethereum/) alapítója, a projekt 2015-ös indulása előtt. Fontos megjegyezni, hogy az Ethereum sok másik közösség által vezetett, nyílt forráskódú szoftver projekthez hasonlóan, a kezdeti elindulás óta fejlődött._
 
 _Noha több éve íródott, fenntartjuk ezt a kiadványt, mert továbbra is hasznos referenciaként szolgál és pontos ábrázolást mutat az Ethereumról és annak jövőképéről. Ha többet szeretnél megtudni az Ethereum legutóbbi fejlesztéseiről és az általunk elvégzett protokoll változtatásokról, akkor ezt az [útmutatót](/learn/) ajánljuk._
 
-## Az okosszerződések és decentralizált alkalmazás platformok következő generációja \{#a-next-generation-smart-contract-and-decentralized-application-platform}
+## Az okosszerződések és decentralizált alkalmazás platformok következő generációja {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
 Satoshi Nakamoto 2009-ben történő Bitcoin fejlesztését gyakran a pénz és a pénznem radikális fejleményének nevezték, ez az első példa egy olyan digitális eszközre, amelynek egyszerre nincs háttér vagy [belső értéke](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/), valamint nincs központi kibocsájtója vagy irányítója. A Bitcoin kísérlet másik - vitathatatlanul fontosabb - része azonban az alapjául szolgáló blokklánc technológia, mint az elosztott konszenzus eszköze, és a figyelem gyorsan kezd áttérni a Bitcoin ezen másik aspektusára. A blokklánc technológia gyakran idézett alternatív alkalmazásai közé tartozik az blokkláncon lévő digitális eszközök használata az egyedi valuták és pénzügyi eszközök reprezentálására ([colored coins](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)), a mögöttes fizikai eszköz tulajdonjoga ([smart property](https://en.bitcoin.it/wiki/Smart_Property)), nem felcserélhető eszközök, mint a domén nevek ([Namecoin](http://namecoin.org)), vagy a komplexebb alkalmazások, melyek digitális javak közvetlen irányítását vonják magukkal egy tetszőleges szabályrendszert követő kód alapján ([smart contracts](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)) vagy akár blokklánc alapú [decentralizált autonóm szervezetek](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/) (DAO-k). Az Ethereum egy olyan beépített, teljesen kidolgozott Turing-teljes programozási nyelvvel rendelkező blokkláncot szeretne nyújtani, amely használható olyan "szerződések" létrehozására, amelyek tetszőleges állapotátmeneti funkciók kódolására használhatóak, lehetővé téve a felhasználók számára a fent leírt rendszerek bármelyikének létrehozását, valamint sok olyan más dolgot is, melyre még nem gondoltunk, egyszerűen a logika pár sornyi kódként való leírásával.
 
-## Bevezetés a Bitcoinba és a létező fogalmakba \{#introduction-to-bitcoin-and-existing-concepts}
+## Bevezetés a Bitcoinba és a létező fogalmakba {#introduction-to-bitcoin-and-existing-concepts}
 
-### Előzmények \{#history}
+### Előzmények {#history}
 
 A decentralizált digitális valuta, valamint az alternatív alkalmazások, például az ingatlan-nyilvántartások fogalma évtizedek óta létezik. Az 1980-as és 1990-es évek anonim e-cash protokolljai, melyek főleg a Chaum féle vakításként ismert kriptográfiai primitívre támaszkodtak, egy magas fokú adatvédelemmel rendelkező valutát kínáltak, de a protokolloknak többnyire nem sikerült elterjedniük, mivel egy centralizált közvetítőre támaszkodtak. 1998-ban Wei Dai [b-money-je](http://www.weidai.com/bmoney.txt) vált az első javaslattá, mely bemutatta a pénz létrehozásának számítási kirakósok megoldásával történő ötletét, valamint a decentralizált konszenzust, de a javaslat kevés részletet tartalmazott arról, hogy hogyan lehetne megvalósítani a decentralizált konszenzust a gyakorlatban. 2005-ben Hal Finney bemutatta az [újrafelhasználható munkabizonyítékokat](http://nakamotoinstitute.org/finney/rpow/), egy olyan rendszert, amely a b-pénzből származó ötleteket és Adam Back számítási szempontból nehéz Hashcash rejtvényeit használta fel a kriptovaluta koncepciójának megalkotására, de az ideálistól ez is elmaradt azáltal, hogy egy megbízható számítási backendre támaszkodott. Először 2009-ben került bevezetésre a gyakorlatban egy decentralizált valuta Satoshi Nakamoto által, amely egyesítette az alapként szolgáló már létező primitíveket amik a tulajdonjog publikus kulcs kriptográfiával történő kezelésére szolgáltak, egy konszenzus algoritmussal, mely az érmék tulajdonosainak számontartására szolgál és amit "munkabizonyítéknak" nevezünk.
 
@@ -25,7 +25,7 @@ A proof-of-work mögötti mechanizmus egy áttörés volt, mivel egyszerre két 
 
 Itt egy blog bejegyzés Vitalik Buterintől, az Ethereum alapítójától az [Ethereum előtörténetéről](https://vitalik.eth.limo/general/2017/09/14/prehistory.html). [Itt](https://blog.ethereum.org/2016/02/09/cut-and-try-building-a-dream/) egy másik blog bejegyzés további történetekkel.
 
-### Bitcoin, mint egy állapot átmeneti rendszer \{#bitcoin-as-a-state-transition-system}
+### Bitcoin, mint egy állapot átmeneti rendszer {#bitcoin-as-a-state-transition-system}
 
 ![Ethereum állapot átmenet](./ethereum-state-transition.png)
 
@@ -55,7 +55,7 @@ Az állapot átmeneti függvény `APPLY(S,TX) -> S'` nagyjából a következő m
 
 Az első lépés első fele megakadályozza, hogy a tranzakciók feladói nem létező érméket költsenek el, az első lépés második fele pedig megakadályozza, hogy a tranzakciók feladói mások érméit költsék el, a második lépés pedig az érték megőrzését hajtja végre. Ahhoz, hogy ezt fizetésnél használjuk, a protokoll a következő. Tegyük fel, hogy Alice 11,7 BTC-t szeretne Bob-nak átutalni. Először Alice megkeresi az általa birtokolt elérhető UTXO-k egy olyan halmazát, melynek összege legalább 11.7 BTC. A valóságban Alice nem fog pont 11.7 BTC-t találni; mondjuk, hogy a legkisebb, amit megtalált 6+4+2=12. Ezután elkészít egy tranzakciót ezzel a három bemenettel és két kimenettel. Az első kimenet 11.7 BTC lesz, aminek Bob címe lesz a tulajdonosa, a második kimenet pedig a maradék 0.3 BTC "visszajáró", melynek maga Alice a tulajdonosa.
 
-### Bányászat \{#mining}
+### Bányászat {#mining}
 
 ![Ethereum blokkok](./ethereum-blocks.png)
 
@@ -85,7 +85,7 @@ Hogy jobban megértsük a bányászat célját, nézzük meg, hogy mi történik
 
 Amint az (1) lépés befejeződött, pár perc múlva valamelyik bányász beteszi a tranzakciót egy blokkba, mondjuk a 270-es számúba. Nagyjából egy órával később, ezután a blokk után öt új blokk kerül hozzáadásra a lánchoz, és minden egyes blokk közvetetten hivatkozik a tranzakcióra, így "megerősítve" azt. Ezen a ponton a kereskedő elfogadja a kifizetést véglegesítettként és kiszállítja a terméket; mivel feltételezzük, hogy ez egy digitális termék, a szállítás azonnali. Ekkor a támadó egy új tranzakciót hoz létre, amiben 100 BTC-t küld magának. Ha a támadó egyszerűen elküldené a tranzakciót a világba, nem kerülne feldolgozásra; mert a bányászok megpróbálják a futtatni az `APPLY(S,TX)` függvényt és észreveszik, hogy a `TX` egy olyan UTXO-t akar felhasználni, ami már nem létezik az "állapot" szerint. Ehelyett a támadó csinál egy blokklánc "elágazást" (fork) úgy, hogy a 270-es blokknak egy új verzióját kezdi el bányászni, ami ugyanarra a 269-es "szülő" blokkra épül, de a régi helyett egy új tranzakcióval. Mivel a blokk adata különböző, így újra kell csinálni a "prrof-of-work"-öt. Továbbá a támadó 270-es számú új blokk verziója egy különböző hash-sel rendelkezik, így az eredeti blokkok 271-től 275-ig nem "hivatkoznak" rá; így az eredeti lánc és a támadó új lánca teljesen különböző. Az a szabály, hogy az elágazásban a hosszabb blokkláncot kell igaznak tekinteni, így a törvényesen bányászók a 275-ös láncon fognak tovább dolgozni, míg a támadó egyedül dolgozik a 270-es láncon. Ahhoz, hogy a támadó saját blokkláncát tehesse a leghosszabbá, több számítási kapacitással kell rendelkeznie, mint a hálózat többi résztvevőjének együttvéve, hogy utolérhesse őket (innen ered az "51%-os támadás").
 
-### Merkle fák \{#merkle-trees}
+### Merkle fák {#merkle-trees}
 
 ![SPV Bitcoin-ban](./spv-bitcoin.png)
 
@@ -97,7 +97,7 @@ A Bitcoin egyik fontos skálázhatósági tulajdonsága, hogy a blokk egy több 
 
 A Merkle fa protokoll vitathatatlanul elengedhetetlen a hosszú távú fenntarthatósághoz. Egy "teljes csomópontnak" a Bitcoin hálózatban, az amelyik az összes blokk egészét tárolja és feldolgozza, körülbelül 15 Gb lemezterülettel kell rendelkeznie a Bitcoin hálózatban 2014 áprilisában, és ez havonta 1 Gb-tal nő. Jelenleg ezt csak bizonyos asztali számítógépek tudják megvalósítani, telefonok nem, és a jövőben csak vállalkozások és hobbisták lesznek képesek részt venni. Egy "egyszerűsített fizetési hitelesítésnek (SPV)" nevezett protokoll lehetővé teszi egy másik csomópont típus létezését, melyeket "könnyű csomópontoknak" hívunk, ezek a hálózati résztvevők csak a blokk fejléceket töltik le, hitelesítik a munkabizonyítékot a blokk fejléceken és csak a számukra releváns tranzakciókhoz tartozó "ágakat" töltik le. Ez lehetővé teszi a könnyű csomópontoknak, hogy erős biztonsági garanciával meghatározhassák bármelyik Bitcoin tranzakció állapotát és aktuális egyenlegét, miközben a teljes blokklánc csak nagyon kis részét töltik le.
 
-### Alternatív blokklánc alkalmazások \{#alternative-blockchain-applications}
+### Alternatív blokklánc alkalmazások {#alternative-blockchain-applications}
 
 A mögöttes blokklánc másfajta koncepciókra történő alkalmazásának ötlete szintén hosszú történelemmel bír. 1998-ban Nick Szabo kiadta a [tulajdonosi jogokkal rendelkező biztonságos tulajdonok](http://nakamotoinstitute.org/secure-property-titles/) koncepciójával foglalkozó kiadványt. Ez a dokumentum leírja, hogy az "újdonságok a replikált adatbázis-technológiában" miként tesznek lehetővé egy blokklánc-alapú rendszert, mely nyilvántartja, hogy ki milyen földterülettel rendelkezik, létrehozva ezzel egy kidolgozott keretrendszert, amely magában foglalja az olyan fogalmakat, mint a homesteading, a hátrányos birtoklás és a George féle föld adó. Abban az időben sajnos nem állt rendelkezésre hatékony replikált adatbázis-rendszer, ezért a protokollt a gyakorlatban soha nem valósították meg. 2009-től azonban a Bitcoin decentralizált konszenzusának kialakulása után számos alternatív alkalmazás kezdett gyorsan megjelenni.
 
@@ -109,7 +109,7 @@ A mögöttes blokklánc másfajta koncepciókra történő alkalmazásának ötl
 
 Másfelől a Bitcoin alapú megközelítésnek az a hátulütője, hogy nem örökli a a Bitcoin egyszerűsített fizetési hitelesítési tulajdonságait. Az SPV működik a Bitcoin esetében, mivel felhasználja a blokklánc mélységet, mint érvényességi proxy; egy ponton, amint a tranzakció ősei eleget mennek vissza, biztonsággal állítható, hogy érvényes részei az állapotnak. Másfelől a blokklánc alapú meta protokollok nem kényszeríthetik a blokkláncot, hogy ne tartalmazza azokat a tranzakciókat, melyek nem érvényesek a saját protokolljuk kontextusában. Ezért egy teljesen biztonságos SPV meta-protokoll megvalósításnak vissza kell hivatkoznia a Bitcoin blokklánc elejéig annak megállapítására, hogy biztos-e a tranzakciók érvényessége. Jelenleg a Bitcoin alapú meta-protokollok összes "könnyű" implementációja egy megbízott szerverre támaszkodik az adatszolgáltatásra, mely vitathatóan egy meglehetősen szuboptimális eredmény különösen akkor, amikor a kriptovaluták elsődleges célja a bizalom szükségletének megszüntetése.
 
-### Szkriptelés \{#scripting}
+### Szkriptelés {#scripting}
 
 Még valamilyen kiterjesztés nélkül is a Bitcoin protokoll valóban meg tudja könnyíteni az "okosszerződések" egy gyenge változatának koncepcióját. A Bitcoinban lévő UTXO-kat nem csak publikus kulcsok birtokolhatják, hanem bonyolultabb szkriptek is, melyeket egy egyszerű stack alapú programozási nyelvvel lehet kifejezni. Ebben a paradigmában az UTXO-t elköltő tranzakcióknak adatokat kell szolgáltatni a szkriptek kielégítésére. Valójában még az alapvető publikus kulcs tulajdonjog mechanizmus is egy szkripten keresztül valósul meg: a szkript egy elliptikus görbe aláírást használ bemenetként, megerősíti a tranzakció és az UTXO-t birtokló cím szerint és 1-et ad vissza, ha az érvényesítés sikeres ellenkező esetben 0-át. Más bonyolultabb szkriptek is léteznek további különböző felhasználási esetekre. Például létre lehet hozni egy olyan szkriptet, mely három privát kulcsból kettő aláírását igényli az érvényesítéshez ("multisig"), a vállalati számlák, biztonságos megtakarítási számlák és néhány kereskedői letét számára hasznos beállítás. A szkriptek felhasználhatók a számítási problémák megoldásáért járó jutalmak kifizetésére is, sőt össze lehet állítani egy olyan szkriptet, amely valami olyasmit mond, hogy "ez a Bitcoin UTXO a tiéd, ha tudsz egy SPV bizonyítékot nyújtani arra, hogy nekem küldtél egy ilyen címletű Dogecoin tranzakciót", mely lényegében lehetővé teszi a decentralizált kereszt-kriptovaluta váltást.
 
@@ -122,11 +122,11 @@ Azonban a Bitcoinban implementált szkript nyelvnek számos fontos megkötése v
 
 Így meglátásunk szerint háromféleképpen lehet fejlett alkalmazásokat fejleszteni egy kriptovalutára: új blokklánc indítása, a Bitcoin szkripting használata és egy meta protokoll fejlesztése Bitcoinra. Egy új blokklánc indítása lehetővé teszi a korlátlan szabadságot a funkciókészlet építésében, de a fejlesztési idő, a bootstrapping és a biztonság árán. A szkriptek használata egyszerűen megvalósítható és szabványosítható, de nagyon korlátozott a képességeiben, és a meta protokollok, míg egyszerűek, nehezen skálázhatóak. Az Ethereummal egy olyan alternatív keretrendszert szeretnénk létrehozni, mely még jobban megkönnyíti a fejlesztést, valamint erősebb könnyű kliens tulajdonságokkal rendelkezik, egyúttal az alkalmazásoknak egy közös gazdasági környezetet és blokklánc biztonságot biztosít.
 
-## Ethereum \{#ethereum}
+## Ethereum {#ethereum}
 
 Az Ethereum célja egy alternatív protokoll létrehozása decentralizált alkalmazások fejlesztésére, különböző kompromisszumokkal, amelyről úgy hisszük, hogy nagyon hasznos lesz a decentralizált alkalmazások nagy részének, különös tekintettel az olyan esetekre, ahol fontos a gyors fejlesztési idő, a biztonság a kisméretű és ritkán használt alkalmazások számára, és a különböző alkalmazások közötti nagyon hatékony együttműködés. Az Ethereum ezt úgy éri el, hogy felépíti azt, ami lényegében a végső absztrakt alapréteg: egy blokkláncot beépített Turing-teljes programozási nyelvvel, mely lehetővé teszi bárki számára az okosszerződés írást és a decentralizált alkalmazás fejlesztést, ahol létrehozhatják a saját tetszőleges tulajdonjogi szabályaikat, tranzakció formátumukat és az állapot átmeneti függvényeket. A Namecoin lecsupaszított verziója két sornyi kódból megírható, a többi protokoll, mint például a valuták és az identitás rendszerek pedig kevesebb, mint húsz sorból. Okosszerződések, olyan kriptográfiai "dobozok", melyek értéket tartalmaznak és csak akkor nyílnak ki amikor bizonyos feltételek teljesülnek, szintén építhetőek a platformra sokkal nagyobb erővel, mint amit a Bitcoin szkriptelés kínál, a Turing-teljesség, érték-tudatosság, blokklánc-tudatosság és az "állapot" hozzáadott ereje miatt.
 
-### Filozófia \{#philosophy}
+### Filozófia {#philosophy}
 
 Az Ethereum mögötti elgondolás az alábbi elveket szándékozik követni:
 
@@ -136,7 +136,7 @@ Az Ethereum mögötti elgondolás az alábbi elveket szándékozik követni:
 4.  **Agilitás**: az Ethereum protokoll részletei nincsenek kőbe vésve. Azonban rendkívül megfontoltak leszünk a magas szintű konstrukciók megváltoztatását illetően, mint például a [sharding ütemterv](https://ethresear.ch/t/sharding-phase-1-spec/1407/) esetében a végrehajtás absztrahálása csak az adatok konszenzusos elérhetőségével fog történni. A fejlesztési folyamat során történő későbbi számítási tesztek arra a felfedezésre vezethetnek, hogy bizonyos módosítások például a protokoll felépítésében vagy az Ethereum Virtuális Gépben (EVM) jelentős mértékben növelhetik a skálázhatóságot vagy a biztonságot. Ha találunk ilyen lehetőségeket, akkor ki fogjuk használni őket.
 5.  **Megkülönböztetés-mentesség** és **cenzúra-mentesség**: a protokoll nem kísérelheti meg bizonyos használati kategóriák aktív betiltását vagy megelőzését. A protokoll összes szabályozási mechanizmusát arra kell tervezni, hogy közvetlenül a károkozást szabályozza nem pedig a bizonyos nemkívánatos alkalmazásokat. Egy programozó akár egy végtelen ciklusos szkriptet is futtathat az Ethereumon, amíg hajlandó fizetni a számítási lépések tranzakciós díját.
 
-### Ethereum számlák \{#ethereum-accounts}
+### Ethereum számlák {#ethereum-accounts}
 
 Az Ethereumban az állapotot "számláknak" nevezett objektumok alkotják, ahol minden egyes számla egy 20-bájtos címmel rendelkezik és az állapot átmenetet a számlák közötti közvetlen érték és információ átutalás végzi. Az Ethereum számlák négy mezőt tartalmaznak:
 
@@ -149,7 +149,7 @@ Az "Ether" az Ethereum elsődleges belső kripto-üzemanyaga és a tranzakciós 
 
 Fontos megjegyezni, hogy az Ethereumban a "szerződésekre" nem úgy kell tekinteni, mint amit „teljesíteni” vagy „betartani” kell; inkább "autonóm ügynökök", akik az Ethereum végrehajtási környezetében élnek, és mindig végrehajtanak egy adott kóddarabot, amikor "megböki" őket egy a üzenet vagy tranzakció, és közvetlen ellenőrzésük alatt tartják saját Ether egyenlegüket és saját kulcsérték-adatbázisukat, a tartós változók nyomon követésére.
 
-### Üzenetek és tranzakciók \{#messages-and-transactions}
+### Üzenetek és tranzakciók {#messages-and-transactions}
 
 A "tranzakció" kifejezést az Ethereumban egy aláírt adat csomagra használjuk, ami egy külső tulajdonú számláról érkező üzenetet tartalmaz. A tranzakció a következőket tartalmazza:
 
@@ -164,7 +164,7 @@ Az első három olyan alap mező, ami minden kripto valutánál megtalálható. 
 
 The `STARTGAS` és `GASPRICE` mezők kritikusak az Ethereum szolgáltatás megtagadása elleni modelljében. A véletlen vagy rosszindulatú végtelen ciklusok vagy más számítási kódveszteség megelőzésének érdekében minden tranzakciónak korlátot kell szabnia arra vonatkozóan, hogy a kódfuttatás hány számítási lépést használhat. A számítás alapvető egysége a "gas"; általában egy számítási lépés 1 gas-ba kerül, de egyes műveletek magasabb gas mennyiségbe kerülnek, mert számítási szempontból drágábbak, vagy növelik az állapot részeként tárolandó adatok mennyiségét. Továbbá minden egyes tranzakciós adatban található byte után 5 gas díj is felszámításra kerül. A díjrendszer célja, hogy megkövetelje a támadótól, hogy minden általa felhasznált erőforrásért arányosan fizessen, beleértve a számítást, a sávszélességet és a tárhelyet is; ennélfogva minden olyan tranzakció esetében, amelynek eredményeként a hálózat ezeknek az erőforrásoknak bármelyikét nagyobb mennyiségben fogyasztja, az erőforrások növekedésével nagyjából arányos gas költséggel kell számolni.
 
-### Üzenetek \{#messages}
+### Üzenetek {#messages}
 
 A szerződéseknek meg van a lehetőségük, hogy "üzeneteket" küldjenek más szerződéseknek. Az üzenetek olyan virtuális objektumok, amik soha nincsenek szerializálva és csak az Ethereum futtatási környezetben léteznek. Az üzenet a következőket tartalmazza:
 
@@ -178,7 +178,7 @@ Lényegében az üzenet olyan mint a tranzakció, kivéve, hogy nem a külső sz
 
 Megjegyzendő, hogy a tranzakciók vagy szerződések által kiszabott gas díj vonatkozik a teljes gas összegre, amit az a tranzakció és az összes alvégrehajtási folyamat felhasznált. Például, ha egy külső szereplő A küld egy tranzakciót B-nek 1000 gas-al, és B 600 gas-t fogyaszt, mielőtt üzenetet küldene C-nek, és C belső végrehajtása 300 gas-t fogyaszt, mielőtt visszatérne, akkor B további 100 gas-t költhet, mielőtt kifogyna a gas-ból.
 
-### Ethereum állapotátmenet függvény \{#ethereum-state-transition-function}
+### Ethereum állapotátmenet függvény {#ethereum-state-transition-function}
 
 ![Ether állapot átmenet](./ether-state-transition.png)
 
@@ -209,7 +209,7 @@ Ha a tranzakció fogadó oldalán nem lenne szerződés, akkor a teljes tranzakc
 
 Megjegyzendő, hogy az üzenetek és a tranzakciók visszafordítása ugyanúgy működik: ha az üzenet végrehajtása során elfogy a gas, akkor az üzenet végrehajtása és az összes többi végrehajtás, amelyet az a végrehajtás váltott ki, visszaáll, de a szülő végrehajtásokat nem kell visszaállítani. Ez azt jelenti, hogy egy szerződés "biztonságosan" hívhat egy másik szerződést, mivel ha A G-gas-al hívja B-t, akkor A végrehajtása garantáltan legfeljebb G-gas veszteséget okoz. Végül megjegyzendő, hogy van egy műveleti kód (opcode) `CREATE`, ami létrehozza a szerződést; aminek a végrehajtási mechanikája általában hasonló a `CALL`-hoz, azaz híváshoz, azzal a kivétellel, hogy a végrehajtás kimenete határozza meg az újonnan létrehozott szerződés kódját.
 
-### Kód futtatás \{#code-execution}
+### Kód futtatás {#code-execution}
 
 Az Ethereum szerződésekben szereplő kód alacsony szintű, verem-alapú bájtkód nyelven íródott, amelyet "Ethereum virtuális gép kódnak" vagy "EVM kódnak" neveznek. A kód bájtok sorozatából áll, ahol mindegyik bájt egy műveletet képvisel. A kódfuttatás általában egy végtelen ciklus, ami a művelet ismételt végrehajtásából áll az aktuális programszámlálón (amely nullától kezdődik), majd eggyel növeli a programszámlálót addig, amíg el nem éri a kód végét, vagy egy hibát, illetve `STOP` vagy `RETURN` utasítást észlel. A műveletek háromféle helyhez férnek hozzá, ahol adatokat tárolhatnak:
 
@@ -221,7 +221,7 @@ A kód hozzáférhet a bejövő üzenet értékéhez, feladójához és adataiho
 
 Az EVM kód formális végrehajtási modellje meglepően egyszerű. Amíg az Ethereum virtuális gép fut, teljes számítási állapota meghatározható a következő értéksorral: `(blokk_állapot, tranzakció, üzenet, kód, memória, verem, programszámláló(pc), gas)`, ahol a `blokk_állapot` az összes számlafiókot tartalmazó globális állapot, amely magában foglalja az egyenlegeket és a tárolóhelyeket. Minden egyes végrehajtási kör elején, az aktuális utasítás megtalálható a `kód`-nak (vagy 0 ha `pc >= len(code)`) a `programszámláló` -n meghatározott bájtja által, és minden utasításnak megvan a maga meghatározása abból a szempontból, hogy milyen hatással van az értéksorra. Például, `ADD` elvesz két elemet a veremből és visszarakja az összegüket, csökkenti a `gas` -t 1-el, és növeli a `programszámláló`-t 1-el, és a `SSTORE` leveszi a verem két legfelső elemét és behelyezi a második elemet a szerződés tárhelyébe az első elem által meghatározott indexen. Bár számos módja van az Ethereum virtuális gép végrehajtás optimalizálásának, futásidejű fordítással vagy másnéven röpfordítással, az Ethereum alapvető megvalósítása néhány száz kódsorban elvégezhető.
 
-### Blokklánc és bányászat \{#blockchain-and-mining}
+### Blokklánc és bányászat {#blockchain-and-mining}
 
 ![Ethereum alkalmazás blokkdiagram](./ethereum-apply-block-diagram.png)
 
@@ -240,11 +240,11 @@ A megközelítés első pillantásra nagyon hatékonytalannak tűnhet, mert mind
 
 Gyakran feltett kérdés, hogy "hol" történik a szerződés kódjának végrehajtása, a fizikai hardver szempontjából. Erre egyszerű a válasz: a szerződés kódjának végrehajtási folyamata az állapotátmeneti függvény definíciójának része, amely a blokk érvényesítési algoritmus része, tehát ha egy tranzakciót hozzáadunk a `B` blokkhoz, akkor a tranzakció által létrehozott kód végrehajtását minden csomópont végrehajtja, most és a jövőben is, amelyek letöltik és érvényesítik a `B` blokkot.
 
-## Alkalmazások \{#applications}
+## Alkalmazások {#applications}
 
 Az Ethereumon általánosságban háromféle alkalmazás létezik. Az első kategória a pénzügyi alkalmazások, amelyek hatékonyabb módszereket kínálnak a felhasználóknak a pénzük kezelésére és szerződéskötésre. Ebbe beletartoznak a devizák, a derivatív pénzügyi eszközök, a fedezeti ügyletek, a takarék pénztárcák, végrendeletek, és végül akár teljes körű munkaszerződések egyes kategóriái. A második kategória a félig pénzügyi alkalmazások, amik kapcsolatosak a pénzzel, de a tevékenységeiknek van egy súlyos, nem pénzügyi oldala is; erre tökéletes példa az önérvényesítő jutalmak, a számítási problémák megoldásért. Végül vannak olyan alkalmazások, mint az online szavazás és a decentralizált irányítás, amelyek egyáltalán nem pénzügyi vonatkozásúak.
 
-### Token rendszerek \{#token-systems}
+### Token rendszerek {#token-systems}
 
 A blokkláncon való token vagyis zseton rendszereknek számos alkalmazása van, kezdve az olyan alvalutáktól, amik olyan eszközöket képviselnek, mint az USA Dollár vagy az arany, egészen a vállalati részvények, az okos tulajdont képviselő egyedi zsetonok, a biztonságos, hamisíthatatlan kuponok, és még olyan zseton rendszerekig is, amik semmilyen kapcsolatban nem állnak a hagyományos értékhez, csak a jutalmazás pontrendszereiként használják őket. A zseton rendszereket meglepően egyszerű módon létre lehet hozni az Ethereumon. Kulcsfontosságú megérteni azt, hogy a pénznem vagy a zseton rendszer alapvetően egy egy műveletből álló adatbázis: vonjon le X egységet A-ból, és adjon X egységet B-nek, azzal a feltétellel, hogy (1) A-nak a tranzakció előtt legalább X egysége volt és (2) a tranzakciót A jóváhagyta. A zseton rendszer megvalósításához mindössze annyi kell, hogy ezt a logikát beépítsék egy szerződésbe.
 
@@ -257,7 +257,7 @@ Az alapkód a zsetonrendszer megvalósítására Serpent programnyelven a követ
 
 Ez lényegében a "bankrendszer" állapotátmeneti függvényének szó szerinti megvalósítását jelenti, amely ebben a dokumentumban fentebb már le lett írva. Néhány extra kódsort hozzá kell adni, hogy biztosítsuk a pénzegységek elosztásának kezdeti lépését, néhány másik szélsőséges esetben is, és ideális esetben egy függvényt is hozzáadunk, ami lehetővé teszi másik szerződéseknek, hogy lekérdezzék egy cím számlaegyenlegét. De ennyi az egész. Elméletileg a pénznemként működő Ethereum-alapú zsetonrendszerek tartalmazhatnak egy másik fontos jellemzőt, ami a Bitcoin-alapú blokkláncon található pénzeszközöknél hiányzik: a tranzakciós díjak közvetlen fizetése ugyanabban a pénznemben. Ez úgy lehetne megvalósítható, hogy a szerződés fenntartana egy Ether egyenleget, amelyből visszatérítené a feladónak a díjakra használt Ethert, és ezt az egyenleget úgy töltené fel, hogy összegyűjti a díjakra beszedett belső valutaegységeket, és egy folyamatosan futó aukción továbbértékesíti azokat. A felhasználóknak tehát Etherrel kellene "aktiválniuk" a számláikat, de onnantól, hogy az Ether ott van, újrafelhasználható, mert a szerződés minden alkalommal visszatérítené.
 
-### Pénzügyi derivatívák és stabil értékű valuták \{#financial-derivatives-and-stable-value-currencies}
+### Pénzügyi derivatívák és stabil értékű valuták {#financial-derivatives-and-stable-value-currencies}
 
 A pénzügyi derivatívák az "intelligens szerződés" leggyakoribb alkalmazásai, és az egyik legegyszerűbben megvalósítható kóddal. A pénzügyi szerződések végrehajtása során az a fő kihívás, hogy többségük külső árfolyamra való hivatkozást igényel; például nagyon kívánatos alkalmazás egy olyan okos szerződés, amely fedezetet ad az Ether (vagy más kriptovaluta) árfolyamingadozására az amerikai dollárral szemben, de ehhez a szerződésnek tudnia kell az ETH / USD értékét. Ennek legegyszerűbb módja egy adott fél (pl. NASDAQ) által fenntartott "adatcsatorna" szerződés, amelynek célja, hogy az adott fél képes legyen a szerződés szükség szerinti frissítésére, és egy olyan felület biztosítása, amely lehetővé teszi más szerződések számára, hogy üzenetet küldjenek a szerződésnek, és választ kapjanak, ami tratalmazza az árat.
 
@@ -272,7 +272,7 @@ Egy ilyen szerződés jelentős potenciállal bírna a kriptokereskedelemben. Az
 
 A gyakorlatban azonban a kibocsátók nem mindig megbízhatóak, és egyes esetekben a banki infrastruktúra túl gyenge vagy túl ellenséges ahhoz, hogy ilyen szolgáltatások létezzenek. A pénzügyi derivatívák alternatívát kínálnak. Itt ahelyett, hogy egyetlen kibocsátó biztosítaná az eszközök fedezetére szolgáló alaptőkét, a spekulánsok decentralizált piacon való fogadásai arról, hogy egy kriptográfiai referencia eszköz (pl. ETH) ára emelkedni fog-e játsszák azt a szerepet. A kibocsátóktól eltérően a spekulánsoknak nincs lehetőségük az ügylettel kapcsolatos kötelezettségük elmulasztására, mert a fedezeti szerződés letétben tartja pénzeszközeiket. Fontos megjegyezni, hogy ez a megközelítés nincs teljesen decentralizálva, mert még mindig megbízható forrásra van szükség az árjegyző szerepének betöltésére, bár már ez is vitathatatlanul hatalmas előrelépés az infrastruktúra-követelmények csökkentése szempontjából (ellentétben a kibocsátóval, az árfolyam-kiadáshoz nem szükséges licenc és valószínűleg a szólásszabadság kategóriájába sorolhatók), és a csalás lehetőségét is csökkenti.
 
-### Identitás és Hírnév Rendszerek \{#identity-and-reputation-systems}
+### Identitás és Hírnév Rendszerek {#identity-and-reputation-systems}
 
 A legkorábbi alternatív kriptovaluta, a, [Namecoin](http://namecoin.org/), egy Bitcoinhoz hasonló blokkláncot próbált meg használni egy névregisztrációs rendszer biztosításához, ahol a felhasználók a nevüket egy nyilvános adatbázisba regisztrálhatták több más adat mellett. A leggyakrabban idézett alkalmazási eset [DNS](https://wikipedia.org/wiki/Domain_Name_System) rendszerre, a domain nevek, például "bitcoin.org" (vagy a Namecoin esetében "bitcoin.bit") leképezése egy IP címre. Egyéb alkalmazási esetek például az e-mail autentikációk és a potenciálisan haladóbb reputációs rendszerek. Nézzünk egy alap szerződést, amely Namecoin-féle név regisztrációt biztosít az Ethereumon:
 
@@ -282,7 +282,7 @@ A legkorábbi alternatív kriptovaluta, a, [Namecoin](http://namecoin.org/), egy
 
 A szerződés nagyon egyszerű; gyakorlatilag egy adatbázis az Ethereum hálózatban, amelyhez hozzá lehet adni, de nem lehet módosítani vagy törölni belőle. Bárki regisztrálhat nevet valamilyen értékkel, majd a regisztráció örökre megmarad. Egy kifonomultabb névregisztrációs szerződésben szerepelne egy "függvény kaluzula", amely engedné a többi szerződésnek a lekérdezést, valamint a név "tulajdonosának" (azaz az első regisztrálónak) egy mechanizmust, az adat módosítására vagy a tulajdonjog átadására. Bárki hozzáadhat reputációt és web-of-trust funkcionalitást a legfelső réteghez.
 
-### Decentralized fájltárhely \{#decentralized-file-storage}
+### Decentralized fájltárhely {#decentralized-file-storage}
 
 Az elmúlt években számos népszerű online fájltárhely startup tűnt fel, amelyek közül az egyik legkiemelkedőbb a Dropbox, akik lehetővé teszik ügyfeleiknek, hogy a merevlemezük biztonsági mentését feltöltsék, majd a szolgáltatással tároltassák azt, majd a fehasználó havidíj ellenében férhet hozzá az adataihoz. Azonban ezen a ponton a fájltárhely piac relatív nem hatékony; ha megvizsgáljuk a különböző [meglévő megoldásokat](http://online-storage-service-review.toptenreviews.com/), láthatjuk, hogy különösen a "borzongások völgye", azaz a 20-200 GB szinten, ahol sem az ingyenes kvóták, sem a vállalati szintű kedvezmények nem jelennek meg, a mainstream fájltárolási költségek havi árszintje ott tart, hogy egy hónapért többet fizet az átlag felhasználó, mint egy teljes merevlemezért. Az Ethereum szerződések lehetővé teszik egy decentralizált fájl tárolási ökoszisztéma fejlesztését, ahol az egyes felhasználók kis mennyiségű pénzt kereshetnek azzal, hogy bérbeadják saját merevlemezüket és a használaton kívüli tárhelyüket, ezzel is lefelé hajtva a tárolás költségeit.
 
@@ -290,7 +290,7 @@ Az ilyen eszközök kulcsfontosságú megerősítő eleme az általunk "decentra
 
 A protokoll egyik fontos jellemzője, hogy bár úgy tűnik, hogy valaki több véletlen csomópontot bíz meg azzal, hogy ne felejtse el a fájlt, a saját kockázatát a nullához közelire csökkentheti azzal, hogy a fájlt több részre bontja titkos megosztással, majd figyeli a szerződést, hogy lássa az egyes darabok továbbra is valamelyik csomópont birtokában vannak. Ha egy szerződés továbbra is fizet, akkor kriptográfiai bizonyíték van arra, hogy valaki továbbra is tárolja a fájlt.
 
-### Decentralizált Autonóm Szervezetek \{#decentralized-autonomous-organizations}
+### Decentralizált Autonóm Szervezetek {#decentralized-autonomous-organizations}
 
 A "decentralizált autonóm szervezetek" általános koncepciója, hogy egy virtuális entitásnak, amely adott számú taggal vagy "részvényessel" rendelkezik, akár esetleg 67%-os többséggel, felhatalmazása lehet arra, hogy elköltse az entitás pénzeszközeit és módosítsa a kódját. A tagok együttesen dönthetik el, hogy a szervezet hogyan allokálja a pénzeszközöket. Egy DAO pénzeszközeinek allokálásának módszerei a pénzadománytól, fizetéseken át akár még egzotikusabb mechanizmusokig terjedhet, mint például egy belső valuta a munka elismerésére. Ez gyakorlatilag replikálja a hagyományos vállalatok vagy non-profit entitások jogi csapdáit, de a végrehajtásra kizárólag kriptográfiai blokklánc technológiát használ. Eddig a DAO-kkal kapcsolatban leginkább a kapitalista "decentralizált autonóm vállalat" (DAC) modelljéről beszéltünk, ahol a részvényesek osztalékot vagy kereskedhető részvényeket kapnak; azonban van egy alternatív, talán a "decentralizált autonóm közösség" fogalommal leírható értelmezés is, ahol a tagok egyenlő mértékben vesznek részt a döntéshozatalban, és a tagok 67%-ának beleegyezése szükséges ahhoz, hogy felvegyenek egy új tagot, vagy eltávolítsanak egy tagot. Azt a követelményt, hogy egy személy csak egy tagsággal rendelkezhet a csoportnak kollektíven kell érvényre juttatnia.
 
@@ -304,7 +304,7 @@ A szerződésben ezután mindegyikre szerepel egy klauzula. Ezután rögzíti az
 
 Alternatív mód a decentralizált vállalat modell, amikor valamelyik számlán nulla vagy több részvény van, és a döntéshozatalhoz a részvények kétharmadára van szükség. Egy teljes vázban ideális esetben van egy eszközkezelő funkció, lehetőség részvények vásárlására vagy eladására szóló ajánlattételre, valamint lehetőség az ajánlatok elfogadására (lehetőség szerint a szerződésen belül egy ajánlat-egyeztető mechanizmussal). A delegálás szintén Liquid Democracy-stílusban létezik, általánosítva az "igazgatótanács" koncepciót.
 
-### További alkalmazások \{#further-applications}
+### További alkalmazások {#further-applications}
 
 **1. Tárcák mentése**. Tegyük fel, hogy Alice biztonságban szeretné tudni pénzeszközeit, azonban aggódik amiatt, hogy veszteség éri, vagy valaki feltöri a privát-kulcsát. Ethert helyez el egy szerződésben Bobbal, egy bankkal a következőképpen:
 
@@ -328,9 +328,9 @@ Alicenek általában elég naponta 1%, azonban, ha Alice-nak többre van szüks�
 
 **8. On-chain decentralizált piacterek**, amelyek az azonosítás és elismerés rendszert használják alapként.
 
-## Egyebek és aggályok \{#miscellanea-and-concerns}
+## Egyebek és aggályok {#miscellanea-and-concerns}
 
-### Módosított GHOST implementáció \{#modified-ghost-implementation}
+### Módosított GHOST implementáció {#modified-ghost-implementation}
 
 A "Greedy Heaviest Observed Subtree" (GHOST) innovatív protokollt Yonatan Sompolinsky és Aviv Zohar vezette be [2013 decemberében](https://eprint.iacr.org/2013/881.pdf). A GHOST mögötti motiváció az volt, hogy azokon a blokkláncokon, ahol a megerősítési idő gyors, a magas elavulási aránynak köszönhetően csökken a biztonság - mivel a blokknak bizonyos időre van szüksége a hálózaton való terjedéshez, ha A bányász kibányász egy blokkot, majd B bányász még azelőtt kibányász egy blokkot, hogy A bányász blokkja eljutna B bányászhoz, ez utóbbi blokkja feleslegessé válik, és nem járul hozzá a hálózat biztonságához. Továbbá van egy centralizációs probléma is: ha A bányász egy 30% hash-erejű bányász-pool, és B bányásznak 10% hash-ereje van, A bányásznak megvan az a kockázata, hogy az esetek 70%-ában elavult blokkot hozzon létre (mivel a fennmaradó 30% esetben A bányász hozta létre az utolsó blokkot, így azonnal bányászati adathoz jut), míg B bányász kockázata, hogy az esetek 90%-ában fog létrehozni elavult blokkot. Ezért ha a blokk intervallum elég rövid ahhoz, hogy a lejárati arány magas legyen, A jelentősen hatékonyabb lesz pusztán a mérete miatt. A két hatás kombinálásával az a blokklánc, amely gyorsan gyárt blokkokat valószínűleg vezetni fog egy bányász poolt, és elég nagy százalékot fog elfoglalni a hálózat hash-teljesítményéből, hogy de facto átvegye az irányítást a bányászási folyamat fölött.
 
@@ -348,7 +348,7 @@ Az Ethereum a GHOST egy egyszerűsített verzióját implementálja, amely hét 
 
 A GHOST limitált verzióját, ahol legfeljebb 7 generációig szerepelhet nagybácsi, két ok miatt használtuk. Először is a korlátlan GHOST túl sok komplikációval járna annak kiszámításában, hogy egy adott blokkban mely nagybácsik érvényesek. Másodsorban a korlátlan GHOST, ahogy az Ethereumban használják, nem ösztönzi a bányászt, hogy a fő láncon bányásszon a nyilvános támadó által használt lánc helyett.
 
-### Díjak \{#fees}
+### Díjak {#fees}
 
 Mivel minden blokkláncban közzétett tranzakció költséget ró a hálózatra a letöltés és a hitelesítés miatt, szükség van valamilyen szabályozó mechanizmusra, általában tranzakciós díjak beiktatását, hogy meg lehessen akadályozni a rosszindulatú viselkedést. A Bitcoinban is alkalmazott alapértelmezett megközelítés szerint tisztán önkéntes díjakra van szükség, ami a bányászokra támaszkodik abban, hogy őrizzék a biztonságot és dinamikus minimumokat állítsanak be. Ezt a megközelítést nagyon kedvezően fogadták a Bitcoin közösségben, különösen azért, mert "piaci-alapú", meghagyja a keresletet és a kínálatot a bányászok és a tranzakciók küldői között, és így meghatározza az árat. A probléma ezzel az érveléssel az, hogy a tranzakciók feldolgozása nem piac; bár intuitívan vonzó a tranzakció feldolgozását olyan szolgáltatásként értelmezni, amelyet a bányász kínál küldőnek, a valóságban minden olyan tranzakció, amelyhez bányász kell a hálózat minden csomópontján fel kell dolgozni, így a tranzakció feldolgozási költségének jelentős részét külső felek fizetik, és nem a bányász hozza meg azt a döntést, hogy foglalkozik-e vele vagy sem. Így nagyon valószínű a "közlegelő tragédiája" típusú problémák előfordulása.
 
@@ -377,7 +377,7 @@ A `BLK_LIMIT_FACTOR` és `EMA_FACTOR` állandó, beállításuk jelenleg 65536 �
 
 Van még egy faktor, ami megszünteti a nagy blokkméretek iránti elköteleződést a Bitcoinban: a nagy blokkok terjedési ideje hosszabb, és így nagyobb eséllyel válnak elavulttá. Az Ethereumban a sok gázt fogyasztó blokkoknak is több időre van szüksége a terjedéshez, mivel egyrészt fizikailag hosszabbak, másrészt több időbe telik az állapot átmenet tranzakciók feldolgozásának validálása. Ez a késleltetési negatív ösztönző jelentős a Bitcoin esetében, de kevésbé az az Ethereum világában a GHOST protokoll miatt; következésképpen a szabályozott blokk limitekre való támaszkodás stabilabb alapkonfigurációt tesz lehetővé.
 
-### Számítási és Turing-teljesség \{#computation-and-turing-completeness}
+### Számítási és Turing-teljesség {#computation-and-turing-completeness}
 
 Fontos megjegyezni, hogy az Ethereum virtuális gép Turing-teljes; azaz az EVM kód minden olyan számítást képes titkosítani, amelyet rejtve lehet elvégezni, ideértve a végtelen hurkokat is. Az EVm kód a hurkokat kétféleképpen teszi lehetővé. Egyfelől a `JUMP` utasítás lehetővé teszi a programnak, hogy visszaugorjon egy korábbi pontra a kódban, míg a `JUMPI` utasítás feltételhez kötött ugrást hajt végre, lehetővé téve a `while x < 27: x = x * 2` típusú állításokat. Másodsorban a szerződések más szerződéseket is meghívhatnak, ami potenciálisan lehetővé teszi a rekurzión keresztül történő hurkok alkalmazását. Ez természetesen egy problémát eredményez: a kártékony felhasználók lényegében le tudják állítani a bányászokat és a teljes csomópontokat azzal, hogy végtelen hurokba lépésre kényszerítik őket? A probléma a számítástechnikában megakadás problémaként ismert jelenség miatt jelentkezik: általánosságban nem lehet megmondani, hogy egy adott program mikor akad meg.
 
@@ -399,7 +399,7 @@ A Turing-teljesség alternatívája a Turing-nem-teljesség, ahol a `JUMP` és `
 
 Most, küldjön egy tranzakciót A-nak. Így 51 tranzakcióban van egy olyan szerződésünk, amely akár 2<sup>50</sup> számítási lépést is magában foglalhat. A bányászok megpróbálhatják már jóelőre kiszűrni ezeket a logikai bombákat, ha értéket tartanak minden szerződés mellett, amely meghatározza, hogy legfeljebb mennyi számítási lépést vehet fel, és kiszámítják ezt azokhoz a szerződésekhez, amelyek rekurzívan hívnak más szerződéseket, azonban ez arra kényszerítené a bányászokat, hogy letiltsák azokat a szerződéseket, amelyek más szerződéseket hoznak létre (mivel a fenti 26 szerződés létrehozása és futtatása könnyedén egy szerződésbe gyúrható). Másik problematikus pont, hogy az üzenet címmezője egy változó, tehát általánosságban idő előtt nem lehet megmondani, hogy milyen más szerződést fog meghívni egy adott szerződés. Ezért összességében meglepő következtetésre jutottunk: A Turing-teljességet meglepően könnyű kezelni, valamint a Turing-teljesség hiányát hasonlóképpen meglepően nehéz kezelni, kivéve, ha ugyanezeket a vezérlőket alkalmazzuk - de ebben az esetben miért ne legyen a protokoll Turing-teljes?
 
-### Valuta és kiadás \{#currency-and-issuance}
+### Valuta és kiadás {#currency-and-issuance}
 
 Az Ethereum rendszerben saját beépített valuta, az ether szolgál kettős célt, egyfelől egy elsődleges likviditási réteget biztosít a különböző digitális eszközök közötti hatékony váltáshoz, másfelől pedig fontos mechanizmust biztosít a tranzakciós költségek fizetésére. Kényelmi szempontból, valamint elkerülve a későbbi vitákat (lásd a jelenlegi mBTC/uBTC/satoshi vitát a Bitcoin-ban), a névértékeket előre felcímkézzük:
 
@@ -437,7 +437,7 @@ Az állandó lineáris keresletnövekedés modell csökkenti a jelentő vagyonko
 
 Ne feledjük, hogy a jövőben valószínű, hogy az Ethereum proof-of-stake modellre vált a biztonság érdekében, és évi nulla és 0,05X közé csökken a kiadásra vonatkozó követelmény. Abban az esetben, ha az Ethereum szervezet elveszíti pénzeszközeit, vagy valamilyen más okból kifolyólag eltűnik, nyitva hagyunk egy "társadalmi szerződést": mindenkinek joga van létrehozni egy jövőbeli Ethereum verziót, azzal a feltétellel, hogy az ether mennyiségének `60102216 * (1.198 + 0.26 * n)` kell lennie, ahol az `n` a z évek számát jelöli a genesis blokk után. A létrehozók szabadon értékesíthetik crowd-sell formájában, illetve meghatározhatják a PoS-által hajtott kínálat növekedés és a maximálisan engedélyezett kínálat bővülés különbségét részben vagy egészben a fejlesztés költségeinek lefedésére. Azok a frissítések, amelyek nem felelnek meg a társadalmi szerződés követelményeinek forkolhatók a követelményeknek megfelelő verziókba.
 
-### A bányászat centralizálása \{#mining-centralization}
+### A bányászat centralizálása {#mining-centralization}
 
 A Bitcoin bányászati algoritmusa úgy működik, hogy a bányászok SHA256 számításokat végeznek a blokk fejléc kissé módosított verzióin egymás után több milliószor, amíg végül egy csomópont egy olyan verzióhoz ér, amelynek hash értéke kevesebb mint a cél (jelenleg körülbelül 2<sup>192</sup>). Azonban ez a bányászati algoritmus a centralizáció két formájára sérülékeny. Először is a bányászati ökoszisztémát az ASIC-ok (alkalmazásspecifikus integrált körök), az erre a célra tervezett számítógép chipek dominálják, és ezért ezek többezerszer hatékonyabbak a Bitcoin bányászat során. Ez azt jelenti, hogy a Bitcoin bányászat már egyáltalán nem decentralizált és az egyenlőségen alapuló tér, és több millió dolláros tőkére van szükség ahhoz, hogy hatékonyan részt lehessen venni benne. Másodsorban a legtöbb Bitcoin bányász gyakorlatilag nem lokálisan validálja a blokkokat; hanem helyette egy centralizált bányász-poolra támaszkodnak a blokk fejlécek megadásakor. Ez a probléma azonban még rosszabb: a tartalom írásakor a legjobb három bányász-pool indirekt módon a feldolgozási teljesítmény körülbelül 50%-át irányítja, bár ezt némiképp enyhíti az a tény, hogy a bányászok átválthatnak egy másik pool-ra, ha a pool vagy a koalíció 51%-os támadással próbálkozik.
 
@@ -445,7 +445,7 @@ Az Ethereumban jelenleg az a szándék, hogy olyan bányászati algoritmust hasz
 
 Ez a modell még nincs tesztelve, és szembejöhetnek még nehézségek bizonyos okos optimalizálások elkerülése terén, amikor a szerződés futtatást bányászati algoritmusként használják. Azonban ennek az algoritmusnak egyik érdekes funkciója, hogy bárki "megmérgezheti a kutat", ha nagyszámú szerződést vezet be a blokkláncra, azért, hogy megakasszon bizonyos ASIC-okat. Az ASIC gyártók számára léteznek gazdasági ösztönzők arra, hogy ezzel a trükkel megtámadják egymást. Ezért az általunk fejlesztett megoldás végeredményben egy adaptív humán gazdasági megoldás, és nem pusztán technikai.
 
-### Méretezhetőség \{#scalability}
+### Méretezhetőség {#scalability}
 
 Az Ethereummal kapcsolatos gyakori aggály a méretezhetőség kérdése. A Bitcoinhoz hasonlóan az Ethereumnak megvan az a hibája, hogy a hálózatban minden csomópontnak fel kell dolgoznia a tranzakciókat. A Bitcoin esetében a jelenlegi blokklánc mérete körülbelül 15 GB, ami óránként mintegy 1 MB-vel nő. Ha a Bitcoin hálózatnak másodpercenként 2000 Visa tranzakciót kellene feldolgoznia, akkor három másodpercenként nőne 1 MB-val (1 GB óránként, 8 TB évente). Az Ethereumon is hasonló növekedési tempó figyelhető meg, amelyet még rosszabbá tesz az a tény, hogy számos alkalmazást futtatnak az Ethereum blokkláncán, szemben azzal, hogy a Bitcoin csak egy valuta, azonban javít rajta az, hogy az Ethereum teljes csomópontjainak csak az állapotot és nem a teljes blokklánc előzményt kell tárolniuk.
 
@@ -455,15 +455,15 @@ A közeljövőben az Ethereum két további stratégiát fog használni a probl�
 
 Egy másik, kifinomultabb támadásban rosszindulatú bányászok félkész blokkokat publikálnak, így a teljes információ nem is létezik annak megállapítására, hogy a blokk érvényes-e. A megoldás egy kihívásra reagáló protokoll: a hitelesítő csomópont cél tranzakciós indexek formájában "kihívásokat" adnak ki, majd amikor visszakapnak egy csomópontot, egy könnyű csomópont mindaddig érvénytelennek tekinti a blokkot, amíg egy másik csomópont, egy bányász, vagy egy másik hitelesítő vissza nem ad Patricia csomópont készleteket igazolva az érvényességet.
 
-## Következtetés \{#conclusion}
+## Következtetés {#conclusion}
 
 Az Ethereum protokollt eredetileg egy frissített kriptovaluta verziónak tekintették, ami haladó funkciókat is kínált, például blokkláncon lévő escrow-t, kivételi korlátokat, pénzügyi szerződéseket, szerencsejáték piacokat és hasonlókat egy nagyon általánosított programnyelven. Az Ethereum protokoll nem "támogatja" közvetlenül az alkalmazásokat, azonban a Turin-teljesség programnyelv megléte azt jelenti, hogy tetszőleges mennyiségű szerződés hozható létre bármilyen tranzakció típushoz vagy alkalmazáshoz. Még érdekesebb az Ethereummal kapcsolatban, hogy az Ethereum protokoll sokkal több puszta valutánál. A decentralizált fájl tárolással, számításokkal és kimenetelre fogadó piacokkal kapcsolatos protokollok több tucat hasonló koncepció mellett magukban rejtik a számítási ipar hatékonyságnövelésének potenciálját, és masszív lökést adnak más peer-to-peer protokolloknak egy korábban nem látott gazdasági réteg hozzáadásával. Végezetül pedig jelentős számú alkalmazás van, amely egyáltalán nem foglalkozik pénzzel.
 
 Az Ethereum protokollban implementált tetszőleges állapot átmenet függvény koncepciója egyedi potenciált rejtő platformot kínál; szemben a zártvégű, egycélú protokollokkal, amelyeket egy bizonyos típusú alkalmazásra fejlesztenek az adattárolás, pénzügy vagy szerencsejáték világában, az Ethereum egy alapvetően nyílt végű koncepció, és hiszünk abban, hogy kiválóan szolgál nagyon sok pénzügyi és nem pénzügyi protokoll alapozó rétegeként az elkövetkező években.
 
-## Jegyzetek és további olvasnivaló \{#notes-and-further-reading}
+## Jegyzetek és további olvasnivaló {#notes-and-further-reading}
 
-### Jegyzetek \{#notes}
+### Jegyzetek {#notes}
 
 1.  A kifinomult olvasó észreveheti, hogy gyakorlatilag egy Bitcoin cím az elliptikus görbe nyilvános kulcs hash-e, és nem a nyilvános kulcs maga. Azonban gyakorlatilag teljesen legitim kriptográfiai terminológia a pubkey hash nyilvános kulcsként történő hivatkozása. Ez azért van, mert a Bitcoin kriptográfiáját tekinthetjük egy egyedi digitális aláírás algoritmusnak, ahol a nyilvános kulcs az ECC pubkey hashjéből áll, az aláírás az ECC pubkey és az ECC aláírás együttesen, a hitelesítő algoritmusban pedig az aláírásban lévő ECC pubkey-t a nyilvános kulcsként rendelkezésre bocsátott ECC pubkey hashhel vetik összes, majd az ECC aláírást az ECC pubkey értékével hitelesítik.
 2.  Gyakorlatilag a 11 előző blokk mediánja.
@@ -472,7 +472,7 @@ Az Ethereum protokollban implementált tetszőleges állapot átmenet függvény
 5.  Ennek egy másik kifejezési módja az absztrakció. A [legfrissebb roadmap](https://ethresear.ch/t/sharding-phase-1-spec/1407/67) az absztrakt futtatás megtervezése, ahol a futtató motoroknak nem feltétlenül kell követniük egy kanonizáló specifikációt, de például testreszabható egy adott alkalmazáshoz vagy egy shard-hoz. (A futtató motorok heterogénsége nincs explicite leírva a roadmapban. Létezik heterogén sharding, amelyet Vlad Zamfir foglalt koncepcióba.)
 6.  Belső értelmezésben a 2 és "CHARLIE" szám, ez utóbbi big-endian bázis 256 reprezentáció. A számok 0-tól legfeljebb 2<sup>256</sup>-1-ig terjedhetnek.
 
-### További olvasnivaló \{#further-reading}
+### További olvasnivaló {#further-reading}
 
 1.  [Valódi érték](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)
 2.  [Okos-tulajdonság](https://en.bitcoin.it/wiki/Smart_Property)

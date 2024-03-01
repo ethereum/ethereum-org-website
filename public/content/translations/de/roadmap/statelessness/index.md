@@ -4,7 +4,7 @@ description: Erklärung vom Verfall des Vergangenen (history expiry) und der Zus
 lang: de
 ---
 
-# Zustandslosigkeit, Zustandsverfall und Verfall des Vergangenen (history expiry) \{#statelessness}
+# Zustandslosigkeit, Zustandsverfall und Verfall des Vergangenen (history expiry) {#statelessness}
 
 Die Möglichkeit Ethereum Nodes auf einfacher Hardware betreiben zu können ist für wahre Dezentralisation entscheidend. Das liegt daran, dass das Betreiben eines Nodes Nutzern die Möglichkeit gibt Informationen verifizieren zu können, indem sie kryptografische Überprüfungen unabhängig ausführen können, statt von den Daten eines Dritten abhängig zu sein. Einen Node zu betreiben erlaubt Nutzern Transaktionen direkt zum Ethereum Peer-to-Peer Netzwerk einzuschicken, statt einem Vermittler vertrauen zu müssen. Dezentralisation ist nicht möglich, wenn diese Vorteile nur Nutzern mit teurer Hardware zur Verfügung stehen. Stattdessen sollten Nodes in der Lage sein, mit extrem einfachen Rechen- und Speichervoraussetzungen betrieben zu werden. Dadurch könnten sie auf Handys, Mikrocomputern oder unbemerkt auf einem Standrechner laufen.
 
@@ -12,7 +12,7 @@ Heute ist der hohe Speicherplatzbedarf das, was den Zugriff auf Nodes für alle 
 
 Günstigere Festplatten können für das Speichern alter Daten verwendet werden, sie sind jedoch zu langsam, um mit eingehenden Blöcken mithalten zu können. Die Beibehaltung der aktuellen Speichermodelle für Clients, bei gleichzeitiger Verbilligung und Vereinfachung der Datenspeicherung ist nur eine vorübergehende und partielle Lösung des Problems, da das Zustandswachstum von Ethereum "unbegrenzt" ist, was bedeutet, dass die Speicheranforderungen immer weiter steigen werden und die technologischen Verbesserungen immer mit dem kontinuierlichen Zustandswachstum Schritt halten müssen. Stattdessen müssen Klienten einen neuen Weg finden, Blöcke und Transaktionen zu verifizieren, während keine Daten von lokalen Datenbanken gespeichert werden müssen.
 
-## Speicherreduzierung für Nodes \{#reducing-storage-for-nodes}
+## Speicherreduzierung für Nodes {#reducing-storage-for-nodes}
 
 Es gibt mehrere Möglichkeiten um die Menge an Daten, die jeder Node speichern muss, zu verringern. Dabei muss das Kernprotokoll Ethereums zu unterschiedlichem Maße aktualisiert werden:
 
@@ -21,9 +21,9 @@ Es gibt mehrere Möglichkeiten um die Menge an Daten, die jeder Node speichern m
 - **Schwache Zustandslosigkeit**: Hier müssen nur Blockproduzenten Zugriff auf die vollständigen Zustandsdaten haben, andere Nodes können Blöcke ohne eine lokale Zustandsdatenbank verifizieren.
 - **Starke Zustandslosigkeit**: Hier können keine Nodes auf die vollständigen Zustandsdaten zugreifen.
 
-## Datenverfall \{#data-expiry}
+## Datenverfall {#data-expiry}
 
-### Verfall des Vergangenen (history expiry) \{#history-expiry}
+### Verfall des Vergangenen (history expiry) {#history-expiry}
 
 Dass das Vergangene verfällt, bedeutet im Einfachen, dass Clients ältere Daten, die sie unwahrscheinlich brauchen werden, abschneiden. Dadurch müssen sie nur noch kleine Mengen der vergangenen Daten behalten und können alte Daten wegschmeißen, sobald neue hinzugefügt werden. Es gibt zwei Gründe dafür, dass Clients veraltete Daten brauchen könnten: dem Synchronisieren und Bedienen von Datenanfragen. Früher mussten Clients vom jeden Block Genesis bis zum Kopf der Kette synchronisieren und dabei alle nach Richtigkeit überprüfen. Heute nutzen Clients "schwache subjektive Kontrollpunkte" um ihren Weg an die Spitze der Blockchain zu bootstrappen. Diese Kontrollpunkte sind vertraute Startpunkte, als würde man den Genesis Block näher die Gegenwart statt dem Startpunkt von Ethereum legen. Das bedeutet, dass Clients alle Informationen vor ihrem letzten schwachen subjektiven Kontrollpunkt löschen können, ohne dabei die Fähigkeit zu verlieren, den Kopf der Kette zu synchronisieren. Clients liefern zurzeit Anfragen (die über JSON-RPC ankommen) für vergangene Daten, indem sie sie von ihren lokalen Datenbanken nehmen. Jedoch wird das mit dem Verfall des Vergangenen nicht möglich sein, wenn die angefragten Daten abgeschnitten wurden. Um diese vergangenen Daten zu liefern, bedarf es innovativer Lösungen.
 
@@ -35,7 +35,7 @@ EIP-4444 ist bis jetzt nicht bereit, aber unter aktiver Diskussion. Interessante
 
 Dieses Upgrade ändert nicht die fundamentale Art der Ethereum Nodes, Zustandsdaten zu speichern, sondern nur die Art auf vergangene Daten zuzugreifen.
 
-### Zustandsverfall \{#state-expiry}
+### Zustandsverfall {#state-expiry}
 
 Zustandsverfall bezieht sich auf das Entfernen der Zustände von individuellen Nodes, wenn sie nicht vor kurzer Zeit aufgerufen wurden. Es gibt mehrere Wege, wie das implementiert werden könnte, dazu gehören:
 
@@ -50,7 +50,7 @@ Das würde wahrscheinlich durch Zustandsbäume für verschiedene Zeiträume (vie
 
 Zustandsverfall ist immer noch in der Forschungsphase und nicht bereit ausgeliefert zu werden. Zustandsverfälle könnten gut nach zustandslosen Clients und dem Verfallen vom Vergangenen passieren, da diese Verbesserungen große Zustandsgrößen für die Mehrheit von Validatoren gut verwaltbar.
 
-## Zustandslosigkeit \{#statelessness}
+## Zustandslosigkeit {#statelessness}
 
 Zustandslosigkeit ist fast eine falsche Bezeichnung, da nicht das Konzept des Zustands eliminiert wird. Stattdessen beinhaltet es Änderungen dazu, wie Ethereum Nodes Zustandsdaten verarbeiten. Zustandslosigkeit selber kommt in zwei Arten: schwache und starke Zustandslosigkeit. Schwache Zustandslosigkeit ermöglicht den meisten Nodes zustandslos zu werden, indem sie die Verantwortung für das Speichern der Zustände auf mehrere aufteilen. Starke Zustandslosigkeit entfernt komplett die Notwendigkeit für jeden Node die kompletten Zustandsdaten zu speichern. Sowohl schwache, als auch starke Zustandslosigkeit bieten die folgenden Vorteile für normale Validatoren:
 
@@ -60,7 +60,7 @@ Zustandslosigkeit ist fast eine falsche Bezeichnung, da nicht das Konzept des Zu
 - Das Betreiben von Nodes auf günstigen Festplatten, da kein schreiben/lesen auf dem Speicher nötig ist
 - Kompatibilität mit zukünftigen Verbesserungen der Kryptographie Ethereums
 
-### Schwache Zustandslosigkeit \{#weak-statelessness}
+### Schwache Zustandslosigkeit {#weak-statelessness}
 
 Schwache Zustandslosigkeit beinhaltet Änderungen dazu, wie Ethereum Nodes Zustandsänderungen verifizieren, jedoch eliminiert es nicht komplett den Bedarf für Zustandsspeicher auf allen Nodes des Netzwerks. Stattdessen schiebt schwache Zustandslosigkeit die Verantwortung für den Zustandsspeicher auf Blockantragsteller (block proposer), während alle anderen Nodes auf dem Netzwerk Blöcke verifizieren, ohne die vollen Zustandsdaten zu speichern.
 
@@ -81,17 +81,17 @@ Block Proposer nutzen die Zustandsdaten, um "Zeugen" zu erzeugen - die minimale 
 
 Schwache Zustandslosigkeit ist in einem fortgeschrittenem Forschungsstand, aber es stützt sich stark darauf, dass Proposer-Builder Separation und Verkle Bäume implementiert werden, sodass kleine Zeugen zwischen Peers übergeben werden können. Das bedeutet, dass schwache Zustandslosigkeit wahrscheinlich noch einige Jahre vom Ethereum Hauptnetz entfernt ist.
 
-### Starke Zustandslosigkeit \{#strong-statelessness}
+### Starke Zustandslosigkeit {#strong-statelessness}
 
 Starke Zustandslosigkeit entfernt jegliche Notwendigkeit für irgendeinen Node die Zustandsdaten zu speichern. Stattdessen werden Transaktionen mit Zeugen, welche von Blockerzeugern aggregiert werden können, versendet. Die Blockerzeuger sind dann verantwortlich, nur den für die Generierung von Zeugen für relevante Accounts gebrauchten Zustand zu speichern. Die Verantwortung für den Zustand ist fast komplett an den Nutzer verschoben, da diese Zeugen senden und 'Listen aufrufen' um zu erklären, mit welchen Account- und Speicherschlüsseln sie interagieren.
 
 Starke Zustandslosigkeit wurde von Forschern untersucht, wird aber wahrscheinlich kein Teil der Ethereum Roadmap sein - es ist wahrscheinlicher, dass die schwache Zustandslosigkeit für Ethereums Skalierungsbedürfnisse ausreicht.
 
-## Aktueller Fortschritt \{#current-progress}
+## Aktueller Fortschritt {#current-progress}
 
 Schwache Zustandslosigkeit, Verfall des Vergangenen und Zustandsverfall sind alle in der Forschungsphase und können voraussichtlich in einigen Jahren ausgesendet werden. Es gibt keine Garantie dafür, dass all diese Vorschläge implementiert werden, zum Beispiel wird es eventuell nicht nötig sein den Verfall des Vergangenen nach dem Zustandsverfall zu implementieren. Es gibt auch andere Punkte der Roadmap, so wie [Verkle Bäume](/roadmap/verkle-trees) und [Proposer-Builder Separation](/roadmap/pbs), welche zuerst fertiggestellt werden müssen.
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [Vitalik Zustandslosigkeit AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [Eine Theorie der Zustandsgrößenverwaltung](https://hackmd.io/@vbuterin/state_size_management)

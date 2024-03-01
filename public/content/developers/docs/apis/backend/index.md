@@ -10,15 +10,15 @@ For this purpose, every Ethereum client implements the [JSON-RPC](/developers/do
 
 If you want to use a specific programming language to connect with an Ethereum node, there are many convenience libraries within the ecosystem that make this much easier. With these libraries, developers can write intuitive, one-line methods to initialize JSON-RPC requests (under the hood) that interact with Ethereum.
 
-## Prerequisites \{#prerequisites}
+## Prerequisites {#prerequisites}
 
 It might be helpful to understand the [Ethereum stack](/developers/docs/ethereum-stack/) and [Ethereum clients](/developers/docs/nodes-and-clients/).
 
-## Why use a library? \{#why-use-a-library}
+## Why use a library? {#why-use-a-library}
 
 These libraries abstract away much of the complexity of interacting directly with an Ethereum node. They also provide utility functions (e.g. converting ETH to Gwei) so as a developer you can spend less time dealing with the intricacies of Ethereum clients and more time focused on the unique functionality of your application.
 
-## Available libraries \{#available-libraries}
+## Available libraries {#available-libraries}
 
 **Alchemy -** **_Ethereum Development Platform._**
 
@@ -167,16 +167,16 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Related topics \{#related-topics}
+## Related topics {#related-topics}
 
 - [Nodes and clients](/developers/docs/nodes-and-clients/)
 - [Development frameworks](/developers/docs/frameworks/)
 
-## Related tutorials \{#related-tutorials}
+## Related tutorials {#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Instructions for getting web3.js set up in your project._
 - [Calling a smart contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Using the DAI token, see how to call contracts function using JavaScript._

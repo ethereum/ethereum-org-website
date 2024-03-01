@@ -16,7 +16,7 @@ published: 2020-12-01
 
 Questa è una guida entry level su come utilizzare Websocket e Alchemy per fare richieste alla blockchain Ethereum.
 
-## WebSocket e HTTP \{#websockets-vs-http}
+## WebSocket e HTTP {#websockets-vs-http}
 
 A differenza di HTTP, con i WebSocket non serve fare continuamente richieste quando si desiderano informazioni specifiche. I WebSocket mantengono una connessione con la rete (se configurati correttamente) e monitorano le modifiche.
 
@@ -24,7 +24,7 @@ Come avviene con ogni connessione di rete, non presupporre che un WebSocket rima
 
 ​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) aggiunge automaticamente la gestione degli errori di WebSocket e i nuovi tentativi senza necessità di configurazione alcuna.
 
-## Facciamo una prova \{#try-it-out}
+## Facciamo una prova {#try-it-out}
 
 Il modo più facile per testare i WebSocket è installare uno strumento da riga di comando per eseguire richieste WebSocket come [wscat](https://github.com/websockets/wscat). Usando wscat, è possibile inviare richieste come di seguito:
 
@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ```
 
-## Come usare i WebSocket \{#how-to-use-websockets}
+## Come usare i WebSocket {#how-to-use-websockets}
 
 Per iniziare, apri un WebSocket usando l'URL WebSocket della tua app. Puoi trovare l'URL WebSocket della tua app aprendo la pagina dell'app [nel dashboard](https://dashboard.alchemyapi.io/) e facendo clic su "View Key". Tieni presente che l'URL della tua app per WebSocket è diverso dall'URL per le richieste HTTP, ma entrambi sono visualizzabili facendo clic su "View Key".
 
@@ -47,7 +47,7 @@ Per iniziare, apri un WebSocket usando l'URL WebSocket della tua app. Puoi trova
 
 Tutte le API elencate in [Alchemy API Reference](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) possono essere utilizzate tramite WebSocket. A questo scopo, usa lo stesso payload che verrebbe inviato come corpo di una richiesta HTTP POST, ma invialo tramite il WebSocket.
 
-## Con Web3 \{#with-web3}
+## Con Web3 {#with-web3}
 
 Passare ai WebSocket usando una libreria client come Web3 è semplice. Basta passare l'URL WebSocket anziché quello HTTP quando crei un'istanza del client Web3. Per esempio:
 
@@ -57,26 +57,26 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## API per l'iscrizione \{#subscription-api}
+## API per l'iscrizione {#subscription-api}
 
 Se ti connetti tramite WebSocket, puoi usare altri due metodi: `eth_subscribe` e `eth_unsubscribe`. Ti consentiranno di attendere determinati eventi e di ricevere notifiche immediate.
 
-### `eth_subscribe` \{#eth-subscribe}
+### `eth_subscribe` {#eth-subscribe}
 
 Crea una nuova iscrizione agli eventi specificati. [Scopri di più su`eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
-#### Parametri \{#parameters}
+#### Parametri {#parameters}
 
 1. Tipi di iscrizioni
 2. Parametri opzionali
 
 Il primo argomento specifica il tipo di evento da attendere. Il secondo argomento contiene opzioni aggiuntive che dipendono dal primo argomento. I diversi tipi di descrizione, le loro opzioni e i payload degli eventi sono descritti di seguito.
 
-#### Restituisce \{#returns}
+#### Restituisce {#returns}
 
 L'ID dell'iscrizione: questo ID sarà allegato a ogni evento ricevuto e può anche essere usato per annullare l'iscrizione usando `eth_unsubscribe`.
 
-#### Eventi di iscrizione \{#subscription-events}
+#### Eventi di iscrizione {#subscription-events}
 
 Mentre l'iscrizione è attiva, ricevi eventi che sono oggetti con i seguenti campi:
 
@@ -86,7 +86,7 @@ Mentre l'iscrizione è attiva, ricevi eventi che sono oggetti con i seguenti cam
   - `subscription`: ID dell'iscrizione restituito dalla chiamata `eth_subscription` che ha creato questa iscrizione.
   - `result`: oggetto i cui contenuti variano in base al tipo di iscrizione.
 
-#### Tipi di iscrizione \{#subscription-types}
+#### Tipi di iscrizione {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
@@ -209,7 +209,7 @@ Esempio:
 
 ```
 
-### `eth_unsubscribe` \{#eth-unsubscribe}
+### `eth_unsubscribe` {#eth-unsubscribe}
 
 Annulla un'iscrizione esistente in modo che non siano inviati altri eventi.
 

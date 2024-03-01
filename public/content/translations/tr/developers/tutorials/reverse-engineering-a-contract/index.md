@@ -10,7 +10,7 @@ skill: advanced
 published: 2021-12-30
 ---
 
-## Giriş \{#introduction}
+## Giriş {#introduction}
 
 _Blokzincirde sır yoktur_; her şey tutarlı, doğrulanabilir ve herkes tarafından erişilebilirdir. İdeal olarak [sözleşmelerin kaynak kodları Etherscan'de yayımlanmalı ve doğrulanmalıdır](https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code). Fakat, [durum her zaman böyle değildir](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code). Bu makalede, kaynak kodu olmayan bir sözleşmeye bakarak sözleşmelerde tersine mühendislik yapmayı öğreneceksiniz, [`0x2510c039cc3b061d79e564b38836da87e31b342f`](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f).
 
@@ -18,7 +18,7 @@ Ters derleyiciler vardır, fakat her zaman [ kullanılabilir sonuçlar](https://
 
 Bu makaleyi anlayabilmek için Ethereum Sanal Makinesi'nin temellerini çoktan biliyor olmalı ve en azından Ethereum Sanal Makinesi'nin derleyicisine aşina olmalısınız. [Bu konuları buradan okuyabilirsiniz](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
-## Yürütülebilir Kodu Hazırlama \{#prepare-the-executable-code}
+## Yürütülebilir Kodu Hazırlama {#prepare-the-executable-code}
 
 İşlem kodlarını sözleşme için Etherscan'e gidip **Sözleşme** seçeneğine ve sonrasında **İşlem Kodu Görünümüne Geç**'e tıklayarak alabilirsiniz. Bir satıra bir işlem kodunun düştüğü bir görünüm elde edeceksiniz.
 
@@ -42,7 +42,7 @@ Sonraki adım, sıçramaları anlayabilmemiz için doğru kod konumlarını alma
 
 Bu fonksiyonun bize onaltılık bir değer vermesine ihtiyacımız var çünkü sıçramalardan (`JUMP` and `JUMPI`) önceki itilen değerler de bize onaltılık şekilde verilir.
 
-## Giriş Noktası (0x00) \{#the-entry-point-0x00}
+## Giriş Noktası (0x00) {#the-entry-point-0x00}
 
 Sözleşmeler her zaman ilk bayttan yürütülür. Bu kodun ilk kısmıdır:
 
@@ -64,7 +64,7 @@ Bu kod iki şey yapar:
 
 ![Bu kısım için akış şeması](flowchart-entry.png)
 
-### 0X5E'deki (ABI olmayan çağrı verisi) İşleyici \{#the-handler-at-0x5e-for-non-abi-call-data}
+### 0X5E'deki (ABI olmayan çağrı verisi) İşleyici {#the-handler-at-0x5e-for-non-abi-call-data}
 
 | Offset | Opcode       |
 | -----: | ------------ |
@@ -158,7 +158,7 @@ Hepsini özetlemek için işte başlangıçtaki kod için bir akış şeması.
 
 ![Giriş noktası akış şeması](flowchart-entry.png)
 
-## 0x7C'deki İşleyici \{#the-handler-at-0x7c}
+## 0x7C'deki İşleyici {#the-handler-at-0x7c}
 
 Bu işleyicinin ne yaptığını bilerek başlığa koymadım. Buradaki amaç, size bu spesifik sözleşmenin nasıl çalıştığını değil, sözleşmelere nasıl tersine mühendislik yapacağınızı öğretmek. Ne yaptığını benimle aynı şekilde öğreneceksiniz, yani kodu takip ederek.
 
@@ -250,7 +250,7 @@ Burada dönen veriyi 0x80'den başlayan arabellek hafızasına kopyalıyoruz.
 
 Yani çağrının ardından dönen veriyi 0x80 - 0x80+RETURNDATASIZE arabelleğine kopyaladıktan sonra, çağrı başarılı olduysa sonrasında tam olarak o arabellekle `RETURN` yapıyoruz.
 
-### DELEGATECALL Başarısız oldu \{#delegatecall-failed}
+### DELEGATECALL Başarısız oldu {#delegatecall-failed}
 
 Buraya, yani 0xC0'a geldiysek, çağrı yaptığımız sözleşme geri dönmüştür. Bu sözleşme açısından sadece bir vekil olduğumuz için aynı veriyi döndürmek ve ayrıca geri dönmek istiyoruz.
 
@@ -265,7 +265,7 @@ Yani daha önce `RETURN`: 0x80 - 0x80+RETURNDATASIZE için kullandığımız ara
 
 ![Vekil akış şeması çağrısı](flowchart-proxy.png)
 
-## ABI çağrıları \{#abi-calls}
+## ABI çağrıları {#abi-calls}
 
 Eğer veri boyutu 4 bayt ya da daha fazlaysa bu, geçerli bir ABI çağrısı olabilir.
 
@@ -300,7 +300,7 @@ Eşleşme bulunamazsa kod, bizim vekili olduğumuz sözleşmenin bir eşleşmesi
 
 ![ABI çağrıları akış şeması](flowchart-abi.png)
 
-## splitter() \{#splitter}
+## splitter() {#splitter}
 
 | Offset | Opcode       | Yığın                         |
 | -----: | ------------ | ----------------------------- |
@@ -340,7 +340,7 @@ Ve 0x80 artık vekil adresini içeriyor
 |    134 | PUSH2 0x00e4 | 0xE4 0xA0 |
 |    137 | JUMP         | 0xA0      |
 
-### E4 Kodu \{#the-e4-code}
+### E4 Kodu {#the-e4-code}
 
 Bu bu satırları ilk görüşümüz, fakat bunlar diğer yöntemlerle paylaşıldı (aşağı bakın). X yığınındaki değeri arayacağız; `splitter()`'da bu Xin değerinin 0xA0 olduğunu unutmayın.
 
@@ -359,7 +359,7 @@ Yani bu kod, yığında (X) bir bellek işaretçisi alır ve sözleşmenin, arab
 
 `splitter()` durumunda bu, vekili olduğumuz adresi döndürür. `RETURN`, veriyi yazdığımız yerin adresi olan 0x80-0x9F'deki arabelleği verir (0x130un yukarısındaki kayma).
 
-## currentWindow() \{#currentwindow}
+## currentWindow() {#currentwindow}
 
 0x158-0x163 kaymalarındaki kod, `splitter()` içindeki 0x103-0x10E'de gördüğümüzle aynıdır (`JUMPI` hedefi dışında), bu nedenle `currentWindow()`'un da `payable` olmadığını biliyoruz.
 
@@ -373,7 +373,7 @@ Yani bu kod, yığında (X) bir bellek işaretçisi alır ve sözleşmenin, arab
 |    16C | DUP2         | 0xDA Storage[1] 0xDA |
 |    16D | JUMP         | Storage[1] 0xDA      |
 
-### DA kodu \{#the-da-code}
+### DA kodu {#the-da-code}
 
 Bu kod da diğer yöntemlerle paylaşılmıştır. Yani Y yığınındaki değeri çağıracağız; `currentWindow()`'da bu Y'nin değerinin Storage[1] olduğunu unutmayın.
 
@@ -395,7 +395,7 @@ Bu kod da diğer yöntemlerle paylaşılmıştır. Yani Y yığınındaki değer
 
 Ve geri kalanı da [yukarıda](#the-e4-code) anlatılmıştır. Yani 0xDA'ya yapılan sıçramalar yığının başını (Y), 0x80-0x9F'ye yazar ve bu değeri döndürür. Bir `currentWindow()` durumunda, Storage[1]'ı verir.
 
-## merkleRoot() \{#merkleroot}
+## merkleRoot() {#merkleroot}
 
 0x158-0x163 kaymalarındaki kod, `splitter()` içindeki 0x103-0x10E'de gördüğümüzle aynıdır (`JUMPI` hedefi dışında), bu nedenle `merkleRoot()`'un da `payable` olmadığını biliyoruz.
 
@@ -411,7 +411,7 @@ Ve geri kalanı da [yukarıda](#the-e4-code) anlatılmıştır. Yani 0xDA'ya yap
 
 Sıçramadan sonra ne olduğunu [çoktan anladık](#the-da-code). Yani `merkleRoot()` Storage[0]'ı döndürür.
 
-## 0x81e580d3 \{#0x81e580d3}
+## 0x81e580d3 {#0x81e580d3}
 
 0xC4-0xCF kaymalarındaki kod, `splitter()` içindeki 0x103-0x10E'de gördüğümüzle aynıdır (`JUMPI` hedefi dışında), dolayısıyla bu fonksiyonun da `payable` olmadığını biliyoruz.
 
@@ -515,7 +515,7 @@ Ve 0x00-0x1F bellek konumları artık 0x04 verilerini içermektedir (0x00-0x1E'l
 
 [0xDA kaymasındaki kodun](#the-da-code) ne yaptığını zaten biliyoruz, arayan kişiye yığının üst değerini döndürür. Yani bu fonksiyon, arayana arama tablosundaki değeri döndürür.
 
-## 0x1f135823 \{#0x1f135823}
+## 0x1f135823 {#0x1f135823}
 
 0xC4-0xCF kaymalarındaki kod, `splitter()` içindeki 0x103-0x10E'de gördüğümüzle aynıdır (`JUMPI` hedefi dışında), dolayısıyla bu fonksiyonun da `payable` olmadığını biliyoruz.
 
@@ -531,7 +531,7 @@ Ve 0x00-0x1F bellek konumları artık 0x04 verilerini içermektedir (0x00-0x1E'l
 
 [0xDA uzaklığındaki kodun](#the-da-code) ne yaptığını zaten biliyoruz, arayan kişiye yığının üst değerini döndürür. Yani bu fonksiyon `Value*` döndürür.
 
-### Yöntem Özeti \{#method-summary}
+### Yöntem Özeti {#method-summary}
 
 Bu noktada sözleşmeyi anladığınızı düşünüyor musunuz? Ben düşünmüyorum. Şu ana kadar elimizde şu yöntemler var:
 
@@ -546,7 +546,7 @@ Bu noktada sözleşmeyi anladığınızı düşünüyor musunuz? Ben düşünmü
 
 Ancak diğer işlevlerin Storage[3]'da sözleşme tarafından sağlandığını biliyoruz. Belki o sözleşmenin ne olduğunu bilseydik bize bir ipucu verirdi. Neyse ki, blokzincirden bahsediyoruz ve en azından teoride de olsa her şey biliniyor. Storage[3] değerini ayarlayan herhangi bir yöntem görmedik, dolayısıyla bunun oluşturucu tarafından ayarlanmış olması gerekir.
 
-## Yapıcı \{#the-constructor}
+## Yapıcı {#the-constructor}
 
 [Bir sözleşmeye baktığımızda](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f) onu oluşturan işlemi de görebiliriz.
 
@@ -554,7 +554,7 @@ Ancak diğer işlevlerin Storage[3]'da sözleşme tarafından sağlandığını 
 
 O işleme ve sonrasında da **Durum** sekmesine tıklarsak, parametrelerin başlangıç değerlerini görebiliriz. Spesifik olarak, Storage[3]'ın [0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761](https://etherscan.io/address/0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761) değerini içerdiğini görebiliriz. O sözleşme, eksik işlevselliği içermek zorundadır. Araştırdığımız sözleşme için kullandığımız araçların aynılarını kullanarak bunu anlayabiliriz.
 
-## Vekil Sözleşmesi \{#the-proxy-contract}
+## Vekil Sözleşmesi {#the-proxy-contract}
 
 Yukarıdaki orijinal sözleşme için kullandığımız tekniklerin aynılarını kullanarak kontratın şu durumlarda eski haline döndüğünü görüyoruz:
 
@@ -580,7 +580,7 @@ Alttaki 4 metodu görmezden gelebiliriz, çünkü onları ele almayacağız. İm
 
 Kalan yöntemlerden biri `claim(<params>)`, diğeri de `isClaimed(<params>)` şeklindedir, dolayısıyla bir airdrop sözleşmesini andırır. İşlem kodundan işlem koduna geri kalanların üzerinden geçmek yerine, bu sözleşmeden üç fonksiyon için kullanılabilir sonuçlar oluşturan [geri derleyiciyi deneyebiliriz](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761). Diğerlerine tersine mühendislik yapmak ise alıştırma olarak okuyucuya bırakılmıştır.
 
-### scaleAmountByPercentage \{#scaleamountbypercentage}
+### scaleAmountByPercentage {#scaleamountbypercentage}
 
 Bu fonksiyon için geri derleyicinin bize verdiği şey şudur:
 
@@ -598,7 +598,7 @@ def unknown8ffb5c97(uint256 _param1, uint256 _param2) payable:
 
 Son olarak, fonksiyon ölçeklendirilmiş bir değer döndürür.
 
-### talep et \{#claim}
+### talep et {#claim}
 
 Geri derleyicinin oluşturduğu kod karmaşık ve bunun haricinde tamamı da bizim açımızdan ilgili değil. Bunların bir kısmını atlayıp bize işe yarar bilgi sağlayacağına inandığım satırlara odaklanacağım
 
@@ -673,7 +673,7 @@ Fonksiyonun sonunda bir günlük girdisinin oluşturulduğunu görüyoruz. [Olu�
 
 ![Üstlenme işlemi](claim-tx.png)
 
-### 1e7df9d3 \{#1e7df9d3}
+### 1e7df9d3 {#1e7df9d3}
 
 Bu fonksiyon, yukarıdaki [`claim`](#claim) fonksiyonuna çok benziyor. Ayrıca bir merkle kanıtını kontrol eder, ilkine ETH transfer etmeyi dener ve aynı türde bir günlük girdisi oluşturur.
 
@@ -739,6 +739,6 @@ Asıl fark geri çekilecek olan pencere olan ilk parametrenin orada olmamasıdı
 
 Yani tüm pencereleri üstlenen bir `claim` varyantı gibi görünüyor.
 
-## Sonuç \{#conclusion}
+## Sonuç {#conclusion}
 
 Şu ana kadar kaynak kodu ulaşılabilir olmayan sözleşmeleri, işlem kodlarını ya da geri derleyiciyi kullanarak (eğer çalışırsa) nasıl anlayacağınızı öğrenmiş olmalısınız. Bu makalenin uzunluğundan da anlaşılacağı gibi, bir sözleşmeye tersine mühendislik uygulamak önemsiz değildir, ancak güvenliğin önemli olduğu bir sistemde sözleşmelerin vaat edildiği gibi çalıştığını doğrulayabilmek önemli bir beceridir.

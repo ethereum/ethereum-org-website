@@ -5,16 +5,16 @@ lang: ja
 incomplete: true
 ---
 
-## はじめに \{#introduction}
+## はじめに {#introduction}
 
 イーサリアムにおける開発規格の多くは、トークンのインターフェイスを対象としています。 これらの規格は、スマートコントラクトにコンポーザビリティを提供するため、新規プロジェクトで発行されたトークンも既存の分散型取引所で取り扱えるようになります。
 
-## 前提知識 \{#prerequisites}
+## 前提知識 {#prerequisites}
 
 - [イーサリアム開発規格](/developers/docs/standards/)
 - [スマートコントラクト](/developers/docs/smart-contracts/)
 
-## トークン標準 \{#token-standards}
+## トークン標準 {#token-standards}
 
 以下では、イーサリアムにおける最も一般的なトークン規格を説明します:
 
@@ -24,11 +24,11 @@ incomplete: true
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - より効率的な取引や、トランザクションのバンドル化によるコスト軽減を実現できる規格です。 ユーティリティトークン（$BNBや$BAT など）および非代替性トークン（CryptoPunks など）の両方に使用できます。
 - [ERC-4626](/developers/docs/standards/tokens/erc-4626/) - 利回りボールト（保管庫）における技術的なパラメータを最適化、統一することを目指して設計された、トークン化ボールト用の規格です。
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 _役に立つコミュニティリソースをご存知の場合は、 このページを編集して追加してください。_
 
-## 関連トピック \{#related-tutorials}
+## 関連トピック {#related-tutorials}
 
 - [トークンの統合作業に関するチェックリスト](/developers/tutorials/token-integration-checklist/) _– トークンのやりとりを統合する際に検討すべき事項が列挙されています。_
 - [ERC20 トークンを利用するスマートコントラクトを理解する](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _- イーサリアムのテストネットワーク上ではじめてスマートコントラクトをデプロイする初心者向けの入門ガイドです。_

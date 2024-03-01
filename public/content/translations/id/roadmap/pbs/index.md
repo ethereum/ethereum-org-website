@@ -4,13 +4,13 @@ description: Pelajari bagaimana dan mengapa validator Ethereum akan membagi tang
 lang: id
 ---
 
-# Pemisahan pengusul-pembuat \{#proposer-builder-separation}
+# Pemisahan pengusul-pembuat {#proposer-builder-separation}
 
 Validator Ethereum saat ini membuat _dan_ menyiarkan blok. Mereka mengelompokkan transaksi yang mereka dengar melalui jaringan gosip dan mengemasnya ke dalam blok yang dikirimkan kepada rekan-rekan di jaringan Ethereum. **Pemisahan pengusul-pembangun (PBS)** membagi tugas ini di antara beberapa validator. Pembangun blok menjadi bertanggung jawab untuk membuat blok dan menawarkannya kepada pengusul blok pada setiap ruang. Pengusul blok tidak dapat melihat konten blok, mereka hanya memilih yang paling menguntungkan, membayar biaya kepada pembangun blok sebelum mengirim blok ke rekan-rekannya.
 
 Ini adalah peningkatan penting karena beberapa alasan. Pertama, menciptakan peluang untuk mencegah penyensoran transaksi pada tingkat protokol. Kedua, mencegah validator pemula dari persaingan dengan pemain institusi yang dapat lebih baik mengoptimalkan profitabilitas pembangunan blok mereka. Ketiga, membantu dalam penskalaan Ethereum dengan memungkinkan peningkatan Danksharding.
 
-## PBS dan ketahanan terhadap penyensoran \{#pbs-and-censorship-resistance}
+## PBS dan ketahanan terhadap penyensoran {#pbs-and-censorship-resistance}
 
 Memisahkan pembangun blok dan pengusul blok membuat lebih sulit bagi pembangun blok untuk menyensor transaksi. Hal ini karena kriteria inklusi yang relatif kompleks dapat ditambahkan yang memastikan tidak ada penyensoran yang terjadi sebelum blok diusulkan. Karena pengusul blok adalah entitas terpisah dari pembangun blok, ia dapat mengambil peran pelindung terhadap penyensoran pembangun blok.
 
@@ -26,7 +26,7 @@ Organisasi yang kuat dapat memberi tekanan kepada validator untuk menyensor tran
 </ExpandableCard>
 }
 
-## PBS dan MEV \{#pbs-and-mev}
+## PBS dan MEV {#pbs-and-mev}
 
 **Nilai ekstraksi maksimum (MEV)** mengacu pada validator memaksimalkan profitabilitas mereka dengan mengurutkan transaksi dengan cara yang menguntungkan. Contoh umum meliputi arbitrase pertukaran di bursa terdesentralisasi (misalnya, mendahului penjualan atau pembelian besar) atau mengidentifikasi peluang untuk likuidasi posisi DeFi. Memaksimalkan MEV memerlukan pemahaman teknis yang canggih dan perangkat lunak khusus yang ditambahkan ke validator normal, sehingga lebih mungkin bagi operator institusi untuk melampaui individu dan validator pemula dalam ekstraksi MEV. Ini berarti pengembalian penaruhan kemungkinan akan lebih tinggi dengan operator terpusat, menciptakan kekuatan sentralisasi yang mengurangi insentif untuk penaruhan di rumah.
 
@@ -39,15 +39,15 @@ Seseorang dapat diberi insentif untuk melakukan penaruhan dengan pool daripada m
 </ExpandableCard>
 }
 
-## PBS dan Danksharding \{#pbs-and-danksharding}
+## PBS dan Danksharding {#pbs-and-danksharding}
 
 Danksharding adalah cara di mana Ethereum akan melakukan skalabilitas hingga >100.000 transaksi per detik dan meminimalkan biaya bagi pengguna rollup. Ini mengandalkan PBS karena menambah beban kerja bagi pembangun blok, yang harus menghitung bukti untuk hingga 64 MB data rollup dalam waktu kurang dari 1 detik. Hal ini mungkin akan memerlukan pembangun khusus yang dapat mengalokasikan perangkat keras yang cukup besar untuk tugas tersebut. Namun, dalam situasi saat ini, pembangunan blok bisa menjadi semakin terpusat di sekitar operator yang lebih canggih dan kuat karena ekstraksi MEV. Pemisahan pengusul-pembangun adalah cara untuk merangkul realitas ini dan mencegahnya memberikan tekanan terpusat pada validasi blok (bagian yang penting) atau distribusi imbalan penaruhan. Manfaat samping yang besar adalah bahwa pembangun blok khusus juga bersedia dan mampu menghitung bukti data yang diperlukan untuk Danksharding.
 
-## Kemajuan saat ini \{#current-progress}
+## Kemajuan saat ini {#current-progress}
 
 PBS berada dalam tahap penelitian yang canggih, tetapi masih ada beberapa pertanyaan desain penting yang perlu dipecahkan sebelum dapat diprototipekan dalam klien Ethereum. Belum ada spesifikasi final yang tersedia. Ini berarti PBS kemungkinan akan memerlukan waktu setahun atau lebih lagi. Periksa [status terbaru penelitian](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance).
 
-## Bacaan Lebih Lanjut \{#further-reading}
+## Bacaan Lebih Lanjut {#further-reading}
 
 - [Status penelitian: ketahanan terhadap penyensoran di bawah PBS](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 - [Desain pasar bebas yang ramah PBS](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)

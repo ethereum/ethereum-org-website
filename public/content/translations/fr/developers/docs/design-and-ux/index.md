@@ -8,7 +8,7 @@ Vous êtes novice en matière de design sur Ethereum ? Vous êtes au bon endroit
 
 Vous avez d'abord besoin d'une compréhension plus élémentaire du web3 ? Consultez le [**Centre d'apprentissage**](/learn/).
 
-## Commencez par une étude sur les utilisateurs \{#start-with-user-research}
+## Commencez par une étude sur les utilisateurs {#start-with-user-research}
 
 Un design efficace va au-delà de la création d'interfaces utilisateur visuellement attrayantes. Il s'agit d'acquérir une compréhension approfondie des besoins, des objectifs et des facteurs déterminants de l'utilisateur. C'est pourquoi nous recommandons vivement à tous les designers d'adopter un processus de design, tel que le [**processus du double diamant**](<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)>), afin de s'assurer que leur travail est délibéré et intentionnel.
 
@@ -17,7 +17,7 @@ Un design efficace va au-delà de la création d'interfaces utilisateur visuelle
 - [Comment aborder les décisions d'UX dans le Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - Un aperçu rapide de la recherche quantitative et qualitative et des différences entre les deux (vidéo, 6 min)
 - [Être un chercheur UX dans le Web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - Un point de vue personnel sur ce que c'est que d'être un chercheur UX dans le Web3
 
-## Études et recherches dans le Web3 \{#research-in-web3}
+## Études et recherches dans le Web3 {#research-in-web3}
 
 Il s'agit d'une liste organisée de recherches par des utilisateurs sur le Web3 qui peut aider à prendre des décisions de conception de produit ou servir d'inspiration pour mener sa propre étude.
 
@@ -36,7 +36,7 @@ Il s'agit d'une liste organisée de recherches par des utilisateurs sur le Web3 
 - [Métaverse : Rapport de recherche sur les utilisateurs](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)
 - [Partir en safari : Rechercher des utilisateurs dans le métaverse](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (vidéo, 27 min)
 
-## Conception pour le web3 \{#design-for-web3}
+## Conception pour le web3 {#design-for-web3}
 
 - [Principes de Design Web3](https://medium.com/@lyricalpolymath/web3-design-principles-f21db2f240c1) - Un cadre de règles UX pour les dapps basées sur la blockchain
 - [Principes de Design Blockchain](https://medium.com/design-ibm/blockchain-design-principles-599c5c067b6e) - Leçons apprises par l'équipe de design blockchain chez IBM
@@ -45,7 +45,7 @@ Il s'agit d'une liste organisée de recherches par des utilisateurs sur le Web3 
 - [W3design.io](https://w3design.io/) - Une bibliothèque organisée de flux d'interface utilisateur de différents projets dans l'écosystème
 - [Neueux.com](https://neueux.com/apps) - Bibliothèque d'interface utilisateur de flux d'utilisateurs avec diverses options de filtrage
 
-## Études de cas dans la conception pour le web3 \{#design-case-studies}
+## Études de cas dans la conception pour le web3 {#design-case-studies}
 
 - [Comment écrire de meilleurs messages d'erreur web3](https://medium.com/@JonCrabb/how-to-design-better-web3-error-messages-bd96e12fa582)
 - [Conseils de design DeFi](https://medium.com/@JonCrabb/defi-design-tips-vol-12-8600f4374714)
@@ -54,14 +54,14 @@ Il s'agit d'une liste organisée de recherches par des utilisateurs sur le Web3 
 - [Vendre un NFT sur OpenSea](https://builtformars.com/case-studies/opensea)
 - [Analyse UX du portefeuille : comment les portefeuilles doivent changer](https://www.youtube.com/watch?v=oTpuxYj8JWI&ab_channel=ETHDenver) (vidéo, 20 min)
 
-## Primes pour la conception \{#bounties}
+## Primes pour la conception {#bounties}
 
 - [Dework](https://app.dework.xyz/bounties)
 - [Gitcoin](https://bounties.gitcoin.co/explorer)
 - [Hackathons Buildbox](https://gitcoin.co/hackathons)
 - [ETHGlobal](https://ethglobal.com/)
 
-## Concevoir des DAOs et des communautés \{#design-daos-and-communities}
+## Concevoir des DAOs et des communautés {#design-daos-and-communities}
 
 Participez à des organisations professionnelles communautaires ou rejoignez des groupes de designers pour discuter avec d'autres membres de sujets et de tendances liés au design et à la recherche.
 
@@ -73,7 +73,7 @@ Participez à des organisations professionnelles communautaires ou rejoignez des
 - [web3trends.org](https://web3trends.org/)
 - [Open Source Web3Design](https://www.web3designers.org/)
 
-## Concevoir des systèmes \{#design-systems}
+## Concevoir des systèmes {#design-systems}
 
 - [Conception d'Optimism](https://www.figma.com/@oplabs) (Figma)
 - [Ethereum.org Conception de system](https://www.figma.com/@ethdotorg) (Figma)

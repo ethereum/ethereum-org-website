@@ -6,11 +6,11 @@ lang: tr
 
 Dagger-Hashimoto, Ethereum'un madencilik algoritması için orijinal araştırma uygulaması ve şartnamesiydi. Dagger-Hashimoto'nun yerini [Ethash](#ethash) aldı. 15 Eylül 2022'de gerçekleşen [Birleşim'den](/updates/merge) sonra madencilik tamamen durdurulmuştur. O zamandan beri Ethereum [hisse ispatı](/developers/docs/consensus-mechanisms/pos) mekanizmasını kullanmaktadır. Bu sayfa sadece bilgilendirme içindir - burdaki bilgi Birleşim sonrası Ethereum için geçerli değildir.
 
-## Ön koşullar \{#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bu sayfayı daha iyi anlamak için önce [iş kanıtı mutabakatı](/developers/docs/consensus-mekanizmalar/pow), [madencilik](/developers/docs/consensus-mechanisms/pow/mining) ve [>madencilik algoritmaları](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms) hakkında okumanızı öneririz.
 
-## Dagger-Hashimoto \{#dagger-hashimoto}
+## Dagger-Hashimoto {#dagger-hashimoto}
 
 Dagger-Hashimoto iki hedefi gerçekleştirmeyi amaçlar:
 
@@ -21,7 +21,7 @@ Ek bir değişiklikle, istenirse, ancak ek karmaşıklık pahasına üçüncü b
 
 **Tam zincir depolama**: madencilik, tam blok zinciri durumunun depolanmasını gerektirmelidir (Ethereum durum üçlüsünün düzensiz yapısı nedeniyle, özellikle sık kullanılan bazı sözleşmelerde bir miktar budamanın mümkün olacağını tahmin ediyoruz, ancak bunu en asgari seviyeye indirmek istiyoruz).
 
-## DAG Jenerasyonu \{#dag-generation}
+## DAG Jenerasyonu {#dag-generation}
 
 Algoritmanın kodu aşağıdaki Python'da tanımlanacaktır. İlk olarak belirlitilen kesinliklerin belirli olmayan tam sayılarını dizelere sıralamak için `encode_int` ile başlarız. Tersi de aşağıda verilmiştir:
 
@@ -60,7 +60,7 @@ def dbl_sha3(x):
     return decode_int(utils.sha3(utils.sha3(x)))
 ```
 
-### Parametreler \{#parameters}
+### Parametreler {#parameters}
 
 Algoritma için kullanılan parametreler şunlardır:
 
@@ -84,7 +84,7 @@ parametreler = {
 
 Bu durumda `P`, `log₂(P)`'nin 512'den biraz daha küçük olacağı şekilde seçilen bir asaldır ve bu, sayılarımızı temsil etmek için kullandığımız 512 bite karşılık gelir. DAG'nin yalnızca ikinci yarısının gerçekten depolanması gerektiğini unutmayın, bu nedenle RAM gereksinimi 1 GB'den başlar ve yılda 441 MB büyür.
 
-### Dagger grafiği inşa etmek \{#dagger-graph-building}
+### Dagger grafiği inşa etmek {#dagger-graph-building}
 
 Dagger grafiği oluşturma ilkesi şu şekilde tanımlanır:
 
@@ -105,7 +105,7 @@ Esasen, bir grafikten tek bir düğüm, `sha3(tohum)` olarak başlar ve oradan, 
 
 Bu algoritma, sayı teorisinden elde edilen çeşitli sonuçlara dayanır. Bir tartışma için ek bölümü aşağıda görebilirsiniz.
 
-## Hafif istemci değerlendirmesi \{#light-client-evaluation}
+## Hafif istemci değerlendirmesi {#light-client-evaluation}
 
 Yukarıdaki grafik yapısı, grafikteki her bir düğümün, yalnızca az sayıda düğümden oluşan bir alt ağaç hesaplanarak ve yalnızca az miktarda yardımcı bellek gerektirerek yeniden oluşturulmasına izin vermeyi amaçlamaktadır. K=1 ile alt ağacın yalnızca DAG'deki ilk öğeye kadar giden bir değerler zinciri olduğuna dikkat edin.
 
@@ -133,7 +133,7 @@ def quick_calc(params, seed, p):
 
 Esasen, tüm DAG için değerleri hesaplama döngüsünü ortadan kaldıran ve önceki düğüm aramasını özyinelemeli bir çağrı veya bir önbellek aramasıyla değiştiren, yukarıdaki algoritmanın basitçe yeniden yazılmasıdır. `k=1` için önbelleğin gereksiz olduğunu unutmayın, ancak daha fazla optimizasyon aslında DAG'nin ilk birkaç bin değerini önceden hesaplar ve bunu, hesaplamalar için statik bir önbellek olarak tutar; bunun bir kod uygulaması için eke bakın.
 
-## DAG'ların duble destekçisi \{#double-buffer}
+## DAG'ların duble destekçisi {#double-buffer}
 
 Bir tam istemcide 2 DAG'ın [_ çifte buffer_](https://wikipedia.org/wiki/Multiple_buffering)' yukarıda kullanılan formül ile üretilir. Burada düşünce, DAG'lar her blok sayısı `döngü zamanı` tarafından yukarıdaki parametrelere göre üretilir. Üretilen en son DAG'ı kullanan istemci yerine, öncekini kullanır. Bunun yararı, madencilerin tüm verileri aniden yeniden hesaplaması gereken bir adımın dahil edilmesine gerek kalmadan, DAG'lerin zaman içinde değiştirilmesine izin vermesidir. Aksi takdirde, düzenli aralıklarla zincir işlemede ani bir geçici yavaşlama ve merkezileşmeyi önemli ölçüde artırma potansiyeli vardır. Bu nedenle, tüm veriler yeniden hesaplanmadan önceki birkaç dakika içinde %51 saldırı riski vardır.
 
@@ -174,7 +174,7 @@ def get_daggerset(params, block):
                          "block_number": seedset["back_number"]}}
 ```
 
-## Hashimoto \{#hashimoto}
+## Hashimoto {#hashimoto}
 
 Orijinal Hashimoto'nun arkasındaki fikir, blok zincirini bir veri seti olarak kullanmak, blok zincirinden N indeks seçen, bu indekslerdeki işlemleri toplayan, bu verilerin bir XOR'sini gerçekleştiren ve sonucun karmasını döndüren bir hesaplama yapmaktır. Thaddeus Dryja'nın tutarlılık için Python'a çevrilmiş orijinal algoritması aşağıdaki gibidir:
 
@@ -211,7 +211,7 @@ def quick_hashimoto(seed, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-## Madencilik ve doğrulama \{#mining-and-verifying}
+## Madencilik ve doğrulama {#mining-and-verifying}
 
 Şimdi hepsini madencilik algoritmasında bir araya getirelim:
 
@@ -254,15 +254,15 @@ Ayrıca, Dagger-Hashimoto'nun blok başlığına ek gereksinimler getirdiğini u
 - İki katmanlı doğrulamanın çalışması için, bir blok başlığı hem nonce hem de orta değer pre-sha3'e sahip olmalıdır
 - Bir yerde, bir blok başlığı mevcut tohum setinin sha3'ünü depolamalıdır
 
-## Daha fazla okuma \{#further-reading}
+## Daha fazla okuma {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve onu ekleyin!_
 
-## Ek \{#appendix}
+## Ek {#appendix}
 
 Yukarıda belirtildiği gibi, DAG üretimi için kullanılan RNG, sayı teorisinden elde edilen bazı sonuçlara dayanır. İlk olarak, `picker` değişkeninin temeli olan Lehmer RNG'nin geniş bir periyoda sahip olduğuna dair güvence veriyoruz. İkinci olarak, `P-1`'in başlamak için `x ∈ [2,P-2]`'i sağladığını ya da `pow(x,3,P)`'un `x`'i `1`'e adreslemeyeceğini gösteriyoruz. Son olarak, `pow(x,3,P)` öğesinin bir karma işlevi olarak ele alındığında düşük bir çarpışma oranına sahip olduğunu gösteriyoruz.
 
-### Lehmer rastgele sayı üreticisi \{#lehmer-random-number}
+### Lehmer rastgele sayı üreticisi {#lehmer-random-number}
 
 `produce_dag` işlevinin tarafsız rastgele sayılar üretmesi gerekmese de, potansiyel bir tehdit, `seed**i % P`'nin yalnızca bir avuç değer almasıdır. Bu, modeli tanımayanlara kıyasla madencilere bir avantaj sağlayabilir.
 
@@ -287,7 +287,7 @@ DAG'daki ilk hücreyi (`init` etiketli değişken) atadığımızda, ` iş kanı
 
 > Gözlem 2. `x`, güvenli bir asal `P` için `ℤ/Pℤ` çarpımsal grubunun bir üyesi olsun ve `w` bir doğal sayı olsun. `x mod P ≠ 1 mod P` ve `x mod P ≠ P-1 mod P` ve ayrıca `w mod P ≠ P-1 mod P` ve `w mod P ≠ 0 mod P` ise, ardından `xʷ mod P ≠ 1 mod P` ve `xʷ mod P ≠ P-1 mod P`
 
-### Karma işlevi olarak modüler üstel alma \{#modular-exponentiation}
+### Karma işlevi olarak modüler üstel alma {#modular-exponentiation}
 
 Belirli `P` ve `w` değerleri için, `pow(x, w, P)` işlevinin birçok çakışması olabilir. Örneğin, `pow(x,9,19)` yalnızca `{1,18}` değerlerini alır.
 
@@ -303,7 +303,7 @@ Bu nedenle, `P`'nin asal olduğu ve `w`'un `P-1`'e görece asal olduğu göz ön
 
 `P`'nin seçtiğimiz gibi güvenli bir asal olması özel durumunda, o zaman `P-1`'in sadece 1, 2, `(P-1)/2` ve `P-1` faktörleri vardır. `P`'den beri > 7'de, 3'ün `P-1`'e göre asal olduğunu biliyoruz, dolayısıyla `w=3` yukarıdaki önermeyi karşılıyor.
 
-## Daha verimli önbellek tabanlı değerlendirme algoritması \{#cache-based-evaluation}
+## Daha verimli önbellek tabanlı değerlendirme algoritması {#cache-based-evaluation}
 
 ```python
 def quick_calc(params, seed, p):

@@ -6,11 +6,11 @@ lang: id
 
 Akun Ethereum adalah entitas dengan saldo eter (ETH) yang dapat mengirim transaksi di Ethereum. Akun dapat dikontrol pengguna atau digunakan sebagai kontrak pintar.
 
-## Prasyarat \{#prerequisites}
+## Prasyarat {#prerequisites}
 
 Akun adalah topik yang sangat ramah bagi pemula. Tetapi untuk membantu Anda lebih memahami halaman ini, kami sarankan Anda terlebih dahulu membaca [pengantar Ethereum](/developers/docs/intro-to-ethereum/).
 
-## Jenis akun \{#types-of-account}
+## Jenis akun {#types-of-account}
 
 Ethereum mempunyai dua jenis akun:
 
@@ -22,7 +22,7 @@ Kedua jenis akun tersebut memiliki kemampuan untuk:
 - Menerima, menyimpan, dan mengirim ETH serta token
 - Berinteraksi dengan kontrak pintar yang diterapkan
 
-### Perbedaan utama \{#key-differences}
+### Perbedaan utama {#key-differences}
 
 **Kepemilikan Eksternal**
 
@@ -36,7 +36,7 @@ Kedua jenis akun tersebut memiliki kemampuan untuk:
 - Hanya dapat mengirim transaksi sebagai tanggapan untuk menerima transaksi
 - Transaksi dari akun eksternal ke akun kontrak dapat memicu kode yang dapat melakukan banyak tindakan berbeda, seperti mentransfer token atau bahkan membuat kontrak baru
 
-## Pemeriksaan akun \{#an-account-examined}
+## Pemeriksaan akun {#an-account-examined}
 
 Akun Ethereum memiliki empat bidang:
 
@@ -47,7 +47,7 @@ Akun Ethereum memiliki empat bidang:
 
 ![Diagram yang menunjukan susunan akun](./accounts.png) _Diagram diadaptasi dari [Ethereum EVM yang diilustrasikan](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Akun dan pasangan kunci dengan kepemilikan eksternal \{#externally-owned-accounts-and-key-pairs}
+## Akun dan pasangan kunci dengan kepemilikan eksternal {#externally-owned-accounts-and-key-pairs}
 
 Akun terdiri dari sepasang kunci kriptografis: publik dan pribadi. Mereka membantu membuktikan bahwa transaksi benar-benar ditandatangani oleh pengirim dan mencegah pemalsuan. Kunci privat adalah yang Anda gunakan untuk menandatangani transaksi, sehingga memberi Anda pengawasan atas dana yang terkait dengan akun Anda. Anda tidak pernah benar-benar memegang mata uang kripto, Anda memegang kunci privatnya - dananya selalu ada di buku besar Ethereum.
 
@@ -55,7 +55,7 @@ Ini mencegah pelaku jahat menyiarkan transaksi palsu karena Anda selalu dapat me
 
 Jika Alice ingin mengirim eter dari akunnya sendiri ke akun Bob, Alice perlu membuat permintaan transaksi dan mengirimkannya ke jaringan untuk verifikasi. Penggunaan kriptografi kunci publik Ethereum memastikan bahwa Alice dapat membuktikan bahwa dia awalnya yang memulai permintaan transaksi. Tanpa mekanisme kriptografi, musuh jahat Eve dapat dengan mudah menyiarkan permintaan yang terlihat seperti "kirim 5 ETH dari akun Alice ke akun Eve," dan tidak ada yang dapat memverifikasi bahwa permintaan tersebut tidak berasal dari Alice.
 
-## Pembuatan akun \{#account-creation}
+## Pembuatan akun {#account-creation}
 
 Saat Anda ingin membuat akun, kebanyakan pustaka akan memberi Anda kunci privat acak.
 
@@ -85,7 +85,7 @@ Dimungkinkan untuk memperoleh kunci publik baru dari kunci privat Anda tetapi An
 
 Anda memerlukan kunci privat untuk menandatangani pesan dan transaksi yang menghasilkan tanda tangan. Orang lain kemudian dapat mengambil tanda tangan untuk mendapatkan kunci publik anda, membuktikan penulis pesan tersebut. Dalam aplikasi Anda, Anda dapat menggunakan pustaka javascript untuk mengirim transaksi ke jaringan.
 
-## Akun Kontrak \{#contract-accounts}
+## Akun Kontrak {#contract-accounts}
 
 Akun kontrak juga memiliki alamat heksadesimal 42 karakter:
 
@@ -95,11 +95,11 @@ Contoh:
 
 Alamat kontrak biasanya diberikan saat kontrak diterapkan ke Rantai Blok Ethereum. Alamat ini berasal dari alamat pembuat dan jumlah transaksi yang dikirim dari alamat tersebut (“nonce”).
 
-## Catatan pada dompet \{#a-note-on-wallets}
+## Catatan pada dompet {#a-note-on-wallets}
 
 Akun bukanlah dompet. Akun adalah pasangan kunci untuk akun Ethereum yang dimiliki pengguna. Dompet adalah antarmuka atau aplikasi yang memungkinkan Anda berinteraksi dengan akun Ethereum Anda.
 
-## Demo visual \{#a-visual-demo}
+## Demo visual {#a-visual-demo}
 
 Tonton Austin memandu Anda tentang fungsi hash, dan pasangan kunci.
 
@@ -111,11 +111,11 @@ Tonton Austin memandu Anda tentang fungsi hash, dan pasangan kunci.
 <YouTube id="9LtBDy67Tho" />
 }
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
-## Topik terkait \{#related-topics}
+## Topik terkait {#related-topics}
 
 - [Kontrak pintar](/developers/docs/smart-contracts/)
 - [Transaksi](/developers/docs/transactions/)

@@ -4,11 +4,11 @@ description: Een overzicht van de subsidieprogramma's in het Ethereum-ecosysteem
 lang: nl
 ---
 
-# Online gemeenschappen \{#online-communities}
+# Online gemeenschappen {#online-communities}
 
 Honderdduizenden liefhebbers van Ethereum verzamelen zich in deze online fora om nieuws te delen, over recente ontwikkelingen te praten, over technische kwesties te debatteren en zich de toekomst voor te stellen.
 
-## Forums \{#forums}
+## Forums {#forums}
 
 {
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - alles over Ethereum</SocialListItem>
@@ -35,7 +35,7 @@ Honderdduizenden liefhebbers van Ethereum verzamelen zich in deze online fora om
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> - de meest invloedrijke messageboard voor cryptoeconomisch onderzoek</SocialListItem>
 }
 
-## Chatruimtes \{#chat-rooms}
+## Chatruimtes {#chat-rooms}
 
 {
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - gemeenschap gericht op het aanbieden van projectbeheerondersteuning voor Ethereum-ontwikkeling</SocialListItem>
@@ -68,7 +68,7 @@ Honderdduizenden liefhebbers van Ethereum verzamelen zich in deze online fora om
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- gedecentraliseerd vraag- en antwoordforum_</SocialListItem>
 }
 
-## YouTube en Twitter \{#youtube-and-twitter}
+## YouTube en Twitter {#youtube-and-twitter}
 
 {
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Blijf op de hoogte van de laatste informatie van de Ethereum Foundation</SocialListItem>

@@ -6,11 +6,11 @@ lang: en
 
 Dagger-Hashimoto was the original research implementation and specification for Ethereum's mining algorithm. Dagger-Hashimoto was superseded by [Ethash](#ethash). Mining was switched off completely at [The Merge](/updates/merge) on 15th September 2022. Since then, Ethereum has been secured using a [proof-of-stake](/developers/docs/consensus-mechanisms/pos) mechanism instead. This page is for historical interest - the information here is no longer relevant for post-Merge Ethereum.
 
-## Prerequisites \{#prerequisites}
+## Prerequisites {#prerequisites}
 
 To better understand this page, we recommend you first read up on [proof-of-work consensus](/developers/docs/consensus-mechanisms/pow), [mining](/developers/docs/consensus-mechanisms/pow/mining), and [mining algorithms](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms).
 
-## Dagger-Hashimoto \{#dagger-hashimoto}
+## Dagger-Hashimoto {#dagger-hashimoto}
 
 Dagger-Hashimoto aims to satisfy two goals:
 
@@ -21,7 +21,7 @@ With an additional modification, we also specify how to fulfill a third goal if 
 
 **Full chain storage**: mining should require storage of the complete blockchain state (due to the irregular structure of the Ethereum state trie, we anticipate that some pruning will be possible, particularly of some often-used contracts, but we want to minimize this).
 
-## DAG Generation \{#dag-generation}
+## DAG Generation {#dag-generation}
 
 The code for the algorithm will be defined in Python below. First, we give `encode_int` for marshaling unsigned ints of specified precision to strings. Its inverse is also given:
 
@@ -60,7 +60,7 @@ def dbl_sha3(x):
     return decode_int(utils.sha3(utils.sha3(x)))
 ```
 
-### Parameters \{#parameters}
+### Parameters {#parameters}
 
 The parameters used for the algorithm are:
 
@@ -84,7 +84,7 @@ params = {
 
 `P` in this case is a prime chosen such that `log₂(P)` is just slightly less than 512, which corresponds to the 512 bits we have been using to represent our numbers. Note that only the latter half of the DAG actually needs to be stored, so the de-facto RAM requirement starts at 1 GB and grows by 441 MB per year.
 
-### Dagger graph building \{#dagger-graph-building}
+### Dagger graph building {#dagger-graph-building}
 
 The dagger graph building primitive is defined as follows:
 
@@ -105,7 +105,7 @@ Essentially, it starts off a graph as a single node, `sha3(seed)`, and from ther
 
 This algorithm relies on several results from number theory. See the appendix below for a discussion.
 
-## Light client evaluation \{#light-client-evaluation}
+## Light client evaluation {#light-client-evaluation}
 
 The above graph construction intends to allow each node in the graph to be reconstructed by computing a subtree of only a small number of nodes and requiring only a small amount of auxiliary memory. Note that with k=1, the subtree is only a chain of values going up to the first element in the DAG.
 
@@ -133,7 +133,7 @@ def quick_calc(params, seed, p):
 
 Essentially, it is simply a rewrite of the above algorithm that removes the loop of computing the values for the entire DAG and replaces the earlier node lookup with a recursive call or a cache lookup. Note that for `k=1` the cache is unnecessary, although a further optimization actually precomputes the first few thousand values of the DAG and keeps that as a static cache for computations; see the appendix for a code implementation of this.
 
-## Double buffer of DAGs \{#double-buffer}
+## Double buffer of DAGs {#double-buffer}
 
 In a full client, a [_double buffer_](https://wikipedia.org/wiki/Multiple_buffering) of 2 DAGs produced by the above formula is used. The idea is that DAGs are produced every `epochtime` number of blocks according to the params above. Instead of the client using the latest DAG produced, it uses the one previous. The benefit of this is that it allows the DAGs to be replaced over time without needing to incorporate a step where miners must suddenly recompute all of the data. Otherwise, there is the potential for an abrupt temporary slowdown in chain processing at regular intervals and dramatically increasing centralization. Thus 51% attack risks within those few minutes before all data are recomputed.
 
@@ -174,7 +174,7 @@ def get_daggerset(params, block):
                          "block_number": seedset["back_number"]}}
 ```
 
-## Hashimoto \{#hashimoto}
+## Hashimoto {#hashimoto}
 
 The idea behind the original Hashimoto is to use the blockchain as a dataset, performing a computation that selects N indices from the blockchain, gathers the transactions at those indices, performs an XOR of this data, and returns the hash of the result. Thaddeus Dryja's original algorithm, translated to Python for consistency, is as follows:
 
@@ -211,7 +211,7 @@ def quick_hashimoto(seed, dagsize, params, header, nonce):
     return dbl_sha3(mix)
 ```
 
-## Mining and verifying \{#mining-and-verifying}
+## Mining and verifying {#mining-and-verifying}
 
 Now, let us put it all together into the mining algorithm:
 
@@ -254,15 +254,15 @@ Also, note that Dagger-Hashimoto imposes additional requirements on the block he
 - For two-layer verification to work, a block header must have both the nonce and the middle value pre-sha3
 - Somewhere, a block header must store the sha3 of the current seedset
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_
 
-## Appendix \{#appendix}
+## Appendix {#appendix}
 
 As noted above, the RNG used for DAG generation relies on some results from number theory. First, we provide assurance that the Lehmer RNG that is the basis for the `picker` variable has a wide period. Second, we show that `pow(x,3,P)` will not map `x` to `1` or `P-1` provided `x ∈ [2,P-2]` to start. Finally, we show that `pow(x,3,P)` has a low collision rate when treated as a hashing function.
 
-### Lehmer random number generator \{#lehmer-random-number}
+### Lehmer random number generator {#lehmer-random-number}
 
 While the `produce_dag` function does not need to produce unbiased random numbers, a potential threat is that `seed**i % P` only takes on a handful of values. This could provide an advantage to miners recognizing the pattern over those that do not.
 
@@ -287,7 +287,7 @@ When we are assigning the first cell in the DAG (the variable labeled `init`), w
 
 > Observation 2. Let `x` be a member of the multiplicative group `ℤ/Pℤ` for a safe prime `P`, and let `w` be a natural number. If `x mod P ≠ 1 mod P` and `x mod P ≠ P-1 mod P`, as well as `w mod P ≠ P-1 mod P` and `w mod P ≠ 0 mod P`, then `xʷ mod P ≠ 1 mod P` and `xʷ mod P ≠ P-1 mod P`
 
-### Modular exponentiation as a hash function \{#modular-exponentiation}
+### Modular exponentiation as a hash function {#modular-exponentiation}
 
 For certain values of `P` and `w`, the function `pow(x, w, P)` may have many collisions. For instance, `pow(x,9,19)` only takes on values `{1,18}`.
 
@@ -299,7 +299,7 @@ Thus, given that `P` is prime and `w` is relatively prime to `P-1`, we have that
 
 In the special case that `P` is a safe prime as we have selected, then `P-1` only has factors 1, 2, `(P-1)/2` and `P-1`. Since `P` > 7, we know that 3 is relatively prime to `P-1`, hence `w=3` satisfies the above proposition.
 
-## More efficient cache-based evaluation algorithm \{#cache-based-evaluation}
+## More efficient cache-based evaluation algorithm {#cache-based-evaluation}
 
 ```python
 def quick_calc(params, seed, p):

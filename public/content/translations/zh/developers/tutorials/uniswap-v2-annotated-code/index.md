@@ -9,11 +9,11 @@ published: 2021-05-01
 lang: zh
 ---
 
-## 介绍 \{#introduction}
+## 介绍 {#introduction}
 
 [Uniswap v2](https://uniswap.org/whitepaper.pdf) 可以在任何两个 ERC-20 代币之间创建一个兑换市场。 在本文中，我们将深入探讨实现此协议的合约的源代码，了解为何要如此编写协议。
 
-### Uniswap 是做什么的？ \{#what-does-uniswap-do}
+### Uniswap 是做什么的？ {#what-does-uniswap-do}
 
 一般来说有两类用户：流动资金提供者和交易者。
 
@@ -25,15 +25,15 @@ lang: zh
 
 [点击此处查看更完整的描述](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/)。
 
-### 为什么选择 v2？ 而不是 v3？ \{#why-v2}
+### 为什么选择 v2？ 而不是 v3？ {#why-v2}
 
 [Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) 是 v2 的升级，远比 v2 复杂得多。 比较容易的方法是先学习 v2，然后再学习 v3。
 
-### 核心合约与外围合约 \{#contract-types}
+### 核心合约与外围合约 {#contract-types}
 
 Uniswap v2 可以分为两个部分，一个为核心部分，另一个为外围部分。 核心合约存放着资产，因而*必须*确保安全，这种分法就使核心合约更加简洁且更便于审核。 而所有交易者需要的其它功能可以通过外围合约提供。
 
-## 数据和控制流程 \{#flows}
+## 数据和控制流程 {#flows}
 
 执行 Uniswap 的三个主要操作时，会出现以下数据和控制流程：
 
@@ -41,72 +41,72 @@ Uniswap v2 可以分为两个部分，一个为核心部分，另一个为外围
 2. 将资金添加到市场中提供流动性，并获得兑换中奖励的流动池 ERC-20 代币
 3. 消耗流动池 ERC-20 代币并收回交易所允许交易者兑换的 ERC-20 代币
 
-### 兑换 \{#swap-flow}
+### 兑换 {#swap-flow}
 
 这是交易者最常用的流程：
 
-#### 调用者 \{#caller}
+#### 调用者 {#caller}
 
 1. 向外围帐户提供兑换额度。
 2. 调用外围合约中的一个兑换函数。外围合约有多种兑换函数，调用哪一个取决于是否涉及以太币、交易者是指定了存入的代币金额还是提取的代币金额等。 每个兑换函数都接受一个 `path`，即要执行的一系列兑换。
 
-#### 在外围合约 (UniswapV2Router02.sol) 中 \{#in-the-periphery-contract-uniswapv2router02-sol}
+#### 在外围合约 (UniswapV2Router02.sol) 中 {#in-the-periphery-contract-uniswapv2router02-sol}
 
 3. 确定兑换路径中，每次兑换所需交易的代币数额。
 4. 沿路径迭代。 对于路径上的每次兑换，首先发送输入代币，然后调用交易所的 `swap` 函数。 在大多数情况下，代币输出的目的地址是路径中下一个配对交易。 在最后一个交易所中，该地址是交易者提供的地址。
 
-#### 在核心合约 (UniswapV2Pair.sol) 中 \{#in-the-core-contract-uniswapv2pairsol-2}
+#### 在核心合约 (UniswapV2Pair.sol) 中 {#in-the-core-contract-uniswapv2pairsol-2}
 
 5. 验证核心合约没有被欺骗，可在兑换后保持足够的流动资金。
 6. 检查除了现有的储备金额外，还有多少额外的代币。 此数额是我们收到的要用于兑换的输入代币数量。
 7. 将输出代币发送到目的地址。
 8. 调用 `_update` 来更新储备金额
 
-#### 回到外围合约 (UniswapV2Router02.sol) \{#back-in-the-periphery-contract-uniswapv2router02-sol}
+#### 回到外围合约 (UniswapV2Router02.sol) {#back-in-the-periphery-contract-uniswapv2router02-sol}
 
 9. 执行所需的必要清理工作（例如，消耗包装以太币代币以返回以太币给交易者）
 
-### 增加流动资金 \{#add-liquidity-flow}
+### 增加流动资金 {#add-liquidity-flow}
 
-#### 调用者 \{#caller-2}
+#### 调用者 {#caller-2}
 
 1. 向外围帐户提交准备加入流动资金池的资金额度。
 2. 调用外围合约的其中一个 `addLiquidity` 函数。
 
-#### 在外围合约 (UniswapV2Router02.sol) 中 \{#in-the-periphery-contract-uniswapv2router02sol-2}
+#### 在外围合约 (UniswapV2Router02.sol) 中 {#in-the-periphery-contract-uniswapv2router02sol-2}
 
 3. 必要时创建一个新的配对交易
 4. 如果有现有的币对交易所，请计算要增加的代币金额。 该金额对于两种代币应该是相同的，因此新代币对现有代币的比率是相同的。
 5. 检查金额是否可接受（调用者可以指定一个最低金额，低于此金额他们就不增加流动性）
 6. 调用核心合约。
 
-#### 在核心合约 (UniswapV2Pair.sol) 中 \{#in-the-core-contract-uniswapv2pairsol-2}
+#### 在核心合约 (UniswapV2Pair.sol) 中 {#in-the-core-contract-uniswapv2pairsol-2}
 
 7. 生成流动池代币并将其发送给调用者
 8. 调用 `_update` 来更新储备金额
 
-### 撤回流动资金 \{#remove-liquidity-flow}
+### 撤回流动资金 {#remove-liquidity-flow}
 
-#### 调用者 \{#caller-3}
+#### 调用者 {#caller-3}
 
 1. 向外围帐户提供一个流动池代币的额度，作为兑换底层代币所需的消耗。
 2. 调用外围合约的其中一个 `removeLiquidity` 函数。
 
-#### 在外围合约 (UniswapV2Router02.sol) 中 \{#in-the-periphery-contract-uniswapv2router02sol-3}
+#### 在外围合约 (UniswapV2Router02.sol) 中 {#in-the-periphery-contract-uniswapv2router02sol-3}
 
 3. 将流动池代币发送到该配对交易
 
-#### 在核心合约 (UniswapV2Pair.sol) 中 \{#in-the-core-contract-uniswapv2pairsol-3}
+#### 在核心合约 (UniswapV2Pair.sol) 中 {#in-the-core-contract-uniswapv2pairsol-3}
 
 4. 向目的地址发送底层代币，金额与销毁的代币成比例。 例如，如果资金池里有 1000 个 A 代币，500 个 B 代币和 90 个流动性代币，而我们收到请求销毁 9 个流动性代币，那么，我们将销毁 10% 的流动性代币，然后将返还用户 100 个 A 代币和 50 个 B 代币。
 5. 销毁流动性代币
 6. 调用`_update`来更新储备金额
 
-## 核心合约 \{#core-contracts}
+## 核心合约 {#core-contracts}
 
 这些是持有流动资金的安全合约。
 
-### UniswapV2Pair.sol \{#UniswapV2Pair}
+### UniswapV2Pair.sol {#UniswapV2Pair}
 
 [本合约](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol)实现用于交易代币的实际资金池。 这是 Uniswap 的核心功能。
 
@@ -144,7 +144,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 关于这个函数库的更详细内容在[文档的稍后部分](#FixedPoint)。
 
-#### 变量 \{#pair-vars}
+#### 变量 {#pair-vars}
 
 ```solidity
     uint public constant MINIMUM_LIQUIDITY = 10**3;
@@ -212,7 +212,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 由于交易者提供了更多 token0，token1 的相对价值增加了，反之亦然，这取决于供求。
 
-#### 锁定 \{#pair-lock}
+#### 锁定 {#pair-lock}
 
 ```solidity
     uint private unlocked = 1;
@@ -246,7 +246,7 @@ contract UniswapV2Pair is IUniswapV2Pair, UniswapV2ERC20 {
 
 当主函数返回后，释放锁定。
 
-#### 其他 函数 \{#pair-misc}
+#### 其他 函数 {#pair-misc}
 
 ```solidity
     function getReserves() public view returns (uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast) {
@@ -279,7 +279,7 @@ ERC-20 的转移调用有两种方式可能失败：
 
 一旦出现这两种情况，转移调用就会回退。
 
-#### 事件 \{#pair-events}
+#### 事件 {#pair-events}
 
 ```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
@@ -307,7 +307,7 @@ ERC-20 的转移调用有两种方式可能失败：
 
 最后，无论出于何种原因，每次存入或提取代币时都会触发 `Sync` 事件，以提供最新的储备金信息（从而提供汇率）。
 
-#### 设置函数 \{#pair-setup}
+#### 设置函数 {#pair-setup}
 
 这些函数应在建立新的配对交易时调用。
 
@@ -330,7 +330,7 @@ ERC-20 的转移调用有两种方式可能失败：
 
 这个函数允许工厂（而且只允许工厂）指定配对中进行兑换的两种 ERC-20 代币。
 
-#### 内部更新函数 \{#pair-update-internal}
+#### 内部更新函数 {#pair-update-internal}
 
 ##### \_update
 
@@ -451,7 +451,7 @@ ERC-20 的转移调用有两种方式可能失败：
 
 如果不需收费则将 `klast` 设为 0（如果 klast 不为 0）。 编写该合约时，有一个[燃料返还功能](https://eips.ethereum.org/EIPS/eip-3298)，用于鼓励合约将其不需要的存储释放，从而减少以太坊上状态的整体存储大小。 此段代码在可行时返还。
 
-#### 外部可访问函数 \{#pair-external}
+#### 外部可访问函数 {#pair-external}
 
 请注意，虽然任何交易或合约都*可以*调用这些函数，但这些函数在设计上是从外围合约调用。 如果直接调用，您无法欺骗币对交易所，但可能因为错误而丢失价值。
 
@@ -680,7 +680,7 @@ ERC-20 的转移调用有两种方式可能失败：
 }
 ```
 
-### UniswapV2Factory.sol \{#UniswapV2Factory}
+### UniswapV2Factory.sol {#UniswapV2Factory}
 
 [此合约](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol)创建币对交易所。
 
@@ -798,7 +798,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 这两个函数允许 `feeSetter` 管理费用接收人（如果有）并将 `feeSetter` 更改为新地址。
 
-### UniswapV2ERC20.sol \{#UniswapV2ERC20}
+### UniswapV2ERC20.sol {#UniswapV2ERC20}
 
 [本合约](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol)实现 ERC-20 流动性代币。 它与 [OpenZeppelin ERC-20 合约](/developers/tutorials/erc20-annotated-code)相似，因此这里仅解释不同的部分，即 `permit` 的功能。
 
@@ -884,15 +884,15 @@ contract UniswapV2Factory is IUniswapV2Factory {
 
 如果一切正常，则将其视为 [ERC-20 批准](https://eips.ethereum.org/EIPS/eip-20#approve)。
 
-## 外围合约 \{#periphery-contracts}
+## 外围合约 {#periphery-contracts}
 
 外围合约是用于 Uniswap 的 API（应用程序接口）。 它们可用于其他合约或去中心化应用程序进行的外部调用。 你可以直接调用核心合约但更为复杂，如果你出错，则可能会损失价值。 核心合约只包含确保它们不会遭受欺骗的测试，不会对其他调用者进行健全性检查。 它们在外围，因此可以根据需要进行更新。
 
-### UniswapV2Router01.sol \{#UniswapV2Router01}
+### UniswapV2Router01.sol {#UniswapV2Router01}
 
 [本合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol)存在问题，[不应该再使用](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01)。 幸运的是，外围合约无状态，也不拥有任何资产，弃用外围合约比较容易。建议使用 `UniswapV2Router02` 来替代。
 
-### UniswapV2Router02.sol \{#UniswapV2Router02}
+### UniswapV2Router02.sol {#UniswapV2Router02}
 
 在大多数情况下，您会通过[该合约](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol)使用 Uniswap。 有关使用说明，您可以在[这里](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02)找到。
 
@@ -947,7 +947,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 当我们将代币从包装以太币合约换回以太币时，需要调用此函数。 只有我们使用的包装以太币合约才有权完成此操作。
 
-#### 增加流动资金 \{#add-liquidity}
+#### 增加流动资金 {#add-liquidity}
 
 这些函数添加代币进行配对交易，从而增大了流动资金池。
 
@@ -1131,7 +1131,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 用户已经向我们发送了以太币，因此，如果还有任何额外以太币剩余（因为另一种代币比用户所认为的价值更低），我们需要发起退款。
 
-#### 撤回流动资金 \{#remove-liquidity}
+#### 撤回流动资金 {#remove-liquidity}
 
 下面的函数将撤回流动资金并还给流动资金提供者。
 
@@ -1292,7 +1292,7 @@ contract UniswapV2Router02 is IUniswapV2Router02 {
 
 最后这个函数将存储费用计入元交易。
 
-#### 交易 \{#trade}
+#### 交易 {#trade}
 
 ```solidity
     // **** SWAP ****
@@ -1650,15 +1650,15 @@ Solidity 中的函数参数可以存入 `memory` 或者 `calldata`。 如果此�
 
 这些函数仅仅是调用 [UniswapV2Library 函数](#uniswapV2library)的代理。
 
-### UniswapV2Migrator.sol \{#UniswapV2Migrator}
+### UniswapV2Migrator.sol {#UniswapV2Migrator}
 
 这个合约用于将交易从旧版 v1 迁移至 v2。 目前版本已经迁移，便不再相关。
 
-## 程序库 \{#libraries}
+## 程序库 {#libraries}
 
 [SafeMath 库](https://docs.openzeppelin.com/contracts/2.x/api/math)是一个文档很完备的程序库，这里便无需赘述了。
 
-### 数学 \{#Math}
+### 数学 {#Math}
 
 此库包含一些 Solidity 代码通常不需要的数学函数，因而它们不是 Solidity 语言的一部分。
 
@@ -1703,7 +1703,7 @@ library Math {
 }
 ```
 
-### 定点小数 (UQ112x112) \{#FixedPoint}
+### 定点小数 (UQ112x112) {#FixedPoint}
 
 该库处理小数，这些小数通常不属于以太坊计算的一部分。 为此，它将数值编码*x*为 _x\*2^112_。 这使我们能够使用原来的加法和减法操作码，无需更改。
 
@@ -1740,7 +1740,7 @@ library UQ112x112 {
 
 如果我们需要两个 `UQ112x112` 值相除，结果不需要再乘以 2^112。 因此，我们为分母取一个整数。 我们需要使用类似的技巧来做乘法，但不需要将 `UQ112x112` 的值相乘。
 
-### UniswapV2Library \{#uniswapV2library}
+### UniswapV2Library {#uniswapV2library}
 
 此库仅被外围合约使用
 
@@ -1862,7 +1862,7 @@ Solidity 本身不能进行小数计算，所以不能简单地将金额乘以 0
 
 在需要进行数次配对交易时，可以通过这两个函数获得相应数值。
 
-### 转账帮助 \{#transfer-helper}
+### 转账帮助 {#transfer-helper}
 
 [此库](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol)添加了围绕 ERC-20 和以太坊转账的成功检查，并以同样的方式处理回退和返回 `false` 值。
 
@@ -1947,7 +1947,7 @@ library TransferHelper {
 
 此函数将以太币转至一个帐户。 任何对不同合约的调用都可以尝试发送以太币。 因为我们实际上不需要调用任何函数，就不需要在调用中发送任何数据。
 
-## 结论 \{#conclusion}
+## 结论 {#conclusion}
 
 本篇文章较长，约有 50 页。 如果您已读到此处，恭喜您！ 希望你现在已经了解编写真实应用程序（相对于短小的示例程序）时的考虑因素，并且能够更好地为自己的用例编写合约。
 

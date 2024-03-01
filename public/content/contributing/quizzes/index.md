@@ -4,7 +4,7 @@ description: The policy we use when adding quizzes to ethereum.org
 lang: en
 ---
 
-# Quizzes \{#quizzes}
+# Quizzes {#quizzes}
 
 Quizzes are an opportunity for users to test themselves to see if they understood the content on the page they just read. The questions should only be based on the content provided on the page and should not ask about information that is not mentioned on the page.
 

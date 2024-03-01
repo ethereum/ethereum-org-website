@@ -4,7 +4,7 @@ description: Nietechniczne wprowadzenie do dowodów wiedzy zerowej dla początku
 lang: pl
 ---
 
-## Czym są dowody wiedzy zerowej? \{#what-are-zk-proofs}
+## Czym są dowody wiedzy zerowej? {#what-are-zk-proofs}
 
 Dowód o wiedzy zerowej to sposób na udowodnienie ważności stwierdzenia bez ujawniania samego stwierdzenia. „Udowadniający” jest stroną próbującą udowodnić twierdzenie, podczas gdy „weryfikator” jest odpowiedzialny za walidację twierdzenia.
 
@@ -14,7 +14,7 @@ Dowody wiedzy zerowej pojawiły się po raz pierwszy w artykule z 1985 r. pt. �
 
 Dowody wiedzy zerowej zostały udoskonalone na przestrzeni lat i są obecnie wykorzystywane w wielu rzeczywistych zastosowaniach.
 
-## Dlaczego potrzebujemy dowodów o wiedzy zerowej? \{#why-zero-knowledge-proofs-are-important}
+## Dlaczego potrzebujemy dowodów o wiedzy zerowej? {#why-zero-knowledge-proofs-are-important}
 
 Dowody wiedzy zerowej stanowiły przełom w stosowanej kryptografii, ponieważ obiecywały poprawę bezpieczeństwa informacji dla osób fizycznych. Zastanów się, w jaki sposób możesz udowodnić stwierdzenie (np. „Jestem obywatelem kraju X”) innej stronie (np. usługodawcy). Musiałbyś przedstawić „dowody” na poparcie swojego stwierdzenia, takie jak paszport lub prawo jazdy.
 
@@ -24,7 +24,7 @@ Dowody wiedzy zerowej rozwiązują ten problem, eliminując potrzebę ujawniania
 
 Wracając do naszego wcześniejszego przykładu, jedynym dowodem potrzebnym do udowodnienia stwierdzenia o obywatelstwie jest dowód wiedzy zerowej. Weryfikator musi jedynie sprawdzić, czy pewne właściwości dowodu są prawdziwe, aby być przekonanym, że podstawowe stwierdzenie jest również prawdziwe.
 
-## Jak działają dowody wiedzy zerowej? \{#how-do-zero-knowledge-proofs-work}
+## Jak działają dowody wiedzy zerowej? {#how-do-zero-knowledge-proofs-work}
 
 Dowód wiedzy zerowej pozwala udowodnić prawdziwość stwierdzenia bez dzielenia się jego treścią lub ujawniania sposobu, w jaki odkryłeś prawdę. Aby było to możliwe, protokoły wiedzy zerowej opierają się na algorytmach, które biorą pewne dane jako dane wejściowe i zwracają „prawdę” lub „fałsz” jako dane wyjściowe.
 
@@ -48,7 +48,7 @@ Powyżej opisano strukturę „interaktywnego dowodu wiedzy zerowej”. Wczesne 
 
 Dobrym przykładem ilustrującym działanie interaktywnych dowodów jest słynna [historia jaskini Ali Baby](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave) Jeana-Jacquesa Quisquatera. W tej historii Peggy (udowadniająca) chce udowodnić Victorowi (weryfikującemu), że zna sekretną frazę otwierającą magiczne drzwi bez ujawniania tej frazy.
 
-### Nieinteraktywne dowody wiedzy zerowej \{#non-interactive-zero-knowledge-proofs}
+### Nieinteraktywne dowody wiedzy zerowej {#non-interactive-zero-knowledge-proofs}
 
 Interaktywne udowadnianie, choć jest rewolucyjne, miało ograniczoną użyteczność, ponieważ wymagało od obu stron bycia dostępnym i wielokrotnej interakcji. Nawet jeśli weryfikator był przekonany o uczciwości udowadniającego, dowód byłby niedostępny do niezależnej weryfikacji (obliczenie nowego dowodu wymagałoby nowego zestawu wiadomości między udowadniającym a weryfikującym).
 
@@ -60,9 +60,9 @@ Udowadnianie nieinteraktywne zmniejsza komunikację między udowadniającym a we
 
 Nieinteraktywne dowody stanowiły przełom w technologii wiedzy zerowej i zainicjowały rozwój stosowanych obecnie systemów udowadniania. Omówimy te rodzaje dowodów poniżej:
 
-### Rodzaje dowodów wiedzy zerowej \{#types-of-zero-knowledge-proofs}
+### Rodzaje dowodów wiedzy zerowej {#types-of-zero-knowledge-proofs}
 
-#### ZK-SNARKs \{#zk-snarks}
+#### ZK-SNARKs {#zk-snarks}
 
 ZK-SNARK to skrót od **Zero-Knowledge Succinct Non-Interactive Argument of Knowledge** (Zwięzły i nieinteraktywny dowód oparty o wiedzę zerową). Protokół ZK-SNARK ma następujące właściwości:
 
@@ -82,7 +82,7 @@ ZK-SNARK to skrót od **Zero-Knowledge Succinct Non-Interactive Argument of Know
 
 Zaufane konfiguracje wymagają od użytkowników zaufania uczestnikom w generacji parametrów. Jednak rozwój ZK-STARK umożliwił udowodnienie protokołów, które działają z niezaufaną konfiguracją.
 
-#### ZK-STARKs \{#zk-starks}
+#### ZK-STARKs {#zk-starks}
 
 ZK-STARK to skrót od **Zero-Knowledge Scalable Transparent Argument of Knowledge** (Skalowalny i transparentny dowód oparty o wiedzę zerową). Dowody ZK-STARK są podobne do ZK-SNARK, z wyjątkiem tego, że są:
 
@@ -92,9 +92,9 @@ ZK-STARK to skrót od **Zero-Knowledge Scalable Transparent Argument of Knowledg
 
 ZK-STARK generuje większe dowody niż ZK-SNARK, co oznacza, że najczęściej ma większe koszty weryfikacji. Istnieją jednak przypadki (takie jak udowadnianie dużych zbiorów danych), w których ZK-STARK może być bardziej opłacalny niż ZK-SNARK.
 
-## Przypadki użycia dowodów wiedzy zerowej \{#use-cases-for-zero-knowledge-proofs}
+## Przypadki użycia dowodów wiedzy zerowej {#use-cases-for-zero-knowledge-proofs}
 
-### Anonimowe płatności \{#anonymous-payments}
+### Anonimowe płatności {#anonymous-payments}
 
 Płatności kartą kredytową są często widoczne dla wielu podmiotów, w tym dla dostawcy usług płatniczych, banków i innych zainteresowanych podmiotów (np. organów rządowych). Chociaż nadzór finansowy przynosi korzyści w zakresie identyfikacji nielegalnych działalności, narusza on również prywatność zwykłych obywateli.
 
@@ -106,19 +106,19 @@ Dzięki wbudowaniu technologii wiedzy zerowej do protokołu, sieci blockchain sk
 
 Dowody wiedzy zerowej są również stosowane do anonimizacji transakcji na publicznych blockchainach. Przykładem jest Tornado Cash, zdecentralizowana usługa non-custodial (nie ma bezpośredniego dostępu do aktywów użytkownika), która umożliwia użytkownikom przeprowadzanie prywatnych transakcji na Ethereum. Tornado Cash wykorzystuje dowody wiedzy zerowej do ukrywania szczegółów transakcji i gwarantowania prywatności finansowej. Niestety, ponieważ są to narzędzia prywatności typu „opt-in” to kojarzone są z nielegalną działalnością. Aby temu zaradzić, prywatność musi ostatecznie stać się rzeczą domyślną na publicznych blockchainach.
 
-### Ochrona tożsamości \{#identity-protection}
+### Ochrona tożsamości {#identity-protection}
 
 Obecne systemy zarządzania tożsamością narażają dane osobowe na ryzyko. Dowody wiedzy zerowej mogą pomóc osobom w weryfikacji tożsamości przy jednoczesnym ochranianiu poufnych danych.
 
 Dowody wiedzy zerowej są szczególnie przydatne w kontekście [zdecentralizowanej tożsamości](/decentralized-identity/). Zdecentralizowana tożsamość (określana również jako „tożsamość suwerenna”) daje osobom możliwość kontrolowania dostępu do osobistych danych identyfikacyjnych. Potwierdzenie obywatelstwa bez konieczności ujawniania danych z identyfikatora podatkowego lub paszportu to dobry przykład tego, jak technologia wiedzy zerowej umożliwia zdecentralizowaną tożsamość.
 
-### Uwierzytelnianie \{#authentication}
+### Uwierzytelnianie {#authentication}
 
 Używanie usług online wymaga udowodnienia swojej tożsamości i prawa dostępu do tych platform. Często wymaga to podania danych osobowych, takich jak imię, adres e-mail, data urodzenia itp. Konieczne może być również zapamiętywanie długich haseł, co wiąże się z utratą dostępu.
 
 Jednak dowody wiedzy zerowej mogą uprościć uwierzytelnianie zarówno dla platform, jak i użytkowników. Po wygenerowaniu dowodu wiedzy zerowej przy użyciu danych wejściowych publicznych (np. danych potwierdzających członkostwo użytkownika na platformie) i prywatnych (np. szczegółów użytkownika), użytkownik może po prostu przedstawić go w celu uwierzytelnienia swojej tożsamości, gdy musi uzyskać dostęp do usługi. Poprawia to wrażenia użytkowników i uwalnia organizacje od konieczności przechowywania ogromnych ilości danych użytkowników.
 
-### Weryfikowalne obliczenia \{#verifiable-computation}
+### Weryfikowalne obliczenia {#verifiable-computation}
 
 Weryfikowalne obliczenia to kolejne zastosowanie technologii wiedzy zerowej do ulepszania designów blockchainów. Weryfikowalne obliczenia pozwalają nam zlecić obliczenia innemu podmiotowi przy jednoczesnym zachowaniu weryfikowalnych wyników. Podmiot przesyła wynik wraz z dowodem weryfikującym poprawność wykonania programu.
 
@@ -142,7 +142,7 @@ W tym miejscu wkraczają weryfikowalne obliczenia. Kiedy węzeł wykona transakc
 
 [Pakiety zbiorcze o wiedzy zerowej](/developers/docs/scaling/zk-rollups) i [validiumy](/developers/docs/scaling/validium/) są dwoma rozwiązaniami poza łańcuchowymi, które używają dowodów ważności do zapewnienia bezpiecznej skalowalności. Protokoły te wykonują tysiące transakcji poza łańcuchem i przesyłają dowody do weryfikacji na Ethereum. Wyniki te mogą być zastosowane natychmiast po zweryfikowaniu dowodu, pozwalając Ethereum na przetworzenie większej ilości transakcji bez zwiększania ilości obliczeń w warstwie bazowej.
 
-### Ograniczenie łapówek i zmów w głosowaniach w łańcuchu \{#secure-blockchain-voting}
+### Ograniczenie łapówek i zmów w głosowaniach w łańcuchu {#secure-blockchain-voting}
 
 Schematy głosowania na blockchainie mają wiele korzystnych cech: są w pełni kontrolowane, zabezpieczone przed atakami, odporne na cenzurę i wolne od ograniczeń geograficznych. Ale nawet schematy głosowania w łańcuchu nie są odporne na problem **zmów**.
 
@@ -156,7 +156,7 @@ Używanie głosowania w łańcuchu sprawia, że finansowanie kwadratowe jest wra
 
 Na szczęście nowsze rozwiązania, takie jak MACI (Minimalna struktura antykolizyjna), wykorzystują dowody wiedzy zerowej, aby uczynić głosowanie w łańcuchu (np. mechanizmy finansowania kwadratowego) odpornym na przekupstwo i zmowy. MACI to zestaw inteligentnych kontraktów i skryptów, które umożliwiają centralnemu administratorowi (zwanego „koordynatorem”) agregowanie głosów i podliczanie wyników _bez_ ujawniania szczegółów o tym, jak głosowała każda osoba. Mimo to nadal możliwe jest weryfikowanie, czy głosy zostały policzone prawidłowo lub potwierdzić, że dana osoba uczestniczyła w rundzie głosowania.
 
-#### Jak działa MACI z dowodami wiedzy zerowej? \{#how-maci-works-with-zk-proofs}
+#### Jak działa MACI z dowodami wiedzy zerowej? {#how-maci-works-with-zk-proofs}
 
 Na początku koordynator wdraża kontrakt MACI na Ethereum, po czym użytkownicy mogą zarejestrować się do głosowania (rejestrując swój klucz publiczny w inteligentnym kontrakcie). Użytkownicy oddają głosy, wysyłając wiadomości zaszyfrowane ich kluczem publicznym do inteligentnego kontraktu (między innymi poprawny głos musi zostać podpisany najnowszym kluczem publicznym powiązanym z tożsamością użytkownika). Następnie koordynator przetwarza wszystkie wiadomości po zakończeniu okresu głosowania, podlicza głosy i weryfikuje wyniki w łańcuchu.
 
@@ -178,29 +178,29 @@ Jednak w przypadku, w którym koordynator pozostaje uczciwy, MACI stanowi potę�
 
 [Dowiedz się więcej o MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
 
-## Wady korzystania z dowodów wiedzy zerowej \{#drawbacks-of-using-zero-knowledge-proofs}
+## Wady korzystania z dowodów wiedzy zerowej {#drawbacks-of-using-zero-knowledge-proofs}
 
-### Koszty sprzętowe \{#hardware-costs}
+### Koszty sprzętowe {#hardware-costs}
 
 Generowanie dowodów wiedzy zerowej wymaga bardzo skomplikowanych obliczeń, które najlepiej wykonywać na wyspecjalizowanych maszynach. Ponieważ maszyny te są drogie, często są poza zasięgiem zwykłych osób. Co więcej, aplikacje, które chcą korzystać z technologi wiedzy zerowej, muszą uwzględnić koszty sprzętu — co może zwiększyć koszt dla użytkowników końcowych.
 
-### Koszt weryfikacji dowodu \{#proof-verification-costs}
+### Koszt weryfikacji dowodu {#proof-verification-costs}
 
 Weryfikowanie dowodów również wymaga skomplikowanych obliczeń i zwiększa koszty wdrożenia technologii wiedzy zerowej w aplikacjach. Koszt ten jest szczególnie istotny w kontekście udowadniania obliczeń. Na przykład, pakiety zbiorcze o wiedzy zerowej wymagają około 500.000 gazu do zweryfikowana pojedynczego dowodu ZK-SNARK na Ethereum, a ZK-STARK wymaga jeszcze wyższych opłat.
 
-### Założenia zaufania \{#trust-assumptions}
+### Założenia zaufania {#trust-assumptions}
 
 W ZK-SNARK Wspólny Ciąg Odniesienia (publiczne parametry) jest generowany raz i dostępny do ponownego wykorzystania dla stron, które chcą uczestniczyć w protokole wiedzy zerowej. Publiczne parametry są tworzone za pośrednictwem zaufanej ceremonii konfiguracji, w której zakłada się, że uczestnicy są uczciwi.
 
 Jednak tak naprawdę użytkownicy nie mają możliwości ocenić uczciwości uczestników i muszą wierzyć deweloperom na słowo. Dowody ZK-STARK są wolne od założeń zaufania, ponieważ losowość używana do generowania ciągu jest publicznie weryfikowalna. W międzyczasie naukowcy pracują nad niezaufanymi konfiguracjami dla ZK-SNARK, aby zwiększyć bezpieczeństwo mechanizmów udowadniania.
 
-### Zagrożenia obliczeń kwantowych \{#quantum-computing-threats}
+### Zagrożenia obliczeń kwantowych {#quantum-computing-threats}
 
 ZK-SNARK do szyfrowania używa kryptografii krzywych eliptycznych ([ECDSA](/glossary/#ecdsa)). Chociaż algorytm ECDSA jest bezpieczny na tę chwilę, rozwój komputerów kwantowych może w przyszłości złamać jego model bezpieczeństwa.
 
 ZK-STARK jest uważany za odporny na zagrożenia związane z obliczeniami kwantowymi, ponieważ korzysta z funkcji haszujących odpornych na kolizje. W przeciwieństwie do par kluczy publiczno-prywatnych stosowanych w kryptografii krzywych eliptycznych, odporne na kolizje haszowanie jest cięższe do złamania przez algorytmy obliczeń kwantowych.
 
-## Przeczytaj także \{#further-reading}
+## Przeczytaj także {#further-reading}
 
 - [Informatyk wyjaśnia jedno pojęcie na 5 poziomach trudności | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) — _Kanał Wired na YouTubie_
 - [Przegląd przypadków użycia dowodów wiedzy zerowej](https://appliedzkp.org/#Projects) — _Drużyna do spraw eksploracji prywatności i skalowania_

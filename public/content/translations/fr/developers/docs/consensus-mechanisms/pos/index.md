@@ -6,21 +6,21 @@ lang: fr
 
 La preuve d'enjeu (PoS) sous-tend le [mécanisme de consensus](/developers/docs/consensus-mechanisms/) Ethereum. Ethereum est passé au mécanisme de preuve d'enjeu en 2022 parce que celui-ci est plus sécurisé, moins énergivore, et parfait pour l'implémentation de nouvelles solutions de mise à l'échelle par rapport à la précédente architecture de [preuve de travail](/developers/docs/consensus-mechanisms/pow).
 
-## Prérequis \{#prerequisites}
+## Prérequis {#prerequisites}
 
 Pour mieux comprendre cette page, nous vous recommandons d'abord de lire la page [Mécanismes de consensus](/developers/docs/consensus-mechanisms/).
 
-## Qu'est-ce que la preuve d'enjeu (PoS) ? \{#what-is-pos}
+## Qu'est-ce que la preuve d'enjeu (PoS) ? {#what-is-pos}
 
 La preuve d'enjeu est un moyen de prouver que les validateurs ont procuré dans le réseau une chose de valeur pouvant être détruite s'ils agissent de manière malhonnête. Ethereum utilise la preuve d'enjeu, où les validateurs misent explicitement du capital en ETH via un contrat intelligent sur Ethereum. Le validateur est alors chargé de vérifier la validité des nouveaux blocs propagés sur le réseau et, à l'occasion, de créer et de propager lui-même de nouveaux blocs. S’ils tentent de frauder le réseau (par exemple en proposant plusieurs blocs au lieu d'un seul ou en envoyant des attestations contradictoires), tout ou partie de leurs ETH misés peuvent être détruits.
 
-## Validateurs \{#validators}
+## Validateurs {#validators}
 
 Pour participer en tant que validateur, un utilisateur doit déposer 32 ETH dans le contrat de dépôt et exécuter trois logiciels distincts : un client d'exécution, un client de consensus, et un validateur. Lors du dépôt de ses ETH, l'utilisateur rejoint une file d'attente d'activation qui limite le taux de nouveaux validateurs rejoignant le réseau. Une fois activés, les validateurs reçoivent de nouveaux blocs de leurs pairs sur le réseau Ethereum. Les transactions incluses dans le bloc sont ré-exécutées pour vérifier que les modifications proposées à l'état d'Ethereum sont valides ainsi que la signature du bloc. Le validateur envoie ensuite un vote (appelé attestation) en faveur de ce bloc à travers le réseau.
 
 Alors qu'avec le consensus de preuve de travail, la fréquence des blocs est déterminée par la difficulté minière, avec la preuve d'enjeu, cette fréquence reste fixe. Dans le consensus de mise en jeu d'Ethereum, le temps est divisé en créneaux (12 secondes) et périodes (32 créneaux). Un validateur est sélectionné aléatoirement pour proposer un bloc dans chaque créneau. Ce validateur est responsable de la création d'un nouveau bloc et de son envoi aux autres nœuds du réseau. De même, dans chaque créneau, un comité de validateurs est choisi au hasard, et leurs votes servent à déterminer la validité du bloc proposé. Il est important de diviser le validateur mis en place en comités pour maintenir la charge du réseau gérable. Les validateurs sont répartis en comités de telle façon que chaque validateur actif atteste à chaque période, mais pas à chaque créneau.
 
-## Comment une transaction est exécutée sur Ethereum PoS \{#transaction-execution-ethereum-pos}
+## Comment une transaction est exécutée sur Ethereum PoS {#transaction-execution-ethereum-pos}
 
 Ce qui suit fournit une explication de bout en bout de la façon dont une transaction est exécutée avec la preuve d'enjeu Ethereum (PoS).
 
@@ -33,23 +33,23 @@ Ce qui suit fournit une explication de bout en bout de la façon dont une transa
 
 Vous trouverez plus de détails sur la finalité ci-dessous.
 
-## Finalisation \{#finality}
+## Finalisation {#finality}
 
 Une transaction atteint la « finalité » dans les réseaux distribués lorsqu’elle fait partie d’un bloc ne pouvant être modifié sans qu'une grande quantité d’ETH ne soit brûlée. Avec la preuve d'enjeu d'Ethereum, cela est géré via des blocs dits « checkpoint » ou « points de contrôle ». Le premier bloc de chaque période est un point de contrôle. Les validateurs votent pour des paires de blocs « points de contrôle » qu'ils considèrent comme étant valides. Si une paire de points de contrôle regroupe des votes représentant au moins les deux tiers de l'ETH total misé, les points de contrôle sont mis à niveau. La plus récente des deux (cible) devient « justifiée ». La plus ancienne des deux est déjà justifiée en ce qu'elle était la « cible » de la période précédente. Elle est ensuite mise à niveau vers le statut « finalisée ».
 
 Pour annuler un bloc finalisé, un attaquant devrait s'engager à perdre au moins un tiers de l'ETH total mis en jeu. La raison exacte de ce phénomène est expliquée [dans ce post de blog de l'Ethereum Foundation](https://blog.ethereum.org/2016/05/09/on-settlement-finality/). Puisque la finalisation requiert une majorité des deux tiers, un attaquant pourrait empêcher le réseau d'atteindre la finalité en votant avec un tiers de la mise totale. Il existe un mécanisme visant à se défendre contre ce type d'attaque : la [fuite d'inactivité](https://eth2book.info/bellatrix/part2/incentives/inactivity). Ce mécanisme s'active lorsque la chaîne échoue à finaliser plus de quatre périodes. La fuite d'inactivité détruit progressivement les ETH mis en jeu par les validateurs qui votent contre la majorité, permettant à celle -ci de retrouver une majorité des deux tiers et de finaliser la chaîne.
 
-## Sécurité Crypto-économique \{#crypto-economic-security}
+## Sécurité Crypto-économique {#crypto-economic-security}
 
 Faire fonctionner un validateur est un engagement. Il est attendu du validateur qu'il maintienne un matériel et une connectivité suffisants pour participer à la validation et à la proposition de blocs. En retour, le validateur est payé en ETH (le solde misé augmente). D'autre part, la participation en tant que validateur ouvre également de nouvelles possibilités pour les utilisateurs d'attaquer le réseau en vue de réaliser un gain personnel ou un sabotage. Pour éviter cela, les validateurs ratent les récompenses en ETH s'ils ne participent pas quand ils sont appelés, et leur mise actuelle peut être détruite s'ils se comportent de manière malhonnête. Deux principaux comportements peuvent être considérés comme malhonnêtes : proposer plusieurs blocs pour un même créneau (équivoque) et soumettre des attestations contradictoires.
 
 La quantité d'ETH détruite dépend du nombre de validateurs qui sont sanctionnés en même temps. Ce mécanisme est connu sous le nom de [« pénalité de corrélation »](https://eth2book.info/bellatrix/part2/incentives/slashing#the-correlation-penalty) ; il peut être mineur (~1 % de la mise en jeu pour un seul validateur sanctionné) ou entraîner la destruction de 100 % de la mise en jeu du validateur (échec massif). Elle est imposée à mi-chemin d’une période de sortie forcée qui commence par une pénalité immédiate (jusqu’à 1 ETH) le jour 1, la pénalité de corrélation le jour 18 et enfin l’expulsion du réseau le jour 36. Les validateurs reçoivent chaque jour des pénalités d'attestation mineures parce qu'ils sont présents sur le réseau mais ne soumettent pas de votes. Tout cela signifie qu’une attaque coordonnée serait très coûteuse pour l’attaquant.
 
-## Choix de la fourche \{#fork-choice}
+## Choix de la fourche {#fork-choice}
 
 Lorsque le réseau fonctionne de manière optimale et honnête, il n'y a jamais qu'un nouveau bloc en tête de chaîne, et tous les validateurs l'attestent. Cependant, il est possible pour les validateurs d'avoir des points de vue différents sur le bloc en tête de la chaîne, en raison de la latence du réseau ou parce qu'un validateur a émis des données contradictoires. Par conséquent, les clients de consensus ont besoin d'un algorithme pour décider lequel favoriser. L'algorithme utilisé dans la preuve d'enjeu Ethereum est appelé [LMD-GHOST](https://arxiv.org/pdf/2003.03052.pdf), et il travaille en identifiant la fourche qui a le plus grand poids d'attestations dans son histoire.
 
-## Preuve d'enjeu et sécurité \{#pos-and-security}
+## Preuve d'enjeu et sécurité {#pos-and-security}
 
 Avec un consensus de preuve d'enjeu (comme avec la preuve de travail), la menace d'une attaque de [51 %](https://www.investopedia.com/terms/1/51-attack.asp) existe toujours, mais elle est encore plus risquée pour les attaquants. Un attaquant aurait besoin de 51 % de l'ETH mis en jeu. Ils pourraient alors utiliser leurs propres attestations pour s'assurer que leur fourche préférée est celle qui possède le plus d'attestations. Les clients de consensus utilisent le « poids » des attestations cumulées pour déterminer la chaîne correcte, de sorte que cet attaquant serait en mesure de faire de sa fourche la fourche canonique. Toutefois, l'intérêt de la preuve d'enjeu comparé à la preuve de travail est que la communauté a la possibilité de monter une contre-attaque. Par exemple, les validateurs honnêtes pourraient décider de continuer de construire sur la chaîne minoritaire et ignorer totalement la fourche de l'attaquant tout en encourageant les applications, les échanges et les pools à faire de même. Ils pourraient également décider de sortir l'attaquant de force du réseau et de détruire l'ETH misé. Ces possibilités constituent des défenses fortes contre une attaque de type 51 %.
 
@@ -57,7 +57,7 @@ Mais les attaques des 51 % ne sont qu'une des facettes des activités malveillan
 
 Dans l'ensemble, il a été démontré que la preuve d'enjeu, telle qu'elle est implémentée sur Ethereum, est plus sûre économiquement que la preuve de travail.
 
-## Avantages et inconvénients \{#pros-and-cons}
+## Avantages et inconvénients {#pros-and-cons}
 
 | Avantages                                                                                                                                                                                                                                                                                                            | Inconvénients                                                                                                                                  |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -66,7 +66,7 @@ Dans l'ensemble, il a été démontré que la preuve d'enjeu, telle qu'elle est 
 | La preuve d'enjeu offre une plus grande sécurité crypto-économique que la preuve de travail                                                                                                                                                                                                                          | Les utilisateurs doivent utiliser trois logiciels pour participer à la preuve d'enjeu d'Ethereum.                                              |
 | Une émission moindre de nouveaux ETH est nécessaire pour inciter la participation au réseau                                                                                                                                                                                                                          |                                                                                                                                                |
 
-### Comparaison avec la preuve de travail \{#comparison-to-proof-of-work}
+### Comparaison avec la preuve de travail {#comparison-to-proof-of-work}
 
 Ethereum n’a pas toujours été un réseau de preuve d'enjeu. Ethereum utilisait initialement la preuve de travail. La transition de la preuve de travail à la preuve d'enjeu a eu lieu en septembre 2022. La preuve d'enjeu présente des avantages par rapport à la preuve de travail :
 
@@ -77,7 +77,7 @@ Ethereum n’a pas toujours été un réseau de preuve d'enjeu. Ethereum utilisa
 - les sanctions économiques en cas de fraude rendent les attaques de type 51% plus onéreuses pour un attaquant que la preuve de travail
 - La communauté peut, en dernier recours, voter pour la récupération d'une chaîne viable dans le cas où surviendrait une attaque de type 51% malgré les barrières économiques évoquées ci-dessus.
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [FAQ Preuve d'enjeu](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Qu'est-ce qu'une Preuve d'enjeu ?](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
@@ -88,6 +88,6 @@ Ethereum n’a pas toujours été un réseau de preuve d'enjeu. Ethereum utilisa
 - [Une philosophie de design pour la Preuve d'enjeu](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_
 - [Vidéo : Vitalik Buterin explique la preuve d'enjeu à Lex Fridman](https://www.youtube.com/watch?v=3yrqBG-7EVE)
 
-## Sujets connexes \{#related-topics}
+## Sujets connexes {#related-topics}
 
 - [Preuve de travail](/developers/docs/consensus-mechanisms/pow/)

@@ -10,7 +10,7 @@ lang: zh
 
 [Ethash](https://github.com/ethereum/wiki/wiki/Ethash) 是 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto) 算法的修改版。 Ethash 工作量证明是[内存密集型](https://wikipedia.org/wiki/Memory-hard_function)算法，这被认为使算法可抵御专用集成电路。 Ethash 专用集成电路最终被开发出来，但在工作量证明被关闭之前，图形处理单元挖矿仍然是一个可行的选择。 Ethash 仍然用于在其他非以太坊工作量证明网络上挖掘其他币。
 
-## Ethash 是如何工作的？ \{#how-does-ethash-work}
+## Ethash 是如何工作的？ {#how-does-ethash-work}
 
 内存硬度通过工作量证明算法实现，需要根据随机数和区块头选择固定资源子集。 该资源（大小为几 GB）称为有向无环图。 有向无环图每 30000 个区块更改一次（大约 125 小时的窗口，称为一个时段（大约 5.2 天）），需要一段时间才能生成。 由于有向无环图仅依赖于区块高度，因此可以预先生成，但如果没有，则客户端需要等到此过程结束才能生成区块。 如果客户端没有提前预生成和缓存有向无环图，网络可能会在每个时段过渡时遇到严重的区块延迟。 请注意，不需要生成有向无环图即可验证，工作量证明本质上允许使用低端中央处理器和小内存进行验证。
 
@@ -23,7 +23,7 @@ lang: zh
 
 每隔 30000 个区块更新一次大数据集，因此，矿工的绝大部分工作都是读取数据集，而不是对其进行修改。
 
-## 定义 \{#definitions}
+## 定义 {#definitions}
 
 我们采用以下定义：
 
@@ -42,13 +42,13 @@ CACHE_ROUNDS = 3                  # number of rounds in cache production
 ACCESSES = 64                     # number of accesses in hashimoto loop
 ```
 
-### 使用“SHA3” \{#sha3}
+### 使用“SHA3” {#sha3}
 
 以太坊的开发恰逢 SHA3 标准的制定， 标准进程对最终确定的哈希算法的填充做了后期改动，使得以太坊的 “sha3_256”和“sha3_512”哈希值不是标准的 sha3 哈希值，而是在其他情况下 常被称为“Keccak-256”和“Keccak-512”的变量。 讨论请见[此处](https://eips.ethereum.org/EIPS-1803)、[此处](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)或[此处](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)。
 
 请记住这一点，因为下面的算法描述中提到了“sha3”哈希值。
 
-## 参数 \{#parameters}
+## 参数 {#parameters}
 
 Ethash 的缓存和数据集的参数取决于区块号。 缓存大小和数据集大小都呈线性增长；然而，我们总是取低于线性增长阈值的最高素数，以降低意外规律导致循环行为的风险。
 
@@ -70,7 +70,7 @@ def get_full_size(block_number):
 
 附录中提供了数据集和缓存大小值表。
 
-## 缓存生成 \{#cache-generation}
+## 缓存生成 {#cache-generation}
 
 现在，我们来指定生成缓存的函数：
 
@@ -94,7 +94,7 @@ def mkcache(cache_size, seed):
 
 缓存生成过程中，先按顺序填充 32 MB 内存，然后从[严格内存硬哈希函数 (2014)](http://www.hashcash.org/papers/memohash.pdf) 执行两次 Sergio Demian Lerner 的 _RandMemoHash_ 算法。 输出一组 524288 个 64 字节值。
 
-## 数据聚合函数 \{#date-aggregation-function}
+## 数据聚合函数 {#date-aggregation-function}
 
 我们使用灵感来自 [FNV 哈希](https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)的算法，在部分情况下，这种算法可用作逻辑异或的不相关替代。 请注意，我们使用全 32 位输入乘以素数，与之相对地，FNV-1 spec 用 1 个字节（8 个字节）依次乘以素数。
 
@@ -107,7 +107,7 @@ def fnv(v1, v2):
 
 请注意，即使黄皮书也指出 fnv 为 v1\*(FNV_PRIME ^ v2)，所有当前实现始终采用上述定义。
 
-## 完整数据集计算 \{#full-dataset-calculation}
+## 完整数据集计算 {#full-dataset-calculation}
 
 整个 1 GB 数据集中每个 64 字节项目的计算如下：
 
@@ -133,7 +133,7 @@ def calc_dataset(full_size, cache):
     return [calc_dataset_item(cache, i) for i in range(full_size // HASH_BYTES)]
 ```
 
-## 主循环 \{#main-loop}
+## 主循环 {#main-loop}
 
 现在，我们指定了类似“hashimoto”的主要循环。在此循环中，我们聚合整个数据集的数据，以生成特定区块头和随机数的最终值。 在下面的代码中，`header` 代表一个*被截断*区块头的递归长度前缀表示的 SHA3-256 _哈希值_。被截断是指区块头被截去了 **mixHash** 和**随机数**字段。 `nonce` 是指一个 64 位无符号整数的八个字节，按大端序排列。 因此 `nonce[::-1]` 是上述值的八字节小端序表示：
 
@@ -175,7 +175,7 @@ def hashimoto_full(full_size, dataset, header, nonce):
 
 如果此算法的输出低于所需目标，即证明随机数是有效的。 请注意，在最后额外应用 `sha3_256` 将确保中间随机数的存在。提供此证据可以证明至少做了少量工作；而且此快速外部工作量证明验证可以用于反分布式拒绝服务目的。 也可提供统计保证，说明结果是一个无偏 256 位数字。
 
-## 挖矿 \{#mining}
+## 挖矿 {#mining}
 
 挖矿算法定义如下：
 
@@ -190,7 +190,7 @@ def mine(full_size, dataset, header, difficulty):
     return nonce
 ```
 
-## 定义种子哈希 \{#seed-hash}
+## 定义种子哈希 {#seed-hash}
 
 为了计算用于在给定区块上挖掘的种子哈希值，我们使用以下算法：
 
@@ -204,11 +204,11 @@ def mine(full_size, dataset, header, difficulty):
 
 请注意，为了顺利挖矿和验证，我们建议在单个线程中预先计算未来的种子哈希值和数据集。
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 _还有哪些社区资源对您有所帮助？ 请编辑本页面并添加！_
 
-## 附录 \{#appendix}
+## 附录 {#appendix}
 
 如果您有兴趣将上述 python spec 作为代码运行，则应在头部添加以下代码。
 
@@ -260,7 +260,7 @@ def isprime(x):
     return True
 ```
 
-### 数据大小 \{#data-sizes}
+### 数据大小 {#data-sizes}
 
 以下查找表列表显示了大约 2048 个数据大小和缓存大小时段。
 

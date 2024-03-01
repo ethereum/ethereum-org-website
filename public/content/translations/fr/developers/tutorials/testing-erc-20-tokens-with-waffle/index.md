@@ -28,7 +28,7 @@ Prérequis :
 
 Encore une fois, si l'un de ces éléments n'est pas correct ou si vous ne prévoyez pas de reproduire l'exact code de cet article, il vous sera possible de comprendre son contenu sans grande difficulté.
 
-## Quelques mots sur Waffle \{#a-few-words-about-waffle}
+## Quelques mots sur Waffle {#a-few-words-about-waffle}
 
 [Waffle](https://getwaffle.io) est la bibliothèque la plus avancée pour écrire et tester les contrats intelligents.
 
@@ -36,7 +36,7 @@ Fonctionne avec l'[API JavaScript](/developers/docs/apis/javascript/) ethers-js.
 
 Vous pouvez trouver de plus amples détails dans la [documentation Waffle](https://ethereum-waffle.readthedocs.io/en/latest/#waffle-documentation) !
 
-## Le tutoriel rapide \{#the-quick-tutorial}
+## Le tutoriel rapide {#the-quick-tutorial}
 
 Tout d'abord, créez un nouveau projet `JavaScript` ou `TypeScript` (Je vais utiliser `TS`, mais si vous utilisez `JS` ce n'est pas un problème) :
 
@@ -641,7 +641,7 @@ Quelque chose comme ceci :
 
 </details>
 
-## Étape #1 : Installez Waffle dans votre projet ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation)) \{#step-1-install-waffle-in-your-project}
+## Étape #1 : Installez Waffle dans votre projet ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation)) {#step-1-install-waffle-in-your-project}
 
 Pour commencer, installez `ethereum-waffle`. Dans ce tutoriel, j'utiliserai `yarn`, donc pour installer `ethereum-waffle` exécutez :
 
@@ -649,7 +649,7 @@ Pour commencer, installez `ethereum-waffle`. Dans ce tutoriel, j'utiliserai `yar
  yarn add --dev ethereum-waffle
 ```
 
-## Étape #2 : Écrire un contrat intelligent ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract)) \{#step-2-write-a-smart-contract}
+## Étape #2 : Écrire un contrat intelligent ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract)) {#step-2-write-a-smart-contract}
 
 Dans ce tutoriel, j'utiliserai le jeton [ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/ded2b0a55c9c13731963ab7b85a70c8e73504bab/contracts/token/ERC20/ERC20.sol) de [OpenZeppelin](https://openzeppelin.com).
 
@@ -675,7 +675,7 @@ contract BasicToken is ERC20 {
 
 ```
 
-## Étape #3 : Compilez votre contrat intelligent ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract)) \{#step-3-compile-your-smart-contract}
+## Étape #3 : Compilez votre contrat intelligent ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract)) {#step-3-compile-your-smart-contract}
 
 Pour compiler votre contrat intelligent, ajoutez l'entrée suivante dans le `package.json` de votre projet :
 
@@ -1007,9 +1007,9 @@ Vous devriez voir que Waffle a compilé votre contrat et placé la sortie JSON r
 
 </details>
 
-## Étape #4 : Testez votre contrat intelligent ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)) \{#step-4-test-your-smart-contract}
+## Étape #4 : Testez votre contrat intelligent ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)) {#step-4-test-your-smart-contract}
 
-### Étape #4.1 Installez les dépendances nécessaires ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)) \{#step-4-1}
+### Étape #4.1 Installez les dépendances nécessaires ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)) {#step-4-1}
 
 Une fois que nous avons réussi à rédiger un Contrat Intelligent, nous pouvons le tester. Nous utiliserons `Waffle` pour le faire.
 
@@ -1021,7 +1021,7 @@ Nous devons donc ajouter `Chai` à nos dépendances :
  yarn add --dev mocha chai
 ```
 
-### Étape #4.2 Créez un fichier de test ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)) \{#step-4-2}
+### Étape #4.2 Créez un fichier de test ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)) {#step-4-2}
 
 Pour écrire notre test, nous devons créer le fichier `BasicToken.test.ts` dans notre répertoire de test.
 
@@ -1059,7 +1059,7 @@ it("Assigns initial balance", async () => {
 
 Pour exécuter le test, utilisez `yarn test`
 
-### Étape #4.3 Événement d'émission ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events)) \{#step-4-3}
+### Étape #4.3 Événement d'émission ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events)) {#step-4-3}
 
 Dans ce tutoriel, nous souhaitons montrer les correspondances les plus utiles de `Waffle`, alors commençons par la première.
 
@@ -1081,7 +1081,7 @@ Un autre avantage de cette correspondance est que nous pouvons vérifier avec qu
 
 Cela nous permettra d'être sûrs que notre fonction est appelée correctement !
 
-### Étape #4.4 Annuler avec un message ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message)) \{#step-4-4}
+### Étape #4.4 Annuler avec un message ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message)) {#step-4-4}
 
 `Waffle` nous permet de tester le message avec lequel il a été retourné.
 
@@ -1097,7 +1097,7 @@ it("Can not transfer above the amount", async () => {
 })
 ```
 
-### Étape #4.5 Change-jeton-solde ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance)) \{#step-4-5}
+### Étape #4.5 Change-jeton-solde ([Lien vers la documentation](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance)) {#step-4-5}
 
 `Waffle` nous permet de vérifier les changements dans les soldes des portefeuilles !
 
@@ -1129,7 +1129,7 @@ it("Send transaction changes sender and receiver balances", async () => {
 
 La transaction devrait être passée en tant que rappel (callback) (nous devons vérifier le solde avant l'appel) ou en tant que réponse de transaction.
 
-## Félicitations \{#congratulations}
+## Félicitations {#congratulations}
 
 **Félicitations ! Vous avez réussi à le faire avec mon tutoriel. Vous avez fait votre premier grand pas vers les tests des contrats intelligents avec Waffle.**
 

@@ -8,11 +8,11 @@ sidebarDepth: 3
 
 Kanali stanja sodelujočim omogočajo, da izvajajo transakcije izven verige `x`-krat, medtem ko na omrežju Ethereum oddajo le dve transakciji. To omogoča izjemno visoko pretočnost.
 
-## Predpogoji \{#prerequisites}
+## Predpogoji {#prerequisites}
 
 Dobro morate razumeti vse temeljne teme in zelo dobro razumeti [razširljivosti Ethereum](/developers/docs/scaling/). Implementacija rešitev za razširljivost, kot so kanali, je napredno področje, saj tehnologija v praksi še ni dovolj testirana ter se še naprej raziskuje in razvija.
 
-## Kanali \{#channels}
+## Kanali {#channels}
 
 Sodelujoči morajo zakleniti del stanja Ethereum, recimo polog ETH, v večpodpisno pogodbo. Večpodpisna pogodba je vrsta pogodbe, ki za izvedbo zahteva podpisnike (torej soglasje) več ključev.
 
@@ -26,7 +26,7 @@ Ta način zaklepanja stanja predstavlja prvo transakcijo in odpre kanal. Sodeluj
 
 Trenutno obstajata dve vrsti kanalov: kanali stanja in plačilni kanali.
 
-## Kanali stanja \{#state-channels}
+## Kanali stanja {#state-channels}
 
 Kanale stanja je morda najbolje razložiti s primerom, kot je igra križcev in krožcev:
 
@@ -36,11 +36,11 @@ Kanale stanja je morda najbolje razložiti s primerom, kot je igra križcev in k
 
 3. Ob zmagi se kanal zapre s predložitvijo končnega stanja (torej seznama transakcij) pogodbi sodnika in plača le provizijo za eno transakcijo. Sodnik zagotovi, da sta to "končno stanje" podpisala oba sodelujoča, in počaka določen čas, da zagotovi, da nihče ne more legitimno izzvati rezultata, ter nato Alici izplača 1 ETH nagrade.
 
-## Plačilni kanali \{#payment-channels}
+## Plačilni kanali {#payment-channels}
 
 Poenostavljeni kanali stanja, ki se ukvarjajo le s plačili (torej prenosi ETH). Prenose med dvema sodelujočima izven verige omogočajo, dokler neto vsota njunih prenosov ne preseže položenih žetonov.
 
-## Prednosti in slabosti \{#channels-pros-and-cons}
+## Prednosti in slabosti {#channels-pros-and-cons}
 
 | Prednosti                                                                     | Slabosti                                                                                                                                                        |
 | ----------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,7 +49,7 @@ Poenostavljeni kanali stanja, ki se ukvarjajo le s plačili (torej prenosi ETH).
 | Najnižji strošek na transakcijo – dobro za tokove mikroplačil                 | Sredstva je treba zakleniti v odprte plačilne kanale                                                                                                            |
 |                                                                               | Ne podpira odprtega sodelovanja                                                                                                                                 |
 
-## Uporaba kanalov stanja \{#use-state-channels}
+## Uporaba kanalov stanja {#use-state-channels}
 
 Več projektov zagotavlja implementacije kanalov stanj, ki jih lahko integrirate v svoje dappe:
 
@@ -59,7 +59,7 @@ Več projektov zagotavlja implementacije kanalov stanj, ki jih lahko integrirate
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Nadaljnje branje \{#further-reading}
+## Nadaljnje branje {#further-reading}
 
 **Kanali stanja**
 

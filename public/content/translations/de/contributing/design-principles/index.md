@@ -4,7 +4,7 @@ lang: de
 description: Die Grundsätze hinter den Entscheidungen über Design und Inhalt von ethereum.org
 ---
 
-# Unsere Designgrundsätze \{#contributing-to-ethereumorg-}
+# Unsere Designgrundsätze {#contributing-to-ethereumorg-}
 
 <Emoji text=":wave:" size={1} /> Hallo und herzlich willkommen bei den Designgrundsätzen für ethereum.org. Die Informationen sind Teil eines laufenden Prozesses zur Weiterentwicklung und Verbesserung von ethereum.org.
 
@@ -12,13 +12,13 @@ Unsere Grundsätze prägen das Erscheinungsbild der Website und den Inhalt.
 
 Machen Sie sich mit den Informationen vertraut, bevor Sie einen [Beitrag zu ethereum.org](/beitrag/) leisten.
 
-## Was sind Designgrundsätze? \{#ways-to-contribute}
+## Was sind Designgrundsätze? {#ways-to-contribute}
 
 Keine Sorge, das ist ziemlich einfach. **Designgrundsätze** sind eine Reihe von Richtlinien, auf die wir uns beziehen, wenn wir etwas entwerfen (d. h. erstellen, pflegen oder aktualisieren).
 
 In Zusammenhang mit ethereum.org bilden diese Designgrundsätze die Basis für das, was wir mit der Website darstellen und der Welt zeigen wollen. Sie sind ambitioniert **und** funktional. Es geht nicht nur darum, wie die Website _aussieht_, sondern auch darum, wie sie _funktioniert_, und sogar darum, welche _Gefühle_ sie bei jemanden auslöst. Alles, von den Farben über die Seitenlayouts bis hin zur Art und Weise, wie wir auf der Website über Ethereum sprechen, sollte von diesen Grundsätzen geprägt sein.
 
-## Die Grundsätze in der Praxis \{#how-decisions-about-the-site-are-made}
+## Die Grundsätze in der Praxis {#how-decisions-about-the-site-are-made}
 
 Sehen wir uns ein Beispiel an. Einer der Grundsätze ist "Glaubwürdig". Das bedeutet, dass Besucher der Site von der Vertrauenswürdigkeit _überzeugt_ _sind_ – genau wie vom breiteren Ethereum-Ökosystem. Dieser Grundsätz gliedert sich in drei funktionale "Unterprinzipien", die wir als umsetzbar erachten, um die Glaubwürdigkeit der Website zu verbessern:
 
@@ -32,9 +32,9 @@ Wenn wir Entscheidungen in puncto Design oder Werbetexte tätigen, ziehen wir de
 - _"Wie und wo zeigen wir die Größe und Aktivität des Ökösystems?"_
 - _"Sind die vorgeschlagenen Beiträge eines Mitglieds der Community, die ich überprüfe, konsistent mit dem aktuellen Design und Inhalten auf der Seite?"_
 
-## Designgrundsätze von ethereum.org \{#contributors}
+## Designgrundsätze von ethereum.org {#contributors}
 
-### 1. Inspirierend \{#1-inspirational}
+### 1. Inspirierend {#1-inspirational}
 
 Die Seite sollte Nutzer dazu anregen, sich vorzustellen, welche Veränderungen Ethereum für die Welt brignen könnte. Menschen sollen sich motiviert fühlen, die Tools des Ethereum-Ökösystems zu erkunden, damit zu experimentieren und zu basteln.
 
@@ -43,7 +43,7 @@ Die Seite sollte Nutzer dazu anregen, sich vorzustellen, welche Veränderungen E
 
 Visuelle Ausrichtung • Inhalt
 
-### 2. Allgemein \{#2-universal}
+### 2. Allgemein {#2-universal}
 
 Ethereum ist ein globales, dezentralisiertes Projekt und das zeigt sich auch in unserer Zielgruppe. Ziel ist es, die Site jedem zugänglich zu machen und die Kulturen der Welt zu begrüßen.
 
@@ -53,7 +53,7 @@ Ethereum ist ein globales, dezentralisiertes Projekt und das zeigt sich auch in 
 
 Schriftsystem • Benutzung der Farben • Optische Ausrichtung • Inhalt
 
-### 3. Eine gute Geschichte \{#3-a-good-story}
+### 3. Eine gute Geschichte {#3-a-good-story}
 
 Die Website sollte eine gute Geschichte erzählen. Besucher sind auf einer Reise und der Inhalt, den Sie beitragen, ist ein Teil davon. Ihre Beiträge sollten sich mit einer klaren Erzählung einfügen: mit einem Anfang (Einleitung/Einstiegspunkt), Mittelteil (eine Reihe von Erkenntnissen und Einsichten) und ein Schlussteil (ein Link zu relevanten Ressourcen oder nächsten Schritten).
 
@@ -62,7 +62,7 @@ Die Website sollte eine gute Geschichte erzählen. Besucher sind auf einer Reise
 
 Benutzererfahrung • Inhalt
 
-### 4. Glaubwürdig \{#4-credible}
+### 4. Glaubwürdig {#4-credible}
 
 Besucher sind entweder auf der Suche nach einem Einstieg in das Ethereum-Ökosystem oder sie stehen der Sache skeptisch gegenüber. Seien Sie sich dieser Verantwortung bewusst und kommunizieren Sie in einer entsprechenden Art und Weise. Stellen Sie sicher, dass die Inhalte das Vertrauen der Besucher in das Ethereum-Ökosystem stärken.
 
@@ -72,7 +72,7 @@ Besucher sind entweder auf der Suche nach einem Einstieg in das Ethereum-Ökosys
 
 Gestaltung • Inhalt
 
-### 5. Gemeinsame Verbesserung \{#5-collaborative-improvement}
+### 5. Gemeinsame Verbesserung {#5-collaborative-improvement}
 
 Die Website ist ein Produkt von vielen Mitwirkenden, genau wie das ganze Ökösystem.
 
@@ -84,7 +84,7 @@ Die Website ist ein Produkt von vielen Mitwirkenden, genau wie das ganze Ökösy
 
 Sie können unsere Designgrundsätze in Aktion sehen, und zwar [überall auf unserer Site](/).
 
-## Wir sind an Feedback interessiert \{#give-feedback}
+## Wir sind an Feedback interessiert {#give-feedback}
 
 **Teilen Sie uns Ihr Feedback zu diesem Dokument mit.** Einer unserer Grundsätze ist "**Gemeinsame Verbesserung**" und das bedeutet, dass die Website ein Produkt aus der Beteiligung vieler Mitwirkenden ist. Daher möchen wir diese Designgrundsätze mit der Ethereum-Community teilen.
 

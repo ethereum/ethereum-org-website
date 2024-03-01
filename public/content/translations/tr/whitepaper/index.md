@@ -6,7 +6,7 @@ sidebarDepth: 2
 hideEditButton: true
 ---
 
-# Ethereum Teknik Raporu \{#ethereum-whitepaper}
+# Ethereum Teknik Raporu {#ethereum-whitepaper}
 
 _Bu tanıtım yazısının orijinali 2014 yılında, [Ethereum](/what-is-ethereum/)'un kurucusu Vitalik Buterin tarafından, projenin 2015'teki lansmanından önce yayınlandı. Birçok topluluk odaklı, açık-kaynak yazılım projesinde olduğu gibi Ethereum'un da ilk başlangıcından bu yana evrildiğini belirtmekte fayda var._
 
@@ -14,19 +14,19 @@ _Birkaç yıllık olmasına rağmen, bu teknik raporu güncellemeyi sürdürüyo
 
 [Tanıtım belgesinin [Aralık 2014 tarihli] geçmiş veya kurallara uygun bir versiyonunu arayan araştırmacılar ve akademisyenler bu PDF'yi kullanmalıdır.](./whitepaper-pdf/Ethereum_Whitepaper_-_Buterin_2014.pdf)
 
-## Yeni Nesil Akıllı Sözleşme ve Merkeziyetsiz Uygulama Platformu \{#a-next-generation-smart-contract-and-decentralized-application-platform}
+## Yeni Nesil Akıllı Sözleşme ve Merkeziyetsiz Uygulama Platformu {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
 Satoshi Nakamoto'nun 2009'da Bitcoin'i geliştirmesi, aynı zamanda hiçbir desteği, "[içsel değeri](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)" ve merkezi bir ihraççısı veya denetleyicisi olmayan bir dijital varlığın ilk örneği olması yönüyle genellikle para ve para birimi bağlamında radikal bir gelişme olarak kabul edildi. Ancak, Bitcoin deneyinin daha önemli bir başka yönü ise, dağıtılmış bir fikir birliği aracı olarak, altta yatan blok zincir teknolojisidir ve dikkatler hızla Bitcoin'in bu diğer yönüne kaymaya başlamaktadır. Blok zinciri teknolojisinin yaygın olarak belirtilen alternatif uygulamaları arasında, özel para birimlerini ve finansal araçları ("[renkli madeni paralar](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)") temsil etmek için blok zinciri üzerinde dijital varlıkların kullanılması, temel alınan bir fiziksel cihazın ("[akıllı mülk](https://en.bitcoin.it/wiki/Smart_Property)") mülkiyeti, alan adları gibi değiştirilemez varlıklar ("[Namecoin](http://namecoin.org)"), dijital varlıkların doğrudan keyfi kurallar uygulayan bir kod parçası tarafından kontrol edilmesini içeren daha karmaşık uygulamalar ("[akıllı sözleşmeler](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)") veya blok zinciri tabanlı "[merkeziyetsiz otonom organizasyonlar](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/)" (DAO'lar) yer alır. Ethereum'un amacı, isteğe bağlı durum geçiş fonksiyonlarını kodlamak için kullanılabilecek "sözleşmeler" yaratmak için kullanılabilecek tam teşekküllü yerleşik bir Turing-tam programlama diline sahip bir blok zinciri sunarak kullanıcıların sadece birkaç satır kod ile mantık yazarak yukarıda bahsedilen sistemlerden herhangi birini ve henüz düşünülmemiş olanları yaratabilmesini sağlamaktır.
 
-## Bitcoin'e Giriş ve Mevcut Kavramlar \{#introduction-to-bitcoin-and-existing-concepts}
+## Bitcoin'e Giriş ve Mevcut Kavramlar {#introduction-to-bitcoin-and-existing-concepts}
 
-### Tarihçe \{#history}
+### Tarihçe {#history}
 
 Merkeziyetsiz dijital para birimi kavramının yanı sıra mülk kayıtları gibi alternatif uygulamalar on yıllardır ortalıkta dolaşmaktadır. 1980'lerin ve 1990'ların, çoğunlukla Chaumian körleme olarak bilinen bir kriptografik ilkeye dayanan anonim e-para protokolleri, yüksek derecede mahremiyete sahip bir para birimi sağlasa da protokoller, merkezi bir aracıya olan bağlılıkları nedeniyle hiç yaygınlaşmamıştır. 1998'de, Wei Dai'nin [b-money'i](http://www.weidai.com/bmoney.txt), hesaplama bulmacaları çözerek para yaratma ve merkeziyetsiz mutabakat fikrini ortaya koyan ilk teklif oldu ancak bu teklif, merkeziyetsiz mutabakatın gerçekten nasıl uygulanabileceği konusunda yetersizdi. 2005'te Hal Finney, bir kriptopara konsepti oluşturmak için b-money fikirlerini Adam Back'in bilgi işlem açısından zor Hashcash bulmacaları ile birlikte kullanan [tekrar kullanılabilir iş ispatları](https://nakamotoinstitute.org/finney/rpow/) konseptini tanıttı ancak arka uç olarak güven gerektiren hesaplamaya dayandığı için yine yetersiz kaldı. 2009'da, merkeziyetsiz bir para birimi ilk kez Satoshi Nakamoto tarafından açık anahtar kriptografisi yoluyla sahipliği yönetmek için kullanılan yerleşik ilkelleri, "iş ispatı" olarak bilinen paralara kimin sahip olduğunu takip etmek kullanılan bir mutabakat algoritmasıyla birleştirerek kullanıma sokuldu.
 
 İş ispatının arkasındaki mekanizma, aynı anda iki sorunu çözdüğü için bu alanda bir çığır açmıştır. İlk olarak, ağdaki düğümlerin Bitcoin defterinin durumuna ilişkin bir dizi kurallı güncelleme üzerinde toplu olarak anlaşmalarına izin veren basit ve orta derecede etkili bir mutabakat algoritması sağladı. İkinci olarak, mutabakat sürecine serbest girişe izin veren, aynı zamanda sybil saldırılarını önlerken, mutabakatı kimin etkileyeceğine karar vereceğine dair siyasi sorunu çözen bir mekanizma sağladı. Bunu, belirli bir listede benzersiz bir varlık olarak kayıt olma şartı gibi katılımın önündeki resmî bir engeli, ekonomik bir engelle değiştirerek yapar: Mutabakat oylama sürecinde tek bir düğümün ağırlığı, düğümün sağladığı hesaplama gücüyle doğru orantılıdır. O zamandan beri, bir düğümün ağırlığının hesaplama kaynaklarıyla değil, sahip olduğu para birimiyle orantılı olarak hesaplanmasıyla, _hisse ispatı_ olarak adlandırılan alternatif bir yaklaşım önerildi; iki yaklaşımın göreceli değerlerinin tartışılması bu makalenin kapsamı dışındadır, ancak her iki yaklaşımın da bir kripto para biriminin omurgası olarak kullanılabileceğini belirtmek gerekir.
 
-### Bir Durum Geçiş Sistemi Olarak Bitcoin \{#bitcoin-as-a-state-transition-system}
+### Bir Durum Geçiş Sistemi Olarak Bitcoin {#bitcoin-as-a-state-transition-system}
 
 ![Ethereum durum geçişi](./ethereum-state-transition.png)
 
@@ -74,7 +74,7 @@ Durum geçiş fonksiyonu olan `APPLY(S,TX) -> S'` kabaca şu şekilde tanımlana
 
 İlk adımın ilk yarısı, işlem gönderenlerin var olmayan paraları harcamasını engeller, ilk adımın ikinci yarısı, işlem gönderenlerin diğer kişilerin paralarını harcamasını engeller ve ikinci adım, değerin korunmasını zorunlu kılar. Bunu ödeme amacıyla kullanmak için gerekli protokol aşağıdaki gibidir. Alice'in Bob'a 11.7 BTC göndermek istediğini varsayalım. Alice ilk olarak sahip olduğu ve toplamı en az 11.7 BTC'ye kadar olan bir dizi kullanılabilir UTXO arayacaktır. Alice gerçekte tam olarak 11.7 BTC bulamayacak; bulabileceği en küçük sayının 6+4+2=12 olduğunu varsayalım. Daha sonra bu üç girdi ve iki çıktı ile bir işlem yaratır. İlk çıktı, sahibi olarak Bob'un adresiyle birlikte 11.7 BTC olacak ve ikinci çıktı, sahibi Alice'in kendisi olmak üzere, kalan 0.3 BTC "para üstü" olacaktır.
 
-### Madencilik \{#mining}
+### Madencilik {#mining}
 
 ![Ethereum blokları](./ethereum-blocks.png)
 
@@ -104,7 +104,7 @@ Madenciliğin amacını daha iyi anlamak için kötü niyetli bir saldırgan dur
 
 Adım (1) gerçekleştikten birkaç dakika sonra bir madenci işlemi bir bloğa, diyelim ki 270000 numaralı bloğa dahil edecektir. Yaklaşık bir saat sonra, bu bloktan sonra zincire beş blok daha eklenecek ve bu blokların her biri dolaylı olarak işleme işaret edecek ve böylece onu "onaylayacak". Bu noktada satıcı ödemeyi kesinleşmiş olarak kabul edecek ve ürünü teslim edecektir; bunun dijital bir mal olduğunu varsaydığımız için teslimat anında gerçekleşir. Şimdi, saldırgan 100 BTC'yi kendisine gönderen başka bir işlem oluşturur. Saldırgan işlemi öylece vahşi doğaya bırakırsa işlem işlenmez; madenciler `APPLY(S,TX)` çalıştırmayı deneyecek ve `TX`'in artık durumda olmayan bir UTXO tükettiğini fark edecek. Bunun yerine saldırgan, 270000 numaralı bloğun başka bir versiyonunu, bir ebeveyn olarak aynı 269999 numaralı bloğa işaret ederek ancak eskisinin işlemin yerine yeni işlemi koyarak blok zincirinin bir "çatalını" oluşturur. Blok verileri farklı olduğundan bu, iş ispatının yeniden yapılmasını gerektirir. Ayrıca, saldırganın yeni 270000 numaralı blok sürümünün farklı bir hash değeri olduğu için 270001 ila 270005 numaralı orijinal bloklar ona "işaret etmez". Bu nedenle, orijinal zincir ve saldırganın yeni zinciri tamamen ayrıdır. Bir çatalda en uzun blok zincirinin gerçek olarak kabul edilmesi kuralı bulunur ve bu nedenle meşru madenciler 270005 numaralı zincir üzerinde çalışırken, saldırgan tek başına 270000 numaralı zincir üzerinde çalışır. Saldırganın kendininkini en uzun blok zinciri yapabilmesi için ağın geri kalanının toplamından daha fazla hesaplama gücüne sahip olması gerekir (yani "%51 saldırısı").
 
-### Merkle Ağaçları \{#merkle-trees}
+### Merkle Ağaçları {#merkle-trees}
 
 ![Bitcoin'de SPV](./spv-bitcoin.png)
 
@@ -116,7 +116,7 @@ Bitcoin'in önemli bir ölçeklenebilirlik özelliği, bloğun çok seviyeli bir
 
 Merkle ağacı protokolünün, uzun vadede sürdürülebilirlik için gerekli olduğu söylenebilir. Bitcoin ağındaki her bloğun tamamını depolayan ve işleyen bir "tam düğüm", Nisan 2014 itibariyle Bitcoin ağında yaklaşık 15 GB disk alanı kaplıyor ve ayda bir gigabayttan fazla büyüyor. Şu anda bu, telefonlar için olmasa da bazı masaüstü bilgisayarlar için kullanışlıdır ve daha sonra gelecekte yalnızca işletmeler ve hobi olarak kullananlar katılabilecek. "Basitleştirilmiş ödeme doğrulaması" (SPV) olarak bilinen bir protokol, "hafif düğümler" adı verilen ve blok başlıklarını indiren, blok başlıklarındaki iş ispatını doğrulayan ve ardından yalnızca kendileriyle ilgili işlemlerle ilişkili "dalları indiren" başka bir düğüm sınıfının var olmasına izin verir. Bu, hafif düğümlerin tüm blok zincirinin yalnızca çok küçük bir bölümünü indirirken herhangi bir Bitcoin işleminin durumunun ve mevcut bakiyesinin ne olduğunu güçlü bir güvenlik garantisi ile belirlemesine olanak tanır.
 
-### Alternatif Blok Zinciri Uygulamaları \{#alternative-blockchain-applications}
+### Alternatif Blok Zinciri Uygulamaları {#alternative-blockchain-applications}
 
 Temeldeki blok zinciri fikrini alıp, diğer kavramlarda uygulama fikrinin de uzun bir geçmişi vardır. 2005 yılında Nick Szabo [sahiplik yetkili güvenli mülk unvanları](https://nakamotoinstitute.org/secure-property-titles/) kavramını ortaya attı. Bu, "çoğaltılmış veri tabanı teknolojisindeki yeni gelişmelerin", kimin hangi araziye sahip olduğuna dair kayıtları saklamak ve ev sahibi olma, fiili işgal ve Gürcü arazi vergisi gibi kavramları içeren ayrıntılı bir çerçeve oluşturmak için blok zinciri temelli bir sistemin oluşturulmasını nasıl sağlayacağını açıklayan bir belgedir. Ancak ne yazık ki o zamanlar etkili bir çoğaltılmış veri tabanı sistemi olmadığı için protokol hiçbir zaman uygulanmadı. Ancak 2009'dan sonra Bitcoin'in merkeziyetsiz mutabakat geliştirildikten sonra bir takım alternatif uygulamalar hızla ortaya çıkmaya başladı.
 
@@ -128,7 +128,7 @@ Bu nedenle, genel olarak, bir mutabakat protokolü oluşturmaya yönelik iki yak
 
 Bitcoin tabanlı yaklaşım ise Bitcoin'in basitleştirilmiş ödeme doğrulama özelliklerini miras almaması gibi bir kusura sahiptir. SPV, Bitcoin için kullanışlıdır çünkü geçerlilik için bir vekil olarak blok zinciri derinliğini kullanabilir; bir noktada, bir işlemin ataları yeterince geriye gittiğinde, yasal olarak durumun bir parçası oldukları kesin bir şekilde söylenebilir. Blok zinciri tabanlı meta protokoller ise blok zincirini kendi protokolleri bağlamında geçerli olmayan işlemleri dahil etmemeye zorlayamaz. Bu nedenle, tamamen güvenli bir SPV meta protokolü uygulamasının, belirli işlemlerin geçerli olup olmadığını belirlemek için Bitcoin blok zincirinin başlangıcına kadar geriye doğru taraması gerekir. Şu anda, Bitcoin tabanlı meta-protokollerin tüm "hafif" uygulamaları, verileri sağlamak için güvenilen bir sunucuya bel bağlıyor; bu, özellikle bir kripto para biriminin asıl amaçlarından biri güven ihtiyacını ortadan kaldırmak olduğu için muhtemelen oldukça yetersiz bir sonuç olacaktır.
 
-### Komut Dosyaları \{#scripting}
+### Komut Dosyaları {#scripting}
 
 Herhangi bir uzantı olmadan bile, Bitcoin protokolü aslında "akıllı sözleşme" kavramının zayıf bir versiyonunun uygulanmasını kolaylaştırıyor. Bitcoin'deki UTXO, yalnızca bir açık anahtara değil, aynı zamanda yığın tabanlı basit bir programlama dilinde ifade edilen daha karmaşık bir komut dosyasına da sahip olabilir. Bu paradigmada, o UTXO'yu harcayan işlem, komut dosyasının gerekliliklerini yerine getirecek veriler sunmalıdır. Aslında, temel açık anahtar sahipliği mekanizması bile bir komut dosyası aracılığıyla uygulanır: Komut dosyası girdi olarak eliptik bir eğri imzası alır, bunu UTXO'nun sahip olduğu işlem ve adresle doğrular ve doğrulama başarılı olursa 1, aksi takdirde 0 döndürür. Çeşitli ek kullanım durumları için başka, daha karmaşık komut dosyaları mevcuttur. Örneğin, doğrulamak için belirli bir üç özel anahtarın ("multisig") ikisinden imza gerektiren bir komut dosyası oluşturulabilir. Bu; şirket hesapları, güvenli tasarruf hesapları ve bazı ticari emanet durumları için yararlı bir kurulumdur. Komut dosyaları ayrıca, hesaplama sorunlarının çözümleri için ödül ödemek için kullanılabilir ve hatta "bu değerin bir Dogecoin işlemini bana gönderdiğinize dair bir SPV kanıtı sağlayabilirseniz, bu Bitcoin UTXO sizindir" gibi bir şey yazan bir komut dosyası oluşturabilirsiniz. Yani esasen merkeziyetsiz bir çapraz kripto para birimi değişimine izin verir.
 
@@ -141,11 +141,11 @@ Bununla birlikte, Bitcoin'de uygulanan komut dosyası dilinin birkaç önemli s�
 
 Böylece, kripto para biriminin üzerine gelişmiş uygulamalar oluşturmaya yönelik üç yaklaşım görüyoruz: yeni bir blok zinciri oluşturmak, Bitcoin üzerinde komut dosyası yazmak ve Bitcoin üzerinde bir meta protokol oluşturmak. Yeni bir blok zinciri oluşturmak, bir özellik kümes oluşturmada sınırsız özgürlüğe izin verir ancak geliştirme süresi, başlatma çabası ve güvenlik konusunda maliyet oluşturur. Komut dosyası oluşturmanın uygulanması ve standartlaştırılması kolaydır ancak komut dosyalarının kabiliyetleri çok sınırlıdır ve meta protokoller kolay olsa da ölçeklenebilirlikteki hatalardan muzdariptir. Ethereum ile, geliştirme kolaylığında daha da büyük kazanımların yanı sıra daha güçlü hafif istemci özellikleri sağlayan ve aynı zamanda uygulamaların ekonomik bir ortamı ve blok zinciri güvenliğini paylaşmasına izin veren alternatif bir çerçeve oluşturmayı amaçlıyoruz.
 
-## Ethereum \{#ethereum}
+## Ethereum {#ethereum}
 
 Ethereum'un amacı, birçok merkeziyetsiz uygulama için çok faydalı olacağına inandığımız farklı bir maliyet-kazanç kümesi sağlayan merkeziyetsiz uygulamalar için alternatif bir protokol oluşturmaktır ve hızlı geliştirme süresinin, küçük ve nadiren kullanılan uygulamalar için güvenliğin ve farklı uygulamaların çok verimli bir şekilde etkileşim kurmasının önemli olduğu durumlara özellikle önem verilir. Ethereum bunu aslında en üstün soyut temel katmanı inşa ederek yapar: Turing-tam programlama dilinde, herkesin akıllı sözleşme yazmasına izin veren, merkeziyetsiz uygulamaların kendi mülkiyet, işlem biçimleri ve durum geçişi için keyfi kural fonksiyonları oluşturabilecekleri yerleşik bir blok zinciri. Namecoin'in temel bir versiyonu iki satır kodda yazılabilir, para birimleri ve itibar sistemleri gibi diğer protokoller yirmiden az satırla oluşturulabilir. Değer içeren ve yalnızca belirli koşullar yerine getirildiğinde kilidi açılan kriptografik "kutular" olan akıllı sözleşmeler, Turing-tamlığı, değer farkındalığı, blok zinciri farkındalığı ve durum gibi ek avantajlarla Bitcoin komut dosyası tarafından sunulandan çok daha fazla güçle platform üzerinde oluşturulabilir.
 
-### Ethereum Hesapları \{#ethereum-accounts}
+### Ethereum Hesapları {#ethereum-accounts}
 
 Ethereum'da durum, "hesap" olarak adlandırılan nesnelerden oluşur ve her hesabın 20 baytlık bir adresi vev hesaplar arasında doğrudan değer ve bilgi transferi olan durum geçişleri bulunur. Bir Ethereum hesabında dört alan bulunur:
 
@@ -158,7 +158,7 @@ Ethereum'da durum, "hesap" olarak adlandırılan nesnelerden oluşur ve her hesa
 
 Ethereum'daki "sözleşmelerin", "yerine getirilmesi" veya "uyulması" gereken bir şey olarak görülmemesi gerektiğini unutmayın; bundan ziyade, daha çok Ethereum yürütme ortamının içinde yaşayan, bir mesaj veya işlem tarafından "dürtüldüğünde" her zaman belirli bir kod parçasını yürüten ve kalıcı değişkenleri takip etmek için kendi ether bakiyeleri ve kendi anahtarları/değer depoları üzerinde doğrudan kontrole sahip olan "otonom temsilciler" gibidirler.
 
-### Mesajlar ve İşlemler \{#messages-and-transactions}
+### Mesajlar ve İşlemler {#messages-and-transactions}
 
 Ethereum'da "İşlem" terimi, harici olarak sahiplenilmiş bir hesaptan gönderilecek bir mesajı saklayan imzalı veri paketini ifade etmek için kullanılır. İşlemler şunları içerir:
 
@@ -173,7 +173,7 @@ Ethereum'da "İşlem" terimi, harici olarak sahiplenilmiş bir hesaptan gönderi
 
 `STARTGAS` ve `GASPRICE` alanları, Ethereum'un hizmet reddi önleme modeli için çok önemlidir. Kaza veya saldırı sonucu oluşan sonsuz döngüleri veya koddaki diğer hesaplama israfını önlemek için her işlemin kullanabileceği kod yürütmenin hesaplama adımına bir sınır koyması gerekir. Temel hesaplama birimi "gaz"dır; genellikle, bir hesaplama adımı 1 gaza mal olur ancak bazı işlemler, hesaplama açısından daha pahalı olduklarından veya durumun bir parçası olarak depolanması gereken veri miktarını artırdıklarından daha yüksek miktarlarda gaza mal olur. Ayrıca işlem verilerindeki her bayt için 5 gaz ücreti bulunur. Ücret sisteminin amacı, bir saldırganın hesaplama, bant genişliği ve depolama dahil olmak üzere tükettiği her kaynak için orantılı olarak ödeme yapmasını istemektir; bu nedenle, ağın bu kaynaklardan daha fazla tüketmesine yol açan herhangi bir işlem, artışla kabaca orantılı bir gaz ücretine sahip olmalıdır.
 
-### Mesajlar \{#messages}
+### Mesajlar {#messages}
 
 Sözleşmeler, diğer sözleşmelere "mesaj" gönderme yeteneğine sahiptir. Mesajlar, hiçbir zaman serileştirilmeyen ve yalnızca Ethereum yürütme ortamı içinde var olan sanal nesnelerdir. Bir mesaj şunları içerir:
 
@@ -187,7 +187,7 @@ Bir mesaj aslında bir işlem gibidir ancak harici bir aktör değil, bir sözle
 
 Bir işlem veya sözleşme tarafından tahsis edilen gaz ödeneğinin, o işlem ve tüm alt yürütmeler tarafından tüketilen toplam gaz için geçerli olduğunu unutmayın. Örneğin, harici bir aktör olan A, 1000 gaz ile B'ye bir işlem gönderirse ve B de C'ye mesaj göndermeden önce 600 gaz tüketir ve C'nin dahili yürütmesi geri dönmeden önce 300 gaz tüketirse, B aktörü daha sonra gazı bitmeden önce 100 gaz daha harcayabilir.
 
-### Ethereum Durum Geçiş Fonksiyonu \{#ethereum-state-transition-function}
+### Ethereum Durum Geçiş Fonksiyonu {#ethereum-state-transition-function}
 
 ![Ether durum geçişi](./ether-state-transition.png)
 
@@ -220,7 +220,7 @@ Gerçekte sözleşme kodunun düşük seviyeli EVM kodunda yazıldığını unut
 
 Mesajların geri dönüşler açısından işlemlere eşdeğer şekilde çalıştığını unutmayın: bir mesaj yürütmesinin gazı biterse, o mesajın yürütülmesi ve bu yürütme tarafından tetiklenen tüm diğer yürütmeler geri alınır, ancak ana yürütmelerin geri alınması gerekmez. Bu, bir sözleşmenin başka bir sözleşme çağrısı yapmasının "güvenli" olduğu anlamına gelir, A'nın B'yi G miktarda gaz ile çağırıyorsa, A'nın yürütmesinin en fazla G miktarından fazla gaz kaybetmesi önlenir. Son olarak, bir sözleşme oluşturan `CREATE` adlı bir işlem kodu olduğuna dikkat edin; yürütme mekanikleri, yürütme çıktısının yeni oluşturulan bir sözleşmenin kodunu belirlemesi dışında, genellikle `CALL` öğesine benzer.
 
-### Kod Yürütme \{#code-execution}
+### Kod Yürütme {#code-execution}
 
 Ethereum sözleşmelerindeki kod, "Ethereum sanal makinesi kodu" veya "EVM kodu" olarak adlandırılan düşük seviyeli, yığın tabanlı bir bayt kodu dilinde yazılır. Kod, her baytın bir işlemi temsil ettiği bir dizi bayttan oluşur. Genel olarak, kod yürütme, işlemi geçerli program sayacında (sıfırdan başlar) tekrar tekrar gerçekleştirmekten ve ardından program sayacını kodun sonuna ulaşılana kadar ve bir hatanın veya `STOP` ya da `RETURN` talimatının algılanmasına kadar birer birer artırmaktan oluşan sonsuz bir döngüdür. İşlemlerin, veri depolamak için üç tür alana erişimi vardır:
 
@@ -232,7 +232,7 @@ Kod ayrıca gelen mesajın değerine, göndericisine ve verilerine ve ayrıca bl
 
 EVM kodunun resmi yürütme modeli şaşırtıcı derecede basittir. Ethereum sanal makinesi çalışırken, tam hesaplama durumu "demet" tarafından tanımlanabilir `(block_state, transaction, message, code, memory, stack, pc, gas)`, buradaki `block_state`, tüm hesapları, bakiyeleri ve depolamayı içeren küresel durumdur. Her yürütme turunun başlangıcında geçerli talimat, `code` öğesinin `pc` baytı alınarak bulunur (veya `pc >= len(code)` ise 0) ve her talimatın, demeti nasıl etkilediğine göre kendi tanımı vardır. Örneğin, `ADD` iki öğeyi yığından çıkarır ve toplamlarını iter, `gas` değerini 1 azaltıp `pc` değerini 1 artırırken `SSTORE`, en üstteki iki öğeyi yığından iter ve ikinci öğeyi ilk öğe tarafından belirtilen endekste sözleşmenin depolamasına ekler. Tam zamanında derleme yoluyla Ethereum sanal makine yürütmesini optimize etmenin birçok yolu olsa da, temel bir Ethereum uygulaması birkaç yüz satır kodla yapılabilir.
 
-### Blok Zinciri ve Madencilik \{#blockchain-and-mining}
+### Blok Zinciri ve Madencilik {#blockchain-and-mining}
 
 ![Ethereum uygulamalı blok şeması](./ethereum-apply-block-diagram.png)
 
@@ -251,11 +251,11 @@ Yaklaşım ilk bakışta oldukça verimsiz görünebilir, çünkü tüm durumu h
 
 Genel olarak sorulan bir soru, sözleşme kodunun fiziksel donanım olarak "nerede" yürütüldüğüdür. Bunun basit bir cevabı var: Sözleşme kodunun yürütme süreci, blok doğrulama algoritmasının bir parçası olan durum geçiş fonksiyonu tanımının bir parçasıdır, bu nedenle bir işlem `B` bloğuna eklenirse, bu işlem `B` bloğunu indiren ve doğrulayan tüm düğümler tarafından şimdi ve gelecekte çalıştırılır.
 
-## Uygulamalar \{#applications}
+## Uygulamalar {#applications}
 
 Genel olarak, Ethereum'un üzerinde üç tür uygulama vardır. İlk kategori, paralarını kullanarak sözleşmeleri yönetmenin ve imzalamanın güçlü yollarını sağlayan finansal uygulamalardır. Bunlar alt para birimleri, finansal türevler, riskten korunma sözleşmeleri, tasarruf cüzdanları, vasiyetnameler ve hatta bazı tam ölçekli iş sözleşmeleri sınıflarıdır. İkinci kategori, paranın söz konusu olduğu ancak yapılanların parasal olmayan ağır bir yanının da bulunduğu yarı finansal uygulamalardır; mükemmel bir örnek, hesaplama problemlerine çözümler için kendi kendini uygulayan ödüllerdir. Son olarak, çevrimiçi oylama ve merkeziyetsiz yönetim gibi uygulamalar finansal değildir.
 
-### Token Sistemleri \{#token-systems}
+### Token Sistemleri {#token-systems}
 
 Block zinciri üzerindeki token sistemleri, USD veya altın gibi varlıkları temsil eden alt para birimlerinden şirket hisse senetlerine, akıllı mülkü temsil eden bireysel token'lara, güvenli sahtesi üretilemeyecek kuponlara ve hatta teşvik için puan sistemi olarak kullanılan geleneksel değerle hiçbir bağı olmayan token sistemlerine kadar birçok uygulamaya sahiptir. Token sistemlerinin Ethereum'da uygulanması şaşırtıcı derecede kolaydır. Anlaşılması gereken kilit nokta, bir para biriminin veya token sisteminin temelde tek işlemli bir veri tabanı olduğudur: A'dan X birimi çıkar ve (1) A'nın işlemden önce en az X birime sahip olması ve (2) işlemin A tarafından onaylanması şartıyla X birimini B'ye ver. Bir token sistemini uygulamak için gereken tek şey bu mantığı bir sözleşmeye uygulamaktır.
 
@@ -270,7 +270,7 @@ def send(to, value):
 
 Aslında bu, yukarıda bu belgede açıklanan "bankacılık sistemi" durum geçiş fonksiyonunun gerçek bir uygulamasıdır. İlk etapta para birimlerini ve diğer birkaç uç durumu dağıtmanın ilk adımını sağlamak için birkaç ekstra kod satırı eklenmelidir ve ideal olarak, diğer sözleşmelerin bir adresin bakiyesini sorgulamasına izin vermek için bir fonksiyon eklenebilir. Ama hepsi bu kadar. Teorik olarak, alt para birimleri olarak hareket eden Ethereum tabanlı token sistemleri, zincirdeki Bitcoin tabanlı meta para birimlerinde eksik olan başka bir önemli özelliği potansiyel olarak içerebilir: işlem ücretlerini doğrudan bu para biriminde ödeme yeteneği. Bunun uygulanma şekli, sözleşmenin, göndericiye ücret ödemek için kullanılan ether'ı iade edeceği bir ether bakiyesi sürdürmesi ve ücret olarak aldığı dahili para birimi birimlerini toplayarak ve bunları sürekli devam eden bir açık artırma ile yeniden satarak bu bakiyeyi yeniden doldurmasıdır. Bu nedenle, kullanıcıların hesaplarını ether ile "etkinleştirmesi" gerekir, ancak ether bir kez orada olduğunda, sözleşme her seferinde iade edeceği için yeniden kullanılabilir olacaktır.
 
-### Finansal türevler ve Stabil Değerli Para Birimleri \{#financial-derivatives-and-stable-value-currencies}
+### Finansal türevler ve Stabil Değerli Para Birimleri {#financial-derivatives-and-stable-value-currencies}
 
 Finansal türevler, bir "akıllı sözleşmenin" en yaygın uygulamasıdır ve kodda uygulanması en basit olanlardan biridir. Mali sözleşmelerin uygulanmasındaki ana zorluk, çoğunluğunun harici bir fiyat göstergesine atıfta bulunmayı gerektirmesidir; örneğin, çok arzu edilen bir uygulama, ether'ın (veya başka bir kripto para biriminin) ABD dolarına göre oynaklığına karşı koruma sağlayan akıllı bir sözleşmedir ancak bunu yapmak, sözleşmenin ETH/USD'nin değerinin ne olduğunu bilmesini gerektirir. Bunu yapmanın en basit yolu, belirli bir taraf (örn. NASDAQ) tarafından yürütülen ve söz konusu tarafın sözleşmeyi gerektiği gibi güncelleyebilmesi için tasarlanmış bir "veri akışı" sözleşmesi kullanmak ve diğer sözleşmelerin bu sözleşmeye mesaj atıp, fiyatı sağlayan bir yanıt almasıdır.
 
@@ -285,7 +285,7 @@ Böyle bir sözleşme, kripto ticaretinde önemli bir potansiyele sahip olacakt�
 
 Ancak uygulamada, ihraççılar her zaman güvenilir değildir ve bazı durumlarda bankacılık altyapısı bu tür hizmetlerin var olması için çok zayıf veya çok düşmancadır. Finansal türevler bir alternatif sunar. Burada, bir varlığı desteklemek için fon sağlayan tek bir ihraççı yerine, bir kriptografik referans varlığının (örn. ETH) fiyatının artacağına bahse giren merkeziyetsiz bir spekülatör piyasası bu rolü oynar. İhraççıların aksine, riskten korunma sözleşmesi fonlarını emanette tuttuğu için spekülatörlerin alışverişte temerrüde düşme seçeneği yoktur. Bu yaklaşımın tamamen merkeziyetsiz olmadığını unutmayın, çünkü fiyat göstergesini sağlamak için hâlâ güvenilir bir kaynağa ihtiyaç duyulmaktadır ancak tartışmalı olarak yine de bu, altyapı gereksinimlerini azaltmak açısından büyük bir gelişmedir (bir ihraççı olmanın aksine, bir fiyat akışı yayınlamak için lisans gerekmez) ve muhtemelen ifade özgürlüğü olarak sınıflandırılabilir ve dolandırıcılık potansiyelini azaltır.
 
-### Kimlik ve İtibar Sistemleri \{#identity-and-reputation-systems}
+### Kimlik ve İtibar Sistemleri {#identity-and-reputation-systems}
 
 En eski alternatif kripto para birimi olan [Namecoin](http://namecoin.org/), kullanıcıların adlarını diğer verilerle birlikte halka açık bir veri tabanına kaydedebileceği bir isim kayıt sistemi sağlamak için Bitcoin benzeri bir blok zinciri kullanmaya çalıştı. Bahsedilen başlıca kullanım örneği, "bitcoin.org" (veya Namecoin'in durumunda "bitcoin.bit") gibi alan adlarını bir IP adresine eşleyen bir [DNS](https://wikipedia.org/wiki/Domain_Name_System) sistemi içindir. Diğer kullanım alanları, e-posta kimlik doğrulamasını ve potansiyel olarak daha gelişmiş itibar sistemlerini içerir. Ethereum'da Namecoin benzeri bir isim kayıt sistemi sağlamak için temel sözleşme:
 
@@ -297,7 +297,7 @@ def register(name, value):
 
 Sözleşme çok basit; hepsi, Ethereum ağı içinde eklenebilen, ancak değiştirilemeyen veya çıkarılamayan bir veri tabanıdır. Herkes bir değeri olan bir isim kaydedebilir ve bu kayıt sonsuza kadar kalır. Daha karmaşık bir isim kayıt sözleşmesi, diğer sözleşmelerin onu sorgulamasına izin veren bir "işlev maddesine" ve ayrıca bir adın "sahibinin" (yani ilk kaydediciye) verileri değiştirmesine veya mülkiyeti devretmesine izin veren bir mekanizmaya sahip olacaktır. Üstüne itibar ve güven ağı işlevselliği bile eklenebilir.
 
-### Merkeziyetsiz Dosya Depolama \{#decentralized-file-storage}
+### Merkeziyetsiz Dosya Depolama {#decentralized-file-storage}
 
 Son birkaç yılda, kullanıcıların sabit disklerinin bir yedeğini yüklemelerine ve hizmetin yedeği depolamasını sağlamaya çalışan ve kullanıcının aylık bir ücret karşılığında erişimine izin verenbir dizi popüler çevrimiçi dosya depolama girişimi ortaya çıktı. Dropbox bunlardan en ünlü olandır. Ancak, bu noktada dosya depolama piyasası zaman zaman nispeten verimsizdir; Çeşitli mevcut çözümlere üstünkörü bir bakış, özellikle ne ücretsiz kotaların ne de kurumsal düzeyde indirimlerin başladığı 20-200 GB seviyesi olan "tekinsiz vadide", genel dosya depolama maliyetleri için aylık fiyatların daha yüksek olduğunu gösteriyor, öyle ki; tek bir ayda tüm sabit diskin maliyetinden daha fazlasını ödüyorsunuz. Ethereum sözleşmeleri, bireysel kullanıcıların kendi sabit disklerini kiralayarak küçük miktarlarda para kazanabileceği ve kullanılmayan alanın dosya depolama maliyetlerini daha da aşağı çekmek için kullanılabileceği, merkeziyetsiz bir dosya depolama ekosisteminin geliştirilmesine izin verebilir.
 
@@ -305,7 +305,7 @@ Böyle bir cihazın temel dayanağı, "merkeziyetsiz Dropbox sözleşmesi" olara
 
 Protokolün önemli bir özelliği şudur: Dosyayı unutmamaya karar vermek için birçok rastgele düğüme güveniyor gibi görünse de, gizli paylaşım yoluyla dosyayı birçok parçaya bölerek bu riski sıfıra yakın bir seviyeye indirebilir ve her parçanın hala bazı düğümlerin elinde olduğunu görmek için sözleşmeleri izleyebilir. Bir sözleşme hâlâ para ödüyorsa bu, oradaki birinin hala dosyayı sakladığına dair kriptografik bir kanıt sunar.
 
-### Merkeziyetsiz Otonom Organizasyonlar \{#decentralized-autonomous-organizations}
+### Merkeziyetsiz Otonom Organizasyonlar {#decentralized-autonomous-organizations}
 
 "Merkeziyetsiz otonom organizasyon" (DAO) kavramı genel olarak, belirli bir grup üye veya hissedardan oluşan ve örneğin %67 çoğunluk ile organizasyonun fonlarını harcama ve kodunu değiştirme hakkına sahip olunan sanal bir varlıktır. Üyeler toplu olarak, kuruluş fonlarının nasıl tahsis edileceğine karar verebilir. Bir DAO'nun fonlarını tahsis etme yöntemleri; ödüller, maaşlar, çalışmayı ödüllendirmek için dahili bir para birimi gibi daha egzotik mekanizmalar kadar çeşitli olabilir. Bu, aslında geleneksel bir şirketin veya kâr amacı gütmeyen bir kuruluşun yasal özelliklerini kopyalar ancak uygulama için yalnızca kriptografik blok zinciri teknolojisini kullanır. Şimdiye kadar DAO'lar hakkındaki tartışmaların çoğu, temettü alan hissedarları ve takas edilebilir hisseleri olan bir "merkeziyetsiz otonom şirketin" (DAC) "kapitalist" modeli çevresinde olmuştur. Belki de "merkeziyetsiz otonomtopluluk" olarak tanımlanabilecek bir alternatif, tüm üyelerin karar vermede eşit paya sahip olmasını ve mevcut üyelerin %67'sinin bir üye eklemeyi veya çıkarmayı kabul etmesini gerektirebilir. Bir kişinin yalnızca bir üyeliğe sahip olabilmesi şartının grup tarafından toplu olarak uygulanması gerekir.
 
@@ -319,7 +319,7 @@ Sözleşmede daha sonra bunların her biri için maddeler olacaktır. Tüm açı
 
 Alternatif bir model, herhangi bir hesabın sıfır veya daha fazla hisseye sahip olabileceği ve karar vermek için hisselerin üçte ikisinin gerekli olduğu, merkeziyetsiz bir şirket modelidir. Tam bir iskelet, varlık yönetimi işlevselliğini, hisse satın alma veya satma teklifi yapma yeteneğini ve teklifleri kabul etme yeteneğini (tercihen sözleşme içindeki bir sipariş eşleştirme mekanizmasıyla) içerecektir. Bir "yönetim kurulu" kavramını genelleştiren Akışkan Demokrasi tarzı delegasyon da olacaktır.
 
-### Diğer Uygulamalar \{#further-applications}
+### Diğer Uygulamalar {#further-applications}
 
 **1. Tasarruf cüzdanları**. Alice'in fonlarını güvende tutmak istediğini ancak özel anahtarını kaybedeceğinden veya birinin özel anahtarını hack'leyeceğinden endişelendiğini varsayalım. Ether'ı bir banka olan Bob ile aşağıdaki gibi bir sözleşmeye koyar:
 
@@ -343,9 +343,9 @@ Normalde günde %1 Alice için yeterlidir ve eğer Alice daha fazla para çekmek
 
 **8. Kimlik ve itibar sistemini temel alan zincir üstü merkeziyetsiz pazar yerleri**.
 
-## Çeşitli Durumlar ve Endişeler \{#miscellanea-and-concerns}
+## Çeşitli Durumlar ve Endişeler {#miscellanea-and-concerns}
 
-### Değiştirilmiş GHOST Uygulaması \{#modified-ghost-implementation}
+### Değiştirilmiş GHOST Uygulaması {#modified-ghost-implementation}
 
 "Aç Gözlü En Ağır Gözlemlenmiş Alt Ağaç" (Greedy Heaviest Observed Subtree/GHOST) protokolü, ilk olarak Yonatan Sompolinsky ve Aviv Zohar tarafından [Aralık 2013](https://eprint.iacr.org/2013/881.pdf)'te tanıtılan bir yeniliktir. GHOST'un arkasındaki motivasyon, hızlı onay sürelerine sahip blok zincirlerinin şu anda yüksek eskime oranı nedeniyle düşük güvenlikten muzdarip olmasıdır. Blokların ağda yayılması belirli bir zaman aldığı için A madencisi bir blok kazarsa ve A madencisinin bloğu B madencisine yayılmadan B madencisi başka bir blok kazarsa B madencisinin bloğu boşa gidecek ve ağ güvenliğine katkıda bulunmayacaktır, bu da güvenlik oranının düşmesine neden olur. Ayrıca, bir merkezileştirme sorunu var: A Madencisi, %30 hash gücüne sahip bir madencilik havuzuysa ve B %10 hash gücüne sahipse A, %70 ihtimalle eski bir blok üretme riskine (geri kalan %30'unda A son bloğu ürettiği ve madencilik verisini anında alacağı için), B ise %90 ihtimalle eski bir blok üretme riskine sahip olacaktır. Bu nedenle, blok aralığı, bayat hızının yüksek olması için yeterince kısaysa, A boyutundan dolayı önemli ölçüde daha verimli olacaktır. Bu iki etki birleştiğinde, hızlı bir şekilde blok üreten blok zincirlerinin, madencilik süreci üzerinde fiili kontrole sahip olmak için ağ hash gücünün yeterince büyük bir yüzdesine sahip bir madencilik havuzuna yol açması çok muhtemeldir.
 
@@ -363,7 +363,7 @@ Ethereum, yalnızca yedi seviye aşağı inen basitleştirilmiş bir GHOST sür�
 
 Amcaların yalnızca 7 nesle kadar dahil edilebildiği bu sınırlı GHOST sürümü iki nedenden dolayı kullanıldı. İlk olarak, sınırsız GHOST belirli bir blok için hangi amcaların geçerli olduğunun hesaplamak için çok fazla komplikasyon yaratacaktır. İkincisi, Ethereum'da kullanılan tazminat ile sınırsız GHOST, bir madencinin halka açık bir saldırganın zincirinde değil ana zincirde madencilik yapma teşvikini ortadan kaldırır.
 
-### Ücretler \{#fees}
+### Ücretler {#fees}
 
 Blok zincirinde yayınlanan her işlem, ağa indirme ve doğrulama maliyeti getirdiğinden, kötüye kullanımı önlemek için tipik olarak işlem ücretlerini içeren bazı düzenleyici mekanizmalara ihtiyaç vardır. Bitcoin'de kullanılan varsayılan yaklaşım, madencilerin kapı bekçileri olarak hareket etmesine ve dinamik minimumlar belirlemesine güvenerek tamamen gönüllü ücretlere sahip olmaktır. Bu yaklaşım, özellikle "piyasa temelli" olduğu için Bitcoin topluluğunda çok olumlu karşılandı ve madencilerle işlem gönderenler arasındaki arz ve talebin fiyatı belirlemesine izin verdi. Bununla birlikte, bu mantığın sorunu, işlem işlemenin bir pazar olmamasıdır; İşlem işlemeyi madencinin gönderene sunduğu bir hizmet olarak yorumlamak sezgisel olarak çekici olsa da, gerçekte bir madencinin içerdiği her işlemin ağdaki her düğüm tarafından işlenmesi gerekecektir, bu nedenle işlem maliyetinin büyük çoğunluğu işlemi dahil edip etmeme kararını veren madenci değil, üçüncü taraflarca karşılanır. Bu nedenle, ortak varlıkların trajedisi sorunlarının meydana gelmesi muhtemeldir.
 
@@ -394,7 +394,7 @@ floor(parent.opcount \* BLK\_LIMIT\_FACTOR)) / EMA\_FACTOR)
 
 Bitcoin'de büyük blok boyutlarını caydıran başka bir faktör daha var: Büyük blokların yayılması daha uzun sürecek ve bu nedenle eskime olasılığı daha yüksek olacak. Ethereum'da, yüksek oranda gaz tüketen blokların yayılması hem fiziksel olarak daha büyük oldukları için hem de işlem durumu geçişlerini doğrulamak için daha uzun sürdüğü için daha uzun sürebilir. Bu gecikme caydırıcı, Bitcoin'de önemli bir husustur ancak GHOST protokolü nedeniyle Ethereum'da daha az önemlidir; bu nedenle, düzenlenmiş blok limitlerine güvenmek daha istikrarlı bir temel sağlar.
 
-### Hesaplama ve Turing-Tamlığı \{#computation-and-turing-completeness}
+### Hesaplama ve Turing-Tamlığı {#computation-and-turing-completeness}
 
 Önemli bir not, Ethereum sanal makinesinin Turing-tam olmasıdır; bu, EVM kodunun, sonsuz döngüler dahil, makul bir şekilde gerçekleştirilebilecek herhangi bir hesaplamayı kodlayabileceği anlamına gelir. EVM kodu döngüye iki şekilde izin verir. İlk olarak, programın kodda önceki bir noktaya atlamasına izin veren bir `JUMP` talimatı ve `while x < 27: x = x * 2` gibi ifadelere izin veren koşullu atlama yapmak için `JUMPI` talimatı vardır. İkinci olarak sözleşmeler, potansiyel olarak özyineleme yoluyla döngüye izin vererek diğer sözleşmeleri çağırabilir. Bu doğal olarak bir soruna yol açar: Kötü niyetli kullanıcılar, madencileri ve tam düğümleri sonsuz bir döngüye girmeye zorlayarak onları kapatabilir mi? Sorun, bilgisayar bilimlerinde durma sorunu olarak bilinen bir sorundan kaynaklanmaktadır: Genel durumda, belirli bir programın durup durmayacağını söylemenin bir yolu yoktur.
 
@@ -418,7 +418,7 @@ C50: (run one step of a program and record the change in storage)
 
 Şimdi A'ya bir işlem gönderin. Böylece 51 işlemde 2<sup>50</sup> hesaplama adımı gerçekleştiren bir sözleşmemiz olur. Madenciler, her bir sözleşmenin yanında, alabileceği maksimum hesaplama adımlarını belirten bir değer koruyarak ve bunu diğer sözleşmeleri özyinelemeli olarak çağıran sözleşmeler için hesaplayarak bu tür mantık bombalarını önceden tespit etmeye çalışabilirler ancak bu, madencilerin yeni sözleşmeleri oluşturan diğer sözleşmeleri (yukarıdaki 26 sözleşmenin tümünün oluşturulması ve yürütülmesi kolayca tek bir sözleşmeye dönüştürülebileceği için) yasaklamalarını gerektirecektir. Bir diğer sorunlu nokta, bir mesajın adres alanının bir değişken olmasıdır, bu nedenle genel olarak belirli bir sözleşmenin önceden hangi sözleşmeleri çağıracağını anlamak bile mümkün olmayabilir. Sonuç olarak, şaşırtıcı bir sonuca varıyoruz: Turing-tamlığı yönetmek şaşırtıcı derecede kolaydır ve tam olarak aynı kontroller uygulanmadıkça Turing-tamlığın eksikliğini yönetmek de aynı derecede şaşırtıcı derecede zordur. Peki bu durumda neden protokolün Turing-tam olmasını sağlamıyoruz?
 
-### Para Birimi ve İhraç \{#currency-and-issuance}
+### Para Birimi ve İhraç {#currency-and-issuance}
 
 Ethereum ağı, çeşitli dijital varlık türleri arasında verimli alışverişe izin vermek amacıyla birincil bir likidite katmanı sağlamak ve daha da önemlisi işlem ücretlerini ödemek için bir mekanizma sağlamak gibi ikili bir amaca hizmet eden kendi yerleşik para birimi olan ether'ı içerir. Kolaylık ve gelecekteki tartışmalardan kaçınmak için (Bitcoin'deki mevcut mBTC/uBTC/satoshi münazarasına bakınız), değer birimleri bu şekilde ön isimlendirilecektir:
 
@@ -456,7 +456,7 @@ Kalıcı olarak doğrusal arz büyüme modeli, Bitcoin'deki gibi aşırı servet
 
 Gelecekte, Ethereum'un güvenlik için bir hisse ispatı modeline geçeceğini ve ihraç gereksinimini yılda sıfır ila 0,05X arasında bir seviyeye indireceğini unutmayın. Ethereum organizasyonunun fon kaybetmesi veya başka bir nedenle ortadan kalkması durumunda, bir "sosyal sözleşmeyi" açık bırakıyoruz: Herkes, Ethereum'un gelecekteki bir aday versiyonunu yaratma hakkına sahiptir. Tek koşul, ether miktarının en fazla `60102216 * (1,198 + 0,26 * n)` ile eşit olmasıdır. Burada `n`, başlangıç bloğundan sonraki yılların sayısıdır. İçerik oluşturucular toplu satış yapmakta veya hisse ispatı odaklı arz genişlemesi ve izin verilen maksimum arz genişlemesi arasındaki farkı geliştirme için kullanmakta özgürdür. Sosyal sözleşmeye uygun olmayan aday güncellemeleri, haklı olarak uyumlu sürümlere dönüştürülebilir.
 
-### Madenciliğin Merkezileşmesi \{#mining-centralization}
+### Madenciliğin Merkezileşmesi {#mining-centralization}
 
 Bitcoin madenciliği algoritması, madencilerin blok başlığının hafifçe değiştirilmiş versiyonlarında SHA256'yı milyonlarca kez tekrar tekrar hesaplamasını sağlayarak çalışır. Bu, sonunda bir düğüm, hash değeri hedeften daha az olan bir versiyon (şu anda 2<sup>192</sup> civarında) ortaya çıkarana kadar devam eder. Ancak, bu madencilik algoritması iki tür merkezileştirmeye karşı savunmasızdır. İlk olarak, madencilik ekosistemine ASIC'ler (uygulamaya özel entegre devreler), Bitcoin madenciliğinin özel görevi için tasarlanmış ve dolayısıyla binlerce kat daha verimli olan bilgisayar çipleri hakim oldu. Bu, Bitcoin madenciliğinin artık etkin bir şekilde katılmak için milyonlarca dolarlık sermaye gerektiren oldukça merkeziyetsiz ve eşitlikçi bir arayış olmadığı anlamına geliyor. İkincisi, çoğu Bitcoin madencileri aslında yerel olarak blok doğrulaması yapmazlar; bunun yerine, blok başlıklarını sağlamak için merkezi bir madencilik havuzuna güvenirler. Bu sorun muhtemelen daha kötü: Bu yazının yazıldığı tarih itibariyle, ilk üç madencilik havuzu dolaylı olarak Bitcoin ağındaki işlem gücünün yaklaşık %50'sini kontrol ediyor, ancak madencilerin bir havuzun veya koalisyonun %51 saldırısı girişiminde bulunması durumunda diğer madencilik havuzlarına geçebilmeleri gerçeğiyle bu hafifletiliyor.
 
@@ -464,7 +464,7 @@ Ethereum'daki mevcut amaç, madencilerin durumdan rastgele veriler getirmesi, bl
 
 Bu model test edilmemiştir ve bir madencilik algoritması olarak sözleşme yürütmeyi kullanırken bazı akıllı optimizasyonlardan kaçınmanın yol boyunca zorlukları olabilir. Bununla birlikte, bu algoritmanın dikkat çekici bir özelliği, belirli ASIC'leri engellemek için özel olarak tasarlanmış blok zincirine çok sayıda sözleşme ekleyerek herkesin "kuyuyu zehirlemesine" izin vermesidir. ASIC üreticilerinin birbirlerine saldırmak için böyle bir hile kullanmaları için ekonomik teşvikler mevcuttur. Bu nedenle, geliştirmekte olduğumuz çözüm, tamamen teknik olmaktan ziyade nihayetinde uyarlanabilir bir ekonomik insan çözümüdür.
 
-### Ölçeklenebilirlik \{#scalability}
+### Ölçeklenebilirlik {#scalability}
 
 Ethereum ile ilgili ortak bir endişe, ölçeklenebilirlik sorunudur. Ethereum, Bitcoin'de olduğu gibi her işlemin ağdaki her bir düğüm tarafından işlenmesi gerekmesi sorunundan muzdariptir. Bitcoin ile, mevcut blok zincirinin boyutu 15 GB civarındadır ve saatte yaklaşık 1 MB büyümektedir. Bitcoin ağı Visa'nın 2000 işlemi saniye başına işleyecek olsaydı, her üç saniyede 1 MB (saatte 1 GB, yılda 8 TB) büyür. Ethereum'un benzer bir büyüme modelinden muzdarip olması muhtemeldir, ve bu etki Bitcoin'de olduğu gibi sadece bir para birimi yerine Ethereum blok zincirinin üzerinde birçok uygulamanın olacağı gerçeğiyle daha da ağırlaşır ancak Ethereum'un tam düğümlerinin tüm blok zinciri geçmişi yerine sadece durumu depolaması gerektiği gerçeğiyle hafifleşir.
 
@@ -474,21 +474,21 @@ Kısa vadede Ethereum bu sorunla başa çıkmak için iki ek strateji kullanacak
 
 Daha karmaşık bir başka saldırı ise kötü niyetli madencilerin eksik bloklar yayınlamasıdır, bu durumda blokların geçerli olup olmadığına karar vermek için kullanılacak tam bilgi bulunmaz bile. Bunun çözümü bir meydan okuma-yanıt protokolüdür: Doğrulama düğümleri, hedef işlem endeksleri şeklinde "meydan okumalar" yapar ve bir düğüm alındığında hafif düğüm, madenci veya başka bir doğrulayıcı olan başka bir düğüm doğruluk ispatı olarak Patricia düğümlerinin bir alt kümesinin sunana kadar bloğa güvenilmez olarak davranır.
 
-## Sonuç \{#conclusion}
+## Sonuç {#conclusion}
 
 Ethereum protokolü başlangıçta kripto paraların; blok zinciri üzerinde emanet, para çekme limitleri, mali sözleşmeler, kumar piyasaları ve son derece genelleştirilmiş bir programlama dili gibi gelişmiş özellikler sağlayan yükseltilmiş bir versiyonu olarak tasarlandı. Ethereum protokolu, herhangi bir uygulamayı doğrudan "desteklemez" ancak Turing-tam bir programlama dilinin varlığı, herhangi bir işlem türü veya uygulama için teorik olarak isteğe bağlı sözleşmelerin oluşturulabileceği anlamına gelir. Bununla birlikte Ethereum hakkında daha ilginç olan şey, Ethereum protokolünün sadece bir para biriminden çok daha fazlası olmasıdır. Merkeziyetsiz dosya depolama, merkeziyetsiz hesaplama, merkeziyetsiz tahmin piyasaları, ve bu tür düzinelerce kavram arasında şekillenen protokollerde, ilk kez bir ekonomik katman eklemek suretiyle hesaplama verimliliğini önemli ölçüde artırma ve diğer eşler arası protokollere büyük bir destek sağlama potansiyeli bulunmaktadır. Son olarak, ayrıca parayla hiçbir ilgisi olmayan çok sayıda uygulama da bulunmaktadır.
 
 Ethereum protokolü tarafından uygulanan keyfi bir durum geçiş fonksiyonu kavramı, benzersiz bir potansiyele sahip bir platform sağlar; kapalı uçlu, tek amaçlı bir protokol olmaktan ziyade veri depolama, kumar veya finans alanındaki belirli uygulamalar dizisi olmak için tasarlanmıştır. Ethereum, tasarımı gereği açık uçludur ve biz bunun önümüzdeki yıllarda hem finansal hem de finansal olmayan protokollerin kullanabileceği çok büyük sayılar için temel bir katman olarak hizmet etmeye uygun olduğuna inanıyoruz.
 
-## Notlar ve Daha Fazla Bilgi \{#notes-and-further-reading}
+## Notlar ve Daha Fazla Bilgi {#notes-and-further-reading}
 
-### Notlar \{#notes}
+### Notlar {#notes}
 
 1. İleri seviye bir okuyucu, bir Bitcoin adresinin aslında açık anahtarın kendisinin değil, eliptik eğri açık anahtarının hash değeri olduğunu görebilir. Ancak, pubkey hash değerini açık anahtarın kendisi olarak ifade etmek aslında tamamen geçerli bir kriptografik terminolojidir. Bunun nedeni, Bitcoin'in şifrelemesinin özel bir dijital imza algoritması olarak kabul edilebilmesidir; burada açık anahtar ECC yayın anahtarının hash değerinden oluşur; imza ECC imzasıyla birleştirilmiş ECC pubkey'den oluşur ve doğrulama algoritması, imzadaki ECC pubkey'i açık anahtar olarak sağlanan ECC pubkey hash değeri ile karşılaştırmayı ve ardından ECC imzasını ECC pubkey'e karşı doğrulamayı içerir.
 2. Teknik olarak, önceki 11 bloğun ortanca değeri.
 3. Dahili olarak, hem 2 hem de "CHARLIE" sayıdır<sup>[fn3](#notes)</sup> ve ikincisi, büyük sonlu temelinde 256 temsilidir. Sayılar en az 0, en fazla 2<sup>256</sup>-1 olabilir.
 
-### Daha fazla bilgi \{#further-reading}
+### Daha fazla bilgi {#further-reading}
 
 1. [İçsel değer](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)
 2. [Akıllı mülk](https://en.bitcoin.it/wiki/Smart_Property)

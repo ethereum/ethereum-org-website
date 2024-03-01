@@ -14,7 +14,7 @@ summaryPoint3: Nyíltforráskódú technológián alapszik, melyre bárki fejles
 
 A decentralizált pénzügyek (DeFi) egy nyílt és globális pénzügyi rendszer, mely az internet korához igazodik – alternatívája annak, ami alig átlátható, szorosan kontrollált és sok évtizedes infrastruktúrák és folyamatok tartják össze. A DeFi kontrollt és átláthatóságot biztosít a pénzeszközök felett. Lehetőséget ad arra, hogy a globális piacokon működjön és alternatívát biztosít a helyi valuták vagy bankolási lehetőségek helyett. A DeFi termékek mindenki számára elérhetővé teszik a pénzügyi szolgáltatásokat, aki internetkapcsolattal rendelkezik, és nagy arányban maguk a felhasználók tulajdonolják és kezelik ezeket. Eddig több tízmilliárd dollárnyi kripto áramlott keresztül a DeFi alkalmazásokon, és ez minden egyes nappal növekszik.
 
-## Mi az a DeFi? \{#what-is-defi}
+## Mi az a DeFi? {#what-is-defi}
 
 A DeFi egy gyűjtőfogalom azokra a pénzügyi termékekre és szolgáltatásokra vonatkozóan, melyek mindenki számára elérhetők az Ethereum hálózatát használva – bárkinek, aki rendelkezik internetkapcsolattal. A DeFi révén a piacok állandóan nyitva vannak és nincs olyan központi hatóság, amely megakadályozhatna egy kifizetést vagy megtilthatná a hozzáférést valamilyen termékhez. Azok a szolgáltatások, melyek korábban lassúak voltak és az emberi hiba kockázatát hordozták magukban, most automatikusak és biztonságokat, mivel egy olyan programkód üzemelteti azokat, melyet bárki megvizsgálhat.
 
@@ -24,7 +24,7 @@ Egy gyorsan fejlődő kriptogazdaság található itt, ahol Ön is adhat és veh
 <YouTube id="H-O3r2YMWJ4" />
 }
 
-## A DeFi és a hagyományos pénzügyek összehasonlítása \{#defi-vs-tradfi}
+## A DeFi és a hagyományos pénzügyek összehasonlítása {#defi-vs-tradfi}
 
 A DeFi-ban rejlő lehetőségeket talán úgy lehet legjobban megragadni, ha megértjük a jelenlegi problémákat.
 
@@ -37,7 +37,7 @@ A DeFi-ban rejlő lehetőségeket talán úgy lehet legjobban megragadni, ha meg
 - Az átutalások több napig is eltarthatnak a közbenső, manuális folyamatok miatt.
 - A pénzügyi szolgáltatásokért extra díjat kell fizetni, mert a közvetítő intézmények is kiveszik a részüket.
 
-### Összehasonlítás \{#defi-comparison}
+### Összehasonlítás {#defi-comparison}
 
 | DeFi                                                                                                                | Hagyományos pénzügyek                                                                                                              |
 | ------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,7 +53,7 @@ A DeFi-ban rejlő lehetőségeket talán úgy lehet legjobban megragadni, ha meg
   Fedezze fel a DeFi alkalmazásokat
 </ButtonLink>
 
-## Minden a Bitcoinnal kezdődött... \{#bitcoin}
+## Minden a Bitcoinnal kezdődött... {#bitcoin}
 
 A Bitcoin több szempontból is az első DeFi alkalmazás volt. A Bitcoin lehetővé tette, hogy a felhasználó valóban birtokolja és kontrollálja az értéket, és elküldje azt a világon bárhova. Ehhez pedig egy olyan módszert adott egy nagy létszámú, egymásban nem bízó csoport kezébe, amellyel közvetítő megbízása nélkül egyezhetnek meg a számlafőkönyv tartalmán. A Bitcoin mindenki számára nyitott és senki sem tudja megváltoztatni a szabályait. A szabályai, ahogy a végessége és a nyitottsága is bele van kódolva a technológiába. Ez teljesen eltér a hagyományos pénzügyektől, ahol a kormány pénzt nyomtathat, mely csökkenti a megtakarítások értékét, a cégek pedig lezárhatják a pénzügyi piacokat.
 
@@ -63,7 +63,7 @@ Az Ethereum is erre épít. A Bitcoinhoz hasonlóan a szabályokat nem változta
 <YouTube id="qFBYB4W2tqU" />
 }
 
-## Programozható pénz \{#programmable-money}
+## Programozható pénz {#programmable-money}
 
 Ez furcsán hangzik... „miért akarnám programozni a pénzemet”? Ez azonban több, mint az Ethereum tokenjeinek alaptulajdonsága. Bárki programozhat valamilyen logikát a kifizetések kezelésébe. Így rendelkezhet a Bitcoin által nyújtott kontrollal és biztonsággal, a pénzügyi intézmények által nyújtott szolgáltatásokkal kombinálva azt. Lehetővé válik, hogy a kriptovalutával olyan műveleteket is véghezvigyen a felhasználó, amit a Bitcoin nem támogat, mint például kölcsön adás és kölcsön vétel, időzített kifizetések, indexalapokba való befektetés stb.
 
@@ -74,7 +74,7 @@ Ez furcsán hangzik... „miért akarnám programozni a pénzemet”? Ez azonban
   </ButtonLink>
 </InfoBanner>
 
-## Mit lehet csinálni a DeFi-ban? \{#defi-use-cases}
+## Mit lehet csinálni a DeFi-ban? {#defi-use-cases}
 
 A legtöbb pénzügyi szolgáltatásnak létezik decentralizált alternatívája. Az Ethereum emellett olyan lehetőségeket teremt, hogy teljesen új pénzügyi termékek is létrejöhessenek. Ez egy folyamatosan bővülő lista.
 
@@ -94,7 +94,7 @@ A legtöbb pénzügyi szolgáltatásnak létezik decentralizált alternatívája
 <Divider />
 }
 
-### Azonnali pénzküldés a világ bármelyik pontjára \{#send-money}
+### Azonnali pénzküldés a világ bármelyik pontjára {#send-money}
 
 Az Ethereum-blokklánc úgy van kialakítva, hogy biztonságosan és globálisan kezeljen tranzakciókat. A Bitcoinhoz hasonlóan az Ethereumon is olyan könnyen lehet pénzt utalni, akár egy e-mailt elküldeni. Csak írja be a fogadó fél [ENS-nevét](/nft/#nft-domains) (például bob.eth) vagy számlacímét a tárcájában, és az utalás közvetlenül megérkezik hozzá általában percek alatt. Az utalások küldéséhez vagy fogadásához szükség van egy [tárcára](/wallets/).
 
@@ -102,7 +102,7 @@ Az Ethereum-blokklánc úgy van kialakítva, hogy biztonságosan és globálisan
   Tovább a fizetési dappokhoz
 </ButtonLink>
 
-#### Pénzáramoltatás (streaming) a világon bárhova... \{#stream-money}
+#### Pénzáramoltatás (streaming) a világon bárhova... {#stream-money}
 
 Az Ethereumon pénzáramoltatásra is lehetőség van. Ez lehetővé teszi, hogy valós időben kapja meg valaki a fizetését, így a pénzeszközei mindig rendelkezésre állnak. Vagy kölcsönözhet is valamit addig, amíg azt használja, mint egy tárolóhely vagy elektromos robogó.
 
@@ -112,7 +112,7 @@ Ha pedig nem akar [ETH-t](/eth/) küldeni vagy áramoltatni, mert annak változh
 <Divider />
 }
 
-### Stabil pénznemek használata \{#stablecoins}
+### Stabil pénznemek használata {#stablecoins}
 
 A kriptovaluta változékonysága számos pénzügyi termék és általános költés esetén problémát okoz. A DeFi közösség ezt a stabil érmékkel oldotta meg. Ezek értéke hozzá van kötve egy másik eszközhöz, általában egy népszerű valutához, mint amilyen a dollár.
 
@@ -126,7 +126,7 @@ Az olyan érmék értéke, mint a Dai vagy a USDC, csak néhány centtel változ
 <Divider />
 }
 
-### Kölcsönfelvétel \{#lending}
+### Kölcsönfelvétel {#lending}
 
 A kölcsönfelvétel a decentralizált szolgáltatóktól kétféle módon valósulhat meg.
 
@@ -139,7 +139,7 @@ A kölcsönfelvétel a decentralizált szolgáltatóktól kétféle módon való
 
 Számos előnye van annak, ha decentralizált kölcsönadót használunk...
 
-#### A kölcsönfelvétel magán jellegének megőrzése \{#borrowing-privacy}
+#### A kölcsönfelvétel magán jellegének megőrzése {#borrowing-privacy}
 
 Manapság a pénz kölcsönadása és -vétele az abban résztvevő egyének köré rendeződik. A bank tudni akarja, hogy vissza fogja-e fizetni a kölcsönt annak igénylője, mielőtt odaítélné neki.
 
@@ -147,15 +147,15 @@ A decentralizált kölcsönzésnél a feleknek nem kell azonosítaniuk magukat. 
 
 Így anélkül lehet pénzt kölcsönözni, hogy hitelellenőrzést kellene végezni vagy személyes információkat átadni.
 
-#### Globális alapokhoz való hozzáférés \{#access-global-funds}
+#### Globális alapokhoz való hozzáférés {#access-global-funds}
 
 Amikor valaki decentralizált kölcsönadóhoz fordul, akkor az egész világon letétbe helyezett alapok válnak számára elérhetővé, nem csak azok az eszközök, melyeket a kiválasztott bankban vagy intézményben elhelyeztek. Ez sokkal elérhetőbbé teszi a kölcsönt és jobb kamatozást is biztosít.
 
-#### Adóhatékonyság \{#tax-efficiencies}
+#### Adóhatékonyság {#tax-efficiencies}
 
 A kölcsönfelvétel révén hozzáférhet a szükséges eszközökhöz, így nem kell eladnia a rendelkezésére álló ETH-t (melynek adóvonzata van). Ehelyett használhatja az ETH-t fedezetként egy stabilérme-kölcsönhöz. Így a szükséges pénz is rendelkezésére áll, és az ETH-t is megtarthatja. A stabil érmék olyan tokenek, melyek előnyösebbek, ha készpénzre van szüksége, mert az értékük nem változik annyira, mint az ETH esetében. [Bővebben a stabil érmékről](#stablecoins)
 
-#### Villámkölcsönök \{#flash-loans}
+#### Villámkölcsönök {#flash-loans}
 
 A villámkölcsön a decentralizált kölcsönzés kísérleti jellegű formája, amikor fedezet nélkül, illetve bármiféle személyes adat átadása nélkül tud valaki kölcsönt felvenni.
 
@@ -184,9 +184,9 @@ Ha a hagyományos pénzügyi világban szeretne ugyanilyen ügyletet végrehajta
 <Divider />
 }
 
-### Kezdjen el pénzt megtakarítani a kriptóval \{#saving}
+### Kezdjen el pénzt megtakarítani a kriptóval {#saving}
 
-#### Kölcsönadás \{#lending}
+#### Kölcsönadás {#lending}
 
 A rendelkezésére álló kriptovaluta kölcsönadásával kamatot kaphat, így pénzeszközei folyamatosan növekednek. Jelenleg a kamatráták sokkal magasabbak, mint a helyi bankokban (ha egyáltalán van elérhető bank a közelében). Itt egy példa:
 
@@ -199,7 +199,7 @@ A rendelkezésére álló kriptovaluta kölcsönadásával kamatot kaphat, így 
   Tovább a kölcsönadási dappokhoz
 </ButtonLink>
 
-#### Veszteség nélküli lottó \{#no-loss-lotteries}
+#### Veszteség nélküli lottó {#no-loss-lotteries}
 
 A veszteség nélküli lottók, mint a PoolTogether, szórakoztató és innovatív módszerek a megtakarításokra.
 
@@ -219,7 +219,7 @@ A rendelkezésre álló nyeremény abból a kamatból keletkezik, amit a jegyvá
 <Divider />
 }
 
-### Kereskedés a tokenekkel \{#swaps}
+### Kereskedés a tokenekkel {#swaps}
 
 Az Ethereumon ezernyi token elérhető. A decentralizált tőzsdék (DEX) lehetővé teszik, hogy a felhasználók a különféle tokenekkel bármikor kereskedjenek. Eközben az eszközök feletti kontroll végig megmarad. Olyan, mint amikor az ember egy másik országba utazik és valutaváltót használ. Ugyanakkor a DeFi sosem zár be. A pénzpiacok folyamatosan nyitva vannak (az év 365 napján, napi 24 órában), a technológia pedig garantálja, hogy mindig van, aki elfogadja az ügyletet.
 
@@ -233,7 +233,7 @@ Például, ha Ön szeretné használni a veszteség nélküli lottózást, a Poo
 <Divider />
 }
 
-### Haladó szintű kereskedés \{#trading}
+### Haladó szintű kereskedés {#trading}
 
 Haladóbb lehetőségek is rendelkezésre állnak azoknak a kereskedőknek, akik több kontrollt szeretnének. Lehetségesek a meghatározott áron történő vételi/eladási megbízások (limit order), határidős ügyletek, tőkeáttétes kereskedések és még sok más. A decentralizált kereskedés során Ön hozzáfér a globális likviditáshoz, a piac sosem zár be, az eszközök feletti kontroll pedig mindig az Ön kezében van.
 
@@ -247,7 +247,7 @@ A centralizált tőzsdéken ehhez képest letétbe kell helyezni az eszközöket
 <Divider />
 }
 
-### Portfóliófejlesztés \{#investing}
+### Portfóliófejlesztés {#investing}
 
 Az Ethereumon találhatók olyan alapkezelő termékek, melyek az Ön által választott stratégia mentén megpróbálják megnövelni portfóliója értékét. Mindez automata, mindenki számára nyitott, és nem igényel kezelőt, aki a profitból levenné a saját részét.
 
@@ -261,7 +261,7 @@ Egy jó példa erre a [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/d
 <Divider />
 }
 
-### Közösségi elképzelések finanszírozása \{#crowdfunding}
+### Közösségi elképzelések finanszírozása {#crowdfunding}
 
 Az Ethereum egy tökéletes platform arra, hogy a közösség segítségével finanszírozzon bizonyos elképzeléseket:
 
@@ -273,7 +273,7 @@ Az Ethereum egy tökéletes platform arra, hogy a közösség segítségével fi
   Tovább a közösségi finanszírozás dappokhoz
 </ButtonLink>
 
-#### Kvadratikus finanszírozás \{#quadratic-funding}
+#### Kvadratikus finanszírozás {#quadratic-funding}
 
 Az Ethereum egy nyílt forráskódú program, és az eddigi fejlesztések nagy részét a közösség finanszírozta. Ez vezetett el egy érdekes és új modellhez: a kvadratikus finanszírozáshoz. Ennek lehetősége van azt a módot továbbfejleszteni, ahogy a közjavak finanszírozását kezelhetjük.
 
@@ -292,7 +292,7 @@ Eszerint az A projekt, mely 100 adományt kapott, egyenként 1 $ értékben, tö
 <Divider />
 }
 
-### Biztosítások \{#insurance}
+### Biztosítások {#insurance}
 
 A decentralizált biztosítások célja, hogy azok olcsóbbak, sokkal átláthatóbbak legyenek, és gyorsabb legyen a kifizetés. Az automatizálásnak köszönhetően a biztosítás általi lefedettség megfizethetőbb, a kifizetések pedig gyorsabbak. Az igénybejelentéshez használt adatok teljesen transzparensek.
 
@@ -306,7 +306,7 @@ Az Ethereum termékei, mint bármelyik szoftver, tartalmazhatnak hibákat és se
 <Divider />
 }
 
-### Gyűjtőhelyek és portfóliókezelők \{#aggregators}
+### Gyűjtőhelyek és portfóliókezelők {#aggregators}
 
 Amikor ennyi minden zajlik, Önnek is szüksége lehet egy olyan megoldásra, mellyel a befektetéseit, kölcsöneit és kereskedéseit figyelemmel követheti. Rengeteg olyan termék elérhető, melyekkel egyetlen helyről tudja az összes DeFi tevékenységét koordinálni. Ez a DeFi nyílt architektúrájának szépsége. A csapatok olyan interface-eket építenek, melyekkel nemcsak az összes termék kapcsán láthatja az egyenlegét, hanem használhatja azok tulajdonságait is. Amint Ön is jobban elmélyül a DeFi világában, hasznosnak fogja ezt találni.
 
@@ -318,7 +318,7 @@ Amikor ennyi minden zajlik, Önnek is szüksége lehet egy olyan megoldásra, me
 <Divider />
 }
 
-## Hogyan működik a DeFi? \{#how-defi-works}
+## Hogyan működik a DeFi? {#how-defi-works}
 
 A decentralizált pénzügyek (DeFi) kriptovalutákat és okosszerződéseket használnak ahhoz, hogy közvetítő nélküli szolgáltatásokat adjanak. A mai pénzügyi világban a pénzintézetek garantálják a tranzakciókat. Ez nagy hatalmat ad az intézményeknek, mert a pénz rajtuk áramlik keresztül. Emellett emberek milliárdjai világszerte még bankszámlát sem tudnak nyitni maguknak.
 
@@ -330,7 +330,7 @@ A szerződések emellett teljesen nyilvánosak és bárki megvizsgálhatja azoka
 
 Ez valójában azt jelenti, hogy jelenleg az Ethereum-közösség technikailag képzettebb tagjaiban bízunk, akik el tudják olvasni a programkódot. A nyílt forráskódon alapuló közösség segít a fejlesztőket ellenőrzés alatt tartani, ami idővel szükségtelenné fog válni, ahogy az okosszerződéseket könnyebb lesz átlátni, és a programkód megbízhatóságára más igazolási módok is születnek.
 
-## Az Ethereum és a DeFi \{#ethereum-and-defi}
+## Az Ethereum és a DeFi {#ethereum-and-defi}
 
 Az Ethereum tökéletes alapot biztosít a decentralizált pénzügyek (DeFi) számára:
 
@@ -346,7 +346,7 @@ A DeFi-t a következő rétegek szerint értelmezheti:
 3. A protokollok – az [okosszerződések](/glossary/#smart-contract), melyek a műveleteket biztosítják, mint amilyen például egy szolgáltatás az eszközök decentralizált kölcsönadására.
 4. [Az alkalmazások](/dapps/) – azok a termékek, melyek révén kezeljük és elérjük a protokollokat.
 
-## Építse Ön is a DeFi-t \{#build-defi}
+## Építse Ön is a DeFi-t {#build-defi}
 
 A DeFi egy nyílt forráskódú kezdeményezés. A kapcsolódó protokollok és alkalmazások mind nyitottak az Ön számára, hogy megvizsgálja azokat, elágazásokat készítsen azokból vagy továbbfejlessze azokat. A rétegezett struktúra következtében (melynek részei ugyanarra az alap blokkláncra épülnek és ugyanazokat az eszközöket használják) a protokollokat össze lehet kötni, hogy egyedi lehetőségeket aknázzunk ki.
 
@@ -354,25 +354,25 @@ A DeFi egy nyílt forráskódú kezdeményezés. A kapcsolódó protokollok és 
   Bővebben a dappok építéséről
 </ButtonLink>
 
-## További olvasnivaló \{#futher-reading}
+## További olvasnivaló {#futher-reading}
 
-### DeFi adatok \{#defi-data}
+### DeFi adatok {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 - [DeFi Rate](https://defirate.com/)
 
-### Cikkek a DeFi-ról \{#defi-articles}
+### Cikkek a DeFi-ról {#defi-articles}
 
 - [Útmutató kezdőknek a DeFi-ról](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 2020. január 6._
 
-### Videók \{#videos}
+### Videók {#videos}
 
 - [Finematics – decentralizált pénzügyi oktatás](https://finematics.com/) – _Videók a DeFi-ról_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) – _A DeFi alapjai: minden, amit tudnia kell, hogy elboldoguljon ebben a néha rejtélyes világban._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _Mi az a DeFi?_
 
-### Közösségek \{#communities}
+### Közösségek {#communities}
 
 - [DeFi Llama Discord-szerver](https://discord.gg/buPFYXzDDd)
 - [DeFi Pulse Discord-szerver](https://discord.gg/Gx4TCTk)

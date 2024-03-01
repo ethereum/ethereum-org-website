@@ -12,17 +12,17 @@ Se desideri utilizzare JavaScript per connetterti a un nodo Ethereum, puoi usare
 
 Si noti che, a partire da [La Fusione](/roadmap/merge/), per eseguire un nodo occorrono due elementi di software di Ethereum connessi (un client di esecuzione e un client di consenso). Assicurati che il tuo nodo includa sia un client di esecuzione che un client di consenso. Se il tuo nodo non si trova sulla tua macchina locale (ad es. se è in esecuzione su un'istanza AWS), occorrerà aggiornare di conseguenza gli indirizzi IP nel tutorial. Per ulteriori informazioni, consulta la nostra pagina sull'[esecuzione di un nodo](/developers/docs/nodes-and-clients/run-a-node/).
 
-## Prerequisiti \{#prerequisites}
+## Prerequisiti {#prerequisites}
 
 Potrebbe essere utile conoscere non solo Javascript ma anche lo [stack di Ethereum](/developers/docs/ethereum-stack/) e [i client di Ethereum](/developers/docs/nodes-and-clients/).
 
-## Perché usare una libreria? \{#why-use-a-library}
+## Perché usare una libreria? {#why-use-a-library}
 
 Queste librerie eliminano buona parte della complessità legata al dover interagire direttamente con un nodo Ethereum. Assicurano inoltre funzioni di utilità (ad esempio la conversione da ETH a Gwei) per fare in modo che gli sviluppatori debbano dedidare meno tempo alle complessità dei client Ethereum e più tempo alle funzionalità specifiche dell'applicazione.
 
-## Caratteristiche della libreria \{#library-features}
+## Caratteristiche della libreria {#library-features}
 
-### Connettersi ai nodi Ethereum \{#connect-to-ethereum-nodes}
+### Connettersi ai nodi Ethereum {#connect-to-ethereum-nodes}
 
 Utilizzando i provider, queste librerie consentono di connettersi a Ethereum e leggerne i dati, tramite JSON-RPC, INFURA, Etherscan, Alchemy o MetaMask.
 
@@ -70,7 +70,7 @@ Una volta eseguita la configurazione, sarà possibile interrogare la blockchain 
 - ID di rete
 - e molto altro...
 
-### Funzionalità del portafoglio \{#wallet-functionality}
+### Funzionalità del portafoglio {#wallet-functionality}
 
 Queste librerie offrono le funzionalità per creare portafogli, gestire chiavi e firmare transazioni.
 
@@ -152,7 +152,7 @@ Una volta eseguita la configurazione, sarà possibile:
 - firmare transazioni
 - e molto altro...
 
-### Interagire con le funzioni dei contratti intelligenti \{#interact-with-smart-contract-functions}
+### Interagire con le funzioni dei contratti intelligenti {#interact-with-smart-contract-functions}
 
 Le librerie del client di JavaScript consentono alla tua applicazione di chiamare le funzioni dei contratti intelligenti, leggendo l'Interfaccia Binaria dell'Applicazione (ABI) di un contratto compilato.
 
@@ -214,7 +214,7 @@ Ciò significa che è possibile:
 - Distribuire un contratto
 - E molto altro...
 
-### Funzioni di utilità \{#utility-functions}
+### Funzioni di utilità {#utility-functions}
 
 Le funzioni di utilità forniscono pratiche scorciatoie che rendono la programmazione con Ethereum un po' più semplice.
 
@@ -236,7 +236,7 @@ ethers.utils.formatEther(balance)
 - [Funzioni di utilità Web3js](https://docs.web3js.org/api/web3-utils)
 - [Funzioni utilità ethers](https://docs.ethers.io/v5/api/utils/)
 
-## Librerie disponibili \{#available-libraries}
+## Librerie disponibili {#available-libraries}
 
 **Web3.js -** **_API JavaScript Ethereum_**
 
@@ -280,16 +280,16 @@ ethers.utils.formatEther(balance)
 - [Documentazione](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-## Letture consigliate \{#further-reading}
+## Letture consigliate {#further-reading}
 
 _Conosci una risorsa della comunità che ti è stata utile? Modifica questa pagina e aggiungila!_
 
-## Argomenti correlati \{#related-topics}
+## Argomenti correlati {#related-topics}
 
 - [ Nodi e client](/developers/docs/nodes-and-clients/)
 - [Quadri di sviluppo](/developers/docs/frameworks/)
 
-## Tutorial correlati \{#related-tutorials}
+## Tutorial correlati {#related-tutorials}
 
 - [Set up Web3js to use the Ethereum blockchain in JavaScript](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Istruzioni per impostare web3.js in un progetto._
 - [Calling a Smart Contract from JavaScript](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– Usando il token DAI, impara come funzionano i contratti di chiamata con JavaScript_

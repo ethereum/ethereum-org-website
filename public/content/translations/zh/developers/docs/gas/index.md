@@ -6,11 +6,11 @@ lang: zh
 
 Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正如车辆需要汽油一样。
 
-## 前提条件 \{#prerequisites}
+## 前提条件 {#prerequisites}
 
 为了更好地理解此页面，推荐先阅读[交易](/developers/docs/transactions/)和 [EVM](/developers/docs/evm/)。
 
-## 什么是燃料？ \{#what-is-gas}
+## 什么是燃料？ {#what-is-gas}
 
 燃料是指在以太坊网络上执行特定操作所需的计算工作量。
 
@@ -26,7 +26,7 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 
 "Gwei" 是 "giga-wei" 的缩写，意思是 “十亿个 wei”。 一个 gwei 等于十亿个 wei。 Wei 本身（以 [b-money](https://www.investopedia.com/terms/b/bmoney.asp) 的发明者 [Wei Dai](https://wikipedia.org/wiki/Wei_Dai) 的名字命名）是以太币的最小单位。
 
-## 如何计算燃料费？ \{#how-are-gas-fees-calculated}
+## 如何计算燃料费？ {#how-are-gas-fees-calculated}
 
 当提交交易时，你可以设置你愿意支付的燃料数量。 通过提供一定数量的燃料，你出价将你的交易添加到下一个区块中。 如果你提供的燃料太少，验证者就不太可能选择添加你的交易，这意味着你的交易可能会延迟执行或不会被执行。 如果提供太多，你可能浪费一些以太币。 那么，怎么知道你应该支付多少燃料费呢？
 
@@ -48,7 +48,7 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 
 当 Jordan 转账时，将从 Jordan 帐户中扣除 1.000252 个以太币。 Taylor 的帐户增加 1.0000 个以太币。 验证者收到价值 0.000042 个以太币的小费。 0.00021 个以太币的 `base fee` 被销毁。
 
-### 基础费 \{#base-fee}
+### 基础费 {#base-fee}
 
 每个区块都有一个基础费作为底价。 要想有资格添加到区块中，燃料费出价必须至少等于基础费。 基础费独立于当前区块计算，是由当前区块之前的区块决定的，这使得用户更容易预测交易费。 在创建区块时，它的**基础费将被“销毁”**并退出流通。
 
@@ -77,23 +77,23 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 | ...      |        ... |    12.5% |             ... |
 | 100      |        30M |    12.5% | 10302608.6 gwei |
 
-### 优先费（小费） \{#priority-fee}
+### 优先费（小费） {#priority-fee}
 
 优先费（小费）激励验证者将交易添加到区块中。 如果没有小费，验证者会发现开采空区块在经济上可行，因为它们会获得相同的区块奖励。 小额小费是对验证者将交易添加到区块的最小激励。 在相同区块中，对于要优先于其他交易执行的交易，可以添加更高的小费来尝试使出价高于竞争性交易。
 
-### 最高费用 \{#maxfee}
+### 最高费用 {#maxfee}
 
 要在网络上执行交易，用户可以为他们愿意支付的交易执行费用指定最高限额。 此可选参数称为 `maxFeePerGas`。 为了执行交易，最高费用必须超过基础费和小费的总和。 交易完成后，会将最高费用与基础费和小费总和之间的差额退还给交易发送人。
 
-### 区块大小 \{#block-size}
+### 区块大小 {#block-size}
 
 每个区块的目标大小为 1500 万单位燃料，但区块的大小将根据网络需求增减，最大不得超过 3000 万单位燃料的区块大小上限（目标区块大小的 2 倍）。 协议通过 _tâtonnement_ 过程使均衡区块大小平均达到 1,500 万单位燃料。 这意味着如果区块大小超出目标区块大小，协议将增加下一个区块的基础费。 同样，如果区块大小小于目标区块大小，协议将减少基础费。 基础费的调整金额与当前区块大小和目标区块大小的差距成比例。 [关于区块的更多信息](/developers/docs/blocks/)。
 
-### 实践中的燃料费计算 \{#calculating-fees-in-practice}
+### 实践中的燃料费计算 {#calculating-fees-in-practice}
 
 你可以明确说明自己愿意支付多少交易执行费。 然而，大多数钱包提供商会自动设置推荐的交易费（基础费 + 推荐的优先费）来降低用户操作的复杂程度。
 
-## 为什么存在燃料费？ \{#why-do-gas-fees-exist}
+## 为什么存在燃料费？ {#why-do-gas-fees-exist}
 
 简而言之，燃料费有助于确保以太坊网络的安全。 在网络上执行的每次计算都需要收费，这样可以防止不良行为者给网络带来垃圾信息。 为了防止代码中出现无意或恶意的无限循环或其他计算浪费，要求每笔交易对可以采用的代码执行计算步骤设置一个限制。 基本计算单位是“燃料”。
 
@@ -101,23 +101,23 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 
 ![未使用燃料退还示意图](../transactions/gas-tx.png) _示意图节选自[以太坊虚拟机图解](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## 什么是燃料限额？ \{#what-is-gas-limit}
+## 什么是燃料限额？ {#what-is-gas-limit}
 
 燃料限额是指你愿意在交易中消耗的最大燃料数量。 涉及[智能合约](/developers/docs/smart-contracts/)的更复杂交易需要进行更多的计算工作，因此相比简单的支付，它们需要更高的燃料限额。 标准以太币转账要求燃料限额为 21,000 单位燃料。
 
 例如，如果你对简单的以太币转账设置 50,000 单位燃料限额，以太坊虚拟机将消耗 21,000 单位，你将收到剩余的 29,000 单位。 然而，如果你设置的燃料太少，比如说，对于简单的以太币转账，设置燃料限额为 20,000 单位，以太坊虚拟机将消耗 20,000 单位燃料并尝试执行交易，但最后不会完成。 然后，以太坊虚拟机回滚所有变化，但由于验证者已经完成了价值 20k 单位燃料的工作，这些燃料就被消耗了。
 
-## 为什么燃料费会变得如此高？ \{#why-can-gas-fees-get-so-high}
+## 为什么燃料费会变得如此高？ {#why-can-gas-fees-get-so-high}
 
 燃料费高是由于以太坊广受欢迎。 如果需求量太大，用户必须提供更高的小费，力争使出价高于其他用户的交易。 小费越高，交易进入下一个区块的可能性就越大。 此外，更复杂的智能合约应用可能会执行许多操作来支持其功能，使它们消耗大量的燃料。
 
-## 减少燃料成本的举措 \{#initiatives-to-reduce-gas-costs}
+## 减少燃料成本的举措 {#initiatives-to-reduce-gas-costs}
 
 以太坊[可扩展性升级](/roadmap/)最终应该可以解决部分燃料费问题，并让以太坊平台有能力每秒处理数千笔交易，从而实现全面扩容。
 
 二层网络扩容是一项主要举措，可大大优化燃料成本、用户体验和可扩展性。 [关于二层网络扩容的更多信息](/developers/docs/scaling/#layer-2-scaling)。
 
-## 什么是伦敦升级 / EIP-1559？ \{#what-was-the-london-upgrade-eip-1559}
+## 什么是伦敦升级 / EIP-1559？ {#what-was-the-london-upgrade-eip-1559}
 
 在伦敦升级之前，以太坊具有固定大小的区块。 在网络需求高峰期，这些区块满负荷运行。 因此，用户常常不得不等到需求量降低后才能将交易添加到区块中，这导致用户体验变得十分糟糕。 伦敦升级为以太坊引入了大小可变的区块。
 
@@ -135,7 +135,7 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 <YouTube id="MGemhK9t44Q" />
 }
 
-## 监控燃料费 \{#moitoring-gas-fees}
+## 监控燃料费 {#moitoring-gas-fees}
 
 如果想要监控燃料价格，用较少的费用发送以太币，你可以使用多种不同的工具，例如：
 
@@ -143,11 +143,11 @@ Gas 对以太坊网络至关重要。 正是这种燃料使它能够运行，正
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _支持类型 0 传统交易和类型 2 EIP-1559 交易的燃料估算 Chrome 插件。_
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _按照你的当地货币计算主网、Arbitrum 和 Polygon 上进行的各类交易的燃料费。_
 
-## 相关工具 \{#related-tools}
+## 相关工具 {#related-tools}
 
 - [Blocknative 的燃料平台](https://www.blocknative.com/gas)_由 Blocknative 的全局内存池数据平台提供支持的燃料估算应用程序接口_
 
-## 延伸阅读 \{#further-reading}
+## 延伸阅读 {#further-reading}
 
 - [以太坊 Gas 详解](https://defiprime.com/gas)
 - [减少智能合约的燃料消耗](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)

@@ -22,7 +22,7 @@ Bunların tamamı internet ile değişti. Belirli bir ilan panosunu görebilen k
 
 Blok zinciri ile bu pazarlar bir kez daha değişmeye hazır, size nasıl olduğunu göstereyim.
 
-## Para kazanma \{#monetization}
+## Para kazanma {#monetization}
 
 Halka açık bir blok zinciri ilan panosunun iş modelinin Ebay'den ve bir şirketten farklı olması gerekecektir.
 
@@ -38,7 +38,7 @@ Burada bir iş fırsatı kokusu alıyorum. İşletme maliyeti olmayan bir ilan p
 
 Bunu inşa etmenin verdiği mutluluk benim için yeterli. Hadi koda bir göz atalım.
 
-## Uygulama \{#implementation}
+## Uygulama {#implementation}
 
 Bir süre önce, iş örneği uygulamaları ve başka farklı şeyler içeren bir [açık kaynak deposu](https://github.com/HQ20/contracts?ref=hackernoon.com) başlattık, lütfen bir göz atın.
 
@@ -138,7 +138,7 @@ function cancelTrade(uint256 _trade)
 
 Bu kadar. Uygulamanın sonuna geldiniz. Kodla ifade edildiğinde bazı iş kavramlarının ne kadar kısa olduğu oldukça şaşırtıcıdır ve bu da o durumlardan biridir. [Depomuzda](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol) tam sözleşmeye bakın.
 
-## Sonuç \{#conclusion}
+## Sonuç {#conclusion}
 
 İlan panoları, internet ile büyük miktarda ölçeklenen ve oldukça az tekel niteliğinde kazananla son derece popüler bir iş modeli hâline gelen ortak bir pazar yapılandırmasıdır.
 

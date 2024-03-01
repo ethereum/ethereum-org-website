@@ -15,7 +15,7 @@ summaryPoint4: 合併將以太坊的能耗降低了大約 99.95%。
   「合併」已於 2022 年 9 月 15 日執行。 這使得以太坊完全過渡到權益證明共識，正式棄用工作量證明並將能耗降低大約 99.95%。
 </UpgradeStatus>
 
-## 「合併」是什麼？ \{#what-is-the-merge}
+## 「合併」是什麼？ {#what-is-the-merge}
 
 合併指將以太坊的原始執行層（自[創世](/history/#frontier)以來就存在的主網）與其新的權益證明共識層「信標鏈」結合在一起。 它減少了對能源密集型挖礦的需求，而是藉由質押的以太幣來確保網路安全。 這是實現以太坊「更高的可擴容性、安全性和永續性」願景的真正令人興奮的一步。
 
@@ -25,7 +25,7 @@ summaryPoint4: 合併將以太坊的能耗降低了大約 99.95%。
 
 將以太坊想像成一艘宇宙飛船，還未完全準備好星際旅行就已經升空。 以太坊社群藉由信標鏈打造全新的引擎與堅固的外殼。 經過大量的測試後，是時候在飛行旅途中以熱插拔的方式將舊引擎更換為新引擎了。 這將全新且更高效的引擎合併到現有的飛船中，使之能夠進行長達數光年的太空之旅。
 
-## 與主網合併 \{#merging-with-mainnet}
+## 與主網合併 {#merging-with-mainnet}
 
 從創世到合併之前，工作量證明一直保護著以太坊主網的安全。 這使得我們都習慣的以太坊區塊鏈於 2015 年 7 月誕生，並具備所有熟悉的功能——交易、智慧型合約、帳戶等。
 
@@ -41,7 +41,7 @@ summaryPoint4: 合併將以太坊的能耗降低了大約 99.95%。
 這種向權益證明的過渡改變了以太幣的發行方式。 瞭解<a href="/roadmap/merge/issuance/">合併前後的以太幣發行</a>的更多相關資訊。
 </InfoBanner>
 
-### 使用者及持有者 \{#users-holders}
+### 使用者及持有者 {#users-holders}
 
 **合併並不會對持有者或使用者造成任何影響。**
 
@@ -51,7 +51,7 @@ summaryPoint4: 合併將以太坊的能耗降低了大約 99.95%。
 
 [關於以太坊安全性的更多資訊](/security/#eth2-token-scam)
 
-### 節點營運者與去中心化應用程式開發者 \{#node-operators-dapp-developers}
+### 節點營運者與去中心化應用程式開發者 {#node-operators-dapp-developers}
 
 {
 <ExpandableCard
@@ -112,15 +112,15 @@ id="developers">
 </ExpandableCard>
 }
 
-## 合併與能耗 \{#merge-and-energy}
+## 合併與能耗 {#merge-and-energy}
 
 合併標誌著以太坊工作量證明的結束，並開啟了更永續、更環保的以太坊紀元。 以太坊的能耗預計下降了 99.95%，使得以太坊成為綠色區塊鏈。 瞭解關於[以太坊能耗](/energy-consumption/)的更多資訊。
 
-## 合併與擴容 \{#merge-and-scaling}
+## 合併與擴容 {#merge-and-scaling}
 
 合併也為工作量證明之下無法實現的進一步擴容升級奠定了基礎，使得以太坊更接近實現[以太坊願景](/roadmap/vision/)中所描繪的全面擴容、安全性與永續性。
 
-## 關於合併的誤解 \{#misconceptions}
+## 關於合併的誤解 {#misconceptions}
 
 {
 <ExpandableCard
@@ -195,7 +195,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 </ExpandableCard>
 }
 
-## “Eth2”發生了什麽？ \{#eth2}
+## “Eth2”發生了什麽？ {#eth2}
 
 「Eth2」這個術語已被棄用。 將「Eth1」和「Eth2」合併為單一的區塊鏈後，已不需要區分這兩個以太坊網路；現在只有以太坊。
 
@@ -208,11 +208,11 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
 
 [瞭解更多關於“Eth2”重命名的信息](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## 不同升級之間的關聯 \{#relationship-between-upgrades}
+## 不同升級之間的關聯 {#relationship-between-upgrades}
 
 所有以太坊升級都有某種程度上的關聯。 我們來重新回顧合併與其他升級之間的關係。
 
-### 合併與信標鏈 \{#merge-and-beacon-chain}
+### 合併與信標鏈 {#merge-and-beacon-chain}
 
 合併代表著信標鏈作為原始主網執行層的新共識層被正式採用。 合併後，驗證者需負責維護以太坊安全，且[工作量證明](/developers/docs/consensus-mechanisms/pow/)挖礦已不再是有效的區塊生產方式。
 
@@ -222,13 +222,13 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
   信標鏈
 </ButtonLink>
 
-### 合並與上海升級 \{#merge-and-shanghai}
+### 合並與上海升級 {#merge-and-shanghai}
 
 為了簡化流程並最大限度地專注於成功過渡到權益證明，合併升級不包括某些預期的功能，例如提取質押以太幣的能力。 此功能是在上海/卡佩拉升級時單獨啟用的。
 
 歡迎感興趣人士詳細瞭解 Vitalik 在 2021 年 4 月的 ETHGlobal 活動上介紹的[合併後會發生什麼](https://youtu.be/7ggwLccuN5s?t=101)的更多資訊。
 
-### 合併與分片 \{#merge-and-data-sharding}
+### 合併與分片 {#merge-and-data-sharding}
 
 原本的計劃是，在合併前進行分片以處理擴容問題。 然而，鑑於[二層網路擴容解決方案](/layer-2/)的蓬勃發展，優先事務就是摒棄工作量證明，轉用權益證明。
 
@@ -238,7 +238,7 @@ contentPreview="False. Validator exits are rate limited for security reasons.">
   分片
 </ButtonLink>
 
-## 延伸閱讀 \{#further-reading}
+## 延伸閱讀 {#further-reading}
 
 <MergeArticleList />
 

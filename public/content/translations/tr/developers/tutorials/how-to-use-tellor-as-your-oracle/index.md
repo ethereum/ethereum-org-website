@@ -15,7 +15,7 @@ sourceUrl: https://docs.tellor.io/tellor/
 
 Hızlı Soru: Protokolünüz tamamlanmak üzere ancak zincir dışı verilere erişmek için bir kâhine ihtiyacı var... Ne yaparsınız?
 
-## (Hafif) Ön Koşullar \{#soft-prerequisites}
+## (Hafif) Ön Koşullar {#soft-prerequisites}
 
 Bu gönderi, bir kâhin akışına erişmeyi mümkün olduğunca basit ve anlaşılır hâle getirmeyi amaçlamaktadır. Bununla birlikte, kâhin yönüne odaklanmak için kodlama beceri seviyeniz hakkında aşağıdakileri varsayıyoruz.
 
@@ -27,7 +27,7 @@ Varsayımlar:
 
 Tellor, uygulamaya hazır yayınlanmış ve açık kaynaklı bir kâhindir. Bu başlangıç rehberi, projenize tamamen merkeziyetsiz ve sansüre dayanıklı bir kâhin sağlayarak Tellor ile çalışmaya başlamanın kolaylığını gösterme amacı taşır.
 
-## Genel Bakış \{#overview}
+## Genel Bakış {#overview}
 
 Tellor, tarafların zincir dışı bir veri noktasının (örneğin BTC/USD) değerini talep edebildiği ve raporlayıcıların bu değeri tüm Ethereum akıllı sözleşmeleri tarafından erişilebilen zincir üstü bir veri bankasına eklemek için rekabet ettiği bir kâhin sistemidir. Bu veri bankasına yapılan girdiler, stake edilmiş muhabirlerden oluşan bir ağ tarafından güvence altına alınmıştır. Tellor, raporlayıcılar tarafından sağlanan dürüst veri kayıtlarını ödüllendiren, Tributes (TRB) Tellor jetonunun piyasaya sürülmesi ve uyuşmazlık mekanizması aracılığıyla kötü niyetli davrananları cezalandıran kripto ekonomik teşvik mekanizmalarını kullanır.
 
@@ -37,7 +37,7 @@ Bu öğreticide şunların üzerinden geçeceğiz:
 - Basit bir örneğe genel bakış.
 - Şu anda Tellor'ı test edebileceğiniz ağların test ağlarının adreslerini listelemek.
 
-## UsingTellor \{#usingtellor}
+## UsingTellor {#usingtellor}
 
 Yapmak isteyeceğiniz ilk şey, Tellor'ı kâhininiz olarak kullanmak için gerekli olan temel araçları kurmaktır. Tellor Kullanıcı Sözleşmelerini yüklemek için [bu paketi](https://github.com/tellor-io/usingtellor) kullanın:
 
@@ -47,7 +47,7 @@ Kurulduktan sonra bu, sözleşmelerinizin "UsingTellor" sözleşmesinden fonksiy
 
 Harika! Artık araçları hazırladığınıza göre, bitcoin fiyatını alacağımız basit bir alıştırmadan geçelim:
 
-### BTC/USD Örneği \{#btcusd-example}
+### BTC/USD Örneği {#btcusd-example}
 
 UsingTellor sözleşmesini kalıtım yoluya alarak Tellor adresini bir yapıcı argüman olarak geçirmek:
 

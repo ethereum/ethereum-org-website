@@ -4,9 +4,9 @@ lang: fr
 description: Instructions d'utilisation de Crowdin pour traduire ethereum.org
 ---
 
-# Comment traduire \{#how-to-translate}
+# Comment traduire {#how-to-translate}
 
-## Guide visuel \{#visual-guide}
+## Guide visuel {#visual-guide}
 
 Pour les apprenants plus visuels, regardez la vidéo de Luka qui présente le paramétrage de Crowdin. Vous pouvez également trouver les mêmes étapes sous forme écrite dans la section suivante.
 
@@ -14,9 +14,9 @@ Pour les apprenants plus visuels, regardez la vidéo de Luka qui présente le pa
 <YouTube id="Ii7bYhanLs4" />
 }
 
-## Guide écrit \{#written-guide}
+## Guide écrit {#written-guide}
 
-### Rejoignez notre projet sur Crowdin \{#join-project}
+### Rejoignez notre projet sur Crowdin {#join-project}
 
 Vous devrez vous connecter à votre compte Crowdin ou vous inscrire si vous n'avez pas encore de compte. Tout ce qui est nécessaire pour vous inscrire est un compte de messagerie et un mot de passe.
 
@@ -24,7 +24,7 @@ Vous devrez vous connecter à votre compte Crowdin ou vous inscrire si vous n'av
   Rejoindre le projet
 </ButtonLink>
 
-### Accédez à votre langue \{#open-language}
+### Accédez à votre langue {#open-language}
 
 Après vous être connecté à Crowdin, vous verrez une description du projet et une liste de toutes les langues disponibles. Chaque langue contient également des informations sur le nombre total de mots traduisibles et une vue d'ensemble de la quantité de contenu qui a été traduite et approuvée dans une langue spécifique.
 
@@ -32,7 +32,7 @@ Ouvrez la langue dans laquelle vous souhaitez traduire pour voir la liste des fi
 
 ![Liste des langues sur Crowdin](./list-of-languages.png)
 
-### Trouvez un document sur lequel travailler \{#find-document}
+### Trouvez un document sur lequel travailler {#find-document}
 
 Le contenu du site web est divisé en un certain nombre de documents et d'ensembles de contenus. Vous pouvez vérifier la progression de chaque document sur la droite. Si la progression de la traduction est inférieure à 100 %, n'hésitez pas à y contribuer !
 
@@ -46,7 +46,7 @@ Nous vous encourageons à traduire dans cet ordre numérique (1 → 2 → 3 → 
 
 [En savoir plus sur les compartiments de contenu ethereum.org](/contributing/translation-program/content-buckets/)
 
-### Traduire \{#translate}
+### Traduire {#translate}
 
 Après avoir sélectionné le dossier que vous souhaitez traduire, il s'ouvrira dans l'éditeur en ligne. Si vous n'avez jamais utilisé Crowdin auparavant, vous pouvez utiliser ce guide rapide pour passer en revue les bases.
 
@@ -74,7 +74,7 @@ En utilisant les boutons situés en haut, vous pouvez également accéder à la 
 
 Vous voulez en savoir plus ? N'hésitez pas à consulter la [documentation sur l'utilisation de l'éditeur en ligne Crowdin](https://support.crowdin.com/online-editor/)
 
-### Processus de révision \{#review-process}
+### Processus de révision {#review-process}
 
 Une fois que vous avez terminé la traduction (c'est-à-dire que tous les fichiers pour un ensemble de contenu affichent une progression à 100 %), notre service de traduction professionnel examinera (et, éventuellement, modifiera) le contenu. Une fois la révision terminée (c'est-à-dire que la progression de la révision est de 100 %), nous ajouterons le contenu sur le site web.
 
@@ -82,7 +82,7 @@ Une fois que vous avez terminé la traduction (c'est-à-dire que tous les fichie
   Veuillez ne pas utiliser de traduction automatique pour traduire le projet. Toutes les traductions seront examinées avant d'être ajoutées au site web. S'il apparaît que les traductions que vous proposez sont traduites automatiquement, elles seront rejetées et les contributeurs qui utilisent souvent la traduction automatique seront retirés du projet.
 </InfoBanner>
 
-### Nous contacter \{#get-in-touch}
+### Nous contacter {#get-in-touch}
 
 Vous avez d'autres questions ? Ou souhaitez-vous collaborer avec notre équipe et d'autres traducteurs ? Envoyez un message dans le canal #translations sur notre [serveur Discord ethereum.org](/discord/)
 

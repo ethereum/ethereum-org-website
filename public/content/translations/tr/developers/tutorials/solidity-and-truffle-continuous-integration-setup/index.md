@@ -19,7 +19,7 @@ Truffle ile sürekli entegrasyon (CI), temel bir test setini uyguladıktan sonra
 
 Sürekli entegrasyonumuzu kurmak için [Truffle Metacoin Box](https://www.trufflesuite.com/boxes/metacoin) kullanacağız. Travis CI veya Circle CI'yi seçebilirsiniz.
 
-## Travis CI kurulumu \{#setting-up-travis-ci}
+## Travis CI kurulumu {#setting-up-travis-ci}
 
 [Travis CI](https://travis-ci.org/) eklemek basittir. Projenin kök dizinine yalnızca bir `.travis.yml` yapılandırma dosyası eklemeniz gerekecek:
 
@@ -39,7 +39,7 @@ script:
 
 Şimdilik çok karmaşıklaştırmıyoruz ve yalnızca Truffle birim testlerini yürüten test komut dosyasını çalıştırıyoruz. Ancak bir sorunumuz var, Travis CI makinesinde kullanılabilir bir blok zinciri olmayacak. Bunun için basit bir düzeltme, `npm install ganache-cli` ve bunu testten önce çalıştırmaktır. Bunu npx `ganache-cli > /dev/null` satırıyla bir bash komut dosyası ekleyerek `npx truffle test` çağrısından önce yapabilirsiniz. [Tam örnek bash komut dosyası](https://github.com/gorgos/Truffle-CI-Example/blob/master/scripts/run_tests.sh).
 
-## Circle CI kurulumu \{#setting-up-circle-ci}
+## Circle CI kurulumu {#setting-up-circle-ci}
 
 [CircleCi](https://circleci.com/) daha uzun bir yapılandırma dosyası gerektirir. Ek [`npm ci`](https://docs.npmjs.com/cli/ci.html) komutu Travis'te otomatik olarak yapılır. Bağımlılıkları `npm install`'dan daha hızlı ve daha güvenli kurar. Testlerden önce ganache-cli'yi çalıştırmak için yine Travis versiyonundaki aynı komut dosyasını kullanıyoruz.
 
@@ -97,18 +97,18 @@ workflows:
             - dependencies
 ```
 
-## Eth-gas-reporter eklentisini ekleme \{#adding-the-eth-gas-reporter-plugin}
+## Eth-gas-reporter eklentisini ekleme {#adding-the-eth-gas-reporter-plugin}
 
 Eth-gas-reporter eklentisi, akıllı sözleşme fonksiyonlarınızın gaz maliyetlerini takip etmek için oldukça kullanışlıdır. CI'nizde bulundurmak, çekme talepleri eklerken farkları göstermek için ayrıca yararlı olacaktır.
 
-### 1. Adım: Eth-gas-reporter eklentisini ve kod kontrollerini kurun \{#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
+### 1. Adım: Eth-gas-reporter eklentisini ve kod kontrollerini kurun {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
 
 ```bash
 npm install --save-dev eth-gas-reporter
 npm install --save-dev @codechecks/client
 ```
 
-### 2. Adım: Eklentiyi truffle-config.js içindeki mocha ayarlarına ekleyin \{#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
+### 2. Adım: Eklentiyi truffle-config.js içindeki mocha ayarlarına ekleyin {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
 
 [Seçeneklere bakın](https://github.com/cgewecke/eth-gas-reporter#options)
 
@@ -124,21 +124,21 @@ module.exports = {
 };
 ```
 
-### 3. Adım: Projenizin kök dizinine bir codechecks.yml ekleyin \{#step-3-add-a-codechecksyml-to-your-projects-root-directory}
+### 3. Adım: Projenizin kök dizinine bir codechecks.yml ekleyin {#step-3-add-a-codechecksyml-to-your-projects-root-directory}
 
 ```yml
 checks:
   - name: eth-gas-reporter/codechecks
 ```
 
-### 4. Adım: Test komutundan sonra kod kontrollerini çalıştırın \{#step-4-run-codechecks-after-the-test-command}
+### 4. Adım: Test komutundan sonra kod kontrollerini çalıştırın {#step-4-run-codechecks-after-the-test-command}
 
 ```bash
 - npm test
 - npx codechecks
 ```
 
-### 5. Adım: Bir Codechecks hesabı oluşturun \{#step-5-create-a-codechecks-account}
+### 5. Adım: Bir Codechecks hesabı oluşturun {#step-5-create-a-codechecks-account}
 
 - [Codechecks](http://codechecks.io/) ile bir hesap oluşturun.
 - GitHub deposunu buna ekleyin.
@@ -149,17 +149,17 @@ Bu kadar. Artık çekme talebinizin gaz maliyetlerindeki değişiklikler hakkın
 
 ![Örnek gaz raporu](./gas-reports.png)
 
-## Solidity-coverage eklentisini ekleme \{#adding-the-solidity-coverage-plugin}
+## Solidity-coverage eklentisini ekleme {#adding-the-solidity-coverage-plugin}
 
 solidity-coverage eklentisi ile, testlerinizin kod yollarınızın ne kadarını kapsadığını kontrol edebilirsiniz. Bunu CI'ınıza eklemek, kurulduktan sonra kullanımını çok kolay hâle getirir.
 
-### 1. Adım: Bir metacoin projesi oluşturun ve kapsama araçlarını kurun \{#step-1-create-a-metacoin-project-and-install-coverage-tools}
+### 1. Adım: Bir metacoin projesi oluşturun ve kapsama araçlarını kurun {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
 ```bash
 npm install --save-dev truffle coveralls solidity-coverage
 ```
 
-### 2. Adım: truffle-config.js'deki eklentiler dizisine solidity-coverage ekleyin \{#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}
+### 2. Adım: truffle-config.js'deki eklentiler dizisine solidity-coverage ekleyin {#step-2-add-solidity-coverage-to-the-plugins-array-in-truffle-configjs}
 
 ```js
 module.exports = {
@@ -168,7 +168,7 @@ module.exports = {
 }
 ```
 
-### 3. Adım: Coverage komutlarını .travis.yml veya Circle CI config.yml dosyasına ekleyin \{#step-3-add-the-coverage-commands-to-the-travisyml-or-circle-ci-configyml}
+### 3. Adım: Coverage komutlarını .travis.yml veya Circle CI config.yml dosyasına ekleyin {#step-3-add-the-coverage-commands-to-the-travisyml-or-circle-ci-configyml}
 
 ```bash
 - npx truffle run coverage
@@ -177,7 +177,7 @@ module.exports = {
 
 Solidity coverage, kendi ganache-cli'sini başlatır, bu yüzden bu konuda endişelenmemize gerek yok. Yine de normal test komutunu değiştirmeyin, coverage'ın ganache-cli'si farklı şekilde çalışır ve bu nedenle düzenli birim testleri çalıştırmanın yerini alamaz.
 
-### 4. Adım: Depoyu coveralls'a ekleyin \{#step-4-add-repository-to-coveralls}
+### 4. Adım: Depoyu coveralls'a ekleyin {#step-4-add-repository-to-coveralls}
 
 - [Coveralls](https://coveralls.io/) ile bir hesap oluşturun.
 - GitHub deposunu buna ekleyin.
@@ -185,7 +185,7 @@ Solidity coverage, kendi ganache-cli'sini başlatır, bu yüzden bu konuda endi�
 
 ![Örnek coverall](./coverall.png)
 
-## Diğer fikirler \{#further-ideas}
+## Diğer fikirler {#further-ideas}
 
 - [MythX](https://mythx.io/): MythX ile akıllı sözleşme güvenliğinizi otomatik olarak analiz edebilirsiniz. Yani [bunu CI'nize eklemek](https://blog.mythx.io/howto/mythx-and-continuous-integration-part-1-circleci/) gayet mantıklıdır.
 - [Linting](https://wikipedia.org/wiki/Lint_%28software%29): İyi kod, linting araçlarıyla bir dereceye kadar zorlanabilir. [Eslint](https://eslint.org/) JavaScript ile harika çalışır ve [ kurulumu kolaydır](https://eslint.org/docs/user-guide/getting-started). [Solhint](https://protofire.github.io/solhint/) ise Solidity için kullanılabilir.

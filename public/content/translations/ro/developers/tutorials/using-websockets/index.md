@@ -18,7 +18,7 @@ published: 2020-12-01
 
 Acesta este un ghid de bază pentru a folosi WebSockets și Alchemy pentru a face cereri către blockchain-ul Ethereum.
 
-## WebSockets vs. HTTP \{#websockets-vs-http}
+## WebSockets vs. HTTP {#websockets-vs-http}
 
 Spre deosebire de HTTP, cu WebSockets nu este nevoie să faceți încontinuu cereri când doriți informații precise. WebSockets menține o conexiune de rețea pentru tine (dacă este făcută corect) și ascultă dacă apar modificări.
 
@@ -26,7 +26,7 @@ Ca și în cazul oricărei conexiuni la rețea, nu ar trebui să presupunem că 
 
 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) adaugă automat manipularea pentru eșecuri WebSocket și reîncercări fără nici o configurație necesară.
 
-## Încearcă-l \{#try-it-out}
+## Încearcă-l {#try-it-out}
 
 Cel mai simplu mod de a testa WebSockets este de a instala un instrument de linie de comandă pentru a face cereri WebSocket, cum ar fi [wscat](https://github.com/websockets/wscat). Folosind wscat, puteți trimite cereri după cum urmează:
 
@@ -41,7 +41,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ```
 
-## Cum se utilizează WebSockets \{#how-to-use-websockets}
+## Cum se utilizează WebSockets {#how-to-use-websockets}
 
 Pentru a începe, deschideți un WebSocket utilizând URL-ul WebSocket pentru aplicația dvs. Puteți găsi URL-ul WebSocket al aplicației dvs. deschizând pagina aplicației în [tabloul dvs. de bord](https://dashboard.alchemyapi.io/) și făcând clic pe „View Key” („Vizualizare cheie”). Rețineți că URL-ul aplicației dvs. pentru WebSockets este diferit de URL-ul pentru cererile HTTP, dar ambele pot fi găsite făcând clic pe „View Key” („Vizualizare cheie”).
 
@@ -49,7 +49,7 @@ Pentru a începe, deschideți un WebSocket utilizând URL-ul WebSocket pentru ap
 
 Oricare dintre API-urile enumerate în [Alchemy API de referință](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) poate fi folosit prin intermediul WebSocket. Pentru aceasta, folosește aceleași elemente care ar fi trimise prin metoda de cereri POST suportată de HTTP, dar trimite-le prin WebSocket.
 
-## Cu Web3 \{#with-web3}
+## Cu Web3 {#with-web3}
 
 Tranziția la WebSockets în timpul utilizării unei biblioteci client ca Web3 este simplă. Pur și simplu transmiți URL-ul WebSocket în loc de HTTP atunci când creezi o instanță a clientul tău Web3. De exemplu:
 
@@ -59,26 +59,26 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## Abonament API \{#subscription-api}
+## Abonament API {#subscription-api}
 
 Când vă conectați printr-un WebSocket, puteți utiliza două metode suplimentare: `eth_subscribe` și `eth_unsubscribe`. Aceste metode îți vor permite să asculți anumite evenimente și să fii notificat imediat.
 
-### `eth_subscribe` \{#eth-subscribe}
+### `eth_subscribe` {#eth-subscribe}
 
 Creează un nou abonament pentru evenimente specificate. [Aflați mai multe despre `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
 
-#### Parametri \{#parameters}
+#### Parametri {#parameters}
 
 1. Tipuri de abonamente
 2. Parametri opționali
 
 Primul argument specifică tipul de eveniment pentru care să asculte. Al doilea argument conține opțiuni suplimentare care depind de primul argument. Diferitele tipuri de descriere, opțiunile lor și conținutul de evenimente pe care le includ sunt descrise mai jos.
 
-#### Returnări \{#returns}
+#### Returnări {#returns}
 
 ID-ul abonamentului: acest ID va fi atașat la orice evenimente primite și poate fi utilizat și pentru anularea abonamentului folosind `eth_unsubscribe`.
 
-#### Evenimente de abonament \{#subscription-events}
+#### Evenimente de abonament {#subscription-events}
 
 Cât timp abonamentul este activ, veți primi evenimente care sunt obiecte cu următoarele câmpuri:
 
@@ -88,7 +88,7 @@ Cât timp abonamentul este activ, veți primi evenimente care sunt obiecte cu ur
   - `subscription`: ID-ul abonamentului returnat de apelul `eth_subscription` care a creat acest abonament.
   - `result`: un obiect al cărui conținut variază în funcție de tipul abonamentului.
 
-#### Tipuri de abonamente \{#subscription-types}
+#### Tipuri de abonamente {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
@@ -213,7 +213,7 @@ Exemplu:
 
 ```
 
-### `eth_unsubscribe` \{#eth-unsubscribe}
+### `eth_unsubscribe` {#eth-unsubscribe}
 
 Anulează un abonament existent, astfel încât să nu mai fie trimise alte evenimente.
 

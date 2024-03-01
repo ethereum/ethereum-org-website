@@ -5,7 +5,7 @@ lang: zh
 sidebarDepth: 1
 ---
 
-# 以太坊的历史 \{#the-history-of-ethereum}
+# 以太坊的历史 {#the-history-of-ethereum}
 
 所有主要里程碑、分叉和更新以太坊区块链的时间表
 
@@ -27,13 +27,13 @@ sidebarDepth: 1
 
 <Divider />
 
-## 2023 年 \{#2023}
+## 2023 年 {#2023}
 
-### 上海升级 \{#shanghai}
+### 上海升级 {#shanghai}
 
 <NetworkUpgradeSummary name="shanghai" />
 
-#### 摘要 \{#shanghai-summary}
+#### 摘要 {#shanghai-summary}
 
 上海升级将质押提款引入执行层。 上海升级与卡佩拉升级同时进行，使区块能够接受提款操作，因此质押人可以将以太币从信标链提取到执行层。
 
@@ -55,11 +55,11 @@ sidebarDepth: 1
 
 ---
 
-### 卡佩拉升级 \{#capella}
+### 卡佩拉升级 {#capella}
 
 <NetworkUpgradeSummary name="capella" />
 
-#### 摘要 \{#capella-summary}
+#### 摘要 {#capella-summary}
 
 卡佩拉升级是共识层（信标链）的第三次重大升级，实现了质押提款。 卡佩拉与上海同步升级执行层并启用了质押提款功能。
 
@@ -72,13 +72,13 @@ sidebarDepth: 1
 
 <Divider />
 
-## 2022 年 \{#2022}
+## 2022 年 {#2022}
 
-### 巴黎升级（合并） \{#paris}
+### 巴黎升级（合并） {#paris}
 
 <NetworkUpgradeSummary name="paris" />
 
-#### 摘要 \{#paris-summary}
+#### 摘要 {#paris-summary}
 
 巴黎升级是由于工作量证明区块链超过了[终端总难度](/glossary/#terminal-total-difficulty) 58750000000000000000000 而触发的。 这发生在 2022 年 9 月 15 日区块 15537393 上，并在下一个区块处触发了巴黎升级。 巴黎升级就是[合并](/roadmap/merge/)过渡，以太坊的主要功能结束了[工作量证明](/developers/docs/consensus-mechanisms/pow)挖矿算法及相关共识逻辑并启动了[权益证明](/developers/docs/consensus-mechanisms/pos)。 巴黎升级本身是对[执行客户端](/developers/docs/nodes-and-clients/#execution-clients)的升级（相当于共识层上的 Bellatrix 升级），让执行客户端能够从与其连接的[共识客户端](/developers/docs/nodes-and-clients/#consensus-clients)接受指令。 这需要激活一组新的内部应用程序接口方法，统称为[引擎应用程序接口](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)。 该升级可能是自[家园](#homestead)以来以太坊历史上最重要的升级！
 
@@ -97,11 +97,11 @@ sidebarDepth: 1
 
 ---
 
-### Bellatrix 升级 \{#bellatrix}
+### Bellatrix 升级 {#bellatrix}
 
 <NetworkUpgradeSummary name="bellatrix" />
 
-#### 摘要 \{#bellatrix-summary}
+#### 摘要 {#bellatrix-summary}
 
 Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，让信标链为[合并](/roadmap/merge/)做好准备。 它将验证者由于怠惰及进行了可被罚没的行为而受到的惩罚提高到其全部价值。 Bellatrix 升级还包括对分叉选择规则的更新，让信标链为合并以及从最后一个工作量证明区块过渡到第一个权益证明区块做好准备。 这包括让共识客户端意识到[终端总难度](/glossary/#terminal-total-difficulty) 58750000000000000000000。
 
@@ -109,11 +109,11 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 灰色冰川升级 \{#gray-glacier}
+### 灰色冰川升级 {#gray-glacier}
 
 <NetworkUpgradeSummary name="grayGlacier" />
 
-#### 摘要 \{#gray-glacier-summary}
+#### 摘要 {#gray-glacier-summary}
 
 灰色冰川网络升级将[难度炸弹](/glossary/#difficulty-bomb)推迟了三个月。 这是此次升级中引入的唯一变更，本质上类似于[箭形冰川](#arrow-glacier)和[缪尔冰川](#muir-glacier)升级。 [拜占庭](#byzantium)、[君士坦丁堡](#constantinople)和[伦敦](#london)网络升级也做了类似的变更。
 
@@ -131,13 +131,13 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 <Divider />
 
-## 2021 年 \{#2021}
+## 2021 年 {#2021}
 
-### 箭形冰川升级 \{#arrow-glacier}
+### 箭形冰川升级 {#arrow-glacier}
 
 <NetworkUpgradeSummary name="arrowGlacier" />
 
-#### 摘要 \{#arrow-glacier-summary}
+#### 摘要 {#arrow-glacier-summary}
 
 箭形冰川网络升级将[难度炸弹](/glossary/#difficulty-bomb)推迟了数月。 这是此次升级中引入的唯一变更，本质上类似于[缪尔冰川](#muir-glacier)升级。 [拜占庭](#byzantium)、[君士坦丁堡](#constantinople)和[伦敦](#london)网络升级也做了类似的更改。
 
@@ -156,17 +156,17 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 天鹰座升级 \{#altair}
+### 天鹰座升级 {#altair}
 
 <NetworkUpgradeSummary name="altair" />
 
-#### 摘要 \{#altair-summary}
+#### 摘要 {#altair-summary}
 
 天鹰座升级是计划的第一次[信标链](/roadmap/beacon-chain)升级。 它增加了对“同步委员会”的支持—支持轻客户端，在向合并进展的过程中，增加了对验证者怠惰及可被罚没行为的惩罚。
 
 - [阅读天鹰座升级规范](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} me="0.5rem" />有趣的事实！ \{#altair-fun-fact}
+#### <emoji text=":tada:" size={1} me="0.5rem" />有趣的事实！ {#altair-fun-fact}
 
 天鹰座升级是第一个有确切发布时间的重大网络升级。 之前的每一次升级均基于一个已经在工作量证明链上申报过的区块编号，而该链上的区块时间各不相同。 信标链不需要解析工作量证明，而是在一个基于时间、由 32 个 12 秒“时隙”组成的时段系统上运作。在这个系统上，验证者可以提出区块。 这就是为什么我们能准确知晓达到时段 74,240 以及天鹰座升级启动的时间！
 
@@ -174,11 +174,11 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 伦敦升级 \{#london}
+### 伦敦升级 {#london}
 
 <NetworkUpgradeSummary name="london" />
 
-#### 摘要 \{#london-summary}
+#### 摘要 {#london-summary}
 
 伦敦升级引入了 [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559)，对交易费市场进行了改革，同时还对燃料费的退款处理方式和[冰河世纪](/glossary/#ice-age)日程进行了修改。
 
@@ -202,11 +202,11 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 柏林升级 \{#berlin}
+### 柏林升级 {#berlin}
 
 <NetworkUpgradeSummary name="berlin" />
 
-#### 摘要 \{#berlin-summary}
+#### 摘要 {#berlin-summary}
 
 柏林升级优化了某些以太坊虚拟机操作的燃料成本，并增加了对多种交易类型的支持。
 
@@ -228,13 +228,13 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 <Divider />
 
-## 2020 年 \{#2020}
+## 2020 年 {#2020}
 
-### 信标链创世块 \{#beacon-chain-genesis}
+### 信标链创世块 {#beacon-chain-genesis}
 
 <NetworkUpgradeSummary name="beaconChainGenesis" />
 
-#### 摘要 \{#beacon-chain-genesis-summary}
+#### 摘要 {#beacon-chain-genesis-summary}
 
 [信标链](/roadmap/beacon-chain/)需要 16384 个存储了 32 个质押以太币的帐户，以确保安全上线。 这发生于 2020 年 11 月 27 日，意味着信标链在 2020 年 12 月 1 日开始生产区块。 这是实现[以太坊愿景](/roadmap/vision/)的第一步，十分重要。
 
@@ -246,11 +246,11 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 已部署质押存款合约 \{#staking-deposit-contract}
+### 已部署质押存款合约 {#staking-deposit-contract}
 
 <NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
-#### 摘要 \{#deposit-contract-summary}
+#### 摘要 {#deposit-contract-summary}
 
 质押存款合约将[质押](/glossary/#staking)引入以太坊生态系统。 虽然是一个[主网](/glossary/#mainnet)合约，但它直接影响到[信标链](/roadmap/beacon-chain/)的发布时间线，而后者是[以太坊升级](/roadmap/)的重要部分。
 
@@ -262,11 +262,11 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 缪尔冰川升级 \{#muir-glacier}
+### 缪尔冰川升级 {#muir-glacier}
 
 <NetworkUpgradeSummary name="muirGlacier" />
 
-#### 摘要 \{#muir-glacier-summary}
+#### 摘要 {#muir-glacier-summary}
 
 缪尔冰川分叉使[难度炸弹](/glossary/#difficulty-bomb)延迟。 增加[工作量证明](/developers/docs/consensus-mechanisms/pow/)共识机制的区块难度可能会增加发送交易和使用去中心化应用程序的等待时间，从而降低以太坊的可用性。
 
@@ -285,13 +285,13 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 <Divider />
 
-## 2019 年 \{#2019}
+## 2019 年 {#2019}
 
-### 伊斯坦布尔分叉 \{#istanbul}
+### 伊斯坦布尔分叉 {#istanbul}
 
 <NetworkUpgradeSummary name="istanbul" />
 
-#### 摘要 \{#istanbul-summary}
+#### 摘要 {#istanbul-summary}
 
 伊斯坦布尔分叉：
 
@@ -320,11 +320,11 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 君士坦丁堡分叉 \{#constantinople}
+### 君士坦丁堡分叉 {#constantinople}
 
 <NetworkUpgradeSummary name="constantinople" />
 
-#### 摘要 \{#constantinople-summary}
+#### 摘要 {#constantinople-summary}
 
 君士坦丁堡分叉：
 
@@ -349,13 +349,13 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 <Divider />
 
-## 2017 年 \{#2017}
+## 2017 年 {#2017}
 
-### 拜占庭升级 \{#byzantium}
+### 拜占庭升级 {#byzantium}
 
 <NetworkUpgradeSummary name="byzantium" />
 
-#### 摘要 \{#byzantium-summary}
+#### 摘要 {#byzantium-summary}
 
 拜占庭分叉：
 
@@ -386,13 +386,13 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 <Divider />
 
-## 2016 年 \{#2016}
+## 2016 年 {#2016}
 
-### Spurious Dragon \{#spurious-dragon}
+### Spurious Dragon {#spurious-dragon}
 
 <NetworkUpgradeSummary name="spuriousDragon" />
 
-#### 摘要 \{#spurious-dragon-summary}
+#### 摘要 {#spurious-dragon-summary}
 
 伪龙分叉是对拒绝服务 (DoS) 网络攻击（2016 年 9 月/10 月）的第二个响应，包括：
 
@@ -417,11 +417,11 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 橘子口哨分叉 \{#tangerine-whistle}
+### 橘子口哨分叉 {#tangerine-whistle}
 
 <NetworkUpgradeSummary name="tangerineWhistle" />
 
-#### 摘要 \{#tangerine-whistle-summary}
+#### 摘要 {#tangerine-whistle-summary}
 
 橘子口哨分叉是对拒绝服务 (DoS) 网络攻击（2016 年 9 月/10 月）的第一个响应，包括：
 
@@ -442,11 +442,11 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 去中心化自治组织分叉 \{#dao-fork}
+### 去中心化自治组织分叉 {#dao-fork}
 
 <NetworkUpgradeSummary name="daoFork" />
 
-#### 摘要 \{#dao-fork-summary}
+#### 摘要 {#dao-fork-summary}
 
 去中心化自治组织分叉是为了响应 [2016 DAO 攻击](https://www.coindesk.com/learn/understanding-the-dao-attack/)，当时一个不安全的[去中心化自治组织](/glossary/#dao)合约被黑客盗走了超过 360 万个以太币。 此分叉将资金从有问题的合约转移到一个[新合约](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754)，新合约只有一个功能：提款。 任何损失了资金的人都可以在他们的钱包中提取以太币，每 100 个 DAO 代币 1 个以太币。
 
@@ -458,11 +458,11 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 家园分叉 \{#homestead}
+### 家园分叉 {#homestead}
 
 <NetworkUpgradeSummary name="homestead" />
 
-#### 摘要 \{#homestead-summary}
+#### 摘要 {#homestead-summary}
 
 家园分叉展望未来， 包括若干协议修改和联网变更，使以太坊能够进一步进行网络升级。
 
@@ -482,13 +482,13 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 <Divider />
 
-## 2015 年 \{#2015}
+## 2015 年 {#2015}
 
-### 边境解冻分叉 \{#frontier-thawing}
+### 边境解冻分叉 {#frontier-thawing}
 
 <NetworkUpgradeSummary name="frontierThawing" />
 
-#### 摘要 \{#frontier-thawing-summary}
+#### 摘要 {#frontier-thawing-summary}
 
 边境解冻分叉提高了每个[区块](/glossary/#block) 5,000 单位[燃料](/glossary/#gas)的限制，并将默认燃料价格设为 51 [gwei](/glossary/#gwei)。 这样便能进行交易 - 交易需要 21,000 单位燃料。 而引入[难度炸弹](/glossary/#difficulty-bomb)是为了确保未来硬分叉到[权益证明](/glossary/#pos)。
 
@@ -497,11 +497,11 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 边境 \{#frontier}
+### 边境 {#frontier}
 
 <NetworkUpgradeSummary name="frontier" />
 
-#### 摘要 \{#frontier-summary}
+#### 摘要 {#frontier-summary}
 
 边境是以太坊最初的版本，但在上面能做的事情很少。 该版本在奥利匹克测试阶段成功完成之后推出。 它面向的是技术用户，特别是开发者。 [区块](/glossary/#block)有 5,000 单位的[燃料](/glossary/#gas)限制。 此“解冻”期使矿工能够开始操作，并使早期采用者能够有足够的时间来安装客户端。
 
@@ -509,9 +509,9 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 <Divider />
 
-## 2014 年 \{#2014}
+## 2014 年 {#2014}
 
-### 以太币销售 \{#ether-sale}
+### 以太币销售 {#ether-sale}
 
 <NetworkUpgradeSummary name="etherSale" />
 
@@ -521,7 +521,7 @@ Bellatrix 升级是计划的第二次[信标链](/roadmap/beacon-chain)升级，
 
 ---
 
-### 黄皮书已发布 \{#yellowpaper}
+### 黄皮书已发布 {#yellowpaper}
 
 <NetworkUpgradeSummary name="yellowpaperRelease" />
 
@@ -531,9 +531,9 @@ Gavin Wood 博士撰写的黄皮书，关于以太坊协议的技术定义。
 
 <Divider />
 
-## 2013 年 \{#2013}
+## 2013 年 {#2013}
 
-### 白皮书已发布 \{#whitepaper}
+### 白皮书已发布 {#whitepaper}
 
 <NetworkUpgradeSummary name="whitepaperRelease" />
 

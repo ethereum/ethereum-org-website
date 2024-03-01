@@ -15,7 +15,7 @@ summaryPoint4: Połączenie zmniejszyło zużycie energii przez Ethereum o okoł
   Połączenie zostało przeprowadzone w dniu 15 września 2022 r. Zakończyło to przejście Ethereum na konsensus proof-of-stake i oficjalną rezygnację z mechanizmu proof-of-work, skutkujące zmniejszeniem zużycia energii o około 99,95%.
 </UpgradeStatus>
 
-## Czym było Połączenie? \{#what-is-the-merge}
+## Czym było Połączenie? {#what-is-the-merge}
 
 Połączenie to scalenie pierwotnej warstwy wykonania Ethereum (sieci głównej, która istnieje od [genezy](/history/#frontier)) z nową warstwą konsensusu proof-of-stake, łańcuchem śledzącym. Wyeliminowało to potrzebę energochłonnego wydobycia, a zamiast tego umożliwiło zabezpieczenie sieci za pomocą stakowanych ETH. To był naprawdę ekscytujący krok w realizacji wizji Ethereum — większej skalowalności, bezpieczeństwa i zrównoważenia ekologicznego.
 
@@ -25,7 +25,7 @@ Początkowo [łańcuch śledzący](/roadmap/beacon-chain/) wdrażano oddzielnie 
 
 Wyobraź sobie, że Ethereum to statek kosmiczny, który wystartował, zanim był gotowy do podróży międzygwiezdnej. Dzięki łańcuchowi śledzącemu społeczność zbudowała nowy silnik i wzmocniony kadłub. Po intensywnych testach nadszedł czas, aby w czasie jazdy zamienić stary silnik na nowy. W ten sposób nowy, wydajniejszy silnik został zainstalowany w działającej maszynie, która dzięki temu nabrała kosmicznej prędkości.
 
-## Łączenie z siecią główną \{#merging-with-mainnet}
+## Łączenie z siecią główną {#merging-with-mainnet}
 
 Mechanizm proof-of-work zabezpieczał sieć główną Ethereum od chwili jej genezy aż do Połączenia. Dzięki temu w lipcu 2015 roku powstała sieć blockchain Ethereum, do której wszyscy przywykliśmy, ze wszystkimi znanymi nam funkcjami — transakcjami, inteligentnymi kontraktami, kontami itd.
 
@@ -41,7 +41,7 @@ Podczas Połączenia nie została utracona żadna historia. Gdy sieć główna p
 Przejście na proof-of-stake zmieniło sposób emisji etheru. Dowiedz się więcej o <a href="/roadmap/merge/issuance/">emisji etheru przed i po Połączeniu</a>.
 </InfoBanner>
 
-### Użytkownicy i posiadacze \{#users-holders}
+### Użytkownicy i posiadacze {#users-holders}
 
 **Połączenie nie zmieniło niczego dla posiadaczy/użytkowników.**
 
@@ -51,7 +51,7 @@ Mimo przejścia z proof-of-work cała historia Ethereum od genezy pozostała nie
 
 [Więcej o zabezpieczeniach Ethereum](/security/#eth2-token-scam)
 
-### Operatorzy węzłów i deweloperzy aplikacji \{#node-operators-dapp-developers}
+### Operatorzy węzłów i deweloperzy aplikacji {#node-operators-dapp-developers}
 
 {
 <ExpandableCard
@@ -109,15 +109,15 @@ Więcej informacji znajdziesz w tym wpisie Tima Beiko [Jak Połączenie wpływa 
 </ExpandableCard>
 }
 
-## Połączenie i zużycie energii \{#merge-and-energy}
+## Połączenie i zużycie energii {#merge-and-energy}
 
 Połączenie stanowi koniec stosowania mechanizmu proof-of-work w sieci Ethereum i rozpoczęcie ery bardziej zrównoważonego ekologicznie Ethereum. Zużycie energii przez sieć Ethereum spadło o około 99,95%, dzięki czemu Ethereum stało się ekologiczną siecią blockchain. Dowiedz się więcej o [zużyciu energii przez Ethereum](/energy-consumption/).
 
-## Połączenie i skalowanie \{#merge-and-scaling}
+## Połączenie i skalowanie {#merge-and-scaling}
 
 Połączenie stwarza również miejsce dla dalszych uaktualnień skalowalności, które nie są możliwe w ramach mechanizmu proof-of-work, co przybliży Ethereum o krok do osiągnięcia pełnej skali, bezpieczeństwa i zrównoważenia ekologicznego, o których mowa w [wizji Ethereum](/roadmap/vision/).
 
-## Błędne przekonania o Połączeniu \{#misconceptions}
+## Błędne przekonania o Połączeniu {#misconceptions}
 
 {
 <ExpandableCard
@@ -193,7 +193,7 @@ APR jest celowo dynamiczna, co pozwala rynkowi stakerów wyważyć, jakiej zapł
 </ExpandableCard>
 }
 
-## Co się stało z „Eth2”? \{#eth2}
+## Co się stało z „Eth2”? {#eth2}
 
 Termin „Eth2” został odrzucony. Po połączeniu „Eth1” i „Eth2” w jeden łańcuch nie trzeba już rozróżniać dwóch sieci Ethereum — jest tylko jedna sieć Ethereum.
 
@@ -206,11 +206,11 @@ Ta terminologia aktualizuje tylko konwencje nazewnictwa; nie zmienia celów ani 
 
 [Dowiedz się więcej o zmianie nazwy „Eth2”](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## Relacje między uaktualnieniami \{#relationship-between-upgrades}
+## Relacje między uaktualnieniami {#relationship-between-upgrades}
 
 Wszystkie uaktualnienia Ethereum są poniekąd wzajemnie powiązane. Podsumujmy więc, jak Połączenie ma się do innych uaktualnień.
 
-### Połączenie i łańcuch śledzący \{#merge-and-beacon-chain}
+### Połączenie i łańcuch śledzący {#merge-and-beacon-chain}
 
 Połączenie reprezentuje formalne przyjęcie łańcucha śledzącego jako nowej warstwy konsensusu w stosunku do pierwotnej warstwy wykonania sieci głównej. Od czasu Połączenia walidatorzy są przypisani do bezpiecznej sieci głównej Ethereum, a wydobywanie na [proof-of-work](/developers/docs/consensus-mechanisms/pow/) nie jest już prawidłowym sposobem produkcji bloków.
 
@@ -220,13 +220,13 @@ Bloki są natomiast proponowane przez węzły walidujące, które stakują ETH w
   Łańcuch śledzący
 </ButtonLink>
 
-### Połączenie i uaktualnienie Shanghai \{#merge-and-shanghai}
+### Połączenie i uaktualnienie Shanghai {#merge-and-shanghai}
 
 W celu zapewnienia uproszczenia i maksymalnego skupienia się na udanym przejściu na proof-of-stake uaktualnienie Połączenie nie zawierało pewnych oczekiwanych funkcji, takich jak możliwość wypłaty stakowanych ETH. Planuje się, że wdrożenie uaktualnienia Shanghai nastąpi po Połączeniu i umożliwi wypłaty stakerom.
 
 Bądź na bieżąco dzięki [zagadnieniu planowania uaktualnienia Shanghai w serwisie GitHub](https://github.com/ethereum/pm/issues/450) lub [blogowi poświęconemu badaniom i rozwojowi EF](https://blog.ethereum.org/category/research-and-development/). Można też dowiedzieć się więcej o tym, [Co się dzieje po Połączeniu](https://youtu.be/7ggwLccuN5s?t=101), z prezentacji Vitalika podczas wydarzenia ETHGlobal w kwietniu 2021 roku.
 
-### Połączenie i sharding \{#merge-and-data-sharding}
+### Połączenie i sharding {#merge-and-data-sharding}
 
 Pierwotnie planowano prace nad shardingiem przed Połączeniem, aby rozwiązać problem skalowalności. Jednak wraz z rozwojem [rozwiązań skalujących warstwę 2](/warstwa-2/) priorytet przesunął się na zamianę mechanizmu proof-of-work na proof-of-stake.
 
@@ -236,7 +236,7 @@ Plany dotyczące shardingu szybko ewoluują, ale ze względu na rozwój i sukces
   Sharding
 </ButtonLink>
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 <MergeArticleList />
 

@@ -22,11 +22,11 @@ To jest przewodnik dla początkujących po rozpoczęciu programowania w Ethereum
 
 Zarejestruj się w Alchemy, aby napisać swój pierwszy skrypt web3! Nie jest wymagane doświadczenie w programowaniu blockchain!
 
-## 1\. Zarejestruj się na darmowym koncie Alchemy \{#sign-up-for-a-free-alchemy-account}
+## 1\. Zarejestruj się na darmowym koncie Alchemy {#sign-up-for-a-free-alchemy-account}
 
 Tworzenie konta z Alchemy jest łatwe, [zarejestruj się za darmo tutaj](https://auth.alchemyapi.io/signup).
 
-## 2\. Utwórz aplikację Alchemy \{#create-an-alchemy-app}
+## 2\. Utwórz aplikację Alchemy {#create-an-alchemy-app}
 
 Aby korzystać z produktów Alchemy, potrzebujesz klucza API do uwierzytelnienia swoich żądań.
 
@@ -44,7 +44,7 @@ Możesz również ściągnąć istniejące klucze API, umieszczając kursor mysz
 
 ![Gif pokazuje użytkownikowi jak ściągnąć klucze API](./pull-api-keys.gif)
 
-## 3\. Zgłoś żądanie z wiersza poleceń \{#make-a-request-from-the-command-line}
+## 3\. Zgłoś żądanie z wiersza poleceń {#make-a-request-from-the-command-line}
 
 Współpracuj z blockchainem Ethereum przez Alchemy, używając JSON-RPC i curl.
 
@@ -72,7 +72,7 @@ curl [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.alchemyapi.
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 100000000000000000 }
 ```
 
-## 4\. Skonfiguruj swojego klienta Web3 \{#set-up-your-web3-client}
+## 4\. Skonfiguruj swojego klienta Web3 {#set-up-your-web3-client}
 
 **Jeśli masz istniejącego klienta,** zmień adres URL aktualnego dostawcy węzła na adres URL Alchemy z kluczem API: `"https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -103,7 +103,7 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
-## 5\. Napisz swój pierwszy skrypt Web3! \{#write-your-first-web3-script}
+## 5\. Napisz swój pierwszy skrypt Web3! {#write-your-first-web3-script}
 
 Teraz, aby ubrudzić sobie ręce odrobiną programowania web3, napiszemy prosty skrypt, który wypisuje najnowszy numer bloku z sieci głównej Ethereum.
 

@@ -4,7 +4,7 @@ description: La política que usamos cuando añadimos una capa 2 a ethereum.org
 lang: es
 ---
 
-# Añadir capas 2 \{#adding-layer-2}
+# Añadir capas 2 {#adding-layer-2}
 
 Queremos asegurarnos de que estamos incluyendo los mejores recursos posibles para que los usuarios pueden navegar en el espacio de la capa 2 de una manera fiable y segura.
 
@@ -18,9 +18,9 @@ Actualmente enumeramos las capas 2 en las páginas siguientes:
 
 La capa 2 es un modelo relativamente nuevo y emocionante para Ethereum. Hemos intentado crear un marco de trabajo justo para su consideración en ethereum.org, pero los criterios de listado cambiarán y evolucionarán con el tiempo.
 
-## El marco de decisión \{#decision-framework}
+## El marco de decisión {#decision-framework}
 
-### Criterios para la inclusión: los aspectos obligatorios \{#criteria-for-inclusion-the-must-haves}
+### Criterios para la inclusión: los aspectos obligatorios {#criteria-for-inclusion-the-must-haves}
 
 **Listado en L2BEAT**
 
@@ -70,7 +70,7 @@ _No consideramos que otras soluciones de escalabilidad que no utilicen Ethereum 
 
 - Los proyectos incluidos requieren un explorador de bloque funcional que permita a los usuarios navegar de forma sencilla por la cadena.
 
-### Otros criterios: los aspectos deseables \{#nice-to-haves}
+### Otros criterios: los aspectos deseables {#nice-to-haves}
 
 **Soporte de Exchanges al proyecto**
 
@@ -88,7 +88,7 @@ _No consideramos que otras soluciones de escalabilidad que no utilicen Ethereum 
 
 - ¿Hay alguna cartera que soporte la capa 2 nativamente?
 
-## Añada su capa 2 \{#add-exchange}
+## Añada su capa 2 {#add-exchange}
 
 Si quiere añadir una capa 2 a ethereum.org, cree una incidencia en GitHub.
 

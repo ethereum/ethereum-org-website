@@ -22,7 +22,7 @@ Totul s-a schimbat odată cu internetul. Numărul de persoane care ar putea vede
 
 Cu blockchain-ul, aceste piețe sunt configurate să se schimbe încă o dată, permite-mi să-ți arăt.
 
-## Monetizare \{#monetization}
+## Monetizare {#monetization}
 
 Modelul de afaceri al unui panou publicitar public blockchain va trebui să fie diferit de cel al Ebay și companie.
 
@@ -38,7 +38,7 @@ Simt o oportunitate de afaceri aici. Un panou publicitar fără costuri de func�
 
 Sunt doar fericit să-l construiesc. Să aruncăm o privire la cod.
 
-## Implementarea \{#implementation}
+## Implementarea {#implementation}
 
 Cu câtva timp în urmă am început un [depozit open source](https://github.com/HQ20/contracts?ref=hackernoon.com) cu implementări de exemple de afaceri și alte bunătăți, te rog să arunci o privire.
 
@@ -138,7 +138,7 @@ function cancelTrade(uint256 _trade)
 
 Asta-i tot. Ai ajuns la sfârșitul implementării. Este destul de surprinzător cât de compacte pot fi unele concepte de afaceri atunci când sunt exprimate în cod, iar acesta este unul dintre acele cazuri. Check the complete contract [in our repo](https://github.com/HQ20/contracts/blob/master/contracts/classifieds/Classifieds.sol).
 
-## Concluzie \{#conclusion}
+## Concluzie {#conclusion}
 
 Panourile publicitare sunt o configurație de piață obișnuită, care s-a mărit masiv odată cu internetul, devenind un model de afaceri extrem de popular, cu câțiva câștigători monopoliști.
 

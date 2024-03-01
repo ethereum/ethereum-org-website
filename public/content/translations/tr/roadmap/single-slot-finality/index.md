@@ -4,19 +4,19 @@ description: Tek yuva kesinliğinin açıklaması
 lang: tr
 ---
 
-# Tek yuva kesinliği \{#single-slot-finality}
+# Tek yuva kesinliği {#single-slot-finality}
 
 Bir Ethereum blokunun tamamlanması yaklaşık 15 dakika sürer. Bununla beraber, Ethereum'un mutabakat mekanizmasının blokları daha etkili bir biçimde doğrulanmasını sağlayarak tamamlanma süresini önemli ölçüde azaltabiliriz. On beş dakika beklemek yerine, bloklar aynı yuvanın içinde önerilip tamamlanabilir. Bu konsept **tek yuva kesinliği (SSF)** olarak bilinir.
 
-## Kesinlik nedir? \{#what-is-finality}
+## Kesinlik nedir? {#what-is-finality}
 
 Ethereum'un hisse ispatına dayalı taahhüt mekanizması, toplam hisselenmiş Ethereum'un %33'ünü yakmadan blok zincirden kesinlikle bir blokun değiştirilememesi ve silinememesini garanti etmekten bahseder. Bu "kripto-ekonomik"tir çünkü bu olaya güven zincirin sırasının veya içeriğinin değiştirmesi aşırı masraflıdır ve hiçbir rasyonel ekonomik aktör bunu denemez.
 
-## Neden daha hızlı bir kesinlik hedefliyoruz? \{#why-aim-for-quicker-finality}
+## Neden daha hızlı bir kesinlik hedefliyoruz? {#why-aim-for-quicker-finality}
 
 Kesinlik için gereken güncel zamanın çok uzun olduğu ortaya çıktı. Birçok kullanıcı kesinlik için 15 dakika beklemek istemiyor ve büyük işlemleri beklemeden ve işlemlerinin kalıcı olduğunun kesin olduğuna emin olmadan yapmak da borsa ve uygulamalar için uygunsuz bir durum. Bu blok teklifi ve kesinlik arasında yaşanan gecikme aynı zamanda saldırganların belli blokları sansürlemesi ya da MEVi çıkarmasının önünü açıyor. Güncel aşamadaki blokları yükseltmekten sorumlu olan mekanizma da oldukça karmaşık ve güvenlik konusundaki kırılganlıkları kapatabilmek için birkaç kez güncellendi, bu da Ethereum Kod bazındaki anında göze çarpmayan bazı "hata"ların oluşmasının muhtemel olduğu anlamına geliyor. Bu sorunların tamamı tek bir blokun kesinliğinin süresini azaltarak çözülebilir.
 
-## Merkezisyetsizleştime/süre genel gider takası \{#the-decentralization-time-overhead-tradeoff}
+## Merkezisyetsizleştime/süre genel gider takası {#the-decentralization-time-overhead-tradeoff}
 
 Kesinlik garantisi yeni bir bloka anında gelebilen bir özelllik değil, yeni bir blokun kesinlik evresine gelmesi zaman alıyor. Bunun sebebi doğrulayıcıların ağdaki toplam pay edilmiş ETH'nin 2/3'ünü temsil etmesi ve blokun sonuçlanmış sayılabilmesi için oy kullanmak zorunda olmaları ("kanıtlama"). Ağdaki her doğrulayıcı düğümünün 2/3 eşiğini geçip geçmediğinin bilinebilmesi için diğer düğümler tarafından kanıtlama sürecinden geçmesi gerekiyor.
 
@@ -31,7 +31,7 @@ Ethereum'un güncel taahhüt mekanızması bu 3 parametreyi şu şekilde dengele
 
 Şu anki mekanizma tasarımıyla, kesinlik süresini azaltmak için, ağdaki doğrulayıcı sayısını azaltmak ya da her düğüm için gerekli donanım seviyesini arttırmak şarttır. Ancak, kanıtlamaların yapılma şekline veri yüküne ekleme olmadan bir kerede sayılacak daha fazla kanıtlamaya izin vermek gibi geliştirmeler de var. Daha verimli bu süreç kesinliğin iki dönem arasında değil, tek bir yuvada belirlenmesini sağlayacak.
 
-## SSF'ye gden yollar \{#routes-to-ssf}
+## SSF'ye gden yollar {#routes-to-ssf}
 
 {
 <ExpandableCard title= "Neden bugün SSF'ye sahip olamayız?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
@@ -50,19 +50,19 @@ Daha verimli katkılar yuva başına 125.000 rastgele seçilmiş doğrulayıcıd
 
 Ancak, darboğazın asıl noktası onaylamada değil, doğrulayıcı düğümlerini gerçekten zora sokan imza toplamada. İmza toplamalarını ölçeklendirebilmek muhtemelen her alt kümedeki doğrulayıcı sayısını artırmayı gerektirecek, bu da alt küme sayısını artıtır ya da ek toplama katmanları ekletir (yani komitelerin komiteleri gibi). Çözümün bir parçası özelleştirilmiş toplayıcılara izin vermek olabilir, bu da blok inşasına ve toplamalar için oluşturulan taahhüt verilerinin özelleştirilmiş blok inşacılarına önerici-inşacı ayrımıyla (PBS) ve Danksharding altında verilmesine benzer bir süreçtir.
 
-## Çatal-seçim kuralının SSF'deki rolü ne? \{#role-of-the-fork-choice-rule}
+## Çatal-seçim kuralının SSF'deki rolü ne? {#role-of-the-fork-choice-rule}
 
 Bugünün taahhüt mekanizması kesinlik aracı (doğrulayıcıların 2/3'ünün belli bir zinciri tasdik ettiğini belirleyen algoritma) ve çatal seçim kuralı (çoklu seçenek varken hangi zincirin doğru olan olduğuna karar veren algoritma) arasındaki sıkı bir bağa dayanıyor. Çatals eçim algoritması sadece son kesinleştirilmiş bloktan _itibaren_ olan blokları dikkate alır. SSF altında çatal seçim kuralının dikkate alacağı bir blok olmaz çünkü kesinlik olayı blokun önerildiği yuvayla aynı yerde gerçekleşir. Bu SSF altında _ya_ çatal seçim algoritmasının _ya da_ kesinlik aletinin herhangi bir zamanda aktif olabileceği anlamına gelir. Kesinlik aleti blokları doğrulayıcıların 2/3ü çevrimiçiyken ve tasdikleri dürütsçe yapıyorken kesinleştirir. Eğer bir blok 2/3 eşiğini geçemiyorsa, çatal seçim kuralı hangi zincirin takip edileceğinin kararlaştırılması için devreye girer. Bu ayrıca doğrulayıcıların >1/3'ü çevrimdışıyken devreye giren inaktiflik sızıntısı mekanizmasının yönetilmesi için bir olanak sağlar, tabi bazı nüanslarla birlikte.
 
-## Bekleyen sorunlar \{#outstanding-issues}
+## Bekleyen sorunlar {#outstanding-issues}
 
 Ölçeklendirme toplamasıyla ilgili sorun alt küme başına düşen doğrulayıcı sayısının artması ve bunun eşler arası ağ için daha büyük bir yük oluşturması. Toplama katmanları eklemekle ilgili olan sorun ise mühendisliğinin çok karmaşık olması ve gecikmeler eklemesi (yani blok önericisinin bütün toplayıcı alt kümelerinden haber alması daha uzun sürebilir). Ayrıca, ağda her yuvaya makul bir şekilde işlem yaptırabilecek kadar fazla aktif doğrulayıcının olduğu senaryonun nasıl halledileceği BLS imza toplamayla bile biraz belirsiz. SSF'nin altında bir komite olmadığı ve her doğrulayıcı her yuvada tasdik yaptığı için, normal dengedeki 32 ETH kapasitesi tamamen silinebilir, çoklu doğrulayıcıları yöneten operatörler, hisselerini pekiştirebilir ve yavaşlatabilir, bu da doğrulama düğümlerinin bütün doğrulama kümeleri için işlemesi gereken mesaj sayısını azaltır. Bu potansiyel bir çözümdür. Bu süreç büyük hissedarların doğrulayıcılarını pekiştirmekte anlaşmasına bağlıdır. Ayrıca, doğrulayıcı sayısı ya da herhangi bir zamanda paylanan ETH miktarı için ayarlanmış bir kapasite empoze etmek de mümkündür. Ancak, bu hangi doğrulayıcıların katılıp katılamayacağına karar veren bir mekanizmaya ihtiyaç duyar, bu da istenmeyen ikincil etkilerden sorumlu olabilir.
 
-## Güncel ilerleme \{#current-progress}
+## Güncel ilerleme {#current-progress}
 
 SSF araştırma aşamasında. Birkaç yıl daha gelmesi beklenmiyor, muhtemelen çok aşamalı yükseltmelerden, [(Verkle ağaçları](/roadmap/verkle-trees/) ve [Danksharding](/roadmap/danksharding]) gibi) sonra.
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Vitalik'in SSF hakkındaki görüşleri, EDCON 2022](https://www.youtube.com/watch?v=nPgUKNPWXNI)
 - [Vitalik'in notları: Tek yuva kesinliğine giden yollar](https://notes.ethereum.org/@vbuterin/single_slot_finality)

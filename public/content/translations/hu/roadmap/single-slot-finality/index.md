@@ -4,19 +4,19 @@ description: Az egy sloton belüli véglegesség magyarázata
 lang: hu
 ---
 
-# Egy sloton belüli véglegesség \{#single-slot-finality}
+# Egy sloton belüli véglegesség {#single-slot-finality}
 
 Jelenleg 15 percet vesz igénybe, hogy egy Ethereum blokk véglegesedjen. Ugyanakkor az Ethereum konszenzusmechanizmusa úgy is fejleszthető, hogy a blokk validálása hatékonyabb legyen, és a véglegességhez szükséges idő drasztikusan csökkenjen. Ahelyett, hogy egy blokk javaslásához tizenöt perc kellene, azt ugyanabban a slotban lehessen javasolni és véglegesíteni. Ezt a koncepciót nevezik **egy sloton belüli véglegességnek (SSF)**.
 
-## Mi az a véglegesség? \{#what-is-finality}
+## Mi az a véglegesség? {#what-is-finality}
 
 Az Ethereum proof-of-stake alapú konszenzusmechanizmusában a véglegesítés arra utal, hogy a blokkot nem lehet megváltoztatni vagy eltávolítani a blokkláncból anélkül, hogy legalább 33%-nyi résztvevő vállalná az ezzel járó súlyos büntetést, vagyis az ETH elégetését. Ez egy kriptogazdasági biztonság, mert nagyon nagy költséggel járna, ha valaki meg akarná változtatni a lánc sorrendjét vagy tartalmát, így a racionális gazdasági szereplők nem vállalnák.
 
-## Miért törekszünk gyorsabb véglegesítésre? \{#why-aim-for-quicker-finality}
+## Miért törekszünk gyorsabb véglegesítésre? {#why-aim-for-quicker-finality}
 
 A véglegessé válás jelenlegi ideje túl hosszúnak bizonyult. A legtöbb felhasználó nem akar 15 percet várni, hogy végleges legyen a tranzakciója. Továbbá az alkalmazások és tőzsdék számára is kellemetlen, amelyek gyors tranzakcióátvitelt szeretnének, és mégis sokáig kell várniuk, hogy állandónak tekinthessék a változást. A blokk előterjesztése és a véglegesítése közötti idő arra is lehetőséget teremt, hogy egy támadó átrendezze a tartalmat, illetve hogy blokkokat cenzúrázzon vagy MEV-et szerezzen. Az a mechanizmus, amely a várakozó blokkok frissítését intézi, elég összetett és számtalanszor volt már javítva, hogy a gyenge biztonsági pontokat lezárják, így ez az Ethereum kódjának ez az a része, ahol kisebb hibák nagy valószínűséggel fordulnak elő. Ezeket a problémákat mind megoldaná, hogy ha egy slotban véglegessé válna a blokk.
 
-## A decentralizáció/idő/költség átváltása \{#the-decentralization-time-overhead-tradeoff}
+## A decentralizáció/idő/költség átváltása {#the-decentralization-time-overhead-tradeoff}
 
 A véglegesség garanciája az új blokknál nem azonnal történik meg; idő kell ahhoz, hogy a blokkot véglegesnek tekintsük. Ennek az az oka, hogy a véglegesítéshez a teljes letétbe helyezett ETH 2/3-át képviselő validátoroknak tanúsítaniuk kell az új blokkot. A hálózat minden validáló csomópontjának a többi csomóponttól érkező tanúsításokat kell feldolgoznia, hogy a blokk elérte a 2/3-os határt vagy nem.
 
@@ -31,7 +31,7 @@ Az Ethereum jelenlegi konszenzusmechanizmusa e három paraméter között a köv
 
 A jelenlegi mechanizmussal a véglegesítés idejét úgy lehet csökkenteni, ha csökkentjük a validátorok számát a hálózaton vagy növeljük a hardverszükségletet minden csomópont esetében. Ugyanakkor fejleszthető a tanúsítások végzése is, amellyel több tanúsítás lehetséges növekvő költség és az egyes csomópontok túlterhelése nélkül. A hatékonyabb végrehajtás lehetővé teszi, hogy a véglegesítés egy sloton belül, ne két korszak alatt történjen meg.
 
-## Az egy sloton belüli véglegesítéshez (SSF) vezető út \{#routes-to-ssf}
+## Az egy sloton belüli véglegesítéshez (SSF) vezető út {#routes-to-ssf}
 
 {
 <ExpandableCard title= "Miért nem lehet bevezetni az SSF-et akár ma?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
@@ -50,19 +50,19 @@ Még hatékonyabb lenne, ha szuperbizottságokat hoznának létre, pl. 125 000 
 
 Ugyanakkor nem az ellenőrzés a valódi szűk keresztmetszet, hanem az aláírások aggregálása a kihívás a validátor-csomópontok számára. Az aláírásaggregáció skálázásához a validátorok számát valószínűleg meg kell növelni minden alhálózatban, növelni kell az alhálózatok számát, vagy az aggregáció új rétegeit kell bevezetni (pl. a bizottságok bizottságát létrehozni). A megoldás része lehet a specializált aggregátorok létrehozása is, hasonlóan ahhoz, ahogy a javaslattevő-építő szétválasztás (PBS) és a Danksharding bevezetésénél a blokk építését és az összevont tranzakcióhoz tartozó elköteleződés létrehozását kiszervezik specializált építőknek.
 
-## Mi a szerepe az elágazásválasztásnak az SSF-ben? \{#role-of-the-fork-choice-rule}
+## Mi a szerepe az elágazásválasztásnak az SSF-ben? {#role-of-the-fork-choice-rule}
 
 A jelenlegi konszenzusmechanizmus a véglegesedési mechanizmus és az elágazásválasztás közötti szoros kapcsolaton alapszik, az első az az algoritmus, amely meghatározza, hogy a validátorok 2/3-a tanúsított-e egy adott láncot, a második pedig az az algoritmus, amelyik eldönti, hogy melyik lánc a megfelelő, amikor több opció is létezik. Az elágazásválasztás algoritmusa csak azokat a blokkokat veszi figyelembe, amelyek az utolsó véglegesített blokk _után_keletkeznek. Az SSF bevezetésével nem lesz olyan blokk, ami az elágazásválaszt határkörébe esik, mert a véglegesítés ugyanabban a slotban történik, mint a blokk előterjesztése. Ennélfogva az SSF bevezetésével \_sem_ az elágazásválasztás algoritmusa, _sem_ a véglegességi mechanizmus nem lesz aktív. A véglegességi mechanizmus véglegesítené azokat a blokkokat, ahol a validátorok 2/3-a online volt és jóhiszeműen tanúsított. Ha a blokk nem tudná meghaladni a 2/3-os határt, akkor az elágazásválasztási szabály lépne életbe, hogy meghatározza a követendő láncot. Ez arra is lehetőséget ad, hogy az inaktivitás miatti elszivárgás mechanizmusát fenntartsák, amely visszaállítja a láncot, amikor a validátorok több mint 1/3-a offline, jóllehet némileg továbbfejlesztve azt.
 
-## Fennálló problémák \{#outstanding-issues}
+## Fennálló problémák {#outstanding-issues}
 
 Ha az aggregáció skálázásához az alhálózatokban megnövelnék a validátorok számát, az azzal a problémával járna, hogy a peer-to-peer hálózatra nagyobb teher nehezedne. Az aggregáció új rétegeinek bevezetése elég összetett programozási feladat és késleltetést okoz (mivel hosszabb időbe telik, mire a blokkot ellenőrző minden alhálózati aggregátortól kap valamit). Az sem egyértelmű, hogyan lehetne kezelni azt, hogy több aktív validátor van a hálózaton, mint amit egy slotban fel lehet dolgozni, még akár BLS aláírásaggregációval is. Mivel minden slotban minden validátor tanúsít és nincsenek bizottságok az SSF koncepcióban, egy lehetséges megoldás lehet az is, hogy az effektív egyenleg maximális 32 ETH határát teljesen eltörölnék, így a több validátort működtetők konszolidálhatnák a letétjeiket és kevesebb validátort futtathatnának, ezzel csökkentve az üzenetek számát, amelyet a validátor-csomópontoknak kell feldolgozniuk a teljes validátorkészletet illetően. A nagyletéteseken múlik, hogy konszolidálják a validátoraikat. Az is lehetséges, hogy bármikor felső határt húznak a validátorok számát vagy a letétbe helyezett ETH összegét illetően. Ugyanakkor ehhez szükséges egy olyan mechanizmus, amely eldönti, hogy melyik validátor vehet részt és amelyik nem, ez pedig nem kívánt másodlagos hatásokat okozhat.
 
-## Jelenlegi helyzet \{#current-progress}
+## Jelenlegi helyzet {#current-progress}
 
 Az SSF még kutatási fázisban van. Nem várható, hogy a következő években bevezetésre kerül, inkább más lényeges fejlesztések után eszközölése várható, mint például a [Verkle-fák](/roadmap/verkle-trees/) és a [Danksharding](/roadmap/danksharding]).
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [Vitalik az SSF-ről az EDCON rendezvényen (2022)](https://www.youtube.com/watch?v=nPgUKNPWXNI)
 - [Vitalik jegyzetei: az egy sloton belüli véglegességhez vezető út](https://notes.ethereum.org/@vbuterin/single_slot_finality)

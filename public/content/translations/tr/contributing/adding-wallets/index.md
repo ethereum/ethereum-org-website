@@ -4,7 +4,7 @@ description: Ethereum.org'a cüzdan eklerken kullandığımız politika
 lang: tr
 ---
 
-# Cüzdan ekleme \{#adding-wallets}
+# Cüzdan ekleme {#adding-wallets}
 
 Kullanıcıların kendilerinden emin bir tarzda Ethereum'da yön bulabilmeleri için cüzdanların özellik açısından zengin manzaralarını kapsayan, çeşitli cüzdanları gösterdiğimizden emin olmak isteriz.
 
@@ -17,9 +17,9 @@ Herkes yeni bir cüzdan önermekte özgürdür. Cüzdanlar şu anda aşağıdaki
 
 Ethereum'da cüzdanlar çok hızlı bir biçimde değişiyor. Ethereum.org'da değerlendirilmek üzere adil bir çerçeve oluşturmaya çalıştık, ancak listeleme kriterleri zamanla değişecek ve gelişecektir.
 
-## Karar çerçevesi \{#the-decision-framework}
+## Karar çerçevesi {#the-decision-framework}
 
-### Dahil edilme kriterleri: olmazsa olmazlar \{#the-must-haves}
+### Dahil edilme kriterleri: olmazsa olmazlar {#the-must-haves}
 
 - **Güvenliği sınanmış bir ürün** - bir denetim, iç güvenlik ekibi, açık kaynaklı kodlama yoluyla ya da bazı başka yöntemlerle cüzdanınızın güvenliği sağlanmış olmak zorundadır. Bu, kullanıcılarımıza yönelik riski azaltır ve güvenliği ciddiye aldığınızı gösterir.
 - **Altı aydan fazladır ''canlı'' olan VEYA itibarlı bir geçmişe sahip olan bir grup tarafından yayımlanan bir cüzdan** - bu, güvenliğin bir başka göstergesidir. Hayati hataların ve kötüye kullanımların bulunması için altı ay iyi bir zaman aralığıdır. Projeler olarak hızlı bir şekilde terk edilecek çatallanmaları elemek için altı ay istiyoruz.
@@ -27,7 +27,7 @@ Ethereum'da cüzdanlar çok hızlı bir biçimde değişiyor. Ethereum.org'da de
 - **Dürüst ve doğru listeleme bilgileri**: Projelerden önerilen tüm listelemelerin dürüst ve doğru bilgilerle gelmesi beklenir. Ürününüzü, örneğin "açık kaynaklı" değilken öyleymiş gibi duyurarak listeleme bilgilerini tahrif eden ürünler kaldırılacaktır.
 - **İletişim noktası** - Cüzdan için bir iletişim noktası, değişiklikler yapıldığında doğru bilgiyi elde etmemize büyük ölçüde yardımcı olacaktır. Bu, geleceğe ait bilgileri toplarken ethereum.org'u güncelleme sürecini yönetilebilir halde tutacaktır.
 
-### Diğer kriterler: olursa iyi olan şeyler \{#the-nice-to-haves}
+### Diğer kriterler: olursa iyi olan şeyler {#the-nice-to-haves}
 
 - **Küresel olarak erişilebilir** - cüzdanınız, belirli kişilerin hizmetinize erişmesini engelleyen coğrafi kısıtlamalara veya KYC koşullarına sahip değildir.
 - **Birden fazla dilde mevcut olma** - cüzdanınız, tüm dünyadaki kullanıcıların erişim sağlayabilmesi için birden çok dile çevrilir.
@@ -53,7 +53,7 @@ Ethereum'da cüzdanlar çok hızlı bir biçimde değişiyor. Ethereum.org'da de
 - **Özel destek ekibi** - cüzdanınız, kullanıcıların sorun yaşadıklarında gidebilecekleri özel bir destek ekibine sahiptir.
 - **Eğitim kaynakları/dokümanları** - ürününüz, kullanıcılara yardım etmek ve onları bilgilendirmek için iyi tasarlanmış bir alıştırma deneyimine sahip olmalıdır. Alternatif olarak, makaleler veya videolar gibi nasıl yapılır içeriğinin kanıtına da sahip olabilir.
 
-## Cüzdan ekleme \{#adding-a-wallet}
+## Cüzdan ekleme {#adding-a-wallet}
 
 Ethereum.org'a bir cüzdan eklemek istiyorsanız GitHub'da bir konu oluşturun.
 
@@ -61,7 +61,7 @@ Ethereum.org'a bir cüzdan eklemek istiyorsanız GitHub'da bir konu oluşturun.
   Bir konu oluştur
 </ButtonLink>
 
-## Bakım \{#maintenance}
+## Bakım {#maintenance}
 
 Ethereum'un akıcı yapısında olduğu gibi, ekipler ve ürünler gelir ve gider; yenilikler her gün gerçekleşir, bu nedenle şu amaçlarla içeriğimizin rutin kontrollerini gerçekleştireceğiz:
 
@@ -70,6 +70,6 @@ Ethereum'un akıcı yapısında olduğu gibi, ekipler ve ürünler gelir ve gide
 
 Ethereum, açık kaynak topluluğu tarafından yönetilir ve onu güncel tutmaları için topluluğa güveniriz. Listelenmiş cüzdanlar ile ilgili herhangi bir bilginin güncelleştirilmesi gerektiğini fark ettiyseniz lütfen [bir konu açın](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) veya [çekme isteği oluşturun](https://github.com/ethereum/ethereum-org-website/pulls)!
 
-## Kullanım Koşulları \{#terms-of-use}
+## Kullanım Koşulları {#terms-of-use}
 
 Ayrıca lütfen [kullanım koşullarımıza](/terms-of-use/) başvurun. Ethereum.org'daki bilgiler, yalnızca genel bilgi amaçlı verilmektedir.

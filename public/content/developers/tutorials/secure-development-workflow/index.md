@@ -10,7 +10,7 @@ source: Building secure contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
-## Smart contract development checklist \{#smart-contract-development-checklist}
+## Smart contract development checklist {#smart-contract-development-checklist}
 
 Here's a high-level process we recommend following while you write your smart contracts.
 
@@ -46,7 +46,7 @@ Finally, be mindful of issues that automated tools cannot easily find:
 - Cryptographic operations
 - Risky interactions with external DeFi components
 
-## Ask for help \{#ask-for-help}
+## Ask for help {#ask-for-help}
 
 [Ethereum office hours](https://calendly.com/dan-trailofbits/ethereum-office-hours) run every Tuesday afternoon. These 1-hour, 1-on-1 sessions are an opportunity to ask us any questions you have about security, troubleshoot using our tools, and get feedback from experts about your current approach. We will help you work through this guide.
 

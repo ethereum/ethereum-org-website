@@ -11,7 +11,7 @@ incomplete: true
 
 使用 Microsoft 技术堆栈中的工具和语言在以太坊上搭建去中心化应用程序和与智能合约交互 —— .NET Framework/.NET Core/.NET Standard 支持 VSCode 和 Visual Studio 等工具上的 C#、# Visual Basic .NET、F#。 使用 Microsoft Azure 区块链在 Azure 上部署一条以太坊区块链，几分钟即可完成。 将人们对 .NET 的喜爱带到以太坊上！
 
-## 智能合约和 Solidity 语言入门 \{#getting-started-with-smart-contracts-and-the-solidity-language}
+## 智能合约和 Solidity 语言入门 {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **迈出集成 .NET 与以太坊的第一步**
 
@@ -22,7 +22,7 @@ incomplete: true
 - [编写您的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## 初学者参考文献和链接 \{#beginner-references-and-links}
+## 初学者参考文献和链接 {#beginner-references-and-links}
 
 **介绍 Nethereum 库和 VS Code Solidity**
 
@@ -43,7 +43,7 @@ incomplete: true
   - 转账以太币至帐户 [C#](http://playground.nethereum.com/csharp/id/1003) [VB.NET](http://playground.nethereum.com/vb/id/2003)
   - ... 以及更多！
 
-## 面向中等程度用户的文章 \{#intermediate-articles}
+## 面向中等程度用户的文章 {#intermediate-articles}
 
 - [Nethereum 练习册/样本列表](http://docs.nethereum.com/en/latest/Nethereum.Workbooks/docs/)
 - [部署您自己的开发测试链](https://github.com/Nethereum/Testchains)
@@ -56,13 +56,13 @@ incomplete: true
 - [Kaleido 和 Nethereum](https://kaleido.io/kaleido-and-nethereum/)
 - [Quorum 和 Nethereum](https://github.com/Nethereum/Nethereum/blob/master/src/Nethereum.Quorum/README.md)
 
-## 面向高等程度用户的使用模式 \{#advanced-use-patterns}
+## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
 - [Azure Key Vault 和 Nethereum](https://github.com/Azure-Samples/bc-community-samples/tree/master/akv-nethereum)
 - [Nethereum.DappHybrid](https://github.com/Nethereum/Nethereum.DappHybrid)
 - [Ujo Nethereum 后端参考架构](https://docs.nethereum.com/en/latest/nethereum-ujo-backend-sample/)
 
-## .NET 项目、工具和其他有趣内容 \{#dot-net-projects-tools-and-other-fun-stuff}
+## .NET 项目、工具和其他有趣内容 {#dot-net-projects-tools-and-other-fun-stuff}
 
 - [Nethereum 训练场](http://playground.nethereum.com/) - _在浏览器中编译、创建和运行 Nethereum 代码片段_
 - [Nethereum Codegen Blazor](https://github.com/Nethereum/Nethereum.CodeGen.Blazor) - _在 Blazor 中具有 UI 的 Nethereum 代码生成_
@@ -74,13 +74,13 @@ incomplete: true
 
 想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。
 
-## .NET 社区贡献者 \{#dot-net-community-contributors}
+## .NET 社区贡献者 {#dot-net-community-contributors}
 
 在 Nethereum，我们主要活跃于 [Gitter](https://gitter.im/Nethereum/Nethereum) 上，任何人都可以前来提问/回答问题，获得帮助或者前来逛逛。 可以随意在 [Nethereum GitHub 存储库](https://github.com/Nethereum)上提交拉取请求或者打开一个问题，或者仅仅浏览我们提供的许多小项目/示例项目。 您可以在 [Discord](https://discord.gg/jQPrR58FxX) 上找到我们！
 
 如果你是 Nethermind 的新手并且需要入门帮助，请加入我们的 [Discord](http://discord.gg/PaCMRFdvWT)。 我们的开发人员随时准备回答你的问题。 不要犹豫，在 [Nethermind GitHub 存储库](https://github.com/NethermindEth/nethermind)上打开一个拉取请求或提出任何问题。
 
-## 其他汇总列表 \{#other-aggregated-lists}
+## 其他汇总列表 {#other-aggregated-lists}
 
 [Nethereum 官方网站](https://nethereum.com/)  
 [Nethermind 官方网站](https://nethermind.io/)

@@ -4,20 +4,20 @@ description: Özel Ethereum blok zincirlerinde işletme uygulamaları için kayn
 lang: tr
 ---
 
-# İşletmeler için özel Ethereum \{#private-ethereum-for-enterprise}
+# İşletmeler için özel Ethereum {#private-ethereum-for-enterprise}
 
 Kurumsal blok zinciri uygulamaları, kamuya açık izinsiz Ethereum Mainnet veya Ethereum teknolojisine dayalı özel blok zincirleri üzerine kurulabilir. Herkese açık Ethereum Mainnet'i oluşturma hakkında daha fazla bilgi için [İşletmeler için Ethereum Mainnet](/enterprise/)'e bakın.
 
-## Özel işletmeler için Ethereum geliştirici kaynakları \{#developer-resources-private-enterprise-ethereum}
+## Özel işletmeler için Ethereum geliştirici kaynakları {#developer-resources-private-enterprise-ethereum}
 
-### Organizasyonlar \{#organisations}
+### Organizasyonlar {#organisations}
 
 Ethereum'u işletme dostu hale getirmek için farklı kuruluşlar ortak çalışmalar yapmıştır:
 
 - [Enterprise Ethereum Alliance](https://entethalliance.org/) EEA, kuruluşların Ethereum teknolojisini günlük iş operasyonlarında benimsemelerini ve kullanmalarını sağlar. Ethereum ekosistemini yeni iş fırsatları geliştirmek, endüstrinin benimsenmesini sağlamak ve beraber öğrenmek ve iş birliği yapmak için güçlendiriyoruz.
 - [Hyperledger](https://hyperledger.org) _Hyperledger, sektörler arası blok zinciri teknolojilerini ilerletmek için oluşturulmuş açık kaynaklı bir ortak çalışmadır. Finans, bankacılık, Nesnelerin İnterneti, tedarik zincirleri, üretim ve Teknoloji liderlerini içeren, Linux Vakfı'nın ev sahipliğinde küresel bir iş birliğidir. Vakfın içinde Ethereum yığını ile çalışan bazı projeler var: [Besu](https://www.hyperledger.org/use/besu) ve [Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) bunlar arasındadır._
 
-### Protokol ve altyapı \{#protocol-and-infrastructure}
+### Protokol ve altyapı {#protocol-and-infrastructure}
 
 - [Chainstack](https://chainstack.com/) _çoklu-bulut ve çoklu-protokol Platformu olarak, merkeziyetsiz ağları ve hizmetleri hızla kurma, uygulama ve yönetme işlerini güçlendiren işletmelere hizmet_
 - [Clearmatics Autonity](https://www.clearmatics.com/about/) _p2p protokollerini uygulayan ve istemci yazılımı ve altyapısı sağlayan protokol paketi_

@@ -20,7 +20,7 @@ Tous ont frappé leur NFT en utilisant la puissante API d'Alchemy. Dans ce tutor
 
 Commençons !
 
-## Étape 1 : Installer Web3 \{#install-web3}
+## Étape 1 : Installer Web3 {#install-web3}
 
 Si vous avez suivi le premier tutoriel sur la création de votre contrat intelligent NFT, vous avez déjà expérimenté Ethers.js. Web3 est similaire à Ethers, étant une bibliothèque utilisée pour faciliter la création de requêtes vers la blockchain Ethereum. Dans ce tutoriel, nous utiliserons [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3) qui est une bibliothèque Web3 améliorée proposant des essais automatiques et une prise en charge solide de WebSocket.
 
@@ -30,7 +30,7 @@ Dans le répertoire d'accueil de votre projet, exécutez :
 npm install @alch/alchemy-web3
 ```
 
-## Étape 2 : Créer un fichier `mint-nft.js` \{#create-mintnftjs}
+## Étape 2 : Créer un fichier `mint-nft.js` {#create-mintnftjs}
 
 À l'intérieur de votre répertoire de scripts, créez un fichier `mint-nft.js` et ajoutez les lignes de code suivantes :
 
@@ -41,7 +41,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Étape 3 : Récupérer l'ABI de votre contrat \{#contract-abi}
+## Étape 3 : Récupérer l'ABI de votre contrat {#contract-abi}
 
 L'ABI (Application Binary Interface) de notre contrat est l’interface permettant d'interagir avec notre contrat intelligent. Vous en apprendrez plus sur les ABI de contrats [ici](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is). Hardhat génère automatiquement pour nous une ABI et l'enregistre dans le fichier `MyNFT.json`. Pour l'utiliser, nous devrons analyser les contenus en ajoutant les lignes de code suivantes à notre fichier `mint-nft.js` :
 
@@ -61,7 +61,7 @@ Pour exécuter `mint-nft.js` et voir votre ABI affichée dans la console, navigu
 node scripts/mint-nft.js
 ```
 
-## Étape 4 : Configurer les métadonnées de votre NFT en utilisant IPFS \{#config-meta}
+## Étape 4 : Configurer les métadonnées de votre NFT en utilisant IPFS {#config-meta}
 
 Si vous vous rappelez de la première partie de notre tutoriel, notre fonction de contrat intelligent `mintNFT` accepte un paramètre tokenURI qui doit se résoudre en un document JSON décrivant les métadonnées du NFT - ce qui donne vraiment vie au NFT, en lui permettant d'avoir des propriétés configurables, comme un nom, une description ou encore une image, entre autres.
 
@@ -109,7 +109,7 @@ Une fois que vous avez fini de modifier le fichier JSON, enregistrez les modific
 
 ![Comment télécharger votre nft-metadata.json sur Pinata](./uploadPinata.gif)
 
-## Étape 5 : Créer une instance de votre contrat \{#instance-contract}
+## Étape 5 : Créer une instance de votre contrat {#instance-contract}
 
 À présent, pour interagir avec notre contrat, nous avons besoin de l'instancier dans notre code. Pour ce faire, nous aurons besoin de l'adresse du contrat que nous pouvons obtenir à partir du déploiement ou d'[Etherscan](https://sepolia.etherscan.io/) en recherchant l'adresse que vous avez utilisée pour déployer le contrat.
 
@@ -125,7 +125,7 @@ const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
 
-## Étape 6 : Mettre à jour le fichier `.env` \{#update-env}
+## Étape 6 : Mettre à jour le fichier `.env` {#update-env}
 
 Maintenant, pour créer et envoyer des transactions sur la chaîne Ethereum, nous utiliserons votre adresse publique de compte Ethereum pour obtenir le nonce du compte (explication à suivre ci-dessous).
 
@@ -137,7 +137,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## Étape 7 : Créer votre transaction \{#create-txn}
+## Étape 7 : Créer votre transaction {#create-txn}
 
 En premier lieu, définissons une fonction nommée `mintNFT(tokenData)` et créons notre transaction en faisant ce qui suit :
 
@@ -186,7 +186,7 @@ Votre fichier `mint-nft.js` devrait ressembler à ceci maintenant :
    }​
 ```
 
-## Étape 8 : Signer la transaction \{#sign-txn}
+## Étape 8 : Signer la transaction {#sign-txn}
 
 Maintenant que nous avons créé notre transaction, nous devons la signer afin de l’envoyer. Nous utiliserons ici notre clé privée.
 
@@ -244,7 +244,7 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## Étape 9 : Appelez `mintNFT` et exécutez le nœud `mint-nft.js` \{#call-mintnft-fn}
+## Étape 9 : Appelez `mintNFT` et exécutez le nœud `mint-nft.js` {#call-mintnft-fn}
 
 Vous vous souvenez du `metadata.json` que vous avez téléchargé sur Pinata ? Récupérez son code de hachage et passez-le comme paramètre à la fonction `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 

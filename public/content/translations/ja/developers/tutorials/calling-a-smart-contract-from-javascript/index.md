@@ -96,7 +96,7 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 次のパートでは、両方のアドレスが保有している現在のトークンの量を取得するために`balanceOf`関数を呼び出します。
 
-## Call: スマートコントラクトから値を読み込む \{#call-reading-value-from-a-smart-contract}
+## Call: スマートコントラクトから値を読み込む {#call-reading-value-from-a-smart-contract}
 
 最初の例では、トランザクションを送信することなく、「constant」メソッドを呼び出し、スマートコントラクトメソッドを EVM で実行します。 そのために、まずはアドレスの ERC20 の残高を読み込みます。 [ERC20 トークンに関する記事](/developers/tutorials/understand-the-erc-20-token-smart-contract/)をご覧ください。
 
@@ -114,7 +114,7 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 
 ERC20 の DAI には 18 桁の 0 があり、正しい数値を得るためには 18 桁の 0 を削除する必要があります。 Javascript は大きな数値を扱えないため、uint256 は文字列で返されます。 JavaScript で大きな数字を扱う方法がご不明の場合、[JavaScript で大きな数字を扱う bignumber.js のチュートリアルをご覧ください。](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/)
 
-## send: スマートコントラクト関数にトランザクションを送信する \{#send-sending-a-transaction-to-a-smart-contract-function}
+## send: スマートコントラクト関数にトランザクションを送信する {#send-sending-a-transaction-to-a-smart-contract-function}
 
 2 番目の例では、DAI スマートコントラクトの transfer 関数を呼び出し、2 番目のアドレスに 10DAI を送信します。 この transfer 関数では、受取人のアドレスと送金するトークン数の 2 つのパラメータが必要です。
 

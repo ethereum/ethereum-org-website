@@ -6,11 +6,11 @@ lang: es
 
 Los bloques son lotes de transacciones con un hash del bloque anterior en la cadena. Esta vincula bloques juntos (en una cadena) porque los hashes derivan criptográficamente de los datos del bloque. Esto previene el fraude, porque un cambio en cualquier bloque del historial invalidaría todos los siguientes bloques; asimismo, todos los hashes subsecuentes cambiarían y todos los que ejecutasen la blockchain lo notarían.
 
-## Requisitos previos \{#prerequisites}
+## Requisitos previos {#prerequisites}
 
 Los bloques son muy fáciles de manejar incluso para los principiantes. Sin embargo, para ayudarle a comprender mejor esta página, le recomendamos leer primero las secciones de [Cuentas](/developers/docs/accounts/) y [Transacciones](/developers/docs/transactions/) y nuestra [introducción a Ethereum](/developers/docs/intro-to-ethereum/).
 
-## ¿Por qué se usan los bloques? \{#why-blocks}
+## ¿Por qué se usan los bloques? {#why-blocks}
 
 Para asegurarse de que todos los participantes de la red Ethereum mantienen un estado sincronizado y aceptan el registro de transacciones, estas se organizan en bloques. Lo que significa que decenas (sino cientos) de transacciones se encuentran en curso, confirmadas y sincronizadas al mismo tiempo.
 
@@ -18,13 +18,13 @@ Para asegurarse de que todos los participantes de la red Ethereum mantienen un e
 
 Al separar los commits (formación exitosa de una cadena), damos a todos los participantes de la red el tiempo suficiente para llegar a un consenso: aunque las solicitudes de transacción ocurren docenas de veces por segundo, los bloques en Ethereum se confirman aproximadamente una vez cada 15 segundos.
 
-## ¿Cómo funcionan los bloques? \{#how-blocks-work}
+## ¿Cómo funcionan los bloques? {#how-blocks-work}
 
 Para preservar el historial de transacciones, los bloques se ordenan estrictamente (cada nuevo bloque creado contiene una referencia a su bloque predecesor) y las transacciones dentro de los bloques también se ordenan de manera estricta. Excepto en casos raros o en un momento determinado, todos los participantes en la red están de acuerdo en el número exacto y en el historial de los bloques. Además, están trabajando para agrupar los requerimientos de transacción en tiempo real en el próximo bloque.
 
 Cuando un validador seleccionado aleatoriamente completa un bloque en la red, este se propaga por el resto de la red. Todos los nodos añaden este nuevo bloque al final de sus cadenas de bloque y se selecciona a un nuevo validador para crear el siguiente bloque. El proceso exacto de ensamblaje de bloques y los procesos de compromiso/consenso se encuentran específicados en el protocolo de prueba de participación (PoS) de Ethereum.
 
-## Protocolo de prueba de participación (PoS) \{#proof-of-work-protocol}
+## Protocolo de prueba de participación (PoS) {#proof-of-work-protocol}
 
 La prueba de participación (PoS) consiste en lo siguiente:
 
@@ -35,7 +35,7 @@ La prueba de participación (PoS) consiste en lo siguiente:
 
 [Más información sobre la prueba de participación](/developers/docs/consensus-mechanisms/pos)
 
-## ¿Qué hay en un bloque? \{#block-anatomy}
+## ¿Qué hay en un bloque? {#block-anatomy}
 
 Hay mucha información contenida en un bloque. En los niveles más altos, un bloque contiene las siguientes características:
 
@@ -131,21 +131,21 @@ La lista de `retiradas` contiene objetos de `retirada` estructurados de la sigui
 | `índice`         | valor del índice de la retirada                      |
 | `validatorIndex` | valor del índice del validador                       |
 
-## Tiempo del bloque \{#block-time}
+## Tiempo del bloque {#block-time}
 
 El tiempo del bloque se refiere al espacio de tiempo que separa los bloques entre sí. En Ethereum, el tiempo se divide en unidades de doce segundos llamadas «ranuras». En cada ranura se selecciona a un validador único para que proponga un bloque. Asumiendo que todos los validadores están en línea y operativos, habría un bloque en cada ranura, lo que significaría que el tiempo de un bloque es de 12 segundos. A pesar de ello, en algunas ocasiones, los validadores podrían encontrarse desconectados en el momento de solicitarles la propuesta de un nuevo bloque, lo que sugiere que algunas ranuras podrían estar vacías.
 
 Esta implementación difiere de los sistemas basados en pruebas de trabajo cuyos tiempos de bloqueo son probabilísticos y ajustados por la dificultad de minería del protocolo. El [tiempo medio de bloque](https://etherscan.io/chart/blocktime) de Ethereum es un claro ejemplo de esto, donde la transición de la prueba de trabajo a la prueba de participación puede deducirse claramente según la consistencia del nuevo bloque de 12 horas.
 
-## Tamaño del bloque \{#block-size}
+## Tamaño del bloque {#block-size}
 
 Un importante apunte final es que los bloques tienen limitaciones de tamaño. Cada bloque tiene un tamaño objetivo de 15 millones de gas, pero el tamaño de los bloques incrementará o disminuirá según las exigencias de la red, hasta el límite de 30 millones de gas por bloque (el doble del tamaño objetivo). La cantidad total de gas utilizada por todas las transacciones del bloque debe ser inferior al límite de gas del bloque. Esto es importante, porque garantiza que los bloques no pueden tener un tamaño arbitrario. Si los bloques pudieran ser del tamaño que quisiéramos, los nodos completos de menor rendimiento dejarían de adaptarse gradualmente a la red, debido a los requisitos de espacio y velocidad. Cuanto más grande sea el bloque, mayores serán los requerimientos de potencia informática para procesarlos a tiempo para la siguiente ranura. Esto constituye una fuerza centralizadora, limitada por el tamaño de los bloques.
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
-## Temas relacionados \{#related-topics}
+## Temas relacionados {#related-topics}
 
 - [Transacciones](/developers/docs/transactions/)
 - [Gas](/developers/docs/gas/)

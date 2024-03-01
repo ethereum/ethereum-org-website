@@ -18,7 +18,7 @@ sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 
 Dalam tutorial ini, kita akan membangun Aplikasi DeFi dengan Solidity di mana pengguna dapat menyetor token ERC20 ke kontrak pintar dan kontrak pintar akan mencetak serta mentransfer Token Farm ke mereka. Pengguna nantinya dapat menarik token ERC20 mereka dengan membakar Token Farm pada kontrak pintar dan token ERC20 akan ditransfer kembali ke mereka.
 
-## Instal Truffle dan Ganache \{#install-truffle-and-ganache}
+## Instal Truffle dan Ganache {#install-truffle-and-ganache}
 
 Jika ini adalah pertama kalinya Anda menulis kontrak pintar, maka Anda perlu mengatur lingkungan kerja. Kita akan menggunakan dua perangkat: [Truffle](https://www.trufflesuite.com/) dan [Ganache](https://www.trufflesuite.com/ganache).
 
@@ -44,7 +44,7 @@ Perintah ini akan membuat sebuah proyek kosong untuk pengembangan dan penyebaran
 
 - `truffle-config.js`: File konfigurasi Truffle
 
-## Buat Token ERC20 \{#create-the-erc20-token}
+## Buat Token ERC20 {#create-the-erc20-token}
 
 Pertama, kita perlu membuat token ERC20 yang akan digunakan untuk melakukan taruhan pada kontrak pintar. Untuk membuat token yang dapat ditukarkan, kita terlebih dahulu perlu menginstal pustaka OpenZeppelin. Pustaka ini memuat penerapan standar seperti ERC20 dan ERC721. Untuk menginstal pustaka tersebut, jalankan perintah:
 
@@ -90,7 +90,7 @@ constructor (string memory name_, string memory symbol_) public {
 }
 ```
 
-## Kumpulkan Token ERC20 \{#compile-the-erc20-token}
+## Kumpulkan Token ERC20 {#compile-the-erc20-token}
 
 Untuk mengumpulkan kontrak pintar kita, kita harus terlebih dahulu memeriksa versi pengumpul solidity kita. Anda dapat memeriksa versi tersebut dengan menjalankan perintah:
 
@@ -123,7 +123,7 @@ Sekarang, kita dapat mengumpulkan kontrak pintar kita dengan menjalankan perinta
 truffle compile
 ```
 
-## Sebarkan Token ERC20 \{#deploy-erc20-token}
+## Sebarkan Token ERC20 {#deploy-erc20-token}
 
 Setelah dikumpulkan, kita sekarang dapat menyebarkan token kita.
 
@@ -175,7 +175,7 @@ Dengan menjalankan perintah di atas, kita akan melihat bahwa alamat pertama sebe
 
 _Alamat pertama memiliki 1000000 MyTokens_
 
-## Buat Kontrak Pintar FarmToken \{#create-farmtoken-smart-contract}
+## Buat Kontrak Pintar FarmToken {#create-farmtoken-smart-contract}
 
 Kontrak pintar FarmToken akan memiliki 3 fungsi:
 
@@ -468,7 +468,7 @@ Untuk menjalankan skrip ini: `truffle exec .\scripts\withdrawMyTokenFromTokenFar
 
 _output dari withdrawMyTokenFromTokenFarm.js_
 
-## Referensi \{#references}
+## Referensi {#references}
 
 [Kontrak - Dokumentasi OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/)
 

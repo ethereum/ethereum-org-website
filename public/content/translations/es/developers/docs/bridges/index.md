@@ -6,7 +6,7 @@ lang: es
 
 Con la proliferación de las cadenas de bloques L1 y las soluciones de [escalamiento](/developers/docs/scaling/) L2, junto con el gran crecimiento del número de aplicaciones descentralizadas operando en varias cadenas o pasando a la modalidad multicadena, la necesidad por establecer comunicación y de poder mover activos a través de estás cadenas se han convertido en una parte esencial de la infraestructura de red. Existen diferentes tipos de puentes que hacen esto posible.
 
-## La necesidad de puentes \{#need-for-bridges}
+## La necesidad de puentes {#need-for-bridges}
 
 Los puentes existen para poder conectar las redes de cadena de bloques entre sí. Permiten la conectividad e interoperatividad entre las cadenas de bloques.
 
@@ -14,7 +14,7 @@ Las cadenas de bloques existen en entornos aislados, lo que significa que no hay
 
 Los puentes ofrecen una manera de que los entornos aislados de cadenas de bloques puedan conectarse entre sí. Establecen una vía de transporte entre las cadenas de bloques donde tokens, mensajes, datos arbitrarios e incluso llamadas a [contratos inteligentes](/developers/docs/smart-contracts/) puedan transferirse de una cadena hacia otra.
 
-## Beneficio de los puentes \{#benefits-of-bridges}
+## Beneficio de los puentes {#benefits-of-bridges}
 
 En pocas palabras, los puentes posibilitan numerosos casos de uso, ya que permiten que las redes de cadenas de bloques intercambien datos y muevan activos entre sí.
 
@@ -28,7 +28,7 @@ En el caso de los desarrolladores, los puentes permiten lo siguiente:
 - Coloración entre desarrolladores de varios ecosistemas de cadenas de bloques para crear nuevos productos;
 - Atracción de usuarios y comunidades de varios ecosistemas a sus dapps.
 
-## ¿Cómo funcionan los puentes? \{#how-do-bridges-work}
+## ¿Cómo funcionan los puentes? {#how-do-bridges-work}
 
 Si bien hay muchos [tipos de diseños de puentes](https://li.fi/knowledge-hub/blockchain-bridges-and-classification/), resaltan tres formas de facilitar la transferencia de activos entre cadenas:
 
@@ -36,7 +36,7 @@ Si bien hay muchos [tipos de diseños de puentes](https://li.fi/knowledge-hub/bl
 - **Quemar y mintear:** Quemar activos en la cadena de origen y mintearlos en la cadena de destino.
 - **Intercambios atómicos:** Intercambiar activos en la cadena fuente por activos en la cadena de destino con otra parte.
 
-## Tipos de puentes \{#bridge-types}
+## Tipos de puentes {#bridge-types}
 
 Los puentes usualmente se clasifican en los siguientes tipos:
 
@@ -45,7 +45,7 @@ Los puentes usualmente se clasifican en los siguientes tipos:
 - **Puentes de pase de mensajes generalizados:** Estos puentes pueden transferir activos, junto con mensajes y datos arbitrarios entre cadenas. Ejemplos: Nomad y LayerZero.
 - **Redes de liquidez:** Estos puentes principalmente se enfocan en la transferencia de activos desde una cadena de bloques a otra vía intercambios atómicos. Generalmente, no soportan el envío de mensajes entre cadenas. Ejemplos: Connext y Hop.
 
-## Algunas compensaciones que debe considerar \{#trade-offs}
+## Algunas compensaciones que debe considerar {#trade-offs}
 
 Los puentes no son soluciones perfectas. De hecho, deben sacrificarse algunas cuestiones para el propósito. Desarrolladores y usuarios pueden evaluar los puentes basándose en los siguientes factores:
 
@@ -65,7 +65,7 @@ Para evaluar los puentes sin confianza en función de otros factores, debemos di
 - **Puentes de pase de mensajes generalizados:** Estos puentes son excelentes en materia de seguridad y la capacidad de transferir datos más complejos a través de cadenas. Por lo general, también son buenos en términos de rentabilidad. Sin embargo, estas fortalezas generalmente vienen a expensas de la conectividad para los puentes de clientes ligeros (por ejemplo, IBC) e inconvenientes de velocidad para los puentes optimistas (por ejemplo, Nomad) que utilizan pruebas de fraude.
 - **Redes de liquidez:** Estos puentes utilizan intercambios atómicos para transferir activos y son sistemas verificados localmente (es decir, utilizan los validadores de las cadenas de bloques subyacentes para verificar las transacciones). Como resultado, sobresalen por seguridad y velocidad. Además, se consideran comparativamente rentables y ofrecen una buena conectividad. Sin embargo, la principal compensación es su incapacidad para transmitir datos más complejos, ya que no admiten la transmisión de mensajes entre cadenas.
 
-## Riesgo con los puentes \{#risk-with-bridges}
+## Riesgo con los puentes {#risk-with-bridges}
 
 Los puentes se asocian a los tres [más importantes hackeos en DeFi](https://rekt.news/leaderboard/) y todavía están en las primeras etapas de desarrollo. El uso de cualquier puente conlleva los siguientes riesgos:
 
@@ -74,11 +74,11 @@ Los puentes se asocian a los tres [más importantes hackeos en DeFi](https://rek
 - **Riesgo de contraparte:** Algunos puentes utilizan un diseño confiable que requiere que los usuarios confíen en la suposición de que los validadores no harán un complot para robar los fondos de los usuarios. La necesidad de que los usuarios confíen en estos actores de terceros los expone a riesgos como los rug pulls, la censura y otras actividades maliciosas.
 - **Problemas abiertos:** Dado que los puentes se encuentran en las primeras etapas de desarrollo, hay muchas preguntas sin respuesta relacionadas con el rendimiento de los puentes en diferentes condiciones del mercado, como los tiempos de congestión de la red, y durante eventos imprevistos, como ataques a nivel de red o reversiones de estado. Esta incertidumbre plantea ciertos riesgos, cuyo grado aún se desconoce.
 
-## ¿Cómo pueden usar los puentes las dapps? \{#how-can-dapps-use-bridges}
+## ¿Cómo pueden usar los puentes las dapps? {#how-can-dapps-use-bridges}
 
 Estas son algunas aplicaciones prácticas que los desarrolladores pueden considerar sobre los puentes y llevar su dapp a otras cadenas:
 
-### Integración de puentes \{#integrating-bridges}
+### Integración de puentes {#integrating-bridges}
 
 Para los desarrolladores, hay muchas maneras de añadir soporte para puentes:
 
@@ -101,7 +101,7 @@ Dicho esto, los agregadores de puentes también tienen sus limitaciones. Por eje
 
 Si una dapp va por la ruta de integrar un puente o un agregador, hay diferentes opciones en función de la profundidad de la integración. Por ejemplo, si solo se trata de una integración de front-end para mejorar la experiencia de incorporación del usuario, una dapp integraría el widget. Sin embargo, si la integración es para explorar estrategias de cadena cruzada más profundas como el staking, el yield farming, etc., la dapp integra el SDK o la API.
 
-### Implementar una dapp en múltiples cadenas \{#deploying-a-dapp-on-multiple-chains}
+### Implementar una dapp en múltiples cadenas {#deploying-a-dapp-on-multiple-chains}
 
 Para implementar una dapp en múltiples cadenas, los desarrolladores pueden usar plataformas de desarrollo como [Alchemy](https://www.alchemy.com/), [Hardhat](https://hardhat.org/), [Truffle](https://trufflesuite.com/), [Moralis](https://moralis.io/), etc. Por lo general, estas plataformas vienen con complementos componibles que pueden permitir que las dapps se hagan multicadena o se usen en otras. Por ejemplo, los desarrolladores pueden usar un proxy de implementación determinista ofrecido por el [complemento hardhat-deploy](https://github.com/wighawag/hardhat-deploy).
 
@@ -111,7 +111,7 @@ Para implementar una dapp en múltiples cadenas, los desarrolladores pueden usar
 - [Crear un mercado de NFT entre cadenas](https://youtu.be/WZWCzsB1xUE)
 - [Moralis: Creación de dapps de NFT multicadena](https://www.youtube.com/watch?v=ehv70kE1QYo)
 
-### Monitoreo de la actividad de contratos entre cadenas \{#monitoring-contract-activity-across-chains}
+### Monitoreo de la actividad de contratos entre cadenas {#monitoring-contract-activity-across-chains}
 
 Para monitorear la actividad de los contratos entre cadenas, los desarrolladores pueden usar subgrafos y plataformas de desarrollador como Tenderly para observar los contratos inteligentes en tiempo real. Estas plataformas también tienen herramientas que ofrecen una mayor funcionalidad de monitoreo de datos para actividades multicadena, como la comprobación de [eventos emitidos por contratos](https://docs.soliditylang.org/en/v0.8.14/contracts.html?highlight=events#events), etc.
 
@@ -120,7 +120,7 @@ Para monitorear la actividad de los contratos entre cadenas, los desarrolladores
 - [The Graph](https://thegraph.com/en/)
 - [Antiguamente](https://tenderly.co/)
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [Puntes de cadena de bloques](/bridges/): ethereum.org
 - [Puntes de cadena de bloques: crear redes de redes criptográficas](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8) 8 de septiembre de 2021, Dmitriy Berenzon

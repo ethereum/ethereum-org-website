@@ -6,7 +6,7 @@ lang: ja
 
 [統合開発環境(IDE)](https://wikipedia.org/wiki/Integrated_development_environment)のセットアップに関して言えば、イーサリアム上のアプリケーションのプログラミングは、他のソフトウェアプロジェクトのプログラミングと類似しています。 多くの選択肢があるので、最終的には自分の好みに合った IDE やコードエディタを選んでください。 イーサリアムの開発に最適な IDE は、ほとんどの場合、従来のソフトウェア開発ですでに使用している IDE です。
 
-## Web ベースの IDE \{#web-based-ides}
+## Web ベースの IDE {#web-based-ides}
 
 [ローカル開発環境のセットアップ](/developers/local-environment/)を行う前にコードを触りたい場合、以下のウェブアプリがイーサリアムのスマートコントラクト開発用にカスタムビルドされています。
 
@@ -30,7 +30,7 @@ lang: ja
 
 - [Gitter](https://gitter.im/loomnetwork/ethfiddle)
 
-## デスクトップの IDE \{#desktop-ides}
+## デスクトップの IDE {#desktop-ides}
 
 ほとんどの定番 IDE では、イーサリアムの開発体験を向上させるプラグインが構築されています。 少なくとも、[スマートコントラクト言語](/developers/docs/smart-contracts/languages/)の構文強調表示は使用できます。
 
@@ -58,13 +58,13 @@ lang: ja
 - [ダウンロード](https://github.com/ethereum/remix-desktop/releases)
 - [GitHub](https://github.com/ethereum/remix-desktop)
 
-## プラグインと拡張機能 \{#plugins-extensions}
+## プラグインと拡張機能 {#plugins-extensions}
 
 - [Solidity](https://marketplace.visualstudio.com/items?itemName=JuanBlanco.solidity) - Visual Studio Code のためのイーサリアムの Solidity 言語
 - [VS Code のための Solidity と Hardhat](https://marketplace.visualstudio.com/items?itemName=NomicFoundation.hardhat-solidity) - Hardhat チームによる Solidity と Hardhat のサポート
 - [Prettier Solidity](https://github.com/prettier-solidity/prettier-plugin-solidity) - Prettier を使用するコードフォーマッター
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 - [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy のイーサリアム統合開発環境のリスト_
 

@@ -12,7 +12,7 @@ summaryPoint2: Pokušaj upotrebe Ethereuma za rešavanje globalnih koordinacioni
 summaryPoint3: Alatka za značajno povećanje ekoloških korisnih sredstava poput verifikovanih kreditnih bodova za smanjenje emisije ugljenika
 ---
 
-## Šta je ReFi? \{#what-is-refi}
+## Šta je ReFi? {#what-is-refi}
 
 **Regenerativne finansije (ReFi)** je skup alatki i ideja izgrađenih na vrhu lanca blokova, koje imaju za cilj stvaranje ekonomija koje su regenerativne, umesto ekstraktivnih ili eksploatativnih. Na kraju, ekstraktivni sistemi iscrpljuju dostupne resurse i propadaju; bez regenerativnih mehanizama, nedostaje im otpornost. ReFi deluje na pretpostavci da stvaranje monetarne vrednosti mora biti odvojeno od neodrživog izvlačenja resursa sa naše planete i zajednica.
 
@@ -26,7 +26,7 @@ ReFi projekti ostvaruju ove principe korišćenjem [pametnih ugovora](/developer
 
 ReFi takođe se preklapa sa pokretom [decentralizovane nauke (DeSci)](/desci/), koji koristi Ethereum kao platformu za finansiranje, kreiranje, recenzije, dodelu zasluga, skladištenje i širenje naučnog znanja. DeSci alati mogli bi da postanu korisni za razvoj verifikovanih standarda i praksi za implementaciju i praćenje regenerativnih aktivnosti poput sadnje drveća, uklanjanja plastike iz okeana ili obnove degradiranog ekosistema.
 
-## Tokenizacija karbonskih kredita \{#tokenization-of-carbon-credits}
+## Tokenizacija karbonskih kredita {#tokenization-of-carbon-credits}
 
 **[Dobrovoljno ugljenično tržište (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** predstavlja mehanizam za finansiranje projekata koji imaju potvrđen pozitivan uticaj na emisije ugljenika, bilo smanjivanjem postojećih emisija ili uklanjajem efekta staklene bašte već emitovanih emisija u atmosferi. Ovi projekti dobijaju sredstva nazvano "karbonski krediti" nakon što verifikovani, i njih mogu prodavati pojedincima i organizacijama koje žele podržati borbu protiv klimatskih promena.
 
@@ -50,7 +50,7 @@ Projekti ReFi koriste blokčejn tehnologiju kako bi ublažili mnoge probleme tra
 - **Trgovanje se dešava bez posrednika** koji naplaćuju visoke naknade. Digitalne karbonske kreditne jedinice predstavljaju[ poboljšanje troškova od 62% u odnosu na ekvivalentne tradicionalne kredite,](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne) prema podacima jedne analitičke firme.
 - **DCM je skalabilan** i možete jednako da izvrši zahteve pojedinaca i korporacija.
 
-### Ključne komponente DCM-a \{#key-components-dcm}
+### Ključne komponente DCM-a {#key-components-dcm}
 
 Četiri glavne komponente čine trenutnu sliku DCM-a:
 
@@ -65,7 +65,7 @@ Neki od njih, kao što su [Klima Infinity](https://www.klimadao.finance/infinity
 
 4. Osnovna infrastruktura koja olakšava povećanje uticaja i efikasnosti celokupnog lanca snabdevanja tržišta ugljenikom. [KlimaDAO](http://klimadao.finance/) pruža likvidnost kao javno dobro (omogućujući svima da kupe ili prodaju kreditne vrednosti ugljenika po transparentnoj ceni), stimuliše povećan protok tržišta ugljenika i povlačenje uz nagrade, obezbeđuje korisnički prijateljske interoperabilne alate za pristup podacima i omogućuje sticanje i povlačenje različitih tokenizovanih kreditnih vrednosti ugljenika.
 
-## ReFi izvan tržišta ugljenika \{#refi-beyond}
+## ReFi izvan tržišta ugljenika {#refi-beyond}
 
 Iako trenutno postoji snažan naglasak na tržišta ugljenika uopšteno i posebno na prelazak sa VCM na DCM unutar ovog prostora, termin "ReFi" nije strogo ograničen samo na ugljenik. Drugi ekološki resursi osim kredita za ugljenik mogu biti razvijeni i tokenizovani, što znači da će i drugi negativni eksterni uticaji moći biti precizno procenjeni unutar osnovnih slojeva budućih ekonomskih sistema. Osim toga, regenerativni aspekt ovog ekonomskog modela može se primeniti i na druge oblasti, poput finansiranja javnih dobara putem platformi za kvadratno finansiranje kao što je [Gitcoin](https://gitcoin.co/). Organizacije koje su izgrađene na ideji otvorenog učešća i jednake distribucije resursa ohrabruju svakog da preusmeri sredstva projektima otvorenog koda, projektima za zaštitu životne sredine, edukativnih projektima i projektima orijentisane ka zajednici.
 

@@ -9,7 +9,7 @@ incomplete: true
 
 Használj Ethereumot decentralizált alkalmazások (avagy "dappok") fejlesztésére, melyek kihasználják a kriptovaluta és a blokklánc technológia nyújtotta előnyöket. Ezek a dappok megbízhatóak, ami azt jelenti, hogyha egyszer telepítették az Ethereumba, akkor mindig úgy fognak futni, ahogy programozták őket. Digitális vagyontárgyakat irányíthatnak, lehetőséget teremtve ezzel újfajta pénzügyi alkalmazások létrejöveteléhez. Decentralizáltak lehetnek, mely azt jelenti, hogy semmilyen entitás vagy személy nem irányítja őket és közel lehetetlen őket cenzúrázni.
 
-## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel \{#getting-started-with-smart-contracts-and-solidity}
+## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel {#getting-started-with-smart-contracts-and-solidity}
 
 **Tegye meg az első lépést, hogy integrálja a Pythont az Ethereummal**
 
@@ -20,7 +20,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Írd meg az első Okosszerződésed](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Tanuld meg a Solidity fordítását és telepítését](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Cikkek kezdőknek \{#beginner-articles}
+## Cikkek kezdőknek {#beginner-articles}
 
 - [Egy (Python) fejlesztői útmutató az Ethereumra](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
 - [A Python helyzete a 2023-as blokklánc riportban](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
@@ -30,7 +30,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Bevezetés Web3.py-ba · Ethereum Python fejlesztőknek](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Hogyan kell egy okosszerződés függvényt meghívni Python és web3.py használatával](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
-## Köztes cikkek \{#intermediate-articles}
+## Köztes cikkek {#intermediate-articles}
 
 - [Dapp fejlesztés Python programozóknak](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [Python Ethereum felület létrehozása: Első rész](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
@@ -38,15 +38,15 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Okosszerződések telepítése Brownie-val és Pythonnal](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
 - [NFT-k létrehozása az OpenSea piactérre a Brownie-val](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
-## Speciális használati minták \{#advanced-use-patterns}
+## Speciális használati minták {#advanced-use-patterns}
 
 - [Ethereum okosszerződések fordítása, telepítése és hívása Python használatával](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
 - [Solidity okosszerződések elemzése Slitherrel](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 - [Blokklánc pénzügyi technológiai (fintech) útmutató: kölcsönadás és kölcsönvétel Pythonnal](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
 
-## Python projektek és eszközök \{#python-projects-and-tools}
+## Python projektek és eszközök {#python-projects-and-tools}
 
-### Aktív: \{#active}
+### Aktív: {#active}
 
 - [Web3.py](https://github.com/ethereum/web3.py) – _Python könyvtár az Ethereummal történő interakciókra_
 - [Vyper](https://github.com/ethereum/vyper/) – _Pythonikus okosszerződés nyelv az EVM-re_
@@ -62,14 +62,14 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [siwe](https://github.com/spruceid/siwe-py) – _Bejelentkezés az Ethereummal (siwe) Pythonra_
 - [Web3 decentralizált pénzügyek (DeFi) Ethereum integrációhoz](https://github.com/tradingstrategy-ai/web3-ethereum-defi) – _Egy Python csomag, mely készen áll az ERC-20, Uniswap és más népszerű projektekkel való integrációra_
 
-### Archivált / a karbantartás megszűnt: \{#archived--no-longer-maintained}
+### Archivált / a karbantartás megszűnt: {#archived--no-longer-maintained}
 
 - [Trinity](https://github.com/ethereum/trinity) – _Ethereum Python-kliens_
 - [Mamba](https://github.com/arjunaskykok/mamba) – _Keretrendszer Vyper nyelven írt okosszerződések írására, fordítására és telepítésére_
 
 Még több anyagot keresel? Tekintse meg az [ethereum.org/developers](/developers/) oldalt.
 
-## Python-eszközöket használó projektek \{#projects-using-python-tooling}
+## Python-eszközöket használó projektek {#projects-using-python-tooling}
 
 A következő Ethereum-alapú projektek a fent említett eszközöket használják. A kapcsolódó mappák jó referenciaként szolgálnak például a kódok és a bevált gyakorlatok tekintetében.
 
@@ -79,11 +79,11 @@ A következő Ethereum-alapú projektek a fent említett eszközöket használj�
 - [Sushi](https://sushi.com/) [Pythont használ arra, hogy a megbízási szerződéseket kezelje és telepítse](https://github.com/sushiswap/sushi-vesting-protocols)
 - [Alpha Finance](https://alphafinance.io/), amelyet az Alpha Homora révén ismerünk, [Brownie-t használ, hogy az okosszerződéseket tesztelje és telepítse](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
-## Python közösségi egyeztetések \{#python-community-contributors}
+## Python közösségi egyeztetések {#python-community-contributors}
 
 - [Ethereum Python közösségi Discord csatorna](https://discord.gg/9zk7snTfWe) a Web3.py és más Python keretrendszerhez kapcsolódó beszélgetésekhez
 - [Vyper Discord csatorna](https://discord.gg/SdvKC79cJk) a Vyper okosszerződések programozásáról szóló beszélgetésekhez
 
-## Egyéb összesített listák \{#other-aggregated-lists}
+## Egyéb összesített listák {#other-aggregated-lists}
 
 A Vyper wikinek [elképesztő anyaglistája van Vyperrel kapcsolatban.](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)

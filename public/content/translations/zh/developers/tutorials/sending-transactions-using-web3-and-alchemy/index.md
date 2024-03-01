@@ -17,30 +17,30 @@ sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 
 **注意：**本指南适用于在应用程序*后端*签署交易。 如果想在前端集成交易签署，请查看将 [Web3 与浏览器提供程序集成](https://docs.alchemy.com/reference/api-overview#with-a-browser-provider)。
 
-## 基本概念 \{#the-basics}
+## 基本概念 {#the-basics}
 
 像大多数区块链开发人员刚开始的时候一样，您可能已经对如何发送交易（应该非常简单）进行了一些研究，然后阅读了大量的指南，发现每个人有不同的解读，让您有点不知所措和困惑。 如果您已上了那条船，就不要担心，我们在某些时候都会这样！ 所以，在开始之前，让我们弄清楚一些事情：
 
-### 1. Alchemy 不会存储您的私钥 \{#alchemy-does-not-store-your-private-keys}
+### 1. Alchemy 不会存储您的私钥 {#alchemy-does-not-store-your-private-keys}
 
 - 这意味着 Alchemy 无法代表您签署和发送交易。 这样做的原因是出于安全考虑。 Alchemy 绝不会要求您分享您的私钥，您也绝不应该与托管节点（或任何人）分享您的私钥。
 - 您可以使用 Alchemy 的核心应用程序接口读取区块链，但要写入它，您需要使用其他方式签署交易然后通过 Alchemy 发送它们（任何其他[节点服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)也是如此）。
 
-### 2. 什么是 "签名者"？ \{#what-is-a-signer}
+### 2. 什么是 "签名者"？ {#what-is-a-signer}
 
 - 签名者将使用您的私钥为您签署交易。 在本教程中，我们将使用 [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3) 签署我们的交易，但您也可以使用任何其他 Web3 库。
 - 在前端，一个很好的签名者示例是 [MetaMask](https://metamask.io/)，它将代表你签署和发送交易。
 
-### 3. 为什么我需要在我的交易上签名？ \{#why-do-i-need-to-sign-my-transactions}
+### 3. 为什么我需要在我的交易上签名？ {#why-do-i-need-to-sign-my-transactions}
 
 - 每个想要在以太坊网络上发送交易的用户都必须在交易上签名（使用他们的私钥），以验证交易的来源是其所声称的那个人。
 - 保护这个私钥非常重要，因为拥有这个私钥就可以完全控制您的以太坊帐户，允许您（或任何有权限的人）代表您进行交易。
 
-### 4. 如何保护我的私钥？ \{#how-do-i-protect-my-private-key}
+### 4. 如何保护我的私钥？ {#how-do-i-protect-my-private-key}
 
 - 有许多方法来保护您的私钥，并使用它来发送交易。 在本教程中，我们将使用 `.env` 文件。 然而，你也可以使用一个单独的存储私钥的服务提供器，使用一个密钥库文件，或其他选项。
 
-### 5. `eth_sendTransaction` 和 `eth_sendRawTransaction` 之间有什么区别？ \{#difference-between-send-and-send-raw}
+### 5. `eth_sendTransaction` 和 `eth_sendRawTransaction` 之间有什么区别？ {#difference-between-send-and-send-raw}
 
 `eth_sendTransaction` 和 `eth_sendRawTransaction` 都是 Ethereum API 函数，用于将交易广播到 Ethereum 网络，以便将其添加到未来的区块中。 它们在处理交易签名的方式上有所不同。
 
@@ -51,7 +51,7 @@ sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 
 这就是我们将在本教程中使用的函数。
 
-### 6. Web3 库是什么？ \{#what-is-the-web3-library}
+### 6. Web3 库是什么？ {#what-is-the-web3-library}
 
 - Web3.js 是一个围绕标准 JSON-RPC 调用的封装库，在以太坊开发中使用相当普遍。
 - 有许多针对不同语言的 web3 库。 在本教程中，我们将使用 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)，它用 JavaScript 编写。 您可以在[这里](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)查看其他选项。
@@ -64,17 +64,17 @@ sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 2.  [创建 MetaMask 帐户](https://metamask.io/)（或获取以太坊地址）
 3.  [按照这些步骤安装 NodeJs 和 NPM](https://docs.alchemy.com/alchemy/guides/alchemy-for-macs)
 
-## 发送交易的步骤 \{#steps-to-sending-your-transaction}
+## 发送交易的步骤 {#steps-to-sending-your-transaction}
 
-### 1. 在 Rinkeby 测试网上创建一个 Alchemy 程序 \{#create-an-alchemy-app-on-the-rinkeby-testnet}
+### 1. 在 Rinkeby 测试网上创建一个 Alchemy 程序 {#create-an-alchemy-app-on-the-rinkeby-testnet}
 
 导航到您的 [Alchemy 仪表板](https://dashboard.alchemyapi.io/)并创建一个新的应用程序，选择 Rinkeby（或任何其他测试网）作为您的网络。
 
-### 2. 从 Rinkeby faucet 请求 ETH \{#request-eth-from-rinkeby-faucet}
+### 2. 从 Rinkeby faucet 请求 ETH {#request-eth-from-rinkeby-faucet}
 
 按照 [Alchemy Rinkeby 水龙头](https://www.rinkebyfaucet.com/)相关说明接收以太币。 确保包含您的 **Rinkeby** 以太坊地址（来自 MetaMask）而不是其他网络。 按照说明操作后，请仔细检查您是否已在钱包中收到以太币。
 
-### 3. 创建一个新的项目目录，并使用 `cd` 命令进入该目录。 \{#create-a-new-project-direction}
+### 3. 创建一个新的项目目录，并使用 `cd` 命令进入该目录。 {#create-a-new-project-direction}
 
 从命令行（macs 终端）创建一个新的项目目录并导航到这个目录：
 
@@ -83,7 +83,7 @@ mkdir sendtx-example
 cd sendtx-example
 ```
 
-### 4. 安装 Alchemy Web3（或任何 web3 库）。 \{#install-alchemy-web3}
+### 4. 安装 Alchemy Web3（或任何 web3 库）。 {#install-alchemy-web3}
 
 在你的项目目录中运行以下命令，以安装 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)：
 
@@ -91,7 +91,7 @@ cd sendtx-example
 npm install @alch/alchemy-web3
 ```
 
-### 5. 安装 dotenv \{#install-dotenv}
+### 5. 安装 dotenv {#install-dotenv}
 
 我们将使用 `.env` 文件安全地存储我们的应用程序接口密钥和私钥。
 
@@ -99,7 +99,7 @@ npm install @alch/alchemy-web3
 npm install dotenv --save
 ```
 
-### 6. 创建 `.env` 文件 \{#create-the-dotenv-file}
+### 6. 创建 `.env` 文件 {#create-the-dotenv-file}
 
 在您的项目目录中创建一个 `.env` 文件并添加以下内容（替换”`your-api-url`“和”`your-private-key`“）
 
@@ -115,7 +115,7 @@ PRIVATE_KEY = "your-private-key"
 不要提交 <code>.env</code>！ 请确保永远不要与任何人共享或公开您的 <code>.env</code> 文件，因为这样做会泄露您的私钥。 如果您使用版本控制，请将您的 <code>.env</code> 添加到 <a href="https://git-scm.com/docs/gitignore">gitignore</a> 文件中。
 </InfoBanner>
 
-### 7. 创建 `sendTx.js` 文件 \{#create-sendtx-js}
+### 7. 创建 `sendTx.js` 文件 {#create-sendtx-js}
 
 太好了，既然我们已经在 `.env` 文件中保护了敏感数据，我们开始编码吧。 对于我们的发送交易示例，我们将把 ETH 发送回 Rinkeby faucet。
 
@@ -174,7 +174,7 @@ main();
 - 智能合约交易：在链上执行一些智能合约代码。 在这种情况下，数据字段应包含您希望执行的智能函数及任何参数。
   - 有关实际示例，请查看此 [Hello World 教程](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#step-8-create-the-transaction)中的第 8 步。
 
-### 8. 使用 `节点 sendTx.js` 运行代码 \{#run-the-code-using-node-sendtx-js}
+### 8. 使用 `节点 sendTx.js` 运行代码 {#run-the-code-using-node-sendtx-js}
 
 返回到您的终端或命令行并运行：
 
@@ -182,7 +182,7 @@ main();
 node index.js
 ```
 
-### 9. 在内存池中查看您的交易 \{#see-your-transaction-in-the-mempool}
+### 9. 在内存池中查看您的交易 {#see-your-transaction-in-the-mempool}
 
 在您的 Alchemy 仪表板上打开[内存池页面](https://dashboard.alchemyapi.io/mempool)，并通过您创建的应用程序筛选，以找到您的交易。 我们可以在这里观看交易从待处理状态转换到已开采状态（如果成功），或者从待处理状态转换到被丢弃状态（如果失败）。 确保页面保持在“全部”视图下，这样您就能捕捉到“已开采”、“待处理”和“被丢弃”的交易。 您还可以通过查找发送到地址 `0x31b98d14007bdee637298086988a0bbd31184523` 的交易来搜索您的交易。
 

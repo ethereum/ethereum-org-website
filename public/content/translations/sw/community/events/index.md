@@ -4,7 +4,7 @@ description: Jinsi ya kushiriki kwenye jamii ya Ethereum.
 lang: sw
 ---
 
-## Matukio yajayo \{#events}
+## Matukio yajayo {#events}
 
 **Kila mwezi, kuna matukio muhimu ulimwenguni kote.** Fikiria kuhusu kushiriki mkutano mmoja ulio jirani na wewe ukutane na watu wengi walio kwenye jamii, jifunze juu ya kupata fursa za kazi na jenga ujuzi mpya.
 
@@ -14,7 +14,7 @@ lang: sw
 
 Hii ni orodha isyo kamili inayohifadhiwa na jamii yetu. Unajua mkutano ujao wowote wa Ethereum wa kuongeze kwenye orodha hii? [Tafadhali uongeze](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
 
-## Mikutano ya Ethereum \{#meetups}
+## Mikutano ya Ethereum {#meetups}
 
 Hauoni mkutano unaokufaa? Jaribu kuingia kwenye mkutano. Mikutano hii ni midigo inayoandaliwa na wapenzi wa Ethereum - hii ni nafasi ya watu wanaovutiwa na Ethereum kukutana, kujadili kuhusu Ethereum, na kujifunza maendeleo ya hivi karibuni.
 

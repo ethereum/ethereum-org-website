@@ -9,7 +9,7 @@ template: roadmap
 
 Algunas partes de la hoja de ruta no son obligatorias para escalar o asegurar a Ethereum a corto plazo, pero preparan la estabilidad y fiabilidad de Ethereum en el futuro.
 
-## Resistencia cuántica \{#quantum-resistance}
+## Resistencia cuántica {#quantum-resistance}
 
 Parte de la criptografía que asegura el presente de Ethereum se alterará cuando la computación cuántica se haga realidad. Aunque es probable que la computación cuántica esté a décadas de distancia de ser una amenaza genuina para la criptografía moderna, Ethereum se está construyendo para ser segura por los siglos de los siglos. Esto significa hacer a [Ethereum cuántico resistente](https://consensys.net/blog/developers/how-will-quantum-supremacy-affect-blockchain/) tan pronto como sea posible.
 
@@ -21,7 +21,7 @@ Las [estrategias comprometidas «KZG»](/roadmap/danksharding/#what-is-kzg) que 
 <ButtonLink variant="outline-color" to="/roadmap/danksharding#what-is-kzg"> Lea acerca de KZG y las configuraciones seguras</ButtonLink>
 }
 
-## Ethereum más simple y eficiente \{#simpler-more-efficient-ethereum}
+## Ethereum más simple y eficiente {#simpler-more-efficient-ethereum}
 
 La complejidad crea oportunidades para errores o vulnerabilidades que los intrusos pueden explotar. En consecuencia, parte de la hoja de ruta está simplificando Ethereum y eliminando el código que ha estado pendiente de varias actualizaciones, pero que ya no se necesita o que ahora puede mejorarse. A los desarrolladores les resulta más sencillo y dinámico mantener y razonar una base de código.
 
@@ -29,7 +29,7 @@ Se realizarán múltiples actualizaciones a la [Máquina Virtual de Ethereum (EV
 
 Igualmente, hay actualizaciones que pueden hacerse en otras áreas para los clientes actuales de Ethereum. Un ejemplo es que la ejecución actual y los clientes de consenso usan un tipo diferente de comprensión de la información. Será mucho más fácil e intuitivo compartir datos entre clientes si la estrategia de compresión está unificada en toda la red.
 
-## Progreso actual \{#current-progress}
+## Progreso actual {#current-progress}
 
 La mayoría de las actualizaciones requeridas para la garantía futura de Ethereum están aún en fase de investigación y su implementación aún puede tardar varios años. Actualizaciones como eliminar SELF-DESTRUCT y armonizar la estrategia de comprensión usada en la ejecución y en los clientes de consenso probablemente lleguen antes que la criptografía cuántica resistente.
 

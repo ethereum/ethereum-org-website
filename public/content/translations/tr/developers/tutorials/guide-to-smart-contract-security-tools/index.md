@@ -35,7 +35,7 @@ Her tekniğin avantajları ve yetersizlikleri vardır ve hepsi [belirli durumlar
 
 **Manticore** "en büyük ağırlık" analizini uygular. Echidna gibi, Manticore da kullanıcı tarafından sağlanan özellikleri doğrular. Çalıştırmak için daha fazla zamana ihtiyacı olacak ancak bir özelliğin geçerliliğini kanıtlayabilir ve yanlış alarmları bildirmez.
 
-## Önerilen iş akışı \{#suggested-workflow}
+## Önerilen iş akışı {#suggested-workflow}
 
 Şu anda hiçbir basit hatanın bulunmadığından veya daha sonra tanıtılacağından emin olmak için Slither'ın yerleşik algılayıcılarıyla başlayın. Kalıtım, değişken bağımlılıkları ve yapısal sorunlarla ilgili özellikleri kontrol etmek için Slither'ı kullanın. Kod tabanı büyüdükçe, durum makinesinin daha karmaşık özelliklerini test etmek için Echidna'yı kullanın. Geçersiz kılınan bir fonksiyona karşı koruma gibi, Solidity'de bulunmayan korumalar için özel kontroller geliştirmek için Slither'ı tekrar ziyaret edin. Son olarak, aritmetik işlemler gibi kritik güvenlik özelliklerinin hedefli doğrulamasını gerçekleştirmek için Manticore'u kullanın.
 
@@ -46,7 +46,7 @@ Her tekniğin avantajları ve yetersizlikleri vardır ve hepsi [belirli durumlar
 
 **Birim testleri üzerine bir not**. Yüksek kaliteli yazılım oluşturmak için birim testleri gereklidir. Ancak, bu teknikler güvenlik açıklarını bulmak için en uygun teknikler değildir. Genellikle kodun olumlu davranışlarını test etmek için kullanılırlar (yani kod normal bağlamda beklendiği gibi çalışır), güvenlik kusurları ise geliştiricilerin dikkate almadığı uç durumlarda bulunma eğilimindedir. Düzinelerce akıllı sözleşme güvenlik incelemesini içeren çalışmamızda [birim test kapsamı, müşterimizin kodunda bulduğumuz güvenlik açıklarının sayısı veya ciddiyeti üzerinde hiçbir etkiye sahip değildi](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/).
 
-## Güvenlik Özelliklerinin Belirlenmesi \{#determining-security-properties}
+## Güvenlik Özelliklerinin Belirlenmesi {#determining-security-properties}
 
 Kodunuzu etkili bir şekilde test etmek ve doğrulamak için dikkat edilmesi gereken alanları belirlemelisiniz. Güvenlik için harcanan kaynaklarınız sınırlı olduğundan, çabanızı optimize etmek için kod tabanınızın zayıf veya yüksek değerli kısımlarının kapsamını belirlemek önemlidir. Tehdit modelleme yardımcı olabilir. Şunları incelemeyi düşünün:
 
@@ -57,7 +57,7 @@ Kodunuzu etkili bir şekilde test etmek ve doğrulamak için dikkat edilmesi ger
 - [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
 - [Teyitlerin Kullanımı](https://blog.regehr.org/archives/1091)
 
-### Bileşenler \{#components}
+### Bileşenler {#components}
 
 Neyi kontrol etmek istediğinizi bilmek, doğru aracı seçmenize de yardımcı olacaktır.
 
@@ -86,7 +86,7 @@ Akıllı sözleşmelerle sıklıkla ilgili olan geniş alanlar şunları içerir
 - **Standart uyum.** Ethereum standartı tasarımlarının (örn. ERC20) geçmişlerinde bir çok hata bulunur. Üzerine inşa ettiğiniz standardın sınırlamalarının farkında olun.
   - Slither, Echidna ve Manticore, belirli bir standarttan sapmaları tespit etmenize yardımcı olacaktır.
 
-### Araç seçimi kopya kağıdı \{#tool-selection-cheatsheet}
+### Araç seçimi kopya kağıdı {#tool-selection-cheatsheet}
 
 | Bileşen                | Araçlar                     | Örnekler                                                                                                                                                                                                                                                          |
 | ---------------------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -9,7 +9,7 @@ incomplete: true
 
 Használja az Ethereumot decentralizált alkalmazások (dappok) fejlesztésére. Ezek a dappok megbízhatóak, ami azt jelenti, hogyha egyszer telepítették az Ethereumba, akkor mindig úgy fognak futni, ahogy programozták őket. Decentralizáltak, ami azt jelenti, hogy egy peer-to-peer hálózaton futnak és nincs lehetőség egyetlen hiba miatti leállásra (single point of failure). Nincs olyan entitás vagy személy, ami irányítaná őket és szinte lehetetlen őket cenzúrázni. Digitális eszközöket irányíthatnak, lehetőséget teremtve ezzel újfajta alkalmazások létrejöveteléhez.
 
-## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel \{#getting-started-with-smart-contracts-and-solidity}
+## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel {#getting-started-with-smart-contracts-and-solidity}
 
 **Tegye meg az első lépést, hogy integrálja a Go-t az Ethereummal**
 
@@ -21,7 +21,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Tanuld meg a Solidity fordítását és telepítését](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [Szerződésútmutató](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
-## Cikkek és könyvek kezdőknek \{#beginner-articles-and-books}
+## Cikkek és könyvek kezdőknek {#beginner-articles-and-books}
 
 - [Ethereum kliens kiválasztása](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Kezdő lépések Geth-tel](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
@@ -30,7 +30,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Egy útmutató, arról, hogy hogyan kell Ethereum okosszerződéseket tesztelni és telepíteni lépésről lépésre](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [eBook: Ethereum fejlesztése a Go-val](https://goethereumbook.org/) – _Ethereum alkalmazások fejlesztése Go-val_
 
-## Cikkek és dokumentációk haladóknak \{#intermediate-articles-and-docs}
+## Cikkek és dokumentációk haladóknak {#intermediate-articles-and-docs}
 
 - [Go Ethereum dokumentácó](https://geth.ethereum.org/docs/) – _A hivatalos Ethereum Golang dokumentáció_
 - [Erigon útmutató programozóknak](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) – _Illusztrált útmutató, amely bemutatja az állapotfát, többszöri bizonyítékokat és a tranzakciófeldolgozást_
@@ -42,7 +42,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Solidity szerződések egységtesztje az Ethereumon a Go-val](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [Gyors hivatkozás, hogyan használja a Geth-t könyvtárként](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
-## Speciális használati minták \{#advanced-use-patterns}
+## Speciális használati minták {#advanced-use-patterns}
 
 - [A GETH szimulált Backend](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [A blokklánc mint szolgáltatás alkalmazások az Ethereum és a Quorum használatával](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
@@ -50,7 +50,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 - [Mobilkliensek: könyvtárak és inproc Ethereum csomópontok](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [Natív dappok: Go-megkötések az Ethereum szerződésekre](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-## Go-projektek és -eszközök \{#go-projects-and-tools}
+## Go-projektek és -eszközök {#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _Az Ethereum protokoll hivatalos Go implementációja_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _Go Ethereum forráskód áttekintése és elemzése_
@@ -68,7 +68,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintsd meg az [
 
 Még több anyagot keresel? Tekintse meg az [ethereum.org/developers](/developers/) oldalt
 
-## Go közösségi hozzájárulók \{#go-community-contributors}
+## Go közösségi hozzájárulók {#go-community-contributors}
 
 - [Geth Discord](https://discordapp.com/invite/nthXNEv)
 - [Geth Gist](https://gitter.im/ethereum/go-ethereum)
@@ -78,7 +78,7 @@ Még több anyagot keresel? Tekintse meg az [ethereum.org/developers](/developer
 - [Ethereum Gitter](https://gitter.im/ethereum/home)
 - [Geth light Client Gitter](https://gitter.im/ethereum/light-client)
 
-## Egyéb összesített listák \{#other-aggregated-lists}
+## Egyéb összesített listák {#other-aggregated-lists}
 
 - [Awesome Ethereum](https://github.com/btomashvili/awesome-ethereum)
 - [Consensys: Az Ethereum fejlesztői eszközök döntő listája](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub forrás](https://github.com/ConsenSys/ethereum-developer-tools-list)

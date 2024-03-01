@@ -18,7 +18,7 @@ published: 2020-12-01
 
 Jest to przewodnik na poziomie podstawowym do korzystania z WebSockets i Alchemy do wykonywania żądań do blockchainu Ethereum.
 
-## WebSockets vs. HTTP \{#websockets-vs-http}
+## WebSockets vs. HTTP {#websockets-vs-http}
 
 W odróżnieniu od HTTP, z WebSockets, nie musisz ciągle wysyłać żądań, gdy chcesz uzyskać konkretne informacje. WebSockets utrzymuje dla Ciebie połączenie sieciowe (jeżeli zostało nawiązane) i nasłuchuje zmian.
 
@@ -26,7 +26,7 @@ Podobnie jak w przypadku jakiegokolwiek połączenia sieciowego, nie należy zak
 
 ​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automatycznie dodaje obsługę awarii WebSocket i ponawiania prób bez konieczności konfiguracji.
 
-## Wypróbuj \{#try-it-out}
+## Wypróbuj {#try-it-out}
 
 Najprostszym sposobem na przetestowanie WebSockets jest zainstalowanie narzędzia wiersza poleceń do tworzenia żądań WebSocket, takich jak [wscat](https://github.com/websockets/wscat). Używając wscat, możesz wysyłać następujące żądania:
 
@@ -39,7 +39,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ```
 
-## Jak korzystać z WebSockets \{#how-to-use-websockets}
+## Jak korzystać z WebSockets {#how-to-use-websockets}
 
 Aby rozpocząć, otwórz WebSocket za pomocą adresu URL WebSocket dla swojej aplikacji. Możesz znaleźć adres URL swojej aplikacji WebSocket, otwierając stronę aplikacji w [pulpicie nawigacyjnym](https://dashboard.alchemyapi.io/) i klikając przycisk „Wyświetl klucz”. Pamiętaj, że adres URL Twojej aplikacji dla WebSocketów różni się od adresu URL dla żądań HTTP, ale oba można znaleźć klikając „Wyświetl klucz”.
 
@@ -47,7 +47,7 @@ Aby rozpocząć, otwórz WebSocket za pomocą adresu URL WebSocket dla swojej ap
 
 Każdy z API wymienionych w [alchemy API](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) może być używany przez WebSocket. Aby to zrobić, użyj tego samego ładunku, który zostałby wysłany jako treść żądania HTTP POST, ale zamiast tego wyślij ten ładunek za pośrednictwem protokołu WebSocket.
 
-## Z Web3 \{#with-web3}
+## Z Web3 {#with-web3}
 
 Przejście na WebSockets podczas korzystania z biblioteki klienckiej, takiej jak Web3, jest proste. Po prostu przekaż adres URL WebSocket zamiast HTTP podczas tworzenia instancji klienta Web3. Na przykład:
 
@@ -57,26 +57,26 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## Subskrypcja API \{#subscription-api}
+## Subskrypcja API {#subscription-api}
 
 Po połączeniu przez WebSocket, możesz użyć dwóch dodatkowych metod: `eth_subscribe` i `eth_unsubscribe`. Te metody pozwolą Ci na wysłuchanie konkretnych wydarzeń i natychmiastowe powiadomienie.
 
-### `eth_subscribe` \{#eth-subscribe}
+### `eth_subscribe` {#eth-subscribe}
 
 Tworzy nową subskrypcję dla określonych zdarzeń. [Dowiedz się więcej o `eth_subscribe`](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_subscribe).
 
-#### Parametry \{#parameters}
+#### Parametry {#parameters}
 
 1. Rodzaj subskrypcji
 2. Parametry opcjonalne
 
 Pierwszy argument określa rodzaj wydarzenia, którego należy nasłuchiwać. Drugi argument zawiera dodatkowe opcje, które zależą od pierwszego argumentu. Poniżej opisano różne rodzaje opisów, ich opcje i obciążenia zdarzeniami.
 
-#### Zwraca \{#returns}
+#### Zwraca {#returns}
 
 ID subskrypcji: Ten identyfikator zostanie dołączony do wszystkich otrzymanych wydarzeń, i może być również używany do anulowania subskrypcji za pomocą `eth_unsubscribe`.
 
-#### Zdarzenia subskrypcji \{#subscription-events}
+#### Zdarzenia subskrypcji {#subscription-events}
 
 Podczas gdy subskrypcja jest aktywna, otrzymasz zdarzenia, które są obiektami z następującymi polami:
 
@@ -86,7 +86,7 @@ Podczas gdy subskrypcja jest aktywna, otrzymasz zdarzenia, które są obiektami 
   - `subscription`: ID subskrypcji zwrócony przez połączenie `eth_subscription`, które utworzyło tę subskrypcję.
   - `result`: Obiekt, którego zawartość różni się w zależności od rodzaju subskrypcji.
 
-#### Rodzaj subskrypcji \{#subscription-types}
+#### Rodzaj subskrypcji {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
@@ -211,7 +211,7 @@ Przykład:
 
 ```
 
-### `eth_unsubscribe` \{#eth-unsubscribe}
+### `eth_unsubscribe` {#eth-unsubscribe}
 
 Anuluje istniejącą subskrypcję, aby nie wysyłano żadnych kolejnych wydarzeń.
 

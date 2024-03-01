@@ -5,19 +5,19 @@ lang: ro
 sidebarDepth: 2
 ---
 
-# Ethereum Whitepaper \{#ethereum-whitepaper}
+# Ethereum Whitepaper {#ethereum-whitepaper}
 
 _Această lucrare introductivă a fost publicată inițial în 2013 de Vitalik Buterin, fondatorul [Ethereum](/what-is-ethereum/), înainte de lansarea proiectului în 2015. Este demn de remarcat faptul că Ethereum, ca multe proiecte software open-source bazate pe comunitate, a evoluat de la începuturile sale inițiale._
 
 _Deși are câțiva ani de când a fost creat, menținem această lucrare, deoarece continuă să servească drept referință utilă și o reprezentare exactă a Ethereum și a viziunii sale. Pentru a afla despre cele mai recente evoluții ale Ethereum și despre modul în care se fac modificări ale protocolului, recomandăm acest [ghid](/learn/)._
 
-## O nouă generație de contracte inteligente și o platformă de aplicații descentralizată \{#a-next-generation-smart-contract-and-decentralized-application-platform}
+## O nouă generație de contracte inteligente și o platformă de aplicații descentralizată {#a-next-generation-smart-contract-and-decentralized-application-platform}
 
 Dezvoltarea Bitcoin de către Satoshi Nakamoto în 2009 a fost adesea apreciată ca o dezvoltare radicală în bani și monedă, fiind primul exemplu a unui activ digital care simultan nu are niciun suport sau [valoare intrinsecă](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/) și niciun emitent sau controlor centralizat". Cu toate acestea, o altă parte - probabil mai importantă - a experimentului Bitcoin este tehnologia blockchain care stă la bază ca instrument de consens distribuit, iar atenția începe rapid să se deplaseze către acest alt aspect al Bitcoin. În mod obișnuit aplicațiile alternative citate ale tehnologiei blockchain includ utilizarea activelor digitale în-blockchain pentru a reprezenta monede personalizate și instrumente financiare ([monede colorate](https://docs.google.com/a/buterin.com/document/d/1AnkP_cVZTCMLIzw4DvsW6M8Q2JC0lIzrTLuoWu2z1BE/edit)), proprietatea unui dispozitiv fizic subiacent ([proprietate inteligentă](https://en.bitcoin.it/wiki/Smart_Property)), active non-fungibile precum nume de domenii [(Namecoin](http://namecoin.org)), precum și aplicații mai complexe care implică existența de active digitale controlate direct de o bucată de cod care implementează reguli arbitrare ([contracte inteligente](http://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/idea.html)) sau chiar [organizații autonome descentralizate](http://bitcoinmagazine.com/7050/bootstrapping-a-decentralized-autonomous-corporation-part-i/) bazate pe blockchain (DAO). Ce intenționează să ofere Ethereum este un blockchain cu un limbaj de programare Turing-complet încorporat, care poate fi folosit pentru a crea „contracte” care pot fi utilizate pentru a codifica funcții de tranziția de stare arbitrară, permițând utilizatorilor să creeze oricare dintre sistemele descrise mai sus, precum și multe altele pe care nu le-am imaginat încă, pur și simplu scriind logica în câteva linii de cod.
 
-## Introducere în Bitcoin și concepte existente \{#introduction-to-bitcoin-and-existing-concepts}
+## Introducere în Bitcoin și concepte existente {#introduction-to-bitcoin-and-existing-concepts}
 
-### Istoric \{#history}
+### Istoric {#history}
 
 Conceptul de monedă digitală descentralizată, precum și aplicațiile alternative, precum registrele de proprietate, există de zeci de ani. Protocoalele anonime de numerar electronic din anii 1980 și 1990, bazate în cea mai mare parte pe o primitivă criptografică, cunoscută sub numele de Chaumian Blinding, au furnizat o monedă cu un grad ridicat de confidențialitate, dar nu au reușit să câștige tracțiune din cauza dependenței lor de un sistem centralizat intermediar. În 1998, [b-money](http://www.weidai.com/bmoney.txt) ai lui Wei Dai au devenit prima propunere de a introduce ideea de a crea bani prin rezolvarea puzzle-urilor computaționale, precum și a consensului descentralizat, dar propunerea a avut puține detalii cu privire la modul în care consensul descentralizat ar putea fi implementat. În 2005, Hal Finney a introdus un concept al [dovezilor de muncă reutilizabile](http://nakamotoinstitute.org/finney/rpow/) (rpow), un sistem care folosește ideile de b-money și cele de puzzle-uri Hashcash dificile din punct de vedere al calculului ale lui Adam Back, pentru a crea un concept pentru o criptomonedă, dar din nou, nu a reușit să-și atingă idealul, bazându-se pe computerul de încredere ca back-end. În 2009, o monedă descentralizată a fost implementată pentru prima dată în practică de Satoshi Nakamoto, combinând primitive stabilite pentru gestionarea proprietății prin criptografie cu cheie publică cu un algoritm de consens pentru a urmări cine deține monede, cunoscut sub numele de „dovada muncii”.
 
@@ -25,7 +25,7 @@ Mecanismul din spatele dovezii muncii a fost un progres astronomic, deoarece a r
 
 Iată o postare de pe blogul lui Vitalik Buterin, fondatorul Ethereum, despre [Preistoria Ethereum](https://vitalik.eth.limo/general/2017/09/14/prehistory.html). [Aici](https://blog.ethereum.org/2016/02/09/cut-and-try-building-a-dream/) este o altă postare de pe blog cu mai multă istorie.
 
-### Bitcoin ca un sistem de tranziție de stare \{#bitcoin-as-a-state-transition-system}
+### Bitcoin ca un sistem de tranziție de stare {#bitcoin-as-a-state-transition-system}
 
 ![Tranziția de stare Ethereum](./ethereum-state-transition.png)
 
@@ -55,7 +55,7 @@ Funcția de tranziție de stare `APPLY(S,TX) -> S'`se poate defini aproximativ d
 
 Prima jumătate a primului pas împiedică tranzacțiile să cheltuiască monede care nu există, a doua jumătate a primului pas împiedică tranzacțiile să nu cheltuiască monedele altor persoane, iar a doua etapă impune conservarea valorii. Pentru a utiliza acest lucru pentru plată, protocolul este după urmează. Să presupunem că Alice vrea să trimită 11,7 BTC lui Bob. În primul rând, Alice va căuta un set de UTXO disponibile pe care le deține, care totalizează până la cel puțin 11,7 BTC. În mod realist, Alice nu va va putea obține exact 11,7 BTC; să spunem că minimul pe care îl poate obține este 6+4+2=12. Ea creează apoi o tranzacție cu aceste trei intrări și două ieșiri. Prima ieșire va fi 11,7 BTC cu adresa lui Bob ca proprietar, iar a doua ieșire va fi restul de 0,3 BTC „rest”, proprietarul fiind Alice însăși.
 
-### Minarea \{#mining}
+### Minarea {#mining}
 
 ![Blocuri Ethereum](./ethereum-blocks.png)
 
@@ -85,7 +85,7 @@ Pentru a înțelege mai bine scopul mineritului, să examinăm ce se întâmplă
 
 Odată ce pasul (1) a avut loc, după câteva minute un miner va include tranzacția într-un bloc, să zicem blocul numărul 270. După aproximativ o oră, alte cinci blocuri vor fi adăugate lanțului după acel bloc, cu fiecare dintre aceste blocuri indicând indirect tranzacția și astfel, „confirmând-o". În acest moment, comerciantul va accepta plata ca fiind finalizată și va livra produsul; din moment ce presupunem că acesta este un bun digital, livrarea este instantanee. Acum, atacatorul creează o altă tranzacție, trimițând 100 de BTC către el însuși. În cazul în care atacatorul pur și simplu eliberează tranzacția la întâmplare, aceasta nu va fi procesată; minerii vor încerca să ruleze `APPLY(S,TX)` și să observe că `TX` consumă un UTXO care nu mai este în stare. Deci, în schimb, atacatorul creează o „furculiță” a blockchain-ului, începând prin exploatarea unei alte versiuni de bloc 270 indicând spre același bloc 269 ca fiind părinte, dar cu noua tranzacție în locul celei vechi. Pentru că datele blocului sunt diferite, acest lucru necesită refacerea dovezii de muncă. Mai mult decât atât, noua versiune a blocului 270 a atacatorului are un hash diferit, astfel încât blocurile originale de la 271 la 275 nu „indică” spre el; astfel, lanțul original și noul lanț al atacatorului sunt complet separate. Regula este că într-o furculiță cel mai lung blockchain este considerat a fi adevărat, astfel încât minerii legitimi vor lucra pe lanțul 275 în timp ce atacatorul singur lucrează pe lanțul 270. Pentru ca atacatorul să-și facă blockchain-ul lui ca cel mai lung, el ar trebui să aibă mai multă putere de calcul decât restul rețelei combinate pentru a ajunge din urmă (prin urmare, „51% atac”).
 
-### Arbori Merkle \{#merkle-trees}
+### Arbori Merkle {#merkle-trees}
 
 ![SPV în Bitcoin](./spv-bitcoin.png)
 
@@ -97,7 +97,7 @@ O caracteristică importantă de scalabilitate a Bitcoin este că blocul este st
 
 Protocolul arborelui Merkle este, fără îndoială, esențial pentru durabilitatea pe termen lung. Un „nod complet” în rețeaua Bitcoin, unul care stochează și procesează toate elementele fiecărui bloc, ocupă aproximativ 15 GB de spațiu pe disc în rețeaua Bitcoin începând cu aprilie 2014 și crește cu peste un gigabyte pe lună. În prezent, acest lucru este viabil pentru unele calculatoare desktop și nu pentru telefoane, și mai târziu, în viitor, numai întreprinderile și pasionații vor putea participa. Un protocol cunoscut sub numele de „verificare simplificată a plăților” (SPV) permite existența unei alte clase de noduri, numite „noduri ușoare”, care descarcă anteturile de bloc, verifică dovada muncii pe anteturile de bloc și apoi descarcă numai „ramurile” asociate cu tranzacțiile care sunt relevante pentru acestea. Acest lucru permite nodurilor ușoare să determine cu o garanție puternică a securității care este starea oricărei tranzacții Bitcoin, și echilibrul lor actual, doar descărcând o parte foarte mică a întregului blockchain.
 
-### Aplicații Alternative Blockchain \{#alternative-blockchain-applications}
+### Aplicații Alternative Blockchain {#alternative-blockchain-applications}
 
 Ideea de a lua ideea blockchain de bază și de a o aplica altor concepte are, de asemenea, o istorie lungă. În 1998, Nick Szabo a venit cu conceptul de [titluri de proprietate sigure cu autoritatea proprietarului](http://nakamotoinstitute.org/secure-property-titles/), un document care descrie modul în care „noi progrese în tehnologia de baze de date replicate” va permite un sistem bazat pe blockchain pentru stocarea unui registru al celor care dețin un anumit teren, creând un cadru elaborat, care să includă concepte precum exploatarea fermieră, posesia adversă și impozitul pe teren georgian. Cu toate acestea, la momentul respectiv nu a existat, din păcate, niciun sistem eficient de baze de date replicate disponibil, și astfel protocolul nu a fost niciodată pus în aplicare în practică. După 2009 însă, odată ce consensul descentralizat al Bitcoin a fost dezvoltat, o serie de aplicații alternative au început să apară rapid.
 
@@ -109,7 +109,7 @@ Astfel, în general, există două abordări către construirea unui protocol de
 
 Abordarea bazată pe Bitcoin, pe de altă parte, are defectul că nu moștenește caracteristicile simplificate ale Bitcoin de verificare a plăților. SPV funcționează pentru Bitcoin, deoarece poate utiliza adâncimea blockchain-ului ca un proxy pentru valabilitate; la un moment dat, odată ce strămoșii unei tranzacții merg destul de departe înapoi, este sigur să spunem că au fost în mod legitim parte a stării. Pe de altă parte, metaprotocoalele bazate pe blockchain nu pot forța blockchain-ul să nu includă tranzacții care nu sunt valabile în contextul propriilor protocoale. Prin urmare, o implementare pe deplin securizată de metaprotocol SPV, ar trebui să scaneze înapoi tot drumul până la începutul blockchain-ului Bitcoin pentru a determina dacă anumite tranzacții sunt sau nu valabile. În prezent, toate implementările „ușoare” de Bitcoin pe bază de metaprotocoale se bazează pe un server de încredere pentru a furniza date, fără îndoială, un rezultat extrem de suboptim mai ales atunci când unul dintre scopurile primare ale unei criptomonede este de a elimina nevoia de încredere.
 
-### Scripturi \{#scripting}
+### Scripturi {#scripting}
 
 Chiar și fără extensii, protocolul Bitcoin facilitează de fapt o versiune slabă a unui concept de „contracte inteligente”. UTXO în Bitcoin poate fi deținut nu doar de o cheie publică, ci și de un script mai complicat exprimat într-un limbaj de programare simplu bazat pe stivă. În această paradigmă, o tranzacție care cheltuiește acest UTXO trebuie să furnizeze date care satisfac scriptul. Într-adevăr, chiar și mecanismul de bază de proprietate a unei chei publice este implementat printr-un script: scriptul ia ca intrare o semnătură curbă eliptică, o verifică în raport cu tranzacția și adresa care deține UTXO și returnează 1 dacă verificarea are succes sau 0 în caz contrar. Alte, scripturi mai complicate, există pentru diferite cazuri de utilizare suplimentare. De exemplu, se poate construi un script care necesită semnături din două dintre trei anumite chei private pentru a valida („multisig”), o configurare utilă pentru conturile corporative, conturile de economii sigure și unele situații de comerț fiduciar. Scripturile pot fi, de asemenea, folosite pentru plata de recompense pentru soluționarea de probleme de calcul, și se poate construi chiar și un script care spune ceva de genul „acest Bitcoin UTXO este al tău, dacă poți oferi o dovadă SPV că mi-ai trimis o tranzacție Dogecoin de această denumire”, permițând, în esență, schimbul încrucișat descentralizat de criptomonede.
 
@@ -122,11 +122,11 @@ Cu toate acestea, limbajul de scripturi implementat în Bitcoin are mai multe li
 
 Astfel, vedem trei abordări pentru construirea de aplicații avansate pe bază de criptomonedă: construirea unui nou blockchain, utilizarea scripturilor bazate pe Bitcoin și construirea unui metaprotocol bazat pe Bitcoin. Construirea unui nou blockchain permite libertatea nelimitată în construirea unui set de caracteristici, dar cu prețul timpului de dezvoltare, a efortului de bootstrap și a securității. Utilizarea scripturilor este ușor de implementat și standardizat, dar este foarte limitată în ceea ce privește capacitățile sale, iar metaprotocoalele, deși sunt ușoare, suferă de defecte în scalabilitate. Cu Ethereum, intenționăm să construim un cadru alternativ care să ofere câștiguri și mai mari în ceea ce privește ușurința dezvoltării, precum și proprietăți și mai puternice ale clientului ușor, permițând în același timp aplicațiilor să partajeze un mediu economic și de securitate blockchain.
 
-## Ethereum \{#ethereum}
+## Ethereum {#ethereum}
 
 Intenția Ethereum este de a crea un protocol alternativ pentru construirea de aplicații descentralizate, oferind un set diferit de compromisuri care credem că va fi foarte util pentru o mare clasă de aplicații descentralizate, cu un accent deosebit pe situații în care timpul de dezvoltare rapidă, securitatea pentru aplicațiile mici și rar utilizate, precum și capacitatea diferitelor aplicații de a interacționa foarte eficient sunt importante. Ethereum face acest lucru prin construirea a ceea ce este, în esență, nivelul fundamental abstract final: un blockchain cu un limbaj de programare built-in Turing-complet, care permite oricui să scrie contracte inteligente și aplicații descentralizate în care ei pot crea propriile reguli arbitrare pentru proprietate, formatele de tranzacție și funcțiile de tranziție de stare. O versiune de bază a Namecoin poate fi scrisă în două linii de cod, iar alte protocoale, cum ar fi monedele și sistemele de reputație pot fi construite în mai puțin de douăzeci de minute. Contracte inteligente, „cutii” criptografice care conțin valoare și o deblochează numai dacă sunt îndeplinite anumite condiții, pot fi, de asemenea, construite pe această platformă, cu mult mai multă putere decât cea oferită de scriptul Bitcoin din cauza puterilor adăugate de exhaustivitatea-Turing, valoarea-conștientizată, blockchain-conștientizat și starea.
 
-### Filozofie \{#philosophy}
+### Filozofie {#philosophy}
 
 Designul din spatele Ethereum este destinat să urmeze următoarele principii:
 
@@ -136,7 +136,7 @@ Designul din spatele Ethereum este destinat să urmeze următoarele principii:
 4.  **Agilitate**: detaliile protocolului Ethereum nu sunt bătute în piatră. Deși vom fi extrem de prudenți în ceea ce privește modificările la construcțiile de nivel înalt, de exemplu, cu [foaia de parcurs a fragmentelor](https://ethresear.ch/t/sharding-phase-1-spec/1407/), abstractizarea executării, cu disponibilitatea datelor doar consacrată în consens. Testele de calcul ulterioare în procesul de dezvoltare ne pot determina să descoperim că anumite modificări, de exemplu, la arhitectura protocolului sau la Mașina Virtuală Ethereum (EVM), vor îmbunătăți în mod substanțial scalabilitatea sau securitatea. Dacă se găsesc astfel de oportunități, le vom exploata.
 5.  **Fără discriminare** și **fără cenzură**: protocolul nu ar trebui să încerce să restricționeze în mod activ sau să prevină anumite categorii de utilizare. Toate mecanismele de reglementare din protocol ar trebui să fie concepute pentru a reglementa direct prejudiciul și să nu încerce să se opună unor aplicații nedorite specifice. Un programator poate rula chiar și un script cu buclă infinită în Ethereum atâta timp cât este dispus să plătească în continuare taxa de tranzacție per pas de calcul.
 
-### Conturile Ethereum \{#ethereum-accounts}
+### Conturile Ethereum {#ethereum-accounts}
 
 În Ethereum, starea este alcătuită din obiecte numite „conturi”, fiecare cont având o adresă de 20 de byți, iar tranzițiile de stare sunt transferuri directe de valoare și informații între conturi. Un cont Ethereum conține patru câmpuri:
 
@@ -149,7 +149,7 @@ Eter este principalul cripto-combustibil intern al Ethereum și este utilizat pe
 
 Reține că aceste „contracte” din Ethereum nu trebuie văzute ca ceva care ar trebui „îndeplinit” sau „respectat”; mai degrabă seamănă cu „agenți autonomi” care trăiesc în interiorul mediului de execuție Ethereum, executând întotdeauna o anumită bucată de cod atunci când sunt „împinși” de un mesaj sau tranzacție și având controlul direct asupra propriului echilibru de eter și propriul depozit de chei/valori pentru a urmări variabilele persistente.
 
-### Mesaje și tranzacții \{#messages-and-transactions}
+### Mesaje și tranzacții {#messages-and-transactions}
 
 Termenul „tranzacție” este utilizat în Ethereum pentru a se referi la pachetul de date semnat care stochează un mesaj care trebuie trimis dintr-un cont deținut extern. Tranzacțiile conțin:
 
@@ -164,7 +164,7 @@ Primele trei sunt câmpuri standard așteptate în orice criptomonedă. Câmpul 
 
 Câmpurile `STARTGAS` și `GASPRICE` sunt cruciale pentru modelul antinegare a serviciului Ethereum. Pentru a preveni buclele infinite accidentale sau ostile sau alte pierderi de calcul din cod, fiecare tranzacție trebuie să stabilească o limită a numărului de pași de calcul de execuție a codului pe care îi poate folosi. Unitatea fundamentală de calcul este „gazul”; de obicei, un pas de calcul costă 1 gaz, dar unele operațiuni costă cantități mai mari de gaz, deoarece sunt mai scumpe din punct de vedere al calculului sau măresc cantitatea de date care trebuie stocate ca parte a stării. Există, de asemenea, o taxă de 5 gaz pentru fiecare byte în datele tranzacției. Intenția sistemului de taxare este de a cere unui atacator să plătească proporțional pentru fiecare resursă pe care o consumă, inclusiv calculul, lățimea de bandă și stocarea; prin urmare, orice tranzacție care face ca rețeaua să consume o cantitate mai mare din oricare dintre aceste resurse trebuie să aibă o taxă de gaz aproximativ proporțională cu creșterea.
 
-### Mesaje \{#messages}
+### Mesaje {#messages}
 
 Contractele au capacitatea de a trimite „mesaje” către alte contracte. Mesajele sunt obiecte virtuale care nu sunt niciodată serializate și există doar în mediul de execuție Ethereum. Un mesaj conține:
 
@@ -178,7 +178,7 @@ Contractele au capacitatea de a trimite „mesaje” către alte contracte. Mesa
 
 A se reține că alocația de gaz atribuită unei tranzacții sau contract se aplică gazului total consumat de acea tranzacție și tuturor sub-execuțiilor. De exemplu, dacă un actor extern A trimite o tranzacție către B cu 1.000 de gaz, iar B consumă 600 de gaz înainte de a trimite un mesaj către C, iar executarea internă a lui C consumă 300 de gaz înainte de întoarcere, atunci B poate cheltui încă 100 de gaz înainte de a rula fără combustibil.
 
-### Funcția de tranziție a stării Ethereum \{#ethereum-state-transition-function}
+### Funcția de tranziție a stării Ethereum {#ethereum-state-transition-function}
 
 ![Tranziția stării eterului](./ether-state-transition.png)
 
@@ -209,7 +209,7 @@ Dacă nu a existat niciun contract la finalul tranzacției, atunci taxa totală 
 
 Reține că mesajele funcționează similar cu tranzacțiile în ceea ce privește revenirile: dacă o execuție de mesaj rămâne fără gaz, atunci execuția acelui mesaj și toate celelalte execuții declanșate de acea execuție revin, dar execuțiile părinte nu trebuie să revină. Aceasta înseamnă că este „sigur” ca un contract să solicite un alt contract, ca și cum A ar apela B cu gaz G, atunci execuția lui A este garantată că va pierde cel mult G gaz. În cele din urmă, reține că există un opcod, `CREATE`, care creează un contract; mecanica sa de execuție este în general similară cu `CALL`, cu excepția că rezultatul execuției determină codul unui contract nou creat.
 
-### Executarea codului \{#code-execution}
+### Executarea codului {#code-execution}
 
 Codul din contractele Ethereum este scris într-un limbaj bytecode, de nivel scăzut, bazat pe stivă, denumit „codul mașinii virtuale Ethereum” sau „codul EVM”. Codul constă dintr-o serie de byți, în care fiecare byte reprezintă o operație. În general, execuția codului este o buclă infinită care constă din efectuarea în mod repetat a operației la contorul programului curent (care începe la zero) și apoi creșterea incrementală a contorului programului cu unul, până când se ajunge la sfârșitul codului sau se detectează o instrucțiune de eroare sau `STOP` sau `RETURN`. Operațiunile au acces la trei tipuri de spații în care să stocheze date:
 
@@ -221,7 +221,7 @@ De asemenea, codul poate accesa valoarea, expeditorul și datele mesajului primi
 
 Modelul formal de execuție al codului EVM este surprinzător de simplu. În timp ce mașina virtuală Ethereum rulează, starea sa completă de calcul poate fi definită de secvența de variabile `(block_state, transaction, message, code, memory, stack, pc, gas)`, unde `block_state` este starea globală care conține toate conturile și include solduri și stocarea. La începutul fiecărei runde de execuție, instrucțiunea curentă se găsește luând byte-ul `pc` al `codului` (sau 0 dacă `pc >= len (cod)`) și fiecare instrucțiune are propria definiție în ceea ce privește modul în care afectează secvența de variabile. De exemplu, `ADD` scoate două articole din stivă și împinge suma lor, reduce `gas` cu 1 și crește `pc` cu 1, iar `SSTORE` scoate primele două articole din stivă și introduce al doilea articol în stocarea contractului la indexul specificat de primul articol. Deși există multe modalități de a optimiza execuția mașinii virtuale Ethereum prin compilare-din-mers, o implementare de bază a Ethereum se poate face în câteva sute de linii de cod.
 
-### Blockchain și minerit \{#blockchain-and-mining}
+### Blockchain și minerit {#blockchain-and-mining}
 
 ![Diagrama blocul aplicării Ethereum](./ethereum-apply-block-diagram.png)
 
@@ -240,11 +240,11 @@ Abordarea poate părea extrem de ineficientă la prima vedere, deoarece trebuie 
 
 O întrebare frecventă este „unde” este executat codul contractului, în ceea ce privește hardware-ul fizic. Acest lucru are un răspuns simplu: procesul de executare a codului de contract face parte din definiția funcției de tranziție de stare, care face parte din algoritmul de validare al blocului, astfel încât, dacă o tranzacție este adăugată în blocul `B`, executarea codului generat de acea tranzacție va fi executată de toate nodurile, acum și în viitor, care descarcă și validează blocul `B`.
 
-## Aplicații \{#applications}
+## Aplicații {#applications}
 
 În general, există trei categorii de aplicații care funcționează pe Ethereum. În prima categorie sunt aplicațiile financiare, oferind utilizatorilor modalități mai puternice de gestionare și încheiere a contractelor folosind banii lor. Ele includ sub-monedele, instrumentele financiare derivate, contractele de acoperire a riscurilor, portofelele de economii, testamentele și, în final, chiar unele categorii de contracte de muncă pe scară largă. În a doua categorie sunt aplicațiile semi-financiare, în care sunt implicați bani, dar există, de asemenea, o latură grea nemonetară a ceea ce se face; un exemplu perfect este de auto-aplicarea de recompense pentru soluții la problemele de calcul. În cele din urmă, există aplicații precum votul on-line și guvernanța descentralizată care nu sunt deloc financiare.
 
-### Sisteme token \{#token-systems}
+### Sisteme token {#token-systems}
 
 Sistemele token pe-blockchain au multe aplicații, de la sub-monede reprezentând active cum ar fi USD sau aur, la acțiunile companiei, tokenuri individuale reprezentând proprietăți inteligente, cupoane sigure nefalsificabile și chiar sisteme token fără legături la valori convenționale, utilizate ca sisteme de puncte pentru stimulare. Sistemele token sunt surprinzător de ușor de implementat în Ethereum. Ce trebuie să înțelegi este că o monedă, sau sistem de tokenuri, este o bază de date cu o singură operațiune: scade X unități de la A și adaugă X unități lui B, cu condiția ca (1) A să fi avut cel puțin X unități înainte de tranzacție și (2) tranzacția să fie aprobată de A. Tot ce este nevoie pentru a pune în aplicare un sistem de tokenuri este de a pune în aplicare această logică într-un contract.
 
@@ -257,7 +257,7 @@ Codul de bază pentru implementarea unui sistem de tokenuri în Serpent arată d
 
 Aceasta este, în esență, implementare literală a „sistemului bancar” funcția de tranziție de stare descrisă mai sus în acest document. Câteva linii suplimentare de cod trebuie să fie adăugate pentru a asigura etapa inițială de distribuire a unităților monetare în primul rând și alte câteva cazuri de margine și, în mod ideal, ar trebui adăugată o funcție care să permită altor contracte să interogheze pentru soldul unei adrese. Dar asta e tot. Teoretic, sistemele token bazate pe Ethereum care acționează ca sub-monede pot include o altă caracteristică importantă pe care metamonedele bazate pe Bitcoin în-lanț nu o au: capacitatea de a plăti taxe de tranzacție direct în moneda respectivă. Modalitatea de implementare a acestui lucru este următoarea: contract menține soldul de eter cu cu care să ramburseze expeditorului eter utilizat pentru plata de taxe și reface soldul prin colectarea unităților valutare interne pe care le ia în taxe și revânzarea lor într-o licitație permanentă. Utilizatorii ar trebui, prin urmare, să „activeze” conturile lor cu eter, dar odată ce eterul este acolo ar fi reutilizabil, deoarece contractul ar rambursa de fiecare dată.
 
-### Instrumente financiare derivate și Monede cu Valoare Stabilă \{#financial-derivatives-and-stable-value-currencies}
+### Instrumente financiare derivate și Monede cu Valoare Stabilă {#financial-derivatives-and-stable-value-currencies}
 
 Instrumentele financiare derivate sunt cea mai comună aplicație a unui „contract inteligent”, și una dintre cele mai simple de implementat în cod. Principala provocare în punerea în aplicare a contractelor financiare este că majoritatea acestora necesită trimiterea la un instrument bursier de prețuri extern; de exemplu, o aplicație foarte dezirabilă este un contract inteligent care să asigure volatilitatea eterului (sau a altei criptomonede) în raport cu dolarul SUA, dar acest lucru cere contractului să știe care este valoarea ETH/USD. Cel mai simplu mod de a face acest lucru este printr-un contract de „flux de date” menținut de o anumită parte (de exemplu. NASDAQ) conceput astfel încât acea parte are capacitatea de a actualiza contractul după cum este necesar, și oferind o interfață care permite altor contracte să trimită un mesaj la acel contract și a obține înapoi un răspuns care oferă prețul.
 
@@ -272,7 +272,7 @@ Un astfel de contract ar avea un potențial semnificativ în cripto-comerț. Una
 
 Cu toate acestea, în practică, emitenții nu sunt întotdeauna de încredere, iar în unele cazuri infrastructura bancară este prea slabă sau prea ostilă pentru ca astfel de servicii să existe. Instrumentele financiare derivate oferă o alternativă. Aici, în loc de un emitent unic care oferă fonduri pentru a susține un activ, o piață descentralizată de speculatori, pariind că prețul unui activ criptografic de referință (de exemplu ETH) va crește, va juca acest rol. Contrar emitenților, speculatorii nu au nicio opțiune să eșueze partea lor de negociere, deoarece contractul de asigurare le ține fondurile în garanție. Reține faptul că această abordare nu este pe deplin descentralizată, deoarece o sursă de încredere este în continuare necesară pentru un ticker de prețuri, deși discutabil, chiar și acest lucru este o îmbunătățire masivă în ceea ce privește reducerea cerințelor de infrastructură (spre deosebire de a fi un emitent, emiterea unui flux de informații privind prețurile nu necesită licențe și poate fi probabil clasificată drept libertatea cuvântului) și reducând potențialul de fraudă.
 
-### Sisteme de identitate și de reputație \{#identity-and-reputation-systems}
+### Sisteme de identitate și de reputație {#identity-and-reputation-systems}
 
 Cea mai veche criptomonedă alternativă dintre toate, [Namecoin](http://namecoin.org/), a încercat să utilizeze un blockchain ca Bitcoin pentru a oferi un sistem de înregistrare a numelui, unde utilizatorii își pot înregistra numele într-o bază de date publică alături de alte date. Cazul de utilizare citat major este pentru un sistem [DNS](https://wikipedia.org/wiki/Domain_Name_System), de mapare de nume de domenii, cum ar fi „bitcoin.org” (sau, în cazul Namecoin, „bitcoin.bit”) la o adresă IP. Alte cazuri de utilizare includ autentificarea prin e-mail și potențial, sisteme mai avansate de reputație. Iată contractul de bază de furnizare a unui sistem de înregistrare de nume asemănător cu Namecoin pe Ethereum:
 
@@ -282,7 +282,7 @@ Cea mai veche criptomonedă alternativă dintre toate, [Namecoin](http://namecoi
 
 Contractul este foarte simplu; tot ce este o bază de date în interiorul rețelei Ethereum care poate fi adăugată, dar nu modificată sau eliminată. Oricine poate înregistra un nume cu o anumită valoare, iar acea înregistrare va rămâne pentru totdeauna. Un contract mai sofisticat de înregistrare a numelui va avea, de asemenea, o „clauză funcțională” care permite altor contracte să-l interogheze, precum și un mecanism pentru „proprietarul” (adică primul înregistrator) unui nume pentru a schimba datele sau a transfera proprietatea. Se poate adăuga chiar și reputație și funcționalitate web-of-trust.
 
-### Stocare descentralizată de fișiere \{#decentralized-file-storage}
+### Stocare descentralizată de fișiere {#decentralized-file-storage}
 
 În ultimii ani, au apărut o serie de companii start-up noi populare de stocare online a fișierelor, cea mai proeminentă fiind Dropbox, care urmărește să permită utilizatorilor să încarce o copie de rezervă a discului lor dur pentru a fi stocat și accesat de pe orice dispozitiv dintr-un dosar special sincronizat, în schimbul unei taxe lunare. Cu toate acestea, în acest moment piața stocării fișierelor este uneori relativ ineficientă; o privire superficială la diverse [soluții existente](http://online-storage-service-review.toptenreviews.com/) arată că, în special la bariera de netrecut a nivelului de 20-200 GB pe care nici cotele gratuite, nici reducerile la nivel de întreprindere nu pot să o treacă, prețurile lunare pentru costurile de stocare a fișierelor mainstream sunt de așa natură că plătești mai mult decât costul întregului disc dur într-o singură lună. Contractele Ethereum pot permite dezvoltarea unui ecosistem descentralizat de stocare a fișierelor, în care utilizatorii individuali pot câștiga cantități mici de bani prin închirierea propriilor discuri dure, iar spațiul neutilizat poate fi utilizat pentru a reduce în continuare costurile stocării fișierelor.
 
@@ -290,7 +290,7 @@ Elementul cheie care stă la baza unui astfel de dispozitiv ar fi ceea ce am num
 
 O caracteristică importantă a protocolului este că, deși ar părea că cineva se încrede în mai multe noduri aleatorii care să nu decidă să uite fișierul, se poate reduce riscul aproape la zero, împărțind fișierul în mai multe bucăți prin partajare secretă și urmărind contractele pentru a vedea dacă fiecare bucată este încă în posesia unui nod. Dacă un contract plătește în continuare bani, acesta oferă criptografic o dovadă că cineva de acolo încă stochează fișierul.
 
-### Organizații autonome descentralizate \{#decentralized-autonomous-organizations}
+### Organizații autonome descentralizate {#decentralized-autonomous-organizations}
 
 Conceptul general al unei „organizații autonome descentralizate” este cel al unei entități virtuale care are un anumit set de membri sau acționari care, probabil cu o majoritate de 67%, au dreptul să cheltuiască fondurile entității și să-i modifice codul. Membrii vor decide în mod colectiv modul în care organizația ar trebui să-și aloce fondurile. Metodele de alocare a fondurilor unui DAO ar putea varia de la recompense, salarii la mecanisme și mai exotice, cum ar fi o monedă internă pentru recompensarea muncii. Aceasta replică în esență capcanele legale ale unei companii tradiționale sau nonprofit, dar folosind doar tehnologia blockchain criptografică pentru punerea în aplicare. Până în prezent, cele mai multe discuții despre DAO s-au bazat pe modelul „capitalist” al unei „societăți autonome descentralizate” (DAC) cu acționari care primesc dividende și acțiuni tranzacționale; o alternativă, probabil descrisă ca fiind o „comunitate autonomă descentralizată”, ar avea un procentaj egal în procesul decizional și ar necesita ca 67% dintre membrii existenți să fie de acord să adauge sau să elimine un membru. Cerința ca o persoană să poată avea o singură calitate de membru ar trebui apoi să fie pusă în aplicare în mod colectiv de către grup.
 
@@ -304,7 +304,7 @@ Contractul va avea apoi clauze pentru fiecare dintre acestea. Acesta va menține
 
 Un model alternativ este pentru o corporație descentralizată, în care orice cont poate avea zero sau mai multe acțiuni, iar două treimi din acțiuni sunt necesare pentru a lua o decizie. Un schelet complet ar implica funcționalitatea de gestionare a activelor, capacitatea de a face o ofertă de cumpărare sau vânzare de acțiuni și capacitatea de a accepta oferte (de preferință cu un mecanism de ordonare a comenzilor în cadrul contractului). Delegația ar exista, de asemenea, în stilul Democrației Lichide, generalizând conceptul de „consiliu de administrație”.
 
-### Alte aplicații \{#further-applications}
+### Alte aplicații {#further-applications}
 
 **1. Portofele de economii**. Să presupunem că Alice vrea să-și păstreze fondurile în siguranță, dar este îngrijorată că va pierde sau că cineva îi va pirata cheia privată. Ea pune eter într-un contract cu Bob, o bancă, după cum urmează:
 
@@ -328,9 +328,9 @@ Un model alternativ este pentru o corporație descentralizată, în care orice c
 
 **8. Piețe descentralizate în lanț**, folosind sistemul de identitate și reputație ca bază.
 
-## Diverse și preocupări \{#miscellanea-and-concerns}
+## Diverse și preocupări {#miscellanea-and-concerns}
 
-### Implementare GHOST modificată \{#modified-ghost-implementation}
+### Implementare GHOST modificată {#modified-ghost-implementation}
 
 Protocolul „Greedy Heaviest Observed Subtree” (GHOST) este o inovație introdusă pentru prima dată de Yonatan Sompolinsky și Aviv Zohar în [decembrie 2013](https://eprint.iacr.org/2013/881.pdf). Motivația din spatele GHOST este că blockchain-urile cu timp de confirmare rapidă suferă în prezent de o securitate redusă din cauza unei rate vechi ridicate - deoarece blocurile iau un anumit timp pentru a se propaga prin rețea, dacă minerul A extrage un bloc și apoi minerul B se întâmplă să exploateze un alt bloc înainte ca blocul minerului A să se propage către B, blocul minerului B va ajunge să fie risipit și nu va contribui la securitatea rețelei. Mai mult, există o problemă de centralizare: dacă minerul A este o piscină minieră cu 30% hashpower și B are 10% hashpower, A va risca să producă un bloc vechi 70% din timp (în timp ce în restul de 30% din timp A produce ultimul bloc și astfel va obține date miniere imediat), în timp ce B va risca să producă un bloc vechi 90% din timp. Astfel, dacă intervalul de blocare este suficient de scurt pentru ca rata de învechire să fie mare, A va fi substanțial mai eficient pur și simplu în virtutea mărimii sale. Cu aceste două efecte combinate, blockchain-urile care produc blocuri rapid sunt foarte susceptibile de a conduce la o singură piscină minieră cu un procent suficient de mare din puterea hash a rețelei pentru a avea un control de facto asupra procesului minier.
 
@@ -348,7 +348,7 @@ Ethereum implementează o versiune simplificată a GHOST care coboară doar șap
 
 Această versiune limitată de GHOST, cu unchi incluși doar până la a șaptea generație, a fost folosită din două motive. În primul rând, un GHOST nelimitat ar include prea multe complicații în calcularea cărui unchi este valid pentru un anumit bloc. În al doilea rând, un GHOST nelimitat cu compensare așa cum se utilizează în Ethereum elimină stimulentul unui miner de a mina pe lanțul principal și nu pe lanțul unui atacator public.
 
-### Taxe \{#fees}
+### Taxe {#fees}
 
 Deoarece fiecare tranzacție publicată în blockchain impune rețelei costul necesității descărcării și verificării acesteia, este nevoie de un anumit mecanism de reglementare, care implică de obicei taxe de tranzacție, pentru a preveni abuzul. Abordarea implicită, utilizată în Bitcoin, este de a avea taxe pur voluntare, bazându-se pe mineri să acționeze ca gardieni și a stabili minime dinamice. Această abordare a fost primită foarte favorabil în comunitatea Bitcoin, în special pentru că este „bazată pe piață”, permițând cererii și ofertei - între minerii și expeditorii tranzacțiilor - să stabilească prețul. Cu toate acestea, problema acestei rațiuni este că procesarea tranzacțiilor nu este o piață; deși este intuitiv atractiv să interpretăm procesarea tranzacției ca un serviciu pe care minerul îl oferă expeditorului, în realitate, fiecare tranzacție pe care un miner o include va trebui procesată de fiecare nod din rețea, deci marea majoritate a costului tranzacției prelucrarea este suportată de terți și nu de minerul care ia decizia de a o include sau nu. Prin urmare, este foarte probabil să apară probleme ale tragediei-bunurilor-comune.
 
@@ -377,7 +377,7 @@ Cu toate acestea, există mai multe abateri importante de la aceste ipoteze în 
 
 Există un alt factor care descurajează supradimensionarea blocurilor în Bitcoin: blocurile care sunt mari vor dura mai mult timp pentru a se propaga și, prin urmare, au o probabilitate mai mare de a deveni vechi. În Ethereum, propagarea blocurilor care consumă foarte mult gaz poate dura, de asemenea, mai mult, pentru sunt mai mari din punct de vedere fizic și pentru că au nevoie de mai mult timp pentru a procesa tranzițiile stării tranzacției pentru a le valida. Această descurajare a întârzierii este o considerație semnificativă în Bitcoin, dar mai puțin în Ethereum din cauza protocolului GHOST; prin urmare, bazarea pe limite de blocuri reglementate, oferă o linie de bază mai stabilă.
 
-### Calcul și completitudine-Turing \{#computation-and-turing-completeness}
+### Calcul și completitudine-Turing {#computation-and-turing-completeness}
 
 O notă importantă este că mașina virtuală Ethereum este Turing-completă; aceasta înseamnă că orice calcul care se poate realiza, poate fi codificat de codul mașinii virtuale Ethereum, inclusiv buclele infinite. Codul EVM permite bucle infinite în două moduri. În primul rând, există o instrucțiune `JUMP` care permite programului să se întoarcă la un loc anterior din cod și o instrucțiune `JUMPI` pentru a face un salt condițional, permițând instrucțiuni precum `while x < 27: x = x * 2`. În al doilea rând, contractele pot apela alte contracte, permițând potențial buclarea prin recursivitate. Acest lucru duce în mod natural la o problemă: pot utilizatorii rău intenționați să blocheze minerii și nodurile complete, forțându-i să intre într-o buclă infinită? Problema apare din cauza unei probleme în informatică cunoscută sub numele de „problema opririi”: nu există nicio modalitate de a spune, în cazul general, dacă un anumit program se va opri vreodată.
 
@@ -399,7 +399,7 @@ Alternativa la completitudinea-Turing este incompletitudinea-Turing, în care `J
 
 Acum, trimite o tranzacție la A. Așadar, în 51 de tranzacții, avem un contract care durează 2<sup>50</sup> de pași de calcul. Minerii ar putea încerca să detecteze astfel de bombe logice din timp, menținând o valoare alături de fiecare contract, specificând numărul maxim de pași de calcul pe care îi poate face și calculând acest lucru pentru contractele care solicită alte contracte recursiv, dar asta ar necesita interzicerea de către mineri a contractelor care creează alte contracte (din moment ce crearea și executarea tuturor celor 26 de contracte de mai sus ar putea fi ușor transformate într-un singur contract). Un alt punct problematic este proprietatea de variabilitate a câmpului de adresă al unui mesaj, deci, în general, nici măcar nu este posibil să se spună din timp ce alt contract va apela un anumit contract. Prin urmare, una peste alta, avem o concluzie surprinzătoare: completitudinea-Turing este surprinzător de ușor de gestionat, iar lipsa completitudinii-Turing este la fel de surprinzător de dificil de gestionat dacă nu există exact aceleași controale - dar în acest caz de ce să nu lăsăm protocolul să fie doar Turing-complet?
 
-### Moneda și emiterea \{#currency-and-issuance}
+### Moneda și emiterea {#currency-and-issuance}
 
 Rețeaua Ethereum include propria sa monedă încorporată, eterul, care servește scopului dublu de a furniza un strat de lichiditate primar pentru a permite schimbul eficient între diferite tipuri de active digitale și, mai important, de a oferi un mecanism de plată a taxelor de tranzacție. Pentru comoditate și pentru a evita argumentele viitoare (a se vedea dezbaterea actuală mBTC/uBTC/satoshi în Bitcoin), denominațiile vor fi pre-etichetate:
 
@@ -437,7 +437,7 @@ Modelul permanent de creștere a ofertei liniare reduce riscul a ceea ce unii co
 
 De reținut că, în viitor, este probabil ca Ethereum să treacă la un model de dovadă a mizei pentru securitate, reducând cerința de emitere la undeva între zero și 0,05X pe an. În cazul în care organizația Ethereum pierde finanțarea sau din orice alt motiv dispare, lăsăm deschis un „contract social”: oricine are dreptul să creeze o viitoare versiune candidat a Ethereum, cu o singură condiție și anume cantitatea de eter să fie cel mult egală cu `60.102.216 * (1,198 + 0,26 * n)` unde `n` este numărul de ani după blocul de geneză. Creatorii sunt liberi să vândă în grup, sau să atribuie o parte sau toată diferența dintre expansiunea alimentării datorată PoS și extinderea maximă admisibilă a ofertei, pentru a plăti pentru dezvoltare. Upgrade-urile candidaților care nu respectă contractul social pot fi în mod justificat încorporați în versiuni conforme.
 
-### Centralizarea mineritului \{#mining-centralization}
+### Centralizarea mineritului {#mining-centralization}
 
 Algoritmul de extragere Bitcoin funcționează pe faptul că minerii calculează SHA256 pe versiuni ușor modificate ale antetului blocului de milioane de ori din nou și din nou, până când în cele din urmă un nod vine cu o versiune al cărei hash este mai mic decât ținta (în prezent în jur de 2<sup>192</sup>). Cu toate acestea, acest algoritm de minerit este vulnerabil la două forme de centralizare. În primul rând, ecosistemul minier a ajuns să fie dominat de ASIC-uri (circuite integrate specifice aplicației), cipuri de calculator concepute pentru, și, prin urmare, de mii de ori mai eficiente la sarcina specifică mineritului de Bitcoin. Aceasta înseamnă că mineritul de Bitcoin și-a pierdut scopul primordial al descentralizării și egalității, necesitând milioane de dolari de capital pentru a participa efectiv. În al doilea rând, majoritatea minerilor Bitcoin nu efectuează de fapt validarea blocurilor la nivel local; în schimb, se bazează pe un bazin centralizat și temporar de date de minerit pentru a furniza anteturile blocului. Această problemă este, cu siguranță, mai gravă: în momentul scrierii acestui articol, primele trei grupuri miniere controlează indirect aproximativ 50% din puterea de procesare din rețeaua Bitcoin, deși acest lucru este atenuat de faptul că minerii pot trece la alte bazine miniere dacă un grup sau coaliția încearcă un atac de 51%.
 
@@ -445,7 +445,7 @@ Intenția actuală la Ethereum este de a utiliza un algoritm de minerit în care
 
 Acest model nu este testat și ar putea exista dificultăți pe parcurs pentru a evita anumite optimizări inteligente atunci când se utilizează executarea contractului ca algoritm minier. Cu toate acestea, o caracteristică deosebit de interesantă a acestui algoritm este aceea că permite oricui să „otrăvească fântâna”, prin introducerea unui număr mare de contracte în blockchain-ul special conceput pentru a bloca anumite ASIC-uri. Există stimulente economice pentru producătorii ASIC de a folosi un astfel de truc pentru a se ataca reciproc. Astfel, soluția pe care o dezvoltăm este, în cele din urmă, o soluție economică adaptativă umană, mai degrabă decât una pur tehnică.
 
-### Scalabilitatea \{#scalability}
+### Scalabilitatea {#scalability}
 
 O preocupare comună cu privire la Ethereum este problema scalabilității. Asemenea cu Bitcoin, Ethereum suferă de defectul că fiecare tranzacție trebuie procesată de fiecare nod din rețea. Cu Bitcoin, dimensiunea blockchain-ului actual se situează la aproximativ 15 GB, crescând cu aproximativ 1 MB pe oră. Dacă rețeaua Bitcoin ar procesa cele 2.000 de tranzacții Visa pe secundă, ar crește cu 1 MB pe trei secunde (1 GB pe oră, 8 TB pe an). Este posibil ca Ethereum să sufere un tipar similar de creștere, înrăutățit de faptul că vor exista multe aplicații bazate pe blockchain-ul Ethereum în loc de doar o monedă, așa cum este cazul cu Bitcoin, dar ameliorat de faptul că nodurile complete Ethereum trebuie să stocheze doar starea în locul întregului istoric blockchain.
 
@@ -455,15 +455,15 @@ Problema cu o dimensiune atât de mare a blockchain-ului este riscul de centrali
 
 Un alt atac, mai sofisticat, ar implica minerii rău intenționați care publică blocuri incomplete, astfel încât informațiile complete nici măcar să nu existe pentru a determina dacă blocurile sunt valabile sau nu. Soluția la acest lucru este un protocol provocare-răspuns: nodurile de verificare emit „provocări” sub formă de indicii de tranzacție țintă, iar la primirea unui nod, un nod ușor tratează blocul ca fiind nesigur până când un alt nod, fie un miner fie un alt verificator, oferă un subset de noduri Patricia ca dovadă a validității.
 
-## Concluzie \{#conclusion}
+## Concluzie {#conclusion}
 
 Protocolul Ethereum a fost conceput inițial ca o versiune îmbunătățită a unei criptomonede, oferind caracteristici avansate, cum ar fi escrow pe-blockchain, limitele de retragere, contracte financiare, piețele de jocuri și altele asemenea, printr-un limbaj de programare extrem de generalizat. Protocolul Ethereum nu ar „sprijini” nicio aplicație în mod direct, dar existența unui limbaj de programare complet Turing înseamnă că, teoretic, pot fi create contracte arbitrare pentru orice tip de tranzacție sau aplicație. Totuși, ceea ce este mai interesant la Ethereum este că protocolul Ethereum se deplasează mult dincolo de simpla monedă. Protocoalele legate de stocarea descentralizată a fișierelor, calculul descentralizat și piețele de predicție descentralizate, printre alte zeci de astfel de concepte, au potențialul de a spori substanțial eficiența industriei de calcul și de a oferi un impuls masiv altor protocoale peer-to-peer prin adăugarea pentru prima dată a unui nivel economic. În cele din urmă, există, de asemenea, o gamă substanțială de aplicații care nu au nimic de-a face cu banii, absolut deloc.
 
 Conceptul unei funcții de tranziție de stare arbitrară așa cum este implementat de protocolul Ethereum furnizează o platformă cu potențial unic; mai degrabă decât să fie un protocol închis, cu un singur scop, destinat unei game specifice de aplicații în stocarea datelor, jocuri de noroc sau finanțe, Ethereum este deschis prin design și credem că este extrem de bine potrivit pentru a servi ca nivel fundamental pentru un număr foarte mare de protocoale atât financiare, cât și non-financiare în anii următori.
 
-## Note și referințe suplimentare \{#notes-and-further-reading}
+## Note și referințe suplimentare {#notes-and-further-reading}
 
-### Note \{#notes}
+### Note {#notes}
 
 1.  Un cititor sofisticat poate observa că, de fapt, o adresă Bitcoin este hash-ul cheii publice a curbei eliptice și nu cheia publică în sine. Cu toate acestea, este de fapt o terminologie criptografică perfect legitimă să se refere la hash-ul cheii publice ca la cheia publică în sine. Acest lucru se întâmplă deoarece criptografia Bitcoin poate fi considerată a fi un algoritm personalizat de semnătură digitală, în care cheia publică se compune din hash-ul cheii publice ECC, semnătura constă din cheia publică ECC concatenată cu semnătura ECC, iar algoritmul de verificare implică verificarea cheii publice ECC în semnătură împotriva hash-ului cheii publice ECC furnizat ca o cheie publică și apoi verificarea semnăturii ECC împotriva cheii publice ECC.
 2.  Din punct de vedere tehnic, mediana celor 11 blocuri anterioare.
@@ -472,7 +472,7 @@ Conceptul unei funcții de tranziție de stare arbitrară așa cum este implemen
 5.  Un alt mod de a exprima acest lucru este abstractizarea. Cea mai [recentă foaie de parcurs](https://ethresear.ch/t/sharding-phase-1-spec/1407/67) este planificarea abstractizării execuției, permițând motoarelor de execuție să nu trebuiască neapărat să respecte o specificație canonică, dar, de exemplu, ar putea fi adaptate pentru o aplicație specifică, precum și pentru un fragment. (Această eterogenitate a motoarelor de execuție nu este menționată în mod explicit în foaia de parcurs. Există, de asemenea, fragmentarea eterogenă, pe care Vlad Zamfir a conceput-o.)
 6.  Pe plan intern, 2 și „CHARLIE” sunt ambele numere, acesta din urmă fiind în reprezentare de bază big-endian 256. Numerele pot fi cel puțin 0 și cel mult 2<sup>256</sup>-1.
 
-### Referințe suplimentare \{#further-reading}
+### Referințe suplimentare {#further-reading}
 
 1.  [Valoare intrinsecă](http://bitcoinmagazine.com/8640/an-exploration-of-intrinsic-value-what-it-is-why-bitcoin-doesnt-have-it-and-why-bitcoin-does-have-it/)
 2.  [Proprietate inteligentă](https://en.bitcoin.it/wiki/Smart_Property)

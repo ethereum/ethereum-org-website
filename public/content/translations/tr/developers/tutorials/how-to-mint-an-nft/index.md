@@ -20,7 +20,7 @@ Hepsi, Alchemy'nin güçlü API'sini kullanarak NFT'lerini bastı. Bu öğretici
 
 Başlayalım!
 
-## Adım 1: Web3'ü yükleme \{#install-web3}
+## Adım 1: Web3'ü yükleme {#install-web3}
 
 NFT akıllı sözleşmenizi oluşturmaya ilişkin ilk öğreticiyi izlediyseniz, zaten Ethers.js kullanma deneyiminiz vardır. Web3, Ethereum blok zincirine istek oluşturmayı kolaylaştırmak için kullanılan bir kütüphane olduğu için Ethers'a benzer. Bu öğreticide, otomatik yeniden denemeler ve güçlü WebSocket desteği sunan gelişmiş bir Web3 kütüphanesi olan [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3)'ü kullanacağız.
 
@@ -30,7 +30,7 @@ Projenizin ana dizininde şunu çalıştırın:
 npm install @alch/alchemy-web3
 ```
 
-## Adım 2: Bir `mint-nft.js` dosyası oluşturma \{#create-mintnftjs}
+## Adım 2: Bir `mint-nft.js` dosyası oluşturma {#create-mintnftjs}
 
 Komut dosyaları dizininizin içinde bir `mint-nft.js` dosyası oluşturun ve aşağıdaki kod satırlarını ekleyin:
 
@@ -41,7 +41,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Adım 3: Sözleşme ABI'nizi alın \{#contract-abi}
+## Adım 3: Sözleşme ABI'nizi alın {#contract-abi}
 
 Sözleşme ABI'miz (Uygulama İkili Arayüzü), akıllı sözleşmemizle etkileşim kurmak için kullanılan arayüzdür. Sözleşme ABI'lerı hakkında daha fazlasını [buradan](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is) öğrenebilirsiniz. Hardhat bizim için otomatik olarak bir ABI oluşturur ve bunu `MyNFT.json` dosyasına kaydeder. Bunu kullanmak için `mint-nft.js` dosyamıza aşağıdaki kod satırlarını ekleyerek içeriği ayrıştırmamız gerekir:
 
@@ -61,7 +61,7 @@ console.log(JSON.stringify(contract.abi))
 node scripts/mint-nft.js
 ```
 
-## Adım 4: IPFS kullanarak NFT'niz için meta verileri yapılandırın \{#config-meta}
+## Adım 4: IPFS kullanarak NFT'niz için meta verileri yapılandırın {#config-meta}
 
 Bölüm 1'deki eğitimimizden hatırlarsanız, `mintNFT` akıllı sözleşme işlevimiz, NFT'nin meta verilerini tanımlayan bir JSON belgesine çözümlenmesi gereken bir tokenURI parametresi alır - bu gerçekten NFT'yi hayata geçiren şeydir ve bir ad, açıklama, resim ve diğer nitelikler gibi yapılandırılabilir özelliklere sahip olmasını sağlar.
 
@@ -109,7 +109,7 @@ JSON dosyasını düzenlemeyi tamamladıktan sonra kaydedin ve resmi yüklemek i
 
 ![nft-metadata.json dosyanızı Pinata'ya nasıl yüklersiniz](./uploadPinata.gif)
 
-## Adım 5: Sözleşmenizin bir örneğini oluşturun \{#instance-contract}
+## Adım 5: Sözleşmenizin bir örneğini oluşturun {#instance-contract}
 
 Şimdi, sözleşmemizle etkileşime geçmek için, kodumuzda onun bir örneğini oluşturmalıyız. Bunu yapmak için dağıtımdan veya [Etherscan](https://sepolia.etherscan.io/)'den sözleşmeyi dağıtmak amacıyla kullandığınız adresi arayarak alabileceğimiz sözleşme adresimize ihtiyacımız olacak.
 
@@ -125,7 +125,7 @@ const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
 
-## Adım 6: `.env` dosyasını güncelleme \{#update-env}
+## Adım 6: `.env` dosyasını güncelleme {#update-env}
 
 Şimdi, Ethereum zincirine işlemler oluşturmak ve göndermek amacıyla, hesap nonce değeri almak için genel Ethereum hesap adresinizi kullanacağız (aşağıda açıklanacaktır).
 
@@ -137,7 +137,7 @@ PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
 
-## Adım 7: İşleminizi oluşturma \{#create-txn}
+## Adım 7: İşleminizi oluşturma {#create-txn}
 
 İlk olarak, `mintNFT(tokenData)` isimli bir fonksiyon tanımlayalım ve sıradakileri yaparak işlemimizi oluşturalım:
 
@@ -186,7 +186,7 @@ PUBLIC_KEY = "your-public-account-address"
    }​
 ```
 
-## Adım 8: İşlemi imzalama \{#sign-txn}
+## Adım 8: İşlemi imzalama {#sign-txn}
 
 Artık işlemimizi oluşturduğumuza göre, göndermek için imzalamamız gerekiyor. Özel anahtarımızı burada kullanacağız.
 
@@ -244,7 +244,7 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## Adım 9: `mintNFT`'yi çağırma ve `mint-nft.js` düğümünü çalıştırma \{#call-mintnft-fn}
+## Adım 9: `mintNFT`'yi çağırma ve `mint-nft.js` düğümünü çalıştırma {#call-mintnft-fn}
 
 Pinata'ya yüklediğiniz `metadata.json`'ı hatırlıyor musunuz? Pinata'dan karma kodunu alın ve aşağıdakileri `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>` işlevine parametre olarak aktarın
 

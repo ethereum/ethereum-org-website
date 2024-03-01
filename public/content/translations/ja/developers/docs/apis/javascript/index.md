@@ -12,17 +12,17 @@ JavaScript でイーサリアムノードに接続する場合、通常の JavaS
 
 [マージ](/roadmap/merge/)以降は、ノードの実行には、実行クライアントとコンセンサスクライアントという 2 つのつながったイーサリアムソフトウェアが必要になることに注意してください。 必ず、ノードに実行クライアントとコンセンサスクライアントの両方が含まれるようにしてください。 ノードがローカルマシン上にない(ノードが AWS インスタンス上で動作しているなど)場合は、適宜、チュートリアルの IP アドレスをアップデートしてください。 詳細については、[ノードの実行](/developers/docs/nodes-and-clients/run-a-node/)ページをご覧ください。
 
-## 前提知識 \{#prerequisites}
+## 前提知識 {#prerequisites}
 
 JavaScript を理解している必要があります。また、[イーサリアムスタック](/developers/docs/ethereum-stack/)と[イーサリアムクライアント](/developers/docs/nodes-and-clients/)についても理解していることが推奨されます。
 
-## ライブラリの利点 \{#why-use-a-library}
+## ライブラリの利点 {#why-use-a-library}
 
 これらのライブラリにより、イーサリアムノードと直接やり取りする際の複雑さが抽象化されます。 また、ユーティリティ関数 (ETH を Gwei に変換する関数など) も提供されています。そのため、デベロッパーは複雑なイーサリアムクライアントの作業に費やす時間を削減でき、自身のアプリケーションの独自機能の開発作業に専念できます。
 
-## ライブラリの機能 \{#library-features}
+## ライブラリの機能 {#library-features}
 
-### イーサリアムノードに接続 \{#connect-to-ethereum-nodes}
+### イーサリアムノードに接続 {#connect-to-ethereum-nodes}
 
 providers ライブラリを使用することで、JSON-RPC、INFURA、Etherscan、Alchemy または MetaMask であっても、イーサリアムに接続してデータを読み取ることができます。
 
@@ -70,7 +70,7 @@ var web3 = new Web3(
 - ネットワーク ID
 - その他
 
-### ウォレットの機能 \{#wallet-functionality}
+### ウォレットの機能 {#wallet-functionality}
 
 これらのライブラリは、ウォレットの作成、キーの管理、トランザクションへ署名を行います。
 
@@ -151,7 +151,7 @@ wallet.sendTransaction(tx)
 - トランザクションへの署名
 - 等々...
 
-### スマートコントラクト関数とのやり取り \{#interact-with-smart-contract-functions}
+### スマートコントラクト関数とのやり取り {#interact-with-smart-contract-functions}
 
 Javascript クライアントライブラリを使用すると、コンパイルされたコントラクトのアプリケーションバイナリインタフェース (ABI) を読み取ることによって、アプリからスマートコントラクト関数を呼び出せるようになります。
 
@@ -213,7 +213,7 @@ contract Test {
 - コントラクトのデプロイ
 - 等々...
 
-### ユーティリティ関数 \{#utility-functions}
+### ユーティリティ関数 {#utility-functions}
 
 ユーティリティ関数は、イーサリアムでの構築を少し簡単にする便利なショートカットです。
 
@@ -235,7 +235,7 @@ ethers.utils.formatEther(balance)
 - [Web3js のユーティリティ関数](https://docs.web3js.org/api/web3-utils)
 - [Ethers のユーティリティ関数](https://docs.ethers.io/v5/api/utils/)
 
-## 利用可能なライブラリ \{#available-libraries}
+## 利用可能なライブラリ {#available-libraries}
 
 **Web3.js -** **_イーサリアムの JavaScript API_**
 
@@ -279,16 +279,16 @@ ethers.utils.formatEther(balance)
 - [ドキュメント](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 _役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
 
-## 関連トピック \{#related-topics}
+## 関連トピック {#related-topics}
 
 - [ ノードとクライアント](/developers/docs/nodes-and-clients/)
 - [開発フレームワーク](/developers/docs/frameworks/)
 
-## 関連チュートリアル \{#related-tutorials}
+## 関連チュートリアル {#related-tutorials}
 
 - [Javascript でイーサリアムブロックチェーンを使用するための Web3js のセットアップ](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– プロジェクトで web3.js をセットアップするための手順。_
 - [JavaScript からスマートコントラクトを呼び出す](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– DAI トークンを使って、JavaScript からスマートコントラクトを呼び出す方法を確認する。_

@@ -4,7 +4,7 @@ description: La politica utilizzata quando aggiungiamo un livello 2 a ethereum.o
 lang: it
 ---
 
-# Aggiungere Livelli 2 \{#adding-layer-2}
+# Aggiungere Livelli 2 {#adding-layer-2}
 
 Vogliamo assicurarci di elencare le migliori risorse possibili, così che gli utenti possano navigare nello spazio del livello 2 con la massima tranquillità e sicurezza.
 
@@ -18,9 +18,9 @@ Attualmente elenchiamo i L2 nelle pagine seguenti:
 
 Il Livello 2 è un paradigma relativamente nuovo ed entusiasmante per Ethereum. Abbiamo provato a creare un meccanismo equo per la disamina su ethereum.org, ma i criteri elencati cambieranno ed evolveranno col tempo.
 
-## Il meccanismo decisionale \{#decision-framework}
+## Il meccanismo decisionale {#decision-framework}
 
-### Criteri per l'inclusione: gli elementi imprescindibili \{#criteria-for-inclusion-the-must-haves}
+### Criteri per l'inclusione: gli elementi imprescindibili {#criteria-for-inclusion-the-must-haves}
 
 **Elenco su L2BEAT**
 
@@ -70,7 +70,7 @@ _Non prendiamo in considerazione altre soluzioni di scalabilità che non utilizz
 
 - I progetti elencati richiedono un esploratore del blocco funzionante per consentire agli utenti di navigare facilmente sulla catena.
 
-### Altri criteri: gli aspetti preferibili \{#nice-to-haves}
+### Altri criteri: gli aspetti preferibili {#nice-to-haves}
 
 **Supporto della piattaforma di scambio per il progetto**
 
@@ -88,7 +88,7 @@ _Non prendiamo in considerazione altre soluzioni di scalabilità che non utilizz
 
 - Qualche portafoglio supporta il L2 nativamente?
 
-## Aggiungi il tuo livello 2 \{#add-exchange}
+## Aggiungi il tuo livello 2 {#add-exchange}
 
 Se desideri aggiungere un livello 2 su ethereum.org, crea un ticket su GitHub.
 

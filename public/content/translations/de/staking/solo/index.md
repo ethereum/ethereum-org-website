@@ -13,7 +13,7 @@ summaryPoints:
   - Vertrauen Sie niemandem und geben Sie niemals den Zugang zu Ihren Geldern weiter
 ---
 
-## Was ist Solo-Staking? \{#what-is-solo-staking}
+## Was ist Solo-Staking? {#what-is-solo-staking}
 
 Solo-Staking ist das [Betreiben eines Ethereum-Knotens](/run-a-node/), der mit dem Internet verbunden ist, und das Hinterlegen von 32 ETH, um einen [Validator zu aktivieren](#faq), wodurch Sie direkt am Netzwerkkonsens teilnehmen können.
 
@@ -25,7 +25,7 @@ Solo-Staker sind für den Betrieb der Hardware verantwortlich, die zum Ausführe
 
 Ein Solo-Staker erhält Belohnungen direkt vom Protokoll dafür, dass sein Validator ordnungsgemäß funktioniert und online bleibt.
 
-## Warum Solo-Staken? \{#why-stake-solo}
+## Warum Solo-Staken? {#why-stake-solo}
 
 Das Solo-Staking bringt mehr Verantwortung mit sich, bietet Ihnen aber die maximale Kontrolle über Ihre Mittel und Ihre Staking-Einstellungen.
 
@@ -35,7 +35,7 @@ Das Solo-Staking bringt mehr Verantwortung mit sich, bietet Ihnen aber die maxim
   <Card title="Netzwerksicherheit" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Überlegungen vor dem Solo-Staking \{#considerations-before-staking-solo}
+## Überlegungen vor dem Solo-Staking {#considerations-before-staking-solo}
 
 So sehr wir uns wünschen, dass das Solo-Staking für alle zugänglich und risikofrei wäre, spiegelt dies nicht die Realität wider. Es gibt einige praktische und ernsthafte Überlegungen, die Sie beachten sollten, bevor Sie sich entscheiden, Ihre ETH solo zu staken.
 
@@ -85,7 +85,7 @@ Im Gegensatz zu Strafen für Inaktivität in Offline-Zeiten ist <em>Slashing</em
 
 <StakingComparison page="solo" />
 
-## Wie es funktioniert \{#how-it-works}
+## Wie es funktioniert {#how-it-works}
 
 <StakingHowSoloWorks />
 
@@ -95,13 +95,13 @@ Wenn Sie möchten, können Sie als Validator aussteigen, wodurch die Notwendigke
 
 [Mehr zu Staking-Auszahlungen](/staking/withdrawals/)
 
-## Beginnen Sie mit dem Staking-Launchpad \{#get-started-on-the-staking-launchpad}
+## Beginnen Sie mit dem Staking-Launchpad {#get-started-on-the-staking-launchpad}
 
 Das Staking-Launchpad ist eine Open-Source-Anwendung, die Ihnen hilft, ein Staker zu werden. Es führt Sie durch die Auswahl Ihrer Clients, die Generierung Ihrer Schlüssel und die Hinterlegung Ihrer ETH nach Maßgabe des Staking-Einlagenvertrags. Eine Checkliste wird bereitgestellt, um sicherzustellen, dass Sie alles abgedeckt haben, um Ihren Validator sicher einzurichten.
 
 <StakingLaunchpadWidget />
 
-## Was bei Node- und Client-Konfigurations-Tools zu beachten ist \{#node-tool-considerations}
+## Was bei Node- und Client-Konfigurations-Tools zu beachten ist {#node-tool-considerations}
 
 Es gibt eine wachsende Zahl von Tools und Dienstleistungen, die Ihnen helfen, Ihre ETH solo zu staken, aber sie sind mit unterschiedlichen Risiken und Vorteilen verbunden.
 
@@ -109,7 +109,7 @@ Attributindikatoren werden unten verwendet, um auf nennenswerte Stärken oder Sc
 
 <StakingConsiderations page="solo" />
 
-## Erkunden Sie Tools zum Einrichten von Nodes und Clients \{#node-and-client-tools}
+## Erkunden Sie Tools zum Einrichten von Nodes und Clients {#node-and-client-tools}
 
 Es gibt eine Vielzahl von Optionen, die Ihnen bei der Einrichtung helfen. Verwenden Sie die obigen Indikatoren, um Sie durch die folgenden Tools zu führen.
 
@@ -129,11 +129,11 @@ Diese Tools können als Alternative zur [Staking-Einlage-CLI](https://github.com
 
 Haben Sie einen Vorschlag für einen Staking-Tool, der noch fehlt? Machen Sie sich mit unserer [Richtlinie zum Aufführen von Produkten](/contributing/adding-staking-products/) vertraut, um beurteilen zu können, ob Ihr Vorschlag geeignet ist. Senden Sie ihn uns dann zur Prüfung zu.
 
-## Erkunden Sie Solo-Staking-Anleitungen \{#staking-guides}
+## Erkunden Sie Solo-Staking-Anleitungen {#staking-guides}
 
 <StakingGuides />
 
-## Häufig gestellte Fragen \{#faq}
+## Häufig gestellte Fragen {#faq}
 
 Das sind einige der häufigsten Fragen zum Thema Staking. Es ist lohnenswert sich damit auseinanderzusetzen.
 
@@ -217,7 +217,7 @@ Um Ihr gesamtes Guthaben zu entsperren und zu erhalten, müssen Sie auch den Pro
 </ExpandableCard>
 }
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [Ethereums Client-Diversitätsproblem](https://hackernoon.com/Ethereums-Client-Diversitätsproblem) – _@emmanuelawosika 2022_
 - [Client-Diversität fördern](https://www.attestant.io/Posts/Client-Diversität-fördern/) – _Jim McDonald 2022_

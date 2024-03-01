@@ -33,15 +33,15 @@ published: 2021-10-06
 
 事不宜迟，让我们开始吧！
 
-## 制作非同质化代币 101 \{#making-nfts-101}
+## 制作非同质化代币 101 {#making-nfts-101}
 
 在我们开始考虑任何代码之前，了解非同质化代币的工作原理非常重要。 它包括两个步骤：
 
-### 在以太坊区块链上发布非同质化代币智能合约 \{#publish-nft}
+### 在以太坊区块链上发布非同质化代币智能合约 {#publish-nft}
 
 两种非同质化代币智能合约标准的最大区别在于，ERC-1155 是多代币标准且包含批量功能，而 ERC-721 是单代币标准，因此仅支持一次转账一个代币。
 
-### 调用铸币函数 \{#minting-function}
+### 调用铸币函数 {#minting-function}
 
 通常，此铸币函数需要您传入两个变量作为参数，第一个是 `recipient`，它指定将要接收您的新铸造非同质化代币的地址，第二个是非同质化代币的 `tokenURI`，它是一个字符串，解析为描述非同质化代币元数据的 JSON 文档。
 
@@ -53,7 +53,7 @@ published: 2021-10-06
 
 太好了，现在我们已经了解了非同质化代币的工作原理，我们来克隆我们的启动文件！
 
-## 克隆启动文件 \{#clone-the-starter-files}
+## 克隆启动文件 {#clone-the-starter-files}
 
 首先，浏览到 [nft-minter-tutorial GitHub 资源库](https://github.com/alchemyplatform/nft-minter-tutorial)，获取此项目的启动文件。 将此资源库克隆到您的本地环境中。
 
@@ -66,11 +66,11 @@ published: 2021-10-06
 
 我们编写的所有代码都将保存在 `src` 文件夹下。 我们将编辑 `Minter.js` 组件并编写额外的 javascript 文件来为我们的项目提供 Web3 功能。
 
-## 第 2 步：查看我们的启动文件 \{#step-2-check-out-our-starter-files}
+## 第 2 步：查看我们的启动文件 {#step-2-check-out-our-starter-files}
 
 在我们开始编码之前，必须检查起始文件中已经为我们提供了什么。
 
-### 让您的 react 项目运行起来 \{#get-your-react-project-running}
+### 让您的 react 项目运行起来 {#get-your-react-project-running}
 
 首先在浏览器中运行 React 项目。 React 的美妙之处在于，一旦我们的项目在浏览器中运行，保存的任何更改都会在浏览器中实时更新。
 
@@ -91,7 +91,7 @@ npm start
 
 如果您尝试点击“Connect Wallet”或“Mint NFT”按钮，您会发现它们不起作用 — 那是因为我们仍然需要对它们的功能进行编程！ :\)
 
-### Minter.js 组件 \{#minter-js}
+### Minter.js 组件 {#minter-js}
 
 **注：**确保您位于 `minter-starter-files` 文件夹而不是 `nft-minter` 文件夹！
 
@@ -198,21 +198,21 @@ return (
 
 我们已经了解了我们正在进行的操作，现在我们来设置我们的以太坊钱包！
 
-## 设置您的以太坊钱包 \{#set-up-your-ethereum-wallet}
+## 设置您的以太坊钱包 {#set-up-your-ethereum-wallet}
 
 为了让用户能够与你的智能合约交互，他们需要将其以太坊钱包连接到你的去中心化应用程序。
 
-### 下载 MetaMask \{#download-metamask}
+### 下载 MetaMask {#download-metamask}
 
 在本教程中，我们将使用 MetaMask，它是浏览器中的虚拟钱包，用来管理您的以太坊账户地址。 如果您想了解更多关于以太坊交易如何运作的信息，请参阅[此页面](/developers/docs/transactions/)。
 
 您可以点击[此处](https://metamask.io/download.html)免费下载并创建一个 MetaMask 账户。 在创建账户时，或者如果您已经有一个账户，确保切换到右上角的“Ropsten 测试网络”\（这样我们就不会交易真正的钱币\）。
 
-### 通过水龙头中添加以太币 \{#add-ether-from-faucet}
+### 通过水龙头中添加以太币 {#add-ether-from-faucet}
 
 为了铸造我们的非同质化代币（或在以太坊区块链上签署任何交易），我们需要一些虚拟以太币。 要获取以太币，您可以转到 [Ropsten 水龙头](https://faucet.ropsten.be/)并输入您的 Ropsten 帐户地址，然后点击“Send Ropsten Eth”。 您应该会很快在您的 MetaMask 帐户中看到以太币！
 
-### 检查您的余额 \{#check-your-balance}
+### 检查您的余额 {#check-your-balance}
 
 为了核查我们账户中有余额，我们使用 [Alchemy composer 工具](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)发出 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 请求。 这将返回我们钱包中的以太币数量。 输入您的 MetaMask 帐户地址并点击“Send Request”后，您应该会看到这样的响应：
 
@@ -224,13 +224,13 @@ return (
 
 哦！ 我们的虚拟以太币都在那里了！ <Emoji text=":money_mouth_face:" size={1} />
 
-## 将 MetaMask 连接到您的用户界面 \{#connect-metamask-to-your-UI}
+## 将 MetaMask 连接到您的用户界面 {#connect-metamask-to-your-UI}
 
 既然我们的 MetaMask 钱包已经设置好了，我们将我们的去中心化应用程序与之连接！
 
 因为我们建议采用 [MVC](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller) 规范，所以我们要创建一个单独的文件，其中包含用来管理我们的去中心化应用程序的逻辑、数据和规则的函数，然后将这些函数传递给我们的前端（Minter.js 组件）。
 
-### `connectWallet` 函数 \{#connect-wallet-function}
+### `connectWallet` 函数 {#connect-wallet-function}
 
 为此，我们在 `src` 目录中创建一个名为 `utils` 的新文件夹，并在其中添加一个名为 `interact.js` 的文件，其中将包含我们所有的钱包和智能合约交互函数。
 
@@ -292,7 +292,7 @@ export const connectWallet = async () => {
 - 如果用户选择连接，`method: "eth_requestAccounts"` 将返回一个数组，其中包含连接到去中心化应用程序的用户的所有帐户地址。 总之，我们的 `connectWallet` 函数将返回一个 JSON 对象，其中包含此数组中的*第一个 * `address` \（见第 9 行\），并返回一条 `status` 信息，提示用户向智能合约写入信息。
 - 如果用户拒绝连接，则 JSON 对象将包含返回的 `address` 的空字符串和反映用户拒绝连接的 `status` 信息。
 
-### 将 connectWallet 函数添加到您的 Minter.js 用户界面组件 \{#add-connect-wallet}
+### 将 connectWallet 函数添加到您的 Minter.js 用户界面组件 {#add-connect-wallet}
 
 我们已经编写了 `connectWallet` 函数，现在我们将它连接到我们的 `Minter.js.` 组件。
 
@@ -338,7 +338,7 @@ const connectWalletPressed = async () => {
 
 不过不用担心！ 我们可以通过实现一个名为 `getCurrentWalletConnected` 的函数轻松解决这个问题，该函数将检查地址是否已连接到我们的去中心化应用程序并相应地更新我们的用户界面！
 
-### getCurrentWalletConnected 函数 \{#get-current-wallet}
+### getCurrentWalletConnected 函数 {#get-current-wallet}
 
 在您的 `interact.js` 文件中，添加以下 `getCurrentWalletConnected` 函数：
 
@@ -415,7 +415,7 @@ useEffect(async () => {
 
 添加这段代码后，请尝试刷新我们的浏览器窗口。 按钮应显示您已连接，并显示已连接钱包地址的预览 — 即使在您刷新后也是如此！
 
-### 实现 addWalletListener \{#implement-add-wallet-listener}
+### 实现 addWalletListener {#implement-add-wallet-listener}
 
 我们的去中心化应用程序钱包设置的最后一步是实现钱包监听器，以便我们的用户界面在钱包状态发生变化时更新，例如当用户断开或切换帐户时。
 
@@ -466,7 +466,7 @@ useEffect(async () => {
 
 瞧！ 我们已经完成了所有钱包功能的编程！ 我们的钱包已经设置好了，现在让我们弄清楚如何铸造非同质化代币！
 
-## 非同质化代币元数据 101 \{#nft-metadata-101}
+## 非同质化代币元数据 101 {#nft-metadata-101}
 
 所以，请记住我们刚刚在本教程的第 0 步讨论过的非同质化代币元数据，它是非同质化代币的核心，让非同质化代币具有属性，例如数字资产、名称、描述及其他特性。
 
@@ -480,11 +480,11 @@ useEffect(async () => {
 
 要将我们的元数据存储在星际文件系统上，我们将使用 [Pinata](https://pinata.cloud/)，这是一种方便的星际文件系统应用程序接口和工具包。 下一步，我们将准确解释如何操作！
 
-## 使用 Pintata 将元数据固定到星际文件系统 \{#use-pinata-to-pin-your-metadata-to-IPFS}
+## 使用 Pintata 将元数据固定到星际文件系统 {#use-pinata-to-pin-your-metadata-to-IPFS}
 
 如果您没有 [Pinata](https://pinata.cloud/) 帐户，请点击[此处](https://pinata.cloud/signup)注册一个免费帐户完成您的电子邮件和帐户验证步骤。
 
-### 创建您的 Pinata 应用程序接口密钥 \{#create-pinata-api-key}
+### 创建您的 Pinata 应用程序接口密钥 {#create-pinata-api-key}
 
 导航到 [https://pinata.cloud/keys](https://pinata.cloud/keys) 页面，然后选择顶部的“新建密钥”按钮并将“管理”小组件设置为启用，然后给您的密钥命名。
 
@@ -492,7 +492,7 @@ useEffect(async () => {
 
 我们的密钥已经设置好了，我们现在将它添加到项目中以便可以使用它。
 
-### 创建 .env 文件 \{#create-a-env}
+### 创建 .env 文件 {#create-a-env}
 
 我们可以将 Pinata 密钥和私钥安全地存储在环境文件中。 我们在您的项目目录中安装 [dotenv 软件包](https://www.npmjs.com/package/dotenv)。
 
@@ -519,7 +519,7 @@ REACT_APP_PINATA_SECRET = <pinata-api-secret>
 
 保存该文件，然后您就可以开始编写函数将您的 JSON 元数据上传到星际文件系统！
 
-### 实现 pinJSONToIPFS \{#pin-json-to-ipfs}
+### 实现 pinJSONToIPFS {#pin-json-to-ipfs}
 
 对我们来说幸运的是，Pinata 提供了一个[专门用于将 JSON 数据上传到星际文件系统的应用程序接口](https://pinata.cloud/documentation#PinJSONToIPFS)和一个方便的使用 axios 示例的 JavaScript，我们做一些轻微修改后就可以使用它。
 
@@ -578,19 +578,19 @@ export const pinJSONToIPFS = async (JSONBody) => {
 
 与 `connectWallet` 函数返回类型一样，会返回 JSON 对象，因此我们可以使用它们的参数更新状态变量和用户界面。
 
-## 加载您的智能合约 \{#load-your-smart-contract}
+## 加载您的智能合约 {#load-your-smart-contract}
 
 我们有办法通过 `pinJSONToIPFS` 函数将非同质化代币元数据上传到星际文件系统，现在我们需要一种办法来加载我们智能合约的实例，以便我们可以调用其 `mintNFT ` 函数。
 
 正如我们之前提到的，在本教程中，我们将使用[这个现有的非同质化代币智能合约](https://ropsten.etherscan.io/address/0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE)；但是，如果您想了解我们如何创建或者想自己创建一个，我们强烈建议您参阅我们的另一个教程[“如何创建非同质化代币。”](https://docs.alchemyapi.io/alchemy/tutorials/how-to-create-an-nft)。
 
-### 智能合约应用程序二进制接口 \{#contract-abi}
+### 智能合约应用程序二进制接口 {#contract-abi}
 
 如果您仔细研究我们的文件，您会注意到我们的 `src` 目录中有一个 `contract-abi.json` 文件。 在指定合约将要调用的函数以及确保函数以您期望的格式返回数据时，应用程序二进制接口必不可少。
 
 我们还需要一个 Alchemy 应用程序接口密钥和 Alchemy Web3 应用程序接口，用来连接到以太坊区块链并加载我们的智能合约。
 
-### 创建您的 Alchemy API 密钥 \{#create-alchemy-api}
+### 创建您的 Alchemy API 密钥 {#create-alchemy-api}
 
 如果您还没有 Alchemy 帐户，请[在此处免费注册。](https://alchemy.com/?a=eth-org-nft-minter)
 
@@ -614,7 +614,7 @@ REACT_APP_ALCHEMY_KEY = https://eth-ropsten.alchemyapi.io/v2/<alchemy-key>
 
 既然我们已经有合约应用程序二进制接口和 Alchemy 应用程序接口密钥了，现在我们可以使用 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) 加载我们的智能合约。
 
-### 设置您的 Alchemy Web3 端点和合约 \{#setup-alchemy-endpoint}
+### 设置您的 Alchemy Web3 端点和合约 {#setup-alchemy-endpoint}
 
 首先，如果您还没有 [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3)，您需要通过在终端导航到主目录 `nft-minter-tutorial` 来安装它：
 
@@ -648,7 +648,7 @@ const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
 
 在有了这两项后，我们就可以开始编写我们的铸币函数了！
 
-## 实现 mintNFT 函数 \{#implement-the-mintnft-function}
+## 实现 mintNFT 函数 {#implement-the-mintnft-function}
 
 在 `interact.js` 文件中，我们定义的函数 `mintNFT`，它将用相同的名称铸造非同质化代币。
 
@@ -660,7 +660,7 @@ const contractAddress = "0x4C4a07F737Bf57F6632B6CAB089B78f62385aCaE"
 export const mintNFT = async (url, name, description) => {}
 ```
 
-### 输入错误处理 \{#input-error-handling}
+### 输入错误处理 {#input-error-handling}
 
 当然，在函数开始运行时进行某种输入错误处理是合理的，这样，如果输入参数不正确，我们将退出该函数。 在我们的函数中，我们添加以下代码：
 
@@ -678,7 +678,7 @@ export const mintNFT = async (url, name, description) => {
 
 本质上，如果有任何输入参数是空字符串，我们返回一个 JSON 对象，其中 `success` 布尔值为 false，并且 `status` 字符串指示我们用户界面中的所有字段必须完整。
 
-### 将元数据上传到星际文件系统 \{#upload-metadata-to-ipfs}
+### 将元数据上传到星际文件系统 {#upload-metadata-to-ipfs}
 
 在知道我们的元数据格式正确后，下一步是将其包装到 JSON 对象中，并通过我们编写的 `pinJSONToIPFS` 将其上传到星际文件系统！
 
@@ -835,7 +835,7 @@ export const mintNFT = async (url, name, description) => {
 
 这是一个大型函数！ 现在，我们只需要将 `mintNFT` 函数连接到我们的 `Minter.js` 组件......
 
-## 将 mintNFT 连接到我们的 Minter.js 前端 \{#connect-our-frontend}
+## 将 mintNFT 连接到我们的 Minter.js 前端 {#connect-our-frontend}
 
 打开您的 `Minter.js` 文件，并将顶部的 `import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";` 行更新为：
 
@@ -856,13 +856,13 @@ const onMintPressed = async () => {
 }
 ```
 
-## 将您的非同质化代币部署到在线网站 \{#deploy-your-NFT}
+## 将您的非同质化代币部署到在线网站 {#deploy-your-NFT}
 
 准备好让您的项目上线和用户互动了吗？ 查看[本教程](https://docs.alchemy.com/alchemy/tutorials/nft-minter/how-do-i-deploy-nfts-online)，将您的铸币机部署到在线网站。
 
 最后一步......
 
-## 掀起区块链世界的风暴 \{#take-the-blockchain-world-by-storm}
+## 掀起区块链世界的风暴 {#take-the-blockchain-world-by-storm}
 
 开个玩笑，您已经完成了本教程！
 

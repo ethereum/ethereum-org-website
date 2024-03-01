@@ -96,7 +96,7 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Na próxima parte, chamaremos a função `balanceOf` para recuperar a quantidade atual de tokens que os dois endereços possuem.
 
-## Chamada: valor de leitura de um contrato inteligente \{#call-reading-value-from-a-smart-contract}
+## Chamada: valor de leitura de um contrato inteligente {#call-reading-value-from-a-smart-contract}
 
 O primeiro exemplo chamará um método "constant" e executará seu método de contrato inteligente na EVM sem enviar qualquer transação. Para isso, vamos ler o saldo do ERC20 de um endereço. [Leia o nosso artigo sobre tokens ERC20](/developers/tutorials/understand-the-erc-20-token-smart-contract/).
 
@@ -114,7 +114,7 @@ daiToken.methods.balanceOf(senderAddress).call(função (err, res) {
 
 Lembre-se que DAI ERC20 tem 18 decimais, o que significa que você precisa remover 18 zeros para obter o valor correto. uint256 são retornados como cadeias de caracteres, pois o JavaScript não lida com grandes valores numéricos. Se não tiver certeza [de como lidar com grandes números em JS, verifique nosso tutorial sobre bignumber.js](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/).
 
-## Enviar: enviando transação para uma função de contrato inteligente \{#send-sending-a-transaction-to-a-smart-contract-function}
+## Enviar: enviando transação para uma função de contrato inteligente {#send-sending-a-transaction-to-a-smart-contract-function}
 
 Para o segundo exemplo, chamaremos a função de transferência do contrato inteligente DAI para enviar 10 DAI para o nosso segundo endereço. A função de transferência aceita dois parâmetros: o endereço do destinatário e a quantidade de token para transferências:
 

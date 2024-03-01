@@ -5,7 +5,7 @@ lang: ro
 sidebarDepth: 1
 ---
 
-# Istoricul lui Ethereum \{#the-history-of-ethereum}
+# Istoricul lui Ethereum {#the-history-of-ethereum}
 
 O cronologie a tuturor reperelor majore, a fork-urilor și actualizărilor blockchain-ului Ethereum.
 
@@ -27,15 +27,15 @@ Sunteți în căutarea unor viitoare actualizări ale protocolului? [Aflați des
 <Divider />
 }
 
-## 2021 \{#2021}
+## 2021 {#2021}
 
-### Arrow Glacier \{#arrow-glacier}
+### Arrow Glacier {#arrow-glacier}
 
 {
 <NetworkUpgradeSummary name="arrowGlacier" />
 }
 
-#### Rezumat \{#arrow-glacier-summary}
+#### Rezumat {#arrow-glacier-summary}
 
 Actualizarea Arrow Glacier a amânat [bomba de dificultate](/glossary/#difficulty-bomb) cu câteva luni. Aceasta este singura modificare introdusă în această actualizare și este similară ca natură cu actualizarea [Muir Glacier](#muir-glacier). Modificări similare au fost efectuate cu actualizările [Byzantium](#byzantium), [Constantinople](#constantinople) și [Londra](#london) ale reţelei.
 
@@ -50,25 +50,25 @@ Actualizarea Arrow Glacier a amânat [bomba de dificultate](/glossary/#difficult
 </ExpandableCard>
 }
 
-#### <Emoji text=":police_car_light:" size={1} me="0.5rem" />Operatorii de noduri \{#arrow-glacier-node-operators}
+#### <Emoji text=":police_car_light:" size={1} me="0.5rem" />Operatorii de noduri {#arrow-glacier-node-operators}
 
 Aveţi grijă să vă actualizați software-ul client la versiunea cea mai recentă înainte de 5 decembrie 2021, pentru a justifica timpii de bloc variabili. Aceasta va evita sincronizarea clientului dvs. cu un lanț pre-fork, care va avea ca rezultat imposibilitatea de a trimite fonduri sau de a verifica în mod corect tranzacțiile.
 
 ---
 
-### Altair \{#altair}
+### Altair {#altair}
 
 {
 <NetworkUpgradeSummary name="altair" />
 }
 
-#### Rezumat \{#altair-summary}
+#### Rezumat {#altair-summary}
 
 Actualizarea Altair a fost prima actualizare programată pentru [Lanțul Beacon](/roadmap/beacon-chain). A adăugat acceptarea „comitetelor de sincronizare”—prin activarea clienților light (ușori) și aducând penalităţi pentru inactivitatea și slashing-ul validatorului la valorile lor maxime.
 
 - [Citiţi specificaţiile actualizărilor Altair](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <Emoji text=":tada:" size={1} me="0.5rem" />Un fapt amuzant! \{#altair-fun-fact}
+#### <Emoji text=":tada:" size={1} me="0.5rem" />Un fapt amuzant! {#altair-fun-fact}
 
 Altair a fost prima actualizare majoră a rețelei care a avut o dată exactă de lansare. Toate actualizările anterioare s-au bazat pe un număr de bloc declarat pe lanțul dovezii-muncii (PoW), unde timpii de bloc variază. Lanțul Beacon nu necesită rezolvarea de calcule ca dovadă-a-muncii (PoW), ci funcționează pe un sistem de epoci bazate pe timp, sistem care constă din 32 de „sloturi” de timp de 12 secunde în care validatorii pot propune blocuri. Acesta este motivul pentru care am știut exact când vom atinge epoca 74.240 și Altair va deveni funcțional!
 
@@ -76,13 +76,13 @@ Altair a fost prima actualizare majoră a rețelei care a avut o dată exactă d
 
 ---
 
-### Londra \{#london}
+### Londra {#london}
 
 {
 <NetworkUpgradeSummary name="london" />
 }
 
-#### Rezumat \{#london-summary}
+#### Rezumat {#london-summary}
 
 Actualizarea Londra a introdus [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), care a reformat piața de taxe de tranzacționare, precum și schimbările modului de gestionare a rambursărilor de gaz și ale programării [Erei glaciare](/glossary/#ice-age).
 
@@ -104,13 +104,13 @@ Actualizarea Londra a introdus [EIP-1559](https://eips.ethereum.org/EIPS/eip-155
 
 ---
 
-### Berlin \{#berlin}
+### Berlin {#berlin}
 
 {
 <NetworkUpgradeSummary name="berlin" />
 }
 
-#### Rezumat \{#berlin-summary}
+#### Rezumat {#berlin-summary}
 
 Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și crește acceptarea mai multor tipuri de tranzacții.
 
@@ -132,15 +132,15 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 <Divider />
 }
 
-## 2020 \{#2020}
+## 2020 {#2020}
 
-### Geneza Lanțului Beacon \{#beacon-chain-genesis}
+### Geneza Lanțului Beacon {#beacon-chain-genesis}
 
 {
 <NetworkUpgradeSummary name="beaconChainGenesis" />
 }
 
-#### Rezumat \{#beacon-chain-genesis-summary}
+#### Rezumat {#beacon-chain-genesis-summary}
 
 [Lanțul Beacon](/roadmap/beacon-chain/) avea nevoie de 16384 de depozite de 32 de ETH mizați pentru a transfera în siguranță. Acest lucru se întâmpla pe 27 noiembrie, ceea ce înseamnă că Lanțul Beacon a început să producă blocuri pe 1 decembrie 2020. Acesta este primul pas important în realizarea [viziunii Ethereum](/roadmap/vision/).
 
@@ -152,13 +152,13 @@ Actualizarea Berlin a optimizat costul gazului pentru anumite acțiuni EVM și c
 
 ---
 
-### S-a implementat contractul de depunere a mizei \{#staking-deposit-contract}
+### S-a implementat contractul de depunere a mizei {#staking-deposit-contract}
 
 {
 <NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 }
 
-#### Rezumat \{#deposit-contract-summary}
+#### Rezumat {#deposit-contract-summary}
 
 Contractul de depunere a mizei a introdus [mizarea](/glossary/#staking) în ecosistemul Ethereum. Cu toate că este un contract pe [Mainnet](/glossary/#mainnet), acesta a avut un impact direct asupra termenului de lansare a [Lanțului Beacon](/roadmap/beacon-chain/), o importantă [actualizare Ethereum](/roadmap/).
 
@@ -170,13 +170,13 @@ Contractul de depunere a mizei a introdus [mizarea](/glossary/#staking) în ecos
 
 ---
 
-### Muir Glacier \{#muir-glacier}
+### Muir Glacier {#muir-glacier}
 
 {
 <NetworkUpgradeSummary name="muirGlacier" />
 }
 
-#### Rezumat \{#muir-glacier-summary}
+#### Rezumat {#muir-glacier-summary}
 
 Fork-ul Muir Glacier a introdus o întârziere a [bombei de dificultate](/glossary/#difficulty-bomb). Creșterea dificultăţii blocului în mecanismul de consens bazat pe [dovada-muncii](/developers/docs/consensus-mechanisms/pow/) ameninţa să degradeze calitățile funcționale ale lui Ethereum prin creșterea timpului de așteptare pentru trimiterea tranzacțiilor și folosirea aplicațiilor dapp.
 
@@ -195,15 +195,15 @@ Fork-ul Muir Glacier a introdus o întârziere a [bombei de dificultate](/glossa
 <Divider />
 }
 
-## 2019 \{#2019}
+## 2019 {#2019}
 
-### Istanbul \{#istanbul}
+### Istanbul {#istanbul}
 
 {
 <NetworkUpgradeSummary name="istanbul" />
 }
 
-#### Rezumat \{#istanbul-summary}
+#### Rezumat {#istanbul-summary}
 
 Fork-ul Istanbul:
 
@@ -230,13 +230,13 @@ Fork-ul Istanbul:
 
 ---
 
-### Constantinopol \{#constantinople}
+### Constantinopol {#constantinople}
 
 {
 <NetworkUpgradeSummary name="constantinople" />
 }
 
-#### Rezumat \{#constantinople-summary}
+#### Rezumat {#constantinople-summary}
 
 Fork-ul Constantinopol:
 
@@ -261,15 +261,15 @@ Fork-ul Constantinopol:
 <Divider />
 }
 
-## 2017 \{#2017}
+## 2017 {#2017}
 
-### Byzantium \{#byzantium}
+### Byzantium {#byzantium}
 
 {
 <NetworkUpgradeSummary name="byzantium" />
 }
 
-#### Rezumat \{#byzantium-summary}
+#### Rezumat {#byzantium-summary}
 
 Fork-ul Byzantium:
 
@@ -300,15 +300,15 @@ Fork-ul Byzantium:
 <Divider />
 }
 
-## 2016 \{#2016}
+## 2016 {#2016}
 
-### Spurious Dragon \{#spurious-dragon}
+### Spurious Dragon {#spurious-dragon}
 
 {
 <NetworkUpgradeSummary name="spuriousDragon" />
 }
 
-#### Rezumat \{#spurious-dragon-summary}
+#### Rezumat {#spurious-dragon-summary}
 
 Fork-ul Spurious Dragon a fost al doilea răspuns la atacurile prin refuzul-serviciului (DoS) din rețea (septembrie/octombrie 2016), incluzând:
 
@@ -331,13 +331,13 @@ Fork-ul Spurious Dragon a fost al doilea răspuns la atacurile prin refuzul-serv
 
 ---
 
-### Tangerine whistle \{#tangerine-whistle}
+### Tangerine whistle {#tangerine-whistle}
 
 {
 <NetworkUpgradeSummary name="tangerineWhistle" />
 }
 
-#### Rezumat \{#tangerine-whistle-summary}
+#### Rezumat {#tangerine-whistle-summary}
 
 Fork-ul Tangerine Whistle a fost primul răspuns la atacurile prin refuzul-serviciului (DoS) din rețea (septembrie/octombrie 2016), incluzând:
 
@@ -356,13 +356,13 @@ Fork-ul Tangerine Whistle a fost primul răspuns la atacurile prin refuzul-servi
 
 ---
 
-### Fork-ul DAO \{#dao-fork}
+### Fork-ul DAO {#dao-fork}
 
 {
 <NetworkUpgradeSummary name="daoFork" />
 }
 
-#### Rezumat \{#dao-fork-summary}
+#### Rezumat {#dao-fork-summary}
 
 Fork-ul DAO a fost un răspuns la [atacul DAO din 2016](https://www.coindesk.com/markets/2016/06/25/understanding-the-dao-attack/), în care un contract [DAO](/glossary/#dao) nesecurizat a fost golit de peste 3,6 milioane de ETH prin piratare. Fork-ul a mutat fondurile de pe contractul defectuos pe un [contract nou](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) cu o singură funcție: „withdraw” (retragere). Oricine a pierdut fonduri a putut retrage 1 ETH pentru fiecare 100 de tokenuri DAO din portofel.
 
@@ -374,13 +374,13 @@ Unii miner-i au refuzat să creeze fork-ul pentru că incidentul DAO nu a fost o
 
 ---
 
-### Homestead \{#homestead}
+### Homestead {#homestead}
 
 {
 <NetworkUpgradeSummary name="homestead" />
 }
 
-#### Rezumat \{#homestead-summary}
+#### Rezumat {#homestead-summary}
 
 Fork-ul Homestead care privea spre viitor. Acesta a inclus mai multe modificări ale protocolului și o schimbare de relaţionare care i-a permis lui Ethereum să efectueze noi actualizări ale reţelei.
 
@@ -400,15 +400,15 @@ Fork-ul Homestead care privea spre viitor. Acesta a inclus mai multe modificări
 <Divider />
 }
 
-## 2015 \{#2015}
+## 2015 {#2015}
 
-### Frontier thawing \{#frontier-thawing}
+### Frontier thawing {#frontier-thawing}
 
 {
 <NetworkUpgradeSummary name="frontierThawing" />
 }
 
-#### Rezumat \{#frontier-thawing-summary}
+#### Rezumat {#frontier-thawing-summary}
 
 Fork-ul frontier thawing a ridicat limita de [gaz](/glossary/#gas) de 5.000 per [bloc](/glossary/#block) și a stabilit prețul implicit al gazului la 51 [gwei](/glossary/#gwei). Acest lucru a permis tranzacțiile – tranzacțiile necesită 21.000 de gaz.
 
@@ -416,13 +416,13 @@ Fork-ul frontier thawing a ridicat limita de [gaz](/glossary/#gas) de 5.000 per 
 
 ---
 
-### Frontier \{#frontier}
+### Frontier {#frontier}
 
 {
 <NetworkUpgradeSummary name="frontier" />
 }
 
-#### Rezumat \{#frontier-summary}
+#### Rezumat {#frontier-summary}
 
 Frontier a fost o implementare în direct, dar absolut esenţială pentru proiectul Ethereum. A urmat fazei de testare de succes Olympic. A fost destinat utilizatorilor tehnici, în special dezvoltatorilor. [Blocurile](/glossary/#block) aveau o limită de [gaz](/glossary/#gas) de 5.000. Această perioadă de „spargere a gheţii” le-a permis miner-ilor să-și înceapă operațiunile și celor care au adoptat din timp sistemul să-și instaleze clienții fără a avea nevoie să se „grăbească”.
 
@@ -432,9 +432,9 @@ Frontier a fost o implementare în direct, dar absolut esenţială pentru proiec
 <Divider />
 }
 
-## 2014 \{#2014}
+## 2014 {#2014}
 
-### Vânzarea de ether \{#ether-sale}
+### Vânzarea de ether {#ether-sale}
 
 {
 <NetworkUpgradeSummary name="etherSale" />
@@ -446,7 +446,7 @@ Ether-ul a fost pus în vânzare oficial timp de 42 de zile. Se putea cumpăra c
 
 ---
 
-### A fost lansată Cartea galbenă \{#yellowpaper}
+### A fost lansată Cartea galbenă {#yellowpaper}
 
 {
 <NetworkUpgradeSummary name="yellowpaperRelease" />
@@ -460,9 +460,9 @@ Cartea galbenă, scrisă de Dr. Gavin Wood, este o definiție tehnică a protoco
 <Divider />
 }
 
-## 2013 \{#2013}
+## 2013 {#2013}
 
-### A fost lansată Cartea albă \{#whitepaper}
+### A fost lansată Cartea albă {#whitepaper}
 
 {
 <NetworkUpgradeSummary name="whitepaperRelease" />

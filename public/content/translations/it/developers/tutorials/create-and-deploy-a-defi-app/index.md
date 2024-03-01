@@ -18,7 +18,7 @@ sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 
 In questo tutorial creeremo un'applicazione DeFi con Solidity in cui gli utenti possono depositare un token ERC20 sullo smart contract, per poter coniare e trasferire i token Farm. Gli utenti possono quindi prelevare i token ERC20: una volta bruciato il token Farm sullo smart contract, i token ERC20 verranno ritrasferiti.
 
-## Installa Truffle e Ganache \{#install-truffle-and-ganache}
+## Installa Truffle e Ganache {#install-truffle-and-ganache}
 
 Se questa è la prima volta che scrivi uno smart contract, dovrai configurare il tuo ambiente. Useremo due strumenti: [Truffle](https://www.trufflesuite.com/) e [Ganache](https://www.trufflesuite.com/ganache).
 
@@ -44,7 +44,7 @@ Verrà creato un progetto vuoto per lo sviluppo e la distribuzione dei nostri sm
 
 - `truffle-config.js`: File di configurazione di Truffle
 
-## Crea il Token ERC20 \{#create-the-erc20-token}
+## Crea il Token ERC20 {#create-the-erc20-token}
 
 Innanzi tutto dobbiamo creare il nostro token ERC20, che useremo per lo staking sullo smart contract. Per creare il nostro token fungibile, dovremo prima installare la libreria di OpenZeppelin. Essa contiene le implementazioni di standard come ERC20 ed ERC721. Per installare, esegui il comando:
 
@@ -90,7 +90,7 @@ constructor (string memory name_, string memory symbol_) public {
 }
 ```
 
-## Compila il Token ERC20 \{#compile-the-erc20-token}
+## Compila il Token ERC20 {#compile-the-erc20-token}
 
 Per compilare il nostro smart contract, dobbiamo prima verificare la nostra versione del compilatore in Solidity. Puoi verificarla eseguendo il comando:
 
@@ -123,7 +123,7 @@ Ora possiamo compilare il nostro smart contract eseguendo il seguente comando:
 truffle compile
 ```
 
-## Distribuisci il Token ERC20 \{#deploy-erc20-token}
+## Distribuisci il Token ERC20 {#deploy-erc20-token}
 
 Dopo la compilazione, possiamo distribuire il nostro token.
 
@@ -175,7 +175,7 @@ Eseguendo i suddetti comandi, vedremo che il primo indirizzo ha difatti 1 milion
 
 _Il primo indirizzo ha 1000000 MyToken_
 
-## Crea lo smart contract del FarmToken \{#create-farmtoken-smart-contract}
+## Crea lo smart contract del FarmToken {#create-farmtoken-smart-contract}
 
 Lo smart contract FarmToken avrà 3 funzioni:
 
@@ -468,7 +468,7 @@ Per eseguire questo script: `truffle exec .\scripts\withdrawMyTokenFromTokenFarm
 
 _output di withdrawMyTokenFromTokenFarm.js_
 
-## Riferimenti \{#references}
+## Riferimenti {#references}
 
 [Contratti - Documentazione di OpenZeppelin](https://docs.openzeppelin.com/contracts/3.x/)
 

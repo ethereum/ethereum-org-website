@@ -4,11 +4,11 @@ description: Ethereum ekosistemindeki hibe programlarının bir listesi.
 lang: tr
 ---
 
-# Çevrimiçi topluluklar \{#online-communities}
+# Çevrimiçi topluluklar {#online-communities}
 
 Yüz binlerce Ethereum meraklısı, haberleri paylaşmak, son gelişmeler hakkında konuşmak, teknik sorunları tartışmak ve geleceği hayal etmek için bu çevrimiçi forumlarda bir araya geliyor.
 
-## Forumlar \{#forums}
+## Forumlar {#forums}
 
 {
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> - Ethereum'a dair her şey</SocialListItem>
@@ -35,7 +35,7 @@ Yüz binlerce Ethereum meraklısı, haberleri paylaşmak, son gelişmeler hakkı
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Araştırma</Link> - kriptoekonomik araştırmalar için en etkili mesaj panosu</SocialListItem>
 }
 
-## Sohbet odaları \{#chat-rooms}
+## Sohbet odaları {#chat-rooms}
 
 {
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Kedi Güdücüler</Link> - Ethereum geliştirmeye proje yönetimi desteği sunmaya odaklı topluluk</SocialListItem>
@@ -68,7 +68,7 @@ Yüz binlerce Ethereum meraklısı, haberleri paylaşmak, son gelişmeler hakkı
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- merkeziyetsiz soru cevap forumu_</SocialListItem>
 }
 
-## YouTube ve Twitter \{#youtube-and-twitter}
+## YouTube ve Twitter {#youtube-and-twitter}
 
 {
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Vakfı</Link> - Ethereum Vakfı'ndan en son haberleri takip edin</SocialListItem>

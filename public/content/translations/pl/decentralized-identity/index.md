@@ -17,11 +17,11 @@ Jednak tradycyjne systemy zarządzania tożsamością od dawna polegają na scen
 
 Te problemy rozwiązują zdecentralizowane systemy tożsamości oparte na publicznych łańcuchach bloków, takie jak Ethereum. Tożsamość zdecentralizowana umożliwia jednostkom zarządzanie informacjami związanymi z ich tożsamością. Dzięki zdecentralizowanym rozwiązaniom w zakresie tożsamości możesz _samodzielnie_ tworzyć identyfikatory oraz żądać swoich poświadczeń i przechowywać je bez polegania na organach centralnych, takich jak dostawcy usług lub rządy.
 
-## Co to jest tożsamość? \{#what-is-identity}
+## Co to jest tożsamość? {#what-is-identity}
 
 Tożsamość oznacza odczuwanie przez jednostkę własnego „ja”, określonego przez unikalne cechy. Tożsamość odnosi się do bytu, _odrębnej_ istoty ludzkiej. Tożsamość może odnosić się również do innych podmiotów, takich jak organizacja czy władza.
 
-## Co to są identyfikatory? \{#what-are-identifiers}
+## Co to są identyfikatory? {#what-are-identifiers}
 
 Identyfikator jest informacją, która wskazuje określoną lub określone tożsamości. Najczęstsze identyfikatory to:
 
@@ -33,13 +33,13 @@ Identyfikator jest informacją, która wskazuje określoną lub określone tożs
 
 Te tradycyjne przykłady identyfikatorów są wydawane, przechowywane i kontrolowane przez jednostki centralne. Potrzebujesz pozwolenia od swojego rządu, aby zmienić swoje imię i nazwisko, a od platformy mediów społecznościowych, aby zmienić swój identyfikator.
 
-## Co to są atesty? \{#what-are-attestations}
+## Co to są atesty? {#what-are-attestations}
 
 Poświadczenie jest oświadczeniem złożonym przez jeden podmiot na temat innego podmiotu. Jeśli mieszkasz w Stanach Zjednoczonych, prawo jazdy wydane przez departament pojazdów mechanicznych (jeden podmiot) potwierdza, że inny podmiot (Ty) jest uprawniony do prowadzenia samochodu.
 
 Poświadczenia to nie to samo, co identyfikatory. Poświadczenia _zawierają_ identyfikatory odnoszące się do określonej tożsamości oraz oświadczenie dotyczące atrybutu związanego z tą tożsamością. Tak więc prawo jazdy zawiera identyfikatory (nazwisko, data urodzenia, adres), ale jest również poświadczeniem o prawie do prowadzenia pojazdu.
 
-### Co to są zdecentralizowane identyfikatory? \{#what-are-decentralized-identifiers}
+### Co to są zdecentralizowane identyfikatory? {#what-are-decentralized-identifiers}
 
 Tradycyjne identyfikatory, takie jak nazwa prawna lub adres e-mail, zależą od osób trzecich – rządów czy dostawców poczty elektronicznej. Decentralizowane identyfikatory (DID) są inne — nie są wydawane, zarządzane ani kontrolowane przez jakikolwiek podmiot centralny.
 
@@ -47,21 +47,21 @@ Zdecentralizowane identyfikatory są wydawane, przechowywane i kontrolowane prze
 
 Zdecentralizowane identyfikatory są przechowywane w rozproszonych księgach (łańcuchach bloków) lub sieciach peer-to-peer. Dzięki temu DID-y są [globalnie unikalne, rozwiązywalne z wysoką dostępnością i kryptograficznie weryfikowalne](https://w3c-ccg.github.io/did-primer/). Zdecentralizowany identyfikator może być powiązany z różnymi podmiotami: z pojedynczymi osobami, organizacjami lub instytucjami rządowymi.
 
-## Co sprawia, że zdecentralizowane identyfikatory są możliwe? \{#what-makes-decentralized-identifiers-possible}
+## Co sprawia, że zdecentralizowane identyfikatory są możliwe? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastruktura klucza publicznego (PKI) \{#public-key-infrastructure}
+### 1. Infrastruktura klucza publicznego (PKI) {#public-key-infrastructure}
 
 Infrastruktura klucza publicznego (PKI) to środek bezpieczeństwa informacji, który generuje dla podmiotu [klucz publiczny](/glossary/#public-key) i [klucz prywatny](/glossary/#private-key). Kryptografia klucza publicznego jest wykorzystywana w sieciach łańcuchów bloków do uwierzytelniania tożsamości użytkowników i udawadniania własności zasobów cyfrowych.
 
 Niektóre zdecentralizowane identyfikatory, takie jak konto Ethereum, mają klucze publiczne i prywatne. Klucz publiczny identyfikuje kontrolera konta, a klucze prywatne mogą podpisywać i odszyfrowywać wiadomości dla tego konta. PKI zapewnia dowody potrzebne do uwierzytelniania podmiotów i zapobiegania podszywaniu się i używaniu fałszywych tożsamości, wykorzystując [podpisy kryptograficzne](https://andersbrownworth.com/blockchain/public-private-keys/) do weryfikacji wszystkich twierdzeń.
 
-### 2. Zdecentralizowane magazyny danych \{#decentralized-datastores}
+### 2. Zdecentralizowane magazyny danych {#decentralized-datastores}
 
 Łańcuch bloków służy jako weryfikowalny rejestr danych: otwarte, niezaufane i zdecentralizowane repozytorium informacji. Istnienie publicznych łańcuchów bloków eliminuje potrzebę przechowywania identyfikatorów w scentralizowanych rejestrach.
 
 Aby potwierdzić ważność zdecentralizowanego identyfikatora, można wyszukać w łańcuchu bloków powiązany klucz publiczny. Jest to istotna różnica w porównaniu do tradycyjnych identyfikatorów, które wymagają uwierzytelniania stron trzecich.
 
-## W jaki sposób zdecentralizowane identyfikatory i poświadczenia umożliwiają zdecentralizowaną tożsamość? \{#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
+## W jaki sposób zdecentralizowane identyfikatory i poświadczenia umożliwiają zdecentralizowaną tożsamość? {#how-decentralized-identifiers-and-attestations-enable-decentralized-identity}
 
 Zdecentralizowana tożsamość zakłada, że informacje związane z tożsamością powinny być samodzielnie kontrolowane, prywatne i przenośne, a zdecentralizowane identyfikatory i poświadczenia są podstawowymi elementami składowymi.
 
@@ -73,11 +73,11 @@ Dzięki zdecentralizowanym identyfikatorom poświadczenia są niezależne i wery
 
 Zdecentralizowane identyfikatory mają również kluczowe znaczenie dla ochrony prywatności danych osobowych, z względu na zdecentralizowaną tożsamość. Jeśli na przykład osoba fizyczna przedstawia dowód poświadczenia (prawo jazdy), strona weryfikująca nie musi sprawdzać prawidłowości informacji w dowodzie. Zamiast tego weryfikator potrzebuje jedynie gwarancji kryptograficznych autentyczności poświadczenia i tożsamości organizacji, która je wydała, aby ustalić, czy dowód jest prawidłowy.
 
-## Rodzaje poświadczeń w zdecentralizowanej tożsamości \{#types-of-attestations-in-decentralized-identity}
+## Rodzaje poświadczeń w zdecentralizowanej tożsamości {#types-of-attestations-in-decentralized-identity}
 
 Sposób, w jaki informacje o poświadczeniach są przechowywane i pobierane w ekosystemie tożsamości opartym na Ethereum, różni się od tradycyjnego zarządzania tożsamościami. Oto przegląd różnych podejść do wydawania, przechowywania i weryfikacji poświadczeń w zdecentralizowanych systemach tożsamości:
 
-### Poświadczenia poza łańcuchem \{#off-chain-attestations}
+### Poświadczenia poza łańcuchem {#off-chain-attestations}
 
 Jedną z obaw związanych z przechowywaniem poświadczeń w łańcuchu jest to, że mogą one zawierać informacje, które osoby fizyczne chcą zachować w tajemnicy. Publiczny charakter łańcucha bloków Ethereum sprawia, że jest on nieprzydatny do przechowywania takich poświadczeń.
 
@@ -89,13 +89,13 @@ Oto hipotetyczny scenariusz opisujący, jak działają poświadczenia poza łań
 
 2. Bob ubiega się o pracę i chce udowodnić swoje kwalifikacje akademickie pracodawcy, dlatego udostępnia poświadczenie z mobilnego portfela. Przedsiębiorstwo (weryfikator) może następnie potwierdzić prawidłowość poświadczenia poprzez sprawdzenie DID wystawcy (tj. jego klucza publicznego na Ethereum).
 
-### Poświadczenia poza łańcuchem, z trwałym dostępem \{#offchain-attestations-with-persistent-access}
+### Poświadczenia poza łańcuchem, z trwałym dostępem {#offchain-attestations-with-persistent-access}
 
 W takim układzie poświadczenia są przekształcane w pliki JSON i przechowywane poza łańcuchem (najlepiej na platformie [zdecentralizowanej pamięci masowej w chmurze](/developers/docs/storage/), takiej jak IPFS lub Swarm). Jednak plik JSON jest przechowywany w łańcuchu i powiązany z DID za pośrednictwem rejestru w łańcuchu. Powiązanym DID może być albo wystawca poświadczenia, albo odbiorca.
 
 Takie podejście umożliwia uzyskiwanie przez poświadczenia trwałości opartej na łańcuchu bloków, przy jednoczesnym zachowaniu zaszyfrowanych i weryfikowalnych informacji o oświadczeniach. Umożliwia to również selektywne ujawnienie, ponieważ posiadacz klucza prywatnego może odszyfrować informacje.
 
-### Poświadczenia w łańcuchu \{#onchain-attestations}
+### Poświadczenia w łańcuchu {#onchain-attestations}
 
 Poświadczenia w łańcuchu są przechowywane w [inteligentnych kontraktach](/developers/docs/smart-contracts/) w łańcuchu bloków Ethereum. Inteligentny kontrakt (działający jako rejestr) mapuje poświadczenie do odpowiedniego zdecentralizowanego identyfikatora w łańcuchu (klucza publicznego).
 
@@ -107,11 +107,11 @@ Oto przykład pokazujący, w jaki sposób poświadczenia mogą działać w prakt
 
 3. Inteligentny kontrakt sprzedaży akcji może sprawdzić kontrakt rejestracji dla tożsamości sprawdzanych nabywców i określić, kto jest uprawniony do zakupu akcji.
 
-### Tokeny Soulbound i tożsamość \{#soulbound}
+### Tokeny Soulbound i tożsamość {#soulbound}
 
 [Tokeny Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (niezbywalne NFT) mogą być używane do zbierania informacji unikatowych dla określonego portfela. W ten sposób tworzy się unikatową w łańcuchu tożsamość związaną z określonym adresem Ethereum, która może obejmować tokeny reprezentujące osiągnięcia (np. ukończenie określonego kursu online lub przekroczenie progowego wyniku w grze) albo zaangażowanie w działania społeczności.
 
-## Zalety zdecentralizowanej tożsamości \{#benefits-of-decentralized-identity}
+## Zalety zdecentralizowanej tożsamości {#benefits-of-decentralized-identity}
 
 1. Zdecentralizowana tożsamość zwiększa indywidualną kontrolę nad informacjami identyfikacyjnymi. Zdecentralizowane identyfikatory i poświadczenia można weryfikować bez polegania na scentralizowanych organach i usługach osób trzecich.
 
@@ -125,33 +125,33 @@ Oto przykład pokazujący, w jaki sposób poświadczenia mogą działać w prakt
 
 6. Zdecentralizowana tożsamość umożliwia mechanizmom obrony przed atakami typu Sybil identyfikację, kiedy jeden człowiek udaje wielu ludzi, aby grać lub spamować jakiś system.
 
-## Sposoby wykorzystywania zdecentralizowanej tożsamości \{#decentralized-identity-use-cases}
+## Sposoby wykorzystywania zdecentralizowanej tożsamości {#decentralized-identity-use-cases}
 
 Zdecentralizowana tożsamość ma wiele potencjalnych zastosowań:
 
-### 1. Uniwersalne logowania \{#universal-dapp-logins}
+### 1. Uniwersalne logowania {#universal-dapp-logins}
 
 Zdecentralizowana tożsamość może pomóc w zastąpieniu logowania opartego na hasłach [zdecentralizowanym uwierzytelnianiem](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/). Dostawcy usług mogą wydawać użytkownikom poświadczenia, które można przechowywać w portfelu Ethereum. Przykładowym poświadczeniem może być token [NFT](/nft/) przyznający posiadaczowi dostęp do społeczności internetowej.
 
 Funkcja [logowania z Ethereum](https://login.xyz/) umożliwiłaby wtedy serwerom potwierdzenie konta Ethereum użytkownika i pobranie wymaganego poświadczenia z adresu jego konta. Oznacza to, że użytkownicy mogą uzyskać dostęp do platform i stron internetowych bez konieczności zapamiętywania długich haseł, co znacząco poprawia komfort działania w Internecie.
 
-### 2. Uwierzytelnianie KYC \{#kyc-authentication}
+### 2. Uwierzytelnianie KYC {#kyc-authentication}
 
 Korzystanie z wielu usług online wymaga od osób fizycznych dostarczenia poświadczeń i uwierzytelnień, takich jak prawo jazdy lub dowód osobisty. Podejście to jest jednak problematyczne, ponieważ informacje o użytkownikach prywatnych mogą być zagrożone, a usługodawcy nie mogą zweryfikować autentyczności poświadczenia.
 
 Zdecentralizowana tożsamość umożliwia firmom pominięcie konwencjonalnych procesów [KYC (Know-Your-Customer)](https://en.wikipedia.org/wiki/Know_your_customer) i uwierzytelnianie tożsamości użytkowników za pomocą weryfikowalnych poświadczeń. Zmniejsza to koszty zarządzania tożsamością i zapobiega stosowaniu fałszywej dokumentacji.
 
-### 3. Głosowanie i społeczności internetowe \{#voting-and-online-communities}
+### 3. Głosowanie i społeczności internetowe {#voting-and-online-communities}
 
 Głosowanie online i media społecznościowe to dwie nowatorskie aplikacje z wykorzystaniem zdecentralizowanej tożsamości. Systemy głosowania on-line są podatne na manipulacje, zwłaszcza jeśli złośliwe podmioty tworzą fałszywe tożsamości w celu oddania głosu. Zwracanie się do osób fizycznych o przedstawienie poświadczeń w łańcuchu może poprawić integralność procesów głosowania online.
 
 Zdecentralizowana tożsamość może pomóc w tworzeniu społeczności internetowych, które są wolne od fałszywych kont. Na przykład każdy użytkownik może być zmuszony do uwierzytelniania swojej tożsamości za pomocą systemu identyfikacji w łańcuchu, takiego jak usługa Ethereum Name Service, zmniejszając możliwość tworzenia botów.
 
-### 4. Ochrona przed atakami typu Sybil \{#sybil-protection}
+### 4. Ochrona przed atakami typu Sybil {#sybil-protection}
 
 Ataki typu Sybil polegają na tym, że pojedynczy człowiek oszukuje system, aby ten mylnie uznał, że jest wieloma osobami, w celu zwiększenia swoich wpływów. [Aplikacje przyznające dotacje](https://gitcoin.co/grants/), które używają [głosowania kwadratowego](https://www.radicalxchange.org/concepts/plural-voting/), są podatne na ataki typu Sybil, ponieważ wartość dotacji wzrasta, gdy więcej osób na nią głosuje, zachęcając użytkowników do podzielenia swojego wkładu na wiele tożsamości. Zdecentralizowane tożsamości pomagają temu zapobiec, zwiększając obciążenie każdego uczestnika, aby udowodnić, że naprawdę jest człowiekiem, choć często bez konieczności ujawniania konkretnych informacji prywatnych.
 
-## Zastosowania zdecentralizowanej tożsamości \{#use-decentralized-identity}
+## Zastosowania zdecentralizowanej tożsamości {#use-decentralized-identity}
 
 Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zdecentralizowanych rozwiązań w zakresie tożsamości:
 
@@ -162,23 +162,23 @@ Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zd
 - **[BrightID](https://www.brightid.org/)** — _sieć zdecentralizowanych tożsamości społecznościowych typu open source. Jej celem jest zreformowanie weryfikacji tożsamości poprzez tworzenie i analizę wykresu społecznego._
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** — _zdecentralizowany agregator tożsamości cyfrowych._
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
-### Artykuły \{#articles}
+### Artykuły {#articles}
 
 - [Wykorzystanie łańcucha bloków: łańcuch bloków w tożsamości cyfrowej](https://consensys.net/blockchain-use-cases/digital-identity/) — _ConsenSys_
 - [Co to jest Ethereum ERC725? Samodzielne zarządzanie tożsamością w łańcuchu bloków](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [Jak łańcuch bloków może rozwiązać problem cyfrowej tożsamości](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [Co to jest zdecentralizowana tożsamość i dlaczego warto się nią zajmować?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
 
-### Materiały wideo \{#videos}
+### Materiały wideo {#videos}
 
 - [Zdecentralizowana tożsamość (oraz dodatkowa sesja transmisji na żywo)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _świetny film szkoleniowy na temat zdecentralizowanej tożsamości autorstwa Andreasa Antonopoulosa._
 - [Logowanie za pomocą Ethereum i zdecentralizowanej tożsamości za pomocą Ceramic, IDX, React i 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _samouczek YouTube pokazujący, jak zbudować system zarządzania tożsamością do tworzenia, odczytywania i aktualizowania profilu użytkownika przy użyciu portfela Ethereum autorstwa Nadera Dabita._
 - [BrightID — zdecentralizowana tożsamość w Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _odcinek podcastu Bankless omawiający BrightID, zdecentralizowane rozwiązanie tożsamości dla Ethereum._
 - [Internet poza łańcuchem: zdecentralizowana tożsamość i weryfikowalne dane uwierzytelniające](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — prezentacja EthDenver 2022 autorstwa Evina McMullena.
 
-### Społeczności \{#communities}
+### Społeczności {#communities}
 
 - [Sojusz ERC-725 na GitHub](https://github.com/erc725alliance) — _zwolennicy standardu ERC725 do zarządzania tożsamością w łańcuchu bloków Ethereum._
 - [Serwer Discord SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _społeczność dla entuzjastów i programistów pracujących nad logowaniem za pomocą Ethereum._

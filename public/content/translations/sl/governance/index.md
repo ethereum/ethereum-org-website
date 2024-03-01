@@ -4,7 +4,7 @@ description: Uvod v odločevalski proces Ethereuma.
 lang: sl
 ---
 
-# Uvod v upravljanje Ethereuma \{#introduction}
+# Uvod v upravljanje Ethereuma {#introduction}
 
 _Če si nihče ne lasti Ethereuma, kako so potem sprejete odločitve o prihodnjih in preteklih spremembah? Upravljanje Ethereuma kaže na proces, ki omogoča sprejemanje takšnih odločitev_
 
@@ -12,19 +12,19 @@ _Če si nihče ne lasti Ethereuma, kako so potem sprejete odločitve o prihodnji
 <Divider />
 }
 
-## Kaj je upravljanje? \{#what-is-governance}
+## Kaj je upravljanje? {#what-is-governance}
 
 Upravljanje je sistem, ki omogoča sprejemanje odločitev. V tipični organizacijski strukturi ima lahko zadnjo besedo pri sprejemanju odločitev izvršna ekipa ali upravni odbor. Ali pa morda delničarji glasujejo o predlogih za uveljavitev sprememb. V političnem sistemu izvoljeni uradniki lahko uveljavijo zakonodajo, ki poskuša predstavljati interese njihovih volivcev.
 
-## Decentralizirano upravljanje \{#decentalized-governance}
+## Decentralizirano upravljanje {#decentalized-governance}
 
 Nobena oseba si ne lasti ali kontrolira Ethereum protokola, vendar odločitve o implementaciji sprememb morajo biti kljub temu sprejete, da bi lahko zagotovili dolgoživost in blaginjo omrežja. To pomanjkanje lastništva pomeni, da je tradicionalno organizacijsko upravljanje nezdružljiva rešitev.
 
-## Upravljanje Ethereuma \{#ethereum-governance}
+## Upravljanje Ethereuma {#ethereum-governance}
 
 Upravljanje Ethereuma je proces s katerim so sprejete spremembe protokola. Pomembno je izpostaviti, da ta proces ni povezan s tem kako ljudje in aplikacije protokol uporabljajo - Ethereum ne zahteva dovoljenja. Kdorkoli lahko od koderkoli na svetu sodeluje v aktivnostih na verigi. Ni postavljenih pravil za to, kdo lahko ali ne sme razviti aplikacije ali poslati transakcije. Ne glede na to obstaja proces za predloge sprememb jedrnega protokola, na katerem delujejo te aplikacije. Ker se veliko ljudi zanaša na Ethereumovo stabilnost, obstaja zelo visoka meja koordinacije za ključne spremembe, vključno s socialnimi in tehničnimi, za zagotavljanje varnosti in široke podpore skupnosti pri kakršnihkoli spremembah.
 
-### Upravljanje na verigi proti izven verige \{#on-chain-vs-off-chain}
+### Upravljanje na verigi proti izven verige {#on-chain-vs-off-chain}
 
 Tehnologija blokovnih verig omogoča nove upravljavske sposobnosti, znane kot upravljanje na verigi. Upravljanje na verigi je proces, pri katerem se o spremembah protokola odloča z glasovanjem deležnikov, običajno lastnikov upravljavskih žetonov in to glasovanje se dogaja na verigi. Pri nekaterih oblikah upravljanja na verigi so predlogi za spremembe že zapisani v programski kodi in implementirani samodejno, če jih deležniki potrdijo.
 
@@ -42,7 +42,7 @@ _Čeprav je na nivoju protokola upravljanje Ethereuma izven verige, se v veliko 
 <Divider />
 }
 
-## Kdo vse je vključen? \{#who-is-involved}
+## Kdo vse je vključen? {#who-is-involved}
 
 V [Ethereum skupnosti](/community/) so prisotni različni deležniki, od katerih vsak predstavlja svojo vlogo v upravljavskem procesu. Začne se pri deležnikih, ki so najbolj oddaljeni od protokola in se nato približuje. Imamo:
 
@@ -60,7 +60,7 @@ _Opomba: katerikoli posameznik je lahko del različnih skupin (na primer, razvij
 <Divider />
 }
 
-## Kaj je EIP? \{#what-is-an-eip}
+## Kaj je EIP? {#what-is-an-eip}
 
 Pomemben proces, ki se uporablja pri upravljanju Ethereuma je predlaganje **Ethereum predlogov za izboljšave (EIPs)**. EIPs so standard za opredeljevanje potencialnih lastnosti ali procesov Ethereuma. Kdorkoli znotraj Ethereum skupnosti lahko ustvari EIP. Na primer, noben od avtorjev EIP-721 - EIP-ja, ki je standardiziral NFT-je, ni neposredno delal na razvoju Ethereum protokola.
 
@@ -72,7 +72,7 @@ Pomemben proces, ki se uporablja pri upravljanju Ethereuma je predlaganje **Ethe
 <Divider />
 }
 
-## Uraden proces \{#formal-process}
+## Uraden proces {#formal-process}
 
 Uraden proces za predstavitev sprememb Ethereum protokola je sledeč:
 
@@ -94,17 +94,17 @@ Uraden proces za predstavitev sprememb Ethereum protokola je sledeč:
 
 Ta tok, čeprav zelo poenostavljen, daje pregled nad pomembnimi fazami za aktivacijo spremembe protokola na Ethereumu. Zdaj pa si oglejmo neformalne dejavnike, ki so v igri pri tem procesu.
 
-## Neformalen proces \{#informal-process}
+## Neformalen proces {#informal-process}
 
-### Razumevanje predhodnega dela \{#prior-work}
+### Razumevanje predhodnega dela {#prior-work}
 
 EIP predlagatelji se morajo seznaniti z predhodnim delom in predlogi, preden ustvarijo EIP, ki bo lahko resno upoštevan za uvedbo na glavnem Ethereum omrežju. Na ta način upamo, da EIP prinese nekaj novega, kar še ni bilo predhodno zavrnjeno. Tri glavna mesta za raziskovanje tega so [EIP zbornik](https://github.com/ethereum/eips), [Ethereum čarovniki](https://www.ethereum-magicians.org/) in [ ethresear.ch](https://www.ethresear.ch/).
 
-### Delovne skupine \{#working-groups}
+### Delovne skupine {#working-groups}
 
 Prvi osnutek EIP-ja verjetno ne bo implementiran v glavno Ethereum omrežje brez urejanja in sprememb. Na splošno bodo EIP predlagatelji z podskupino razvijalcev protokola, da opredelijo, implementirajo, testirajo, ponovijo in finalizirajo njihov predlog. Zgodovinsko gledano imajo te delovne skupine zahtevajo nekaj mesecev (včasih celo let!) dela. Podobno bi morali EIP predlagatelji za takšne spremembe v njihov trud že zgodaj vključiti relevantne razvijalce aplikacij/orodij, da zberejo odzive končnih uporabnikov in zmanjšajo kakršnakoli tveganja pri uvajanju.
 
-### Soglasje skupnosti \{#community-consensus}
+### Soglasje skupnosti {#community-consensus}
 
 Medtem, ko EIP-ji predstavljajo predvsem tehnične izboljšave v manjših odtenkih, so nekateri bolj kompleksni in sami po sebi predstavljajo kompromise, ki bodo na različne načine vplivale na različne deležnike. To pomeni, da nekateri EIP-ji znotraj skupnosti postanejo bolj sporni kot drugi.
 
@@ -118,13 +118,13 @@ Onstran varnosti Ethereum omrežja, je bila s strani razvijalcev protokola zgodo
 <Divider />
 }
 
-## Upravljanje nestrinjanj \{#disagreements}
+## Upravljanje nestrinjanj {#disagreements}
 
 Veliko število deležnikov z različnimi razlogi in prepričanji pomeni, da pogosto prihaja do nestrinjanj.
 
 Na splošno se nestrinjanje rešuje z dolgo razpravo na javnih forumih, da bi lahko razumeli izvor problema in vsem omogočili sodelovanje. Običajno ena skupina prizna drugo rešitev ali pa se doseže kompromis, s katerim so vsi zadovoljni. Če je ena skupina dovolj prepričana, bi lahko prisilna uvedba spremembe privedla do razdelitve verige. Do razdelitve verige pride, ko nekaj deležnikov nasprotuje implementaciji spremembe protokola, kar privede do drugačne, nekompatibilne verzije delujočega protokola, iz katerega se razvijeta dve samostojni blokovni verigi.
 
-### DAO razcep \{#dao-fork}
+### DAO razcep {#dao-fork}
 
 Razcepi se zgodijo, ko pride do pomembnejših nadgradenj ali sprememb omrežja in sprememb pravil protokola. [Ethereum stranke](/developers/docs/nodes-and-clients/) morajo nadgraditi svojo programsko opremo, da implementirajo nova pravila razcepa.
 
@@ -152,7 +152,7 @@ Oglejte si več o DAO razcepu:
 <Divider />
 }
 
-### Uporabnost razcepov \{#forking-utility}
+### Uporabnost razcepov {#forking-utility}
 
 Ethereum/Ethereum Classic razcep je odličen primer zdravega razcepa. Dve skupini sta se o nekaterih ključnih vrednotah dovolj močno nestrinjali, da se jim je zdelo tveganja vredno nadaljevati z različnima načinoma delovanja.
 
@@ -162,7 +162,7 @@ Možnost razcepa ob pomembnih političnih, filozofskih ali ekonomskih razlikah p
 <Divider />
 }
 
-## Razvoj oddajniške verige \{#beacon-chain}
+## Razvoj oddajniške verige {#beacon-chain}
 
 Proces Ethereum upravljanja pogosto zapostavi hitrost in učinkovitost za odprtost in vključevalnost. Za pospešitev razvoja Oddajniške verige je bila ta zagnana ločeno od Ethereum omrežja z dokazom o delu in je tako sledila svojemu načinu upravljanja.
 
@@ -178,7 +178,7 @@ Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo up
 <Divider />
 }
 
-## Kako se lahko vključim? \{#get-involved}
+## Kako se lahko vključim? {#get-involved}
 
 - [Predlagajte EIP](/eips/#sodelovanje)
 - [Razpravljajte o trenutnih predlogih](https://ethereum-magicians.org/)
@@ -188,7 +188,7 @@ Ko se bo Oddajniška veriga združila z Ethereumovo izvršilno plastjo, se bo up
 - [Prispevajte k razvoju strank](/developers/docs/nodes-and-clients/#execution-clients)
 - [Pripravniški program za ključne razvijalce](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
-## Dodatno branje \{#further-reading}
+## Dodatno branje {#further-reading}
 
 Upravljanje Ethereuma ni rigidno določeno. Različni sodelujoči v skupnosti imajo raznolike poglede nanj. Tukaj jih je nekaj:
 

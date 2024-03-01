@@ -10,7 +10,7 @@ A Plasma chain is a separate blockchain anchored to Ethereum Mainnet but executi
 
 Merkle trees enable the creation of an endless stack of these chains that can work to offload bandwidth from parent chains (including Ethereum Mainnet). However, while these chains derive some security from Ethereum (via fraud proofs), their security and efficiency are affected by several design limitations.
 
-## Prerequisites \{#prerequisites}
+## Prerequisites {#prerequisites}
 
 You should have a good understanding of all the foundational topics and a high-level understanding of [Ethereum scaling](/developers/docs/scaling/).
 
@@ -24,7 +24,7 @@ The Plasma contract functions, among other things, as a [bridge](/developers/doc
 
 The basic components of the Plasma framework are:
 
-### Off-chain computation \{#off-chain-computation}
+### Off-chain computation {#off-chain-computation}
 
 Ethereum's current processing speed is limited to ~ 15-20 transactions per second, reducing the short-term possibility of scaling to handle more users. This problem exists mainly because Ethereum's [consensus mechanism](/developers/docs/consensus-mechanisms/) requires many peer-to-peer nodes to verify every update to the blockchain's state.
 
@@ -34,7 +34,7 @@ Plasma supposes that Ethereum Mainnet doesn't need to verify all transactions. I
 
 Off-chain computation is necessary since Plasma chains can optimize for speed and cost. For example, a Plasma chain may—and most often does—use a single "operator" to manage the ordering and execution of transactions. With just one entity verifying transactions, processing times on a plasma chain are faster than Ethereum Mainnet.
 
-### State commitments \{#state-commitments}
+### State commitments {#state-commitments}
 
 While Plasma executes transactions off-chain, they are settled on the main Ethereum execution layer—otherwise, Plasma chains cannot benefit from Ethereum's security guarantees. But finalizing off-chain transactions without knowing the state of the plasma chain would break the security model and allow the proliferation of invalid transactions. This is why the operator, the entity responsible for producing blocks on the plasma chain, is required to publish "state commitments" on Ethereum periodically.
 
@@ -44,17 +44,17 @@ Merkle roots are cryptographic primitives that enable compressing of large amoun
 
 Merkle roots are important for providing information about the off-chain's state to Ethereum. You can think of Merkle roots as "save points": the operator is saying, "This is the state of the Plasma chain at x point in time, and this is the Merkle root as proof." The operator is committing to the _current state_ of the plasma chain with a Merkle root, which is why it is called a "state commitment".
 
-### Entries and exits \{#entries-and-exits}
+### Entries and exits {#entries-and-exits}
 
 For Ethereum users to take advantage of Plasma, there needs to be a mechanism for moving funds between Mainnet and plasma chains. We cannot arbitrarily send ether to an address on the plasma chain, though—these chains are incompatible, so the transaction would either fail or lead to lost funds.
 
 Plasma uses a master contract running on Ethereum to process user entries and exits. This master contract is also responsible for tracking state commitments (explained earlier) and punishing dishonest behavior via fraud proofs (more on this later).
 
-#### Entering the plasma chain \{#entering-the-plasma-chain}
+#### Entering the plasma chain {#entering-the-plasma-chain}
 
 To enter the plasma chain, Alice (the user) will have to deposit ETH or any ERC-20 token in the plasma contract. The plasma operator, who watches contract deposits, recreates an amount equal to Alice's initial deposit and releases it to her address on the plasma chain. Alice is required to attest to receiving the funds on the child chain and can then use these funds for transactions.
 
-#### Exiting the plasma chain \{#exiting-the-plasma-chain}
+#### Exiting the plasma chain {#exiting-the-plasma-chain}
 
 Exiting the plasma chain is more complex than entering it for several reasons. The biggest one is that, while Ethereum has information about the plasma chain's state, it cannot verify if the information is true or not. A malicious user could make an incorrect assertion ("I have 1000 ETH") and get away with providing fake proofs to back up the claim.
 
@@ -70,7 +70,7 @@ The user must also add a bond to the withdrawal request as a guarantee of honest
 
 If the challenge period elapses without anyone providing a fraud-proof, Alice's withdrawal request is considered valid, allowing her to retrieve deposits from the Plasma contract on Ethereum.
 
-### Dispute arbitration \{#dispute-arbitration}
+### Dispute arbitration {#dispute-arbitration}
 
 Like any blockchain, plasma chains need a mechanism for enforcing the integrity of transactions in case participants act maliciously (e.g. double-spending funds). To this end, plasma chains use fraud proofs to arbitrate disputes concerning the validity of state transitions and penalize bad behavior. Fraud proofs are used as a mechanism through which a Plasma child chain files a complaint to its parent chain or to the root chain.
 
@@ -80,7 +80,7 @@ To prevent the withdrawal, Bob will construct a fraud-proof by providing evidenc
 
 If Bob's challenge succeeds, Alice's withdrawal request is canceled. However, this approach relies on Bob's ability to watch the chain for withdrawal requests. If Bob is offline, then Alice can process the malicious withdrawal once the challenge period elapses.
 
-## The mass exit problem in plasma \{#the-mass-exit-problem-in-plasma}
+## The mass exit problem in plasma {#the-mass-exit-problem-in-plasma}
 
 The mass exit problem occurs when a large number of users try to withdraw from a plasma chain at the same time. Why this problem exists has to do with one of Plasma's biggest problems: **data unavailability**.
 
@@ -104,7 +104,7 @@ But this approach still has problems. For instance, if all users on a plasma cha
 
 Although exit games sound nice in theory, real-life mass exits will likely trigger network-wide congestion on Ethereum itself. Besides harming Ethereum's functionality, a poorly coordinated mass exit means that users may be unable to withdraw funds before the operator drains every account on the plasma chain.
 
-## Pros and cons of plasma \{#pros-and-cons-of-plasma}
+## Pros and cons of plasma {#pros-and-cons-of-plasma}
 
 | Pros                                                                                                                                                                                                                             | Cons                                                                                                                                                                         |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -114,42 +114,42 @@ Although exit games sound nice in theory, real-life mass exits will likely trigg
 | Reduces load on Ethereum Mainnet by moving computation and storage off-chain.                                                                                                                                                    | Withdrawals are delayed by several days to allow for challenges. For fungible assets, this can be mitigated by liquidity providers, but there is an associated capital cost. |
 |                                                                                                                                                                                                                                  | If too many users try to exit simultaneously, Ethereum Mainnet could get congested.                                                                                          |
 
-## Plasma vs layer 2 scaling protocols \{#plasma-vs-layer-2}
+## Plasma vs layer 2 scaling protocols {#plasma-vs-layer-2}
 
 While Plasma was once considered a useful scaling solution for Ethereum, it has since been dropped in favor of [layer 2 (L2) scaling protocols](/layer-2/). L2 scaling solutions remedy several of Plasma's problems:
 
-### Efficiency \{#efficiency}
+### Efficiency {#efficiency}
 
 [Zero-Knowledge rollups](/developers/docs/scaling/zk-rollups) generate cryptographic proofs of the validity of each batch of transactions processed off-chain. This prevents the users (and operators) from advancing invalid state transitions, eliminating the need for challenge periods and exit games. It also means users don't have to watch the chain periodically to secure their funds.
 
-### Support for smart contracts \{#support-for-smart-contracts}
+### Support for smart contracts {#support-for-smart-contracts}
 
 Another problem with the plasma framework was [the inability to support the execution of Ethereum smart contracts](https://ethresear.ch/t/why-smart-contracts-are-not-feasible-on-plasma/2598/4). As a result, most implementations of Plasma were mostly built for simple payments or the exchange of ERC-20 tokens.
 
 Conversely, optimistic rollups, are compatible with the [Ethereum Virtual Machine](/developers/docs/evm/) and can run Ethereum-native [smart contracts](/developers/docs/smart-contracts/), making them a useful and _secure_ solution for scaling [decentralized applications](/developers/docs/dapps/). Similarly, plans are underway to [create a zero-knowledge implementation of the EVM (zkEVM)](https://ethresear.ch/t/a-zk-evm-specification/11549) that would allow ZK-rollups to process arbitrary logic and execute smart contracts.
 
-### Data unavailability \{#data-unavailability}
+### Data unavailability {#data-unavailability}
 
 As explained earlier, plasma suffers from a data availability problem. If a malicious operator advanced an invalid transition on the plasma chain, users would be unable to challenge it since the operator can withhold data needed to create the fraud-proof. Rollups solve this problem by forcing operators to post transaction data on Ethereum, allowing anyone to verify the chain's state and create fraud proofs if necessary.
 
-### Mass exit problem \{#mass-exit-problem}
+### Mass exit problem {#mass-exit-problem}
 
 ZK-rollups and optimistic rollups both solve Plasma's mass exit problem in various ways. For example, a ZK-rollup relies on cryptographic mechanisms that ensure operators cannot steal user funds under any scenario.
 
 Similarly, optimistic rollups impose a delay period on withdrawals during which anyone can initiate a challenge and prevent malicious withdrawal requests. While this is similar to Plasma, the difference is that verifiers have access to data needed to create fraud proofs. Thus, there's no need for rollup users to engage in a frenzied, "first-to-get-out" migration to Ethereum Mainnet.
 
-## How does Plasma differ from sidechains and sharding? \{#plasma-sidechains-sharding}
+## How does Plasma differ from sidechains and sharding? {#plasma-sidechains-sharding}
 
 Plasma, sidechains, and sharding are fairly similar because they all connect to Ethereum Mainnet in some way. However, the level and strength of these connections vary, which affects the security properties of each scaling solution.
 
-### Plasma vs sidechains \{#plasma-vs-sidechains}
+### Plasma vs sidechains {#plasma-vs-sidechains}
 
 A [sidechain](/developers/docs/scaling/sidechains/) is an independently operated blockchain connected to Ethereum Mainnet via a two-way bridge. [Bridges](/bridges/) allow users to exchange tokens between the two blockchains to transact on the sidechain, reducing congestion on Ethereum Mainnet and improving scalability.
 Sidechains use a separate consensus mechanism and are typically much smaller than Ethereum Mainnet. As a result, bridging assets to these chains involves increased risk; given the lack of security guarantees inherited from Ethereum Mainnet in the sidechain model, users risk the loss of funds in an attack on the sidechain.
 
 Conversely, plasma chains derive their security from Mainnet. This makes them measurably more secure than sidechains. Both sidechains and plasma chains can have different consensus protocols, but the difference is that plasma chains publish Merkle roots for each block on Ethereum Mainnet. Block roots are small pieces of information we can use to verify information about transactions that happen on a plasma chain. If an attack happens on a plasma chain, users can safely withdraw their funds back to Mainnet using the appropriate proofs.
 
-### Plasma vs sharding \{#plasma-vs-sharding}
+### Plasma vs sharding {#plasma-vs-sharding}
 
 Both plasma chains and shard chains periodically publish cryptographic proofs to Ethereum Mainnet. However, both have different security properties.
 
@@ -159,13 +159,13 @@ Plasma is different because Mainnet only receives minimal information about the 
 
 **Note** that sharding the Ethereum blockchain is no longer on the roadmap. It has been superseded by scaling via rollups and [Danksharding](/roadmap/danksharding).
 
-### Use Plasma \{#use-plasma}
+### Use Plasma {#use-plasma}
 
 Multiple projects provide implementations of Plasma that you can integrate into your dapps:
 
 - [Polygon](https://polygon.technology/) (previously Matic Network)
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [Learn Plasma](https://www.learnplasma.org/en/)
 - [A quick reminder of what "shared security" means and why it's so important](https://old.reddit.com/r/ethereum/comments/sgd3zt/a_quick_reminder_of_what_shared_security_means/)

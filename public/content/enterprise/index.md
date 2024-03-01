@@ -4,7 +4,7 @@ description: Guides, articles, and tools about enterprise applications on the pu
 lang: en
 ---
 
-# Ethereum Mainnet for enterprise \{#ethereum-for-enterprise}
+# Ethereum Mainnet for enterprise {#ethereum-for-enterprise}
 
 Blockchain applications help businesses:
 
@@ -15,13 +15,13 @@ Blockchain applications help businesses:
 
 Enterprise blockchain applications can be built on the public permissionless Ethereum [Mainnet](/glossary/#mainnet), or on private blockchains that are based on Ethereum technology. Find more information on [private Enterprise Ethereum chains](/enterprise/private-ethereum/).
 
-## Public vs private Ethereum \{#private-vs-public}
+## Public vs private Ethereum {#private-vs-public}
 
 There is only one public Ethereum Mainnet. Applications that are built on the Mainnet are able to interoperate, similarly to how applications built on the Internet can connect to each other, leveraging the full potential of decentralized blockchain.
 
 Many businesses and consortia have deployed private, permissioned blockchains for specific applications based on Ethereum technology.
 
-### Key differences \{#key-differences}
+### Key differences {#key-differences}
 
 - Blockchain Security/Immutability - A blockchain’s resistance to tampering is determined by its consensus algorithm. Ethereum Mainnet is secured by the interaction of thousands of independent nodes run by individuals and miners throughout the world. Private chains typically have a small number of nodes which are controlled by one or a few organizations; those nodes can be tightly controlled, but only a few must be compromised in order to rewrite the chain or commit fraudulent transactions.
 - Performance - Because private Enterprise Ethereum chains may use high performance nodes with special hardware requirements and different consensus algorithms such as proof-of-authority, they may achieve higher transaction throughput on the base layer (Layer 1). On Ethereum Mainnet, high throughput can be achieved with the use of [Layer 2 scaling solutions](/developers/docs/scaling/#layer-2-scaling).
@@ -29,15 +29,15 @@ Many businesses and consortia have deployed private, permissioned blockchains fo
 - Node Permissioning - Only authorized nodes can join private chains. Anybody can set up a node on Ethereum Mainnet.
 - Privacy - Access to data written to private chains can be controlled by restricting access to the network, and on a finer grained basis with access controls and private transactions. All data written to Mainnet Layer 1 is viewable by anyone, so sensitive information should be stored and transmitted off-chain, or else encrypted. Design patterns that facilitate this are emerging (e.g. Baseline, Aztec), as well as Layer 2 solutions that can keep data compartmentalized and off of Layer 1.
 
-### Why build on Ethereum Mainnet \{#why-build-on-ethereum-mainnet}
+### Why build on Ethereum Mainnet {#why-build-on-ethereum-mainnet}
 
 Enterprises have been experimenting with blockchain technology since around 2016, when the Hyperledger, Quorum, and Corda projects were launched. The focus was largely on private permissioned enterprise blockchains, but starting in 2019 there has been a shift in thinking about public vs private blockchains for business applications. A [survey](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) conducted by Forrester revealed that “Survey respondents ... see this potential, with 75% stating that they’re likely to leverage public blockchains in the future, and nearly one-third saying they’re very likely”. EY’s Paul Brody has [talked](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) about the benefits of building on public blockchain, which (depending on the application) may include stronger security/immutability, transparency, lower total cost of ownership, and the ability to interoperate with all of the other applications that are also on the Mainnet (network effects). Sharing a common frame of reference among businesses avoids the unnecessary creation of numerous isolated silos which cannot communicate and share or synchronize information with each other.
 
 Another development which is shifting the focus toward public blockchains is [Layer 2](/developers/docs/scaling/#layer-2-scaling). Layer 2 is primarily a scalability technology category which makes high throughput applications possible on public chains. But Layer 2 solutions can also [address some of the other challenges that have driven enterprise developers to choose private chains in the past](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
-## Enterprise developer resources \{#enterprise-developer-resources}
+## Enterprise developer resources {#enterprise-developer-resources}
 
-### Organizations \{#organizations}
+### Organizations {#organizations}
 
 Some collaborative efforts to make Ethereum enterprise friendly have been made by different organizations:
 
@@ -49,7 +49,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Baseline Project](https://www.baseline-protocol.org/)
   The Baseline Protocol is an open source initiative that combines advances in cryptography, messaging, and blockchain to deliver secure and private business processes at low cost via the public Ethereum Mainnet. The protocol enables confidential and complex collaboration between enterprises without leaving any sensitive data on-chain. The Baseline project is a sub-project of the Ethereum OASIS Open Project, and is coordinated by the Baseline Technical Steering Committee.
 
-### Products and services \{#products-and-services}
+### Products and services {#products-and-services}
 
 - [Alchemy](https://www.alchemy.com/) _provides API services and tools for building and monitoring applications on Ethereum_
 - [Blast](https://blastapi.io/) _an API platform that provides RPC/WSS APIs for Ethereum Archive Mainnet and Testnets._
@@ -69,7 +69,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Zero Services GmbH](https://www.zeroservices.eu/) _provider of managed services spread across co-locations in Europe and Asia. Operates & monitors your nodes securely and reliably_
 - [Zeeve](https://www.zeeve.io/) _provides a range of products and tools for building on Ethereum, also infrastructure and APIs for Enterprise Web3 applications._
 
-### Tooling and libraries \{#tooling-and-libraries}
+### Tooling and libraries {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Data Analytics Platform_
 - [Sirato](https://www.web3labs.com/sirato) _a data and analytics platform for public and private Ethereum compatible networks by Web3 Labs_
@@ -78,23 +78,23 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Tenderly](https://tenderly.co/) _a Data Platform providing real-time analytics, alerting and monitoring with support for private networks_
 - [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
-### Scalability solutions \{#scalability-solutions}
+### Scalability solutions {#scalability-solutions}
 
 [Layer 2](/layer-2) is a set of technologies or systems that run on top of Ethereum (Layer 1), inherit security properties from Layer 1, and provide greater transaction processing capacity (throughput), lower transaction fees (operating cost), and faster transaction confirmations than Layer 1. Layer 2 scaling solutions are secured by Layer 1, but they enable blockchain applications to handle many more users or actions or data than Layer 1 could accommodate. Many of them leverage recent advances in cryptography and zero-knowledge (ZK) proofs to maximize performance and security.
 
 Building your application on top of a Layer 2 scalability solution can help [address many of the concerns that have previously driven companies to build on private blockchains](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), yet retain the benefits of building on Mainnet.
 
-## Enterprise applications live on Mainnet \{#enterprise-live-on-mainnet}
+## Enterprise applications live on Mainnet {#enterprise-live-on-mainnet}
 
 Here are some of the enterprise applications that have been built on top of the public Ethereum Mainnet
 
-### Payments \{#payments}
+### Payments {#payments}
 
 - [Brave Browser](https://basicattentiontoken.org/) _pays users for their attention to advertisements and users can pay publishers to support them, via the Basic Attention Token_
 - [hCaptcha](https://www.hcaptcha.com/) _Bot prevention CAPTCHA system which pays web site operators for the work done by users to label data for machine learning. Now deployed by Cloudflare_
 - [EthereumAds](https://ethereumads.com/) _lets web site operators sell advertising space and get paid via Ethereum_
 
-### Finance \{#finance}
+### Finance {#finance}
 
 - [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _bond issuance and settlement_
 - [Societe Generale](https://www.generali-investments.com/it/en/institutional/article/generali-investments-and-generali-iard-carry-out-first-market-transaction-based-on-blockchain-infrastructure) _bond issuance_
@@ -102,14 +102,14 @@ Here are some of the enterprise applications that have been built on top of the 
 - [Sila](https://silamoney.com/) _banking and ACH payments infrastructure-as-a-service, using a stablecoin_
 - [Taurus](https://www.taurushq.com/) _issues tokenized securities_
 
-### Asset tokenization \{#tokenization}
+### Asset tokenization {#tokenization}
 
 - [Tinlake](https://tinlake.centrifuge.io/) _receivables financing via tokenized real-world assets such as invoices, mortgages or streaming royalties_
 - [RealT](https://realt.co/) _investors around the globe can buy into the US real estate market through fully-compliant, fractional, tokenized ownership._
 - [AgroToken](https://agrotoken.io/en/) _tokenizing and trading agricultural commodities_
 - [Fasset](https://www.fasset.com/) _a platform for supporting sustainable infrastructure_
 
-### Notarization of data \{#notarization-of-data}
+### Notarization of data {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _details of finalized loans are hashed and recorded on Mainnet_
 - [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _data integrity can be ensured by periodically writing hashes of indexed data to Mainnet_
@@ -118,7 +118,7 @@ Here are some of the enterprise applications that have been built on top of the 
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _records provenance and repair history of watches on Ethereum_
 - [EthSign](https://ethsign.xyz/) _records signed electronic documents on the Ethereum blockchain_
 
-### Supply chain \{#supply-chain}
+### Supply chain {#supply-chain}
 
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _bill of lading and document transfer provider_
 - [Morpheus.network](https://morpheus.network/) _supply chain automation platform which implements a hybrid of private chains with notarized data on the Ethereum Mainnet, and is in use by companies such as Canadian food, oil & gas distributor Federated Co-op Ltd. and Argentinian pet food provider Vitalcan_
@@ -128,12 +128,12 @@ Here are some of the enterprise applications that have been built on top of the 
 - [TradeTrust](https://www.tradetrust.io/) _verifies electronic Bills of Lading (eBLs) for international shipping_
 - [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _mints NFTs for each new batch of beer, enabling greater visibility and efficiency across its supply chain_
 
-### Insurance \{#insurance}
+### Insurance {#insurance}
 
 - [Arbol](https://www.arbolmarket.com/) _parmetric insurance to cover weather related risks_
 - [Etherisc](https://etherisc.com/) _decentralized insurance for a variety of risks_
 
-### Credentials and certifications \{#credentials}
+### Credentials and certifications {#credentials}
 
 - [Two Italian high schools](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digital diplomas issued on Ethereum Mainnet_
 - [University of St. Gallen](https://cointelegraph.com/news/swiss-university-fights-fake-diplomas-with-blockchain-technology) _pilot project to verify degrees by a Swiss university_
@@ -141,7 +141,7 @@ Here are some of the enterprise applications that have been built on top of the 
 - [OpenCerts](https://opencerts.io/faq) _issues blockchain education credentials in Singapore_
 - [BlockCerts](https://www.blockcerts.org/) _developed an open standard for blockchain credentials_
 
-### Utilities \{#utilities}
+### Utilities {#utilities}
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _electricity payments_
 

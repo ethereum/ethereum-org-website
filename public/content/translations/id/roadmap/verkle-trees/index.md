@@ -7,11 +7,11 @@ summaryPoints:
   - Baca mengapa Pohon Verkle adalah peningkatan yang berguna untuk Ethereum
 ---
 
-# Pohon Verkle \{#verkle-trees}
+# Pohon Verkle {#verkle-trees}
 
 Pohon Verkle (gabungan dari "Vector commitment" dan "Merkle Trees") adalah sebuah struktur data yang dapat digunakan untuk meningkatkan simpul Ethereum sehingga simpul tersebut dapat berhenti menyimpan data status dalam jumlah besar tanpa kehilangan kemampuan untuk memvalidasi blok.
 
-## Tanpa kewarganegaraan \{#statelessness}
+## Tanpa kewarganegaraan {#statelessness}
 
 Pohon Verkle adalah langkah penting dalam perjalanan menuju klien Ethereum tanpa kewarganegaraan. Klien tanpa kewarganegaraan adalah klien yang tidak perlu menyimpan seluruh database status untuk memvalidasi blok yang masuk. Alih-alih menggunakan salinan lokal status Ethereumnya sendiri untuk memverifikasi blok, klien tanpa status menggunakan "saksi" untuk data status yang datang bersama blok. Saksi adalah sebuah kumpulan potongan-potongan individu dari data status yang diperlukan untuk mengeksekusi serangkaian transaksi tertentu, dan bukti kriptografi bahwa saksi tersebut benar-benar merupakan bagian dari data lengkap. Saksi digunakan, _bukan_ dari database keadaan. Agar hal ini dapat bekerja, saksi harus berukuran sangat kecil, sehingga dapat disiarkan dengan aman di seluruh jaringan pada waktunya agar validator dapat memprosesnya dalam ruang 12 detik. Struktur data status saat ini tidak cocok karena saksi terlalu besar. Pohon Verkle memecahkan masalah ini dengan memungkinkan saksi kecil, menghilangkan salah satu hambatan utama bagi klien tanpa status.
 
@@ -23,11 +23,11 @@ Klien Ethereum saat ini menggunakan struktur data yang dikenal sebagai Patricia 
 </ExpandableCard>
 }
 
-## Apa itu witness dan mengapa dibutuhkan? \{#what-is-a-witness}
+## Apa itu witness dan mengapa dibutuhkan? {#what-is-a-witness}
 
 Memverifikasi blok berarti mengeksekusi ulang transaksi yang terdapat di blok tersebut, menerapkan perubahan pada pohon keadaan Ethereum, dan menghitung hash akar yang baru. Blok terverifikasi adalah blok dengan hash akar keadaan terkomputasi yang sama dengan hash akar keadaan yang disediakan pada blok tersebut (karena hal ini berarti pengusul blok benar-benar melakukan komputasi yang diakuinya). Pada klien Ethereum saat ini, memperbarui keadaan membutuhkan akses ke seluruh pohon keadaan, yang merupakan struktur data besar yang harus disimpan secara lokal. Witness hanya berisi fragmen data keadaan yang dibutuhkan untuk menjalankan transaksi dalam blok. Validator kemudian hanya dapat menggunakan fragmen tersebut untuk memverifikasi bahwa pengusul blok telah mengeksekusi transaksi blok dan memperbarui keadaan dengan tepat. Namun, hal ini berarti bahwa witness perlu ditransfer di antara peer di jaringan Ethereum dengan cukup cepat untuk diterima dan diproses oleh setiap simpul dengan aman dalam ruang 12 detik. Jika witness terlalu besar, beberapa simpul mungkin membutuhkan waktu terlalu lama untuk mengunduhnya dan mengikuti perkembangan rantai. Ini adalah kekuatan sentralisasi karena hanya simpul dengan koneksi internet cepat yang dapat berpartisipasi dalam memvalidasi blok. Dengan pohon Verkle, tidak perlu menyimpan keadaan di hard disk Anda; _segala sesuatu_ yang dibutuhkan untuk memverifikasi blok terkandung di dalam blok itu sendiri. Sayangnya, witness yang dapat dihasilkan dari pohon Merkle terlalu besar untuk mendukung klien tanpa keadaan.
 
-## Mengapa pohon Verkle memungkinkan witness yang lebih kecil? \{#why-do-verkle-trees-enable-smaller-witnesses}
+## Mengapa pohon Verkle memungkinkan witness yang lebih kecil? {#why-do-verkle-trees-enable-smaller-witnesses}
 
 Struktur pohon Merkle menyebabkan ukuran witness menjadi sangat besar - terlalu besar untuk disebarkan dengan aman di antara peer dalam ruang 12 detik. Hal ini karena witness adalah jalur yang menghubungkan data, yang disimpan dalam daun, dengan hash akar. Untuk memverifikasi data, tidak hanya semua hash perantara yang harus menghubungkan setiap daun dengan akar, tetapi semua simpul "saudara" juga harus melakukannya. Setiap simpul dalam bukti memiliki saudara yang di-hash untuk membuat hash berikutnya pada pohon. Proses Ini menghasilkan sangat banyak data. Pohon Verkle mengurangi ukuran witness dengan memperpendek jarak antara daun pohon dan akarnya serta juga menghilangkan kebutuhan untuk menyediakan simpul saudara untuk memverifikasi hash akar. Penggunaan skema komitmen polinomial yang kuat akan meningkatkan efisiensi ruang dibandingkan dengan komitmen vektor bergaya hash. Komitmen polinomial memungkinkan witness memiliki ukuran yang tetap, terlepas dari jumlah daun yang dibuktikannya.
 
@@ -41,7 +41,7 @@ Ukuran witness berbeda-beda, bergantung pada jumlah daun yang disertakannya. Den
 </ExpandableCard>
 }
 
-## Bagaimana struktur pohon Verkle? \{#what-is-the-structure-of-a-verkle-tree}
+## Bagaimana struktur pohon Verkle? {#what-is-the-structure-of-a-verkle-tree}
 
 Pohon Verkle adalah pasangan `(key,value)`, di mana kunci adalah elemen 32 byte yang terdiri dari 31 byte _stem_ dan satu byte _sufiks_. Berbagai kunci ini diorganisasikan dalam simpul _ekstensi_ dan simpul _dalam_. Simpul ekstensi mewakili satu stem untuk 256 anak dengan sufiks yang berbeda. Simpul dalam juga memiliki 256 anak yang di antaranya dapat berupa simpul ekstensi lainnya. Perbedaan utama antara struktur pohon Verkle dan pohon Merkle adalah pohon Verkle jauh lebih datar, yang berarti lebih sedikit simpul perantara yang menghubungkan daun ke akar sehingga lebih sedikit data yang diperlukan untuk menghasilkan bukti.
 
@@ -49,7 +49,7 @@ Pohon Verkle adalah pasangan `(key,value)`, di mana kunci adalah elemen 32 byte 
 
 [Baca selengkapnya tentang struktur pohon Verkle](https://blog.ethereum.org/2021/12/02/verkle-tree-structure)
 
-## Kemajuan saat ini \{#current-progress}
+## Kemajuan saat ini {#current-progress}
 
 Jaringan percobaan pohon Verkle sudah aktif dan berjalan, tetapi masih ada pembaruan dalam jumlah besar yang harus dilakukan oleh klien agar dapat mendukung pohon Verkle. Anda dapat membantu mempercepat kemajuan dengan menggunakan kontrak ke jaringan percobaan atau menjalankan klien jaringan percobaan.
 
@@ -57,7 +57,7 @@ Jaringan percobaan pohon Verkle sudah aktif dan berjalan, tetapi masih ada pemba
 
 [Tonton penjelasan Guillaume Ballet tentang jaringan percobaan Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (perhatikan bahwa jaringan percobaan Condrieu menggunakan konsep bukti kerja dan sekarang telah digantikan oleh [jaringan percobaan Kaustinen](https://kaustinen.ethdevops.io)).
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 - [Dankrad Feist menjelaskan pohon Verkle di PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet menjelaskan pohon verkle di ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)

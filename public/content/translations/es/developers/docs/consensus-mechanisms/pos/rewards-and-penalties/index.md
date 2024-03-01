@@ -14,9 +14,9 @@ Todas las recompensas y penalizaciones se aplican una vez por época.
 
 Siga leyendo si desea ahondar más al respecto...
 
-## Penalizaciones y recompensas \{#rewards}
+## Penalizaciones y recompensas {#rewards}
 
-### Recompensas \{#rewards}
+### Recompensas {#rewards}
 
 Los validadores reciben recompensas cuando hacen votos que son consistentes con la mayoría de otros validadores, cuando proponen bloques y cuando participan en comités de sincronización. El valor de las recompensas en cada época se calcula a partir de una `base_reward`. Esta es la unidad de base a partir de la cual se calculan otras recompensas. La `base_reward` representa la recompensa media recibida por un validador en condiciones óptimas por época. Esto se calcula a partir del saldo efectivo del validador y el número total de validadores activos de la siguiente manera:
 
@@ -54,7 +54,7 @@ Se añade una recompensa adicional para incentivar las certificaciones rápidas.
 
 Los proponentes de bloques reciben `8 / 64 * base_reward` por **cada certificación válida** incluida en el bloque, por lo que el valor real de la recompensa se escala con el número de validadores de certificación. Los proponentes de bloques también pueden aumentar su recompensa al incluir evidencia de mal comportamiento por parte de otros validadores en su bloque propuesto. Estas recompensas son los alicientes que fomentan la honestidad del validador. Un proponente de bloques que incluya la reducción será recompensado con `slashed_validators_effective_balance / 512`.
 
-### Penalizaciones \{#penalties}
+### Penalizaciones {#penalties}
 
 Hasta ahora hemos considerado validadores con un comportamiento ejemplar, pero ¿qué pasa con los validadores que no hacen votos portunamente de cabeza, fuente y destino, o se toman demasiado tiempo en hacerlos?
 
@@ -62,7 +62,7 @@ Las penalizaciones por no alcanzar el objetivo y los votos de la fuente son igua
 
 Lea más sobre recompensas y penalizaciones en las [especificaciones de consenso](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Las recompensas y las penalizaciones se ajustaron en la actualización de Bellatrix, vea a Danny Ryan y Vitalik comentarlo en este [vídeo Eche un vistazo a una propuesta de mejora de Ethereum](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
-## Recortes \{#slashing}
+## Recortes {#slashing}
 
 Los recortes son una acción más grave que resulta en la eliminación forzada de un validador de la red y una pérdida asociada de su ether apostado. Hay tres formas en las que se puede recortar un validador, todas ellas equivalen a la propuesta deshonesta o la certificación de bloques:
 
@@ -72,13 +72,13 @@ Los recortes son una acción más grave que resulta en la eliminación forzada d
 
 Si se detectan estas acciones, el validador se recorta. Esto significa que 1/32 de su ether apostado (hasta un máximo de 1 ether) se quema inmediatamente, luego comienza un período de eliminación de 36 días. Durante este período de eliminación, la participación del validador se desvanece gradualmente. En el punto medio (18.º día) se aplica una penalización adicional cuya magnitud se prorratea con el ether total en participación de todos los validadores recortados en los 36 días anteriores al evento de recorte. Esto significa que cuando se recortan más validadores, la magnitud del recorte aumenta. El recorte máximo es el balance efectivo completo de todos los validadores recortados (es decir, si hay muchos validadores que se recortan, podrían perder toda su participación). Por otro lado, un solo evento de recorte aislado solo quema una pequeña parte de la participación del validador. Esta penalización de punto medio que se prorratea con el número de validadores recortados se llama «pena de correlación».
 
-## Pérdida por inactividad \{#inactivity-leak}
+## Pérdida por inactividad {#inactivity-leak}
 
 Si la capa de consenso ha pasado más de cuatro épocas sin finalizar, se activa un protocolo de emergencia llamado «pérdida por inactividad». El objetivo final de la pérdida por inactividad es crear las condiciones necesarias para que la cadena recupere la finalidad. Como se explicó anteriormente, la finalidad requiere una mayoría de 2/3 del ether en participación para acordar los puntos de control de origen y destino. Si los validadores que representan más de 1/3 del total de validadores se desconectan o no envían las certificaciones correctas, entonces no es posible que una supermayoría de 2/3 finalice los puntos de control. La pérdida por inactividad permite que la participación relativa a los validadores inactivos se desvanezca gradualmente hasta que controlen menos de 1/3 de la participación total, lo que permite que los validadores activos restantes finalicen la cadena. Por grande que sea el grupo de validadores inactivos, los validadores activos restantes eventualmente controlarán >2/3 de la participación. ¡La pérdida de participación es un fuerte incentivo para que los validadores inactivos se reactiven lo antes posible! Se encontró un caso de pérdida por inactividad en la red de pruebas de Medalla, cuando < 66 % de los validadores activos pudieron llegar a un consenso sobre la cabeza actual de la cadena de bloques. ¡La pérdida por inactividad se activó y finalmente se recuperó la finalidad!
 
 El diseño de recompensa, penalización y recorte del mecanismo de consenso anima a los validadores individuales a comportarse correctamente. No obstante, de estas opciones de diseño surge un sistema que incentiva poderosamente la distribución equitativa de validadores entre múltiples clientes, y debería desincentivar con ahínco el dominio de un solo cliente.
 
-## Leer más \{#further-reading}
+## Leer más {#further-reading}
 
 - [Actualización de Ethereum: la capa de incentivos](https://eth2book.info/altair/part2/incentives)
 - [Incentivos en el protocolo híbrido Casper de Ethereum](https://arxiv.org/pdf/1903.04205.pdf)

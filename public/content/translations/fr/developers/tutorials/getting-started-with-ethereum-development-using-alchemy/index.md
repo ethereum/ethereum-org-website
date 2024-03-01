@@ -21,11 +21,11 @@ Ceci est un guide pour les débutants qui souhaitent se lancer dans le développ
 
 Nous vous guiderons à travers toutes les étapes, de votre inscription sur Alchemy à votre premier script Web3 ! Aucune expérience préalable dans le développement de blockchain n'est requise !
 
-## 1. Créez votre compte Alchemy gratuit \{#sign-up-for-a-free-alchemy-account}
+## 1. Créez votre compte Alchemy gratuit {#sign-up-for-a-free-alchemy-account}
 
 Il est très facile de créer un compte sur Alchemy. [Inscrivez-vous gratuitement ici](https://auth.alchemyapi.io/signup).
 
-## 2. Créer une application Alchemy \{#create-an-alchemy-app}
+## 2. Créer une application Alchemy {#create-an-alchemy-app}
 
 Pour communiquer avec la chaîne Ethereum et utiliser les services d'Alchemy, vous aurez besoin d'une clé d'API pour authentifier vos requêtes.
 
@@ -43,7 +43,7 @@ Vous pouvez également extraire les clés API existantes en passant la souris su
 
 ![Gif montrant à un utilisateur comment tirer des clés d'API](./pull-api-keys.gif)
 
-## 3. Faire une demande en ligne de commande \{#make-a-request-from-the-command-line}
+## 3. Faire une demande en ligne de commande {#make-a-request-from-the-command-line}
 
 Interagissez avec la blockchain Ethereum via Alchemy en utilisant JSON-RPC et curl.
 
@@ -71,7 +71,7 @@ _**REMARQUE :** Remplacez [https://eth-mainnet.alchemyapi.io/v2/demo](https://et
 { "id": 73,"jsonrpc": "2.0","result": "0x09184e72a000" // 10000000000000 }
 ```
 
-## 4. Configurer votre client Web3 \{#set-up-your-web3-client}
+## 4. Configurer votre client Web3 {#set-up-your-web3-client}
 
 **Si vous avez un client existant,** changez votre URL actuelle de fournisseur de nœuds en une URL Alchemy avec votre clé API : `"https://eth-mainnet.alchemyapi.io/v2/your-api-key"`
 
@@ -102,7 +102,7 @@ const web3 = createAlchemyWeb3(
 )
 ```
 
-## 5. Écrivez votre premier script Web3 ! \{#write-your-first-web3-script}
+## 5. Écrivez votre premier script Web3 ! {#write-your-first-web3-script}
 
 Maintenant pour nous salir les mains avec un peu de programmation Web3, nous allons écrire un script simple qui affiche le dernier numéro de bloc du réseau principal Ethereum.
 

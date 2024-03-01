@@ -4,7 +4,7 @@ description: Základné informácie, ktoré vám pomôžu začať používať Et
 lang: sk
 ---
 
-# Používanie Etherea \{#use-ethereum-applications}
+# Používanie Etherea {#use-ethereum-applications}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: sk
 
 </FeaturedText>
 
-## Ako používať aplikácie postavené na Ethereu \{#how-to-use-an-application-built-on-ethereum}
+## Ako používať aplikácie postavené na Ethereu {#how-to-use-an-application-built-on-ethereum}
 
 Najlepší spôsob, ako začať s Ethereom, je pustiť sa rovno do toho!
 

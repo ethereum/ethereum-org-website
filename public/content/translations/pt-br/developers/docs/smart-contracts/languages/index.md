@@ -15,11 +15,11 @@ Desenvolvedores mais experientes também podem querer usar o Yul, uma linguagem 
 
 Se você está curioso e gosta de ajudar a testar novas linguagens que ainda estão em grande desenvolvimento, você pode experimentar com Fe, uma linguagem de contrato inteligente emergente que ainda está na sua infância.
 
-## Pré-requisitos \{#prerequisites}
+## Pré-requisitos {#prerequisites}
 
 Conhecimento anterior de linguagens de programação, especialmente de JavaScript ou Python, pode ajudá-lo a entender as diferenças nas linguagens de contratos inteligentes. Nós também recomendamos que você entenda os contratos inteligentes como um conceito, antes de se aprofundar nas comparações de linguagem. [Introdução aos contratos inteligentes](/developers/docs/smart-contracts/).
 
-## Solidity \{#solidity}
+## Solidity {#solidity}
 
 - Linguagem de alto nível orientada para objetos para a implementação de contratos inteligentes.
 - Linguagem de marcações mais profundamente influenciada por C++.
@@ -29,7 +29,7 @@ Conhecimento anterior de linguagens de programação, especialmente de JavaScrip
   - Bibliotecas (você pode criar código reutilizável que pode ser chamado de diferentes contratos – como funções estáticas dentro de uma classe estática em outras linguagens de programação orientadas a objetos).
   - Tipos complexos definidos pelo usuário.
 
-### Links importantes \{#important-links}
+### Links importantes {#important-links}
 
 - [Documentação](https://docs.soliditylang.org/en/latest/)
 - [Portal da linguagem Solidity](https://soliditylang.org/)
@@ -40,7 +40,7 @@ Conhecimento anterior de linguagens de programação, especialmente de JavaScrip
 - [Blog da Solidity](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
 
-### Exemplo de contrato \{#example-contract}
+### Exemplo de contrato {#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -83,7 +83,7 @@ contract Coin {
 
 Esse exemplo deve dar a você, uma ideia de como é a sintaxe de um contrato na Solidity. Para uma descrição mais detalhada das funções e variáveis, [consulte a documentação](https://docs.soliditylang.org/en/latest/contracts.html).
 
-## Vyper \{#vyper}
+## Vyper {#vyper}
 
 - Linguagem de programação Pythonic
 - Digitação sólida
@@ -101,7 +101,7 @@ Esse exemplo deve dar a você, uma ideia de como é a sintaxe de um contrato na 
 
 Para obter mais informações, [leia a lógica do Vyper](https://vyper.readthedocs.io/en/latest/index.html).
 
-### Links importantes \{#important-links-1}
+### Links importantes {#important-links-1}
 
 - [Documentação](https://vyper.readthedocs.io)
 - [Vyper como exemplo](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
@@ -116,7 +116,7 @@ Para obter mais informações, [leia a lógica do Vyper](https://vyper.readthedo
 - [Exemplos de contratos inteligentes de maiores sucessos Vyper](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [Recursos incríveis com curadoria do Vyper](https://github.com/spadebuilders/awesome-vyper)
 
-### Exemplo \{#example}
+### Exemplo {#example}
 
 ```python
 # Leilão aberto
@@ -205,7 +205,7 @@ def endAuction():
 
 Esse exemplo deve dar-nos uma noção do que é a sintaxe do contrato Vyper. Para uma descrição mais detalhada das funções e variáveis, [consulte a documentação](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction).
 
-## Yul e Yul+ \{#yul}
+## Yul e Yul+ {#yul}
 
 Se você é novo na Ethereum e ainda não fez qualquer codificação com linguagens de contrato inteligentes, recomendamos começar com Solidity ou Vyper. Apenas olhe para Yul ou Yul+ quando estiver familiarizado com as melhores práticas de segurança inteligente do contrato e com as especificações de trabalho com a EVM.
 
@@ -221,14 +221,14 @@ Se você é novo na Ethereum e ainda não fez qualquer codificação com linguag
 - Inicialmente concebido para um [optimistic rollup](/developers/docs/scaling/optimistic-rollups/).
 - Yul+ pode ser visto como uma proposta de atualização experimental para Yul, adicionando novos recursos.
 
-### Links Importantes \{#important-links-2}
+### Links Importantes {#important-links-2}
 
 - [Documentação](https://docs.soliditylang.org/en/latest/yul.html)
 - [Documentação Yul+](https://github.com/fuellabs/yulp)
 - [Yul+ Playground](https://yulp.fuel.sh/)
 - [Yul+ Post de Introdução](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### Exemplo de contrato \{#example-contract-2}
+### Exemplo de contrato {#example-contract-2}
 
 O exemplo a seguir simples implementa uma função de energia. Ele pode ser compilado usando `solc --strict-assembly --bin input.yul`. O exemplo deve ser armazenado no arquivo input.yul.
 
@@ -253,14 +253,14 @@ O exemplo a seguir simples implementa uma função de energia. Ele pode ser comp
 
 Se você já é bem experiente com contratos inteligentes, uma implementação do ERC20 em Yul pode ser encontrada [aqui](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example).
 
-## Fe \{#fe}
+## Fe {#fe}
 
 - Linguagem estaticamente digitada para a Máquina Virtual Ethereum (EVM).
 - Inspirado por Python e Rust.
 - O objetivo é ser fácil de aprender -- mesmo para desenvolvedores que são novos no ecossistema Ethereum.
 - Fe ainda está em seus estágios iniciais, a linguagem teve sua versão alfa em janeiro de 2021.
 
-### Links importantes \{#important-links-3}
+### Links importantes {#important-links-3}
 
 - [GitHub](https://github.com/ethereum/fe)
 - [Anúncio da Fe](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
@@ -268,7 +268,7 @@ Se você já é bem experiente com contratos inteligentes, uma implementação d
 - [Chat de Discord Fe](https://discord.com/invite/ywpkAXFjZH)
 - [Fe Twitter](https://twitter.com/official_fe)
 
-### Exemplo de contrato \{#example-contract-3}
+### Exemplo de contrato {#example-contract-3}
 
 O seguinte é um contrato simples implementado em Fe.
 
@@ -291,34 +291,34 @@ contrate GuestBook:
 
 ```
 
-## Como escolher \{#how-to-choose}
+## Como escolher {#how-to-choose}
 
 Como com qualquer outra linguagem de programação, trata-se principalmente de escolher a ferramenta certa para o trabalho certo, assim como preferências pessoais.
 
 Aqui estão algumas coisas a considerar se você ainda não tentou nenhuma das linguagens:
 
-### O que é que há de melhor em Solidity? \{#solidity-advantages}
+### O que é que há de melhor em Solidity? {#solidity-advantages}
 
 - Se você for um iniciante, há muitos tutoriais e ferramentas de aprendizagem disponíveis. Veja mais sobre isso na seção [Aprenda programando](/developers/learning-tools/).
 - Ótima ferramenta de desenvolvedor disponível.
 - Solidity tem uma grande comunidade de desenvolvedores, o que significa que você provavelmente encontrará respostas para as suas perguntas muito rapidamente.
 
-### O que há de melhor em Vyper? \{#vyper-advatages}
+### O que há de melhor em Vyper? {#vyper-advatages}
 
 - Uma ótima maneira de começar para desenvolvedores de Python que querem escrever contratos inteligentes.
 - O Vyper tem um número menor de características que o torna ótimo para a rápida reprodução de ideias.
 - A Vyper visa ser fácil de controlar e o máximo legível ao ser humano.
 
-### O que é ótimo sobre Yul e Yul+? \{#yul-advantages}
+### O que é ótimo sobre Yul e Yul+? {#yul-advantages}
 
 - Uma linguagem de baixo nível simples e funcional.
 - Permite aproximar-se muito mais da EVM bruta, o que pode ajudar a otimizar o uso de gás de seus contratos.
 
-## Comparações de linguagens \{#language-comparisons}
+## Comparações de linguagens {#language-comparisons}
 
 Para comparações de sintaxe básica, o ciclo de vida do contrato, interfaces, operadores, estruturas de dados, funções, fluxo de controle e mais confira esta [folha de crédito por auditoria](https://reference.auditless.com/cheatsheet/)
 
-## Leitura adicional \{#further-reading}
+## Leitura adicional {#further-reading}
 
 - [Biblioteca de Contratos da Solidity por OpenZeppelin](https://docs.openzeppelin.com/contracts)
 - [Solidity como exemplo](https://solidity-by-example.org)

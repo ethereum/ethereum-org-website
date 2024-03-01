@@ -8,7 +8,7 @@ lang: ja
 
 イーサリアムとそのコミュニティは、オープンソースを採用しています。 クライアントの実装、API、開発フレームワーク、テストツールなどのコミュニティプロジェクトは、さまざまな言語で記述されています。
 
-## 言語の選択 \{#data}
+## 言語の選択 {#data}
 
 以下から使用したい開発言語を選択して、プロジェクト、リソース、仮想コミュニティを見つけられます。
 
@@ -22,7 +22,7 @@ lang: ja
 - [Ruby デベロッパーのためのイーサリアム](/developers/docs/programming-languages/ruby/)
 - [Rust デベロッパーのためのイーサリアム](/developers/docs/programming-languages/rust/)
 
-### 使いたい言語がサポートされていなかった場合 \{#other-lang}
+### 使いたい言語がサポートされていなかった場合 {#other-lang}
 
 上記以外のプログラミング言語について、リソースや仮想コミュニティへのリンクを追加したい場合は、[問題をオープンする](https://github.com/ethereum/ethereum-org-website/issues/new/choose)ことによって、新しいページをリクエストできます。
 

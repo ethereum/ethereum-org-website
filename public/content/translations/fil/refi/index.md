@@ -12,7 +12,7 @@ summaryPoint2: Isang pagsubok na gamitin ang Ethereum upang malutas ang mga pand
 summaryPoint3: Isang tool na susukatin nang husto ang mga ecological benefit asset tulad ng mga verified na carbon credit
 ---
 
-## Ano ang ReFi? \{#what-is-refi}
+## Ano ang ReFi? {#what-is-refi}
 
 Ang **regenerative finance (ReFi)** ay isang hanay ng mga tool at ideya na ibinatay sa mga blockchain, na naglalayong gumawa ng mga ekonomiya na regenerative, sa halip na extractive o exploitative. Kalaunan, mauubos ng mga extractive system ang mga resource na available, at magko-collapse ang mga ito. Kapag walang regenerative na mekanismo, walang resilience ang mga ito. Ipinagpapalagay sa ReFi na dapat i-decouple ang paggawa ng monetary value sa hindi sustainable na paghango ng mga resource mula sa ating planeta at mga komunidad.
 
@@ -26,7 +26,7 @@ Isinasakatuparan ng mga proyekto sa ReFi ang mga prinsipyong ito gamit ang [mga 
 
 May pagkakapareho ang ReFi sa [decentralized science (DeSci)](/desci/) movement, na gumagamit ng Ethereum bilang platform para pondohan, gawin, suriin, kilalanin, i-store, at ipakalat ang siyentipikong kaalaman. Ang mga tool sa DeSci ay maaaring maging kapaki-pakinabang para sa pagbuo ng mga nave-verify na pamantayan at pamamaraan para sa pagpapatupad at pagsusubaybay sa mga regenerative na aktibidad tulad ng pagtatanim ng mga puno, pag-aalis ng plastic sa karagatan, o pagpapanumbalik ng sigla ng napinsalang ecosystem.
 
-## Tokenization ng mga carbon credit \{#tokenization-of-carbon-credits}
+## Tokenization ng mga carbon credit {#tokenization-of-carbon-credits}
 
 Ang **[voluntary carbon market (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** ay mekanismo para pondohan ang mga proyekto na may napatunayang positibong epekto sa mga carbon emission, tulad ng pababain ang mga kasalukuyang emission o alisin ang mga greenhouse gas na nasa atmosphere na. Matapos ma-verify, makakatanggap ang mga proyektong ito ng asset na tinatawag na "mga carbon credit," na maibebenta ng mga ito sa mga indibidwal at organisasyong gustong suportahan ang mga pagsisikap para protektahan ang klima.
 
@@ -50,7 +50,7 @@ Gumagamit ang mga proyekto sa ReFi ng blockchain technology para solusyonan ang 
 - **Isinasagawa ang mga gawain sa trading nang walang intermediary**, na naniningil ng mahal na bayarin. Ayon sa data mula sa isang analytics firm, kumakatawan ang mga digital carbon credit sa [62% pagpapabuti sa gastos kumpara sa mga katumbas na tradisyonal na credit](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne).
 - **Scalable ang DCM** at kaya nitong tugunan ang mga demand ng mga indibidwal at multinational corporation.
 
-### Mga pangunahing bahagi ng DCM \{#key-components-dcm}
+### Mga pangunahing bahagi ng DCM {#key-components-dcm}
 
 Apat na pangunahing bahagi ang bumubuo sa kasalukuyang landscape ng DCM:
 
@@ -65,7 +65,7 @@ May ilang serbisyo tulad ng [Klima Infinity](https://www.klimadao.finance/infini
 
 4. Pinapangasiwaan ng mga kasalukuyang rail at infrastructure ang pagpapalawak ng epekto at kahusayan ng buong supply chain ng carbon market. Nagsu-supply ang [KlimaDAO](http://klimadao.finance/) ng liquidity bilang public good (nagbibigay-daan sa kahit sino na bumili o magbenta ng mga carbon credit sa transparent na presyo), nagbibigay ito ng mga reward kapalit ng mas mataas na throughput ng mga carbon market at pag-retire, at nagbibigay ito ng madaling gamiting interoperable tooling para ma-access ang data tungkol sa, pati na rin ang kumuha at mag-retire ng, iba't ibang tokenized na carbon credit.
 
-## Ang ReFi sa labas ng mga carbon market \{#refi-beyond}
+## Ang ReFi sa labas ng mga carbon market {#refi-beyond}
 
 Bagama't may matinding pagpapahalaga sa mga carbon market sa pangkalahatan at pag-transition ng VCM sa DCM partikular na sa loob ng space, hindi limitado sa carbon ang terminong “ReFi”. Maaaring gumawa at mag-tokenize ng iba pang environmental asset at hindi lang mga carbon credit. Ipinapahiwatig nitong maaari ding itakda ang presyo ng iba pang negatibong externality sa mga base layer ng mga susunod pang sistema ng ekonomiya. Dagdag pa rito, ang regenerative na aspeto ng economic model na ito ay maaaring gamitin sa iba't ibang aspeto, tulad ng pagsuporta sa pagpopondo sa mga public good sa pamamagitan ng mga quadratic funding platform gaya ng [Gitcoin](https://gitcoin.co/). Binibigyang-kakayahan ng mga organisasyon na ibinatay sa ideya ng pakikilahok na bukas sa lahat at pantay-pantay na pamamahagi ng mga resource ang lahat na maglaan ng pera sa mga proyekto sa open-source software, pati na rin sa mga proyektong pang-edukasyon, pangkalikasan, at pangkomunidad.
 

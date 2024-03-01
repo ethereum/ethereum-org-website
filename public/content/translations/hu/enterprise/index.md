@@ -4,7 +4,7 @@ description: Útmutatók, cikkek és eszközök a nyilvános Ethereum blokklánc
 lang: hu
 ---
 
-# Ethereum főhálózat vállalatoknak \{#ethereum-for-enterprise}
+# Ethereum főhálózat vállalatoknak {#ethereum-for-enterprise}
 
 A blokklánc alkalmazások segítenek a vállalatoknak:
 
@@ -15,13 +15,13 @@ A blokklánc alkalmazások segítenek a vállalatoknak:
 
 Vállalati blokklánc alkalmazások fejleszthetőek a nyilvános, engedély nélküli Ethereum [főhálózatra](/glossary/#mainnet) vagy privát blokkláncokra, melyek az Ethereum technológiáján alapulnak. Tudj meg többet a [privát vállalati Ethereum láncokról](/enterprise/private-ethereum/).
 
-## Nyilvános vs privát Ethereum \{#private-vs-public}
+## Nyilvános vs privát Ethereum {#private-vs-public}
 
 Csak egy nyilvános Ethereum főhálózat létezik. A főhálózatra épült alkalmazások integrálódhatnak egymással, hasonlóan ahogy az internetre épített alkalmazások egymáshoz kapcsolódhatnak, kihasználva ezzel a decentralizált blokklánc teljes potenciálját.
 
 Számos vállalat és konzorcium indított privát, engedélyköteles blokkláncot specifikus alkalmazásokhoz, melyek az Ethereum technológiáján alapulnak.
 
-### Legfontosabb különbségek \{#key-differences}
+### Legfontosabb különbségek {#key-differences}
 
 - Blokklánc biztonság/megváltoztathatóság - A blokklánc ellenállását az adatmódosítás ellen a konszenzus algoritmusa határozza meg. Az Ethereum főhálózatot több ezer független csomópont együttműködése biztosítja, amelyeket egyének és bányászok vezetnek szerte a világon. A privát láncoknak általában kevés csomópontja van, amelyeket egy vagy több szervezet irányít; ezeket a csomópontokat szigorúan lehet ellenőrizni, de elég néhány felett átvenni az irányítást a lánc átírása vagy hamis tranzakciók végrehajtása érdekében.
 - Teljesítmény - Mivel a vállalatok privát Ethereum láncai nagy teljesítményű csomópontokat használhatnak, speciális hardverkövetelményekkel és különböző konszenzus algoritmusokkal, például a proof-of-authority-vel, így magasabb tranzakciós átvitelt érhetnek el az alaprétegen (1. réteg). Az Ethereum főhálózaton nagy átvitel érhető el a [2. rétegű skálázási megoldások használatával](/developers/docs/layer-2-scaling/).
@@ -29,7 +29,7 @@ Számos vállalat és konzorcium indított privát, engedélyköteles blokklánc
 - Csomóponti engedélyezés - Csak felhatalmazott csomópontok csatlakozhatnak a privát láncokhoz. Bárki felállíthat egy csomópontot az Ethereum főhálózatán.
 - Adatvédelem - A privát láncokra írt adatokhoz való hozzáférést a hálózatra való hozzáférés korlátozásával lehet szabályozni, és alaposabban hozzáférés-szabályozással és privát tranzakciókkal. A főhálózat 1. rétegére írt minden adat bárki számára hozzáférhető, így az érzékeny információkat off-chain kell tárolni és továbbítani, vagy titkosítani kell őket. Az ilyen design minták felemelkedőben vannak (pl.: Baseline, Aztec), csakúgy mint a 2. rétegű megoldások, melyek szétválasztják és az 1.rétegen kívül kezelik az adatot.
 
-### Miért építsünk az Ethereum főhálózaton \{#why-build-on-ethereum-mainnet}
+### Miért építsünk az Ethereum főhálózaton {#why-build-on-ethereum-mainnet}
 
 A vállalkozások 2016 óta kísérleteztek a blokklánc technológiával, amikor elindították a Hyperledger, a Quorum és a Corda projekteket. A hangsúly főleg a privát engedélyköteles vállalati blokkláncokra helyezkedett, de 2019-től kezdődően váltás történt a gondolkodásban az nyilvános vagy privát blokkláncok használatára az üzleti alkalmazások esetében. Egy [felmérés](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf), melyet a Forrester vezettet, kimutatta, hogy "A felmérésben résztvevők 75%-a ... látja a lehetőséget, hogy egy valószínűséggel kihasználják majd a nyilvános blokkláncokat a jövőben, és közel kétharmaduk állította azt, hogy nagy valószínűséggel. Paul Brody az EY-tól [beszélt](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) a nyilvános blokkláncokra történő fejlesztés előnyeiről, mely (az alkalmazástól függően) magasabb szintű biztonságot/megváltoztathatatlanságot, transzparenciát, a tulajdonjog alacsonyabb teljes költségét, és a többi alkalmazással történő interoperabilitási képességét nyújthatja, melyek szintén a főhálózaton vannak (hálózati hatások). A közös referenciakeret megosztása a vállalkozások között elkerülhetővé teszi a különféle szegregált silók felesleges létrehozását, amelyek nem képesek kommunikálni, megosztani vagy szinkronizálni az információkat egymással.
 
@@ -37,9 +37,9 @@ Egy másik fejlesztés, mely a nyilvános blokkláncokra tereli a figyelmet a [2
 
 Az Baseline protokoll az egyik kulcsfontosságú projekt, amely olyan protokollt határoz meg, amely bizalmas és összetett együttműködést tesz lehetővé a vállalkozások között anélkül, hogy érzékeny adatokat hagynának a láncon. Nagy [lendületet](https://www.oasis-open.org/news/pr/baseline-protocol-achieves-key-milestone-with-release-of-v0-1-implementation-for-enterprise-) szereztek 2020 folyamán.
 
-## Vállati fejlesztői anyagok \{#enterprise-developer-resources}
+## Vállati fejlesztői anyagok {#enterprise-developer-resources}
 
-### Szervezetek \{#organizations}
+### Szervezetek {#organizations}
 
 Az Ethereum vállalkozásbarátabbá tételére irányuló egyes együttműködési törekvések különböző szervezetek munkájának eredménye:
 
@@ -47,7 +47,7 @@ Az Ethereum vállalkozásbarátabbá tételére irányuló egyes együttműköd�
 - [Ethereum OASIS Open Project](https://github.com/ethereum-oasis/oasis-open-project) Az Ethereum OASIS Open Projekt egy OASIS Open Project, amely azért létezik, hogy semleges fórumot biztosítson a különböző érdekelt felek számára, hogy magas színvonalú specifikációkat hozzanak létre, amelyek megkönnyítik az Ethereum hosszú élettartamát, interoperabilitását és könnyű integrációját. A projekt célja világos, nyílt szabványok, magas színvonalú dokumentációk és megosztott tesztcsomagok kifejlesztése, amelyek megkönnyítik az Ethereum protokoll új funkcióit és továbbfejlesztéseit.
 - [Baseline Project](https://www.baseline-protocol.org/) A Baseline Protocol egy nyílt forráskódú kezdeményezés, amely egyesíti a kriptográfia, az üzenetküldés és a blokklánc fejlesztéseit, hogy biztonságos és privát üzleti folyamatokat nyújtson alacsony költségen, az Ethereum nyilvános főhálózatán keresztül. A protokoll bizalmas és összetett együttműködést tesz lehetővé a vállalkozások között anélkül, hogy érzékeny adatokat hagyna a láncon. A Baseline Project az Ethereum OASIS Open Project egy alprojektje és a Baseline Technical Steering Committe irányítja.
 
-### Termékek és szolgáltatások \{#products-and-services}
+### Termékek és szolgáltatások {#products-and-services}
 
 - [Alchemy](https://alchemyapi.io/) _API szolgáltatásokat és eszközöket szolgáltat az Ethereum alkalmazások fejlesztéséhez és monitorozásához_
 - [Blockapps](https://blockapps.net/) _az Enterprise Ethereum implementációja, eszközök, API-ok, melyek a STRATO platformot alkotják_
@@ -59,7 +59,7 @@ Az Ethereum vállalkozásbarátabbá tételére irányuló egyes együttműköd�
 - [Provide](https://provide.services/) _infrastruktúra és API-ok vállalati web3 alkalmazásoknak_
 - [Unibright](https://unibright.io/) _egy blokklánc specialistákból, tervezőkből, fejlesztőkőből és szaktanácsadókból álló csapat több mint 20 év tapasztalattal az üzleti folyamatok és az integráció területén_
 
-### Eszközök és könyvtárak \{#tooling-and-libraries}
+### Eszközök és könyvtárak {#tooling-and-libraries}
 
 - [Alethio](https://aleth.io/) _Ethereum Data Analytics Platform_
 - [Epirus](https://www.web3labs.com/epirus) _Egy platform blokklánc alkalmazások fejlesztésére, telepítésére és monitorozására a Web3 Labs által_
@@ -68,7 +68,7 @@ Az Ethereum vállalkozásbarátabbá tételére irányuló egyes együttműköd�
 - [Tenderly](https://tenderly.co/) _egy adat platform, mely valós idejű elemzéseket, figyelmeztetéseket és monitorozást kínál privát láncok támogatásával._
 - [Truffle Suite](https://trufflesuite.com) _blockchain development suite (Truffle, Ganache, Drizzle)_
 
-### Skálázási megoldások \{#scalability-solutions}
+### Skálázási megoldások {#scalability-solutions}
 
 A [2. réteget](/developers/docs/layer-2-scaling/) olyan technológiák vagy rendszerek alkotják, melyek az Ethereumon (1. réteg) futnak, öröklik a biztonsági tulajdonságait az 1. rétegről és nagyobb tranzakció feldolgozási kapacitást (átvitelt) biztosítanak, alacsonyabb tranzakciós díjjal (működési költség) és gyorsabb tranzakció megerősítést, mint az 1. réteg esetében. A 2. rétegű skálázási megoldások biztonságát az 1. réteg szolgáltatja, de a blokklánc alkalmazások számára elérhetővé teszik, hogy több felhasználót, tevékenységet vagy adatot kezeljenek, mint amire az 1. réteg képes lenne. A legtöbbjük kihasználja a legutóbbi fejlődési eredményeket a kriptográfiában és zero-knowledge (ZK) bizonyítékokat használnak, hogy növeljék a teljesítményt és a biztonságot.
 
@@ -103,17 +103,17 @@ Példák L2 megoldásokra, melyek produkcióra készek, vagy hamarosan készen l
 - Hibrid megoldások, amelyek több kategória tulajdonságait ötvözik
   - [Celer](https://celer.network)
 
-## Vállalati alkalmazások a főhálózaton \{#enterprise-live-on-mainnet}
+## Vállalati alkalmazások a főhálózaton {#enterprise-live-on-mainnet}
 
 Itt egy pár vállalati alkalmazás, melyek telepítve lettek a nyilvános Ethereum főhálózatra
 
-### Fizetések \{#payments}
+### Fizetések {#payments}
 
 - [Brave Böngésző](https://basicattentiontoken.org/) _a felhasználókat fizetik, hogy hirdetéseket nézzenek és a felhasználók fizetéssel támogathatják a kiadókat a Basic Attention Token segítségével._
 - [hCaptcha](https://www.hcaptcha.com/) _Bot megelőző CAPTCHA rendszer, mely fizet a weboldal működtetőnek a felhasználók által végzett munkáért, akik a gépi tanulás számára jelölik az adatokat. Már telepítve van a Cloudflare-en is._
 - [Audius](https://audius.co/) _egy streaming szolgáltatás, mely összeköti a zene rajongókat közvetlenül a művészekkel, akiket teljes egészében a rajongóik fizethetnek ki, azonnal minden egyes stream után_
 
-### Pénzügy \{#finance}
+### Pénzügy {#finance}
 
 - [Santander Bank](https://www.coindesk.com/santander-settles-both-sides-of-a-20-million-bond-trade-on-ethereum) _kötvény kiadás és elszámolás_
 - [Societe Generale](https://www.societegenerale.com/en/newsroom-first-financial-transaction-settled-with-a-digital-currency) _kötvény kiadás_
@@ -123,7 +123,7 @@ Itt egy pár vállalati alkalmazás, melyek telepítve lettek a nyilvános Ether
 - [Kratos](https://triterras.com/kratos) _árupiaci kereskedés és pénzügyi platform, mely összeköti és lehetővé teszi az árukereskedőknek, hogy kereskedjenek és tőkét szerezzenek kölcsönzőktől közvetlenül online_
 - [Fasset](https://www.fasset.com/) _egy platform a fenntartható infrastruktúráért_
 
-### Adatok notarizációja \{#notarization-of-data}
+### Adatok notarizációja {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _a véglegesített kölcsönök részletei hashelődnek és feljegyzésre kerülnek a főhálózatra_
 - [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _az adatok integritása biztosítható az indexelt adatok hashének rendszeres feljegyzésével a főhálózatra_
@@ -131,7 +131,7 @@ Itt egy pár vállalati alkalmazás, melyek telepítve lettek a nyilvános Ether
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _logolja a sajtókiadványokat az Ethereumra biztosítva ezzel a vállalati elszámoltathatóságot és bizalmat_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _rögzíti az órák származását és javítását Ethereumra_
 
-### Ellátási lánc \{#supply-chain}
+### Ellátási lánc {#supply-chain}
 
 - [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _Fuvarlevél és dokumentumátvitel szolgáltató_
 - [Morpheus.network](https://morpheus.network/) _ellátási lánc automatizálási platform, mely egy privát láncokból és a notarizált adatokat tartalmazó Ethereum főhálózatból álló hibridet vezetett be és olyan cégek használják, mint a kanadai élelmiszer, olaj & gáz elosztó Federated Co-op Ltd. és az argentín kisállat eledel Vitalcan_
@@ -141,7 +141,7 @@ Itt egy pár vállalati alkalmazás, melyek telepítve lettek a nyilvános Ether
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _egy beszerzési workflow-ba történő belépést tesz lehetővé cégek számára RFQ-k, szerződések, rendelések és számlák kiadásával az Ön megbízható üzleti partnereiből álló hálózaton keresztül_
 - [Treum](https://treum.io/) _átláthatóságot, nyomonkövethetőséget és kereskedési lehetőséget biztosít ellátási láncoknak blokklánc technológia használatával_
 
-### Hitelesítő adatok és tanúsítványok \{#credentials}
+### Hitelesítő adatok és tanúsítványok {#credentials}
 
 - [Utah Counties](http://www.utahcounty.gov/Dept/ClerkAud/DigitalCertCopy.html) _digitális házassági tanúsítványok kiadása Ethereumon_
 - [Két olasz középiskola](https://cointelegraph.com/news/two-italian-high-schools-to-issue-digital-diplomas-with-blockchain) _digitális érettségik az Ethereum főhálózaton kibocsájtva_
@@ -152,7 +152,7 @@ Itt egy pár vállalati alkalmazás, melyek telepítve lettek a nyilvános Ether
 - [BlockCerts](https://www.blockcerts.org/) _egy nyílt szabványt fejlesztett a blokklánc hitelesítőknek _
 - [SkillTree](http://skilltree.org/) _Online készség képzés és tanúsítványok, amelyek a lejárati triggerekkel vagy más készségekkel kapcsolatos függőségekkel konfigurálhatók_
 
-### Eszközök \{#utilities}
+### Eszközök {#utilities}
 
 - [GridPlus](https://blog.gridplus.io/gridplus-is-live-in-texas-efc83c814601) _elektromos fizetések_
 

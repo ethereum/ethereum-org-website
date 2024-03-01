@@ -4,7 +4,7 @@ description: Le informazioni base che ti servono per comprendere ETH.
 lang: it
 ---
 
-# Cos'è ether (ETH)? \{#what-is-ether-eth}
+# Cos'è ether (ETH)? {#what-is-ether-eth}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: it
 
 </FeaturedText>
 
-## Cosa sono gli ETH e come si ottengono? \{#what-is-eth-and-how-do-i-get-it}
+## Cosa sono gli ETH e come si ottengono? {#what-is-eth-and-how-do-i-get-it}
 
 Ether, o ETH, è la valuta nativa di Ethereum. È una "moneta digitale" che può essere inviata via Internet istantaneamente e a basso costo, ed essere usata anche in molte [applicazioni basate su Ethereum](/it/dapps/).
 

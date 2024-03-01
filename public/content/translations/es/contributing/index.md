@@ -4,7 +4,7 @@ description: Entérese de diferentes maneras en las que puede colaborar con ethe
 lang: es
 ---
 
-# Colaborar con ethereum.org 🦄 \{#contributing-to-ethereumorg}
+# Colaborar con ethereum.org 🦄 {#contributing-to-ethereumorg}
 
 El sitio web ethereum.org, al igual Ethereum en general, es un proyecto de código abierto. Por tanto, si quiere ayudar a mejorar [nuestro portal de Ethereum](/about/), a continuación le indicamos maneras de hacerlo.
 
@@ -13,7 +13,7 @@ El sitio web ethereum.org, al igual Ethereum en general, es un proyecto de códi
   <a href="#poap">Más información sobre POAP.</a>
 </InfoBanner>
 
-## Formas de colaborar \{#ways-to-contribute}
+## Formas de colaborar {#ways-to-contribute}
 
 - [Trabajar en una incidencia abierta](https://github.com/ethereum/ethereum-org-website/issues) _: hemos detectado tareas pendientes_.
 - [Únase al Programa de traducción](/contributing/translation-program/) _: ayúdenos a traducir ethereum.org a nuevos idiomas_.
@@ -35,7 +35,7 @@ El sitio web ethereum.org, al igual Ethereum en general, es un proyecto de códi
 
 _¿Tiene alguna pregunta?_ 🤔 Póngase en contacto con nuestro [servidor de Discord](https://discord.gg/CetY6Y4)
 
-## Cómo trabajar en ethereum.org \{#how-to-update-content}
+## Cómo trabajar en ethereum.org {#how-to-update-content}
 
 Ya esté agregando información al sitio, creando contenido o trabajando en incidencias abiertas, necesitará una cuenta de [GitHub](https://github.com).
 
@@ -53,7 +53,7 @@ Antes de empezar a colaborar, asegúrese de estar familiarizado con:
 - nuestra [guía de estilo](/contributing/style-guide/)
 - nuestro [código de conducta](/community/code-of-conduct)
 
-## Cómo se toman las decisiones sobre el sitio \{#how-decisions-about-the-site-are-made}
+## Cómo se toman las decisiones sobre el sitio {#how-decisions-about-the-site-are-made}
 
 Las decisiones acerca de las solicitudes de incorporación de cambios individuales, la evolución del diseño y las mejoras importantes las toma un equipo del ecosistema de Ethereum. Este equipo está compuesto por gestores de proyectos, desarrolladores, diseñadores, especialistas en marketing y comunicación, y otros expertos en la materia. El aporte de la comunidad se tiene en cuenta en cada decisión. Po lo tanto, exprese sus dudas y preguntas en las incidencias abiertas, envíe solicitudes de incorporación de cambios o póngase en contacto con el equipo:
 
@@ -61,21 +61,21 @@ Las decisiones acerca de las solicitudes de incorporación de cambios individual
 - [@ethdotorg](https://twitter.com/ethdotorg)
 - [Servidor Discord](https://discord.gg/CetY6Y4)
 
-### Aclaraciones acerca del plagio \{#plagiarism}
+### Aclaraciones acerca del plagio {#plagiarism}
 
 Utilice únicamente su trabajo o contenido original, del que tenga permiso para utilizar cuando contribuya con cualquier contenido o aportación en ethereum.org. Muchos proyectos dentro del ecosistema de Ethereum utilizan licencias de código abierto que permiten el libre intercambio de información. Sin embargo, si no puede encontrar esta información, no intente agregarla a ethereum.org. Cualquier solicitud de incorporación de cambios que se considere como plagio será rechazada.
 
-## ¿No sabe lo que es el código abierto? \{#new-to-open-source}
+## ¿No sabe lo que es el código abierto? {#new-to-open-source}
 
 Tenemos poca capacidad para introducir incidencias en nuestro repositorio GitHub específicamente diseñado para desarrolladores que no estén familiarizados con el código abierto etiquetados como [buena primera incidencia](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
-## Reclame su POAP de colaborador \{#poap}
+## Reclame su POAP de colaborador {#poap}
 
 Si su contribución se agrega a ethereum.org, le acuñaremos una POAP única de colaboradores. Un token de prueba de protocolo de asistencia (POAP) es la prueba en cadena de que usted ha ayudado a que el ecosistema sea cada vez más estupendo.
 
 [Más sobre las POAP](https://www.poap.xyz/)
 
-### Cómo reclamarlo \{#how-to-claim}
+### Cómo reclamarlo {#how-to-claim}
 
 1. Únase a nuestro [servidor de Discord](https://discord.gg/E8dET2ux8y).
 2. Pegue un enlace a su contribución en el canal [`#🥇 | poaps`](https://discord.com/channels/714888181740339261/804005643211898911).
@@ -84,18 +84,18 @@ Si su contribución se agrega a ethereum.org, le acuñaremos una POAP única de 
 
 Solo debe usar carteras de autocustodia para reclamar POAP. No use cuentas de divisas u otras cuentas de las que no posea las claves privadas, ya que estas no le permitirán acceder y manejar sus POAP.
 
-## Reclama tu GitPOAP \{#claim-gitpoap}
+## Reclama tu GitPOAP {#claim-gitpoap}
 
 ¡GitPOAP reconocerá automáticamente tu contribución incluida y te permitirá mintear un POAP único de los contribuyentes en su propia plataforma!
 
-### Cómo reclamarlo \{#how-to-claim}
+### Cómo reclamarlo {#how-to-claim}
 
 1. Visita [GitPOAP](https://www.gitpoap.io).
 2. Conecte con su billetera o consulte su correo electrónico mediante la opción de inicio de sesión.
 3. Busque su nombre de usuario en GitHub, dirección ETH, nombres ENS o cualquier GitPOAP para comprobar si es elegible.
 4. ¡Si tu cuenta de GitHub es elegible, serás capaz de mintear un GitPOAP!
 
-## Colaboradores \{#contributors}
+## Colaboradores {#contributors}
 
 {
 <Contributors />

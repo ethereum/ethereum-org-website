@@ -4,7 +4,7 @@ description: Eine Liste aller verfügbaren Opcodes für die virtuelle Ethereum-M
 lang: de
 ---
 
-## Übersicht \{#overview}
+## Übersicht {#overview}
 
 Das ist eine aktualisierte Version der EVM-Referenzseite unter [wolflo/evm-opcodes](https://github.com/wolflo/evm-opcodes). Auch aus dem [Yellow Paper](https://ethereum.github.io/yellowpaper/paper.pdf), dem [Jello Paper](https://jellopaper.org/evm/), und der [Geth](https://github.com/ethereum/go-ethereum)-Implementierung. Das soll eine zugängliche Referenz sein, aber sie ist nicht besonders streng. Wenn Sie sich sicher sein wollen, und Kenntnis von jedem Sonderfall haben benötigen, ist es ratsam, das Jello Paper oder eine Client-Implementierung zu verwenden.
 

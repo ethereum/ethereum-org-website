@@ -4,7 +4,7 @@ description: Les conditions générales que nous appliquons pour ajouter des pro
 lang: fr
 ---
 
-# Ajouter des produits ou services de mise en jeu \{#adding-staking-products-or-services}
+# Ajouter des produits ou services de mise en jeu {#adding-staking-products-or-services}
 
 Nous souhaitons nous assurer de lister les meilleures ressources possibles tout en préservant la sécurité et la confiance des utilisateurs.
 
@@ -18,7 +18,7 @@ Nous listons actuellement les produits et services de mise en jeu sur les pages 
 
 La preuve d’enjeu sur la Chaîne phare est utilisée depuis le 1er décembre 2020. Bien que la mise en jeu soit encore relativement nouvelle, nous avons essayé de créer un cadre équitable et transparent pour être pris en compte sur ethereum.org cependant, les critères d’inscription changeront et évolueront au fil du temps et restent au final à la discrétion de l’équipe du site ethereum.org.
 
-## Le cadre décisionnel \{#the-decision-framework}
+## Le cadre décisionnel {#the-decision-framework}
 
 La décision de lister un produit sur ethereum.org ne dépend pas d'un seul facteur. Nous utilisons conjointement plusieurs critères de décision pour lister un produit ou un service. Les chances d'être listé sont fonction du nombre de critères satisfaits.
 
@@ -31,7 +31,7 @@ La décision de lister un produit sur ethereum.org ne dépend pas d'un seul fact
 
 Actuellement, nous répertorions uniquement des produits ou des services dans ces catégories.
 
-### Critères d'inclusion \{#criteria-for-inclusion}
+### Critères d'inclusion {#criteria-for-inclusion}
 
 Les soumissions de produits ou de services de mise en jeu seront évaluées selon les critères suivants :
 
@@ -59,7 +59,7 @@ Les soumissions de produits ou de services de mise en jeu seront évaluées selo
 
 - Par ex. Linux, macOS, Windows, iOS, Android
 
-#### Logiciels et contrats intelligents \{#software-and-smart-contracts}
+#### Logiciels et contrats intelligents {#software-and-smart-contracts}
 
 Pour tout logiciel personnalisé ou contrat intelligent impliqué :
 
@@ -83,7 +83,7 @@ Pour tout logiciel personnalisé ou contrat intelligent impliqué :
 - Dans le cas contraire, est-il prévu de créer une prime au bogue de sécurité ?
 - Ceci est utilisé pour déterminer le score « prime de bogue » des produits.
 
-#### Nœud ou logiciel outil \{#node-or-client-tooling}
+#### Nœud ou logiciel outil {#node-or-client-tooling}
 
 Pour les produits logiciels liés à la configuration de nœuds ou de clients, la gestion ou la migration :
 
@@ -92,7 +92,7 @@ Pour les produits logiciels liés à la configuration de nœuds ou de clients, l
 - Quels sont les clients pris en charge ? L'utilisateur peut-il choisir ?
 - Ceci est utilisé pour déterminer le score « multi-client » des produits.
 
-#### Mise en jeu en tant que service \{#staking-as-a-service}
+#### Mise en jeu en tant que service {#staking-as-a-service}
 
 Pour les listes de [mise en jeu en tant que service](/staking/saas/) (c'est-à-dire les opérations de nœuds délégués) :
 
@@ -117,7 +117,7 @@ Pour les listes de [mise en jeu en tant que service](/staking/saas/) (c'est-à-d
 - Depuis la dernière modification, Prysm est le client de couche de consensus exécutée par une majorité d'opérateurs de nœuds, ce qui est dangereux pour le réseau. Si une couche de consensus client est actuellement utilisée par plus de 33 % du réseau, nous demandons des données relatives à son utilisation.
 - Ceci est utilisé pour déterminer le score « diversité de clients » des produits.
 
-#### Pools de mise en jeu \{#staking-pool}
+#### Pools de mise en jeu {#staking-pool}
 
 Pour les [services de mise en commun des mises en jeu](/staking/pools/) :
 
@@ -147,7 +147,7 @@ Pour les [services de mise en commun des mises en jeu](/staking/pools/) :
 - Depuis la dernière modification, Prysm est le client de couche de consensus exécutée par une majorité d'opérateurs de nœuds, ce qui est dangereux pour le réseau. Si une couche de consensus client est actuellement utilisée par plus de 33 % du réseau, nous demandons des données relatives à son utilisation.
 - Ceci est utilisé pour déterminer le score « diversité de clients » des produits.
 
-### Autres critères : c'est toujours un plus de les avoir \{#other-criteria}
+### Autres critères : c'est toujours un plus de les avoir {#other-criteria}
 
 **Quelles sont les interfaces utilisateur prises en charge ?**
 
@@ -161,13 +161,13 @@ Pour les [services de mise en commun des mises en jeu](/staking/pools/) :
 
 - Cela nous donne une idée de la portée de votre service à ce stade.
 
-## Comment nous affichons les résultats \{#product-ordering}
+## Comment nous affichons les résultats {#product-ordering}
 
 Les [critères d'inclusion](#criteria-for-inclusion) ci-dessus sont utilisés pour calculer un score cumulé pour chaque produit ou service. Ceci est utilisé comme un moyen de trier et de présenter des produits qui répondent à certains critères objectifs. Plus il y a de critères pour lesquels des preuves sont fournies, plus un produit sera listé haut, les ex æquo étant affichés aléatoirement au chargement.
 
 La logique de code et les pondérations de ces critères sont actuellement contenus dans [ce composant JavaScript](https://github.com/ethereum/ethereum-org-website/blob/dev/src/components/Staking/StakingProductsCardGrid.js#L350) sur notre dépôt.
 
-## Ajoutez votre produit ou service \{#add-product}
+## Ajoutez votre produit ou service {#add-product}
 
 Si vous souhaitez ajouter un produit ou un service de mise en jeu sur ethereum.org, il vous suffit de créer un ticket sur GitHub.
 

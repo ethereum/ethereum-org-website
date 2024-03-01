@@ -6,15 +6,15 @@ lang: ja
 
 スマートコントラクトは、イーサリアム上のアドレスで実行されるプログラムです。 それらはトランザクションの受信時に実行できるデータと関数で構成されています。 ここでは、スマートコントラクトの構成要素の概要を説明します。
 
-## 前提知識 \{#prerequisites}
+## 前提知識 {#prerequisites}
 
 最初に、[スマートコントラクト](/developers/docs/smart-contracts/)を必ずお読みください。 このドキュメントは、JavaScript や Python などのプログラミング言語に精通していることを前提としています。
 
-## データ \{#data}
+## データ {#data}
 
 すべてのコントラクトのデータは、`storage`または`memory`のいずれかのロケーションに割り当てる必要があります。 スマートコントラクトのストレージの変更にはコストがかかりますので、データをどこに格納するかを考える必要があります。
 
-### ストレージ \{#storage}
+### ストレージ {#storage}
 
 永続データはストレージと呼ばれ、状態変数で表されます。 これらの値は、ブロックチェーンに永続的に保存されます。 コントラクトがコンパイル時に必要なブロックチェーンのストレージ容量を追跡できるように、型を宣言する必要があります。
 
@@ -52,13 +52,13 @@ storedData: int128
 - [Vyper の型を見る](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
 - [Solidity の型を見る](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
-### メモリ \{#memory}
+### メモリ {#memory}
 
 コントラクト関数の実行期間にのみ保存される値は、メモリ変数と呼ばれます。 これらはブロックチェーンに永続的に保存されることはないため、低コストで使用できます
 
 EVM がデータ(ストレージ、メモリ、スタック)を格納する方法の詳細については、[Solidity のドキュメント](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack)をご覧ください。
 
-### 環境変数 \{#environment-variables}
+### 環境変数 {#environment-variables}
 
 コントラクトで定義した変数に加え、特別なグローバル変数がいくつかあります。 これらは主にブロックチェーンや現在のトランザクションに関する情報を提供するために使用されます。
 
@@ -69,7 +69,7 @@ EVM がデータ(ストレージ、メモリ、スタック)を格納する方�
 | `block.timestamp` | uint256      | 現在のブロックエポックタイムスタンプ |
 | `msg.sender`      | address      | メッセージの送信者(現在の呼び出し)   |
 
-## 関数 \{#functions}
+## 関数 {#functions}
 
 簡単に言うと、関数は受信トランザクションに応じて情報を取得したり、情報を設定したりすることができます。
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - `public`と宣言されており、誰でもアクセスできます。
 - `view`が宣言されていないため、コントラクトの状態を変更できます。
 
-### View 関数 \{#view-functions}
+### View 関数 {#view-functions}
 
 これらの関数によって、コントラクトのデータの状態を変更しないことを指定します。 一般的な例としては、「getter」関数があります。例えば、これを使用してユーザーの残高を受け取ることができます。
 
@@ -131,7 +131,7 @@ def readName() -> string:
 7. 低レベル呼び出しの使用。
 8. 特定のオペコードを含むインラインアセンブリの使用。
 
-### コンストラクタ関数 \{#constructor-functions}
+### コンストラクタ関数 {#constructor-functions}
 
 `constructor`関数は、コントラクトが最初にデプロイされたときに 1 回だけ実行されます。 多くのクラスベースのプログラミング言語の`constructor`と同様に、これらの関数はしばしば、指定された値に状態変数を初期化します。
 
@@ -158,7 +158,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
     self.auctionEnd = self.auctionStart + _bidding_time
 ```
 
-### 組み込み関数 \{#built-in-functions}
+### 組み込み関数 {#built-in-functions}
 
 コントラクトで定義した変数と関数に加え、特別な組み込み関数がいくつかあります。 最もわかりやすい例は、以下のとおりです。
 
@@ -167,7 +167,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 
 これらの関数により、コントラクトは他のアカウントに ETH を送信することができます。
 
-## 関数を書く \{#writing-functions}
+## 関数を書く {#writing-functions}
 
 関数には以下のものが必要です。
 
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 完全なコントラクトはこのようになります。 ここで、`constructor`関数は、`dapp_name`変数の初期値を提供します。
 
-## イベントとログ \{#events-and-logs}
+## イベントとログ {#events-and-logs}
 
 イベント(event)を使用すると、フロントエンドやその他のサブスクライブアプリケーションからスマートコントラクトと通信できます。 トランザクションがマイニングされると、スマートコントラクトはイベントを発行し、フロントエンドが処理できるログをブロックチェーンに書き込みます。
 
-## 注釈付きの例 \{#annotated-examples}
+## 注釈付きの例 {#annotated-examples}
 
 Solidity で書かれた例を以下に示します。 コードを実行したい場合は、[Remix](http://remix.ethereum.org)で操作できます。
 
-### Hello World \{#hello-world}
+### Hello World {#hello-world}
 
 ```solidity
 // Specifies the version of Solidity, using semantic versioning.
@@ -246,7 +246,7 @@ contract HelloWorld {
 }
 ```
 
-### トークン \{#token}
+### トークン {#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -309,7 +309,7 @@ contract Token {
 }
 ```
 
-### 固有のデジタル資産 \{#unique-digital-asset}
+### 固有のデジタル資産 {#unique-digital-asset}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -639,19 +639,19 @@ contract CryptoPizza is IERC721, ERC165 {
 }
 ```
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 スマートコントラクトの全体的な概要については、Solidity と Vyper のドキュメントをご確認ください。
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
 
-## 関連トピック \{#related-topics}
+## 関連トピック {#related-topics}
 
 - [スマートコントラクト](/developers/docs/smart-contracts/)
 - [イーサリアム仮想マシン(EVM)](/developers/docs/evm/)
 
-## 関連チュートリアル \{#related-tutorials}
+## 関連チュートリアル {#related-tutorials}
 
 - [コントラクトのサイズ制限に対処するためのコントラクトのサイズ縮小](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- スマートコントラクトのサイズを小さくするための実用的なヒント_
 - [イベントを使用してスマートコントラクトからデータをログに記録](/developers/tutorials/logging-events-smart-contracts/) _- スマートコントラクトのイベントの紹介と、それを使ってデータをログに記録する方法_

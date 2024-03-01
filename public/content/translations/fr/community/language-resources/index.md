@@ -4,7 +4,7 @@ description: Ressources non anglophones pour en savoir plus sur Ethereum
 lang: fr
 ---
 
-# Ressources non-anglophones \{#language-resources}
+# Ressources non-anglophones {#language-resources}
 
 La communauté Ethereum est internationale et rassemble des millions de membres non-anglophones.
 
@@ -14,15 +14,15 @@ Si vous préférez vous documenter dans votre langue maternelle ou connaissez qu
 
 Vous connaissez une ressource éducative dans votre langue ? [Ouvrez un ticket](https://github.com/ethereum/ethereum-org-website/issues/new/choose) pour l'ajouter à la liste !
 
-## Ressources d'Ethereum.org \{#ethereum-org}
+## Ressources d'Ethereum.org {#ethereum-org}
 
 Ethereum.org est traduit d'emblée dans plus de 40 langues, que vous pouvez trouver sur notre [page des langues](/languages).
 
 Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de personnes, vous pouvez aussi contribuer au [Programme de traduction d'Ethereum.org](/contributing/translation-program/#translation-program) afin de nous aider à traduire le site.
 
-## Ressources communautaires \{#community}
+## Ressources communautaires {#community}
 
-### Portugais brésilien \{#br-pt}
+### Portugais brésilien {#br-pt}
 
 **Actualité**
 
@@ -40,7 +40,7 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Cointimes](http://www.cointimes.com.br/) - informations et ressources éducatives sur les cryptomonnaies
 - [Pack de démarrage Web3](https://docs.google.com/document/d/1X8PSTFH7FTw9J-gbKWM6Y430SWCBT8d4t4pJgFQHJ8E/) - un guide répondant aux questions crypto les plus fréquemment posées et les plus fondamentales
 
-### Chinois \{#zh}
+### Chinois {#zh}
 
 **Ressources générales**
 
@@ -67,28 +67,28 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [SecbitLabs](https://mp.weixin.qq.com/s/69_tqBJpr_sbaKtR1sBRMw) - un groupe WeChat à propos de la cryptographie, de la sécurité, etc.
 - [Sparkbyte](https://mp.weixin.qq.com/s/9KgKTc_jtJ7bWKdbNPoqvQ) - un groupe WeChat à propos de la technologie ZK
 
-### Tchèque \{#cs}
+### Tchèque {#cs}
 
 - [Gwei.cz](https://gwei.cz) - communauté locale autour du Web3, création du contenu éducatif, organisation des événements en ligne et en présentiel
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - guide Ethereum pour débutants
 - [DAO Příručka](https://dao.gwei.cz/) - guide pour débutants en DAO
 - [Maîtriser Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Maîtriser Ethereum en tchèque
 
-### Français \{#fr}
+### Français {#fr}
 
 - [Ethereum France](https://www.ethereum-france.com/) - Ethereum France organise des événements, crée du contenu et favorise les échanges autour d'Ethereum
 - [Ethereum.fr](https://ethereum.fr/) - actualité et ressources éducatives sur Ethereum
 - [BanklessFR](https://banklessfr.substack.com/) - lettre d'information de Bankless en français
 - [CryptoFR](https://cryptofr.com/category/44/ethereum-general) - forum sur les cryptomonnaies avec une rubrique consacrée à l'Ethereum
 
-### Allemand \{#de}
+### Allemand {#de}
 
 - [Microsoft Learn (Solidity)](https://docs.microsoft.com/de-de/learn/modules/blockchain-learning-solidity/) - utiliser Solidity
 - [Microsoft Learn (smart contracts)](https://docs.microsoft.com/de-de/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - écrire des contrats intelligents Ethereum avec Solidity
 - [Microsoft Learn (Ethereum networks)](https://docs.microsoft.com/de-de/learn/modules/blockchain-ethereum-networks/) - se connecter et déployer des réseaux Ethereum
 - [Microsoft Learn (blockchains)](https://docs.microsoft.com/de-de/learn/paths/ethereum-blockchain-development/) - introduction au développement de la blockchain
 
-### Italien \{#it}
+### Italien {#it}
 
 - [Ethereum Italia](https://www.ethereum-italia.it/) - formations, événements et actualités Ethereum, axés sur les contrats intelligents et la technologie blockchain
 - [Ethereum Italia Podcast](https://www.ethereum-italia.it/podcast/) - podcast sur Ethereum en italien
@@ -96,11 +96,11 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Microsoft Learn (Smart contracts)](https://docs.microsoft.com/it-it/learn/modules/blockchain-solidity-ethereum-smart-contracts/) - écrire des contrats intelligents Ethereum avec Solidity
 - [Microsoft Learn (dApps)](https://docs.microsoft.com/it-it/learn/modules/blockchain-create-ui-decentralized-apps/) - créer une interface utilisateur avec des applications décentralisées
 
-### Russe \{#ru}
+### Russe {#ru}
 
 - [Cyber Academy](https://cyberacademy.dev) - espace éducatif pour les constructeurs web3
 
-### Espagnol \{#es}
+### Espagnol {#es}
 
 - [Ethereum Madrid](https://ethereummadrid.com/) - cours, événements et blog sur la gouvernance, la DeFi et la blockchain
 - [Cointelegraph](https://es.cointelegraph.com/ethereum-for-beginners) - guide Ethereum en espagnol pour les débutants
@@ -110,18 +110,18 @@ Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de 
 - [Curso Introducción a DeFi Development](https://youtube.com/playlist?list=PLTqiwJDd_R8zZiP9_jNdaPqA3HqoW2lrS) - apprendre comment les contrats intelligents DeFi fonctionnent avec Solidity et créer votre propre Automated Market Maker
 - [Cryptoversidad](https://www.youtube.com/c/Cryptoversidad) - ressources d'éducation non-technique sur la blockchain, de débutant à confirmé. Tout savoir sur les crypto-monnaies et Ethereum.
 
-### Turc \{#tr}
+### Turc {#tr}
 
 - [BTK Akademi](https://www.btkakademi.gov.tr/portal/course/blokzincir-ve-kripto-paralar-10569#!/about) - cours axés sur la cryptomonnaie et la blockchain
 - [The great renaming: what happened to Eth2?](https://miningturkiye.org/konu/ethereum-madenciligi-bitiyor-mu-onemli-gelisme.655/) - traduction turque du grand blog de renommage, expliquant l'abandon de la terminologie « Eth2 »
 
-### Vietnamien \{#vi}
+### Vietnamien {#vi}
 
 - [Tino Group](https://wiki.tino.org/ethereum-la-gi/) - aperçu d'Ethereum, des dApps, portefeuilles et FAQ
 - [Tap Chi Bitcoin](https://tapchibitcoin.io/tap-chi/tin-tuc-ethereum-eth) - plateforme Web comportant des rubriques consacrées à l'actualité et aux ressources éducatives sur Ethereum
 - [Coin68](https://coin68.com/ethereum-tieu-diem/) - portail sur les cryptomonnaies comportant des ressources éducatives et l'actualité relative à Ethereum
 
-### Japonais \{#ja}
+### Japonais {#ja}
 
 - [Association japonaise d'échange d'actifs virtuels et de cryptomonnaies (JVCEA)](https://jvcea.or.jp/)
 - [Association des entreprises de cryptoactifs du Japon (JCBA)](https://cryptocurrency-association.org/)

@@ -4,7 +4,7 @@ lang: fr
 description: Nos critères de référencement des outils de développement sur ethereum.org
 ---
 
-# Ajouter des outils de développement \{#contributing-to-ethereumorg-}
+# Ajouter des outils de développement {#contributing-to-ethereumorg-}
 
 Nous voulons nous assurer de lister les meilleures ressources de développement possible pour que vous puissiez construire en toute confiance et bénéficier du soutien dont vous avez besoin.
 
@@ -14,7 +14,7 @@ Nous listons actuellement les outils de développement sur notre [portail des d�
 
 **N'hésitez pas à proposer de nouveaux ajouts aux pages appropriées.**
 
-## Méthode de sélection \{#ways-to-contribute}
+## Méthode de sélection {#ways-to-contribute}
 
 Les propositions d'outils de développement seront évaluées selon les critères suivants :
 
@@ -46,13 +46,13 @@ De nombreux projets dans l'espace Ethereum sont open source. Nous sommes plus su
 
 ---
 
-## Ordre des produits \{#product-ordering}
+## Ordre des produits {#product-ordering}
 
 À moins que les produits ne soient délibérément classés autrement, par exemple par ordre alphabétique, ils seront affichés par ordre d'ajout sur la page : du moins récent au plus récent. En d'autres termes, les derniers produits ajoutés figureront en bas de liste.
 
 ---
 
-## Ajout de votre outil de développement \{#how-decisions-about-the-site-are-made}
+## Ajout de votre outil de développement {#how-decisions-about-the-site-are-made}
 
 Si vous souhaitez ajouter un outil de développement à ethereum.org et qu'il répond aux critères, créez un ticket sur GitHub.
 

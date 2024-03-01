@@ -9,17 +9,17 @@ Jika terkait dengan blockchain seperti Ethereum, yang pada dasarnya adalah basis
 
 Sekalipun mekanisme konsensus tidak secara langsung terkait dengan membangun dapp, memahaminya akan memperjelas konsep yang relevan untuk Anda dan pengalaman para pengguna Anda, seperti harga gas dan frekuensi transaksi.
 
-## Prasyarat \{#prerequisites}
+## Prasyarat {#prerequisites}
 
 Untuk lebih memahami halaman ini, kami sarankan Anda membaca [pengantar Ethereum](/developers/docs/intro-to-ethereum/) kami terlebih dahulu.
 
-## Apa itu konsensus? \{#what-is-consensus}
+## Apa itu konsensus? {#what-is-consensus}
 
 Yang kami maksud dengan konsensus adalah kesepakatan umum yang telah dicapai. Anggaplah ada sebuah grup orang yang pergi ke bioskop. Jika tidak ada kesepakatan terhadap pilihan film yang diusulkan, maka konsensus dicapai. Dalam kasus ekstrem, grup akan pada akhirnya terpecah.
 
 Terkait dengan blockchain, mencapai konsensus berarti setidaknya 51% node di jaringan sepakat tentang state jaringan global berikutnya.
 
-## Apa itu mekanisme konsensus? \{#what-is-a-consensus-mechanism}
+## Apa itu mekanisme konsensus? {#what-is-a-consensus-mechanism}
 
 Mekanisme konsensus (juga dikenal sebagai protokol konsensus atau algoritma konsensus) memungkinkan sistem terdistribusi (jaringan komputer) untuk bekerja bersama dan tetap aman.
 
@@ -31,37 +31,37 @@ Mekanisme konsensus dalam sistem ekonomi kripto juga membantu mencegah beberapa 
 <YouTube id="dylgwcPH4EA" />
 }
 
-## Jenis-jenis mekanisme konsensus \{#types-of-consensus-mechanisms}
+## Jenis-jenis mekanisme konsensus {#types-of-consensus-mechanisms}
 
-### Bukti kerja \{#proof-of-work}
+### Bukti kerja {#proof-of-work}
 
 Ethereum, seperti Bitcoin, saat ini menggunakan protokol konsensus **bukti kerja (PoW)**.
 
-#### Pembuatan blok \{#pow-block-creation}
+#### Pembuatan blok {#pow-block-creation}
 
 Bukti kerja dijalankan oleh [penambang](/developers/docs/consensus-mechanisms/pow/mining/), yang bersaing untuk membuat blok baru yang penuh dengan transaksi yang diproses. Pemenang membagikan blok baru kepada jaringan lainnya dan mendapatkan beberapa ETH yang baru dicetak. Perlombaan dimenangkan oleh komputer siapa pun yang tercepat dalam memecahkan teka-teki matematika - ini menghasilkan tautan kriptografis antara blok saat ini dan blok sebelumnya. Memecahkan teka-teki ini adalah tugas di "bukti kerja".
 
-#### Keamanan \{#pow-security}
+#### Keamanan {#pow-security}
 
 Jaringan tetap terjaga aman karena Anda memerlukan 51% daya komputasi jaringan untuk menipu rantai. Ini akan membutuhkan investasi sangat besar dalam peralatan dan energi; Anda mungkin menghabiskan lebih banyak daripada yang Anda dapatkan.
 
 Selengkapnya tentang [bukti kerja](/developers/docs/consensus-mechanisms/pow/)
 
-### Bukti taruhan \{#proof-of-stake}
+### Bukti taruhan {#proof-of-stake}
 
 Ethereum memiliki rencana untuk melakukan peningkatan ke protokol konsensus **bukti taruhan (PoS)**.
 
-#### Pembuatan blok \{#pos-block-creation}
+#### Pembuatan blok {#pos-block-creation}
 
 Bukti taruhan dijalankan oleh validator yang telah mempertaruhkan ETH untuk berpartisipasi dalam sistem. Validator dipilih secara acak untuk membuat blok baru, membagikannya dengan jaringan, dan mendapatkan imbalan. Alih-alih perlu melakukan pekerjaan komputasi yang intens, Anda hanya perlu menstaking ETH Anda di jaringan. Inilah yang mendorong perilaku jaringan yang sehat.
 
-#### Keamanan \{#pos-security}
+#### Keamanan {#pos-security}
 
 Sistem bukti taruhan tetap aman karena Anda memerlukan 51% dari total ETH yang dipertaruhkan untuk menipu rantai. Dan bahwa taruhan Anda akan dipotong untuk perilaku jahat.
 
 Selengkapnya tentang [bukti taruhan](/developers/docs/consensus-mechanisms/pos/)
 
-### Panduan visual \{#types-of-consensus-video}
+### Panduan visual {#types-of-consensus-video}
 
 Tonton selengkapnya tentang berbagai jenis mekanisme konsensus yang digunakan di Ethereum:
 
@@ -69,7 +69,7 @@ Tonton selengkapnya tentang berbagai jenis mekanisme konsensus yang digunakan di
 <YouTube id="ojxfbN78WFQ" />
 }
 
-### Ketahanan Sybil dan pemilihan rantai \{#sybil-chain}
+### Ketahanan Sybil dan pemilihan rantai {#sybil-chain}
 
 Saat ini secara teknis, bukti kerja dan bukti taruhan pada dasarnya bukan protokol konsensus, tapi sering dianggap demikian agar mudah dipahami. Protokol ini sebenarnya merupakan mekanisme ketahanan Sybil dan pemilih penulis blok; merupakan cara untuk menentukan siapa penulis dari blok terakhir. Mekanisme ketahanan Sybil inilah yang dikombinasikan dengan aturan pemilihan rantai yang membentuk mekanisme konsensus sebenarnya.
 
@@ -81,7 +81,7 @@ Kombinasi bukti kerja dan aturan rantai terpanjang dikenal sebagai "Konsensus Na
 
 [Rantai Suar](/roadmap/beacon-chain/) menggunakan mekanisme konsensus yang disebut [Casper the Friendly Finality Gadget](https://arxiv.org/abs/1710.09437), yang berbasis bukti taruhan.
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 - [Apa itu Algoritma Konsensus Blockchain?](https://academy.binance.com/en/articles/what-is-a-blockchain-consensus-algorithm)
 - [Apa itu Konsensus Nakamoto? Panduan Lengkap Untuk Pemula](https://blockonomi.com/nakamoto-consensus/)
@@ -90,7 +90,7 @@ Kombinasi bukti kerja dan aturan rantai terpanjang dikenal sebagai "Konsensus Na
 
 _Tahu tentang sumber daya komunitas yang membantu Anda? Edit halaman ini dan tambahkan!_
 
-## Topik terkait \{#related-topics}
+## Topik terkait {#related-topics}
 
 - [Bukti kerja](/developers/docs/consensus-mechanisms/pow/)
 - [Penambangan](/developers/docs/consensus-mechanisms/pow/mining/)

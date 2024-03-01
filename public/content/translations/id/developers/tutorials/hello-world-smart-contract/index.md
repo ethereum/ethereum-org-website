@@ -20,11 +20,11 @@ Di bagian 2 dari tutorial ini kita akan membahas bagaimana kita dapat berinterak
 
 Jika Anda memiliki pertanyaan, silakan berdiskusi di [Discord Alchemy](https://discord.gg/gWuC7zB)!
 
-## Langkah 1: Hubungkan ke jaringan Ethereum \{#step-1}
+## Langkah 1: Hubungkan ke jaringan Ethereum {#step-1}
 
 Ada banyak cara untuk membuat permintaan ke rantai Ethereum. Untuk mempermudah, kita akan menggunakan akun gratis di Alchemy, platform pengembang rantai blok dan API yang memungkinkan kita untuk berkomunikasi dengan rantai Ethereum tanpa harus menjalankan simpul kita sendiri. Platform ini juga memiliki perangkat pengembang untuk pemantauan dan analitik yang akan kita manfaatkan dalam tutorial ini untuk memahami apa yang terjadi di balik layar dalam penyebaran kontrak pintar kita. Jika Anda belum memiliki akun Alchemy, [Anda dapat mendaftar gratis di sini](https://dashboard.alchemyapi.io/signup).
 
-## Langkah 2: Buat aplikasi Anda (dan kunci API) \{#step-2}
+## Langkah 2: Buat aplikasi Anda (dan kunci API) {#step-2}
 
 Setelah Anda membuat akun Alchemy, Anda dapat membuat kunci API dengan membuat aplikasi. Ini akan memungkinkan kita untuk membuat permintaan ke jaringan pengujian Ropsten. Jika Anda tidak terbiasa dengan jaringan uji, lihat [laman ini](/developers/docs/networks/).
 
@@ -38,7 +38,7 @@ Setelah Anda membuat akun Alchemy, Anda dapat membuat kunci API dengan membuat a
 
 3. Klik "Buat aplikasi" dan selesai! Aplikasi Anda seharusnya muncul dalam tabel di bawah ini.
 
-## Langkah 3: Buat akun Ethereum (alamat) \{#step-3}
+## Langkah 3: Buat akun Ethereum (alamat) {#step-3}
 
 Kita memerlukan akun Ethereum untuk mengirim dan menerima transaksi. Untuk tutorial ini, kita akan menggunakan MetaMask, dompet virtual dalam peramban yang digunakan untuk mengelola alamat akun Ethereum Anda. Selengkapnya tentang [transaksi](/developers/docs/transactions/).
 
@@ -46,11 +46,11 @@ Anda dapat mengunduh dan membuat akun MetaMask secara gratis [di sini](https://m
 
 ![contoh metamask ropsten](./metamask-ropsten-example.png)
 
-## Langkah 4: Tambahkan ether dari Keran \{#step-4}
+## Langkah 4: Tambahkan ether dari Keran {#step-4}
 
 Untuk menyebarkan kontrak pintar kita ke jaringan uji, kita memerlukan beberapa ETH palsu. Untuk mendapatkan ETH, Anda dapat beralih ke [keran Ropsten](https://faucet.dimensions.network/) dan memasukkan alamat akun Ropsten Anda, lalu klik "Kirim ETH Ropsten." Mungkin perlu beberapa saat untuk menerima ETH palsu Anda karena kepadatan jaringan. Anda seharusnya akan melihat ETH dalam akun MetaMask Anda dengan segera!
 
-## Langkah 5: Periksa Saldo Anda \{#step-5}
+## Langkah 5: Periksa Saldo Anda {#step-5}
 
 Untuk memeriksa ulang apakah saldo kita ada di sana, mari buat permintaan [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) dengan menggunakan [peralatan komposer Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Ini akan mengembalikan jumlah ETH dalam dompet kita. Setelah Anda memasukkan alamat akun MetaMask Anda dan klik "Kirim Permintaan", Anda akan melihat respons seperti ini:
 
@@ -62,7 +62,7 @@ Untuk memeriksa ulang apakah saldo kita ada di sana, mari buat permintaan [eth_g
 >
 > Fiuh! Uang palsu kita ada di sana <Emoji text=":money_mouth_face:" size={1} />.
 
-## Langkah 6: Inisialisasi proyek kami \{#step-6}
+## Langkah 6: Inisialisasi proyek kami {#step-6}
 
 Pertama, kita perlu membuat folder untuk proyek kita. Navigasikan ke barisan perintah dan ketik:
 
@@ -118,7 +118,7 @@ npm install --save-dev hardhat
 
 Lihat halaman ini untuk detail lebih lanjut tentang [petunjuk penginstalan](https://hardhat.org/getting-started/#overview).
 
-## Langkah 8: Buat proyek Hardhat \{#step-8}
+## Langkah 8: Buat proyek Hardhat {#step-8}
 
 Di dalam folder proyek kita jalankan:
 
@@ -148,7 +148,7 @@ Quit
 
 Ini akan menghasilkan berkas `hardhat.config.js` untuk kita yang merupakan tempat di mana kita akan menentukan semua penyiapan untuk proyek kita (pada langkah 13).
 
-## Langkah 9: Tambahkan folder proyek \{#step-9}
+## Langkah 9: Tambahkan folder proyek {#step-9}
 
 Agar proyek kami tetap teratur, kita akan membuat dua folder baru. Navigasikan ke direktori akar dari proyek Anda dalam barisan perintah dan ketik:
 
@@ -160,7 +160,7 @@ mkdir scripts
 - `contracts/` adalah tempat kita menyimpan berkas kode kontrak pintar hello world kita
 - `scripts/` adalah tempat kita menyimpan skrip untuk menyebar dan berinteraksi dengan kontrak kita
 
-## Langkah 10: Tulis kontrak kita \{#step-10}
+## Langkah 10: Tulis kontrak kita {#step-10}
 
 Anda mungkin bertanya pada diri sendiri, kapan kita akan menulis kode?? Nah, kita sudah sampai disini, pada langkah 10.
 
@@ -199,7 +199,7 @@ contract HelloWorld {
 
 Ini adalah kontrak pintar super sederhana yang menyimpan pesan saat dibuat dan dapat diperbarui dengan memanggil fungsi `update`.
 
-## Langkah 11: Hubungkan MetaMask & Alchemy ke proyek Anda \{#step-11}
+## Langkah 11: Hubungkan MetaMask & Alchemy ke proyek Anda {#step-11}
 
 Kita telah membuat dompet MetaMask, akun Alchemy, dan menulis kontrak pintar kitar, sekarang saatnya untuk menghubungkan ketiganya.
 
@@ -235,7 +235,7 @@ Untuk betul-betul menghubungkannya ke kode kita, kita akan mereferensikan variab
 Don't commit <code>.env</code>! Please make sure never to share or expose your <code>.env</code> file with anyone, as you are compromising your secrets in doing so. If you are using version control, add your <code>.env</code> to a <a href="https://git-scm.com/docs/gitignore">gitignore</a> file.
 </InfoBanner>
 
-## Langkah 12: Instal Ethers.js \{#step-12-install-ethersjs}
+## Langkah 12: Instal Ethers.js {#step-12-install-ethersjs}
 
 Ethers.js adalah pustaka yang mempermudah interaksi dan pembuatan permintaan ke Ethereum dengan membungkus [metode JSON-RPC standar](/developers/docs/apis/json-rpc/) dengan metode yang lebih ramah pengguna.
 
@@ -249,7 +249,7 @@ npm install --save-dev @nomiclabs/hardhat-ethers "ethers@^5.0.0"
 
 Kita juga memerlukan ethers dalam `hardhat.config.js` kita di langkah selanjutnya.
 
-## Langkah 13: Perbarui hardhat.config.js \{#step-13-update-hardhatconfigjs}
+## Langkah 13: Perbarui hardhat.config.js {#step-13-update-hardhatconfigjs}
 
 Kita sejauh ini telah menambahkan beberapa dependensi dan plugin, kini kita perlu memperbarui `hardhat.config.js` agar proyek kita mengenali mereka.
 
@@ -277,7 +277,7 @@ module.exports = {
 }
 ```
 
-## Langkah 14: Mengkompilasi kontrak kita \{#step-14-compile-our-contracts}
+## Langkah 14: Mengkompilasi kontrak kita {#step-14-compile-our-contracts}
 
 Untuk memastikan segalanya berjalan baik sejauh ini, mari kita kompilasikan kontrak kita. Tugas untuk `mengompilasi` merupakan salah satu tugas bawaan hardhat.
 
@@ -289,7 +289,7 @@ npx hardhat compile
 
 Anda mungkin mendapat peringatan mengenai pengenal lisensi `SPDX tidak tersedia di berkas sumber`, tetapi tidak perlu mengkhawatirkannya — semoga semua yang lainnya berjalan dengan baik! Jika tidak, Anda selalu dapat mengirim pesan di [discord Alchemy](https://discord.gg/u72VCg3).
 
-## Langkah 15: Tulis skrip penyebaran kita \{#step-15-write-our-deploy-scripts}
+## Langkah 15: Tulis skrip penyebaran kita {#step-15-write-our-deploy-scripts}
 
 Kini setelah kontrak kita ditulis dan berkas konfigurasi kita siap, inilah waktunya menulis skrip penyebaran kontrak kita.
 
@@ -325,7 +325,7 @@ const hello_world = await HelloWorld.deploy();
 
 Memanggil `deploy()` pada `ContractFactory` akan memulai penyebaran, dan mengembalikan `Promise` yang menyelesaikan ke `Contract`. Ini adalah objek yang memiliki metode untuk setiap fungsi kontrak pintar kita.
 
-## Langkah 16: Menyebarkan kontrak kita \{#step-16-deploy-our-contract}
+## Langkah 16: Menyebarkan kontrak kita {#step-16-deploy-our-contract}
 
 Akhirnya kita siap untuk menyebarkan kontrak pintar kita! Arahkan ke baris perintah dan jalankan:
 

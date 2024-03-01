@@ -20,16 +20,16 @@ When doing this, the assets are burned on L2 and then released back to the user 
 This is the way the [Optimism standard bridge](https://community.optimism.io/docs/developers/bridge/standard-bridge) works.
 In this article we go over the source code for that bridge to see how it works and study it as an example of well written Solidity code.
 
-## Control flows \{#control-flows}
+## Control flows {#control-flows}
 
 The bridge has two main flows:
 
 - Deposit (from L1 to L2)
 - Withdrawal (from L2 to L1)
 
-### Deposit flow \{#deposit-flow}
+### Deposit flow {#deposit-flow}
 
-#### Layer 1 \{#deposit-flow-layer-1}
+#### Layer 1 {#deposit-flow-layer-1}
 
 1. If depositing an ERC-20, the depositor gives the bridge an allowance to spend the amount being deposited
 2. The depositor calls the L1 bridge (`depositERC20`, `depositERC20To`, `depositETH`, or `depositETHTo`)
@@ -38,7 +38,7 @@ The bridge has two main flows:
    - ERC-20: The asset is transferred by the bridge to itself using the allowance provided by the depositor
 4. The L1 bridge uses the cross-domain message mechanism to call `finalizeDeposit` on the L2 bridge
 
-#### Layer 2 \{#deposit-flow-layer-2}
+#### Layer 2 {#deposit-flow-layer-2}
 
 5. The L2 bridge verifies the call to `finalizeDeposit` is legitimate:
    - Came from the cross domain message contract
@@ -48,26 +48,26 @@ The bridge has two main flows:
    - The L2 contract reports that it supports the correct interface ([using ERC-165](https://eips.ethereum.org/EIPS/eip-165)).
 7. If the L2 contract is the correct one, call it to mint the appropriate number of tokens to the appropriate address. If not, start a withdrawal process to allow the user to claim the tokens on L1.
 
-### Withdrawal flow \{#withdrawal-flow}
+### Withdrawal flow {#withdrawal-flow}
 
-#### Layer 2 \{#withdrawal-flow-layer-2}
+#### Layer 2 {#withdrawal-flow-layer-2}
 
 1. The withdrawer calls the L2 bridge (`withdraw` or `withdrawTo`)
 2. The L2 bridge burns the appropriate number of tokens belonging to `msg.sender`
 3. The L2 bridge uses the cross-domain message mechanism to call `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` on the L1 bridge
 
-#### Layer 1 \{#withdrawal-flow-layer-1}
+#### Layer 1 {#withdrawal-flow-layer-1}
 
 4. The L1 bridge verifies the call to `finalizeETHWithdrawal` or `finalizeERC20Withdrawal` is legitimate:
    - Came from the cross domain message mechanism
    - Was originally from the bridge on L2
 5. The L1 bridge transfers the appropriate asset (ETH or ERC-20) to the appropriate address
 
-## Layer 1 code \{#layer-1-code}
+## Layer 1 code {#layer-1-code}
 
 This is the code that runs on L1, the Ethereum Mainnet.
 
-### IL1ERC20Bridge \{#IL1ERC20Bridge}
+### IL1ERC20Bridge {#IL1ERC20Bridge}
 
 [This interface is defined here](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol).
 It includes functions and definitions required for bridging ERC-20 tokens.
@@ -233,7 +233,7 @@ Withdrawals (and other messages from L2 to L1) in Optimism are a two step proces
 2. A finalizing or claiming transaction on L1.
    This transaction needs to happen after the [fault challenge period](https://community.optimism.io/docs/how-optimism-works/#fault-proofs) for the L2 transaction ends.
 
-### IL1StandardBridge \{#il1standardbridge}
+### IL1StandardBridge {#il1standardbridge}
 
 [This interface is defined here](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1StandardBridge.sol).
 This file contains event and function definitions for ETH.
@@ -318,7 +318,7 @@ The same is true for the other events and the functions.
 }
 ```
 
-### CrossDomainEnabled \{#crossdomainenabled}
+### CrossDomainEnabled {#crossdomainenabled}
 
 [This contract](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/libraries/bridge/CrossDomainEnabled.sol) is inherited by both bridges ([L1](#the-l1-bridge-contract) and [L2](#the-l2-bridge-contract)) to send messages to the other layer.
 
@@ -460,7 +460,7 @@ In this case, the following line triggers two vulnerabilities:
 
 In this case we are not worried about reentrancy we know `getCrossDomainMessenger()` returns a trustworthy address, even if Slither has no way to know that.
 
-### The L1 bridge contract \{#the-l1-bridge-contract}
+### The L1 bridge contract {#the-l1-bridge-contract}
 
 [The source code for this contract is here](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/L1StandardBridge.sol).
 
@@ -935,7 +935,7 @@ When we moved from the implementation to this one, we had to move all the assets
 ERC-20 tokens can just be moved.
 However, to transfer ETH to a contract you need that contract's approval, which is what `donateETH` provides us.
 
-## ERC-20 Tokens on L2 \{#erc-20-tokens-on-l2}
+## ERC-20 Tokens on L2 {#erc-20-tokens-on-l2}
 
 For an ERC-20 token to fit into the standard bridge, it needs to allow the standard bridge, and _only_ the standard bridge, to mint token.
 This is necessary because the bridges need to ensure that the number of tokens circulating on Optimism is equal to the number of tokens locked inside the L1 bridge contract.
@@ -943,7 +943,7 @@ If there are too many tokens on L2 some users would be unable to bridge their as
 Instead of a trusted bridge, we would essentially recreate [fractional reserve banking](https://www.investopedia.com/terms/f/fractionalreservebanking.asp).
 If there are too many tokens on L1, some of those tokens would stay locked inside the bridge contract forever because there is no way to release them without burning L2 tokens.
 
-### IL2StandardERC20 \{#il2standarderc20}
+### IL2StandardERC20 {#il2standarderc20}
 
 Every ERC-20 token on L2 that uses the standard bridge needs to provide [this interface](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/IL2StandardERC20.sol), which has the functions and events that the standard bridge needs.
 
@@ -987,7 +987,7 @@ We need to be able to bridge any L1 token, regardless of whether L2 support was 
 Functions and events to mint (create) and burn (destroy) tokens.
 The bridge should be the only entity that can run these functions to ensure the number of tokens is correct (equal to the number of tokens locked on L1).
 
-### L2StandardERC20 \{#L2StandardERC20}
+### L2StandardERC20 {#L2StandardERC20}
 
 [This is our implementation of the `IL2StandardERC20` interface](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol).
 Unless you need some kind of custom logic, you should use this one.
@@ -1080,7 +1080,7 @@ Only the L2 bridge is allowed to mint and burn assets.
 `_mint` and `_burn` are actually defined in the [OpenZeppelin ERC-20 contract](/developers/tutorials/erc20-annotated-code/#the-_mint-and-_burn-functions-_mint-and-_burn).
 That contract just doesn't expose them externally, because the conditions to mint and burn tokens are as varied as the number of ways to use ERC-20.
 
-## L2 Bridge Code \{#l2-bridge-code}
+## L2 Bridge Code {#l2-bridge-code}
 
 This is code that runs the bridge on Optimism.
 [The source for this contract is here](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol).
@@ -1343,7 +1343,7 @@ The only way we can do this from L2 is to send a message that will have to wait 
 }
 ```
 
-## Conclusion \{#conclusion}
+## Conclusion {#conclusion}
 
 The standard bridge is the most flexible mechanism for asset transfers.
 However, because it is so generic it is not always the easiest mechanism to use.

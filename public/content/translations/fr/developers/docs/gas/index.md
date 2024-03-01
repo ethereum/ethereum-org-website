@@ -6,11 +6,11 @@ lang: fr
 
 Le gaz est un élément essentiel du réseau Ethereum. Il lui permet de fonctionner, tout comme une voiture a besoin d'essence pour avancer.
 
-## Prérequis \{#prerequisites}
+## Prérequis {#prerequisites}
 
 Pour mieux comprendre cette page, nous vous recommandons de commencer par lire celles sur les [transactions](/developers/docs/transactions/) et sur l'[EVM](/developers/docs/evm/).
 
-## Qu'est-ce que le gaz ? \{#what-is-gas}
+## Qu'est-ce que le gaz ? {#what-is-gas}
 
 Le gaz est l'unité qui mesure la quantité d'efforts de calculs requis pour exécuter des opérations spécifiques sur le réseau Ethereum.
 
@@ -26,7 +26,7 @@ Par exemple, au lieu de dire que votre gaz coûte 0,000000001 Ether, vous pouvez
 
 Le mot "gwei" est une contraction de "giga-wei", qui signifie "milliard de wei". Un gwei est égal à un milliard de wei. « Wei » (qui porte le nom de [Wei Dai](https://wikipedia.org/wiki/Wei_Dai), le créateur de [b-money](https://www.investopedia.com/terms/b/bmoney.asp)), est la plus petite unité d'ETH.
 
-## Comment sont calculées les frais de gaz ? \{#how-are-gas-fees-calculated}
+## Comment sont calculées les frais de gaz ? {#how-are-gas-fees-calculated}
 
 Vous pouvez fixer le montant du gaz que vous êtes prêt à payer lorsque vous soumettez une transaction. En choissisant une certaine quantité de gaz, vous faites une offre pour que votre transaction soit incluse dans le bloc suivant. Si votre offre est insuffisante, les validateurs seront moins enclins à choisir votre transaction pour l'inclure, ce qui signifie que votre transaction risque d'être exécutée tardivement ou de ne pas être exécutée du tout. Si vous en offrez trop, vous risquez de gaspiller de l'ETH. Alors, comment savoir combien payer ?
 
@@ -48,7 +48,7 @@ ex. `21,000 * (10 + 2) = 252,000 gwei` (0.000252 ETH).
 
 Lorsque Jordan enverra de l'argent, 1,000252 ETH sera déduit du compte de Jordan. Thierry sera crédité de 1,0000 ETH. Le validateur reçoit un pourboire de 0,000042 ETH. Les `frais de base` de 0,00021 ETH sont brûlés.
 
-### Frais de base \{#base-fee}
+### Frais de base {#base-fee}
 
 Chaque bloc a des frais de base qui servent de prix de réserve. Pour être éligible à l'inclusion dans un bloc, le prix proposé en gaz doit être au moins égal aux frais de base. Les frais de base sont calculés indépendamment du bloc actuel et sont déterminés par les blocs qui le précèdent, ce qui rend les frais de transaction plus prévisibles pour les utilisateurs. Lors de la création du bloc, les **frais de base sont "brûlés"**, ce qui les retire de la circulation.
 
@@ -77,23 +77,23 @@ Il est également important de noter qu'il est peu probable que nous assistions 
 | ...            |        ... |                 12,5 % |                   ... |
 | 100            |       30 M |                 12,5 % |     10 302 608,6 gwei |
 
-### Frais de priorité (pourboires) \{#priority-fee}
+### Frais de priorité (pourboires) {#priority-fee}
 
 Les frais de priorité (pourboire) incitent les validateurs à inclure une transaction dans le bloc. En l'absence de pourboires, les validateurs trouveraient économiquement viable de miner des blocs vides, puisqu'ils recevraient la même récompense pour les blocs. Les petits pourboires n'incitent que très peu les validateurs à inclure une transaction. Pour que les transactions soient exécutées de préférence à d'autres transactions dans le même bloc, un pourboire plus élevé peut être ajouté pour tenter de surenchérir sur les transactions concurrentes.
 
-### Frais maximums \{#maxfee}
+### Frais maximums {#maxfee}
 
 Pour exécuter une transaction sur le réseau, les utilisateurs peuvent spécifier une limite maximale qu'ils sont prêts à payer pour que leur transaction soit exécutée. Ce paramètre optionnel est connu sous le nom de `maxFeePerGas`. Pour qu'une transaction soit exécutée, les frais max doivent dépasser la somme des frais de base et du pourboire. La différence entre les frais maximums et la somme des frais de base et du pourboire est remboursée à l'émetteur de la transaction.
 
-### Taille des blocs \{#block-size}
+### Taille des blocs {#block-size}
 
 Chaque bloc vise une taille cible de 15 millions de gaz, mais leur taille s'adapte aux exigences du réseau, jusqu'à une limite de 30 millions de gaz (deux fois la taille cible de bloc). Le protocole atteint une taille d'équilibre de bloc de 15 millions en moyenne grâce au processus de _tâtonnement_. Cela signifie que si la taille du bloc est plus importante que la taille cible du bloc, le protocole augmentera les frais de base pour le bloc suivant. De même, le protocole diminuera les frais de base si la taille du bloc est inférieure à la taille cible du bloc. Le montant par lequel les frais de base sont ajustés est proportionnel à l'écart entre la taille actuelle et la taille cible du bloc. [En savoir plus sur les blocs](/developers/docs/blocks/).
 
-### Calculer les frais de gaz dans la pratique \{#calculating-fees-in-practice}
+### Calculer les frais de gaz dans la pratique {#calculating-fees-in-practice}
 
 Vous pouvez indiquer explicitement le montant que vous êtes prêt à payer pour que votre transaction soit exécutée. Cependant, la plupart des fournisseurs de portefeuilles fixent automatiquement des frais de transaction recommandés (frais de base + frais de priorité recommandés) afin de réduire la complexité imposée à leurs utilisateurs.
 
-## Pourquoi les frais de gaz existent-ils ? \{#why-do-gas-fees-exist}
+## Pourquoi les frais de gaz existent-ils ? {#why-do-gas-fees-exist}
 
 En résumé, les frais de gaz aident à sécuriser le réseau Ethereum. En exigeant des frais pour chaque calcul exécuté sur le réseau, nous empêchons les acteurs malveillants de spammer le réseau. Afin d'éviter les boucles infinies accidentelles ou hostiles ou d'autres gaspillages de calcul dans le code, chaque transaction doit limiter le nombre d'étapes de calcul dans l'exécution du code. L'unité fondamentale de calcul est le « gaz ».
 
@@ -101,23 +101,23 @@ Bien qu'une transaction comprenne une limite, tout gaz inutilisé dans une trans
 
 ![Diagramme montrant comment le gaz non utilisé est remboursé](../transactions/gas-tx.png) _Schéma adapté à partir du document [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
-## Qu'est-ce que la limite de gaz ? \{#what-is-gas-limit}
+## Qu'est-ce que la limite de gaz ? {#what-is-gas-limit}
 
 La limite de gaz correspond à la quantité maximale de gaz que vous êtes prêt à consommer lors d'une transaction. Les transactions plus compliquées impliquant des [contrats intelligents](/developers/docs/smart-contracts/) nécessitent plus de travail de calcul, et donc une limite de gaz supérieure à celle d'un simple paiement. Un transfert standard d'ETH nécessite une limite de gaz de 21 000 unités de gaz.
 
 Par exemple, si vous définissez votre limite de gaz à 50 000 pour un simple transfert ETH, l'EVM en consommera 21 000 et vous récupérerez les 29 000 restants. Cependant, si vous fixez un montant de gaz trop faible, par exemple une limite de gaz de 20 000 pour un simple transfert ETH, l'EVM consommera vos 20 000 unités de gaz en essayant de réaliser la transaction, mais celle-ci ne sera pas complète. L'EVM annule alors toute modification, mais comme le validateur a déjà effectué un travail d'une valeur de 20 000 unités de gaz, ce gaz est consommé.
 
-## Pourquoi les frais de gaz peuvent-ils devenir si élevés ? \{#why-can-gas-fees-get-so-high}
+## Pourquoi les frais de gaz peuvent-ils devenir si élevés ? {#why-can-gas-fees-get-so-high}
 
 Les frais élevés de gaz sont le fruit de la popularité d'Ethereum. Si la demande est trop forte, les utilisateurs doivent proposer des pourboires plus élevés pour tenter de surenchérir sur les transactions des autres utilisateurs. Un pourboire plus élevé augmentera la possibilité que votre transaction soit intégrée au prochain bloc. De plus, les applications de contrats intelligents plus complexes peuvent effectuer de nombreuses opérations pour assurer leurs fonctions, ce qui leur fait consommer beaucoup de gaz.
 
-## Initiatives mises en œuvre pour réduire les coûts du gaz \{#initiatives-to-reduce-gas-costs}
+## Initiatives mises en œuvre pour réduire les coûts du gaz {#initiatives-to-reduce-gas-costs}
 
 [Les mises à jour d'évolutivité](/roadmap/) d'Ethereum devraient en fin de compte résoudre certains problèmes liés aux frais de gaz et permettra à la plate-forme de traiter des milliers de transactions par seconde et à l'échelle mondiale.
 
 La mise à l'échelle de la couche 2 est une initiative primordiale pour améliorer considérablement les coûts de gaz, l'expérience utilisateur et l'évolutivité. [En savoir plus sur la mise à l'échelle de la couche 2](/developers/docs/scaling/#layer-2-scaling).
 
-## Que fut la mise à niveau London / EIP-1559 ? \{#what-was-the-london-upgrade-eip-1559}
+## Que fut la mise à niveau London / EIP-1559 ? {#what-was-the-london-upgrade-eip-1559}
 
 Avant la mise à jour de Londres, Ethereum avait des blocs de taille fixe. En période de forte demande du réseau, ces blocs fonctionnaient au maximum de sa capacité En conséquence, les utilisateurs devaient souvent attendre que la demande diminue pour être inclus dans un bloc, ce qui entraînait une mauvaise expérience utilisateur. La mise à niveau de Londres a permis d'introduire des blocs de taille variable dans Ethereum.
 
@@ -135,7 +135,7 @@ Cette vidéo explique l'EIP-1559 et les avantages qu'il procure :
 <YouTube id="MGemhK9t44Q" />
 }
 
-## Suivi des frais de gaz \{#moitoring-gas-fees}
+## Suivi des frais de gaz {#moitoring-gas-fees}
 
 Si vous voulez surveiller les prix du gaz et pouvoir envoyer votre ETH à moindre coût, vous pouvez utiliser différents outils comme :
 
@@ -143,11 +143,11 @@ Si vous voulez surveiller les prix du gaz et pouvoir envoyer votre ETH à moindr
 - [Blocknative ETH Gas Estimator](https://chrome.google.com/webstore/detail/blocknative-eth-gas-estim/ablbagjepecncofimgjmdpnhnfjiecfm) _Extension Chrome pour estimer le gaz à la fois pour les transactions de Type 0 et les transactions de Type 2 EIP-1559 ._
 - [Cryptoneur Gas Fees Calculator](https://www.cryptoneur.xyz/gas-fees-calculator) _Calculez les frais de gaz dans votre devise locale pour différents types de transaction sur le réseau principal, Arbitrum et Polygon._
 
-## Outils connexes \{#related-tools}
+## Outils connexes {#related-tools}
 
 - [Blocknative's Gas Platform](https://www.blocknative.com/gas) _API d'estimation de gaz propulsé par la plate-forme globale Blocknative de données mempool_
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [Explication du gaz sur Ethereum](https://defiprime.com/gas)
 - [Réduire la consommation de gaz de vos contrats intelligents](https://medium.com/coinmonks/8-ways-of-reducing-the-gas-consumption-of-your-smart-contracts-9a506b339c0a)

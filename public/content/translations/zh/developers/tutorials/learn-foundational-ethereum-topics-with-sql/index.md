@@ -19,7 +19,7 @@ sourceUrl: https://paulapivat.com/post/query_ethereum/
 
 链上数据可以帮助我们理解网络和算力经济 — 以太坊，并且帮助我们理解以太坊当前所面临的挑战（例如不断上涨的燃料），更重要的是，了解一些围绕扩容解决方案的讨论。
 
-### 交易 \{#transactions}
+### 交易 {#transactions}
 
 用户以太坊之旅的第一步是初始化具有以太币余额的用户控制帐户或实体。 账户类型分为两种 — 用户控制账户或智能合约（参阅 [ethereum.org](/developers/docs/accounts/)）。
 
@@ -63,19 +63,19 @@ FROM temp_table
 
 产生的信息与 Etherscan 交易页面提供的信息相同。 为了比较起见，下面是两种来源的信息：
 
-#### Etherscan \{#etherscan}
+#### Etherscan {#etherscan}
 
 ![](./etherscan_view.png)
 
 [Etherscan 上以太坊基金会的合约页面。](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
-#### Dune Analytics \{#dune-analytics}
+#### Dune Analytics {#dune-analytics}
 
 ![](./dune_view.png)
 
 可以在[此处](https://duneanalytics.com/paulapivat/Learn-Ethereum)找到仪表板。 点击表格查看查询（另请参阅上文）。
 
-### 交易明细 \{#breaking_down_transactions}
+### 交易明细 {#breaking_down_transactions}
 
 提交的交易包含几条信息，包括[（原文）](/developers/docs/transactions/)：
 
@@ -104,7 +104,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### 区块 \{#blocks}
+### 区块 {#blocks}
 
 每笔交易都会改变以太坊虚拟机 ([EVM](/developers/docs/evm/)) 的状态（[原文](/developers/docs/transactions/)）。 交易广播到网络上进行验证并被记录在一个区块中。 每笔交易都与一个区块编号相关联。 要查看数据，我们可以查询一个具体的区块编码：12396854（截至本文撰写日期 2021 年 11 月 5 日，以太坊基金会交易中最新的区块）。
 
@@ -211,7 +211,7 @@ FROM temp_table
 
 2016 年以来每天产生的平均区块数量略高于 5,874 个。 或者，将 86400 秒除以平均区块数量 5874 应得到 14.7 秒，或大约每 15 秒一个区块。
 
-### 燃料 \{#gas}
+### 燃料 {#gas}
 
 区块的大小是有限的。 最大区块大小是动态的，根据网络需求在 12,500,000 到 25,000,000 个单位之间变化。 需要设置大小限制，防止任意大的区块大小给全节点造成磁盘空间和速度要求方面的压力（[出处](/developers/docs/blocks/)）。
 
@@ -263,7 +263,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### 总结 \{#summary}
+### 总结 {#summary}
 
 在本教程中，我们经过查询和感受链上数据，了解了以太坊基础概念以及以太坊区块链工作原理。
 

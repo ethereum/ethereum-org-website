@@ -5,7 +5,7 @@ lang: fi
 sidebarDepth: 1
 ---
 
-# Opi Ethereumista \{#learn-about-ethereum}
+# Opi Ethereumista {#learn-about-ethereum}
 
 **Tervetuloa ethereum.org/learn -sivulle - kokoelmaan resursseja, jotka auttavat sinua oppimaan lisää Ethereumista.** Tämä sivu sisältää teknisiä **ja** ei-teknisiä artikkeleja, ohjeita ja resursseja. Jos olet täysin uusi Ethereumiin, [suosittelemme aloittamaan täältä](/fi/beginners/).
 
@@ -27,7 +27,7 @@ Tämän sivun lisäksi saatavilla on useita yhteisön luomia resursseja, jotka o
 - [ethresear.ch forum](https://ethresear.ch/) _Syvempiä teknisiä keskusteluja Ethereumista, ETH 2.0:sta ja muusta aiheeseen liittyvästä_
 - [ETHGlobal](https://ethglobal.co) _Ethereumin hackathon-sarja - liity itsekin lähimpään!_
 
-## Ethereumin perusteet \{#ethereum-basics}
+## Ethereumin perusteet {#ethereum-basics}
 
 Onko Ethereum sinulle uusi? Nämä englanninkieliset artikkelit ja lähteet ovat hyvä paikka aloittaa.
 
@@ -38,7 +38,7 @@ Onko Ethereum sinulle uusi? Nämä englanninkieliset artikkelit ja lähteet ovat
 - [The Case for Ethereum](http://blog.eladgil.com/2018/01/the-case-for-ethereum.html) _Jan 30, 2018 - Elad Gil_
 - [Blockchains: How they Work and Why they’ll Change the World](https://spectrum.ieee.org/computing/networks/blockchains-how-they-work-and-why-theyll-change-the-world) _Sept 28, 2017 - Morgan Peck_
 
-## Kuinka Ethereum toimii \{#how-ethereum-works}
+## Kuinka Ethereum toimii {#how-ethereum-works}
 
 Korkeatasoisia englanninkielisiä artikkeleita Ethereumista ja lohkoketjuteknologiasta yleisesti.
 
@@ -47,33 +47,33 @@ Korkeatasoisia englanninkielisiä artikkeleita Ethereumista ja lohkoketjuteknolo
 - [Introduction to Blockchain through Cryptoeconomics - Part 1](https://medium.com/blockchain-at-berkeley/introduction-to-blockchain-through-cryptoeconomics-part-1-bitcoin-369f245067f9) _Jan 26, 2018 - Zubin Koticha_
 - [Introduction to Blockchain through Cryptoeconomics - Part 2](https://medium.com/mechanism-labs/introduction-to-bitcoin-through-cryptoeconomics-part-2-proof-of-work-and-nakamoto-consensus-1252f6a6c012) _July 19, 2018 - Zubin Koticha_
 
-## Älysopimukset \{#smart-contracts}
+## Älysopimukset {#smart-contracts}
 
 "Älysopimus" on yksinkertaisuudessaan koodinpätkä, joka suoritetaan Ethereumissa. Sitä kutsutaan "sopimukseksi", koska koodi, joka suoritetaan Ethereumissa, voi ohjata arvokkaita asioita, kuten ETH:iä tai muita digitaalisia varoja.
 
 - Haluatko oppia ohjelmoimaan älysopimuksia Ethereumilla? [ethereum.org/fi/developers](/developers/)
 - [What is a Smart Contract?](https://github.com/ethereumbook/ethereumbook/blob/develop/07smart-contracts-solidity.asciidoc#what-is-a-smart-contract) _Nov 12, 2018 - Andreas M. Antonopoulos, Gavin Wood_
 
-## Proof-of-work ja louhinta \{#proof-of-work-and-mining}
+## Proof-of-work ja louhinta {#proof-of-work-and-mining}
 
 Ethereum käyttää menetelmää nimeltä "proof-of-work". Tämä mahdollistaa Ethereum-verkon konsensusmenettelyn, jolla validoidaan kaikkien Ethereum-lohkoketjuun tallennettujen tietojen tila ja estetään tietynlaisia taloudellisia hyökkäyksiä.
 
 ETH 2.0 -versiossa Ethereum tulee siirtymään toiseen menetelmään nimeltä "proof-of-stake". [Lue lisää ETH 2.0 -versiosta jäljempänä](#consensus-layer-upgrades).
 
-## Asiakasohjelmat ja solmut \{#clients-and-nodes}
+## Asiakasohjelmat ja solmut {#clients-and-nodes}
 
 Ethereum-tietoverkko on rakennettu useista solmuista, joissa suoritetaan niille yhteensopivia asiakasohjelmistoja. Kahta asiakasohjelmaa käytetään suurimmassa osassa solmuista: [Geth](https://geth.ethereum.org/) (kirjoitettu Golla) ja [Parity](https://www.parity.io/ethereum/) (kirjoitettu Rustilla).
 
 - Haluatko oppia kuinka ajaa itse luomaasi solmua? → [ethereum.org/fi/developers](/developers/#clients-running-your-own-node/)
 - [Kattava lista kaikista Ethereum-asiakasohjelmista](https://github.com/ConsenSys/ethereum-developer-tools-list#ethereum-clients)
 
-## Ethereum yrityksille \{#enterprise-ethereum}
+## Ethereum yrityksille {#enterprise-ethereum}
 
 Enterprise Ethereum viittaa yksityis-, yhteistyö- ja hybriditoteutuksiin Ethereumin-koodipohjasta liiketoimintasovelluksia varten. Yritykset ympäri maailmaa käyttävät jo nyt Enterprise Ethereumia taloudellisten markkinoiden tehostamiseen, toimitusketjujen hallnitaan ja uusien liiketoimintamallien luomiseen.
 
 Lue lisää aiheesta [Ethereum yrityksille](/fi/enterprise/).
 
-## Ethereumin skaalattavuuden parantaminen \{#improving-ethereums-scalability}
+## Ethereumin skaalattavuuden parantaminen {#improving-ethereums-scalability}
 
 Työn alla on monia pyrkimyksiä lisätä Ethereumin skaalautuvuutta parantamalla sen nopeutta ja liiketapahtumien kokonaissuoritustehoa. Yleisesti nämä on lajiteltu Taso 1- ja Taso 2 -ratkaisuihin.
 
@@ -85,22 +85,22 @@ Taso 2 viittaa teknologioihin, jotka on rakennettu Ethereumin pääprotokollan p
 - [The Case for Ethereum Scalability](https://medium.com/connext/the-case-for-ethereum-scalability-d2a8035f880f) _Jan 18, 2019 - Hunter Hillman, Steven McKie, and Eric Olszewski_
 - [5 Ways to Scale your Ethereum Dapp](https://kauri.io/article/7ccaaa2fe7f344d5bf53807cb5c01530) _Apr 23, 2019 - Andreas Wallendahl_
 
-### Maksu- ja tilakanavat \{#payment--state-channels}
+### Maksu- ja tilakanavat {#payment--state-channels}
 
 - [State Channels - an explanation](https://www.jeffcoleman.ca/state-channels/) _Nov 6, 2015 - Jeff Coleman_
 - [Basics of State Channels](https://education.district0x.io/general-topics/understanding-ethereum/basics-state-channels/) _District0x_
 
-### Sivuketjut \{#sidechains}
+### Sivuketjut {#sidechains}
 
 - [Scaling Ethereum Dapps through Sidechains](https://medium.com/loom-network/dappchains-scaling-ethereum-dapps-through-sidechains-f99e51fff447) _Feb 8, 2018 - Georgios Konstantopoulos_
 
-### Plasma \{#plasma}
+### Plasma {#plasma}
 
 - [Understanding Plasma, Part 1: The Basics](https://www.theblockcrypto.com/2019/02/07/understanding-plasma-part-1-the-basics/) _Feb 7, 2019 - Daniel Goldman_
 - [Understanding Plasma](https://education.district0x.io/general-topics/understanding-ethereum/understanding-plasma/) _District0x_
 - [Learn Plasma - Oppimisresurssi Plasma-ohjelmistokehykseen](https://www.learnplasma.org/en/)
 
-## ETH 2.0 \{#consensus-layer-upgrades}
+## ETH 2.0 {#consensus-layer-upgrades}
 
 ETH 2.0 (tunnetaan myös nimellä Serenity) viittaa seuraavaan merkittävään päivitykseen Ethereumin ydinprotokollassa. Se yhdistää useita parannuksia Ethereumin ydinprotokollaan eli Taso 1:een.
 
@@ -108,11 +108,11 @@ ETH 2.0 (tunnetaan myös nimellä Serenity) viittaa seuraavaan merkittävään p
 - [ETH 2.0 - The Road to Scaling Ethereum - Vitalik Buterin](https://youtu.be/kCVpDrlVesA) _(Video) November, 2018 - YouTube_
 - [9 Things You Didn't Know About Ethereum 2.0](https://our.status.im/9-things-you-didnt-know-about-ethereum-2-0/) _July 18, 2019 - Bruno Škvorc_
 
-## ETH 1.x \{#execution-layer-upgrades}
+## ETH 1.x {#execution-layer-upgrades}
 
 ETH 1.x on nimi kokoelmalle päivityksiä nykyiseen Ethereum-protokollaan. Tavoite on jatkaa Ethereumin kehitystä ja ylläpitoa sillä aikaa, kun ETH 2.0:aa kehitetään ja toteutetaan.
 
-## Kryptoekonomia \{#cryptoeconomics}
+## Kryptoekonomia {#cryptoeconomics}
 
 "Kryptoekonomia" on käytännön tiede hajautettujen järjestelmien rakentamiselle, missä näiden järjestelmien ominaisuudet turvataan taloudellisilla kannustimilla ja missä taloudelliset mekanismit turvataan krytografialla. Kyseessä on yleinen termi, jota käytetään lohkoketjujen, kuten Ethereumin ja Bitcoinin, suunnittelusta ja skaalaamisesta.
 
@@ -120,7 +120,7 @@ ETH 1.x on nimi kokoelmalle päivityksiä nykyiseen Ethereum-protokollaan. Tavoi
 - [Intro to Cryptoeconomics](https://www.youtube.com/watch?v=F0FCI8GxO5I) _(Video) Aug 19, 2018 - Karl Floersch_
 - [Making Sense of Cryptoeconomics](https://medium.com/l4-media/making-sense-of-cryptoeconomics-5edea77e4e8d) _Nov 16 2017 - Josh Stark_
 
-## Kritiikki ja skeptisyys \{#critique-and-skepticism}
+## Kritiikki ja skeptisyys {#critique-and-skepticism}
 
 Kriittiset näkökulmat Ethereumista ja kryptovaluutoista (englanniksi).
 

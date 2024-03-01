@@ -18,7 +18,7 @@ sourceUrl: https://soliditydeveloper.com/thegraph
 
 Bu kez, geçen yıl merkeziyetsiz uygulamalar geliştirmeye yönelik standart yığının asli bir parçası hâline gelen Graph'e daha yakından bakacağız. Önce geleneksel yöntemlerle bunları nasıl yapacağımızı görelim...
 
-## The Graph olmasaydı... \{#without-the-graph}
+## The Graph olmasaydı... {#without-the-graph}
 
 O hâlde örnekleme amacıyla basit bir örnekle gidelim. Hepimiz oyunları severiz, bu yüzden kullanıcıların bahis oynadığı basit bir oyun hayal edin:
 
@@ -83,7 +83,7 @@ Bunun neden optimal olmadığını görebilirsiniz:
 
 Şimdi daha iyi bir çözüme bakalım.
 
-## Sizi GraphQL ile tanıştırayım \{#let-me-introduce-to-you-graphql}
+## Sizi GraphQL ile tanıştırayım {#let-me-introduce-to-you-graphql}
 
 İlk önce, orijinal olarak Facebook tarafından tasarlanan ve uygulanan GraphQL'den bahsedelim. Geleneksel Rest API modeline aşina olabilirsiniz. Şimdi bunun yerine tam olarak istediğiniz veriler için bir sorgu yazabileceğinizi hayal edin:
 
@@ -97,7 +97,7 @@ Bunun neden optimal olmadığını görebilirsiniz:
 
 Şimdi bu bilgiyle, nihayet blok zinciri alanına ve The Graph'a geçelim.
 
-## The Graph nedir? \{#what-is-the-graph}
+## The Graph nedir? {#what-is-the-graph}
 
 Blok zinciri, merkeziyetsiz bir veri tabanıdır ancak normalden farklı olarak bu veri tabanı için bir sorgu dilimiz yoktur. Verileri almak için çözümler, zahmetli veya tamamen imkansızdır. The Graph, blok zinciri verilerini endekslemek ve sorgulamak için merkeziyetsiz bir protokoldür. Tahmin etmişsinizdir, sorgulama dili olarak GraphQL kullanıyor.
 
@@ -105,7 +105,7 @@ Blok zinciri, merkeziyetsiz bir veri tabanıdır ancak normalden farklı olarak 
 
 Bir şeyleri anlamanın en iyi yolu örnekler olduğu için GameContract örneğimiz için The Graph'i kullanalım.
 
-## Bir Alt grafik nasıl oluşturulur \{#how-to-create-a-subgraph}
+## Bir Alt grafik nasıl oluşturulur {#how-to-create-a-subgraph}
 
 Verilerin nasıl endeksleneceğinin tanımına alt grafik denir. Üç bileşen gerektirir:
 
@@ -113,7 +113,7 @@ Verilerin nasıl endeksleneceğinin tanımına alt grafik denir. Üç bileşen g
 2. Şema (`schema.graphql`)
 3. Eşleştirme (`mapping.ts`)
 
-### Manifesto (`subgraph.yaml`) \{#manifest}
+### Manifesto (`subgraph.yaml`) {#manifest}
 
 Manifesto, yapılandırma dosyamızdır ve şunları tanımlar:
 
@@ -157,7 +157,7 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-### Şema (`schema.graphql`) \{#schema}
+### Şema (`schema.graphql`) {#schema}
 
 Şema, GraphQL veri tanımıdır. Hangi varlıkların var olduğunu ve bunların türlerini tanımlamanıza izin verecektir. The Graph tarafından desteklenen veri türleri şunlardır
 
@@ -188,7 +188,7 @@ type Player @entity {
 }
 ```
 
-### Eşleştirme (`mapping.ts`) \{#mapping}
+### Eşleştirme (`mapping.ts`) {#mapping}
 
 Graph'teki eşleştirme dosyası, gelen olayları varlıklara dönüştüren fonksiyonlarımzı tanımlar. TypeScript'in bir alt kümesi olan AssemblyScript ile yazılmıştır. Bu, eşleştirmenin daha verimli ve taşınabilir yürütülmesi için WASM'de (WebAssembly) derlenebileceği anlamına gelir.
 
@@ -240,7 +240,7 @@ export function handleNewBet(event: PlacedBet): void {
 }
 ```
 
-## Bunu Ön Uçta kullanma \{#using-it-in-the-frontend}
+## Bunu Ön Uçta kullanma {#using-it-in-the-frontend}
 
 Apollo Boost gibi bir şey kullanarak Graph'i React merkeziyetsiz uygulamanıza (veya Apollo-Vue) kolayca entegre edebilirsiniz. Özellikle React kancaları ve Apollo kullanırken veri almak, bileşeninize tek bir GraphQl sorgusu yazmak kadar basittir. Tipik bir kurulum şöyle görünebilir:
 
@@ -291,19 +291,19 @@ React.useEffect(() => {
 
 Ama yapbozun son bir parçası eksik: sunucu. Kendiniz çalıştırabilir veya barındırılan hizmeti kullanabilirsiniz.
 
-## The Graph sunucusu \{#the-graph-server}
+## The Graph sunucusu {#the-graph-server}
 
-### Graph Arayıcısı: Barındırılan hizmet \{#graph-explorer-the-hosted-service}
+### Graph Arayıcısı: Barındırılan hizmet {#graph-explorer-the-hosted-service}
 
 En kolay yol, barındırılan hizmeti kullanmaktır. Bir alt grafik dağıtmak için [buradaki](https://thegraph.com/docs/deploy-a-subgraph) yönergeleri takip edin. Birçok proje için mevcut alt grafikleri [explorer](https://thegraph.com/explorer/)'da bulabilirsiniz.
 
 ![Graph-Arayıcısı](./thegraph-explorer.png)
 
-### Kendi düğümünüzü çalıştırma \{#running-your-own-node}
+### Kendi düğümünüzü çalıştırma {#running-your-own-node}
 
 Alternatif olarak kendi düğümünüzü çalıştırabilirsiniz. Dosyalar [buradadır](https://github.com/graphprotocol/graph-node#quick-start). Bunu yapmanın bir nedeni, barındırılan hizmet tarafından desteklenmeyen bir ağ kullanmak olabilir. Şu anda Ana Ağ, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI ve Sokol desteklenmektedir.
 
-## Merkeziyetsiz gelecek \{#the-decentralized-future}
+## Merkeziyetsiz gelecek {#the-decentralized-future}
 
 GraphQL, yeni gelen olaylar için akışları da destekler. Bu henüz The Graph tarafından tam olarak desteklenmiyor, ancak yakında yayınlanacak.
 

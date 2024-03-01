@@ -6,7 +6,7 @@ lang: id
 
 Web2 mengacu pada versi internet yang diketahui oleh kebanyakan dari kita hari ini. Sebuah internet yang didominasi oleh perusahaan yang menyediakan layanan dengan imbalan data pribadi Anda. Web3, dalam konteks Ethereum, mengacu pada aplikasi terdesentralisasi yang beroperasi pada blockchain. Inilah aplikasi yang memungkinkan siapa pun untuk berpartisipasi tanpa menghasilkan uang dari data pribadi mereka.
 
-## Keuntungan Web3 \{#web3-benefits}
+## Keuntungan Web3 {#web3-benefits}
 
 Banyak pengembang Web3 telah memilih membangun dapp karena aspek desentralisasi bawaan Ethereum:
 
@@ -15,7 +15,7 @@ Banyak pengembang Web3 telah memilih membangun dapp karena aspek desentralisasi 
 - Pembayaran dilakukan lewat token asli, ether (ETH).
 - Ethereum bersifat lengkap secara turing, yang berarti Anda hampir bisa memrogram apa saja.
 
-## Perbandingan praktis \{#practical-comparisons}
+## Perbandingan praktis {#practical-comparisons}
 
 | Web2                                                                                           | Web3                                                                                                                                                 |
 | ---------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -25,7 +25,7 @@ Banyak pengembang Web3 telah memilih membangun dapp karena aspek desentralisasi 
 
 Ini tidak berarti semua layanan perlu diubah menjadi dapp. Contoh ini hanya menjelaskan perbedaan utama antara layanan web2 dan web3.
 
-## Keterbatasan Web3 \{#web3-limitations}
+## Keterbatasan Web3 {#web3-limitations}
 
 Web3 memiliki beberapa keterbatasan saat ini:
 
@@ -34,7 +34,7 @@ Web3 memiliki beberapa keterbatasan saat ini:
 - Aksesibilitas – kurangnya integrasi di browser web modern membuat web3 kurang dapat diakses bagi kebanyakan pengguna.
 - Biaya – dapps paling sukses memasukkan bagian sangat kecil dari kode mereka ke dalam rantai blok karena ini sangat mahal.
 
-## Sentralisasi vs Terdesentralisasi \{#centralization-vs-decentralization}
+## Sentralisasi vs Terdesentralisasi {#centralization-vs-decentralization}
 
 Dalam tabel di bawah, kami mencantumkan beberapa keuntungan dan kerugian jaringan digital terpusat dan terdesentralisasi secara umum.
 
@@ -50,7 +50,7 @@ Dalam tabel di bawah, kami mencantumkan beberapa keuntungan dan kerugian jaringa
 
 Perhatikan bahwa ini adalah pola umum yang mungkin tidak selalu benar dalam setiap jaringan. Lagipula, dalam kenyataannya seberapa jauh sebuah jaringan bersifat terpusat/terdesentralisasi terletak pada spektrum; tidak ada jaringan yang benar-benar terpusat atau terdesentralisasi.
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 - [What is Web3?](/web3/) - _ethereum.org_
 - [Arsitektur aplikasi Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_

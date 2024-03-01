@@ -9,13 +9,13 @@ Der Betrieb eines eigenen Nodes bietet Ihnen verschiedene Vorteile, eröffnet ne
 
 Bitte beachten Sie, dass seit [der Zusammenführung](/roadmap/merge) zwei Clients erforderlich sind, um einen Ethereum-Knoten zu betreiben; ein Client auf **Ausführungsebene (EL)** und ein Client auf **Konsensebene (CL)**. Auf dieser Seite zeigen wir Ihnen die Installation, Konfiguration und Verbindung dieser beiden Clients, um einen Ethereum-Knoten zu betreiben.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Sie sollten verstehen, was ein Ethereum-Knoten ist und warum Sie ggf. einen Client betreiben sollten. Dieses Thema wird unter [Nodes und Clients](/developers/docs/nodes-and-clients/) behandelt.
 
 Wenn das Thema neu für Sie ist oder Sie nach einem weniger technischen Weg suchen, empfehlen wir Ihnen, zunächst unsere benutzerfreundliche Einführung zum [Betrieb eines Ethereum-Knotens](/run-a-node) zu lesen.
 
-## Herangehensweise bestimmen \{#choosing-approach}
+## Herangehensweise bestimmen {#choosing-approach}
 
 Der erste Schritt beim Einrichten Ihres Knotens besteht in der Wahl der Herangehensweise. Auf der Grundlage der Anforderungen und der verschiedenen Möglichkeiten müssen Sie die Client-Implementierung (sowohl für Ausführungs- als auch für Konsensclients), die Umgebung (Hardware, System) und die Parameter für die Client-Einstellungen auswählen.
 
@@ -31,9 +31,9 @@ Wenn Ihr Knoten ausgeführt wird und synchronisiert ist, können Sie diesen [nut
 
 ![Client-Setup](./diagram.png)
 
-### Umgebung und Hardware \{#environment-and-hardware}
+### Umgebung und Hardware {#environment-and-hardware}
 
-#### Lokal oder Cloud \{#local-vs-cloud}
+#### Lokal oder Cloud {#local-vs-cloud}
 
 Ethereum-Clients können auf gewöhnlichen Heim-Computern ausgeführt werden und benötigen keine spezielle Hardware, wie z. B. Mining-Maschinen. Sie haben also verschiedene Möglichkeiten, den Knoten je nach Ihren Bedürfnissen zu betreiben. Zur Vereinfachung stellen wir uns vor, dass ein Knoten sowohl auf einem lokalen physischen Computer als auch auf einem Cloud-Server ausgeführt werden kann:
 
@@ -50,7 +50,7 @@ Ethereum-Clients können auf gewöhnlichen Heim-Computern ausgeführt werden und
 
 Beide Optionen haben verschiedene Vorteile, die oben zusammengefasst sind. Wenn Sie eine Cloud-Lösung suchen, gibt es neben vielen traditionellen Cloud-Computing-Anbietern auch Dienste, die sich auf die Bereitstellung von Knoten konzentrieren. Unter [Nodes als Dienste](/developers/docs/nodes-and-clients/nodes-as-a-service/) finden Sie weitere Optionen für gehostete Nodes.
 
-#### Hardware \{#hardware}
+#### Hardware {#hardware}
 
 Ein zensurresistentes, dezentrales Netz sollte sich jedoch nicht auf Cloud-Anbieter verlassen. Stattdessen ist es für das Ökosystem gesünder, wenn Sie Ihren Node auf Ihrer eigenen lokalen Hardware betreiben. [Schätzungen](https://www.ethernodes.org/networkType/Hosting) zeigen, dass ein großer Teil der Knoten in der Cloud betrieben werden, was zu einer einzelnen Fehlerquelle führen kann.
 
@@ -58,7 +58,7 @@ Ethereum-Clients können auf Ihrem Computer, Laptop, Server oder sogar auf einem
 
 Die Verwendung Ihrer eigenen Hardware kann sehr einfach sein. Es gibt viele einfache Optionen, aber auch fortgeschrittene Einstellungen für technisch versierte Personen. Schauen wir uns also die Voraussetzungen und Mittel für die Ausführung von Ethereum-Clients auf Ihrem Rechner an.
 
-#### Voraussetzungen \{#requirements}
+#### Voraussetzungen {#requirements}
 
 Die Hardware-Anforderungen sind je nach Client unterschiedlich, aber im Allgemeinen nicht besonders hoch, da der Knoten nur synchronisiert bleiben muss. Verwechseln Sie das nicht mit dem Mining, das viel mehr Rechenleistung erfordert. Die Synchronisation von Zeit und Leistung verbessert sich jedoch mit leistungsstärkerer Hardware.
 
@@ -101,26 +101,26 @@ Der von Ihnen gewählte Synchronisierungsmodus und Client wirken sich auf den Sp
 
 Bei Konsens-Clients hängt der Platzbedarf auch von der Client-Implementierung und den aktivierten Funktionen (z. B. Validator Slasher) ab, im Allgemeinen werden jedoch weitere 200 GB für Beacon-Daten benötigt. Mit einer großen Anzahl von Validatoren steigt auch die Bandbreitenbelastung. [Details zu den Anforderungen an Konsensclients finden Sie in dieser Analyse](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e).
 
-#### Plug-and-Play-Lösungen \{#plug-and-play}
+#### Plug-and-Play-Lösungen {#plug-and-play}
 
 Die einfachste Möglichkeit, einen Knoten mit eigener Hardware zu betreiben, ist die Verwendung von Plug-and-Play-Modulen. Vorkonfigurierte Geräte von Anbietern bieten die unkomplizierteste Lösung: bestellen, anschließen, loslegen. Alles ist vorkonfiguriert und läuft automatisch mit einer intuitiven Anleitung und einem Dashboard zur Überwachung und Steuerung der Software.
 
 - [DappNode](https://dappnode.io/)
 - [Avado](https://ava.do/)
 
-#### Ethereum auf einem Einplatinenrechner \{#ethereum-on-a-single-board-computer}
+#### Ethereum auf einem Einplatinenrechner {#ethereum-on-a-single-board-computer}
 
 Eine einfache und kostengünstige Möglichkeit, einen Ethereum-Node zu betreiben, ist die Verwendung eines Einplatinenrechners, sogar mit einer ARM-Architektur wie dem Raspberry Pi. [Ethereum on ARM](https://ethereum-on-arm-documentation.readthedocs.io/en/latest/) bietet einfach auszuführende Implementierungen von mehreren Ausführungs- und Konsensclients für Raspberry Pi und anderer ARM-Boards.
 
 Kleine, kostengünstige und effiziente Geräte wie diese sind ideal für den Betrieb eines Knotens im eigenen Haushalt, doch sollte man ihre begrenzte Leistung nicht überschätzen.
 
-## Hochfahren des Nodes \{#spinning-up-node}
+## Hochfahren des Nodes {#spinning-up-node}
 
 Die eigentliche Client-Einrichtung kann entweder mit automatischen Startprogrammen (Launcher) oder manuell erfolgen, indem die Client-Software direkt eingerichtet wird.
 
 Für weniger fortgeschrittene Benutzer empfiehlt sich die Verwendung eines „Launchers“, einer Software, die Sie durch die Installation führt und den Client-Einrichtungsprozess automatisiert. Wenn Sie jedoch etwas Erfahrung im Umgang mit einem Terminal haben, sollten die Schritte zur manuellen Einrichtung einfach zu befolgen sein.
 
-### Geführte Einrichtung \{#automatized-setup}
+### Geführte Einrichtung {#automatized-setup}
 
 Mehrere benutzerfreundliche Projekte zielen darauf ab, die Erfahrungen bei der Einrichtung eines Kunden zu verbessern. Diese Launcher bieten eine automatische Client-Installation und -Konfiguration, wobei einige sogar eine grafische Oberfläche für die geführte Einrichtung und Überwachung der Clients bieten.
 
@@ -132,13 +132,13 @@ Im Folgenden finden Sie einige Projekte, mit denen Sie Clients mit wenigen Klick
 - [NiceNode](https://www.nicenode.xyz/) – Ein Launcher mit einer einfachen Benutzerführung, um einen Node auf Ihrem Computer zu starten. Wählen Sie einfach Clients aus und starten Sie sie mit ein paar Klicks. Noch in der Entwicklung.
 - [Sedge](https://docs.sedge.nethermind.io/docs/intro) – Node-Einrichtungstool, das mit Hilfe eines CLI-Assistenten automatisch eine Docker-Konfiguration erstellt. Geschrieben in Go von Nethermind.
 
-### Manuelle Einrichtung von Clients \{#manual-setup}
+### Manuelle Einrichtung von Clients {#manual-setup}
 
 Die andere Möglichkeit besteht darin, die Client-Software manuell herunterzuladen, zu überprüfen und zu konfigurieren. Auch wenn einige Clients eine grafische Oberfläche bieten, erfordert eine manuelle Einrichtung immer noch Grundkenntnisse im Umgang mit dem Terminal, bietet aber viel mehr Möglichkeiten.
 
 Wie bereits erläutert, muss für die Einrichtung Ihres eigenen Ethereum-Knotens ein Paar bestehend aus Konsens- und Ausführungsclients ausgeführt werden. Einige Clients können einen „leichten Client“ der alternativen Art enthalten und synchronisieren, ohne dass weitere Software erforderlich ist. Für eine vollständige vertrauenswürdige Überprüfung sind jedoch beide Implementierungen erforderlich.
 
-#### Abrufen der Client-Software \{#getting-the-client}
+#### Abrufen der Client-Software {#getting-the-client}
 
 Als erstes müssen Sie sich Ihre bevorzugte Software für den [Ausführungsclient](/developers/docs/nodes-and-clients/#execution-clients) und [Konsensclient](/developers/docs/nodes-and-clients/#consensus-clients) beschaffen.
 
@@ -183,7 +183,7 @@ sha256sum teku-22.6.1.tar.gz
 9b2f8c1f8d4dab0404ce70ea314ff4b3c77e9d27aff9d1e4c1933a5439767dde
 ```
 
-#### Client-Setup \{#client-setup}
+#### Client-Setup {#client-setup}
 
 Nach der Installation, dem Herunterladen oder dem Kompilieren der Client-Software sind Sie bereit, sie auszuführen. Das bedeutet lediglich, dass es mit der richtigen Konfiguration ausgeführt werden muss. Die Clients bieten eine vielfältige Auswahl an Konfigurationsoptionen, die verschiedene Funktionen aktivieren können.
 
@@ -195,7 +195,7 @@ Zu Testzwecken sollten Sie einen Client in einem der Testnetzwerke betreiben. [S
 
 Beispiele für laufende Ausführungsclients mit Grundkonfiguration finden Sie im nächsten Abschnitt.
 
-#### Starten des Ausführungsclients \{#starting-the-execution-client}
+#### Starten des Ausführungsclients {#starting-the-execution-client}
 
 Bevor Sie die Ethereum-Client-Software starten, überprüfen Sie noch einmal, ob Ihre Systemumgebung bereit ist. Stellen Sie beispielsweise Folgendes sicher:
 
@@ -217,7 +217,7 @@ Dieser Token wird automatisch von der Client-Software generiert, in manchen Fäl
 openssl rand -hex 32 > jwtsecret
 ```
 
-#### Betreiben eines Ausführungsclients \{#running-an-execution-client}
+#### Betreiben eines Ausführungsclients {#running-an-execution-client}
 
 Dieser Abschnitt führt Sie durch die Einrichtung eines Ausführungsclients. Er dient nur als Beispiel für eine Grundkonfiguration, mit der der Client entsprechend dieser Einstellungen gestartet wird:
 
@@ -298,7 +298,7 @@ Die Nethermind-Dokumente bieten eine [vollständige Anleitung](https://docs.neth
 
 Ein Ausführungsclient initiiert seine Kernfunktionen, wählt Endpunkte und beginnt mit der Suche nach Peers. Nach erfolgreicher Erkennung von Peers beginnt der Client mit der Synchronisierung. Der Ausführungsclient wartet auf eine Verbindung vom Konsensclient. Die aktuellen Blockchain-Daten sind verfügbar, sobald der Client erfolgreich mit dem aktuellen Zustand synchronisiert wurde.
 
-#### Starten des Konsensclients \{#starting-the-consensus-client}
+#### Starten des Konsensclients {#starting-the-consensus-client}
 
 Der Konsensclient muss mit der richtigen Port-Konfiguration gestartet werden, um eine lokale RPC-Verbindung zum Ausführungsclient herzustellen. Die Konsensclients müssen mit dem offengelegten Ausführungsclient-Port als Konfigurationsargument ausgeführt werden.
 
@@ -371,7 +371,7 @@ teku --network mainnet \
 
 Wenn sich ein Konsensclient mit dem Ausführungsclient verbindet, um den Einzahlungsvertrag zu lesen und die Validatoren zu identifizieren, verbindet er sich auch mit anderen Beacon Node-Peers und beginnt mit der Synchronisierung der Konsens-Slots ab der Genesis. Sobald der Beacon Node die aktuelle Epoche erreicht, wird die Beacon API für Ihre Validatoren nutzbar. Erfahren Sie mehr über [Beacon Node APIs](https://eth2docs.vercel.app/).
 
-### Hinzufügen von Validatoren \{#adding-validators}
+### Hinzufügen von Validatoren {#adding-validators}
 
 Ein Konsensclient dient als Beacon Node, mit dem sich Validatoren verbinden können. Jeder Konsensclient verfügt über eine eigene Validierungssoftware, die in der jeweiligen Dokumentation ausführlich beschrieben wird.
 
@@ -381,7 +381,7 @@ Der einfachste Weg, mit dem Staking und der Generierung von Validatorenschlüsse
 
 Auf der [Staking-Seite](/staking) finden Sie einen Überblick über die Staking-Optionen.
 
-### Verwendung eines Knotens \{#using-the-node}
+### Verwendung eines Knotens {#using-the-node}
 
 Ausführungsclients bieten [RPC-API-Endpunkte](/developers/docs/apis/json-rpc/), mit denen Sie Transaktionen einreichen, mit dem Ethereum-Netzwerk interagieren oder Smart Contracts auf verschiedene Weise einsetzen können:
 
@@ -393,7 +393,7 @@ Verschiedene Clients verfügen über unterschiedliche Implementierungen der RPC-
 
 Die Konsensclients stellen alle eine [Beacon API](https://ethereum.github.io/beacon-APIs) zur Verfügung, die verwendet werden kann, um den Status des Konsensclients zu überprüfen oder Blöcke und Konsensdaten herunterzuladen, indem Anfragen mit Tools wie [Curl](https://curl.se) gesendet werden. Weitere Informationen hierzu finden Sie in der Dokumentation des jeweiligen Konsensclients.
 
-#### Weitere Informationen hierzu finden Sie in der Dokumentation des jeweiligen Konsensclients. \{#reaching-rpc}
+#### Weitere Informationen hierzu finden Sie in der Dokumentation des jeweiligen Konsensclients. {#reaching-rpc}
 
 Der Standardport für den Ausführungsclient JSON-RPC ist `8545`, Sie können jedoch die Ports der lokalen Endpunkte in der Konfiguration ändern. Standardmäßig ist die RPC-Schnittstelle nur über den localhost Ihres Computers erreichbar. Um sie aus der Ferne zugänglich zu machen, können Sie sie der Öffentlichkeit präsentieren, indem Sie die Adresse zu `0.0.0.0` ändern. Hierdurch wird sie über das lokale Netz und öffentliche IP-Adressen erreichbar. In den meisten Fällen müssen Sie außerdem eine Portweiterleitung auf Ihrem Router einrichten.
 
@@ -409,11 +409,11 @@ Dazu müssen Sie Ihren eigenen [Onion-Service](https://community.torproject.org/
 
 Eine der beliebtesten Möglichkeiten, Zugang zu internen Netzen zu erhalten, ist schließlich eine VPN-Verbindung. Je nach Anwendungsfall und der Anzahl der Benutzer, die Zugang zu Ihrem Knoten benötigen, könnte eine sichere VPN-Verbindung eine Option sein. [OpenVPN](https://openvpn.net/) ist ein SSL-VPN mit vollem Funktionsumfang, das eine sichere Netzwerkerweiterung auf OSI-Ebene 2 oder 3 unter Verwendung des Branchenstandards SSL/TLS-Protokoll implementiert, flexible Client-Authentifizierungsmethoden auf der Grundlage von Zertifikaten, Smartcards und/oder Benutzername/Passwort-Anmeldeinformationen unterstützt und benutzer- oder gruppenspezifische Zugriffskontrollrichtlinien unter Verwendung von Firewall-Regeln für die virtuelle VPN-Schnittstelle ermöglicht.
 
-### Betreiben des Knotens \{#operating-the-node}
+### Betreiben des Knotens {#operating-the-node}
 
 Sie sollten Ihren Knoten regelmäßig überwachen, um sicherzustellen, dass er ordnungsgemäß funktioniert. Möglicherweise müssen Sie gelegentlich Wartungsarbeiten durchführen.
 
-#### Eine Node online lassen \{#keeping-node-online}
+#### Eine Node online lassen {#keeping-node-online}
 
 Ihr Knoten muss nicht die ganze Zeit online sein, Sie sollten ihn jedoch so oft wie möglich online lassen, damit er sich mit dem Netzwerk synchronisieren kann. Sie können ihn ausschalten, um ihn neu zu starten, bedenken Sie jedoch Folgendes:
 
@@ -423,11 +423,11 @@ Ihr Knoten muss nicht die ganze Zeit online sein, Sie sollten ihn jedoch so oft 
 
 _Dies gilt nicht für Validierungsknoten auf Konsensebene._ Wenn Sie Ihren Knoten offline schalten, wirkt sich dies auf alle von ihm abhängigen Dienste aus. Wenn Sie einen Node für _Sicherungszwecke_ betreiben, sollten Sie versuchen, die Ausfallzeiten so gering wie möglich zu halten.
 
-#### Erstellung von Client-Diensten \{#creating-client-services}
+#### Erstellung von Client-Diensten {#creating-client-services}
 
 Erwägen Sie die Einrichtung eines Dienstes, der Ihren Client automatisch beim Start ausführt. Auf Linux-Servern wäre es zum Beispiel eine gute Praxis, einen Dienst zu erstellen, z. B. mit `systemd`, der den Client mit der richtigen Konfiguration unter einem Benutzer mit begrenzten Rechten ausführt und automatisch neu startet.
 
-#### Aktualisieren von Clients \{#updating-clients}
+#### Aktualisieren von Clients {#updating-clients}
 
 Sie müssen Ihre Client-Software mit den neuesten Sicherheitspatches, Funktionen und [EIPs](/eips/) auf dem neuesten Stand halten. Besonders vor [Hard Forks](/history/) sollten Sie sicherstellen, dass Sie die richtigen Client-Versionen verwenden.
 
@@ -437,17 +437,17 @@ Die Aktualisierung der Clients ist sehr einfach. Jeder Client hat spezifische An
 
 Jede Client-Implementierung hat eine von Menschen lesbare Versionszeichenfolge, die im Peer-to-Peer-Protokoll verwendet wird, aber auch über die Befehlszeile zugänglich ist. Anhand dieses Versionsstrings können die Nutzer überprüfen, ob sie die richtige Version verwenden. Außerdem ermöglicht er es Blockexplorern und anderen Analysewerkzeugen eine quantitative Analyse der Verteilung bestimmter Clients im Netz. Weitere Informationen zu den Versionsstrings finden Sie in der jeweiligen Client-Dokumentation.
 
-#### Ausführung zusätzlicher Dienste \{#running-additional-services}
+#### Ausführung zusätzlicher Dienste {#running-additional-services}
 
 Wenn Sie einen eigenen Knoten betreiben, können Sie Dienste nutzen, die einen direkten Zugang zum Ethereum-Client-RPC erfordern. Dabei handelt es sich um Dienste, die auf Ethereum aufbauen, wie [Layer-2-Lösungen](/developers/docs/scaling/#layer-2-scaling), Backend für Wallets, Block-Explorer, Entwicklertools und andere Ethereum-Infrastruktur.
 
-#### Überwachung des Knotens \{#monitoring-the-node}
+#### Überwachung des Knotens {#monitoring-the-node}
 
 Um Ihren Knoten ordnungsgemäß zu überwachen, sollten Sie Metriken sammeln. Clients stellen Metrik-Endpunkte bereit, damit Sie umfassende Daten über Ihren Knoten erhalten können. Verwenden Sie Tools wie [InfluxDB](https://www.influxdata.com/get-influxdb/) oder [Prometheus](https://prometheus.io/), um Datenbanken zu erstellen, die Sie in Software wie [Grafana](https://grafana.com/) in Visualisierungen und Diagramme umwandeln können. Es gibt viele Setups für die Verwendung dieser Software und verschiedene Grafana-Dashboards, mit denen Sie Ihre Knoten und das Netzwerk als Ganzes visualisieren können. Sehen Sie sich zum Beispiel das [Tutorial zur Überwachung von Geth](/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/) an.
 
 Behalten Sie im Rahmen der Überwachung auch die Leistung Ihres Rechners im Auge. Während der ersten Synchronisierung Ihres Knotens kann die Client-Software sehr viel CPU und RAM beanspruchen. Zusätzlich zu Grafana können Sie dafür die Tools Ihres Betriebssystems wie `htop` oder `uptime` verwenden.
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [Leitfaden für Ethereum Staking](https://github.com/SomerEsat/ethereum-staking-guides) - _Somer Esat, häufig aktualisiert_
 - [Anleitung | Einrichtung eines Validators für das Staken auf dem Ethereum Mainnet](https://www.coincashew.com/coins/overview-eth/guide-or-how-to-setup-a-validator-on-eth2-mainnet) _- CoinCashew, regelmäßig aktualisiert_
@@ -458,7 +458,7 @@ Behalten Sie im Rahmen der Überwachung auch die Leistung Ihres Rechners im Auge
 - [Running a Hyperledger Besu Node on the Ethereum Mainnet: Benefits, Requirements, and Setup](https://pegasys.tech/running-a-hyperledger-besu-node-on-the-ethereum-mainnet-benefits-requirements-and-setup/) _– Felipe Faraggi, 7. Mai 2020_
 - [Deploying Nethermind Ethereum Client with Monitoring Stack](https://medium.com/nethermind-eth/deploying-nethermind-ethereum-client-with-monitoring-stack-55ce1622edbd) _– Nethermind.eth, 8. Juli 2020_
 
-## Verwandte Themen \{#related-topics}
+## Verwandte Themen {#related-topics}
 
 - [Knotenpunkte und Clients](/developers/docs/nodes-and-clients/)
 - [Blöcke](/developers/docs/blocks/)

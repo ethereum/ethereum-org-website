@@ -12,11 +12,11 @@ Ancak Ethereum, [iş ispatından](/developers/docs/consensus-mechanisms/pow) [hi
 
 Bu yeni türdeki anahtar, [**Boneh-Lyn-Shacham (BLS)** imza şemasını kullanır](https://wikipedia.org/wiki/BLS_digital_signature). BLS, imzaların çok verimli bir şekilde toplanmasına imkân tanırken, aynı zamanda topplanmış bireysel doğrulayıcı anahtarlarının tersine mühendislik ile çözülmesine izin verir ve doğrulayıcılar arasındaki işlemleri yönetmek için idealdir.
 
-## Doğrulayıcı anahtarlarının iki türü \{#two-types-of-keys}
+## Doğrulayıcı anahtarlarının iki türü {#two-types-of-keys}
 
 Hisse ispatına geçiş yapmadan önce, Ethereum kullanıcılarının fonlarına erişmek için sadece tek bir eliptik eğri tabanlı özel anahtarı vardı. Hisse ispatının tanıtılmasıyla birlikte, solo paydaş olmak isteyen kullanıcılar aynı zamanda bir **doğrulayıcı anahtarı** ve bir **para çekme anahtarı** gerekli oldu.
 
-### Doğrulayıcı anahtarı \{#validator-key}
+### Doğrulayıcı anahtarı {#validator-key}
 
 Doğrulayıcı imza anahtarı iki öğeden oluşur:
 
@@ -35,13 +35,13 @@ Bu esneklik, doğrulayıcı imza anahtarlarını bir cihazdan diğerine çok hı
 
 **Doğrulayıcı açık anahtarı** bir kullanıcı hisseleme mevduat sözleşmesine ETH yatırdığında işlem verisine dahil olarak bulunur. Bu _yatırma verisi_ olarak bilinir ve Ethereum'un doğrulayıcıyı tanımlamasına izin verir.
 
-### Para çekme kimlik bilgileri \{#withdrawal-credentials}
+### Para çekme kimlik bilgileri {#withdrawal-credentials}
 
 Her doğrulayıcı _para çekme kimlikleri_ olarak bilinen özelliğe sahiptir. Bu 32-bayt alan ya BLS para çekme kimliklerini temsil eden `0x00` ile başlar ya da yürütme adresine işaret eden kimlikleri temsil eden `0x01` ile başlar.
 
 `0x00` BLS anahtarları olan doğrulayıcılar fazla bakiye ödemelerini aktive etmek ve hisselemelerini tam olarak çekebilmek için bu kimlikleri güncellemek zorundadır. Bu, başlangıç anahtar üretiminde yatırılan verileri yürütme adresiyle destekleyerek yapılabilir _VEYA_ `BLSToExecutionChange` mesajını imzalamak ve yayınlamak için daha sonra bir para çekme anahtarı kullanılarak yapılabilir.
 
-### Para çekme anahtarı \{#withdrawal-key}
+### Para çekme anahtarı {#withdrawal-key}
 
 Eğer başlangıç yatırımı sırasında ayarlanmamışsa, para çekme anahtarının yürütme adresini işaret eden para çekme kimlik bilgileriyle güncellenmesi gerekir. Bu fazla bakiye ödemeleri süreci başlamasına iimkân sunar, ayrıca kullanıcıların hisselenmiş ETH'lerini çekmelerini sağlar.
 
@@ -56,7 +56,7 @@ Doğrulayıcı anahtarlarınızı Ethereum hesabınızdan ayırmak birçok doğr
 
 ![doğrulayıcı anahtarı şeması](validator-key-schematic.png)
 
-## Güvenlik kelimelerinden anahtarlar türetmek \{#deriving-keys-from-seed}
+## Güvenlik kelimelerinden anahtarlar türetmek {#deriving-keys-from-seed}
 
 Eğer hisselenen tüm 32 ETH, tamamen yeni 2 set bağımsız anahtarları gerektirseydi, anahtar yönetimi özellikle birden fazla doğrulayıcı çalıştıran kullanıcılar için çok çabuk kullanılması zor bir hale gelirdi. Bunun yerine, birçok doğrulayıcı anahtarı tek bir genel paroladan türetilir ve bu tek parola birçok doğrulayıcı anahtarına erişime izin verir.
 
@@ -90,7 +90,7 @@ Her bir bölümün `/` yani `m/2` tarafından ayrılması, ana anahatar ve takip
 
 ![doğrulayıcı anahtarı mantığı](multiple-keys.png)
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Ethereum Foundation blog gönderisi, Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [EIP-2333 BLS12-381 anahtar üretimi](https://eips.ethereum.org/EIPS/eip-2333)

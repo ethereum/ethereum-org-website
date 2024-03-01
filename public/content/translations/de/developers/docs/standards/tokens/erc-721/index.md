@@ -4,7 +4,7 @@ description:
 lang: de
 ---
 
-## Einführung \{#introduction}
+## Einführung {#introduction}
 
 **Was ist ein nicht-fungibler Token?**
 
@@ -16,13 +16,13 @@ Der ERC-721 führt eine Norm für NFT ein, mit anderen Worten, diese Art von Tok
 
 Ja! Alle NFTs haben eine `uint256` Variable namens `TokenId` und bei jedem ERC-721 Contract muss das Paar aus `Kontaktadresse uint256 TokenId` global eindeutig sein. Eine dApp kann einen „Konverter" haben, der die `TokenId` als Eingabe verwendet und ein Bild von etwas Coolem ausgibt, wie Zombies, Waffen, Fertigkeiten oder Krypto-Kitties!
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 - [Konten](/developers/docs/accounts/)
 - [Smart Contracts](/developers/docs/smart-contracts/)
 - [Token-Standards](/developers/docs/standards/tokens/)
 
-## Hauptteil \{#body}
+## Hauptteil {#body}
 
 Der ERC-721 (Ethereum Request for Comments 721), im Januar 2018 von William Entriken, Dieter Shirley, Jacob Evans und Nastassia Sachs vorgeschlagen, ist ein nicht-fungibler Token-Standard, der eine API für Tokens innerhalb von Smart Contracts implementiert.
 
@@ -32,7 +32,7 @@ Wenn ein Smart Contract folgende Methoden und Ereignisse implementiert, kann er 
 
 Aus [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-### Methoden \{#methods}
+### Methoden {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ Aus [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### Events \{#events}
+### Events {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -54,11 +54,11 @@ Aus [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### Beispiele \{#web3py-example}
+### Beispiele {#web3py-example}
 
 Lassen Sie uns sehen, wie wichtig ein Standard ist, um es uns einfach zu machen, jeden ERC-721 Token-Vertrag auf Ethereum zu inspizieren. Wir benötigen nur das Application Binary Interface (ABI) des Vertrags, um eine Schnittstelle zu jedem ERC-721 Token zu erstellen. Wie Sie unten sehen können, werden wir ein vereinfachtes ABI verwenden, um es zu einem Beispiel mit geringer Reibung zu machen.
 
-#### Web3.py Beispiel \{#web3py-example}
+#### Web3.py Beispiel {#web3py-example}
 
 Stellen Sie zuerst sicher, dass Sie [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python-Bibliothek installiert haben:
 
@@ -225,7 +225,7 @@ birth_logs = w3.eth.getLogs({
 recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## Beliebte NFTs \{#popular-nfts}
+## Beliebte NFTs {#popular-nfts}
 
 - [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) Liste der Top-NFT auf Ethereum, nach Transfervolumen sortiert.
 - [Krypto-Kitties](https://www.cryptokitties.co/) ist ein Spiel mit Fokus auf das Züchten und Sammeln liebenswerter Kreaturen, die wir Krypto-Kitties nennen.
@@ -235,7 +235,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Gods Unchained Cards](https://godsunchained.com/) ist ein TCG auf der Ethereum-Blockchain, welches NFTs verwendet, um In-Game-Assets als Eigentum zu verleihen.
 - [Bored Ape Yacht Club](https://boredapeyachtclub.com) ist eine Sammlung von 10.000 einzigartigen NFTs, die nicht nur ein nachweislich seltenes Kunstwerk sind, sondern auch als Mitgliedschaftsmarke für den Club fungieren und den Mitgliedern Vergünstigungen und Vorteile bieten, die sich im Laufe der Zeit aufgrund der Bemühungen der Gemeinschaft erhöhen.
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [EIP-721: ERC-721 Nicht-Fungibler Token-Standard](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 Dokumentation](https://docs.openzeppelin.com/contracts/3.x/erc721)

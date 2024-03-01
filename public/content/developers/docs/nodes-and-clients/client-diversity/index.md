@@ -7,27 +7,27 @@ sidebarDepth: 2
 
 The behavior of an Ethereum node is controlled by the client software it runs. There are several production-level Ethereum clients, each one developed and maintained in different languages by separate teams. The clients are built to a common spec that ensures the clients seamlessly communicate with each other and have the same functionality and provide an equivalent user experience. However, at the moment the distribution of clients across nodes is not equal enough to realize this network fortification to its full potential. Ideally, users divide roughly equally across the various clients to bring as much client diversity as possible to the network.
 
-## Prerequisites \{#prerequisites}
+## Prerequisites {#prerequisites}
 
 If you don't already understand what nodes and clients are, check out [nodes and clients](/developers/docs/nodes-and-clients/). [Execution](/glossary/#execution-layer) and [consensus](/glossary/#consensus-layer) layers are defined in the glossary.
 
-## Why are there multiple clients? \{#why-multiple-clients}
+## Why are there multiple clients? {#why-multiple-clients}
 
 Multiple, independently developed and maintained clients exist because client diversity makes the network more resilient to attacks and bugs. Multiple clients is a strength unique to Ethereum - other blockchains rely on the infallibility of a single client. However, it is not enough simply to have multiple, clients available, they have to be adopted by the community and the total active nodes distributed relatively evenly across them.
 
-## Why is client diversity important? \{#client-diversity-importance}
+## Why is client diversity important? {#client-diversity-importance}
 
 Having many independently developed and maintained clients is vital for the health of a decentralized network. Let's explore the reasons why.
 
-### Bugs \{#bugs}
+### Bugs {#bugs}
 
 A bug in an individual client is less of a risk to the network when representing a minority of Ethereum nodes. With a roughly even distribution of nodes across many clients, the likelihood of most clients suffering from a shared issue is small, and as a result, the network is more robust.
 
-### Resilience to attacks \{#resilience}
+### Resilience to attacks {#resilience}
 
 Client diversity also offers resilience to attacks. For example, an attack that [tricks a particular client](https://twitter.com/vdWijden/status/1437712249926393858) onto a particular branch of the chain is unlikely to be successful because other clients are unlikely to be exploitable in the same way and the canonical chain remains uncorrupted. Low client diversity increases the risk associated with a hack on the dominant client. Client diversity has already proven to be an important defense against malicious attacks on the network, for example the Shanghai denial-of-service attack in 2016 was possible because attackers were able to trick the dominant client (Geth) into executing a slow disk i/o operation tens of thousands of times per block. Because alternative clients were also online which did not share the vulnerability, Ethereum was able to resist the attack and continue to operate while the vulnerability in Geth was fixed.
 
-### Proof-of-stake finality \{#finality}
+### Proof-of-stake finality {#finality}
 
 A bug in a consensus client with over 33% of the Ethereum nodes could prevent the consensus layer from finalizing, meaning users could not trust that transactions would not be reverted or changed at some point. This would be very problematic for many of the apps built on top of Ethereum, particularly DeFi.
 
@@ -35,11 +35,11 @@ A bug in a consensus client with over 33% of the Ethereum nodes could prevent th
 
 Although these are unlikely scenarios, the Ethereum eco-system can mitigate their risk by evening out the distribution of clients across the active nodes. Ideally, no consensus client would ever reach a 33% share of the total nodes.
 
-### Shared responsibility \{#responsibility}
+### Shared responsibility {#responsibility}
 
 There is also a human cost to having majority clients. It puts excess strain and responsibility on a small development team. The lesser the client diversity, the greater the burden of responsibility for the developers maintaining the majority client. Spreading this responsibility across multiple teams is good for both the health of Ethereum's network of nodes and its network of people.
 
-## Current client diversity \{#current-client-diversity}
+## Current client diversity {#current-client-diversity}
 
 ![Pie chart showing client diversity](./client-diversity.png)
 _Diagram data from [ethernodes.org](https://ethernodes.org) and [clientdiversity.org](https://clientdiversity.org/)_
@@ -50,15 +50,15 @@ The execution layer data were obtained from [Ethernodes](https://ethernodes.org)
 
 Up to date client diversity data for the consensus layer is now available at [clientdiversity.org](https://clientdiversity.org/).
 
-## Execution layer \{#execution-layer}
+## Execution layer {#execution-layer}
 
 Until now, the conversation around client diversity has focused mainly on the consensus layer. However, the execution client [Geth](https://geth.ethereum.org) currently accounts for around 85% of all nodes. This percentage is problematic for the same reasons as for consensus clients. For example, a bug in Geth affecting transaction handling or constructing execution payloads could lead to consensus clients finalizing problematic or bugged transactions. Therefore, Ethereum would be healthier with a more even distribution of execution clients, ideally with no client representing more than 33% of the network.
 
-## Use a minority client \{#use-minority-client}
+## Use a minority client {#use-minority-client}
 
 Addressing client diversity requires more than individual users to choose minority clients - it requires mining/validator pools and institutions like the major dapps and exchanges to switch clients too. However, all users can do their part in redressing the current imbalance and normalizing the use of all the available Ethereum software. After The Merge, all node operators will be required to run an execution client and a consensus client. Choosing combinations of the clients suggested below will help increase client diversity.
 
-### Execution clients \{#execution-clients}
+### Execution clients {#execution-clients}
 
 [Besu](https://www.hyperledger.org/use/besu)
 
@@ -68,7 +68,7 @@ Addressing client diversity requires more than individual users to choose minori
 
 [Go-Ethereum](https://geth.ethereum.org/)
 
-### Consensus clients \{#consensus-clients}
+### Consensus clients {#consensus-clients}
 
 [Nimbus](https://nimbus.team/)
 
@@ -82,7 +82,7 @@ Addressing client diversity requires more than individual users to choose minori
 
 Technical users can help accelerate this process by writing more tutorials and documentation for minority clients and encouraging their node-operating peers to migrate away from the dominant clients. Guides for switching to a minority consensus client are available on [clientdiversity.org](https://clientdiversity.org/).
 
-## Client diversity dashboards \{#client-diversity-dashboards}
+## Client diversity dashboards {#client-diversity-dashboards}
 
 Several dashboards give real-time client diversity statistics for the execution and consensus layer.
 
@@ -95,7 +95,7 @@ Several dashboards give real-time client diversity statistics for the execution 
 - [execution-diversity.info](https://execution-diversity.info/)
 - [Ethernodes](https://ethernodes.org/)
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [Client diversity on Ethereum's consensus layer](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA)
 - [Ethereum Merge: Run the majority client at your own peril!](https://dankradfeist.de/ethereum/2022/03/24/run-the-majority-client-at-your-own-peril.html) – _Dankrad Fiest, March 24 2022_
@@ -105,7 +105,7 @@ Several dashboards give real-time client diversity statistics for the execution 
 - [Ethereum Diversity and How to Solve For It (YouTube)](https://www.youtube.com/watch?v=1hZgCaiqwfU)
 - [clientdiversity.org](https://clientdiversity.org/)
 
-## Related topics \{#related-topics}
+## Related topics {#related-topics}
 
 - [Run an Ethereum node](/run-a-node/)
 - [Nodes and clients](/developers/docs/nodes-and-clients/)

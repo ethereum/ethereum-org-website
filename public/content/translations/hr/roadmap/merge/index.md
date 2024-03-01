@@ -15,7 +15,7 @@ summaryPoint4: Spajanjem je potrošnja energije Ethereuma smanjena za približno
   Spajanje je provedeno 15. rujna 2022. Dovršeni prijelaz Ethereuma na konsenzus dokaza uloga službeno je zamijenio dokaz rada i smanjio potrošnju energije za približno 99,95 %.
 </UpgradeStatus>
 
-## Što je spajanje? \{#what-is-the-merge}
+## Što je spajanje? {#what-is-the-merge}
 
 Spajanje predstavlja objedinjavanje izvornog izvršnog sloja Ethereuma (glavne mreže koja je postojala još od [geneze](/history/#frontier)) s novim slojem konsenzusa dokaza uloga pod nazivom Beacon Chain. Time se uklanja potreba za energetski intenzivnim rudarenjem i umjesto toga mreža se osigurava korištenjem ulagačkog ETH-a. To je bio dosta značajan korak vizije Ethereuma kao prilagodljivijeg, sigurnijeg i održivijeg.
 
@@ -27,7 +27,7 @@ U početku je [Beacon Chain](/roadmap/beacon-chain/) bio odvojen od [glavne mre�
 
 Zamislite Ethereum kao svemirski brod koji je izbačen u orbitu prije nogo što je bio spreman za zvjezdano putovanje. Uz Beacon Chain zajednica je izgradila novi stroj i ojačala njegov trup. Nakon iscrpnog testiranja, odlučeno je da je vrijeme za zamjenu starog stroja u radu novim. Time je uveden nov i učinkovitiji motor u postojeći brod koji mu omogućuje dodatne svjetlosne godine i osvajanje novih svjetova.
 
-## Spajanje s Mainnetom \{#merging-with-mainnet}
+## Spajanje s Mainnetom {#merging-with-mainnet}
 
 Dokaz rada štitio je glavnu mrežu Ethereuma od njegove geneze sve do spajanja. Time je omogućeno da se u srpnju 2015. uvede lanac blokova Ethereuma kojim se svi mi koristimo, sa svim poznatim značajkama – transakcijama, pametnim ugovorima, računima i drugim.
 
@@ -43,7 +43,7 @@ Spajanjem nisu izgubljeni povijesni podaci. Kako se glavna mreža objedinila s B
 Prijelaz na dokaz uloga promijenio je način izdavanja Ethera. Saznajte više o <a href="/roadmap/merge/issuance/">izdavanju Ethera prije i nakon Spajanja</a>.
 </InfoBanner>
 
-### Korisnici i vlasnici \{#users-holders}
+### Korisnici i vlasnici {#users-holders}
 
 **Spajanjem nije promijenjeno ništa za vlasnike ili korisnike.**
 
@@ -53,7 +53,7 @@ Unatoč trajne zamjene dokaza rada i prijelaza na dokaz uloga, cjelokupna povije
 
 [Više o sigurnosti Ethereuma](/security/#eth2-token-scam)
 
-### Rukovatelji čvora i programeri decentralizirane aplikacije (dapp) \{#node-operators-dapp-developers}
+### Rukovatelji čvora i programeri decentralizirane aplikacije (dapp) {#node-operators-dapp-developers}
 
 {
 <ExpandableCard
@@ -111,15 +111,15 @@ Više informacija potražite u objavi Tima Beikoa: [How The Merge Impacts Ethere
 </ExpandableCard>
 }
 
-## Spajanje i potrošnja energije \{#merge-and-energy}
+## Spajanje i potrošnja energije {#merge-and-energy}
 
 Spajanje predstavlja kraj ere dokaza rada u Ethereumu i početak održivijeg, ekološki prikladnijeg Ethereuma. Pad potrošnje energije Ethereuma procijenjen je na 99,95 %, čime je Ethereum postao zeleni lanac čvorova. Saznajte više o [potrošnji energije Ethereuma](/energy-consumption/).
 
-## Spajanje i skaliranje \{#merge-and-scaling}
+## Spajanje i skaliranje {#merge-and-scaling}
 
 Spajanje je postavilo temelje za nove nadogradnje skalabilnosti koje nisu bile moguće u konceptu dokaza rada. Tako se Ethereum približio potpunoj sigurnosti i održivosti koja je opisana u [Viziji Ethereuma](/roadmap/vision/).
 
-## Zablude o spajanju \{#misconceptions}
+## Zablude o spajanju {#misconceptions}
 
 {
 <ExpandableCard
@@ -195,7 +195,7 @@ Kamatna stopa na godišnjoj razini namjerno je dinamična kako bi dopustila trž
 </ExpandableCard>
 }
 
-## Što se dogodilo s „Eth2”? \{#eth2}
+## Što se dogodilo s „Eth2”? {#eth2}
 
 Pojam „Eth2” je povučen. Nakoj spajanja „Eth1” i „Eth2” u jedan lanac, više nema potrebe za razdvajanjem dviju Ethereumovih mreža – postoji samo jedan Ethereum.
 
@@ -208,11 +208,11 @@ Te terminološke promjene mijenjaju samo naziv i ne utječu na ciljeve i plan ra
 
 [Saznajte više o promjeni naziva „Eth2”](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## Odnos između nadogradnji \{#relationship-between-upgrades}
+## Odnos između nadogradnji {#relationship-between-upgrades}
 
 Sve nadogradnje Ethereum donekle su međusobno povezane. Ponovimo kako se spajanje odnosi na druge nadogradnje.
 
-### Spajanje i Beacon Chain \{#merge-and-beacon-chain}
+### Spajanje i Beacon Chain {#merge-and-beacon-chain}
 
 Spajanje predstavlja formalno usvajanje nadogradnje Beacon Chain kao novog sloja konsenzusa za izvorni sloj za izvršavanje glavne mreže. Od spajanja validatori se dodjeljuju kako bi zaštitili glavnu mrežu Ethereuma, a rudarenje temeljem [dokaza rada](/developers/docs/consensus-mechanisms/pow/) više nije valjan način proizvodnje bloka.
 
@@ -222,13 +222,13 @@ Blokove sada predlažu validirajući čvorovi s ulogom ETH-a u zamjenu za pravo 
   Beacon Chain
 </ButtonLink>
 
-### Spajanje i šangajska nadogradnja \{#merge-and-shanghai}
+### Spajanje i šangajska nadogradnja {#merge-and-shanghai}
 
 Kako bi se pojednostavila i maksimizirala usredotočenost na uspješan prijelaz na koncept dokaza uloga, nadogradnja spajanja nije sadržavala određene, očekivane značajke, kao mogućnost povlačenja uloženog ETH-a. Šangajska nadogradnja planira se nakon spajanja kako bi omogućila ulagačima da povuku sredstva.
 
 Pratite [problem sa šangajskom nadogradnjom na GitHubu](https://github.com/ethereum/pm/issues/450) ili [blog o razvoju i istraživanju EF-a](https://blog.ethereum.org/category/research-and-development/). Za znatiželjne, pogledajte prezentaciju [Što se događa nakon spajanja](https://youtu.be/7ggwLccuN5s?t=101) koju je održao Vitalik u travnju 2021. na događaju ETHGlobal.
 
-### Spajanje i razdjeljivanje \{#merge-and-data-sharding}
+### Spajanje i razdjeljivanje {#merge-and-data-sharding}
 
 Izvorni je plan bio razvijati razdjeljivanje prije spajanja kako bi se riješio problem prilagođavanja. Međutim, uz procvat [rješenja za skaliranje sloja 2](/layer-2/), prioritet se prebacio na zamjenu koncepta dokaza rada u dokaz uloga.
 
@@ -238,7 +238,7 @@ Planovi za razdjeljivanje brzo su se razvijali. Međutim, uzimajući u obzir ras
   Dijeljenje
 </ButtonLink>
 
-## Daljnje čitanje \{#further-reading}
+## Daljnje čitanje {#further-reading}
 
 {
 <MergeArticleList />

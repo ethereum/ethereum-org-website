@@ -13,11 +13,11 @@ summaryPoints:
   - A bizalomigénye kevesebb, a visszavonási kulcsok az Ön saját felügyelete alatt állnak
 ---
 
-## Mi az a letétbe helyezés mint szolgáltatás? \{#what-is-staking-as-a-service}
+## Mi az a letétbe helyezés mint szolgáltatás? {#what-is-staking-as-a-service}
 
 A letétbe helyezés, mint szolgáltatás (SaaS) egy olyan lehetőség, amikor a felhasználó letétbe teszi a saját 32 ETH összegét, hogy validátort működtessen, de a csomópont üzemeltetését egy harmadik félre bízza. E folyamat során a felhasználót végigvezetik a kezdeti beállításokon, beleértve a kulcs létrehozását, a letét elhelyezését, majd az aláíró kulcsok feltöltését az operátornak. A szolgáltatás így a felhasználó nevében működteti a validátort, általában egy havi díjért cserébe.
 
-## Miért jó a letéti szolgáltatás használata? \{#why-stake-with-a-service}
+## Miért jó a letéti szolgáltatás használata? {#why-stake-with-a-service}
 
 Az Ethereum-protokoll eredendően nem támogatja a letétbe helyezés delegálását, így ezek a szolgáltatások képesek ellátni ezt az igényt. Ha Ön letétbe helyezne 32 ETH-t, de nem szeretne a hardveres részével foglalkozni, az SaaS lehetővé teszi, hogy ezt a részét átadja másnak, miközben részesül a blokkjutalmakból.
 
@@ -31,7 +31,7 @@ Az Ethereum-protokoll eredendően nem támogatja a letétbe helyezés delegálá
 <StakingComparison page="saas" />
 }
 
-## Mit kell figyelembe venni \{#what-to-consider}
+## Mit kell figyelembe venni {#what-to-consider}
 
 Az SaaS szolgáltatók száma egyre növekszik, ugyanakkor mind saját előnnyel és kockázattal bír. Az önálló stakinghez képest ezek az opciók mind extra bizalmat igényelnek. Az SaaS opciók rendelkezhetnek olyan hozzáadott programkóddal, melybe az Ethereum-klienst csomagolják, ami nem nyilvános vagy auditálható. Emellett negatív hatást gyakorolnak a hálózat decentralizálására. A beállítások függvényében Ön talán nem is bír kontrollal a validátora felett – az operátor rosszhiszeműen is eljárhat az Ön ETH-ját használva fel.
 
@@ -41,7 +41,7 @@ Alább különböző jellemzők mentén mutatjuk be a jelentős erősségeket va
 <StakingConsiderations page="saas" />
 }
 
-## Fedezze fel, hogy kik nyújtanak letétbe helyezési szolgáltatást \{#saas-providers}
+## Fedezze fel, hogy kik nyújtanak letétbe helyezési szolgáltatást {#saas-providers}
 
 Néhány elérhető SaaS-szolgáltatót soroltunk fel alább. A fenti jellemzőket használva megértheti az alábbi szolgáltatásokban rejlő lehetőségeket
 
@@ -65,7 +65,7 @@ Olyan szolgáltatót válasszon, aki támogatja a [kisebbségi klienseket](/deve
 
 Javasolna olyan SaaS-szolgáltatót, akit nem lát felsorolva? Ha a [terméklistázó szabályzat](/contributing/adding-staking-products/) alapján úgy véli, hogy egy adott eszköz illeszkedne ide, akkor jelezze felénk.
 
-## Gyakran ismételt kérdések \{#faq}
+## Gyakran ismételt kérdések {#faq}
 
 {
 <ExpandableCard title="Kinél vannak a kulcsaim?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
@@ -107,7 +107,7 @@ Kérdezze meg az SaaS-szolgáltatóját a lehetséges garanciákról vagy biztos
 </ExpandableCard>
 }
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [Ethereum letétbe helyezési jegyzék](https://www.staking.directory/) – _Eridian és Spacesider_
 - [A letétbe helyezési szolgáltatások értékelése](https://www.attestant.io/posts/evaluating-staking-services/) – _Jim McDonald 2020._

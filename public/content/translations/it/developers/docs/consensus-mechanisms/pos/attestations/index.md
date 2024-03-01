@@ -6,7 +6,7 @@ lang: it
 
 Un validatore dovrebbe creare, firmare e trasmettere una attestazione durante ogni epoca. Questa pagina delinea come appaiono queste attestazioni e come sono elaborate e comunicate tra i client di consenso.
 
-## Cos'è un'attestazione? \{#what-is-an-attestation}
+## Cos'è un'attestazione? {#what-is-an-attestation}
 
 Ogni [epoca](/glossary/#epoch) (6,4 minuti), un validatore propone un'attestazione alla rete. L'attestazione è per uno slot specifico nell'epoca. Lo scopo dell'attestazione è votare a favore della visione della catena del validatore, in particolare il blocco giustificato più recente e il primo blocco nell'epoca corrente (noti come punti di controllo `source` (origine) e `target` (destinazione)). Queste informazioni sono combinate per tutti i validatori partecipanti, consentendo alla rete di raggiungere il consenso sullo stato della blokchain.
 
@@ -28,7 +28,7 @@ Una volta costruiti i `data`, il validatore può capovolgere il bit in `aggregat
 
 Infine, il validatore firma l'attestazione e la trasmette sulla rete.
 
-### Attestazione aggregata \{#aggregated-attestation}
+### Attestazione aggregata {#aggregated-attestation}
 
 Le spese aggiuntive associate al trasferimento di questi dati nella rete sono molto elevate per ogni validatore. Di conseguenza, prima ancora che avvenga la trasmissione su larga scala, le attestazioni dei singoli validatori sono aggregate in reti secondarie. Questo include l'aggregazione delle firme in modo che un'attestazione che viene trasmessa includa i `dati` di consenso e un'unica firma creata combinando le firme di tutte i validatori d'accordo con tali `dati`. Ciò è verificabile utilizzando `aggregation_bits`, poiché questi forniscono l'indice di ogni validatore nella propria commissione (i cui ID sono forniti in `data`) che può essere utilizzato per richiedere le singole firme.
 
@@ -36,7 +36,7 @@ In ogni epoca, un validatore in ogni rete secondaria è selezionato dall'`aggreg
 
 Quando un validatore viene selezionato per essere un propositore di blocchi, impacchetta le attestazioni aggregate dalle reti secondarie fino all'ultimo slot nel nuovo blocco.
 
-### Ciclo di vita di inclusione dell'attestazione \{#attestation-inclusion-lifecycle}
+### Ciclo di vita di inclusione dell'attestazione {#attestation-inclusion-lifecycle}
 
 1. Generazione
 2. Propagazione
@@ -48,37 +48,37 @@ Il ciclo di vita dell'attestazione è delineato nel seguente schema:
 
 ![ciclo di vita dell'attestazione](./attestation_schematic.png)
 
-## Ricompense \{#rewards}
+## Ricompense {#rewards}
 
 I validatori sono ricompensati per l'invio delle attestazioni. La ricompensa dell'attestazione dipende da due variabili, la `base reward` (ricompensa di base) e l'`inclusion delay` (ritardo d'inclusione). Il miglior caso per il ritardo d'inclusione è che sia pari a 1.
 
 `ricompensa d'attestazione = 7/8 x ricompensa di base x (1/ritardo d'inclusione)`
 
-### Ricompensa di base \{#base-reward}
+### Ricompensa di base {#base-reward}
 
 La ricompensa di base è calcolata secondo il numero di validatori attestanti e i loro saldi effettivi di ether in staking:
 
 `base reward = validator effective balance x 2^6 / SQRT(Effective balance of all active validators)`
 
-#### Ritardo d'inclusione \{#inclusion-delay}
+#### Ritardo d'inclusione {#inclusion-delay}
 
 Al momento del voto dei validatori sulla testa della catena (`block n`), `block n+1` non era ancora stato proposto. Pertanto, le attestazioni sono incluse naturalmente **un blocco più tardi**, così che tutte le attestazioni che hanno votato sul `block n`, che è la testa della catena, sono incluse in `block n+1` e il **ritardo d'inclusione** è 1. Se il ritardo d'inclusione raddoppia a due slot, la ricompensa di attestazione si dimezza, perché per calcolare la ricompensa di attestazione la ricompensa di base è moltiplicata per il reciproco del ritardo d'inclusione.
 
-### Scenari di attestazione \{#attestation-scenarios}
+### Scenari di attestazione {#attestation-scenarios}
 
-#### Validatore votante mancante \{#missing-voting-validator}
+#### Validatore votante mancante {#missing-voting-validator}
 
 I validatori hanno un massimo di 1 epoca per inviare le proprie attestazioni. Se l'attestazione era mancante nell'epoca 0, può essere inviata con un ritardo d'inclusione nell'epoca 1.
 
-#### Aggregatore mancante \{#missing-aggregator}
+#### Aggregatore mancante {#missing-aggregator}
 
 Per ogni epoca ci sono in totale 16 Aggregatori. Inoltre, alcuni validatori casuali si iscrivono a **due reti secondarie per 256 epoche** e servono da backup nel caso in cui gli aggregatori siano mancanti.
 
-#### Propositore di blocchi mancante \{#missing-block-proposer}
+#### Propositore di blocchi mancante {#missing-block-proposer}
 
 Si noti che in alcuni casi un aggregatore fortunato potrebbe anche diventare il propositore di blocchi. Se l'attestazione non è stata inclusa perché il propositore di blocchi è mancante, sarebbe il propositore successivo a selezionare l'attestazione aggregata e includerla nel blocco successivo. Tuttavia, il **ritardo d'inclusione** aumenterebbe di uno.
 
-## Lettura consigliate \{#further-reading}
+## Lettura consigliate {#further-reading}
 
 - [Le attestazioni nelle specifiche del consenso annotate da Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
 - [Le attestazioni su eth2book.info](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)

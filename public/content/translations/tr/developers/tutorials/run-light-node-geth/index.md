@@ -16,7 +16,7 @@ Hafif istemci, Ethereum durumuyla tam etkileşime izin verirken 400 Mb'den daha 
 
 Farklı senkronizasyon modları arasındaki farkların açıklaması için [düğüm ve istemci geliştirici belgelerimizi](/developers/docs/nodes-and-clients/#node-types) okuyun.
 
-## Kurun ve çalıştırın \{#install-and-run}
+## Kurun ve çalıştırın {#install-and-run}
 
 İlk olarak, [Geth'i kurun](https://geth.ethereum.org/docs/install-and-build/installing-geth).
 
@@ -32,13 +32,13 @@ Geth düğümünüz yeterli sayıda eşe sahip olduğunda, zincirdeki yeni blokl
 
 Yeni blok başlıklarının artık bir "yaşı" olmadığında Geth, zincirin başıyla senkronize edilir.
 
-## Düğümünüzü durdurma ve yeniden başlatma \{#stopping-and-restarting-your-node}
+## Düğümünüzü durdurma ve yeniden başlatma {#stopping-and-restarting-your-node}
 
 <kbd>CTRL</kbd>+<kbd>C</kbd> tuşlarına basarak düğümünüzü istediğiniz zaman durdurabilirsiniz.
 
 Düğümü yeniden başlatırken, Geth'in düğümün son çalıştırılmasından bu yana oluşturulan blok başlıklarını indirmesi birkaç dakika sürecektir.
 
-## HTTP-RPC sunucusunu etkinleştir \{#enable-the-http-rpc-server}
+## HTTP-RPC sunucusunu etkinleştir {#enable-the-http-rpc-server}
 
 HTTP-RPC sunucusunu etkinleştirmek, Ethereum düğümünüzü cüzdanlar, tarayıcı uzantıları veya özel yazılım kitaplıkları gibi diğer yazılımlara bağlamanıza olanak tanır.
 
@@ -50,7 +50,7 @@ geth --syncmode light --http
 
 Etkinleştirildiğinde, `curl http://127.0.0.1:8545` komutunu çalıştırın. Bu, hata bildirmemelidir.
 
-### Uzak bağlantılara izin verin \{#allow-remote-connections}
+### Uzak bağlantılara izin verin {#allow-remote-connections}
 
 Uzak ana bilgisayarların düğümünüze bağlanmasına izin vermek için aşağıdaki komutla Geth'i başlatın:
 
@@ -60,7 +60,7 @@ geth --syncmode light --http --http.addr 0.0.0.0
 
 Not: Bu, güvenlik duvarı gibi yerel ana makinenize gelen istekleri engelleyen bir işlem olmadığını varsayar.
 
-## Geth JavaScript konsolu \{#geth-javascript-console}
+## Geth JavaScript konsolu {#geth-javascript-console}
 
 Geth, düğümünüzle etkileşim kurmak için kullanabileceğiniz yerleşik bir JavaScript konsoluna ve [web3js](https://github.com/ethereum/web3.js/) adlı bir JavaScript API'sine sahiptir.
 
@@ -74,7 +74,7 @@ Bu konsol, Ethereum ile doğrudan etkileşime izin verir. Örneğin, `eth.blockN
 
 [Tam web3js belgeleri](http://web3js.readthedocs.io/)
 
-## Mainnet ve test ağları \{#mainnet-and-testnets}
+## Mainnet ve test ağları {#mainnet-and-testnets}
 
 Geth, düğümünüzü varsayılan olarak [Ethereum Mainnet](/glossary/#mainnet/) üzerinde çalıştırır.
 
@@ -86,7 +86,7 @@ geth --syncmode light --rinkeby
 geth --syncmode light --goerli
 ```
 
-## Blok zinciri ve EVM verileri nerede saklanıyor? \{#where-is-the-blockchain-and-evm-data-stored}
+## Blok zinciri ve EVM verileri nerede saklanıyor? {#where-is-the-blockchain-and-evm-data-stored}
 
 Geth'in ham blok zinciri verilerini depolamak için kullandığı dizin, işletim sisteminize bağlıdır. Geth'i çalıştırdıktan sonra şuna benzeyen bir mesaj bulmaya çalışın:
 
@@ -98,7 +98,7 @@ INFO [11-18|14:04:47] Allocated cache and file handles         database=/Users/b
 
 Bu noktada, buranın blok zincirinin en düşük seviyede yaşadığı yer olduğunu vurgulamakta fayda var. Blok zincirinin tam içeriği ve EVM durumu, Ethereum ağındaki her tam düğümde, bilgisayarınızdakine çok benzeyen dizinlerde depolanır.
 
-## Daha fazla okuma \{#further-reading}
+## Daha fazla okuma {#further-reading}
 
 - [Farklı ağlar hakkında öğrenin](/developers/docs/networks/).
 - [Tam bir düğüm çalıştırın](/run-a-node/)

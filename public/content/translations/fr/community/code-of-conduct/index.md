@@ -4,11 +4,11 @@ description: Les normes de base que nous nous efforçons de respecter dans les e
 lang: fr
 ---
 
-## Mission \{#mission}
+## Mission {#mission}
 
 Développer et maintenir le centre de connaissances le plus complet et le plus accessible pour Ethereum.
 
-## Valeurs \{#values}
+## Valeurs {#values}
 
 La communauté ethereum.org s'efforce d'être :
 
@@ -19,7 +19,7 @@ La communauté ethereum.org s'efforce d'être :
 - axée sur la technologie sous-jacente et les cas d'utilisation d'Ethereum
 - axée sur les concepts et les principes de conception d'Ethereum
 
-## Ce que nous ne sommes pas \{#what-we-are-not}
+## Ce que nous ne sommes pas {#what-we-are-not}
 
 - Le site de la Fondation Ethereum
 - Une plateforme pour promouvoir des investissements ou des profits de quelque nature que ce soit
@@ -27,17 +27,17 @@ La communauté ethereum.org s'efforce d'être :
 - Un DEX, un CEX ou toute autre forme de plateforme financière
 - Une plateforme qui donne des conseils financiers ou juridiques de quelque nature que ce soit
 
-## Code de conduite \{#code-of-conduct}
+## Code de conduite {#code-of-conduct}
 
-### Engagement \{#pledge}
+### Engagement {#pledge}
 
 La participation ouverte est au cœur de la philosophie d'ethereum.org. Nous sommes un site web et une communauté entretenus par des milliers de contributeurs, et cela n'est possible que si nous maintenons un environnement accueillant et participatif. À cette fin, les contributeurs de ce site s'engagent à maintenir un environnement sans harcèlement pour tous les participants et participantes sur toutes les plateformes et espaces communautaires d'ethereum.org. La communauté ethereum.org accueille et valorise toute personne souhaitant participer de manière constructive et amicale, indépendamment de l'âge, du handicap, de l'ethnicité, des caractéristiques sexuelles, de l'identité de genre, du niveau d'expérience, du domaine d'expertise, de l'éducation, du statut socio-économique, de la nationalité, de l'apparence personnelle, de la race, de la religion ou de toute autre dimension de la diversité.
 
-### Portée \{#scope}
+### Portée {#scope}
 
 Ce code de conduite s'applique à tous les espaces ethereum.org (tels que GitHub, Discord, Figma, Crowdin, Twitter et autres plateformes en ligne), et il s'applique également lorsque la communauté est représentée dans des espaces publics réels tels que les meet-ups, les conférences et les événements.
 
-### Nos standards \{#our-standards}
+### Nos standards {#our-standards}
 
 Voici des exemples de comportements qui contribuent à créer un environnement positif :
 
@@ -62,7 +62,7 @@ Voici quelques exemples de comportements inacceptables de la part des participan
 - Ne pas tenir compte des demandes ou des avertissements des modérateurs de la communauté
 - Adopter d'autres comportements qui pourraient raisonnablement être considérés comme inappropriés dans un cadre professionnel
 
-### Signalement \{#reporting}
+### Signalement {#reporting}
 
 Les violations du code de conduite seront normalement visibles par la communauté, car nous essayons de tout faire sur des canaux ouverts et publics, ce qui permet aux membres de la communauté de s'autosurveiller.
 
@@ -70,6 +70,6 @@ Cependant, si quelque chose se produit et que vous pensez qu'il faut y prêter a
 
 Dans votre signalement, veuillez fournir autant de détails que possible, y compris des exemples spécifiques et des horodatages. Cela permettra de garantir un résultat équitable.
 
-### Mise en œuvre \{#enforcement}
+### Mise en œuvre {#enforcement}
 
 En fonction de la gravité, les personnes qui enfreignent le code de conduite peuvent recevoir des avertissements, des interdictions temporaires ou des interdictions permanentes des communautés ethereum.org.

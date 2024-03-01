@@ -4,13 +4,13 @@ lang: tr
 description: Ethererum.org Çeviri Programı hakkında bilgi
 ---
 
-# Çeviri Programı \{#translation-program}
+# Çeviri Programı {#translation-program}
 
 Çeviri Programı, web sitesini dünya çapında İngilizce bilmeyen milyarlarca kişi için daha erişilebilir hâle getirmek için ethereum.org'u farklı dillere çevirmeyi amaçlayan ortak bir çabadır.
 
 ![](./enterprise-eth.png)
 
-## Çevirmemize yardım edin \{#help-us-translate}
+## Çevirmemize yardım edin {#help-us-translate}
 
 Ethereum.org Çeviri Programı açıktır ve herkes katkı verebilir!
 
@@ -26,7 +26,7 @@ _Çeviriler konusunda iş birliği yapmak, sorular sormak, geribildirim ve fikir
   Çeviriye başlayın
 </ButtonLink>
 
-## Çeviri Programı hakkında \{#about-us}
+## Çeviri Programı hakkında {#about-us}
 
 Ethereum topluluğu, küresel ve kapsayıcı olmayı hedefliyor ancak içeriğinin çoğu yalnızca İngilizce konuşanlara hitap ediyor ve dünyada İngilizce konuşmayan 6 milyar insanı dışarıda bırakıyor. Ethereum.org'un dünya çapındaki topluluk için Ethereum'a giriş portalı görevi görmesi için İngilizce konuşmayan kişilere ana dillerinde Ethereum içeriği sağlamanın çok önemli olduğuna inanıyoruz.
 
@@ -34,7 +34,7 @@ Ethereum.org Çeviri Programı, ethereum.org ve diğer Ethereum içeriğini müm
 
 Ethereum.org Çeviri Programının [misyon ve vizyonu](/contributing/translation-program/mission-and-vision) hakkında daha fazla bilgi edinin.
 
-### Şimdiye kadarki ilerleme durumumuz \{#our-progress}
+### Şimdiye kadarki ilerleme durumumuz {#our-progress}
 
 - [**5.100 +** çevirmen](/contributing/translation-program/contributors/)
 - [**54** sitenin yayında olduğu dil sayısı](/languages/)
@@ -44,29 +44,29 @@ Ethereum.org Çeviri Programının [misyon ve vizyonu](/contributing/translation
 <TranslationChartImage />
 }
 
-### Onaylar \{#acknowledgements}
+### Onaylar {#acknowledgements}
 
 Ethereum.org, binlerce topluluk üyesi tarafından çevrilmektedir ve bu kişiler, Çeviri Programının anahtar parçalarıdır. Çevirmenlerimize onları takdir ettiğimizi göstermek ve kariyer yollarında desteklemek isteriz. Çevirmenlerimizi takdir etme yöntemlerimizden bazıları:
 
-#### Sertifika \{#certificate}
+#### Sertifika {#certificate}
 
 Çeviri Programına katkıda bulunduysanız ve çevirdiğiniz kelimelerden en az 5000 tanesi onaylandıysa ethereum.org çevirmen sertifikasına hak kazanırsınız. [Sertifikalar hakkında daha fazla bilgi](/contributing/translation-program/acknowledgements/#certificate)
 
-#### POAP'ler \{#poaps}
+#### POAP'ler {#poaps}
 
 Tüm çevirmenlerimiz, ethereum.org Çeviri Programına katkıda bulunduklarını kanıtlayan bir NFT olan POAP'yi (Katılım İspatı Protokolü) almaya hak kazanır. [POAP'ler hakkında daha fazla bilgi](/contributing/translation-program/acknowledgements/#poap)
 
-#### Çevirmenlere teşekkür \{#translator-acknowledgements}
+#### Çevirmenlere teşekkür {#translator-acknowledgements}
 
 En iyi çevirmenlerimize [lider tablosu](/contributing/translation-program/acknowledgements/) ve [Çeviri Programına katkıda bulunanlar tam listesi](/contributing/translation-program/contributors/) aracılığıyla açık teşekkür.
 
-#### Ödüller \{#rewards}
+#### Ödüller {#rewards}
 
 Geçmişte, en aktif şekilde katkıda bulunanları, özel ethereum.org ürünlerinin yanı sıra [Devcon](https://devcon.org/en/) ve [Devconnect](https://devconnect.org/) gibi Ethereum konferanslarının biletleriyle geriye dönük ödüllendirdik.
 
 Katkıda bulunan kişileri ödüllendirmek için sürekli yeni ve yaratıcı yollar arıyoruz; bizi izlemeye devam edin!
 
-### Kılavuzlar ve kaynaklar \{#guides-and-resources}
+### Kılavuzlar ve kaynaklar {#guides-and-resources}
 
 Çeviri Programına katkıda bulunuyor ya da programda yer almayı düşünüyorsanız aşağıdaki çeviri rehberlerini gözden geçirmelisiniz:
 
@@ -77,13 +77,13 @@ Katkıda bulunan kişileri ödüllendirmek için sürekli yeni ve yaratıcı yol
 
 Diğer kullanışlı çeviri araçları, çevirmen toplulukları ve Çeviri Programı blog gönderileri için lütfen [Kaynaklar sayfasını](/contributing/translation-program/resources/) ziyaret edin.
 
-## İletişime geçin \{#get-in-touch}
+## İletişime geçin {#get-in-touch}
 
 Sormak istediğiniz bir şey mi var? Ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](https://discord.gg/ethereum-org) #translations kanalına yazın
 
 Ayrıca bize translations@ethereum.org adresinden de ulaşabilirsiniz
 
-## Kendi çeviri programınızı başlatma \{#starting-a-translation-program}
+## Kendi çeviri programınızı başlatma {#starting-a-translation-program}
 
 Ethereum içeriğini mümkün olduğunca çok dile çevirme ve eğitim içeriğini herkesin kullanımına sunma konusunda kararlıyız. Çevirilere odaklanmaya paralel olarak, diğer Ethereum projelerinin kendi çeviri çabalarını düzenlemelerine, yönetmelerine ve geliştirmelerine yardımcı olmak istiyoruz.
 

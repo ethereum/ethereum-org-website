@@ -4,11 +4,11 @@ description: Список дозволених програм у всій еко
 lang: uk
 ---
 
-# Віртуальна спільнота \{#online-communities}
+# Віртуальна спільнота {#online-communities}
 
 Сотні тисяч ентузіастів Ethereum збираються на цих онлайн-форумах, щоб обмінюватися новинами, обговорювати останні події, розв’язувати технічні проблеми й уявляти своє майбутнє.
 
-## Форуми \{#forums}
+## Форуми {#forums}
 
 {
 {
@@ -36,7 +36,7 @@ lang: uk
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> — найвпливовіша дошка повідомлень, присвячена дослідженням у галузі криптоекономіки</SocialListItem>
 }
 
-## Чати \{#chat-rooms}
+## Чати {#chat-rooms}
 
 {
 {
@@ -73,7 +73,7 @@ lang: uk
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- децентралізований форум із запитаннями й відповідями_</SocialListItem>
 }
 
-## YouTube і Twitter \{#youtube-and-twitter}
+## YouTube і Twitter {#youtube-and-twitter}
 
 {
 {

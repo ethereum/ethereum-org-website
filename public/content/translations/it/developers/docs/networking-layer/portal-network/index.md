@@ -12,7 +12,7 @@ La Rete Portal è un nuovo progetto di rete per Ethereum che mira a risolvere il
 
 Maggiori informazioni su [nodi e client](/developers/docs/nodes-and-clients/)
 
-## Perché abbiamo bisogno della Rete Portal \{#why-do-we-need-portal-network}
+## Perché abbiamo bisogno della Rete Portal {#why-do-we-need-portal-network}
 
 I nodi di Ethereum memorizzano la propria copia completa o parziale della blockchain di Ethereum. Questa copia locale viene utilizzata per convalidare le transazioni e garantire che il nodo stia seguendo la catena corretta. Questi dati memorizzati localmente consentono ai nodi di verificare in modo indipendente che i dati in arrivo siano validi e corretti, senza doversi fidare di altre entità.
 
@@ -22,7 +22,7 @@ Ciò significa che la gestione dei nodi può essere costosa, perché una grande 
 
 La Rete Portal mira a fornire un modo alternativo per i nodi leggeri di ottenere i loro dati che non richieda il fare affidamento sui nodi completi o l'aumento significativo del carico di lavoro di questi ultimi. Il modo in cui ciò avverrà consiste nell'introdurre un nuovo modo per i nodi di Ethereum di condividere i dati attraverso la rete.
 
-## Come funziona la Rete Portal? \{#how-does-portal-network-work}
+## Come funziona la Rete Portal? {#how-does-portal-network-work}
 
 I nodi di Ethereum hanno protocolli rigorosi che definiscono come devono comunicare tra loro. I client di esecuzione comunicano utilizzando un insieme di sottoprotocolli noti come [DevP2P](/developers/docs/networking-layer/#devp2p), mentre i nodi di consenso utilizzano uno stack di sottoprotocolli differente chiamato [libP2P](/developers/docs/networking-layer/#libp2p). Questi definiscono i tipi di dati che possono essere trasferiti tra i nodi.
 
@@ -61,7 +61,7 @@ Il diagramma seguente mostra le funzioni dei client esistenti che possono essere
 
 ![tabella della rete portal](portal-network-table2.png)
 
-## Diversità dei client per impostazione predefinita \{#client-diversity-as-default}
+## Diversità dei client per impostazione predefinita {#client-diversity-as-default}
 
 Nella loro progettazione, gli sviluppatori della Rete Portal hanno deciso di creare anche tre diversi client della Rete Portal fin dal primo giorno.
 
@@ -75,7 +75,7 @@ La presenza di più implementazioni client indipendenti aumenta la resilienza e 
 
 Se un client presenta problemi o vulnerabilità, gli altri client possono continuare a funzionare senza problemi, evitando un punto di errore singolo. Inoltre, le diverse implementazioni dei clienti favoriscono l'innovazione e la concorrenza, promuovendo miglioramenti e riducendo il rischio di monopolio all'interno dell'ecosistema.
 
-## Letture consigliate \{#futher-reading}
+## Letture consigliate {#futher-reading}
 
 - [La Rete Portal (Piper Merriam al Devcon di Bogotà)](https://www.youtube.com/watch?v=0stc9jnQLXA).
 - [Discord della Rete Portal](https://discord.gg/6XFs56cX)

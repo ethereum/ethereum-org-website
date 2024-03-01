@@ -8,33 +8,33 @@ Ethereum gibi herkese açık blokzincirler değişmez niteliktedir ve bu durum, 
 
 Bu yüzden, akıllı sözleşmeleri ana ağa [dağıtmadan](/developers/docs/smart-contracts/deploying/) önce test etmek [güvenlik](/developers/docs/smart-contracts/security/) açısından bir asgari gereksinimdir. Bir sözleşmeyi test etmenin ve kodunu değerlendirmenin birçok farklı tekniği vardır; burada neye ihtiyacınız olduğuna göre seçimler yaparsınız. Bununla birlikte, farklı araç ve yaklaşımlardan oluşan bir test paketi kullanmak, sözleşme kodundaki hem küçük hem de büyük güvenlik açıklarını yakalamak için idealdir.
 
-## Ön koşullar \{#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Bu sayfa, akıllı sözleşmeleri Ethereum ağına yüklemeden önce onları nasıl test edeceğinizi açıklamaktadır. [Akıllı sözleşmeler](/developers/docs/smart-contracts/) ile aşina olduğunuz varsayılır.
 
-## Akıllı sözleşme testi nedir? \{#what-is-smart-contract-testing}
+## Akıllı sözleşme testi nedir? {#what-is-smart-contract-testing}
 
 Akıllı sözleşme testi, sözleşmenin içerisindeki kodların beklendiği gibi çalışıp çalışmadığını doğrulama işlemidir. Test, belirli bir akıllı sözleşmenin güvenilirlik, kullanılabilirlik ve güvenlik gereksinimlerini karşılayıp karşılamadığını kontrol etmek için kullanışlıdır.
 
 Yaklaşımlar farklılıklar gösterse de çoğu test yöntemi, akıllı sözleşmenin işlenmesi beklenen verilerin küçük bir örneğiyle birlikte yürütülmesini gerektirir. Sözleşme örnek verilerle doğru sonuçlar veriyorsa, düzgün çalıştığı varsayılır. Çoğu test aracı, bir sözleşme yürütmesinin beklenen sonuçlarla eşleşip eşleşmediğini kontrol etmek için [test senaryolarının](https://en.m.wikipedia.org/wiki/Test_case) yazılmasını ve yürütülmesini sağlayan kaynaklar sunar.
 
-### Akıllı sözleşmeleri test etmek neden önemlidir? \{#importance-of-testing-smart-contracts}
+### Akıllı sözleşmeleri test etmek neden önemlidir? {#importance-of-testing-smart-contracts}
 
 Akıllı sözleşmeler genellikle yüksek değerli finansal varlıkları yönettiğinden, küçük programlama hataları sıklıkla [kullanıcılar için büyük kayıplara](https://rekt.news/leaderboard/) yol açabilir. Ancak titizlikle yapılan testler akıllı sözleşmelerin kodundaki sorunları erkenden fark etmenize ve sözleşmeyi ana ağa dağıtmadan önce düzeltmenize yardımcı olabilir.
 
 Bir hata bulunursa sözleşmeyi yükseltmek mümkün olsa da, yükseltmeler karmaşık olduğundan yanlış şekilde ele alınırsa [hatalarla sonuçlanabilir](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/). Bir sözleşmeyi yükseltmek, değişmezlik ilkesini ortadan kaldırır ve kullanıcılara ek güven varsayımları yükler. Bu durumla karşılaşmamak ve sözleşmenizi test etmek için kapsamlı bir plan yapıp akıllı sözleşmenizin güvenlik risklerini azaltırsanız dağıtımdan sonra karmaşık mantık yükseltmelerine ihtiyacınız azalır.
 
-## Akıllı sözleşme test etme yöntemleri \{#methods-for-testing-smart-contracts}
+## Akıllı sözleşme test etme yöntemleri {#methods-for-testing-smart-contracts}
 
 Ethereum akıllı sözleşmelerini test etme yöntemleri iki genel başlık altında sınıflandırılabilir: **otomatik test** ve **manuel test**. Otomatik test ve manuel test, benzersiz avantajlar ve çeşitli artı-eksiler sunar ancak sözleşmelerinizi analiz etmek için sağlam bir plan oluşturmak istiyorsanız ikisini birlikte kullanabilirsiniz.
 
-### Otomatik test \{#automated-testing}
+### Otomatik test {#automated-testing}
 
 Otomatik test, yürütme sırasındaki hatalar için akıllı sözleşme kodunu otomatik olarak kontrol eden araçlar kullanır. Otomatik testin faydası, sözleşme işlevlerinin değerlendirilmesine rehberlik eden [komut dosyalarının](https://www.techtarget.com/whatis/definition/script?amp=1) kullanımından kaynaklanır. Komut dosyası testlerinin minimum insan müdahalesi ile tekrar tekrar çalıştırılması planlanabilir, bu da otomatik testi manuel test yaklaşımlarından daha verimli bir yere koyar.
 
 Otomatik testler, özellikle tekrarlayan ve zaman alıcı testler söz konusu olduğunda kullanışlıdır, manuel olarak yapılması zor, insan hatasına duyarlı veya kritik sözleşme fonksiyonlarının değerlendirilmesini içerir. Ancak otomatik test araçlarının da belirli hataları gözden kaçırmak ve çok sayıda [yalancı pozitif](https://www.contrastsecurity.com/glossary/false-positive) üretmek gibi bazı dezavantajları olabilir. Bu nedenle, akıllı sözleşmeler için otomatik test ile manuel testi birlikte kullanmak idealdir.
 
-### Manuel test \{#manual-testing}
+### Manuel test {#manual-testing}
 
 Manuel test, insanı da işin içine sokar ve bir akıllı sözleşmenin doğruluğunu analiz ederken test paketinizdeki her test senaryosunun arka arkaya yürütülmesini içerir. Bu süreç, bir sözleşme üzerinde aynı anda birden çok izole testi çalıştırabileceğiniz, tüm başarısız ve başarılı testleri gösteren bir rapor alabileceğiniz otomatik testten farklıdır.
 
@@ -42,15 +42,15 @@ Manuel test, farklı test senaryolarını kapsayan yazılı bir test planını t
 
 Manuel testin etkili olması için ciddi miktarda kaynak (beceri, zaman, para ve çaba) gerekir ve testleri yürütürken insan hatası nedeniyle bazı hataları gözden kaçırmak mümkündür. Ancak manuel test faydalı da olabilir; örneğin bir insan test uzmanı (örneğin bir denetçi), sezgilerini kullanarak otomatik bir test aracının kaçıracağı ekstrem durumları yakalayabilir.
 
-## Akıllı sözleşmeler için otomatik testler \{#automated-testing-for-smart-contracts}
+## Akıllı sözleşmeler için otomatik testler {#automated-testing-for-smart-contracts}
 
-### Birim testi \{#unit-testing-for-smart-contracts}
+### Birim testi {#unit-testing-for-smart-contracts}
 
 Birim testi, sözleşme işlevlerini ayrı ayrı değerlendirir ve her bileşenin doğru çalışıp çalışmadığını kontrol eder. Başarılı bir birim testi; basit, çabuk çalıştırılabilir ve testlerin başarısız olması durumunda neyin yanlış gittiğine dair net bir açıklama sağlayacak nitelikte olmalıdır.
 
 Birim testleri, işlevlerin beklenen değerleri döndürdüğünü ve işlev yürütüldükten sonra sözleşme depolamasının düzgün bir şekilde güncellendiğini teyit etmek açısından kullanışlıdır. Ayrıca bir sözleşme kod tabanında yeni mantık eklemeye olanak sağlayan değişiklikler yaptıktan sonra birim testleri çalıştırıldığında hata üretilmez. Birim testlerini etkili şekilde çalıştırmaya yönelik yönergeler aşağıda verilmiştir:
 
-#### Akıllı sözleşmelerde birim testi yapmaya yönelik yönergeler \{#unit-testing-guidelines}
+#### Akıllı sözleşmelerde birim testi yapmaya yönelik yönergeler {#unit-testing-guidelines}
 
 ##### 1. Sözleşmelerinizin iş mantığını ve iş akışını anlayın
 
@@ -146,7 +146,7 @@ Solidity akıllı sözleşmeleri için birim testi çerçeveleri farklı dillerd
 - **[Ape ile birim testleri çalıştırma](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
 - **[Hardhat ile birim testleri çalıştırma](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
 
-### Entegrasyon testi \{#integration-testing-for-smart-contracts}
+### Entegrasyon testi {#integration-testing-for-smart-contracts}
 
 Birim testi izole edilmiş sözleşme işlevlerinde hata ayıklarken, entegrasyon testleri bir akıllı sözleşmenin tüm bileşenlerini bir bütün olarak değerlendirir. Entegrasyon testi, sözleşmeler arası çağrılardan veya aynı akıllı sözleşmedeki farklı işlevler arasındaki etkileşimlerden kaynaklanan sorunları tespit edebilir. Örneğin, entegrasyon testleri [kalıtım](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance) ve bağımlılık enjeksiyonu gibi şeylerin doğru çalışıp çalışmadığını kontrol etmeye yardımcı olabilir.
 
@@ -154,13 +154,13 @@ Entegrasyon testi, sözleşmenizin modüler bir mimariyi benimsemesi ya da yür�
 
 Çatallanmış blokzincir, ana ağa benzer şekilde davranır ve ilişkili durumları ve bakiyeleri bulunan hesaplara sahiptir. Ancak yalnızca ayrıştırılmış bir yerel geliştirme ortamı olarak işlev görür, yani işlemler için gerçek Ether'e ihtiyacınız olmaz ve yaptığınız değişiklikler gerçek Ethereum ağını etkilemez.
 
-### Özellik tabanlı test \{#property-based-testing-for-smart-contracts}
+### Özellik tabanlı test {#property-based-testing-for-smart-contracts}
 
 Özellik tabanlı test, bir akıllı sözleşmenin tanımlanmış bir özelliği karşılayıp karşılayamadığının kontrol edildiği bir süreçtir. Özellikler, farklı senaryolarda doğru kalması beklenen bir sözleşme davranışı hakkındaki gerçekleri ortaya koyar; "Sözleşmedeki aritmetik işlemler asla taşma veya yetersizlik gösteremez" ifadesi örnek bir akıllı sözleşme özelliği olabilir.
 
 **Statik analiz** ve **dinamik analiz**, özellik tabanlı test yürütmenin iki yaygın tekniğidir ve ikisi de bir programın kodunun (bu durumda bir akıllı sözleşme) önceden tanımlanmış bir özelliği karşıladığını doğrulayabilir. Özellik tabanlı test araçlarından bazıları, beklenen sözleşme özellikleri ile ilgili önceden tanımlanmış kurallar ile birlikte gelir ve kodu bu kurallara karşı kontrol eder, bazıları ise bir akıllı sözleşme için özel özellikler oluşturmanıza olanak tanır.
 
-#### Statik analiz \{#static-analysis}
+#### Statik analiz {#static-analysis}
 
 Bir statik analizör, bir akıllı sözleşmenin kaynak kodunu girdi olarak alır ve sözleşmenin bir özelliği karşılayıp karşılamadığını belirten sonuçları çıktı olarak verir. Dinamik analizin aksine, statik analiz bir sözleşmenin doğruluğunu analiz etmek amacıyla yürütülmesini kapsamaz. Statik analiz bunun yerine bir akıllı sözleşmenin yürütme esnasında takip edebileceği olası tüm yolları anlamaya çalışır (yani kaynak kodun yapısını sözleşmenin yürütme esnasındaki işlemleri için ne anlama gelebileceğini belirlemek amacıyla inceler).
 
@@ -168,7 +168,7 @@ Bir statik analizör, bir akıllı sözleşmenin kaynak kodunu girdi olarak alı
 
 Çoğu durumda, statik analiz bir sözleşmenin kodundaki güvenli olmayan yapılar, söz dizimi hataları veya kodlama standartlarının ihlalleri gibi güvenlik sorunlarını tespit etmek açısından kullanışlıdır. Ancak statik analizörler, genelde daha derin güvenlik açıklarını tespit etme konusunda güvenilmezdir ve aşırı sayıda yalancı pozitifler üretebilir.
 
-#### Dinamik analiz \{#dynamic-analysis}
+#### Dinamik analiz {#dynamic-analysis}
 
 Dinamik analiz, herhangi bir hata izinin belirli özellikleri ihlal edip etmediğini görmek için bir akıllı sözleşmenin fonksiyonlarında sembolik girdiler (örneğin [sembolik yürütmede](https://en.m.wikipedia.org/wiki/Symbolic_execution)) veya somut girdiler (örneğin [bulandırmada](https://owasp.org/www-community/Fuzzing)) oluşturur. Bu tarz özellik tabanlı test biçimi, test durumlarının birden çok senaryoyu kapsaması ve bir programın test durumlarının oluşturulmasını işlemesi bakımından birim testlerinden farklıdır.
 
@@ -182,7 +182,7 @@ Beklenmeyen girdilerin yanlış işlenmesi, istenmeyen yürütmelere neden olup 
 
 3. **Birim testleri, bir sözleşmenin örnek veriler için doğru şekilde yürütüldüğünü kanıtlasa da sözleşmenin örnek dışındaki girdiler için doğru şekilde yürütülüp yürütülmeyeceği bilinmez.** Özellik testleri, onaylama hatalarına neden olan yürütme izlerini bulmak için belirli bir girdi değerinin birden çok varyasyonuyla birlikte hedef sözleşmeyi yürütür. Böylelikle özellik testleri, sözleşmenin daha geniş bir giriş verileri sınıfında doğru yürütülmesini daha net bir şekilde garanti eder.
 
-### Akıllı sözleşmelerde özellik tabanlı testleri çalıştırabilmek için yönergeler \{#running-property-based-tests}
+### Akıllı sözleşmelerde özellik tabanlı testleri çalıştırabilmek için yönergeler {#running-property-based-tests}
 
 Özellik tabanlı test çalıştırma, genellikle bir akıllı sözleşmede özelliklerin tanımlanmasıyla (ör. [tamsayı taşması](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow) bulunmaması) veya doğrulamak istediğiniz özelliklerin toplanması ile başlar. Özellik testleri yazarken, programın işlem girdileri için veri üretebileceği bir değer aralığı tanımlamanız da gerekebilir.
 
@@ -195,11 +195,11 @@ Testinizi düzgün bir şekilde yapılandırdıktan sonra özellik test aracı a
 - **[Manticore ile akıllı sözleşmeleri sembolik yürütme](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
 - **[Mythril ile akıllı sözleşmeleri sembolik yürütme](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
-## Akıllı sözleşmeler için manuel test \{#manual-testing-for-smart-contracts}
+## Akıllı sözleşmeler için manuel test {#manual-testing-for-smart-contracts}
 
 Akıllı sözleşmelerin manuel olarak test edilmesi, genellikle geliştirme döngüsünün otomatik testlerden sonraki safhalarında gerçekleştirilir. Bu test biçimi, teknik gereksinimlerde belirtildiği gibi performans gösterip göstermediğini görmek için akıllı sözleşmeyi tam entegrasyonlu tek bir ürün olarak değerlendirir.
 
-### Sözleşmeleri yerel blokzincir üzerinde test etme \{#testing-on-local-blockchain}
+### Sözleşmeleri yerel blokzincir üzerinde test etme {#testing-on-local-blockchain}
 
 Yerel geliştirme ortamında gerçekleştirilen otomatik testler, yararlı hata ayıklama bilgileri sağlayabilir, dolayısıyla akıllı sözleşmenizin bir üretim ortamında nasıl davrandığını bilmek istersiniz. Ancak Ethereum ana zincirine dağıtım yaptığınızda gaz ücretleri ortaya çıkar; ayrıca akıllı sözleşmenizde hatalar varsa siz veya kullanıcılarınız para kaybına uğrayabilir.
 
@@ -209,7 +209,7 @@ Sözleşmeleri yerel bir blokzincirde çalıştırmak, bir tür manuel entegrasy
 
 [Geliştirme ağları hakkında daha fazla bilgi.](/developers/docs/development-networks/)
 
-### Sözleşmeleri test ağları üzerinde test etme \{#testing-contracts-on-testnets}
+### Sözleşmeleri test ağları üzerinde test etme {#testing-contracts-on-testnets}
 
 Test ağı ya da testnet, Ethereum ana ağı ile aynı şekilde çalışır ancak bunu, gerçek değeri olmayan Ether (ETH) kullanarak yapar. Sözleşmenizi bir [test ağı](/developers/docs/networks/#ethereum-testnets) üzerine dağıtmanız, herhangi birisinin fonlarını riske atmadan sözleşmenizle (örneğin dapp ön yüzü aracılığıyla) etkileşime girebilmesi anlamına gelir.
 
@@ -219,7 +219,7 @@ Yerel bir blokzincirde test ettikten sonra bir test ağına dağıtım yapmak, i
 
 [Ethereum test ağları hakkında daha fazla bilgi.](/developers/docs/development-networks/#public-beacon-testchains)
 
-## Test ile resmi doğrulama karşılaştırması \{#testing-vs-formal-verification}
+## Test ile resmi doğrulama karşılaştırması {#testing-vs-formal-verification}
 
 Test etme, bir sözleşmenin bazı veri girdileri için beklenen sonuçları verdiğinin doğrulanmasına yardımcı olurken, testler sırasında kullanılmayan girdiler için aynı şeyi kesin olarak kanıtlayamaz. Bu nedenle, bir akıllı sözleşmeyi test etmek, "fonksiyonel doğruluğu" güvence altına almaz (yani, bir programın _tüm_ girdi değerleri kümesi için gerektiği gibi davrandığını gösteremez).
 
@@ -231,7 +231,7 @@ Test etmenin aksine resmi doğrulama, bir akıllı sözleşmenin yürütülmesin
 
 [Akıllı sözleşmeler için resmi doğrulama hakkında daha fazla bilgi.](/developers/docs/smart-contracts/formal-verification)
 
-## Test etme ile denetleme ve hata ödüllerinin karşılaştırılması \{#testing-vs-audits-bug-bounties}
+## Test etme ile denetleme ve hata ödüllerinin karşılaştırılması {#testing-vs-audits-bug-bounties}
 
 Yukarıda belirtildiği gibi, titizlikle yapılan testler bir sözleşmede hata bulunmamasını nadiren garanti edebilir; resmi doğrulama yaklaşımları doğruluk konusunda daha güçlü güvence sağlayabilir ancak şu anda kullanımı zor ve maliyeti yüksektir.
 
@@ -243,9 +243,9 @@ Bunun aksine hata ödül programı, genellikle akıllı sözleşmelerde bir güv
 
 En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacker topluluğuna açık olması ve özgün yetenek ve deneyime sahip etik hacker ve bağımsız güvenlik profesyonellerinden oluşan bir grubu kendine çekmesidir. Bu, esas olarak sınırlı veya dar uzmanlığa sahip ekiplere emanet edilen akıllı sözleşme denetimlerine göre bir avantaj olabilir.
 
-## Test araçları ve kütüphaneleri \{#testing-tools-and-libraries}
+## Test araçları ve kütüphaneleri {#testing-tools-and-libraries}
 
-### Birim test araçları \{#unit-testing-tools}
+### Birim test araçları {#unit-testing-tools}
 
 - **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** - _Solidity ile yazılmış akıllı sözleşmeler için kod kapsamı aracı._
 
@@ -265,15 +265,15 @@ En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacke
 
 - **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _Ethereum Sanal Makinası'nı hedefleyen akıllı sözleşmeleri test etmek için Python tabanlı geliştirme ve test çerçevesi._
 
-### Özellik tabanlı test araçları \{#property-based-testing-tools}
+### Özellik tabanlı test araçları {#property-based-testing-tools}
 
-#### Statik analiz araçları \{#static-analysis-tools}
+#### Statik analiz araçları {#static-analysis-tools}
 
 - **[Slither](https://github.com/crytic/slither)** - _Güvenlik açıklarını bulmaya, kod kavramayı geliştirmeye ve akıllı sözleşmeler için özel analizler yazmaya yarayan Python tabanlı Solidity statik analiz çerçevesi._
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Solidity akıllı sözleşme programlama dilinin tarz ve güvenlik en iyi uygulamalarının yürütülmesini sağlamaya yarayan linter._
 
-#### Dinamik analiz araçları \{#dynamic-analysis-tools}
+#### Dinamik analiz araçları {#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _Akıllı sözleşmelerdeki güvenlik açıklarını özellik tabanlı testler aracılığıyla tespit etmeye yarayan hızlı sözleşme bulandırıcı._
 
@@ -285,7 +285,7 @@ En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacke
 
 - **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribble, akıllı sözleşmelere özellikler eklemenize olanak tanıyan bir spesifikasyon dili ve çalışma zamanı doğrulama aracıdır. Bu özellikler sayesinde sözleşmeleri otomatik olarak Diligence Fuzzing veya MythX gibi araçlarla test edebilirsiniz._
 
-## İlgili öğreticiler \{#related-tutorials}
+## İlgili öğreticiler {#related-tutorials}
 
 - [Truffle testleri için Travis veya Circle Continuous Integration (CI) nasıl kurulur?](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/)
 - [Farklı test ürünlerine genel bakış ve ürünlerin karşılaştırılması](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
@@ -296,7 +296,7 @@ En önemli fark, hata ödül programlarının daha geniş bir geliştirici/hacke
 - [Truffle Testlerinden OpenZeppelin Test Ortamı'na nasıl geçiş yapılır?](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
 - [Sözleşmeler ağa dağıtıldıktan sonra nasıl test edilir?](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Ethereum akıllı sözleşmelerini test etmeye yönelik ayrıntılı bir kılavuz](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
 - [Ethereum akıllı sözleşmeleri nasıl test edilir?](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)

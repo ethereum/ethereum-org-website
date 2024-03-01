@@ -8,11 +8,11 @@ Az EVM fizikai megtestesülését nem lehet úgy leírni, mint ahogy azt egy fel
 
 Az Ethereum protokoll maga egyedül azért létezik, hogy fenntartsa a folyamatos, zavartalan és változatlan működését ennek a speciális státuszú gépnek. Ez egy olyan környezet, amelyben az összes Ethereum számla és okosszerződés él. A lánc bármely adott blokkján az Ethereumnak egy és csak egy „kanonikus” állapota van, és az EVM határozza meg a szabályokat egy új érvényes állapot létrehozására blokkról blokkra.
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 Alapvető számítástudományi fogalmak ismerete, mint például a [bájtok](https://wikipedia.org/wiki/Byte), [memória](https://wikipedia.org/wiki/Computer_memory), és a [stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) szükségesek ahhoz, hogy megértse az EVM-et. Érdemes tisztában lenni egy pár kriptográfiai/blokklánc fogalommal úgy, mint a [hash függvények](https://wikipedia.org/wiki/Cryptographic_hash_function) és a [Merkle-fa](https://wikipedia.org/wiki/Merkle_tree).
 
-## Főkönyvtől az állapot gépig \{#from-ledger-to-state-machine}
+## Főkönyvtől az állapot gépig {#from-ledger-to-state-machine}
 
 Az 'elosztott főkönyv' analógiáját gyakran használjuk olyan blokkláncok jellemzésére, mint a Bitcoin, mely lehetővé egy decentralizált valuta létrehozását alapvető kriptográfiai eszközök használatával. A főkönyv tartalmazza a történések rekordjait, amelynek meg kell felelnie bizonyos szabályoknak, ami azt irányítja, hogy mit tehet meg és mit nem tehet meg valaki a főkönyv módosításához. Például egy Bitcoin cím nem költhet el több bitcoint, mint amennyit előzőleg megkapott. Ezek a szabályok támasztják alá az összes Bitcoin tranzakciót és sok más blokkláncot is.
 
@@ -20,7 +20,7 @@ Míg az Ethereumnak megvan a saját natív kriptovalutája (Ether), amely ugyana
 
 ![Egy diagram mely az EVM felépítését mutatja be](./evm.png) _Diagram átvéve az [Ethereum EVM illusztrálva](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
-## Az Ethereum állapot átmeneti függvény \{#the-ethereum-state-transition-function}
+## Az Ethereum állapot átmeneti függvény {#the-ethereum-state-transition-function}
 
 Az EVM úgy viselkedik, mint egy matematikai függvény: Adott egy bemenet, mely egy determinisztikus kimenetet generál. Ezért nagyon hasznos, ha az Ethereumot formálisabban úgy írjuk le, mint egy **állapot átmeneti függvényt**:
 
@@ -30,17 +30,17 @@ Y(S, T)= S'
 
 Adott egy régebbi érvényes állapot `(S)` és egy új érvényes tranzakciókból álló halmaz `(T)`, az Ethereum állapot átmeneti függvény `Y(S, T)` létrehoz egy új érvényes kimeneti állapotot `S'`
 
-### Állapot \{#state}
+### Állapot {#state}
 
 Az Ethereum kontextusában az állapot egy hatalmas adatstruktúra, amelyet úgy hívnak, hogy [módosított Merkle Patricia-fa](/developers/docs/data-structures-and-encoding/patricia-merkle-trie/), amely az összes [számlát](/developers/docs/accounts/) hashekkel köti össze és redukálja egy gyökér hash-é, amelyet a blokklánc tárol.
 
-### Tranzakciók \{#transactions}
+### Tranzakciók {#transactions}
 
 A tranzakciók számlákból származó kriptográfiailag aláírt instrukciók. A tranzakcióknak két típusa van: azok, amelyek üzenet hívásokat eredményeznek és azok melyek szerződés létrehozásokat.
 
 A szerződés létrehozás egy új szerződéses számla létrehozásával jár, mely a fordított [okosszerződés](/developers/docs/smart-contracts/anatomy/) bájtkódot tartalmazza. Amikor egy másik számla egy üzenet hívást intéz ehhez a szerződéshez, végrehajtja a bájtkódját.
 
-## EVM Utasítások \{#evm-instructions}
+## EVM Utasítások {#evm-instructions}
 
 Az EVM egy [veremgépként](https://wikipedia.org/wiki/Stack_machine) fut 1024 elemes mélységgel. Mindegyik tétel egy 256 bites szó, amelyet a 256 bitet kriptográfia használata miatt választottak (mint amilyen a Keccak-256 hash-e vagy secp256k1 aláírások).
 
@@ -52,7 +52,7 @@ A befordított okosszerződés bájtkódja EVM-[opcode-ként](/developers/docs/e
 
 ![Egy diagram, amely azt mutatja, hogy hol van szükség gázra az EVM-műveleteknél](../gas/gas.png) _Diagramok átvéve az [Illusztrált Ethereum EVM](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_ anyagból
 
-## EVM Implementációk \{#evm-implementations}
+## EVM Implementációk {#evm-implementations}
 
 Az összes EVM-implementációnak meg kell felelnie az Ethereum sárgakönyvben megfogalmazott specifikációnak.
 
@@ -66,7 +66,7 @@ Az [Ethereum végrehajtási kliensek](/developers/docs/nodes-and-clients/#execut
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
 - [revm](https://github.com/bluealloy/revm) - _Rust_
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [Ethereum sárga könyv](https://ethereum.github.io/yellowpaper/paper.pdf)
 - [Jello könyv, vagyis a KEVM: az EVM szemantikái K-ban](https://jellopaper.org/)
@@ -75,6 +75,6 @@ Az [Ethereum végrehajtási kliensek](/developers/docs/nodes-and-clients/#execut
 - [Ethereum Virtuális Gép operációskódjainak interaktív referenciája](https://www.evm.codes/)
 - [Rövid bevezetés a Solidity dokumentációjába](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
 
-## Kapcsolódó témák \{#related-topics}
+## Kapcsolódó témák {#related-topics}
 
 - [Gáz](/developers/docs/gas/)

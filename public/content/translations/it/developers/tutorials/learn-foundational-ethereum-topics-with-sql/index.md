@@ -19,7 +19,7 @@ Questo tutorial aiuta i lettori a comprendere i concetti fondamentali di Ethereu
 
 I dati sulla catena possono aiutarci a comprendere Ethereum, la rete, come un'economia per la potenza di calcolo, e dovrebbero servire da base per comprendere le sfide che Ethereum affronta oggi (cioè, l'aumento dei prezzi del gas) e, soprattutto, le discussioni sulle soluzioni di ridimensionamento.
 
-### Transazioni \{#transactions}
+### Transazioni {#transactions}
 
 Il percorso di un utente su Ethereum inizia inizializzando il conto controllato da un utente o da un'entità, con un saldo di ETH. Esistono due tipi di conto: controllato dall'utente o contratto intelligente (vedi [ethereum.org](/developers/docs/accounts/)).
 
@@ -63,19 +63,19 @@ FROM temp_table
 
 Questo produrrà le stesse informazioni fornite sulla pagina della transazione di Etherscan. A titolo di confronto, ecco le due sorgenti:
 
-#### Etherscan \{#etherscan}
+#### Etherscan {#etherscan}
 
 ![](./etherscan_view.png)
 
 [Pagina del contratto dell'EF su Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
-#### Dune Analytics \{#dune-analytics}
+#### Dune Analytics {#dune-analytics}
 
 ![](./dune_view.png)
 
 Puoi trovare la dashboard [qui](https://duneanalytics.com/paulapivat/Learn-Ethereum). Clicca sulla tabella per vedere l'interrogazione (vedi anche sopra).
 
-### Spezzare le Transazioni \{#breaking_down_transactions}
+### Spezzare le Transazioni {#breaking_down_transactions}
 
 Una transazione inviata presenta diverse informazioni, tra cui ([sorgente](/developers/docs/transactions/)):
 
@@ -104,7 +104,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Blocchi \{#blocks}
+### Blocchi {#blocks}
 
 Ogni transazione cambierà lo stato della macchina virtuale di Ethereum ([EVM](/developers/docs/evm/)) ([sorgente](/developers/docs/transactions/)). Le transazioni sono trasmesse alla rete per esser verificate e incluse in un blocco. Ogni transazione è associata al numero di un blocco. Per vedere i dati, potremmo interrogare un numero di blocco specifico: 12396854 (il blocco più recente tra le transazioni di Ethereum Foundation al momento della scrittura, 05/11/2021).
 
@@ -211,7 +211,7 @@ FROM temp_table
 
 Il numero medio di blocchi prodotto ogni giorno dal 2016 è lievemente superiore a quel numero, a 5.874. In alternativa, dividendo 86400 secondi per i 5874 blocchi medi, si ottiene 14,7 secondi, pari a circa un blocco ogni 15 secondi.
 
-### Gas \{#gas}
+### Gas {#gas}
 
 I blocchi hanno dimensioni limitate. La dimensione massima del blocco è dinamica e varia a seconda della domanda di rete, tra le 12.500.000 e le 25.000.000 unità. I limiti sono necessari per evitare che le dimensioni arbitrariamente grandi dei blocchi mettano a dura prova i nodi completi, in termini di requisiti di spazio su disco e velocità ([fonte](/developers/docs/blocks/)).
 
@@ -263,7 +263,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Riepilogo \{#summary}
+### Riepilogo {#summary}
 
 Con questo tutorial esaminiamo i concetti fondamentali di Ethereum e come funziona la blockchain di Ethereum interrogando e comprendendo i dati sulla catena.
 

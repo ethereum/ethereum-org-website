@@ -4,11 +4,11 @@ description: 一個關於以太坊生態系統的贈款計劃清單
 lang: zh-tw
 ---
 
-# 線上社群 \{#online-communities}
+# 線上社群 {#online-communities}
 
 數十萬的以太坊愛好者聚集在這些線上論壇上，分享消息、談論最近的發展、討論技術問題，並暢想未來。
 
-## 論壇 \{#forums}
+## 論壇 {#forums}
 
 {
 {
@@ -36,7 +36,7 @@ lang: zh-tw
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">以太坊研究</Link> - 最具影響力的加密經濟研究留言板</SocialListItem>
 }
 
-## 聊天室 \{#chat-rooms}
+## 聊天室 {#chat-rooms}
 
 {
 {
@@ -70,7 +70,7 @@ lang: zh-tw
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- 去中心化問答論壇_</SocialListItem>
 }
 
-## YouTube 和 Twitter \{#youtube-and-twitter}
+## YouTube 和 Twitter {#youtube-and-twitter}
 
 {
 {

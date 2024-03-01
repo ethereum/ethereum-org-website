@@ -4,7 +4,7 @@ description: フレームワークの利点を調査し、利用可能なオプ�
 lang: ja
 ---
 
-## フレームワーク入門 \{#introduction-to-frameworks}
+## フレームワーク入門 {#introduction-to-frameworks}
 
 本格的な dapp を構築するには、 さまざまな技術が必要になります。 ソフトウェアフレームワークには、必要な機能の多くが含まれています。 あるいは、好きなツールで作業できるように簡単なプラグインシステムが備わっています。
 
@@ -16,11 +16,11 @@ lang: ja
 - イーサリアムネットワーク(ローカルで実行されているインスタンスまたはイーサリアムのパブリックネットワーク)に接続し、コントラクトをデプロイするための設定
 - 分散型アプリケーションの配布 - IPFS などのストレージオプションとの統合
 
-## 前提知識 \{#prerequisites}
+## 前提知識 {#prerequisites}
 
 フレームワークの使用を開始する前に、[dapp](/developers/docs/dapps/)と[イーサリアムスタック](/developers/docs/ethereum-stack/)の入門を最初に読むことをお勧めします。
 
-## 利用可能なフレームワーク \{#available-frameworks}
+## 利用可能なフレームワーク {#available-frameworks}
 
 **Foundry -** **_Foundry は、イーサリアムアプリケーション開発のための、迅速でポータブルなモジュラー型ツールキットです。_**
 
@@ -106,10 +106,10 @@ lang: ja
 - [コミュニティフォーラム](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK 開発の終了**
 
-## 参考文献 \{#further-reading}
+## 参考文献 {#further-reading}
 
 _役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_
 
-## 関連トピック \{#related-topics}
+## 関連トピック {#related-topics}
 
 - [ローカル開発環境のセットアップ](/developers/local-environment/)

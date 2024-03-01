@@ -5,13 +5,13 @@ lang: cs
 sidebarDepth: 1
 ---
 
-# Ethereum pro firmy \{#ethereum-for-enterprise}
+# Ethereum pro firmy {#ethereum-for-enterprise}
 
 {
 <FeaturedText>Příručky, články a nástroje o veřejných a soukromých blockchainech Etherea pro firmy.</FeaturedText>
 }
 
-## K čemu je Ethereum pro firmy? \{#why-enterprise-ethereum}
+## K čemu je Ethereum pro firmy? {#why-enterprise-ethereum}
 
 Proč by se firmy měly starat o Ethereum?
 
@@ -28,7 +28,7 @@ Tady jsou některé související články pro více informací:
 - [EY releases zero-knowledge proof blockchain transaction technology to the public domain to advance blockchain privacy standards](https://www.ey.com/en_gl/news/2019/04/ey-releases-zero-knowledge-proof-blockchain-transaction-technology-to-the-public-domain-to-advance-blockchain-privacy-standards)
 - [Introduction to Quorum: Blockchain for the Financial Sector](https://medium.com/blockchain-at-berkeley/introduction-to-quorum-blockchain-for-the-financial-sector-58813f84e88c)
 
-## Organizace \{#organizations}
+## Organizace {#organizations}
 
 Některé organizace vyvinuly společné úsilí směřující ke zlepšení podpory Etherea pro firemní aplikace:
 
@@ -36,7 +36,7 @@ Některé organizace vyvinuly společné úsilí směřující ke zlepšení pod
 
 - [Hyperledger Foundation](https://hyperledger.org) _Hyperledger je společné open source úsilí o vytvoření pokročilých blockchainových technologií pro podnikové využití. Je to globální spolupráce zastřešená nadací The Linux Foundation a zahrnující vedoucí postavy z bankovnictví a finančního sektoru, Internetu věcí, dodavatelských řetězců, výroby a technologií._ _Některé projekty v této nadaci jsou určeny pro Ethereum:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
 
-## Podnikově zaměřené služby \{#enterprise-focused-services}
+## Podnikově zaměřené služby {#enterprise-focused-services}
 
 Následující projekty poskytují blockchainové služby pro firemní systémy:
 
@@ -45,7 +45,7 @@ Následující projekty poskytují blockchainové služby pro firemní systémy:
 - [PegaSys Plus](https://pegasys.tech/enterprise/) _nabízí stejné funkce a funkce jako HF Besu, a také další výhody zaměřené na firemní sféru_
 - [Quorum](https://www.goquorum.com/) _open source blockchain platforma, která kombinuje inovace veřejné Ethereum komunity s vylepšeními podpory firemních potřeb_
 
-## Protokol a infrastruktura \{#protocol-and-infrastructure}
+## Protokol a infrastruktura {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _open-source Ethereum klient vyvinutý pod licencí Apache 2.0 a napsaný v Javě_
 - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _modulární blockchain klient s interpreterem chytrých kontraktů s kontrolovaným přístupem, částečně vyvinutým podle specifikace virtuálního stroje Ethereum (EVM)_
@@ -54,33 +54,33 @@ Následující projekty poskytují blockchainové služby pro firemní systémy:
 - [Autonity](https://www.clearmatics.com/about/) _sada protokolů, která implementuje p2p protokoly a poskytuje klientský software a infrastrukturu_
 - [Chainstack](https://chainstack.com/) _platforma jako služba pro různé druhy cloudů a různé protokoly, která podnikům umožňuje rychlý vývoj, nasazení a správu decentralizovaných sítí a služeb_
 
-## Funkce pro firmy \{#enterprise-features}
+## Funkce pro firmy {#enterprise-features}
 
 Veřejné a soukromé Ethereum sítě mohou v závislosti na tom, kdo je používá, potřebovat určité funkce. Následuje popis některých z těchto funkcí:
 
-### Chráněný přístup \{#permissioning}
+### Chráněný přístup {#permissioning}
 
 - [Pegasys Permissioning Contracts](https://github.com/PegaSysEng/permissioning-smart-contracts)
 - [Quorum Permissioning solution](https://github.com/jpmorganchase/quorum/wiki/Security)
 
-### Ochrana soukromí \{#privacy}
+### Ochrana soukromí {#privacy}
 
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _Více informací [zde](https://bravenewcoin.com/insights/ernst-and-young-rolls-out-'nightfall-to-enable-private-transactions-on)_
 - [Pegasys' Orion](https://docs.pantheon.pegasys.tech/en/stable/Concepts/Privacy/Privacy-Overview/) _Více informací [zde](https://pegasys.tech/privacy-in-pantheon-how-it-works-and-why-your-enterprise-should-care/)_
 - [Quorum's Tessera](https://docs.goquorum.com/en/latest/Privacy/Tessera/Tessera/) _Více informací [zde](https://github.com/jpmorganchase/tessera/wiki/How-Tessera-works)_
 
-### Bezpečnost \{#security}
+### Bezpečnost {#security}
 
 - [Clef](https://geth.ethereum.org/docs/clef/tutorial) _používaný pro podepisování transakcí a data je zamýšlen jako náhrada pro správu účtů v Geth_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _Aplikace pro podepisování transakcí pro použití s poskytovateli web3_
 
-### Nástroje \{#tooling}
+### Nástroje {#tooling}
 
 - [Alethio](https://explorer.aleth.io/) _Datově analytická platforma pro Ethereum_
 - [Treum](https://treum.io/) _pomocí technologie blockchainu přináší transparentnost, dohledatelnost a obchodovatelnost dodavatelským řetězcům_
 - [Truffle Suite](https://trufflesuite.com) _sada nástrojů pro blockchainový vývoj (Truffle, Ganache, Drizzle)_
 
-## Komunita vývojářů funkcí pro firmy \{#enterprise-developer-community}
+## Komunita vývojářů funkcí pro firmy {#enterprise-developer-community}
 
 - [Alethio Discord](https://discord.gg/d2t8NuU)
 - [Infura Discourse](https://community.infura.io/)

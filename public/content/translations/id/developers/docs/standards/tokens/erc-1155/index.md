@@ -4,7 +4,7 @@ description:
 lang: id
 ---
 
-## Pendahuluan \{#introduction}
+## Pendahuluan {#introduction}
 
 Sebuah antarmuka standar untuk kontrak yang mengelola jenis token multiple. Suatu kontrak tunggal yang disebarkan mungkin memasukkan kombinasi mana pun dari token yang dapat dipertukarkan, token yang tidak dapat dipertukarkan, atau konfigurasi lainnya (contohnya token semi yang dapat dipertukarkan).
 
@@ -14,11 +14,11 @@ Idenya sederhana dan bertujuan untuk membuat antarmuka kontrak pintar yang dapat
 
 Token ERC-1155 dideskripsikan secara lengkap di [EIP-1155](https://eips.ethereum.org/EIPS/eip-1155).
 
-## Prasyarat \{#prerequisites}
+## Prasyarat {#prerequisites}
 
 Untuk lebih memahami halaman ini, sebaiknya baca terlebih dahulu tentang [standar token](/developers/docs/standards/tokens/), [ERC-20](/developers/docs/standards/tokens/erc-20/), dan [ERC-721](/developers/docs/standards/tokens/erc-721/).
 
-## Fungsi dan Fitur ERC-1155: \{#body}
+## Fungsi dan Fitur ERC-1155: {#body}
 
 - [Transfer Kelompok](#batch_transfers): Transfer beberapa aset dalam sekali pemanggilan.
 - [Saldo Kelompok](#batch_balance): Dapatkan saldo dari beberapa aset dalam sekali pemanggilan.
@@ -27,7 +27,7 @@ Untuk lebih memahami halaman ini, sebaiknya baca terlebih dahulu tentang [standa
 - [Dukungan NFT](#nft_support): Jika persediaan hanya berjumlah 1, anggaplah sebagai NFT.
 - [Aturan Transfer Aman](#safe_transfer_rule): Kumpulan aturan untuk transfer yang aman.
 
-### Transfer Kelompok \{#batch-transfers}
+### Transfer Kelompok {#batch-transfers}
 
 Transfer kelompok bekerja dalam cara yang sangat mirip dengan transfer ERC-20 reguler. Mari kita lihat fungsi transferFrom ERC-20 reguler:
 
@@ -53,7 +53,7 @@ Satu-satunya perbedaan dalam ERC-1155 adalah bahwa kita melewatkan nilai sebagai
 
 Dalam ERC-1155, kita hanya memiliki `transferFrom`, tidak memiliki `transfer`. Untuk menggunakannya seperti `transfer` reguler, cukup tetapkan alamat from ke alamat yang memanggil fungsi.
 
-### Saldo Kelompok \{#batch-balance}
+### Saldo Kelompok {#batch-balance}
 
 Pemanggilan `balanceOf` ERC-20 masing-masing juga memiliki fungsi pasangannya dengan dukungan kelompok. Sebagai pengingat, ini adalah versi ERC-20:
 
@@ -80,7 +80,7 @@ Sebagai contoh, diketahui `_ids=[3, 6, 13]` dan `_owners=[0xbeef..., 0x1337..., 
 ]
 ```
 
-### Persetujuan Kelompok \{#batch-approval}
+### Persetujuan Kelompok {#batch-approval}
 
 ```solidity
 // ERC-1155
@@ -101,7 +101,7 @@ Membaca status saat ini dapat dilakukan melalui `isApprovedForAll`. Seperti yang
 
 Ini dengan sengaja dirancang sedemikian rupa dengan tujuan kemudahan. Anda juga dapat menyetujui semua hal untuk satu alamat.
 
-### Terima Kaitan \{#receive-hook}
+### Terima Kaitan {#receive-hook}
 
 ```solidity
 function onERC1155BatchReceived(
@@ -121,11 +121,11 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 Ketika kontrak yang menerima mengembalikan nilai ini, kontrak dianggap menerima transfer dan mengetahui cara menangani token ERC-1155. Bagus, tidak ada lagi token yang macet dalam kontrak!
 
-### Dukungan NFT \{#nft-support}
+### Dukungan NFT {#nft-support}
 
 Ketika persediaan hanya berjumlah satu, token pada dasarnya merupakan token yang tidak dapat dipertukarkan (NFT). Dan karena ini adalah standar untuk ERC-721, Anda dapat menentukan suatu URL metadata. URL dapat dibaca dan dimodifikasi oleh klien, lihat [di sini](https://eips.ethereum.org/EIPS/eip-1155#metadata).
 
-### Aturan Transfer Aman \{#safe-transfer-rule}
+### Aturan Transfer Aman {#safe-transfer-rule}
 
 Kita telah membahas beberapa aturan transfer yang aman di penjelasan sebelumnya. Tetapi, mari kita lihat pada bagian terpenting dari aturannya:
 
@@ -138,7 +138,7 @@ Kita telah membahas beberapa aturan transfer yang aman di penjelasan sebelumnya.
 
 _Catatan_: Semua fungsi kelompok termasuk kaitan juga hadir sebagai versi tanpa kelompok. Ini semua demi efisiensi gas, dengan pertimbangan untuk mentransfer hanya satu aset mungkin masih menjadi cara yang paling banyak digunakan. Kita telah melewatkannya untuk penjelasan yang sederhana, termasuk untuk aturan transfer yang aman. Namanya mirip, cukup hilangkan 'Batch'.
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 - [EIP-1155: Standar Token Multi](https://eips.ethereum.org/EIPS/eip-1155)
 - [ERC-1155: Dokumen Openzeppelin](https://docs.openzeppelin.com/contracts/3.x/erc1155)

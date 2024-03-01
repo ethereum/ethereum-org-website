@@ -12,7 +12,7 @@ summaryPoint2: NFT-lər məzmun yaradıcılarına əvvəlkindən daha çox güc 
 summaryPoint3: Ethereum blokçeynində ağıllı müqavilələr ilə dəstəklənmişdir.
 ---
 
-## What are NFTs? \{#what-are-nfts}
+## What are NFTs? {#what-are-nfts}
 
 NFT-lər individual olaraq unikal olan tokenlərdir. Hər bir NFT fərqli xüsusiyyətlərə malikdir (dəyişilə bilməyən) və sübut edilə bilən səviyyədə, azdır. Bu, ETH və ya USDC kimi digər Ethereum əsaslı tokenlərdən fərqlidir ki onlarda hər bir token eynidir və eyni xüsusiyyətlərə malikdir ("işlənə bilən"). Cüzdanınızda hansı xüsusi dollar əskinasının (və ya ETH) olması sizə əhəmiyyət vermir, çünki onların hamısı eynidir və eyni dəyərdədir. Bununla belə, siz hansı NFT-yə sahib olduğunuza əhəmiyyət _verirsiniz_, çünki onların hamısı onları digərlərindən fərqləndirən fərdi xüsusiyyətlərə malikdir (“dəyişilə bilməyən”).
 
@@ -22,13 +22,13 @@ Hər bir NFT-nin unikallığı incəsənət, kolleksiya əşyaları və ya hətt
 <YouTube id="Xdkkux6OxfM" />
 }
 
-## Aktivlərin interneti \{#internet-of-assets}
+## Aktivlərin interneti {#internet-of-assets}
 
 NFT-lər və Ethereum bu gün internetdə mövcud olan bəzi problemləri həll edir. Hər şey daha rəqəmsallaşdıqca, fiziki əşyaların çatışmazlıq, unikallıq və mülkiyyət sübutu kimi xüsusiyyətlərini mərkəzi təşkilat tərəfindən idarə olunmayan şəkildə təkrarlamaq lazımdır. Məsələn, NFT-lər ilə siz bütün Ethereum əsaslı proqramlarda musiqi mp3 faylına sahib ola bilərsiniz və Spotify və ya Apple Music kimi bir şirkətin xüsusi musiqi proqramına bağlı olmaya bilərsiniz. Siz sata və ya dəyişdirə biləcəyiniz bir sosial media dəstəyinə sahib ola bilərsiniz, lakin bir platforma provayderi tərəfindən özbaşına sizdən alına bilməz.
 
 Bu gün çoxumuzun istifadə etdiyi internetlə müqayisədə NFT internetinin fərqləri bunlardır...
 
-### Müqayisə \{#nft-comparison}
+### Müqayisə {#nft-comparison}
 
 | NFT interneti                                                                                                                                              | Bugünkü internet                                                                                                                                                           |
 | ---------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -39,7 +39,7 @@ Bu gün çoxumuzun istifadə etdiyi internetlə müqayisədə NFT internetinin f
 | Məzmun yaradıcıları işlərini hər yerdə sata və qlobal bazara çıxa bilərlər.                                                                                | Yaradıcılar istifadə etdikləri platformaların infrastrukturuna və paylanmasına etibar edirlər. Bunlar çox vaxt istifadə şərtlərinə və coğrafi məhdudiyyətlərə məruz qalır. |
 | NFT yaradıcıları öz işləri üzərində mülkiyyət hüquqlarını saxlaya bilərlər və qonorarları birbaşa NFT müqaviləsinə proqramlaşdıra bilərlər.                | Musiqi axını xidmətləri kimi platformalar satışdan əldə edilən gəlirin böyük hissəsini özlərinə saxlayır.                                                                  |
 
-## NFT-lər nə üçün istifadə olunur? \{#nft-use-cases}
+## NFT-lər nə üçün istifadə olunur? {#nft-use-cases}
 
 NFT-lər bir çox şeylər üçün istifadə olunur, o cümlədən:
 
@@ -70,7 +70,7 @@ Bu veb-saytın NFT-lər tərəfindən dəstəklənən alternativ domen adı da v
 <Divider />
 }
 
-## NFT-lər necə işləyir? \{#how-nfts-work}
+## NFT-lər necə işləyir? {#how-nfts-work}
 
 NFT-lər, Ethereum blockchainindəki hər hansı rəqəmsal element kimi, "ağıllı müqavilə" adlanan xüsusi Ethereum əsaslı kompüter proqramı vasitəsilə yaradılır Bu müqavilələr, müqavilənin nə edə biləcəyini müəyyən edən ERC-721 və ya ERC-1155 standartları kimi müəyyən qaydalara əməl edir.
 
@@ -84,7 +84,7 @@ Kimsə NFT-ni "yaradanda" və ya "zərb edəndə", əsasən ağıllı müqavilə
 
 Bundan əlavə, müqavilənin yaradıcısı əlavə qaydalar əlavə edə bilər. Onlar müəyyən bir NFT-nin neçəsinin yaradıla biləcəyini məhdudlaşdıra bilər və ya NFT əl dəyişdirəndə kiçik bir royalti haqqı almağa qərar verə bilər.
 
-### NFT təhlükəsizliyi \{#nft-security}
+### NFT təhlükəsizliyi {#nft-security}
 
 Ethereum-un təhlükəsizliyi hissə sübutundan gəlir. Sistem, zərərli hərəkətləri iqtisadi cəhətdən dayandırmaq üçün dizayn edilmişdir və bu, Ethereum-u müdaxiləyə davamlı edir. NFT-ləri mümkün edən budur. NFT əməliyyatınızı ehtiva edən blok tamamlandıqdan sonra onu dəyişdirmək təcavüzkar üçün milyonlarla ETH-yə başa gələr. Ethereum proqramını işlədən hər kəs dərhal NFT-yə qeyri-qanuni müdaxiləni aşkar edə biləcək və pis aktyor iqtisadi cəhətdən cəzalandırılacaq və çıxarılacaq.
 
@@ -94,7 +94,7 @@ NFT-lərlə bağlı təhlükəsizlik məsələləri çox vaxt fişinq fırıldaq
   Təhlükəsizlik haqqında daha çox məlumat
 </ButtonLink>
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [NFT-lər haqqında yeni başlayanlar üçün bələdçi](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) – _Linda Xie, yanvar 2020_
 - [EtherscanNFT izləyicisi](https://etherscan.io/nft-top-contracts)

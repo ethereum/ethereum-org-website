@@ -8,7 +8,7 @@ isOutdated: true
 
 W przeciwieństwie do centralnie zlokalizowanego serwera obsługiwanego przez jedną firmę lub organizację, zdecentralizowane systemy pamięci masowej składają się z sieci peer-to-peer użytkowników-operatorów, którzy posiadają część ogólnych danych, tworząc odporny system przechowywania i udostępniania plików.
 
-## Powiązane narzędzia \{#related-tools}
+## Powiązane narzędzia {#related-tools}
 
 **IPFS -** **_InterPlanetary File System to zdecentralizowany system przechowywania i odwoływania się do plików dla Ethereum. _**
 
@@ -26,10 +26,10 @@ W przeciwieństwie do centralnie zlokalizowanego serwera obsługiwanego przez je
 - [Dokumentacja](https://github.com/orbitdb/field-manual)
 - [GitHub](https://github.com/orbitdb/orbit-db)
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
 
-## Powiązane tematy \{#related-topics}
+## Powiązane tematy {#related-topics}
 
 - [Frameworki programistyczne](/developers/docs/frameworks/)

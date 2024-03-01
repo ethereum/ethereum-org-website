@@ -4,11 +4,11 @@ description: Μια λίστα με τα προγράμματα επιχορηγ
 lang: el
 ---
 
-# Διαδικτυακές κοινότητες \{#online-communities}
+# Διαδικτυακές κοινότητες {#online-communities}
 
 Εκατοντάδες χιλιάδες λάτρεις του Ethereum συγκεντρώνονται σε αυτές τις διαδικτυακές τοποθεσίες για να μοιραστούν ειδήσεις, να μιλήσουν για τις πρόσφατες εξελίξεις, να συζητήσουν τεχνικά ζητήματα και να ονειρευτούν το μέλλον.
 
-## Φόρουμ \{#forums}
+## Φόρουμ {#forums}
 
 {
 {
@@ -36,7 +36,7 @@ lang: el
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> - ο πιο σημαντικός πίνακας ειδήσεων για κρυπτοοικονομική έρευνα.</SocialListItem>
 }
 
-## Αίθουσες συνομιλίας \{#chat-rooms}
+## Αίθουσες συνομιλίας {#chat-rooms}
 
 {
 {
@@ -70,7 +70,7 @@ lang: el
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- αποκεντρωμένο φόρουμ ερωτήσεων και απαντήσεων_</SocialListItem>
 }
 
-## YouTube και Twitter \{#youtube-and-twitter}
+## YouTube και Twitter {#youtube-and-twitter}
 
 {
 {

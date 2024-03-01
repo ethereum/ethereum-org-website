@@ -4,7 +4,7 @@ description: Pag-unawa sa mga scam token, paano nagmumukhang lehitimo ang mga it
 lang: fil
 ---
 
-# Paano matukoy ang mga scam token \{#identify-scam-tokens}
+# Paano matukoy ang mga scam token {#identify-scam-tokens}
 
 One of the most common uses for Ethereum is for a group to create a tradable token, in a sense their own currency. Karaniwang sumusunod ang mga token na ito sa isang pamantayan, ang [ERC-20](/developers/docs/standards/tokens/erc-20/). Gayunpaman, saanman may mga lehitimong use case na nagpapahusay nito, mayroon ding mga kriminal na sumusubok na kunin iyon para sa kanilang sarili.
 
@@ -37,7 +37,7 @@ Hindi makatwirang gumawa ng wrapped na bersyon ng isang ERC-20 token na nasa Eth
 </ExpandableCard>
 }
 
-## Paano gumagana ang mga scam token? \{#how-do-scam-tokens-work}
+## Paano gumagana ang mga scam token? {#how-do-scam-tokens-work}
 
 Ang layunin talaga ng Ethereum ay decentralization. Ibig sabihin nito, walang central na awtoridad na puwedeng kumumpiska ng iyong mga asset o pumigil sa iyong mag-deploy ng smart contract. Ngunit ibig sabihin rin nito, puwedeng mag-deploy ng anumang smart contract ang mga scammer.
 
@@ -53,7 +53,7 @@ Ang <a href="/developers/docs/smart-contracts/">mga smart contract</a> ang mga p
 
 Partikular dito, nag-deploy ang Arbitrum ng contract na gumagamit ng simbolong `ARB`. Ngunit, hindi nito napipigilan ang ibang tao na mag-deploy din ng contract na gumagamit ng mismong simbolong iyon, o ng katulad noon. Maitatakda ng gumagawa ng contract ang gagawin ng contract.
 
-## Pagmumukhang lehitimo \{#appearing-legitimate}
+## Pagmumukhang lehitimo {#appearing-legitimate}
 
 May ilang pandarayang ginagawa ang mga creator ng scam token para magmukhang lehitimo.
 
@@ -67,13 +67,13 @@ May ilang pandarayang ginagawa ang mga creator ng scam token para magmukhang leh
 
 - **Mga lehitimong pag-transfer**. _Hindi magbabayad ang mga lehitimong may-ari para mag-transfer ng scam token sa iba, kaya kung may mga pag-transfer, lehitimo ito, tama?_ **Mali**. Ang mga `transfer` event ay mula sa ERC-20 contract. Madali para sa isang scammer na i-write ang contract sa paraang magsasagawa ng mga pagkilos na iyon.
 
-## Mga scammy website \{#websites}
+## Mga scammy website {#websites}
 
 Maaari ding gumawa ang mga scammer ng mga napakakapani-paniwalang website, na kung minsan pa ay mga eksaktong kopya ng mga tunay na site na may magkaparehong UI, ngunit may maliliit na pandaraya. Ang mga halimbawa ay mga external link na mukhang lehitimo pero dinadala pala ang user sa external scam website, o mga maling tagubilin na nagdidirekta sa user sa pag-expose ng kanyang mga key o pagpapadala ng mga pondo sa address ng attacker.
 
 Ang pinakamagandang kagawian upang maiwasan ito ay maingat na suriin ang URL ng mga site na bibisitahin mo, at i-save ang mga address ng mga kilalang lehitimong site sa iyong mga bookmark. Pagkatapos ay maa-access mo ang tunay na site sa pamamagitan ng iyong mga bookmark nang hindi sinasadyang magkamali sa spelling o umaasa sa mga external link.
 
-## Paano mo mapoprotektahan ang iyong sarili? \{#protect-yourself}
+## Paano mo mapoprotektahan ang iyong sarili? {#protect-yourself}
 
 1. **Tingnan ang address ng contract**. Ang mga lehitimong token ay nagmumula sa mga lehitimong organisasyon, at makikita mo ang mga address ng contract sa website ng organisasyon. Halimbawa, [para sa `ARB`, makikita mo ang mga lehitimong address dito](https://docs.arbitrum.foundation/deployment-addresses#token).
 
@@ -93,7 +93,7 @@ Ito ay isa pang ebidensya na nagpapakita sa atin na ang `wARB` ay hindi lehitimo
 
    ![Scam token sa Etherscan](./etherscan-scam.png)
 
-## Conclusion \{#conclusion}
+## Conclusion {#conclusion}
 
 Hangga't may halaga sa mundo, may mga scammer na magtatangkang nakawin ito para sa kanilang sarili, at sa isang decentralized na mundo, walang ibang magpoprotekta sa iyo kundi ikaw. Sana ay tandaan mo ang mga puntong ito para matukoy ang mga lehitimong token sa mga scam:
 

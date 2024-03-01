@@ -9,7 +9,7 @@ skill: beginner
 published: 2022-08-15
 ---
 
-## Introduction \{#introduction}
+## Introduction {#introduction}
 
 L'un des grands avantages avec Ethereum est qu'il n'y a pas d'autorité centrale qui peut modifier ou annuler vos transactions. L'un des grands problèmes avec Ethereum est qu'il n'y a pas d'autorité centrale ayant le pouvoir d'annuler les erreurs des utilisateurs ou les transactions illicites. Dans cet article, vous apprendrez quelques-unes des erreurs courantes que commettent les utilisateurs avec les jetons [ERC-20](/developers/docs/standards/tokens/erc-20/), ainsi que comment créer des contrats ERC-20 qui aident les utilisateurs à éviter ces erreurs, ou qui donnent à une autorité centrale certains pouvoirs (par exemple, geler des comptes).
 
@@ -22,7 +22,7 @@ Si vous souhaitez consulter le code source complet :
 3. Clonez le référentiel GitHub `https://github.com/qbzzt/20220815-erc20-safety-rails`.
 4. Ouvrez **contrats > erc20-safety-rails.sol**.
 
-## Création d'un contrat ERC-20 \{#creating-an-erc-20-contract}
+## Création d'un contrat ERC-20 {#creating-an-erc-20-contract}
 
 Avant de pouvoir ajouter la fonctionnalité de sécurité, nous avons besoin d'un contrat ERC-20. Dans cet article, nous utiliserons [l'assistant de contrats OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/wizard). Ouvrez-le dans un autre navigateur et suivez ces instructions :
 
@@ -42,9 +42,9 @@ Avant de pouvoir ajouter la fonctionnalité de sécurité, nous avons besoin d'u
 4. Nous avons maintenant un contrat ERC-20 pleinement fonctionnel. Vous pouvez développer `.deps` > ` npm` pour voir le code importé.
 5. Compilez, déployez et jouez avec le contrat pour voir qu'il fonctionne comme un contrat ERC-20. Si vous devez apprendre à utiliser Remix, [utilisez ce tutoriel](https://remix.ethereum.org/?#activate=udapp,solidity,LearnEth).
 
-## Erreurs courantes \{#common-mistakes}
+## Erreurs courantes {#common-mistakes}
 
-### Les erreurs \{#the-mistakes}
+### Les erreurs {#the-mistakes}
 
 Les utilisateurs envoient parfois des tokens à la mauvaise adresse. Bien que nous ne puissions pas lire dans leurs pensées pour savoir ce qu'ils voulaient faire, il existe deux types d'erreurs qui se produisent souvent et sont faciles à détecter :
 
@@ -52,7 +52,7 @@ Les utilisateurs envoient parfois des tokens à la mauvaise adresse. Bien que no
 
 2. Envoyer les tokens à une adresse vide, une adresse qui ne correspond pas à [un compte possédé extérieurement](/developers/docs/accounts/#externally-owned-accounts-and-key-pairs) ou [à un contrat intelligent](/developers/docs/smart-contracts). Bien que je n'aie pas de statistiques sur la fréquence à laquelle cela se produit, [un incident aurait pu coûter 20 000 000 tokens](https://gov.optimism.io/t/message-to-optimism-community-from-wintermute/2595).
 
-### Prévenir les transferts \{#preventing-transfers}
+### Prévenir les transferts {#preventing-transfers}
 
 Le contrat ERC-20 d'OpenZeppelin comprend [un crochet`, _beforeTokenTransfer`](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol#L364-L368), qui est appelé avant qu'un token soit transféré. Par défaut, ce crochet ne fait rien, mais nous pouvons y ajouter notre propre fonctionnalité, comme des vérifications qui annulent le transfert s'il y a un problème.
 
@@ -87,7 +87,7 @@ Nous devons explicitement spécifier que nous [surchargeons](https://docs.solidi
 
 Cette ligne appelle la fonction `_beforeTokenTransfer` du ou des contrats dont nous avons hérité et qui la possèdent. Dans ce cas, il s'agit uniquement `d'ERC20`, `Ownable` n'a pas ce crochet. Bien qu'actuellement `ERC20._beforeTokenTransfer` ne fasse rien, nous l'appelons au cas où une fonctionnalité serait ajoutée à l'avenir (et nous décidons alors de redéployer le contrat, car les contrats ne changent pas après le déploiement).
 
-### Codage des exigences \{#coding-the-requirements}
+### Codage des exigences {#coding-the-requirements}
 
 Nous voulons ajouter ces exigences à la fonction :
 
@@ -119,7 +119,7 @@ C'est ainsi que nous vérifions si une adresse est un contrat. Nous ne pouvons p
 
 Et enfin, nous avons la vérification réelle des adresses vides.
 
-## Accès administratif \{#admin-access}
+## Accès administratif {#admin-access}
 
 Parfois, il est utile d'avoir un administrateur qui peut annuler des erreurs. Pour réduire le potentiel d'abus, cet administrateur peut être géré par une [multisig](https://blog.logrocket.com/security-choices-multi-signature-wallets/), ce qui signifie que plusieurs personnes doivent accepter une action. Dans cet article, nous aurons deux fonctionnalités administratives :
 
@@ -137,7 +137,7 @@ OpenZeppelin fournit deux mécanismes pour activer l'accès administratif :
 
 Pour simplifier, dans cet article, nous utilisons `Ownable`.
 
-### Geler et dégeler les contrats \{#freezing-and-thawing-contracts}
+### Geler et dégeler les contrats {#freezing-and-thawing-contracts}
 
 Le gel et le dégel des contrats nécessitent plusieurs modifications :
 
@@ -183,7 +183,7 @@ Le gel et le dégel des contrats nécessitent plusieurs modifications :
        require(!frozenAccounts[from], "The account is frozen");
   ```
 
-### Nettoyage des actifs \{#asset-cleanup}
+### Nettoyage des actifs {#asset-cleanup}
 
 Pour libérer les jetons ERC-20 détenus par ce contrat, nous devons appeler une fonction sur le contrat token auquel ils appartiennent, soit [`transfer`](https://eips.ethereum.org/EIPS/eip-20#transfer) soit [`approve`](https://eips.ethereum.org/EIPS/eip-20#approve). Cela ne sert à rien de gaspiller du gaz dans ce cas en quotas, autant transférer directement.
 
@@ -208,6 +208,6 @@ C'est la syntaxe pour créer un objet pour un contrat lorsque nous recevons l'ad
 
 C'est une fonction de nettoyage, nous ne voulons donc probablement laisser aucun jeton. Au lieu d'obtenir le solde de l'utilisateur manuellement, autant automatiser le processus.
 
-## Conclusion \{#conclusion}
+## Conclusion {#conclusion}
 
 Ce n'est pas une solution parfaite - il n'existe pas de solution parfaite au problème « l'utilisateur a fait une erreur ». Cependant, utiliser ce type de vérifications peut au moins prévenir certaines erreurs. La capacité à geler des comptes, bien que dangereuse, peut être utilisée pour limiter les dégâts de certaines attaques en refusant au pirate les fonds volés.

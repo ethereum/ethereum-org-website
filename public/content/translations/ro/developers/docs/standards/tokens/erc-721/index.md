@@ -4,7 +4,7 @@ description:
 lang: ro
 ---
 
-## Introducere \{#introduction}
+## Introducere {#introduction}
 
 **Ce este un token nefungibil?**
 
@@ -16,13 +16,13 @@ ERC-721 introduce un standard pentru NFT-uri, cu alte cuvinte, acest tip de Toke
 
 Da! Toate NFT-urile au o variabilă `uint256` numită `tokenId`, astfel încât pentru orice contract ERC-721, perechea `contract address, uint256 tokenId` trebuie să fie unică la nivel global. Acestea fiind spuse, o aplicaţie dApp poate avea un „convertor” care folosește `tokenId` ca date de intrare și produce la ieşire ceva grozav, cum ar fi o imagine cu zombi, arme, abilități sau pisicuțe uimitoare!
 
-## Condiții prealabile \{#prerequisites}
+## Condiții prealabile {#prerequisites}
 
 - [Conturi](/developers/docs/accounts/)
 - [Contracte inteligente](/developers/docs/smart-contracts/)
 - [Standarde de tokenuri](/developers/docs/standards/tokens/)
 
-## Conținut \{#body}
+## Conținut {#body}
 
 ERC-721 (Cerere de comentarii Ethereum), propus de William Entriken, Dieter Shirley, Jacob Evans, Nastassia Sachs în ianuarie 2018, este un Standard de tokenuri nefungibile care implementează un API pentru tokenuri în cadrul Contractelor inteligente.
 
@@ -32,7 +32,7 @@ Acesta oferă funcționalități cum ar fi transferul de tokenuri dintr-un cont 
 
 De la [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
 
-### Metode \{#methods}
+### Metode {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ De la [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### Evenimente \{#events}
+### Evenimente {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -54,11 +54,11 @@ De la [EIP-721](https://eips.ethereum.org/EIPS/eip-721):
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### Exemple \{#web3py-example}
+### Exemple {#web3py-example}
 
 Să vedem cât de important este un standard pentru a ne simplifica lucrurile când inspectăm orice contract de tokenuri ERC-721 pe Ethereum. Avem nevoie doar de interfața binară cu aplicația (ABI) a contractului pentru a crea o interfață pentru orice token ERC-721. După cum puteţi vedea mai jos, vom folosi un ABI simplificat, pentru a facilita înţelegerea exemplului.
 
-#### Exemplu Web3.py \{#web3py-example}
+#### Exemplu Web3.py {#web3py-example}
 
 În primul rând aveţi grijă să instalaţi librăria Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
@@ -225,7 +225,7 @@ birth_logs = w3.eth.getLogs({
 recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## NFT-uri populare \{#popular-nfts}
+## NFT-uri populare {#popular-nfts}
 
 - [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) listează NFT-urile de top pe Ethereum după volumul transferurilor.
 - [CryptoKitties](https://www.cryptokitties.co/) este un joc centrat pe creaturile care pot fi crescute, colecționate și sunt atât de adorabile pe care le numim CryptoKitties.
@@ -235,7 +235,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Gods Unchained Cards](https://godsunchained.com/) este un TCG (joc de cărți de tranzacționare) pe blockchain-ul Ethereum care folosește NFT-uri pentru a aduce proprietate reală activelor din joc.
 - [Bored Ape Yacht Club](https://boredapeyachtclub.com) este o colecție de 10.000 de NFT-uri unice, care, în afară de a fi o piesă artistică cu adevărat rară, funcționează ca token de membru al clubului, oferind membrilor avantaje și beneficii care cresc în timp, ca rezultat al eforturilor comunității.
 
-## Referințe suplimentare \{#further-reading}
+## Referințe suplimentare {#further-reading}
 
 - [EIP-721: Standardul de tokenuri nefungibile ERC-721](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - Documentație ERC-721](https://docs.openzeppelin.com/contracts/3.x/erc721)

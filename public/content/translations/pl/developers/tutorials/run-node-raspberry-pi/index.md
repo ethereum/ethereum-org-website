@@ -27,7 +27,7 @@ Zasadniczo oba są tym samym obrazem i zawierają te same cechy obrazów opartyc
 
 **Obrazy wykonują wszystkie niezbędne kroki**, od konfiguracji środowiska i formatowania dysku SSD po instalację i uruchomienie oprogramowania Ethereum, a także uruchomienie synchronizacji łańcucha bloków.
 
-## Główne funkcje \{#main-features}
+## Główne funkcje {#main-features}
 
 - Na podstawie Ubuntu 20.04 64bit
 - Automatyczna partycja i formatowanie dysku USB
@@ -37,23 +37,23 @@ Zasadniczo oba są tym samym obrazem i zawierają te same cechy obrazów opartyc
 - Zawiera repozytorium APT do instalacji i aktualizacji oprogramowania Ethereum
 - Zawiera panel monitorowania oparty na Grafana / Prometheus
 
-## Dołączone oprogramowanie \{#software-included}
+## Dołączone oprogramowanie {#software-included}
 
 Oba obrazy zawierają te same pakiety, jedyną różnicą między nimi jest to, że Eth 1.0 domyślnie uruchamia Geth, a Eth 2.0 domyślnie uruchamia łańcuch śledzący Prysm.
 
-### Klienty Ethereum 1.0 \{#execution-clients}
+### Klienty Ethereum 1.0 {#execution-clients}
 
 - Geth [[8]](/developers/tutorials/run-node-raspberry-pi/#references): 1.9.13 (oficjalny plik binarny)
 - Parity [[9]](/developers/tutorials/run-node-raspberry-pi/#references): 2.7.2 (kompilacja krzyżowa)
 - Nethermind [[10]](/developers/tutorials/run-node-raspberry-pi/#references): 1.8.28 (kompilacja krzyżowa)
 - Hyperledger Besu [[11]](/developers/tutorials/run-node-raspberry-pi/#references): 1.4.4 (skompilowane)
 
-### Klienty Ethereum 2.0 \{#consensus-clients}
+### Klienty Ethereum 2.0 {#consensus-clients}
 
 - Prysm [[12]](/developers/tutorials/run-node-raspberry-pi/#references): 1.0.0-alpha6 (oficjalny plik binarny)
 - Lighthouse [[13]](/developers/tutorials/run-node-raspberry-pi/#references): 0.1.1 (kompilacja)
 
-### Framework Ethereum \{#ethereum-framework}
+### Framework Ethereum {#ethereum-framework}
 
 - Swarm [[14]](/developers/tutorials/run-node-raspberry-pi/#references): 0.5.7 (oficjalny plik binarny)
 - Raiden Network [[15]](/developers/tutorials/run-node-raspberry-pi/#references): 0.200.0~rc1 (oficjalny plik binarny)
@@ -61,9 +61,9 @@ Oba obrazy zawierają te same pakiety, jedyną różnicą między nimi jest to, 
 - Statusd [[17]](/developers/tutorials/run-node-raspberry-pi/#references): 0.52.3 (skompilowany)
 - Vipnode [[18]](/developers/tutorials/run-node-raspberry-pi/#references): 2.3.3 (oficjalny plik binarny)
 
-## Instrukcja instalacji i użytkowania \{#installation-guide-and-usage}
+## Instrukcja instalacji i użytkowania {#installation-guide-and-usage}
 
-### Zalecany sprzęt i konfiguracja \{#recommended-hardware-and-setup}
+### Zalecany sprzęt i konfiguracja {#recommended-hardware-and-setup}
 
 - Raspberry 4 (model B) - 4GB
 - Karta MicroSD (16 GB klasy 10 minimum)
@@ -74,7 +74,7 @@ Oba obrazy zawierają te same pakiety, jedyną różnicą między nimi jest to, 
 - Obudowa z radiatorem i wentylatorem (opcjonalna, ale zdecydowanie zalecana)
 - Klawiatura USB, monitor i kabel HDMI (micro-HDMI) (opcjonalnie)
 
-## Pamięć \{#storage}
+## Pamięć {#storage}
 
 Będziesz potrzebować dysku SSD, aby uruchomić klientów Ethereum (bez dysku SSD nie ma absolutnie żadnej szansy na zsynchronizowanie łańcucha bloków Ethereum). Istnieją dwie opcje:
 
@@ -85,9 +85,9 @@ W obu przypadkach unikaj uzyskiwania dysków SSD niskiej jakości, ponieważ jes
 
 Pamiętaj, że musisz podłączyć dysk do portu USB 3.0 (niebieski)
 
-## Pobieranie i instalacja obrazu \{#image-download-and-installation}
+## Pobieranie i instalacja obrazu {#image-download-and-installation}
 
-### 1. Pobierz obrazy Eth 1.0 lub Eth 2.0 \{#1-download-execution-or-consensus-images}
+### 1. Pobierz obrazy Eth 1.0 lub Eth 2.0 {#1-download-execution-or-consensus-images}
 
 {
 <ButtonLink to="https://ethraspbian.com/downloads/ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip">Pobierz obraz Eth 1.0</ButtonLink>
@@ -97,7 +97,7 @@ sha256 7fa9370d13857dd6abcc8fde637c7a9a7e3a66b307d5c28b0c0d29a09c73c55c<ButtonLi
 
 sha256 74c0c15b708720e5ae5cac324f1afded6316537fb17166109326755232cd316e
 
-### 2. Wgraj obraz \{#2-flash-the-image}
+### 2. Wgraj obraz {#2-flash-the-image}
 
 Włóż kartę microSD do komputera stacjonarnego / laptopa i pobierz plik (na przykład Eth 1.0):
 
@@ -120,9 +120,9 @@ unzip ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img.zip
 sudo dd bs=1M if=ubuntu-20.04-preinstalled-server-arm64+raspi-eth1.img of=/dev/mmcblk0 && sync
 ```
 
-### 3. Włóż microSD do Raspberry Pi 4. Podłącz kabel Ethernet i podłącz dysk USB SSD (upewnij się, że używasz niebieskiego portu). \{#3-insert-the-microsd-into-the-raspberry-pi-4-connect-an-ethernet-cable-and-attach-the-usb-ssd-disk-make-sure-you-are-using-a-blue-port}
+### 3. Włóż microSD do Raspberry Pi 4. Podłącz kabel Ethernet i podłącz dysk USB SSD (upewnij się, że używasz niebieskiego portu). {#3-insert-the-microsd-into-the-raspberry-pi-4-connect-an-ethernet-cable-and-attach-the-usb-ssd-disk-make-sure-you-are-using-a-blue-port}
 
-### 4. Włącz urządzenie \{#4-power-on-the-device}
+### 4. Włącz urządzenie {#4-power-on-the-device}
 
 System operacyjny Ubuntu uruchomi się za mniej niż minutę, ale **trzeba poczekać około 10 minut**, aby skrypt mógł wykonać niezbędne zadania, aby zmienić urządzenie w węzeł Ethereum i zrestartuj Raspberry.
 
@@ -131,7 +131,7 @@ W zależności od obrazu uruchomisz:
 - Eth 1.0: Geth jako domyślny klient synchronizujący łańcuch bloków
 - Eth2: Prysm jako domyślny klient synchronizujący łańcuch śledzący (sieć testowa Topaz)
 
-### 5. Zaloguj się \{#5-log-in}
+### 5. Zaloguj się {#5-log-in}
 
 Możesz zalogować się przez SSH lub za pomocą konsoli (jeśli masz podłączony monitor i klawiaturę)
 
@@ -142,9 +142,9 @@ Password: ethereum
 
 Zostaniesz poproszony o zmianę hasła przy pierwszym logowaniu, więc będziesz musiał zalogować się dwukrotnie.
 
-### 6. Otwórz port 30303 dla Getha i 13000, jeśli używasz łańcucha śledzącego Prysm. Jeśli nie wiesz, jak to zrobić, wygoogluj „przekierowanie portów”, a następnie model routera. \{#6-open-30303-port-for-geth-and-13000-if-you-are-running-prysm-beacon-chain-if-you-dont-know-how-to-do-this-google-port-forwarding-followed-by-your-router-model}
+### 6. Otwórz port 30303 dla Getha i 13000, jeśli używasz łańcucha śledzącego Prysm. Jeśli nie wiesz, jak to zrobić, wygoogluj „przekierowanie portów”, a następnie model routera. {#6-open-30303-port-for-geth-and-13000-if-you-are-running-prysm-beacon-chain-if-you-dont-know-how-to-do-this-google-port-forwarding-followed-by-your-router-model}
 
-### 7. Uzyskaj dane wyjściowe konsoli \{#7-get-console-output}
+### 7. Uzyskaj dane wyjściowe konsoli {#7-get-console-output}
 
 Możesz zobaczyć, co dzieje się w tle, wpisując:
 
@@ -154,13 +154,13 @@ sudo tail -f /var/log/syslog
 
 **Gratulacje. Korzystasz teraz z pełnego węzła Ethereum na swoim Raspberry Pi 4.**
 
-## Synchronizowanie łańcucha bloków \{#syncing-the-blockchain}
+## Synchronizowanie łańcucha bloków {#syncing-the-blockchain}
 
 Teraz musisz poczekać na synchronizację łańcucha bloków. W przypadku Eth 1.0 zajmie to kilka dni w zależności od kilku czynników, ale możesz spodziewać się do około 5-7 dni.
 
 Jeśli korzystasz z tesnetu Eth2 Topaz, możesz spodziewać się 1-2 dni czasu synchronizacji łańcucha śledzącego. Pamiętaj, że będziesz musiał ustawić walidator później, aby rozpocząć proces stakingu. [Jak uruchomić walidator Eth 2.0](/developers/tutorials/run-node-raspberry-pi/#validator)
 
-## Pulpity kontrolne \{#monitoring-dashboards}
+## Pulpity kontrolne {#monitoring-dashboards}
 
 W tej pierwszej wersji dołączyliśmy 3 panele monitorowania oparte na Prometheus [[5]](/developers/tutorials/run-node-raspberry-pi/#references) /Grafana [[6]](/developers/tutorials/run-node-raspberry-pi/#references) w celu monitorowania danych węzła i klientów (Geth i Besu). Możesz uzyskać dostęp przez przeglądarkę internetową:
 
@@ -170,7 +170,7 @@ User: admin
 Password: ethereum
 ```
 
-## Przełączanie klientów \{#switching-clients}
+## Przełączanie klientów {#switching-clients}
 
 Wszyscy klienci działają jako usługa systemowa. Jest to ważne, ponieważ jeśli pojawi się problem, system automatycznie odrodzi proces.
 
@@ -195,7 +195,7 @@ sudo systemctl stop prysm-beacon && sudo systemctl disable prysm-beacon
 sudo systemctl start lighthouse && sudo systemctl enable lighthouse
 ```
 
-## Zmiana parametrów \{#changing-parameters}
+## Zmiana parametrów {#changing-parameters}
 
 Pliki konfiguracyjne klientów znajdują się w katalogu /etc/ethereum/. Możesz edytować te pliki i ponownie uruchomić usługę systemd, aby zmiany zaczęły obowiązywać. Jedynym wyjątkiem jest Nethermind, który dodatkowo posiada plik konfiguracyjny sieci głównej, który znajduje się tutaj:
 
@@ -205,7 +205,7 @@ Pliki konfiguracyjne klientów znajdują się w katalogu /etc/ethereum/. Możesz
 
 Dane klientów Blockchain są przechowywane na koncie domowym Ethereum w następujący sposób (zwróć uwagę na kropkę przed nazwą katalogu):
 
-### Eth 1.0 \{#execution-layer}
+### Eth 1.0 {#execution-layer}
 
 ```bash
 /home/ethereum/.geth
@@ -214,7 +214,7 @@ Dane klientów Blockchain są przechowywane na koncie domowym Ethereum w następ
 /home/ethereum/.nethermind
 ```
 
-### Eth2 \{#consensus-layer}
+### Eth2 {#consensus-layer}
 
 ```bash
 /home/ethereum/.eth2
@@ -222,25 +222,25 @@ Dane klientów Blockchain są przechowywane na koncie domowym Ethereum w następ
 /home/ethereum/.lighthouse
 ```
 
-## Nethermind i Hyperledger Besu \{#nethermind-and-hyperledger-besu}
+## Nethermind i Hyperledger Besu {#nethermind-and-hyperledger-besu}
 
 Te 2 wspaniałe klienty Eth 1.0 stały się świetną alternatywą dla Geth and Parity. Im większa różnorodność w sieci, tym lepiej, więc możesz spróbować i przyczynić się do poprawy stanu sieci.
 
 Oba wymagają dalszych testów, więc wypróbuj je i zgłoś swoją opinię.
 
-## Jak uruchomić walidator Eth 2.0 (staking) \{#validator}
+## Jak uruchomić walidator Eth 2.0 (staking) {#validator}
 
 Gdy łańcuch śledzący sieci testowej Topaz zostanie zsynchronizowany, można uruchomić walidator na tym samym urządzeniu. Będziesz musiał postępować według [tych etapów uczestnictwa](https://prylabs.net/participate).
 
 Po raz pierwszy, musisz utworzyć ręcznie konto, uruchamiając plik binarny „validator” i skonfigurować hasło. Po zakończeniu tego kroku możesz dodać hasło do `/etc/ethereum/prysm-validator.conf` i uruchomić walidator jako usługę systemową.
 
-## Opinie są mile widziane! \{#feedback-appreciated}
+## Opinie są mile widziane! {#feedback-appreciated}
 
 Włożyliśmy dużo pracy, próbując skonfigurować Raspberry Pi 4 jako pełny węzeł Ethereum, ponieważ wiemy, że ogromna baza użytkowników tego urządzenia może mieć bardzo pozytywny wpływ na sieć.
 
 Proszę wziąć pod uwagę, że jest to pierwszy obraz oparty na Ubuntu 20.04, więc może być kilka błędów. Jeśli tak, otwórz zgłoszenie na [GitHub](https://github.com/diglos/ethereumonarm) lub skontaktuj się z nami na [Twitter](https://twitter.com/EthereumOnARM).
 
-## Odniesienia \{#references}
+## Odniesienia {#references}
 
 1. [geth repeatedly crashes with SIGSEGV](https://github.com/ethereum/go-ethereum/issues/20190)
 2. [https://github.com/diglos/ethereumonarm](https://github.com/diglos/ethereumonarm)

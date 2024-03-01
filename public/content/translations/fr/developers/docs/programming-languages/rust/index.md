@@ -11,7 +11,7 @@ incomplete: true
 
 Utilisez Ethereum pour créer des applications décentralisées (ou « dApps ») qui tirent parti de la technologie de la blockchain et des cryptomonnaies. Ces dApps sont dignes de confiance, ce qui signifie que dès qu'elles sont déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune personne ni entité ne les contrôle et qu'il est pratiquement impossible de les censurer.
 
-## Premiers pas avec les contrats intelligents et le langage Solidity \{#getting-started-with-smart-contracts-and-solidity}
+## Premiers pas avec les contrats intelligents et le langage Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Commencer à intégrer Rust à Ethereum**
 
@@ -22,16 +22,16 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [Écrire votre premier contrat intelligent](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Apprendre à compiler et à déployer avec Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Articles pour les débutants \{#beginner-articles}
+## Articles pour les débutants {#beginner-articles}
 
 - [Choisir un client Ethereum](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Le client Rust Ethereum](https://openethereum.github.io/) **Veuillez noter que OpenEthereum [a été déprécié](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) et n'est plus maintenu.** Utilisez-le avec prudence et passez de préférence à une autre implémentation client.
 - [Envoi de la transaction à Ethereum en utilisant Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Un tutoriel sur la façon d'écrire des contrats dans Rust Wasm pour Kovan](https://github.com/paritytech/pwasm-tutorial)
 
-## Articles intermédiaires \{#intermediate-articles}
+## Articles intermédiaires {#intermediate-articles}
 
-## Modèles d'utilisation avancés \{#advanced-use-patterns}
+## Modèles d'utilisation avancés {#advanced-use-patterns}
 
 - [pwasm_ethereum externs library to interact with Ethereum-like network](https://github.com/openethereum/pwasm-ethereum)
 - [Build A Decentralized Chat Using JavaScript and Rust](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
@@ -40,7 +40,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [An Intro to Secret Contracts](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Construire une blockchain en Rust](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
-## Projets et outils Rust \{#rust-projects-and-tools}
+## Projets et outils Rust {#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection d'éléments externes pour interagir avec un réseau de type Ethereum_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Client rapide de la couche de consensus d'Ethereum_
@@ -57,7 +57,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 
 Vous cherchez davantage de ressources ? Consultez [ethereum.org/developers.](/developers/)
 
-## Contributeurs de la communauté Rust \{#rust-community-contributors}
+## Contributeurs de la communauté Rust {#rust-community-contributors}
 
 - [Ethereum WebAssembly](https://gitter.im/ewasm/Lobby)
 - [Gitter d'Oasis](https://gitter.im/Oasis-official/Lobby)

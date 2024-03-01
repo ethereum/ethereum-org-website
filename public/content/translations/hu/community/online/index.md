@@ -4,11 +4,11 @@ description: A támogatói programok listája az egész Ethereum-ökoszisztémá
 lang: hu
 ---
 
-# Online közösségek \{#online-communities}
+# Online közösségek {#online-communities}
 
 Ethereum rajongók százezrei gyűlnek össze ezeken az online fórumokon, hogy megosszák a híreket, megbeszéljék az új fejlesztéseket, megvitassák a technikai problémákat és elképzeljék a jövőt.
 
-## Fórumok \{#forums}
+## Fórumok {#forums}
 
 {
 <SocialListItem socialIcon="reddit"><Link to="https://www.reddit.com/r/ethereum">r/ethereum</Link> – minden az Ethereumról</SocialListItem>
@@ -35,7 +35,7 @@ Ethereum rajongók százezrei gyűlnek össze ezeken az online fórumokon, hogy 
 <SocialListItem socialIcon="webpage"><Link to="https://ethresear.ch">Ethereum Research</Link> – a legbefolyásosabb üzenőfal a kriptogazdasági kutatáshoz</SocialListItem>
 }
 
-## Csevegőszobák \{#chat-rooms}
+## Csevegőszobák {#chat-rooms}
 
 {
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> – projektmanagement-támogatás az Ethereum-fejlesztésekhez</SocialListItem>
@@ -68,7 +68,7 @@ Ethereum rajongók százezrei gyűlnek össze ezeken az online fórumokon, hogy 
 <SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _– decentralizált kérdések és válaszok fóruma_</SocialListItem>
 }
 
-## YouTube és Twitter \{#youtube-and-twitter}
+## YouTube és Twitter {#youtube-and-twitter}
 
 {
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Alapítvány</Link> – legyen napra kész az Ethereum Alapítvány újdonságaival kapcsolatban</SocialListItem>

@@ -13,13 +13,13 @@ summaryPoints:
   - 在你自己的錢包中持有質押代幣
 ---
 
-## 什麼是質押礦池 \{#what-are-staking-pools}
+## 什麼是質押礦池 {#what-are-staking-pools}
 
 質押礦池是一種協作方式，允許擁有少量以太幣的人能夠滿足 32 個以太幣這一條件，以激活一組驗證者金鑰。 由於協定本身並不支援聯合質押這項功能，因此需要單獨建立解決方案來滿足此需求。
 
 一些礦池使用智慧型合約運作，可以將資金存入合約，由合約以去信任的方式管理和追蹤你的質押品，並向你發放相應價值的代幣。 其他礦池可能不涉及智慧型合約，而是在鏈外調解。
 
-## 為什麼要使用礦池進行質押 \{#why-stake-with-a-pool}
+## 為什麼要使用礦池進行質押 {#why-stake-with-a-pool}
 
 除了我們在[質押簡介](/staking/)中描述的好處之外，聯合質押還具有許多獨特的好處。
 
@@ -31,7 +31,7 @@ summaryPoints:
 
 <StakingComparison page="pools" />
 
-## 需要考慮的事項 \{#what-to-consider}
+## 需要考慮的事項 {#what-to-consider}
 
 以太坊協定本身並不支援聯合質押或委託質押，但考量到想要質押的以太幣不足 32 個的使用者的需求，越來越多的解決方案已經開始建立。
 
@@ -45,7 +45,7 @@ summaryPoints:
 
 <StakingConsiderations page="pools" />
 
-## 探索質押礦池 \{#explore-staking-pools}
+## 探索質押礦池 {#explore-staking-pools}
 
 有多種方案可以幫你完成設定。 請運用上述指標來幫助你了解以下工具。
 
@@ -57,7 +57,7 @@ summaryPoints:
 
 關於我們遺漏的質押工具，你有什麼推薦嗎？ 請參閱我們的[產品刊登政策](/contributing/adding-staking-products/)，如果合適，請提交以供審核。
 
-## 常見問題 \{#faq}
+## 常見問題 {#faq}
 
 {
 <ExpandableCard title="如何賺取獎勵">
@@ -85,7 +85,7 @@ summaryPoints:
 </ExpandableCard>
 }
 
-## 延伸閱讀 \{#further-reading}
+## 延伸閱讀 {#further-reading}
 
 - [使用 Rocket Pool 進行質押 - 質押概覽](https://docs.rocketpool.net/guides/staking/overview.html) - _RocketPool 文件_
 - [使用 Lido 質押以太坊](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido 幫助文件_

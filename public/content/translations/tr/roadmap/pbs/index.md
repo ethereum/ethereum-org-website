@@ -4,13 +4,13 @@ description: Ethereum doğrulayıcılarının kendi blok inşa ve blok yayımlam
 lang: tr
 ---
 
-# Teklifi yapan-oluşturucu ayrımı \{#proposer-builder-separation}
+# Teklifi yapan-oluşturucu ayrımı {#proposer-builder-separation}
 
 Bugünün Ethereum doğrulayıcıları blokları yaratır _ve_ yayımlar. Onlar, dedikodu ağı aracılığıyla duydukları işlemleri demet haline getirir ve bunları, Ethereum ağındaki eşlerine göndermek üzere bir blok halinde paketlerler. **Önerici-inşa edici ayrımı (PBS)** çoklu doğrulayıcılar arasında bu görevleri dağıtır. Blok inşacıları, her bir yuvada blok yaratmaktan ve bunları, blok önericiye sunmaktan sorumlu hale gelir. Blok önerici blokun içeriklerini göremez; yalnızca bloku eşlerine göndermeden önce blok inşacısına bir komisyon ödeyerek basit bir şekilde en kârlı olanı seçer.
 
 Bu, çeşitli nedenden dolayı önemli bir yükseltmedir. Öncelikle, protokol düzeyinde işlem sansürünü engellemek için fırsatlar yaratır. İkinci olarak, doğrulayıcılığı hobi olarak yapan doğrulayıcıların, rekabette kârlarını daha iyi optimize edebilen kuruluşların gerisinde kalmalarını önler. Üçüncü olarak Danksharding yükseltmesini etkinleştirerek Ethereum ölçeklendirmesine yardım eder.
 
-## PBS ve sansür direnci \{#pbs-and-censorship-resistance}
+## PBS ve sansür direnci {#pbs-and-censorship-resistance}
 
 Blok inşacılar ile blok önericilerin ayrılması blok inşacıların işlemi sansürlemelerini daha zor hale getirir. Blok önerilmeden önce hiç yer almayan sansürü güvence altına alacak ekleme kriterlerinin karmaşıklığından ötürüdür. Blok önerici, blok inşacısından farklı bir birim olsa da blok inşacısının sansürüne karşı koruma rolünü taşıyabilir.
 
@@ -26,7 +26,7 @@ Güçlü organizasyonlar doğrulaycılara belirli adrese gelen veya o adrese gid
 </ExpandableCard>
 }
 
-## PBS ve MEV \{#pbs-and-mev}
+## PBS ve MEV {#pbs-and-mev}
 
 **Maksimum çıkarılabilir değerden (MEV)** kasıt, doğruluyacılıarın kazançlarını ve isteğe bağlı olarak işlem emirlerini maksimize etmesidir. Buna verilebilecek yaygın örnekler takasları merkeziyetsiz borsalarda tahkim etmek (büyük bir satışı ya da alışı önceden halletmek) ya da DeFi pozisyonlarını likidite etmek için fırsatlar tanımlamaktır. MEV'yi maksimize etmek normal doğrulayıcılara ek olarak işin nasıl yapılacağını bilecek kadar sofistike teknik bilgi ve özel yazılım gerektirir, bu da ensistü operatörlerinin bu konuda bireysel ve hobi için bu işi yapan doğrulayıcılara MEV çıkarması konusunda daha iyi performans göstermesiyle sonuçlanır. Bu da hisseleme dönüşlerinin muhtemelen merkeziyetçi operatörlerin ev hisselemesinden caydıracak bir merkezi güç oluşturmasıyla daha fazla olacağı anlamına gelir.
 
@@ -39,15 +39,15 @@ Bireyler kendi başlarına hisselemek yerine havuzlarla birlikte hisselemeye te�
 </ExpandableCard>
 }
 
-## PBS ve Danksharding \{#pbs-and-danksharding}
+## PBS ve Danksharding {#pbs-and-danksharding}
 
 Danksharding Ethereum'un saniyede >100.000 işleme ulaşması ve toplama kullanıcıları için masrafları en aza indirmenin yoludur. PBS'ye dayanır çünkü 64 MB kadar toplama verisini 1 saniyeden az sürede kanıtlamak için bilgi-işlem yapacak olan blok oluşturucularının iş yüküne eklenir. Bu muhtemelen bu işe sağlam donanımla katılabilecek uzmanlaşmış oluşturuculara ihtiyaç duyulacağı anlamına geliyor. Ancak, blok oluşturuculuğunun güncel durumu MEV çıkarması sebebiyle daha sofistike ve güçlü operatörler etrafında artarak merkezileşebilir. Önerici, oluşturucu ayrımı bu gerçekliği kabul etmek ve blok doğrulama sürecine merkeziyetçi bir güç eklenmesini (önemli kısım) ya da hisseleme ödüllerini engellemek için bir yoldur. Güzel bir ek fayda da uzmanlaşmış blok oluşturucularının da Danksharding için gerekli veri kanıtlarını işlemek için istekli ve kalifiye olmalarıdır.
 
-## Güncel ilerleme \{#current-progress}
+## Güncel ilerleme {#current-progress}
 
 PBS geliştirilmiş bir araştırma aşamasında, ancak hâlâ Ethereum istemcilerinde prototip haline getirilmeden önce cevaplanması gereken bazı önemli dizayn soruları var. Sonuçlanmış özellik henüz yok. Bunun anlamı da PBS'nin bir yıl veya daha uzun vadede gerçekleşeceğidir. En son [araştırma durumunu](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance) denetleyin.
 
-## Daha Fazla Bilgi \{#further-reading}
+## Daha Fazla Bilgi {#further-reading}
 
 - [Araştırma durumu: PBS altında sansür direnci](https://notes.ethereum.org/@vbuterin/pbs_censorship_resistance)
 - [PBS dostu serbest piyasa tasarımları](https://ethresear.ch/t/proposer-block-builder-separation-friendly-fee-market-designs/9725)

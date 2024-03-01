@@ -10,7 +10,7 @@ skill: advanced
 published: 2021-12-30
 ---
 
-## Introduction \{#introduction}
+## Introduction {#introduction}
 
 _Il n'y a aucun secret sur la blockchain_, tout ce qui se passe est cohérent, vérifiable et accessible au public. Idéalement, [les contrats devraient avoir leur code source publié et vérifié sur Etherscan](https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code). Or [ce n'est pas toujours le cas](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code). Dans cet article, vous apprendrez comment rétro-concevoir des contrats en prenant comme exemple un contrat sans code source, [`0x2510c039cc3b061d79e564b38836da87e31b342f`](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f).
 
@@ -18,7 +18,7 @@ Il existe des décompilateurs, mais ils ne produisent pas toujours [des résulta
 
 Pour être en mesure de comprendre cet article, vous devriez connaître les bases de l'EVM et être au moins familier avec l'assembleur EVM. [Vous pouvez en savoir plus sur ces sujets ici](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
-## Préparer le Code Exécutable \{#prepare-the-executable-code}
+## Préparer le Code Exécutable {#prepare-the-executable-code}
 
 Vous pouvez récupérer les opcodes en cherchant le contrat sur Etherscan, cliquez sur l'onglet **Contract** et puis sur **Switch to Opcodes View**. Vous obtenez un affichage d'un opcode par ligne.
 
@@ -42,7 +42,7 @@ Dans la cellule `A1`, déclarez la première valeur décalée à 0. Puis, dans l
 
 Nous avons besoin de cette fonction pour nous donner la valeur hexadécimale car les valeurs poussées avant les sauts (`JUMP` et `JUMPI`) nous sont données en hexadécimal.
 
-## Le Point d'Entrée (0x00) \{#the-entry-point-0x00}
+## Le Point d'Entrée (0x00) {#the-entry-point-0x00}
 
 Les contrats sont toujours exécutés à partir du premier octet. Ceci est la première partie du code :
 
@@ -64,7 +64,7 @@ Ce code fait deux choses :
 
 ![Organigramme de cette partie](flowchart-entry.png)
 
-### Le Gestionnaire à 0x5E (pour les données d'appel non-ABI) \{#the-handler-at-0x5e-for-non-abi-call-data}
+### Le Gestionnaire à 0x5E (pour les données d'appel non-ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
 
 | Décalage | Opcode       |
 | -------: | ------------ |
@@ -158,7 +158,7 @@ Pour tout résumer, voici un diagramme du code initial.
 
 ![Organigramme des points d'entrée](flowchart-entry.png)
 
-## Le gestionnaire à 0x7C \{#the-handler-at-0x7c}
+## Le gestionnaire à 0x7C {#the-handler-at-0x7c}
 
 J'ai sciemment omis de mettre dans la rubrique ce que fait ce gestionnaire. Le but n'est pas de vous enseigner comment fonctionne ce contrat spécifique, mais comment rétro-concevoir les contrats. Vous apprendrez ce qu'il fait de la même manière que moi, en suivant le code.
 
@@ -250,7 +250,7 @@ Ici, nous copions toutes les données retournées dans le tampon de mémoire à 
 
 Donc, après l'appel, nous copions les données retournées dans le tampon 0x80 - 0x80+RETURNDATASIZE, et si l'appel réussit, nous retournons `RETURN` avec exactement ce tampon.
 
-### Échec de DELEGATECALL \{#delegatecall-failed}
+### Échec de DELEGATECALL {#delegatecall-failed}
 
 Si nous arrivons ici, à 0xC0, cela signifie que le contrat que nous avons appelé a annulé son exécution. Étant donné que nous ne sommes qu'un proxy pour ce contrat, nous voulons retourner les mêmes données et annuler également.
 
@@ -265,7 +265,7 @@ Donc nous annulons `REVERT` avec le même tampon que nous avons utilisé pour `R
 
 ![Organigramme de l'appel de proxy](flowchart-proxy.png)
 
-## Appels ABI \{#abi-calls}
+## Appels ABI {#abi-calls}
 
 Si la taille des données de l'appel est de quatre octets ou plus, il peut s'agir d'un appel ABI valide.
 
@@ -300,7 +300,7 @@ Si aucune correspondance n'est trouvée, le code saute vers [le gestionnaire de 
 
 ![Organigramme des appels ABI](flowchart-abi.png)
 
-## splitter() \{#splitter}
+## splitter() {#splitter}
 
 | Décalage | Opcode       | Pile                          |
 | -------: | ------------ | ----------------------------- |
@@ -340,7 +340,7 @@ Et 0x80 contient maintenant l'adresse du proxy
 |      134 | PUSH2 0x00e4 | 0xE4 0xA0 |
 |      137 | JUMP         | 0xA0      |
 
-### Le code E4 \{#the-e4-code}
+### Le code E4 {#the-e4-code}
 
 C'est la première fois que nous voyons ces lignes, mais elles sont partagées avec d'autres méthodes (voir ci-dessous). Nous allons donc appeler la valeur dans la pile X, et n'oubliez pas que dans la fonction `splitter()` la valeur de ce X est 0xA0.
 
@@ -359,7 +359,7 @@ Ce code reçoit un pointeur de mémoire dans la pile (X), et entraîne le contra
 
 Dans le cas de `splitter()`, ceci retourne l'adresse pour laquelle nous sommes un proxy. `RETURN` retourne le tampon en 0x80-0x9F, où nous avons écrit ces données (décalage 0x130 ci-dessus).
 
-## currentWindow() \{#currentwindow}
+## currentWindow() {#currentwindow}
 
 Le code aux décalages 0x158-0x163 est identique à ce que nous avons vu en 0x103-0x10E dans `splitter()` (autre que la destination `JUMPI`), donc nous savons que `currentWindow()` n'est pas `payable` non plus.
 
@@ -373,7 +373,7 @@ Le code aux décalages 0x158-0x163 est identique à ce que nous avons vu en 0x10
 |      16C | DUP2         | 0xDA Storage[1] 0xDA |
 |      16D | JUMP         | Storage[1] 0xDA      |
 
-### Le code DA \{#the-da-code}
+### Le code DA {#the-da-code}
 
 Ce code est aussi partagé avec d'autres méthodes. Nous allons donc appeler la valeur dans la pile Y, et n'oubliez pas que dans la fonction `currentWindow()` la valeur de ce Y est Stockage[1].
 
@@ -395,7 +395,7 @@ Ce code est aussi partagé avec d'autres méthodes. Nous allons donc appeler la 
 
 Et le reste est déjà expliqué [au-dessus](#the-e4-code). Donc les sauts à 0xDA écrivent la pile supérieure (Y) à 0x80-0x9F, et retournent cette valeur. Dans le cas de `currentWindow()`, il retourne Stockage[1].
 
-## merkleRoot() \{#merkleroot}
+## merkleRoot() {#merkleroot}
 
 Le code aux décalages 0xED-0xF8 est identique à ce que nous avons vu en 0x103-0x10E dans `splitter()` (autre que la destination `JUMPI`), donc nous savons que `merkleRoot()` n'est pas `payable` non plus.
 
@@ -411,7 +411,7 @@ Le code aux décalages 0xED-0xF8 est identique à ce que nous avons vu en 0x103-
 
 [Nous avons déjà compris](#the-da-code) ce qu'il se passe après le saut. Donc `merkleRoot()` retourne Stockage[0].
 
-## 0x81e580d3 \{#0x81e580d3}
+## 0x81e580d3 {#0x81e580d3}
 
 Le code aux décalages 0x138-0x143 est identique à ce que nous avons vu en 0x103-0x10E dans `splitter()` (autre que la destination `JUMPI`), donc nous savons que cette fonction n'est pas `payable` non plus.
 
@@ -515,7 +515,7 @@ Il y a une table de recherche dans le stockage, qui commence à SHA3 de 0x000...
 
 Nous savons déjà ce que fait [le code à la valeur décalée 0xDA](#the-da-code) , il retourne la valeur la plus élevée de la pile à l'appelant. Ainsi, cette fonction retourne la valeur de la table de recherche à l'appelant.
 
-## 0x1f135823 \{#0x1f135823}
+## 0x1f135823 {#0x1f135823}
 
 Le code aux décalages 0xC4-0xCF est identique à ce que nous avons vu en 0x103-0x10E dans `splitter()` (autre que la destination `JUMPI`), donc nous savons que cette fonction n'est pas `payable` non plus.
 
@@ -531,7 +531,7 @@ Le code aux décalages 0xC4-0xCF est identique à ce que nous avons vu en 0x103-
 
 Nous savons déjà ce que fait [le code à la position 0xDA](#the-da-code) , il retourne la valeur la plus élevée de la pile à l'appelant. Donc cette fonction retourne `Value*`.
 
-### Résumé de la méthode \{#method-summary}
+### Résumé de la méthode {#method-summary}
 
 Avez-vous l'impression de comprendre le contrat à ce stade ? Non. Jusqu'à présent, nous disposons de ces méthodes :
 
@@ -546,7 +546,7 @@ Avez-vous l'impression de comprendre le contrat à ce stade ? Non. Jusqu'à pré
 
 Mais nous savons que toute autre fonctionnalité est fournie par le contrat dans Stockage[3]. Peut-être que si nous savions quel est ce contrat, cela nous donnerait un indice. Heureusement, ceci est la blockchain et tout est connu, du moins en théorie. Nous n'avons pas vu de méthode qui définisse Stockage[3], donc il doit avoir été défini par le constructeur.
 
-## Le Constructeur \{#the-constructor}
+## Le Constructeur {#the-constructor}
 
 Lorsque nous [regardons un contrat](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f) nous pouvons également voir la transaction qui l'a créée.
 
@@ -554,7 +554,7 @@ Lorsque nous [regardons un contrat](https://etherscan.io/address/0x2510c039cc3b0
 
 Si nous cliquons sur cette transaction, puis sur l'onglet **État** , nous pouvons voir les valeurs initiales des paramètres. Plus précisément, nous pouvons voir que Stockage[3] contient [0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761](https://etherscan.io/address/0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761). Ce contrat doit contenir la fonctionnalité manquante. Nous pouvons le comprendre en utilisant les mêmes outils que ceux utilisés pour le contrat que nous étudions.
 
-## Le contrat de proxy \{#the-proxy-contract}
+## Le contrat de proxy {#the-proxy-contract}
 
 En utilisant les mêmes techniques que celles utilisées pour le contrat original ci-dessus, nous pouvons voir que le contrat est annulé si :
 
@@ -580,7 +580,7 @@ Nous pouvons ignorer les quatre dernières méthodes parce que nous ne les attei
 
 Une des méthodes restantes est `claim(<params>)`, et une autre est `isClaimed(<params>)`, donc cela ressemble à un contrat d'airdrop. Au lieu de fouiller le code d'opération restant par opcode, nous pouvons [essayer le décompilateur](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), qui donne des résultats utilisables pour trois fonctions de ce contrat. La rétro-conception des autres est laissée au lecteur comme exercice de travail.
 
-### scaleAmountByPercentage \{#scaleamountbypercentage}
+### scaleAmountByPercentage {#scaleamountbypercentage}
 
 Voilà ce que nous donne le décompilateur pour cette fonction :
 
@@ -598,7 +598,7 @@ L'instruction `if` semble vérifier que `_param1` n'est pas zéro et que `_param
 
 Enfin, la fonction retourne une valeur mise à l'échelle.
 
-### claim \{#claim}
+### claim {#claim}
 
 Le code que le décompilateur crée est complexe, et tout n'est pas pertinent pour nous. Je vais en passer une partie pour me concentrer sur les lignes qui je pense fournissent des informations utiles
 
@@ -673,7 +673,7 @@ Il semble donc que les contrats tentent d'envoyer de l'ETH à `_param2`. S'ils p
 
 ![Une transaction de réclamation](claim-tx.png)
 
-### 1e7df9d3 \{#1e7df9d3}
+### 1e7df9d3 {#1e7df9d3}
 
 Cette fonction est très similaire à [`claim`](#claim) ci-dessus. Elle vérifie également une preuve de Merkle, tente de transférer de l'ETH au premier, et produit le même type d'entrée de journal.
 
@@ -739,6 +739,6 @@ La principale différence est que le premier paramètre, la fenêtre du retrait,
 
 Donc elle ressemble à une variante de `claim` qui réclame toutes les fenêtres.
 
-## Conclusion \{#conclusion}
+## Conclusion {#conclusion}
 
 À présent, vous devriez savoir comment comprendre les contrats dont le code source n'est pas disponible, en utilisant soit les codes d'opérations soit (quand cela fonctionne) le décompilateur. Comme le montre la longueur de cet article, rétro-concevoir un contrat n'est pas trivial, mais dans un système où la sécurité est essentielle, il est important d'être capable de vérifier que les contrats fonctionnent comme promis.

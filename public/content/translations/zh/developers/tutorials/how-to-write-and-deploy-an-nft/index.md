@@ -22,13 +22,13 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 当然，如果您有任何问题，请随时通过 [Alchemy Discord](https://discord.gg/gWuC7zB) 联系我们或阅读 [Alchemy 的非同质化代币应用程序接口相关文档](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)！
 
-## 步骤 1：连接到以太坊网络 \{#connect-to-ethereum}
+## 步骤 1：连接到以太坊网络 {#connect-to-ethereum}
 
 有很多方法可以向以太坊区块链发出请求，但为了方便起见，我们将使用 [Alchemy](https://alchemy.com/signup/eth) 上的免费帐户。Alchemy 是一个区块链开发平台，能够提供应用程序接口，让我们无需运行自己的节点，即可与以太坊区块链进行通信。
 
 在本教程中，我们将利用 Alchemy 平台的开发者工具进行监测和分析，以便了解智能合约部署的底层逻辑。 如果您还没有 Alchemy 帐户，您可以在[此处](https://alchemy.com/signup/eth)免费注册。
 
-## 步骤 2：创建应用程序（和应用程序接口密钥） \{#make-api-key}
+## 步骤 2：创建应用程序（和应用程序接口密钥） {#make-api-key}
 
 创建了 Alchemy 帐户后，您可以通过创建应用程序来生成应用程序接口密钥。 这将使我们能够向 Sepolia 测试网络发出请求。 如果您想了解更多关于测试网络的信息，请查看[本指南](https://docs.alchemyapi.io/guides/choosing-a-network)。
 
@@ -42,7 +42,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 3. 点击"创建应用程序"，完成！ 您的应用程序应该会出现在下面的表格中。
 
-## 步骤 3：创建一个以太坊帐户（地址） \{#create-eth-address}
+## 步骤 3：创建一个以太坊帐户（地址） {#create-eth-address}
 
 我们需要一个以太坊帐户来发送和接收交易。 在本教程中，我们将使用 MetaMask——浏览器中的虚拟钱包，用来管理您的以太坊帐户地址。 如果您想了解更多关于以太坊交易的运作方式，请查看以太坊基金会的[这个页面](/developers/docs/transactions/)。
 
@@ -50,11 +50,11 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 ![将 Sepolia 设置为你的网络](./metamask-goerli.png)
 
-## 步骤 4：从水龙头添加以太币 \{#step-4-add-ether-from-a-faucet}
+## 步骤 4：从水龙头添加以太币 {#step-4-add-ether-from-a-faucet}
 
 为了将我们的智能合约部署到测试网络，我们需要一些虚拟以太币。 想要获取以太币，可以访问由 Alchemy 托管的 [Sepolia Faucet](https://sepoliafaucet.com/)，登录并输入你的帐户地址，点击“Send Me ETH”。 您应该会很快在您的 MetaMask 帐户中看到以太币！
 
-## 步骤 5：查看帐户余额 \{#check-balance}
+## 步骤 5：查看帐户余额 {#check-balance}
 
 为了核实我们的余额，可以使用 [Alchemy 的创作者工具](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D)发出 [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) 请求。 这将返回我们钱包中的以太币金额。 输入您的 Metamask 帐户地址并单击“发送请求”后，您应该会看到这样的响应：
 
@@ -64,7 +64,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 哦！ 这里显示了我们所有的虚拟货币。
 
-## 步骤 6：初始化我们的项目 \{#initialize-project}
+## 步骤 6：初始化我们的项目 {#initialize-project}
 
 首先，需要为我们的项目创建一个文件夹。 导航到您的命令行，然后输入：
 
@@ -102,7 +102,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 批准 package.json，我们就可以开始了！
 
-## 步骤 7：安装[安全帽 (Hardhat)](https://hardhat.org/getting-started/#overview) \{#install-hardhat}
+## 步骤 7：安装[安全帽 (Hardhat)](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 安全帽是一个用于编译、部署、测试和调试以太坊软件的开发环境。 它帮助开发者在本地构建智能合约和去中心化应用程序并部署到实时链上。
 
@@ -112,7 +112,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 查看此页面，了解更多有关[安装说明](https://hardhat.org/getting-started/#overview)的详细信息。
 
-## 步骤 8：创建安全帽项目 \{#create-hardhat-project}
+## 步骤 8：创建安全帽项目 {#create-hardhat-project}
 
 在我们的项目文件夹中运行：
 
@@ -136,7 +136,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 这将生成一个 hardhat.config.js 文件，我们将在其中指定项目的所有设置（步骤 13）。
 
-## 步骤 9：添加项目文件夹 \{#add-project-folders}
+## 步骤 9：添加项目文件夹 {#add-project-folders}
 
 为了使我们的项目有条理，我们将创建两个新的文件夹。 在您的命令行中导航到项目的根目录，然后输入：
 
@@ -147,7 +147,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 - scripts/ 是我们存放脚本的位置，用于部署我们的智能合约和与之交互。
 
-## 步骤 10：编写合约 \{#write-contract}
+## 步骤 10：编写合约 {#write-contract}
 
 现在我们的环境已经配置完成，接下来将是更令人兴奋的内容：_编写我们的智能合约代码！_
 
@@ -212,7 +212,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 `mintNFT` 调用了继承的 ERC-721 库中的一些方法，最终返回一个数字，代表新铸造非同质化代币的 ID。
 
-## 步骤 11：将 Metamask 和 Alchemy 连接至您的项目 \{#connect-metamask-and-alchemy}
+## 步骤 11：将 Metamask 和 Alchemy 连接至您的项目 {#connect-metamask-and-alchemy}
 
 我们已经创建了 Metamask 钱包、Alchemy 帐户，并且编写了一个智能合约，现在是将这三者连接起来的时候了。
 
@@ -241,7 +241,7 @@ Alchemy 非常自豪能够推动非同质化代币领域的一些巨头，包括
 
 <EnvWarningBanner />
 
-## 步骤 12：安装 Ethers.js \{#install-ethers}
+## 步骤 12：安装 Ethers.js {#install-ethers}
 
 Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准 JSON RPC 方法](/developers/docs/apis/json-rpc/)，从而更容易与以太坊互动，并向以太坊提出请求。
 
@@ -253,7 +253,7 @@ Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准
 
 下一步中，我们还将在 hardhat.config.js 中使用 ethers。
 
-## 步骤 13：更新 hardhat.config.js \{#update-hardhat-config}
+## 步骤 13：更新 hardhat.config.js {#update-hardhat-config}
 
 到目前为止，我们已经添加了几个依赖库和插件，现在我们需要更新 hardhat.config.js，以使项目了解所有这些新的组件。
 
@@ -277,7 +277,7 @@ Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准
        },
     }
 
-## 步骤 14：编写合约 \{#compile-contract}
+## 步骤 14：编写合约 {#compile-contract}
 
 为了确保一切正常，我们来编译一下合约。 编译任务是 hardhat 的内部任务之一。
 
@@ -287,7 +287,7 @@ Ethers.js 是一个软件库，通过以更加方便用户的方法打包[标准
 
 你可能会看到关于源文件中未提供 SPDX 许可证识别码的警告，但无需担心，但愿其它的一切正常！ 如果遇到问题，您可以随时在 [Alchemy cord](https://discord.gg/u72VCg3) 社区中发消息询问。
 
-## 步骤 15：编写部署脚本 \{#write-deploy}
+## 步骤 15：编写部署脚本 {#write-deploy}
 
 合约已经写完，配置文件也准备妥当，现在是写合约部署脚本的时候了。
 
@@ -321,7 +321,7 @@ ethers.js 中的 ContractFactory 是用于部署新智能合约的抽象对象�
 
 调用 ContractFactory 代码中的 deploy() 函数会启动合约部署，然后返回解析为合约的 Promise。 这个对象包括我们智能合约中每个函数的对应调用方法。
 
-## 步骤 16：部署合约 \{#deploy-contract}
+## 步骤 16：部署合约 {#deploy-contract}
 
 我们终于准备好部署我们的智能合约啦！ 返回项目目录的根目录，在命令行中运行：
 

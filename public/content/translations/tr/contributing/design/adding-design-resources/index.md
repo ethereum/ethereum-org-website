@@ -10,7 +10,7 @@ Bu sayfanın, hevesli web3 kullanıcıları için değer sunmaya odaklandığın
 
 Sağladığımız bilgilerde yüksek standartları korumak ve değerli görüşleri teşvik etmek için bir liste politikası oluşturduk:
 
-## Araştırma Çalışmaları ve Gösterge Panoları \{#Research-studies}
+## Araştırma Çalışmaları ve Gösterge Panoları {#Research-studies}
 
 1. Sağlam Metodoloji
 
@@ -28,7 +28,7 @@ a. Araştırmanın konusu, web3 tasarımcıları açısından ilgili olmalı ve 
 
 a. Metnin temel amacı, spesifik bir projeyi veya şirketi tanıtmak yerine ayrıntılı bilgiler paylaşmak olmalıdır.
 
-## Makaleler \{#Articles}
+## Makaleler {#Articles}
 
 1. Web3 Tasarımcıları/Araştırmacıları ve Yaygın Web3 Tasarım Kullanım Durumları ile Bağlantılı Olma
 
@@ -46,7 +46,7 @@ c. Yazı, özlü ve nokta atışı olmalıdır.
 
 a. Makalenin temel amacı, belirli bir projeyi veya şirketi tanıtmak yerine ayrıntılı bilgiler paylaşmak olmalıdır.
 
-## Topluluklar/DAO'lar \{#Communities-and-DAOs}
+## Topluluklar/DAO'lar {#Communities-and-DAOs}
 
 1. Web sitesi, DAO'ya/Topluluğa katılma yolunu açıkça belirtmelidir
 

@@ -10,11 +10,11 @@ La prueba de trabajo ya no es parte de la base del mecanismo de consenso de Ethe
 
 La minería de Ethereum utilizo un algoritmo conocido como Ethash. La idea fundamental del algoritmo es que un minero intenta encontrar un contador nonce usando el cálculo computacional en bruto, de esta forma el hash resultante es menor que el umbral determinado por la dificultad calculada. Este nivel de dificultad se puede ajustar de forma dinámica, permitiendo que la producción de bloques ocurra en un intervalo regular.
 
-## Pre requisitos \{#prerequisites}
+## Pre requisitos {#prerequisites}
 
 Para comprender mejor esta página, le recomendamos leer primero sobre el [consenso de prueba de trabajo](/developers/docs/consensus-mechanisms/pow) y la [minería](/developers/docs/consensus-mechanisms/pow/mining).
 
-## Dagger Hashimoto \{#dagger-hashimoto}
+## Dagger Hashimoto {#dagger-hashimoto}
 
 Dagger Hashimoto fue un algoritmo de investigación precursor para la minería de Ethereum que Ethash reemplazó. Fue una combinación de dos algoritmos diferentes: Dagger y Hashimoto. Sólo fue en realidad una implementacion de investigación y fue superada por «Ethash» en el momento en el que se lanzó la red principal de Ethereum.
 
@@ -26,12 +26,12 @@ Dagger-Hashimoto utilizó versiones modificadas de los algoritmos Dagger y Hashi
 
 Descubra más sobre [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto).
 
-## Ethash \{#ethash}
+## Ethash {#ethash}
 
 Ethash era el algoritmo de minería que en realidad se usaba en la verdadera red principal de Ethereum bajo la estructura de prueba de trabajo, que ahora ha quedado obsoleta. Ethash fue esencialmente el nuevo nombre dado a una versión específica de Dagger-Hashimoto después de que el algoritmo se actualizara considerablemente, aunque aun heredando los principios fundamentales de su predecesor. La red principal de Ethereum solo usó Ethash - Dagger Hashimoto era una versión de R&D del algoritmo de minería que fue reemplazado antes de que comenzara la minería en la red principal de Ethereum.
 
 Descubra más sobre [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 _¿Conoces un recurso comunitario que te ayudó? Edita esta página y añádelo!_

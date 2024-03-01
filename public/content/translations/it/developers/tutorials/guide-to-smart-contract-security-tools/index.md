@@ -35,7 +35,7 @@ Ogni tecnica ha vantaggi e svantaggi ed è utile in [casi specifici](#determinin
 
 **Manticore** esegue l'analisi dal "peso maggiore". Come Echidna, Manticore verifica le proprietà fornite dall'utente. Necessiterà di maggiore tempo per funzionare, ma può provare la validità di una proprietà e non segnalerà falsi allarmi.
 
-## Flusso di lavoro suggerito \{#suggested-workflow}
+## Flusso di lavoro suggerito {#suggested-workflow}
 
 Inizia con i rilevatori integrati di Slither per assicurarti che non siano presenti bug semplici ora o che non saranno introdotti in seguito. Usa Slither per controllare le proprietà correlate all'eredità, le dipendenze della variabile e i problemi strutturali. Al crescere della base di codice, usa Echidna per testare proprietà più complesse della macchina di stato. Rivisita Slither per sviluppare controlli personalizzati per protezioni non disponibili con Solidity, come la protezione contro una funzione in sovrascrizione. Infine, usa Manticore per eseguire la verifica mirata di proprietà di sicurezza critiche, ad es. operazioni aritmetiche.
 
@@ -46,7 +46,7 @@ Inizia con i rilevatori integrati di Slither per assicurarti che non siano prese
 
 **Una nota sui test unitari**. I testi unitari servono necessariamente per creare software di alta qualità. Tuttavia, queste tecniche non sono le più adatte a trovare difetti di sicurezza. Sono tipicamente usati per testare i comportamenti positivi del codice (ad es. il codice funziona come previsto nel contesto normale), mentre i difetti di sicurezza tendono a risiedere in casi al limite che gli sviluppatori non hanno considerato. Nel nostro studio di dozzine di revisioni di sicurezza di contratti intelligenti, la [copertura dei test unitari non ha avuto alcun effetto sul numero o sulla gravità dei difetti di sicurezza](https://blog.trailofbits.com/2019/08/08/246-findings-from-our-smart-contract-audits-an-executive-summary/) trovati nel codice del nostro client.
 
-## Determinare le proprietà di sicurezza \{#determining-security-properties}
+## Determinare le proprietà di sicurezza {#determining-security-properties}
 
 Per testare e verificare efficacemente il tuo codice, devi identificare le aree che richiedono attenzione. Poiché le risorse impiegate per la sicurezza sono limitate, è importante sfruttare le parti deboli o d'alto valore della tua base di codice per ottimizzare lo sforzo. La modellazione della minaccia può essere utile. Puoi consultare:
 
@@ -57,7 +57,7 @@ Per testare e verificare efficacemente il tuo codice, devi identificare le aree 
 - [PASTA](https://wikipedia.org/wiki/Threat_model#P.A.S.T.A.)
 - [Uso delle asserzioni](https://blog.regehr.org/archives/1091)
 
-### Componenti \{#components}
+### Componenti {#components}
 
 Sapere cosa vuoi controllare ti aiuterà anche a selezionare lo strumento più adatto.
 
@@ -86,7 +86,7 @@ Tra le grandi aree spesso pertinenti per gli smart contract troviamo:
 - **Conformità standard.** Gli standard di Ethereum (es. ERC20) sono noti per i difetti a livello di progettazione. Sii consapevole delle limitazioni dello standard su cui stai costruendo.
   - Slither, Echidna e Manticore ti aiuteranno a rilevare le deviazioni da un dato standard.
 
-### Tabella riepilogativa per la selezione degli strumenti \{#tool-selection-cheatsheet}
+### Tabella riepilogativa per la selezione degli strumenti {#tool-selection-cheatsheet}
 
 | Componente               | Strumenti                   | Esempi                                                                                                                                                                                                                                                                |
 | ------------------------ | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

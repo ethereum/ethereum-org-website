@@ -9,23 +9,23 @@ skill: intermediate
 published: 2022-04-01
 ---
 
-## Introduction \{#introduction}
+## Introduction {#introduction}
 
 Dans cet article, vous en apprendrez plus sur les [Rollups optimistes](/developers/docs/scaling/optimistic-rollups), le coût des transactions qui leur est appliqué, et comment la structure de coûts distincte nous oblige à optimiser différents éléments sur le réseau principal Ethereum. Vous apprendrez également à implémenter cette optimisation.
 
-### Devoir de transparence \{#full-disclosure}
+### Devoir de transparence {#full-disclosure}
 
 Je suis un employé à temps plein chez [Optimism](https://www.optimism.io/), les exemples illustrant cet article seront donc exécutés sur Optimism. Cependant, la technique expliquée ici devrait aussi bien fonctionner pour d'autres rollups.
 
-### Terminologie \{#terminology}
+### Terminologie {#terminology}
 
 Lorsque l'on parle des rollups, le terme 'Couche 1' (L1) est généralement utilisé pour le réseau principal, le réseau Ethereum de production. Le terme 'Couche 2' (L2) est utilisé pour les rollups ou tout autre système qui se base sur L1 pour la sécurité, mais qui réalise son traitement hors chaîne.
 
-## Comment pouvons-nous encore réduire le coût des transactions L2 ? \{#how-can-we-further-reduce-the-cost-of-L2-transactions}
+## Comment pouvons-nous encore réduire le coût des transactions L2 ? {#how-can-we-further-reduce-the-cost-of-L2-transactions}
 
 [Les Rollups optimistes](/developers/docs/scaling/optimistic-rollups) doivent conserver un registre de chaque historique de transaction afin que toute personne qui le souhaite puisse le passer en revue et vérifier que l'état actuel est correct. La façon la plus économique de récupérer des données sur le réseau principal Ethereum est de les écrire en tant que données d'appel. Cette solution a été choisie à la fois par [Optimism](https://help.optimism.io/hc/en-us/articles/4413163242779-What-is-a-rollup-) et [Arbitrum](https://developer.offchainlabs.com/docs/rollup_basics#intro-to-rollups).
 
-### Coût des transactions L2 \{#cost-of-l2-transactions}
+### Coût des transactions L2 {#cost-of-l2-transactions}
 
 Le coût des transactions L2 est composé de deux éléments :
 
@@ -36,7 +36,7 @@ Au moment d'écrire cet article, le coût de gaz L2 sur Optimism est de 0,001 [G
 
 Un octet de données d'appel coûte soit 4 gaz (s'il est nul) soit 16 gaz (s'il s'agit d'une autre valeur). L'une des opérations les plus coûteuses de l'EVM est d'écrire sur le stockage. Le coût maximum d'écriture d'un mot de 32 octets pour un stockage sur L2 est de 22 100 gaz. Soit actuellement 22,1 gwei. Si nous parvenons à sauvegarder un seul octet zéro de données d'appel, nous pourrons écrire environ 200 octets de stockage et sortir gagnants de l'opération.
 
-### L'ABI \{#the-abi}
+### L'ABI {#the-abi}
 
 La grande majorité des transactions accèdent à un contrat provenant d'un compte externe. La plupart des contrats sont écrits en Solidity et interprètent leur champ de données conformément à l'[interface binaire d'application (ABI)](https://docs.soliditylang.org/en/latest/abi-spec.html#formal-specification-of-the-encoding).
 
@@ -58,11 +58,11 @@ Explication :
 
 Le gaspillage de 160 gaz sur L1 est normalement négligeable. Une transaction coûte un minimum de [21 000 gaz](https://yakkomajuri.medium.com/blockchain-definition-of-the-week-ethereum-gas-2f976af774ed), ainsi, un supplément de 0,8 % n'a pas grande importance. Cependant, sur L2, les choses sont différentes. La quasi-totalité du coût de la transaction consiste à l'écrire sur L1. En plus des données d'appel de la transaction, il y a 109 octets d'en-tête de la transaction (adresse de destination, signature, etc.). Le coût total est donc `109*16+576+160=2480`, et nous en gaspillons environ 6,5%.
 
-## Réduire les coûts lorsque vous ne contrôlez pas la destination \{#reducing-costs-when-you-dont-control-the-destination}
+## Réduire les coûts lorsque vous ne contrôlez pas la destination {#reducing-costs-when-you-dont-control-the-destination}
 
 En supposant que vous n'ayez pas de contrôle sur le contrat de destination, vous pouvez toujours utiliser une solution similaire à [celle-ci](https://github.com/qbzzt/ethereum.org-20220330-shortABI). Passons en revue les fichiers pertinents.
 
-### Token.sol \{#token-sol}
+### Token.sol {#token-sol}
 
 [Ceci est le contrat de destination](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/Token.sol). Il s'agit d'un contrat standard ERC-20, avec une fonction supplémentaire. Cette fonction `faucet` permet à n'importe quel utilisateur d'obtenir un jeton à utiliser. Elle rendrait inutile la création d'un contrat ERC-20, mais elle facilite la vie quand un ERC-20 existe uniquement pour faciliter les tests.
 
@@ -77,7 +77,7 @@ En supposant que vous n'ayez pas de contrôle sur le contrat de destination, vou
 
 [Vous pouvez voir un exemple de ce contrat en cours de déploiement ici](https://kovan-optimistic.etherscan.io/address/0x950c753c0edbde44a74d3793db738a318e9c8ce8).
 
-### CalldataInterpreter.sol \{#calldatainterpreter-sol}
+### CalldataInterpreter.sol {#calldatainterpreter-sol}
 
 [Ceci est le contrat que les transactions sont censées appeler au moyen de données d'appel plus courtes](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/contracts/CalldataInterpreter.sol). Revenons dessus ligne par ligne.
 
@@ -239,7 +239,7 @@ Dans l'ensemble, un transfert prend 35 octets de données d'appel :
 }       // contract CalldataInterpreter
 ```
 
-### test.js \{#test-js}
+### test.js {#test-js}
 
 [Ce test unitaire JavaScript](https://github.com/qbzzt/ethereum.org-20220330-shortABI/blob/master/test/test.js) nous montre comment utiliser ce mécanisme (et comment vérifier qu'il fonctionne correctement). Je vais supposer que vous comprenez [chai](https://www.chaijs.com/) et [ethers](https://docs.ethers.io/v5/) et uniquement vous expliquer les parties applicables spécifiquement au contrat.
 
@@ -327,7 +327,7 @@ Créer une transaction de transfert. Le premier octet est "0x02", suivi de l'adr
 })      // describe
 ```
 
-### Exemple \{#example}
+### Exemple {#example}
 
 Si vous souhiatez voir ces fichiers en action sans les exécuter vous-même, suivez ces liens :
 
@@ -337,13 +337,13 @@ Si vous souhiatez voir ces fichiers en action sans les exécuter vous-même, sui
 4. [Appel de `OrisUselessToken.approve()`](https://kovan-optimistic.etherscan.io/tx/1410747). Cet appel doit aller directement au contrat de jeton car le traitement repose sur `msg.sender`.
 5. [Appel de `transfer()`](https://kovan-optimistic.etherscan.io/tx/1410748).
 
-## Réduire les coûts lorsque vous contrôlez le contrat de destination \{#reducing-the-cost-when-you-do-control-the-destination-contract}
+## Réduire les coûts lorsque vous contrôlez le contrat de destination {#reducing-the-cost-when-you-do-control-the-destination-contract}
 
 Si vous avez le contrôle sur le contrat de destination, vous pouvez créer des fonctions qui contournent la vérification `msg.sender` dans la mesure où elles font confiance à l'interpréteur des données d'appel. [Vous pouvez voir un exemple de comment cela fonctionne ici, dans la branche `control-contract`](https://github.com/qbzzt/ethereum.org-20220330-shortABI/tree/control-contract).
 
 Si le contrat ne répondait qu'à des transactions externes, nous pourrions nous contenter d'un seul contrat. Cependant, cela casserait [la composabilité](/developers/docs/smart-contracts/composability/). Il est préférable d'avoir un contrat capable de répondre aux appels traditionnels ERC-20 et un autre contrat destiné aux transactions avec de courts appels de données.
 
-### Token.sol \{#token-sol-2}
+### Token.sol {#token-sol-2}
 
 Dans cet exemple, nous pouvons modifier `Token.sol`. Cela nous permet d'avoir un certain nombre de fonctions que seul le proxy peut appeler. Voici les nouveaux éléments :
 
@@ -441,7 +441,7 @@ Il s'agit de trois opérations pour lesquelles le message doit normalement prove
 1. Est modifiée par `onlyProxy()` afin que personne d'autre ne soit autorisé à les contrôler.
 2. Récupère l'adresse qui serait normalement `msg.sender` en tant que paramètre supplémentaire.
 
-### CalldataInterpreter.sol \{#calldatainterpreter-sol-2}
+### CalldataInterpreter.sol {#calldatainterpreter-sol-2}
 
 L'interpréteur de données d'appel est presque identique à celui ci-dessus, à la différence que les fonctions proxy reçoivent un paramètre `msg.sender` et qu'il n'est pas nécessaire d'effectuer d'allocation pour le `transfert`.
 
@@ -475,7 +475,7 @@ L'interpréteur de données d'appel est presque identique à celui ci-dessus, à
         }
 ```
 
-### Test.js \{#test-js-2}
+### Test.js {#test-js-2}
 
 Il existe quelques différences entre le code de test précédent et celui-ci.
 
@@ -533,7 +533,7 @@ expect(await token.balanceOf(destAddr2)).to.equal(255)
 
 Tester les deux nouvelles fonctions. Notez que `transferFromTx` nécessite deux paramètres d'adresse : le donneur de l'allocation et le destinataire.
 
-### Exemple \{#example-2}
+### Exemple {#example-2}
 
 Si vous souhiatez voir ces fichiers en action sans les exécuter vous-même, suivez ces liens :
 
@@ -545,6 +545,6 @@ Si vous souhiatez voir ces fichiers en action sans les exécuter vous-même, sui
 6. [Appel de `approveProxy()`](https://kovan-optimistic.etherscan.io/tx/1475419).
 7. [Appel de `transferProxy()`](https://kovan-optimistic.etherscan.io/tx/1475421). Notez que cet appel provient d'une adresse différente des autres, `poorSigner` au lieu du `signer`.
 
-## Conclusion \{#conclusion}
+## Conclusion {#conclusion}
 
 [Optimism](https://medium.com/ethereum-optimism/the-road-to-sub-dollar-transactions-part-2-compression-edition-6bb2890e3e92) et [Arbitrum](https://developer.offchainlabs.com/docs/special_features) recherchent des moyens de réduire la taille des données d'appel écrites en L1 et donc le coût des transactions. Cependant, en tant que fournisseurs d'infrastructures pour des solutions génériques, nos capacités sont limitées. En tant que développeur dApp, vous avez des connaissances spécifiques concernant l'application, ce qui vous permet d'optimiser vos données d'appel bien mieux que nous ne pourrions le faire avec une solution générique. J'espère que cet article vous aidera à trouver la solution idéale pour vos besoins.

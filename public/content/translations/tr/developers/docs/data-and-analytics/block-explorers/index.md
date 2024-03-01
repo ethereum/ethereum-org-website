@@ -7,11 +7,11 @@ sidebarDepth: 3
 
 Blok arayıcıları, Ethereum'un verilerine açılan portalınızdır. Bunları; bloklar, işlemler, madenciler, hesaplar ve diğer zincir üstü olaylarla ilgili gerçek zamanlı verileri görmek için kullanabilirsiniz.
 
-## Ön Koşullar \{#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 Bir blok arayıcısının size verdiği verileri anlamlandırabilmeniz için Ethereum'un temel kavramlarını anlamalısınız. [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) ile başlayın.
 
-## Hizmetler \{#services}
+## Hizmetler {#services}
 
 - [Etherscan](https://etherscan.io/) -_Ayrıca Çince, Korece, Rusça ve Japonca dillerinde de mevcut_
 - [Beaconcha.in](https://beaconcha.in/)
@@ -26,13 +26,13 @@ Bir blok arayıcısının size verdiği verileri anlamlandırabilmeniz için Eth
 - [EthVM](https://www.ethvm.com/)
 - [DexGuru Blok Arayıcısı](https://ethereum.dex.guru/)
 
-## Veri \{#data}
+## Veri {#data}
 
 Ethereum, tasarımı itibariyle şeffaf olduğu için yapılan her işlem doğrulanabilir. Blok arayıcıları bu bilgiyi almak için bir arayüz desteği sağlar. Ve bu, verilere ihtiyacınız olması durumunda hem ana Ethereum ağı hem de test ağları için kullanılabilir. Veri, yürütme ve mutabakat verisi olarak ayrılır. Yürütme verisi, spesifik bir blokta yürütülen işlemleri ifade eder. Mutabakat verisi, blokların kendilerini ve bunları öneren doğrulayıcıları ifade eder.
 
 İşte bir blok arayıcısından alabileceğiniz veri türlerinin bir özeti.
 
-### Yürütme verisi \{#execution-data}
+### Yürütme verisi {#execution-data}
 
 Her 12 saniyede bir Ethereum'a yeni bloklar eklenir (eğer ki bir blok önericisi kendi turunu kaçırmazsa), yani blok arayıcılarına eklenen neredeyse sabit bir veri akışı vardır. Bloklar, yararlı bulabileceğiniz birçok önemli veri içerir:
 
@@ -56,7 +56,7 @@ Her 12 saniyede bir Ethereum'a yeni bloklar eklenir (eğer ki bir blok önericis
 - Üst karma – Mevcut bloktan önce gelen blokun karma değeri
 - StateRoot - Sistemin tüm durumunu saklayan Merkle ağacının kök karma değeri
 
-### Gaz \{#gas}
+### Gaz {#gas}
 
 Blok araştırmacıları size işlemlerde ve bloklarda Gaz kullanımı hakkında bilgi vermekle kalmaz, bazıları size ağın mevcut gaz fiyatları hakkında da bilgi verir. Bu, ağ kullanımını anlamanıza, güvenli işlemler göndermenize ve fazla gaz harcamamanıza yardımcı olacaktır. Bu bilgileri ürününüzün arayüzüne almanıza yardımcı olabilecek API'lara bakın. Gaza özgü veriler şunları kapsar:
 
@@ -67,7 +67,7 @@ Blok araştırmacıları size işlemlerde ve bloklarda Gaz kullanımı hakkında
 - Gaz tüketen sözleşmeler - diğer bir deyişle, ağda çokça kullanılan popüler ürünler
 - Gaz harcayan hesaplar - başka bir deyişle, ağı sık kullanan kullanıcılar
 
-### İşlemler \{#transactions}
+### İşlemler {#transactions}
 
 Blok arayıcıları, insanların işlemlerinin ilerlemesini takip etmeleri için ortak bir yer haline geldi. Bunun nedeni, alabileceğiniz ayrıntı düzeyinin ekstra kesinlik sağlamasıdır. İşlem verileri şunları içerir:
 
@@ -91,7 +91,7 @@ Blok arayıcıları, insanların işlemlerinin ilerlemesini takip etmeleri için
 - Tek seferlik sayı - `başlangıç` adresinin işlem numarası (bu değerin 0'dan başladığını, bu nedenle `100` olan bir tek seferlik sayı değerinin aslında bu hesap tarafından gönderilen 101. işlem olduğunu unutmayın
 - Giriş verisi – İşlemin gerektirdiği herhangi bir ek bilgi
 
-### Hesaplar \{#accounts}
+### Hesaplar {#accounts}
 
 Bir hesap hakkında erişebileceğiniz çok fazla veri var. Bu nedenle, varlıklarınızın ve değerinizin kolayca izlenememesi için genellikle birden fazla hesap kullanmanız önerilir. İşlemleri ve hesap hareketlerini daha özel hale getirmek için geliştirilmekte olan bazı çözümler de bulunmaktadır. Ancak, işte hesaplar hakkında mevcut olan veriler:
 
@@ -114,7 +114,7 @@ Akıllı sözleşme hesapları, bir kullanıcı hesabının sahip olacağı tüm
 - Sözleşme oluşturma kodu - Akıllı sözleşmenin derlenmiş bayt kodu - Solidity veya Vyper vb. ile yazılmış bir akıllı sözleşmeyi derlerken oluşturulur.
 - Sözleşme olayları - Akıllı sözleşmede çağırılan metotların bir geçmişi - temelde sözleşmenin nasıl ve ne sıklıkla kullanıldığını görmek için bir yol
 
-### Token'lar \{#tokens}
+### Token'lar {#tokens}
 
 Token'lar bir tür sözleşmedir, bu nedenle akıllı sözleşmelere benzer verilere sahip olurlar. Ancak değerli oldukları ve alınıp satılabildikleri için ek veri noktalarına sahiptirler:
 
@@ -128,7 +128,7 @@ Token'lar bir tür sözleşmedir, bu nedenle akıllı sözleşmelere benzer veri
 - Sözleşme adresi - Ana Ağ'a dağıtılan token'ın adresi
 - Ondalık Sayılar - ERC20 token'ları bölünebilirdir ve ondalık basamaklara sahiptir
 
-### Ağ \{#network}
+### Ağ {#network}
 
 Bazı blok verileri Ethereum'un durumu hakkında daha bütüncül olarak endişelidir.
 
@@ -138,9 +138,9 @@ Bazı blok verileri Ethereum'un durumu hakkında daha bütüncül olarak endişe
 - Toplam ETH arzı - Dolaşımdaki ETH sayısı–her bloğun oluşumu ile blok ödülleri şeklinde yeni ETH oluşturulduğunu unutmayın
 - Piyasa değeri - Fiyat\*arz ile hesaplanır
 
-## Mutabakat katmanı verileri \{#consensus-layer-data}
+## Mutabakat katmanı verileri {#consensus-layer-data}
 
-### Dönem \{#epoch}
+### Dönem {#epoch}
 
 Güvenlik sebeplerinden dolayı, her dönemin sonunda (her 6,4 dakikada bir) doğrulayıcılardan rastgele kurullar oluşturulmaktadır. Dönem verileri şunları içerir:
 
@@ -155,7 +155,7 @@ Güvenlik sebeplerinden dolayı, her dönemin sonunda (her 6,4 dakikada bir) do�
 - Ortalama Doğrulayıcı bakiyesi - Aktif doğrulayıcılar için ortalama bakiye
 - Yuvalar - Döneme dahil edilen yuva sayısı (yuvalar bir geçerli blok içerir)
 
-### Yuva \{#slot}
+### Yuva {#slot}
 
 Yuvalar, blok oluşturma fırsatlarıdır; her yuva için mevcut veriler şunları içerir:
 
@@ -180,7 +180,7 @@ Yuvalar, blok oluşturma fırsatlarıdır; her yuva için mevcut veriler şunlar
 - Cezalar - Blok önerenlere veya tasdik edenlere verilen cezaların sayısı
 - Oylar - Bu yuvadaki bloka oy veren doğrulayıcılar
 
-### Bloklar \{#blocks-1}
+### Bloklar {#blocks-1}
 
 Hisse ispatı, zamanı yuvalar ve dönemlere böler. Yani bu yeni veriler demektir!
 
@@ -189,7 +189,7 @@ Hisse ispatı, zamanı yuvalar ve dönemlere böler. Yani bu yeni veriler demekt
 - Yuva - Blokun önerildiği yuva
 - Tasdikler - Yuvaya dahil olan tasdiklerin sayısı - tasdikler blokun İşaret Zinciri'ne gitmeye hazır olduğunu gösteren oylar gibidirler
 
-### Doğrulayıcılar \{#validators}
+### Doğrulayıcılar {#validators}
 
 Doğrulayıcılar, bloklar önermekten ve bu blokları yuvalar içinde tasdik etmekten sorumludur.
 
@@ -205,7 +205,7 @@ Doğrulayıcılar, bloklar önermekten ve bu blokları yuvalar içinde tasdik et
 - Tasdikler - Doğrulayıcının sağladığı tasdikler
 - Yatırımlar - Gönderen adresi, işlem karması, blok numarası, zaman damgası ve doğrulayıcının hisse yatırma miktarı ve durumu
 
-### Tasdikler \{#attestations}
+### Tasdikler {#attestations}
 
 Tasdikler, zincire blok eklemek için verilen "evet" oylarıdır. Verileri, tasdikin kaydı ve tasdik eden doğrulayıcılarla ilgilidir.
 
@@ -218,7 +218,7 @@ Tasdikler, zincire blok eklemek için verilen "evet" oylarıdır. Verileri, tasd
 - Hedef - En son dönem sınırını gösterir
 - İmza
 
-### Ağ \{#network-1}
+### Ağ {#network-1}
 
 Fikir birliği katmanı üst düzey verileri şunları içerir:
 
@@ -229,7 +229,7 @@ Fikir birliği katmanı üst düzey verileri şunları içerir:
 - Hisselenmiş ETH - Ağda hisselenmiş ETH miktarı
 - Ortalama bakiye - Doğrulayıcıların ortalama ETH bakiyesi
 
-## Blok arayıcıları \{#block-explorers}
+## Blok arayıcıları {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) - Ethereum Ana Ağı ve Goerli Test Ağı'ndan veri çekmek için kullanabileceğiniz bir blok arayıcısı
 - [Beaconcha.in](https://beaconcha.in/) - Ethereum Ana Ağı ve Goerli Test Ağı için açık kaynaklı bir blok arayıcısı
@@ -238,11 +238,11 @@ Fikir birliği katmanı üst düzey verileri şunları içerir:
 - [Ethplorer](https://ethplorer.io/) - Ethereum Ana Ağı ve Kovan test ağı için token'lar üzerine odaklı bir blok arayıcısı
 - [Rantom](https://rantom.app/) - Detaylı anlayış için kullanıcı dostu açık kaynaklı bir DeFi & NFT işlem görüntüleyicisi
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## İlgili konular \{#related-topics}
+## İlgili konular {#related-topics}
 
 - [İşlemler](/developers/docs/transactions/)
 - [Hesaplar](/developers/docs/accounts/)

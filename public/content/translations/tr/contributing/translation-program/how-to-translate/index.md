@@ -4,9 +4,9 @@ lang: tr
 description: Ethererum.org çevirisinde Crowdin kullanım talimatları
 ---
 
-# Çevirme yöntemi \{#how-to-translate}
+# Çevirme yöntemi {#how-to-translate}
 
-## Görsel rehber \{#visual-guide}
+## Görsel rehber {#visual-guide}
 
 Görsel olarak daha kolay öğrenenler için Luka'nın Crowdin'in kurulumunu anlatışını izleyin. Alternatif olarak, bir sonraki bölümde aynı adımları yazılı olarak da bulabilirsiniz.
 
@@ -14,9 +14,9 @@ Görsel olarak daha kolay öğrenenler için Luka'nın Crowdin'in kurulumunu anl
 <YouTube id="Ii7bYhanLs4" />
 }
 
-## Yazılı rehber \{#written-guide}
+## Yazılı rehber {#written-guide}
 
-### Crowdin'deki projemize katılın \{#join-project}
+### Crowdin'deki projemize katılın {#join-project}
 
 Crowdin hesabınızda oturum açmanız veya henüz hesabınız yoksa Crowdin hesabı oluşturmanız gerekecektir. Kaydolmak için gerekli olan tek şey bir e-posta hesabı ve şifredir.
 
@@ -24,7 +24,7 @@ Crowdin hesabınızda oturum açmanız veya henüz hesabınız yoksa Crowdin hes
   Projeye katılın
 </ButtonLink>
 
-### Dilinizi açın \{#open-language}
+### Dilinizi açın {#open-language}
 
 Crowdin'e giriş yaptıktan sonra bir proje açıklaması ile kullanılabilir tüm dillerin bir listesini göreceksiniz. Her dil ayrıca toplam çevrilebilir kelime sayısı hakkında bilgi ve ilgili dilde ne kadar içeriğin çevrildiğine ve onaylandığına dair bir genel görünüm içerir.
 
@@ -32,7 +32,7 @@ Crowdin'e giriş yaptıktan sonra bir proje açıklaması ile kullanılabilir t�
 
 ![Crowdin'deki diller listesi](./list-of-languages.png)
 
-### Üzerinde çalışmak istediğiniz bir belge bulun \{#find-document}
+### Üzerinde çalışmak istediğiniz bir belge bulun {#find-document}
 
 Web site içeriği, çok sayıda belge ve içerik gruplarına bölünmüştür. Her belgenin ilerleme durumunu sağ taraftan kontrol edebilirsiniz; çevirinin ilerleme durumu %100'ün altındaysa lütfen katkıda bulunun!
 
@@ -46,7 +46,7 @@ En yüksek etkiye sahip sayfaların önce çevrilmesini sağlamak için şu say�
 
 [Ethereum.org içerik grupları hakkında daha fazla bilgi edinin](/contributing/translation-program/content-buckets/)
 
-### Çevirin \{#translate}
+### Çevirin {#translate}
 
 Çevirmek istediğiniz dosyayı seçtiğinizde, bu dosya çevrimiçi düzenleyicide açılacaktır. Crowdin'i daha önce hiç kullanmadıysanız, temel bilgileri gözden geçirmek için bu hızlı rehberi kullanabilirsiniz.
 
@@ -74,7 +74,7 @@ Burada yorumları, çeviri belleği girdilerini ve sözlük girdilerini bulabili
 
 Dahasını mı öğrenmek istiyorsunuz? [Crowdin çevrimiçi düzenleyiciyi kullanımıyla ilgili dokümanlara](https://support.crowdin.com/online-editor/) göz atmaktan çekinmeyin
 
-### Gözden geçirme süreci \{#review-process}
+### Gözden geçirme süreci {#review-process}
 
 Çeviriyi tamamladığınızda (yani, içerik grubundaki tüm dosyalar 100% olarak göründüğünde) profesyonel çeviri hizmeti aldığımız kurum içeriği gözden geçirecektir (ve potansiyel olarak düzeltecektir). Gözden geçirme tamamlandıktan sonra (yani gözden geçirmenin ilerleme durumu %100 olduğunda) çevirileri web sitesine ekleriz.
 
@@ -82,7 +82,7 @@ Dahasını mı öğrenmek istiyorsunuz? [Crowdin çevrimiçi düzenleyiciyi kull
   Lütfen projeyi makine çevirisi kullanarak çevirmeyin. Tüm çeviriler web sitesine eklenmeden önce gözden geçirilecektir. Önerdiğiniz çevirilerin makine çevirisi olduğu tespit edilirse, çeviriler reddedilir ve makine çevirisini kullanarak katkıda bulunanlar sıklıkla projeden çıkarılır.
 </InfoBanner>
 
-### İletişime geçin \{#get-in-touch}
+### İletişime geçin {#get-in-touch}
 
 Sormak istediğiniz bir şey mi var? Ekibimizle ve diğer çevirmenlerle iş birliği yapmak mı istiyorsunuz? Lütfen [ethereum.org Discord sunucumuzun](/discord/) #translations kanalına yazın
 

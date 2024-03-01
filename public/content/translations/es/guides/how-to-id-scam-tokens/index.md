@@ -4,7 +4,7 @@ description: Detectar los tókenes de estafa, cómo hacen para parecer legítimo
 lang: es
 ---
 
-# Cómo detectar los tókenes de estafa \{#identify-scam-tokens}
+# Cómo detectar los tókenes de estafa {#identify-scam-tokens}
 
 Uno de los usos más comunes para Ethereum es que un grupo cree un token intercambiable, en cierto sentido su propia moneda. Estos tókenes suelen seguir un estándar, [ERC-20](/developers/docs/standards/tokens/erc-20/). No obstante, en cualquier lugar donde haya casos de uso legítimos que aporten valor, también hay criminales que intentan robar ese valor para sí mismos.
 
@@ -37,7 +37,7 @@ No tiene sentido crear una versión encubierta de un token ERC-20 que ya está e
 </ExpandableCard>
 }
 
-## ¿Cómo funcionan los tókenes estafa? \{#how-do-scam-tokens-work}
+## ¿Cómo funcionan los tókenes estafa? {#how-do-scam-tokens-work}
 
 La finalidad última de Ethereum es la descentralización. Esto significa que no hay una autoridad central que pueda confiscar sus activos ni impedirle implementar un contrato inteligente. Aunque también significa que los estafadores pueden desplegar cualquier contrato inteligente que deseen.
 
@@ -53,7 +53,7 @@ contentPreview=''>
 
 Específicamente, Arbitrum desplegó un contrato que utiliza el símbolo `ARB`. Pero eso no impide que otras personas también desplieguen un contrato que utiliza exactamente el mismo símbolo, o uno similar. Quienquiera que escriba el contrato puede establecer lo que hará el contrato.
 
-## Apariencia legítima \{#appearing-legitimate}
+## Apariencia legítima {#appearing-legitimate}
 
 Hay varios trucos que los creadores de tókenes estafa hacen para que parezcan legítimos.
 
@@ -67,13 +67,13 @@ Hay varios trucos que los creadores de tókenes estafa hacen para que parezcan l
 
 - **Transferencias legítimas**. _Los propietarios legítimos no pagarían por transferir un token estafa a otros, por lo que si hay transferencias, debería ser legítimo, ¿no? _ **Incorrecto**. Los eventos `transacción` los produce el contrato ERC-20. Un estafador puede escribir fácilmente el contrato de tal manera que produzca esas acciones.
 
-## Sitios web fraudulentos \{#websites}
+## Sitios web fraudulentos {#websites}
 
 Los estafadores también pueden producir sitios web muy convincentes, a veces incluso clones precisos de sitios auténticos con interfaces de usuario idénticas, pero con trucos sutiles. Los ejemplos podrían ser enlaces externos que parecen legítimos remitiendo al usuario a un sitio de estafa externo, o instrucciones incorrectas que guían al usuario a exponer sus claves o enviar fondos a la dirección de un atacante.
 
 La mejor práctica para evitar esto es comprobar cuidadosamente la URL de los sitios que visita y guardar las direcciones de los sitios auténticos conocidos en sus marcadores. Luego, puede acceder al sitio real a través de sus marcadores sin cometer accidentalmente errores ortográficos ni depender de enlaces externos.
 
-## ¿Cómo puede protegerse a sí mismo? \{#protect-yourself}
+## ¿Cómo puede protegerse a sí mismo? {#protect-yourself}
 
 1. **Compruebe la dirección del contrato**. Los tókenes legítimos provienen de organizaciones legítimas, y puede ver las direcciones del contrato en el sitio web de la organización. Por ejemplo, [para `ARB` puede ver las direcciones legítimas aquí](https://docs.arbitrum.foundation/deployment-addresses#token).
 
@@ -93,7 +93,7 @@ Esta es otra prueba que nos muestra que `wARB` no es probable que sea un token l
 
    ![Token estafa en Etherscan](./etherscan-scam.png)
 
-## Conclusión \{#conclusion}
+## Conclusión {#conclusion}
 
 Mientras haya valor en el mundo, va a haber estafadores que intenten robarlo para su beneficio, y en un mundo descentralizado no hay nadie que le proteja excepto usted mismo. Esperamos que recuerde estos puntos para ayudar a distinguir los tókenes legítimos de las estafas:
 

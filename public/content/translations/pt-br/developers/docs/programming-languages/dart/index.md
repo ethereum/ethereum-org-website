@@ -5,9 +5,9 @@ lang: pt-br
 incomplete: true
 ---
 
-## Introdução aos contratos inteligentes e linguagem Solidity \{#getting-started-with-smart-contracts-and-solidity}
+## Introdução aos contratos inteligentes e linguagem Solidity {#getting-started-with-smart-contracts-and-solidity}
 
-## Tutoriais \{#tutorials}
+## Tutoriais {#tutorials}
 
 - [Flutter and Blockchain – Hello World Dapp](https://www.geeksforgeeks.org/flutter-and-blockchain-hello-world-dapp/) leva você através de todos os passos para iniciar:
   1.  Instalando o [Truffle development suite](https://www.trufflesuite.com/)
@@ -18,7 +18,7 @@ incomplete: true
 - Se você é impaciente, talvez prefira o [Building a Blockchain Decentralized-app with Flutter and Dart on Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), que leva apenas vinte minutos
 - [Integrating MetaMask in Flutter application](https://youtu.be/8qzVDje3IWk) - Este pequeno vídeo mostra as etapas de integração do MetaMask em seus aplicativos Flutter
 
-## Trabalhando com clientes Ethereum \{#working-with-ethereum-clients}
+## Trabalhando com clientes Ethereum {#working-with-ethereum-clients}
 
 Você pode usar Ethereum para criar aplicativos descentralizados (ou "dapps") que utilizam os benefícios da tecnologia de criptomoedas e cadeia de blocos. Existem ao menos duas bibliotecas mantidas atualmente para Dart, para usar [JSON RPC API](/developers/docs/apis/json-rpc/) para Ethereum.
 

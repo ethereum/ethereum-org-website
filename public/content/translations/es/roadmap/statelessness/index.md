@@ -4,7 +4,7 @@ description: Explicación del historial de vencimiento y sin estado de Ethereum
 lang: es
 ---
 
-# Vencimiento del estado, sin estado e historial \{#statelessness}
+# Vencimiento del estado, sin estado e historial {#statelessness}
 
 La capacidad de ejecutar nodos de Ethereum en un hardware modesto es fundamental para una verdadera descentralización. Esto se debe a que ejecutar un nodo da a los usuarios la capacidad de verificar la información mediante la realización de comprobaciones criptográficas de forma independiente en lugar de confiar en un tercero para que les facilite los datos. Ejecutar un nodo permite a los usuarios enviar transacciones directamente a la red entre pares de Ethereum en lugar de tener que confiar en un intermediario. La descentralización no es posible si estos beneficios solo están al alcance de aquellos usuarios que pueden disponer de costoso hardware. En su lugar, los nodos deberían poder ejecutarse con requisitos de procesamiento y memoria extremadamente modestos, para que puedan ejecutarse en teléfonos móviles, microordenadores o de fondo en un ordenador doméstico.
 
@@ -12,7 +12,7 @@ Hoy en día, los requisitos de espacio en el disco son la principal barrera que 
 
 Los discos duros más baratos se pueden usar para almacenar datos más antiguos, pero son demasiado lentos para mantenerse al día con los bloques entrantes. Mantener los modelos de almacenamiento actuales para los clientes, mientras se hace que los datos sean más baratos y fáciles de almacenar es solo una solución temporal y parcial al problema, porque el crecimiento del estado de Ethereum es «sin límites», lo que significa que los requisitos de almacenamiento solo pueden aumentar, y las mejoras tecnológicas siempre tendrán que seguir el ritmo del crecimiento continuo del estado. En su lugar, los clientes deben encontrar nuevas formas de verificar bloques y transacciones que no dependan de la búsqueda de datos en bases de datos locales.
 
-## Reducción del almacenamiento para los nodos \{#reducing-storage-for-nodes}
+## Reducción del almacenamiento para los nodos {#reducing-storage-for-nodes}
 
 Hay varias formas de reducir la cantidad de datos que cada nodo tiene que almacenar, cada una de las cuales requiere que el protocolo central de Ethereum se actualice hasta cierto punto:
 
@@ -21,9 +21,9 @@ Hay varias formas de reducir la cantidad de datos que cada nodo tiene que almace
 - **Sin estado débil**: solo los productores de bloques necesitan acceso a datos de estado completo, otros nodos pueden verificar bloques sin una base de datos de estado local.
 - **Sin estado fuerte**: ningún nodo necesita acceso a los datos completos del estado.
 
-## Vencimiento de datos \{#data-expiry}
+## Vencimiento de datos {#data-expiry}
 
-### Vencimiento del historial \{#history-expiry}
+### Vencimiento del historial {#history-expiry}
 
 El vencimiento del historial se refiere a los clientes que «podan» los datos más antiguos que es poco probable que necesiten, de modo que solo almacenen una pequeña cantidad de datos históricos, descartando los datos más antiguos en beneficio de datos nuevos cuando lleguen. Hay dos razones por las que los clientes requieren datos históricos: sincronizar y atender las solicitudes de datos. Originalmente, los clientes tenían que sincronizar desde el bloque inicial, verificando que cada bloque sucesivo fuera correcto hasta la cabeza de la cadena. Hoy en día, los clientes utilizan «puntos de control de subjetividad débiles» para abrirse camino hacia la cabeza de la cadena. Estos puntos de control son puntos de partida de confianza, como tener un bloque de génesis cerca del presente en lugar del comienzo mismo de Ethereum. Esto significa que los clientes pueden eliminar toda la información antes del punto de control de subjetividad débil más reciente sin perder la capacidad de sincronizarse con la cabeza de la cadena. Actualmente, los clientes atienden solicitudes (que llegan a través de JSON-RPC) de datos históricos al obtenerlos de sus bases de datos locales. Sin embargo, con el vencimiento del historial, ya no se podrá lograr si se han podado los datos solicitados. Para atender a estos datos históricos se necesitan algunas soluciones innovadoras.
 
@@ -35,7 +35,7 @@ EIP-4444 aún no está aún listo para enviarse, pero es un tema sobre el que se
 
 Esta actualización no cambia fundamentalmente la forma en que los nodos de Ethereum manejan los datos de estado, solo cambia la forma en que se accede a los datos históricos.
 
-### Vencimiento del estado \{#state-expiry}
+### Vencimiento del estado {#state-expiry}
 
 Por vencimiento del estado se refiere a la eliminación del estado de los nodos individuales si no se ha accedido recientemente. Hay varias formas en las que esto podría implementarse, incluyendo:
 
@@ -50,7 +50,7 @@ De manera similar al vencimiento del historial, la responsabilidad del vencimien
 
 El vencimiento del estado todavía está en la fase de investigación y aún no está lista para enviarla. El vencimiento del estado puede ocurrir más tarde que los clientes sin estado y el vencimiento del historial, porque esas actualizaciones hacen que la mayoría de los validadores puedan gestionar fácilmente los grandes tamaños de estado.
 
-## Sin estado \{#statelessness}
+## Sin estado {#statelessness}
 
 El término sin estado no es del todo preciso, ya que no significa que se elimine el concepto de «estado», sino que implica cambios en la forma en que los nodos de Ethereum gestionan los datos de estado. Un estado sin estado en sí mismo tiene dos vertientes: el sin estado débil y el fuerte. La apátrida débil permite que la mayoría de los nodos se quede sin estado al poner la responsabilidad del almacenamiento estatal en unos pocos. La apátrida fuerte elimina por completo la necesidad de que cualquier nodo almacene los datos completos del estado. Tanto el sin estado debil como el fuerte ofrecen los siguientes beneficios a los validadores normales:
 
@@ -60,7 +60,7 @@ El término sin estado no es del todo preciso, ya que no significa que se elimin
 - los nodos pueden ejecutarse en discos duros baratos porque no se requiere lectura/escritura de disco
 - compatible con futuras actualizaciones de la criptografía de Ethereum
 
-### Sin estado débil \{#weak-statelessness}
+### Sin estado débil {#weak-statelessness}
 
 El sin estado débil implica cambios en la forma en que los nodos de Ethereum verifican los cambios de estado, pero no elimina por completo la necesidad de almacenamiento de estado en todos los nodos de la red. En cambio, la apátrida débil pone la responsabilidad del almacenamiento de estado en los proponentes de bloques, mientras que todos los demás nodos de la red verifican los bloques sin almacenar los datos de estado completos.
 
@@ -81,17 +81,17 @@ Los proponentes de bloques utilizan los datos del estado para crear «testigos»
 
 El sin estado débil se encuentra en un estado avanzado de investigación, pero depende de la separación proponente-constructor y de que se hayan implementado los árboles de Verkle para que se puedan pasar pequeños testigos entre pares. Esto significa que el sin estado débil todavía tardará probablemente unos años en integrarse en la red principal de Ethereum.
 
-### Sin estado fuerte \{#strong-statelessness}
+### Sin estado fuerte {#strong-statelessness}
 
 El sin estado fuerte elimina por completo la necesidad de que cualquier bloque almacene los datos completos del estado. En su lugar, las transacciones se envían con testigos que pueden añadir los productores de bloques. Los productores de bloques son entonces responsables de almacenar solo ese estado que se necesita para generar testigos para las cuentas pertinentes. La responsabilidad del estado se traslada casi en su totalidad a los usuarios, ya que envían testigos y «listas de acceso» para declarar con qué cuentas y claves de almacenamiento están interactuando. Esto permitiría nodos extremadamente ligeros, no obstante acarrea contrapartidas que pueden dificultar las transacciones con contratos inteligentes.
 
 Los investigadores han estudiado el sin estado fuerte, aunque actualmente no se espera que forme parte de la hoja de ruta de Ethereum; es más probable que con el sin estado débil sea suficiente para las necesidades de escalabilidad de Ethereum.
 
-## Progreso actual \{#current-progress}
+## Progreso actual {#current-progress}
 
 El sin estado débil, el vencimiento del historial y el vencimiento del estado están en la fase de investigación y se espera que se envíen dentro de varios años. No hay garantía de que todas estas propuestas se implementen, por ejemplo, si el vencimiento del estado se implementa primero, es posible que ya no sea necesario implementar también el vencimiento del historial. También hay otros elementos de la hoja de ruta, como los [árboles de Verkle](/roadmap/verkle-trees) y [la separación entre proponentes y constructores](/roadmap/pbs) que deben completarse primero.
 
-## Más información \{#further-reading}
+## Más información {#further-reading}
 
 - [Vitalik comenta el sin estado en AMA](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [Una teoría de la gestión del tamaño del estado](https://hackmd.io/@vbuterin/state_size_management)

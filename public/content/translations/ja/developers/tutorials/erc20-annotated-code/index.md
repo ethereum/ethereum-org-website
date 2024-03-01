@@ -10,13 +10,13 @@ skill: beginner
 published: 2021-03-09
 ---
 
-## はじめに \{#introduction}
+## はじめに {#introduction}
 
 イーサリアムの最も一般的な用途の 1 つは、グループが取引可能なトークン、いわば独自の通貨を作ることです。 これらのトークンは通常、[ERC-20](/developers/docs/standards/tokens/erc-20/)という規格に準拠しています。 この規格により、流動性プールやウォレットなど、すべての ERC-20 トークンで利用できるツールの作成が可能になります。 今回は、[OpenZeppelin Solidity ERC-20 の実装](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)と、[インターフェース定義](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)について分析していきます。
 
 ここではアノテーション付きのソースコードを見ていきます。 ERC-20 を実装する場合は、[こちらのチュートリアル](https://docs.openzeppelin.com/contracts/2.x/erc20-supply)をご覧ください。
 
-## インターフェース \{#the-interface}
+## インターフェース {#the-interface}
 
 ERC-20 のような規格の目的は、ウォレットや分散型取引所のようなアプリケーション間で相互運用可能な多くのトークンの実装を可能にすることです。 しかしその実現には[インターフェース](https://www.geeksforgeeks.org/solidity-basics-of-interface/)が必要です。 トークンコントラクトを使用する必要があるすべてのコードは、インターフェースで同じ定義を使用することができ、その定義を使用するすべてのトークンコントラクトと互換性があります。それらには MetaMask などのウォレット、etherscan.io などの分散型アプリケーション(Dapp)、流動性プールなどの異なるコントラクトが含まれます。
 
@@ -184,7 +184,7 @@ interface IERC20 {
 
 これらのイベントは、ERC-20 コントラクトの状態が変更されるタイミングで発行されます。
 
-## 実際のコントラクト \{#the-actual-contract}
+## 実際のコントラクト {#the-actual-contract}
 
 以下は、[こちらから取得した](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)、ERC-20 規格を採用している実際のコントラクトです。 そのまま使うためのものではありませんが、[継承](https://www.tutorialspoint.com/solidity/solidity_inheritance.htm)することで使用可能なコントラクトに拡張することができます。
 
@@ -195,7 +195,7 @@ pragma solidity >=0.6.0 <0.8.0;
 
 &nbsp;
 
-### インポートステートメント \{#import-statements}
+### インポートステートメント {#import-statements}
 
 コントラクト定義では、上記のインターフェース定義に加え、別の 2 つのファイルをインポートします。
 
@@ -241,7 +241,7 @@ import "../../math/SafeMath.sol";
 
 ```
 
-### コントラクトの定義 \{#contract-definition}
+### コントラクトの定義 {#contract-definition}
 
 ```solidity
 contract ERC20 is Context, IERC20 {
@@ -259,7 +259,7 @@ contract ERC20 is Context, IERC20 {
 
 この行では、`SafeMath`ライブラリを`uint256`型にアタッチしています。 このライブラリの詳細については、[こちら](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)をご覧ください。
 
-### 変数の定義 \{#variable-definitions}
+### 変数の定義 {#variable-definitions}
 
 これらの定義では、コントラクトの状態変数を指定します。 変数には、`private`で宣言しているものがありますが、ブロックチェーン上の他のコントラクトから読み取れないというだけです。 _ブロックチェーンに秘密はありません_。すべてのノードのソフトウェアは、すべてのブロックのすべてのコントラクトの状態を保持します。 状態変数は、慣例として`_<something>`のように命名されます。
 
@@ -303,7 +303,7 @@ contract ERC20 is Context, IERC20 {
 
 アプリケーションには、トークンの残高を表示する方法が必要です。 ユーザーが 3,14,000,000,000,000,000,000,000wei を持っている場合、それは 3.14 ETH でしょうか? それとも、31.41 ETH でしょうか? 3,141 ETH でしょうか? イーサ (ETH) の場合、1 ETH が 10^18 wei と定義されていますが、トークンでは別の値を選択可能です。 トークンを分割する必要がなければ、値がゼロの`_decimals`を使用できます。 ETH と同じ基準を使用したい場合は、**18**の値を指定してください。
 
-### コンストラクタ \{#the-constructor}
+### コンストラクタ {#the-constructor}
 
 ```solidity
     /**
@@ -324,7 +324,7 @@ contract ERC20 is Context, IERC20 {
 
 コンストラクタは、コントラクトが最初に作成されたときに呼び出されます。 慣例として関数パラメータは、 `<something>_`のように命名されます。
 
-### ユーザーインターフェース関数 \{#user-interface-functions}
+### ユーザーインターフェース関数 {#user-interface-functions}
 
 ```solidity
     /**
@@ -372,7 +372,7 @@ contract ERC20 is Context, IERC20 {
 
 このケースでは、`memory`の使用が最善の選択肢です。
 
-### トークン情報の読み取り \{#read-token-information}
+### トークン情報の読み取り {#read-token-information}
 
 以下の関数は、トークンの情報(総供給量またはアカウントの残高のいずれか)を提供します。
 
@@ -400,7 +400,7 @@ contract ERC20 is Context, IERC20 {
 
 アカウントの残高を読み取ります。 誰でも他のユーザーのアカウント残高を取得できることに注意してください。 どのノードでも取得可能な情報であるため、隠そうとしても無駄です。 _ブロックチェーンに秘密はありません_。
 
-### トークンの転送 \{#transfer-tokens}
+### トークンの転送 {#transfer-tokens}
 
 ```solidity
     /**
@@ -428,11 +428,11 @@ contract ERC20 is Context, IERC20 {
 
 通常、Solidity では、メッセージ送信者に`msg.sender`を使用します。 しかし、[OpenGSN](http://opengsn.org/)では使えません。 イーサ(ETH)無しのトークンのトランザクションを許可したい場合は、`_msgSender()`を使用しなければなりません。 通常のトランザクションでは、`msg.sender`を返しますが、イーサ(ETH)無しのトランザクションの場合は、メッセージを中継したコントラクトではなく、元の署名者を返します。
 
-### 割当量(allowance)関連の関数 \{#allowance-functions}
+### 割当量(allowance)関連の関数 {#allowance-functions}
 
 割当量機能を実装した関数には、`allowance`、`approve`、 `transferFrom`、`_approve`があります。 さらに、OpenZeppelin 実装には、基本的な標準に加えてセキュリティを向上させる `increaseAllowance`や`decreaseAllowance`などの複数の機能が含まれます。
 
-#### allowance 関数 \{#allowance}
+#### allowance 関数 {#allowance}
 
 ```solidity
     /**
@@ -445,7 +445,7 @@ contract ERC20 is Context, IERC20 {
 
 `allowance`関数を使用すると、誰でも割当量を確認することができます。
 
-#### approve 関数 \{#approve}
+#### approve 関数 {#approve}
 
 ```solidity
     /**
@@ -473,7 +473,7 @@ contract ERC20 is Context, IERC20 {
 
 internal 関数を使用して、状態変更が起こる場所の数を最小限にしています。 状態を変更する*すべての*関数には、潜在的なセキュリティリスクがあり、セキュリティ監査が必要です。 このような方法で、間違いを犯す可能性を下げています。
 
-#### transferFrom 関数 \{#transferFrom}
+#### transferFrom 関数 {#transferFrom}
 
 これは、使用者(spender)が割当量(allowance)を使用するために呼び出す関数です。 これには、使う量の転送操作と、その量を割当量(allowance)から減らす操作の、2 つの操作が必要になります。
 
@@ -507,7 +507,7 @@ internal 関数を使用して、状態変更が起こる場所の数を最小�
     }
 ```
 
-#### OpenZeppelin による安全性の向上 \{#openzeppelin-safety-additions}
+#### OpenZeppelin による安全性の向上 {#openzeppelin-safety-additions}
 
 ゼロ以外の割当量を別のゼロ以外の値に設定することには、リスクが伴います。自分が制御できるのは自分のトランザクションの順序のみであり、他のユーザーのトランザクションの順序を制御することはできないからです。 アリスという初心者ユーザーと、ビルという誠実さに欠けるユーザーがいるとします。 アリスは、ビルが提供しているサービスを購入することにしました。購入には 5 トークンの費用がかかるため、アリスは 5 トークンの割当量(allowance)をビルに付与しました。
 
@@ -583,11 +583,11 @@ B:
     }
 ```
 
-### トークン情報を変更する関数 \{#functions-that-modify-token-information}
+### トークン情報を変更する関数 {#functions-that-modify-token-information}
 
 次の 4 つの関数(`_transfer`、`_mint`、`_burn`、`_approve`)は、実際の処理を行います。
 
-#### \_transfer 関数 \{#\_transfer}
+#### \_transfer 関数 {#\_transfer}
 
 ```solidity
     /**
@@ -652,7 +652,7 @@ OpenZeppelin ERC-20 のコードはすでに監査を受けており、安全で
 
 最後に、`Transfer`イベントを発行します。 イベントは、スマートコントラクトからアクセスできません。しかし、ブロックチェーンの外で実行されているコードは、イベントをリッスンして対応することができます。 例えば、ウォレットで所有者がより多くのトークンを得た時期を追跡できます。
 
-#### \_mint 関数と\_burn 関数 \{#\_mint-and-\_burn}
+#### \_mint 関数と\_burn 関数 {#\_mint-and-\_burn}
 
 この 2 つの関数(`_mint`と`_burn`)は、トークンの総供給量を変更します。 これらは internal であり、このコントラクト内にこれらを呼び出す関数はありません。そのため、コントラクトを継承し、新しいトークンのミントや既存のトークンのバーンを実行する条件を決定する独自のロジックを追加する場合にのみ役立ちます。
 
@@ -706,7 +706,7 @@ OpenZeppelin ERC-20 のコードはすでに監査を受けており、安全で
 
 `_burn`関数は、方向が逆であることを除き`_mint`とほぼ同じです。
 
-#### \_approve 関数 \{#\_approve}
+#### \_approve 関数 {#\_approve}
 
 これは、実際の割当量(allowance)を指定する関数です。 所有者は自身の現在の残高よりも高い割当量を指定できることに注意してください。 残高は転送時にチェックされるため、割当量の作成時の残高と異なっていても問題ありません。
 
@@ -741,7 +741,7 @@ OpenZeppelin ERC-20 のコードはすでに監査を受けており、安全で
 
 ```
 
-### 小数変数の変更 \{#modify-the-decimals-variable}
+### 小数変数の変更 {#modify-the-decimals-variable}
 
 ```solidity
 
@@ -760,7 +760,7 @@ OpenZeppelin ERC-20 のコードはすでに監査を受けており、安全で
 
 この関数は、`_decimals`変数を変更します。`_decimals`変数は、量(金額)の解釈方法をユーザーインターフェースに伝えるのに使用されます。 コンストラクタから呼び出される必要があります。 その後のどの時点においても、この関数を呼び出すと不正になります。アプリケーションは、このような処理をするようには設計されていません。
 
-### フック \{#hooks}
+### フック {#hooks}
 
 ```solidity
 
@@ -784,7 +784,7 @@ OpenZeppelin ERC-20 のコードはすでに監査を受けており、安全で
 
 このフック関数は、転送中に呼び出されます。 空になっていますが、何かを実行するのにこの関数が必要な場合は、オーバーライドしてください。
 
-# まとめ \{#conclusion}
+# まとめ {#conclusion}
 
 確認のため、このコントラクトの最も重要な点を以下にまとめています(個人的な意見のため、他者にとって重要な点とは異なる場合があります) 。
 

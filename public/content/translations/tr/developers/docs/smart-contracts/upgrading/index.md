@@ -10,11 +10,11 @@ Değişmezlik, akıllı sözleşmelerin güvensizliği, merkeziyestizliği ve g�
 
 Ancak akıllı sözleşmeleri geliştirmeye yönelik artan araştırmalar, birkaç yükseltme modelinin kullanılmaya başlamasına neden olmuştur. Bu yükseltme modelleri geliştiricilere, (değişmezliği korurken) iş mantığını farklı sözleşmelere yerleştirerek akıllı sözleşmeleri yükseltme olanağı verir.
 
-## Ön koşullar \{#prerequisites}
+## Ön koşullar {#prerequisites}
 
 [Akıllı sözleşmelere](/developers/docs/smart-contracts/), [akıllı sözleşme anatomisine](/developers/docs/smart-contracts/anatomy/) ve [Ethereum Sanal Makinesi'ne (EVM)](/developers/docs/evm/) tam anlamıyla hakim olmalısınız. Bu kılavuz aynı zamanda, okuyucuların akıllı sözleşmeleri programlama konusunu kavramış durumda olduğunu varsayar.
 
-## Akıllı sözleşme yükseltmesi nedir? \{#what-is-a-smart-contract-upgrade}
+## Akıllı sözleşme yükseltmesi nedir? {#what-is-a-smart-contract-upgrade}
 
 Akıllı sözleşme yükseltmesi, akıllı sözleşmenin iş mantığını değiştirirken sözleşmenin durumunu da korumayı içerir. Özellikle akıllı sözleşmeler kapsamında, yükseltilebilirlik ile değişebilirliğin farklı şeyler olduğuna açıklık getirmek önemlidir.
 
@@ -32,7 +32,7 @@ Bu, aşağıdaki yöntemlerle yapılabilir:
 
 5. Elmas modelini kullanarak vekil sözleşmeden gelen fonksiyon çağrılarını bir mantık sözleşmelerine yönlendirmek.
 
-### Yükseltme mekanizması 1: Sözleşme taşıma \{#contract-migration}
+### Yükseltme mekanizması 1: Sözleşme taşıma {#contract-migration}
 
 Sözleşme taşıma, aynı yazılımın eşsiz durumlarını oluşturma ve yönetme fikri anlamına gelen sürüm belirleme temelinde çalışır. Sözleşme taşıma, mevcut bir akıllı sözleşmenin yeni bir örneğinin dağıtılması ve depolama ile bakiyelerin yeni sözleşmeye transferini içerir.
 
@@ -44,7 +44,7 @@ Sözleşme taşıma, akıllı sözleşmeleri kullanıcı etkileşimlerini kesint
 
 [Sözleşme taşıma hakkında daha fazla bilgi.](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/)
 
-### Yükseltme mekanizması 2: Veri ayırma \{#data-separation}
+### Yükseltme mekanizması 2: Veri ayırma {#data-separation}
 
 Akıllı sözleşmeleri yükseltmenin bir diğer yöntemi, iş mantığı ile veri depolamayı farklı sözleşmelere ayırmaktır. Bunun anlamı, veriler depolama sözleşmesinde depolanırken kullanıcıların mantık sözleşmesi ile etkileşime girmesidir.
 
@@ -58,7 +58,7 @@ Bu yükseltme yönteminin kullanılması, depolama sözleşmesinde mantık sözl
 
 Veri ayırma modelini uygulamak, sözleşme taşınması ile karşılaştırıldığında tartışmasız daha kolaydır. Ancak, akıllı sözleşmeleri kötü niyetli yükseltmelerden korumak için birden çok sözleşmeyi yönetmeniz ve karmaşık yetkilendirme düzenlemeleri uygulamanız gerekir.
 
-### Yükseltme mekanizması 3: Vekil modeller \{#proxy-patterns}
+### Yükseltme mekanizması 3: Vekil modeller {#proxy-patterns}
 
 Araştırma modeli aynı zamanda, iş mantığını ve veriyi ayrı sözleşmelerde tutmak için veri ayırmayı kullanır. Bununla beraber bir vekil modelinde, depolama sözleşmesi (vekil olarak adlandırılır) kod yürütme sırasında mantık sözleşmesini çağırır. Bu, mantık sözleşmesinin depolama sözleşmesini çağırdığı veri ayırma yönteminin tersidir.
 
@@ -88,7 +88,7 @@ Vekil modeller, sözleşme taşımayla ilgili zorlukları ortadan kaldırmasınd
 
 [Vekil modeller hakkında daha fazla bilgi](https://blog.openzeppelin.com/proxy-patterns/).
 
-### Yükseltme mekanizması 4: Strateji modeli \{#strategy-pattern}
+### Yükseltme mekanizması 4: Strateji modeli {#strategy-pattern}
 
 Bu teknik, belirli özellikleri uygulamak için diğer programlarla arayüz oluşturan yazılım programları oluşturmayı teşvik eden [strateji modelinden](https://en.wikipedia.org/wiki/Strategy_pattern) etkilenmiştir. Strateji modelini Ethereum'u geliştirmek için kullanmak, diğer sözleşmelerden fonksiyon çağıran bir akıllı sözleşme oluşturmak anlamına gelir.
 
@@ -100,7 +100,7 @@ Strateji modeli, daha önce tartışılan vekil model ile benzerlik taşısa da 
 
 Ana dezavantajı, bu modelin çoğunlukla küçük yükseltmeleri devreye almak açısından kullanışlı olmasıdır. Ayrıca, ana sözleşmenin güvenliği tehlike altındaysa (örneğin, saldırı yoluyla) bu yükseltme yöntemini kullanamazsınız.
 
-### Yükseltme mekanizması 5: Elmas modeli \{#diamond-pattern}
+### Yükseltme mekanizması 5: Elmas modeli {#diamond-pattern}
 
 Elmas modeli, vekil modelde yapılan bir iyileştirme olarak kabul edilir. Elmas modelleri, elmas vekil sözleşmesi, fonksiyon çağrılarını birden fazla mantık sözleşmesine iletebildiği için vekil modellerden farklıdır.
 
@@ -118,7 +118,7 @@ Elmas yükseltmesi modelinin, geleneksel vekil yükseltme modellerine göre baz�
 
 [Elmas modeli hakkında daha fazla bilgi](https://eip2535diamonds.substack.com/p/introduction-to-the-diamond-standard?s=w).
 
-## Akıllı sözleşmeleri yükseltmenin artıları ve eksileri \{#pros-and-cons-of-upgrading-smart-contracts}
+## Akıllı sözleşmeleri yükseltmenin artıları ve eksileri {#pros-and-cons-of-upgrading-smart-contracts}
 
 | Artıları                                                                                                                                                      | Eksileri                                                                                                                                                      |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -128,7 +128,7 @@ Elmas yükseltmesi modelinin, geleneksel vekil yükseltme modellerine göre baz�
 | Akıllı sözleşme yükseltmeleri, geliştiricilere farklı özellikleri denemek ve zaman içinde merkeziyetsiz uygulamaları geliştirmek için daha fazla alan sağlar. | Akıllı sözleşmeleri yükseltme fırsatı, geliştiricilerin projeleri geliştirme aşamasında yeterli önlem almadan daha hızlı başlatmalarına teşvik edebilir.      |
 |                                                                                                                                                               | Akıllı sözleşmelerde güvensiz erişim kontrolü veya merkezileşme, kötü niyetli kişilerin yetkisiz yükseltmeler gerçekleştirmesini daha kolay hale getirebilir. |
 
-## Akıllı sözleşmeleri yükseltirken dikkat edilecek hususlar \{#considerations-for-upgrading-smart-contracts}
+## Akıllı sözleşmeleri yükseltirken dikkat edilecek hususlar {#considerations-for-upgrading-smart-contracts}
 
 1. Özellikle vekil modeller, strateji modelleri ya da veri ayırma kullanıyorsanız, yetkisiz akıllı sözleşme güncellemelerini önlemek için güvenli erişim kontrolü/yetkilendirme mekanizmalarını kullanın. Buna örnek olarak, yükseltme işlevinin erişimini, sadece sözleşme sahibinin onu çağırmasına izin verecek şekilde kısıtlamak verilebilir.
 
@@ -142,21 +142,21 @@ Elmas yükseltmesi modelinin, geleneksel vekil yükseltme modellerine göre baz�
 
 Zaman kilitleri, önerilen bir değişikliğe (örn. mantık yükseltmesi ya da yeni ücret planları) katılmayan kullanıcılara sistemden çıkmaları için biraz zaman tanır. Zaman kilitleri olmadığında kullanıcılar, geliştiricilerin önceden haber vermeden akıllı bir sözleşmede keyfi değişiklikler yapmayacağına güvenmek zorunda kalır. Buradaki dezavantaj, zaman kilitlerinin, güvenlik açıklarını hızlıca onarma yeterliliğini kısıtlamasıdır.
 
-## Kaynaklar \{#resources}
+## Kaynaklar {#resources}
 
 **OpenZeppelin Yükseltme Eklentileri - _Yükseltilebilir akıllı sözleşmelerin dağıtımını ve güvence altına alınmasını sağlayan bir araç paketi._**
 
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-upgrades)
 - [Dokümanlar](https://docs.openzeppelin.com/upgrades)
 
-## Sunumlar \{#tutorials}
+## Sunumlar {#tutorials}
 
 - [Akıllı Sözleşmelerinizi Yükseltme | YouTube Öğreticisi](https://www.youtube.com/watch?v=bdXJmWajZRY), Patrick Collins
 - [Ethereum Akıllı Sözleşme Taşıma Öğreticisi](https://medium.com/coinmonks/ethereum-smart-contract-migration-13f6f12539bd), Austin Griffith
 - [UUPS vekil modelini kullanarak akıllı sözleşmeleri yükseltme](https://blog.logrocket.com/author/praneshas/), Pranesh A.S
 - [Web3 Öğreticisi: OpenZeppelin kullanarak yükseltilebilir akıllı sözleşme (vekil) yazın](https://dev.to/yakult/tutorial-write-upgradeable-smart-contract-proxy-contract-with-openzeppelin-1916), fangjun.eth
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Akıllı Sözleşme Yükseltmelerinin Durumu](https://blog.openzeppelin.com/the-state-of-smart-contract-upgrades/), Santiago Palladino
 - [Solidity akıllı sözleşmelerini yükseltmenin çeşitli yolları](https://cryptomarketpool.com/multiple-ways-to-upgrade-a-solidity-smart-contract/) - Crypto Market Pool blog

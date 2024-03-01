@@ -12,11 +12,11 @@ Tuttavia, quando Ethereum è passato dal [proof-of-work](/developers/docs/consen
 
 Questo nuovo tipo di chiave utilizza lo [schema di firma di **Boneh-Lyn-Shacham (BLS)**](https://wikipedia.org/wiki/BLS_digital_signature). BLS consente un'aggregazione molto efficiente delle firme, ma consente anche di sottoporre a ingegneria inversa le chiavi dei singoli validatori aggregati ed è ideale per gestire le azioni tra validatori.
 
-## I due tipi di chiavi del validatore \{#two-types-of-keys}
+## I due tipi di chiavi del validatore {#two-types-of-keys}
 
 Prima del passaggio al proof-of-stake, gli utenti di Ethereum avevano soltanto una chiave privata basata sulla curva ellittica per accedere ai propri fondi. Con l'introduzione del proof-of-stake, gli utenti che desideravano essere staker in autonomia necessitavano anche di una **chiave del validatore** e di una **chiave di prelievo**.
 
-### La chiave del validatore \{#validator-key}
+### La chiave del validatore {#validator-key}
 
 La chiave di firma del validatore consiste in due elementi:
 
@@ -35,13 +35,13 @@ Questa flessibilità ha il vantaggio di spostare molto rapidamente le chiavi di 
 
 La **chiave pubblica del validatore** è inclusa nei dati della transazione quando un utente deposita gli ETH al contratto di deposito di staking. Questi sono noti come _dati di deposito_ e consentono a Ethereum di identificare il validatore.
 
-### Credenziali di prelievo \{#withdrawal-credentials}
+### Credenziali di prelievo {#withdrawal-credentials}
 
 Ogni validatore ha una proprietà nota come _credenziali di prelievo_. Questo campo di 32 byte inizia con uno `0x00`, che rappresenta le credenziali di prelievo BLS, o uno `0x01`, che rappresenta le credenziali che puntano a un indirizzo di esecuzione.
 
 I validatori con le chiavi BLS `0x00` devono aggiornare tali credenziali affinché puntino a un indirizzo di esecuzione per poter attivare i pagamenti del saldo in eccesso o il prelievo completo dallo staking. Ciò può essere fatto fornendo un indirizzo di esecuzione nei dati di deposito durante la generazione iniziale della chiave, _O_ utilizzando la chiave di prelievo in un momento successivo per firmare e trasmettere un messaggio `BLSToExecutionChange`.
 
-### La chiave di prelievo \{#withdrawal-key}
+### La chiave di prelievo {#withdrawal-key}
 
 La chiave di prelievo sarà necessaria per aggiornare le credenziali di prelievo affinché puntino a un indirizzo di esecuzione, se non impostato durante il deposito iniziale. Questo consentirà di iniziare a elaborare i pagamenti del saldo in eccesso, nonché di prelevare interamente i propri ETH in staking.
 
@@ -56,7 +56,7 @@ Separare le chiavi del validatore dalle chiavi del conto di Ethereum consente a 
 
 ![schema della chiave del validatore](validator-key-schematic.png)
 
-## Derivare le chiavi da una frase di seed \{#deriving-keys-from-seed}
+## Derivare le chiavi da una frase di seed {#deriving-keys-from-seed}
 
 Se ogni 32 ETH in staking richiedessero una nuova serie di 2 chiavi completamente indipendenti, la gestione delle chiavi diverrebbe rapidamente scomoda, specialmente per gli utenti che eseguono più validatori. Invece, più chiavi del validatore sono derivabili da un'unica frase segreta comune e memorizzare tale singola frase segreta consente l'accesso a più chiavi del validatore.
 
@@ -90,7 +90,7 @@ Ogni ramo è separato da uno `/`, quindi `m/2` significa iniziare con la chiave 
 
 ![logica della chiave del validatore](multiple-keys.png)
 
-## Lettura consigliate \{#further-reading}
+## Lettura consigliate {#further-reading}
 
 - [Post del blog della Ethereum Foundation di Carl Beekhuizen](https://blog.ethereum.org/2020/05/21/keys/)
 - [Generazione delle chiavi BLS12-381 dell'EIP-2333](https://eips.ethereum.org/EIPS/eip-2333)

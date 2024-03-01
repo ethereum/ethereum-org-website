@@ -18,7 +18,7 @@ sourceUrl: https://soliditydeveloper.com/thegraph
 
 这次我们将仔细研究 The Graph，它在去年基本上成为了开发去中心化应用程序的标准堆栈的一部分。 让我们先看看我们会如何用传统的方式做事…
 
-## 没有 The Graph... \{#without-the-graph}
+## 没有 The Graph... {#without-the-graph}
 
 为了说明起见，让我们举一个简单的例子。 我们都喜欢游戏，所以想象一个用户下注的简单游戏：
 
@@ -83,7 +83,7 @@ GameContract.events.BetPlaced({
 
 现在让我们看看更好的解决方案。
 
-## 让我向您介绍一下 GraphQL \{#let-me-introduce-to-you-graphql}
+## 让我向您介绍一下 GraphQL {#let-me-introduce-to-you-graphql}
 
 首先我们来谈谈 GraphQL，它最初是由 Facebook 设计和实现的。 您可能熟悉传统的 Rest API 模型。 现在设想一下，您可以编写一个查询来精确查找您想要的数据：
 
@@ -95,7 +95,7 @@ GameContract.events.BetPlaced({
 
 现在有了这些知识，让我们最终进入区块链空间和 The Graph。
 
-## 什么是 The Graph？ \{#what-is-the-graph}
+## 什么是 The Graph？ {#what-is-the-graph}
 
 区块链是一个去中心化的数据库，但与通常情况不同的是，我们没有适用于这个数据库的查询语言。 检索数据的解决方案是痛苦的，或者是完全不可能的。 The Graph 是一种用于为区块链数据建立索引并进行查询的去中心化协议。 您可能已经猜到了，它使用 GraphQL 作为查询语言。
 
@@ -103,7 +103,7 @@ GameContract.events.BetPlaced({
 
 示例总是最容易理解的，所以让我们使用 The Graph 作为 GameContract 示例。
 
-## 如何创建子图 \{#how-to-create-a-subgraph}
+## 如何创建子图 {#how-to-create-a-subgraph}
 
 有关如何建立数据索引的定义称为子图. 它需要三个组件：
 
@@ -111,7 +111,7 @@ GameContract.events.BetPlaced({
 2. 模式 (`schema.graphql`)
 3. 映射 (`mapping.ts`)
 
-### 清单 (`subgraph.yaml`) \{#manifest}
+### 清单 (`subgraph.yaml`) {#manifest}
 
 清单是我们的配置文件，定义了：
 
@@ -155,7 +155,7 @@ dataSources:
       file: ./src/mapping.ts
 ```
 
-### 模式 (`schema.graphql`) \{#schema}
+### 模式 (`schema.graphql`) {#schema}
 
 模式是 GraphQL 数据定义。 它将允许您定义存在哪些实体及其类型。 The Graph 支持的类型包括：
 
@@ -186,7 +186,7 @@ type Player @entity {
 }
 ```
 
-### 映射 (`mapping.ts`) \{#mapping}
+### 映射 (`mapping.ts`) {#mapping}
 
 The Graph 中的映射文件定义了将传入事件转换为实体的函数。 它是用 AssemblyScript（TypeScript 的子集）编写的。 这意味着它可以编译成 WASM (WebAssembly)，以更高效和可移植的方式执行映射。
 
@@ -238,7 +238,7 @@ export function handleNewBet(event: PlacedBet): void {
 }
 ```
 
-## 在前端使用它 \{#using-it-in-the-frontend}
+## 在前端使用它 {#using-it-in-the-frontend}
 
 使用 Apollo Boost 之类的工具，你可以轻松将 The Graph 集成到你的 React 去中心化应用程序（或 Apollo-Vue）中。 特别是当使用 React hooks 和 Apollo 这样的工具时，获取数据与在组件中写入单个 GraphQl 查询一样简单。 一个典型的设置可能如下所示：
 
@@ -289,19 +289,19 @@ React.useEffect(() => {
 
 但我们缺少了这个拼图的最后一块，那就是服务器。 您可以自行运行一个服务器或使用托管服务。
 
-## The Graph 服务器 \{#the-graph-server}
+## The Graph 服务器 {#the-graph-server}
 
-### Graph Explorer：托管服务 \{#graph-explorer-the-hosted-service}
+### Graph Explorer：托管服务 {#graph-explorer-the-hosted-service}
 
 最简单的方法是使用托管服务。 按照[此处](https://thegraph.com/docs/deploy-a-subgraph)的说明来部署子图。 许多项目，您实际上可以在浏览器中找到现有的子图：https://thegraph.com/explorer/。
 
 ![The Graph 浏览器](./thegraph-explorer.png)
 
-### 运行您自己的节点 \{#running-your-own-node}
+### 运行您自己的节点 {#running-your-own-node}
 
 或者，您可以运行自己的节点：https://github.com/graphprotocol/graph-node#quick-start。 这样做的一个原因可能是使用托管服务不支持的网络。 目前支持的有主网、Kovan、Rinkeby、Ropsten、Goerli、PoA-Core、xDAI 和 Sokol。
 
-## 去中心化的未来 \{#the-decentralized-future}
+## 去中心化的未来 {#the-decentralized-future}
 
 GraphQL 也支持新传入事件的流。 The Graph 还没有完全支持这一点，但很快就会发布。
 

@@ -10,7 +10,7 @@ skill: advanced
 published: 2021-12-30
 ---
 
-## Introduzione \{#introduction}
+## Introduzione {#introduction}
 
 _Non ci sono segreti sulla blockchain_: tutto ciò che si verifica è coerente, verificabile e disponibile pubblicamente. Idealmente, il codice sorgente dei [contratti dovrebbe essere pubblicato e verificato su Etherscan](https://etherscan.io/address/0xb8901acb165ed027e32754e0ffe830802919727f#code). Però [non sempre è così](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f#code). In questo articolo imparerai come decompilare i contratti guardando un contratto privo del codice sorgente, [`0x2510c039cc3b061d79e564b38836da87e31b342f`](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f).
 
@@ -18,7 +18,7 @@ Esistono dei decompilatori, ma non producono sempre [risultati utilizzabili](htt
 
 Per poter comprendere questo articolo dovresti già conoscere le basi dell'EVM ed avere una certa familiarità con l'assembler dell'EVM. [Puoi leggere articoli su questi argomenti qui](https://medium.com/mycrypto/the-ethereum-virtual-machine-how-does-it-work-9abac2b7c9e).
 
-## Preparare il codice eseguibile \{#prepare-the-executable-code}
+## Preparare il codice eseguibile {#prepare-the-executable-code}
 
 Puoi ottenere gli opcode andando su Etherscan per il contratto, facendo clic sulla scheda **Contract** e poi **Switch to Opcodes View**. Ottieni una vista composta da un opcode per riga.
 
@@ -42,7 +42,7 @@ In `A1` inserisci il primo scostamento: zero. Poi, in `A2`, inserisci questa fun
 
 Ci serve che questa funzione ci restituisca il valore esadecimale perché i valori su cui è stato eseguito il push prima dei salti (`JUMP` e `JUMPI`) ci vengono dati in esadecimali.
 
-## Il Punto d'accesso (0x00) \{#the-entry-point-0x00}
+## Il Punto d'accesso (0x00) {#the-entry-point-0x00}
 
 I contratti sono sempre eseguiti dal primo byte. Questa è la parte iniziale del codice:
 
@@ -64,7 +64,7 @@ Questo codice fa due cose:
 
 ![Diagramma di flusso per questa parte](flowchart-entry.png)
 
-### Il Gestore a 0x5E (per i dati della chiamata non ABI) \{#the-handler-at-0x5e-for-non-abi-call-data}
+### Il Gestore a 0x5E (per i dati della chiamata non ABI) {#the-handler-at-0x5e-for-non-abi-call-data}
 
 | Offset | Opcode       |
 | -----: | ------------ |
@@ -158,7 +158,7 @@ Per riassumere tutto, ecco un diagramma di flusso per il codice iniziale.
 
 ![Diagramma di flusso dei punti d'accesso](flowchart-entry.png)
 
-## Il Gestore a 0x7C \{#the-handler-at-0x7c}
+## Il Gestore a 0x7C {#the-handler-at-0x7c}
 
 Volutamente ho omesso di inserire nell'intestazione cosa fa questo gestore. Il punto non è insegnarti come funziona questo contratto specifico, ma come decompilare i contratti. Imparerai cosa faccia come ho fatto io, seguendo il codice.
 
@@ -250,7 +250,7 @@ Qui copiamo tutti i dati restituiti al buffer di memoria partendo a 0x80.
 
 Quindi, dopo la chiamata, copiamo i dati restituiti al buffer 0x80 - 0x80+RETURNDATASIZE, e se la chiamata è andata a buon fine `RETURN` esattamente con quel buffer.
 
-### DELEGATECALL fallita \{#delegatecall-failed}
+### DELEGATECALL fallita {#delegatecall-failed}
 
 Se arriviamo qui, a 0xC0, significa che il contratto che abbiamo chiamato è annullato. Poiché siamo solo un proxy per quel contratto, vogliamo restituire gli stessi dati e annullare a nostra volta.
 
@@ -265,7 +265,7 @@ Quindi noi `REVERT` con lo stesso buffer usato prima per `RETURN`: 0x80 - 0x80+R
 
 ![Chiamata al diagramma di flusso del proxy](flowchart-proxy.png)
 
-## Chiamate ABI \{#abi-calls}
+## Chiamate ABI {#abi-calls}
 
 Se la dimensione dei dati della chiamata è di quattro byte o superiore, potrebbe essere una chiamata ABI valida.
 
@@ -300,7 +300,7 @@ Se non è trovata alcuna corrispondenza, il codice salta al [gestore del proxy a
 
 ![Diagramma di flusso delle chiamate ABI](flowchart-abi.png)
 
-## splitter() \{#splitter}
+## splitter() {#splitter}
 
 | Offset | Opcode       | Stack                         |
 | -----: | ------------ | ----------------------------- |
@@ -340,7 +340,7 @@ E ora 0x80 contiene l'indirizzo del proxy
 |    134 | PUSH2 0x00e4 | 0xE4 0xA0 |
 |    137 | JUMP         | 0xA0      |
 
-### Il Codice E4 \{#the-e4-code}
+### Il Codice E4 {#the-e4-code}
 
 Questa è la prima volta che vediamo queste righe, ma sono condivise con altri metodi (vedi di seguito). Quindi chiameremo il valore nello stack X e ricorderemo semplicemente che in `splitter()` il valore di questa X è 0xA0.
 
@@ -359,7 +359,7 @@ Quindi questo codice riceve un puntatore di memoria nello stack (X) e fa sì che
 
 Nel caso di `splitter()`, ciò restituisce l'indirizzo per cui siamo un proxy. `RETURN` restituisce il buffer in 0x80-0x9F, ovvero dove abbiamo scritto questi dati (offset 0x130 sopra).
 
-## currentWindow() \{#currentwindow}
+## currentWindow() {#currentwindow}
 
 Il codice negli offset 0x158-0x163 è identico a quello che abbiamo visto in 0x103-0x10E in `splitter()` (diverso dalla destinazione `JUMPI`), quindi sappiamo che neanche `currentWindow()` è `pagabile`.
 
@@ -373,7 +373,7 @@ Il codice negli offset 0x158-0x163 è identico a quello che abbiamo visto in 0x1
 |    16C | DUP2         | 0xDA Storage[1] 0xDA |
 |    16D | JUMP         | Storage[1] 0xDA      |
 
-### Il codice DA \{#the-da-code}
+### Il codice DA {#the-da-code}
 
 Questo codice è condiviso anche con altri metodi. Quindi chiameremo il valore nello stack Y e ricorderemo semplicemente che in `currentWindow()` il valore di questa Y è Storage[1].
 
@@ -395,7 +395,7 @@ Scrivi Y a 0x80-0x9F.
 
 E il resto è già spiegato [sopra](#the-e4-code). Quindi salta a 0xDA, scrive la cima dello stack (Y) a 0x80-0x9F e restituisce quel valore. Nel caso di `currentWindow()`, restituisce Storage[1].
 
-## merkleRoot() \{#merkleroot}
+## merkleRoot() {#merkleroot}
 
 Il codice negli offset 0xED-0xF8 è identico a quello che abbiamo visto in 0x103-0x10E in `splitter()` (diverso dalla destinazione `JUMPI`), quindi sappiamo che neanche `merkleRoot()` è `pagabile`.
 
@@ -411,7 +411,7 @@ Il codice negli offset 0xED-0xF8 è identico a quello che abbiamo visto in 0x103
 
 Cosa succede dopo il salto, [lo abbiamo già capito](#the-da-code). Quindi `merkleRoot()` restituisce Storage[0].
 
-## 0x81e580d3 \{#0x81e580d3}
+## 0x81e580d3 {#0x81e580d3}
 
 Il codice negli offset 0x138-0x143 è identico a quello che abbiamo visto in 0x103-0x10E in `splitter()` (diverso dalla destinazione `JUMPI`), quindi sappiamo che neanche questa funzione è `pagabile`.
 
@@ -515,7 +515,7 @@ Quindi c'è una tabella di ricerca in memoria che inizia allo SHA3 di 0x000...00
 
 Sappiamo già cosa faccia [il codice all'offset 0xDA](#the-da-code), restituisce il valore massimo dello stack al chiamante. Quindi questa funzione restituisce il valore dalla tabella di ricerca al chiamante.
 
-## 0x1f135823 \{#0x1f135823}
+## 0x1f135823 {#0x1f135823}
 
 Il codice negli offset 0xC4-0xCF è identico a quello che abbiamo visto in 0x103-0x10E in `splitter()` (diverso dalla destinazione `JUMPI`), quindi sappiamo che neanche questa funzione è `pagabile`.
 
@@ -531,7 +531,7 @@ Il codice negli offset 0xC4-0xCF è identico a quello che abbiamo visto in 0x103
 
 Sappiamo già cosa faccia [il codice all'offset 0xDA](#the-da-code), restituisce il valore massimo dello stack al chiamante. Quindi questa funzione restituisce `Value*`.
 
-### Riepilogo del metodo \{#method-summary}
+### Riepilogo del metodo {#method-summary}
 
 Senti di comprendere il contratto a questo punto? Io no. Finora abbiamo questi metodi:
 
@@ -546,7 +546,7 @@ Senti di comprendere il contratto a questo punto? Io no. Finora abbiamo questi m
 
 Ma sappiamo che ogni altra funzionalità è fornita dal contratto in Storage[3]. Forse se sapessimo cos'è quel contratto ci darebbe un indizio. Fortunatamente questa è la blockchain e tutto è noto, almeno in teoria. Non abbiamo visto alcun metodo che imposti Storage[3], quindi dev'essere stato impostato dal costruttore.
 
-## Il costruttore \{#the-constructor}
+## Il costruttore {#the-constructor}
 
 Quando [guardiamo un contratto](https://etherscan.io/address/0x2510c039cc3b061d79e564b38836da87e31b342f) possiamo anche vedere la transazione che lo ha creato.
 
@@ -554,7 +554,7 @@ Quando [guardiamo un contratto](https://etherscan.io/address/0x2510c039cc3b061d7
 
 Facendo clic su quella transazione e poi sulla scheda **State**, possiamo visualizzare i valori iniziali dei parametri. Nello specifico, possiamo vedere che Storage[3] contiene [0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761](https://etherscan.io/address/0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761). Quel contratto deve contenere la funzionalità mancante. Possiamo comprenderlo usando gli stessi strumenti usati per il contratto che stiamo esaminando.
 
-## Il contratto proxy \{#the-proxy-contract}
+## Il contratto proxy {#the-proxy-contract}
 
 Usando le stesse tecniche usate per il suddetto contratto originale, possiamo vedere che il contratto si annulla se:
 
@@ -580,7 +580,7 @@ Possiamo ignorare gli ultimi quattro metodi perché non ci arriveremo mai. Le lo
 
 Uno dei metodi rimanenti è `claim(<params>)` e un altro è `isClaimed(<params>)`, quindi sembra un contratto airdrop. Invece di analizzare il resto opcode per opcode, possiamo [provare il decompilatore](https://etherscan.io/bytecode-decompiler?a=0x2f81e57ff4f4d83b40a9f719fd892d8e806e0761), che produce risultati utilizzabili per tre funzioni da questo contratto. La decompilazione degli altri viene lasciato come esercizio per il lettore.
 
-### scaleAmountByPercentage \{#scaleamountbypercentage}
+### scaleAmountByPercentage {#scaleamountbypercentage}
 
 Questo è ciò che il decompilatore ci restituisce per questa funzione:
 
@@ -598,7 +598,7 @@ L'istruzione `if` sembra verificare che `_param1` non sia zero e che `_param1 * 
 
 Infine, la funzione restituisce un valore in scala.
 
-### claim \{#claim}
+### claim {#claim}
 
 Il codice creato dal decompilatore è complesso, e non tutto è rilevante per noi. Ne salterò una parte per concentrarci sulle righe che ritengo forniscano informazioni utili
 
@@ -673,7 +673,7 @@ Alla fine della funzione vediamo che viene generata una voce del registro. [Guar
 
 ![Una transazione di rivendicazione](claim-tx.png)
 
-### 1e7df9d3 \{#1e7df9d3}
+### 1e7df9d3 {#1e7df9d3}
 
 Questa funzione è molto simile alla suddetta [`claim`](#claim). Verifica anche una prova di Merkle, tenta di trasferire ETH al primo e produce lo stesso tipo di voce del registro.
 
@@ -739,6 +739,6 @@ La differenza principale è che il primo parametro, la finestra per prelevare, n
 
 Quindi, sembra una variante di `claim` che rivendica tutte le finestre.
 
-## Conclusione \{#conclusion}
+## Conclusione {#conclusion}
 
 A questo punto dovresti sapere come comprendere i contratti il cui codice sorgente non è disponibile usando gli opcode o (quando funziona) il decompilatore. Come è evidente dalla lunghezza di questo articolo, decompilare un contratto non è banale, ma in un sistema in cui la sicurezza è essenziale, poter verificare che i contratti operino come promesso è un'abilità importante.

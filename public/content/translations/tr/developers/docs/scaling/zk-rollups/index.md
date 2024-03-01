@@ -6,11 +6,11 @@ lang: tr
 
 Sıfır-Bilgi Toplamaları (ZK-toplamaları), hesaplamaları ve durum depolamalarını zincir dışına taşıyarak Ethereum Ana Ağı'ndaki verimi artıran katman 2 [ölçeklendirme çözümleridir](/developers/docs/scaling/). ZK-toplamaları, bir gruptaki binlerce işlemi gerçekleştirip sonrasında asgari büyüklükte bir özetini Ana Ağ'a aktarabilir. Bu özet veriler, Ethereum durumunda yapılması gereken değişiklikleri ve bu değişikliklerin doğru olduğuna dair bazı kriptografik kanıtları tanımlar.
 
-## Ön Koşullar \{#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 Bu sayfayı anlamak için [Ethereum ölçeklendirme](/developers/docs/scaling/) ve [katman 2](/layer-2) yazılarını okumalısın.
 
-## Sıfır-Bilgi Toplamaları nedir? \{#what-are-zk-rollups}
+## Sıfır-Bilgi Toplamaları nedir? {#what-are-zk-rollups}
 
 **Sıfır-bilgi toplamaları (SB-toplamaları)** zincir dışında gerçekleştirilen, bir grubun içine sarmalamanmış (veya 'toplanmış') işlemlerdir. Zincir dışı hesaplamalar, blokzincire gönderilmesi gereken veri miktarını azaltır. SB-toplamaları tüm işlemleri ayrı ayrı göndermek yerine bütün işlemleri temsil eden bir özet yığını gönderir. Ayrıca değişikliklerin gerçekliğini kanıtlayan [doğruluk kanıtları](/glossary/#validity-proof) da üretirler. Doğruluk kanıtı, Ethereum'un durumunda önerilen değişikliklerin tüm gruplanmış işlemlerin yürütülmesinin nihai sonucu olduğunu kriptografik kesinlikle gösterir.
 
@@ -20,7 +20,7 @@ Fonları ZK-toplamasından Ethereum'a taşırken gecikme olmaz; çünkü çıkı
 
 ZK-toplamaları, işlemleri Ethereum üzerine `calldata` olarak yazar. `calldata`, akıllı sözleşme fonksiyonlarına yapılan harici çağrılara dahil edilen verilerin depolandığı yerdir. `calldata` içindeki bilgiler, blokzincirde yayımlanır ve herkesin toplamanın durumunu bağımsız olarak yeniden yapılandırmasına olanak tanır. ZK-toplamaları işlem verilerini azaltmak için sıkıştırma teknikleri kullanır. Örneğin hesaplar adres yerine bir indeksle temsil edilir ve bu işlem 28 baytlık veri tasarrufu sağlar. Zincir üstünde veri yayımlama, toplamalar için çok masraflıdır. Bu sebeple verilerin sıkıştırılması kullanıcı ücretlerini azaltabilir.
 
-## ZK-toplamaları Ethereum ile nasıl etkileşime girer? \{#zk-rollups-and-ethereum}
+## ZK-toplamaları Ethereum ile nasıl etkileşime girer? {#zk-rollups-and-ethereum}
 
 Bir ZK-toplama zinciri, Ethereum blokzincirinin üzerinde çalışan ve zincir üstünde Ethereum akıllı sözleşmeleri tarafından yönetilen zincir dışı bir protokoldür. ZK-toplamaları işlemleri Ana Ağ'ın dışında gerçekleştirir, fakat zincir dışı işlem gruplarını periyodik olarak bir zincir üstü toplama sözleşmesine işler. Bu işlem kaydı, Ethereum blokzinciri gibi değişmezdir ve ZK-toplama zincirini oluşturur.
 
@@ -34,7 +34,7 @@ ZK-toplamaları, bağımsız çalışan ancak güvenliği Ethereum'a dayanan zin
 
 ZK-toplamaları aşağıdaki hususlarda ana Ethereum protokolüne dayalıdır:
 
-### Veri uygunluğu \{#data-availability}
+### Veri uygunluğu {#data-availability}
 
 ZK-toplamaları zincir dışında gerçekleşmiş her işlemin durum verisini Ethereum'da yayımlar. Bu veriyle, birey ve şirketlerin toplamanın durumunu yeniden oluşturmaları ve zinciri kendileri doğrulamaları mümkün olur. Ethereum bu veriyi ağdaki tüm kullanıcılara `calldata` olarak ulaşılabilir kılar.
 
@@ -42,31 +42,31 @@ ZK-toplamalarının zincir üstünde çok da bir işlem verisi yayımlamalarına
 
 Zincir üstü, kullanıcıların toplamayla etkileşime geçmesi için gereklidir. Durum verisine erişim olmadan kullanıcılar hesap bakiyelerini sorgulayamaz ya da durum bilgisine (çekim işlemleri gibi) dayanan işlemleri başlatamazlar.
 
-### İşlem kesinliği \{#transaction-finality}
+### İşlem kesinliği {#transaction-finality}
 
 Ethereum ZK-toplamaları için bir uzlaşma katmanı gibi hareket eder: K2 işlemleri ancak K1 sözleşmesi doğruluk kanıtını kabul ederse kesinleşir. Bu, her işlemin Ana Ağ'da onaylanması gerektiği için kötü niyetli operatörlerin zinciri bozması (örn. toplama fonlarını çalmak) riskini ortadan kaldırır. Ayrıca Ethereum, L1'de sonlandırıldıktan sonra kullanıcı işlemlerinin geri alınamayacağını garanti eder.
 
-### Sansüre dayanıklılık \{#censorship-resistance}
+### Sansüre dayanıklılık {#censorship-resistance}
 
 Çoğu ZK-toplaması, işlemleri yürüten, grupları üreten ve blokları L1'e gönderen bir "üst düğüm" (operatör) kullanır. Bu, verimliliği sağlarken sansür riskini de artırır: kötü niyetli ZK-toplaması operatörleri, işlemlerini gruplara dahil etmeyi reddederek kullanıcıları sansürleyebilir.
 
 Bir güvenlik tedbiri olarak ZK-toplamaları, operatör tarafından sansürlendiklerini düşünen kullanıcıların işlemlerini doğrudan Ana Ağ'daki toplama sözleşmesine göndermelerini sağlar. Bu, kullanıcıların operatörün iznine ihtiyaç duymadan ZK-toplamasından Ethereum'a çıkışı zorlamalarına olanak sağlar.
 
-## ZK-toplamaları nasıl çalışır? \{#how-do-zk-rollups-work}
+## ZK-toplamaları nasıl çalışır? {#how-do-zk-rollups-work}
 
-### İşlemler \{#transactions}
+### İşlemler {#transactions}
 
 ZK-toplamasındaki kullanıcılar, işlemleri imzalar ve işleme ve sonraki gruba dahil edilmeleri için L2 operatörlerine gönderir. Bazı durumlarda operatör, sıralayıcı olarak adlandırılan merkezileşmiş bir varlıktır ve işlemleri yürütür, gruplara toplar ve L1'e gönderir. Sıralayıcı, bu sistemde L2 bloğu oluşturmaya ve ZK-toplama sözleşmesine toplama işlemleri eklemeye izinli tek varlıktır.
 
 Diğer ZK-toplamaları [hisse ispatı](/developers/docs/consensus-mechanisms/pos/) doğrulama setini kullanarak operatör rolüne dönebilir. Potansiyel operatörler, toplama sözleşmesine fon yatırır; her payın büyüklüğü, paydaşın bir sonraki toplama grubunu oluşturmak için seçilme şansını etkiler. Operatörün payı eğer kötü niyetli davranması halinde kesilebilir, bu da geçerli bloklar göndermeleri için onları teşvik eder.
 
-#### ZK-toplamaları işlem verilerini Ethereum üzerinde nasıl yayımlar? \{#how-zk-rollups-publish-transaction-data-on-ethereum}
+#### ZK-toplamaları işlem verilerini Ethereum üzerinde nasıl yayımlar? {#how-zk-rollups-publish-transaction-data-on-ethereum}
 
 Anlatıldığı üzere, işlem verileri Ethereum'da `calldata` olarak yayımlanır. `calldata`, akıllı sözleşmenin içinde bulunan, bir fonksiyona argümanlar aktarmak için kullanılan ve [belleğe](/developers/docs/smart-contracts/anatomy/#memory) benzer şekilde hareket eden bir veri alanıdır. `calldata`, Ethereum'un durumunun bir parçası olarak depolanmasa da, Ethereum zincirinin [geçmiş günlüklerinin](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs) bir parçası olarak zincirde kalıcı şekilde saklanır. `calldata`, Ethereum'un durumunu etkilemediği için zincir üstünde veri depolamanın ucuz bir yoludur.
 
 `calldata` anahtar sözcüğü, genellikle bir işlem tarafından çağrılan akıllı sözleşme yöntemini tanımlar ve yöntemin girdilerini ardışık bir bayt dizisi şeklinde tutar. ZK-toplamaları, sıkıştırılmış işlem verilerini zincir üzerinde yayımlamak için `calldata`'yı kullanır; toplama operatörü, toplama sözleşmesindeki gerekli fonksiyonu çağırarak yeni bir toplu işlem ekler ve sıkıştırılmış verileri fonksiyon argümanları olarak iletir. Bu, toplama ücretlerinin büyük bir kısmı işlem verilerini zincir üstünde depolamaya gittiğinden kullanıcılar için maliyetlerin azaltılmasına yardımcı olur.
 
-### Durum taahhütleri \{#state-commitments}
+### Durum taahhütleri {#state-commitments}
 
 L2 hesaplarını ve bakiyelerini içeren ZK-toplamasının durumu, [Merkle ağacı](/whitepaper/#merkle-trees) olarak temsil edilir. Merkle ağacının köküne ait (Merkle Kökü) kriptografik bir karma, zincir üstü sözleşmede depolanır, bu da toplama protokolünün ZK-toplamasının durumundaki değişiklikleri takip edebilmesini sağlar.
 
@@ -74,7 +74,7 @@ Toplama, yeni bir işlem grubunun yürütülmesinin ardından yeni bir duruma ge
 
 ZK-toplaması operatörü, durum köklerini hesaplamak dışında, bir gruptaki tüm işlemleri içeren ve Merkle ağacının kökü olangrup kökü de oluşturur. Yeni bir grup gönderildiğinde toplama sözleşmesi grup kökünü saklar, böylece kullanıcılar bir işlemin (örneğin, bir çekme talebi) gruba dahil edildiğini kanıtlayabilir. Kullanıcıların işlem detaylarını, grup kökünü ve dahil edilme yolunu gösteren bir [Merkle kanıtı](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) sağlamaları gerekir.
 
-### Doğruluk kanıtları \{#validity-proofs}
+### Doğruluk kanıtları {#validity-proofs}
 
 ZK-toplama operatörünün Ethereum L1 sözleşmesine gönderdiği yeni durum kökü, toplamanın durumundaki güncellemelerin sonucudur. Diyelim ki Alice, Bob'a 10 jeton gönderiyor, operatör sadece Alice'in bakiyesini 10 azaltır ve Bob'un bakiyesini 10 artırır. Operatör daha sonra güncellenmiş hesap verilerini karma hale getirir, toplamanın Merkle ağacını yeniden oluşturur ve yeni Merkle kökünü zincir üstünde sözleşmeye gönderir.
 
@@ -104,7 +104,7 @@ Doğruluk kanıtlarını kanıtlamak ve doğrulamak için gereken süreler, teme
 
 ZK-STARK'lar ayrıca kuantum bilgisayarlarına karşı güvenlidir, oysa ZK-SNARK'ların kullanıldığı Elips Eğrisi Kriptografisi'nin (ECC) kuantum bilgisayar saldırılarına karşı savunmasız olduğuna yaygın olarak inanılmaktadır. ZK-STARK'ların dezavantajı, daha büyük ispat boyutları üretmeleridir ve bu boyutları Ethereum üzerinde doğrulamak daha pahalıdır.
 
-#### Doğruluk kanıtları ZK-toplamalarında nasıl çalışır? \{#validity-proofs-in-zk-rollups}
+#### Doğruluk kanıtları ZK-toplamalarında nasıl çalışır? {#validity-proofs-in-zk-rollups}
 
 ##### Kanıt oluşturma
 
@@ -146,7 +146,7 @@ Kanıtlama devresi durum güncellemelerinin doğruluğunu onayladıktan sonra, L
 
 Bu, ispatın devreyi karşılaması (yani, geçerli kabul etmesi) durumunda, toplamanın önceki durumdan (durum öncesi kök tarafından kriptografik olarak parmak izi alınan) yeni bir duruma (durum sonrası kök tarafından kriptografik olarak parmak izi alınan) geçiş yapmasını sağlayan bir geçerli işlemler dizisinin mevcut olduğu anlamına gelir. Durum öncesi kök, toplama sözleşmesinde depolanan kökle eşleşiyorsa ve ispat geçerli ise, toplama sözleşmesi ispattan durum sonrası kökü alır ve durum ağacını, toplamanın değişen durumunu yansıtacak şekilde günceller.
 
-### Girişler ve çıkışlar \{#entries-and-exits}
+### Girişler ve çıkışlar {#entries-and-exits}
 
 Kullanıcılar, jetonları L1 zincirine dağıtılan toplamanın sözleşmesine yatırarak ZK-toplamasına girer. Bu işlem, toplama sözleşmesine sadece operatörlerin işlem gönderebilmesi nedeniyle sıraya alınır.
 
@@ -164,7 +164,7 @@ ZK-toplamadan L1'e çekim işlemi basittir. Kullanıcı, toplamadaki varlıklar�
 
 Toplama sözleşmesi işlem verilerini karma hale getirir, grup kökünün mevcut olup olmadığını kontrol eder ve ardından Merkle ispatını kullanarak işlem karmasının grup kökünün bir parçası olup olmadığını kontrol eder. Sonrasında sözleşme, çıkış işlemini yürütür ve fonları kullanıcının L1'deki seçilen adresine gönderir.
 
-## ZK-toplamaları ve EVM uyumluluğu \{#zk-rollups-and-evm-compatibility}
+## ZK-toplamaları ve EVM uyumluluğu {#zk-rollups-and-evm-compatibility}
 
 ZK-toplamaları, iyimser toplamaların aksine [Ethereum Sanal Makinesi (EVM)](/developers/docs/evm/) ile anında uyumlu değildir. Genel amaçlı EVM hesaplamalarını devrelerde kanıtlamak, (önceden açıklanan jeton transferi gibi) basit hesaplamaları kanıtlamaktan daha zordur ve daha fazla kaynak gerektirir.
 
@@ -174,7 +174,7 @@ Tıpkı EVM gibi zkEVM de bazı girdilerde hesaplama yapıldıktan sonra durumla
 
 Geliştiricilerin sıfır bilgili ispatların ölçeklenebilirlik ve güvenlik garantilerinden yararlanmalarına yardımcı olmak amacıyla EVM uyumlu ZK-toplamalarının devreye alınması beklenmektedir. Daha da önemlisi, yerel Ethereum altyapısıyla uyumluluk, geliştiricilerin tanıdık (ve sınamadan geçmiş) araçlar ve diller kullanarak ZK dostu merkeziyetsiz uygulamalar geliştirmelerine olanak tanır.
 
-## ZK-toplama ücretleri nasıl çalışır? \{#how-do-zk-rollup-fees-work}
+## ZK-toplama ücretleri nasıl çalışır? {#how-do-zk-rollup-fees-work}
 
 Kullanıcıların ZK-toplamalarında işlemler için ödedikleri ücret, Ethereum Ana Ağı'ndaki gibi gaz ücretine bağlıdır. Ancak gaz ücretleri L2'de farklı şekilde işler ve aşağıdaki maliyetlerden etkilenir:
 
@@ -188,15 +188,15 @@ Kullanıcıların ZK-toplamalarında işlemler için ödedikleri ücret, Ethereu
 
 ZK-toplamaları, işlemleri gruplamanın yanı sıra işlem verilerini sıkıştırarak da kullanıcılar için ücretleri azaltır. Ethereum ZK-toplamalarını kullanmanın maliyeti hakkında gerçek zamanlı bir genel bakışa [buradan](https://l2fees.info/) ulaşabilirsiniz.
 
-## ZK-toplamaları Ethereum'u nasıl ölçeklendirir? \{#scaling-ethereum-with-zk-rollups}
+## ZK-toplamaları Ethereum'u nasıl ölçeklendirir? {#scaling-ethereum-with-zk-rollups}
 
-### İşlem verilerinin sıkıştırılması \{#transaction-data-compression}
+### İşlem verilerinin sıkıştırılması {#transaction-data-compression}
 
 ZK-toplamaları, Ethereum'un temel katmanındaki işlem gücünü artırarak işlem hesaplamalarını zincir dışına çıkarır ancak ölçeklendirme için gerçek artış, işlem verilerini sıkıştırmadan gelir. Ethereum'un [blok boyutu](/developers/docs/blocks/#block-size), her bloğun taşıyabileceği veriyi ve dolayısıyla işlenen işlem sayısını sınırlar. ZK-toplamaları, işlemle ilgili verileri sıkıştırarak her blokta işlenen işlem sayısını önemli ölçüde artırır.
 
 ZK-toplamaları, her bir işlemi doğrulamak için gereken tüm veriyi göndermek zorunda olmadıklarından işlem verilerini iyimser toplamalara göre daha iyi sıkıştırabilir. Sadece toplamadaki hesapların ve bakiyelerin son durumunu yeniden oluşturabilmek için gerekli olan minimal veriyi göndermeleri gerekir.
 
-### Özyinelemeli kanıtlar \{#recursive-proofs}
+### Özyinelemeli kanıtlar {#recursive-proofs}
 
 Sıfır-bilgili ispatların bir avantajı, ispatların diğer ispatları doğrulayabiliyor olmasıdır. Örneğin, tek bir ZK-SNARK diğer ZK-SNARK'ları doğrulayabilir. Bunun gibi "kanıtların-kanıtları"na, tekrarlanan kanıtlar denir ve bunlar, ZK-toplamalarındaki verimliliği önemli ölçüde artırırlar.
 
@@ -204,7 +204,7 @@ Güncel olarak, doğruluk kanıtları bloktan bloğa temelinde oluşturur ve do�
 
 Öte yandan tekrarlanabilir kanıtlar, bir doğruluk kanıtıyla birkaç bloğu sonlandırmayı mümkün kılar. Bunun sebebi, kanıtlama döngüsünün son bir kanıt oluşturulana kadar çoklu blok kanıtlarını toplamasıdır. L2 operatörü, bu tekrarlanan kanıtı gönderir ve sözleşmenin bunun kabul etmesi durumunda ilgili blokların tümü anında sonlandırılır. Tekrarlanan kanıtlar sayesinde, Ethereum'da zaman aralıklarıyla sonlandırılabilecek olan ZK-toplamalarının sayısı artar.
 
-### ZK-toplamalarının artıları ve eksileri \{#zk-rollups-pros-and-cons}
+### ZK-toplamalarının artıları ve eksileri {#zk-rollups-pros-and-cons}
 
 | Artıları                                                                                                                                                                                                                        | Eksileri                                                                                                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -216,7 +216,7 @@ Güncel olarak, doğruluk kanıtları bloktan bloğa temelinde oluşturur ve do�
 | Canlılık varsayımlarına bağımlı değildir ve kullanıcıların fonlarını koruyabilmek için zinciri doğrulamaları gerekmez.                                                                                                          | Bazı kanıtlama sistemleri (örn. ZK-SNARK) güvenilir bir kurulum gerektirir. Bu kurulum yanlış ele alınırsa ZK-toplamasının güvenlik modelinden taviz verilmesine yol açabilir.                                      |
 | Veri sıkıştırmanın daha yiyi olması, Ethereum'da `calldata` yayımlama masraflarını azaltabilir ve kullanıcılar için toplama ücretlerini minimize edebilir.                                                                      |                                                                                                                                                                                                                     |
 
-### ZK-toplamalarının görsel açıklaması \{#zk-video}
+### ZK-toplamalarının görsel açıklaması {#zk-video}
 
 Finematics'in ZK-toplaması hakkındaki açıklamasını izleyin:
 
@@ -224,7 +224,7 @@ Finematics'in ZK-toplaması hakkındaki açıklamasını izleyin:
 <YouTube id="7pWxCklcNsU" start="406" />
 }
 
-### ZK toplamalarını kullanın \{#use-zk-rollups}
+### ZK toplamalarını kullanın {#use-zk-rollups}
 
 Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok ZK toplamaları uygulaması mevcuttur:
 
@@ -232,7 +232,7 @@ Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok ZK toplamal
 <RollupProductDevDoc rollupType="zk" />
 }
 
-## zkEVM üzerinde kimler çalışıyor? \{#zkevm-projects}
+## zkEVM üzerinde kimler çalışıyor? {#zkevm-projects}
 
 Şunlar zkEVM'ler üzerinde çalışan projeler arasındadır:
 
@@ -246,7 +246,7 @@ Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok ZK toplamal
 
 - **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0, Matter Labs tarafından geliştirilen ve kendi zkEVM'si desteklenen EVM uyumlu bir ZK Toplamasıdır._
 
-## ZK-toplamaları üzerine daha fazla kaynak \{#further-reading-on-zk-rollups}
+## ZK-toplamaları üzerine daha fazla kaynak {#further-reading-on-zk-rollups}
 
 - [Sıfır-Bilgi Toplamaları nedir?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [Sıfır-Bilgi Toplamaları nedir?](https://alchemy.com/blog/zero-knowledge-rollups)

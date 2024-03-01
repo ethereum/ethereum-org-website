@@ -12,7 +12,7 @@ published: 2020-12-01
 
 This is an entry level guide to using WebSockets and Alchemy to make requests to the Ethereum blockchain.
 
-## WebSockets vs. HTTP \{#websockets-vs-http}
+## WebSockets vs. HTTP {#websockets-vs-http}
 
 Unlike HTTP, with WebSockets, you don't need to continuously make requests when you want specific information. WebSockets maintain a network connection for you (if done right) and listen for changes.
 
@@ -20,7 +20,7 @@ As with any network connection, you should not assume that a WebSocket will rema
 
 ​[Alchemy Web3](https://docs.alchemy.com/reference/api-overview) automatically adds handling for WebSocket failures and retries with no configuration necessary.
 
-## Try it out \{#try-it-out}
+## Try it out {#try-it-out}
 
 The easiest way to test out WebSockets is to install a command line tool for making WebSocket requests such as [wscat](https://github.com/websockets/wscat). Using wscat, you can send requests as follows:
 
@@ -35,7 +35,7 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ```
 
-## How to use WebSockets \{#how-to-use-websockets}
+## How to use WebSockets {#how-to-use-websockets}
 
 To begin, open a WebSocket using the WebSocket URL for your app. You can find your app's WebSocket URL by opening the app's page in [your dashboard](https://dashboard.alchemyapi.io/) and clicking "View Key". Note that your app's URL for WebSockets is different from its URL for HTTP requests, but both can be found by clicking "View Key".
 
@@ -43,7 +43,7 @@ To begin, open a WebSocket using the WebSocket URL for your app. You can find yo
 
 Any of the APIs listed in the [Alchemy API Reference](https://docs.alchemyapi.io/documentation/alchemy-api-reference/) can be used via WebSocket. To do so, use the same payload that would be sent as the body of a HTTP POST request, but instead send that payload through the WebSocket.
 
-## With Web3 \{#with-web3}
+## With Web3 {#with-web3}
 
 Transitioning to WebSockets while using a client library like Web3 is simple. Simply pass the WebSocket URL instead of the HTTP one when instantiating your Web3 client. For example:
 
@@ -53,26 +53,26 @@ const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
 web3.eth.getBlockNumber().then(console.log) // -> 7946893
 ```
 
-## Subscription API \{#subscription-api}
+## Subscription API {#subscription-api}
 
 When connected through a WebSocket, you may use two additional methods: `eth_subscribe` and `eth_unsubscribe`. These methods will allow you to listen for particular events and be notified immediately.
 
-### `eth_subscribe` \{#eth-subscribe}
+### `eth_subscribe` {#eth-subscribe}
 
 Creates a new subscription for specified events. [Learn more about `eth_subscribe`](https://docs.alchemy.com/reference/eth-subscribe).
 
-#### Parameters \{#parameters}
+#### Parameters {#parameters}
 
 1. Subscription types
 2. Optional params
 
 The first argument specifies the type of event for which to listen. The second argument contains additional options which depend on the first argument. The different description types, their options, and their event payloads are described below.
 
-#### Returns \{#returns}
+#### Returns {#returns}
 
 The subscription ID: This ID will be attached to any received events, and can also be used to cancel the subscription using `eth_unsubscribe`.
 
-#### Subscription events \{#subscription-events}
+#### Subscription events {#subscription-events}
 
 While the subscription is active, you will receive events which are objects with the following fields:
 
@@ -82,7 +82,7 @@ While the subscription is active, you will receive events which are objects with
   - `subscription`: The subscription ID returned by the `eth_subscribe` call which created this subscription.
   - `result`: An object whose contents vary depending on the type of subscription.
 
-#### Subscription types \{#subscription-types}
+#### Subscription types {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
@@ -205,7 +205,7 @@ Example:
 
 ```
 
-### `eth_unsubscribe` \{#eth-unsubscribe}
+### `eth_unsubscribe` {#eth-unsubscribe}
 
 Cancels an existing subscription so that no further events are sent.
 

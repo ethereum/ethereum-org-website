@@ -5,15 +5,15 @@ lang: it
 sidebarDepth: 2
 ---
 
-## Introduzione \{#Introduction}
+## Introduzione {#Introduction}
 
 Eseguire un [nodo Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) può essere impegnativo, specialmente quando si è alle prime armi o in caso di ridimensionamento veloce. Ci sono [alcuni servizi](#popular-node-services) che eseguono infrastrutture di nodo ottimizzate, in modo che gli sviluppatori si possano concentrare sullo sviluppo di un'applicazione o di un prodotto. Se vuoi muovere i primi passi, ti spiegheremo come funzionano i servizi di nodo, i pro e i contro del loro utilizzo ed elencheremo i fornitori.
 
-## Prerequisiti \{#prerequisites}
+## Prerequisiti {#prerequisites}
 
 Se non hai ancora chiaro cosa siano nodi e client, consulta [Nodi e client](/developers/docs/nodes-and-clients/).
 
-## Staker \{#stakoooooooooooooors}
+## Staker {#stakoooooooooooooors}
 
 Gli staker in autonomia devono gestire la propria infrastruttura piuttosto che affidarsi a fornitori terzi. Ciò significa eseguire un client di esecuzione associato a un client di consenso. Prima de [La Fusione](/roadmap/merge), era possibile eseguire solo un client di consenso e usare un fornitore centralizzato per i dati di esecuzione; questo non è più possibile: uno staker in autonomia deve eseguire entrambi i client. Tuttavia, sono disponibili dei servizi per semplificare questo processo.
 
@@ -21,7 +21,7 @@ Gli staker in autonomia devono gestire la propria infrastruttura piuttosto che a
 
 I servizi descritti in questa pagina sono per i nodi non di staking.
 
-## Come funzionano i servizi di nodo? \{#how-do-node-services-work}
+## Come funzionano i servizi di nodo? {#how-do-node-services-work}
 
 I fornitori di servizi di nodo eseguono client di nodo distribuiti, così che non debba farlo l'utente.
 
@@ -35,19 +35,19 @@ Spesso i servizi di nodo eseguono una varietà di [ client](/developers/docs/nod
 
 È importante notare che i servizi di nodo non memorizzano le chiavi né le informazioni private, e non lo devono fare.
 
-## Quali sono i vantaggi legati all'utilizzo di un servizio di nodo? \{#benefits-of-using-a-node-service}
+## Quali sono i vantaggi legati all'utilizzo di un servizio di nodo? {#benefits-of-using-a-node-service}
 
 Il vantaggio principale dell'utilizzo di un servizio di nodo è non dover dedicare il proprio tempo alla progettazione, alla manutenzione e alla gestione del nodo. Questo permette di concentrarsi sulla realizzazione del prodotto anziché sulla manutenzione dell'infrastruttura.
 
 L'esecuzione di nodi può essere molto costosa in termini di spazio di archiviazione e larghezza di banda, per non parlare del tempo di progettazione. Aspetti come l'aggiunta di nodi durante il ridimensionamento, l'aggiornamento dei nodi alle versioni più recenti e la garanzia della coerenza dello stato possono togliere tempo e risorse alla creazione del prodotto web3 che si desidera realizzare.
 
-## Quali sono gli svantaggi legati all'utilizzo di un servizio di nodo? \{#cons-of-using-a-node-service}
+## Quali sono gli svantaggi legati all'utilizzo di un servizio di nodo? {#cons-of-using-a-node-service}
 
 Utilizzando un servizio di nodo si centralizza l'aspetto dell'infrastruttura del prodotto. Per questo motivo, i progetti per cui la decentralizzazione ha la massima importanza potrebbero preferire nodi propri anziché un outsourcing a terzi.
 
 Consulta i [vantaggi legati all'esecuzione di un nodo proprio](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Servizi di nodo più popolari \{#popular-node-services}
+## Servizi di nodo più popolari {#popular-node-services}
 
 Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungine pure altri, se li conosci! Ogni servizio di nodo offre diversi vantaggi e funzionalità in aggiunta ai livelli gratuiti o a pagamento. Verifica quali corrispondono alle tue esigenze prima di prendere una decisione.
 
@@ -372,15 +372,15 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
   - Paga in criptovalute
   - Supporto esterno per ulteriori requisiti di funzionalità
 
-## Letture consigliate \{#further-reading}
+## Letture consigliate {#further-reading}
 
 - [Elenco di servizi di nodi Ethereum](https://ethereumnodes.com/)
 
-## Argomenti correlati \{#related-topics}
+## Argomenti correlati {#related-topics}
 
 - [ Nodi e client](/developers/docs/nodes-and-clients/)
 
-## Tutorial correlati \{#related-tutorials}
+## Tutorial correlati {#related-tutorials}
 
 - [Primi passi nello sviluppo di Ethereum usando Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Guida all'invio di transazioni tramite web3 e Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

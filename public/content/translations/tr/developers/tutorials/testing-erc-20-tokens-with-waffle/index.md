@@ -28,7 +28,7 @@ Varsayımlar:
 
 Buna karşın, eğer varsayımlardan herhangi biri doğru değilse veya bu makaledeki kodu yeniden uygulamayı düşünmüyorsanız, büyük ihtimalle yine de gayet iyi şekilde takip edebilirsiniz.
 
-## Waffle hakkında kısa bilgiler \{#a-few-words-about-waffle}
+## Waffle hakkında kısa bilgiler {#a-few-words-about-waffle}
 
 [Waffle](https://getwaffle.io), akıllı sözleşmeler yazmak ve test etmek için en gelişmiş kütüphanedir.
 
@@ -36,7 +36,7 @@ Buna karşın, eğer varsayımlardan herhangi biri doğru değilse veya bu makal
 
 Daha fazla ayrıntıyı [Waffle belgelerinde](https://ethereum-waffle.readthedocs.io/en/latest/#waffle-documentation) okuyabilirsiniz!
 
-## Hızlı öğretici \{#the-quick-tutorial}
+## Hızlı öğretici {#the-quick-tutorial}
 
 Her şeyden önce, yeni bir `JavaScript` veya `TypeScript` projesi oluşturun (Ben `TS` kullanacağım, ancak `JS` kullanıyorsanız problem değil):
 
@@ -641,7 +641,7 @@ Her şeyden önce, yeni bir `JavaScript` veya `TypeScript` projesi oluşturun (B
 
 </details>
 
-## 1. Adım: Projenize waffle kurun [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) \{#step-1-install-waffle-in-your-project}
+## 1. Adım: Projenize waffle kurun [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#installation) {#step-1-install-waffle-in-your-project}
 
 Başlamak için, `ethereum-waffle` kurun. Bu öğreticide ben `yarn` kullanacağım, yani `ethereum-waffle` kurmak için şunu çalıştırın:
 
@@ -649,7 +649,7 @@ Başlamak için, `ethereum-waffle` kurun. Bu öğreticide ben `yarn` kullanacağ
  yarn add --dev ethereum-waffle
 ```
 
-## 2. Adım: Bir akıllı sözleşme yazın [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract) \{#step-2-write-a-smart-contract}
+## 2. Adım: Bir akıllı sözleşme yazın [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract) {#step-2-write-a-smart-contract}
 
 Bu öğreticide, [ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/ded2b0a55c9c13731963ab7b85a70c8e73504bab/contracts/token/ERC20/ERC20.sol) OpenZeppelin token'ını kullanacağım[](https://openzeppelin.com).
 
@@ -675,7 +675,7 @@ contract BasicToken is ERC20 {
 
 ```
 
-## 3. Adım: Akıllı sözleşmenizi derleyin [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) \{#step-3-compile-your-smart-contract}
+## 3. Adım: Akıllı sözleşmenizi derleyin [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#compiling-the-contract) {#step-3-compile-your-smart-contract}
 
 Akıllı sözleşmenizi derlemek için projenizin `package.json` dosyasına aşağıdaki girişi ekleyin:
 
@@ -1007,9 +1007,9 @@ Waffle'ın sözleşmenizi derlediğini ve ortaya çıkan JSON çıktısını `bu
 
 </details>
 
-## 4. Adım: Akıllı sözleşmenizi test edin [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) \{#step-4-test-your-smart-contract}
+## 4. Adım: Akıllı sözleşmenizi test edin [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-test-your-smart-contract}
 
-### 4.1. Adım: Gerekli bağımlılıkları ekleyin [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) \{#step-4-1}
+### 4.1. Adım: Gerekli bağımlılıkları ekleyin [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-1}
 
 Bir Akıllı Sözleşmeyi başarıyla yazdıktan sonra onu test edebiliriz. Bunu yapmak için `Waffle` kullanacağız.
 
@@ -1021,7 +1021,7 @@ Yani, bağımlılıklarımıza `Chai` eklemeliyiz:
  yarn add --dev mocha chai
 ```
 
-### 4.2. Adım: Test dosyası oluşturun [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) \{#step-4-2}
+### 4.2. Adım: Test dosyası oluşturun [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-2}
 
 Testimizi yazmak için test dizinimizde `BasicToken.test.ts` dosyası oluşturmamız gerekiyor.
 
@@ -1059,7 +1059,7 @@ it("Assigns initial balance", async () => {
 
 Testi çalıştırmak için `yarn test` kullanın
 
-### 4.3. Adım: Olaylar yayma [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events) \{#step-4-3}
+### 4.3. Adım: Olaylar yayma [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#emitting-events) {#step-4-3}
 
 Bu öğreticide size `Waffle`'ın en kullanışlı eşleyicilerini göstermek istiyorum, ilkiyle başlayalım.
 
@@ -1081,7 +1081,7 @@ Ayrıca, bu eşleyicinin büyük bir avantajı, testimize `withArgs` ekleyerek b
 
 Bu, fonksiyonumuzun doğru çağrıldığından emin olmamızı sağlayacaktır!
 
-### 4.4. Adım: Mesaj ile geri döndürün [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message) \{#step-4-4}
+### 4.4. Adım: Mesaj ile geri döndürün [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#revert-with-message) {#step-4-4}
 
 `Waffle`, hangi mesajla geri dönüldüğünü test etmemizi sağlar.
 
@@ -1097,7 +1097,7 @@ it("Can not transfer above the amount", async () => {
 })
 ```
 
-### 4.5. Adım: Change-token-balance (Token bakiyesini değiştir) [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance) \{#step-4-5}
+### 4.5. Adım: Change-token-balance (Token bakiyesini değiştir) [Belge bağlantısı](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html?highlight=changeBalance#change-balance) {#step-4-5}
 
 `Waffle`, cüzdanların bakiyelerindeki değişiklikleri kontrol etmemizi sağlar!
 
@@ -1129,7 +1129,7 @@ it("Send transaction changes sender and receiver balances", async () => {
 
 İşlemin geri çağırma (çağrıdan önce bakiyeyi kontrol etmemiz gerekiyor) veya işlem yanıtı olarak iletilmesi bekleniyor.
 
-## Tebrikler \{#congratulations}
+## Tebrikler {#congratulations}
 
 **Tebrikler! Öğreticimi tamamladınız. Waffle ile akıllı sözleşmeleri test etme yolunda ilk büyük adımınızı attınız.**
 

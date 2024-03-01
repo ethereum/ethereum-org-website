@@ -9,7 +9,7 @@ incomplete: true
 
 Használj Ethereumot decentralizált alkalmazások (avagy "dappok") fejlesztésére, melyek kihasználják a kriptovaluta és a blokklánc technológia nyújtotta előnyöket. Ezek a dappok megbízhatóak, ami azt jelenti, hogyha egyszer telepítették az Ethereumba, akkor mindig úgy fognak futni, ahogy programozták őket. Digitális vagyontárgyakat irányíthatnak, lehetőséget teremtve ezzel újfajta pénzügyi alkalmazások létrejöveteléhez. Decentralizáltak lehetnek, mely azt jelenti, hogy semmilyen entitás vagy személy nem irányítja őket és közel lehetetlen őket cenzúrázni.
 
-## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel \{#getting-started-with-smart-contracts-and-solidity}
+## Kezdő lépések az okosszerződésekkel és a Solidity nyelvvel {#getting-started-with-smart-contracts-and-solidity}
 
 **Tegye meg az első lépést, hogy integrálja a Rust-ot az Ethereummal**
 
@@ -20,16 +20,16 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [
 - [Írd meg az első Okosszerződésed](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Tanuld meg a Solidity fordítását és telepítését](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Cikkek kezdőknek \{#beginner-articles}
+## Cikkek kezdőknek {#beginner-articles}
 
 - [Ethereum kliens kiválasztása](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [A Rust Ethereum-kliens](https://openethereum.github.io/) \* **Felhívjuk figyelmét, hogy az OpenEthereum [támogatása megszűnt](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd), karbantartása nem biztosított.** Használja körültekintően, és inkább térjen át másik kliensimplementációra.
 - [Tranzakció küldése Ethereumra Rust használatával](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
 - [Részletes útmutató arról, hogyan lehet szerződéseket írni Rust Wasm nyelven Kovanra](https://github.com/paritytech/pwasm-tutorial)
 
-## Köztes cikkek \{#intermediate-articles}
+## Köztes cikkek {#intermediate-articles}
 
-## Speciális használati minták \{#advanced-use-patterns}
+## Speciális használati minták {#advanced-use-patterns}
 
 - [pwasm_ethereum externs könyvtár Ethereum-szerű hálózatokkal való interakciókhoz](https://github.com/openethereum/pwasm-ethereum)
 - [Építsen egy decentralizált csevegőprogramot JavaScript és Rust használatával](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
@@ -37,7 +37,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [
 
 - [Blokklánc építése Rust nyelven](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
-## Rust-projektek és -eszközök \{#rust-projects-and-tools}
+## Rust-projektek és -eszközök {#rust-projects-and-tools}
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) – _Külső elemek gyűjteménye az Ethereum-szerű hálózattal való interakcióhoz_
 - [Lighthouse](https://github.com/sigp/lighthouse) – _Gyors Ethereum-konszenzusrétegkliens_
@@ -54,7 +54,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [
 
 Még több anyagot keresel? Tekintse meg az [ethereum.org/developers](/developers/) oldalt.
 
-## Rust közösségi hozzájárulók \{#rust-community-contributors}
+## Rust közösségi hozzájárulók {#rust-community-contributors}
 
 - [Ethereum WebAssembly](https://gitter.im/ewasm/Lobby)
 - [Oasis Gitter](https://gitter.im/Oasis-official/Lobby)

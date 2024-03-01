@@ -8,7 +8,7 @@ A web2 arra az internetre utal, melyet ma legtöbbünk ismer. Egy internet, mely
 
 Egy sokkal inkább kezdőknek szóló áttekintést szeretne? Tekintse meg a [bevezetés a web3-ba](/web3/) oldalt.
 
-## Web3 előnyök \{#web3-benefits}
+## Web3 előnyök {#web3-benefits}
 
 Sok web3-fejlesztő választotta a dappok fejlesztését az Ethereum örökletes decentralizációja miatt:
 
@@ -17,7 +17,7 @@ Sok web3-fejlesztő választotta a dappok fejlesztését az Ethereum örökletes
 - A fizetések be vannak építve a natív tokennel, Etherrel (ETH).
 - Az Ethereum Turing-kompatibilis, vagyis lényegében bármi leprogramozható a számára.
 
-## Gyakorlati összehasonlítás \{#practical-comparisons}
+## Gyakorlati összehasonlítás {#practical-comparisons}
 
 | Web2                                                                                              | Web3                                                                                                                                   |
 | ------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
@@ -27,7 +27,7 @@ Sok web3-fejlesztő választotta a dappok fejlesztését az Ethereum örökletes
 
 Ez nem jeleni azt, hogy minden szolgáltatást dappá kell alakítani. Ezek a példák a web2 és a web3 szolgáltatások közötti fő különbségeket hivatottak bemutatni.
 
-## Web3 korlátok \{#web3-limitations}
+## Web3 korlátok {#web3-limitations}
 
 A web3-at jelenleg több dolog is korlátozza:
 
@@ -36,7 +36,7 @@ A web3-at jelenleg több dolog is korlátozza:
 - Elérhetőség – a modern webböngészők nem elég integráltak ahhoz, hogy a web3-at a legtöbb felhasználó elérhesse.
 - Költség – a legtöbb sikeres dapp csak a kódjának csak egy kis hányadát teszi fel a blokkláncra, mivel ez elég költséges.
 
-## Centralizáció vs decentralizáció \{#centralization-vs-decentralization}
+## Centralizáció vs decentralizáció {#centralization-vs-decentralization}
 
 Az alábbi táblázatban felsoroljuk a centralizált és decentralizált digitális hálózatok néhány széleskörű előnyét és hátrányát.
 
@@ -52,7 +52,7 @@ Az alábbi táblázatban felsoroljuk a centralizált és decentralizált digitá
 
 Azt meg kell jegyezni, hogy ezek a minták nem biztos, hogy minden hálózatra igazak. Továbbá a valóságban egy hálózat centralizáltsága/decentralizáltsága skálán mérhető; nincsen teljesen centralizált vagy teljesen decentralizált hálózat.
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [Mi az a web3?](/web3/) – _ethereum.org_
 - [A web 3.0 alkalmazások architektúrája](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_

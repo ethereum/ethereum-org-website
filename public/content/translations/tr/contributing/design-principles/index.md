@@ -4,7 +4,7 @@ lang: tr
 description: Ethereum.org'un tasarım ve içerik kararlarının arkasındaki ilkeler
 ---
 
-# Tasarım prensiplerimiz \{#contributing-to-ethereumorg-}
+# Tasarım prensiplerimiz {#contributing-to-ethereumorg-}
 
 <Emoji text=":wave:" size={1} /> Merhaba, ethereum.org tasarım ilkelerine hoş geldiniz. Bu, ethereum.org'u geliştirmek ve iyileştirmek için devam eden bir sürecin parçasıdır.
 
@@ -12,13 +12,13 @@ description: Ethereum.org'un tasarım ve içerik kararlarının arkasındaki ilk
 
 [ethereum.org'a katkıda bulunmadan](/contributing/) önce bunları okumalısınız.
 
-## Tasarım ilkelerimiz neler? \{#ways-to-contribute}
+## Tasarım ilkelerimiz neler? {#ways-to-contribute}
 
 Endişelenmeyin, oldukça basitler! **Tasarım ilkeleri**, bir şeyi tasarlarken (yani oluştururken, sürdürürken veya güncellerken) başvurduğumuz bir dizi yönergedir.
 
 Ethereum.org bağlamında bu tasarım ilkeleri, web sitesinin dünya karşısında temsil etmesini ve dünyaya yansıtmasını istediğimiz şeyin temelidir. Hem heves uyandırırlar **hem de** fonksiyoneldirler. Bu sadece web sitesinin _görünüşü_ değil, aynı zamanda nasıl _çalıştığı_ ve hatta birine nasıl _hissettirdiği_ ile ilgilidir. Renklerden sayfa düzenlerine, web sitesinde Ethereum hakkında nasıl konuştuğumuza kadar her şey bu ilkeler tarafından belirlenmelidir.
 
-## Pratikte ilkeler \{#how-decisions-about-the-site-are-made}
+## Pratikte ilkeler {#how-decisions-about-the-site-are-made}
 
 Bir örneğe bakalım. İlkelerden biri "Güvenilir", yani siteye gelen ziyaretçilerin sitenin güvenilir olduğunu _hissetmelerini_ ve _bilmelerini_ istiyoruz: Tıpkı daha geniş Ethereum ekosistemi gibi. Bu ilke dahilinde, siteyi güvenilir kılmak için atabileceğimiz eyleme geçirilebilir adımlar olduğuna inandığımız 3 işlevsel "alt ilkemiz" var:
 
@@ -32,9 +32,9 @@ Bu nedenle, tasarım kararları verirken veya metin yazarlığı kararları veri
 - _"Ekosistemin büyüklüğünü ve etkinliğini nasıl ve nerede gösteriyoruz?"_
 - _"Bir topluluk üyesi tarafından önerilen ve gözden geçirdiğim yeni katkılar sitedeki mevcut tasarım ve yazıyla tutarlı mı?"_
 
-## Ethereum.org tasarım ilkeleri \{#contributors}
+## Ethereum.org tasarım ilkeleri {#contributors}
 
-### 1. İlham Verici \{#1-inspirational}
+### 1. İlham Verici {#1-inspirational}
 
 Site, kullanıcılara Ethereum'un dünyayı nasıl değiştirebileceğini hayal etmeleri için ilham vermelidir. İnsanları Ethereum ekosisteminin araçlarını ve uygulamalarını keşfetmeye, onlarla oynamaya ve onları onarmaya motive etmelidir.
 
@@ -43,7 +43,7 @@ Site, kullanıcılara Ethereum'un dünyayı nasıl değiştirebileceğini hayal 
 
 Görsel Yönlendirmeler • İçerik
 
-### 2. Evrensel \{#2-universal}
+### 2. Evrensel {#2-universal}
 
 Ethereum küresel, merkeziyetsiz bir projedir ve hedef kitlemiz bunu yansıtır. Site, herkes tarafından erişilebilir olmayı ve dünyanın birçok kültürüne duyarlı olmayı hedeflemelidir.
 
@@ -53,7 +53,7 @@ Ethereum küresel, merkeziyetsiz bir projedir ve hedef kitlemiz bunu yansıtır.
 
 Yazı sistemleri • Renk kullanımı • Görsel Yön • İçerik
 
-### 3. İyi Bir Hikâye \{#3-a-good-story}
+### 3. İyi Bir Hikâye {#3-a-good-story}
 
 Web sitesii iyi bir hikâye gibi olmalıdır. Ziyaretçiler bir yolculuğa çıkmışlardır ve katkıda bulunduğunuz içerik, bunun bir parçasıdır. Katkılarınız net bir anlatıma uymalıdır: Başlangıç (tanıtım/giriş noktası), ortası (öğrenme ve içgörü kümesi) ve sonu (ilgili kaynaklara veya sonraki adımlara yönlendiren bağlantılar) olan bir anlatım.
 
@@ -62,7 +62,7 @@ Web sitesii iyi bir hikâye gibi olmalıdır. Ziyaretçiler bir yolculuğa çık
 
 Kullanıcı Serüvenleri • İçerik
 
-### 4. Güvenilir \{#4-credible}
+### 4. Güvenilir {#4-credible}
 
 İnsanlar Ethereum ekosistemine giriş yapmak istiyor olabilir veya bu konuda şüpheci olabilir. İletişim kurma şeklinizde bu sorumluluğu kabul edin. İki türden insanların da Ethereum ekosisteminden daha büyük bir güvenle ayrıldığından emin olun.
 
@@ -72,7 +72,7 @@ Kullanıcı Serüvenleri • İçerik
 
 Görsel Yön • İçerik
 
-### 5. Ortaklaşa Gelişim \{#5-collaborative-improvement}
+### 5. Ortaklaşa Gelişim {#5-collaborative-improvement}
 
 Web sitesi, tıpkı ekosistemin bütünü gibi birçok katkıda bulunan insanın ürünüdür.
 
@@ -84,7 +84,7 @@ Web sitesi, tıpkı ekosistemin bütünü gibi birçok katkıda bulunan insanın
 
 Tasarım ilkelerimizi [sitemizde](/) faaliyet hâlinde görebilirsiniz.
 
-## Geri bildirim gönder \{#give-feedback}
+## Geri bildirim gönder {#give-feedback}
 
 **Bu belgeyle ilgili geri bildiriminizi paylaşın!** Önerilen ilkelerimizden biri, web sitesinin birçok katkıda bulunan insanın ürünü olmasını istediğimiz anlamına gelen "**Ortaklaşa Gelişim**"dir. Bu ilkenin ruhuna uygun olarak, bu tasarım ilkelerini Ethereum topluluğuyla paylaşmak istiyoruz.
 

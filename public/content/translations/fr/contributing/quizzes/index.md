@@ -4,7 +4,7 @@ description: La politique que nous appliquons pour ajouter des quiz sur ethereum
 lang: fr
 ---
 
-# Quiz \{#quizzes}
+# Quiz {#quizzes}
 
 Les quiz permettent aux utilisateurs de vérifier s'ils ont bien compris le contenu de la page qu'ils viennent de lire. Les questions doivent être basées sur le contenu de la page et ne doivent pas porter sur des informations qui n'y sont pas mentionnées.
 

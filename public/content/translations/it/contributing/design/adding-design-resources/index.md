@@ -10,7 +10,7 @@ Si prega di notare che questa pagina si occupa di fornire il valore dell'utente 
 
 Per assicurarci di mantenere uno standard informativo elevato e promuovere informazioni preziose, abbiamo stabilito una politica di elencazione:
 
-## Studi di ricerca e pannelli di controllo \{#Research-studies}
+## Studi di ricerca e pannelli di controllo {#Research-studies}
 
 1. Metodologia valida
 
@@ -28,7 +28,7 @@ a. L'argomento della ricerca dovrebbe essere pertinente per il designer in Web3 
 
 a. L'obiettivo principale del testo dovrebbe essere condividere informazioni dettagliate piuttosto che promuovere un progetto o un'azienda nello specifico.
 
-## Articoli \{#Articles}
+## Articoli {#Articles}
 
 1. Pertinenza per i designer/ricercatori in Web3 e casi d'uso di progettazione comuni in Web3
 
@@ -46,7 +46,7 @@ c. La scrittura dovrebbe essere concisa e pertinente.
 
 a. L'obiettivo principale dell'articolo dovrebbe essere la condivisione di informazioni dettagliate piuttosto che la promozione di un progetto o un'azienda in particolare.
 
-## Comunità / DAO \{#Communities-and-DAOs}
+## Comunità / DAO {#Communities-and-DAOs}
 
 1. Il sito web dovrebbe indicare chiaramente come aderire alla DAO/Comunità
 

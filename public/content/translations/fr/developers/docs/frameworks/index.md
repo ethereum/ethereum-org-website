@@ -4,7 +4,7 @@ description: Explorez les avantages des frameworks et comparez les options dispo
 lang: fr
 ---
 
-## Introduction aux infrastructures \{#introduction-to-frameworks}
+## Introduction aux infrastructures {#introduction-to-frameworks}
 
 La construction d'une dApp complète nécessite différentes technologies. Les infrastructures logiciels incluent de nombreuses fonctionnalités ou fournissent des systèmes de plugin pour choisir les outils que vous voulez.
 
@@ -16,11 +16,11 @@ Ces infrastructures sont livrés avec de nombreuses fonctionnalités prêtes à 
 - Configuration pour se connecter aux réseaux Ethereum et déployer des contrats, que ce soit sur une instance exécutée localement ou sur l'un des réseaux publics Ethereum.
 - Distribution d'applications décentralisées, intégration à des options de stockage comme IPFS.
 
-## Prérequis \{#prerequisites}
+## Prérequis {#prerequisites}
 
 Avant de plonger dans les infrastructures, nous vous recommandons de commencer par lire notre introduction aux [dApps](/developers/docs/dapps/) et à la [pile Ethereum](/developers/docs/ethereum-stack/).
 
-## Infrastructures disponibles \{#available-frameworks}
+## Infrastructures disponibles {#available-frameworks}
 
 **Foundry -** - **_Foundry est une boîte à outils rapide, portable et modulaire pour le développement d'applications Ethereum_**
 
@@ -106,10 +106,10 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 - [Forum communautaire](https://forum.openzeppelin.com/c/support/17)
 - **Le développement de OpenZeppelin SDK a été arrêté**
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_
 
-## Sujets connexes \{#related-topics}
+## Sujets connexes {#related-topics}
 
 - [Configurer un environnement de développement local](/developers/local-environment/)

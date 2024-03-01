@@ -4,7 +4,7 @@ lang: ig
 hideEditButton: true
 ---
 
-# Nnoo! \{#what-is-ethereum}
+# Nnoo! {#what-is-ethereum}
 
 Ọhụrụ na Ethereum? I no n'ebe ziri ezi. Ka anyi bido site na nnukwu foto.
 

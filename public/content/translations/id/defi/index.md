@@ -14,7 +14,7 @@ summaryPoint3: Berdasarkan teknologi sumber terbuka yang dengannya siapa pun dap
 
 DeFi adalah sebuah sistem keuangan terbuka dan global yang dibangun untuk zaman internet – sebuah alternatif untuk sistem yang tidak tembus pandang, dikontrol dengan ketat, dan diselenggarakan bersama oleh infrastruktur dan proses yang berusia puluhan tahun. Sistem yang memberi Anda kontrol dan visibilitas atas uang Anda. Memberi Anda paparan tentang pasar global dan alternatif untuk mata uang lokal atau opsi perbankan Anda. Produk DeFi membuka layanan keuangan bagi siapa saja yang memiliki koneksi internet dan sebagian besar dimiliki dan dikelola oleh penggunanya. Sejauh ini kripto senilai puluhan miliar dolar telah mengalir melalui aplikasi DeFi dan terus berkembang setiap hari.
 
-## Apa itu DeFi? \{#what-is-defi}
+## Apa itu DeFi? {#what-is-defi}
 
 DeFi adalah sebuah istilah kolektif untuk produk dan layanan keuangan yang dapat diakses oleh siapa saja yang dapat menggunakan Ethereum – siapa saja yang memiliki koneksi internet. Dengan DeFi, pasar selalu terbuka dan tidak ada otoritas terpusat yang dapat memblokir pembayaran atau menolak Anda mengakses apa pun. Layanan yang sebelumnya lambat dan berisiko terjadi kesalahan manusia menjadi otomatis dan lebih aman sekarang karena ditangani oleh kode yang dapat diperiksa dan diteliti oleh siapa saja.
 
@@ -24,7 +24,7 @@ Ada ekonomi kripto yang sedang booming di luar sana, di mana Anda dapat memberi 
 <YouTube id="H-O3r2YMWJ4" />
 }
 
-## DeFi vs keuangan tradisional \{#defi-vs-tradfi}
+## DeFi vs keuangan tradisional {#defi-vs-tradfi}
 
 Salah satu cara terbaik untuk melihat potensi DeFi adalah dengan memahami permasalahan yang ada saat ini.
 
@@ -37,7 +37,7 @@ Salah satu cara terbaik untuk melihat potensi DeFi adalah dengan memahami permas
 - Pengiriman uang dapat memakan waktu berhari-hari karena proses internal manusia.
 - Ada premi untuk layanan keuangan karena lembaga perantara membutuhkan pembayaran untuk jasa mereka.
 
-### Perbandingan \{#defi-comparison}
+### Perbandingan {#defi-comparison}
 
 | DeFi                                                                                                         | Keuangan tradisional                                                                                                                                    |
 | ------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -53,7 +53,7 @@ Salah satu cara terbaik untuk melihat potensi DeFi adalah dengan memahami permas
   Jelajahi aplikasi DeFi
 </ButtonLink>
 
-## Ini dimulai dengan Bitcoin... \{#bitcoin}
+## Ini dimulai dengan Bitcoin... {#bitcoin}
 
 Bitcoin dalam banyak hal adalah aplikasi DeFi yang pertama. Bitcoin memungkinkan Anda benar-benar memiliki dan mengontrol nilai dan mengirimkannya ke mana saja di seluruh dunia. Ini dilakukan dengan menyediakan cara bagi sejumlah besar orang, yang tidak saling percaya, untuk menyepakati isi buku besar akun tanpa memerlukan perantara terpercaya. Bitcoin terbuka untuk siapa saja dan tidak ada yang memiliki wewenang untuk mengubah aturannya. Aturan Bitcoin, seperti kelangkaan dan keterbukaannya, ditulis ke dalam teknologi. Ini berbeda dengan keuangan tradisional di mana pemerintah dapat mencetak uang yang mengurangi nilai tabungan Anda dan perusahaan dapat menutup pasar.
 
@@ -63,7 +63,7 @@ Ethereum dibangun di atas ini. Seperti Bitcoin, aturannya tidak dapat berubah te
 <YouTube id="qFBYB4W2tqU" />
 }
 
-## Uang yang dapat diprogram \{#programmable-money}
+## Uang yang dapat diprogram {#programmable-money}
 
 Ini terdengar aneh... "mengapa saya ingin memrogram uang saya"? Namun, ini lebih dari sekadar sebuah fitur default dari token di Ethereum. Siapa pun dapat memrogram logika ke dalam proses pembayaran. Sehingga Anda dapat memiliki kontrol dan keamanan Bitcoin yang digabungkan dengan layanan yang disediakan oleh lembaga keuangan. Ini memungkinkan Anda melakukan berbagai hal dengan mata uang kripto yang tidak dapat Anda lakukan dengan Bitcoin seperti memberi pinjaman dan mendapatkan pinjaman, menjadwalkan pembayaran, berinvestasi dalam reksadana indeks, dan banyak lagi.
 
@@ -74,7 +74,7 @@ Ini terdengar aneh... "mengapa saya ingin memrogram uang saya"? Namun, ini lebih
   </ButtonLink>
 </InfoBanner>
 
-## Apa yang dapat Anda lakukan dengan DeFi? \{#defi-use-cases}
+## Apa yang dapat Anda lakukan dengan DeFi? {#defi-use-cases}
 
 Ada sebuah alternatif terdesentralisasi untuk kebanyakan layanan keuangan. Tetapi Ethereum juga menciptakan peluang untuk membuat produk keuangan yang benar-benar baru. Ini adalah sebuah daftar yang akan terus bertambah.
 
@@ -94,7 +94,7 @@ Ada sebuah alternatif terdesentralisasi untuk kebanyakan layanan keuangan. Tetap
 <Divider />
 }
 
-### Kirim uang ke seluruh dunia dengan cepat \{#send-money}
+### Kirim uang ke seluruh dunia dengan cepat {#send-money}
 
 Sebagai sebuah blockchain, Ethereum dirancang untuk mengirim transaksi dalam cara yang aman dan global. Seperti Bitcoin, Ethereum membuat pengiriman uang ke seluruh dunia semudah mengirimkan email. Cukup masukkan [nama ENS](/nft/#nft-domains) penerima Anda (seperti bob.eth) atau alamat akun mereka dari dompet Anda dan pembayaran Anda akan berpindah langsung ke mereka dalam hitungan menit (biasanya). Untuk mengirim atau menerima pembayaran, Anda akan memerlukan sebuah [dompet](/wallets/).
 
@@ -102,7 +102,7 @@ Sebagai sebuah blockchain, Ethereum dirancang untuk mengirim transaksi dalam car
   Lihat dapp pembayaran
 </ButtonLink>
 
-#### Salurkan uang ke seluruh dunia... \{#stream-money}
+#### Salurkan uang ke seluruh dunia... {#stream-money}
 
 Anda juga dapat menyalurkan uang melalui Ethereum. Ini memungkinkan Anda membayar gaji seseorang gaji dalam hitungan detik, yang memberi mereka akses ke uangnya kapan pun mereka membutuhkannya. Atau sewakan sesuatu dalam hitungan detik, seperti sebuah loker penyimpanan atau skuter listrik.
 
@@ -112,7 +112,7 @@ Dan jika Anda tidak ingin mengirim atau menyalurkan [ETH](/eth/) karena perubaha
 <Divider />
 }
 
-### Akses mata uang yang stabil \{#stablecoins}
+### Akses mata uang yang stabil {#stablecoins}
 
 Volatilitas mata uang kripto adalah masalah bagi banyak produk keuangan dan pengeluaran umum. Komunitas DeFi telah mengatasi hal ini dengan stablecoin. Nilainya bersifat tetap dipatok dengan aset lainnya, biasanya mata uang yang populer seperti dolar.
 
@@ -126,7 +126,7 @@ Produk koin seperti Dai atau USDC memiliki nilai yang tetap dalam cakupan bebera
 <Divider />
 }
 
-### Meminjam \{#lending}
+### Meminjam {#lending}
 
 Layanan meminjam uang dari para penyedia terdesentralisasi hadir dalam dua variasi utama.
 
@@ -139,7 +139,7 @@ Layanan meminjam uang dari para penyedia terdesentralisasi hadir dalam dua varia
 
 Ada banyak keuntungan menggunakan pemberi pinjaman terdesentralisasi...
 
-#### Meminjam dengan privasi \{#borrowing-privacy}
+#### Meminjam dengan privasi {#borrowing-privacy}
 
 Saat ini, memberi pinjaman dan meminjam uang semuanya berpusat pada para individu yang terlibat. Bank perlu tahu apakah kemungkinan besar Anda akan membayar kembali pinjaman sebelum pemberian pinjaman dilakukan.
 
@@ -147,15 +147,15 @@ Pemberian pinjaman terdesentralisasi berlangsung tanpa mengharuskan kedua pihak 
 
 Ini memungkinkan Anda meminjam uang tanpa pemeriksaan kredit atau menyediakan informasi pribadi.
 
-#### Akses ke dana global \{#access-global-funds}
+#### Akses ke dana global {#access-global-funds}
 
 Ketika Anda menggunakan pemberi pinjaman terdesentralisasi, Anda memiliki akses ke dana yang didepositokan dari seluruh dunia, bukan hanya dana dalam perwalian dari bank atau lembaga yang Anda pilih. Ini membuat pinjaman lebih mudah diakses dan meningkatkan tingkat bunga.
 
-#### Efisiensi pajak \{#tax-efficiencies}
+#### Efisiensi pajak {#tax-efficiencies}
 
 Meminjam dapat memberi Anda akses ke dana yang diperlukan tanpa perlu menjual ETH Anda (kegiatan yang dipungut pajak). Sebagai gantinya, Anda dapat menggunakan ETH sebagai jaminan untuk pinjaman koin stabil. Ini memberi Anda aliran dana yang dibutuhkan dan memungkinkan Anda tetap menyimpan ETH. Stablecoin merupakan token yang jauh lebih baik saat Anda membutuhkan uang tunai karena nilainya tidak berfluktuasi seperti ETH. [Selengkapnya tentang stablecoin](#stablecoins)
 
-#### Pinjaman flash \{#flash-loans}
+#### Pinjaman flash {#flash-loans}
 
 Pinjaman flash merupakan bentuk yang lebih bersifat ekprerimental dari pemberian pinjaman terdesentralisasi yang memungkinkan Anda meminjam tanpa memberikan jaminan atau menyediakan informasi pribadi apa pun.
 
@@ -184,9 +184,9 @@ Agar dapat melakukan contoh di atas dalam dunia keuangan tradisional, Anda akan 
 <Divider />
 }
 
-### Mulai menabung dengan kripto \{#saving}
+### Mulai menabung dengan kripto {#saving}
 
-#### Pemberian pinjaman \{#lending}
+#### Pemberian pinjaman {#lending}
 
 Anda dapat menghasilkan bunga pada kripto Anda dengan meminjamkannya dan melihat dana Anda bertambah dalam waktu nyata. Saat ini tingkat bunga jauh lebih tinggi daripada yang mungkin Anda dapatkan di bank lokal (jika Anda cukup beruntung untuk dapat mengakses tingkat bunga ini). Berikut contohnya:
 
@@ -199,7 +199,7 @@ Anda dapat menghasilkan bunga pada kripto Anda dengan meminjamkannya dan melihat
   Lihat dapp pemberi pinjaman
 </ButtonLink>
 
-#### Lotre anti kerugian \{#no-loss-lotteries}
+#### Lotre anti kerugian {#no-loss-lotteries}
 
 Lotre anti kerugian seperti PoolTogether merupakan cara baru yang menyenangkan dan inovatif untuk menyimpan uang.
 
@@ -219,7 +219,7 @@ Pool hadiah dibentuk oleh semua bunga yang dihasilkan oleh pemberian pinjaman de
 <Divider />
 }
 
-### Tukar token \{#swaps}
+### Tukar token {#swaps}
 
 Ada ribuan token di Ethereum. Decentralized exchange (DEX) memungkinkan Anda memperdagangkan beragam token kapan pun yang Anda inginkan. Anda tidak pernah menyerahkan kontrol atas aset Anda. Ini seperti menggunakan bursa pertukaran mata uang ketika mengunjungi sebuah negara yang berbeda. Tetapi versi DeFi tidak pernah tutup. Pasarnya buka 24/7, 365 hari dalam setahun, dan teknologinya menjamin bahwa akan selalu ada seseorang yang menerima perdagangan.
 
@@ -233,7 +233,7 @@ Misalnya, jika Anda ingin menggunakan lotre anti kerugian PoolTogether (yang did
 <Divider />
 }
 
-### Perdagangan tingkat lanjut \{#trading}
+### Perdagangan tingkat lanjut {#trading}
 
 Ada lebih banyak opsi tingkat lanjut bagi para pedagang yang menginginkan sedikit kontrol yang lebih banyak. Batasi pesanan, metode perpetual, perdagangan margin, dan banyak lagi, semuanya dimungkinkan. Dengan Perdagangan terdesentralisasi, Anda mendapatkan akses ke likuiditas global, pasar yang tidak pernah tutup, dan Anda selalu mengontrol aset Anda.
 
@@ -247,7 +247,7 @@ Ketika Anda menggunakan bursa terpusat, Anda harus mendepositokan aset Anda sebe
 <Divider />
 }
 
-### Kembangkan portofolio Anda \{#investing}
+### Kembangkan portofolio Anda {#investing}
 
 Ada produk manajemen dana di Ethereum yang akan mencoba mengembangkan portofolio Anda berdasarkan strategi pilihan Anda. Ini bersifat otomatis, terbuka untuk semua orang, dan tidak memerlukan manajer manusia yang mengambil imbalan dari keuntungan Anda.
 
@@ -261,7 +261,7 @@ Sebuah contoh yang baik untuk ini adalah [dana DeFi Pulse Index (DPI)](https://d
 <Divider />
 }
 
-### Danai ide Anda \{#crowdfunding}
+### Danai ide Anda {#crowdfunding}
 
 Ethereum merupakan platform yang ideal untuk penggalangan dana:
 
@@ -273,7 +273,7 @@ Ethereum merupakan platform yang ideal untuk penggalangan dana:
   Lihat dapp penggalangan dana
 </ButtonLink>
 
-#### Pendanaan kuadrat \{#quadratic-funding}
+#### Pendanaan kuadrat {#quadratic-funding}
 
 Ethereum merupakan perangkat lunak sumber terbuka dan banyak usaha sejauh ini telah didanai oleh komunitas. Hal ini telah menyebabkan pertumbuhan sebuah model penggalangan dana baru yang menarik: pendanaan kuadrat. Hal ini berpotensi memperbaiki cara kita mendanai semua jenis barang publik di masa depan.
 
@@ -292,7 +292,7 @@ Ini berarti Proyek A dengan 100 sumbangannya senilai 1 dolar dapat menerima lebi
 <Divider />
 }
 
-### Asuransi \{#insurance}
+### Asuransi {#insurance}
 
 Asuransi terdesentralisasi bertujuan untuk membuat asuransi lebih murah, lebih cepat dalam pencairan dananya, dan lebih transparan. Dengan lebih banyak otomatisasi, jaminannya lebih terjangkau, dan pencairan dananya jauh lebih cepat. Data yang digunakan untuk menentukan klaim Anda benar-benar transparan.
 
@@ -306,7 +306,7 @@ Produk Ethereum, seperti perangkat lunak mana pun, dapat mengalami masalah karen
 <Divider />
 }
 
-### Manajer agregator dan portofolio \{#aggregators}
+### Manajer agregator dan portofolio {#aggregators}
 
 Dengan begitu banyak hal yang terjadi, Anda akan memerlukan cara untuk tetap melacak semua investasi, pinjaman, dan perdagangan Anda. Ada sebuah host produk yang memungkinkan Anda mengkoordinir semua aktivitas DeFi dari satu tempat. Inilah keindahan dari arsitektur terbuka DeFi. Tim dapat menysusun antarmuka di mana Anda tidak hanya dapat melihat saldo di seluruh produk, Anda juga dapat menggunakan fiturnya. Anda mungkin menemukan manfaatnya saat menjelajahi lebih lanjut tentang DeFi.
 
@@ -318,7 +318,7 @@ Dengan begitu banyak hal yang terjadi, Anda akan memerlukan cara untuk tetap mel
 <Divider />
 }
 
-## Bagaimana cara kerja DeFi? \{#how-defi-works}
+## Bagaimana cara kerja DeFi? {#how-defi-works}
 
 DeFi menggunakan mata uang kripto dan kontrak pintar untuk menyediakan layanan yang tidak memerlukan perantara. Dalam dunia keuangan saat ini, lembaga keuangan bertindak sebagai penjamin transaksi. Ini memberi kekuasaan yang lebih besar bagi lembaga ini karena uang Anda mengalir melalui mereka. Ditambah lagi miliaran orang di seluruh dunia bahkan tidak dapat mengakses akun bank.
 
@@ -330,7 +330,7 @@ Kontrak juga bersifat publik bagi siapa saja untuk diperiksa dan diaudit. Ini be
 
 Ini berarti saat ini ada kebutuhan untuk mempercayai anggota yang memiliki pengetahuan teknis lebih banyak di komunitas Ethereum yang dapat membaca kode. Komunitas berbasis open-source ini membantu mengawasi pengembang, tetapi kebutuhan ini akan berkurang seiring waktu karena kontrak pintar menjadi semakin mudah untuk dibaca dan cara lain untuk membuktikan keabsahan kode sedang dikembangkan.
 
-## Ethereum dan DeFi \{#ethereum-and-defi}
+## Ethereum dan DeFi {#ethereum-and-defi}
 
 Ethereum adalah fondasi yang sempurna untuk DeFi dikarenakan beberapa alasan:
 
@@ -346,7 +346,7 @@ Anda dapat membayangkan tentang DeFi dalam lapisan:
 3. Protokol – [kontrak pintar](/glossary/#smart-contract) yang menyediakan fungsionalitas, misalnya, layanan yang memungkinkan pemberian pinjaman aset yang terdesentralisasi.
 4. [Aplikasi](/dapps/) – produk yang kita gunakan untuk mengelola dan mengakses protokol.
 
-## Bangun DeFi \{#build-defi}
+## Bangun DeFi {#build-defi}
 
 DeFi adalah gerakan sumber terbuka. Anda bisa memeriksa, melakukan fork, dan berinovasi pada semua protokol dan aplikasi DeFi. Karena tumpukan berlapis ini (semuanya berbagi blockchain dan aset dasar yang sama), protokol dapat digabungkan dan dicocokkan untuk membuka peluang kombo yang unik.
 
@@ -354,25 +354,25 @@ DeFi adalah gerakan sumber terbuka. Anda bisa memeriksa, melakukan fork, dan ber
   Lebih lanjut tentang membangun dapp
 </ButtonLink>
 
-## Bacaan lebih lanjut \{#futher-reading}
+## Bacaan lebih lanjut {#futher-reading}
 
-### Data DeFi \{#defi-data}
+### Data DeFi {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 - [DeFi Rate](https://defirate.com/)
 
-### Artikel DeFi \{#defi-articles}
+### Artikel DeFi {#defi-articles}
 
 - [Panduan DeFi untuk pemula](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 Januari, 2020_
 
-### Video \{#videos}
+### Video {#videos}
 
 - [Finematics - edukasi keuangan terdesentralisasi](https://finematics.com/) – _Video tentang DeFi_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Dasar-dasar DeFi: Semua hal yang perlu Anda ketahui untuk mulai menggunakan ruang yang terkadang membingungkan ini._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _Apa itu DeFi?_
 
-### Komunitas \{#communities}
+### Komunitas {#communities}
 
 - [Server Discord DeFi Llama](https://discord.gg/buPFYXzDDd)
 - [Server Discord DeFi Pulse](https://discord.gg/Gx4TCTk)

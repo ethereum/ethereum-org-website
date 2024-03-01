@@ -15,11 +15,11 @@ lang: zh-tw
 
 若你有興趣，且想協助測試還處於大力開發階段的新語言，可以實驗仍在發展初期的新興智慧型合約語言 Fe。
 
-## 基本資訊 \{#prerequisites}
+## 基本資訊 {#prerequisites}
 
 如果已經有編程語言的知識，特別是 JavaScript 或 Python，可以幫助你瞭解智慧型合約語言的差異。 同時，我們建議你在深入理解語言差異之前，先理解智慧型合約的概念。 [智慧型合約簡介](/developers/docs/smart-contracts/)。
 
-## Solidity \{#solidity}
+## Solidity {#solidity}
 
 - 實作智慧型合約的物件導向高階語言。
 - 深受 C++ 語言影響的大括號語言。
@@ -29,7 +29,7 @@ lang: zh-tw
   - 資料庫（你可以建立能從不同的合約調用的可重複使用代碼，如同其他物件導向程式語言中的靜態類別靜態函數）。
   - 複雜的使用者定義類型。
 
-### 重要連結 \{#important-links}
+### 重要連結 {#important-links}
 
 - [文件](https://docs.soliditylang.org/en/latest/)
 - [Solidity 語言入口網站](https://soliditylang.org/)
@@ -40,7 +40,7 @@ lang: zh-tw
 - [Solidity 部落格](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
 
-### 合約範例 \{#example-contract}
+### 合約範例 {#example-contract}
 
 ```solidity
 // SPDX-License-Identifier: GPL-3.0
@@ -80,7 +80,7 @@ contract Coin {
 
 這個範例應該能讓你瞭解 Solidity 的合約語法。 關於函數和變數的詳細描述，[請參閱文件](https://docs.soliditylang.org/en/latest/contracts.html)。
 
-## Vyper \{#vyper}
+## Vyper {#vyper}
 
 - Python 程式語言
 - 強輸入類型
@@ -98,7 +98,7 @@ contract Coin {
 
 如需更多資訊，[請參閱 Vyper 原理](https://vyper.readthedocs.io/en/latest/index.html)。
 
-### 重要鏈結 \{#important-links-1}
+### 重要鏈結 {#important-links-1}
 
 - [文件](https://vyper.readthedocs.io)
 - [Vyper by Example](https://vyper.readthedocs.io/en/latest/vyper-by-example.html)
@@ -113,7 +113,7 @@ contract Coin {
 - [Vyper 最熱門的智慧型合約範例](https://github.com/pynchmeister/vyper-greatest-hits/tree/main/contracts)
 - [出色的 Vyper 精選資源](https://github.com/spadebuilders/awesome-vyper)
 
-### 範例 \{#example}
+### 範例 {#example}
 
 ```python
 # Open Auction
@@ -202,7 +202,7 @@ def endAuction():
 
 此範例應該能讓你瞭解 Solidity 的合約語法。 關於函數和變數的詳細描述，[請參閱文件](https://vyper.readthedocs.io/en/latest/vyper-by-example.html#simple-open-auction)。
 
-## Yul 和 Yul+ \{#yul}
+## Yul 和 Yul+ {#yul}
 
 如果你是以太坊新手並且尚未使用過智慧型合約語言編碼，建議你從 Solidity 或 Vyper 開始。 只有在你熟悉智慧型合約安全性最佳案例和使用以太坊虛擬機的具體細節後，才可投入 Yul 或 Yul+。
 
@@ -218,14 +218,14 @@ def endAuction():
 - 最初設計用於[樂觀卷軸](/developers/docs/scaling/optimistic-rollups/)合約。
 - Yul+ 可以被視為 Yul 的實驗性升級建議，為其添加新功能。
 
-### 重要鏈結 \{#important-links-2}
+### 重要鏈結 {#important-links-2}
 
 - [Yul 文件](https://docs.soliditylang.org/en/latest/yul.html)
 - [Yul+ 文件](https://github.com/fuellabs/yulp)
 - [Yul+ 訓練場](https://yulp.fuel.sh/)
 - [Yul+ 介紹文章](https://medium.com/@fuellabs/introducing-yul-a-new-low-level-language-for-ethereum-aa64ce89512f)
 
-### 合約範例 \{#example-contract-2}
+### 合約範例 {#example-contract-2}
 
 以下簡單範例採用冪函數。 它可以使用 `solc --strict-assembly --bin input.yul` 編譯。 這個範例應該 儲存在 input.yul 檔案中。
 
@@ -250,14 +250,14 @@ def endAuction():
 
 如果你已經熟悉智慧型合約，可以在[此處](https://solidity.readthedocs.io/en/latest/yul.html#complete-erc20-example)找到 Yul 言語的完整 ERC20 實作。
 
-## Fe \{#fe}
+## Fe {#fe}
 
 - 用於以太坊虛擬機 (EVM) 的靜態類型語言。
 - 受 Python 和 Rust 所啟發。
 - 目標是讓以太坊生態系統的新手開發者，都能輕鬆學習這門語言。
 - Fe 還處於早期開發階段，其 Alpha 版本於 2021 年 1 月推出。
 
-### 重要鏈結 \{#important-links-3}
+### 重要鏈結 {#important-links-3}
 
 - [Github](https://github.com/ethereum/fe)
 - [Fe 發布聲明](https://snakecharmers.ethereum.org/fe-a-new-language-for-the-ethereum-ecosystem/)
@@ -265,7 +265,7 @@ def endAuction():
 - [Fe Discord 聊天室](https://discord.com/invite/ywpkAXFjZH)
 - [Fe Twitter](https://twitter.com/official_fe)
 
-### 合約範例 \{#example-contract-3}
+### 合約範例 {#example-contract-3}
 
 以下為採用 Fe 的簡單合約。
 
@@ -288,34 +288,34 @@ contract GuestBook:
 
 ```
 
-## 如何選擇 \{#how-to-choose}
+## 如何選擇 {#how-to-choose}
 
 與任何其他編程語言一樣，重點在於根據合適的工作與個人偏好選擇正確工具。
 
 如果你還沒有嘗試過任何一種語言，請考慮以下幾點：
 
-### Solidity 的優點是什麼？ \{#solidity-advantages}
+### Solidity 的優點是什麼？ {#solidity-advantages}
 
 - 如果你是初學者，有不少使用教學和學習工具。 在[透過編碼學習](/developers/learning-tools/)部分瞭解更多相關資訊。
 - 提供優良的開發者工具。
 - Solidity 擁有龐大的開發者社群，這表示你很可能會很快找到問題的答案。
 
-### Vyper 的優點是什麼？ \{#vyper-advatages}
+### Vyper 的優點是什麼？ {#vyper-advatages}
 
 - 適合想要編寫智慧型合約的 Python 開發者入門。
 - Vyper 的功能較少，因此非常適合快速製作創意原型。
 - Vyper 的目的是容易審查並盡可能提高人類可讀性。
 
-### Yul 和 Yul+ 的優點是什麼？ \{#yul-advantages}
+### Yul 和 Yul+ 的優點是什麼？ {#yul-advantages}
 
 - 簡單而實用的低階語言。
 - 允許更接近原始以太坊虛擬機，有助於最佳化合約的燃料使用量。
 
-## 語言比較 \{#language-comparisons}
+## 語言比較 {#language-comparisons}
 
 如需瞭解基本語法比較、合約生命週期、介面、運算子、數據結構、功能、控制流程等資訊，請參閱[由 Auditless 編寫的懶人包](https://reference.auditless.com/cheatsheet/)
 
-## 衍生閱讀 \{#further-reading}
+## 衍生閱讀 {#further-reading}
 
 - [OpenZeppelin 的 Solidity 合約資料庫](https://docs.openzeppelin.com/contracts)
 - [Solidity 範例](https://solidity-by-example.org)

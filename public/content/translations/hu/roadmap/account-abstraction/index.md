@@ -8,7 +8,7 @@ summaryPoints:
   - Az elvesztett vagy nyilvánossá vált kulcsokat többféle biztonsági megoldással is vissza lehet nyerni
 ---
 
-# Számlaabsztrakció \{#account-abstraction}
+# Számlaabsztrakció {#account-abstraction}
 
 A felhasználók **[külső tulajdonú számlák (EOA)](/glossary/#eoa)** révén kapcsolódnak az Ethereumhoz. Ez az egyetlen módja, hogy egy tranzakciót kezdeményezzenek vagy elindítsanak egy okosszerződést. Ez behatárolja azt, ahogyan a felhasználók az Ethereummal kapcsolatba léphetnek. Nehézkessé teszi például, hogy tranzakciókötegeket hajtsanak végre és a felhasználóknak mindig tartani kell ETH-t, hogy fedezzék a tranzakciók költségeit (gáz).
 
@@ -34,7 +34,7 @@ Az okosszerződéses tárcák megoldást tudnak ezekre adni, de jelenleg nehéz 
 
 Végül a számlaabsztrakció fejleszti az okosszerződéses tárcák támogatását, mivel egyszerűbb lesz azokat megépíteni és biztonságosabb lesz használni. A számlaabsztrakció révén a felhasználók az Ethereum összes előnyét kiélvezhetik, és nem kell tudniuk vagy foglalkozniuk a mögöttes technológiával.
 
-## A kulcsmondatokon túl \{#beyond-seed-phrases}
+## A kulcsmondatokon túl {#beyond-seed-phrases}
 
 Jelenleg a számlákat a privát kulcsok használata védi, amelyet kulcsmondatokból állítanak elő. Aki hozzáfér a kulcsmondathoz, az könnyen fel tudja fedezni a számlát védő privát kulcsot, így hozzáférhet a számla eszközeihez. Ha a privát kulcs és a kulcsmondat elvész, akkor azokat már nem lehet visszanyerni és a számlán tárolt eszközök örökre be lesznek fagyasztva. A kulcsmondatok biztonságos tárolása elég kényelmetlen még a szakértő felhasználók számára is, és az ezekre irányuló adathalászat a fő oka annak, hogy a felhasználókat átverik.
 
@@ -50,7 +50,7 @@ Például olyan biztonsági kulcsok adhatók a tárcához, hogy ha valaki elvesz
 - **Tranzakciólimitek beállítása**: Napi határértéket lehet megadni arra vonatkozóan, hogy milyen értéket lehet áttranszferálni az adott számláról egy nap/hét/hónap alatt. Tehát ha egy támadó hozzáférést szerez a számlához, akkor nem tudja egyszerre kiüríteni azt, a tulajdonos pedig be tudja azt fagyasztani és visszaállítani a saját hozzáférést.
 - **Engedélyezési lista készítése**: Csak olyan tranzakciókat lehet elindítani, amelyek előre megadott, biztonságos címekre adnak át eszközöket. Ekkor, _még ha_ a privát kulcsot el is lopták, a támadó nem tud pénzügyi eszközöket küldeni olyan számlákra, amelyek nem szerepelnek az engedélyezési listán. Ezek a listák többszörös aláírást igényelnek, így a támadó nem tudja egyszerűen hozzáadni a saját címét a listához, hacsak nem fér hozzá több biztonsági kulcshoz is egyszerre.
 
-## Jobb felhasználói élmény \{#better-user-experience}
+## Jobb felhasználói élmény {#better-user-experience}
 
 A számlaabsztrakció lehetővé teszi a **jobb felhasználói élményt** és **a magasabb fokú biztonságot**, mert támogatást biztosít az okosszerződéses tárcának a protokoll szintjén. Ez a megoldás az okosszerződések, tárcák és alkalmazások fejlesztőinek olyan szintű szabadságot ad az innovációra a felhasználói élményt illetően, olyan módokon, amiket most még elképzelni sem tudunk. Néhány egyértelmű fejlesztés a számlaabsztrakció mellett többek között az, hogy a tranzakciókat kötegelni lehet a gyorsaság és a hatékonyság érdekében. Például egy egyszerű átváltás egy egykattintásos művelet lehet, míg jelenleg az átváltás előtt a különböző tokenekre külön tranzakciót kell aláírni. A számlaabsztrakcióval megszűnik ez a többszörös jóváhagyás, mert a tranzakciókat össze lehet kötegelni. Emellett a kötegelt tranzakciókat úgy hagyja jóvá a felhasználó, hogy a tokeneknek a megfelelő értéke szerepel benne, majd a végrehajtás után visszavonja a jóváhagyást, ezzel fokozva a biztonságot.
 
@@ -72,7 +72,7 @@ A megbízható periódus használata is jelentős hatással lehet a felhasznál�
 
 Ez csak néhány példa arra, hogy a felhasználói élmény hogyan fejlődhet a számlaabsztrakcióval, ám ennél sokkal több is lehetségessé válik. A számlaabsztrakció felszabadítja a fejlesztőket a jelenlegi EOA-k kötöttségei alól, behozhatják a web2 jó szempontjait a web3-ba anélkül, hogy feláldoznák az eszközök fölötti saját felügyeletet, illetve kreatív módon javíthatják a felhasználói élményeket.
 
-## Hogyan kerül bevezetésre a számlaabsztrakció? \{#how-will-aa-be-implemented}
+## Hogyan kerül bevezetésre a számlaabsztrakció? {#how-will-aa-be-implemented}
 
 Az okosszerződéses tárcák most is léteznek, de kihívásokkal teli a megvalósításuk, mert az EVM nem támogatja azokat. Ehelyett azon alapulnak, hogy elég összetett kódokba burkolják a standard Ethereum-tranzakciókat. Az Ethereum képes ezt megváltoztatni azáltal, hogy megengedi az okosszerződéseknek a tranzakciókezdeményezést, így az Ethereum okosszerződésbe lehet kódolni a szükséges logikákat, nem pedig a láncon kívül kezelni azokat. Az okosszerződésbe írt logikák növelik az Ethereum decentralizációját is, mivel nem lesz szükség a tárcafejlesztők által működtetett közvetítőkre, hogy lefordítsák a felhasználók által aláírt üzeneteket Ethereum-tranzakciókká.
 
@@ -116,11 +116,11 @@ Jelenleg az EIP-3074 változtatás nem aktív. A közösség az EIP-4337 javasla
 </ExpandableCard>
 }
 
-## Jelenlegi helyzet \{#current-progress}
+## Jelenlegi helyzet {#current-progress}
 
 Az okosszerződéses tárcák már elérhetők, de több fejlesztésre van szükség, hogy még decentralizáltabbak és engedélymentesek legyenek. Az EIP-4337 egy kiforrott javaslat, amely nem igényel változtatást az Ethereum-protokollban, ezért ezt gyorsan be lehet vezetni. Azok a fejlesztések, amelyekhez az Ethereum-protokollt módosítani kell, jelenleg nincsenek aktív állapotban, így ezek a változások hosszabb időt vesznek igénybe. Az is lehetséges, hogy a számlaabsztrakciót kellőképpen el lehet érni az EIP-4337 révén, ezért a protokollt nem is kell hozzá megváltoztatni.
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [erc4337.io](https://www.erc4337.io/)
 - [Panelbeszélgetés a számlaabsztrakcióról a Devcontól, Bogotából](https://www.youtube.com/watch?app=desktop&v=WsZBymiyT-8)

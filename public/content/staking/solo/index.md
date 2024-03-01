@@ -13,7 +13,7 @@ summaryPoints:
   - Remove trust, and never give up control of the keys to your funds
 ---
 
-## What is solo staking? \{#what-is-solo-staking}
+## What is solo staking? {#what-is-solo-staking}
 
 Solo staking is the act of [running an Ethereum node](/run-a-node/) connected to the internet and depositing 32 ETH to activate a [validator](#faq), giving you the ability to participate directly in network consensus.
 
@@ -25,7 +25,7 @@ Solo stakers are responsible for operating the hardware needed to run these clie
 
 A solo staker receives rewards directly from the protocol for keeping their validator properly functioning and online.
 
-## Why stake solo? \{#why-stake-solo}
+## Why stake solo? {#why-stake-solo}
 
 Solo staking comes with more responsibility but provides you with maximum control over your funds and staking setup.
 
@@ -35,7 +35,7 @@ Solo staking comes with more responsibility but provides you with maximum contro
   <Card title="Network security" emoji="🔐" description="Solo staking is the most impactful way to stake. By running a validator on your own hardware at home, you strengthen the robustness, decentralization, and security of the Ethereum protocol." />
 </CardGrid>
 
-## Considerations before staking solo \{#considerations-before-staking-solo}
+## Considerations before staking solo {#considerations-before-staking-solo}
 
 As much as we wish that solo staking was accessible and risk free to everyone, this is not reality. There are some practical and serious considerations to keep in mind before choosing to solo stake your ETH.
 
@@ -87,7 +87,7 @@ Different from inactivity penalties for being offline, <em>slashing</em> is a mu
 <StakingComparison page="solo" />
 }
 
-## How it works \{#how-it-works}
+## How it works {#how-it-works}
 
 {
 <StakingHowSoloWorks />
@@ -99,7 +99,7 @@ If ever desired, you can exit as a validator which eliminates the requirement to
 
 [More on staking withdrawals](/staking/withdrawals/)
 
-## Get started on the Staking Launchpad \{#get-started-on-the-staking-launchpad}
+## Get started on the Staking Launchpad {#get-started-on-the-staking-launchpad}
 
 The Staking Launchpad is an open source application that will help you become a staker. It will guide you through choosing your clients, generate your keys and depositing your ETH to the staking deposit contract. A checklist is provided to make sure you've covered everything to get your validator set up safely.
 
@@ -107,7 +107,7 @@ The Staking Launchpad is an open source application that will help you become a 
 <StakingLaunchpadWidget />
 }
 
-## What to consider with node and client setup tools \{#node-tool-considerations}
+## What to consider with node and client setup tools {#node-tool-considerations}
 
 There are a growing number of tools and services to help you solo stake your ETH, but each come with different risks and benefits.
 
@@ -117,7 +117,7 @@ Attribute indicators are used below to signal notable strengths or weaknesses a 
 <StakingConsiderations page="solo" />
 }
 
-## Explore node and client setup tools \{#node-and-client-tools}
+## Explore node and client setup tools {#node-and-client-tools}
 
 There are a variety of options available to help you with your setup. Use the above indicators to help guide you through the tools below.
 
@@ -143,13 +143,13 @@ These tools can be used as an alternative to the [Staking Deposit CLI](https://g
 
 Have a suggestion for a staking tool we missed? Check out our [product listing policy](/contributing/adding-staking-products/) to see if it would be a good fit, and to submit it for review.
 
-## Explore solo staking guides \{#staking-guides}
+## Explore solo staking guides {#staking-guides}
 
 {
 <StakingGuides />
 }
 
-## Frequently asked questions \{#faq}
+## Frequently asked questions {#faq}
 
 These are a few of the most common questions about staking that are worth knowing about.
 
@@ -233,7 +233,7 @@ To unlock and receive your entire balance back you must also complete the proces
 </ExpandableCard>
 }
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Ethereum's Client Diversity Problem](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_

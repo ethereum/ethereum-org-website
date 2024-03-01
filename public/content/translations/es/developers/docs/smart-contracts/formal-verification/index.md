@@ -10,13 +10,13 @@ La verificación formal es una de las técnicas recomendadas para mejorar la [se
 
 Cuando se implementa en contratos inteligentes, la verificación formal puede demostrar que la lógica comercial de un contrato cumple con una especificación predefinida. En comparación con otros métodos para evaluar la corrección del código de un contrato, como las pruebas, la verificación formal ofrece garantías más sólidas de que un contrato inteligente sea funcionalmente correcto.
 
-## ¿Qué es la verificación formal? \{#what-is-formal-verification}
+## ¿Qué es la verificación formal? {#what-is-formal-verification}
 
 La verificación formal se refiere al proceso de evaluación de la corrección de un sistema con respecto a una especificación formal. En términos más simples, la verificación formal nos permite comprobar si el comportamiento de un sistema cumple con algunos requisitos (es decir, hace lo que queremos).
 
 Los comportamientos esperados del sistema (un contrato inteligente en este caso) se describen utilizando un modelado formal, mientras que los lenguajes de especificación permiten la creación de propiedades formales. Las técnicas de verificación formal pueden verificar que la implementación de un contrato cumpla con sus especificaciones y derivar una prueba matemática de la corrección del contrato. Cuando un contrato cumple con su especificación, se describe como "funcionalmente correcto", "correcto por diseño" o "correcto por construcción".
 
-### ¿Qué es un modelo formal? \{#what-is-a-formal-model}
+### ¿Qué es un modelo formal? {#what-is-a-formal-model}
 
 En informática, un [modelo formal](https://en.wikipedia.org/wiki/Model_of_computation) es una descripción matemática de un proceso computacional. Los programas se abstraen en funciones matemáticas (ecuaciones), con un modelo que describe cómo se calculan los resultados (o salidas) de las funciones dada una entrada.
 
@@ -30,7 +30,7 @@ Por el contrario, otros modelos formales se centran en el comportamiento de bajo
 
 Los modelos de bajo nivel se consideran ideales, ya que representan la ejecución real de un contrato inteligente en el entorno de ejecución de Ethereum (es decir, la [EVM](/developers/docs/evm/)). Las técnicas de modelado de bajo nivel son especialmente útiles para establecer propiedades de seguridad críticas en contratos inteligentes y detectar posibles vulnerabilidades.
 
-### ¿Qué es una especificación formal? \{#what-is-a-formal-specification}
+### ¿Qué es una especificación formal? {#what-is-a-formal-specification}
 
 Una especificación es simplemente un requisito técnico que un sistema en particular debe cumplir. En la programación, las especificaciones representan ideas generales sobre la ejecución de un programa (es decir, lo que el programa debe hacer).
 
@@ -40,7 +40,7 @@ Por lo tanto, podemos pensar en una especificación formal como una colección d
 
 Las especificaciones formales son fundamentales para desarrollar implementaciones seguras de contratos inteligentes. Los contratos que no implementan invariantes o cuyas propiedades se ven violadas durante la ejecución son propensos a vulnerabilidades que pueden dañar la funcionalidad o causar explotaciones, o exploits, maliciosas.
 
-## Tipos de especificaciones formales para contratos inteligentes \{#formal-specifications-for-smart-contracts}
+## Tipos de especificaciones formales para contratos inteligentes {#formal-specifications-for-smart-contracts}
 
 Las especificaciones formales permiten el razonamiento matemático sobre la corrección de la ejecución de un programa. Al igual que con los modelos formales, las especificaciones formales pueden capturar propiedades de alto nivel o el comportamiento de bajo nivel de la implementación de un contrato.
 
@@ -48,7 +48,7 @@ Las especificaciones formales se derivan utilizando elementos de [lógica del pr
 
 Las especificaciones formales para los contratos inteligentes se pueden clasificar ampliamente como **especificaciones de alto nivel** o **especificaciones de bajo nivel**. Independientemente de a qué categoría pertenezca una especificación, debe describir de manera adecuada e inequívoca la propiedad del sistema que se desea analizar.
 
-### Especificaciones de alto nivel \{#high-level-specifications}
+### Especificaciones de alto nivel {#high-level-specifications}
 
 Como su nombre lo indica, una especificación de alto nivel (también llamada "especificación orientada a modelos") describe el comportamiento de alto nivel de un programa. Las especificaciones de alto nivel modelan un contrato inteligente como una [máquina de estado finito](https://en.wikipedia.org/wiki/Finite-state_machine) (FSM), que puede hacer la transición entre estados mediante la realización de operaciones, con la lógica temporal utilizada para definir propiedades formales para el modelo FSM.
 
@@ -60,7 +60,7 @@ Tomemos por ejemplo este requisito de seguridad que cubre las condiciones para u
 
 Las propiedades de vitalidad afirman que "algo bueno finalmente sucede" y se refieren a la capacidad de un contrato para progresar por diferentes estados. Un ejemplo de una propiedad de vitalidad es la "liquidez", que se refiere a la capacidad de un contrato para transferir sus saldos a usuarios a petición. Si se viola esta propiedad, los usuarios no podrían retirar los activos almacenados en el contrato, como lo que sucedió con el [incidente de la billetera de Parity](https://www.cnbc.com/2017/11/08/accidental-bug-may-have-frozen-280-worth-of-ether-on-parity-wallet.html).
 
-### Especificaciones de bajo nivel \{#low-level-specifications}
+### Especificaciones de bajo nivel {#low-level-specifications}
 
 Las especificaciones de alto nivel toman como punto de partida un modelo de estado finito de un contrato y definen las propiedades deseadas de este modelo. En contraste, las especificaciones de bajo nivel (también llamadas "especificaciones orientadas a propiedades") a menudo modelan programas (contratos inteligentes) como sistemas que constan de una colección de funciones matemáticas y describen el comportamiento correcto de dichos sistemas.
 
@@ -68,7 +68,7 @@ En términos más simples, las especificaciones de bajo nivel analizan _rastros 
 
 Las especificaciones formales de bajo nivel se pueden dar como propiedades de estilo Hoare o invariantes en las rutas de ejecución.
 
-### Propiedades de estilo Hoare \{#hoare-style-properties}
+### Propiedades de estilo Hoare {#hoare-style-properties}
 
 La [lógica de Hoare](https://en.wikipedia.org/wiki/Hoare_logic) proporciona un conjunto de reglas formales para razonar sobre la corrección de los programas, incluidos los contratos inteligentes. Una propiedad de estilo Hoare está representada por un triple Hoare {_P_}_c_{_Q_}, donde _c_ es un programa y _P_ y _Q_ son predicados sobre el estado del _c_ (es decir, el programa), descrito formalmente como _precondiciones_ y _poscondiciones_, respectivamente.
 
@@ -84,7 +84,7 @@ Muchos marcos de verificación formal utilizan especificaciones de estilo Hoare 
 
 Las declaraciones `require` expresan una condición previa o invariante y a menudo se utilizan para validar las entradas del usuario, mientras que `assert` captura una poscondición necesaria para la seguridad. Por ejemplo, se puede lograr un control de acceso adecuado para las funciones (un ejemplo de una propiedad de seguridad) utilizando `require` como una comprobación previa de la identidad de la cuenta invocante. Del mismo modo, un invariante sobre los valores permitidos de las variables de estado en un contrato (por ejemplo, el número total de tokens en circulación) se puede proteger de la violación mediante el uso de `assert` para confirmar el estado del contrato después de la ejecución de la función.
 
-### Propiedades de nivel de rastreo \{#trace-level-properties}
+### Propiedades de nivel de rastreo {#trace-level-properties}
 
 Las especificaciones basadas en rastros o pistas describen las operaciones que hacen la transición de un contrato entre diferentes estados y las relaciones entre estas operaciones. Como se explicó anteriormente, los rastros son secuencias de operaciones que alteran el estado de un contrato de una manera particular.
 
@@ -102,9 +102,9 @@ Usemos un ejemplo de un contrato de [DAO](/dao/) que tiene algunas funciones de 
 
 Ejemplos de propiedades de nivel de rastreo podrían ser _"los usuarios que no depositan fondos no pueden votar sobre una propuesta"_ o _"los usuarios que no voten sobre una propuesta siempre deben poder reclamar un reembolso"_. Ambas propiedades afirman secuencias de ejecución preferidas (la votación no puede ocurrir _antes_ de depositar fondos, y reclamar un reembolso no puede ocurrir _después_ de votar sobre una propuesta).
 
-## Técnicas para la verificación formal de contratos inteligentes \{#formal-verification-techniques}
+## Técnicas para la verificación formal de contratos inteligentes {#formal-verification-techniques}
 
-### Comprobación de modelos \{#model-checking}
+### Comprobación de modelos {#model-checking}
 
 La comprobación de modelos es una técnica de verificación formal en la que un algoritmo compara un modelo formal de un contrato inteligente con sus especificaciones. En la comprobación de modelos, los contratos inteligentes a menudo se representan como sistemas de transición de estado, mientras que las propiedades en estados de contrato permisibles se definen utilizando la lógica temporal.
 
@@ -116,7 +116,7 @@ Por ejemplo, una propiedad de seguridad relacionada con el control de acceso (po
 
 La comprobación de modelos utiliza la exploración espacial de estado, lo que implica la construcción de todos los estados posibles de un contrato inteligente y el intento de encontrar estados alcanzables que resulten en violaciones de propiedad. Sin embargo, esto puede conducir a un número infinito de estados (conocidos como el "problema de la explosión de estado"), por lo que los verificadores de modelos se basan en técnicas de abstracción para hacer posible el análisis eficiente de los contratos inteligentes.
 
-### Prueba de teorema \{#theorem-proving}
+### Prueba de teorema {#theorem-proving}
 
 La prueba de teorema es un método de razonamiento matemático sobre la corrección de los programas, incluidos los contratos inteligentes. Implica transformar el modelo del sistema de un contrato y sus especificaciones en fórmulas matemáticas (declaraciones lógicas).
 
@@ -128,7 +128,7 @@ Mientras que la comprobación de modelos modela contratos como sistemas de trans
 
 Como resultado, a menudo se requiere asistencia humana para guiar al verificador de teoremas en la obtención de pruebas de corrección. El uso de asistencia humana en la verificación de teoremas hace que sea más costosa de usar que la verificación de modelos, que es totalmente automatizada.
 
-### Ejecución simbólica \{#symbolic-execution}
+### Ejecución simbólica {#symbolic-execution}
 
 La ejecución simbólica es un método para analizar un contrato inteligente mediante la ejecución de funciones utilizando _valores simbólicos_ (por ejemplo, `x > 5`) en lugar de _valores concretos_ (por ejemplo, `x == 5`). Como técnica de verificación formal, la ejecución simbólica se utiliza para razonar formalmente sobre las propiedades de nivel de rastreo en el código de un contrato.
 
@@ -156,15 +156,15 @@ function safe_add(uint x, uint y) returns(uint z){
 
 Un rastreo de ejecución que resulte en un desbordamiento de enteros tendría que satisfacer la fórmula: `z = x + y AND (z >= x) AND (z=>y) AND (z < x OR z < y)`. Es poco probable que se resuelva una fórmula de este tipo, por lo que servirá como prueba matemática de que la función `safe_add` nunca resulte en el desbordamiento de enteros.
 
-### ¿Por qué usar la verificación formal para los contratos inteligentes? \{#benefits-of-formal-verification}
+### ¿Por qué usar la verificación formal para los contratos inteligentes? {#benefits-of-formal-verification}
 
-#### Necesidad de fiabilidad \{#need-for-reliability}
+#### Necesidad de fiabilidad {#need-for-reliability}
 
 La verificación formal se utiliza para evaluar la corrección de los sistemas críticos para la seguridad cuya falla puede tener consecuencias devastadoras, como la muerte, lesiones o la ruina financiera. Los contratos inteligentes son aplicaciones de alto valor que controlan enormes cantidades de valor, y simples errores en el diseño pueden conducir a [pérdidas irrecuperables para los usuarios](https://www.freecodecamp.org/news/a-hacker-stole-31m-of-ether-how-it-happened-and-what-it-means-for-ethereum-9e5dc29e33ce/amp/). Sin embargo, la verificación formal de un contrato antes de la implementación puede aumentar las garantías de que funcionará como se espera una vez que se ejecute en la cadena de bloques.
 
 La fiabilidad es una cualidad muy deseada en cualquier contrato inteligente, especialmente porque el código implementado en la máquina virtual de Ethereum (EVM) suele ser inmutable. Dado que las actualizaciones posteriores al lanzamiento no son fácilmente accesibles, la necesidad de garantizar la fiabilidad de los contratos hace necesaria una verificación formal. La verificación formal es capaz de detectar problemas complicados, como desbordamientos hacia arriba y hacia abajo, el reingreso y optimizaciones de gas deficientes, que los auditores y los verificadores pueden pasar por alto.
 
-#### Demostrar la corrección funcional \{#prove-functional-correctness}
+#### Demostrar la corrección funcional {#prove-functional-correctness}
 
 Las pruebas de programa son el método más común para demostrar que un contrato inteligente cumple con algunos requisitos. Esto implica ejecutar un contrato con una muestra de los datos que se espera que maneje y analizar su comportamiento. Si el contrato devuelve los resultados esperados para los datos de muestra, entonces los desarrolladores tienen una prueba objetiva de su corrección.
 
@@ -174,13 +174,13 @@ Por el contrario, la verificación formal puede demostrar formalmente que un con
 
 Con la verificación formal, la cuestión de verificar si la lógica comercial de un contrato satisface los requisitos es una proposición matemática que puede ser probada o refutada. Al probar formalmente una proposición, podemos verificar un número infinito de casos de prueba con un número finito de pasos. De esta manera, la verificación formal tiene mejores perspectivas de demostrar que un contrato es funcionalmente correcto con respecto a una especificación.
 
-#### Objetivos de verificación ideales \{#ideal-verification-targets}
+#### Objetivos de verificación ideales {#ideal-verification-targets}
 
 Un objetivo de verificación describe el sistema que se verificará formalmente. La verificación formal se utiliza mejor en "sistemas integrados" (software pequeños y simples que forman parte de un sistema más grande). También son ideales para dominios especializados que tienen pocas reglas, ya que esto facilita la modificación de las herramientas para verificar las propiedades específicas del dominio.
 
 Los contratos inteligentes, al menos hasta cierto punto, cumplen con ambos requisitos. Por ejemplo, el pequeño tamaño de los contratos de Ethereum hace que sean adecuados para la verificación formal. Del mismo modo, la EVM sigue reglas simples, lo que facilita la especificación y verificación de las propiedades semánticas de los programas que se ejecutan en ella.
 
-### Ciclo de desarrollo más rápido \{#faster-development-cycle}
+### Ciclo de desarrollo más rápido {#faster-development-cycle}
 
 Las técnicas de verificación formal, como la verificación de modelos y la ejecución simbólica, son generalmente más eficientes que el análisis regular del código de los contratos inteligentes (realizado durante pruebas o auditorías). Esto se debe a que la verificación formal se basa en valores simbólicos para probar las afirmaciones ("¿qué pasa si un usuario intenta retirar _n_ ether?") a diferencia de las pruebas que utilizan valores concretos ("¿qué pasa si un usuario intenta retirar 5 ethers?").
 
@@ -188,29 +188,29 @@ Las variables de entrada simbólicas pueden cubrir múltiples clases de valores 
 
 La verificación formal también mejora el proceso de creación de aplicaciones descentralizadas (dapps), ya que reduce los costosos errores de diseño. La actualización de los contratos (cuando es posible) para corregir vulnerabilidades requiere una extensa reescritura de las bases de código y más esfuerzo invertido en el desarrollo. La verificación formal puede detectar muchos errores en las implementaciones de contratos que los verificadores y los auditores pueden pasar por alto, y proporciona una gran oportunidad de solucionar esos problemas antes de implementar un contrato.
 
-## Desventajas de la verificación formal \{#drawbacks-of-formal-verification}
+## Desventajas de la verificación formal {#drawbacks-of-formal-verification}
 
-### Coste del trabajo manual \{#cost-of-manual-labor}
+### Coste del trabajo manual {#cost-of-manual-labor}
 
 La verificación formal, especialmente la verificación semiautomatizada en la que un humano guía al verificador para obtener pruebas de corrección, requiere un trabajo manual considerable. Además, la creación de especificaciones formales es una actividad compleja que requiere un alto nivel de habilidad.
 
 Estos factores (esfuerzo y habilidad) hacen que la verificación formal sea más exigente y costosa en comparación con los métodos habituales para evaluar la corrección de los contratos, como las pruebas y las auditorías. No obstante, pagar el costo de una auditoría de verificación completa es práctico, teniendo en cuenta el costo de los errores en las implementaciones de contratos inteligentes.
 
-### Falsos negativos \{#false-negatives}
+### Falsos negativos {#false-negatives}
 
 La verificación formal solo puede comprobar si la ejecución del contrato inteligente coincide con la especificación formal. Como tal, es importante asegurarse de que la especificación describa correctamente los comportamientos esperados de un contrato inteligente.
 
 Si las especificaciones están mal escritas, las violaciones de las propiedades —que apuntan a ejecuciones vulnerables— no pueden ser detectadas por la auditoría de verificación formal. En este caso, un desarrollador podría asumir erróneamente que el contrato está libre de errores.
 
-### Problemas de rendimiento \{#performance-issues}
+### Problemas de rendimiento {#performance-issues}
 
 La verificación formal tiene una serie de problemas de rendimiento. Por ejemplo, los problemas de explosión de estado y ruta encontrados durante la comprobación de modelos y la comprobación simbólica, respectivamente, pueden afectar a los procedimientos de verificación. Además, las herramientas de verificación formal a menudo utilizan solucionadores SMT y otros solucionadores de restricciones en su capa subyacente, y estos solucionadores se basan en procedimientos computacionalmente intensivos.
 
 Además, no siempre es posible que los verificadores de programas determinen si una propiedad (descrita como una fórmula lógica) se puede satisfacer o no (el "[problema de decidibilidad](https://en.wikipedia.org/wiki/Decision_problem)") porque es posible que un programa nunca termine. Como tal, podría ser imposible probar algunas propiedades para un contrato, incluso si está bien especificado.
 
-## Herramientas de verificación formal para contratos inteligentes de Ethereum \{#formal-verification-tools}
+## Herramientas de verificación formal para contratos inteligentes de Ethereum {#formal-verification-tools}
 
-### Lenguajes de especificación para crear especificaciones formales \{#specification-languages}
+### Lenguajes de especificación para crear especificaciones formales {#specification-languages}
 
 **Act**: \_\*Act permite la especificación de actualizaciones de almacenamiento, pre/poscondiciones e invariantes del contrato. Su conjunto de herramientas también tiene backends de prueba capaces de probar muchas propiedades a través de Coq, solucionadores SMT o hevm.\*\*
 
@@ -225,7 +225,7 @@ Además, no siempre es posible que los verificadores de programas determinen si 
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
-### Verificadores de programas para comprobar la corrección \{#program-verifiers}
+### Verificadores de programas para comprobar la corrección {#program-verifiers}
 
 **Certora Prover:** _Certora Prover es una herramienta de verificación formal automática para comprobar la corrección del código en contratos inteligentes. Las especificaciones están escritas en CVL (Certora Verification Language), y las violaciones de propiedad se detectan mediante una combinación de análisis estático y resolución de restricciones. _
 
@@ -245,7 +245,7 @@ Además, no siempre es posible que los verificadores de programas determinen si 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [Documentación](https://jellopaper.org/)
 
-### Marcos lógicos para la prueba de teoremas \{#theorem-provers}
+### Marcos lógicos para la prueba de teoremas {#theorem-provers}
 
 **Isabelle:** _Isabelle/HOL es un asistente de prueba que permite expresar fórmulas matemáticas en lenguaje formal y proporciona herramientas para probar esas fórmulas. La aplicación principal es la formalización de pruebas matemáticas y, en particular, la verificación formal, que incluye probar la corrección de hardware o software informático y probar las propiedades de lenguajes y protocolos informáticos. _
 
@@ -257,7 +257,7 @@ Además, no siempre es posible que los verificadores de programas determinen si 
 - [GitHub](https://github.com/coq/coq)
 - [Documentación](https://coq.github.io/doc/v8.13/refman/index.html)
 
-### Herramientas basadas en la ejecución simbólica para detectar patrones vulnerables en contratos inteligentes \{#symbolic-execution-tools}
+### Herramientas basadas en la ejecución simbólica para detectar patrones vulnerables en contratos inteligentes {#symbolic-execution-tools}
 
 **Manticore:** \__Manticore es una herramienta de ejecución simbólica para el análisis de contratos inteligentes_. \*
 
@@ -273,7 +273,7 @@ Además, no siempre es posible que los verificadores de programas determinen si 
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [Documentación](https://mythril-classic.readthedocs.io/en/develop/)
 
-## Para mayor información \{#further-reading}
+## Para mayor información {#further-reading}
 
 - [Cómo funciona la verificación formal de los contratos inteligentes](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
 - [Cómo la verificación formal puede garantizar contratos inteligentes sin errores](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)

@@ -13,7 +13,7 @@ source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
-## Elenco di controllo per lo sviluppo di smart contract \{#smart-contract-development-checklist}
+## Elenco di controllo per lo sviluppo di smart contract {#smart-contract-development-checklist}
 
 Ecco un processo d'alto livello che consigliamo di seguire per la scrittura degli smart contract.
 
@@ -49,7 +49,7 @@ Infine, ricordati dei problemi che gli strumenti automatizzati non possono facil
 - Operazioni crittografiche
 - Interazioni rischiose con componenti esterni della DeFi
 
-## Chiedi aiuto \{#ask-for-help}
+## Chiedi aiuto {#ask-for-help}
 
 [Orari lavorativi di Ethereum](https://calendly.com/dan-trailofbits/ethereum-office-hours): ogni martedì pomeriggio. Queste sessioni 1 a 1 di un'ora sono un'opportunità per farci domande sulla sicurezza, la risoluzione dei problemi usando i nostri strumenti e la ricezione di feedback dagli esperti sul tuo approccio corrente. Ti aiuteremo ad arrivare in fondo a questa guida.
 

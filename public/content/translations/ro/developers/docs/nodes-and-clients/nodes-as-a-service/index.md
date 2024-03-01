@@ -5,15 +5,15 @@ lang: ro
 sidebarDepth: 2
 ---
 
-## Introducere \{#Introduction}
+## Introducere {#Introduction}
 
 Rularea propriului dvs. [nod Ethereum](/developers/docs/nodes-and-clients/#what-are-nodes-and-clients) poate fi o provocare, mai ales la început sau la scalarea rapidă. Există o [serie de servicii](#popular-node-services) care rulează infrastructuri de noduri optimizate pentru dvs., astfel încât să vă puteţi axa pe dezvoltarea aplicației sau a produsului mai degrabă. Vă vom explica modul cum funcționează serviciile nodurilor, avantajele și dezavantajele utilizării acestora și vom enumera câțiva furnizori, dacă sunteţi interesat să începeţi.
 
-## Condiții prealabile \{#prerequisites}
+## Condiții prealabile {#prerequisites}
 
 Dacă nu aţi înțeles încă ce sunt nodurile și clienții, consultaţi secţiunea [Noduri și clienți](/developers/docs/nodes-and-clients/).
 
-## Cum funcționează serviciile nodurilor? \{#how-do-node-services-work}
+## Cum funcționează serviciile nodurilor? {#how-do-node-services-work}
 
 Furnizorii de servicii de noduri rulează în culise clienți de noduri distribuite pentru dvs., ca să nu fiţi nevoit să o faceţi dvs.
 
@@ -27,19 +27,19 @@ De multe ori serviciile de noduri vor rula o varietate de [clienți noduri](/dev
 
 Este important de reţinut că serviciile nodurilor nu stochează și nu ar trebui să stocheze cheile sau informațiile dvs. private.
 
-## Care sunt avantajele utilizării unui serviciu de noduri? \{#benefits-of-using-a-node-service}
+## Care sunt avantajele utilizării unui serviciu de noduri? {#benefits-of-using-a-node-service}
 
 Principalul avantaj al utilizării unui serviciu de noduri este că nu trebuie să petreceţi timp cu ingineria, pentru a întreţine şi gestiona nodurile dvs. înşivă. Acest lucru vă permite să vă axaţi pe construirea produsului dvs., mai degrabă decât să vă îngrijiţi de întreţinerea infrastructurii.
 
 Rularea propriilor noduri poate fi foarte costisitoare, de la stocare și lățime de bandă până la timpul preţios de inginerie. Things like spinning up more nodes when scaling, upgrading nodes to the latest versions, and ensuring state consistency, can distract from building and spending resources on your desired web3 product.
 
-## Care sunt dezavantajele utilizării unui serviciu de noduri? \{#cons-of-using-a-node-service}
+## Care sunt dezavantajele utilizării unui serviciu de noduri? {#cons-of-using-a-node-service}
 
 Prin utilizarea unui serviciu de noduri, centralizaţi aspectul infrastructurii produsului dvs. Din acest motiv, proiectele care consideră descentralizarea ca lucrul cel mai important ar putea prefera nodurile cu auto-găzduire, mai degrabă decât externalizarea către un terţ.
 
 Citiţi mai multe despre [beneficiile rulării propriului nod](/developers/docs/nodes-and-clients/#benefits-to-you).
 
-## Servicii de noduri cunoscute \{#popular-node-services}
+## Servicii de noduri cunoscute {#popular-node-services}
 
 Iată o listă cu unii dintre cei mai cunoscuți furnizori de noduri Ethereum; nu ezitaţi să mai adăugaţi dacă lipsesc! Fiecare serviciu de noduri oferă avantaje și funcţionalităţi diferite, în plus față de nivelurile gratuite sau plătite; investigaţi care dintre ele vă convin înainte de a lua o decizie.
 
@@ -203,15 +203,15 @@ Iată o listă cu unii dintre cei mai cunoscuți furnizori de noduri Ethereum; n
     - Resource scaling
     - High processing speeds
 
-## Referințe suplimentare \{#further-reading}
+## Referințe suplimentare {#further-reading}
 
 - [Lista serviciilor de noduri Ethereum](https://ethereumnodes.com/)
 
-## Subiecte corelate \{#related-topics}
+## Subiecte corelate {#related-topics}
 
 - [Noduri și clienți](/developers/docs/nodes-and-clients/)
 
-## Tutoriale corelate \{#related-tutorials}
+## Tutoriale corelate {#related-tutorials}
 
 - [Noțiuni introductive despre dezvoltarea Ethereum folosind Alchemy](/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/)
 - [Ghid pentru trimiterea tranzacțiilor folosind web3 și Alchemy](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)

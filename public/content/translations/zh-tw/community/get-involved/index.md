@@ -4,13 +4,13 @@ description: 如何加入以太坊社群
 lang: zh-tw
 ---
 
-# 我該如何參與？ \{#get-involved}
+# 我該如何參與？ {#get-involved}
 
 以太坊社群裡包含了具有各種不同背景跟技術的人。 無論你是開發者、藝術家或是會計師，你總會找到方法參與我們的社群。 以下建議可幫助你踏出第一步。
 
 由閱讀[行為守則](/community/code-of-conduct)中 ethereum.org 的使命與核心價值開始。
 
-## 程式開發人員<Emoji text=":computer:" size={1} /> \{#developers}
+## 程式開發人員<Emoji text=":computer:" size={1} /> {#developers}
 
 - 造訪 [ethereum.org/developers/](/developers/)，瞭解和嘗試使用以太坊
 - [從 Gitcoin 獲得賞金](https://gitcoin.co/)，透過解決大小技術問題來賺取加密貨幣！
@@ -21,7 +21,7 @@ lang: zh-tw
 - [Web3Bridge](https://www.web3bridge.com/) - 加入有抱負的 Web3 社群，一起積極尋找、培訓和支持整個非洲數百名開發人員和社群成員
 - 加入[以太坊牧貓人組織 Discord](https://discord.io/EthCatHerders)
 
-## 研究人員和學術工作者 <Emoji text=":mag:" size={1} /> \{#researchers-and-academics}
+## 研究人員和學術工作者 <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 你有數學、虛擬貨幣或者經濟學相關的學術背景嗎？ 你可能會對以太坊生態中的一些前線工作有興趣。
 
@@ -42,61 +42,61 @@ lang: zh-tw
 
 [探索更多活躍的研究領域](/community/research/)。
 
-## 非技術性參與選項 <Emoji text=":briefcase:" size={1} /> \{#non-technical}
+## 非技術性參與選項 <Emoji text=":briefcase:" size={1} /> {#non-technical}
 
 如果你不是程式開發人員，在以太坊中，你可能會不知道該從哪裡開始。 這裡提供了一些建議，還有一些為特定專業背景人士提供的資源。
 
-### 在你所在城市籌備一場聚會 \{#meetups}
+### 在你所在城市籌備一場聚會 {#meetups}
 
 - 不知道從哪開始？ [BUIDL 網路](https://consensys.net/developers/buidlnetwork/)幫得上忙。
 
-### 撰寫以太坊相關的內容 \{#write-content}
+### 撰寫以太坊相關的內容 {#write-content}
 
 - 以太坊需要好的作者用簡單易懂的文字讓人了解以太坊
 - 還沒準備好發表自己的文章？ 可以考慮就社群資源中既有的內容進行協助，或者[提出有關 ethereum.org 的新內容建議](/contributing/)！
 
-### 值得留意的社群招募 \{#take-notes}
+### 值得留意的社群招募 {#take-notes}
 
 - 有很多開源的社群招募，眾多討論筆記更是一大助力。 如你對此有興趣，請加入[以太坊牧貓人組織 discord](https://discord.com/invite/Nz6rtfJ8Cu)，並介紹你自己吧！
 
-### 把以太坊的內容翻譯成自己的母語 \{#translate-ethereum}
+### 把以太坊的內容翻譯成自己的母語 {#translate-ethereum}
 
 - ethereum.org 一直有個翻譯計畫，將網站和其他資源翻譯成不同語言
 - 從[這裡](/contributing/translation-program)了解參加的方法
 
-### 運行一節點 \{#run-a-node}
+### 運行一節點 {#run-a-node}
 
 跟數千名節點營運者一起讓以太坊進一步去中心化。
 
 - [有關如何運行節點的詳細資訊](/developers/docs/nodes-and-clients/run-a-node/)
 
-### 質押你的以太幣 \{#staking}
+### 質押你的以太幣 {#staking}
 
 透過質押你的以太幣來保護太坊網路並獲取酬勞。
 
 - [更多權益質押相關訊息。](/staking/)
 
-### 支援專案 \{#support-projects}
+### 支援專案 {#support-projects}
 
 以太坊生態系統正在進行一項任務，即尋找有益於公眾且有影響力的專案。 僅需非常小額的捐款，就能表達你對此的支援，從而實現重要工作。
 
 - [Gitcoin](https://gitcoin.co/fund)
 - [clr.fund](https://clr.fund/#/about)
 
-## 金融從業人員和會計師<Emoji text=":chart_with_upwards_trend:" size={1} /> \{#financial-professionals}
+## 金融從業人員和會計師<Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
 - 以太坊是「去中心化金融」生態系統的發源地 - 這是一個擁有各種協議與應用程式的網路，可以視為一種金融系統。 如果你是金融從業人員，可以到 [DeFi Llama](https://defillama.com/) 或 [DeFiPrime](https://defiprime.com) 查看我們的去中心化金融應用程式
 - 你是會計師？ 以太坊的資產 - 以太幣、代幣、去中心化金融等 - 新興會計議題有很多。 你可以先查看一些旨在幫助加密貨幣使用者解決記帳問題和會計挑戰的專案計畫，例如 [Rotki](https://rotki.com/)
 
-## 產品經理 <Emoji text=":fountain_pen:" size={1} /> \{#product-managers}
+## 產品經理 <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
 - 以太坊生態系統需要你的才華！ 很多公司都在招聘產品經理。 如你想要從公開招募的專案著手，請聯絡[以太坊牧貓人組織](https://discord.com/invite/Nz6rtfJ8Cu)或[元同業聯盟](https://www.metacartel.org/)。
 
-## 市場策劃人員 <Emoji text=":megaphone:" size={1} /> \{#marketing}
+## 市場策劃人員 <Emoji text=":megaphone:" size={1} /> {#marketing}
 
 - 以太坊生態系統內設有非常多市場策劃和溝通人員的職位！
 
-## 以太坊工作 \{#ethereum-jobs}
+## 以太坊工作 {#ethereum-jobs}
 
 **想在以太坊尋找工作？**
 
@@ -115,7 +115,7 @@ lang: zh-tw
 - [以太坊工作](https://startup.jobs/ethereum-jobs)
 - [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
-## 加入去中心化自治組織 (DAO) \{#decentralized-autonomous-organizations-daos}
+## 加入去中心化自治組織 (DAO) {#decentralized-autonomous-organizations-daos}
 
 「DAO」是指去中心化自治組織。 這些群體會利用以太坊技術加速整合及合作。 例如，為了控制會員，他們會針對提案進行投票，或者管理質押池內的資產。 當去中心化自治組織仍維持在試驗狀態時，他們讓你有機會去尋找你認同的群體、合作者，然後在以太坊的社群內培養你的影響力。 [更多去中心化自治組織相關資訊](/dao/)
 

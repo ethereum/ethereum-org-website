@@ -4,7 +4,7 @@ description: La tecnologia del validatore distribuito consente l'operazione dist
 lang: it
 ---
 
-# Tecnologia del validatore distribuito \{#distributed-validator-technology}
+# Tecnologia del validatore distribuito {#distributed-validator-technology}
 
 La tecnologia del validatore distribuito (DVT) è un approccio alla sicurezza del validatore che distribuisce le responsabilità di gestione delle chiavi e firma tra più parti, per ridurre i singoli punti di guasto e incrementare la resilienza del validatore.
 
@@ -12,21 +12,21 @@ Lo fa **dividendo la chiave privata** utilizzata per proteggere un validatore **
 
 ![Un diagramma che mostra come una singola chiave del validatore è divisa in parti e distribuita su più nodi, con componenti diversi.](./dvt-cluster.png)
 
-## Perché ci occorre la DVT? \{#why-do-we-need-dvt}
+## Perché ci occorre la DVT? {#why-do-we-need-dvt}
 
-### Sicurezza \{#security}
+### Sicurezza {#security}
 
 I validatori generano due coppie di chiavi pubblica-privata: le chiavi del validatore per partecipare al consenso e le chiavi di prelievo per accedere ai fondi. Mentre i validatori possono proteggere le chiavi di prelievo nell'archiviazione a freddo, le chiavi private del validatore devono essere sempre online. Se una chiave privata del validatore è compromessa, un utente malevolo può controllare il validatore, portando potenzialmente al frazionamento o alla perdita degli ETH dello staker. La DVT può aiutare a mitigare tale rischio. Ecco come:
 
 Utilizzando la DVT, gli staker possono partecipare allo staking mantenendo la chiave privata del validatore in archiviazione a freddo. Ciò è possibile crittografando la chiave originale del validatore completo e quindi dividendola in parti. Le parti di chiave risiedono online e sono distribuite a più nodi, che consentono l'operazione distribuita del validatore. Ciò è possibile perché i validatori di Ethereum utilizzano le firme BLS, che sono additive, il che significa che la chiave intera è ricostruibile sommandone le parti componenti. Ciò consente allo staker di mantenere in sicurezza offline la chiave "principale" del validatore intera e originale.
 
-### Nessun punto di guasto singolo \{#no-single-point-of-failure}
+### Nessun punto di guasto singolo {#no-single-point-of-failure}
 
 Quando un validatore è diviso tra più operatori e macchine, può resistere a singoli guasti hardware e software, senza andare offline. Il rischio di guasti è inoltre riducibile utilizzando configurazioni hardware e software differenti tra i nodi di un cluster. Questa resilienza non è disponibile per le configurazioni del validatore a nodo singolo; proviene dal livello della DVT.
 
 Se uno dei componenti di una macchina in un cluster si guasta (ad esempio, se ci sono quattro operatori in un cluster del validatore e uno utilizza un client specifico avente un bug), gli altri assicurano che il validatore resti in esecuzione.
 
-### Decentralizzazione \{#decentralization}
+### Decentralizzazione {#decentralization}
 
 Lo scenario ideale per Ethereum è avere quanti più validatori operati indipendentemente possibili. Tuttavia, alcuni fornitori di staking sono diventati molto popolari e rappresentano una porzione sostanziale degli ETH in staking totali sulla rete. La DVT può consentire a questi operatori di esistere, preservando la decentralizzazione dello stake. Questo perché le chiavi per ogni validatore sono distribuite tra molte macchine, e sarebbe necessaria una collusione molto maggiore, affinché un validatore diventi dannoso.
 
@@ -42,7 +42,7 @@ Senza la DVT, è più facile per i fornitori di staking supportare soltanto una 
 6. **Migliora la diversità** (client, data center, posizione, regolamentazione, ecc.)
 7. **Sicurezza migliorata** della gestione della chiave del validatore
 
-## Come funziona la DVT? \{#how-does-dvt-work}
+## Come funziona la DVT? {#how-does-dvt-work}
 
 Una soluzione DVT contiene i seguenti componenti:
 
@@ -54,21 +54,21 @@ Una soluzione DVT contiene i seguenti componenti:
 
 I validatori distribuiti hanno una tolleranza al guasto integrata e possono continuare a funzionare anche se alcuni nodi singoli sono offline. Ciò significa che il cluster è resiliente anche se alcuni dei nodi al suo interno risultano essere dannosi o "pigri".
 
-## Casi d'uso della DVT \{#dvt-use-cases}
+## Casi d'uso della DVT {#dvt-use-cases}
 
 La DVT ha implicazioni significative per il più ampio settore dello staking:
 
-### Staker in solo \{#solo-stakers}
+### Staker in solo {#solo-stakers}
 
 Inoltre, la DVT consente lo staking non custodito, permettendoti di distribuire la chiave del tuo validatore tra i nodi remoti pur mantenendo la chiave completa interamente offline. Ciò significa che gli staker domestici non devono per forza sborsare per l'hardware distribuendo le parti di chiave che aiutano a rafforzarli contro potenziali attacchi.
 
-### Staking come servizio (SaaS) \{#saas}
+### Staking come servizio (SaaS) {#saas}
 
 Gli operatori (quali gruppi di staking e staker istituzionali) che gestiscono molti validatori, possono utilizzare la DVT per ridurre i propri rischi. Distribuendo la propria infrastruttura, possono aggiungere ridondanza alle proprie operazioni e diversificare i tipi di hardware che utilizzano.
 
 La DVT condivide la responsabilità della gestione delle chiavi tra più nodi, a significare che anche i costi operativi sono condivisibili. La DVT, inoltre, può ridurre il rischio operativo e i costi assicurativi per i fornitori di staking.
 
-### Pool di staking \{#staking-pools}
+### Pool di staking {#staking-pools}
 
 A causa delle configurazioni standard dei validatori, i gruppi di staking e i fornitori di staking liquido sono costretti ad avere livelli variabili di fiducia nel singolo operatore, poiché guadagni e perdite sono socializzati in tutto il gruppo. Inoltre, si affidano agli operatori per salvaguardare le chiavi di firma, poiché, finora, non c'erano altre opzioni per farlo.
 
@@ -78,13 +78,13 @@ Facendo leva sulla DVT, la fiducia degli operatori è richiesta molto meno. **I 
 
 Un altro beneficio per minimizzare la fiducia del singolo operatore è che i gruppi di staking possono consentire una partecipazione dell'operatore più aperta e priva di autorizzazioni. Così, i servizi possono ridurre il rischio e supportare la decentralizzazione di Ethereum, utilizzando serie di operatori curate e prive di autorizzazioni, ad esempio associando gli staker domestici o minori a quelli più grandi.
 
-## Potenziali svantaggi dell'utilizzo della DVT \{#potential-drawbacks-of-using-dvt}
+## Potenziali svantaggi dell'utilizzo della DVT {#potential-drawbacks-of-using-dvt}
 
 - **Componente aggiuntivo**: introdurre un nodo DVT aggiunge un'altra parte che potrebbe essere difettosa o vulnerabile. Un modo per mitigare tale problema è sforzarsi per maggiori implementazioni di un nodo DVT, quindi, di più client DVT (analogamente al fatto che esistono più client per i livelli del consenso e dell'esecuzione).
 - **Costi operativi**: poiché la DVT distribuisce il validatore tra più parti, sono necessari più nodi per l'operazione, invece di un singolo nodo, introducendo costi operativi maggiori.
 - **Latenza potenzialmente incrementata**: poiché la DVT utilizza un protocollo di consenso per raggiungere il consenso tra più nodi che operano un validatore, potrebbe introdurre una maggiore latenza.
 
-## Letture consigliate \{#further-reading}
+## Letture consigliate {#further-reading}
 
 - [Specifiche del validatore distribuito di Ethereum (alto livello)](https://github.com/ethereum/distributed-validator-specs)
 - [Specifiche tecniche del validatore distribuito di Ethereum](https://github.com/ethereum/distributed-validator-specs/tree/dev/src/dvspec)

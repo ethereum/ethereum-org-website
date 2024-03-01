@@ -13,7 +13,7 @@ lang: fr
 published: 2020-11-14
 ---
 
-## À quoi sert ce tutoriel ? \{#what-is-this-tutorial-about}
+## À quoi sert ce tutoriel ? {#what-is-this-tutorial-about}
 
 Dans ce tutoriel, vous apprendrez comment :
 
@@ -26,11 +26,11 @@ Prérequis :
 - vous vous débrouillez en `JavaScript` et en `TypeScript`
 - vous avez fait d'autres tutoriels `Waffle` ou vous connaissez deux ou trois choses à ce sujet
 
-## Bouchonnage dynamique \{#dynamic-mocking}
+## Bouchonnage dynamique {#dynamic-mocking}
 
 Pourquoi le bouchonnage dynamique est-il utile ? Eh bien, il nous permet de rédiger des tests unitaires plutôt que des tests d'intégration. Qu'est-ce que cela signifie ? Cela signifie que nous n'avons pas à nous soucier des dépendances des contrats intelligents, donc que nous pouvons tous les tester de façon isolée. Laissez-moi vous montrer comment procéder.
 
-### **1. Projet** \{#1-project}
+### **1. Projet** {#1-project}
 
 Avant de commencer, nous avons besoin de préparer un simple projet node.js :
 
@@ -69,7 +69,7 @@ La structure de votre projet devrait ressembler à ceci :
 └── test
 ```
 
-### **2. Contrat intelligent** \{#2-smart-contract}
+### **2. Contrat intelligent** {#2-smart-contract}
 
 Pour démarrer un bouchonnage dynamique, nous avons besoin d'un contrat intelligent avec des dépendances. Ne t'inquiètes pas, nous assurons tes arrières !
 
@@ -118,7 +118,7 @@ npx waffle
 
 Facile, n'est-ce pas? Dans le dossier `build/`, deux fichiers correspondant au contrat et à l'interface apparaissent. Nous les utiliserons plus tard pour les tests.
 
-### **3. Tests** \{#3-testing}
+### **3. Tests** {#3-testing}
 
 Nous allons créer un fichier appelé `AmIRichAlready.test.ts` pour le test actuel. Tout d'abord, nous devons gérer les importations. Nous en aurons besoin pour plus tard:
 
@@ -253,7 +253,7 @@ Vous exécutez les tests...
 
 Et voici où tu en es! Notre contrat semble fonctionner comme prévu :)
 
-## Test des appels de contrat \{#testing-contract-calls}
+## Test des appels de contrat {#testing-contract-calls}
 
 Résumons ce qui a été fait jusqu'à présent. Nous avons testé la fonctionnalité de notre contrat `AmIRichalready` et il semble qu'il fonctionne correctement. Cela signifie que nous avons terminé, n'est-ce pas? Pas exactement ! Waffle nous permet de tester encore plus notre contrat. Mais comment exactement ? Eh bien, dans l'arsenal de Waffle, il y a une correspondance entre `calledOnContract()` et `calledOnContractWith()`. Cela va nous permettre de vérifier si notre contrat a appelé le contrat fictif ERC20. Voici un test de base avec l'une de ces correspondance:
 
@@ -285,7 +285,7 @@ Super, tous les tests sont verts.
 
 Tester des appels de contrats avec Waffle est super facile. Et voici la meilleure partie. Ces matchers fonctionnent à la fois avec des contrats normaux et fictifs ! C'est parce que Waffle enregistre et filtre les appels EVM plutôt que d'injecter du code, comme c'est le cas des bibliothèques de test populaires pour d'autres technologies.
 
-## La fin \{#the-finish-line}
+## La fin {#the-finish-line}
 
 Félicitations ! Maintenant vous savez comment utiliser Waffle pour tester dynamiquement les appels de contrats et les contrats fictifs. Il y a beaucoup plus de fonctionnalités intéressantes à découvrir. Je recommande de plonger dans la documentation de Waffle.
 

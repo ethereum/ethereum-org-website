@@ -6,11 +6,11 @@ lang: es
 
 Las pruebas de conocimiento cero (ZK-rollups) son soluciones [soluciones de escalabilidad](/developers/docs/scaling/) de segunda capa que incrementan el rendimiento de la red principal de Ethereum, gracias a que mueven la gran mayoría del trabajo computacional y el almacenamiento fuera de la cadena principal. Los ZK-rollups pueden procesar miles de transacciones en un lote y luego pasar solo algunos de los datos mínimos y necesarios hacia la red principal. Estos datos en resúmen, definen los cambios que deben hacerse en Ethereum, y realizar pruebas criptográficas de que esos cambios y resultados finales son correctos.
 
-## Requisitos previos \{#prerequisites}
+## Requisitos previos {#prerequisites}
 
 Debe haber leído y comprendido el tema [Escalamiento de Ethereum](/developers/docs/scaling/) y [capa 2](/layer-2).
 
-## ¿Qué son las pruebas de conocimiento cero (ZK)? \{#what-are-zk-rollups}
+## ¿Qué son las pruebas de conocimiento cero (ZK)? {#what-are-zk-rollups}
 
 **Pruebas de conocimiento cero (ZK-rollups)** son paquetes acumulativos que «enrollan» las transacciones para que se ejecuten fuera de la cadena principal. La computación fuera de la cadena principal reduce la cantidad de datos que tienen que procesarse en la cadena de bloques. Los operadores de ZK-rollups presentan un resumen de los cambios necesarios para representar todas las transacciones en un lote en lugar de enviar cada transacción individualmente. También llevan a cabo [pruebas de su validez](/glossary/#validity-proof) para demostrar la exactitud de sus cambios y resultados finales.
 
@@ -20,7 +20,7 @@ La ejecucíon tardará poco tiempo, ya que cuando se mueven los activos de un ZK
 
 Los ZK-rollups escriben transacciones en Ethereum como `calldata` (o datos de llamada). En los `calldata` se almacenan los datos incluidos en las llamadas externas a funciones del contrato inteligente. La información en `calldata` se publica en la cadena de bloques, permitiendo que cualquiera reconstruya el estado del rollup de forma independiente. Los ZK-rollup utilizan técnicas de compresión para reducir los datos de las transacciones: por ejemplo, las cuentas están representadas por un índice en lugar de una dirección, que ahorra unos 28 bytes en datos. La publicación de datos dentro de la cadena tiene un coste significativo para los rollups, por lo que la compresión de datos puede reducir las tarifas para los usuarios.
 
-## ¿Cómo interactúan los ZK-rollups con Ethereum? \{#zk-rollups-and-ethereum}
+## ¿Cómo interactúan los ZK-rollups con Ethereum? {#zk-rollups-and-ethereum}
 
 Los ZK-rollup tienen un protocolo que se encuentra fuera de la cadena y que funciona apoyándose en la cadena de bloque de Ethereum, la cual ese gestiona mdiante contratos inteligentes dentro de la misma cadena de bloque. Los ZK-rollups ejecutan transacciones fuera de la red principal, aunque realizan lotes de transacciones periódicamente fuera de la cadena a un contrato de rollup dentro de la cadena. Este registro de transacciones es inmutable, al igual que ocurre en la cadena de bloque de Ethereum y forma la cadena de ZK-rollups.
 
@@ -34,7 +34,7 @@ Los ZK-rollups son «soluciones híbridas de escalabilidad», protocolos fuera d
 
 Los ZK-rollups se basan en el protocolo principal de Ethereum para lo siguiente:
 
-### Disponibilidad de datos \{#data-availability}
+### Disponibilidad de datos {#data-availability}
 
 Los ZK-rollups publican datos de estado para cada transacción procesada fuera de la cadena a Ethereum. Con estos datos, es posible que las personas o las empresas reproduzcan el estado del rollup y validen la cadena por sí mismas. Ethereum pone estos datos a disposición de todos los participantes de la red como `calldata`.
 
@@ -42,31 +42,31 @@ Los ZK-rollups no necesitan publicar muchos datos de transacciones en cadena, po
 
 Se requiere en cadena para que los usuarios interactúen con el rollup. Sin acceso a los datos de estado, los usuarios no pueden consultar el saldo de su cuenta o iniciar transacciones (por ejemplo, retiradas) que se basen en la información sobre el estado.
 
-### Finalidad de la transacción \{#transaction-finality}
+### Finalidad de la transacción {#transaction-finality}
 
 Ethereum actúa como una capa de liquidación para los ZK-rollups: las transacciones L2 se finalizan solo si el contrato L1 acepta la prueba de validez. Esto elimina el riesgo de que los operadores maliciosos corrompan la cadena (por ejemplo, el robo de fondos rollup), ya que cada transacción debe aprobarse en la red principal. Además, Ethereum garantiza que las operaciones de los usuarios no se pueden revertir una vez finalizadas en L1.
 
-### Resistencia a la censura \{#censorship-resistance}
+### Resistencia a la censura {#censorship-resistance}
 
 La mayoría de los ZK-rollups utilizan un «supernodo» (el operador) para ejecutar transacciones, producir lotes y enviar bloques a L1. Si bien esto garantiza la eficiencia, aumenta el riesgo de censura: los operadores maliciosos de ZK-rollup pueden censurar a los usuarios al negarse a incluir sus transacciones en lotes.
 
 Como medida de seguridad, los ZK-rollups permiten a los usuarios enviar transacciones directamente al contrato de rollup en la red principal si creen que están siendo censurados por el operador. Esto permite a los usuarios forzar una salida del ZK-rollup a Ethereum sin tener que depender del permiso del operador.
 
-## ¿Cómo funcionan los ZK-rollups? \{#how-do-zk-rollups-work}
+## ¿Cómo funcionan los ZK-rollups? {#how-do-zk-rollups-work}
 
-### Transacciones \{#transactions}
+### Transacciones {#transactions}
 
 Los usuarios del ZK-rollup firman las transacciones y las envían a los operadores de L2 para su procesamiento e inclusión en el siguiente lote. En algunos casos, el operador es una entidad centralizada, llamada secuenciador, que ejecuta transacciones, las añade en lotes y las envía a L1. El secuenciador de este sistema es la única entidad a la que se le permite producir bloques L2 y añadir transacciones acumuladas al contrato de ZK-rollup.
 
 Otros ZK-rollups pueden rotar el rol de operador utilizando un conjunto de validadores [prueba de participación](/developers/docs/consensus-mechanisms/pos/). Los posibles operadores depositan fondos en el contrato de rollup. El tamaño de cada participación influye en las posibilidades que el participante tiene de ser seleccionado para producir el próximo lote de rollup. La participación del operador se puede reducir si actúa de forma maliciosa, lo que los incentiva a publicar bloques válidos.
 
-#### Cómo los ZK-rollups publican datos de transacciones en Ethereum \{#how-zk-rollups-publish-transaction-data-on-ethereum}
+#### Cómo los ZK-rollups publican datos de transacciones en Ethereum {#how-zk-rollups-publish-transaction-data-on-ethereum}
 
 Tal y como se ha explicado, los datos de las transacciones se publican en Ethereum como `calldata` (o datos de llamada). `Calldata` es un área de datos en un contrato inteligente que se utiliza para pasar argumentos a una función y se comporta de manera similar a una [memoria](/developers/docs/smart-contracts/anatomy/#memory). Si bien los `calldata` no se almacenan como parte del estado de Ethereum, persisten en la cadena como parte de los [registros de historial de la cadena Ethereum](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html?highlight=memory#logs). `Calldata` no afecta al estado de Ethereum, por lo que es una forma barata de almacenar datos en cadena.
 
 La palabra clave `calldata` a menudo identifica el método de contrato inteligente que llama una transacción y contiene entradas para el método en forma de una secuencia arbitraria de bytes. Los ZK-rollups utilizan los `calldata` para publicar datos de transacciones comprimidas en cadena; el operador rollup simplemente añade un nuevo lote llamando a la función requerida en el contrato rollup y pasa los datos comprimidos como argumentos de función. Esto ayuda a reducir los costes de los usuarios, ya que gran parte de las tarifas de los rollups se destinan al almacenamiento de datos de transacciones en la cadena.
 
-### Compromisos de estado \{#state-commitments}
+### Compromisos de estado {#state-commitments}
 
 El estado del ZK-rollup, que incluye cuentas y saldos L2, se representa como un [árbol de Merkle](/whitepaper/#merkle-trees). Un hash criptográfico de la raíz del árbol Merkle (raíz Merkle) se almacena en el contrato en cadena, lo que permite que el protocolo rollup realice un seguimiento de los cambios en el estado del ZK rollup.
 
@@ -74,7 +74,7 @@ Las transacciones del rollup pasan a un nuevo estado después de la ejecución d
 
 Además de calcular las raíces de estado, el operador ZK-rollup también crea una raíz de lote, la raíz de un árbol de Merkle que comprende todas las transacciones en un lote. Cuando se envía un nuevo lote, el contrato acumulable almacena la raíz del lote, lo que permite a los usuarios probar que una transacción (por ejemplo, una solicitud de retirada) se ha incluido en el lote. Los usuarios tendrán que proporcionar los detalles de la transacción, la raíz del lote y una [prueba de Merkle](/developers/tutorials/merkle-proofs-for-offline-data-integrity/) que muestre la ruta de inclusión.
 
-### Pruebas de validez \{#validity-proofs}
+### Pruebas de validez {#validity-proofs}
 
 La nueva raíz de estado que el operador de ZK-rollup envía al contrato L1 es el resultado de las actualizaciones del estado del rollup. Digamos que Alice envía 10 tókenes a Bob, el operador simplemente disminuye el saldo de Alice en 10 e incrementa el saldo de Bob en otros 10. A continuación, el operador hace un hash de los datos actualizados de la cuenta, reconstruye el árbol de Merkle del rollup y envía la nueva raíz de Merkle al contrato en cadena.
 
@@ -104,7 +104,7 @@ Los ZK-STARK también proporcionan más escalabilidad, ya que el tiempo necesari
 
 Los ZK-STARK también son seguros contra los ordenadores cuánticos, mientras que se cree que la criptografía de curva elíptica (ECC) utilizada en los ZK-SNARK es susceptible a los ataques de computación cuántica. La desventaja de los ZK-STARK es que producen unos tamaños de prueba más grandes que son más caros de verificar en Ethereum.
 
-#### ¿Cómo funcionan las pruebas de validez en los ZK-rollups? \{#validity-proofs-in-zk-rollups}
+#### ¿Cómo funcionan las pruebas de validez en los ZK-rollups? {#validity-proofs-in-zk-rollups}
 
 ##### Generación de pruebas
 
@@ -146,7 +146,7 @@ Después de que el circuito de prueba verifique la exactitud de las actualizacio
 
 Si la prueba satisface el circuito (es decir, es válida), significa que existe una secuencia de transacciones válidas que hacen la transición del rollup del estado anterior (criptada criptográficamente por la raíz preestado) a un nuevo estado (criptada criptográficamente por la raíz posterior al estado). Si la raíz de preestado coincide con la raíz almacenada en el contrato de rollup, y la prueba es válida, el contrato de rollup toma la raíz de posestado de la prueba y actualiza su árbol de estado para reflejar el estado cambiado del rollup.
 
-### Entradas y salidas \{#entries-and-exits}
+### Entradas y salidas {#entries-and-exits}
 
 Los usuarios entran en el ZK-rollup depositando tókenes en el contrato del rollup desplegado en la cadena L1. Esta transacción se pone en la cola, ya que solo los operadores pueden enviar transacciones al contrato de rollup.
 
@@ -164,7 +164,7 @@ Una retirada de un ZK-rollup a L1 es sencillo. El usuario inicia la transacción
 
 El contrato rollup hace un hash de los datos de la transacción, comprueba si la raíz del lote existe y utiliza la prueba de Merkle para comprobar si el hash de la transacción es parte de la raíz del lote. Después, el contrato ejecuta la transacción de salida y envía los fondos a la dirección elegida por el usuario en L1.
 
-## ZK-rollups y compatibilidad con EVM \{#zk-rollups-and-evm-compatibility}
+## ZK-rollups y compatibilidad con EVM {#zk-rollups-and-evm-compatibility}
 
 A diferencia de los rollups optimistas, los ZK-rollups no son fácilmente compatibles con la [Máquina Virtual Ethereum (EVM)](/developers/docs/evm/). Es más difícil demostrar el cálculo EVM de propósito general en circuitos y requiere más recursos que demostrar cálculos sencillos (como la transferencia de tókenes descrita anteriormente).
 
@@ -174,7 +174,7 @@ Al igual que el EVM, zkEVM transita entre estados después de que se realice el 
 
 Se espera que la introducción de los ZK-rollups compatibles con EVM ayude a los desarrolladores a aprovechar las garantías de escalabilidad y seguridad de las pruebas de conocimiento cero. Lo que es más importante, la compatibilidad con la infraestructura nativa de Ethereum significa que los desarrolladores pueden crear dapps compatibles con ZK utilizando herramientas e idiomas familiares (y probados en la práctica).
 
-## ¿Cómo funcionan las tarifas de ZK-rollup? \{#how-do-zk-rollup-fees-work}
+## ¿Cómo funcionan las tarifas de ZK-rollup? {#how-do-zk-rollup-fees-work}
 
 La cantidad que los usuarios pagan por las transacciones en los ZK-rollups depende de la tarifa de gas, al igual que en la red principal de Ethereum. Sin embargo, las tarifas de gas funcionan de manera diferente en L2 y están influidas por los siguientes costes:
 
@@ -188,15 +188,15 @@ La cantidad que los usuarios pagan por las transacciones en los ZK-rollups depen
 
 Además de las transacciones por lotes, los ZK-rollups reducen las tarifas para los usuarios al comprimir los datos de las transacciones. Puede [ver una visión general en tiempo real](https://l2fees.info/) de lo que cuesta usar los ZK-rollups en Ethereum.
 
-## ¿Cómo se escalan los ZK-rollups a Ethereum? \{#scaling-ethereum-with-zk-rollups}
+## ¿Cómo se escalan los ZK-rollups a Ethereum? {#scaling-ethereum-with-zk-rollups}
 
-### Compresión de datos de transacción \{#transaction-data-compression}
+### Compresión de datos de transacción {#transaction-data-compression}
 
 Los ZK-rollups amplían el rendimiento en la capa base de Ethereum tomando el cálculo fuera de la cadena, aunque el verdadero impulso para la escalabilidad proviene de la compresión de los datos de las transacciones. El [tamaño del bloque](/developers/docs/blocks/#block-size) de Ethereum limita los datos que cada bloque puede contener y, por extensión, el número de transacciones procesadas por bloque. Al comprimir los datos relacionados con las transacciones, los ZK-rollups aumentan significativamente el número de transacciones procesadas por bloque.
 
 Los ZK-rollups pueden comprimir los datos de las transacciones mejor que los rollups optimistas, ya que no tienen que publicar todos los datos necesarios para validar cada transacción. Solo tienen que publicar los datos mínimos necesarios para reconstruir el último estado de las cuentas y los saldos en la lista acumulada.
 
-### Pruebas recursivas \{#recursive-proofs}
+### Pruebas recursivas {#recursive-proofs}
 
 Una ventaja de las pruebas de conocimiento cero es que las pruebas pueden verificar otras pruebas. Por ejemplo, un solo ZK-SNARK puede verificar otros ZK-SNARK. Tales «pruebas de prueba» se llaman pruebas recursivas y aumentan drásticamente el rendimiento en los ZK-rollups.
 
@@ -204,7 +204,7 @@ Actualmente, las pruebas de validez se generan bloque por bloque y se envían al
 
 Sin embargo, las pruebas recursivas permiten finalizar varios bloques con una prueba de validez. Esto se debe a que el circuito de prueba agrega recursivamente múltiples pruebas de bloque hasta que se crea una prueba final. El operador de L2 presenta esta prueba recursiva, y si el contrato la acepta, todos los bloques relevantes se finalizarán al instante. Con las pruebas recursivas, aumenta el número de transacciones de ZK-rollup que se pueden finalizar en Ethereum a intervalos.
 
-### Pros y contras de los ZK-rollups \{#zk-rollups-pros-and-cons}
+### Pros y contras de los ZK-rollups {#zk-rollups-pros-and-cons}
 
 | Ventajas                                                                                                                                                                                                                    | Desventajas                                                                                                                                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -216,7 +216,7 @@ Sin embargo, las pruebas recursivas permiten finalizar varios bloques con una pr
 | No depende de las suposiciones de vitalidad y los usuarios no tienen que validar la cadena para proteger sus fondos.                                                                                                        | Algunos sistemas de prueba (por ejemplo, ZK-SNARK) requieren una configuración de confianza que, si se maneja mal, podría comprometer el modelo de seguridad de un ZK-rollup.                                                   |
 | Una mejor compresión de datos puede ayudar a reducir los costes de publicación de `calldata` en Ethereum y minimizar las tarifas de aumento de datos para los usuarios.                                                     |                                                                                                                                                                                                                                 |
 
-### Explicación visual de los ZK-rollups \{#zk-video}
+### Explicación visual de los ZK-rollups {#zk-video}
 
 Vea una explicación de Finematics de los ZK-rollups:
 
@@ -224,7 +224,7 @@ Vea una explicación de Finematics de los ZK-rollups:
 <YouTube id="7pWxCklcNsU" start="406" />
 }
 
-### Utilice los ZK-rollups \{#use-zk-rollups}
+### Utilice los ZK-rollups {#use-zk-rollups}
 
 Existen múltiples implementaciones de ZK-rollups que pueden integrarse en sus dApps:
 
@@ -232,7 +232,7 @@ Existen múltiples implementaciones de ZK-rollups que pueden integrarse en sus d
 <RollupProductDevDoc rollupType="zk" />
 }
 
-## ¿Quién está trabajando en un zkEVM? \{#zkevm-projects}
+## ¿Quién está trabajando en un zkEVM? {#zkevm-projects}
 
 Los proyectos que trabajan en zkEVM incluyen:
 
@@ -248,7 +248,7 @@ Los proyectos que trabajan en zkEVM incluyen:
 
 - **[Starknet](https://starkware.co/starknet/)** - _StarkNet is an EVM-compatible layer 2 scaling solution built by StarkWare._
 
-## Bibliografía para profundizar sobre los ZK-rollups \{#further-reading-on-zk-rollups}
+## Bibliografía para profundizar sobre los ZK-rollups {#further-reading-on-zk-rollups}
 
 - [¿Qué son los rollups de conocimiento cero (ZK)?](https://coinmarketcap.com/alexandria/glossary/zero-knowledge-rollups)
 - [¿Qué son las pruebas de conocimiento cero (ZK)?](https://alchemy.com/blog/zero-knowledge-rollups)

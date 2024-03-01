@@ -79,7 +79,7 @@ MyWaffleProject
 └── package.json
 ```
 
-### Sekarang mari kita bicara tentang beberapa file ini: \{#now-lets-talk}
+### Sekarang mari kita bicara tentang beberapa file ini: {#now-lets-talk}
 
 - Greeter.sol - kontrak pintar kita yang ditulis dalam solidity;
 
@@ -126,7 +126,7 @@ describe("Greeter", function () {
 })
 ```
 
-### Langkah selanjutnya terdiri dari mengompilasi kontrak kita dan menjalankan pengujian: \{#compiling-and-testing}
+### Langkah selanjutnya terdiri dari mengompilasi kontrak kita dan menjalankan pengujian: {#compiling-and-testing}
 
 Pengujian wafel menggunakan Mocha (kerangka pengujian) dengan Chai (pustaka assertion). Yang harus Anda lakukan adalah menjalankan `npx hardhat test` dan menunggu pesan berikut muncul.
 
@@ -134,7 +134,7 @@ Pengujian wafel menggunakan Mocha (kerangka pengujian) dengan Chai (pustaka asse
 ✓ Should return the new greeting once it's changed
 ```
 
-### Semuanya terlihat bagus sejauh ini, mari tambahkan lebih banyak kerumitan pada proyek kita <Emoji text=":slightly_smiling_face:" size={1}/> \{#adding-complexity}
+### Semuanya terlihat bagus sejauh ini, mari tambahkan lebih banyak kerumitan pada proyek kita <Emoji text=":slightly_smiling_face:" size={1}/> {#adding-complexity}
 
 Bayangkan suatu situasi ketika seseorang menambahkan string kosong sebagai salam. Ini bukan sapaan yang hangat, bukan?  
 Mari kita pastikan itu tidak terjadi:
@@ -195,7 +195,7 @@ Mari kita jalankan tes lagi:
 
 Selamat! Anda berhasil :)
 
-### Kesimpulan \{#conclusion}
+### Kesimpulan {#conclusion}
 
 Kita membuat proyek sederhana dengan Waffle, Hardhat, dan eters.js. Kita mempelajari cara menyiapkan proyek, menambahkan pengujian, dan mengimplementasikan fungsionalitas baru.
 

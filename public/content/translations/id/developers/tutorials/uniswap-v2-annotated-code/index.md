@@ -9,11 +9,11 @@ published: 2021-05-01
 lang: id
 ---
 
-## Pendahuluan \{#introduction}
+## Pendahuluan {#introduction}
 
 [Uniswap v2](https://uniswap.org/whitepaper.pdf) dapat membuat pasar bursa antara dua token ERC-20 mana pun. Dalam artikel ini, kita akan memeriksa kode sumber untuk kontrak-kontrak yang menerapkan protokol ini dan melihat alasan kontrak-kontrak tersebut ditulis dengan cara ini.
 
-### Apa Fungsi Uniswap? \{#what-does-uniswap-do}
+### Apa Fungsi Uniswap? {#what-does-uniswap-do}
 
 Pada dasarnya, ada dua tipe pengguna: penyedia likuiditas dan pedagang.
 
@@ -25,15 +25,15 @@ Ketika penyedia likuiditas menginginkan kembali aset mereka, mereka dapat membak
 
 [Klik di sini untuk deskripsi lengkapnya](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/swaps/).
 
-### Mengapa v2? Mengapa bukan v3? \{#why-v2}
+### Mengapa v2? Mengapa bukan v3? {#why-v2}
 
 Waktu saya menulis ini, [Uniswap v3](https://uniswap.org/whitepaper-v3.pdf) hampir siap. Namun, peningkatan tersebut jauh lebih rumit dari versi aslinya. Lebih mudah untuk terlebih dahulu mempelajari v2 dan kemudian beralih ke v3.
 
-### Kontrak Inti vs Kontrak Perifer \{#contract-types}
+### Kontrak Inti vs Kontrak Perifer {#contract-types}
 
 Uniswap v2 terbagi menjadi dua komponen, inti dan perifer. Pembagian ini membuat kontrak inti, yang menampung aset dan oleh karena itu _harus_ aman, menjadi lebih sederhana dan mudah untuk diaudit. Semua fungsionalitas ekstra yang diperlukan oleh para pedagang kemudian dapat disediakan oleh kontrak perifer.
 
-## Alur Data dan Pengendalian \{#flows}
+## Alur Data dan Pengendalian {#flows}
 
 Ini adalah alur data dan pengendalian yang terjadi ketika Anda melakukan ketiga aksi utama Uniswap:
 
@@ -41,72 +41,72 @@ Ini adalah alur data dan pengendalian yang terjadi ketika Anda melakukan ketiga 
 2. Menambahkan likuiditas ke pasar dan mendapatkan imbalan dengan bursa pasangan token likuiditas ERC-20
 3. Membakar token likuiditas ERC-20 dan mendapatkan kembali token ERC-20 yang diperbolehkan bursa pasangan untuk ditukarkan oleh para pedagang
 
-### Menukar \{#swap-flow}
+### Menukar {#swap-flow}
 
 Alur ini paling umum, yang digunakan oleh para pedagang:
 
-#### Pemanggil \{#caller}
+#### Pemanggil {#caller}
 
 1. Menyediakan akun perifer dengan tunjangan dalam jumlah yang dapat ditukarkan.
 2. Memanggil salah satu dari banyak fungsi penukaran kontrak perifer (yang bergantung pada apakah ETH dilibatkan atau tidak, apakah pedagang menentukan jumlah token yang akan disetorkan atau jumlah token yang akan didapatkan kembali, dll). Setiap fungsi penukaran menerima `jalur`, larik bursa yang akan dilewati.
 
-#### Dalam kontrak perifer (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02-sol}
+#### Dalam kontrak perifer (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02-sol}
 
 3. Mengenali jumlah yang perlu diperdagangkan pada setiap bursa sepanjang jalur.
 4. Mengulang di sepanjang jalur. Untuk setiap bursa di sepanjang jalur, mengirimkan token input dan kemudian memanggil fungsi `penukaran` bursa. Dalam kebanyakan kasus, alamat tujuan token adalah bursa pasangan berikutnya dalam jalur. Dalam bursa terakhir, ada alamat yang disediakan oleh pedagang.
 
-#### Dalam kontrak inti (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-2}
+#### Dalam kontrak inti (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
 
 5. Verifikasi bahwa kontrak inti tidak dicurangi dan dapat mempertahankan likuiditas yang memadai setelah penukaran.
 6. Melihat seberapa banyak token tambahan yang kita miliki selain dari cadangan yang diketahui. Jumlah tersebut adalah jumlah token input yang kita terima untuk dipertukarkan.
 7. Mengirimkan token output ke tujuan.
 8. Memanggil `_update` untuk memperbarui jumlah cadangan
 
-#### Kembali dalam kontrak perifer (UniswapV2Router02.sol) \{#back-in-the-periphery-contract-uniswapv2router02-sol}
+#### Kembali dalam kontrak perifer (UniswapV2Router02.sol) {#back-in-the-periphery-contract-uniswapv2router02-sol}
 
 9. Melakukan pembersihan mana pun yang diperlukan (contohnya, membakar token WETH untuk mendapatkan kembali ETH yang akan dikirimkan ke pedagang)
 
-### Menambah Likuiditas \{#add-liquidity-flow}
+### Menambah Likuiditas {#add-liquidity-flow}
 
-#### Pemanggil \{#caller-2}
+#### Pemanggil {#caller-2}
 
 1. Menyediakan akun perifer dengan tunjangan dalam jumlah yang akan ditambahkan ke pool likuiditas.
 2. Memanggil salah satu dari fungsi addLiquidity kontrak perifer.
 
-#### Dalam kontrak perifer (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02sol-2}
+#### Dalam kontrak perifer (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-2}
 
 3. Membuat bursa pasangan baru jika diperlukan
 4. Jika ada bursa pasangan yang telah ada, hitung jumlah token yang akan ditambahkan. Seharusnya nilai yang sama untuk kedua token, sehingga rasionya sama untuk token baru dan token yang telah ada.
 5. Memeriksa jika jumlahnya dapat diterima (pemanggil dapat menentukan jumlah minimum di bawah yang tidak akan mereka tambahkan ke likuiditas)
 6. Memanggil kontrak inti.
 
-#### Dalam kontrak inti (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-2}
+#### Dalam kontrak inti (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-2}
 
 7. Mencetak token likuiditas dan mengirimkannya ke pemanggil
 8. Memanggil `_update` untuk memperbarui jumlah cadangan
 
-### Menghapus Likuiditas \{#remove-liquidity-flow}
+### Menghapus Likuiditas {#remove-liquidity-flow}
 
-#### Pemanggil \{#caller-3}
+#### Pemanggil {#caller-3}
 
 1. Menyediakan akun perifer dengan tunjangan dari token likuiditas yang akan dibakar di bursa untuk token yang mendasarinya.
 2. Memanggil salah satu dari fungsi removeLiquidity kontrak perifer.
 
-#### Dalam kontrak perifer (UniswapV2Router02.sol) \{#in-the-periphery-contract-uniswapv2router02sol-3}
+#### Dalam kontrak perifer (UniswapV2Router02.sol) {#in-the-periphery-contract-uniswapv2router02sol-3}
 
 3. Mengirimkan token likuiditas ke bursa pasangan
 
-#### Dalam kontrak inti (UniswapV2Pair.sol) \{#in-the-core-contract-uniswapv2pairsol-3}
+#### Dalam kontrak inti (UniswapV2Pair.sol) {#in-the-core-contract-uniswapv2pairsol-3}
 
 4. Mengirimkan ke alamat tujuan token yang mendasarinya sesuai proporsi terhadap token yang akan dibakar. Contohnya, jika ada 1000 token A dalam pool, 500 token B, dan 90 token likuiditas, dan kita menerima 9 token untuk dibakar, kita membakar 10% dari token likuiditas sehingga kita mengirimkan kembali ke pengguna 100 token A dan 50 token B.
 5. Membakar token likuiditas
 6. Memanggil `_update` untuk memperbarui jumlah cadangan
 
-## Kontrak Inti \{#core-contracts}
+## Kontrak Inti {#core-contracts}
 
 Ini adalah kontrak aman yang menampung likuiditas.
 
-### UniswapV2Pair.sol \{#UniswapV2Pair}
+### UniswapV2Pair.sol {#UniswapV2Pair}
 
 [Kontrak ini](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Pair.sol) menerapkan pool sebenarnya yang mempertukarkan token. Ini adalah fungsionalitas Uniswap inti.
 
@@ -144,7 +144,7 @@ Banyak perhitungan dalam kontrak pool yang memerlukan pecahan. Namun, pecahan ti
 
 Rincian selengkapnya tentang pustaka ini tersedia [nanti dalam dokumennya](#FixedPoint).
 
-#### Variabel \{#pair-vars}
+#### Variabel {#pair-vars}
 
 ```solidity
     uint public constant MINIMUM_LIQUIDITY = 10**3;
@@ -212,7 +212,7 @@ Berikut adalah contoh sederhana. Perhatikan bahwa demi mempermudah, tabel hanya 
 
 Karena pedagang menyediakan lebih banyak token0, nilai relatif token1 meningkat, dan sebaliknya, didasarkan pada persediaan dan permintaan.
 
-#### Penguncian \{#pair-lock}
+#### Penguncian {#pair-lock}
 
 ```solidity
     uint private unlocked = 1;
@@ -246,7 +246,7 @@ Dalam pemodifikasi `_;` adalah panggilan fungsi asli (dengan semua parameternya)
 
 Setelah fungsi utama kembali, lepaskan pengunciannya.
 
-#### Fungsi lainnya \{#pair-misc}
+#### Fungsi lainnya {#pair-misc}
 
 ```solidity
     function getReserves() public view returns (uint112 _reserve0, uint112 _reserve1, uint32 _blockTimestampLast) {
@@ -279,7 +279,7 @@ Ada dua cara di mana panggilan transfer ERC-20 dapat melaporkan kegagalan:
 
 Jika salah satu kondisi ini terjadi, balikkan.
 
-#### Aksi \{#pair-events}
+#### Aksi {#pair-events}
 
 ```solidity
     event Mint(address indexed sender, uint amount0, uint amount1);
@@ -307,7 +307,7 @@ Aksi ini dipancarkan ketika pedagang menukar satu token dengan token lainnya. Se
 
 Akhirnya, `Sinkronisasi` dipancarkan setiap kali token ditambahkan atau ditarik, terlepas dari alasannya, untuk menyediakan informasi cadangan terkini (dan oleh karena itu berupa nilai tukar).
 
-#### Fungsi Pengaturan \{#pair-setup}
+#### Fungsi Pengaturan {#pair-setup}
 
 Fungsi ini seharusnya dipanggil setelah bursa pasangan baru diatur.
 
@@ -330,7 +330,7 @@ Konstruktor memastikan kita akan terus menelusuri alamat dari pabrik yang membua
 
 Fungsi ini membuat pabrik (dan hanya pabrik) dapat menentukan kedua token ERC-20 yang akan dipertukarkan oleh pasangan ini.
 
-#### Fungsi Pembaruan Internal \{#pair-update-internal}
+#### Fungsi Pembaruan Internal {#pair-update-internal}
 
 ##### \_update
 
@@ -451,7 +451,7 @@ Gunakan fungsi `UniswapV2ERC20._mint` untuk benar-benar membuat token-token liku
 
 Jika tidak ada biaya, tetapkan `kLast` menjadi nol (jika belum menjadi nol). Ketika kontrak ini ditulis terdapat [fitur pengembalian dana gas](https://eips.ethereum.org/EIPS/eip-3298) yang mendorong kontrak untuk mengurangi ukuran keseluruhan status Ethereum dengan mengosongkan penyimpanan yang tidak diperlukan. Kode ini mendapatkan pengembalian dana tersebut jika memungkinkan.
 
-#### Fungsi yang Dapat Diakses secara Eksternal \{#pair-external}
+#### Fungsi yang Dapat Diakses secara Eksternal {#pair-external}
 
 Perhatikan bahwa ketika transaksi atau kontrak mana pun _dapat_ memanggil fungsi-fungsi ini, fungsi-fungsi tersebut dirancang untuk dipanggil dari kontrak perifer. Jika Anda memanggil fungsi-fungsi tersebut secara langsung, Anda tidak akan dapat mencurangi bursa pasangan, tetapi Anda dapat kehilangan nilai karena melakukan kesalahan.
 
@@ -680,7 +680,7 @@ Dalam kasus ini, ada dua solusi:
 }
 ```
 
-### UniswapV2Factory.sol \{#UniswapV2Factory}
+### UniswapV2Factory.sol {#UniswapV2Factory}
 
 [Kontrak ini](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2Factory.sol) membuat bursa pasangan.
 
@@ -798,7 +798,7 @@ Simpan informasi pasangan baru dalam variabel status dan pancarkan aksi untuk me
 
 Kedua fungsi ini membuat `feeSetter` dapat mengendalikan penerima biaya (jika ada), dan untuk mengubah `feeSetter` ke alamat baru.
 
-### UniswapV2ERC20.sol \{#UniswapV2ERC20}
+### UniswapV2ERC20.sol {#UniswapV2ERC20}
 
 [Kontrak ini](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) menerapkan token likuiditas ERC-20. Sama dengan kontrak [ERC-20 OpenWhisk](/developers/tutorials/erc20-annotated-code), sehingga saya hanya akan menjelaskan perbedaannya, fungsionalitas `izin`.
 
@@ -884,15 +884,15 @@ Dari intisari dan tandatangan, kita bisa mendapatkan alamat yang ditandatangani 
 
 Jika semuanya OKE, anggaplah ini sebagai [persetujuan ERC-20](https://eips.ethereum.org/EIPS/eip-20#approve).
 
-## Kontrak Perifer \{#periphery-contracts}
+## Kontrak Perifer {#periphery-contracts}
 
 Kontrak perifer adalah API (antarmuka program aplikasi) untuk Uniswap. Kontrak ini tersedia untuk panggilan eksternal, baik dari kontrak lain maupun aplikasi terdesentralisasi. Anda dapat memanggil kontrak inti secara langsung, tetapi lebih rumit dan Anda mungkin kehilangan nilai jika Anda membuat kesalahan. Kontrak-kontrak inti hanya memuat tes untuk memastikan tidak dicurangi, bukan pemeriksaan kewarasan untuk seseorang lainnya. Kontrak-kontrak itu terdapat dalam perifer, sehingga dapat diperbarui sesuai keperluan.
 
-### UniswapV2Router01.sol \{#UniswapV2Router01}
+### UniswapV2Router01.sol {#UniswapV2Router01}
 
 [Kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router01.sol) memiliki masalah, dan [seharusnya tidak lagi digunakan](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-01). Untungnya, kontrak perifer bersifat tanpa status dan tidak menampung aset apa pun, sehingga mudah untuk mengusangkannya dan menyarankan orang-orang menggunakan penggantinya, `UniswapV2Router02`, sebagai gantinya.
 
-### UniswapV2Router02.sol \{#UniswapV2Router02}
+### UniswapV2Router02.sol {#UniswapV2Router02}
 
 Dalam kebanyakan kasus, Anda akan menggunakan Uniswap melalui [kontrak ini](https://github.com/Uniswap/uniswap-v2-periphery/blob/master/contracts/UniswapV2Router02.sol). Anda dapat melihat cara menggunakannya [di sini](https://docs.uniswap.org/contracts/v2/reference/smart-contracts/router-02).
 
@@ -947,7 +947,7 @@ Konstruktor cukup menetapkan variabel statu yang tidak dapat diubah.
 
 Fungsi ini dipanggil ketika kita menebus token dari kontrak WETH kembali menjadi ETH. Hanya kontrak WETH yang kita gunakan diizinkan untuk melakukan penebusan tersebut.
 
-#### Menambah Likuiditas \{#add-liquidity}
+#### Menambah Likuiditas {#add-liquidity}
 
 Fungsi ini menambahkan token ke bursa pasangan, yang meningkatkan pool likuiditas.
 
@@ -1137,7 +1137,7 @@ Untuk menyetor ETH, kontrak pertama-tama dibungkus ke WETH dan kemudian mentrans
 
 Pengguna telah mengirimkan ETH kepada kami, sehingga jika ada sisa ekstra (karena token lainnya kurang berharga daripada yang dipikirkan pengguna), kita perlu mengajukan pengembalian dana.
 
-#### Menghapus Likuiditas \{#remove-liquidity}
+#### Menghapus Likuiditas {#remove-liquidity}
 
 Fungsi ini akan menghapus likuiditas dan membayar kembali penyedia likuiditas.
 
@@ -1298,7 +1298,7 @@ Fungsi ini dapat digunakan untuk token yang memiliki biaya transfer atau penyimp
 
 Fungsi terakhir menggabungkan biaya penyimpanan dengan transaksi meta.
 
-#### Perdagangkan \{#trade}
+#### Perdagangkan {#trade}
 
 ```solidity
     // **** SWAP ****
@@ -1656,15 +1656,15 @@ Ini varian-varian yang sama yang digunakan untuk token normal, tetapi memanggil 
 
 Fungsi ini hanyalah proksi yang memanggil [fungsi UniswapV2Library](#uniswapV2library).
 
-### UniswapV2Migrator.sol \{#UniswapV2Migrator}
+### UniswapV2Migrator.sol {#UniswapV2Migrator}
 
 Kontrak ini digunakan untuk memindahkan bursa dari v1 yang lama ke v2. Sekarang, karena mereka telah bermigrasi, hal tersebut tidak lagi relevan.
 
-## Pustaka \{#libraries}
+## Pustaka {#libraries}
 
 [Pustaka SafeMath](https://docs.openzeppelin.com/contracts/2.x/api/math) didokumentasikan dengan baik, sehingga tidak diperlukan untuk mendokumentasikannya di sini.
 
-### Math \{#Math}
+### Math {#Math}
 
 Pustaka ini memuat beberapa fungsi matematika yang biasanya tidak diperlukan dalam kode Solidity, sehingga fungsi-fungsi ini bukanlah bagian dari bahasa.
 
@@ -1709,7 +1709,7 @@ Kita seharusnya tidak akan pernah memerlukan akar kuadrat dari nol. Akar kuadrat
 }
 ```
 
-### Pecahan Poin Tetap (UQ112x112) \{#FixedPoint}
+### Pecahan Poin Tetap (UQ112x112) {#FixedPoint}
 
 Pustaka ini menangani pecahan, yang biasanya bukan bagian dari aritmatika Ethereum. Dilakukan dengan mengodekan angka _x_ sebagai _x\*2^112_. Membuat kita dapat menggunakan opcode penambahan dan pengurangan asli tanpa perubahan.
 
@@ -1746,7 +1746,7 @@ Because y is `uint112`, the most it can be is 2^112-1. Angka tersebut masih dapa
 
 Jika kita membagi dua nilai `UQ112x112`, hasilnya tidak lagi dikalikan dengan 2^112. Jadi, sebagai gantinya, kita mengambil bilangan bulat sebagai penyebut. Kita perlu menggunakan trik yang serupa untuk melakukan perkalian, tetapi kita tidak perlu melakukan perkalian untuk nilai `UQ112x112`.
 
-### UniswapV2Library \{#uniswapV2library}
+### UniswapV2Library {#uniswapV2library}
 
 Pustaka ini hanya digunakan oleh kontrak perifer
 
@@ -1868,7 +1868,7 @@ Fungsi ini kira-kira melakukan hal yang sama, tetapi mendapatkan jumlah output d
 
 Kedua fungsi ini menangani pengenalan nilai ketika diperlukan untuk melalui beberapa bursa pasangan.
 
-### Pembantu Transfer \{#transfer-helper}
+### Pembantu Transfer {#transfer-helper}
 
 [Pustaka ini](https://github.com/Uniswap/uniswap-lib/blob/master/contracts/libraries/TransferHelper.sol) menambahkan pemeriksaan keberhasilan seputar transfer ERC-20 dan Ethereum untuk memperlakukan pembalikan dan nilai `salah` pengembalian dalam cara yang sama.
 
@@ -1953,7 +1953,7 @@ Fungsi ini menerapkan [fungsionalitas transferFrom ERC-20](https://eips.ethereum
 
 Fungsi ini mentransfer ether ke akun. Setiap panggilan ke kontrak yang berbeda dapat mencoba mengirimkan ether. Karena kita sebenarnya tidak perlu memanggil fungsi apa pun, kita tidak mengirim data apa pun dengan panggilan tersebut.
 
-## Kesimpulan \{#conclusion}
+## Kesimpulan {#conclusion}
 
 Ini adalah artikel dengan panjang sekitar 50 halaman. Jika Anda berhasil sampai di sini, selamat! Semoga saat ini Anda telah memahami pertimbangan dalam menulis aplikasi kehidupan nyata (dibandingkan dengan program sampel singkat) dan lebih baik agar dapat menulis kontrak untuk kasus penggunaan Anda sendiri.
 

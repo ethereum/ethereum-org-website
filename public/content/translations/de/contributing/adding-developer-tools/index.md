@@ -4,7 +4,7 @@ lang: de
 description: Unsere Kriterien für die Auflistung von Entwicklertools auf ethereum.org
 ---
 
-# Entwicklertools hinzufügen \{#contributing-to-ethereumorg-}
+# Entwicklertools hinzufügen {#contributing-to-ethereumorg-}
 
 Wir möchten sicherstellen, dass wir nur die besten Entwicklerressourcen auflisten, damit andere vertrauensvoll damit arbeiten können und die Unterstützung bekommen, die sie benötigen.
 
@@ -14,7 +14,7 @@ Derzeit listen wir Entwicklertools in unserem [Entwicklerportal](/developers/).
 
 **Sie können gerne neue Ergänzungen zu den entsprechenden Seiten vorschlagen.**
 
-## So treffen wir Entscheidungen \{#ways-to-contribute}
+## So treffen wir Entscheidungen {#ways-to-contribute}
 
 Die eingereichten Entwicklertools werden anhand der folgenden Kriterien bewertet:
 
@@ -46,13 +46,13 @@ Viele Projekte im Bereich Ethereum sind Open Source. Wir führen mit höherer Wa
 
 ---
 
-## Produktanordnung \{#product-ordering}
+## Produktanordnung {#product-ordering}
 
 Sofern die Produkte nicht ausdrücklich anders geordnet sind, z. B. alphabetisch, werden sie in der Reihenfolge der Hinzufügung angezeigt. Die neuesten Produkte erscheinen also am Ende der Liste.
 
 ---
 
-## Ihr Entwicklertool hinzufügen \{#how-decisions-about-the-site-are-made}
+## Ihr Entwicklertool hinzufügen {#how-decisions-about-the-site-are-made}
 
 Wenn Sie ein Entwicklertool zu ethereum.org hinzufügen möchten, das die Kriterien erfüllt, erstellen Sie einen Eintrag auf GitHub.
 

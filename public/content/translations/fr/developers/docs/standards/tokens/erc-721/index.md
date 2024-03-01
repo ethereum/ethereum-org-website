@@ -4,7 +4,7 @@ description:
 lang: fr
 ---
 
-## Introduction \{#introduction}
+## Introduction {#introduction}
 
 **Qu'est-ce qu'un jeton non fongible (NFT) ?**
 
@@ -16,13 +16,13 @@ L'ERC-721 introduit une norme pour les NFT. En d'autres termes, ce type de jeton
 
 Oui ! Tous les NFT ont une variable `uint256` appelée `tokenId` ainsi, pour tout contrat ERC-721, la paire `contract address, uint256 tokenId` doit être globalement unique. Cela dit, une dApp peut avoir un « convertisseur » qui utilisent le `tokenld` comme entrée et affiche une image de quelque chose de cool, comme des zombies, des armes, des compétences ou des incroyables chatons !
 
-## Prérequis \{#prerequisites}
+## Prérequis {#prerequisites}
 
 - [Comptes](/developers/docs/accounts/)
 - [Contrats intelligents](/developers/docs/smart-contracts/)
 - [Normes de jetons](/developers/docs/standards/tokens/)
 
-## Présentation \{#body}
+## Présentation {#body}
 
 L'ERC-721 (pour "Ethereum Request for Comments 721") proposé par William Entriken, Dieter Shirley, Jacob Evans, Nastassia Sachs en janvier 2018, est une norme de jeton non fongible qui implémente une API pour les jetons des contrats intelligents.
 
@@ -32,7 +32,7 @@ Si un contrat intelligent implémente les méthodes et les événements suivants
 
 De [EIP-721](https://eips.ethereum.org/EIPS/eip-721) :
 
-### Méthodes \{#methods}
+### Méthodes {#methods}
 
 ```solidity
     function balanceOf(address _owner) external view returns (uint256);
@@ -46,7 +46,7 @@ De [EIP-721](https://eips.ethereum.org/EIPS/eip-721) :
     function isApprovedForAll(address _owner, address _operator) external view returns (bool);
 ```
 
-### Événements \{#events}
+### Événements {#events}
 
 ```solidity
     event Transfer(address indexed _from, address indexed _to, uint256 indexed _tokenId);
@@ -54,11 +54,11 @@ De [EIP-721](https://eips.ethereum.org/EIPS/eip-721) :
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### Exemples \{#web3py-example}
+### Exemples {#web3py-example}
 
 Voyons comment une norme peut être si importante pour nous faciliter le contrôle de tout contrat de jeton ERC-721 sur Ethereum. Nous avons juste besoin de l'interface binaire-programme (ABI) du contrat pour créer une interface à n'importe quel jeton ERC-721. Comme vous pouvez le voir ci-dessous, nous utiliserons une ABI simplifiée, pour en faire un exemple de faible friction.
 
-#### Exemple Web3.py \{#web3py-example}
+#### Exemple Web3.py {#web3py-example}
 
 Pour commencer, assurez-vous d'avoir installé la bibliothèque Python [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation):
 
@@ -225,7 +225,7 @@ birth_logs = w3.eth.get_logs({
 recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] for log in birth_logs]
 ```
 
-## NFT populaires \{#popular-nfts}
+## NFT populaires {#popular-nfts}
 
 - [Etherscan NFT Tracker](https://etherscan.io/tokens-nft) répertorie les NFT les plus importants sur Ethereum en termes de volume de transferts.
 - [CryptoKitties](https://www.cryptokitties.co/) est un jeu axé sur des créatures de collection adorables dont on peut faire l'élevage et que nous appelons CryptoKitties.
@@ -236,7 +236,7 @@ recent_births = [get_event_data(w3.codec, ck_extra_events_abi[1], log)["args"] f
 - [Gods Unchained Cards](https://godsunchained.com/) est un jeu de cartes à collectionner (JCC) de la blockchain Ethereum, qui utilise des NFT pour apporter une vraie propriété aux actifs en jeu.
 - [Bored Ape Yacht Club](https://boredapeyachtclub.com) est une collection de 10 000 NFT uniques qui, en plus d'être une œuvre d'art remarquablement rare, agit en tant que jeton d’adhésion au club en fournissant aux membres des atouts et des avantages qui augmentent au fil du temps grâce aux efforts de la communauté.
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [EIP-721: ERC-721 Non-Fungible Token Standard](https://eips.ethereum.org/EIPS/eip-721)
 - [OpenZeppelin - ERC-721 Docs](https://docs.openzeppelin.com/contracts/3.x/erc721)

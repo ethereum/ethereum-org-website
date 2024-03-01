@@ -7,21 +7,21 @@ incomplete: true
 
 Ethereum, podobnie jak Bitcoin, używa obecnie protokołu konsensusu o nazwie [proof-of-work (PoW)](https://wikipedia.org/wiki/Proof_of_work). Pozwala to węzłom sieci Ethereum na uzgodnienie stanu wszystkich informacji zapisanych w blockchainie Ethereum i zapobiega niektórym rodzajom ataków ekonomicznych.
 
-## Warunki wstępne \{#prerequisites}
+## Warunki wstępne {#prerequisites}
 
 Aby lepiej zrozumieć tę stronę, zalecamy najpierw zapoznać się z [transakcjami](/developers/docs/transactions/) i [blokami](/developers/docs/blocks/).
 
-## Czym jest proof-of-work (PoW)? \{#what-is-pow}
+## Czym jest proof-of-work (PoW)? {#what-is-pow}
 
 Proof-of-work (PoW) jest mechanizmem pozwalającym zdecentralizowanej sieci Ethereum na osiągnięcie konsensusu, lub akceptuje takie rzeczy jak salda konta i kolejność transakcji. Zapobiega to „podwójnemu wydawaniu” swoich monet przez użytkowników i zapewnia, że ​​łańcuch Ethereum jest niezwykle trudny do zaatakowania lub nadpisania.
 
-## Proof-of-work i wydobycie \{#pow-and-mining}
+## Proof-of-work i wydobycie {#pow-and-mining}
 
 Proof-of-work to podstawowy algorytm, który określa poziom trudności i zasady wykonywania pracy przez górników. Wydobycie to sama „praca”. Jest to akt dodawania prawidłowych bloków do łańcucha. Jest to ważne, ponieważ długość łańcucha pomaga sieci wykryć prawidłowy łańcuch Ethereum i zrozumieć aktualny stan Ethereum. Im więcej „pracy” zostanie wykonane, im dłuższy łańcuch i im wyższy numer bloku, tym większa pewność co do aktualnego stanu rzeczy w sieci.
 
 [Więcej o wydobyciu](/developers/docs/consensus-mechanisms/pow/mining/)
 
-## Jak działa proof-of-work Ethereum? \{#how-it-works}
+## Jak działa proof-of-work Ethereum? {#how-it-works}
 
 Transakcje Ethereum są przetwarzane w blokach. Każdy blok zawiera:
 
@@ -31,7 +31,7 @@ Transakcje Ethereum są przetwarzane w blokach. Każdy blok zawiera:
 
 Te dane bloku są bezpośrednio związane z PoW.
 
-### Praca na potrzeby proof-of-work \{#the-work}
+### Praca na potrzeby proof-of-work {#the-work}
 
 Protokół proof-of-work, znany jako Ethash, wymaga od górników intensywnego wyścigu prób i błędów, aby znaleźć blok nonce. Do łańcucha można dodać tylko bloki z poprawnym nonce.
 
@@ -41,7 +41,7 @@ Trudność określa cel hashu. Im niższy cel, tym mniejszy zestaw prawidłowych
 
 Haszowanie ułatwia wykrycie oszustwa. Ale PoW jako proces jest również dużym środkiem odstraszającym do atakowania łańcucha.
 
-### Proof-of-work i bezpieczeństwo \{#security}
+### Proof-of-work i bezpieczeństwo {#security}
 
 Górnicy są zachęcani do wykonywania tych prac w głównym łańcuchu Ethereum. W niewielkim stopniu zachęca się podzbiór górników do uruchomienia własnego łańcucha – podważa to system. Blockchainy opierają się na jednym stanie jako źródle prawdy. Użytkownicy zawsze wybierają najdłuższy lub „najcięższy” łańcuch.
 
@@ -49,13 +49,13 @@ Celem programu PoW jest rozszerzenie łańcucha. Najdłuższy łańcuch jest naj
 
 Aby konsekwentnie tworzyć złośliwe, ale ważne bloki, potrzebujesz ponad 51% mocy wydobycia sieci, aby pokonać wszystkich innych. Potrzebujesz dużo mocy obliczeniowej, aby móc wykonać tę ilość „pracy”. A wydatkowanie energii może nawet przewyższyć zyski, jakie możesz osiągnąć w ataku.
 
-### Ekonomia proof-of-work \{#economics}
+### Ekonomia proof-of-work {#economics}
 
 PoW jest również odpowiedzialny za emisję nowej waluty do systemu i zachęcanie górników do wykonywania pracy.
 
 Górnicy, którzy pomyślnie utworzyli blok, są nagrodzeni w 2 świeżo wybitnych ETH i wszystkie opłaty transakcyjne w ramach bloku. Górnik może również otrzymać 1,75 Eth na blok wuja. To poprawny blok, utworzony jednocześnie z udanym blokiem, przez innego górnika. Zwykle dzieje się to z powodu opóźnień w sieci.
 
-## Nieodwołalność \{#finality}
+## Nieodwołalność {#finality}
 
 W sieciach rozproszonych transakcja osiąga „nieodwołalność”, gdy staje się częścią bloku, który nie może się zmienić.
 
@@ -67,7 +67,7 @@ Należy o tym pamiętać podczas projektowania zdecentralizowanych aplikacji, po
 
 Pamiętaj, że ten czas nie zawiera czasu oczekiwania na odebranie transakcji przez górnika.
 
-## Wady i zalety \{#pros-and-cons}
+## Wady i zalety {#pros-and-cons}
 
 | Zalety                                                                                                                                                                                                                           | Wady                                                                                                                                                                               |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -75,7 +75,7 @@ Pamiętaj, że ten czas nie zawiera czasu oczekiwania na odebranie transakcji pr
 | PoW to wypróbowany i przetestowany mechanizm konsensusu, dzięki któremu Bitcoin i Ethereum były bezpieczne i zdecentralizowane od wielu lat.                                                                                     | Jeśli chcesz kopać, potrzebujesz tak specjalistycznego sprzętu, że to duża inwestycja na początek.                                                                                 |
 | W porównaniu z proof-of-stake jest to stosunkowo łatwe w realizacji.                                                                                                                                                             | Ze względu na coraz większe zapotrzebowanie obliczeniowe, pule wydobywcze mogą potencjalnie zdominować grę wydobywczą, co prowadzi do centralizacji i zagrożeń dla bezpieczeństwa. |
 
-## W porównaniu z proof of stake \{#compared-to-pos}
+## W porównaniu z proof of stake {#compared-to-pos}
 
 Na wysokim poziomie proof of stake ma ten sam cel co proof of work: pomoc w osiągnięciu konsensusu przez zdecentralizowaną sieć w bezpieczny sposób. Ma jednak pewne różnice w procesie i pracownikach:
 
@@ -86,12 +86,12 @@ Na wysokim poziomie proof of stake ma ten sam cel co proof of work: pomoc w osi�
 
 [Więcej o proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 - [Atak większościowy](https://en.bitcoin.it/wiki/Majority_attack)
 - [O nieodwołalności rozliczenia](https://blog.ethereum.org/2016/05/09/on-settlement-finality/)
 
-## Tematy powiązane \{#related-topics}
+## Tematy powiązane {#related-topics}
 
 - [Wydobywanie](/developers/docs/consensus-mechanisms/pow/mining/)
 - [proof-of-stake](/developers/docs/consensus-mechanisms/pos/)

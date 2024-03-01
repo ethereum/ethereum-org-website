@@ -6,11 +6,11 @@ lang: tr
 
 Bloklar, zincirde yer alan bir önceki blok hakkındaki hash değerlerini barındıran işlem gruplarıdır. Bu, blokları birbirine (bir zincir hâlinde) bağlar çünkü hash değerleri blok verilerinden kriptografik olarak türetilir. Bu, geçmişteki herhangi bir bloktaki tek bir değişikliğin sonraki tüm hash değerlerini değiştirerek tüm blokları geçersiz kılacağı ve bu durum blok zincirini yürüten herkes tarafından fark edileceği için dolandırıcılığı önler.
 
-## Ön Koşullar \{#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 Bloklar, yeni başlayanlar için uygun bir konudur. Ancak bu sayfayı daha iyi anlamanıza yardımcı olmak için önce [Hesaplar](/developers/docs/accounts/), [İşlemler](/developers/docs/transactions/) ve [Ethereum'a giriş](/developers/docs/intro-to-ethereum/) bölümlerini okumanızı öneririz.
 
-## Bloklar neden gerekli? \{#why-blocks}
+## Bloklar neden gerekli? {#why-blocks}
 
 Ethereum ağındaki tüm katılımcıların senkronize durumlarını sürdürmesini ve işlemlerin kesin geçmişi üzerinde anlaşmasını sağlamak için işlemleri bloklar hâlinde topluyoruz. Bu, düzinelerce (veya yüzlerce) işlemin aynı anda yapıldığı, üzerinde anlaşmaya varıldığı ve senkronize edildiği anlamına gelir.
 
@@ -18,13 +18,13 @@ Ethereum ağındaki tüm katılımcıların senkronize durumlarını sürdürmes
 
 Kod girişleri arasında belirli bir süre tanıyarak ağ katılımcıları için yeterli zamanı veriyoruz: işlem talepleri saniye başına düzinelerce oluşsa da bloklar Ethereum üzerinde on iki saniyede bir yaratılmaktadır ve oluşmaktadır.
 
-## Blokların çalışma şekli \{#how-blocks-work}
+## Blokların çalışma şekli {#how-blocks-work}
 
 İşlem geçmişini korumak için, bloklar titizlikle sıralanır (oluşturulan her yeni blok, önceki bloğa bir referans içerir) ve bloklar içindeki işlemler de titizlikle sıralanır. Herhangi bir zamanda olabilecek nadir durumlar dışında ağdaki tüm katılımcılar, blokların tam sayısı ve geçmişi konusunda mutabıktır ve mevcut aktif işlem taleplerini bir sonraki blokta gruplandırmak için çalışmaktadır.
 
 Bir blok, ağ üzerinden rastgele seçilmiş doğruluyacılar tarafından bir araya getirildiğinde ağın geri kalanına yayılır, bütün düğümler bu bloku kendi blok zincirlerinin sonuna ekler ve yeni bloku yaratmak için yeni bir doğrulayıcı seçilir. Bu blok birleştirme süreci ve taahtütname/mutabakat süreci şu anda Ethereum'un "hisse ispatı" protokolü tarafından özelleştiriliyor.
 
-## Hisse ispatı protokolü \{#proof-of-work-protocol}
+## Hisse ispatı protokolü {#proof-of-work-protocol}
 
 Hisse ispatının anlamı aşağıdaki gibidir:
 
@@ -35,7 +35,7 @@ Hisse ispatının anlamı aşağıdaki gibidir:
 
 [Hisse ispatı hakkında daha fazla bilgi](/developers/docs/consensus-mechanisms/pos)
 
-## Bir blokta neler yer alır? \{#block-anatomy}
+## Bir blokta neler yer alır? {#block-anatomy}
 
 Bir blok içinde barındırılan çok fazla bilgi vardır. En yüksek düzeyde, bir blok aşağıdaki alanları barındırır:
 
@@ -131,21 +131,21 @@ Bu işlemleri `execution_payload`'da yapmak global durumu günceller. Tüm istem
 | `indeks`         | para çekim endeksi değeri |
 | `validatorIndex` | doğrulayıcı endeks değeri |
 
-## Blok süresi \{#block-time}
+## Blok süresi {#block-time}
 
 Blok süresi, blokların ayrılması sırasındaki süreye karşılık gelir. Ethereum'da zaman, "yuva" adı verilen 12 saniyelik birimlere bölünmüştür. Her bir yuvada blok önermek için tek bir doğrulayıcı seçilmiştir. Tüm doğrulayıcıların çevrimiçi ve tam anlamıyla işlevsel olduğunu varsayarsak her bir yuvada bir blok oluşacaktır, bu da blok zamanının 12 saniye olduğu anlamına gelir. Ancak bazen doğrulayıcılar, blok önerisine çağrıldıklarında çevrimdışı olabilir, bu da kimi zaman yuvaların boş olacağı anlamına gelir.
 
 Bu uygulama; blok sürelerinin tahmin edilebilir olduğu ve protokolün hedef madencilik zorluğu tarafından ayarlanan iş ispatı temelli sistemlerden ayrılır. Ethereum'un [ortalama blok süresi](https://etherscan.io/chart/blocktime) yeni 12li blok süresinin istikrarına bağlı olarak bakıldığında iş ispatı ve hisse ispatı arasındajki geçişi net olarak gösteren mükemmel bir örnektir.
 
-## Blok boyutu \{#block-size}
+## Blok boyutu {#block-size}
 
 Son olarak önemli bir not: Blokların kendileri de boyut olarak sınırlandırılmıştır. Her blokun hedef boyutu 15 milyon gazdır ama blok boyutu ağ isteklerine göre 30 milyon gaz olan blok limitine kadar (blok boyutu hedefinin 2 katı) artabilir veya azalabilir. Bloktaki işlemlerden kesilen toplam gaz miktarı, blokun gaz limitinden daha az olmalıdır. Bu, blok boyutunun keyfi olarak belirlenememesini sağladığı için önemlidir. Bloklar keyfi boyutlarda olabilseydi, daha az performans gösteren tam düğümler, alan ve hız gereksinimleri nedeniyle yavaş yavaş ağa ayak uyduramazlardı. Blok ne kadar büyük olursa onu bir sonraki yuvada zamanında işlemek için gereken işlemci gücü de o denli büyük olacaktır. Bu blok boyutlarına üst sınırlar koyarak direnen bir merkezileştirici kuvvet.
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## İlgili konular \{#related-topics}
+## İlgili konular {#related-topics}
 
 - [İşlemler](/developers/docs/transactions/)
 - [Gaz](/developers/docs/gas/)

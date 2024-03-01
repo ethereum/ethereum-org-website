@@ -13,11 +13,11 @@ summaryPoints:
   - Mengurangi kepercayaan, dan tetap memegang kendali kunci penarikan Anda
 ---
 
-## Apa yang dimaksud dengan penaruhan sebagai layanan? \{#what-is-staking-as-a-service}
+## Apa yang dimaksud dengan penaruhan sebagai layanan? {#what-is-staking-as-a-service}
 
 Penaruhan sebagai layanan ("SaaS") merupakan kategori layanan penguncian di mana Anda menyetor sendiri 32 ETH untuk validator, tetapi menugaskan operasi simpul kepada operator pihak ketiga. Proses ini biasanya melibatkan panduan dalam pengaturan awal, termasuk pembuatan kunci dan setoran, kemudian menampilkan kunci tanda tangan Anda ke operator. Ini memungkinkan layanan tersebut menggunakan validator Anda atas nama Anda, biasanya dengan membayar biaya bulanan.
 
-## Mengapa melakukan taruhan dengan layanan? \{#why-stake-with-a-service}
+## Mengapa melakukan taruhan dengan layanan? {#why-stake-with-a-service}
 
 Protokol Ethereum tidak secara asli mendukung delegasi taruhan, sehingga layanan-layanan ini dibangun untuk memenuhi permintaan tersebut. Jika Anda memiliki 32 ETH untuk taruhan, namun tidak merasa nyaman menghadapi perangkat keras, layanan SaaS memungkinkan Anda menugaskan bagian yang sulit sementara Anda mendapatkan imbalan blok asli.
 
@@ -31,7 +31,7 @@ Protokol Ethereum tidak secara asli mendukung delegasi taruhan, sehingga layanan
 <StakingComparison page="saas" />
 }
 
-## Apa yang perlu ditentukan \{#what-to-consider}
+## Apa yang perlu ditentukan {#what-to-consider}
 
 Ada semakin banyak penyedia SaaS yang dapat membantu Anda melakukan taruhan ETH, tetapi setiap penyedia memiliki manfaat dan risikonya sendiri. Semua pilihan layanan SaaS memerlukan keyakinan tambahan dibandingkan dengan penaruhan di beranda. Opsi Saas mungkin memiliki kode tambahan yang melingkupi klien Ethereum yang tidak terbuka atau dapat diaudit. SaaS juga berdampak buruk pada desentralisasi jaringan. Tergantung pada pengaturan, Anda mungkin tidak mengendalikan validator Anda - operator dapat bertindak tidak jujur dengan menggunakan ETH Anda.
 
@@ -41,7 +41,7 @@ Indikator atribut digunakan di bawah ini untuk menandakan kekuatan atau kelemaha
 <StakingConsiderations page="saas" />
 }
 
-## Eksplorasi penyedia layanan penaruhan \{#saas-providers}
+## Eksplorasi penyedia layanan penaruhan {#saas-providers}
 
 Berikut adalah beberapa penyedia layanan SaaS yang tersedia. Gunakan indikator-indikator di atas untuk membantu memandu Anda melalui layanan-layanan ini
 
@@ -65,7 +65,7 @@ Harap perhatikan pentingnya mendukung [diversitas klien](/developers/docs/nodes-
 
 Punya saran untuk penyedia penaruhan sebagai layanan yang kami lewatkan? Lihat [kebijakan daftar produk](/contributing/adding-staking-products/) kami untuk melihat apakah cocok, dan untuk mengirimkannya untuk ditinjau.
 
-## Pertanyaan yang sering diajukan \{#faq}
+## Pertanyaan yang sering diajukan {#faq}
 
 {
 <ExpandableCard title="Siapa yang menyimpan kunci-kunci saya?" eventCategory="SaasStaking" eventName="clicked who holds my keys">
@@ -107,6 +107,6 @@ Hubungi penyedia SaaS secara individu untuk mendapatkan informasi lebih lanjut t
 </ExpandableCard>
 }
 
-## Bacaan lebih lanjut \{#further-reading}
+## Bacaan lebih lanjut {#further-reading}
 
 - [Menilai Layanan Penaruhan](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

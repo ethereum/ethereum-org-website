@@ -6,7 +6,7 @@ sidebarDepth: 1
 isOutdated: true
 ---
 
-# Historia Ethereum \{#the-history-of-ethereum}
+# Historia Ethereum {#the-history-of-ethereum}
 
 Oś czasu wszystkich najważniejszych kamieni milowych, forków i aktualizacji blockchainu Ethereum.
 
@@ -24,9 +24,9 @@ Te zmiany reguł mogą spowodować tymczasowy podział w sieci. Nowe bloki możn
 
 <Divider />
 
-## 2021 \{#2021}
+## 2021 {#2021}
 
-### (_W toku_) Altair \{#altair}
+### (_W toku_) Altair {#altair}
 
 Uaktualnienie Altair jest pierwszym planowanym uaktualnieniem [łańcucha śledzącego](/roadmap/beacon-chain). Jego wdrożenie ma nastąpić w 2021 r. Wprowadzi ono wsparcie dla „komitetów synchronizacji”, które mogą umożliwiać korzystanie z lekkich klientów, a także podniesie kary za brak aktywności i cięcia do ich pełnych wartości.
 
@@ -34,11 +34,11 @@ Uaktualnienie Altair jest pierwszym planowanym uaktualnieniem [łańcucha śledz
 
 ---
 
-### London \{#london}
+### London {#london}
 
 <NetworkUpgradeSummary name="london" />
 
-#### Podsumowanie \{#london-summary}
+#### Podsumowanie {#london-summary}
 
 Uaktualnienie London wprowadziło [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559), która zreformowała rynek opłat transakcyjnych oraz wprowadziła zmiany do sposobu obsługi zwrotów kosztów gazu oraz do harmonogramu [Epoki Lodowcowej](/glossary/#ice-age) (Ice Age).
 
@@ -60,11 +60,11 @@ Uaktualnienie London wprowadziło [EIP-1559](https://eips.ethereum.org/EIPS/eip-
 
 ---
 
-### Berlin \{#berlin}
+### Berlin {#berlin}
 
 <NetworkUpgradeSummary name="berlin" />
 
-#### Podsumowanie \{#berlin-summary}
+#### Podsumowanie {#berlin-summary}
 
 Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz zwiększa wsparcie wielu rodzajów transakcji.
 
@@ -84,13 +84,13 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 <Divider />
 
-## 2020 \{#2020}
+## 2020 {#2020}
 
-### Geneza łańcucha śledzącego \{#beacon-chain-genesis}
+### Geneza łańcucha śledzącego {#beacon-chain-genesis}
 
 <NetworkUpgradeSummary name="beaconChainGenesis" />
 
-#### Podsumowanie \{#beacon-chain-genesis-summary}
+#### Podsumowanie {#beacon-chain-genesis-summary}
 
 [Łańcuch śledzący ](/roadmap/beacon-chain/) potrzebował 16384 depozytów z 32 zestakowanymi ETH, aby zapewnić bezpieczną wysyłkę. Stało się to 27 listopada, co oznacza, że łańcuch śledzący (​​Beacon Chain) rozpoczął produkcję bloków 1 grudnia 2020 roku. To ważny pierwszy krok w realizacji [wizji Eth2](/roadmap/vision/).
 
@@ -102,11 +102,11 @@ Uaktualnienie Berlin optymalizuje koszt gazu przy pewnych działaniach EVM oraz 
 
 ---
 
-### Wdrożony kontrakt depozytu na staking \{#staking-deposit-contract}
+### Wdrożony kontrakt depozytu na staking {#staking-deposit-contract}
 
 <NetworkUpgradeSummary name="stakingDepositContractDeployed" />
 
-#### Podsumowanie \{#deposit-contract-summary}
+#### Podsumowanie {#deposit-contract-summary}
 
 Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć był to kontrakt [sieci głównej](/glossary/#staking), miał bezpośredni wpływ na harmonogram wprowadzania [łańcucha odłamkowego](/roadmap/beacon-chain/), ważnego [ulepszenia Eth2](/roadmap/).
 
@@ -118,11 +118,11 @@ Do ekosystemu Ethereum został wprowadzony kontrakt depozytu na staking Choć by
 
 ---
 
-### Muir Glacier \{#muir-glacier}
+### Muir Glacier {#muir-glacier}
 
 <NetworkUpgradeSummary name="muirGlacier" />
 
-#### Podsumowanie \{#muir-glacier-summary}
+#### Podsumowanie {#muir-glacier-summary}
 
 Fork Muir Glacier wprowadził opóźnienie [bomby trudności](/glossary/#difficulty-bomb). Zwiększona trudność bloków konsensusu[proof-of-work](/developers/docs/consensus-mechanisms/pow/) grozi pogorszeniem przydatności Ethereum na skutek wydłużenia czasu oczekiwania na wysłanie transakcji i korzystanie z aplikacji zdecentralizowanych.
 
@@ -139,13 +139,13 @@ Fork Muir Glacier wprowadził opóźnienie [bomby trudności](/glossary/#difficu
 
 <Divider />
 
-## Rok 2019 \{#2019}
+## Rok 2019 {#2019}
 
-### Istanbul \{#istanbul}
+### Istanbul {#istanbul}
 
 <NetworkUpgradeSummary name="istanbul" />
 
-#### Podsumowanie \{#istanbul-summary}
+#### Podsumowanie {#istanbul-summary}
 
 Fork Istanbul:
 
@@ -172,11 +172,11 @@ Fork Istanbul:
 
 ---
 
-### Constantinople \{#constantinople}
+### Constantinople {#constantinople}
 
 <NetworkUpgradeSummary name="constantinople" />
 
-#### Podsumowanie \{#constantinople-summary}
+#### Podsumowanie {#constantinople-summary}
 
 Fork Constantinople:
 
@@ -199,13 +199,13 @@ Fork Constantinople:
 
 <Divider />
 
-## 2017 \{#2017}
+## 2017 {#2017}
 
-### Byzantium \{#byzantium}
+### Byzantium {#byzantium}
 
 <NetworkUpgradeSummary name="byzantium" />
 
-#### Podsumowanie \{#byzantium-summary}
+#### Podsumowanie {#byzantium-summary}
 
 Fork Byzantium:
 
@@ -234,13 +234,13 @@ Fork Byzantium:
 
 <Divider />
 
-## 2016 \{#2016}
+## 2016 {#2016}
 
-### Spurious Dragon \{#spurious-dragon}
+### Spurious Dragon {#spurious-dragon}
 
 <NetworkUpgradeSummary name="spuriousDragon" />
 
-#### Podsumowanie \{#spurious-dragon-summary}
+#### Podsumowanie {#spurious-dragon-summary}
 
 Fork Spurious Dragon był drugą odpowiedzią na ataki typu DoS (odmowa usługi) na sieć (wrzesień/październik 2016 r.). Obejmował:
 
@@ -263,11 +263,11 @@ Fork Spurious Dragon był drugą odpowiedzią na ataki typu DoS (odmowa usługi)
 
 ---
 
-### Tangerine Whistle \{#tangerine-whistle}
+### Tangerine Whistle {#tangerine-whistle}
 
 <NetworkUpgradeSummary name="tangerineWhistle" />
 
-#### Podsumowanie \{#tangerine-whistle-summary}
+#### Podsumowanie {#tangerine-whistle-summary}
 
 Fork Tangerine Whistle był pierwszą odpowiedzią na ataki typu „odmowa usługi” (DoS) na sieć (wrzesień/październik 2016 r.). Uwzględniał:
 
@@ -286,11 +286,11 @@ Fork Tangerine Whistle był pierwszą odpowiedzią na ataki typu „odmowa usłu
 
 ---
 
-### Fork DAO \{#dao-fork}
+### Fork DAO {#dao-fork}
 
 <NetworkUpgradeSummary name="daoFork" />
 
-#### Podsumowanie \{#dao-fork-summary}
+#### Podsumowanie {#dao-fork-summary}
 
 Fork DAO był odpowiedzią na [atak DAO 2016](https://www.coindesk.com/understanding-dao-hack-journalists), który doprowadził do złamania niezabezpieczonego kontraktu [DAO](/glossary/#dao) i kradzieży ponad 3,6 mln ETH. Fork przeniósł fundusze z błędnego kontraktu do [nowego kontraktu](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) z jedną funkcją: wypłać. Każdy, kto stracił środki, mógł wypłacić 1 ETH za każde 100 tokenów DAO w swoim portfelu.
 
@@ -302,11 +302,11 @@ Niektórzy górnicy odmówili forku, ponieważ incydent DAO nie był defektem pr
 
 ---
 
-### Homestead \{#homestead}
+### Homestead {#homestead}
 
 <NetworkUpgradeSummary name="homestead" />
 
-#### Podsumowanie \{#homestead-summary}
+#### Podsumowanie {#homestead-summary}
 
 Przyszłościowy fork Homestead. Obejmował kilka zmian protokołu i zmianę sieci, która dała Ethereum możliwość wykonywania dalszych aktualizacji sieci.
 
@@ -324,13 +324,13 @@ Przyszłościowy fork Homestead. Obejmował kilka zmian protokołu i zmianę sie
 
 <Divider />
 
-## 2015 \{#2015}
+## 2015 {#2015}
 
-### Frontier thawing \{#frontier-thawing}
+### Frontier thawing {#frontier-thawing}
 
 <NetworkUpgradeSummary name="frontierThawing" />
 
-#### Podsumowanie \{#frontier-thawing-summary}
+#### Podsumowanie {#frontier-thawing-summary}
 
 Fork frontier thawing podniósł wynoszący 5000 limit [gazu](/glossary/#gas) na [blok](/glossary/#block) i określił domyślną cenę gazu na 51 [gwei](/glossary/#gwei). Pozwoliło to na transakcje – transakcje wymagają 21 tys. gazu.
 
@@ -338,11 +338,11 @@ Fork frontier thawing podniósł wynoszący 5000 limit [gazu](/glossary/#gas) na
 
 ---
 
-### Frontier \{#frontier}
+### Frontier {#frontier}
 
 <NetworkUpgradeSummary name="frontier" />
 
-#### Podsumowanie \{#frontier-summary}
+#### Podsumowanie {#frontier-summary}
 
 Frontier był działającą, ale surową implementacją projektu Ethereum. Wprowadzono go po udanej fazie testów olimpijskich. Był przeznaczony dla użytkowników technicznych, w szczególności programistów. [Bloki](/glossary/#block) miały limit [gazu](/glossary/#gas) wynoszący 5000. Ten okres „thawing” umożliwił górnikom rozpoczęcie działalności, a wczesnym użytkownikom instalowanie klientów bez konieczności „pośpiechu”.
 
@@ -350,9 +350,9 @@ Frontier był działającą, ale surową implementacją projektu Ethereum. Wprow
 
 <Divider />
 
-## 2014 \{#2014}
+## 2014 {#2014}
 
-### Sprzedaż Etheru \{#ether-sale}
+### Sprzedaż Etheru {#ether-sale}
 
 <NetworkUpgradeSummary name="etherSale" />
 
@@ -362,7 +362,7 @@ Ether był oficjalnie sprzedawany przez 42 dni. Można było go kupić za BTC.
 
 ---
 
-### Wydanie dokumentacji Yellowpaper \{#yellowpaper}
+### Wydanie dokumentacji Yellowpaper {#yellowpaper}
 
 <NetworkUpgradeSummary name="yellowpaperRelease" />
 
@@ -372,9 +372,9 @@ Dokumentacja Yellow Paper autorstwa dr Gavina Wood, jest techniczną definicją 
 
 <Divider />
 
-## 2013 \{#2013}
+## 2013 {#2013}
 
-### Wydanie dokumentacji Whitepaper \{#whitepaper}
+### Wydanie dokumentacji Whitepaper {#whitepaper}
 
 <NetworkUpgradeSummary name="whitepaperRelease" />
 

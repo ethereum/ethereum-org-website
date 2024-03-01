@@ -6,11 +6,11 @@ lang: tr
 
 Bir merkeziyetsiz uygulama (dapp), bir [akıllı sözleşme](/developers/docs/smart-contracts/) ile bir ön uç kullanıcı arayüzünü birleştiren merkeziyetsiz bir ağ üzerine kurulmuş bir uygulamadır. Ethereum'da akıllı sözleşmeler açık API'ler gibi erişilebilir ve şeffaftır: Bu yüzden merkeziyetsiz uygulamanız, başka birinin yazdığı bir akıllı sözleşmeyi bile içerebilir.
 
-## Ön koşullar \{#prerequisites}
+## Ön koşullar {#prerequisites}
 
 Dapp'ler hakkında bilgi edinmeden önce, [blok zinciri temellerini](/developers/docs/intro-to-ethereum/) gözden geçirmeli ve Ethereum ağı ve ağın nasıl merkeziyetsizleştirildiği hakkında bilgi edinmelisiniz.
 
-## Dapp'in tanımı \{#definition-of-a-dapp}
+## Dapp'in tanımı {#definition-of-a-dapp}
 
 Bir dapp'in arka uç kodu, merkeziyetsiz bir eşler arası ağ üzerinde çalışır. Bunu, arka uç kodunun merkezi sunucularda çalıştığı bir uygulamanın tersi olarak düşünebilirsiniz.
 
@@ -21,13 +21,13 @@ Bir dapp, arka ucuna çağrı yapabilen herhangi bir dilde yazılmış (tıpkı 
 - **Turing-tam** - gereken kaynaklar sağlandığında herhangi bir eylemi gerçekleştirebilirler
 - **İzole** - Ethereum Sanal Makinesi olarak bilinen sanal bir ortamda yürütülürler, böylece akıllı sözleşmede bir hata olursa, blok zinciri ağının normal işleyişi engellemez
 
-### Akıllı sözleşmeler hakkında \{#on-smart-contracts}
+### Akıllı sözleşmeler hakkında {#on-smart-contracts}
 
 Dapp'leri kullanıma sokmak için, en iyi şekilde bir dapp'in arka ucu olarak tanımlayabileceğimiz akıllı sözleşmeleri kullanıma sokmamız gerekir. Ayrıntılı bir genel bakış için [akıllı sözleşmeler](/developers/docs/smart-contracts/) hakkındaki bölümümüzü ziyaret edin.
 
 Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programlandığı gibi çalışan bir koddur. Akıllı sözleşmeler ağa dağıtıldıktan sonra bunları değiştiremezsiniz. Dapp'ler, bir kişi veya şirket tarafından değil, sözleşmeye yazılan mantık tarafından kontrol edildikleri için merkeziyetsiz hâle getirilebilir. Bu aynı zamanda, sözleşmelerinizi çok dikkatli bir şekilde tasarlamanız ve iyice test etmeniz gerektiği anlamına gelir.
 
-## Dapp deliştirmenin faydaları \{#benefits-of-dapp-development}
+## Dapp deliştirmenin faydaları {#benefits-of-dapp-development}
 
 - **Sıfır kesinti** – Akıllı sözleşme dağıtıldıktan ve blok zincirine ulaştıktan sonra ağ bir bütün olarak sözleşme ile etkileşmek isteyen istemcilere her zaman hizmet edebilecektir. Bu nedenle kötü niyetli aktörler, bireysel dapp'lere yönelik hizmet reddi saldırıları başlatamaz.
 - **Gizlilik** – Bir dapp dağıtmak veya onunla etkileşime girmek için gerçek hayattaki kimliğinizi sağlamanız gerekmez.
@@ -35,7 +35,7 @@ Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programland
 - **Tam veri bütünlüğü** – Blok zincirinde depolanan veriler, kriptografik temeller sayesinde değişmez ve tartışılmazdır. Kötü niyetli aktörler, hâlihazırda kamuya açıklanmış olan işlemleri veya diğer verileri taklit edemezler.
 - **Güven gerektirmeyen hesaplama/doğrulanabilir davranış** – Akıllı sözleşmeler, analiz edilebilirler ve merkezi bir otoriteye güvenmeye gerek kalmadan öngörülebilir şekillerde yürütülmeleri garanti edilir. Bu geleneksel modeller için geçerli değildir: Örneğin, çevrimiçi bankacılık sistemlerini kullandığımızda, finansal kurumların finansal verilerimizi kötüye kullanmayacağına, kayıtları kurcalamayacağına veya saldırıya uğramayacağına güvenmemiz gerekir.
 
-## Dapp geliştirmenin zorlukları \{#drawbacks-of-dapp-development}
+## Dapp geliştirmenin zorlukları {#drawbacks-of-dapp-development}
 
 - **Bakım** – Blok zincirinde yayınlanan kod ve verilerin değiştirilmesi daha zor olduğu için dapp'lerin bakımı daha zor olabilir. Geliştiricilerin, eski bir sürümde hatalar veya güvenlik riskleri tanımlansa bile dağıtıldıktan sonra dapp'lerinde (veya bir dapp tarafından depolanan temel verilerde) güncellemeler yapmaları zordur.
 - **Performans ek yükü** – Büyük bir performans ek yükü mevcuttur ve ölçeklendirme aşırı zordur. Ethereum'un arzu ettiği güvenlik, bütünlük, şeffaflık ve güvenilirlik seviyesini elde etmek için her düğüm, her işlemi çalıştırır ve depolar. Buna ek olarak, hisse ispatı mutabakatı da zaman alır.
@@ -43,13 +43,13 @@ Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programland
 - **Kullanıcı deneyimi** – Ortalama bir kullanıcı blok zinciriyle gerçekten güvenli bir etkileşime girmek için gerekli bir araç kümesini kurmayı aşırı zor bulabileceği için kullanıcı dostu deneyimler geliştirmek çok daha zor olabilir.
 - **Merkezileşme** – Ethereum'un temel katmanı üzerinde inşa edilmiş kullanıcı dostu ve geliştirici dostu çözümler merkezileşmiş servislere benzeyecek şekilde sonuçlanabilir. Örnek olarak, bu tip servisler anahtarlar veya diğer hassas bilgileri sunucu tarafında depolayabilir, merkezi bir sunucu kullanarak bir ön uç sunabilir veya önemli bir iş mantığını blok zincirine yazmadan önce merkezi bir sunucuda çalıştırabilir. Merkezileşme, blok zincirinin geleneksel modele göre avantajlarının çoğunu (tamamını da olabilir) ortadan kaldırır.
 
-## Görsel olarak öğrenmeyi mi tercih ediyorsunuz? \{#visual-learner}
+## Görsel olarak öğrenmeyi mi tercih ediyorsunuz? {#visual-learner}
 
 {
 <YouTube id="F50OrwV6Uk8" />
 }
 
-## Dapp oluşturmak için araçlar \{#dapp-tools}
+## Dapp oluşturmak için araçlar {#dapp-tools}
 
 **Scaffold-ETH _- Akıllı sözleşmenize adapte olan bir ön uç kullanarak Solidity ile hızlıca deney yapın._**
 
@@ -76,7 +76,7 @@ Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programland
 - [Dokümanlar](https://portal.thirdweb.com/)
 - [GitHub](https://github.com/thirdweb-dev/)
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Dapps'i keşfedin](/dapps)
 - [Bir Web 3.0 uygulamasının mimarisi](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_
@@ -86,7 +86,7 @@ Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programland
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_
 
-## İlgili konular \{#related-topics}
+## İlgili konular {#related-topics}
 
 - [Ethereum yığınına giriş](/developers/docs/ethereum-stack/)
 - [Geliştirici çerçeveleri](/developers/docs/frameworks/)

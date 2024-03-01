@@ -8,11 +8,11 @@ lang: tr
 
 Hesaplama, Ethereum'u kullanmanın yavaş ve pahalı kısmı olduğundan iyimser toplamalar ölçeklenebilirlikte 10-100x'lik iyileştirmeler sunabilir. İyimser toplamalar ayrıca işlemleri Ethereum'a çağrı verisi `calldata` olarak yazar, bu da kullanıcılar için gaz maliyetlerini azaltır.
 
-## Ön Koşullar \{#prerequisites}
+## Ön Koşullar {#prerequisites}
 
 [Ethereum ölçeklendirme](/developers/docs/scaling/) ve [katman 2](/layer-2/) hakkındaki sayfalarımızı okumuş ve anlamış olmalısınız.
 
-## İyimser toplama nedir? \{#what-is-an-optimistic-rollup}
+## İyimser toplama nedir? {#what-is-an-optimistic-rollup}
 
 Bir iyimser toplama, Ethereum'u ölçeklendirmek amacıyla hesaplama ve durum depolamayı zincir dışına taşımayı içeren bir çözüm yaklaşımıdır. İyimser toplamalar işlemleri Ethereum dışında yürütür, ancak işlem verilerini Ana ağa `calldata` olarak gönderir.
 
@@ -26,7 +26,7 @@ Eğer sahtecilik kanıtı başarılı olursa, toplama protokolü işlemi/işleml
 
 Toplama partisinin itiraz süresi sona erdikten sonra hala itiraz edilmemişse (yani tüm işlemler doğru bir şekilde yürütülmüşse), parti geçerli sayılır ve Ethereum'da kabul edilir. Diğerleri, doğrulanmamış bir toplama bloğu üzerine inşa etmeye devam edebilir, ancak bir uyarı söz konusudur: işlem sonuçları, önceden yayınlanmış ve yanlış gerçekleştirilmiş bir işleme dayanıyorsa sonuçlar tersine çevrilecektir.
 
-## İyimser toplamalar Ethereum ile nasıl etkileşime girer? \{#optimistic-rollups-and-Ethereum}
+## İyimser toplamalar Ethereum ile nasıl etkileşime girer? {#optimistic-rollups-and-Ethereum}
 
 İyimser toplamalar, Ethereum üzerinde çalışacak şekilde inşa edilmiş [zincir dışı ölçeklendirme çözümleri](/developers/docs/scaling/#off-chain-scaling)dir. Her iyimser toplama, Ethereum ağına dağıtılmış bir dizi akıllı sözleşme tarafından yönetilir. İyimser toplamalar, işlemleri ana Ethereum zinciri dışında gerçekleştirir ancak zincir dışındaki işlemleri (toplu halde) zincir üzerindeki bir toplama sözleşmesine gönderir. Ethereum blokzincirinde olduğu gibi, bu işlem kaydı da değiştirilemezdir ve "iyimser toplama zincirini" oluşturur.
 
@@ -42,13 +42,13 @@ Bir iyimser toplamanın mimarisi şu bölümlerden oluşur:
 
 İyimser toplamalar aşağıdakiler için ana Ethereum protokolüne güvenir:
 
-### Veri mevcudiyeti \{#data-availability}
+### Veri mevcudiyeti {#data-availability}
 
 Belirtildiği gibi, iyimser toplamalar işlem verilerini Ethereum'a `calldata` olarak gönderir. Toplama zincirinin yürütülmesi gönderilen işlemlere dayandığından, herkes Ethereum'un temel katmanında bulunan bu bilgileri kullanarak toplamanın durumunu yürütebilir ve durum geçişlerinin doğruluğunu teyit edebilir.
 
 [Veri kullanılabilirliği](/developers/docs/data-availability/) kritiktir; çünkü itiraz eden kişiler, durum verilerine erişim olmadan geçersiz toplama işlemlerine itiraz etmek için sahtecilik kanıtları oluşturamazlar. Ethereum'un veri mevcudiyeti ve kullanılabilirliği sağlaması sayesinde, toplama operatörlerinin kötü niyetli hareketlerden (ör. geçersiz bloklar gönderme) paçayı sıyırma riski azalır.
 
-### Sansüre dayanıklılık \{#censorship-resistance}
+### Sansüre dayanıklılık {#censorship-resistance}
 
 İyimser toplamalar da sansüre karşı direnç konusunda Ethereum'a güvenir. Bir iyimser toplamada işlemleri işlemekten ve Ethereum'a toplama blokları göndermekten merkezi bir varlık (operatör) sorumludur. Bunun bazı sonuçları vardır:
 
@@ -64,15 +64,15 @@ Belirtildiği gibi, iyimser toplamalar işlem verilerini Ethereum'a `calldata` o
 
 - Kullanıcılar, işlemlerini sıralayıcı yerine L1 üzerinden de gönderebilirler; bu durumda sıralayıcı, geçerli bloklar üretmeye devam etmek için işlemi belirli bir zaman sınırı içinde dahil etmek zorundadır.
 
-### Uzlaşma \{#settlement}
+### Uzlaşma {#settlement}
 
 Ethereum'un iyimser toplamalar bağlamında oynadığı bir diğer rol de, uzlaşma katmanı olmasıdır. Bir uzlaşma katmanı tüm blokzincir ekosistemi için çıpa görevi görür, güvenliği tesis eder ve başka bir zincirde (bu durumda iyimser toplamalar) hakemlik gerektiren bir anlaşmazlık meydana gelirse nesnel kesinlik sağlar.
 
 Ethereum Ana Ağı, iyimser toplamaların sahtecilik kanıtlarını doğrulaması ve anlaşmazlıkları çözmesi için bir merkez sunar. Dahası, toplama üzerinde gerçekleştirilen işlemler, ancak toplama bloğu Ethereum'da kabul edildikten _sonra_ nihai hale gelir. Bir toplama işlemi Ethereum'un temel katmanına işlendikten sonra geri alınamaz (zincirin yeniden düzenlenmesi gibi gerçekleşme olasılığı çok az olan bir durum hariç).
 
-## İyimser toplamalar nasıl çalışır? \{#how-optimistic-rollups-work}
+## İyimser toplamalar nasıl çalışır? {#how-optimistic-rollups-work}
 
-### İşlem yürütme ve birleştirme \{#transaction-execution-and-aggregation}
+### İşlem yürütme ve birleştirme {#transaction-execution-and-aggregation}
 
 Kullanıcılar işlemleri "operatörlere" gönderir; bu operatörler, iyimser toplamalar üzerinde işlemleri gerçekleştirmekten sorumlu olan düğümlerdir. Aynı zamanda "doğrulayıcı" veya "birleştirici" olarak da bilinen operatör, işlemleri birleştirir, temel veriyi sıkıştırır ve bloğu Ethereum'da yayımlar.
 
@@ -84,7 +84,7 @@ Bazı iyimser toplamalar izin gerektirmeyen bir doğrulayıcı sisteminden ferag
 
 Sıralayıcı, işlemlerin sıralanması üzerinde daha fazla kontrole sahip olduğu için normal bir toplama operatöründen farklıdır. Sıralayıcı ayrıca, toplama zincirine öncelikli erişime sahiptir ve zincir üstündeki sözleşmeye işlem gönderme yetkisine sahip tek varlıktır. Sıralayıcı olmayan düğümlerden veya normal kullanıcılardan gelen işlemler, sıralayıcı bunları yeni bir partiye dahil edene kadar ayrı bir gelen kutusunda bekletilir.
 
-#### Toplama bloklarını Ethereum'a gönderme \{#submitting-blocks-to-ethereum}
+#### Toplama bloklarını Ethereum'a gönderme {#submitting-blocks-to-ethereum}
 
 Belirtildiği gibi, bir iyimser toplamanın operatörü zincir dışı işlemleri bir yığın halinde toplar ve onay için Ethereum'a gönderir. Bu süreç, işlemle ilgili verilerin sıkıştırılmasını ve Ethereum üzerinde `calldata` olarak yayımlanmasını içerir.
 
@@ -96,7 +96,7 @@ Belirtildiği gibi, bir iyimser toplamanın operatörü zincir dışı işlemler
 
 İşte bu konseptin nasıl çalıştığını göstermek için toplama partisi gönderimine [bir örnek](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a924fb5fbd7c4cd2f675911c27422a5591). Sıralayıcı `appendSequencerBatch()` yöntemini çağırmış ve sıkıştırılmış işlem verilerini `calldata` kullanarak girdi olarak geçirmiştir.
 
-### Durum taahhütleri \{#state-commitments}
+### Durum taahhütleri {#state-commitments}
 
 Herhangi bir zamanda, iyimser toplamanın durumu (hesaplar, bakiyeler, sözleşme kodu, vb.) "durum ağacı" adı verilen bir [Merkle ağacı](/whitepaper/#merkle-trees) olarak düzenlenir. Toplamanın en son durumuna başvuran bu Merkle ağacının kökü (durum kökü) karma hale getirilir ve toplama sözleşmesinde saklanır. Zincir üstündeki her durum geçişi, operatörün yeni bir durum kökü hesaplayarak taahhüt ettiği yeni bir toplama durumu üretir.
 
@@ -106,7 +106,7 @@ Toplama operatörünün ayrıca işlem yığınının kendisi için bir Merkle k
 
 Durum taahhütleri, özellikle de durum kökleri, iyimser toplamada durum değişikliklerinin doğruluğunu kanıtlamak için gereklidir. Toplama sözleşmesi, gönderildikten hemen sonra operatörlerden yeni durum köklerini kabul eder ancak daha sonra toplamayı doğru durumuna geri getirmek için geçersiz durum köklerini silebilir.
 
-### Sahteciliği kanıtlama \{#fraud-proving}
+### Sahteciliği kanıtlama {#fraud-proving}
 
 Açıklandığı üzere, iyimser toplamalar isteyen herkesin geçerlilik kanıtları sunmadan blokları yayımlamasına izin verir. Bununla birlikte, zincirin güvenli kalmasını sağlamak için iyimser toplamalar, herhangi birinin bir durum geçişine itiraz edebileceği bir zaman aralığı belirtir. Bu nedenle, isteyen herkes doğruluklarına itiraz edebileceğinden toplama bloklarına "savlar" denir.
 
@@ -116,7 +116,7 @@ Tek turlu etkileşimli kanıtlama şemaları, geçersiz savları tespit etmek i�
 
 Bununla birlikte, sahtekarlığı tespit etmek için L1'deki işlemlerin yeniden yürütülmesi, bireysel işlemler için durum taahhütlerinin yayımlanmasını gerektirir ve toplamaların zincir üstünde yayımlanması gereken veri miktarını artırır. İşlemlerin tekrarlanması, önemli gaz maliyetlerine neden olur. Bu nedenlerle, iyimser toplamalar aynı hedefe (yani geçersiz toplama işlemlerini tespit etme) daha verimli bir şekilde ulaşmak için çok turlu etkileşimli kanıtlamaya geçmektedir.
 
-#### Çok turlu etkileşimli kanıtlama \{#multi-round-interactive-proving}
+#### Çok turlu etkileşimli kanıtlama {#multi-round-interactive-proving}
 
 Çok turlu etkileşimli kanıtlama, bir sav sahibi ile itiraz eden arasında bir L1 doğrulayıcı sözleşmesi tarafından denetlenen ileri geri bir protokol içerir ve yalan söyleyen tarafı bu protokol belirler. Bir L2 düğümü bir sava itiraz ederse, sav sahibinin itiraza konu savı iki eşit yarıya bölmesi gerekir. Bu durumda her bir bireysel sav, diğerinde olduğu kadar çok hesaplama adımı içerecektir.
 
@@ -134,7 +134,7 @@ Bu tür bir sahtecilik kanıtı hakkında bazı notlar:
 
 4. Çok turlu etkileşimli kanıtlama, her iki tarafın da (sav sahibi ve itiraz eden) belirtilen zaman penceresi içinde hamle yapmasını gerektirir. Son tarih öncesinde harekete geçmemek, temerrüde düşen tarafın itirazı kaybetmesine neden olur.
 
-#### Sahtecilik kanıtları iyimser toplamalar için neden önemlidir? \{#fraud-proof-benefits}
+#### Sahtecilik kanıtları iyimser toplamalar için neden önemlidir? {#fraud-proof-benefits}
 
 Sahtecilik kanıtları, iyimser toplamalarda _güven gerektirmeyen kesinliği_ kolaylaştırdığı için önemlidir. Güven gerektirmeyez kesinlik, iyimser toplamaların bir niteliğidir ve bir işlemin, geçerli olduğu sürece sonunda kesinlikle onaylanacağını garanti eder.
 
@@ -142,11 +142,11 @@ Kötü niyetli düğümler, sahte itirazlar başlatarak geçerli bir toplama blo
 
 Bu, iyimser toplamaların başka bir güvenlik özelliği ile de ilgilidir: zincirin geçerliliği, dürüst _bir_ düğümün varlığına bağlıdır. Dürüst düğüm, geçerli savları yayımlayarak veya geçersiz savlara itiraz ederek zinciri doğru bir şekilde ilerletebilir. Her durumda, dürüst düğümle ihtilafa düşen kötü niyetli düğümler, sahtecilik kanıtlama süreci sırasında hisselerini kaybeder.
 
-### L1/L2 birlikte çalışabilirliği \{#l1-l2-interoperability}
+### L1/L2 birlikte çalışabilirliği {#l1-l2-interoperability}
 
 İyimser toplamalar, Ethereum Ana Ağı ile birlikte çalışacak şekilde tasarlanmıştır ve kullanıcıların L1 ile L2 arasında mesaj ve keyfi veri iletimine izin verir. Ayrıca Ethereum Sanal Makinesi ile de uyumludurlar. Bu sayede mevcut [merkeziyetsiz uygulamaları](/developers/docs/dapps/) iyimser toplamalara taşıyabilir veya Ethereum geliştirme araçlarını kullanarak yeni merkeziyetsiz uygulamalar oluşturabilirsiniz.
 
-#### 1. Varlık hareketi \{#asset-movement}
+#### 1. Varlık hareketi {#asset-movement}
 
 ##### Toplamaya giriş
 
@@ -166,7 +166,7 @@ Ethereum'a fonları çekmeden önce bir hafta beklememek için iyimser toplama k
 
 Likidite sağlayıcıları, fonları serbest bırakmadan önce kullanıcının çekme isteğinin geçerliliğini (zinciri kendileri yürüterek) kontrol edebilir. Bu şekilde, işlemin nihayetinde onaylanacağına dair güvenceleri olur (yani, güven gerektirmeyen kesinlik).
 
-#### 2. ESM uyumluluğu \{#evm-compatibility}
+#### 2. ESM uyumluluğu {#evm-compatibility}
 
 Geliştiriciler için iyimser toplamaların avantajı, [Ethereum Sanal Makinesi (EVM)](/developers/docs/evm/) ile uyumlulukları veya daha da iyi bir ifadeyle eşdeğerlikleridir. EVM uyumlu toplamalar, [Ethereum Sarı Kağıdı](https://ethereum.github.io/yellowpaper/paper.pdf)'ndaki spesifikasyonlara uyar ve EVM'yi bit kodu seviyesinde destekler.
 
@@ -178,7 +178,7 @@ ii. İyimser toplamaları kullanan geliştiriciler ve proje ekipleri, Ethereum a
 
 Mevcut araçları kullanmak, bu araçların yıllar boyunca kapsamlı şekilde denetlendiği, hata ayıkladığı ve geliştirildiği göz önünde bulunduruldduğunda önemlidir. Aynı zamanda Ethereum geliştiricilerinin tamamen yeni bir geliştirme yığınıyla geliştirme yapacaklarını öğrenme ihtiyaçlarını ortadan kaldırır.
 
-#### 3. Çapraz zincir sözleşme çağrıları \{#cross-chain-contract-calls}
+#### 3. Çapraz zincir sözleşme çağrıları {#cross-chain-contract-calls}
 
 Kullanıcılar (dışarıdan sahip olunan hesaplar), bir işlemi toplama sözleşmesine göndererek veya bunu bir sıralayıcı veya doğrulayıcıya yaptırarak L2 sözleşmeleriyle etkileşime geçerler. İyimser toplamalar ayrıca, Ethereum'daki sözleşme hesaplarının L1 ile L2 arasında mesaj iletimi ve veri aktarımı yapmak için köprüleme sözleşmeleri kullanarak L2 sözleşmeleri ile etkileşime geçmesine olanak tanır. Bu, Ethereum Ana Ağı'nda bir L1 sözleşmesinin, bir L2 iyimser toplaması üzerindeki sözleşmelere ait fonksiyonları çağırmak üzere programlanabileceği anlamına gelir.
 
@@ -190,7 +190,7 @@ Kullanıcılar (dışarıdan sahip olunan hesaplar), bir işlemi toplama sözle�
 
 Son olarak, sözleşmeler arasındaki L2 > L1 mesaj çağrıları, gecikmeleri de hesaba katılmalıdır (L1 > L2 çağrıları tipik olarak birkaç dakika sonra yürütülür). Bunun nedeni, iyimser toplamadan Ana Ağ'a gönderilen mesajların itiraz dönemi sona erene kadar yürütülememesidir.
 
-## İyimser toplamalar nasıl çalışır? \{#how-do-optimistic-rollup-fees-work}
+## İyimser toplamalar nasıl çalışır? {#how-do-optimistic-rollup-fees-work}
 
 İyimser toplamalar, tıpkı Ethereum gibi kullanıcıların işlem başına ne kadar ödeyeceğini belirtmek için bir gaz ücreti şeması kullanır. İyimser toplamalarda tahsil edilen ücretler aşağıdaki bileşenlere bağlıdır:
 
@@ -202,7 +202,7 @@ Son olarak, sözleşmeler arasındaki L2 > L1 mesaj çağrıları, gecikmeleri d
 
 İyimser toplamalar, kullanıcıların ödeyeceği ücretleri azaltmak için işlemleri birleştirme ve `calldata`'yı sıkıştırarak veri yayımlama maliyetlerini düşürme gibi birkaç mekanizma uygular. Ethereum tabanlı iyimser toplamaları kullanmanın maliyetine ilişkin gerçek zamanlı bir genel bakış için [L2 ücret izleyici](https://l2fees.info/)ye göz atabilirsiniz.
 
-## İyimser toplamalar Ethereum'u nasıl ölçeklendirir? \{#scaling-ethereum-with-optimistic-rollups}
+## İyimser toplamalar Ethereum'u nasıl ölçeklendirir? {#scaling-ethereum-with-optimistic-rollups}
 
 Açıklandığı gibi, iyimser toplamalar, veri erişilebilirliğini garanti etmek için Ethereum'a sıkıştırılmış işlem verileri yayımlar. Zincir üstünde yayımlanan verileri sıkıştırabilme yeteneği, iyimser toplamalar ile Ethereum'da ölçeklendirme hacmini artırmak açısından önemlidir.
 
@@ -231,7 +231,7 @@ Bu, iyimser toplama işlemlerinin asla tam bir Ethereum bloğunu oluşturamayaca
 
 [Veri parçalamanın](/roadmap/danksharding/) Ethereum'da iyimser toplamalarda ölçeklenebilirliği artırması beklenmektedir. Toplama işlemleri, blok alanını toplama olmayan diğer işlemlerle paylaşmak zorunda olduğundan işleme kapasiteleri, ana Ethereum zincirindeki veri hacmiyle sınırlıdır. Danksharding, L2 zincirlerinin veri yayımlamak için kullanabileceği blok başına alanı artırırken pahalı, kalıcı `CALLDATA` yerine daha ucuz, geçici "blob" depolama kullanacaktır.
 
-### İyimser toplamaların artıları ve eksileri \{#optimistic-rollups-pros-and-cons}
+### İyimser toplamaların artıları ve eksileri {#optimistic-rollups-pros-and-cons}
 
 | Artıları                                                                                                                                                                                                  | Eksileri                                                                                                                                                 |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -243,7 +243,7 @@ Bu, iyimser toplama işlemlerinin asla tam bir Ethereum bloğunu oluşturamayaca
 | İyimser toplamalar, zincirdeki güvenliği artırmak için iyi tasarlanmış kriptoekonomik teşviklere güvenir.                                                                                                 | Toplamaların tüm işlem verilerini zincir üzerinde yayımlaması gerekir, bu da maliyetleri artırabilir.                                                    |
 | EVM ve Solidity ile uyumluluk, geliştiricilerin Ethereum'a özgü akıllı sözleşmeleri toplamalara taşımasına veya yeni merkeziyetsiz uygulamalar oluşturmak için mevcut araçları kullanmasına olanak tanır. |                                                                                                                                                          |
 
-### İyimser toplamaların görsel açıklaması \{#optimistic-video}
+### İyimser toplamaların görsel açıklaması {#optimistic-video}
 
 Görerek öğrenmeyi mi tercih ediyorsunuz? Finematics'in iyimser toplamalar hakkındaki açıklamasını izleyin:
 
@@ -251,7 +251,7 @@ Görerek öğrenmeyi mi tercih ediyorsunuz? Finematics'in iyimser toplamalar hak
 <YouTube id="7pWxCklcNsU" start="263" />
 }
 
-### İyimser toplamaları kullanın \{#use-optimistic-rollups}
+### İyimser toplamaları kullanın {#use-optimistic-rollups}
 
 Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok İyimser toplama uygulaması mevcuttur:
 

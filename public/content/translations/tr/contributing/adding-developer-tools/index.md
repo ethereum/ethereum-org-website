@@ -4,7 +4,7 @@ lang: tr
 description: Ethereum.org'da geliştirici araçlarını listeleme kriterlerimiz
 ---
 
-# Geliştirici araçları ekleme \{#contributing-to-ethereumorg-}
+# Geliştirici araçları ekleme {#contributing-to-ethereumorg-}
 
 İnsanların güvenle inşa edebilmeleri ve ihtiyaç duydukları desteğe sahip olabilmeleri için mümkün olan en iyi geliştirici kaynaklarını listelediğimizden emin olmak istiyoruz.
 
@@ -14,7 +14,7 @@ Kaçırdığımız yararlı bir geliştirici aracı varsa, uygun bir yerde öner
 
 **Uygun sayfalara yeni eklemeler önermekten çekinmeyin.**
 
-## Nasıl karar veririz \{#ways-to-contribute}
+## Nasıl karar veririz {#ways-to-contribute}
 
 Geliştirici aracı gönderimleri aşağıdaki kriterlere göre değerlendirilecektir:
 
@@ -46,13 +46,13 @@ Ethereum alanındaki birçok proje açık kaynak kodludur. Topluluk geliştirici
 
 ---
 
-## Ürün Siparişi \{#product-ordering}
+## Ürün Siparişi {#product-ordering}
 
 Ürünler özel olarak sıralanmadıkça, örneğin alfabetik olarak, uzak geçmişten yakın geçmişe göre sayfaya eklenir. Diğer bir deyişle, en yeni ürünler listenin en altına eklenir.
 
 ---
 
-## Geliştirici aracınızı ekleyin \{#how-decisions-about-the-site-are-made}
+## Geliştirici aracınızı ekleyin {#how-decisions-about-the-site-are-made}
 
 Eğer ethereum.org'a geliştirici aracı eklemek istiyorsanız ve kriterleri karşılıyorsa GitHub'da bir konu oluşturun.
 

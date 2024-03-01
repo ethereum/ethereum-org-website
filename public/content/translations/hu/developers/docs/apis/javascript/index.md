@@ -12,17 +12,17 @@ Ha JavaScript programnyelvet szeretnél használni, hogy csatlakozz egy Ethereum
 
 Az [egyesítés (Merge)](/roadmap/merge/) után, az Ethereum szoftver két kapcsolódó darabja – egy végrehajtó kliens és egy konszenzus kliens – kell a csomópont futtatásához. Gondoskodjon arról, hogy a csomópont mindkét kliens benne legyen. Ha a csomópont nem a helyi gépen van (pl. egy AWS-en fut), akkor az IP-címet frissíteni kell az útmutatóban. Bővebb információért érdemes felkeresni a [csomópont futtatása](/developers/docs/nodes-and-clients/run-a-node/) oldalt.
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 A JavaScript megértése mellett lehet érdemes lehet előbb alaposan megismerni az [Ethereum stacket](/developers/docs/ethereum-stack/) és az [Ethereum-klienseket](/developers/docs/nodes-and-clients/).
 
-## Miért használj könyvtárat? \{#why-use-a-library}
+## Miért használj könyvtárat? {#why-use-a-library}
 
 Ezek a könyvtárak elveszik a komplexitás nagy részét, mely Ethereum csomóponthoz történő közvetlen csatlakozással jár. Ezen kívül használati függvényeket is szolgáltatnak (pl.: ETH konvertálása Gwei-be), így fejlesztőként kevesebb időt kell az Ethereum kliensek bonyodalmaival foglalkoznod és több időd jut egyedi funkcionalitást kialakítani az alkalmazásodnak.
 
-## Könyvtár tulajdonságok \{#library-features}
+## Könyvtár tulajdonságok {#library-features}
 
-### Csatlakozás Ethereum csomóponthoz \{#connect-to-ethereum-nodes}
+### Csatlakozás Ethereum csomóponthoz {#connect-to-ethereum-nodes}
 
 Szolgáltatók használatakor ezen könyvtárak használatával rácsatlakozhat az Ethereumra és kiolvashatja az adatait, függetlenül attól, hogy JSON-RPC, INFURA, Etherscan, Alchemy vagy MetaMask rendszeren keresztül történik.
 
@@ -70,7 +70,7 @@ Amint be van állítva, lekérdezéseket indíthat a blokkláncon a következők
 - hálózati azonosító
 - és még sok mást...
 
-### Tárca funkcionalitás \{#wallet-functionality}
+### Tárca funkcionalitás {#wallet-functionality}
 
 Ezek a könyvtárak funkcionalitást adnak, hogy tárcákat hozzon létre, kulcsokat kezeljen és tranzakciókat írjon alá.
 
@@ -151,7 +151,7 @@ Amint be van állítva, a következőket teheti:
 - tranzakciókat aláírni
 - és még sok mást...
 
-### Interakció okosszerződés függvényekkel \{#interact-with-smart-contract-functions}
+### Interakció okosszerződés függvényekkel {#interact-with-smart-contract-functions}
 
 A Javascript-kliens könyvtárai lehetővé teszik az alkalmazás számára, hogy okosszerződés-függvényeket hívjanak meg egy befordított szerződés Application Binary Interface-ének (ABI) olvasásával.
 
@@ -213,7 +213,7 @@ Ez azt jelenti, hogy:
 - Telepíthetsz egy szerződést
 - És még sok mást...
 
-### Használati függvények \{#utility-functions}
+### Használati függvények {#utility-functions}
 
 A használati függvények praktikus könnyítéseke adnak, hogy egyszerűbb legyen az Ethereumon való építés.
 
@@ -235,7 +235,7 @@ ethers.utils.formatEther(balance)
 - [Web3js használati függvények](https://docs.web3js.org/api/web3-utils)
 - [Ethers használati függvények](https://docs.ethers.io/v5/api/utils/)
 
-## Elérhető könyvtárak \{#available-libraries}
+## Elérhető könyvtárak {#available-libraries}
 
 **Web3.js -** **_Ethereum JavaScript API._**
 
@@ -279,16 +279,16 @@ ethers.utils.formatEther(balance)
 - [Dokumentáció](https://viem.sh)
 - [GitHub](https://github.com/wagmi-dev/viem)
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 _Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
 
-## Kapcsolódó témák \{#related-topics}
+## Kapcsolódó témák {#related-topics}
 
 - [ Csomópontok és kliensek](/developers/docs/nodes-and-clients/)
 - [Fejlesztői keretrendszerek](/developers/docs/frameworks/)
 
-## Kapcsolódó útmutatók \{#related-tutorials}
+## Kapcsolódó útmutatók {#related-tutorials}
 
 - [Web3js beállítása az Ethereum-blokklánc használatához JavaScriptben](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/) _– Útmutató a web3.js projektben való beállításához.._
 - [Okosszerződés hívása JavaScriptből](/developers/tutorials/calling-a-smart-contract-from-javascript/) _– A DAI token használatával tekintse meg, hogyan hívhat be szerződéseket a JavaScript segítségével._

@@ -11,19 +11,19 @@ lang: ja
 published: 2021-04-06
 ---
 
-## ethers.js(5.0)を使用したトークンの送信 \{#send-token}
+## ethers.js(5.0)を使用したトークンの送信 {#send-token}
 
-### このチュートリアルでは、次の処理を行う方法について学びます。 \{#you-learn-about}
+### このチュートリアルでは、次の処理を行う方法について学びます。 {#you-learn-about}
 
 - ethers.js のインポート
 - トークンの転送
 - ネットワークの混雑状況に応じたガス代の設定
 
-### はじめに \{#to-get-started}
+### はじめに {#to-get-started}
 
 まず、ethers.js というライブラリを javascript にインポートする必要があります。これには、ethers.js 5.0 も含まれます。
 
-### インストール \{#install-ethersjs}
+### インストール {#install-ethersjs}
 
 ```shell
 /home/ricmoo> npm install --save ethers
@@ -47,7 +47,7 @@ published: 2021-04-06
 ></script>
 ```
 
-### パラメータ \{#param}
+### パラメータ {#param}
 
 1. **`contract_address`**: トークンのコントラクトアドレス(転送したいトークンがイーサでない場合は、コントラクトアドレスが必要となります)
 2. **`send_token_amount`**: 受取人に送る量
@@ -55,15 +55,15 @@ published: 2021-04-06
 4. **`send_account`**: 送信者のアドレス
 5. **`private_key`**: トランザクションに署名し、実際にトークンを転送するための送信者の秘密鍵
 
-## 注意 \{#notice}
+## 注意 {#notice}
 
 `signTransaction(tx)`は、`sendTransaction()`の内部で実行されるため削除されました。
 
-## 送信の手順 \{#procedure}
+## 送信の手順 {#procedure}
 
-### 1. ネットワーク(testnet)に接続する \{#connect-to-network}
+### 1. ネットワーク(testnet)に接続する {#connect-to-network}
 
-#### プロバイダー(Infura)の設定 \{#set-provider}
+#### プロバイダー(Infura)の設定 {#set-provider}
 
 テストネットの Ropsten に接続します。
 
@@ -71,29 +71,29 @@ published: 2021-04-06
 window.ethersProvider = new ethers.providers.InfuraProvider("ropsten")
 ```
 
-### 2. ウォレットを作成する \{#create-wallet}
+### 2. ウォレットを作成する {#create-wallet}
 
 ```javascript
 let wallet = new ethers.Wallet(private_key)
 ```
 
-### 3. ウォレットをネットに接続する \{#connect-wallet-to-net}
+### 3. ウォレットをネットに接続する {#connect-wallet-to-net}
 
 ```javascript
 let walletSigner = wallet.connect(window.ethersProvider)
 ```
 
-### 4. 現在のガス代を取得する \{#get-gas}
+### 4. 現在のガス代を取得する {#get-gas}
 
 ```javascript
 window.ethersProvider.getGasPrice() // gasPrice
 ```
 
-### 5. トランザクションを定義する \{#define-transaction}
+### 5. トランザクションを定義する {#define-transaction}
 
 以下で定義されている変数は、`send_token()`に依存します。
 
-### トランザクションのパラメータ \{#transaction-params}
+### トランザクションのパラメータ {#transaction-params}
 
 1. **`send_account`**: トークン送信者のアドレス
 2. **`to_address`**: トークンの受取人のアドレス
@@ -114,7 +114,7 @@ const tx = {
 }
 ```
 
-### 6. 転送する \{#transfer}
+### 6. 転送する {#transfer}
 
 ```javascript
 walletSigner.sendTransaction(tx).then((transaction) => {
@@ -123,7 +123,7 @@ walletSigner.sendTransaction(tx).then((transaction) => {
 })
 ```
 
-## 使い方 \{#how-to-use}
+## 使い方 {#how-to-use}
 
 ```javascript
 let private_key =
@@ -146,11 +146,11 @@ send_token(
 )
 ```
 
-### 成功しました! \{#success}
+### 成功しました! {#success}
 
 ![トランザクションが成功したときのイメージ](./successful-transaction.png)
 
-## send_token() \{#send-token-method}
+## send_token() {#send-token-method}
 
 ```javascript
 function send_token(

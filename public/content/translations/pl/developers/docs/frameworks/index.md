@@ -4,7 +4,7 @@ description: Zapoznaj się z zaletami frameworków i porównaj dostępne opcje.
 lang: pl
 ---
 
-## Wprowadzenie do frameworków \{#introduction-to-frameworks}
+## Wprowadzenie do frameworków {#introduction-to-frameworks}
 
 Budowa pełnoprawnej zdecentralizowanej aplikacji wymaga różnych technologii. Frameworki programistyczne zawierają wiele z potrzebnych funkcji lub zapewniają łatwe systemy pluginów, aby wybrać narzędzia, których potrzebujesz.
 
@@ -16,11 +16,11 @@ Te frameworki mają wiele gotowych funkcji, takich jak:
 - Konfiguracja połączenia się z sieciami Ethereum i wdrażania kontraktów, niezależnie od tego, czy jest to lokalnie uruchomiona instancja, czy jedna z publicznych sieci Ethereum.
 - Zdecentralizowana dystrybucja aplikacji — integracja z opcjami przechowywania, takimi jak IPFS.
 
-## Warunki wstępne \{#prerequisites}
+## Warunki wstępne {#prerequisites}
 
 Przed zagłębieniem się w frameworki zalecamy przeczytanie naszego wprowadzenia do [aplikacji zdecentralizowanych](/developers/docs/dapps/) i [stosu Ethereum](/developers/docs/ethereum-stack/).
 
-## Dostępne frameworki \{#available-frameworks}
+## Dostępne frameworki {#available-frameworks}
 
 **Truffle —** **_środowisko programistyczne, testowanie frameworka i inne narzędzia._**
 
@@ -69,10 +69,10 @@ Przed zagłębieniem się w frameworki zalecamy przeczytanie naszego wprowadzeni
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.gg/kwqVnrA)
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_
 
-## Powiązane tematy \{#related-topics}
+## Powiązane tematy {#related-topics}
 
 - [Konfigurowanie lokalnego środowiska programistycznego](/developers/local-environment/)

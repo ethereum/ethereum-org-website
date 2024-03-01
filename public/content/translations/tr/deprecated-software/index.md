@@ -5,21 +5,21 @@ lang: tr
 sidebarDepth: 2
 ---
 
-# Kullanımdan kaldırılmış yazılım \{#summary-deprecated-software}
+# Kullanımdan kaldırılmış yazılım {#summary-deprecated-software}
 
 Bu, Ethereum ile ilgili kullanımdan kaldırılmış veya artık desteklenmeyen önemli proje ve kaynakların bir listesidir. Kullanımdan kaldırılmış çalışmaları vurgulamak, kullanıcıların işlevsel alternatifleri bulmalarını sağlamak ve kötü amaçlı sürümlerin dağıtılmasını önlemek açısından önemlidir.
 
 Bu liste topluluğumuz tarafından hazırlanmıştır. Eksik veya yanlış bir şey varsa, lütfen bu sayfayı düzenleyin!
 
-## İş ispatı \{#pow}
+## İş ispatı {#pow}
 
 [İş ispatı](/developers/docs/consensus-mechanisms/pow), Ethereum'da Eylül 2022'ye kadar kullanılan bir mutabakat motorudur. Ethereum, [hisse ispatı](/developers/docs/consensus-mechanisms/pos) tabanlı bir mutabakat mekanizmasına geçiş yaptığında kullanımı sona ermiştir. Bu, istemci yazılımının [Ethhash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethhash) (madencilik algoritması) ve başlangıçta yürütüm istemcilerinde tümleşik olarak sunulan mutabakat mantığı ve blok yayılım işlevselliğininin tümü dahil olmak üzere iş ispatı madenciliği ile ilgili kısımlarının kullanımdan kaldırılmasıyla gerçekleştirildi. İstemcilerin kendileri değil, bazı temel bileşenleri kullanımdan kaldırılmıştır. İş ispatı kavramı, istemci yazılımının ilgili bileşenlerinin kaldırılmasının yarattığı genel etki sonucunda kullanımdan kaldırılmıştır.
 
-## Yazılım \{#software}
+## Yazılım {#software}
 
 Bu bölüm, kullanımdan kaldırılmış masaüstü, komut satırı veya sunucu yazılımlarını içerir. Başlıca türleri arasında cüzdanlar, entegre geliştirme ortamları, diller ve Ethereum istemcileri yer alır. Kullanımdan kaldırılmış yazılımı, https://github.com/ethereum adresi altında barındırılan bir depo gibi orijinal kaynaktan geldiğinden emin olmadan yüklememeye dikkat edin.
 
-### OpenEthereum \{#open-ethereum}
+### OpenEthereum {#open-ethereum}
 
 Temmuz 2021'de kullanımdan kaldırılmıştır
 
@@ -39,7 +39,7 @@ OpenEthereum, madenciler, hizmet sağlayıcılar ve hızlı senkronizasyon ile m
 
 [Tüm Ethereum yürütüm istemcisi seçeneklerini karşılaştırın](/developers/docs/nodes-and-clients/#execution-clients).
 
-### Grid \{#grid}
+### Grid {#grid}
 
 10 Ocak 2020'de kullanımdan kaldırılmıştır
 
@@ -59,7 +59,7 @@ Grid, aynı zamanda Mist'in varisi olarak görülebilir. Mist de bağımsız bir
 
 [DAppNode](https://dappnode.io/), merkeziyetsiz uygulamaları, P2P istemcilerini ve blokzincir düğümlerini dağıtmaya ve barındırmaya yarayan bir platformdur.
 
-### Ethereum Studio \{#ethereum-studio}
+### Ethereum Studio {#ethereum-studio}
 
 7 Aralık 2020'de kullanımdan kaldırılmıştır
 
@@ -79,7 +79,7 @@ Ethereum Studio, kullanıcılara tümleşik bir Ethereum blokzinciri ve Solidity
 
 [Remix](https://remix.ethereum.org/), Solidity geliştirmeleri için alternatif bir web IDE'sidir. Ayrıca [Geliştirici Portalı](/developers/), web ve yerel geliştirme, belgeleme ve daha fazlası için araçlar sunmaktadır.
 
-### Meteor Dapp Wallet \{#meteor-dapp-wallet}
+### Meteor Dapp Wallet {#meteor-dapp-wallet}
 
 27 Mart 2019'da kullanımdan kaldırılmıştır
 
@@ -105,7 +105,7 @@ Aşağıda Mist'e göz atın.
 
 Ethereum.org'da [Ethereum Cüzdanları](/wallets/) sayfasına göz atın.
 
-### Mist \{#mist}
+### Mist {#mist}
 
 27 Mart 2019'da kullanımdan kaldırılmıştır
 
@@ -125,7 +125,7 @@ Mist, Ethereum anahtarlarının nasıl yönetileceğini keşfettiği, kullanıc�
 
 [MetaMask](https://metamask.io/), Ethereum anahtarlarını yönetmenizi ve merkeziyetsiz uygulamalarla etkileşime geçmenizi sağlayan bir tarayıcı içi cüzdandır. Google Chrome ve Firefox'ta uzantı olarak mevcuttur ve [Brave Tarayıcı](https://brave.com/)'da da bulunur.
 
-### Mix \{#mix}
+### Mix {#mix}
 
 11 Ağustos 2016'da kullanımdan kaldırılmıştır
 
@@ -145,7 +145,7 @@ Mix, Ethereum'la ilgili en eski uygulamalardan biridir. [Devcon0'da Gavin Wood t
 
 [Remix](https://remix.ethereum.org/), Solidity/akıllı sözleşme geliştiriciliği, testleri ve dağıtılması için tarayıcıda barındırılan bir IDE'dir. Bir masaüstü seçeneği de vardır.
 
-### Minimal \{#minimal}
+### Minimal {#minimal}
 
 2020'de kullanımdan kaldırılmıştır.
 
@@ -161,7 +161,7 @@ Minimal, Ethereum blokzincirinin Go'da yazılmış modüler bir uygulamasıydı.
 
 Minimal'in yerini [polgon-sdk](https://github.com/0xPolygon/polygon-edge) almıştır
 
-### Hyperledger Burrow \{#hyperledger-burrow}
+### Hyperledger Burrow {#hyperledger-burrow}
 
 2022'de kullanımdan kaldırılmıştır.
 
@@ -173,7 +173,7 @@ Hyperledger Burrow, izin verilmiş bir Ethereum akıllı sözleşme blokzincir d
 
 [Arşivlenmiş GitHub deposu](https://github.com/hyperledger/burrow)
 
-### Mana-Ethereum \{#mana-ethereum}
+### Mana-Ethereum {#mana-ethereum}
 
 **Özet**
 
@@ -187,7 +187,7 @@ Mana-Ethereum, Elixir kullanılarak geliştirilmiş bir Ethereum istemcisiydi.
 
 Mana-Ethereum'un Github deposu, henüz açık bir şekilde arşivlenmemiştir ancak son giriş 2019'da yapılmıştır.
 
-### Aleth (cpp-ethereum) \{#aleth}
+### Aleth (cpp-ethereum) {#aleth}
 
 6 Ekim 2021'de kullanımdan kaldırılmıştır
 
@@ -207,7 +207,7 @@ Aleth, 6 Ekim 2021'de kullanımdan kaldırılmadan önce Ethereum'un en popüler
 
 [Geth](https://geth.ethereum.org/), iyi bilinen alternatif bir Ethereum istemcisidir.
 
-### Ethereum-H \{#ethereum-h}
+### Ethereum-H {#ethereum-h}
 
 **Arşivler**
 
@@ -221,7 +221,7 @@ Ethereum-H, Haskell'de yazılmış bir Ethereum istemcisiydi. 2015 civarında ku
 
 [Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://besu.hyperledger.org/en/stable/) ve [Erigon](https://github.com/ledgerwatch/erigon) uygulanabilir alternatif Ethereum istemcileridir - güncel bir Haskell istemcisi yoktur.
 
-### ruby-ethereum \{#ruby-ethereum}
+### ruby-ethereum {#ruby-ethereum}
 
 **Arşivler**
 
@@ -235,7 +235,7 @@ ruby-ethereum, Ruby'de yazılmış bir Ethereum istemcisiydi. 2018 civarında ku
 
 [Geth](https://geth.ethereum.org/), [Nethermind](http://nethermind.io/), [Besu](https://besu.hyperledger.org/en/stable/) and [Erigon](https://github.com/ledgerwatch/erigon) uygulanabilir alternatif Ethereum istemcileridir. Güncel bir Ruby istemcisi yoktur.
 
-### Parity \{#parity}
+### Parity {#parity}
 
 2 Haziran 2020'de kullanımdan kaldırılmıştır
 
@@ -259,7 +259,7 @@ Ethereum'un ilk yıllarındaki iki önde gelen uygulanabilir istemciden biri ola
 
 Ethereum.org'daki ["Kendi Ethereum düğümünüzü programlayın"](/developers/docs/nodes-and-clients/run-a-node/#getting-the-client) kaynağı, bir Ethereum istemcisini indirme, kurma ve çalıştırma bölümlerini kapsar.
 
-### Trinity \{#trinity}
+### Trinity {#trinity}
 
 1 Temmuz 2021'de kullanımdan kaldırılmıştır
 
@@ -281,11 +281,11 @@ Ethereum.org'daki ["Kendi Ethereum düğümünüzü programlayın"](/developers/
 
 [EthereumJS](https://github.com/ethereumjs) projesi de Trinity ile benzer bir araştırma ve eğitim amaçlı kullanım senaryosuna sahiptir.
 
-## Merkeziyetsiz Uygulamalar ve Hizmetler \{#dapps-and-services}
+## Merkeziyetsiz Uygulamalar ve Hizmetler {#dapps-and-services}
 
 Bu bölüm, Ethereum Ana Ağı'na ve EVM tabanlı diğer ağlara dağıtılmış olan hizmetlere yöneliktir. Buradaki merkeziyetsiz uygulama ve hizmetlerin bakımsızlık, protokol değişiklikleri, vs. gibi sebeplerden hack'lenmiş ya da güvenlik açıklarına sahip olan DeFi uygulamalarını kapsayabileceğini göz önünde bulundurun.
 
-### Cover Protokolü \{#cover-protocol}
+### Cover Protokolü {#cover-protocol}
 
 2021 sonbaharında kapatılmıştır
 
@@ -303,7 +303,7 @@ Cover, Ethereum ve diğer EVM tabanlı ağlarda çalışan bir DeFi sigorta prot
 
 [Dokümanlar](https://wayback.archive-it.org/17679/20211004074634/https://docs.coverprotocol.com/)
 
-### DAO \{#the-dao}
+### DAO {#the-dao}
 
 2016 yazında hack'lenmiş ve kapatılmıştır
 
@@ -331,7 +331,7 @@ DAO başarısız olmasına rağmen, konsept devam ettirildi. DAO için geliştir
 
 [Gitcoin Hibeleri](https://gitcoin.co/grants/)
 
-### SparkPool \{#sparkpool}
+### SparkPool {#sparkpool}
 
 2021 sonbaharında kapatılmıştır
 
@@ -349,11 +349,11 @@ EthFans topluluğu ile ilişkili olan hizmet, 2015'te başlatıldı. Spankpool, 
 
 [Ethermine](https://ethermine.org/)
 
-## Dokümantasyon ve Bilgi Kaynakları \{#documentation-and-information-sources}
+## Dokümantasyon ve Bilgi Kaynakları {#documentation-and-information-sources}
 
 Şu anda kaldırılmış ya da mevcut olmasına rağmen sürdürülmeyen sayısız dokümantasyon, makale, öğretici ve forum kaynağı vardır. Önemli olan ya da güncel durumu kullanımdan kaldırılmış olmasına rağmen kafa karışıklığına ya da dolandırıcılık girişimlerine sebep olabilecek birkaç taneyi seçtik.
 
-### Legacy Wiki ve eth.wiki \{#eth-wiki}
+### Legacy Wiki ve eth.wiki {#eth-wiki}
 
 **Özet**
 
@@ -379,7 +379,7 @@ Ethereum yazılım projeleri, genelde dokümantasyonlarını [Dokümanları Okuy
 
 Github'da barındırılan teknik spesifikasyonlar: [EIP'ler](https://github.com/ethereum/EIPs), [Yürütüm Spesifikasyonları](https://github.com/ethereum/execution-specs), [Mutabakat Spesifikasyonları](https://github.com/ethereum/consensus-specs)
 
-### forum.ethereum.org \{#forum-ethereum-org}
+### forum.ethereum.org {#forum-ethereum-org}
 
 **Özet**
 
@@ -397,9 +397,9 @@ Bu Forum, erken dönemlerde Ethereum topluluğunun "resmi" tartışma panosuydu.
 
 [/r/ethereum](https://reddit.com/r/ethereum) ve çok sayıda DAO Forum ile Discord sunucusu.
 
-## Gitter Kanalları \{#gitter-channels}
+## Gitter Kanalları {#gitter-channels}
 
-### AllCoreDevs \{#allcorewdevs-gitter}
+### AllCoreDevs {#allcorewdevs-gitter}
 
 **Özet**
 
@@ -413,7 +413,7 @@ AllCoreDevs Gitter, [Ethereum istemcisinin temel geliştiricileri](https://githu
 
 Lütfen [EthR&D Discord Sunucusu](https://discord.gg/qHv7AjTDuK)'ndaki "allcoredevs" kanalını kullanın
 
-### EthereumJS \{#ethereumjs-gitter}
+### EthereumJS {#ethereumjs-gitter}
 
 **Özet**
 

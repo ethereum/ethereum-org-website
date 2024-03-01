@@ -5,11 +5,11 @@ lang: de
 incomplete: true
 ---
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Um diese Seite besser zu verstehen, empfehlen wir dir, zuerst [Transaktionen](/developers/docs/transactions/), [Blöcke](/developers/docs/blocks/) und [Proof-of-Work](/developers/docs/consensus-mechanisms/pow/) zu lesen.
 
-## Was ist Ethereum-Mining? \{#what-is-ethereum-mining}
+## Was ist Ethereum-Mining? {#what-is-ethereum-mining}
 
 Mining ist der Prozess zur Erstellung eines Blocks aus Transaktionen, der zur Ethereum-Blockchain hinzugefügt werden soll.
 
@@ -19,17 +19,17 @@ Ethereum verwendet derzeit, genau wie Bitcoin, einen [Proof-of-Work (PoW)](/deve
    Proof-of-Stake wird im Laufe des nächsten Jahres Mining und Proof-of-Work ersetzen. Du kannst schon heute mit dem Staking deiner ETH beginnen. <a href="/abstecken/">Mehr zum Staking</a>    
 </InfoBanner>
 
-## Warum gibt es Miner? \{#why-do-miners-exist}
+## Warum gibt es Miner? {#why-do-miners-exist}
 
 In dezentralisierten Systemen wie Ethereum müssen wir sicherstellen, dass jeder mit der Reihenfolge der Transaktionen übereinstimmt. Miner helfen dabei, indem sie rechnerisch schwierige Puzzles lösen, um Blöcke zu erzeugen, welche als Möglichkeit dienen, das Netzwerk vor Angriffen zu schützen.
 
 [Mehr zum Proof-of-Work](/developers/docs/consensus-mechanisms/pow/)
 
-## Wer kann Miner bei Ethereum werden? \{#who-can-become-a-miner}
+## Wer kann Miner bei Ethereum werden? {#who-can-become-a-miner}
 
 Technisch gesehen kann jeder mit seinem Computer im Ethereum-Netzwerk minen. Allerdings kann nicht jeder Ether (ETH) gewinnbringend minen. In den meisten Fällen müssen Miner spezielle Computerhardware kaufen, um gewinnbringend minen zu können. Zwar kann jeder die Mining-Software auf seinem Computer laufen lassen, doch ist es unwahrscheinlich, dass ein durchschnittlicher Computer genügend Blockprämien erwirtschaftet, um die mit dem Mining verbundenen Kosten zu decken.
 
-### Mining-Kosten \{#cost-of-mining}
+### Mining-Kosten {#cost-of-mining}
 
 - Mögliche Kosten für die Hardware, die für den Bau und die Wartung einer Mining-Anlage erforderlich ist
 - Stromkosten für den Betrieb der Mining-Anlage
@@ -38,7 +38,7 @@ Technisch gesehen kann jeder mit seinem Computer im Ethereum-Netzwerk minen. All
 
 Um die Rentabilität des Minings weiter zu erkunden, kannst du einen Mining-Rechner verwenden, wie ihn [Etherscan](https://etherscan.io/ether-mining-calculator) anbietet.
 
-## Wie Ethereum-Transaktionen gemint werden \{#how-ethereum-transactions-are-mined}
+## Wie Ethereum-Transaktionen gemint werden {#how-ethereum-transactions-are-mined}
 
 1. Ein Benutzer schreibt und signiert eine Anfrage für eine [Transaktion](/developers/docs/transactions/) mit seinem privaten Schlüssel von einem [Konto](/developers/docs/accounts/).
 2. Der Benutzer überträgt die Transaktionsanfrage von einigen [Nodes](/developers/docs/nodes-and-clients/) an das gesamte Ethereum-Netzwerk.
@@ -53,7 +53,7 @@ Um die Rentabilität des Minings weiter zu erkunden, kannst du einen Mining-Rech
 
 Jede Transaktion wird einmal gemint (einschließen in einen neuen Block und zum ersten Mal propagiert), aber von jedem Teilnehmer im Prozess der Weiterentwicklung des kanonischen EVM-Zustands mehrfach abgearbeitet und verifiziert. Dies hebt eines der wichtigsten Mantras der Blockchain hervor: **Vertraue nicht, prüfe!**.
 
-## Eine visuelle Demo \{#a-visual-demo}
+## Eine visuelle Demo {#a-visual-demo}
 
 Schaue zu, wie Austin dich durch Mining und die Proof-of-Work-Blockchain führt.
 
@@ -61,15 +61,15 @@ Schaue zu, wie Austin dich durch Mining und die Proof-of-Work-Blockchain führt.
 <YouTube id="zcX7OJ-L8XQ" />
 }
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
-## Verwandte Tools \{#related-tools}
+## Verwandte Tools {#related-tools}
 
 - [Verwandte Themen](https://etherscan.io/stat/miner?range=7&blocktype=blocks)
 - [Etherscan-Mining-Rechner](https://etherscan.io/ether-mining-calculator)
 - [Minerstat-Mining-Rechner](https://minerstat.com/coin/ETH)
 
-## Verwandte Themen \{#related-topics}
+## Verwandte Themen {#related-topics}
 
 - [Gas](/developers/docs/gas/)
 - [EVM](/developers/docs/evm/)

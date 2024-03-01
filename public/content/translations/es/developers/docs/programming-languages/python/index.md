@@ -9,7 +9,7 @@ incomplete: true
 
 Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprovechan las ventajas de las criptomonedas y la tecnología de blockchain. Estas dapps pueden ser confiables, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Pueden controlar los activos digitales para crear nuevos tipos de aplicaciones financieras. Estas aplicaciones pueden ser descentralizadas, lo que significa que ninguna entidad o persona las controla y, por lo tanto, son prácticamente imposibles de censurar.
 
-## Comenzar con los contratos inteligentes y el lenguaje Solidity \{#getting-started-with-smart-contracts-and-solidity}
+## Comenzar con los contratos inteligentes y el lenguaje Solidity {#getting-started-with-smart-contracts-and-solidity}
 
 **Da los primeros pasos para integrar Python con Ethereum**
 
@@ -20,7 +20,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Escribir el primer contrato inteligente](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Aprender a compilar e implementar Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Artículos para principiantes \{#beginner-articles}
+## Artículos para principiantes {#beginner-articles}
 
 - [Guía del programador (Python) para Ethereum](https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/)
 - [Informe sobre el estado de Python en la cadena de bloques 2023](https://tradingstrategy.ai/blog/the-state-of-python-in-blockchain-in-2023)
@@ -30,7 +30,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Introducción a Web3.py · Ethereum para desarrolladores de Python](https://www.dappuniversity.com/articles/web3-py-intro)
 - [Cómo llamar a una función de contrato inteligente mediante Python y web3.py](https://stackoverflow.com/questions/57580702/how-to-call-a-smart-contract-function-using-python-and-web3-py)
 
-## Artículos de nivel intermedio \{#intermediate-articles}
+## Artículos de nivel intermedio {#intermediate-articles}
 
 - [Desarrollo de Dapp para programadores de Python](https://levelup.gitconnected.com/dapps-development-for-python-developers-f52b32b54f28)
 - [Creación de una interfaz de Python Ethereum: Parte 1](https://hackernoon.com/creating-a-python-ethereum-interface-part-1-4d2e47ea0f4d)
@@ -38,15 +38,15 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [Utilizar Brownie y Python para implementar contratos inteligentes](https://dev.to/patrickalphac/using-brownie-for-to-deploy-smart-contracts-1kkp)
 - [Crear NFT en OpenSea con Brownie](https://www.freecodecamp.org/news/how-to-make-an-nft-and-render-on-opensea-marketplace/)
 
-## Patrones de uso avanzados \{#advanced-use-patterns}
+## Patrones de uso avanzados {#advanced-use-patterns}
 
 - [Compilar, desplegar y llamar a contratos inteligentes de Ethereum mediante Python](https://yohanes.gultom.id/2018/11/28/compiling-deploying-and-calling-ethereum-smartcontract-using-python/)
 - [Analizar contratos inteligentes de Solifity con Slither](https://kauri.io/#collections/DevOps/analyze-solidity-smart-contracts-with-slither/#analyze-solidity-smart-contracts-with-slither)
 - [Tutorial fintech para la cadena de bloques: prestar y pedir prestado con Python](https://blog.chain.link/blockchain-fintech-defi-tutorial-lending-borrowing-python/)
 
-## Proyectos y herramientas de Python \{#python-projects-and-tools}
+## Proyectos y herramientas de Python {#python-projects-and-tools}
 
-### Activos: \{#active}
+### Activos: {#active}
 
 - [Web3.py:](https://github.com/ethereum/web3.py) _biblioteca de Python para interactuar con Ethereum_
 - [Vyper:](https://github.com/ethereum/vyper/) _lenguaje de contratos inteligentes tipo Python para la EVM_
@@ -62,14 +62,14 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [siwe:](https://github.com/spruceid/siwe-py) _inicio de sesión con Ethereum (siwe) para Python_
 - [DeFi Web3 para integraciones Ethereum:](https://github.com/tradingstrategy-ai/web3-ethereum-defi) _paquete de Python con integraciones listas para ERC-20, Uniswap y otros proyectos populares_
 
-### Archivados/ya no mantenidos: \{#archived--no-longer-maintained}
+### Archivados/ya no mantenidos: {#archived--no-longer-maintained}
 
 - [Trinity:](https://github.com/ethereum/trinity) _cliente Python de Ethereum_
 - [Mamba:](https://github.com/arjunaskykok/mamba) _entorno de trabajo para escribir, compilar e implementar contratos inteligentes escritos con Vyper_
 
 ¿Buscas más recursos? Visite [ethereum.org/developers](/developers/).
 
-## Proyectos que usan herramientas de Python \{#projects-using-python-tooling}
+## Proyectos que usan herramientas de Python {#projects-using-python-tooling}
 
 Los siguientes proyectos basados en Ethereum utilizan las herramientas mencionadas en esta página. Los repositorios de código abierto relacionados sirven como una buena referencia para código de ejemplo y mejores prácticas.
 
@@ -79,11 +79,11 @@ Los siguientes proyectos basados en Ethereum utilizan las herramientas mencionad
 - [Sushi](https://sushi.com/) usa [Python en la gestión e implementación de sus contratos de vesting](https://github.com/sushiswap/sushi-vesting-protocols)
 - [Alpha Finance](https://alphafinance.io/), de la fama de Alpha Homora, usa [Brownie para probar e implementar contratos inteligentes](https://github.com/AlphaFinanceLab/alpha-staking-contract)
 
-## Debate de la comunidad de Pyton \{#python-community-contributors}
+## Debate de la comunidad de Pyton {#python-community-contributors}
 
 - [Discord de la comunidad de Python para Ethereum](https://discord.gg/9zk7snTfWe) para Web3.py y otras discusiones sobre el marco Python
 - [Discord de Vyper](https://discord.gg/SdvKC79cJk) para debatir sobre programación de contratos inteligentes Vyper
 
-## Otras listas agregadas \{#other-aggregated-lists}
+## Otras listas agregadas {#other-aggregated-lists}
 
 La wiki de Vyper tiene una [increíble lista de recursos para Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources).

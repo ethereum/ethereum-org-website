@@ -15,7 +15,7 @@ sourceUrl: https://docs.tellor.io/tellor/
 
 Quiz: il tuo protocollo è appena terminato, ma ti serve un oracolo per avere accesso ai dati esterni alla catena... Cosa fai?
 
-## (Soft) Prerequisiti \{#soft-prerequisites}
+## (Soft) Prerequisiti {#soft-prerequisites}
 
 Questo post intende rendere l'accesso al feed dell'oracolo il più semplice e diretto possibile. Detto ciò, per concentrarci sull'aspetto dell'oracolo, presumiamo da parte tua le seguenti abilità di programmazione.
 
@@ -27,7 +27,7 @@ Premesse:
 
 Tellor è un oracolo in diretta e open source pronto all'implementazione. Questa guida per principianti serve a mostrare la facilità con cui puoi metterti al lavoro con Tellor, fornendo il tuo progetto con un oracolo completamente decentralizzato e resistente alla censura.
 
-## Panoramica \{#overview}
+## Panoramica {#overview}
 
 Tellor è un sistema di oracolo in cui le parti possono richiedere il valore di un punto di dati esterno alla catena (es. BTC/USD) e i segnalatori competono ad aggiungere tale valore a una banca dati sulla catena, accessibile da tutti i contratti intelligenti di Ethereum. Gli input a questa banca dati sono protetti da una rete di reporter di staking. Tellor utilizza dei meccanismi d'incentivazione cripto-economica, ricompensando gli invii di dati onesti dai segnalatori e punendo gli utenti malevoli tramite l'emissione del token di Tellor, Tributes (TRB) e un meccanismo di disputa.
 
@@ -37,7 +37,7 @@ In questo tutorial, esamineremo:
 - Guida a un semplice esempio.
 - Elenco degli indirizzi testnet delle reti su cui puoi testare Tellor in questo momento.
 
-## Usare Tellor \{#usingtellor}
+## Usare Tellor {#usingtellor}
 
 La prima cosa che dovrai fare è installare gli strumenti di base necessari per usare Tellor come oracolo. Usa [questo pacchetto](https://github.com/tellor-io/usingtellor) per installare i Contratti Utente di Tellor:
 
@@ -47,7 +47,7 @@ Una volta installato, i tuoi contratti potranno ereditare le funzioni dal contra
 
 Ottimo! Ora che hai preparato gli strumenti, guardiamo un semplice esercizio in cui recuperiamo il prezzo Bitcoin:
 
-### Esempio BTC/USD \{#btcusd-example}
+### Esempio BTC/USD {#btcusd-example}
 
 Eredita il contratto UsingTellor, passando l'indirizzo di Tellor come argomento del costruttore:
 

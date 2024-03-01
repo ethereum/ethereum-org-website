@@ -15,7 +15,7 @@ Delphi プログラミング言語を使用してイーサリアムを開発す�
 
 分散型アプリケーションをイーサリアム上に構築し、Delphi プログラミング言語を使用してスマートコントラクトとのやり取りを行えます。
 
-## スマートコントラクトと Solidity を使い始める \{#getting-started-with-smart-contracts-and-the-solidity-language}
+## スマートコントラクトと Solidity を使い始める {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Delphi をイーサリアムに統合するための最初のステップを踏み出してみましょう。**
 
@@ -26,7 +26,7 @@ Delphi プログラミング言語を使用してイーサリアムを開発す�
 - [初めてのスマートコントラクトを記述する](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity のコンパイルとデプロイの方法を学ぶ](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## 初級者向けの参考文献とリンク \{#beginner-references-and-links}
+## 初級者向けの参考文献とリンク {#beginner-references-and-links}
 
 **Delphereum ライブラリの紹介**
 
@@ -40,13 +40,13 @@ Delphi プログラミング言語を使用してイーサリアムを開発す�
 - [3 分でわかるスマートコントラクトと Delphi - Part 1](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
 - [3 分でわかるスマートコントラクトと Delphi - Part 2](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## 中級者向けの記事 \{#intermediate-articles}
+## 中級者向けの記事 {#intermediate-articles}
 
 - [Delphi でイーサリアム署名されたメッセージ署名を生成する](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [Delphi を使用して Ether を送金する](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [Delphi を使用して ERC-20 トークンを送金する](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
-## 高度な使用パターン \{#advanced-use-patterns}
+## 高度な使用パターン {#advanced-use-patterns}
 
 - [Delphi とイーサリアム名サービス (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode、イーサリアム、Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)

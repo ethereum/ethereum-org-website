@@ -4,7 +4,7 @@ description: Richtlinien für das Hinzufügen von Handelsplätzen auf ethereum.o
 lang: de
 ---
 
-# Ethereum-Handelsplätze hinzufügen \{#adding-ethereum-exchanges}
+# Ethereum-Handelsplätze hinzufügen {#adding-ethereum-exchanges}
 
 Jeder kann neue Handelsplätze auf ethereum.org vorschlagen.
 
@@ -18,7 +18,7 @@ Daher sind für den Vorschlag eines Handeslplatzes einige bestimmte Informatione
 
 **HINWEIS:** Wenn Sie einen dezentrale Handelsplatz auflisten möchten, machen Sie sich mit unserer [Richtlinie zum Auflisten von Wallets und Dapps](/contributing/adding-products/) vertraut.
 
-## Folgende Informationen sind erforderlich \{#what-we-need}
+## Folgende Informationen sind erforderlich {#what-we-need}
 
 - Die geografischen Beschränkungen, die für Handelsplätze gelten
 - Die Währungen, mit denen Benutzer ETH kaufen können
@@ -31,7 +31,7 @@ Außerdem sind diese Informationen die Grundlage, dass ethereum.org darauf vertr
 
 ---
 
-## Ihre Börse hinzufügen \{#add-exchange}
+## Ihre Börse hinzufügen {#add-exchange}
 
 Wenn Sie eine Börse zu ethereum.org hinzufügen möchten, erstellen Sie einen Eintrag auf GitHub.
 

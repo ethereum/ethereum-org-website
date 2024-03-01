@@ -21,13 +21,13 @@ Les retraits de staking ont été activés avec la mise à niveau Shanghai/Capel
 
 **Les paiements des récompenses au dessus d'un solde** de 32 ETH seront automatiquement et régulièrement envoyés à une adresse de retrait liée à chaque validateur, une fois fourni par l’utilisateur. Les utilisateurs peuvent également **quitter le staking entièrement**, débloquer leur solde de validateur complet.
 
-## Récompenses de staking \{#staking-rewards}
+## Récompenses de staking {#staking-rewards}
 
 Les paiements de récompenses sont traités automatiquement pour les comptes des validateurs actifs avec un solde effectif de 32 ETH maximum.
 
 Tout solde supérieur à 32 ETH gagné grâce aux récompenses ne contribue pas réellement au capital, ou à augmenter le poids de ce validateur sur le réseau, et se trouve donc automatiquement renvoyé après quelques jours lors du paiement des récompenses. À part fournir une adresse de retrait une seule fois, recevoir ces récompenses ne nécessite aucune action de la part de l'opérateur du nœud validateur. Tout cela est géré depuis la couche de consensus, donc aucun gaz (frais de transaction) n'est requis à aucune étape.
 
-### Comment sommes-nous arrivés là ? \{#how-did-we-get-here}
+### Comment sommes-nous arrivés là ? {#how-did-we-get-here}
 
 Au cours des dernières années, Ethereum a subi plusieurs mises à niveau de réseau en passant à un réseau sécurisé par ETH lui-même, plutôt que par un minage coûteux en énergie auparavant. Participer au consensus sur Ethereum est maintenant connu sous le nom de « staking », les participants ayant volontairement bloqué l'ETH, le mettant « en jeu » pour pouvoir participer au réseau. Les utilisateurs qui suivent les règles seront récompensés, tandis que les tentatives de triche peuvent être pénalisées.
 
@@ -35,13 +35,13 @@ Depuis le lancement du contrat de dépôt en staking en novembre 2020, certains 
 
 Avant la mise à niveau de Shanghai/Capella, vous ne pouviez pas utiliser l'ETH déposé en staking. Mais désormais vous pouvez choisir de recevoir automatiquement vos récompenses dans un compte de votre choix, et vous pouvez également retirer vos ETH mis en jeu quand vous le souhaitez.
 
-### Comment puis-je me préparer ? \{#how-do-i-prepare}
+### Comment puis-je me préparer ? {#how-do-i-prepare}
 
 {
 <WithdrawalsTabComparison />
 }
 
-### Informations importantes \{#important-notices}
+### Informations importantes {#important-notices}
 
 Fournir une adresse de retrait est une étape requise pour tout compte de validateur avant d'être admissible à un retrait d'ETH sur son solde.
 
@@ -51,7 +51,7 @@ Fournir une adresse de retrait est une étape requise pour tout compte de valida
 
 Le fait de ne pas fournir cette adresse ne pose <strong>aucun danger pour vos fonds pendant ce temps</strong>, à condition que votre phrase mnémonique/de récupération soit restée en sécurité hors-ligne, et n'ait été compromise d'aucune façon. Ne pas ajouter d’identifiants de retrait laissera simplement l’ETH verrouillé sur le compte du validateur tel qu'il était jusqu'à jusqu’à ce qu’une adresse de retrait soit fournie.
 
-## Quitter entièrement le staking \{#exiting-staking-entirely}
+## Quitter entièrement le staking {#exiting-staking-entirely}
 
 Fournir une adresse de retrait est nécessaire pour que _les fonds_ puissent être transférés sur un solde de compte de validateur.
 
@@ -61,7 +61,7 @@ Le processus d'un validateur sortant du staking prend un temps variable, en fonc
 
 Une fois qu'un compte est marqué comme « retirable » et que les identifiants de retrait ont été fournis, un utilisateur n'a plus rien à faire d'autre qu'attendre. Les comptes sont automatiquement et continuellement balayés par les proposeurs de blocs pour les fonds sortis qui sont admissibles, et le solde de votre compte sera transféré en entier (également connu sous le nom de « retrait complet ») au cours du prochain <a href="#validator-sweeping" customEventOptions={{ eventCategory: "Anchor link", eventAction: "Exiting staking entirely (sweep)", eventName: "click" }}>balayage</a>.
 
-## Quand les retraits de staking sont-ils activés ? \{#when}
+## Quand les retraits de staking sont-ils activés ? {#when}
 
 Les retraits de staking sont disponibles ! La fonction de retrait a été activée dans le cadre de la mise à niveau Shanghai/Capella qui a eu lieu le 12 avril 2023.
 
@@ -70,11 +70,11 @@ La mise à niveau Shanghai/Capella a permis de récupérer de l'Ether précédem
 - [En savoir plus sur l'histoire d'Ethereum](/history/)
 - [En savoir plus sur la feuille de route d'Ethereum](/roadmap/)
 
-## Comment fonctionnent les paiements de retraits ? \{#how-do-withdrawals-work}
+## Comment fonctionnent les paiements de retraits ? {#how-do-withdrawals-work}
 
 Le fait qu'un validateur donné soit éligible ou non pour un retrait est déterminé par l'état du compte du validateur lui-même. Aucune intervention de l'utilisateur n'est nécessaire à un moment donné pour déterminer si un compte doit faire l'objet d'un retrait ou non - l'ensemble du processus est effectué automatiquement par la couche de consensus en boucle continue.
 
-### Davantage qu'un apprenant visuel ? \{#visual-learner}
+### Davantage qu'un apprenant visuel ? {#visual-learner}
 
 Consultez cette explication de Finematics sur les retraits de staking d'Ethereum :
 
@@ -82,7 +82,7 @@ Consultez cette explication de Finematics sur les retraits de staking d'Ethereum
 <YouTube id="RwwU3P9n3uo" />
 }
 
-### « Balayage » du validateur \{#validator-sweeping}
+### « Balayage » du validateur {#validator-sweeping}
 
 Lorsqu'un validateur doit proposer le bloc suivant, il est tenu de constituer une file d'attente de retraits, pouvant aller jusqu'à 16 retraits éligibles. Pour ce faire, on commence par l'index 0 du validateur, on détermine s'il existe un retrait éligible pour ce compte selon les règles du protocole et on l'ajoute à la file d'attente si tel est le cas. Le validateur configuré pour proposer le bloc suivant reprendra là où le précédent s'est arrêté, progressant dans l'ordre indéfiniment.
 
@@ -92,7 +92,7 @@ Maintenant au lieu de 1 à 12, imaginez que l'horloge a 0 à N <em>(le nombre to
 L'aiguille de l’horloge pointe vers le prochain validateur qui doit être vérifié pour les retraits éligibles. Il commence à 0 et progresse tout autour sans sauter de compte. Lorsque le dernier validateur est atteint, le cycle reprend au début.
 </InfoBanner>
 
-#### Vérification des retraits sur un compte \{#checking-an-account-for-withdrawals}
+#### Vérification des retraits sur un compte {#checking-an-account-for-withdrawals}
 
 Lorsqu'un proposant passe en revue les validateurs pour d'éventuels retraits, chaque validateur vérifié est évalué en fonction d'une courte série de questions afin de déterminer si un retrait doit être déclenché et, le cas échéant, quel montant d'ETH doit être retiré.
 
@@ -105,11 +105,11 @@ Seules deux actions entreprises par les opérateurs de validateurs au cours du c
 - Fournir des justificatifs de retrait pour permettre toute forme de retrait
 - Sortir du réseau déclenchera un retrait complet
 
-### Sans gaz \{#gas-free}
+### Sans gaz {#gas-free}
 
 Cette approche des retraits de staking évite d'obliger les stakers à soumettre manuellement une transaction demandant le retrait d'une quantité particulière d'ETH. Cela signifie qu'aucun **gaz (frais de transaction)** n'est requis, et les retraits ne concurrencent pas non plus l'espace de bloc existant de la couche d'exécution.
 
-### À quelle fréquence recevrai-je mes récompenses de mise en jeu ? \{#how-soon}
+### À quelle fréquence recevrai-je mes récompenses de mise en jeu ? {#how-soon}
 
 Un maximum de 16 retraits peut être traité en un seul bloc. À ce rythme, 115 200 retraits de validateurs peuvent être traités par jour (en supposant qu'il n'y ait pas de créneaux manqués). Comme indiqué ci-dessus, les validateurs n'ayant pas effectué de retraits éligibles seront ignorés, ce qui réduira le temps nécessaire pour terminer le balayage.
 
@@ -129,7 +129,7 @@ En élargissant ce calcul, nous pouvons estimer le temps nécessaire pour traite
 
 Comme vous pouvez le constater, ce processus ralentit au fur et à mesure que le nombre de validateurs augmente sur le réseau. Une augmentation des crénaux manqués pourrait ralentir proportionnellement ce phénomène, mais cela représente généralement le côté le plus lent des résultats possibles.
 
-## Questions fréquemment posées \{#faq}
+## Questions fréquemment posées {#faq}
 
 {
 <ExpandableCard
@@ -228,7 +228,7 @@ Non. Une fois qu'un validateur est sorti et que son solde total a été retiré,
 </ExpandableCard>
 }
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [Retraits de la plateforme de lancement de la mise en jeu](https://launchpad.ethereum.org/withdrawals)
 - [EIP-4895 : la chaîne phare signale les retraits comme des opérations](https://eips.ethereum.org/EIPS/eip-4895)

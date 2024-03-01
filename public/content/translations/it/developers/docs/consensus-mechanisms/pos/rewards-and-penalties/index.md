@@ -14,9 +14,9 @@ Tutte le ricompense e le sanzioni sono applicate una volta all'epoca.
 
 Continua a leggere per ulteriori dettagli...
 
-## Ricompense e sanzioni \{#rewards}
+## Ricompense e sanzioni {#rewards}
 
-### Ricompense \{#rewards}
+### Ricompense {#rewards}
 
 I validatori ricevono ricompense quando effettuano voti coerenti con la maggioranza degli altri validatori, quando propongono blocchi e quando partecipano alle commissioni di sincronizzazione. Il valore delle ricompense in ogni epoca è calcolato a partire da una `base_reward` (ricompensa di base). Questa unità fornisce le basi per il calcolo delle ricompense. La`base_reward` rappresenta la ricompensa media ricevuta da un validatore in condizioni ottimali per ogni epoca. Questa è calcolata in base al saldo effettivo del validatore e al numero totale di validatori attivi, come segue:
 
@@ -54,7 +54,7 @@ Questi pesi ammontano a 64. La ricompensa è calcolata come la somma dei pesi ap
 
 I propositori di blocchi ricevono `8 / 64 * base_reward` per **ogni attestazione valida** inclusa nel blocco, quindi il valore effettivo della ricompensa scala con il numero di validatori attestanti. I propositori di blocchi, inoltre, possono incrementare la propria ricompensa includendo prova del comportamento scorretto di altri validatori nel loro blocco proposto. Queste ricompense sono le "carote" che incoraggiano l'onestà del validatore. Un propositore di blocchi che include il taglio sarà ricompensato con `slashed_validators_effective_balance / 512`.
 
-### Sanzioni \{#penalties}
+### Sanzioni {#penalties}
 
 Finora abbiamo considerato validatori che si comportano in modo impeccabile, ma quali sono le sanzioni per i validatori che non effettuano tempestivi voti sull'origine, sulla destinazione e sulla testa o lo fanno lentamente?
 
@@ -62,7 +62,7 @@ Le sanzioni per la mancanza di voti sull'origine e sulla destinazione equivalgon
 
 Leggi di più sulle ricompense e le sanzioni nelle [specifiche del consenso](https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md). Ricompense e sanzioni sono state adeguate nell'aggiornamento di Bellatrix; guarda Danny Ryan e Vitalik discuterne in questo [Video Peep an EIP](https://www.youtube.com/watch?v=iaAEGs1DMgQ).
 
-## Taglio \{#slashing}
+## Taglio {#slashing}
 
 Il taglio è un'azione più grave che risulta nella rimozione forzata di un validatore dalla rete e nella perdita associata del suo ether in staking. Esistono tre modi in cui un validatore può essere tagliato, tutti equivalenti alla proposta o attestazione disonesta dei blocchi:
 
@@ -72,13 +72,13 @@ Il taglio è un'azione più grave che risulta nella rimozione forzata di un vali
 
 Se queste azioni sono rilevate, il validatore viene tagliato. Ciò significa che 1/32 del suo ether in staking (fino a un massimo di 1 ether) viene immediatamente bruciato, poi inizia un periodo di rimozione di 36 giorni. Durante tale periodo di rimozione, lo stake del validatore si riduce gradualmente. Al punto intermedio (Giorno 18), è applicata una sanzione aggiuntiva la cui portata scala con il totale di ether in staking di tutti i validatori tagliati nei 36 giorni precedenti all'evento di taglio. Ciò significa che più validatori sono tagliati, maggiore è l'entità del taglio. Il taglio massimo è il saldo effettivo di tutti i validatori tagliati (cioè, se molti validatori sono tagliati, potrebbero perdere il proprio intero stake). D'altra parte, un evento di taglio singolo e isolato brucia soltanto una piccola porzione dello stake del validatore. Questa sanzione intermedia che scala con il numero di validatori tagliati è detta "sanzione di correlazione".
 
-## Perdita per inattività \{#inactivity-leak}
+## Perdita per inattività {#inactivity-leak}
 
 Se il livello del consenso ha superato più di quattro epoche senza finalizzare, un protocollo di emergenza detto "perdita di inattività" viene attivato. Lo scopo ultimo della perdita per inattività è creare le condizioni necessarie perché la catena recuperi la finalità. Come spiegato sopra, la finalità richiede una maggioranza dei 2/3 dell'ether in staking totale per accordarsi sui punti di controllo di origine e di destinazione. Se validatori che rappresentano oltre 1/3 dei validatori totali vanno offline o non riescono a inviare le attestazioni corrette, non è possibile che una supermaggioranza dei 2/3 finalizzi i punti di controllo. La perdita per inattività consente allo stake appartenente ai validatori inattivi di disperdersi gradualmente finché non controllano meno di 1/3 dello stake totale, consentendo ai validatori attivi rimanenti di finalizzare la catena. Indipendentemente da quanto sia grande il gruppo di validatori inattivi, i rimanenti validatori attivi alla fine controlleranno più di 2/3 dello stake. La perdita di stake è un forte incentivo per i validatori inattivi a riattivarsi appena possibile! Uno scenario di perdita per inattività è stato riscontrato sulla rete di prova Medalla quando <66% di validatori attivi è riuscito ad arrivare al consenso sulla testa corrente della blockchain. La perdita per inattività è stata attivata e la finalità è stata infine recuperata!
 
 Il design di ricompense, sanzioni e frazionamenti del meccanismo di consenso incoraggia i singoli validatori a comportarsi correttamente. Tuttavia, da tali scelte di progettazione emerge un sistema che incentiva fortemente la distribuzione equa dei validatori tra i vari client e dovrebbe disincentivare fortemente il dominio di un singolo client.
 
-## Ulteriori letture \{#further-reading}
+## Ulteriori letture {#further-reading}
 
 - [Aggiornare Ethereum: Il livello d'incentivazione](https://eth2book.info/altair/part2/incentives)
 - [Incentivi nel protocollo ibrido Casper di Ethereum](https://arxiv.org/pdf/1903.04205.pdf)

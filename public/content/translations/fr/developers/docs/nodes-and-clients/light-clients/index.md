@@ -6,17 +6,17 @@ lang: fr
 
 L'exécution d'un nœud complet est le moyen le plus fiable, privé, décentralisé et résistant à la censure d'interagir avec Ethereum. Avec un nœud complet, vous conservez votre propre copie de la blockchain que vous pouvez interroger instantanément, et vous obtenez un accès direct au réseau pair-à-pair Ethereum. Cependant, exécuter un nœud complet nécessite une quantité importante de mémoire, de stockage et de puissance de calcul. Cela signifie qu'exécuter son propre nœud n'est pas réalisable pour tout le monde. Il existe plusieurs solutions à cela sur la feuille de route Ethereum, y compris le « statelessness », mais elles sont à plusieurs années d'être mises en œuvre. La solution à court terme consiste à faire un compromis sur certains avantages de l'exécution d'un nœud complet en échange d'améliorations significatives des performances permettant aux nœuds de fonctionner avec des exigences matérielles très faibles. Les nœuds qui font ce compromis sont appelés des nœuds légers.
 
-## Qu'est-ce qu'un client léger \{#what-is-a-light-client}
+## Qu'est-ce qu'un client léger {#what-is-a-light-client}
 
 Un nœud léger est un nœud exécutant un logiciel client léger. Au lieu de conserver des copies locales des données de la blockchain et de vérifier indépendamment toutes les modifications, ils demandent les données nécessaires à un fournisseur. Le fournisseur peut être une connexion directe à un nœud complet ou via un serveur RPC centralisé. Les données sont ensuite vérifiées par le nœud léger, ce qui lui permet de suivre la tête de la chaîne. Le nœud léger traite uniquement les en-têtes de bloc, téléchargeant occasionnellement le contenu réel des blocs. Les nœuds peuvent être plus ou moins légers, en fonction des combinaisons de logiciels clients légers et complets qu'ils exécutent. Par exemple, la configuration la plus légère consisterait à utiliser un client d'exécution léger et un client de consensus léger. Il est également probable que de nombreux nœuds choisiront d'exécuter des clients de consensus léger avec des clients d'exécution complète, ou vice versa.
 
-## Comment fonctionnent les clients légers ? \{#how-do-light-clients-work}
+## Comment fonctionnent les clients légers ? {#how-do-light-clients-work}
 
 Lorsque Ethereum a commencé à utiliser un mécanisme de consensus basé sur la preuve d'enjeu, une nouvelle infrastructure a été introduite spécifiquement pour prendre en charge les clients légers. Le système fonctionne en sélectionnant au hasard un sous-ensemble de 512 validateurs tous les 1,1 jour pour agir en tant que **comité de synchronisation**. Le comité de synchronisation signe l'en-tête des blocs récents. Chaque en-tête de bloc contient la signature agrégée des validateurs du comité de synchronisation et un « champ de bits » qui indique les validateurs qui ont signé et ceux qui n'ont pas signé. Chaque en-tête comprend également une liste de validateurs censés participer à la signature du bloc suivant. Cela signifie qu'un client léger peut rapidement voir que le comité de synchronisation a approuvé les données qu'il reçoit, et il peut également vérifier que le comité de synchronisation est le bon en comparant les données qu'il reçoit à celles qu'on lui a dit d'attendre dans le bloc précédent. De cette façon, le client léger peut continuer à mettre à jour sa connaissance du dernier bloc Ethereum sans télécharger le bloc lui-même, mais seulement l'en-tête contenant des informations sommaires.
 
 Au niveau de la couche d'exécution, il n'existe pas de spécification unique pour un client d'exécution léger. La portée d'un client d'exécution légère peut varier d'un « mode léger » d'un client d'exécution complète qui dispose de toutes les fonctionnalités EVM et réseau d'un nœud complet, mais qui vérifie uniquement les en-têtes de blocs, sans télécharger les données associées, ou il peut s'agir d'un client plus simple qui s'appuie fortement sur la transmission de demandes à un fournisseur RPC pour interagir avec Ethereum.
 
-## Pourquoi les clients légers sont-ils importants ? \{#why-are-light-clients-important}
+## Pourquoi les clients légers sont-ils importants ? {#why-are-light-clients-important}
 
 Les clients légers sont importants car ils permettent aux utilisateurs de vérifier les données entrantes plutôt que de faire aveuglément confiance à l'exactitude et à l'honnêteté de leur fournisseur de données, tout en n'utilisant qu'une infime partie des ressources informatiques d'un nœud complet. Les données que les clients légers reçoivent peuvent être vérifiées par rapport à des en-têtes de blocs dont ils savent qu'ils ont été signés par au moins 2/3 d'un ensemble aléatoire de 512 validateurs Ethereum. Cela constitue une preuve très solide que les données sont correctes.
 
@@ -26,7 +26,7 @@ Prenons un exemple simple. Imaginez que vous souhaitiez vérifier le solde de vo
 
 Un client léger permet de résoudre ce problème. Vous demandez toujours des données à un fournisseur externe, mais lorsque vous recevez les données en retour, elles sont accompagnées d'une preuve que votre nœud léger peut vérifier par rapport aux informations qu'il a reçues dans l'en-tête du bloc. Cela signifie qu'Ethereum vérifie l'exactitude de vos données à la place d'un opérateur de confiance.
 
-## Quelles innovations les clients légers permettent-ils ? \{#what-innovations-do-light-clients-enable}
+## Quelles innovations les clients légers permettent-ils ? {#what-innovations-do-light-clients-enable}
 
 L'avantage principal des clients légers est de permettre à un plus grand nombre de personnes d'accéder à Ethereum de manière indépendante, avec des exigences matérielles négligeables et une dépendance minimale à l'égard de tiers. C'est une bonne chose pour les utilisateurs, car ils peuvent vérifier leurs propres données, mais aussi pour le réseau, car cela augmente le nombre et la diversité des nœuds qui vérifient la chaîne.
 
@@ -38,7 +38,7 @@ Les rollups Ethereum bénéficieraient également des clients légers. L'un des 
 
 Les clients légers pourraient également être utilisés pour mettre les portefeuilles Ethereum à niveau. Au lieu de faire confiance aux données fournies par un fournisseur RPC, votre portefeuille pourrait vérifier directement les données qui vous sont présentées en utilisant un client léger intégré. Cela augmenterait la sécurité de votre portefeuille. Si votre fournisseur RPC était malhonnête et vous fournissait des données incorrectes, le client léger intégré pourrait vous le signaler !
 
-## Quel est l'état actuel du développement des clients légers ? \{#current-state-of-development}
+## Quel est l'état actuel du développement des clients légers ? {#current-state-of-development}
 
 Il existe plusieurs clients légers en développement, notamment des clients légers d'exécution, de consensus et des clients légers combinant exécution et consensus. Voici les implémentations de clients légers que nous connaissons au moment de la rédaction de cette page :
 
@@ -53,7 +53,7 @@ Il y a aussi beaucoup de travail en cours pour améliorer l'accès des clients l
 
 D'autres éléments de la [feuille de route](/roadmap/) tels que les [arbres Verkle](/roadmap/verkle-trees/) et l'[absence d'état](/roadmap/statelessness/) apporteront finalement les garanties de sécurité des clients légers équivalentes à celles des clients complets.
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [Zsolt Felföldi sur les clients légers Geth](https://www.youtube.com/watch?v=EPZeFXau-RE)
 - [Etan Kissling sur le réseau des clients légers](https://www.youtube.com/watch?v=85MeiMA4dD8)

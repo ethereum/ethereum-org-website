@@ -24,7 +24,7 @@ Tutorial ini menolong pembaca memahami konsep dasar Ethereum termasuk transaksi,
 
 Data on-chain dapat menolong kita memahami Ethereum, jaringannya, dan sebagai ekonomi untuk daya komputasi dan seharusnya berfungsi sebagai dasar untuk memahami tantangan yang dihadapi Ethereum hari ini (yaitu, harga gas yang terus naik) dan, lebih penting lagi, diskusi tentang solusi penskalaan.
 
-### Transaksi \{#transactions}
+### Transaksi {#transactions}
 
 Perjalanan pengguna di Ethereum dimulai dengan menginisialisasi akun yang dikontrol penggunga atau entitas dengan saldo ETH. Ada dua jenis akun - yang dikontrol pengguna atau kontrak pintar (lihat [ethereum.org](/developers/docs/accounts/)).
 
@@ -68,19 +68,19 @@ FROM temp_table
 
 Ini akan menghasilkan informasi yang sama seperti yang disediakan di halaman transaksi Etherscan. Sebagai perbandingan, berikut adalah kedua sumber:
 
-#### Etherscan \{#etherscan}
+#### Etherscan {#etherscan}
 
 ![etherscan_view](./etherscan_view.png)
 
 [Halaman kontrak EF di Etherscan.](https://etherscan.io/address/0xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe)
 
-#### Analitik Dune \{#dune-analytics}
+#### Analitik Dune {#dune-analytics}
 
 ![dune_view](./dune_view.png)
 
 Anda dapat menemukan dasbor [di sini](https://duneanalytics.com/paulapivat/Learn-Ethereum). Klik pada tabel untuk melihat kuerinya (juga lihat di atas).
 
-### Merinci Transaksi \{#breaking_down_transactions}
+### Merinci Transaksi {#breaking_down_transactions}
 
 Transaksi yang dikirimkan mencakup beberapa bagian informasi termasuk ([sumber](/developers/docs/transactions/)):
 
@@ -108,7 +108,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Blok \{#blocks}
+### Blok {#blocks}
 
 Setiap transaksi akan mengubah state dari mesin virtual Ethereum ([EVM](/developers/docs/evm/)) ([sumber](/developers/docs/transactions/)). Transaksi disiarkan ke jaringan untuk diverifikasi dan dimasukkan ke dalam blok. Setiap transaksi terkait dengan nomor blok. Untuk melihat data, kita dapat membuat kueri nomor blok khusus: 12396854 (blok terbaru di antara transaksi Yayasan Ethereum pada waktu penulisan ini, 11/5/21).
 
@@ -216,7 +216,7 @@ FROM temp_table
 
 Jumlah rata-rata blok yang dibuat per hari sejak 2016 sedikit di atas jumlah tersebut pada 5.874. Secara alternatif, membagi 86400 detik dengan 5874 blok rata-rata menghasilkan 14,7 detik atau kira-kira satu blok setiap 15 detik.
 
-### Gas \{#gas}
+### Gas {#gas}
 
 Blok dibatasi oleh ukuran. Setiap blok memiliki batas gas yang secara kolektif ditetapkan oleh para penambang dan jaringan untuk mencegah ukuran blok yang besar secara aribitrari agar mengurangi tekanan pada node penuh dalam persyaratan ruang diska dan kecepatan ([sumber](/developers/docs/blocks/)).
 
@@ -268,7 +268,7 @@ WHERE "to" = '\xde0B295669a9FD93d5F28D9Ec85E40f4cb697BAe'
 ORDER BY block_time DESC
 ```
 
-### Ringkasan \{#summary}
+### Ringkasan {#summary}
 
 Dengan tutorial ini, kita memahami konsep dasar Ethereum dan cara blockchain Ethereum bekerja dengan membuat kueri dan memahami data on-chain.
 

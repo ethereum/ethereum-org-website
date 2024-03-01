@@ -16,7 +16,7 @@ _Bu görsel, geth.ethereum.org'dan alınmıştır ve yürütüm istemcilerini te
 
 Bu çift istemcili yapının çalışması için, fikir birliği istemcilerinin yürütüm istemcisine işlem paketlerini iletebilmesi gerekir. İstemcinin herhangi bir Ethereum kuralını çiğnemediğinden ve Ethereum'un durumu için önerilen güncellemenin doğru olduğundan emin olmanın yolu işlemleri yerel olarak yürütmektir. Benzer olarak, düğüm bir blok üreticisi olmak için seçildiğinde, fikir birliği istemcisi yeni bloka dahil etmek ve küresel durumu güncellemek için Geth üzerinden işlem paketleri talep edebilmelidir. İstemciler arası gerçekleşen bu iletişim [motor API](https://github.com/ethereum/execution-apis/blob/main/src/engine/common.md)'sını kullanan yerel bir RPC bağlantısı tarafından sağlanır.
 
-## Yürütüm istemcisi ne yapar? \{#execution-client}
+## Yürütüm istemcisi ne yapar? {#execution-client}
 
 Yürütüm istemcisi, işlem işleme, işlem dedikodusu, durum yönetimi ve Ethereum Sanal Makinesi'nin ([EVM](/developers/docs/evm/)) desteklenmesinden sorumludur. Ancak blok inşası, blok dedikodusu ve mutabakat mantığının idaresinden sorumlu **değildir**. Bunlar, fikir birliği istemcisinin sorumluluğundadır.
 
@@ -29,19 +29,19 @@ Yürütüm istemcisi ayrıca Ethereum'a [RPC yöntemleri](/developers/docs/apis/
 - Ethereum'a bir kullanıcı ağ geçidi
 - Ethereum'un durum ve işlem havuzu olan Ethereum Sanal Makinesi'nin evidir.
 
-## Fikir birliği istemcisi ne yapar? \{#consensus-client}
+## Fikir birliği istemcisi ne yapar? {#consensus-client}
 
 Fikir birliği istemcisi, bir düğümün Ethereum ağıyla senkronize kalmasını sağlayan mantıkla ilgilenir. Bu eşlerden blok almayı ve her zaman en büyük tastik birikintisi olan düğümü (Doğrulayıcının etkin bakiyesiyle ölçülür) takip ettiğinden emin olmak için çatal seçim algoritmasını çalıştırmasını kapsar. Yürütüm istemcisine benzer olarak, yürütüm istemcilerinin de blok ve tastikler paylaştıkları kendilerine ait bir P2P ağları vardır.
 
 Yürütüm istemcisi tasdikleme sürecine ya da blok önerilerine katılmaz, bu isteğe bağlı bir fikir birliği istemcisi olan doğrulayıcı tarafından yapılır. Doğrulayıcı olmayan bir fikir birliği istemcisi sadece düğümün senkronize kalması için zincirin baş kısmını takip eder. Bu kullanıcının kendi yürütüm istemcisini kullanarak ve doğru zincirde olduğundan emin olarak Ethereum üzerinde işlem yapmasını sağlar.
 
-## Doğrulayıcılar \{#validators}
+## Doğrulayıcılar {#validators}
 
 Düğüm operatörleri mevduat sözleşmesine 32 ETH yatırırken kendi fikir birliği istemcilerine doğrulayıcı ekleyebilirler. Doğrulayıcı istemcisi fikir birliği istemcisi ile paketlenmiş şekilde gelir ve istenen herhangi bir zamanda bir düğüme eklenebilir. Doğrulayıcı, tastikleri ve blok önerilerini işler. Bir düğümün duruma göre ödülleri almasını, cezalar sebebiyle ETH kaybetmesini ya da cezalandırılmasını sağlarlar. Doğrulayıcı yazılımını çalıştırmak ayrıca bir düğümün yeni blok önermesi için seçilmesine uygun hale getirir.
 
 [Hisseleme hakkında daha fazlası](/staking/).
 
-## Düğüm karşılaştırmasının bileşenleri \{#node-comparison}
+## Düğüm karşılaştırmasının bileşenleri {#node-comparison}
 
 | Yürütüm İstemcisi                                                | Fikir Birliği İstemcisi                                                | Doğrulayıcı                      |
 | ---------------------------------------------------------------- | ---------------------------------------------------------------------- | -------------------------------- |
@@ -52,7 +52,7 @@ Düğüm operatörleri mevduat sözleşmesine 32 ETH yatırırken kendi fikir bi
 | Yürütme yükünü oluşturur                                         | RanDAO'da birikmiş rastlantısallığı takip eder                         | Cezalandırılabilir               |
 | Ethereum ile etkileşimde olan JSON-RPC API'larını ortaya çıkarır | Gerekçeyi ve sonuçlandırmayı takip eder                                |                                  |
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Hisse ispatı](/developers/docs/consensus-mechanisms/pos)
 - [Blok önerisi](/developers/docs/consensus-mechanisms/pos/block-proposal)

@@ -10,11 +10,11 @@ Proof-of-work is no longer underlying Ethereum's consensus mechanism, meaning mi
 
 Ethereum mining used an algorithm known as Ethash. The fundamental idea of the algorithm is that a miner tries to find a nonce input using brute force computation so that the resulting hash is smaller than a threshold determined by the calculated difficulty. This difficulty level can be dynamically adjusted, allowing block production to happen at a regular interval.
 
-## Prerequisites \{#prerequisites}
+## Prerequisites {#prerequisites}
 
 To better understand this page, we recommend you first read up on [proof-of-work consensus](/developers/docs/consensus-mechanisms/pow) and [mining](/developers/docs/consensus-mechanisms/pow/mining).
 
-## Dagger Hashimoto \{#dagger-hashimoto}
+## Dagger Hashimoto {#dagger-hashimoto}
 
 Dagger Hashimoto was a precursor research algorithm for Ethereum mining that Ethash superseded. It was an amalgamation of two different algorithms: Dagger and Hashimoto. It was only ever a research implementation and was superseded by Ethash by the time Ethereum Mainnet launched.
 
@@ -26,12 +26,12 @@ Dagger-Hashimoto used amended versions of the Dagger and Hashimoto algorithms. T
 
 More on [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto).
 
-## Ethash \{#ethash}
+## Ethash {#ethash}
 
 Ethash was the mining algorithm that was actually used on the real Ethereum Mainnet under the now deprecated proof-of-work architecture. Ethash was effectively a new name given to a specific version of Dagger-Hashimoto after the algorithm got significantly updated, whilst still inheriting the fundamental principles of its predecessor. Ethereum Mainnet only ever used Ethash - Dagger Hashimoto was an R&D version of the mining algorithm that was superseded before mining started on Ethereum mainnet.
 
 [More on Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 _Know of a community resource that helped you? Edit this page and add it!_

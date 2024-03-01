@@ -4,19 +4,19 @@ description: Erklärung von Einzelplatzfinalität (single slot finality)
 lang: de
 ---
 
-# Einzelplatzfinalität (single slot finality) \{#single-slot-finality}
+# Einzelplatzfinalität (single slot finality) {#single-slot-finality}
 
 Es braucht ungefähr 15 Minuten einen Ethereum Block zu finalisieren. Jedoch können wir Ethereums Konsensmechanismus Blöcke effizienter validieren lassen und dadurch die Zeit, die für das Finalisieren benötigt wird, dramatisch verringern. Statt für 15 Minuten zu warten, könnten Blöcke im selben Platz (slot) vorgeschlagen und finalisiert werden. Dieses Konzept nennt sich **Einzelplatzfinalität (SSF)**.
 
-## Was ist die Endlichkeit? \{#what-is-finality}
+## Was ist die Endlichkeit? {#what-is-finality}
 
 In Ethereums auf Proof-of-Stake basierenden Konsensmechanismus bezieht sich die Endlichkeit auf die Garantie, dass ein Block nicht mehr verändert oder von der Blockchain entfernt werden kann, ohne mindestens 33 % der gesamten staked Ether zu entfernen. Dies ist "krypto-wirtschaftliche" Sicherheit, da das Selbstvertrauen von den extrem hohen Kosten, welche mit dem Verändern der Reihenfolge von Inhalten der Kette assoziiert werden, welche jeden rationalen wirtschaftlichen Akteur davon abhalten würde, es auszuprobieren.
 
-## Warum sich auf schnellere Endlichkeit fokussieren? \{#why-aim-for-quicker-finality}
+## Warum sich auf schnellere Endlichkeit fokussieren? {#why-aim-for-quicker-finality}
 
 Die derzeitige Zeit zur Endlichkeit hat sich als zu lang herausgestellt. Die meisten Nutzer wollen nicht 15 Minuten auf Endlichkeit warten, und es ist für Anwendungen und Austausche, welche einen hohen Transaktionsdurchsatz wollen ungünstig so lange zu warten, um sicher zu sein, dass ihre Transaktionen permanent sind. Eine Verzögerung zwischen dem Vorschlagen eines Blocks und dessen Finalisierung zu haben ermöglicht auch kurze Neuorganisationen, welche ein Angreifer nutzen könnte einzelne Blöcke zu zensieren oder MEV zu extrahieren. Der Mechanismus, der das stufenweise Verbessern von Blöcken regelt, ist ebenfalls recht komplex und wurde mehrfach gepatcht, um Sicherheitslücken zu schließen, was ihn zu einem der Teile der Ethereum-Codebasis macht, in dem subtile Fehler wahrscheinlicher sind. Diese Probleme könnten alle eliminiert werden, wäre die Zeit, die für das finalisieren eines einzigen Platzes gebraucht wird, geringer.
 
-## Der Kompromiss von Dezentralisation / Zeit / Overhead \{#the-decentralization-time-overhead-tradeoff}
+## Der Kompromiss von Dezentralisation / Zeit / Overhead {#the-decentralization-time-overhead-tradeoff}
 
 Die Endlichkeitsgarantie ist keine direkte Eigenschaft eines neuen Blocks; es braucht Zeit, einen neuen Block zu finalisieren. Der Grund dafür ist, dass Validatoren, die mindestens 2/3 der gesamten staked ETH auf dem Netzwerk für den Block abstimmen müssen ("Bestätigung"), dafür dass er als endlich gesehen werden kann. Jeder validierende Node auf dem Netzwerk muss Attestierungen anderer Nodes verarbeiten, um zu wissen, ob ein Block diese 2/3 Voraussetzung erreicht hat.
 
@@ -31,7 +31,7 @@ Ethereums derzeitiger Konsensmechanismus gleicht diese Parameter aus, indem:
 
 Mit dem derzeitigen Aufbau des Mechanismus müssen, um die Zeit zur Endlichkeit zu reduzieren, die Nummer von Validatoren auf dem Netzwerk verringert, oder die Hardware Voraussetzungen für jeden Node erhöht werden. Es gibt jedoch Verbesserungen zu der Art, wie Attestierungen verarbeitet werden, wodurch mehr Attestierungen gezählt werden könnten, ohne einen Overhead an jeden Node hinzuzufügen. Durch die effizientere Verarbeitung kann die Endlichkeit in einem einzelnen Platz, anstelle von zwei Epochen, ermittelt werden.
 
-## Wege zu SSF \{#routes-to-ssf}
+## Wege zu SSF {#routes-to-ssf}
 
 {
 <ExpandableCard title= "Warum können wir nicht heute schon SSF haben?" eventCategory="/roadmap/single-slot-finality" eventName="clicked Why can't we hear SSF today?">
@@ -50,19 +50,19 @@ Weitere Effizienzgewinne könnten durch die Erstellung von Superkomitees von bei
 
 Jedoch ist die Verifikation noch nicht das wahre Problem, die Aggregation von Unterschriften ist was Validatoren Nodes wirklich herausfordert. Um die Aggregation der Unterschriften zu skalieren, muss man wahrscheinlich die Validatorenmenge jedes Unternetzwerks oder die Anzahl an Unternetzwerke erhöhen oder zusätzliche Ebenen der Aggregation hinzufügen (d.h. Komitees von Komitees zu implementieren). Ein Teil der Lösung könnte das Erlauben von spezialisierten Aggregatoren sein - ähnlich dazu wie das Blockerzeugen und das Generieren von Verpflichtungen für Rollup Daten zu spezialisierten Blockerzeugern unter Proposer-Builder Separation (PBS) und Danksharding ausgelagert wird.
 
-## Was ist die Rolle der Abspaltungsregel (fork-choice rule) innerhalb SSF? \{#role-of-the-fork-choice-rule}
+## Was ist die Rolle der Abspaltungsregel (fork-choice rule) innerhalb SSF? {#role-of-the-fork-choice-rule}
 
 Der heutige Konsensmechanismus beruht auf engen Verbindungen zwischen dem Finality Gadget (Algorithmus, welcher bestimmt ob 2/3 der Validatoren eine bestimmte Kette attestiert haben) und der Abspaltungsregel (Algorithmus, der bestimmt welche Kette die richtige ist, sollte es mehrere geben). Der Abspaltungsalgorithmus (fork choice algorithm) betrachtet nur Blöcke _seit_ dem letzten finalisierten Block. Unter SSF gäbe es keine Blöcke, welche die Abspaltungsregel erwähnen müsste, da die Endgültigkeit im selben Slot, in der der Block vorgeschlagen wurde, aufkommt. Das bedeutet, dass unter SSF _entweder_ der Abspaltungsalgorithmus _oder_ das Finality Gadget zu jeder Zeit aktiv sein müssten. Das Finality Gadget würde Blöcke, bei denen 2/3 der Validatoren online sind und ehrlich attestieren finalisieren. Wenn ein Block die 2/3 Grenze nicht überschreiten könnte, würde die Abspaltungsregel bestimmen welcher Kette zu folgen ist. Das erzeugt auch eine Möglichkeit den Inaktivität-Leck-Mechanismus, welcher eine Kette wiederherstellt, bei der >1/3 der Validatoren offline gegangen sind, wenn auch mit einigen zusätzlichen Nuancen.
 
-## Offenstehende Probleme \{#outstanding-issues}
+## Offenstehende Probleme {#outstanding-issues}
 
 Das Problem mit dem Skalieren von Aggregationen mit einer Erhöhung der Validatorenmenge pro Unternetz ist, dass es zu einer größeren Last auf dem Peer-to-Peer Netzwerk führt. Das Problem damit, Ebenen der Aggregation hinzuzufügen, ist, dass es sehr komplex aufzubauen ist und Verzögerungen mit sich bringt (d.h. es könnte für einen Block Proposer länger dauern von allen Unternetz-Aggregatoren zu hören). Es ist auch nicht klar, wie man mit dem Szenario umgeht, dass mehr aktive Validatoren auf dem Netzwerk sind, als in jedem Platz verarbeitbar sind, sogar mit der BLS Unterschriftenaggregation. Eine mögliche Lösung ist das, da alle Validatoren in jedem Platz attestieren müssen und es keine Komitees unter SSF gibt. Das 32 ETH Limit zum effektiven Guthaben könnte komplett entfernt werden, was bedeutet, dass Operatoren, welche mehrere Validatoren verwalten ihren Staking Einsatz konsolidieren und weniger laufen könnten. Das würde die Anzahl der Nachrichten, welche validierende Nodes verarbeiten müssen, um alle Validatoren zu berücksichtigen reduzieren. Das beruht auf große Staker, welche zustimmen ihre Validatoren zu konsolidieren. Es ist auch möglich eine Obergrenze für die Anzahl an Validatoren oder der Anzahl von staked ETH zu jeder Zeit festzulegen. Jedoch erfordert dies irgendeinen Mechanismus, um zu entscheiden, welche Validatoren erlaubt sind teilzunehmen und welche nicht, was verantwortlich für das Erzeugen ungewollter Nebeneffekte ist.
 
-## Aktueller Fortschritt \{#current-progress}
+## Aktueller Fortschritt {#current-progress}
 
 SSF ist in der Forschungsphase. Es ist nicht zu erwarten, dass es in den nächsten Jahren entsendet werden kann, wahrscheinlich wird dies erst nach anderen wesentlichen Verbesserungen wie [Verkle Bäumen](/roadmap/verkle-trees/) und [Danksharding](/roadmap/danksharding]) passieren können.
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 - [Vitalik zu SSF auf der EDCON 2022](https://www.youtube.com/watch?v=nPgUKNPWXNI)
 - [Vitaliks Notizen: Wege zur Einzelplatzfinalität (SSF)](https://notes.ethereum.org/@vbuterin/single_slot_finality)

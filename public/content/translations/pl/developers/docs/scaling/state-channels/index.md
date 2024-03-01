@@ -8,11 +8,11 @@ sidebarDepth: 3
 
 Kanały uzyskiwania informacji umożliwiają uczestnikom przeprowadzenie `x` transakcji off-chain, natomiast do sieci Ethereum przesyłają dwie transakcje on-chain. Pozwala to na niezwykle wysoką przepustowość transakcji.
 
-## Warunki wstępne \{#prerequisites}
+## Warunki wstępne {#prerequisites}
 
 Musisz dobrze się orientować we wszystkich podstawowych tematach i mieć zaawansowaną wiedzę na temat [skalowania Ethereum](/developers/docs/scaling/). Wdrażanie rozwiązań skalowania takich jak kanały jest trudnym tematem, ponieważ technologia nie jest jeszcze sprawdzona w boju i nadal jest badana i rozwijana.
 
-## Kanały \{#channels}
+## Kanały {#channels}
 
 Uczestnicy muszą zablokować część stanu Ethereum, taką jak depozyt ETH, w umowie wielopodpisowej. Kontrakt wielostronny jest rodzajem umowy, która wymaga podpisu (a więc umowy) wielu kluczy prywatnych do wykonania.
 
@@ -26,7 +26,7 @@ Zablokowanie stanu w ten sposób jest pierwszą transakcją i otwiera kanał. Uc
 
 Obecnie istnieją dwa rodzaje kanałów: kanały uzyskiwania informacji i kanały płatnicze.
 
-## Kanały uzyskiwania informacji \{#state-channels}
+## Kanały uzyskiwania informacji {#state-channels}
 
 Kanał uzyskiwania informacji najlepiej jest wyjaśnić na przykładzie, np. gry w kółko i krzyżyk:
 
@@ -36,11 +36,11 @@ Kanał uzyskiwania informacji najlepiej jest wyjaśnić na przykładzie, np. gry
 
 3. Kiedy zostanie wyłoniony zwycięzca, zamykają oni kanał, przekazując stan końcowy (np. listę transakcji) do kontraktu sędziowskiego, płacąc tylko pojedynczą opłatę transakcyjną. Sędzia zapewnia podpisanie tego „stanu końcowego” przez obie strony, i czeka przez pewien czas, aby zagwarantować, że nikt nie będzie w stanie podważyć wyniku, a następnie wypłaci Alice nagrodę w wysokości 1ETH.
 
-## Kanały płatnicze \{#payment-channels}
+## Kanały płatnicze {#payment-channels}
 
 Uproszczone kanały płatnicze obsługujące wyłącznie płatności (np. transfery ETH). Pozwalają one na transfery off-chain pomiędzy dwoma uczestnikami, o ile suma netto ich transferów nie przekracza zdeponowanych tokenów.
 
-## Plusy i minusy \{#channels-pros-and-cons}
+## Plusy i minusy {#channels-pros-and-cons}
 
 | Zalety                                                                                   | Wady                                                                                                                                                                 |
 | ---------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -49,7 +49,7 @@ Uproszczone kanały płatnicze obsługujące wyłącznie płatności (np. transf
 | Najniższy koszt za transakcję — dobry do strumieniowania mikropłatności                  | Konieczność zablokowania środków w otwartych kanałach płatności                                                                                                      |
 |                                                                                          | Brak wsparcia otwartego uczestnictwa                                                                                                                                 |
 
-## Używanie kanałów uzyskiwania informacji \{#use-state-channels}
+## Używanie kanałów uzyskiwania informacji {#use-state-channels}
 
 Wiele projektów dostarcza implementacje kanałów uzyskiwania informacji, które można zintegrować z własnymi aplikacjami zdecentralizowanymi:
 
@@ -59,7 +59,7 @@ Wiele projektów dostarcza implementacje kanałów uzyskiwania informacji, któr
 - [Raiden](https://raiden.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Dalsza lektura \{#further-reading}
+## Dalsza lektura {#further-reading}
 
 **Kanały uzyskiwania informacji**
 

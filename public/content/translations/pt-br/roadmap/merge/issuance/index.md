@@ -4,11 +4,11 @@ description: Detalhamento de como a Fusão afetou o fornecimento de ETH
 lang: pt-br
 ---
 
-# Como A Fusão afetou o fornecimento de ETH \{#how-the-merge-impacts-ETH-supply}
+# Como A Fusão afetou o fornecimento de ETH {#how-the-merge-impacts-ETH-supply}
 
 A Fusão representou a transição das redes Ethereum da prova de trabalho para a prova de participação, que ocorreu em setembro de 2022. A forma como o ETH foi emitido passou por mudanças no momento dessa transição. Anteriormente, novas moedas de ETH eram emitidas por duas fontes: a camada de execução (ou seja, Mainnet) e a camada de consenso (ou seja, Beacon Chain). Desde o The Merge, a emissão na camada de execução não acontece mais. Vamos explicar isso melhor.
 
-## Componentes da emissão de ETH \{#components-of-eth-issuance}
+## Componentes da emissão de ETH {#components-of-eth-issuance}
 
 Podemos dividir o fornecimento de ETH em duas forças principais: emissão e queima.
 
@@ -27,19 +27,19 @@ title="Emissão de ETH tldr">
 
 </Card>
 
-## Pré-fusão (histórico) \{#pre-merge}
+## Pré-fusão (histórico) {#pre-merge}
 
-### Emissão da camada de execução \{#el-issuance-pre-merge}
+### Emissão da camada de execução {#el-issuance-pre-merge}
 
 Na prova de trabalho, os mineradores só interagiam com a camada de execução e recebiam recompensas de bloco se fossem os primeiros mineradores a resolver o bloco seguinte. Desde a [atualização Constantinople](/history/#constantinople) em 2019, essa recompensa era de 2 ETH por bloco. Os mineradores também foram recompensados por publicar blocos [ommer](/glossary/#ommer), que eram blocos válidos que não terminavam na cadeia mais longa/canônica. Essas recompensas foram de no máximo 1,75 ETH por ommer e foram _além da_ recompensa emitida pelo bloco canônico. O processo de mineração era uma atividade economicamente intensiva, que historicamente exigia altos níveis de emissão de ETH para sustentar.
 
-### Emissão da camada de consenso \{#cl-issuance-pre-merge}
+### Emissão da camada de consenso {#cl-issuance-pre-merge}
 
 A [Beacon Chain](/history/#beacon-chain-genesis) foi lançada em 2020. Em vez de mineradores, ela é protegida por validadores usando a prova de participação. Essa cadeia foi iniciada por usuários do Ethereum depositando ETH, de uma forma em um contrato inteligente na Mainnet (a camada de execução), que a Beacon Chain escuta, creditando ao usuário com uma quantidade igual de ETH na nova cadeia. Até a Fusão ter acontecido, os validadores da Beacon Chain não estavam processando transações e essencialmente estavam chegando a um consenso sobre o estado do próprio pool de validadores.
 
 Os validadores da Beacon Chain são recompensados com ETH, por atestar o estado da cadeia e propor blocos. As recompensas (ou penalidades) são calculadas e distribuídas a cada época (a cada 6,4 minutos) com base no desempenho do validador. As recompensas do validador são **significativamente** menores do que as recompensas de mineração, que foram emitidas anteriormente na prova de trabalho (2 ETH a cada ~13,5 segundos), pois operar um nó de validação não é tão intenso economicamente e, portanto, não requer ou garante uma recompensa tão alta.
 
-### Análise da emissão pré-fusão \{#pre-merge-issuance-breakdown}
+### Análise da emissão pré-fusão {#pre-merge-issuance-breakdown}
 
 Fornecimento total de ETH: **~120.520.000 ETH** (até o momento do The Merge, em setembro de 2022)
 
@@ -61,13 +61,13 @@ Fornecimento total de ETH: **~120.520.000 ETH** (até o momento do The Merge, em
 <strong>~11,3%</strong> estava sendo emitido para participantes na camada de consenso (0,52 / 4,61 * 100)
 </InfoBanner>
 
-## Pós-fusão (atualmente) \{#post-merge}
+## Pós-fusão (atualmente) {#post-merge}
 
-### Emissão da camada de execução \{#el-issuance-post-merge}
+### Emissão da camada de execução {#el-issuance-post-merge}
 
 A emissão da camada de execução desde o The Merge é zero. A prova de trabalho já não é mais um meio válido de produção de blocos sob as regras atualizadas de consenso. Toda a atividade da camada de execução é empacotada em “blocos beacon”, que são publicados e atestados por validadores de prova de participação. As recompensas por atestar e publicar blocos beacon são contabilizadas separadamente na camada de consenso.
 
-### Emissão da camada de consenso \{#cl-issuance-post-merge}
+### Emissão da camada de consenso {#cl-issuance-post-merge}
 
 A emissão da camada de consenso continua hoje, como antes do The Merge, com pequenas recompensas para os validadores que atestam e propõem blocos. As recompensas do validador continuam a acumular para _saldos do validador_ que são gerenciados na camada de consenso. Diferentemente das contas atuais (contas de "execução"), que podem fazer transações na rede principal, essas são contas Ethereum separadas que não podem realizar transações livremente com outras contas Ethereum. Os fundos nessas contas podem ser retirados apenas para um único endereço de execução especificado.
 
@@ -79,7 +79,7 @@ Aproximadamente 0,33% da contagem total de validadores pode sair em um dia espec
 
 À medida que mais validadores sacam, o número máximo de validadores que saem reduz gradualmente para um mínimo de quatro, para evitar intencionalmente que grandes quantidades desestabilizadoras de ETH participado sejam sacadas simultaneamente.
 
-### Detalhamento da inflação pós-fusão \{#post-merge-inflation-breakdown}
+### Detalhamento da inflação pós-fusão {#post-merge-inflation-breakdown}
 
 - Fornecimento total de ETH: **~120.520.000 ETH** (no momento do The Merge, em setembro de 2022)
 - Emissão da camada de execução: **0**
@@ -90,7 +90,7 @@ Taxa total de emissão anualizada: <strong>~0.52%</strong><br/><br/>
 Redução líquida na emissão anual de ETH: <strong>~88,7%</strong> (4,61% - 0,52%) / 4,61% * 100)
 </InfoBanner>
 
-## <Emoji text=":fire:" size="1" />A queima \{#the-burn}
+## <Emoji text=":fire:" size="1" />A queima {#the-burn}
 
 A força oposta à emissão de ETH é a taxa em que o ETH é queimado. Para uma transação executar no Ethereum, a taxa mínima (conhecida como “taxa base”) deve ser paga, a qual flutua continuamente (bloco a bloco) dependendo da atividade da rede. A taxa é paga no ETH e é _necessária_ para que a transação seja considerada válida. Essa taxa é _queimada_ durante o processo de transação, removendo-a de circulação.
 
@@ -100,7 +100,7 @@ A queima de taxas foi lançada com <a href="/history/#london">a atualização Lo
 
 Além da queima de taxas implementada pela atualização London, os validadores também podem incorrer em penalidades por estarem offline ou, pior ainda, eles podem ser removidos por quebrar regras específicas que ameaçam a segurança da rede. Essas penalidades resultam na redução de ETH do saldo do validador, que não é recompensado diretamente para nenhuma outra conta, efetivamente queimando/retirando-o de circulação.
 
-### Calculando o preço médio do gás para deflação \{#calculating-average-gas-price-for-deflation}
+### Calculando o preço médio do gás para deflação {#calculating-average-gas-price-for-deflation}
 
 Conforme discutido acima, a quantidade de ETH emitido em um determinado dia depende do total de ETH em stake. No momento da produção deste texto, isso equivale a aproximadamente 1.700 ETH/dia.
 
@@ -128,7 +128,7 @@ Podemos simplificar e escrever isso como uma função de `X`:
 
 Assim, por exemplo, se `X` (emissão diária de ETH) aumentar para 1.800 com base no total de ETH em stake, `f(X)` (gwei necessário para compensar toda a emissão), então seria `17 gwei` (usando 2 dígitos significativos)
 
-## Leia mais \{#further-reading}
+## Leia mais {#further-reading}
 
 - [The Merge (A Fusão)](/roadmap/merge/)
 - [Ultrasound.money](https://ultrasound.money/) — _Painéis disponíveis para visualizar a emissão e queima de ETH em tempo real_

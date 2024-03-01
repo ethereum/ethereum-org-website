@@ -8,7 +8,7 @@ Web2 se refiere a la versión de Internet que la mayoría de nosotros conocemos 
 
 ¿Busca un recurso para principiantes? Vea nuestra [introducción a la Web3](/web3/).
 
-## Ventajas de Web3 \{#web3-benefits}
+## Ventajas de Web3 {#web3-benefits}
 
 Muchos desarrolladores de Web3 han elegido construir DApps debido a la descentralización inherente a Ethereum:
 
@@ -17,7 +17,7 @@ Muchos desarrolladores de Web3 han elegido construir DApps debido a la descentra
 - Los pagos se incorporan a través del token nativo, ether (ETH).
 - Ethereum es turing-completa, lo que significa que prácticamente se puede programar cualquier cosa.
 
-## Comparaciones prácticas \{#practical-comparisons}
+## Comparaciones prácticas {#practical-comparisons}
 
 | Web 2.0                                                                                    | Web 3.0                                                                                                                |
 | ------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------- |
@@ -27,7 +27,7 @@ Muchos desarrolladores de Web3 han elegido construir DApps debido a la descentra
 
 Esto no significa que todos los servicios deban convertirse en una DApp. Estos ejemplos son ilustrativos de las principales diferencias entre los servicios Web 2 y Web3.
 
-## Limitaciones de web3 \{#web3-limitations}
+## Limitaciones de web3 {#web3-limitations}
 
 Web3 tiene algunas limitaciones ahora mismo:
 
@@ -36,7 +36,7 @@ Web3 tiene algunas limitaciones ahora mismo:
 - Accesibilidad: la falta de integración en los navegadores web modernos hace que web3 sea menos accesible para la mayoría de los usuarios.
 - Coste: Las DApps más exitosas introducen partes muy pequeñas de su código en la cadena de bloques, ya que resulta costoso.
 
-## Centralización vs descentralización \{#centralization-vs-decentralization}
+## Centralización vs descentralización {#centralization-vs-decentralization}
 
 En siguiente la tabla, esbozamos algunas de las ventajas y desventajas de las redes digitales centralizadas y descentralizadas.
 
@@ -52,7 +52,7 @@ En siguiente la tabla, esbozamos algunas de las ventajas y desventajas de las re
 
 Tenga en cuenta que estos son patrones generales y puede que no se mantengan auténticos en cada red. Además, en realidad el grado en que una red está centralizada/descentralizada reside en un espectro; ninguna red está enteramente centralizada ni totalmente descentralizada.
 
-## Más lectura \{#further-reading}
+## Más lectura {#further-reading}
 
 - [¿Qué es la Web3?](/web3/):_ethereum.org_
 - [La arquitectura de una aplicación Web 3.0](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) - _Preethi Kasireddy_

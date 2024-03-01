@@ -4,7 +4,7 @@ description: Tarih sonlanması ve durumsuz Ethereum'un açıklanması
 lang: tr
 ---
 
-# Durumsuzluk, durum sonlanması ve tarih sonlanması \{#statelessness}
+# Durumsuzluk, durum sonlanması ve tarih sonlanması {#statelessness}
 
 Gerçek anlamda merkeziyetsizlik için Ethereum düğümlerini ılımlı donanımda yürütme yeteneği hayati önem taşır. Bu; düğüm yürütmenin kullanıcılara, veri ile beslenmeleri için üçüncül şahıslara güvenmektense bağımsız olarak kriptoprafik denetimler uygulayarak bilgiyi doğrulama yeteneği vermesinden ötürüdür. Bir düğüm yürütmek kullanıcılara, herhangi bir aracıya güvenmek zorunda kalmaktansa Ethereum'un eşler arası ağına doğrudan işlem kaydetme olanağı tanır. Eğer bu faydalar yalnızca pahalı donanımlara sahip kullanıcılar için ulaşılabilir olursa merkeziyetsizlik mümkün değildir. Bunun aksine düğümlerin yürütülmesi için o kadar ılımlı işlemci ve hazıfa gereklilikleri olmalıdır ki cep telefonları, mikro bilgisayarlar veya bir ev bilgisayarında bile fark edilmeden yürütülsün.
 
@@ -12,7 +12,7 @@ Bugün, yüksek disk hacmi gerekliliği düğümlere evrensel erişimi engelleye
 
 Daha eski verileri depolamak için daha ucuz sabit sürücüler kullanılabilir, ancak bunlar işlenmekte olan blokları yakalamak için oldukça yavaşlar. Veri depolanmasını daha ucuz ve kolay hale getirirken müşteriler için mevcut depolama modellerini tutmak, soruna yalnızca geçici ve kısmi bir çözümdür çünkü Ethereum'un durum büyümesi "sınırsızdır" yani depolama gereksinimi yalnızca artacaktır ve teknolojik iyileştirmeler her zaman devamlı durum büyümesine ayak uydurmak zorunda kalacaktır. Bunun yerine müşteriler, yerel veri tabanlarından gelecek veriye bel bağlamadan blok ve işlem onayı için yeni yollar bulmak zorundadır.
 
-## Düğümler için depolamayı azaltma \{#reducing-storage-for-nodes}
+## Düğümler için depolamayı azaltma {#reducing-storage-for-nodes}
 
 Her bir düğümün depolaması gereken veri miktarını düşürmek için, her biri Ethereum'un temel protokolünün farklı bir boyuta güncellenmesini gerektiren birçok yol mevcuttur:
 
@@ -21,9 +21,9 @@ Her bir düğümün depolaması gereken veri miktarını düşürmek için, her 
 - **Zayıf durumsuzluk**: tam durum verisine yalnızca blok üreticilerinin erişmesi gerekir, diğer düğümler yerel durum veritabanı olmadan blokları onaylayabilirler.
 - **Güçlü durumsuzluk**: hiçbir düğümün tam durum verisine ihtiyaç duymaması.
 
-## Veri sonlanması \{#data-expiry}
+## Veri sonlanması {#data-expiry}
 
-### Tarih sonlanması \{#history-expiry}
+### Tarih sonlanması {#history-expiry}
 
 Tarih sonlanması; müşteirlerin gelecekte ihtiyaç olmayacak eski verilerin fazlasını yeni veriler geldikçe eskilerini bırakarak ortadan kaldırmasına, bu sayede yalnızca küçük miktarda geçmiş verinin depolanmak zorunda olmasına karşılık gelir. Müşterilerin geçmiş veriye ihtiyaç duymalarının iki sebebi vardır: senkronizasyon ve veri isteklerini karşılamak. Aslen müşteriler, ardışık her bir bloku doğruluğunu onaylayarak zincirin başına kadar başlangıç blokundan başlayarak senkronize olmak zorundadır. Bugün müşteriler ''zayıf öznellik kontrol noktalarını'' zincirin başına giden yollarında önyükleme için kullanır. Bu kontrol noktaları, Ethereum en başındakiler yerine bugüne daha yakın başlangıç blokuna sahip, güvenilir başlama noktalarıdır. Bu; müşterilerin en güncel zayıf öznellik kontrol noktası öncesindeki tüm verileri, zincirin en başı ile senkronize olma yeteneklerini kaybetmeden bırakabileceği anlamına gelir. İstemciler şu anda (JSON-RPC ile geliyor) geçmiş verileri yerel veritabanlarından almak için bazı taleplere hizmet ediyorlar. Ancak tarih sonlanması ile bu durum, eğer talep edilen veri ortadan kaldırılmışsa mümkün olmayacak. Bu geçmiş veriyi sunmak, bazı yenilikçi çözümlerin gerekli olduğu yerdir.
 
@@ -35,7 +35,7 @@ EIP-4444 henüz aktif olmaya hazır değil, ancak güncel olarak tartışılıyo
 
 Bu yükseltme temelde Ethereum düğümlerinin veriyi işlemesini değil, geçmiş verilere nasıl erişildiğini değiştiriyor.
 
-### Durum sonlanması \{#state-expiry}
+### Durum sonlanması {#state-expiry}
 
 Durum sonlanması eğer yakın zamanda erişilmediyse durumları bireysel düğümlerden silmekten bahseder. Bunu uygulamak için aşağıdakileri içeren birkaç yol vardır:
 
@@ -50,7 +50,7 @@ Tarih sonlanmasına benzer olarak, durum sonlanmasının eski durum verilerini d
 
 Durum sonlanması hâlâ araştırma aşamasında ve henüz hazır değil. Durum sonlanması durumsuz istemcilerden ve tarih sonlanmasından sonra gayet de gerçekleşebilir çünkü o yükseltmeler büyük durum verilerini doğrulayıcıların çoğunluğu için kolayca yönbetilebilir hale getirecek.
 
-## Durumsuzluk \{#statelessness}
+## Durumsuzluk {#statelessness}
 
 Durumsuzluk biraz yanlış bir isim çünkü durum konseptinin elimine edildiğini ifade etmiyor, aksine Ethereum Düğümlerinin durum verilerini işlemesi için bazı değişiklikler içeriyor. Durumsuzluğun kendisi iki kavram ile geliyor: zayıf durumsuzluk ve güçlü durumsuzluk. Zayıf durumsuzluk çoğu düğümün durumsuz hale gelmesini bazılarına durum depolama sorumluluğu vererek yapıyor. Güçlü durumsuzluk ise her düğümün tam durum verisi depolama gerekliliğini tamamen ortadan kaldırıyor. Hem zayıf hem de güçlü durumsuzluk normal doğrulayıcılara aşağıdaki bazı faydaları da beraberinde getiriyor:
 
@@ -60,7 +60,7 @@ Durumsuzluk biraz yanlış bir isim çünkü durum konseptinin elimine edildiği
 - düğümler ucuz donanımlarda çalışabilir çünkü disk okuma/yazmasına gerek yoktur
 - Ethereum Kriptografisinin gelecekteki yükseltmeleriyle uyumludur
 
-### Zayıf Durumsuzluk \{#weak-statelessness}
+### Zayıf Durumsuzluk {#weak-statelessness}
 
 Zayıf durumsuzluk Ethereum düğümlerinin durum değişikliklerini onaylamasıyla ilgili bazı değişiklikleri kapsar, ancak ağdaki her düğüm için durum depolamasını tamamen ortadan kaldırmaz. Onun yerine, zayıf durumsuzluk ağdaki diğer tüm düğümler blokları tüm durum verisini depolamadan onaylarken durum verisi sorumluluğunu blok önericilerine verir.
 
@@ -81,17 +81,17 @@ Blok önericileri durum verisini "tanıklar" oluşturmak için kullanırlar, bu 
 
 Zayıf durumsuzluk geliştirilmiş bir araştırma aşamasındadır, ancak önerici-oluşturucu ayrımına ve Verkel Ağaçlarının eşler arasında küçük tanıkların iletilmesine dayanır. Bu zayıf durumsuzluğun muhtemelen Ethereum Ana Ağı'ndan birkaç yıl uzakta olduğu anlamına gelir.
 
-### Güçlü durumsuzluk \{#strong-statelessness}
+### Güçlü durumsuzluk {#strong-statelessness}
 
 Güçlü durumsuzluk herhangi bir blokun durum verisi depolaması ihtiyacını ortadan kaldırır. Bunun yerine, işlemler blok oluşturucular tarafından toplanabilen tanıklar aracılığıyla gönderilir. Blok oluşturucular sonrasında sadece alakalı hesaplara gerekli tanıkları oluşturman durumu depolamaktan sorumludur. Durumun sorumluluğu neredeyse tamamen kullanıcılara verilmiştir, yani kullanıcılar hangi hesap ve depolama anahtarlarıyla etkileşimde olduklarını tanımlamak için tanıkları ve "erişim listelerini" gönderirler. Bu, son derece hafif düğümleri olanaklı kılardı ancak akıllı sözleşmelerle işlem yapmayı zorlaştırmak gibi bazı bedeller söz konusudur.
 
 Güçlü durumsuzluk araştırmacılar tarafından incelendi fakat şu anda Ethereum Yol Haritasının bir parçası olması beklenmiyor - Ethereum'un ölçeklendirilme gereklilikleri için şu anda zayıf durumsuzluk yeterli gibi görünüyor.
 
-## Güncel ilerleme \{#current-progress}
+## Güncel ilerleme {#current-progress}
 
 Zayıf durumsuzluk, tarih sonlanması ve durum sonlanması hâlâ araştırma aşamasında ve birkaç sene içinde gelmesi bekleniyor. Bu tekliflerinin hepsinin uygulanacağına dair bir garanti yok, örneğin ilk durum sonlanması uygulanırsa diğerlerine ya da tarih sonlanmasına ihtiyaç duyulmayabilir. Ayrıca başka yol haritası öğeleri de var, [Verkle Ağaçları](/roadmap/verkle-trees) ve [Önerici-oluşturucu ayrımı](/roadmap/pbs)gibi. Önce bunların tamamlanması gerekiyor.
 
-## Daha fazla bilgi \{#further-reading}
+## Daha fazla bilgi {#further-reading}
 
 - [Vitalik durumsuzluk AMA (bana her şeyi sorun)](https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/)
 - [Durum boyutu yönetimi teorisi](https://hackmd.io/@vbuterin/state_size_management)

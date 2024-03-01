@@ -7,11 +7,11 @@ incomplete: true
 
 Oracles sind Datenleitungen, die Ethereum mit Offchain-Informationen in der realen Welt verbinden, so dass Sie Daten in Ihren Smart Contracts abfragen können. Zum Beispiel nutzen Vorhersagemarkt-dApps Oracles zur Begleichung von Zahlungen auf der Grundlage von Events. Ein Vorhersagemarkt könnte Sie fragen, Ihre ETH auf den nächsten Präsidenten der Vereinigten Staaten zu wetten. Sie werden ein Oracle verwenden, um das Ergebnis zu bestätigen und entsprechend an die Gewinner zu zahlen.
 
-## Voraussetzungen \{#prerequisites}
+## Voraussetzungen {#prerequisites}
 
 Stellen Sie sicher, dass Sie mit [Knotenpunkten](/developers/docs/nodes-and-clients/), [Konsensmechanismen](/developers/docs/consensus-mechanisms/)und [Smart Contract-Anatomie](/developers/docs/smart-contracts/anatomy/)vertraut sind, im speziellen Smart Contract-Events.
 
-## Was ist ein Oracle \{#what-is-an-oracle}
+## Was ist ein Oracle {#what-is-an-oracle}
 
 Ein Oracle ist eine Brücke zwischen der Blockchain und der realen Welt. Sie fungieren als on-chain APIs, die Sie abfragen können, um Informationen für Ihre Smart Contracts zu bekommen. Dies könnte theoretisch alles sein, von Preisinformationen bis hin zu Wetterberichten. Oracles können auch bidirektional sein, um Daten in die reale Welt zu „senden".
 
@@ -21,23 +21,23 @@ Schauen Sie sich an, wie Patrick Oracles erklärt:
 <YouTube id="ZJfkNzyO7-U" start="10" />
 }
 
-## Warum werden sie benötigt? \{#why-are-they-needed}
+## Warum werden sie benötigt? {#why-are-they-needed}
 
 Bei einer Blockchain wie Ethereum muss jeder Knotenpunkt im Netzwerk jede Transaktion wiederholen und am Ende garantiert das gleiche Ergebnis erzielen. APIs führen potenziell variable Daten ein. Wenn Sie ETH auf Basis eines vereinbarten $USD-Werts über eine Preis-API senden würden, würde die Abfrage von einem Tag auf den anderen ein anderes Ergebnis liefern. Nicht zu vergessen, die API könnte gehackt oder veraltet sein. Wenn dies geschieht, könnten sich die Knotenpunkte im Netzwerk nicht auf den aktuellen Zustand von Ethereum einigen und damit den [Konsens](/developers/docs/consensus-mechanisms/) brechen.
 
 Oracles lösen dieses Problem, indem die Daten auf der Blockchain veröffentlicht werden. Jeder Knotenpunkt, der die Transaktion wiedergibt, verwendet also die gleichen unveränderlichen Daten, die für alle sichtbar sind. Dazu besteht ein Oracle in der Regel aus einem Smart Contract und einigen Off-Chain-Komponenten, die APIs abfragen können. Es werden regelmäßig Transaktionen gesendet, um die Daten des Smart Contract zu aktualisieren.
 
-### Das Oracle-Problem \{#oracle-problem}
+### Das Oracle-Problem {#oracle-problem}
 
 Wie wir bereits erwähnt haben, können Ethereum-Transaktionen nicht direkt auf Off-Chain-Daten zugreifen. Gleichzeitig ist es unsicher, sich bei der Bereitstellung von Daten auf eine einzige Quelle der Wahrheit zu verlassen, und es macht die Dezentralisierung eines Smart Contract zunichte. Dies ist als Oracle-Problem bekannt.
 
 Wir können das Oracle-Problem vermeiden, indem wir ein dezentrales Oracle verwenden, das Daten aus mehreren Quellen schöpft. Wenn eine Datenquelle gehackt wird oder ausfällt, funktioniert der Smart Contract trotzdem wie vorgesehen.
 
-### Sicherheit \{#security}
+### Sicherheit {#security}
 
 Ein Oracle ist nur so sicher wie seine Datenquelle(n). Wenn ein dApp Uniswap als Oracle für seinen ETH/DAI-Preis-Feed verwendet, kann ein Angreifer den Preis auf Uniswap verschieben, um das Verständnis des dApps für den aktuellen Preis zu manipulieren. Ein Beispiel dafür, wie man dem entgegenwirken kann, ist ein [Feed-System](https://developer.makerdao.com/feeds/) wie das von MakerDAO, das Preisdaten aus vielen externen Preis-Feeds zusammenführt, anstatt sich nur auf eine einzige Quelle zu verlassen.
 
-### Architektur \{#architecture}
+### Architektur {#architecture}
 
 Dies ist ein Beispiel für eine einfache Oracle-Architektur, aber es gibt noch mehr Möglichkeiten, um Berechnungen außerhalb der Kette auszulösen.
 
@@ -52,7 +52,7 @@ Der nächste Schritt könnte ein Netzwerk mit diesen Knotenpunkten sein, die die
 
 [Chainlink Off-Chain Reporting](https://blog.chain.link/off-chain-reporting-live-on-mainnet/) (Chainlink OCR) hat diese Methode verbessert, indem die Off-Chain-Oracles des Netzwerks miteinander kommunizieren, ihre Antworten kryptographisch signieren, ihre Antworten off-chain zusammenfassen und nur eine Transaktion mit dem Ergebnis on-chain senden. Auf diese Weise wird weniger Gas verbraucht, aber Sie erhalten trotzdem die Garantie dezentraler Daten, da jeder Knotenpunkt seinen Teil der Transaktion signiert hat, so dass er von dem Knotenpunkt, der die Transaktion sendet, nicht mehr geändert werden kann. Die Eskalationsrichtlinie tritt in Kraft, wenn der Knotenpunkt keine Transaktion durchführt, und der nächste Knotenpunkt eine Transaktion sendet.
 
-## Verwendung \{#usage}
+## Verwendung {#usage}
 
 Mit Diensten wie Chainlink können Sie dezentrale Daten auf der Kette referenzieren, die bereits aus der realen Welt gezogen und aggregiert wurden. Eine Art öffentliches Gemeingut, aber für dezentralisierte Daten. Sie können auch Ihre eigenen modularen Oracle Netzwerke aufbauen, um alle gewünschten Daten zu erhalten. Darüber hinaus können Sie auch Berechnungen außerhalb der Blockchain durchführen und Informationen an die reale Welt senden. Chainlink verfügt über die nötige Infrastruktur:
 
@@ -62,7 +62,7 @@ Mit Diensten wie Chainlink können Sie dezentrale Daten auf der Kette referenzie
 
 Hier ist ein Beispiel dafür, wie Sie den neuesten ETH-Preis in Ihrem Smart Contract mithilfe eines Chainlink-Preis-Feeds erhalten:
 
-### Chainlink-Datenleitungen \{#chainlink-data-feeds}
+### Chainlink-Datenleitungen {#chainlink-data-feeds}
 
 ```solidity
 pragma solidity ^0.6.7;
@@ -102,7 +102,7 @@ contract PriceConsumerV3 {
 
 [Dokumentation ansehen](https://docs.chain.link/docs/get-the-latest-price)
 
-### Chainlink-VRF \{#chainlink-vrf}
+### Chainlink-VRF {#chainlink-vrf}
 
 Chainlink-VRF (Verifiable Random Function) ist eine nachweislich faire und überprüfbare Zufallsquelle, die für Smart Contracts entwickelt wurde. Entwickler von Smart Contracts können Chainlink-VRF als manipulationssichere Zufallszahlengenerierung (RNG) verwenden, um zuverlässige Smart Contracts für alle Anwendungen zu erstellen, die auf unvorhersehbare Ergebnisse angewiesen sind:
 
@@ -162,7 +162,7 @@ contract RandomNumberConsumer is VRFConsumerBase {
 }
 ```
 
-### Chainlink Keeper \{#chainlink-keepers}
+### Chainlink Keeper {#chainlink-keepers}
 
 Smart Contracts können ihre eigenen Funktionen nicht zu beliebigen Zeiten oder unter beliebigen Bedingungen auslösen oder initiieren. Zustandsänderungen treten nur auf, wenn ein anderes Konto eine Transaktion initiiert (z. B. ein Benutzer, ein Oracle oder ein Vertrag). Das [Chainlink Keeper Netzwerk](https://docs.chain.link/docs/chainlink-keepers/introduction/) bietet Optionen für Smart Contracts, um regelmäßige Wartungsaufgaben auf eine vertrauensminimierte und dezentralisierte Weise auszulagern.
 
@@ -215,12 +215,12 @@ contract Counter is KeeperCompatibleInterface {
 
 Nachdem Sie einen Keeper-kompatiblen Vertrag eingerichtet haben, müssen Sie den Vertrag für [Upkeep](https://docs.chain.link/docs/chainlink-keepers/register-upkeep/) registrieren und mit LINK finanzieren, um das Keeper-Netzwerk über Ihren Vertrag zu informieren, damit Ihre Arbeit kontinuierlich ausgeführt wird.
 
-### Keeper-Projekte \{#keepers}
+### Keeper-Projekte {#keepers}
 
 - [Chainlink Keeper](https://keepers.chain.link/)
 - [Keep3r Netzwerk](https://docs.keep3r.network/)
 
-### Chainlink API Aufruf \{#chainlink-api-call}
+### Chainlink API Aufruf {#chainlink-api-call}
 
 [Chainlink API Calls](https://docs.chain.link/docs/make-a-http-get-request) sind der einfachste Weg, um Daten aus der Off-Chain-Welt auf die traditionelle Art und Weise zu erhalten, wie das Web funktioniert: API-Aufrufe. Da es nur eine einzige Instanz und nur ein Oracle gibt, ist es von Natur aus zentralisiert. Um wirklich dezentralisiert zu sein, müsste eine Smart-Contract-Plattform zahlreiche Knotenpunkte in einem [externen Datenmarkt](https://market.link/) verwenden.
 
@@ -297,7 +297,7 @@ contract APIConsumer is ChainlinkClient {
 
 Sie können mehr über die Anwendungen von Chainlink erfahren, indem Sie den [Chainlink-Entwickler-Blog](https://blog.chain.link/tag/developers/) lesen.
 
-## Oracle-Dienste \{#other-services}
+## Oracle-Dienste {#other-services}
 
 - [Chainlink](https://chain.link/)
 - [Witnet](https://witnet.io/)
@@ -305,7 +305,7 @@ Sie können mehr über die Anwendungen von Chainlink erfahren, indem Sie den [Ch
 - [Paralink](https://paralink.network/)
 - [Dos.Netzwerk](https://dos.network/)
 
-### Erstellen Sie einen Oracle-Smart-Contract \{#build-an-oracle-smart-contract}
+### Erstellen Sie einen Oracle-Smart-Contract {#build-an-oracle-smart-contract}
 
 Hier ist ein Oracle-Beispielvertrag von Pedro Costa. Weitere Anmerkungen finden Sie in seinem Artikel: [Implementierung eines Blockchain Oracles auf Ethereum](https://medium.com/@pedrodc/implementing-a-blockchain-oracle-on-ethereum-cedc7e26b49e).
 
@@ -423,7 +423,7 @@ contract Oracle {
 
 _Wir würden gerne mehr Dokumentation über die Erstellung eines Oracle-Smart-Contract erhalten. Wenn Sie helfen können, erstellen Sie bitte eine PR!_
 
-## Weiterführende Informationen \{#further-reading}
+## Weiterführende Informationen {#further-reading}
 
 **Artikel**
 

@@ -4,7 +4,7 @@ description:
 lang: hu
 ---
 
-## Bevezetés \{#introduction}
+## Bevezetés {#introduction}
 
 **Mi is az a token?**
 
@@ -24,13 +24,13 @@ Egy ilyen erős Ethereum tulajdonságot egy szintén erős szabványnak kell kez
 
 Az ERC-20 bevezeti a Felcserélhető Token szabványt, vagyis a tokeneknek meg van az a tulajdonságuk, hogy minden egyes token pontosan ugyanaz (típusban és értékben), mint egy másik token. Például egy ERC-20 token úgy viselkedik, mint az ETH, vagyis 1 token egyenlő és egyenlő is marad az összes többi tokennel.
 
-## Előfeltételek \{#prerequisites}
+## Előfeltételek {#prerequisites}
 
 - [Számlák](/developers/docs/accounts)
 - [Okosszerződések](/developers/docs/smart-contracts/)
 - [Token szabványok](/developers/docs/standards/tokens/)
 
-## Törzs \{#body}
+## Törzs {#body}
 
 Az ERC-20 (Ethereum Request for Comments 20), melyet Fabian Vogelsteller javasolt 2015 novemberében, egy Token Szabvány, mely egy API-t implementál a tokenek számára az okosszerződéseken belül.
 
@@ -40,7 +40,7 @@ Ha egy okosszerződés implementálja a következő metódusokat és eseményeke
 
 Az [EIP-20-ból](https://eips.ethereum.org/EIPS/eip-20):
 
-### Metódusok \{#methods}
+### Metódusok {#methods}
 
 ```solidity
 function name() public view returns (string)
@@ -54,18 +54,18 @@ function approve(address _spender, uint256 _value) public returns (bool success)
 function allowance(address _owner, address _spender) public view returns (uint256 remaining)
 ```
 
-### Események \{#events}
+### Események {#events}
 
 ```solidity
 event Transfer(address indexed _from, address indexed _to, uint256 _value)
 event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 ```
 
-### Példák \{#web3py-example}
+### Példák {#web3py-example}
 
 Nézzük meg, miért olyan fontos egy szabvány, hogy egyszerűbbé tegye számunkra azt, hogy bármely ERC-20 token szerződést megtekinthessük az Ethereumon. Csak a szerződés Application Binary Interface-ére (ABI) lesz szükség, hogy egy felületet készítsünk bármely ERC-20 tokennek. Ahogy lentebb látni fogod, egy egyszerűsített ABI-t használunk, hogy egy egyszerűbb példával éljünk.
 
-#### Web3.py példa \{#web3py-example}
+#### Web3.py példa {#web3py-example}
 
 Először győződj meg arról, hogy a [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python könyvtár telepítve van:
 
@@ -136,14 +136,14 @@ print("Total Supply:", totalSupply)
 print("Addr Balance:", addr_balance)
 ```
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [EIP-20: ERC-20 Token Szabvány](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - Tokenek](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20 Implementáció](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
 - [ConsenSys - ERC-20 Implementáció](https://github.com/ConsenSys/Tokens/blob/master/contracts/eip20/EIP20.sol)
 
-## Kapcsolódó témák \{#related-topics}
+## Kapcsolódó témák {#related-topics}
 
 - [ERC-721](/developers/docs/standards/tokens/erc-721/)
 - [ERC-777](/developers/docs/standards/tokens/erc-777/)

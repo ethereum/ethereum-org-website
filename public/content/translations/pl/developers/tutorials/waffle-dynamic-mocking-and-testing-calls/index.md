@@ -13,7 +13,7 @@ lang: pl
 published: 2020-11-14
 ---
 
-## O czym jest ten samouczek? \{#what-is-this-tutorial-about}
+## O czym jest ten samouczek? {#what-is-this-tutorial-about}
 
 Z tego samouczka dowiesz się, jak:
 
@@ -26,11 +26,11 @@ Założenia:
 - znasz się na `JavaScript` i `TypeScript`
 - zapoznałeś się z innymi samouczkami `Waffle` lub wiesz coś na ten temat
 
-## Dynamiczne tworzenie atrap \{#dynamic-mocking}
+## Dynamiczne tworzenie atrap {#dynamic-mocking}
 
 Dlaczego dynamiczne tworzenie atrap jest przydatne? No cóż, pozwala nam pisać testy jednostkowe zamiast testów integracyjnych. Co to oznacza? Oznacza to, że nie musimy martwić się zależnościami inteligentnych kontraktów, dlatego możemy je przetestować w całkowicie izolacji. Pozwolę sobie pokazać, jak dokładnie możesz to zrobić.
 
-### **1. Projekt** \{#1-project}
+### **1. Projekt** {#1-project}
 
 Zanim zaczniemy musimy przygotować prosty projekt node.js:
 
@@ -68,7 +68,7 @@ Twoja struktura projektu powinna teraz wyglądać tak:
 └── test
 ```
 
-### **2. Inteligentny kontrakt** \{#2-smart-contract}
+### **2. Inteligentny kontrakt** {#2-smart-contract}
 
 Aby rozpocząć dynamiczne tworzenie atrapy, potrzebujemy inteligentnego kontraktu z zależnościami. Nie martw się, pomyślałem o tym!
 
@@ -117,7 +117,7 @@ $ npx waffle
 
 Łatwe, prawda? W folderze `build/` pojawiły się dwa pliki odpowiadające umowie i interfejsowi. Wykorzystamy je później do testowania.
 
-### **3. Testowanie** \{#3-testing}
+### **3. Testowanie** {#3-testing}
 
 Utwórzmy plik o nazwie `AmIRichAlready.test.ts` dla bieżącego testu. Przede wszystkim musimy poradzić sobie z importem. Będziemy ich potrzebować na później:
 
@@ -252,7 +252,7 @@ Uruchomiłeś testy...
 
 ...i tu jesteś! Nasza umowa wydaje się działać zgodnie z zamierzeniem :)
 
-## Testowanie wywołań kontraktów \{#testing-contract-calls}
+## Testowanie wywołań kontraktów {#testing-contract-calls}
 
 Podsumujmy dotychczasowe osiągnięcia. Przetestowaliśmy funkcjonalność naszego kontraktu `AmIRichAlready` i wygląda na to, że działa poprawnie. To znaczy, że skończyliśmy, prawda? Nie całkiem! Waffle pozwala nam jeszcze bardziej przetestować nasz kontrakt. Ale jak dokładnie? No cóż, w arsenale Waffle'a znajduje się `calledOnContract()` i wyrażenia matcher `calledOnContractWith()`. Umożliwią nam one sprawdzenie, czy nasz kontrakt wywołał pozorowany kontrakt ERC20. Oto podstawowy test z jednym z tych wyrażeń:
 
@@ -284,7 +284,7 @@ Sprawdźmy, czy testy są poprawne:
 
 Testowanie połączeń kontraktowych z Waffle jest bardzo łatwe. I oto najlepsza część. Te wyrażenia matcher działają zarówno z normalnymi, jak i próbnymi kontraktami! Wynika to z tego, że Waffle rejestruje i filtruje połączenia EVM zamiast wstrzykiwać kod, tak jak w przypadku popularnych bibliotek testowych dla innych technologii.
 
-## Meta \{#the-finish-line}
+## Meta {#the-finish-line}
 
 Gratulacje! Teraz wiesz jak korzystać z Waffle do dynamicznego testowania połączeń i modelowania kontraktów. Istnieją o wiele bardziej interesujące funkcje, które należy odkryć. Zalecam nurkowanie w dokumentacji Waffle.
 

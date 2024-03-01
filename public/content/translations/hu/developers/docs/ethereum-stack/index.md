@@ -8,7 +8,7 @@ Mint bármely szoftverstack, az „Ethereum-stack” is változni fog projektrő
 
 Vannak azonban alap Ethereum technológiák, melyek segítenek egy mentális modellt szolgáltatni arról, hogy a szoftver alkalmazások hogyan lépnek interakcióba az Ethereum blokklánccal. A stack rétegeinek megértése segíteni fog megérteni az Ethereum szoftver projektekbe történő integrálásának különböző módjait.
 
-## Első szint: Ethereum Virtuális Gép \{#ethereum-virtual-machine}
+## Első szint: Ethereum Virtuális Gép {#ethereum-virtual-machine}
 
 Az [Ethereum virtuális gép (EVM)](/developers/docs/evm/) egy futtatókörnyezet az Ethereumon az okosszerződések számára. Az Ethereum blokkláncon minden okosszerződést és állapot változást [tranzakciók](/developers/docs/transactions/) hajtanak végre. Az EVM kezeli az összes tranzakció feldolgozását az Ethereum hálózaton.
 
@@ -18,7 +18,7 @@ A háttérben az EVM opcode utasítások sorozatát használja meghatározott fe
 
 Dapp fejlesztőként nem kell sokat tudnod az EVM-ről azon kívül, hogy létezik és megbízhatóan működteti az összes Ethereum alkalmazást állásidő nélkül.
 
-## Második szint: Okosszerződések \{#smart-contracts}
+## Második szint: Okosszerződések {#smart-contracts}
 
 Az [okosszerződések](/developers/docs/smart-contracts/) olyan futtatható programok, melyek az Ethereum blokkláncon futnak.
 
@@ -28,7 +28,7 @@ Az okosszerződések nem csak nyílt forráskódú könyvtáraknak felelnek meg,
 
 Dapp fejlesztőként csak akkor kell okosszerződéseket írnod, ha szeretnél egyedi funkciókat hozzáadni az Ethereum blokklánchoz. Hamar rájöhetsz, hogy a projekted legtöbb célját elérheted csupán a létező okosszerződések integrálásával, például ha szeretnéd használni a stablecoin fizetéseket vagy lehetővé tenni a tokenek decentralizált cseréjét.
 
-## Harmadik szint: Ethereum csomópontok \{#ethereum-nodes}
+## Harmadik szint: Ethereum csomópontok {#ethereum-nodes}
 
 Ahhoz, hogy az alkalmazás az Ethereum-blokklánccal működni tudjon, egy [Ethereum-csomóponthoz](/developers/docs/nodes-and-clients/) kell kapcsolódnia. Egy ilyen csomópont lehetővé teszi, hogy elérje a blokkláncon lévő adatokat és/vagy tranzakciókat küldjön a hálózatnak.
 
@@ -36,7 +36,7 @@ Az Ethereum csomópontok egy szoftvert - Ethereum klienst - futtató számítóg
 
 Hogyha összekapcsolja az alkalmazást egy Ethereum-csomóponttal ([JSON RPC-n](/developers/docs/apis/json-rpc/) keresztül), akkor az alkalmazás képes lesz adatokat leolvasni a blokkláncról (például felhasználóiszámla-egyenlegek), illetve új tranzakciókat közvetíteni a hálózatra (például ETH-átutalás felhasználói számlák között, illetve okosszerződés-függvények futtatása).
 
-## Négyes szint: Ethereum kliens API-ok \{#ethereum-client-apis}
+## Négyes szint: Ethereum kliens API-ok {#ethereum-client-apis}
 
 Sok kényelmi könyvtár (melyet az Ethereum nyílt forráskódú közössége fejleszt és tart karban) lehetővé teszi a végfelhasználói alkalmazásodnak, hogy rácsatlakozzon és kommunikáljon az Ethereum blokklánccal.
 
@@ -44,17 +44,17 @@ Ha a felhasználó oldali alkalmazásod egy web app, akkor érdemes `npm install
 
 Annak ellenére, hogy ezek az API-ok nem szükséges elemei a stack-nek, sok komplexitást egyszerűsítenek le, amikor egy Ethereum csomóponttal szeretnénk kommunikálni. Ezen kívül használati függvényeket is szolgáltatnak (pl.: ETH konvertálása Gwei-be), így fejlesztőként kevesebb időt kell az Ethereum kliensek bonyodalmaival foglalkoznod és több időd jut egyedi funkcionalitást kialakítani az alkalmazásodnak.
 
-## Ötös szint: Végfelhasználói alkalmazások \{#end-user-applications}
+## Ötös szint: Végfelhasználói alkalmazások {#end-user-applications}
 
 A stack tetején a felhasználó oldali alkalmazások állnak. Ezek a standard alkalmazások, melyeket rendszeresen használsz és fejlesztesz manapság: főleg web és mobil alkalmazások.
 
 Ahogy ezeket a felhasználói felületeket fejleszted lényegében nem változott. Gyakran a felhasználóknak nem kell tudniuk arról, hogy az alkalmazás amit használnak, egy blokkláncot használ.
 
-## Készen állsz kiválasztani a stack-edet? \{#ready-to-choose-your-stack}
+## Készen állsz kiválasztani a stack-edet? {#ready-to-choose-your-stack}
 
 Nézd meg az útmutatónkat, hogy[felállítsd egy helyi fejlesztői környezetet](/developers/local-environment/) az Ethereum alkalmazásodnak.
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 - [A web 3.0 alkalmazások architektúrája](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
 

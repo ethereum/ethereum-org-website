@@ -4,13 +4,13 @@ lang: tr
 description: Ethereum.org'da içerik kaynaklarını listeleme kriterlerimiz
 ---
 
-# İçerik kaynakları ekleme \{#adding-content-resources}
+# İçerik kaynakları ekleme {#adding-content-resources}
 
 Ethereum ile ilgili her şeyi kapsamayı ummak abartılı olabilir, bu nedenle topluluğun oluşturduğu bazı harika makaleleri, öğreticileri, haber bültenlerini, iş ilanlarını ve çeşitli içerik kaynaklarını sergilemeye çalışıyoruz. Bunlar genellikle kullanıcıların ilgilenebileceği konular hakkında daha derinlemesine bilgi sağlar.
 
 Bir sayfaya eklenmesi gerektiğini düşündüğünüz bir içerik kaynağı varsa, bunu uygun bir yerde önermekten çekinmeyin.
 
-## Nasıl karar veririz \{#how-we-decide}
+## Nasıl karar veririz {#how-we-decide}
 
 Öğrenme kaynakları aşağıdaki kriterlere göre değerlendirilecektir:
 
@@ -23,7 +23,7 @@ Bir sayfaya eklenmesi gerektiğini düşündüğünüz bir içerik kaynağı var
 
 ---
 
-## İçerik kaynağınızı ekleyin \{#add-your-content-resource}
+## İçerik kaynağınızı ekleyin {#add-your-content-resource}
 
 Eğer ethereum.org'a içerik kaynağı eklemek istiyorsanız ve kriterleri karşılıyorsa GitHub'da bir konu oluşturun.
 

@@ -9,7 +9,7 @@ incomplete: true
 
 使用以太坊创建去中心化应用（即"dapps"）。 这些去中心化应用程序可被信任，意味着一旦被部署到以太坊上，它们将总是按既定程序运行。 它们是去中心化的，意味着它们运行在一个点对点网络中并且不存在单点故障。 不存在单一实体或者个人可以控制它们，它们也几乎不可能被审查。 它们可以通过控制数字资产来创建新的应用。
 
-## 智能合约和 Solidity 语言入门 \{#getting-started-with-smart-contracts-and-solidity}
+## 智能合约和 Solidity 语言入门 {#getting-started-with-smart-contracts-and-solidity}
 
 **迈出集成 Go 与以太坊的第一步**
 
@@ -21,7 +21,7 @@ incomplete: true
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [智能合约教程](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
-## 初学者文章和书籍 \{#beginner-articles-and-books}
+## 初学者文章和书籍 {#beginner-articles-and-books}
 
 - [选择以太坊客户端](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [开始使用 Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
@@ -30,7 +30,7 @@ incomplete: true
 - [一步步教您测试和部署以太坊 Go 语言智能合约](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [电子书：使用 Go 开发以太坊](https://goethereumbook.org/) - _使用 Go 开发以太坊应用程序_
 
-## 面向中等程度用户的文章和文档 \{#intermediate-articles-and-docs}
+## 面向中等程度用户的文章和文档 {#intermediate-articles-and-docs}
 
 - [Go 以太坊相关文档](https://geth.ethereum.org/docs/) - _官方以太坊 Golang 相关文档_
 - [Erigon 程序员指南](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/guide.md) - _图文指南，包括状态树、多重证明和交易处理_
@@ -42,7 +42,7 @@ incomplete: true
 - [使用 Go 对以太坊上的 Solidity 合约进行单元测试](https://medium.com/coinmonks/unit-testing-solidity-contracts-on-ethereum-with-go-3cc924091281)
 - [使用 Geth 作为库的快速参考](https://medium.com/coinmonks/web3-go-part-1-31c68c68e20e)
 
-## 面向高等程度用户的使用模式 \{#advanced-use-patterns}
+## 面向高等程度用户的使用模式 {#advanced-use-patterns}
 
 - [使用 GETH 模拟后端搭建](https://kauri.io/#collections/An%20ethereum%20test%20toolkit%20in%20Go/the-geth-simulated-backend/#_top)
 - [基于以太坊和 Quorum 的区块链即服务应用程序](https://blockchain.dcwebmakers.com/blockchain-as-a-service-apps-using-ethereum-and-quorum.html)
@@ -50,7 +50,7 @@ incomplete: true
 - [移动客户端：各种库和 Inproc 以太坊节点](https://github.com/ethereum/go-ethereum/wiki/Mobile-Clients:-Libraries-and-Inproc-Ethereum-Nodes)
 - [原生去中心化应用程序：到以太坊合约的 Go 绑定](https://github.com/ethereum/go-ethereum/wiki/Native-DApps:-Go-bindings-to-Ethereum-contracts)
 
-## Go 项目和工具 \{#go-projects-and-tools}
+## Go 项目和工具 {#go-projects-and-tools}
 
 - [Geth / Go Ethereum](https://github.com/ethereum/go-ethereum) - _以太坊协议的官方 Go 实现_
 - [Go Ethereum Code Analysis](https://github.com/ZtesoftCS/go-ethereum-code-analysis) - _审查和分析 Go 以太坊源代码_
@@ -68,7 +68,7 @@ incomplete: true
 
 想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
 
-## Go 社区贡献者 \{#go-community-contributors}
+## Go 社区贡献者 {#go-community-contributors}
 
 - [Geth Discord](https://discordapp.com/invite/nthXNEv)
 - [Geth Gist](https://gitter.im/ethereum/go-ethereum)
@@ -78,7 +78,7 @@ incomplete: true
 - [Ethereum Gitter](https://gitter.im/ethereum/home)
 - [Geth light Client Gitter](https://gitter.im/ethereum/light-client)
 
-## 其他汇总列表 \{#other-aggregated-lists}
+## 其他汇总列表 {#other-aggregated-lists}
 
 - [强大的以太坊](https://github.com/btomashvili/awesome-ethereum)
 - [Consensys：以太坊开发工具的权威清单](https://media.consensys.net/an-definitive-list-of-ethereum-developer-tools-2159ce865974) | [GitHub 源](https://github.com/ConsenSys/ethereum-developer-tools-list)

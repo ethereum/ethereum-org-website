@@ -17,7 +17,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Solidity'de [olaylar](/developers/docs/smart-contracts/anatomy/#events-and-logs), akıllı sözleşmenin gönderebileceği kaydedilmiş sinyallerdir. Merkeziyetsiz uygulamalar ya da Ethereum JSON-RPC API'sine bağlı herhangi bir şey, bu olayları dinleyip gerektiği şekilde hareket edebilir. Her bir olay endekslenir böylece olay tarihi sonrasında tekrar aranabilir olur.
 
-## Olaylar \{#events}
+## Olaylar {#events}
 
 Bu makalenin yazıldığı sırada Ethereum blok zincirindeki en yaygın olay, biri token'ları transfer ettiğinde ERC20 token'ları tarafından yayılan Transfer olayıdır.
 

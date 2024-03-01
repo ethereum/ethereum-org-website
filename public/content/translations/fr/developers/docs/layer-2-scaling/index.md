@@ -9,17 +9,17 @@ isOutdated: true
 
 La couche 2 est un terme collectif désignant les solutions conçues pour aider à redimensionner votre application en gérant les transactions hors de la chaîne principale Ethereum (couche 1). La vitesse de transaction est affectée lorsque le réseau est occupé, ce qui peu appauvrir l'expérience utilisateur pour certains types de DApps. Et plus le réseau est fréquenté, plus le prix du carburant augmente, car les expéditeurs de transactions cherchent à surenchérir. Cela peut rendre l'utilisation d'Ethereum très onéreuse.
 
-## Prérequis \{#prerequisites}
+## Prérequis {#prerequisites}
 
 Vous devez avoir une bonne compréhension de tous les sujets fondamentaux. Les solutions d'implémentation de la couche 2 sont avancées car la technologie a moins fait ses preuves.
 
-## Pourquoi la couche 2 est-elle nécessaire ? \{#why-is-layer-2-needed}
+## Pourquoi la couche 2 est-elle nécessaire ? {#why-is-layer-2-needed}
 
 - Certains cas d'utilisation, comme les jeux blockchain, n'ont aucun sens avec les temps de transaction actuels
 - Utiliser des applications blockchain peut être inutilement onéreux
 - Toute mise à jour d'évolutivité ne devrait pas se faire aux dépens de la décentralisation de la sécurité. La couche 2 est construite au niveau supérieur d'Ethereum.
 
-## Types de solution de la couche 2 \{#types}
+## Types de solution de la couche 2 {#types}
 
 - [Rollups](#rollups)
   - [Rollups ZK](#zk-rollups)
@@ -34,7 +34,7 @@ La plupart des solutions de la couche 2 sont centrées autour d'un serveur ou d'
 
 Une instance spécifique de la couche 2 peut être ouverte et partagée par de nombreuses applications, ou peut être déployée par une société et dédiée à soutenir uniquement leur application.
 
-## Rollups \{#rollups}
+## Rollups {#rollups}
 
 Les rollups sont des solutions qui regroupent ou "englobent" les transactions de la chaîne latérale en une seule transaction et qui génèrent une preuve cryptographique, connu sous le nom de SNARK (Succinct Non-interactive Argument of Knowledge, argument de connaissance succinct non interactif). Seule cette preuve est soumise à la chaîne principale.
 
@@ -55,7 +55,7 @@ Il existe deux types de rollups avec différents modèles de sécurité :
 - Rollup ZK : exécute le calcul hors de la blockchain principale, puis soumet une [**preuve de validité **](/glossary/#validity-proof)
 - Rollup optimisé : assume que les transactions sont valides par défaut et exécute uniquement le calcul, via une [**preuve de fraude**](/glossary/#fraud-proof),
 
-### Rollups Zero Knowledge (ZK) \{#zk-rollups}
+### Rollups Zero Knowledge (ZK) {#zk-rollups}
 
 Les rollups Zero Knowledge, également appelés Rollups ZK ou ZK-Rollups, regroupent des centaines de transferts hors chaîne en une seule transaction via un contrat intelligent. À partir des données soumises, le contrat intelligent peut vérifier tous les transferts inclus. C'est ce que l'on appelle une preuve de validité.
 
@@ -63,7 +63,7 @@ Avec un rollup ZK, valider un nouveau bloc est plus rapide et moins coûteux, ca
 
 La chaîne latérale où se produisent les rollups ZK peut être optimisée pour réduire davantage la taille des transactions. Par exemple, un compte représenté par un index plutôt que par une adresse permet de réduire à seulement 4 octets une transaction de 32 octets. Les transactions étant également écrites sur Ethereum en tant que données d'appel, cela réduit la quantité de carburant.
 
-#### Avantages et inconvénients \{#zk-pros-and-cons}
+#### Avantages et inconvénients {#zk-pros-and-cons}
 
 | Avantages                                                                                                          | Inconvénients                                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -71,14 +71,14 @@ La chaîne latérale où se produisent les rollups ZK peut être optimisée pour
 | Moindre vulnérabilité aux attaques économiques que les [rollups optimisés](#optimistic-pros-and-cons).             | Les preuves de validité étant intenses à calculer, les rollups ZK ne présentent guère d'intérêt pour les applications peu actives sur la chaîne.                                                                                                                  |
 |                                                                                                                    | Délai de [finalisation](/glossary/#finality) subjective plus long (10-30 min pour générer une preuve ZK), mais plus rapide pour une finalisation complète, car il n'existe pas de délai de contestation comme dans les [rollups optimisés](#optimistic-rollups)). |
 
-#### Rollups ZK que vous pouvez utiliser \{#use-zk-rollups}
+#### Rollups ZK que vous pouvez utiliser {#use-zk-rollups}
 
 - [Loopring](https://loopring.org/#/)
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkSync](https://matter-labs.io/)
 - [Aztec 2.0](https://aztec.network/)
 
-### Rollups optimisés \{#optimistic-rollups}
+### Rollups optimisés {#optimistic-rollups}
 
 Les rollups optimisés utilisent une chaîne latérale positionnée en parallèle à la chaîne principale Ethereum. Ils peuvent offrir des améliorations en matière d'évolutivité, car ils n'effectuent aucun calcul par défaut. Au lieu de cela, après une transaction, ils proposent le nouvel état à la chaîne principal. On dit aussi qu'ils "notarisent" la transaction.
 
@@ -86,7 +86,7 @@ Avec les rollups optimisés, les transactions sont écrites sur la chaîne princ
 
 Le calcul étant la partie lente et coûteuse de l'utilisation d'Ethereum, les rollups optimisés peuvent offrir 10 à 100 fois plus d'évolutivité en fonction de la transaction. Ce nombre augmentera encore plus avec l'introduction de la mise à niveau Eth2 vers les [chaînes de fragments](/roadmap/danksharding). Cela est dû au fait qu'il y aura plus de données disponibles en cas de contestation d'une transaction.
 
-#### Contestation des transactions \{#disputing-transactions}
+#### Contestation des transactions {#disputing-transactions}
 
 Les rollups optimisés ne calculant pas réellement la transaction, il faut donc implémenter un mécanisme pour garantir que les transactions sont légitimes et non frauduleuses. C'est là que des preuves de fraude entrent en matière. Si quelqu'un remarque une opération frauduleuse, le rollup exécutera une preuve de fraude et effectuera le calcul de la transaction en utilisant les données d'état disponibles. Cela signifie que le délai d'attente pour confirmer une transaction peut être plus élevé avec ce type de rollup plutôt qu'avec un rollup ZK, car elle pourrait être contestée.
 
@@ -98,20 +98,20 @@ Le carburant nécessaire pour effectuer le calcul de la preuve de fraude est rem
 
 Vous êtes donc remboursé pour avoir prouvé la fraude.
 
-#### Avantages et inconvénients \{#optimistic-pros-and-cons}
+#### Avantages et inconvénients {#optimistic-pros-and-cons}
 
 | Avantages                                                                                                                                                | Inconvénients                                                                                                             |
 | -------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
 | Tout ce que vous pouvez faire sur la couche Ethereum 1, vous pouvez le faire avec les rollups optimisés car ils sont compatibles avec l'EVM et Solidity. | Longs délais d'attente pour les transactions sur la blockchain en raison de potentiels problèmes de fraude.               |
 | Toutes les données de transaction étant stockées sur la chaîne de la couche 1, elles sont donc sécurisées et décentralisées.                             | Vulnérabilité potentielle aux attaques si la valeur d'un rollup optimisé dépasse le montant de la caution d'un opérateur. |
 
-#### Rollups optimisés que vous pouvez utiliser \{#use-optimistic-rollups}
+#### Rollups optimisés que vous pouvez utiliser {#use-optimistic-rollups}
 
 - [Optimism](https://optimism.io/)
 - [Offchain Labs Arbitrum Rollup](https://offchainlabs.com/)
 - [Fuel Network](https://fuel.sh/)
 
-## Canaux \{#channels}
+## Canaux {#channels}
 
 Les canaux permettent aux participants d'effectuer `x` transactions hors chaîne tout en ne soumettant que deux transactions au réseau sur la chaîne. Cela permet un débit de transaction extrêmement élevé
 
@@ -125,7 +125,7 @@ Les participants doivent verrouiller une partie de l'état d'Ethereum, comme un 
 
 Verrouiller l'état de cette façon constitue la première transaction et ouvre le canal. Les participants peuvent alors effectuer des transactions rapidement et librement hors chaîne. Une fois l'interaction terminée, une transaction finale est soumise sur la blockchain, déverrouillant l'état.
 
-### Canaux d'état \{#state-channels}
+### Canaux d'état {#state-channels}
 
 Canal d'état tic-tac-toe :
 
@@ -140,7 +140,7 @@ Il existe actuellement deux types de canaux :
 - Canaux d'état - Comme décrit ci-dessus
 - Canaux de paiement - Canaux d'état simplifiés qui ne traitent que des paiements. Ils permettent des transferts hors chaîne entre deux participants, à condition que la somme nette des transferts ne dépasse pas les jetons déposés.
 
-#### Avantages et inconvénients \{#channels-pros-and-cons}
+#### Avantages et inconvénients {#channels-pros-and-cons}
 
 | Avantages                                                                                       | Inconvénients                                                                                                                                                           |
 | ----------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -149,14 +149,14 @@ Il existe actuellement deux types de canaux :
 | Coût par transaction le plus bas. Intéressant pour le streaming des micropaiements              | Nécessité de verrouiller les fonds sur les canaux de paiement ouverts.                                                                                                  |
 |                                                                                                 | Ne prend pas en charge la participation ouverte.                                                                                                                        |
 
-#### Canaux d'état que vous pouvez utiliser \{#use-state-channels}
+#### Canaux d'état que vous pouvez utiliser {#use-state-channels}
 
 - [Connext](https://connext.network/)
 - [Raiden](https://raiden.network/)
 - [Perun](https://perun.network/)
 - [Statechannels.org](https://statechannels.org/)
 
-## Plasma \{#plasma}
+## Plasma {#plasma}
 
 Une chaîne plasma est une blockchain séparée qui est ancrée à la chaîne Ethereum principale, et qui utilise des preuves de fraude (comme les [rollups optimisés](#optimistic-rollups)) pour arbitrer les litiges.
 
@@ -167,14 +167,14 @@ Une chaîne plasma est une blockchain séparée qui est ancrée à la chaîne Et
 |                                                                                                                                                      | Se repose sur un ou plusieurs opérateurs pour stocker les données et les utiliser sur demande.                                                                                                                |
 |                                                                                                                                                      | Les retraits sont retardés de plusieurs jours pour permettre les contestations. Pour les actifs fongibles, cela peut être atténué par les fournisseurs de liquidités, mais il y a un coût en capital associé. |
 
-### Chaînes Plasma que vous pouvez utiliser \{#use-plasma}
+### Chaînes Plasma que vous pouvez utiliser {#use-plasma}
 
 - [OMG Network](https://omg.network/)
 - [Matic Network](https://matic.network/)
 - [Gluon](https://gluon.network/)
 - [LeapDAO](https://ipfs.leapdao.org/)
 
-## Validium \{#validium}
+## Validium {#validium}
 
 Utilise les preuves de validité comme les [rollups ZK](#zk-rollups), mais les données ne sont pas stockées sur la chaîne Ethereum de la couche principale 1. Cela peut permettre jusqu'à 10 000 transactions par seconde par chaîne Validium, et plusieurs chaînes peuvent être exécutées en parallèle.
 
@@ -184,13 +184,13 @@ Utilise les preuves de validité comme les [rollups ZK](#zk-rollups), mais les d
 | Aucune vulnérabilité à certaines attaques économiques auxquelles sont confrontés les systèmes basés sur les preuves de fraude dans des applications à valeur élevée. | Grande puissance de calcul nécessaire pour générer les preuves de validité, donc n'est pas rentable pour les applications à faible débit.                                                                           |
 |                                                                                                                                                                      | Délai de finalisation subjective plus long (10-30 min pour générer une preuve ZK), mais plus rapide pour une finalisation complète, car il n'existe pas de délai de contestation comme dans les rollups optimisés). |
 
-### Chaînes Validium que vous pouvez utiliser \{#use-validium}
+### Chaînes Validium que vous pouvez utiliser {#use-validium}
 
 - [Starkware](https://starkware.co/)
 - [Matter Labs zkPorter](https://matter-labs.io/)
 - [Loopring](https://loopring.org/#/)
 
-## Chaînes latérales \{#sidechains}
+## Chaînes latérales {#sidechains}
 
 Une chaîne latérale est une blockchain séparée qui fonctionne en parallèle au réseau principal, de façon indépendante. Elle possède son propre algorithme de consensus ([preuve d'autorité](https://wikipedia.org/wiki/Proof_of_authority), [preuve d'enjeu déléguée](https://en.bitcoinwiki.org/wiki/DPoS), [tolérance aux défauts byzantins](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained), etc.). Elle est relié à la chaîne principale par un "pont" à deux sens.
 
@@ -200,20 +200,20 @@ Une chaîne latérale est une blockchain séparée qui fonctionne en parallèle 
 | Prend en charge le calcul général, est compatible avec l'EVM. | Utilise un mécanisme de consensus distinct. Non sécurisée par la couche 1 (techniquement, ce n’est donc pas la couche 2). |
 |                                                               | Un quorum de validateurs de la chaîne latérale peut commettre une fraude.                                                 |
 
-### Chaînes latérales que vous pouvez utiliser \{#use-sidechains}
+### Chaînes latérales que vous pouvez utiliser {#use-sidechains}
 
 - [Skale](https://skale.network/)
 - [POA Network](https://www.poa.network/)
 
-## Solutions hybrides \{#hybrid-solutions}
+## Solutions hybrides {#hybrid-solutions}
 
 Combine les meilleures parties des multiples technologies de couche 2, et peut offrir des compromis configurables.
 
-### Solutions hybrides que vous pouvez utiliser \{#use-hybrid-solutions}
+### Solutions hybrides que vous pouvez utiliser {#use-hybrid-solutions}
 
 - [Celer](https://www.celer.network/)
 
-## Complément d'information \{#further-reading}
+## Complément d'information {#further-reading}
 
 - [Validium et The Layer 2 Two-By-Two - Numéro 99](https://www.buildblockchain.tech/newsletter/issues/no-99-validium-and-the-layer-2-two-by-two)
 - [Evaluating Ethereum layer 2 Scaling Solutions: A Comparison Framework](https://blog.matter-labs.io/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)

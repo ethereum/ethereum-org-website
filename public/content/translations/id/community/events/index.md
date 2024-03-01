@@ -5,7 +5,7 @@ hideEditButton: true
 lang: id
 ---
 
-## Aksi mendatang \{#events}
+## Aksi mendatang {#events}
 
 **Setiap bulan, ada aksi besar Ethereum di seluruh dunia.** Pertimbangkanlah untuk menghadiri salah satunya di dekat area Anda untuk bertemu dengan lebih banyak orang di komunitas, mendapatkan informasi tentang lowongan pekerjaan, dan mengembangkan keahlian baru.
 
@@ -15,7 +15,7 @@ lang: id
 
 Ini adalah daftar tidak lengkap yang dipelihara oleh komunitas kami. Tahu aksi Ethereum mendatang untuk ditambahkan ke daftar ini? [Silahkan tambahkan](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
 
-## Pertemuan Ethereum \{#meetups}
+## Pertemuan Ethereum {#meetups}
 
 Tidak melihat aksi yang cocok untuk Anda? Cobalah menghadiri sebuah pertemuan. Pertemuan adalah aksi yang lebih kecil yang diadakan oleh grup penggemar Ethereum - sebuah peluang bagi orang-orang yang tertarik dengan Ethereum untuk berkumpul, berbicara tentang Ethereum, dan mengetahui tentang perkembangan terkini.
 

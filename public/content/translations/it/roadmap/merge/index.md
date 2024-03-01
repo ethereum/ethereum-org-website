@@ -15,7 +15,7 @@ summaryPoint4: La Fusione ha ridotto il consumo energetico di Ethereum di circa 
   La Fusione è avvenuta il 15 settembre 2022. Ciò ha portato a termine la transizione di Ethereum al consenso di proof-of-stake, deprecando ufficialmente il proof-of-work e riducendo il consumo energetico di circa il 99,95%.
 </UpgradeStatus>
 
-## In cosa ha consistito la Fusione? \{#what-is-the-merge}
+## In cosa ha consistito la Fusione? {#what-is-the-merge}
 
 La Fusione è stata l'unione del livello di esecuzione originale di Ethereum (la Rete principale che esisteva dalla [genesi](/history/#frontier)) con il suo nuovo livello di consenso di Proof of stake, la Beacon Chain. Ha eliminato la necessità di grandi quantità di energia richieste dal processo di mining, consentendo invece di proteggere la rete utilizzando l'ETH in staking. È stato un passo davvero emozionante nel realizzare la visione di Ethereum: maggiori scalabilità, sicurezza e sostenibilità.
 
@@ -27,7 +27,7 @@ Inizialmente, la [Beacon Chain](/roadmap/beacon-chain/) veniva inviata separatam
 
 Immagina Ethereum come una nave lanciata prima di essere pronta per un viaggio interstellare. Con la Beacon Chain, la community ha costruito un nuovo motore e uno scafo più resistente. Dopo test significativi, è arrivato il momento di scambiare il vecchio motore con quello nuovo durante il volo. Questo ha aggiunto il nuovo e più efficiente motore nella nave esistente, consentendole di percorrere diversi anni luce e conquistare l'universo.
 
-## La fusione con la rete principale \{#merging-with-mainnet}
+## La fusione con la rete principale {#merging-with-mainnet}
 
 La Proof of Work ha protetto la Rete rrincipale di Ethereum dalla genesi alla Fusione. Questo ha consentito alla blockchain di Ethereum a cui siamo tutti abituati di venire alla luce, a luglio 2015, con tutte le sue funzionalità familiari: transazioni, contratti intelligenti, conti, etc.
 
@@ -43,7 +43,7 @@ Con La Fusione, la cronologia non è andata perduta. Quando la Rete principale s
 Questa transizione al Proof of stake ha cambiato il metodo di emissione dell'ether. Scopri di più sull'<a href="/roadmap/merge/issuance/">emissione di ether prima e dopo La Fusione</a>.
 </InfoBanner>
 
-### Utenti e detentori \{#users-holders}
+### Utenti e detentori {#users-holders}
 
 **La Fusione non ha modificato nulla per i detentori/utenti.**
 
@@ -53,7 +53,7 @@ Nonostante il passaggio dal Proof of Work, l'intera cronologia di Ethereum dalla
 
 [Maggiori informazioni sulla sicurezza di Ethereum](/security/#eth2-token-scam)
 
-### Operatori di nodi e sviluppatori di dapp \{#node-operators-dapp-developers}
+### Operatori di nodi e sviluppatori di dapp {#node-operators-dapp-developers}
 
 {
 <ExpandableCard
@@ -114,15 +114,15 @@ Per ulteriori informazioni, consulta questo post del blog di Tim Beiko su <a hre
 </ExpandableCard>
 }
 
-## La Fusione e il consumo energetico \{#merge-and-energy}
+## La Fusione e il consumo energetico {#merge-and-energy}
 
 Questa fase ha segnato la fine del Proof of Work per Ethereum e l'inizio di una rete Ethereum più sostenibile ed ecologica. Il consumo energetico di Ethereum si è ridotto di una stima del 99,95%, rendendo Ethereum una blockchain ecosostenibile. Scopri di più sul [consumo energetico di Ethereum](/energy-consumption/).
 
-## La Fusione e il ridimensionamento \{#merge-and-scaling}
+## La Fusione e il ridimensionamento {#merge-and-scaling}
 
 La Fusione ha inoltre gettato le basi per ulteriori aggiornamenti di scalabilità, impossibili sotto il Poof of Work, portando Ethereum un po' più vicina al raggiungimento della completa scalabilità, sicurezza e sostenibilità delinate nella [visione di Ethereum](/roadmap/vision/).
 
-## Equivoci su La Fusione \{#misconceptions}
+## Equivoci su La Fusione {#misconceptions}
 
 {
 <ExpandableCard
@@ -197,7 +197,7 @@ L'APR, inoltre, è intenzionalmente dinamico, consentendo a un mercato di staker
 </ExpandableCard>
 }
 
-## Cos'è successo a 'Eth2'? \{#eth2}
+## Cos'è successo a 'Eth2'? {#eth2}
 
 Il termine 'Eth2' è stato superato. Dopo aver fuso 'Eth1' ed 'Eth2' in una singola catena, non vi è più alcun bisogno di distinguere tra le due reti di Ethereum; esiste solo Ethereum.
 
@@ -210,11 +210,11 @@ Questi aggiornamenti della terminologia cambiano solo le convenzioni di nomencla
 
 [Scopri di più sulla rinominazione di 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
-## Relazione tra gli aggiornamenti \{#relationship-between-upgrades}
+## Relazione tra gli aggiornamenti {#relationship-between-upgrades}
 
 Gli aggiornamenti di Ethereum sono tutti in qualche modo interconnessi. Quindi, ricapitoliamo di come la Fusione si collega agli altri aggiornamenti.
 
-### La Fusione e la Beacon Chain \{#merge-and-beacon-chain}
+### La Fusione e la Beacon Chain {#merge-and-beacon-chain}
 
 La Fusione rappresenta l'adozione formale della Beacon Chain come nuovo livello di consenso al livello di esecuzione originale della Rete principale. A partire dalla Fusione, i validatori sono assegnati alla Rete principale sicura di Ethereum e il mining su [Proof of Work](/developers/docs/consensus-mechanisms/pow/) non è più un mezzo valido di produzione di blocchi.
 
@@ -224,13 +224,13 @@ I blocchi sono invece proposti dai nodi di convalida, che ottengono ETH in staki
   La beacon chain
 </ButtonLink>
 
-### La Fusione e l'aggiornamento di Shanghai \{#merge-and-shanghai}
+### La Fusione e l'aggiornamento di Shanghai {#merge-and-shanghai}
 
 Per poter semplificare e massimizzare l'attenzione sulla riuscita della transizione al Proof of stake, l'aggiornamento de La Fusione non ha incluso alcune funzionalità annunciate, come la possibilità di prelevare gli ETH in staking. Questa funzionalità è stata abilitata separatamente, con l'aggiornamento di Shanghai/Capella.
 
 Per i curiosi, scoprite di più su [Cosa succede dopo la Fusione](https://youtu.be/7ggwLccuN5s?t=101), presentato da Vitalik all'evento ETHGlobal di aprile 2021.
 
-### La Fusione e lo sharding \{#merge-and-data-sharding}
+### La Fusione e lo sharding {#merge-and-data-sharding}
 
 Originariamente, il piano prevedeva di lavorare allo sharding prima della Fusione per risolvere la questione della scalabilità. Tuttavia, con il boom delle [soluzioni di ridimensionamento del livello 2](/layer-2/), la priorità si è spostata sul passaggio dal Proof of Work al Proof of stake.
 
@@ -240,7 +240,7 @@ I piani per lo sharding si stanno evolvendo rapidamente, ma data la nascita e il
   Sharding
 </ButtonLink>
 
-## Letture consigliate \{#further-reading}
+## Letture consigliate {#further-reading}
 
 {
 <MergeArticleList />

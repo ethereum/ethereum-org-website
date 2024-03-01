@@ -4,7 +4,7 @@ description: Grunnleggende informasjon du trenger for å komme i gang med Ethere
 lang: nb
 ---
 
-# Bruke Ethereum \{#using-ethereum}
+# Bruke Ethereum {#using-ethereum}
 
 <FeaturedText>
 
@@ -12,7 +12,7 @@ lang: nb
 
 </FeaturedText>
 
-## Slik bruker du en applikasjon bygget på Ethereum \{#how-to-use-an-application-built-on-ethereum}
+## Slik bruker du en applikasjon bygget på Ethereum {#how-to-use-an-application-built-on-ethereum}
 
 Den beste måten å komme i gang med Ethereum er å hoppe rett inn i det!
 

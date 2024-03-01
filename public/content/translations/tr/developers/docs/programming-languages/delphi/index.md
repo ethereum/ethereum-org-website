@@ -15,7 +15,7 @@ Ethereum'u, kripto para birimi ve blok zinciri teknolojisinin avantajlarından f
 
 Delphi programlama dilini kullanarak Ethereum üzerinde merkeziyetsiz uygulamalar geliştirin ve akıllı sözleşmelerle etkileşime geçin!
 
-## Akıllı Sözleşmeler ve Solidity Dilini Öğrenmeye Başlangıç \{#getting-started-with-smart-contracts-and-the-solidity-language}
+## Akıllı Sözleşmeler ve Solidity Dilini Öğrenmeye Başlangıç {#getting-started-with-smart-contracts-and-the-solidity-language}
 
 **Delphi ve Ethereum'u entegre etmek için ilk adımlarınızı atın**
 
@@ -26,7 +26,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [İlk Akıllı Sözleşmenizi Yazın](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [Solidity'yi Nasıl Derleyeceğinizi ve Dağıtacağınızı Öğrenin](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
-## Başlangıç Düzeyi Yardımcı Kaynaklar ve Bağlantılar \{#beginner-references-and-links}
+## Başlangıç Düzeyi Yardımcı Kaynaklar ve Bağlantılar {#beginner-references-and-links}
 
 **Delphereum kütüphanesinin tanıtımı**
 
@@ -40,13 +40,13 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [3 dakikalık bir Akıllı Sözleşme ve Delphi - Bölüm 1](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-61d998571d)
 - [3 dakikalık bir Akıllı Sözleşme ve Delphi - Bölüm 2](https://medium.com/@svanas/a-3-minute-smart-contract-and-delphi-part-2-446925faa47b)
 
-## Orta Seviye Makaleler \{#intermediate-articles}
+## Orta Seviye Makaleler {#intermediate-articles}
 
 - [Delphi'de Ethereum tarafından imzalanmış bir mesaj imzası oluşturma](https://medium.com/@svanas/generating-an-ethereum-signed-message-signature-in-delphi-75661ce5031b)
 - [Delphi ile ether aktarımı](https://medium.com/@svanas/transferring-ether-with-delphi-b5f24b1a98a4)
 - [Delphi ile ERC-20 token'larının aktarımı](https://medium.com/@svanas/transferring-erc-20-tokens-with-delphi-bb44c05b295d)
 
-## İleri Düzey Kullanım Şekilleri \{#advanced-use-patterns}
+## İleri Düzey Kullanım Şekilleri {#advanced-use-patterns}
 
 - [Delphi ve Ethereum İsim Servisi (ENS)](https://medium.com/@svanas/delphi-and-ethereum-name-service-ens-4443cd278af7)
 - [QuikNode, Ethereum ve Delphi](https://medium.com/@svanas/quiknode-ethereum-and-delphi-f7bfc9671c23)

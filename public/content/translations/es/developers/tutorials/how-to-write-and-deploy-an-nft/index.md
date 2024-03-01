@@ -23,13 +23,13 @@ En la parte 2 de este tutorial, explicaremos cómo podemos utilizar nuestro cont
 
 Y, por supuesto, si le surge alguna duda en cualquier momento, no dude en consultar [Alchemy Discord](https://discord.gg/gWuC7zB) o visitar [los documentos de la API de NFT en Alchemy](https://docs.alchemy.com/alchemy/enhanced-apis/nft-api)!
 
-## Paso 1: Conectarse a la red Ethereum \{#connect-to-ethereum}
+## Paso 1: Conectarse a la red Ethereum {#connect-to-ethereum}
 
 Hay muchas maneras de hacer peticiones a la cadena de bloques Ethereum, pero para simplificarnos la vida, usaremos una cuenta gratuita en [Alchemy](https://alchemy.com/signup/eth), una plataforma de desarrollo de cadena de bloques y API que nos permite comunicarnos con la cadena Ethereum sin tener que ejecutar nuestros propios nodos.
 
 En este tutorial, también aprovecharemos las herramientas de desarrollo de Alchemy para monitorizar y analizar lo que está ocurriendo dentro de nuestro despliegue de contratos inteligentes. Si aún no tiene una cuenta de Alchemy, puede registrarse gratis en [aquí](https://alchemy.com/signup/eth).
 
-## Paso 2: Crear su aplicación (y llave API) \{#make-api-key}
+## Paso 2: Crear su aplicación (y llave API) {#make-api-key}
 
 Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API creando una aplicación. Esto nos permitirá hacer solicitudes a la red de pruebas de Ropsten. Consulte [esta guía](https://docs.alchemyapi.io/guides/choosing-a-network) si tiene curiosidad para saber más sobre redes de pruebas.
 
@@ -43,7 +43,7 @@ Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API cr
 
 3. ¡Haga clic en «Crear app» y ya está! Su aplicación debería aparecer en la siguiente tabla.
 
-## Paso 3: Crear una cuenta Ethereum (dirección) \{#create-eth-address}
+## Paso 3: Crear una cuenta Ethereum (dirección) {#create-eth-address}
 
 Necesitamos una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos MetaMask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Si quiere más información sobre cómo funcionan las transacciones en Ethereum, eche un vistazo a [esta página](/developers/docs/transactions/) de Ethereum Foundation.
 
@@ -51,11 +51,11 @@ Puede descargar y crear una cuenta MetaMask gratis [aquí](https://metamask.io/d
 
 ![Configure Ropsten como su red](./metamask-goerli.png)
 
-## Paso 4: Añadir ether de un faucet \{#step-4-add-ether-from-a-faucet}
+## Paso 4: Añadir ether de un faucet {#step-4-add-ether-from-a-faucet}
 
 Para desarrollar nuestro contrato inteligente en la red de prueba, necesitaremos algunos ETH de prueba. Para obtener ETH, puede ir a [FaucETH](https://fauceth.komputing.org) e introducir la dirección de su cuenta Ropsten, hacer clic en «Request funds» (Solicitar fondos) y luego en «Ethereum Testnet Ropsten» (Ropsten de red de prueba de Ethereum) antes de volver a hacer clic en el botón «Request funds». Deberían aparecer ETH en su cuenta de MetaMask poco después.
 
-## Paso 5: Comprobar su balance \{#check-balance}
+## Paso 5: Comprobar su balance {#check-balance}
 
 Para comprobar que nuestro balance está ahí, hagamos una solicitud de [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)usando [la herramienta de composición de Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto devolverá la cantidad de ETH a nuestra cartera. Después de introducir la dirección de su cuenta de MetaMask y hacer clic en «Send Request» (Enviar Solicitud), debería ver una respuesta como esta:
 
@@ -65,7 +65,7 @@ Para comprobar que nuestro balance está ahí, hagamos una solicitud de [eth_get
 
 ¡Fiu! Nuestro dinero de prueba está ahí sano y salvo.
 
-## Paso 6: Iniciar nuestro proyecto \{#initialize-project}
+## Paso 6: Iniciar nuestro proyecto {#initialize-project}
 
 Primero, necesitaremos crear una carpeta para nuestro proyecto. Navegue hasta su línea de comandos y teclee:
 
@@ -103,7 +103,7 @@ Realmente no importa la respuesta que dé a las preguntas de instalación, he aq
 
 Apruebe package.json y ¡ya puede comenzar!
 
-## Paso 7: Instalar [Hardhat](https://hardhat.org/getting-started/#overview) \{#install-hardhat}
+## Paso 7: Instalar [Hardhat](https://hardhat.org/getting-started/#overview) {#install-hardhat}
 
 Hardhat es un entorno de desarrollo para compilar, desplegar, probar y depurar su software Ethereum. Ayuda a los desarrolladores cuando construyen contratos inteligentes y dApps localmente antes de desplegarse en la cadena en vivo.
 
@@ -113,7 +113,7 @@ Dentro de nuestro proyecto my-nft, ejecute:
 
 Revise esta página para más información acerca de las [intrucciones de instalación](https://hardhat.org/getting-started/#overview).
 
-## Paso 8: Crear proyecto Hardhat \{#create-hardhat-project}
+## Paso 8: Crear proyecto Hardhat {#create-hardhat-project}
 
 Dentro de la carpeta de nuestro proyecto, ejecute:
 
@@ -137,7 +137,7 @@ Entonces debería aparecer un mensaje de bienvenida y la opción de seleccionar 
 
 Esta acción nos creará un archivo hardhat.config.js, que es donde especificaremos todos los ajustes para nuestro proyecto (en el paso 13).
 
-## Paso 9: Añadir carpetas de proyecto \{#add-project-folders}
+## Paso 9: Añadir carpetas de proyecto {#add-project-folders}
 
 Para mantener nuestro proyecto organizado, crearemos dos nuevas carpetas. Navegue al directorio raíz de su proyecto en su línea de comandos y teclee:
 
@@ -148,7 +148,7 @@ Para mantener nuestro proyecto organizado, crearemos dos nuevas carpetas. Navegu
 
 - scripts/ es donde mantendremos scripts para desplegar e interactuar con nuestro contrato inteligente
 
-## Paso 10: Escribir nuestro contrato \{#write-contract}
+## Paso 10: Escribir nuestro contrato {#write-contract}
 
 Ahora que nuestro entorno está configurado, es hora de dedicarse a cosas más emocionantes, como por ejemplo, _¡escribir nuestro código de contrato inteligente!_
 
@@ -213,7 +213,7 @@ Por último, tenemos nuestra función `mintNFT(address recipient, string memory 
 
 `mintNFT` llama a algunos métodos de la biblioteca ERC-721 heredada, y en última instancia muestra un número que representa el ID del NFT recién acuñado.
 
-## Paso 11: Conectar MetaMask & Alchemy a su proyecto \{#connect-metamask-and-alchemy}
+## Paso 11: Conectar MetaMask & Alchemy a su proyecto {#connect-metamask-and-alchemy}
 
 Ahora que hemos creado una cartera de MetaMask, una cuenta de Alchemy y hemos escrito nuestro contrato inteligente, es hora de conectarlos a los tres.
 
@@ -244,7 +244,7 @@ Para conectarlos a nuestro código, haremos referencia a estas variables en nues
 ¡No exponga su <code>.env</code>! Asegúrese de que nunca comparte ni expone su archivo <code>.env</code> con nadie, ya que ello conlleva revelar sus secretos. Si está haciendo un control de la versión, añada <code>.env</code> a un archivo <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 
-## Paso 12: Instalar Ethers.js \{#install-ethers}
+## Paso 12: Instalar Ethers.js {#install-ethers}
 
 Ethers.js es una biblioteca que hace más fácil interactuar y hacer solicitudes a Ethereum combinando [métodos JSON-RPC estándar](/developers/docs/apis/json-rpc/) con métodos más amigables para el usuario.
 
@@ -256,7 +256,7 @@ En el directorio de su proyecto teclee:
 
 También necesitaremos ethers en nuestro hardhat.config.js en el siguiente paso.
 
-## Paso 13: Actualizar hardhat.config.js \{#update-hardhat-config}
+## Paso 13: Actualizar hardhat.config.js {#update-hardhat-config}
 
 Hasta el momento, hemos añadido varias dependencias y plugins, ahora necesitamos actualizar hardhat.config.js para que nuestro proyecto los reconozca.
 
@@ -280,7 +280,7 @@ Actualice su hardhat.config.js para que se vea así:
        },
     }
 
-## Paso 14: Compilar nuestro contrato \{#compile-contract}
+## Paso 14: Compilar nuestro contrato {#compile-contract}
 
 Para asegurarnos de que todo funciona hasta ahora, compilemos nuestro contrato. La tarea de compilación es una de las tareas de hardhat incorporadas.
 
@@ -290,7 +290,7 @@ Desde la línea de comandos ejecute:
 
 Puede que reciba una advertencia sobre el identificador de licencia SPDX no proporcionado en el archivo fuente, pero no se preocupe si la recibe, ¡esperemos que todo lo demás esté correcto! Si no, siempre puede enviar un mensaje en el [discord de Alchemy](https://discord.gg/u72VCg3).
 
-## Paso 15: Escribir nuestro script de despliegue \{#write-deploy}
+## Paso 15: Escribir nuestro script de despliegue {#write-deploy}
 
 Ahora que nuestro contrato está escrito y nuestro archivo de configuración está listo, es hora de escribir nuestro script de despliegue del contrato.
 
@@ -324,7 +324,7 @@ Un ContractFactory en ethers.js es una abstracción utilizada para implementar n
 
 Ejecutar un despliegue() en un ContractFactory iniciará el despliegue y devolverá una Promesa que se resuelva a un Contrato. Este es el elemento que tiene un método para cada una de nuestras funciones de contrato inteligente.
 
-## Paso 16: Desplegar nuestro contrato \{#deploy-contract}
+## Paso 16: Desplegar nuestro contrato {#deploy-contract}
 
 ¡Ahora ya estamos listos para desplegar nuestro contrato inteligente! Navegue de nuevo a la raíz del directorio de su proyecto, y en la linea de comando ejecute:
 

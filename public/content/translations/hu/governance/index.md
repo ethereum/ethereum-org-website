@@ -5,7 +5,7 @@ lang: hu
 postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
-# Bevezetés az Ethereum irányításába \{#introduction}
+# Bevezetés az Ethereum irányításába {#introduction}
 
 _Ha senki sem birtokolja az Ethereumot, akkor a döntéseket hogyan hozzák meg az Ethereum kapcsán? Az Ethereum irányítása (governance) egy olyan folyamat, mely lehetővé teszi a döntések meghozatalát._
 
@@ -13,19 +13,19 @@ _Ha senki sem birtokolja az Ethereumot, akkor a döntéseket hogyan hozzák meg 
 <Divider />
 }
 
-## Mi az az irányítás (governance)? \{#what-is-governance}
+## Mi az az irányítás (governance)? {#what-is-governance}
 
 Az irányítás az a rendszer, amely lehetővé teszi a döntéshozást. Egy tipikus szervezeti struktúrában a végrehajtó csapat vagy az igazgatótanács szava az utolsó a döntéshozásban. Vagy talán a részvényesek szavaznak a javaslatokra, hogy változást indítsanak el. A politikai rendszerben a választott hivatalnokok olyan törvényt hoznak, ami a választóik javát szolgálja.
 
-## Decentralizált irányítás \{#decentralized-governance}
+## Decentralizált irányítás {#decentralized-governance}
 
 Az Ethereum protokollt nem birtokolja vagy kontrollálja senki, ugyanakkor a változásokról dönteni kell, hogy a hálózat hosszú életét és prosperitását a leginkább biztosítsák. A tulajdonlás hiánya miatt a hagyományos szervezeti irányítás nem működő megoldás.
 
-## Ethereum-felügyelet \{#ethereum-governance}
+## Ethereum-felügyelet {#ethereum-governance}
 
 Az Ethereum irányítása (governance) az a folyamat, amely által a protokoll megváltoztatható. Fontos kiemelni, hogy ez nem kapcsolódik ahhoz, hogy az emberek és az alkalmazások hogyan használják a protokollt, mert az Ethereum egy engedélymentes hálózat. A világon bárki bárhonnan részt vehet a láncon zajló tevékenységekben. Nincsenek olyan szabályok, hogy ki csinálhat vagy nem csinálhat alkalmazást vagy indíthat tranzakciókat. Ugyanakkor van egy folyamat, mellyel változásokat lehet kezdeményezni a protokollban, amelyre a decentralizált alkalmazások épülnek. Mivel sok ember függ az Ethereum stabilitásától, ezért a kulcsváltozások koordinációs küszöbe nagyon magas, beleértve a közösségi és technikai folyamatokét is, hogy az Ethereum módosítása biztonságos és a közösség által széles körben támogatott legyen.
 
-### A láncon belüli és kívüli irányítás összehasonlítása \{#on-chain-vs-off-chain}
+### A láncon belüli és kívüli irányítás összehasonlítása {#on-chain-vs-off-chain}
 
 A blokklánc-technológiával új irányítási képességek jelentek meg, mint amilyen a láncon belüli irányítás is. A láncon belüli irányítás az, amikor a javasolt protokollváltoztatásokat az érdekeltek megszavazzák, általában egy irányítási token birtokában, a szavazás pedig a láncon zajlik. A láncon belüli irányítás néhány esetében a javasolt változások már bele vannak írva a kódba és automatikusan végrehajtásra kerülnek, ha az érdekeltek jóváhagyják azt, aláírva a tranzakciót.
 
@@ -43,7 +43,7 @@ _Miközben a protokollszintű Ethereum-irányítás láncon kívül zajlik, addi
 <Divider />
 }
 
-## Ki vesz részt ebben? \{#who-is-involved}
+## Ki vesz részt ebben? {#who-is-involved}
 
 Az [Ethereum-közösségben](/community/) számos érdekelt fél van, akik szerepet játszanak az irányítási folyamatban. A protokolltól távolabb lévőktől kezdve így néz ki az érdekeltek köre:
 
@@ -61,7 +61,7 @@ _Megjegyzés: bárki lehet több csoport tagja is (pl. a protokollfejlesztő leh
 <Divider />
 }
 
-## Mi az az Ethereum fejlesztési javaslat (EIP)? \{#what-is-an-eip}
+## Mi az az Ethereum fejlesztési javaslat (EIP)? {#what-is-an-eip}
 
 Az egyik fontos Ethereum-irányítási eszköz az **Ethereum fejlesztési javaslatok (EIP)** kezelése. Az EIP olyan szabvány, amely egy lehetséges új funkciót vagy folyamatot specifikál az Ethereum számára. Az Ethereum-közösség bármelyik tagja létrehozhat EIP-t. Ha Önt érdekli az EIP írása, értékelése vagy irányítása, akkor:
 
@@ -73,7 +73,7 @@ Az egyik fontos Ethereum-irányítási eszköz az **Ethereum fejlesztési javasl
 <Divider />
 }
 
-## A hivatalos folyamat \{#formal-process}
+## A hivatalos folyamat {#formal-process}
 
 Az Ethereum-protokollt érintő változásokat a következő módon lehet kezdeményezni:
 
@@ -95,17 +95,17 @@ Az Ethereum-protokollt érintő változásokat a következő módon lehet kezdem
 
 Ez az egyszerűsített folyamat betekintést ad a protokollváltoztatások főbb állomásaiba. Most nézzük meg az informális tényezőket, melyek mindezt befolyásolják.
 
-## Az informális folyamat \{#informal-process}
+## Az informális folyamat {#informal-process}
 
-### A korábbi munkák megértése \{#prior-work}
+### A korábbi munkák megértése {#prior-work}
 
 Az EIP-bajnokoknak ismerni kell a korábbi munkákat és javaslatokat, mielőtt egy újat készítenek, hogy azt komolyan megfontolják egy Ethereum-fejlesztéseként. Így az EIP javaslat újdonságot hozhat, nem pedig egy korábban már elutasított dolgot. Három fő helyen kell átnézni az anyagokat: [EIP-könyvtár](https://github.com/ethereum/EIPs), [Ethereum Magicians](https://ethereum-magicians.org/) és [ethresear.ch](https://ethresear.ch/).
 
-### Munkacsoportok \{#working-groups}
+### Munkacsoportok {#working-groups}
 
 Az EIP kezdeti javaslata változtatások nélkül nem valószínű, hogy végigmegy a bevezetésig. Általában az EIP-bajnokok a protokollfejlesztők egy kis csoportjával dolgoznak együtt, hogy specifikálják, létrehozzák, teszteljék és véglegesítsék a javaslatot. Korábban ezek a munkacsoportok számos hónapot (néha éveket) dolgoztak a javaslatokon. Az EIP-bajnokok emellett be kell vonják a releváns alkalmazás- vagy eszközfejlesztőket, hogy a felhasználóktól is tudjanak visszajelzést kapni, illetve csökkentsék a megvalósítás kockázatát.
 
-### Közösségi konszenzus \{#community-consensus}
+### Közösségi konszenzus {#community-consensus}
 
 Miközben néhány EIP egyértelmű technikai fejlesztés, addig mások komplexek és olyan kompromisszumokat kívánnak meg, melyek a különféle érdekeltek másképpen érintik. Tehát néhány javaslat több vitát vált ki.
 
@@ -119,13 +119,13 @@ Az Ethereum-hálózat biztonságán túl rendkívül fontos az, hogy miként vé
 <Divider />
 }
 
-## A nézeteltérések kezelése \{#disagreements}
+## A nézeteltérések kezelése {#disagreements}
 
 Mivel ennyiféle érdekelt van különböző motivációkkal és hitekkel, ezért a nézeteltérés nem ritka.
 
 Általában a nézeteltéréseket hosszú egyeztetéseken kezelik nyilvános fórumokon, hogy a probléma gyökerét megtalálják és azt mindenki meg tudja fontolni. Általában az egyik fél engedményt tesz vagy egy örömteli középutat találnak. Ha az egyik csoport egy adott változást áterőltet a rendszeren, akkor a lánc kettéválhat. Amikor az érdekeltek egy része kifogásol egy változást, így a protokollnak egy eltérő, nem kompatibilis verziói működnek, melyekből két blokklánc emelkedik ki.
 
-### A DAO elágazás \{#dao-fork}
+### A DAO elágazás {#dao-fork}
 
 Az elágazások akkor jönnek létre, amikor komoly technikai változások történnek a hálózaton és megváltoztatják a protokoll szabályait. Az [Ethereum-klienseknek](/developers/docs/nodes-and-clients/) frissíteni kell a szoftverjét, hogy az új elágazási szabályokat életbe léptessék.
 
@@ -153,7 +153,7 @@ Bővebben a DAO-támadásról:
 <Divider />
 }
 
-### Az elágazás hasznossága \{#forking-utility}
+### Az elágazás hasznossága {#forking-utility}
 
 Az Ethereum/Ethereum Classic elágazás egy kiváló példája az egészséges elágazásnak. A két csoport elég nagy mértékben nem értett egyet egymással az alapvető értékek tekintetében, hogy megérte a kockázatot, hogy a saját útjukat kövessék.
 
@@ -163,7 +163,7 @@ Az elágazás lehetősége a jelentős politikai, filozófiai vagy gazdasági k�
 <Divider />
 }
 
-## Beacon-lánc irányítása \{#beacon-chain}
+## Beacon-lánc irányítása {#beacon-chain}
 
 Az Ethereum-irányítási folyamat gyakran a gyorsaság és a hatékonyság rovására a nyitottságot és a bevonódást hangsúlyozza. A Beacon-lánc fejlesztésének meggyorsítása érdekében ezt a proof-of-work Ethereum-hálózattól külön hozták létre, és a maga irányítási gyakorlatát követte.
 
@@ -179,7 +179,7 @@ Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szept
 <Divider />
 }
 
-## Hogyan lehet ebben részt venni? \{#get-involved}
+## Hogyan lehet ebben részt venni? {#get-involved}
 
 - [Javasoljon egy EIP-t](/eips/#participate)
 - [Vitassa meg a jelenlegi javaslatokat](https://ethereum-magicians.org/)
@@ -189,7 +189,7 @@ Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szept
 - [Vegyen részt a kliensfejlesztésekben](/developers/docs/nodes-and-clients/#execution-clients)
 - [Protokollfejlesztő gyakornoki program](https://blog.ethereum.org/2021/09/06/core-dev-apprenticeship-second-cohort/)
 
-## További olvasnivaló \{#further-reading}
+## További olvasnivaló {#further-reading}
 
 Az Ethereumban az irányítás nincs szigorúan definiálva. A közösség különféle tagjainak eltérő perspektívái vannak ezzel kapcsolatban. Néhány ezek közül:
 

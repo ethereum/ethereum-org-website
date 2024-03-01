@@ -12,7 +12,7 @@ summaryPoint2: NFTs dey give more pawa to kontent kreators pass any taim bifor.
 summaryPoint3: Na smart contracts on top of Ethereum blockchain dey give di pawa.
 ---
 
-## What are NFTs? \{#what-are-nfts}
+## What are NFTs? {#what-are-nfts}
 
 NFTs na tokens wey ish dey unik on im own. Ish NFT get im own difren propatis (non-fungibol) and e dey very skarse. E dey difren from tokens such as ERC-20s wey be say evry token wey dey one set dey look di same den kom folow get di same propatis ('fungibol'). Yu nor dey kare for wich partikular dollar bill yu get for yor wallet, bikos dem bi di same tin and dem get di same worth. Anyhow e bi, yu*dey* kare for wich spesifik NFT yu get, bikos dem bi pesina propatis wey make dem fit stand out from odas (''non-fungibol).
 
@@ -22,13 +22,13 @@ Di unikness wey ish NFT karry dey enabol make dem fit get yus token do tins like
 <YouTube id="Xdkkux6OxfM" />
 }
 
-## Intanet wit difren assets \{#internet-of-assets}
+## Intanet wit difren assets {#internet-of-assets}
 
 NFTs and Ethereum dey solve some palava wey dey di intanet today. As evrytin dey turn digital di more, e dey impotant to replikate di propatis of fisika items like skarsity, unikness, and pruf of ownaship. for way wey one sentral organizashon nor fit kontrol. For eksampol, wit NFTs, yu fit own muzik mp3 wey nor dey spesifik to one kompany's spesifik muzik app, abi yu fit own soshial media handol wey yu fit sell abi swap, but nor fit dey komot from yu by platform provida.
 
 Si as intanet of NFTs dey compia to di intanet wey plenti of us dey yus today...
 
-### One kain komparison \{#nft-comparison}
+### One kain komparison {#nft-comparison}
 
 | One NFT intanet                                                                                                 | Di intanet tuday                                                                                                                                                                     |
 | --------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
@@ -39,13 +39,13 @@ Si as intanet of NFTs dey compia to di intanet wey plenti of us dey yus today...
 | Kontent kreators fit sell dem work anywia and dem fit enta one global market.                                   | Kreators dey dipend on di infrastructure and distribushon wey di platfoms wey dem yus provide for dem. Dis platfoms dey always subjet to terms of yus and geographical restricshons. |
 | NFT kreators fit retain ownaship rite ova dem own work, and program royaltis directly into di NFT contract.     | Platforms, like muzik streaming savis, dey kip di majority of profits from sales wey dem make.                                                                                       |
 
-## Hau NFTs dey work? \{#how-nfts-work}
+## Hau NFTs dey work? {#how-nfts-work}
 
 Like any token issue on Ethereum, NFTs dey issue by smart contract. Di smart contract dey folow one of several NFT standads (normally ERC-721 abi ERC-1155) wey define di funshon wey di contract get. Di contract fit make ('mint') NFTs and give dem to one spesifik owna. Ownaship dey define for di contract by mappin spesifik NFTs to spesifik address. Di NFT get one ID and metadata normally wey join wit am, and dis one make Di spesifik token dey konfam.
 
 Wen pesin kreate abi mint one NFT, e mean say dem dey do one funshon inside di smart contract wey go assign one spesifik NFT to dia address. Dis informashon dey store inside di contract's storaj, wey bi part of di blockchain. Di pesin wey kreate di contract fit add extra logik for di contract, for eksampol dem fit limit di total supply abi define royalty wey dem go pay di kreator anytaim pesin dey transfa di token.
 
-## Wetin NFT dey for? \{#nft-use-cases}
+## Wetin NFT dey for? {#nft-use-cases}
 
 Dem fit yus NFTs for plenti tins like:
 
@@ -76,7 +76,7 @@ Dis website folow get alternative domain name powered by NFTs, **ethereum.eth**.
 <Divider />
 }
 
-### NFT sekurity \{#nft-security}
+### NFT sekurity {#nft-security}
 
 Ethereum's Sikurity dey kome from Proof-of-stake. Di system dey design to ekonomikally komot bad akshon, e dey make Ethereum tamper-proof. Dis na wetin wey dey make NFTs possibol. Wons di block wey dey kontain yor NFT transakshon don finalize e go kost attacka millions of ETH to shange am. Anyone wey dey run Ethereum software immediately fit sabi dishonest tamperin wey dey wit one NFT, and dis bad pesin go ekonomikally dey penalize and eject.
 
@@ -86,7 +86,7 @@ Sikurity issues wey rilate to NFTs dey often rilate to phishin skams, vulnerabil
   More on sikurity
 </ButtonLink>
 
-## Further reading \{#further-reading}
+## Further reading {#further-reading}
 
 - [One biginna guide to NFTs](https://linda.mirror.xyz/df649d61efb92c910464a4e74ae213c4cab150b9cbcc4b7fb6090fc77881a95d) - _Linda Xiet, January 2020_
 - [EtherscanNFT tracker](https://etherscan.io/nft-top-contracts)

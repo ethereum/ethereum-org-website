@@ -12,7 +12,7 @@ summaryPoint2: Uma tentativa de aproveitar o Ethereum para resolver crises de co
 summaryPoint3: Uma ferramenta para aumentar drasticamente a escala dos ativos de benefícios ecológicos, como créditos de carbono verificados
 ---
 
-## O que é DeFi? \{#what-is-refi}
+## O que é DeFi? {#what-is-refi}
 
 **Finanças regenerativas (ReFi)** é um conjunto de ferramentas e ideias construidas sobre "blockchains", cujo objetivo é criar economias que são regenerativas, em vez de economias extrativas ou exploradoras. Eventualmente, sistemas extrativos esgotam os recursos e entram colapso, sem mecanismos regenerativos, não são sustentáveis. ReFi operam sob o pressuposto de que a criação de valor monetário deve ser desassociada da extração insustentável de recursos do nosso planeta e comunidades.
 
@@ -26,7 +26,7 @@ ReFi espera aplicar estes princípios usando [contratos inteligentes](/developer
 
 ReFi também se intersecta com o movimento de [ciência descentralizada (DeSci)](/desci/), que usa Ethereum como plataforma para financiar, criar, armazenar e divulgar conhecimento cientifico. Ferramentas DeSci podem eventualmente ser úteis para desenvolver normas e práticas verificáveis para implementar e monitorizar atividades regenerativas como, plantação de árvores, remoção de plástico do oceano ou o restauro de uma ecossistema degradado.
 
-## "Tokenization" de créditos de carbono \{#tokenization-of-carbon-credits}
+## "Tokenization" de créditos de carbono {#tokenization-of-carbon-credits}
 
 O **[ mercado voluntário de carbono (MVC)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** é um mecanismo para financiar projetos que têm um impacto positivo verificado nas emissões de carbono, seja reduzindo a quantidade atual de emissões, ou removendo gases responsáveis pelo efeito estufa da atmosfera. Estes projetos recebem um ativo chamado "crédito de carbono" após serem verificados, que podem vender a individuos e organizações que querem apoiar ações contra as alterações climáticas.
 
@@ -50,7 +50,7 @@ Projetos ReFi utilizam a tecnologia “blockchain” para aliviar muitos dos pro
 - **A atividade comercial ocorre sem intermediários**, que praticam taxas elevadas. Os créditos de carbono digitais representam uma [melhoria de 62% nos custos em comparação com os créditos tradicionais equivalentes](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne), de acordo com dados de uma empresa de análise.
 - **O DCM é expansível** e pode satisfazer as exigências tanto de particulares como de empresas multinacionais.
 
-### Componentes-chave do DCM \{#key-components-dcm}
+### Componentes-chave do DCM {#key-components-dcm}
 
 Quatro componentes principais constituem o panorama atual do DCM:
 
@@ -65,7 +65,7 @@ Alguns como [Klima Infinity](https://www.klimadao.finance/infinity) e [Senken](h
 
 4. As vias e infra-estruturas subjacentes que facilitam o aumento do impacto e da eficiência de toda a cadeia de abastecimento do mercado do carbono. A [KlimaDAO](http://klimadao.finance/) fornece liquidez como um bem público (permitindo a qualquer um comprar ou vender créditos de carbono a um preço transparente), incentiva o aumento do rendimento dos mercados de carbono e as retiradas com recompensas, e fornece ferramentas interoperáveis de fácil utilização para aceder a dados sobre, bem como adquirir e retirar, uma grande variedade de créditos de carbono tokenizados.
 
-## A ReFi para além dos mercados de carbono \{#refi-beyond}
+## A ReFi para além dos mercados de carbono {#refi-beyond}
 
 Embora atualmente se dê uma grande ênfase aos mercados de carbono em geral e à transição do VCM para o DCM em particular, o termo "ReFi" não se limita estritamente ao carbono. Outros ativos ambientais, para além dos créditos de carbono, podem ser desenvolvidos e tokenizados, o que significa que outras externalidades negativas também podem ser precificadas nas camadas de base dos futuros sistemas económicos. Além disso, o aspeto regenerativo deste modelo económico pode ser aplicado a outras áreas, como o financiamento de bens públicos através de plataformas de financiamento quadráticas como [Gitcoin](https://gitcoin.co/). As organizações que se baseiam na ideia de participação aberta e distribuição equitativa de recursos permitem que todos canalizem dinheiro para projetos de software de código aberto, bem como para projetos educativos, ambientais e comunitários.
 

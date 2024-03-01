@@ -9,7 +9,7 @@ template: roadmap
 
 L'utilisation d'Ethereum doit être simplifiée, de la gestion des clés et des portefeuilles à la réalisation des transactions. Pour faciliter l'adoption de masse, Ethereum doit considérablement augmenter la facilité d'utilisation, permettant aux utilisateurs de profiter d'un accès sans autorisation et résistant à la censure à Ethereum avec l'expérience sans friction de l'utilisation des applications Web2.
 
-## En finir avec les phrases de récupération \{#no-more-seed-phrases}
+## En finir avec les phrases de récupération {#no-more-seed-phrases}
 
 Les comptes sur Ethereum sont protégés par une paire de clés utilisées pour identifier ces comptes (clé publique) et signer les messages (clé privée). Une clé privée est comme un mot de passe principal ; elle permet un accès total à un compte Ethereum. Il s'agit d'une manière différente de fonctionner pour les personnes plus familières avec les banques et les applications Web2 qui gèrent les comptes au nom de l'utilisateur. Pour qu'Ethereum atteigne une l'adoption de masse sans dépendre de tiers centralisés, il doit exister un moyen simple et sans complication pour qu'un utilisateur prenne en charge ses actifs et garde le contrôle de ses données sans avoir à comprendre la cryptographie à clé publique/privée et la gestion de ces clés.
 
@@ -31,7 +31,7 @@ Plusieurs mises à jour faciliteront l'exécution des nœuds et réduiront consi
 
 Avec ces mises à jour, les freins à l'exécution d'un nœud sont réduites à pratiquement rien. Les utilisateurs bénéficieront d'un accès sécurisé et sans demande d'autorisation à Ethereum sans avoir à sacrifier du stockage ou de la puissance de calcul CPU sur leur ordinateur ou leur téléphone portable, et ils n'auront pas à dépendre de tiers pour les données ou l'accès au réseau lorsqu'ils utilisent des applications.
 
-## Progrès actuels \{#current-progress}
+## Progrès actuels {#current-progress}
 
 Des portefeuilles de contrats intelligents sont déjà disponibles, mais d'autres améliorations sont nécessaires pour les rendre aussi décentralisés et sans autorisation que possible. L'EIP-4337 est une proposition finalisée qui ne nécessite aucune modification du protocole d'Ethereum. Le principal contrat intelligent pour l'EIP-4337 a été déployé en mars 2023.
 

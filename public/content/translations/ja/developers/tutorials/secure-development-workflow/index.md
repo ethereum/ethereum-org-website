@@ -13,7 +13,7 @@ source: セキュアなコントラクトの開発
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
 
-## スマートコントラクトの開発チェックリスト \{#smart-contract-development-checklist}
+## スマートコントラクトの開発チェックリスト {#smart-contract-development-checklist}
 
 スマートコントラクトを作成する際には、以下に挙げる大まかなプロセスに従って行うことをお勧めします。
 
@@ -49,7 +49,7 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/devel
 - 秘匿化された操作
 - 外部 DeFi コンポーネントとの危険なやりとり
 
-## ヘルプを求めましょう \{#ask-for-help}
+## ヘルプを求めましょう {#ask-for-help}
 
 毎週火曜日の午後に、[イーサリアム・オフィス・アワー](https://calendly.com/dan-trailofbits/ethereum-office-hours)が開かれています。 この 1 対 1 の 1 時間のセッションで、セキュリティに関する質問をしたり、ツールを使ってトラブルシューティングをしたり、現在のアプローチについて専門家からフィードバックを得ることができます。 私たちが、このガイドに基づいてサポートします。
 

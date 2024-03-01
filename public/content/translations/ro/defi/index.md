@@ -14,7 +14,7 @@ summaryPoint3: Pe baza tehnologiei open-source cu care poate programa oricine.
 
 DeFi este un sistem financiar deschis și mondial conceput pentru era internetului – o alternativă la un sistem opac, controlat îndeaproape și menținut în funcțiune prin infrastructuri și procese vechi de zeci de ani. Acesta vă oferă controlul și vizibilitatea asupra banilor dvs. Vă oferă vizibilitate pe piețele mondiale și alternative la moneda dvs. locală sau la opțiunile bancare. Produsele DeFi dau acces la servicii financiare oricui are o conexiune la internet și sunt în mare parte deținute și întreținute de utilizatorii lor. Cripto în valoare de zeci de miliarde de dolari a circulat prin aplicațiile DeFi până acum și această sumă crește pe zi ce trece.
 
-## Ce este DeFi? \{#what-is-defi}
+## Ce este DeFi? {#what-is-defi}
 
 DeFi este un termen colectiv pentru produsele și serviciile financiare care sunt accesibile oricui poate utiliza Ethereum – oricui are o conexiune la internet. Cu DeFi, piețele sunt întotdeauna deschise și nu există autorități centralizate care să vă blocheze plățile sau să vă interzică accesul la ceva. Serviciile care înainte erau lente și riscau să fie afectate de erori umane sunt automate și mai sigure acum, când sunt gestionate de coduri pe care oricine le poate inspecta și verifica.
 
@@ -22,7 +22,7 @@ Există o economie cripto în plină expansiune, în care puteți să dați cu �
 
 <YouTube id="H-O3r2YMWJ4" />
 
-## DeFi în comparație cu finanțele tradiționale \{#defi-vs-tradfi}
+## DeFi în comparație cu finanțele tradiționale {#defi-vs-tradfi}
 
 Unul dintre cele mai bune moduri de a ne da seama de potențialul DeFi este prin înțelegerea problemelor actuale.
 
@@ -35,7 +35,7 @@ Unul dintre cele mai bune moduri de a ne da seama de potențialul DeFi este prin
 - Transferurile de bani pot dura zile întregi datorită unor procese umane interne.
 - Serviciile financiare vă costă în plus, pentru că instituțiile intermediare își cer partea lor.
 
-### O comparație \{#defi-comparison}
+### O comparație {#defi-comparison}
 
 | DeFi                                                                                                                                 | Finanțele tradiționale                                                                                                                                            |
 | ------------------------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -51,7 +51,7 @@ Unul dintre cele mai bune moduri de a ne da seama de potențialul DeFi este prin
   Explorați aplicațiile DeFi
 </ButtonLink>
 
-## A început cu Bitcoin... \{#bitcoin}
+## A început cu Bitcoin... {#bitcoin}
 
 Bitcoin a fost, în multe privințe, prima aplicație DeFi. Bitcoin vă permite să dețineți și să controlați valori cu adevărat și să le trimiteți în întreaga lume. Face aceasta oferind o cale prin care un număr mare de oameni care nu au încredere între ei să se pună de acord asupra unui registru de conturi fără a fi nevoie de un intermediar de încredere. Bitcoin este deschis oricui și nimeni nu are autoritatea de a-i schimba regulile. Regulile Bitcoin, cum ar fi raritatea și deschiderea sa, sunt înscrise în tehnologie. Nu este ca finanțele tradiționale, în care guvernele pot tipări bani care vă devalorizează economiile şi companiile pot închide piețele.
 
@@ -59,7 +59,7 @@ Ethereum construieşte pe aceste baze. La fel ca în cazul Bitcoin, regulile nu 
 
 <YouTube id="qFBYB4W2tqU" />
 
-## Bani programabili \{#programmable-money}
+## Bani programabili {#programmable-money}
 
 Asta sună ciudat... „De ce aș vrea să-mi programez banii”? Cu toate acestea, este mai degrabă o funcţionalitate implicită a tokenurilor de pe Ethereum. Oricine poate programa logica în plăți. Așa că puteți obține controlul și securitatea Bitcoin îmbinate cu serviciile oferite de instituțiile financiare. Aceasta vă permite să faceți cu criptomonedele lucruri pe care nu le puteți face cu Bitcoin, cum ar fi a lua şi a da cu împrumut, a planifica plăţile, a investi în fonduri de indexare și multe altele.
 
@@ -70,7 +70,7 @@ Asta sună ciudat... „De ce aș vrea să-mi programez banii”? Cu toate acest
   </ButtonLink>
 </InfoBanner>
 
-## Ce puteți face cu DeFi? \{#defi-use-cases}
+## Ce puteți face cu DeFi? {#defi-use-cases}
 
 Există o alternativă descentralizată la majoritatea serviciilor financiare. Dar Ethereum oferă de asemenea oportunități pentru crearea de produse financiare complet noi. Aceasta este o listă în permanentă creștere.
 
@@ -88,7 +88,7 @@ Există o alternativă descentralizată la majoritatea serviciilor financiare. D
 
 <Divider />
 
-### Trimiteți rapid bani în întreaga lume \{#send-money}
+### Trimiteți rapid bani în întreaga lume {#send-money}
 
 Ca blockchain, Ethereum este destinat tranzacțiilor în mod securizat și la nivel mondial. Ca și Bitcoin, Ethereum trimite bani în întreaga lume tot atât de ușor cum s-ar trimite un e-mail. Introduceți [numele ENS](/nft/#nft-Domains) al destinatarului (precum bob.eth) sau adresa contului acestuia din portofel și plata va fi efectuată direct către acesta în câteva minute (de obicei). Pentru a trimite sau a primi plăți, aveți nevoie de un [portofel](/wallets/).
 
@@ -96,7 +96,7 @@ Ca blockchain, Ethereum este destinat tranzacțiilor în mod securizat și la ni
   Vedeți aplicațiile dapp de plată
 </ButtonLink>
 
-#### Trimiteți bani în flux în întreaga lume... \{#stream-money}
+#### Trimiteți bani în flux în întreaga lume... {#stream-money}
 
 Puteți să trimiteți bani în flux și prin Ethereum. Acest lucru vă permite să plătiți cuiva salariul la secundă, oferindu-i acestuia acces la bani oricând are nevoie de ei. Sau să închiriați ceva la secundă, cum ar fi un spațiu de depozitare sau un scuter electric.
 
@@ -104,7 +104,7 @@ Puteți să trimiteți bani în flux și prin Ethereum. Acest lucru vă permite 
 
 <Divider />
 
-### Accesați monedele stabile \{#stablecoins}
+### Accesați monedele stabile {#stablecoins}
 
 Volatilitatea criptomonedelor reprezintă o problemă pentru o mulțime de produse financiare și pentru cheltuielile generale. Comunitatea DeFi a rezolvat această problemă cu ajutorul stablecoin-urilor. Valoarea lor rămâne legată de un alt activ, de obicei o monedă populară, cum ar fi dolarul.
 
@@ -116,7 +116,7 @@ Monede precum Dai sau USDC au o valoare care se menține la câțiva cenți de u
 
 <Divider />
 
-### Împrumuturile \{#lending}
+### Împrumuturile {#lending}
 
 Împrumuturile de la furnizorii descentralizați se prezintă în două varietăți principale.
 
@@ -129,7 +129,7 @@ Monede precum Dai sau USDC au o valoare care se menține la câțiva cenți de u
 
 Există multe avantaje la utilizarea unui creditor descentralizat...
 
-#### Împrumut în condiții de confidențialitate \{#borrowing-privacy}
+#### Împrumut în condiții de confidențialitate {#borrowing-privacy}
 
 În prezent, creditarea de bani și luarea cu împrumut a acestora se petrece între persoanele implicate. Băncile trebuie să știe care este probabilitatea să rambursați un împrumut înainte de a-l acorda.
 
@@ -137,15 +137,15 @@ Există multe avantaje la utilizarea unui creditor descentralizat...
 
 Acest lucru vă permite să împrumutați bani fără verificări de credit sau comunicarea de informații private.
 
-#### Acces la fonduri mondiale \{#access-global-funds}
+#### Acces la fonduri mondiale {#access-global-funds}
 
 Când folosiți un creditor descentralizat, aveți acces la fonduri depuse din întreaga lume, nu doar la fondurile aflate în custodia băncii sau instituției pe care o alegeți. Acest lucru face împrumuturile mai accesibile și îmbunătățește ratele dobânzilor.
 
-#### Eficiențe fiscale \{#tax-efficiencies}
+#### Eficiențe fiscale {#tax-efficiencies}
 
 Împrumuturile vă pot oferi acces la fondurile de care aveți nevoie fără a fi nevoie să vă vindeți ETH-ul (un eveniment impozabil). În schimb, puteți să folosiți ETH ca garanție pentru un împrumut în stablecoin. Acest lucru vă oferă fluxul de numerar de care aveți nevoie și vă permite să vă păstraţi ETH-ul. Stablecoin-urile sunt tokenuri mult mai adecvate atunci când aveți nevoie de numerar, deoarece nu fluctuează ca valoare precum ETH-ul. [Mai multe despre stablecoin-uri](#stablecoins)
 
-#### Împrumuturi flash \{#flash-loans}
+#### Împrumuturi flash {#flash-loans}
 
 Împrumuturile flash sunt o formă mai experimentală de împrumut descentralizat care vă permit să luaţi cu împrumut fără să oferiți garanții sau să furnizați informații personale.
 
@@ -172,9 +172,9 @@ Pentru a putea realiza cele din exemplul de mai sus în lumea financiară tradi�
 
 <Divider />
 
-### Începeți să economisiți cu cripto \{#saving}
+### Începeți să economisiți cu cripto {#saving}
 
-#### Creditarea \{#lending}
+#### Creditarea {#lending}
 
 Puteți să câștigați dobândă creditând cripto și să vedeți cum vă cresc fondurile în timp real. În acest moment, ratele dobânzilor sunt mult mai mari decât cele pe care le-ați putea obține la banca dvs. locală (dacă aveți norocul să puteți accesa vreuna). Iată un exemplu:
 
@@ -187,7 +187,7 @@ Puteți să câștigați dobândă creditând cripto și să vedeți cum vă cre
   Vedeți dapp-uri de creditare
 </ButtonLink>
 
-#### Loterii fără pierderi \{#no-loss-lotteries}
+#### Loterii fără pierderi {#no-loss-lotteries}
 
 Loteriile fără pierdere, precum PoolTogether, sunt un nou mod distractiv și inovator de a economisi bani.
 
@@ -205,7 +205,7 @@ Fondul de premii este generat de toate dobânzile generate de creditarea biletel
 
 <Divider />
 
-### Schimbați tokenuri \{#swaps}
+### Schimbați tokenuri {#swaps}
 
 Există mii de tokenuri pe Ethereum. Schimburile descentralizate (DEX) vă permit să tranzacționați tokenuri diferite oricând doriți. Nu renunțați niciodată la controlul activelor dvs. Acest lucru este ca și cum ați folosi un schimb valutar atunci când vizitați o altă țară. Dar versiunea DeFi nu se închide niciodată. Piețele sunt deschise 24/7, 365 de zile pe an, iar tehnologia garantează că va exista întotdeauna cineva care să accepte o tranzacție.
 
@@ -217,7 +217,7 @@ De exemplu, dacă doriți să folosiți loteria fără pierderi PoolTogether (de
 
 <Divider />
 
-### Tranzacționare avansată \{#trading}
+### Tranzacționare avansată {#trading}
 
 Există opțiuni mai avansate pentru cei ce doresc să tranzacționeze deținând ceva mai mult control. Ordinele cu limită, perpetue, tranzacționarea în marjă și multe altele sunt toate posibile. Cu tranzacționarea descentralizată aveți acces la lichidități mondiale, piața nu se închide niciodată și dețineți mereu controlul asupra activelor dvs.
 
@@ -229,7 +229,7 @@ Atunci când folosiți un schimb centralizat, trebuie să vă depuneți activele
 
 <Divider />
 
-### Măriți-vă portofoliul \{#investing}
+### Măriți-vă portofoliul {#investing}
 
 Există produse de gestionare a fondurilor pe Ethereum care vor încerca să vă crească portofoliul utilizând o strategie la alegerea dvs. Acest lucru este automat, deschis tuturor și nu are nevoie de un manager uman care să vă reducă profiturile.
 
@@ -241,7 +241,7 @@ Un bun exemplu este [fondul DeFi Pulse Index (DPI)](https://defipulse.com/blog/d
 
 <Divider />
 
-### Finanțați-vă ideile \{#crowdfunding}
+### Finanțați-vă ideile {#crowdfunding}
 
 Ethereum este o platformă ideală pentru finanțarea participativă:
 
@@ -253,7 +253,7 @@ Ethereum este o platformă ideală pentru finanțarea participativă:
   Vedeți aplicațiile dapp de finanțare participativă
 </ButtonLink>
 
-#### Finanțare cuadratică \{#quadratic-funding}
+#### Finanțare cuadratică {#quadratic-funding}
 
 Ethereum este un software open source și o mare parte din munca de până acum a fost finanțată de comunitate. Aceasta a dus la creșterea unui model nou și interesant de finanțare: finanțarea cuadratică. Acesta are potențialul de a îmbunătăți modul în care finanțăm toate tipurile de bunuri publice în viitor.
 
@@ -270,7 +270,7 @@ Aceasta înseamnă că Proiectul A cu cele 100 de donații de 1 dolar ar putea p
 
 <Divider />
 
-### Asigurările \{#insurance}
+### Asigurările {#insurance}
 
 Asigurările descentralizate urmăresc reducerea costurilor de asigurare, fiind mai rapide și mai transparente. Fiind mai automatizată, acoperirea este mai accesibilă și plățile sunt mult mai rapide. Datele utilizate pentru decizia cu privire la solicitarea dvs. sunt complet transparente.
 
@@ -282,7 +282,7 @@ Produsele Ethereum, ca orice software, pot fi afectate de bug-uri și alte modur
 
 <Divider />
 
-### Agregatorii și managerii de portofoliu \{#aggregators}
+### Agregatorii și managerii de portofoliu {#aggregators}
 
 Având în vedere ceea ce se întâmplă, veți avea nevoie de o modalitate de a ține evidența tuturor investițiilor, împrumuturilor și tranzacțiilor. Există o multitudine de produse care vă permit să vă coordonați întreaga activitate DeFi dintr-un singur loc. Aceasta este splendoarea arhitecturii DeFi deschise. Echipele pot construi interfețe în care nu puteți doar vedea soldurile din toate produsele, ci puteți folosi și funcțiile acestora. Puteți descoperi utilitatea acestui fapt pe măsură ce continuați explorarea DeFi.
 
@@ -292,7 +292,7 @@ Având în vedere ceea ce se întâmplă, veți avea nevoie de o modalitate de a
 
 <Divider />
 
-## Cum funcționează DeFi? \{#how-defi-works}
+## Cum funcționează DeFi? {#how-defi-works}
 
 DeFi utilizează criptomonede și contracte inteligente pentru a furniza servicii care nu au nevoie de intermediari. În lumea financiară de astăzi, instituțiile financiare acționează ca garanți ai tranzacțiilor. Acest lucru oferă acestor instituții o putere imensă, deoarece banii dvs. circulă prin ele. În plus, miliarde de oameni din întreaga lume nici măcar nu pot accesa un cont bancar.
 
@@ -304,7 +304,7 @@ Contractele sunt și publice, putând fi inspectate și auditate de oricine. Ace
 
 Acest lucru înseamnă că trebuie actualmente să avem încredere în membrii cu mai multe abilități tehnice ai comunității Ethereum, care pot citi codul. Comunitatea bazată pe open-source ajută la menținerea dezvoltatorilor sub control, dar această necesitate se va diminua în timp, pe măsură ce contractele inteligente devin mai ușor de citit și sunt elaborate alte modalități pentru a dovedi fiabilitatea codului.
 
-## Ethereum și DeFi \{#ethereum-and-defi}
+## Ethereum și DeFi {#ethereum-and-defi}
 
 Ethereum este fundația perfectă pentru DeFi din mai multe motive:
 
@@ -320,7 +320,7 @@ Puteți să vă imaginați DeFi în niveluri:
 3. Protocoalele – [contracte inteligente](/glossary/#smart-contract) care oferă funcționalitatea, de exemplu un serviciu care permite a da împrumuturi descentralizat de active.
 4. [Aplicațiile](/dapps/) – produsele pe care le folosim pentru a gestiona și a accesa protocoalele.
 
-## Construiţi DeFi \{#build-defi}
+## Construiţi DeFi {#build-defi}
 
 DeFi este o mișcare open-source. Protocoalele și aplicațiile DeFi sunt dtoate eschise pentru ca dvs. să le puteţi inspecta, să puteţi crea fork-uri și inova. Din cauza acestei stive pe niveluri (toate împart același blockchain de bază și aceleași active), protocoalele pot fi combinate şi asortate pentru a debloca oportunități combo unice.
 
@@ -328,24 +328,24 @@ DeFi este o mișcare open-source. Protocoalele și aplicațiile DeFi sunt dtoate
   Mai multe despre construirea de aplicaţii dapp
 </ButtonLink>
 
-## Referințe suplimentare \{#futher-reading}
+## Referințe suplimentare {#futher-reading}
 
-### Date despre DeFi \{#defi-data}
+### Date despre DeFi {#defi-data}
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
 
-### Articole despre DeFi \{#defi-articles}
+### Articole despre DeFi {#defi-articles}
 
 - [Ghidul începătorului pentru DeFi](https://blog.coinbase.com/a-beginners-guide-to-decentralized-finance-defi-574c68ff43c4) – _Sid Coelho-Prabhu, 6 ianuarie 2020_
 
-### Videoclipuri \{#videos}
+### Videoclipuri {#videos}
 
 - [Finematks - educație financiară descentralizată](https://finematics.com/) – _Videoclipuri despre DeFi_
 - [The Defiant](https://www.youtube.com/playlist?list=PLaDcID4s1KronHMKojfjwiHL0DdQEPDcq) - _Bazele DeFi: Tot ce trebuie să știți pentru a porni în acest spațiu uneori derutant._
 - [Whiteboard Crypto](https://youtu.be/17QRFlml4pA) _Ce este DeFi?_
 
-### Comunități \{#communities}
+### Comunități {#communities}
 
 - [Serverul Discord DeFi Llama](https://discord.gg/buPFYXzDDd)
 - [Serverul Discord DeFi Pulse](https://discord.gg/Gx4TCTk)
