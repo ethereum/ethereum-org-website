@@ -84,7 +84,6 @@ const WalletFilterFeature = ({
               <>
                 <Heading
                   as="h3"
-                  color="primary.base"
                   borderBottom={isExpanded ? "1px" : "none"}
                   borderColor="body.light"
                   fontSize="lg"
@@ -104,7 +103,7 @@ const WalletFilterFeature = ({
                     _hover={{ background: "transparent" }}
                   >
                     <Box as="span" flex={1}>
-                      <Text color="text">{filterOption.title}</Text>
+                      <Text>{filterOption.title}</Text>
                     </Box>
                     <AccordionIcon
                       color="primary.base"
@@ -162,12 +161,7 @@ const WalletFilterFeature = ({
                           }
                         >
                           <GridItem>
-                            <LabelIcon
-                              boxSize={7}
-                              mt={0.5}
-                              color="text"
-                              aria-hidden
-                            />
+                            <LabelIcon boxSize={7} mt={0.5} aria-hidden />
                           </GridItem>
                           <GridItem as="span" lineHeight="1.1rem">
                             {item.title}
@@ -190,7 +184,7 @@ const WalletFilterFeature = ({
                           </GridItem>
                           <GridItem
                             as="span"
-                            color="text200"
+                            color="body.medium"
                             fontSize="0.9rem"
                             lineHeight="1.1rem"
                             colStart={2}

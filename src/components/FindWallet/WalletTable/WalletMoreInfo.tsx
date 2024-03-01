@@ -123,7 +123,6 @@ export const WalletMoreInfo = ({
           {/* Links section */}
           <Stack
             as={Text}
-            color="text300"
             fontSize="sm"
             justifyContent="space-between"
             wrap="wrap"
@@ -138,8 +137,7 @@ export const WalletMoreInfo = ({
               as="h4"
               lineHeight={1.4}
               fontSize="md"
-              color="text"
-              fontWeight={500}
+              fontWeight="bold"
               mx="0.2rem"
               my={-3.5}
             >
