@@ -197,40 +197,48 @@ const WalletsPage = () => {
     {
       emoji: ":dollar:",
       title: t("page-wallets-manage-funds"),
-      description: t("page-wallets-manage-funds-desc"),
+      description: (
+        <Translation id="page-wallets:page-wallets-manage-funds-desc" />
+      ),
     },
     {
       emoji: ":frame_with_picture:",
       title: t("page-wallets-your-ethereum-account"),
-      description: t("page-wallets-your-ethereum-account-desc"),
+      description: (
+        <Translation id="page-wallets:page-wallets-your-ethereum-account-desc" />
+      ),
     },
     {
       emoji: ":bust_in_silhouette:",
       title: t("page-wallets-your-login"),
-      description: t("page-wallets-your-login-desc"),
+      description: (
+        <Translation id="page-wallets:page-wallets-your-login-desc" />
+      ),
     },
   ]
 
   const types = [
     {
       emoji: ":cd:",
-      description: t("page-wallets-cd"),
+      description: <Translation id="page-wallets:page-wallets-cd" />,
     },
     {
       emoji: ":mobile_phone:",
-      description: t("page-wallets-mobile"),
+      description: <Translation id="page-wallets:page-wallets-mobile" />,
     },
     {
       emoji: ":globe_with_meridians:",
-      description: t("page-wallets-web-browser"),
+      description: <Translation id="page-wallets:page-wallets-web-browser" />,
     },
     {
       emoji: ":globe_with_meridians:",
-      description: t("page-wallets-web-browser-extension"),
+      description: (
+        <Translation id="page-wallets:page-wallets-web-browser-extension" />
+      ),
     },
     {
       emoji: ":desktop_computer:",
-      description: t("page-wallets-desktop"),
+      description: <Translation id="page-wallets:page-wallets-desktop" />,
     },
   ]
 
@@ -244,11 +252,6 @@ const WalletsPage = () => {
       title: t("page-wallets-keys-to-safety"),
       description: t("page-wallets-blog"),
       link: "https://www.coinbase.com/learn/crypto-basics/how-to-secure-crypto",
-    },
-    {
-      title: t("page-wallets-how-to-store"),
-      description: "ConsenSys",
-      link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
     },
   ]
 
@@ -317,10 +320,14 @@ const WalletsPage = () => {
               </Text>
             </li>
             <li>
-              <Text>{t("page-wallets-accounts-ethereum-addresses")}</Text>
+              <Text>
+                <Translation id="page-wallets:page-wallets-accounts-ethereum-addresses" />
+              </Text>
             </li>
             <li>
-              <Text>{t("page-wallets-ethereum-wallet")}</Text>
+              <Text>
+                <Translation id="page-wallets:page-wallets-ethereum-wallet" />
+              </Text>
             </li>
           </ul>
           <Text>{t("page-wallets-most-wallets")}</Text>
@@ -406,7 +413,7 @@ const WalletsPage = () => {
         <LeftColumn>
           <H2>{t("page-wallets-stay-safe")}</H2>
           <Box lineHeight={1.4} mb={6} color="text300">
-            {t("page-wallets-stay-safe-desc")}
+            <Translation id="page-wallets:page-wallets-stay-safe-desc" />
           </Box>
           <Box>
             <ChecklistItem
