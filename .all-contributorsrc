@@ -11065,6 +11065,51 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "gabrieltemtsen",
+      "name": "Gabriel Temsten",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57184013?v=4",
+      "profile": "https://github.com/gabrieltemtsen",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "jennyg0",
+      "name": "Jen ",
+      "avatar_url": "https://avatars.githubusercontent.com/u/60794961?v=4",
+      "profile": "https://github.com/jennyg0",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "Molotov-Eugene",
+      "name": "Eugene",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95471552?v=4",
+      "profile": "https://github.com/Molotov-Eugene",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "rimtaex",
+      "name": "RimTaeX",
+      "avatar_url": "https://avatars.githubusercontent.com/u/155366533?v=4",
+      "profile": "https://github.com/rimtaex",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "zarifpour",
+      "name": "Daniel Zarifpour",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16494335?v=4",
+      "profile": "http://zarifpour.xyz",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -3,7 +3,7 @@ title: Ethereum yol haritası
 description: Ethereum için daha ölçeklenebilir, güvenli ve sürdürülebilir olmanın yolu.
 lang: tr
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /heroes/roadmap-hub-hero.jpg
 alt: "Ethereum yol haritası"
 summaryPoints:
 buttons:

@@ -257,7 +257,6 @@ function processMarkdown(path: string) {
     !path.includes("hello-world-smart-contract") &&
     !path.includes("opcodes") &&
     !path.includes("translation-program") &&
-    !path.includes("/deprecated-software/") &&
     !path.includes("/energy-consumption/") &&
     !markdownFile.includes("```javascript") &&
     !markdownFile.includes("ExpandableCard")

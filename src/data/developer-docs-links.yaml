@@ -4,253 +4,253 @@
 # To display item as a collapsible directory vs. a link
 # use the `path` property (of the directory) vs. the `to` property
 - id: docs-nav-readme
-  to: /developers/docs
+  to: /developers/docs/
 - id: docs-nav-foundational-topics
   path: /developers/docs/
   items:
     - id: docs-nav-intro-to-ethereum
-      to: /developers/docs/intro-to-ethereum
+      to: /developers/docs/intro-to-ethereum/
       description: docs-nav-intro-to-ethereum-description
     - id: docs-nav-intro-to-ether
-      to: /developers/docs/intro-to-ether
+      to: /developers/docs/intro-to-ether/
       description: docs-nav-intro-to-ether-description
     - id: docs-nav-intro-to-dapps
-      to: /developers/docs/dapps
+      to: /developers/docs/dapps/
       description: docs-nav-intro-to-dapps-description
     - id: docs-nav-web2-vs-web3
-      to: /developers/docs/web2-vs-web3
+      to: /developers/docs/web2-vs-web3/
       description: docs-nav-web2-vs-web3-description
     - id: docs-nav-accounts
-      to: /developers/docs/accounts
+      to: /developers/docs/accounts/
       description: docs-nav-accounts-description
     - id: docs-nav-transactions
-      to: /developers/docs/transactions
+      to: /developers/docs/transactions/
       description: docs-nav-transactions-description
     - id: docs-nav-blocks
-      to: /developers/docs/blocks
+      to: /developers/docs/blocks/
       description: docs-nav-blocks-description
     - id: docs-nav-evm
-      to: /developers/docs/evm
+      to: /developers/docs/evm/
       description: docs-nav-evm-description
       items:
         - id: docs-nav-opcodes
-          to: /developers/docs/evm/opcodes
+          to: /developers/docs/evm/opcodes/
     - id: docs-nav-gas
-      to: /developers/docs/gas
+      to: /developers/docs/gas/
       description: docs-nav-gas-description
     - id: docs-nav-nodes-and-clients
-      to: /developers/docs/nodes-and-clients
+      to: /developers/docs/nodes-and-clients/
       description: docs-nav-nodes-and-clients-description
       items:
         - id: docs-nav-run-a-node
-          to: /developers/docs/nodes-and-clients/run-a-node
+          to: /developers/docs/nodes-and-clients/run-a-node/
         - id: docs-nav-client-diversity
-          to: /developers/docs/nodes-and-clients/client-diversity
+          to: /developers/docs/nodes-and-clients/client-diversity/
         - id: docs-nav-nodes-as-a-service
-          to: /developers/docs/nodes-and-clients/nodes-as-a-service
+          to: /developers/docs/nodes-and-clients/nodes-as-a-service/
         - id: docs-nav-node-architecture
-          to: /developers/docs/nodes-and-clients/node-architecture
+          to: /developers/docs/nodes-and-clients/node-architecture/
         - id: docs-nav-light-clients
-          to: /developers/docs/nodes-and-clients/light-clients
+          to: /developers/docs/nodes-and-clients/light-clients/
         - id: docs-nav-archive-nodes
-          to: /developers/docs/nodes-and-clients/archive-nodes
+          to: /developers/docs/nodes-and-clients/archive-nodes/
         - id: docs-nav-bootnodes
-          to: /developers/docs/nodes-and-clients/bootnodes
+          to: /developers/docs/nodes-and-clients/bootnodes/
     - id: docs-nav-networks
-      to: /developers/docs/networks
+      to: /developers/docs/networks/
       description: docs-nav-networks-description
     - id: docs-nav-consensus-mechanisms
-      to: /developers/docs/consensus-mechanisms
+      to: /developers/docs/consensus-mechanisms/
       description: docs-nav-consensus-mechanisms-description
       items:
         - id: docs-nav-proof-of-work
-          to: /developers/docs/consensus-mechanisms/pow
+          to: /developers/docs/consensus-mechanisms/pow/
           items:
             - id: docs-nav-mining
-              to: /developers/docs/consensus-mechanisms/pow/mining
+              to: /developers/docs/consensus-mechanisms/pow/mining/
               items:
                 - id: docs-nav-mining-algorithms
-                  to: /developers/docs/consensus-mechanisms/pow/mining-algorithms
+                  to: /developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/
                   items:
                     - id: docs-nav-dagger-hashimoto
-                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto
+                      to: /developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/
                     - id: docs-nav-ethash
-                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash
+                      to: /developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/
         - id: docs-nav-proof-of-stake
-          to: /developers/docs/consensus-mechanisms/pos
+          to: /developers/docs/consensus-mechanisms/pos/
           items:
             - id: docs-nav-gasper
-              to: /developers/docs/consensus-mechanisms/pos/gasper
+              to: /developers/docs/consensus-mechanisms/pos/gasper/
             - id: docs-nav-weak-subjectivity
-              to: /developers/docs/consensus-mechanisms/pos/weak-subjectivity
+              to: /developers/docs/consensus-mechanisms/pos/weak-subjectivity/
             - id: docs-nav-attestations
-              to: /developers/docs/consensus-mechanisms/pos/attestations
+              to: /developers/docs/consensus-mechanisms/pos/attestations/
             - id: docs-nav-rewards-and-penalties
-              to: /developers/docs/consensus-mechanisms/pos/rewards-and-penalties
+              to: /developers/docs/consensus-mechanisms/pos/rewards-and-penalties/
             - id: docs-nav-attack-and-defense
-              to: /developers/docs/consensus-mechanisms/pos/attack-and-defense
+              to: /developers/docs/consensus-mechanisms/pos/attack-and-defense/
             - id: docs-nav-keys
-              to: /developers/docs/consensus-mechanisms/pos/keys
+              to: /developers/docs/consensus-mechanisms/pos/keys/
             - id: docs-nav-pos-vs-pow
-              to: /developers/docs/consensus-mechanisms/pos/pos-vs-pow
+              to: /developers/docs/consensus-mechanisms/pos/pos-vs-pow/
             - id: docs-nav-block-proposal
-              to: /developers/docs/consensus-mechanisms/pos/block-proposal
+              to: /developers/docs/consensus-mechanisms/pos/block-proposal/
             - id: docs-nav-pos-faqs
-              to: /developers/docs/consensus-mechanisms/pos/faqs
+              to: /developers/docs/consensus-mechanisms/pos/faqs/
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:
     - id: docs-nav-intro-to-the-stack
-      to: /developers/docs/ethereum-stack
+      to: /developers/docs/ethereum-stack/
       description: docs-nav-intro-to-the-stack-description
     - id: docs-nav-smart-contracts
-      to: /developers/docs/smart-contracts
+      to: /developers/docs/smart-contracts/
       description: docs-nav-smart-contracts-description
       items:
         - id: docs-nav-smart-contract-languages
-          to: /developers/docs/smart-contracts/languages
+          to: /developers/docs/smart-contracts/languages/
         - id: docs-nav-smart-contract-anatomy
-          to: /developers/docs/smart-contracts/anatomy
+          to: /developers/docs/smart-contracts/anatomy/
         - id: docs-nav-smart-contracts-libraries
-          to: /developers/docs/smart-contracts/libraries
+          to: /developers/docs/smart-contracts/libraries/
         - id: docs-nav-testing-smart-contracts
-          to: /developers/docs/smart-contracts/testing
+          to: /developers/docs/smart-contracts/testing/
         - id: docs-nav-compiling-smart-contracts
-          to: /developers/docs/smart-contracts/compiling
+          to: /developers/docs/smart-contracts/compiling/
         - id: docs-nav-deploying-smart-contracts
-          to: /developers/docs/smart-contracts/deploying
+          to: /developers/docs/smart-contracts/deploying/
         - id: docs-nav-verifying-smart-contracts
-          to: /developers/docs/smart-contracts/verifying
+          to: /developers/docs/smart-contracts/verifying/
         - id: docs-nav-upgrading-smart-contracts
-          to: /developers/docs/smart-contracts/upgrading
+          to: /developers/docs/smart-contracts/upgrading/
         - id: docs-nav-smart-contract-security
-          to: /developers/docs/smart-contracts/security
+          to: /developers/docs/smart-contracts/security/
           description: docs-nav-smart-contract-security-description
         - id: docs-nav-smart-contract-formal-verification
-          to: /developers/docs/smart-contracts/formal-verification
+          to: /developers/docs/smart-contracts/formal-verification/
           description: docs-nav-smart-contract-formal-verification-description
         - id: docs-nav-composability
-          to: /developers/docs/smart-contracts/composability
+          to: /developers/docs/smart-contracts/composability/
     - id: docs-nav-development-networks
-      to: /developers/docs/development-networks
+      to: /developers/docs/development-networks/
       description: docs-nav-development-networks-description
     - id: docs-nav-development-frameworks
-      to: /developers/docs/frameworks
+      to: /developers/docs/frameworks/
       description: docs-nav-development-frameworks-description
     - id: docs-nav-ethereum-client-apis
       description: docs-nav-ethereum-client-apis-description
       items:
         - id: docs-nav-java-script-apis
-          to: /developers/docs/apis/javascript
+          to: /developers/docs/apis/javascript/
         - id: docs-nav-backend-apis
-          to: /developers/docs/apis/backend
+          to: /developers/docs/apis/backend/
         - id: docs-nav-json-rpc
-          to: /developers/docs/apis/json-rpc
+          to: /developers/docs/apis/json-rpc/
     - id: docs-nav-data-and-analytics
-      to: /developers/docs/data-and-analytics
+      to: /developers/docs/data-and-analytics/
       description: docs-nav-data-and-analytics-description
       items:
         - id: docs-nav-block-explorers
-          to: /developers/docs/data-and-analytics/block-explorers
+          to: /developers/docs/data-and-analytics/block-explorers/
     - id: docs-nav-storage
-      to: /developers/docs/storage
+      to: /developers/docs/storage/
       description: docs-nav-storage-description
     - id: docs-nav-integrated-development-environments-ides
-      to: /developers/docs/ides
+      to: /developers/docs/ides/
       description: docs-nav-integrated-development-environments-ides-description
     - id: docs-nav-programming-languages
-      to: /developers/docs/programming-languages
+      to: /developers/docs/programming-languages/
       description: docs-nav-programming-languages-description
       items:
         - id: docs-nav-dart
-          to: /developers/docs/programming-languages/dart
+          to: /developers/docs/programming-languages/dart/
         - id: docs-nav-delphi
-          to: /developers/docs/programming-languages/delphi
+          to: /developers/docs/programming-languages/delphi/
         - id: docs-nav-dot-net
-          to: /developers/docs/programming-languages/dot-net
+          to: /developers/docs/programming-languages/dot-net/
         - id: docs-nav-golang
-          to: /developers/docs/programming-languages/golang
+          to: /developers/docs/programming-languages/golang/
         - id: docs-nav-java
-          to: /developers/docs/programming-languages/java
+          to: /developers/docs/programming-languages/java/
         - id: docs-nav-javascript
-          to: /developers/docs/programming-languages/javascript
+          to: /developers/docs/programming-languages/javascript/
         - id: docs-nav-python
-          to: /developers/docs/programming-languages/python
+          to: /developers/docs/programming-languages/python/
         - id: docs-nav-ruby
-          to: /developers/docs/programming-languages/ruby
+          to: /developers/docs/programming-languages/ruby/
         - id: docs-nav-rust
-          to: /developers/docs/programming-languages/rust
+          to: /developers/docs/programming-languages/rust/
 - id: docs-nav-advanced
   path: /developers/docs/
   items:
     - id: docs-nav-bridges
-      to: /developers/docs/bridges
+      to: /developers/docs/bridges/
       description: docs-nav-bridges-description
     - id: docs-nav-standards
-      to: /developers/docs/standards
+      to: /developers/docs/standards/
       description: docs-nav-standards-description
       items:
         - id: docs-nav-token-standards
-          to: /developers/docs/standards/tokens
+          to: /developers/docs/standards/tokens/
           items:
             - id: docs-nav-erc-20
-              to: /developers/docs/standards/tokens/erc-20
+              to: /developers/docs/standards/tokens/erc-20/
             - id: docs-nav-erc-721
-              to: /developers/docs/standards/tokens/erc-721
+              to: /developers/docs/standards/tokens/erc-721/
             - id: docs-nav-erc-777
-              to: /developers/docs/standards/tokens/erc-777
+              to: /developers/docs/standards/tokens/erc-777/
             - id: docs-nav-erc-1155
-              to: /developers/docs/standards/tokens/erc-1155
+              to: /developers/docs/standards/tokens/erc-1155/
             - id: docs-nav-erc-4626
-              to: /developers/docs/standards/tokens/erc-4626
+              to: /developers/docs/standards/tokens/erc-4626/
     - id: docs-nav-mev
-      to: /developers/docs/mev
+      to: /developers/docs/mev/
       description: docs-nav-mev-description
     - id: docs-nav-oracles
-      to: /developers/docs/oracles
+      to: /developers/docs/oracles/
       description: docs-nav-oracles-description
     - id: docs-nav-scaling
-      to: /developers/docs/scaling
+      to: /developers/docs/scaling/
       description: docs-nav-scaling-description
       items:
         - id: docs-nav-scaling-optimistic-rollups
-          to: /developers/docs/scaling/optimistic-rollups
+          to: /developers/docs/scaling/optimistic-rollups/
         - id: docs-nav-scaling-zk-rollups
-          to: /developers/docs/scaling/zk-rollups
+          to: /developers/docs/scaling/zk-rollups/
         - id: docs-nav-scaling-channels
-          to: /developers/docs/scaling/state-channels
+          to: /developers/docs/scaling/state-channels/
         - id: docs-nav-scaling-sidechains
-          to: /developers/docs/scaling/sidechains
+          to: /developers/docs/scaling/sidechains/
         - id: docs-nav-scaling-plasma
-          to: /developers/docs/scaling/plasma
+          to: /developers/docs/scaling/plasma/
         - id: docs-nav-scaling-validium
-          to: /developers/docs/scaling/validium
+          to: /developers/docs/scaling/validium/
     - id: docs-nav-data-availability
-      to: /developers/docs/data-availability
+      to: /developers/docs/data-availability/
       description: docs-nav-data-availability-description
     - id: docs-nav-networking-layer
-      to: /developers/docs/networking-layer
+      to: /developers/docs/networking-layer/
       description: docs-nav-networking-layer-description
       items:
         - id: docs-nav-networking-layer-network-addresses
-          to: /developers/docs/networking-layer/network-addresses
+          to: /developers/docs/networking-layer/network-addresses/
         - id: docs-nav-networking-layer-portal-network
-          to: /developers/docs/networking-layer/portal-network
+          to: /developers/docs/networking-layer/portal-network/
     - id: docs-nav-data-structures-and-encoding
-      to: /developers/docs/data-structures-and-encoding
+      to: /developers/docs/data-structures-and-encoding/
       description: docs-nav-data-structures-and-encoding-description
       items:
         - id: docs-nav-data-structures-and-encoding-patricia-merkle-trie
-          to: /developers/docs/data-structures-and-encoding/patricia-merkle-trie
+          to: /developers/docs/data-structures-and-encoding/patricia-merkle-trie/
         - id: docs-nav-data-structures-and-encoding-rlp
-          to: /developers/docs/data-structures-and-encoding/rlp
+          to: /developers/docs/data-structures-and-encoding/rlp/
         - id: docs-nav-data-structures-and-encoding-ssz
-          to: /developers/docs/data-structures-and-encoding/ssz
+          to: /developers/docs/data-structures-and-encoding/ssz/
         - id: docs-nav-data-structures-and-encoding-web3-secret-storage
-          to: /developers/docs/data-structures-and-encoding/web3-secret-storage
+          to: /developers/docs/data-structures-and-encoding/web3-secret-storage/
 - id: docs-nav-design-fundamentals
   path: /developers/docs/
   items:
     - id: docs-nav-design-and-ux
-      to: /developers/docs/design-and-ux
+      to: /developers/docs/design-and-ux/
       description: docs-nav-design-and-ux-description

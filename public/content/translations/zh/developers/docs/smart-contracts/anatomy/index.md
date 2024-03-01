@@ -8,15 +8,15 @@ lang: zh
 
 ## 前置要求 {#prerequisites}
 
-确保您已经先阅读了[智能合约](/developers/docs/smart-contracts/)。 本文档假设您已经熟悉某种编程语言，例如 JavaScript 或 Python。
+确保你已经先阅读了[智能合约](/developers/docs/smart-contracts/)。 本文档假设你已经熟悉某种编程语言，例如 JavaScript 或 Python。
 
 ## 数据 {#data}
 
-任何合约数据必须分配到一个位置：要么是`存储`，要么是`内存`。 在智能合约中修改存储消耗很大，因此您需要考虑数据在哪里存取。
+任何合约数据必须分配到一个位置：要么是`存储`，要么是`内存`。 在智能合约中修改存储消耗很大，因此你需要考虑数据在哪里存取。
 
 ### 存储 {#storage}
 
-持久性数据被称之为存储，由状态变量表示。 这些值被永久地存储在区块链上。 您需要声明一个类型，以便于合约在编译时可以跟踪它在区块链上需要多少存储。
+持久性数据被称之为存储，由状态变量表示。 这些值被永久地存储在区块链上。 你需要声明一个类型，以便于合约在编译时可以跟踪它在区块链上需要多少存储。
 
 ```solidity
 // Solidity example
@@ -64,10 +64,10 @@ storedData: int128
 
 示例：
 
-| **属性**          | **状态变量** | **描述**                 |
-| ----------------- | ------------ | ------------------------ |
-| `block.timestamp` | uint256      | 当前区块的时间戳         |
-| `msg.sender`      | 地址         | 消息的发送者（当前调用） |
+| **属性**            | **状态变量** | **描述**       |
+| ----------------- | -------- | ------------ |
+| `block.timestamp` | uint256  | 当前区块的时间戳     |
+| `msg.sender`      | 地址       | 消息的发送者（当前调用） |
 
 ## 函数 {#functions}
 
@@ -168,7 +168,7 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 
 ## 编写函数 {#writing-functions}
 
-您的函数需要：
+你的函数需要：
 
 - 参数变量及其类型（如果它接受参数）
 - 声明为 internal/external
@@ -202,11 +202,11 @@ contract ExampleDapp {
 
 ## 事件和日志 {#events-and-logs}
 
-事件可以让您通过前端或其它订阅应用与您的智能合约通信。 当交易被挖矿执行时，智能合约可以触发事件并且将日志写入区块链，然后前端可以进行处理。
+事件可以让你通过前端或其它订阅应用与你的智能合约通信。 当交易被挖矿执行时，智能合约可以触发事件并且将日志写入区块链，然后前端可以进行处理。
 
 ## 附带说明的例子 {#annotated-examples}
 
-这是一些用 Solidity 写的例子。 如果希望运行这些代码，您可以在 [Remix](http://remix.ethereum.org) 中调试。
+这是一些用 Solidity 写的例子。 如果希望运行这些代码，你可以在 [Remix](http://remix.ethereum.org) 中调试。
 
 ### Hello world {#hello-world}
 
@@ -232,7 +232,7 @@ contract HelloWorld {
     // 构造器用于初始化合约的数据。
     // 了解更多：https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
     constructor(string memory initMessage) public {
-        // 接受一个字符变量 `initMessage`
+        // 接受一个字符变量 `initMessage` 
         // 并为合约的存储变量`message` 赋值
         message = initMessage;
     }
@@ -244,7 +244,7 @@ contract HelloWorld {
 }
 ```
 
-### 代币（Token） {#token}
+### 代币 {#token}
 
 ```solidity
 pragma solidity ^0.5.10;
@@ -447,7 +447,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
     /**
      * 安全转账给定代币 ID 的所有权到其它地址
-     * 如果目标地址是一个合约，则该合约必须实现 `onERC721Received`函数,
+     * 如果目标地址是一个合约，则该合约必须实现 `onERC721Received`函数, 
      * 该函数调用了安全转账并且返回一个 magic value。
      * `bytes4(keccak256("onERC721Received(address,address,uint256,bytes)"))`;
      * 否则，转账被回退。

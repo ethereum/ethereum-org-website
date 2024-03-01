@@ -23,7 +23,7 @@ interface TableProps extends ThemingProps<"Table"> {
 const Table = (props: TableProps) => {
   const { variant, ...rest } = props
   return (
-    <TableContainer whiteSpace="normal">
+    <TableContainer whiteSpace="normal" position="relative">
       <ChakraTable variant={variant} {...rest} />
     </TableContainer>
   )

@@ -21,7 +21,7 @@ summaryPoint3: 代幣和非同質化代幣創造了將內容貨幣化的新方�
 
 ### 去中心化社交網路是如何運作的？ {#decentralized-social-networks-overview}
 
-去中心化社交網路是一種[去中心化應用程式 (dApp) ](/dapps/)——由部署在區塊鏈上的[智慧型合約](/developers/docs/smart-contracts/)提供支持的應用程式。 合約程式碼充當這些應用程式的後端並定義它們的業務邏輯。
+去中心化社交網路是一種[去中心化應用程式 (dApp) ](/dapps/)— 由部署在區塊鏈上的[智慧型合約](/developers/docs/smart-contracts/)提供支持的應用程式。 合約程式碼充當這些應用程式的後端並定義它們的業務邏輯。
 
 傳統社交媒體平台依靠資料庫來儲存用戶資訊、程式碼和其他形式的資料。 但這會產生單點故障並帶來重大風險。 例如，去年 Facebook 的伺服器[離線數小時](https://www.npr.org/2021/10/05/1043211171/facebook-instagram-whatsapp-outage-business-impact)，使得用戶與平台的連線中斷，引起了許多用戶抱怨。
 
@@ -39,7 +39,7 @@ summaryPoint3: 代幣和非同質化代幣創造了將內容貨幣化的新方�
 
 3. 去中心化社交網路取消了「中間人」。 內容創作者對其創作內容擁有直接所有權，他們直接與追隨者、粉絲、買家和其他各方互動，雙方之間僅有智慧型合約。
 
-4. 由於去中心化應用程式在以太坊網路上運作，而該網路是由全球 P2P 節點網路所維持，因此去中心化社交網路不太容易受到伺服器停機和中斷的影響。
+4. 由於去中心化應用程式在以太坊網路上運作，而該網路是由全球對等節點網路所維持，因此去中心化社交網路不太容易受到伺服器停機和中斷的影響。
 
 5. 去中心化社交平台透過非同質化代幣 (NFT)、應用程式內加密貨幣支付等，為內容創作者提供更好的貨幣化框架。
 
@@ -61,11 +61,11 @@ summaryPoint3: 代幣和非同質化代幣創造了將內容貨幣化的新方�
 
 [Mirror](https://mirror.xyz/) 是一個支援 web3 的寫作平台，旨在實現去中心化和為使用者所擁有。 使用者只需連接錢包即可在 Mirror 上免費閲讀和寫作。 使用者還可以收集寫作作品並訂閱他們喜歡的作者。
 
-在 Mirror 上發布的文章會永久儲存在去中心化存儲平台 Arweave 上，並且可以鑄造為可收集的[非同質化代幣 (NFT)](/nft/)，也稱為寫作非同質化代幣。 鑄造寫作非同質化代幣對作者來說是完全免費的，並且收集發生在以太坊二層網路上——使交易變得便宜、快速且環保。
+在 Mirror 上發布的文章會永久儲存在去中心化儲存平台 Arweave 上，並且可以鑄造為可收集的[非同質化代幣 (NFT)](/nft/)，也稱為寫作非同質化代幣。 鑄造寫作非同質化代幣對作者來說是完全免費的，並且收集發生在以太坊二層網路上——使交易變得便宜、快速且環保。
 
 ### MINDS {#minds}
 
-[MINDS](https://www.minds.com/) 是最常用的去中心化社交網絡之一。 它的運作方式與 Facebook 類似，並且已經吸引了數百萬使用者。
+[MINDS](https://www.minds.com/) 是最常用的去中心化社交網路之一。 它的運作方式與 Facebook 類似，並且已經吸引了數百萬使用者。
 
 使用者使用平台的原生 ERC-20 代幣 $MIND 來支付物品價格。 使用者還可以透過發布熱門內容、為生態系統做出貢獻以及將其他人推薦給平台來賺取 $MIND 代幣。
 
@@ -92,7 +92,7 @@ Reddit 擁有[回饋式社群積分](https://cointelegraph.com/news/reddit-to-re
 ## 使用去中心化社交網路 {#use-decentralized-social-networks}
 
 - **[Status.im](https://status.im/)** - _Status 是安全的訊息傳遞應用程式，使用開放程式碼、點對點協議和端到端加密來保護你的訊息免受第三方的侵害。_
-- **[Mirror.xyz](https://mirror.xyz/)** - _Ｍ irror 是一個基於以太坊構建的使用者擁有的去中心化發布平台，供使用者眾籌創意、將內容貨幣化並建立高價值社群。_
+- **[Mirror.xyz](https://mirror.xyz/)** - _Ｍirror 是一個基於以太坊構建的使用者擁有的去中心化發布平台，供使用者眾籌創意、將內容貨幣化並建立高價值社群。_
 - **[Lens Protocol](https://lens.xyz/)** - _Lens Protocol 是一個可組合和去中心化的社交圖譜，可幫助創作者在去中心化網際網路的數位花園中的任何地方擁有自己的內容。_
 - **[Farcaster](https://farcaster.xyz/)** - _Farcaster 是一個充分去中心化的社交網路。 它是個支持多種用戶端的開放式協議，如電子郵件。_
 
@@ -106,7 +106,7 @@ Reddit 擁有[回饋式社群積分](https://cointelegraph.com/news/reddit-to-re
 - [區塊鏈社交媒體發展形勢概覽](https://www.gemini.com/cryptopedia/blockchain-social-media-decentralized-social-media) — _Gemini Cryptopedia_
 - [區塊鏈如何解決社交媒體隱私問題](https://www.investopedia.com/news/ethereum-blockchain-social-media-privacy-problem-linkedin-indorse/) — _Prableen Bajpai_
 - [社交媒體網路正在進入區塊鏈](https://businesstechguides.co/what-are-decentralized-social-networks) — _Emmanuel Awosika_
-- [社交網絡的充分去中心化](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
+- [社交網路的充分去中心化](https://www.varunsrinivasan.com/2022/01/11/sufficient-decentralization-for-social-networks) — _Varun Srinivasan_
 
 ### 影片 {#videos}
 

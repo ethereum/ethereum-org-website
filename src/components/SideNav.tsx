@@ -152,7 +152,7 @@ const SideNav = ({ path }: SideNavProps) => {
     <Box
       as="nav"
       position="sticky"
-      top="7.25rem"
+      top="19"
       pt={8}
       pb={16}
       h="calc(100vh - 80px)" // TODO take footer into account for height?
