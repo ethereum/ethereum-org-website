@@ -350,6 +350,8 @@ lang: en
 
 <GlossaryDefinition term="pow" />
 
+<GlossaryDefinition term="proto-danksharding" />
+
 <GlossaryDefinition term="public-goods" />
 
 <GlossaryDefinition term="public-key" />
