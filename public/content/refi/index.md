@@ -47,7 +47,7 @@ ReFi projects employ blockchain technology to alleviate many of the problems of 
 - **Liquidity is concentrated in a small number of liquidity pools** that can be freely traded by anyone. Large organizations as well as individual users can use these pools without manual searches for sellers/buyers, participation fees, or prior registration.
 - **All transactions are recorded on public blockchains**. The path each carbon credit takes due to trading activity is traceable forever as soon as it is made available in the DCM.
 - **Transaction speed is nearly instant**. Securing large amounts of carbon credits via the legacy markets can take days or weeks, but this can be achieved in a few seconds in the DCM.
-- **Trading activity occurs without intermediaries**, which charge high fees. Digital carbon credits represent a [62% cost improvement compared to equivalent traditional credits](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne), according to data from one analytics firm.
+- **Trading activity occurs without intermediaries**, which charge high fees. Digital carbon credits represent a 62% cost improvement compared to equivalent traditional credits, according to data from one analytics firm.
 - **The DCM is scalable** and can meet the demands of individuals and multinational corporations alike.
 
 ### Key components of the DCM {#key-components-dcm}
