@@ -92,7 +92,7 @@ export const WalletMoreInfo = ({
       <SimpleGrid
         templateColumns={{
           base: "38px auto",
-          md: "94px auto",
+          md: "98px auto",
           lg: "74px auto",
         }}
       >
@@ -100,6 +100,7 @@ export const WalletMoreInfo = ({
         <Box
           bgGradient={`linear(to-b, ${wallet.brand_color} 0%, rgba(217, 217, 217, 0) 97.4%)`}
           mx="auto"
+          mt={{ md: -40 }}
           width={1}
           height="full"
         />
@@ -109,6 +110,7 @@ export const WalletMoreInfo = ({
           <Flex
             direction={{ base: "column", xl: "row" }}
             gap={{ base: 4, xl: 0 }}
+            ms={-1}
           >
             {walletInfoSections.map((section, idx) => (
               <WalletMoreInfoCategory
@@ -129,7 +131,6 @@ export const WalletMoreInfo = ({
             alignItems="flex-start"
             mt={6}
             mb={8}
-            ps={4}
             spacing={4}
           >
             {/* Social icons */}
@@ -138,13 +139,13 @@ export const WalletMoreInfo = ({
               lineHeight={1.4}
               fontSize="md"
               fontWeight="bold"
-              mx="0.2rem"
+              ms={{ lg: "0.5rem" }}
               my={-3.5}
             >
               {t("page-find-wallet-social-links")}
             </Heading>
 
-            <Flex ps={1} gap="0.8rem">
+            <Flex ms={{ lg: "0.5rem" }} gap="0.8rem">
               <SocialLink
                 to={wallet.url}
                 hideArrow
