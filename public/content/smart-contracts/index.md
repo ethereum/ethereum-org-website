@@ -12,6 +12,12 @@ Nick Szabo coined the term "smart contract". In 1994, he wrote [an introduction 
 
 Szabo envisioned a digital marketplace where automatic, [cryptographically-secure](/glossary/#cryptography) processes enable transactions and business functions to happen without trusted intermediaries. Smart contracts on Ethereum put this vision into practice.
 
+## More of a visual learner? {#visual-learner}
+
+Watch Finematics explain smart contracts:
+
+<YouTube id="pWGLtjG-F5c" />
+
 ## Trust in conventional contracts {#trust-and-contracts}
 
 One of the biggest problems with a traditional contract is the need for trusted individuals to follow through with the contract's outcomes.
@@ -65,15 +71,9 @@ They can perform computations, create currency, store data, mint [NFTs](/glossar
 - [Stablecoins](/stablecoins/)
 - [Creating and distributing unique digital assets](/nft/)
 - [An automatic, open currency exchange](/get-eth/#dex)
-- [Decentralized gaming](/dapps/?category=gaming)
+- [Decentralized gaming](/dapps/?category=gaming#explore)
 - [An insurance policy that pays out automatically](https://etherisc.com/)
 - [A standard that lets people create customized, interoperable currencies](/developers/docs/standards/tokens/)
-
-## More of a visual learner? {#visual-learner}
-
-Watch Finematics explain smart contracts:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## Further reading {#further-reading}
 
