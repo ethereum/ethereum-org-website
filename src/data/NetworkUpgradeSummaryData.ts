@@ -3,7 +3,7 @@ import type { NetworkUpgradeData } from "@/lib/types"
 const NetworkUpgradeSummaryData: NetworkUpgradeData = {
   cancun: {
     isPending: true, // Fill in remaining and remove `isPending` once complete
-    dateTimeAsString: "2024-03-13T01:55:35.000Z",
+    dateTimeAsString: "2024-03-13T13:55:35.000Z",
     // ethPriceInUSD: 0,
     // waybackLink: "https://web.archive.org/web/{timestamp}/https://ethereum.org/en/",
     epochNumber: 269568,
@@ -11,7 +11,7 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
   },
   deneb: {
     isPending: true, // Fill in remaining and remove `isPending` once complete
-    dateTimeAsString: "2024-03-13T01:55:35.000Z",
+    dateTimeAsString: "2024-03-13T13:55:35.000Z",
     // ethPriceInUSD: 0,
     // waybackLink: "https://web.archive.org/web/{timestamp}/https://ethereum.org/en/",
     epochNumber: 269568,
