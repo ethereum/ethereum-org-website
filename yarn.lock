@@ -9548,6 +9548,11 @@ md5.js@^1.3.4:
     inherits "^2.0.1"
     safe-buffer "^5.1.2"
 
+mdast-heading-id@*:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mdast-heading-id/-/mdast-heading-id-1.0.1.tgz#6fb584febd3e88f459a7f438f4c3a262e159574f"
+  integrity sha512-TrZqVGAAJ6BjzXTjvdHEUYqQqCJrdGTyKx/pyBBklBE7JpAdpaJy7c4b0KDXJGPEhyewDLjAS9ZYhD3yOUajlw==
+
 mdast-util-definitions@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/mdast-util-definitions/-/mdast-util-definitions-4.0.0.tgz#c5c1a84db799173b4dcf7643cda999e440c24db2"
@@ -10056,6 +10061,13 @@ micromark-factory-whitespace@^1.0.0:
     micromark-util-symbol "^1.0.0"
     micromark-util-types "^1.0.0"
 
+micromark-heading-id@*:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/micromark-heading-id/-/micromark-heading-id-1.0.1.tgz#93b9f21aa060c395d164adcc27e4753918e25bb5"
+  integrity sha512-AcJm5cDKg0zPxXqaFK73KcwsnQzNUF4uhEdb/BCrr61W70z8XTuAnHTf7fOJ5a4EhF3TGADTsgqVzCko16gJwQ==
+  dependencies:
+    micromark-util-symbol "^1.0.1"
+
 micromark-util-character@^1.0.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/micromark-util-character/-/micromark-util-character-1.2.0.tgz#4fedaa3646db249bc58caeb000eb3549a8ca5dcc"
@@ -10162,7 +10174,7 @@ micromark-util-subtokenize@^1.0.0:
     micromark-util-types "^1.0.0"
     uvu "^0.5.0"
 
-micromark-util-symbol@^1.0.0:
+micromark-util-symbol@^1.0.0, micromark-util-symbol@^1.0.1:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/micromark-util-symbol/-/micromark-util-symbol-1.1.0.tgz#813cd17837bdb912d069a12ebe3a44b6f7063142"
   integrity sha512-uEjpEYY6KMs1g7QfJ2eX1SQEV+ZT4rUD3UcF6l57acZvLNK7PBZL+ty82Z1qhK1/yXIY4bdx04FKMgR0g4IAag==
@@ -11816,6 +11828,15 @@ relateurl@^0.2.7:
   resolved "https://registry.yarnpkg.com/relateurl/-/relateurl-0.2.7.tgz#54dbf377e51440aca90a4cd274600d3ff2d888a9"
   integrity sha512-G08Dxvm4iDN3MLM0EsP62EDV9IuhXPR6blNz6Utcp7zyV3tr4HVNINt6MpaRWbxoOHT3Q7YN2P+jaHX8vUbgog==
 
+remark-custom-heading-id@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/remark-custom-heading-id/-/remark-custom-heading-id-1.0.1.tgz#a3cbe966a8e84c403671aca298ead5156a460636"
+  integrity sha512-K9gIrLOmIdOsHusDRQL4U0ew7Q3WzzKsr3tquKuppV/kJwEYj4v+Bn/T9pJkkpS1m2i9y9lrsmh9vHs4sRPLIg==
+  dependencies:
+    mdast-heading-id "*"
+    micromark-heading-id "*"
+    unist-util-visit "^4.1.2"
+
 remark-external-links@^8.0.0:
   version "8.0.0"
   resolved "https://registry.yarnpkg.com/remark-external-links/-/remark-external-links-8.0.0.tgz#308de69482958b5d1cd3692bc9b725ce0240f345"
@@ -13179,7 +13200,7 @@ unist-util-visit@^2.0.0:
     unist-util-is "^4.0.0"
     unist-util-visit-parents "^3.0.0"
 
-unist-util-visit@^4.0.0:
+unist-util-visit@^4.0.0, unist-util-visit@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-4.1.2.tgz#125a42d1eb876283715a3cb5cceaa531828c72e2"
   integrity sha512-MSd8OUGISqHdVvfY9TPhyK2VdUrPgxkUtWSuMHF6XAAFuL4LokseigBnZtPnJMu+FbynTkFNnFlyjxpVKujMRg==

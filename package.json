@@ -83,6 +83,7 @@
     "plaiceholder": "^3.0.0",
     "polished": "^4.2.2",
     "raw-loader": "^4.0.2",
+    "remark-custom-heading-id": "^1.0.1",
     "storybook": "7.6.6",
     "storybook-react-i18next": "^2.0.9",
     "ts-node": "^10.9.1",
