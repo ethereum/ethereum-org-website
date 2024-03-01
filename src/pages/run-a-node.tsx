@@ -362,16 +362,6 @@ const RunANodePage = () => {
           eventName: "learn more",
         },
       },
-      {
-        content: t("page-run-a-node-hero-cta-2"),
-        toId: "getting-started",
-        variant: "outline",
-        matomo: {
-          eventCategory: "run a node hero buttons",
-          eventAction: "click",
-          eventName: "lets dive in",
-        },
-      },
     ],
   }
 
@@ -801,7 +791,7 @@ const RunANodePage = () => {
             <ButtonContainer>
               <ButtonLink
                 leftIcon={<FaDiscord />}
-                to="https://discord.gg/c28an8dA5k"
+                to="https://discord.com/invite/dappnode"
               >
                 {t("page-run-a-node-community-link-1")}
               </ButtonLink>

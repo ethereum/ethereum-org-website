@@ -78,7 +78,6 @@
   "page-run-a-node-hero-header": "Take full control.<br />Run your own node.",
   "page-run-a-node-hero-subtitle": "Become fully sovereign while helping secure the network. Become Ethereum.",
   "page-run-a-node-hero-cta-1": "Learn more",
-  "page-run-a-node-hero-cta-2": "Let's dive in!",
   "page-run-a-node-install-manually-title": "Install manually",
   "page-run-a-node-install-manually-1": "If you're a more technical user and have decided to build your own device, DAppNode can be downloaded from any computer and installed onto a fresh SSD via a USB drive.",
   "page-run-a-node-meta-description": "An introduction on what, why, and how to run an Ethereum node.",
