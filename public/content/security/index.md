@@ -16,7 +16,7 @@ With interest in cryptocurrencies growing, learning best practices when using cr
 
 [Over 80% of account hacks are a result of weak or stolen passwords](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). A long combination of characters, numbers and symbols is best to keep your accounts secure.
 
-A common mistake individuals make is using a combination of two to three common, related dictionary words. Passwords like this are insecure because they are prone to a simple hacking technique known as a [dictionary attack](https://wikipedia.org/wiki/Dictionary_attack).
+A common mistake individuals make is using a combination of two to three common, related dictionary words. Passwords like this are insecure because they are prone to a simple hacking technique known as a dictionary attack.
 
 ```md
 Example of a weak password: CuteFluffyKittens!
