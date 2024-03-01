@@ -372,12 +372,6 @@ const EthPage = () => {
       description: "Anthony Sassano",
       caption: t("page-eth-last-updated"),
     },
-    {
-      link: "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
-      title: t("page-eth-how-to-buy"),
-      description: "MyCrypto",
-      caption: t("page-eth-how-to-buy-caption"),
-    },
   ]
 
   return (
