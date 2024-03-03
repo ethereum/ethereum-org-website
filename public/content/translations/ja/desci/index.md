@@ -68,7 +68,7 @@ DeSci は、Web2 アカデミアをデジタルワールドにオンボーディ
 
 同じ提案であっても同委員会の担当者によって結果が大きく異なることがあり、優れた提案を選択するうえで助成金審査委員会は責務を果たしていないことが研究によって示されています。 資金調達が厳しくなる中で、資金の行く先は保守的なプロジェクトを行う少人数の上席研究者へと集中してきました。 その結果、非常に競争の激しい資金調達環境が生み出され、歪んだインセンティブを根付かせ、イノベーションを妨げることになりました。
 
-DAO と Web3 によって培われた各種インセンティブモデルを広く試すことで、現在の破綻した資金調達モデルを食い止めることができるかもしれません。 [遡及効果のある公共財の資金調達](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)、[クアドラティックファンディング](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)、[DAO ガバナンス](https://www.antler.co/blog/daos-and-web3-governance)、[トークン化されたインセンティブ構造<0>](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)などの Web3 ツールには、科学の資金調達に大変革をもたらす可能性があります。
+DAO と Web3 によって培われた各種インセンティブモデルを広く試すことで、現在の破綻した資金調達モデルを食い止めることができるかもしれません。 [遡及効果のある公共財の資金調達](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)、[クアドラティックファンディング](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)、[DAO ガバナンス](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead)、[トークン化されたインセンティブ構造<0>](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)などの Web3 ツールには、科学の資金調達に大変革をもたらす可能性があります。
 
 ### IP の所有権と開発 {#ip-ownership}
 

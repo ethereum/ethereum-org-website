@@ -68,7 +68,7 @@ DeSci डिजिटल जगामध्ये Web2 अकादमीला 
 
 अभ्यासातून असे दिसून आले आहे की अनुदान पुनरावलोकन पॅनेल उच्च-गुणवत्तेचे प्रस्ताव निवडण्याचे खराब काम करतात कारण वेगवेगळ्या पॅनेलला दिलेल्या समान प्रस्तावांचे परिणाम खूप वेगळे असतात. निधी अधिक दुर्मिळ झाला असल्याने, ते अधिक बौद्धिकदृष्ट्या पुराणमतवादी प्रकल्पांसह अधिक ज्येष्ठ संशोधकांच्या लहान गटात केंद्रित झाले आहे. या परिणामामुळे अति-स्पर्धात्मक निधीची लँडस्केप तयार झाली आहे, विकृत प्रोत्साहने आणि नवकल्पना रोखून धरण्यात आली आहे.
 
-Web3 मध्ये DAO आणि Web3 द्वारे विकसित केलेल्या विविध प्रोत्साहन मॉडेल्ससह प्रयोग करून या तुटलेल्या निधी मॉडेलमध्ये व्यत्यय आणण्याची क्षमता आहे. [रेट्रोएक्टिव्ह सार्वजनिक वस्तू निधी](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [चतुर्भुज निधी](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO गव्हर्नन्स](https://www.antler.co/blog/daos-and-web3-governance) आणि [टोकनीकृत प्रोत्साहन संरचना](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) हे काही आहेत Web3 साधने जी विज्ञान निधीमध्ये क्रांती घडवू शकतात.
+Web3 मध्ये DAO आणि Web3 द्वारे विकसित केलेल्या विविध प्रोत्साहन मॉडेल्ससह प्रयोग करून या तुटलेल्या निधी मॉडेलमध्ये व्यत्यय आणण्याची क्षमता आहे. [रेट्रोएक्टिव्ह सार्वजनिक वस्तू निधी](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [चतुर्भुज निधी](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [DAO गव्हर्नन्स](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) आणि [टोकनीकृत प्रोत्साहन संरचना](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) हे काही आहेत Web3 साधने जी विज्ञान निधीमध्ये क्रांती घडवू शकतात.
 
 ### IP मालकी आणि विकास {#ip-ownership}
 
