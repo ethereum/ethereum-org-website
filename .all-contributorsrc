@@ -1521,7 +1521,7 @@
       "login": "sassal",
       "name": "sassal",
       "avatar_url": "https://avatars0.githubusercontent.com/u/9276959?v=4",
-      "profile": "https//twitter.com/sassal0x",
+      "profile": "https://twitter.com/sassal0x",
       "contributions": [
         "content"
       ]
@@ -8830,7 +8830,7 @@
       "login": "joonspoon",
       "name": "June Clarke ",
       "avatar_url": "https://avatars.githubusercontent.com/u/302478?v=4",
-      "profile": "jointheleague.org",
+      "profile": "https://www.jointheleague.org/",
       "contributions": [
         "doc"
       ]
@@ -8839,7 +8839,7 @@
       "login": "slf188",
       "name": "菲利",
       "avatar_url": "https://avatars.githubusercontent.com/u/49417481?v=4",
-      "profile": "huggingface.co/slf188",
+      "profile": "https://huggingface.co/slf188",
       "contributions": [
         "doc"
       ]
@@ -11100,6 +11100,90 @@
       "profile": "https://github.com/rimtaex",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "zarifpour",
+      "name": "Daniel Zarifpour",
+      "avatar_url": "https://avatars.githubusercontent.com/u/16494335?v=4",
+      "profile": "http://zarifpour.xyz",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "intldds",
+      "name": "intldds",
+      "avatar_url": "https://avatars.githubusercontent.com/u/80983240?v=4",
+      "profile": "https://github.com/intldds",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "hodlon",
+      "name": "Hodlon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37387563?v=4",
+      "profile": "https://hodlon.art",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "M4x28",
+      "name": "Leonardo Birardi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64036726?v=4",
+      "profile": "https://github.com/M4x28",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "Flamenk",
+      "name": "Parrot Iwai",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78525550?v=4",
+      "profile": "https://github.com/Flamenk",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
+    },
+    {
+      "login": "starwalker00",
+      "name": "starwalker00",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68958932?v=4",
+      "profile": "https://github.com/starwalker00",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "Eversmile12",
+      "name": "VItto Rivabella",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72762629?v=4",
+      "profile": "http://vitto.cc",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "olafnub",
+      "name": "Andy Li",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101077165?v=4",
+      "profile": "https://www.linkedin.com/in/andy-li-65284220b/",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
+    },
+    {
+      "login": "maxammann",
+      "name": "Max Ammann",
+      "avatar_url": "https://avatars.githubusercontent.com/u/905221?v=4",
+      "profile": "https://maxammann.org/",
+      "contributions": [
+        "doc"
       ]
     }
   ],

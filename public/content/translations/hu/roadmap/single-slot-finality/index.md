@@ -58,7 +58,7 @@ Ha az aggregáció skálázásához az alhálózatokban megnövelnék a validát
 
 ## Jelenlegi helyzet {#current-progress}
 
-Az SSF még kutatási fázisban van. Nem várható, hogy a következő években bevezetésre kerül, inkább más lényeges fejlesztések után eszközölése várható, mint például a [Verkle-fák](/roadmap/verkle-trees/) és a [Danksharding](/roadmap/danksharding]).
+Az SSF még kutatási fázisban van. Nem várható, hogy a következő években bevezetésre kerül, inkább más lényeges fejlesztések után eszközölése várható, mint például a [Verkle-fák](/roadmap/verkle-trees/) és a [Danksharding](/roadmap/danksharding/).
 
 ## További olvasnivaló {#further-reading}
 

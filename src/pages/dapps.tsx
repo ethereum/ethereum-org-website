@@ -115,7 +115,6 @@ import zapper from "@/public/dapps/zapper.png"
 import zerion from "@/public/dapps/zerion.png"
 import developers from "@/public/developers-eth-blocks.png" // Handled inside Callout => height=200
 import doge from "@/public/doge-computer.png" // HERO, full? 624px
-import ogImage from "@/public/doge-computer.png" // PageMetadata, src only
 import oneinch from "@/public/exchanges/1inch.png"
 import magicians from "@/public/magicians.png"
 import wallet from "@/public/wallet.png" // width=300
@@ -1210,13 +1209,6 @@ const DappsPage = () => {
 
   const bridges = [
     {
-      title: "Multichain",
-      description: t("page-dapps-dapp-description-multichain"),
-      link: "https://multichain.xyz/",
-      image: multichain,
-      alt: t("page-dapps-multichain-logo-alt"),
-    },
-    {
       title: "Rubic",
       description: t("page-dapps-dapp-description-rubic"),
       link: "https://rubic.exchange/",
@@ -1334,8 +1326,8 @@ const DappsPage = () => {
     <Page>
       <PageMetadata
         title={t("common:decentralized-applications-dapps")}
-        description={t("common:page-dapps-desc")}
-        image={ogImage.src}
+        description={t("page-dapps-desc")}
+        image="/doge-computer.png"
       />
       <PageHero content={heroContent} />
       <Divider />

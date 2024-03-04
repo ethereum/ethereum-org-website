@@ -17,14 +17,14 @@ Es necesario que comprendas los conceptos básicos de Ethereum para poder entend
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair:](https://blockchair.com/ethereum) _También disponible en inglés, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
 - [Blockscout](https://blockscout.com/)
+- [Chainlens](https://www.chainlens.com/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer:](https://ethplorer.io/) _También disponible en chino, español, francés, turco, ruso, coreano y vietnamita_
+- [EthVM](https://www.ethvm.com/)
+- [Explorador de bloques DexGuru](https://ethereum.dex.guru/)
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
-- [Sirato](https://www.web3labs.com/sirato)
-- [EthVM](https://www.ethvm.com/)
-- [Explorador de bloques DexGuru](https://ethereum.dex.guru/)
 
 ## Datos {#data}
 

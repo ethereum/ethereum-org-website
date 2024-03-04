@@ -270,6 +270,8 @@ The major difference is that bug bounty programs are open to the wider developer
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter for enforcing style and security best practices for the Solidity smart contract programming language._
 
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Rust-based static analyzer specifically designed for Web3 smart contract security and development._
+
 #### Dynamic analysis tools {#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** - _Fast contract fuzzer for detecting vulnerabilities in smart contracts through property-based testing._

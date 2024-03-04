@@ -743,7 +743,7 @@ contract UniswapV2Factory is IUniswapV2Factory {
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-我们希望新交易所的地址是可以确定的，这样就可以在链下提前计算（这对于[二层网络交易](/developers/docs/layer-2-scaling/)来说比较有用）。 为此，无论收到代币地址的顺序如何，我们需要代币地址始终按顺序排列，因此我们在此处对它们排序。
+我们希望新交易所的地址是可以确定的，这样就可以在链下提前计算（这对于[二层网络交易](/developers/docs/scaling/)来说比较有用）。 为此，无论收到代币地址的顺序如何，我们需要代币地址始终按顺序排列，因此我们在此处对它们排序。
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');

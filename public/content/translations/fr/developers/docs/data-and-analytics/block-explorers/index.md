@@ -17,14 +17,14 @@ Pour que les données fournies par un explorateur de blocs aient du sens, vous d
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) - _Également disponible en espagnol, français, italien, néerlandais, portugais, russe, chinois et Farsi_
 - [Blockscout](https://blockscout.com/)
+- [Chainlens](https://www.chainlens.com/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/) - _Aussi disponible en chinois, espagnol, français, turc, russe, coréen et vietnamien_
+- [EthVM](https://www.ethvm.com/)
+- [Explorateurs de bloc DexGuru](https://ethereum.dex.guru/)
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
-- [Sirato](https://www.web3labs.com/sirato)
-- [EthVM](https://www.ethvm.com/)
-- [Explorateurs de bloc DexGuru](https://ethereum.dex.guru/)
 
 ## Données {#data}
 
