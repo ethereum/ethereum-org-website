@@ -11194,6 +11194,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "vbaranov",
+      "name": "Victor Baranov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4341812?v=4",
+      "profile": "https://ethereum.stackexchange.com/users/2128/viktor-baranov",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
