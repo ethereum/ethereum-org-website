@@ -1746,6 +1746,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dswilson4"><img src="https://avatars.githubusercontent.com/u/33137497?v=4?s=100" width="100px;" alt="dswilson4"/><br /><sub><b>dswilson4</b></sub></a><br /><a href="#content-dswilson4" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://ethereum.stackexchange.com/users/2128/viktor-baranov"><img src="https://avatars.githubusercontent.com/u/4341812?v=4?s=100" width="100px;" alt="Victor Baranov"/><br /><sub><b>Victor Baranov</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vbaranov" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/drehuwann"><img src="https://avatars.githubusercontent.com/u/62968123?v=4?s=100" width="100px;" alt="drehuwann"/><br /><sub><b>drehuwann</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=drehuwann" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/greetfish"><img src="https://avatars.githubusercontent.com/u/11615617?v=4?s=100" width="100px;" alt="junble"/><br /><sub><b>junble</b></sub></a><br /><a href="#ideas-greetfish" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
