@@ -87,7 +87,6 @@ import {
   SocialRecoverIcon,
   StakingIcon,
   SwapIcon,
-  WalletConnectIcon,
   WithdrawCryptoIcon,
 } from "./wallets"
 
@@ -170,7 +169,6 @@ const iconsDefinitions = [
   SocialRecoverIcon,
   StakingIcon,
   SwapIcon,
-  WalletConnectIcon,
   WithdrawCryptoIcon,
   EthHomeIcon,
   FeedbackGlyphIcon,

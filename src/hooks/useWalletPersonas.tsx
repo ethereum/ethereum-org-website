@@ -1,28 +1,5 @@
 import { useTranslation } from "next-i18next"
 
-// TODO: remove unused icons
-// Icons
-// import {
-//   BuyCryptoIcon,
-//   ConnectDappsIcon,
-//   ENSSupportIcon,
-//   ERC20SupportIcon,
-//   GasFeeCustomizationIcon,
-//   HardwareIcon,
-//   HardwareSupportIcon,
-//   Layer2Icon,
-//   MultisigIcon,
-//   NFTSupportIcon,
-//   NonCustodialIcon,
-//   OpenSourceWalletIcon,
-//   RPCImportingIcon,
-//   SocialRecoverIcon,
-//   StakingIcon,
-//   SwapIcon,
-//   WalletConnectIcon,
-//   WithdrawCryptoIcon,
-// } from "../components/icons/wallets"
-
 // Types
 interface Personas {
   title: string

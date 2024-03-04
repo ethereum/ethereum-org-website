@@ -28,7 +28,6 @@ import {
   SocialRecoverIcon,
   StakingIcon,
   SwapIcon,
-  WalletConnectIcon,
   WithdrawCryptoIcon,
 } from "../components/icons/wallets"
 

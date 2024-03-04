@@ -21,7 +21,6 @@ import { RPCImportingIcon } from "./RPCImportingIcon"
 import { SocialRecoverIcon } from "./SocialRecoverIcon"
 import { StakingIcon } from "./StakingIcon"
 import { SwapIcon } from "./SwapIcon"
-import { WalletConnectIcon } from "./WalletConnectIcon"
 import { WithdrawCryptoIcon } from "./WithdrawCryptoIcon"
 
 export {
@@ -48,6 +47,5 @@ export {
   SocialRecoverIcon,
   StakingIcon,
   SwapIcon,
-  WalletConnectIcon,
   WithdrawCryptoIcon,
 }
