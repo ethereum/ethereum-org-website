@@ -1,6 +1,7 @@
 import * as React from "react"
 import { VStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
 import SelectComponent from "./"
 
 const selectData = [

@@ -1,11 +1,10 @@
 // Libraries
 import { useEffect, useState } from "react"
+import { useTranslation } from "next-i18next"
 import { Icon } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
 // Data
 import walletFilterData from "../../../../data/wallets/wallet-filters"
-
 import {
   BrowserIcon,
   BuyCryptoIcon,
@@ -56,7 +55,7 @@ export const useWalletFilterFeature = ({
   filters,
   updateFilterOptions,
 }: Omit<WalletFilterFeatureProps, "updateFilterOption">) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
   const [filterOptions, setFilterOptions] = useState<FilterOptionType[]>([
     {
       title: t("page-find-wallet-device"),
@@ -314,21 +313,20 @@ export const useWalletFilterFeature = ({
     updateFilterOptions(keys, value)
   }
 
-  const resetFilters = () => {
-    for (let filterItem of filterOptions) {
-      for (let item of filterItem.items) {
-        if (item.options.length > 0) {
-          item.showOptions = false
-        } else {
-          item.showOptions = undefined
+  useEffect(() => {
+    const resetFilters = () => {
+      for (let filterItem of filterOptions) {
+        for (let item of filterItem.items) {
+          if (item.options.length > 0) {
+            item.showOptions = false
+          } else {
+            item.showOptions = undefined
+          }
         }
       }
     }
-  }
-
-  useEffect(() => {
     resetWalletFilter.current = resetFilters
-  }, [])
+  }, [filterOptions, resetWalletFilter])
 
   return {
     setShowOptions,

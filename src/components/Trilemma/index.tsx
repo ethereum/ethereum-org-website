@@ -1,4 +1,4 @@
-import React from "react"
+import { useTranslation } from "next-i18next"
 import {
   Drawer,
   DrawerCloseButton,
@@ -8,16 +8,17 @@ import {
   Hide,
   useToken,
 } from "@chakra-ui/react"
-import Card from "../Card"
-import Translation from "../Translation"
-import Text from "../OldText"
-import OldHeading from "../OldHeading"
-import { TriangleSVG, IProps as TriangleSVGProps } from "./Triangle"
+
+import Card from "@/components/Card"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+
+import { TriangleSVG, TriangleSVGProps } from "./Triangle"
 import { useTrilemma } from "./useTrilemma"
 
-export interface IProps {}
+const Trilemma = () => {
+  const { t } = useTranslation("page-roadmap-vision")
 
-const Trilemma: React.FC<IProps> = () => {
   const {
     trilemmaChecks,
     mobileModalOpen,
@@ -51,19 +52,13 @@ const Trilemma: React.FC<IProps> = () => {
         }}
       >
         <OldHeading fontSize="2rem" mt={0}>
-          <Translation id="page-roadmap-vision-trilemma-h2" />
+          {t("page-roadmap-vision-trilemma-h2")}
         </OldHeading>
-        <Text>
-          <Translation id="page-roadmap-vision-trilemma-p" />
-        </Text>
-        <Text>
-          <Translation id="page-roadmap-vision-trilemma-p-1" />
-        </Text>
-        <Text>
-          <Translation id="page-roadmap-vision-trilemma-p-2" />
-        </Text>
+        <Text>{t("page-roadmap-vision-trilemma-p")}</Text>
+        <Text>{t("page-roadmap-vision-trilemma-p-1")}</Text>
+        <Text>{t("page-roadmap-vision-trilemma-p-2")}</Text>
         <Text fontWeight={600} hideFrom={lgBp}>
-          <Translation id="page-roadmap-vision-trilemma-modal-tip" />:
+          {t("page-roadmap-vision-trilemma-modal-tip")}:
         </Text>
         <Card {...cardDetail} mt={8} minH="300px" hideBelow={lgBp} />
       </Flex>
@@ -86,7 +81,7 @@ const Trilemma: React.FC<IProps> = () => {
               justifyContent="flex-start"
               my={8}
             />
-            <DrawerCloseButton top={6} right={6} />
+            <DrawerCloseButton top="6" insetInlineEnd="6" />
           </DrawerContent>
         </Drawer>
       </Hide>

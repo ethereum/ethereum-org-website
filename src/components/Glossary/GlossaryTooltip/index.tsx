@@ -1,15 +1,15 @@
 import React, { ReactNode } from "react"
 import { Text, useBreakpointValue } from "@chakra-ui/react"
 
-import GlossaryDefinition from "../GlossaryDefinition"
-import Tooltip from "../../Tooltip"
+import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
+import Tooltip from "@/components/Tooltip"
 
-interface IProps {
+type GlossaryTooltipProps = {
   children: ReactNode
   termKey: string
 }
 
-const GlossaryTooltip: React.FC<IProps> = ({ children, termKey }) => {
+const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
   const isLargeScreen = useBreakpointValue({ base: false, lg: true })
 
   return isLargeScreen ? (

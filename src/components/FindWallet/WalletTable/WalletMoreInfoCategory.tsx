@@ -1,13 +1,12 @@
-import * as React from "react"
-import { Box, Flex, Heading, HStack, Icon } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
-
-import Text from "../../OldText"
-import Tooltip from "../../Tooltip"
-import { DropdownOption } from "./useWalletTable"
+import { Box, Flex, Heading, HStack, Icon } from "@chakra-ui/react"
 
 import walletFilterData from "../../../data/wallets/wallet-filters"
+import Text from "../../OldText"
+import Tooltip from "../../Tooltip"
+
+import { DropdownOption } from "./useWalletTable"
 
 interface WalletMoreInfoCategoryProps {
   wallet: any
@@ -22,7 +21,7 @@ export const WalletMoreInfoCategory = ({
   headingLabel,
   sectionName,
 }: WalletMoreInfoCategoryProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
 
   return (
     <Box width="full" mt={12} _first={{ mt: 2 }}>
@@ -66,7 +65,7 @@ export const WalletMoreInfoCategory = ({
                     svg: {
                       width: 6,
                       fill: "secondary",
-                      pr: 2,
+                      pe: 2,
                     },
                   },
                 }}

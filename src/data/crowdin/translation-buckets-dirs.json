@@ -41,7 +41,7 @@
   },
   {
     "id": 6197,
-    "name": "09) Upgrades"
+    "name": "09) Roadmap"
   },
   {
     "id": 6201,
@@ -110,5 +110,9 @@
   {
     "id": 7833,
     "name": "28) Developer Tutorials IV"
+  },
+  {
+    "id": 8218,
+    "name": "Menu redesign & language picker"
   }
 ]

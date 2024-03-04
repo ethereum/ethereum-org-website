@@ -27,7 +27,7 @@ function MdLink(props: Props) {
   if (matches?.length) {
     const termKey = matches[1]
 
-    return <GlossaryTooltip termKey={termKey} children={props.children} />
+    return <GlossaryTooltip termKey={termKey}>{props.children}</GlossaryTooltip>
   }
 
   return <InlineLink {...props} />

@@ -1,36 +1,36 @@
-import React from "react"
-import { Icon, Box, Flex, Text, HStack } from "@chakra-ui/react"
-import { MdInfoOutline } from "react-icons/md"
 import { kebabCase } from "lodash"
-import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis } from "recharts"
+import { MdInfoOutline } from "react-icons/md"
+import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
+import { Box, Flex, Icon, Text, VStack } from "@chakra-ui/react"
+
+import type { StatsBoxMetric } from "@/lib/types"
+
+import { RANGES } from "@/lib/constants"
+
+import InlineLink from "../Link"
+import OldText from "../OldText"
+import StatErrorMessage from "../StatErrorMessage"
 import Tooltip from "../Tooltip"
 import Translation from "../Translation"
-import InlineLink from "../Link"
-import StatErrorMessage from "../StatErrorMessage"
-import StatLoadingMessage from "../StatLoadingMessage"
-import { Metric, ranges } from "./useStatsBoxGrid"
-import { Direction } from "../../types"
-import OldText from "../OldText"
 
-const tooltipContent = (metric: Metric) => (
+const tooltipContent = (metric: StatsBoxMetric) => (
   <div>
     <Translation id="data-provided-by" />{" "}
     <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
   </div>
 )
 
-interface IGridItemProps {
-  metric: Metric
-  dir?: Direction
+type GridItemProps = {
+  metric: StatsBoxMetric
 }
 
-export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
+export const GridItem = ({ metric }: GridItemProps) => {
   const { title, description, state, buttonContainer, range } = metric
-  const isLoading = !state.value
-  const value = state.hasError ? (
+  const hasError = "error" in state
+  const hasData = "data" in state
+
+  const value = hasError ? (
     <StatErrorMessage />
-  ) : isLoading ? (
-    <StatLoadingMessage />
   ) : (
     <HStack lineHeight={1} alignItems="baseline" spacing={4}>
       <Box
@@ -45,6 +45,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
             <Icon
               as={MdInfoOutline}
               boxSize="6"
+              me={2}
               _hover={{ fill: "primary.base" }}
               _active={{ fill: "primary.base" }}
               _focus={{ fill: "primary.base" }}
@@ -58,7 +59,7 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
   // Returns either 90 or 30-day data range depending on `range` selection
   const filteredData = (data: Array<{ timestamp: number }>) => {
     if (!data) return
-    if (range === ranges[1]) return [...data]
+    if (range === RANGES[1]) return [...data]
     return data.filter(({ timestamp }) => {
       const millisecondRange = 1000 * 60 * 60 * 24 * 30
       const now = new Date().getTime()
@@ -66,20 +67,21 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
     })
   }
 
-  const minValue = state.data.reduce(
-    (prev, { value }) => (prev < value ? prev : value),
-    1e42
-  )
+  const minValue = hasData
+    ? state.data.reduce(
+        (prev, { value }) => (prev < value ? prev : value),
+        Infinity
+      )
+    : 0
 
-  const maxValue = state.data.reduce(
-    (prev, { value }) => (prev > value ? prev : value),
-    0
-  )
+  const maxValue = hasData
+    ? state.data.reduce((prev, { value }) => (prev > value ? prev : value), 0)
+    : 0
 
   const chart: React.ReactNode = (
     <ResponsiveContainer width="100%" height="100%">
       <AreaChart
-        data={filteredData(state.data)}
+        data={hasData ? filteredData(state.data) : []}
         margin={{ left: -5, right: -5 }}
       >
         <defs>
@@ -125,7 +127,6 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
       height={80}
       flexDirection="column"
       justifyContent="space-between"
-      alignItems="flex-start"
       borderX={{
         base: "0px solid #000000",
         lg: "1px solid",
@@ -149,48 +150,29 @@ export const GridItem: React.FC<IGridItemProps> = ({ metric, dir }) => {
         </Text>
         <OldText>{description}</OldText>
       </Box>
-      {!state.hasError && !isLoading && (
-        <>
-          <Box
-            position="absolute"
-            left={0}
-            bottom={0}
-            width="100%"
-            height="65%"
-          >
-            {chart}
-          </Box>
-          {dir === "rtl" ? (
-            <Box
-              position="absolute"
-              bottom="20px"
-              fontFamily="monospace"
-              left="20px"
-            >
-              {buttonContainer}
-            </Box>
-          ) : (
-            <Box
-              position="absolute"
-              bottom="20px"
-              fontFamily="monospace"
-              right="20px"
-            >
-              {buttonContainer}
-            </Box>
-          )}
-        </>
+      {hasData && (
+        <Box position="absolute" insetInline="0" bottom={0} height="65%">
+          {chart}
+        </Box>
       )}
-      <Box
-        position="absolute"
-        bottom="8%"
-        marginTop={0}
-        color="text"
-        flexWrap="wrap"
-        textOverflow="ellipsis"
-      >
-        {value}
-      </Box>
+      <Flex justifyContent="space-between">
+        <Box
+          fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
+          fontWeight={600}
+          color="text"
+          flexWrap="wrap"
+          textOverflow="ellipsis"
+          lineHeight="1.6rem"
+          mb="2"
+        >
+          {value}
+        </Box>
+        {hasData && (
+          <Box fontFamily="monospace" me="-1" mb="-1">
+            {buttonContainer}
+          </Box>
+        )}
+      </Flex>
     </Flex>
   )
 }

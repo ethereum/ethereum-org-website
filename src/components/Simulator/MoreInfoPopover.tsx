@@ -1,29 +1,27 @@
+import React, { useState } from "react"
+import { motion } from "framer-motion"
+import { MdInfoOutline } from "react-icons/md"
 import {
-  Popover,
-  PopoverTrigger,
   Button,
   Icon,
-  PopoverContent,
+  Popover,
   PopoverArrow,
   PopoverBody,
   type PopoverBodyProps,
   PopoverCloseButton,
+  PopoverContent,
   PopoverHeader,
+  PopoverTrigger,
 } from "@chakra-ui/react"
-import { motion } from "framer-motion"
-import React, { useState } from "react"
-import { MdInfoOutline } from "react-icons/md"
+
 import { PulseAnimation } from "./PulseAnimation"
 
 const MotionButton = motion(Button)
 
-interface IProps extends Pick<PopoverBodyProps, "children"> {
+type MoreInfoPopover = Pick<PopoverBodyProps, "children"> & {
   isFirstStep: boolean
 }
-export const MoreInfoPopover: React.FC<IProps> = ({
-  isFirstStep,
-  children,
-}) => {
+export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
   const [clicked, setClicked] = useState(false)
   return (
     <Popover>

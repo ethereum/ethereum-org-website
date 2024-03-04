@@ -49,12 +49,12 @@
   "page-find-wallet-token-support": "Podrška za tokene",
   "page-find-wallet-features": "Značajke",
   "page-find-wallet-security": "Sigurnost",
-  "page-find-wallet-smart-contract": "Smart contract",
-  "page-find-wallet-check-out": "Check out",
+  "page-find-wallet-smart-contract": "Pametni ugovor",
+  "page-find-wallet-check-out": "Odjava",
   "page-find-wallet-info-updated-on": "informacije ažurirane",
   "page-find-wallet-showing-all-wallets": "Prikaz svih novčanika",
   "page-find-wallet-showing": "Prikazivanje ",
-  "page-find-wallet-wallets": "novčanici",
+  "page-find-wallet-wallets": "novčanika",
   "page-find-wallet-iOS": "iOS",
   "page-find-wallet-android": "Android",
   "page-find-wallet-linux": "Linux",
@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Filtri po značajkama",
   "page-find-wallet-footnote-1": "Prikaz novčanika na ovoj stranici ne predstavlja službeno odobrenje i služi samo za informaciju.",
   "page-find-wallet-footnote-2": "Njihovi opisi primljeni su izravno od projekata novčanika.",
-  "page-find-wallet-footnote-3": "Na ovu stranicu dodajemo proizvode temeljem kriterija iz naše <a href=\"/contributing/adding-wallets/\">politike uvrštenja</a>. Ako želite da dodamo novčanik, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">podignite problem na GitHub-u</a>.",
+  "page-find-wallet-footnote-3": "Na ovu stranicu dodajemo proizvode temeljem kriterija iz naše <a href=\"/contributing/adding-wallets/\">politike uvrštenja</a>. Ako želite da dodamo novčanik, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">rehistrirajte problem na GitHub-u</a>.",
   "page-find-wallet-mobile": "Mobitel",
   "page-find-wallet-mobile-desc": "Novčanici s mobilnim aplikacijama",
   "page-find-wallet-desktop": "Desktop",
@@ -90,5 +90,6 @@
   "page-find-wallet-browser-desc": "Novčanici s ekstenzijama za preglednike",
   "page-find-wallet-device": "Uređaj",
   "page-find-choose-to-compare": "Odaberite za usporedbu",
-  "page-find-wallet-choose-features": "Odaberite značajke"
+  "page-find-wallet-choose-features": "Odaberite značajke",
+  "page-find-wallet-reset-filters": "Resetirajte filtre"
 }

@@ -1,11 +1,14 @@
-import { IconProps } from "@chakra-ui/react"
 import type { ReactElement } from "react"
+import type { Icon } from "@chakra-ui/react"
+
+import { PhoneScreenProps } from "@/lib/types"
+
 import type { PathId } from "./types"
 
 export interface SimulatorPathSummary {
   primaryText: string
   secondaryText?: string
-  Icon: React.FC<IconProps>
+  Icon: typeof Icon
 }
 
 export interface SimulatorExplanation {
@@ -21,23 +24,16 @@ export interface SimulatorNav {
   openPath: (pathId: PathId) => void
 }
 
-export interface SimulatorNavProps {
-  nav: SimulatorNav
-}
-
 export interface LabelHref {
   label: string
   href: string
   isPrimary?: boolean
 }
 
-export interface PhoneScreenProps extends SimulatorNavProps {
-  ctaLabel: string
-}
 export interface SimulatorDetails {
   title: string
-  Icon: React.FC<IconProps>
-  Screen: React.FC<PhoneScreenProps>
+  Icon: typeof Icon
+  Screen: (props: PhoneScreenProps) => JSX.Element
   explanations: Array<SimulatorExplanation>
   ctaLabels: Array<string>
   finalCtaLink: LabelHref
