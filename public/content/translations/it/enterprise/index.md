@@ -68,7 +68,7 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 ### Strumenti e librerie {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Piattaforma di analisi dei dati di Ethereum_
-- [Sirato](https://www.web3labs.com/sirato) _una piattaforma specializzata nell'analisi dei dati per reti pubbliche e private abilitate a Ethereum realizzata da Labs nel Web3_
+- [Chainlens](https://www.chainlens.com/) _una piattaforma specializzata nell'analisi dei dati per reti pubbliche e private abilitate a Ethereum realizzata da Labs nel Web3_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _kit di strumenti per transazioni private_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _applicazione per la firma delle transazioni da usare con un provider web3_
 - [Tenderly](https://tenderly.co/) _una Piattaforma di dati che fornisce analitiche in tempo reale, avvisando e monitorando con supporto alle reti private_

@@ -17,12 +17,12 @@ Você deve entender os conceitos básicos do Ethereum; para que você possa ente
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_ Também disponível em espanhol, francês, italiano, holandês, português, russo, chinês e persa_
 - [Blockscout](https://blockscout.com/)
+- [Chainlens](https://www.chainlens.com/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/) -_ Também disponível em chinês, espanhol, francês, turco, russo, coreano e vietnamita_
+- [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
-- [Sirato](https://www.web3labs.com/sirato)
-- [EthVM](https://www.ethvm.com/)
 
 ## Dados {#data}
 
