@@ -233,16 +233,6 @@ export const useWalletTable = ({
     )
   })
 
-  const filteredFeatureDropdownItems = [...featureDropdownItems].filter(
-    (item) => {
-      return (
-        item.label !== firstFeatureSelect.label &&
-        item.label !== secondFeatureSelect.label &&
-        item.label !== thirdFeatureSelect.label
-      )
-    }
-  )
-
   /**
    *
    * @param selectedOption selected dropdown option
@@ -281,7 +271,6 @@ export const useWalletTable = ({
     featureDropdownItems,
     updateMoreInfo,
     filteredWallets,
-    filteredFeatureDropdownItems,
     updateDropdown,
     setFirstFeatureSelect,
     setSecondFeatureSelect,
