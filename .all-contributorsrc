@@ -11137,6 +11137,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "Flamenk",
+      "name": "Parrot Iwai",
+      "avatar_url": "https://avatars.githubusercontent.com/u/78525550?v=4",
+      "profile": "https://github.com/Flamenk",
+      "contributions": [
+        "doc",
+        "translation"
+      ]
     }
   ],
   "contributorsPerLine": 7,
