@@ -196,6 +196,7 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
     cursor="pointer"
     justifyContent="center"
     height="full"
+    mt={{ base: 10, md: 0 }}
     sx={{
       "&.fade": {
         animation: `${fadeOut} 0.375s`,
@@ -279,6 +280,10 @@ const WalletTable = ({
           const rest = numberOfSupportedLanguages - 5
           const restText = `${rest > 0 ? "+" : ""} ${rest > 0 ? rest : ""}`
           const sliceSize = 5
+          const formattedSupportedLanguages = formatSupportedLanguages(
+            supportedLanguages,
+            sliceSize
+          )
 
           return (
             <WalletContainer key={wallet.key}>
@@ -366,10 +371,7 @@ const WalletTable = ({
                                 fontSize="1rem !important"
                                 fontWeight="normal !important"
                               >
-                                {`${formatSupportedLanguages(
-                                  supportedLanguages,
-                                  sliceSize
-                                )}`}{" "}
+                                {`${formattedSupportedLanguages}`}{" "}
                                 {rest > 0 && (
                                   <SupportedLanguagesTooltip
                                     supportedLanguages={supportedLanguages}
