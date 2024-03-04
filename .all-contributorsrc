@@ -11221,6 +11221,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "viniciusmorais",
+      "name": "Vinicius de Morais",
+      "avatar_url": "https://avatars.githubusercontent.com/u/3915778?v=4",
+      "profile": "https://github.com/viniciusmorais",
+      "contributions": [
+        "translation",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
