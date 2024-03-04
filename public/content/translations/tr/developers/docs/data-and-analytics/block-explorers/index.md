@@ -16,7 +16,7 @@ Bir blok arayıcısının size verdiği verileri anlamlandırabilmeniz için Eth
 - [Etherscan](https://etherscan.io/) -_Ayrıca Çince, Korece, Rusça ve Japonca dillerinde de mevcut_
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_Ayrıca İspanyolca, Fransızca, İtalyanca, Danca, Portekizce, Rusça, Çince ve Farsça olarak da mevcut_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Blok Arayıcısı](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
