@@ -171,7 +171,7 @@ Scammers are always looking for ways to take your funds off you. It is impossibl
 - no one is going to give you free or discounted ETH
 - no one needs access to your private keys or personal information
 
-### Twitter ad phishing
+### Twitter ad phishing {#ad-phishing}
 
 ![Twitter link phishing](./twitterPhishingScam.png)
 
