@@ -40,6 +40,7 @@ import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
+import { SupportedLanguagesTooltip } from "./SupportedLanguagesTooltip"
 import { WalletEmptyState } from "./WalletEmptyState"
 
 import { useLanguagesList } from "@/hooks/useLanguagesList"
@@ -268,11 +269,16 @@ const WalletTable = ({
           wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
 
           const walletPersonas = getWalletPersonas(wallet)
+          // Supported languages
           const supportedLanguages = getSupportedLanguages(
             wallet.languages_supported,
             languagesList,
             locale!
           )
+          const numberOfSupportedLanguages = supportedLanguages.length
+          const rest = numberOfSupportedLanguages - 5
+          const restText = `${rest > 0 ? "+" : ""} ${rest > 0 ? rest : ""}`
+          const sliceSize = 5
 
           return (
             <WalletContainer key={wallet.key}>
@@ -351,7 +357,16 @@ const WalletTable = ({
                                 fontSize="1rem !important"
                                 fontWeight="normal !important"
                               >
-                                {formatSupportedLanguages(supportedLanguages)}
+                                {`${formatSupportedLanguages(
+                                  supportedLanguages,
+                                  sliceSize
+                                )}`}{" "}
+                                {rest > 0 && (
+                                  <SupportedLanguagesTooltip
+                                    supportedLanguages={supportedLanguages}
+                                    restText={restText}
+                                  />
+                                )}
                               </Text>
                             </Flex>
                           </Stack>
