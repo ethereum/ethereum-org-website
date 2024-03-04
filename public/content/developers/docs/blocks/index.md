@@ -56,7 +56,7 @@ The block `body` contains several fields of its own:
 | `eth1_data`          | information about the deposit contract             |
 | `graffiti`           | arbitrary data used to tag blocks                  |
 | `proposer_slashings` | list of validators to be slashed                   |
-| `attester_slashings` | list of validators to be slashed                   |
+| `attester_slashings` | list of attesters to be slashed                   |
 | `attestations`       | list of attestations in favor of the current block |
 | `deposits`           | list of new deposits to the deposit contract       |
 | `voluntary_exits`    | list of validators exiting the network             |
