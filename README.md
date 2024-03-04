@@ -1745,6 +1745,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://maxammann.org/"><img src="https://avatars.githubusercontent.com/u/905221?v=4?s=100" width="100px;" alt="Max Ammann"/><br /><sub><b>Max Ammann</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=maxammann" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/dswilson4"><img src="https://avatars.githubusercontent.com/u/33137497?v=4?s=100" width="100px;" alt="dswilson4"/><br /><sub><b>dswilson4</b></sub></a><br /><a href="#content-dswilson4" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://ethereum.stackexchange.com/users/2128/viktor-baranov"><img src="https://avatars.githubusercontent.com/u/4341812?v=4?s=100" width="100px;" alt="Victor Baranov"/><br /><sub><b>Victor Baranov</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=vbaranov" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/drehuwann"><img src="https://avatars.githubusercontent.com/u/62968123?v=4?s=100" width="100px;" alt="drehuwann"/><br /><sub><b>drehuwann</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=drehuwann" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
