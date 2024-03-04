@@ -1,12 +1,5 @@
 import React from "react"
-import {
-  Box,
-  Checkbox,
-  CheckboxGroup,
-  Flex,
-  Heading,
-  useColorModeValue,
-} from "@chakra-ui/react"
+import { Box, Checkbox, CheckboxGroup, Flex, Heading } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getPersonaBorderColor } from "@/lib/utils/wallets"

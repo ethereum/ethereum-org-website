@@ -17,7 +17,6 @@ import {
   List,
   SimpleGrid,
   Text,
-  useColorModeValue,
   VStack,
 } from "@chakra-ui/react"
 
