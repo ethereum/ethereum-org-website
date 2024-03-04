@@ -1,15 +1,15 @@
-import React, { useState, useEffect, ReactNode } from "react"
+import { ReactNode, useEffect, useState } from "react"
+import { motion } from "framer-motion"
+import { useTranslation } from "next-i18next"
+import { MdExpandMore } from "react-icons/md"
 import { Box, HStack, Icon } from "@chakra-ui/react"
 
-import { motion } from "framer-motion"
-import { MdExpandMore } from "react-icons/md"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { ChildOnlyProp } from "@/lib/types"
+import { DeveloperDocsLink } from "@/lib/interfaces"
 
-import Link, { BaseLink, IProps as ILinkProps } from "./Link"
-import Translation from "./Translation"
+import { BaseLink, LinkProps } from "@/components/Link"
 
 import docLinks from "../data/developer-docs-links.yaml"
-import { DeveloperDocsLink } from "../types"
 
 export const dropdownIconContainerVariant = {
   open: {
@@ -33,14 +33,14 @@ const innerLinksVariants = {
   },
 }
 
-const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
+const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
     <HStack
       w="full"
       justify="space-between"
       py={2}
-      pr={4}
-      pl={8}
+      pe={4}
+      ps={8}
       _hover={{ bgColor: "ednBackground" }}
     >
       {children}
@@ -48,7 +48,7 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
+const SideNavLink = ({ children, ...props }: LinkProps) => {
   return (
     <BaseLink
       w="full"
@@ -64,13 +64,16 @@ const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
   )
 }
 
-export interface IPropsNavLink {
+export type NavLinkProps = {
   item: DeveloperDocsLink
   path: string
+  isTopLevel?: boolean
 }
 
-const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
-  const isLinkInPath = path.includes(item.to) || path.includes(item.path)
+const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
+  const { t } = useTranslation("page-developers-docs")
+  const isLinkInPath =
+    isTopLevel || path.includes(item.to) || path.includes(item.path)
   const [isOpen, setIsOpen] = useState<boolean>(isLinkInPath)
 
   useEffect(() => {
@@ -88,12 +91,12 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
         <LinkContainer>
           {item.to && (
             <SideNavLink to={item.to} isPartiallyActive={false}>
-              <Translation id={item.id} />
+              {t(item.id)}
             </SideNavLink>
           )}
           {!item.to && (
             <Box w="full" cursor="pointer" onClick={() => setIsOpen(!isOpen)}>
-              <Translation id={item.id} />
+              {t(item.id)}
             </Box>
           )}
           <Box
@@ -111,11 +114,11 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
           fontSize="sm"
           lineHeight="tall"
           fontWeight="normal"
-          ml={4}
+          ms={4}
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
-          initial="closed"
+          initial={isOpen ? "open" : "closed"}
         >
           {item.items.map((childItem, idx) => (
             <NavLink item={childItem} path={path} key={idx} />
@@ -128,29 +131,28 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path }) => {
     <Box>
       <LinkContainer>
         <SideNavLink to={item.to} isPartiallyActive={false}>
-          <Translation id={item.id} />
+          {t(item.id)}
         </SideNavLink>
       </LinkContainer>
     </Box>
   )
 }
 
-export interface IProps {
+export interface SideNavProps {
   path: string
 }
 
 // TODO set tree state based on if current path is a child
 // of the given parent. Currently all `path` items default to open
 // and they only collapse when clicked on.
-// e.g. solution: https://github.com/hasura/gatsby-gitbook-starter/blob/5c165af40e48fc55eb06b45b95c84eb64b17ed32/src/components/sidebar/tree.js
-const SideNav: React.FC<IProps> = ({ path }) => {
-  const { t } = useTranslation()
+const SideNav = ({ path }: SideNavProps) => {
+  const { t } = useTranslation("page-developers-docs")
 
   return (
     <Box
       as="nav"
       position="sticky"
-      top="7.25rem"
+      top="19"
       pt={8}
       pb={16}
       h="calc(100vh - 80px)" // TODO take footer into account for height?
@@ -160,13 +162,13 @@ const SideNav: React.FC<IProps> = ({ path }) => {
       transition="transform 0.2s ease"
       bgColor="background.base"
       boxShadow="1px 0px 0px rgba(0, 0, 0, 0.1)"
-      borderRight="1px solid"
-      borderRightColor="border"
+      borderInlineEnd="1px solid"
+      borderInlineEndColor="border"
       display={{ base: "none", lg: "block" }}
-      aria-label={t("nav-developers-docs")}
+      aria-label={t("common:nav-developers-docs")}
     >
       {docLinks.map((item, idx) => (
-        <NavLink item={item} path={path} key={idx} />
+        <NavLink item={item} path={path} key={idx} isTopLevel />
       ))}
     </Box>
   )

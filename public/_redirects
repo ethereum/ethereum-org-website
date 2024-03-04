@@ -1,0 +1,175 @@
+/discord https://discord.gg/ethereum-org 301!
+
+/*/discord https://discord.gg/ethereum-org 301!
+
+/pdfs/* /en/ 301!
+
+/brand /en/assets/ 301!
+
+/ether /en/eth/ 301!
+
+/token /en/developers/ 301!
+
+/crowdsale /en/developers/ 301!
+
+/cli /en/developers/ 301!
+
+/greeter /en/developers/ 301!
+
+/search /en/ 301!
+
+/use /en/dapps/ 301!
+
+/beginners /en/what-is-ethereum/ 301!
+
+/eth2/ /en/roadmap/ 301!
+
+/build/ /en/developers/learning-tools/ 301!
+
+/nfts/ /en/nft/ 301!
+
+/daos/ /en/dao/ 301!
+
+/layer2/ /en/layer-2/ 301!
+
+/*/layer2/ /:splat/layer-2/ 301!
+
+/grants/ /en/community/grants/ 301!
+
+/no/* /nb/:splat 301!
+
+/ph/* /fil/:splat 301!
+
+/java/ /en/developers/docs/programming-languages/java/ 301!
+
+/en/java/ /en/developers/docs/programming-languages/java/ 301!
+
+/python/ /en/developers/docs/programming-languages/python/ 301!
+
+/en/python/ /en/developers/docs/programming-languages/python/ 301!
+
+/javascript/ /en/developers/docs/programming-languages/javascript/ 301!
+
+/en/javascript/ /en/developers/docs/programming-languages/javascript/ 301!
+
+/golang/ /en/developers/docs/programming-languages/golang/ 301!
+
+/en/golang/ /en/developers/docs/programming-languages/golang/ 301!
+
+/rust/ /en/developers/docs/programming-languages/rust/ 301!
+
+/en/rust/ /en/developers/docs/programming-languages/rust/ 301!
+
+/dot-net/ /en/developers/docs/programming-languages/dot-net/ 301!
+
+/en/dot-net/ /en/developers/docs/programming-languages/dot-net/ 301!
+
+/delphi/ /en/developers/docs/programming-languages/delphi/ 301!
+
+/en/delphi/ /en/developers/docs/programming-languages/delphi/ 301!
+
+/dart/ /en/developers/docs/programming-languages/dart/ 301!
+
+/en/dart/ /en/developers/docs/programming-languages/dart/ 301!
+
+/developers/docs/mining/ /en/developers/docs/consensus-mechanisms/pow/mining/ 301!
+
+/en/developers/docs/mining/ /en/developers/docs/consensus-mechanisms/pow/mining/ 301!
+
+/*/beginners /:splat/what-is-ethereum/ 301!
+
+/*/build /:splat/developers/learning-tools/ 301!
+
+/*/eth2/beacon-chain/ /:splat/upgrades/beacon-chain/ 301!
+
+/*/eth2/the-beacon-chain/ /:splat/upgrades/beacon-chain/ 301!
+
+/*/upgrades/the-beacon-chain/ /:splat/upgrades/beacon-chain/ 301!
+
+/*/eth2/merge /:splat/upgrades/merge/ 301!
+
+/*/eth2/the-merge /:splat/upgrades/merge/ 301!
+
+/*/upgrades/the-merge /:splat/upgrades/merge/ 301!
+
+/*/eth2/docking /:splat/upgrades/merge/ 301!
+
+/*/upgrades/docking /:splat/upgrades/merge/ 301!
+
+/*/eth2/the-docking /:splat/upgrades/merge/ 301!
+
+/*/upgrades/the-docking /:splat/upgrades/merge/ 301!
+
+/*/eth2/shard-chains/ /:splat/roadmap/danksharding/ 301!
+
+/*/upgrades/shard-chains/ /:splat/roadmap/danksharding/ 301!
+
+/upgrades/sharding/ /en/roadmap/danksharding/ 301!
+
+/*/upgrades/sharding/ /:splat/roadmap/danksharding/ 301!
+
+/upgrades/shard-chains/ /en/roadmap/danksharding/ 301!
+
+/upgrades/merge /en/roadmap/merge/ 301!
+
+/*/upgrades/merge /:splat/roadmap/merge/ 301!
+
+/upgrades/merge/issuance /en/roadmap/merge/issuance 301!
+
+/*/upgrades/merge/issuance /:splat/roadmap/merge/issuance 301!
+
+/upgrades/beacon-chain /en/roadmap/beacon-chain 301!
+
+/*/upgrades/beacon-chain /:splat/roadmap/beacon-chain 301!
+
+/upgrades/vision/ /en/roadmap/vision/ 301!
+
+/*/upgrades/vision/ /:splat/roadmap/vision/ 301!
+
+/upgrades /en/roadmap 301!
+
+/*/upgrades /:splat/roadmap 301!
+
+/upgrades/get-involved /contributing 301!
+
+/*/upgrades/get-involved /:splat/contributing 301!
+
+/*/eth2/staking/ /:splat/staking/ 301!
+
+/*/eth2/vision/ /:splat/roadmap/vision/ 301!
+
+/*/eth2/get-involved/ /:splat/upgrades/get-involved/ 301!
+
+/*/eth2/get-involved/bug-bounty/ /:splat/bug-bounty/ 301!
+
+/*/upgrades/get-involved/bug-bounty/ /:splat/bug-bounty/ 301!
+
+/*/eth2/deposit-contract/ /:splat/staking/deposit-contract/ 301!
+
+/*/eth2 /:splat/upgrades/ 301!
+
+/*/developers/docs/scaling /:splat/developers/docs/scaling 301!
+
+/*/developers/docs/scaling/layer-2-rollups /:splat/developers/docs/scaling 301!
+
+/*/about/web-developer /:splat/about/#open-jobs 301!
+
+/*/about/product-designer /:splat/about/#open-jobs 301!
+
+/*/use /:splat/dapps/ 301!
+
+/*/contributing/translation-program/translation-guide/ /:splat/contributing/translation-program/faq/ 301!
+
+/*/contributing/translation-program/content-versions/ /:splat/contributing/translation-program/content-buckets/ 301!
+
+/*/developers/docs/smart-contracts/source-code-verification/ /:splat/developers/docs/smart-contracts/verifying/ 301!
+
+/*/developers/docs/smart-contracts/upgrading-smart-contracts/ /:splat/developers/docs/smart-contracts/upgrading/ 301!
+
+/staking/withdraws /en/staking/withdrawals/ 301!
+
+/*/writing-cohort https://ethereumwriterscohort.carrd.co/ 301!
+
+/*/staking/withdraws /:splat/staking/withdrawals/ 301!
+
+/*/guides/how-to-register-an-ethereum-account /:splat/guides/how-to-create-an-ethereum-account/ 301!

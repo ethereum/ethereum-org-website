@@ -1,18 +1,15 @@
-import { Box, Flex, Grid, Icon, Text, TextProps } from "@chakra-ui/react"
 import React from "react"
 import { motion } from "framer-motion"
-import { EthGlyphIcon } from "../../icons"
 import { PiCheckThin } from "react-icons/pi"
+import { Box, Flex, Grid, Icon, Text, TextProps } from "@chakra-ui/react"
 
-interface IProps extends Pick<TextProps, "children"> {
+import { EthGlyphIcon } from "../../icons"
+
+type SliderProps = Pick<TextProps, "children"> & {
   isConnected: boolean
   displayUrl: string
 }
-export const Slider: React.FC<IProps> = ({
-  isConnected,
-  displayUrl,
-  children,
-}) => {
+export const Slider = ({ isConnected, displayUrl, children }: SliderProps) => {
   const ICON_SIZE = "4.5rem" as const
   return (
     <>
@@ -67,7 +64,7 @@ export const Slider: React.FC<IProps> = ({
                 transition={{ delay: 0.15 }}
               >
                 <Text textAlign="center" px={{ base: 4, md: 8 }}>
-                  You're logged in!
+                  You&apos;re logged in!
                 </Text>
               </motion.div>
             </Flex>
