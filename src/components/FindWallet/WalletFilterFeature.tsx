@@ -9,6 +9,7 @@ import {
   AccordionPanel,
   Box,
   Checkbox,
+  Flex,
   GridItem,
   Heading,
   HStack,
@@ -129,7 +130,7 @@ const WalletFilterFeature = ({
                       >
                         <SimpleGrid
                           key={uniqueId("walletFilterSidebarItemPanel")}
-                          templateColumns="28px auto 34px"
+                          templateColumns="28px auto"
                           alignItems="center"
                           columnGap={2.5}
                           cursor="pointer"
@@ -163,25 +164,33 @@ const WalletFilterFeature = ({
                           <GridItem>
                             <LabelIcon boxSize={7} mt={0.5} aria-hidden />
                           </GridItem>
+
                           <GridItem as="span" lineHeight="1.1rem">
-                            {item.title}
+                            <Flex
+                              alignItems="center"
+                              justifyContent="space-between"
+                            >
+                              <>{item.title}</>
+
+                              <>
+                                {item.filterKey && (
+                                  <FilterToggle
+                                    ariaLabel={item.title}
+                                    conditionItem={
+                                      restProps.filters[item.filterKey]
+                                    }
+                                  />
+                                )}
+                                {item.showOptions !== undefined && (
+                                  <FilterToggle
+                                    ariaLabel={item.title}
+                                    conditionItem={item.showOptions}
+                                  />
+                                )}
+                              </>
+                            </Flex>
                           </GridItem>
-                          <GridItem>
-                            {item.filterKey && (
-                              <FilterToggle
-                                ariaLabel={item.title}
-                                conditionItem={
-                                  restProps.filters[item.filterKey]
-                                }
-                              />
-                            )}
-                            {item.showOptions !== undefined && (
-                              <FilterToggle
-                                ariaLabel={item.title}
-                                conditionItem={item.showOptions}
-                              />
-                            )}
-                          </GridItem>
+
                           <GridItem
                             as="span"
                             color="body.medium"
