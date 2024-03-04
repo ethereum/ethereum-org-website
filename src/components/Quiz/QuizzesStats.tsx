@@ -1,35 +1,36 @@
-import React, { useContext } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { FaTwitter } from "react-icons/fa"
 import {
   Box,
   Circle,
   Flex,
-  Grid,
   GridItem,
+  Highlight,
+  HStack,
+  ListItem,
   Progress,
+  SimpleGrid,
   Stack,
   Text,
+  UnorderedList,
 } from "@chakra-ui/react"
-import { FaTwitter } from "react-icons/fa"
-import { useI18next } from "gatsby-plugin-react-i18next"
 
-import Button from "../Button"
-import Translation from "../Translation"
+import { CompletedQuizzes, QuizShareStats } from "@/lib/types"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
+import { Button } from "../Buttons"
 import { TrophyIcon } from "../icons/quiz"
+import Translation from "../Translation"
 
-import { QuizzesHubContext } from "./context"
-
-// Utils
 import {
   getFormattedStats,
   getNumberOfCompletedQuizzes,
   getTotalQuizzesPoints,
   shareOnTwitter,
 } from "./utils"
-import { trackCustomEvent } from "../../utils/matomo"
-
-import { QuizShareStats } from "../../types"
-
-import { ethereumBasicsQuizzes, usingEthereumQuizzes } from "../../data/quizzes"
 
 const handleShare = ({ score, total }: QuizShareStats) => {
   shareOnTwitter({
@@ -44,14 +45,20 @@ const handleShare = ({ score, total }: QuizShareStats) => {
   })
 }
 
-const QuizzesStats: React.FC = () => {
-  const { language } = useI18next()
-  const {
-    userStats: { score: userScore, completed, average },
-  } = useContext(QuizzesHubContext)
-  const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(
-    JSON.parse(completed)
-  )
+type QuizzesStatsProps = {
+  totalCorrectAnswers: number
+  averageScoresArray: number[]
+  completedQuizzes: CompletedQuizzes
+}
+
+const QuizzesStats = ({
+  totalCorrectAnswers,
+  averageScoresArray,
+  completedQuizzes,
+}: QuizzesStatsProps) => {
+  const { locale } = useRouter()
+  const { t } = useTranslation("learn-quizzes")
+  const numberOfCompletedQuizzes = getNumberOfCompletedQuizzes(completedQuizzes)
 
   // These values are not fixed but calculated each time, can't be moved to /constants
   const totalQuizzesNumber =
@@ -63,143 +70,131 @@ const QuizzesStats: React.FC = () => {
     formattedCollectiveQuestionsAnswered,
     formattedCollectiveAverageScore,
     formattedCollectiveRetryRate,
-  } = getFormattedStats(language, average)
+  } = getFormattedStats(locale!, averageScoresArray)
 
   return (
-    <Box flex={1} order={{ base: 1, lg: 2 }} w="full">
-      <Stack mt={{ base: 0, lg: 12 }} gap={{ base: 8, lg: 4 }}>
+    <Box>
+      <Stack mt={{ base: 0, lg: "12" }} spacing={{ base: "4", lg: "2" }}>
         {/* user stats */}
-        <Grid
-          gap={4}
+        <SimpleGrid
+          columns={{ base: 1, lg: 2 }}
+          gap={{ base: "6", lg: "4" }}
           bg="background.highlight"
           borderRadius={{ base: "none", lg: "lg" }}
           border="none"
-          p={8}
-          mb={-2}
+          p="8"
         >
-          <GridItem colSpan={{ base: 2, lg: 1 }} alignSelf="center" order={1}>
+          <GridItem alignSelf="center" order={1}>
             <Text
-              color="body.base"
               fontWeight="bold"
-              fontSize="xl"
-              margin={0}
+              size="xl"
               textAlign={{ base: "center", lg: "left" }}
             >
-              <Translation id="your-total" />
+              {t("your-total")}
             </Text>
           </GridItem>
 
-          <GridItem
-            colSpan={{ base: 2, lg: 1 }}
-            justifySelf={{ base: "auto", lg: "end" }}
-            alignSelf="center"
-            order={{ base: 3, lg: 2 }}
-          >
+          <GridItem justifySelf={{ lg: "end" }} order={{ base: 3, lg: 2 }}>
             <Button
-              variant="outline-color"
+              variant="outline"
               leftIcon={<FaTwitter />}
               onClick={() =>
-                handleShare({ score: userScore, total: totalQuizzesPoints })
+                handleShare({
+                  score: totalCorrectAnswers,
+                  total: totalQuizzesPoints,
+                })
               }
               w={{ base: "full", lg: "auto" }}
-              mt={{ base: 2, lg: 0 }}
             >
-              <Translation id="share-results" />
+              {t("share-results")}
             </Button>
           </GridItem>
 
-          <GridItem colSpan={2} order={{ base: 2, lg: 3 }}>
-            <Stack gap={2}>
-              <Flex
-                justifyContent={{ base: "center", lg: "flex-start" }}
-                alignItems="center"
+          <GridItem colSpan={{ lg: 2 }} order={{ base: 2, lg: 3 }}>
+            <Stack spacing="2">
+              <HStack
+                spacing="4"
+                justify={{ base: "center", lg: "flex-start" }}
               >
-                <Circle size="64px" bg="primary.base" mr={4}>
+                <Circle size="64px" bg="primary.base">
                   <TrophyIcon color="neutral" w="35.62px" h="35.62px" />
                 </Circle>
-
-                <Text fontWeight="bold" fontSize="5xl" mb={0} color="body.base">
-                  {userScore}
-                  <Text as="span" color="body.medium">
-                    /{totalQuizzesPoints}
-                  </Text>
+                <Text as="span" fontWeight="bold" fontSize="5xl">
+                  <Highlight
+                    query={`/${totalQuizzesPoints}`}
+                    styles={{ color: "body.medium" }}
+                  >
+                    {totalCorrectAnswers + "/" + totalQuizzesPoints}
+                  </Highlight>
                 </Text>
-              </Flex>
+              </HStack>
 
-              <Progress value={(userScore / totalQuizzesPoints) * 100} />
+              <Progress
+                value={(totalCorrectAnswers / totalQuizzesPoints) * 100}
+              />
 
-              <Flex direction={{ base: "column", lg: "row" }}>
-                <Text
-                  mr={10}
-                  mb={0}
-                  mt={{ base: 2, lg: 0 }}
-                  color="body.medium"
-                >
-                  <Translation id="average-score" />{" "}
-                  <Text as="span" color="body.base">
-                    {formattedUserAverageScore}
-                  </Text>
+              <Flex columnGap="10" direction={{ base: "column", lg: "row" }}>
+                <Text mt={{ base: "2", lg: 0 }} color="body.medium">
+                  {t("average-score")}{" "}
+                  <Text as="span">{formattedUserAverageScore}</Text>
                 </Text>
 
-                <Text mb={0} color="body.medium">
-                  <Translation id="completed" />{" "}
-                  <Text as="span" color="body.base">
+                <Text color="body.medium">
+                  {t("completed")}{" "}
+                  <Text as="span">
                     {numberOfCompletedQuizzes}/{totalQuizzesNumber}
                   </Text>
                 </Text>
               </Flex>
             </Stack>
           </GridItem>
-        </Grid>
+        </SimpleGrid>
 
         {/* community stats */}
-        <Flex
-          direction="column"
-          gap={6}
-          justifyContent="space-between"
+        <Stack
+          gap="6"
           bg="background.highlight"
-          borderRadius={{ base: "none", lg: "lg" }}
+          borderRadius={{ lg: "lg" }}
           border="none"
-          p={8}
+          p="8"
         >
-          <Text color="body.base" fontWeight="bold" fontSize="xl" mb={0}>
-            <Translation id="community-stats" />
+          <Text fontWeight="bold" fontSize="xl">
+            {t("community-stats")}
           </Text>
 
           <Flex
+            as={UnorderedList}
             direction={{ base: "column", md: "row" }}
-            gap={{ base: 6, md: 10 }}
+            columnGap="20"
+            rowGap="6"
+            m={0}
           >
-            <Stack>
-              <Text mr={10} mb={-2} color="body.medium">
-                <Translation id="average-score" />
-              </Text>
-              {/* Data from Matomo, manually updated */}
-              <Text color="body.base">{formattedCollectiveAverageScore}</Text>
-            </Stack>
-
-            <Stack>
-              <Text mr={10} mb={-2} color="body.medium">
-                <Translation id="questions-answered" />
-              </Text>
-
-              {/* Data from Matomo, manually updated */}
-              <Text color="body.base">
-                {formattedCollectiveQuestionsAnswered}
-                <Text as="span">+</Text>
-              </Text>
-            </Stack>
-
-            <Stack>
-              <Text mr={10} mb={-2} color="body.medium">
-                <Translation id="retry" />
-              </Text>
-
-              {/* Data from Matomo, manually updated */}
-              <Text color="body.base">{formattedCollectiveRetryRate}</Text>
-            </Stack>
+            {(
+              [
+                {
+                  labelId: "average-score",
+                  value: formattedCollectiveAverageScore,
+                },
+                {
+                  labelId: "questions-answered",
+                  value: formattedCollectiveQuestionsAnswered + "+",
+                },
+                {
+                  labelId: "retry",
+                  value: formattedCollectiveRetryRate,
+                },
+              ] satisfies Array<{ labelId: string; value: string }>
+            ).map(({ labelId, value }) => (
+              <Stack as={ListItem} key={labelId} spacing={0} m={0}>
+                <Text as="span" color="body.medium">
+                  <Translation id={labelId} options={{ ns: "learn-quizzes" }} />
+                </Text>
+                {/* Data from Matomo, manually updated */}
+                <Text as="span">{value}</Text>
+              </Stack>
+            ))}
           </Flex>
-        </Flex>
+        </Stack>
       </Stack>
     </Box>
   )

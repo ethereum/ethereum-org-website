@@ -2,14 +2,13 @@ import * as React from "react"
 import {
   Table as ChakraTable,
   TableContainer,
+  Tbody,
   Td,
   Th,
-  Tr,
-  ThemingProps,
-  Tbody,
   Thead,
+  ThemingProps,
+  Tr,
 } from "@chakra-ui/react"
-import { MDXProviderComponentsProp } from "@mdx-js/react"
 
 /*
  * TODO: Currently, there are cell spacing issues with some table content.
@@ -24,13 +23,13 @@ interface TableProps extends ThemingProps<"Table"> {
 const Table = (props: TableProps) => {
   const { variant, ...rest } = props
   return (
-    <TableContainer whiteSpace="normal">
+    <TableContainer whiteSpace="normal" position="relative">
       <ChakraTable variant={variant} {...rest} />
     </TableContainer>
   )
 }
 
-export const mdxTableComponents: MDXProviderComponentsProp = {
+export const mdxTableComponents = {
   table: Table,
   th: ({ align, ...rest }) => <Th textAlign={align} {...rest} />,
   td: ({ align, ...rest }) => <Td textAlign={align} {...rest} />,

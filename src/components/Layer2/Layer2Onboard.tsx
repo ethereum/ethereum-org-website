@@ -1,38 +1,35 @@
-// Libraries
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import React, { useState } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useState } from "react"
+import { StaticImageData } from "next/image"
+import { useTranslation } from "next-i18next"
 import {
   Box,
   chakra,
   Flex,
-  Heading,
-  Img,
   ListItem,
   SimpleGrid,
   Stack,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react"
 
-// Components
-import ButtonLink from "../ButtonLink"
-import InlineLink from "../Link"
-import Translation from "../Translation"
-import { StyledSelect as Select } from "../SharedStyledComponents"
+import type { ChildOnlyProp } from "@/lib/types"
+
+import { Image } from "@/components/Image"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 // Data
 import {
-  cexOnboardData,
   CexOnboard,
+  cexOnboardData,
 } from "../../data/layer-2/cex-layer-2-onboard"
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
+// Components
+import { ButtonLink } from "../Buttons"
+import InlineLink from "../Link"
+import OldHeading from "../OldHeading"
+import Text from "../OldText"
+import { StyledSelect as Select } from "../SharedStyledComponents"
 
-//Utils
-import { trackCustomEvent } from "../../utils/matomo"
-import { ChildOnlyProp } from "../../types"
-
-// Styles
 const Flex50 = (props: ChildOnlyProp) => (
   <Box flex={{ base: "100%", md: "50%" }} {...props} />
 )
@@ -65,7 +62,7 @@ const SelectedContainer = (props: ChildOnlyProp) => (
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     mt={0}
     fontSize={{ base: "xl", md: "2xl" }}
@@ -76,7 +73,7 @@ const H3 = (props: ChildOnlyProp) => (
 )
 
 const H4 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     fontWeight={500}
@@ -115,18 +112,18 @@ interface CexOnboardOption extends Option {
   cexOnboard: CexOnboard
 }
 
-export interface IProps {
+export type Layer2OnboardProps = {
   layer2DataCombined: Array<Layer2>
-  ethIcon: IGatsbyImageData
+  ethIcon: StaticImageData
   ethIconAlt: string
 }
 
-const Layer2Onboard: React.FC<IProps> = ({
+const Layer2Onboard = ({
   layer2DataCombined,
   ethIcon,
   ethIconAlt,
-}) => {
-  const { t } = useTranslation()
+}: Layer2OnboardProps) => {
+  const { t } = useTranslation("page-layer-2")
 
   const [selectedCexOnboard, setSelectedCexOnboard] = useState<
     CexOnboard | undefined
@@ -226,31 +223,25 @@ const Layer2Onboard: React.FC<IProps> = ({
   return (
     <Box bg="layer2Gradient" borderRadius="sm" p={10}>
       <Box textAlign="center" maxW="75ch" m="auto">
-        <Heading
+        <OldHeading
           fontSize={{ base: "2xl", md: "2rem" }}
           mt="12"
           fontWeight={600}
           lineHeight={1.4}
         >
-          <Translation id="layer-2-onboard-title" />
-        </Heading>
-        <Text>
-          <Translation id="layer-2-onboard-1" />
-        </Text>
+          {t("layer-2-onboard-title")}
+        </OldHeading>
+        <Text>{t("layer-2-onboard-1")}</Text>
       </Box>
       <SimpleGrid {...gridContentPlacementStyles.gridContainer}>
         <Flex flexDir="column">
           {/* LeftDescription */}
           <Box>
-            <H4>
-              <Translation id="layer-2-onboard-wallet-title" />
-            </H4>
-            <Text>
-              <Translation id="layer-2-onboard-wallet-1" />
-            </Text>
+            <H4>{t("layer-2-onboard-wallet-title")}</H4>
+            <Text>{t("layer-2-onboard-wallet-1")}</Text>
             <Text>
               <InlineLink to="/bridges/">
-                <Translation id="layer-2-more-on-bridges" />
+                {t("layer-2-more-on-bridges")}
               </InlineLink>
             </Text>
           </Box>
@@ -274,16 +265,12 @@ const Layer2Onboard: React.FC<IProps> = ({
         <Flex flexDir="column">
           {/* RightDescription */}
           <Box>
-            <H4>
-              <Translation id="layer-2-onboard-exchange-title" />
-            </H4>
+            <H4>{t("layer-2-onboard-exchange-title")}</H4>
+            <Text>{t("layer-2-onboard-exchange-1")}</Text>
             <Text>
-              <Translation id="layer-2-onboard-exchange-1" />
-            </Text>
-            <Text>
-              <Translation id="layer-2-onboard-exchange-2" />{" "}
+              {t("layer-2-onboard-exchange-2")}{" "}
               <InlineLink to="/wallets/find-wallet/">
-                <Translation id="layer-2-onboard-find-a-wallet" />
+                {t("layer-2-onboard-find-a-wallet")}
               </InlineLink>
             </Text>
           </Box>
@@ -330,9 +317,7 @@ const Layer2Onboard: React.FC<IProps> = ({
             <SelectedContainer>
               <TwoColumnContent>
                 <Flex50>
-                  <H3>
-                    <Translation id="layer-2-deposits" />
-                  </H3>
+                  <H3>{t("layer-2-deposits")}</H3>
                   <UnorderedList>
                     {selectedExchange.supports_deposits.map((l2) => (
                       <ListItem key={l2}>{l2}</ListItem>
@@ -340,9 +325,7 @@ const Layer2Onboard: React.FC<IProps> = ({
                   </UnorderedList>
                 </Flex50>
                 <Flex50>
-                  <H3>
-                    <Translation id="layer-2-withdrawals" />
-                  </H3>
+                  <H3>{t("layer-2-withdrawals")}</H3>
                   <UnorderedList>
                     {selectedExchange.supports_withdrawals.map((l2) => (
                       <ListItem key={l2}>{l2}</ListItem>
@@ -372,12 +355,11 @@ const Layer2Onboard: React.FC<IProps> = ({
         )}
         {/* EthLogo */}
         <Box {...gridContentPlacementStyles.logo}>
-          <Img
-            as={GatsbyImage}
-            image={ethIcon}
-            objectFit="contain"
+          <Image
+            src={ethIcon}
             alt={ethIconAlt}
-            w="full"
+            width={50}
+            style={{ objectFit: "contain" }}
           />
         </Box>
       </SimpleGrid>

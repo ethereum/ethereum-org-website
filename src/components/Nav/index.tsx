@@ -1,39 +1,65 @@
-import React, { FC, useRef } from "react"
-import { Icon, Flex, Box, HStack, useDisclosure } from "@chakra-ui/react"
-import { MdWbSunny, MdBrightness2, MdLanguage } from "react-icons/md"
+import { useRef } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { BsTranslate } from "react-icons/bs"
+import { MdBrightness2, MdWbSunny } from "react-icons/md"
+import {
+  Box,
+  Button,
+  Flex,
+  HStack,
+  Icon,
+  MenuButton,
+  Text,
+  useColorModeValue,
+  useDisclosure,
+  useEventListener,
+} from "@chakra-ui/react"
+
+import { IconButton } from "@/components/Buttons"
+import { EthHomeIcon } from "@/components/icons"
+import LanguagePicker from "@/components/LanguagePicker"
+import { BaseLink } from "@/components/Link"
+import Search from "@/components/Search"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
-import ButtonLink from "../ButtonLink"
-import Link, { BaseLink } from "../Link"
-import Search from "../Search"
-import IconButton from "../IconButton"
-import { EthHomeIcon } from "../icons"
 import { useNav } from "./useNav"
 
-export interface IProps {
-  path: string
-}
-
 // TODO display page title on mobile
-const Nav: FC<IProps> = ({ path }) => {
-  const {
-    ednLinks,
-    fromPageParameter,
-    i18n,
-    isDarkTheme,
-    shouldShowSubNav,
-    t,
-    toggleColorMode,
-    linkSections,
-    mobileNavProps,
-  } = useNav({ path })
+const Nav = () => {
+  const { toggleColorMode, linkSections, mobileNavProps } = useNav()
+  const { locale } = useRouter()
+  const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
-
   const navWrapperRef = useRef(null)
+  const languagePickerState = useDisclosure()
+  const languagePickerRef = useRef<HTMLButtonElement>(null)
+
+  /**
+   * Adds a keydown event listener to toggle color mode (ctrl|cmd + \)
+   * or open the language picker (\).
+   * @param {string} event - The keydown event.
+   */
+  useEventListener("keydown", (e) => {
+    if (e.key !== "\\") return
+    e.preventDefault()
+    if (e.metaKey || e.ctrlKey) {
+      toggleColorMode()
+    } else {
+      if (languagePickerState.isOpen) return
+      languagePickerRef.current?.click()
+    }
+  })
+
+  const ThemeIcon = useColorModeValue(<MdBrightness2 />, <MdWbSunny />)
+  const themeIconAriaLabel = useColorModeValue(
+    "Switch to Dark Theme",
+    "Switch to Light Theme"
+  )
 
   return (
-    <Box position="sticky" top={0} zIndex={100} width="full">
+    <Box position="sticky" top={0} zIndex="sticky" width="full">
       <Flex
         ref={navWrapperRef}
         as="nav"
@@ -47,13 +73,13 @@ const Nav: FC<IProps> = ({ path }) => {
         px={{ base: 4, xl: 8 }}
       >
         <Flex
-          alignItems={{ base: "center", lg: "normal" }}
-          justifyContent={{ base: "space-between", lg: "normal" }}
+          alignItems={{ base: "center", md: "normal" }}
+          justifyContent={{ base: "space-between", md: "normal" }}
           width="full"
           maxW="container.2xl"
         >
           <BaseLink
-            to="/"
+            href="/"
             aria-label={t("home")}
             display="inline-flex"
             alignItems="center"
@@ -64,89 +90,88 @@ const Nav: FC<IProps> = ({ path }) => {
           {/* Desktop */}
           <Flex
             w="full"
-            justifyContent={{ base: "flex-end", lg: "space-between" }}
-            ml={{ base: 3, xl: 8 }}
+            justifyContent={{ base: "flex-end", md: "space-between" }}
+            ms={{ base: 3, xl: 8 }}
           >
-            <Menu hideBelow="lg" path={path} sections={linkSections} />
-            <Flex
-              alignItems="center"
-              justifyContent="space-between"
-              gap={{ base: 2, xl: 4 }}
-            >
+            <Menu hideBelow="md" sections={linkSections} />
+            <Flex alignItems="center"/*  justifyContent="space-between" */>
               <Search {...searchModalDisclosure} />
+              {/* Desktop */}
+              <HStack hideBelow="md" gap="0">
+                <IconButton
+                  transition="transform 0.5s, color 0.2s"
+                  icon={ThemeIcon}
+                  aria-label={themeIconAriaLabel}
+                  variant="ghost"
+                  isSecondary
+                  px={{ base: "2", xl: "3" }}
+                  _hover={{
+                    transform: "rotate(10deg)",
+                    color: "primary.hover",
+                  }}
+                  onClick={toggleColorMode}
+                />
+
+                {/* Locale-picker menu */}
+                <LanguagePicker
+                  placement="bottom-end"
+                  minH="unset"
+                  maxH="75vh"
+                  w="xs"
+                  inset="unset"
+                  top="unset"
+                  menuState={languagePickerState}
+                >
+                  <MenuButton
+                    as={Button}
+                    ref={languagePickerRef}
+                    variant="ghost"
+                    color="body.base"
+                    transition="color 0.2s"
+                    px={{ base: "2", xl: "3" }}
+                    _hover={{
+                      color: "primary.hover",
+                      "& svg": {
+                        transform: "rotate(10deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }}
+                    _active={{
+                      color: "primary.hover",
+                      bg: "primary.lowContrast",
+                    }}
+                    sx={{
+                      "& svg": {
+                        transform: "rotate(0deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }}
+                  >
+                    <Icon
+                      as={BsTranslate}
+                      fontSize="2xl"
+                      verticalAlign="middle"
+                      me={2}
+                    />
+                    <Text hideBelow="lg" as="span">
+                      {t("common:languages")}&nbsp;
+                    </Text>
+                    {locale!.toUpperCase()}
+                  </MenuButton>
+                </LanguagePicker>
+              </HStack>
               {/* Mobile */}
               <MobileNavMenu
                 {...mobileNavProps}
-                hideFrom="lg"
+                linkSections={linkSections}
+                hideFrom="md"
                 toggleSearch={searchModalDisclosure.onOpen}
                 drawerContainerRef={navWrapperRef}
               />
-              <HStack spacing={2} hideBelow="lg">
-                <IconButton
-                  icon={isDarkTheme ? <MdWbSunny /> : <MdBrightness2 />}
-                  aria-label={
-                    isDarkTheme
-                      ? "Switch to Light Theme"
-                      : "Switch to Dark Theme"
-                  }
-                  variant="ghost"
-                  isSecondary
-                  px={1.5}
-                  onClick={toggleColorMode}
-                ></IconButton>
-                <ButtonLink
-                  to={`/languages/${fromPageParameter}`}
-                  leftIcon={<Icon as={MdLanguage} />}
-                  variant="ghost"
-                  isSecondary
-                  px={1.5}
-                >
-                  {t("languages")} {i18n.language.toUpperCase()}
-                </ButtonLink>
-              </HStack>
             </Flex>
           </Flex>
         </Flex>
       </Flex>
-      {shouldShowSubNav && (
-        <Flex
-          as="nav"
-          aria-label={t("nav-developers")}
-          display={{ base: "none", lg: "flex" }}
-          bg="ednBackground"
-          borderBottom="1px"
-          borderColor="border"
-          boxSizing="border-box"
-          py={4}
-          px={8}
-        >
-          {ednLinks.map((link, idx) => (
-            <BaseLink
-              key={idx}
-              to={link.to}
-              isPartiallyActive={link.isPartiallyActive}
-              color="text"
-              fontWeight="normal"
-              textDecor="none"
-              mr={8}
-              _hover={{
-                color: "primary.base",
-                svg: {
-                  fill: "currentColor",
-                },
-              }}
-              _visited={{}}
-              sx={{
-                svg: {
-                  fill: "currentColor",
-                },
-              }}
-            >
-              {link.text}
-            </BaseLink>
-          ))}
-        </Flex>
-      )}
     </Box>
   )
 }

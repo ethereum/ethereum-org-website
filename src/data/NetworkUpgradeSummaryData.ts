@@ -1,17 +1,22 @@
-interface NetworkUpgradeProps {
-  dateTimeAsString?: string
-  ethPriceInUSD?: number
-  waybackLink?: string
-  blockNumber?: number
-  epochNumber?: number
-  slotNumber?: number
-}
+import type { NetworkUpgradeData } from "@/lib/types"
 
-export interface NetworkUpgradeSummaryDataProps {
-  [key: string]: NetworkUpgradeProps
-}
-
-const NetworkUpgradeSummaryData: NetworkUpgradeSummaryDataProps = {
+const NetworkUpgradeSummaryData: NetworkUpgradeData = {
+  cancun: {
+    isPending: true, // Fill in remaining and remove `isPending` once complete
+    dateTimeAsString: "2024-03-13T13:55:35.000Z",
+    // ethPriceInUSD: 0,
+    // waybackLink: "https://web.archive.org/web/{timestamp}/https://ethereum.org/en/",
+    epochNumber: 269568,
+    slotNumber: 269568 * 32,
+  },
+  deneb: {
+    isPending: true, // Fill in remaining and remove `isPending` once complete
+    dateTimeAsString: "2024-03-13T13:55:35.000Z",
+    // ethPriceInUSD: 0,
+    // waybackLink: "https://web.archive.org/web/{timestamp}/https://ethereum.org/en/",
+    epochNumber: 269568,
+    slotNumber: 269568 * 32,
+  },
   shanghai: {
     dateTimeAsString: "2023-04-12T22:27:35.000Z",
     ethPriceInUSD: 1917,

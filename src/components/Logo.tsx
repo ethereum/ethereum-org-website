@@ -1,45 +1,17 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { useColorMode } from "@chakra-ui/react"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
+import { useColorModeValue } from "@chakra-ui/react"
 
-import { getImage } from "../utils/image"
+import { Image } from "@/components/Image"
 
-export interface IProps {}
+import darkImage from "@/public/ef-logo.png"
+import lightImage from "@/public/ef-logo-white.png"
 
-const Logo: React.FC<IProps> = () => {
-  const { t } = useTranslation()
-  const { colorMode } = useColorMode()
-  const isDarkTheme = colorMode === "dark"
-  const data = useStaticQuery(graphql`
-    {
-      dark: file(relativePath: { eq: "ef-logo.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 100
-            layout: FIXED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-      light: file(relativePath: { eq: "ef-logo-white.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            height: 100
-            layout: FIXED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-    }
-  `)
+const Logo = () => {
+  const { t } = useTranslation("common")
+  const image = useColorModeValue(darkImage, lightImage)
 
-  const image = isDarkTheme ? data.light : data.dark
   return (
-    <GatsbyImage image={getImage(image)!} alt={t("ethereum-foundation-logo")} />
+    <Image src={image} h={100} w="auto" alt={t("ethereum-foundation-logo")} />
   )
 }
 

@@ -1,48 +1,58 @@
-// Import libraries
-import React from "react"
-import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+import { useRef } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdSearch } from "react-icons/md"
 import {
+  Box,
   forwardRef,
-  Portal,
   IconButtonProps,
-  useToken,
-  useMediaQuery,
+  Portal,
+  ThemeTypings,
+  type UseDisclosureReturn,
   useMergeRefs,
 } from "@chakra-ui/react"
 import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
-import Button from "../Button"
+
+import { Button } from "@/components/Buttons"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
+import { sanitizeHitUrl } from "@/lib/utils/url"
+
 import SearchButton from "./SearchButton"
 import SearchModal from "./SearchModal"
-import { sanitizeHitUrl } from "../../utils/url"
-import { sanitizeHitTitle } from "../../utils/sanitizeHitTitle"
 
-// Styles
 import "@docsearch/css"
-
-// Utils
-import { trackCustomEvent } from "../../utils/matomo"
 
 export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   (props, ref) => (
-    <Button ref={ref} variant="ghost" isSecondary px={1.5} {...props}>
+    <Button
+      ref={ref}
+      variant="ghost"
+      isSecondary
+      px={2}
+      _hover={{
+        color: "primary.base",
+        transform: "rotate(5deg)",
+        transition: "transform 0.2s ease-in-out",
+      }}
+      transition="transform 0.2s ease-in-out"
+      {...props}
+    >
       <MdSearch />
     </Button>
   )
 )
 
-interface IProps {
-  isOpen: boolean
-  onOpen: () => void
-  onClose: () => void
-}
+type Props = Pick<UseDisclosureReturn, "isOpen" | "onOpen" | "onClose">
 
-const Search = forwardRef<IProps, "button">(
+const Search = forwardRef<Props, "button">(
   ({ isOpen, onOpen, onClose }, ref) => {
-    const searchButtonRef = React.useRef<HTMLButtonElement>(null)
-
+    const { locale } = useRouter()
+    const searchButtonRef = useRef<HTMLButtonElement>(null)
     const mergedButtonRefs = useMergeRefs(ref, searchButtonRef)
+    const { t } = useTranslation("common")
 
     useDocSearchKeyboardEvents({
       isOpen,
@@ -50,20 +60,17 @@ const Search = forwardRef<IProps, "button">(
       onClose,
       searchButtonRef,
     })
-    const { t } = useTranslation()
-    const { language } = useI18next()
-    const appId = process.env.GATSBY_ALGOLIA_APP_ID || ""
-    const apiKey = process.env.GATSBY_ALGOLIA_SEARCH_KEY || ""
-    const indexName =
-      process.env.GATSBY_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
 
-    // Check for the breakpoint with theme token
-    const xlBp = useToken("breakpoints", "xl")
-    const [isLargerThanXl] = useMediaQuery(`(min-width: ${xlBp})`)
+    const appId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || ""
+    const apiKey = process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || ""
+    const indexName =
+      process.env.NEXT_PUBLIC_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
+
+    const breakpointToken: ThemeTypings["breakpoints"] = "xl"
 
     return (
       <>
-        {isLargerThanXl ? (
+        <Box hideBelow={breakpointToken}>
           <SearchButton
             ref={mergedButtonRefs}
             onClick={() => {
@@ -79,7 +86,8 @@ const Search = forwardRef<IProps, "button">(
               buttonAriaLabel: t("search"),
             }}
           />
-        ) : (
+        </Box>
+        <Box hideFrom={breakpointToken}>
           <SearchIconButton
             onClick={() => {
               onOpen()
@@ -92,7 +100,7 @@ const Search = forwardRef<IProps, "button">(
             ref={mergedButtonRefs}
             aria-label={t("aria-toggle-search-button")}
           />
-        )}
+        </Box>
         <Portal>
           {isOpen && (
             <SearchModal
@@ -101,14 +109,16 @@ const Search = forwardRef<IProps, "button">(
               indexName={indexName}
               onClose={onClose}
               searchParameters={{
-                facetFilters: [`lang:${language}`],
+                facetFilters: [`lang:${locale}`],
               }}
               transformItems={(items) =>
                 items.map((item: DocSearchHit) => {
                   const newItem: DocSearchHit = structuredClone(item)
                   newItem.url = sanitizeHitUrl(item.url)
-                  newItem._highlightResult.hierarchy.lvl0.value =
-                    sanitizeHitTitle(item._highlightResult.hierarchy.lvl0.value)
+                  const newTitle = sanitizeHitTitle(
+                    item._highlightResult.hierarchy.lvl0?.value || ""
+                  )
+                  newItem._highlightResult.hierarchy.lvl0.value = newTitle
                   return newItem
                 })
               }

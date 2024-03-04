@@ -4,8 +4,10 @@
   "template-usecase-dropdown-dao": "Zdecentralizowane autonomiczne organizacje (DAO)",
   "template-usecase-dropdown-social-networks": "Zdecentralizowane sieci społecznościowe",
   "template-usecase-dropdown-identity": "Zdecentralizowana tożsamość",
+  "template-usecase-dropdown-desci": "Zdecentralizowana nauka (DeSci)",
+  "template-usecase-dropdown-refi": "Finanse regeneracyjne (ReFi)",
   "template-usecase-dropdown": "Przykłady użycia Ethereum",
-  "template-usecase-banner": "Zastosowanie Ethereum stale się rozwija i ewoluuje. Dodaj wszelkie informacje, które twoim zdaniem sprawią, że wszystko będzie bardziej przejrzyste i aktualne.",
+  "template-usecase-banner": "Zastosowania Ethereum stale się rozwijają i ewoluują. Dodaj wszelkie informacje, które Twoim zdaniem sprawią, że wszystko będzie jaśniejsze lub bardziej aktualne.",
   "template-usecase-edit-link": "Edytuj stronę",
-  "template-usecase-dropdown-aria": "Użyj rozwijanego menu"
+  "template-usecase-dropdown-aria": "Rozwijane menu przykładów użycia"
 }
