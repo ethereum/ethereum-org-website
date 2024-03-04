@@ -60,5 +60,5 @@ jobs:
 
       - name: Create Pull Request
         run: |
-          gh auth login --with-token <<< ${{ secrets.GITHUB_TOKEN }}
+          gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
           gh pr create --base dev --head "automated-update-${{ env.TIMESTAMP }}" --title "Update translation progress from Crowdin - ${{ env.READABLE_DATE }}" --body-file pr_body.txt
