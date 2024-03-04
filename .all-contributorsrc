@@ -11128,6 +11128,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "M4x28",
+      "name": "Leonardo Birardi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64036726?v=4",
+      "profile": "https://github.com/M4x28",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
