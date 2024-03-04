@@ -21,7 +21,7 @@ import {
   Tr,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp } from "@/lib/types"
+import { ChildOnlyProp, WalletFilter } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
@@ -206,8 +206,8 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
   />
 )
 
-export interface WalletTableProps {
-  filters: Record<string, boolean>
+export type WalletTableProps = {
+  filters: WalletFilter
   resetFilters: () => void
   resetWalletFilter: React.MutableRefObject<() => void>
   walletData: WalletData[]

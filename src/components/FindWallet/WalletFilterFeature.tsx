@@ -20,6 +20,8 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
+import { WalletFilter } from "@/lib/types"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useWalletFilterFeature } from "@/hooks/useWalletFilterFeature"
@@ -47,7 +49,7 @@ const FilterToggle = ({
 
 export type WalletFilterFeatureProps = {
   resetWalletFilter: MutableRefObject<() => void>
-  filters: Record<string, boolean>
+  filters: WalletFilter
   updateFilterOption: (key: any) => void
   updateFilterOptions: (key: any, value: any) => void
 }

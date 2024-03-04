@@ -11,7 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-import { Lang } from "@/lib/types"
+import { Lang, WalletFilter } from "@/lib/types"
 
 import InlineLink, { LinkProps } from "@/components/Link"
 
@@ -23,7 +23,7 @@ import { DropdownOption } from "@/hooks/useWalletTable"
 
 interface WalletMoreInfoProps {
   wallet: Record<string, any>
-  filters: Record<string, boolean>
+  filters: WalletFilter
   idx: number
   featureDropdownItems: DropdownOption[]
 }

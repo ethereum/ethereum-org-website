@@ -3,32 +3,16 @@ import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import {
-  Box,
-  Center,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
-  Flex,
-  Hide,
-  Show,
-  Text,
-  useDisclosure,
-  useTheme,
-} from "@chakra-ui/react"
+import { Box, Center, Flex, Hide, Show, Text, useTheme } from "@chakra-ui/react"
 
 import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
 import BannerNotification from "@/components/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import { Button } from "@/components/Buttons"
+import { MobileFiltersMenu } from "@/components/FindWallet/MobileFiltersMenu"
 import WalletFilterPersona from "@/components/FindWallet/WalletFilterPersona"
 import WalletFilterSidebar from "@/components/FindWallet/WalletFilterSidebar"
 import WalletTable from "@/components/FindWallet/WalletTable"
-import { FilterBurgerIcon } from "@/components/icons/wallets/FilterBurgerIcon"
 import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
@@ -37,7 +21,6 @@ import PageMetadata from "@/components/PageMetadata"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   getNonSupportedLocaleWallets,
@@ -85,7 +68,6 @@ const FindWalletPage = () => {
   const theme = useTheme()
   const { t } = useTranslation("page-wallets-find-wallet")
   const resetWalletFilter = useRef(() => {})
-  const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
   const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
 
@@ -196,80 +178,17 @@ const FindWalletPage = () => {
       </Box>
 
       {/* Mobile filters menu */}
-      <Hide above="lg">
-        <Box
-          display={{ base: "block", lg: "none" }}
-          position="sticky"
-          top={NAV_BAR_PX_HEIGHT}
-          bg="background.base"
-          w="full"
-          zIndex="docked"
-          py="5px"
-        >
-          <Button
-            rightIcon={<FilterBurgerIcon />}
-            variant="outline"
-            borderInlineStart="none"
-            borderInlineStartRadius="none"
-            gap={4}
-            sx={{
-              svg: {
-                boxSize: 8,
-                line: { stroke: "primary.base" },
-                circle: { stroke: "primary.base" },
-              },
-            }}
-            onClick={() => {
-              showMobileSidebar ? onClose() : onOpen()
-              trackCustomEvent({
-                eventCategory: "MobileFilterToggle",
-                eventAction: `Tap MobileFilterToggle`,
-                eventName: `show mobile filters ${!showMobileSidebar}`,
-              })
-            }}
-          >
-            <Box>
-              <Text>{t("page-find-wallet-filters")}</Text>
-              <Text fontSize="sm" lineHeight="14px" color="body.medium">
-                {Object.values(filters).reduce(
-                  (acc, filter) => (filter ? acc + 1 : acc),
-                  0
-                )}{" "}
-                {t("page-find-wallet-active")}
-              </Text>
-            </Box>
-          </Button>
-        </Box>
-        <Drawer
-          isOpen={showMobileSidebar}
-          placement="start"
-          onClose={onClose}
-          size="sm"
-        >
-          <DrawerOverlay />
-          <DrawerContent>
-            <DrawerHeader mb={4}>
-              <DrawerCloseButton />
-            </DrawerHeader>
-            <DrawerBody position="relative">
-              <WalletFilterSidebar
-                position="absolute"
-                inset={2}
-                overflow="auto"
-                {...{
-                  filters,
-                  resetWalletFilter,
-                  updateFilterOption,
-                  updateFilterOptions,
-                  resetFilters,
-                  selectedPersona,
-                  setFilters,
-                  setSelectedPersona,
-                }}
-              />
-            </DrawerBody>
-          </DrawerContent>
-        </Drawer>
+      <Hide above="md">
+        <MobileFiltersMenu
+          filters={filters}
+          resetWalletFilter={resetWalletFilter}
+          updateFilterOption={updateFilterOption}
+          updateFilterOptions={updateFilterOptions}
+          resetFilters={resetFilters}
+          selectedPersona={selectedPersona}
+          setFilters={setFilters}
+          setSelectedPersona={setSelectedPersona}
+        />
       </Hide>
 
       <Box px={{ md: 4, "2xl": 0 }}>
@@ -290,7 +209,9 @@ const FindWalletPage = () => {
               }}
             />
           </Show>
+
           <Box
+            mt={0.5}
             w="full"
             sx={{
               scrollbarWidth: "thin",

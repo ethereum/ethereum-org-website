@@ -1,21 +1,34 @@
 import { MdCircle } from "react-icons/md"
-import { Box, Flex, Heading, Icon, Text } from "@chakra-ui/react"
+import { Box, Flex, Heading, Icon, Text, useDisclosure } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getPersonaBorderColor } from "@/lib/utils/wallets"
 
 import { useWalletPersonas } from "../../hooks/useWalletPersonas"
 
+interface WalletFilterPersonaProps {
+  resetFilters: any
+  setFilters: any
+  selectedPersona: any
+  setSelectedPersona: any
+}
+
 const WalletFilterPersona = ({
   resetFilters,
   setFilters,
   selectedPersona,
   setSelectedPersona,
-}) => {
+}: WalletFilterPersonaProps) => {
   const personas = useWalletPersonas()
+  const { isOpen: showMobileSidebar } = useDisclosure()
 
   return (
-    <Flex direction={{ base: "column", lg: "row" }} gap={4} mb={2}>
+    <Flex
+      direction={{ base: showMobileSidebar ? "row" : "column", lg: "row" }}
+      gap={showMobileSidebar ? 2 : 4}
+      mb={showMobileSidebar ? 10 : 2}
+      wrap={showMobileSidebar ? "wrap" : "nowrap"}
+    >
       {personas.map((persona, idx) => {
         return (
           <Flex
@@ -23,7 +36,7 @@ const WalletFilterPersona = ({
             direction="column"
             alignItems="flex-start"
             padding={2}
-            w="100%"
+            w={showMobileSidebar ? "49.4%" : "100%"}
             border="solid"
             borderColor={getPersonaBorderColor(selectedPersona, idx)}
             bg="background.highlight"
@@ -53,7 +66,7 @@ const WalletFilterPersona = ({
               }
             }}
           >
-            <Flex alignItems="center" gap={2} mb="0.2rem" px={1.5}>
+            <Flex gap={2} mb={showMobileSidebar ? 0 : "0.2rem"} px={1.5}>
               <Box role="radio" aria-label={`${persona.title} filter`}>
                 <Icon
                   as={MdCircle}
@@ -80,7 +93,8 @@ const WalletFilterPersona = ({
               <Heading
                 as="h3"
                 ms={0}
-                fontSize="1.2rem"
+                fontSize={showMobileSidebar ? "md" : "lg"}
+                fontWeight={showMobileSidebar ? "normal" : "bold"}
                 py={0}
                 pe={1}
                 ps={0}
@@ -92,6 +106,7 @@ const WalletFilterPersona = ({
             </Flex>
 
             <Text
+              display={showMobileSidebar ? "none" : "block"}
               p="0.4rem"
               color={selectedPersona === idx ? "text" : "text200"}
               fontSize="0.9rem"

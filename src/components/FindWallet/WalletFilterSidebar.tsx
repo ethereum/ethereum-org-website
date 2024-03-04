@@ -9,6 +9,7 @@ import {
   Tabs,
   type TabsProps,
   Text,
+  useDisclosure,
   useTheme,
 } from "@chakra-ui/react"
 
@@ -18,7 +19,7 @@ import WalletFilterFeature from "@/components/FindWallet/WalletFilterFeature"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-type WalletFilterSidebarProps = Omit<TabsProps, "children"> & {
+export type WalletFilterSidebarProps = Omit<TabsProps, "children"> & {
   filters: WalletFilter
   resetWalletFilter: React.MutableRefObject<() => void>
   resetFilters: () => void
@@ -43,6 +44,7 @@ const WalletFilterSidebar = ({
 }: WalletFilterSidebarProps) => {
   const theme = useTheme()
   const { t } = useTranslation("page-wallets-find-wallet")
+  const { isOpen: showMobileSidebar } = useDisclosure()
 
   return (
     <Tabs
@@ -71,13 +73,17 @@ const WalletFilterSidebar = ({
         <Flex
           justifyContent="space-between"
           alignItems="center"
-          px={6}
+          px={showMobileSidebar ? 0 : 6}
           py={2}
-          borderBottom="1px solid"
+          borderBottom={showMobileSidebar ? "none" : "1px solid"}
           borderBottomColor="primary.base"
           bg="background.base"
         >
-          <Text fontWeight="bold" lineHeight={1.6}>
+          <Text
+            fontWeight="bold"
+            lineHeight={1.6}
+            fontSize={showMobileSidebar ? "lg" : "md"}
+          >
             {`${t("page-find-wallet-filters")} (${Object.values(filters).reduce(
               (acc, filter) => {
                 if (filter) {
