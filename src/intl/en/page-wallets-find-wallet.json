@@ -21,7 +21,7 @@
   "page-find-wallet-nft-support": "NFT support",
   "page-find-wallet-nft-support-desc": "Wallets that support viewing and interacting with your NFTs",
   "page-find-wallet-connect-to-dapps": "Connect to dapps",
-  "page-find-wallet-connect-to-dapps-desc": "Wallets that connect to applications built on the Ethereum network",
+  "page-find-wallet-connect-to-dapps-desc": "You can connect to applications that support WalletConnect or an alternative",
   "page-find-wallet-staking": "Staking",
   "page-find-wallet-staking-desc": "Stake ETH directly from the wallet",
   "page-find-wallet-swaps": "Swaps",
