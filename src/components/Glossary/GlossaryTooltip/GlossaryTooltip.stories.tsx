@@ -1,12 +1,17 @@
-import React from "react"
-import { Meta, StoryFn } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/react"
 
-import GlossaryTooltip from "."
+import GlossaryTooltipComponent from "."
 
-export default {
-  component: GlossaryTooltip,
-} as Meta<typeof GlossaryTooltip>
+const meta = {
+  title: "Molecules / Overlay Content / Glossary Tooltip",
+  component: GlossaryTooltipComponent,
+} satisfies Meta<typeof GlossaryTooltipComponent>
 
-export const Basic: StoryFn<typeof GlossaryTooltip> = () => (
-  <GlossaryTooltip termKey="big-endian">big-endian</GlossaryTooltip>
-)
+export default meta
+
+export const GlossaryTooltip: StoryObj<typeof meta> = {
+  args: {
+    termKey: "big-endian",
+    children: "big-endian",
+  },
+}

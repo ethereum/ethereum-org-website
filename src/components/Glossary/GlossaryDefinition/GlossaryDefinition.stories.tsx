@@ -1,12 +1,16 @@
-import React from "react"
-import { Meta, StoryFn } from "@storybook/react"
+import { Meta, StoryObj } from "@storybook/react"
 
-import GlossaryDefinition from "."
+import GlossaryDefinitionComponent from "."
 
-export default {
-  component: GlossaryDefinition,
-} as Meta<typeof GlossaryDefinition>
+const meta = {
+  title: "GlossaryDefinition",
+  component: GlossaryDefinitionComponent,
+} as Meta<typeof GlossaryDefinitionComponent>
 
-export const Basic: StoryFn<typeof GlossaryDefinition> = () => (
-  <GlossaryDefinition term="51%-attack" />
-)
+export default meta
+
+export const GlossaryDefinition: StoryObj<typeof meta> = {
+  args: {
+    term: "51%-attack",
+  },
+}

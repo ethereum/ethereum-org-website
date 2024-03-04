@@ -2,9 +2,7 @@ import * as React from "react"
 import { Flex, Radio as RadioComponent, RadioGroup } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-type RadioType = typeof RadioComponent
-
-const meta: Meta<RadioType> = {
+const meta = {
   title: "Atoms / Form / Radio",
   component: RadioComponent,
   argTypes: {
@@ -19,11 +17,11 @@ const meta: Meta<RadioType> = {
       expanded: false,
     },
   },
-}
+} satisfies Meta<typeof RadioComponent>
 
 export default meta
 
-type Story = StoryObj<typeof RadioGroup>
+type Story = StoryObj<typeof meta>
 
 export const Radio: Story = {
   args: {

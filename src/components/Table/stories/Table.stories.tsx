@@ -10,9 +10,7 @@ import {
   MdxTypesOfBridgesData,
 } from "./mockMdxData"
 
-type TableType = typeof TableComponent
-
-const meta: Meta<TableType> = {
+const meta = {
   title: "Molecules / Display Content / Tables",
   component: TableComponent,
   decorators: [
@@ -22,11 +20,11 @@ const meta: Meta<TableType> = {
       </Flex>
     ),
   ],
-}
+} satisfies Meta<typeof TableComponent>
 
 export default meta
 
-type Story = StoryObj<TableType>
+type Story = StoryObj<typeof meta>
 
 export const Tables: Story = {
   args: {
@@ -42,7 +40,7 @@ export const Tables: Story = {
   ),
 }
 
-export const MockDocContent: Story = {
+export const MockDocContent = {
   render: () => (
     <>
       <TableComponent variant="simple">
