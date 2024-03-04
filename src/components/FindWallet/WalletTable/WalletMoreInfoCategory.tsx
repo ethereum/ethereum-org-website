@@ -23,7 +23,7 @@ import { DropdownOption } from "@/hooks/useWalletTable"
 type WalletMoreInfoCategoryProps = {
   wallet: any
   orderedFeatureDropdownItems: DropdownOption[]
-  headingLabel: any
+  headingLabel: string
   sectionName: string
 }
 

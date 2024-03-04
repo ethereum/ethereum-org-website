@@ -4,6 +4,8 @@ import Tooltip from "@/components/Tooltip"
 
 import { formatSupportedLanguages } from "@/lib/utils/wallets"
 
+import { NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN } from "@/lib/constants"
+
 type SupportedLanguagesTooltipProps = {
   supportedLanguages: string[]
   restText: string
@@ -17,7 +19,9 @@ export const SupportedLanguagesTooltip = ({
     <Tooltip
       content={
         <Text fontSize="1rem !important" fontWeight="normal !important">
-          {formatSupportedLanguages(supportedLanguages)}
+          {formatSupportedLanguages(
+            supportedLanguages.slice(NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN)
+          )}
         </Text>
       }
     >

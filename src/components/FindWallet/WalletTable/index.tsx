@@ -38,7 +38,10 @@ import {
 
 import { WalletData } from "@/data/wallets/wallet-data"
 
-import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
+import {
+  NAV_BAR_PX_HEIGHT,
+  NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN,
+} from "@/lib/constants"
 
 import { SupportedLanguagesTooltip } from "./SupportedLanguagesTooltip"
 import { WalletEmptyState } from "./WalletEmptyState"
@@ -279,7 +282,7 @@ const WalletTable = ({
           const numberOfSupportedLanguages = supportedLanguages.length
           const rest = numberOfSupportedLanguages - 5
           const restText = `${rest > 0 ? "+" : ""} ${rest > 0 ? rest : ""}`
-          const sliceSize = 5
+          const sliceSize = NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
           const formattedSupportedLanguages = formatSupportedLanguages(
             supportedLanguages,
             sliceSize

@@ -75,7 +75,9 @@ export const ETHERSCAN_API_URL = "https://api.etherscan.io"
 export const NAV_BAR_PX_HEIGHT = "75px"
 export const FROM_QUERY = "from"
 
-// Wallets features
+// Wallets
+export const NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN = 5
+
 export const WALLETS_FILTERS_DEFAULT = {
   android: false,
   ios: false,
