@@ -88,7 +88,6 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 Building your application on top of a Layer 2 scalability solution can help [address many of the concerns that have previously driven companies to build on private blockchains](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/), yet retain the benefits of building on Mainnet.
 
-
 ## Enterprise applications live on Mainnet {#enterprise-live-on-mainnet}
 
 Here are some of the enterprise applications that have been built on top of the public Ethereum Mainnet
