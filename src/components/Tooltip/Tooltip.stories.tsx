@@ -1,12 +1,13 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import { Box, HStack } from "@chakra-ui/react"
 import { RiInformationLine } from "react-icons/ri"
+import { Box, HStack } from "@chakra-ui/react"
+import { Meta, StoryObj } from "@storybook/react"
+
+import InlineLink from "../Link"
+import Translation from "../Translation"
 
 // TODO: remove `index` when we delete the old tooltip
 import TooltipComponent from "./index"
-import InlineLink from "../Link"
-import Translation from "../Translation"
 
 type TooltipType = typeof TooltipComponent
 

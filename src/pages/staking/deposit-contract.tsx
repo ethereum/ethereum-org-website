@@ -6,16 +6,15 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
-  BoxProps,
   Button,
   type ButtonProps,
   Checkbox,
   Flex,
+  forwardRef,
   Heading,
   Img,
   Text,
   useToken,
-  forwardRef,
 } from "@chakra-ui/react"
 
 import type { BasePageProps, ChildOnlyProp, TranslationKey } from "@/lib/types"

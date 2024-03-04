@@ -1,6 +1,6 @@
 import { popoverAnatomy as parts } from "@chakra-ui/anatomy"
-import { createMultiStyleConfigHelpers } from "@chakra-ui/styled-system"
 import { cssVar } from "@chakra-ui/react"
+import { createMultiStyleConfigHelpers } from "@chakra-ui/styled-system"
 
 const { definePartsStyle, defineMultiStyleConfig } =
   createMultiStyleConfigHelpers(parts.keys)
