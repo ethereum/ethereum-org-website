@@ -78,6 +78,5 @@
   "page-find-wallet-mobile": "Mobile",
   "page-find-wallet-desktop": "Desktop",
   "page-find-wallet-browser": "Browser",
-  "page-find-wallet-device": "Device",
-  "page-find-wallet-choose-features": "Pumili ng mga feature"
+  "page-find-wallet-device": "Device"
 }

@@ -78,6 +78,5 @@
   "page-find-wallet-mobile": "Mobil",
   "page-find-wallet-desktop": "Skrivbord",
   "page-find-wallet-browser": "Webbläsare",
-  "page-find-wallet-device": "Anordning",
-  "page-find-wallet-choose-features": "Välj funktioner"
+  "page-find-wallet-device": "Anordning"
 }
