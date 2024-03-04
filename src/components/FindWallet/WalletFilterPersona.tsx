@@ -20,7 +20,6 @@ const WalletFilterPersona = ({
   setSelectedPersona,
 }) => {
   const personas = useWalletPersonas()
-  const filterBg = useColorModeValue("chakra-subtle-bg", "black400")
 
   return (
     <Flex direction={{ base: "column", lg: "row" }} gap={4}>
@@ -33,7 +32,7 @@ const WalletFilterPersona = ({
               alignItems="flex-start"
               padding={2}
               mb={2}
-              bg={filterBg}
+              bg="background.highlight"
               w="100%"
               borderRadius="base"
               border="1px solid"

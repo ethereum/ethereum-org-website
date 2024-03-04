@@ -58,7 +58,6 @@ const WalletFilterFeature = ({
   ...restProps
 }: WalletFilterFeatureProps) => {
   const { filterOptions, setShowOptions } = useWalletFilterFeature(restProps)
-  const filterPanelBg = useColorModeValue("chakra-subtle-bg", "black400")
 
   return (
     <Accordion
@@ -75,7 +74,7 @@ const WalletFilterFeature = ({
         return (
           <AccordionItem
             key={uniqueId("walletFilterSidebarItem")}
-            background={filterPanelBg}
+            background="background.highlight"
             borderRadius="base"
             // Remove border color from global style
             borderColor="transparent"
