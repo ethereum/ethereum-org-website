@@ -60,7 +60,8 @@ If you’re interested to read more about EIPs, check out the [EIPs website](htt
 - [A description of all EIP types](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [A description of all EIP statuses](https://eips.ethereum.org/EIPS/eip-1#eip-process)
 
-### Community education projects
+### Community education projects {#community-projects}
+
 - [EIPs For Nerds](https://ethereum2077.substack.com/t/eip-research) — *EIPs For Nerds provides comprhensive, ELI5-style overviews of various Ethereum Improvement Proposals (EIPs), including core EIPs and application/infrastructure-layer EIPs (ERCs), to educate readers and shape consensus around proposed changes to the Ethereum protocol.* 
 - [PEEPanEIP](https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F) — *PEEPanEIP is an educational video series that discusses Ethereum Improvement Proposal (EIPs) and key features of upcoming upgrades.*
 - [EIPs.wtf](https://www.eips.wtf/) — *EIPs.wtf provides extra information for Ethereum Improvement Proposals (EIPs), including their status, implementation details, related pull requests, and community feedback.* 
