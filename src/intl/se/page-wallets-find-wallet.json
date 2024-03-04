@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Plånböcker som inte kontrollerar dina privata nycklar",
   "page-find-wallet-hardware-wallet-support": "Stöd för hårdvaruplånböcker",
   "page-find-wallet-hardware-wallet-support-desc": "Plånböcker som kan anslutas till hårdvaruplånböcker för bättre säkerhet",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Plånböcker som stöder WalletConnect för anslutning till dapps",
   "page-find-wallet-rpc-importing": "RPC-import",
   "page-find-wallet-rpc-importing-desc": "Plånböcker som stöder anpassade RPC-slutpunkter för anslutning till olika noder eller nätverk",
   "page-find-wallet-nft-support": "Stöd från NFT",

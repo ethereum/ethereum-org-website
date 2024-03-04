@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Carteiras que não controlam suas chaves privadas",
   "page-find-wallet-hardware-wallet-support": "Suporte para carteira de hardware",
   "page-find-wallet-hardware-wallet-support-desc": "Carteiras que podem se conectar à carteira de hardware para uma melhor segurança",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Carteiras que suportam o WalletConnect para se conectar a dapps",
   "page-find-wallet-rpc-importing": "Importação de RPC",
   "page-find-wallet-rpc-importing-desc": "Carteiras que suportam pontos de extremidade RPC personalizados para se conectar a nós ou redes diferentes",
   "page-find-wallet-nft-support": "Suporte para NFTs",

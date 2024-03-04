@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Кошельки, которые не контролируют ваши закрытые ключи",
   "page-find-wallet-hardware-wallet-support": "Поддержка аппаратных кошельков",
   "page-find-wallet-hardware-wallet-support-desc": "Кошельки, которые могут подключаться к аппаратному кошельку для повышения безопасности",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Кошельки, поддерживающие WalletConnect для подключения к децентрализованным приложениям",
   "page-find-wallet-rpc-importing": "Импорт RPC",
   "page-find-wallet-rpc-importing-desc": "Кошельки, поддерживающие пользовательские конечные точки RPC для подключения к различным узлам или сетям",
   "page-find-wallet-nft-support": "Поддержка NFT",

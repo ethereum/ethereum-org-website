@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Mga wallet na hindi kinokontrol ang iyong mga pribadong key",
   "page-find-wallet-hardware-wallet-support": "Suporta sa hardware wallet",
   "page-find-wallet-hardware-wallet-support-desc": "Mga wallet na maaaring kumonekta sa hardware wallet para sa mas mahusay na seguridad",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Mga wallet na sumusuporta sa WalletConnect para sa pagkonekta sa mga dapp",
   "page-find-wallet-rpc-importing": "Pag-import ng RPC",
   "page-find-wallet-rpc-importing-desc": "Mga wallet na sumusuporta sa mga custom na RPC endpoint para kumonekta sa iba't ibang node o network",
   "page-find-wallet-nft-support": "Suporta sa NFT",

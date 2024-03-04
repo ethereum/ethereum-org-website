@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "المحافظ التي لا تتحكم في مفاتيحك الخاصة",
   "page-find-wallet-hardware-wallet-support": "دعم محفظة الأجهزة",
   "page-find-wallet-hardware-wallet-support-desc": "المحافظ التي تستطيع الاتصال بمحفظة الأجهزة للحصول على أمان أفضل",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "المحافظ التي تدعم WalletConnect للاتصال بالتطبيقات اللامركزية",
   "page-find-wallet-rpc-importing": "استيراد RPC",
   "page-find-wallet-rpc-importing-desc": "المحافظ التي تدعم نقاط نهاية RPC المخصصة للاتصال بعقد أو شبكات مختلفة",
   "page-find-wallet-nft-support": "دعم NFT",

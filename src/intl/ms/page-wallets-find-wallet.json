@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Dompet yang tidak mengawal kunci peribadi anda",
   "page-find-wallet-hardware-wallet-support": "Menyokong dompet perkakasan",
   "page-find-wallet-hardware-wallet-support-desc": "Dompet yang boleh disambungkan ke dompet perkakasan untuk keselamatan yang lebih baik",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Dompet yang menyokong WalletConnect untuk menyambung kepada dapps",
   "page-find-wallet-rpc-importing": "Pengimportan RPC",
   "page-find-wallet-rpc-importing-desc": "Dompet yang menyokong titik akhir RPC tersuai untuk menyambung ke nod atau rangkaian yang berbeza",
   "page-find-wallet-nft-support": "Menyokong NFT",

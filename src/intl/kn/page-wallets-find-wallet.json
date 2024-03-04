@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "ನಿಮ್ಮ ಖಾಸಗಿ ಕೀಗಳನ್ನು ನಿಯಂತ್ರಿಸದ ವಾಲೆಟ್‌ಗಳು",
   "page-find-wallet-hardware-wallet-support": "ಹಾರ್ಡ್‌ವೇರ್ ವಾಲೆಟ್ ಬೆಂಬಲ",
   "page-find-wallet-hardware-wallet-support-desc": "ಉತ್ತಮ ಸುರಕ್ಷತೆಗಾಗಿ ಹಾರ್ಡ್‌ವೇರ್ ವಾಲೆಟ್‌ಗೆ ಸಂಪರ್ಕಿಸಬಹುದಾದ ವಾಲೆಟ್‌ಗಳು",
-  "page-find-wallet-walletconnect": "ವಾಲೆಟ್‌ ಕನೆಕ್ಟ್",
-  "page-find-wallet-walletconnect-desc": "dapps ಗೆ ಸಂಪರ್ಕಿಸಲು ವಾಲೆಟ್‌ ಕನೆಕ್ಟ್‌ ಅನ್ನು ಬೆಂಬಲಿಸುವ ವಾಲೆಟ್‌ಗಳು",
   "page-find-wallet-rpc-importing": "RPC ತೆಗೆಯಲು",
   "page-find-wallet-rpc-importing-desc": "ವಿವಿಧ ನೋಡ್‌ಗಳಿಗೆ ಅಥವಾ ನೆಟ್‌ವರ್ಕ್‌ಗಳಿಗೆ ಸಂಪರ್ಕಿಸಲು ಕಸ್ಟಮ್ RPC ಎಂಡ್‍ಪಾಯಿಂಟ್‍ಗಳಿಗೆ ವಾಲೆಟ್‍ಗಳು ಬೆಂಬಲಿಸುತ್ತವೆ",
   "page-find-wallet-nft-support": "NFT ಬೆಂಬಲ",

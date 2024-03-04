@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "កាបូប​ដែល​មិន​គ្រប់​គ្រង​ Private Key របស់អ្នក។",
   "page-find-wallet-hardware-wallet-support": "អាចប្រើជាមួយ Hardware wallet",
   "page-find-wallet-hardware-wallet-support-desc": "កាបូប​ដែល​អាច​ភ្ជាប់​ទៅ​​ Hardware wallet សម្រាប់​ពង្រឹង​សុវ​ត្ថិភាព",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "កាបូប​ដែល​អាច​ភ្ជាប់ទៅ​កម្ម​វិធី​វិ​ម​ជ្ឈ​ការ​ (DApps) តាម​រយៈ WalletConnect",
   "page-find-wallet-rpc-importing": "ការ​បញ្ជូល​ RPC",
   "page-find-wallet-rpc-importing-desc": "កាបូប​ដែល​អាច​ភ្ជាប់ទៅកាន់​ node ឬ​បណ្តាញ​ផ្សេងៗ តាម​រយៈការ​បញ្ជូល​ RPC​ endpoints",
   "page-find-wallet-nft-support": "អាចប្រើជាមួយ NFT",

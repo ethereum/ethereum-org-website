@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Портфейли, които не контролират личните ви ключове",
   "page-find-wallet-hardware-wallet-support": "Поддръжка за хардуер портфейл",
   "page-find-wallet-hardware-wallet-support-desc": "Портфейли, които могат да се свързват към хардуерен портфейл за по-голяма сигурност",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Портфейли които поддържат WalletConnect за свързване към dapps",
   "page-find-wallet-rpc-importing": "RPC импортиране",
   "page-find-wallet-rpc-importing-desc": "Портфейли, поддържащи персонализирани RPC крайни точки за свързване към различни възли или мрежи",
   "page-find-wallet-nft-support": "Поддръжка на NFT",

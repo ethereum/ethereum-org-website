@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "개인 키를 제어하지 않는 지갑",
   "page-find-wallet-hardware-wallet-support": "하드웨어 지갑 지원",
   "page-find-wallet-hardware-wallet-support-desc": "하드웨어 지갑에 연결하여 보안을 강화할 수 있는 지갑",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "디앱에 연결하기 위해 WalletConnect를 지원하는 지갑",
   "page-find-wallet-rpc-importing": "RPC 가져오기",
   "page-find-wallet-rpc-importing-desc": "다른 노드 또는 네트워크에 연결할 수 있도록 사용자 지정 RPC 엔드포인트를 지원하는 지갑",
   "page-find-wallet-nft-support": "NFT 지원",

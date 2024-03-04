@@ -40,7 +40,6 @@ interface Personas {
     open_source: boolean
     non_custodial: boolean
     hardware_support: boolean
-    walletconnect: boolean
     rpc_importing: boolean
     nft_support: boolean
     connect_to_dapps: boolean
@@ -72,9 +71,6 @@ export const useWalletPersonas = () => {
     },
     hardware_support: {
       label: t("page-find-wallet-hardware-wallet-support"),
-    },
-    walletconnect: {
-      label: t("page-find-wallet-walletconnect"),
     },
     rpc_importing: {
       label: t("page-find-wallet-rpc-importing"),
@@ -139,7 +135,6 @@ export const useWalletPersonas = () => {
         open_source: false,
         non_custodial: false,
         hardware_support: false,
-        walletconnect: false,
         rpc_importing: false,
         nft_support: false,
         connect_to_dapps: true,
@@ -175,7 +170,6 @@ export const useWalletPersonas = () => {
         open_source: false,
         non_custodial: false,
         hardware_support: false,
-        walletconnect: false,
         rpc_importing: false,
         nft_support: true,
         connect_to_dapps: true,
@@ -207,7 +201,6 @@ export const useWalletPersonas = () => {
         open_source: false,
         non_custodial: true,
         hardware_support: false,
-        walletconnect: false,
         rpc_importing: false,
         nft_support: false,
         connect_to_dapps: false,
@@ -244,7 +237,6 @@ export const useWalletPersonas = () => {
         open_source: false,
         non_custodial: false,
         hardware_support: true,
-        walletconnect: false,
         rpc_importing: false,
         nft_support: false,
         connect_to_dapps: true,
@@ -265,7 +257,6 @@ export const useWalletPersonas = () => {
       description: t("page-find-wallet-developer-desc"),
       featureHighlight: [
         filterLabels.open_source,
-        filterLabels.walletconnect,
         filterLabels.rpc_importing,
         filterLabels.connect_to_dapps,
         filterLabels.gas_fee_customization,
@@ -283,7 +274,6 @@ export const useWalletPersonas = () => {
         open_source: false,
         non_custodial: false,
         hardware_support: false,
-        walletconnect: true,
         rpc_importing: true,
         nft_support: false,
         connect_to_dapps: true,

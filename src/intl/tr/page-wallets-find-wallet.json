@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Cüzdanlar sizin özel anahtarlarınızı kontrol etmez",
   "page-find-wallet-hardware-wallet-support": "Donanımsal cüzdan desteği",
   "page-find-wallet-hardware-wallet-support-desc": "Daha iyi güvenlik için donanım cüzdanına bağlanabilen cüzdanlar",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Merkezi olmayan uygulamalara bağlanmak için WalletConnect'i destekleyen cüzdanlar",
   "page-find-wallet-rpc-importing": "RPC içe aktarma",
   "page-find-wallet-rpc-importing-desc": "Farklı düğümlere veya ağlara bağlanmak için özel RPC uç noktalarını destekleyen cüzdanlar",
   "page-find-wallet-nft-support": "NFT desteği",

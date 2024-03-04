@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Pochi ambazo hazidhibiti funguo zako za faragha",
   "page-find-wallet-hardware-wallet-support": "Msaada wa vifaa kwa pochi",
   "page-find-wallet-hardware-wallet-support-desc": "Pochi zinazoweza kuunganishwa na pochi ya maunzi kwa usalama zaidi",
-  "page-find-wallet-walletconnect": "UnganishaPochi",
-  "page-find-wallet-walletconnect-desc": "Pochi zinazotoa huduma za UnganishaPochi kwa ajili ya kuunga dapps",
   "page-find-wallet-rpc-importing": "Uingizaji wa RPC",
   "page-find-wallet-rpc-importing-desc": "Pochi zinazotoa huduma binafsi za noti za mwisho za RPC ili kuunganishwa na nodi tofauti au mtandao",
   "page-find-wallet-nft-support": "Msaada wa NFT",

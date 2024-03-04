@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "不控制私钥的钱包",
   "page-find-wallet-hardware-wallet-support": "硬件钱包支持",
   "page-find-wallet-hardware-wallet-support-desc": "可以连接到硬件钱包以提高安全性的钱包",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "支持使用 WalletConnect 连接到去中心化应用程序的钱包",
   "page-find-wallet-rpc-importing": "远程过程调用导入",
   "page-find-wallet-rpc-importing-desc": "支持通过自定义远程过程调用端点连接到不同节点或网络的钱包",
   "page-find-wallet-nft-support": "支持非同质化代币",

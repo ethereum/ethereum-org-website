@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Carteras que no controlan sus claves privadas",
   "page-find-wallet-hardware-wallet-support": "Soporte para cartera electrónica",
   "page-find-wallet-hardware-wallet-support-desc": "Carteras que pueden conectarse a la cartera de un equipo para una mejor seguridad",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Carteras que soportan WalletConnect para conectarse a aplicaciones",
   "page-find-wallet-rpc-importing": "Importación de RPC",
   "page-find-wallet-rpc-importing-desc": "Carteras que admiten puntos finales personalizados de RPC para conectarse a diferentes nodos o redes",
   "page-find-wallet-nft-support": "Soporte de NFT",

@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Hususy açarlaryňyzy dolandyrmaýan gapjyklar",
   "page-find-wallet-hardware-wallet-support": "Enjamdaky gapjyk goldawy",
   "page-find-wallet-hardware-wallet-support-desc": "Has gowy howpsuzlyk üçin enjamdaky gapjyga birigip bilýän gapjyklar",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Merkezleşdirilmedik programmalara birikmek üçin WalletConnect goldaýan gapjyklar",
   "page-find-wallet-rpc-importing": "RPC içeri geçirmek",
   "page-find-wallet-rpc-importing-desc": "Dürli düwünlere ýa-da torlara birikmek üçin ýörite RPC ahyrky nokatlaryny goldaýan gapjyklar",
   "page-find-wallet-nft-support": "NFT goldawy",

@@ -77,11 +77,6 @@ const walletFilterData: { [key: string]: WalletFilter } = {
     description: "page-find-wallet-hardware-wallet-support-desc",
     filterKey: "hardware_support",
   },
-  walletconnect: {
-    title: "page-find-wallet-walletconnect",
-    description: "page-find-wallet-walletconnect-desc",
-    filterKey: "walletconnect",
-  },
   rpc_importing: {
     title: "page-find-wallet-rpc-importing",
     description: "page-find-wallet-rpc-importing-desc",

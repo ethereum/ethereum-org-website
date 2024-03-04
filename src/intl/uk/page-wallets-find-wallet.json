@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Гаманці, які не контролюють ваші приватні ключі",
   "page-find-wallet-hardware-wallet-support": "Підтримка апаратних гаманців",
   "page-find-wallet-hardware-wallet-support-desc": "Гаманці, які можуть підключатися до апаратного гаманця для більшої безпеки",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Гаманці з підтримкою WalletConnect для підключення до децентралізованих програм",
   "page-find-wallet-rpc-importing": "Імпорт RPC",
   "page-find-wallet-rpc-importing-desc": "Гаманці з підтримкою користувацьких кінцевих точок RPC для підключення до різних вузлів або мереж",
   "page-find-wallet-nft-support": "Підтримка NFT",

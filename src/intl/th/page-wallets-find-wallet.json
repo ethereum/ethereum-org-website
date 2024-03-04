@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "วอลเล็ทที่ไม่ได้ควบคุมกุญแจลับส่วนตัวของคุณ",
   "page-find-wallet-hardware-wallet-support": "ใช้งานกับเครื่องวอลเล็ทได้",
   "page-find-wallet-hardware-wallet-support-desc": "วอลเล็ทที่สามารถเชื่อมต่อกับเครื่องวอลเล็ทเพื่อความปลอดภัยที่ดีขึ้น",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "วอลเล็ทที่สามารถใช้ WalletConnect เพื่อที่จะเชื่อมต่อกับแอปพลิเคชันไร้ศูนย์กลาง (dapps)",
   "page-find-wallet-rpc-importing": "การนำเข้า RPC",
   "page-find-wallet-rpc-importing-desc": "วอลเล็ทที่สามารถใช้ปลายทาง RPC ที่กำหนดเองเพื่อเชื่อมต่อกับโหนดหรือเครือข่ายต่างๆ",
   "page-find-wallet-nft-support": "ใช้งานกับ NFT ได้",

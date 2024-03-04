@@ -207,16 +207,6 @@ export const useWalletFilterFeature = ({
           showOptions: undefined,
           options: [],
         },
-        // TODO: remove
-        {
-          title: t(walletFilterData.walletconnect.title),
-          icon: WalletConnectIcon,
-          description: t(walletFilterData.walletconnect.description),
-          filterKey: walletFilterData.walletconnect.filterKey,
-          showOptions: undefined,
-          options: [],
-        },
-        // TODO: remove
         {
           title: t(walletFilterData.ens_support.title),
           icon: ENSSupportIcon,

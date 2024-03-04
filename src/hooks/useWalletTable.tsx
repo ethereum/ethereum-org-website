@@ -42,12 +42,6 @@ export const useWalletTable = ({
       category: "feature",
     },
     {
-      label: t("page-find-wallet-walletconnect"),
-      value: t("page-find-wallet-walletconnect"),
-      filterKey: "walletconnect",
-      category: "feature",
-    },
-    {
       label: t("page-find-wallet-rpc-importing"),
       value: t("page-find-wallet-rpc-importing"),
       filterKey: "rpc_importing",

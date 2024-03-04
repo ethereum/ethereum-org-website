@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Portemonnees die je privé-sleutels niet beheren",
   "page-find-wallet-hardware-wallet-support": "Hardwareportemonnee-ondersteuning",
   "page-find-wallet-hardware-wallet-support-desc": "Portemonnees die verbinding kunnen maken met hardwareportemonnees voor betere beveiliging",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Portemonnees die WalletConnect ondersteunen voor het verbinden met dapps",
   "page-find-wallet-rpc-importing": "RPC importeren",
   "page-find-wallet-rpc-importing-desc": "Portemonnees die aangepaste RPC-eindpunten ondersteunen om verbinding te maken met verschillende nodes of netwerken",
   "page-find-wallet-nft-support": "NFT-ondersteuning",

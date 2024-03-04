@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "የግል ቁልፎችዎን የማይቆጣጠሩ ቦርሳዎች።",
   "page-find-wallet-hardware-wallet-support": "የሃርድዌር ቦርሳ ድጋፍ",
   "page-find-wallet-hardware-wallet-support-desc": "ለተሻለ ደህንነት ከሃርድዌር ቦርሳ ጋር መገናኘት የሚችሉ ቦርሳዎች",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "ከdapps ጋር ለመገናኘት WalletConnectን የሚደግፉ ቦርሳዎች",
   "page-find-wallet-rpc-importing": "RPCን ማስመጣት",
   "page-find-wallet-rpc-importing-desc": "ከተለያዩ ኖድዎች ወይም አውታረ-መረቦች ጋር የሚያገናኙ ብጁ RPC መጨረሻ ነጥቦችን የሚደግፉ ቦርሳዎች",
   "page-find-wallet-nft-support": "የNFT ድጋፍ",

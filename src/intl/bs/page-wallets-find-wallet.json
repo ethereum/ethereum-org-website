@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Novčanici koji ne kontrolišu vaše privatne ključeve",
   "page-find-wallet-hardware-wallet-support": "Podrška za hardverski novčanik",
   "page-find-wallet-hardware-wallet-support-desc": "Novčanici koji se mogu povezati s hardverskim novčanikom radi bolje sigurnosti",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Novčanici koji mogu koristiti WalletConnect za povezivanje s dapps",
   "page-find-wallet-rpc-importing": "Uvoz RPC",
   "page-find-wallet-rpc-importing-desc": "Novčanici koji podržavaju prilagođene RPC krajnje tačke prilikom povezivanje sa različitim čvorovima ili mrežama",
   "page-find-wallet-nft-support": "NFT podrška",

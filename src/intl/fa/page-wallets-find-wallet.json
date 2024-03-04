@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "کیف‌های پول که کلیدهای خصوصی شما را کنترل نمی کنند",
   "page-find-wallet-hardware-wallet-support": "پشتیبانی کیف پول سخت افزاری",
   "page-find-wallet-hardware-wallet-support-desc": "کیف‌های پول که می توانند برای امنیت بهتر، به کیف پول سخت افزاری متصل شوند",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "کیف پول هایی که WalletConnect را پشتیبانی می کنند تا به دپ ها متصل شوند",
   "page-find-wallet-rpc-importing": "وارد کردن RPC",
   "page-find-wallet-rpc-importing-desc": "کیف پول‌هایی که از اندپوینت‌های RPC شخصی‌سازی شده برای اتصال به نودها یا شبکه‌های مختلف پشتیبانی می‌کنند",
   "page-find-wallet-nft-support": "پشتیبانی از NFT",

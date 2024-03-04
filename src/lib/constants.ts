@@ -88,7 +88,6 @@ export const WALLETS_FILTERS_DEFAULT = {
   open_source: false,
   non_custodial: false,
   hardware_support: false,
-  walletconnect: false,
   rpc_importing: false,
   nft_support: false,
   connect_to_dapps: false,
@@ -125,7 +124,6 @@ export const FINANCE_FEATURES = [
 
 export const DEVELOPER_FEATURES = [
   "open_source",
-  "walletconnect",
   "rpc_importing",
   "connect_to_dapps",
   "gas_fee_customization",

@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Πορτοφόλια που δεν ελέγχουν τα ιδιωτικά σας κλειδιά",
   "page-find-wallet-hardware-wallet-support": "Υποστήριξη υλικού πορτοφολιού",
   "page-find-wallet-hardware-wallet-support-desc": "Πορτοφόλια που μπορούν να συνδεθούν με συσκευές πορτοφόλι για μεγαλύτερη ασφάλεια",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Πορτοφόλια που υποστηρίζουν το WalletConnect για σύνδεση σε dapps",
   "page-find-wallet-rpc-importing": "Εισαγωγή RPC",
   "page-find-wallet-rpc-importing-desc": "Τα πορτοφόλια που υποστηρίζουν προσαρμοσμένα τελικά σημεία RPC για σύνδεση σε διαφορετικούς κόμβους ή δίκτυα",
   "page-find-wallet-nft-support": "Υποστήριξη NFT",

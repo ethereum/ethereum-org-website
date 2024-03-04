@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Peňaženky, ktoré nemajú pod kontrolou vaše privátne kľúče",
   "page-find-wallet-hardware-wallet-support": "Podpora pre hardvérové peňaženky",
   "page-find-wallet-hardware-wallet-support-desc": "Peňaženky, ktoré môžu byť pripojené k hardvérovým peňaženkám za účelom zvýšenia bezpečnosti",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Peňaženky, ktoré podporujú použitie rozhrania WalletConnect za účelom pripojenia k decentralizovaným aplikáciám - dapps",
   "page-find-wallet-rpc-importing": "RPC importing",
   "page-find-wallet-rpc-importing-desc": "Peňaženky umožňujúce vytvorenie súkromných RPC bodov za účelom pripojenia rozdielnych uzlov, alebo sietí",
   "page-find-wallet-nft-support": "Podpora NFT",

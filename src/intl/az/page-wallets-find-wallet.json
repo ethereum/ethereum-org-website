@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Şəxsi açarlarınızı idarə etməyən pulqabılar",
   "page-find-wallet-hardware-wallet-support": "Harware pulqabı dəstəyi",
   "page-find-wallet-hardware-wallet-support-desc": "Daha yaxşı təhlükəsizlik üçün hardware pulqabına qoşula bilən pul kisələri",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Dapps-a qoşulmaq üçün WalletConnect-i dəstəkləyən pulqabılar",
   "page-find-wallet-rpc-importing": "RPC idxalı",
   "page-find-wallet-rpc-importing-desc": "Fərqli qovşaqlara və ya şəbəkələrə qoşulmaq üçün fərdi RPC son nöqtələrini dəstəkləyən pulqabılar",
   "page-find-wallet-nft-support": "NFT dəstəyi",

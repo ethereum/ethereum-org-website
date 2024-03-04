@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Դրամապանակներ, որոնք չեն վերահսկում Ձեր գաղտնի բանալին (անգլ. private key)",
   "page-find-wallet-hardware-wallet-support": "Ֆիզիկական դրամապանակին միանալու հնարավորություն",
   "page-find-wallet-hardware-wallet-support-desc": "Դրամապանակներ, որոնք կարող են միանալ ֆիզիկական դրամապանակի հետ ավելի լավ անվտանգության համար",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Դրամապանակներ, որոնք աշխատում են WalletConnect գործիքի հետ ապ-հավելվածներին (dapps) միանալու համար",
   "page-find-wallet-rpc-importing": "RPC ներմուծում",
   "page-find-wallet-rpc-importing-desc": "Դրամապանակներ, որոնք աշխատում են ցանկացած RPC վերջնակետերի հետ տարբեր հանգույցների կամ ցանցերի հետ միանալու համար",
   "page-find-wallet-nft-support": "NFT աջակցություն",

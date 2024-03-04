@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "秘密鍵を管理しないウォレット",
   "page-find-wallet-hardware-wallet-support": "ハードウェアウォレット対応",
   "page-find-wallet-hardware-wallet-support-desc": "セキュリティ向上のためハードウェアウォレットに接続できるウォレット",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "分散型アプリ(Dapp)に接続するWalletConnect対応ウォレット",
   "page-find-wallet-rpc-importing": "RPCインポート",
   "page-find-wallet-rpc-importing-desc": "異なるノードやネットワークに接続できるカスタムRPCエンドポイント対応ウォレット",
   "page-find-wallet-nft-support": "NFT対応",

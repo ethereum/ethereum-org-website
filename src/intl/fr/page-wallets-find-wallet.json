@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Portefeuilles ne contrôlant pas vos clés privées",
   "page-find-wallet-hardware-wallet-support": "Prise en charge du portefeuille matériel",
   "page-find-wallet-hardware-wallet-support-desc": "Des portefeuilles qui peuvent se connecter à un portefeuille matériel pour une meilleure sécurité",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Portefeuilles compatibles avec WalletConnect pour se connecter aux applications décentralisées",
   "page-find-wallet-rpc-importing": "Importation de RPC",
   "page-find-wallet-rpc-importing-desc": "Portefeuilles prenant en charge des terminaisons RPC personnalisées pour se connecter à différents nœuds ou réseaux",
   "page-find-wallet-nft-support": "Support NFT",

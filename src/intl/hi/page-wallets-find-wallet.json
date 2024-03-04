@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "वे वॉलेट जो आपकी निजी कुंजियों को नियंत्रित नहीं करते हैं",
   "page-find-wallet-hardware-wallet-support": "हार्डवेयर वॉलेट सपोर्ट",
   "page-find-wallet-hardware-wallet-support-desc": "वे वॉलेट जो बेहतर सुरक्षा के लिए हार्डवेयर वॉलेट से कनेक्ट हो सकते हैं",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "वे वॉलेट जो dapps से कनेक्ट करने के लिए WalletConnect का सपोर्ट करते हैं",
   "page-find-wallet-rpc-importing": "RPC आयात",
   "page-find-wallet-rpc-importing-desc": "वे वॉलेट जिनमें विभिन्न नोड या नेटवर्क से कनेक्ट होने के लिए कस्टम RPC एंडप्वॉइंट का इस्तेमाल किया जा सकता है",
   "page-find-wallet-nft-support": "NFT सपोर्ट",

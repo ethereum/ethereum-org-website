@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Lompakot, jotka eivät hallitse yksityisiä avaimiasi",
   "page-find-wallet-hardware-wallet-support": "Laitteistolompakon tuki",
   "page-find-wallet-hardware-wallet-support-desc": "Lompakot, jotka voivat muodostaa yhteyden laitteistolompakkoon paremman turvallisuuden varmistamiseksi",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "Lompakot, jotka tukevat WalletConnectia dAppeihin yhdistämistä varten",
   "page-find-wallet-rpc-importing": "RPC-tuonti",
   "page-find-wallet-rpc-importing-desc": "Lompakot, jotka tukevat mukautettuja RPC-päätepisteitä yhdistääkseen eri solmuihin tai verkkoihin",
   "page-find-wallet-nft-support": "NFT-tuki",

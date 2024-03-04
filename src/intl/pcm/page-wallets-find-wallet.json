@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Wallets wey nor dey kontrol yor private keys",
   "page-find-wallet-hardware-wallet-support": "Hardware wallet suport",
   "page-find-wallet-hardware-wallet-support-desc": "Wallets wey fit konet to hardware wallet to sekure am wella",
-  "page-find-wallet-walletconnect": "WalletKonet",
-  "page-find-wallet-walletconnect-desc": "Wallets wey suport WalletKonet to dey konet to dapps",
   "page-find-wallet-rpc-importing": "RPC importin",
   "page-find-wallet-rpc-importing-desc": "Wallets wey dey suport kustom RPC finalplace to konet to difren nodes abi netwoks",
   "page-find-wallet-nft-support": "NFT join body",

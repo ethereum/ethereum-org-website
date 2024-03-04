@@ -15,8 +15,6 @@
   "page-find-wallet-non-custodial-desc": "Tárcák, melyek nem felügyelik a privát kulcsait",
   "page-find-wallet-hardware-wallet-support": "Hardveres tárcák támogatása",
   "page-find-wallet-hardware-wallet-support-desc": "Tárcák, amelyek hardveres tárcához csatlakoztathatók a fokozott biztonság érdekében",
-  "page-find-wallet-walletconnect": "WalletConnect",
-  "page-find-wallet-walletconnect-desc": "A WalletConnect funkció támogató tárcák dappokhoz való csatlakozáshoz",
   "page-find-wallet-rpc-importing": "RPC-importálás",
   "page-find-wallet-rpc-importing-desc": "Egyedi RPC-végpontokat támogató tárcák különböző csomópontokhoz vagy hálózatokhoz való csatlakozáshoz",
   "page-find-wallet-nft-support": "NFT-támogatás",
