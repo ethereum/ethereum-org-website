@@ -72,7 +72,7 @@ lang: ru
 - [Gwei.cz](https://gwei.cz) — локальное сообщество на тему Web3, создает образовательный контент, организует очные и онлайн-мероприятия
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) — руководство по Ethereum для начинающих
 - [DAO Příručka](https://dao.gwei.cz/) — руководство для начинающих по DAO
-- [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) — о тонкостях работы Ethereum на чешском языке
+- [Mastering Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) — о тонкостях работы Ethereum на чешском языке
 
 ### Французский {#fr}
 

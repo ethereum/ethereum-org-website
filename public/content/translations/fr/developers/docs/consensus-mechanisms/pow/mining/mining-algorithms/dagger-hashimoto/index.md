@@ -4,7 +4,7 @@ description: Un regard détaillé sur l'algorithme Dagger-Hashimoto.
 lang: fr
 ---
 
-Dagger-Hashimoto représentait l'implémentation et la spécification originales de recherche pour l'algorithme de minage d'Ethereum. Dagger-Hashimoto a été remplacé par [Ethash](#ethash). Le minage a été complètement arrêté avec [La Fusion](/updates/merge) du 15 septembre 2022. Depuis lors, Ethereum a été sécurisé en utilisant à la place un mécanisme de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos). Cette page a un intérêt historique - l'information fournie n'est plus pertinente depuis La Fusion Ethereum.
+Dagger-Hashimoto représentait l'implémentation et la spécification originales de recherche pour l'algorithme de minage d'Ethereum. Dagger-Hashimoto a été remplacé par [Ethash](#ethash). Le minage a été complètement arrêté avec [La Fusion](/roadmap/merge/) du 15 septembre 2022. Depuis lors, Ethereum a été sécurisé en utilisant à la place un mécanisme de [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos). Cette page a un intérêt historique - l'information fournie n'est plus pertinente depuis La Fusion Ethereum.
 
 ## Prérequis {#prerequisites}
 

@@ -27,6 +27,7 @@ import CalloutBanner from "@/components/CalloutBanner"
 import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
+import DencunBanner from "@/components/DencunBanner"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -346,6 +347,7 @@ const HomePage = ({
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
       />
+      <DencunBanner />
       <Box w="full">
         <HomeHero heroImg={hero} />
       </Box>
@@ -412,7 +414,7 @@ const HomePage = ({
               <ButtonLink to="/what-is-ethereum/">
                 <Translation id="page-index:page-index-what-is-ethereum-button" />
               </ButtonLink>
-              <ButtonLink to="/eth/" variant="outline">
+              <ButtonLink to="/eth/" variant="outline" isSecondary>
                 <Translation id="page-index:page-index-what-is-ethereum-secondary-button" />
               </ButtonLink>
             </ButtonLinkRow>
@@ -491,7 +493,7 @@ const HomePage = ({
                 <ButtonLink to="/dapps/?category=technology">
                   <Translation id="page-index:page-index-internet-button" />
                 </ButtonLink>
-                <ButtonLink to="/wallets/" variant="outline">
+                <ButtonLink to="/wallets/" variant="outline" isSecondary>
                   <Translation id="page-index:page-index-internet-secondary-button" />
                 </ButtonLink>
               </ButtonLinkRow>
@@ -530,7 +532,7 @@ const HomePage = ({
               <Translation id="page-index:page-index-developers-description" />
             </SectionDecription>
             <ButtonLinkRow>
-              <ButtonLink to="/dapps/?category=technology">
+              <ButtonLink to="/developers/">
                 <Translation id="page-index:page-index-developers-button" />
               </ButtonLink>
             </ButtonLinkRow>
@@ -626,6 +628,7 @@ const HomePage = ({
               to="https://github.com/ethereum/ethereum-org-website"
               leftIcon={<Icon as={FaGithub} fontSize="2xl" />}
               variant="outline"
+              isSecondary
             >
               GitHub
             </ButtonLink>

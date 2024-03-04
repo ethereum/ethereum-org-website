@@ -1,6 +1,6 @@
 ---
 title: 数据和分析学
-description: 如何获取在链分析和数据以用于您的去中心化应用程序。
+description: 如何获取在链分析和数据以用于你的去中心化应用程序。
 lang: zh
 ---
 
@@ -12,7 +12,7 @@ lang: zh
 
 ## 前提条件 {#prerequisites}
 
-您应该理解[区块浏览器](/developers/docs/data-and-analytics/block-explorers/) 的基本概念，以便更好地理解在数据分析环境中使用它们。 此外，熟悉[索引](/glossary/#index)概念，以了解它们给系统设计带来的好处。
+你应该理解[区块浏览器](/developers/docs/data-and-analytics/block-explorers/) 的基本概念，以便更好地理解在数据分析环境中使用它们。 此外，熟悉[索引](/glossary/#index)概念，以了解它们给系统设计带来的好处。
 
 就架构基础而言，也要从理论上了解[应用程序接口](https://www.wikipedia.org/wiki/API)和 [REST](https://www.wikipedia.org/wiki/Representational_state_transfer) 是什么。
 
@@ -30,11 +30,11 @@ lang: zh
 
 ## 客户端多样性
 
-[客户端多样性](/developers/docs/nodes-and-clients/client-diversity/)对于以太坊网络的整体健康很重要，因为它提供了对错误和漏洞利用的弹性。 目前，出现了一些客户端多样性仪表板，包括 [clientdiversity.org](https://clientdiversity.org/)、[rated.network](https://rated.network/)、[execution-diversity.info](https://execution-diversity.info/) 和 [Ethernodes](https://ethernodes.org/)。
+[客户端多样性](/developers/docs/nodes-and-clients/client-diversity/)对于以太坊网络的整体健康很重要，因为它提供了对错误和漏洞利用的弹性。 目前，出现了一些客户端多样性仪表板，包括 [clientdiversity.org](https://clientdiversity.org/)、[rated.network](https://www.rated.network)、[execution-diversity.info](https://execution-diversity.info/) 和 [Ethernodes](https://ethernodes.org/)。
 
 ## Dune Analytics {#dune-analytics}
 
-[Dune Analytics](https://dune.com/) 对区块链数据进行预处理，并存入关系型数据库（PostgreSQL 和 DatabricksSQL）表中，以便用户可以使用结构化查询语言 (SQL) 查询区块链数据并基于查询结果构建仪表板。 链上数据被组织为 4 个原始表：`blocks`、`transactions`、（事件）`logs` 和（调用）`traces`。 常见的合约和协议都已解码，并且每个都有自己的事件集和调用表。 这些事件和调用表被进一步处理并按协议类型组织成抽象表，例如 DEX、借贷、稳定币等。
+[Dune Analytics](https://dune.com/) 对区块链数据进行预处理，并存入关系型数据库（PostgreSQL 和 DatabricksSQL）表中，以便用户可以使用结构化查询语言 (SQL) 查询区块链数据并基于查询结果构建仪表板。 链上数据被组织为 4 个原始表：`blocks`、`transactions`、（事件）`logs` 和（调用）`traces`。 常见的合约和协议都已解码，并且每个都有自己的事件集和调用表。 这些事件和调用表被进一步处理并按协议类型组织成抽象表，例如去中心化交易所、借贷、稳定币等。
 
 ## 延伸阅读 {#further-reading}
 

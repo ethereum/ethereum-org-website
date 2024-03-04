@@ -200,4 +200,4 @@ it("Reverts when Vei amount uneven", async () => {
 
 - [使用 Waffle 测试 ERC20](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
 - [Waffle：动态模拟和测试合约调用](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
-- [Waffle 使用 hardhat 和 ethers 设置 hello world 的教程](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)
+- [Waffle 使用 hardhat 和 ethers 设置 hello world 的教程](/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/)

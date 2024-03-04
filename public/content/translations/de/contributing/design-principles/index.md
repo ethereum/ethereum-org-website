@@ -10,7 +10,7 @@ description: Die Grundsätze hinter den Entscheidungen über Design und Inhalt v
 
 Unsere Grundsätze prägen das Erscheinungsbild der Website und den Inhalt.
 
-Machen Sie sich mit den Informationen vertraut, bevor Sie einen [Beitrag zu ethereum.org](/beitrag/) leisten.
+Machen Sie sich mit den Informationen vertraut, bevor Sie einen [Beitrag zu ethereum.org](/contributing/) leisten.
 
 ## Was sind Designgrundsätze? {#ways-to-contribute}
 

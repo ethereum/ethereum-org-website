@@ -1,5 +1,5 @@
 ---
-title: Фонд Ethereum и программы грантов сообщества
+title: Фонд Ethereum Foundation и программы грантов сообщества
 description: Список программ грантов в рамках экосистемы Ethereum.
 lang: ru
 ---
@@ -15,31 +15,27 @@ lang: ru
 Эти программы поддерживают обширную экосистему Ethereum, предлагая гранты для широкого круга проектов. Они включают решения по масштабируемости, созданию сообществ, безопасности, конфиденциальности и не только. Эти гранты не относятся к какой-либо конкретной платформе Ethereum и являются хорошей отправной точкой, если вы не уверены в себе.
 
 - [Программа поддержки экосистемы EF](https://esp.ethereum.foundation) — _финансирование проектов с открытым исходным кодом, которые приносят пользу Ethereum, с особым акцентом на универсальные инструменты, инфраструктуру, исследования и общественные блага_
-- [Запросы предложений (RFP) Ethereum](https://github.com/ethereum/requests-for-proposals) — _запросы предложений Фондом Ethereum для работы и проектов в экосистеме Ethereum_
-- [MetaCartel](https://www.metacartel.org/grants/) — _разработка децентрализованных приложений, создание DAO_
-- [Децентрализованная автономная организация (DAO) Moloch](https://www.molochdao.com/) — _конфиденциальность, масштабирование второго уровня, безопасность клиентов и многое другое_
-- [Открытые гранты](https://opengrants.com/explore)
-- [Гранты DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) — _таблица Google организаций, предлагающих гранты_
-- [Аналог Crunchbase для грантов по Web3](https://www.cryptoneur.xyz/web3-grants) — _отфильтровывайте и ищите гранты по категории, назначению, количеству и другим характеристикам. Внесите свой вклад, чтобы помочь другим найти нужный грант._
-- [Академические гранты](https://esp.ethereum.foundation/academic-grants) — _гранты на поддержку академической работы, связанной с Ethereum_
+- [MetaCartel](https://www.metacartel.org/grants/): _разработка децентрализованных приложений, создание DAO._
+- [DAO Moloch](https://www.molochdao.com/): _конфиденциальность, масштабирование второго уровня, безопасность клиентов и многое другое._
+- [Гранты DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0): _Google-таблица организаций, предлагающих гранты._
+- [Crunchbase для грантов по Web3](https://www.cryptoneur.xyz/web3-grants): _отфильтровывайте и ищите гранты по категории, назначению, количеству и другим характеристикам. Помогите другим найти нужный грант._
+- [Академические гранты](https://esp.ethereum.foundation/academic-grants): _гранты на поддержку академической работы, связанной с Ethereum._
+- [Blockworks Grantfarm](https://blockworks.co/grants/programs): _компания Blockworks составила полный каталог всех грантов, запросов предложений (RFP) и наград за найденные ошибки._
 
 ## Отдельные проекты {#project-specific}
 
 В рамках этих проектов созданы их собственные гранты, направленные на разработку и тестирование собственных технологий.
 
 - [Программа грантов Aave](https://aavegrants.org/) — _гранты DAO от [Aave](https://aave.com/)_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) — _фонд экосистемы [Balancer](https://balancer.fi/)_
+- [Balancer](https://quark-ceres-740.notion.site/Balancer-Grants-938f1b979810427f8d903a904315da41): _фонд экосистемы [Balancer](https://balancer.fi/)._
 - [Программа грантов Chainlink](https://chain.link/community/grants) — _гранты сообщества [Chainlink](https://chain.link/)_
-- [Программа грантов Compound](https://compoundgrants.org/) — _финансовая экосистема [Compound](https://compound.finance/)_
-- [ Программа грантов Decentraland](https://governance.decentraland.org/grants/) — _метавселенная децентрализованных автономных организаций (DAO) [Decentraland](https://decentraland.org/)_
-- [Организация грантов экосистемы Lido (LEGO)](https://lego.lido.fi/) — _финансовая экосистема [Lido](https://lido.fi/)_
-- [ Программа MetaMask](https://metamaskgrants.org/) — _децентрализованная автономная организация (DAO) по выдаче грантов, возглавляемая сотрудниками [MetaMask](https://metamask.io/)_
-- [Программа грантов mStable](https://docs.mstable.org/advanced/grants-program) — _сообщество [mStable](https://mstable.org/)_
-- [Программа грантов SKALE Network](https://skale.space/developers#grants) — _экосистема [SKALE Network](https://skale.space/)_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _экосистема [The Graph](https://thegraph.com/)_
-- [Программа грантов UMA](https://grants.umaproject.org/) — _поддержка разработчиков [UMA](https://umaproject.org/)_
-- [Программа грантов Uniswap](https://www.unigrants.org/) — _сообщество [Uniswap](https://uniswap.org/)_
-- [Гранты по Web3](https://web3grants.net) — _большой список грантовых программ по Web3/криптовалютам_
+- [ Программа грантов Decentraland](https://governance.decentraland.org/grants/): _метавселенная DAO [Decentraland](https://decentraland.org/)._
+- [Организация грантов экосистемы Lido (LEGO)](https://lido.fi/lego): _финансовая экосистема [Lido](https://lido.fi/)._
+- [ Программа MetaMask](https://metamaskgrants.org/): _DAO по выдаче грантов под руководством сотрудников [MetaMask](https://metamask.io/)._
+- [Программа грантов SKALE Network](https://skale.space/developers#grants): _экосистема [SKALE Network](https://skale.space/)._
+- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm): _экосистема [The Graph](https://thegraph.com/)._
+- [Программа грантов Uniswap](https://www.uniswapfoundation.org/apply-for-a-grant): _сообщество [Uniswap](https://uniswap.org/)._
+- [Web3 Grants](https://web3grants.net): _обширный список грантов, связанных с web3/криптовалютами._
 
 ## Квадратичное финансирование {#quadratic-funding}
 
