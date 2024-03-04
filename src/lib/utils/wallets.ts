@@ -87,13 +87,13 @@ export const getSupportedLanguages = (
   return supportedLanguages
 }
 
-export const formatSupportedLanguages = (supportedLanguages: string[]) => {
-  const numberOfSupportedLanguages = supportedLanguages.length
-  const rest = numberOfSupportedLanguages - 5
-
-  return `${supportedLanguages.slice(0, 5).join(", ")} ${
-    rest > 0 ? `+ ${rest}` : ""
-  }`
+export const formatSupportedLanguages = (
+  supportedLanguages: string[],
+  sliceSize?: number
+) => {
+  return sliceSize
+    ? supportedLanguages.slice(0, sliceSize).join(", ")
+    : supportedLanguages.join(", ")
 }
 
 export const getPersonaBorderColor = (selectedPersona: number, idx: number) => {
