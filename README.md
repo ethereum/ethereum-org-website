@@ -1748,6 +1748,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/drehuwann"><img src="https://avatars.githubusercontent.com/u/62968123?v=4?s=100" width="100px;" alt="drehuwann"/><br /><sub><b>drehuwann</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=drehuwann" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/greetfish"><img src="https://avatars.githubusercontent.com/u/11615617?v=4?s=100" width="100px;" alt="junble"/><br /><sub><b>junble</b></sub></a><br /><a href="#ideas-greetfish" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/viniciusmorais"><img src="https://avatars.githubusercontent.com/u/3915778?v=4?s=100" width="100px;" alt="Vinicius de Morais"/><br /><sub><b>Vinicius de Morais</b></sub></a><br /><a href="#translation-viniciusmorais" title="Translation">🌍</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=viniciusmorais" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.dsrvlabs.com"><img src="https://avatars.githubusercontent.com/u/102006034?v=4?s=100" width="100px;" alt="0xhsy"/><br /><sub><b>0xhsy</b></sub></a><br /><a href="#ideas-0xhsy" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
