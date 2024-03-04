@@ -1,32 +1,30 @@
-import React from "react"
-import { Link as GatsbyLink } from "gatsby"
-import { SystemStyleObject, cssVar } from "@chakra-ui/react"
-import CustomLink, { BaseLink } from "../Link"
-import { getCustomId, Item, trimmedTitle } from "./utils"
+import { cssVar, SystemStyleObject } from "@chakra-ui/react"
 
-export interface IPropsTableOfContentsLink {
+import type { ToCItem } from "@/lib/types"
+
+import { BaseLink } from "@/components/Link"
+
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
+export type TableOfContentsLinkProps = {
   depth: number
-  item: Item
+  item: ToCItem
   activeHash?: string
 }
 
-const Link: React.FC<IPropsTableOfContentsLink> = ({
+const Link = ({
   depth,
-  item,
+  item: { title, url },
   activeHash,
-}) => {
-  const url = `#${getCustomId(item.title)}`
-
+}: TableOfContentsLinkProps) => {
+  const { flipForRtl } = useRtlFlip()
   const isActive = activeHash === url
   const isNested = depth === 2
 
-  let classes = ""
-  if (isActive) {
-    classes += " active"
-  }
-  if (isNested) {
-    classes += " nested"
-  }
+  const classList: Array<string> = []
+  isActive && classList.push("active")
+  isNested && classList.push("nested")
+  const classes = classList.join(" ")
 
   const $dotBg = cssVar("dot-bg")
 
@@ -40,7 +38,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
       borderRadius: "50%",
       boxSize: 2,
       position: "absolute",
-      left: "-1.29rem",
+      insetInlineStart: "-1.29rem",
       top: "50%",
       mt: -1,
     },
@@ -48,8 +46,7 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
 
   return (
     <BaseLink
-      as={GatsbyLink}
-      to={url}
+      href={url}
       className={classes}
       textDecoration="none"
       display="inline-block"
@@ -73,18 +70,19 @@ const Link: React.FC<IPropsTableOfContentsLink> = ({
             opacity: 0.5,
             display: "inline-flex",
             position: "absolute",
-            left: -3.5,
+            insetInlineStart: -3.5,
             top: -1,
+            transform: flipForRtl,
           },
           "&.active, &:hover": {
             _after: {
-              left: "-2.29rem",
+              insetInlineStart: "-2.29rem",
             },
           },
         },
       }}
     >
-      {trimmedTitle(item.title)}
+      {title}
     </BaseLink>
   )
 }

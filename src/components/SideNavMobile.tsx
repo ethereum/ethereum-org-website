@@ -1,20 +1,20 @@
-import React, { ReactNode, useState } from "react"
+import React, { useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
+import { useTranslation } from "next-i18next"
+import { MdExpandMore } from "react-icons/md"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
-import { motion, AnimatePresence } from "framer-motion"
-import { MdExpandMore } from "react-icons/md"
+import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
+import { DeveloperDocsLink } from "@/lib/interfaces"
 
-import { BaseLink, IProps as ILinkProps } from "./Link"
-import Translation from "./Translation"
-import { isLang } from "../utils/languages"
+import { BaseLink, LinkProps } from "@/components/Link"
+
+import docLinks from "@/data/developer-docs-links.yaml"
+
 import {
   dropdownIconContainerVariant,
-  IPropsNavLink as INavLinkProps,
+  type NavLinkProps as SideNavLinkProps,
 } from "./SideNav"
-
-import docLinks from "../data/developer-docs-links.yaml"
-import { DeveloperDocsLink } from "../types"
-import { TranslationKey } from "../utils/translations"
 
 // Traverse all links to find page id
 const getPageTitleId = (
@@ -46,14 +46,14 @@ const innerLinksVariants = {
   },
 }
 
-const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
+const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
     <HStack
       w="full"
       justify="space-between"
       py={2}
-      pr={8}
-      pl={2}
+      pe={8}
+      ps={2}
       _hover={{
         bgColor: "ednBackground",
       }}
@@ -63,7 +63,7 @@ const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
   )
 }
 
-const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
+const SideNavLink = ({ children, ...props }: LinkProps) => {
   return (
     <BaseLink
       w="full"
@@ -83,11 +83,12 @@ const SideNavLink: React.FC<ILinkProps> = ({ children, ...props }) => {
   )
 }
 
-export interface IPropsNavLink extends INavLinkProps {
+export type NavLinkProps = SideNavLinkProps & {
   toggle: () => void
 }
 
-const NavLink: React.FC<IPropsNavLink> = ({ item, path, toggle }) => {
+const NavLink = ({ item, path, toggle }: NavLinkProps) => {
+  const { t } = useTranslation("page-developers-docs")
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
   if (item.items) {
@@ -96,12 +97,12 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path, toggle }) => {
         <LinkContainer>
           {item.to && (
             <SideNavLink to={item.to} isPartiallyActive={false}>
-              <Translation id={item.id} />
+              {t(item.id)}
             </SideNavLink>
           )}
           {!item.to && (
             <Box w="full" cursor="pointer" onClick={() => setIsOpen(!isOpen)}>
-              <Translation id={item.id} />
+              {t(item.id)}
             </Box>
           )}
           <Box
@@ -119,7 +120,7 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path, toggle }) => {
           fontSize="sm"
           lineHeight="tall"
           fontWeight="normal"
-          pl={4}
+          ps={4}
           key={item.id}
           animate={isOpen ? "open" : "closed"}
           variants={innerLinksVariants}
@@ -136,31 +137,27 @@ const NavLink: React.FC<IPropsNavLink> = ({ item, path, toggle }) => {
     <Box onClick={toggle}>
       <LinkContainer>
         <SideNavLink to={item.to} isPartiallyActive={false}>
-          <Translation id={item.id} />
+          {t(item.id)}
         </SideNavLink>
       </LinkContainer>
     </Box>
   )
 }
 
-export interface IProps {
+export type SideNavMobileProps = {
   path: string
 }
 
 // TODO consolidate into SideNav
-const SideNavMobile: React.FC<IProps> = ({ path }) => {
+const SideNavMobile = ({ path }: SideNavMobileProps) => {
+  const { t } = useTranslation("page-developers-docs")
+
   const [isOpen, setIsOpen] = useState<boolean>(false)
 
-  // Strip language path
-  let pagePath = path
-  if (isLang(pagePath.split("/")[1])) {
-    pagePath = pagePath.substring(3)
-  }
-  let pageTitleId = getPageTitleId(pagePath, docLinks)
-  if (!pageTitleId) {
-    console.warn(`No id found for "pagePath": `, pagePath)
-    pageTitleId = `Change page` as TranslationKey
-  }
+  // Add trailing slash to path for docLinks match
+  const pageTitleId =
+    getPageTitleId(path + "/", docLinks) || ("Change page" as TranslationKey)
+
   return (
     <Box
       position="sticky"
@@ -184,9 +181,7 @@ const SideNavMobile: React.FC<IProps> = ({ path }) => {
         borderBottomColor="border"
         onClick={() => setIsOpen(!isOpen)}
       >
-        <Box mr={2}>
-          <Translation id={pageTitleId} />
-        </Box>
+        <Box me={2}>{t(pageTitleId)}</Box>
         <Box
           as={motion.div}
           cursor="pointer"
