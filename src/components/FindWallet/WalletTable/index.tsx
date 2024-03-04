@@ -221,19 +221,8 @@ const WalletTable = ({
   const { locale } = useRouter()
   const {
     featureDropdownItems,
-    // TODO: remove
-    // filteredFeatureDropdownItems,
     filteredWallets,
-    // TODO: remove
-    // setFirstFeatureSelect,
-    // setSecondFeatureSelect,
-    // setThirdFeatureSelect,
-    // updateDropdown,
     updateMoreInfo,
-    // TODO: remove
-    // firstFeatureSelect,
-    // secondFeatureSelect,
-    // thirdFeatureSelect,
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
   const languagesList = useLanguagesList()

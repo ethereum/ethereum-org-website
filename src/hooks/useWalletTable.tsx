@@ -132,15 +132,6 @@ export const useWalletTable = ({
       return { ...wallet, moreInfo: false, key: wallet.name }
     })
   )
-  const [firstFeatureSelect, setFirstFeatureSelect] = useState(
-    featureDropdownItems[14]
-  )
-  const [secondFeatureSelect, setSecondFeatureSelect] = useState(
-    featureDropdownItems[1]
-  )
-  const [thirdFeatureSelect, setThirdFeatureSelect] = useState(
-    featureDropdownItems[9]
-  )
 
   const updateMoreInfo = (key) => {
     const temp = [...walletCardData]
@@ -272,12 +263,6 @@ export const useWalletTable = ({
     updateMoreInfo,
     filteredWallets,
     updateDropdown,
-    setFirstFeatureSelect,
-    setSecondFeatureSelect,
-    setThirdFeatureSelect,
     walletCardData,
-    firstFeatureSelect,
-    secondFeatureSelect,
-    thirdFeatureSelect,
   }
 }
