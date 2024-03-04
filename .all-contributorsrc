@@ -11147,6 +11147,16 @@
         "doc",
         "translation"
       ]
+    },
+    {
+      "login": "starwalker00",
+      "name": "starwalker00",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68958932?v=4",
+      "profile": "https://github.com/starwalker00",
+      "contributions": [
+        "bug",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
