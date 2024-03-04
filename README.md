@@ -1741,6 +1741,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://vitto.cc"><img src="https://avatars.githubusercontent.com/u/72762629?v=4?s=100" width="100px;" alt="VItto Rivabella"/><br /><sub><b>VItto Rivabella</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=Eversmile12" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/andy-li-65284220b/"><img src="https://avatars.githubusercontent.com/u/101077165?v=4?s=100" width="100px;" alt="Andy Li"/><br /><sub><b>Andy Li</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aolafnub" title="Bug reports">🐛</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=olafnub" title="Documentation">📖</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://maxammann.org/"><img src="https://avatars.githubusercontent.com/u/905221?v=4?s=100" width="100px;" alt="Max Ammann"/><br /><sub><b>Max Ammann</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=maxammann" title="Documentation">📖</a></td>
+    </tr>
   </tbody>
 </table>
 

@@ -11176,6 +11176,15 @@
         "bug",
         "doc"
       ]
+    },
+    {
+      "login": "maxammann",
+      "name": "Max Ammann",
+      "avatar_url": "https://avatars.githubusercontent.com/u/905221?v=4",
+      "profile": "https://maxammann.org/",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
