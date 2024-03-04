@@ -6,7 +6,6 @@ import { DevicesIcon } from "./DevicesIcon"
 import { ENSSupportIcon } from "./ENSSupportIcon"
 import { ERC20SupportIcon } from "./ERC20SupportIcon"
 import { FilterBurgerIcon } from "./FilterBurgerIcon"
-import { FrameIcon } from "./FrameIcon"
 import { GasFeeCustomizationIcon } from "./GasFeeCustomizationIcon"
 import { HardwareIcon } from "./HardwareIcon"
 import { HardwareSupportIcon } from "./HardwareSupportIcon"
@@ -32,7 +31,6 @@ export {
   ENSSupportIcon,
   ERC20SupportIcon,
   FilterBurgerIcon,
-  FrameIcon,
   GasFeeCustomizationIcon,
   HardwareIcon,
   HardwareSupportIcon,
