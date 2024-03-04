@@ -97,5 +97,5 @@ export const formatSupportedLanguages = (
 }
 
 export const getPersonaBorderColor = (selectedPersona: number, idx: number) => {
-  return selectedPersona === idx ? "primary.base" : "body.light"
+  return selectedPersona === idx ? "primary.base" : "transparent"
 }
