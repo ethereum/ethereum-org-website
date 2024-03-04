@@ -16,7 +16,7 @@ Sie sollten das Basiskonzept von Ethereum verstehen, damit Sie die Daten, die Si
 - [Etherscan](https://etherscan.io/) -_Auch in Chinesisch, Koreanisch, Russisch und Japanisch verfügbar_
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_Auch in Spanisch, Französisch, Italienisch, Niederländisch, Portugiesisch, Russisch, Chinesisch und Farsi verfügbar_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)

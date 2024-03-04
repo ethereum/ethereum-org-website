@@ -16,7 +16,7 @@ Pour que les données fournies par un explorateur de blocs aient du sens, vous d
 - [Etherscan](https://etherscan.io/) - _Également disponible en chinois, coréen, russe et japonais_
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) - _Également disponible en espagnol, français, italien, néerlandais, portugais, russe, chinois et Farsi_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/) - _Aussi disponible en chinois, espagnol, français, turc, russe, coréen et vietnamien_

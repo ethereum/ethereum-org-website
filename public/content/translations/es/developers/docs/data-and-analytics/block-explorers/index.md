@@ -16,7 +16,7 @@ Es necesario que comprendas los conceptos básicos de Ethereum para poder entend
 - [Etherscan:](https://etherscan.io/) _También disponible en chino, coreano, ruso y japonés_
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair:](https://blockchair.com/ethereum) _También disponible en inglés, francés, italiano, neerlandés, portugués, ruso, chino y farsi_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer:](https://ethplorer.io/) _También disponible en chino, español, francés, turco, ruso, coreano y vietnamita_

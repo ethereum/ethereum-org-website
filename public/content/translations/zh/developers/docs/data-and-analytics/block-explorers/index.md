@@ -16,7 +16,7 @@ sidebarDepth: 3
 - [Etherscan](https://etherscan.io/) -_ 还支持中文、韩语、俄语和日语_
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_ 还支持西班牙语、法语、意大利语、荷兰语、葡萄牙语、俄语、中文和波斯语_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
 - [Chainlens](https://www.chainlens.com/)
 - [DexGuru 区块浏览器](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
