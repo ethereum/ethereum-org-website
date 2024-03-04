@@ -1,10 +1,10 @@
-import * as React from "react"
-import { Box, SimpleGrid, VStack, Text } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
+import { Box, SimpleGrid, Text, VStack } from "@chakra-ui/react"
 
-import ButtonLink from "../../ButtonLink"
-import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
+import { ButtonLink } from "../../Buttons"
+
 import { DropdownOption } from "./useWalletTable"
+import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
 
 interface WalletMoreInfoProps {
   wallet: Record<string, any>
@@ -19,7 +19,7 @@ export const WalletMoreInfo = ({
   idx,
   featureDropdownItems,
 }: WalletMoreInfoProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
   const walletHasFilter = (filterKey) => {
     return wallet[filterKey] === true
   }

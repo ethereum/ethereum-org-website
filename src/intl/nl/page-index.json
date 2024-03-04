@@ -39,7 +39,7 @@
   "page-index-developers-button": "Ontwikkelaarsportaal",
   "page-index-developers-code-examples": "Codevoorbeelden",
   "page-index-developers-code-example-title-0": "Je eigen bank",
-  "page-index-developers-code-example-description-0": "Je kunt een bank bouwen die wordt uitgevoerd volgens logica die je hebt geprogrammeerd.",
+  "page-index-developers-code-example-description-0": "Je kunt een bank bouwen die wordt aangedreven door logica die je zelf hebt geprogrammeerd.",
   "page-index-developers-code-example-title-1": "Je eigen valuta",
   "page-index-developers-code-example-description-1": "Je kunt tokens maken die je kan verzenden en gebruiken in verschillende applicaties.",
   "page-index-developers-code-example-title-2": "Een JavaScript Ethereum-wallet",
@@ -51,6 +51,7 @@
   "page-index-network-stats-total-eth-staked": "Totaal gestakete ETH",
   "page-index-network-stats-eth-price-description": "ETH-koers (USD)",
   "page-index-network-stats-eth-price-explainer": "De meest recente prijs voor 1 ether. Je kunt zo weinig kopen als 0,000000000000000001 – je hoeft niet 1 hele ETH te kopen.",
+  "page-index-network-stats-total-eth-staked-explainer": "De totale hoeveelheid ETH die momenteel wordt gestaked en het netwerk beveiligt.",
   "page-index-network-stats-tx-day-description": "Transacties vandaag",
   "page-index-network-stats-tx-day-explainer": "Het aantal transacties dat in de afgelopen 24 uur succesvol is verwerkt op het netwerk.",
   "page-index-network-stats-value-defi-description": "Waarde vergrendeld in DeFi (USD)",
@@ -74,5 +75,15 @@
   "page-index-nft": "Het internet van activa",
   "page-index-nft-description": "Ethereum is niet alleen voor digitaal geld. Alles wat je kunt bezitten kan worden vertegenwoordigd, verhandeld en gebruikt als niet-vervangbare tokens (NFT's). Je kunt een token maken voor je kunst en automatisch royalties krijgen telkens wanneer deze opnieuw verkocht wordt. Of gebruik een token voor iets dat je zelf bezit om een lening af te sluiten. De mogelijkheden groeien voortdurend.",
   "page-index-nft-button": "Meer over NFT's",
-  "page-index-nft-alt": "Een Eth-logo dat via een hologram wordt weergegeven."
+  "page-index-nft-alt": "Een Eth-logo dat via een hologram wordt weergegeven.",
+  "community-events-content-heading": "Word lid van de ethereum.org community",
+  "community-events-content-1": "Sluit je aan bij bijna <strong>40.000 leden</strong> op onze <a href=\"/discord/\">Discord-server</a>.",
+  "community-events-content-2": "Doe mee met onze maandelijkse community calls voor spannende updates over de ontwikkeling van Ethereum.org en belangrijk nieuws over het ecosysteem. Krijg de kans om vragen te stellen, ideeën te delen en feedback te geven - het is de perfecte gelegenheid om deel uit te maken van de bloeiende Ethereum gemeenschap.",
+  "community-events-next-event": "Volgend evenement",
+  "community-events-no-events-planned": "Geen evenementen gepland",
+  "community-events-upcoming-calls": "Aankomende calls",
+  "community-events-no-upcoming-calls": "Geen aankomende calls",
+  "community-events-previous-calls": "Vorige calls",
+  "community-events-there-are-no-past-calls": "Er zijn geen eerdere calls",
+  "community-events-add-to-calendar": "Toevoegen aan kalender"
 }

@@ -1,3 +1,8 @@
+// TODO
+import React from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import {
   Box,
   Flex,
@@ -8,16 +13,13 @@ import {
   SimpleGrid,
   useToken,
 } from "@chakra-ui/react"
-import { graphql, useStaticQuery } from "gatsby"
-import { useI18next, useTranslation } from "gatsby-plugin-react-i18next"
-import React from "react"
-import { FaDiscord, FaGithub, FaTwitter, FaYoutube } from "react-icons/fa"
 
-import { Lang } from "../utils/languages"
-import { getLocaleTimestamp } from "../utils/time"
-import { isLangRightToLeft, TranslationKey } from "../utils/translations"
-import Link from "./Link"
-import Translation from "./Translation"
+import { Lang, TranslationKey } from "@/lib/types"
+
+import { BaseLink } from "@/components/Link"
+import Translation from "@/components/Translation"
+
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
 const socialLinks = [
   {
@@ -33,14 +35,8 @@ const socialLinks = [
     color: "#1DA1F2",
   },
   {
-    icon: FaYoutube,
-    to: "https://youtube.com/channel/UCNOfzGXD_C9YMYmnefmPH0g",
-    ariaLabel: "Youtube",
-    color: "#FF0000",
-  },
-  {
     icon: FaDiscord,
-    to: "https://discord.gg/CetY6Y4",
+    to: "https://discord.gg/ethereum-org",
     ariaLabel: "Discord",
     color: "#7289da",
   },
@@ -54,16 +50,16 @@ export interface LinkSection {
   }>
 }
 
-export interface IProps {}
+export type FooterProps = {
+  lastDeployDate: string
+}
 
-const Footer: React.FC<IProps> = () => {
-  const { language } = useI18next()
-  const { t } = useTranslation()
+const Footer = ({ lastDeployDate }: FooterProps) => {
+  const { locale } = useRouter()
+  const { t } = useTranslation("common")
 
-  const isPageRightToLeft = isLangRightToLeft(language as Lang)
-
+  // TODO: check if `medBp` is being used or remove it
   const [medBp] = useToken("breakpoints", ["md"])
-
   const linkSections: Array<LinkSection> = [
     {
       title: t("use-ethereum"),
@@ -116,6 +112,10 @@ const Footer: React.FC<IProps> = () => {
         {
           to: `/wallets/`,
           text: t("ethereum-wallets"),
+        },
+        {
+          to: "/gas/",
+          text: "Gas fees",
         },
         {
           to: "/security/",
@@ -290,18 +290,6 @@ const Footer: React.FC<IProps> = () => {
     },
   ]
 
-  const data = useStaticQuery(graphql`
-    query {
-      allSiteBuildMetadata {
-        edges {
-          node {
-            buildTime
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <Box as="footer" p="1rem 2rem">
       <Flex
@@ -312,20 +300,18 @@ const Footer: React.FC<IProps> = () => {
       >
         <Box color="text200">
           <Translation id="website-last-updated" />:{" "}
-          {getLocaleTimestamp(
-            language as Lang,
-            data.allSiteBuildMetadata.edges[0].node.buildTime
-          )}
+          {getLocaleTimestamp(locale as Lang, lastDeployDate!)}
         </Box>
         <Box my={4}>
           {socialLinks.map((link, idk) => {
             return (
-              <Link
+              <BaseLink
                 key={idk}
                 to={link.to}
                 hideArrow
                 color="secondary"
                 aria-label={link.ariaLabel}
+                ms={4}
               >
                 <Icon
                   as={link.icon}
@@ -335,9 +321,8 @@ const Footer: React.FC<IProps> = () => {
                       "color 0.2s ease-in-out, transform 0.2s ease-in-out",
                   }}
                   fontSize="4xl"
-                  ml={4}
                 />
-              </Link>
+              </BaseLink>
             )
           })}
         </Box>
@@ -345,17 +330,11 @@ const Footer: React.FC<IProps> = () => {
       <SimpleGrid
         gap={4}
         justifyContent="space-between"
-        gridTemplateColumns="repeat(6, auto)"
-        sx={{
-          "@media (max-width: 1300px)": {
-            gridTemplateColumns: "repeat(3, auto)",
-          },
-          [`@media (max-width: ${medBp})`]: {
-            gridTemplateColumns: "repeat(2, auto)",
-          },
-          "@media (max-width: 500px)": {
-            gridTemplateColumns: "auto",
-          },
+        templateColumns={{
+          base: "auto",
+          sm: "repeat(2, auto)",
+          md: "repeat(3, auto)",
+          xl: "repeat(6, auto)",
         }}
       >
         {linkSections.map((section: LinkSection, idx) => (
@@ -366,12 +345,12 @@ const Footer: React.FC<IProps> = () => {
             <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} mb={4}>
-                  <Link
+                  <BaseLink
                     to={link.to}
                     isPartiallyActive={false}
-                    dir={isPageRightToLeft ? "auto" : "ltr"}
                     textDecor="none"
                     color="text200"
+                    fontWeight="normal"
                     _hover={{
                       textDecor: "none",
                       color: "primary.base",
@@ -389,7 +368,7 @@ const Footer: React.FC<IProps> = () => {
                     }}
                   >
                     {link.text}
-                  </Link>
+                  </BaseLink>
                 </ListItem>
               ))}
             </List>

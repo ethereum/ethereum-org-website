@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Funktionsfilter",
   "page-find-wallet-footnote-1": "Die auf dieser Seite aufgeführten Wallets sind keine offiziellen Empfehlungen und dienen ausschließlich zu Informationszwecken.",
   "page-find-wallet-footnote-2": "Die Beschreibungen wurden von den Wallet-Projekten selbst bereitgestellt.",
-  "page-find-wallet-footnote-3": "Wir fügen dieser Seite Produkte basierend auf den Kriterien unserer <a href=\"/contributing/adding-products/\">Auflistungsrichtlinie</a> hinzu. Wenn Sie möchten, dass wir eine Wallet hinzufügen, melden Sie ein <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">Problem in GitHub</a>.",
+  "page-find-wallet-footnote-3": "Wir fügen dieser Seite Produkte basierend auf den Kriterien unserer <a href=\"/contributing/adding-wallets/\">Auflistungsrichtlinie</a> hinzu. Wenn Sie möchten, dass wir eine Wallet hinzufügen, erstellen Sie ein <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">Ticket auf GitHub</a>.",
   "page-find-wallet-mobile": "Mobil",
   "page-find-wallet-mobile-desc": "Wallets mit mobilen Apps",
   "page-find-wallet-desktop": "Desktop",
@@ -90,5 +90,6 @@
   "page-find-wallet-browser-desc": "Wallets mit Browser-Erweiterungen",
   "page-find-wallet-device": "Gerät",
   "page-find-choose-to-compare": "Zum Vergleich auswählen",
-  "page-find-wallet-choose-features": "Funktionen auswählen"
+  "page-find-wallet-choose-features": "Funktionen auswählen",
+  "page-find-wallet-reset-filters": "Filter zurücksetzen"
 }

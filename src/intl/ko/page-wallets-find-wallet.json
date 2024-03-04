@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "기능 필터",
   "page-find-wallet-footnote-1": "이 페이지에 나열된 지갑은 공식적으로 보증된 것이 아니며 정보 제공 목적으로만 제공됩니다.",
   "page-find-wallet-footnote-2": "해당 설명은 지갑 프로젝트에서 직접 제공했습니다.",
-  "page-find-wallet-footnote-3": "<a href=\"/contributing/adding-products/\">리스팅 정책</a>의 기준에 따라 이 페이지에 제품을 추가합니다. 지갑을 추가하려면 <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub에 문제를 제출</a>하세요.",
+  "page-find-wallet-footnote-3": "<a href=\"/contributing/adding-wallets/\">리스팅 정책</a>의 기준에 따라 이 페이지에 제품을 추가합니다. 지갑을 추가하려면 <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">GitHub에 문제를 제출</a>하세요.",
   "page-find-wallet-mobile": "모바일",
   "page-find-wallet-mobile-desc": "모바일 앱이 있는 지갑",
   "page-find-wallet-desktop": "데스크톱",
@@ -89,5 +89,7 @@
   "page-find-wallet-browser": "브라우저",
   "page-find-wallet-browser-desc": "브라우저 확장 기능이 있는 지갑",
   "page-find-wallet-device": "기기",
-  "page-find-choose-to-compare": "비교하도록 선택"
+  "page-find-choose-to-compare": "비교하도록 선택",
+  "page-find-wallet-choose-features": "기능 선택",
+  "page-find-wallet-reset-filters": "필터 초기화"
 }

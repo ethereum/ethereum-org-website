@@ -1,6 +1,6 @@
 {
   "page-find-wallet-clear": "Limpar filtros",
-  "page-find-wallet-desc-2": "Então, escolha sua carteira com base nas características que você deseja.",
+  "page-find-wallet-desc-2": "Escolha sua carteira com base nas características que você deseja.",
   "page-find-wallet-description": "As carteiras têm muitos recursos dos quais você pode gostar.",
   "page-find-wallet-last-updated": "Última atualização",
   "page-find-wallet-meta-description": "Encontre e compare carteiras Ethereum com base nos recursos que você deseja.",
@@ -30,8 +30,8 @@
   "page-find-wallet-swaps-desc": "Trocar tokens ERC-20 diretamente na carteira",
   "page-find-wallet-layer-2": "Camada 2",
   "page-find-wallet-layer-2-desc": "Carteiras que suportam camadas 2 de Ethereum",
-  "page-find-wallet-gas-fee-customization": "Personalização da taxa de gás",
-  "page-find-wallet-gas-fee-customization-desc": "Personalize suas quantidades de gás (taxa base, taxa prioritária e taxa máxima)",
+  "page-find-wallet-gas-fee-customization": "Personalização da taxa Gas",
+  "page-find-wallet-gas-fee-customization-desc": "Personalize suas quantidades de Gas (taxa base, taxa prioritária e taxa máxima)",
   "page-find-wallet-ens-support": "Suporte para ENS",
   "page-find-wallet-ens-support-desc": "Carteiras que suportam o Ethereum Name Service (ENS)",
   "page-find-wallet-token-importing": "Importação de token",
@@ -40,7 +40,7 @@
   "page-find-wallet-fee-optimization-desc": "Suporte a transações tipo 2 para taxas de gás otimizadas e taxas de reembolso para gás não utilizado",
   "page-find-wallet-buy-crypto": "Comprar cripto",
   "page-find-wallet-buy-crypto-desc": "Compre cripto com fiat diretamente na carteira \n *Observação: comprar cripto pode ser específico da região",
-  "page-find-wallet-sell-for-fiat": "Venda por fiat",
+  "page-find-wallet-sell-for-fiat": "Venda através de fiduciários",
   "page-find-wallet-sell-for-fiat-desc": "Vender cripto para fiduciário diretamente na carteira\n *Observação: saque de cripto pode ser específico da região",
   "page-find-wallet-multisig": "Multi-assinaturas",
   "page-find-wallet-multisig-desc": "Carteiras que requerem múltiplas assinaturas para autorizar uma transação",
@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Filtros de recursos",
   "page-find-wallet-footnote-1": "As carteiras listadas nesta página não são endossos oficiais e são fornecidas apenas a título informativo.",
   "page-find-wallet-footnote-2": "As descrições delas foram fornecidas pelos próprios projetos da carteira.",
-  "page-find-wallet-footnote-3": "Adicionamos produtos a esta página com base nos critérios em nossa <a href=\"/contributing/adding-products/\">política de listagem</a>. Se você quiser que adicionemos uma carteira, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">abra um tíquete no GitHub</a>.",
+  "page-find-wallet-footnote-3": "Adicionamos produtos a esta página com base nos critérios em nossa <a href=\"/contributing/adding-wallets/\">política de listagem</a>. Se você quiser que adicionemos uma carteira, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">abra um tíquete no GitHub</a>.",
   "page-find-wallet-mobile": "Celular",
   "page-find-wallet-mobile-desc": "Carteiras com aplicativos móveis",
   "page-find-wallet-desktop": "Área de trabalho",
@@ -89,5 +89,7 @@
   "page-find-wallet-browser": "Navegador",
   "page-find-wallet-browser-desc": "Carteiras com extensões de navegador",
   "page-find-wallet-device": "Dispositivo",
-  "page-find-choose-to-compare": "Selecione para comparar"
+  "page-find-choose-to-compare": "Selecione para comparar",
+  "page-find-wallet-choose-features": "Escolher recursos",
+  "page-find-wallet-reset-filters": "Redefinir filtros"
 }
