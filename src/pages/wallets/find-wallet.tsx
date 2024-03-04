@@ -178,7 +178,7 @@ const FindWalletPage = () => {
       </Box>
 
       {/* Mobile filters menu */}
-      <Hide above="md">
+      <Hide above="lg">
         <MobileFiltersMenu
           filters={filters}
           resetWalletFilter={resetWalletFilter}

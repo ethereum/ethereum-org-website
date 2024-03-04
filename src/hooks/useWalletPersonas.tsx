@@ -1,10 +1,10 @@
 import { useTranslation } from "next-i18next"
 
 // Types
+// TODO move to types
 interface Personas {
   title: string
   description: string
-  featureHighlight: { label: string }[]
   presetFilters: {
     android: boolean
     ios: boolean
@@ -93,13 +93,6 @@ export const useWalletPersonas = () => {
     {
       title: t("page-find-wallet-new-to-crypto-title"),
       description: t("page-find-wallet-new-to-crypto-desc"),
-      featureHighlight: [
-        filterLabels.connect_to_dapps,
-        filterLabels.layer_2,
-        filterLabels.ens_support,
-        filterLabels.erc_20_support,
-        filterLabels.buy_crypto,
-      ],
       presetFilters: {
         android: false,
         ios: false,
@@ -130,11 +123,6 @@ export const useWalletPersonas = () => {
     {
       title: t("page-find-wallet-nfts-title"),
       description: t("page-find-wallet-nfts-desc"),
-      featureHighlight: [
-        filterLabels.nft_support,
-        filterLabels.layer_2,
-        filterLabels.connect_to_dapps,
-      ],
       presetFilters: {
         android: false,
         ios: false,
@@ -165,7 +153,6 @@ export const useWalletPersonas = () => {
     {
       title: t("page-find-wallet-hodler-title"),
       description: t("page-find-wallet-hodler-desc"),
-      featureHighlight: [filterLabels.hardware, filterLabels.non_custodial],
       presetFilters: {
         android: false,
         ios: false,
@@ -196,12 +183,6 @@ export const useWalletPersonas = () => {
     {
       title: t("page-find-wallet-finance-title"),
       description: t("page-find-wallet-finance-desc"),
-      featureHighlight: [
-        filterLabels.hardware_support,
-        filterLabels.connect_to_dapps,
-        filterLabels.gas_fee_customization,
-        filterLabels.erc_20_support,
-      ],
       presetFilters: {
         android: false,
         ios: false,
@@ -232,13 +213,6 @@ export const useWalletPersonas = () => {
     {
       title: t("page-find-wallet-developer-title"),
       description: t("page-find-wallet-developer-desc"),
-      featureHighlight: [
-        filterLabels.open_source,
-        filterLabels.rpc_importing,
-        filterLabels.connect_to_dapps,
-        filterLabels.gas_fee_customization,
-        filterLabels.erc_20_support,
-      ],
       presetFilters: {
         android: false,
         ios: false,
