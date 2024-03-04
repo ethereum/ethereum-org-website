@@ -15,11 +15,7 @@ const WalletFilterPersona = ({
   const personas = useWalletPersonas()
 
   return (
-    <Flex
-      direction={{ base: "column", lg: "row" }}
-      gap={4}
-      mb={{ base: 2, md: 0 }}
-    >
+    <Flex direction={{ base: "column", lg: "row" }} gap={4} mb={2}>
       {personas.map((persona, idx) => {
         return (
           <Flex
@@ -30,6 +26,7 @@ const WalletFilterPersona = ({
             w="100%"
             border="solid"
             borderColor={getPersonaBorderColor(selectedPersona, idx)}
+            bg="background.highlight"
             borderRadius="base"
             cursor="pointer"
             transition="0.5s all"
@@ -57,7 +54,7 @@ const WalletFilterPersona = ({
             }}
           >
             <Flex alignItems="center" gap={2} mb="0.2rem" px={2}>
-              <Box role="checkbox" aria-label={`${persona.title} filter`}>
+              <Box role="radio" aria-label={`${persona.title} filter`}>
                 <Icon
                   as={MdCircle}
                   borderRadius="full"
