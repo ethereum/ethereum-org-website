@@ -11231,6 +11231,15 @@
         "translation",
         "doc"
       ]
+    },
+    {
+      "login": "0xhsy",
+      "name": "0xhsy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102006034?v=4",
+      "profile": "http://www.dsrvlabs.com",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
