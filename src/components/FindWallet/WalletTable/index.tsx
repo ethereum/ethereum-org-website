@@ -16,6 +16,7 @@ import {
   Table,
   TableProps,
   Td,
+  Text,
   Th,
   Tr,
 } from "@chakra-ui/react"
@@ -26,7 +27,6 @@ import { ButtonLink } from "@/components/Buttons"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
-import Text from "@/components/OldText"
 import Tag from "@/components/Tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -65,7 +65,7 @@ const WalletContainer = (props: ChildOnlyProp) => (
   <Container
     borderBottom="1px"
     borderColor="lightBorder"
-    _hover={{ bg: "chakra-subtle-bg", transition: "0.5s all" }}
+    _hover={{ bg: "background.highlight", transition: "0.5s all" }}
     {...props}
   />
 )
@@ -305,7 +305,10 @@ const WalletTable = ({
                       ps={{ base: 0, md: 1.5 }}
                     >
                       {/* Wallet image */}
-                      <Box w={{ base: "24px", md: "56px" }}>
+                      <Box
+                        w={{ base: "24px", md: "56px" }}
+                        mb={deviceLabels.length > 0 ? 0 : 36}
+                      >
                         <Image
                           src={wallet.image}
                           alt=""
@@ -316,12 +319,18 @@ const WalletTable = ({
 
                       <Box w={{ base: "100%", md: "auto" }}>
                         <Stack>
-                          <Stack mb={3}>
-                            <Text>{wallet.name}</Text>
-                          </Stack>
+                          <Box mb={3}>
+                            <Text lineHeight={1.2} fontSize="xl !important">
+                              {wallet.name}
+                            </Text>
+                          </Box>
 
                           {/* Wallet Personas supported */}
-                          <Flex gap={1.5} wrap="wrap">
+                          <Flex
+                            gap={1.5}
+                            wrap="wrap"
+                            mb={walletPersonas.length > 0 ? 0 : 8}
+                          >
                             {walletPersonas.map((persona) => (
                               <Tag
                                 key={persona}
