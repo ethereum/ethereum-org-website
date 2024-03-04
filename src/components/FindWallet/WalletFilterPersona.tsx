@@ -53,7 +53,7 @@ const WalletFilterPersona = ({
               }
             }}
           >
-            <Flex alignItems="center" gap={2} mb="0.2rem" px={2}>
+            <Flex alignItems="center" gap={2} mb="0.2rem" px={1.5}>
               <Box role="radio" aria-label={`${persona.title} filter`}>
                 <Icon
                   as={MdCircle}
@@ -70,9 +70,7 @@ const WalletFilterPersona = ({
                     selectedPersona === idx ? "primary.base" : "transparent"
                   }
                   outline="1.5px solid"
-                  outlineColor={
-                    selectedPersona === idx ? "primary.base" : "body.light"
-                  }
+                  outlineColor="primary.base"
                   outlineOffset="3px"
                   fontSize={8}
                   _groupHover={{ outlineColor: "primary.hover" }}
