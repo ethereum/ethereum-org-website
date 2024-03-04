@@ -16,6 +16,7 @@ export interface IProps extends PopoverProps {
 const Tooltip: React.FC<IProps> = ({ content, children, ...rest }) => {
   return (
     <Popover
+      variant="tooltip"
       placement="top"
       trigger="hover"
       strategy="fixed"
