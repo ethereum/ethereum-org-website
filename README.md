@@ -1735,6 +1735,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/intldds"><img src="https://avatars.githubusercontent.com/u/80983240?v=4?s=100" width="100px;" alt="intldds"/><br /><sub><b>intldds</b></sub></a><br /><a href="#content-intldds" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://hodlon.art"><img src="https://avatars.githubusercontent.com/u/37387563?v=4?s=100" width="100px;" alt="Hodlon"/><br /><sub><b>Hodlon</b></sub></a><br /><a href="#content-hodlon" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/M4x28"><img src="https://avatars.githubusercontent.com/u/64036726?v=4?s=100" width="100px;" alt="Leonardo Birardi"/><br /><sub><b>Leonardo Birardi</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=M4x28" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
