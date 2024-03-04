@@ -21,7 +21,7 @@ import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
 
 import { DropdownOption } from "@/hooks/useWalletTable"
 
-interface WalletMoreInfoProps {
+type WalletMoreInfoProps = {
   wallet: Record<string, any>
   filters: WalletFilter
   idx: number

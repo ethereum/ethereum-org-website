@@ -20,7 +20,7 @@ import walletFilterData from "@/data/wallets/wallet-filters"
 
 import { DropdownOption } from "@/hooks/useWalletTable"
 
-interface WalletMoreInfoCategoryProps {
+type WalletMoreInfoCategoryProps = {
   wallet: any
   orderedFeatureDropdownItems: DropdownOption[]
   headingLabel: any

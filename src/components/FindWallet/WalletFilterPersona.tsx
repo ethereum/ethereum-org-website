@@ -1,16 +1,18 @@
 import { MdCircle } from "react-icons/md"
 import { Box, Flex, Heading, Icon, Text, useDisclosure } from "@chakra-ui/react"
 
+import { WalletFilter } from "@/lib/types"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getPersonaBorderColor } from "@/lib/utils/wallets"
 
 import { useWalletPersonas } from "../../hooks/useWalletPersonas"
 
-interface WalletFilterPersonaProps {
-  resetFilters: any
-  setFilters: any
-  selectedPersona: any
-  setSelectedPersona: any
+type WalletFilterPersonaProps = {
+  resetFilters: () => void
+  setFilters: React.Dispatch<React.SetStateAction<WalletFilter>>
+  selectedPersona: number
+  setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
 }
 
 const WalletFilterPersona = ({

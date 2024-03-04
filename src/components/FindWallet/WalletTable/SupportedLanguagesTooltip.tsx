@@ -4,7 +4,7 @@ import Tooltip from "@/components/Tooltip"
 
 import { formatSupportedLanguages } from "@/lib/utils/wallets"
 
-interface SupportedLanguagesTooltipProps {
+type SupportedLanguagesTooltipProps = {
   supportedLanguages: string[]
   restText: string
 }
