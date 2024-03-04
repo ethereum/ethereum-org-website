@@ -1,5 +1,7 @@
+/* eslint-disable react/jsx-key */
 import React from "react"
 import { createIcon } from "@chakra-ui/react"
+
 import { commonIconDefaultProps } from "../utils"
 
 export const TrophyIcon = createIcon({

@@ -1,38 +1,41 @@
-// Library imports
-import React, { useState, useEffect, useRef, useMemo } from "react"
+import { useEffect, useMemo, useRef, useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogCloseButton,
+  AlertDialogContent,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogOverlay,
   Box,
   Button,
   ButtonProps,
-  Flex,
-  Icon,
   ScaleFade,
+  useDisclosure,
 } from "@chakra-ui/react"
-import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
-import { MdClose } from "react-icons/md"
-import FocusTrap from "focus-trap-react"
-// Component imports
-import Translation from "./Translation"
-import Text from "./OldText"
-// SVG imports
-import { FeedbackGlyphIcon } from "./icons"
-// Utility imports
-import { trackCustomEvent } from "../utils/matomo"
-// Hook imports
-import { useOnClickOutside } from "../hooks/useOnClickOutside"
-import { useKeyPress } from "../hooks/useKeyPress"
-import { useSurvey } from "../hooks/useSurvey"
 
-interface FixedDotProps extends ButtonProps {
+import { FeedbackGlyphIcon } from "@/components/icons"
+import Text from "@/components/OldText"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
+import { useSurvey } from "@/hooks/useSurvey"
+
+type FixedDotProps = ButtonProps & {
   bottomOffset: number
   isExpanded: boolean
 }
-const FixedDot: React.FC<FixedDotProps> = ({
+const FixedDot = ({
   children,
   bottomOffset,
   isExpanded,
   ...props
-}) => {
+}: FixedDotProps) => {
+  const { t } = useTranslation("common")
   const size = "3rem"
   return (
     <Button
@@ -43,8 +46,9 @@ const FixedDot: React.FC<FixedDotProps> = ({
       boxShadow="tableItemBox"
       position="sticky"
       bottom={{ base: `${bottomOffset + 1}rem`, lg: 4 }}
-      ms="auto"
+      me="1rem"
       mt={{ lg: "inherit" }}
+      insetStart={`calc(100% - ${size})`}
       insetEnd={4}
       zIndex={98} /* Below the mobile menu */
       display="flex"
@@ -52,12 +56,12 @@ const FixedDot: React.FC<FixedDotProps> = ({
       alignItems="center"
       whiteSpace="normal"
       _hover={{
-        cursor: "pointer",
         transform: "scale(1.1)",
         transition: "transform 0.2s ease-in-out",
       }}
-      transition="transform 0.2s ease-in-out, width 0.25s linear,
+      transition="transform 0.2s ease-in-out, width 0.25s ease-in-out,
       border-radius 0.25s linear"
+      aria-label={t("feedback-widget")}
       {...props}
     >
       {children}
@@ -65,54 +69,50 @@ const FixedDot: React.FC<FixedDotProps> = ({
   )
 }
 
-interface FeedbackWidgetProps {
-  location: string
-}
-const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
-
-  const containerRef = useRef<HTMLInputElement>(null)
-  useOnClickOutside(containerRef, () => handleClose(), [`mousedown`])
-  const [isOpen, setIsOpen] = useState<boolean>(false)
-  const [isExpanded, setIsExpanded] = useState<boolean>(false)
-  const [feedbackSubmitted, setFeedbackSubmitted] = useState<boolean>(false)
+const FeedbackWidget = () => {
+  const { t } = useTranslation("common")
+  const { asPath, locale } = useRouter()
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const cancelRef = useRef<HTMLButtonElement>(null)
+  const [isExpanded, setIsExpanded] = useState(false)
+  const [feedbackSubmitted, setFeedbackSubmitted] = useState(false)
 
   useEffect(() => {
-    // Reset component state when path (location) changes
-    setIsOpen(false)
+    // Reset component state when path (asPath) changes
+    onClose()
     setFeedbackSubmitted(false)
     setIsExpanded(false)
 
-    let expandTimeout = setTimeout(() => setIsExpanded(true), 30000)
+    let expandTimeout = setTimeout(() => setIsExpanded(true), 30_000)
 
     return () => clearTimeout(expandTimeout)
-  }, [location])
+  }, [asPath, onClose])
 
   const surveyUrl = useSurvey(feedbackSubmitted)
 
   const bottomOffset = useMemo(() => {
-    const pathsWithBottomNav = ["/staking", "/dao", "/defi", "/nft"]
+    const pathsWithBottomNav = ["/staking/", "/dao/", "/defi/", "/nft/"]
     const CONDITIONAL_OFFSET = 6.75
     let offset = 0
     pathsWithBottomNav.forEach((path) => {
-      if (location.includes(path)) {
+      if (asPath.includes(path)) {
         offset = CONDITIONAL_OFFSET
       }
     })
     return offset
-  }, [location])
+  }, [asPath])
 
   const handleClose = (): void => {
-    setIsOpen(false)
+    onClose()
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
       eventAction: `Clicked`,
       eventName: `Closed feedback widget`,
     })
   }
+
   const handleOpen = (): void => {
-    setIsOpen(true)
+    onOpen()
     setIsExpanded(false)
     trackCustomEvent({
       eventCategory: `FeedbackWidget toggled`,
@@ -120,6 +120,7 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
       eventName: `Opened feedback widget`,
     })
   }
+
   const handleSubmit = (choice: boolean): void => {
     trackCustomEvent({
       eventCategory: `Page is helpful feedback`,
@@ -135,14 +136,13 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
       eventName: "Feedback survey opened",
     })
     window && surveyUrl && window.open(surveyUrl, "_blank")
-    setIsOpen(false) // Close widget without triggering redundant tracker event
+    onClose() // Close widget without triggering redundant tracker event
     setIsExpanded(false)
   }
 
-  useKeyPress(`Escape`, handleClose)
+  // Display on English pages only
+  if (locale !== DEFAULT_LOCALE) return null
 
-  if (language !== "en") return null
-  const closeButtonSize = "24px"
   return (
     <>
       <FixedDot
@@ -172,128 +172,103 @@ const FeedbackWidget: React.FC<FeedbackWidgetProps> = ({ location = "" }) => {
                 alignItems="center"
                 display={{ base: "none", lg: isExpanded ? "flex" : "none" }}
               >
-                <Translation id="feedback-widget-prompt" />
+                {t("feedback-widget-prompt")}
               </Text>
             </ScaleFade>
           )}
         </Box>
       </FixedDot>
-      {isOpen && (
-        <Box
-          display="block"
-          position="fixed"
-          inset={0}
-          bgColor="blackAlpha.400"
-          zIndex={1001} /* Above the nav bar */
-        >
-          <FocusTrap
-            focusTrapOptions={{
-              fallbackFocus: `#dot`,
-            }}
+
+      <AlertDialog
+        isOpen={isOpen}
+        leastDestructiveRef={cancelRef}
+        onClose={handleClose}
+      >
+        <AlertDialogOverlay>
+          <AlertDialogContent
+            position="fixed"
+            maxW={1504}
+            m="auto"
+            alignItems="flex-end"
+            backgroundColor="transparent"
+            boxShadow="tableItemBox"
+            me={24}
+            bottom={{ base: `${bottomOffset + 5}rem`, lg: 20 }}
           >
-            <Flex
-              id="modal"
-              ref={containerRef}
-              boxSizing="border-box"
+            <Box
               w={{ base: "auto", sm: "300px" }}
               bgColor="ednBackground"
               border="1px"
               borderColor="buttonColor"
-              boxShadow="tableItemBox"
-              borderRadius="base" /* 0.25rem */
-              position="fixed"
-              insetEnd={{ base: 4, sm: 8 }}
-              insetStart={{ base: 4, sm: "auto" }}
-              bottom={{ base: `${bottomOffset + 5}rem`, lg: 20 }}
-              zIndex={1002} /* Above the modal background */
-              _hover={{
-                transform: "scale(1.02)",
-                transition: "transform 0.2s ease-in-out",
-              }}
-              transition="transform 0.2s ease-in-out"
-              direction="column"
-              alignItems="center"
-              textAlign="center"
-              p={8}
+              borderRadius="base"
+              py="4"
+              px="2"
             >
-              <Button
-                variant="ghost"
-                onClick={handleClose}
-                aria-label={t("close")}
-                position="absolute"
-                insetEnd={2}
-                top={2}
-                cursor="pointer"
-                h={closeButtonSize}
-                w={closeButtonSize}
-                minW={closeButtonSize}
-                minH={closeButtonSize}
-                _hover={{
-                  transform: "scale(1.1)",
-                  transition: "transform 0.2s ease-in-out",
-                }}
-                transition="transform 0.2s ease-in-out"
-              >
-                <Icon as={MdClose} h={closeButtonSize} w={closeButtonSize} />
-              </Button>
+              <AlertDialogCloseButton />
 
-              <Text fontWeight="bold" fontSize="xl" lineHeight={6}>
-                {feedbackSubmitted ? (
-                  <Translation id="feedback-widget-thank-you-title" />
-                ) : (
-                  <Translation id="feedback-widget-prompt" />
-                )}
-              </Text>
+              <AlertDialogHeader
+                fontSize="xl"
+                fontWeight="bold"
+                lineHeight="6"
+                textAlign="center"
+              >
+                {feedbackSubmitted
+                  ? t("feedback-widget-thank-you-title")
+                  : t("feedback-widget-prompt")}
+              </AlertDialogHeader>
+
+              {/* Body: */}
               {feedbackSubmitted && (
-                <Text fontWeight="normal" fontSize="md" lineHeight={5}>
-                  <Translation id="feedback-widget-thank-you-subtitle" />
-                </Text>
-              )}
-              {feedbackSubmitted && (
-                <Text
-                  fontWeight="bold"
-                  fontSize="xs"
-                  lineHeight={4}
-                  letterSpacing="wide"
-                  color="searchBorder"
-                >
-                  <Translation id="feedback-widget-thank-you-timing" />
-                </Text>
-              )}
-              <Flex flexWrap="nowrap" gap={6} width="full">
-                {feedbackSubmitted ? (
-                  <Button
-                    onClick={handleSurveyOpen}
-                    aria-label={t("feedback-widget-thank-you-cta")}
-                    flex={1}
+                <>
+                  <AlertDialogBody
+                    fontWeight="normal"
+                    fontSize="md"
+                    lineHeight="5"
+                    textAlign="center"
                   >
-                    <Translation id="feedback-widget-thank-you-cta" />
+                    {t("feedback-widget-thank-you-subtitle")}
+                  </AlertDialogBody>
+                  <AlertDialogBody
+                    fontWeight="bold"
+                    fontSize="xs"
+                    lineHeight="4"
+                    letterSpacing="wide"
+                    color="searchBorder"
+                    textAlign="center"
+                  >
+                    {t("feedback-widget-thank-you-timing")}
+                  </AlertDialogBody>
+                </>
+              )}
+
+              <AlertDialogFooter display="flex" gap="6">
+                {feedbackSubmitted ? (
+                  <Button onClick={handleSurveyOpen} flex={1}>
+                    {t("feedback-widget-thank-you-cta")}
                   </Button>
                 ) : (
                   <>
                     <Button
                       variant="solid"
                       onClick={() => handleSubmit(true)}
-                      aria-label={t("yes")}
                       flex={1}
                     >
-                      <Translation id="yes" />
+                      {t("yes")}
                     </Button>
                     <Button
                       variant="solid"
                       onClick={() => handleSubmit(false)}
-                      aria-label={t("no")}
                       flex={1}
                     >
-                      <Translation id="no" />
+                      {t("no")}
                     </Button>
                   </>
                 )}
-              </Flex>
-            </Flex>
-          </FocusTrap>
-        </Box>
-      )}
+              </AlertDialogFooter>
+            </Box>
+          </AlertDialogContent>
+        </AlertDialogOverlay>
+      </AlertDialog>
     </>
   )
 }
