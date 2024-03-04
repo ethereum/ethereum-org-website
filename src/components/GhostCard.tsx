@@ -1,18 +1,16 @@
 import React from "react"
 import { Box, BoxProps } from "@chakra-ui/react"
 
-export interface IProps extends BoxProps {
-  className?: string
-}
+export type GhostCardProps = BoxProps
 
-const GhostCard: React.FC<IProps> = ({ children, className, ...rest }) => (
-  <Box position="relative" alignSelf="stretch" className={className} {...rest}>
+const GhostCard = ({ children, ...rest }: GhostCardProps) => (
+  <Box position="relative" alignSelf="stretch" {...rest}>
     <Box
       zIndex="hide"
       position="absolute"
       backgroundColor="ghostCardGhost"
       bottom="2"
-      left="2"
+      insetInlineStart="2"
       border="1px solid"
       borderColor="border"
       borderRadius="2px"
@@ -29,7 +27,7 @@ const GhostCard: React.FC<IProps> = ({ children, className, ...rest }) => (
       background="ghostCardBackground"
       border="1px solid"
       borderColor="border"
-      textAlign="left"
+      textAlign="start"
     >
       {children}
     </Box>

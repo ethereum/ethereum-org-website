@@ -50,10 +50,10 @@
   "page-find-wallet-features": "Fitur",
   "page-find-wallet-security": "Keamanan",
   "page-find-wallet-smart-contract": "Kontrak pintar",
-  "page-find-wallet-check-out": "Lihat juga",
+  "page-find-wallet-check-out": "Lihat",
   "page-find-wallet-info-updated-on": "info diperbarui pada",
   "page-find-wallet-showing-all-wallets": "Tampilkan semua dompet",
-  "page-find-wallet-showing": "Menampilkan ",
+  "page-find-wallet-showing": "Menampilkan",
   "page-find-wallet-wallets": "dompet",
   "page-find-wallet-iOS": "iOS",
   "page-find-wallet-android": "Android",
@@ -81,7 +81,7 @@
   "page-find-wallet-feature-filters": "Fitur filter",
   "page-find-wallet-footnote-1": "Dompet yang tercantum di halaman ini bukan dukungan resmi, dan disediakan hanya untuk tujuan informasi.",
   "page-find-wallet-footnote-2": "Deskripsi mereka telah disediakan oleh proyek dompet itu sendiri.",
-  "page-find-wallet-footnote-3": "Kami menambahkan produk ke halaman ini berdasarkan kriteria kami <a href=\"/contributing/adding-products/\">kebijakan daftar</a>. Jika Anda ingin kami menambahkan dompet, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">kirim issue di GitHub</a>.",
+  "page-find-wallet-footnote-3": "Kami menambahkan produk ke halaman ini berdasarkan kriteria dalam <a href=\"/contributing/adding-wallets/\">kebijakan pendaftaran</a> kami. Jika Anda menginginkan penambahan dompet dari kami, <a href=\"https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml&title=Suggest+a+wallet\" target=\"_blank\">ajukan persoalan ini di GitHub</a>.",
   "page-find-wallet-mobile": "Seluler",
   "page-find-wallet-mobile-desc": "Dompet dengan aplikasi seluler",
   "page-find-wallet-desktop": "Desktop",
@@ -90,5 +90,6 @@
   "page-find-wallet-browser-desc": "Dompet dengan ekstensi browser",
   "page-find-wallet-device": "Perangkat",
   "page-find-choose-to-compare": "Pilih untuk membandingkan",
-  "page-find-wallet-choose-features": "Pilih fitur"
+  "page-find-wallet-choose-features": "Pilih fitur",
+  "page-find-wallet-reset-filters": "Atur ulang filter"
 }

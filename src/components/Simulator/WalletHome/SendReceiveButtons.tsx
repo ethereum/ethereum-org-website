@@ -1,19 +1,21 @@
-import { Flex } from "@chakra-ui/react"
 import React from "react"
 import { PiPaperPlaneRightFill } from "react-icons/pi"
-import { SendReceiveButton } from "./SendRecieveButton"
-import type { SimulatorNav } from "../interfaces"
-import type { SendReceiveEnabled } from "./types"
-import { QrCodeIcon } from "../icons"
+import { Flex } from "@chakra-ui/react"
 
-interface SendReceiveButtonsProps {
+import { QrCodeIcon } from "../icons"
+import type { SimulatorNav } from "../interfaces"
+
+import { SendReceiveButton } from "./SendRecieveButton"
+import type { SendReceiveEnabled } from "./types"
+
+type SendReceiveButtonsProps = {
   nav?: SimulatorNav
   isEnabled?: SendReceiveEnabled
 }
-export const SendReceiveButtons: React.FC<SendReceiveButtonsProps> = ({
+export const SendReceiveButtons = ({
   nav,
   isEnabled = [false, false],
-}) => {
+}: SendReceiveButtonsProps) => {
   const [isSendEnabled, isReceiveEnabled] = isEnabled
   if (nav && isSendEnabled && isReceiveEnabled)
     throw new Error(

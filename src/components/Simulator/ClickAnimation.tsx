@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react"
-import { createIcon, Flex, Text, TextProps } from "@chakra-ui/react"
 import { motion, type Transition } from "framer-motion"
+import { createIcon, Flex, Text, TextProps } from "@chakra-ui/react"
 
 const MotionFlex = motion(Flex)
 
@@ -15,20 +15,20 @@ const DownArrowLong = motion(
   })
 )
 
-interface IProps extends Pick<TextProps, "children"> {
+type ClickAnimationProps = Pick<TextProps, "children"> & {
   below?: boolean
   delay?: number
 }
-export const ClickAnimation: React.FC<IProps> = ({
+export const ClickAnimation = ({
   below,
   delay = 5000,
   children,
-}) => {
+}: ClickAnimationProps) => {
   const [visible, setVisible] = useState(false)
   useEffect(() => {
     const timeout = setTimeout(() => setVisible(true), delay)
     return () => clearTimeout(timeout)
-  }, [])
+  }, [delay])
   const transition: Transition = {
     duration: 2.5,
     times: [0, 0.25, 0.5],

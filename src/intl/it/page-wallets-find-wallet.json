@@ -90,5 +90,6 @@
   "page-find-wallet-browser-desc": "Portafogli con estensioni per browser",
   "page-find-wallet-device": "Dispositivo",
   "page-find-choose-to-compare": "Seleziona per confrontare",
-  "page-find-wallet-choose-features": "Seleziona le funzionalità"
+  "page-find-wallet-choose-features": "Seleziona le funzionalità",
+  "page-find-wallet-reset-filters": "Ripristina filtri"
 }

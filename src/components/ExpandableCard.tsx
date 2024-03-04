@@ -1,5 +1,5 @@
-// Libraries
-import React, { ReactNode, useState } from "react"
+import { type ReactNode, useState } from "react"
+import { useTranslation } from "next-i18next"
 import {
   Accordion,
   AccordionButton,
@@ -7,27 +7,24 @@ import {
   AccordionPanel,
   Box,
   Heading,
-  Icon,
+  type Icon as ChakraIcon,
 } from "@chakra-ui/react"
 
-// Components
-import Translation from "./Translation"
-import Text from "./OldText"
+import Text from "@/components/OldText"
 
-// Utils
-import { trackCustomEvent } from "../utils/matomo"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-export interface IProps {
-  children?: React.ReactNode
+export type ExpandableCardProps = {
+  children?: ReactNode
   contentPreview?: ReactNode
   title: ReactNode
-  svg?: typeof Icon
+  svg?: typeof ChakraIcon
   eventAction?: string
   eventCategory?: string
   eventName?: string
 }
 
-const ExpandableCard: React.FC<IProps> = ({
+const ExpandableCard = ({
   children,
   contentPreview,
   title,
@@ -35,8 +32,9 @@ const ExpandableCard: React.FC<IProps> = ({
   eventAction = "Clicked",
   eventCategory = "",
   eventName = "",
-}) => {
+}: ExpandableCardProps) => {
   const [isVisible, setIsVisible] = useState(false)
+  const { t } = useTranslation("common")
   const matomo = {
     eventAction,
     eventCategory: `ExpandableCard${eventCategory}`,
@@ -57,7 +55,7 @@ const ExpandableCard: React.FC<IProps> = ({
 
   return (
     <Accordion
-      border="1px solid"
+      border="1px"
       borderColor="border"
       borderRadius="sm"
       display="flex"
@@ -88,15 +86,12 @@ const ExpandableCard: React.FC<IProps> = ({
               flexDir={{ base: "column", sm: "row" }}
               textAlign="start"
             >
-              <Box
-                marginBottom={{ base: 2, sm: 0 }}
-                marginRight={{ base: 0, sm: 4 }}
-              >
+              <Box marginBottom={{ base: 2, sm: 0 }} me={{ base: 0, sm: 4 }}>
                 <Box
                   display="flex"
                   alignItems="center"
                   sx={{
-                    svg: { marginRight: "1.5rem" },
+                    svg: { me: "1.5rem" },
                   }}
                   my="4"
                 >
@@ -117,11 +112,11 @@ const ExpandableCard: React.FC<IProps> = ({
               <Text
                 fontSize="md"
                 color="primary.base"
-                ml={{ base: undefined, sm: "auto" }}
+                ms={{ base: undefined, sm: "auto" }}
                 mt="auto"
                 mb="auto"
               >
-                <Translation id={isVisible ? "less" : "more"} />
+                {t(isVisible ? "less" : "more")}
               </Text>
             </Box>
           </AccordionButton>
