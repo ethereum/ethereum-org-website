@@ -95,7 +95,7 @@ const WalletFilterSidebar = ({
             fontSize="xs"
             gap={1}
             _hover={{
-              color: "selectHover",
+              color: "primary.hover",
             }}
             onClick={() => {
               resetFilters()
