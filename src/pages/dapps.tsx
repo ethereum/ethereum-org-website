@@ -1,4 +1,5 @@
 import { type ComponentPropsWithRef, useEffect, useRef, useState } from "react"
+import { merge } from "lodash"
 import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -6,6 +7,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Badge,
   Box,
+  BoxProps,
   Button,
   type ButtonProps,
   Divider as ChakraDivider,
@@ -116,6 +118,7 @@ import zerion from "@/public/dapps/zerion.png"
 import developers from "@/public/developers-eth-blocks.png" // Handled inside Callout => height=200
 import doge from "@/public/doge-computer.png" // HERO, full? 624px
 import oneinch from "@/public/exchanges/1inch.png"
+import exploring from "@/public/hackathon_transparent.png"
 import magicians from "@/public/magicians.png"
 import wallet from "@/public/wallet.png" // width=300
 
@@ -1418,6 +1421,25 @@ const DappsPage = () => {
             </ProductCard>
           ))}
         </StyledCardGrid>
+      </Content>
+      {/* Explore Ecosystem Section */}
+      <Content>
+        <CalloutBanner
+          mt={0}
+          mx={0}
+          mb={{ base: 0, lg: 16 }}
+          titleKey={"page-dapps:page-dapps-explore-title"}
+          descriptionKey={"page-dapps:page-dapps-explore-1"}
+          image={exploring}
+          imageWidth={300}
+          alt={t("page-dapps-explore-callout-image-alt")}
+        >
+          <Box>
+            <ButtonLink to="https://www.ethereum-ecosystem.com/apps">
+              {t("page-dapps:page-dapps-explore-2")}
+            </ButtonLink>
+          </Box>
+        </CalloutBanner>
       </Content>
       <FullWidthContainer ref={explore}>
         <H2 id="explore">{t("page-dapps-explore-dapps-title")}</H2>

@@ -286,5 +286,9 @@
   "page-dapps-dapp-description-dodo": "DODO is a on-chain liquidity provider, which leverages the Proactive Market Maker algorithm (PMM)",
   "page-dapps-dodo-image-alt": "DODO logo",
   "page-dapps-dapp-description-artblocks": "Art Blocks is dedicated to bringing compelling works of contemporary generative art to life",
-  "page-dapps-artblocks-image-alt": "Art Blocks logo"
+  "page-dapps-artblocks-image-alt": "Art Blocks logo",
+  "page-dapps-explore-title": "Looking for more Ethereum dapps?",
+  "page-dapps-explore-1": "Explore over 1000 dapps on Ethereum and its Layer 2s like Base, Optimism and Starknet easily – start your journey through the Ethereum ecosystem now.",
+  "page-dapps-explore-2": "Go to Ethereum Ecosystem",
+  "page-dapps-explore-callout-image-alt": "Illustration of a man tinkering with a computer."
 }
