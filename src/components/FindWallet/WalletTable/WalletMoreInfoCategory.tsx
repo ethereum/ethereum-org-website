@@ -54,7 +54,7 @@ export const WalletMoreInfoCategory = ({
                   ? GreenCheckProductGlyphIcon
                   : WarningProductGlyphIcon
               }
-              fontSize="1rem"
+              fontSize="md"
               color={featureColor}
             />
           )
@@ -87,7 +87,7 @@ export const WalletMoreInfoCategory = ({
               >
                 <ListIcon as={FeatureIcon}></ListIcon>
 
-                <Text px="0.2rem" lineHeight={1}>
+                <Text px={1} lineHeight={1}>
                   {feature.label}
                 </Text>
 

@@ -139,13 +139,13 @@ export const WalletMoreInfo = ({
               lineHeight={1.4}
               fontSize="md"
               fontWeight="bold"
-              ms={{ lg: "0.5rem" }}
+              ms={{ lg: 2 }}
               my={-3.5}
             >
               {t("page-find-wallet-social-links")}
             </Heading>
 
-            <Flex ms={{ lg: "0.5rem" }} gap="0.8rem">
+            <Flex ms={{ lg: 2 }} gap="0.8rem">
               <SocialLink
                 to={wallet.url}
                 hideArrow

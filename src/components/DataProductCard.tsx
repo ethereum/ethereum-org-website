@@ -129,7 +129,7 @@ const DataProductCard = ({
                       objectFit="cover"
                       alt=""
                       minWidth="24px"
-                      me="0.5rem"
+                      me={2}
                     />
                   )}
                   {coin}
