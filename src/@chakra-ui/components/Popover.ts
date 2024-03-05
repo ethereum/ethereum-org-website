@@ -30,6 +30,9 @@ const baseStyle = definePartsStyle(
       boxShadow: `0px 0px 16px 0px #00000040`,
       fontSize: "sm",
       border: "none",
+      minWidth: "48", // 12rem
+      maxWidth: "xs", // 20rem
+      w: "auto",
     },
     header: {
       border: "none",
