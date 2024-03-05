@@ -7,6 +7,7 @@ import {
   DrawerContent,
   DrawerHeader,
   DrawerOverlay,
+  Flex,
   Text,
 } from "@chakra-ui/react"
 
@@ -19,6 +20,7 @@ import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 import { FilterBurgerIcon } from "../icons/wallets"
 import OldHeading from "../OldHeading"
 
+import { ResetFiltersButton } from "./ResetFiltersButton"
 import WalletFilterPersona from "./WalletFilterPersona"
 import WalletFilterSidebar, {
   WalletFilterSidebarProps,
@@ -33,9 +35,9 @@ interface MobileFiltersMenuProps extends WalletFilterSidebarProps {
 export const MobileFiltersMenu = ({
   filters,
   resetWalletFilter,
+  resetFilters,
   updateFilterOption,
   updateFilterOptions,
-  resetFilters,
   selectedPersona,
   setFilters,
   setSelectedPersona,
@@ -59,8 +61,7 @@ export const MobileFiltersMenu = ({
         <Button
           rightIcon={<FilterBurgerIcon />}
           variant="outline"
-          borderInlineStart="none"
-          borderInlineStartRadius="none"
+          border="none"
           gap={4}
           sx={{
             svg: {
@@ -79,8 +80,13 @@ export const MobileFiltersMenu = ({
           }}
         >
           <Box>
-            <Text>{t("page-find-wallet-filters")}</Text>
-            <Text fontSize="sm" lineHeight="14px" color="body.medium">
+            <Text align="start">{t("page-find-wallet-filters")}</Text>
+            <Text
+              align="start"
+              fontSize="sm"
+              lineHeight="14px"
+              color="body.medium"
+            >
               {Object.values(filters).reduce(
                 (acc, filter) => (filter ? acc + 1 : acc),
                 0
@@ -98,11 +104,11 @@ export const MobileFiltersMenu = ({
         size="full"
       >
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent bg="background.base">
           <DrawerHeader mb={4}>
             <DrawerCloseButton />
           </DrawerHeader>
-          <DrawerBody position="relative" p={2}>
+          <DrawerBody position="relative" p={3}>
             {/* Wallet Personas */}
             <Box px={{ base: showMobileSidebar ? 0 : 4, "2xl": 0 }}>
               <OldHeading
@@ -111,7 +117,7 @@ export const MobileFiltersMenu = ({
                 fontWeight="bold"
                 lineHeight={1.4}
                 mt={0}
-                mb={3}
+                mb={2}
               >
                 {t("page-find-wallet-personas-title")}
               </OldHeading>
@@ -139,6 +145,30 @@ export const MobileFiltersMenu = ({
                 showMobileSidebar,
               }}
             />
+
+            <Flex
+              justifyContent="space-between"
+              alignItems="center"
+              position="fixed"
+              bottom={0}
+              left={0}
+              w="100%"
+              h="85px"
+              px={9}
+              py={5}
+              bg="background.base"
+            >
+              <Box flex={1}>
+                <ResetFiltersButton
+                  resetFilters={resetFilters}
+                  resetWalletFilter={resetWalletFilter}
+                />
+              </Box>
+
+              <Button w="100%" flex={1} onClick={onClose}>
+                {t("page-find-wallet-see-wallets")}
+              </Button>
+            </Flex>
           </DrawerBody>
         </DrawerContent>
       </Drawer>

@@ -45,7 +45,6 @@ const WalletFilterSidebar = ({
 
   return (
     <Tabs
-      bg="background.base"
       transition="0.5s all"
       sx={{
         scrollbarWidth: "thin",
@@ -74,7 +73,7 @@ const WalletFilterSidebar = ({
           py={2}
           borderBottom={showMobileSidebar ? "none" : "1px solid"}
           borderBottomColor="primary.base !important"
-          bg="background.base"
+          bg={showMobileSidebar ? "none" : "background.base"}
         >
           <Text
             fontWeight="bold"
@@ -92,10 +91,12 @@ const WalletFilterSidebar = ({
             )})`}
           </Text>
 
-          <ResetFiltersButton
-            resetFilters={resetFilters}
-            resetWalletFilter={resetWalletFilter}
-          />
+          <Box display={showMobileSidebar ? "none" : "block"}>
+            <ResetFiltersButton
+              resetFilters={resetFilters}
+              resetWalletFilter={resetWalletFilter}
+            />
+          </Box>
         </Flex>
       </Box>
 

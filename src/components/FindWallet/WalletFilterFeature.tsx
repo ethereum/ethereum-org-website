@@ -67,7 +67,6 @@ const WalletFilterFeature = ({
       reduceMotion
       spacing={2}
       alignItems="normal"
-      p={{ base: 4, sm: 0 }}
       // Workaround to not having a dedicated prop to all items open by default
       defaultIndex={Object.keys(filterOptions).map((key) => +key)}
     >
