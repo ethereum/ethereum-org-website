@@ -63,7 +63,6 @@ export const getWalletPersonas = (wallet: WalletData) => {
 // Get a list of wallet supported languages with native title
 export const getSupportedLanguages = (
   walletSupportedLanguages: string[],
-  languages: {}[],
   locale: string
 ) => {
   const supportedLanguages = [] as string[]
@@ -78,11 +77,16 @@ export const getSupportedLanguages = (
   }
 
   walletSupportedLanguages.forEach((supportedLanguage) => {
-    for (const [_, value] of Object.entries(languages)) {
-      if (value[supportedLanguage]) {
-        supportedLanguages.push(value[supportedLanguage])
-      }
-    }
+    // Get supported language name
+    const supportedLanguageName = new Intl.DisplayNames([locale], {
+      type: "language",
+    }).of(supportedLanguage)
+    // Capitalize supported language name
+    const formattedSupportedLanguageName =
+      supportedLanguageName!.charAt(0).toUpperCase() +
+      supportedLanguageName!.slice(1)
+
+    supportedLanguages.push(formattedSupportedLanguageName)
   })
 
   return supportedLanguages

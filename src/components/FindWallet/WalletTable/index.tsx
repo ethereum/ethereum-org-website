@@ -44,7 +44,6 @@ import {
 import { SupportedLanguagesTooltip } from "./SupportedLanguagesTooltip"
 import { WalletEmptyState } from "./WalletEmptyState"
 
-import { useLanguagesList } from "@/hooks/useLanguagesList"
 import { useWalletTable } from "@/hooks/useWalletTable"
 
 const Container = (props: TableProps) => (
@@ -228,7 +227,6 @@ const WalletTable = ({
     updateMoreInfo,
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
-  const languagesList = useLanguagesList()
 
   return (
     <Container>
@@ -274,7 +272,6 @@ const WalletTable = ({
           // Supported languages
           const supportedLanguages = getSupportedLanguages(
             wallet.languages_supported,
-            languagesList,
             locale!
           )
           const numberOfSupportedLanguages = supportedLanguages.length
