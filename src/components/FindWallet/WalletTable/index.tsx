@@ -159,7 +159,7 @@ const FlexInfo = (props: FlexProps) => (
     sx={{
       p: {
         p: 0,
-        fontSize: "1.2rem",
+        fontSize: "xl",
         fontWeight: "bold",
         "& + p": {
           mt: "0.1rem",
@@ -278,9 +278,10 @@ const WalletTable = ({
             locale!
           )
           const numberOfSupportedLanguages = supportedLanguages.length
-          const rest = numberOfSupportedLanguages - 5
-          const restText = `${rest > 0 ? "+" : ""} ${rest > 0 ? rest : ""}`
           const sliceSize = NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
+          const rest = numberOfSupportedLanguages - sliceSize
+          const restText = `${rest > 0 ? "+" : ""} ${rest > 0 ? rest : ""}`
+
           const formattedSupportedLanguages = formatSupportedLanguages(
             supportedLanguages,
             sliceSize
@@ -319,7 +320,7 @@ const WalletTable = ({
                           src={wallet.image}
                           alt=""
                           objectFit="contain"
-                          boxSize={{ base: "24px", md: "56px" }}
+                          boxSize="auto"
                         />
                       </Box>
 
@@ -357,7 +358,7 @@ const WalletTable = ({
                               <Icon as={DevicesIcon} fontSize="2xl" />
 
                               <Text
-                                fontSize="1rem !important"
+                                fontSize="md !important"
                                 fontWeight="normal !important"
                               >
                                 {deviceLabels.join(" · ")}
@@ -369,7 +370,7 @@ const WalletTable = ({
                               <Icon as={LanguagesIcon} fontSize="2xl" />
 
                               <Text
-                                fontSize="1rem !important"
+                                fontSize="md !important"
                                 fontWeight="normal !important"
                               >
                                 {/* Show up to 5 supported languages and use a tooltip for the rest */}

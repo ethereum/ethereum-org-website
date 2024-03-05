@@ -19,7 +19,7 @@ export const SupportedLanguagesTooltip = ({
   return (
     <Tooltip
       content={
-        <Text fontSize="1rem !important" fontWeight="normal !important">
+        <Text fontSize="md !important" fontWeight="normal !important">
           {formatSupportedLanguages(
             supportedLanguages.slice(NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN)
           )}
@@ -28,7 +28,7 @@ export const SupportedLanguagesTooltip = ({
     >
       <Text
         color="primary.base"
-        fontSize="1rem !important"
+        fontSize="md !important"
         fontWeight="normal !important"
       >
         {restText}

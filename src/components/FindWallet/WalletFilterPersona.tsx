@@ -77,7 +77,7 @@ const WalletFilterPersona = ({
                 }
               }}
             >
-              <Flex gap={2} mb={showMobileSidebar ? 0 : "0.2rem"} px={1.5}>
+              <Flex gap={2} mb={showMobileSidebar ? 0 : 1} px={1.5}>
                 <Box role="radio" aria-label={`${persona.title} filter`}>
                   <Icon
                     as={MdCircle}
@@ -120,7 +120,7 @@ const WalletFilterPersona = ({
                 display={showMobileSidebar ? "none" : "block"}
                 p="0.4rem"
                 color={selectedPersona === idx ? "text" : "text200"}
-                fontSize="0.9rem"
+                fontSize="sm"
                 fontWeight="normal"
                 transition="0.5s all"
                 lineHeight={1.3}
