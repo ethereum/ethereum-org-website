@@ -1,7 +1,7 @@
 import { kebabCase } from "lodash"
 import { MdInfoOutline } from "react-icons/md"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
-import { Box, Flex, HStack, Icon, Text } from "@chakra-ui/react"
+import { Box, Flex, HStack, Icon, Text, VStack } from "@chakra-ui/react"
 
 import type { StatsBoxMetric } from "@/lib/types"
 
@@ -32,20 +32,21 @@ export const GridItem = ({ metric }: GridItemProps) => {
   const value = hasError ? (
     <StatErrorMessage />
   ) : (
-    <HStack lineHeight={1} alignItems="baseline" spacing={4}>
+    <Box display="inline">
       <Box
         fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
-        fontWeight={600}
+        display="inline"
+        lineHeight="100%"
       >
-        {state.value}
+        {state.value}{" "}
       </Box>
-      <Box>
+      <Box display="inline">
         <Tooltip content={tooltipContent(metric)}>
           <Box as="span" display="inline-block">
             <Icon
               as={MdInfoOutline}
-              boxSize="6"
-              me={2}
+              boxSize={6}
+              fill="text"
               _hover={{ fill: "primary.base" }}
               _active={{ fill: "primary.base" }}
               _focus={{ fill: "primary.base" }}
@@ -53,7 +54,7 @@ export const GridItem = ({ metric }: GridItemProps) => {
           </Box>
         </Tooltip>
       </Box>
-    </HStack>
+    </Box>
   )
 
   // Returns either 90 or 30-day data range depending on `range` selection
@@ -155,15 +156,16 @@ export const GridItem = ({ metric }: GridItemProps) => {
           {chart}
         </Box>
       )}
-      <Flex justifyContent="space-between">
+      <Flex
+        justifyContent="space-between"
+        position="relative"
+        alignItems="flex-end"
+      >
         <Box
-          fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
           fontWeight={600}
           color="text"
           flexWrap="wrap"
           textOverflow="ellipsis"
-          lineHeight="1.6rem"
-          mb="2"
         >
           {value}
         </Box>
