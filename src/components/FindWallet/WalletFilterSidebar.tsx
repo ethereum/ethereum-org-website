@@ -75,7 +75,7 @@ const WalletFilterSidebar = ({
           alignItems="center"
           px={showMobileSidebar ? 0 : 6}
           py={2}
-          borderBottom={{ base: "none !important", md: "1px solid" }}
+          borderBottom={showMobileSidebar ? "none" : "1px solid"}
           borderBottomColor="primary.base !important"
           bg="background.base"
         >
