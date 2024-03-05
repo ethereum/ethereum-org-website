@@ -104,7 +104,7 @@ const WalletFilterPersona = ({
                 <Heading
                   as="h3"
                   ms={0}
-                  fontSize={showMobileSidebar ? "md" : "lg"}
+                  fontSize={showMobileSidebar ? "md" : "xl"}
                   fontWeight={showMobileSidebar ? "normal" : "bold"}
                   py={0}
                   pe={1}

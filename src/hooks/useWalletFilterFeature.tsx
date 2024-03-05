@@ -1,7 +1,8 @@
 // Libraries
 import { useEffect, useState } from "react"
 import { useTranslation } from "next-i18next"
-import { Icon } from "@chakra-ui/react"
+
+import { FilterOptionType } from "@/lib/types"
 
 import { WalletFilterFeatureProps } from "@/components/FindWallet/WalletFilterFeature"
 
@@ -31,29 +32,16 @@ import {
   WithdrawCryptoIcon,
 } from "../components/icons/wallets"
 
-type FilterOptionType = {
-  title: string
-  items: Array<{
-    title: string
-    icon: typeof Icon
-    description: string
-    filterKey: string | undefined
-    showOptions: boolean | undefined
-    options:
-      | Array<{
-          name: string
-          filterKey?: string
-          inputType: "checkbox"
-        }>
-      | []
-  }>
-}
+type UseWalletFilterFeatureProps = Omit<
+  WalletFilterFeatureProps,
+  "updateFilterOption"
+>
 
 export const useWalletFilterFeature = ({
   resetWalletFilter,
   filters,
   updateFilterOptions,
-}: Omit<WalletFilterFeatureProps, "updateFilterOption">) => {
+}: UseWalletFilterFeatureProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const [filterOptions, setFilterOptions] = useState<FilterOptionType[]>([
     {
@@ -108,7 +96,7 @@ export const useWalletFilterFeature = ({
           icon: BrowserIcon,
           description: t(walletFilterData.browser.description),
           filterKey: walletFilterData.browser.filterKey,
-          showOptions: filters.firefox || filters.chrome ? true : false,
+          showOptions: filters.firefox || filters.chromium ? true : false,
           options: [
             {
               name: t(walletFilterData.firefox.title),

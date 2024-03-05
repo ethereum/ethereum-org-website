@@ -1,5 +1,7 @@
 import { useState } from "react"
 
+import { ColumnClassName } from "@/lib/types"
+
 import { WalletTableProps } from "@/components/FindWallet/WalletTable"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -10,8 +12,6 @@ export interface DropdownOption {
   filterKey: string
   category: string
 }
-
-export type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
 
 type UseWalletTableProps = Pick<WalletTableProps, "filters" | "walletData"> & {
   t: (x: string) => string

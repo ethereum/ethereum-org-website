@@ -9,7 +9,6 @@ import {
   Tabs,
   type TabsProps,
   Text,
-  useDisclosure,
   useTheme,
 } from "@chakra-ui/react"
 
@@ -135,8 +134,8 @@ const WalletFilterSidebar = ({
         }}
       >
         <WalletFilterFeature
-          resetWalletFilter={resetWalletFilter}
           filters={filters}
+          resetWalletFilter={resetWalletFilter}
           updateFilterOption={updateFilterOption}
           updateFilterOptions={updateFilterOptions}
         />

@@ -4,6 +4,7 @@ import type { AppProps } from "next/app"
 import { StaticImageData } from "next/image"
 import { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
+import { Icon } from "@chakra-ui/react"
 
 import type {
   DocsFrontmatter,
@@ -496,6 +497,57 @@ export type CommunityConference = {
 
 // Wallets
 export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
+
+export type FilterOptionType = {
+  title: string
+  items: Array<{
+    title: string
+    icon: typeof Icon
+    description: string
+    filterKey: string | undefined
+    showOptions: boolean | undefined
+    options:
+      | Array<{
+          name: string
+          filterKey?: string
+          inputType: "checkbox"
+        }>
+      | []
+  }>
+}
+
+export type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
+
+export interface WalletPersonas {
+  title: string
+  description: string
+  presetFilters: {
+    android: boolean
+    ios: boolean
+    linux: boolean
+    windows: boolean
+    macOS: boolean
+    firefox: boolean
+    chromium: boolean
+    hardware: boolean
+    open_source: boolean
+    non_custodial: boolean
+    hardware_support: boolean
+    rpc_importing: boolean
+    nft_support: boolean
+    connect_to_dapps: boolean
+    staking: boolean
+    swaps: boolean
+    layer_2: boolean
+    gas_fee_customization: boolean
+    ens_support: boolean
+    erc_20_support: boolean
+    buy_crypto: boolean
+    withdraw_crypto: boolean
+    multisig: boolean
+    social_recovery: boolean
+  }
+}
 
 // Historical upgrades
 type NetworkUpgradeDetails = {

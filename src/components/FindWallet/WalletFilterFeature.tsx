@@ -48,8 +48,8 @@ const FilterToggle = ({
 )
 
 export type WalletFilterFeatureProps = {
-  resetWalletFilter: MutableRefObject<() => void>
   filters: WalletFilter
+  resetWalletFilter: MutableRefObject<() => void>
   updateFilterOption: (key: any) => void
   updateFilterOptions: (key: any, value: any) => void
 }

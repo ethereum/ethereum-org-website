@@ -1,37 +1,6 @@
 import { useTranslation } from "next-i18next"
 
-// Types
-// TODO move to types
-interface Personas {
-  title: string
-  description: string
-  presetFilters: {
-    android: boolean
-    ios: boolean
-    linux: boolean
-    windows: boolean
-    macOS: boolean
-    firefox: boolean
-    chromium: boolean
-    hardware: boolean
-    open_source: boolean
-    non_custodial: boolean
-    hardware_support: boolean
-    rpc_importing: boolean
-    nft_support: boolean
-    connect_to_dapps: boolean
-    staking: boolean
-    swaps: boolean
-    layer_2: boolean
-    gas_fee_customization: boolean
-    ens_support: boolean
-    erc_20_support: boolean
-    buy_crypto: boolean
-    withdraw_crypto: boolean
-    multisig: boolean
-    social_recovery: boolean
-  }
-}
+import { WalletPersonas } from "@/lib/types"
 
 export const useWalletPersonas = () => {
   const { t } = useTranslation("page-wallets-find-wallet")
@@ -89,7 +58,8 @@ export const useWalletPersonas = () => {
       label: t("page-find-wallet-token-support"),
     },
   }
-  const personas: Personas[] = [
+
+  const personas: WalletPersonas[] = [
     {
       title: t("page-find-wallet-new-to-crypto-title"),
       description: t("page-find-wallet-new-to-crypto-desc"),
