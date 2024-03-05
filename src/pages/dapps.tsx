@@ -1,5 +1,4 @@
 import { type ComponentPropsWithRef, useEffect, useRef, useState } from "react"
-import { merge } from "lodash"
 import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -7,7 +6,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Badge,
   Box,
-  BoxProps,
   Button,
   type ButtonProps,
   Divider as ChakraDivider,
