@@ -21,7 +21,7 @@ import {
   Tr,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp, WalletFilter } from "@/lib/types"
+import { ChildOnlyProp, WalletData, WalletFilter } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
@@ -35,8 +35,6 @@ import {
   getSupportedLanguages,
   getWalletPersonas,
 } from "@/lib/utils/wallets"
-
-import { WalletData } from "@/data/wallets/wallet-data"
 
 import {
   NAV_BAR_PX_HEIGHT,

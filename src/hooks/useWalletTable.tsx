@@ -119,6 +119,12 @@ export const useWalletTable = ({
       filterKey: "social_recovery",
       category: "smart_contract",
     },
+    {
+      label: t("page-find-wallet-new-to-crypto-title"),
+      value: t("page-find-wallet-new-to-crypto-title"),
+      filterKey: "new_to_crypto",
+      category: "new_to_crypto",
+    },
   ]
 
   const [walletCardData, setWalletData] = useState(

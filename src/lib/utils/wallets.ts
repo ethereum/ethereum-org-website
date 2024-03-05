@@ -1,6 +1,6 @@
 import { shuffle } from "lodash"
 
-import walletData, { WalletData } from "@/data/wallets/wallet-data"
+import walletData from "@/data/wallets/wallet-data"
 
 import {
   DEVELOPER_FEATURES,
@@ -9,6 +9,7 @@ import {
   NEW_TO_CRYPTO_FEATURES,
   NFTS_FEATURES,
 } from "../constants"
+import { WalletData } from "../types"
 
 export const getSupportedLocaleWallets = (locale: string) =>
   shuffle(

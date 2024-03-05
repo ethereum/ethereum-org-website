@@ -14,7 +14,7 @@ import {
   useTheme,
 } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, WalletData } from "@/lib/types"
 
 import BannerNotification from "@/components/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
@@ -35,8 +35,6 @@ import {
   getNonSupportedLocaleWallets,
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
-
-import { WalletData } from "@/data/wallets/wallet-data"
 
 import { NAV_BAR_PX_HEIGHT, WALLETS_FILTERS_DEFAULT } from "@/lib/constants"
 
