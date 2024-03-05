@@ -8,7 +8,6 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Text,
-  useDisclosure,
 } from "@chakra-ui/react"
 
 import { Button } from "@/components/Buttons"
@@ -25,7 +24,11 @@ import WalletFilterSidebar, {
   WalletFilterSidebarProps,
 } from "./WalletFilterSidebar"
 
-type MobileFiltersMenuProps = WalletFilterSidebarProps
+interface MobileFiltersMenuProps extends WalletFilterSidebarProps {
+  showMobileSidebar: boolean
+  onOpen: () => void
+  onClose: () => void
+}
 
 export const MobileFiltersMenu = ({
   filters,
@@ -36,9 +39,11 @@ export const MobileFiltersMenu = ({
   selectedPersona,
   setFilters,
   setSelectedPersona,
+  showMobileSidebar,
+  onOpen,
+  onClose,
 }: MobileFiltersMenuProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
 
   return (
     <>
@@ -116,6 +121,7 @@ export const MobileFiltersMenu = ({
                 setFilters={setFilters}
                 selectedPersona={selectedPersona}
                 setSelectedPersona={setSelectedPersona}
+                showMobileSidebar={showMobileSidebar}
               />
             </Box>
 

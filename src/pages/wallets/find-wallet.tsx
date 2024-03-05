@@ -3,7 +3,16 @@ import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Center, Flex, Hide, Show, Text, useTheme } from "@chakra-ui/react"
+import {
+  Box,
+  Center,
+  Flex,
+  Hide,
+  Show,
+  Text,
+  useDisclosure,
+  useTheme,
+} from "@chakra-ui/react"
 
 import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
@@ -70,6 +79,7 @@ const FindWalletPage = () => {
   const resetWalletFilter = useRef(() => {})
   const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
+  const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
 
   const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
   const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
@@ -174,6 +184,7 @@ const FindWalletPage = () => {
           setFilters={setFilters}
           selectedPersona={selectedPersona}
           setSelectedPersona={setSelectedPersona}
+          showMobileSidebar={showMobileSidebar}
         />
       </Box>
 
@@ -188,6 +199,9 @@ const FindWalletPage = () => {
           selectedPersona={selectedPersona}
           setFilters={setFilters}
           setSelectedPersona={setSelectedPersona}
+          showMobileSidebar={showMobileSidebar}
+          onOpen={onOpen}
+          onClose={onClose}
         />
       </Hide>
 

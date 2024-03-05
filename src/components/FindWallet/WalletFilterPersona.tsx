@@ -1,5 +1,5 @@
 import { MdCircle } from "react-icons/md"
-import { Box, Flex, Heading, Icon, Text, useDisclosure } from "@chakra-ui/react"
+import { Box, Flex, Heading, Icon, Text } from "@chakra-ui/react"
 
 import { WalletFilter } from "@/lib/types"
 
@@ -13,6 +13,7 @@ type WalletFilterPersonaProps = {
   setFilters: React.Dispatch<React.SetStateAction<WalletFilter>>
   selectedPersona: number
   setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
+  showMobileSidebar: boolean
 }
 
 const WalletFilterPersona = ({
@@ -20,9 +21,9 @@ const WalletFilterPersona = ({
   setFilters,
   selectedPersona,
   setSelectedPersona,
+  showMobileSidebar,
 }: WalletFilterPersonaProps) => {
   const personas = useWalletPersonas()
-  const { isOpen: showMobileSidebar } = useDisclosure()
 
   return (
     <Flex

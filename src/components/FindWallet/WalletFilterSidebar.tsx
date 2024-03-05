@@ -28,6 +28,7 @@ export type WalletFilterSidebarProps = Omit<TabsProps, "children"> & {
   setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
   updateFilterOption: (key: any) => void
   updateFilterOptions: (keys: any, value: any) => void
+  showMobileSidebar?: boolean
 }
 
 const WalletFilterSidebar = ({
@@ -40,11 +41,11 @@ const WalletFilterSidebar = ({
   updateFilterOption,
   updateFilterOptions,
   top,
+  showMobileSidebar,
   ...tabsProps
 }: WalletFilterSidebarProps) => {
   const theme = useTheme()
   const { t } = useTranslation("page-wallets-find-wallet")
-  const { isOpen: showMobileSidebar } = useDisclosure()
 
   return (
     <Tabs
@@ -75,8 +76,8 @@ const WalletFilterSidebar = ({
           alignItems="center"
           px={showMobileSidebar ? 0 : 6}
           py={2}
-          borderBottom={showMobileSidebar ? "none" : "1px solid"}
-          borderBottomColor="primary.base"
+          borderBottom={{ base: "none !important", md: "1px solid" }}
+          borderBottomColor="primary.base !important"
           bg="background.base"
         >
           <Text
