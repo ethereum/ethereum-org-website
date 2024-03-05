@@ -374,6 +374,7 @@ const WalletTable = ({
                                 fontSize="1rem !important"
                                 fontWeight="normal !important"
                               >
+                                {/* Show up to 5 supported languages and use a tooltip for the rest */}
                                 {`${formattedSupportedLanguages}`}{" "}
                                 {rest > 0 && (
                                   <SupportedLanguagesTooltip
