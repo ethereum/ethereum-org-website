@@ -8,7 +8,6 @@ import {
   Center,
   Flex,
   Hide,
-  Show,
   Text,
   useDisclosure,
   useTheme,
@@ -205,22 +204,21 @@ const FindWalletPage = () => {
 
       <Box px={{ md: 4, "2xl": 0 }}>
         <Flex pt={4} pb={6} gap={6}>
-          <Show above="lg">
-            <WalletFilterSidebar
-              w={{ md: "330px" }}
-              top={NAV_BAR_PX_HEIGHT}
-              {...{
-                filters,
-                resetWalletFilter,
-                updateFilterOption,
-                updateFilterOptions,
-                resetFilters,
-                selectedPersona,
-                setFilters,
-                setSelectedPersona,
-              }}
-            />
-          </Show>
+          <WalletFilterSidebar
+            hideBelow="lg"
+            w={{ md: "330px" }}
+            top={NAV_BAR_PX_HEIGHT}
+            {...{
+              filters,
+              resetWalletFilter,
+              updateFilterOption,
+              updateFilterOptions,
+              resetFilters,
+              selectedPersona,
+              setFilters,
+              setSelectedPersona,
+            }}
+          />
 
           <Box
             mt={0.5}
