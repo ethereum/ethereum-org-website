@@ -217,6 +217,10 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("esp"),
         },
         {
+          to: "https://www.ethereum-ecosystem.com",
+          text: t("ethereum-ecosystem"),
+        },
+        {
           to: "/bug-bounty/",
           text: t("ethereum-bug-bounty"),
         },
