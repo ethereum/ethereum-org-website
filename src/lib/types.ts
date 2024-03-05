@@ -593,6 +593,7 @@ export interface WalletPersonas {
     withdraw_crypto: boolean
     multisig: boolean
     social_recovery: boolean
+    new_to_crypto?: boolean
   }
 }
 

@@ -288,6 +288,7 @@ const walletData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.coinbase.com/wallet/tutorials",
     documentation: "",
+    new_to_crypto: true,
     // note: "Community contribution, let's follow up with Coinbase",
   },
   {
@@ -426,6 +427,7 @@ const walletData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://support.metamask.io",
     documentation: "",
+    new_to_crypto: true,
   },
   {
     last_updated: "2023-01-25",
@@ -757,6 +759,7 @@ const walletData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://www.mewtopia.com/",
     documentation: "https://help.myetherwallet.com/en/",
+    new_to_crypto: true,
   },
   {
     last_updated: "2022-06-24",
@@ -1103,6 +1106,7 @@ const walletData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://learn.rainbow.me/",
     documentation: "",
+    new_to_crypto: true,
   },
   {
     last_updated: "2022-08-21",
@@ -1402,6 +1406,7 @@ const walletData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "",
     documentation: "https://help.zerion.io/en/",
+    new_to_crypto: true,
   },
   {
     last_updated: "2022-08-31",
@@ -1648,6 +1653,7 @@ const walletData: WalletData[] = [
     social_recovery: false,
     onboard_documentation: "https://help.onekey.so/hc/en-us",
     documentation: "https://developer.onekey.so/guide/introduction",
+    new_to_crypto: true,
   },
   {
     last_updated: "2023-01-25",
