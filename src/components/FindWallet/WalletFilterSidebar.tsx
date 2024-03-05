@@ -1,10 +1,7 @@
 import { useTranslation } from "next-i18next"
-import { BsArrowCounterclockwise } from "react-icons/bs"
 import {
   Box,
-  Center,
   Flex,
-  Icon,
   Stack,
   Tabs,
   type TabsProps,
@@ -16,7 +13,7 @@ import { WalletFilter } from "@/lib/types"
 
 import WalletFilterFeature from "@/components/FindWallet/WalletFilterFeature"
 
-import { trackCustomEvent } from "@/lib/utils/matomo"
+import { ResetFiltersButton } from "./ResetFiltersButton"
 
 export type WalletFilterSidebarProps = Omit<TabsProps, "children"> & {
   filters: WalletFilter
@@ -95,31 +92,10 @@ const WalletFilterSidebar = ({
             )})`}
           </Text>
 
-          <Center
-            as="button"
-            color="primary.base"
-            fontSize="xs"
-            gap={1}
-            _hover={{
-              color: "primary.hover",
-            }}
-            onClick={() => {
-              resetFilters()
-              resetWalletFilter.current()
-              trackCustomEvent({
-                eventCategory: "WalletFilterReset",
-                eventAction: `WalletFilterReset clicked`,
-                eventName: `reset filters`,
-              })
-            }}
-          >
-            <Icon
-              as={BsArrowCounterclockwise}
-              aria-hidden="true"
-              fontSize="sm"
-            />
-            {t("page-find-wallet-reset-filters").toUpperCase()}
-          </Center>
+          <ResetFiltersButton
+            resetFilters={resetFilters}
+            resetWalletFilter={resetWalletFilter}
+          />
         </Flex>
       </Box>
 

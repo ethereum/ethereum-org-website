@@ -38,7 +38,7 @@ const WalletFilterPersona = ({
       gap={showMobileSidebar ? 2 : 4}
       autoColumns="minmax(0, 1fr)"
       templateColumns={showMobileSidebar ? "repeat(2, 1fr)" : "minmax(0, 1fr)"}
-      mb={4}
+      mb={showMobileSidebar ? 4 : 2}
     >
       {personas.map((persona, idx) => {
         return (
