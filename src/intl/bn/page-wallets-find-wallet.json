@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "যে ওয়ালেট গুলোতে একটি লেনদেনের অনুমোদনের জন্য একাধিক স্বাক্ষরের প্রয়োজন হয়",
   "page-find-wallet-social-recovery": "সামাজিক পুনরুদ্ধার",
   "page-find-wallet-social-recovery-desc": "যে ওয়ালেট গুলো অভিভাবকদের স্মার্ট কন্ট্র্যাক্ট ওয়ালেটের জন্য স্বাক্ষর কী পরিবর্তন করতে দেয়",
-  "page-find-wallet-token-support": "টোকেন সাপোর্ট",
   "page-find-wallet-features": "Features",
   "page-find-wallet-security": "নিরাপত্তা",
   "page-find-wallet-smart-contract": "Smart contract",

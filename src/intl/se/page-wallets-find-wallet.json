@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Plånböcker som kräver flera signaturer för att godkänna en transaktion",
   "page-find-wallet-social-recovery": "Social återhämtning",
   "page-find-wallet-social-recovery-desc": "Plånböcker som tillåter vårdnadshavare att ändra signeringsnyckeln för plånböcker för smarta kontrakt",
-  "page-find-wallet-token-support": "Stöd för tokens",
   "page-find-wallet-features": "Funktioner",
   "page-find-wallet-security": "Säkerhet",
   "page-find-wallet-smart-contract": "Smart contract",

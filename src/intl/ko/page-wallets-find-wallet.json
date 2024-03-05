@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "거래를 승인하기 위해 다중 서명이 필요한 지갑",
   "page-find-wallet-social-recovery": "소셜 복구",
   "page-find-wallet-social-recovery-desc": "보호자가 스마트 계약 지갑의 서명 키를 변경할 수 있는 지갑",
-  "page-find-wallet-token-support": "토큰 지원",
   "page-find-wallet-features": "기능",
   "page-find-wallet-security": "보안",
   "page-find-wallet-smart-contract": "스마트 계약",

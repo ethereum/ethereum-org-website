@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "需要多重签名来授权交易的钱包",
   "page-find-wallet-social-recovery": "社交恢复",
   "page-find-wallet-social-recovery-desc": "允许监护人更改智能合约钱包签名密钥的钱包",
-  "page-find-wallet-token-support": "支持代币",
   "page-find-wallet-features": "功能",
   "page-find-wallet-security": "安全性",
   "page-find-wallet-smart-contract": "智能合约",

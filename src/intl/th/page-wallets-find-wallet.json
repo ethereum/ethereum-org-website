@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "วอลเล็ทที่เรียกร้องหลายลายเซ็นเพื่ออนุมัติการทำธุรกรรม",
   "page-find-wallet-social-recovery": "การกู้คืนข้อมูลด้วยผู้ใช้หลายคน (Social recovery)",
   "page-find-wallet-social-recovery-desc": "วอลเล็ทที่ให้ผู้ปกครองเปลี่ยนคีย์เซ็นชื่อวอลเล็ทสัญญาอัจฉริยะ",
-  "page-find-wallet-token-support": "ใช้งานกับโทเค็นได้",
   "page-find-wallet-features": "คุุณสมบัติ",
   "page-find-wallet-security": "ความปลอดภัย",
   "page-find-wallet-smart-contract": "Smart contract",

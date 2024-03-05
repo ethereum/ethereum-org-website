@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Wallets, die mehrere Signaturen zur Genehmigung einer Transaktion erfordern",
   "page-find-wallet-social-recovery": "Soziale Wiederherstellung",
   "page-find-wallet-social-recovery-desc": "Wallets, die es Bevollmächtigten ermöglichen, den Signierschlüssel für Smart Contract-Wallets zu ändern",
-  "page-find-wallet-token-support": "Token Unterstützung",
   "page-find-wallet-features": "Eigenschaften",
   "page-find-wallet-security": "Sicherheit",
   "page-find-wallet-smart-contract": "Smart Contract",

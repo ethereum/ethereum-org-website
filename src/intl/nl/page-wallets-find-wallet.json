@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Portemonnees die meerdere handtekeningen vereisen om een transactie te autoriseren",
   "page-find-wallet-social-recovery": "Sociaal herstel",
   "page-find-wallet-social-recovery-desc": "Portemonnees die guardians in staat stellen de ondertekeningssleutel voor smart contract portemonnees te wijzigen",
-  "page-find-wallet-token-support": "Tokenondersteuning",
   "page-find-wallet-features": "Eigenschappen",
   "page-find-wallet-security": "Beveiliging",
   "page-find-wallet-smart-contract": "Smart contract",

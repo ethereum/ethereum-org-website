@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Гаманці, яким потрібно декілька підписів для авторизації транзакції",
   "page-find-wallet-social-recovery": "Соціальне відновлення",
   "page-find-wallet-social-recovery-desc": "Гаманці, що дозволяють опікунам змінювати ключ підпису для гаманців зі смарт-контрактами",
-  "page-find-wallet-token-support": "Підтримка токенів",
   "page-find-wallet-features": "Можливості",
   "page-find-wallet-security": "Безпека",
   "page-find-wallet-smart-contract": "Смарт-контракт",

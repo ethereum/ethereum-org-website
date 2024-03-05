@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Portefeuilles nécessitant plusieurs signatures pour autoriser une transaction",
   "page-find-wallet-social-recovery": "Récupération Sociale",
   "page-find-wallet-social-recovery-desc": "Portefeuilles permettant aux responsables de modifier la clé de signature pour les portefeuilles de contrats intelligents",
-  "page-find-wallet-token-support": "Support des jetons",
   "page-find-wallet-features": "Fonctionnalités",
   "page-find-wallet-security": "Sécurité",
   "page-find-wallet-smart-contract": "Contrat intelligent",

@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Кошельки, требующие нескольких подписей для авторизации транзакции",
   "page-find-wallet-social-recovery": "Социальное восстановление",
   "page-find-wallet-social-recovery-desc": "Кошельки, позволяющие опекунам изменять ключ подписи для кошельков умных контрактов",
-  "page-find-wallet-token-support": "Поддержка токенов",
   "page-find-wallet-features": "Функции",
   "page-find-wallet-security": "Безопасность",
   "page-find-wallet-smart-contract": "Смарт-контракт",

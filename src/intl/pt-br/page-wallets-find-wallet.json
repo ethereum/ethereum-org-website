@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Carteiras que requerem múltiplas assinaturas para autorizar uma transação",
   "page-find-wallet-social-recovery": "Recuperação social",
   "page-find-wallet-social-recovery-desc": "Carteiras que permitem que os guardiões alterem a chave de assinatura para carteiras de contrato inteligentes",
-  "page-find-wallet-token-support": "Suporte para token",
   "page-find-wallet-features": "Recursos",
   "page-find-wallet-security": "Segurança",
   "page-find-wallet-smart-contract": "Contrato inteligente",

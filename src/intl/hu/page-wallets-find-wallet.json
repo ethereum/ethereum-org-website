@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Tárcák, melyeknél több aláírás szükséges a tranzakciók engedélyezéséhez",
   "page-find-wallet-social-recovery": "Hagyományos visszaállítás",
   "page-find-wallet-social-recovery-desc": "Tárcák, melyeknél az őrzők megváltoztathatják az aláírókulcsot az okosszerződéses tárcákhoz",
-  "page-find-wallet-token-support": "Tokentámogatás",
   "page-find-wallet-features": "Jellemzők",
   "page-find-wallet-security": "Biztonság",
   "page-find-wallet-smart-contract": "Smart contract",

@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Портфейли, които изискват множество подписи за разрешаване на трансакция",
   "page-find-wallet-social-recovery": "Социално възстановяване",
   "page-find-wallet-social-recovery-desc": "Портфейли, които позволяват на попечителите да сменят ключа за влизане на портфейли с интелигентни договори",
-  "page-find-wallet-token-support": "Поддръжка на токени",
   "page-find-wallet-features": "Характеристики",
   "page-find-wallet-security": "Сигурност",
   "page-find-wallet-smart-contract": "Smart contract",

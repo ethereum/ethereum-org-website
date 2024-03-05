@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Bir işlemi yetkilendirmek için birden fazla imza gerektiren cüzdanlar",
   "page-find-wallet-social-recovery": "Sosyal kurtarma",
   "page-find-wallet-social-recovery-desc": "Vasilerin akıllı sözleşme cüzdanları için imzalama anahtarını değiştirmesine izin veren cüzdanlar",
-  "page-find-wallet-token-support": "Jeton desteği",
   "page-find-wallet-features": "Özellikler",
   "page-find-wallet-security": "Güvenlik",
   "page-find-wallet-smart-contract": "Akıllı sözleşme",

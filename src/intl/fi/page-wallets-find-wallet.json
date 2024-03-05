@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Lompakot, jotka vaativat useita allekirjoituksia transaktion vahvistamiseen",
   "page-find-wallet-social-recovery": "Sosiaalisen verkoston käyttäminen palauttamiseen ns. sosiaalinen palauttaminen",
   "page-find-wallet-social-recovery-desc": "Lompakot, jotka sallivat suojelioiden vaihtaa allekirjoitusavainta älysopimuslompakoiden yhteydessä",
-  "page-find-wallet-token-support": "Rahakkeiden tuki",
   "page-find-wallet-features": "Ominaisuudet",
   "page-find-wallet-security": "Turvallisuus",
   "page-find-wallet-smart-contract": "Älysopimukset",

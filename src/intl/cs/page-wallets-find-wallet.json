@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "Peněženky, které vyžadují více podpisů pro autorizaci transakce",
   "page-find-wallet-social-recovery": "Obnova přístupu",
   "page-find-wallet-social-recovery-desc": "Peněženky, které strážcům umožňují změnit podpisový klíč pro smart contract peněženky",
-  "page-find-wallet-token-support": "Podpora tokenů",
   "page-find-wallet-features": "Funkce",
   "page-find-wallet-security": "Bezpečnost",
   "page-find-wallet-smart-contract": "Chytrý kontrakt",

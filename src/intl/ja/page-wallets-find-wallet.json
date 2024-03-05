@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "トランザクションの承認に複数の署名が必要なウォレット",
   "page-find-wallet-social-recovery": "ソーシャルリカバリー",
   "page-find-wallet-social-recovery-desc": "スマートコントラクトウォレットの署名キーをガーディアンが変更できるウォレット",
-  "page-find-wallet-token-support": "トークン対応",
   "page-find-wallet-features": "機能",
   "page-find-wallet-security": "セキュリティ",
   "page-find-wallet-smart-contract": "スマートコントラクト",

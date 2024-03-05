@@ -41,7 +41,6 @@
   "page-find-wallet-multisig-desc": "जिन वॉलेट से लेन-देन को ऑथोराइज़ करने के लिए एक से ज़्यादा हस्ताक्षरों की ज़रूरत होती है",
   "page-find-wallet-social-recovery": "सामाजिक पुनर्प्राप्ति",
   "page-find-wallet-social-recovery-desc": "जिन वॉलेट से संरक्षक स्मार्ट कॉन्ट्रैक्ट वॉलेट के लिए हस्ताक्षर कुंजी को बदल सकते हैं",
-  "page-find-wallet-token-support": "टोकन सपोर्ट",
   "page-find-wallet-features": "विशेषताएँ",
   "page-find-wallet-security": "सुरक्षा",
   "page-find-wallet-smart-contract": "Smart contract",
