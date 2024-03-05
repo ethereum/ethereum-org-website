@@ -87,3 +87,5 @@ export const SECTION_LABELS: NavSectionKey[] = [
   "participate",
   "research",
 ]
+
+export const NAV_PY = 4
