@@ -62,6 +62,8 @@ export const MobileFiltersMenu = ({
           rightIcon={<FilterBurgerIcon />}
           variant="outline"
           border="none"
+          ps={0}
+          ms={4}
           gap={4}
           sx={{
             svg: {
