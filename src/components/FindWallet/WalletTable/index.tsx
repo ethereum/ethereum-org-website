@@ -233,12 +233,12 @@ const WalletTable = ({
       <WalletContentHeader>
         <Th sx={{ textAlign: "start !important" }}>
           {filteredWallets.length === walletCardData.length ? (
-            <Text as="span">
+            <Text ps={{ base: 2, md: 0 }} as="span">
               {t("page-find-wallet-showing-all-wallets")} (
               <strong>{walletCardData.length}</strong>)
             </Text>
           ) : (
-            <Text as="span">
+            <Text ps={{ base: 2, md: 0 }} as="span">
               {t("page-find-wallet-showing")}{" "}
               <strong>
                 {filteredWallets.length} / {walletCardData.length}
