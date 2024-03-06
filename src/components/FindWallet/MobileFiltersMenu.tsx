@@ -89,6 +89,7 @@ export const MobileFiltersMenu = ({
               lineHeight="14px"
               color="body.medium"
             >
+              {/* TODO: move to util */}
               {Object.values(filters).reduce(
                 (acc, filter) => (filter ? acc + 1 : acc),
                 0
@@ -168,7 +169,12 @@ export const MobileFiltersMenu = ({
               </Box>
 
               <Button w="100%" flex={1} onClick={onClose}>
-                {t("page-find-wallet-see-wallets")}
+                {t("page-find-wallet-see-wallets")} (
+                {Object.values(filters).reduce(
+                  (acc, filter) => (filter ? acc + 1 : acc),
+                  0
+                )}
+                )
               </Button>
             </Flex>
           </DrawerBody>
