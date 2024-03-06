@@ -152,9 +152,9 @@ Below is a breakdown of the website pages each content bucket contains.
 
 - [Proof-of-work](/developers/docs/consensus-mechanisms/pow/)
 - [Mining](/developers/docs/consensus-mechanisms/pow/mining/)
-- [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
-- [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/)
-- [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/)
+- [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/)
+- [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/)
+- [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/)
 
 ## 15) Ethereum stack developer docs {#ethereum-stack-docs}
 
@@ -239,9 +239,9 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Recursive-length prefix (RLP) serialization](/developers/docs/data-structures-and-encoding/rlp/)
 - [Network addresses](/developers/docs/networking-layer/network-addresses/)
 - [Simple serialize](/developers/docs/data-structures-and-encoding/ssz/)
-- [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
-- [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/)
-- [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/)
+- [Mining algorithms](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/)
+- [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/)
+- [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/)
 - [Gasper](/developers/docs/consensus-mechanisms/pos/gasper/)
 - [Weak subjectivity](/developers/docs/consensus-mechanisms/pos/weak-subjectivity/)
 - [Web3 secret storage definition](/developers/docs/data-structures-and-encoding/web3-secret-storage/)

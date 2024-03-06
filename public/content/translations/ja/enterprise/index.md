@@ -66,7 +66,7 @@ Hyperledger、Quorum、Corda プロジェクトが開始された 2016 年頃か
 ### ツールとライブラリ {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _イーサリアムデータ分析プラットフォーム_
-- [Sirato](https://www.web3labs.com/sirato) _Web3 Labs によるパブリックとプライベートイーサリアム互換ネットワークのためのデータおよび分析プラットフォーム_
+- [Chainlens](https://www.chainlens.com/) _Web3 Labs によるパブリックとプライベートイーサリアム互換ネットワークのためのデータおよび分析プラットフォーム_
 - [Ernst & Young's ‘Nightfall’](https://github.com/EYBlockchain/nightfall) _プライベートトランザクション用のツールキット_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _Web3 プロバイダーで使用するトランザクション署名のアプリケーション_
 - [Tenderly](https://tenderly.co/) _プライベートネットワークをサポートするリアルタイムの分析、アラート、モニタリングを提供するデータプラットフォーム。_

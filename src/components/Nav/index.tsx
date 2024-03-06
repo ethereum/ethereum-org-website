@@ -22,6 +22,8 @@ import LanguagePicker from "@/components/LanguagePicker"
 import { BaseLink } from "@/components/Link"
 import Search from "@/components/Search"
 
+import { NAV_PY } from "@/lib/constants"
+
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import { useNav } from "./useNav"
@@ -69,7 +71,7 @@ const Nav = () => {
         borderColor="rgba(0, 0, 0, 0.1)"
         height="4.75rem"
         justifyContent="center"
-        py={4}
+        py={NAV_PY}
         px={{ base: 4, xl: 8 }}
       >
         <Flex
@@ -94,7 +96,7 @@ const Nav = () => {
             ms={{ base: 3, xl: 8 }}
           >
             <Menu hideBelow="md" sections={linkSections} />
-            <Flex alignItems="center"/*  justifyContent="space-between" */>
+            <Flex alignItems="center" /*  justifyContent="space-between" */>
               <Search {...searchModalDisclosure} />
               {/* Desktop */}
               <HStack hideBelow="md" gap="0">
