@@ -47,6 +47,7 @@ import {
   fetchEthereumEcosystemData,
   fetchEthereumStablecoinsData,
 } from "@/lib/api/stablecoinsData"
+import summerfiImg from "@/public/dapps/summerfi.png"
 import dogeComputerImg from "@/public/doge-computer.png"
 // -- daps
 import aaveImg from "@/public/stablecoins/aave.png"
@@ -354,11 +355,11 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
     },
     {
       background: "linear-gradient(135deg, #c7efe6 0%, #eeeac7 100%)",
-      url: "https://oasis.app",
-      alt: t("oasis-logo"),
-      image: daiLargeImg,
+      url: "https://summer.fi/",
+      alt: t("summerfi-logo"),
+      image: summerfiImg,
       width: "80px",
-      name: "Oasis",
+      name: "Summer.fi",
       description: t("page-stablecoins-stablecoins-dapp-description-4"),
     },
   ]

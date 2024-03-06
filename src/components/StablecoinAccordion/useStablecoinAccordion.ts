@@ -9,20 +9,18 @@ import compoundImg from "@/public/dapps/compound.png"
 import gitcoinImg from "@/public/dapps/gitcoin.png"
 import loopringImg from "@/public/dapps/loopring.png"
 import matchaImg from "@/public/dapps/matcha.png"
-import oasisImg from "@/public/dapps/stabledai.png"
+import summerfiImg from "@/public/dapps/summerfi.png"
 // Static assets
 // -- dapps
 import uniImg from "@/public/dapps/uni.png"
 import oneInchImg from "@/public/exchanges/1inch.png"
 import binanceImg from "@/public/exchanges/binance.png"
-import bittrexImg from "@/public/exchanges/bittrex.png"
 // -- exchanges
 import coinbaseImg from "@/public/exchanges/coinbase.png"
 import coinmamaImg from "@/public/exchanges/coinmama.png"
 import geminiImg from "@/public/exchanges/gemini.png"
 import krakenImg from "@/public/exchanges/kraken.png"
 import ethImg from "@/public/favicon.png"
-import makerImg from "@/public/stablecoins/maker.png"
 
 export const useStablecoinAccordion = () => {
   const { t } = useTranslation("page-stablecoins")
@@ -68,10 +66,10 @@ export const useStablecoinAccordion = () => {
       alt: t("aave-logo"),
     },
     {
-      title: "Oasis",
-      image: oasisImg,
-      link: "https://oasis.app",
-      alt: t("oasis-logo"),
+      title: "Summer.fi",
+      image: summerfiImg,
+      link: "https://summer.fi/",
+      alt: t("summerfi-logo"),
     },
   ]
 
