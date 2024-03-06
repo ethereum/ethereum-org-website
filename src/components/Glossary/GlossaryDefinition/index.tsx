@@ -5,13 +5,13 @@ import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
 
+import { DEFAULT_GLOSSARY_NS } from "@/lib/constants"
+
 interface GlossaryDefinitionProps {
   term: string
   size?: "md" | "sm"
   options?: ComponentProps<typeof Translation>["options"]
 }
-
-const DEFAULT_NS = "glossary"
 
 // Override the default `a` mapping to prevent displaying the glossary tooltip
 // in the glossary definition
@@ -22,7 +22,7 @@ const components = {
 const GlossaryDefinition = ({
   term,
   size = "md",
-  options = { ns: DEFAULT_NS },
+  options = { ns: DEFAULT_GLOSSARY_NS },
 }: GlossaryDefinitionProps) => {
   const headingStyles =
     size === "sm"
@@ -32,7 +32,7 @@ const GlossaryDefinition = ({
   const textStyles = size === "sm" ? { mb: 0 } : {}
 
   return (
-    <Box textAlign="left">
+    <Box textAlign="start">
       <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
         <Translation
           id={term + "-term"}
