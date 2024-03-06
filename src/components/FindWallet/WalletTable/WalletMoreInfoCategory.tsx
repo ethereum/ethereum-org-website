@@ -46,7 +46,6 @@ export const WalletMoreInfoCategory = ({
       <UnorderedList m={0}>
         {orderedFeatureDropdownItems.map((feature) => {
           const featureColor = wallet[feature.filterKey!] ? "text" : "secondary"
-
           const FeatureIcon = () => (
             <Icon
               as={

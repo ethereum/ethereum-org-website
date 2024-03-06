@@ -24,7 +24,6 @@ import {
 import { ChildOnlyProp, WalletData, WalletFilter } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
-import { useWalletTable } from "@/components/FindWallet/WalletTable/useWalletTable"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
@@ -44,6 +43,8 @@ import {
 
 import { SupportedLanguagesTooltip } from "./SupportedLanguagesTooltip"
 import { WalletEmptyState } from "./WalletEmptyState"
+
+import { useWalletTable } from "@/hooks/useWalletTable"
 
 const Container = (props: TableProps) => (
   <Table
