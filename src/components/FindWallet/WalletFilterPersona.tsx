@@ -111,6 +111,9 @@ const WalletFilterPersona = ({
                   ps={0}
                   lineHeight="1.7rem"
                   color="primary.base"
+                  _groupHover={{
+                    color: "primary.hover",
+                  }}
                 >
                   {persona.title}
                 </Heading>
