@@ -43,12 +43,18 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                 <NavigationMenu.Item key={sectionKey} value={label}>
                   <NavigationMenu.Trigger asChild>
                     <Button
-                      pt="2"
-                      pb={2 + NAV_PY}
+                      py="2"
                       px={{ base: "3", lg: "4" }}
                       variant="ghost"
                       whiteSpace="nowrap"
                       color={isActive ? "primary.base" : "body.base"}
+                      _after={{
+                        content: '""',
+                        position: "absolute",
+                        insetInline: 0,
+                        top: "100%",
+                        height: NAV_PY,
+                      }}
                     >
                       {/* Animated highlight for active section */}
                       {isActive && (
@@ -57,7 +63,6 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                           layoutId="active-section-highlight"
                           position="absolute"
                           inset="0"
-                          bottom={NAV_PY}
                           bg="primary.lowContrast"
                           rounded="base"
                           zIndex={0}
