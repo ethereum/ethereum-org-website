@@ -161,7 +161,7 @@ export const MobileFiltersMenu = ({
               py={5}
               bg="background.base"
             >
-              <Box flex={1}>
+              <Box flex={1} me={2}>
                 <ResetFiltersButton
                   resetFilters={resetFilters}
                   resetWalletFilter={resetWalletFilter}

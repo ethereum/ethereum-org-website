@@ -36,11 +36,11 @@ const WalletFilterPersona = ({
   return (
     <Grid
       gap={showMobileSidebar ? 2 : 4}
-      autoColumns={{ base: "200px", md: "minmax(0, 1fr)" }}
+      autoColumns={{ base: "200px", lg: "minmax(0, 1fr)" }}
       templateColumns={
         showMobileSidebar
           ? "repeat(2, 1fr)"
-          : { base: "200px", md: "minmax(0, 1fr)" }
+          : { base: "200px", lg: "minmax(0, 1fr)" }
       }
       mb={showMobileSidebar ? 4 : 2}
       overflowX="scroll"
@@ -50,7 +50,6 @@ const WalletFilterPersona = ({
           <GridItem
             key={persona.title}
             gridRow={showMobileSidebar ? "auto" : 1}
-            minW="min-content"
           >
             <Flex
               h="100%"
