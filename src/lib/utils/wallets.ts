@@ -1,4 +1,4 @@
-import { shuffle } from "lodash"
+import { shuffle, union } from "lodash"
 
 import walletData from "@/data/wallets/wallet-data"
 
@@ -10,6 +10,9 @@ import {
   NFTS_FEATURES,
 } from "../constants"
 import { WalletData } from "../types"
+
+import { getLanguageCodeName } from "./i18n"
+import { capitalize } from "./string"
 
 export const getSupportedLocaleWallets = (locale: string) =>
   shuffle(
@@ -78,20 +81,15 @@ export const getSupportedLanguages = (
 
   walletSupportedLanguages.forEach((supportedLanguage) => {
     // Get supported language name
-    const supportedLanguageName = new Intl.DisplayNames([locale], {
-      type: "language",
-    }).of(supportedLanguage)
+    const supportedLanguageName = getLanguageCodeName(supportedLanguage, locale)
     // Capitalize supported language name
-    const formattedSupportedLanguageName =
-      supportedLanguageName!.charAt(0).toUpperCase() +
-      supportedLanguageName!.slice(1)
-
-    supportedLanguages.push(formattedSupportedLanguageName)
+    supportedLanguages.push(capitalize(supportedLanguageName!))
   })
 
   return supportedLanguages
 }
 
+// Format languages list to be displayed on UI label
 export const formatSupportedLanguages = (
   supportedLanguages: string[],
   sliceSize?: number
@@ -101,6 +99,28 @@ export const formatSupportedLanguages = (
     : supportedLanguages.join(", ")
 }
 
+// Get border custom color for Persona filter
 export const getPersonaBorderColor = (selectedPersona: number, idx: number) => {
   return selectedPersona === idx ? "primary.base" : "transparent"
+}
+
+// Get a list of all wallets languages, without duplicates
+export const getAllWalletsLanguages = (
+  wallets: WalletData[],
+  locale: string
+) => {
+  return wallets
+    .reduce(
+      (allLanguagesList, current) =>
+        // `union` lodash method merges all arrays removing duplicates
+        union(allLanguagesList, current.languages_supported),
+      [] as string[]
+    )
+    .map((languageCode) => {
+      // Get supported language name
+      const supportedLanguageName = getLanguageCodeName(languageCode, locale)
+      // Capitalize supported language name
+      return capitalize(supportedLanguageName!)
+    })
+    .sort()
 }
