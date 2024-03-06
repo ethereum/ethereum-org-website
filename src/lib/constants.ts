@@ -105,13 +105,7 @@ export const WALLETS_FILTERS_DEFAULT = {
   social_recovery: false,
 }
 
-export const NEW_TO_CRYPTO_FEATURES = [
-  "connect_to_dapps",
-  "layer_2",
-  "ens_support",
-  "erc_20_support",
-  "buy_crypto",
-]
+export const NEW_TO_CRYPTO_FEATURES = ["new_to_crypto"]
 
 export const NFTS_FEATURES = ["nft_support", "layer_2", "connect_to_dapps"]
 

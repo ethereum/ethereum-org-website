@@ -22,6 +22,8 @@ import {
 
 import { WalletFilter } from "@/lib/types"
 
+import { LanguageSupportFilter } from "@/components/FindWallet/LanguageSupportFilter"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { useWalletFilterFeature } from "@/hooks/useWalletFilterFeature"
@@ -71,203 +73,216 @@ const WalletFilterFeature = ({
       defaultIndex={Object.keys(filterOptions).map((key) => +key)}
     >
       {filterOptions.map((filterOption, idx) => {
-        return (
-          <AccordionItem
-            key={uniqueId("walletFilterSidebarItem")}
-            background="background.highlight"
-            borderRadius="base"
-            // Remove border color from global style
-            borderColor="transparent"
-            p={6}
-          >
-            {({ isExpanded }) => (
-              <>
-                <Heading
-                  as="h3"
-                  borderBottom={isExpanded ? "1px" : "none"}
-                  borderColor="body.light"
-                  fontSize="lg"
-                  fontWeight={600}
-                  lineHeight={1.4}
-                  py={1}
-                  px={4}
-                  borderRadius={1}
-                  _hover={{ color: "primary.hover" }}
-                >
-                  <AccordionButton
-                    color="inherit"
-                    fontWeight="inherit"
-                    fontSize="inherit"
-                    p={0}
-                    textAlign="initial"
-                    _hover={{ background: "transparent" }}
+        if (idx === 1) {
+          return (
+            <LanguageSupportFilter
+              key={uniqueId("walletFilterSidebarLanguageSupport")}
+            />
+          )
+        } else {
+          return (
+            <AccordionItem
+              key={uniqueId("walletFilterSidebarItem")}
+              background="background.highlight"
+              borderRadius="base"
+              // Remove border color from global style
+              borderColor="transparent"
+              p={6}
+            >
+              {({ isExpanded }) => (
+                <>
+                  <Heading
+                    as="h3"
+                    borderBottom={isExpanded ? "1px" : "none"}
+                    borderColor="body.light"
+                    fontSize="lg"
+                    fontWeight={600}
+                    lineHeight={1.4}
+                    py={1}
+                    ps={4}
+                    pe={2.5}
+                    borderRadius={1}
+                    _hover={{ color: "primary.hover" }}
                   >
-                    <Box as="span" flex={1}>
-                      <Text>{filterOption.title}</Text>
-                    </Box>
-                    <AccordionIcon
-                      color="primary.base"
-                      boxSize={9}
-                      _hover={{ color: "primary.hover" }}
-                    />
-                  </AccordionButton>
-                </Heading>
-
-                <AccordionPanel as={List} p={0} m={0}>
-                  {filterOption.items.map((item, itemIdx) => {
-                    const LabelIcon = item.icon
-
-                    return (
-                      <Box
-                        key={itemIdx}
-                        borderBottom="1px"
-                        borderColor="lightBorder"
-                        pt="1.16rem"
-                        px={3}
-                        pb={3}
-                        _last={{ border: "none" }}
-                      >
-                        <SimpleGrid
-                          key={uniqueId("walletFilterSidebarItemPanel")}
-                          templateColumns="28px auto"
-                          alignItems="center"
-                          columnGap={2.5}
-                          cursor="pointer"
-                          onClick={
-                            item.filterKey
-                              ? () => {
-                                  trackCustomEvent({
-                                    eventCategory: "WalletFilterSidebar",
-                                    eventAction: `${filterOption.title}`,
-                                    eventName: `${item.filterKey} ${!restProps
-                                      .filters[item.filterKey!]}`,
-                                  })
-                                  updateFilterOption(item.filterKey)
-                                }
-                              : () => {
-                                  setShowOptions(
-                                    idx,
-                                    itemIdx,
-                                    !item.showOptions
-                                  )
-                                  trackCustomEvent({
-                                    eventCategory: "WalletFilterSidebar",
-                                    eventAction: `${filterOption.title}`,
-                                    eventName: `Toggle ${
-                                      item.title
-                                    } ${!item.showOptions}`,
-                                  })
-                                }
-                          }
-                        >
-                          <GridItem>
-                            <LabelIcon boxSize={7} mt={0.5} aria-hidden />
-                          </GridItem>
-
-                          <GridItem as="span" lineHeight="1.1rem">
-                            <Flex
-                              alignItems="center"
-                              justifyContent="space-between"
-                            >
-                              <>{item.title}</>
-
-                              <>
-                                {item.filterKey && (
-                                  <FilterToggle
-                                    ariaLabel={item.title}
-                                    conditionItem={
-                                      restProps.filters[item.filterKey]
-                                    }
-                                  />
-                                )}
-                                {item.showOptions !== undefined && (
-                                  <FilterToggle
-                                    ariaLabel={item.title}
-                                    conditionItem={item.showOptions}
-                                  />
-                                )}
-                              </>
-                            </Flex>
-                          </GridItem>
-
-                          <GridItem
-                            as="span"
-                            color="body.medium"
-                            fontSize="0.9rem"
-                            lineHeight="1.1rem"
-                            colStart={2}
-                          >
-                            {item.description}
-                          </GridItem>
-                        </SimpleGrid>
-                        {item.options.length > 0 && item.showOptions && (
-                          <HStack mt={3.5} spacing={2}>
-                            {item.options.map((option, optionIdx) => {
-                              const handleClick = () => {
-                                let closeShowOptions = true
-
-                                for (let filterOption of item.options) {
-                                  if (filterOption.name === option.name) {
-                                    if (
-                                      !restProps.filters[
-                                        filterOption.filterKey!
-                                      ]
-                                    ) {
-                                      closeShowOptions = false
-                                      break
-                                    }
-                                  } else {
-                                    if (
-                                      restProps.filters[filterOption.filterKey!]
-                                    ) {
-                                      closeShowOptions = false
-                                      break
-                                    }
-                                  }
-                                }
-
-                                if (closeShowOptions) {
-                                  setShowOptions(
-                                    idx,
-                                    itemIdx,
-                                    !item.showOptions
-                                  )
-                                }
-
-                                trackCustomEvent({
-                                  eventCategory: "WalletFilterSidebar",
-                                  eventAction: `${filterOption.title}`,
-                                  eventName: `${option.filterKey} ${!restProps
-                                    .filters[option.filterKey!]}`,
-                                })
-                                updateFilterOption(option.filterKey)
-                              }
-                              return (
-                                <Checkbox
-                                  key={optionIdx}
-                                  aria-label={option.name}
-                                  isChecked={
-                                    restProps.filters[option.filterKey!]
-                                  }
-                                  width="full"
-                                  onChange={handleClick}
-                                >
-                                  <Text as="p" aria-hidden="true">
-                                    {option.name}
-                                  </Text>
-                                </Checkbox>
-                              )
-                            })}
-                          </HStack>
-                        )}
+                    <AccordionButton
+                      color="inherit"
+                      fontWeight="inherit"
+                      fontSize="inherit"
+                      p={0}
+                      textAlign="initial"
+                      _hover={{ background: "transparent" }}
+                    >
+                      <Box as="span" flex={1}>
+                        <Text>{filterOption.title}</Text>
                       </Box>
-                    )
-                  })}
-                </AccordionPanel>
-              </>
-            )}
-          </AccordionItem>
-        )
+
+                      <AccordionIcon
+                        color="primary.base"
+                        boxSize={9}
+                        _hover={{ color: "primary.hover" }}
+                      />
+                    </AccordionButton>
+                  </Heading>
+
+                  <AccordionPanel as={List} p={0} m={0}>
+                    {filterOption.items.map((item, itemIdx) => {
+                      const LabelIcon = item.icon
+
+                      return (
+                        <Box
+                          key={itemIdx}
+                          borderBottom="1px"
+                          borderColor="lightBorder"
+                          pt="1.16rem"
+                          px={3}
+                          pb={3}
+                          _last={{ border: "none" }}
+                        >
+                          <SimpleGrid
+                            key={uniqueId("walletFilterSidebarItemPanel")}
+                            templateColumns="28px auto"
+                            alignItems="center"
+                            columnGap={2.5}
+                            cursor="pointer"
+                            onClick={
+                              item.filterKey
+                                ? () => {
+                                    trackCustomEvent({
+                                      eventCategory: "WalletFilterSidebar",
+                                      eventAction: `${filterOption.title}`,
+                                      eventName: `${item.filterKey} ${!restProps
+                                        .filters[item.filterKey!]}`,
+                                    })
+                                    updateFilterOption(item.filterKey)
+                                  }
+                                : () => {
+                                    setShowOptions(
+                                      idx,
+                                      itemIdx,
+                                      !item.showOptions
+                                    )
+                                    trackCustomEvent({
+                                      eventCategory: "WalletFilterSidebar",
+                                      eventAction: `${filterOption.title}`,
+                                      eventName: `Toggle ${
+                                        item.title
+                                      } ${!item.showOptions}`,
+                                    })
+                                  }
+                            }
+                          >
+                            <GridItem>
+                              <LabelIcon boxSize={7} mt={0.5} aria-hidden />
+                            </GridItem>
+
+                            <GridItem as="span" lineHeight="1.1rem">
+                              <Flex
+                                alignItems="center"
+                                justifyContent="space-between"
+                              >
+                                <>{item.title}</>
+
+                                <>
+                                  {item.filterKey && (
+                                    <FilterToggle
+                                      ariaLabel={item.title}
+                                      conditionItem={
+                                        restProps.filters[item.filterKey]
+                                      }
+                                    />
+                                  )}
+                                  {item.showOptions !== undefined && (
+                                    <FilterToggle
+                                      ariaLabel={item.title}
+                                      conditionItem={item.showOptions}
+                                    />
+                                  )}
+                                </>
+                              </Flex>
+                            </GridItem>
+
+                            <GridItem
+                              as="span"
+                              color="body.medium"
+                              fontSize="0.9rem"
+                              lineHeight="1.1rem"
+                              colStart={2}
+                            >
+                              {item.description}
+                            </GridItem>
+                          </SimpleGrid>
+
+                          {item.options.length > 0 && item.showOptions && (
+                            <HStack mt={3.5} spacing={2}>
+                              {item.options.map((option, optionIdx) => {
+                                const handleClick = () => {
+                                  let closeShowOptions = true
+
+                                  for (let filterOption of item.options) {
+                                    if (filterOption.name === option.name) {
+                                      if (
+                                        !restProps.filters[
+                                          filterOption.filterKey!
+                                        ]
+                                      ) {
+                                        closeShowOptions = false
+                                        break
+                                      }
+                                    } else {
+                                      if (
+                                        restProps.filters[
+                                          filterOption.filterKey!
+                                        ]
+                                      ) {
+                                        closeShowOptions = false
+                                        break
+                                      }
+                                    }
+                                  }
+
+                                  if (closeShowOptions) {
+                                    setShowOptions(
+                                      idx,
+                                      itemIdx,
+                                      !item.showOptions
+                                    )
+                                  }
+
+                                  trackCustomEvent({
+                                    eventCategory: "WalletFilterSidebar",
+                                    eventAction: `${filterOption.title}`,
+                                    eventName: `${option.filterKey} ${!restProps
+                                      .filters[option.filterKey!]}`,
+                                  })
+                                  updateFilterOption(option.filterKey)
+                                }
+                                return (
+                                  <Checkbox
+                                    key={optionIdx}
+                                    aria-label={option.name}
+                                    isChecked={
+                                      restProps.filters[option.filterKey!]
+                                    }
+                                    width="full"
+                                    onChange={handleClick}
+                                  >
+                                    <Text as="p" aria-hidden="true">
+                                      {option.name}
+                                    </Text>
+                                  </Checkbox>
+                                )
+                              })}
+                            </HStack>
+                          )}
+                        </Box>
+                      )
+                    })}
+                  </AccordionPanel>
+                </>
+              )}
+            </AccordionItem>
+          )
+        }
       })}
     </Accordion>
   )
