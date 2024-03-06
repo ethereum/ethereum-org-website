@@ -135,6 +135,32 @@ export const getAllWalletsLanguages = (locale: string) => {
     .sort()
 }
 
+// Get a list of top n wallets languages
+export const getWalletsTopLanguages = (n: number, locale: string) => {
+  const compareFn = (a: string, b: string) => {
+    return getLanguageTotalCount(b) - getLanguageTotalCount(a)
+  }
+
+  return walletsData
+    .reduce(
+      (allLanguagesList, current) =>
+        // `union` lodash method merges all arrays removing duplicates
+        union(allLanguagesList, current.languages_supported),
+      [] as string[]
+    )
+    .sort(compareFn)
+    .map((languageCode) => {
+      // Get supported language name
+      const supportedLanguageName = getLanguageCodeName(languageCode, locale)
+      // Capitalize supported language name
+      return `${capitalize(supportedLanguageName!)} (${getLanguageTotalCount(
+        languageCode
+      )})`
+    })
+    .slice(0, n)
+}
+
+// Get wallets listing count after applying filters
 export const walletsListingCount = (filters: WalletFilter) => {
   return Object.values(filters).reduce(
     (acc, filter) => (filter ? acc + 1 : acc),
