@@ -27,3 +27,9 @@ export const getTranslatedImgPath = (originalPath: string, locale: string) =>
 
 export const checkIfImageIsTranslated = (translatedImgPath: string) =>
   existsSync(join("public", translatedImgPath))
+
+export const getLanguageCodeName = (languageCode: string, locale: string) => {
+  return new Intl.DisplayNames([locale], {
+    type: "language",
+  }).of(languageCode)
+}
