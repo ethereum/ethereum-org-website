@@ -545,6 +545,12 @@ export interface WalletData {
 
 export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
 
+export interface WalletFilterData {
+  title: TranslationKey
+  filterKey?: string
+  description: TranslationKey | ""
+}
+
 export type FilterOptionType = {
   title: string
   items: Array<{
@@ -618,3 +624,13 @@ type NetworkUpgradeDetails = {
 )
 
 export type NetworkUpgradeData = Record<string, NetworkUpgradeDetails>
+
+// Footer
+export interface LinkSection {
+  title: TranslationKey
+  links: Array<{
+    to: string
+    text: TranslationKey
+    isPartiallyActive?: boolean
+  }>
+}

@@ -38,7 +38,7 @@ import UnstoppableWalletImage from "@/public/wallets/unstoppable.png"
 import XDEFIImage from "@/public/wallets/xdefi.png"
 import ZerionImage from "@/public/wallets/zerion.png"
 
-const walletData: WalletData[] = [
+export const walletData: WalletData[] = [
   {
     last_updated: "2022-06-22",
     name: "Keystone",
@@ -678,7 +678,7 @@ const walletData: WalletData[] = [
     url: "https://www.pillar.fi/",
     wallet_live_date: "December 18 2018 V1, June 2020 V2",
     active_development_team: true,
-    languages_supported: ["en", "et", "ba", "zh"],
+    languages_supported: ["en", "et", "bs", "zh"],
     twitter: "https://twitter.com/PillarWallet",
     discord: "https://chat.pillar.fi/",
     reddit: "",
@@ -997,7 +997,6 @@ const walletData: WalletData[] = [
       "da",
       "de",
       "es",
-      "ph",
       "fa",
       "fil",
       "fr",

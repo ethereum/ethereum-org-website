@@ -1,12 +1,6 @@
-import type { TranslationKey } from "@/lib/types"
+import type { WalletFilterData } from "@/lib/types"
 
-interface WalletFilter {
-  title: TranslationKey
-  filterKey?: string
-  description: TranslationKey | ""
-}
-
-const walletFilterData: { [key: string]: WalletFilter } = {
+const walletFilterData: { [key: string]: WalletFilterData } = {
   mobile: {
     title: "page-find-wallet-mobile",
     description: "",

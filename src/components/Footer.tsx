@@ -1,5 +1,3 @@
-// TODO
-import React from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
@@ -11,10 +9,9 @@ import {
   List,
   ListItem,
   SimpleGrid,
-  useToken,
 } from "@chakra-ui/react"
 
-import { Lang, TranslationKey } from "@/lib/types"
+import { Lang, LinkSection } from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
@@ -41,16 +38,8 @@ const socialLinks = [
     color: "#7289da",
   },
 ]
-export interface LinkSection {
-  title: TranslationKey
-  links: Array<{
-    to: string
-    text: TranslationKey
-    isPartiallyActive?: boolean
-  }>
-}
 
-export type FooterProps = {
+type FooterProps = {
   lastDeployDate: string
 }
 
@@ -58,8 +47,6 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("common")
 
-  // TODO: check if `medBp` is being used or remove it
-  const [medBp] = useToken("breakpoints", ["md"])
   const linkSections: Array<LinkSection> = [
     {
       title: t("use-ethereum"),
