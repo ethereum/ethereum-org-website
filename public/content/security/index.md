@@ -92,7 +92,7 @@ Watch more on 2FA:
 
 ### Uninstall browser extensions {#uninstall-browser-extensions}
 
-Browser extensions, like Chrome extensions or Add-ons for Firefo, can improve browser functionality but also come with risks. By default, most browser extensions ask for access to 'read and change site data', allowing them to do almost anything with your data. Chrome extensions are always automatically updated, so a previously safe extension may update later to include malicious code. Most browser extensions are not trying to steal your data, but you should be aware that they can.
+Browser extensions, like Chrome extensions or Add-ons for Firefox, can improve browser functionality but also come with risks. By default, most browser extensions ask for access to 'read and change site data', allowing them to do almost anything with your data. Chrome extensions are always automatically updated, so a previously safe extension may update later to include malicious code. Most browser extensions are not trying to steal your data, but you should be aware that they can.
 
 #### Stay safe by: {#browser-extension-safety}
 
