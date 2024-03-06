@@ -32,7 +32,7 @@ const GlossaryDefinition = ({
   const textStyles = size === "sm" ? { mb: 0 } : {}
 
   return (
-    <Box textAlign="left">
+    <Box textAlign="start">
       <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
         <Translation
           id={term + "-term"}
