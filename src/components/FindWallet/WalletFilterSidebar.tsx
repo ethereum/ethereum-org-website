@@ -13,6 +13,8 @@ import { WalletFilter } from "@/lib/types"
 
 import WalletFilterFeature from "@/components/FindWallet/WalletFilterFeature"
 
+import { walletsListingCount } from "@/lib/utils/wallets"
+
 import { ResetFiltersButton } from "./ResetFiltersButton"
 
 export type WalletFilterSidebarProps = Omit<TabsProps, "children"> & {
@@ -80,14 +82,8 @@ const WalletFilterSidebar = ({
             lineHeight={1.6}
             fontSize={showMobileSidebar ? "lg" : "md"}
           >
-            {`${t("page-find-wallet-filters")} (${Object.values(filters).reduce(
-              (acc, filter) => {
-                if (filter) {
-                  acc += 1
-                }
-                return acc
-              },
-              0
+            {`${t("page-find-wallet-filters")} (${walletsListingCount(
+              filters
             )})`}
           </Text>
 

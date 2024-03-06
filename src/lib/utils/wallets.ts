@@ -12,7 +12,7 @@ import {
   NEW_TO_CRYPTO_FEATURES,
   NFTS_FEATURES,
 } from "../constants"
-import { WalletData } from "../types"
+import { WalletData, WalletFilter } from "../types"
 
 export const getSupportedLocaleWallets = (locale: string) =>
   shuffle(
@@ -133,4 +133,11 @@ export const getAllWalletsLanguages = (locale: string) => {
       )})`
     })
     .sort()
+}
+
+export const walletsListingCount = (filters: WalletFilter) => {
+  return Object.values(filters).reduce(
+    (acc, filter) => (filter ? acc + 1 : acc),
+    0
+  )
 }
