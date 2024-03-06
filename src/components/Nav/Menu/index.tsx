@@ -4,7 +4,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
 import { Button } from "@/components/Buttons"
 
-import { SECTION_LABELS } from "@/lib/constants"
+import { NAV_PY, SECTION_LABELS } from "@/lib/constants"
 
 import type { NavSections } from "../types"
 
@@ -32,6 +32,7 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
         dir={direction}
         orientation="horizontal"
         onValueChange={handleSectionChange}
+        delayDuration={0}
       >
         <NavigationMenu.List asChild>
           <UnorderedList display="flex" listStyleType="none" m="0">
@@ -47,6 +48,13 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
                       variant="ghost"
                       whiteSpace="nowrap"
                       color={isActive ? "primary.base" : "body.base"}
+                      _after={{
+                        content: '""',
+                        position: "absolute",
+                        insetInline: 0,
+                        top: "100%",
+                        height: NAV_PY,
+                      }}
                     >
                       {/* Animated highlight for active section */}
                       {isActive && (
