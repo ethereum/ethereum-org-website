@@ -1,13 +1,8 @@
 import { useState } from "react"
 
-import { WalletTableProps } from "@/components/FindWallet/WalletTable"
+import { DropdownOption } from "@/lib/types"
 
-export interface DropdownOption {
-  label: string
-  value: string
-  filterKey: string
-  category: string
-}
+import { WalletTableProps } from "@/components/FindWallet/WalletTable"
 
 type UseWalletTableProps = Pick<WalletTableProps, "filters" | "walletData"> & {
   t: (x: string) => string

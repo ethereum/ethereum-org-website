@@ -378,7 +378,7 @@ ENS レジストリは、単一の中央[コントラクト](#smart-contract)で
 
 [プルーフ・オブ・ステーク(PoS)](#pos)に移行する前にイーサリアムで使用されていた[プルーフ・オブ・ワーク(PoW)](#pow)のアルゴリズム。
 
-[続きを読む](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
+[続きを読む](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)
 
 ### イーサ(ether) {#ether}
 

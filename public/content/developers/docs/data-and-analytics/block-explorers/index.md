@@ -16,16 +16,16 @@ You should understand the basic concepts of Ethereum so you can make sense of th
 - [Etherscan](https://etherscan.io/) -_Also available in Chinese, Korean, Russian, and Japanese_
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) -_Also available in Spanish, French, Italian, Dutch, Portuguese, Russian, Chinese, and Farsi_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
+- [Chainlens](https://www.chainlens.com/)
+- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
+- [Ethernow](https://www.ethernow.xyz/)
 - [Ethplorer](https://ethplorer.io/) -_Also available in Chinese, Spanish, French, Turkish, Russian, Korean and Vietnamese_
+- [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
-- [Sirato](https://www.web3labs.com/sirato)
-- [EthVM](https://www.ethvm.com/)
-- [DexGuru Block Explorer](https://ethereum.dex.guru/)
-- [Ethernow](https://www.ethernow.xyz/)
 
 ## Data {#data}
 

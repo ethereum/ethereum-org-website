@@ -24,13 +24,13 @@ Dagger Hashimoto était un algorithme de recherche précurseur pour le minage Et
 
 Dagger-Hashimoto a utilisé des versions modifiées des algorithmes Dagger et Hashimoto. La différence entre Dagger Hashimoto et Hashimoto réside dans le fait qu'au lieu d'utiliser la blockchain comme une source de données, Dagger Hashimoto utilise un ensemble de données générées sur mesure, qui se met à jour en fonction des données de chaque bloc N. L'ensemble de données est généré à l'aide de l'algorithme Dagger permettant de calculer efficacement un sous-ensemble spécifique à chaque nonce pour l'algorithme de vérification du client léger. La différence entre Dagger Hashimoto et Dagger est que, contrairement à l'original Dagger, le jeu de données utilisé pour interroger le bloc est semi-permanent, mis à jour uniquement à intervalles occasionnels (par exemple une fois par semaine). Cela signifie que la partie de l'effort de génération du jeu de données est proche de zéro. Les arguments de Sergio Lerner concernant les vitesses de mémoires partagées deviennent donc négligeables.
 
-En savoir plus sur [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto).
+En savoir plus sur [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 ## Ethash {#ethash}
 
 Ethash était l'algorithme de minage qui était en fait utilisé sur le véritable réseau principal Ethereum sous l'architecture désormais obsolète de la preuve de travail. Ethash a été en fait un nouveau nom donné à une version spécifique de Dagger-Hashimoto après que l'algorithme a été mis à jour de manière significative, tout en héritant des principes fondamentaux de son prédécesseur. Le réseau principal Ethereum a toujours utilisé Ethash - Dagger Hashimoto était une version R&D de l'algorithme de minage qui a été remplacé avant que le minage ne démarre sur le réseau principal Ethereum.
 
-[En savoir plus sur Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
+[En savoir plus sur Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash).
 
 ## Complément d'information {#further-reading}
 

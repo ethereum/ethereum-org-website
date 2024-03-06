@@ -1,19 +1,12 @@
-import { Dispatch, SetStateAction, useState } from "react"
+import { useState } from "react"
+
+import { DropdownOption } from "@/lib/types"
 
 import { WalletTableProps } from "@/components/FindWallet/WalletTable"
-
-export interface DropdownOption {
-  label: string
-  value: string
-  filterKey: string
-  category: string
-}
 
 type UseWalletTableProps = Pick<WalletTableProps, "filters" | "walletData"> & {
   t: (x: string) => string
 }
-
-export type SetFeatureSelectState = Dispatch<SetStateAction<DropdownOption>>
 
 export const useWalletTable = ({
   filters,

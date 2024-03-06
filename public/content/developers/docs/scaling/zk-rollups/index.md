@@ -232,7 +232,7 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 
 Projects working on zkEVMs include:
 
-- **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Applied ZKP is a project funded by the Ethereum Foundation to develop an EVM-compatible ZK-rollup and a mechanism for generating validity proofs for Ethereum blocks._
+- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM is a project funded by the Ethereum Foundation to develop an EVM-compatible ZK-rollup and a mechanism for generating validity proofs for Ethereum blocks._
 
 - **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _is a decentralized ZK Rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
 
