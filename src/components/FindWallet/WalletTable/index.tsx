@@ -311,7 +311,7 @@ const WalletTable = ({
                       {/* Wallet image */}
                       <Box
                         w={{ base: "24px", md: "56px" }}
-                        mb={deviceLabels.length > 0 ? 0 : 36}
+                        //
                       >
                         <Image
                           src={wallet.image}
@@ -330,37 +330,37 @@ const WalletTable = ({
                           </Box>
 
                           {/* Wallet Personas supported */}
-                          <Flex
-                            gap={1.5}
-                            wrap="wrap"
-                            mb={walletPersonas.length > 0 ? 0 : 8}
-                          >
-                            {walletPersonas.map((persona) => (
-                              <Tag
-                                key={persona}
-                                label={t(persona).toUpperCase()}
-                              />
-                            ))}
-                          </Flex>
+                          {walletPersonas.length > 0 && (
+                            <Flex gap={1.5} wrap="wrap">
+                              {walletPersonas.map((persona) => (
+                                <Tag
+                                  key={persona}
+                                  label={t(persona).toUpperCase()}
+                                />
+                              ))}
+                            </Flex>
+                          )}
 
                           <Stack gap={2} mb={{ base: 0, md: 3 }}>
                             {/* Device labels */}
-                            <Flex
-                              alignItems="center"
-                              gap={3}
-                              display={
-                                deviceLabels.length > 0 ? "flex" : "none"
-                              }
-                            >
-                              <Icon as={DevicesIcon} fontSize="2xl" />
-
-                              <Text
-                                fontSize="md !important"
-                                fontWeight="normal !important"
+                            {deviceLabels.length > 0 && (
+                              <Flex
+                                alignItems="center"
+                                gap={3}
+                                display={
+                                  deviceLabels.length > 0 ? "flex" : "none"
+                                }
                               >
-                                {deviceLabels.join(" · ")}
-                              </Text>
-                            </Flex>
+                                <Icon as={DevicesIcon} fontSize="2xl" />
+
+                                <Text
+                                  fontSize="md !important"
+                                  fontWeight="normal !important"
+                                >
+                                  {deviceLabels.join(" · ")}
+                                </Text>
+                              </Flex>
+                            )}
 
                             {/* Supported languages */}
                             <Flex alignItems="center" gap={3}>
@@ -383,7 +383,7 @@ const WalletTable = ({
                           </Stack>
 
                           {/* Wallet Website Button (desktop) */}
-                          <Box display={{ base: "none", md: "block" }} w="auto">
+                          <Box display={{ base: "none", md: "block" }}>
                             <ButtonLink
                               to={wallet.url}
                               variant="outline"
