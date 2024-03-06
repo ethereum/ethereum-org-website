@@ -1,6 +1,6 @@
 {
   "51%-attack-term": "51% attack",
-  "51%-attack-definition": "A type of attack where a group gains control of the majority of <a href=\"/glossary/#node\">nodes</a>. This would allow them to defraud the blockchain by reversing <a href=\"/glossary/#transaction\">transactions</a> and double spending <a href=\"eth\">ether</a> and other tokens.",
+  "51%-attack-definition": "A type of attack where a group gains control of the majority of <a href=\"/glossary/#node\">nodes</a>. This would allow them to defraud the blockchain by reversing <a href=\"/glossary/#transaction\">transactions</a> and double spending <a href=\"eth\">ether</a> and other tokens.<br /><br />In Ethereum proof-of-stake this would be achieved by accumulating more than half of the total staked ether. This would allow an attacker to decide which new blocks are added to the blockchain. However, to revert the chain or double-spend an attacker would require at least 66% of the total staked ether.",
   "account-term": "Account",
   "account-definition": "An Ethereum account is a digital identity on the Ethereum blockchain, allowing users to send, receive Ether, and interact with smart contracts.<br /><br /><strong>Technical:</strong><br />Its an object containing an address, balance, nonce, and optional storage and code. An account can be a contract account or an externally owned account (EOA).",
   "address-term": "Address",

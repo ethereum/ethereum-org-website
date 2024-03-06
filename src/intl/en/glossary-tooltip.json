@@ -28,7 +28,7 @@
   "cryptoeconomics-term": "Cryptoeconomics",
   "cryptoeconomics-definition": "The study of mathematical and economic principles to design secure and trustworthy digital platforms. The goal is to  ensure that all participants follow the rules and are rewarded for contributing to the network's security and operation. ",
   "cryptography-term": "Cryptography",
-  "cryptography-definition": "It is the practice of securing communication and data through the use of codes, so that only those for whom the information is intended can read and process it.",
+  "cryptography-definition": "It is the practice of making communication private and secure so that only those for whom the information is intended can read it.",
   "dao-term": "Decentralized autonomous organization (DAO)",
   "dao-definition": "A DAO is a digital organization run by rules coded on a blockchain, where decisions are made by member votes, not a central authority. <a href=\"/dao/\">More on decentralized autonomous organizations (DAOs)</a>.",
   "dapp-term": "Dapp",
