@@ -4,8 +4,8 @@ import GlossaryTooltip from "./Glossary/GlossaryTooltip"
 import InlineLink from "./Link"
 
 interface Props {
-  href: string
-  children: ReactNode
+  href?: string
+  children?: ReactNode
 }
 
 /**
