@@ -2,7 +2,8 @@
 import React from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
+import { FaDiscord, FaGithub } from "react-icons/fa"
+import { FaXTwitter } from "react-icons/fa6";
 import {
   Box,
   Flex,
