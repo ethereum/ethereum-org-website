@@ -132,7 +132,7 @@
   "erc-term": "Ethereum Request for Comments (ERC)",
   "erc-definition": "Néhány <a href=\"/glossary/#eip\">EIP-hez</a> tartozó címke, melyek specifikus Ethereum használati szabványokat definiálnak.",
   "ethash-term": "Ethash",
-  "ethash-definition": "Egy <a href=\"/glossary/#pow\">proof-of-work</a> algoritmus, amelyet az Ethereumon használtak a <a href=\"/glossary/#pos\">proof-of-stake</a> mechanizmusra való áttérés előtt. <a href=\"/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash\">Tudjon meg többet</a>",
+  "ethash-definition": "Egy <a href=\"/glossary/#pow\">proof-of-work</a> algoritmus, amelyet az Ethereumon használtak a <a href=\"/glossary/#pos\">proof-of-stake</a> mechanizmusra való áttérés előtt. <a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">Tudjon meg többet</a>",
   "ether-term": "Ether",
   "ether-definition": "Az Ethereum ökoszisztéma natív kriptovalutája, mely a tranzakciók végrehajtásához szükséges <a href=\"/glossary/#gas\">gázdíjak</a> kifizetésére szolgál. Írható még a következő módokon: ETH, Ξ szimbólum, a görög Xi jele. <a href=\"/eth/\">Bővebben az etherről</a>.",
   "events-term": "Események",

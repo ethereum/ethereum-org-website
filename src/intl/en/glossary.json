@@ -132,7 +132,7 @@
   "erc-term": "Ethereum Request for Comments (ERC)",
   "erc-definition": "A label given to some <a href=\"/glossary/#eip\">EIPs</a> that attempt to define a specific standard of Ethereum usage.",
   "ethash-term": "Ethash",
-  "ethash-definition": "A <a href=\"/glossary/#pow\">proof-of-work</a> algorithm that was used on Ethereum before it transitioned to <a href=\"/glossary/#pos\">proof-of-stake. <a href=\"/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash\">Read more</a>",
+  "ethash-definition": "A <a href=\"/glossary/#pow\">proof-of-work</a> algorithm that was used on Ethereum before it transitioned to <a href=\"/glossary/#pos\">proof-of-stake. <a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">Read more</a>",
   "ether-term": "Ether",
   "ether-definition": "The native cryptocurrency used by the Ethereum ecosystem, which covers <a href=\"/glossary/#gas\">gas</a> costs when executing transactions. Also written as ETH or its symbol Ξ, the Greek uppercase Xi character. <a href=\"/eth/\">More on ether</a>.",
   "events-term": "Events",

@@ -378,7 +378,7 @@ Etichetta assegnata ad alcune [EIP](#eip) per tentare di definire uno standard s
 
 Un algoritmo [proof-of-work](#pow) usato su Ethereum prima che passasse al [Proof-of-Stake](#pos).
 
-[Leggi altro](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
+[Leggi altro](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)
 
 ### ether {#ether}
 
