@@ -1,6 +1,9 @@
 import { shuffle, union } from "lodash"
 
-import walletData from "@/data/wallets/wallet-data"
+import { getLanguageCodeName } from "@/lib/utils/intl"
+import { capitalize } from "@/lib/utils/string"
+
+import walletsData from "@/data/wallets/wallet-data"
 
 import {
   DEVELOPER_FEATURES,
@@ -11,17 +14,14 @@ import {
 } from "../constants"
 import { WalletData } from "../types"
 
-import { getLanguageCodeName } from "./i18n"
-import { capitalize } from "./string"
-
 export const getSupportedLocaleWallets = (locale: string) =>
   shuffle(
-    walletData.filter((wallet) => wallet.languages_supported.includes(locale))
+    walletsData.filter((wallet) => wallet.languages_supported.includes(locale))
   )
 
 export const getNonSupportedLocaleWallets = (locale: string) =>
   shuffle(
-    walletData.filter((wallet) => !wallet.languages_supported.includes(locale))
+    walletsData.filter((wallet) => !wallet.languages_supported.includes(locale))
   )
 
 // Get a list of a wallet supported Personas (new to crypto, nfts, long term, finance, developer)
@@ -104,12 +104,20 @@ export const getPersonaBorderColor = (selectedPersona: number, idx: number) => {
   return selectedPersona === idx ? "primary.base" : "transparent"
 }
 
+// Get total count of wallets that support a language
+const getLanguageTotalCount = (languageCode: string) => {
+  return walletsData.reduce(
+    (total, currentWallet) =>
+      currentWallet.languages_supported.includes(languageCode)
+        ? (total = total + 1)
+        : total,
+    0
+  )
+}
+
 // Get a list of all wallets languages, without duplicates
-export const getAllWalletsLanguages = (
-  wallets: WalletData[],
-  locale: string
-) => {
-  return wallets
+export const getAllWalletsLanguages = (locale: string) => {
+  return walletsData
     .reduce(
       (allLanguagesList, current) =>
         // `union` lodash method merges all arrays removing duplicates
@@ -120,7 +128,9 @@ export const getAllWalletsLanguages = (
       // Get supported language name
       const supportedLanguageName = getLanguageCodeName(languageCode, locale)
       // Capitalize supported language name
-      return capitalize(supportedLanguageName!)
+      return `${capitalize(supportedLanguageName!)} (${getLanguageTotalCount(
+        languageCode
+      )})`
     })
     .sort()
 }

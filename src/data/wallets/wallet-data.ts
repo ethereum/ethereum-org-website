@@ -38,7 +38,7 @@ import UnstoppableWalletImage from "@/public/wallets/unstoppable.png"
 import XDEFIImage from "@/public/wallets/xdefi.png"
 import ZerionImage from "@/public/wallets/zerion.png"
 
-export const walletData: WalletData[] = [
+export const walletsData: WalletData[] = [
   {
     last_updated: "2022-06-22",
     name: "Keystone",
@@ -1918,4 +1918,4 @@ export const walletData: WalletData[] = [
   },
 ]
 
-export default walletData
+export default walletsData
