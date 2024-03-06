@@ -19,6 +19,7 @@ import InfoBanner from "../InfoBanner"
 import InlineLink, { BaseLink } from "../Link"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
+import Translation from "../Translation"
 
 import {
   AccordionCustomItem,
@@ -135,7 +136,7 @@ const StablecoinAccordion = () => {
             {t("page-stablecoins-accordion-swap-dapp-title")}
           </SectionTitle>
           <Text>
-            {t("page-stablecoins-accordion-swap-dapp-intro")}{" "}
+            <Translation id="page-stablecoins:page-stablecoins-accordion-swap-dapp-intro" />{" "}
             <InlineLink to="/get-eth/#dex">
               {t("page-stablecoins-accordion-swap-dapp-link")}
             </InlineLink>

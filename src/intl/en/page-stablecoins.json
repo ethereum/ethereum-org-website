@@ -39,7 +39,7 @@
   "page-stablecoins-accordion-less": "Less",
   "page-stablecoins-accordion-more": "More",
   "page-stablecoins-accordion-requirements": "What you'll need",
-  "page-stablecoins-accordion-swap-dapp-intro": "If you’ve already got ETH and a wallet, you can use these dapps to swap for stablecoins.",
+  "page-stablecoins-accordion-swap-dapp-intro": "If you’ve already got ETH and a <a href=\"/glossary/#wallet\">wallet</a>, you can use these dapps to swap for stablecoins.",
   "page-stablecoins-accordion-swap-dapp-link": "More on decentralized exchanges",
   "page-stablecoins-accordion-swap-dapp-title": "Dapps for swapping tokens",
   "page-stablecoins-accordion-swap-editors-tip": "Editors' tip",
