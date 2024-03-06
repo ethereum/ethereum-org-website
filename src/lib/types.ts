@@ -569,8 +569,6 @@ export type FilterOptionType = {
   }>
 }
 
-export type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
-
 export interface WalletPersonas {
   title: string
   description: string
