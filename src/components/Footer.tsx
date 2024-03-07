@@ -439,17 +439,20 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
         ))}
       </SimpleGrid>
       <List
-        bg="background.highlight"
-        p="8"
-        m="0"
-        fontSize="sm"
+        display="flex"
+        flexWrap="wrap"
+        justifyContent="center"
+        my="6"
+        mx="0"
+        py="8"
+        px="2"
         lineHeight="base"
         fontWeight="normal"
-        display="flex"
-        justifyContent="center"
+        fontSize="sm"
+        bg="background.highlight"
       >
         {dipperLinks.map(({ to, text }) => (
-          <ListItem key={text} p="2">
+          <ListItem key={text} p="2" m="0">
             <BaseLink href={to} {...linkProps}>
               {text}
             </BaseLink>
