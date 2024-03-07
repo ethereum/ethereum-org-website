@@ -4,7 +4,7 @@ description: Un introduzione "non tecnica" per i principianti sulle prove a cono
 lang: it
 ---
 
-## Cosa sono le prove a conoscenza zero? {#what-are-zk-proofs}
+# Cosa sono le prove a conoscenza zero? {#what-are-zk-proofs}
 
 Una prova a conoscenza zero è un modo per provare la validità di una dichiarazione senza rivelarla. Il 'dimostratore' è la parte che tenta di provare una rivendicazione, mentre il 'validatore' è responsabile della sua convalida.
 

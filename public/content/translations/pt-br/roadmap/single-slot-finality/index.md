@@ -58,7 +58,7 @@ O problema da escalabilidade da agregação por meio do aumento do número de va
 
 ## Progresso atual {#current-progress}
 
-A SSF está em fase de pesquisa. A implementação não deverá ocorrer por vários anos, provavelmente apenas após outras melhorias consideráveis, como [Verkle Trees](/roadmap/verkle-trees/) e [Danksharding](/roadmap/danksharding]).
+A SSF está em fase de pesquisa. A implementação não deverá ocorrer por vários anos, provavelmente apenas após outras melhorias consideráveis, como [Verkle Trees](/roadmap/verkle-trees/) e [Danksharding](/roadmap/danksharding/).
 
 ## Leitura adicional {#further-reading}
 

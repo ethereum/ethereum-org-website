@@ -253,6 +253,7 @@ const Layer2Page = () => {
       <PageMetadata
         title={t("layer-2-hero-title")}
         description={t("layer-2-metadata-description")}
+        image="/heroes/layer-2-hub-hero.jpg"
       />
       {/* Hero Section */}
       <HubHero {...heroContent} />

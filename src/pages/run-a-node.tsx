@@ -446,6 +446,7 @@ const RunANodePage = () => {
       <PageMetadata
         title={t("page-run-a-node-title")}
         description={t("page-run-a-node-meta-description")}
+        image="/run-a-node/ethereum-inside.png"
       />
       <HeroContainer>
         <Box pb="8">

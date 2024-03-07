@@ -217,6 +217,7 @@ const TutorialPage = ({
         )}
       />
       <Heading
+        as="h1"
         fontStyle="normal"
         fontWeight="semibold"
         fontFamily="monospace"

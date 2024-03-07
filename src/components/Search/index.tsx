@@ -31,7 +31,7 @@ export const SearchIconButton = forwardRef<IconButtonProps, "button">(
       ref={ref}
       variant="ghost"
       isSecondary
-      px={1.5}
+      px={2}
       _hover={{
         color: "primary.base",
         transform: "rotate(5deg)",

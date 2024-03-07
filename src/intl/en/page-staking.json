@@ -187,7 +187,7 @@
   "page-staking-section-comparison-requirements-title": "Requirements",
   "page-staking-section-comparison-solo-requirements-li1": "You must deposit 32 ETH",
   "page-staking-section-comparison-solo-requirements-li2": "Maintain hardware that runs both an Ethereum execution client and consensus client while connected to the internet",
-  "page-staking-section-comparison-solo-requirements-li3": "The <a href=\"https://goerli.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> will walk you through the process and hardware requirements",
+  "page-staking-section-comparison-solo-requirements-li3": "The <a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">Staking Launchpad</a> will walk you through the process and hardware requirements",
   "page-staking-section-comparison-saas-requirements-li1": "Deposit 32 ETH and generate your keys with assistance",
   "page-staking-section-comparison-saas-requirements-li2": "Store your keys securely",
   "page-staking-section-comparison-saas-requirements-li3": "The rest is taken care of, though specific services will vary",

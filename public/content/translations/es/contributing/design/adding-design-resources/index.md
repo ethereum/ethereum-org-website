@@ -4,6 +4,8 @@ description: Pautas y requerimientos para asegurar la calidad de los materiales 
 lang: es
 ---
 
+# Añadiendo recursos de diseño {#adding-design-resources}
+
 Cualquiera puede sugerir nuevos materiales de diseño para la [página de diseño y experiencia del usuario en Web3](/developers/docs/design-and-ux/).
 
 Tenga en cuenta que la finalidad de esta página es proporcionar valor a los usuarios que aspiran ser diseñadores en Web3. La sección de diseño no está ahí para que la uses para anunciar tus servicios, productos o plataformas.

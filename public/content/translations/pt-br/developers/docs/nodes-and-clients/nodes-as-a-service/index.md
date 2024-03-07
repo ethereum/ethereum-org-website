@@ -41,7 +41,7 @@ O principal benefício para usar um serviço de nós é não ter de gastar tempo
 
 Executar seus próprios nós pode ser muito caro, quer seja de armazenamento, largura de banda, quer de tempo de engenharia. Dispor de mais nós ao dimensionar, atualizar nós para as versões mais recentes e garantir a consistência dos estados pode roubar tempo para criar e usar recursos no seu produto web3 desejado.
 
-## Quais são os benefícios do uso do serviço de nós? {#cons-of-using-a-node-service}
+## Quais são os contras do uso do serviço de nós? {#cons-of-using-a-node-service}
 
 Usando um serviço nó você está centralizando o aspecto da infraestrutura do seu produto. Por esse motivo, os projetos que dão à descentralização a maior importância podem preferir nós de auto-hospedagem a terceirizar o serviço a terceiros.
 

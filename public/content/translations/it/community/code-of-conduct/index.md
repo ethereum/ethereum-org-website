@@ -4,6 +4,8 @@ description: Gli standard di base che ci impegniamo a rispettare negli spazi di 
 lang: it
 ---
 
+# Codice di condotta {#conduct-intro}
+
 ## Missione {#mission}
 
 Sviluppare e mantenere l'hub più completo ed accessibile di conoscenza Ethereum.

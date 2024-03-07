@@ -35,6 +35,14 @@ export const useLanguagePicker = (
 
   const [filteredNames, setFilteredNames] = useState<LocaleDisplayInfo[]>([])
 
+  // Used to only send one matomo event for users who focus the filter input
+  const [hasFocusedInput, setHasFocusedInput] = useState(false)
+
+  // Reset if user switches languages
+  useEffect(() => {
+    setHasFocusedInput(false)
+  }, [locale])
+
   // perform all the filtering and mapping when the filter value change
   useEffect(() => {
     const locales = filterRealLocales(rawLocales)
@@ -188,6 +196,21 @@ export const useLanguagePicker = (
     )
   }
 
+  /**
+   * Send Matomo event when user focuses in the filter input.
+   * Only send once per user per session per language
+   * @returns void
+   */
+  const handleInputFocus = (): void => {
+    if (hasFocusedInput) return
+    trackCustomEvent({
+      ...eventBase,
+      eventAction: "Filter input",
+      eventName: "Focused inside filter input",
+    })
+    setHasFocusedInput(true)
+  }
+
   return {
     t,
     refs,
@@ -195,5 +218,6 @@ export const useLanguagePicker = (
     filterValue,
     setFilterValue,
     filteredNames,
+    handleInputFocus,
   }
 }

@@ -68,7 +68,7 @@ DeSci در حال ساخت مجموعه ابزار علمی برای ورود د
 
 مطالعات نشان داده اند که پانل های بررسی کمک هزینه در انتخاب پیشنهادهای با کیفیت بالا کار ضعیفی انجام می دهند، زیرا همان پیشنهادات ارائه شده به پانل های مختلف نتایج بسیار متفاوتی دارند. از آنجایی که بودجه کمیاب‌تر شده است، این بودجه در مجموعه کوچک‌تری از محققان ارشد با پروژه‌های محافظه‌کارانه‌تر متمرکز شده است. این اثر یک چشم انداز سرمایه گذاری بیش از حد رقابتی ایجاد کرده است، انگیزه های انحرافی را تقویت می کند و نوآوری را خفه می کند.
 
-Web3 این پتانسیل را دارد که با آزمایش مدل‌های انگیزشی مختلف که توسط DAOs و Web3 به طور گسترده ایجاد شده‌اند، این مدل بودجه شکسته را مختل کند. [تأمین مالی ماسبق برای کالاهای عمومی](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)، [تأمین مالی درجه](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)، [حاکمیت DAO](https://www.antler.co/blog/daos-and-web3-governance) و [ساختارهای تشویقی نمادین](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) برخی از ابزارهای Web3 هستند که می توانند تأمین مالی علمی را متحول کنند.
+Web3 این پتانسیل را دارد که با آزمایش مدل‌های انگیزشی مختلف که توسط DAOs و Web3 به طور گسترده ایجاد شده‌اند، این مدل بودجه شکسته را مختل کند. [تأمین مالی ماسبق برای کالاهای عمومی](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)، [تأمین مالی درجه](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)، [حاکمیت DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) و [ساختارهای تشویقی نمادین](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) برخی از ابزارهای Web3 هستند که می توانند تأمین مالی علمی را متحول کنند.
 
 ### مالکیت و توسعه IP {#ip-ownership}
 
