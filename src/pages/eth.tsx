@@ -426,7 +426,7 @@ const EthPage = () => {
           <InfoBanner emoji=":wave:" shouldCenter>
             <Text as="b">{t("page-eth-buy-some")}</Text>{" "}
             {t("page-eth-buy-some-desc")}{" "}
-            <InlineLink to="/what-is-ethereum/">
+            <InlineLink href="/what-is-ethereum/">
               {t("page-eth-more-on-ethereum-link")}
             </InlineLink>
             {t("page-eth-period")}
@@ -449,7 +449,7 @@ const EthPage = () => {
             </Text>
             <Text>
               {t("page-eth-fuels-staking")}{" "}
-              <InlineLink to="/staking/">
+              <InlineLink href="/staking/">
                 {t("page-eth-fuels-more-staking")}
               </InlineLink>
             </Text>
@@ -479,25 +479,25 @@ const EthPage = () => {
             <Text>{t("page-eth-uses-desc-2")} </Text>
             <UnorderedList>
               <ListItem>
-                <InlineLink to="https://sablier.com">
+                <InlineLink href="https://sablier.com">
                   {t("page-eth-stream-link")}
                 </InlineLink>{" "}
                 – {t("page-eth-uses-desc-3")}
               </ListItem>
               <ListItem>
-                <InlineLink to="/get-eth/#dex">
+                <InlineLink href="/get-eth/#dex">
                   {t("page-eth-trade-link-2")}
                 </InlineLink>{" "}
                 – {t("page-eth-uses-desc-4")}
               </ListItem>
               <ListItem>
-                <InlineLink to="https://app.compound.finance/">
+                <InlineLink href="https://app.compound.finance/">
                   {t("page-eth-earn-interest-link")}
                 </InlineLink>{" "}
                 – {t("page-eth-uses-desc-5")}
               </ListItem>
               <ListItem>
-                <InlineLink to="/stablecoins/">
+                <InlineLink href="/stablecoins/">
                   {t("page-eth-stablecoins-link")}
                 </InlineLink>{" "}
                 – {t("page-eth-uses-desc-6")}
