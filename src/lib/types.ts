@@ -495,9 +495,7 @@ export type CommunityConference = {
   endDate: string
 }
 
-/**
- * Wallets
- */
+// Wallets
 export interface WalletData {
   last_updated: string
   name: string
@@ -545,6 +543,32 @@ export interface WalletData {
   new_to_crypto?: boolean
 }
 
+export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
+
+export interface WalletFilterData {
+  title: TranslationKey
+  filterKey?: string
+  description: TranslationKey | ""
+}
+
+export type FilterOptionType = {
+  title: string
+  items: Array<{
+    title: string
+    icon: typeof Icon
+    description: string
+    filterKey: string | undefined
+    showOptions: boolean | undefined
+    options:
+      | Array<{
+          name: string
+          filterKey?: string
+          inputType: "checkbox"
+        }>
+      | []
+  }>
+}
+
 export interface WalletPersonas {
   title: string
   description: string
@@ -577,39 +601,6 @@ export interface WalletPersonas {
   }
 }
 
-export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
-
-export interface WalletFilterData {
-  title: TranslationKey
-  filterKey?: string
-  description: TranslationKey | ""
-}
-
-export type FilterOptionType = {
-  title: string
-  items: Array<{
-    title: string
-    icon: typeof Icon
-    description: string
-    filterKey: string | undefined
-    showOptions: boolean | undefined
-    options:
-      | Array<{
-          name: string
-          filterKey?: string
-          inputType: "checkbox"
-        }>
-      | []
-  }>
-}
-
-export interface DropdownOption {
-  label: string
-  value: string
-  filterKey: string
-  category: string
-}
-
 // Historical upgrades
 type NetworkUpgradeDetails = {
   blockNumber?: number
@@ -632,9 +623,7 @@ type NetworkUpgradeDetails = {
 
 export type NetworkUpgradeData = Record<string, NetworkUpgradeDetails>
 
-/**
- * Footer
- */
+// Footer
 export interface LinkSection {
   title: TranslationKey
   links: Array<{

@@ -3,9 +3,11 @@ import { StaticImageData } from "next/image"
 import { useTranslation } from "next-i18next"
 import {
   Box,
+  chakra,
   Flex,
   ListItem,
   SimpleGrid,
+  Stack,
   UnorderedList,
 } from "@chakra-ui/react"
 
@@ -27,6 +29,7 @@ import InlineLink from "../Link"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
 import ReactSelect, { ReactSelectOnChange } from "../ReactSelect"
+import { StyledSelect as Select } from "../SharedStyledComponents"
 
 const Flex50 = (props: ChildOnlyProp) => (
   <Box flex={{ base: "100%", md: "50%" }} {...props} />

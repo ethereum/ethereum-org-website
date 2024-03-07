@@ -9,8 +9,6 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import { DropdownOption } from "@/lib/types"
-
 import {
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
@@ -19,6 +17,8 @@ import Text from "@/components/OldText"
 import Tooltip from "@/components/Tooltip"
 
 import walletFilterData from "@/data/wallets/wallet-filters"
+
+import { DropdownOption } from "@/hooks/useWalletTable"
 
 type WalletMoreInfoCategoryProps = {
   wallet: any

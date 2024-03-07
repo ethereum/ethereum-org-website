@@ -1,32 +1,33 @@
 import { useState } from "react"
 import { useTranslation } from "next-i18next"
 import { FaTools } from "react-icons/fa"
-import { Box, Flex } from "@chakra-ui/react"
+import { Box, chakra, Flex } from "@chakra-ui/react"
 
 import { ButtonLink } from "@/components/Buttons"
 import Text from "@/components/OldText"
+import { StyledSelect as Select } from "@/components/SharedStyledComponents"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import ReactSelect, { type ReactSelectOnChange } from "../ReactSelect"
-
-type StakingDataOption = { label: string; value: string }
+const StyledSelect = chakra(Select, {
+  baseStyle: {
+    maxW: { base: "full", md: "50%" },
+  },
+})
 
 const StakingLaunchpadWidget = () => {
   const { t } = useTranslation("page-staking")
   const [selection, setSelection] = useState("testnet")
 
-  const handleChange: ReactSelectOnChange<StakingDataOption> = (data) => {
-    if (!data) return
-
+  const handleChange = (e) => {
     trackCustomEvent({
       eventCategory: `Selected testnet vs mainnet for Launchpad link`,
       eventAction: `Clicked`,
-      eventName: `${data.label} bridge selected`,
-      eventValue: `${data.value}`,
+      eventName: `${e.label} bridge selected`,
+      eventValue: `${e.value}`,
     })
-    setSelection(data.value)
+    setSelection(e.value)
   }
 
   const data = {
@@ -40,7 +41,7 @@ const StakingLaunchpadWidget = () => {
     },
   }
 
-  const selectOptions = Object.keys(data).map<StakingDataOption>((key) => ({
+  const selectOptions = Object.keys(data).map((key) => ({
     label: data[key].label,
     value: key,
   }))
@@ -55,13 +56,13 @@ const StakingLaunchpadWidget = () => {
       <Text as="span" color="text200">
         <Translation id="page-staking:page-staking-launchpad-widget-span" />
       </Text>
-      <Box my={4} maxW={{ md: "50%" }}>
-        <ReactSelect
-          instanceId="staking-launchpad-select"
+      <Box my={4}>
+        <StyledSelect
+          className="react-select-container"
+          classNamePrefix="react-select"
           options={selectOptions}
           onChange={handleChange}
           defaultValue={selectOptions[0]}
-          variant="outline"
         />
       </Box>
       <Text>

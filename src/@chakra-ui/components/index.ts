@@ -21,7 +21,6 @@ import { Link } from "./Link"
 import { Modal } from "./Modal"
 import { Progress } from "./Progress"
 import { Radio } from "./Radio"
-import { ReactSelect } from "./ReactSelect"
 import { Select } from "./Select"
 import { Switch } from "./Switch"
 import { Table } from "./Table"
@@ -51,7 +50,6 @@ export default {
   Modal,
   Progress,
   Radio,
-  ReactSelect,
   Select,
   Spinner: spinnerDefaultTheme,
   Switch,

@@ -11,13 +11,15 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-import { DropdownOption, Lang, WalletFilter } from "@/lib/types"
+import { Lang, WalletFilter } from "@/lib/types"
 
 import InlineLink, { LinkProps } from "@/components/Link"
 
 import { getLocaleFormattedDate } from "@/lib/utils/time"
 
 import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
+
+import { DropdownOption } from "@/hooks/useWalletTable"
 
 type WalletMoreInfoProps = {
   wallet: Record<string, any>

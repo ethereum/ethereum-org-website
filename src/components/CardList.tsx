@@ -70,7 +70,6 @@ const Card = ({
           <LinkOverlay
             as={BaseLink}
             href={link}
-            isExternal={isExternal}
             hideArrow
             color="text"
             textDecoration="none"
