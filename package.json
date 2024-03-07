@@ -50,7 +50,7 @@
     "react-i18next": "^13.3.1",
     "react-icons": "^4.10.1",
     "react-lite-youtube-embed": "^2.4.0",
-    "react-select": "^4.3.0",
+    "react-select": "5.8.0",
     "reading-time": "^1.5.0",
     "recharts": "^2.7.3",
     "remark-gfm": "^3.0.1",

@@ -70,12 +70,12 @@
               to: /developers/docs/consensus-mechanisms/pow/mining/
               items:
                 - id: docs-nav-mining-algorithms
-                  to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/
+                  to: /developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/
                   items:
                     - id: docs-nav-dagger-hashimoto
-                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/
+                      to: /developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/
                     - id: docs-nav-ethash
-                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/
+                      to: /developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/
         - id: docs-nav-proof-of-stake
           to: /developers/docs/consensus-mechanisms/pos/
           items:
