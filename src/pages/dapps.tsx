@@ -114,7 +114,6 @@ import dai from "@/public/dapps/stabledai.png"
 import status from "@/public/dapps/status.png"
 import superrare from "@/public/dapps/superrare.png"
 import synthetix from "@/public/dapps/synthetix.png"
-import uniswapec from "@/public/dapps/uni.png"
 import uniswap from "@/public/dapps/uni.png"
 import xmtp from "@/public/dapps/xmtp.png"
 import yearn from "@/public/dapps/yearn.png"
@@ -1265,7 +1264,7 @@ const DappsPage = () => {
       name: "Uniswap",
       description: t("page-dapps-editors-choice-uniswap"),
       url: "https://uniswap.exchange/swap",
-      image: uniswapec,
+      image: uniswap,
       alt: t("page-dapps-uniswap-logo-alt"),
       background: "#212f46",
       type: CategoryType.FINANCE,
