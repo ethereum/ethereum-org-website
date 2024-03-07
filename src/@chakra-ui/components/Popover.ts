@@ -21,6 +21,7 @@ const baseStyle = definePartsStyle(
   defineMergeStyles(defaultBaseStyle, {
     popper: {
       borderRadius: "base",
+      zIndex: "popover",
     },
     content: {
       [$arrowSize.variable]: "8px",

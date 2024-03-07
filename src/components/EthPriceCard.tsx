@@ -100,7 +100,7 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
   const change = hasData ? formatPercentage(state.data.percentChangeUSD) : ""
 
   const tooltipContent = (
-    <Box textTransform="none">
+    <Box>
       {t("data-provided-by")}{" "}
       <InlineLink to="https://www.coingecko.com/en/api">
         coingecko.com

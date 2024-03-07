@@ -25,7 +25,9 @@ const Tooltip: React.FC<IProps> = ({ content, children, ...rest }) => {
       <PopoverTrigger>{children}</PopoverTrigger>
       <PopoverContent>
         <PopoverArrow />
-        <PopoverBody>{content}</PopoverBody>
+        <PopoverBody color="body.base" fontWeight="normal" textTransform="none">
+          {content}
+        </PopoverBody>
       </PopoverContent>
     </Popover>
   )
