@@ -117,22 +117,41 @@ const getLanguageTotalCount = (languageCode: string) => {
 
 // Get a list of all wallets languages, without duplicates
 export const getAllWalletsLanguages = (locale: string) => {
-  return walletsData
-    .reduce(
-      (allLanguagesList, current) =>
-        // `union` lodash method merges all arrays removing duplicates
-        union(allLanguagesList, current.languages_supported),
-      [] as string[]
-    )
-    .map((languageCode) => {
-      // Get supported language name
-      const supportedLanguageName = getLanguageCodeName(languageCode, locale)
-      // Capitalize supported language name
-      return `${capitalize(supportedLanguageName!)} (${getLanguageTotalCount(
-        languageCode
-      )})`
-    })
-    .sort()
+  const compareFn = (
+    a: { langCode: string; langName: string },
+    b: { langCode: string; langName: string }
+  ) => {
+    if (a.langName > b.langName) {
+      return 1
+    }
+    if (a.langName < b.langName) {
+      return -1
+    }
+    return 0
+  }
+
+  return (
+    walletsData
+      .reduce(
+        (allLanguagesList, current) =>
+          // `union` lodash method merges all arrays removing duplicates
+          union(allLanguagesList, current.languages_supported),
+        [] as string[]
+      )
+      .map((languageCode) => {
+        // Get supported language name
+        const supportedLanguageName = getLanguageCodeName(languageCode, locale)
+        // Get a list of {langCode, langName}
+        return {
+          langCode: languageCode,
+          langName: `${capitalize(
+            supportedLanguageName!
+          )} (${getLanguageTotalCount(languageCode)})`,
+        }
+      })
+      // Sort list alphabetically by langName
+      .sort(compareFn)
+  )
 }
 
 // Get a list of top n wallets languages

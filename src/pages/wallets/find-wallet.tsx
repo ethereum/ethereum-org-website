@@ -96,7 +96,6 @@ const FindWalletPage = () => {
     const updatedFilters = { ...filters }
     updatedFilters[key] = !updatedFilters[key]
     setFilters(updatedFilters)
-    setSelectedPersona(NaN)
   }
 
   const updateFilterOptions = (keys, value) => {
@@ -105,7 +104,6 @@ const FindWalletPage = () => {
       updatedFilters[key] = value
     }
     setFilters(updatedFilters)
-    setSelectedPersona(NaN)
   }
 
   const resetFilters = () => {
@@ -186,7 +184,7 @@ const FindWalletPage = () => {
       </Box>
 
       {/* Mobile filters menu */}
-      <Hide above="lg">
+      <Box hideFrom="lg">
         <MobileFiltersMenu
           filters={filters}
           resetWalletFilter={resetWalletFilter}
@@ -200,7 +198,7 @@ const FindWalletPage = () => {
           onOpen={onOpen}
           onClose={onClose}
         />
-      </Hide>
+      </Box>
 
       <Box px={{ md: 4, "2xl": 0 }}>
         <Flex pt={4} pb={6} gap={6}>
