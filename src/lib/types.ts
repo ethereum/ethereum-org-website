@@ -513,3 +513,15 @@ type NetworkUpgradeDetails = {
 )
 
 export type NetworkUpgradeData = Record<string, NetworkUpgradeDetails>
+
+// Footer
+export type FooterLink = {
+  to: string
+  text: TranslationKey
+  isPartiallyActive?: boolean
+}
+
+export type FooterLinkSection = {
+  title: TranslationKey
+  links: FooterLink[]
+}
