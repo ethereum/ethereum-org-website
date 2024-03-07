@@ -33,7 +33,7 @@ const socialLinks = [
     icon: FaXTwitter,
     to: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
-    color: "#FFFFFF",
+    color: "#333",
   },
   {
     icon: FaDiscord,
