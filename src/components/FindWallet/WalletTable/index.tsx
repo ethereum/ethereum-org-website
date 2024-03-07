@@ -323,11 +323,9 @@ const WalletTable = ({
 
                       <Box w={{ base: "100%", md: "auto" }}>
                         <Stack>
-                          <Box mb={3}>
-                            <Text lineHeight={1.2} fontSize="xl !important">
-                              {wallet.name}
-                            </Text>
-                          </Box>
+                          <Text lineHeight={1.2} fontSize="xl !important">
+                            {wallet.name}
+                          </Text>
 
                           {/* Wallet Personas supported */}
                           {walletPersonas.length > 0 && (

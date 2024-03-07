@@ -73,6 +73,7 @@ const WalletFilterFeature = ({
       defaultIndex={Object.keys(filterOptions).map((key) => +key)}
     >
       {filterOptions.map((filterOption, idx) => {
+        // Insert `LanguageSupportFilter` in the 2nd position
         if (idx === 1) {
           return (
             <LanguageSupportFilter

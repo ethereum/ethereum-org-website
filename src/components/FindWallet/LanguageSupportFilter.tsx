@@ -13,7 +13,10 @@ import {
 
 import ReactSelect from "@/components/ReactSelect"
 
-import { getAllWalletsLanguages } from "@/lib/utils/wallets"
+import {
+  getAllWalletsLanguages,
+  getWalletsTopLanguages,
+} from "@/lib/utils/wallets"
 
 type LanguageSupportFilterProps = {}
 
@@ -22,12 +25,14 @@ export const LanguageSupportFilter = ({}: LanguageSupportFilterProps) => {
   const { locale } = useRouter()
 
   const allWalletsLanguages = getAllWalletsLanguages(locale!)
-  const allWalletsLanguagesOptions = allWalletsLanguages!.map((language) => {
-    return {
-      label: language,
-      value: language,
+  const allWalletsLanguagesOptions = allWalletsLanguages!.map(
+    ({ langCode, langName }) => {
+      return {
+        label: langName,
+        value: langCode,
+      }
     }
-  })
+  )
 
   // const handleLayer2SelectChange: ReactSelectOnChange<Layer2Option> = (
   //   selectedOption
@@ -42,6 +47,8 @@ export const LanguageSupportFilter = ({}: LanguageSupportFilterProps) => {
   //   })
   //   setSelectedL2(selectedOption.l2)
   // }
+
+  const walletsTop5Languages = getWalletsTopLanguages(5, locale!).join(", ")
 
   return (
     <AccordionItem
@@ -89,14 +96,27 @@ export const LanguageSupportFilter = ({}: LanguageSupportFilterProps) => {
 
           <AccordionPanel as={List} p={0} m={0}>
             <ReactSelect
-              instanceId="language-filter"
+              instanceId="language-support-filter"
               // TODO
-              placeholder={"Search language"}
+              // aria-label={t("page-get-eth-exchanges-header")}
               options={allWalletsLanguagesOptions}
               // TODO
               onChange={() => {}}
+              // TODO i18n
+              placeholder={"Search language"}
+              isSearchable
               variant="outline"
             />
+
+            <Box mt={2}>
+              <Text color="body.medium" fontSize="sm" lineHeight={1.6}>
+                {/* TODO: i18n */}
+                Most popular
+              </Text>
+              <Text color="primary.base" fontSize="sm" lineHeight={1.6}>
+                {walletsTop5Languages}
+              </Text>
+            </Box>
           </AccordionPanel>
         </>
       )}
