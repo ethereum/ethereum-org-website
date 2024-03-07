@@ -1,5 +1,4 @@
 // TODO
-import React from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
@@ -14,7 +13,11 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import { Lang, TranslationKey } from "@/lib/types"
+import {
+  FooterLink,
+  FooterLinkSection,
+  Lang
+} from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
@@ -41,16 +44,8 @@ const socialLinks = [
     color: "#7289da",
   },
 ]
-export interface LinkSection {
-  title: TranslationKey
-  links: Array<{
-    to: string
-    text: TranslationKey
-    isPartiallyActive?: boolean
-  }>
-}
 
-export type FooterProps = {
+type FooterProps = {
   lastDeployDate: string
 }
 
@@ -60,40 +55,7 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
 
   // TODO: check if `medBp` is being used or remove it
   const [medBp] = useToken("breakpoints", ["md"])
-  const linkSections: Array<LinkSection> = [
-    {
-      title: t("use-ethereum"),
-      links: [
-        {
-          to: "/wallets/find-wallet/",
-          text: t("find-wallet"),
-        },
-        {
-          to: `/get-eth/`,
-          text: t("get-eth"),
-        },
-        {
-          to: `/dapps/`,
-          text: t("decentralized-applications-dapps"),
-        },
-        {
-          to: "/layer-2/",
-          text: t("layer-2"),
-        },
-        {
-          to: "/run-a-node/",
-          text: t("run-a-node"),
-        },
-        {
-          to: `/stablecoins/`,
-          text: t("stablecoins"),
-        },
-        {
-          to: `/staking/`,
-          text: t("stake-eth"),
-        },
-      ],
-    },
+  const linkSections: FooterLinkSection[] = [
     {
       title: t("learn"),
       links: [
@@ -114,14 +76,6 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("ethereum-wallets"),
         },
         {
-          to: "/gas/",
-          text: "Gas fees",
-        },
-        {
-          to: "/security/",
-          text: t("ethereum-security"),
-        },
-        {
           to: "/web3/",
           text: t("web3"),
         },
@@ -130,32 +84,8 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("smart-contracts"),
         },
         {
-          to: "/energy-consumption/",
-          text: t("energy-consumption"),
-        },
-        {
-          to: "/roadmap/",
-          text: t("ethereum-roadmap"),
-        },
-        {
-          to: "/eips/",
-          text: t("eips"),
-        },
-        {
-          to: "/history/",
-          text: t("history-of-ethereum"),
-        },
-        {
-          to: "/whitepaper/",
-          text: t("ethereum-whitepaper"),
-        },
-        {
-          to: `/glossary/`,
-          text: t("ethereum-glossary"),
-        },
-        {
-          to: "/governance/",
-          text: t("ethereum-governance"),
+          to: "/gas/",
+          text: "Gas fees",
         },
         {
           to: "/bridges/",
@@ -166,22 +96,87 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("zero-knowledge-proofs"),
         },
         {
+          to: "/run-a-node/",
+          text: t("run-a-node"),
+        },
+        {
+          to: "/security/",
+          text: t("ethereum-security"),
+        },
+        {
           to: "/quizzes/",
           text: t("quizzes-title"),
         },
       ],
     },
     {
-      title: t("developers"),
+      title: t("use"),
+      links: [
+        {
+          to: "/guides/",
+          text: t("guides"),
+        },
+        {
+          to: "/wallets/find-wallet/",
+          text: t("nav-find-wallet-label"),
+        },
+        {
+          to: `/get-eth/`,
+          text: t("get-eth"),
+        },
+        {
+          to: `/dapps/`,
+          text: t("decentralized-applications-dapps"),
+        },
+        {
+          to: `/stablecoins/`,
+          text: t("stablecoins"),
+        },
+        {
+          to: `/nft/`,
+          text: t("nft-page"),
+        },
+        {
+          to: `/defi/`,
+          text: t("defi-page"),
+        },
+        {
+          to: `/dao/`,
+          text: t("dao-page"),
+        },
+        {
+          to: `/decentralized-identity/`,
+          text: t("decentralized-identity"),
+        },
+        {
+          to: `/social-networks/`,
+          text: t("decentralized-social-networks"),
+        },
+        {
+          to: `/desci/`,
+          text: t("decentralized-science"),
+        },
+        {
+          to: `/refi/`,
+          text: t("regenerative-finance"),
+        },
+        {
+          to: `/staking/`,
+          text: t("stake-eth"),
+        },
+        {
+          to: "/layer-2/",
+          text: t("layer-2"),
+        },
+      ],
+    },
+    {
+      title: t("build"),
       links: [
         {
           to: `/developers/`,
-          text: t("get-started"),
+          text: t("nav-builders-home-label"),
           isPartiallyActive: false,
-        },
-        {
-          to: `/developers/docs/`,
-          text: t("documentation"),
         },
         {
           to: `/developers/tutorials/`,
@@ -195,14 +190,62 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           to: `/developers/local-environment/`,
           text: t("set-up-local-env"),
         },
+        {
+          to: `/community/grants/`,
+          text: t("grants"),
+        },
+        {
+          to: `/developers/docs/`,
+          text: t("documentation"),
+        },
+        {
+          to: `/developers/docs/intro-to-ethereum/`,
+          text: t("nav-docs-foundation-label"),
+        },
+        {
+          to: `/developers/docs/ethereum-stack/`,
+          text: t("nav-docs-stack-label"),
+        },
+        {
+          to: `/developers/docs/design-and-ux/`,
+          text: t("nav-docs-design-label"),
+        },
+        {
+          to: `/enterprise/`,
+          text: t("enterprise-mainnet"),
+        },
+        {
+          to: `/enterprise/private-ethereum/`,
+          text: t("enterprise-private"),
+        },
       ],
     },
     {
-      title: t("ecosystem"),
+      title: t("participate"),
       links: [
         {
           to: `/community/`,
           text: t("community-hub"),
+        },
+        {
+          to: `/community/online/`,
+          text: t("ethereum-online"),
+        },
+        {
+          to: `/community/events/`,
+          text: t("ethereum-events"),
+        },
+        {
+          to: `/contributing/`,
+          text: t("nav-contribute-label"),
+        },
+        {
+          to: `/contributing/translation-program/`,
+          text: t("translation-program"),
+        },
+        {
+          to: "/about/",
+          text: t("about-us"),
         },
         {
           to: "/foundation/",
@@ -221,79 +264,120 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("ethereum-bug-bounty"),
         },
         {
-          to: "/community/grants",
-          text: t("grant-programs"),
-        },
-        {
-          to: "/assets/",
-          text: t("ethereum-brand-assets"),
-        },
-        {
           to: "https://devcon.org/",
           text: t("devcon"),
         },
       ],
     },
     {
-      title: t("enterprise"),
+      title: t("research"),
       links: [
         {
-          to: "/enterprise/",
-          text: t("mainnet-ethereum"),
+          to: "/whitepaper/",
+          text: t("ethereum-whitepaper"),
         },
         {
-          to: "/enterprise/private-ethereum/",
-          text: t("private-ethereum"),
+          to: "/roadmap/",
+          text: t("ethereum-roadmap"),
         },
         {
-          to: "/enterprise/",
-          text: t("enterprise"),
-        },
-      ],
-    },
-    {
-      title: t("about-ethereum-org"),
-      links: [
-        {
-          to: "/about/",
-          text: t("about-us"),
+          to: `/roadmap/security/`,
+          text: t("nav-roadmap-security-label"),
         },
         {
-          to: "/about/#open-jobs",
-          text: t("jobs"),
+          to: `/roadmap/scaling/`,
+          text: t("nav-roadmap-scaling-label"),
         },
         {
-          to: "/contributing/",
-          text: t("contributing"),
+          to: `/roadmap/user-experience/`,
+          text: t("nav-roadmap-ux-label"),
         },
         {
-          to: "/languages/",
-          text: t("language-support"),
+          to: `/roadmap/future-proofing/`,
+          text: t("nav-roadmap-future-label"),
         },
         {
-          to: "/privacy-policy/",
-          text: t("privacy-policy"),
+          to: `/history/`,
+          text: t("nav-history-label"),
         },
         {
-          to: "/terms-of-use/",
-          text: t("terms-of-use"),
+          to: `/community/research/`,
+          text: t("nav-open-research-label"),
         },
         {
-          to: "/cookie-policy/",
-          text: t("cookie-policy"),
+          to: "/eips/",
+          text: t("eips"),
         },
         {
-          to: "mailto:press@ethereum.org",
-          text: t("contact"),
+          to: "/governance/",
+          text: t("ethereum-governance"),
         },
       ],
     },
   ]
 
+  const dipperLinks: FooterLink[] = [
+    {
+      to: "/assets/",
+      text: t("ethereum-brand-assets"),
+    },
+    {
+      to: `/glossary/`,
+      text: t("ethereum-glossary"),
+    },
+    {
+      to: "/community/code-of-conduct/",
+      text: t("nav-code-of-conduct"),
+    },
+    {
+      to: "/about/#open-jobs",
+      text: t("jobs"),
+    },
+    {
+      to: "/privacy-policy/",
+      text: t("privacy-policy"),
+    },
+    {
+      to: "/terms-of-use/",
+      text: t("terms-of-use"),
+    },
+    {
+      to: "/cookie-policy/",
+      text: t("cookie-policy"),
+    },
+    {
+      to: "mailto:press@ethereum.org",
+      text: t("contact"),
+    },
+  ]
+
+  const hoverStyles = {
+    textDecor: "none",
+    color: "primary.base",
+    _after: {
+      color: "primary.base",
+    },
+    "& svg": {
+      fill: "primary.base",
+    },
+  }
+  const linkProps = {
+    isPartiallyActive: false,
+    textDecor: "none",
+    color: "body.base",
+    fontWeight: "normal",
+    _hover: hoverStyles,
+    sx: {
+      "& svg": {
+        fill: "text200",
+      },
+    },
+  }
+
   return (
-    <Box as="footer" p="1rem 2rem">
+    <Box as="footer" py="4" px="8">
       <Flex
-        fontSize="sm"
+        fontSize="md"
         justify="space-between"
         alignItems="center"
         flexWrap="wrap"
@@ -303,20 +387,20 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           {getLocaleTimestamp(locale as Lang, lastDeployDate!)}
         </Box>
         <Box my={4}>
-          {socialLinks.map((link, idk) => {
+          {socialLinks.map(({ to, ariaLabel, icon, color }) => {
             return (
               <BaseLink
-                key={idk}
-                to={link.to}
+                key={to}
+                href={to}
                 hideArrow
                 color="secondary"
-                aria-label={link.ariaLabel}
-                ms={4}
+                aria-label={ariaLabel}
+                ms="4"
               >
                 <Icon
-                  as={link.icon}
+                  as={icon}
                   _hover={{
-                    color: link.color,
+                    color,
                     transition:
                       "color 0.2s ease-in-out, transform 0.2s ease-in-out",
                   }}
@@ -337,36 +421,15 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           xl: "repeat(6, auto)",
         }}
       >
-        {linkSections.map((section: LinkSection, idx) => (
+        {linkSections.map((section: FooterLinkSection, idx) => (
           <Box key={idx}>
-            <Heading as="h3" fontSize="sm" lineHeight="1.6" my="1.14em">
+            <Heading as="h3" fontSize="sm" lineHeight="base" my="1.14em">
               <Translation id={section.title} />
             </Heading>
-            <List fontSize="sm" lineHeight="1.6" fontWeight="400" m={0}>
+            <List fontSize="sm" lineHeight="base" fontWeight="normal" m="0">
               {section.links.map((link, linkIdx) => (
                 <ListItem key={linkIdx} mb={4}>
-                  <BaseLink
-                    to={link.to}
-                    isPartiallyActive={false}
-                    textDecor="none"
-                    color="text200"
-                    fontWeight="normal"
-                    _hover={{
-                      textDecor: "none",
-                      color: "primary.base",
-                      _after: {
-                        color: "primary.base",
-                      },
-                      "& svg": {
-                        fill: "primary.base",
-                      },
-                    }}
-                    sx={{
-                      "& svg": {
-                        fill: "text200",
-                      },
-                    }}
-                  >
+                  <BaseLink href={link.to} {...linkProps}>
                     {link.text}
                   </BaseLink>
                 </ListItem>
@@ -375,6 +438,24 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           </Box>
         ))}
       </SimpleGrid>
+      <List
+        bg="background.highlight"
+        p="8"
+        m="0"
+        fontSize="sm"
+        lineHeight="base"
+        fontWeight="normal"
+        display="flex"
+        justifyContent="center"
+      >
+        {dipperLinks.map(({ to, text }) => (
+          <ListItem key={text} p="2">
+            <BaseLink href={to} {...linkProps}>
+              {text}
+            </BaseLink>
+          </ListItem>
+        ))}
+      </List>
     </Box>
   )
 }
