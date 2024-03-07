@@ -120,7 +120,7 @@
   "public-goods-term": "Public goods",
   "public-goods-definition": "Public goods are things everyone can use for free, like parks or clean air, and using them doesn’t stop others from using them too. Governments often provide these because businesses usually won’t, since they can’t easily charge people for using them.",
   "public-key-term": "Public key",
-  "public-key-definition": "A number, derived via a one-way function from a <a href=\"/glossary/#private-key\">private key</a>, which can be shared publicly and used by anyone to verify a digital signature made with the corresponding private key.",
+  "public-key-definition": "A public key is a set of characters that lets others send you digital currency securely, like an email address for money.",
   "quadratic-voting-term": "Quadratic voting",
   "quadratic-voting-definition": "Is a voting method where voters express how strongly they feel about issues. It allows voters to show not just preference, but also the intensity of their preference.",
   "recovery-phrase-term": "Seed phrase/recovery phrase",

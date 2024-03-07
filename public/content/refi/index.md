@@ -26,6 +26,8 @@ ReFi projects realize these principles using [smart contracts](/glossary/#smart-
 
 ReFi also overlaps with the [decentralized science (DeSci)](/desci/) movement, which uses Ethereum as a platform to finance, create, review, credit, store, and disseminate scientific knowledge. DeSci tools could become useful for developing verifiable standards and practices for implementing and monitoring regenerative activities like planting trees, removing plastic from the ocean, or restoring a degraded ecosystem.
 
+<YouTube id="La52dDzBt2k" />
+
 ## Tokenization of carbon credits {#tokenization-of-carbon-credits}
 
 The **[voluntary carbon market (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** is a mechanism for funding projects that make a verified positive impact on carbon emissions, either reducing ongoing emissions, or removing greenhouse gases already emitted from the atmosphere. These projects receive an asset called "carbon credits" after they are verified, which they can sell to individuals and organizations who want to support climate action.
@@ -47,7 +49,7 @@ ReFi projects employ blockchain technology to alleviate many of the problems of 
 - **Liquidity is concentrated in a small number of liquidity pools** that can be freely traded by anyone. Large organizations as well as individual users can use these pools without manual searches for sellers/buyers, participation fees, or prior registration.
 - **All transactions are recorded on public blockchains**. The path each carbon credit takes due to trading activity is traceable forever as soon as it is made available in the DCM.
 - **Transaction speed is nearly instant**. Securing large amounts of carbon credits via the legacy markets can take days or weeks, but this can be achieved in a few seconds in the DCM.
-- **Trading activity occurs without intermediaries**, which charge high fees. Digital carbon credits represent a 62% cost improvement compared to equivalent traditional credits, according to data from one analytics firm.
+- **Trading activity occurs without intermediaries**, which charge high fees. Digital carbon credits represent a significant cost reduction compared to traditional credits.
 - **The DCM is scalable** and can meet the demands of individuals and multinational corporations alike.
 
 ### Key components of the DCM {#key-components-dcm}

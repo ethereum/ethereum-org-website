@@ -12,8 +12,6 @@ Nick Szabo coined the term "smart contract". In 1994, he wrote [an introduction 
 
 Szabo envisioned a digital marketplace where automatic, [cryptographically-secure](/glossary/#cryptography) processes enable transactions and business functions to happen without trusted intermediaries. Smart contracts on Ethereum put this vision into practice.
 
-## More of a visual learner? {#visual-learner}
-
 Watch Finematics explain smart contracts:
 
 <YouTube id="pWGLtjG-F5c" />

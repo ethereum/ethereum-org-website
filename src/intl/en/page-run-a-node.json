@@ -92,8 +92,6 @@
   "page-run-a-node-privacy-3": "Also, if a malicious node distributes an invalid transaction, your node will simply disregard it.  Every transaction is verified locally on your own machine, so you don't need to trust anyone.",
   "page-run-a-node-rasp-pi-title": "A note on Raspberry Pi (ARM processor)",
   "page-run-a-node-rasp-pi-description": "Raspberry Pis are lightweight and affordable computers, but they have limitations that may impact the performance of your node. Though not currently recommended for staking, these can be an excellent and inexpensive option for running a node for personal use, with as little as 4 - 8 GB of RAM.",
-  "page-run-a-node-rasp-pi-note-1-link": "DAppNode on ARM",
-  "page-run-a-node-rasp-pi-note-1-description": "See these instructions if you plan on running DAppNode on a Raspberry Pi",
   "page-run-a-node-rasp-pi-note-2-link": "Ethereum on ARM documentation",
   "page-run-a-node-rasp-pi-note-2-description": "Learn how to set up a node via the command line on a Raspberry Pi",
   "page-run-a-node-rasp-pi-note-3-link": "Run a node with Raspberry Pi",

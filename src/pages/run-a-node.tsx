@@ -882,15 +882,6 @@ const RunANodePage = () => {
         <Text>{t("page-run-a-node-rasp-pi-description")}</Text>
         <ul>
           <li>
-            <InlineLink to="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
-              {t("page-run-a-node-rasp-pi-note-1-link")}
-            </InlineLink>{" "}
-            -{" "}
-            <Text as="i">
-              {t("page-run-a-node-rasp-pi-note-1-description")}
-            </Text>
-          </li>
-          <li>
             <InlineLink to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
               {t("page-run-a-node-rasp-pi-note-2-link")}
             </InlineLink>{" "}

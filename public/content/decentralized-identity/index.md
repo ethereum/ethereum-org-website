@@ -21,6 +21,8 @@ To solve these problems, we have decentralized identity systems built on public 
 
 Identity means an individual's sense of self, defined by unique characteristics. Identity refers to being an _individual_, i.e., a distinct human entity. Identity could also refer to other non-human entities, such as an organization or authority.
 
+<YouTube id="Ew-_F-OtDFI" />
+
 ## What are identifiers? {#what-are-identifiers}
 
 An identifier is a piece of information that acts as a pointer to a particular identity or identities. Common identifiers include:

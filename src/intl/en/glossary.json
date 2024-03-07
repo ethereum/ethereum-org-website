@@ -290,7 +290,7 @@
   "proto-danksharding-term": "Proto-Danksharding",
   "proto-danksharding-definition": "A new transaction type which accepts \"blobs\" of data for Ethereum. This \"blob\" data is temporarily stored on the beacon chain for 4096 epochs (~18.2 days), and can optionally be pruned after to help reduce hardware requirements for node operators.",
   "public-key-term": "Public key",
-  "public-key-definition": "A number, derived via a one-way function from a <a href=\"/glossary/#private-key\">private key</a>, which can be shared publicly and used by anyone to verify a digital signature made with the corresponding private key.",
+  "public-key-definition": "A public key is a set of characters that lets others send you digital currency securely, like an email address for money.",
   "quadratic-voting-term": "Quadratic voting",
   "quadratic-voting-definition": "Is a voting method where voters express how strongly they feel about issues. It allows voters to show not just preference, but also the intensity of their preference.",
   "receipt-term": "Receipt",
