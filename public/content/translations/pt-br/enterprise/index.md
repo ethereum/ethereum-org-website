@@ -68,7 +68,7 @@ Diversas organizações trabalharam juntas para tornar o Ethereum amigável para
 ### Ferramentas e bibliotecas {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Plataforma de Análise de Dados do Ethereum_
-- [Sirato](https://www.web3labs.com/sirato) _uma plataforma de dados e análises para redes públicas e privadas Ethereum compatíveis da Web3 Labs_
+- [Chainlens](https://www.chainlens.com/) _uma plataforma de dados e análises para redes públicas e privadas Ethereum compatíveis da Web3 Labs_
 - [Ernst & Young ‘Nightfall’](https://github.com/EYBlockchain/nightfall) _é um conjunto de ferramentas para transações privadas_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _é um aplicativo de assinatura de transações para ser usado com um provedor web3_
 - [Tenderly](https://tenderly.co/) _é uma plataforma de dados que fornece análise em tempo real, alertando e monitorando com suporte a redes privadas_

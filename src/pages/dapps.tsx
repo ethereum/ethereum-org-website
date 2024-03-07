@@ -1,4 +1,10 @@
-import { type ComponentPropsWithRef,useEffect, useRef, useState } from "react"
+import React, {
+  type ComponentPropsWithRef,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
 import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -42,6 +48,7 @@ import ProductCard from "@/components/ProductCard"
 import ProductListComponent, {
   type ProductListProps,
 } from "@/components/ProductList"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -423,7 +430,7 @@ interface Category {
   benefits?: Array<{
     emoji: string
     title: string
-    description: string
+    description: ReactNode
   }>
 }
 
@@ -603,7 +610,9 @@ const DappsPage = () => {
         {
           emoji: ":scales:",
           title: t("page-dapps-finance-benefits-3-title"),
-          description: t("page-dapps-finance-benefits-3-description"),
+          description: (
+            <Translation id="page-dapps:page-dapps-finance-benefits-3-description" />
+          ),
         },
         {
           emoji: ":chains:",
@@ -1211,13 +1220,6 @@ const DappsPage = () => {
 
   const bridges = [
     {
-      title: "Multichain",
-      description: t("page-dapps-dapp-description-multichain"),
-      link: "https://multichain.xyz/",
-      image: multichain,
-      alt: t("page-dapps-multichain-logo-alt"),
-    },
-    {
       title: "Rubic",
       description: t("page-dapps-dapp-description-rubic"),
       link: "https://rubic.exchange/",
@@ -1343,10 +1345,7 @@ const DappsPage = () => {
       <Content>
         <StyledH2>{t("common:get-started")}</StyledH2>
         <Text>
-          {t("page-dapps-get-started-subtitle")}{" "}
-          <GlossaryTooltip termKey="transaction-fee">
-            {t("transaction-fees")}
-          </GlossaryTooltip>
+          <Translation id="page-dapps:page-dapps-get-started-subtitle" />
         </Text>
         <Row>
           <StepBoxContainer>
@@ -1868,7 +1867,9 @@ const DappsPage = () => {
         <Row>
           <LeftColumn>
             <H2>{t("page-dapps-how-dapps-work-title")}</H2>
-            <Text>{t("page-dapps-how-dapps-work-p1")}</Text>
+            <Text>
+              <Translation id="page-dapps:page-dapps-how-dapps-work-p1" />
+            </Text>
             <Text>{t("page-dapps-how-dapps-work-p2")}</Text>
             <Text>{t("page-dapps-how-dapps-work-p3")}</Text>
             <DocLink to="/developers/docs/dapps/">

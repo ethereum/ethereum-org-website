@@ -8,7 +8,7 @@ lang: ja
    Ethashは、イーサリアムのプルーフ・オブ・ワークのマイニングアルゴリズムでした。 プルーフ・オブ・ワークは、今『完全に廃止』されており、イーサリアムは現在<a href="/developers/docs/consensus-mechanisms/pos/">プルーフ・オブ・ステーク</a>により安全が確保されています。 詳細については、<a href="/roadmap/merge/">マージ</a>、<a href="/developers/docs/consensus-mechanisms/pos/">プルーフ・オブ・ステーク</a>および<a href="/staking/">ステーキング</a>を参照してください。 このページについては、これまでのイーサリアムの歩みを学ぶための参考としてお読みください。  
 </InfoBanner>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash)は、 [ダガーハシモト](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto)アルゴリズムの改良版です。 Ethash プルーフ・オブ・ワークは、[メモリハード](https://wikipedia.org/wiki/Memory-hard_function)になっており、アルゴリズムで ASIC 耐性が高まると考えられました。 最終的には、Ethash ASIC が開発されましたが、GPU マイニングは、プルーフ・オブ・ワークが停止されるまでが実行可能なオプションでした。 Ethash は現在でも、イーサリアム以外のプルール・オブ・ワーク・ネットワークで他のコインのマイニングに使われています。
+[Ethash](https://github.com/ethereum/wiki/wiki/Ethash)は、 [ダガーハシモト](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)アルゴリズムの改良版です。 Ethash プルーフ・オブ・ワークは、[メモリハード](https://wikipedia.org/wiki/Memory-hard_function)になっており、アルゴリズムで ASIC 耐性が高まると考えられました。 最終的には、Ethash ASIC が開発されましたが、GPU マイニングは、プルーフ・オブ・ワークが停止されるまでが実行可能なオプションでした。 Ethash は現在でも、イーサリアム以外のプルール・オブ・ワーク・ネットワークで他のコインのマイニングに使われています。
 
 ## Ethash の仕組み {#how-does-ethash-work}
 
@@ -44,7 +44,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### 「SHA3」の使用 {#sha3}
 
-イーサリアムの開発は、SHA3 標準の開発と同時期に起こりました。標準プロセスは、最終決定したハッシュアルゴリズムのパディングが遅れて変更されたため、イーサリアムの「sha3_256」および「sha3_512」ハッシュは、標準の sha3 ハッシュではありません。他の文脈の多くでは、変異型として「Keccak-256」および「Keccak-512」と呼ばれています。 この考察については、 [こちら](https://eips.ethereum.org/EIPS-1803)、[こちら](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)、または[こちら](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)を参照してください。
+イーサリアムの開発は、SHA3 標準の開発と同時期に起こりました。標準プロセスは、最終決定したハッシュアルゴリズムのパディングが遅れて変更されたため、イーサリアムの「sha3_256」および「sha3_512」ハッシュは、標準の sha3 ハッシュではありません。他の文脈の多くでは、変異型として「Keccak-256」および「Keccak-512」と呼ばれています。 この考察については、 [こちら](https://eips.ethereum.org/EIPS/eip-1803)、[こちら](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use)、または[こちら](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057)を参照してください。
 
 以下のアルゴリズムの説明では、「sha3」ハッシュが参照されることを覚えておいてください。
 

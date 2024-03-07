@@ -68,7 +68,7 @@ summaryPoint3: 以開放科學運動為原則。
 
 研究顯示，同一個提案被提交到不同的小組時，結果卻大相徑庭，可見資助審查小組難以選出高品質提案。 隨著資金變得越來越稀缺，這些款項都集中在少數資深研究者與較為保守的研究計劃上。 這導致了一個各方為資金搶破頭的環境，還鞏固了不健康的激勵措施，並抑制創新。
 
-Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型，因而有可能改善這種糟糕的融資模型。 Web3 工具包括[追溯性公共財產資金](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)、[平方募資法](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)、[去中心化自治組織治理](https://www.antler.co/blog/daos-and-web3-governance)和[代幣化激勵結構](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)，這些都可以徹底改變科研融資現況。
+Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型，因而有可能改善這種糟糕的融資模型。 Web3 工具包括[追溯性公共財產資金](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)、[平方募資法](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)、[去中心化自治組織治理](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead)和[代幣化激勵結構](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)，這些都可以徹底改變科研融資現況。
 
 ### 知識產權所有權和開發 {#ip-ownership}
 

@@ -395,7 +395,7 @@ const DevelopersPage = () => {
               <Translation id="page-developers-index:page-developers-mining-desc" />
             </Text>
 
-            <InlineLink href="/developers/docs/consensus-mechanisms/pow/mining-algorithms/">
+            <InlineLink href="/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/">
               <Translation id="page-developers-index:page-developers-mining-algorithms-link" />
             </InlineLink>
             <Text>

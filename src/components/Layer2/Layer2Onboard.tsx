@@ -28,6 +28,7 @@ import { ButtonLink } from "../Buttons"
 import InlineLink from "../Link"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
+import ReactSelect, { ReactSelectOnChange } from "../ReactSelect"
 import { StyledSelect as Select } from "../SharedStyledComponents"
 
 const Flex50 = (props: ChildOnlyProp) => (
@@ -42,19 +43,6 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
     justifyContent="space-between"
     {...props}
   />
-)
-
-const ChakraSelect = chakra((props: { className?: string }) => (
-  <Select {...props} />
-))
-const StyledSelect = (props: any) => (
-  <Box mt="auto">
-    <ChakraSelect
-      maxW="none"
-      sx={{ ".react-select__control": { py: { base: "14px", sm: "0" } } }}
-      {...props}
-    />
-  </Box>
 )
 
 const SelectedContainer = (props: ChildOnlyProp) => (
@@ -161,40 +149,6 @@ const Layer2Onboard = ({
     }
   )
 
-  const formatGroupLabel = (data) => {
-    return data.label ? (
-      <Stack borderTop="2px solid" m={0}>
-        <Text mb={0} mt={2} textTransform="none" color="theme.colors.text">
-          {data.label}
-        </Text>
-      </Stack>
-    ) : (
-      <></>
-    )
-  }
-
-  const selectExchangeOnboard = (option: ExchangeOption & CexOnboardOption) => {
-    if (Object.hasOwn(option, "cex")) {
-      trackCustomEvent({
-        eventCategory: `Selected cex to onboard`,
-        eventAction: `Clicked`,
-        eventName: `${option.cex.name} selected`,
-        eventValue: `${option.cex.name}`,
-      })
-      setSelectedExchange(option.cex)
-      setSelectedCexOnboard(undefined)
-    } else {
-      trackCustomEvent({
-        eventCategory: `Selected cexOnboard to onboard`,
-        eventAction: `Clicked`,
-        eventName: `${option.cexOnboard.name} selected`,
-        eventValue: `${option.cexOnboard.name}`,
-      })
-      setSelectedCexOnboard(option.cexOnboard)
-      setSelectedExchange(undefined)
-    }
-  }
-
   const gridContentPlacementStyles = {
     gridContainer: {
       columns: { base: 1, md: 2 },
@@ -219,6 +173,47 @@ const Layer2Onboard = ({
       placeSelf: "center",
     },
   } as const
+
+  const handleLayer2SelectChange: ReactSelectOnChange<Layer2Option> = (
+    selectedOption
+  ) => {
+    if (!selectedOption) return
+
+    trackCustomEvent({
+      eventCategory: `Selected layer 2 to bridge to`,
+      eventAction: `Clicked`,
+      eventName: `${selectedOption.l2.name} bridge selected`,
+      eventValue: `${selectedOption.l2.name}`,
+    })
+    setSelectedL2(selectedOption.l2)
+  }
+
+  const handleExchangeOnboard: ReactSelectOnChange<
+    ExchangeOption | CexOnboardOption
+  > = (selectedOption) => {
+    if (!selectedOption) return
+
+    if ("cex" in selectedOption) {
+      trackCustomEvent({
+        eventCategory: `Selected cex to onboard`,
+        eventAction: `Clicked`,
+        eventName: `${selectedOption.label} selected`,
+        eventValue: `${selectedOption.label}`,
+      })
+
+      setSelectedExchange(selectedOption.cex)
+      setSelectedCexOnboard(undefined)
+    } else {
+      trackCustomEvent({
+        eventCategory: `Selected cexOnboard to onboard`,
+        eventAction: `Clicked`,
+        eventName: `${selectedOption.label} selected`,
+        eventValue: `${selectedOption.label}`,
+      })
+      setSelectedCexOnboard(selectedOption.cexOnboard)
+      setSelectedExchange(undefined)
+    }
+  }
 
   return (
     <Box bg="layer2Gradient" borderRadius="sm" p={10}>
@@ -246,21 +241,15 @@ const Layer2Onboard = ({
             </Text>
           </Box>
           {/* LeftSelected */}
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={layer2Options}
-            onChange={(selectedOption: Layer2Option) => {
-              trackCustomEvent({
-                eventCategory: `Selected layer 2 to bridge to`,
-                eventAction: `Clicked`,
-                eventName: `${selectedOption.l2.name} bridge selected`,
-                eventValue: `${selectedOption.l2.name}`,
-              })
-              setSelectedL2(selectedOption.l2)
-            }}
-            placeholder={t("layer-2-onboard-wallet-input-placeholder")}
-          />
+          <Box mt="auto">
+            <ReactSelect
+              instanceId="layer2-left-selected"
+              placeholder={t("layer-2-onboard-wallet-input-placeholder")}
+              options={layer2Options}
+              onChange={handleLayer2SelectChange}
+              variant="outline"
+            />
+          </Box>
         </Flex>
         <Flex flexDir="column">
           {/* RightDescription */}
@@ -275,25 +264,23 @@ const Layer2Onboard = ({
             </Text>
           </Box>
           {/* RightSelect */}
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                options: [...cexSupportOptions],
-              },
-              {
-                label:
-                  "Don't see you exchange? Use dapps to bridge directly from exchanges to layer 2.",
-                options: [...cexOnboardOptions],
-              },
-            ]}
-            onChange={(selectedOption: ExchangeOption & CexOnboardOption) => {
-              selectExchangeOnboard(selectedOption)
-            }}
-            placeholder={t("layer-2-onboard-exchange-input-placeholder")}
-            formatGroupLabel={formatGroupLabel}
-          />
+          <Box mt="auto">
+            <ReactSelect
+              instanceId="exchange-onboard-select"
+              options={[
+                {
+                  options: [...cexSupportOptions],
+                },
+                {
+                  label:
+                    "Don't see you exchange? Use dapps to bridge directly from exchanges to layer 2.",
+                  options: [...cexOnboardOptions],
+                },
+              ]}
+              onChange={handleExchangeOnboard}
+              variant="outline"
+            />
+          </Box>
         </Flex>
         {/* LeftSelected extra */}
         {selectedL2 && (

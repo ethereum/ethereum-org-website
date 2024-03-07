@@ -200,4 +200,4 @@ Hai compiuto il tuo primo grande passo verso il test dei contratti intelligenti 
 
 - [Testare ERC-20 con Waffle](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
 - [Waffle: simulazioni dinamiche e test delle chiamate del contratto](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
-- [Tutorial Waffle Hello world con hardhat ed ethers](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)
+- [Tutorial Waffle Hello world con hardhat ed ethers](/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/)
