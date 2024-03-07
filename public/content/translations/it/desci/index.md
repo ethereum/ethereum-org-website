@@ -18,7 +18,7 @@ La scienza decentralizzata (DeSci) è un movimento che mira alla creazione di un
 
 La DeSci vuole creare un ecosistema in cui gli scienziati siano incentivati alla condivisione aperta delle proprie ricerche, ricevendo credito per il proprio operato, pur consentendo a chiunque di accedere e contribuire facilmente alla ricerca. La DeSci sfrutta l'idea che la conoscenza scientifica dovrebbe essere accessibile a tutti e che il procedimento di ricerca scientifica dovrebbe essere trasparente. La DeSci punta a creare un modello di ricerca scientifica più decentralizzato e distribuito, rendendolo più resistente alla censura e al controllo delle autorità centrali. La DeSci spera di creare un ambiente in cui le idee innovative e non convenzionali, possano prosperare, decentralizzando l'accesso a finanziamenti, strumenti scientifici e canali di comunicazione.
 
-La scienza decentralizzata consente fonti di finanziamento più diversificate (dalle [DAO](/dao/) alle [donazioni quadratiche](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), fino al crowdfunding, e molto altro), accesso a dati e metodi più accessibile, fornendo incentivi per la riproducibilità.
+La scienza decentralizzata consente fonti di finanziamento più diversificate (dalle [DAO](/dao/), le [donazioni quadratiche](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), al crowdfunding e molto altro), dati e metodi più accessibili, e fornendo incentivi per la riproducibilità.
 
 ### Juan Benet: Il Movimento della DeSci
 
@@ -103,7 +103,7 @@ Esplora i progetti e unisciti alla community della DeSci.
 - [OceanDAO: finanziamenti governati dalla DAO per la scienza relativa ai dati](https://oceanprotocol.com/dao)
 - [Opscientia: flussi di lavoro scientifici decentralizzati e aperti](https://opsci.io/research/)
 - [LabDAO: piega una proteina in silico](https://alphafodl.vercel.app/)
-- [Bio.xyz: ricevi finanziamenti per la tua DAO biotecnologica o il tuo progetto di DeSci](https://www.molecule.to/)
+- [Bio.xyz: ricevi finanziamenti per la tua DAO biotecnologica o il tuo progetto di DeSci](https://www.bio.xyz/)
 - [ResearchHub: pubblica un risultato scientifico e conversa con i colleghi](https://www.researchhub.com/)
 - [VitaDAO: ricevi finanziamenti tramite accordi di ricerca sponsorizzati per la ricerca di longevità](https://www.vitadao.com/)
 - [Fleming Protocol: economia dei dati open source che alimenta la scoperta biomedica collaborativa](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

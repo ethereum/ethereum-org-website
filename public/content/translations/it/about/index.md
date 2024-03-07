@@ -104,7 +104,7 @@ Usiamo una serie di [principi di progettazione](/contributing/design-principles/
 
 Abbiamo costruito e implementato un [sistema la cui architettura](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1) consente una distribuzione più rapida delle funzioni, dando la possibilità ai membri della community di accedere alla progettazione aperta di ethereum.org.
 
-Voglia di far parte della squadra?[Scopri di più su Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), sul [ticket di GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) e unisciti alla conversazione nel nostro [canale #design di Discord](https://discord.gg/ethereum-org).
+Voglia di far parte della squadra?[Scopri di più su Figma](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System), sul [ticket di GitHub](https://github.com/ethereum/ethereum-org-website/issues/6284) e unisciti alla conversazione nel nostro [canale #design di Discord](https://discord.gg/bKycYhVUwV).
 
 ## Guida di stile {#style-guide}
 
