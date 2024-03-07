@@ -74,12 +74,12 @@ const QuizzesHubPage: NextPage<
   return (
     <Box as={MainArticle}>
       <PageMetadata
-        title={t("quizzes-title")}
+        title={t("common:quizzes-title")}
         description={t("quizzes-subtitle")}
         image="/heroes/quizzes-hub-hero.png"
       />
       <HubHero
-        title={t("quizzes-title")}
+        title={t("common:quizzes-title")}
         description={t("quizzes-subtitle")}
         header={t("test-your-knowledge")}
         heroImg={HeroImage}
