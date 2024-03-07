@@ -244,7 +244,7 @@ const walletData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "June 22, 2022",
+    last_updated: "March 7, 2024",
     name: "Argent",
     image: ArgentImage,
     brand_color: "#ffffff",
@@ -264,7 +264,7 @@ const walletData: WalletData[] = [
     firefox: true,
     chromium: true,
     hardware: false,
-    open_source: false,
+    open_source: true,
     repo_url: "",
     non_custodial: true,
     security_audit: [
