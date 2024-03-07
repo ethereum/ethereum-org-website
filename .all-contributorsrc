@@ -11240,6 +11240,26 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "enjoyooor",
+      "name": "enjoyooor",
+      "avatar_url": "https://avatars.githubusercontent.com/u/147568088?v=4",
+      "profile": "https://github.com/enjoyooor",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "konopkja",
+      "name": "Jakub",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100724231?v=4",
+      "profile": "http://ethereum.org",
+      "contributions": [
+        "doc",
+        "content",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
