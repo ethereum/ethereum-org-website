@@ -55,7 +55,7 @@ Los beneficios de este diseño de red son:
 - reducir la dependencia de los proveedores centralizados
 - Reducir el uso del ancho de banda de Internet
 - Sincronización minimizada o cero
-- Accesible para dispositivos con recursos limitados (<1GB de Ram, <100mB de disco, 1CPU)
+- Accesible para dispositivos con recursos limitados (`<1GB` de Ram, <100mB de disco, 1CPU)
 
 El siguiente diagrama muestra las funciones de los clientes existentes que Portal Network puede entregar, lo que permite a los usuarios acceder a estas funciones en dispositivos de muy pocos recursos.
 

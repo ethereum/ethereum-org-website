@@ -55,7 +55,7 @@ The benefits of this network design are:
 - reduce dependence on centralized providers
 - Reduce Internet bandwidth usage
 - Minimized or zero syncing
-- Accessible to resource-constrained devices (<1GB ram, <100mB disk, 1CPU)
+- Accessible to resource-constrained devices (`<1GB` ram, <100mB disk, 1CPU)
 
 The diagram below shows the functions of existing clients that can be delivered by the Portal Network, enabling users to access these functions on very low-resource devices.
 
