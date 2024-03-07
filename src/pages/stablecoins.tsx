@@ -237,7 +237,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
 
   const tooltipContent = (
     <div>
-      {t("data-provided-by")}{" "}
+      {t("common:data-provided-by")}{" "}
       <InlineLink to="https://www.coingecko.com/en/api">
         coingecko.com
       </InlineLink>
