@@ -141,8 +141,8 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
       >
         {t("eth-current-price")}
         <Tooltip content={tooltipContent}>
-          <Box as="span">
-            <Icon as={MdInfoOutline} boxSize="14px" ms={2} />
+          <Box as="span" ms={2}>
+            <Icon as={MdInfoOutline} boxSize="14px" />
           </Box>
         </Tooltip>
       </Heading>
