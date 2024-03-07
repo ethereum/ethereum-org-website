@@ -1856,7 +1856,7 @@ const DappsPage = () => {
           <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             {t("page-dapps-magic-behind-dapps-description")}
           </Text>
-          <InlineLink to="/what-is-ethereum/">
+          <InlineLink href="/what-is-ethereum/">
             {t("page-dapps-magic-behind-dapps-link")}
           </InlineLink>
         </Flex>

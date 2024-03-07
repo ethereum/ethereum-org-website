@@ -83,17 +83,17 @@ const Layer2ProductCard = ({
           )}
         </Box>
         {bridge && (
-          <InlineLink to={bridge}>
+          <InlineLink href={bridge}>
             {name} {t("layer-2-bridge")}
           </InlineLink>
         )}
         {ecosystemPortal && (
-          <InlineLink to={ecosystemPortal}>
+          <InlineLink href={ecosystemPortal}>
             {name} {t("layer-2-ecosystem-portal")}
           </InlineLink>
         )}
         {tokenLists && (
-          <InlineLink to={tokenLists}>
+          <InlineLink href={tokenLists}>
             {name} {t("layer-2-token-lists")}
           </InlineLink>
         )}
