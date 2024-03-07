@@ -2,7 +2,7 @@
 import React from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGithub, FaYoutube } from "react-icons/fa"
+import { FaDiscord, FaGithub } from "react-icons/fa"
 import { FaXTwitter } from "react-icons/fa6";
 import {
   Box,
@@ -34,12 +34,6 @@ const socialLinks = [
     to: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
     color: "#333",
-  },
-    {
-    icon: FaYoutube,
-    to: "https://www.youtube.com/@EthereumProtocol",
-    ariaLabel: "Youtube",
-    color: "#FF0000",
   },
   {
     icon: FaDiscord,
