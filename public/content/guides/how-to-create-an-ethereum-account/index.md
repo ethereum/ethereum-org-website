@@ -28,7 +28,7 @@ There are also other profile filters to cater to your needs. These are examples 
 
 Once you have decided on a specific wallet, visit their official website or app store, download and install it. All of them should be free.
 
-## Step 3: Open the app and create or import your Ethereum account
+## Step 3: Open the app and create your Ethereum account
 
 The first time you open your new wallet you might be asked to choose between creating a new account or importing an existing one. Click on the new account creation.
 
