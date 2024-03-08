@@ -35,6 +35,11 @@ const baseStyle = definePartsStyle(
       maxWidth: "xs", // 20rem
       w: "auto",
     },
+    body: {
+      color: "body.base",
+      fontWeight: "normal",
+      textTransform: "none",
+    },
     header: {
       border: "none",
     },
