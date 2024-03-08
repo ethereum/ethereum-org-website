@@ -99,7 +99,7 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
             <Box textTransform="none">
               <Text>{t("page-staking-stats-box-metric-1-tooltip")}</Text>
               {t("common:data-provided-by")}{" "}
-              <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
+              <InlineLink href="https://beaconcha.in/">Beaconcha.in</InlineLink>
             </Box>
           </BeaconchainTooltip>
         </Label>
@@ -112,7 +112,7 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
             <Box textTransform="none">
               <Text>{t("page-staking-stats-box-metric-2-tooltip")}</Text>
               {t("common:data-provided-by")}{" "}
-              <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
+              <InlineLink href="https://beaconcha.in/">Beaconcha.in</InlineLink>
             </Box>
           </BeaconchainTooltip>
         </Label>
@@ -125,7 +125,7 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
             <Box textTransform="none">
               <Text>{t("page-staking-stats-box-metric-3-tooltip")}</Text>
               {t("common:data-provided-by")}{" "}
-              <InlineLink to="https://beaconcha.in/ethstore">
+              <InlineLink href="https://beaconcha.in/ethstore">
                 Beaconcha.in
               </InlineLink>
             </Box>

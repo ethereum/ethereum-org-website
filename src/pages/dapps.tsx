@@ -114,8 +114,10 @@ import dai from "@/public/dapps/stabledai.png"
 import status from "@/public/dapps/status.png"
 import superrare from "@/public/dapps/superrare.png"
 import synthetix from "@/public/dapps/synthetix.png"
-import uniswapec from "@/public/dapps/uni.png"
-import uniswap from "@/public/dapps/uni.png"
+import {
+  default as uniswap,
+  default as uniswapec,
+} from "@/public/dapps/uni.png"
 import xmtp from "@/public/dapps/xmtp.png"
 import yearn from "@/public/dapps/yearn.png"
 import zapper from "@/public/dapps/zapper.png"
@@ -1857,7 +1859,7 @@ const DappsPage = () => {
           <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             {t("page-dapps-magic-behind-dapps-description")}
           </Text>
-          <InlineLink to="/what-is-ethereum/">
+          <InlineLink href="/what-is-ethereum/">
             {t("page-dapps-magic-behind-dapps-link")}
           </InlineLink>
         </Flex>
