@@ -575,7 +575,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 Haritanın bir öğesini almak daha zordur. Bir elemanın haritadaki konumu şu şekilde hesaplanır:
 
 ```js
-keccack(LeftPad32(key, 0), LeftPad32(map position, 0))
+keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
 Bu, pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] üzerindeki depolamayı almak için konumu şu şekilde hesaplamamız gerektiği anlamına gelir:

@@ -76,7 +76,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
 **NodeReal -** **_Ethereum Development Platform._**
 

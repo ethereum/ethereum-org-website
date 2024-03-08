@@ -4,6 +4,8 @@ description: Diretrizes e requisitos para garantir a qualidade dos materiais de 
 lang: pt-br
 ---
 
+# Adicionando recursos de design {#adding-design-resources}
+
 Qualquer pessoa pode sugerir novos materiais de design para a página de [Design e UX na web3](/developers/docs/design-and-ux/).
 
 Esteja ciente de que o foco desta página é fornecer valor ao usuário para candidatos a designers web3. A seção de design não está lá para anunciar seus serviços, produtos ou plataformas.

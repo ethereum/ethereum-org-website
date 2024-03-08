@@ -29,5 +29,5 @@ _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldal
 
 - [Token integrációs checklista](/developers/tutorials/token-integration-checklist/) _– Egy checklista, melyet figyelembe kell venni tokenekkel történő interakcióknál_
 - [Az ERC20 token okosszerződés megértése](/developers/tutorials/understand-the-erc-20-token-smart-contract/) _– Bevezetés az első okosszerződésed telepítésébe egy Ethereum teszt hálózaton._
-- [ERC20 tokenek átutalása és jóváhagyása egy Solidity okosszerződésből](/developers/tutorials/transfers-and-approval-of-erc20-tokens-from-a-solidity-smart-contract/) _– Egy okosszerződés használata token interakcióhoz a Solidity nyelv használatával._
+- [ERC20 tokenek átutalása és jóváhagyása egy Solidity okosszerződésből](/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/) _– Egy okosszerződés használata token interakcióhoz a Solidity nyelv használatával._
 - [ERC721 piac implementáció [egy how-to segédleg]](/developers/tutorials/how-to-implement-an-erc721-market/) _– Hogyan lehet tokenizált tárgyakat eladásra kínálni egy decentralizált és titkosított felületen._

@@ -108,7 +108,7 @@ export const StaticLayout = ({
         pt={{ base: 8, lg: 16 }}
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
-        <Box>
+        <Box w="full">
           {slug === "/guides/" ? (
             <HubHero
               heroImg={GuideHeroImage}

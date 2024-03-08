@@ -16,7 +16,7 @@ import Translation from "../Translation"
 const tooltipContent = (metric: StatsBoxMetric) => (
   <div>
     <Translation id="data-provided-by" />{" "}
-    <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
+    <InlineLink href={metric.apiUrl}>{metric.apiProvider}</InlineLink>
   </div>
 )
 

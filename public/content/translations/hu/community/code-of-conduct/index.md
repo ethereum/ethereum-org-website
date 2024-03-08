@@ -4,6 +4,8 @@ description: Alapvető szabályok az ethereum.org oldalain.
 lang: hu
 ---
 
+# Magatartási szabályok {#conduct-intro}
+
 ## Misszió {#mission}
 
 A legátfogóbb és legelérhetőbb tudásközpont kifejlesztése és fenntartása az Ethereum számára.

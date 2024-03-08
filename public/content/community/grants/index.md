@@ -33,6 +33,7 @@ These projects have created their own grants for projects aimed at developing an
 - [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/) finance ecosystem_
 - [MetaMask Program](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/) employee-led grants DAO_
 - [SKALE Network Grants Program](https://skale.space/developers#grants) - _[SKALE Network](https://skale.space/) ecosystem_
+- [Swarm Foundation Grants Program](https://my.ethswarm.org/grants) - _[Swarm Foundation](https://www.ethswarm.org/) ecosystem_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/) ecosystem_
 - [Uniswap Grants Program](https://www.uniswapfoundation.org/grants) – _[Uniswap](https://uniswap.org/) community_
 - [Web3 Grants](https://web3grants.net) - _An extensive list of web3/crypto related grant programs_
