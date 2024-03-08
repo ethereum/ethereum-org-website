@@ -24,18 +24,18 @@ Centinaia di migliaia di appassionati di Ethereum si riuniscono in questi forum 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - community orientata all'offerta di assistenza per la gestione dei progetti per lo sviluppo di Ethereum</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - Chat Discord gestita da ETHGlobal: una community online per gli hacker di Ethereum in tutto il mondo</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - Community Discord focalizzata sullo sviluppo di Ethereum</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.io/ethstaker">EthStaker Discord</Link>: guida, istruzione, assistenza e risorse gestite dalla comunità per gli staker esistenti e potenziali</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link>: guida, istruzione, assistenza e risorse gestite dalla comunità per gli staker esistenti e potenziali</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">Ethereum.org website team</Link> - date un'occhiata e chattate sullo sviluppo e la progettazione di ethereum.org con il team e le persone della community</SocialListItem>
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - community dei creatori di web3; un luogo di incontro per costruttori, figure industriali e appassionati di Ethereum. Siamo appassionati di sviluppo, progettazione e cultura del web3. Vieni a costruire con noi.</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - chat per lo sviluppo in solidity (Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity/">Solidity Gitter</Link> - chat per lo sviluppo in solidity (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - chat per lo sviluppo in solidity (Matrix)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> - _forum di domande e risposte_</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _-forum decentralizzato di domande e risposte_</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> <i>- forum di domande e risposte</i></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> <i>- forum decentralizzato di domande e risposte</i></SocialListItem>
 
 ## YouTube e Twitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">Ethereum Foundation</Link> - Mantieniti aggiornato con le ultime notizie dalla Ethereum Foundation</SocialListItem>
-<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link>: Profilo ufficiale della Ethereum Foundation</SocialListItem>
+<SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - Profilo ufficiale della Ethereum Foundation</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - Il portale per Ethereum, costruito per la nostra community globale in espansione</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">Elenco di profili Twitter influenti di Ethereum</Link></SocialListItem>
 

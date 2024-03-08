@@ -378,7 +378,7 @@ DeFi 是“去中心化金融”的缩写，是一类广义的[去中心化应�
 
 在以太坊过渡到[权益证明](#pos)之前在以太坊上使用的一种[工作量证明](#pow)算法。
 
-[了解更多](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
+[了解更多](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)
 
 ### 以太币 {#ether}
 

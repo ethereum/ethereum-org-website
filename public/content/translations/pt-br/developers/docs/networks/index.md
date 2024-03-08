@@ -38,7 +38,7 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 
 #### Sepolia {#sepolia}
 
-\*\*\*\*Sepolia é a rede de teste padrão recomendada para desenvolvimento de aplicativos. A rede Sepolia usa um conjunto de validadores autorizados. É bastante novo, o que significa que seu estado e história são bastante pequenos. Isso significa que a rede é rápida para sincronizar e que a execução de um nó requer menos armazenamento. Isso é útil para usuários que desejam ativar rapidamente um nó e interagir diretamente com a rede.
+****Sepolia é a rede de teste padrão recomendada para desenvolvimento de aplicativos. A rede Sepolia usa um conjunto de validadores autorizados. É bastante novo, o que significa que seu estado e história são bastante pequenos. Isso significa que a rede é rápida para sincronizar e que a execução de um nó requer menos armazenamento. Isso é útil para usuários que desejam ativar rapidamente um nó e interagir diretamente com a rede.
 
 - Conjunto de validadores fechado, controlado pelo cliente & equipes de teste
 - Nova rede de teste, menos aplicativos implantados que outras redes de teste
@@ -56,10 +56,11 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 - [Faucet do QuickNode Sepolia](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [Faucet de PoW](https://sepolia-faucet.pk910.de/)
-- [Faucet da Carteira da Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Faucet da Carteira Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Faucet do Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet do Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet da Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet da rede de teste | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(suporte a longo prazo)_ {#goerli}
 
@@ -102,7 +103,7 @@ Uma rede de testes para [Arbitrum](https://arbitrum.io/).
 
 - [Faucet do Chainlink](https://faucets.chain.link/)
 
-#### Goerli otimista {#optimistic-goerli}
+#### Optimistic Goerli {#optimistic-goerli}
 
 Uma rede de testes para [Optimism](https://www.optimism.io/).
 
@@ -111,26 +112,34 @@ Uma rede de testes para [Optimism](https://www.optimism.io/).
 - [Faucet Paradigm](https://faucet.paradigm.xyz/)
 - [Coinbase Wallet Faucet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
+#### Starknet Goerli {#starknet-goerli}
+
+Uma rede de teste para [Starknet](https://www.starknet.io).
+
+##### Faucets
+
+- [Faucet da Starknet](https://faucet.goerli.starknet.io)
+
 ## Redes privadas {#private-networks}
 
-Uma rede Ethereum é uma rede privada se seus nós não estiverem conectados a uma rede pública (ex: Rede principal e rede de testes). Neste contexto, privado significa apenas reservado ou isolado, em vez de protegido ou seguro.
+Uma rede Ethereum é uma rede privada se seus nódulos não estiverem conectados a uma rede pública (ex: Rede principal e rede de testes). Neste contexto, privado significa apenas reservado ou isolado, em vez de protegido ou seguro.
 
 ### Redes de desenvolvimento {#development-networks}
 
-Para desenvolver um aplicativo Ethereum, você deve executá-lo em uma rede privada para ver como funciona antes de implantá-lo. Tal como você pode criar um servidor local em seu computador para desenvolvimento Web, você pode criar uma instância local de cadeia de blocos para testar seu dapp. Isso permite uma iteração muito mais rápida do que uma rede de testes pública.
+Para desenvolver um aplicativo Ethereum, você deve executá-lo em uma rede privada para ver como funciona antes de implantá-lo. Tal como você pode criar um servidor local em seu computador para desenvolvimento Web, você pode criar uma instância local de blockchain para testar seu dapp. Isso permite uma iteração muito mais rápida do que uma rede de testes pública.
 
 Existem projetos e ferramentas dedicadas a ajudá-lo com isso. Saiba mais sobre [redes de desenvolvimento](/developers/docs/development-networks/).
 
 ### Redes de consórcio {#consortium-networks}
 
-O processo de consenso é controlado por um conjunto predefinido de nós confiáveis. Por exemplo, uma rede privada de instituições acadêmicas conhecidas, cada uma administrando um único nó, e os blocos são validados por um limite de signatários dentro da rede.
+O processo de consenso é controlado por um conjunto predefinido de nódulos confiáveis. Por exemplo, uma rede privada de instituições acadêmicas conhecidas, cada uma administrando um único nódulo, e os blocos são validados por um limite de signatários na rede.
 
 Se uma rede pública Ethereum é como a internet pública, uma rede de consórcio é como uma intranet privada.
 
 ## Ferramentas relacionadas {#related-tools}
 
 - [Chainlist](https://chainlist.org/) _Lista de redes EVM para conectar carteiras e fornecedores aos identificadores de cadeia e rede apropriados_
-- [/Cadeias baseadas na EVM](https://github.com/ethereum-lists/chains) _repositório do GitHub com metadados de cadeias que alimenta a Chainlist_
+- [/Cadeias baseadas em EVM](https://github.com/ethereum-lists/chains) _Repositório do GitHub com metadados de cadeias que alimenta a Chainlist_
 
 ## Leitura adicional {#further-reading}
 

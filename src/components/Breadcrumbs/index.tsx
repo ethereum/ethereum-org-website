@@ -36,17 +36,12 @@ type Crumb = {
 //   { fullPath: "/en/eth2/", text: "ETH2" },
 //   { fullPath: "/en/eth2/proof-of-stake/", text: "PROOF OF STAKE" },
 // ]
-const Breadcrumbs = ({
-  slug: originalSlug,
-  startDepth = 0,
-  ...props
-}: BreadcrumbsProps) => {
+const Breadcrumbs = ({ slug, startDepth = 0, ...props }: BreadcrumbsProps) => {
   const { t } = useTranslation("common")
   const { locale, asPath } = useRouter()
   const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
   const hasHome = asPath !== "/"
-  const slug = originalSlug.replace(`/${locale}/`, "/")
   const slugChunk = slug.split("/")
   const sliced = slugChunk.filter((item) => !!item)
 

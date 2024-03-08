@@ -59,10 +59,13 @@ export type Layout = keyof LayoutMappingType
 
 export type Lang =
   | "en"
+  | "am"
   | "ar"
   | "az"
+  | "be"
   | "bg"
   | "bn"
+  | "bs"
   | "ca"
   | "cs"
   | "da"
@@ -71,6 +74,7 @@ export type Lang =
   | "es"
   | "fa"
   | "fi"
+  | "fil"
   | "fr"
   | "gl"
   | "gu"
@@ -78,6 +82,7 @@ export type Lang =
   | "hi"
   | "hr"
   | "hu"
+  | "hy-am"
   | "id"
   | "ig"
   | "it"
@@ -85,13 +90,15 @@ export type Lang =
   | "ka"
   | "kk"
   | "km"
+  | "kn"
   | "ko"
   | "lt"
   | "ml"
   | "mr"
   | "ms"
-  | "nl"
   | "nb"
+  | "ne-np"
+  | "nl"
   | "pcm"
   | "ph"
   | "pl"
@@ -106,6 +113,7 @@ export type Lang =
   | "sw"
   | "ta"
   | "th"
+  | "tk"
   | "tr"
   | "uk"
   | "ur"
@@ -483,3 +491,25 @@ export type CommunityConference = {
   startDate: string
   endDate: string
 }
+
+// Historical upgrades
+type NetworkUpgradeDetails = {
+  blockNumber?: number
+  epochNumber?: number
+  slotNumber?: number
+} & (
+  | {
+      isPending: true
+      dateTimeAsString?: string
+      ethPriceInUSD?: never
+      waybackLink?: never
+    }
+  | {
+      ethPriceInUSD: number
+      waybackLink: string
+      dateTimeAsString: string
+      isPending?: never
+    }
+)
+
+export type NetworkUpgradeData = Record<string, NetworkUpgradeDetails>

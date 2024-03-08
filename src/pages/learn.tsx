@@ -213,6 +213,7 @@ const LearnPage = () => {
       <PageMetadata
         title={t("common:learn-hub")}
         description={t("hero-subtitle")}
+        image="/heroes/learn-hub-hero.png"
       />
 
       <HubHero {...heroContent} />

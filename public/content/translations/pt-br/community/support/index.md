@@ -39,7 +39,7 @@ Procurando uma carteira Ethereum? [Veja a nossa lista completa de carteiras Ethe
 Desevolver um dapp pode ser difícil. Aqui estão alguns espaços voltados ao desenvolvimento com desenvolvedores Ethereum experientes dispostos a ajudar.
 
 - [Universidade Alchemy](https://university.alchemy.com/#starter_code)
-- [Discord CryptoDevs](https://discord.gg/Z9TA39m8Yu)
+- [Discord CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [Stackexchange do Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Universidade Web3](https://www.web3.university/)
@@ -53,7 +53,7 @@ Sua pergunta está relacionada a uma ferramenta, projeto ou biblioteca em partic
 
 Aqui estão alguns exemplos populares:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -65,7 +65,7 @@ Aqui estão alguns exemplos populares:
 
 Se você estiver executando um nó ou validador, aqui estão algumas comunidades que se dedicam a ajudá-lo a começar.
 
-- [Discord EthStaker](https://discord.io/ethstaker)
+- [Discord EthStaker](https://discord.gg/ethstaker)
 - [Reddit EthStaker](https://www.reddit.com/r/ethstaker)
 
 A maioria das equipes que estão construindo clientes Ethereum também tem espaços dedicados ao público, onde você pode obter suporte e fazer perguntas.

@@ -70,9 +70,9 @@ Ether のマイニング ＝ ネットワークの保護
 
 ## マイニングのアルゴリズム {#mining-algorithm}
 
-イーサリアムのメインネットにおいて、マイニングのために用いられたアルゴリズムは[「Ethash」](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/)のみです。 Ethhash は、当初研究開発用に使用されていた[「Dagger-Hashimoto」](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/)の後継アルゴリズムです。
+イーサリアムのメインネットにおいて、マイニングのために用いられたアルゴリズムは[「Ethash」](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/)のみです。 Ethhash は、当初研究開発用に使用されていた[「Dagger-Hashimoto」](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/)の後継アルゴリズムです。
 
-[マイニングのアルゴリズムについての詳細](/developers/docs/consensus-mechanisms/pow/mining-algorithms/)
+[マイニングのアルゴリズムについての詳細](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/)
 
 ## 関連トピック {#related-topics}
 

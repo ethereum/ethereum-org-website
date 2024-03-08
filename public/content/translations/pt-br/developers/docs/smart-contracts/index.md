@@ -66,7 +66,7 @@ De maneira similar a como uma máquina de venda automática elimina a necessidad
 
 ## Sem necessidade de permissão {#permissionless}
 
-Qualquer um pode escrever um contrato inteligente e implantá-lo na rede. Você só precisa aprender a codificar em uma [linguagem de contrato inteligente](/developers/docs/smart-contracts/languages/) e ter ETH suficiente para implantar seu contrato. A implantação de um contrato inteligente é tecnicamente uma transação, portanto, você precisa pagar [Gas](/developers/docs/gas/) da mesma forma que precisa pagar gás por uma simples transferência de ETH. No entanto, os custos de gás para implantação de contrato são muito mais altos.
+Qualquer um pode escrever um contrato inteligente e implantá-lo na rede. Você só precisa aprender a codificar em uma [linguagem de contrato inteligente](/developers/docs/smart-contracts/languages/) e ter ETH suficiente para implantar seu contrato. A implantação de um contrato inteligente é tecnicamente uma transação, portanto, você precisa pagar o [gás](/developers/docs/gas/) da mesma forma que precisa pagar o Gas por uma simples transferência de ETH. No entanto, os custos de gás para implantação de contrato são muito mais altos.
 
 A Ethereum tem linguagens que o desenvolvedor terá facilidade de usar para escrever contratos inteligentes:
 
@@ -85,9 +85,9 @@ Saiba mais sobre a [composição do contrato inteligente](/developers/docs/smart
 
 ## Limitações {#limitations}
 
-Os contratos inteligentes, por si só, não conseguem obter informações sobre eventos do "mundo-real" porque não podem enviar solicitações HTTP. Isto é por concepção. A sua concepção é a de que as informações externas podem pôr em causa o consenso, que é importante para a segurança e a descentralização.
+Os contratos inteligentes sozinhos não podem obter informações sobre eventos do "mundo real", porque não podem recuperar dados de fontes off-chain. Isso significa que eles não podem responder a eventos no mundo real. Isto é, por concepção. A sua concepção é a de que as informações externas podem pôr em causa o consenso, que é importante para a segurança e a descentralização.
 
-Há maneiras de contornar isso usando [oráculos](/developers/docs/oracles/).
+No entanto, é importante que aplicações blockchain possam usar dados off-chain. A solução são os [oráculos](/developers/docs/oracles/), que são instrumentos que ingerem dados off-chain e os disponibilizam para contratos inteligentes.
 
 Outra limitação de contratos inteligentes é o tamanho máximo do contrato. Um contrato inteligente pode ser um máximo de 24KB ou ficará sem gás. Isso pode ser contornado usando [O Padrão de Diamante](https://eips.ethereum.org/EIPS/eip-2535).
 
@@ -103,13 +103,8 @@ Os contratos multisig (com múltiplas assinaturas) são contas de contrato intel
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Fórum da Comunidade](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys -** **_Blocos de código seguros, simples e flexíveis para contratos inteligentes._**
-
-- [Dappsys](https://dappsys.readthedocs.io/)
-- [GitHub](https://github.com/dapphub/dappsys)
-
 ## Leitura adicional {#further-reading}
 
-- [Contratos Inteligentes: A Tecnologia Blockchain que substituirá Advogados](https://blockgeeks.com/guides/smart-contracts/) _– Blockgeeks_
-- [Melhores Práticas para Desenvolvimento de Contrato Inteligente](https://yos.io/2019/11/10/smart-contract-development-best-practices/) _– 10 de Novembro de 2019 - Yos Riady_
-- [Contratos claros - um guia sobre padrões de contrato inteligente & práticas](https://www.wslyvh.com/clean-contracts/) _– Jul 30 2020 - wslyvh_
+- [Coinbase: O que é um contrato inteligente?](https://www.coinbase.com/learn/crypto-basics/what-is-a-smart-contract)
+- [Chainlink: O que é um contrato inteligente?](https://chain.link/education/smart-contracts)
+- [Vídeo: Simplesmente Explicado - Contratos Inteligentes](https://youtu.be/ZE2HxTmxfrI)

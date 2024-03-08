@@ -4,7 +4,7 @@ description: Jinsi ya kushiriki kwenye jamii ya Ethereum.
 lang: sw
 ---
 
-## Matukio yajayo {#events}
+# Matukio yajayo {#events}
 
 **Kila mwezi, kuna matukio muhimu ulimwenguni kote.** Fikiria kuhusu kushiriki mkutano mmoja ulio jirani na wewe ukutane na watu wengi walio kwenye jamii, jifunze juu ya kupata fursa za kazi na jenga ujuzi mpya.
 

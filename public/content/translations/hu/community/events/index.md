@@ -5,7 +5,7 @@ lang: hu
 hideEditButton: true
 ---
 
-## Közelgő események {#events}
+# Közelgő események {#events}
 
 **Minden hónapban részt vehet Ethereum-eseményeken a világ bármely pontján.** Vegyen részt egy Önhöz közel eső eseményen, hogy találkozzon a közösség tagjaival, megismerje a munkalehetőségeket és új képességeket fejlesszen.
 

@@ -4,7 +4,7 @@ description: Isang hindi teknikal na panimula sa mga zero-knowledge proof para s
 lang: fil
 ---
 
-## Ano ang mga zero-knowledge proof? {#what-are-zk-proofs}
+# Ano ang mga zero-knowledge proof? {#what-are-zk-proofs}
 
 Ang zero-knowledge proof ay isang paraan para patunayan ang validity ng isang pahayag nang hindi ipinapakita ang mismong pahayag. Ang ‘prover’ ang partidong sumusubok na patunayan ang isang pahayag, samantalang ang ‘verifier’ ang responsable sa pag-validate ng claim.
 

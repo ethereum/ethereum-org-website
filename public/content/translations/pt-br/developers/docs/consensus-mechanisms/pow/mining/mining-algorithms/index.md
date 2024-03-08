@@ -24,13 +24,13 @@ Dagger Hashimoto foi um algoritmo de pesquisa precursor para mineração Ethereu
 
 Dagger-Hashimoto usou versões modificadas dos algoritmos Dagger e Hashimoto. A diferença entre Dagger Hashimoto e Hashimoto é que, ao invés de usar a blockchain como fonte de dados, o Dagger Hashimoto usa um conjunto de dados gerados de forma personalizada, que atualiza com base nos dados do bloco a cada N blocos. O conjunto de dados é gerado usando o algoritmo Dagger, permitindo calcular com eficiência um subconjunto específico para cada nonce para o algoritmo de verificação de cliente leve. A diferença entre Dagger Hashimoto e Dagger é que, ao contrário do Dagger original, o conjunto de dados usado para consultar o bloco é semipermanente, sendo atualizado apenas em intervalos ocasionais (por exemplo, uma vez por semana). Isso significa que a porção do esforço de geração do conjunto de dados é próxima de zero, de modo que os argumentos de Sergio Lerner a respeito das acelerações de memória compartilhada tornam-se insignificantes.
 
-Mais sobre [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto).
+Mais sobre [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 ## Ethash {#ethash}
 
 Ethash foi o algoritmo de mineração, que na verdade foi usado na rede principal Ethereum real, sob a agora obsoleta arquitetura de prova de trabalho. Ethash foi efetivamente um novo nome dado a uma versão específica do Dagger-Hashimoto depois que o algoritmo foi significativamente atualizado, enquanto ainda herdava os princípios fundamentais de seu antecessor. A rede principal do Ethereum só usava Ethash. Dagger Hashimoto era uma versão de pesquisa e desenvolvimento do algoritmo de mineração que foi substituído antes do início da mineração na rede principal do Ethereum.
 
-[Mais sobre Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
+[Mais sobre Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash).
 
 ## Leitura adicional {#further-reading}
 
