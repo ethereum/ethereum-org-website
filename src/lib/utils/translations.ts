@@ -176,7 +176,6 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   if (
     path.startsWith("/dapps/") ||
     path.startsWith("/layer-2/") ||
-    path.startsWith("/wallets/") ||
     path.startsWith("/get-eth/") ||
     path.startsWith("/stablecoins/") ||
     path.startsWith("/staking/") ||
