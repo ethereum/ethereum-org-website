@@ -240,7 +240,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
   const tooltipContent = (
     <div>
       {t("data-provided-by")}{" "}
-      <InlineLink to="https://www.coingecko.com/en/api">
+      <InlineLink href="https://www.coingecko.com/en/api">
         coingecko.com
       </InlineLink>
     </div>
@@ -434,7 +434,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             <H2 mt={0}>{t("page-stablecoins-why-stablecoins")}</H2>
             <Text>
               {t("page-stablecoins-prices-definition")}{" "}
-              <InlineLink to="#how">
+              <InlineLink href="#how">
                 {t("page-stablecoins-prices-definition-how")}
               </InlineLink>
             </Text>
@@ -491,12 +491,12 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             <Text>{t("page-stablecoins-find-stablecoin-intro")}</Text>
             <ul>
               <li>
-                <InlineLink to="#how">
+                <InlineLink href="#how">
                   {t("page-stablecoins-find-stablecoin-types-link")}
                 </InlineLink>
               </li>
               <li>
-                <InlineLink to="#explore">
+                <InlineLink href="#explore">
                   {t("page-stablecoins-find-stablecoin-how-to-get-them")}
                 </InlineLink>
               </li>
@@ -703,7 +703,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             </Text>
             <Text as="em">
               {t("page-stablecoins-bank-apy-source")}{" "}
-              <InlineLink to="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
+              <InlineLink href="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
                 {t("page-stablecoins-bank-apy-source-link")}
               </InlineLink>
             </Text>

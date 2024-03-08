@@ -299,7 +299,7 @@ const WhatIsEthereumPage = ({
   const tooltipContent = ({ apiUrl, apiProvider, ariaLabel }) => (
     <div>
       {t("common:data-provided-by")}{" "}
-      <InlineLink to={apiUrl} aria-label={ariaLabel}>
+      <InlineLink href={apiUrl} aria-label={ariaLabel}>
         {apiProvider}
       </InlineLink>
     </div>
@@ -710,7 +710,7 @@ const WhatIsEthereumPage = ({
               </Text>
               <UnorderedList>
                 <ListItem>
-                  <InlineLink to="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
+                  <InlineLink href="https://www.europol.europa.eu/publications-events/publications/cryptocurrencies-tracing-evolution-of-criminal-finances#downloads">
                     Europol Spotlight - Cryptocurrencies - Tracing the evolution
                     of criminal finances.pdf
                   </InlineLink>{" "}
@@ -742,20 +742,20 @@ const WhatIsEthereumPage = ({
       <Content>
         <H2>{t("page-what-is-ethereum-additional-reading")}</H2>
         <Text>
-          <InlineLink to="https://weekinethereumnews.com/">
+          <InlineLink href="https://weekinethereumnews.com/">
             {t("page-what-is-ethereum-week-in-ethereum")}
           </InlineLink>{" "}
           {t("page-what-is-ethereum-week-in-ethereum-desc")}
         </Text>
         <Text>
-          <InlineLink to="https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0">
+          <InlineLink href="https://stark.mirror.xyz/n2UpRqwdf7yjuiPKVICPpGoUNeDhlWxGqjulrlpyYi0">
             {t("page-what-is-ethereum-atoms-institutions-blockchains")}
           </InlineLink>{" "}
           {t("page-what-is-ethereum-atoms-institutions-blockchains-desc")}
         </Text>
 
         <Text>
-          <InlineLink to="https://www.kernel.community/en/learn/module-1/dreamers">
+          <InlineLink href="https://www.kernel.community/en/learn/module-1/dreamers">
             {t("page-what-is-ethereum-kernel-dreamers")}
           </InlineLink>{" "}
           {t("page-what-is-ethereum-kernel-dreamers-desc")}

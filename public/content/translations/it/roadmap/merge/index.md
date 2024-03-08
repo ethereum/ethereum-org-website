@@ -1,6 +1,6 @@
 ---
 title: La Fusione
-description: "Scopri La Fusione: quando la Rete principale di Ethereum ha adottato il Poof of stake."
+description: 'Scopri La Fusione: quando la Rete principale di Ethereum ha adottato il Poof of stake.'
 lang: it
 template: upgrade
 image: /upgrades/merge.png
