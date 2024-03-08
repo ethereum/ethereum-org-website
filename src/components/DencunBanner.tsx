@@ -1,10 +1,12 @@
-import { Box, Text, Tooltip } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 
 import DismissableBanner from "@/components/Banners/DismissableBanner"
 import Emoji from "@/components/Emoji"
 import Link from "@/components/Link"
 
 import NetworkUpgradeSummaryData from "@/data/NetworkUpgradeSummaryData"
+
+import Tooltip from "./Tooltip"
 
 const DencunBanner = () => {
   const dateTimeAsString = NetworkUpgradeSummaryData.cancun
@@ -16,14 +18,10 @@ const DencunBanner = () => {
         <Emoji text="🚨" me="2" />
         The Deneb + Cancun network upgrade is scheduled for{" "}
         <Tooltip
-          label={
-            <Box bg="background.base" p="2" rounded="base">
-              Epoch 269568 - {upgradeDate.toLocaleString()}
-            </Box>
-          }
+          content={<Box>Epoch 269568 - {upgradeDate.toLocaleString()}</Box>}
           aria-label="Deneb/Cancun timing"
         >
-          {upgradeDate.toLocaleDateString()}
+          <span>{upgradeDate.toLocaleDateString()}</span>
         </Tooltip>
         . Node operators must update client software to a supported version to
         prepare.{" "}

@@ -19,6 +19,7 @@ import { Heading } from "./Heading"
 import { Input } from "./Input"
 import { Link } from "./Link"
 import { Modal } from "./Modal"
+import { Popover } from "./Popover"
 import { Progress } from "./Progress"
 import { Radio } from "./Radio"
 import { ReactSelect } from "./ReactSelect"
@@ -49,6 +50,7 @@ export default {
   Link,
   Menu: menuDefaultTheme,
   Modal,
+  Popover,
   Progress,
   Radio,
   ReactSelect,
