@@ -33,6 +33,7 @@ const baseStyle = definePartsStyle(
       border: "none",
       minWidth: "48", // 12rem
       maxWidth: "xs", // 20rem
+      lineHeight: "base",
       w: "auto",
     },
     body: {

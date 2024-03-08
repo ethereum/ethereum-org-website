@@ -78,7 +78,7 @@ export const WalletMoreInfoCategory = ({
                 <p>{feature.label}</p>
                 <Tooltip
                   content={
-                    <Text lineHeight={1.2}>
+                    <Text>
                       {t(walletFilterData[feature.filterKey].description)}
                     </Text>
                   }
