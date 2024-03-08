@@ -44,7 +44,7 @@ Transactions on Ethereum can sometimes get stuck if you have submitted a lower t
 
 ### How do I mine Ethereum? {#mining-ethereum}
 
-Ethereum mining is no longer possible. Mining was switched off when Ethereum moved from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos). Now, instead of miners, Ethereum has validators. Validators [stake](/glossary/#staking) ETH and receive staking rewards for securing the network.
+Ethereum mining is no longer possible. Mining was switched off when Ethereum moved from [proof-of-work](/glossary/#pow) to [proof-of-stake](/glossary/#pos). Now, instead of miners, Ethereum has validators. Anyone may [stake](/glossary/#staking) ETH and receive staking rewards for running validator software to secure the network.
 
 ### How do I become a staker/validator? {#become-validator}
 
