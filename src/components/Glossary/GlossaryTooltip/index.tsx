@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react"
-import { Box, Text, useBreakpointValue } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import Tooltip from "@/components/Tooltip"
@@ -10,9 +10,7 @@ type GlossaryTooltipProps = {
 }
 
 const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
-  const isLargeScreen = useBreakpointValue({ base: false, lg: true })
-
-  return isLargeScreen ? (
+  return (
     <Box display="inline-block">
       <Tooltip
         content={
@@ -37,8 +35,6 @@ const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
         </Text>
       </Tooltip>
     </Box>
-  ) : (
-    <Text as="span">{children}</Text>
   )
 }
 
