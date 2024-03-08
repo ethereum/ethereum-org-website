@@ -265,7 +265,7 @@ const walletData: WalletData[] = [
     chromium: true,
     hardware: false,
     open_source: true,
-    repo_url: "",
+    repo_url: "https://github.com/argentlabs/argent-x",
     non_custodial: true,
     security_audit: [
       "https://github.com/argentlabs/argent-contracts/tree/develop/audit",
