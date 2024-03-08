@@ -238,12 +238,12 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
   const { t } = useTranslation("page-stablecoins")
 
   const tooltipContent = (
-    <div>
-      {t("data-provided-by")}{" "}
+    <Box>
+      {t("common:data-provided-by")}{" "}
       <InlineLink href="https://www.coingecko.com/en/api">
         coingecko.com
       </InlineLink>
-    </div>
+    </Box>
   )
 
   const features = [

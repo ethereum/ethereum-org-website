@@ -10,6 +10,7 @@ import {
   type ButtonProps,
   Checkbox,
   Flex,
+  forwardRef,
   Heading,
   Img,
   Text,
@@ -134,8 +135,9 @@ const AddressCard = (props: ChildOnlyProp) => {
   )
 }
 
-const Address = (props: ChildOnlyProp) => (
+const Address = forwardRef<ChildOnlyProp, "div">((props, ref) => (
   <Box
+    ref={ref}
     fontFamily="monospace"
     borderRadius="sm"
     fontSize="2rem"
@@ -145,7 +147,7 @@ const Address = (props: ChildOnlyProp) => (
     mb={4}
     {...props}
   />
-)
+))
 
 const CopyButton = (props: ButtonProps) => (
   <Button
