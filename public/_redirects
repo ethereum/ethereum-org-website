@@ -171,3 +171,7 @@
 /*/staking/withdraws /:splat/staking/withdrawals/ 301!
 
 /*/guides/how-to-register-an-ethereum-account /:splat/guides/how-to-create-an-ethereum-account/ 301!
+
+/*/roadmap/deneb /:splat/roadmap/dencun/ 301!
+
+/*/roadmap/cancun /:splat/roadmap/dencun/ 301!
