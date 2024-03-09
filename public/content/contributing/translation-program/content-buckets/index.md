@@ -114,7 +114,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Community hub](/community/)
 - [Code of conduct](/community/code-of-conduct/#code-of-conduct)
 
-
 ## 11) Foundational developer docs {#foundational-docs}
 
 - [Overview](/developers/docs/)
