@@ -11260,6 +11260,15 @@
         "content",
         "design"
       ]
+    },
+    {
+      "login": "yusuf-musleh",
+      "name": "Yusuf Musleh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6829768?v=4",
+      "profile": "http://www.ymusleh.com",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,

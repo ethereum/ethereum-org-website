@@ -1753,6 +1753,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/enjoyooor"><img src="https://avatars.githubusercontent.com/u/147568088?v=4?s=100" width="100px;" alt="enjoyooor"/><br /><sub><b>enjoyooor</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=enjoyooor" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://ethereum.org"><img src="https://avatars.githubusercontent.com/u/100724231?v=4?s=100" width="100px;" alt="Jakub"/><br /><sub><b>Jakub</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=konopkja" title="Documentation">📖</a> <a href="#content-konopkja" title="Content">🖋</a> <a href="#design-konopkja" title="Design">🎨</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.ymusleh.com"><img src="https://avatars.githubusercontent.com/u/6829768?v=4?s=100" width="100px;" alt="Yusuf Musleh"/><br /><sub><b>Yusuf Musleh</b></sub></a><br /><a href="#content-yusuf-musleh" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
