@@ -42,4 +42,4 @@ Jeśli jest to Twoja pierwsza próba rozwoju Ethereum, zalecamy zacząć od pocz
 
 - [Standardy tokenów](/developers/docs/standards/tokens/)
 - [Wyrocznie](/developers/docs/oracles/)
-- [Skalowanie](/developers/docs/layer-2-scaling/)
+- [Skalowanie](/developers/docs/scaling/)

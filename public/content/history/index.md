@@ -25,6 +25,66 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 <Divider />
 
+## 2024 {#2024}
+
+### _(In Progress)_&nbsp; Cancun {#cancun}
+
+<NetworkUpgradeSummary name="cancun" />
+
+#### Summary {#cancun-summary}
+
+The Cancun upgrade contains a set of improvements to Ethereum's _execution_ aimed towards improving scalability, in tandem with the Deneb consensus upgrades.
+
+Notably this includes EIP-4844, known as **Proto-Danksharding**, which significantly decreases the cost of data storage for layer 2 rollups. This is achieved through the introduction of data "blobs" which enables rollups to post data to Mainnet for a short period of time. This results in significantly lower transaction fees for users of layer 2 rollups.
+
+<ExpandableCard title="Cancun EIPs" contentPreview="Official improvements included in this upgrade.">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1153">EIP-1153</a> - <em>Transient storage opcodes</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>Beacon block root in the EVM</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>Shard blob transactions (Proto-Danksharding)</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-5656">EIP-5656</a> - <em><code>MCOPY</code> - Memory copying instruction</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-6780">EIP-6780</a> - <em><code>SELFDESTRUCT</code> only in same transaction</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7516">EIP-7516</a> - <em><code>BLOBBASEFEE</code> opcode</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [Layer 2 rollups](/layer-2/)
+- [Proto-Danksharding](/roadmap/scaling/#proto-danksharding)
+- [Danksharding](/roadmap/danksharding/)
+- [Read the Cancun upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md)
+
+---
+
+### _(In Progress)_&nbsp; Deneb {#deneb}
+
+<NetworkUpgradeSummary name="deneb" />
+
+#### Summary {#deneb-summary}
+
+The Deneb upgrade contains a set of improvements to Ethereum's _consensus_ aimed towards improving scalability. This upgrade comes in tandem with the Deneb execution upgrades to enable Proto-Danksharding (EIP-4844), along with other improvements to the Beacon Chain.
+
+Pre-generated signed "voluntary exit messages" no longer expire, thus giving more control to users staking their funds with a third-party node operator. With this signed exit message, stakers can delegate node operation while maintaining the ability to safely exit and withdrawal their funds at any time, without needing to ask permission from anyone.
+
+EIP-7514 brings a tightening to the issuance of ETH by capping the "churn" rate that validators can join the network to eight (8) per epoch. Since ETH issuance is proportional to total ETH staked, limiting the number of validators joining caps the _growth rate_ of newly issued ETH, while also reducing hardware requirements for node operators, helping decentralization.
+
+<ExpandableCard title="Deneb EIPs" contentPreview="Official improvements included in this upgrade">
+
+<ul>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4788">EIP-4788</a> - <em>Beacon block root in the EVM</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-4844">EIP-4844</a> - <em>Shard blob transactions</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7044">EIP-7044</a> - <em>Perpetually valid signed voluntary exits</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7045">EIP-7045</a> - <em>Increase max attestation inclusion slot</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-7514">EIP-7514</a> - <em>Add max epoch churn limit</em></li>
+</ul>
+
+</ExpandableCard>
+
+- [Read the Deneb upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+
+<Divider />
+
 ## 2023 {#2023}
 
 ### Shanghai {#shanghai}

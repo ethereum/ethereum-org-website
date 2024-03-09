@@ -24,13 +24,13 @@ lang: ja
 
 ダガーハシモトは、ダガーとハシモトアルゴリズムを修正したものです。 ダガーハシモトとハシモトの違いとしては、ブロックチェーンデータをソースとして使わず、ダガーハシモトは、カスタム生成のデータセットを使い、N ブロックごとにブロックデータを基にして更新します。 このデータセットは、ダガーアルゴリズムを使って生成され、ライトクライアント検証アルゴリズムのための、各ノンス (nonce)に特有なサブセットで効率的な計算を可能にします。 ダガーハシモトとダガーの違いとしては、オリジナルのダガーとは異なり、ブロックのクエリーとして使われるデータセットは、半永続的で、周期的な間隔で更新(例: 1 週間に一回)されるだけということです。 データセットを生成する労力の割合はゼロに近く、共有メモリの高速化に関する Sergio Lerner の主張は、無視できるようになります。
 
-[ダガーハシモト](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto)の詳細
+[ダガーハシモト](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)の詳細
 
 ## Ethash {#ethash}
 
 Ethash は、現在は廃止となっているプルーフ・オブ・ワークのアーキテクチャの下で、実際にイーサリアムメインネットで使われたマイニングアルゴリズムです。 Ethash は、ダガーハシモトのアルゴリズムが大幅に更新された後に、特定のダガーハシモトのバージョンに事実上付けられたた新しい名前です。なので、前バージョンの基本理念を継承しています。 イーサリアムメインネットは、これまで Ethash のみを使用していました。ダガーハシモトは、研究開発バージョンのマイニングアルゴリズムで、イーサリアムメインネットでマイニングが開始される前に Ethash に引き継がれました。
 
-[Ethash の詳細](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
+[Ethash の詳細](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)
 
 ## 参考文献 {#further-reading}
 

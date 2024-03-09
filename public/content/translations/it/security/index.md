@@ -24,7 +24,7 @@ Esempio di una password debole: CuteFluffyKittens!
 Esempio di una password sicura: ymv\*azu.EAC8eyp8umf
 ```
 
-Un altro errore comune è l'utilizzo di password che possono essere facilmente indovinate o trovate attraverso [l'ingegneria sociale](<https://wikipedia.org/wiki/Social_engineering_(security)>). Includere il nome da nubile di tua madre, i nomi dei tuoi figli o dei tuoi animali domestici, o le date di nascita nella tua password non è sicuro e aumenterà il rischio che la tua password venga violata.
+Un altro errore comune è l'utilizzo di password che possono essere facilmente indovinate o trovate attraverso [l'ingegneria sociale](https://wikipedia.org/wiki/Social_engineering_(security)). Includere il nome da nubile di tua madre, i nomi dei tuoi figli o dei tuoi animali domestici, o le date di nascita nella tua password non è sicuro e aumenterà il rischio che la tua password venga violata.
 
 #### Buone pratiche concernenti le password: {#good-password-practices}
 
@@ -270,15 +270,14 @@ Le truffe di Airdrop prevedono un falso progetto di airdropping di una risorsa (
 
 ### Sicurezza web {#reading-web-security}
 
-- [Questo è il motivo per cui non dovresti usare testi per l'autenticazione a due fattori](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
-- [Fino a 3 milioni di dispositivi infettati da componenti aggiuntivi Chrome e Edge lacciati da malware](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
+- [Fino a 3 milioni di dispositivi infettati da componenti aggiuntivi Chrome e Edge con malware](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [Come creare una password forte — che non dimentichi](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [Cos'è una chiave di sicurezza?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
 
 ### Crypto security {#reading-crypto-security}
 
 - [Protecting Yourself and Your Funds](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) _Aggiornato frequentemente - MyCrypto_
-- [4 modi per salvaguardare le criptovalute](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/)-_CoinDesk_
+- [Problemi di sicurezza nei software di cripto-comunicazione comuni](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media): _Salus_
 - [Guida alla sicurezza per principianti e anche per esperti](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Crypto Security: Passwords and Authentication](https://www.youtube.com/watch?v=m8jlnZuV1i4)-_Andreas M. Antonopoulos_
 

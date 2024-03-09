@@ -27,7 +27,7 @@ Jukumu ya mnyororo wa Kioleza litabadilika baada ya mda ila sehemu ya msingi ya 
 
 Mnyororo wa Kioleza utaingiza [uthibitisho-wa-hisa](/developers/docs/consensus-mechanisms/pos/) kwenye Ethereum. Hii ndio njia mpya ya wewe kusaidia Ethereum kua salama. Ifikirie kama faida kw jamii ambayo itafanya Ethereum kua na afya na kukutenegenezea hela zaidi wakati wa mchakato. Kiuhalisia, itahusisha wewe kuweka hisa za ETH ili kuamsha programu. Kama mthibitishaji utafanya mchakato wa shughuli za pesa na utaunda vitalu vipya kwenye mnyororo.
 
-Kuweka hisa na kua mt hibitishaji ni rahisi kuliko [kuchimba](/developers/docs/mining/)(jinsi ambavyo mtandao ni saklama kwa sasa). Mwishowe hii inamatumaini itasaidia Ethereum kua salama zaidi. Jinsi watu wengi wanavyoshiriki katika mtandao, ndivyo unavyozodi kujitegemea na salama kutoka kwa shambulio litakalokuja.
+Kuweka hisa na kua mt hibitishaji ni rahisi kuliko [kuchimba](/developers/docs/consensus-mechanisms/pow/mining/)(jinsi ambavyo mtandao ni saklama kwa sasa). Mwishowe hii inamatumaini itasaidia Ethereum kua salama zaidi. Jinsi watu wengi wanavyoshiriki katika mtandao, ndivyo unavyozodi kujitegemea na salama kutoka kwa shambulio litakalokuja.
 
 <InfoBanner emoji=":money_bag:">
 Kama ungependa kua mthibitishaji na kusaidia kulinda mnyororo wa Kioleza, <a href="/staking/">jifunze zaidi jinsi ya kuweka hisa</a>.

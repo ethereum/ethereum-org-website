@@ -58,7 +58,7 @@ Le problème avec l'évolutivité de l'agrégation en augmentant le nombre de va
 
 ## Progrès actuels {#current-progress}
 
-La Finalité à créneau unique (SSF) est en phase d'études. Celle-ci ne devrait pas être opérationnelle avant plusieurs années, probablement après que d'autres avancées substantielles aient été réalisées, telles que [l'Arbre de Verkle](/roadmap/verkle-trees/) et la [solution Danksharding](/roadmap/danksharding]).
+La Finalité à créneau unique (SSF) est en phase d'études. Celle-ci ne devrait pas être opérationnelle avant plusieurs années, probablement après que d'autres avancées substantielles aient été réalisées, telles que [l'Arbre de Verkle](/roadmap/verkle-trees/) et la [solution Danksharding](/roadmap/danksharding/).
 
 ## Complément d'information {#further-reading}
 
