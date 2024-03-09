@@ -27,11 +27,11 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 ## 2024 {#2024}
 
-### _(In Progress)_&nbsp; Cancun {#cancun}
+### _(In Progress)_&nbsp; Cancun-Deneb ("Dencun") {#dencun}
 
-<NetworkUpgradeSummary name="cancun" />
+<NetworkUpgradeSummary name="dencun" />
 
-#### Summary {#cancun-summary}
+#### Cancun summary {#cancun-summary}
 
 The Cancun upgrade contains a set of improvements to Ethereum's _execution_ aimed towards improving scalability, in tandem with the Deneb consensus upgrades.
 
@@ -55,13 +55,7 @@ Notably this includes EIP-4844, known as **Proto-Danksharding**, which significa
 - [Danksharding](/roadmap/danksharding/)
 - [Read the Cancun upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/cancun.md)
 
----
-
-### _(In Progress)_&nbsp; Deneb {#deneb}
-
-<NetworkUpgradeSummary name="deneb" />
-
-#### Summary {#deneb-summary}
+#### Deneb summary {#deneb-summary}
 
 The Deneb upgrade contains a set of improvements to Ethereum's _consensus_ aimed towards improving scalability. This upgrade comes in tandem with the Deneb execution upgrades to enable Proto-Danksharding (EIP-4844), along with other improvements to the Beacon Chain.
 
@@ -87,11 +81,11 @@ EIP-7514 brings a tightening to the issuance of ETH by capping the "churn" rate 
 
 ## 2023 {#2023}
 
-### Shanghai {#shanghai}
+### Shanghai-Capella ("Shapella") {#shanghai}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### Summary {#shanghai-summary}
+#### Shanghai summary {#shanghai-summary}
 
 The Shanghai upgrade brought staking withdrawals to the execution layer. In tandem with the Capella upgrade, this enabled blocks to accept withdrawal operations, which allows stakers to withdraw their ETH from the Beacon Chain to the execution layer.
 
@@ -109,13 +103,7 @@ The Shanghai upgrade brought staking withdrawals to the execution layer. In tand
 
 - [Read the Shanghai upgrade specification](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### Capella {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### Summary {#capella-summary}
+#### Capella summary {#capella-summary}
 
 The Capella upgrade was the third major upgrade to the consensus layer (Beacon Chain) and enabled staking withdrawals. Capella occurred synchronously with the execution layer upgrade, Shanghai, and enabled staking withdrawal functionality.
 

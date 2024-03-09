@@ -1,7 +1,7 @@
 import type { NetworkUpgradeData } from "@/lib/types"
 
 const NetworkUpgradeSummaryData: NetworkUpgradeData = {
-  cancun: {
+  dencun: {
     isPending: true, // Fill in remaining and remove `isPending` once complete
     dateTimeAsString: "2024-03-13T13:55:35.000Z",
     // ethPriceInUSD: 0,
@@ -9,29 +9,12 @@ const NetworkUpgradeSummaryData: NetworkUpgradeData = {
     epochNumber: 269568,
     slotNumber: 269568 * 32,
   },
-  deneb: {
-    isPending: true, // Fill in remaining and remove `isPending` once complete
-    dateTimeAsString: "2024-03-13T13:55:35.000Z",
-    // ethPriceInUSD: 0,
-    // waybackLink: "https://web.archive.org/web/{timestamp}/https://ethereum.org/en/",
-    epochNumber: 269568,
-    slotNumber: 269568 * 32,
-  },
-  shanghai: {
+  shapella: {
     dateTimeAsString: "2023-04-12T22:27:35.000Z",
     ethPriceInUSD: 1917,
     waybackLink:
       "https://web.archive.org/web/20230411044526/https://ethereum.org/en/",
     blockNumber: 17034870,
-    epochNumber: undefined,
-    slotNumber: undefined,
-  },
-  capella: {
-    dateTimeAsString: "2023-04-12T22:27:35.000Z",
-    ethPriceInUSD: 1917,
-    waybackLink:
-      "https://web.archive.org/web/20230411044526/https://ethereum.org/en/",
-    blockNumber: undefined,
     epochNumber: 194048,
     slotNumber: 6209536,
   },
