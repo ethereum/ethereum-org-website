@@ -26,7 +26,7 @@ Procurando por futuras melhorias de protocolo? [Saiba mais sobre as próximas at
 
 ## 2023 {#2023}
 
-### Shanghai-Capella ("Shapella) {#shapella}
+### Shanghai-Capella ("Shapella") {#shapella}
 
 <NetworkUpgradeSummary name="shapella" />
 

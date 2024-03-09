@@ -124,7 +124,7 @@ EIP-7514 brings a tightening to the issuance of ETH by capping the "churn" rate 
 
 ## 2023 {#2023}
 
-### Shanghai-Capella ("Shapella") {#shanghai}
+### Shanghai-Capella ("Shapella") {#shapella}
 
 <NetworkUpgradeSummary name="shapella" />
 
