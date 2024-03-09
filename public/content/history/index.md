@@ -19,6 +19,49 @@ These rule changes may create a temporary split in the network. New blocks could
 
 </ExpandableCard>
 
+<ExpandableCard title="Why do some upgrades have multiple names?" contentPreview="Upgrades names follow a pattern">
+
+The software that underlies Ethereum is composed of two halves, known as the [execution layer](/glossary/#execution-layer) and the [consensus layer](/glossary/#consensus-layer).
+
+**Execution upgrade naming**
+
+Since 2021, upgrades to the **execution layer** are named according to the city names of [previous Devcon locations](https://devcon.org/en/past-events/) in chronological order:
+
+| Upgrade Name | Devcon Year | Devcon Number | Upgrade Date |
+| ------------ | ----------- | ------------- | ------------ |
+| Berlin       | 2015        | 0             | Apr 15, 2021 |
+| London       | 2016        | I             | Aug 5, 2021  |
+| Shanghai     | 2017        | II            | Apr 12, 2023 |
+| **_Cancun_** | 2018        | III           | Mar 13, 2024 |
+| _Prague_     | 2019        | IV            | TBD          |
+| _Osaka_      | 2020        | V             | TBD          |
+| _Bogota_     | 2022        | VI            | TBD          |
+| _Bangkok_    | 2024        | VII           | TBD          |
+
+**Consensus upgrade naming**
+
+Since the launch of the [Beacon Chain](/glossary/#beacon-chain), upgrades to the **consensus layer** are named after celestial stars beginning with letters that proceed in alphabetical order:
+
+| Upgrade Name                                                | Upgrade Date |
+| ----------------------------------------------------------- | ------------ |
+| Beacon Chain genesis                                        | Dec 1, 2020  |
+| [Altair](https://en.wikipedia.org/wiki/Altair)              | Oct 27, 2021 |
+| [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)        | Sep 6, 2022  |
+| [Capella](https://en.wikipedia.org/wiki/Capella)            | Apr 12, 2023 |
+| [**_Deneb_**](https://en.wikipedia.org/wiki/Deneb)          | Mar 13, 2024 |
+| [_Electra_](<https://en.wikipedia.org/wiki/Electra_(star)>) | TBD          |
+
+**Combined naming**
+
+The execution and consensus upgrades were initially rolled out at different times, but after [The Merge](/roadmap/merge/) in 2022 these have been deployed simultaneously. As-such, colloquial terms have emerged to simplify references to these upgrades using a single conjoined term. This began with the _Shanghai-Capella_ upgrade, commonly referred to as "**Shapella**", and is continued with the _Cancun-Deneb_ upgrade, which may be referred to as "**Dencun**."
+
+| Execution Upgrade | Consensus Upgrade | Short Name |
+| ----------------- | ----------------- | ---------- |
+| Shanghai          | Capella           | "Shapella" |
+| Cancun            | Deneb             | "Dencun"   |
+
+</ExpandableCard>
+
 Skip straight to information about some of the particularly important past upgrades: [The Beacon Chain](/roadmap/beacon-chain/); [The Merge](/roadmap/merge/); and [EIP-1559](#london)
 
 Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethereum roadmap](/roadmap/).
