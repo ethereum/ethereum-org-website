@@ -1,6 +1,6 @@
 ---
 title: 新增內容資源
-lang: zh
+lang: zh-tw
 description: 在 ethereum.org 上架上架內容資源的標準
 ---
 

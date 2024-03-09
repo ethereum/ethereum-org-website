@@ -1,7 +1,7 @@
 ---
 title: 新增交易所
 description: 在 ethereum.org 上新增交易所時適用的政策
-lang: zh
+lang: zh-tw
 ---
 
 # 新增以太坊交易所 {#adding-ethereum-exchanges}
