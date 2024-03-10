@@ -9,7 +9,7 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import ReactSelect, { type ReactSelectOnChange } from "../ReactSelect"
+import Select, { type SelectOnChange } from "../Select"
 
 type StakingDataOption = { label: string; value: string }
 
@@ -17,7 +17,7 @@ const StakingLaunchpadWidget = () => {
   const { t } = useTranslation("page-staking")
   const [selection, setSelection] = useState("testnet")
 
-  const handleChange: ReactSelectOnChange<StakingDataOption> = (data) => {
+  const handleChange: SelectOnChange<StakingDataOption> = (data) => {
     if (!data) return
 
     trackCustomEvent({
@@ -56,7 +56,7 @@ const StakingLaunchpadWidget = () => {
         <Translation id="page-staking:page-staking-launchpad-widget-span" />
       </Text>
       <Box my={4} maxW={{ md: "50%" }}>
-        <ReactSelect
+        <Select
           instanceId="staking-launchpad-select"
           options={selectOptions}
           onChange={handleChange}

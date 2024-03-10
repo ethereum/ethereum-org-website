@@ -29,7 +29,7 @@ import {
 import { Image } from "@/components/Image"
 import InlineLink, { LinkProps } from "@/components/Link"
 import Text from "@/components/OldText"
-import ReactSelect, { ReactSelectOnChange } from "@/components/ReactSelect"
+import Select, { SelectOnChange } from "@/components/Select"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -246,7 +246,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
     (
       colName: ColumnClassName,
       featureDispatch: SetFeatureSelectState
-    ): ReactSelectOnChange<DropdownOption> =>
+    ): SelectOnChange<DropdownOption> =>
     (selectedOption) => {
       if (!selectedOption) return
       updateDropdown(selectedOption, featureDispatch, colName)
@@ -275,7 +275,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
           <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
             {t("page-find-wallet-choose-features")}
           </Text>
-          <ReactSelect
+          <Select
             options={[
               {
                 label: t("page-find-choose-to-compare"),
@@ -290,7 +290,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
           />
         </Th>
         <Th>
-          <ReactSelect
+          <Select
             options={[
               {
                 label: t("page-find-choose-to-compare"),
@@ -305,7 +305,7 @@ const WalletTable = ({ filters, walletData }: WalletTableProps) => {
           />
         </Th>
         <Th>
-          <ReactSelect
+          <Select
             options={[
               {
                 label: t("page-find-choose-to-compare"),

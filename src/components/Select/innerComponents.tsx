@@ -11,7 +11,7 @@ import type {
 } from "react-select"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
-import { useReactSelectStyles } from "."
+import { useSelectStyles } from "."
 
 export const reactSelectAnatomyKeys = [
   "container",
@@ -41,7 +41,7 @@ const SelectContainer = <
   const { innerProps, children, className, selectProps } = props
   const { menuIsOpen } = selectProps
 
-  const styles = useReactSelectStyles()
+  const styles = useSelectStyles()
   return (
     <Box
       className={className}
@@ -64,7 +64,7 @@ const Control = <
 ) => {
   const { innerProps, innerRef, children, menuIsOpen } = props
 
-  const styles = useReactSelectStyles()
+  const styles = useSelectStyles()
   return (
     <HStack
       ref={innerRef}
@@ -86,7 +86,7 @@ const DropdownIndicator = <
   props: DropdownIndicatorProps<Option, IsMulti, Group>
 ) => {
   const { innerProps } = props
-  const styles = useReactSelectStyles()
+  const styles = useSelectStyles()
   return (
     <Center
       {...innerProps}
@@ -105,7 +105,7 @@ const MenuList = <
   props: MenuListProps<Option, IsMulti, Group>
 ) => {
   const { innerProps, innerRef, children } = props
-  const styles = useReactSelectStyles()
+  const styles = useSelectStyles()
   return (
     <Box
       ref={innerRef}
@@ -127,7 +127,7 @@ const Option = <
 ) => {
   const { innerProps, innerRef, children, isSelected, isFocused } = props
 
-  const styles = useReactSelectStyles()
+  const styles = useSelectStyles()
   return (
     <Box
       ref={innerRef}
@@ -151,7 +151,7 @@ const Group = <
 ) => {
   const { children, headingProps, label } = props
 
-  const styles = useReactSelectStyles()
+  const styles = useSelectStyles()
 
   const notFirstGroupStyles = {
     _notFirst: {
