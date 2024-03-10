@@ -161,6 +161,19 @@ Many Ethereum wallets offer limits protection to safeguard against accounts bein
 
 [How to revoke smart contract access to your crypto funds](/guides/how-to-revoke-token-access/)
 
+### Use reliable Web3 security tools {#use-security-tools}
+
+Risks associated with transactions and signature requests are often unidentifiable by the naked eye and by signing them, you risk compromising the safety of your tokens. For example, allow contract owners to transfer or burn tokens as well as grant approvals without your consent, potentially draining your wallet. Specialized security solutions can offer significant protection.
+
+Among such tools, Web3 Antivirus (W3A) Snap is an official plugin for MetaMask designed to simulate transactions and warn you if it finds signs of scams. It detects over 20 risks, including phishing, poisoning attacks, wallet drainers, scam tokens, fake addresses, and more.
+
+It is open-source and passed an audit by Veridise.
+
+#### Try a security tool: {#try-security-tool}
+
+- [W3A Snap](https://snaps.metamask.io/snap/npm/web3-antivirus/web3-antivirus-snap/)
+- [Browser extension](https://chromewebstore.google.com/detail/web3-antivirus/inejiiekmjkmphgjjehhcmkpjncboodn)
+
 <Divider />
 
 ## Common scams {#common-scams}
