@@ -133,7 +133,7 @@ export const Pre = (props: ChildOnlyProp) => (
 )
 
 export const Paragraph = (props: ChildOnlyProp) => (
-  <Text color="text300" mt={8} mb={4} {...props} />
+  <Text mt={8} mb={4} {...props} />
 )
 
 export const HR = () => (

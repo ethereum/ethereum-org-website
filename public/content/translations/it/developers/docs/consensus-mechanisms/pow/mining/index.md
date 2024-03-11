@@ -60,7 +60,7 @@ Il mining di ogni transazione (cioè l'inclusione in un nuovo blocco e la prima 
 
 L'estrazione di blocchi basata sul proof-of-work era solo probabilistica, il che significa che a volte due blocchi validi venivano pubblicati simultaneamente a causa della latenza della rete. In questo caso, il protocollo doveva determinare la catena più lunga (e quindi più "valida") garantendo al tempo stesso un trattamento equo dei miner, ricompensando parzialmente il blocco valido proposto non incluso. Ciò incoraggiava l'ulteriore decentralizzazione della rete in quanto i piccoli miner, che potevano trovarsi ad affrontare una latenza più elevata, potevano comunque generare rendimenti tramite ricompense per blocchi [ommer](/glossary/#ommer).
 
-"Ommer" è il termine preferito, neutro dal punto di vista del genere, per lo stesso livello di un blocco padre, ma a volte viene anche indicato come "zio". **Da quando Ethereum è passato alla proof-of-stake, i blocchi ommer non vengono più estratti** poiché in ogni slot viene eletto solo un proponente. Questo cambiamento può essere osservato nel [grafico storico](https://ycharts.com/indicators/ethereum_uncle_rate) dei blocchi ommer estratti.
+"Ommer" è il termine preferito, neutro dal punto di vista del genere, per lo stesso livello di un blocco genitore, ma a volte viene anche indicato come "zio". **Da quando Ethereum è passato alla proof-of-stake, i blocchi ommer non vengono più estratti** poiché in ogni slot viene eletto solo un proponente. Questo cambiamento può essere osservato nel [grafico storico](https://ycharts.com/indicators/ethereum_uncle_rate) dei blocchi ommer estratti.
 
 ## Demo visiva {#a-visual-demo}
 

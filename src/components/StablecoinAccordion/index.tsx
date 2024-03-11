@@ -1,4 +1,3 @@
-import { ReactNode } from "react"
 import { useTranslation } from "next-i18next"
 import { MdArrowForward } from "react-icons/md"
 import {
@@ -136,7 +135,7 @@ const StablecoinAccordion = () => {
           </SectionTitle>
           <p>
             {t("page-stablecoins-accordion-swap-dapp-intro")}{" "}
-            <InlineLink to="/get-eth/#dex">
+            <InlineLink href="/get-eth/#dex">
               {t("page-stablecoins-accordion-swap-dapp-link")}
             </InlineLink>
           </p>
@@ -225,7 +224,7 @@ const StablecoinAccordion = () => {
           </SectionTitle>
           <p>
             {t("page-stablecoins-accordion-borrow-crypto-collateral-copy")}{" "}
-            <InlineLink to="#how">
+            <InlineLink href="#how">
               {t("page-stablecoins-accordion-borrow-crypto-collateral-link")}
             </InlineLink>
           </p>
@@ -249,7 +248,7 @@ const StablecoinAccordion = () => {
           </SectionTitle>
           <p>
             {t("page-stablecoins-accordion-borrow-risks-copy")}{" "}
-            <InlineLink to="/eth/">
+            <InlineLink href="/eth/">
               {t("page-stablecoins-accordion-borrow-risks-link")}
             </InlineLink>
           </p>

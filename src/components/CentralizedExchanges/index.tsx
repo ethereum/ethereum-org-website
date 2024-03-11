@@ -9,7 +9,7 @@ import Emoji from "@/components/Emoji"
 import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
-import ReactSelect from "@/components/ReactSelect"
+import Select from "@/components/Select"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
@@ -103,7 +103,7 @@ const CentralizedExchanges = ({
         {t("page-get-eth-exchanges-intro")}
       </Text>
       <Box w="full" maxW="container.sm">
-        <ReactSelect
+        <Select
           instanceId="eth-exchange-region"
           aria-label={t("page-get-eth-exchanges-header")}
           options={selectOptions}

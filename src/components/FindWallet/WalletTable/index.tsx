@@ -1,4 +1,5 @@
 import { ReactNode } from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import {
@@ -15,24 +16,17 @@ import {
   Table,
   TableProps,
   Td,
+  Text,
   Th,
   Tr,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp } from "@/lib/types"
+import { ChildOnlyProp, WalletData, WalletFilter } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
-import {
-  ColumnClassName,
-  DropdownOption,
-  SetFeatureSelectState,
-  useWalletTable,
-} from "@/components/FindWallet/WalletTable/useWalletTable"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
 import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
-import Text from "@/components/OldText"
-import ReactSelect, { ReactSelectOnChange } from "@/components/ReactSelect"
 import Tag from "@/components/Tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -42,13 +36,15 @@ import {
   getWalletPersonas,
 } from "@/lib/utils/wallets"
 
-import { WalletData } from "@/data/wallets/wallet-data"
+import {
+  NAV_BAR_PX_HEIGHT,
+  NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN,
+} from "@/lib/constants"
 
-import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
-
+import { SupportedLanguagesTooltip } from "./SupportedLanguagesTooltip"
 import { WalletEmptyState } from "./WalletEmptyState"
 
-import { useLanguagesList } from "@/hooks/useLanguagesList"
+import { useWalletTable } from "@/hooks/useWalletTable"
 
 const Container = (props: TableProps) => (
   <Table
@@ -69,7 +65,7 @@ const WalletContainer = (props: ChildOnlyProp) => (
   <Container
     borderBottom="1px"
     borderColor="lightBorder"
-    _hover={{ bg: "chakra-subtle-bg", transition: "0.5s all" }}
+    _hover={{ bg: "background.highlight", transition: "0.5s all" }}
     {...props}
   />
 )
@@ -135,7 +131,7 @@ const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
   <Grid
     ref={ref}
     cursor="pointer"
-    py="25px"
+    py={4}
     px={{ base: 4, lg: 1 }}
     sx={{
       p: {
@@ -162,7 +158,7 @@ const FlexInfo = (props: FlexProps) => (
     sx={{
       p: {
         p: 0,
-        fontSize: "1.2rem",
+        fontSize: "xl",
         fontWeight: "bold",
         "& + p": {
           mt: "0.1rem",
@@ -200,6 +196,7 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
     cursor="pointer"
     justifyContent="center"
     height="full"
+    mt={{ base: 10, md: 0 }}
     sx={{
       "&.fade": {
         animation: `${fadeOut} 0.375s`,
@@ -209,8 +206,8 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
   />
 )
 
-export interface WalletTableProps {
-  filters: Record<string, boolean>
+export type WalletTableProps = {
+  filters: WalletFilter
   resetFilters: () => void
   resetWalletFilter: React.MutableRefObject<() => void>
   walletData: WalletData[]
@@ -223,44 +220,25 @@ const WalletTable = ({
   walletData,
 }: WalletTableProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
+  const { locale } = useRouter()
   const {
     featureDropdownItems,
-    filteredFeatureDropdownItems,
     filteredWallets,
-    setFirstFeatureSelect,
-    setSecondFeatureSelect,
-    setThirdFeatureSelect,
-    updateDropdown,
     updateMoreInfo,
-    firstFeatureSelect,
-    secondFeatureSelect,
-    thirdFeatureSelect,
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
-  const languagesList = useLanguagesList()
-
-  const handleFeatureSelectChange =
-    (
-      colName: ColumnClassName,
-      featureDispatch: SetFeatureSelectState
-    ): ReactSelectOnChange<DropdownOption> =>
-    (selectedOption) => {
-      if (!selectedOption) return
-      updateDropdown(selectedOption, featureDispatch, colName)
-      return
-    }
 
   return (
     <Container>
       <WalletContentHeader>
         <Th sx={{ textAlign: "start !important" }}>
           {filteredWallets.length === walletCardData.length ? (
-            <Text as="span">
+            <Text ps={{ base: 2, md: 0 }} as="span">
               {t("page-find-wallet-showing-all-wallets")} (
               <strong>{walletCardData.length}</strong>)
             </Text>
           ) : (
-            <Text as="span">
+            <Text ps={{ base: 2, md: 0 }} as="span">
               {t("page-find-wallet-showing")}{" "}
               <strong>
                 {filteredWallets.length} / {walletCardData.length}
@@ -268,54 +246,6 @@ const WalletTable = ({
               {t("page-find-wallet-wallets")}
             </Text>
           )}
-        </Th>
-        <Th>
-          <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
-            {t("page-find-wallet-choose-features")}
-          </Text>
-          <ReactSelect
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={handleFeatureSelectChange(
-              "firstCol",
-              setFirstFeatureSelect
-            )}
-            defaultValue={firstFeatureSelect}
-          />
-        </Th>
-        <Th>
-          <ReactSelect
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={handleFeatureSelectChange(
-              "secondCol",
-              setSecondFeatureSelect
-            )}
-            defaultValue={secondFeatureSelect}
-          />
-        </Th>
-        <Th>
-          <ReactSelect
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={handleFeatureSelectChange(
-              "thirdCol",
-              setThirdFeatureSelect
-            )}
-            defaultValue={thirdFeatureSelect}
-          />
         </Th>
       </WalletContentHeader>
       {filteredWallets.length === 0 && (
@@ -339,9 +269,19 @@ const WalletTable = ({
           wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
 
           const walletPersonas = getWalletPersonas(wallet)
+          // Supported languages
           const supportedLanguages = getSupportedLanguages(
             wallet.languages_supported,
-            languagesList
+            locale!
+          )
+          const numberOfSupportedLanguages = supportedLanguages.length
+          const sliceSize = NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
+          const rest = numberOfSupportedLanguages - sliceSize
+          const restText = `${rest > 0 ? "+" : ""} ${rest > 0 ? rest : ""}`
+
+          const formattedSupportedLanguages = formatSupportedLanguages(
+            supportedLanguages,
+            sliceSize
           )
 
           return (
@@ -359,67 +299,95 @@ const WalletTable = ({
                 }}
               >
                 <Td lineHeight="revert">
-                  <Flex justifyContent="space-between" alignItems="center">
-                    <FlexInfo w={{ base: "100%", md: "auto" }}>
+                  <Flex
+                    justifyContent="space-between"
+                    alignItems="center"
+                    w="100%"
+                  >
+                    <FlexInfo
+                      w={{ base: "100%", md: "auto" }}
+                      ps={{ base: 0, md: 1.5 }}
+                    >
                       {/* Wallet image */}
-                      <Box w="56px">
+                      <Box
+                        w={{ base: "24px", md: "56px" }}
+                        //
+                      >
                         <Image
                           src={wallet.image}
                           alt=""
                           objectFit="contain"
-                          boxSize="56px"
+                          boxSize="auto"
                         />
                       </Box>
 
                       <Box w={{ base: "100%", md: "auto" }}>
-                        <Stack gap={5}>
-                          <Text>{wallet.name}</Text>
+                        <Stack>
+                          <Text lineHeight={1.2} fontSize="xl !important">
+                            {wallet.name}
+                          </Text>
 
                           {/* Wallet Personas supported */}
-                          <Flex gap={1.5}>
-                            {walletPersonas.map((persona) => (
-                              <Tag
-                                key={persona}
-                                label={t(persona).toUpperCase()}
-                              />
-                            ))}
-                          </Flex>
+                          {walletPersonas.length > 0 && (
+                            <Flex gap={1.5} wrap="wrap">
+                              {walletPersonas.map((persona) => (
+                                <Tag
+                                  key={persona}
+                                  label={t(persona).toUpperCase()}
+                                />
+                              ))}
+                            </Flex>
+                          )}
 
-                          {/* Device labels */}
-                          <Flex
-                            alignItems="center"
-                            gap={3}
-                            display={deviceLabels.length > 0 ? "flex" : "none"}
-                          >
-                            <Icon as={DevicesIcon} fontSize="2xl" />
+                          <Stack gap={2} mb={{ base: 0, md: 3 }}>
+                            {/* Device labels */}
+                            {deviceLabels.length > 0 && (
+                              <Flex
+                                alignItems="center"
+                                gap={3}
+                                display={
+                                  deviceLabels.length > 0 ? "flex" : "none"
+                                }
+                              >
+                                <Icon as={DevicesIcon} fontSize="2xl" />
 
-                            <Text
-                              fontSize="1rem !important"
-                              fontWeight="normal !important"
-                            >
-                              {deviceLabels.join(" · ")}
-                            </Text>
-                          </Flex>
+                                <Text
+                                  fontSize="md !important"
+                                  fontWeight="normal !important"
+                                >
+                                  {deviceLabels.join(" · ")}
+                                </Text>
+                              </Flex>
+                            )}
 
-                          {/* Supported languages */}
-                          <Flex alignItems="center" gap={3}>
-                            <Icon as={LanguagesIcon} fontSize="2xl" />
+                            {/* Supported languages */}
+                            <Flex alignItems="center" gap={3}>
+                              <Icon as={LanguagesIcon} fontSize="2xl" />
 
-                            <Text
-                              fontSize="1rem !important"
-                              fontWeight="normal !important"
-                            >
-                              {formatSupportedLanguages(supportedLanguages)}
-                            </Text>
-                          </Flex>
+                              <Text
+                                fontSize="md !important"
+                                fontWeight="normal !important"
+                              >
+                                {/* Show up to 5 supported languages and use a tooltip for the rest */}
+                                {`${formattedSupportedLanguages}`}{" "}
+                                {rest > 0 && (
+                                  <SupportedLanguagesTooltip
+                                    supportedLanguages={supportedLanguages}
+                                    restText={restText}
+                                  />
+                                )}
+                              </Text>
+                            </Flex>
+                          </Stack>
 
-                          {/* Wallet Website (desktop) */}
-                          <Box display={{ base: "none", md: "block" }} w="auto">
+                          {/* Wallet Website Button (desktop) */}
+                          <Box display={{ base: "none", md: "block" }}>
                             <ButtonLink
                               to={wallet.url}
                               variant="outline"
                               w="auto"
                               isExternal
+                              size="sm"
                             >
                               {t("page-find-wallet-visit-website")}
                             </ButtonLink>
@@ -438,19 +406,14 @@ const WalletTable = ({
                       </Box>
                     </FlexInfoCenter>
                   </Flex>
-                  {/* Wallet Website (mobile) */}
-                  <Box
-                    display={{ base: "block", md: "none" }}
-                    mt={6}
-                    w="100%"
-                    ps={1}
-                    pe={3}
-                  >
+                  {/* Wallet Website Button (mobile) */}
+                  <Box display={{ base: "block", md: "none" }} mt={6} w="100%">
                     <ButtonLink
                       to={wallet.url}
                       variant="outline"
                       w="100%"
                       isExternal
+                      size="sm"
                     >
                       {t("page-find-wallet-visit-website")}
                     </ButtonLink>
