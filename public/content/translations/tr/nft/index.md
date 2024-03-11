@@ -96,7 +96,7 @@ NFT'lerle ilgili güvenlik sorunları çoğunlukla kimlik avı dolandırıcılı
 - [EtherscanNFT izleyici](https://etherscan.io/nft-top-contracts)
 - [ERC-721 token standardı](/developers/docs/standards/tokens/erc-721/)
 - [ERC-1155 token standardı](/developers/docs/standards/tokens/erc-1155/)
-- [Popular NFT dApps and Tools](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
+- [Popular NFT Apps and Tools](https://www.ethereum-ecosystem.com/blockchains/ethereum/nfts)
 
 <Divider />
 
