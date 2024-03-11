@@ -107,6 +107,10 @@ Simply being compatible with the Ethereum Virtual Machine (EVM) does not mean th
 
 ## More of a visual learner? {#visual-learner}
 
+<YouTube id="HT9PHWloIiU" />
+
+_Finematics: Unlocking Ethereum's Scaling, EIP-4844_
+
 <YouTube id="dFjyUY3e53Q" />
 
 _Bankless: Blobspace 101 with Domothy_
