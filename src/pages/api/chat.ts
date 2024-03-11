@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest,
   const { messages } = await req.body;
   const currentMessageContent = messages[messages.length - 1].content;
 
-  const response = await fetch("http://localhost:3001/api/vector", {
+  const response = await fetch("https://ethereum.org/api/vector", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -25,7 +25,7 @@ export default async function handler(req: NextApiRequest,
   const TEMPLATE = `You are a very enthusiastic ethereum.org representative who loves to help people! Given the following sections from the ethereum.org contributor documentation, answer the question using that information. You should paraphrase to provide clear explanations instead of simply quoting. If you are unsure and the answer is not explicitly written in the documentation, say "Sorry, I don't know how to help with that."
   
   Context sections:
-  Pigs are cool
+  ${vectorSearch}
 
   Question: """
   ${currentMessageContent}
