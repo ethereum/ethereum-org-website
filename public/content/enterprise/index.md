@@ -58,7 +58,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 
 ### Products and services {#products-and-services}
 
-- [4EVERLAND](https://www.4everland.org/) - _provides APIs, RPC services and tools for hosting decentralised applications and enabling decentralised storage on Ethereum_
+- [4EVERLAND](https://www.4everland.org/) - _provides APIs, RPC services and tools for hosting decentralized applications and enabling decentralised storage on Ethereum_
 - [Alchemy](https://www.alchemy.com/) - _provides API services and tools for building and monitoring applications on Ethereum_
 - [Blast](https://blastapi.io/) - _an API platform that provides RPC/WSS APIs for Ethereum Archive Mainnet and Testnets._
 - [Blockapps](https://blockapps.net/) - _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
