@@ -37,6 +37,21 @@ The introduction of Proto-Danksharding in the Dencun upgrade adds cheaper data s
 
 [More on scaling Ethereum](/roadmap/scaling/)
 
+## How is old blob data accessed? {#historical-access}
+
+While regular Ethereum nodes will always hold the _current state_ of the network, historical blob data can be discarded after ~18 days. Before it can be discarded, Ethereum guarantees that this data has been made available to allows time for all rollup challenge periods to be completed, interested parties to download the data, and the L2 data to be considered finalized.
+
+Historical blob data my be desired for a variety of reasons, and can be stored and accessed using several decentralized protocols:
+
+- **Rollup providers** are incentivized to store this data to improve the user experience of their rollup
+- **Block explorers** typically run archival nodes that will index and store all of this information for easy historical reference
+- **Third-party indexing protocols** such as The Graph can store this data using a decentralized set of node operators using crypto-economic incentives
+- **Bittorrent** is a decentralized protocol consisting of volunteers who can hold and serve this data
+- **[Ethereum portal network](/developers/docs/networking-layer/portal-network/)** aims to provide access to all Ethereum data through a decentralized network of node operators, by means of splitting up data amongst participants, similar to Bittorrent
+- **Individual users** are always free to store their own copy of any data they would like for historical reference
+
+It is important to note, that recovering historical state of a **1-of-N trust modal**, meaning that you only need _a single honest actor_ to provide the data, and then anyone can verify it to be correct using the current state of the network.
+
 ## How does this upgrade contribute to the broader Ethereum roadmap? {#roadmap-impact}
 
 Proto-Danksharding sets the stage for the full implementation of [Danksharding](/roadmap/danksharding/), which splits up the burden of storing rollup data amongst node operators, so each only has to handle a small portion of the total. This will <!-- TIME-SENSITIVE --> enable significantly more data blobs per block, and help Ethereum grow by another order of magnitude.
@@ -86,11 +101,17 @@ _Validator_ software is handled by the consensus clients, which have all been up
 - ETH issuance is proportional to the total amount of ETH staked, thus this limitation will slow the potential issuance of new ETH
 - This does NOT mean that new validators cannot join, but removes the exponential climb in how many are allowed to join at a time
 
+## Will all transactions on L2s now use temporary blob space, or will you be able to choose? {#calldata-vs-blobs}
+
+Rollup transactions are not required to use blob space for their data (though they are economically incentivized to do so). Each can optionally write their data to blobs (guaranteed available for all challenge periods, very cheap) or to smart contract "calldata" (permanent storage, more expensive). Rollup providers will decide which to use based on the current demand for blob space. If blobs are in high demand, the rollup may decide to use calldata to ensure the data is posted in a timely manner.
+
+Although this decision is likely to be performed behind-the-scenes by rollup providers, it is theoretically possible for a user to choose which storage type to use. This would require the rollup provider to expose this option to the user, which introduces additional complexities when bundling transactions in a cost-effective manner. See individual rollup provider documentation for more details.
+
 ## Would this reduce layer 1 (L1) gas fees in any way? {#l1-fee-impact}
 
 Yes, but significantly less than on layer 2 rollups. A new gas market is introduced exclusively for blob space, for use by rollup providers. This reduces the demand from these rollups for L1 block space, pushing gas prices downward.
 
-_Although fees on L1 may be reduced by off-loading rollup data to blobs, this upgrade primarily focuses on the reduction of L2 fees. Reduction of fees on L1 (Mainnet) may occur as a second-order effect._
+_Although fees on L1 may be reduced by off-loading rollup data to blobs, this upgrade primarily focuses on the reduction of L2 fees. Reduction of fees on L1 (Mainnet) may occur as a second-order effect to a lesser extent._
 
 - L1 gas reduction will be proportional to adoption/usage of blob data by rollup providers
 - L1 gas is likely to remain competitive from non-rollup related activity
