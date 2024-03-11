@@ -6,26 +6,10 @@ import { ChatOpenAI } from '@langchain/openai';
 export default async function handler(req: NextApiRequest,
   res: NextApiResponse,
 ) {
-<<<<<<< HEAD
   console.log('Received request');
   if (!req.body || !req.body.messages) {
     console.log('Missing messages in request body');
     return res.status(400).json({ error: 'Missing messages in request body' });
-=======
-  const { messages } = await req.body;
-  const currentMessageContent = messages[messages.length - 1].content;
-
-  const response = await fetch("https://deploy-preview-12424--ethereumorg.netlify.app/api/vector", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(currentMessageContent),
-  });
-  if (!response.ok) {
-    console.error('Fetch Error:', response.statusText, await response.text());
-    return res.status(response.status).json({ error: response.statusText });
->>>>>>> 9f795c443a16d9a0bf29fd3151fed9a7755fd171
   }
 
   const messages = req.body.messages;
