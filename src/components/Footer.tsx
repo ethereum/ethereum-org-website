@@ -88,14 +88,6 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: "Gas fees",
         },
         {
-          to: "/bridges/",
-          text: t("bridges"),
-        },
-        {
-          to: "/zero-knowledge-proofs/",
-          text: t("zero-knowledge-proofs"),
-        },
-        {
           to: "/run-a-node/",
           text: t("run-a-node"),
         },
@@ -106,6 +98,10 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
         {
           to: "/quizzes/",
           text: t("quizzes-title"),
+        },
+        {
+          to: `/glossary/`,
+          text: t("ethereum-glossary"),
         },
       ],
     },
@@ -149,18 +145,6 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("decentralized-identity"),
         },
         {
-          to: `/social-networks/`,
-          text: t("decentralized-social-networks"),
-        },
-        {
-          to: `/desci/`,
-          text: t("decentralized-science"),
-        },
-        {
-          to: `/refi/`,
-          text: t("regenerative-finance"),
-        },
-        {
           to: `/staking/`,
           text: t("stake-eth"),
         },
@@ -183,6 +167,10 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("tutorials"),
         },
         {
+          to: `/developers/docs/`,
+          text: t("documentation"),
+        },
+        {
           to: `/developers/learning-tools/`,
           text: t("learn-by-coding"),
         },
@@ -195,16 +183,8 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("grants"),
         },
         {
-          to: `/developers/docs/`,
-          text: t("documentation"),
-        },
-        {
           to: `/developers/docs/intro-to-ethereum/`,
           text: t("nav-docs-foundation-label"),
-        },
-        {
-          to: `/developers/docs/ethereum-stack/`,
-          text: t("nav-docs-stack-label"),
         },
         {
           to: `/developers/docs/design-and-ux/`,
@@ -244,8 +224,8 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("translation-program"),
         },
         {
-          to: "/about/",
-          text: t("about-us"),
+          to: "/bug-bounty/",
+          text: t("ethereum-bug-bounty"),
         },
         {
           to: "/foundation/",
@@ -258,10 +238,6 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
         {
           to: "https://esp.ethereum.foundation",
           text: t("esp"),
-        },
-        {
-          to: "/bug-bounty/",
-          text: t("ethereum-bug-bounty"),
         },
         {
           to: "https://devcon.org/",
@@ -285,18 +261,6 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("nav-roadmap-security-label"),
         },
         {
-          to: `/roadmap/scaling/`,
-          text: t("nav-roadmap-scaling-label"),
-        },
-        {
-          to: `/roadmap/user-experience/`,
-          text: t("nav-roadmap-ux-label"),
-        },
-        {
-          to: `/roadmap/future-proofing/`,
-          text: t("nav-roadmap-future-label"),
-        },
-        {
           to: `/history/`,
           text: t("nav-history-label"),
         },
@@ -318,12 +282,12 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
 
   const dipperLinks: FooterLink[] = [
     {
-      to: "/assets/",
-      text: t("ethereum-brand-assets"),
+      to: "/about/",
+      text: t("about-us"),
     },
     {
-      to: `/glossary/`,
-      text: t("ethereum-glossary"),
+      to: "/assets/",
+      text: t("ethereum-brand-assets"),
     },
     {
       to: "/community/code-of-conduct/",
