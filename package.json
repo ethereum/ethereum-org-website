@@ -86,7 +86,7 @@
     "storybook": "7.6.6",
     "storybook-react-i18next": "^2.0.9",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.6",
+    "typescript": "^5.4.2",
     "unified": "^10.0.0",
     "unist-util-visit": "^5.0.0"
   },

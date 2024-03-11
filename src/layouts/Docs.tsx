@@ -139,7 +139,7 @@ const OrderedList = (props: ListProps) => (
 )
 
 const ListItem = (props: ListItemProps) => (
-  <ChakraListItem color="text300" {...props} />
+  <ChakraListItem {...props} />
 )
 
 // Apply styles for classes within markdown here
