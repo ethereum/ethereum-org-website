@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react"
+import React, { ReactNode, useEffect } from "react"
 import {
   Popover,
   PopoverArrow,
@@ -6,6 +6,7 @@ import {
   PopoverContent,
   PopoverProps,
   PopoverTrigger,
+  useDisclosure,
 } from "@chakra-ui/react"
 
 export interface IProps extends PopoverProps {
@@ -14,11 +15,35 @@ export interface IProps extends PopoverProps {
 }
 
 const Tooltip: React.FC<IProps> = ({ content, children, ...rest }) => {
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+  // Close the popover when the user scrolls.
+  // This is useful for mobile devices where the popover is open by clicking the
+  // trigger, not hovering.
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isOpen) {
+        onClose()
+      }
+    }
+
+    // Add event listener when the popover is open
+    if (isOpen) {
+      window.addEventListener("scroll", handleScroll)
+    }
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll)
+    }
+  }, [isOpen, onClose])
+
   return (
     <Popover
+      isOpen={isOpen}
+      onOpen={onOpen}
+      onClose={onClose}
       placement="top"
       trigger="hover"
-      strategy="fixed"
       gutter={8}
       {...rest}
     >
