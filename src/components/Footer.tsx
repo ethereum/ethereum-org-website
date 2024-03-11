@@ -328,7 +328,7 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
   const linkProps = {
     isPartiallyActive: false,
     textDecor: "none",
-    color: "body.base",
+    color: "body.medium",
     fontWeight: "normal",
     _hover: hoverStyles,
     sx: {
