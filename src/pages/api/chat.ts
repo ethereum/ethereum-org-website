@@ -6,60 +6,42 @@ import { ChatOpenAI } from '@langchain/openai';
 export default async function handler(req: NextApiRequest,
   res: NextApiResponse,
 ) {
-  console.log('Received request');
-  if (!req.body || !req.body.messages) {
-    console.log('Missing messages in request body');
-    return res.status(400).json({ error: 'Missing messages in request body' });
-  }
+  const { messages } = await req.body;
+  const currentMessageContent = messages[messages.length - 1].content;
 
-  const messages = req.body.messages;
-  const currentMessage = messages[messages.length - 1];
-  if (!currentMessage || !currentMessage.content) {
-    console.log('Missing content in last message');
-    return res.status(400).json({ error: 'Missing content in last message' });
-  }
+  // const response = await fetch("http://localhost:3001/api/vector", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: JSON.stringify(currentMessageContent),
+  // });
+  // if (!response.ok) {
+  //   console.error('Fetch Error:', response.statusText, await response.text());
+  //   return res.status(response.status).json({ error: response.statusText });
+  // }
+  
+  // const vectorSearch = await response.json();
 
-  const currentMessageContent = currentMessage.content;
+  const TEMPLATE = `You are a very enthusiastic ethereum.org representative who loves to help people! Given the following sections from the ethereum.org contributor documentation, answer the question using that information. You should paraphrase to provide clear explanations instead of simply quoting. If you are unsure and the answer is not explicitly written in the documentation, say "Sorry, I don't know how to help with that."
+  
+  Context sections:
 
-  try {
-    console.log('Fetching ethereum.org/api/vector');
-    const response = await fetch("https://deploy-preview-12424--ethereumorg.netlify.app/api/vector", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(currentMessageContent),
-    });
+  Question: """
+  ${currentMessageContent}
+  """
+  `;
 
-    if (!response.ok) {
-      const errorText = await response.text();
-      console.error('Fetch Error:', response.statusText, errorText);
-      return res.status(response.status).json({ error: response.statusText, details: errorText });
-    }
+  messages[messages.length -1].content = TEMPLATE;
 
-    const vectorSearch = await response.json();
+  const { stream, handlers } = LangChainStream();
+  const llm = new ChatOpenAI({
+    modelName: "gpt-3.5-turbo",
+    streaming: true,
+  });
 
-    const TEMPLATE = `You are a very enthusiastic ethereum.org representative who loves to help people! Given the following sections from the ethereum.org contributor documentation, answer the question using that information. You should paraphrase to provide clear explanations instead of simply quoting. If you are unsure and the answer is not explicitly written in the documentation, say "Sorry, I don't know how to help with that."
-    
-    Context sections:
-    ${vectorSearch}
-
-    Question: """
-    ${currentMessageContent}
-    """
-    `;
-
-    messages[messages.length -1].content = TEMPLATE;
-    console.log('Template generated:', TEMPLATE);
-
-    const { stream, handlers } = LangChainStream();
-    const llm = new ChatOpenAI({
-      modelName: "gpt-3.5-turbo",
-      streaming: true,
-    });
-
-    console.log('Starting LLM call');
-    await llm.call(
+  llm
+    .call(
       (messages as Message[]).map(m =>
         m.role == 'user'
           ? new HumanMessage(m.content)
@@ -67,13 +49,8 @@ export default async function handler(req: NextApiRequest,
       ),
       {},
       [handlers],
-    );
+    )
+    .catch(console.error);
 
-    console.log('LLM call finished');
-    return streamToResponse(stream, res);
-  } catch (error) {
-    console.error(error);
-    console.log('Internal Server Error');
-    return res.status(500).json({ error: 'Internal Server Errorf' });
-  }
+  return streamToResponse(stream, res);
 }
