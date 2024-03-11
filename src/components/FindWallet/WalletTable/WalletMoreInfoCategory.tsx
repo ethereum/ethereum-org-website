@@ -36,7 +36,7 @@ export const WalletMoreInfoCategory = ({
   const { t } = useTranslation("page-wallets-find-wallet")
 
   return (
-    <Box mx={{ base: 0, md: 0, lg: 2 }}>
+    <Box mx={{ base: 0, md: 0, lg: 2 }} w="100%">
       {/* Category label */}
       <Heading as="h4" lineHeight={1.4} fontSize="md" fontWeight="bold" mb={2}>
         {headingLabel}
@@ -92,7 +92,7 @@ export const WalletMoreInfoCategory = ({
 
                 <Tooltip
                   content={
-                    <Text lineHeight={1.2} color="body.base !important">
+                    <Text color="body.base !important">
                       {t(walletFilterData[feature.filterKey].description)}
                     </Text>
                   }

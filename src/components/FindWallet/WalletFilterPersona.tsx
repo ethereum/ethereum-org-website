@@ -43,7 +43,7 @@ const WalletFilterPersona = ({
           : { base: "200px", lg: "minmax(0, 1fr)" }
       }
       mb={showMobileSidebar ? 4 : 2}
-      overflowX="scroll"
+      overflowX="auto"
     >
       {personas.map((persona, idx) => {
         return (
