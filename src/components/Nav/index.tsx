@@ -17,6 +17,7 @@ import {
 } from "@chakra-ui/react"
 
 import { IconButton } from "@/components/Buttons"
+import { ChatBotModal } from "@/components/ChatBotModal"
 import { EthHomeIcon } from "@/components/icons"
 import LanguagePicker from "@/components/LanguagePicker"
 import { BaseLink } from "@/components/Link"
@@ -34,6 +35,7 @@ const Nav = () => {
   const { locale } = useRouter()
   const { t } = useTranslation("common")
   const searchModalDisclosure = useDisclosure()
+  const chatBotDisclosure = useDisclosure()
   const navWrapperRef = useRef(null)
   const languagePickerState = useDisclosure()
   const languagePickerRef = useRef<HTMLButtonElement>(null)
@@ -113,6 +115,14 @@ const Nav = () => {
                   }}
                   onClick={toggleColorMode}
                 />
+
+                <>
+                  <Button variant="ghost" onClick={chatBotDisclosure.onOpen}>AI</Button>
+                  <ChatBotModal
+                    isOpen={chatBotDisclosure.isOpen}
+                    onClose={chatBotDisclosure.onClose}
+                  />
+                </>
 
                 {/* Locale-picker menu */}
                 <LanguagePicker

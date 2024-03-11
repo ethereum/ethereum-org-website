@@ -58,7 +58,7 @@ type ChatBotModalProps = ModalContentProps &
     );
   }
 
-export const SimulatorModal = ({
+export const ChatBotModal = ({
   isOpen,
   onClose,
   size,

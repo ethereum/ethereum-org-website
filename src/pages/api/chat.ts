@@ -2,7 +2,7 @@ import { LangChainStream, Message,StreamingTextResponse } from 'ai';
 import { AIMessage, HumanMessage } from 'langchain/schema'
 import { ChatOpenAI } from '@langchain/openai';
 
-import { fetchVectorSearch } from '@/lib/api/fetchVectorSearch';
+// import { fetchVectorSearch } from '@/lib/api/fetchVectorSearch';
 
 export const runtime = 'edge';
 
