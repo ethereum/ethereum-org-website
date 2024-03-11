@@ -89,7 +89,7 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     primaryNamespace = "page-eth"
   }
 
-  if (path.startsWith("/glossary/") || path.startsWith("/dapps/")) {
+  if (path.startsWith("/glossary/")) {
     requiredNamespaces = [...requiredNamespaces, "glossary"]
   }
 
@@ -161,7 +161,6 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path.startsWith("/wallets/")) {
     primaryNamespace = "page-wallets"
-    requiredNamespaces = [...requiredNamespaces, "glossary"]
   }
 
   if (path.startsWith("/wallets/find-wallet/")) {
@@ -171,6 +170,16 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
 
   if (path.startsWith("/layer-2/")) {
     primaryNamespace = "page-layer-2"
+  }
+
+  // Glossary tooltips
+  if (
+    path.startsWith("/dapps/") ||
+    path.startsWith("/layer-2/") ||
+    path.startsWith("/wallets/") ||
+    path.startsWith("/get-eth/")
+  ) {
+    requiredNamespaces = [...requiredNamespaces, "glossary-tooltip"]
   }
 
   // Quizzes
@@ -203,7 +212,7 @@ const getRequiredNamespacesForLayout = (layout?: string) => {
 
   // namespaces required for all layouts
   if (layout) {
-    requiredNamespaces = [...requiredNamespaces, "glossary"]
+    requiredNamespaces = [...requiredNamespaces, "glossary-tooltip"]
   }
 
   if (layout === "docs") {

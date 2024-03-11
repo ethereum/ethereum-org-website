@@ -544,7 +544,7 @@ const RunANodePage = () => {
                   )}
                 </Text>
               </Text>
-              <InlineLink to="/developers/docs/nodes-and-clients/run-a-node/">
+              <InlineLink href="/developers/docs/nodes-and-clients/run-a-node/">
                 {t("page-run-a-node-getting-started-software-section-1-link")}
               </InlineLink>
             </ColumnFill>
@@ -823,19 +823,19 @@ const RunANodePage = () => {
         <H2>{t("page-run-a-node-further-reading-title")}</H2>
         <ul>
           <li>
-            <InlineLink to="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
+            <InlineLink href="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
               {t("page-run-a-node-further-reading-1-link")}
             </InlineLink>{" "}
             -{" "}
             <Text as="i">{t("page-run-a-node-further-reading-1-author")}</Text>
           </li>
           <li>
-            <InlineLink to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
+            <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
               {t("page-run-a-node-further-reading-2-link")}
             </InlineLink>
           </li>
           <li>
-            <InlineLink to="https://vitalik.eth.limo/general/2021/05/23/scaling.html">
+            <InlineLink href="https://vitalik.eth.limo/general/2021/05/23/scaling.html">
               {t("page-run-a-node-further-reading-3-link")}
             </InlineLink>{" "}
             -{" "}
@@ -879,7 +879,7 @@ const RunANodePage = () => {
         </Text>
         <Text>
           {t("page-run-a-node-staking-plans-ethstaker-link-description")} -{" "}
-          <InlineLink to="https://youtu.be/C2wwu1IlhDc">
+          <InlineLink href="https://youtu.be/C2wwu1IlhDc">
             {t("page-run-a-node-staking-plans-ethstaker-link-label")}
           </InlineLink>
         </Text>
@@ -890,7 +890,7 @@ const RunANodePage = () => {
         <Text>{t("page-run-a-node-rasp-pi-description")}</Text>
         <ul>
           <li>
-            <InlineLink to="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
+            <InlineLink href="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
               {t("page-run-a-node-rasp-pi-note-1-link")}
             </InlineLink>{" "}
             -{" "}
@@ -899,7 +899,7 @@ const RunANodePage = () => {
             </Text>
           </li>
           <li>
-            <InlineLink to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
+            <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
               {t("page-run-a-node-rasp-pi-note-2-link")}
             </InlineLink>{" "}
             -{" "}
@@ -908,7 +908,7 @@ const RunANodePage = () => {
             </Text>
           </li>
           <li>
-            <InlineLink to="/developers/tutorials/run-node-raspberry-pi">
+            <InlineLink href="/developers/tutorials/run-node-raspberry-pi">
               {t("page-run-a-node-rasp-pi-note-3-link")}
             </InlineLink>{" "}
             -{" "}

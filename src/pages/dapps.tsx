@@ -1,4 +1,10 @@
-import { type ComponentPropsWithRef, useEffect, useRef, useState } from "react"
+import React, {
+  type ComponentPropsWithRef,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
 import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -42,6 +48,7 @@ import ProductCard from "@/components/ProductCard"
 import ProductListComponent, {
   type ProductListProps,
 } from "@/components/ProductList"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -107,7 +114,6 @@ import dai from "@/public/dapps/stabledai.png"
 import status from "@/public/dapps/status.png"
 import superrare from "@/public/dapps/superrare.png"
 import synthetix from "@/public/dapps/synthetix.png"
-import uniswapec from "@/public/dapps/uni.png"
 import uniswap from "@/public/dapps/uni.png"
 import xmtp from "@/public/dapps/xmtp.png"
 import yearn from "@/public/dapps/yearn.png"
@@ -422,7 +428,7 @@ interface Category {
   benefits?: Array<{
     emoji: string
     title: string
-    description: string
+    description: ReactNode
   }>
 }
 
@@ -602,7 +608,9 @@ const DappsPage = () => {
         {
           emoji: ":scales:",
           title: t("page-dapps-finance-benefits-3-title"),
-          description: t("page-dapps-finance-benefits-3-description"),
+          description: (
+            <Translation id="page-dapps:page-dapps-finance-benefits-3-description" />
+          ),
         },
         {
           emoji: ":chains:",
@@ -1257,7 +1265,7 @@ const DappsPage = () => {
       name: "Uniswap",
       description: t("page-dapps-editors-choice-uniswap"),
       url: "https://uniswap.exchange/swap",
-      image: uniswapec,
+      image: uniswap,
       alt: t("page-dapps-uniswap-logo-alt"),
       background: "#212f46",
       type: CategoryType.FINANCE,
@@ -1335,10 +1343,7 @@ const DappsPage = () => {
       <Content>
         <StyledH2>{t("common:get-started")}</StyledH2>
         <Text>
-          {t("page-dapps-get-started-subtitle")}{" "}
-          <GlossaryTooltip termKey="transaction-fee">
-            {t("transaction-fees")}
-          </GlossaryTooltip>
+          <Translation id="page-dapps:page-dapps-get-started-subtitle" />
         </Text>
         <Row>
           <StepBoxContainer>
@@ -1871,7 +1876,7 @@ const DappsPage = () => {
           <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             {t("page-dapps-magic-behind-dapps-description")}
           </Text>
-          <InlineLink to="/what-is-ethereum/">
+          <InlineLink href="/what-is-ethereum/">
             {t("page-dapps-magic-behind-dapps-link")}
           </InlineLink>
         </Flex>
@@ -1879,7 +1884,9 @@ const DappsPage = () => {
         <Row>
           <LeftColumn>
             <H2>{t("page-dapps-how-dapps-work-title")}</H2>
-            <Text>{t("page-dapps-how-dapps-work-p1")}</Text>
+            <Text>
+              <Translation id="page-dapps:page-dapps-how-dapps-work-p1" />
+            </Text>
             <Text>{t("page-dapps-how-dapps-work-p2")}</Text>
             <Text>{t("page-dapps-how-dapps-work-p3")}</Text>
             <DocLink to="/developers/docs/dapps/">

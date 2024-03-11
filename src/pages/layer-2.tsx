@@ -288,7 +288,9 @@ const Layer2Page = () => {
             <Text>
               <Translation id="page-layer-2:layer-2-what-is-layer-1-1" />
             </Text>
-            <Text>{t("layer-2-what-is-layer-1-2")}</Text>
+            <Text>
+              <Translation id="page-layer-2:layer-2-what-is-layer-1-2" />
+            </Text>
           </Box>
           <Box flex="50%">
             <Text>
@@ -320,7 +322,7 @@ const Layer2Page = () => {
             />
             <Text>
               {t("layer-2-what-is-layer-1-list-link-1")}{" "}
-              <InlineLink to="/what-is-ethereum/">
+              <InlineLink href="/what-is-ethereum/">
                 {t("layer-2-what-is-layer-1-list-link-2")}
               </InlineLink>
             </Text>
@@ -356,7 +358,7 @@ const Layer2Page = () => {
             <Text>
               <Translation id="page-layer-2:layer-2-why-do-we-need-layer-2-scalability-2" />
             </Text>
-            <InlineLink to="/roadmap/vision/">
+            <InlineLink href="/roadmap/vision/">
               {t("layer-2-why-do-we-need-layer-2-scalability-3")}
             </InlineLink>
           </Box>
@@ -437,7 +439,7 @@ const Layer2Page = () => {
                 <SectionHeading as="h3">{title}</SectionHeading>
                 <Text>{description}</Text>
                 <Text>
-                  <InlineLink to={childLink}>{childSentence}</InlineLink>
+                  <InlineLink href={childLink}>{childSentence}</InlineLink>
                 </Text>
               </Flex>
             )
@@ -449,7 +451,9 @@ const Layer2Page = () => {
         <InfoBanner isWarning>
           <SectionHeading>{t("layer-2-dyor-title")}</SectionHeading>
           <Text>{t("layer-2-dyor-1")}</Text>
-          <Text>{t("layer-2-dyor-2")}</Text>
+          <Text>
+            <Translation id="page-layer-2:layer-2-dyor-2" />
+          </Text>
           <Text>
             <ButtonLink to="https://l2beat.com/scaling/risk">
               {t("layer-2-dyor-3")}
@@ -461,11 +465,15 @@ const Layer2Page = () => {
       <ContentBox id="use-layer-2">
         <SectionHeading>{t("layer-2-use-layer-2-title")}</SectionHeading>
         <Text>{t("layer-2-use-layer-2-1")}</Text>
-        <Text>{t("layer-2-contract-accounts")}</Text>
+        <Text>
+          <Translation id="page-layer-2:layer-2-contract-accounts" />
+        </Text>
         <SectionHeading as="h3">
           {t("layer-2-use-layer-2-generalized-title")}
         </SectionHeading>
-        <Text>{t("layer-2-use-layer-2-generalized-1")}</Text>
+        <Text>
+          <Translation id="page-layer-2:layer-2-use-layer-2-generalized-1" />
+        </Text>
         <Layer2CardGrid>
           {layer2DataCombined
             .filter((l2) => !l2.purpose.indexOf("universal"))
@@ -569,12 +577,12 @@ const Layer2Page = () => {
             <Text>{t("layer-2-sidechains-2")}</Text>
             <UnorderedList>
               <ListItem>
-                <InlineLink to="/developers/docs/scaling/sidechains/">
+                <InlineLink href="/developers/docs/scaling/sidechains/">
                   {t("layer-2-more-on-sidechains")}
                 </InlineLink>
               </ListItem>
               <ListItem>
-                <InlineLink to="/developers/docs/scaling/validium/">
+                <InlineLink href="/developers/docs/scaling/validium/">
                   {t("layer-2-more-on-validiums")}
                 </InlineLink>
               </ListItem>
@@ -624,18 +632,20 @@ const Layer2Page = () => {
           <Text>{t("layer-2-faq-question-2-description-2")}</Text>
           <Text>{t("layer-2-faq-question-2-description-3")}</Text>
           <Text>
-            <InlineLink to="/developers/docs/scaling/optimistic-rollups/">
+            <InlineLink href="/developers/docs/scaling/optimistic-rollups/">
               {t("layer-2-more-info-on-optimistic-rollups")}
             </InlineLink>
           </Text>
           <Text>
-            <InlineLink to="/developers/docs/scaling/zk-rollups/">
+            <InlineLink href="/developers/docs/scaling/zk-rollups/">
               {t("layer-2-more-info-on-zk-rollups")}
             </InlineLink>
           </Text>
         </ExpandableCard>
         <ExpandableCard title={`${t("layer-2-faq-question-4-title")}`}>
-          <Text>{t("layer-2-faq-question-4-description-1")}</Text>
+          <Text>
+            <Translation id="page-layer-2:layer-2-faq-question-4-description-1" />
+          </Text>
           <Text>
             <Translation id="page-layer-2:layer-2-faq-question-4-description-2" />
           </Text>
@@ -643,7 +653,7 @@ const Layer2Page = () => {
             <Translation id="page-layer-2:layer-2-faq-question-4-description-3" />
           </Text>
           <Text>
-            <InlineLink to="/bridges/">
+            <InlineLink href="/bridges/">
               {t("layer-2-more-on-bridges")}
             </InlineLink>
           </Text>
@@ -651,7 +661,7 @@ const Layer2Page = () => {
         <ExpandableCard title={`${t("layer-2-faq-question-5-title")}`}>
           <Text>
             {t("layer-2-faq-question-5-description-1")}{" "}
-            <InlineLink to="/contributing/adding-layer-2s/">
+            <InlineLink href="/contributing/adding-layer-2s/">
               {t("layer-2-faq-question-5-view-listing-policy")}
             </InlineLink>
           </Text>
@@ -665,31 +675,31 @@ const Layer2Page = () => {
         <SectionHeading>{t("layer-2-further-reading-title")}</SectionHeading>
         <UnorderedList ms="1.45rem" mb="1.45rem">
           <ListItem>
-            <InlineLink to="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
+            <InlineLink href="https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698">
               {t("a-rollup-centric-ethereum-roadmap")}
             </InlineLink>{" "}
             <i>- Vitalik Buterin </i>
           </ListItem>
           <ListItem>
-            <InlineLink to="https://vitalik.eth.limo/general/2021/01/05/rollup.html">
+            <InlineLink href="https://vitalik.eth.limo/general/2021/01/05/rollup.html">
               {t("an-incomplete-guide-to-rollups")}
             </InlineLink>{" "}
             <i>- Vitalik Buterin</i>
           </ListItem>
           <ListItem>
-            <InlineLink to="https://www.youtube.com/watch?v=DyNbmgkyxJI">
+            <InlineLink href="https://www.youtube.com/watch?v=DyNbmgkyxJI">
               {t("polygon-sidechain-vs-ethereum-rollups")}
             </InlineLink>{" "}
             <i>- Lex Clips</i>
           </ListItem>
           <ListItem>
-            <InlineLink to="https://www.youtube.com/watch?v=7pWxCklcNsU">
+            <InlineLink href="https://www.youtube.com/watch?v=7pWxCklcNsU">
               {t("rollups-the-ultimate-ethereum-scaling-strategy")}
             </InlineLink>{" "}
             <i>- Finematics</i>
           </ListItem>
           <ListItem>
-            <InlineLink to="https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r">
+            <InlineLink href="https://barnabe.substack.com/p/understanding-rollup-economics-from?s=r">
               {t("understanding-rollup-economics-from-first-principals")}
             </InlineLink>{" "}
             <i>- Barnabé Monnot</i>

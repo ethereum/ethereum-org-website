@@ -294,7 +294,7 @@ Per certi valori di `P` e `w`, la funzione `pow(x, w, P)` potrebbe avere molte c
 Dato che `P` è primo, allora è possibile scegliere un'appropriata `w` per una funzione di hashing di esponenziazione modulare usando il seguente risultato:
 
 > Osservazione 3. Prendiamo `P` come numero primo; `w` e `P-1` sono coprimi se e solo se per ogni `a` e `b` in `ℤ/Pℤ`:
->
+> 
 > <center>
 >   `aʷ mod P ≡ bʷ mod P` se e solo se `a mod P ≡ b mod P`
 > </center>
