@@ -2,8 +2,6 @@ import { LangChainStream, Message,StreamingTextResponse } from 'ai';
 import { AIMessage, HumanMessage } from 'langchain/schema'
 import { ChatOpenAI } from '@langchain/openai';
 
-// import { fetchVectorSearch } from '@/lib/api/fetchVectorSearch';
-
 export const runtime = 'edge';
 
 
@@ -13,25 +11,14 @@ export default async function POST(req) {
   console.log('API messages', messages);
   const currentMessageContent = messages[messages.length - 1].content;
 
-  // Utilize the server-side `fetchVectorSearch` function instead of `fetch`
-  // let vectorSearch;
-  // try {
-  //   // Since `fetchVectorSearch` expects a Request, we create a new Request instance with the current message content
-  //   const vectorSearchRequest = new Request('http://localhost:3001/api/vector', {
-  //     method: 'POST',
-  //     headers: { 'Content-Type': 'application/json' },
-  //     body: JSON.stringify({ content: currentMessageContent }), // Ensure body is stringified JSON
-  //   });
+  // const vectorSearch = await fetch("http://localhost:3000/api/vectorSearch", {
+  //   method: "POST",
+  //   headers: {
+  //     "Content-Type": "application/json",
+  //   },
+  //   body: currentMessageContent,
+  // }).then((res) => res.json());
 
-  //   // Call the `fetchVectorSearch` function
-  //   vectorSearch = await fetchVectorSearch(vectorSearchRequest);
-  // } catch (error) {
-  //   console.error('Error fetching vector search:', error);
-  //   // @ts-ignore
-  //   return new Response(JSON.stringify({ error: error.message }), {
-  //     status: 500,
-  //   });
-  // }
 
   // Construct a template for the chatbot to answer a question.
   // The template includes the vector search response and the question itself.
@@ -66,8 +53,6 @@ export default async function POST(req) {
       [handlers],
     )
     .catch(console.error);
-
-// console.log(vectorSearch)
 
   // Return a StreamingTextResponse with the stream from the LangChainStream.
   return new StreamingTextResponse(stream);
