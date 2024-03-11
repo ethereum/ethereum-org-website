@@ -73,11 +73,11 @@ const Layer2ProductCard = ({
               {children}
             </Box>
           )}
-          <Text opacity="0.8" fontSize="sm" mb={2} lineHeight="140%">
+          <Text fontSize="sm" mb={2} lineHeight="140%">
             {description}
           </Text>
           {note.length > 0 && (
-            <Text opacity="0.8" fontSize="sm" mb={2} lineHeight="140%">
+            <Text fontSize="sm" mb={2} lineHeight="140%">
               {t("layer-2-note")} {note}
             </Text>
           )}

@@ -41,6 +41,7 @@ import ExpandableCard from "./ExpandableCard"
 import FeaturedText from "./FeaturedText"
 import InfoBanner from "./InfoBanner"
 import MainArticle from "./MainArticle"
+import VideoIframe from "./VideoIframe"
 
 /**
  * Base HTML elements
@@ -161,6 +162,7 @@ export const htmlElements = {
   p: Paragraph,
   pre: Pre,
   ul: UnorderedList,
+  iframe: VideoIframe,
   ...mdxTableComponents,
 }
 
