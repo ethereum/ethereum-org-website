@@ -1,8 +1,9 @@
 ---
 title: Wrapped Ether (WETH)
 description: An introduction to Wrapped Ether (WETH)—an ERC20-compatible version of Ether (ETH). 
+lang: en
 ---
----
+
 # What Is Wrapped Ether (WETH)? {#what-is-wrapped-ether-weth}    
 Wrapped Ether (WETH) is an ERC-20 token representing Ethereum’s native Ether (ETH) coin. As a native cryptocurrency, the use of ETH is limited to transferring value and paying for computation on the Ethereum network. Using ETH in dapps is technically difficult because of its limitations. 
 
