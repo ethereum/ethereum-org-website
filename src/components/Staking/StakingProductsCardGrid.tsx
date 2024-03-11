@@ -53,7 +53,7 @@ const getIconFromName = (
   return Icon
 }
 
-const Status: React.FC<{ status: FlagType }> = ({ status }) => {
+const Status = ({ status }: { status: FlagType }) => {
   if (!status) return null
 
   const styles = { fontSize: "2xl", m: 0 }
@@ -70,10 +70,13 @@ const Status: React.FC<{ status: FlagType }> = ({ status }) => {
   }
 }
 
-const StakingBadge: React.FC<{
+const StakingBadge = ({
+  type,
+  children,
+}: {
   type: "ui" | "platform"
   children: React.ReactNode
-}> = ({ type, children }) => {
+}) => {
   const uiTypeColor = type === "ui" && "stakingPillUI"
   const platformTypeColor = type === "platform" && "stakingPillPlatform"
 
@@ -111,11 +114,11 @@ type Product = {
   economical: FlagType
   matomo: MatomoEventOptions
 }
-interface ICardProps {
+type StakingProductCardProps = {
   product: Product
 }
 
-const StakingProductCard: React.FC<ICardProps> = ({
+const StakingProductCard = ({
   product: {
     name,
     imageName,
@@ -139,7 +142,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
     economical,
     matomo,
   },
-}) => {
+}: StakingProductCardProps) => {
   const { t } = useTranslation("page-staking")
   const Svg = getIconFromName(imageName)
   const data = [
@@ -283,11 +286,11 @@ const StakingProductCard: React.FC<ICardProps> = ({
   )
 }
 
-export interface IProps {
+export type StakingProductCardGridProps = {
   category: string
 }
 
-const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
+const StakingProductCardGrid = ({ category }: StakingProductCardGridProps) => {
   const [rankedProducts, updateRankedProducts] = useState<Array<Product>>([])
   const [SAT, LUM] = useColorModeValue(["75%", "60%"], ["50%", "35%"])
 

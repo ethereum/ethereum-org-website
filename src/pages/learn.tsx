@@ -21,7 +21,7 @@ import type {
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import OriginalCard, {
-  type IProps as OriginalCardProps,
+  type CardProps as OriginalCardProps,
 } from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -131,7 +131,7 @@ const H3 = ({ children, ...props }: HeadingProps) => (
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/learn")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -213,6 +213,7 @@ const LearnPage = () => {
       <PageMetadata
         title={t("common:learn-hub")}
         description={t("hero-subtitle")}
+        image="/heroes/learn-hub-hero.png"
       />
 
       <HubHero {...heroContent} />

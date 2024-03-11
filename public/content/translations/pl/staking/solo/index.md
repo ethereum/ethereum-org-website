@@ -109,7 +109,7 @@ Dostępnych jest wiele opcji ułatwiających konfigurację. Skorzystaj z powyżs
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Należy pamiętać o znaczeniu wybrania [klienta mniejszościowego](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Narzędzia, które pozwalają na konfigurację klienta mniejszościowego są oznaczone jako <em style={{ textTransform: "uppercase" }}>„multi-klient”.</em>
+Należy pamiętać o znaczeniu wybrania [klienta mniejszościowego](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Narzędzia, które pozwalają na konfigurację klienta mniejszościowego, są oznaczone jako <em style={{ textTransform: "uppercase" }}>„multi-klient”.</em>
 
 ### Generatory kluczy
 
@@ -195,6 +195,7 @@ Aby odblokować i otrzymać całe saldo z powrotem, należy również zakończy�
 
 ## Dalsza lektura {#further-reading}
 
+- [Katalog stakingu Ethereum](https://www.staking.directory/) — _Eridian i Spacesider_
 - [Problem różnorodności klientów Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) — _@emmanuelawosika 2022 r._
 - [Wspieranie różnorodności klientów](https://www.attestant.io/posts/helping-client-diversity/) — _Jim McDonald 2022 r._
 - [Różnorodność klientów w warstwie konsensusu Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) — _jmcook.eth 2022 r._

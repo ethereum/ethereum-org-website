@@ -95,7 +95,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/wallets/find-wallet"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {
@@ -142,6 +142,7 @@ const FindWalletPage = () => {
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
+        image="/wallets/wallet-hero.png"
       />
 
       <BannerNotification shouldShow={true}>

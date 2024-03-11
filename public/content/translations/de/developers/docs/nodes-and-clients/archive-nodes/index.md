@@ -56,7 +56,7 @@ Bevor Sie ihren eigenen Archivierungsknoten starten, sollten Sie die Unterschied
 
 ## Empfohlene Verfahren
 
-Neben den generellen [Empfehlungen zum Betreiben eines Knotens](/developers/docs/nodes-and-clients/run-a-node/) kann ein Archivierungsknoten höhere Anforderungen an Hardware und Wartung stellen. In Anbetracht von Erigons [Schlüsselfunktionen](https://github.com/ledgerwatch/erigon#key-features) ist der praktischste Ansatz, die [Erigon](/developers/docs/nodes-and-clients/#erigon)-Client-Implementation zu verwenden.
+Abgesehen von den generellen [Empfehlungen zum Betreiben einer Node](/developers/docs/nodes-and-clients/run-a-node/) kann eine Archivierungs-Node höhere Anforderungen an Hardware und Wartung stellen. In Anbetracht von Erigons [Schlüsselfunktionen](https://github.com/ledgerwatch/erigon#key-features) ist der praktischste Ansatz, die [Erigon](/developers/docs/nodes-and-clients/#erigon)-Client-Implementation zu verwenden.
 
 ### Hardware
 

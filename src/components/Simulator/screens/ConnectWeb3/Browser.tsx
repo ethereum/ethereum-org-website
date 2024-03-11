@@ -11,10 +11,10 @@ import { NotificationPopover } from "../../NotificationPopover"
 
 import { EXAMPLE_APP_URL } from "./constants"
 
-interface IProps extends FlexProps {
+type BrowserProps = FlexProps & {
   progressStepper: () => void
 }
-export const Browser: React.FC<IProps> = ({ progressStepper, ...props }) => {
+export const Browser = ({ progressStepper, ...props }: BrowserProps) => {
   const [typing, setTyping] = useState(false)
   useEffect(() => {
     const timeout = setTimeout(() => {

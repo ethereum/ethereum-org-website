@@ -7,7 +7,7 @@ import { CorrectIcon, IncorrectIcon, TrophyIcon } from "../../icons/quiz"
 
 import { AnswerStatus } from "./useQuizWidget"
 
-interface AnswerIconProps {
+type AnswerIconProps = {
   answerStatus: AnswerStatus
 }
 

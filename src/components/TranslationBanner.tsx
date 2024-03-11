@@ -12,17 +12,17 @@ import { DEFAULT_LOCALE } from "../lib/constants"
 import { ButtonLink } from "./Buttons"
 import Emoji from "./Emoji"
 
-export interface IProps {
+export type TranslationBannerProps = {
   shouldShow: boolean
   originalPagePath: string
   isPageContentEnglish: boolean
 }
 
-const TranslationBanner: React.FC<IProps> = ({
+const TranslationBanner = ({
   shouldShow,
   originalPagePath,
   isPageContentEnglish,
-}) => {
+}: TranslationBannerProps) => {
   const [isOpen, setIsOpen] = useState(shouldShow)
   const [textColor] = useToken("colors", ["text"])
   const { t } = useTranslation("common")
@@ -96,7 +96,9 @@ const TranslationBanner: React.FC<IProps> = ({
                 {t("translation-banner-button-translate-page")}
               </ButtonLink>
             </Box>
-            {!isPageContentEnglish && (
+            {/* Todo: Reimplement once fixed */}
+            {/* Issue: https://github.com/ethereum/ethereum-org-website/issues/12292 */}
+            {/* {!isPageContentEnglish && (
               <Box>
                 <ButtonLink
                   to={originalPagePath}
@@ -110,7 +112,7 @@ const TranslationBanner: React.FC<IProps> = ({
                   {t("translation-banner-button-see-english")}
                 </ButtonLink>
               </Box>
-            )}
+            )} */}
           </Flex>
         </Flex>
         <CloseButton

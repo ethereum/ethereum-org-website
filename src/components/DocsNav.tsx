@@ -22,7 +22,7 @@ import docLinks from "@/data/developer-docs-links.yaml"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
+const TextDiv = ({ children, ...props }: FlexProps) => (
   <Flex
     direction="column"
     justify="space-between"
@@ -128,13 +128,16 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
   // Find index that matches current page
   let currentIndex = 0
   for (let i = 0; i < docsArray.length; i++) {
-    if (asPath.indexOf(docsArray[i].to) > -1) {
+    if (
+      asPath.indexOf(docsArray[i].to) >= 0 &&
+      asPath.length === docsArray[i].to.length
+    ) {
       currentIndex = i
     }
   }
 
   // Extract previous and next doc based on current index +/- 1
-  const previousDoc = currentIndex - 1 > 0 ? docsArray[currentIndex - 1] : null
+  const previousDoc = currentIndex - 1 >= 0 ? docsArray[currentIndex - 1] : null
   const nextDoc =
     currentIndex + 1 < docsArray.length ? docsArray[currentIndex + 1] : null
 

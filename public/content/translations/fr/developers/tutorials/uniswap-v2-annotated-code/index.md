@@ -202,13 +202,13 @@ Dans le cadre de l'échange de paires, le taux de change entre le jeton0 et jeto
 Voici un exemple simple. Notez que pour des raisons de simplicité, le tableau n'affiche que trois chiffres après la virgule et que nous ignorons le taux de change de 0,3 % et qu'ainsi, les chiffres présentés sont inexacts.
 
 | Evénement                                             |  reserve0 |  reserve1 | reserve0 \* reserve1 | Taux de change moyen (jeton1 / jeton0) |
-| ----------------------------------------------------- | --------: | --------: | -------------------: | -------------------------------------- |
-| Configuration initiale                                | 1.000,000 | 1.000,000 |            1.000.000 |                                        |
-| Le trader A échange 50 jetons0 contre 47,619 jetons1  | 1.050,000 |   952,381 |            1.000.000 | 0,952                                  |
-| Le trader B échange 10 jetons0 contre 8,984 jetons1   | 1.060,000 |   943,396 |            1.000.000 | 0,898                                  |
-| Le trader C échange 40 jetons0 pcontre 34,305 jetons1 | 1.100,000 |   909,090 |            1.000.000 | 0,858                                  |
-| Le trader D échange 100 jetons1 contre 109,01 jetons0 |   990,990 | 1.009,090 |            1.000.000 | 0,917                                  |
-| Le trader E échange 10 jetons0 contre 10,079 jetons1  | 1.000.990 |   999.010 |            1.000,000 | 1,008                                  |
+| ----------------------------------------------------- | ---------:| ---------:| ----------------------:| -------------------------------------- |
+| Configuration initiale                                | 1.000,000 | 1.000,000 |              1.000.000 |                                        |
+| Le trader A échange 50 jetons0 contre 47,619 jetons1  | 1.050,000 |   952,381 |              1.000.000 | 0,952                                  |
+| Le trader B échange 10 jetons0 contre 8,984 jetons1   | 1.060,000 |   943,396 |              1.000.000 | 0,898                                  |
+| Le trader C échange 40 jetons0 pcontre 34,305 jetons1 | 1.100,000 |   909,090 |              1.000.000 | 0,858                                  |
+| Le trader D échange 100 jetons1 contre 109,01 jetons0 |   990,990 | 1.009,090 |              1.000.000 | 0,917                                  |
+| Le trader E échange 10 jetons0 contre 10,079 jetons1  | 1.000.990 |   999.010 |              1.000,000 | 1,008                                  |
 
 Comme les traders fournissent plus de jetons0, la valeur relative du jeton1 augmente et vice versa, en fonction de l'offre et de la demande.
 
@@ -364,10 +364,10 @@ Si le temps écoulé n'est pas nul, cela signifie que nous sommes la première t
 
 Chaque accumulateur de coûts est mis à jour en tenant compte du coût le plus récent (réserve de l'autre jeton/réserve de ce jeton) multiplié par le temps écoulé en secondes. Pour obtenir un prix moyen, vous prenez le prix cumulé de deux points dans le temps et le divisez par la différence de temps entre ces deux points. Par exemple, supposons cette séquence d'événements :
 
-| Evénement                                                 |  réserve0 |  réserve1 | horodatage | Taux de change marginal (réserve1 / réserve0) |         DernierprixCumulé0 |
-| --------------------------------------------------------- | --------: | --------: | ---------- | --------------------------------------------: | -------------------------: |
-| Configuration initiale                                    | 1.000,000 | 1.000,000 | 5.000      |                                         1,000 |                          0 |
-| Le Trader A dépose 50 jetons0 et récupère 47,619 jetons1  | 1.050,000 |   952,381 | 5.020      |                                         0,907 |                         20 |
+| Evénement                                                 |  réserve0 |  réserve1 | horodatage | Taux de change marginal (réserve1 / réserve0) |           DernierprixCumulé0 |
+| --------------------------------------------------------- | ---------:| ---------:| ---------- | ---------------------------------------------:| ----------------------------:|
+| Configuration initiale                                    | 1.000,000 | 1.000,000 | 5.000      |                                         1,000 |                            0 |
+| Le Trader A dépose 50 jetons0 et récupère 47,619 jetons1  | 1.050,000 |   952,381 | 5.020      |                                         0,907 |                           20 |
 | Le Trader B dépose 10 jetons0 et récupère 8,984 jetons1   | 1.060,000 |   943,396 | 5.030      |                                         0,890 |       20+10\*0,907 = 29,07 |
 | Le Trader C dépose 40 jetons0 et récupère 34,305 jetons1  | 1.100,000 |   909,090 | 5.100      |                                         0,826 |    29,07+70\*0,890 = 91,37 |
 | Le Trader D dépose 100 jetons1 et récupère 109,01 jetons0 |   990,990 | 1.009,090 | 5.110      |                                         1,018 |    91,37+10\*0,826 = 99,63 |
@@ -499,9 +499,9 @@ Lors du premier dépôt, nous ne connaissons pas la valeur relative des deux jet
 Nous pouvons nous y fier parce qu'il est dans l'intérêt du déposant de fournir une valeur égale pour éviter de perdre de la valeur à l'arbitrage. Imaginons que la valeur des deux jetons est identique mais que notre déposant a déposé quatre fois plus de **Jetons1** que de **Jetons0**. Un trader peut s'appuyer sur le fait que l'échange de paire laisse supposer qu'il est plus utile de retirer de la valeur du **Jeton0**.
 
 | Evénement                                                              | réserve0 | réserve1 | réserve0 \* réserve1 | Valeur du pool (réserve0 + réserve1) |
-| ---------------------------------------------------------------------- | -------: | -------: | -------------------: | -----------------------------------: |
-| Configuration initiale                                                 |        8 |       32 |                  256 |                                   40 |
-| Le Trader dépose dépose 8 jetons **Jeton0** et récupère 16 **Jetons1** |       16 |       16 |                  256 |                                   32 |
+| ---------------------------------------------------------------------- | --------:| --------:| ----------------------:| ------------------------------------:|
+| Configuration initiale                                                 |        8 |       32 |                    256 |                                   40 |
+| Le Trader dépose dépose 8 jetons **Jeton0** et récupère 16 **Jetons1** |       16 |       16 |                    256 |                                   32 |
 
 Comme vous pouvez le constater, le trader a gagné 8 jetons supplémentaires qui viennent d'une réduction de la valeur du pool, affectant le déposant qui le possède.
 
@@ -515,12 +515,12 @@ Comme vous pouvez le constater, le trader a gagné 8 jetons supplémentaires qui
 Qu'il s'agisse du dépôt initial ou d'un dépôt ultérieur, le nombre de jetons de liquidité que nous fournissons est égal à la racine carrée du changement dans `reserve0*reserve1` et la valeur du jeton de liquidité ne change pas (sauf si nous obtenons un dépôt qui n'a pas de valeurs égales pour les deux types, auquel cas l'« amende » est distribuée). Voici un autre exemple avec deux jetons qui ont la même valeur, avec trois bons dépôts et un mauvais (dépôt d'un seul type de jeton, donc il ne produit aucun jeton de liquidité).
 
 | Événement                      | réserve0 | réserve1 | réserve0 \* réserve1 | Valeur du pool (réserve0 + réserve1) | Jetons de liquidité frappés pour ce dépôt | Jetons de liquidité totaux | Valeur de chaque jeton de liquidité |
-| ------------------------------ | -------: | -------: | -------------------: | -----------------------------------: | ----------------------------------------: | -------------------------: | ----------------------------------: |
-| Configuration initiale         |    8,000 |    8,000 |                   64 |                               16,000 |                                         8 |                          8 |                               2,000 |
-| Dépôt de quatre de chaque type |   12,000 |   12,000 |                  144 |                               24,000 |                                         4 |                         12 |                               2,000 |
-| Dépôt de deux de chaque type   |   14,000 |   14,000 |                  196 |                               28,000 |                                         2 |                         14 |                               2,000 |
-| Dépôt de valeurs inégales      |   18,000 |   14,000 |                  252 |                               32,000 |                                         0 |                         14 |                              ~2,286 |
-| Après arbitrage                |  ~15,874 |  ~15,874 |                  252 |                              ~31,748 |                                         0 |                         14 |                              ~2,267 |
+| ------------------------------ | --------:| --------:| ----------------------:| ------------------------------------:| -----------------------------------------:| --------------------------:| -----------------------------------:|
+| Configuration initiale         |    8,000 |    8,000 |                     64 |                               16,000 |                                         8 |                          8 |                               2,000 |
+| Dépôt de quatre de chaque type |   12,000 |   12,000 |                    144 |                               24,000 |                                         4 |                         12 |                               2,000 |
+| Dépôt de deux de chaque type   |   14,000 |   14,000 |                    196 |                               28,000 |                                         2 |                         14 |                               2,000 |
+| Dépôt de valeurs inégales      |   18,000 |   14,000 |                    252 |                               32,000 |                                         0 |                         14 |                              ~2,286 |
+| Après arbitrage                |  ~15,874 |  ~15,874 |                    252 |                              ~31,748 |                                         0 |                         14 |                              ~2,267 |
 
 ```solidity
         }
@@ -743,7 +743,7 @@ C'est la fonction principale de l'usine : créer un échange de paires entre deu
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Nous souhaitons que l'adresse du nouvel échange soit déterminable de sorte qu'elle puisse être calculée à l'avance hors chaîne (cela peut être utile pour [les transactions de couche 2](/developers/docs/layer-2-scaling/)). Pour cela, nous devons avoir les adresses de jetons dans un ordre cohérent indépendant de l'ordre dans lequel nous les avons reçus. Aussi les trions-nous ici.
+Nous souhaitons que l'adresse du nouvel échange soit déterminable de sorte qu'elle puisse être calculée à l'avance hors chaîne (cela peut être utile pour [les transactions de couche 2](/developers/docs/scaling/)). Pour cela, nous devons avoir les adresses de jetons dans un ordre cohérent indépendant de l'ordre dans lequel nous les avons reçus. Aussi les trions-nous ici.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
@@ -985,7 +985,7 @@ Les fournisseurs de liquidités spécifient un minimum, généralement parce qu'
 Par exemple, imaginez un cas où le taux de change est d'un pour un et où le fournisseur de liquidités spécifie ces valeurs :
 
 | Paramètre      | Valeur |
-| -------------- | -----: |
+| -------------- | ------:|
 | amountADesired |   1000 |
 | amountBDesired |   1000 |
 | amountAMin     |    900 |

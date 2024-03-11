@@ -120,7 +120,7 @@ const H3 = (props: ChildOnlyProp) => (
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("assets")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -160,17 +160,17 @@ const AssetsPage = () => {
             </Heading>
           </Center>
           <Center>
-            <InlineLink to="/assets/#illustrations">
+            <InlineLink href="/assets/#illustrations">
               {t("page-assets-illustrations")}
             </InlineLink>
           </Center>
           <Center>
-            <InlineLink to="/assets/#historical">
+            <InlineLink href="/assets/#historical">
               {t("page-assets-historical-artwork")}
             </InlineLink>
           </Center>
           <Center>
-            <InlineLink to="/assets/#brand">
+            <InlineLink href="/assets/#brand">
               {t("page-assets-ethereum-brand-assets")}
             </InlineLink>
           </Center>

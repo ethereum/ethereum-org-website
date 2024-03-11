@@ -5,26 +5,23 @@ import {
   ModalContent,
   type ModalContentProps,
   ModalOverlay,
-  type ModalProps,
+  type ModalProps as ChakraModalProps,
 } from "@chakra-ui/react"
 
-export interface IPropsOverlay {
-  isActive: boolean
-}
+export type ModalProps = ModalContentProps &
+  Pick<ChakraModalProps, "size"> & {
+    children?: React.ReactNode
+    isOpen: boolean
+    setIsOpen: (isOpen: boolean) => void
+  }
 
-export interface IProps extends ModalContentProps, Pick<ModalProps, "size"> {
-  children?: React.ReactNode
-  isOpen: boolean
-  setIsOpen: (isOpen: boolean) => void
-}
-
-const Modal: React.FC<IProps> = ({
+const Modal = ({
   children,
   isOpen,
   setIsOpen,
   size,
   ...restProps
-}) => {
+}: ModalProps) => {
   return (
     <ChakraModal
       isOpen={isOpen}

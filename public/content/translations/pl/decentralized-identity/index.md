@@ -6,16 +6,16 @@ template: use-cases
 emoji: ":id:"
 sidebarDepth: 2
 image: /eth-gif-cat.png
-summaryPoint1: W tradycyjnych systemach tożsamościwydawanie, utrzymywanie i kontrola identyfikatorów są scentralizowane.
+summaryPoint1: W tradycyjnych systemach tożsamości wydawanie, utrzymywanie i kontrola Twoich identyfikatorów są scentralizowane.
 summaryPoint2: Tożsamość zdecentralizowana usuwa zależność od scentralizowanych podmiotów trzecich.
-summaryPoint3: Dzięki crypto użytkownicy, po raz kolejny, mają teraz narzędzia do wydawania i kontrolowania własnych identyfikatorów i zaświadczeń.
+summaryPoint3: Dzięki technologii kryptograficznej użytkownicy mają ponownie narzędzia do wydawania, przechowywania i kontrolowania własnych identyfikatorów i poświadczeń.
 ---
 
 Tożsamość stanowi dzisiaj podstawę praktycznie każdego aspektu życia. Korzystając z usług internetowych, otwierając konto bankowe, głosując w wyborach, kupując nieruchomości, zatrudniając się — zawsze musisz udowodnić swoją tożsamość.
 
 Jednak tradycyjne systemy zarządzania tożsamością od dawna polegają na scentralizowanych pośrednikach, którzy wydają, przechowują i kontrolują Twoje identyfikatory oraz [poświadczenia](#what-are-attestations). Oznacza to, że nie możesz kontrolować informacji związanych z tożsamością ani decydować, kto ma dostęp do informacji umożliwiających identyfikację osoby (PII) i jak duży jest ten dostęp.
 
-Te problemy rozwiązują zdecentralizowane systemy tożsamości oparte na publicznych łańcuchach bloków, takie jak Ethereum. Tożsamość zdecentralizowana umożliwia jednostkom zarządzanie informacjami związanymi z ich tożsamością. Dzięki zdecentralizowanym rozwiązaniom w zakresie tożsamości możesz _samodzielnie_ tworzyć identyfikatory oraz żądać swoich poświadczeń i przechowywać je bez polegania na organach centralnych, takich jak dostawcy usług lub rządy.
+Te problemy rozwiązują zdecentralizowane systemy tożsamości oparte na publicznych blockchainach takich jak Ethereum. Tożsamość zdecentralizowana umożliwia jednostkom zarządzanie informacjami związanymi z ich tożsamością. Dzięki zdecentralizowanym rozwiązaniom w zakresie tożsamości możesz _samodzielnie_ tworzyć identyfikatory oraz żądać swoich poświadczeń i przechowywać je bez polegania na organach centralnych, takich jak dostawcy usług lub rządy.
 
 ## Co to jest tożsamość? {#what-is-identity}
 
@@ -33,7 +33,7 @@ Identyfikator jest informacją, która wskazuje określoną lub określone tożs
 
 Te tradycyjne przykłady identyfikatorów są wydawane, przechowywane i kontrolowane przez jednostki centralne. Potrzebujesz pozwolenia od swojego rządu, aby zmienić swoje imię i nazwisko, a od platformy mediów społecznościowych, aby zmienić swój identyfikator.
 
-## Co to są atesty? {#what-are-attestations}
+## Co to są poświadczenia? {#what-are-attestations}
 
 Poświadczenie jest oświadczeniem złożonym przez jeden podmiot na temat innego podmiotu. Jeśli mieszkasz w Stanach Zjednoczonych, prawo jazdy wydane przez departament pojazdów mechanicznych (jeden podmiot) potwierdza, że inny podmiot (Ty) jest uprawniony do prowadzenia samochodu.
 
@@ -161,6 +161,7 @@ Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zd
 - **[Proof of Humanity (lub PoH)](https://www.proofofhumanity.id)** — _ system weryfikacji tożsamości społecznościowej oparty na Ethereum._
 - **[BrightID](https://www.brightid.org/)** — _sieć zdecentralizowanych tożsamości społecznościowych typu open source. Jej celem jest zreformowanie weryfikacji tożsamości poprzez tworzenie i analizę wykresu społecznego._
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** — _zdecentralizowany agregator tożsamości cyfrowych._
+- **[walt.id](https://walt.id)** — _zdecentralizowana infrastruktura tożsamości i portfela o otwartym kodzie źródłowym, która umożliwia deweloperom i organizacjom wykorzystanie niezależnej tożsamości i NFT/SBT._
 
 ## Dalsza lektura {#further-reading}
 
@@ -170,6 +171,7 @@ Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zd
 - [Co to jest Ethereum ERC725? Samodzielne zarządzanie tożsamością w łańcuchu bloków](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [Jak łańcuch bloków może rozwiązać problem cyfrowej tożsamości](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [Co to jest zdecentralizowana tożsamość i dlaczego warto się nią zajmować?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Wprowadzenie do zdecentralizowanej tożsamości](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
 
 ### Materiały wideo {#videos}
 
@@ -177,9 +179,11 @@ Istnieje wiele ambitnych projektów wykorzystujących Ethereum jako podstawę zd
 - [Logowanie za pomocą Ethereum i zdecentralizowanej tożsamości za pomocą Ceramic, IDX, React i 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _samouczek YouTube pokazujący, jak zbudować system zarządzania tożsamością do tworzenia, odczytywania i aktualizowania profilu użytkownika przy użyciu portfela Ethereum autorstwa Nadera Dabita._
 - [BrightID — zdecentralizowana tożsamość w Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _odcinek podcastu Bankless omawiający BrightID, zdecentralizowane rozwiązanie tożsamości dla Ethereum._
 - [Internet poza łańcuchem: zdecentralizowana tożsamość i weryfikowalne dane uwierzytelniające](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — prezentacja EthDenver 2022 autorstwa Evina McMullena.
+- [Wyjaśnienie weryfikowalnych danych uwierzytelniających](https://www.youtube.com/watch?v=ce1IdSr-Kig) — film wyjaśniający na YouTube z demonstracją autorstwa Tamino Baumanna
 
 ### Społeczności {#communities}
 
 - [Sojusz ERC-725 na GitHub](https://github.com/erc725alliance) — _zwolennicy standardu ERC725 do zarządzania tożsamością w łańcuchu bloków Ethereum._
 - [Serwer Discord SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _społeczność dla entuzjastów i programistów pracujących nad logowaniem za pomocą Ethereum._
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _społeczność programistów uczestniczących w budowaniu struktury weryfikowalnych danych dla aplikacji._
+- [walt.id](https://discord.com/invite/AW8AgqJthZ) — _społeczność deweloperów i twórców pracujących nad przypadkami użycia zdecentralizowanej tożsamości w różnych branżach_

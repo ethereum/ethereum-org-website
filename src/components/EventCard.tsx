@@ -12,7 +12,7 @@ const clearStyles = {
   clear: "both",
 }
 
-export interface IProps {
+export type EventCardProps = {
   title: string
   to: string
   date: string
@@ -22,7 +22,7 @@ export interface IProps {
   isEven: boolean
 }
 
-const EventCard: React.FC<IProps> = ({
+const EventCard = ({
   title,
   to,
   date,
@@ -30,7 +30,7 @@ const EventCard: React.FC<IProps> = ({
   className,
   location,
   isEven,
-}) => (
+}: EventCardProps) => (
   <Box
     className={className}
     position="relative"

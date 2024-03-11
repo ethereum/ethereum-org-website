@@ -4,7 +4,6 @@ description: Erfahren Sie mehr über die Zusammenführung, als Mainnet Ethereum 
 lang: de
 template: upgrade
 image: /upgrades/merge.png
-alt: 
 summaryPoint1: Ethereum Mainnet verwendet Proof-of-Stake, aber das war nicht immer der Fall.
 summaryPoint2: Der Wechsel vom ursprünglichen Proof-of-Work Mechanismus zu Proof-of-Stake wurde Zusammenführung genannt.
 summaryPoint3: Die Zusammenführung bezieht sich auf das ursprüngliche Ethereum Mainnet, welches mit einer separaten Proof-of-Stake-Blockchain namens Beacon Chain vereinigt wurde, und somit nun beide als eine Blockchain existieren.
@@ -179,18 +178,18 @@ Dadurch wird ein Massenexodus der für Staking eingesetzten Mittel verhindert. D
 Der effektive Jahreszins ist auch bewusst dynamisch, damit ein Markt von Stakern abwägen kann, wie viel sie bereit sind, für die Sicherung des Netzwerks zu zahlen. Wenn die Rate zu niedrig ist, werden die Validatoren mit einer durch das Protokoll begrenzten Rate aussteigen. Nach und nach wird dadurch die APR für alle erhöht, die bleiben und wieder neue oder wiederkehrende Staker anziehen.
 </ExpandableCard>
 
-## Was ist mit "Eth2" passiert? {#eth2}
+## Was ist mit „Eth2“ passiert? {#eth2}
 
 Der Begriff "Eth2" ist veraltet. Nach der Zusammenführung von "Eth1" und "Eth2" in eine einzelne Chain gibt es keinen Grund mehr zwischen zwei Ethereum Netzwerken zu unterscheiden. Es gibt nur Ethereum.
 
 Um Unklarheiten zu minimieren, hat die Community diese Begriffe aktualisiert:
 
-- „Eth1“ ist nun der „Ausführungslayer“, der Transaktionen verarbeitet und ausführt.
-- „Eth2“ ist nun der „Konsenslayer“, der den Proof-of-Stake-Konsens regelt.
+- „Eth1“ ist nun die „Ausführungsebene“, die Transaktionen und Ausführungen verarbeitet.
+- „Eth2“ ist nun die „Konsensebene“, die den Proof-of-Stake-Konsens regelt.
 
-Diese aktualisierte Terminologie ändert lediglich die Benennungskonventionen. Die Ziele von Ethereum oder die Roadmap ändern sich dadurch nicht.
+Diese aktualisierte Terminologie ändert lediglich die Benennungskonventionen. Die Ziele und der Fahrplan von Ethereum ändern sich dadurch nicht.
 
-[Mehr erfahren über die „Eth2“-Umbenennung](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
+[Mehr über die „Eth2“-Umbenennung erfahren](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 
 ## Beziehung zwischen den Upgrades {#relationship-between-upgrades}
 

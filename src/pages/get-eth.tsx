@@ -28,6 +28,7 @@ import { Divider } from "@/components/MdComponents"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -109,7 +110,7 @@ type Props = BasePageProps & {
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("get-eth")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDataUpdateDate = getLastModifiedDateByPath(
     "src/data/exchangesByCountry.ts"
@@ -293,7 +294,7 @@ const GetEthPage = ({
         <StyledCard
           emoji=":robot:"
           title={t("page-get-eth-dex")}
-          description={t("page-get-eth-dex-desc")}
+          description={<Translation id="page-get-eth:page-get-eth-dex-desc" />}
         >
           <InlineLink href="#dex">{t("page-get-eth-try-dex")}</InlineLink>
         </StyledCard>

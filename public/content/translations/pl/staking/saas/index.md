@@ -47,7 +47,7 @@ Poniżej znajduje się paru dostępnych dostawców SaaS. Skorzystaj z powyższyc
 
 <StakingProductsCardGrid category="saas" />
 
-Należy pamiętać o znaczeniu wspierania [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Usługi, które mają dowody na ograniczanie korzystania z większości klientów, są oznaczone <em style={{ textTransform: "uppercase" }}>„różnorodność klientów wykonawczych”</em> i <em style={{ textTransform: "uppercase" }}>„różnorodność klientów konsensusu.”</em>
+Należy pamiętać o znaczeniu wspierania [różnorodności klientów](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Usługi, które mają dowody na ograniczanie korzystania z większości klientów, są oznaczone jako <em style={{ textTransform: "uppercase" }}>„różnorodność klientów wykonawczych”</em> i <em style={{ textTransform: "uppercase" }}>„różnorodność klientów konsensusu”.</em>
 
 ### Generatory kluczy
 
@@ -91,4 +91,5 @@ Skontaktuj się z indywidualnym dostawcą SaaS, aby uzyskać więcej informacji 
 
 ## Dodatkowo przeczytaj {#further-reading}
 
+- [Katalog stakingu Ethereum](https://www.staking.directory/) — _Eridian i Spacesider_
 - [Ocena usług stakingu](https://www.attestant.io/posts/evaluating-staking-services/) — _Jim McDonald 2020 r._

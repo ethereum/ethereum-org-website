@@ -10,7 +10,7 @@ O próprio protocolo Ethereum existe apenas com o propósito de manter a operaç
 
 ## Pré-requisitos {#prerequisites}
 
-Alguma familiaridade básica com a terminologia comum em ciência da computação, como [bytes](https://wikipedia.org/wiki/Byte), [memória](https://wikipedia.org/wiki/Computer_memory) e [pilha](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) é necessária para entender a EVM. Também recomendamos se familiarizar com conceitos de criptografia/cadeia de blocos, como [funções hash](https://wikipedia.org/wiki/Cryptographic_hash_function) e a [árvore Merkle](https://wikipedia.org/wiki/Merkle_tree).
+Alguma familiaridade básica com a terminologia comum em ciência da computação, como [bytes](https://wikipedia.org/wiki/Byte), [memória](https://wikipedia.org/wiki/Computer_memory) e [pilha](https://wikipedia.org/wiki/Stack_(abstract_data_type)) é necessária para entender a EVM. Também recomendamos se familiarizar com conceitos de criptografia/cadeia de blocos, como [funções hash](https://wikipedia.org/wiki/Cryptographic_hash_function) e a [árvore Merkle](https://wikipedia.org/wiki/Merkle_tree).
 
 ## Do livro-razão para a máquina de estado {#from-ledger-to-state-machine}
 
@@ -64,6 +64,7 @@ Os [clientes de execução Ethereum](/developers/docs/nodes-and-clients/#executi
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
+- [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Leitura adicional {#further-reading}
 

@@ -24,7 +24,7 @@ Some popular exchanges are:
 - [1Inch](https://app.1inch.io/#/1/unified/swap/ETH/DAI)
 - [Curve](https://curve.fi/#/ethereum/swap)
 
-If you'd like to learn more about what DeFi is and how these new kinds of exchanges work, we can recommend the [Kernel Library](https://library.kernel.community/Topic+-+DeFi/Topic+-+DeFi).
+Interesting? Learn more about what [decentralised finance (DeFi)](/defi/) is and how these new kinds of exchanges work.
 
 ## 2. Select the pair of tokens you wish to swap
 

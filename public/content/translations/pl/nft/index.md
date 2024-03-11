@@ -14,15 +14,15 @@ summaryPoint3: Wspierane przez inteligentne kontrakty na blockchainie Ethereum.
 
 ## Czym są NFT? {#what-are-nfts}
 
-NFT to tokeny, które są unikalne. Każdy NFT ma inne właściwości (niezamienne) i można udowodnić, że jest rzadki. Różni się to od tokenów takich jak ERC-20, gdzie każdy token w zestawie jest identyczny i ma te same właściwości („zamienne”). Nie obchodzi cię, który konkretnie banknot masz w portfelu, ponieważ wszystkie są identyczne i warte tyle samo. Jednakże _ma_ znaczenie, który konkretnie NFT posiadasz, ponieważ wszystkie mają indywidualne właściwości, które odróżniają je od innych („niezamienne”).
+NFT to tokeny, które są unikalne. Każdy NFT ma inne właściwości (niezamienne) i można udowodnić, że jest rzadki. Różni się to od tokenów takich jak ETH lub innych tokenów opartych na Ethereum, takich jak USDC, gdzie każdy token jest identyczny i ma te same właściwości („zamienne”). Nie ma znaczenia, który konkretnie banknot (lub ETH) masz w portfelu, ponieważ wszystkie są identyczne i warte tyle samo. Jednakże _ma_ znaczenie, który konkretnie NFT posiadasz, ponieważ wszystkie mają indywidualne właściwości, które odróżniają je od innych („niezamienne”).
 
-Unikalność każdego NFT umożliwia tokenizację rzeczy takich jak dzieła artystyczne, przedmioty kolekcjonerskie, a nawet nieruchomości, gdzie jeden konkretny unikalny NFT reprezentuje konkretny unikalny prawdziwy lub cyfrowy przedmiot. Własność aktywa zabezpieczona jest przez blockchain Ethereum — nikt nie może zmodyfikować rejestrów własności ani skopiować/wkleić nowego NFT.
+Unikalność każdego NFT umożliwia tokenizację rzeczy takich jak dzieła artystyczne, przedmioty kolekcjonerskie, a nawet nieruchomości, gdzie jeden konkretny unikalny NFT reprezentuje konkretny unikalny prawdziwy lub cyfrowy przedmiot. Własność aktywa jest publicznie weryfikowalna na blockchainie Ethereum.
 
 <YouTube id="Xdkkux6OxfM" />
 
 ## Internet rzeczy {#internet-of-assets}
 
-NFT i Ethereum rozwiązują niektóre z problemów występujących w dzisiejszym internecie. Ponieważ wszystko staje się coraz bardziej cyfrowe, istnieje potrzeba odtworzenia właściwości przedmiotów fizycznych, takich jak rzadkość, unikalność i dowód własności w sposób, który nie jest kontrolowany przez centralną organizację. Na przykład, dzięki NFT możesz posiadać muzykę mp3, która nie jest specyficzna dla konkretnej aplikacji muzycznej jednej firmy, lub możesz mieć nazwę konta w mediach społecznościowych, którą możesz sprzedać lub wymienić, ale nie może ona zostać samowolnie odebrana przez dostawcę platformy.
+NFT i Ethereum rozwiązują niektóre z problemów występujących w dzisiejszym Internecie. Ponieważ wszystko staje się coraz bardziej cyfrowe, istnieje potrzeba odtworzenia właściwości przedmiotów fizycznych, takich jak rzadkość, unikalność i dowód własności w sposób, który nie jest kontrolowany przez centralną organizację. Dzięki NFT możesz na przykład posiadać plik muzyczny mp3 we wszystkich aplikacjach opartych na Ethereum i nie być przywiązanym do konkretnej aplikacji muzycznej danej firmy, takiej jak Spotify lub Apple Music. Możesz posiadać nazwę w mediach społecznościowych, którą możesz sprzedać lub wymienić, ale nie może ona zostać samowolnie odebrana przez dostawcę platformy.
 
 Oto jak wygląda porównanie Internetu NFT z Internetem, z którego korzysta większość z nas...
 
@@ -30,18 +30,12 @@ Oto jak wygląda porównanie Internetu NFT z Internetem, z którego korzysta wi�
 
 | Internet NFT                                                                                                                                        | Internet dzisiaj                                                                                                                                                                      |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Ty jesteś właścicielem swoich aktywów! Tylko Ty możesz je sprzedać lub wymienić.                                                                    | Wynajmujesz aktywa od jakiejś organizacji.                                                                                                                                            |
+| Ty jesteś właścicielem swoich aktywów! Tylko Ty możesz je sprzedać lub wymienić.                                                                    | Wynajmujesz aktywa od jakiejś organizacji i mogą one zostać Ci odebrane.                                                                                                              |
 | NFT są cyfrowo unikalne, nie istnieją dwa takie same NFT.                                                                                           | Kopia jakiejś jednostki często nie może być odróżniona od oryginału.                                                                                                                  |
 | Własność NFT jest przechowywana w blockchainie tak, aby każdy mógł ją zweryfikować.                                                                 | Rejestry własności przedmiotów cyfrowych są przechowywane na serwerach kontrolowanych przez instytucje — musisz im wierzyć na słowo.                                                  |
 | NFT to inteligentne kontrakty na Ethereum. Oznacza to, że można je łatwo wykorzystać w innych inteligentnych kontraktach i aplikacjach na Ethereum! | Firmy posiadające elementy cyfrowe zazwyczaj wymagają własnej infrastruktury typu „ogrodzony ogród” („walled garden”).                                                                |
 | Twórcy mogą sprzedawać swoje prace w dowolnym miejscu i mają dostęp do globalnego rynku.                                                            | Twórcy opierają się na infrastrukturze i systemie dystrybucji platform, z których korzystają. Są one często objęte określonymi warunkami użytkowania i ograniczeniami geograficznymi. |
 | Twórcy NFT mogą zachować prawa własności do własnej pracy i zaprogramować tantiemy bezpośrednio w kontrakcie NFT.                                   | Platformy, takie jak serwisy streamingu muzyki, zachowują większość zysków ze sprzedaży.                                                                                              |
-
-## Jak działają NFT? {#how-nfts-work}
-
-Podobnie jak każdy token wydany na Ethereum, NFT są wydawane przez inteligentny kontrakt. Inteligentny kontrakt jest zgodny z jednym z kilku standardów NFT (najczęściej ERC-721 lub ERC-1155), które określają funkcje, jakie posiada kontrakt. Kontrakt może tworzyć („wybijać”) NFT i przypisywać je do określonego właściciela. Własność jest określona w kontrakcie poprzez mapowanie określonych NFT na określone adresy. NFT ma ID i zazwyczaj powiązane z nim metadane, które sprawiają, że konkretny token jest unikalny.
-
-Kiedy ktoś tworzy lub wybija NFT, tak naprawdę wykonuje funkcję w inteligentnym kontrakcie, która przypisuje określony NFT do jego adresu. Informacja ta jest przechowywana w pamięci kontraktu, która jest częścią blochainu. Twórca kontraktu może zapisać w niej dodatkową logikę, na przykład ograniczając całkowitą ilość lub określając tantiemę, która ma być wypłacana twórcy za każdym razem, gdy token zostanie przeniesiony.
 
 ## W jakim celu używa się NFT? {#nft-use-cases}
 
@@ -58,23 +52,37 @@ NFT są używane do wielu rzeczy, w tym:
 - zdecentralizowane nazwy domen internetowych
 - jako zabezpieczenie w DeFi
 
-Być może jesteś artystą, który chce udostępniać swoje prace za pomocą NFT, bez utraty kontroli i poświęcania zysków na rzecz pośredników. Możesz utworzyć nowy kontrakt i określić liczbę NFT, ich właściwości oraz link do określonego dzieła sztuki. Jako artysta możesz zaprogramować w inteligentnym kontrakcie tantiemy, które powinny zostać Ci zapłacone (np. przekazać 5% ceny sprzedaży właścicielowi kontraktu za każdym razem, gdy NFT zostanie przeniesione). Zawsze możesz również udowodnić, że NFT został stworzony przez Ciebie, ponieważ jesteś właścicielem portfela, który wdrożył kontrakt. Kupujący mogą łatwo udowodnić, że posiadają autentyczny NFT z Twojej kolekcji, ponieważ ich adres portfela jest powiązany z tokenem w Twoim inteligentnym kontrakcie. Mogą go używać w całym ekosystemie Ethereum, mając pewność co do jego autentyczności.
+Być może jesteś artystą, który chce udostępniać swoje prace za pomocą NFT, bez utraty kontroli i poświęcania zysków na rzecz pośredników. Możesz utworzyć nowy kontrakt i określić liczbę NFT, ich właściwości oraz link do określonego dzieła sztuki. Jako artysta możesz zaprogramować w inteligentnym kontrakcie tantiemy, które powinny zostać Ci zapłacone (np. przekazywać 5% ceny sprzedaży właścicielowi kontraktu za każdym razem, gdy NFT zostanie przeniesione). Zawsze możesz również udowodnić, że NFT został stworzony przez Ciebie, ponieważ jesteś właścicielem portfela, który wdrożył kontrakt. Kupujący mogą łatwo udowodnić, że posiadają autentyczny NFT z Twojej kolekcji, ponieważ ich adres portfela jest powiązany z tokenem w Twoim inteligentnym kontrakcie. Mogą go używać w całym ekosystemie Ethereum, mając pewność co do jego autentyczności.
 
-To tak jak bilet na wydarzenie sportowe. Podobnie jak organizator wydarzenia może wybrać, ile biletów chce sprzedać, twórca NFT może zdecydować, ile istnieje replik. Czasami są to dokładne repliki, takie jak 5000 takich samych biletów wstępu. Czasami wybijanych jest kilka bardzo podobnych, ale każdy z nich nieco się różni, np. bilet z przypisanym miejscem. Można je kupować i sprzedawać peer-to-peer bez płacenia osobie obsługującej bilety, a kupujący zawsze ma pewność co do autentyczności biletu, sprawdzając adres kontraktu.
+Pomyśl o tym tak jak o bilecie na wydarzenie sportowe. Podobnie jak organizator wydarzenia może wybrać, ile biletów chce sprzedać, twórca NFT może zdecydować, ile istnieje replik. Czasami są to dokładne repliki, takie jak 5000 takich samych biletów wstępu. Czasami wybijanych jest kilka bardzo podobnych, ale każdy z nich nieco się różni, np. bilet z przypisanym miejscem. Można je kupować i sprzedawać peer-to-peer bez płacenia osobie obsługującej bilety, a kupujący zawsze ma pewność co do autentyczności biletu, sprawdzając adres kontraktu.
 
-Na ethereum.org NFT są używane do pokazania, że ludzie wnieśli swój wkład do naszego repozytorium GitHub lub uczestniczyli w rozmowach, a nawet mamy własną nazwę domeny NFT. Jeśli przyczynisz się do rozwoju ethereum.org, możesz otrzymać NFT w formie POAPu. Niektóre spotkania kryptowalutowe wykorzystywały tokeny POAP jako bilety. [Więcej na temat przyczyniania się do rozwoju Ethereum](/contributing/#poap).
+Na ethereum.org, NFT są używane do pokazania, że ludzie wnieśli znaczący wkład w nasze repozytorium na GitHubie (zaprogramowali stronę, napisali lub zmodyfikowali artykuł...), przetłumaczyli nasze treści lub uczestniczyli w naszych rozmowach ze społecznością, mamy nawet własną nazwę domeny NFT. Jeśli przyczynisz się do rozwoju ethereum.org, możesz otrzymać NFT w formie POAPu. Niektóre spotkania kryptowalutowe wykorzystywały POAPy jako bilety. [Więcej na temat przyczyniania się do rozwoju](/contributing/#poap).
 
 ![ethereum.org POAP](./poap.png)
 
-Ta strona ma alternatywną domenę obsługiwaną przez NFT, **ethereum.eth**. Nasz adres `.org` jest zarządzany centralnie przez DNS, podczas gdy ethereum`.eth` jest zarejestrowany na Ethereum za pośrednictwem Ethereum Name Service (ENS). Jest ona naszą własnością i jest zarządzana przez nas. [Sprawdź nasz wpis do ENS](https://app.ens.domains/name/ethereum.eth)
+Ta strona ma również alternatywną domenę obsługiwaną przez NFT, **ethereum.eth**. Nasz adres `.org` jest zarządzany centralnie przez dostawcę DNS, podczas gdy ethereum`.eth` jest zarejestrowany na Ethereum za pośrednictwem Ethereum Name Service (ENS). Jest ona naszą własnością oraz jest zarządzana przez nas. [Sprawdź nasz rekord ENS](https://app.ens.domains/name/ethereum.eth)
 
 [Więcej o ENS](https://app.ens.domains)
 
 <Divider />
 
+## Jak działają NFT? {#how-nfts-work}
+
+NFT, podobnie jak inne cyfrowe elementy w blockchainie Ethereum, są tworzone za pomocą specjalnego programu komputerowego opartego na Ethereum, zwanego „inteligentnym kontraktem”. Kontrakty te są zgodne z pewnymi zasadami, takimi jak standardy ERC-721 lub ERC-1155, które określają, co kontrakt może robić.
+
+Inteligentny kontrakt NFT może robić kilka kluczowych czynności:
+
+- **Tworzyć NFT:** może tworzyć nowe NFT.
+- **Przypisywać własność:** utrzymuje kontrolę nad tym, kto jest właścicielem, którego NFT, łącząc je z określonymi adresami Ethereum.
+- **Nadawać każdemu NFT własne ID:** każdy NFT ma numer, który sprawia, że jest unikalny. Ponadto dołączone są do niego zazwyczaj pewne informacje (metadane) opisujące, co reprezentuje NFT.
+
+Kiedy ktoś „tworzy” lub „wybija” NFT, w zasadzie mówi inteligentnemu kontraktowi, aby dał mu prawo własności do konkretnego NFT. Ta informacja jest bezpiecznie i publicznie przechowywana w blockchainie.
+
+Co więcej, twórca kontraktu może dodać dodatkowe zasady. Może ograniczyć liczbę NFT, które mogą zostać utworzone lub zdecydować, że powinien otrzymywać niewielką tantiemę za każdym razem, gdy NFT zmieni właściciela.
+
 ### Bezpieczeństwo NFT {#nft-security}
 
-Bezpieczeństwo Ethereum wynika z algorytmu proof-of-stake. System został zaprojektowany w celu ekonomicznego zniechęcenia do złośliwych działań, dzięki czemu Ethereum jest odporne na manipulacje. To właśnie umożliwia działanie NFT. Gdy blok zawierający Twoją transakcję NFT zostanie sfinalizowany, zmiana go kosztowałaby atakującego miliony ETH. Każdy, kto korzysta z oprogramowania Ethereum, byłby w stanie natychmiast wykryć nieuczciwe manipulacje w NFT, a przestępca zostałby ekonomicznie ukarany i wyrzucony.
+Bezpieczeństwo Ethereum wynika z algorytmu proof-of-stake. System ten został zaprojektowany w celu ekonomicznego zniechęcenia do złośliwych działań, dzięki czemu Ethereum jest odporne na manipulacje. To właśnie umożliwia działanie NFT. Gdy blok zawierający Twoją transakcję NFT zostanie sfinalizowany, zmiana go kosztowałaby atakującego miliony ETH. Każdy, kto korzysta z oprogramowania Ethereum, byłby w stanie natychmiast wykryć nieuczciwą manipulację w NFT, a przestępca zostałby ekonomicznie ukarany i wyrzucony.
 
 Kwestie bezpieczeństwa związane z NFT są najczęściej związane z oszustwami typu phishing, lukami w inteligentnych kontraktach lub błędami użytkownika (takimi jak nieumyślne ujawnienie kluczy prywatnych), co sprawia, że dbanie o bezpieczeństwo portfela ma kluczowe znaczenie dla właścicieli NFT.
 
