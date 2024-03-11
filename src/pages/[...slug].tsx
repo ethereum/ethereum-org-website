@@ -13,7 +13,6 @@ import { MDXRemote, type MDXRemoteSerializeResult } from "next-mdx-remote"
 import { serialize } from "next-mdx-remote/serialize"
 import { getPlaiceholder } from "plaiceholder"
 import readingTime from "reading-time"
-import { remarkHeadingId } from "remark-custom-heading-id"
 import remarkGfm from "remark-gfm"
 
 import type {
@@ -125,7 +124,6 @@ export const getStaticProps = (async (context) => {
         // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
         remarkGfm,
         [remarkInferToc, { callback: tocCallback }],
-        remarkHeadingId,
       ],
       rehypePlugins: [
         [rehypeImg, { dir: mdDir, srcPath: mdPath, locale }],
