@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest,
   const { messages } = await req.body;
   const currentMessageContent = messages[messages.length - 1].content;
 
-  const response = await fetch("https://ethereum.org/api/vector", {
+  const response = await fetch("https://deploy-preview-12424--ethereumorg.netlify.app/api/vector", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
