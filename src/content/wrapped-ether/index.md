@@ -7,6 +7,7 @@ lang: en
 # What Is wrapped ether (WETH)? {#what-is-wrapped-ether-weth}
 
 Wrapped ether (WETH) is an ERC-20 token representing Ethereum’s native token ether (ETH). Ether is limited to transferring value and paying for computation on the Ethereum network. Wrapping ETH into an ERC-20 token (WETH) allows users to use ETH in applications, such as DeFi or liquid staking tokens, that the native asset ETH cannot. Because there's significant demand to use ETH in the ecosystem, wrapped ether (WETH) solves this problem by providing an ERC20-compliant version of ETH to use in other applications.
+
 Today, **nearly 3% of the circulating ETH supply is locked in the WETH token contract** making it one of the most popular smart contracts. WETH is especially popular with users interacting with applications in Ethereum's Decentralized Finance (DeFi) ecosystem.
 ## What are wrapped tokens? {#intro-to-wrapped-tokens}
 
