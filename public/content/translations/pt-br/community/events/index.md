@@ -5,7 +5,7 @@ lang: pt-br
 hideEditButton: true
 ---
 
-## Próximos eventos {#events}
+# Próximos eventos {#events}
 
 **Todos os meses há grandes eventos da Ethereum ao redor do mundo.** Considere participar de um perto de você para conhecer pessoas que fazem parte da comunidade, aprender sobre oportunidades de emprego e desenvolver novas habilidades.
 

@@ -743,7 +743,7 @@ Essa é a função principal da fábrica, para criar um par de troca entre dois 
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Queremos que o endereço da nova troca seja determinante, para poder ser calculado antecipadamente fora da cadeia (isso pode ser útil para [transações com camada 2](/developers/docs/layer-2-scaling/)). Para isso, precisamos ter uma ordem consistente dos endereços dos tokens, independente da ordem na qual nós os recebemos, então os classificamos aqui.
+Queremos que o endereço da nova troca seja determinante, para poder ser calculado antecipadamente fora da cadeia (isso pode ser útil para [transações com camada 2](/developers/docs/scaling/)). Para isso, precisamos ter uma ordem consistente dos endereços dos tokens, independente da ordem na qual nós os recebemos, então os classificamos aqui.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');

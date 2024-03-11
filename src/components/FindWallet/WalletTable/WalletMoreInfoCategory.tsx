@@ -78,12 +78,14 @@ export const WalletMoreInfoCategory = ({
                 <p>{feature.label}</p>
                 <Tooltip
                   content={
-                    <Text lineHeight={1.2}>
+                    <Text>
                       {t(walletFilterData[feature.filterKey].description)}
                     </Text>
                   }
                 >
-                  <Icon as={MdInfoOutline} color={featureColor} />
+                  <Box as="span">
+                    <Icon as={MdInfoOutline} color={featureColor} />
+                  </Box>
                 </Tooltip>
               </HStack>
             )

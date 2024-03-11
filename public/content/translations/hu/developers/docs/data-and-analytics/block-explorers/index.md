@@ -16,15 +16,15 @@ Először meg kellene értened az Ethereum alapvető fogalmait ahhoz, hogy érte
 - [Etherscan](https://etherscan.io/) –_ elérhető kínai, koreai, orosz és japán nyelven is_
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum) –_ Spanyol, francia, olasz, holland, portugál, orosz, kínai és fárszi nyelven is elérhető_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
+- [Chainlens](https://www.chainlens.com/)
+- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/) –_Kínai, spanyol, francia, török, orosz, koreai és vietnámi nyelven is elérhető_
+- [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
-- [Sirato](https://www.web3labs.com/sirato)
-- [EthVM](https://www.ethvm.com/)
-- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 
 ## Adat {#data}
 

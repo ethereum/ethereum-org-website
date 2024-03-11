@@ -10,26 +10,24 @@ lang: zh
 
 ## 前置要求 {#prerequisites}
 
-在部署智能合约之前，您需要理解[以太坊网络](/developers/docs/networks/), [交易](/developers/docs/transactions/)和[详解智能合约](/developers/docs/smart-contracts/anatomy/)。
+在部署智能合约之前，你需要理解[以太坊网络](/developers/docs/networks/), [交易](/developers/docs/transactions/)和[详解智能合约](/developers/docs/smart-contracts/anatomy/)。
 
-部署一个合约也需要耗费以太币 (ETH)，因为他们被存储在区块链上，所以您应该熟悉以太坊的[燃料和费用](/developers/docs/gas/)。
+部署一个合约也需要耗费以太币 (ETH)，因为他们被存储在区块链上，所以你应该熟悉以太坊的[燃料和费用](/developers/docs/gas/)。
 
-最后，您需要在部署之前编译您的合约，所以请确保您已经阅读了[编译智能合约](/developers/docs/smart-contracts/compiling/)。
+最后，你需要在部署之前编译你的合约，所以请确保你已经阅读了[编译智能合约](/developers/docs/smart-contracts/compiling/)。
 
 ## 如何部署智能合约 {#how-to-deploy-a-smart-contract}
 
-### 您所需要的 {#what-youll-need}
+### 你所需要的 {#what-youll-need}
 
-- 您的合约字节码 – 这是通过[编译](/developers/docs/smart-contracts/compiling/)获得的。
-- 用作燃料的以太币 – 像其他交易一样，您需要设定燃料限制，这样就知道部署合约比简单的以太币交易需要更多的燃料。
+- 合约的字节码 – 可通过[编译](/developers/docs/smart-contracts/compiling/)生成
+- 用作燃料的以太币 – 像其他交易一样，你需要设定燃料限制，这样就知道部署合约比简单的以太币交易需要更多的燃料。
 - 一个部署脚本或插件。
-- 通过以下方式之一可以访问[以太坊节点](/developers/docs/nodes-and-clients/)：运行自己的节点、连接到公共节点或使用[节点服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)的应用程序接口应用程序接口密钥。
+- 通过以下方式之一可以访问[以太坊节点](/developers/docs/nodes-and-clients/)：运行自己的节点、连接到公共节点或使用[节点服务](/developers/docs/nodes-and-clients/nodes-as-a-service/)的应用程序接口密钥。
 
 ### 部署智能合约的步骤 {#steps-to-deploy}
 
-所涉及的具体步骤将取决于您使用的工具。 例如，查看[关于部署合约的安全帽文档](https://hardhat.org/guides/deploying.html)或[关于网络和应用程序部署的 Truffle 文档](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)。 这是两个最受欢迎的智能合约部署工具，它们涉及到编写脚本来处理部署步骤。
-
-一旦部署，您的合约将有一个以太坊地址，就像其它[帐户](/developers/docs/accounts/)一样。
+具体步骤将取决于使用的开发框架。 例如，你可以查看[安全帽提供的合约部署文档](https://hardhat.org/guides/deploying.html)或 [Foundry 提供 的智能合约部署与验证文档](https://book.getfoundry.sh/forge/deploying)。 如同其他[帐户](/developers/docs/accounts/)一样，部署后，你的合约将有一个以太坊地址，并且可以使用[源代码验证工具](/developers/docs/smart-contracts/verifying/#source-code-verification-tools)来验证。
 
 ## 相关工具 {#related-tools}
 
@@ -44,20 +42,14 @@ lang: zh
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
-**安全帽 - _用于编译、部署、测试和调试您的以太坊软件的开发环境_**
+**安全帽 - _用于编译、部署、测试和调试你的以太坊软件的开发环境_**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
 - [关于部署合约的文档](https://hardhat.org/guides/deploying.html)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
 
-**Truffle -** **_开发环境、测试框架、部署通道及其他工具。_**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [关于网络和应用部署的文档](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
-- [GitHub](https://github.com/trufflesuite/truffle)
-
-**thirdweb - _使用单一命令轻松地将任何合约部署到任何与 EVM 兼容的区块链_。**
+**thirdweb - _使用一条命令轻松地将任何合约部署到任何与以太坊虚拟机兼容的区块链_**
 
 - [相关文档](https://portal.thirdweb.com/deploy/)
 

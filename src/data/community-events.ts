@@ -91,15 +91,6 @@ const communityConferences: CommunityConference[] = [
     description: "ETH Community in SEA to #Build, #Learn and #Share together.",
   },
   {
-    title: "Ethereum Rio",
-    startDate: "2024-03-19",
-    endDate: "2024-03-24",
-    to: "https://www.ethereumbrasil.com/",
-    location: "Rio de Janeiro, Brazil",
-    description:
-      "3rd Edition of LATAM's most loved ETH event. Bootcamp, Buildathon & Conference",
-  },
-  {
     title: "ETHTaipei",
     startDate: "2024-03-21",
     endDate: "2024-03-24",
@@ -219,6 +210,15 @@ const communityConferences: CommunityConference[] = [
     description: "ETHGlobal Sydney is going to be an event full of hacking, networking, side events and fun activities. This will be our inaugural event on the continent of Oceania-completing the global in ETHGlobal as the sixth and final continent in our world tour.",
     startDate: "2024-5-3",
     endDate: "2024-5-5"
+  },
+  {
+    title: "ETH Rio",
+    startDate: "2024-05-13",
+    endDate: "2024-05-15",
+    to: "https://www.ethereumbrasil.com/",
+    location: "Rio de Janeiro, Brazil",
+    description:
+      "3rd Edition of ETH Rio. ETH Rio 2024 will bring regulators, builders and businesses to discuss the future of the Brazilian Tokenized Economy based on EVM.",
   },
   {
     title: "DappConn",

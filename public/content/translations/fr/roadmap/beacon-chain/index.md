@@ -27,7 +27,7 @@ La chaîne Beacon est le nom donné au registre de comptes utilisé pour la cond
 
 La Chaîne phare introduit la [preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/) dans Ethereum. Cela permet de sécuriser Ethereum et pour les validateurs de gagner plus d'ETH au cours du processus. En pratique, le staking implique de miser des ETH pour activer le logiciel de validation. En tant que validateur, vous exécutez le logiciel qui créé et valide de nouveaux blocs dans la chaîne.
 
-La mise en jeu a un objectif similaire au [minage](/developers/docs/mining/), mais diffère à plusieurs titres. Le minage nécessitait d’importantes dépenses initiales sous la forme d’une puissante consommation en matériel et énergie, entraînant des économies d’échelle et promouvant la centralisation. Le minage n'impliquait pas non plus l'obligation de bloquer les actifs en tant que garantie, ce qui limite la capacité du protocole à punir les mauvais acteurs après une attaque.
+La mise en jeu a un objectif similaire au [minage](/developers/docs/consensus-mechanisms/pow/mining/), mais diffère à plusieurs titres. Le minage nécessitait d’importantes dépenses initiales sous la forme d’une puissante consommation en matériel et énergie, entraînant des économies d’échelle et promouvant la centralisation. Le minage n'impliquait pas non plus l'obligation de bloquer les actifs en tant que garantie, ce qui limite la capacité du protocole à punir les mauvais acteurs après une attaque.
 
 La transition vers la preuve d'enjeu a rendu Ethereum nettement plus sûr et décentralisé par comparaison avec la preuve de travail. Plus le nombre de participants sera élevé sur le réseau, plus celui-ci sera décentralisé et à l'abri des attaques.
 

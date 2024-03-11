@@ -5,13 +5,13 @@ lang: en
 hideEditButton: true
 ---
 
-## Upcoming events {#events}
+# Upcoming events {#events}
 
 **Every month, there are major Ethereum events around the world.** Consider attending one near you to meet more people in the community, learn about employment opportunities, and develop new skills.
 
 <UpcomingEventsList/>
 
-This is a non-exhaustive list maintained by our community. Know of an upcoming Ethereum event to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)!
+This is a non-exhaustive list maintained by our community. Know of an upcoming Ethereum event to add to this list? [Please add it](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.ts)!
 
 ## Ethereum meetups {#meetups}
 

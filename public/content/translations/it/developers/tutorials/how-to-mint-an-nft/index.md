@@ -14,7 +14,7 @@ published: 2021-04-22
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): $69 milioni [3LAU](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): $11 milioni [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): $6 milioni
 
-Tutti hanno coniato i propri NFT usando la potente API di Alchemy. In questo tutorial ti insegneremo come fare lo stesso in meno di 10 minuti.
+Tutti loro hanno coniato i propri NFT utilizzando la potente API di Alchemy. In questo tutorial ti insegneremo come fare lo stesso in meno di 10 minuti.
 
 "Coniare un NFT" è l'atto di pubblicare un'istanza unica del tuo token ERC-721 sulla blockchain. Usando il nostro contratto intelligente dalla [Parte 1 di questa serie di tutorial sugli NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/), dimostriamo le nostre abilità di Web3 e coniamo un NFT. Alla fine di questo tutorial, potrai coniare tutti gli NFT che desideri (e che può permettersi il tuo portafoglio)!
 
@@ -325,6 +325,6 @@ Vai quindi alla tua [mempool di Alchemy](https://dashboard.alchemyapi.io/mempool
 
 Ecco fatto! Hai ora distribuito E coniato con un NFT sulla Blockchain di Ethereum <Emoji text=":money_mouth_face:" size={1} />
 
-Usando `mint-nft.js` puoi coniare tutti gli NFT che desideri (e che può permettersi il tuo portafoglio)! Basta che ti accerti di passare un nuovo tokenURI che descriva i metadati dell'NFT (altrimenti, finirai per crearne tanti identici con ID differenti).
+Utilizzando `mint-nft.js`, puoi coniare quanti NFT il tuo cuore, e portafoglio, desiderino! Basta che ti accerti di passare un nuovo tokenURI che descriva i metadati dell'NFT (altrimenti, finirai per crearne tanti identici con ID differenti).
 
 Molto probabilmente vorrai visualizzare il tuo NFT nel tuo portafoglio, quindi assicurati di leggere la [Parte 3: come visualizzare il tuo NFT nel portafoglio](/developers/tutorials/how-to-view-nft-in-metamask/)!

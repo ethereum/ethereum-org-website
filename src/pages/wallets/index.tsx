@@ -267,6 +267,7 @@ const WalletsPage = () => {
       <PageMetadata
         title={t("page-wallets-meta-title")}
         description={t("page-wallets-meta-description")}
+        image="/wallets/wallet-hero.png"
       />
       <PageHero content={heroContent} isReverse />
       <GrayContainer>
