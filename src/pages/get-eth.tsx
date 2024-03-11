@@ -57,9 +57,7 @@ const Page = (props: ChildOnlyProp) => (
   />
 )
 
-export const Content = (props: BoxProps) => (
-  <Box w="full" py={4} px={8} {...props} />
-)
+export const Content = (props: BoxProps) => <Box w="full" px={8} {...props} />
 
 const StyledCard = (props: ComponentPropsWithRef<typeof Card>) => (
   <Card
@@ -135,6 +133,12 @@ const GetEthPage = ({
 
   const tokenSwaps: CardListItem[] = [
     {
+      title: "Uniswap",
+      link: "https://app.uniswap.org/#/swap",
+      image: uniswap,
+      alt: "",
+    },
+    {
       title: "1inch",
       link: "https://1inch.exchange/#/",
       image: oneinch,
@@ -142,7 +146,7 @@ const GetEthPage = ({
     },
     {
       title: "Bancor",
-      link: "https://www.bancor.network/",
+      link: "https://www.carbondefi.xyz/",
       image: bancor,
       alt: "",
     },
@@ -152,19 +156,7 @@ const GetEthPage = ({
       image: kyber,
       alt: "",
     },
-    {
-      title: "Loopring",
-      link: "https://loopring.io/",
-      image: loopring,
-      alt: "",
-    },
-    {
-      title: "Uniswap",
-      link: "https://app.uniswap.org/#/swap",
-      image: uniswap,
-      alt: "",
-    },
-  ].sort((a, b) => a.title.localeCompare(b.title))
+  ]
 
   const safetyArticles: CardListItem[] = [
     {
@@ -176,11 +168,6 @@ const GetEthPage = ({
       title: t("page-get-eth-article-keeping-crypto-safe"),
       link: "https://blog.coinbase.com/the-keys-to-keeping-your-crypto-safe-96d497cce6cf",
       description: t("page-get-eth-article-keeping-crypto-safe-desc"),
-    },
-    {
-      title: t("page-get-eth-article-store-digital-assets"),
-      link: "https://media.consensys.net/how-to-store-digital-assets-on-ethereum-a2bfdcf66bd0",
-      description: t("page-get-eth-article-store-digital-assets-desc"),
     },
   ]
 
@@ -351,7 +338,11 @@ const GetEthPage = ({
         <CentralizedExchanges lastDataUpdateDate={lastDataUpdateDate} />
       </Flex>
       <Content id="dex">
-        <OldHeading fontSize={{ base: "2xl", md: "2rem" }} lineHeight={1.4}>
+        <OldHeading
+          fontSize={{ base: "2xl", md: "2rem" }}
+          lineHeight={1.4}
+          m={0}
+        >
           {t("page-get-eth-dexs")}
         </OldHeading>
       </Content>
@@ -373,7 +364,7 @@ const GetEthPage = ({
           </Text>
           <Text>{t("page-get-eth-dexs-desc-3")}</Text>
           <Text>{t("page-get-eth-need-wallet")}</Text>
-          <ButtonLink href="/wallets/">
+          <ButtonLink href="/wallets/find-wallet/">
             {t("page-get-eth-get-wallet-btn")}
           </ButtonLink>
         </LeftColumn>

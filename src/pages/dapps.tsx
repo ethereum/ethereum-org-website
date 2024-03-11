@@ -92,7 +92,6 @@ import loopring from "@/public/dapps/loopring.png"
 import marble from "@/public/dapps/marble.png"
 import matcha from "@/public/dapps/matcha.png"
 import mirror from "@/public/dapps/mirror.png"
-import multichain from "@/public/dapps/multichain.png"
 import nexus from "@/public/dapps/nexus.png"
 import nifty from "@/public/dapps/nifty.png"
 import opensea from "@/public/dapps/opensea.png"
@@ -110,8 +109,8 @@ import sablier from "@/public/dapps/sablier.png"
 import set from "@/public/dapps/set.png"
 import spatial from "@/public/dapps/spatial.png"
 import spruce from "@/public/dapps/spruce.png"
-import dai from "@/public/dapps/stabledai.png"
 import status from "@/public/dapps/status.png"
+import summerfi from "@/public/dapps/summerfi.png"
 import superrare from "@/public/dapps/superrare.png"
 import synthetix from "@/public/dapps/synthetix.png"
 import uniswap from "@/public/dapps/uni.png"
@@ -715,11 +714,11 @@ const DappsPage = () => {
       alt: t("page-dapps-compound-logo-alt"),
     },
     {
-      title: "Oasis",
-      description: t("page-dapps-dapp-description-oasis"),
-      link: "https://oasis.app/",
-      image: dai,
-      alt: t("page-dapps-oasis-logo-alt"),
+      title: "Summer.fi",
+      description: t("page-dapps-dapp-description-summerfi"),
+      link: "https://summer.fi/",
+      image: summerfi,
+      alt: t("page-dapps-summerfi-logo-alt"),
     },
     {
       title: "PWN",
