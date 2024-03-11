@@ -14,7 +14,7 @@ This significantly reduces the cost of using rollups, limits chain growth, and h
 
 ## When do we expect that rollups will reflect lower fees as a result of Proto-Danksharding? {#when}
 
-- This upgrade is set for activation at start of [epoch](/glossary/#epoch) 269568, occurring on **13-Mar-2024 (UTC)**
+- This upgrade is set for activation at the start of [epoch](/glossary/#epoch) 269568, occurring on **13-Mar-2024 (UTC)**
 - All major rollup providers, such as Arbitrum or Optimism, have signaled that blobs will be supported immediately following the upgrade
 - Individual rollup support may vary as each rollup must upgrade to take advantage of the new blob space
 
@@ -39,18 +39,22 @@ The introduction of Proto-Danksharding in the Dencun upgrade adds cheaper data s
 
 ## How is old blob data accessed? {#historical-access}
 
-While regular Ethereum nodes will always hold the _current state_ of the network, historical blob data can be discarded after ~18 days. Before it can be discarded, Ethereum guarantees that this data has been made available to allows time for all rollup challenge periods to be completed, interested parties to download the data, and the L2 data to be considered finalized.
+While regular Ethereum nodes will always hold the _current state_ of the network, historical blob data can be discarded after ~18 days. Before it can be discarded, Ethereum guarantees that this data has been made available to all network participants, to allow time for:
 
-Historical blob data my be desired for a variety of reasons, and can be stored and accessed using several decentralized protocols:
+- interested parties to download and store the data
+- all rollup challenge periods to be completed
+- and the rollup transactions to be considered finalized.
 
-- **Rollup providers** are incentivized to store this data to improve the user experience of their rollup
-- **Block explorers** typically run archival nodes that will index and store all of this information for easy historical reference
-- **Third-party indexing protocols** such as The Graph can store this data using a decentralized set of node operators using crypto-economic incentives
-- **Bittorrent** is a decentralized protocol consisting of volunteers who can hold and serve this data
+_Historical_ blob data may be desired for a variety of reasons, and can be stored and accessed using several decentralized protocols:
+
+- **Third-party indexing protocols**, such as The Graph, can store this data using a decentralized set of node operators using crypto-economic incentives
+- **Bittorrent** is a decentralized protocol consisting of volunteers who can hold and serve this data for others
 - **[Ethereum portal network](/developers/docs/networking-layer/portal-network/)** aims to provide access to all Ethereum data through a decentralized network of node operators, by means of splitting up data amongst participants, similar to Bittorrent
 - **Individual users** are always free to store their own copy of any data they would like for historical reference
+- **Rollup providers** are incentivized to store this data to improve the user experience of their rollup
+- **Block explorers** typically run archival nodes that will index and store all of this information for easy historical reference, made available to users through a web interface
 
-It is important to note, that recovering historical state of a **1-of-N trust modal**, meaning that you only need _a single honest actor_ to provide the data, and then anyone can verify it to be correct using the current state of the network.
+It is important to note, that recovering historical state is a **1-of-N trust modal**, meaning that you only need _a single honest actor_ to provide the data, and then _anyone can verify it_ to be correct using the current state of the network.
 
 ## How does this upgrade contribute to the broader Ethereum roadmap? {#roadmap-impact}
 
@@ -76,14 +80,15 @@ _Validator_ software is handled by the consensus clients, which have all been up
 
 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) - *Shard blob transactions (Proto-Danksharding)*
 
-- Introduction and utilization of blob-space reduces L1 gas demand in the near-term, making all transactions less expensive on average <!-- See below -->
+- Introduction and utilization of blob-space reduces L1 gas demand in the near-term, making all transactions less expensive on average ([see L1 fee impact below](#l1-fee-impact))
+- This upgrade primarily affects L2 rollup fees, making them significantly cheaper, but also helps offload some demand for L1 block space
 - Lower L1 gas costs means the amount of ETH burned from transaction fees is also reduced, making ETH less deflationary
-- Lower gas costs make the network more accessible to new users and new use cases, reflexively increasing demand for block space over time
+- Lower gas costs make the network more accessible to new users and new use cases, which may reflexively increase demand for block space over time
 
 [EIP-7516](https://eips.ethereum.org/EIPS/eip-7516) - *Blob base fee opcode*
 
 - Introduces a new fee market, similar to the EIP-1559 mechanism, dedicated to pricing blob space
-- This offloads demand for traditional L1 block space, reducing fees and reducing the amount of ETH burned on average
+- This helps offload demand for traditional L1 block space, reducing fees and reducing the amount of ETH burned on average
 
 ### Deneb (Consensus) {#economic-impact-deneb}
 
@@ -116,7 +121,7 @@ _Although fees on L1 may be reduced by off-loading rollup data to blobs, this up
 - L1 gas reduction will be proportional to adoption/usage of blob data by rollup providers
 - L1 gas is likely to remain competitive from non-rollup related activity
 - Rollups that adopt the use of blob space will demand less L1 gas, helping push L1 gas fees downward in the near-term
-- Blob space is still limited, so if blobs in a block are saturated/full, then rollups may be required to post their data as permanent data again, which will drive L1 and L2 gas prices up
+- Blob space is still limited, so if blobs within a block are saturated/full, then rollups may be required to post their data as permanent data in the meantime, which would drive L1 and L2 gas prices up
 
 ## Will this reduce fees on other EVM layer 1 blockchains? {#alt-l1-fee-impact}
 
