@@ -267,10 +267,6 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("contributing"),
         },
         {
-          to: "/languages/",
-          text: t("language-support"),
-        },
-        {
           to: "/privacy-policy/",
           text: t("privacy-policy"),
         },

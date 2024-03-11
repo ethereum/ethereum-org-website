@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-import { BaseLink } from "@/components/Link"
+import { Button } from "@/components/Buttons"
 
 const Morpher = () => {
   const [state, setState] = useState({
@@ -118,16 +118,24 @@ const Morpher = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const clickLanguagePicker = () => {
+    if (!document) return
+    ;(document.querySelector("[id*=menu-button]") as HTMLButtonElement).click()
+  }
+
   return (
-    <BaseLink
+    <Button
+      w="fit-content"
+      mx="auto"
+      variant="ghost"
       textDecor="none"
       fontSize="md"
       color="body.medium"
       _hover={{ color: "primary.base" }}
-      to="/languages/"
+      onClick={clickLanguagePicker}
     >
-      <span>{state.text}</span>
-    </BaseLink>
+      {state.text}
+    </Button>
   )
 }
 

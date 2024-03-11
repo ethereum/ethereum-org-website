@@ -11,7 +11,7 @@ Program Terjemahan adalah sebuah usaha kolaboratif untuk menerjemahkan ethereum.
 Kemajuan kami sejauh ini:
 
 - [**2.500+** penerjemah](/contributing/translation-program/acknowledgements/)
-- [**40** bahasa ada di situs](/languages/)
+- **40** bahasa ada di situs
 - [**2,9 juta** kata telah diterjemahkan di 2021](/contributing/translation-program/acknowledgements/)
 
 Jika Anda ingin terlibat dan membantu kami mengembangkan komunitas Ethereum global dengan menerjemahkan situs web ke dalam bahasa Anda, ikuti langkah-langkah di bawah ini!
