@@ -1,4 +1,3 @@
-// TODO
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
@@ -10,14 +9,9 @@ import {
   List,
   ListItem,
   SimpleGrid,
-  useToken,
 } from "@chakra-ui/react"
 
-import {
-  FooterLink,
-  FooterLinkSection,
-  Lang
-} from "@/lib/types"
+import type { FooterLink, FooterLinkSection, Lang } from "@/lib/types"
 
 import { BaseLink } from "@/components/Link"
 import Translation from "@/components/Translation"
@@ -53,26 +47,24 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
   const { locale } = useRouter()
   const { t } = useTranslation("common")
 
-  // TODO: check if `medBp` is being used or remove it
-  const [medBp] = useToken("breakpoints", ["md"])
   const linkSections: FooterLinkSection[] = [
     {
       title: t("learn"),
       links: [
         {
-          to: `/learn/`,
+          to: "/learn/",
           text: t("learn-hub"),
         },
         {
-          to: `/what-is-ethereum/`,
+          to: "/what-is-ethereum/",
           text: t("what-is-ethereum"),
         },
         {
-          to: `/eth/`,
+          to: "/eth/",
           text: t("what-is-ether"),
         },
         {
-          to: `/wallets/`,
+          to: "/wallets/",
           text: t("ethereum-wallets"),
         },
         {
@@ -100,7 +92,7 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("quizzes-title"),
         },
         {
-          to: `/glossary/`,
+          to: "/glossary/",
           text: t("ethereum-glossary"),
         },
       ],
@@ -117,35 +109,35 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("nav-find-wallet-label"),
         },
         {
-          to: `/get-eth/`,
+          to: "/get-eth/",
           text: t("get-eth"),
         },
         {
-          to: `/dapps/`,
+          to: "/dapps/",
           text: t("decentralized-applications-dapps"),
         },
         {
-          to: `/stablecoins/`,
+          to: "/stablecoins/",
           text: t("stablecoins"),
         },
         {
-          to: `/nft/`,
+          to: "/nft/",
           text: t("nft-page"),
         },
         {
-          to: `/defi/`,
+          to: "/defi/",
           text: t("defi-page"),
         },
         {
-          to: `/dao/`,
+          to: "/dao/",
           text: t("dao-page"),
         },
         {
-          to: `/decentralized-identity/`,
+          to: "/decentralized-identity/",
           text: t("decentralized-identity"),
         },
         {
-          to: `/staking/`,
+          to: "/staking/",
           text: t("stake-eth"),
         },
         {
@@ -158,44 +150,44 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
       title: t("build"),
       links: [
         {
-          to: `/developers/`,
+          to: "/developers/",
           text: t("nav-builders-home-label"),
           isPartiallyActive: false,
         },
         {
-          to: `/developers/tutorials/`,
+          to: "/developers/tutorials/",
           text: t("tutorials"),
         },
         {
-          to: `/developers/docs/`,
+          to: "/developers/docs/",
           text: t("documentation"),
         },
         {
-          to: `/developers/learning-tools/`,
+          to: "/developers/learning-tools/",
           text: t("learn-by-coding"),
         },
         {
-          to: `/developers/local-environment/`,
+          to: "/developers/local-environment/",
           text: t("set-up-local-env"),
         },
         {
-          to: `/community/grants/`,
+          to: "/community/grants/",
           text: t("grants"),
         },
         {
-          to: `/developers/docs/intro-to-ethereum/`,
+          to: "/developers/docs/intro-to-ethereum/",
           text: t("nav-docs-foundation-label"),
         },
         {
-          to: `/developers/docs/design-and-ux/`,
+          to: "/developers/docs/design-and-ux/",
           text: t("nav-docs-design-label"),
         },
         {
-          to: `/enterprise/`,
+          to: "/enterprise/",
           text: t("enterprise-mainnet"),
         },
         {
-          to: `/enterprise/private-ethereum/`,
+          to: "/enterprise/private-ethereum/",
           text: t("enterprise-private"),
         },
       ],
@@ -204,23 +196,23 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
       title: t("participate"),
       links: [
         {
-          to: `/community/`,
+          to: "/community/",
           text: t("community-hub"),
         },
         {
-          to: `/community/online/`,
+          to: "/community/online/",
           text: t("ethereum-online"),
         },
         {
-          to: `/community/events/`,
+          to: "/community/events/",
           text: t("ethereum-events"),
         },
         {
-          to: `/contributing/`,
+          to: "/contributing/",
           text: t("nav-contribute-label"),
         },
         {
-          to: `/contributing/translation-program/`,
+          to: "/contributing/translation-program/",
           text: t("translation-program"),
         },
         {
@@ -257,15 +249,15 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           text: t("ethereum-roadmap"),
         },
         {
-          to: `/roadmap/security/`,
+          to: "/roadmap/security/",
           text: t("nav-roadmap-security-label"),
         },
         {
-          to: `/history/`,
+          to: "/history/",
           text: t("nav-history-label"),
         },
         {
-          to: `/community/research/`,
+          to: "/community/research/",
           text: t("nav-open-research-label"),
         },
         {
@@ -351,28 +343,26 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
           {getLocaleTimestamp(locale as Lang, lastDeployDate!)}
         </Box>
         <Box my={4}>
-          {socialLinks.map(({ to, ariaLabel, icon, color }) => {
-            return (
-              <BaseLink
-                key={to}
-                href={to}
-                hideArrow
-                color="secondary"
-                aria-label={ariaLabel}
-                ms="4"
-              >
-                <Icon
-                  as={icon}
-                  _hover={{
-                    color,
-                    transition:
-                      "color 0.2s ease-in-out, transform 0.2s ease-in-out",
-                  }}
-                  fontSize="4xl"
-                />
-              </BaseLink>
-            )
-          })}
+          {socialLinks.map(({ to, ariaLabel, icon, color }) => (
+            <BaseLink
+              key={to}
+              href={to}
+              hideArrow
+              color="secondary"
+              aria-label={ariaLabel}
+              ms="4"
+            >
+              <Icon
+                as={icon}
+                _hover={{
+                  color,
+                  transition:
+                    "color 0.2s ease-in-out, transform 0.2s ease-in-out",
+                }}
+                fontSize="4xl"
+              />
+            </BaseLink>
+          ))}
         </Box>
       </Flex>
       <SimpleGrid
