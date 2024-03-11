@@ -1,6 +1,6 @@
 import React from "react"
 import { useChat } from "ai/react";
-import { Box, Flex,FormControl,Input, Text } from '@chakra-ui/react';
+import { Box, Flex,FormControl,Heading,Input, Text } from '@chakra-ui/react';
 import {
   Modal as ChakraModal,
   ModalCloseButton,
@@ -32,7 +32,7 @@ type ChatBotModalProps = ModalContentProps &
         w="full"
         maxW="md"
         h="full"
-        py="24"
+        paddingTop="18"
       >
       <Box overflowY="auto">
           {messages.length > 0 && messages.map(m => (
@@ -95,7 +95,7 @@ export const ChatBotModal = ({
         {...restProps}
       >
         <ModalCloseButton />
-        AI bot here
+        <Heading as="h2" fontSize={{ base: "xl", md: "2xl" }} textAlign={"center"}>Ethereum.org AI</Heading>
         <Chat />
       </ModalContent>
     </ChakraModal>

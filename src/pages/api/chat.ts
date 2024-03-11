@@ -1,41 +1,39 @@
-import { LangChainStream, Message,StreamingTextResponse } from 'ai';
+import { LangChainStream, Message, streamToResponse } from 'ai';
 import { AIMessage, HumanMessage } from 'langchain/schema'
+import { NextApiRequest, NextApiResponse } from 'next';
 import { ChatOpenAI } from '@langchain/openai';
 
-export const runtime = 'edge';
-
-
-export default async function POST(req) {
-  console.error('in api');
-  const { messages } = await req.json();
-  console.log('API messages', messages);
+export default async function handler(req: NextApiRequest,
+  res: NextApiResponse,
+) {
+  const { messages } = await req.body;
   const currentMessageContent = messages[messages.length - 1].content;
 
-  // const vectorSearch = await fetch("http://localhost:3000/api/vectorSearch", {
-  //   method: "POST",
-  //   headers: {
-  //     "Content-Type": "application/json",
-  //   },
-  //   body: currentMessageContent,
-  // }).then((res) => res.json());
+  const response = await fetch("http://localhost:3001/api/vector", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(currentMessageContent),
+  });
+  if (!response.ok) {
+    console.error('Fetch Error:', response.statusText, await response.text());
+    return res.status(response.status).json({ error: response.statusText });
+  }
+  const vectorSearch = await response.json();
 
-
-  // Construct a template for the chatbot to answer a question.
-  // The template includes the vector search response and the question itself.
-  const TEMPLATE = `You are a very enthusiastic ethereum.org representative who loves to help people! Given the following sections from the ethereum.org contributor documentation, answer the question using that information, outputted in markdown format. You should paraphrase to provide clear explanations instead of simply quoting. If you are unsure and the answer is not written in the documentation, say "Sorry, I don't know how to help with that."
+  const TEMPLATE = `You are a very enthusiastic ethereum.org representative who loves to help people! Given the following sections from the ethereum.org contributor documentation, answer the question using that information. You should paraphrase to provide clear explanations instead of simply quoting. If you are unsure and the answer is not explicitly written in the documentation, say "Sorry, I don't know how to help with that."
   
   Context sections:
-  
+  Pigs are cool
 
   Question: """
   ${currentMessageContent}
   """
   `;
 
-  // Add the template to the last message in the "messages" array.
   messages[messages.length -1].content = TEMPLATE;
 
-  // Set up a LangChainStream and a ChatOpenAI instance.
   const { stream, handlers } = LangChainStream();
   const llm = new ChatOpenAI({
     modelName: "gpt-3.5-turbo",
@@ -54,6 +52,5 @@ export default async function POST(req) {
     )
     .catch(console.error);
 
-  // Return a StreamingTextResponse with the stream from the LangChainStream.
-  return new StreamingTextResponse(stream);
+  return streamToResponse(stream, res);
 }

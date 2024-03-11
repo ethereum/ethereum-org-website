@@ -2,6 +2,7 @@ import { useRef } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
+import { LuSparkles } from "react-icons/lu"
 import { MdBrightness2, MdWbSunny } from "react-icons/md"
 import {
   Box,
@@ -117,7 +118,23 @@ const Nav = () => {
                 />
 
                 <>
-                  <Button variant="ghost" onClick={chatBotDisclosure.onOpen}>AI</Button>
+                  <Button variant="ghost" color="body.base"
+                    transition="color 0.2s"
+                    px={{ base: "2", xl: "3" }}
+                    _hover={{
+                      color: "primary.hover",
+                      "& svg": {
+                        transform: "rotate(10deg)",
+                        transition: "transform 0.5s",
+                      },
+                    }} onClick={chatBotDisclosure.onOpen}>
+                    <Icon
+                      as={LuSparkles}
+                      fontSize="2xl"
+                      verticalAlign="middle"
+                      me={2}
+                    />
+                  </Button>
                   <ChatBotModal
                     isOpen={chatBotDisclosure.isOpen}
                     onClose={chatBotDisclosure.onClose}
