@@ -4,7 +4,6 @@ import { useTranslation } from "next-i18next"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import {
   Box,
-  calc,
   ContainerProps,
   Flex,
   FlexProps,
@@ -35,6 +34,7 @@ import {
   formatSupportedLanguages,
   getSupportedLanguages,
   getWalletPersonas,
+  walletsListingCount,
 } from "@/lib/utils/wallets"
 
 import {
@@ -91,18 +91,11 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
     bg="background.base"
     borderBottom="1px"
     borderColor="primary.base"
-    templateColumns={{
-      base: "auto",
-      sm: "60% auto 0% 0% 5%",
-      md: "40% auto auto auto 5%",
-    }}
+    templateColumns="auto"
     rowGap={{ base: 4, sm: 0 }}
     p={2}
     position="sticky"
-    top={{
-      base: calc(NAV_BAR_PX_HEIGHT).add("4rem").toString(),
-      lg: NAV_BAR_PX_HEIGHT,
-    }}
+    top={NAV_BAR_PX_HEIGHT}
     zIndex={1}
     sx={{
       th: {
@@ -233,20 +226,34 @@ const WalletTable = ({
     <Container>
       <WalletContentHeader>
         <Th sx={{ textAlign: "start !important" }}>
-          {filteredWallets.length === walletCardData.length ? (
-            <Text ps={{ base: 2, md: 0 }} as="span">
-              {t("page-find-wallet-showing-all-wallets")} (
-              <strong>{walletCardData.length}</strong>)
+          <Flex justifyContent="space-between" px={{ base: 2.5, md: 0 }}>
+            <Text
+              display={{ base: "block", lg: "none" }}
+              lineHeight={1.6}
+              fontSize="md"
+              color="primary.base"
+              textTransform="uppercase"
+            >
+              {`${t("page-find-wallet-filters")} (${walletsListingCount(
+                filters
+              )})`}
             </Text>
-          ) : (
-            <Text ps={{ base: 2, md: 0 }} as="span">
-              {t("page-find-wallet-showing")}{" "}
-              <strong>
-                {filteredWallets.length} / {walletCardData.length}
-              </strong>{" "}
-              {t("page-find-wallet-wallets")}
-            </Text>
-          )}
+
+            {filteredWallets.length === walletCardData.length ? (
+              <Text ps={{ base: 2, md: 0 }} as="span">
+                {t("page-find-wallet-showing-all-wallets")} (
+                <strong>{walletCardData.length}</strong>)
+              </Text>
+            ) : (
+              <Text ps={{ base: 2, md: 0 }} as="span">
+                {t("page-find-wallet-showing")}{" "}
+                <strong>
+                  {filteredWallets.length} / {walletCardData.length}
+                </strong>{" "}
+                {t("page-find-wallet-wallets")}
+              </Text>
+            )}
+          </Flex>
         </Th>
       </WalletContentHeader>
       {filteredWallets.length === 0 && (
