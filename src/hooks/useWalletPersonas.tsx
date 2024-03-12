@@ -138,7 +138,7 @@ export const useWalletPersonas = () => {
         firefox: false,
         chromium: false,
         hardware: false,
-        open_source: false,
+        open_source: true,
         non_custodial: false,
         hardware_support: false,
         rpc_importing: true,
