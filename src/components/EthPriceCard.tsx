@@ -102,7 +102,7 @@ const EthPriceCard = ({ isLeftAlign = false, ...props }: EthPriceCardProps) => {
   const tooltipContent = (
     <Box>
       {t("data-provided-by")}{" "}
-      <InlineLink to="https://www.coingecko.com/en/api">
+      <InlineLink href="https://www.coingecko.com/en/coins/ethereum">
         coingecko.com
       </InlineLink>
     </Box>

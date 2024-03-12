@@ -65,7 +65,7 @@ Mogu da izvršavaju računanja, naprave valutu, skladište podatke, rudare NFT-i
 - [Stablecoins](/stablecoins/)
 - [kreiranje i distribuiranje jedinstvenih digitalnih sredstava](/nft/)
 - [automatska, otvorena razmena valuta](/get-eth/#dex)
-- [Decentralizovano igranje](/dapps/?category=gaming)
+- [Decentralizovano igranje](/dapps/?category=gaming#explore)
 - [polisa osiguranja koja se automatski izvršava](https://etherisc.com/)
 - [standard koji omogućava da ljudi kreiraju prilagođene, interoperabilne valute](/developers/docs/standards/tokens/)
 

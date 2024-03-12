@@ -60,8 +60,8 @@ import {
 } from "@/lib/utils/translations"
 
 import { fetchTxCount } from "@/lib/api/fetchTxCount"
-import developers from "@/public/developers-eth-blocks.png"
-import community from "@/public/enterprise.png"
+import dogeComputerImg from "@/public/doge-computer.png"
+import ethImg from "@/public/eth.png"
 import diffEthAndBtc from "@/public/eth.png"
 import criminalActivity from "@/public/finance_transparent.png"
 import ethCoin from "@/public/impact_transparent.png"
@@ -275,10 +275,14 @@ const WhatIsEthereumPage = ({
       eventName: "Cryptocurrency tab",
       content: (
         <>
-          <Text>{t("page-what-is-ethereum-cryptocurrency-tab-content-1")}</Text>
-          <Text>{t("page-what-is-ethereum-cryptocurrency-tab-content-2")}</Text>
+          <Text>
+            <Translation id="page-what-is-ethereum:page-what-is-ethereum-cryptocurrency-tab-content-1" />
+          </Text>
+          <Text>
+            <Translation id="page-what-is-ethereum:page-what-is-ethereum-cryptocurrency-tab-content-2" />
+          </Text>
           <Text mb="0">
-            {t("page-what-is-ethereum-cryptocurrency-tab-content-3")}
+            <Translation id="page-what-is-ethereum:page-what-is-ethereum-cryptocurrency-tab-content-3" />
           </Text>
         </>
       ),
@@ -609,10 +613,14 @@ const WhatIsEthereumPage = ({
             </Width40>
             <Width60>
               <H2>{t("page-what-is-ethereum-who-runs-ethereum-title")}</H2>
-              <Text>{t("page-what-is-ethereum-who-runs-ethereum-desc-1")}</Text>
-              <Text>{t("page-what-is-ethereum-who-runs-ethereum-desc-2")}</Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-who-runs-ethereum-desc-1" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-who-runs-ethereum-desc-2" />
+              </Text>
               <ButtonRow>
-                <ButtonLink to="/run-a-node/">
+                <ButtonLink href="/run-a-node/">
                   {t("page-what-is-ethereum-run-a-node")}
                 </ButtonLink>
               </ButtonRow>
@@ -630,13 +638,17 @@ const WhatIsEthereumPage = ({
               <Text>
                 <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-1" />
               </Text>
-              <Text>{t("page-what-is-ethereum-smart-contract-desc-2")}</Text>
-              <Text>{t("page-what-is-ethereum-smart-contract-desc-3")}</Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-2" />
+              </Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-smart-contract-desc-3" />
+              </Text>
               <ButtonRow>
-                <ButtonLink to="/smart-contracts/">
+                <ButtonLink href="/smart-contracts/">
                   {t("page-what-is-ethereum-more-on-smart-contracts")}
                 </ButtonLink>
-                <ButtonLink to="/dapps/" variant="outline" isSecondary>
+                <ButtonLink href="/dapps/" variant="outline" isSecondary>
                   {t("page-what-is-ethereum-explore-dapps")}
                 </ButtonLink>
               </ButtonRow>
@@ -654,10 +666,10 @@ const WhatIsEthereumPage = ({
               <Text>{t("page-what-is-ethereum-meet-ether-desc-1")}</Text>
               <Text>{t("page-what-is-ethereum-meet-ether-desc-2")}</Text>
               <ButtonRow>
-                <ButtonLink to="/eth/">
+                <ButtonLink href="/eth/">
                   {t("page-what-is-ethereum-what-is-ether")}
                 </ButtonLink>
-                <ButtonLink to="/get-eth/" variant="outline" isSecondary>
+                <ButtonLink href="/get-eth/" variant="outline" isSecondary>
                   {t("page-what-is-ethereum-get-eth")}
                 </ButtonLink>
               </ButtonRow>
@@ -672,15 +684,21 @@ const WhatIsEthereumPage = ({
             </Width40>
             <Width60>
               <H2>{t("page-what-is-ethereum-energy-title")}</H2>
-              <Text>{t("page-what-is-ethereum-energy-desc-1")}</Text>
+              <Text>
+                <Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-1" />
+              </Text>
               <Text>
                 <Translation id="page-what-is-ethereum:page-what-is-ethereum-energy-desc-2" />
               </Text>
               <ButtonRow>
-                <ButtonLink to="/energy-consumption/">
+                <ButtonLink href="/energy-consumption/">
                   {t("page-what-is-ethereum-more-on-energy-consumption")}
                 </ButtonLink>
-                <ButtonLink to="/roadmap/merge/" variant="outline" isSecondary>
+                <ButtonLink
+                  href="/roadmap/merge/"
+                  variant="outline"
+                  isSecondary
+                >
                   {t("page-what-is-ethereum-the-merge-update")}
                 </ButtonLink>
               </ButtonRow>
@@ -709,12 +727,6 @@ const WhatIsEthereumPage = ({
                     of criminal finances.pdf
                   </InlineLink>{" "}
                   EN (1.4 MB)
-                </ListItem>
-                <ListItem>
-                  <InlineLink href="https://go.chainalysis.com/2021-CryptoCrime-Report.html">
-                    Chainalysis (2021), The 2021 Crypto Crime report
-                  </InlineLink>{" "}
-                  EN
                 </ListItem>
               </UnorderedList>
             </Width60>
@@ -770,28 +782,28 @@ const WhatIsEthereumPage = ({
           <Callout
             flex="1 1 416px"
             minH="full"
-            image={developers}
-            titleKey="page-what-is-ethereum:page-what-is-ethereum-build"
-            alt={t("page-what-is-ethereum-alt-img-lego")}
-            descriptionKey="page-what-is-ethereum:page-what-is-ethereum-build-desc"
+            image={ethImg}
+            titleKey="page-what-is-ethereum:page-what-is-ethereum-get-eth-title"
+            alt={t("page-what-is-ethereum-get-eth-alt")}
+            descriptionKey="page-what-is-ethereum:page-what-is-ethereum-get-eth-description"
           >
             <Box>
-              <ButtonLink to="/developers/">
-                {t("page-what-is-ethereum-start-building-btn")}
+              <ButtonLink href="/get-eth/">
+                {t("page-what-is-ethereum-get-eth")}
               </ButtonLink>
             </Box>
           </Callout>
           <Callout
             flex="1 1 416px"
             minH="full"
-            image={community}
-            titleKey="page-what-is-ethereum:page-what-is-ethereum-community"
-            alt={t("page-what-is-ethereum-alt-img-comm")}
-            descriptionKey="page-what-is-ethereum:page-what-is-ethereum-comm-desc"
+            image={dogeComputerImg}
+            titleKey="page-what-is-ethereum:page-what-is-ethereum-explore-dapps-title"
+            alt={t("page-what-is-ethereum-explore-dapps-alt")}
+            descriptionKey="page-what-is-ethereum:page-what-is-ethereum-explore-dapps-description"
           >
             <Box>
-              <ButtonLink to="/community/">
-                {t("page-what-is-ethereum-meet-comm")}
+              <ButtonLink href="/dapps/">
+                {t("page-what-is-ethereum-explore-dapps")}
               </ButtonLink>
             </Box>
           </Callout>

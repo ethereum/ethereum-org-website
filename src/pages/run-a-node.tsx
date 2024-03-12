@@ -362,16 +362,6 @@ const RunANodePage = () => {
           eventName: "learn more",
         },
       },
-      {
-        content: t("page-run-a-node-hero-cta-2"),
-        toId: "getting-started",
-        variant: "outline",
-        matomo: {
-          eventCategory: "run a node hero buttons",
-          eventAction: "click",
-          eventName: "lets dive in",
-        },
-      },
     ],
   }
 
@@ -491,7 +481,9 @@ const RunANodePage = () => {
           background="runNodeGradient2"
           forceOpen
         >
-          <Text>{t("page-run-a-node-who-copy-1")}</Text>
+          <Text>
+            <Translation id="page-run-a-node:page-run-a-node-who-copy-1" />
+          </Text>
           <Text>{t("page-run-a-node-who-copy-2")}</Text>
           <Text>{t("page-run-a-node-who-copy-3")}</Text>
           <StrongParagraph>
@@ -581,7 +573,7 @@ const RunANodePage = () => {
                 {t("page-run-a-node-getting-started-software-section-3a")}
               </Text>
               <Text>
-                {t("page-run-a-node-getting-started-software-section-3b")}
+                <Translation id="page-run-a-node:page-run-a-node-getting-started-software-section-3b" />
               </Text>
             </ColumnFill>
             <ColumnNarrow>
@@ -799,7 +791,7 @@ const RunANodePage = () => {
             <ButtonContainer>
               <ButtonLink
                 leftIcon={<FaDiscord />}
-                to="https://discord.gg/c28an8dA5k"
+                to="https://discord.com/invite/dappnode"
               >
                 {t("page-run-a-node-community-link-1")}
               </ButtonLink>
@@ -889,15 +881,6 @@ const RunANodePage = () => {
         </H3>
         <Text>{t("page-run-a-node-rasp-pi-description")}</Text>
         <ul>
-          <li>
-            <InlineLink href="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
-              {t("page-run-a-node-rasp-pi-note-1-link")}
-            </InlineLink>{" "}
-            -{" "}
-            <Text as="i">
-              {t("page-run-a-node-rasp-pi-note-1-description")}
-            </Text>
-          </li>
           <li>
             <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
               {t("page-run-a-node-rasp-pi-note-2-link")}
