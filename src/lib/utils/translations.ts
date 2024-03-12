@@ -176,8 +176,14 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
   if (
     path.startsWith("/dapps/") ||
     path.startsWith("/layer-2/") ||
+    path.startsWith("/get-eth/") ||
+    path.startsWith("/stablecoins/") ||
+    path.startsWith("/staking/") ||
+    path.startsWith("/run-a-node/") ||
+    path.startsWith("/what-is-ethereum/") ||
+    path.startsWith("/eth/") ||
     path.startsWith("/wallets/") ||
-    path.startsWith("/get-eth/")
+    path.startsWith("/gas/")
   ) {
     requiredNamespaces = [...requiredNamespaces, "glossary-tooltip"]
   }
