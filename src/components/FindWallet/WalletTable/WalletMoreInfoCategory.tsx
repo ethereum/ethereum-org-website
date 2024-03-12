@@ -97,7 +97,9 @@ export const WalletMoreInfoCategory = ({
                     </Text>
                   }
                 >
-                  <Icon as={MdInfoOutline} color={featureColor} />
+                  <Box as="span">
+                    <Icon as={MdInfoOutline} color={featureColor} />
+                  </Box>
                 </Tooltip>
               </ListItem>
             )

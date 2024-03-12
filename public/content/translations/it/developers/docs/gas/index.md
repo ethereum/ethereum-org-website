@@ -55,7 +55,7 @@ Ogni blocco ha una commissione base che funge da prezzo di riserva. Per poter es
 La commissione di base è calcolata con una formula che confronta le dimensioni del blocco precedente (la quantità di gas usata per tutte le transazioni) con le dimensioni di quello corrente. La commissione base aumenta di un massimo del 12,5% per blocco se la dimensione prevista del blocco viene superata. Questa crescita esponenziale rende economicamente impensabile che la dimensione del blocco resti elevata per un tempo indefinito.
 
 | Numero del blocco | Gas Incluso | Aumento della commissione | Tariffa base corrente |
-| ----------------- | ----------: | ------------------------: | --------------------: |
+| ----------------- | -----------:| -------------------------:| ---------------------:|
 | 1                 |         15M |                        0% |              100 gwei |
 | 2                 |         30M |                        0% |              100 gwei |
 | 3                 |         30M |                     12,5% |            112,5 gwei |
@@ -70,7 +70,7 @@ Secondo la tabella che precede, per creare una transazione sul blocco numero 9, 
 Inoltre, è importante notare che, vista la velocità con cui la commissione base aumenta mentre si avanza verso un blocco completo, è improbabile assistere a picchi prolungati di blocchi completi.
 
 | Numero del blocco | Gas Incluso | Aumento della commissione | Tariffa base corrente |
-| ----------------- | ----------: | ------------------------: | --------------------: |
+| ----------------- | -----------:| -------------------------:| ---------------------:|
 | 30                |         30M |                     12,5% |          2.705,6 gwei |
 | ...               |         ... |                     12,5% |                   ... |
 | 50                |         30M |                     12,5% |         28.531,3 gwei |

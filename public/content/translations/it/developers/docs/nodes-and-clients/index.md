@@ -136,6 +136,7 @@ Questa tabella riepiloga i diversi client. Tutti superano i [test dei client](ht
 | [Nethermind](http://nethermind.io/)             | C#, .NET   | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Snap (senza servire), Rapida, Completa | Archiviata, Tagliata      |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java       | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Snap, Veloce, Completo                 | Archiviata, Tagliata      |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go         | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Completa                               | Archiviata, Tagliata      |
+| [Reth](https://github.com/paradigmxyz/reth)     | Rust       | Linux, Windows, macOS | Rete Principale, Sepolia, Goerli e altre | Completa                               | Archiviata, Tagliata      |
 
 Per ulteriori informazioni sulle reti supportate, consulta [reti Ethereum](/developers/docs/networks/).
 
