@@ -41,8 +41,8 @@ The introduction of Proto-Danksharding in the Dencun upgrade adds cheaper data s
 
 While regular Ethereum nodes will always hold the _current state_ of the network, historical blob data can be discarded after ~18 days. Before it can be discarded, Ethereum guarantees that this data has been made available to all network participants, to allow time for:
 
-- interested parties to download and store the data
-- all rollup challenge periods to be completed
+- interested parties to download and store the data.
+- all rollup challenge periods to be completed.
 - and the rollup transactions to be considered finalized.
 
 _Historical_ blob data may be desired for a variety of reasons, and can be stored and accessed using several decentralized protocols:
@@ -80,7 +80,7 @@ Rollup transactions are not required to use blob space for their data (though th
 
 Although this decision is likely to be performed behind-the-scenes by rollup providers, it is theoretically possible for a user to choose which storage type to use. This would require the rollup provider to expose this option to the user, which introduces additional complexities when bundling transactions in a cost-effective manner. See individual rollup provider documentation for more details.
 
-## Would this reduce layer 1 (L1) gas fees in any way? {#l1-fee-impact}
+## Will 4844 reduce L1 gas? {#l1-fee-impact}
 
 Yes, but significantly less than on layer 2 rollups. A new gas market is introduced exclusively for blob space, for use by rollup providers. This reduces the demand from these rollups for L1 block space, pushing gas prices downward.
 
