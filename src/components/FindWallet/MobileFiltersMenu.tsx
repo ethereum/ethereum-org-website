@@ -16,6 +16,8 @@ import { Button } from "@/components/Buttons"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { walletsListingCount } from "@/lib/utils/wallets"
 
+import walletData from "@/data/wallets/wallet-data"
+
 import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
 import { FilterBurgerIcon } from "../icons/wallets"
@@ -26,6 +28,8 @@ import WalletFilterPersona from "./WalletFilterPersona"
 import WalletFilterSidebar, {
   WalletFilterSidebarProps,
 } from "./WalletFilterSidebar"
+
+import { useWalletTable } from "@/hooks/useWalletTable"
 
 interface MobileFiltersMenuProps extends WalletFilterSidebarProps {
   showMobileSidebar: boolean
@@ -47,6 +51,7 @@ export const MobileFiltersMenu = ({
   onClose,
 }: MobileFiltersMenuProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
+  const { filteredWallets } = useWalletTable({ filters, t, walletData })
 
   return (
     <>
@@ -165,8 +170,8 @@ export const MobileFiltersMenu = ({
               </Box>
 
               <Button w="100%" flex={1} onClick={onClose}>
-                {t("page-find-wallet-see-wallets")} (
-                {walletsListingCount(filters)})
+                {t("page-find-wallet-see-wallets")}{" "}
+                {`(${filteredWallets.length})`}
               </Button>
             </Flex>
           </DrawerBody>

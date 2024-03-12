@@ -7,7 +7,6 @@ import {
   Box,
   Center,
   Flex,
-  Hide,
   Text,
   useDisclosure,
   useTheme,
