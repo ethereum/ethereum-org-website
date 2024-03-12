@@ -5,6 +5,7 @@ import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import {
   Box,
   calc,
+  ContainerProps,
   Flex,
   FlexProps,
   forwardRef,
@@ -61,7 +62,7 @@ const Container = (props: TableProps) => (
   />
 )
 
-const WalletContainer = (props: ChildOnlyProp) => (
+const WalletContainer = (props: ChildOnlyProp & ContainerProps) => (
   <Container
     borderBottom="1px"
     borderColor="lightBorder"
@@ -285,7 +286,10 @@ const WalletTable = ({
           )
 
           return (
-            <WalletContainer key={wallet.key}>
+            <WalletContainer
+              key={wallet.key}
+              bg={wallet.moreInfo ? "background.highlight" : "transparent"}
+            >
               <Wallet
                 onClick={() => {
                   updateMoreInfo(wallet.key)
