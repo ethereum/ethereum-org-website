@@ -6,15 +6,15 @@ lang: en
 
 # Cancun-Deneb (Dencun) {#dencun}
 
-Cancun-Deneb (Dencun) is an upgrade to the Ethereum network which activates **Proto-Danksharding (EIP-4844)**, introducing data **blobs** for cheaper layer 2 (L2) rollup storage.
+Cancun-Deneb (Dencun) is an upgrade to the Ethereum network which activates **Proto-Danksharding (EIP-4844)**, introducing temporary data **blobs** for cheaper layer 2 (L2) rollup storage.
 
-A new transaction type enables rollup providers to store data in a more cost-effective manner, in what are known as "blobs", which are guaranteed to be made available to the network, but can be discarded after a couple weeks.
+A new transaction type enables rollup providers to store data in a more cost-effective manner, in what are known as "blobs". These are guaranteed to be made available to the network for a few weeks, or more precisely, 4096 [epochs](/glossary/#epoch). After this period, blobs are pruned from the network but applications can still verify the validity of their data using proofs. 
 
 This significantly reduces the cost of using rollups, limits chain growth, and helps to support more users while maintaining security and a decentralized set of node operators.
 
 ## When do we expect that rollups will reflect lower fees as a result of Proto-Danksharding? {#when}
 
-- This upgrade is set for activation at the start of [epoch](/glossary/#epoch) 269568, occurring on **13-Mar-2024 (UTC)**
+- This upgrade is set for activation at the start of epoch 269568, occurring on **13-Mar-2024 (UTC)**
 - All major rollup providers, such as Arbitrum or Optimism, have signaled that blobs will be supported immediately following the upgrade
 - Individual rollup support may vary as each rollup must upgrade to take advantage of the new blob space
 
@@ -31,9 +31,9 @@ Dencun primarily addresses **scalability** (handling more users and more transac
 
 The Ethereum community has been taking a "rollup-centric" approach to its growth, which places layer 2 rollups as the primary means to safely support more users.
 
-Rollup networks handle the _processing_ (or "execution") of transactions separate from Mainnet, and then publish a cryptographic proof of the results back to Mainnet for record keeping. Storing these proofs carries an expense (in the form of [gas](/glossary/#gas)), which prior to Proto-Danksharding had to be stored permanently by all network node operators, making it an expensive task.
+Rollup networks handle the _processing_ (or "execution") of transactions separate from Mainnet, and then publish a cryptographic proof and/or compressed transaction data of the results back to Mainnet for record keeping. Storing these proofs carries an expense (in the form of [gas](/glossary/#gas)), which prior to Proto-Danksharding had to be stored permanently by all network node operators, making it an expensive task.
 
-The introduction of Proto-Danksharding in the Dencun upgrade adds cheaper data storage for these proofs by only requiring node operators to store this data for about 18 days, after which is can safely be removed to prevent expansion of hardware requirements.
+The introduction of Proto-Danksharding in the Dencun upgrade adds cheaper data storage for these proofs by only requiring node operators to store this data for about 18 days, after which data can be safely removed to prevent expansion of hardware requirements.  Because rollups typically have a withdrawal period of 7 days, their security model is unchanged as long as blobs are available on L1 for this duration. The 18 day pruning window provides a significant buffer to this period.
 
 [More on scaling Ethereum](/roadmap/scaling/)
 
@@ -64,7 +64,7 @@ This is critical to [scale Ethereum to support billions of users](/roadmap/scali
 
 ## Does this upgrade affect all Ethereum consensus and validator clients? {#client-impact}
 
-Yes. Proto-Danksharding (EIP-4844) involves changes to both the execution clients _and_ consensus clients. All production Ethereum clients have released updates to support the upgrade. Node operators must upgrade to a supported version to stay in sync with the chain after the upgrade. <!-- TIME-SENSITIVE --> [See details on supported client releases](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases)
+Yes. Proto-Danksharding (EIP-4844) involves changes to both the execution clients and consensus clients. All production Ethereum clients have released updates to support the upgrade. Node operators must upgrade to a supported version to stay in sync with the chain after the upgrade. <!-- TIME-SENSITIVE --> [See details on supported client releases](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases)
 
 _Validator_ software is handled by the consensus clients, which have all been updated to accommodate the upgrade.
 
@@ -73,38 +73,6 @@ _Validator_ software is handled by the consensus clients, which have all been up
 - Devnets, Goerli, Sepolia and Holesky have all undergone the Dencun upgrade and have Proto-Danksharding fully functioning
 - Rollup developers can use these networks for EIP-4844 testing
 - Most users will be completely unaffected by this change to each testnet
-
-## What is the economic impact for the included Ethereum Improvement Proposals (EIPs)? {#economic-impact}
-
-### Cancun (Execution) {#economic-impact-cancun}
-
-[EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) - *Shard blob transactions (Proto-Danksharding)*
-
-- Introduction and utilization of blob-space reduces L1 gas demand in the near-term, making all transactions less expensive on average ([see L1 fee impact below](#l1-fee-impact))
-- This upgrade primarily affects L2 rollup fees, making them significantly cheaper, but also helps offload some demand for L1 block space
-- Lower L1 gas costs means the amount of ETH burned from transaction fees is also reduced, making ETH less deflationary
-- Lower gas costs make the network more accessible to new users and new use cases, which may reflexively increase demand for block space over time
-
-[EIP-7516](https://eips.ethereum.org/EIPS/eip-7516) - *Blob base fee opcode*
-
-- Introduces a new fee market, similar to the EIP-1559 mechanism, dedicated to pricing blob space
-- This helps offload demand for traditional L1 block space, reducing fees and reducing the amount of ETH burned on average
-
-### Deneb (Consensus) {#economic-impact-deneb}
-
-[EIP-4844](https://eips.ethereum.org/EIPS/eip-4844) - [See above](#economic-impact-cancun)
-
-[EIP-7044](https://eips.ethereum.org/EIPS/eip-7044) - *Perpetually valid signed voluntary exits*
-
-- This reduces the trust assumptions for users of pooled staking or staking-as-a-service platforms by providing a self-sovereign means of exiting validator funds without any permission from a third-party node operator
-- In the event this encourages more users to stake, the increase in total ETH staked will increase the issuance of new ETH
-- In the event users are more likely to exit staking, this will decrease the total ETH staked, reducing the issuance of new ETH
-
-[EIP-7514](https://eips.ethereum.org/EIPS/eip-7514) - *Add max epoch churn limit*
-
-- This caps the rate at which new ETH can be staked
-- ETH issuance is proportional to the total amount of ETH staked, thus this limitation will slow the potential issuance of new ETH
-- This does NOT mean that new validators cannot join, but removes the exponential climb in how many are allowed to join at a time
 
 ## Will all transactions on L2s now use temporary blob space, or will you be able to choose? {#calldata-vs-blobs}
 
@@ -127,7 +95,7 @@ _Although fees on L1 may be reduced by off-loading rollup data to blobs, this up
 
 No. The benefits of Proto-Danksharding are specific to Ethereum layer 2 rollups that store their proofs on layer 1 (Mainnet).
 
-Simply being compatible with the Ethereum Virtual Machine (EVM) does not mean that a network will see any benefit from this upgrade. Networks that operate independently of Ethereum (whether EVM compatible or not), such as Polygon PoS, Binance Smart Chain, Solana, Avalanche, or Gnosis Chain, do not store their data on Ethereum and will not see any benefit from this upgrade.
+Simply being compatible with the Ethereum Virtual Machine (EVM) does not mean that a network will see any benefit from this upgrade. Networks that operate independently of Ethereum (whether EVM compatible or not) do not store their data on Ethereum and will not see any benefit from this upgrade.
 
 [More about layer 2 rollups](/layer-2/)
 
@@ -149,3 +117,4 @@ _Bankless: Blobspace 101 with Domothy_
 - [The Hitchhiker's Guide to Ethereum: Proto-Danksharding](https://members.delphidigital.io/reports/the-hitchhikers-guide-to-ethereum/#proto-danksharding-eip-4844) - _Jon Charbonneau_
 - [Proto-Danksharding FAQ](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq) - _Vitalik Buterin_
 - [An In-depth Explanation of EIP-4844: The Core of the Cancun Upgrade](https://medium.com/@ebunker.io/an-in-depth-explanation-of-eip-4844-the-core-of-the-cancun-upgrade-de7b13761d2c) - _Ebunker_
+- [AllCoreDevs Update 016](https://tim.mirror.xyz/HzH5MpK1dnw7qhBSmzCfdCIxpwpD6DpwlfxtaAwEFro) - _Tim Beiko_
