@@ -57,6 +57,7 @@ export const LanguageSupportFilter = ({}: LanguageSupportFilterProps) => {
       // Remove border color from global style
       borderColor="transparent"
       p={6}
+      zIndex={0}
     >
       {({ isExpanded }) => (
         <>
