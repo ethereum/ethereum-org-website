@@ -11,7 +11,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-import ReactSelect from "@/components/ReactSelect"
+import Select from "@/components/Select"
 
 import {
   getAllWalletsLanguages,
@@ -95,7 +95,7 @@ export const LanguageSupportFilter = ({}: LanguageSupportFilterProps) => {
           </Heading>
 
           <AccordionPanel as={List} p={0} m={0}>
-            <ReactSelect
+            <Select
               instanceId="language-support-filter"
               // TODO
               // aria-label={t("page-get-eth-exchanges-header")}
