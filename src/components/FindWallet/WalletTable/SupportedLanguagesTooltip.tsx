@@ -1,4 +1,4 @@
-import { Text } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 
 import Tooltip from "@/components/Tooltip"
 
@@ -16,17 +16,14 @@ export const SupportedLanguagesTooltip = ({
   supportedLanguages,
   restText,
 }: SupportedLanguagesTooltipProps) => {
+  const tooltipContent = formatSupportedLanguages(
+    supportedLanguages.slice(NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN)
+  )
+
   return (
-    <Tooltip
-      content={
-        <Text fontSize="md !important" fontWeight="normal !important">
-          {formatSupportedLanguages(
-            supportedLanguages.slice(NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN)
-          )}
-        </Text>
-      }
-    >
+    <Tooltip content={tooltipContent}>
       <Text
+        as="span"
         color="primary.base"
         fontSize="md !important"
         fontWeight="normal !important"
