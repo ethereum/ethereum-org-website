@@ -218,6 +218,7 @@ const TutorialPage = ({
         )}
       />
       <Heading
+        as="h1"
         fontStyle="normal"
         fontWeight="semibold"
         fontFamily="monospace"
@@ -247,7 +248,7 @@ const TutorialPage = ({
         </Heading>
         <Text>
           <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />{" "}
-          <InlineLink to="/contributing/content-resources/">
+          <InlineLink href="/contributing/content-resources/">
             <Translation id="page-developers-tutorials:page-tutorial-listing-policy" />
           </InlineLink>
         </Text>

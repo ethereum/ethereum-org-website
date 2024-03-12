@@ -7,7 +7,7 @@ incomplete: true
 
 ## 简介 {#a-brief-introduction}
 
-智能合约在以太坊上是公开的，可视为开放式应用程序接口。 您不需要写自己的智能合约才能成为一个去中心化应用程序开发者，您只需要知道如何与它们交互。 例如，您可以使用现有的智能合约 [Uniswap](https://uniswap.exchange/swap)，一个去中心化的交易所，在您的应用中处理代币交易逻辑 – 您并不需要一切从零开始。 看看他们的一些 [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) 和 [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts) 合约。
+智能合约在以太坊上是公开的，可视为开放式应用程序接口。 你不需要写自己的智能合约才能成为一个去中心化应用程序开发者，你只需要知道如何与它们交互。 例如，你可以使用现有的智能合约 [Uniswap](https://uniswap.exchange/swap)，一个去中心化的交易所，在你的应用中处理代币交易逻辑 – 你并不需要一切从零开始。 看看他们的一些 [v2](https://github.com/Uniswap/uniswap-v2-core/tree/master/contracts) 和 [v3](https://github.com/Uniswap/uniswap-v3-core/tree/main/contracts) 合约。
 
 ## 什么是可组合性？ {#what-is-composability}
 
@@ -45,7 +45,7 @@ incomplete: true
 
 如果某个代币在`交易所 A` 的交易价格高于`交易所 B`，你可以利用价格差赚取利润。 然而，只有当你有足够的资本来为交易提供资金的情况下，你才能做到这一点（即，从`交易所 B` 购买代币并在`交易所 A` 出售）。
 
-在你没有足够资金来支付交易的情况下，闪电贷可能是个理想的办法。 [闪电贷](/defi/#flash-loans)的技术含量较高，但最基本的逻辑是，你可以借入资产（无抵押品），并在*一笔*交易中返还相同的资产。
+在你没有足够资金来支付交易的情况下，闪电贷可能是个理想的办法。 [闪电贷](/defi/#flash-loans)的技术含量较高，但最基本的逻辑是，你可以借入资产（无抵押品），并在_一笔_交易中返还相同的资产。
 
 回到我们最初的示例，仲裁交易者可以拿出大笔闪电贷，从`交易所 B` 购买代币，在`交易所 A` 出售它们，退还资本＋利息，并将利润保留在同一笔交易中。 这种复杂的逻辑需要将多个合约的调用结合起来，如果智能合约缺乏互操作性，这种调用是不可能做到的。
 
@@ -66,7 +66,7 @@ incomplete: true
 ## 相关教程 {#related-tutorials}
 
 - [合约的可组合性：以太坊智能合约开发的基石](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
-- [使用 create-eth-app 启动你的去中心化应用程序前端开发](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– 概述如何使用 create-eth-app，借助开箱即用的流行智能合约创建应用程序。_
+- [使用 create-eth-app 启动去中心化应用程序前端开发](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _– 概述如何使用 create-eth-app，借助开箱即用的热门智能合约创建应用程序。_
 
 ## 延伸阅读 {#further-reading}
 

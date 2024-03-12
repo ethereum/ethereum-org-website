@@ -24,7 +24,7 @@ Se você quiser ver o código-fonte completo:
 
 ## Criando um contrato ERC-20 {#creating-an-erc-20-contract}
 
-Antes que nós possamos adicionar funcionalidade de trilhos de segurança, nós precisamos de um contrato ERC-20. Neste artigo, usaremos o [o Assistente de contratos da OpenZeppelin](https://docs.openzeppelin.com/contracts/4.x/wizard). Abra-o em outro navegador e siga estas instruções:
+Antes que nós possamos adicionar funcionalidade de trilhos de segurança, nós precisamos de um contrato ERC-20. Neste artigo, usaremos o [o Assistente de contratos da OpenZeppelin](https://docs.openzeppelin.com/contracts/5.x/wizard). Abra-o em outro navegador e siga estas instruções:
 
 1. Selecione **ERC20**.
 2. Entre estas configurações:

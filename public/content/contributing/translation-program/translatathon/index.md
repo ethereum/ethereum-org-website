@@ -4,6 +4,8 @@ description: Join the first ethereum.org Translatathon to contribute to ethereum
 lang: en
 ---
 
+# Ethereum.org Translatathon {#introduction}
+
 Welcome to the first ever ethereum.org Translatathon!
 
 A translatathon is a collaborative and competitive hackathon-style event where individuals and teams compete for prizes by translating ethereum.org content into different languages.

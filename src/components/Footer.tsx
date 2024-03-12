@@ -313,6 +313,7 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
                 hideArrow
                 color="secondary"
                 aria-label={link.ariaLabel}
+                ms={4}
               >
                 <Icon
                   as={link.icon}
@@ -322,7 +323,6 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
                       "color 0.2s ease-in-out, transform 0.2s ease-in-out",
                   }}
                   fontSize="4xl"
-                  ms={4}
                 />
               </BaseLink>
             )

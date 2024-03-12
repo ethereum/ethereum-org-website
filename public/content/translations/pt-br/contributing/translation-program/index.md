@@ -73,7 +73,7 @@ Se você está contribuindo para o Programa de Tradução ou pensando em se envo
 - [Guia do editor online do Crowdin](https://support.crowdin.com/online-editor/) _ — um guia detalhado sobre como usar o editor online do Crowdin e algumas funcionalidades avançadas do Crowdin_
 - [Pacotes de conteúdo](/contributing/translation-program/content-buckets/) _ — quais páginas estão incluídas em cada pacote de conteúdo do ethereum.org_
 
-Para outras ferramentas úteis de tradução, comunidades de tradutores e postagens no blog do Programa de Tradução, visite a [Página de recursos](/contribuindo/tradução-programa/recursos/).
+Para outras ferramentas úteis de tradução, comunidades de tradutores e postagens no blog do Programa de Tradução, visite a [Página de recursos](/contributing/translation-program/resources/).
 
 ## Envolva-se {#get-in-touch}
 

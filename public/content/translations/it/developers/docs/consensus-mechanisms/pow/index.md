@@ -68,7 +68,7 @@ Per complicare ulteriormente le cose, le transazioni che erano state rifiutate s
 
 ## Consumo energetico del Proof of Work {#energy}
 
-Una delle principali critiche mosse al Proof of Work riguarda la quantità di energia necessaria per mantenere la rete sicura. Per mantenere la sicurezza e la decentralizzazione, Ethereum sul Proof of Work consumava elevate quantità di energia. Poco prima di passare al Proof of Stake, i miner di Ethereum consumavano collettivamente circa 70 TWh/anno (quasi quanto la Repubblica ceca, secondo [digiconomist](https://digiconomist.net), il 18 luglio 2022).
+Una delle principali critiche mosse al Proof of Work riguarda la quantità di energia necessaria per mantenere la rete sicura. Per mantenere la sicurezza e la decentralizzazione, Ethereum sul Proof of Work consumava elevate quantità di energia. Poco prima di passare al Proof of Stake, i miner di Ethereum consumavano collettivamente circa 70 TWh/anno (quasi quanto la Repubblica ceca, secondo [digiconomist](https://digiconomist.net/), il 18 luglio 2022).
 
 ## Pro e contro {#pros-and-cons}
 

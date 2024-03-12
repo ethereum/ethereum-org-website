@@ -3,7 +3,7 @@ title: Peta Perjalanan Ethereum
 description: Jalan menuju peningkatan skalabilitas, keamanan, dan keberlanjutan Ethereum.
 lang: id
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /heroes/roadmap-hub-hero.jpg
 alt: "Peta Perjalanan Ethereum"
 summaryPoints:
 buttons:
@@ -59,7 +59,7 @@ Ethereum ditingkatkan secara rutin untuk meningkatkan skalabilitas, keamanan, at
 
 <RoadmapImageContent title="Cara penetapan peta jalan">
 
-Peta jalan ini sebagian besar adalah hasil kerja bertahun-tahun dari para peneliti dan pengembang - karena protokol ini sangat teknis - tetapi setiap orang yang berminat boleh ikut serta. Ide-ide biasanya dimulai dari diskusi di forum seperti [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) atau server discord Eth R&D. Ide-ide tersebut mungkin tanggapan terhadap kerentanan baru yang ditemukan, saran dari organisasi yang bekerja di lapisan aplikasi (seperti dapps dan bursa pertukaran) atau dari perselisihan yang diketahui oleh pengguna akhir (seperti biaya atau kecepatan transaksi). Ketika sudah matang, ide-ide ini dapat diusulkan sebagai [Proposal Peningkatan Ethereum](https://eips.ethereum.org/). Semua ini dilakukan di ruang publik sehingga setiap anggota komunitas dapat memberi masukan kapan saja.
+Peta jalan ini sebagian besar adalah hasil kerja bertahun-tahun dari para peneliti dan pengembang - karena protokol ini sangat teknis - tetapi setiap orang yang berminat boleh ikut serta. Ide-ide biasanya dimulai dari diskusi di forum seperti [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://ethereum-magicians.org/) atau server discord Eth R&D. Ide-ide tersebut mungkin tanggapan terhadap kerentanan baru yang ditemukan, saran dari organisasi yang bekerja di lapisan aplikasi (seperti dapps dan bursa pertukaran) atau dari perselisihan yang diketahui oleh pengguna akhir (seperti biaya atau kecepatan transaksi). Ketika sudah matang, ide-ide ini dapat diusulkan sebagai [Proposal Peningkatan Ethereum](https://eips.ethereum.org/). Semua ini dilakukan di ruang publik sehingga setiap anggota komunitas dapat memberi masukan kapan saja.
 
 [Selengkapnya tentang tata kelola Ethereum](/governance/)
 

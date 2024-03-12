@@ -60,7 +60,7 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
         me={2}
       />
       {contributor.user && (
-        <InlineLink to={contributor.user.url}>
+        <InlineLink href={contributor.user.url}>
           @{contributor.user.login}
         </InlineLink>
       )}
@@ -146,8 +146,8 @@ const FileContributors = ({
           <Skeleton isLoaded={!loading}>
             <Text m={0} color="text200">
               <Translation id="last-edit" />:{" "}
-              {lastContributor.user && (
-                <InlineLink to={lastContributor.user.url}>
+              {lastContributor.user?.url && (
+                <InlineLink href={lastContributor.user.url}>
                   @{lastContributor.user.login}
                 </InlineLink>
               )}

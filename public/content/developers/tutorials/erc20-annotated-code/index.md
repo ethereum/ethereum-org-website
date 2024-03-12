@@ -308,7 +308,7 @@ This line attaches the `SafeMath` library to the `uint256` type. You can find th
 
 ### Variable Definitions {#variable-definitions}
 
-These definitions specify the contract's state variables. There variables are declared `private`, but
+These definitions specify the contract's state variables. These variables are declared `private`, but
 that only means that other contracts on the blockchain can't read them. _There are no
 secrets on the blockchain_, the software on every node has the state of every contract
 at every block. By convention, state variables are named `_<something>`.
@@ -794,7 +794,7 @@ Make sure to update `_totalSupply` when the total number of tokens changes.
 
 &nbsp;
 
-```
+```solidity
     /**
      * @dev Destroys `amount` tokens from `account`, reducing the
      * total supply.

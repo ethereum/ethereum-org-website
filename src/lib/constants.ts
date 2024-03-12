@@ -1,5 +1,7 @@
 import { ReportsModel } from "@crowdin/crowdin-api-client"
 
+import { NavSectionKey } from "@/components/Nav/types"
+
 import i18nConfig from "../../i18n.config.json"
 
 export const OLD_CONTENT_DIR = "src/content"
@@ -11,6 +13,7 @@ export const INTL_JSON_DIR = "src/intl"
 
 // i18n
 export const DEFAULT_LOCALE = "en"
+export const FAKE_LOCALE = "default"
 // Sorted list of supported locales codes, defined in `i18n.config.json`
 const BUILD_LOCALES = process.env.BUILD_LOCALES
 export const LOCALES_CODES = BUILD_LOCALES
@@ -23,6 +26,7 @@ export const DISCORD_PATH = "/discord/"
 export const EDIT_CONTENT_URL = `https://github.com/ethereum/ethereum-org-website/tree/dev/`
 export const MAIN_CONTENT_ID = "main-content"
 export const WEBSITE_EMAIL = "website@ethereum.org"
+export const DEFAULT_OG_IMAGE = "/home/hero.png"
 
 // Config
 export const CONTENT_IMAGES_MAX_WIDTH = 800
@@ -70,3 +74,21 @@ export const ETHERSCAN_API_URL = "https://api.etherscan.io"
 
 export const NAV_BAR_PX_HEIGHT = "75px"
 export const FROM_QUERY = "from"
+
+/**
+ * Navigation
+ */
+
+// Determines the order of sections in the menu
+export const SECTION_LABELS: NavSectionKey[] = [
+  "learn",
+  "use",
+  "build",
+  "participate",
+  "research",
+]
+
+// Glossary Definition Component
+export const DEFAULT_GLOSSARY_NS = "glossary"
+
+export const NAV_PY = 4

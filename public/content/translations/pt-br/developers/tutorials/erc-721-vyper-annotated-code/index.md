@@ -13,7 +13,7 @@ published: 2021-04-01
 
 ## Introdução {#introduction}
 
-O [ERC-721](/developers/docs/standards/tokens/erc-721/) padrão é usado para manter a propriedade de tokens não fungíveis (NFT). [ERC-20](/developers/docs/standards/totens/erc-20/) os tokens se comportam como uma mercadoria, porque não há diferença entre os totens individuais. Em contraste com isso, ERC-721 tokens são projetados para ativos semelhantes, mas não idênticos, como diferentes [cat cartoons](https://www.cryptokitties.co/) ou títulos de diferentes imóveis.
+O [ERC-721](/developers/docs/standards/tokens/erc-721/) padrão é usado para manter a propriedade de tokens não fungíveis (NFT). [ERC-20](/developers/docs/standards/tokens/erc-20/) os tokens se comportam como uma mercadoria, porque não há diferença entre os totens individuais. Em contraste com isso, ERC-721 tokens são projetados para ativos semelhantes, mas não idênticos, como diferentes [cat cartoons](https://www.cryptokitties.co/) ou títulos de diferentes imóveis.
 
 Neste artigo, vamos analisar o [contrato ERC-721 de Ryuya Nakamura](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy). Este contrato é escrito em [Vyper](https://vyper.readthedocs.io/en/latest/index.html), a Python-like linguagem de contrato projetada para tornar é mais difícil escrever código inseguro do que na solidez.
 

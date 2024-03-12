@@ -295,4 +295,4 @@ Bu öğreticinin kaynak kodu [burada](https://github.com/EthWorks/Waffle/tree/ma
 
 Ayrıca ilginizi çekebilecek öğreticiler:
 
-- [Waffle ile akıllı sözleşmeleri test etme](/developers/tutorials/testing-smart-contract-with-waffle/)
+- [Waffle ile akıllı sözleşmeleri test etme](/developers/tutorials/waffle-test-simple-smart-contract/)

@@ -24,7 +24,7 @@ lang: zh-tw
 強式密碼範例：ymv\*azu.EAC8eyp8umf
 ```
 
-另一個常見的錯誤是使用容易透過[社交工程](<https://wikipedia.org/wiki/Social_engineering_(security)>)猜中或發現的密碼。 在密碼中使用母親娘家姓、子女或寵物的名字或出生日期，都是不安全的做法，會增加密碼遭駭的風險。
+另一個常見的錯誤是使用容易透過[社交工程](https://wikipedia.org/wiki/Social_engineering_(security))猜中或發現的密碼。 在密碼中使用母親娘家姓、子女或寵物的名字或出生日期，都是不安全的做法，會增加密碼遭駭的風險。
 
 #### 良好密碼實務： {#good-password-practices}
 
@@ -270,7 +270,6 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 
 ### 網路安全 {#reading-web-security}
 
-- [不該以簡訊進行雙因素驗證的原因](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [高達 3 百萬台裝置被含有惡意軟體的 Chrome 與 Edge 附加元件所感染](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [如何建立一個永遠記得住的強式密碼](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [什麼是安全金鑰？](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
@@ -278,7 +277,7 @@ _注意：有些衍生的代幣/行情指示器可能代表被質押的以太幣
 ### 加密貨幣安全 {#reading-crypto-security}
 
 - [保護自己，保護資金](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [維持加密貨幣安全性的 4 種方式](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [幣圈通訊軟體之共同資安問題](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media) - _Salus_
 - [全民必修安全指南](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [加密貨幣安全性：密碼與驗證](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 
