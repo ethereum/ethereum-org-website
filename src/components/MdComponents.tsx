@@ -40,6 +40,7 @@ import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
 import FeaturedText from "./FeaturedText"
 import InfoBanner from "./InfoBanner"
+import LocaleDateTime from "./LocaleDateTime"
 import MainArticle from "./MainArticle"
 import VideoIframe from "./VideoIframe"
 
@@ -161,6 +162,7 @@ export const htmlElements = {
   ol: OrderedList,
   p: Paragraph,
   pre: Pre,
+  time: LocaleDateTime,
   ul: UnorderedList,
   iframe: VideoIframe,
   ...mdxTableComponents,
