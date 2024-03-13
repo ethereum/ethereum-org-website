@@ -383,6 +383,14 @@ const communityConferences: CommunityConference[] = [
     endDate: "2024-10-17"
   },
   {
+    title: "ETHSofia",
+    to: "https://ethsofia.com",
+    location: "Sofia, Bulgaria",
+    description: "ETHSofia is a 3-day conference and hackathon event that brings together the Ethereum community in Bulgaria and beyond. It is a place for developers, researchers, and enthusiasts to come together and share knowledge and ideas.",
+    startDate: "2024-10-17",
+    endDate: "2024-10-19"
+  },
+  {
     title: "ETHGlobal San Francisco",
     to: "https://ethglobal.com/events/sanfrancisco2024",
     location: "San Francisco, California",
