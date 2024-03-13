@@ -9,7 +9,7 @@ import NetworkUpgradeSummaryData from "@/data/NetworkUpgradeSummaryData"
 import Tooltip from "./Tooltip"
 
 const DencunBanner = () => {
-  const dateTimeAsString = NetworkUpgradeSummaryData.cancun
+  const dateTimeAsString = NetworkUpgradeSummaryData.dencun
     .dateTimeAsString as string
   const upgradeDate = new Date(dateTimeAsString)
   return (
