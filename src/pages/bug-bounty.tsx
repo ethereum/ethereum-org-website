@@ -456,7 +456,7 @@ const BugBountiesPage = () => {
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      {/* INFO: Uncommon this to enable Bug Bounty Banner: <BugBountyBanner /> */}
+      {/* INFO: Uncomment this to enable Bug Bounty Banner: <BugBountyBanner /> */}
       <Content>
         <HeroCard>
           <HeroContainer>
