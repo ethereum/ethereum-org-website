@@ -13,10 +13,10 @@ type GHIssue = {
   }
 }
 
-export const fetchGFIs = async () => {
+export const fetchGFIs = async (since: string) => {
   const url = `https://api.github.com/repos/${owner}/${repo}/issues?labels=${encodeURIComponent(
     label
-  )}`
+  )}&since=${since}&state=open&sort=created&direction=desc`
 
   try {
     const response = await fetch(url, {

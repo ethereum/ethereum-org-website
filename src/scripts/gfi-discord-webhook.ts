@@ -5,24 +5,36 @@ import { fetchGFIs } from "../lib/api/fetchGFIs"
 dotenv.config({ path: `.env.local` })
 
 const run = async () => {
-  const issues = await fetchGFIs()
+  // Calculate the start of the last hour
+  const now = new Date()
+  const sinceDate = new Date(
+    now.getFullYear(),
+    now.getMonth(),
+    now.getDate(),
+    now.getHours() - 1
+  ).toISOString()
 
-  const embeds = issues
-    .map((issue) => ({
-      title: issue.title,
-      url: issue.html_url,
-      timestamp: issue.created_at,
-      color: 10181046,
-      footer: {
-        text: "Good First Issue",
-      },
-      author: {
-        name: issue.user.login,
-        url: issue.user.html_url,
-        icon_url: issue.user.avatar_url,
-      },
-    }))
-    .slice(0, 1)
+  const issues = await fetchGFIs(sinceDate)
+
+  if (!issues.length) {
+    console.log("No new good first issues found.")
+    return
+  }
+
+  const embeds = issues.map((issue) => ({
+    title: issue.title,
+    url: issue.html_url,
+    timestamp: issue.created_at,
+    color: 10181046,
+    footer: {
+      text: "Good First Issue",
+    },
+    author: {
+      name: issue.user.login,
+      url: issue.user.html_url,
+      icon_url: issue.user.avatar_url,
+    },
+  }))
   const message = {
     content:
       issues.length > 1
