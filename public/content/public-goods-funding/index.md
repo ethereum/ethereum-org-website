@@ -145,10 +145,10 @@ Imagine two parks are planned for development, with the teams building each park
 
 The table below shows how much each park will receive under a quadratic funding scheme:
 
-| | No. of donors | Amount contributed by individual donors | Total contribution | Matched funding | Total funding received |
-| :--- | :--- | :--- | :--- | :--- | :--- |
-| Park A | 10 | $25 | $250 | $2,250 | $2,500 |
-| Park B | 2 | $400 | $800 | $800 | $1,600 |
+|        | No. of donors | Amount contributed by individual donors | Total contribution | Matched funding | Total funding received |
+| :----- | :------------ | :-------------------------------------- | :----------------- | :-------------- | :--------------------- |
+| Park A | 10            | $25                                     | $250               | $2,250          | $2,500                 |
+| Park B | 2             | $400                                    | $800               | $800            | $1,600                 |
 
 We can easily calculate the final amount received by each project using the quadratic formula:
 
