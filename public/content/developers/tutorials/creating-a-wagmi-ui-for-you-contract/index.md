@@ -14,14 +14,13 @@ This article is for you. I assume you know programming, and maybe a bit of JavaS
 
 ## Why is this important {#why-important}
 
-In theory, you could just have people use [Etherscan](https://holesky.etherscan.io/address/0x432d810484add7454ddb3b5311f0ac2e95cecea8#writeContract) or [Blockscout](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=write_contract) to interact with your contracts. That will be great for the experienced Ethereans. But we are trying to serve [another billion people](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion). This won't happen without a great user experience, and a friendly user interface is a big part of that. 
+In theory, you could just have people use [Etherscan](https://holesky.etherscan.io/address/0x432d810484add7454ddb3b5311f0ac2e95cecea8#writeContract) or [Blockscout](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=write_contract) to interact with your contracts. That will be great for the experienced Ethereans. But we are trying to serve [another billion people](https://blog.ethereum.org/2021/05/07/ethereum-for-the-next-billion). This won't happen without a great user experience, and a friendly user interface is a big part of that.
 
-# Greeter application {#greeter-app}
+## Greeter application {#greeter-app}
 
 There is a lot of theory behind for a modern UI works, and [a lot of good sites](https://react.dev/learn/thinking-in-react) [that explain it](https://wagmi.sh/core/getting-started). Instead of repeating the fine work done by those sites, I'm going to assume you prefer to learn by doing and start with an application you can play with. You still need the theory to get things done, and we'll get to it - we'll just go source file by source file, and discuss things as we get to them.
 
-
-## Installation {#installation}
+### Installation {#installation}
 
 1. If necessary, add [the Holesky blockchain](https://chainlist.org/?search=holesky&testnets=true) to your wallet and [get test ETH](https://www.holeskyfaucet.io/).
 
@@ -48,9 +47,9 @@ There is a lot of theory behind for a modern UI works, and [a lot of good sites]
 
 1. You can see the contract source code, a slightly modified version of Hardhat's Greeter, [on a blockchain explorer](https://eth-holesky.blockscout.com/address/0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8?tab=contract).
 
-## File walk through {#file-walk-through}
+### File walk through {#file-walk-through}
 
-### `index.html` {#index-html}
+#### `index.html` {#index-html}
 
 This file is standard HTML boilerplate except for this line, which imports the script file.
 
@@ -58,7 +57,7 @@ This file is standard HTML boilerplate except for this line, which imports the s
 <script type="module" src="/src/main.tsx"></script>
 ```
 
-### `src/main.tsx` {#main-tsx}
+#### `src/main.tsx` {#main-tsx}
 
 The file extension tells us that this file is a [React component](https://www.w3schools.com/react/react_components.asp) written in [TypeScript](https://www.typescriptlang.org/), an extension of JavaScript that supports [type checking](https://en.wikipedia.org/wiki/Type_system#Type_checking). TypeScript is compiled into JavaScript, so we can use it for client-side execution.
 
@@ -78,7 +77,6 @@ import { App } from './App'
 ```
 
 Import the React component that implements the application (see below).
-
 
 ```tsx
 ReactDOM.createRoot(document.getElementById('root')!).render(
@@ -119,8 +117,7 @@ Now we can have the component for the application, which actually implements the
 
 Of course, we have to close off the other components.
 
-### `src/App.tsx` {#app-tsx}
-
+#### `src/App.tsx` {#app-tsx}
 
 ```tsx
 import { ConnectButton } from '@rainbow-me/rainbowkit'
@@ -145,7 +142,7 @@ By convention, in React functions called `use...` are [hooks](https://www.w3scho
     <>
 ```
 
-The JSX of a React component *has* to return one component. When we have multiple components and we don't have anything that wraps up "naturally" we use an empty component (`<> ... </>`) to make them into a single component.
+The JSX of a React component _has_ to return one component. When we have multiple components and we don't have anything that wraps up "naturally" we use an empty component (`<> ... </>`) to make them into a single component.
 
 ```tsx
       <h1>Greeter</h1>
@@ -164,7 +161,6 @@ The syntax `a && b` is short for [`a ? b : a`](https://www.w3schools.com/react/r
 
 In this case, we only want to show the user `Greeter` if the user is connected to a blockchain.
 
-
 ```tsx
           <Greeter />
       )}
@@ -173,7 +169,7 @@ In this case, we only want to show the user `Greeter` if the user is connected t
 }
 ```
 
-### `src/components/Greeter.tsx` {#greeter-tsx}
+#### `src/components/Greeter.tsx` {#greeter-tsx}
 
 This file contains most of the UI functionality. It includes definitions that would normally be in multiple files, but as this is a tutorial the program is optimized for being easy to understand the first time, rather than performance or ease of maintenance.
 
@@ -206,20 +202,19 @@ let greeterABI = [
 The ABI for the `Greeter` contract.
 If you are developing the contracts and UI at the same time you'd normally put them in the same repository and use the ABI generated by the Solidity compiler as a file in your application. However, this is not necessary here because the contract is already developed and not going to change.
 
-
 ```tsx
 type AddressPerBlockchainType = {
   [key: number]: AddressType
 }
 ```
 
-TypeScript is strongly typed. We use this definition to specify the address in which the `Greeter` contract is deployed on different chains.  The key is a number (the chainId), and the value is an `AddressType` (an address).
+TypeScript is strongly typed. We use this definition to specify the address in which the `Greeter` contract is deployed on different chains. The key is a number (the chainId), and the value is an `AddressType` (an address).
 
 ```tsx
-const contractAddrs : AddressPerBlockchainType = {
+const contractAddrs: AddressPerBlockchainType = {
   // Holesky
   17000: '0x432d810484AdD7454ddb3b5311f0Ac2E95CeceA8',
-    
+
   // Sepolia
   11155111: '0x7143d5c190F048C8d19fe325b748b081903E3BF0'
 }
@@ -246,10 +241,10 @@ type ShowGreetingAttrsType = {
 
 At any moment in time we may either know what the greeting is (because we read it from the blockchain) or not know (because we haven't received it yet). So it is useful to have a type that can be either a string or nothing.
 
-#### `Greeter` component {#greeter-component}
+##### `Greeter` component {#greeter-component}
 
 ```tsx
-const Greeter = () => {  
+const Greeter = () => {
 ```
 
 Finally, we get the define the component.
@@ -291,7 +286,7 @@ The `useState` hook returns a list with two values:
 1. The current value of the state variable.
 2. A function to modify the state variable when needed. As this is a hook, every time it is called the component is rendered again.
 
-In this case, we are using a state variable for the new greeting the user wants to set. 
+In this case, we are using a state variable for the new greeting the user wants to set.
 
 ```tsx
   const greetingChange : ChangeEventHandler<HTMLInputElement> = (evt) => 
@@ -313,8 +308,8 @@ This is the event handler for when the new greeting input field changes. The typ
 This is the process to submit a blockchain transaction from the client perspective:
 
 1. Send the transaction to a node in the blockchain using [`eth_estimateGas`](https://docs.alchemy.com/reference/eth-estimategas).
-2. Wait for a response from the node. 
-3. When the response is received, ask the user to sign the transaction through the wallet. This step *has* to happen after the node response is received because the user is shown the gas cost of the transaction before signing it.
+2. Wait for a response from the node.
+3. When the response is received, ask the user to sign the transaction through the wallet. This step _has_ to happen after the node response is received because the user is shown the gas cost of the transaction before signing it.
 4. Wait for the user for approve.
 5. Send the transaction again, this time using [`eth_sendRawTransaction`](https://docs.alchemy.com/reference/eth-sendrawtransaction).
 
@@ -378,10 +373,9 @@ Finally, to help you see what we're doing, show the three objects we use:
 - `preparedTx`
 - `workingTx`
 
+##### `ShowGreeting` component {#showgreeting-component}
 
-#### `ShowGreeting` component  {#showgreeting-component}
-
-This component shows 
+This component shows
 
 ```tsx
 const ShowGreeting = (attrs : ShowGreetingAttrsType) => {
@@ -394,7 +388,7 @@ A component function receives a parameter with all the attributes of the compone
 }
 ```
 
-#### `ShowObject` component {#showobject-component}
+##### `ShowObject` component {#showobject-component}
 
 For information purposes, we use the `ShowObject` component to show the important objects (`readResults` for reading the greeting and `preparedTx` and `workingTx` for transactions we create).
 
@@ -427,7 +421,7 @@ Most of the fields are displayed using [`JSON.stringify`](https://www.w3schools.
 The exception is functions, which aren't part of [the JSON standard](https://www.json.org/json-en.html), so they have to be displayed separately.
 
 ```tsx
-          {funs.map((f, i) => 
+          {funs.map((f, i) =>
 ```
 
 Within JSX, code inside `{` curly brackets `}` is interpreted as JavaScript. Then, the code inside the `(` regular brackets `)`, is interpreted again as JSX.
@@ -450,20 +444,19 @@ React requires tags in the [DOM Tree](https://www.w3schools.com/js/js_htmldom.as
 
 End the various HTML tags.
 
-
-#### The final `export` {#the-final-export}
+##### The final `export` {#the-final-export}
 
 ```tsx
-export {Greeter}
+export { Greeter }
 ```
 
 The `Greeter` component is the one we need to export for the application.
 
-### `src/wagmi.ts` {#wagmi-ts}
+#### `src/wagmi.ts` {#wagmi-ts}
 
 Finally, various definitions related to WAGMI are in `src/wagmi.ts`. I am not going to explain everything here, because most of it is boilerplate you are unlikely to need to change.
 
-The code here isn't exactly the same as [on github](https://github.com/qbzzt/20230801-modern-ui/blob/main/src/wagmi.ts) because later in the article we add another chain ([Redstone Holesky](https://redstone.xyz/docs/network-info)). 
+The code here isn't exactly the same as [on github](https://github.com/qbzzt/20230801-modern-ui/blob/main/src/wagmi.ts) because later in the article we add another chain ([Redstone Holesky](https://redstone.xyz/docs/network-info)).
 
 ```ts
 import { getDefaultWallets } from '@rainbow-me/rainbowkit'
@@ -496,7 +489,7 @@ const { connectors } = getDefaultWallets({
 })
 
 export const config = createConfig({
-  autoConnect: true,   
+  autoConnect: true,
   connectors,
   publicClient,
   webSocketPublicClient,
@@ -505,7 +498,7 @@ export const config = createConfig({
 export { chains }
 ```
 
-## Adding another blockchain {#add-blockchain}
+### Adding another blockchain {#add-blockchain}
 
 These days there are a lot of [L2 scaling solution](https://ethereum.org/en/layer-2/), and you might want to support some that viem does not support yet. To do it, you modify `src/wagmi.ts`. These instructions explain how to add [Redstone Holesky](https://redstone.xyz/docs/network-info).
 
