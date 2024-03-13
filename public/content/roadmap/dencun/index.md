@@ -76,8 +76,6 @@ The consensus clients handle the _Validator_ software, which has all been update
 
 ## Will all transactions on L2s now use temporary blob space, or will you be able to choose? {#calldata-vs-blobs}
 
-## Will all transactions on L2s now use temporary blob space, or will you be able to choose? {#calldata-vs-blobs}
-
 Rollup transactions on Layer 2 (L2) of Ethereum have the option of using two types of data storage: temporary blob space or permanent smart contract calldata. Blob space is an economical choice, providing temporary storage at a lower cost. It guarantees data availability for all necessary challenge periods. On the other hand, smart contract calldata offers permanent storage but is more expensive.
 
 The decision between using blob space or calldata is primarily made by rollup providers. They base this decision on the current demand for blob space. If blob space is in high demand, rollups may opt for calldata to ensure the data is posted in a timely manner.
