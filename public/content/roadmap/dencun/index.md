@@ -86,9 +86,7 @@ While it's theoretically possible for users to choose their preferred storage ty
 
 ## Will 4844 reduce L1 gas? {#l1-fee-impact}
 
-Yes, but significantly less than on layer 2 rollups. A new gas market is introduced exclusively for blob space, for use by rollup providers. This reduces the demand from these rollups for L1 block space, pushing gas prices downward.
-
-_Although fees on L1 may be reduced by off-loading rollup data to blobs, this upgrade primarily focuses on the reduction of L2 fees. Reduction of fees on L1 (Mainnet) may occur as a second-order effect to a lesser extent._
+Not significantly. A new gas market is introduced exclusively for blob space, for use by rollup providers. _Although fees on L1 may be reduced by off-loading rollup data to blobs, this upgrade primarily focuses on the reduction of L2 fees. Reduction of fees on L1 (Mainnet) may occur as a second-order effect to a lesser extent._
 
 - L1 gas reduction will be proportional to adoption/usage of blob data by rollup providers
 - L1 gas is likely to remain competitive from non-rollup related activity
