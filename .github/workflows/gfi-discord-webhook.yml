@@ -1,0 +1,22 @@
+name: GFI Discord webhook
+
+on:
+  schedule:
+    - cron: "0 * * * *"
+  workflow_dispatch:
+
+jobs:
+  build:
+    name: GFI Discord webhook
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 18
+      - run: yarn install
+      - run: yarn discord-issues
+        env:
+          DISCORD_ID: ${{ secrets.DISCORD_ID }}
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+          ISSUES_GITHUB_TOKEN: ${{ secrets.ISSUES_GITHUB_TOKEN_READ_ONLY }}
