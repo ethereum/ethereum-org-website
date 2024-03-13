@@ -31,6 +31,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/defi",
     "/desci",
     "/nft",
+    "/public-goods-funding",
     "/refi",
     "/social-networks",
     // Staking (4/4) ✅

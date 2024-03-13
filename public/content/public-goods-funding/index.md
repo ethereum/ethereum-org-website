@@ -3,7 +3,7 @@ title: Public goods funding
 description: An overview of public goods funding solutions on Ethereum
 lang: en
 template: use-cases
-image: ../../assets/enterprise-eth.png
+image: /enterprise-eth.png
 emoji: 🌎
 sidebar: true
 sidebarDepth: 2
@@ -67,7 +67,7 @@ Public goods funding typically requires a mechanism for measuring public prefere
 
 Regenerative economic systems can be contrasted with extractive economies in which common resources and public goods are consumed (extracted) without any effort to replenish common resources, or sustain creation of public goods; every individual act of consumption subtracts from the shared resource pool (leading to its eventual depletion), or degrades the quality of the public good. Extractive economies are also *negative sum*: overconsuming a common resource, or using a public good without paying for its continued creation, benefits the individual in the short-term, but leads to worse long-term outcomes for the group (of which they are part). 
 
-![Eight interconnected principles](refi-regenerative-economy-diagram.png)
+![Eight interconnected principles](../refi/refi-regenerative-economy-diagram.png)
 
 *Regenerative cryptoeconomics* applies the principles of regenerative economics to the sphere of blockchains and cryptocurrencies. Regenerative cryptoeconomics (a.k.a., [regenerative finance](/refi)) uses tools and ideas built on top of programmable blockchains (e.g., Ethereum) to design novel incentive models and coordination mechanisms that enable individuals collaborate effectively to solve problems facing the world (many of which represent existential risk). Some examples of problems regenerative cryptoeconomics and ReFi initiatives are tackling include: climate change, biodiversity, income inequality, insecure and underfunded digital infrastructure, limited access to scientific knowledge, and exclusive economic systems (which impose barriers to participation on individuals from certain demographics and geographies).
 
