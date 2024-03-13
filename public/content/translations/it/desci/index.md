@@ -18,7 +18,7 @@ La scienza decentralizzata (DeSci) è un movimento che mira alla creazione di un
 
 La DeSci vuole creare un ecosistema in cui gli scienziati siano incentivati alla condivisione aperta delle proprie ricerche, ricevendo credito per il proprio operato, pur consentendo a chiunque di accedere e contribuire facilmente alla ricerca. La DeSci sfrutta l'idea che la conoscenza scientifica dovrebbe essere accessibile a tutti e che il procedimento di ricerca scientifica dovrebbe essere trasparente. La DeSci punta a creare un modello di ricerca scientifica più decentralizzato e distribuito, rendendolo più resistente alla censura e al controllo delle autorità centrali. La DeSci spera di creare un ambiente in cui le idee innovative e non convenzionali, possano prosperare, decentralizzando l'accesso a finanziamenti, strumenti scientifici e canali di comunicazione.
 
-La scienza decentralizzata consente fonti di finanziamento più diversificate (dalle [DAO](/dao/) alle [donazioni quadratiche](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), fino al crowdfunding, e molto altro), accesso a dati e metodi più accessibile, fornendo incentivi per la riproducibilità.
+La scienza decentralizzata consente fonti di finanziamento più diversificate (dalle [DAO](/dao/), le [donazioni quadratiche](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), al crowdfunding e molto altro), dati e metodi più accessibili, e fornendo incentivi per la riproducibilità.
 
 ### Juan Benet: Il Movimento della DeSci
 
@@ -68,7 +68,7 @@ Il modello standard odierno per il finanziamento scientifico, prevede che indivi
 
 Degli studi hanno dimostrato che i comitati di revisione delle sovvenzioni, svolgono un lavoro mediocre nella selezione di proposte di alta qualità, poiché le stesse proposte, date a diversi comitati, producono risultati ampiamente differenti. Al ridursi dei finanziamenti, questi si concentrano su un gruppo più piccolo di ricercatori più anziani, con progetti intellettualmente più conservatori. L'effetto ha creato un panorama di finanziamento super competitivo, radicando incentivi perversi e asfissiando l'innovazione.
 
-Il Web3 ha il potenziale di sconvolgere tale modello corrotto di finanziamento, sperimentando con svariati modelli d'incentivazione, ampiamente sviluppati dalle DAO e dal Web3. Il [finanziamento retroattivo dei beni pubblici](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), il [finanziamento quadratico](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), la [governance delle DAO](https://www.antler.co/blog/daos-and-web3-governance) e le [strutture d'incentivazione tokenizzate](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design), sono solo alcuni degli strumenti del Web3 che potrebbero rivoluzionare il finanziamento scientifico.
+Il Web3 ha il potenziale di sconvolgere tale modello corrotto di finanziamento, sperimentando con svariati modelli d'incentivazione, ampiamente sviluppati dalle DAO e dal Web3. Il [finanziamento retroattivo dei beni pubblici](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), il [finanziamento quadratico](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), la [governance delle DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) e le [strutture d'incentivazione tokenizzate](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design), sono solo alcuni degli strumenti del Web3 che potrebbero rivoluzionare il finanziamento scientifico.
 
 ### Proprietà e sviluppo della IP {#ip-ownership}
 
@@ -103,7 +103,7 @@ Esplora i progetti e unisciti alla community della DeSci.
 - [OceanDAO: finanziamenti governati dalla DAO per la scienza relativa ai dati](https://oceanprotocol.com/dao)
 - [Opscientia: flussi di lavoro scientifici decentralizzati e aperti](https://opsci.io/research/)
 - [LabDAO: piega una proteina in silico](https://alphafodl.vercel.app/)
-- [Bio.xyz: ricevi finanziamenti per la tua DAO biotecnologica o il tuo progetto di DeSci](https://www.molecule.to/)
+- [Bio.xyz: ricevi finanziamenti per la tua DAO biotecnologica o il tuo progetto di DeSci](https://www.bio.xyz/)
 - [ResearchHub: pubblica un risultato scientifico e conversa con i colleghi](https://www.researchhub.com/)
 - [VitaDAO: ricevi finanziamenti tramite accordi di ricerca sponsorizzati per la ricerca di longevità](https://www.vitadao.com/)
 - [Fleming Protocol: economia dei dati open source che alimenta la scoperta biomedica collaborativa](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

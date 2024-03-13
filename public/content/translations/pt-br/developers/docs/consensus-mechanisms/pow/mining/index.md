@@ -70,9 +70,9 @@ Acompanhe o Austin enquanto ele explica como funciona o processo de mineração 
 
 ## O algoritmo de mineração {#mining-algorithm}
 
-A Rede principal do Ethereum usou apenas um algoritmo de mineração, o ["Ethash"](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/). O Ethhash foi o sucessor de um algoritmo de P&D original conhecido como ["Dagger-Hashimoto"](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/).
+A Rede principal do Ethereum usou apenas um algoritmo de mineração, o ["Ethash"](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). O Ethhash foi o sucessor de um algoritmo de P&D original conhecido como ["Dagger-Hashimoto"](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/).
 
-[Mais sobre algoritmos de mineração](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
+[Mais sobre algoritmos de mineração](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
 
 ## Tópicos relacionados {#related-topics}
 

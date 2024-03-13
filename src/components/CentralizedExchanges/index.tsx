@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { Box, Center, chakra, Flex } from "@chakra-ui/react"
+import { Box, Center, Flex } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 
@@ -9,7 +9,7 @@ import Emoji from "@/components/Emoji"
 import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
-import { StyledSelect } from "@/components/SharedStyledComponents"
+import Select from "@/components/Select"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
@@ -49,10 +49,6 @@ const SuccessContainer = (props: ChildOnlyProp) => (
 const EmptyStateText = (props: ChildOnlyProp) => (
   <Text m={8} fontSize="xl" maxW="450px" textAlign="center" {...props} />
 )
-
-const Select = chakra(StyledSelect, {
-  baseStyle: { maxW: "container.sm" },
-})
 
 const NoResults = ({ children }) => (
   <EmptyStateContainer>
@@ -106,14 +102,17 @@ const CentralizedExchanges = ({
       <Text maxW="container.sm" mb={8} lineHeight={1.4} textAlign="center">
         {t("page-get-eth-exchanges-intro")}
       </Text>
-      <Select
-        aria-label={t("page-get-eth-exchanges-header")}
-        className="react-select-container"
-        classNamePrefix="react-select"
-        options={selectOptions}
-        onChange={handleSelectChange as any} // TODO: Fix typing
-        placeholder={placeholderString}
-      />
+      <Box w="full" maxW="container.sm">
+        <Select
+          instanceId="eth-exchange-region"
+          aria-label={t("page-get-eth-exchanges-header")}
+          options={selectOptions}
+          onChange={handleSelectChange}
+          placeholder={placeholderString}
+          isSearchable
+          variant="outline"
+        />
+      </Box>
       {!hasSelectedCountry && (
         <EmptyStateContainer>
           <Emoji text=":world_map:" fontSize="80px" />
