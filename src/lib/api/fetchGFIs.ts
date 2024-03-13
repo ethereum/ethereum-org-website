@@ -11,6 +11,11 @@ type GHIssue = {
     html_url: string
     avatar_url: string
   }
+  labels: GHLabel[]
+}
+
+type GHLabel = {
+  name: string
 }
 
 export const fetchGFIs = async (since: string) => {

@@ -25,10 +25,8 @@ const run = async () => {
     title: issue.title,
     url: issue.html_url,
     timestamp: issue.created_at,
+    description: issue.labels.map((label) => label.name).join(" • "),
     color: 10181046,
-    footer: {
-      text: "Good First Issue",
-    },
     author: {
       name: issue.user.login,
       url: issue.user.html_url,
