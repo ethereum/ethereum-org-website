@@ -70,7 +70,7 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 ## 2024 {#2024}
 
-###  Cancun-Deneb ("Dencun") {#dencun}
+### Cancun-Deneb ("Dencun") {#dencun}
 
 <NetworkUpgradeSummary name="dencun" />
 
