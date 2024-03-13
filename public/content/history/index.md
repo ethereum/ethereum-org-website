@@ -32,7 +32,7 @@ Since 2021, upgrades to the **execution layer** are named according to the city 
 | Berlin       | 2015        | 0             | Apr 15, 2021 |
 | London       | 2016        | I             | Aug 5, 2021  |
 | Shanghai     | 2017        | II            | Apr 12, 2023 |
-| **_Cancun_** | 2018        | III           | Mar 13, 2024 |
+| **Cancun**   | 2018        | III           | Mar 13, 2024 |
 | _Prague_     | 2019        | IV            | TBD          |
 | _Osaka_      | 2020        | V             | TBD          |
 | _Bogota_     | 2022        | VI            | TBD          |
@@ -48,7 +48,7 @@ Since the launch of the [Beacon Chain](/glossary/#beacon-chain), upgrades to the
 | [Altair](https://en.wikipedia.org/wiki/Altair)              | Oct 27, 2021 |
 | [Bellatrix](https://en.wikipedia.org/wiki/Bellatrix)        | Sep 6, 2022  |
 | [Capella](https://en.wikipedia.org/wiki/Capella)            | Apr 12, 2023 |
-| [**_Deneb_**](https://en.wikipedia.org/wiki/Deneb)          | Mar 13, 2024 |
+| [**Deneb**](https://en.wikipedia.org/wiki/Deneb)            | Mar 13, 2024 |
 | [_Electra_](<https://en.wikipedia.org/wiki/Electra_(star)>) | TBD          |
 
 **Combined naming**
@@ -70,7 +70,7 @@ Looking for future protocol upgrades? [Learn about upcoming upgrades on the Ethe
 
 ## 2024 {#2024}
 
-###  Cancun-Deneb ("Dencun") {#dencun}
+### Cancun-Deneb ("Dencun") {#dencun}
 
 <NetworkUpgradeSummary name="dencun" />
 
