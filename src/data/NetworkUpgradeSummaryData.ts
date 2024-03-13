@@ -2,10 +2,11 @@ import type { NetworkUpgradeData } from "@/lib/types"
 
 const NetworkUpgradeSummaryData: NetworkUpgradeData = {
   dencun: {
-    isPending: true, // Fill in remaining and remove `isPending` once complete
     dateTimeAsString: "2024-03-13T13:55:35.000Z",
-    // ethPriceInUSD: 0,
-    // waybackLink: "https://web.archive.org/web/{timestamp}/https://ethereum.org/en/",
+    ethPriceInUSD: 3984,
+    waybackLink:
+      "https://web.archive.org/web/20240312070259/https://ethereum.org/en/",
+    blockNumber: 19426587,
     epochNumber: 269568,
     slotNumber: 269568 * 32,
   },
