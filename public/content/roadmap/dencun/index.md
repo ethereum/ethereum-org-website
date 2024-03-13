@@ -6,22 +6,22 @@ lang: en
 
 # Cancun-Deneb (Dencun) {#dencun}
 
-Cancun-Deneb (Dencun) is an upgrade to the Ethereum network which activates **Proto-Danksharding (EIP-4844)**, introducing temporary data **blobs** for cheaper layer 2 (L2) rollup storage.
+Cancun-Deneb (Dencun) is an upgrade to the Ethereum network, which activates **Proto-Danksharding (EIP-4844)**, introducing temporary data **blobs** for cheaper layer 2 (L2) rollup storage.
 
-A new transaction type enables rollup providers to store data in a more cost-effective manner, in what are known as "blobs". These are guaranteed to be made available to the network for a few weeks, or more precisely, 4096 [epochs](/glossary/#epoch). After this period, blobs are pruned from the network but applications can still verify the validity of their data using proofs. 
+A new transaction type enables rollup providers to store data more cost-effectively in what are known as "blobs." Blobs are guaranteed to be available to the network for around 18 days (more precisely, 4096 [epochs](/glossary/#epoch)). After this period, blobs are pruned from the network, but applications can still verify the validity of their data using proofs. 
 
-This significantly reduces the cost of using rollups, limits chain growth, and helps to support more users while maintaining security and a decentralized set of node operators.
+This significantly reduces the cost of rollups, limits chain growth, and helps to support more users while maintaining security and a decentralized set of node operators.
 
-## When do we expect that rollups will reflect lower fees as a result of Proto-Danksharding? {#when}
+## When do we expect rollups to reflect lower fees due to Proto-Danksharding? {#when}
 
-- This upgrade actives at epoch 269568, on **13-Mar-2024 (UTC)**
-- All major rollup providers, such as Arbitrum or Optimism, have signaled that blobs will be supported immediately following the upgrade
-- Individual rollup support may vary as each rollup must upgrade to take advantage of the new blob space
+- This upgrade activates at epoch 269568, on **13-Mar-2024 at 13:55PM (UTC)**
+- All major rollup providers, such as Arbitrum or Optimism, have signalled that blobs will be supported immediately following the upgrade
+- The timeline for individual rollup support may vary, as each provider must update their systems to take advantage of the new blob space
 
 ## How can ETH be converted after the hard fork? {#scam-alert}
 
-- **There is NO need to convert your ETH** after Ethereum's Dencun upgrade. Your account balances will not change, and the ETH you hold will continue to be available in the same form after the upgrade (hard fork).
-- <Emoji text="⚠️" /> <strong>Anyone telling you to upgrade your ETH is attempting to scam you!</strong> Users do not need to do anything for this upgrade, and your assets will remain unaffected.
+- **No Action Required for Your ETH**: Following the Ethereum Dencun upgrade, there is no need to convert or upgrade your ETH. Your account balances will remain the same, and the ETH you currently hold will remain accessible in its existing form after the hard fork.
+- **Beware of Scams!** <Emoji text="⚠️" /> **anyone instructing you to "upgrade" your ETH is trying to scam you.** There is nothing you need to do in relation to this upgrade. Your assets will stay completely unaffected. Remember, staying informed is the best defense against scams.
 
 [More on recognizing and avoiding scams](/security/)
 
@@ -31,42 +31,42 @@ Dencun primarily addresses **scalability** (handling more users and more transac
 
 The Ethereum community has been taking a "rollup-centric" approach to its growth, which places layer 2 rollups as the primary means to safely support more users.
 
-Rollup networks handle the _processing_ (or "execution") of transactions separate from Mainnet, and then publish a cryptographic proof and/or compressed transaction data of the results back to Mainnet for record keeping. Storing these proofs carries an expense (in the form of [gas](/glossary/#gas)), which prior to Proto-Danksharding had to be stored permanently by all network node operators, making it an expensive task.
+Rollup networks handle the _processing_ (or "execution") of transactions separate from Mainnet and then publish a cryptographic proof and/or compressed transaction data of the results back to Mainnet for record keeping. Storing these proofs carries an expense (in the form of [gas](/glossary/#gas)), which, before Proto-Danksharding, had to be stored permanently by all network node operators, making it an expensive task.
 
-The introduction of Proto-Danksharding in the Dencun upgrade adds cheaper data storage for these proofs by only requiring node operators to store this data for about 18 days, after which data can be safely removed to prevent expansion of hardware requirements.  Because rollups typically have a withdrawal period of 7 days, their security model is unchanged as long as blobs are available on L1 for this duration. The 18 day pruning window provides a significant buffer to this period.
+The introduction of Proto-Danksharding in the Dencun upgrade adds cheaper data storage for these proofs by only requiring node operators to store this data for about 18 days, after which data can be safely removed to prevent expansion of hardware requirements.  Because rollups typically have a withdrawal period of 7 days, their security model is unchanged as long as blobs are available on L1 for this duration. The 18-day pruning window provides a significant buffer for this period.
 
 [More on scaling Ethereum](/roadmap/scaling/)
 
 ## How is old blob data accessed? {#historical-access}
 
-While regular Ethereum nodes will always hold the _current state_ of the network, historical blob data can be discarded after ~18 days. Before it can be discarded, Ethereum guarantees that this data has been made available to all network participants, to allow time for:
+While regular Ethereum nodes will always hold the _current state_ of the network, historical blob data can be discarded approximately 18 days after its introduction. Before discarding this data, Ethereum ensures that it has been made available to all network participants, allowing time for:
 
-- interested parties to download and store the data.
-- all rollup challenge periods to be completed.
-- and the rollup transactions to be considered finalized.
+- Interested parties to download and store the data.
+- Completion of all rollup challenge periods.
+- Finalization of the rollup transactions.
 
-_Historical_ blob data may be desired for a variety of reasons, and can be stored and accessed using several decentralized protocols:
+_Historical_ blob data may be desired for a variety of reasons and can be stored and accessed using several decentralized protocols:
 
-- **Third-party indexing protocols**, such as The Graph, can store this data using a decentralized set of node operators using crypto-economic incentives
-- **Bittorrent** is a decentralized protocol consisting of volunteers who can hold and serve this data for others
-- **[Ethereum portal network](/developers/docs/networking-layer/portal-network/)** aims to provide access to all Ethereum data through a decentralized network of node operators, by means of splitting up data amongst participants, similar to Bittorrent
-- **Individual users** are always free to store their own copy of any data they would like for historical reference
-- **Rollup providers** are incentivized to store this data to improve the user experience of their rollup
-- **Block explorers** typically run archival nodes that will index and store all of this information for easy historical reference, made available to users through a web interface
+- **Third-party indexing protocols**, such as The Graph, store this data through a decentralized network of node operators incentivized by crypto-economic mechanisms.
+- **BitTorrent** is a decentralized protocol where volunteers can hold and distribute this data to others.
+- **[Ethereum portal network](/developers/docs/networking-layer/portal-network/)** aims to provide access to all Ethereum data through a decentralized network of node operators by distributing data among participants akin to BitTorrent.
+- **Individual users** are always free to store their own copies of any data they wish for historical reference.
+- **Rollup providers** are incentivized to store this data to enhance the user experience of their rollup.
+- **Block explorers** typically run archival nodes that index and store all this information for easy historical reference, accessible to users via a web interface.
 
-It is important to note, that recovering historical state is a **1-of-N trust modal**, meaning that you only need _a single honest actor_ to provide the data, and then _anyone can verify it_ to be correct using the current state of the network.
+It is important to note that recovering historical state operates on a **1-of-N trust model**. This means that you only need data from _a single trustworthy source_ to verify its correctness using the current state of the network.
 
 ## How does this upgrade contribute to the broader Ethereum roadmap? {#roadmap-impact}
 
-Proto-Danksharding sets the stage for the full implementation of [Danksharding](/roadmap/danksharding/), which splits up the burden of storing rollup data amongst node operators, so each only has to handle a small portion of the total. This will <!-- TIME-SENSITIVE --> enable significantly more data blobs per block, and help Ethereum grow by another order of magnitude.
+Proto-Danksharding sets the stage for the full implementation of [Danksharding](/roadmap/danksharding/). Danksharding is designed to distribute the storage of rollup data across node operators, so each operator only needs to handle a small part of the total data. This distribution will increase the number of data blobs per block, which is essential for scaling Ethereum to handle more users and transactions.
 
-This is critical to [scale Ethereum to support billions of users](/roadmap/scaling/) with affordable fees and more advanced applications, while maintaining a decentralized network of participants. Without this, hardware requirements for node operators would continue to climb over time, requiring more-and-more expensive machinery to operate, pricing out users who would [otherwise participate](/run-a-node/). This would consolidate node operators to a select few who could afford the hardware, hindering decentralization.
+This scalability is crucial to [supporting billions of users on Ethereum](/roadmap/scaling/) with affordable fees and more advanced applications, while maintaining a decentralized network. Without these changes, the hardware demands for node operators would escalate, leading to the need for increasingly expensive equipment. This could price out smaller operators, resulting in a concentration of network control among a few large operators, which would go against the principle of decentralization.
 
 ## Does this upgrade affect all Ethereum consensus and validator clients? {#client-impact}
 
-Yes. Proto-Danksharding (EIP-4844) involves changes to both the execution clients and consensus clients. All production Ethereum clients have released updates to support the upgrade. Node operators must upgrade to a supported version to stay in sync with the chain after the upgrade. <!-- TIME-SENSITIVE --> [See details on supported client releases](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases)
+Yes, Proto-Danksharding (EIP-4844) requires updates to both execution clients and consensus clients. All main Ethereum clients have released versions supporting the upgrade. To maintain synchronization with the Ethereum network post-upgrade, node operators must ensure they are running a supported client version. Note that the information about client releases is time-sensitive, and users should refer to the latest updates for the most current details. [See details on supported client releases](https://blog.ethereum.org/2024/02/27/dencun-mainnet-announcement#client-releases).
 
-_Validator_ software is handled by the consensus clients, which have all been updated to accommodate the upgrade.
+The consensus clients handle the _Validator_ software, which has all been updated to accommodate the upgrade.
 
 ## How does Cancun-Deneb (Dencun) affect Goerli or other Ethereum testnets? {#testnet-impact}
 
@@ -76,9 +76,13 @@ _Validator_ software is handled by the consensus clients, which have all been up
 
 ## Will all transactions on L2s now use temporary blob space, or will you be able to choose? {#calldata-vs-blobs}
 
-Rollup transactions are not required to use blob space for their data (though they are economically incentivized to do so). Each can optionally write their data to blobs (guaranteed available for all challenge periods, very cheap) or to smart contract "calldata" (permanent storage, more expensive). Rollup providers will decide which to use based on the current demand for blob space. If blobs are in high demand, the rollup may decide to use calldata to ensure the data is posted in a timely manner.
+## Will all transactions on L2s now use temporary blob space, or will you be able to choose? {#calldata-vs-blobs}
 
-Although this decision is likely to be performed behind-the-scenes by rollup providers, it is theoretically possible for a user to choose which storage type to use. This would require the rollup provider to expose this option to the user, which introduces additional complexities when bundling transactions in a cost-effective manner. See individual rollup provider documentation for more details.
+Rollup transactions on Layer 2 (L2) of Ethereum have the option of using two types of data storage: temporary blob space or permanent smart contract calldata. Blob space is an economical choice, providing temporary storage at a lower cost. It guarantees data availability for all necessary challenge periods. On the other hand, smart contract calldata offers permanent storage but is more expensive.
+
+The decision between using blob space or calldata is primarily made by rollup providers. They base this decision on the current demand for blob space. If blob space is in high demand, rollups may opt for calldata to ensure the data is posted in a timely manner.
+
+While it's theoretically possible for users to choose their preferred storage type, rollup providers typically manage this choice. Offering this option to users would add complexity, particularly in cost-effective bundling transactions. For specific details on this choice, users should refer to the documentation provided by individual rollup providers.
 
 ## Will 4844 reduce L1 gas? {#l1-fee-impact}
 
