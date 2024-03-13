@@ -17,7 +17,8 @@
     "chromatic": "chromatic --project-token fee8e66c9916",
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
-    "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts"
+    "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
+    "discord-issues": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/gfi-discord-webhook"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.0",
