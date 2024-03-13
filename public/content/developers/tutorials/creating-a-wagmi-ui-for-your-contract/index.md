@@ -6,6 +6,7 @@ tags: ["typescript", "react", "vite", "wagmi", "frontend"]
 skill: beginner
 published: 2023-11-01
 lang: en
+sidebarDepth: 3
 ---
 
 You found a feature we need in the Ethereum ecosystem. You wrote the smart contracts to implement it, and maybe even some related code that runs offchain. This is great! Unfortunately, without a user interface you aren't going to have any users, and the last time you wrote a web site people used dial-up modems and JavaScript was new.
