@@ -1,265 +1,299 @@
 ---
 title: スマートコントラクトのテスト
-description: イーサリアムスマートコントラクトをテストするための手法と考慮事項の概要
+description: イーサリアムスマートコントラクトのテスト方法と考察の概要
 lang: ja
 ---
 
-[スマートコントラクト](/developers/docs/smart-contracts/)のテストは、[スマートコントラクトのセキュリティ](/developers/docs/smart-contracts/security/)を向上させる最も重要な対策の 1 つです。 従来のソフトウェアとは異なり、通常、スマートコントラクトは起動後に更新することができないため、イーサリアムネットワークにコントラクトをデプロイする前に厳格なテストを行うことが不可欠です。
+イーサリアムなどのパブリックブロックチェーンは不変で、一度デプロイされたスマートコントラクトのコードを変更するのは困難です。 「バーチャルアップデート」を実行するための[スマートコントラクトアップグレードのパターン](/developers/docs/smart-contracts/upgrading/)が存在するものの、実装は困難で、かつ社会的コンセンサスも必要です。 さらに、アップグレードは、発見された_後に_エラーを修正できるものにすぎません。攻撃者が先に脆弱性を発見した場合、スマートコントラクトは悪用される可能性があります。
+
+これらの理由から、メインネットに[デプロイする](/developers/docs/smart-contracts/deploying/)前にスマートコントラクトをテストすることは、 [セキュリティ](/developers/docs/smart-contracts/security/)の最小要件です。 テストでは、さまざまな技術を活用してコードの正確性を評価しますが、必要な機能や目的に合わせて選択しなければなりません。 それでも、さまざまなツールとアプローチを組み合わせたテストスイートを使えば、スマートコントラクトコード深刻度にかかわらず、セキュリティ欠陥を見つけることができます。
+
+## 前提知識 {#prerequisites}
+
+このページでは、イーサリアムネットワークにデプロイする前に、スマートコントラクトをテストする方法について説明します。 [スマートコントラクト](/developers/docs/smart-contracts/)の知識があることを前提としています。
 
 ## スマートコントラクトのテストとは {#what-is-smart-contract-testing}
 
-スマートコントラクトのテストとは、スマートコントラクトの開発サイクルにおいて、そのソースコードの品質を評価するために詳細な分析と評価を行うことを意味します。 スマートコントラクトをテストすることで、バグや脆弱性の特定が容易になり、コストのかかるエクスプロイトにつながるソフトウェアエラーの可能性を低減することができます。
+スマートコントラクトのテストとは、スマートコントラクトのコードが意図したとおりに動作することを検証するプロセスです。 テストによって、スマートコントラクトの信頼性、使いやすさ、セキュリティ要件を満たしているかどうかを確認することができます。
 
-スマートコントラクトのテストには様々な形態があり、それぞれの手法によってメリットがあります。 イーサリアムスマートコントラクトのテスト戦略は、大きく 2 つに分類されます。**自動テスト**と**手動テスト**です。
+テストにはさまざまなアプローチがありますが、一般的には、処理することが予想されるデータの小さなサンプルを用いてスマートコントラクトを実行する必要があります。 コントラクトがサンプルデータに対して正しい結果を生成する場合、コントラクトは適切に機能していると判断できます。 テストツールのほとんどは、コントラクトの実行が期待通りであるかどうかを検証するための[テストケース](https://en.m.wikipedia.org/wiki/Test_case)を作成したり実行したりするためのリソースを提供しています。
+
+### スマートコントラクトのテストの重要性 {#importance-of-testing-smart-contracts}
+
+スマートコントラクトでは、高価値の金融資産を管理することが多いため、小さなプログラミングの間違いが[ユーザーに大損失](https://rekt.news/leaderboard/)を与える可能性があります。実際に、そのような事例は度々発生しています。 Rigorous testing can, however, help you discover defects and issues in a smart contract's code early and fix them before launching on Mainnet.
+
+バグが発見された場合、コントラクトをアップグレードすることは可能ですが、アップグレードは複雑で、誤った処理をすると[エラー](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/)が発生する可能性があります。 また、アップグレードによって、コントラクトの不変性の原則が損なわれ、ユーザーにさらなる信頼が求められることになります。 一方で、統合的なテスト計画を立てることで、スマートコントラクトのセキュリティリスクを軽減し、デプロイ後に複雑なロジックのアップグレードを実行する必要性を減らすことができます。
+
+## スマートコントラクトのテスト方法 {#methods-for-testing-smart-contracts}
+
+Methods for testing Ethereum smart contracts fall under two broad categories: **automated testing** and **manual testing**. 自動テストと手動テストには、それぞれに長所と短所があります。両方を組み合わせることで、コントラクトを解析するための堅牢な計画を立てることができます。
 
 ### 自動テスト {#automated-testing}
 
-自動テストでは、自動化ツールを使って、スマートコントラクトのスクリプトテストを実施します。 この技術は、スマートコントラクトの欠陥を見つけるためにテストを繰り返し実行できる自動化されたソフトウェアに依存しています。
+自動テストでは、スマートコントラクトのコードを実行して、エラーがないか自動的にチェックするツールを使用します。 自動テストの利点は、[スクリプト](https://www.techtarget.com/whatis/definition/script?amp=1)を使用してコントラクトの機能を評価できることです。 スクリプト化されたテストは、人間の介入を最小限に抑え、繰り返し実行するようにスケジュールできるので、手動によるテストよりも効率的です。
 
-自動テストは効率的で、使用するリソースも少なく、手動分析よりも高いカバレッジレベルを実現します。 また、自動テストツールにテストデータを設定することで、予測された動作と実際の結果を比較することができます。
+自動テストは、テストが反復的で時間がかかる、手動で実行するのが難しい、人的ミスの影響を受けやすい、重要なコントラクト関数の評価を伴う、などの場合に特に役立ちます。 ただし、自動テストツールには、欠点もあります。例えば、特定のバグを検出できなかったり、多くの[誤検知](https://www.contrastsecurity.com/glossary/false-positive)をしてしまうことがあります。 そのため、スマートコントラクトのテストには、自動テストと手動テストを組み合わせることが望ましいと言えます。
 
 ### 手動テスト {#manual-testing}
 
-手動テストは、人が介在し、テスト手順を手動で実行するものです。 コード監査は、デベロッパーや監査人がコントラクトコードのすべての行に目を通すもので、スマートコントラクトの手動テストの一例です。
+手動テストは、人が直接操作して行うテストです。スマートコントラクトの正確性を解析する際には、テストスイートの各テストケースを順番に実行します。 これは、コントラクト上で複数の個別のテストを同時に実行し、失敗したテストと合格したすべてのテストを表示したレポートを取得できる自動テストとは異なります。
 
-スマートコントラクトの手動テストには、かなりのスキルと、時間、費用、労力の投資が必要です。 さらに、手作業によるテストは、時にヒューマンエラーの問題をはらんでいることがあります。
+手動テストは、さまざまなテストシナリオを網羅するように作成されたテスト計画書に従って、個人が実行します。 また、手動テストの一環として、複数の個人やグループが一定期間にわたってスマートコントラクトを操作することもあります。 テスターは、コントラクトの実際の動作と期待される動作を比較して、違いがあればバグとしてフラグを立てます。
 
-さらに、手作業によるテストは、時にヒューマンエラーの問題をはらんでいることがあります。 コード監査は、人間の知能を利用して、自動テストでは検出されない可能性のある契約コードの欠陥を見つけます。
-
-スマートコントラクトを手動でテストすることで、コードの外に存在する、しかし影響を及ぼしうる脆弱性を発見することもできます。 例えば、スマートコントラクトの監査では、オフチェーンのコンポーネントとの欠陥のある相互作用に起因する脆弱性を発見することができます。
-
-## スマートコントラクトのテストの重要性 {#benefits-of-smart-contract-testing}
-
-以下の理由により、スマートコントラクトのテストは重要です。
-
-### 1. スマートコントラクトは高価値のアプリケーションである {#smart-contracts-are-high-value-applications}
-
-スマートコントラクトは、特に[分散型金融(DeFi)](/defi/)などの業界において価値の高い金融資産や、[非代替性トークン(NFT)](/nft/)などの有価物を扱うことがよくあります。 そのため、スマートコントラクトの些細な脆弱性が、ユーザーにとって回復不能な巨額の損失につながることがしばしばあります。 しかし、包括的なテストにより、スマートコントラクトのコードの誤りを明らかにし、デプロイする前にセキュリティリスクを低減することができます。
-
-### 2. スマートコントラクトはイミュータブル(不変)である {#smart-contracts-are-immutable}
-
-[イーサリアム仮想マシン(EVM)](/developers/docs/evm/)にデプロイされたスマートコントラクトは、デフォルトでイミュータブル(不変)となっています。 従来のデベロッパーは、発売後にソフトウェアのバグを修正することに慣れているかもしれませんが、イーサリアムの開発では、スマートコントラクトがブロックチェーン上で稼働すると、セキュリティ上の欠陥を修正する余地がほとんどなくなります。
-
-プロキシパターンなど、スマートコントラクトでアップグレード可能なメカニズムは存在するものの、実装が難しい場合があります。 アップグレードによって不変性が損なわれ、複雑さが生じるだけでなく、しばしば複雑なガバナンスプロセスが要求されます。
-
-ほとんどの場合、アップグレードは最後の手段と考え、必要な場合を除き避けるべきです。 起動前の段階でスマートコントラクトの潜在的な脆弱性や欠陥を検出することで、ロジックのアップグレードの必要性を減らすことができます。
+効果的な手動テストには、スキル、時間、資金、労力などの多くのリソースが必要になります。また、テストの実行中に人的ミスにより、特定のエラーを見逃すことがあります。 しかし、手動テストにもメリットがあります。例えば、人間のテスト担当者(監査人など)は、自動テストツールでは検出が難しいエッジケースを直感的に見つけることができます。
 
 ## スマートコントラクトの自動テスト {#automated-testing-for-smart-contracts}
 
-### 1. 機能テスト {#functional-testing}
+### 単体テスト {#unit-testing-for-smart-contracts}
 
-機能テストは、スマートコントラクトの機能を検証し、コード内の各機能が期待通りに動作することを保証するものです。 機能テストでは、スマートコントラクトが特定の条件下でどのように動作すべきかを理解する必要があります。 その後、選択した値で計算を実行し、返された出力と期待される出力を比較することで、各機能をテストすることができます。
+単体テストでは、コントラクトの関数を個別に評価し、各コンポーネントが正しく動作するかを確認します。 優れた単体テストとは、シンプルで短時間で実行でき、テストが失敗した場合に、その原因を明確に示せるものです。
 
-機能テストには 3 つの手法があります。**単体テスト**、**統合テスト**、**システムテスト**です。
+単体テストは、期待する値が返されるかどうかと、関数の実行後にコントラクトのストレージが適切に更新されるかどうかを確認するのに効果的です。 また、コントラクトのコードベースに変更を加えた後に単体テストを実行し、新しいロジックの追加によってエラーが発生しないことを確認します。 以下は、効果的な単体テストを実行するためのガイドラインです。
 
-#### 単体テスト
+#### スマートコントラクト単体テストのガイドライン {#unit-testing-guidelines}
 
-単体テストは、スマートコントラクトの個々のコンポーネントの正確性をテストするものです。 単体テストはシンプルで、素早く実行でき、テストが失敗した場合に何が悪かったのかを明確にすることができます。
+##### 1. コントラクトのビジネスロジックとワークフローを理解する
 
-スマートコントラクトの開発では、特にコードに新しいロジックを追加する必要がある場合、単体テストは非常に重要です。 各機能の動作を検証し、意図したとおりに実行されることを確認することができます。
+スマートコントラクトが提供する機能を理解し、ユーザーがどのように関数にアクセスして使用しているかを把握しておくと、単体テストを作成しやすくなります。 [ハッピーパステスト](https://en.m.wikipedia.org/wiki/Happy_path)を実行する場合に特に有用です。これは、 コントラクト内の関数が有効なユーザーの入力に対して正しい出力を返すかどうかを判断します。 [オークションコントラクト](https://docs.soliditylang.org/en/v0.8.17/solidity-by-example.html?highlight=Auction%20contract#simple-open-auction)の(要約された)例を用いて、このコンセプトを説明します。
 
-多くの場合、単体テストを実行するには、_アサーション_(スマートコントラクトの要件を指定する単純で非公式なステートメント)の作成が必要になります。 単体テストでは、それぞれのアサーションをテストし、実行時にそれが正しいかどうかを確認することができます。
+```
+constructor(
+        uint biddingTime,
+        address payable beneficiaryAddress
+    ) {
+        beneficiary = beneficiaryAddress;
+        auctionEndTime = block.timestamp + biddingTime;
+    }
 
-コントラクト関連のアサーションの例としては、以下のものがあります。
+function bid() external payable {
 
-I. 「コントラクトを一時停止できるのは管理者のみ」
+      if (block.timestamp > auctionEndTime)
+            revert AuctionAlreadyEnded();
 
-ii. 「管理者以外は新しいトークンをミントできない」
+      if (msg.value <= highestBid)
+            revert BidNotHighEnough(highestBid);
 
-iii. 「コントラクトはエラーになると元に戻る」
+ if (highestBid != 0) {
+    pendingReturns[highestBidder] += highestBid;
+        }
+        highestBidder = msg.sender;
+        highestBid = msg.value;
+        emit HighestBidIncreased(msg.sender, msg.value);
+    }
 
-#### 統合テスト
+ function withdraw() external returns (bool) {
+        uint amount = pendingReturns[msg.sender];
+        if (amount > 0) {
+           pendingReturns[msg.sender] = 0;
 
-統合テストは、テスト階層において単体テストより上位に位置します。 統合テストでは、スマートコントラクトの個々のコンポーネントが一緒にテストされます。
+        if (!payable(msg.sender).send(amount)) {
+                pendingReturns[msg.sender] = amount;
+                return false;
+            }
+        }
+        return true;
+    }
 
-このアプローチは、コントラクトの異なる構成要素間、または複数のコントラクトにまたがる相互作用に起因するエラーを検出するものです。 複数の機能を持つ複雑なコントラクトや、他のコントラクトとのインターフェイスを持つコントラクトがある場合は、この手法を使用する必要があります。
+function auctionEnd() external {
+       if (block.timestamp < auctionEndTime)
+            revert AuctionNotYetEnded();
+        if (ended)
+            revert AuctionEndAlreadyCalled();
 
-統合テストは、<a　href="https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance">継承</a>や依存性注入などが適切に動作することを確認するのに便利です。
+        ended = true;
+        emit AuctionEnded(highestBidder, highestBid);
 
-#### システムテスト
+        beneficiary.transfer(highestBid);
+    }
+}
+```
 
-システムテストは、スマートコントラクトの機能テストの最終段階です。 システムテストは、スマートコントラクトを完全に統合された 1 つの製品として評価し、技術要件で指定されたとおりの性能を発揮するかどうかを確認します。
+このオークションコントラクトは、入札期間中に入札を受け付けるシンプルなものです。 `highestBid`が増えた場合は、以前の最高入札者に入札金が支払われます。また、入札期間が終了すると、`beneficiary`はコントラクトを呼び出して入札金を受け取ります。
 
-この段階は、ユーザーの視点からスマートコントラクトのエンドツーエンドの流れを確認することだと考えることができます。 スマートコントラクトのシステムテストを行うには、[テストネット](/developers/docs/networks/#ethereum-testnets)や[開発用ネットワーク](/developers/docs/development-networks/)などの本番同様の環境上にデプロイすることが良い方法と言えます。
+このようなコントラクトの単体テストでは、コントラクトとやり取りする際にユーザーが呼び出す可能性のあるさまざまな関数をテストします。 例えば、オークションの進行中にユーザーが入札できるか(すなわち、`bid()`の呼び出しが成功する)かどうかを確認する単体テストや、ユーザーが現在の`highestBid`よりも高い入札ができるかどうかを確認する単体テストなどがあります。
 
-ここでは、エンドユーザーが試験運用を行い、コントラクトのビジネスロジックや全体的な機能に関する問題を報告することができます。 システムテストが重要なのは、コントラクトがメインの EVM 環境にデプロイされると、コードを変更することができないからです。
+コントラクトの操作上のワークフローを理解しておくと、実行内容が要件を満たしているかどうかを確認する単体テストの作成にも役立ちます。 例えば、オークションコントラクトでは、オークションが終了したとき(つまり、`auctionEndTime`が`block.timestamp`よりも小さいとき)は、ユーザーが入札できないようになっています。 この場合、デベロッパーは、オークション終了時(つまり、`auctionEndTime` > `block.timestamp`の場合)に`bid()`関数の呼び出しが成功するか失敗するかをチェックする単体テストを実行するとよいでしょう。
 
-### 2. 静的/動的解析 {#static-dynamic-analysis}
+##### 2. コントラクトの実行に関するすべての前提条件を評価する
 
-スマートコントラクトのセキュリティ品質を評価するための自動テスト手法として、静的解析と動的解析があります。 しかし、どちらの手法も、コントラクトコードの不具合を発見するために、異なるアプローチを採用しています。
+コントラクトの実行に関する前提を文書化し、それらの前提の妥当性を検証する単体テストを作成することが重要です。 アサーションテストを行うことで、予期しない実行を防ぐことができます。また、スマートコントラクトのセキュリティモデルを破る可能性のある操作について検討する際にも役立ちます。 有用な方法としては、「ユーザーにとって満足のいくテスト」を超えて、間違った入力に対して関数が失敗するかどうかをチェックするネガティブテストを作成することです。
 
-#### 静的解析
+多くの単体テストフレームワークでは、アサーションの作成ができます。アサーションでは、コントラクトで可能・不可能なことを記述する単純なステートメントを作成します。テストを実行すると、それらのアサーションが維持されているかどうかが確認されます。 上記のオークションコントラクトを開発しているデベロッパーは、ネガティブテストを実行する前に、その挙動について次のようなアサーションを作成できます。
 
-静的解析は、実行前にスマートコントラクトのソースコードまたはバイトコードを調査します。 つまり、実際にプログラムを実行することなく、コントラクトコードをデバッグすることができるのです。 静的解析ツールは、イーサリアムスマートコントラクトに共通する脆弱性を検出し、最善の方法の遵守を支援します。
+- オークションが終了しているか、まだ開始されていない場合、ユーザーは入札することができないこと。
 
-#### 動的解析
+- 入札額が許容しきい値を下回った場合、オークションコントラクトを取り消す(リバートする)こと。
 
-動的解析手法では、スマートコントラクトをランタイム環境で実行し、コードの問題点を特定する必要があります。 動的コードアナライザーは、実行中のコントラクトの振る舞いを観察し、特定された脆弱性やプロパティ違反の詳細なレポートを生成します。
+- 落札に失敗したユーザーの資金が確実に戻ること。
 
-ファジングは、コントラクトをテストするための動的解析手法の一例です。 ファズテストでは、ファザーがスマートコントラクトに不正なデータを与え、その入力に対してコントラクトがどのように応答するかを監視します。
+**注**: 前提をテストする別の方法としては、特に`require`、`assert`、`if…else`ステートメントなど、コントラクト内の[関数修飾子](https://docs.soliditylang.org/en/v0.8.16/contracts.html#function-modifiers)をトリガーするテストを作成することです。
 
-ファズテストでは、ファザーがスマートコントラクトに不正なデータを与え、その入力に対してコントラクトがどのように応答するかを監視します。 ユーザーが正しい入力をすることを前提としていますが、必ずしもそうであるとは限らないからです。
+##### 3. コードカバレッジを計測する
 
-スマートコントラクトに誤った入力値を送ると、リソースリークやクラッシュを引き起こしたり、最悪の場合、意図しないコードの実行につながったりするケースがあります。 ファジングキャンペーンでは、このような問題を事前に発見し、脆弱性を排除することが可能です。
+[コードカバレッジ](https://en.m.wikipedia.org/wiki/Code_coverage)は、テストで実行されたコード内の分岐、行、ステートメントの数を追跡する指標です。 テストには、適切なコードカバレッジが必要です。コードカバレッジが不十分だと、「偽陰性」を引き起こす可能性があります。つまり、コントラクトがすべてのテストに合格しても、依然としてコードに脆弱性が存在する可能性が残ってしまいます。 しかし、高いコードカバレッジを記録していれば、スマートコントラクト内のすべてのステートメントや関数が正確であることを十分に検証することができます。
+
+##### 4. 完成度の高いテストフレームワークを使用する
+
+スマートコントラクトの単体テストを実行するツールの品質は、非常に重要です。 理想的なテストフレームワークは、定期的にメンテナンスされ、便利な機能(ログ機能やレポート機能など)を備えているものです。そして、多くのデベロッパーに広く使用され、よく精査されていることも重要です。
+
+Solidityスマートコントラクト用の単体テストフレームワークは、さまざまな言語(主にJavaScript、Python、Rust)で提供されています。 単体テストの実行を始めるには、以下のさまざまなテストフレームワークのガイドを参照してください。
+
+- **[Brownieを使った単体テストの実行](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)**
+- **[Foundryを使った単体テストの実行](https://book.getfoundry.sh/forge/writing-tests)**
+- **[Waffleを使った単体テストの実行](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests)**
+- **[Remixを使った単体テストの実行](https://remix-ide.readthedocs.io/en/latest/unittesting.html#write-tests)**
+- **[Apeを使った単体テストの実行](https://docs.apeworx.io/ape/stable/userguides/testing.html)**
+- **[Hardhatを使った単体テストの実行](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)**
+
+### 統合テスト {#integration-testing-for-smart-contracts}
+
+単体テストでは、コントラクトの関数を個別にデバッグしましたが、統合テストでは、スマートコントラクトのコンポーネント全体を評価します。 統合テストでは、スマートコントラクト間の呼び出しで発生する問題や、同じスマートコントラクト内の異なる関数間のやり取りで発生する問題を検出できます。 例えば、[継承](https://docs.soliditylang.org/en/v0.8.12/contracts.html#inheritance)や依存性注入などの機能が正しく動作するかどうかを確認するのに役立ちます。
+
+統合テストは、コントラクトがモジュラー型アーキテクチャを採用していたり、実行中に他のオンチェーンコントラクトと接続する場合に有用です。 One way of running integration tests is to [fork the blockchain](/glossary/#fork) at a specific height (using a tool like [Forge](https://book.getfoundry.sh/forge/fork-testing) or [Hardhat](https://hardhat.org/hardhat-network/docs/guides/forking-other-networks) and simulate interactions between your contract and deployed contracts.
+
+フォークされたブロックチェーンは、メインネットと同様の仕組みで動作し、アカウントに状態と残高が関連付けられています。 しかし、サンドボックス化されたローカル開発環境としてのみ機能します。例えば、トランザクションに実際のETHは必要なく、変更しても実際のイーサリアムプロトコルに影響することはありません。
+
+### プロパティベースのテスト {#property-based-testing-for-smart-contracts}
+
+プロパティベースのテストは、スマートコントラクトが定義されたプロパティを満たしていることを確認するプロセスです。 プロパティは、コントラクトの行動に関する事実をアサーションします。この事実は、さまざまなシナリオにおいて真であることが期待されるものです。スマートコントラクトプロパティの例としては、「コントラクト内の算術演算は、オーバーフローもアンダーフローもしない」などがあります。
+
+プロパティベースのテストを実行する方法には、**静的分析**と**動的分析**の2つの一般的な手法があります。どちらの手法でも、 プログラムのコード(この場合は、スマートコントラクト)が、事前に定義されたプロパティを満たしていることを検証できます。 プロパティベースのテストツールには、予期されるコントラクトプロパティに対する事前定義されたルールが備えてあり、コードがそれらのルールに違反しているかチェックするものや、スマートコントラクトのカスタムプロパティを作成できるものがあります。
+
+#### 静的解析 {#static-analysis}
+
+静的アナライザーは、スマートコントラクトのソースコードを受け取って解析し、コントラクトがプロパティを満たしているかどうかを判断します。 動的解析とは異なり、静的解析では、コントラクトを実行して正確性の解析を行うことはありません。 静的解析は、スマートコントラクトが実行中にたどる可能性のあるすべてのパスを推論します。つまり、ソースコードの構造を調べて、コントラクトの操作がランタイムで何を意味するかを決定します。
+
+コントラクトで静的解析を実行する一般的な手法として、[リンティング](https://www.perforce.com/blog/qac/what-lint-code-and-why-linting-important)と[静的テスト](https://www.techtarget.com/whatis/definition/static-analysis-static-code-analysis)があります。 どちらの手法も、コンパイラによって出力された[抽象構文木](https://en.m.wikipedia.org/wiki/Abstract_syntax_tree)や[制御フローグラフ](https://www.geeksforgeeks.org/software-engineering-control-flow-graph-cfg/amp/)など、コントラクト実行における低レベル表現の解析が必要です。
+
+静的解析は、安全でない構造の使用や構文エラー、コントラクトコード内のコーディング規約違反などの安全性の問題を検出するには有効です。 しかし、より深い脆弱性の検出が不得意であることが知られており、過剰な誤検出が生じる可能性があります。
+
+#### 動的解析 {#dynamic-analysis}
+
+動的解析では、シンボリックな入力(例: [シンボリック実行](https://en.m.wikipedia.org/wiki/Symbolic_execution))または具体的な入力(例: [ファジング](https://owasp.org/www-community/Fuzzing))をスマートコントラクトの関数に生成して、実行トレースが特定のプロパティに違反していないかどうかを確認します。 この方式によるプロパティベースのテストでは、単体テストとは異なり、複数のシナリオのテストケースをカバーし、プログラムがテストケースを生成します。
+
+[ファジング](https://halborn.com/what-is-fuzz-testing-fuzzing/)は、動的解析手法の例の1つでスマートコントラクトの任意のプロパティを検証します。 ファザー(fuzzer)は、定義されたランダムまたは不正なバリエーションの入力値で、ターゲットコントラクト内の関数を呼び出します。 スマートコントラクトがエラー状態 (例: アサーションが失敗した状態など) になると、問題に対してフラグが立てられ、実行によって脆弱なパスに向かう入力がレポートに作成されます。
+
+ファジングは、スマートコントラクトの入力検証メカニズムを評価するのに効果的です。なぜなら、予期しない入力を適切に処理しないと、意図しない動作が発生し、悪影響が生じる可能性があるからです。 この方式によるプロパティベースのテストは、以下のような理由から理想的です。
+
+1. **さまざまなシナリオをカバーするテストケースを書くことは難しい**。 プロパティテストでは、振る舞いとその振る舞いをテストするためのデータ範囲を定義するだけです。プログラムは、定義されたプロパティに基づいてテストケースを自動的に生成します。
+
+2. **テストスイートがプログラム内のすべての実行パスを十分にカバーしていないことがある。**100%のカバレッジであっても、エッジケースを見逃す可能性があります。
+
+3. **単体テストでは、コントラクトがサンプルデータに対して正しく実行されることを証明できるが、サンプル外の入力に対して正しく実行されるかどうかは未確認のままである。**プロパティテストでは、ターゲットコントラクトを複数のバリエーションで実行します。 指定された入力値を使用して、アサーションの失敗を引き起こす実行トレースを見つけます。 そのため、プロパティテストでは、広範なクラスの入力データに対してコントラクトが正しく実行されることを、より確実に保証することができます。
+
+### スマートコントラクトでプロパティベースのテストを実行する際のガイドライン {#running-property-based-tests}
+
+プロパティベースのテストの実行では通常、プロパティの定義(例: [整数オーバーフロー](https://github.com/ConsenSys/mythril/wiki/Integer-Overflow)がないこと)、またはスマートコントラクト検証を行う必要のあるプロパティのコレクションを定義することから始めます。 プロパティテストを作成するときに、プログラムがトランザクションの入力データを生成するために、その値の範囲の定義が必要になることもあります。
+
+プロパティテストツールは、適切に構成することで、ランダムに生成された入力値を使ってスマートコントラクトの関数を実行することができます。 アサーション違反が発生した場合、評価対象のプロパティに違反する具体的な入力データがレポートに含まれます。 プロパティベースのテストを実行するには、以下のさまざまなツールのガイドを参照してください。
+
+- **[Slitherを使ったスマートコントラクト静的解析](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither#slither)**
+- **[Brownieを使ったプロパティベースのテスト](https://eth-brownie.readthedocs.io/en/stable/tests-hypothesis-property.html)**
+- **[Foundryを使ったコントラクトのファジング](https://book.getfoundry.sh/forge/fuzz-testing)**
+- **[Echidnaを使ったコントラクトのファジング](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna#echidna-tutorial)**
+- **[Manticoreを使ったスマートコントラクトのシンボリック実行](https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore#manticore-tutorial)**
+- **[Mythrilを使ったスマートコントラクトのシンボリック実行](https://mythril-classic.readthedocs.io/en/master/tutorial.html)**
 
 ## スマートコントラクトの手動テスト {#manual-testing-for-smart-contracts}
 
-### 1. コード監査 {#code-audits}
+スマートコントラクトの手動テストは、通常、自動テストを行った後の開発サイクルの後半で行われます。 この手動テストでは、スマートコントラクトを完全に統合された1つの製品として評価し、技術要件で指定されたとおりの性能を発揮するかどうかを確認します。
 
-コード監査とは、スマートコントラクトのソースコードを詳細に評価し、起こりうる障害点、セキュリティ上の欠陥、不適切な開発手法を発見することです。 コード監査は自動化することもできますが、ここでは人の手を介したコード解析を指しています。
+### ローカルブロックチェーンでのコントラクトのテスト {#testing-on-local-blockchain}
 
-コード監査では、スマートコントラクトで考えられる攻撃ベクトルをマッピングするために、攻撃者のマインドセットが必要です。 自動監査を行うにしても、ソースコードの一行一行を解析することは、安全なスマートコントラクトを書くための最低条件です。
+ローカルの開発環境で実行される自動テストは、有用なデバッグ情報を提供しますが、実際の環境でスマートコントラクトがどのように動作するかを確認したい場合もあります。 しかし、実際のイーサリアムチェーンにデプロイするとガス代が発生します。また、スマートコントラクトにバグがある場合、ユーザーが実際にお金を失う可能性があることは言うまでもありません。
 
-また、スマートコントラクトの安全性をより確実にするために、セキュリティ監査を依頼することも可能です。 監査では、サイバーセキュリティの専門家による広範な解析が行われ、スマートコントラクトの機能を破壊する可能性のある脆弱性やバグを検出することができます。
+メインネットでテストする代わりに、ローカルのブロックチェーン([開発ネットワーク](/developers/docs/development-networks/)とも呼ばれます)でコントラクトをテストすることをお勧めします。 ローカルブロックチェーンは、イーサリアムブロックチェーンのコピーで、自分のコンピュータのローカル環境で実行できるものです。これにより、イーサリアムの実行レイヤーの動作をシミュレートすることができます。 そのため、トランザクションをプログラムしてコントラクトとやり取りする際に、多額のコストが発生することはありません。
 
-### 2. バグ報奨金 {#bug-bounties}
+ローカルのブロックチェーン上でコントラクトを実行するのは、手動で統合テストを行うのに効果的な方法です。 [スマートコントラクトは、柔軟に構成できるようになっています](/developers/docs/smart-contracts/composability/)。これにより、既存のプロトコルと統合できるようになりましたが、複雑なオンチェーンでの相互作用が正しい結果を生み出すかどうかについては、依然として確認する必要があります。
 
-バグ報奨金とは、プログラムのコードに脆弱性やバグを発見し、デベロッパーに報告した個人に与えられる金銭的な報酬のことです。 バグ報奨金は、スマートコントラクトの不具合の発見を他の人に依頼するもので、監査に似ています。 大きな違いは、バグ報奨金プログラムには、デベロッパーコミュニティやハッカーコミュニティからも幅広く参加できるということです。
+[開発用ネットワークの詳細](/developers/docs/development-networks/)
 
-バグ奨励金プログラムには、独自のスキルや経験を持つ幅広い層の倫理的ハッカーや独立したセキュリティ専門家が多く参加します。 これは、限られた専門知識を持つチームに依存するスマートコントラクト監査にはない利点と言えるでしょう。
+### テストネットでのスマートコントラクトのテスト {#testing-contracts-on-testnets}
+
+テストネットワークすなわちテストネットは、イーサリアムメインネットとまったく同じ仕様で動作するネットワークです。ただし、テストネットで使用されるイーサ(ETH)は、現実世界で価値がありません。 コントラクトを[テストネット](/developers/docs/networks/#ethereum-testnets)にデプロイすると、資金を失うリスクはありません。また、Dappのフロントエンドなどを介して、誰でもコントラクトとやり取りできるようになります。
+
+この方式の手動テストでは、ユーザーの視点からアプリケーションのエンドツーエンドのフローを評価することができます。 テストネットでは、ベータテスターが試験運用を行い、コントラクトのビジネスロジックや全体的な機能に関する問題を報告することもできます。
+
+テストネットの方がイーサリアム仮想マシンの動作に近いため、ローカルブロックチェーンでテストした後にテストネットにデプロイすることが理想です。 そのため、多くのイーサリアムを使うプロジェクトでは、テストネットにDappをデプロイし、現実世界の条件下でスマートコントラクトの操作を評価するのが一般的です。
+
+[イーサリアムテストネットの詳細](/developers/docs/development-networks/#public-beacon-testchains)
 
 ## テストと形式検証の比較 {#testing-vs-formal-verification}
 
-テストは、あるデータ入力に対してコントラクトが期待通りの結果を返すことを確認するのに役立ちますが、テストで使用されていない入力に対して同じことを決定的に証明することはできません。 スマートコントラクトのテストは「機能的な正しさ」を保証できません。つまり、入力値や条件の*すべての*セットに対してプログラムが要求通りに動作することを示すことはできないのです。
+テストは、あるデータの入力に対して、コントラクトが期待通りの結果を返すことを確認するのに役立ちますが、テストで使用されていない入力に対して、同じことを確実に証明できるわけではありません。 したがって、スマートコントラクトのテストでは、「機能的な正しさ」を保証できません。つまり、入力値の_すべての_セットに対して、プログラムが要求通りに動作することを保証することはできません。
 
-そのため、デベロッパーはスマートコントラクトの正しさを評価するアプローチに**形式検証**を取り入れることが推奨されています。 形式検証では、[形式手法](https://www.brookings.edu/techstream/formal-methods-as-a-path-toward-better-cybersecurity/)(ソフトウェアを仕様化し検証するための数学的に厳密な技法)を用います。
+形式検証は、プログラムの形式モデルが形式仕様と一致するかどうかを確認することでソフトウェアの正確さを評価するアプローチです。 プログラムを抽象的かつ数学的に表現したものが形式モデルで、プログラムのプロパティ(つまり、プログラムの実行に関する論理的アサーション)を定義したものが形式仕様です。
 
-形式検証は、デベロッパーがスマートコントラクトに関連する仮定を形式的に検証するのに役立つため、スマートコントラクトにとって重要であると考えられています。 これは、スマートコントラクトの特性を記述した形式的な仕様を作成し、スマートコントラクトの形式モデルがその仕様に合致していることを検証することで実現されます。 このアプローチにより、スマートコントラクトはビジネスロジックで定義された機能のみを実行し、それ以外の機能は実行しないという信頼性を高めることができます。
+プロパティは、数学用語で記述されるため、システムの形式(数学)モデルが仕様を満たしていることを、論理的な推論規則を使用して検証することができます。 したがって、形式検証ツールは、システムの正確さを「数学的に証明」できると言われています。
 
-[スマートコントラクトのための形式検証の詳細](/developers/docs/smart-contracts/formal-verification)
+テストとは異なり、形式検証は、サンプルデータを使わずにスマートコントラクトが_どのような_実行においても、形式仕様を満たしていること(バグがないこと)を検証できます。 これにより、数十の単体テストの実行時間が短縮され、背後にある脆弱性をより効率的に発見できるようになります。 ただし、形式検証手法では、実装の難易度や有用性が多岐に渡ります。
 
-## テストのためのツールとライブラリ {#testing-tools-and-libraries}
+[スマートコントラクトの形式検証の詳細](/developers/docs/smart-contracts/formal-verification)
+
+## テストと監査およびバグ報奨金の比較 {#testing-vs-audits-bug-bounties}
+
+上記のように、厳密なテストをしても、コントラクトにバグがないとは言い切れません。 形式検証によるアプローチは、正確性をより強力に保証できますが、現時点では使用が難しく、かなりのコストがかかります。
+
+第三者によるコードレビューを受ければ、コントラクトの脆弱性を発見できる可能性が高くなります。 第三者にコントラクトを分析してもらうには、[スマートコントラクトの監査](https://www.immunebytes.com/blog/what-is-a-smart-contract-audit/)および[バグ報奨金](https://medium.com/immunefi/a-defi-security-standard-the-scaling-bug-bounty-9b83dfdc1ba7)のいずれかの方法があります。
+
+監査は、スマートコントラクトのセキュリティ上の欠陥や不健全な開発プラクティスを探し出す経験豊かな監査人が行います。 監査では、コードベース全体の手動レビューだけでなく、テストや形式検証も行われるのが一般的です。
+
+一方で、バグ報奨金プログラムでは通常、スマートコントラクトの脆弱性を発見してデベロッパーへ公開する([ホワイトハットハッカー](https://en.wikipedia.org/wiki/White_hat_(computer_security))と呼ばれる)個人に対して、金銭的な報酬が支払われます。 バグ報奨金は、スマートコントラクトの不具合の発見を他の人に依頼するもので、監査に似ています。
+
+主な違いとしては、バグ報奨金プログラムは、より広範なデベロッパーやハッカーコミュニティを対象としているため、ユニークなスキルや経験を持つ幅広いクラスの倫理的なハッカーや独立したセキュリティ専門家を引きつけることができます。 これは、限られた専門知識を持つチームに依存するスマートコントラクト監査では得られない利点と言えるでしょう。
+
+## テストツールとライブラリ {#testing-tools-and-libraries}
 
 ### 単体テストツール {#unit-testing-tools}
 
-**Solidity-Coverage** - _スマートコントラクトのテストに便利な Solidity のコードカバレッジツールです_。
+- **[solidity-coverage](https://github.com/sc-forks/solidity-coverage)** - _Solidityで書かれたスマートコントラクトのコードカバレッジツール_
 
-- [GitHub](https://github.com/sc-forks/solidity-coverage)
+- **[Waffle](https://ethereum-waffle.readthedocs.io/en/latest/)** - _高度なスマートコントラクトの開発とテストのためのフレームワーク(ethers.jsベース)_
 
-**Waffle** - _高度なスマートコントラクトの開発とテストのためのフレームワークです(ethers.js をベースとする)_。
+- **[Remixテスト](https://github.com/ethereum/remix-project/tree/master/libs/remix-tests)** - _Solidityスマートコントラクトのテストツール。 Remix IDEの「Solidity Unit Testing」プラグインで動作します。このプラグインは、コントラクトのテストケースの作成と実行に使用します。_
 
-- [ドキュメント](https://ethereum-waffle.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/TrueFiEng/Waffle)
-- [ウェブサイト](https://getwaffle.io/)
+- **[OpenZeppelinテストヘルパー](https://github.com/OpenZeppelin/openzeppelin-test-helpers)** - _イーサリアムスマートコントラクトのテストに使用できるアサーションライブラリ。 コントラクトが期待通りに動作していることを確認してください。_
 
-**Remix Tests** - _Solidity スマートコントラクトをテストするためのツールです。 Remix IDE の「Solidity Unit Testing」プラグインで動作します。このプラグインは、コントラクトのテストケースの作成と実行に使用されます。_
+- **[Brownieユニットテストフレームワーク](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)** - _最小限のコードで小さなテストを作成可能。また、大規模なプロジェクトにも対応するスケーラビリティも持ち合わせており、機能豊富なテストフレームワークであるPytestを利用しています。_
 
-- [ドキュメンテーション](https://remix-ide.readthedocs.io/en/latest/unittesting.html)
-- [GitHub](https://github.com/ethereum/remix-project/tree/master/libs/remix-tests)
+- **[Foundryテスト](https://github.com/foundry-rs/foundry/tree/master/forge)** - _Foundry社は、シンプルな単体テスト、ガス最適化チェック、コントラクトファジングを実行でき、高速で柔軟なイーサリアムテストフレームワークであるForgeを提供しています。_
 
-**OpenZeppelin テストヘルパー -** _イーサリアムスマートコントラクトテストのためのアサーションライブラリです。 コントラクトが期待通りに動作することを確認してください。_
+- **[Hardhatテスト](https://hardhat.org/hardhat-runner/docs/guides/test-contracts)** - _ethers.js、Mocha、Chaiをベースとしたスマートコントラクトテストにおけるフレームワーク_。
 
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-test-helpers)
-- [ドキュメント](https://docs.openzeppelin.com/test-helpers)
+- **[ApeWorx](https://docs.apeworx.io/ape/stable/userguides/testing.html)** - _イーサリアム仮想マシン用のスマートコントラクトでPythonベースの開発およびテストのためのフレームワーク_。
 
-**Truffle スマートコントラクトテストフレームワーク** - _自動テストフレームワークにより、コントラクトのテストを簡単に行うことができます。_
+### プロパティベースのテストツール {#property-based-testing-tools}
 
-- [ドキュメント](https://trufflesuite.com/docs/truffle/testing/testing-your-contracts/)
-- [ウェブサイト](https://trufflesuite.com/)
+#### 静的解析ツール {#static-analysis-tools}
 
-**ユニットテストフレームワーク Brownie** - _Brownie は、最小限のコードで小さなテストを作成することができ、大規模なプロジェクトでもうまく拡張できる、機能豊富なテストフレームワークである Pytest を利用しています。_
+- **[Slither](https://github.com/crytic/slither)** - _PythonベースのSolidity静的解析フレームワークで、脆弱性の発見、コード理解の強化、スマートコントラクトのカスタム解析の記述で使用_。
 
-- [ドキュメント](https://eth-brownie.readthedocs.io/en/v1.0.0_a/tests.html)
-- [GitHub](https://github.com/eth-brownie/brownie)
+- **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _スマートコントラクトのプログラミング言語であるSolidityのスタイルとセキュリティのベストプラクティスを適用するためのリンター_。
 
-**Foundry Tests** - _Foundry 社は、シンプルな単体テスト、ガス最適化チェック、コントラクトファジングを実行できる、高速で柔軟なイーサリアムテストフレームワークである Forge を提供しています。_
+#### 動的解析ツール {#dynamic-analysis-tools}
 
-- [GitHub](https://github.com/foundry-rs/foundry/tree/master/forge)
-- [ドキュメント](https://book.getfoundry.sh/forge/)
+- **[Echidna](https://github.com/crytic/echidna/)** - _プロパティベースのテストによりスマートコントラクトの脆弱性を検出する高速なコントラクトファザー_。
 
-**Etheno** - _JSON RPC マルチプレクサ、解析ツールラッパー、テスト統合ツールからなるオールインワンのイーサリアムテストツールです。 Etheno は、大規模なマルチコントラクトプロジェクトにおいて、Manticore や Echidna のような分析ツールを設定する複雑さを解消します。_
+- **[Diligence Fuzzing](https://consensys.net/diligence/fuzzing/)** - _スマートコントラクトのコードのプロパティ違反を検出するのに便利な自動ファジングツール_。
 
-- [GitHub](https://github.com/crytic/etheno)
+- **[Manticore](https://manticore.readthedocs.io/en/latest/index.html)** - _EVMバイトコード解析のための動的シンボリック実行フレームワーク_。
 
-**Woke development and testing framework** - _Python のテスト・デプロイメントスクリプトで、型ヒント、ファザー、デバッグサポート、コードカバレッジ、クロスチェーンテストを備えています。_
+- **[Mythril](https://github.com/ConsenSys/mythril-classic)** - _Taint解析、Concolic解析、制御フローチェックを用いてコントラクトの脆弱性を検出するEVMバイトコード評価ツール_。
 
-- [ドキュメント](https://ackeeblockchain.com/woke/docs/latest/testing-framework/overview/)
-- [GitHub](https://github.com/Ackee-Blockchain/woke)
-
-### 静的解析ツール {#static-analysis-tools}
-
-**Mythril** - _Taint 解析、Concolic 解析、制御フローチェックを用いてコントラクトの脆弱性を検出する EVM バイトコード評価ツールです_。
-
-- [GitHub](https://github.com/ConsenSys/mythril-classic)
-- [ドキュメント](https://mythril-classic.readthedocs.io/en/master/about.html)
-
-**Slither** - _Python ベースの Solidity 静的解析フレームワークで、脆弱性の発見、コード理解の強化、スマートコントラクトのカスタム解析の記述に使用します。_
-
-- [GitHub](https://github.com/crytic/slither)
-
-**Rattle** - _デプロイされたスマートコントラクトで動作するように設計された EVM バイトコード静的解析フレームワークです。_
-
-- [GitHub](https://github.com/crytic/rattle)
-
-### 動的解析ツール {#dynamic-analysis-tools}
-
-**Echidna** - _プロパティベースのテストによりスマートコントラクトの脆弱性を検出する高速なコントラクトファザーです_。
-
-- [GitHub](https://github.com/crytic/echidna/)
-
-**Harvey** - _スマートコントラクトのコードのプロパティ違反を検出するのに便利な自動ファジングツールです。_
-
-- [ウェブサイト](https://consensys.net/diligence/fuzzing/)
-
-**Manticore** - _EVM バイトコード解析のための動的シンボリック実行フレームワーク。_
-
-- [GitHub](https://github.com/trailofbits/manticore)
-- [ドキュメント](https://github.com/trailofbits/manticore/wiki)
-
-### スマートコントラクト監査サービス {#smart-contract-auditing-services}
-
-**ConsenSys Diligence** - _スマートコントラクトの監査サービスによって、ブロックチェーンエコシステム全体のプロジェクトについて、プロトコルが起動に適した状態にあり、ユーザーを保護できるように構築されていることを保証します。_
-
-- [ウェブサイト](https://consensys.net/diligence/)
-
-**CertiK** - _スマートコントラクトとブロックチェーンネットワークに最先端の形式検証技術を使用する先駆的なブロックチェーンセキュリティ企業です。_
-
-- [ウェブサイト](https://www.certik.com/)
-
-**Trail of Bits** - _セキュリティ研究と攻撃者の心理を融合させ、リスクの低減とコードの堅牢化を図るサイバーセキュリティ企業です。_
-
-- [ウェブサイト](https://www.trailofbits.com/)
-
-**PeckShield** - _ブロックチェーンエコシステム全体のセキュリティ、プライバシー、ユーザビリティのための製品やサービスを提供するブロックチェーンセキュリティ企業です。_
-
-- [ウェブサイト](https://peckshield.com/)
-
-**QuantStamp** - _セキュリティおよびリスク評価サービスを通じて、ブロックチェーン技術の主流化を促進する監査サービスです_。
-
-- [ウェブサイト](https://quantstamp.com/)
-
-**OpenZeppelin** - _分散型システムのセキュリティ監査を提供するスマートコントラクトセキュリティ企業です。_
-
-- [ウェブサイト](https://www.openzeppelin.com/security-audits)
-
-**Nethermind** - _Solidity と Cairo の監査サービスにより、イーサリアムと Starknet 全体でスマートコントラクトの整合性とユーザーの安全が確保されます。_
-
-- [ウェブサイト](https://nethermind.io/smart-contracts-audits)
-
-### バグ報奨金プラットフォーム {#bug-bounty-platforms}
-
-**Immunefi** - _スマートコントラクトと DeFi プロジェクトのためのバグ報奨金プラットフォームです。セキュリティ研究者がコードをレビューし、脆弱性を開示し、報酬を得て、暗号をより安全なものにします。_
-
-- [ウェブサイト](https://immunefi.com/)
-
-**HackerOne** - _企業とペネトレーションテスターやサイバーセキュリティ研究者をつなぐ、脆弱性調整とバグ報奨金のプラットフォームです。_
-
-- [ウェブサイト](https://www.hackerone.com/)
+- **[Diligence Scribble](https://consensys.net/diligence/scribble/)** - _Scribbleは、仕様記述言語およびランタイム検証ツールでスマートコントラクトのプロパティにアノテーションを付けることができます。これにより、Diligence FuzzingやMythXなどのツールを使用してコントラクトを自動的にテストできます。_
 
 ## 関連チュートリアル {#related-tutorials}
 
-- [安定性と Truffle 連続統合設定](/developers/tutorials/solidity-and-truffle-continuous-integration-setup/) _– Travis または Circle CI の Truffle テストと有益なプラグインのセットアップ方法_
-- [製品テストの概要](/developers/tutorials/guide-to-smart-contract-security-tools/) _– 様々な製品テストの概要と比較_
-- [スマートコントラクトのテストに Echidna を使用する方法](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
-- [Manticore を使用してスマートコントラクトのバグを見つける方法](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
-- [Slither を使用してスマートコントラクトのバグを見つける方法](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
-- [テスト用 Solidity コントラクトのモックの作成方法](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
-- [Truffle テストから OpenZeppelin テスト環境に移行する方法](https://docs.openzeppelin.com/test-environment/0.1/migrating-from-truffle)
-- [ネットワークにデプロイした後にスマートコントラクトをテストする方法](https://fulldecent.blogspot.com/2019/04/testing-deployed-ethereum-contracts.html)
-- [JavaScript で学ぶブロックチェーン、Solidity、フルスタック Web3 開発(YouTube)](https://www.youtube.com/watch?v=gyMwXuJrbJQ)
-- [Solidity、ブロックチェーン、スマートコントラクト講座(YouTube)](https://www.youtube.com/watch?v=M576WGiDBdQ)
+- [さまざまな製品テストの概要と比較](/developers/tutorials/guide-to-smart-contract-security-tools/) \_
+- [スマートコントラクトのテストにEchidnaを使用する方法](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/)
+- [Manticoreを使用してスマートコントラクトのバグを見つける方法](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/)
+- [Slitherを使用してスマートコントラクトのバグを見つける方法](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
+- [Solidityコントラクトのテスト用モックの作成方法](/developers/tutorials/how-to-mock-solidity-contracts-for-testing/)
+- [How to run unit tests in Solidity using Foundry](https://www.rareskills.io/post/foundry-testing-solidity)
 
 ## 参考文献 {#further-reading}
 
-- [イーサリアムスマートコントラクトのテストに関する徹底ガイド](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297) - _Ben Hauser_
-- [イーサリアムスマートコントラクトのテスト方法](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d) - _Alex Roan_
+- [イーサリアムスマートコントラクトのテストに関する詳細ガイド](https://iamdefinitelyahuman.medium.com/an-in-depth-guide-to-testing-ethereum-smart-contracts-2e41b2770297)
+- [イーサリアムスマートコントラクトのテスト方法](https://betterprogramming.pub/how-to-test-ethereum-smart-contracts-35abc8fa199d)
+- [デベロッパー向けMolochDAOのユニットテストガイド](https://github.com/MolochVentures/moloch/tree/4e786db8a4aa3158287e0935dcbc7b1e43416e38/test#moloch-testing-guide)
+- [ロックスターのようにスマートコントラクトをテストする方法](https://forum.openzeppelin.com/t/test-smart-contracts-like-a-rockstar/1001)

@@ -58,7 +58,7 @@ lang: fa
 
 ## پیشرفت فعلی {#current-progress}
 
-SSF در مرحله تحقیقاتی است. انتظار نمی‌رود تا چندین سال آتی تحقق یابد، و احتمالاً باید ابتدا ارتقاهای اساسی دیگر مانند [درختان ورکل](/roadmap/verkle-trees/) و [Danksharding](/roadmap/danksharding]) را پشت سر گذاشت.
+SSF در مرحله تحقیقاتی است. انتظار نمی‌رود تا چندین سال آتی تحقق یابد، و احتمالاً باید ابتدا ارتقاهای اساسی دیگر مانند [درختان ورکل](/roadmap/verkle-trees/) و [Danksharding](/roadmap/danksharding/) را پشت سر گذاشت.
 
 ## بیشتر بخوانید {#further-reading}
 

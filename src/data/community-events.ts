@@ -91,15 +91,6 @@ const communityConferences: CommunityConference[] = [
     description: "ETH Community in SEA to #Build, #Learn and #Share together.",
   },
   {
-    title: "Ethereum Rio",
-    startDate: "2024-03-19",
-    endDate: "2024-03-24",
-    to: "https://www.ethereumbrasil.com/",
-    location: "Rio de Janeiro, Brazil",
-    description:
-      "3rd Edition of LATAM's most loved ETH event. Bootcamp, Buildathon & Conference",
-  },
-  {
     title: "ETHTaipei",
     startDate: "2024-03-21",
     endDate: "2024-03-24",
@@ -221,6 +212,15 @@ const communityConferences: CommunityConference[] = [
     endDate: "2024-5-5"
   },
   {
+    title: "ETH Rio",
+    startDate: "2024-05-13",
+    endDate: "2024-05-15",
+    to: "https://www.ethereumbrasil.com/",
+    location: "Rio de Janeiro, Brazil",
+    description:
+      "3rd Edition of ETH Rio. ETH Rio 2024 will bring regulators, builders and businesses to discuss the future of the Brazilian Tokenized Economy based on EVM.",
+  },
+  {
     title: "DappConn",
     startDate: "2024-05-21",
     endDate: "2024-05-23",
@@ -302,6 +302,14 @@ const communityConferences: CommunityConference[] = [
     description: "Through Hackathon, Conference, side events, discussions, collaborations, and vast networking, we aim to further establish Kyiv as an innovation and infrastructure development leader",
   },
   {
+    title: "EthCC",
+    to: "https://ethcc.io",
+    location: "Brussels, Belgium",
+    description: "The Ethereum Community Conference (EthCC) is the largest annual European Ethereum event focused on technology and community. Four intense days of conferences, networking and learning.",
+    startDate: "2024-7-08",
+    endDate: "2024-7-11"
+  },
+  {
     title: "Pragma Brussels",
     to: "https://ethglobal.com/events/pragma-brussels",
     location: "Brussels, Belgium",
@@ -342,6 +350,15 @@ const communityConferences: CommunityConference[] = [
     description: "This conference will bring together Web3 enthusiasts from all over Nigeria and beyond. Here, community meets technology for three days of intensive Networking and Learning experiences.",
   },
   {
+    title: "ETHSafari",
+    startDate: "2024-09-09",
+    endDate: "2024-09-15",
+    to: "https://ethsafari.xyz/",
+    location: "Nairobi & Kilifi, Kenya",
+    description:
+      "Welcome to the largest Ethereum event happening in Africa! Join the BlockTrain from Nairobi to celebrate an ETH-festival held underneath ancient Boabab trees in Kilifi.",
+  },
+  {
     title: "TOKEN2049",
     startDate: "2024-09-18",
     endDate: "2024-09-19",
@@ -364,6 +381,14 @@ const communityConferences: CommunityConference[] = [
     description: "Pragma is a single-track, in-person summit hosted by ETHGlobal. With a focus on intimacy, Pragma serves as a hub for high-quality talks and as a forum of discussion for builders and leaders from Ethereum ecosystem and beyond. For the first time, we’re excited to introduce a multi-day format to cover an even wider range for all things happening in web3",
     startDate: "2024-10-15",
     endDate: "2024-10-17"
+  },
+  {
+    title: "ETHSofia",
+    to: "https://ethsofia.com",
+    location: "Sofia, Bulgaria",
+    description: "ETHSofia is a 3-day conference and hackathon event that brings together the Ethereum community in Bulgaria and beyond. It is a place for developers, researchers, and enthusiasts to come together and share knowledge and ideas.",
+    startDate: "2024-10-17",
+    endDate: "2024-10-19"
   },
   {
     title: "ETHGlobal San Francisco",

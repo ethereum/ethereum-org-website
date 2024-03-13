@@ -24,13 +24,17 @@ export interface TableRow {
   url?: string
 }
 
-export interface IProps {
+export type StablecoinsTableProps = {
   columns: Array<string>
   content: Array<TableRow>
   hasError: boolean
 }
 
-const StablecoinsTable: React.FC<IProps> = ({ columns, content, hasError }) => {
+const StablecoinsTable = ({
+  columns,
+  content,
+  hasError,
+}: StablecoinsTableProps) => {
   const [textColor] = useToken("colors", ["text"])
   const { flipForRtl } = useRtlFlip()
   const { t } = useTranslation("page-stablecoins")

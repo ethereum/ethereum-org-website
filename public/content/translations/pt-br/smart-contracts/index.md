@@ -65,7 +65,7 @@ Eles podem realizar cálculos, criar moeda, armazenar dados, mintar NFTs, enviar
 - [Stablecoins](/stablecoins/)
 - [Criação e distribuição de ativos digitais únicos](/nft/)
 - [Uma negociação de moeda automática e aberta](/get-eth/#dex)
-- [Jogos descentralizados](/dapps/?category=gaming)
+- [Jogos descentralizados](/dapps/?category=gaming#explore)
 - [Uma apólice de seguro que paga automaticamente](https://etherisc.com/)
 - [Um padrão que permite que pessoas criem moedas personalizadas e interoperáveis](/developers/docs/standards/tokens/)
 

@@ -15,15 +15,15 @@ const DownArrowLong = motion(
   })
 )
 
-interface IProps extends Pick<TextProps, "children"> {
+type ClickAnimationProps = Pick<TextProps, "children"> & {
   below?: boolean
   delay?: number
 }
-export const ClickAnimation: React.FC<IProps> = ({
+export const ClickAnimation = ({
   below,
   delay = 5000,
   children,
-}) => {
+}: ClickAnimationProps) => {
   const [visible, setVisible] = useState(false)
   useEffect(() => {
     const timeout = setTimeout(() => setVisible(true), delay)

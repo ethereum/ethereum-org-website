@@ -72,7 +72,7 @@ Jeśli jesteś dwujęzyczny i chcesz pomóc nam dotrzeć do większej liczby os�
 - [Gwei.cz](https://gwei.cz) — lokalna społeczność skupiona wokół Web3, tworzy treści edukacyjne, organizuje wydarzenia online i stacjonarne
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) — przewodnik Ethereum dla początkujących
 - [DAO Příručka](https://dao.gwei.cz/) — przewodnik dla początkujących o DAO
-- [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) — doskonalenie Ethereum po czesku
+- [Mastering Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) — doskonalenie Ethereum po czesku
 
 ### Francuski {#fr}
 

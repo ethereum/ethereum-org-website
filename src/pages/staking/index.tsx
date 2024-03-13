@@ -15,6 +15,7 @@ import type {
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ButtonLink, { ButtonLinkProps } from "@/components/Buttons/ButtonLink"
 import Card from "@/components/Card"
+import DencunBanner from "@/components/DencunBanner"
 import ExpandableCard from "@/components/ExpandableCard"
 import FeedbackCard from "@/components/FeedbackCard"
 import LeftNavBar from "@/components/LeftNavBar"
@@ -46,7 +47,7 @@ import rhino from "@/public/upgrades/upgrade_rhino.png"
 type BenefitsType = {
   title: string
   emoji: string
-  description: string
+  description: ReactNode
   linkText?: string
   to?: string
 }
@@ -151,7 +152,7 @@ const CardGrid = (props: ChildOnlyProp) => (
 const StyledCard = (props: {
   title: string
   emoji: string
-  description: string
+  description: ReactNode
   key: number
   children: ReactNode
 }) => (
@@ -212,7 +213,7 @@ export const getStaticProps = (async ({ locale }) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage("/staking")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const data = await cachedFetchBeaconchainData()
 
@@ -249,7 +250,9 @@ const StakingPage = ({
     {
       title: t("page-staking-benefits-1-title"),
       emoji: "💰",
-      description: t("page-staking-benefits-1-description"),
+      description: (
+        <Translation id="page-staking:page-staking-benefits-1-description" />
+      ),
     },
     {
       title: t("page-staking-benefits-2-title"),
@@ -367,7 +370,9 @@ const StakingPage = ({
       <PageMetadata
         title={t("page-staking-meta-title")}
         description={t("page-staking-meta-description")}
+        image="/upgrades/upgrade_rhino.png"
       />
+      <DencunBanner />
       <HeroStatsWrapper>
         <PageHero content={heroContent} />
         <StakingStatsBox data={data} />
@@ -385,11 +390,8 @@ const StakingPage = ({
               <H2 id={tocItems.whatIsStaking.id}>
                 {tocItems.whatIsStaking.title}
               </H2>
-              <Text>{t("page-staking-description")}</Text>
               <Text>
-                <InlineLink href="/get-eth/">
-                  {t("page-staking-section-what-link")}
-                </InlineLink>
+                <Translation id="page-staking:page-staking-description" />
               </Text>
             </Box>
             <Box>
@@ -442,7 +444,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
@@ -463,7 +465,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
@@ -479,19 +481,15 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "solo-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-solo-requirements-li1"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li1" />
                     </li>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-solo-requirements-li2"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li2" />
                     </li>
                     <li>
                       <Translation id="page-staking:page-staking-section-comparison-solo-requirements-li3" />
@@ -512,7 +510,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
@@ -530,7 +528,7 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
@@ -543,24 +541,18 @@ const StakingPage = ({
                   </ul>
                 </div>
                 <div style={{ gridArea: "saas-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-saas-requirements-li1"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-saas-requirements-li1" />
                     </li>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-saas-requirements-li2"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-saas-requirements-li2" />
                     </li>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-saas-requirements-li3"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-saas-requirements-li3" />
                     </li>
                   </ul>
                 </div>
@@ -579,18 +571,18 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-rewards-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      {t("page-staking-section-comparison-pools-rewards-li1")}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li1" />
                     </li>
                     <li>
-                      {t("page-staking-section-comparison-pools-rewards-li2")}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li2" />
                     </li>
                     <li>
-                      {t("page-staking-section-comparison-pools-rewards-li3")}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-rewards-li3" />
                     </li>
                   </ul>
                 </div>
@@ -600,32 +592,28 @@ const StakingPage = ({
                     borderBottom: "1px solid #3335",
                   }}
                 >
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-risks-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      {t("page-staking-section-comparison-pools-risks-li1")}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-risks-li1" />
                     </li>
                     <li>
-                      {t("page-staking-section-comparison-pools-risks-li2")}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-risks-li2" />
                     </li>
                   </ul>
                 </div>
                 <div style={{ gridArea: "pool-reqs" }}>
-                  <OldHeading as="h4">
+                  <OldHeading as="h4" size="md">
                     {t("page-staking-section-comparison-requirements-title")}
                   </OldHeading>
                   <ul>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-pools-requirements-li1"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-requirements-li1" />
                     </li>
                     <li>
-                      {t(
-                        "page-staking-section-comparison-pools-requirements-li2"
-                      )}
+                      <Translation id="page-staking:page-staking-section-comparison-pools-requirements-li2" />
                     </li>
                   </ul>
                 </div>
@@ -672,26 +660,8 @@ const StakingPage = ({
               <H2 id={tocItems.further.id}>{tocItems.further.title}</H2>
               <ul>
                 <li>
-                  <InlineLink href="https://vitalik.eth.limo/general/2020/11/06/pos2020.html">
-                    {t("page-staking-further-reading-1-link")}
-                  </InlineLink>{" "}
-                  -{" "}
-                  <i>
-                    {t("page-staking-further-reading-author-vitalik-buterin")}
-                  </i>
-                </li>
-                <li>
                   <InlineLink href="https://notes.ethereum.org/9l707paQQEeI-GPzVK02lA?view#">
                     {t("page-staking-further-reading-2-link")}
-                  </InlineLink>{" "}
-                  -{" "}
-                  <i>
-                    {t("page-staking-further-reading-author-vitalik-buterin")}
-                  </i>
-                </li>
-                <li>
-                  <InlineLink href="https://vitalik.eth.limo/general/2017/12/31/pos_faq.html">
-                    {t("page-staking-further-reading-3-link")}
                   </InlineLink>{" "}
                   -{" "}
                   <i>
@@ -713,11 +683,6 @@ const StakingPage = ({
                 <li>
                   <InlineLink href="https://www.attestant.io/posts/">
                     {t("page-staking-further-reading-6-link")}
-                  </InlineLink>
-                </li>
-                <li>
-                  <InlineLink href="https://kb.beaconcha.in/">
-                    {t("page-staking-further-reading-7-link")}
                   </InlineLink>
                 </li>
                 <li>

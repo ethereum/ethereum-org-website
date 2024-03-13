@@ -6,11 +6,11 @@ import type { TranslationKey } from "@/lib/types"
 import BannerNotification from "../BannerNotification"
 import Translation from "../Translation"
 
-export interface IProps {
+export type PostMergeBannerProps = {
   translationString: TranslationKey
 }
 
-const PostMergeBanner: React.FC<IProps> = ({ translationString }) => (
+const PostMergeBanner = ({ translationString }: PostMergeBannerProps) => (
   <BannerNotification
     shouldShow
     zIndex={1}

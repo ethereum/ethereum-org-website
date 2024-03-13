@@ -14,14 +14,14 @@ import {
 } from "./constants"
 import { WordDisplay, type WordStyleVariant } from "./WordDisplay"
 
-interface WordListProps {
+type WordListProps = {
   words: Array<string>
   wordsSelected?: number
 }
 
 // ?: Consider not generating
 // ?: Keep in mind translations... English only? BIP39 Langs only?
-export const WordList: React.FC<WordListProps> = ({ words, wordsSelected }) => {
+export const WordList = ({ words, wordsSelected }: WordListProps) => {
   const sharedStyles = {
     display: "flex",
     flexDirection: "column",

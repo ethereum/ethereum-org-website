@@ -64,7 +64,7 @@ Verschiedene Organisationen unternahmen gemeinsame Anstrengungen, um Ethereum un
 ### Tools und Bibliotheken {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum-Data-Analytics-Plattform_
-- [Epirus](https://www.web3labs.com/epirus) _eine Plattform zur Entwicklung, Bereitstellung und Überwachung von Blockchain-Anwendungen durch Web3 Labs_
+- [Chainlens](https://www.chainlens.com/) _eine Plattform zur Entwicklung, Bereitstellung und Überwachung von Blockchain-Anwendungen durch Web3 Labs_
 - [Ernst & Youngs 'Nightfall'](https://github.com/EYBlockchain/nightfall) _ein Toolkit für private Transaktionen_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _eine Transaktionssignierungsanwendung zur Verwendung mit einem Web3-Anbieter_
 - [Tenderly](https://tenderly.co/) _, eine Datenplattform, die Echtzeit-Analysen, Alarmierung und Überwachung mit Unterstützung für private Netzwerke bereitstellt_

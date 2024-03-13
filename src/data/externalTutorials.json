@@ -1,5 +1,25 @@
 [
   {
+    "url": "https://updraft.cyfrin.io/courses/security",
+    "title": "Learn Smart Contract Auditing, Security, and DeFi",
+    "description": "The ultimate web3 security course for all those looking to be top smart contract developer or security researchers. We teach you all the cutting edge skills needed to make web3 safer and start a successful career in web3 security.",
+    "author": "Cyfrin Updraft",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "video",
+      "oracles",
+      "foundry",
+      "defi",
+      "fuzzing"
+    ],
+    "skillLevel": "advanced",
+    "timeToRead": "1320",
+    "lang": "en",
+    "publishDate": "12/13/2023"
+  },
+  {
     "url": "https://youtu.be/umepbfKp5rI",
     "title": "Learn Solidity, Blockchain Development, & Smart Contracts using Foundry",
     "description": "This course will give you a full introduction to all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, Foundry, DeFi, Chainlink, Ethereum, upgradable smart contracts, DAOs, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time!",

@@ -76,4 +76,4 @@ summaryPoint3: 一种可以大幅扩展生态效益资产的工具，例如经�
 - [碳货币及其在经济体系中的地位的高层概览](https://www.klimadao.finance/blog/the-vision-of-a-carbon-currency)
 - [小说《The Ministry for the Future》（未来部）描写了一种锚定碳的货币在应对气候变化中发挥的作用。](https://en.wikipedia.org/wiki/The_Ministry_for_the_Future)
 - [扩大自愿碳市场工作组 (TSVCM) 的详细报告](https://www.iif.com/Portals/1/Files/TSVCM_Report.pdf)
-- [CoinMarketCap 术语表中有关再生金融的条目，由 Kevin Owocki 和 Evan Miyazono 撰写](https://coinmarketcap.com/alexandria/glossary/regenerative-finance-refi)
+- [CoinMarketCap 术语表中有关再生金融的条目，由Kevin Owocki 和 Evan Miyazono 撰写](https://coinmarketcap.com/alexandria/glossary/regenerative-finance-refi)

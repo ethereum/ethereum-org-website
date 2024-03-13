@@ -64,7 +64,7 @@ Web3 permet la propriété directe via les [jetons non-fongibles (NFT)](/nft/). 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>En savoir plus sur les NFT</div>
   <ButtonLink to="/nft/">
-    Plus d'infos sur les NTF
+    Plus d'infos sur les NFT
   </ButtonLink>
 </InfoBanner>
 

@@ -1,7 +1,7 @@
 import { useState } from "react"
 import { useTranslation } from "next-i18next"
 
-import { IProps as CardProps } from "../Card"
+import { CardProps } from "../Card"
 
 /**
  * The `selection` param accepted values for the click handler

@@ -276,7 +276,7 @@ Se la dimensione dei dati della chiamata è di quattro byte o superiore, potrebb
 |     10 | PUSH1 0xe0   | 0xE0 (((Prima parola (256 bit) dei dati della chiamata))) |
 |     12 | SHR          | (((primi 32 bit (4 byte) dei dati della chiamata)))       |
 
-Etherscan ci dice che `1C` è un opcode sconosciuto, perché [è stato aggiunto dopo che Etherscan aveva scritto questa funzionalità](https://eips.ethereum.org/EIPS/eip-145) e non l'ha aggiornata. Una [tabella degli opcode aggiornata](https://github.com/wolflo/evm-opcodes) ci indica che questo è lo spostamento a destra
+Etherscan ci dice che `1C` è un opcode sconosciuto, perché [è stato aggiunto dopo che Etherscan aveva scritto questa funzionalità](https://eips.ethereum.org/EIPS/eip-145) e non l'ha aggiornata. An [up to date opcode table](https://github.com/wolflo/evm-opcodes) shows us that this is shift right
 
 | Offset | Opcode           | Stack                                                                                                              |
 | -----: | ---------------- | ------------------------------------------------------------------------------------------------------------------ |

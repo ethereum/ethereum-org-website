@@ -33,11 +33,11 @@ export interface List {
   items: Array<ListItem>
 }
 
-export interface IProps extends ButtonProps {
+export type ButtonDropdownProps = ButtonProps & {
   list: List
 }
 
-const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
+const ButtonDropdown = ({ list, ...rest }: ButtonDropdownProps) => {
   const { t } = useTranslation("common")
   const handleClick = (
     e: MouseEvent<HTMLElement>,

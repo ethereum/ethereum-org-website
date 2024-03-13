@@ -54,11 +54,11 @@ const IndicatorGroup = ({
   )
 }
 
-export interface IProps {
+export type StakingConsiderationsProps = {
   page: StakingPage
 }
 
-const StakingConsiderations: React.FC<IProps> = ({ page }) => {
+const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
   // TODO: Replace with direct token implementation after UI migration is completed
   const mdBp = useToken("breakpoints", "md")
 
