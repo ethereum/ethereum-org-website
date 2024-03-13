@@ -14,13 +14,13 @@ This significantly reduces the cost of using rollups, limits chain growth, and h
 
 ## When do we expect that rollups will reflect lower fees as a result of Proto-Danksharding? {#when}
 
-- This upgrade is set for activation at the start of epoch 269568, occurring on **13-Mar-2024 (UTC)**
+- This upgrade actives at epoch 269568, on **13-Mar-2024 (UTC)**
 - All major rollup providers, such as Arbitrum or Optimism, have signaled that blobs will be supported immediately following the upgrade
 - Individual rollup support may vary as each rollup must upgrade to take advantage of the new blob space
 
 ## How can ETH be converted after the hard fork? {#scam-alert}
 
-- **There is NO need to convert your ETH**. Your account balances will not change, and the ETH you hold will continue to be available in the same form after the upgrade (hard fork).
+- **There is NO need to convert your ETH** after Ethereum's Dencun upgrade. Your account balances will not change, and the ETH you hold will continue to be available in the same form after the upgrade (hard fork).
 - <Emoji text="⚠️" /> <strong>Anyone telling you to upgrade your ETH is attempting to scam you!</strong> Users do not need to do anything for this upgrade, and your assets will remain unaffected.
 
 [More on recognizing and avoiding scams](/security/)
@@ -103,11 +103,11 @@ Simply being compatible with the Ethereum Virtual Machine (EVM) does not mean th
 
 <YouTube id="HT9PHWloIiU" />
 
-_Finematics: Unlocking Ethereum's Scaling, EIP-4844_
+_Unlocking Ethereum's Scaling, EIP-4844 — Finematics _
 
 <YouTube id="dFjyUY3e53Q" />
 
-_Bankless: Blobspace 101 with Domothy_
+_Blobspace 101 with Domothy — Bankless_
 
 ## Further reading {#further-reading}
 
