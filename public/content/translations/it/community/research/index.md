@@ -124,7 +124,7 @@ Una particolare area di Livello 2 che richiede maggior ricerca e sviluppo è que
 - [Introduzione ai ponti della blockchain](/bridges/)
 - [Vitalik riguardo ai ponti](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [Articolo sui ponti blockchain](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Il valore bloccato nei ponti](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [Il valore bloccato nei ponti](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
 
 #### Ricerca recente {#recent-research-3}
 
@@ -156,7 +156,7 @@ L'[esecuzione di nodi](/developers/docs/nodes-and-clients/run-a-node/) su hardwa
 
 #### Ricerca recente {#recent-research-5}
 
-- [ecdsa sui FGPA](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [ecdsa su FPGA](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Sicurezza {#security}
 
@@ -346,7 +346,6 @@ Gli strumenti per gli sviluppatori di Ethereum stanno rapidamente migliorando. C
 - [Quadri di sviluppo](/developers/docs/frameworks/)
 - [Lista di strumenti per sviluppatori del livello di consenso](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Standard per i token](/developers/docs/standards/tokens/)
-- [Biastek: strumenti per Ethereum](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub: Strumenti per la EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Ricerca recente {#recent-research-17}

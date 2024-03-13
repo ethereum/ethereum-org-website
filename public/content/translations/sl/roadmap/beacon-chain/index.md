@@ -32,7 +32,7 @@ Oddajniška veriga je bila temeljni del [varnega, okolju prijaznega in prilagodl
 
 Oddajniška veriga je v Ethereum vpeljala mehanizem [dokaza o deležu](/developers/docs/consensus-mechanisms/pos/). Ta ščiti Ethereum in omogoča validatorjem, da v postopku zaslužijo več ETH. V praksi to pomeni, da je treba za aktiviranje programske opreme za validacijo zastaviti ETH. Kot zastavljavec poganjate programsko opremo, ki ustvarja in validira nove bloke v verigi.
 
-Zastavljanje deluje podobno, kot je prej [rudarjenje](/developers/docs/mining/), vendar je drugačno. Rudarjenje je zahtevalo veliko predhodno investicijo v obliki zmogljive strojne opreme in porabe energije. Posledici sta bili ekonomija obsega in spodbujanje centralizacije. Rudarjenje prav tako ni vključevalo zahteve po zamrznitvi sredstev kot jamstva, kar je omejevalo možnosti prokotola, da kaznuje storilce po napadu.
+Zastavljanje deluje podobno, kot je prej [rudarjenje](/developers/docs/consensus-mechanisms/pow/mining/), vendar je drugačno. Rudarjenje je zahtevalo veliko predhodno investicijo v obliki zmogljive strojne opreme in porabe energije. Posledici sta bili ekonomija obsega in spodbujanje centralizacije. Rudarjenje prav tako ni vključevalo zahteve po zamrznitvi sredstev kot jamstva, kar je omejevalo možnosti prokotola, da kaznuje storilce po napadu.
 
 S prehodom na mehanizem dokaza o deležu je Ethereum postal občutno varnejši in bolj decentraliziran v primerjavi z mehanizmom dokaza o delu. Več ljudi kot sodeluje v omrežju, bolj decentralizirano in varno pred napadi postane.
 

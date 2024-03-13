@@ -28,7 +28,7 @@ Rantai Suar adalah nama yang diberikan kepada buku besar akun yang melakukan dan
 
 Rantai Suar memperkenalkan [bukti taruhan](/developers/docs/consensus-mechanisms/pos/) pada Ethereum. Hal ini membuat Ethereum tetap aman dan membuat validator mendapatkan lebih banyak ETH dalam prosesnya. Dalam praktiknya, penaruhan melibatkan penaruhan ETH untuk mengaktifkan perangkat lunak validator. Sebagai penaruh, Anda menjalankan perangkat lunak yang membuat dan memvalidasi blok baru dalam chain.
 
-Penaruhan memiliki tujuan yang serupa dengan [penambangan](/developers/docs/mining/), tetapi berbeda dalam banyak hal. Penambangan membutuhkan pengeluaran besar di muka dalam bentuk perangkat keras yang kuat dan konsumsi energi, yang menghasilkan skala ekonomi, dan mendorong sentralisasi. Penambangan juga tidak dilengkapi dengan persyaratan untuk mengunci aset sebagai jaminan, membatasi kemampuan protokol untuk menghukum pelaku kejahatan setelah terjadi serangan.
+Penaruhan memiliki tujuan yang serupa dengan [penambangan](/developers/docs/consensus-mechanisms/pow/mining/), tetapi berbeda dalam banyak hal. Penambangan membutuhkan pengeluaran besar di muka dalam bentuk perangkat keras yang kuat dan konsumsi energi, yang menghasilkan skala ekonomi, dan mendorong sentralisasi. Penambangan juga tidak dilengkapi dengan persyaratan untuk mengunci aset sebagai jaminan, membatasi kemampuan protokol untuk menghukum pelaku kejahatan setelah terjadi serangan.
 
 Transisi ke bukti taruhan membuat Ethereum secara signifikan lebih aman dan terdesentralisasi dibandingkan dengan bukti kerja. Semakin banyak orang yang berpartisipasi dalam jaringan, semakin terdesentralisasi dan aman dari serangan.
 

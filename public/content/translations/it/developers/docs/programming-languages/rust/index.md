@@ -25,8 +25,7 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Choosing an Ethereum Client](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [The Rust Ethereum Client](https://openethereum.github.io/) \* **Notare che OpenEthereum [è ormai superato](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd) e non viene più mantenuto.** Usalo con cautela e preferibilmente passa a un'altra implementazione client.
 - [Sending Transaction to Ethereum Using Rust](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
-- [Un'Introduzione ai Contratti Intelligenti con il Client di Ethereum Parity](https://wiki.parity.io/Smart-Contracts)
-- [Una guida passo-passo su come scrivere un contratto in rust Wasm per Kovan](https://github.com/paritytech/pwasm-tutorial)
+- [Tutorial passo-passo per scrivere contratti in rust Wasm per Kovan (in inglese)](https://github.com/paritytech/pwasm-tutorial)
 
 ## Articoli di livello intermedio {#intermediate-articles}
 
@@ -36,7 +35,6 @@ Hai prima bisogno di nozioni di base? Dai un'occhiata a [ethereum.org/learn](/le
 - [Creare una chat decentralizzata usando JavaScript e Rust (in inglese)](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [Creare un'app decentralizzata Todo usando Vue.js e Rust (in inglese)](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 
-- [Introduzione ai contratti segreti (in inglese)](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [Costruisci una blockchain in Rust](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Progetti e strumenti di Rust {#rust-projects-and-tools}

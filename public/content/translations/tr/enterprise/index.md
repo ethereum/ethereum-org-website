@@ -68,7 +68,7 @@ Ethereum'u işletme dostu hâle getirmek için farklı kuruluşlar tarafından b
 ### Araçlar ve kütüphaneler {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Veri Analizi Platformu_
-- [Sirato](https://www.web3labs.com/sirato), _Web3 Labs'den Ethereum ile uyumlu herkese açık ve özel ağlara yönelik bir veri ve analiz platformu_
+- [Chainlens](https://www.chainlens.com/), _Web3 Labs'den Ethereum ile uyumlu herkese açık ve özel ağlara yönelik bir veri ve analiz platformu_
 - [Ernst & Young'ın "Nightfall"u](https://github.com/EYBlockchain/nightfall) _özel işlemler için bir araç takımı_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _bir web3 sağlayıcısıyla kullanılacak bir işlem imzalama uygulaması_
 - [Tenderly](https://tenderly.co/)_gerçek zamanlı analizler sağlayan, özel ağlar için destek sunarak uyarılarda bulunan ve izleme gerçekleştiren bir Veri Platformudur_

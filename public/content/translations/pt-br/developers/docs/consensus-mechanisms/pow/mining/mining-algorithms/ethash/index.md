@@ -8,7 +8,7 @@ lang: pt-br
    Ethash foi o algoritmo de mineração da prova de trabalho do Ethereum. A prova de trabalho foi agora **totalmente desativada** e o Ethereum agora está protegido usando a <a href="/developers/docs/consensus-mechanisms/pos/">prova de participação</a>. Leia mais sobre <a href="/roadmap/merge/">A Fusão</a> (The Merge), <a href="/developers/docs/consensus-mechanisms/pos/">prova de participação</a> e <a href="/staking/">participação (stake)</a>. Esta página é de interesse histórico!  
 </InfoBanner>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) é uma versão modificada do algoritmo [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto). A prova de trabalho Ethash faz uso de [muita memória](https://wikipedia.org/wiki/Memory-hard_function), o que foi pensado para tornar o algoritmo ASIC resistente. Os ASICs Ethash foram eventualmente desenvolvidos, mas a mineração de GPU ainda era uma opção viável até que a prova de trabalho fosse desativada. Ethash ainda é usado para minerar outras moedas em outras redes de prova de trabalho não Ethereum.
+[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) é uma versão modificada do algoritmo [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). A prova de trabalho Ethash faz uso de [muita memória](https://wikipedia.org/wiki/Memory-hard_function), o que foi pensado para tornar o algoritmo ASIC resistente. Os ASICs Ethash foram eventualmente desenvolvidos, mas a mineração de GPU ainda era uma opção viável até que a prova de trabalho fosse desativada. Ethash ainda é usado para minerar outras moedas em outras redes de prova de trabalho não Ethereum.
 
 ## Como o Ethash funciona? {#how-does-ethash-work}
 
@@ -44,7 +44,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### O uso de 'SHA3' {#sha3}
 
-O desenvolvimento do Ethereum coincidiu com o desenvolvimento do padrão SHA3, e o processo de padrões fez uma alteração tardia no preenchimento do algoritmo de hash finalizado, para que os hashes "sha3_256" e "sha3_512" do Ethereum não sejam hashes sha3 padrão, mas uma variante muitas vezes referida como "Keccak-256" e "Keccak-512" em outros contextos. Veja a discussão, por exemplo, [aqui](https://eips.ethereum.org/EIPS-1803), [aqui](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) ou [aqui](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+O desenvolvimento do Ethereum coincidiu com o desenvolvimento do padrão SHA3, e o processo de padrões fez uma alteração tardia no preenchimento do algoritmo de hash finalizado, para que os hashes "sha3_256" e "sha3_512" do Ethereum não sejam hashes sha3 padrão, mas uma variante muitas vezes referida como "Keccak-256" e "Keccak-512" em outros contextos. Veja a discussão, por exemplo, [aqui](https://eips.ethereum.org/EIPS/eip-1803), [aqui](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use) ou [aqui](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
 Tenha isso em mente, já que hashes "sha3" são referidos na descrição do algoritmo abaixo.
 
