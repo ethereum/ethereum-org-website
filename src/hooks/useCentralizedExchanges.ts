@@ -39,6 +39,7 @@ import itezcom from "@/public/exchanges/itezcom.png"
 import korbit from "@/public/exchanges/korbit.png"
 import kraken from "@/public/exchanges/kraken.png"
 import kucoin from "@/public/exchanges/kucoin.png"
+import matrixport from "@/public/exchanges/matrixport.png"
 import moonpay from "@/public/exchanges/moonpay.png"
 import mtpelerin from "@/public/exchanges/mtpelerin.png"
 import okx from "@/public/exchanges/okx.png"
@@ -66,15 +67,16 @@ type ExchangeKey =
   | "gemini"
   | "huobiglobal"
   | "itezcom"
+  | "korbit"
   | "kraken"
   | "kucoin"
-  | "mtpelerin"
+  | "matrixport"
   | "moonpay"
+  | "mtpelerin"
   | "okx"
   | "rain"
   | "shakepay"
   | "wazirx"
-  | "korbit"
 
 type ExchangeDetail = {
   name: string
@@ -206,6 +208,12 @@ const exchanges: ExchangeDetails = {
     name: "Huobi Global",
     url: "https://huobi.com/",
     image: huobiglobal,
+    usaExceptions: [],
+  },
+  matrixport: {
+    name: "Matrixport",
+    url: "https://www.matrixport.com/",
+    image: matrixport,
     usaExceptions: [],
   },
   itezcom: {
