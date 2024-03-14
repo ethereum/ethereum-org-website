@@ -1,6 +1,6 @@
 import { ComponentProps, useState } from "react"
-import { Box, Text, Link, Flex } from "@chakra-ui/react"
 import { VscLink } from "react-icons/vsc"
+import { Box, Flex, Link, Text } from "@chakra-ui/react"
 import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
