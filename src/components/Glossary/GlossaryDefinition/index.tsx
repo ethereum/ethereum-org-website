@@ -1,11 +1,11 @@
-import { ComponentProps, useState } from "react"
-import { VscLink } from "react-icons/vsc"
 import { Box, Flex, Link, Text } from "@chakra-ui/react"
+import { ComponentProps, useState } from "react"
+
+import { DEFAULT_GLOSSARY_NS } from "@/lib/constants"
 import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
-
-import { DEFAULT_GLOSSARY_NS } from "@/lib/constants"
+import { VscLink } from "react-icons/vsc"
 
 interface GlossaryDefinitionProps {
   term: string
