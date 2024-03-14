@@ -11287,6 +11287,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "blmalone",
+      "name": "Blaine Malone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15608778?v=4",
+      "profile": "https://medium.com/@blainemalone01",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
