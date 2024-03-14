@@ -11269,6 +11269,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "acceptacross",
+      "name": "acceptacross",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150119116?v=4",
+      "profile": "https://github.com/acceptacross",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
