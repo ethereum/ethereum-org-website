@@ -14,7 +14,7 @@ This significantly reduces the cost of rollups, limits chain growth, and helps t
 
 ## When do we expect rollups to reflect lower fees due to Proto-Danksharding? {#when}
 
-- This upgrade activates at epoch 269568, on **13-Mar-2024 at 13:55PM (UTC)**
+- This upgrade activated at epoch 269568, on **13-Mar-2024 at 13:55PM (UTC)**
 - All major rollup providers, such as Arbitrum or Optimism, have signalled that blobs will be supported immediately following the upgrade
 - The timeline for individual rollup support may vary, as each provider must update their systems to take advantage of the new blob space
 
