@@ -24,13 +24,13 @@ Dagger Hashimoto was a precursor research algorithm for Ethereum mining that Eth
 
 Dagger-Hashimoto used amended versions of the Dagger and Hashimoto algorithms. The difference between Dagger Hashimoto and Hashimoto is that, instead of using the blockchain as a data source, Dagger Hashimoto uses a custom-generated data set, which updates based on block data every N blocks. The data set is generated using the Dagger algorithm, allowing for efficiently calculating a subset specific to every nonce for the light client verification algorithm. The difference between Dagger Hashimoto and Dagger is that, unlike in the original Dagger, the dataset used to query the block is semi-permanent, only being updated at occasional intervals (e.g. once per week). This means that the portion of the effort of generating the dataset is close to zero, so Sergio Lerner’s arguments regarding shared memory speedups become negligible.
 
-More on [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto).
+More on [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 ## Ethash {#ethash}
 
 Ethash was the mining algorithm that was actually used on the real Ethereum Mainnet under the now deprecated proof-of-work architecture. Ethash was effectively a new name given to a specific version of Dagger-Hashimoto after the algorithm got significantly updated, whilst still inheriting the fundamental principles of its predecessor. Ethereum Mainnet only ever used Ethash - Dagger Hashimoto was an R&D version of the mining algorithm that was superseded before mining started on Ethereum mainnet.
 
-[More on Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
+[More on Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash).
 
 ## Further reading {#further-reading}
 

@@ -81,7 +81,7 @@ Data availability sampling is required for validators to quickly and efficiently
 
 ### Current progress {#current-progress}
 
-Full Danksharding is several years away. In the meantime, the KZG ceremony has concluded with over 140,000 contributions, and the [EIP](https://eips.ethereum.org/EIPS/eip-4844) for Proto-Danksharding has matured, with an agreed upon production-ready specification already being tested on testnets. This upgrade is set to go live on Ethereum Mainnet in March 2024 as part of the Deneb + Cancun upgrade. You can keep up to date using the [EIP 4844 readiness checklist](https://github.com/ethereum/pm/blob/master/Dencun/4844-readiness-checklist.md).
+Full Danksharding is several years away. In the meantime, the KZG ceremony has concluded with over 140,000 contributions, and the [EIP](https://eips.ethereum.org/EIPS/eip-4844) for Proto-Danksharding has matured. This proposal has been fully implemented in all testnets, and went live on Mainnet with the Cancun-Deneb ("Dencun") network upgrade in March 2024.
 
 ### Further reading {#further-reading}
 
