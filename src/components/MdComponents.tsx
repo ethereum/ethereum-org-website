@@ -42,6 +42,7 @@ import FeaturedText from "./FeaturedText"
 import InfoBanner from "./InfoBanner"
 import LocaleDateTime from "./LocaleDateTime"
 import MainArticle from "./MainArticle"
+import TableIssues from "./TableIssues"
 import VideoIframe from "./VideoIframe"
 
 /**
@@ -282,6 +283,7 @@ export const reactComponents = {
   Page,
   QuizWidget: StandaloneQuizWidget,
   StyledButtonDropdown,
+  TableIssues,
   Title,
   YouTube,
 }
