@@ -4,6 +4,11 @@ const { i18n } = require("./next-i18next.config")
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS || 2)
 
+// See https://nextjs.org/docs/app/building-your-application/configuring/content-security-policy
+const ContentSecurityPolicy = `
+  frame-ancestors 'none';
+`
+
 const experimental = LIMIT_CPUS
   ? {
       // This option could be enabled in the future when flagged as stable, to speed up builds
@@ -21,6 +26,7 @@ module.exports = (phase, { defaultConfig }) => {
   let nextConfig = {
     ...defaultConfig,
     reactStrictMode: true,
+    poweredByHeader: false,
     webpack: (config) => {
       config.module.rules.push({
         test: /\.ya?ml$/,
@@ -32,6 +38,24 @@ module.exports = (phase, { defaultConfig }) => {
       })
 
       return config
+    },
+    async headers() {
+      return [
+        {
+          source: "/(.*?)",
+          headers: [
+            {
+              // See https://nextjs.org/docs/pages/api-reference/next-config-js/headers#x-frame-options
+              key: "X-Frame-Options",
+              value: "deny",
+            },
+            {
+              key: "Content-Security-Policy",
+              value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
+            },
+          ],
+        },
+      ]
     },
     i18n,
     trailingSlash: true,
