@@ -488,6 +488,7 @@
     "tags": ["solidity", "smart contracts", "erc-721"],
     "skillLevel": "beginner",
     "lang": "en",
+    "timeToRead": "20",
     "publishDate": "03/24/2023"
   },
   {
@@ -499,6 +500,7 @@
     "tags": ["solidity", "smart contracts", "erc-721", "nft"],
     "skillLevel": "beginner",
     "lang": "en",
+    "timeToRead": "20",
     "publishDate": "03/24/2023"
   },
   {
@@ -510,6 +512,7 @@
     "tags": ["javascript", "frontend"],
     "skillLevel": "beginner",
     "lang": "en",
+    "timeToRead": "15",
     "publishDate": "03/24/2023"
   },
   {
@@ -521,6 +524,7 @@
     "tags": ["solidity", "oracles", "javascript"],
     "skillLevel": "beginner",
     "lang": "en",
+    "timeToRead": "30",
     "publishDate": "03/24/2023"
   }
 ]
