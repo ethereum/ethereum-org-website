@@ -277,6 +277,10 @@ const WalletTable = ({
           wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
 
           const walletPersonas = getWalletPersonas(wallet)
+          const hasPersonasLabels = walletPersonas.length > 0
+          const hasDeviceLabels = deviceLabels.length > 0
+          const hasAllLabels = hasPersonasLabels && hasDeviceLabels
+
           // Supported languages
           const supportedLanguages = getSupportedLanguages(
             wallet.languages_supported,
@@ -322,14 +326,18 @@ const WalletTable = ({
                       <Box w={{ base: "100%", md: "auto" }}>
                         <Flex alignItems="start">
                           {/* Wallet image */}
-                          <Box w={{ base: "24px", md: "56px" }} me={4}>
+                          <Stack
+                            w={{ base: "24px", md: "56px" }}
+                            h={{ base: "24px", md: "56px" }}
+                            me={4}
+                          >
                             <Image
                               src={wallet.image}
                               alt=""
+                              h={{ base: "24px", md: "56px" }}
                               objectFit="contain"
-                              boxSize="auto"
                             />
-                          </Box>
+                          </Stack>
 
                           <Text lineHeight={1.2} fontSize="xl !important">
                             {wallet.name}
@@ -338,7 +346,7 @@ const WalletTable = ({
 
                         <Stack mt={{ base: 2, md: -6 }} ms={{ md: "72px" }}>
                           {/* Wallet Personas supported */}
-                          {walletPersonas.length > 0 && (
+                          {hasPersonasLabels && (
                             <Flex gap={1.5} wrap="wrap">
                               {walletPersonas.map((persona) => (
                                 <Tag
@@ -351,13 +359,11 @@ const WalletTable = ({
 
                           <Stack gap={2} mb={{ base: 0, md: 3 }}>
                             {/* Device labels */}
-                            {deviceLabels.length > 0 && (
+                            {hasDeviceLabels && (
                               <Flex
                                 alignItems="center"
                                 gap={3}
-                                display={
-                                  deviceLabels.length > 0 ? "flex" : "none"
-                                }
+                                display={hasDeviceLabels ? "flex" : "none"}
                               >
                                 <Icon as={DevicesIcon} fontSize="2xl" />
 
@@ -437,6 +443,7 @@ const WalletTable = ({
                   filters={filters}
                   idx={idx}
                   featureDropdownItems={featureDropdownItems}
+                  hasAllLabels={hasAllLabels}
                 />
               )}
             </WalletContainer>

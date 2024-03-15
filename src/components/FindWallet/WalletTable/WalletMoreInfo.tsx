@@ -26,6 +26,7 @@ type WalletMoreInfoProps = {
   filters: WalletFilter
   idx: number
   featureDropdownItems: DropdownOption[]
+  hasAllLabels: boolean
 }
 
 const SocialLink = (props: LinkProps) => (
@@ -48,6 +49,7 @@ export const WalletMoreInfo = ({
   filters,
   idx,
   featureDropdownItems,
+  hasAllLabels,
 }: WalletMoreInfoProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const { locale } = useRouter()
@@ -108,7 +110,7 @@ export const WalletMoreInfo = ({
         <Box
           bgGradient={`linear(to-b, ${wallet.brand_color} 0%, rgba(217, 217, 217, 0) 97.4%)`}
           mx="auto"
-          mt={{ md: -40 }}
+          mt={hasAllLabels ? { md: -36 } : { md: -28 }}
           width={1}
           height="full"
         />
