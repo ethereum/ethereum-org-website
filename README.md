@@ -99,7 +99,7 @@ yarn dev
   - Explore scripts within `package.json` for more build options
   - Get **faster** local builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
 
-By default the script will build all the languages (complete list in `data/translations.json`) and will ignore the `/docs` and `/tutorials` folders. To control this behavior you can play with the `BUILD_LOCALES` and `IGNORE_CONTENT` env variables. Check out `.env.example` to read more about them.
+By default the script will build all the languages (complete list in `i18n.config.json`) and will ignore the `/docs` and `/tutorials` folders. To control this behavior you can play with the `BUILD_LOCALES` and `IGNORE_CONTENT` env variables. Check out `.env.example` to read more about them.
 
 3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)).
 
@@ -1754,6 +1754,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/enjoyooor"><img src="https://avatars.githubusercontent.com/u/147568088?v=4?s=100" width="100px;" alt="enjoyooor"/><br /><sub><b>enjoyooor</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=enjoyooor" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://ethereum.org"><img src="https://avatars.githubusercontent.com/u/100724231?v=4?s=100" width="100px;" alt="Jakub"/><br /><sub><b>Jakub</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=konopkja" title="Documentation">📖</a> <a href="#content-konopkja" title="Content">🖋</a> <a href="#design-konopkja" title="Design">🎨</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.ymusleh.com"><img src="https://avatars.githubusercontent.com/u/6829768?v=4?s=100" width="100px;" alt="Yusuf Musleh"/><br /><sub><b>Yusuf Musleh</b></sub></a><br /><a href="#content-yusuf-musleh" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/acceptacross"><img src="https://avatars.githubusercontent.com/u/150119116?v=4?s=100" width="100px;" alt="acceptacross"/><br /><sub><b>acceptacross</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=acceptacross" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/pdelagrave"><img src="https://avatars.githubusercontent.com/u/17990895?v=4?s=100" width="100px;" alt="Pierre Delagrave"/><br /><sub><b>Pierre Delagrave</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Apdelagrave" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://medium.com/@blainemalone01"><img src="https://avatars.githubusercontent.com/u/15608778?v=4?s=100" width="100px;" alt="Blaine Malone"/><br /><sub><b>Blaine Malone</b></sub></a><br /><a href="#content-blmalone" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>

@@ -26,11 +26,11 @@ Suchen Sie nach weiteren Protokoll-Upgrades? [Erfahren Sie mehr über anstehende
 
 ## 2023 {#2023}
 
-### Shanghai {#shanghai}
+### Shanghai-Capella ("Shapella") {#shapella}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### Zusammenfassung {#shanghai-summary}
+#### Shanghai-Zusammenfassung {#shanghai-summary}
 
 Das Shanghai-Update ebnete den Weg für Staking-Auszahlungen auf der Ausführungsebene. Die Fusion mit dem Capella-Upgrade ermöglichte es Blöcken, Auszahlungen zu akzeptieren, wodurch Stakern erlaubt wurde, ihre ETH von der Beacon Chain auf der Ausführungsebene abzuheben.
 
@@ -48,13 +48,7 @@ Das Shanghai-Update ebnete den Weg für Staking-Auszahlungen auf der Ausführung
 
 - [Lesen Sie die Spezifikation für das Shanghai-Upgrade](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### Capella {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### Zusammenfassung {#capella-summary}
+#### Capella-Zusammenfassung {#capella-summary}
 
 Das Capella-Update war das drittgrößte Upgrade für die Konsensebene (Beacon Chain) und ermöglichte Staking-Abhebungen. Mit Capella, das gleichzeitig mit dem Upgrade der Ausführungsebene, Shanghai, erfolgte, wurde die Staking-Abhebungsfunktion zur Verfügung gestellt.
 

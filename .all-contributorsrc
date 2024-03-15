@@ -11269,6 +11269,33 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "acceptacross",
+      "name": "acceptacross",
+      "avatar_url": "https://avatars.githubusercontent.com/u/150119116?v=4",
+      "profile": "https://github.com/acceptacross",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "pdelagrave",
+      "name": "Pierre Delagrave",
+      "avatar_url": "https://avatars.githubusercontent.com/u/17990895?v=4",
+      "profile": "https://github.com/pdelagrave",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "blmalone",
+      "name": "Blaine Malone",
+      "avatar_url": "https://avatars.githubusercontent.com/u/15608778?v=4",
+      "profile": "https://medium.com/@blainemalone01",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
