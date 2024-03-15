@@ -11296,6 +11296,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "sixhobbits",
+      "name": "Gareth Dwyer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2641205?v=4",
+      "profile": "https://dwyer.co.za",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
