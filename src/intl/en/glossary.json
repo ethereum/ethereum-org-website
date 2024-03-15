@@ -204,7 +204,7 @@
   "issuance-term": "Issuance",
   "issuance-definition": "The minting of new ether to reward block proposal, attestation and whistle-blowing.",
   "kdf-term": "Key derivation function (KDF)",
-  "kdf-definition": "Also known as a \"password stretching algorithm,\" it is used by <a href=\"/glossary/#keystore-file\">keystore</a> formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.",
+  "kdf-definition": "Also known as a \"password stretching algorithm,\" it is used by <a href=\"/glossary/#keystore\">keystore</a> formats to protect against brute-force, dictionary, and rainbow table attacks on passphrase encryption, by repeatedly hashing the passphrase.",
   "keystore-term": "Keystore",
   "keystore-definition": "Every account’s private key/address pair exists as a single keyfile in an Ethereum client. These are JSON text files which contains the encrypted private key of the account, which can only be decrypted with the password entered during account creation.",
   "keccak-256-term": "Keccak-256",
@@ -394,5 +394,5 @@
   "zk-proof-term": "Zero-knowledge proof",
   "zk-proof-definition": "A zero-knowledge proof is a cryptographic method that allows an individual to prove that a statement is true without conveying any additional information. <a href=\"/developers/docs/scaling/zk-rollups/\">More on zero-knowledge rollups</a>.",
   "zk-rollup-term": "Zero-knowledge rollup",
-  "zk-rollup-definition": "A <a href=\"/glossary/#rollups\">rollup of transactions that use <a href=\"/glossary/#validity-proof\">validity proofs</a> to offer increased <a href=\"/glossary/#layer-2\">layer 2</a> transaction throughput while using the security provided by Mainnet (layer 1). Although they can't handle complex transaction types, like <a href=\"/glossary/#optimistic-rollups\">optimistic rollups</a>, they don't have latency issues because transactions are provably valid when submitted. <a href=\"/developers/docs/scaling/zk-rollups/\">More on zero-knowledge rollups</a>."
+  "zk-rollup-definition": "A <a href=\"/glossary/#rollups\">rollup of transactions that use <a href=\"/glossary/#validity-proof\">validity proofs</a> to offer increased <a href=\"/glossary/#layer-2\">layer 2</a> transaction throughput while using the security provided by Mainnet (layer 1). Although they can't handle complex transaction types, like <a href=\"/glossary/#optimistic-rollup\">optimistic rollups</a>, they don't have latency issues because transactions are provably valid when submitted. <a href=\"/developers/docs/scaling/zk-rollups/\">More on zero-knowledge rollups</a>."
 }
