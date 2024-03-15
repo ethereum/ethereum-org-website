@@ -319,25 +319,24 @@ const WalletTable = ({
                       w={{ base: "100%", md: "auto" }}
                       ps={{ base: 0, md: 1.5 }}
                     >
-                      {/* Wallet image */}
-                      <Box
-                        w={{ base: "24px", md: "56px" }}
-                        //
-                      >
-                        <Image
-                          src={wallet.image}
-                          alt=""
-                          objectFit="contain"
-                          boxSize="auto"
-                        />
-                      </Box>
-
                       <Box w={{ base: "100%", md: "auto" }}>
-                        <Stack>
+                        <Flex alignItems="start">
+                          {/* Wallet image */}
+                          <Box w={{ base: "24px", md: "56px" }} me={4}>
+                            <Image
+                              src={wallet.image}
+                              alt=""
+                              objectFit="contain"
+                              boxSize="auto"
+                            />
+                          </Box>
+
                           <Text lineHeight={1.2} fontSize="xl !important">
                             {wallet.name}
                           </Text>
+                        </Flex>
 
+                        <Stack mt={{ base: 2, md: -6 }} ms={{ md: "72px" }}>
                           {/* Wallet Personas supported */}
                           {walletPersonas.length > 0 && (
                             <Flex gap={1.5} wrap="wrap">
