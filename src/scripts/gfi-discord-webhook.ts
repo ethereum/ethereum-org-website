@@ -1,8 +1,4 @@
-import * as dotenv from "dotenv"
-
 import { fetchGFIs } from "../lib/api/fetchGFIs"
-
-dotenv.config({ path: `.env.local` })
 
 const run = async () => {
   // Calculate the start of the last hour
