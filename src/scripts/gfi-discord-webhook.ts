@@ -1,4 +1,10 @@
+import * as dotenv from "dotenv"
+
+import { rawLabelsToText } from "@/lib/utils/gh"
+
 import { fetchGFIs } from "../lib/api/fetchGFIs"
+
+dotenv.config({ path: `.env.local` })
 
 const run = async () => {
   // Calculate the start of the last hour
@@ -22,18 +28,26 @@ const run = async () => {
     url: issue.html_url,
     timestamp: issue.created_at,
     description: issue.labels.map((label) => label.name).join(" • "),
-    color: 10181046,
+    color: 10181046, // purple
     author: {
       name: issue.user.login,
       url: issue.user.html_url,
       icon_url: issue.user.avatar_url,
     },
   }))
+
+  const allLabels = issues
+    .map((issue) => issue.labels.map((label) => label.name))
+    .flat()
+  const uniqueLabels = Array.from(new Set(allLabels))
+  const labels = rawLabelsToText(uniqueLabels)
+  const labelsText = labels ? ` - ${labels}` : ""
+
   const message = {
     content:
       issues.length > 1
-        ? `## (${issues.length}) New good first issues! 🎉`
-        : "## New good first issue! 🎉",
+        ? `## (${issues.length}) New good first issues${labelsText}`
+        : `## New good first issue${labelsText}`,
     embeds,
   }
 
