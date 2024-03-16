@@ -490,6 +490,7 @@ export type CommunityConference = {
   description: string
   startDate: string
   endDate: string
+  imageUrl: string
 }
 
 // Historical upgrades
