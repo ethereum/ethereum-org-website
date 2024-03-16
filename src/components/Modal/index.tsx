@@ -1,9 +1,13 @@
 import React from "react"
 import {
+  Button,
   Modal as ChakraModal,
+  ModalBody,
   ModalCloseButton,
   ModalContent,
   type ModalContentProps,
+  ModalFooter,
+  ModalHeader,
   ModalOverlay,
   type ModalProps as ChakraModalProps,
 } from "@chakra-ui/react"
@@ -11,15 +15,18 @@ import {
 export type ModalProps = ModalContentProps &
   Pick<ChakraModalProps, "size"> & {
     children?: React.ReactNode
+    title?: string
+    actionButtonLabel?: string
     isOpen: boolean
     setIsOpen: (isOpen: boolean) => void
   }
 
 const Modal = ({
   children,
+  title,
+  actionButtonLabel,
   isOpen,
   setIsOpen,
-  size,
   ...restProps
 }: ModalProps) => {
   return (
@@ -27,7 +34,7 @@ const Modal = ({
       isOpen={isOpen}
       onClose={() => setIsOpen(false)}
       isCentered
-      size={size ?? "xl"}
+      /* size={size ?? "xl"} */
       scrollBehavior="inside"
     >
       <ModalOverlay bgColor="blackAlpha.700" />
@@ -40,8 +47,15 @@ const Modal = ({
         borderRadius="md"
         {...restProps}
       >
+        <ModalHeader>{title}</ModalHeader>
         <ModalCloseButton />
-        {children}
+        <ModalBody>{children}</ModalBody>
+        {actionButtonLabel && (
+          <ModalFooter>
+            <Button variant="outline">Cancel</Button>
+            <Button>{actionButtonLabel}</Button>
+          </ModalFooter>
+        )}
       </ModalContent>
     </ChakraModal>
   )

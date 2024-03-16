@@ -25,12 +25,12 @@ import ActionCard from "@/components/ActionCard"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
 import Codeblock from "@/components/Codeblock"
-import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
 import DencunBanner from "@/components/DencunBanner"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
+import Modal from "@/components/Modal"
 import PageMetadata from "@/components/PageMetadata"
 import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
@@ -122,7 +122,7 @@ const StyledActionCard = chakra(ActionCard, {
   },
 })
 
-const StyledCodeModal = chakra(CodeModal)
+const StyledCodeModal = chakra(Modal)
 
 const StyledTitleCardList = chakra(TitleCardList)
 
