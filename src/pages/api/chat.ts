@@ -1,14 +1,19 @@
-import { LangChainStream, Message, streamToResponse } from 'ai';
+import { LangChainStream, Message, StreamingTextResponse,streamToResponse } from 'ai';
 import { AIMessage, HumanMessage } from 'langchain/schema'
 import { NextApiRequest, NextApiResponse } from 'next';
+import { NextRequest } from 'next/server'
 import { ChatOpenAI } from '@langchain/openai';
 
 import fetchVectorSearch from '../../lib/api/fetchVectorSearch'
 
-export default async function handler(req: NextApiRequest,
+export const runtime = 'edge';
+
+export default async function handler(req: NextRequest,
   res: NextApiResponse,
 ) {
-  const { messages } = await req.body;
+  const body = await req.json();
+  const messages = body.messages ?? [];
+  console.log(messages)
   const currentMessageContent = messages[messages.length - 1].content;
 
   const requestObject: any = {
@@ -16,6 +21,7 @@ export default async function handler(req: NextApiRequest,
   };
 
   const vectorSearch = await fetchVectorSearch(requestObject)
+  console.log(vectorSearch)
   
   const TEMPLATE = `You are a very enthusiastic ethereum.org representative who loves to help people! Given the following sections from the ethereum.org contributor documentation, answer the question using that information. You should paraphrase to provide clear explanations instead of simply quoting. If you are unsure and the answer is not explicitly written in the documentation, say "Sorry, I don't know how to help with that."
   
@@ -49,5 +55,5 @@ export default async function handler(req: NextApiRequest,
     )
     .catch(console.error);
 
-  return streamToResponse(stream, res);
+  return new StreamingTextResponse(stream);
 }

@@ -1,48 +1,55 @@
-import { MongoDBAtlasVectorSearch } from "@langchain/mongodb";
+import { SupabaseVectorStore } from "@langchain/community/vectorstores/supabase";
 import { OpenAIEmbeddings } from "@langchain/openai";
+import { createClient, SupabaseClient } from "@supabase/supabase-js";
 
-import mongoClientPromise from '../../lib/mongodb';
+const SUPABASE_URL = process.env.SUPABASE_URL
+const SUPABASE_KEY = process.env.SUPABASE_KEY
 
-export default async function fetchVectorSearch(stringToSearch) {
-  console.log('Received request:', stringToSearch);
+// https://js.langchain.com/docs/modules/indexes/vector_stores/integrations/supabase
 
-    const client = await mongoClientPromise;
-    console.log('Connected to MongoDB');
+export default async function fetchVectorSearchSupabase(stringToSearch) {
+  const privateKey: any = SUPABASE_KEY;
+  const url: any = SUPABASE_URL;
+  // @ts-ignore
+  try {
+  const client = createClient(url, privateKey);
 
-    const dbName = "docs";
-    const collectionName = "embeddings";
-    const collection = client.db(dbName).collection(collectionName);
-    console.log('Selected collection:', collectionName);
+    if (!stringToSearch.body) {
+      console.error('No body in stringToSearch');
+      return [];
+    }
 
-    
-    console.log('String to search:', stringToSearch.body.toString())
-    
     const question = await stringToSearch.body.toString();
     console.log('Received question:', question);
 
-    const vectorStore = new MongoDBAtlasVectorSearch(
+   
+
+    const vectorStore = await SupabaseVectorStore.fromExistingIndex(
       new OpenAIEmbeddings({
         modelName: 'text-embedding-ada-002',
         stripNewLines: true,
-      }), {
-      collection,
-      indexName: "default",
-      textKey: "text", 
-      embeddingKey: "embedding",
-    });
-    console.log('Created Vector store');
+      }),
+      {
+        client,
+        tableName: "documents",
+        queryName: "match_documents",
+      }
+    );
+  
+    const resultOne = await vectorStore.similaritySearch(question, 5);
+    console.log('Result:', resultOne);
 
-    const retriever = vectorStore.asRetriever({
-      searchType: "mmr",
-      searchKwargs: {
-        fetchK: 20,
-        lambda: 0.1,
-      },
-    });
-    console.log('Created Retriever');
 
-    const retrieverOutput = await retriever.getRelevantDocuments(question);
-    console.log('Retriever output:', retrieverOutput);
-    
-    return retrieverOutput
+    if (resultOne.length === 0) {
+      console.log('No documents found for the query:', question);
+    } else {
+      console.log('Documents retrieved:', resultOne);
+    }
+
+    return resultOne;
+  } catch (error) {
+    console.error('Error in fetchVectorSearchSupabase:', error);
+    // Depending on your setup, you might want to return an error message or an empty array
+    return [];
   }
+};
