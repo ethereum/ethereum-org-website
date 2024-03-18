@@ -475,7 +475,9 @@ const TutorialPage = ({
               <Text color="text200" fontSize="sm" textTransform="uppercase">
                 <Emoji text=":writing_hand:" fontSize="sm" me={2} />
                 {tutorial.author}
-                {tutorial.published && " • " + published(locale!, tutorial.published)}
+                {tutorial.published ? (
+                  <> •{published(locale!, tutorial.published!)}</>
+                ) : null}
                 {tutorial.timeToRead && (
                   <>
                     {" "}
