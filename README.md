@@ -1759,6 +1759,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://medium.com/@blainemalone01"><img src="https://avatars.githubusercontent.com/u/15608778?v=4?s=100" width="100px;" alt="Blaine Malone"/><br /><sub><b>Blaine Malone</b></sub></a><br /><a href="#content-blmalone" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://dwyer.co.za"><img src="https://avatars.githubusercontent.com/u/2641205?v=4?s=100" width="100px;" alt="Gareth Dwyer"/><br /><sub><b>Gareth Dwyer</b></sub></a><br /><a href="#ideas-sixhobbits" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/UNOFFICIALbgd"><img src="https://avatars.githubusercontent.com/u/71248977?v=4?s=100" width="100px;" alt="UNOFFICIALbgd"/><br /><sub><b>UNOFFICIALbgd</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AUNOFFICIALbgd" title="Bug reports">🐛</a></td>
+    </tr>
   </tbody>
 </table>
 
