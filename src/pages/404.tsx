@@ -1,10 +1,9 @@
 import type { GetStaticProps } from "next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { Box, Flex, Heading, Text } from "@chakra-ui/react"
+import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react"
 
 import { BasePageProps } from "@/lib/types"
 
-import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import Translation from "@/components/Translation"
 
@@ -37,9 +36,9 @@ const NotFoundPage = () => (
       </Heading>
       <Text mb={8}>
         <Translation id="try-using-search" />{" "}
-        <InlineLink href="/">
+        <Link href="/" isExternal={false}>
           <Translation id="return-home" />
-        </InlineLink>
+        </Link>
         .
       </Text>
     </Box>
