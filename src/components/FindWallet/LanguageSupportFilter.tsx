@@ -21,7 +21,7 @@ import {
 type LanguageSupportFilterProps = {}
 
 export const LanguageSupportFilter = ({}: LanguageSupportFilterProps) => {
-  // const { t } = useTranslation("page-wallets-find-wallet")
+  const { t } = useTranslation("page-wallets-find-wallet")
   const { locale } = useRouter()
 
   const allWalletsLanguages = getAllWalletsLanguages(locale!)
@@ -83,8 +83,7 @@ export const LanguageSupportFilter = ({}: LanguageSupportFilterProps) => {
               _hover={{ background: "transparent" }}
             >
               <Box as="span" flex={1}>
-                {/* TODO i18n */}
-                <Text>Language support</Text>
+                <Text>{t("page-find-wallet-languages-supported")}</Text>
               </Box>
 
               <AccordionIcon
