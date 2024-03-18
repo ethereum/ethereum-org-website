@@ -1,3 +1,4 @@
+import { useContext } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
@@ -18,11 +19,14 @@ import {
   getWalletsTopLanguages,
 } from "@/lib/utils/wallets"
 
-type LanguageSupportFilterProps = {}
+import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 
-export const LanguageSupportFilter = ({}: LanguageSupportFilterProps) => {
+export const LanguageSupportFilter = () => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const { locale } = useRouter()
+
+  // Context API
+  const { setSupportedLanguage } = useContext(WalletSupportedLanguageContext)
 
   const allWalletsLanguages = getAllWalletsLanguages(locale!)
   const allWalletsLanguagesOptions = allWalletsLanguages!.map(
@@ -34,19 +38,12 @@ export const LanguageSupportFilter = ({}: LanguageSupportFilterProps) => {
     }
   )
 
-  // const handleLayer2SelectChange: ReactSelectOnChange<Layer2Option> = (
-  //   selectedOption
-  // ) => {
-  //   if (!selectedOption) return
+  const handleLanguageFilterSelectChange = (selectedLanguage) => {
+    if (!selectedLanguage) return
 
-  //   trackCustomEvent({
-  //     eventCategory: `Selected layer 2 to bridge to`,
-  //     eventAction: `Clicked`,
-  //     eventName: `${selectedOption.l2.name} bridge selected`,
-  //     eventValue: `${selectedOption.l2.name}`,
-  //   })
-  //   setSelectedL2(selectedOption.l2)
-  // }
+    // TODO: add matomo tracking
+    setSupportedLanguage(selectedLanguage.value)
+  }
 
   const walletsTop5Languages = getWalletsTopLanguages(5, locale!).join(", ")
 
@@ -54,7 +51,6 @@ export const LanguageSupportFilter = ({}: LanguageSupportFilterProps) => {
     <AccordionItem
       background="background.highlight"
       borderRadius="base"
-      // Remove border color from global style
       borderColor="transparent"
       p={6}
       zIndex={0}
@@ -100,8 +96,7 @@ export const LanguageSupportFilter = ({}: LanguageSupportFilterProps) => {
               // TODO
               // aria-label={t("page-get-eth-exchanges-header")}
               options={allWalletsLanguagesOptions}
-              // TODO
-              onChange={() => {}}
+              onChange={handleLanguageFilterSelectChange}
               // TODO i18n
               placeholder={"Search language"}
               isSearchable

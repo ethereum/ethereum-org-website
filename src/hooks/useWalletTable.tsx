@@ -1,19 +1,14 @@
-import { Dispatch, SetStateAction, useState } from "react"
+import { useContext, useState } from "react"
+
+import { DropdownOption } from "@/lib/types"
 
 import { WalletTableProps } from "@/components/FindWallet/WalletTable"
 
-export interface DropdownOption {
-  label: string
-  value: string
-  filterKey: string
-  category: string
-}
+import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 
 type UseWalletTableProps = Pick<WalletTableProps, "filters" | "walletData"> & {
   t: (x: string) => string
 }
-
-export type SetFeatureSelectState = Dispatch<SetStateAction<DropdownOption>>
 
 export const useWalletTable = ({
   filters,
@@ -131,6 +126,9 @@ export const useWalletTable = ({
     })
   )
 
+  // Context API for language filter
+  const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
+
   const updateMoreInfo = (key) => {
     const temp = [...walletCardData]
 
@@ -155,6 +153,10 @@ export const useWalletTable = ({
     const deviceFilters = Object.entries(filters).filter(
       (item) => !featureFilterKeys.includes(item[0])
     )
+
+    const languageSupportFilter =
+      wallet.languages_supported.includes(supportedLanguage)
+
     const mobileFiltersTrue = deviceFilters
       .filter((item) => item[0] === "ios" || item[0] === "android")
       .filter((item) => item[1])
@@ -218,7 +220,12 @@ export const useWalletTable = ({
     })
 
     return (
-      mobileCheck && desktopCheck && browserCheck && hardwareCheck && showWallet
+      mobileCheck &&
+      desktopCheck &&
+      browserCheck &&
+      hardwareCheck &&
+      showWallet &&
+      languageSupportFilter
     )
   })
 
