@@ -4,8 +4,9 @@ import { Box, type BoxProps } from "@chakra-ui/react"
 
 import { IS_DEV } from "@/lib/utils/env"
 
-const Twemoji = dynamic(() =>
-  import("react-emoji-render").then((mod) => mod.Twemoji)
+const Twemoji = dynamic(
+  () => import("react-emoji-render").then((mod) => mod.Twemoji),
+  { ssr: false }
 )
 
 export type EmojiProps = Omit<BoxProps, "children"> & BaseProps
