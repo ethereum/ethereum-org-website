@@ -1762,6 +1762,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/UNOFFICIALbgd"><img src="https://avatars.githubusercontent.com/u/71248977?v=4?s=100" width="100px;" alt="UNOFFICIALbgd"/><br /><sub><b>UNOFFICIALbgd</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AUNOFFICIALbgd" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Codex-Bugmenot"><img src="https://avatars.githubusercontent.com/u/59927099?v=4?s=100" width="100px;" alt="Codex-Bugmenot"/><br /><sub><b>Codex-Bugmenot</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ACodex-Bugmenot" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/repo"><img src="https://avatars.githubusercontent.com/u/45478?v=4?s=100" width="100px;" alt="repo"/><br /><sub><b>repo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=repo" title="Documentation">📖</a> <a href="#blog-repo" title="Blogposts">📝</a> <a href="#translation-repo" title="Translation">🌍</a></td>
     </tr>
   </tbody>
 </table>
