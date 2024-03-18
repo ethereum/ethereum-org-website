@@ -11323,6 +11323,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "doutv",
+      "name": "Jason Huang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20609724?v=4",
+      "profile": "http://huangyongjin.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
