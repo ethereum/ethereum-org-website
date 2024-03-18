@@ -37,7 +37,7 @@ export default async function fetchVectorSearchSupabase(stringToSearch) {
     );
   
     const resultOne = await vectorStore.similaritySearch(question, 5);
-    console.log('Result:', resultOne);
+    // console.log('Result:', resultOne);
 
 
     if (resultOne.length === 0) {
