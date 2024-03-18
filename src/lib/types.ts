@@ -601,6 +601,18 @@ export interface WalletPersonas {
   }
 }
 
+export interface DropdownOption {
+  label: string
+  value: string
+  filterKey: string
+  category: string
+}
+
+export type WalletSupportedLanguageContextType = {
+  supportedLanguage: string
+  setSupportedLanguage: (language: string) => void
+}
+
 // Historical upgrades
 type NetworkUpgradeDetails = {
   blockNumber?: number
