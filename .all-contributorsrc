@@ -11314,6 +11314,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Codex-Bugmenot",
+      "name": "Codex-Bugmenot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59927099?v=4",
+      "profile": "https://github.com/Codex-Bugmenot",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
