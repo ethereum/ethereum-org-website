@@ -18,7 +18,7 @@ async function getPageMetadata(url: string): Promise<Record<string, string>>  {
     
     return metaTags
   } catch (error) {
-    console.error(error)
+    console.error('Unable to fetch metadata', url)
     return {}
   }
 }
@@ -55,18 +55,19 @@ export async function EthereumEventsImport() {
 
     let start, end
     try {
-      start = Date.parse(`${startDate}, ${currentYear}`)
-      end = Date.parse(`${endDate}, ${currentYear}`)
+      start = Date.parse(`${startDate}, ${currentYear} GMT`)
+      end = Date.parse(`${endDate}, ${currentYear} GMT`)
       if (Number.isNaN(start) || Number.isNaN(end)) continue
     } catch (e) {
       console.log("Invalid date", i[0])
       continue
     }
 
+    let websiteUrl = link
     let description = ''
     let imageUrl = ''
-    if (link) { 
-      const websiteUrl = link.startsWith('https://') || link.startsWith('http://') ? link : `https://${link}`
+    if (link) {
+      websiteUrl = link.startsWith('https://') || link.startsWith('http://') ? link : `https://${link}`
       const meta = await getPageMetadata(websiteUrl)
       
       if (meta.description) description = meta.description
@@ -75,9 +76,9 @@ export async function EthereumEventsImport() {
 
     events.push({
       title: title,
-      startDate: start,
-      endDate: end,
-      to: link,
+      startDate: new Date(start).toISOString().substring(0,10),
+      endDate: new Date(end).toISOString().substring(0,10),
+      to: websiteUrl,
       location: location,
       description: description,
       imageUrl: imageUrl,
