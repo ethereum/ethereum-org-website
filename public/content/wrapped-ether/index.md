@@ -8,7 +8,7 @@ lang: en
 
 [Ether](/eth) (ETH) is the native token on Ethereum, and is used for staking, as a currency and paying for gas fees for computation. However, ETH has limitations in how it can interact with assets and applications built on top of Ethereum, like ERC-20 tokens. In order for ETH to be able to interact with ERC-20 tokens, it must conform with the ERC-20 standard.
 
-To bridge this gap, wrapped ETH (wETH) was created. Wrapped ETH is a smart contract that lets you deposit 1 ETH into the contract, and receive 1 minted wETH with conforms to the ERC-20 token standard. However, wETH is a representation of ETH that allows you to interact with ETH as an ERC-20, not as the native asset ETH. You will still need native ETH to pay for gas fees, so make sure you save some when depositing. 
+To bridge this gap, wrapped ETH (wETH) was created. Wrapped ETH is a smart contract that lets you deposit 1 ETH into the contract and receive 1 minted wETH that conforms to the ERC-20 token standard. wETH is a representation of ETH that allows you to interact with it as an ERC-20 token, not as the native asset ETH. You will still need native ETH to pay for gas fees, so make sure you save some when depositing. 
 
 You are able to unwrap wETH for ETH by using the wETH smart contract. You can deposit 1 wETH back into the wETH smart contract, and you will receive 1 ETH. The wETH deposited is then burned and taken out of the circulating supply of wETH.
 
