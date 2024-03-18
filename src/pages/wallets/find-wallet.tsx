@@ -34,8 +34,13 @@ import {
   getSupportedLocaleWallets,
 } from "@/lib/utils/wallets"
 
-import { NAV_BAR_PX_HEIGHT, WALLETS_FILTERS_DEFAULT } from "@/lib/constants"
+import {
+  DEFAULT_LOCALE,
+  NAV_BAR_PX_HEIGHT,
+  WALLETS_FILTERS_DEFAULT,
+} from "@/lib/constants"
 
+import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 import HeroImage from "@/public/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
@@ -75,6 +80,7 @@ const FindWalletPage = () => {
   const resetWalletFilter = useRef(() => {})
   const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
+  const [supportedLanguage, setSupportedLanguage] = useState(DEFAULT_LOCALE)
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
 
   const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
@@ -108,6 +114,7 @@ const FindWalletPage = () => {
   const resetFilters = () => {
     setSelectedPersona(NaN)
     setFilters(WALLETS_FILTERS_DEFAULT)
+    setSupportedLanguage(DEFAULT_LOCALE)
   }
 
   return (
@@ -182,74 +189,81 @@ const FindWalletPage = () => {
         />
       </Box>
 
-      {/* Mobile filters menu */}
-      <Box hideFrom="lg">
-        <MobileFiltersMenu
-          filters={filters}
-          resetWalletFilter={resetWalletFilter}
-          updateFilterOption={updateFilterOption}
-          updateFilterOptions={updateFilterOptions}
-          resetFilters={resetFilters}
-          selectedPersona={selectedPersona}
-          setFilters={setFilters}
-          setSelectedPersona={setSelectedPersona}
-          showMobileSidebar={showMobileSidebar}
-          onOpen={onOpen}
-          onClose={onClose}
-        />
-      </Box>
-
-      <Box px={{ md: 4, "2xl": 0 }}>
-        <Flex pt={4} pb={6} gap={6}>
-          <WalletFilterSidebar
-            hideBelow="lg"
-            w={{ md: "330px" }}
-            top={NAV_BAR_PX_HEIGHT}
-            {...{
-              filters,
-              resetWalletFilter,
-              updateFilterOption,
-              updateFilterOptions,
-              resetFilters,
-              selectedPersona,
-              setFilters,
-              setSelectedPersona,
-            }}
+      {/* Context value is updated when using the language filter */}
+      <WalletSupportedLanguageContext.Provider
+        value={{ supportedLanguage, setSupportedLanguage }}
+      >
+        {/* Mobile filters menu */}
+        <Box hideFrom="lg">
+          <MobileFiltersMenu
+            filters={filters}
+            resetWalletFilter={resetWalletFilter}
+            updateFilterOption={updateFilterOption}
+            updateFilterOptions={updateFilterOptions}
+            resetFilters={resetFilters}
+            selectedPersona={selectedPersona}
+            setFilters={setFilters}
+            setSelectedPersona={setSelectedPersona}
+            showMobileSidebar={showMobileSidebar}
+            onOpen={onOpen}
+            onClose={onClose}
           />
+        </Box>
 
-          <Box
-            mt={0.5}
-            w="full"
-            sx={{
-              scrollbarWidth: "thin",
-              scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
-
-              "::-webkit-scrollbar": {
-                width: 2,
-              },
-              "::-webkit-scrollbar-track": {
-                bg: "background.base",
-              },
-              "::-webkit-scrollbar-thumb": {
-                bgColor: "lightBorder",
-                borderRadius: "base",
-                border: "2px solid",
-                borderColor: "background.base",
-              },
-              table: {
-                m: 0,
-              },
-            }}
-          >
-            <WalletTable
-              filters={filters}
-              resetFilters={resetFilters}
-              resetWalletFilter={resetWalletFilter}
-              walletData={randomizedWalletData}
+        <Box px={{ md: 4, "2xl": 0 }}>
+          <Flex pt={4} pb={6} gap={6}>
+            {/* Filters sidebar */}
+            <WalletFilterSidebar
+              hideBelow="lg"
+              w={{ md: "330px" }}
+              top={NAV_BAR_PX_HEIGHT}
+              {...{
+                filters,
+                resetWalletFilter,
+                updateFilterOption,
+                updateFilterOptions,
+                resetFilters,
+                selectedPersona,
+                setFilters,
+                setSelectedPersona,
+              }}
             />
-          </Box>
-        </Flex>
-      </Box>
+
+            {/* Wallets table */}
+            <Box
+              mt={0.5}
+              w="full"
+              sx={{
+                scrollbarWidth: "thin",
+                scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
+
+                "::-webkit-scrollbar": {
+                  width: 2,
+                },
+                "::-webkit-scrollbar-track": {
+                  bg: "background.base",
+                },
+                "::-webkit-scrollbar-thumb": {
+                  bgColor: "lightBorder",
+                  borderRadius: "base",
+                  border: "2px solid",
+                  borderColor: "background.base",
+                },
+                table: {
+                  m: 0,
+                },
+              }}
+            >
+              <WalletTable
+                filters={filters}
+                resetFilters={resetFilters}
+                resetWalletFilter={resetWalletFilter}
+                walletData={randomizedWalletData}
+              />
+            </Box>
+          </Flex>
+        </Box>
+      </WalletSupportedLanguageContext.Provider>
     </Flex>
   )
 }
