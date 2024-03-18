@@ -43,6 +43,8 @@
   "page-find-wallet-social-recovery": "Social recovery",
   "page-find-wallet-social-recovery-desc": "Wallets that allow guardians to change the signing key for smart contract wallets",
   "page-find-wallet-languages-supported": "Language support",
+  "page-find-wallet-languages-search-language": "Search language",
+  "page-find-wallet-popular-languages": "Most popular",
   "page-find-wallet-features": "Features",
   "page-find-wallet-security": "Security",
   "page-find-wallet-smart-contract": "Smart contract",

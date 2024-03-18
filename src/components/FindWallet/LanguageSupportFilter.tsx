@@ -14,6 +14,7 @@ import {
 
 import Select from "@/components/Select"
 
+import { trackCustomEvent } from "@/lib/utils/matomo"
 import {
   getAllWalletsLanguages,
   getWalletsTopLanguages,
@@ -41,8 +42,12 @@ export const LanguageSupportFilter = () => {
   const handleLanguageFilterSelectChange = (selectedLanguage) => {
     if (!selectedLanguage) return
 
-    // TODO: add matomo tracking
     setSupportedLanguage(selectedLanguage.value)
+    trackCustomEvent({
+      eventCategory: "WalletFilterSidebar",
+      eventAction: `Language search`,
+      eventName: selectedLanguage.value,
+    })
   }
 
   const walletsTop5Languages = getWalletsTopLanguages(5, locale!).join(", ")
@@ -53,7 +58,7 @@ export const LanguageSupportFilter = () => {
       borderRadius="base"
       borderColor="transparent"
       p={6}
-      zIndex={0}
+      zIndex={1}
     >
       {({ isExpanded }) => (
         <>
@@ -93,20 +98,17 @@ export const LanguageSupportFilter = () => {
           <AccordionPanel as={List} p={0} m={0}>
             <Select
               instanceId="language-support-filter"
-              // TODO
-              // aria-label={t("page-get-eth-exchanges-header")}
+              aria-label={t("page-find-wallet-languages-supported")}
               options={allWalletsLanguagesOptions}
               onChange={handleLanguageFilterSelectChange}
-              // TODO i18n
-              placeholder={"Search language"}
+              placeholder={t("page-find-wallet-languages-search-language")}
               isSearchable
               variant="outline"
             />
 
             <Box mt={2}>
               <Text color="body.medium" fontSize="sm" lineHeight={1.6}>
-                {/* TODO: i18n */}
-                Most popular
+                {t("page-find-wallet-popular-languages")}
               </Text>
               <Text color="primary.base" fontSize="sm" lineHeight={1.6}>
                 {walletsTop5Languages}

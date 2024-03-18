@@ -28,9 +28,9 @@ export const ResetFiltersButton = ({
         resetFilters()
         resetWalletFilter.current()
         trackCustomEvent({
-          eventCategory: "WalletFilterReset",
-          eventAction: `WalletFilterReset clicked`,
-          eventName: `reset filters`,
+          eventCategory: "WalletFilterSidebar",
+          eventAction: `Reset button`,
+          eventName: `reset_click`,
         })
       }}
     >

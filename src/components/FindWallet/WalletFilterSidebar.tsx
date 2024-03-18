@@ -67,7 +67,7 @@ const WalletFilterSidebar = ({
       }}
       {...tabsProps}
     >
-      <Box position="sticky" top={top ?? 0} zIndex={1} w={{ md: "330px" }}>
+      <Box position="sticky" top={top ?? 0} zIndex={2} w={{ md: "330px" }}>
         <Flex
           justifyContent="space-between"
           alignItems="center"
