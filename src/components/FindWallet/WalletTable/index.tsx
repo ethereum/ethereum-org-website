@@ -347,7 +347,7 @@ const WalletTable = ({
                             <Image
                               src={wallet.image}
                               alt=""
-                              h={{ base: "24px", md: "56px" }}
+                              height={56}
                               objectFit="contain"
                             />
                           </Stack>

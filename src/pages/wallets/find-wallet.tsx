@@ -77,10 +77,13 @@ const FindWalletPage = () => {
   const { pathname, locale } = useRouter()
   const theme = useTheme()
   const { t } = useTranslation("page-wallets-find-wallet")
+
   const resetWalletFilter = useRef(() => {})
+
   const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
   const [supportedLanguage, setSupportedLanguage] = useState(DEFAULT_LOCALE)
+
   const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
 
   const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
