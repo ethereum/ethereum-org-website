@@ -12,6 +12,8 @@ import {
   UseDisclosureReturn,
 } from "@chakra-ui/react"
 
+import Tag from "../Tag"
+
 type TemplateMessageProps = {
   children: React.ReactNode; 
   role: Message["role"];
@@ -26,6 +28,8 @@ type ChatMessagesProps = {
   messages: UseChatHelpers["messages"];
   messagesEndRef: React.RefObject<HTMLDivElement>;
   isLoading: boolean
+  append: UseChatHelpers["append"];
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
 }
 
 type ChatInputProps = {
@@ -95,25 +99,49 @@ const LoadingMessage = () => {
 }
 
 
+// @ts-ignore
+  const ChatMessages = ({ messages, messagesEndRef, isLoading, setIsLoading, append }: ChatMessagesProps) => {
 
-  const ChatMessages = ({ messages, messagesEndRef, isLoading }: ChatMessagesProps) => {
+    const submitLabelQuestion = (e) => {
+      const labelContent = e.target.textContent
+      append({ role: "user", content: labelContent })
+      setIsLoading(true)
+    }
+
+    const SearchTag = ({ label }) => {
+      return <Tag cursor="pointer" label={label} color="primary.highContrast" bgColor="primary.lowContrast" _hover={{ bgColor: "primary.hover", color: "background.base" }} onClick={(e) => submitLabelQuestion(e)} />
+    }
+
     return (
-        <Box
+        <Flex
           flex="1"
+          direction={ messages.length > 0 ? "column" : "column-reverse"}
+          justifyContent={ messages.length > 0 ? "normal" : "space-between"}
           overflowY="auto"
           py={4}
           px={{ base: 4, sm: 8 }}
         >
-          {/* Messages */}
-          {messages.length > 0 && messages.map(m => (
-              <RoleMessage key={m.id} role={m.role} content={m.content}/>
-          ))}
-              <Box>
+              {messages.length > 0 ? (
+                messages.map(m => (
+                    <RoleMessage key={m.id} role={m.role} content={m.content} />
+                ))
+            ) : (
+                <>
+                <Flex gap="3" justifyContent="center" flexWrap="wrap">
+                  <SearchTag label="What is layer 2?" />
+                  <SearchTag label="What is a wallet?" />
+                  <SearchTag label="When is the next upgrade?" />
+                  <SearchTag label="How can I send ETH to a friend?" />
+                </Flex>
+                <Text mb="4" textAlign="center" fontWeight="bold" fontSize="xl">Ask me about Ethereum!</Text>
+                </>
+            )}
+            <Box>
                 { isLoading ? <LoadingMessage /> : null}
               </Box>
           {/* Empty div to scroll to */}
           <Box ref={messagesEndRef}></Box>
-        </Box>
+        </Flex>
     )
   }
 
@@ -147,10 +175,9 @@ const LoadingMessage = () => {
   const Chat = () => {
     'use client';
     const [isLoading, setIsLoading] = useState(false)
-    const { messages, input, handleInputChange, handleSubmit } = useChat({ onResponse: () => { setIsLoading(false) } });
+    const { messages, input, handleInputChange, handleSubmit, append } = useChat({ onResponse: () => { setIsLoading(false) } });
     const messagesEndRef = useRef<null | HTMLDivElement>(null);
 
-    // @ts-ignore
     const onSubmit = (e) => {
       setIsLoading(true);
       handleSubmit(e);
@@ -168,7 +195,7 @@ const LoadingMessage = () => {
         h="full"
       >
         <ChatHeader />
-        <ChatMessages messages={messages} messagesEndRef={messagesEndRef} isLoading={isLoading} />
+        <ChatMessages messages={messages} messagesEndRef={messagesEndRef} isLoading={isLoading} append={append} setIsLoading={setIsLoading} />
         <ChatInput input={input} handleInputChange={handleInputChange} handleSubmit={(e) => onSubmit(e)} />
       </Flex>
     );
