@@ -52,6 +52,7 @@ const WalletFilterPersona = ({
             gridRow={showMobileSidebar ? "auto" : 1}
           >
             <Flex
+              tabIndex={0}
               h="100%"
               direction="column"
               alignItems="flex-start"

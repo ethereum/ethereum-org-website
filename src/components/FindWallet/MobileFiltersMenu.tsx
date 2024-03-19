@@ -8,21 +8,15 @@ import {
   DrawerHeader,
   DrawerOverlay,
   Flex,
-  Text,
 } from "@chakra-ui/react"
 
 import { Button } from "@/components/Buttons"
 
-import { trackCustomEvent } from "@/lib/utils/matomo"
-import { walletsListingCount } from "@/lib/utils/wallets"
-
 import walletData from "@/data/wallets/wallet-data"
 
-import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
-
-import { FilterBurgerIcon } from "../icons/wallets"
 import OldHeading from "../OldHeading"
 
+import { MobileFiltersButton } from "./MobileFiltersButton"
 import { ResetFiltersButton } from "./ResetFiltersButton"
 import WalletFilterPersona from "./WalletFilterPersona"
 import WalletFilterSidebar, {
@@ -31,7 +25,7 @@ import WalletFilterSidebar, {
 
 import { useWalletTable } from "@/hooks/useWalletTable"
 
-interface MobileFiltersMenuProps extends WalletFilterSidebarProps {
+type MobileFiltersMenuProps = WalletFilterSidebarProps & {
   showMobileSidebar: boolean
   onOpen: () => void
   onClose: () => void
@@ -55,51 +49,12 @@ export const MobileFiltersMenu = ({
 
   return (
     <>
-      <Box
-        display={{ base: "block", lg: "none" }}
-        position="sticky"
-        top={NAV_BAR_PX_HEIGHT}
-        bg="background.base"
-        w="full"
-        zIndex="docked"
-        py="5px"
-      >
-        <Button
-          rightIcon={<FilterBurgerIcon />}
-          variant="outline"
-          border="none"
-          ps={0}
-          ms={4}
-          gap={4}
-          sx={{
-            svg: {
-              boxSize: 8,
-              line: { stroke: "primary.base" },
-              circle: { stroke: "primary.base" },
-            },
-          }}
-          onClick={() => {
-            showMobileSidebar ? onClose() : onOpen()
-            trackCustomEvent({
-              eventCategory: "MobileFilterToggle",
-              eventAction: `Tap MobileFilterToggle`,
-              eventName: `show mobile filters ${!showMobileSidebar}`,
-            })
-          }}
-        >
-          <Box>
-            <Text align="start">{t("page-find-wallet-filters")}</Text>
-            <Text
-              align="start"
-              fontSize="sm"
-              lineHeight="14px"
-              color="body.medium"
-            >
-              {walletsListingCount(filters)} {t("page-find-wallet-active")}
-            </Text>
-          </Box>
-        </Button>
-      </Box>
+      <MobileFiltersButton
+        filters={filters}
+        showMobileSidebar={showMobileSidebar}
+        onOpen={onOpen}
+        onClose={onClose}
+      />
 
       <Drawer
         isOpen={showMobileSidebar}
@@ -161,6 +116,7 @@ export const MobileFiltersMenu = ({
               px={9}
               py={5}
               bg="background.base"
+              zIndex={2}
             >
               <Box flex={1} me={2}>
                 <ResetFiltersButton

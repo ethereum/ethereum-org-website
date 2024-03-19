@@ -1,10 +1,10 @@
 import { useTranslation } from "next-i18next"
 import { BsArrowCounterclockwise } from "react-icons/bs"
-import { Center, Icon } from "@chakra-ui/react"
+import { Center, Icon, Text } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-type WalletEmptyStateProps = {
+type ResetFiltersProps = {
   resetFilters: () => void
   resetWalletFilter: React.MutableRefObject<() => void>
 }
@@ -12,7 +12,7 @@ type WalletEmptyStateProps = {
 export const ResetFiltersButton = ({
   resetFilters,
   resetWalletFilter,
-}: WalletEmptyStateProps) => {
+}: ResetFiltersProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
 
   return (
@@ -35,7 +35,9 @@ export const ResetFiltersButton = ({
       }}
     >
       <Icon as={BsArrowCounterclockwise} aria-hidden="true" fontSize="sm" />
-      {t("page-find-wallet-reset-filters").toUpperCase()}
+      <Text as="span" textTransform="uppercase">
+        {t("page-find-wallet-reset-filters")}
+      </Text>
     </Center>
   )
 }

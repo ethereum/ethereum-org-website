@@ -108,9 +108,9 @@ const WalletFilterFeature = ({
                     textAlign="initial"
                     _hover={{ background: "transparent" }}
                   >
-                    <Box as="span" flex={1}>
-                      <Text>{filterOption.title}</Text>
-                    </Box>
+                    <Text as="span" flex={1}>
+                      {filterOption.title}
+                    </Text>
 
                     <AccordionIcon
                       color="primary.base"

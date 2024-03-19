@@ -87,13 +87,6 @@ export const WalletMoreInfo = ({
     wallet.last_updated
   )
 
-  // autoColumns={{ base: "200px", lg: "minmax(0, 1fr)" }}
-  //     templateColumns={
-  //       showMobileSidebar
-  //         ? "repeat(2, 1fr)"
-  //         : { base: "200px", lg: "minmax(0, 1fr)" }
-  //   }
-
   return (
     <Box mt={4} w="full">
       <SimpleGrid
