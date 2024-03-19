@@ -101,6 +101,29 @@ const Nav = () => {
             <Menu hideBelow="md" sections={linkSections} />
             <Flex alignItems="center" /*  justifyContent="space-between" */>
               <Search {...searchModalDisclosure} />
+              <>
+                <Button variant="ghost" color="body.base"
+                  transition="color 0.2s"
+                  px={{ base: "2", xl: "3" }}
+                  _hover={{
+                    color: "primary.hover",
+                    "& svg": {
+                      transform: "rotate(10deg)",
+                      transition: "transform 0.5s",
+                    },
+                  }} onClick={chatBotDisclosure.onOpen}>
+                  <Icon
+                    as={LuSparkles}
+                    fontSize="2xl"
+                    verticalAlign="middle"
+                    me={2}
+                  />
+                </Button>
+                <ChatBotModal
+                  isOpen={chatBotDisclosure.isOpen}
+                  onClose={chatBotDisclosure.onClose}
+                />
+                </>
               {/* Desktop */}
               <HStack hideBelow="md" gap="0">
                 <IconButton
@@ -117,29 +140,7 @@ const Nav = () => {
                   onClick={toggleColorMode}
                 />
 
-                <>
-                  <Button variant="ghost" color="body.base"
-                    transition="color 0.2s"
-                    px={{ base: "2", xl: "3" }}
-                    _hover={{
-                      color: "primary.hover",
-                      "& svg": {
-                        transform: "rotate(10deg)",
-                        transition: "transform 0.5s",
-                      },
-                    }} onClick={chatBotDisclosure.onOpen}>
-                    <Icon
-                      as={LuSparkles}
-                      fontSize="2xl"
-                      verticalAlign="middle"
-                      me={2}
-                    />
-                  </Button>
-                  <ChatBotModal
-                    isOpen={chatBotDisclosure.isOpen}
-                    onClose={chatBotDisclosure.onClose}
-                  />
-                </>
+
 
                 {/* Locale-picker menu */}
                 <LanguagePicker
