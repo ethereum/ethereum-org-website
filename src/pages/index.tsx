@@ -27,7 +27,6 @@ import CalloutBanner from "@/components/CalloutBanner"
 import Codeblock from "@/components/Codeblock"
 import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
-import DencunBanner from "@/components/DencunBanner"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -347,7 +346,6 @@ const HomePage = ({
         title={t("page-index:page-index-meta-title")}
         description={t("page-index:page-index-meta-description")}
       />
-      <DencunBanner />
       <Box w="full">
         <HomeHero heroImg={hero} />
       </Box>

@@ -44,7 +44,9 @@ This second step is known as [“Danksharding”](/roadmap/danksharding/). **It 
 
 ## Current progress {#current-progress}
 
-Proto-Danksharding is the first of these roadmap items to be implemented as part of the Deneb + Cancun network upgrade in March of 2024. 
+Proto-Danksharding is the first of these roadmap items to be implemented as part of the Cancun-Deneb ("Dencun") network upgrade in March of 2024. 
 **Full Danksharding is likely several years away**, as it relies upon several other roadmap items being completed first. Decentralizing rollup infrastructure is likely to be a gradual process - there are many different rollups that are building slightly different systems and will fully decentralize at different rates.
+
+[More on the Dencun network upgrade](/roadmap/dencun/)
 
 <QuizWidget quizKey="scaling" />
