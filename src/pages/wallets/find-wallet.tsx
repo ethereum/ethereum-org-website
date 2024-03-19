@@ -218,7 +218,6 @@ const FindWalletPage = () => {
             {/* Filters sidebar */}
             <WalletFilterSidebar
               hideBelow="lg"
-              w={{ md: "330px" }}
               top={NAV_BAR_PX_HEIGHT}
               {...{
                 filters,
