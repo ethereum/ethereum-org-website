@@ -107,7 +107,7 @@ export const LanguageSupportFilter = () => {
             />
 
             <Box mt={2}>
-              <Text color="body.medium" fontSize="sm" lineHeight={1.6}>
+              <Text color="body.medium" size="sm">
                 {t("page-find-wallet-popular-languages")}
               </Text>
 
@@ -118,8 +118,7 @@ export const LanguageSupportFilter = () => {
                       key={language.code}
                       as="span"
                       color="primary.base"
-                      fontSize="sm"
-                      lineHeight={1.6}
+                      size="sm"
                       cursor="pointer"
                       onClick={() => {
                         setSupportedLanguage(language.code)
