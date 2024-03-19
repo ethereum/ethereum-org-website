@@ -415,6 +415,14 @@ const communityConferences: CommunityConference[] = [
     startDate: "TBD",
     endDate: "TBD"
   },
+  {
+    title: "NapulETH Open Village",
+    to: "https://napul.eth.limo",
+    location: "Naples, Italy",
+    description: "The Biggest ETH Event in Southern Italy",
+    startDate: "2024-09-12",
+    endDate: "2024-09-14",
+  },
 ]
 
 export default communityConferences
