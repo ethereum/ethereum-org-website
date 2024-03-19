@@ -135,7 +135,7 @@ const WalletFilterPersona = ({
               {!showMobileSidebar && (
                 <Text
                   p="0.4rem"
-                  color={selectedPersona === idx ? "text" : "text200"}
+                  color={selectedPersona === idx ? "body.base" : "body.medium"}
                   fontSize="sm"
                   fontWeight="normal"
                   transition="0.5s all"
