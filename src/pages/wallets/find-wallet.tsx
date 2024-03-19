@@ -232,30 +232,7 @@ const FindWalletPage = () => {
             />
 
             {/* Wallets table */}
-            <Box
-              mt={0.5}
-              w="full"
-              sx={{
-                scrollbarWidth: "thin",
-                scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
-
-                "::-webkit-scrollbar": {
-                  width: 2,
-                },
-                "::-webkit-scrollbar-track": {
-                  bg: "background.base",
-                },
-                "::-webkit-scrollbar-thumb": {
-                  bgColor: "lightBorder",
-                  borderRadius: "base",
-                  border: "2px solid",
-                  borderColor: "background.base",
-                },
-                table: {
-                  m: 0,
-                },
-              }}
-            >
+            <Box mt={0.5} w="full">
               <WalletTable
                 filters={filters}
                 resetFilters={resetFilters}

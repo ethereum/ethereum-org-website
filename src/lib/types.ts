@@ -608,7 +608,7 @@ export interface DropdownOption {
   category: string
 }
 
-export type WalletSupportedLanguageContext = {
+export type WalletSupportedLanguageContextType = {
   supportedLanguage: string
   setSupportedLanguage: (language: string) => void
 }
