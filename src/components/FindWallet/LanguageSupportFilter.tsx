@@ -43,6 +43,7 @@ export const LanguageSupportFilter = () => {
     if (!selectedLanguage) return
 
     setSupportedLanguage(selectedLanguage.value)
+
     trackCustomEvent({
       eventCategory: "WalletFilterSidebar",
       eventAction: `Language search`,

@@ -143,12 +143,24 @@ const WalletFilterFeature = ({
                           onClick={
                             item.filterKey
                               ? () => {
-                                  trackCustomEvent({
-                                    eventCategory: "WalletFilterSidebar",
-                                    eventAction: `${filterOption.title}`,
-                                    eventName: `${item.filterKey} ${!restProps
-                                      .filters[item.filterKey!]}`,
-                                  })
+                                  // Track 'gas_fee_customization' filter separately when selected
+                                  if (
+                                    item.filterKey === "gas_fee_customization"
+                                  ) {
+                                    trackCustomEvent({
+                                      eventCategory: "WalletFilterSidebar",
+                                      eventAction: `advanced_features`,
+                                      eventName: "gas_fee_customization true",
+                                    })
+                                  } else {
+                                    trackCustomEvent({
+                                      eventCategory: "WalletFilterSidebar",
+                                      eventAction: `${filterOption.title}`,
+                                      eventName: `${item.filterKey} ${!restProps
+                                        .filters[item.filterKey!]}`,
+                                    })
+                                  }
+
                                   updateFilterOption(item.filterKey)
                                 }
                               : () => {

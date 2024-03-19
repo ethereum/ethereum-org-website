@@ -14,6 +14,13 @@ export const WalletEmptyState = ({
 }: WalletEmptyStateProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
 
+  // Track empty state
+  trackCustomEvent({
+    eventCategory: "Wallet_empty_state",
+    eventAction: `reset`,
+    eventName: `triggered`,
+  })
+
   return (
     <Flex
       justifyContent="center"
@@ -36,10 +43,11 @@ export const WalletEmptyState = ({
           onClick={() => {
             resetFilters()
             resetWalletFilter.current()
+
             trackCustomEvent({
-              eventCategory: "WalletFilterReset",
-              eventAction: `WalletFilterReset clicked`,
-              eventName: `reset filters`,
+              eventCategory: "Wallet_empty_state",
+              eventAction: `reset`,
+              eventName: `reset_button_clicked`,
             })
           }}
         >
