@@ -14,6 +14,7 @@ import {
 
 import Select from "@/components/Select"
 
+import { getLanguageCodeName } from "@/lib/utils/intl"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import {
   getAllWalletsLanguages,
@@ -47,7 +48,7 @@ export const LanguageSupportFilter = () => {
     trackCustomEvent({
       eventCategory: "WalletFilterSidebar",
       eventAction: `Language search`,
-      eventName: selectedLanguage.value,
+      eventName: getLanguageCodeName(selectedLanguage.value, locale!),
     })
   }
 
@@ -120,13 +121,24 @@ export const LanguageSupportFilter = () => {
                       fontSize="sm"
                       lineHeight={1.6}
                       cursor="pointer"
-                      onClick={() => setSupportedLanguage(language.code)}
+                      onClick={() => {
+                        setSupportedLanguage(language.code)
+
+                        trackCustomEvent({
+                          eventCategory: "WalletFilterSidebar",
+                          eventAction: `Language search`,
+                          eventName: getLanguageCodeName(
+                            language.code,
+                            locale!
+                          ),
+                        })
+                      }}
                     >
                       {language.langName}
                     </Text>
                   )
                 })
-                // `.reduce()` used to generate the comma separator
+                // `.reduce()` used to generate the comma separator between languages
                 .reduce((prev, curr) => [prev, ", ", curr])}
             </Box>
           </AccordionPanel>
