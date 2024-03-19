@@ -1766,6 +1766,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/adeolu98"><img src="https://avatars.githubusercontent.com/u/39372980?v=4?s=100" width="100px;" alt="dCRYPT"/><br /><sub><b>dCRYPT</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aadeolu98" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sourabupadhya123"><img src="https://avatars.githubusercontent.com/u/64914231?v=4?s=100" width="100px;" alt="Sourab"/><br /><sub><b>Sourab</b></sub></a><br /><a href="#security-sourabupadhya123" title="Security">🛡️</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ykaravas"><img src="https://avatars.githubusercontent.com/u/6537956?v=4?s=100" width="100px;" alt="ykaravas"/><br /><sub><b>ykaravas</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aykaravas" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://allwin-portfolio.vercel.app/"><img src="https://avatars.githubusercontent.com/u/127643894?v=4?s=100" width="100px;" alt="Prince Allwin"/><br /><sub><b>Prince Allwin</b></sub></a><br /><a href="#content-allwin199" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
