@@ -415,6 +415,15 @@ const communityConferences: CommunityConference[] = [
     startDate: "TBD",
     endDate: "TBD"
   },
+  {
+    title: "ETHBratislava",
+    to: "http://www.ethbratislava.com/",
+    location: "Bratislava, Slovakia",
+    description:
+      "With this pioneering event in Slovakia we are finally uniting a passionate community engaged in the Ethereum ecosystem's economics, governance, and technology.",
+    startDate: "2024-05-10",
+    endDate: "2024-05-11",
+  },
 ]
 
 export default communityConferences
