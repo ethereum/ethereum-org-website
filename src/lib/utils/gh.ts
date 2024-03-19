@@ -44,3 +44,35 @@ export const getLastModifiedDateByPath = (path: string): string => {
   const logInfo = getGitLogFromPath(path)
   return extractDateFromGitLogInfo(logInfo)
 }
+
+const LABELS_TO_SEARCH = ["content", "design", "dev", "doc", "translation"]
+const LABELS_TO_TEXT = {
+  content: "content",
+  design: "design",
+  dev: "dev",
+  doc: "docs",
+  translation: "translation",
+}
+
+// Given a list of labels, it returns a string with the labels that match the
+// LABELS_TO_SEARCH list, using the LABELS_TO_TEXT values
+// Example:
+// - ["content :pencil:", "ux design"] => "content, design"
+// - ["documentation :emoji:", "dev required", "good first issue"] => "docs, dev"
+export const rawLabelsToText = (labels: string[]) => {
+  return labels
+    .map((label) => {
+      const labelIndex = LABELS_TO_SEARCH.findIndex((l) =>
+        label.toLocaleLowerCase().includes(l)
+      )
+
+      if (labelIndex === -1) {
+        return
+      }
+
+      const labelMatched = LABELS_TO_SEARCH[labelIndex]
+      return LABELS_TO_TEXT[labelMatched]
+    })
+    .filter(Boolean)
+    .join(", ")
+}
