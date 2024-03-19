@@ -1,8 +1,12 @@
 import React, { ReactNode } from "react"
+import { useRouter } from "next/router"
 import { Box, Text } from "@chakra-ui/react"
 
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import Tooltip from "@/components/Tooltip"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { cleanPath } from "@/lib/utils/url"
 
 type GlossaryTooltipProps = {
   children: ReactNode
@@ -10,6 +14,8 @@ type GlossaryTooltipProps = {
 }
 
 const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
+  const { asPath } = useRouter()
+
   return (
     <Box display="inline-block">
       <Tooltip
@@ -20,6 +26,13 @@ const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
             options={{ ns: "glossary-tooltip" }}
           />
         }
+        onOpen={() => {
+          trackCustomEvent({
+            eventCategory: "Glossary Tooltip",
+            eventAction: cleanPath(asPath),
+            eventName: termKey,
+          })
+        }}
       >
         <Text
           as="u"
