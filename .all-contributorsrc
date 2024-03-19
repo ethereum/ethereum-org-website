@@ -11325,14 +11325,12 @@
       ]
     },
     {
-      "login": "repo",
-      "name": "repo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/45478?v=4",
-      "profile": "https://github.com/repo",
+      "login": "doutv",
+      "name": "Jason Huang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20609724?v=4",
+      "profile": "http://huangyongjin.com",
       "contributions": [
-        "doc",
-        "blog",
-        "translation"
+        "bug"
       ]
     },
     {
