@@ -171,10 +171,13 @@ export const getWalletsTopLanguages = (n: number, locale: string) => {
     .map((languageCode) => {
       // Get supported language name
       const supportedLanguageName = getLanguageCodeName(languageCode, locale)
-      // Capitalize supported language name
-      return `${capitalize(supportedLanguageName!)} (${getLanguageTotalCount(
-        languageCode
-      )})`
+      // Return {code, capitalized language name}
+      return {
+        code: languageCode,
+        langName: `${capitalize(
+          supportedLanguageName!
+        )} (${getLanguageTotalCount(languageCode)})`,
+      }
     })
     .slice(0, n)
 }

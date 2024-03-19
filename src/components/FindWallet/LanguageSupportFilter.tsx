@@ -1,4 +1,4 @@
-import { useContext } from "react"
+import { ReactNode, useContext } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import {
@@ -49,8 +49,6 @@ export const LanguageSupportFilter = () => {
       eventName: selectedLanguage.value,
     })
   }
-
-  const walletsTop5Languages = getWalletsTopLanguages(5, locale!).join(", ")
 
   return (
     <AccordionItem
@@ -110,9 +108,25 @@ export const LanguageSupportFilter = () => {
               <Text color="body.medium" fontSize="sm" lineHeight={1.6}>
                 {t("page-find-wallet-popular-languages")}
               </Text>
-              <Text color="primary.base" fontSize="sm" lineHeight={1.6}>
-                {walletsTop5Languages}
-              </Text>
+
+              {getWalletsTopLanguages(5, locale!)
+                .map<ReactNode>((language) => {
+                  return (
+                    <Text
+                      key={language.code}
+                      as="span"
+                      color="primary.base"
+                      fontSize="sm"
+                      lineHeight={1.6}
+                      cursor="pointer"
+                      onClick={() => setSupportedLanguage(language.code)}
+                    >
+                      {language.langName}
+                    </Text>
+                  )
+                })
+                // `.reduce()` used to generate the comma separator
+                .reduce((prev, curr) => [prev, ", ", curr])}
             </Box>
           </AccordionPanel>
         </>
