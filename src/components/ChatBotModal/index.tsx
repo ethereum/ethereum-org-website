@@ -1,6 +1,6 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { useChat, UseChatHelpers } from "ai/react";
-import { Box, Flex,FormControl, Heading,Input, Text } from '@chakra-ui/react';
+import { Box, Flex,FormControl, Heading,Input, Spinner,Text } from '@chakra-ui/react';
 import {
   Modal as ChakraModal,
   ModalCloseButton,
@@ -14,6 +14,7 @@ import {
 type ChatMessagesProps = {
   messages: UseChatHelpers["messages"];
   messagesEndRef: React.RefObject<HTMLDivElement>;
+  isLoading: boolean
 }
 
 type ChatInputProps = {
@@ -55,7 +56,34 @@ type ChatBotModalProps = ModalContentProps &
     )
   }
 
-  const ChatMessages = ({ messages, messagesEndRef }: ChatMessagesProps) => {
+  const MessageTemplate = ({ children, role }) => {
+    return (
+    <Box whiteSpace="pre-wrap" mb="32px">
+      <Text as="span" color="body.medium" fontSize="sm" fontStyle="italic">
+        {role === "user" ? "You" : "Ask ethereum.org"}
+      </Text>
+      {children}
+    </Box>  
+  )
+}
+
+const LoadingMessage = () => {
+  return (
+    <MessageTemplate role="assistant">
+      <Spinner display="block" w="1rem" h="1rem"/>
+    </MessageTemplate>
+)
+}
+
+const RoleMessage = ({ role, content }) => {
+  return (
+    <MessageTemplate role={role}>
+      <Text>{content}</Text>
+    </MessageTemplate>
+  )
+}
+
+  const ChatMessages = ({ messages, messagesEndRef, isLoading }: ChatMessagesProps) => {
     return (
         <Box
           flex="1"
@@ -65,13 +93,11 @@ type ChatBotModalProps = ModalContentProps &
         >
           {/* Messages */}
           {messages.length > 0 && messages.map(m => (
-              <Box key={m.id} whiteSpace="pre-wrap" mb="32px">
-                  <Text as="span" color="body.medium" fontSize="sm" fontStyle="italic">
-                    {m.role === "user" ? "You" : "Ask ethereum.org"}
-                  </Text>
-                  <Text>{m.content}</Text>
-              </Box>
+              <RoleMessage key={m.id} role={m.role} content={m.content}/>
           ))}
+              <Box>
+                { isLoading ? <LoadingMessage /> : null}
+              </Box>
           {/* Empty div to scroll to */}
           <Box ref={messagesEndRef}></Box>
         </Box>
@@ -107,9 +133,15 @@ type ChatBotModalProps = ModalContentProps &
 
   const Chat = () => {
     'use client';
+    const [isLoading, setIsLoading] = useState(false)
+    const { messages, input, handleInputChange, handleSubmit } = useChat({ onResponse: () => { setIsLoading(false) } });
+    const messagesEndRef = useRef<null | HTMLDivElement>(null);
 
-    const { messages, input, handleInputChange, handleSubmit } = useChat();
-    const messagesEndRef = useRef<null | HTMLDivElement>(null)
+    // @ts-ignore
+    const onSubmit = (e) => {
+      setIsLoading(true);
+      handleSubmit(e);
+    }
 
     useEffect(() => {
         messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
@@ -123,8 +155,8 @@ type ChatBotModalProps = ModalContentProps &
         h="full"
       >
         <ChatHeader />
-        <ChatMessages messages={messages} messagesEndRef={messagesEndRef} />
-        <ChatInput input={input} handleInputChange={handleInputChange} handleSubmit={handleSubmit} />
+        <ChatMessages messages={messages} messagesEndRef={messagesEndRef} isLoading={isLoading} />
+        <ChatInput input={input} handleInputChange={handleInputChange} handleSubmit={(e) => onSubmit(e)} />
       </Flex>
     );
   }
