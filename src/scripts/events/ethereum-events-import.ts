@@ -1,24 +1,30 @@
 import { CommunityConference } from "@/lib/types"
+
 import "dotenv/config"
 
-async function getPageMetadata(url: string): Promise<Record<string, string>>  {   
+async function getPageMetadata(url: string): Promise<Record<string, string>> {
   try {
     const metaTags: Record<string, string> = {}
     const text = await fetch(url).then((r) => r.text())
-    
-    const description = text.match(/<meta.*?name="description".*?content="(.*?)".*?>|<meta.*?content="(.*?)".*?name="description".*?>/i)
-    if (description && Array.from(description).length > 2) metaTags['description'] = Array.from(description)[1]    
 
-    const tags = text.matchAll(/<meta (property|name)="(og|twitter):(\S+)" content="(\S+)"/gm)
+    const description = text.match(
+      /<meta.*?name="description".*?content="(.*?)".*?>|<meta.*?content="(.*?)".*?name="description".*?>/i
+    )
+    if (description && Array.from(description).length > 2)
+      metaTags["description"] = Array.from(description)[1]
+
+    const tags = text.matchAll(
+      /<meta (property|name)="(og|twitter):(\S+)" content="(\S+)"/gm
+    )
     for (const matchGroup of Array.from(tags)) {
       const key = matchGroup[3]
       const value = matchGroup[4]
       if (key && value) metaTags[key] = value
     }
-    
+
     return metaTags
   } catch (error) {
-    console.error('Unable to fetch metadata', url)
+    console.error("Unable to fetch metadata", url)
     return {}
   }
 }
@@ -51,7 +57,13 @@ export async function EthereumEventsImport() {
     const link: string = data.values[4][i]
 
     if (!title || !startDate || !endDate || !location) continue
-    if (startDate.includes("TBD") || endDate.includes("TBD") || !startDate.includes(' ') || !endDate.includes(' ')) continue
+    if (
+      startDate.includes("TBD") ||
+      endDate.includes("TBD") ||
+      !startDate.includes(" ") ||
+      !endDate.includes(" ")
+    )
+      continue
 
     let start, end
     try {
@@ -64,20 +76,23 @@ export async function EthereumEventsImport() {
     }
 
     let websiteUrl = link
-    let description = ''
-    let imageUrl = ''
+    let description = ""
+    let imageUrl = ""
     if (link) {
-      websiteUrl = link.startsWith('https://') || link.startsWith('http://') ? link : `https://${link}`
+      websiteUrl =
+        link.startsWith("https://") || link.startsWith("http://")
+          ? link
+          : `https://${link}`
       const meta = await getPageMetadata(websiteUrl)
-      
+
       if (meta.description) description = meta.description
-      if (meta.image && meta.image.startsWith('http')) imageUrl = meta.image
+      if (meta.image && meta.image.startsWith("http")) imageUrl = meta.image
     }
 
     events.push({
       title: title,
-      startDate: new Date(start).toISOString().substring(0,10),
-      endDate: new Date(end).toISOString().substring(0,10),
+      startDate: new Date(start).toISOString().substring(0, 10),
+      endDate: new Date(end).toISOString().substring(0, 10),
       to: websiteUrl,
       location: location,
       description: description,
