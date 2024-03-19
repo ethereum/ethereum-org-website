@@ -35,7 +35,6 @@ These projects have created their own grants for projects aimed at developing an
 - [Swarm Foundation Grants Program](https://my.ethswarm.org/grants) - _[Swarm Foundation](https://www.ethswarm.org/) ecosystem_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/) ecosystem_
 - [Uniswap Grants Program](https://www.uniswapfoundation.org/grants) – _[Uniswap](https://uniswap.org/) community_
-- [Web3 Grants](https://web3grants.net) - _An extensive list of web3/crypto related grant programs_
 
 ## Quadratic funding {#quadratic-funding}
 
