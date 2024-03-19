@@ -188,7 +188,7 @@ const WalletFilterFeature = ({
                               alignItems="center"
                               justifyContent="space-between"
                             >
-                              <>{item.title}</>
+                              {item.title}
 
                               <>
                                 {item.filterKey && (

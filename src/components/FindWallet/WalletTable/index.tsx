@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { ReactNode, useContext } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
@@ -38,6 +38,7 @@ import {
 } from "@/lib/utils/wallets"
 
 import {
+  DEFAULT_LOCALE,
   NAV_BAR_PX_HEIGHT,
   NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN,
 } from "@/lib/constants"
@@ -45,6 +46,7 @@ import {
 import { SupportedLanguagesTooltip } from "./SupportedLanguagesTooltip"
 import { WalletEmptyState } from "./WalletEmptyState"
 
+import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 import { useWalletTable } from "@/hooks/useWalletTable"
 
 const Container = (props: TableProps) => (
@@ -123,6 +125,7 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
 
 const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
   <Grid
+    tabIndex={0}
     ref={ref}
     cursor="pointer"
     py={4}
@@ -222,6 +225,9 @@ const WalletTable = ({
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
 
+  // Context API
+  const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
+
   return (
     <Container>
       <WalletContentHeader>
@@ -234,9 +240,10 @@ const WalletTable = ({
               color="primary.base"
               textTransform="uppercase"
             >
-              {`${t("page-find-wallet-filters")} (${walletsListingCount(
-                filters
-              )})`}
+              {`${t("page-find-wallet-filters")} (${
+                walletsListingCount(filters) +
+                (supportedLanguage === DEFAULT_LOCALE ? 0 : 1)
+              })`}
             </Text>
 
             {filteredWallets.length === walletCardData.length ? (
@@ -296,22 +303,28 @@ const WalletTable = ({
             sliceSize
           )
 
+          const showMoreInfo = (wallet) => {
+            updateMoreInfo(wallet.key)
+            // Log "more info" event only on expanding
+            wallet.moreInfo &&
+              trackCustomEvent({
+                eventCategory: "WalletMoreInfo",
+                eventAction: `More info wallet`,
+                eventName: `More info ${wallet.name}`,
+              })
+          }
+
           return (
             <WalletContainer
               key={wallet.key}
               bg={wallet.moreInfo ? "background.highlight" : "transparent"}
             >
               <Wallet
-                onClick={() => {
-                  updateMoreInfo(wallet.key)
-                  // Log "more info" event only on expanding
-                  wallet.moreInfo &&
-                    trackCustomEvent({
-                      eventCategory: "WalletMoreInfo",
-                      eventAction: `More info wallet`,
-                      eventName: `More info ${wallet.name}`,
-                    })
+                // Make wallets more info section open on 'Enter'
+                onKeyUp={(e) => {
+                  if (e.key === "Enter") showMoreInfo(wallet)
                 }}
+                onClick={() => showMoreInfo(wallet)}
               >
                 <Td lineHeight="revert">
                   <Flex

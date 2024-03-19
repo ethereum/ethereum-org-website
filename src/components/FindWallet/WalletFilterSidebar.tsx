@@ -1,3 +1,4 @@
+import { useContext } from "react"
 import { useTranslation } from "next-i18next"
 import {
   Box,
@@ -15,7 +16,11 @@ import WalletFilterFeature from "@/components/FindWallet/WalletFilterFeature"
 
 import { walletsListingCount } from "@/lib/utils/wallets"
 
+import { DEFAULT_LOCALE } from "@/lib/constants"
+
 import { ResetFiltersButton } from "./ResetFiltersButton"
+
+import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 
 export type WalletFilterSidebarProps = Omit<TabsProps, "children"> & {
   filters: WalletFilter
@@ -44,6 +49,9 @@ const WalletFilterSidebar = ({
 }: WalletFilterSidebarProps) => {
   const theme = useTheme()
   const { t } = useTranslation("page-wallets-find-wallet")
+
+  // Context API
+  const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
 
   return (
     <Tabs
@@ -82,9 +90,10 @@ const WalletFilterSidebar = ({
             lineHeight={1.6}
             fontSize={showMobileSidebar ? "lg" : "md"}
           >
-            {`${t("page-find-wallet-filters")} (${walletsListingCount(
-              filters
-            )})`}
+            {`${t("page-find-wallet-filters")} (${
+              walletsListingCount(filters) +
+              (supportedLanguage === DEFAULT_LOCALE ? 0 : 1)
+            })`}
           </Text>
 
           <Box display={showMobileSidebar ? "none" : "block"}>

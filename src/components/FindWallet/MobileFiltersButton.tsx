@@ -1,3 +1,4 @@
+import { useContext } from "react"
 import { useTranslation } from "next-i18next"
 import { Box, Text } from "@chakra-ui/react"
 
@@ -8,9 +9,11 @@ import { Button } from "@/components/Buttons"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { walletsListingCount } from "@/lib/utils/wallets"
 
-import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
+import { DEFAULT_LOCALE, NAV_BAR_PX_HEIGHT } from "@/lib/constants"
 
 import { FilterBurgerIcon } from "../icons/wallets"
+
+import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 
 interface MobileFiltersButtonProps {
   filters: WalletFilter
@@ -26,6 +29,9 @@ export const MobileFiltersButton = ({
   onClose,
 }: MobileFiltersButtonProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
+
+  // Context API
+  const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
 
   return (
     <Box
@@ -67,7 +73,9 @@ export const MobileFiltersButton = ({
             lineHeight="14px"
             color="body.medium"
           >
-            {walletsListingCount(filters)} {t("page-find-wallet-active")}
+            {walletsListingCount(filters) +
+              (supportedLanguage === DEFAULT_LOCALE ? 0 : 1)}{" "}
+            {t("page-find-wallet-active")}
           </Text>
         </Box>
       </Button>
