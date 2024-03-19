@@ -11296,6 +11296,69 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "sixhobbits",
+      "name": "Gareth Dwyer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/2641205?v=4",
+      "profile": "https://dwyer.co.za",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "UNOFFICIALbgd",
+      "name": "UNOFFICIALbgd",
+      "avatar_url": "https://avatars.githubusercontent.com/u/71248977?v=4",
+      "profile": "https://github.com/UNOFFICIALbgd",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Codex-Bugmenot",
+      "name": "Codex-Bugmenot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59927099?v=4",
+      "profile": "https://github.com/Codex-Bugmenot",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "doutv",
+      "name": "Jason Huang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20609724?v=4",
+      "profile": "http://huangyongjin.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "adeolu98",
+      "name": "dCRYPT",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39372980?v=4",
+      "profile": "https://github.com/adeolu98",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "sourabupadhya123",
+      "name": "Sourab",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64914231?v=4",
+      "profile": "https://github.com/sourabupadhya123",
+      "contributions": [
+        "security"
+      ]
+    },
+    {
+      "login": "ykaravas",
+      "name": "ykaravas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6537956?v=4",
+      "profile": "https://github.com/ykaravas",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
