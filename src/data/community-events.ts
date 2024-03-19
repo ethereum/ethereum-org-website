@@ -415,6 +415,14 @@ const communityConferences: CommunityConference[] = [
     startDate: "TBD",
     endDate: "TBD"
   },
+  {
+    title: "ETHGlobal Devcon 2024",
+    to: "https://ethglobal.com/events/devcon2024",
+    location: "TBD",
+    description: "Whenever Devcon happens, we’ll be running a large hackathon right alongside it. Don’t miss the biggest web3 developer meetup of the year in South East Asia.",
+    startDate: "TBD",
+    endDate: "TBD"
+  },
 ]
 
 export default communityConferences
