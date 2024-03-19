@@ -9,7 +9,7 @@ import {
   Text,
 } from "@chakra-ui/react"
 
-import { WalletFilter } from "@/lib/types"
+import { WalletFilter, WalletPersonas } from "@/lib/types"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getPersonaBorderColor } from "@/lib/utils/wallets"
@@ -32,6 +32,26 @@ const WalletFilterPersona = ({
   showMobileSidebar,
 }: WalletFilterPersonaProps) => {
   const personas = useWalletPersonas()
+  const handleSelectPersona = (idx: number, persona: WalletPersonas) => {
+    if (idx === selectedPersona) {
+      resetFilters()
+
+      trackCustomEvent({
+        eventCategory: "UserPersona",
+        eventAction: `${persona.title}`,
+        eventName: `${persona.title} false`,
+      })
+    } else {
+      setSelectedPersona(idx)
+      setFilters(persona.presetFilters)
+
+      trackCustomEvent({
+        eventCategory: "UserPersona",
+        eventAction: `${persona.title}`,
+        eventName: `${persona.title} true`,
+      })
+    }
+  }
 
   return (
     <Grid
@@ -67,23 +87,9 @@ const WalletFilterPersona = ({
                 borderColor: "primary.hover",
               }}
               role="group"
-              onClick={() => {
-                if (idx === selectedPersona) {
-                  resetFilters()
-                  trackCustomEvent({
-                    eventCategory: "UserPersona",
-                    eventAction: `${persona.title}`,
-                    eventName: `${persona.title} false`,
-                  })
-                } else {
-                  setSelectedPersona(idx)
-                  setFilters(persona.presetFilters)
-                  trackCustomEvent({
-                    eventCategory: "UserPersona",
-                    eventAction: `${persona.title}`,
-                    eventName: `${persona.title} true`,
-                  })
-                }
+              onClick={() => handleSelectPersona(idx, persona)}
+              onKeyUp={(e) => {
+                if (e.key === "Enter") handleSelectPersona(idx, persona)
               }}
             >
               <Flex gap={2} mb={showMobileSidebar ? 0 : 1} px={1.5}>

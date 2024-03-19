@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react"
 import { useTranslation } from "next-i18next"
 
-import { FilterOptionType } from "@/lib/types"
+import { FilterOption } from "@/lib/types"
 
 import { WalletFilterFeatureProps } from "@/components/FindWallet/WalletFilterFeature"
 
@@ -43,7 +43,7 @@ export const useWalletFilterFeature = ({
   updateFilterOptions,
 }: UseWalletFilterFeatureProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
-  const [filterOptions, setFilterOptions] = useState<FilterOptionType[]>([
+  const [filterOptions, setFilterOptions] = useState<FilterOption[]>([
     {
       title: t("page-find-wallet-device"),
       items: [

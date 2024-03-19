@@ -551,7 +551,7 @@ export interface WalletFilterData {
   description: TranslationKey | ""
 }
 
-export type FilterOptionType = {
+export type FilterOption = {
   title: string
   items: Array<{
     title: string
@@ -608,7 +608,7 @@ export interface DropdownOption {
   category: string
 }
 
-export type WalletSupportedLanguageContextType = {
+export type WalletSupportedLanguageContext = {
   supportedLanguage: string
   setSupportedLanguage: (language: string) => void
 }
