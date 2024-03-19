@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from "react"
+import { Message } from "ai";
 import { useChat, UseChatHelpers } from "ai/react";
 import { Box, Flex,FormControl, Heading,Input, Spinner,Text } from '@chakra-ui/react';
 import {
@@ -10,6 +11,16 @@ import {
   type ModalProps,
   UseDisclosureReturn,
 } from "@chakra-ui/react"
+
+type TemplateMessageProps = {
+  children: React.ReactNode; 
+  role: Message["role"];
+}
+
+type RoleMessageProps = {
+  role: Message["role"];
+  content: Message["content"];
+};
 
 type ChatMessagesProps = {
   messages: UseChatHelpers["messages"];
@@ -56,7 +67,7 @@ type ChatBotModalProps = ModalContentProps &
     )
   }
 
-  const MessageTemplate = ({ children, role }) => {
+  const TemplateMessage = ({ children, role }: TemplateMessageProps) => {
     return (
     <Box whiteSpace="pre-wrap" mb="32px">
       <Text as="span" color="body.medium" fontSize="sm" fontStyle="italic">
@@ -67,21 +78,23 @@ type ChatBotModalProps = ModalContentProps &
   )
 }
 
+const RoleMessage = ({ role, content }: RoleMessageProps) => {
+  return (
+    <TemplateMessage role={role}>
+      <Text>{content}</Text>
+    </TemplateMessage>
+  )
+}
+
 const LoadingMessage = () => {
   return (
-    <MessageTemplate role="assistant">
+    <TemplateMessage role="assistant">
       <Spinner display="block" w="1rem" h="1rem"/>
-    </MessageTemplate>
+    </TemplateMessage>
 )
 }
 
-const RoleMessage = ({ role, content }) => {
-  return (
-    <MessageTemplate role={role}>
-      <Text>{content}</Text>
-    </MessageTemplate>
-  )
-}
+
 
   const ChatMessages = ({ messages, messagesEndRef, isLoading }: ChatMessagesProps) => {
     return (
