@@ -28,7 +28,9 @@ export const LanguageSupportFilter = () => {
   const { locale } = useRouter()
 
   // Context API
-  const { setSupportedLanguage } = useContext(WalletSupportedLanguageContext)
+  const { supportedLanguage, setSupportedLanguage } = useContext(
+    WalletSupportedLanguageContext
+  )
 
   const allWalletsLanguages = getAllWalletsLanguages(locale!)
   const allWalletsLanguagesOptions = allWalletsLanguages!.map(
@@ -83,9 +85,9 @@ export const LanguageSupportFilter = () => {
               textAlign="initial"
               _hover={{ background: "transparent" }}
             >
-              <Box as="span" flex={1}>
-                <Text>{t("page-find-wallet-languages-supported")}</Text>
-              </Box>
+              <Text as="span" flex={1}>
+                {t("page-find-wallet-languages-supported")}
+              </Text>
 
               <AccordionIcon
                 color="primary.base"
@@ -99,9 +101,10 @@ export const LanguageSupportFilter = () => {
             <Select
               instanceId="language-support-filter"
               aria-label={t("page-find-wallet-languages-supported")}
+              aria-placeholder={t("page-find-wallet-languages-search-language")}
               options={allWalletsLanguagesOptions}
               onChange={handleLanguageFilterSelectChange}
-              placeholder={t("page-find-wallet-languages-search-language")}
+              placeholder={getLanguageCodeName(supportedLanguage, locale!)}
               isSearchable
               variant="outline"
             />
