@@ -96,12 +96,12 @@ const WalletFilterSidebar = ({
             })`}
           </Text>
 
-          <Box display={showMobileSidebar ? "none" : "block"}>
+          {!showMobileSidebar && (
             <ResetFiltersButton
               resetFilters={resetFilters}
               resetWalletFilter={resetWalletFilter}
             />
-          </Box>
+          )}
         </Flex>
       </Box>
 

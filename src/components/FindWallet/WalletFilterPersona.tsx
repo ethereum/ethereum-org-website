@@ -95,9 +95,7 @@ const WalletFilterPersona = ({
                     my={0}
                     mx={1}
                     fill={
-                      selectedPersona === idx
-                        ? "primary.base"
-                        : "rgba(0, 0, 0, 0)"
+                      selectedPersona === idx ? "primary.base" : "transparent"
                     }
                     background={
                       selectedPersona === idx ? "primary.base" : "transparent"
@@ -128,17 +126,18 @@ const WalletFilterPersona = ({
                 </Heading>
               </Flex>
 
-              <Text
-                display={showMobileSidebar ? "none" : "block"}
-                p="0.4rem"
-                color={selectedPersona === idx ? "text" : "text200"}
-                fontSize="sm"
-                fontWeight="normal"
-                transition="0.5s all"
-                lineHeight={1.3}
-              >
-                {persona.description}
-              </Text>
+              {!showMobileSidebar && (
+                <Text
+                  p="0.4rem"
+                  color={selectedPersona === idx ? "text" : "text200"}
+                  fontSize="sm"
+                  fontWeight="normal"
+                  transition="0.5s all"
+                  lineHeight={1.3}
+                >
+                  {persona.description}
+                </Text>
+              )}
             </Flex>
           </GridItem>
         )
