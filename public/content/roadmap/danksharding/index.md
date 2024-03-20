@@ -65,7 +65,7 @@ If someone knows the random locations used for the commitment, it is easy for th
 
 Danksharding is the full realization of the rollup scaling that began with Proto-Danksharding. Danksharding will bring massive amounts of space on Ethereum for rollups to dump their compressed transaction data. This means Ethereum will be able to support hundreds of individual rollups with ease and make millions of transactions per second a reality.
 
-The way this works is by expanding the blobs attached to blocks from one (1) in Proto-Danksharding, to 64 in full Danksharding. The rest of the changes required are all updates to the way consensus clients operate to enable them to handle the new large blobs. Several of these changes are already on the roadmap for other purposes independent of Danksharding. For example, Danksharding requires proposer-builder separation to have been implemented. This is an upgrade that separates the tasks of building blocks and proposing blocks across different validators. Similarly, data availability sampling is required for Danksharding, but it is also required for the development of very lightweight clients that do not store much historical data ("stateless clients").
+The way this works is by expanding the blobs attached to blocks from six (6) in Proto-Danksharding, to 64 in full Danksharding. The rest of the changes required are all updates to the way consensus clients operate to enable them to handle the new large blobs. Several of these changes are already on the roadmap for other purposes independent of Danksharding. For example, Danksharding requires proposer-builder separation to have been implemented. This is an upgrade that separates the tasks of building blocks and proposing blocks across different validators. Similarly, data availability sampling is required for Danksharding, but it is also required for the development of very lightweight clients that do not store much historical data ("stateless clients").
 
 <ExpandableCard title="Why does Danksharding require proposer-builder separation?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
@@ -81,7 +81,7 @@ Data availability sampling is required for validators to quickly and efficiently
 
 ### Current progress {#current-progress}
 
-Full Danksharding is several years away. In the meantime, the KZG ceremony has concluded with over 140,000 contributions, and the [EIP](https://eips.ethereum.org/EIPS/eip-4844) for Proto-Danksharding has matured, with an agreed upon production-ready specification already being tested on testnets. This upgrade is set to go live on Ethereum Mainnet in March 2024 as part of the Deneb + Cancun upgrade. You can keep up to date using the [EIP 4844 readiness checklist](https://github.com/ethereum/pm/blob/master/Dencun/4844-readiness-checklist.md).
+Full Danksharding is several years away. In the meantime, the KZG ceremony has concluded with over 140,000 contributions, and the [EIP](https://eips.ethereum.org/EIPS/eip-4844) for Proto-Danksharding has matured. This proposal has been fully implemented in all testnets, and went live on Mainnet with the Cancun-Deneb ("Dencun") network upgrade in March 2024.
 
 ### Further reading {#further-reading}
 

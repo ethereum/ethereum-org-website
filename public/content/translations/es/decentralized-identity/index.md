@@ -49,7 +49,7 @@ Los identificadores descentralizados se almacenan en las cadenas de bloques o re
 
 ## ¿Qué hace que los identificadores descentralizados sean posibles? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infraestructura de clave pública (ICP) {#public-key-infrastructure}
+### 1. Infraestructura de clave pública (ICP) {#public-key-cryptography}
 
 La infraestructura de clave pública (ICP) es una medida de seguridad de la información que genera una [clave pública](/glossary/#public-key) y una [clave privada](/glossary/#private-key) para una entidad. La criptografía de clave pública se utiliza en las redes de cadena de bloques para autenticar las identidades del usuario y demostrar la propiedad de los activos digitales.
 

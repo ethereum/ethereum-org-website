@@ -165,18 +165,15 @@ export const tutorialsComponents = {
   StyledDivider,
   YouTube,
 }
-interface TutorialLayoutProps
-  extends ChildOnlyProp,
-    Pick<
-      MdPageContent,
-      | "tocItems"
-      | "lastUpdatedDate"
-      | "crowdinContributors"
-      | "contentNotTranslated"
-    > {
-  frontmatter: TutorialFrontmatter
-  timeToRead: number
-}
+type TutorialLayoutProps = ChildOnlyProp &
+  Pick<
+    MdPageContent,
+    "tocItems" | "crowdinContributors" | "contentNotTranslated"
+  > &
+  Required<Pick<MdPageContent, "lastUpdatedDate">> & {
+    frontmatter: TutorialFrontmatter
+    timeToRead: number
+  }
 
 export const TutorialLayout = ({
   children,
@@ -194,7 +191,8 @@ export const TutorialLayout = ({
   const postMergeBannerTranslationString =
     frontmatter.postMergeBannerTranslation as TranslationKey | null
   const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
-  const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
+  const intlLastEdit =
+    "data" in gitHubLastEdit ? gitHubLastEdit.data! : lastUpdatedDate
   const useGitHubContributors =
     frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
@@ -226,7 +224,7 @@ export const TutorialLayout = ({
           {useGitHubContributors ? (
             <GitHubContributors
               relativePath={relativePath}
-              lastUpdatedDate={lastUpdatedDate!}
+              lastUpdatedDate={lastUpdatedDate}
             />
           ) : (
             <CrowdinContributors
