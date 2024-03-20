@@ -15,7 +15,7 @@ summaryPoints:
 
 ## What is Proto-Danksharding? {#what-is-protodanksharding}
 
-Proto-Danksharding, also known as [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), is a way for [rollups](/layer2/#rollups) to add cheaper data to blocks. The name comes from the two researchers who proposed the idea: Protolambda and Dankrad Feist. Historically, rollups had been limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`.
+Proto-Danksharding, also known as [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), is a way for [rollups](/layer-2/#rollups) to add cheaper data to blocks. The name comes from the two researchers who proposed the idea: Protolambda and Dankrad Feist. Historically, rollups had been limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`.
 
 This is expensive because it is processed by all Ethereum nodes and lives on-chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent and attached to blocks. The data in these blobs is not accessible to the EVM and is automatically deleted after a fixed time period (set to 4096 epochs at time of writing, or about 18 days). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
 
