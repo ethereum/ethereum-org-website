@@ -25,5 +25,4 @@ Some collaborative efforts to make Ethereum enterprise friendly have been put to
 - [Clearmatics Autonity](https://www.clearmatics.com/about/) _protocol suite that implements p2p protocols and provides client software and infrastructure_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _Open-source Ethereum client developed under the Apache 2.0 license and written in Java, which includes several consensus algorithms including PoW, and PoA (IBFT, IBFT 2.0, Ethash, and Clique). Its comprehensive permissioning schemes are designed specifically for use in a consortium environment._
 - [Kaleido](https://kaleido.io/) _full-stack platform for building and running cross-cloud, hybrid enterprise ecosystems_
-- [Quorum](https://consensys.io/quorum/) _an Ethereum-based open source enterprise blockchain platform with advanced enterprise grade features enabling privacy, permissioning and performance_
 - [Zeeve](https://www.zeeve.io/) _provides a range of products and tools for building on Ethereum, also infrastructure and APIs for Enterprise Web3 applications_
