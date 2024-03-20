@@ -11405,6 +11405,15 @@
       "contributions": [
         "tutorial"
       ]
+    },
+    {
+      "login": "reetbatra",
+      "name": "Reet Batra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51335174?v=4",
+      "profile": "https://github.com/reetbatra",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
