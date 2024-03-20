@@ -6,7 +6,7 @@ import { getOgImage } from "@/lib/utils/metadata"
 import { filterRealLocales } from "@/lib/utils/translations"
 import { getFullUrl } from "@/lib/utils/url"
 
-import { SITE_URL } from "@/lib/constants"
+import { DEFAULT_LOCALE, SITE_URL } from "@/lib/constants"
 
 type NameMeta = {
   name: string
@@ -52,6 +52,9 @@ const PageMetadata = ({
   const url = getFullUrl(locale, path)
   const canonical = canonicalUrl || url
 
+  // Set x-default URL for hreflang
+  const xDefault = getFullUrl(DEFAULT_LOCALE, path)
+
   /* Set fallback ogImage based on path */
   const ogImage = image || getOgImage(slug)
 
@@ -85,6 +88,7 @@ const PageMetadata = ({
         />
       ))}
       <link rel="canonical" key={canonical} href={canonical} />
+      <link rel="alternate" hrefLang="x-default" href={xDefault} />
       {locales.map((loc) => (
         <link
           key={loc}

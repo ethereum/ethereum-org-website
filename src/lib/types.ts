@@ -491,3 +491,37 @@ export type CommunityConference = {
   startDate: string
   endDate: string
 }
+
+// Historical upgrades
+type NetworkUpgradeDetails = {
+  blockNumber?: number
+  epochNumber?: number
+  slotNumber?: number
+} & (
+  | {
+      isPending: true
+      dateTimeAsString?: string
+      ethPriceInUSD?: never
+      waybackLink?: never
+    }
+  | {
+      ethPriceInUSD: number
+      waybackLink: string
+      dateTimeAsString: string
+      isPending?: never
+    }
+)
+
+export type NetworkUpgradeData = Record<string, NetworkUpgradeDetails>
+
+// Footer
+export type FooterLink = {
+  to: string
+  text: TranslationKey
+  isPartiallyActive?: boolean
+}
+
+export type FooterLinkSection = {
+  title: TranslationKey
+  links: FooterLink[]
+}

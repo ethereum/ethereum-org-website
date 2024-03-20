@@ -27,7 +27,7 @@ El rol de la cadena de balisa canviarà amb el pas del temps, però és un eleme
 
 La cadena de balisa introduirà la [prova de participació](/developers/docs/consensus-mechanisms/pos/) a Ethereum. És una manera nova d'ajudar a mantenir segur l'Ethereum. Ho podeu concebre com un bé públic que farà Ethereum més saludable i et farà guanyar més ETH en el procés. A la pràctica, haureu d'apostar ETH per tal d'activar el programari de validació. Com a validador, processareu les transaccions i creareu nous blocs a la cadena.
 
-Apostar i convertir-se en validador és més senzill que [minar](/developers/docs/mining/) (la manera actual de mantenir la xarxa segura). I s'espera que això contribueixi a fer Ethereum més segur a llarg termini. Com més gent participi a la xarxa, més descentralitzada i segura serà davant dels atacs.
+Apostar i convertir-se en validador és més senzill que [minar](/developers/docs/consensus-mechanisms/pow/mining/) (la manera actual de mantenir la xarxa segura). I s'espera que això contribueixi a fer Ethereum més segur a llarg termini. Com més gent participi a la xarxa, més descentralitzada i segura serà davant dels atacs.
 
 <InfoBanner emoji=":money_bag:">
 Si us interessa ser validador i contribuir a protegir la cadena de balisa, <a href="/staking/">aquí podeu aprendre més sobre les apostes</a>.

@@ -87,3 +87,8 @@ export const SECTION_LABELS: NavSectionKey[] = [
   "participate",
   "research",
 ]
+
+// Glossary Definition Component
+export const DEFAULT_GLOSSARY_NS = "glossary"
+
+export const NAV_PY = 4

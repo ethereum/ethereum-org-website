@@ -58,7 +58,7 @@ Masalah dengan penskalaan agregasi dengan meningkatkan jumlah validator per subn
 
 ## Kemajuan saat ini {#current-progress}
 
-SSF sedang dalam tahap penelitian. Ini tidak diharapkan akan diluncurkan dalam beberapa tahun ke depan, kemungkinan setelah peningkatan besar lainnya seperti [Verkle trees](/roadmap/verkle-trees/) dan [Danksharding](/roadmap/danksharding]).
+SSF sedang dalam tahap penelitian. Ini tidak diharapkan akan diluncurkan dalam beberapa tahun ke depan, kemungkinan setelah peningkatan besar lainnya seperti [Verkle trees](/roadmap/verkle-trees/) dan [Danksharding](/roadmap/danksharding/).
 
 ## Bacaan lebih lanjut {#further-reading}
 

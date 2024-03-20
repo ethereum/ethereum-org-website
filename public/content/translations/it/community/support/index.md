@@ -39,7 +39,7 @@ Cerchi un portafoglio Ethereum? [Esplora il nostro elenco completo di portafogli
 La costruzione può essere difficile. Ecco alcuni spazi focalizzati sullo sviluppo, con sviluppatori Ethereum esperti che sono felici di aiutarti.
 
 - [Alchemy University](https://university.alchemy.com/#starter_code)
-- [CryptoDevs discord](https://discord.gg/Z9TA39m8Yu)
+- [CryptoDevs discord](https://discord.com/invite/5W5tVb3)
 - [StackExchange Ethereum](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [Web3 University](https://www.web3.university/)
@@ -53,7 +53,7 @@ La tua domanda riguarda un particolare strumento, progetto o libreria? La maggio
 
 Ecco alcuni esempi più diffusi:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -65,7 +65,7 @@ Ecco alcuni esempi più diffusi:
 
 Se stai eseguendo un nodo o un validatore, ecco alcune community che sono dedicate ad aiutarti ad iniziare.
 
-- [EthStaker discord](https://discord.io/ethstaker)
+- [EthStaker discord](https://discord.gg/ethstaker)
 - [EthStaker reddit](https://www.reddit.com/r/ethstaker)
 
 La maggior parte dei team che costruiscono client di Ethereum hanno anche spazi dedicati, rivolti al pubblico, dove è possibile ottenere supporto e fare domande.

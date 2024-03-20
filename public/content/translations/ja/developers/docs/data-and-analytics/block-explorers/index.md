@@ -16,15 +16,15 @@ sidebarDepth: 3
 - [Etherscan](https://etherscan.io/) –_中国語、韓国語、ロシア語、日本語でも利用できます_
 - [Beaconcha.in](https://beaconcha.in/)
 - [blockchair](https://blockchair.com/ethereum) –_スペイン語、フランス語、イタリア語、オランダ語、ポルトガル語、ロシア語、中国語、ペルシア語でも利用できます_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
+- [Chainlens](https://www.chainlens.com/)
+- [DexGuru ブロックエクスプローラー](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/) –_中国語、スペイン語、フランス語、トルコ語、ロシア語、韓国語、ベトナム語でも利用できます_
+- [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
-- [Sirato](https://www.web3labs.com/sirato)
-- [EthVM](https://www.ethvm.com/)
-- [DexGuru ブロックエクスプローラー](https://ethereum.dex.guru/)
 
 ## データ {#data}
 

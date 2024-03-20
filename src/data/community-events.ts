@@ -91,15 +91,6 @@ const communityConferences: CommunityConference[] = [
     description: "ETH Community in SEA to #Build, #Learn and #Share together.",
   },
   {
-    title: "Ethereum Rio",
-    startDate: "2024-03-19",
-    endDate: "2024-03-24",
-    to: "https://www.ethereumbrasil.com/",
-    location: "Rio de Janeiro, Brazil",
-    description:
-      "3rd Edition of LATAM's most loved ETH event. Bootcamp, Buildathon & Conference",
-  },
-  {
     title: "ETHTaipei",
     startDate: "2024-03-21",
     endDate: "2024-03-24",
@@ -219,6 +210,15 @@ const communityConferences: CommunityConference[] = [
     description: "ETHGlobal Sydney is going to be an event full of hacking, networking, side events and fun activities. This will be our inaugural event on the continent of Oceania-completing the global in ETHGlobal as the sixth and final continent in our world tour.",
     startDate: "2024-5-3",
     endDate: "2024-5-5"
+  },
+  {
+    title: "ETH Rio",
+    startDate: "2024-05-13",
+    endDate: "2024-05-15",
+    to: "https://www.ethereumbrasil.com/",
+    location: "Rio de Janeiro, Brazil",
+    description:
+      "3rd Edition of ETH Rio. ETH Rio 2024 will bring regulators, builders and businesses to discuss the future of the Brazilian Tokenized Economy based on EVM.",
   },
   {
     title: "DappConn",
@@ -381,6 +381,14 @@ const communityConferences: CommunityConference[] = [
     description: "Pragma is a single-track, in-person summit hosted by ETHGlobal. With a focus on intimacy, Pragma serves as a hub for high-quality talks and as a forum of discussion for builders and leaders from Ethereum ecosystem and beyond. For the first time, we’re excited to introduce a multi-day format to cover an even wider range for all things happening in web3",
     startDate: "2024-10-15",
     endDate: "2024-10-17"
+  },
+  {
+    title: "ETHSofia",
+    to: "https://ethsofia.com",
+    location: "Sofia, Bulgaria",
+    description: "ETHSofia is a 3-day conference and hackathon event that brings together the Ethereum community in Bulgaria and beyond. It is a place for developers, researchers, and enthusiasts to come together and share knowledge and ideas.",
+    startDate: "2024-10-17",
+    endDate: "2024-10-19"
   },
   {
     title: "ETHGlobal San Francisco",

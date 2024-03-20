@@ -16,15 +16,15 @@ I block explorer sono il tuo portale sui dati di Ethereum. Puoi usarli per visua
 - [Etherscan](https://etherscan.io/): _disponibile anche in cinese, coreano, russo e giapponese_
 - [Beaconcha.in](https://beaconcha.in/)
 - [Blockchair](https://blockchair.com/ethereum): _disponibile anche in spagnolo, francese, italiano, olandese, portoghese, russo, cinese e farsi_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
+- [Chainlens](https://www.chainlens.com/)
+- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/): _disponibile anche in cinese, spagnolo, francese, turco, russo, coreano e vietnamita_
+- [EthVM](https://www.ethvm.com/)
 - [OKLink](https://www.oklink.com/eth)
 - [Otterscan](https://otterscan.io/)
 - [Rantom](https://rantom.app/)
-- [Sirato](https://www.web3labs.com/sirato)
-- [EthVM](https://www.ethvm.com/)
-- [DexGuru Block Explorer](https://ethereum.dex.guru/)
 
 ## Dati {#data}
 

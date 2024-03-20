@@ -27,11 +27,11 @@ Sedang mencari peningkatan protokol di masa mendatang? [Pelajari tentang upgrade
 
 ## 2023 {#2023}
 
-### Shanghai {#shanghai}
+### Shanghai-Capella ("Shapella") {#shapella}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### Ringkasan {#shanghai-summary}
+#### Ringkasan Shanghai {#shanghai-summary}
 
 Peningkatan Shanghai membawa penarikan penaruhan ke Lapisan Eksekusi. Bersamaan dengan peningkatan Capella, ini memungkinkan blok menerima operasi penarikan, yang memungkinkan para staker menarik ETH mereka dari Rantai Suar ke lapisan eksekusi.
 
@@ -49,13 +49,7 @@ Peningkatan Shanghai membawa penarikan penaruhan ke Lapisan Eksekusi. Bersamaan 
 
 - [Baca spesifikasi meningkatkan Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### Capella {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### Ringkasan {#capella-summary}
+#### Ringkasan Capella {#capella-summary}
 
 Peningkatan Capella adalah peningkatan utama ketiga pada lapisan konsensus (Rantai Suar) dan memungkinkan penarikan penaruhan. Capella terjadi secara bersamaan dengan upgrade lapisan eksekusi, Shanghai, dan mengaktifkan fungsionalitas penarikan penaruhan.
 
