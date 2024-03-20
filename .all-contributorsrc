@@ -11441,6 +11441,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "ardislu",
+      "name": "Ardis Lu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29699850?v=4",
+      "profile": "http://ardislu.dev",
+      "contributions": [
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
