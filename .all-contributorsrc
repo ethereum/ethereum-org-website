@@ -11396,6 +11396,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "veridelisi",
+      "name": "veridelisi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72710290?v=4",
+      "profile": "https://www.ispanyol.com",
+      "contributions": [
+        "tutorial"
+      ]
     }
   ],
   "contributorsPerLine": 7,

@@ -1772,6 +1772,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ryanpwaldon"><img src="https://avatars.githubusercontent.com/u/12480362?v=4?s=100" width="100px;" alt="Ryan Waldon"/><br /><sub><b>Ryan Waldon</b></sub></a><br /><a href="#content-ryanpwaldon" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=ryanpwaldon" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.4everland.org"><img src="https://avatars.githubusercontent.com/u/89854839?v=4?s=100" width="100px;" alt="4EVERLAND"/><br /><sub><b>4EVERLAND</b></sub></a><br /><a href="#tool-4everlandorg" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://member.acm.org/~rhymeq"><img src="https://avatars.githubusercontent.com/u/57232813?v=4?s=100" width="100px;" alt="iepn"/><br /><sub><b>iepn</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=iepn" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://www.ispanyol.com"><img src="https://avatars.githubusercontent.com/u/72710290?v=4?s=100" width="100px;" alt="veridelisi"/><br /><sub><b>veridelisi</b></sub></a><br /><a href="#tutorial-veridelisi" title="Tutorials">✅</a></td>
     </tr>
   </tbody>
 </table>
