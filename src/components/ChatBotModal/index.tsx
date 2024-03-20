@@ -108,40 +108,54 @@ const LoadingMessage = () => {
       setIsLoading(true)
     }
 
+    const EmptyState = () => {
+      return (
+        <Flex flex="1" direction="column" justifyContent="center">
+          <Text mb="4" textAlign="center" fontWeight="200" fontSize="3xl" opacity="0.2" m="auto">Ask me about Ethereum!</Text>
+          <Flex gap="3" justifyContent="center" flexWrap="wrap">
+            <SearchTag label="What is layer 2?" />
+            <SearchTag label="What is a wallet?" />
+            <SearchTag label="When is the next upgrade?" />
+            <SearchTag label="How can I send ETH to a friend?" />
+          </Flex>
+        </Flex>
+      )
+    }
+
+    const ConversationState = ({ messages }) => {
+      return (
+        <>
+          {messages.map(m => (
+                <RoleMessage key={m.id} role={m.role} content={m.content} />
+            ))}
+          <Box>
+            { isLoading ? <LoadingMessage /> : null}
+          </Box>
+          {/* Empty div to scroll to */}
+          <Box ref={messagesEndRef}></Box>
+      </>
+      )
+    }
+
     const SearchTag = ({ label }) => {
       return <Tag cursor="pointer" label={label} color="primary.highContrast" bgColor="primary.lowContrast" _hover={{ bgColor: "primary.hover", color: "background.base" }} onClick={(e) => submitLabelQuestion(e)} />
     }
 
     return (
-        <Flex
-          flex="1"
-          direction={ messages.length > 0 ? "column" : "column-reverse"}
-          justifyContent={ messages.length > 0 ? "normal" : "space-between"}
-          overflowY="auto"
-          py={4}
-          px={{ base: 4, sm: 8 }}
-        >
-              {messages.length > 0 ? (
-                messages.map(m => (
-                    <RoleMessage key={m.id} role={m.role} content={m.content} />
-                ))
-            ) : (
-                <>
-                <Flex gap="3" justifyContent="center" flexWrap="wrap">
-                  <SearchTag label="What is layer 2?" />
-                  <SearchTag label="What is a wallet?" />
-                  <SearchTag label="When is the next upgrade?" />
-                  <SearchTag label="How can I send ETH to a friend?" />
-                </Flex>
-                <Text mb="4" textAlign="center" fontWeight="bold" fontSize="xl">Ask me about Ethereum!</Text>
-                </>
-            )}
-            <Box>
-                { isLoading ? <LoadingMessage /> : null}
-              </Box>
-          {/* Empty div to scroll to */}
-          <Box ref={messagesEndRef}></Box>
-        </Flex>
+      <Flex
+        flex="1"
+        direction="column"
+        overflowY="auto"
+        py={4}
+        px={{ base: 4, sm: 8 }}
+      >
+            {messages.length > 0 
+            ? 
+            <ConversationState messages={messages} />
+            :
+            <EmptyState />
+            }
+      </Flex>
     )
   }
 
