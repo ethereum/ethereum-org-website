@@ -54,13 +54,13 @@ export const LanguageSupportFilter = () => {
     })
   }
 
-  const handleTopLanguageClick = (language) => {
-    setSupportedLanguage(language.code)
+  const handleTopLanguageClick = (languageCode: string) => {
+    setSupportedLanguage(languageCode)
 
     trackCustomEvent({
       eventCategory: "WalletFilterSidebar",
       eventAction: `Language search`,
-      eventName: getLanguageCodeName(language.code, locale!),
+      eventName: getLanguageCodeName(languageCode, locale!),
     })
   }
 
@@ -133,7 +133,7 @@ export const LanguageSupportFilter = () => {
                       color="primary.base"
                       size="sm"
                       cursor="pointer"
-                      onClick={handleTopLanguageClick}
+                      onClick={() => handleTopLanguageClick(language.code)}
                     >
                       {language.langName}
                     </Text>
