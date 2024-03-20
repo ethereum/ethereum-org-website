@@ -18,7 +18,6 @@ Bu programlar geniş bir proje yelpazesine hibeler sağlayarak geniş Ethereum e
 - [MetaCartel](https://www.metacartel.org/grants/) - _Dapp geliştirme, DAO oluşturma_
 - [Moloch DAO](https://www.molochdao.com/) - _Gizlilik, katman 2 ölçeklendirme, istemci güvenliği ve dahası_
 - [DAO Hibeleri](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Hibe sunan organizasyonların Google tablosu_
-- [Web3 Hibeleri için Crunchbase](https://www.cryptoneur.xyz/web3-grants) - _Hibeleri kategori, kullanım alanı, miktar ve dahasına göre filtreleyin ve arayın. Diğerlerinin doğru hibeyi bulabilmesine yardımcı olmak için katkı sağlayın._
 - [Akademik Hibeler](https://esp.ethereum.foundation/academic-grants) - _Ethereum ile ilgili akademik çalışmaları desteklemek için hibeler_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks, tüm hibelerin, RFP'lerin ve hata ödüllerinin kapsamlı bir dizinini derlemiştir._
 
@@ -35,7 +34,6 @@ Bu projeler kendi teknolojilerini geliştirmeye ve deneyimlemeye yönelik olarak
 - [SKALE Ağı Hibe Ekosistemi](https://skale.space/developers#grants) - _[SKALE Ağı](https://skale.space/) ekosistemi_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ekosistemi_
 - [Uniswap Grants Program](https://www.uniswapfoundation.org/apply-for-a-grant) - _[Uniswap](https://uniswap.org/) topluluğu_
-- [Web3 Hibeleri](https://web3grants.net) - _Web3/kripto ile ilgili hibe programlarının geniş bir listesi_
 
 ## İkinci dereceden finansman {#quadratic-funding}
 

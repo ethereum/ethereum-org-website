@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import { shuffle } from "lodash"
+import shuffle from "lodash/shuffle"
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { SSRConfig, useTranslation } from "next-i18next"

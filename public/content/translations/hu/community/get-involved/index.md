@@ -16,7 +16,7 @@ Kezdje azzal, hogy elolvassa az ethereum.org misszióját és értékeit a [maga
 - [Nyerjen jutalmat a Gitcoin-on](https://gitcoin.co/) azáltal, hogy kisebb-nagyobb technikai problémákon dolgozik, és kapjon érte kriptót!
 - Vegyen részt egy Önhöz közel eső [ETHGlobal](http://ethglobal.co/) hackathonon!
 - Nézze meg azokat a [projekteket, melyek a szakterületéhez vagy a választott programnyelvéhez kapcsolódnak](/developers/docs/programming-languages/)
-- Vegyen részt a [protokollfejlesztők megbeszélésein (Core Dev calls)](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Vegyen részt a [protokollfejlesztők megbeszélésein (Core Dev calls)](https://www.youtube.com/@EthereumProtocol)
 - [Ökoszisztémát támogató programok listája](https://esp.ethereum.foundation/wishlist/) – eszközök, dokumentáció és infrastruktúra, ahol az Ethereum-ökoszisztémát támogató programok aktívan várják a támogatásért jelentkezőket
 - [Web3Bridge](https://www.web3bridge.com/) – csatlakozzon az inspiráló web3-közösséghez, mely egész Afrikában fejlesztők és közösségi tagok százait választja ki, tanítja be és támogatja
 - Csatlakozzon a [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) csatornához

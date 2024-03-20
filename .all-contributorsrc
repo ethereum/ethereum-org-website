@@ -11325,14 +11325,130 @@
       ]
     },
     {
-      "login": "repo",
-      "name": "repo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/45478?v=4",
-      "profile": "https://github.com/repo",
+      "login": "doutv",
+      "name": "Jason Huang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/20609724?v=4",
+      "profile": "http://huangyongjin.com",
       "contributions": [
-        "doc",
-        "blog",
-        "translation"
+        "bug"
+      ]
+    },
+    {
+      "login": "adeolu98",
+      "name": "dCRYPT",
+      "avatar_url": "https://avatars.githubusercontent.com/u/39372980?v=4",
+      "profile": "https://github.com/adeolu98",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "sourabupadhya123",
+      "name": "Sourab",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64914231?v=4",
+      "profile": "https://github.com/sourabupadhya123",
+      "contributions": [
+        "security"
+      ]
+    },
+    {
+      "login": "ykaravas",
+      "name": "ykaravas",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6537956?v=4",
+      "profile": "https://github.com/ykaravas",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "allwin199",
+      "name": "Prince Allwin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127643894?v=4",
+      "profile": "https://allwin-portfolio.vercel.app/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ryanpwaldon",
+      "name": "Ryan Waldon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12480362?v=4",
+      "profile": "https://github.com/ryanpwaldon",
+      "contributions": [
+        "content",
+        "code"
+      ]
+    },
+    {
+      "login": "4everlandorg",
+      "name": "4EVERLAND",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89854839?v=4",
+      "profile": "https://www.4everland.org",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "iepn",
+      "name": "iepn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57232813?v=4",
+      "profile": "https://member.acm.org/~rhymeq",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "veridelisi",
+      "name": "veridelisi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72710290?v=4",
+      "profile": "https://www.ispanyol.com",
+      "contributions": [
+        "tutorial"
+      ]
+    },
+    {
+      "login": "reetbatra",
+      "name": "Reet Batra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51335174?v=4",
+      "profile": "https://github.com/reetbatra",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "gndelia",
+      "name": "Gonzalo D'Elia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/352474?v=4",
+      "profile": "https://github.com/gndelia",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "rileyannon",
+      "name": "Riley Annon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31807653?v=4",
+      "profile": "http://www.rileyannon.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ayofimihan",
+      "name": "Ogunsina Champion",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31336254?v=4",
+      "profile": "http://0x13.dev",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ardislu",
+      "name": "Ardis Lu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/29699850?v=4",
+      "profile": "http://ardislu.dev",
+      "contributions": [
+        "doc"
       ]
     }
   ],
