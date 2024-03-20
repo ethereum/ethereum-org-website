@@ -1,7 +1,7 @@
-import { kebabCase } from "lodash"
+import kebabCase from "lodash/kebabCase"
 import { MdInfoOutline } from "react-icons/md"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
-import { Box, Flex, HStack, Icon, Text, VStack } from "@chakra-ui/react"
+import { Box, Flex, Icon, Text } from "@chakra-ui/react"
 
 import type { StatsBoxMetric } from "@/lib/types"
 
