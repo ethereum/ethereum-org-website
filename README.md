@@ -1779,6 +1779,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://0x13.dev"><img src="https://avatars.githubusercontent.com/u/31336254?v=4?s=100" width="100px;" alt="Ogunsina Champion"/><br /><sub><b>Ogunsina Champion</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aayofimihan" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://ardislu.dev"><img src="https://avatars.githubusercontent.com/u/29699850?v=4?s=100" width="100px;" alt="Ardis Lu"/><br /><sub><b>Ardis Lu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ardislu" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
