@@ -27,7 +27,6 @@
     "@emotion/styled": "^11.11.0",
     "@radix-ui/react-navigation-menu": "^1.1.4",
     "@socialgouv/matomo-next": "^1.8.0",
-    "clipboard": "^2.0.11",
     "embla-carousel-react": "^7.0.0",
     "ethereum-blockies-base64": "^1.0.2",
     "focus-trap-react": "^10.2.3",

@@ -11359,6 +11359,34 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "allwin199",
+      "name": "Prince Allwin",
+      "avatar_url": "https://avatars.githubusercontent.com/u/127643894?v=4",
+      "profile": "https://allwin-portfolio.vercel.app/",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "ryanpwaldon",
+      "name": "Ryan Waldon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12480362?v=4",
+      "profile": "https://github.com/ryanpwaldon",
+      "contributions": [
+        "content",
+        "code"
+      ]
+    },
+    {
+      "login": "4everlandorg",
+      "name": "4EVERLAND",
+      "avatar_url": "https://avatars.githubusercontent.com/u/89854839?v=4",
+      "profile": "https://www.4everland.org",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
