@@ -11368,6 +11368,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "ryanpwaldon",
+      "name": "Ryan Waldon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12480362?v=4",
+      "profile": "https://github.com/ryanpwaldon",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
