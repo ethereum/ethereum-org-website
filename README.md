@@ -1777,6 +1777,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gndelia"><img src="https://avatars.githubusercontent.com/u/352474?v=4?s=100" width="100px;" alt="Gonzalo D'Elia"/><br /><sub><b>Gonzalo D'Elia</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Agndelia" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.rileyannon.com"><img src="https://avatars.githubusercontent.com/u/31807653?v=4?s=100" width="100px;" alt="Riley Annon"/><br /><sub><b>Riley Annon</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Arileyannon" title="Bug reports">🐛</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://0x13.dev"><img src="https://avatars.githubusercontent.com/u/31336254?v=4?s=100" width="100px;" alt="Ogunsina Champion"/><br /><sub><b>Ogunsina Champion</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aayofimihan" title="Bug reports">🐛</a></td>
+    </tr>
   </tbody>
 </table>
 
