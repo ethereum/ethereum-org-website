@@ -1774,6 +1774,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://member.acm.org/~rhymeq"><img src="https://avatars.githubusercontent.com/u/57232813?v=4?s=100" width="100px;" alt="iepn"/><br /><sub><b>iepn</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=iepn" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.ispanyol.com"><img src="https://avatars.githubusercontent.com/u/72710290?v=4?s=100" width="100px;" alt="veridelisi"/><br /><sub><b>veridelisi</b></sub></a><br /><a href="#tutorial-veridelisi" title="Tutorials">✅</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/reetbatra"><img src="https://avatars.githubusercontent.com/u/51335174?v=4?s=100" width="100px;" alt="Reet Batra"/><br /><sub><b>Reet Batra</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Areetbatra" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/gndelia"><img src="https://avatars.githubusercontent.com/u/352474?v=4?s=100" width="100px;" alt="Gonzalo D'Elia"/><br /><sub><b>Gonzalo D'Elia</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Agndelia" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.rileyannon.com"><img src="https://avatars.githubusercontent.com/u/31807653?v=4?s=100" width="100px;" alt="Riley Annon"/><br /><sub><b>Riley Annon</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Arileyannon" title="Bug reports">🐛</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://0x13.dev"><img src="https://avatars.githubusercontent.com/u/31336254?v=4?s=100" width="100px;" alt="Ogunsina Champion"/><br /><sub><b>Ogunsina Champion</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aayofimihan" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>

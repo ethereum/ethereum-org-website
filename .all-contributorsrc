@@ -11414,6 +11414,33 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "gndelia",
+      "name": "Gonzalo D'Elia",
+      "avatar_url": "https://avatars.githubusercontent.com/u/352474?v=4",
+      "profile": "https://github.com/gndelia",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "rileyannon",
+      "name": "Riley Annon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31807653?v=4",
+      "profile": "http://www.rileyannon.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ayofimihan",
+      "name": "Ogunsina Champion",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31336254?v=4",
+      "profile": "http://0x13.dev",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
