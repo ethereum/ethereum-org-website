@@ -1769,7 +1769,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://allwin-portfolio.vercel.app/"><img src="https://avatars.githubusercontent.com/u/127643894?v=4?s=100" width="100px;" alt="Prince Allwin"/><br /><sub><b>Prince Allwin</b></sub></a><br /><a href="#content-allwin199" title="Content">🖋</a></td>
     </tr>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ryanpwaldon"><img src="https://avatars.githubusercontent.com/u/12480362?v=4?s=100" width="100px;" alt="Ryan Waldon"/><br /><sub><b>Ryan Waldon</b></sub></a><br /><a href="#content-ryanpwaldon" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ryanpwaldon"><img src="https://avatars.githubusercontent.com/u/12480362?v=4?s=100" width="100px;" alt="Ryan Waldon"/><br /><sub><b>Ryan Waldon</b></sub></a><br /><a href="#content-ryanpwaldon" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=ryanpwaldon" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
