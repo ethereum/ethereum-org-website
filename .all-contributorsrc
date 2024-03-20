@@ -11423,6 +11423,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "rileyannon",
+      "name": "Riley Annon",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31807653?v=4",
+      "profile": "http://www.rileyannon.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
