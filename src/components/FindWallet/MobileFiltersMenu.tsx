@@ -116,7 +116,7 @@ export const MobileFiltersMenu = ({
               px={9}
               py={5}
               bg="background.base"
-              zIndex={2}
+              zIndex={3}
             >
               <Box flex={1} me={2}>
                 <ResetFiltersButton

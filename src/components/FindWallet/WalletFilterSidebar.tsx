@@ -86,12 +86,14 @@ const WalletFilterSidebar = ({
           },
         }}
       >
-        <WalletFilterFeature
-          filters={filters}
-          resetWalletFilter={resetWalletFilter}
-          updateFilterOption={updateFilterOption}
-          updateFilterOptions={updateFilterOptions}
-        />
+        <Box mb={showMobileSidebar ? 20 : 0}>
+          <WalletFilterFeature
+            filters={filters}
+            resetWalletFilter={resetWalletFilter}
+            updateFilterOption={updateFilterOption}
+            updateFilterOptions={updateFilterOptions}
+          />
+        </Box>
       </Stack>
     </Box>
   )
