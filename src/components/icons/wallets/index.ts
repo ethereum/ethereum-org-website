@@ -3,11 +3,9 @@ import { BuyCryptoIcon } from "./BuyCryptoIcon"
 import { ConnectDappsIcon } from "./ConnectDappsIcon"
 import { DesktopIcon } from "./DesktopIcon"
 import { DevicesIcon } from "./DevicesIcon"
-import { EIP1559Icon } from "./EIP1559Icon"
 import { ENSSupportIcon } from "./ENSSupportIcon"
 import { ERC20SupportIcon } from "./ERC20SupportIcon"
 import { FilterBurgerIcon } from "./FilterBurgerIcon"
-import { FrameIcon } from "./FrameIcon"
 import { GasFeeCustomizationIcon } from "./GasFeeCustomizationIcon"
 import { HardwareIcon } from "./HardwareIcon"
 import { HardwareSupportIcon } from "./HardwareSupportIcon"
@@ -22,7 +20,6 @@ import { RPCImportingIcon } from "./RPCImportingIcon"
 import { SocialRecoverIcon } from "./SocialRecoverIcon"
 import { StakingIcon } from "./StakingIcon"
 import { SwapIcon } from "./SwapIcon"
-import { WalletConnectIcon } from "./WalletConnectIcon"
 import { WithdrawCryptoIcon } from "./WithdrawCryptoIcon"
 
 export {
@@ -31,11 +28,9 @@ export {
   ConnectDappsIcon,
   DesktopIcon,
   DevicesIcon,
-  EIP1559Icon,
   ENSSupportIcon,
   ERC20SupportIcon,
   FilterBurgerIcon,
-  FrameIcon,
   GasFeeCustomizationIcon,
   HardwareIcon,
   HardwareSupportIcon,
@@ -50,6 +45,5 @@ export {
   SocialRecoverIcon,
   StakingIcon,
   SwapIcon,
-  WalletConnectIcon,
   WithdrawCryptoIcon,
 }

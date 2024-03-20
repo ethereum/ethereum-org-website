@@ -3,7 +3,7 @@ import { Flex, Heading, Stack, Text } from "@chakra-ui/react"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-interface WalletEmptyStateProps {
+type WalletEmptyStateProps = {
   resetFilters: () => void
   resetWalletFilter: React.MutableRefObject<() => void>
 }
@@ -13,6 +13,13 @@ export const WalletEmptyState = ({
   resetWalletFilter,
 }: WalletEmptyStateProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
+
+  // Track empty state
+  trackCustomEvent({
+    eventCategory: "Wallet_empty_state",
+    eventAction: `reset`,
+    eventName: `triggered`,
+  })
 
   return (
     <Flex
@@ -36,10 +43,11 @@ export const WalletEmptyState = ({
           onClick={() => {
             resetFilters()
             resetWalletFilter.current()
+
             trackCustomEvent({
-              eventCategory: "WalletFilterReset",
-              eventAction: `WalletFilterReset clicked`,
-              eventName: `reset filters`,
+              eventCategory: "Wallet_empty_state",
+              eventAction: `reset`,
+              eventName: `reset_button_clicked`,
             })
           }}
         >
