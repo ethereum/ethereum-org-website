@@ -18,7 +18,6 @@ Diese Programme unterstützen das breit gefächerte Ethereum-Ökosystem, indem s
 - [MetaCartel](https://www.metacartel.org/grants/) - _DApp-Entwicklung, DAO-Erstellung_
 - [Moloch DAO](https://www.molochdao.com/) – _Datenschutz, Layer-2-Skalierung, Client-Sicherheit und mehr_
 - [DAO-Zuschüsse](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _Google-Tabelle der Organisationen, die Zuschüsse anbieten_
-- [Crunchbase für Web3-Zuschüsse](https://www.cryptoneur.xyz/web3-grants) – _Filtere und suche nach Zuschüssen nach Kategorie, Anwendungsfall, Betrag und mehr. Hilf anderen dabei, den richtigen Zuschuss zu finden._
 - [Akademische Stipendien](https://esp.ethereum.foundation/academic-grants) – _Stipendien zur Untstützung akademischer Arbeiten in Bezug auf Ethereum_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks hat ein umfassendes Verzeichnis aller Zuschüsse, Ausschreibungen und Bug-Bounties zusammengestellt._
 
@@ -35,7 +34,6 @@ Diese Projekte haben ihre eigenen Zuschüsse für Projektvorhaben zur Entwicklun
 - [SKALE-Network-Förderprogramm](https://skale.space/developers#grants) – _[SKALE-Network](https://skale.space/)-Ökosystem_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The-Graph](https://thegraph.com/)-Ökosystem_
 - [Uniswap-Förderprogramm](https://www.uniswapfoundation.org/apply-for-a-grant) – _[Uniswap](https://uniswap.org/)-Community_
-- [Web3-Zuschüsse](https://web3grants.net) – _Eine umfangreiche Liste von Förderprogrammen mit Bezug zu Web3/Krypto_
 
 ## Quadratische Finanzierung {#quadratic-funding}
 
