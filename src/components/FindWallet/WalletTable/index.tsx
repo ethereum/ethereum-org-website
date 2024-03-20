@@ -234,7 +234,7 @@ const WalletTable = ({
         <Th sx={{ textAlign: "start !important" }}>
           <Flex justifyContent="space-between" px={{ base: 2.5, md: 0 }}>
             <Text
-              display={{ base: "block", lg: "none" }}
+              hideFrom="lg"
               lineHeight={1.6}
               fontSize="md"
               color="primary.base"
