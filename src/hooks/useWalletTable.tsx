@@ -1,23 +1,14 @@
-import { Dispatch, SetStateAction, useState } from "react"
+import { useContext, useState } from "react"
+
+import { DropdownOption } from "@/lib/types"
 
 import { WalletTableProps } from "@/components/FindWallet/WalletTable"
 
-import { trackCustomEvent } from "@/lib/utils/matomo"
-
-export interface DropdownOption {
-  label: string
-  value: string
-  filterKey: string
-  category: string
-}
-
-export type ColumnClassName = "firstCol" | "secondCol" | "thirdCol"
+import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 
 type UseWalletTableProps = Pick<WalletTableProps, "filters" | "walletData"> & {
   t: (x: string) => string
 }
-
-export type SetFeatureSelectState = Dispatch<SetStateAction<DropdownOption>>
 
 export const useWalletTable = ({
   filters,
@@ -44,16 +35,10 @@ export const useWalletTable = ({
       category: "feature",
     },
     {
-      label: t("page-find-wallet-walletconnect"),
-      value: t("page-find-wallet-walletconnect"),
-      filterKey: "walletconnect",
-      category: "feature",
-    },
-    {
       label: t("page-find-wallet-rpc-importing"),
       value: t("page-find-wallet-rpc-importing"),
       filterKey: "rpc_importing",
-      category: "feature",
+      category: "advanced",
     },
     {
       label: t("page-find-wallet-nft-support"),
@@ -89,7 +74,7 @@ export const useWalletTable = ({
       label: t("page-find-wallet-gas-fee-customization"),
       value: t("page-find-wallet-gas-fee-customization"),
       filterKey: "gas_fee_customization",
-      category: "feature",
+      category: "advanced",
     },
     {
       label: t("page-find-wallet-ens-support"),
@@ -101,13 +86,7 @@ export const useWalletTable = ({
       label: t("page-find-wallet-token-importing"),
       value: t("page-find-wallet-token-importing"),
       filterKey: "erc_20_support",
-      category: "feature",
-    },
-    {
-      label: t("page-find-wallet-fee-optimization"),
-      value: t("page-find-wallet-fee-optimization"),
-      filterKey: "eip_1559_support",
-      category: "feature",
+      category: "advanced",
     },
     {
       label: t("page-find-wallet-buy-crypto"),
@@ -133,6 +112,12 @@ export const useWalletTable = ({
       filterKey: "social_recovery",
       category: "smart_contract",
     },
+    {
+      label: t("page-find-wallet-new-to-crypto-title"),
+      value: t("page-find-wallet-new-to-crypto-title"),
+      filterKey: "new_to_crypto",
+      category: "new_to_crypto",
+    },
   ]
 
   const [walletCardData, setWalletData] = useState(
@@ -140,15 +125,9 @@ export const useWalletTable = ({
       return { ...wallet, moreInfo: false, key: wallet.name }
     })
   )
-  const [firstFeatureSelect, setFirstFeatureSelect] = useState(
-    featureDropdownItems[14]
-  )
-  const [secondFeatureSelect, setSecondFeatureSelect] = useState(
-    featureDropdownItems[1]
-  )
-  const [thirdFeatureSelect, setThirdFeatureSelect] = useState(
-    featureDropdownItems[9]
-  )
+
+  // Context API for language filter
+  const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
 
   const updateMoreInfo = (key) => {
     const temp = [...walletCardData]
@@ -174,6 +153,10 @@ export const useWalletTable = ({
     const deviceFilters = Object.entries(filters).filter(
       (item) => !featureFilterKeys.includes(item[0])
     )
+
+    const languageSupportFilter =
+      wallet.languages_supported.includes(supportedLanguage)
+
     const mobileFiltersTrue = deviceFilters
       .filter((item) => item[0] === "ios" || item[0] === "android")
       .filter((item) => item[1])
@@ -237,66 +220,19 @@ export const useWalletTable = ({
     })
 
     return (
-      mobileCheck && desktopCheck && browserCheck && hardwareCheck && showWallet
+      mobileCheck &&
+      desktopCheck &&
+      browserCheck &&
+      hardwareCheck &&
+      showWallet &&
+      languageSupportFilter
     )
   })
-
-  const filteredFeatureDropdownItems = [...featureDropdownItems].filter(
-    (item) => {
-      return (
-        item.label !== firstFeatureSelect.label &&
-        item.label !== secondFeatureSelect.label &&
-        item.label !== thirdFeatureSelect.label
-      )
-    }
-  )
-
-  /**
-   *
-   * @param selectedOption selected dropdown option
-   * @param stateUpdateMethod method for updating state for dropdown
-   * @param className className of column
-   *
-   * This method gets the elements with the className, adds a fade class to fade icons out, after 0.5s it will then update state for the dropdown with the selectedOption, and then remove the fade class to fade the icons back in. Then it will send a matomo event for updating the dropdown.
-   */
-  const updateDropdown = (
-    selectedOption: DropdownOption,
-    stateUpdateMethod: Function,
-    className: ColumnClassName
-  ) => {
-    const domItems: HTMLCollectionOf<Element> =
-      document.getElementsByClassName(className)
-
-    Array.from(domItems).forEach((item) => {
-      item.classList.add("fade")
-    })
-
-    setTimeout(() => {
-      stateUpdateMethod(selectedOption)
-      Array.from(domItems).forEach((item) => {
-        item.classList.remove("fade")
-      })
-    }, 375)
-
-    trackCustomEvent({
-      eventCategory: "WalletFeatureCompare",
-      eventAction: `Select WalletFeatureCompare`,
-      eventName: `${selectedOption.filterKey} selected`,
-    })
-  }
 
   return {
     featureDropdownItems,
     updateMoreInfo,
     filteredWallets,
-    filteredFeatureDropdownItems,
-    updateDropdown,
-    setFirstFeatureSelect,
-    setSecondFeatureSelect,
-    setThirdFeatureSelect,
     walletCardData,
-    firstFeatureSelect,
-    secondFeatureSelect,
-    thirdFeatureSelect,
   }
 }

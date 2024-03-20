@@ -1,10 +1,10 @@
-import { ReactNode } from "react"
+import { ReactNode, useContext } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
 import {
   Box,
-  calc,
+  ContainerProps,
   Flex,
   FlexProps,
   forwardRef,
@@ -34,9 +34,11 @@ import {
   formatSupportedLanguages,
   getSupportedLanguages,
   getWalletPersonas,
+  walletsListingCount,
 } from "@/lib/utils/wallets"
 
 import {
+  DEFAULT_LOCALE,
   NAV_BAR_PX_HEIGHT,
   NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN,
 } from "@/lib/constants"
@@ -44,6 +46,7 @@ import {
 import { SupportedLanguagesTooltip } from "./SupportedLanguagesTooltip"
 import { WalletEmptyState } from "./WalletEmptyState"
 
+import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
 import { useWalletTable } from "@/hooks/useWalletTable"
 
 const Container = (props: TableProps) => (
@@ -61,7 +64,7 @@ const Container = (props: TableProps) => (
   />
 )
 
-const WalletContainer = (props: ChildOnlyProp) => (
+const WalletContainer = (props: ChildOnlyProp & ContainerProps) => (
   <Container
     borderBottom="1px"
     borderColor="lightBorder"
@@ -90,18 +93,11 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
     bg="background.base"
     borderBottom="1px"
     borderColor="primary.base"
-    templateColumns={{
-      base: "auto",
-      sm: "60% auto 0% 0% 5%",
-      md: "40% auto auto auto 5%",
-    }}
+    templateColumns="auto"
     rowGap={{ base: 4, sm: 0 }}
     p={2}
     position="sticky"
-    top={{
-      base: calc(NAV_BAR_PX_HEIGHT).add("4rem").toString(),
-      lg: NAV_BAR_PX_HEIGHT,
-    }}
+    top={NAV_BAR_PX_HEIGHT}
     zIndex={1}
     sx={{
       th: {
@@ -129,6 +125,7 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
 
 const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
   <Grid
+    tabIndex={0}
     ref={ref}
     cursor="pointer"
     py={4}
@@ -228,24 +225,42 @@ const WalletTable = ({
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
 
+  // Context API
+  const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
+
   return (
     <Container>
       <WalletContentHeader>
         <Th sx={{ textAlign: "start !important" }}>
-          {filteredWallets.length === walletCardData.length ? (
-            <Text ps={{ base: 2, md: 0 }} as="span">
-              {t("page-find-wallet-showing-all-wallets")} (
-              <strong>{walletCardData.length}</strong>)
+          <Flex justifyContent="space-between" px={{ base: 2.5, md: 0 }}>
+            <Text
+              display={{ base: "block", lg: "none" }}
+              lineHeight={1.6}
+              fontSize="md"
+              color="primary.base"
+              textTransform="uppercase"
+            >
+              {`${t("page-find-wallet-filters")} (${
+                walletsListingCount(filters) +
+                (supportedLanguage === DEFAULT_LOCALE ? 0 : 1)
+              })`}
             </Text>
-          ) : (
-            <Text ps={{ base: 2, md: 0 }} as="span">
-              {t("page-find-wallet-showing")}{" "}
-              <strong>
-                {filteredWallets.length} / {walletCardData.length}
-              </strong>{" "}
-              {t("page-find-wallet-wallets")}
-            </Text>
-          )}
+
+            {filteredWallets.length === walletCardData.length ? (
+              <Text ps={{ base: 2, md: 0 }} as="span">
+                {t("page-find-wallet-showing-all-wallets")} (
+                <strong>{walletCardData.length}</strong>)
+              </Text>
+            ) : (
+              <Text ps={{ base: 2, md: 0 }} as="span">
+                {t("page-find-wallet-showing")}{" "}
+                <strong>
+                  {filteredWallets.length} / {walletCardData.length}
+                </strong>{" "}
+                {t("page-find-wallet-wallets")}
+              </Text>
+            )}
+          </Flex>
         </Th>
       </WalletContentHeader>
       {filteredWallets.length === 0 && (
@@ -269,6 +284,10 @@ const WalletTable = ({
           wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
 
           const walletPersonas = getWalletPersonas(wallet)
+          const hasPersonasLabels = walletPersonas.length > 0
+          const hasDeviceLabels = deviceLabels.length > 0
+          const hasAllLabels = hasPersonasLabels && hasDeviceLabels
+
           // Supported languages
           const supportedLanguages = getSupportedLanguages(
             wallet.languages_supported,
@@ -284,19 +303,28 @@ const WalletTable = ({
             sliceSize
           )
 
+          const showMoreInfo = (wallet) => {
+            updateMoreInfo(wallet.key)
+            // Log "more info" event only on expanding
+            wallet.moreInfo &&
+              trackCustomEvent({
+                eventCategory: "WalletMoreInfo",
+                eventAction: `More info wallet`,
+                eventName: `More info ${wallet.name}`,
+              })
+          }
+
           return (
-            <WalletContainer key={wallet.key}>
+            <WalletContainer
+              key={wallet.key}
+              bg={wallet.moreInfo ? "background.highlight" : "transparent"}
+            >
               <Wallet
-                onClick={() => {
-                  updateMoreInfo(wallet.key)
-                  // Log "more info" event only on expanding
-                  wallet.moreInfo &&
-                    trackCustomEvent({
-                      eventCategory: "WalletMoreInfo",
-                      eventAction: `More info wallet`,
-                      eventName: `More info ${wallet.name}`,
-                    })
+                // Make wallets more info section open on 'Enter'
+                onKeyUp={(e) => {
+                  if (e.key === "Enter") showMoreInfo(wallet)
                 }}
+                onClick={() => showMoreInfo(wallet)}
               >
                 <Td lineHeight="revert">
                   <Flex
@@ -308,46 +336,44 @@ const WalletTable = ({
                       w={{ base: "100%", md: "auto" }}
                       ps={{ base: 0, md: 1.5 }}
                     >
-                      {/* Wallet image */}
-                      <Box
-                        w={{ base: "24px", md: "56px" }}
-                        //
-                      >
-                        <Image
-                          src={wallet.image}
-                          alt=""
-                          objectFit="contain"
-                          boxSize="auto"
-                        />
-                      </Box>
-
                       <Box w={{ base: "100%", md: "auto" }}>
-                        <Stack>
+                        <Flex alignItems="start">
+                          {/* Wallet image */}
+                          <Stack
+                            w={{ base: "24px", md: "56px" }}
+                            h={{ base: "24px", md: "56px" }}
+                            me={4}
+                          >
+                            <Image
+                              src={wallet.image}
+                              alt=""
+                              height={56}
+                              objectFit="contain"
+                            />
+                          </Stack>
+
                           <Text lineHeight={1.2} fontSize="xl !important">
                             {wallet.name}
                           </Text>
+                        </Flex>
 
+                        <Stack mt={{ base: 2, md: -6 }} ms={{ md: "72px" }}>
                           {/* Wallet Personas supported */}
-                          {walletPersonas.length > 0 && (
+                          {hasPersonasLabels && (
                             <Flex gap={1.5} wrap="wrap">
                               {walletPersonas.map((persona) => (
-                                <Tag
-                                  key={persona}
-                                  label={t(persona).toUpperCase()}
-                                />
+                                <Tag key={persona} label={t(persona)} />
                               ))}
                             </Flex>
                           )}
 
                           <Stack gap={2} mb={{ base: 0, md: 3 }}>
                             {/* Device labels */}
-                            {deviceLabels.length > 0 && (
+                            {hasDeviceLabels && (
                               <Flex
                                 alignItems="center"
                                 gap={3}
-                                display={
-                                  deviceLabels.length > 0 ? "flex" : "none"
-                                }
+                                display={hasDeviceLabels ? "flex" : "none"}
                               >
                                 <Icon as={DevicesIcon} fontSize="2xl" />
 
@@ -427,6 +453,7 @@ const WalletTable = ({
                   filters={filters}
                   idx={idx}
                   featureDropdownItems={featureDropdownItems}
+                  hasAllLabels={hasAllLabels}
                 />
               )}
             </WalletContainer>

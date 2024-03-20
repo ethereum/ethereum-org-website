@@ -1,5 +1,5 @@
-import React, { MutableRefObject } from "react"
-import uniqueId from "lodash/uniqueId"
+import React, { Fragment, MutableRefObject } from "react"
+import { uniqueId } from "lodash"
 import { BsToggleOff, BsToggleOn } from "react-icons/bs"
 import {
   Accordion,
@@ -9,6 +9,7 @@ import {
   AccordionPanel,
   Box,
   Checkbox,
+  Flex,
   GridItem,
   Heading,
   HStack,
@@ -16,13 +17,16 @@ import {
   List,
   SimpleGrid,
   Text,
-  useColorModeValue,
   VStack,
 } from "@chakra-ui/react"
 
+import { WalletFilter } from "@/lib/types"
+
+import { LanguageSupportFilter } from "@/components/FindWallet/LanguageSupportFilter"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import { useWalletFilterFeature } from "./useWalletFilterFeature"
+import { useWalletFilterFeature } from "@/hooks/useWalletFilterFeature"
 
 const FilterToggle = ({
   ariaLabel,
@@ -46,8 +50,8 @@ const FilterToggle = ({
 )
 
 export type WalletFilterFeatureProps = {
+  filters: WalletFilter
   resetWalletFilter: MutableRefObject<() => void>
-  filters: Record<string, boolean>
   updateFilterOption: (key: any) => void
   updateFilterOptions: (key: any, value: any) => void
 }
@@ -57,24 +61,25 @@ const WalletFilterFeature = ({
   ...restProps
 }: WalletFilterFeatureProps) => {
   const { filterOptions, setShowOptions } = useWalletFilterFeature(restProps)
+  // Workaround to not having a dedicated prop to all items open by default
+  // Adds `null` value to extend the filter options array by one, so `LanguageSupportFilter` starts expanded too
+  const openAllItemsByDefault = [...Object.keys(filterOptions), null].map(
+    (_, idx) => idx
+  )
 
-  const filterPanelBg = useColorModeValue("chakra-subtle-bg", "black400")
   return (
     <Accordion
       as={VStack}
       allowMultiple
       reduceMotion
-      spacing={4}
+      spacing={2}
       alignItems="normal"
-      p={{ base: 4, sm: 0 }}
-      // Workaround to not having a dedicated prop to all items open by default
-      defaultIndex={Object.keys(filterOptions).map((key) => +key)}
+      defaultIndex={openAllItemsByDefault}
     >
       {filterOptions.map((filterOption, idx) => {
-        return (
+        const FilterItem = () => (
           <AccordionItem
-            key={uniqueId("walletFilterSidebarItem")}
-            background={filterPanelBg}
+            background="background.highlight"
             borderRadius="base"
             // Remove border color from global style
             borderColor="transparent"
@@ -84,14 +89,14 @@ const WalletFilterFeature = ({
               <>
                 <Heading
                   as="h3"
-                  color="primary.base"
                   borderBottom={isExpanded ? "1px" : "none"}
-                  borderColor="currentColor"
+                  borderColor="body.light"
                   fontSize="lg"
                   fontWeight={600}
                   lineHeight={1.4}
                   py={1}
-                  px={4}
+                  ps={4}
+                  pe={2.5}
                   borderRadius={1}
                   _hover={{ color: "primary.hover" }}
                 >
@@ -103,9 +108,10 @@ const WalletFilterFeature = ({
                     textAlign="initial"
                     _hover={{ background: "transparent" }}
                   >
-                    <Box as="span" flex={1}>
+                    <Text as="span" flex={1}>
                       {filterOption.title}
-                    </Box>
+                    </Text>
+
                     <AccordionIcon
                       color="primary.base"
                       boxSize={9}
@@ -113,9 +119,11 @@ const WalletFilterFeature = ({
                     />
                   </AccordionButton>
                 </Heading>
+
                 <AccordionPanel as={List} p={0} m={0}>
                   {filterOption.items.map((item, itemIdx) => {
                     const LabelIcon = item.icon
+
                     return (
                       <Box
                         key={itemIdx}
@@ -128,19 +136,31 @@ const WalletFilterFeature = ({
                       >
                         <SimpleGrid
                           key={uniqueId("walletFilterSidebarItemPanel")}
-                          templateColumns="28px auto 34px"
+                          templateColumns="28px auto"
                           alignItems="center"
                           columnGap={2.5}
                           cursor="pointer"
                           onClick={
                             item.filterKey
                               ? () => {
-                                  trackCustomEvent({
-                                    eventCategory: "WalletFilterSidebar",
-                                    eventAction: `${filterOption.title}`,
-                                    eventName: `${item.filterKey} ${!restProps
-                                      .filters[item.filterKey!]}`,
-                                  })
+                                  // Track 'gas_fee_customization' filter separately when selected
+                                  if (
+                                    item.filterKey === "gas_fee_customization"
+                                  ) {
+                                    trackCustomEvent({
+                                      eventCategory: "WalletFilterSidebar",
+                                      eventAction: `advanced_features`,
+                                      eventName: "gas_fee_customization true",
+                                    })
+                                  } else {
+                                    trackCustomEvent({
+                                      eventCategory: "WalletFilterSidebar",
+                                      eventAction: `${filterOption.title}`,
+                                      eventName: `${item.filterKey} ${!restProps
+                                        .filters[item.filterKey!]}`,
+                                    })
+                                  }
+
                                   updateFilterOption(item.filterKey)
                                 }
                               : () => {
@@ -160,35 +180,38 @@ const WalletFilterFeature = ({
                           }
                         >
                           <GridItem>
-                            <LabelIcon
-                              boxSize={7}
-                              mt={0.5}
-                              color="text"
-                              aria-hidden
-                            />
+                            <LabelIcon boxSize={7} mt={0.5} aria-hidden />
                           </GridItem>
+
                           <GridItem as="span" lineHeight="1.1rem">
-                            {item.title}
+                            <Flex
+                              alignItems="center"
+                              justifyContent="space-between"
+                            >
+                              {item.title}
+
+                              <>
+                                {item.filterKey && (
+                                  <FilterToggle
+                                    ariaLabel={item.title}
+                                    conditionItem={
+                                      restProps.filters[item.filterKey]
+                                    }
+                                  />
+                                )}
+                                {item.showOptions !== undefined && (
+                                  <FilterToggle
+                                    ariaLabel={item.title}
+                                    conditionItem={item.showOptions}
+                                  />
+                                )}
+                              </>
+                            </Flex>
                           </GridItem>
-                          <GridItem>
-                            {item.filterKey && (
-                              <FilterToggle
-                                ariaLabel={item.title}
-                                conditionItem={
-                                  restProps.filters[item.filterKey]
-                                }
-                              />
-                            )}
-                            {item.showOptions !== undefined && (
-                              <FilterToggle
-                                ariaLabel={item.title}
-                                conditionItem={item.showOptions}
-                              />
-                            )}
-                          </GridItem>
+
                           <GridItem
                             as="span"
-                            color="text200"
+                            color="body.medium"
                             fontSize="0.9rem"
                             lineHeight="1.1rem"
                             colStart={2}
@@ -196,6 +219,7 @@ const WalletFilterFeature = ({
                             {item.description}
                           </GridItem>
                         </SimpleGrid>
+
                         {item.options.length > 0 && item.showOptions && (
                           <HStack mt={3.5} spacing={2}>
                             {item.options.map((option, optionIdx) => {
@@ -264,6 +288,21 @@ const WalletFilterFeature = ({
             )}
           </AccordionItem>
         )
+
+        // Insert `LanguageSupportFilter` in the 2nd position before `Buy crypto / Sell for fiat` filter
+        if (idx === 1) {
+          return (
+            // `Fragment` needed here to be able to pass a key prop (https://react.dev/reference/react/Fragment#caveats)
+            <Fragment key={uniqueId("walletFilterSidebarLanguageSupport")}>
+              <LanguageSupportFilter />
+
+              {/* Buy crypto / Sell for fiat filter, originally in the 2nd position  */}
+              <FilterItem />
+            </Fragment>
+          )
+        } else {
+          return <FilterItem key={uniqueId("walletFilterSidebarItem")} />
+        }
       })}
     </Accordion>
   )

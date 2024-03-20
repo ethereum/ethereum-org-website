@@ -1,6 +1,9 @@
-import { shuffle } from "lodash"
+import { shuffle, union } from "lodash"
 
-import walletData, { WalletData } from "@/data/wallets/wallet-data"
+import { getLanguageCodeName } from "@/lib/utils/intl"
+import { capitalize } from "@/lib/utils/string"
+
+import walletsData from "@/data/wallets/wallet-data"
 
 import {
   DEVELOPER_FEATURES,
@@ -9,15 +12,16 @@ import {
   NEW_TO_CRYPTO_FEATURES,
   NFTS_FEATURES,
 } from "../constants"
+import { WalletData, WalletFilter } from "../types"
 
 export const getSupportedLocaleWallets = (locale: string) =>
   shuffle(
-    walletData.filter((wallet) => wallet.languages_supported.includes(locale))
+    walletsData.filter((wallet) => wallet.languages_supported.includes(locale))
   )
 
 export const getNonSupportedLocaleWallets = (locale: string) =>
   shuffle(
-    walletData.filter((wallet) => !wallet.languages_supported.includes(locale))
+    walletsData.filter((wallet) => !wallet.languages_supported.includes(locale))
   )
 
 // Get a list of a wallet supported Personas (new to crypto, nfts, long term, finance, developer)
@@ -62,25 +66,126 @@ export const getWalletPersonas = (wallet: WalletData) => {
 // Get a list of wallet supported languages with native title
 export const getSupportedLanguages = (
   walletSupportedLanguages: string[],
-  languages: {}[]
+  locale: string
 ) => {
   const supportedLanguages = [] as string[]
 
+  // current locale should appear first on the list, this manipulates the array to move it to the top if needed
+  const supportsCurrentLocale = (current) => current === locale
+  const localeIndex = walletSupportedLanguages.findIndex(supportsCurrentLocale)
+
+  if (localeIndex >= 0) {
+    walletSupportedLanguages.splice(localeIndex, 1)
+    walletSupportedLanguages.unshift(locale)
+  }
+
   walletSupportedLanguages.forEach((supportedLanguage) => {
-    for (const [key, value] of Object.entries(languages)) {
-      if (value[supportedLanguage])
-        supportedLanguages.push(value[supportedLanguage])
-    }
+    // Get supported language name
+    const supportedLanguageName = getLanguageCodeName(supportedLanguage, locale)
+    // Capitalize supported language name
+    supportedLanguages.push(capitalize(supportedLanguageName!))
   })
 
   return supportedLanguages
 }
 
-export const formatSupportedLanguages = (supportedLanguages: string[]) => {
-  const numberOfSupportedLanguages = supportedLanguages.length
-  const rest = numberOfSupportedLanguages - 2
+// Format languages list to be displayed on UI label
+export const formatSupportedLanguages = (
+  supportedLanguages: string[],
+  sliceSize?: number
+) => {
+  return sliceSize
+    ? supportedLanguages.slice(0, sliceSize).join(", ")
+    : supportedLanguages.join(", ")
+}
 
-  return `${supportedLanguages.slice(0, 2).join(", ")} ${
-    rest > 0 ? `+ ${rest}` : ""
-  }`
+// Get border custom color for Persona filter
+export const getPersonaBorderColor = (selectedPersona: number, idx: number) => {
+  return selectedPersona === idx ? "primary.base" : "transparent"
+}
+
+// Get total count of wallets that support a language
+const getLanguageTotalCount = (languageCode: string) => {
+  return walletsData.reduce(
+    (total, currentWallet) =>
+      currentWallet.languages_supported.includes(languageCode)
+        ? (total = total + 1)
+        : total,
+    0
+  )
+}
+
+// Get a list of all wallets languages, without duplicates
+export const getAllWalletsLanguages = (locale: string) => {
+  const compareFn = (
+    a: { langCode: string; langName: string },
+    b: { langCode: string; langName: string }
+  ) => {
+    if (a.langName > b.langName) {
+      return 1
+    }
+    if (a.langName < b.langName) {
+      return -1
+    }
+    return 0
+  }
+
+  return (
+    walletsData
+      .reduce(
+        (allLanguagesList, current) =>
+          // `union` lodash method merges all arrays removing duplicates
+          union(allLanguagesList, current.languages_supported),
+        [] as string[]
+      )
+      .map((languageCode) => {
+        // Get supported language name
+        const supportedLanguageName = getLanguageCodeName(languageCode, locale)
+        // Get a list of {langCode, langName}
+        return {
+          langCode: languageCode,
+          langName: `${capitalize(
+            supportedLanguageName!
+          )} (${getLanguageTotalCount(languageCode)})`,
+        }
+      })
+      // Sort list alphabetically by langName
+      .sort(compareFn)
+  )
+}
+
+// Get a list of top n wallets languages
+export const getWalletsTopLanguages = (n: number, locale: string) => {
+  const compareFn = (a: string, b: string) => {
+    return getLanguageTotalCount(b) - getLanguageTotalCount(a)
+  }
+
+  return walletsData
+    .reduce(
+      (allLanguagesList, current) =>
+        // `union` lodash method merges all arrays removing duplicates
+        union(allLanguagesList, current.languages_supported),
+      [] as string[]
+    )
+    .sort(compareFn)
+    .map((languageCode) => {
+      // Get supported language name
+      const supportedLanguageName = getLanguageCodeName(languageCode, locale)
+      // Return {code, capitalized language name}
+      return {
+        code: languageCode,
+        langName: `${capitalize(
+          supportedLanguageName!
+        )} (${getLanguageTotalCount(languageCode)})`,
+      }
+    })
+    .slice(0, n)
+}
+
+// Get wallets listing count after applying filters
+export const walletsListingCount = (filters: WalletFilter) => {
+  return Object.values(filters).reduce(
+    (acc, filter) => (filter ? acc + 1 : acc),
+    0
+  )
 }

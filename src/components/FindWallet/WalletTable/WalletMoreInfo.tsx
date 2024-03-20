@@ -1,3 +1,4 @@
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import {
@@ -6,20 +7,24 @@ import {
   Heading,
   Icon,
   SimpleGrid,
+  Stack,
   Text,
-  VStack,
 } from "@chakra-ui/react"
+
+import { DropdownOption, Lang, WalletFilter } from "@/lib/types"
 
 import InlineLink, { LinkProps } from "@/components/Link"
 
-import { DropdownOption } from "./useWalletTable"
+import { getLocaleFormattedDate } from "@/lib/utils/time"
+
 import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
 
-interface WalletMoreInfoProps {
+type WalletMoreInfoProps = {
   wallet: Record<string, any>
-  filters: Record<string, boolean>
+  filters: WalletFilter
   idx: number
   featureDropdownItems: DropdownOption[]
+  hasAllLabels: boolean
 }
 
 const SocialLink = (props: LinkProps) => (
@@ -42,8 +47,10 @@ export const WalletMoreInfo = ({
   filters,
   idx,
   featureDropdownItems,
+  hasAllLabels,
 }: WalletMoreInfoProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
+  const { locale } = useRouter()
   const walletHasFilter = (filterKey) => {
     return wallet[filterKey] === true
   }
@@ -68,36 +75,63 @@ export const WalletMoreInfo = ({
       headingLabel: t("page-find-wallet-smart-contract"),
       sectionName: "smart_contract",
     },
+    {
+      headingLabel: t("page-find-wallet-advanced"),
+      sectionName: "advanced",
+    },
   ]
 
+  // Format last updated date with current locale
+  const walletLastUpdated = getLocaleFormattedDate(
+    locale as Lang,
+    wallet.last_updated
+  )
+
   return (
-    <Box>
-      <SimpleGrid templateColumns="65px auto">
+    <Box mt={4} w="full">
+      <SimpleGrid
+        autoColumns={{ base: "200px", lg: "minmax(0, 1fr)" }}
+        templateColumns={{
+          base: "38px auto",
+          md: "98px auto",
+          lg: "74px auto",
+        }}
+      >
+        {/* Border gradient */}
+        <Box
+          bgGradient={`linear(to-b, ${wallet.brand_color} 0%, rgba(217, 217, 217, 0) 97.4%)`}
+          mx="auto"
+          mt={hasAllLabels ? { md: -36 } : { md: -28 }}
+          width={1}
+          height="full"
+        />
+
+        {/* Category sections */}
         <Box>
-          <Box
-            bgGradient={`linear(to-b, ${wallet.brand_color} 0%, rgba(217, 217, 217, 0) 97.4%)`}
-            m="auto"
-            width={1}
-            height="full"
-          />
-        </Box>
-        <Box>
-          {walletInfoSections.map((section, idx) => (
-            <WalletMoreInfoCategory
-              key={idx}
-              wallet={wallet}
-              orderedFeatureDropdownItems={orderedFeatureDropdownItems}
-              {...section}
-            />
-          ))}
-          <VStack
+          <Flex
+            direction={{ base: "column", xl: "row" }}
+            gap={{ base: 4, xl: 0 }}
+            ms={-1}
+          >
+            {walletInfoSections.map((section, idx) => (
+              <WalletMoreInfoCategory
+                key={idx}
+                wallet={wallet}
+                orderedFeatureDropdownItems={orderedFeatureDropdownItems}
+                {...section}
+              />
+            ))}
+          </Flex>
+
+          {/* Links section */}
+          <Stack
             as={Text}
-            color="text300"
             fontSize="sm"
             justifyContent="space-between"
             wrap="wrap"
             alignItems="flex-start"
-            my={8}
+            mt={6}
+            mb={8}
             spacing={4}
           >
             {/* Social icons */}
@@ -105,15 +139,14 @@ export const WalletMoreInfo = ({
               as="h4"
               lineHeight={1.4}
               fontSize="md"
-              color="text"
-              fontWeight={500}
-              mx="0.2rem"
+              fontWeight="bold"
+              ms={{ lg: 2 }}
               my={-3.5}
             >
               {t("page-find-wallet-social-links")}
             </Heading>
 
-            <Flex ps={1} gap="0.8rem">
+            <Flex ms={{ lg: 2 }} gap="0.8rem">
               <SocialLink
                 to={wallet.url}
                 hideArrow
@@ -159,11 +192,11 @@ export const WalletMoreInfo = ({
             </Flex>
 
             <Text as="i">
-              {`${wallet.name} ${t("page-find-wallet-info-updated-on")} ${
-                wallet.last_updated
-              }`}
+              {`${wallet.name} ${t(
+                "page-find-wallet-info-updated-on"
+              )} ${walletLastUpdated}`}
             </Text>
-          </VStack>
+          </Stack>
         </Box>
       </SimpleGrid>
     </Box>
