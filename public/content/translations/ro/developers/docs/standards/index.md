@@ -18,7 +18,7 @@ De obicei standardele sunt introduse ca [Propuneri de îmbunătățire pentru Et
 - [Introducere despre guvernanța Ethereum](/governance/)
 - [Prezentare generală a guvernanței Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 martie 2019 - Boris Mann_
 - [Guvernarea dezvoltării protocolului Ethereum și coordonarea actualizării rețelei](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 martie 2020 - Hudson Jameson_
-- [Lista de redare a tuturor ședințelor dezvoltatorilor de bază pentru Ethereum](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(Listă de redare YouTube)_
+- [Lista de redare a tuturor ședințelor dezvoltatorilor de bază pentru Ethereum](https://www.youtube.com/@EthereumProtocol) _(Listă de redare YouTube)_
 
 ## Tipuri de standarde {#types-of-standards}
 
