@@ -1,5 +1,5 @@
 import React, { MutableRefObject } from "react"
-import { uniqueId } from "lodash"
+import uniqueId from "lodash/uniqueId"
 import { BsToggleOff, BsToggleOn } from "react-icons/bs"
 import {
   Accordion,
