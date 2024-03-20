@@ -33,6 +33,16 @@ export const MobileFiltersButton = ({
   // Context API
   const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
 
+  const handleClick = () => {
+    showMobileSidebar ? onClose() : onOpen()
+
+    trackCustomEvent({
+      eventCategory: "MobileFilterToggle",
+      eventAction: `Tap MobileFilterToggle`,
+      eventName: `show mobile filters ${!showMobileSidebar}`,
+    })
+  }
+
   return (
     <Box
       position="sticky"
@@ -56,14 +66,7 @@ export const MobileFiltersButton = ({
             circle: { stroke: "primary.base" },
           },
         }}
-        onClick={() => {
-          showMobileSidebar ? onClose() : onOpen()
-          trackCustomEvent({
-            eventCategory: "MobileFilterToggle",
-            eventAction: `Tap MobileFilterToggle`,
-            eventName: `show mobile filters ${!showMobileSidebar}`,
-          })
-        }}
+        onClick={handleClick}
       >
         <Box>
           <Text align="start">{t("page-find-wallet-filters")}</Text>

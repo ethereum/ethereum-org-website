@@ -21,6 +21,17 @@ export const WalletEmptyState = ({
     eventName: `triggered`,
   })
 
+  const handleClick = () => {
+    resetFilters()
+    resetWalletFilter.current()
+
+    trackCustomEvent({
+      eventCategory: "Wallet_empty_state",
+      eventAction: `reset`,
+      eventName: `reset_button_clicked`,
+    })
+  }
+
   return (
     <Flex
       justifyContent="center"
@@ -40,16 +51,7 @@ export const WalletEmptyState = ({
           color="primary.base"
           textDecoration="underline"
           cursor="pointer"
-          onClick={() => {
-            resetFilters()
-            resetWalletFilter.current()
-
-            trackCustomEvent({
-              eventCategory: "Wallet_empty_state",
-              eventAction: `reset`,
-              eventName: `reset_button_clicked`,
-            })
-          }}
+          onClick={handleClick}
         >
           {t("page-find-wallet-reset-filters")}
         </Text>

@@ -54,6 +54,16 @@ export const LanguageSupportFilter = () => {
     })
   }
 
+  const handleTopLanguageClick = (language) => {
+    setSupportedLanguage(language.code)
+
+    trackCustomEvent({
+      eventCategory: "WalletFilterSidebar",
+      eventAction: `Language search`,
+      eventName: getLanguageCodeName(language.code, locale!),
+    })
+  }
+
   return (
     <AccordionItem
       background="background.highlight"
@@ -123,18 +133,7 @@ export const LanguageSupportFilter = () => {
                       color="primary.base"
                       size="sm"
                       cursor="pointer"
-                      onClick={() => {
-                        setSupportedLanguage(language.code)
-
-                        trackCustomEvent({
-                          eventCategory: "WalletFilterSidebar",
-                          eventAction: `Language search`,
-                          eventName: getLanguageCodeName(
-                            language.code,
-                            locale!
-                          ),
-                        })
-                      }}
+                      onClick={handleTopLanguageClick}
                     >
                       {language.langName}
                     </Text>

@@ -15,6 +15,17 @@ export const ResetFiltersButton = ({
 }: ResetFiltersProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
 
+  const handleResetClick = () => {
+    resetFilters()
+    resetWalletFilter.current()
+
+    trackCustomEvent({
+      eventCategory: "WalletFilterSidebar",
+      eventAction: `Reset button`,
+      eventName: `reset_click`,
+    })
+  }
+
   return (
     <Center
       as="button"
@@ -24,16 +35,7 @@ export const ResetFiltersButton = ({
       _hover={{
         color: "primary.hover",
       }}
-      onClick={() => {
-        resetFilters()
-        resetWalletFilter.current()
-
-        trackCustomEvent({
-          eventCategory: "WalletFilterSidebar",
-          eventAction: `Reset button`,
-          eventName: `reset_click`,
-        })
-      }}
+      onClick={handleResetClick}
     >
       <Icon as={BsArrowCounterclockwise} aria-hidden="true" fontSize="sm" />
       <Text as="span" textTransform="uppercase">
