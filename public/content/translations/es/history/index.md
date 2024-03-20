@@ -27,11 +27,11 @@ Vaya directamente a la información sobre algunas de las actualizaciones anterio
 
 ## 2023 {#2023}
 
-### Shanghai {#shanghai}
+### Shanghai-Capella {#shapella}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### Resumen {#shanghai-summary}
+#### Resumen de Shangai {#shanghai-summary}
 
 La actualizacion Shangai permite retirar la participación a la capa de ejecución. Junto con la actualización Capella, habilitó los bloques para aceptar las operaciones de retirada, que permitieran a los interesados retirar sus ETH provenientes de la cadena de baliza para ejecutarlos posteriormente.
 
@@ -49,13 +49,7 @@ La actualizacion Shangai permite retirar la participación a la capa de ejecuci�
 
 - [Lea la especificación de la actualización Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### Capella {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### Resumen {#capella-summary}
+#### Resumen de Capella {#capella-summary}
 
 La actualizacion Capella es la tercera actualización importante a la capa de consenso (cadena de baliza), que le permite retirar su participación. Capella se produjo de forma sincrónica a la actualización de la capa de ejecución, Shanghai, y activó la funcionalidad de retirada de participaciones.
 

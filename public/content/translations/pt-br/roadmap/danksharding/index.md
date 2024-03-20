@@ -5,7 +5,7 @@ lang: pt-br
 summaryPoints:
   - Danksharding é uma melhoria em diversas fases para melhorar a escalabilidade e a capacidade do Ethereum.
   - A primeira fase, Proto-Danksharding, adiciona blobs de dados aos blocos
-  - Os blods de dados oferecem uma maneira mais barata para os rollups publicarem dados no Ethereum e esses custos podem ser repassados aos usuários na forma de taxas de transação mais baixas.
+  - Os blobs de dados oferecem uma maneira mais barata para os rollups publicarem dados no Ethereum e esses custos podem ser repassados aos usuários na forma de taxas de transação mais baixas.
   - Posteriormente, o Danksharding completo distribuirá a responsabilidade pela verificação dos blobs de dados em subconjuntos de nós, o que dimensionará ainda mais o Ethereum para mais de 100.000 transações por segundo.
 ---
 

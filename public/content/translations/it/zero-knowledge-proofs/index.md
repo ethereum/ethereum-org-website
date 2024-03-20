@@ -176,7 +176,7 @@ L'utilizzo di MACI _richiede_ la fiducia nel fatto che il coordinatore sia collu
 
 Ma nei casi in cui il coordinatore rimane onesto, la MACI rappresenta un potente strumento a garanzia della legittimità del voto on-chain. Ciò spiega la sua popolarità tra le applicazioni di finanziamento quadratico (es., [clr.fund](https://clr.fund/#/about/maci)) che fanno molto affidamento sull'integrità delle scelte di voto di ogni individuo.
 
-Scopri di più riguardo a [MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
+[Maggiori informazioni su MACI](https://privacy-scaling-explorations.github.io/maci/).
 
 ## Svantaggi dell'utilizzo delle prove a conoscenza zero {#drawbacks-of-using-zero-knowledge-proofs}
 

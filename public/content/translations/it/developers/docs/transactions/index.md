@@ -1,6 +1,6 @@
 ---
 title: Transazioni
-description: "Panoramica sulle transazioni Ethereum: come funzionano, struttura dati e come inviarle tramite un'applicazione."
+description: 'Panoramica sulle transazioni Ethereum: come funzionano, struttura dati e come inviarle tramite un''applicazione.'
 lang: it
 ---
 

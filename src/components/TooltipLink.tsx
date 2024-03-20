@@ -4,8 +4,8 @@ import GlossaryTooltip from "./Glossary/GlossaryTooltip"
 import InlineLink from "./Link"
 
 interface Props {
-  href: string
-  children: ReactNode
+  href?: string
+  children?: ReactNode
 }
 
 /**
@@ -18,9 +18,14 @@ interface Props {
  * inside of our MD files. The native link syntax has a better UX with Crowdin
  * translations.
  */
-function MdLink(props: Props) {
+function TooltipLink(props: Props) {
+  const { href } = props
+  if (!href) {
+    return <InlineLink {...props} />
+  }
+
   const regex = new RegExp(/\/glossary\/#(.+)/)
-  const matches = props.href.match(regex)
+  const matches = href.match(regex)
 
   // get the `termKey` from the `href`
   // e.g. in `/glossary/#new-term` => "new-term" is the `termKey`
@@ -33,4 +38,4 @@ function MdLink(props: Props) {
   return <InlineLink {...props} />
 }
 
-export default MdLink
+export default TooltipLink

@@ -1,14 +1,29 @@
+import { ComponentProps } from "react"
 import { Box, Text } from "@chakra-ui/react"
 
+import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
+
+import { DEFAULT_GLOSSARY_NS } from "@/lib/constants"
 
 interface GlossaryDefinitionProps {
   term: string
   size?: "md" | "sm"
+  options?: ComponentProps<typeof Translation>["options"]
 }
 
-const GlossaryDefinition = ({ term, size = "md" }: GlossaryDefinitionProps) => {
+// Override the default `a` mapping to prevent displaying the glossary tooltip
+// in the glossary definition
+const components = {
+  a: InlineLink,
+}
+
+const GlossaryDefinition = ({
+  term,
+  size = "md",
+  options = { ns: DEFAULT_GLOSSARY_NS },
+}: GlossaryDefinitionProps) => {
   const headingStyles =
     size === "sm"
       ? { fontSize: "md", mt: 0, mb: 2 }
@@ -17,12 +32,20 @@ const GlossaryDefinition = ({ term, size = "md" }: GlossaryDefinitionProps) => {
   const textStyles = size === "sm" ? { mb: 0 } : {}
 
   return (
-    <Box>
+    <Box textAlign="start">
       <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
-        <Translation id={"glossary:" + term + "-term"} />
+        <Translation
+          id={term + "-term"}
+          options={options}
+          transform={components}
+        />
       </OldHeading>
       <Text {...textStyles}>
-        <Translation id={"glossary:" + term + "-definition"} />
+        <Translation
+          id={term + "-definition"}
+          options={options}
+          transform={components}
+        />
       </Text>
     </Box>
   )
