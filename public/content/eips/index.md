@@ -56,7 +56,7 @@ If you’re interested to read more about EIPs, check out the [EIPs website](htt
 
 ### Official EIP resources
 
-- [A list of every EIP](https://eips.ethereum.org/all)
+- [A list of every Ethereum Improvement Proposal](https://eips.ethereum.org)
 - [A description of all EIP types](https://eips.ethereum.org/EIPS/eip-1#eip-types)
 - [A description of all EIP statuses](https://eips.ethereum.org/EIPS/eip-1#eip-process)
 
