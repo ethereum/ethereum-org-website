@@ -11387,6 +11387,33 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "iepn",
+      "name": "iepn",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57232813?v=4",
+      "profile": "https://member.acm.org/~rhymeq",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "veridelisi",
+      "name": "veridelisi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72710290?v=4",
+      "profile": "https://www.ispanyol.com",
+      "contributions": [
+        "tutorial"
+      ]
+    },
+    {
+      "login": "reetbatra",
+      "name": "Reet Batra",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51335174?v=4",
+      "profile": "https://github.com/reetbatra",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
