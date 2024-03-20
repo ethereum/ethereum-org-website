@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
+  calc,
   Center,
   Flex,
   Text,
@@ -218,7 +219,7 @@ const FindWalletPage = () => {
             {/* Filters sidebar */}
             <WalletFilterSidebar
               hideBelow="lg"
-              top={NAV_BAR_PX_HEIGHT}
+              top={calc(NAV_BAR_PX_HEIGHT).subtract("2px").toString()}
               {...{
                 filters,
                 resetWalletFilter,

@@ -45,7 +45,7 @@ const WalletFilterSidebar = ({
   const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
 
   return (
-    <Box w={{ md: "330px" }} {...boxProps}>
+    <Box w={{ md: showMobileSidebar ? "full" : "330px" }} {...boxProps}>
       <Box position="sticky" top={top ?? 0} zIndex={2} w={{ md: "330px" }}>
         <Flex
           justifyContent="space-between"
