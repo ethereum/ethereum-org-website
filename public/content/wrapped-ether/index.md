@@ -12,7 +12,7 @@ To bridge this gap, wrapped ETH (wETH) was created. **Wrapped ETH is a smart con
 
 You are able to unwrap wETH for ETH by using the wETH smart contract. You can deposit 1 wETH back into the wETH smart contract, and you will receive 1 ETH. The wETH deposited is then burned and taken out of the circulating supply of wETH.
 
-Roughly 3% of the circulating ETH supply is locked in the wETH token contract making it one of the most used smart contracts. wETH is especially important with users interacting with applications in decentralized finance (DeFi).
+**Roughly 3% of the circulating ETH supply is locked in the wETH token contract** making it one of the most used [smart contracts](/glossary/#smart-contract). wETH is especially important with users interacting with applications in decentralized finance (DeFi).
 
 ## Why do we need to wrap ETH as an ERC-20? {#why-do-we-need-to-wrap-eth} 
 
