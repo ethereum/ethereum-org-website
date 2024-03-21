@@ -4,7 +4,7 @@ description: An introduction to Wrapped ether (wETH)—an ERC20-compatible wrapp
 lang: en
 ---
 
-# Wrapped Ether (wETH)
+# Wrapped ether (wETH) {#intro-to-weth}
 
 [Ether](/eth) (ETH) is the native token on Ethereum, and is used for staking, as a currency and paying for gas fees for computation. However, ETH has limitations in how it can interact with assets and applications built on top of Ethereum, like ERC-20 tokens. In order for ETH to be able to interact with ERC-20 tokens, it must conform with the ERC-20 standard.
 
