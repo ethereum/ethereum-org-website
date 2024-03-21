@@ -47,7 +47,7 @@ Nevertheless, wETH is generally considered secure because it is based on a simpl
 
 <ExpandableCard title="Why am I seeing different wETH tokens?" eventCategory="/wrapped-ether" eventName="clicked Why am I seeing different wETH tokens?">
 
-Besides the [canonical implementation of wETH](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) described on this page, there are other variants in the wild. These may be custom tokens created by dapp developers or versions issued on other blockchains, and may behave differently or have different security properties. **Always double-check the token information to know which wETH implementation you're interacting with.**
+Besides the [canonical implementation of wETH](https://blog.0xproject.com/canonical-weth-a9aa7d0279dd) described on this page, there are other variants in the wild. These may be custom tokens created by app developers or versions issued on other blockchains, and may behave differently or have different security properties. **Always double-check the token information to know which wETH implementation you're interacting with.**
 
 </ExpandableCard>
 
