@@ -45,13 +45,21 @@ export const getLastModifiedDateByPath = (path: string): string => {
   return extractDateFromGitLogInfo(logInfo)
 }
 
-const LABELS_TO_SEARCH = ["content", "design", "dev", "doc", "translation"]
+const LABELS_TO_SEARCH = [
+  "content",
+  "design",
+  "dev",
+  "doc",
+  "translation",
+  "event",
+]
 const LABELS_TO_TEXT = {
   content: "content",
   design: "design",
   dev: "dev",
   doc: "docs",
   translation: "translation",
+  event: "event",
 }
 
 // Given a list of labels, it returns a new array with the labels that match the

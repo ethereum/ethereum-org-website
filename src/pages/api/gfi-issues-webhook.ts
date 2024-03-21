@@ -8,6 +8,7 @@ const LABELS_TO_EMOJI = {
   dev: "🛠️",
   docs: "📚",
   translation: "🌐",
+  event: "🗓️",
 }
 
 type ResponseData = {
