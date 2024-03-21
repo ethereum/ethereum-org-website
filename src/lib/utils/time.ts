@@ -15,3 +15,9 @@ export const getLocaleTimestamp = (
   const date = new Date(timestamp)
   return new Intl.DateTimeFormat(locale, opts).format(date)
 }
+
+export const getLocaleFormattedDate = (locale: Lang, date: string) => {
+  const walletLastUpdatedDate = new Date(date)
+
+  return new Intl.DateTimeFormat(locale).format(walletLastUpdatedDate)
+}
