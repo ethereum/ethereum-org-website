@@ -31,7 +31,7 @@ You are able to unwrap wETH for ETH by using the wETH smart contract. You can de
 | Ownership  | Ownership is managed by the Ethereum protocol through your account balance.  | Ownership of wETH managed by the wETH token smart contract, not the Ethereum protocol.                                                                                                                                         |
 | Gas        | Ether (ETH) is the accepted unit of payment for computation on the Ethereum network. Gas fees are denominated in gwei (a unit of Ether).                                                                                    | You cannot pay gas for a transaction using wETH tokens (except when using a third-party relayer service).                                                                                                                                                                                              |
 
-## Frequently Asked Questions
+## Frequently asked questions {#faq}
  
 <ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-ether" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
