@@ -87,7 +87,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
             {pageData.map(({ title, matomo }, idx) => (
               <ListItem
                 key={idx}
-                display="table"
+                style={{ display: 'table' }}
                 onClick={(e) => {
                   handleSelection(idx)
                   trackCustomEvent(matomo)
