@@ -134,6 +134,10 @@ One particular area of layer 2 that requires more research and development is sa
 
 Sharding Ethereum's blockchain has long been part of the development roadmap. However, new scaling solutions such as "Danksharding" are currently taking center stage.
 
+The precursor to full Danksharding known as Proto-Danksharding went live with the Cancun-Deneb ("Dencun") network upgrade.
+
+[More about the Dencun upgrade](/roadmap/dencun/)
+
 #### Background reading {#background-reading-4}
 
 - [Proto-Danksharding notes](https://notes.ethereum.org/@vbuterin/proto_danksharding_faq)

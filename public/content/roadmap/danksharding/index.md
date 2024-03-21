@@ -15,7 +15,7 @@ summaryPoints:
 
 ## What is Proto-Danksharding? {#what-is-protodanksharding}
 
-Proto-Danksharding, also known as [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), is a way for [rollups](/layer2/#rollups) to add cheaper data to blocks. The name comes from the two researchers who proposed the idea: Protolambda and Dankrad Feist. Historically, rollups had been limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`.
+Proto-Danksharding, also known as [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), is a way for [rollups](/layer-2/#rollups) to add cheaper data to blocks. The name comes from the two researchers who proposed the idea: Protolambda and Dankrad Feist. Historically, rollups had been limited in how cheap they can make user transactions by the fact that they post their transactions in `CALLDATA`.
 
 This is expensive because it is processed by all Ethereum nodes and lives on-chain forever, even though rollups only need the data for a short time. Proto-Danksharding introduces data blobs that can be sent and attached to blocks. The data in these blobs is not accessible to the EVM and is automatically deleted after a fixed time period (set to 4096 epochs at time of writing, or about 18 days). This means rollups can send their data much more cheaply and pass the savings on to end users in the form of cheaper transactions.
 
@@ -81,7 +81,7 @@ Data availability sampling is required for validators to quickly and efficiently
 
 ### Current progress {#current-progress}
 
-Full Danksharding is several years away. In the meantime, the KZG ceremony has concluded with over 140,000 contributions, and the [EIP](https://eips.ethereum.org/EIPS/eip-4844) for Proto-Danksharding has matured, with an agreed upon production-ready specification already being tested on testnets. This upgrade is set to go live on Ethereum Mainnet in March 2024 as part of the Deneb + Cancun upgrade. You can keep up to date using the [EIP 4844 readiness checklist](https://github.com/ethereum/pm/blob/master/Dencun/4844-readiness-checklist.md).
+Full Danksharding is several years away. In the meantime, the KZG ceremony has concluded with over 140,000 contributions, and the [EIP](https://eips.ethereum.org/EIPS/eip-4844) for Proto-Danksharding has matured. This proposal has been fully implemented in all testnets, and went live on Mainnet with the Cancun-Deneb ("Dencun") network upgrade in March 2024.
 
 ### Further reading {#further-reading}
 

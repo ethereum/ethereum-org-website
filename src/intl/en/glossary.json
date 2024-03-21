@@ -15,7 +15,7 @@
   "apr-definition": "APR, or Annual Percentage Rate, reflects the yearly cost of borrowing money, including interest and fees, as a percentage.",
   "asic-term": "ASIC",
   "asic-definition": "Application-specific integrated circuit. This usually refers to an integrated circuit, custom-built for cryptocurrency mining.",
-  "assert-term": "asset",
+  "assert-term": "assert",
   "assert-definition": "In <a href=\"/glossary/#solidity\">Solidity</a>, `assert(false)` compiles to `0xfe`, an invalid opcode, which uses up all remaining <a href=\"/glossary/#gas\">gas</a> and reverts all changes. When an `assert()` statement fails, something very wrong and unexpected is happening, and you will need to fix your code. You should use `assert()` to avoid conditions that should never, ever occur. <a href=\"/developers/docs/smart-contracts/security/\">More on smart contract security</a>.",
   "attestation-term": "Attestation",
   "attestation-definition": "A claim made by an entity that something is true. In context of Ethereum, consensus validators must make a claim as to what they believe the state of the chain to be. At designated times, each validator is responsible for publishing different attestations that formally declare this validator's view of the chain, including the last finalized checkpoint and the current head of the chain. <a href=\"/developers/docs/consensus-mechanisms/pos/attestations/\">More on attestations</a>.",
