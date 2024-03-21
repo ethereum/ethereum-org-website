@@ -52,6 +52,7 @@ Besides the [canonical implementation of wETH](https://blog.0xproject.com/canoni
 </ExpandableCard>
 
 ## Further reading {#further-reading}
+
 - [WTF is wETH?](https://weth.io/)
 - [What are the cheapest ways to wrap ETH into wETH?](https://medium.com/@therugpush/cheapest-way-to-wrap-eth-into-weth-446cf1ddccf7) 
 - [wETH token information on Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
