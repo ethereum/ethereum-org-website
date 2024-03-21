@@ -2,87 +2,6 @@ import { CommunityConference } from "@/lib/types"
 
 const communityConferences: CommunityConference[] = [
   {
-    title: "ETH Cinco de Mayo",
-    startDate: "2024-02-02",
-    endDate: "2024-02-04",
-    to: "https://ethcincodemayo.com/",
-    location: "Cholula, Puebla",
-    description:
-      "A perfect combination of competition, workshops, networking, entrepreneurship and culture!",
-  },
-  {
-    title: "Circuit Breaker",
-    to: "https://ethglobal.com/events/circuitbreaker",
-    location: "Remote",
-    description:
-      "It’s finally the time to do a dedicated event all about Zero Knowledge Proofs. Build, learn, and understand how to write ZK Circuits at Circuit Breaker and play a role in making ZK Tooling better. Join us for the month of Feb to do everything ZK.",
-    startDate: "2024-2-2",
-    endDate: "2024-2-21",
-  },
-  {
-    title: "ETH Lima Day",
-    startDate: "2024-02-03",
-    endDate: "2024-02-03",
-    to: "https://ethlima.org",
-    location: "Lima, PE",
-    description:
-      "In Ethereum Lima, we are united by the will to create a community that can take advantage of the opportunities of the technological revolution that comes with blockchain, and particularly with Ethereum.",
-  },
-  {
-    title: "NFT Paris",
-    startDate: "2024-02-23",
-    endDate: "2024-02-24",
-    to: "https://nftparis.xyz",
-    location: "Paris, FR",
-    description:
-      "Where Finance, Gaming, Art, Fashion, Sport , Media converge to celebrate the era of digital assets.",
-  },
-  {
-    title: "ETHDenver",
-    startDate: "2024-02-23",
-    endDate: "2024-03-03",
-    to: "https://ethdenver.com",
-    location: "Denver, CO, USA",
-    description:
-      "ETHDenver celebrates the convergence of blockchain, culture, and education. Located in the heart of Denver, Colorado, ETHDenver is the premiere destination for #BUIDLing the decentralized future..",
-  },
-  {
-    title: "Pragma Denver",
-    to: "https://ethglobal.com/events/pragma-denver",
-    location: "Denver, Colorado",
-    description:
-      "Our first IRL event of the year will be our One Day Founders Only Pragma conference in Denver just before the big weekend. We’re excited to show you our new format for how we believe amazing content focused web3 summits should be executed!",
-    startDate: "2024-2-28",
-    endDate: "2024-2-28",
-  },
-  {
-    title: "ETH Latam",
-    startDate: "2024-03-13",
-    endDate: "2024-03-14",
-    to: "https://ethlatam.org/#/honduras",
-    location: "San Pedro Sula, HN",
-    description:
-      "ETH Latam brings together the global community of creators and educators with the most vibrant crypto communities in the world, who use Ethereum protocols and technology in their daily lives, providing real solutions to real problems.",
-  },
-  {
-    title: "Pragma London",
-    to: "https://ethglobal.com/events/pragma-london",
-    location: "London, United Kingdom",
-    description:
-      "Pragma is a one-day, single-track, in-person summit hosted by ETHGlobal. With a focus on intimacy, Pragma serves as a hub for high-quality talks and as a forum of discussion for builders and leaders from Ethereum ecosystem and beyond. Join us on Pi Day in London to catchup on all things pushing this ecosystem forward",
-    startDate: "2024-3-14",
-    endDate: "2024-3-14",
-  },
-  {
-    title: "ETHGlobal London",
-    to: "https://ethglobal.com/events/london2024",
-    location: "London, United Kingdom",
-    description:
-      "ETHGlobal London is going to be an event full of hacking, networking, side events and fun activities. We are excited to be back in London for our inaugural event of 2024, marking our first return since 2020.",
-    startDate: "2024-3-15",
-    endDate: "2024-3-17",
-  },
-  {
     title: "ETH Canal",
     startDate: "2024-03-19",
     endDate: "2024-03-21",
@@ -90,14 +9,6 @@ const communityConferences: CommunityConference[] = [
     location: "Panama City, PA",
     description:
       "Experience three transformative where the Ethereum community gathers in Panama, to discuss blockchain innovation.",
-  },
-  {
-    title: "ETHVietnam",
-    startDate: "2024-03-16",
-    endDate: "2024-03-17",
-    to: "https://www.eth-vietnam.com/",
-    location: "Hanoi, Vietnam",
-    description: "ETH Community in SEA to #Build, #Learn and #Share together.",
   },
   {
     title: "ETHTaipei",
@@ -456,6 +367,15 @@ const communityConferences: CommunityConference[] = [
       "Whenever Devcon happens, we’ll be running a large hackathon right alongside it. Don’t miss the biggest web3 developer meetup of the year in South East Asia.",
     startDate: "TBD",
     endDate: "TBD",
+  },
+  {
+    title: "ETHBratislava",
+    to: "http://www.ethbratislava.com/",
+    location: "Bratislava, Slovakia",
+    description:
+      "With this pioneering event in Slovakia we are finally uniting a passionate community engaged in the Ethereum ecosystem's economics, governance, and technology.",
+    startDate: "2024-05-10",
+    endDate: "2024-05-11",
   },
   {
     title: "NapulETH Open Village",
