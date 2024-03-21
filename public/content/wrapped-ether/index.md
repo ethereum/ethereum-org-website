@@ -16,7 +16,7 @@ You are able to unwrap wETH for ETH by using the wETH smart contract. You can de
 
 ## Why do we need to wrap ETH as an ERC-20? {#why-do-we-need-to-wrap-eth} 
 
-[ERC-20](/developers/docs/standards/tokens/erc-20/) defines a standard interface for fungible tokens, so anyone can create tokens that interact seamlessly with applications and tokens that use this standard in Ethereum's ecosystem. Since ETH predates the ERC-20 standard, ETH doesn't conform to this specification. This means you can't easily exchange ETH for other ERC-20 tokens or use ETH in apps using the ERC-20 standard. Wrapping ETH gives you the opportunity to do the following:
+[ERC-20](/developers/docs/standards/tokens/erc-20/) defines a standard interface for fungible tokens, so anyone can create tokens that interact seamlessly with applications and tokens that use this standard in Ethereum's ecosystem. Since **ETH predates the ERC-20 standard**, ETH doesn't conform to this specification. This means **you can't easily** exchange ETH for other ERC-20 tokens or **use ETH in apps using the ERC-20 standard**. Wrapping ETH gives you the opportunity to do the following:
 
 - **Exchange ETH for ERC-20 tokens**: You cannot exchange ETH directly for other ERC-20 tokens. wETH is a representation of Ether that complies with the ERC-20 fungible token standard and can be exchanged with other ERC-20 tokens. 
 
