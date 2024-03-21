@@ -6,7 +6,7 @@ lang: en
 
 # Wrapped ether (WETH) {#intro-to-weth}
 
-Ether (ETH) is the main currency of Ethereum. It's used for several purposes like staking, as a currency, and paying for computational services. **WETH is effectively an upgraded form of ETH with some additional functionality required by many applications and <GlossaryTooltip termKey="erc-20">ERC-20 tokens</GlossaryTooltips**, which are other types of digital assets on Ethereum. To work with these tokens, ETH must follow the same rules they do, known as the ERC-20 standard.
+Ether (ETH) is the main currency of Ethereum. It's used for several purposes like staking, as a currency, and paying for computational services. **WETH is effectively an upgraded form of ETH with some additional functionality required by many applications and <GlossaryTooltip termKey="erc-20">ERC-20 tokens</GlossaryTooltips>**, which are other types of digital assets on Ethereum. To work with these tokens, ETH must follow the same rules they do, known as the ERC-20 standard.
 
 To bridge this gap, wrapped ETH (WETH) was created. **Wrapped ETH is a smart contract that lets you deposit 1 ETH into the contract and receive 1 minted WETH** that conforms to the ERC-20 token standard. WETH is a representation of ETH that allows you to interact with it as an ERC-20 token, not as the native asset ETH. You will still need native ETH to pay for gas fees, so make sure you save some when depositing. 
 
