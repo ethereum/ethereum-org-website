@@ -6,13 +6,13 @@ lang: en
 
 # Wrapped ether (wETH) {#intro-to-weth}
 
-Ether (ETH) is the main currency of Ethereum. It's used for several purposes like staking,  as a currency, and paying for computational services. However, **ETH can't easily interact with Ethereum applications and ERC-20 tokens**, which are other types of digital assets on Ethereum. To work with these tokens, ETH must follow the same rules they do, known as the ERC-20 standard.
+Ether (ETH) is the main currency of Ethereum. It's used for several purposes like staking,  as a currency, and paying for computational services. However, **ETH can't easily interact with Ethereum applications and <GlossaryTooltip termKey="erc-20">ERC-20 tokens</GlossaryTooltip>**, which are other types of digital assets on Ethereum. To work with these tokens, ETH must follow the same rules they do, known as the ERC-20 standard.
 
 To bridge this gap, wrapped ETH (wETH) was created. **Wrapped ETH is a smart contract that lets you deposit 1 ETH into the contract and receive 1 minted wETH** that conforms to the ERC-20 token standard. wETH is a representation of ETH that allows you to interact with it as an ERC-20 token, not as the native asset ETH. You will still need native ETH to pay for gas fees, so make sure you save some when depositing. 
 
 You are able to unwrap wETH for ETH by using the wETH smart contract. You can deposit 1 wETH back into the wETH smart contract, and you will receive 1 ETH. The wETH deposited is then burned and taken out of the circulating supply of wETH.
 
-**Roughly 3% of the circulating ETH supply is locked in the wETH token contract** making it one of the most used [smart contracts](/glossary/#smart-contract). wETH is especially important with users interacting with applications in decentralized finance (DeFi).
+**Roughly 3% of the circulating ETH supply is locked in the wETH token contract** making it one of the most used <GlossaryTooltip termKey="smart-contract">smart contracts</GlossaryTooltip>. wETH is especially important with users interacting with applications in decentralized finance (DeFi).
 
 ## Why do we need to wrap ETH as an ERC-20? {#why-do-we-need-to-wrap-eth} 
 
