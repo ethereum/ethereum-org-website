@@ -77,7 +77,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
   } = useStakingConsiderations({ page })
 
   return (
-    <Flex flexDir={{ base: "column", md: "row" }} gap={8}>
+    <Flex flexDir={{ base: "column", md: "row" }}>
       <ButtonDropdown list={dropdownLinks} hideFrom={mdBp} />
       {/* TODO: Improve a11y */}
       <Box flex={1} hideBelow={mdBp}>
@@ -87,6 +87,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
             {pageData.map(({ title, matomo }, idx) => (
               <ListItem
                 key={idx}
+                display="table"
                 onClick={(e) => {
                   handleSelection(idx)
                   trackCustomEvent(matomo)
@@ -98,18 +99,11 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                 position="relative"
                 {...(idx === activeIndex
                   ? {
-                      bg: "primary.base",
-                      color: "background.base",
-                      _after: {
-                        content: `''`,
-                        position: "absolute",
-                        height: 0,
-                        width: 0,
-                        top: 0,
-                        insetInlineStart: "100%",
-                        border: "1rem solid transparent",
-                        borderInlineStartColor: "primary.base",
-                      },
+                      bg: "var(--eth-colors-offBackground)",
+                      color: "var(--eth-colors-chakra-body-text)",
+                      fontWeight: "bold",
+                      display: "table",
+                      width: "100%"
                     }
                   : { color: "primary.base" })}
               >
