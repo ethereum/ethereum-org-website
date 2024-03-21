@@ -33,8 +33,8 @@ export async function EthereumEventsImport() {
   const googleApiKey = process.env.GOOGLE_API_KEY
   const sheetId = "1NEu_FCc1hnGAuRgPmbXXpf0h2lCrCOlMKbbFEqgkVDQ"
 
-  if (!googleApiKey || !sheetId) {
-    console.warn("googleApiKey or sheetId not set")
+  if (!googleApiKey) {
+    console.warn("googleApiKey not set")
     return []
   }
 
