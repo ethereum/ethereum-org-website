@@ -18,7 +18,6 @@ lang: ru
 - [MetaCartel](https://www.metacartel.org/grants/): _разработка децентрализованных приложений, создание DAO._
 - [DAO Moloch](https://www.molochdao.com/): _конфиденциальность, масштабирование второго уровня, безопасность клиентов и многое другое._
 - [Гранты DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0): _Google-таблица организаций, предлагающих гранты._
-- [Crunchbase для грантов по Web3](https://www.cryptoneur.xyz/web3-grants): _отфильтровывайте и ищите гранты по категории, назначению, количеству и другим характеристикам. Помогите другим найти нужный грант._
 - [Академические гранты](https://esp.ethereum.foundation/academic-grants): _гранты на поддержку академической работы, связанной с Ethereum._
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs): _компания Blockworks составила полный каталог всех грантов, запросов предложений (RFP) и наград за найденные ошибки._
 
@@ -35,7 +34,6 @@ lang: ru
 - [Программа грантов SKALE Network](https://skale.space/developers#grants): _экосистема [SKALE Network](https://skale.space/)._
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm): _экосистема [The Graph](https://thegraph.com/)._
 - [Программа грантов Uniswap](https://www.uniswapfoundation.org/apply-for-a-grant): _сообщество [Uniswap](https://uniswap.org/)._
-- [Web3 Grants](https://web3grants.net): _обширный список грантов, связанных с web3/криптовалютами._
 
 ## Квадратичное финансирование {#quadratic-funding}
 

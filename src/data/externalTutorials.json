@@ -478,5 +478,16 @@
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "03/22/2023"
+  },
+  {
+    "url": "https://veridelisi.medium.com/learn-opcodes-7bd28d5f0d1b",
+    "title": "Learn EVM Opcodes Series",
+    "description": "Welcome to the comprehensive series on understanding Ethereum Virtual Machine (EVM) Opcodes",
+    "author": "Engin YILMAZ @veridelisi",
+    "authorGithub": "https://github.com/veridelisi",
+    "tags": ["opcodes", "foundry", "smart contracts", "solidity", "yul", "storage", "memory"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "publishDate": "03/08/2023"
   }
 ]
