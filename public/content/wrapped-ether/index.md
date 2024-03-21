@@ -22,7 +22,7 @@ You are able to unwrap wETH for ETH by using the wETH smart contract. You can de
 
 - **Use ETH in dapps**: Because ETH isn’t ERC20-compatible, developers would need to create separate interfaces (one for ETH and another for ERC-20 tokens) in dapps. Wrapping ETH removes this obstacle and enables developers to handle ETH and other tokens within the same dapp. Many decentralized finance applications use this standard, and create markets for exchanging these tokens.
 
-## Wrapped Ether (wETH) vs Ether (ETH): What is the difference? {#weth-vs-eth-differences}
+## Wrapped ether (wETH) vs ether (ETH): What is the difference? {#weth-vs-eth-differences}
 
 
 |            | **Ether (ETH)**                                                                                                                                                                                                                 | **Wrapped Ether (wETH)**                                                                                                                                                                                                                                                                                    |
