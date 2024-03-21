@@ -171,6 +171,14 @@ const communityConferences: CommunityConference[] = [
     "endDate": "2024-04-19"
   },
   {
+    title: "Cruise Night",
+    startDate: "2024-04-18",
+    endDate: "2024-04-18",
+    to: "https://lu.ma/CruiseNight",
+    location: "Dubai, UAE",
+    description: "An exclusive yacht party on April 18th, 2024, a great connection point of Token 2049 Dubai and EthDubai. This premium event is designed to strengthen ties within the Ethereum community, setting the stage for November's global Devcon gathering.",
+  },
+  {
     title: "TOKEN2049",
     startDate: "2024-04-18",
     endDate: "2024-04-19",
