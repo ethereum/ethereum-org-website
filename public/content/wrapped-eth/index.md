@@ -54,7 +54,5 @@ Besides the [canonical implementation of WETH](https://etherscan.io/token/0xc02a
 ## Further reading {#further-reading}
 
 - [WTF is WETH?](https://weth.io/)
-- [What are the cheapest ways to wrap ETH into WETH?](https://medium.com/@therugpush/cheapest-way-to-wrap-eth-into-weth-446cf1ddccf7) 
 - [WETH token information on Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
-- [How To add Wrapped Ether (WETH) to Metamask](https://isitcrypto.com/add-weth-to-metamask/)
 - [Formal Verification of WETH](https://zellic.io/blog/formal-verification-weth)
