@@ -1,6 +1,6 @@
 ---
 title: What is Wrapped Ether (wETH)
-description: An introduction to Wrapped Ether (wETH)—an ERC20-compatible version of Ether (ETH). 
+description: An introduction to Wrapped ether (wETH)—an ERC20-compatible wrapper for ether (ETH). 
 lang: en
 ---
 
