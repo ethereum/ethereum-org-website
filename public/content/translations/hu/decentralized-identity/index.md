@@ -49,7 +49,7 @@ A decentralizált azonosítókat elosztott főkönyveken (blokklánc) vagy peer-
 
 ## Mi teszi lehetővé a decentralizált azonosítók használatát? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Nyilvánoskulcs-infrastruktúra (PKI) {#public-key-infrastructure}
+### 1. Nyilvánoskulcs-infrastruktúra (PKI) {#public-key-cryptography}
 
 A nyilvánoskulcs-infrastruktúra (PKI) egy olyan információbiztonsági lépés, amely az entitás számára egy [nyilvános kulcsot](/glossary/#public-key) és egy [privát kulcsot](/glossary/#private-key) hoz létre. A nyilvános kulcson alapuló kriptográfiát a blokklánchálózatok arra használják, hogy igazolják a felhasználók identitását és a digitális eszközök tulajdonjogát.
 

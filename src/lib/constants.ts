@@ -75,6 +75,57 @@ export const ETHERSCAN_API_URL = "https://api.etherscan.io"
 export const NAV_BAR_PX_HEIGHT = "75px"
 export const FROM_QUERY = "from"
 
+// Wallets
+export const NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN = 5
+
+export const WALLETS_FILTERS_DEFAULT = {
+  android: false,
+  ios: false,
+  linux: false,
+  windows: false,
+  macOS: false,
+  firefox: false,
+  chromium: false,
+  hardware: false,
+  open_source: false,
+  non_custodial: false,
+  hardware_support: false,
+  rpc_importing: false,
+  nft_support: false,
+  connect_to_dapps: false,
+  staking: false,
+  swaps: false,
+  layer_2: false,
+  gas_fee_customization: false,
+  ens_support: false,
+  erc_20_support: false,
+  buy_crypto: false,
+  withdraw_crypto: false,
+  multisig: false,
+  social_recovery: false,
+}
+
+export const NEW_TO_CRYPTO_FEATURES = ["new_to_crypto"]
+
+export const NFTS_FEATURES = ["nft_support", "layer_2", "connect_to_dapps"]
+
+export const LONG_TERM_FEATURES = ["hardware", "non_custodial"]
+
+export const FINANCE_FEATURES = [
+  "hardware_support",
+  "connect_to_dapps",
+  "gas_fee_customization",
+  "erc_20_support",
+]
+
+export const DEVELOPER_FEATURES = [
+  "open_source",
+  "rpc_importing",
+  "connect_to_dapps",
+  "gas_fee_customization",
+  "erc_20_support",
+]
+
 /**
  * Navigation
  */

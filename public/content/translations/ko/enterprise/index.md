@@ -32,7 +32,7 @@ sidebarDepth: 1
 
 - [EEA](https://entethalliance.org/) _EEA(Enterprise Ethereum Alliance)는 전 세계 기업과 소비자 활동의 조화와 상호 운용성을 촉진하는 개방형의 블록체인 사양을 개발하는 것을 목표로, 회원사 기반으로 운영되는 표준화 조직입니다. EEA의 글로벌 커뮤니티는 리더, 수용층, 혁신층, 개발자, 기업들로 구성되어 있으며, 각 회원사는 모두의 이익을 증진시키는 개방형의 탈중앙화 웹을 만들기 위해 서로 협업합니다._
 
-- [하이퍼레저 재단(Hyperledger Foundation)](https://hyperledger.org) _하이퍼레저는 여러 산업에 적용할 수 있는 블록체인 기술 개발을 위해 공동으로 노력하는 오픈 소스 프로젝트입니다. 하이퍼레저는 금융, 은행, 사물 인터넷, 공급망, 제조 및 기술 분야의 선도업체가 포함된 리눅스 재단이 주관하는 글로벌 협업 프로젝트입니다._ _리눅스 재단에는 이더리움 스택과 연동되는 몇 가지 프로젝트가 있습니다._ - [하이퍼레저 베수(Hyperledger Besu)](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [하이퍼레저 버로우(Hyperledger Burrow)](https://www.hyperledger.org/projects/hyperledger-burrow)
+- [하이퍼레저 재단(Hyperledger Foundation)](https://hyperledger.org) _하이퍼레저는 여러 산업에 적용할 수 있는 블록체인 기술 개발을 위해 공동으로 노력하는 오픈 소스 프로젝트입니다. 하이퍼레저는 금융, 은행, 사물 인터넷, 공급망, 제조 및 기술 분야의 선도업체가 포함된 리눅스 재단이 주관하는 글로벌 협업 프로젝트입니다._ _리눅스 재단에는 이더리움 스택과 연동되는 몇 가지 프로젝트가 있습니다._ - [하이퍼레저 베수(Hyperledger Besu)](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - 하이퍼레저 버로우(Hyperledger Burrow)
 
 ## 엔터프라이즈 중심 서비스 {#enterprise-focused-services}
 
@@ -46,7 +46,6 @@ sidebarDepth: 1
 ## 프로토콜 및 인프라 {#protocol-and-infrastructure}
 
 - [하이퍼레저 베수(Hyperledger Besu)](https://www.hyperledger.org/projects/besu) _Apache 2.0 라이선스에 따라 개발되고 Java로 작성된 오픈 소스 이더리움 클라이언트_
-- [하이퍼레저 버로우(Hyperledger Burrow)](https://www.hyperledger.org/projects/hyperledger-burrow) _EVM(Ethereum Virtual Machine)의 사양에 따라 부분적으로 개발되며, 권한이 부여된 스마트 컨트랙트 인터프리터가 포함된 모듈형 블록체인 클라이언트_
 - [인퓨라(Infura)](https://infura.io/) _이더리움 및 IPFS 네트워크에 대한 확장 가능한 API 액세스_
 - [칼레이도(Kaleido)](https://kaleido.io/) _클라우드를 교차하는 하이브리드 엔터프라이즈 생태계를 구축하고 실행하기 위한 전체 스택 플랫폼_
 - [오토니티(Autonity)](https://www.clearmatics.com/about/) _P2P 프로토콜을 구현하고 클라이언트 소프트웨어 및 인프라를 제공하는 프로토콜 모음_
