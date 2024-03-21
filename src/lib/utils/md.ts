@@ -266,7 +266,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/terms-of-use",
     "/web3",
     "/whitepaper",
-    "/wrapped-ether",
+    "/wrapped-eth",
     "/zero-knowledge-proofs",
   ]
 
