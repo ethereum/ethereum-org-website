@@ -54,13 +54,13 @@ const LABELS_TO_TEXT = {
   translation: "translation",
 }
 
-// Given a list of labels, it returns a string with the labels that match the
+// Given a list of labels, it returns a new array with the labels that match the
 // LABELS_TO_SEARCH list, using the LABELS_TO_TEXT values
 // Example:
-// - ["content :pencil:", "ux design"] => "content, design"
-// - ["documentation :emoji:", "dev required", "good first issue"] => "docs, dev"
-export const rawLabelsToText = (labels: string[]) => {
-  return labels
+// - ["content :pencil:", "ux design"] => ["content", "design"]
+// - ["documentation :emoji:", "dev required", "good first issue"] => ["docs", "dev"]
+export const normalizeLabels = (labels: string[]) => {
+  const labelsFound = labels
     .map((label) => {
       const labelIndex = LABELS_TO_SEARCH.findIndex((l) =>
         label.toLocaleLowerCase().includes(l)
@@ -74,5 +74,7 @@ export const rawLabelsToText = (labels: string[]) => {
       return LABELS_TO_TEXT[labelMatched]
     })
     .filter(Boolean)
-    .join(", ")
+
+  // remove duplicates
+  return Array.from(new Set(labelsFound))
 }

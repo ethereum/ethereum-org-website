@@ -1,6 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 
-import { rawLabelsToText } from "@/lib/utils/gh"
+import { normalizeLabels } from "@/lib/utils/gh"
+
+const LABELS_TO_EMOJI = {
+  content: "📝",
+  design: "🎨",
+  dev: "🛠️",
+  docs: "📚",
+  translation: "🌐",
+}
 
 type ResponseData = {
   message: string
@@ -51,11 +59,13 @@ export default async function handler(
   ]
 
   const allLabels = issue.labels.map((label) => label.name)
-  const labels = rawLabelsToText(allLabels)
-  const labelsText = labels ? ` - ${labels}` : ""
+  const [firstLabel] = normalizeLabels(allLabels)
+  const labelsText = firstLabel ? ` - ${firstLabel}` : ""
+  const emoji = LABELS_TO_EMOJI[firstLabel]
+  const emojiText = emoji ? `${emoji} ` : ""
 
   const message = {
-    content: `## New good first issue${labelsText}`,
+    content: `### ${emojiText}New good first issue${labelsText}`,
     embeds,
   }
 
