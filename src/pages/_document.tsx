@@ -32,7 +32,7 @@ class Document extends NextDocument {
           {/* preload inter static web fonts */}
           <link
             rel="preload"
-            href="/fonts/inter/UcC73FwrK3iLTeHuS_fvQtMwCp50KnMa1ZL7.woff2"
+            href="/fonts/inter/latin.woff2"
             as="font"
             type="font/woff2"
             crossOrigin="anonymous"
