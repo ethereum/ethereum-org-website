@@ -478,7 +478,7 @@
     "startDate": "2024-05-10",
     "endDate": "2024-05-11",
     "to": "https://ethbratislava.com/",
-    "location": "Bratislava, SVK",
+    "location": "Bratislava, Slovakia",
     "description": "Join the 1st #ETH hackathon &amp; conference in Bratislava empowering local communities &amp; sustainability on Ethereum. Follow us for more updates 🔜",
     "imageUrl": "https://framerusercontent.com/images/wx8uSNTYpgWtsrSN5A2dkD0F4.png"
   },
@@ -510,12 +510,12 @@
     "imageUrl": ""
   },
   {
-    "title": "ETH Naples",
+    "title": "NapulETH",
     "startDate": "2024-09-12",
     "endDate": "2024-09-14",
     "to": "https://napul.eth.limo",
-    "location": "Napoli, ITAL",
-    "description": "",
+    "location": "Napoli, Italy",
+    "description": "The Biggest ETH Event in Southern Italy",
     "imageUrl": ""
   },
   {
