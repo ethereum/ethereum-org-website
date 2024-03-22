@@ -61,12 +61,19 @@ export default async function handler(
 
   const allLabels = issue.labels.map((label) => label.name)
   const [firstLabel] = normalizeLabels(allLabels)
-  const labelsText = firstLabel ? ` - ${firstLabel}` : ""
-  const emoji = LABELS_TO_EMOJI[firstLabel]
-  const emojiText = emoji ? `${emoji} ` : ""
+
+  let content: string
+  if (firstLabel) {
+    const labelsText = ` - ${firstLabel}`
+    const emoji = LABELS_TO_EMOJI[firstLabel]
+    const emojiText = emoji ? `${emoji} ` : ""
+    content = `### ${emojiText}New good first issue${labelsText}`
+  } else {
+    content = `### New good first issue`
+  }
 
   const message = {
-    content: `### ${emojiText}New good first issue${labelsText}`,
+    content,
     embeds,
   }
 
