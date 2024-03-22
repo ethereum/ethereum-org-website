@@ -4,7 +4,7 @@ description: A Dagger-Hashimoto algoritmus részletes áttekintése.
 lang: hu
 ---
 
-A Dagger-Hashimoto volt az Ethereum bányászati algoritmusának eredeti fejlesztési implementációja és specifikációja. A Dagger-Hashimoto algoritmust az [Ethash](#ethash) váltotta le. A bányászatot teljesen kikapcsolták az [egyesítés (Merge)](/updates/merge) frissítés életbe lépésekor, 2022. szeptember 15-én. Azóta az Ethereumot a [proof-of-stake (letéti igazolás)](/developers/docs/consensus-mechanisms/pos) mechanizmusa biztosítja. Ez az oldal elavult témákat tartalmaz, amelyek többé már nem relevánsak az egyesítés (Merge) utáni Ethereummal kapcsolatban.
+A Dagger-Hashimoto volt az Ethereum bányászati algoritmusának eredeti fejlesztési implementációja és specifikációja. A Dagger-Hashimoto algoritmust az [Ethash](#ethash) váltotta le. A bányászatot teljesen kikapcsolták az [egyesítés (Merge)](/roadmap/merge/) frissítés életbe lépésekor, 2022. szeptember 15-én. Azóta az Ethereumot a [proof-of-stake (letéti igazolás)](/developers/docs/consensus-mechanisms/pos) mechanizmusa biztosítja. Ez az oldal elavult témákat tartalmaz, amelyek többé már nem relevánsak az egyesítés (Merge) utáni Ethereummal kapcsolatban.
 
 ## Előfeltételek {#prerequisites}
 

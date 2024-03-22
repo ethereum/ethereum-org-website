@@ -378,7 +378,7 @@ Belirli bir Ethereum kullanım standardını tanımlamaya çalışan bazı [EIP'
 
 [Hisse ispatına](#pos) dönüşmeden önce Ethereum'da kullanılmış bir [iş ispatı](#pow) algoritmasıdır.
 
-[Daha fazla bilgi edinin](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
+[Daha fazla bilgi edinin](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)
 
 ### ether {#ether}
 

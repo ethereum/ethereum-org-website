@@ -61,7 +61,7 @@ Ethereum se actualiza periódciamente para mejorar su escalabilidad, seguridad o
 
 La hoja de ruta es principalmente el resultado de años de trabajo de investigadores y desarrolladores, dado que el protocolo es muy técnico. No obstante cualquier persona motivada puede participar. Las ideas usualmente empiezan como discusiones en un foro del estilo [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://ethereum-magicians.org/) o el servidor de Discord de Eth. Pueden haber respuestas a nuevos puntos flacos que se descubren, sugerencias de organizaciones que trabajan en la capa de aplicaciones (como DApps e intercambios) o disuasiones conocidas para los usuarios finales (como costes o velocidades de transacción). Cuando estas ideas maduren, se pueden proponer como [propuestas de mejora de Ethereum o EIP] (https://eips.ethereum.org/). Todo esto se hace en público para que cualquier persona de la comunidad pueda intervenir en cualquier momento.
 
-[Más información sobre la gobernanza de Ethereum](/gobernanza/)
+[Más información sobre la gobernanza de Ethereum](/governance/)
 
 </RoadmapImageContent>
 

@@ -295,4 +295,4 @@ Waffle のドキュメンテーションは、[こちら](https://ethereum-waffl
 
 さらに、以下のチュートリアルをおすすめします：
 
-- [Waffle を使ってスマートコントラクトをテストする](/developers/tutorials/testing-smart-contract-with-waffle/)
+- [Waffle を使ってスマートコントラクトをテストする](/developers/tutorials/waffle-test-simple-smart-contract/)

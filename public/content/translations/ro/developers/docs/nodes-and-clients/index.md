@@ -233,8 +233,6 @@ Verificați cu atenţie documentația sau pagina de ajutor a clientului pentru a
 
 `geth --syncmode "light"`
 
-For further details, check out the tutorial on [running Geth light node](/developers/tutorials/run-light-node-geth/).
-
 **Setting up full sync with archive in [Besu](https://besu.hyperledger.org/)**
 
 `besu --sync-mode=FULL`
@@ -312,5 +310,4 @@ There is a lot of information about Ethereum clients on the internet. Here are f
 
 ## Tutoriale corelate {#related-tutorials}
 
-- [Rularea unui nod cu Geth](/developers/tutorials/run-light-node-geth/) _ – Cum se descarcă, se instalează şi se rulează Geth. Covering syncmodes, the JavaScript console, and more._
 - [Transformați Raspberry Pi 4 într-un nod validator doar prin flash-area cardului MicroSD – Ghidul de instalare](/developers/tutorials/run-node-raspberry-pi/) _– Flash-ați Raspberry Pi 4, conectați un cablu ethernet, conectați discul SSD și porniți dispozitivul pentru a transforma Raspberry Pi 4 într-un nod Ethereum complet care rulează nivelul de execuție (Mainnet) și / sau nivelul de consens (Lanțul Beacon / validatorul)._
