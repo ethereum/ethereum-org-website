@@ -27,11 +27,11 @@ Az elkövetkező protokollfrissítések érdeklik? [Tudjon meg többet a követk
 
 ## 2023 {#2023}
 
-### Shanghai {#shanghai}
+### Shanghai-Capella ("Shapella") {#shapella}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### Összegzés {#shanghai-summary}
+#### Shanghai összefoglaló {#shanghai-summary}
 
 A Shanghai frissítés bevezette a letétek kivonási lehetőségét a végrehajtási rétegen. A Capella frissítéssel együtt ez lehetővé tette, hogy a blokkok kivonási műveletet fogadjanak el, amivel a letétesek ki tudják venni az ETH a Beacon láncról a végrehajtási rétegre.
 
@@ -49,13 +49,7 @@ A Shanghai frissítés bevezette a letétek kivonási lehetőségét a végrehaj
 
 - [Olvassa el a Shanghai frissítés specifikációit](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### Capella {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### Összegzés {#capella-summary}
+#### Capella összefoglaló {#capella-summary}
 
 A Capella frissítés a harmadik legnagyobb frissítés volt a konszenzusrétegen (Beacon lánc) és lehetővé tette a letétek kivételét. A Capella egyszerre történt a Shanghai frissítéssel, ami a végrehajtási réteget változtatta meg, s így lehetővé vált a letét kivétele.
 

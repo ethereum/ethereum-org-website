@@ -56,7 +56,6 @@ const ListItem = (props: ChildOnlyProp) => (
 
 // Static layout components
 export const staticComponents = {
-  a: Link,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
@@ -119,13 +118,15 @@ export const StaticLayout = ({
           ) : (
             <>
               <Breadcrumbs slug={slug} mb="8" />
-              <Text
-                color="text200"
-                dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
-              >
-                <Translation id="page-last-updated" />:{" "}
-                {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
-              </Text>
+              {lastUpdatedDate && (
+                <Text
+                  color="text200"
+                  dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
+                >
+                  <Translation id="page-last-updated" />:{" "}
+                  {getLocaleTimestamp(locale as Lang, lastUpdatedDate)}
+                </Text>
+              )}
             </>
           )}
 
