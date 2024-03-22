@@ -11,6 +11,7 @@ import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
+import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
@@ -65,6 +66,7 @@ export const staticComponents = {
   Contributors,
   EnergyConsumptionChart,
   GlossaryDefinition,
+  GlossaryTooltip,
   Icon,
   Link,
   Logo,
