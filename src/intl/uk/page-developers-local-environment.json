@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Фреймворк для розробки й тестування на основі Python для розумних контрактів, націлених на Віртуальну машину Ethereum.",
   "page-local-environment-brownie-logo-alt": "Brownie logo",
+  "page-local-environment-kurtosis-desc": "Інструментарій на основі контейнерів для легкого налаштування та розкручування тестової мережі з великою кількістю клієнтів Ethereum, у якій можна швидко розробляти локальні децентралізовані програми (dApp), прототипувати й тестувати їх.",
+  "page-local-environment-kurtosis-logo-alt": "Логотип Kurtosis",
   "page-local-environment-epirus-desc": "Платформа для розробки, впровадження та відстеження блокчейн-програм на віртуальній машині Java.",
   "page-local-environment-epirus-logo-alt": "Epirus logo",
   "page-local-environment-eth-app-desc": "Створюйте програми на основі Ethereum за допомогою однієї команди. Містить велику кількість фреймворків інтерфейсу та шаблонів DeFi.",

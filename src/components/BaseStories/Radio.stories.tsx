@@ -1,5 +1,5 @@
 import * as React from "react"
-import { RadioGroup, Radio as RadioComponent, Flex } from "@chakra-ui/react"
+import { Flex, Radio as RadioComponent, RadioGroup } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 type RadioType = typeof RadioComponent
