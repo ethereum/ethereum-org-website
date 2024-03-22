@@ -485,9 +485,65 @@
     "description": "Welcome to the comprehensive series on understanding Ethereum Virtual Machine (EVM) Opcodes",
     "author": "Engin YILMAZ @veridelisi",
     "authorGithub": "https://github.com/veridelisi",
-    "tags": ["opcodes", "foundry", "smart contracts", "solidity", "yul", "storage", "memory"],
+    "tags": [
+      "opcodes",
+      "foundry",
+      "smart contracts",
+      "solidity",
+      "yul",
+      "storage",
+      "memory"
+    ],
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "03/08/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/escrow-contract-with-solidity",
+    "title": "Build an escrow contract with Solidity and Replit",
+    "description": "Learn how to build a simple escrow smart contract, which will include deploying your own non-fungible token (NFT) and learning more about Solidity on Ethereum.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["solidity", "smart contracts", "erc-721"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "20",
+    "publishDate": "03/24/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/build-a-robot-nft",
+    "title": "Build a robot NFT with Solidity and Replit (part 1)",
+    "description": "Learn how to create a simple generative art NFT, ReplBots, with part 1 focusing on the smart contract deployment.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["solidity", "smart contracts", "erc-721", "nft"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "20",
+    "publishDate": "03/24/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/build-a-robot-nft-p2",
+    "title": "Build a robot NFT with Solidity and Replit (part 2)",
+    "description": "Continues from part 1 where you can learn how to create a frontend interface for your NFT application.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["javascript", "frontend"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "15",
+    "publishDate": "03/24/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/build-smart-contract-oracle",
+    "title": "Build a smart contract oracle with Solidity, Node.js, and Replit",
+    "description": "Learn how to use oracles in smart contracts and how oracles work internally, and gain experience with hybrid on-and-off chain systems.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["solidity", "oracles", "javascript"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "30",
+    "publishDate": "03/24/2023"
   }
 ]
