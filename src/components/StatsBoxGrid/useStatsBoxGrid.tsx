@@ -1,252 +1,118 @@
-import React, { useState, useEffect } from "react"
-import axios from "axios"
-import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+import { useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+
+import type { AllMetricData, Lang, StatsBoxMetric } from "@/lib/types"
+
+import { getLocaleForNumberFormat } from "@/lib/utils/translations"
+
+import { RANGES } from "@/lib/constants"
 
 import { RangeSelector } from "./RangeSelector"
-import { Direction } from "../../types"
-import { GATSBY_FUNCTIONS_PATH } from "../../constants"
-import { getData } from "../../utils/cache"
-import {
-  getLocaleForNumberFormat,
-  isLangRightToLeft,
-} from "../../utils/translations"
-import { Lang } from "../../utils/languages"
 
-export const ranges = ["30d", "90d"] as const
-
-export interface State {
-  value: string
-  data: Array<{ timestamp: number }>
-  hasError: boolean
+const formatTotalStaked = (amount: number, locale: string): string => {
+  return new Intl.NumberFormat(locale, {
+    notation: "compact",
+    minimumSignificantDigits: 3,
+    maximumSignificantDigits: 4,
+  }).format(amount)
 }
 
-export interface Metric {
-  title: string
-  description: string
-  state: State
-  buttonContainer: JSX.Element
-  range: string
-  apiUrl: string
-  apiProvider: string
+const formatTVL = (tvl: number, locale: string): string => {
+  return new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: "USD",
+    notation: "compact",
+    minimumSignificantDigits: 3,
+    maximumSignificantDigits: 4,
+  }).format(tvl)
 }
 
-interface IFetchPriceResponse {
-  prices: Array<[number, number]>
+const formatTxs = (txs: number, locale: string): string => {
+  return new Intl.NumberFormat(locale, {
+    notation: "compact",
+    minimumSignificantDigits: 3,
+    maximumSignificantDigits: 4,
+  }).format(txs)
 }
 
-interface IFetchNodeResponse {
-  result: Array<{ UTCDate: number; TotalNodeCount: number }>
+const formatNodes = (nodes: number, locale: string): string => {
+  return new Intl.NumberFormat(locale, {
+    minimumSignificantDigits: 3,
+    maximumSignificantDigits: 4,
+  }).format(nodes)
 }
 
-interface IFetchTotalValueLockedResponse {
-  date: string
-  totalLiquidityUSD: number
-}
+export const useStatsBoxGrid = ({
+  totalEthStaked,
+  nodeCount,
+  totalValueLocked,
+  txCount,
+}: AllMetricData): StatsBoxMetric[] => {
+  const { t } = useTranslation("page-index")
+  const { locale } = useRouter()
 
-interface IFetchTxResponse {
-  unixTimeStamp: string
-  transactionCount: number
-}
-
-export const useStatsBoxGrid = () => {
-  const { t } = useTranslation()
-  const { language } = useI18next()
-
-  const [ethPrices, setEthPrices] = useState<State>({
-    data: [],
-    value: "0",
-    hasError: false,
-  })
-  const [valueLocked, setValueLocked] = useState<State>({
-    data: [],
-    value: "0",
-    hasError: false,
-  })
-  const [txs, setTxs] = useState<State>({
-    data: [],
-    value: "0",
-    hasError: false,
-  })
-  const [nodes, setNodes] = useState<State>({
-    data: [],
-    value: "0",
-    hasError: false,
-  })
-  const [selectedRangePrice, setSelectedRangePrice] = useState<string>(
-    ranges[0]
-  )
-  const [selectedRangeTvl, setSelectedRangeTvl] = useState<string>(ranges[0])
+  const [selectedRangeTotalStaked, setSelectedRangeTotalStaked] =
+    useState<string>(RANGES[0])
+  const [selectedRangeTvl, setSelectedRangeTvl] = useState<string>(RANGES[0])
   const [selectedRangeNodes, setSelectedRangeNodes] = useState<string>(
-    ranges[0]
+    RANGES[0]
   )
-  const [selectedRangeTxs, setSelectedRangeTxs] = useState<string>(ranges[0])
+  const [selectedRangeTxs, setSelectedRangeTxs] = useState<string>(RANGES[0])
 
-  useEffect(() => {
-    const localeForStatsBoxNumbers = getLocaleForNumberFormat(language as Lang)
+  const localeForNumberFormat = getLocaleForNumberFormat(locale! as Lang)
 
-    const formatPrice = (price: number): string => {
-      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
-        style: "currency",
-        currency: "USD",
-        minimumSignificantDigits: 3,
-        maximumSignificantDigits: 4,
-      }).format(price)
-    }
+  const totalEtherStaked =
+    "error" in totalEthStaked
+      ? { error: totalEthStaked.error }
+      : {
+          data: totalEthStaked.data,
+          value: formatTotalStaked(totalEthStaked.value, localeForNumberFormat),
+        }
 
-    const formatTVL = (tvl: number): string => {
-      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
-        style: "currency",
-        currency: "USD",
-        notation: "compact",
-        minimumSignificantDigits: 3,
-        maximumSignificantDigits: 4,
-      }).format(tvl)
-    }
+  const valueLocked =
+    "error" in totalValueLocked
+      ? { error: totalValueLocked.error }
+      : {
+          data: totalValueLocked.data,
+          value: formatTVL(totalValueLocked.value, localeForNumberFormat),
+        }
 
-    const formatTxs = (txs: number): string => {
-      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
-        notation: "compact",
-        minimumSignificantDigits: 3,
-        maximumSignificantDigits: 4,
-      }).format(txs)
-    }
+  const txs =
+    "error" in txCount
+      ? { error: txCount.error }
+      : {
+          data: txCount.data,
+          value: formatTxs(txCount.value, localeForNumberFormat),
+        }
 
-    const formatNodes = (nodes: number): string => {
-      return new Intl.NumberFormat(localeForStatsBoxNumbers, {
-        minimumSignificantDigits: 3,
-        maximumSignificantDigits: 4,
-      }).format(nodes)
-    }
+  const nodes =
+    "error" in nodeCount
+      ? { error: nodeCount.error }
+      : {
+          data: nodeCount.data,
+          value: formatNodes(nodeCount.value, localeForNumberFormat),
+        }
 
-    const fetchPrices = async (): Promise<void> => {
-      try {
-        const {
-          data: { prices },
-        } = await axios.get<IFetchPriceResponse>(
-          `https://api.coingecko.com/api/v3/coins/ethereum/market_chart?vs_currency=usd&days=90&interval=daily`
-        )
-        const data = prices
-          .map(([timestamp, value]) => ({
-            timestamp,
-            value,
-          }))
-          .sort((a, b) => a.timestamp - b.timestamp)
-        const value = formatPrice(data[data.length - 1].value)
-        setEthPrices({
-          data, // historical data: {timestamp: unix-milliseconds, value }
-          value, // current value
-          hasError: false,
-        })
-      } catch (error) {
-        setEthPrices((ethPrices) => ({
-          ...ethPrices,
-          hasError: true,
-        }))
-      }
-    }
-    fetchPrices()
-
-    const fetchNodes = async (): Promise<void> => {
-      try {
-        const { result } = await getData<IFetchNodeResponse>(
-          `${GATSBY_FUNCTIONS_PATH}/etherscan`
-        )
-        const data = result
-          .map(({ UTCDate, TotalNodeCount }) => ({
-            timestamp: new Date(UTCDate).getTime(),
-            value: Number(TotalNodeCount),
-          }))
-          .sort((a, b) => a.timestamp - b.timestamp)
-        const value = formatNodes(data[data.length - 1].value)
-        setNodes({
-          data, // historical data: {timestamp: unix-milliseconds, value }
-          value, // current value
-          hasError: false,
-        })
-      } catch (error) {
-        console.error(error)
-        setNodes((nodes) => ({
-          ...nodes,
-          hasError: true,
-        }))
-      }
-    }
-    fetchNodes()
-
-    const fetchTotalValueLocked = async (): Promise<void> => {
-      try {
-        const response = await getData<Array<IFetchTotalValueLockedResponse>>(
-          `${GATSBY_FUNCTIONS_PATH}/defipulse`
-        )
-        const data = response
-          .map(({ date, totalLiquidityUSD }) => ({
-            timestamp: parseInt(date) * 1000,
-            value: totalLiquidityUSD,
-          }))
-          .sort((a, b) => a.timestamp - b.timestamp)
-        const value = formatTVL(data[data.length - 1].value)
-        setValueLocked({
-          data, // historical data: {timestamp: unix-milliseconds, value }
-          value, // current value
-          hasError: false,
-        })
-      } catch (error) {
-        console.error(error)
-        setValueLocked((valueLocked) => ({
-          ...valueLocked,
-          hasError: true,
-        }))
-      }
-    }
-    fetchTotalValueLocked()
-
-    const fetchTxCount = async (): Promise<void> => {
-      try {
-        const response = await getData<Array<IFetchTxResponse>>(
-          `${process.env.GATSBY_FUNCTIONS_PATH}/txs`
-        )
-        const data = response
-          .map(({ unixTimeStamp, transactionCount }) => ({
-            timestamp: parseInt(unixTimeStamp) * 1000, // unix milliseconds
-            value: transactionCount,
-          }))
-          .sort((a, b) => a.timestamp - b.timestamp)
-        const value = formatTxs(data[data.length - 1].value)
-        setTxs({
-          data,
-          value,
-          hasError: false,
-        })
-      } catch (error) {
-        console.error(error)
-        setTxs((txs) => ({
-          ...txs,
-          hasError: true,
-        }))
-      }
-    }
-    fetchTxCount()
-  }, [language])
-
-  const metrics: Array<Metric> = [
+  const metrics: StatsBoxMetric[] = [
     {
-      apiProvider: "CoinGecko",
-      apiUrl: "https://www.coingecko.com/en/coins/ethereum",
-      title: t("page-index-network-stats-eth-price-description"),
-      description: t("page-index-network-stats-eth-price-explainer"),
+      apiProvider: "Beaconcha.in",
+      apiUrl: "https://beaconcha.in/",
+      title: t("page-index-network-stats-total-eth-staked"),
+      description: t("page-index-network-stats-total-eth-staked-explainer"),
       buttonContainer: (
         <RangeSelector
-          state={selectedRangePrice}
-          setState={setSelectedRangePrice}
+          state={selectedRangeTotalStaked}
+          setState={setSelectedRangeTotalStaked}
           matomo={{
             eventCategory: "Stats",
             eventAction: "click",
-            eventName: "eth price",
+            eventName: "total eth staked",
           }}
         />
       ),
-      state: ethPrices,
-      range: selectedRangePrice,
+      state: totalEtherStaked,
+      range: selectedRangeTotalStaked,
     },
     {
       apiProvider: "Etherscan",
@@ -306,10 +172,6 @@ export const useStatsBoxGrid = () => {
       range: selectedRangeNodes,
     },
   ]
-  const dir: Direction = isLangRightToLeft(language as Lang) ? "rtl" : "ltr"
 
-  return {
-    metrics,
-    dir,
-  }
+  return metrics
 }

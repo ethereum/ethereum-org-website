@@ -6,13 +6,13 @@ This documentation outlines our current processes for how we prioritize items in
 
 ### General review process
 
-We use a first-in, first-out system for reviewing pull requests. The longer a pull request has been open, the higher priority it is for our team to review. In some cases—for example, fixing a high-priority issue or merging low-hanging fruit for a deploy—we will stray from this process and use our best judgement to get higher-impact changes deployed more quickly.
+We use a first-in, first-out system for reviewing pull requests. The longer a pull request has been open, the higher the priority it is for our team to review. In some cases—for example, fixing a high-priority issue or merging low-hanging fruit for a deploy—we will stray from this process and use our best judgement to get higher-impact changes deployed more quickly.
 
 We aim to have every new PR reviewed with change requests, merged, or closed within 30 days of opening. As outlined in the following sections, different types of pull requests do have different levels of priority, and this may influence how promptly a pull request is acted on.
 
 ### Translations
 
-Translation pull requests are considered high priority. These are when the translated and reviewed files from our translation management platform are submitted as a pull request. They are important to our core value of bringing Ethereum education to as many languages as possible. They also are the accumulation of months of work by translators and reviewers, and any delay to this already long process is undesirable.
+Translation pull requests are considered high-priority. These are when the translated and reviewed files from our translation management platform are submitted as a pull request. They are important to our core value of bringing Ethereum education to as many languages as possible. They also are the accumulation of months of work by translators and reviewers, and any delay to this already long process is undesirable.
 
 **Timeline:** PRs should be merged within 4 days of opening (by the next release).
 
@@ -24,7 +24,7 @@ Bug pull requests can vary from low-priority to high-priority depending on the s
 
 ### Features
 
-Any new feature correlated to an approved issue is medium-priority. Similar to translators, code contributors dedicate a large amount of their time to improving [ethereum.org](http://ethereum.org) as a resource and addressing their efforts quickly is desirable. New features that were not discussed, requested or approved do not fall under this timeline.
+Any new feature correlated with an approved issue is of medium priority. Similar to translators, code contributors dedicate a large amount of their time to improving [ethereum.org](http://ethereum.org) as a resource and addressing their efforts quickly is desirable. New features that were not discussed, requested or approved do not fall under this timeline.
 
 **Timeline:** Major features should be merged within 30 days of opening. Minor features should be merged within 14 days of opening.
 

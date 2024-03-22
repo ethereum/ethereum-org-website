@@ -1,11 +1,8 @@
 import React from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import Link from "./Link"
-import Translation from "./Translation"
-import { TranslationKey } from "../utils/translations"
+import { IoCodeOutline } from "react-icons/io5"
 import {
-  Flex,
   Box,
+  Flex,
   Hide,
   Icon,
   LinkBox,
@@ -13,19 +10,23 @@ import {
   useColorModeValue,
 } from "@chakra-ui/react"
 
-import { IoCodeOutline } from "react-icons/io5"
+import { TranslationKey } from "@/lib/types"
+
+import { Image } from "@/components/Image"
+import { BaseLink } from "@/components/Link"
+import Translation from "@/components/Translation"
 
 export interface ITitleCardItem {
   title: string
   description: string
   caption?: string
   link?: string
-  image?: IGatsbyImageData
+  image?: string
   alt?: string
   id?: number
 }
 
-export interface IProps {
+export type TitleCardListProps = {
   content: Array<ITitleCardItem>
   className?: string
   clickHandler: (idx: number) => void
@@ -33,13 +34,13 @@ export interface IProps {
   isCode: boolean
 }
 
-const TitleCardList: React.FC<IProps> = ({
+const TitleCardList = ({
   content,
   className,
   clickHandler,
   headerKey,
   isCode,
-}) => {
+}: TitleCardListProps) => {
   // This will be accessible with color contrast
   const descriptionCaptionColor = useColorModeValue(
     "blackAlpha.700",
@@ -47,7 +48,7 @@ const TitleCardList: React.FC<IProps> = ({
   )
   return (
     <Box
-      bg="background"
+      bg="background.base"
       boxShadow="tableBox"
       width="100%"
       border-radius="sm"
@@ -64,12 +65,7 @@ const TitleCardList: React.FC<IProps> = ({
         borderBottomStyle="solid"
         borderBottomColor="text"
       >
-        <Icon
-          as={IoCodeOutline}
-          _hover={{
-            path: { fill: "tranparent" },
-          }}
-        />
+        <Icon as={IoCodeOutline} />
         <Translation id={headerKey} />
         {isCode && (
           <Hide below="s">
@@ -78,21 +74,21 @@ const TitleCardList: React.FC<IProps> = ({
                 width="12px"
                 height="12px"
                 bg="fail300"
-                marginRight={2}
+                me={2}
                 borderRadius="full"
               />
               <Box
                 width="12px"
                 height="12px"
                 bg="gridYellow"
-                marginRight={2}
+                me={2}
                 borderRadius="full"
               />
               <Box
                 width="12px"
                 height="12px"
                 bg="success300"
-                marginRight={2}
+                me={2}
                 borderRadius="full"
               />
             </Flex>
@@ -106,11 +102,8 @@ const TitleCardList: React.FC<IProps> = ({
         return isLink ? (
           <LinkBox
             key={id || idx}
-            as={Link}
-            href={link}
             display="flex"
             textDecoration="none"
-            hideArrow
             justifyContent="space-between"
             color="text"
             marginBottom="1px"
@@ -119,24 +112,23 @@ const TitleCardList: React.FC<IProps> = ({
             boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
             _hover={{
               textDecoration: "none",
-              boxShadow: "0 0 1px var(--eth-colors-primary)",
+              boxShadow: "0 0 1px var(--eth-colors-primary-base)",
               bg: "primary100",
               color: "black",
             }}
           >
             {image && (
-              <Box
-                as={GatsbyImage}
-                marginTop={1}
-                marginRight={4}
-                minWidth={5}
-                image={image}
+              <Image
+                src={image}
                 alt={alt || ""}
+                marginTop={1}
+                me={4}
+                minWidth={5}
               />
             )}
-            <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
+            <Flex flex="1 1 75%" flexDirection="column" me={8}>
               <LinkOverlay
-                as={Link}
+                as={BaseLink}
                 href={link}
                 hideArrow
                 color="inherit"
@@ -157,12 +149,7 @@ const TitleCardList: React.FC<IProps> = ({
               </Box>
             </Flex>
             {caption && (
-              <Flex
-                flex="1 0 25%"
-                alignItems="center"
-                flexWrap="wrap"
-                marginRight={4}
-              >
+              <Flex flex="1 0 25%" alignItems="center" flexWrap="wrap" me={4}>
                 <Box
                   fontSize="sm"
                   marginBottom="0"
@@ -186,22 +173,21 @@ const TitleCardList: React.FC<IProps> = ({
             cursor="pointer"
             boxShadow="0px 1px 1px var(--eth-colors-tableItemBoxShadow)"
             _hover={{
-              boxShadow: "0 0 1px var(--eth-colors-primary)",
+              boxShadow: "0 0 1px var(--eth-colors-primary-base)",
               bg: "primary100",
-              color: "black",
+              "*": { color: "black" },
             }}
           >
             {image && (
-              <Box
-                as={GatsbyImage}
-                marginTop={1}
-                marginRight={4}
-                minWidth={5}
-                image={image}
+              <Image
+                src={image}
                 alt={alt || ""}
+                marginTop={1}
+                me={4}
+                minWidth={5}
               />
             )}
-            <Flex flex="1 1 75%" flexDirection="column" marginRight={8}>
+            <Flex flex="1 1 75%" flexDirection="column" me={8}>
               <Box>{title}</Box>
 
               <Box
@@ -213,12 +199,7 @@ const TitleCardList: React.FC<IProps> = ({
               </Box>
             </Flex>
             {caption && (
-              <Flex
-                flex="1 0 25%"
-                alignItems="center"
-                flexWrap="wrap"
-                marginRight={4}
-              >
+              <Flex flex="1 0 25%" alignItems="center" flexWrap="wrap" me={4}>
                 <Box
                   fontSize="sm"
                   marginBottom="0"

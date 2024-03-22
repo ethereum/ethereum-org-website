@@ -1,5 +1,6 @@
-import React, { ComponentType, SVGProps, useEffect, useState } from "react"
-import { shuffle } from "lodash"
+import { ComponentType, SVGProps, useEffect, useState } from "react"
+import shuffle from "lodash/shuffle"
+import { useTranslation } from "next-i18next"
 import {
   Badge,
   Box,
@@ -15,27 +16,26 @@ import {
   SimpleGrid,
   useColorModeValue,
 } from "@chakra-ui/react"
-// Data imports
-import stakingProducts from "../../data/staking-products.json"
-// Component imports
-import ButtonLink from "../ButtonLink"
-import Translation from "../Translation"
+
+import { ButtonLink } from "@/components/Buttons"
 // SVG imports
 import {
   CautionProductGlyphIcon,
   GreenCheckProductGlyphIcon,
   UnknownProductGlyphIcon,
   WarningProductGlyphIcon,
-} from "../icons/staking"
+} from "@/components/icons/staking"
 
-import { MatomoEventOptions } from "../../utils/matomo"
-// When adding a product svg, be sure to add to mapping below as well.
+import { MatomoEventOptions } from "@/lib/utils/matomo"
+
+import stakingProducts from "@/data/staking-products.json"
 
 const PADDED_DIV_STYLE: BoxProps = {
   px: 8,
   py: 6,
 }
 
+// TODO: Remove enum, replace with "as const" object
 enum FlagType {
   VALID = "green-check",
   CAUTION = "caution",
@@ -47,11 +47,13 @@ enum FlagType {
 const getIconFromName = (
   imageName: string
 ): ComponentType<SVGProps<SVGElement>> => {
-  const { [imageName + "GlyphIcon"]: Icon } = require("../icons/staking")
+  const {
+    [imageName + "GlyphIcon"]: Icon,
+  } = require("@/components/icons/staking")
   return Icon
 }
 
-const Status: React.FC<{ status: FlagType }> = ({ status }) => {
+const Status = ({ status }: { status: FlagType }) => {
   if (!status) return null
 
   const styles = { fontSize: "2xl", m: 0 }
@@ -68,10 +70,13 @@ const Status: React.FC<{ status: FlagType }> = ({ status }) => {
   }
 }
 
-const StakingBadge: React.FC<{
+const StakingBadge = ({
+  type,
+  children,
+}: {
   type: "ui" | "platform"
   children: React.ReactNode
-}> = ({ type, children }) => {
+}) => {
   const uiTypeColor = type === "ui" && "stakingPillUI"
   const platformTypeColor = type === "platform" && "stakingPillPlatform"
 
@@ -104,15 +109,16 @@ type Product = {
   permissionless: FlagType
   permissionlessNodes: FlagType
   multiClient: FlagType
-  diverseClients: FlagType
+  consensusDiversity: FlagType
+  executionDiversity: FlagType
   economical: FlagType
   matomo: MatomoEventOptions
 }
-interface ICardProps {
+type StakingProductCardProps = {
   product: Product
 }
 
-const StakingProductCard: React.FC<ICardProps> = ({
+const StakingProductCard = ({
   product: {
     name,
     imageName,
@@ -131,59 +137,65 @@ const StakingProductCard: React.FC<ICardProps> = ({
     permissionless,
     permissionlessNodes,
     multiClient,
-    diverseClients,
+    consensusDiversity,
+    executionDiversity,
     economical,
     matomo,
   },
-}) => {
+}: StakingProductCardProps) => {
+  const { t } = useTranslation("page-staking")
   const Svg = getIconFromName(imageName)
   const data = [
     {
-      label: <Translation id="page-staking-considerations-solo-1-title" />,
+      label: t("page-staking-considerations-solo-1-title"),
       status: openSource,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-2-title" />,
+      label: t("page-staking-considerations-solo-2-title"),
       status: audited,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-3-title" />,
+      label: t("page-staking-considerations-solo-3-title"),
       status: bugBounty,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-4-title" />,
+      label: t("page-staking-considerations-solo-4-title"),
       status: battleTested,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-5-title" />,
+      label: t("page-staking-considerations-solo-5-title"),
       status: trustless,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-6-title" />,
+      label: t("page-staking-considerations-solo-6-title"),
       status: permissionless,
     },
     {
-      label: <Translation id="page-staking-considerations-pools-6-title" />,
+      label: t("page-staking-considerations-pools-6-title"),
       status: permissionlessNodes,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-7-title" />,
+      label: t("page-staking-considerations-solo-7-title"),
       status: multiClient,
     },
     {
-      label: <Translation id="page-staking-considerations-saas-7-title" />,
-      status: diverseClients,
+      label: t("page-staking-considerations-saas-7-title"),
+      status: executionDiversity,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-8-title" />,
+      label: t("page-staking-considerations-saas-8-title"),
+      status: consensusDiversity,
+    },
+    {
+      label: t("page-staking-considerations-solo-8-title"),
       status: selfCustody,
     },
     {
-      label: <Translation id="page-staking-considerations-pools-8-title" />,
+      label: t("page-staking-considerations-pools-8-title"),
       status: liquidityToken,
     },
     {
-      label: <Translation id="page-staking-considerations-solo-9-title" />,
+      label: t("page-staking-considerations-solo-9-title"),
       status: economical,
     },
   ].filter(({ status }) => !!status)
@@ -207,7 +219,7 @@ const StakingProductCard: React.FC<ICardProps> = ({
         maxH={24}
       >
         {!!Svg && <Icon as={Svg} fontSize="2rem" color="white" />}
-        <Heading fontSize="2xl" color="white">
+        <Heading as="h4" fontSize="2xl" color="white">
           {name}
         </Heading>
       </HStack>
@@ -267,18 +279,18 @@ const StakingProductCard: React.FC<ICardProps> = ({
       </Box>
       <Box {...PADDED_DIV_STYLE}>
         <ButtonLink to={url} customEventOptions={matomo} width="100%">
-          <Translation id="page-staking-products-get-started" />
+          {t("page-staking-products-get-started")}
         </ButtonLink>
       </Box>
     </Flex>
   )
 }
 
-export interface IProps {
+export type StakingProductCardGridProps = {
   category: string
 }
 
-const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
+const StakingProductCardGrid = ({ category }: StakingProductCardGridProps) => {
   const [rankedProducts, updateRankedProducts] = useState<Array<Product>>([])
   const [SAT, LUM] = useColorModeValue(["75%", "60%"], ["50%", "35%"])
 
@@ -318,12 +330,8 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     return product.multiClient === FlagType.VALID ? 1 : 0
   }
 
-  const scoreDiverseClients = (product: Product): 2 | 1 | 0 => {
-    return product.diverseClients === FlagType.VALID
-      ? 2
-      : product.diverseClients === FlagType.WARNING
-      ? 1
-      : 0
+  const scoreClientDiversity = (flag: FlagType): 2 | 1 | 0 => {
+    return flag === FlagType.VALID ? 2 : flag === FlagType.WARNING ? 1 : 0
   }
 
   const scoreEconomical = (product: Product): 1 | 0 => {
@@ -340,7 +348,8 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
     score += scorePermissionless(product)
     score += scorePermissionlessNodes(product)
     score += scoreMultiClient(product)
-    score += scoreDiverseClients(product)
+    score += scoreClientDiversity(product.executionDiversity)
+    score += scoreClientDiversity(product.consensusDiversity)
     score += scoreEconomical(product)
     return score
   }
@@ -421,7 +430,12 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
           permissionlessNodes: getFlagFromBoolean(
             listing.hasPermissionlessNodes
           ),
-          diverseClients: getDiversityOfClients(listing.pctMajorityClient),
+          executionDiversity: getDiversityOfClients(
+            listing.pctMajorityExecutionClient
+          ),
+          consensusDiversity: getDiversityOfClients(
+            listing.pctMajorityConsensusClient
+          ),
           liquidityToken: getFlagFromBoolean(listing.tokens?.length),
           minEth: listing.minEth,
         }))
@@ -452,7 +466,12 @@ const StakingProductCardGrid: React.FC<IProps> = ({ category }) => {
           ...getTagProperties(listing),
           ...getSharedSecurityProperties(listing),
           permissionless: getFlagFromBoolean(listing.isPermissionless),
-          diverseClients: getDiversityOfClients(listing.pctMajorityClient),
+          executionDiversity: getDiversityOfClients(
+            listing.pctMajorityExecutionClient
+          ),
+          consensusDiversity: getDiversityOfClients(
+            listing.pctMajorityConsensusClient
+          ),
           selfCustody: getFlagFromBoolean(listing.isSelfCustody),
           minEth: listing.minEth,
         }))

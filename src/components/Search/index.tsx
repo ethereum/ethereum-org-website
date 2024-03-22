@@ -1,168 +1,182 @@
-// Import libraries
-import React from "react"
-import { useTranslation, useI18next } from "gatsby-plugin-react-i18next"
+import { useRef } from "react"
+import dynamic from "next/dynamic"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { MdSearch } from "react-icons/md"
 import {
-  IconButton,
+  Box,
   forwardRef,
-  Portal,
-  useDisclosure,
   IconButtonProps,
-  useToken,
-  useMediaQuery,
+  Portal,
+  ThemeTypings,
+  type UseDisclosureReturn,
   useMergeRefs,
 } from "@chakra-ui/react"
 import { useDocSearchKeyboardEvents } from "@docsearch/react"
 import { DocSearchHit } from "@docsearch/react/dist/esm/types"
-import SearchButton from "./SearchButton"
-import SearchModal from "./SearchModal"
-import { sanitizeHitUrl } from "../../utils/url"
-import { sanitizeHitTitle } from "../../utils/sanitizeHitTitle"
 
-// Styles
+import { Button } from "@/components/Buttons"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
+import { sanitizeHitUrl } from "@/lib/utils/url"
+
+import SearchButton from "./SearchButton"
+
 import "@docsearch/css"
 
-// Utils
-import { trackCustomEvent } from "../../utils/matomo"
+const SearchModal = dynamic(() => import("./SearchModal"))
 
 export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   (props, ref) => (
-    <IconButton
+    <Button
       ref={ref}
-      icon={<MdSearch />}
-      fontSize="2xl"
-      variant="icon"
-      _hover={{ svg: { fill: "primary" } }}
+      variant="ghost"
+      isSecondary
+      px={2}
+      _hover={{
+        color: "primary.base",
+        transform: "rotate(5deg)",
+        transition: "transform 0.2s ease-in-out",
+      }}
+      transition="transform 0.2s ease-in-out"
       {...props}
-    />
+    >
+      <MdSearch />
+    </Button>
   )
 )
 
-const Search = forwardRef<{}, "button">((_, ref) => {
-  const searchButtonRef = React.useRef<HTMLButtonElement>(null)
-  const { isOpen, onClose, onOpen } = useDisclosure()
+type Props = Pick<UseDisclosureReturn, "isOpen" | "onOpen" | "onClose">
 
-  const mergedButtonRefs = useMergeRefs(ref, searchButtonRef)
+const Search = forwardRef<Props, "button">(
+  ({ isOpen, onOpen, onClose }, ref) => {
+    const { locale } = useRouter()
+    const searchButtonRef = useRef<HTMLButtonElement>(null)
+    const mergedButtonRefs = useMergeRefs(ref, searchButtonRef)
+    const { t } = useTranslation("common")
 
-  useDocSearchKeyboardEvents({
-    isOpen,
-    onOpen,
-    onClose,
-    searchButtonRef,
-  })
-  const { t } = useTranslation()
-  const { language } = useI18next()
-  const appId = process.env.GATSBY_ALGOLIA_APP_ID || ""
-  const apiKey = process.env.GATSBY_ALGOLIA_SEARCH_KEY || ""
-  const indexName =
-    process.env.GATSBY_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
+    useDocSearchKeyboardEvents({
+      isOpen,
+      onOpen,
+      onClose,
+      searchButtonRef,
+    })
 
-  // Check for the breakpoint with theme token
-  const xlBp = useToken("breakpoints", "xl")
-  const [isLargerThanXl] = useMediaQuery(`(min-width: ${xlBp})`)
+    const appId = process.env.NEXT_PUBLIC_ALGOLIA_APP_ID || ""
+    const apiKey = process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_KEY || ""
+    const indexName =
+      process.env.NEXT_PUBLIC_ALGOLIA_BASE_SEARCH_INDEX_NAME || "ethereumorg"
 
-  return (
-    <>
-      {isLargerThanXl ? (
-        <SearchButton
-          ref={mergedButtonRefs}
-          onClick={() => {
-            onOpen()
-            trackCustomEvent({
-              eventCategory: "nav bar",
-              eventAction: "click",
-              eventName: "search open",
-            })
-          }}
-          translations={{
-            buttonText: t("search"),
-            buttonAriaLabel: t("search"),
-          }}
-        />
-      ) : (
-        <SearchIconButton
-          onClick={() => {
-            onOpen()
-            trackCustomEvent({
-              eventCategory: "nav bar",
-              eventAction: "click",
-              eventName: "search open",
-            })
-          }}
-          ref={mergedButtonRefs}
-          aria-label={t("aria-toggle-search-button")}
-          size="sm"
-        />
-      )}
-      <Portal>
-        {isOpen && (
-          <SearchModal
-            apiKey={apiKey}
-            appId={appId}
-            indexName={indexName}
-            onClose={onClose}
-            searchParameters={{
-              facetFilters: [`lang:${language}`],
-            }}
-            transformItems={(items) =>
-              items.map((item: DocSearchHit) => {
-                const newItem: DocSearchHit = structuredClone(item)
-                newItem.url = sanitizeHitUrl(item.url)
-                newItem._highlightResult.hierarchy.lvl0.value =
-                  sanitizeHitTitle(item._highlightResult.hierarchy.lvl0.value)
-                return newItem
+    const breakpointToken: ThemeTypings["breakpoints"] = "xl"
+
+    return (
+      <>
+        <Box hideBelow={breakpointToken}>
+          <SearchButton
+            ref={mergedButtonRefs}
+            onClick={() => {
+              onOpen()
+              trackCustomEvent({
+                eventCategory: "nav bar",
+                eventAction: "click",
+                eventName: "search open",
               })
-            }
-            placeholder={t("search-ethereum-org")}
+            }}
             translations={{
-              searchBox: {
-                resetButtonTitle: t("clear"),
-                resetButtonAriaLabel: t("clear"),
-                cancelButtonText: t("close"),
-                cancelButtonAriaLabel: t("close"),
-              },
-              footer: {
-                selectText: t("docsearch-to-select"),
-                selectKeyAriaLabel: t("docsearch-to-select"),
-                navigateText: t("docsearch-to-navigate"),
-                navigateUpKeyAriaLabel: t("up"),
-                navigateDownKeyAriaLabel: t("down"),
-                closeText: t("docsearch-to-close"),
-                closeKeyAriaLabel: t("docsearch-to-close"),
-                searchByText: t("docsearch-search-by"),
-              },
-              errorScreen: {
-                titleText: t("docsearch-error-title"),
-                helpText: t("docsearch-error-help"),
-              },
-              startScreen: {
-                recentSearchesTitle: t("docsearch-start-recent-searches-title"),
-                noRecentSearchesText: t("docsearch-start-no-recent-searches"),
-                saveRecentSearchButtonTitle: t(
-                  "docsearch-start-save-recent-search"
-                ),
-                removeRecentSearchButtonTitle: t(
-                  "docsearch-start-remove-recent-search"
-                ),
-                favoriteSearchesTitle: t("docsearch-start-favorite-searches"),
-                removeFavoriteSearchButtonTitle: t(
-                  "docsearch-start-remove-favorite-search"
-                ),
-              },
-              noResultsScreen: {
-                noResultsText: t("docsearch-no-results-text"),
-                suggestedQueryText: t("docsearch-no-results-suggested-query"),
-                reportMissingResultsText: t("docsearch-no-results-missing"),
-                reportMissingResultsLinkText: t(
-                  "docsearch-no-results-missing-link"
-                ),
-              },
+              buttonText: t("search"),
+              buttonAriaLabel: t("search"),
             }}
           />
-        )}
-      </Portal>
-    </>
-  )
-})
+        </Box>
+        <Box hideFrom={breakpointToken}>
+          <SearchIconButton
+            onClick={() => {
+              onOpen()
+              trackCustomEvent({
+                eventCategory: "nav bar",
+                eventAction: "click",
+                eventName: "search open",
+              })
+            }}
+            ref={mergedButtonRefs}
+            aria-label={t("aria-toggle-search-button")}
+          />
+        </Box>
+        <Portal>
+          {isOpen && (
+            <SearchModal
+              apiKey={apiKey}
+              appId={appId}
+              indexName={indexName}
+              onClose={onClose}
+              searchParameters={{
+                facetFilters: [`lang:${locale}`],
+              }}
+              transformItems={(items) =>
+                items.map((item: DocSearchHit) => {
+                  const newItem: DocSearchHit = structuredClone(item)
+                  newItem.url = sanitizeHitUrl(item.url)
+                  const newTitle = sanitizeHitTitle(
+                    item._highlightResult.hierarchy.lvl0?.value || ""
+                  )
+                  newItem._highlightResult.hierarchy.lvl0.value = newTitle
+                  return newItem
+                })
+              }
+              placeholder={t("search-ethereum-org")}
+              translations={{
+                searchBox: {
+                  resetButtonTitle: t("clear"),
+                  resetButtonAriaLabel: t("clear"),
+                  cancelButtonText: t("close"),
+                  cancelButtonAriaLabel: t("close"),
+                },
+                footer: {
+                  selectText: t("docsearch-to-select"),
+                  selectKeyAriaLabel: t("docsearch-to-select"),
+                  navigateText: t("docsearch-to-navigate"),
+                  navigateUpKeyAriaLabel: t("up"),
+                  navigateDownKeyAriaLabel: t("down"),
+                  closeText: t("docsearch-to-close"),
+                  closeKeyAriaLabel: t("docsearch-to-close"),
+                  searchByText: t("docsearch-search-by"),
+                },
+                errorScreen: {
+                  titleText: t("docsearch-error-title"),
+                  helpText: t("docsearch-error-help"),
+                },
+                startScreen: {
+                  recentSearchesTitle: t(
+                    "docsearch-start-recent-searches-title"
+                  ),
+                  noRecentSearchesText: t("docsearch-start-no-recent-searches"),
+                  saveRecentSearchButtonTitle: t(
+                    "docsearch-start-save-recent-search"
+                  ),
+                  removeRecentSearchButtonTitle: t(
+                    "docsearch-start-remove-recent-search"
+                  ),
+                  favoriteSearchesTitle: t("docsearch-start-favorite-searches"),
+                  removeFavoriteSearchButtonTitle: t(
+                    "docsearch-start-remove-favorite-search"
+                  ),
+                },
+                noResultsScreen: {
+                  noResultsText: t("docsearch-no-results-text"),
+                  suggestedQueryText: t("docsearch-no-results-suggested-query"),
+                  reportMissingResultsText: t("docsearch-no-results-missing"),
+                  reportMissingResultsLinkText: t(
+                    "docsearch-no-results-missing-link"
+                  ),
+                },
+              }}
+            />
+          )}
+        </Portal>
+      </>
+    )
+  }
+)
 
 export default Search

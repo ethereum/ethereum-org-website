@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Ein auf Python basierendes Entwicklungs- und Test-Framework für Smart Contracts, die auf die Ethereum Virtual Machine abzielen.",
   "page-local-environment-brownie-logo-alt": "Brownie-Logo",
+  "page-local-environment-kurtosis-desc": "Ein Container-basiertes Toolkit zur einfachen Konfiguration und Einrichtung eines mehrmandantenfähigen Ethereum-Testnetzes für die schnelle lokale dApp-Entwicklung, das Erstellen von Prototypen und Tests.",
+  "page-local-environment-kurtosis-logo-alt": "Kurtosis-Logo",
   "page-local-environment-epirus-desc": "Eine Plattform zum Entwickeln, Bereitstellen und Überwachen von Blockchain-Anwendungen auf der Java Virtual Machine.",
   "page-local-environment-epirus-logo-alt": "Epirus-Logo",
   "page-local-environment-eth-app-desc": "Erstelle Ethereum-basierte Apps mit einem Befehl. Begleitet von einem breiten Angebot von UI-Frameworks und DeFi-Vorlagen, aus denen Sie auswählen können.",

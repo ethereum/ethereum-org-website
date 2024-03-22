@@ -1,5 +1,66 @@
 [
   {
+    "url": "https://updraft.cyfrin.io/courses/security",
+    "title": "Learn Smart Contract Auditing, Security, and DeFi",
+    "description": "The ultimate web3 security course for all those looking to be top smart contract developer or security researchers. We teach you all the cutting edge skills needed to make web3 safer and start a successful career in web3 security.",
+    "author": "Cyfrin Updraft",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "video",
+      "oracles",
+      "foundry",
+      "defi",
+      "fuzzing"
+    ],
+    "skillLevel": "advanced",
+    "timeToRead": "1320",
+    "lang": "en",
+    "publishDate": "12/13/2023"
+  },
+  {
+    "url": "https://youtu.be/umepbfKp5rI",
+    "title": "Learn Solidity, Blockchain Development, & Smart Contracts using Foundry",
+    "description": "This course will give you a full introduction to all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, Foundry, DeFi, Chainlink, Ethereum, upgradable smart contracts, DAOs, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time!",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "video",
+      "oracles",
+      "NFT",
+      "ERC-20",
+      "foundry",
+      "mocking",
+      "testing",
+      "defi",
+      "openzeppelin",
+      "slither",
+      "storage",
+      "alchemy",
+      "block explorer",
+      "fuzzing"
+    ],
+    "skillLevel": "beginner",
+    "timeToRead": "504",
+    "lang": "en",
+    "publishDate": "06/07/2023"
+  },
+  {
+    "url": "https://patrickalphac.medium.com/fuzz-invariant-tests-the-new-bare-minimum-for-smart-contract-security-87ebe150e88c",
+    "title": "Fuzzing & Invariant Testing Introduction",
+    "description": "What is fuzz testing? What are invariant tests? We introduce how to use these tools in Web3 & Solidity and explain why they are essential, especially for security. ",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": ["security"],
+    "skillLevel": "beginner",
+    "timeToRead": "9",
+    "lang": "en",
+    "publishDate": "04/13/2023"
+  },
+  {
     "url": "https://www.cyfrin.io/blog/what-is-a-smart-contract-audit",
     "title": "What is a Smart Contract Audit",
     "description": "Smart Contract Auditing | What it is, what to expect, and where to look for one. Everything you need to know!",
@@ -10,6 +71,18 @@
     "timeToRead": "5",
     "lang": "en",
     "publishDate": "04/06/2023"
+  },
+  {
+    "url": "https://patrickalphac.medium.com/formal-verification-symbolic-execution-the-security-silver-bullet-38e0ac9072eb",
+    "title": "Formal Verification & Symbolic Execution",
+    "description": "We look at formal verification & symbolic execution with two Trail of Bits Web3 security team members. Additionally, we review the value these techniques bring and compare them to other tools.",
+    "author": "Patrick Collins",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": ["security"],
+    "skillLevel": "intermediate",
+    "timeToRead": "10",
+    "lang": "en",
+    "publishDate": "04/25/2023"
   },
   {
     "url": "https://www.youtube.com/watch?v=veBu03A6ptw",
@@ -405,5 +478,72 @@
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "03/22/2023"
+  },
+  {
+    "url": "https://veridelisi.medium.com/learn-opcodes-7bd28d5f0d1b",
+    "title": "Learn EVM Opcodes Series",
+    "description": "Welcome to the comprehensive series on understanding Ethereum Virtual Machine (EVM) Opcodes",
+    "author": "Engin YILMAZ @veridelisi",
+    "authorGithub": "https://github.com/veridelisi",
+    "tags": [
+      "opcodes",
+      "foundry",
+      "smart contracts",
+      "solidity",
+      "yul",
+      "storage",
+      "memory"
+    ],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "publishDate": "03/08/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/escrow-contract-with-solidity",
+    "title": "Build an escrow contract with Solidity and Replit",
+    "description": "Learn how to build a simple escrow smart contract, which will include deploying your own non-fungible token (NFT) and learning more about Solidity on Ethereum.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["solidity", "smart contracts", "erc-721"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "20",
+    "publishDate": "03/24/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/build-a-robot-nft",
+    "title": "Build a robot NFT with Solidity and Replit (part 1)",
+    "description": "Learn how to create a simple generative art NFT, ReplBots, with part 1 focusing on the smart contract deployment.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["solidity", "smart contracts", "erc-721", "nft"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "20",
+    "publishDate": "03/24/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/build-a-robot-nft-p2",
+    "title": "Build a robot NFT with Solidity and Replit (part 2)",
+    "description": "Continues from part 1 where you can learn how to create a frontend interface for your NFT application.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["javascript", "frontend"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "15",
+    "publishDate": "03/24/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/build-smart-contract-oracle",
+    "title": "Build a smart contract oracle with Solidity, Node.js, and Replit",
+    "description": "Learn how to use oracles in smart contracts and how oracles work internally, and gain experience with hybrid on-and-off chain systems.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["solidity", "oracles", "javascript"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "30",
+    "publishDate": "03/24/2023"
   }
 ]

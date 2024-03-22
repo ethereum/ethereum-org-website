@@ -1,0 +1,15 @@
+{
+  "excludedNames": ["ethdotorg"],
+  "excludedUsernames": [
+    "ethdotorg",
+    "corwintines",
+    "wackerow",
+    "removed_user",
+    "moinier",
+    "lucidtranslations",
+    "lukak",
+    "ashley.li",
+    "lorenzolicari"
+  ],
+  "excludedPhrases": ["aco", "acc_", "lqs", "ssb_"]
+}

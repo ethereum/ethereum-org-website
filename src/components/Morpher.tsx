@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react"
-import Link from "./Link"
+import { useEffect, useState } from "react"
+
+import { BaseLink } from "@/components/Link"
 
 const Morpher = () => {
   const [state, setState] = useState({
@@ -28,29 +29,7 @@ const Morpher = () => {
   // loops over chars to morph a text to another
   const morpher = (start: string, end: string): void => {
     // array of chars to randomly morph the text between start and end
-    const chars = [
-      "a",
-      "b",
-      "c",
-      "d",
-      "x",
-      "y",
-      "z",
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "{",
-      "}",
-      "%",
-      "$",
-      "?",
-      "!",
-    ]
+    const chars = "abcdxyz01234567{}%$?!".split("")
     // duration of the global morph
     const duration = 3
     // speed of the morph for each letter
@@ -140,15 +119,15 @@ const Morpher = () => {
   }, [])
 
   return (
-    <Link
+    <BaseLink
       textDecor="none"
       fontSize="md"
-      color="text"
-      _hover={{ color: "primary" }}
+      color="body.medium"
+      _hover={{ color: "primary.base" }}
       to="/languages/"
     >
       <span>{state.text}</span>
-    </Link>
+    </BaseLink>
   )
 }
 
