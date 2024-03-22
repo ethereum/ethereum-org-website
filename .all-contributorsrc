@@ -11451,6 +11451,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "niuhp",
+      "name": "niuhp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7373524?v=4",
+      "profile": "https://github.com/niuhp",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
