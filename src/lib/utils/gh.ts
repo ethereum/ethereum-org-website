@@ -52,8 +52,9 @@ const LABELS_TO_SEARCH = [
   "doc",
   "translation",
   "event",
-]
-const LABELS_TO_TEXT = {
+] as const
+
+const LABELS_TO_TEXT: Record<(typeof LABELS_TO_SEARCH)[number], string> = {
   content: "content",
   design: "design",
   dev: "dev",
