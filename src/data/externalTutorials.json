@@ -480,6 +480,25 @@
     "publishDate": "03/22/2023"
   },
   {
+    "url": "https://veridelisi.medium.com/learn-opcodes-7bd28d5f0d1b",
+    "title": "Learn EVM Opcodes Series",
+    "description": "Welcome to the comprehensive series on understanding Ethereum Virtual Machine (EVM) Opcodes",
+    "author": "Engin YILMAZ @veridelisi",
+    "authorGithub": "https://github.com/veridelisi",
+    "tags": [
+      "opcodes",
+      "foundry",
+      "smart contracts",
+      "solidity",
+      "yul",
+      "storage",
+      "memory"
+    ],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "publishDate": "03/08/2023"
+  },
+  {
     "url": "https://docs.replit.com/tutorials/web3/escrow-contract-with-solidity",
     "title": "Build an escrow contract with Solidity and Replit",
     "description": "Learn how to build a simple escrow smart contract, which will include deploying your own non-fungible token (NFT) and learning more about Solidity on Ethereum.",
