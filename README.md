@@ -1781,6 +1781,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://0x13.dev"><img src="https://avatars.githubusercontent.com/u/31336254?v=4?s=100" width="100px;" alt="Ogunsina Champion"/><br /><sub><b>Ogunsina Champion</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aayofimihan" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://ardislu.dev"><img src="https://avatars.githubusercontent.com/u/29699850?v=4?s=100" width="100px;" alt="Ardis Lu"/><br /><sub><b>Ardis Lu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=ardislu" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/niuhp"><img src="https://avatars.githubusercontent.com/u/7373524?v=4?s=100" width="100px;" alt="niuhp"/><br /><sub><b>niuhp</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aniuhp" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/xivanc"><img src="https://avatars.githubusercontent.com/u/91614446?v=4?s=100" width="100px;" alt="xivanc"/><br /><sub><b>xivanc</b></sub></a><br /><a href="#tool-xivanc" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>
