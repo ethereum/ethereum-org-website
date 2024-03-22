@@ -49,7 +49,7 @@ Tanda pengenal terdesentralisasi disimpan pada buku besar yang terdistribusi (ra
 
 ## Apa yang menjadikan tanda pengenal terdesentralisasi mungkin? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastruktur kunci publik (PKI) {#public-key-infrastructure}
+### 1. Infrastruktur kunci publik (PKI) {#public-key-cryptography}
 
 Infrastruktur kunci publik (PKI) adalah suatu informasi pengukuran keamanan yang menciptakan sebuah [kunci publik](/glossary/#public-key) dan [kunci pribadi](/glossary/#private-key) untuk sebuah entitas. Kriptografi dari kunci publik digunakan pada jaringan rantai blok untuk mengautentikasi identitas pengguna dan membuktikan kepemilikan dari aset digital.
 

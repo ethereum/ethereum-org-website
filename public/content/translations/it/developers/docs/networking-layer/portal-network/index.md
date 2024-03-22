@@ -78,5 +78,5 @@ Se un client presenta problemi o vulnerabilità, gli altri client possono contin
 ## Letture consigliate {#futher-reading}
 
 - [La Rete Portal (Piper Merriam al Devcon di Bogotà)](https://www.youtube.com/watch?v=0stc9jnQLXA).
-- [Discord della Rete Portal](https://discord.gg/6XFs56cX)
-- [Sito web della Rete Portal](https://ethportal.net)
+- [Discord della Rete Portal](https://discord.gg/CFFnmE7Hbs)
+- [Sito web della Rete Portal](https://www.ethportal.net/)

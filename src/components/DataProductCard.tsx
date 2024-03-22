@@ -97,7 +97,7 @@ const DataProductCard = ({
               {name}
             </LinkOverlay>
           </Heading>
-          <Text fontSize="sm" opacity="0.8" mx={4} mb={4} lineHeight="140%">
+          <Text fontSize="sm" mx={4} mb={4} lineHeight="140%">
             {description}
           </Text>
         </Box>
@@ -129,7 +129,7 @@ const DataProductCard = ({
                       objectFit="cover"
                       alt=""
                       minWidth="24px"
-                      me="0.5rem"
+                      me={2}
                     />
                   )}
                   {coin}

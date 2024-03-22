@@ -11,7 +11,7 @@ import customTheme from "@/@chakra-ui/theme"
 import { AppPropsWithLayout } from "@/lib/types"
 
 import { useLocaleDirection } from "@/hooks/useLocaleDirection"
-import { RootLayout } from "@/layouts"
+import { RootLayout } from "@/layouts/RootLayout"
 import { inter, mono } from "@/lib/fonts"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
