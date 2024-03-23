@@ -100,7 +100,7 @@ The sync mode and client you choose will affect space requirements, but we've es
 
 - Note: Erigon does not offer snap sync, but Full Pruning is possible (~500GB)
 
-For consensus clients, space requirement also depends on client implementation and enabled features (e.g. validator slasher) but generally count with another 200GB needed for beacon data. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e).
+For consensus clients, space requirement also depends on client implementation and enabled features (e.g. validator slasher) but generally count with another 200GB needed for beacon data. With a large number of validators, the bandwidth load grows as well. You can find [details on consensus client requirements in this analysis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Plug-and-play solutions {#plug-and-play}
 
