@@ -1783,6 +1783,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/niuhp"><img src="https://avatars.githubusercontent.com/u/7373524?v=4?s=100" width="100px;" alt="niuhp"/><br /><sub><b>niuhp</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aniuhp" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/xivanc"><img src="https://avatars.githubusercontent.com/u/91614446?v=4?s=100" width="100px;" alt="xivanc"/><br /><sub><b>xivanc</b></sub></a><br /><a href="#tool-xivanc" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/zm-moon"><img src="https://avatars.githubusercontent.com/u/42063103?v=4?s=100" width="100px;" alt="patrick"/><br /><sub><b>patrick</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Azm-moon" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xemrekaya"><img src="https://avatars.githubusercontent.com/u/72754835?v=4?s=100" width="100px;" alt="Emre"/><br /><sub><b>Emre</b></sub></a><br /><a href="#tutorial-0xemrekaya" title="Tutorials">✅</a></td>
     </tr>
   </tbody>
 </table>
