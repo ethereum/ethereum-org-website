@@ -11469,6 +11469,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "zm-moon",
+      "name": "patrick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42063103?v=4",
+      "profile": "https://github.com/zm-moon",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
