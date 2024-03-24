@@ -99,7 +99,8 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                 }}
                 py={1}
                 cursor="pointer"
-                sx={{ display: "table", width: "100%" }}
+                display="table"
+                w="full"
                 h={8}
                 p="2"
                 _hover={activeStyles}
