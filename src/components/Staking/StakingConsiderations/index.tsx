@@ -75,15 +75,12 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
     pageData,
     activeIndex,
   } = useStakingConsiderations({ page })
-  
+
   const activeStyles = {
-    bg: "var(--eth-colors-offBackground)",
-    color: "var(--eth-colors-chakra-body-text)",
+    bg: "background.highlight",
+    color: "body.base",
     fontWeight: "bold",
-    display: "table",
-    width: "100%",
-    transition: 'font-weight 0.3s ease, color 0.3s ease'
-  };
+  }
 
   return (
     <Flex flexDir={{ base: "column", md: "row" }}>
@@ -96,19 +93,20 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
             {pageData.map(({ title, matomo }, idx) => (
               <ListItem
                 key={idx}
-                sx={{ display: 'table' ,width: '100%'}}
                 onClick={(e) => {
                   handleSelection(idx)
                   trackCustomEvent(matomo)
                 }}
                 py={1}
-                px={2}
                 cursor="pointer"
+                sx={{ display: "table", width: "100%" }}
                 h={8}
-                p={["var(--eth-space-2)", "var(--eth-space-2)"]}
+                p="2"
                 _hover={activeStyles}
                 position="relative"
-                {...(idx === activeIndex ? activeStyles : { color: "primary.base" })}
+                {...(idx === activeIndex
+                  ? activeStyles
+                  : { color: "primary.base" })}
               >
                 {title}
               </ListItem>
