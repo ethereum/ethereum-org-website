@@ -11478,6 +11478,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "0xemrekaya",
+      "name": "Emre",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72754835?v=4",
+      "profile": "https://github.com/0xemrekaya",
+      "contributions": [
+        "tutorial"
+      ]
     }
   ],
   "contributorsPerLine": 7,
