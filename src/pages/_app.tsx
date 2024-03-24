@@ -10,9 +10,11 @@ import customTheme from "@/@chakra-ui/theme"
 
 import { AppPropsWithLayout } from "@/lib/types"
 
+import "../styles/global.css"
+
 import { useLocaleDirection } from "@/hooks/useLocaleDirection"
 import { RootLayout } from "@/layouts/RootLayout"
-import { inter, mono } from "@/lib/fonts"
+import { mono } from "@/lib/fonts"
 
 const App = ({ Component, pageProps }: AppPropsWithLayout) => {
   useEffect(() => {
@@ -37,7 +39,7 @@ const App = ({ Component, pageProps }: AppPropsWithLayout) => {
       <style jsx global>
         {`
           :root {
-            --font-inter: ${inter.style.fontFamily};
+            --font-inter: Inter, sans-serif;
             --font-mono: ${mono.style.fontFamily};
           }
         `}

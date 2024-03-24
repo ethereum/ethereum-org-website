@@ -1308,7 +1308,8 @@
       "avatar_url": "https://avatars2.githubusercontent.com/u/25974464?v=4",
       "profile": "https://twitter.com/wslyvh",
       "contributions": [
-        "content"
+        "content",
+        "infra"
       ]
     },
     {
@@ -11449,6 +11450,24 @@
       "profile": "http://ardislu.dev",
       "contributions": [
         "doc"
+      ]
+    },
+    {
+      "login": "niuhp",
+      "name": "niuhp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7373524?v=4",
+      "profile": "https://github.com/niuhp",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "xivanc",
+      "name": "xivanc",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91614446?v=4",
+      "profile": "https://github.com/xivanc",
+      "contributions": [
+        "tool"
       ]
     }
   ],
