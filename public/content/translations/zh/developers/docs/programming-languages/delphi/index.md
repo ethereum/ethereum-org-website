@@ -13,7 +13,7 @@ incomplete: true
 
 使用以太坊来创建去中心化应用程序，发挥加密货币和区块链技术的优势。 这些去中心化应用程序可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
 
-在以太坊顶部构建去中心化应用，并使用 Delphi 编程语言与智能合约交互！
+在以太坊顶部构建去中心化应用程序，并使用 Delphi 编程语言与智能合约交互！
 
 ## 智能合约和 Solidity 语言入门 {#getting-started-with-smart-contracts-and-the-solidity-language}
 
@@ -23,7 +23,7 @@ incomplete: true
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [编写您的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [编写你的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## 初学者参考文献和链接 {#beginner-references-and-links}

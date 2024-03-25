@@ -151,7 +151,7 @@ Aqui estão as páginas de lançamento dos clientes, nas quais você pode encont
 ##### Clientes de execução
 
 - [Besu](https://github.com/hyperledger/besu/releases)
-- [Erigon](https://github.com/ledgerwatch/erigon#usage) (não fornece um binário pré-compilado, precisa ser compilado)
+- [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
 

@@ -17,8 +17,7 @@ import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-interface IProps {}
-const WithdrawalsTabComparison: React.FC<IProps> = () => {
+const WithdrawalsTabComparison = () => {
   const { t } = useTranslation("page-staking")
   const handleMatomoEvent = (name: string): void => {
     trackCustomEvent({

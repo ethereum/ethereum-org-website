@@ -6,7 +6,7 @@ import { EthGlyphIcon } from "../../icons"
 
 const MotionFlex = motion(Flex)
 
-export const WelcomeScreen: React.FC = () => (
+export const WelcomeScreen = () => (
   <MotionFlex
     direction="column"
     alignItems="center"

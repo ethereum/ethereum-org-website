@@ -40,9 +40,9 @@ Outre les recherches prospectives, certaines refontes fondamentales du protocole
 #### Lectures de référence {#background-reading}
 
 - [Introduction à la preuve d'enjeu](/developers/docs/consensus-mechanisms/pos/)
-- [Papier sur Casper-FFG](https://arxiv.org/abs/1710.09437)
+- [Article sur Casper-FFG](https://arxiv.org/abs/1710.09437)
 - [Casper-FFG expliqué](https://arxiv.org/abs/1710.09437)
-- [Papier sur Gasper](https://arxiv.org/abs/2003.03052)
+- [Article sur Gasper](https://arxiv.org/abs/2003.03052)
 
 #### Recherche récente {#recent-research}
 
@@ -124,7 +124,7 @@ Un domaine particulier de la couche 2 qui nécessite davantage de recherche et d
 - [Introduction aux ponts blockchain](/bridges/)
 - [Vitalik à propos des ponts](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [Article sur les ponts entre blockchain](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Valeur en caution dans les ponts](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [Valeur en caution dans les ponts](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
 
 #### Recherche récente {#recent-research-3}
 
@@ -346,7 +346,6 @@ Les outils destinés aux développeurs Ethereum s'améliorent rapidement. Il y a
 - [Frameworks pour développeurs](/developers/docs/frameworks/)
 - [Liste d'outils pour développeurs de consensus](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Normes de jetons](/developers/docs/standards/tokens/)
-- [Biastek : Outils Ethereum](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub : Outils EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Recherche récente {#recent-research-17}

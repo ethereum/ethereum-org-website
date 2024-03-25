@@ -23,12 +23,12 @@ interface DataType {
   glyph: JSX.Element
 }
 
-export interface IProps {
+export type StakingComparisonProps = {
   page: StakingPage
   className?: string
 }
 
-const StakingComparison: React.FC<IProps> = ({ page, className }) => {
+const StakingComparison = ({ page, className }: StakingComparisonProps) => {
   const theme = useTheme()
   const { stakingGold, stakingGreen, stakingBlue } = theme.colors
   const { t } = useTranslation("page-staking")

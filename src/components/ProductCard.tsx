@@ -15,10 +15,12 @@ import Text from "@/components/OldText"
 
 import GitStars from "./GitStars"
 
-const SubjectBadge: React.FC<{
+type SubjectBadgeProps = {
   subject: string
   children: React.ReactNode
-}> = ({ subject, children }) => {
+}
+
+const SubjectBadge = ({ subject, children }: SubjectBadgeProps) => {
   const backgroundProp = () => {
     switch (subject) {
       case "Solidity":
@@ -52,7 +54,7 @@ const SubjectBadge: React.FC<{
   )
 }
 
-export interface IProps {
+export type ProductCardProps = {
   children?: React.ReactNode
   url: string
   background: string
@@ -68,7 +70,7 @@ export interface IProps {
   hideStars?: boolean
 }
 
-const ProductCard: React.FC<IProps> = ({
+const ProductCard = ({
   url,
   background: bgProp,
   image,
@@ -82,7 +84,7 @@ const ProductCard: React.FC<IProps> = ({
   githubRepoStars = 0,
   githubRepoLanguages = [],
   hideStars = false,
-}) => {
+}: ProductCardProps) => {
   const DESCRIPTION_STYLES: TextProps = {
     opacity: 0.8,
     fontSize: "sm",

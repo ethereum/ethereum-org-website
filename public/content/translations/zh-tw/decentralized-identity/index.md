@@ -15,11 +15,11 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 然而，傳統的身分管理系統長期以來一直依賴於中心化中間機構來發行、持有和控制你的身分識別和[身分證明](#what-are-attestations)。 這意味著你無法掌控自己身分的相關資訊，也無法決定誰能夠存取你的個人身分資訊 (PII)，以及各方擁有多大的訪問權限。
 
-為了解決這些問題，我們在以太坊等公共區塊鏈上構建了去中心化身分系統。 去中心化身分允許每個人管理他們的身分相關資訊。 借助去中心化身分解決方案，*你*可以建立身分識別、聲明和持有你的身分證明，而無需依賴于中央機構，例如服務提供方或是政府。
+為了解決這些問題，我們在以太坊等公共區塊鏈上構建了去中心化身分系統。 去中心化身分允許每個人管理他們的身分相關資訊。 借助去中心化身分解決方案，_你_可以建立身分識別、聲明和持有你的身分證明，而無需依賴於中央機構，例如服務提供方或是政府。
 
 ## 什麼是身分認同？ {#what-is-identity}
 
-身分意味著個人的自我意識，由獨特的特徵定義。 身分是指作為一個*個體*，即一個獨特的人類實體。 身分也可以是指其他非人類的實體，例如組織或機構。
+身分意味著個人的自我意識，由獨特的特徵定義。 身分是指作為一個_個體_，即一個獨特的人類實體。 身分也可以是指其他非人類的實體，例如組織或機構。
 
 ## 什麼是身分識別？ {#what-are-identifiers}
 
@@ -37,7 +37,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 身分證明是由一個實體提出的關於另一個實體的聲明。 如果你居住在美國，你的駕駛執照是由機動車輛管理局（一個實體）發布，它證明你（另一個實體）在法律上允許駕駛汽車。
 
-身分證明與身分識別不同。 身分證明*包含*用於指向特定身分的身分識別，並聲明與此身分相關的屬性。 因此，你的駕駛執照具有身分識別（姓名、出生日期、地址），但也是關於你合法駕駛權利的證明。
+身分證明與身分識別不同。 身分證明_包含_用於指向特定身分的身分識別，並聲明與此身分相關的屬性。 因此，你的駕駛執照具有身分識別（姓名、出生日期、地址），但也是關於你合法駕駛權利的證明。
 
 ### 什麼是去中心化身分識別？ {#what-are-decentralized-identifiers}
 
@@ -49,7 +49,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 ## 什麼讓去中心化身分識別成為可能？ {#what-makes-decentralized-identifiers-possible}
 
-### 1. 公鑰基礎設施 (PKI) {#public-key-infrastructure}
+### 1. 公鑰基礎設施 (PKI) {#public-key-cryptography}
 
 公鑰基礎設施 (PKI) 是一種資訊安全措施，可為一個實體產生一組[公鑰](/glossary/#public-key)和[私鑰](/glossary/#private-key)。 公鑰密碼學在區塊鏈網路中用於驗證使用者身分並證明數位資產的所有權。
 
@@ -57,7 +57,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 ### 2. 去中心化資料儲存 {#decentralized-datastores}
 
-區塊鏈充當可驗證的資料註冊系統：一個開放、去信任和去中心化的資訊存儲庫。 公共區塊鏈的存在使得不再需要將身分識別儲存在中心化的註冊系統上。
+區塊鏈充當可驗證的資料註冊系統：一個開放、去信任和去中心化的資訊儲存庫。 公共區塊鏈的存在使得不再需要將身分識別儲存在中心化的註冊系統上。
 
 如果任何人需要確認去中心化身分識別的有效性，他們可以在區塊鏈上查找相關的公鑰。 這與需要由第三方進行驗證的傳統身分識別不同。
 
@@ -97,7 +97,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 ### 鏈上身分證明 {#onchain-attestations}
 
-鏈上身份證明保存在以太坊區塊鏈上的[智慧型合約](/developers/docs/smart-contracts/)中。 智慧型合約（充當註冊系統）將身分證明對應到相關的鏈上去中心化身分識別（公鑰）。
+鏈上身份證明保存在以太坊區塊鏈上的[智慧型合約](/developers/docs/smart-contracts/)中。 智慧型合約（充當註冊系統）將身分證明對應到相關的鏈上去中心化身分識別（公開金鑰）。
 
 以下範例展示了鏈上身分證明在實踐中的使用方式：
 
@@ -109,7 +109,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 ### 靈魂綁定代幣和身分 {#soulbound}
 
-[靈魂綁定代幣](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)（不可轉讓的非同質化代幣）可以用於收集特定錢包的獨有資訊。 這有效地創建了綁定到特定以太坊地址的唯一鏈上身分，這可能包括代表成就的代幣（例如完成某些特定的線上課程或在遊戲中超過分數門檻）或社區參與代幣。
+[靈魂綁定代幣](https://vitalik.ca/general/2022/01/26/soulbound.html)（不可轉讓的非同質化代幣）可以用於收集特定錢包的獨有資訊。 這有效地創建了綁定到特定以太坊地址的唯一鏈上身分，這可能包括代表成就的代幣（例如完成某些特定的線上課程或在遊戲中超過分數門檻）或社區參與代幣。
 
 ## 去中心化身分的好處 {#benefits-of-decentralized-identity}
 
@@ -135,7 +135,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 [使用以太坊登入](https://login.xyz/)功能將允許伺服器能夠確認使用者的以太坊帳戶，並從他們的帳戶地址中獲取所需的身分證明。 這意味著使用者無需記住冗長的密碼，就能夠訪問平台和網站，進而改善使用者的線上體驗。
 
-### 2. “了解你的客戶”驗證 {#kyc-authentication}
+### 2. 「認識客戶」驗證 {#kyc-authentication}
 
 許多線上服務的使用，需要提供個人的身分證明和憑證，例如駕駛執照或國家護照。 但這種方式是有問題的，因為使用者的私人資訊有可能會被洩露，並且服務提供商無法驗證身分證明的真實性。
 
@@ -153,14 +153,15 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 ## 使用去中心化身分 {#use-decentralized-identity}
 
-有許多雄心勃勃的項目使用以太坊作為去中心化身分解決方案的基礎：
+有許多雄心勃勃的專案使用以太坊作為去中心化身分解決方案的基礎：
 
 - **[以太坊名稱服務 (ENS)](https://ens.domains/)** - _一個去中心化的鏈上命名系統，適合機器可讀的識別符號，例如以太坊錢包地址、內容雜湊值和中繼資料。_
-- **[SpruceID](https://www.spruceid.com/)** - _去中心化身分項目，它允許使用者使用以太坊帳戶和以太坊名稱服務個人資料來控制數位身分，而不是依賴第三方服務。_
+- **[SpruceID](https://www.spruceid.com/)** - _去中心化身分專案，它允許使用者使用以太坊帳戶和以太坊名稱服務個人資料來控制數位身分，而不是依賴第三方服務。_
 - **[以太坊證明服務 (EAS)](https://attest.sh/)** - _一種去中心化分類帳/協議，用於對任何事物進行鏈上或鏈下證明。_
 - **[人性證明](https://www.proofofhumanity.id)** - _人性證明 (PoH) 是建立在以太坊上的社交身分驗證系統。_
 - **[BrightID](https://www.brightid.org/)** - _一個去中心化的開源社交身分網路，旨在通過創建和分析社交圖譜來改革身分驗證。_
 - **[人格證明護照](https://proofofpersonhood.com/)** - _一個去中心化的數位身分聚合器。_
+- **[walt.id](https://walt.id)** — _一種使開發者和組織能夠利用自主權身份、非同質化代幣/魂縛代幣的開源去中心化身份及錢包基礎設施。_
 
 ## 延伸閱讀 {#further-reading}
 
@@ -170,6 +171,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 - [什麼是以太坊 ERC725？ 區塊鏈上的自我主權身分管理](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [區塊鏈如何解決數位身分問題](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [什麼是去中心化身分以及你為什麼需要關心？](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [去中心化身份簡介](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
 
 ### 影片 {#videos}
 
@@ -177,9 +179,11 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 - [使用以太坊和去中心化身分登錄 Ceramic、IDX、React 和 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _YouTube 使用教學，作者 Nader Dabit，介紹如何構建身分管理系統，透過以太坊錢包建立、讀取和更新使用者個人資料。_
 - [BrightID - 以太坊上的去中心化身分](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Bankless 播客節目討論 BrightID，一個以太坊上的去中心化身分解決方案_
 - [鏈外互聯網：去中心化身分 & 可驗證憑證](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Evin McMullen 在 EthDenver 2022 的演講
+- [Verifiable Credentials Explained（可驗憑證說明）](https://www.youtube.com/watch?v=ce1IdSr-Kig) - 由 Tamino Baumann 主持演示的 YouTube 講解視頻
 
 ### 社群 {#communities}
 
 - [GitHub 上的 ERC-725 聯盟](https://github.com/erc725alliance) — _在以太坊區塊鏈上管理身分的 ERC725 標準的支持者_
 - [SpruceID Discord 伺服器](https://discord.com/invite/Sf9tSFzrnt) — _研究使用以太坊登錄的愛好者和開發者社群_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _一個開發人員社區，致力於為應用程式構建可驗證資料的框架_
+- [walt.id](https://discord.com/invite/AW8AgqJthZ) — _由開發者和構建者組成的社區，致力於開發各個行業的去中心化身份應用案例_

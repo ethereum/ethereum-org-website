@@ -51,7 +51,7 @@ Twój adres będzie taki sam we wszystkich projektach Ethereum. Nie musisz rejes
 
 1. Odwiedź stronę internetową dowolnego projektu.
 2. Jeśli strona docelowa projektu jest tylko statycznym opisem projektu, powinieneś mieć możliwość kliknięcia przycisku „Otwórz aplikację” w menu, który przeniesie Cię do rzeczywistej aplikacji internetowej.
-3. Gdy będziesz w aplikacji kliknij „Połącz”.
+3. Gdy będziesz w aplikacji, kliknij „Połącz”.
 
 ![Przycisk pozwalający użytkownikowi połączyć się ze stroną internetową za pomocą portfela](./connect1.png)
 

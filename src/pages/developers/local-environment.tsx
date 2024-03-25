@@ -65,7 +65,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/developers/local-environment"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const frameworksListData = await cachedFetchLocalEnvironmentFrameworkData()
 

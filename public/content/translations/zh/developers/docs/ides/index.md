@@ -4,11 +4,11 @@ description:
 lang: zh
 ---
 
-当建立一个[集成开发环境](https://wikipedia.org/wiki/Integrated_development_environment)时，以太坊上的应用编程类似于任何其他软件项目编程。 这里有许多选项可供选择，最后，请选择一个最适合您偏好的集成开发环境或代码编辑器。 对您的以太坊开发来说，最好的集成开发环境很可能就是您在传统软件开发中使用过的集成开发环境。
+当建立一个[集成开发环境](https://wikipedia.org/wiki/Integrated_development_environment)时，以太坊上的应用编程类似于任何其他软件项目编程。 这里有许多选项可供选择，最后，请选择一个最适合你偏好的集成开发环境或代码编辑器。 对你的以太坊开发来说，最好的集成开发环境很可能就是你在传统软件开发中使用过的集成开发环境。
 
 ## 基于网络的集成开发环境 {#web-based-ides}
 
-如果您想在[设置本地开发环境](/developers/local-environment/)之前摆弄一下代码，这些网络应用是为以太坊智能合约开发定制的。
+如果你想在[设置本地开发环境](/developers/local-environment/)之前摆弄一下代码，这些网络应用是为以太坊智能合约开发定制的。
 
 **[Remix](https://remix.ethereum.org/)** - **_基于 Web 的集成开发环境，内置静态分析和区块链测试虚拟机_**
 
@@ -66,6 +66,6 @@ lang: zh
 
 ## 延伸阅读 {#further-reading}
 
-- [以太坊集成开发环境 (IDE)](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy 提供的以太坊 IDE 列表_
+- [以太坊集成开发环境 (IDE)](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _- Alchemy 提供的以太坊集成开发环境列表_
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_

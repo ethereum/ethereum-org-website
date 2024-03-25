@@ -3,20 +3,14 @@ import { Heading, Stack, StackProps, Text } from "@chakra-ui/react"
 
 import Emoji from "@/components/Emoji"
 
-export interface IProps extends Omit<StackProps, "children" | "title"> {
+export type CardProps = Omit<StackProps, "children" | "title"> & {
   children?: ReactNode
   emoji?: string
   title?: ReactNode
   description?: ReactNode
 }
 
-const Card: React.FC<IProps> = ({
-  emoji,
-  title,
-  description,
-  children,
-  ...props
-}) => (
+const Card = ({ emoji, title, description, children, ...props }: CardProps) => (
   <Stack
     spacing="4"
     justifyContent="space-between"
@@ -36,7 +30,7 @@ const Card: React.FC<IProps> = ({
             {title}
           </Heading>
         )}
-        {description && <Text opacity={0.8}>{description}</Text>}
+        {description && <Text>{description}</Text>}
       </Stack>
     </Stack>
     {children}

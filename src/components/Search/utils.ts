@@ -17,7 +17,8 @@ export const getSearchButtonStyles = (): ButtonProps => ({
   bg: "none",
   gap: 4,
   m: 0,
-  ps: 3,
+  me: 3,
+  px: 3,
   _hover: {
     ...commonBtnStateStyles,
     ".DocSearch-Button-Keys kbd": {
@@ -74,6 +75,11 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
   "--docsearch-modal-width": "650px",
   "--docsearch-hit-height": "fit-content",
 
+  ".DocSearch.DocSearch-Container": {
+    position: "fixed",
+    inset: 0,
+  },
+
   ".DocSearch-SearchBar": {
     p: { base: 4, md: 8 },
     pb: 4,
@@ -101,6 +107,10 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     _hover: {
       color: "primary.base",
     },
+  },
+
+  ".DocSearch-Container.DocSearch[aria-expanded='true']": {
+    zIndex: "modal",
   },
 
   ".DocSearch-Container--Stalled .DocSearch-MagnifierLabel, .DocSearch-Container--Stalled .DocSearch-LoadingIndicator":
@@ -187,7 +197,7 @@ export const getSearchModalStyles = (): SystemStyleObject => ({
     placeItems: "center",
     borderRadius: "base",
     mr: "unset",
-    me: 1.5
+    me: 1.5,
   },
 
   ".DocSearch-Logo": {

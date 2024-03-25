@@ -8,7 +8,7 @@ import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import Text from "@/components/OldText"
 
-export interface IProps {
+export type Layer2ProductCardProps = {
   children?: React.ReactNode
   url?: string
   background: string
@@ -22,7 +22,7 @@ export interface IProps {
   ecosystemPortal?: string
 }
 
-const Layer2ProductCard: React.FC<IProps> = ({
+const Layer2ProductCard = ({
   url,
   background,
   image,
@@ -34,7 +34,7 @@ const Layer2ProductCard: React.FC<IProps> = ({
   bridge,
   tokenLists,
   ecosystemPortal,
-}) => {
+}: Layer2ProductCardProps) => {
   const { t } = useTranslation("page-layer-2")
 
   return (
@@ -73,27 +73,27 @@ const Layer2ProductCard: React.FC<IProps> = ({
               {children}
             </Box>
           )}
-          <Text opacity="0.8" fontSize="sm" mb={2} lineHeight="140%">
+          <Text fontSize="sm" mb={2} lineHeight="140%">
             {description}
           </Text>
           {note.length > 0 && (
-            <Text opacity="0.8" fontSize="sm" mb={2} lineHeight="140%">
+            <Text fontSize="sm" mb={2} lineHeight="140%">
               {t("layer-2-note")} {note}
             </Text>
           )}
         </Box>
         {bridge && (
-          <InlineLink to={bridge}>
+          <InlineLink href={bridge}>
             {name} {t("layer-2-bridge")}
           </InlineLink>
         )}
         {ecosystemPortal && (
-          <InlineLink to={ecosystemPortal}>
+          <InlineLink href={ecosystemPortal}>
             {name} {t("layer-2-ecosystem-portal")}
           </InlineLink>
         )}
         {tokenLists && (
-          <InlineLink to={tokenLists}>
+          <InlineLink href={tokenLists}>
             {name} {t("layer-2-token-lists")}
           </InlineLink>
         )}

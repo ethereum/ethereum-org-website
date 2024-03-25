@@ -12,7 +12,7 @@ import { TokenBalanceList } from "./TokenBalanceList"
 import type { SendReceiveEnabled } from "./types"
 import { WalletBalance } from "./WalletBalance"
 
-interface IProps {
+type WalletHomeProps = {
   nav?: SimulatorNav
   isEnabled?: SendReceiveEnabled
   tokenBalances?: Array<TokenBalance>
@@ -21,14 +21,14 @@ interface IProps {
   categoryTabState?: [number, Dispatch<SetStateAction<number>>]
   nfts?: Array<NFT>
 }
-export const WalletHome: React.FC<IProps> = ({
+export const WalletHome = ({
   nav,
   isEnabled,
   tokenBalances,
   activeTabIndex = 0,
   setActiveTabIndex,
   nfts = [],
-}) => {
+}: WalletHomeProps) => {
   const data: Array<TokenBalance> = tokenBalances ?? defaultTokenBalances
   const totalAmounts = data.reduce(
     (acc, { amount, usdConversion }) => acc + amount * usdConversion,

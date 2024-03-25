@@ -28,7 +28,7 @@ import {
 import { CONTACTS } from "../components/Simulator/screens/SendReceive/constants"
 import type { SimulatorData } from "../components/Simulator/types"
 
-const Text: React.FC<TextProps> = (props) => <ChakraText mb={4} {...props} />
+const Text = (props: TextProps) => <ChakraText mb={4} {...props} />
 
 export const walletOnboardingSimData: SimulatorData = {
   [CREATE_ACCOUNT]: {

@@ -10,17 +10,17 @@ export interface IStyledContainer {
   isShipped: boolean
 }
 
-export interface IProps {
+export type UpgradeStatusProps = {
   children?: React.ReactNode
   dateKey: TranslationKey
   isShipped?: boolean
 }
 
-const UpgradeStatus: React.FC<IProps> = ({
+const UpgradeStatus = ({
   dateKey,
   children,
   isShipped = false,
-}) => {
+}: UpgradeStatusProps) => {
   const border = useColorModeValue("none", "2px solid")
   const darkBorderColor = isShipped ? "#3fb181" : "#a4a4ff"
   const borderColor = useColorModeValue(undefined, darkBorderColor)

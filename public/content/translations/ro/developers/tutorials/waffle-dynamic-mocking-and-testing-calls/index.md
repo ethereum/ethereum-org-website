@@ -295,4 +295,4 @@ Codul sursă pentru acest tutorial se află [aici](https://github.com/EthWorks/W
 
 Alte tutoriale care vă pot interesa:
 
-- [Testarea contractelor inteligente cu Waffle](/developers/tutorials/testing-smart-contract-with-waffle/)
+- [Testarea contractelor inteligente cu Waffle](/developers/tutorials/waffle-test-simple-smart-contract/)

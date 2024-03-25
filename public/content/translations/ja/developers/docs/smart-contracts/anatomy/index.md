@@ -8,7 +8,7 @@ lang: ja
 
 ## 前提知識 {#prerequisites}
 
-最初に、[スマートコントラクト](/developers/docs/smart-contracts/)を必ずお読みください。 このドキュメントは、JavaScript や Python などのプログラミング言語に精通していることを前提としています。
+最初に、[スマートコントラクト](/developers/docs/smart-contracts/)を必ずお読みください。 このドキュメントは、JavaScriptやPythonなどのプログラミング言語に精通していることを前提としています。
 
 ## データ {#data}
 
@@ -33,7 +33,7 @@ storedData: int128
 
 オブジェクト指向言語でのプログラミングの経験がある場合は、ほとんどの型になじみがあるでしょう。 しかし、イーサリアムの開発が初めての場合、`address`は目新しいかもしれません。
 
-`address`型は、20 バイトまたは 160 ビットに相当するイーサリアムアドレスを保持します。 先頭が 0x の 16 進数を返します。
+`address`型は、20バイトまたは160ビットに相当するイーサリアムアドレスを保持します。 先頭が0xの16進数を返します。
 
 その他の型には次のものがあります。
 
@@ -44,19 +44,19 @@ storedData: int128
 - 動的サイズのバイト配列
 - 有理数リテラルと整数リテラル
 - 文字列リテラル
-- 16 進数リテラル
+- 16進数リテラル
 - 列挙型
 
 詳細については、以下のドキュメントをご覧ください。
 
-- [Vyper の型を見る](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
-- [Solidity の型を見る](https://solidity.readthedocs.io/en/latest/types.html#value-types)
+- [Vyperの型を見る](https://vyper.readthedocs.io/en/v0.1.0-beta.6/types.html#value-types)
+- [Solidityの型を見る](https://solidity.readthedocs.io/en/latest/types.html#value-types)
 
 ### メモリ {#memory}
 
 コントラクト関数の実行期間にのみ保存される値は、メモリ変数と呼ばれます。 これらはブロックチェーンに永続的に保存されることはないため、低コストで使用できます
 
-EVM がデータ(ストレージ、メモリ、スタック)を格納する方法の詳細については、[Solidity のドキュメント](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack)をご覧ください。
+EVMがデータ(ストレージ、メモリ、スタック)を格納する方法の詳細については、[Solidityのドキュメント](https://solidity.readthedocs.io/en/latest/introduction-to-smart-contracts.html?highlight=memory#storage-memory-and-the-stack)をご覧ください。
 
 ### 環境変数 {#environment-variables}
 
@@ -64,28 +64,28 @@ EVM がデータ(ストレージ、メモリ、スタック)を格納する方�
 
 例:
 
-| **プロパティ**    | **状態変数** | **説明**                             |
-| ----------------- | ------------ | ------------------------------------ |
-| `block.timestamp` | uint256      | 現在のブロックエポックタイムスタンプ |
-| `msg.sender`      | address      | メッセージの送信者(現在の呼び出し)   |
+| **プロパティ**         | **状態変数** | **説明**             |
+| ----------------- | -------- | ------------------ |
+| `block.timestamp` | uint256  | 現在のブロックエポックタイムスタンプ |
+| `msg.sender`      | address  | メッセージの送信者(現在の呼び出し) |
 
 ## 関数 {#functions}
 
 簡単に言うと、関数は受信トランザクションに応じて情報を取得したり、情報を設定したりすることができます。
 
-関数呼び出しには、以下の 2 種類があります。
+関数呼び出しには、以下の2種類があります。
 
-- `internal` - これらは EVM 呼び出しを作成しません。
-  - internal 関数と状態変数は、内部(つまり、現在のコントラクト内またはそれから派生したコントラクト内)からのみアクセスできます。
-- `external` - これらは EVM 呼び出しを作成します。
-  - external 関数はコントラクトインターフェイスの一部であり、他のコントラクトから呼び出したり、トランザクションを介して呼び出したりすることができます。 external 関数`f`を内部で呼び出すことはできません(つまり、`f()`は動作しませんが、`this.f()`は動作します)。
+- `internal` - これらはEVM呼び出しを作成しません。
+  - internal関数と状態変数は、内部(つまり、現在のコントラクト内またはそれから派生したコントラクト内)からのみアクセスできます。
+- `external` - これらはEVM呼び出しを作成します。
+  - external関数はコントラクトインターフェイスの一部であり、他のコントラクトから呼び出したり、トランザクションを介して呼び出したりすることができます。 external関数`f`を内部で呼び出すことはできません(つまり、`f()`は動作しませんが、`this.f()`は動作します)。
 
 `public`または`private`にすることもできます。
 
 - `public`関数は、コントラクト内から内部で呼び出すことも、メッセージを介して外部から呼び出すこともできます。
 - `private`関数は、それらが定義されているコントラクトからのみ参照できます。派生したコントラクトからは参照できません。
 
-関数と状態変数はどちらも public または private にすることができます。
+関数と状態変数はどちらもpublicまたはprivateにすることができます。
 
 コントラクトの状態変数を更新するための関数は次のとおりです。
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - `public`と宣言されており、誰でもアクセスできます。
 - `view`が宣言されていないため、コントラクトの状態を変更できます。
 
-### View 関数 {#view-functions}
+### View関数 {#view-functions}
 
 これらの関数によって、コントラクトのデータの状態を変更しないことを指定します。 一般的な例としては、「getter」関数があります。例えば、これを使用してユーザーの残高を受け取ることができます。
 
@@ -133,7 +133,7 @@ def readName() -> string:
 
 ### コンストラクタ関数 {#constructor-functions}
 
-`constructor`関数は、コントラクトが最初にデプロイされたときに 1 回だけ実行されます。 多くのクラスベースのプログラミング言語の`constructor`と同様に、これらの関数はしばしば、指定された値に状態変数を初期化します。
+`constructor`関数は、コントラクトが最初にデプロイされたときに1回だけ実行されます。 多くのクラスベースのプログラミング言語の`constructor`と同様に、これらの関数はしばしば、指定された値に状態変数を初期化します。
 
 ```solidity
 // Solidity example
@@ -165,15 +165,15 @@ def __init__(_beneficiary: address, _bidding_time: uint256):
 - `address.send()` – Solidity
 - `send(address)` – Vyper
 
-これらの関数により、コントラクトは他のアカウントに ETH を送信することができます。
+これらの関数により、コントラクトは他のアカウントにETHを送信することができます。
 
 ## 関数を書く {#writing-functions}
 
 関数には以下のものが必要です。
 
 - パラメータ変数と型(パラメータを受け取る場合)
-- internal/external の宣言
-- pure/view/payable の宣言
+- internal/externalの宣言
+- pure/view/payableの宣言
 - 戻り値の型(値を返す場合)
 
 ```solidity
@@ -207,7 +207,7 @@ contract ExampleDapp {
 
 ## 注釈付きの例 {#annotated-examples}
 
-Solidity で書かれた例を以下に示します。 コードを実行したい場合は、[Remix](http://remix.ethereum.org)で操作できます。
+Solidityで書かれた例を以下に示します。 コードを実行したい場合は、[Remix](http://remix.ethereum.org)で操作できます。
 
 ### Hello World {#hello-world}
 
@@ -641,7 +641,7 @@ contract CryptoPizza is IERC721, ERC165 {
 
 ## 参考文献 {#further-reading}
 
-スマートコントラクトの全体的な概要については、Solidity と Vyper のドキュメントをご確認ください。
+スマートコントラクトの全体的な概要については、SolidityとVyperのドキュメントをご確認ください。
 
 - [Solidity](https://solidity.readthedocs.io/)
 - [Vyper](https://vyper.readthedocs.io/)
@@ -655,4 +655,4 @@ contract CryptoPizza is IERC721, ERC165 {
 
 - [コントラクトのサイズ制限に対処するためのコントラクトのサイズ縮小](/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/) _- スマートコントラクトのサイズを小さくするための実用的なヒント_
 - [イベントを使用してスマートコントラクトからデータをログに記録](/developers/tutorials/logging-events-smart-contracts/) _- スマートコントラクトのイベントの紹介と、それを使ってデータをログに記録する方法_
-- [Solidity を使用した他のコントラクトとの連携](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- 既存のコントラクトからスマートコントラクトをデプロイし、それを扱う方法_
+- [Solidityを使用した他のコントラクトとの連携](/developers/tutorials/interact-with-other-contracts-from-solidity/) _- 既存のコントラクトからスマートコントラクトをデプロイし、それを扱う方法_

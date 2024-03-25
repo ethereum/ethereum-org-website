@@ -70,9 +70,9 @@ Tekintse meg, ahogy Austin elmagyarázza a bányászatot és a proof-of-work blo
 
 ## A bányászati algoritmus {#mining-algorithm}
 
-Az Ethereum főhálózat csak egy bányászati algoritmust használt: [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/). Az Ethash volt az utódja az eredeti kutatási-fejlesztési algoritmusnak, melyet [Dagger-Hashimoto-nak](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/) neveztek.
+Az Ethereum főhálózat csak egy bányászati algoritmust használt: [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Az Ethash volt az utódja az eredeti kutatási-fejlesztési algoritmusnak, melyet [Dagger-Hashimoto-nak](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/) neveztek.
 
-[Bővebben a bányászati algoritmusokról](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
+[Bővebben a bányászati algoritmusokról](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
 
 ## Kapcsolódó témák {#related-topics}
 

@@ -1,12 +1,11 @@
 ---
 title: Transferencias y aprobación de tókenes ERC-20 desde un contrato inteligente en Solidity
-description: Cómo usar un contrato inteligente para interactuar con un token a través del lenguaje Solidity.
+description: Cómo utilizar un contrato inteligente para interactuar con un token usando el lenguaje Solidity
 author: "jdourlens"
 tags:
-  - "smart contracts"
-  - "tókenes"
+  - "contratos inteligentes"
+  - "tokens"
   - "solidity"
-  - "Empezar"
   - "erc-20"
 skill: intermediate
 lang: es
@@ -18,7 +17,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 En el tutorial anterior, se estudió [la anatomía de un token ERC-20 en Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) sobre la cadena de bloques de Ethereum. En este artículo veremos cómo usar un contrato inteligente para la interacción con un token, usando el lenguaje de programación Solidity.
 
-Para el contrato inteligente, se crea un intercambio descentralizado de prueba en donde un usuario puede operar con Ethereum en el recién implementado [token ERC](/developers/docs/standards/tokens/erc-20/).
+Para este contrato inteligente, crearemos un exchange descentralizado realmente falso donde un usuario pueda intercambiar ether por nuestro recientemente implementado [token ERC-20](/developers/docs/standards/tokens/erc-20/).
 
 Para este tutorial usaremos el código que escribimos en el tutorial anterior como punto de partida. El DEX representará una instancia del contrato en su constructor y perfeccionará las operaciones de:
 
@@ -95,7 +94,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;
@@ -197,7 +196,7 @@ function sell(uint256 amount) public {
 }
 ```
 
-Si todo funciona correctamente, se deberían ver 2 eventos ( `Transfer` [transferencia] y `Sold` [vendido]) en la transacción y el saldo de tókenes y balance de Ethereum actualizados.
+Si todo funciona, debería ver 2 eventos (un `Transfer` y `Sold`) en la transacción, además de su saldo de tokens y saldo de ether actualizados.
 
 ![Dos eventos en la transacción: transferencia y vender](./transfer-and-sold-events.png)
 
@@ -277,7 +276,7 @@ contract ERC20Basic is IERC20 {
         require(numTokens <= allowed[owner][msg.sender]);
 
         balances[owner] = balances[owner]-numTokens;
-        allowed[owner][msg.sender] = allowed[owner][msg.sender]+numTokens;
+        allowed[owner][msg.sender] = allowed[owner][msg.sender]-numTokens;
         balances[buyer] = balances[buyer]+numTokens;
         emit Transfer(owner, buyer, numTokens);
         return true;

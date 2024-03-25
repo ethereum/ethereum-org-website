@@ -204,4 +204,4 @@ Where `sender` is the user who triggered the withdrawal and exchanged `shares`, 
 ## Further reading {#further-reading}
 
 - [EIP-4626: Tokenized vault Standard](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHub Repo](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)
+- [ERC-4626: GitHub Repo](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

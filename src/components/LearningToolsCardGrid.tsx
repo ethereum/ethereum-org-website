@@ -6,9 +6,7 @@ import { LearningToolsCardGridProps } from "@/lib/types"
 import ProductCard from "./ProductCard"
 import Translation from "./Translation"
 
-const LearningToolsCardGrid: React.FC<LearningToolsCardGridProps> = ({
-  category,
-}) => {
+const LearningToolsCardGrid = ({ category }: LearningToolsCardGridProps) => {
   return (
     <Grid
       templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"

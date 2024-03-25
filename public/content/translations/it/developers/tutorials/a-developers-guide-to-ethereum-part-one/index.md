@@ -182,7 +182,7 @@ Ora sei pronto a navigare sulla catena! In realtà non si dice così, l'ho inven
 Per prima cosa, un bel sanity check:
 
 ```python
-In [5]: w3.isConnected()
+In [5]: w3.is_connected()
 Out[5]: True
 ```
 
