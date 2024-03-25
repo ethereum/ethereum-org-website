@@ -8,9 +8,9 @@ lang: en
 
 Ether (ETH) is the main currency of Ethereum. It's used for several purposes like staking, as a currency, and paying for gas fees for computation. **WETH is effectively an upgraded form of ETH with some additional functionality required by many applications and [ERC-20 tokens](/glossary/#erc-20)**, which are other types of digital assets on Ethereum. To work with these tokens, ETH must follow the same rules they do, known as the ERC-20 standard.
 
-To bridge this gap, wrapped ETH (WETH) was created. **Wrapped ETH is a smart contract that lets you deposit 1 ETH into the contract and receive 1 minted WETH** that conforms to the ERC-20 token standard. WETH is a representation of ETH that allows you to interact with it as an ERC-20 token, not as the native asset ETH. You will still need native ETH to pay for gas fees, so make sure you save some when depositing. 
+To bridge this gap, wrapped ETH (WETH) was created. **Wrapped ETH is a smart contract that lets you deposit any amount of ETH into the contract and receive the same amount in minted WETH** that conforms to the ERC-20 token standard. WETH is a representation of ETH that allows you to interact with it as an ERC-20 token, not as the native asset ETH. You will still need native ETH to pay for gas fees, so make sure you save some when depositing. 
 
-You are able to unwrap WETH for ETH by using the WETH smart contract. You can redeem 1 WETH with the WETH smart contract, and you will receive 1 ETH. The WETH deposited is then burned and taken out of the circulating supply of WETH.
+You are able to unwrap WETH for ETH by using the WETH smart contract. You can redeem any amount of WETH with the WETH smart contract, and you will receive the same amount in ETH. The WETH deposited is then burned and taken out of the circulating supply of WETH.
 
 **Roughly ~3% of the circulating ETH supply is locked in the WETH token contract** making it one of the most used [smart contracts](/glossary/#smart-contract). WETH is especially important with users interacting with applications in decentralized finance (DeFi).
 
