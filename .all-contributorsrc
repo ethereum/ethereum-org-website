@@ -11451,6 +11451,60 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "niuhp",
+      "name": "niuhp",
+      "avatar_url": "https://avatars.githubusercontent.com/u/7373524?v=4",
+      "profile": "https://github.com/niuhp",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "xivanc",
+      "name": "xivanc",
+      "avatar_url": "https://avatars.githubusercontent.com/u/91614446?v=4",
+      "profile": "https://github.com/xivanc",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "zm-moon",
+      "name": "patrick",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42063103?v=4",
+      "profile": "https://github.com/zm-moon",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "0xemrekaya",
+      "name": "Emre",
+      "avatar_url": "https://avatars.githubusercontent.com/u/72754835?v=4",
+      "profile": "https://github.com/0xemrekaya",
+      "contributions": [
+        "tutorial"
+      ]
+    },
+    {
+      "login": "ryokomy",
+      "name": "Ryo Komiyama",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6007453?v=4",
+      "profile": "http://ryokomy.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Har01d",
+      "name": "Nikita Zhavoronkov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14060856?v=4",
+      "profile": "https://blockchair.com/",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
