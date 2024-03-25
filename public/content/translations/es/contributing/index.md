@@ -78,7 +78,7 @@ Si su contribución se agrega a ethereum.org, le acuñaremos una POAP única de 
 ### Cómo reclamarlo {#how-to-claim}
 
 1. Únase a nuestro [servidor de Discord](https://ethereum.org/discord).
-2. Pegue un enlace a su contribución en el canal `#🥇 | |proof-of-contribution`.
+2. Pegue un enlace a su contribución en el canal `#🥇 | proof-of-contribution`.
 3. Espere a que un miembro de nuestro equipo le envíe un enlace a su POAP.
 4. ¡Reclame su POAP!
 
