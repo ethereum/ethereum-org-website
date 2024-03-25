@@ -23,7 +23,7 @@ export const useLanguagePicker = (
   handleClose?: () => void,
   menuState?: UseDisclosureReturn
 ) => {
-  const { t } = useTranslation("page-languages")
+  const { t } = useTranslation("common")
   const { locale, locales: rawLocales } = useRouter()
   const refs = {
     inputRef: useRef<HTMLInputElement>(null),
