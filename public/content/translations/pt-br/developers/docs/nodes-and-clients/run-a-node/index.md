@@ -99,7 +99,7 @@ O modo de sincronização e o cliente que você escolher afetará os requisitos 
 
 - Observação: O Erigon não oferece sincronização rápida, mas permite a remoção completa (~ 500 GB)
 
-Para clientes de consenso, o requisito de espaço também depende da implementação do cliente e dos recursos habilitados (por exemplo, removedor de validador), mas geralmente contam com outros 200 GB necessários para dados do beacon. Com um grande número de validadores, a carga de largura de banda também aumenta. Você pode encontrar [detalhes sobre os requisitos do cliente de consenso nesta análise](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e).
+Para clientes de consenso, o requisito de espaço também depende da implementação do cliente e dos recursos habilitados (por exemplo, removedor de validador), mas geralmente contam com outros 200 GB necessários para dados do beacon. Com um grande número de validadores, a carga de largura de banda também aumenta. Você pode encontrar [detalhes sobre os requisitos do cliente de consenso nesta análise](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Soluções "Plug-and-play" {#plug-and-play}
 
