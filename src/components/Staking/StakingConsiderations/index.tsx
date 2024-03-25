@@ -94,7 +94,8 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                 display="table"
                 w="full"
                 h={8}
-                p="4"
+                p="3"
+                mb="0"
                 _hover={activeStyles}
                 position="relative"
                 {...(idx === activeIndex
