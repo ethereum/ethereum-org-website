@@ -16,7 +16,7 @@ Comece lendo sobre a missão e os valores da ethereum.org no nosso [código de c
 - [ Seja recompensado no Gitcoin](https://gitcoin.co/), resolva problemas técnicos pequenos ou grandes, ganhe criptomoedas!
 - Participe de uma hackathon [ETHGlobal](http://ethglobal.co/) perto de você!
 - Dê uma olhada nos [projetos relacionados à sua área de conhecimento ou linguagem de programação favorito](/developers/docs/programming-languages/)
-- Assista ou participe das [reuniões do núcleo de desenvolvedores](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Assista ou participe das [reuniões do núcleo de desenvolvedores](https://www.youtube.com/@EthereumProtocol)
 - [Lista de desejos do Programa de apoio ao ecossistema](https://esp.ethereum.foundation/wishlist/): ferramentas, documentação e áreas de infraestrutura onde o Programa de suporte ao ecossistema do Ethereum está ativamente buscando aplicativos
 - [Web3Bridge](https://www.web3bridge.com/): participe da promissora comunidade da web3 em sua iniciativa de identificar, treinar e oferecer suporte a centenas de desenvolvedores e membros da comunidade em toda a África
 - Junte-se ao [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
@@ -28,7 +28,7 @@ Você tem formação em matemática, criptografia ou economia? Talvez tenha inte
 - Escreva ou avalie uma proposta de melhoria do Ethereum (EIP)
   - Escreva uma EIP
     1. Envie a sua ideia em [Ethereum Magicians](https://ethereum-magicians.org)
-    2. Leia a [EIP-1](https://eip.ethereum.org/EIPS/eip-1) - **Sim, esse é o documento _na íntegra_.**
+    2. Leia a [EIP-1](https://eips.ethereum.org/EIPS/eip-1) - **Sim, esse é o documento _na íntegra_.**
     3. Siga as orientações estabelecidas na EIP-1. Consulte-a ao redigir a sua versão preliminar.
   - Saiba como se tornar um [editor de EIP](https://eips.ethereum.org/EIPS/eip-5069)
     - Você pode fazer a revisão por pares de EIPs agora mesmo! Consulte os [PRs abertos com a tag `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Envie feedback técnico por meio do link `discussion-to`.

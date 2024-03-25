@@ -55,7 +55,7 @@ contentPreview=''>
 
 - **正規擁有者**。 詐騙代幣通常會空投大量餘額到預計是真代幣正規擁有者的地址。
 
-  我們再次以 `wARB` 為例。 [大概 16% 的代幣](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f)由公開標籤為 [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) 的地址所擁有。 這*並不是*一個假的地址；它真的是[在以太坊主網上部署真 ARB 合約](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670)的地址。
+  我們再次以 `wARB` 為例。 [大概 16% 的代幣](https://etherscan.io/token/0xb047c8032b99841713b8e3872f06cf32beb27b82?a=0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f)由公開標籤為 [Arbitrum Foundation: Deployer](https://etherscan.io/address/0x1c8db745abe3c8162119b9ef2c13864cd1fdd72f) 的地址所擁有。 這_並不是_一個假的地址；它真的是[在以太坊主網上部署真 ARB 合約](https://etherscan.io/tx/0x242b50ab4fe9896cb0439cfe6e2321d23feede7eeceb31aa2dbb46fc06ed2670)的地址。
 
   因爲一個地址的 ERC-20 餘額為 ERC-20 合約儲存的一部分，合約開發者可以透過合約將其指定為想要的形式。 合約也可能禁止轉帳，使正規使用者無法擺脫詐騙代幣。
 
@@ -92,6 +92,6 @@ contentPreview=''>
 只要世界上存在價值，就會有嘗試挪為自用的詐騙犯，且在一個去中心化的世界裡，除了你，沒有任何人可以保護你。 希望你記住這幾點，幫助你區別正規代幣和詐騙：
 
 - 詐騙代幣會模仿正規代幣，且可以使用同樣的名稱、符號等等。
-- 詐騙代幣*無法*使用相同的合約地址。
+- 詐騙代幣_無法_使用相同的合約地址。
 - 正規代幣地址的最佳來源是該代幣的發行機構。
 - 若無，你可以使用常見且可信的應用程式，例如 [Uniswap](https://app.uniswap.org/#/swap) 和 [Etherscan 區塊瀏覽器](https://etherscan.io/)。

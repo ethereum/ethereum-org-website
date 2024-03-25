@@ -12,7 +12,7 @@ Sonuç olarak bu, tasarım becerilerinizi sergileyeceğiniz çeşit çeşit ve e
 
 ## Nasıl katkıda bulunulur?
 
-### <Emoji text=":one:" size={1} /> Erken tasarım prototipleri hakkında geribildirim sağlayın {#design-critique}
+### <Emoji text=":one:" size={1} /> &nbsp;Erken tasarım prototipleri hakkında geribildirim sağlayın {#design-critique}
 
 Bazen ham fikirlerimizi test etme konusunda yardıma ihtiyaç duyuyoruz. Bu, herhangi bir teknik bilgi olmadan katkıda bulunmanın harika bir yoludur.
 
@@ -20,7 +20,7 @@ Bazen ham fikirlerimizi test etme konusunda yardıma ihtiyaç duyuyoruz. Bu, her
 2. Tasarımların üzerinden yorumlar seçeneğiyle geribildirim vermeye yönlendirileceksiniz.
 3. Sonuç, Github konusunda paylaşılacak ve ekip tarafından kapatılacaktır.
 
-### <Emoji text=":two:" size={1} /> Anket araştırmasına katılın {#answer-surveys}
+### <Emoji text=":two:" size={1} /> &nbsp;Anket araştırmasına katılın {#answer-surveys}
 
 Web sitemiz hakkında geribildirim sağlayın:
 
@@ -28,7 +28,7 @@ Web sitemiz hakkında geribildirim sağlayın:
 2. Sağ alt köşede bulunan geribildirim aracına tıklayıp tasarım ve içerik ile ilgili soruları cevaplayın.
 3. Serbest biçimdeki sorulara odaklanın.
 
-### <Emoji text=":three:" size={1} /> Web sitesindeki tasarımla ilgili sorunları bulun ve bildirin {#report-design-issues}
+### <Emoji text=":three:" size={1} /> &nbsp;Web sitesindeki tasarımla ilgili sorunları bulun ve bildirin {#report-design-issues}
 
 Ethereum.org, birçok içeriğe ve özelliğe sahip, hızla büyüyen bir web sitesidir. Bazı kullanıcı arayüzleri, kolayca güncelliğini yitirebilir ya da geliştirilebilir. Böyle bir durumla karşılaşırsanız, dikkate almamız için lütfen bize bildirin.
 
@@ -36,7 +36,7 @@ Ethereum.org, birçok içeriğe ve özelliğe sahip, hızla büyüyen bir web si
 2. Herhangi bir görsel sorun ya da kullanıcı deneyimi sorunu görürseniz, ekran görüntüsü ve notlar alın.
 3. Bulduğunuz sorunları [hata raporu](https://github.com/ethereum/ethereum-org-website/issues/new/choose) ile bildirin.
 
-### <Emoji text=":four:" size={1} /> Tasarım değişiklikleri önerin {#propose-design-changes}
+### <Emoji text=":four:" size={1} /> &nbsp;Tasarım değişiklikleri önerin {#propose-design-changes}
 
 Tasarım zorluklarının üstesinden gelme konusunda kendinizi rahat hissediyorsanız, GitHub konu panomuzu ziyaret edip [tasarımla ilgili sorunları](https://github.com/ethereum/ethereum-org-website/labels/design%20required%20%F0%9F%8E%A8) filtreleyin.
 
@@ -45,7 +45,7 @@ Tasarım zorluklarının üstesinden gelme konusunda kendinizi rahat hissediyors
 3. İlgili GitHub konusunda çözümü önerin ya da [yeni bir tane oluşturun.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&template=feature_request.yaml&title=Feature+request)
 4. İncelemesi için tasarım ekibini bekleyin.
 
-### <Emoji text=":five:" size={1} /> Tasarım Sistemini birlikte geliştirin {#Contribute-to-design-system}
+### <Emoji text=":five:" size={1} /> &nbsp;Tasarım Sistemini birlikte geliştirin {#Contribute-to-design-system}
 
 Tasarım sistemimiz, ethereum.org'u tasarlamayı eğlenceli ve kolay hale getirir. Deneyimli bir tasarımcıysanız, web sitesi için birçok ana bileşen hazırlamamıza yardımcı olabilirsiniz.
 
@@ -56,7 +56,7 @@ Tasarım sistemimiz, ethereum.org'u tasarlamayı eğlenceli ve kolay hale getiri
 5. Tasarım ekibi inceleyecektir.
 6. Tasarım ekibi, değişiklikleri ana dosyada toplayacak ve bu dosyayı topluluk ile paylaşacaktır.
 
-### <Emoji text=":six:" size={1} /> Web sitesinde tasarımla ilgili içerik yazın {#write-design-articles}
+### <Emoji text=":six:" size={1} /> &nbsp;Web sitesinde tasarımla ilgili içerik yazın {#write-design-articles}
 
 Ethereum geliştirici topluluğu güçlü olsa da, tasarım topluluğu biraz daha geride kalmıştır. Eğer web3'e dair bilgi sahibi bir tasarımcıysanız, lütfen öğrenimlerinizi daha büyük bir toplulukla paylaşmayı düşünün, böylece birlikte büyür ve gelişebiliriz; katkıda bulunmak isterseniz [Ethereum için bir tasarım sayfamız](/developers/docs/design-and-ux/) bulunmaktadır. Ayrıca [listeleme politikalarımızı](/contributing/design/adding-design-resources) kontrol edebilirsiniz.
 
@@ -66,7 +66,7 @@ Ethereum geliştirici topluluğu güçlü olsa da, tasarım topluluğu biraz dah
 4. Onaylandıktan sonra içeriği yazın.
 5. İlgili GH konusunda sunun.
 
-### <Emoji text=":seven:" size={1} /> Yeni illüstrasyonlar çizin {#prepare-illustrations}
+### <Emoji text=":seven:" size={1} /> &nbsp;Yeni illüstrasyonlar çizin {#prepare-illustrations}
 
 Görselleştirmeler, soyut konuları özetlemenin en güçlü araçlarından biridir. Diyagramlar ve infografikler ekleyerek büyük bir potansiyel elde edilir. Sonuç olarak, bir görsel bin kelime söyleyebilir.
 

@@ -11,7 +11,7 @@ import type {
 } from "@/lib/types"
 
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
-import { languages } from "@/lib/utils/translations"
+import { filterRealLocales, languages } from "@/lib/utils/translations"
 
 import progressDataJson from "@/data/translationProgress.json"
 
@@ -24,7 +24,7 @@ export const useLanguagePicker = (
   menuState?: UseDisclosureReturn
 ) => {
   const { t } = useTranslation("page-languages")
-  const { locale, locales } = useRouter()
+  const { locale, locales: rawLocales } = useRouter()
   const refs = {
     inputRef: useRef<HTMLInputElement>(null),
     firstItemRef: useRef<HTMLAnchorElement>(null),
@@ -35,8 +35,18 @@ export const useLanguagePicker = (
 
   const [filteredNames, setFilteredNames] = useState<LocaleDisplayInfo[]>([])
 
+  // Used to only send one matomo event for users who focus the filter input
+  const [hasFocusedInput, setHasFocusedInput] = useState(false)
+
+  // Reset if user switches languages
+  useEffect(() => {
+    setHasFocusedInput(false)
+  }, [locale])
+
   // perform all the filtering and mapping when the filter value change
   useEffect(() => {
+    const locales = filterRealLocales(rawLocales)
+
     // Get the preferred languages for the users browser
     const navLangs = typeof navigator !== "undefined" ? navigator.languages : []
 
@@ -71,8 +81,14 @@ export const useLanguagePicker = (
       const fallbackSource =
         intlSource !== localeOption ? intlSource : englishName
       const i18nKey = "language-" + localeOption.toLowerCase()
-      const i18nSource = t(i18nKey)
-      const sourceName = i18nSource === i18nKey ? fallbackSource : i18nSource
+      const i18nSource = t(i18nKey) // Falls back to English namespace if not found
+
+      // If i18nSource (fetched from `language-{locale}` in current namespace)
+      // is not translated (output === englishName), or not available
+      // (output === i18nKey), use the Intl.DisplayNames result as fallback
+      const sourceName = [i18nKey, englishName].includes(i18nSource)
+        ? fallbackSource
+        : i18nSource
 
       // Get "target" display name (Language choice displayed in that language)
       const fallbackTarget = new Intl.DisplayNames([localeOption], {
@@ -143,7 +159,7 @@ export const useLanguagePicker = (
             .includes(filterValue.toLowerCase())
       )
     )
-  }, [filterValue, locale, locales, t])
+  }, [filterValue, locale, rawLocales, t])
 
   const { isOpen, ...menu } = useDisclosure()
 
@@ -180,6 +196,21 @@ export const useLanguagePicker = (
     )
   }
 
+  /**
+   * Send Matomo event when user focuses in the filter input.
+   * Only send once per user per session per language
+   * @returns void
+   */
+  const handleInputFocus = (): void => {
+    if (hasFocusedInput) return
+    trackCustomEvent({
+      ...eventBase,
+      eventAction: "Filter input",
+      eventName: "Focused inside filter input",
+    })
+    setHasFocusedInput(true)
+  }
+
   return {
     t,
     refs,
@@ -187,5 +218,6 @@ export const useLanguagePicker = (
     filterValue,
     setFilterValue,
     filteredNames,
+    handleInputFocus,
   }
 }

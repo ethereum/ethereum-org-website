@@ -14,7 +14,7 @@ De Ethereum-gemeenschap omvat mensen met verschillende achtergronden en vaardigh
 - [Vind een premie op Gitcoin](https://gitcoin.co/), werk aan een klein of groot technisch probleem, verdien crypto!
 - Doe mee aan een [ETHGlobal](http://ethglobal.co/) hackathon bij u in de buurt!
 - Bekijk [projecten gerelateerd aan uw gebied van expertise of programmeertaal van keuze](/developers/docs/programming-languages/)
-- Bekijk of neem deel aan [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Bekijk of neem deel aan [Core Dev calls](https://www.youtube.com/@EthereumProtocol)
 - [Wensenlijst van Ecosystem Support Programma](https://esp.ethereum.foundation/wishlist/) - tooling, documentatie en infrastructuurgebieden waar het Ecosystem Support Programma van Ethereum actief op zoek is naar subsidieaanvragen
 - [Web3Bridge](https://www.web3bridge.com/) - sluit u aan bij de ambitieuze web3-gemeenschap in hun initiatief om honderden ontwikkelaars en leden van de gemeenschap in heel Afrika te identificeren, te trainen en te ondersteunen
 - Sluit u aan bij de [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)

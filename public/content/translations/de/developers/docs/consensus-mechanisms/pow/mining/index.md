@@ -16,7 +16,7 @@ Mining ist der Prozess zur Erstellung eines Blocks aus Transaktionen, der zur Et
 Ethereum verwendet derzeit, genau wie Bitcoin, einen [Proof-of-Work (PoW)](/developers/docs/consensus-mechanisms/pow/)-Konsensmechanismus. Mining ist das Lebenselixier des Proof-of-Work. Ethereum-Miner (Computer, die eine Software ausführen) nutzen ihre Zeit und Rechenleistung zur Verarbeitung von Transaktionen und Erstellung von Blöcken.
 
 <InfoBanner emoji=":wave:">
-   Proof-of-Stake wird im Laufe des nächsten Jahres Mining und Proof-of-Work ersetzen. Du kannst schon heute mit dem Staking deiner ETH beginnen. <a href="/abstecken/">Mehr zum Staking</a>    
+   Proof-of-Stake wird im Laufe des nächsten Jahres Mining und Proof-of-Work ersetzen. Du kannst schon heute mit dem Staking deiner ETH beginnen. <a href="/staking/">Mehr zum Staking</a>    
 </InfoBanner>
 
 ## Warum gibt es Miner? {#why-do-miners-exist}

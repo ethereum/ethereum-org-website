@@ -259,7 +259,7 @@ Ce contrat expose une fonction `withdraw()` pour permettre aux utilisateurs de r
 2. Envoie des fonds à l'adresse d'appel
 3. Réinitialise son solde à 0, empêchant les retraits supplémentaires de l'utilisateur
 
-La fonction `withdraw()` dans le contrat `Victim` suit un modèle « checks-interactions-effects ». Il _vérifie_ si les conditions nécessaires à l'exécution sont satisfaites (c.-à-d. l'utilisateur a un solde ETH positif) et effectue l'interaction \__ en envoyant l'ETH à l'adresse de l'appelant, avant d'appliquer les \_effets_ de la transaction (c.-à-d., réduisant le solde de l’utilisateur).
+La fonction `withdraw()` dans le contrat `Victim` suit un modèle « checks-interactions-effects ». Il _vérifie_ si les conditions nécessaires à l'exécution sont satisfaites (c.-à-d. l'utilisateur a un solde ETH positif) et effectue l'interaction __ en envoyant l'ETH à l'adresse de l'appelant, avant d'appliquer les _effets_ de la transaction (c.-à-d., réduisant le solde de l’utilisateur).
 
 Si la fonction `withdraw()` est appelée depuis un compte externe (Externally Orné Account, dit EOA), la fonction s'exécute comme attendu : `msg.sender.call.value()` envoie l'ETH à l'appelant. Cependant, si `msg.sender` est un compte de contrat intelligent qui appelle `withdraw()`, l'envoie de fonds en utilisant `msg.sender.call.value()` déclenchera également le code stocké à cette adresse pour l'exécuter.
 
@@ -470,13 +470,13 @@ Si vous comptez interroger un oracle sur le prix des actifs, envisagez d'utilise
 
 ### Outils de surveillance des contrats intelligents {#smart-contract-monitoring-tools}
 
-- **[Sentinelles de défenseur OpenZeppelin](https://docs.openzeppelin.com/defender/sentinel)** - _Un outil pour surveiller et répondre automatiquement aux événements, fonctions et paramètres de transaction sur vos contrats intelligents._
+- **[Sentinelles de défenseur OpenZeppelin](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Un outil pour surveiller et répondre automatiquement aux événements, fonctions et paramètres de transaction sur vos contrats intelligents._
 
 - **[Alerte en temps réel Tenderly](https://tenderly.co/alerting/)** - _Un outil pour recevoir des notifications en temps réel lorsque des événements inhabituels ou inattendus se produisent sur vos contrats intelligents ou portefeuilles._
 
 ### Outils pour une administration sécurisée des contrats intelligents {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/admin)** - _Interface pour gérer l'administration des contrats intelligents, y compris les contrôles d'accès, les mises à jour et la pause._
+- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface pour gérer l'administration des contrats intelligents, y compris les contrôles d'accès, les mises à jour et la pause._
 
 - **[Safe](https://safe.global/)** - _Portefeuille à contrat intelligent fonctionnant sur Ethereum qui exige qu'un nombre minimum de personnes approuvent une transaction avant qu'elle ne puisse avoir lieu (M-of-N)._
 

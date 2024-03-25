@@ -24,4 +24,3 @@ lang: zh
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ 一个基于 Apache2.0 协议和用 Java 编写的开源以太坊客户端，包含了多种共识算法，如 PoW 和 PoA（IBFT、IBFT 2.0、Etherhash 和 Clique)。 它的全面许可计划是专门为了在联盟链场景中使用而设计的。_
 - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _模块化区块链客户端，包含经过许可的、部分根据以太坊虚拟机 (EVM) 规范而开发的智能合约解释器_
 - [Kaleido](https://kaleido.io/) _用于构建和运行跨云、混合式企业生态系统的全栈平台_
-- [Quorum](https://consensys.net/quorum/) _一个基于以太坊的开源企业级区块链平台，具有高级企业级功能，能够提供隐私、权限和性能指标_

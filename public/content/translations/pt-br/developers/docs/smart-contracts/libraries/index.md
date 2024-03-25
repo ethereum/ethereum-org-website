@@ -16,7 +16,7 @@ Geralmente, você pode encontrar dois tipos de blocos de construção em bibliot
 
 ### Comportamentos {#behaviors}
 
-Ao escrever contratos inteligentes, há uma boa chance de você escrever padrões semelhantes repetidamente, como atribuir um endereço de administrador \__ para realizar operações protegidas em um contrato, ou adicionando um botão de emergência \_pause_ em caso de um problema inesperado.
+Ao escrever contratos inteligentes, há uma boa chance de você escrever padrões semelhantes repetidamente, como atribuir um endereço de administrador __ para realizar operações protegidas em um contrato, ou adicionando um botão de emergência _pause_ em caso de um problema inesperado.
 
 As bibliotecas inteligentes de contratos geralmente fornecem implementações reutilizáveis destes comportamentos como [bibliotecas](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#libraries) ou via [herança](https://solidity.readthedocs.io/en/v0.7.2/contracts.html#inheritance) em Solidity.
 
@@ -102,6 +102,11 @@ Por último, ao decidir se deve incluir uma biblioteca, considere a sua utiliza�
 
 - [GitHub](https://github.com/HQ20/contracts)
 
+**thirdweb Solidity SDK -** **_Fornece as ferramentas necessárias para criar contratos inteligentes e personalizados com eficiência_**
+
+- [Documentação](https://portal.thirdweb.com/solidity/)
+- [GitHub](https://github.com/thirdweb-dev/contracts)
+
 ## Tutoriais relacionados {#related-tutorials}
 
 - [Considerações de segurança para os desenvolvedores da Ethereum](/developers/docs/smart-contracts/security/) _– Um tutorial sobre considerações de segurança ao criar contratos inteligentes, incluindo o uso da biblioteca._
@@ -109,4 +114,4 @@ Por último, ao decidir se deve incluir uma biblioteca, considere a sua utiliza�
 
 ## Leitura adicional {#further-reading}
 
-_Conhece algum recurso da comunidade que o ajudou? Edite essa página e adicione!_
+_Conhece um recurso da comunidade que te ajudou? Edite essa página e adicione!_

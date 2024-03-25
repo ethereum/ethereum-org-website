@@ -4,6 +4,8 @@ description: 我们在以太坊社区中严格恪守的准则
 lang: zh
 ---
 
+# 行为守则 {#conduct-intro}
+
 ## 使命 {#mission}
 
 开发和维护最全面、触手可及的以太坊知识中心。

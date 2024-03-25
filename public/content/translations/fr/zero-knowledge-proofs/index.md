@@ -4,7 +4,7 @@ description: Une introduction non technique aux preuves à divulgation nulle de 
 lang: fr
 ---
 
-## Que sont les preuves à divulgation nulle de connaissance ? {#what-are-zk-proofs}
+# Que sont les preuves à divulgation nulle de connaissance ? {#what-are-zk-proofs}
 
 Une preuve à divulgation nulle est un moyen de prouver la validité d'une information sans révéler l'information elle-même. Le « prouveur » est la partie qui tente de prouver une affirmation, tandis que le « vérificateur » est responsable de la validation de l'affirmation.
 

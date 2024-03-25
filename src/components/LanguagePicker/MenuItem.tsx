@@ -61,12 +61,15 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
       bg={isCurrent ? "background.base" : "transparent"}
       color="body.base"
       textDecoration="none"
-      data-group
       onFocus={(e) => {
         e.target.scrollIntoView({ block: "nearest" })
       }}
       scrollMarginY="8"
-      _hover={{ bg: "primary.lowContrast", textDecoration: "none" }}
+      _hover={{
+        bg: "primary.lowContrast",
+        textDecoration: "none",
+        "p.language-name": { color: "primary.base" },
+      }}
       _focus={{ bg: "primary.lowContrast" }}
       sx={{
         p: {
@@ -84,8 +87,9 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
         <Box flex={1}>
           <Flex alignItems="center" gap={2}>
             <Text
+              className="language-name"
               fontSize="lg"
-              color={isCurrent ? "primary.highContrast" : "primary.base"}
+              color={isCurrent ? "primary.highContrast" : "body.base"}
             >
               {targetName}
             </Text>
@@ -108,7 +112,9 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
             {sourceName}
           </Text>
         </Box>
-        {isCurrent && <Icon as={BsCheck} fontSize="2xl" color="primary.highContrast" />}
+        {isCurrent && (
+          <Icon as={BsCheck} fontSize="2xl" color="primary.highContrast" />
+        )}
       </Flex>
       <Text
         textTransform="lowercase"

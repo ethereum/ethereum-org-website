@@ -4,7 +4,7 @@ description: 零知識證明的非技術性介紹，適合新手閱讀。
 lang: zh-tw
 ---
 
-## 什麼是零知識證明？ {#what-are-zk-proofs}
+# 什麼是零知識證明？ {#what-are-zk-proofs}
 
 零知識證明能證明某陳述有效、卻又無需揭示陳述本身。 「證明者」是試圖證明主張的一方，「驗證者」則負責驗證該主張。
 
@@ -46,7 +46,7 @@ lang: zh-tw
 
 以上描述了「互動式零知識證明」的結構。 早期的零知識協定採用互動式證明，證明者和驗證者必須來回溝通許多次，才能驗證陳述的有效性。
 
-互動式證明的運作方式，有個很好的說明範例，就是 Jean-Jacques Quisquater 的著名故事，名為[阿里巴巴的山洞故事](https://zh.wikipedia.org/zh-hant/%E9%9B%B6%E7%9F%A5%E8%Af%86%E8%Af%81%E6%98%8E#%E7%94%9F%E6%B4%Bb%E7%Af%84%E4%Be%8B)。 在這個故事中，Peggy（證明者）想要向 Victor（驗證者）證明她知道開啟一扇魔法門的密語，但不透露該密語。
+互動式證明的運作方式，有個很好的說明範例，就是 Jean-Jacques Quisquater 的著名故事，名為[阿里巴巴的山洞故事](https://en.wikipedia.org/wiki/Zero-knowledge_proof#The_Ali_Baba_cave)。 在這個故事中，Peggy（證明者）想要向 Victor（驗證者）證明她知道開啟一扇魔法門的密語，但不透露該密語。
 
 ### 非互動式零知識證明 {#non-interactive-zero-knowledge-proofs}
 
@@ -80,7 +80,7 @@ ZK-SNARK 是 **Zero-Knowledge Succinct Non-Interactive Argument of Knowledge**�
 
 [多方運算 (MPC)](https://en.wikipedia.org/wiki/Secure_multi-party_computation) 是一種在產生公共參數時能降低風險的方法。 許多參與方同時參與[受信任設定儀式](https://zkproof.org/2021/06/30/setup-ceremonies/amp/)，每個人都會提供一些隨機的值來產生公共參考串。 只要一個誠實的參與方銷毀他們那部分的熵，零知識簡潔非交互式知識論證協定就能保有運算的健全性。
 
-受信任設定要求使用者必須在產生參數上信任參與者。 然而，ZK-STARK 的發展使得證明協定能和非信任設定搭配運作。
+受信任設定要求使用者必須在產生參數上信任參與者。 然而，零知識可擴容透明知識論證的發展使得證明協定能和非信任設定搭配運作。
 
 #### ZK-STARKs {#zk-starks}
 
@@ -154,13 +154,13 @@ ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零�
 
 鏈上投票會導致平方募資更容易被串謀所影響：區塊鏈交易是公開的，所以行賄者可以檢查受賄者的鏈上活動，了解他們是如何「投票」的。 這使得平方募資法已不再能根據社群集體的偏好，有效進行資金分配。
 
-所幸，MACI（最小反串謀基礎設施）等新式解決方案使用零知識證明，使鏈上投票（例如平方募資機制）能抵禦行賄與串謀。 最小反串謀基礎設施是一組智慧型合約與指令碼，它使中央管理員（稱為「協調員」）能匯集得票數與結果，*而且不會*暴露每個人具體的投票方式。 即使如此，仍然能驗證投票是否正確，或確認某參與者是否參與該輪投票。
+所幸，MACI（最小反串謀基礎設施）等新式解決方案使用零知識證明，使鏈上投票（例如平方募資機制）能抵禦行賄與串謀。 最小反串謀基礎設施是一組智慧型合約與指令碼，它使中央管理員（稱為「協調員」）能匯集得票數與結果，_而且不會_暴露每個人具體的投票方式。 即使如此，仍然能驗證投票是否正確，或確認某參與者是否參與該輪投票。
 
 #### 最小反串謀基礎設施如何與零知識證明搭配運作？ {#how-maci-works-with-zk-proofs}
 
 開始時，協調員會在以太坊上部署最小反串謀基礎設施智慧型合約，之後使用者能註冊他們在智慧型合約裡的公鑰，以進行投票註冊。 使用者將使用公開金鑰加密後的訊息，傳送到智慧型合約，便完成投票（必須以使用者身份相關之最新公開金鑰進行簽署，投票才有效，還有其他的標準）。 之後，協調員在投票截止後處理所有訊息、統計得票數，並在區塊鏈上驗證結果。
 
-在最小反串謀基礎設施中，零知識證明用於確保計算的正確性，它使協調員不可能在處理投票和計票時出錯。 因為協調員必須產生零知識簡潔非交互式知識論證證明，驗證 a) 所有訊息皆已處理正確 b) 最終結果與所有*有效*投票的總票數相互對應。
+在最小反串謀基礎設施中，零知識證明用於確保計算的正確性，它使協調員不可能在處理投票和計票時出錯。 因為協調員必須產生零知識簡潔非交互式知識論證證明，驗證 a) 所有訊息皆已處理正確 b) 最終結果與所有_有效_投票的總票數相互對應。
 
 因此，就算未分享每位使用者的投票明細（通常都是如此），最小反串謀基礎設施也能為計票過程中計算的結果確保完整性。 這個特點有助於降低基本串謀手法的有效性。 我們可利用 Bob 賄賂 Alice 以影響投票選擇的例子，來探索這個可能性：
 
@@ -172,11 +172,11 @@ ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零�
 - Alice 向 Bob 展示了一筆交易，該交易顯示她將票投給了 `option B`（這張票是無效的，因為公開金鑰和她在系統裡的身份無任何關聯）
 - 處理訊息時，協調員會略過愛麗絲投給 `option B` 的票，而只算投給 `option A` 的票。 因此，Bob 雖嘗試賄賂 Alice 來操縱鏈上投票，但計謀失敗。
 
-使用最小反串謀基礎設施時，我們*確實*需信任協調員不會與行賄者串通或自行嘗試賄賂投票者。 協調員可以解密使用者的訊息（產生證明時必須如此），以便準確驗證每個人的投票方式。
+使用最小反串謀基礎設施時，我們_確實_需信任協調員不會與行賄者串通或自行嘗試賄賂投票者。 協調員可以解密使用者的訊息（產生證明時必須如此），以便準確驗證每個人的投票方式。
 
 但在協調員保持誠實的情況下，最小反串謀基礎設施是確保鏈上投票之神聖性的強大工具。 這解釋了它在 [clr.fund](https://clr.fund/#/about/maci) 等平方募資應用程式中為何廣受歡迎，這些程式十分依賴每個個體之投票選擇的完整性。
 
-[深入了解最小反串謀基礎設施](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md)。
+[深入了解最小反串謀基礎設施](https://privacy-scaling-explorations.github.io/maci/)。
 
 ## 使用零知識證明的缺點 {#drawbacks-of-using-zero-knowledge-proofs}
 
@@ -192,7 +192,7 @@ ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零�
 
 在零知識簡潔非交互式知識論證裡，公共參考串（公共參數）會產生一次，然後可在想要參加零知識協定的團隊中重複使用。 在參與者皆誠實的前提下，公共參數是經由受信任設定儀式建立而成。
 
-但使用者真的沒有任何方法能評估參與者的誠實度，使用者必須信任開發者。 零知識可擴容透明知識論證沒有信任假設，因為產生字串所採用的隨機性，是能公開驗證的。 同時，研究人員正在研究 ZK-SNARK 的非信任設定，以增加驗證機制的安全性。
+但使用者真的沒有任何方法能評估參與者的誠實度，使用者必須信任開發者。 零知識可擴容透明知識論證沒有信任假設，因為產生字串所採用的隨機性，是能公開驗證的。 同時，研究人員正在研究零知識簡潔非交互式知識論證的非信任設定，以增加驗證機制的安全性。
 
 ### 量子計算的威脅 {#quantum-computing-threats}
 
@@ -208,5 +208,5 @@ ZK-STARK 是** Zero-Knowledge Scalable Transparent Argument of Knowledge（零�
 - [零知識證明：改善區塊鏈的隱私](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [零知識簡潔非交互式知識論證 — 零知識現實範例與深入探討](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [零知識可擴容透明知識論證 — 建立可驗證的信任，哪怕面對量子電腦](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [如何使零知識簡潔非交互式知識論證成真之相關簡介](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [如何使零知識簡潔非交互式知識論證成真之相關簡介](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [零知識證明是什麼？在區塊鏈中的角色為何？](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/)— _LeewayHertz_

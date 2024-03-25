@@ -32,7 +32,10 @@ import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
 import { remapTableOfContents } from "@/lib/utils/toc"
-import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import {
+  filterRealLocales,
+  getRequiredNamespacesForPage,
+} from "@/lib/utils/translations"
 
 import {
   docsComponents,
@@ -82,7 +85,7 @@ export const getStaticPaths = (({ locales }) => {
   const contentFiles = getContent("/")
 
   // Generate page paths for each supported locale
-  const paths = locales!.flatMap((locale) =>
+  const paths = filterRealLocales(locales).flatMap((locale) =>
     contentFiles.map((file) => ({
       params: {
         // Splitting nested paths to generate proper slug

@@ -27,11 +27,11 @@ Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum yol haritasınd
 
 ## 2023 {#2023}
 
-### Şanghay {#shanghai}
+### Şanghay-Capella ("Shapella") {#shapella}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### Özet {#shanghai-summary}
+#### Şanghay özeti {#shanghai-summary}
 
 Şanghay yükseltmesi, hisselemede çekimlerini yürütüm katmanına getirdi. Bu, Capella yükseltmesiyle birlikte blokların çekim işlemlerini kabul etmesi sağladı; bu da, paydaşların ETH'lerini İşaret Zincirinden yürütüm katmanına çekmelerine olanak tanıyor.
 
@@ -49,13 +49,7 @@ Gelecekteki protokol yükseltmelerini mi arıyorsunuz? [Ethereum yol haritasınd
 
 - [Şanghay güncellemesinin spesifikasyonunu okuyun](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### Capella {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### Özet {#capella-summary}
+#### Capella özeti {#capella-summary}
 
 Capella yükseltmesi, fikir birliği katmanındaki (İşaret Zinciri) en büyük 3. büyük yükseltmeydi ve hisseleme çekimlerini mümkün kıldı. Capella, Şanghay yürütüm katmanı yükseltmesi ile eş zamanlı gerçekleşti ve hisseleme çekim işlevselliğini aktif hale getirdi.
 

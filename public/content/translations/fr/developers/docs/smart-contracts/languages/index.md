@@ -1,6 +1,6 @@
 ---
 title: Les langages des contrats intelligents
-description: "Présentation et comparaison des deux principaux langages de contrat intelligent : Solidity et Vyper"
+description: 'Présentation et comparaison des deux principaux langages de contrat intelligent : Solidity et Vyper'
 lang: fr
 ---
 
@@ -23,7 +23,7 @@ La connaissance de langages de programmation comme JavaScript ou Python peut vou
 
 - Un langage orienté objet et de haut niveau pour la mise en œuvre de contrats intelligents.
 - Un langage à accolades principalement influencé par C++.
-- Typé statistiquement (le type d'une variable est connu au moment de la compilation)
+- Typé statiquement (le type d'une variable est connu au moment de la compilation)
 - Prend en charge les éléments suivants :
   - Héritage : Vous pouvez prolonger d'autres contrats.
   - Bibliothèques : Vous pouvez créer du code réutilisable que vous pouvez appeler à partir de différents contrats, comme les fonctions statiques d'une classe statique dans d'autres langages de programmation orientés objets.
@@ -35,7 +35,7 @@ La connaissance de langages de programmation comme JavaScript ou Python peut vou
 - [Portail Solidity](https://soliditylang.org/)
 - [Solidity by Example](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity) en jonction avec [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/) en jonction avec [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
 - [Cheat Sheet](https://reference.auditless.com/cheatsheet)
 - [Blog Solidity](https://blog.soliditylang.org/)
 - [Twitter Solidity](https://twitter.com/solidity_lang)
