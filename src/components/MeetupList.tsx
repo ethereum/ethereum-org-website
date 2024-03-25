@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { sortBy } from "lodash"
+import sortBy from "lodash/sortBy"
 import {
   Box,
   Flex,

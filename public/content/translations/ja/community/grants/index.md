@@ -36,7 +36,6 @@ lang: ja
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)エコシステム_
 - [UMA 助成プログラム](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/)デベロッパーサポート_
 - [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)コミュニティ_
-- [Web3 助成プログラム](https://web3grants.net) - _Web3/暗号資産関連の助成プログラムの広範なリスト_
 
 ## クオドラティック・ファンディング {#quadratic-funding}
 
