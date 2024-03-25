@@ -70,7 +70,7 @@ const Trilemma = () => {
           placement="bottom"
         >
           <DrawerOverlay background="rgba(0,0,0,0.3)" />
-          <DrawerContent borderTopRadius="1rem" background="background.base">
+          <DrawerContent borderTopRadius="2xl" background="background.base">
             <Card {...cardDetail} background="none" border="none" my="8" />
             <DrawerCloseButton top="6" insetInlineEnd="6" />
           </DrawerContent>
