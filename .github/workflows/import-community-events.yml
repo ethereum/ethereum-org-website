@@ -9,15 +9,51 @@ jobs:
   create_pr:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@v3
+      - name: Check out code
+        uses: actions/checkout@master
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
           node-version: 18
-      - run: yarn install
-      - run: yarn events-import
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Set up git
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Generate timestamp and readable date
+        id: date
+        run: |
+          echo "TIMESTAMP=$(date +'%Y%m%d%H%M%S')" >> $GITHUB_ENV
+          echo "READABLE_DATE=$(date +'%B %-d')" >> $GITHUB_ENV
+
+      - name: Fetch latest dev and create new branch
+        run: |
+          git fetch origin dev
+          git checkout -b "automated-update-${{ env.TIMESTAMP }}" origin/dev
+
+      - name: Run script
+        run: yarn events-import
         env:
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
-      - uses: EndBug/add-and-commit@v9
-        with:
-          default_author: github_actions
-          message: "Update community events"
+
+      - name: Commit and push
+        run: |
+          git add -A
+          git commit -m "Update community events"
+          git push origin "automated-update-${{ env.TIMESTAMP }}"
+
+      - name: Create PR body
+        run: |
+          echo "This PR was automatically created to update community events from external community spreadsheet." > pr_body.txt
+          echo "This workflows runs every Sunday at 00:00 (UTC)." >> pr_body.txt
+          echo "Source: https://docs.google.com/spreadsheets/d/1NEu_FCc1hnGAuRgPmbXXpf0h2lCrCOlMKbbFEqgkVDQ" >> pr_body.txt
+
+      - name: Create Pull Request
+        run: |
+          gh auth login --with-token ${{ secrets.GITHUB_TOKEN }}
+          gh pr create --base dev --head "automated-update-${{ env.TIMESTAMP }}" --title "Update community events from external spreadsheet - ${{ env.READABLE_DATE }}" --body-file pr_body.txt
