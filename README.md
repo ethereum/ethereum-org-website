@@ -1784,6 +1784,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/xivanc"><img src="https://avatars.githubusercontent.com/u/91614446?v=4?s=100" width="100px;" alt="xivanc"/><br /><sub><b>xivanc</b></sub></a><br /><a href="#tool-xivanc" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/zm-moon"><img src="https://avatars.githubusercontent.com/u/42063103?v=4?s=100" width="100px;" alt="patrick"/><br /><sub><b>patrick</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Azm-moon" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xemrekaya"><img src="https://avatars.githubusercontent.com/u/72754835?v=4?s=100" width="100px;" alt="Emre"/><br /><sub><b>Emre</b></sub></a><br /><a href="#tutorial-0xemrekaya" title="Tutorials">✅</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://ryokomy.com"><img src="https://avatars.githubusercontent.com/u/6007453?v=4?s=100" width="100px;" alt="Ryo Komiyama"/><br /><sub><b>Ryo Komiyama</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Aryokomy" title="Bug reports">🐛</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://blockchair.com/"><img src="https://avatars.githubusercontent.com/u/14060856?v=4?s=100" width="100px;" alt="Nikita Zhavoronkov"/><br /><sub><b>Nikita Zhavoronkov</b></sub></a><br /><a href="#tool-Har01d" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://grusz.dev"><img src="https://avatars.githubusercontent.com/u/85355882?v=4?s=100" width="100px;" alt="Tomáš Grusz"/><br /><sub><b>Tomáš Grusz</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tomasgrusz" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/davidzhangg"><img src="https://avatars.githubusercontent.com/u/59639140?v=4?s=100" width="100px;" alt="David Zhang"/><br /><sub><b>David Zhang</b></sub></a><br /><a href="#tool-davidzhangg" title="Tools">🔧</a></td>
     </tr>
   </tbody>
 </table>

@@ -11487,6 +11487,42 @@
       "contributions": [
         "tutorial"
       ]
+    },
+    {
+      "login": "ryokomy",
+      "name": "Ryo Komiyama",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6007453?v=4",
+      "profile": "http://ryokomy.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Har01d",
+      "name": "Nikita Zhavoronkov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14060856?v=4",
+      "profile": "https://blockchair.com/",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "tomasgrusz",
+      "name": "Tomáš Grusz",
+      "avatar_url": "https://avatars.githubusercontent.com/u/85355882?v=4",
+      "profile": "https://grusz.dev",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "davidzhangg",
+      "name": "David Zhang",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59639140?v=4",
+      "profile": "https://github.com/davidzhangg",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
