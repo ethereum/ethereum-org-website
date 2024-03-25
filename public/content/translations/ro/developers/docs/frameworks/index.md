@@ -48,6 +48,12 @@ Framework-urile sunt prevăzute cu numeroase funcționalități predefinite, cum
 - [Documentație](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt -** **_Bibliotecă Kotlin/Java/Android asincronă de înaltă performanță pentru blockchain-uri bazate pe EVM._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Exemple](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **OpenZeppelin SDK -** **_Setul suprem de instrumente pentru contractele inteligente: o suită de instrumente care vă ajută să dezvoltați, să compilaţi, să actualizaţi, să implementaţi și să interacționaţi cu contractele inteligente._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)

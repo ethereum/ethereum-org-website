@@ -77,6 +77,12 @@ Pustaka ini menyederhanakan banyak kerumitan dalam interaksi langsung dengan nod
 - [Dokumen](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
+**ethers-kt -** **_Perpustakaan Kotlin/Java/Android asinkron berkinerja tinggi untuk blockchain berbasis EVM._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Contoh](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Rivet -** **_Ethereum dan API Klasik Ethereum sebagai layanan yang didukung oleh sumber terbuka._**
 
 - [rivet.cloud](https://rivet.cloud)

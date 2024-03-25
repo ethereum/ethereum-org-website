@@ -53,6 +53,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Documentation](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt -** **_Async, high-performance Kotlin/Java/Android library for EVM-based blockchains._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Examples](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Create Eth App -** **_Create Ethereum-powered apps with one command. Comes with a wide offering of UI frameworks and DeFi templates to choose from._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)

@@ -48,6 +48,12 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 - [Dokümanlar](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt -** **_EVM tabanlı blockchainler için asenkron, yüksek performanslı Kotlin/Java/Android kütüphanesi._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Örnekler](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **OpenZeppelin SDK -** **_Akıllı Sözleşmeler İçin Temel Araç Kiti: Akıllı sözleşmeler geliştirmenize, derlemenize, yükseltmenize, dağıtmanıza ve bunlarla etkileşime geçmenize yardımcı olacak bir dizi araç._**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)

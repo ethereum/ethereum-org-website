@@ -45,6 +45,12 @@ lang: zh
 - [相关文档](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt -** **_用于EVM基础区块链的异步高性能Kotlin/Java/Android库。_**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [示例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Create Eth App -** **_ 使用一个命令创建以太坊支持的应用程序。 提供众多 UI 框架和去中心化金融模板供选择。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)

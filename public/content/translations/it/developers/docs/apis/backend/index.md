@@ -98,6 +98,12 @@ Queste librerie eliminano buona parte della complessità legata al dover interag
 - [Docs](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
+**ethers-kt -** **_Libreria Kotlin/Java/Android asincrona ad alte prestazioni per blockchain basate su EVM._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Esempi](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Rivet -** **_API di Ethereum ed Ethereum Classic come servizio, supportate da software open source._**
 
 - [rivet.cloud](https://rivet.cloud)

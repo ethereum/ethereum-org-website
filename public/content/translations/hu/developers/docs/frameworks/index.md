@@ -45,6 +45,12 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 - [Dokumentáció](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt -** **_Aszinkron, nagy teljesítményű Kotlin/Java/Android könyvtár EVM-alapú blokkláncokhoz._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Példák](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Create Eth App -** **_Készítsen Ethereum-alapú appokat egy paranccsal. UI-keretrendszerek és DeFi-sablonok széles választék._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)

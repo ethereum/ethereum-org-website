@@ -33,6 +33,11 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [Java Entegrasyon Testlerinde Hyperledger Besu (Pantheon) Düğümü Çalıştırma](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
 - [Web3j Kopya Kağıdı](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
+EVM tabanlı blockchainler ile etkileşim kurmak için asenkron, yüksek performanslı Kotlin kütüphanesi [ethers-kt](https://github.com/Kr1ptal/ethers-kt) nasıl kullanılacağını öğrenin. JVM ve Android platformlarını hedef alıyor.
+- [ERC20 token transferi](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)
+- [Olay dinleme ile UniswapV2 takası](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/tokenswapwitheventlistening/TokenSwapWithEventListening.kt)
+- [ETH / ERC20 bakiye takipçisi](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/balancetracker/BalanceTracker.kt)
+
 ## Orta seviye makaleler {#intermediate-articles}
 
 - [IPFS ile bir Java uygulamasında depolama yönetimi](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
@@ -47,6 +52,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 
 - [Hyperledger Besu (Panteon) (Ethereum İstemcisi)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Ethereum İstemcileriyle Etkileşim Kütüphanesi)](https://github.com/web3j/web3j)
+- [ethers-kt (EVM tabanlı blockchainler için asenkron, yüksek performanslı Kotlin/Java/Android kütüphanesi.)](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum (Olay Dinleyici)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (IPFS Geliştirici Araçları)](https://github.com/ConsenSys/mahuta)
 

@@ -97,6 +97,12 @@ lang: zh
 - [GitHub](https://github.com/web3j/web3j)
 - [相关文档](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
+  
+**ethers-kt -** **_用于EVM基础区块链的异步高性能Kotlin/Java/Android库。_**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [示例](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
 
 **Rivet -** **_由开源软件提供支持的以太坊和以太坊经典应用程序接口即服务。_**
 

@@ -43,6 +43,12 @@ Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 - [Dokumentasi](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
+**ethers-kt -** **_Perpustakaan Kotlin/Java/Android asinkron berkinerja tinggi untuk blockchain berbasis EVM._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Contoh](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **SDK OpenZeppelin -** **_Kotak Peralatan Kontrak Pintar Paling Lengkap: Rangkaian peralatan untuk membantu Anda mengembangkan, mengompilasikan, meningkatkan, menggunakan, dan berinteraksi dengan kontrak pintar._**
 
 - [SDK OpenZeppelin](https://openzeppelin.com/sdk/)

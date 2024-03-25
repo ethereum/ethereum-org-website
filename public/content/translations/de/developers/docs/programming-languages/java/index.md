@@ -33,6 +33,11 @@ Lernen Sie, wie Sie [Web3J](https://github.com/web3j/web3j) und Hyperledger Besu
 - [Einen Hyperledger-Besu-(Pantheon)-Node in Java-Integrationstests ausführen](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
 - [Web3j Cheat Sheet](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
 
+Lernen Sie, wie man [ethers-kt](https://github.com/Kr1ptal/ethers-kt) verwendet. Es handelt sich um eine asynchrone und hochleistungsfähige Kotlin-Bibliothek für die Interaktion mit auf EVM basierenden Blockchains. Zielt auf JVM- und Android-Plattformen ab
+- [Übertragen Sie ERC20-Token](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/abi/TransferERC20.kt)
+- [UniswapV2-Swap mit Event-Listening](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/tokenswapwitheventlistening/TokenSwapWithEventListening.kt)
+- [ETH / ERC20 balance tracker](https://github.com/Kr1ptal/ethers-kt/blob/master/examples/src/main/kotlin/io/ethers/examples/balancetracker/BalanceTracker.kt)
+
 ## Artikel für Fortgeschrittene {#intermediate-articles}
 
 - [Speicher in einer Java-Anwendung mit IPFS verwalten](https://kauri.io/article/3e8494f4f56f48c4bb77f1f925c6d926/managing-storage-in-a-java-application-with-ipfs)
@@ -47,6 +52,7 @@ Lernen Sie, wie Sie [Web3J](https://github.com/web3j/web3j) und Hyperledger Besu
 
 - [Hyperledger Besu (Pantheon) (Ethereum-Client)](https://docs.pantheon.pegasys.tech/en/stable/)
 - [Web3J (Bibliothek für Interaktion mit Ethereum-Clients)](https://github.com/web3j/web3j)
+- [ethers-kt (Asynchrone, hochleistungsfähige Kotlin/Java/Android-Bibliothek für auf EVM basierende Blockchains.)](https://github.com/Kr1ptal/ethers-kt)
 - [Eventeum (Event Listener)](https://github.com/ConsenSys/eventeum)
 - [Mahuta (IPFS-Entwicklertools)](https://github.com/ConsenSys/mahuta)
 
