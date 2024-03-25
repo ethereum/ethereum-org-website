@@ -33,22 +33,28 @@ You are able to unwrap WETH for ETH by using the WETH smart contract. You can re
 
 ## Frequently asked questions {#faq}
  
-<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-ether" eventName="clicked Do you pay to wrap/unwrap ETH?">
+<ExpandableCard title="Do you pay to wrap/unwrap ETH?" eventCategory="/wrapped-eth" eventName="clicked Do you pay to wrap/unwrap ETH?">
 
 You pay gas fees to wrap or unwrap ETH using the WETH contract.
 
 </ExpandableCard>
 
-<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-ether" eventName="clicked Is WETH safe?">
+<ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
 WETH is generally considered secure because it is based on a simple, battle-tested smart contract. The WETH contract has also beeen formally verified, which is the highest security standard for smart contracts on Ethereum.
 
 </ExpandableCard>
 
-<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-ether" eventName="clicked Why am I seeing different WETH tokens?">
+<ExpandableCard title="Why am I seeing different WETH tokens?" eventCategory="/wrapped-eth" eventName="clicked Why am I seeing different WETH tokens?">
 
 Besides the [canonical implementation of WETH](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2) described on this page, there are other variants in the wild. These may be custom tokens created by app developers or versions issued on other blockchains, and may behave differently or have different security properties. **Always double-check the token information to know which WETH implementation you're interacting with.**
 
+</ExpandableCard>
+
+<ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+- [Ethereum Mainnet](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
+- [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
+- [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
 </ExpandableCard>
 
 ## Further reading {#further-reading}
