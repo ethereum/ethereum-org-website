@@ -37,17 +37,9 @@ const IndicatorGroup = ({
     return <WarningProductGlyphIcon style={style} />
   }
   return (
-    <VStack
-      spacing={2}
-      flex={1}
-      width={{ base: "fit-content", sm: "max-content" }}
-    >
+    <VStack spacing={2} flex={1}>
       <IndicatorIcon style={styleObj} />
-      <Text
-        fontSize="xs"
-        textAlign="center"
-        width={{ base: "fit-content", sm: "max-content" }}
-      >
+      <Text fontSize="xs" textAlign="center" maxW="{40}">
         <Translation id={label} />
       </Text>
     </VStack>
@@ -78,7 +70,8 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
 
   const activeStyles = {
     bg: "background.highlight",
-    color: "body.base"
+    color: "body.base",
+    transition: "background 0.5s, color 0.5s"
   }
 
   return (
