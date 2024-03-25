@@ -11487,6 +11487,15 @@
       "contributions": [
         "tutorial"
       ]
+    },
+    {
+      "login": "ryokomy",
+      "name": "Ryo Komiyama",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6007453?v=4",
+      "profile": "http://ryokomy.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
