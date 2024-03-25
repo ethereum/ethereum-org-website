@@ -1,6 +1,6 @@
 import { createMultiStyleConfigHelpers, cssVar } from "@chakra-ui/react"
 
-import { reactSelectAnatomyKeys } from "@/components/ReactSelect/innerComponents"
+import { reactSelectAnatomyKeys } from "@/components/Select/innerComponents"
 
 const $borderBaseWidth = cssVar("border-base-width")
 

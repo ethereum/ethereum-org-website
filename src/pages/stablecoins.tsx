@@ -34,6 +34,7 @@ import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -46,6 +47,7 @@ import {
   fetchEthereumEcosystemData,
   fetchEthereumStablecoinsData,
 } from "@/lib/api/stablecoinsData"
+import summerfiImg from "@/public/dapps/summerfi.png"
 import dogeComputerImg from "@/public/doge-computer.png"
 // -- daps
 import aaveImg from "@/public/stablecoins/aave.png"
@@ -108,7 +110,7 @@ export const getStaticProps = (async ({ locale }) => {
   const stablecoins = {
     USDT: { type: FIAT, url: "https://tether.to/" },
     USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
-    DAI: { type: CRYPTO, url: "https://kb.oasis.app/help/what-is-dai" },
+    DAI: { type: CRYPTO, url: "https://makerdao.com/en/" },
     BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
     PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
     TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
@@ -308,19 +310,27 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
   const tokens = [
     {
       emoji: ":globe_showing_americas:",
-      description: t("page-stablecoins-stablecoins-feature-1"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-1" />
+      ),
     },
     {
       emoji: ":chart_with_upwards_trend:",
-      description: t("page-stablecoins-stablecoins-feature-2"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-2" />
+      ),
     },
     {
       emoji: ":handshake:",
-      description: t("page-stablecoins-stablecoins-feature-3"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-3" />
+      ),
     },
     {
       emoji: ":key:",
-      description: t("page-stablecoins-stablecoins-feature-4"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-4" />
+      ),
     },
   ]
 
@@ -345,11 +355,11 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
     },
     {
       background: "linear-gradient(135deg, #c7efe6 0%, #eeeac7 100%)",
-      url: "https://oasis.app",
-      alt: t("oasis-logo"),
-      image: daiLargeImg,
+      url: "https://summer.fi/",
+      alt: t("summerfi-logo"),
+      image: summerfiImg,
       width: "80px",
-      name: "Oasis",
+      name: "Summer.fi",
       description: t("page-stablecoins-stablecoins-dapp-description-4"),
     },
   ]
@@ -438,8 +448,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           mb={8}
         >
           <Box w="full" margin={{ base: "auto 0", lg: "0 2rem 0" }}>
-            {tokens.map((token) => (
-              <Box key={token.description} minWidth="full" my={2}>
+            {tokens.map((token, index) => (
+              <Box key={index} minWidth="full" my={2}>
                 <HorizontalCard
                   emoji={token.emoji}
                   description={token.description}
@@ -609,7 +619,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             {t("page-stablecoins-top-coins-intro-code")}
           </Text>
         </Box>
-        <Box px={8} py={4} width="full" overflowX="scroll">
+        <Box px={8} py={4} width="full" overflowX="auto">
           <StablecoinsTable
             columns={tableColumns}
             content={markets}

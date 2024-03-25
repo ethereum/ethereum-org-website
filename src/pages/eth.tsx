@@ -31,6 +31,7 @@ import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -308,12 +309,12 @@ const EthPage = () => {
     {
       emoji: ":woman_technologist:",
       title: t("page-eth-yours"),
-      description: t("page-eth-yours-desc"),
+      description: <Translation id="page-eth:page-eth-yours-desc" />,
     },
     {
       emoji: ":shield:",
       title: t("page-eth-cryptography"),
-      description: t("page-eth-cryptography-desc"),
+      description: <Translation id="page-eth:page-eth-cryptography-desc" />,
     },
     {
       emoji: ":handshake:",
@@ -371,12 +372,6 @@ const EthPage = () => {
       description: "Anthony Sassano",
       caption: t("page-eth-last-updated"),
     },
-    {
-      link: "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
-      title: t("page-eth-how-to-buy"),
-      description: "MyCrypto",
-      caption: t("page-eth-how-to-buy-caption"),
-    },
   ]
 
   return (
@@ -425,7 +420,7 @@ const EthPage = () => {
           </CardContainer>
           <InfoBanner emoji=":wave:" shouldCenter>
             <Text as="b">{t("page-eth-buy-some")}</Text>{" "}
-            {t("page-eth-buy-some-desc")}{" "}
+            <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
             <InlineLink href="/what-is-ethereum/">
               {t("page-eth-more-on-ethereum-link")}
             </InlineLink>
@@ -443,7 +438,7 @@ const EthPage = () => {
             <Text>{t("page-eth-fuels-desc")}</Text>
             <Text>{t("page-eth-fuels-desc-2")}</Text>
             <Text>
-              {t("page-eth-fuels-desc-3")}{" "}
+              <Translation id="page-eth:page-eth-fuels-desc-3" />{" "}
               <Text as="strong">{t("page-eth-powers-ethereum")}</Text>
               {t("page-eth-period")}
             </Text>
@@ -463,7 +458,9 @@ const EthPage = () => {
           <TextDivider />
           <Box>
             <H4>{t("page-eth-underpins")}</H4>
-            <Text>{t("page-eth-underpins-desc")}</Text>
+            <Text>
+              <Translation id="page-eth:page-eth-underpins-desc" />
+            </Text>
             <Text>{t("page-eth-underpins-desc-2")}</Text>
             <CentralActionCard
               to="/defi/"

@@ -1,8 +1,12 @@
 import React, { ReactNode } from "react"
-import { Box, Text, useBreakpointValue } from "@chakra-ui/react"
+import { useRouter } from "next/router"
+import { Box, Text } from "@chakra-ui/react"
 
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import Tooltip from "@/components/Tooltip"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { cleanPath } from "@/lib/utils/url"
 
 type GlossaryTooltipProps = {
   children: ReactNode
@@ -10,9 +14,9 @@ type GlossaryTooltipProps = {
 }
 
 const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
-  const isLargeScreen = useBreakpointValue({ base: false, lg: true })
+  const { asPath } = useRouter()
 
-  return isLargeScreen ? (
+  return (
     <Box display="inline-block">
       <Tooltip
         content={
@@ -22,6 +26,13 @@ const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
             options={{ ns: "glossary-tooltip" }}
           />
         }
+        onOpen={() => {
+          trackCustomEvent({
+            eventCategory: "Glossary Tooltip",
+            eventAction: cleanPath(asPath),
+            eventName: termKey,
+          })
+        }}
       >
         <Text
           as="u"
@@ -37,8 +48,6 @@ const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
         </Text>
       </Tooltip>
     </Box>
-  ) : (
-    <Text as="span">{children}</Text>
   )
 }
 
