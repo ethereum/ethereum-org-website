@@ -97,7 +97,7 @@ yarn dev
   - Explore scripts within `package.json` for more build options
   - Get **faster** local builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
 
-By default the script will build all the languages (complete list in `data/translations.json`).
+By default the script will build all the languages (complete list in `i18n.config.json`).
 
 3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)).
 
