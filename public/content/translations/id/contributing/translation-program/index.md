@@ -107,7 +107,7 @@ Terima kasih atas partisipasi Anda dalam Program Terjemahan ethereum.org!
 
 **Jam kerja untuk para penerjemah**
 
-Ada jam kerja bagi para penerjemah pada hari Rabu kedua setiap bulannya. Ini diadakan di kanal suara #office-hours di [Discord ethereum.org](https://discord.gg/geKhWjtF), tempat Anda juga dapat menemukan waktu yang tepat dan detail tambahannya.
+Ada jam kerja bagi para penerjemah pada hari Rabu kedua setiap bulannya. Ini diadakan di kanal suara #office-hours di [Discord ethereum.org](/discord/), tempat Anda juga dapat menemukan waktu yang tepat dan detail tambahannya.
 
 Tujuan dari jam kerja adalah untuk memungkinkan para penerjemah kami menanyakan pertanyaan tentang proses penerjemahan, memberikan umpan balik tentang program, membagikan ide-ide mereka, atau hanya sekadar mengobrol dengan kami. Para peserta juga dapat belajar lebih banyak tentang program penerjemahan dan mendapatkan beberapa informasi tentang menjadi penerjemah ethereum.org. Terakhir, kami ingin menggunakan panggilan ini untuk mengomunikasikan pengembangan terkini tentang program penerjemahan dan membagikan tips serta instruksi kunci dengan para kontributor kami.
 
