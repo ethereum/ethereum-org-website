@@ -1790,6 +1790,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://blockchair.com/"><img src="https://avatars.githubusercontent.com/u/14060856?v=4?s=100" width="100px;" alt="Nikita Zhavoronkov"/><br /><sub><b>Nikita Zhavoronkov</b></sub></a><br /><a href="#tool-Har01d" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://grusz.dev"><img src="https://avatars.githubusercontent.com/u/85355882?v=4?s=100" width="100px;" alt="Tomáš Grusz"/><br /><sub><b>Tomáš Grusz</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=tomasgrusz" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/davidzhangg"><img src="https://avatars.githubusercontent.com/u/59639140?v=4?s=100" width="100px;" alt="David Zhang"/><br /><sub><b>David Zhang</b></sub></a><br /><a href="#tool-davidzhangg" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/HemaDeviU"><img src="https://avatars.githubusercontent.com/u/135946602?v=4?s=100" width="100px;" alt="EL"/><br /><sub><b>EL</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AHemaDeviU" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
