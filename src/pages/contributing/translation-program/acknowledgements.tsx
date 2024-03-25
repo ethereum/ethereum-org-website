@@ -283,7 +283,7 @@ const TranslatorAcknowledgements = () => {
             {t(
               "page-contributing-translation-program-acknowledgements-how-to-claim-1"
             )}{" "}
-            <InlineLink href="https://ethereum.org/discord">
+            <InlineLink href="/discord/">
               {t(
                 "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord"
               )}
