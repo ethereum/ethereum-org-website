@@ -78,8 +78,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
 
   const activeStyles = {
     bg: "background.highlight",
-    color: "body.base",
-    fontWeight: "bold",
+    color: "body.base"
   }
 
   return (
@@ -102,7 +101,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                 display="table"
                 w="full"
                 h={8}
-                p="2"
+                p="4"
                 _hover={activeStyles}
                 position="relative"
                 {...(idx === activeIndex
