@@ -126,9 +126,9 @@
   "page-run-a-node-what-3-subtitle": "Khi trực tuyến.",
   "page-run-a-node-what-3-text": "Việc chạy một nút Ethereum nghe có vẻ phức tạp, nhưng đó chỉ đơn thuần là hành động chạy liên tục phần mềm máy khách trên máy tính khi được kết nối với internet. Trong khi ngoại tuyến, nút của bạn sẽ ngừng hoạt động cho đến khi có mạng trở lại và cập nhật những thay đổi mới nhất.",
   "page-run-a-node-who-title": "<i>Đối tượng</i> nào nên chạy một nút?",
-  "page-run-a-node-who-preview": "Tất cả mọi người! Các nút không chỉ dành cho thợ đào và người xác nhận. <i>Bất kỳ ai</i> cũng có thể chạy một nút—bạn thậm chí không cần đến ETH.",
-  "page-run-a-node-who-copy-1": "Bạn không cần ký gửi ETH hoặc trở thành thợ đào để chạy một nút. Trên thực tế, mọi nút khác trên Ethereum đều có trách nhiệm giải trình cho thợ đào và người xác nhận.",
-  "page-run-a-node-who-copy-2": "Bạn có thể không nhận được phần thưởng tài chính giống như người xác nhận và thợ đào, nhưng việc chạy một nút lại mang đến nhiều lợi thế khác cho người dùng Ethereum, bao gồm quyền riêng tư, bảo mật, giảm sự phụ thuộc vào máy chủ của bên thứ ba, chống kiểm duyệt cũng như cải thiện năng lực và phi tập hoá của mạng.",
+  "page-run-a-node-who-preview": "Tất cả mọi người! Các nút không chỉ dành cho người xác nhận bằng chứng cổ phần. <i>Bất kỳ ai</i> cũng có thể chạy một nút—bạn thậm chí không cần đến ETH.",
+  "page-run-a-node-who-copy-1": "Bạn không cần ký gửi ETH để chạy một nút. Trên thực tế, mọi nút khác trên Ethereum đều áp đặt trách nhiệm với người xác nhận.",
+  "page-run-a-node-who-copy-2": "Bạn có thể không nhận được phần thưởng tài chính giống như người xác nhận, nhưng việc chạy một nút lại mang đến nhiều lợi thế khác cho người dùng Ethereum, bao gồm quyền riêng tư, bảo mật, giảm sự phụ thuộc vào máy chủ của bên thứ ba, chống kiểm duyệt cũng như cải thiện trạng thái và khả năng phi tập trung hoá của mạng.",
   "page-run-a-node-who-copy-3": "Nếu bạn có nút của riêng mình, thì bạn không cần phải tin tưởng vào thông tin của bên thứ ba về trạng thái của mạng.",
   "page-run-a-node-who-copy-bold": "Đừng tin tưởng. Xác minh.",
   "page-run-a-node-why-title": "<i>Tại sao</i> nên chạy một nút?"

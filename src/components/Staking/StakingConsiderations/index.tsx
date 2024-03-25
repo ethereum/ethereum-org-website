@@ -1,33 +1,20 @@
-import React from "react"
-import {
-  Box,
-  chakra,
-  Flex,
-  Heading,
-  List,
-  ListItem,
-  Text,
-  VStack,
-} from "@chakra-ui/react"
+import { Box, Flex, List, ListItem, useToken, VStack } from "@chakra-ui/react"
 
-// SVG imports
+import type { StakingPage } from "@/lib/types"
+
+import ButtonDropdown from "@/components/ButtonDropdown"
 import {
   CautionProductGlyphIcon,
   GreenCheckProductGlyphIcon,
   WarningProductGlyphIcon,
-} from "../../icons/staking"
+} from "@/components/icons/staking"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+import Translation from "@/components/Translation"
 
-// Component imports
-import ButtonDropdown from "../../ButtonDropdown"
-import Translation from "../../Translation"
-import { trackCustomEvent } from "../../../utils/matomo"
-import { useStakingConsiderations } from "./use-staking-considerations"
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
-const ChakraButtonDropdown = chakra(ButtonDropdown, {
-  baseStyle: {
-    hideFrom: "md",
-  },
-})
+import { useStakingConsiderations } from "@/hooks/useStakingConsiderations"
 
 const IndicatorGroup = ({
   label,
@@ -67,11 +54,14 @@ const IndicatorGroup = ({
   )
 }
 
-export interface IProps {
-  page: "solo" | "saas" | "pools"
+export type StakingConsiderationsProps = {
+  page: StakingPage
 }
 
-const StakingConsiderations: React.FC<IProps> = ({ page }) => {
+const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
+  // TODO: Replace with direct token implementation after UI migration is completed
+  const mdBp = useToken("breakpoints", "md")
+
   const {
     StyledSvg,
     caution,
@@ -79,7 +69,6 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
     dropdownLinks,
     handleSelection,
     indicatorSvgStyle,
-    selectionSvgStyle,
     title,
     valid,
     warning,
@@ -89,9 +78,9 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
 
   return (
     <Flex flexDir={{ base: "column", md: "row" }} gap={8}>
-      <ChakraButtonDropdown list={dropdownLinks} />
+      <ButtonDropdown list={dropdownLinks} hideFrom={mdBp} />
       {/* TODO: Improve a11y */}
-      <Box flex={1} hideBelow="md">
+      <Box flex={1} hideBelow={mdBp}>
         {!!pageData && (
           <List m={0}>
             {/* TODO: Make mobile responsive */}
@@ -109,20 +98,20 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
                 position="relative"
                 {...(idx === activeIndex
                   ? {
-                      bg: "primary",
-                      color: "background",
+                      bg: "primary.base",
+                      color: "background.base",
                       _after: {
                         content: `''`,
                         position: "absolute",
                         height: 0,
                         width: 0,
                         top: 0,
-                        left: "100%",
+                        insetInlineStart: "100%",
                         border: "1rem solid transparent",
-                        borderLeftColor: "primary",
+                        borderInlineStartColor: "primary.base",
                       },
                     }
-                  : { color: "primary" })}
+                  : { color: "primary.base" })}
               >
                 {title}
               </ListItem>
@@ -138,8 +127,8 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
         minH="410px"
         p={6}
       >
-        <StyledSvg style={selectionSvgStyle} />
-        <Heading
+        <StyledSvg />
+        <OldHeading
           as="h3"
           fontWeight={700}
           fontSize="27px"
@@ -147,7 +136,7 @@ const StakingConsiderations: React.FC<IProps> = ({ page }) => {
           mt={10}
         >
           {title}
-        </Heading>
+        </OldHeading>
         <Text>{description}</Text>
         <Flex gap={8} justifyContent="center" mt="auto">
           {!!valid && (

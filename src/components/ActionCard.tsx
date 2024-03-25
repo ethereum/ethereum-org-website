@@ -1,18 +1,19 @@
-import React, { ReactNode } from "react"
+import { StaticImageData } from "next/image"
+import type { ReactNode } from "react"
 import {
   Box,
+  type BoxProps,
   Flex,
-  Text,
   Heading,
-  BoxProps,
   LinkBox,
+  type LinkBoxProps,
   LinkOverlay,
-  Image,
   useColorModeValue,
 } from "@chakra-ui/react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
 
-import Link from "./Link"
+import { Image } from "@/components/Image"
+import { BaseLink } from "@/components/Link"
+import Text from "@/components/OldText"
 
 const linkBoxFocusStyles: BoxProps = {
   borderRadius: "base",
@@ -26,11 +27,12 @@ const linkFocusStyles: BoxProps = {
   textDecoration: "none",
 }
 
-export interface IProps {
-  children?: React.ReactNode
+export type ActionCardProps = Omit<LinkBoxProps, "title"> & {
+  children?: ReactNode
   to: string
   alt?: string
-  image: IGatsbyImageData | string
+  image: StaticImageData
+  imageWidth?: number
   title: ReactNode
   description?: ReactNode
   className?: string
@@ -38,18 +40,19 @@ export interface IProps {
   isBottom?: boolean
 }
 
-const ActionCard: React.FC<IProps> = ({
+const ActionCard = ({
   to,
   alt,
   image,
+  imageWidth = 220,
   title,
   description,
   children,
   className,
   isRight,
   isBottom = true,
-}) => {
-  const isImageURL = typeof image === "string"
+  ...props
+}: ActionCardProps) => {
   const descriptionColor = useColorModeValue("blackAlpha.700", "whiteAlpha.800")
 
   return (
@@ -63,9 +66,10 @@ const ActionCard: React.FC<IProps> = ({
       _focus={linkBoxFocusStyles}
       className={className}
       m={4}
+      {...props}
     >
       <Flex
-        minH="260px"
+        h="260px"
         bg="cardGradient"
         direction="row"
         justify={isRight ? "flex-end" : "center"}
@@ -73,30 +77,13 @@ const ActionCard: React.FC<IProps> = ({
         className="action-card-image-wrapper"
         boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
       >
-        {!isImageURL && (
-          <Image
-            alt={alt || ""}
-            as={GatsbyImage}
-            maxH="257px"
-            maxW={{ base: "311px", sm: "372px" }}
-            minW="100px"
-            minH="100px"
-            image={image}
-            sizes="full"
-          />
-        )}
-        {isImageURL && (
-          <Image
-            alt={alt || ""}
-            maxH="257px"
-            maxW={{ base: "311px", sm: "372px" }}
-            minW="100px"
-            minH="100px"
-            src={image}
-            sizes="full"
-            className="action-card-image"
-          />
-        )}
+        <Image
+          src={image}
+          width={imageWidth}
+          maxH="full"
+          alt={alt || ""}
+          style={{ objectFit: "cover" }}
+        />
       </Flex>
       <Box p={6} className="action-card-content">
         <Heading
@@ -108,7 +95,7 @@ const ActionCard: React.FC<IProps> = ({
           lineHeight={1.4}
         >
           <LinkOverlay
-            as={Link}
+            as={BaseLink}
             color="text"
             hideArrow
             textDecoration="none"

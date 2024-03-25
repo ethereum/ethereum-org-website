@@ -19,7 +19,7 @@
   "page-staking-deposit-contract-staking": "Para fazer staking de seu ETH você deve usar a plataforma Launchpad dedicada e seguir as instruções. Enviar ETH para o endereço desta página não o tornará um staker e essa transação dará errado.",
   "page-staking-deposit-contract-staking-check": "Confira estas fontes",
   "page-staking-deposit-contract-staking-check-desc": "Esperamos um grande número de endereços falsos e fraudes. Para sua segurança, compare o endereço do contrato de depósito que você está usando com o endereço que aparece nesta página. Recomendamos também verificá-lo usando outras fontes confiáveis.",
-  "page-staking-deposit-contract-staking-more-link": "Mais sobre participação",
+  "page-staking-deposit-contract-staking-more-link": "Mais sobre staking",
   "page-staking-deposit-contract-stop-reading": "Parar leitura",
   "page-staking-deposit-contract-subtitle": "Este é o endereço do contrato de depósito no Ethereum. Use esta página para confirmar que está enviando fundos para o endereço correto quando fizer tal depósito.",
   "page-staking-deposit-contract-warning": "Verifique cada caractere cuidadosamente.",

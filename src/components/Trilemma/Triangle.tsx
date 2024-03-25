@@ -1,9 +1,10 @@
-import React, { ReactNode } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { ReactNode } from "react"
+import { useTranslation } from "next-i18next"
 import { chakra, HTMLChakraProps } from "@chakra-ui/react"
+
 import { HandleClickParam } from "./useTrilemma"
 
-export interface IProps {
+export type TriangleSVGProps = {
   handleClick: (selection: HandleClickParam) => void
   isDecentralizedAndSecure: boolean
   isScalableAndSecure: boolean
@@ -14,7 +15,7 @@ export interface IProps {
   isScalable: boolean
 }
 
-export const TriangleSVG: React.FC<IProps> = ({
+export const TriangleSVG = ({
   handleClick,
   isDecentralizedAndSecure,
   isScalableAndSecure,
@@ -23,8 +24,8 @@ export const TriangleSVG: React.FC<IProps> = ({
   isDecentralized,
   isSecure,
   isScalable,
-}) => {
-  const { t } = useTranslation()
+}: TriangleSVGProps) => {
+  const { t } = useTranslation("page-roadmap-vision")
 
   const Path = () => (
     <chakra.path
@@ -52,10 +53,11 @@ export const TriangleSVG: React.FC<IProps> = ({
     return (
       <chakra.circle
         fill={
-          (isActive && (isEthereum ? "primary300" : "primary")) || "background"
+          (isActive && (isEthereum ? "primary300" : "primary.base")) ||
+          "background.base"
         }
         _hover={{
-          fill: isActive ? "primary" : "primary100",
+          fill: isActive ? "primary.base" : "primary100",
         }}
         {...rest}
       />
@@ -113,11 +115,11 @@ export const TriangleSVG: React.FC<IProps> = ({
       xmlns="http://www.w3.org/2000/svg"
       height="620px"
       viewBox="-100 100 850 915"
-      fill="background"
+      fill="background.base"
       width={{ base: "full", lg: "auto" }}
       my={{ base: -28, sm: -16, lg: 0 }}
       mt={{ lg: 32 }}
-      mr={{ lg: 32 }}
+      me={{ lg: 32 }}
     >
       <Path />
       <Path />

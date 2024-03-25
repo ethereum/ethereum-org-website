@@ -1,30 +1,32 @@
 import React from "react"
 import { Center, FlexProps, useMediaQuery } from "@chakra-ui/react"
+
 import { lightTheme as oldTheme } from "../../theme"
 
-export interface IProps extends FlexProps {
+export type BannerNotificationProps = FlexProps & {
   shouldShow?: boolean
 }
 
-const BannerNotification: React.FC<IProps> = ({
+const BannerNotification = ({
   children,
   shouldShow = false,
   ...props
-}) => {
+}: BannerNotificationProps) => {
   const [isLGScreen] = useMediaQuery(`min-width: ${oldTheme.breakpoints.l}`)
   return (
     <>
       {shouldShow && (
         <Center
+          as="aside"
           maxW={isLGScreen ? oldTheme.variables.maxPageWidth : "100%"}
           w="100%"
           py="4"
           px="8"
-          bg="primary"
-          color="background"
+          bg="primary.base"
+          color="background.base"
           sx={{
             a: {
-              color: "background",
+              color: "background.base",
             },
           }}
           {...props}
