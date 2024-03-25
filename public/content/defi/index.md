@@ -4,7 +4,7 @@ description: An overview of DeFi on Ethereum
 lang: en
 template: use-cases
 emoji: ":money_with_wings:"
-image: ../../assets/use-cases/defi.png
+image: /use-cases/defi.png
 alt: City scape with defi product signs
 summaryPoint1: DeFi operates without centralized intermediaries
 summaryPoint2: Includes products that let you borrow, save, invest, trade, and more
