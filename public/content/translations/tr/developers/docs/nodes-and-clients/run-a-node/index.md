@@ -99,7 +99,7 @@ Seçtiğiniz senkronizasyon modu ve istemci alan gereksinimlerini etkileyecektir
 
 - Not: Erigon anlık senkronizasyon sunmaz, ancak Tam Budama mümkündür (yaklaşık 500 GB)
 
-Fikir birliği istemcileri için, alan gereksinimi ayrıca istemci uygulaması ve açık olan özelliklere (ör. doğrulayıcı kesici) de bağlıdır ancak genel olarak işaret verisi için gereken ilave bir 200 GB ekleyin. Büyük bir doğrulayıcı sayısı ile bant genişliği yükü de artmaktadır. [Bu analizde fikir birliği istemcileri gereksinimleri hakkında detaylar](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e) bulabilirsiniz.
+Fikir birliği istemcileri için, alan gereksinimi ayrıca istemci uygulaması ve açık olan özelliklere (ör. doğrulayıcı kesici) de bağlıdır ancak genel olarak işaret verisi için gereken ilave bir 200 GB ekleyin. Büyük bir doğrulayıcı sayısı ile bant genişliği yükü de artmaktadır. [Bu analizde fikir birliği istemcileri gereksinimleri hakkında detaylar](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc) bulabilirsiniz.
 
 #### Tak-çalıştır çözümler {#plug-and-play}
 
