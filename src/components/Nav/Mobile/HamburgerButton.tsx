@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
-import { type ButtonProps, Icon, IconButton } from "@chakra-ui/react"
+import { type ButtonProps, Icon } from "@chakra-ui/react"
+
+import { IconButton } from "@/components/Buttons"
 
 const hamburgerSvg =
   "M 2 13 l 10 0 l 0 0 l 10 0 M 4 19 l 8 0 M 12 19 l 8 0 M 2 25 l 10 0 l 0 0 l 10 0"
