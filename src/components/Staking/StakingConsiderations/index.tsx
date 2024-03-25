@@ -110,7 +110,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
       <Flex
         alignItems="center"
         flexDir="column"
-        bg="offBackground"
+        bg="background.highlight"
         flex={2}
         minH="410px"
         p={6}
