@@ -1,6 +1,8 @@
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
-import { type ButtonProps, Icon, IconButton } from "@chakra-ui/react"
+import { type ButtonProps, Icon } from "@chakra-ui/react"
+
+import { IconButton } from "@/components/Buttons"
 
 import { HAMBURGER_BUTTON_ID } from "@/lib/constants"
 

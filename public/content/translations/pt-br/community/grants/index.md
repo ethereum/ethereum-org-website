@@ -18,7 +18,6 @@ Esses programas abrangem um amplo ecossistema Ethereum ao oferecer recompensas a
 - [MetaCartel](https://www.metacartel.org/grants/) – _Desenvolvimento de Dapp, criação de DAO_
 - [Moloch DAO](https://www.molochdao.com/) – _Privacidade, dimensionamento da camada 2, segurança do cliente e mais_
 - [Concessões DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _Planilha Google de organizações que oferecem concessões_
-- [Crunchbase para concessões Web3](https://www.cryptoneur.xyz/web3-grants) – _Filtre e pesquise subvenções por categoria, caso de uso, valor e muito mais. Contribua para ajudar outros a encontrar a concessão certa._
 - [Bolsas acadêmicas](https://esp.ethereum.foundation/academic-grants) – _Bolsas para apoiar o trabalho acadêmico relacionado com o Ethereum_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _A Blockworks compilou um diretório abrangente de todas as recompensas, RFPs e programas de caça a bugs._
 
@@ -35,7 +34,6 @@ Estes projetos criaram seus próprios programas de recompensas destinados a dese
 - [Programa de bolsas da SKALE Network](https://skale.space/developers#grants) - _[Ecossistema da SKALE Network](https://skale.space/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecossistema [The Graph](https://thegraph.com/)_
 - [Uniswap Grants Program](https://www.uniswapfoundation.org/apply-for-a-grant) - _[Comunidade da Uniswap](https://uniswap.org/)_
-- [Web3 Grants](https://web3grants.net) – _Uma extensa lista de programas de concessão web3/crypto relacionados_
 
 ## Financiamento quadrático {#quadratic-funding}
 

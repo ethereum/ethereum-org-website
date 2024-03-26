@@ -6,7 +6,7 @@ import { DEFAULT_LOCALE, FAKE_LOCALE } from "@/lib/constants"
 
 import i18nConfig from "../../../i18n.config.json"
 
-// same data as in the `config.json` but indexed by language code
+// Same data as in the `config.json` but indexed by language code
 export const languages: Languages = i18nConfig.reduce((result, config) => {
   return { ...result, [config.code]: config }
 }, {} as Languages)
@@ -159,11 +159,11 @@ const getRequiredNamespacesForPath = (relativePath: string) => {
     primaryNamespace = "page-run-a-node"
   }
 
-  if (path.startsWith("/wallets/")) {
+  if (path.endsWith("/wallets/")) {
     primaryNamespace = "page-wallets"
   }
 
-  if (path.startsWith("/wallets/find-wallet/")) {
+  if (path.endsWith("/wallets/find-wallet/")) {
     primaryNamespace = "page-wallets-find-wallet"
     requiredNamespaces = [...requiredNamespaces, "page-wallets"]
   }

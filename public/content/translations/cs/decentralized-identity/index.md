@@ -49,7 +49,7 @@ Decentralizované identifikátory jsou uloženy v distribuovaných účetních k
 
 ## Co umožňuje decentralizované identifikátory? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastruktura veřejných klíčů (PKI) {#public-key-infrastructure}
+### 1. Infrastruktura veřejných klíčů (PKI) {#public-key-cryptography}
 
 Infrastruktura veřejných klíčů (PKI) je opatřením v oblasti informační bezpečnosti, které pro entitu vytváří [veřejný klíč](/glossary/#public-key) a [privátní klíč](/glossary/#private-key). Kryptografie veřejných klídů se využívá v sítích blockchainu k ověření totožnosti uživatelů a k prokázání vlastnictví digitálních majetků.
 
