@@ -11560,6 +11560,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "Eikix",
+      "name": "Elias Tazartes",
+      "avatar_url": "https://avatars.githubusercontent.com/u/66871571?v=4",
+      "profile": "https://github.com/Eikix",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
