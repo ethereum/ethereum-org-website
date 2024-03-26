@@ -1,26 +1,48 @@
-import { Lang } from "../utils/languages"
+import fs from "fs"
+import path from "path"
 
-const fs = require("fs")
-const path = require("path")
-const matter = require("gray-matter")
+import matter from "gray-matter"
+
+import type { Lang } from "../lib/types"
 const argv = require("minimist")(process.argv.slice(2))
 
 const LANG_ARG: string | null = argv.lang || null
-const PATH_TO_INTL_MARKDOWN = "./src/content/translations/"
-const PATH_TO_ALL_CONTENT = "./src/content/"
+const PATH_TO_INTL_MARKDOWN = "./public/content/translations/"
+const PATH_TO_ALL_CONTENT = "./public/content/"
 const TUTORIAL_DATE_REGEX = new RegExp("\\d{4}-\\d{2}-\\d{2}")
+// Original
 const WHITE_SPACE_IN_LINK_TEXT = new RegExp(
   "\\[\\s.+\\]\\( | \\[.+\\s\\]\\(",
   "g"
 )
+// Modified
+// const WHITE_SPACE_IN_LINK_TEXT = new RegExp(
+//   "\\[\\s.+?\\]\\(|\\[.+?\\s\\]\\(",
+//   "g"
+// )
 const BROKEN_LINK_REGEX = new RegExp(
   "\\[[^\\]]+\\]\\([^\\)\\s]+\\s[^\\)]+\\)",
+  "g"
+)
+// This RegEx checks for invalid links in markdown content.
+// The criteria for invalid links are:
+// 1. Exclude images: The link shouldn't be preceded by an exclamation mark
+// 2. Exclude internal links: The URL part of the link shouldn't start with a forward slash
+// 3. Exclude fragment identifiers: The URL part of the link shouldn't start with a hash
+// 4. Exclude typical external links: The URL part of the link shouldn't start with http or https
+// 5. Exclude email links: The URL part of the link shouldn't start with mailto:
+// 6. Exclude PDF links: The URL part of the link shouldn't end with .pdf
+// 7. Exclude links wrapped in angled brackets: The URL part of the link shouldn't start with a <
+const INVALID_LINK_REGEX = new RegExp(
+  "(?<!\\!)\\[[^\\]]+\\]\\((?!<|/|#|http|mailto:)[^\\)]*(?<!\\.pdf)\\)",
   "g"
 )
 const INCORRECT_PATH_IN_TRANSLATED_MARKDOWN = new RegExp(
   "image: ../../(assets/|../assets/)",
   "g"
 )
+
+const LINK_TEXT_MISSING_REGEX = new RegExp("(?<![\\S])\\[\\]\\(([^)]+)\\)", "g")
 
 // add <emoji
 // add /developers/docs/scaling/#layer-2-scaling
@@ -40,7 +62,7 @@ const SPELLING_MISTAKES: Array<string> = [
   "Ehtereum",
   "Eferum",
 ]
-const CASE_SENSITVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
+const CASE_SENSITIVE_SPELLING_MISTAKES = ["Thereum", "Metamask", "Github"]
 // Ideas:
 // Regex for explicit lang path (e.g. /en/) && for glossary links (trailing slash breaks links e.g. /glossary/#pos/ doesn't work)
 // We should have case sensitive spelling mistakes && check they are not in links.
@@ -49,7 +71,7 @@ interface Languages {
   lang?: Array<Lang>
 }
 
-const langsArray: Array<Lang> = fs.readdirSync(PATH_TO_INTL_MARKDOWN)
+const langsArray = fs.readdirSync(PATH_TO_INTL_MARKDOWN) as Array<Lang>
 langsArray.push("en")
 
 function getAllMarkdownPaths(
@@ -120,19 +142,9 @@ export async function getTranslatedMarkdownPaths() {
   return languages
 }
 
-interface MatterData {
-  title: string
-  description: string
-  lang: Lang
-  published: Date
-  sidebar: string
-  skill: string
-  emoji: string
-}
-
 function processFrontmatter(path: string, lang: string): void {
-  const file: Buffer = fs.readFileSync(path, "utf-8")
-  const frontmatter: MatterData = matter(file).data
+  const file = fs.readFileSync(path, "utf-8")
+  const frontmatter = matter(file).data
 
   if (!frontmatter.title) {
     console.warn(`Missing 'title' frontmatter at ${path}:`)
@@ -198,6 +210,25 @@ function processMarkdown(path: string) {
     // if (!BROKEN_LINK_REGEX.global) break
   }
 
+  let invalidLinkMatch: RegExpExecArray | null
+
+  // Check for invalid links
+  while ((invalidLinkMatch = INVALID_LINK_REGEX.exec(markdownFile))) {
+    const lineNumber = getLineNumber(markdownFile, invalidLinkMatch.index)
+    console.warn(`Invalid link found: ${path}:${lineNumber}`)
+  }
+
+  let linkTextMissingMatch: RegExpExecArray | null
+
+  // Check for links missing text
+  while ((linkTextMissingMatch = LINK_TEXT_MISSING_REGEX.exec(markdownFile))) {
+    const lineNumber = getLineNumber(
+      markdownFile,
+      linkTextMissingMatch.index
+    )
+    console.warn(`Link text missing: ${path}:${lineNumber}`)
+  }
+
   let incorrectImagePathMatch: RegExpExecArray | null
 
   // Todo: refactor to simply check if the image exists relative to the path
@@ -226,7 +257,6 @@ function processMarkdown(path: string) {
     !path.includes("hello-world-smart-contract") &&
     !path.includes("opcodes") &&
     !path.includes("translation-program") &&
-    !path.includes("/deprecated-software/") &&
     !path.includes("/energy-consumption/") &&
     !markdownFile.includes("```javascript") &&
     !markdownFile.includes("ExpandableCard")
@@ -259,7 +289,7 @@ function processMarkdown(path: string) {
 
   checkMarkdownSpellingMistakes(path, markdownFile, SPELLING_MISTAKES)
   // Turned this off for testing as there are lots of Github (instead of GitHub) and Metamask (instead of MetaMask).
-  // checkMarkdownSpellingMistakes(path, markdownFile, CASE_SENSITVE_SPELLING_MISTAKES, true)
+  // checkMarkdownSpellingMistakes(path, markdownFile, CASE_SENSITIVE_SPELLING_MISTAKES, true)
 }
 
 function checkMarkdownSpellingMistakes(

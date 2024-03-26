@@ -11,6 +11,8 @@
   "page-upgrades-upgrades-docking": "A integração",
   "page-upgrades-shard-title": "Fragmentação",
   "page-upgrades-upgrades-beacon-chain": "A Beacon Chain",
+  "consensus-beaconscan-title": "beaconscan",
+  "consensus-beaconscan-in-title": "beaconcha.in",
   "consensus-beaconcha-in-desc": "Explorador de código aberto da Beacon Chain",
   "consensus-beaconscan-desc": "Explorador da Beacon Chain — Etherscan para a camada de consenso",
   "consensus-become-staker": "Torne-se um staker (participante)",

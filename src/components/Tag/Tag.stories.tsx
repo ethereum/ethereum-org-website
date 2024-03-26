@@ -1,9 +1,10 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import { Box, HStack, Link, VStack } from "@chakra-ui/react"
-import { TbSquareRoundedNumber8Filled } from "react-icons/tb"
-import Tag, { EthTagProps } from "."
 import { MdInfoOutline, MdLanguage } from "react-icons/md"
+import { TbSquareRoundedNumber8Filled } from "react-icons/tb"
+import { Box, HStack, Link, VStack } from "@chakra-ui/react"
+import { Meta, StoryObj } from "@storybook/react"
+
+import Tag, { EthTagProps } from "."
 
 type TagType = typeof Tag
 
