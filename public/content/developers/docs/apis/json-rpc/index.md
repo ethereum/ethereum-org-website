@@ -28,6 +28,8 @@ An internal API is also used for inter-client communication within a node - that
 
 [Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis).
 
+You can also use the [interactive JSON-RPC API playground](https://ethereum-json-rpc.com).
+
 ## Conventions {#conventions}
 
 ### Hex value encoding {#hex-encoding}
