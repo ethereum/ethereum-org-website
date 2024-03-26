@@ -11597,6 +11597,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "AaronChen0",
+      "name": "Aaron Chen",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18425462?v=4",
+      "profile": "https://github.com/AaronChen0",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
