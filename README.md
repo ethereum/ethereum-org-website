@@ -46,9 +46,7 @@ More information on the issue creation process, and expectations around creating
 
 If you're ready to contribute and create your PR, it will help to set up a local environment so you can see your changes.
 
-1. [Set up your development environment](https://www.gatsbyjs.com/docs/tutorial/part-zero/)
-
-2. Clone your fork
+1. Clone your fork
 
 If this is your first time forking our repo, this is all you need to do for this step:
 
@@ -72,7 +70,7 @@ git fetch upstream
 git merge upstream/dev
 ```
 
-3. Install dependencies
+2. Install dependencies
 
 We recommend using a node manager to use multiple node versions in your system. We use [Volta](https://volta.sh/). In case you don't use a manager or you use `nvm`, you can check the currently supported versions under the `"volta"` section on our `package.json` file.
 
@@ -97,9 +95,9 @@ yarn dev
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:3000` from your browser
 - Pro Tip:
   - Explore scripts within `package.json` for more build options
-  - Get **faster** local builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
+  - Get **faster** production builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
 
-By default the script will build all the languages (complete list in `i18n.config.json`) and will ignore the `/docs` and `/tutorials` folders. To control this behavior you can play with the `BUILD_LOCALES` and `IGNORE_CONTENT` env variables. Check out `.env.example` to read more about them.
+By default the script will build all the languages (complete list in `i18n.config.json`).
 
 3. Commit and prepare for pull request (PR). In your PR commit message, reference the issue it resolves (see [how to link a commit message to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword)).
 
@@ -113,32 +111,16 @@ git commit -m "brief description of changes [Fixes #1234]"
 git push
 ```
 
-### 5. Local development with lambda functions
-
-There may be times where you develop features that make external API requests to other services. For these we write lambda functions to obfuscate API keys.
-
-To use an existing function locally you don't need to do anything. Just check that you have set the necessary ENV variables in the `.env` file.
-
-To create a new function, you will need to create two files:
-
-- One in `src/lambda` where the logic will live. These are the ones that will be deployed to Netlify. These functions follow [this format](https://docs.netlify.com/functions/build-with-javascript/#synchronous-function-format).
-- One in `src/api` that will be just a wrapper around the previous one in order to be compatible with Gatsby functions. More on the [Gatsby docs](https://www.gatsbyjs.com/docs/reference/functions/getting-started/) for the format they follow.
-
-Typically, you will develop and test functions in the Gatsby context, by running `yarn start`.
-
-In case you want to test them as if you were in a Netlify env, you can install the [Netlify CLI](https://docs.netlify.com/cli/get-started/) and run `netlify dev --framework=gatsby`.
-
-### 6. Submit your PR
+### 5. Submit your PR
 
 - After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
   - ex. `Updates out of date content [Fixes #1234]`
-- Gatsby Cloud (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.:
-  ![Gatsby Cloud deploy preview](./GC-preview-deploy.png)
-- _Confirm your GC preview deploy looks & functions as expected_
+- Netlify (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.: ![Netlify deploy preview](public/preview-deploy.png)
+- _Confirm your Netlify preview deploy looks & functions as expected_
 - Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/ethereum-org)?
 
-### 7. Wait for review
+### 6. Wait for review
 
 - The website team reviews every PR
 - See [how decisions are made on content changes](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made)
@@ -146,7 +128,7 @@ In case you want to test them as if you were in a Netlify env, you can install t
 
 Learn more about how we review pull requests [here](docs/review-process.md).
 
-### 8. Release
+### 7. Release
 
 - `master` is continually synced to Netlify and will automatically deploy new commits to ethereum.org
 - Learn more about how we deploy the site [here](docs/deploy-process.md)
