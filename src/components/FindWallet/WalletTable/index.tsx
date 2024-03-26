@@ -244,6 +244,7 @@ const WalletTable = ({
               textTransform="uppercase"
               cursor="pointer"
               onClick={onOpen}
+              as="button"
             >
               {`${t("page-find-wallet-filters")} (${
                 walletsListingCount(filters) +
