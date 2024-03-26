@@ -73,9 +73,9 @@ Over Ethereum's nine year history, the EVM has undergone several revisions, and 
 - [Jellopaper aka KEVM: Semantics of EVM in K](https://jellopaper.org/)
 - [The Beigepaper](https://github.com/chronaeon/beigepaper)
 - [Ethereum Virtual Machine Opcodes](https://www.ethervm.io/)
-- [Evm explaination for beginners](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc))
 - [Ethereum Virtual Machine Opcodes Interactive Reference](https://www.evm.codes/)
 - [A short introduction in Solidity's documentation](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Mastering Ethereum - The Ethereum Virtual Machine](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc))
 
 ## Related Topics {#related-topics}
 
