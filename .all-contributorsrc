@@ -11606,6 +11606,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "melpomene",
+      "name": "Christopher",
+      "avatar_url": "https://avatars.githubusercontent.com/u/763476?v=4",
+      "profile": "https://github.com/melpomene",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
