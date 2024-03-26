@@ -1,11 +1,15 @@
-import React, { useState } from "react"
-import { Box, Flex, Heading, useColorModeValue } from "@chakra-ui/react"
-import { useI18next } from "gatsby-plugin-react-i18next"
-import InlineLink, { navigate } from "./Link"
+import { useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import { Box, Flex, useColorModeValue } from "@chakra-ui/react"
+
+import { ChildOnlyProp } from "@/lib/types"
+
+import { isMobile } from "../lib/utils/isMobile"
+
 import Emoji from "./Emoji"
-import Translation from "./Translation"
-import { isMobile } from "../utils/isMobile"
-import { Lang } from "../utils/languages"
+import InlineLink from "./Link"
+import OldHeading from "./OldHeading"
 
 // Represent string as 32-bit integer
 const hashCode = (string: string): number => {
@@ -33,7 +37,7 @@ interface ILink {
   text: string
 }
 
-interface IPropsGridItem {
+type GridItemProps = {
   description: string
   columnNumber: number
   rowNumber: number
@@ -48,35 +52,35 @@ interface IPropsGridItem {
   links: Array<ILink>
 }
 
-const OpenTitle: React.FC<{ title: string }> = ({ title }) => {
+const OpenTitle = ({ title }: { title: string }) => {
   return (
-    <Heading
+    <OldHeading
       as="h3"
       fontSize={{ base: "2rem", sm: "2.5rem" }}
       fontWeight={700}
       marginTop={0}
     >
       {title}
-    </Heading>
+    </OldHeading>
   )
 }
 
-const Title: React.FC<{ title: string }> = ({ title }) => {
+const Title = ({ title }: { title: string }) => {
   return (
-    <Heading
+    <OldHeading
       as="h3"
       fontSize={{ base: "2rem", sm: "2.5rem" }}
       fontWeight={400}
       marginTop={0}
     >
       {title}
-    </Heading>
+    </OldHeading>
   )
 }
 
-const Subtitle: React.FC<{ children: any }> = ({ children }) => {
+const Subtitle = ({ children }: ChildOnlyProp) => {
   return (
-    <Heading
+    <OldHeading
       as="h4"
       fontSize={{ base: "2xl", sm: "2rem" }}
       fontWeight={600}
@@ -87,11 +91,11 @@ const Subtitle: React.FC<{ children: any }> = ({ children }) => {
       borderColor="black300"
     >
       {children}
-    </Heading>
+    </OldHeading>
   )
 }
 
-const Body: React.FC<{ children: any }> = ({ children }) => {
+const Body = ({ children }: ChildOnlyProp) => {
   return (
     <Box fontSize="xl" lineHeight="140%" color="black300">
       {children}
@@ -99,7 +103,7 @@ const Body: React.FC<{ children: any }> = ({ children }) => {
   )
 }
 
-const StyledEmoji: React.FC<{ emoji: string }> = ({ emoji }) => {
+const StyledEmoji = ({ emoji }: { emoji: string }) => {
   return (
     <Emoji
       fontSize="8xl"
@@ -115,7 +119,7 @@ const StyledEmoji: React.FC<{ emoji: string }> = ({ emoji }) => {
   )
 }
 
-const Row: React.FC<{ children: any }> = ({ children }) => {
+const Row = ({ children }: ChildOnlyProp) => {
   return (
     <Flex
       justify="space-between"
@@ -127,11 +131,11 @@ const Row: React.FC<{ children: any }> = ({ children }) => {
   )
 }
 
-const Column: React.FC<{ children: any }> = ({ children }) => {
+const Column = ({ children }: ChildOnlyProp) => {
   return <Box width="100%">{children}</Box>
 }
 
-const GridItem: React.FC<IPropsGridItem> = ({
+const GridItem = ({
   description,
   columnNumber,
   rowNumber,
@@ -144,11 +148,12 @@ const GridItem: React.FC<IPropsGridItem> = ({
   pros,
   cons,
   links,
-}) => {
+}: GridItemProps) => {
   const handleClick = (): void => {
     callback(index)
   }
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
+  const { t } = useTranslation("page-stablecoins")
 
   return (
     <Flex
@@ -196,9 +201,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
             <Row>
               {pros && (
                 <Column>
-                  <Subtitle>
-                    <Translation id="pros" />
-                  </Subtitle>
+                  <Subtitle>{t("pros")}</Subtitle>
 
                   <Body>
                     <ul>
@@ -211,9 +214,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
               )}
               {cons && (
                 <Column>
-                  <Subtitle>
-                    <Translation id="cons" />
-                  </Subtitle>
+                  <Subtitle>{t("cons")}</Subtitle>
                   <Body>
                     <ul>
                       {cons.map((con, idx) => (
@@ -225,9 +226,7 @@ const GridItem: React.FC<IPropsGridItem> = ({
               )}
             </Row>
             <div>
-              <Subtitle>
-                <Translation id="example-projects" />
-              </Subtitle>
+              <Subtitle>{t("example-projects")}</Subtitle>
               <Body>
                 <ul>
                   {links.map((link, idx) => (
@@ -263,19 +262,19 @@ export interface IPropsBoxItem {
   links: Array<ILink>
 }
 
-export interface IProps {
+export type StablecoinBoxGridProps = {
   items: Array<IPropsBoxItem>
 }
 
-const StablecoinBoxGrid: React.FC<IProps> = ({ items }) => {
-  const { language } = useI18next()
+const StablecoinBoxGrid = ({ items }: StablecoinBoxGridProps) => {
   const [indexOpen, setOpenIndex] = useState<number>(0)
+  const router = useRouter()
 
   // TODO generalize
   const handleSelect = (idx: number): void => {
     setOpenIndex(idx)
     if (isMobile()) {
-      navigate(`/stablecoins/#type-${idx}`, language as Lang)
+      router.push(`/stablecoins/#type-${idx}`)
     }
   }
 

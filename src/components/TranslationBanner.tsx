@@ -1,25 +1,33 @@
-import React, { useEffect, useState } from "react"
-
+import { useEffect, useState } from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
 import { Box, CloseButton, Flex, Heading, useToken } from "@chakra-ui/react"
-import ButtonLink from "./ButtonLink"
-import Translation from "./Translation"
+
+import type { Lang } from "@/lib/types"
+
+import { isLangRightToLeft } from "@/lib/utils/translations"
+
+import { DEFAULT_LOCALE } from "../lib/constants"
+
+import { ButtonLink } from "./Buttons"
 import Emoji from "./Emoji"
 
-export interface IProps {
+export type TranslationBannerProps = {
   shouldShow: boolean
-  isPageRightToLeft: boolean
   originalPagePath: string
   isPageContentEnglish: boolean
 }
 
-const TranslationBanner: React.FC<IProps> = ({
+const TranslationBanner = ({
   shouldShow,
-  isPageRightToLeft,
   originalPagePath,
   isPageContentEnglish,
-}) => {
+}: TranslationBannerProps) => {
   const [isOpen, setIsOpen] = useState(shouldShow)
   const [textColor] = useToken("colors", ["text"])
+  const { t } = useTranslation("common")
+  const { locale } = useRouter()
+  const dir = isLangRightToLeft(locale! as Lang) ? "rtl" : "ltr"
 
   useEffect(() => {
     setIsOpen(shouldShow)
@@ -38,9 +46,10 @@ const TranslationBanner: React.FC<IProps> = ({
       as="aside"
       display={isOpen ? "block" : "none"}
       bottom={{ base: 0, md: 8 }}
-      right={{ base: 0, md: 8 }}
+      insetInlineEnd={{ base: 0, md: 8 }}
       position="fixed"
-      zIndex="99"
+      zIndex="banner"
+      dir={dir}
     >
       <Flex
         p="1rem"
@@ -55,12 +64,7 @@ const TranslationBanner: React.FC<IProps> = ({
         }}
         borderRadius="sm"
       >
-        <Flex
-          flexDirection="column"
-          alignItems={isPageRightToLeft ? "flex-end" : "flex-start"}
-          m={4}
-          mt={{ base: 10, sm: 4 }}
-        >
+        <Flex flexDirection="column" m={4} mt={{ base: 10, sm: 4 }}>
           <Flex
             align={{ base: "flex-start", sm: "center" }}
             mb={4}
@@ -73,48 +77,48 @@ const TranslationBanner: React.FC<IProps> = ({
               lineHeight="100%"
               my="0"
             >
-              <Translation id={headerTextId} />
+              {t(headerTextId)}
             </Heading>
             <Emoji
               text=":globe_showing_asia_australia:"
               fontSize="2xl"
-              ml={2}
+              ms={2}
               mb={{ base: 4, sm: "auto" }}
             />
           </Flex>
-          <p>
-            <Translation id={bodyTextId} />
-          </p>
+          <p>{t(bodyTextId)}</p>
           <Flex
             align={{ base: "flex-start", sm: "center" }}
             flexDirection={{ base: "column", sm: "row" }}
           >
             <Box>
               <ButtonLink to="/contributing/translation-program/">
-                <Translation id="translation-banner-button-translate-page" />
+                {t("translation-banner-button-translate-page")}
               </ButtonLink>
             </Box>
-            {!isPageContentEnglish && (
+            {/* Todo: Reimplement once fixed */}
+            {/* Issue: https://github.com/ethereum/ethereum-org-website/issues/12292 */}
+            {/* {!isPageContentEnglish && (
               <Box>
                 <ButtonLink
                   to={originalPagePath}
                   variant="outline"
-                  ml={{ base: 0, sm: 2 }}
+                  ms={{ base: 0, sm: 2 }}
                   mt={{ base: 2, sm: 0 }}
                   borderColor="#333333"
                   color="#333333"
-                  language="en"
+                  lang={DEFAULT_LOCALE}
                 >
-                  <Translation id="translation-banner-button-see-english" />
+                  {t("translation-banner-button-see-english")}
                 </ButtonLink>
               </Box>
-            )}
+            )} */}
           </Flex>
         </Flex>
         <CloseButton
           position="absolute"
           top="0"
-          right={isPageRightToLeft ? "auto" : 0}
+          insetInlineEnd="0"
           margin={2}
           color="secondary"
           _hover={{
