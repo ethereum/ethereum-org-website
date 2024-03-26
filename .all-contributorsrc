@@ -11551,6 +11551,15 @@
         "content",
         "doc"
       ]
+    },
+    {
+      "login": "seandotau",
+      "name": "seandotau",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12471846?v=4",
+      "profile": "https://github.com/seandotau",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
