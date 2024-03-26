@@ -1,9 +1,10 @@
-import React, { useEffect, useState } from "react"
-import { shuffle } from "lodash"
+import { useEffect, useState } from "react"
+import shuffle from "lodash/shuffle"
 
-import Link from "./Link"
+import type { TranslationKey } from "@/lib/types"
+
+import InlineLink from "./Link"
 import Translation from "./Translation"
-import { TranslationKey } from "../utils/translations"
 
 interface App {
   name: string
@@ -49,9 +50,7 @@ const appList: Array<App> = [
   },
 ]
 
-export interface IProps {}
-
-const RandomAppList: React.FC<IProps> = () => {
+const RandomAppList = () => {
   const [randomAppList, setRandomAppList] = useState<Array<App>>([])
 
   useEffect(() => {
@@ -63,7 +62,7 @@ const RandomAppList: React.FC<IProps> = () => {
     <ul>
       {randomAppList.map((item, idx) => (
         <li key={idx}>
-          <Link to={item.url}>{item.name}</Link>
+          <InlineLink href={item.url}>{item.name}</InlineLink>
           , <Translation id={item.description} />
         </li>
       ))}

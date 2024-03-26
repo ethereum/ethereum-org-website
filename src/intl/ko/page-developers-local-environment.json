@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Python 기반 개발 및 이더리움 가상 머신을 대상으로 하는 스마트 계약을 위한 테스팅 프레임워크입니다.",
   "page-local-environment-brownie-logo-alt": "Brownie 로고",
+  "page-local-environment-kurtosis-desc": "신속한 로컬 디앱 개발, 프로토타이핑 및 테스트를 위해 멀티 클라이언트 이더리움 테스트넷을 간편하게 구성하고 스핀업할 수 있는 컨테이너 기반 툴킷입니다.",
+  "page-local-environment-kurtosis-logo-alt": "Kurtosis 로고",
   "page-local-environment-epirus-desc": "Java 가상 머신에서 블록체인 애플리케이션을 개발, 배포하고, 모니터링하기 위한 플랫폼입니다.",
   "page-local-environment-epirus-logo-alt": "Epirus 로고",
   "page-local-environment-eth-app-desc": "한 개의 명령어로 이더리움 제공 앱을 만듭니다. 선택할 수 있는 다양한 UI 프레임워크와 DeFi 템플릿도 제공됩니다.",

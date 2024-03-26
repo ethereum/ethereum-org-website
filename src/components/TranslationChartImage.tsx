@@ -1,40 +1,21 @@
-import React from "react"
-import { Image, useColorModeValue } from "@chakra-ui/react"
-import { useStaticQuery, graphql } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
-import { getImage } from "../utils/image"
+import { useColorModeValue } from "@chakra-ui/react"
 
-export interface IProps {}
+import { Image } from "@/components/Image"
 
-const TranslationChartImage: React.FC<IProps> = () => {
-  const data = useStaticQuery(graphql`
-    {
-      pageviewsLight: file(
-        relativePath: { eq: "translation-program/pageviews-light.png" }
-      ) {
-        childImageSharp {
-          gatsbyImageData(height: 500, placeholder: BLURRED, quality: 100)
-        }
-      }
-      pageviewsDark: file(
-        relativePath: { eq: "translation-program/pageviews-dark.png" }
-      ) {
-        childImageSharp {
-          gatsbyImageData(height: 500, placeholder: BLURRED, quality: 100)
-        }
-      }
-    }
-  `)
+import pageviewsDark from "@/public/translation-program/pageviews-dark.png"
+import pageviewsLight from "@/public/translation-program/pageviews-light.png"
 
-  const ethImage = useColorModeValue(data.pageviewsLight, data.pageviewsDark)
+const TranslationChartImage = () => {
+  const ethImage = useColorModeValue(pageviewsLight, pageviewsDark)
 
   return (
     <Image
-      as={GatsbyImage}
-      image={getImage(ethImage)!}
+      src={ethImage}
       alt=""
-      fit="contain"
+      style={{ objectFit: "contain" }}
       minW="263px"
+      h={500}
+      w="auto"
     />
   )
 }
