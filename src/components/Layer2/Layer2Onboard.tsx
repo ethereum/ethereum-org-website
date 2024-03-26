@@ -1,38 +1,35 @@
-// Libraries
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import React, { useState } from "react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useState } from "react"
+import { StaticImageData } from "next/image"
+import { useTranslation } from "next-i18next"
 import {
   Box,
   chakra,
   Flex,
-  Heading,
-  Img,
   ListItem,
   SimpleGrid,
   Stack,
-  Text,
   UnorderedList,
 } from "@chakra-ui/react"
 
-// Components
-import ButtonLink from "../ButtonLink"
-import InlineLink from "../Link"
-import Translation from "../Translation"
-import { StyledSelect as Select } from "../SharedStyledComponents"
+import type { ChildOnlyProp } from "@/lib/types"
+
+import { Image } from "@/components/Image"
+
+import { trackCustomEvent } from "@/lib/utils/matomo"
 
 // Data
 import {
-  cexOnboardData,
   CexOnboard,
+  cexOnboardData,
 } from "../../data/layer-2/cex-layer-2-onboard"
 import cexSupport from "../../data/layer-2/cex-layer-2-support.json"
+// Components
+import { ButtonLink } from "../Buttons"
+import InlineLink from "../Link"
+import OldHeading from "../OldHeading"
+import Text from "../OldText"
+import Select, { SelectOnChange } from "../Select"
 
-//Utils
-import { trackCustomEvent } from "../../utils/matomo"
-import { ChildOnlyProp } from "../../types"
-
-// Styles
 const Flex50 = (props: ChildOnlyProp) => (
   <Box flex={{ base: "100%", md: "50%" }} {...props} />
 )
@@ -47,25 +44,12 @@ const TwoColumnContent = (props: ChildOnlyProp) => (
   />
 )
 
-const ChakraSelect = chakra((props: { className?: string }) => (
-  <Select {...props} />
-))
-const StyledSelect = (props: any) => (
-  <Box mt="auto">
-    <ChakraSelect
-      maxW="none"
-      sx={{ ".react-select__control": { py: { base: "14px", sm: "0" } } }}
-      {...props}
-    />
-  </Box>
-)
-
 const SelectedContainer = (props: ChildOnlyProp) => (
   <Box bg="rgba(255, 255, 255, 0.02)" mt={2} p="21px" {...props} />
 )
 
 const H3 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h3"
     mt={0}
     fontSize={{ base: "xl", md: "2xl" }}
@@ -76,7 +60,7 @@ const H3 = (props: ChildOnlyProp) => (
 )
 
 const H4 = (props: ChildOnlyProp) => (
-  <Heading
+  <OldHeading
     as="h4"
     fontSize={{ base: "md", md: "xl" }}
     fontWeight={500}
@@ -115,18 +99,18 @@ interface CexOnboardOption extends Option {
   cexOnboard: CexOnboard
 }
 
-export interface IProps {
+export type Layer2OnboardProps = {
   layer2DataCombined: Array<Layer2>
-  ethIcon: IGatsbyImageData
+  ethIcon: StaticImageData
   ethIconAlt: string
 }
 
-const Layer2Onboard: React.FC<IProps> = ({
+const Layer2Onboard = ({
   layer2DataCombined,
   ethIcon,
   ethIconAlt,
-}) => {
-  const { t } = useTranslation()
+}: Layer2OnboardProps) => {
+  const { t } = useTranslation("page-layer-2")
 
   const [selectedCexOnboard, setSelectedCexOnboard] = useState<
     CexOnboard | undefined
@@ -164,40 +148,6 @@ const Layer2Onboard: React.FC<IProps> = ({
     }
   )
 
-  const formatGroupLabel = (data) => {
-    return data.label ? (
-      <Stack borderTop="2px solid" m={0}>
-        <Text mb={0} mt={2} textTransform="none" color="theme.colors.text">
-          {data.label}
-        </Text>
-      </Stack>
-    ) : (
-      <></>
-    )
-  }
-
-  const selectExchangeOnboard = (option: ExchangeOption & CexOnboardOption) => {
-    if (Object.hasOwn(option, "cex")) {
-      trackCustomEvent({
-        eventCategory: `Selected cex to onboard`,
-        eventAction: `Clicked`,
-        eventName: `${option.cex.name} selected`,
-        eventValue: `${option.cex.name}`,
-      })
-      setSelectedExchange(option.cex)
-      setSelectedCexOnboard(undefined)
-    } else {
-      trackCustomEvent({
-        eventCategory: `Selected cexOnboard to onboard`,
-        eventAction: `Clicked`,
-        eventName: `${option.cexOnboard.name} selected`,
-        eventValue: `${option.cexOnboard.name}`,
-      })
-      setSelectedCexOnboard(option.cexOnboard)
-      setSelectedExchange(undefined)
-    }
-  }
-
   const gridContentPlacementStyles = {
     gridContainer: {
       columns: { base: 1, md: 2 },
@@ -223,90 +173,113 @@ const Layer2Onboard: React.FC<IProps> = ({
     },
   } as const
 
+  const handleLayer2SelectChange: SelectOnChange<Layer2Option> = (
+    selectedOption
+  ) => {
+    if (!selectedOption) return
+
+    trackCustomEvent({
+      eventCategory: `Selected layer 2 to bridge to`,
+      eventAction: `Clicked`,
+      eventName: `${selectedOption.l2.name} bridge selected`,
+      eventValue: `${selectedOption.l2.name}`,
+    })
+    setSelectedL2(selectedOption.l2)
+  }
+
+  const handleExchangeOnboard: SelectOnChange<
+    ExchangeOption | CexOnboardOption
+  > = (selectedOption) => {
+    if (!selectedOption) return
+
+    if ("cex" in selectedOption) {
+      trackCustomEvent({
+        eventCategory: `Selected cex to onboard`,
+        eventAction: `Clicked`,
+        eventName: `${selectedOption.label} selected`,
+        eventValue: `${selectedOption.label}`,
+      })
+
+      setSelectedExchange(selectedOption.cex)
+      setSelectedCexOnboard(undefined)
+    } else {
+      trackCustomEvent({
+        eventCategory: `Selected cexOnboard to onboard`,
+        eventAction: `Clicked`,
+        eventName: `${selectedOption.label} selected`,
+        eventValue: `${selectedOption.label}`,
+      })
+      setSelectedCexOnboard(selectedOption.cexOnboard)
+      setSelectedExchange(undefined)
+    }
+  }
+
   return (
     <Box bg="layer2Gradient" borderRadius="sm" p={10}>
       <Box textAlign="center" maxW="75ch" m="auto">
-        <Heading
+        <OldHeading
           fontSize={{ base: "2xl", md: "2rem" }}
           mt="12"
           fontWeight={600}
           lineHeight={1.4}
         >
-          <Translation id="layer-2-onboard-title" />
-        </Heading>
-        <Text>
-          <Translation id="layer-2-onboard-1" />
-        </Text>
+          {t("layer-2-onboard-title")}
+        </OldHeading>
+        <Text>{t("layer-2-onboard-1")}</Text>
       </Box>
       <SimpleGrid {...gridContentPlacementStyles.gridContainer}>
         <Flex flexDir="column">
           {/* LeftDescription */}
           <Box>
-            <H4>
-              <Translation id="layer-2-onboard-wallet-title" />
-            </H4>
+            <H4>{t("layer-2-onboard-wallet-title")}</H4>
+            <Text>{t("layer-2-onboard-wallet-1")}</Text>
             <Text>
-              <Translation id="layer-2-onboard-wallet-1" />
-            </Text>
-            <Text>
-              <InlineLink to="/bridges/">
-                <Translation id="layer-2-more-on-bridges" />
+              <InlineLink href="/bridges/">
+                {t("layer-2-more-on-bridges")}
               </InlineLink>
             </Text>
           </Box>
           {/* LeftSelected */}
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={layer2Options}
-            onChange={(selectedOption: Layer2Option) => {
-              trackCustomEvent({
-                eventCategory: `Selected layer 2 to bridge to`,
-                eventAction: `Clicked`,
-                eventName: `${selectedOption.l2.name} bridge selected`,
-                eventValue: `${selectedOption.l2.name}`,
-              })
-              setSelectedL2(selectedOption.l2)
-            }}
-            placeholder={t("layer-2-onboard-wallet-input-placeholder")}
-          />
+          <Box mt="auto">
+            <Select
+              instanceId="layer2-left-selected"
+              placeholder={t("layer-2-onboard-wallet-input-placeholder")}
+              options={layer2Options}
+              onChange={handleLayer2SelectChange}
+              variant="outline"
+            />
+          </Box>
         </Flex>
         <Flex flexDir="column">
           {/* RightDescription */}
           <Box>
-            <H4>
-              <Translation id="layer-2-onboard-exchange-title" />
-            </H4>
+            <H4>{t("layer-2-onboard-exchange-title")}</H4>
+            <Text>{t("layer-2-onboard-exchange-1")}</Text>
             <Text>
-              <Translation id="layer-2-onboard-exchange-1" />
-            </Text>
-            <Text>
-              <Translation id="layer-2-onboard-exchange-2" />{" "}
-              <InlineLink to="/wallets/find-wallet/">
-                <Translation id="layer-2-onboard-find-a-wallet" />
+              {t("layer-2-onboard-exchange-2")}{" "}
+              <InlineLink href="/wallets/find-wallet/">
+                {t("layer-2-onboard-find-a-wallet")}
               </InlineLink>
             </Text>
           </Box>
           {/* RightSelect */}
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                options: [...cexSupportOptions],
-              },
-              {
-                label:
-                  "Don't see you exchange? Use dapps to bridge directly from exchanges to layer 2.",
-                options: [...cexOnboardOptions],
-              },
-            ]}
-            onChange={(selectedOption: ExchangeOption & CexOnboardOption) => {
-              selectExchangeOnboard(selectedOption)
-            }}
-            placeholder={t("layer-2-onboard-exchange-input-placeholder")}
-            formatGroupLabel={formatGroupLabel}
-          />
+          <Box mt="auto">
+            <Select
+              instanceId="exchange-onboard-select"
+              options={[
+                {
+                  options: [...cexSupportOptions],
+                },
+                {
+                  label:
+                    "Don't see you exchange? Use dapps to bridge directly from exchanges to layer 2.",
+                  options: [...cexOnboardOptions],
+                },
+              ]}
+              onChange={handleExchangeOnboard}
+              variant="outline"
+            />
+          </Box>
         </Flex>
         {/* LeftSelected extra */}
         {selectedL2 && (
@@ -330,9 +303,7 @@ const Layer2Onboard: React.FC<IProps> = ({
             <SelectedContainer>
               <TwoColumnContent>
                 <Flex50>
-                  <H3>
-                    <Translation id="layer-2-deposits" />
-                  </H3>
+                  <H3>{t("layer-2-deposits")}</H3>
                   <UnorderedList>
                     {selectedExchange.supports_deposits.map((l2) => (
                       <ListItem key={l2}>{l2}</ListItem>
@@ -340,9 +311,7 @@ const Layer2Onboard: React.FC<IProps> = ({
                   </UnorderedList>
                 </Flex50>
                 <Flex50>
-                  <H3>
-                    <Translation id="layer-2-withdrawals" />
-                  </H3>
+                  <H3>{t("layer-2-withdrawals")}</H3>
                   <UnorderedList>
                     {selectedExchange.supports_withdrawals.map((l2) => (
                       <ListItem key={l2}>{l2}</ListItem>
@@ -372,12 +341,11 @@ const Layer2Onboard: React.FC<IProps> = ({
         )}
         {/* EthLogo */}
         <Box {...gridContentPlacementStyles.logo}>
-          <Img
-            as={GatsbyImage}
-            image={ethIcon}
-            objectFit="contain"
+          <Image
+            src={ethIcon}
             alt={ethIconAlt}
-            w="full"
+            width={50}
+            style={{ objectFit: "contain" }}
           />
         </Box>
       </SimpleGrid>

@@ -1,13 +1,10 @@
-import React, { useEffect, useState } from "react"
-import { shuffle } from "lodash"
+import shuffle from "lodash/shuffle"
+import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
-import { Box, Flex, Image, LinkBox, LinkOverlay, Text } from "@chakra-ui/react"
+import InlineLink from "@/components/Link"
+import Text from "@/components/OldText"
 
-import data from "../data/contributors.json"
-
-import InlineLink from "./Link"
-
-export interface IProps {}
+import data from "!!raw-loader!@/../.all-contributorsrc"
 
 export interface Contributor {
   login: string
@@ -17,15 +14,8 @@ export interface Contributor {
   contributions: Array<string>
 }
 
-const Contributors: React.FC<IProps> = () => {
-  const [contributorsList, setContributorsList] = useState<Array<Contributor>>(
-    []
-  )
-
-  useEffect(() => {
-    const list = shuffle(data.contributors)
-    setContributorsList(list)
-  }, [])
+const Contributors = () => {
+  const contributorsList = shuffle(JSON.parse(data).contributors)
 
   return (
     <>
@@ -35,8 +25,9 @@ const Contributors: React.FC<IProps> = () => {
       </p>
 
       <Flex flexWrap="wrap">
-        {contributorsList.map((contributor, idx) => (
+        {contributorsList.map((contributor) => (
           <LinkBox
+            key={contributor.login}
             as="div"
             maxWidth="132px"
             margin="2"

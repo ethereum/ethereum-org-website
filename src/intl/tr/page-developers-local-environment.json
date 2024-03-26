@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Ethereum Sanal Makinesi'ni hedefleyen akıllı sözleşmeler için Python bazlı bir geliştirme ve yazılım iskeleti.",
   "page-local-environment-brownie-logo-alt": "Brownie logosu",
+  "page-local-environment-kurtosis-desc": "Kolay yapılandırılabilen ve hızlı yerel dApp geliştirebilme, prototipleme ve testi için, çoklu istemci Ethereum test ağı oluşturabilen konteyner tabanlı bir araç seti.",
+  "page-local-environment-kurtosis-logo-alt": "Kurtosis logosu",
   "page-local-environment-epirus-desc": "Java Sanal Makinesinde blokzincir uygulamalarını geliştirmek, dağıtmak ve izlemek için bir platform.",
   "page-local-environment-epirus-logo-alt": "Epirus logosu",
   "page-local-environment-eth-app-desc": "Tek bir komutla Ethereum destekli uygulamalar oluşturun. Seçebileceğiniz birbirinden farklı arayüz yapıları ve DeFi şablonları da bulunur.",
