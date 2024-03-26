@@ -1,72 +1,80 @@
-import React from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, FlexProps, Image } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+import { Flex, type FlexProps } from "@chakra-ui/react"
 
-import Translation from "./Translation"
-import Text from "./OldText"
-import OldHeading from "./OldHeading"
-import { TranslationKey } from "../utils/translations"
+import type { TranslationKey } from "@/lib/types"
 
-export interface IProps extends FlexProps {
+import { Image, type ImageProps } from "@/components/Image"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+
+export type CalloutBannerProps = FlexProps & {
   children?: React.ReactNode
-  image: IGatsbyImageData
-  maxImageWidth?: number
+  image: ImageProps["src"]
+  imageWidth?: number
   titleKey: TranslationKey
   descriptionKey: TranslationKey
   alt: string
 }
 
-const CalloutBanner: React.FC<IProps> = ({
+const CalloutBanner = ({
   image,
-  maxImageWidth,
+  imageWidth,
   titleKey,
   descriptionKey,
   alt,
   children,
-  ...restProps
-}) => (
-  <Flex
-    as="aside"
-    direction={{ base: "column", lg: "row-reverse" }}
-    bg="layer2Gradient"
-    p={{ base: 8, sm: 12 }}
-    borderRadius="base"
-    {...restProps}
-  >
-    <Image
-      as={GatsbyImage}
-      image={image}
-      alt={alt}
-      objectFit="contain"
-      alignSelf="center"
-      w="full"
-      maxW={`${maxImageWidth}px`}
-      mt={-24}
-      mb={{ base: 0, lg: -24 }}
-    />
+  ...props
+}: CalloutBannerProps) => {
+  const { t } = useTranslation("page-staking")
+
+  return (
     <Flex
-      flexGrow={1}
-      flexShrink={0}
-      flexBasis="50%"
-      direction="column"
-      justifyContent="center"
-      pl={{ base: 0, sm: 4, lg: 8 }}
-      w={{ base: "full", lg: "inherit" }}
+      as="aside"
+      direction={{ base: "column", lg: "row-reverse" }}
+      bg="layer2Gradient"
+      p={{ base: 8, sm: 12 }}
+      borderRadius="base"
+      {...props}
     >
-      <OldHeading
-        as="h2"
-        mt={0}
-        fontSize={{ base: "2xl", sm: "2rem" }}
-        lineHeight="1.4"
+      {image && (
+        <Flex>
+          <Image
+            src={image}
+            alt={alt}
+            width={imageWidth}
+            style={{
+              objectFit: "contain",
+            }}
+            mx="auto"
+            mt={-24}
+            mb={{ base: 0, lg: -24 }}
+          />
+        </Flex>
+      )}
+      <Flex
+        flexGrow={1}
+        flexShrink={0}
+        flexBasis="50%"
+        direction="column"
+        justifyContent="center"
+        ps={{ base: 0, sm: 4, lg: 8 }}
+        w={{ base: "full", lg: "inherit" }}
       >
-        <Translation id={titleKey} />
-      </OldHeading>
-      <Text fontSize="xl" w="90%" lineHeight="140%" mb={8} color="text200">
-        <Translation id={descriptionKey} />
-      </Text>
-      {children}
+        <OldHeading
+          as="h2"
+          mt={0}
+          fontSize={{ base: "2xl", sm: "2rem" }}
+          lineHeight="1.4"
+        >
+          {t(titleKey)}
+        </OldHeading>
+        <Text fontSize="xl" w="90%" lineHeight="140%" mb={8} color="text200">
+          {t(descriptionKey)}
+        </Text>
+        {children}
+      </Flex>
     </Flex>
-  </Flex>
-)
+  )
+}
 
 export default CalloutBanner

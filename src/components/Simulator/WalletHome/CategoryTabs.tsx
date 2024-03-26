@@ -1,18 +1,19 @@
 import React from "react"
 import { Flex, type FlexProps, Text } from "@chakra-ui/react"
-import Button from "../../Button"
 
-interface IProps extends FlexProps {
+import { Button } from "../../Buttons"
+
+type CategoryTabsProps = FlexProps & {
   categories: Array<string>
   activeIndex?: number
   setActiveIndex?: (i: number) => void
 }
-export const CategoryTabs: React.FC<IProps> = ({
+export const CategoryTabs = ({
   categories,
   activeIndex = 0,
   setActiveIndex,
   ...flexProps
-}) => (
+}: CategoryTabsProps) => (
   <Flex gap={6} {...flexProps}>
     {categories.map((category, index) =>
       setActiveIndex ? (

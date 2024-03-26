@@ -1,10 +1,11 @@
-import React, { ReactNode } from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { motion } from "framer-motion"
+import type { ReactNode } from "react"
+import { MdExpandMore } from "react-icons/md"
 import {
-  BackgroundProps,
+  type BackgroundProps,
   Box,
   Center,
-  ChakraProps,
+  type ChakraProps,
   Collapse,
   Heading,
   HStack,
@@ -13,14 +14,13 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react"
-import { motion } from "framer-motion"
-import { MdExpandMore } from "react-icons/md"
 
-import Text from "./OldText"
+import { Image, type ImageProps } from "@/components/Image"
+import Text from "@/components/OldText"
 
-export interface IProps extends ChakraProps {
-  children?: React.ReactNode
-  image?: IGatsbyImageData
+export type ExpandableInfoProps = ChakraProps & {
+  children?: ReactNode
+  image?: ImageProps["src"]
   title: ReactNode
   contentPreview: ReactNode
   background: BackgroundProps["background"]
@@ -28,7 +28,7 @@ export interface IProps extends ChakraProps {
   className?: string
 }
 
-const ExpandableInfo: React.FC<IProps> = ({
+const ExpandableInfo = ({
   image,
   title,
   contentPreview,
@@ -36,8 +36,8 @@ const ExpandableInfo: React.FC<IProps> = ({
   background,
   forceOpen,
   className,
-  ...rest
-}) => {
+  ...props
+}: ExpandableInfoProps) => {
   const { isOpen, getButtonProps, getDisclosureProps } = useDisclosure({
     defaultIsOpen: forceOpen,
   })
@@ -61,11 +61,11 @@ const ExpandableInfo: React.FC<IProps> = ({
 
   return (
     <VStack
-      border="1px solid"
+      border="1px"
       borderColor="border"
       borderRadius="2px"
-      p={6}
-      mb={4}
+      p="6"
+      mb="4"
       spacing="0"
       background={background ?? "background.base"}
       position="relative"
@@ -75,7 +75,7 @@ const ExpandableInfo: React.FC<IProps> = ({
           transition: "transform 0.1s",
         },
       }}
-      {...rest}
+      {...props}
     >
       <Stack
         justify="space-between"
@@ -84,23 +84,22 @@ const ExpandableInfo: React.FC<IProps> = ({
         flexDirection={{ base: "column", md: "row" }}
         width="full"
       >
-        {image && <GatsbyImage image={image} alt="" />}
-        <HStack gap={12} width="full">
-          <Box mr={4}>
-            <HStack
-              width="full"
-              my={4}
-              sx={{
-                img: {
-                  mr: 6,
-                },
-              }}
-            >
+        {image && (
+          <Image
+            src={image}
+            alt=""
+            sizes="300px"
+            style={{ width: "300px", height: "auto" }}
+          />
+        )}
+        <HStack gap="12" width="full">
+          <Box me="4">
+            <HStack width="full" my="4" sx={{ img: { me: 6 } }}>
               <Heading
                 mt="0"
-                mb={1}
+                mb="1"
                 fontSize={{ base: "2xl", md: "2rem" }}
-                fontWeight="600"
+                fontWeight="semibold"
                 lineHeight="1.4"
               >
                 {title}
@@ -139,13 +138,7 @@ const ExpandableInfo: React.FC<IProps> = ({
         endingHeight="100%"
         initial={false}
       >
-        <Box
-          color="text"
-          mt={8}
-          borderTop="1px solid"
-          borderColor="border"
-          paddingTop={6}
-        >
+        <Box color="text" mt="8" borderTop="1px" borderColor="border" pt="6">
           {children}
         </Box>
       </Collapse>

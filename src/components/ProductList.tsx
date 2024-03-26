@@ -1,34 +1,32 @@
-import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
 import {
   Box,
   Flex,
-  Image,
   List,
   ListItem,
   useColorModeValue,
   VisuallyHidden,
 } from "@chakra-ui/react"
 
-import ButtonLink from "./ButtonLink"
-import Translation from "./Translation"
-import OldHeading from "./OldHeading"
+import { ButtonLink } from "@/components/Buttons"
+import { Image, type ImageProps } from "@/components/Image"
+import OldHeading from "@/components/OldHeading"
 
-export interface Content {
+type Content = {
   title: string
   description: string
   link?: string
-  image?: any
+  image?: ImageProps["src"]
   alt: string
   id?: string
 }
 
-export interface IProps {
-  content: Array<Content>
+export type ProductListProps = {
+  content: Content[]
   category: string
+  actionLabel: string
 }
 
-const ProductList: React.FC<IProps> = ({ content, category }) => {
+const ProductList = ({ actionLabel, content, category }: ProductListProps) => {
   const shadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
   const CATEGORY_NAME = "category-name"
@@ -65,9 +63,9 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
             <Box width="5rem">
               {image && (
                 <Image
-                  as={GatsbyImage}
-                  image={image}
+                  src={image}
                   alt={alt}
+                  width={66}
                   boxShadow={shadow}
                   borderRadius="sm"
                 />
@@ -78,7 +76,7 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
               flexDir={{ base: "column", sm: "row" }}
               paddingBottom={4}
               width="full"
-              marginLeft={{ base: 4, sm: 6 }}
+              ms={{ base: 4, sm: 6 }}
               borderBottom="1px solid"
               borderColor="border"
             >
@@ -91,15 +89,15 @@ const ProductList: React.FC<IProps> = ({ content, category }) => {
               {link && (
                 <ButtonLink
                   variant="outline"
-                  to={link}
+                  href={link}
                   alignSelf="center"
-                  marginLeft={{ base: 0, sm: 8 }}
+                  ms={{ base: 0, sm: 8 }}
                   paddingY={1}
                   paddingX={6}
                   borderRadius="sm"
                   marginTop={{ base: 4, sm: 0 }}
                 >
-                  <Translation id="page-dapps-ready-button" />
+                  {actionLabel}
                   <VisuallyHidden>to {title} website</VisuallyHidden>
                 </ButtonLink>
               )}

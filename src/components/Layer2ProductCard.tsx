@@ -1,19 +1,18 @@
 // Libraries
-import React from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Box, Center, Flex, Heading, Image } from "@chakra-ui/react"
+import { StaticImageData } from "next/image"
+import { useTranslation } from "next-i18next"
+import { Box, Center, Flex, Heading } from "@chakra-ui/react"
 
-// Components
-import ButtonLink from "./ButtonLink"
-import InlineLink from "./Link"
-import Text from "./OldText"
+import { ButtonLink } from "@/components/Buttons"
+import { Image } from "@/components/Image"
+import InlineLink from "@/components/Link"
+import Text from "@/components/OldText"
 
-export interface IProps {
+export type Layer2ProductCardProps = {
   children?: React.ReactNode
   url?: string
   background: string
-  image: IGatsbyImageData
+  image: StaticImageData
   name: string
   description: string
   note?: string
@@ -23,7 +22,7 @@ export interface IProps {
   ecosystemPortal?: string
 }
 
-const Layer2ProductCard: React.FC<IProps> = ({
+const Layer2ProductCard = ({
   url,
   background,
   image,
@@ -35,8 +34,8 @@ const Layer2ProductCard: React.FC<IProps> = ({
   bridge,
   tokenLists,
   ecosystemPortal,
-}) => {
-  const { t } = useTranslation()
+}: Layer2ProductCardProps) => {
+  const { t } = useTranslation("page-layer-2")
 
   return (
     <Flex
@@ -57,13 +56,11 @@ const Layer2ProductCard: React.FC<IProps> = ({
         minH="200px"
       >
         <Image
-          as={GatsbyImage}
-          image={image}
+          src={image}
           alt={alt}
-          objectFit="contain"
-          alignSelf="center"
-          maxW={{ base: "311px", sm: "372px" }}
+          width={100}
           maxH={"257px"}
+          style={{ objectFit: "contain" }}
         />
       </Center>
       <Flex p={6} h="100%" direction="column">
@@ -76,27 +73,27 @@ const Layer2ProductCard: React.FC<IProps> = ({
               {children}
             </Box>
           )}
-          <Text opacity="0.8" fontSize="sm" mb={2} lineHeight="140%">
+          <Text fontSize="sm" mb={2} lineHeight="140%">
             {description}
           </Text>
           {note.length > 0 && (
-            <Text opacity="0.8" fontSize="sm" mb={2} lineHeight="140%">
+            <Text fontSize="sm" mb={2} lineHeight="140%">
               {t("layer-2-note")} {note}
             </Text>
           )}
         </Box>
         {bridge && (
-          <InlineLink to={bridge}>
+          <InlineLink href={bridge}>
             {name} {t("layer-2-bridge")}
           </InlineLink>
         )}
         {ecosystemPortal && (
-          <InlineLink to={ecosystemPortal}>
+          <InlineLink href={ecosystemPortal}>
             {name} {t("layer-2-ecosystem-portal")}
           </InlineLink>
         )}
         {tokenLists && (
-          <InlineLink to={tokenLists}>
+          <InlineLink href={tokenLists}>
             {name} {t("layer-2-token-lists")}
           </InlineLink>
         )}

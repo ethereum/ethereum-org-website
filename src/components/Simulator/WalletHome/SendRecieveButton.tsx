@@ -1,17 +1,18 @@
+import React from "react"
 import {
   type As,
+  Box,
   Grid,
   Icon,
   Text,
   type TextProps,
-  Box,
 } from "@chakra-ui/react"
-import React from "react"
+
+import { Button } from "../../Buttons"
 import { ClickAnimation } from "../ClickAnimation"
 import { PulseAnimation } from "../PulseAnimation"
-import Button from "../../Button"
 
-interface SendReceiveButtonProps extends Pick<TextProps, "children"> {
+type SendReceiveButtonProps = Pick<TextProps, "children"> & {
   icon: As
   isHighlighted: boolean
   isDisabled: boolean
@@ -19,14 +20,14 @@ interface SendReceiveButtonProps extends Pick<TextProps, "children"> {
   isAnimated?: boolean
 }
 
-export const SendReceiveButton: React.FC<SendReceiveButtonProps> = ({
+export const SendReceiveButton = ({
   children,
   icon,
   isHighlighted,
   isDisabled,
   onClick,
   isAnimated,
-}) => (
+}: SendReceiveButtonProps) => (
   <Button
     variant="ghost"
     display="flex"

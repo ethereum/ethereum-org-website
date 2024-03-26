@@ -1,26 +1,43 @@
-import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
-import React, { useMemo, useState } from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+import React, { useEffect, useMemo, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import {
-  RiPriceTag2Line,
   RiAuctionLine,
   RiFileTransferLine,
+  RiPriceTag2Line,
 } from "react-icons/ri"
-import { AnimatePresence, motion } from "framer-motion"
-import { Slider } from "./Slider"
-import { Web3App } from "./Web3App"
+import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
+
+import type { PhoneScreenProps } from "@/lib/types"
+
+import { Image } from "@/components/Image"
+
+import { useEthPrice } from "../../../../hooks/useEthPrice"
+import {
+  BASE_ANIMATION_DELAY_SEC,
+  defaultTokenBalances,
+  FALLBACK_ETH_PRICE,
+  USD_RECEIVE_AMOUNT,
+} from "../../constants"
+import { NotificationPopover } from "../../NotificationPopover"
 import { ProgressCta } from "../../ProgressCta"
 import { WalletHome } from "../../WalletHome"
-import type { PhoneScreenProps } from "../../interfaces"
 import type { TokenBalance } from "../../WalletHome/interfaces"
-import { defaultTokenBalances } from "../../constants"
-import { useEthPrice } from "../../../../hooks/useEthPrice"
-import { useNFT } from "../../WalletHome/hooks/useNFT"
-import { FALLBACK_ETH_PRICE, USD_RECEIVE_AMOUNT } from "../../constants"
 
-export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
+import { Browser } from "./Browser"
+import { EXAMPLE_APP_URL } from "./constants"
+import { Slider } from "./Slider"
+import { Web3App } from "./Web3App"
+
+import NFTImage from "@/public/deep-panic.png"
+
+export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
   const { progressStepper, step } = nav
-  const NFTs = useNFT()
+  const NFTs = [
+    {
+      title: "Cool art",
+      image: NFTImage,
+    },
+  ]
   const fetchedPrice = useEthPrice()
   const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE
   const tokensWithEthBalance = useMemo<Array<TokenBalance>>(
@@ -37,15 +54,32 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
     [ethPrice]
   )
   const [activeTabIndex, setActiveTabIndex] = useState(1)
-  const nfts = useNFT()
+  const nfts = [
+    {
+      title: "Cool art",
+      image: NFTImage,
+    },
+  ]
   const fadeInProps = {
     initial: { opacity: 0 },
     animate: { opacity: 1 },
   }
+
+  // Enable ProgressCta button after short delay for first step
+  const [ctaDisabled, setCtaDisabled] = useState(step === 0)
+  useEffect(() => {
+    if (step !== 0) return
+    const timeout = setTimeout(() => {
+      setCtaDisabled(false)
+    }, BASE_ANIMATION_DELAY_SEC * 1000)
+    return () => clearTimeout(timeout)
+  }, [step])
+
   return (
     <>
-      {[0, 1, 2].includes(step) && (
-        <Web3App>
+      {[0].includes(step) && <Browser progressStepper={progressStepper} />}
+      {[1, 2, 3].includes(step) && (
+        <Web3App displayUrl={EXAMPLE_APP_URL}>
           <Flex
             px={6}
             py={{ base: 8, md: 16 }}
@@ -80,68 +114,108 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
         </Web3App>
       )}
       <AnimatePresence>
-        {[1, 2].includes(step) && <Slider isConnected={step === 2} />}
+        {[2, 3].includes(step) && (
+          <Slider isConnected={step === 3} displayUrl={EXAMPLE_APP_URL}>
+            Connecting to the website will not share any personal or secure
+            information with the site owners.
+          </Slider>
+        )}
       </AnimatePresence>
-      {[3].includes(step) && (
+      {[4].includes(step) && (
         <motion.div
           {...fadeInProps}
           exit={{ opacity: 0 }}
           style={{ height: "100%" }}
         >
-          <Web3App bg="background.base">
-            <Box px={6} py={{ base: 2, md: 6 }} fontSize="lg">
+          <Web3App
+            bg="background.base"
+            appName="NFT Marketplace"
+            displayUrl="app.example.com"
+          >
+            <Box
+              px={6}
+              py={{ base: 2, md: 6 }}
+              fontSize="lg"
+              sx={{ button: { textDecoration: "none" } }}
+            >
               <Text fontWeight="bold" mb={4}>
-                Your collection
+                Your collection (1)
               </Text>
               <Flex gap={2} mb={6}>
-                <GatsbyImage image={NFTs[0].image} alt="NFT Image" />
-                <Flex
-                  direction="column"
-                  fontSize={{ base: "xs", sm: "sm" }}
-                  textAlign="start"
-                  alignItems="start"
-                  gap={1}
-                  sx={{ button: { textDecoration: "none" } }}
+                <Image
+                  src={NFTs[0].image}
+                  width={120}
+                  height={120}
+                  alt="NFT Image"
+                />
+                <NotificationPopover
+                  title="Example walkthrough"
+                  content="These are some things you could do as the owner of your NFTs"
+                  placement="top"
                 >
-                  <Text fontWeight="bold" fontSize="md" mb="auto" ms={2}>
-                    Cool art
-                  </Text>
-                  <Button
-                    variant="link"
-                    isDisabled
-                    leftIcon={<Icon as={RiAuctionLine} fontSize="xs" />}
+                  <Flex
+                    direction="column"
+                    fontSize={{ base: "xs", sm: "sm" }}
+                    textAlign="start"
+                    alignItems="start"
+                    gap={1}
                   >
-                    Set a price
-                  </Button>
-                  <Button
-                    variant="link"
-                    isDisabled
-                    leftIcon={<Icon as={RiPriceTag2Line} fontSize="xs" />}
-                  >
-                    Auction item
-                  </Button>
-                  <Button
-                    variant="link"
-                    isDisabled
-                    leftIcon={<Icon as={RiFileTransferLine} fontSize="xs" />}
-                  >
-                    Transfer item
-                  </Button>
-                </Flex>
+                    <Text fontWeight="bold" fontSize="md" mb="auto" ms={2}>
+                      Cool art
+                    </Text>
+                    <Button
+                      variant="link"
+                      isDisabled
+                      leftIcon={<Icon as={RiAuctionLine} fontSize="xs" />}
+                    >
+                      Set a price
+                    </Button>
+                    <Button
+                      variant="link"
+                      isDisabled
+                      leftIcon={<Icon as={RiPriceTag2Line} fontSize="xs" />}
+                    >
+                      Auction item
+                    </Button>
+                    <Button
+                      variant="link"
+                      isDisabled
+                      leftIcon={<Icon as={RiFileTransferLine} fontSize="xs" />}
+                    >
+                      Transfer item
+                    </Button>
+                  </Flex>
+                </NotificationPopover>
               </Flex>
-              <Button variant="outline" w="full" isDisabled>
-                Browser other artwork
-              </Button>
+              <NotificationPopover
+                title="Example walkthrough"
+                content="Try out a real Ethereum application when finished here"
+                placement="top"
+              >
+                <Box fontSize={{ base: "sm", md: "md" }}>
+                  <Button variant="link" isDisabled display="block">
+                    Browse other artwork
+                  </Button>
+                  <Button variant="link" isDisabled>
+                    Mint new NFT
+                  </Button>
+                </Box>
+              </NotificationPopover>
             </Box>
           </Web3App>
         </motion.div>
       )}
-      {[0, 1, 2, 3].includes(step) && (
-        <ProgressCta isAnimated={step === 0} progressStepper={progressStepper}>
+      {[0, 1, 2, 3, 4].includes(step) && (
+        <ProgressCta
+          isAnimated={step === 0}
+          isDisabled={ctaDisabled}
+          progressStepper={progressStepper}
+          mb={step === 0 ? 16 : 0}
+        >
           {ctaLabel}
         </ProgressCta>
       )}
-      {[4].includes(step) && (
+      {[5].includes(step) && (
         <motion.div
           key="final-wallet-display"
           {...fadeInProps}

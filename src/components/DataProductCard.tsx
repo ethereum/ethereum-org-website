@@ -1,43 +1,45 @@
 import React from "react"
-
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
+import { StaticImageData } from "next/image"
 import {
   Box,
   Flex,
   Heading,
-  Image,
-  LinkOverlay,
   LinkBox,
+  LinkOverlay,
   useColorModeValue,
 } from "@chakra-ui/react"
+
+import { Image } from "@/components/Image"
 
 import Text from "./OldText"
 
 export interface DataRow {
-  logo: IGatsbyImageData
+  logo: StaticImageData
   coin: string
   apy: string
 }
 
-export interface IProps {
+export type DataProductCardProps = {
   url: string
   background: string
-  image: IGatsbyImageData
+  image: StaticImageData
+  imgWidth: string
   alt?: string
   name: string
   description?: string
   data?: Array<DataRow>
 }
 
-const DataProductCard: React.FC<IProps> = ({
+const DataProductCard = ({
   url,
   background,
   image,
+  imgWidth,
   alt,
   name,
   description,
   data,
-}) => {
+}: DataProductCardProps) => {
   const boxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
 
   return (
@@ -66,18 +68,17 @@ const DataProductCard: React.FC<IProps> = ({
         bg={background}
       >
         <Image
-          as={GatsbyImage}
-          image={image}
+          src={image}
           objectFit="cover"
           alt={alt ? alt : `${name} logo`}
-          width="100%"
+          w={imgWidth}
           alignSelf="center"
           maxWidth={{ base: "311px", sm: "372px" }}
           maxHeight="257px"
         />
       </Flex>
       <Flex
-        textAlign="left"
+        textAlign="start"
         flexDirection="column"
         justifyContent="space-between"
       >
@@ -96,7 +97,7 @@ const DataProductCard: React.FC<IProps> = ({
               {name}
             </LinkOverlay>
           </Heading>
-          <Text fontSize="sm" opacity="0.8" mx={4} mb={4} lineHeight="140%">
+          <Text fontSize="sm" mx={4} mb={4} lineHeight="140%">
             {description}
           </Text>
         </Box>
@@ -118,18 +119,17 @@ const DataProductCard: React.FC<IProps> = ({
                 textTransform="uppercase"
                 border="1px solid"
                 borderColor="lightBorder"
-                borderLeft="0"
-                borderRight="0"
+                borderInlineStart="0"
+                borderInlineEnd="0"
               >
                 <Flex alignItems="center">
                   {logo && (
                     <Image
-                      as={GatsbyImage}
-                      image={logo}
+                      src={logo}
                       objectFit="cover"
                       alt=""
                       minWidth="24px"
-                      marginRight="0.5rem"
+                      me={2}
                     />
                   )}
                   {coin}

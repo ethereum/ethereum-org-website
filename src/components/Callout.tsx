@@ -1,19 +1,16 @@
-// Libraries
-import React from "react"
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { Flex, FlexProps, Image } from "@chakra-ui/react"
+import { useTranslation } from "next-i18next"
+import { Center, Flex, type FlexProps } from "@chakra-ui/react"
 
-// Components
-import Translation from "./Translation"
-import Emoji from "./Emoji"
-import Text from "./OldText"
-import OldHeading from "./OldHeading"
+import type { TranslationKey } from "@/lib/types"
 
-import type { TranslationKey } from "../utils/translations"
+import Emoji from "@/components/Emoji"
+import { Image, type ImageProps } from "@/components/Image"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
 
-export interface IProps extends FlexProps {
+export type CalloutProps = FlexProps & {
   children?: React.ReactNode
-  image?: IGatsbyImageData
+  image?: ImageProps["src"]
   emoji?: string
   alt?: string
   titleKey: TranslationKey
@@ -21,7 +18,7 @@ export interface IProps extends FlexProps {
   className?: string
 }
 
-const Callout: React.FC<IProps> = ({
+const Callout = ({
   image,
   emoji,
   alt,
@@ -30,48 +27,46 @@ const Callout: React.FC<IProps> = ({
   children,
   className,
   ...rest
-}) => (
-  <Flex
-    as="aside"
-    direction="column"
-    bgGradient="linear-gradient(
+}: CalloutProps) => {
+  const { t } = useTranslation("common")
+
+  return (
+    <Flex
+      as="aside"
+      direction="column"
+      bgGradient="linear-gradient(
     49.21deg,
     rgba(127, 127, 213, 0.2) 19.87%,
     rgba(134, 168, 231, 0.2) 58.46%,
     rgba(145, 234, 228, 0.2) 97.05%
   )"
-    p={6}
-    m={4}
-    mt={32}
-    mb={{ base: 16, lg: 4 }}
-    borderRadius="base"
-    className={className}
-    {...rest}
-  >
-    {image && (
-      <Image
-        as={GatsbyImage}
-        image={image}
-        alt={alt || ""}
-        mt={-40}
-        alignSelf="center"
-        maxW="263px"
-        minH="200px"
-      />
-    )}
-    <Flex direction="column" justify="space-between" mt={10} h="full">
-      <div>
-        {emoji && <Emoji text={emoji} fontSize="5xl" />}
-        <OldHeading as="h3" fontSize="2xl" lineHeight={1.4}>
-          <Translation id={titleKey} />
-        </OldHeading>
-        <Text color="text200" fontSize="xl" lineHeight="140%">
-          <Translation id={descriptionKey} />
-        </Text>
-      </div>
-      {children}
+      p={6}
+      m={4}
+      mt={32}
+      mb={{ base: 16, lg: 4 }}
+      borderRadius="base"
+      className={className}
+      {...rest}
+    >
+      {image && (
+        <Center maxW="263px" minH="200px" mt={-40} alignSelf="center">
+          <Image src={image} alt={alt || ""} height={200} />
+        </Center>
+      )}
+      <Flex direction="column" justify="space-between" mt={10} h="full">
+        <div>
+          {emoji && <Emoji text={emoji} fontSize="5xl" />}
+          <OldHeading as="h3" fontSize="2xl" lineHeight={1.4}>
+            {t(titleKey)}
+          </OldHeading>
+          <Text color="text200" fontSize="xl" lineHeight="140%">
+            {t(descriptionKey)}
+          </Text>
+        </div>
+        {children}
+      </Flex>
     </Flex>
-  </Flex>
-)
+  )
+}
 
 export default Callout

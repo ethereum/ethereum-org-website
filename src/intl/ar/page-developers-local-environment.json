@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "إطار عمل للتطوير والاختبار قائم على Python للعقود الذكية التي تستهدف جهاز إثيريوم الظاهري.",
   "page-local-environment-brownie-logo-alt": "شعار Brownie",
+  "page-local-environment-kurtosis-desc": "مجموعة أدوات قائمة على الحاوية لسهولة تكوين شبكة تجريب اثيريوم متعددة العملاء وتثبيتها لتطوير التطبيقات اللامركزية المحلية ونمذجتها الأولية وتجربتها.",
+  "page-local-environment-kurtosis-logo-alt": "شعار Kurtosis",
   "page-local-environment-epirus-desc": "منصة لتطوير تطبيقات سلسلة الكتل ونشرها ومراقبتها على جهاز جافا الظاهري.",
   "page-local-environment-epirus-logo-alt": "شعار\tEpirus",
   "page-local-environment-eth-app-desc": "إنشاء تطبيقات تعمل بتشغيل إثيريوم بأمر واحد. يأتي مع عرض واسع لأطر واجهة المستخدم وقوالب DeFi للاختيار منها.",

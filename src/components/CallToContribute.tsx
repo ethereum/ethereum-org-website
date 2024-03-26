@@ -1,20 +1,17 @@
-import { Flex, FlexProps, Icon, useToken } from "@chakra-ui/react"
-import { FaGithub } from "react-icons/fa"
 import React, { ReactNode } from "react"
+import { FaGithub } from "react-icons/fa"
+import { Flex, FlexProps, Icon, useToken } from "@chakra-ui/react"
 
+import { ChildOnlyProp } from "@/lib/types"
+
+import { ButtonLink } from "./Buttons"
 import InlineLink from "./Link"
-import ButtonLink from "./ButtonLink"
-import Text from "./OldText"
 import OldHeading from "./OldHeading"
-
+import Text from "./OldText"
 import Translation from "./Translation"
 
-export interface IProps {
+export type CallToContributeProps = {
   editPath: string
-}
-
-export type ChildOnlyType = {
-  children: ReactNode
 }
 
 const ContentColumn = (props: {
@@ -28,18 +25,18 @@ const ContentColumn = (props: {
     flexBasis="50%"
     p={4}
     color="text"
-    textAlign={{ base: "center", lg: "left" }}
+    textAlign={{ base: "center", lg: "start" }}
     {...props}
   />
 )
 
-const DescriptionParagraph = ({ children }: ChildOnlyType) => (
+const DescriptionParagraph = ({ children }: ChildOnlyProp) => (
   <Text lineHeight="140%" color="text" fontFamily="monospace">
     {children}
   </Text>
 )
 
-const CallToContribute: React.FC<IProps> = ({ editPath }) => {
+const CallToContribute = ({ editPath }: CallToContributeProps) => {
   /**
    * TODO: After completion of the UI migration,
    * Remove this and pass the token value directly
@@ -80,24 +77,24 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
           fontSize="2rem"
           lineHeight={1.4}
         >
-          <Translation id="page-calltocontribute-title" />
+          <Translation id="page-developers-docs:page-calltocontribute-title" />
         </OldHeading>
         <DescriptionParagraph>
-          <Translation id="page-calltocontribute-desc-1" />
+          <Translation id="page-developers-docs:page-calltocontribute-desc-1" />
         </DescriptionParagraph>
         <DescriptionParagraph>
-          <Translation id="page-calltocontribute-desc-2" />
+          <Translation id="page-developers-docs:page-calltocontribute-desc-2" />
         </DescriptionParagraph>
         <DescriptionParagraph>
-          <Translation id="page-calltocontribute-desc-3" />{" "}
+          <Translation id="page-developers-docs:page-calltocontribute-desc-3" />{" "}
           <InlineLink to="https://www.notion.so/efdn/Writer-template-4b40d196cde7422ca6a2091de33550bd">
-            <Translation id="page-calltocontribute-link" />
+            <Translation id="page-developers-docs:page-calltocontribute-link" />
           </InlineLink>
         </DescriptionParagraph>
         <DescriptionParagraph>
-          <Translation id="page-calltocontribute-desc-4" />{" "}
-          <InlineLink to="https://discord.gg/CetY6Y4">
-            <Translation id="page-calltocontribute-link-2" />
+          <Translation id="page-developers-docs:page-calltocontribute-desc-4" />{" "}
+          <InlineLink to="https://discord.gg/ethereum-org">
+            <Translation id="page-developers-docs:page-calltocontribute-link-2" />
           </InlineLink>{" "}
         </DescriptionParagraph>
         <ButtonLink
@@ -112,7 +109,7 @@ const CallToContribute: React.FC<IProps> = ({ editPath }) => {
             />
           }
         >
-          <Translation id="page-calltocontribute-span" />
+          <Translation id="page-developers-docs:page-calltocontribute-span" />
         </ButtonLink>
       </ContentColumn>
     </Flex>

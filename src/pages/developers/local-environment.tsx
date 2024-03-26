@@ -1,32 +1,37 @@
-import React, { useEffect, useState } from "react"
+import { GetStaticProps, InferGetStaticPropsType } from "next"
+import { useTranslation } from "next-i18next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
   Flex,
-  Heading,
-  Img,
   ListItem,
   SimpleGrid,
   UnorderedList,
 } from "@chakra-ui/react"
 
-import { GatsbyImage, IGatsbyImageData } from "gatsby-plugin-image"
-import { graphql, PageProps } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { shuffle } from "lodash"
+import { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import { Framework } from "@/lib/interfaces"
 
-import Translation from "../../components/Translation"
-import PageMetadata from "../../components/PageMetadata"
-import ProductCard from "../../components/ProductCard"
-import FeedbackCard from "../../components/FeedbackCard"
-import Text from "../../components/OldText"
+import FeedbackCard from "@/components/FeedbackCard"
+import { Image } from "@/components/Image"
+import MainArticle from "@/components/MainArticle"
+import Heading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+import PageMetadata from "@/components/PageMetadata"
+import ProductCard from "@/components/ProductCard"
+import Translation from "@/components/Translation"
 
-import { getImage } from "../../utils/image"
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
-import { ChildOnlyProp, Context } from "../../types"
+import { getLocalEnvironmentFrameworkData } from "@/lib/api/ghRepoData"
+import EthBlocksImage from "@/public/developers-eth-blocks.png"
 
 const Content = ({ children }: ChildOnlyProp) => {
   return (
-    <Box py={4} px={8} w="full">
+    <Box as={MainArticle} py={4} px={8} w="full">
       {children}
     </Box>
   )
@@ -38,7 +43,7 @@ const Column = ({ children }: ChildOnlyProp) => {
       flex="1 0 33%"
       justifyContent="flex-end"
       mb={6}
-      mr={8}
+      me={8}
       w="full"
       maxW={{ base: "full", md: "none" }}
     >
@@ -47,126 +52,39 @@ const Column = ({ children }: ChildOnlyProp) => {
   )
 }
 
-interface IFramework {
-  id: string
-  url: string
-  githubUrl: string
-  background: string
-  name: string
-  description: string
-  alt: string
-  image?: IGatsbyImageData
+type Props = BasePageProps & {
+  frameworksList: Framework[]
 }
 
-const ChooseStackPage = ({
-  data,
-}: PageProps<Queries.DevelopersLocalEnvironmentPageQuery, Context>) => {
-  const { t } = useTranslation()
-  const [frameworks, setFrameworks] = useState<Array<IFramework>>([])
+const cachedFetchLocalEnvironmentFrameworkData = runOnlyOnce(
+  getLocalEnvironmentFrameworkData
+)
 
-  const frameworksList: Array<IFramework> = [
-    {
-      id: "waffle",
-      url: "https://getwaffle.io/",
-      githubUrl: "https://github.com/EthWorks/waffle",
-      background: "#ffffff",
-      name: "Waffle",
-      description: t("page-local-environment-waffle-desc"),
-      alt: t("page-local-environment-waffle-logo-alt"),
-    },
-    {
-      id: "kurtosis",
-      url: "https://www.kurtosis.com/",
-      githubUrl: "https://github.com/kurtosis-tech/kurtosis",
-      background: "#000000",
-      name: "Kurtosis",
-      description: t("page-local-environment-kurtosis-desc"),
-      alt: t("page-local-environment-kurtosis-logo-alt"),
-    },
-    {
-      id: "hardhat",
-      url: "https://hardhat.org/",
-      githubUrl: "https://github.com/nomiclabs/hardhat",
-      background: "#faf8fb",
-      name: "Hardhat",
-      description: t("page-local-environment-hardhat-desc"),
-      alt: t("page-local-environment-hardhat-logo-alt"),
-    },
-    {
-      id: "truffle",
-      url: "https://www.trufflesuite.com/",
-      githubUrl: "https://github.com/trufflesuite/truffle",
-      background: "#31272a",
-      name: "Truffle",
-      description: t("page-local-environment-truffle-desc"),
-      alt: t("page-local-environment-truffle-logo-alt"),
-    },
-    {
-      id: "brownie",
-      url: "https://github.com/eth-brownie/brownie",
-      githubUrl: "https://github.com/eth-brownie/brownie",
-      background: "#ffffff",
-      name: "Brownie",
-      description: t("page-local-environment-brownie-desc"),
-      alt: t("page-local-environment-brownie-logo-alt"),
-    },
-    {
-      id: "epirus",
-      url: "https://www.web3labs.com/epirus",
-      githubUrl: "https://github.com/web3labs/epirus-free",
-      background: "#ffffff",
-      name: "Epirus",
-      description: t("page-local-environment-epirus-desc"),
-      alt: t("page-local-environment-epirus-logo-alt"),
-    },
-    {
-      id: "createethapp",
-      url: "https://github.com/PaulRBerg/create-eth-app",
-      githubUrl: "https://github.com/PaulRBerg/create-eth-app",
-      background: "#ffffff",
-      name: "Create Eth App",
-      description: t("page-local-environment-eth-app-desc"),
-      alt: t("page-local-environment-eth-app-logo-alt"),
-    },
-    {
-      id: "scaffoldeth",
-      url: "https://github.com/austintgriffith/scaffold-eth",
-      githubUrl: "https://github.com/austintgriffith/scaffold-eth",
-      background: "#ffffff",
-      name: "scaffold-eth",
-      description: t("page-local-environment-scaffold-eth-desc"),
-      alt: t("page-local-environment-scaffold-eth-logo-alt"),
-    },
-    {
-      id: "soliditytemplate",
-      url: "https://github.com/paulrberg/solidity-template",
-      githubUrl: "https://github.com/paulrberg/solidity-template",
-      background: "#ffffff",
-      name: "Solidity template",
-      description: t("page-local-environment-solidity-template-desc"),
-      alt: t("page-local-environment-solidity-template-logo-alt"),
-    },
-    {
-      id: "foundry",
-      url: "https://getfoundry.sh/",
-      githubUrl: "https://github.com/foundry-rs/foundry",
-      background: "#ffffff",
-      name: "Foundry",
-      description: t("page-local-environment-foundry-desc"),
-      alt: t("page-local-environment-foundry-logo-alt"),
-    },
-  ]
+export const getStaticProps = (async ({ locale }) => {
+  const requiredNamespaces = getRequiredNamespacesForPage(
+    "/developers/local-environment"
+  )
 
-  useEffect(() => {
-    const list = shuffle(
-      frameworksList.map((item) => {
-        if (item.image) return item
-        item.image = getImage(data[item.id])
-        return item
-      })
-    )
-    setFrameworks(list)
-  }, [data])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
+
+  const frameworksListData = await cachedFetchLocalEnvironmentFrameworkData()
+
+  const lastDeployDate = getLastDeployDate()
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      frameworksList: frameworksListData,
+      lastDeployDate,
+    },
+  }
+}) satisfies GetStaticProps<Props>
+
+const LocalEnvironmentPage = ({
+  frameworksList,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { t } = useTranslation("page-developers-local-environment")
 
   return (
     <Flex direction="column" alignItems="center" w="full" mx="auto" mt={16}>
@@ -194,7 +112,7 @@ const ChooseStackPage = ({
           mt={0}
           mb="1.625rem"
         >
-          <Translation id="page-local-environment-setup-title" />
+          <Translation id="page-developers-local-environment:page-local-environment-setup-title" />
         </Heading>
         <Text
           fontSize="xl"
@@ -203,9 +121,9 @@ const ChooseStackPage = ({
           mb={2}
           textAlign="center"
         >
-          <Translation id="page-local-environment-setup-subtitle" />
+          <Translation id="page-developers-local-environment:page-local-environment-setup-subtitle" />
           <br />
-          <Translation id="page-local-environment-setup-subtitle-2" />
+          <Translation id="page-developers-local-environment:page-local-environment-setup-subtitle-2" />
         </Text>
       </Box>
       <Content>
@@ -222,58 +140,57 @@ const ChooseStackPage = ({
               mt={0}
               mb="1.625rem"
             >
-              <Translation id="page-local-environment-frameworks-title" />
+              <Translation id="page-developers-local-environment:page-local-environment-frameworks-title" />
             </Heading>
             <Text>
-              <Translation id="page-local-environment-frameworks-desc" />
+              <Translation id="page-developers-local-environment:page-local-environment-frameworks-desc" />
             </Text>
             <Text>
-              <Translation id="page-local-environment-framework-features" />
+              <Translation id="page-developers-local-environment:page-local-environment-framework-features" />
             </Text>
             <UnorderedList>
               <ListItem>
-                <Translation id="page-local-environment-framework-feature-1" />
+                <Translation id="page-developers-local-environment:page-local-environment-framework-feature-1" />
               </ListItem>
               <ListItem>
-                <Translation id="page-local-environment-framework-feature-2" />
+                <Translation id="page-developers-local-environment:page-local-environment-framework-feature-2" />
               </ListItem>
               <ListItem>
-                <Translation id="page-local-environment-framework-feature-3" />
+                <Translation id="page-developers-local-environment:page-local-environment-framework-feature-3" />
               </ListItem>
               <ListItem>
-                <Translation id="page-local-environment-framework-feature-4" />
+                <Translation id="page-developers-local-environment:page-local-environment-framework-feature-4" />
               </ListItem>
               <ListItem>
-                <Translation id="page-local-environment-framework-feature-5" />
+                <Translation id="page-developers-local-environment:page-local-environment-framework-feature-5" />
               </ListItem>
             </UnorderedList>
           </Column>
           <Column>
-            <Img
-              as={GatsbyImage}
+            <Image
               flex="1 1 100%"
-              maxW="50rem"
               backgroundSize="cover"
               backgroundRepeat="no-repeat"
-              image={getImage(data.hero)!}
-              alt={t("alt-eth-blocks")}
+              src={EthBlocksImage}
+              alt={t("page-developers-index:alt-eth-blocks")}
               loading="eager"
             />
           </Column>
         </Flex>
         <SimpleGrid minChildWidth="min(100%, 280px)" spacing={8}>
-          {frameworks.map((framework, idx) => (
+          {frameworksList.map((framework, idx) => (
             <ProductCard
               key={idx}
               url={framework.url}
               background={framework.background}
               image={framework.image!}
               name={framework.name}
+              alt={t(framework.alt)}
               githubUrl={framework.githubUrl}
-              repoLangCount={2}
-              alt={framework.alt}
+              githubRepoStars={framework.starCount}
+              githubRepoLanguages={framework.languages}
             >
-              {framework.description}
+              {t(framework.description)}
             </ProductCard>
           ))}
         </SimpleGrid>
@@ -284,116 +201,5 @@ const ChooseStackPage = ({
     </Flex>
   )
 }
-export default ChooseStackPage
 
-export const devtoolImage = graphql`
-  fragment devtoolImage on File {
-    childImageSharp {
-      gatsbyImageData(
-        height: 100
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
-    }
-  }
-`
-
-export const query = graphql`
-  query DevelopersLocalEnvironmentPage($languagesToFetch: [String!]!) {
-    locales: allLocale(
-      filter: {
-        language: { in: $languagesToFetch }
-        ns: { in: ["page-developers-local-environment", "common"] }
-      }
-    ) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-    hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 700
-          layout: CONSTRAINED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    ogImage: file(relativePath: { eq: "developers-eth-blocks.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 1200
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-    hardhat: file(relativePath: { eq: "dev-tools/hardhat.png" }) {
-      ...devtoolImage
-    }
-    waffle: file(relativePath: { eq: "dev-tools/waffle.png" }) {
-      ...devtoolImage
-    }
-
-    truffle: file(relativePath: { eq: "dev-tools/truffle.png" }) {
-      ...devtoolImage
-    }
-    brownie: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
-      ...devtoolImage
-    }
-    epirus: file(relativePath: { eq: "dev-tools/epirus.png" }) {
-      ...devtoolImage
-    }
-    createethapp: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
-      ...devtoolImage
-    }
-    scaffoldeth: file(relativePath: { eq: "dev-tools/scaffoldeth.png" }) {
-      ...devtoolImage
-    }
-    soliditytemplate: file(
-      relativePath: { eq: "assets/eth-diamond-black.png" }
-    ) {
-      ...devtoolImage
-    }
-    ganache: file(relativePath: { eq: "dev-tools/ganache.png" }) {
-      ...devtoolImage
-    }
-    ethnode: file(relativePath: { eq: "assets/eth-diamond-black.png" }) {
-      ...devtoolImage
-    }
-    solidity: file(relativePath: { eq: "dev-tools/solidity.png" }) {
-      ...devtoolImage
-    }
-    vyper: file(relativePath: { eq: "dev-tools/vyper.png" }) {
-      ...devtoolImage
-    }
-    vscode: file(relativePath: { eq: "dev-tools/Vscode.png" }) {
-      ...devtoolImage
-    }
-    workbench: file(relativePath: { eq: "dev-tools/workbench.png" }) {
-      ...devtoolImage
-    }
-    atom: file(relativePath: { eq: "dev-tools/atom.png" }) {
-      ...devtoolImage
-    }
-    web3js: file(relativePath: { eq: "dev-tools/web3js.png" }) {
-      ...devtoolImage
-    }
-    ethers: file(relativePath: { eq: "dev-tools/ethers.png" }) {
-      ...devtoolImage
-    }
-    foundry: file(relativePath: { eq: "dev-tools/foundry.png" }) {
-      ...devtoolImage
-    }
-    kurtosis: file(relativePath: { eq: "dev-tools/kurtosis.png" }) {
-      ...devtoolImage
-    }
-  }
-`
+export default LocalEnvironmentPage

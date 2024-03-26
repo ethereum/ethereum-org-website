@@ -1,19 +1,18 @@
-import React from "react"
+import { useTranslation } from "next-i18next"
 import { Box, Flex } from "@chakra-ui/react"
-import { useStaticQuery, graphql } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import { getImage, ImageDataLike } from "../utils/image"
+import { ChildOnlyProp } from "@/lib/types"
 
-import CardList from "./CardList"
-import Card from "./Card"
-import ButtonLink from "./ButtonLink"
-import Translation from "./Translation"
-import OldHeading from "./OldHeading"
+import { ButtonLink } from "@/components/Buttons"
+import Card from "@/components/Card"
+import CardList, { type CardListItem } from "@/components/CardList"
+import OldHeading from "@/components/OldHeading"
+import Translation from "@/components/Translation"
 
-import type { CardListItem } from "./CardList"
+import beaconchain from "@/public/upgrades/beaconchainemoji.png"
+import beaconscan from "@/public/upgrades/etherscan.png"
 
-const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+const H3 = ({ children }: ChildOnlyProp) => (
   <OldHeading
     as="h3"
     fontSize="2xl"
@@ -25,50 +24,20 @@ const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   </OldHeading>
 )
 
-export const DataLogo = graphql`
-  fragment DataLogo on File {
-    childImageSharp {
-      gatsbyImageData(
-        width: 24
-        layout: FIXED
-        placeholder: BLURRED
-        quality: 100
-      )
-    }
-  }
-`
+const BeaconChainActions = () => {
+  const { t } = useTranslation(["page-upgrades-index", "page-upgrades"])
 
-const BeaconStaticQuery = graphql`
-  query {
-    beaconscan: file(relativePath: { eq: "upgrades/etherscan.png" }) {
-      ...DataLogo
-    }
-    beaconchain: file(relativePath: { eq: "upgrades/beaconchainemoji.png" }) {
-      ...DataLogo
-    }
-  }
-`
-
-type BeaconQueryTypes = {
-  beaconscan: ImageDataLike | null
-  beaconchain: ImageDataLike | null
-}
-
-const BeaconChainActions: React.FC = () => {
-  const { t } = useTranslation()
-  const data = useStaticQuery<BeaconQueryTypes>(BeaconStaticQuery)
-
-  const datapoints: Array<CardListItem> = [
+  const datapoints: CardListItem[] = [
     {
       title: t("consensus-beaconscan-title"),
-      image: getImage(data.beaconscan)!,
+      image: beaconscan,
       alt: "",
       link: "https://beaconscan.com",
       description: t("consensus-beaconscan-desc"),
     },
     {
       title: t("consensus-beaconscan-in-title"),
-      image: getImage(data.beaconchain)!,
+      image: beaconchain,
       alt: "",
       link: "https://beaconcha.in",
       description: t("consensus-beaconcha-in-desc"),
@@ -76,7 +45,7 @@ const BeaconChainActions: React.FC = () => {
   ]
 
   //TODO: we should refactor the naming here instead of using authors into the description field
-  const reads: Array<CardListItem> = [
+  const reads: CardListItem[] = [
     {
       title: t("page-upgrade-article-title-two-point-oh"),
       description: t("page-upgrade-article-author-status"),
@@ -99,8 +68,8 @@ const BeaconChainActions: React.FC = () => {
       <Flex flexDir={{ base: "column", md: "row" }} pt={4}>
         <Card
           w="full"
-          ml={0}
-          mr={{ base: 0, md: 4 }}
+          ms={0}
+          me={{ base: 0, md: 4 }}
           mb={{ base: 8, md: 0 }}
           emoji=":money_with_wings:"
           title={t("consensus-become-staker")}
@@ -118,11 +87,11 @@ const BeaconChainActions: React.FC = () => {
         <Translation id="consensus-explore" />
       </H3>
 
-      <CardList content={datapoints} />
+      <CardList items={datapoints} />
       <H3>
         <Translation id="read-more" />
       </H3>
-      <CardList content={reads} />
+      <CardList items={reads} />
     </Box>
   )
 }

@@ -1,0 +1,23 @@
+name: Import community events
+
+on:
+  schedule:
+    - cron: "0 0 * * SUN" # Runs every Sunday at midnight
+  workflow_dispatch:
+
+jobs:
+  create_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: yarn install
+      - run: yarn events-import
+        env:
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_API_KEY }}
+      - uses: EndBug/add-and-commit@v9
+        with:
+          default_author: github_actions
+          message: "Update community events"
