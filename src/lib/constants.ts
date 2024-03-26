@@ -72,9 +72,6 @@ export const RANGES = ["30d", "90d"] as const
 export const BEACONCHA_IN_URL = "https://beaconcha.in/"
 export const ETHERSCAN_API_URL = "https://api.etherscan.io"
 
-export const NAV_BAR_PX_HEIGHT = "75px"
-export const FROM_QUERY = "from"
-
 // Wallets
 export const NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN = 5
 
@@ -130,6 +127,11 @@ export const DEVELOPER_FEATURES = [
  * Navigation
  */
 
+export const MAIN_NAV_ID = "main-navigation"
+export const NAV_BAR_PX_HEIGHT = "75px"
+export const FROM_QUERY = "from"
+export const NAV_PY = 4
+
 // Determines the order of sections in the menu
 export const SECTION_LABELS: NavSectionKey[] = [
   "learn",
@@ -141,5 +143,3 @@ export const SECTION_LABELS: NavSectionKey[] = [
 
 // Glossary Definition Component
 export const DEFAULT_GLOSSARY_NS = "glossary"
-
-export const NAV_PY = 4
