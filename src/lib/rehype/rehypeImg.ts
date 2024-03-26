@@ -15,6 +15,8 @@ import {
 
 import { DEFAULT_LOCALE, PLACEHOLDER_IMAGE_DIR } from "@/lib/constants"
 
+import { toPosixPath } from "../utils/relativePath"
+
 interface Options {
   dir: string
   srcPath: string
@@ -22,15 +24,15 @@ interface Options {
 }
 
 type ImageNode = {
-  type: 'element'
-  tagName: 'img'
+  type: "element"
+  tagName: "img"
   properties: {
     src: string
     height?: number
     width?: number
     aspectRatio?: number
     blurDataURL?: string
-    placeholder?: 'blur' | 'empty'
+    placeholder?: "blur" | "empty"
   }
 }
 
@@ -65,24 +67,31 @@ const getImageSize = (src: string, dir: string) => {
   return sizeOf(src)
 }
 
-
 /**
  * Sets image placeholders for the given array of images.
- * 
+ *
  * @param images - The array of images to set placeholders for.
  * @param srcPath - The source page path for the images.
  * @returns A promise that resolves to void.
  */
-const setImagePlaceholders = async (images: ImageNode[], srcPath: string): Promise<void> => {
+const setImagePlaceholders = async (
+  images: ImageNode[],
+  srcPath: string
+): Promise<void> => {
   // Generate kebab-case filename from srcPath, ie: /content/nft => content-nft-data.json
-  const FILENAME = path.join(srcPath, "data.json").replaceAll("/", "-").slice(1)
+  const FILENAME = toPosixPath(path.join(srcPath, "data.json"))
+    .replaceAll("/", "-")
+    .slice(1)
 
   // Make directory for current page if none exists
-  if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR)) fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
+  if (!fs.existsSync(PLACEHOLDER_IMAGE_DIR))
+    fs.mkdirSync(PLACEHOLDER_IMAGE_DIR, { recursive: true })
 
   const DATA_PATH = path.join(PLACEHOLDER_IMAGE_DIR, FILENAME)
   const existsCache = fs.existsSync(DATA_PATH)
-  const placeholdersCached: PlaceholderData = existsCache ? JSON.parse(fs.readFileSync(DATA_PATH, "utf8")) : {}
+  const placeholdersCached: PlaceholderData = existsCache
+    ? JSON.parse(fs.readFileSync(DATA_PATH, "utf8"))
+    : {}
   let isChanged = false
 
   // Generate placeholder for internal images
@@ -96,13 +105,18 @@ const setImagePlaceholders = async (images: ImageNode[], srcPath: string): Promi
     const buffer: Buffer = fs.readFileSync(path.join("public", src))
 
     // Get hash fingerprint of image data (no security implications; fast algorithm prioritized)
-    const hash = await getHashFromBuffer(buffer, { algorithm: "SHA-1", length: 8 })
+    const hash = await getHashFromBuffer(buffer, {
+      algorithm: "SHA-1",
+      length: 8,
+    })
 
     // Look for cached placeholder data with matching hash
-    const cachedPlaceholder: Placeholder | null = placeholdersCached[src]?.hash === hash ? placeholdersCached[src] : null
+    const cachedPlaceholder: Placeholder | null =
+      placeholdersCached[src]?.hash === hash ? placeholdersCached[src] : null
 
     // Get base64 from cached placeholder if available, else generate new placeholder
-    const { base64 } = cachedPlaceholder || await getPlaiceholder(buffer, { size: 16 })
+    const { base64 } =
+      cachedPlaceholder || (await getPlaiceholder(buffer, { size: 16 }))
 
     // Assign base64 placeholder data to image node `blurDataURL` property
     image.properties.blurDataURL = base64
