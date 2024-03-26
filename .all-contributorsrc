@@ -11588,6 +11588,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "kartojal",
+      "name": "kartojal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11179847?v=4",
+      "profile": "https://catapulta.sh",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
