@@ -6,7 +6,7 @@ lang: en
 
 # Ethereum security and scam prevention {#introduction}
 
-Rising interest in cryptocurrency brings with it growing risk from scammers and hackers. This article lays out some best practices to help mitigate these risks.
+Rising interest in cryptocurrency brings with it growing risk from scammers and hackers. This article lays out some best practices to mitigate these risks.
 
 <Divider />
 
