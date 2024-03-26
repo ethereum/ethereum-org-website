@@ -11578,6 +11578,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "lispking",
+      "name": "King",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4446580?v=4",
+      "profile": "http://lispking.github.io/",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
