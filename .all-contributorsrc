@@ -11541,6 +11541,16 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "emmanuel-awosika",
+      "name": "Emmanuel Awosika",
+      "avatar_url": "https://avatars.githubusercontent.com/u/102589267?v=4",
+      "profile": "https://emmanuelawosika.bio.link/",
+      "contributions": [
+        "content",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,

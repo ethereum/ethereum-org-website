@@ -1774,6 +1774,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/davidzhangg"><img src="https://avatars.githubusercontent.com/u/59639140?v=4?s=100" width="100px;" alt="David Zhang"/><br /><sub><b>David Zhang</b></sub></a><br /><a href="#tool-davidzhangg" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/HemaDeviU"><img src="https://avatars.githubusercontent.com/u/135946602?v=4?s=100" width="100px;" alt="EL"/><br /><sub><b>EL</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AHemaDeviU" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hkey0"><img src="https://avatars.githubusercontent.com/u/81494947?v=4?s=100" width="100px;" alt="hkey"/><br /><sub><b>hkey</b></sub></a><br /><a href="#tool-hkey0" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://emmanuelawosika.bio.link/"><img src="https://avatars.githubusercontent.com/u/102589267?v=4?s=100" width="100px;" alt="Emmanuel Awosika"/><br /><sub><b>Emmanuel Awosika</b></sub></a><br /><a href="#content-emmanuel-awosika" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=emmanuel-awosika" title="Documentation">📖</a></td>
     </tr>
   </tbody>
 </table>
