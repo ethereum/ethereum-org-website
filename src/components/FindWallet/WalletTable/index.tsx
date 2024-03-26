@@ -208,6 +208,7 @@ export type WalletTableProps = {
   resetFilters: () => void
   resetWalletFilter: React.MutableRefObject<() => void>
   walletData: WalletData[]
+  onOpen: () => void
 }
 
 const WalletTable = ({
@@ -215,6 +216,7 @@ const WalletTable = ({
   resetFilters,
   resetWalletFilter,
   walletData,
+  onOpen,
 }: WalletTableProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const { locale } = useRouter()
@@ -233,12 +235,16 @@ const WalletTable = ({
       <WalletContentHeader>
         <Th sx={{ textAlign: "start !important" }}>
           <Flex justifyContent="space-between" px={{ base: 2.5, md: 0 }}>
+            {/* Displayed on mobile only */}
             <Text
               hideFrom="lg"
               lineHeight={1.6}
               fontSize="md"
               color="primary.base"
               textTransform="uppercase"
+              cursor="pointer"
+              onClick={onOpen}
+              as="button"
             >
               {`${t("page-find-wallet-filters")} (${
                 walletsListingCount(filters) +
