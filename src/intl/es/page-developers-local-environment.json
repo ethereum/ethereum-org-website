@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Un marco de desarrollo y pruebas basado en Python para contratos inteligentes dirigidos a la máquina virtual de Ethereum.",
   "page-local-environment-brownie-logo-alt": "Logo de Brownie",
+  "page-local-environment-kurtosis-desc": "Un conjunto de herramientas basado en contenedores para configurar y activar fácilmente un multicliente en la red de pruebas Ethereum y así desarrollar, sacar un prototipo y probar rápidamente su DApp localmente.",
+  "page-local-environment-kurtosis-logo-alt": "Logo de Kurtosis",
   "page-local-environment-epirus-desc": "Una plataforma para desarrollar, implementar y supervisar aplicaciones de cadenas de bloques sobre la máquina virtual de Java.",
   "page-local-environment-epirus-logo-alt": "Logo de Epirus",
   "page-local-environment-eth-app-desc": "Crear aplicaciones equipadas con Ethereum con un comando. Viene con un amplio despliegue de marcos de interfaz de usuario y plantillas DeFi para elegir.",
@@ -13,7 +15,7 @@
   "page-local-environment-framework-feature-4": "Configuración para conectarse a redes Ethereum e implementar contratos, ya sea en una instancia que se ejecuta de forma local o en una red pública de Ethereum.",
   "page-local-environment-framework-feature-5": "Distribución descentralizada de aplicaciones, integraciones con opciones de almacenamiento como IPFS.",
   "page-local-environment-framework-features": "Estos marcos vienen con una gran cantidad de funciones listas para usar, como:",
-  "page-local-environment-frameworks-desc": "Recomendamos elegir un marco, especialmente si está empezando. Construir una dapp completa requiere diferentes tecnologías. Las estructuras incluyen muchas de las características necesarias o proporcionan sistemas de plugins sencillos para que elija las herramientas que quiera.",
+  "page-local-environment-frameworks-desc": "Recomendamos elegir un marco, especialmente si está empezando. Construir una DApp completa requiere diferentes tecnologías. Las estructuras incluyen muchas de las características necesarias o proporcionan sistemas de complementos sencillos para que elija las herramientas que quiera.",
   "page-local-environment-frameworks-title": "Marcos y pilas prediseñadas",
   "page-local-environment-hardhat-desc": "Hardhat es un entorno de desarrollo de Ethereum para profesionales.",
   "page-local-environment-hardhat-logo-alt": "Logo de Hardhat",
@@ -28,7 +30,7 @@
   "page-local-environment-setup-title": "Configure su entorno de desarrollo local",
   "page-local-environment-solidity-template-desc": "Una plantilla de GitHub para una configuración prediseñada para sus contratos inteligentes de Solidity. Incluye una red local de Hardhat, Waffle para pruebas, Ethers para implementación de carteras, y más.",
   "page-local-environment-solidity-template-logo-alt": "Logo de plantilla Solidity",
-  "page-local-environment-truffle-desc": "El entorno de desarrollo Truffle Suite hace que los desarrolladores pasen de la idea a la dapp lo más cómodamente posible.",
+  "page-local-environment-truffle-desc": "El entorno de desarrollo Truffle Suite hace que los desarrolladores pasen de la idea a la DApp lo más cómodamente posible.",
   "page-local-environment-truffle-logo-alt": "Logo de Truffle",
   "page-local-environment-waffle-desc": "La biblioteca de pruebas más avanzada para contratos inteligentes. Úsela sola o con Scaffold-eth o Hardhat.",
   "page-local-environment-waffle-logo-alt": "Logo de Waffle"

@@ -39,7 +39,7 @@
   "page-index-developers-button": "پورتال توسعه دهنده",
   "page-index-developers-code-examples": "نمونه کدها",
   "page-index-developers-code-example-title-0": "بانک خودتان",
-  "page-index-developers-code-example-description-0": "شما می توانید بانکی ایجاد کنید که بر اساس منطقی که برنامه ریزی کرده اید اداره می شود.",
+  "page-index-developers-code-example-description-0": "شما می‌توانید بانکی را با استفاده از منطقی که برنامه‌‌ریزی کرده‌اید، ایجاد کنید.",
   "page-index-developers-code-example-title-1": "واحد پول خودتان",
   "page-index-developers-code-example-description-1": "می توانید توکن هایی ایجاد کنید که قابل انتقال و استفاده در برنامه‌ ها هستند.",
   "page-index-developers-code-example-title-2": "کیف پول اتریوم جاوا اسکریپت",
@@ -75,5 +75,15 @@
   "page-index-nft": "اینترنت دارایی ها",
   "page-index-nft-description": "اتریوم صرفاً برای پول دیجیتال نیست. هرچه را که بتوانید تملک کنید قابلیت عرضه، مبادله و استفاده به عنوان توکن های معاوضه‌ناپذیر (NFT) را خواهد داشت. شما می‌توانید هنر خود را توکنیزه کرده و به ازای هر دفعه که به فروش می‌رود به صورت خودکار حق تالیف دریافت کنید. یا برای دریافت وام از توکنی مربوط به یکی از دارایی های خود استفاده کنید. امکانات مربوطه پیوسته در حال افزایش هستند.",
   "page-index-nft-button": "اطلاعات بیشتر درباره NTF ها",
-  "page-index-nft-alt": "یک لوگوی اتر در حال نمایش از طریق هولوگرام."
+  "page-index-nft-alt": "یک لوگوی اتر در حال نمایش از طریق هولوگرام.",
+  "community-events-content-heading": "به جامعه Ethereum.org ملحق شوید",
+  "community-events-content-1": "به جمع اعضای حدود <strong>چهل هزاری<strong> ما در <a href=\"/discord/\">سرور دیسکورد</a> ملحق شوید.",
+  "community-events-content-2": "در دور‌همی‌های ماهانه ما شرکت کنید تا از بروزرسانی‌های جذاب در توسعه Ethereum.org و اخبار مهم اکوسیستم باخبر شوید. می‌توانید با استفاده از این فرصت، سوال‌های خودتان را بپرسید، ایده‌هایتان را به اشتراک بگذارید، بازخوردهایتان را ارائه کنید و این بهترین فرصت است برای اینکه عضوی از جامعه شکوفای اتریوم باشید.",
+  "community-events-next-event": "رویداد بعدی",
+  "community-events-no-events-planned": "هیچ رویدادی برنامه‌ریزی نشده",
+  "community-events-upcoming-calls": "دورهمی‌های پیشِ رو",
+  "community-events-no-upcoming-calls": "هیچ دورهمی آتی وجود ندارد",
+  "community-events-previous-calls": "دورهمی های پیشین",
+  "community-events-there-are-no-past-calls": "هیچ دورهمی پیشینی وجود ندارد",
+  "community-events-add-to-calendar": "افزودن به تقویم"
 }
