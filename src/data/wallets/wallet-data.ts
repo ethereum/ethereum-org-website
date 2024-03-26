@@ -190,7 +190,7 @@ export const walletsData: WalletData[] = [
     documentation: "",
   },
   {
-    last_updated: "June 22, 2022",
+    last_updated: "March 7, 2024",
     name: "Argent",
     image: ArgentImage,
     brand_color: "#ffffff",
@@ -210,8 +210,8 @@ export const walletsData: WalletData[] = [
     firefox: true,
     chromium: true,
     hardware: false,
-    open_source: false,
-    repo_url: "",
+    open_source: true,
+    repo_url: "https://github.com/argentlabs/argent-x",
     non_custodial: true,
     security_audit: [
       "https://github.com/argentlabs/argent-contracts/tree/develop/audit",
