@@ -544,8 +544,6 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 ### Tutorials on smart contract security {#tutorials-on-smart-contract-security}
 
-- [Cyfrin Updraft - Smart contracts security and auditing full course] (https://updraft.cyfrin.io/courses/security)
-
 - [How to write secure smart contracts](/developers/tutorials/secure-development-workflow/)
 
 - [How to use Slither to find smart contract bugs](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/)
@@ -555,3 +553,5 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - [Smart contract security guidelines](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [How to safely integrate your token contract with arbitrary tokens](/developers/tutorials/token-integration-checklist/)
+
+- [Cyfrin Updraft - Smart contracts security and auditing full course](https://updraft.cyfrin.io/courses/security)
