@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react"
-import { shuffle } from "lodash"
+import shuffle from "lodash/shuffle"
 import { useTranslation } from "next-i18next"
 
 import type {

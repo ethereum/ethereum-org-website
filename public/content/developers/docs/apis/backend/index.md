@@ -135,6 +135,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [NOWNodes.io](https://nownodes.io/)
 - [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
+**Node RPC - _Cost-effective EVM JSON RPC provider_**
+
+- [noderpc.xyz](https://www.noderpc.xyz/)
+- [Documentation](https://docs.noderpc.xyz/)
+
 **Moralis -** **_Enterprise-Grade EVM API Provider._**
 
 - [moralis.io](http://moralis.io)

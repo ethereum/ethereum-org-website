@@ -32,7 +32,7 @@ Daugiau išsamios informacijos rasite šiuose straipsniuose:
 
 - [EEA](https://entethalliance.org/) _Ethereum verslui aljansas yra narių valdoma standartų organizacija, kurios pagrindinis tikslas – kurti atviras blokų grandinių technines sąlygas, skatinančias suderinamumą ir sąveiką tarp įmonių ir vartotojų visame pasaulyje. Mūsų pasaulinę narių bendruomenę sudaro lyderiai, standartų rengėjai, novatoriai, kūrėjai ir įmonės, kurios bendradarbiauja vardan atviro ir decentralizuoto žiniatinklio, skirto naudoti kiekvienam._
 
-- [Hyperledger fondas](https://hyperledger.org) _Hyperledger yra atvirojo kodo bendras projektas, sukurtas tobulinti tarpindustrines blokų grandinių technologijas. Tai pasaulinis projektas, kurį parėmė Linux fondas, įskaitant finansų, bankininkystės, daiktų interneto, tiekimo grandinių, gamybos ir technologijų lyderius._ _Fondui priklauso pora projektų, veikiančių su Ethereum:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+- [Hyperledger fondas](https://hyperledger.org) _Hyperledger yra atvirojo kodo bendras projektas, sukurtas tobulinti tarpindustrines blokų grandinių technologijas. Tai pasaulinis projektas, kurį parėmė Linux fondas, įskaitant finansų, bankininkystės, daiktų interneto, tiekimo grandinių, gamybos ir technologijų lyderius._ _Fondui priklauso pora projektų, veikiančių su Ethereum:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - Hyperledger Burrow
 
 ## Į verslą sutelktos paslaugos {#enterprise-focused-services}
 
@@ -46,7 +46,6 @@ Daugiau išsamios informacijos rasite šiuose straipsniuose:
 ## Protokolas ir infrastruktūra {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _atviro kodo Ethereum klientas, sukurtas pagal Apache 2.0 licenciją ir parašytas Java kalba_
-- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _modulinės blokų grandinės klientas su įgaliotu išmaniųjų sutarčių vertėju, iš dalies sukurtu pagal Ethereum Virtual Machine (EVM) specifikacijas_
 - [Infura](https://infura.io/) _palaipsnė API prieiga prie Ethereum ir IPFS tinklų_
 - [Kaleido](https://kaleido.io/) _full-stack platforma, skirta kurti ir valdyti tarpdebesines hibridines įmonių ekosistemas_
 - [Autonity](https://www.clearmatics.com/about/) _protokolų rinkinys, vykdantis p2p protokolus ir teikiantis kliento programinę įrangą bei infrastruktūrą_
