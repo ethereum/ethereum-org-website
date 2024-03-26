@@ -239,6 +239,7 @@ const FindWalletPage = () => {
                 resetFilters={resetFilters}
                 resetWalletFilter={resetWalletFilter}
                 walletData={randomizedWalletData}
+                onOpen={onOpen}
               />
             </Box>
           </Flex>
