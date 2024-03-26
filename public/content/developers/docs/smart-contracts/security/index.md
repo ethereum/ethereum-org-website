@@ -112,7 +112,7 @@ The existence of audits and bug bounties doesn’t excuse your responsibility to
 
 - Use a [development environment](/developers/docs/frameworks/) for testing, compiling, deploying smart contracts
 
-- Run your code through basic code analysis tools, such as, [Cyfrin Aaderyn](https://cyfrin.io/tools/aderyn), Mythril and Slither. Ideally, you should do this before each pull request is merged and compare differences in output
+- Run your code through basic code analysis tools, such as, [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn), Mythril and Slither. Ideally, you should do this before each pull request is merged and compare differences in output
 
 - Ensure your code compiles without errors, and the Solidity compiler emits no warnings
 
@@ -488,8 +488,6 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[CertiK](https://www.certik.com/)** - _Blockchain security firm pioneering the use of cutting-edge formal Verification technology on smart contracts and blockchain networks._
 
-- **[Cyfrin](https://cyfrin.com)** - _Industry-leading Smart contract security auditing, educatio and tools. Helping protect the world's biggest protocols.
-  
 - **[Trail of Bits](https://www.trailofbits.com/)** - _Cybersecurity company that combines security research with an attacker mentality to reduce risk and fortify code._
 
 - **[PeckShield](https://peckshield.com/)** - _Blockchain security company offering products and services for the security, privacy, and usability of the entire blockchain ecosystem._
@@ -546,7 +544,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 ### Tutorials on smart contract security {#tutorials-on-smart-contract-security}
 
-- [Cyfrin Updraft - Smart contracts security and Auditing full course] (https://updraft.cyfrin.io/courses/security)
+- [Cyfrin Updraft - Smart contracts security and auditing full course] (https://updraft.cyfrin.io/courses/security)
 
 - [How to write secure smart contracts](/developers/tutorials/secure-development-workflow/)
 
