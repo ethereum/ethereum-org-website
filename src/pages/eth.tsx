@@ -468,7 +468,9 @@ const EthPage = () => {
               description={t("page-eth-whats-defi-description")}
               image={defi}
             />
-            <InfoBanner isWarning>{t('page-eth-weth')}</InfoBanner>
+            <InfoBanner isWarning>
+              <Translation id="page-eth:page-eth-weth" />
+            </InfoBanner>
           </Box>
           <TextDivider />
           <Box>
