@@ -29,7 +29,7 @@ Una [macchina di Turing](https://en.wikipedia.org/wiki/Turing_machine) è un mod
 
 Il termine
 
-Turing equivalente indica un computer che può eseguire gli stessi calcoli di una macchina di Turing. Le macchine di Turing possono entrare in loop infiniti, mentre l'EVM non può farlo perché finirebbe il carburante, quindi è solo quasi Turing equivalente.
+Turing equivalente/a> indica un computer che può eseguire gli stessi calcoli di una macchina di Turing. Le macchine di Turing possono entrare in loop infiniti, mentre l'EVM non può farlo perché finirebbe il carburante, quindi è solo quasi Turing equivalente.
 
 ## 9.1 Nozioni di base {#91-basics}
 
@@ -45,7 +45,7 @@ mstore(0, 0x60A7)
 
 `mstore` è uno dei tre opcode che la EVM mette a disposizione per interagire con la memoria: carica una parola in memoria. Gli altri due sono `mstore8` che carica un singolo byte in memoria e `mload` che sposta una parola dalla memoria allo stack.
 
-La EVM ha anche un modello separato di <strong>archiviazione</strong> non volatile che viene mantenuta come parte dello stato del sistema; questa memoria è organizzata in un array di parole (al contrario degli array di byte con indirizzamento a parola nello stack). Questa archiviazione è il luogo in cui i contratti conservano i dati permanenti. Un contratto può interagire solo con la propria archiviazione. L’archiviazione è organizzata in mappature chiave-valore.
+La EVM ha anche un modello separato di **archiviazione** non volatile che viene mantenuta come parte dello stato del sistema; questa memoria è organizzata in un array di parole (al contrario degli array di byte con indirizzamento a parola nello stack). Questa archiviazione è il luogo in cui i contratti conservano i dati permanenti. Un contratto può interagire solo con la propria archiviazione. L’archiviazione è organizzata in mappature chiave-valore.
 
 Sebbene non sia menzionato in questa sezione dello Yellow Paper, è utile sapere che esiste un quarto tipo di memoria. **Calldata** è una memoria di sola lettura con indirizzamento a byte utilizzata per memorizzare il valore trasmesso con il parametro `data` di una transazione. L'EVM dispone di opcode specifici per la gestione di `calldata`. `calldatasize` restituisce la dimensione dei dati. `calldataload` carica i dati nello stack. `calldatacopy` copia i dati in memoria.
 

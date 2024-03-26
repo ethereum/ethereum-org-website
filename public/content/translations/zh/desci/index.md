@@ -68,7 +68,7 @@ summaryPoint3: 它以开放科学运动为基础。
 
 研究表明捐赠评审小组往往无法选出高质量的申请，因为同一个提案在不同的评审小组会得到完全不同的结果。 随着资金越来越少，资金集中到了更少的高级研究人员手中，他们的项目更加的保守。 这种效果创造了一个过度竞争的资金环境，助长了不正当的激励机制，并且扼杀了创新。
 
-通过对由去中心化自治组织和 Web3 开发的不同激励模型进行广泛试验，Web3 有可能打破这一不合理的资金模式。 [可溯源的公益资助](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)、[二次方融资](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)、[去中心化自治组织治理](https://www.antler.co/blog/daos-and-web3-governance)和[代币化的激励结构](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)是一些可以彻底改变科学资助的 Web3 工具。
+通过对由去中心化自治组织和 Web3 开发的不同激励模型进行广泛试验，Web3 有可能打破这一不合理的资金模式。 [可溯源的公益资助](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)、[二次方融资](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)、[去中心化自治组织治理](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead)和[代币化的激励结构](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)是一些可以彻底改变科学资助的 Web3 工具。
 
 ### 知识产权所有权和发展 {#ip-ownership}
 

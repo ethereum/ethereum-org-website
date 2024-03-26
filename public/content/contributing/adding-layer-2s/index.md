@@ -78,7 +78,7 @@ _We do not consider other scaling solutions that don't use Ethereum for data ava
 
 **Links to dapps in the layer 2 ecosystem**
 
-- We want to be able to provide information on what users can expect to be able to do on this layer 2. (e.g. https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- We want to be able to provide information on what users can expect to be able to do on this layer 2. (e.g. https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Token contract lists**
 

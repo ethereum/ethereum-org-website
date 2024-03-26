@@ -70,9 +70,9 @@ Austin'in madenciliği ve iş ispatı blok zincirini, size açıklamasını izle
 
 ## Madencilik algoritması {#mining-algorithm}
 
-Ethereum Ana Ağı şimdiye kadar yalnızca bir madencilik algoritması kullandı - ["Ethash"](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/). Ethhash, ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/) olarak bilinen orijinal bir ArGe algoritmasının varisiydi.
+Ethereum Ana Ağı şimdiye kadar yalnızca bir madencilik algoritması kullandı - ["Ethash"](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethhash, ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/) olarak bilinen orijinal bir ArGe algoritmasının varisiydi.
 
-[Madencilik algoritması ile ilgili daha fazlası](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
+[Madencilik algoritması ile ilgili daha fazlası](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
 
 ## İlgili Konular {#related-topics}
 

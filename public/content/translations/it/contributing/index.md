@@ -4,7 +4,7 @@ description: Scopri i vari modi in cui puoi contribuire a ethereum.org
 lang: it
 ---
 
-# Contribuire a ethereum.org {#contributing-to-ethereumorg}
+# Contribuire a ethereum.org  {#contributing-to-ethereumorg}
 
 Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-source. Quindi, se vuoi contribuire a migliorare [il nostro portale per Ethereum](/about/), ecco come puoi fare.
 
@@ -33,7 +33,7 @@ Il sito web di ethereum.org e, più in generale, Ethereum, è un progetto open-s
 - [Quiz](/contributing/quizzes/)_: aggiungi, aggiorna ed elimina le banche di domande dei quiz per una pagina rilevante_
 - [Suggerisci una risorsa di progettazione](/contributing/design/adding-design-resources/)_: aggiungi, aggiorna ed elimina le risorse di progettazione utili_
 
-_Hai domande?_ Consulta il nostro [server Discord](https://discord.gg/ethereum-org)
+_Hai domande?_  Consulta il nostro [server Discord](https://discord.gg/ethereum-org)
 
 ## Come lavorare su ethereum.org {#how-to-update-content}
 
@@ -77,13 +77,24 @@ Se il tuo contributo viene inserito su ethereum.org, conieremo per te un POAP di
 
 ### Come richiederlo {#how-to-claim}
 
-1. Unisciti al nostro [server Discord](https://discord.gg/ethereum-org).
-2. Incolla un link al tuo contributo nel [canale](https://discord.com/channels/714888181740339261/804005643211898911) `# | poaps`.
+1. Unisciti al nostro [server Discord](/discord/).
+2. Incolla un link al tuo contributo nel canale `#🥇 | proof-of-contribution`.
 3. Attendi che un membro del nostro team ti invii un link al tuo POAP.
 4. Richiedi il tuo POAP!
 
 Dovresti usare solo portafogli autosufficienti per rivendicare i POAP. Non usare conti di scambio o altri conti di cui non possiedi le chiavi private, poiché non ti consentiranno di accedere a e di gestire i tuoi POAP.
 
-## Collaboratori {#contributors}
+## Rivendica il tuo GitPOAP {#claim-gitpoap}
+
+Inoltre, GitPOAP riconoscerà automaticamente il tuo contributo, consentendoti di coniare un POAP unico e separato per i collaboratori, sulla sua stessa piattaforma!
+
+### Come reclamare {#how-to-claim}
+
+1. Visita [GitPOAP](https://www.gitpoap.io).
+2. Connettilo con il tuo portafoglio, o persino con la tua email tramite l'opzione d'accesso.
+3. Cerca il tuo nome utente di GitHub, l'indirizzo ETH, i nomi ENS o qualsiasi GitPOAP per verificare se sei idoneo.
+4. Se il tuo profilo di GitHub è idoneo, potrai coniare un GitPOAP!
+
+## Hanno contribuito {#contributors}
 
 <Contributors />

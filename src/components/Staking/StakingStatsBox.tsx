@@ -1,7 +1,7 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
-import { Code, Flex, Icon, VStack } from "@chakra-ui/react"
+import { Box, Code, Flex, Icon, VStack } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang, StakingStatsData } from "@/lib/types"
 
@@ -50,15 +50,17 @@ const Label = ({ children }: ChildOnlyProp) => (
 // BeaconchainTooltip component
 const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (
   <Tooltip content={children}>
-    <Icon
-      as={MdInfoOutline}
-      color="text"
-      marginInlineStart={2}
-      _hover={{ color: "primary.base" }}
-      _active={{ color: "primary.base" }}
-      _focus={{ color: "primary.base" }}
-      boxSize={4}
-    />
+    <Box as="span" marginInlineStart={2}>
+      <Icon
+        as={MdInfoOutline}
+        color="text"
+        _hover={{ color: "primary.base" }}
+        _active={{ color: "primary.base" }}
+        _focus={{ color: "primary.base" }}
+        boxSize={4}
+        verticalAlign="middle"
+      />
+    </Box>
   </Tooltip>
 )
 
@@ -94,9 +96,11 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
         <Label>
           {t("page-staking-stats-box-metric-1")}
           <BeaconchainTooltip>
-            <Text>{t("page-staking-stats-box-metric-1-tooltip")}</Text>
-            {t("common:data-provided-by")}{" "}
-            <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
+            <Box textTransform="none">
+              <Text>{t("page-staking-stats-box-metric-1-tooltip")}</Text>
+              {t("common:data-provided-by")}{" "}
+              <InlineLink href="https://beaconcha.in/">Beaconcha.in</InlineLink>
+            </Box>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -105,9 +109,11 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
         <Label>
           {t("page-staking-stats-box-metric-2")}
           <BeaconchainTooltip>
-            <Text>{t("page-staking-stats-box-metric-2-tooltip")}</Text>
-            {t("common:data-provided-by")}{" "}
-            <InlineLink to="https://beaconcha.in/">Beaconcha.in</InlineLink>
+            <Box textTransform="none">
+              <Text>{t("page-staking-stats-box-metric-2-tooltip")}</Text>
+              {t("common:data-provided-by")}{" "}
+              <InlineLink href="https://beaconcha.in/">Beaconcha.in</InlineLink>
+            </Box>
           </BeaconchainTooltip>
         </Label>
       </Cell>
@@ -116,11 +122,13 @@ const StakingStatsBox = ({ data }: StakingStatsBoxProps) => {
         <Label>
           {t("page-staking-stats-box-metric-3")}
           <BeaconchainTooltip>
-            <Text>{t("page-staking-stats-box-metric-3-tooltip")}</Text>
-            {t("common:data-provided-by")}{" "}
-            <InlineLink to="https://beaconcha.in/ethstore">
-              Beaconcha.in
-            </InlineLink>
+            <Box textTransform="none">
+              <Text>{t("page-staking-stats-box-metric-3-tooltip")}</Text>
+              {t("common:data-provided-by")}{" "}
+              <InlineLink href="https://beaconcha.in/ethstore">
+                Beaconcha.in
+              </InlineLink>
+            </Box>
           </BeaconchainTooltip>
         </Label>
       </Cell>

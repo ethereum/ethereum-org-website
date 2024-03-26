@@ -39,7 +39,7 @@ Der Konsensclient nimmt nicht an Attestierungen oder dem Vorschlagen von Blöcke
 
 Knotenbetreiber können Validatoren zu ihren Konsensclients hinzufügen, indem sie 32 ETH in den Einzahlungsvertrag einzahlen. Der Validatorclient kommt gebündelt mit dem Konsensclient und kann zu jeder Zeit einem Knoten hinzugefügt werden. Der Validator bearbeitet Attestierungen und Blockvorschläge. Sie ermöglichen einem Knoten, Prämien zu sammeln oder ETH über Strafen oder Slashing zu verlieren. Durch das Betreiben der Validatorensoftware kann ein Knoten ausgewählt werden, um einen neuen Block vorzuschlagen.
 
-[Mehr über Staking](/abstecken/).
+[Mehr über Staking](/staking/).
 
 ## Vergleich der Knotenkomponenten {#node-comparison}
 

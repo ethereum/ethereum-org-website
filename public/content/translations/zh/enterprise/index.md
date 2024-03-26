@@ -51,7 +51,7 @@ lang: zh
 - [Blast](https://blastapi.io/) _为以太坊存档主网和测试网提供远程过程调用/网络套接字应用程序接口的应用程序接口平台_
 - [Blockapps](https://blockapps.net/) _通过部署企业级以太坊协议、工具和 API 形成 STRATO 平台_
 - [Chainstack](https://chainstack.com/) _主网和测试网以太坊基础设施托管在公共及孤立的客户云中_
-- [ConsenSys](https://consensys.net/) _为以太坊上的开发提供了一系列工具和产品，同时还提供咨询和定制开发服务_
+- [ConsenSys](https://consensys.io/) _为以太坊上的开发提供了一系列工具和产品，同时还提供咨询和定制开发服务_
 - [Envision Blockchain](https://envisionblockchain.com/) _专注于以太坊主网，并提供针对企业的咨询和开发服务_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _提供了一个采购流程，让用户在信任的业务合作伙伴网络中发出报价申请、合约、订单和发票_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _是一个针对企业的开源以太坊客户端，它依据 Apache 2.0 许可证开发并用 Java 语言编写_
@@ -66,7 +66,7 @@ lang: zh
 ### 工具和库 {#tooling-and-libraries}
 
 - [Alathio](https://explorer.aleth.io/) _以太坊数据分析平台_
-- [Sirato](https://www.web3labs.com/sirato) _面向公共和私有以太坊兼容网络的数据和分析平台，由 Web3 Labs 提供_
+- [Chainlens](https://www.chainlens.com/) _面向公共和私有以太坊兼容网络的数据和分析平台，由 Web3 Labs 提供_
 - [Ernst & Young 的“Nightfall”](https://github.com/EYBlockchain/nightfall) _私有的交易工具包_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _与 Web3 应用提供商一起使用的交易签名应用程序_
 - [Tenderly](https://tenderly.co/)_，一个提供实时分析、告警和监控，并为专用网络提供支持的数据平台_
@@ -100,13 +100,12 @@ lang: zh
 
 - [Tinlake](https://tinlake.centrifuge.io/) _通过代币化的实体资产（如发票、抵押或流媒体版权费等）进行应收款项融资_
 - [RealT](https://realt.co/) _全球各地的投资者可以通过完全合规、代币化的部分所有权在美国房地产市场购买房产。_
-- [AgroToken](https://agrotoken.io/en/) _农产品代币化和交易_
+- [AgroToken](https://agrotoken.io/en/home) _农产品代币化和交易_
 - [Fasset](https://www.fasset.com/) _支持可持续基础设施的平台_
 
 ### 数据公证 {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _对最终贷款的详细信息进行哈希处理并记录在主网上_
-- [Slusk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _数据完整性可以通过定期将索引数据的哈希值写入主网来确保_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _意大利最大的新闻机构与假新闻作斗争，并使读者能够通过在主网上录制这些新闻故事来验证其来源_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _在以太坊上记录新闻稿，以确保公司的责任和信用_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _在以太坊上记录手表的来源和修理记录_
@@ -114,13 +113,11 @@ lang: zh
 
 ### 供应链 {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _提单和单证传输提供者_
 - [Morphosus.network](https://morpheus.network/) _供应链自动化平台，通过以太坊主网上的公证数据实现了私有链的聚合，加拿大食品、石油与天然气经销商 Federated Co-op Ltd. 和阿根廷宠物食品供应商 Vitalcan 等企业目前都在使用该平台_
 - [Minespider](https://www.minespider.com/) _供应链跟踪_
 - [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) _让企业通过在信任的业务合作伙伴网络中发出报价申请、合约、订单和发票，参与采购流程_
 - [Treum](https://treum.io/) _使用区块链技术为供应链带来透明度、可追溯性和可交易性_
 - [TradeTrust](https://www.tradetrust.io/) _验证国际运输中的电子提单 (eBL)_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _可为每批新酿造的啤酒铸造非同质化代币，提高整条供应链的可见性和效率_
 
 ### 保险 {#insurance}
 

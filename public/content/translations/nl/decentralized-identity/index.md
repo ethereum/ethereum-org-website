@@ -49,7 +49,7 @@ Gedecentraliseerde identificatiekenmerken worden opgeslagen op gedistribueerde l
 
 ## Wat maakt gedecentraliseerde identificatiekenmerken mogelijk? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Publieke sleutel-infrastructuur (PKI) {#public-key-infrastructure}
+### 1. Publieke sleutel-infrastructuur (PKI) {#public-key-cryptography}
 
 Publieke sleutel-infrastructuur (PKI) is een informatiebeveiligingsmaatregel die een [publieke sleutel](/glossary/#public-key) en [privé-sleutel](/glossary/#private-key) voor een entiteit genereert. Publieke sleutel-cryptografie wordt gebruikt in blockchain-netwerken om gebruikersidentiteiten te verifiëren en eigendom van digitale activa te bewijzen.
 
