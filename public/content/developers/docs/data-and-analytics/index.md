@@ -38,7 +38,7 @@ Using [GraphQL](https://graphql.org/), developers can query any of the curated o
 
 ## SubQuery Network {#subquery-network}
 
-[SubQuery](https://subquery.network/) is a leading data indexer that gives developers fast, reliable, decentralised, and customised APIs for their web3 projects. SubQuery empower developers from over 80+ ecosystems (including Ethereum) with rich indexed data to build an intuitive and immersive experiences for their users. The SubQuery Network powers your unstoppable apps with a resilient and decentralised infrastructure network. Use SubQuery's blockchain developer toolkit to build the web3 applications of the future, without wasting time building a custom backend for data processing activities.
+[SubQuery](https://subquery.network/) is a leading data indexer that gives developers fast, reliable, decentralized, and customized APIs for their web3 projects. SubQuery empower developers from over 80+ ecosystems (including Ethereum) with rich indexed data to build an intuitive and immersive experiences for their users. The SubQuery Network powers your unstoppable apps with a resilient and decentralized infrastructure network. Use SubQuery's blockchain developer toolkit to build the web3 applications of the future, without spending time building a custom backend for data processing activities.
 
 To start, visit the [Ethereum quick start guide](https://academy.subquery.network/quickstart/quickstart_chains/ethereum-gravatar.html) to start indexing Ethereum blockchain data in minutes in a local Docker environment for testing before going live on a [SubQuery's managed service](https://managedservice.subquery.network/) or on [SubQuery's decentralised network](https://kepler.subquery.network/explorer/home).
 
