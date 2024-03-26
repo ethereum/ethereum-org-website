@@ -61,7 +61,7 @@ const Trilemma = () => {
             {t("page-roadmap-vision-trilemma-modal-tip")}:
           </Text>
         </Flex>
-        <Card {...cardDetail} minH="300px" hideBelow="lg" />
+        <Card {...cardDetail} minH="300px" hideBelow="lg" mt="6" />
       </Stack>
       <Hide above="lg">
         <Drawer
