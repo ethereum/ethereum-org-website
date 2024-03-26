@@ -11615,6 +11615,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "AyumuKasuga",
+      "name": "Andrei Kostakov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/700142?v=4",
+      "profile": "https://t.me/AyumuKasuga",
+      "contributions": [
+        "content",
+        "doc"
+      ]
     }
   ],
   "contributorsPerLine": 7,
