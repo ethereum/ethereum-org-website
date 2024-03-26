@@ -489,7 +489,6 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[CertiK](https://www.certik.com/)** - _Blockchain security firm pioneering the use of cutting-edge formal Verification technology on smart contracts and blockchain networks._
 
 - **[Trail of Bits](https://www.trailofbits.com/)** - _Cybersecurity company that combines security research with an attacker mentality to reduce risk and fortify code._
-- **[Cyfrin](https://www.cyfrin.io/)** - _Blockchain Security and web3 education firm focused on EVM and Vyper based protocols_
 
 - **[PeckShield](https://peckshield.com/)** - _Blockchain security company offering products and services for the security, privacy, and usability of the entire blockchain ecosystem._
 
@@ -506,7 +505,10 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[HashEx](https://hashex.org/)** - _HashEx focuses on blockchain and smart contract auditing to ensure the security of cryptocurrencies, providing services such as smart contract development, penetration testing, blockchain consulting._
 
 - **[Code4rena](https://code4rena.com/)** - _Competitive audit platform that incentivizes smart contract security experts to find vulnerabilities and help make web3 more secure._
+
 - **[CodeHawks](https://codehawks.com/)** - _Competitive audits platform hosting smart contracts auditing competitions for security researchers.
+
+- **[Cyfrin](https://www.cyfrin.io/)** - _Blockchain security and web3 education firm focused on EVM and Vyper based protocols._
 
 
 ### Bug bounty platforms {#bug-bounty-platforms}
