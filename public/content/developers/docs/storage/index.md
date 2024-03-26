@@ -57,11 +57,11 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [IPFS](https://docs.ipfs.io/concepts/what-is-ipfs/)
 - [Pinata](https://www.pinata.cloud/) _(IPFS pinning service)_
 - [web3.storage](https://web3.storage/) _(IPFS/Filecoin pinning service)_
-- [Spheron Network](https://spheron.network/) _(IPFS/Filecoin pinning service)_
 - [Infura](https://infura.io/product/ipfs) _(IPFS pinning service)_
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
 - [4EVERLAND](https://www.4everland.org/)_（IPFS pinning service）_
 - [Filebase](https://filebase.com) _(IPFS Pinning Service)_
+- [Spheron Network](https://spheron.network/) _(IPFS/Filecoin pinning service)_
 
 SWARM is a decentralized data storage and distribution technology with a storage incentive system and a storage rent price oracle.
 
@@ -187,12 +187,6 @@ Proof-of-stake based:
 - [Documentation](https://docs.filebase.com/)
 - [GitHub](https://github.com/filebase)
 
-**Spheron Network - _Spheron is a PaaS designed for dApps looking to launch their applications on decentralised infra with best performance. It provides compute, decentralised storage, CDN & web hosting out of the box._**
-
-- [spheron.network](https://spheron.network/)
-- [Documentation](https://docs.spheron.network/)
-- [GitHub](https://github.com/spheronFdn)
-
 **4EVERLAND - _A Web 3.0 cloud computing platform that integrates storage, compute and networking core capabilities, is S3 compatible and provides synchronous data storage on decentralized storage networks such as IPFS and Arweave._**
 
 - [4everland.org](https://www.4everland.org/)
@@ -204,6 +198,12 @@ Proof-of-stake based:
 - [Kaleido](https://kaleido.io/)
 - [Documentation](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
+
+**Spheron Network - _Spheron is a platform-as-a-service (PaaS) designed for dApps looking to launch their applications on decentralized infra with best performance. It provides compute, decentralized storage, CDN & web hosting out of the box._**
+
+- [spheron.network](https://spheron.network/)
+- [Documentation](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 ## Further reading {#further-reading}
 
