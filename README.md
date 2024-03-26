@@ -1782,6 +1782,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/cradle0fFilth"><img src="https://avatars.githubusercontent.com/u/64477775?v=4?s=100" width="100px;" alt="cradle0fFilth"/><br /><sub><b>cradle0fFilth</b></sub></a><br /><a href="#content-cradle0fFilth" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://lispking.github.io/"><img src="https://avatars.githubusercontent.com/u/4446580?v=4?s=100" width="100px;" alt="King"/><br /><sub><b>King</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Alispking" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://catapulta.sh"><img src="https://avatars.githubusercontent.com/u/11179847?v=4?s=100" width="100px;" alt="kartojal"/><br /><sub><b>kartojal</b></sub></a><br /><a href="#tool-kartojal" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/AaronChen0"><img src="https://avatars.githubusercontent.com/u/18425462?v=4?s=100" width="100px;" alt="Aaron Chen"/><br /><sub><b>Aaron Chen</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AAaronChen0" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
