@@ -39,7 +39,7 @@
   "page-index-developers-button": "Portail des développeurs",
   "page-index-developers-code-examples": "Exemples de code",
   "page-index-developers-code-example-title-0": "Votre propre banque",
-  "page-index-developers-code-example-description-0": "Vous pouvez construire une banque exécutée par le code que vous avez programmé.",
+  "page-index-developers-code-example-description-0": "Vous pouvez construire une banque gouvernée par la logique que vous avez programmée.",
   "page-index-developers-code-example-title-1": "Votre propre monnaie",
   "page-index-developers-code-example-description-1": "Vous pouvez créer des jetons afin de les transférer et les utiliser à travers des applications.",
   "page-index-developers-code-example-title-2": "Un portefeuille Ethereum en JavaScript",
@@ -73,7 +73,17 @@
   "page-index-tout-community-description": "Ethereum est avant tout une communauté. Elle est composée de personnes avec des intérêts différents, issues de tous les horizons. Découvrez comment rejoindre la communauté.",
   "page-index-tout-community-image-alt": "Illustration d'un groupe de bâtisseurs travaillant ensemble.",
   "page-index-nft": "L'internet des ressources",
-  "page-index-nft-description": "Ethereum n'est pas seulement de l'argent numérique. Tout ce que vous pouvez posséder peut être représenté, échangé et utilisé en tant que jetons non fongibles (NFTs). Vous pouvez monétiser votre art et obtenir automatiquement des redevances chaque fois qu'il est vendu. Ou bien, vous pouvez utiliser un jeton pour quelque chose que vous possédez pour contracter un prêt. Les possibilités évoluent sans cesse.",
+  "page-index-nft-description": "Ethereum n'est pas seulement de l'argent numérique. Tout ce que vous pouvez posséder peut être représenté, échangé et utilisé en tant que jetons non fongibles (NFT). Vous pouvez monétiser votre art et obtenir automatiquement des redevances chaque fois qu'il est vendu. Ou bien, vous pouvez utiliser un jeton pour quelque chose que vous possédez pour contracter un prêt. Les possibilités évoluent sans cesse.",
   "page-index-nft-button": "Plus d'infos sur les NTFs",
-  "page-index-nft-alt": "Un logo Eth affiché par hologramme."
+  "page-index-nft-alt": "Un logo Eth affiché par hologramme.",
+  "community-events-content-heading": "Rejoignez la communauté ethereum.org",
+  "community-events-content-1": "Rejoignez presque <strong>40 000 membres</strong> sur notre <a href=\"/discord/\">serveur Discord</a>.",
+  "community-events-content-2": "Rejoignez nos appels communautaire mensuels lors de mises à jour passionnantes sur le développement d'Ethereum.org, sans oublier les dernières actualités importantes concernant l'écosystème. Saisissez l'opportunité pour poser des questions, partager des idées et fournir vos commentaires et retours : c'est la meilleure manière de faire partie de la florissante communauté Ethereum.",
+  "community-events-next-event": "Prochain événement",
+  "community-events-no-events-planned": "Pas d'événements prévus",
+  "community-events-upcoming-calls": "Appels à venir",
+  "community-events-no-upcoming-calls": "Aucun appel à venir",
+  "community-events-previous-calls": "Appels précédents",
+  "community-events-there-are-no-past-calls": "Il n'y a pas d'appels passés",
+  "community-events-add-to-calendar": "Ajouter au calendrier"
 }

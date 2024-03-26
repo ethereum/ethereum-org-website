@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react"
-import { MATOMO_LS_KEY } from "../utils/matomo"
-import { Flex, Checkbox, Text } from "@chakra-ui/react"
+import { useEffect, useState } from "react"
+import { Checkbox, Flex } from "@chakra-ui/react"
 
-export interface IProps {}
+import Text from "@/components/OldText"
 
-const MatomoOptOut: React.FC<IProps> = () => {
+import { MATOMO_LS_KEY } from "@/lib/utils/matomo"
+
+const MatomoOptOut = () => {
   const [loading, setLoading] = useState<boolean>(true)
   const [isOptedOut, setIsOptedOut] = useState<boolean>(false)
 
@@ -56,7 +57,7 @@ const MatomoOptOut: React.FC<IProps> = () => {
           id="matomo"
           isChecked={!isOptedOut}
           onChange={handleCheckbox}
-          mr={2}
+          me={2}
         >
           {isOptedOut
             ? "You are opted out. Check this box to opt-in."

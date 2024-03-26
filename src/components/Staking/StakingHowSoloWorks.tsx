@@ -1,46 +1,28 @@
-import React from "react"
-import { graphql, useStaticQuery } from "gatsby"
-import { GatsbyImage } from "gatsby-plugin-image"
+/* eslint-disable react/jsx-key */
+import { Center } from "@chakra-ui/react"
 
-import OrderedList from "../OrderedList"
-import Translation from "../Translation"
+import { Image } from "@/components/Image"
+import OrderedList from "@/components/OrderedList"
+import Translation from "@/components/Translation"
 
-import { getImage } from "../../utils/image"
-import { Center, Image } from "@chakra-ui/react"
+import image from "@/public/hackathon_transparent.png"
 
-export interface IProps {}
-
-const StakingHowSoloWorks: React.FC<IProps> = () => {
-  const { image } = useStaticQuery(graphql`
-    {
-      image: file(relativePath: { eq: "hackathon_transparent.png" }) {
-        childImageSharp {
-          gatsbyImageData(
-            width: 400
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            quality: 100
-          )
-        }
-      }
-    }
-  `)
-
+const StakingHowSoloWorks = () => {
   const items = [
     <p>
-      <Translation id="page-staking-how-solo-works-item-1" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-1" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-2" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-2" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-3" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-3" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-4" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-4" />
     </p>,
     <p>
-      <Translation id="page-staking-how-solo-works-item-5" />
+      <Translation id="page-staking:page-staking-how-solo-works-item-5" />
     </p>,
   ]
 
@@ -50,7 +32,7 @@ const StakingHowSoloWorks: React.FC<IProps> = () => {
       justifyContent="space-between"
     >
       <OrderedList listData={items} />
-      <Image as={GatsbyImage} image={getImage(image)!} alt="" />
+      <Image src={image} alt="" width={400} />
     </Center>
   )
 }
