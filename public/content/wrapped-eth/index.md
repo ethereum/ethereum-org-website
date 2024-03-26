@@ -52,9 +52,11 @@ Besides the [canonical implementation of WETH](https://etherscan.io/token/0xc02a
 </ExpandableCard>
 
 <ExpandableCard title="What are the WETH contracts on other networks?" eventCategory="/wrapped-eth" eventName="clicked What are the WETH contracts on other networks?">
+
 - [Ethereum Mainnet](https://etherscan.io/token/0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2)
 - [Arbitrum](https://arbiscan.io/token/0x82af49447d8a07e3bd95bd0d56f35241523fbab1)
 - [Optimism](https://optimistic.etherscan.io/token/0x4200000000000000000000000000000000000006)
+
 </ExpandableCard>
 
 ## Further reading {#further-reading}
