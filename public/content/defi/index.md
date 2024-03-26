@@ -308,6 +308,7 @@ Contracts are also public for anyone to inspect and audit. This means bad contra
 
 This does mean there's currently a need to trust the more technical members of the Ethereum community who can read code. The open-source based community helps keep developers in check, but this need will diminish over time as smart contracts become easier to read and other ways to prove trustworthiness of code are developed.
 
+
 ## Ethereum and DeFi {#ethereum-and-defi}
 
 Ethereum is the perfect foundation for DeFi for a number of reasons:
@@ -323,6 +324,8 @@ You can think of DeFi in layers:
 2. The assets – [ETH](/eth/) and the other tokens (currencies).
 3. The protocols – [smart contracts](/glossary/#smart-contract) that provide the functionality, for example, a service that allows for decentralized lending of assets.
 4. [The applications](/dapps/) – the products we use to manage and access the protocols.
+
+Note: much of defi uses the [ERC-20 standard](/glossary/#erc-20). Applications in defi use a wrapper for ETH called Wrapped Ether (WETH). [Learn more about wrapped ether](/wrapped-eth).
 
 ## Build DeFi {#build-defi}
 

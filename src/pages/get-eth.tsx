@@ -367,6 +367,7 @@ const GetEthPage = ({
           <ButtonLink href="/wallets/find-wallet/">
             {t("page-get-eth-get-wallet-btn")}
           </ButtonLink>
+          <InfoBanner isWarning>{t("page-get-eth-dexs-desc-4")}</InfoBanner>
         </LeftColumn>
         <RightColumn>
           <OldHeading
