@@ -1,4 +1,4 @@
-  name: Suggest a wallet
+name: Suggest a wallet
 description: Suggest a new wallet to list on ethereum.org
 title: Suggest a wallet
 labels: ["wallet :purse:"]
