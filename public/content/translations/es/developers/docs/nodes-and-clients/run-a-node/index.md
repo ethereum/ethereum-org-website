@@ -99,7 +99,7 @@ El modo de sincronización que elija afectará a los requisitos de espacio. No o
 
 - Nota: Erigon no realiza la sincronización rápida, pero permite llevar a cabo la limpieza completa (~500 GB).
 
-Para clientes de consenso, la necesidad de espacio también depende de la implementación del cliente y las características habilitadas (p. ej., validador-recortador), pero generalmente necesitan otros 200 GB para datos de baliza. Con un gran número de validadores, la carga de ancho de banda también crece. Puede encontrar [detalles sobre los requisitos del cliente de consenso en este análisis](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e).
+Para clientes de consenso, la necesidad de espacio también depende de la implementación del cliente y las características habilitadas (p. ej., validador-recortador), pero generalmente necesitan otros 200 GB para datos de baliza. Con un gran número de validadores, la carga de ancho de banda también crece. Puede encontrar [detalles sobre los requisitos del cliente de consenso en este análisis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Soluciones de conectar y usar (Plug-and-Play) {#plug-and-play}
 

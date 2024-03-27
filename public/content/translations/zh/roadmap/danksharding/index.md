@@ -15,7 +15,7 @@ summaryPoints:
 
 ## 什么是 Proto-Danksharding？ {#what-is-protodanksharding}
 
-Proto-Danksharding，也称为 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)，是一种让[卷叠](/layer2/#rollups)以更经济的方式向区块添加数据的方法。 这一名称来自提出这个想法的两位研究人员：Protolambda 和 Dankrad Feist。 目前，卷叠在降低用户交易的成本方面受到了限制，因为它们是将交易发布在 `CALLDATA` 中。 这是一种昂贵的方法，因为数据需要经所有以太坊节点处理，并且永远存在于链上，即使卷叠只在很短的时间需要这些数据。 Proto-Danksharding 引入了可以发送并附加到区块上的数据二进制大对象。 这些二进制大对象中的数据不可通过以太坊虚拟机访问，并且在固定的时间（1-3 个月）后会自动删除。 这意味着卷叠可以更经济的方式发送其数据，节省的费用会让最终用户的交易更加便宜。
+Proto-Danksharding，也称为 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)，是一种让[卷叠](/layer-2/#rollups)以更经济的方式向区块添加数据的方法。 这一名称来自提出这个想法的两位研究人员：Protolambda 和 Dankrad Feist。 目前，卷叠在降低用户交易的成本方面受到了限制，因为它们是将交易发布在 `CALLDATA` 中。 这是一种昂贵的方法，因为数据需要经所有以太坊节点处理，并且永远存在于链上，即使卷叠只在很短的时间需要这些数据。 Proto-Danksharding 引入了可以发送并附加到区块上的数据二进制大对象。 这些二进制大对象中的数据不可通过以太坊虚拟机访问，并且在固定的时间（1-3 个月）后会自动删除。 这意味着卷叠可以更经济的方式发送其数据，节省的费用会让最终用户的交易更加便宜。
 
 <ExpandableCard title="为什么二进制大对象能让卷叠更经济？" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
