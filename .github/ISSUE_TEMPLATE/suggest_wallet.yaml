@@ -49,13 +49,6 @@ body:
     validations:
       required: true
   - type: input
-    id: wallet_live_date
-    attributes:
-      label: When did the wallet go live to users?
-      description: Please provide a date when the wallet was usable by the public
-    validations:
-      required: true
-  - type: input
     id: wallet_active_development_team
     attributes:
       label: Does the wallet have an active development team?
