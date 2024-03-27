@@ -576,7 +576,7 @@ const WhatIsEthereumPage = ({
                 </BannerGridCell>
                 <BannerGridCell>
                   <StatPrimary>
-                    {txStat || <StatErrorMessage fontSize="1rem" />}
+                    {txStat || <StatErrorMessage fontSize="md" />}
                   </StatPrimary>
                   {/* TODO: Extract strings for translation */}
                   <StatDescription>

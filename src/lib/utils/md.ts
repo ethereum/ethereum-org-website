@@ -197,6 +197,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers",
     "/developers/tutorials/waffle-test-simple-smart-contract",
     "/developers/tutorials/yellow-paper-evm",
+    "/developers/tutorials/creating-a-wagmi-ui-for-your-contract",
     // Static (68/68) ✅
     "/about",
     "/bridges",
@@ -265,6 +266,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/terms-of-use",
     "/web3",
     "/whitepaper",
+    "/wrapped-eth",
     "/zero-knowledge-proofs",
   ]
 

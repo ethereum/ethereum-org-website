@@ -78,7 +78,7 @@ _Non prendiamo in considerazione altre soluzioni di scalabilità che non utilizz
 
 **Link alle dapp nell'ecosistema del livello 2**
 
-- Vogliamo poter fornire informazioni su cosa gli utenti possono aspettarsi di poter fare su questo livello 2 (es. https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- Vogliamo poter fornire informazioni su cosa gli utenti possono aspettarsi di poter fare su questo livello 2 (es. https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Elenchi di contratti token**
 
