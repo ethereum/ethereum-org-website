@@ -61,6 +61,7 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
 - [siwe](https://github.com/spruceid/siwe-py) - _Sign in with Ethereum (siwe) for Python_
 - [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _A Python package with ready integrations for ERC-20, Uniswap and other popular projects_
+- [Covalent Python SDK](https://pypi.org/project/covalent-api-sdk/) - _Efficient blockchain data access via Python SDK for 200+ blockchains_
 
 ### Archived / No longer maintained: {#archived--no-longer-maintained}
 
