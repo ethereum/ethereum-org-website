@@ -45,15 +45,20 @@ const Tooltip: React.FC<IProps> = ({ content, children, ...rest }) => {
     }
   }, [isOpen, onClose])
 
+  const handleOpen = () => {
+    onOpen()
+    rest.onOpen?.()
+  }
+
   return (
     <Popover
-      isOpen={isOpen}
-      onOpen={onOpen}
-      onClose={onClose}
       placement="top"
       trigger={isMobile() ? "click" : "hover"}
       gutter={8}
       {...rest}
+      isOpen={isOpen}
+      onOpen={handleOpen}
+      onClose={onClose}
     >
       <PopoverTrigger>{children}</PopoverTrigger>
       <PopoverContent>
