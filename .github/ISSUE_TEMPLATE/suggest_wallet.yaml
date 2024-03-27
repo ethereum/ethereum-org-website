@@ -1,4 +1,4 @@
-name: Suggest a wallet
+  name: Suggest a wallet
 description: Suggest a new wallet to list on ethereum.org
 title: Suggest a wallet
 labels: ["wallet :purse:"]
@@ -46,6 +46,13 @@ body:
     attributes:
       label: URL to the project
       description: Please provide a URL (e.g. to the website of the wallet).
+    validations:
+      required: true
+  - type: input
+    id: wallet_live_date
+    attributes:
+      label: When did the wallet go live to users?
+      description: Please provide a date when the wallet was usable by the public
     validations:
       required: true
   - type: input
