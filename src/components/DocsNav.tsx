@@ -58,8 +58,8 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
     <LinkBox
       as={Flex}
       alignItems="center"
-      mt={4}
-      w="262px"
+      w="full"
+      flex="1"
       h="82px"
       bg="background.base"
       border="1px"
@@ -145,7 +145,14 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
     <Flex
       as="nav"
       aria-label="Paginate to document"
-      direction={{ base: "column-reverse", md: "row" }}
+      direction={{
+        base: "column-reverse",
+        md: "row",
+        lg: "column-reverse",
+        xl: "row",
+      }}
+      mt="8"
+      gap="4"
       justify="space-between"
       alignItems={{ base: "center", md: "flex-start" }}
     >

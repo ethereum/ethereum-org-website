@@ -1,4 +1,4 @@
-import { pick } from "lodash"
+import pick from "lodash/pick"
 import { avatarAnatomy } from "@chakra-ui/anatomy"
 import {
   createMultiStyleConfigHelpers,

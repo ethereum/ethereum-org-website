@@ -33,7 +33,7 @@ El sitio web ethereum.org, al igual Ethereum en general, es un proyecto de códi
 - [Cuestionarios](/contributing/quizzes/) _: añada, actualice y elimine bancos de preguntas para los cuestionarios de una página relevante_.
 - [Sugerir un recurso de diseño](/contributing/design/adding-design-resources/) _: añada, actualice y elimine recursos de diseño útiles_.
 
-_¿Tiene alguna pregunta?_ 🤔 Póngase en contacto con nuestro [servidor de Discord](https://discord.gg/CetY6Y4)
+_¿Tiene alguna pregunta?_ 🤔 Póngase en contacto con nuestro [servidor de Discord](/discord/)
 
 ## Cómo trabajar en ethereum.org {#how-to-update-content}
 
@@ -44,7 +44,7 @@ Todas las actualizaciones se hacen a través del proceso de solicitud de incorpo
 No necesita permiso para trabajar en nada, pero siempre es mejor decirnos lo que tiene pensado hacer. Para ello, puede:
 
 - Comentarlo abriendo una incidencia o hacer una solicitud de incorporación de cambios en [GitHub](https://github.com/ethereum/ethereum-org-website)
-- Colgar un mensaje en nuestro [servidor de Discord](https://discord.gg/CetY6Y4)
+- Colgar un mensaje en nuestro [servidor de Discord](/discord/)
 
 Antes de empezar a colaborar, asegúrese de estar familiarizado con:
 
@@ -59,7 +59,7 @@ Las decisiones acerca de las solicitudes de incorporación de cambios individual
 
 - [website@ethereum.org](mailto:website@ethereum.org)
 - [@ethdotorg](https://twitter.com/ethdotorg)
-- [Servidor Discord](https://discord.gg/CetY6Y4)
+- [Servidor Discord](/discord/)
 
 ### Aclaraciones acerca del plagio {#plagiarism}
 
@@ -77,8 +77,8 @@ Si su contribución se agrega a ethereum.org, le acuñaremos una POAP única de 
 
 ### Cómo reclamarlo {#how-to-claim}
 
-1. Únase a nuestro [servidor de Discord](https://discord.gg/E8dET2ux8y).
-2. Pegue un enlace a su contribución en el canal [`#🥇 | poaps`](https://discord.com/channels/714888181740339261/804005643211898911).
+1. Únase a nuestro [servidor de Discord](/discord/).
+2. Pegue un enlace a su contribución en el canal `#🥇 | proof-of-contribution`.
 3. Espere a que un miembro de nuestro equipo le envíe un enlace a su POAP.
 4. ¡Reclame su POAP!
 

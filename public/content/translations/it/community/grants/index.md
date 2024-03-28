@@ -18,7 +18,6 @@ Questi programmi supportano il grande ecosistema di Ethereum offrendo sovvenzion
 - [MetaCartel](https://www.metacartel.org/grants/) - _Sviluppo di dApp, creazione di DAO_
 - [Moloch DAO](https://www.molochdao.com/): _Privacy, ridimensionamento del livello 2, sicurezza del client e molto altro_
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Foglio di calcolo di Google delle organizzazioni che offrono sovvenzioni_
-- [Crunchbase per sovvenzioni Web3](https://www.cryptoneur.xyz/web3-grants) - _Filtra e cerca sovvenzioni per categorie, casi d'uso, importi e altro. Contribuisci ad aiutare gli altri a trovare la giusta sovvenzione._
 - [Sovvenzioni accademiche](https://esp.ethereum.foundation/academic-grants) - _Sovvenzioni per sostenere il lavoro accademico correlato a Ethereum_
 - [Grantfarm di Blockworks](https://blockworks.co/grants/programs) - _Blockworks ha compilato una directory esaustiva di tutte le sovvenzioni, RDP e bug bounty._
 
@@ -35,7 +34,6 @@ Questi progetti hanno creato le proprie sovvenzioni per progetti volti a svilupp
 - [SKALE Network Grants Program](https://skale.space/developers#grants): _ecosistema della [rete SKALE](https://skale.space/)_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _Ecosistema di [The Graph](https://thegraph.com/)_
 - [Uniswap Grants Program](https://www.uniswapfoundation.org/apply-for-a-grant) - _Community di [Uniswap](https://uniswap.org/)_
-- [Sovvenzioni Web3](https://web3grants.net): _Un elenco completo di programmi di sovvenzione relativi a web3/cripto_
 
 ## Finanziamento quadratico {#quadratic-funding}
 

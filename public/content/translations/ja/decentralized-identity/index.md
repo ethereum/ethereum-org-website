@@ -49,7 +49,7 @@ summaryPoint3: 暗号技術により、今や再び自分自身のIDとアテス
 
 ## 分散型 ID を実現する技術 {#what-makes-decentralized-identifiers-possible}
 
-### 1. 公開鍵インフラストラクチャ(PKI) {#public-key-infrastructure}
+### 1. 公開鍵インフラストラクチャ(PKI) {#public-key-cryptography}
 
 公開鍵インフラストラクチャ(PKI)とは、あるエンティティに対して[公開鍵](/glossary/#public-key)と[秘密鍵](/glossary/#private-key)を生成する情報セキュリティのことです。 公開鍵の暗号技術は、ブロックチェーンネットワークにおいて、ユーザーの身分を認証し、デジタル資産の所有権を証明するために使用されます。
 

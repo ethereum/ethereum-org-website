@@ -61,7 +61,6 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
-- [Testnet Faucet | Sepolia](https://testnet-faucet.com/sepolia/)
 - [Blockscout](https://eth-sepolia.blockscout.com/)
 
 #### Goerli _(long-term support)_ {#goerli}

@@ -99,7 +99,7 @@ Le mode de synchronisation et le client que vous choisissez aura une incidence s
 
 - Note : Erigon ne synchronise pas rapidement, mais un élagage complet est possible (~500 Go)
 
-Pour les clients de consensus, les besoins d'espace dépendent également de l'implémentation du client et des fonctionnalités activées (par exemple, validator slasher) mais comptez généralement 200 Go supplémentaires pour les données de la chaîne phare. Avec un grand nombre de validateurs, la charge de bande passante augmente également. Vous pouvez trouver [des détails sur les exigences concernant les clients de consensus dans cette analyse](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e).
+Pour les clients de consensus, les besoins d'espace dépendent également de l'implémentation du client et des fonctionnalités activées (par exemple, validator slasher) mais comptez généralement 200 Go supplémentaires pour les données de la chaîne phare. Avec un grand nombre de validateurs, la charge de bande passante augmente également. Vous pouvez trouver [des détails sur les exigences concernant les clients de consensus dans cette analyse](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Les solutions Plug-and-Play {#plug-and-play}
 

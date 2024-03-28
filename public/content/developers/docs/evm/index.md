@@ -76,6 +76,7 @@ Over Ethereum's nine year history, the EVM has undergone several revisions, and 
 - [Ethereum Virtual Machine Opcodes](https://www.ethervm.io/)
 - [Ethereum Virtual Machine Opcodes Interactive Reference](https://www.evm.codes/)
 - [A short introduction in Solidity's documentation](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#index-6)
+- [Mastering Ethereum - The Ethereum Virtual Machine](https://github.com/ethereumbook/ethereumbook/blob/develop/13evm.asciidoc))
 
 ## Related Topics {#related-topics}
 

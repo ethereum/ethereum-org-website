@@ -9,7 +9,7 @@ type NoResultsCalloutProps = { onClose: () => void }
 
 const NoResultsCallout = forwardRef(
   ({ onClose }: NoResultsCalloutProps, ref) => {
-    const { t } = useTranslation("page-languages")
+    const { t } = useTranslation("common")
     return (
       <FormHelperText color="body.medium" lineHeight="base" fontSize="md">
         <Text fontWeight="bold" mb="2" color="body.base">

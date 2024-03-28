@@ -49,7 +49,7 @@ Gli identificativi decentralizzati sono memorizzati su libri mastri distribuiti 
 
 ## Cosa rende possibili gli identificativi decentralizzati? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastruttura a Chiave Pubblica (PKI) {#public-key-infrastructure}
+### 1. Infrastruttura a Chiave Pubblica (PKI) {#public-key-cryptography}
 
 L'infrastruttura a chiave pubblica (PKI) è una misura di sicurezza delle informazioni che genera una [chiave pubblica](/glossary/#public-key) e una [chiave privata](/glossary/#private-key), per un'entità. La criittografia della chiave pubblica è utilizzata nelle reti blockchain per autenticare le identità degli utenti e dimostrare la proprietà delle risorse digitali.
 

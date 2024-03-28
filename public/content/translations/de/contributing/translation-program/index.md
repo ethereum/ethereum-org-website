@@ -37,7 +37,7 @@ Lesen Sie mehr über <a href="/contributing/translation-program/mission-and-visi
 ### Unsere bisherigen Fortschritte {#our-progress}
 
 - [**5.100 +** Übersetzer](/contributing/translation-program/contributors/)
-- [Die Seite ist in **54** Sprachen verfügbar](/languages/)
+- Die Seite ist in **54** Sprachen verfügbar
 - [**3 Millionen** Wörter übersetzt im Jahr 2022](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />

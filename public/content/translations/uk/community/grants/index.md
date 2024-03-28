@@ -20,7 +20,6 @@ lang: uk
 - [DAO Moloch](https://www.molochdao.com/) — _конфіденційність, масштабування рівня 2, безпека клієнта й багато іншого_
 - [Відкриті гранти](https://opengrants.com/explore)
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Електронна таблиця Google з організацій, які пропонують гранти_
-- [Crunchbase for Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Фільтр і пошук грантів за категорією, використанням, кількістю тощо. Допоможіть іншим знайти правильний грант._
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) — _гранти для підтримки академічної роботи, пов’язаної з Ethereum_
 
 ## За типами проєктів {#project-specific}
@@ -38,7 +37,6 @@ lang: uk
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) — _екосистема [The Graph](https://thegraph.com/)_
 - [Програма грантів UMA](https://grants.umaproject.org/) — _підтримка розробників від [UMA](https://umaproject.org/)_
 - [Програма грантів Uniswap](https://www.unigrants.org/) — _спільнота [Uniswap](https://uniswap.org/)_
-- [Web3 Grants](https://web3grants.net) — _великий список пов’язаних грантів для web3/криптовалют_
 
 ## Чотиричне фінансування {#quadratic-funding}
 

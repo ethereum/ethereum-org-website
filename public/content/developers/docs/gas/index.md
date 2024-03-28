@@ -138,4 +138,4 @@ If you want to monitor gas prices, so you can send your ETH for less, you can us
 - [Proof of Stake versus Proof of Work](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Gas Optimization Strategies for Developers](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [EIP-1559 docs](https://eips.ethereum.org/EIPS/eip-1559).
-- [Time Beiko's EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources).
+- [Tim Beiko's EIP-1559 Resources](https://hackmd.io/@timbeiko/1559-resources).

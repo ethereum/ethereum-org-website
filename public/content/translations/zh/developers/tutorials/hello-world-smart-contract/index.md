@@ -277,7 +277,7 @@ module.exports = {
 }
 ```
 
-## 步骤 14：编写合约 {#step-14-compile-our-contracts}
+## 步骤 14：编译合约 {#step-14-compile-our-contracts}
 
 为了确保一切正常，我们来编译一下合约。 `compile` 任务是安全帽的内部任务之一。
 

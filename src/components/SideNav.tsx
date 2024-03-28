@@ -156,8 +156,8 @@ const SideNav = ({ path }: SideNavProps) => {
       pt={8}
       pb={16}
       h="calc(100vh - 80px)" // TODO take footer into account for height?
-      w="calc((100% - 1448px) / 2 + 298px)"
-      minW="298px"
+      w="calc((100% - 1448px) / 2 + 256px)"
+      minW="256px"
       overflowY="auto"
       transition="transform 0.2s ease"
       bgColor="background.base"

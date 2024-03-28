@@ -11,7 +11,7 @@ import InlineLink from "@/components/Link"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
-import communityConferences from "@/data/community-events"
+import communityEvents from "@/data/community-events.json"
 
 type OrderedUpcomingEvent = CommunityConference & {
   date: string
@@ -37,7 +37,7 @@ const UpcomingEventsList = () => {
   }
 
   useEffect(() => {
-    const eventsList: CommunityConference[] = [...communityConferences]
+    const eventsList = communityEvents as CommunityConference[]
     const yesterday = new Date()
     yesterday.setDate(yesterday.getDate() - 1)
 

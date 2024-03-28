@@ -25,6 +25,7 @@
   "page-get-eth-dexs-desc": "Decentralized exchanges are open marketplaces for ETH and other tokens. They connect buyers and sellers directly.",
   "page-get-eth-dexs-desc-2": "Instead of using a trusted third party to safeguard funds in the transaction, they use code. The seller's ETH will only be transferred when payment is guaranteed. This type of code is known as a smart contract.",
   "page-get-eth-dexs-desc-3": "This means there are fewer geographical restrictions than with centralized alternatives. If someone is selling what you want and accepting a payment method you can provide, you’re good to go.",
+  "page-get-eth-dexs-desc-4": "Note: many dexes use wrapped ether (WETH) to function. <a href=\"/wrapped-eth\">Learn more about wrapped ether</a>.",
   "page-get-eth-do-not-copy": "Example: Do not copy",
   "page-get-eth-exchanges-disclaimer": "We collected this information manually. If you spot something wrong, let us know at",
   "page-get-eth-exchanges-empty-state-text": "Enter your country of residence to see a list of exchanges you may be able to use",

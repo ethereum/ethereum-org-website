@@ -60,7 +60,6 @@ Die beiden öffentlichen Testnets, die die Client-Entwickler derzeit betreiben, 
 - [Faucet für Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet für Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet für Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
-- [Testnetz-Faucet | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(Langzeit-Support)_ {#goerli}
 

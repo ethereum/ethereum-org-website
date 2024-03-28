@@ -77,7 +77,7 @@ Katkınız ethereum.org ile birleştirilirse, sizin için benzersiz bir katkıda
 ### Nasıl talep edilir? {#how-to-claim}
 
 1. [Discord sunucumuza](https://discord.gg/ethereum-org) katılın.
-2. Katkınızın bağlantısını `#🥇 | poaps` [kanalına](https://discord.com/channels/714888181740339261/804005643211898911) yapıştırın.
+2. Katkınızın bağlantısını `#🥇 | proof-of-contribution` [kanalına](https://discord.com/channels/714888181740339261/1212737737916948530) yapıştırın.
 3. Ekibimizin bir üyesinin size POAP'nize bir bağlantı göndermesini bekleyin.
 4. POAP'nizi talep edin!
 

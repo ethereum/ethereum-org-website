@@ -94,7 +94,7 @@ Para hacer que nuestro trabajo sea más accesible y fomentar una mayor colaborac
 
 **¿Qué le parece? ** Siempre apreciamos los comentarios sobre nuestra hoja de ruta. Si hay algo en lo que cree que deberíamos trabajar, ¡por favor, díganoslo! Damos la bienvenida a ideas y relaciones públicas de cualquier persona de la comunidad.
 
-**¿Quiere involucrarse? ** [Entérese de las maneras en las que puede contribuir](/contributing/), [envié un mensjae en Twitter](https://twitter.com/ethdotorg), o únase a las discusiones de la comunidad en [nuestro servidor de Discord](https://discord.gg/CetY6Y4).
+**¿Quiere involucrarse? ** [Entérese de las maneras en las que puede contribuir](/contributing/), [envié un mensjae en Twitter](https://twitter.com/ethdotorg), o únase a las discusiones de la comunidad en [nuestro servidor de Discord](/discord/).
 
 ## Principios de diseño {#design-principles}
 
@@ -118,6 +118,6 @@ Agradecemos los comentarios sobre nuestros principios de diseño, el sistema de 
 
 Aunque este sitio web es de código abierto, y cualquiera puede trabajar en él, tenemos un equipo dedicado a ethereum.org y a otros proyectos web de Ethereum Foundation.
 
-Publicaremos aquí las ofertas de empleo. Si no ve aquí una función que se adapte a su perfil, diríjase a [nuestro servidor de Discord](https://discord.gg/CetY6Y4)¡y díganos cómo le gustaría trabajar con nosotros!
+Publicaremos aquí las ofertas de empleo. Si no ve aquí una función que se adapte a su perfil, diríjase a [nuestro servidor de Discord](/discord/)¡y díganos cómo le gustaría trabajar con nosotros!
 
 ¿Busca algo distinto del equipo de ethereum.org? [Consulte otras vacantes relacionadas con Ethereum](/community/get-involved/#ethereum-jobs/).

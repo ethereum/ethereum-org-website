@@ -16,7 +16,9 @@ lang: fa
 
 ## منابع Ethereum.org {#ethereum-org}
 
-Ethereum.org به بیش از 40 زبان بومی ترجمه شده است که می‌توانید در [صفحه‌ی زبان‌ها](/languages)ی ما آن‌ها را بیابید.
+Ethereum.org به بیش از 40 زبان بومی ترجمه شده است که می‌توانید در صفحه‌ی زبان‌های ما آن‌ها را بیابید.
+
+![Language selector menu](./language-selector-menu.png)
 
 اگر دوزبانه هستید و می‌خواهید به ما کمک کنید تا افراد بیشتری را جذب کنیم، می‌توانید در [برنامه‌ی ترجمه ethereum.org](/contributing/translation-program/#translation-program) نیز مشارکت داشته باشید و به ما کمک کنید تا وب‌سایت را ترجمه کنیم.
 

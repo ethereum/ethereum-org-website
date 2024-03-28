@@ -29,6 +29,14 @@ class Document extends NextDocument {
           <link rel="icon" type="image/x-icon" href="/favicon.png" />
           {/* manifest */}
           <link rel="manifest" href="/manifest.json" />
+          {/* preload inter static web fonts */}
+          <link
+            rel="preload"
+            href="/fonts/inter/latin.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
         </Head>
         <body>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />

@@ -11,6 +11,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Albania: [
     "coinmama",
@@ -23,6 +24,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Algeria: [
     "coinmama",
@@ -38,6 +40,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "American Samoa (USA)": [
     "simplex",
@@ -63,6 +66,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Angola: [
     "coinmama",
@@ -78,6 +82,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Anguilla (UK)": [
     "coinmama",
@@ -90,6 +95,7 @@ const exchangesByCountry = {
     "kucoin",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "Antigua and Barbuda": [
     "coinmama",
@@ -105,6 +111,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Argentina: [
     "coinmama",
@@ -126,6 +133,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
     "bitso",
+    "matrixport",
   ],
   Armenia: [
     "coinmama",
@@ -142,6 +150,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Aruba (Netherlands)": [
     "coinmama",
@@ -157,6 +166,7 @@ const exchangesByCountry = {
     "kucoin",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Australia: [
     "coinmama",
@@ -178,6 +188,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Austria: [
     "coinmama",
@@ -198,6 +209,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Azerbaijan: [
     "coinmama",
@@ -213,6 +225,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Bahamas: [
     "coinmama",
@@ -228,6 +241,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Bahrain: [
     "coinmama",
@@ -245,6 +259,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Bangladesh: [
     "coinmama",
@@ -257,6 +272,7 @@ const exchangesByCountry = {
     "kucoin",
     "huobiglobal",
     "bybit",
+    "matrixport",
   ],
   Barbados: [
     "coinmama",
@@ -271,6 +287,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Belarus: [
     "coinmama",
@@ -286,6 +303,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Belgium: [
     "coinmama",
@@ -307,6 +325,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Belize: [
     "coinmama",
@@ -322,6 +341,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Benin: [
     "coinmama",
@@ -338,6 +358,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Bermuda (UK)": [
     "coinmama",
@@ -354,6 +375,7 @@ const exchangesByCountry = {
     "kucoin",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Bhutan: [
     "coinmama",
@@ -370,6 +392,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Bolivia: [
     "coinmama",
@@ -382,6 +405,7 @@ const exchangesByCountry = {
     "kucoin",
     "huobiglobal",
     "bybit",
+    "matrixport",
   ],
   "Bonaire (Netherlands)": [
     "coinmama",
@@ -396,6 +420,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "Bosnia and Herzegovina": [
     "coinmama",
@@ -410,6 +435,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Botswana: [
     "coinmama",
@@ -423,6 +449,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Brazil: [
     "coinmama",
@@ -444,6 +471,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
     "bitso",
+    "matrixport",
   ],
   "British Virgin Islands (UK)": [
     "coinmama",
@@ -461,6 +489,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Brunei: [
     "coinmama",
@@ -477,6 +506,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Bulgaria: [
     "coinmama",
@@ -497,6 +527,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Burkina Faso": [
     "coinmama",
@@ -511,6 +542,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Burundi: [
     "coinmama",
@@ -526,6 +558,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Cambodia: [
     "coinmama",
@@ -539,6 +572,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Cameroon: [
     "coinmama",
@@ -555,6 +589,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Canada: [
     "coinmama",
@@ -589,6 +624,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Cayman Islands (UK)": [
     "coinmama",
@@ -604,6 +640,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "Central African Republic (CAR)": [
     "coinmama",
@@ -617,6 +654,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Chad: [
     "coinmama",
@@ -632,6 +670,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Chile: [
     "coinmama",
@@ -652,6 +691,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   China: [
     "coinmama",
@@ -677,6 +717,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Colombia: [
     "coinmama",
@@ -698,6 +739,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
     "bitso",
+    "matrixport",
   ],
   Comoros: [
     "coinmama",
@@ -712,6 +754,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Congo: [
     "coinmama",
@@ -724,6 +767,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Cook Islands (New Zealand)": [
     "coinmama",
@@ -740,6 +784,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Costa Rica": [
     "coinmama",
@@ -758,6 +803,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Cote d'Ivoire": [
     "coinmama",
@@ -772,6 +818,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Crimea: [
     "bittrex",
@@ -802,6 +849,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Cuba: ["bittrex", "simplex", "mtpelerin", "wazirx", "bitfinex"],
   "Curacao (Netherlands)": [
@@ -818,6 +866,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Cyprus: [
     "coinmama",
@@ -839,6 +888,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Czech republic": [
     "coinmama",
@@ -860,6 +910,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Denmark: [
     "coinmama",
@@ -881,6 +932,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Djibouti: [
     "coinmama",
@@ -896,6 +948,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Dominica: [
     "coinmama",
@@ -911,6 +964,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Dominican Republic": [
     "coinmama",
@@ -929,6 +983,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Ecuador: [
     "coinmama",
@@ -941,6 +996,7 @@ const exchangesByCountry = {
     "kucoin",
     "huobiglobal",
     "bybit",
+    "matrixport",
   ],
   Egypt: [
     "coinmama",
@@ -959,6 +1015,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "El Salvador": [
     "coinmama",
@@ -977,6 +1034,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Equatorial Guinea": [
     "coinmama",
@@ -992,6 +1050,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Eritrea: [
     "coinmama",
@@ -1006,6 +1065,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Estonia: [
     "coinmama",
@@ -1027,6 +1087,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Eswatini (formerly Swaziland)": [
     "coinmama",
@@ -1039,6 +1100,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Ethiopia: [
     "coinmama",
@@ -1053,6 +1115,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Falkland Islands (UK)": [
     "coinmama",
@@ -1066,6 +1129,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Fiji: [
     "coinmama",
@@ -1082,6 +1146,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Finland: [
     "coinmama",
@@ -1103,6 +1168,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   France: [
     "coinmama",
@@ -1124,6 +1190,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "French Guiana (France)": [
     "coinmama",
@@ -1139,6 +1206,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "French Polynesia (France)": [
     "coinmama",
@@ -1153,6 +1221,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Gabon: [
     "coinmama",
@@ -1168,6 +1237,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Gambia: [
     "coinmama",
@@ -1183,6 +1253,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Georgia: [
     "coinmama",
@@ -1198,6 +1269,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Germany: [
     "coinmama",
@@ -1218,6 +1290,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Ghana: [
     "coinmama",
@@ -1230,6 +1303,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Gibraltar: [
     "coinmama",
@@ -1248,6 +1322,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Greece: [
     "coinmama",
@@ -1270,6 +1345,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Greenland (Denmark)": [
     "coinmama",
@@ -1285,6 +1361,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Grenada: [
     "coinmama",
@@ -1300,6 +1377,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Guadeloupe (France)": [
     "coinmama",
@@ -1315,6 +1393,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "Guam (USA)": ["simplex", "kraken", "kucoin", "huobiglobal", "bybit"],
   Guatemala: [
@@ -1333,6 +1412,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Guernsey: [
     "coinmama",
@@ -1350,6 +1430,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Guinea: [
     "coinmama",
@@ -1363,6 +1444,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Guinea-Bissau": [
     "coinmama",
@@ -1375,6 +1457,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Guyana: [
     "coinmama",
@@ -1390,6 +1473,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Haiti: [
     "coinmama",
@@ -1402,6 +1486,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Honduras: [
     "coinmama",
@@ -1419,6 +1504,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Hong Kong": [
     "coinmama",
@@ -1458,6 +1544,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Iceland: [
     "coinmama",
@@ -1476,6 +1563,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   India: [
     "coinmama",
@@ -1496,6 +1584,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Indonesia: [
     "coinmama",
@@ -1514,6 +1603,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Iran: ["bittrex", "itezcom", "okx", "huobiglobal", "bitfinex"],
   Iraq: [
@@ -1526,6 +1616,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Ireland: [
     "coinmama",
@@ -1547,6 +1638,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Isle of Man": [
     "coinmama",
@@ -1563,6 +1655,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Israel: [
     "simplex",
@@ -1581,6 +1674,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Italy: [
     "coinmama",
@@ -1603,6 +1697,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Jamaica: [
     "coinmama",
@@ -1616,6 +1711,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Japan: [
     "coinmama",
@@ -1649,6 +1745,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Jordan: [
     "coinmama",
@@ -1666,6 +1763,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Kazakhstan: [
     "coinmama",
@@ -1683,6 +1781,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Kenya: [
     "coinmama",
@@ -1700,6 +1799,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Kiribati: [
     "coinmama",
@@ -1715,6 +1815,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Kosovo: [
     "coinmama",
@@ -1728,6 +1829,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Kuwait: [
     "coinmama",
@@ -1746,6 +1848,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Kyrgyzstan: [
     "coinmama",
@@ -1758,6 +1861,7 @@ const exchangesByCountry = {
     "okx",
     "huobiglobal",
     "bybit",
+    "matrixport",
   ],
   Laos: [
     "coinmama",
@@ -1773,6 +1877,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Latvia: [
     "coinmama",
@@ -1795,6 +1900,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Lebanon: [
     "bittrex",
@@ -1807,6 +1913,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Lesotho: [
     "coinmama",
@@ -1822,6 +1929,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Liberia: [
     "coinmama",
@@ -1835,6 +1943,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Libya: [
     "coinmama",
@@ -1847,6 +1956,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Liechtenstein: [
     "coinmama",
@@ -1867,6 +1977,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Lithuania: [
     "coinmama",
@@ -1888,6 +1999,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Luxembourg: [
     "coinmama",
@@ -1909,6 +2021,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Madagascar: [
     "coinmama",
@@ -1924,6 +2037,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Malawi: [
     "coinmama",
@@ -1938,6 +2052,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Malaysia: [
     "coinmama",
@@ -1954,6 +2069,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Maldives: [
     "coinmama",
@@ -1971,6 +2087,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Mali: [
     "coinmama",
@@ -1984,6 +2101,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Malta: [
     "coinmama",
@@ -2001,6 +2119,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Marshall Islands": [
     "coinmama",
@@ -2016,6 +2135,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Martinique (France)": [
     "coinmama",
@@ -2032,6 +2152,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Mauritania: [
     "coinmama",
@@ -2047,6 +2168,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Mauritius: [
     "coinmama",
@@ -2060,6 +2182,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Mexico: [
     "coinmama",
@@ -2080,6 +2203,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
     "bitso",
+    "matrixport",
   ],
   Micronesia: [
     "coinmama",
@@ -2095,6 +2219,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Moldova: [
     "coinmama",
@@ -2110,6 +2235,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Monaco: [
     "coinmama",
@@ -2126,6 +2252,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Mongolia: [
     "coinmama",
@@ -2140,6 +2267,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Montenegro: [
     "coinmama",
@@ -2155,6 +2283,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Montserrat (UK)": [
     "coinmama",
@@ -2169,6 +2298,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Morocco: [
     "coinmama",
@@ -2182,6 +2312,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Mozambique: [
     "coinmama",
@@ -2196,6 +2327,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Myanmar (formerly Burma)": [
     "coinmama",
@@ -2225,6 +2357,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Nauru: [
     "coinmama",
@@ -2240,6 +2373,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Navassa Island (USA)": [
     "coinmama",
@@ -2249,6 +2383,7 @@ const exchangesByCountry = {
     "okx",
     "kucoin",
     "bybit",
+    "matrixport",
   ],
   Nepal: [
     "coinmama",
@@ -2265,6 +2400,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Netherlands: [
     "coinmama",
@@ -2284,6 +2420,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "New Caledonia (France)": [
     "coinmama",
@@ -2298,6 +2435,7 @@ const exchangesByCountry = {
     "kucoin",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "New Zealand": [
     "coinmama",
@@ -2319,6 +2457,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Nicaragua: [
     "coinmama",
@@ -2332,6 +2471,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Niger: [
     "coinmama",
@@ -2347,6 +2487,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Nigeria: [
     "coinmama",
@@ -2364,6 +2505,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Niue (New Zealand)": [
     "coinmama",
@@ -2378,6 +2520,7 @@ const exchangesByCountry = {
     "kucoin",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "Norfolk Island (Australia)": [
     "coinmama",
@@ -2392,6 +2535,7 @@ const exchangesByCountry = {
     "kucoin",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "North Korea": ["bittrex", "bitfinex"],
   "North Macedonia (formerly Macedonia)": [
@@ -2407,6 +2551,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Northern Mariana Islands (USA)": [
     "simplex",
@@ -2435,6 +2580,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Oman: [
     "coinmama",
@@ -2453,6 +2599,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Pakistan: [
     "coinmama",
@@ -2465,6 +2612,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Palau: [
     "coinmama",
@@ -2480,6 +2628,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Palestine: [
     "simplex",
@@ -2494,6 +2643,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Panama: [
     "coinmama",
@@ -2509,6 +2659,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Papua New Guinea": [
     "coinmama",
@@ -2524,6 +2675,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Paraguay: [
     "coinmama",
@@ -2542,6 +2694,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Peru: [
     "coinmama",
@@ -2562,6 +2715,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Philippines: [
     "coinmama",
@@ -2582,6 +2736,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Pitcairn Islands (UK)": [
     "coinmama",
@@ -2596,6 +2751,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Poland: [
     "coinmama",
@@ -2618,6 +2774,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Portugal: [
     "coinmama",
@@ -2640,6 +2797,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Puerto Rico (USA)": [
     "simplex",
@@ -2664,6 +2822,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Romania: [
     "coinmama",
@@ -2685,6 +2844,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Russia: [
     "coinmama",
@@ -2716,6 +2876,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Saba (Netherlands)": [
     "coinmama",
@@ -2730,6 +2891,7 @@ const exchangesByCountry = {
     "kucoin",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "Saint Barthelemy (France)": [
     "coinmama",
@@ -2744,6 +2906,7 @@ const exchangesByCountry = {
     "kucoin",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "Saint Kitts and Nevis": [
     "coinmama",
@@ -2759,6 +2922,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "Saint Lucia": [
     "coinmama",
@@ -2774,6 +2938,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Saint Martin (France)": [
     "coinmama",
@@ -2790,6 +2955,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "Saint Pierre and Miquelon (France)": [
     "coinmama",
@@ -2804,6 +2970,7 @@ const exchangesByCountry = {
     "kucoin",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "Saint Vincent and the Grenadines": [
     "coinmama",
@@ -2819,6 +2986,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Samoa: [
     "coinmama",
@@ -2832,6 +3000,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "San Marino": [
     "coinmama",
@@ -2848,6 +3017,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Sao Tome and Principe": [
     "coinmama",
@@ -2863,6 +3033,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Saudi Arabia": [
     "coinmama",
@@ -2881,6 +3052,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Senegal: [
     "coinmama",
@@ -2895,6 +3067,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Serbia: [
     "coinmama",
@@ -2910,6 +3083,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Seychelles: [
     "coinmama",
@@ -2924,6 +3098,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Sierra Leone": [
     "coinmama",
@@ -2937,6 +3112,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Singapore: [
     "coinmama",
@@ -2968,6 +3144,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "Sint Maarten (Netherlands)": [
     "coinmama",
@@ -2984,6 +3161,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Slovakia: [
     "coinmama",
@@ -3006,6 +3184,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Slovenia: [
     "coinmama",
@@ -3027,6 +3206,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Solomon Islands": [
     "coinmama",
@@ -3042,6 +3222,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Somalia: [
     "coinmama",
@@ -3055,6 +3236,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "South Africa": [
     "coinmama",
@@ -3075,6 +3257,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "South Georgia and the South Sandwich Islands (UK)": [
     "coinmama",
@@ -3088,6 +3271,7 @@ const exchangesByCountry = {
     "kucoin",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   "South Korea": [
     "coinmama",
@@ -3106,6 +3290,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
     "korbit",
+    "matrixport",
   ],
   "South Sudan": [
     "bittrex",
@@ -3118,6 +3303,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Spain: [
     "coinmama",
@@ -3140,6 +3326,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Sri Lanka": [
     "coinmama",
@@ -3155,8 +3342,9 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
-  Sudan: ["bittrex", "simplex", "kucoin", "bitfinex"],
+  Sudan: ["bittrex", "simplex", "kucoin", "bitfinex", "matrixport"],
   Suriname: [
     "coinmama",
     "simplex",
@@ -3171,6 +3359,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Sweden: [
     "coinmama",
@@ -3192,6 +3381,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Switzerland: [
     "coinmama",
@@ -3214,6 +3404,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Syria: ["bittrex", "wazirx", "okx", "bitfinex"],
   Taiwan: [
@@ -3234,6 +3425,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Tajikistan: [
     "coinmama",
@@ -3249,6 +3441,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Tanzania: [
     "coinmama",
@@ -3264,6 +3457,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Thailand: [
     "coinmama",
@@ -3281,6 +3475,7 @@ const exchangesByCountry = {
     "bitfinex",
     "bybit",
     "bitkub",
+    "matrixport",
   ],
   "Timor-Leste": [
     "coinmama",
@@ -3295,6 +3490,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Togo: [
     "coinmama",
@@ -3310,6 +3506,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Tokelau (New Zealand)": [
     "coinmama",
@@ -3325,6 +3522,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Tonga: [
     "coinmama",
@@ -3340,6 +3538,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Trinidad and Tobago": [
     "coinmama",
@@ -3354,6 +3553,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Tunisia: [
     "coinmama",
@@ -3369,6 +3569,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Turkey: [
     "coinmama",
@@ -3389,6 +3590,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Turkmenistan: [
     "coinmama",
@@ -3403,6 +3605,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Turks and Caicos Islands (UK)": [
     "coinmama",
@@ -3417,6 +3620,7 @@ const exchangesByCountry = {
     "huobiglobal",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Tuvalu: [
     "coinmama",
@@ -3432,6 +3636,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Uganda: [
     "coinmama",
@@ -3446,6 +3651,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Ukraine: [
     "coinmama",
@@ -3462,6 +3668,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "United Arab Emirates (UAE)": [
     "coinmama",
@@ -3480,6 +3687,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "United Kingdom (UK)": [
     "coinmama",
@@ -3499,6 +3707,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "United States of America (USA)": [
     "coinmama",
@@ -3526,6 +3735,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "US Virgin Islands (USA)": [
     "simplex",
@@ -3535,6 +3745,7 @@ const exchangesByCountry = {
     "kucoin",
     "huobiglobal",
     "bybit",
+    "matrixport",
   ],
   Uzbekistan: [
     "coinmama",
@@ -3565,6 +3776,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Venezuela: [
     "coinmama",
@@ -3575,6 +3787,7 @@ const exchangesByCountry = {
     "okx",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Vietnam: [
     "coinmama",
@@ -3593,6 +3806,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   "Wake Island (USA)": [
     "coinmama",
@@ -3616,6 +3830,7 @@ const exchangesByCountry = {
     "kucoin",
     "gateio",
     "bybit",
+    "matrixport",
   ],
   Yemen: [
     "coinmama",
@@ -3625,6 +3840,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Zambia: [
     "coinmama",
@@ -3641,6 +3857,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
   Zimbabwe: [
     "coinmama",
@@ -3651,6 +3868,7 @@ const exchangesByCountry = {
     "gateio",
     "bitfinex",
     "bybit",
+    "matrixport",
   ],
 }
 

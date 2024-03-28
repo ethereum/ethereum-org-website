@@ -338,10 +338,12 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
         alignItems="center"
         flexWrap="wrap"
       >
-        <Box color="text200">
-          <Translation id="website-last-updated" />:{" "}
-          {getLocaleTimestamp(locale as Lang, lastDeployDate!)}
-        </Box>
+        {lastDeployDate && (
+          <Box color="text200">
+            <Translation id="website-last-updated" />:{" "}
+            {getLocaleTimestamp(locale as Lang, lastDeployDate)}
+          </Box>
+        )}
         <Box my={4}>
           {socialLinks.map(({ to, ariaLabel, icon, color }) => (
             <BaseLink

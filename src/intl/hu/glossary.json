@@ -11,7 +11,7 @@
   "api-definition": "Az Alkalmazás programozási felület (API) definíciók kötege arról, hogyan lehet használni egy szoftverrészt. Az API az alkalmazás és a webszerver között helyezkedik el, s az ezek közötti adatátadást teszi lehetővé.",
   "asic-term": "ASIC",
   "asic-definition": "Alkalmazásspecifikus intergált körök. Ez általában egy integrált körre vonatkozik, mely személyre szabottan készült a kriptovaluta bányászatához.",
-  "assert-term": "asset",
+  "assert-term": "assert",
   "assert-definition": "A <a href=\"/glossary/#solidity\">Solidity</a> programozási nyelvben az assert(false) a „0xfe” érvénytelen operációs kódra lesz átfordítva, ami felhasználja az összes maradék <a href=\"/glossary/#gas\">gázt</a> és visszafordítja a változtatásokat. Amikor egy assert() parancs hibára fut, akkor valami nagyon rossz és váratlan történik, és a fejlesztőknek meg kell javítaniuk a kódot. Az assert() parancsot arra kell használni a programban, hogy sohe ne történhessenek meg bizonyos események. <a href=\"/developers/docs/smart-contracts/security/\">Bővebben az okosszerződésbiztonságról</a>.",
   "attestation-term": "Tanúsítás",
   "attestation-definition": "Egy entitás állítása arról, hogy valami igaz. Az Ethereum kontextusában a konszenzusvalidátorok egy állítást tesznek arról, hogy mi a lánc státusza. Előre meghatározott időben minden egyes validátor felel azért, hogy tanúsításokat adjon, ami hivatalosan igazolja, hogy ő mit lát a láncon, beleértve a legutóbbi befejezett ellenőrzési pontot és a lánc aktuális elejét. <a href=\"/developers/docs/consensus-mechanisms/pos/attestations/\">Bővebben a tanúsításokról</a>.",

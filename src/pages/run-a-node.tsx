@@ -862,7 +862,7 @@ const RunANodePage = () => {
         </Column>
       </StakingCalloutContainer>
       <Content>
-        <H3 id="plan-on-staking">
+        <H3 id="plan-on-staking" display="flex" alignItems="center">
           <Emoji text=":cut_of_meat:" fontSize="2em" me="4" />
           {t("page-run-a-node-staking-plans-title")}
         </H3>
@@ -875,7 +875,7 @@ const RunANodePage = () => {
             {t("page-run-a-node-staking-plans-ethstaker-link-label")}
           </InlineLink>
         </Text>
-        <H3 id="rasp-pi">
+        <H3 id="rasp-pi" display="flex" alignItems="center">
           <Emoji text=":pie:" fontSize="2em" me="4" />
           {t("page-run-a-node-rasp-pi-title")}
         </H3>

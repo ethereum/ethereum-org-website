@@ -49,7 +49,7 @@ Les identifiants décentralisés sont stockés sur des registres distribués (bl
 
 ## Qu'est-ce qui rend possible les identifiants décentralisés ? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastructure à clé publique (ICP) {#public-key-infrastructure}
+### 1. Infrastructure à clé publique (ICP) {#public-key-cryptography}
 
 L'infrastructure à clé publique (ICP) est une mesure de sécurité de l'information qui génère une [clé publique](/glossary/#public-key) et une [clé privée](/glossary/#private-key) pour une entité. La cryptographie à clé publique est utilisée dans les réseaux blockchain pour authentifier l'identité des utilisateurs et prouver la propriété des actifs numériques.
 

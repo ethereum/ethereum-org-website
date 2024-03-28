@@ -49,7 +49,7 @@ Decentralizovani identifikatori se čuvaju u distribuiranim bazama (lancima blok
 
 ## Šta omogućava decentralizovane identifikatore? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastruktura javnog ključa (PKI) {#public-key-infrastructure}
+### 1. Infrastruktura javnog ključa (PKI) {#public-key-cryptography}
 
 Infrastruktura javnog ključa (PKI) je bezbednosna mera informacionih sistema koja generiše [javni ključ](/glossary/#public-key) i [privatni ključ](/glossary/#private-key) za jedan entitet. Kriptografija javnog ključa se izdaje na mrežama lanca blokova da bi dokazala identitet korisnika i kako bi dokazala vlasništvo nam digitalnom imovinom.
 

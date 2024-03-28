@@ -3,7 +3,7 @@ title: Cómo visualizar su NFT en su cartera (parte 3/3 de la serie de tutoriale
 description: Este tutorial explica cómo visualizar un NFT en MetaMask
 author: "Sumi Mudgil"
 tags:
-  - "NTF"
+  - "NFT"
   - "ERC-721"
   - "Alchemy"
   - "tókenes no fungibles"

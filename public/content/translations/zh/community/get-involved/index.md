@@ -16,7 +16,7 @@ lang: zh
 - [在 Gitcoin 上查找悬赏](https://gitcoin.co/)，解决一个或大或小的技术问题，赚取加密货币！
 - 参加你附近的一个 [ETHGlobal](http://ethglobal.co/) 黑客马拉松活动！
 - 查看[与你的专业领域或所选编程语言相关的项目](/developers/docs/programming-languages/)
-- 观看或参与[核心开发人员电话会议](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- 观看或参与[核心开发人员电话会议](https://www.youtube.com/@EthereumProtocol)
 - [生态系统支持计划的愿望清单](https://esp.ethereum.foundation/wishlist/) - 适用于工具、文档和基础设施领域，以太坊生态系统支持计划正在积极寻求这些领域的资助申请
 - [Web3Bridge](https://www.web3bridge.com/) - 加入有抱负的 web3 社区，一起积极寻找、培训和支持整个非洲的数百名开发人员和社区成员
 - 加入[以太坊牧猫人组织 Discord](https://discord.io/EthCatHerders)

@@ -17,7 +17,7 @@ Zazwyczaj standardy są wprowadzane jako [Propozycje ulepszeń Ethereum](/eips/)
 - [Forum dyskusyjne EIP](https://ethereum-magicians.org/c/eips)
 - [Omówienie zarządzania Ethereum](https://blog.bmannconsulting.com/ethereum-governance/) _31 marca 2019 r. – Boris Mann_
 - [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 marca 2020 - Hudson Jameson_
-- [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(Playlista YouTube)_
+- [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/@EthereumProtocol) _(Playlista YouTube)_
 
 ## Rodzaje standardów {#types-of-standards}
 

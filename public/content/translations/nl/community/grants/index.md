@@ -36,7 +36,6 @@ Deze projecten hebben hun eigen beurzen gecreëerd voor projecten die gericht zi
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)-ecosysteem_
 - [UMA Grants Program](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/)-ontwikkelaarsondersteuning_
 - [Uniswap Grants Program](https://www.unigrants.org/) - _[Uniswap](https://uniswap.org/)-gemeenschap_
-- [Web3 Grants](https://web3grants.net) - _Een uitgebreide lijst van web3-/cryptogerelateerde subsidieprogramma's_
 
 ## Kwadratische financiering {#quadratic-funding}
 

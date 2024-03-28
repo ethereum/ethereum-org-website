@@ -16,7 +16,7 @@ Machen Sie sich zunächst mit der Mission und den Grundsätze von ethereum.org i
 - [Finden Sie ein Bounty auf Gitcoin](https://gitcoin.co/), arbeiten Sie an kleinen und großen technischen Problemen und verdienen Sie Kryptowährung.
 - Besuchen Sie ein [ETHGlobal](http://ethglobal.co/)-Hakathon in Ihrer Nähe.
 - Schauen Sie sich an, welche [Projekte im Zusammenhang mit Ihrem Fachgebiet oder der Programmiersprache Ihrer Wahl](/developers/docs/programming-languages/) es gibt
-- Nehmen Sie teil an den [Core DEV-Calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) oder sehen Sie sie sich an
+- Nehmen Sie teil an den [Core DEV-Calls](https://www.youtube.com/@EthereumProtocol) oder sehen Sie sie sich an
 - [Wunschliste des Ethereum Ecosystem-Supportprogramms](https://esp.ethereum.foundation/wishlist/) – Tools, Dokumentation und Infrastrukturbereiche, für die das Ethereum Ecosystem-Supportprogramm aktiv nach Förderern sucht
 - [Web3Bridge](https://www.web3bridge.com/) – beteiligen Sie sich an der Initiative der aufstrebenden web3-Community, Hunderte von Entwicklern und Mitgliedern der Community in ganz Afrika zu finden, zu schulen und zu unterstützen
 - Trete dem [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) bei

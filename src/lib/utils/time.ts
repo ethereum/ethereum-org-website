@@ -1,20 +1,23 @@
-// TODO: we are using `luxon` package just for this util, should consider rewrite using native JS Date API
-import { DateTime } from "luxon"
-
 import { Lang } from "../types"
 
-export const INVALID_DATETIME = "Invalid DateTime"
+export const getLocaleTimestamp = (
+  locale: Lang,
+  timestamp: string,
+  options?: Intl.DateTimeFormatOptions
+) => {
+  const opts =
+    options ||
+    ({
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+    } as Intl.DateTimeFormatOptions)
+  const date = new Date(timestamp)
+  return new Intl.DateTimeFormat(locale, opts).format(date)
+}
 
-export const getLocaleTimestamp = (locale: Lang, timestamp: string) => {
-  let localeTimestamp = DateTime.fromSQL(timestamp)
-    .setLocale(locale)
-    .toLocaleString(DateTime.DATE_FULL)
+export const getLocaleFormattedDate = (locale: Lang, date: string) => {
+  const walletLastUpdatedDate = new Date(date)
 
-  // Fallback to ISO
-  if (localeTimestamp === INVALID_DATETIME) {
-    localeTimestamp = DateTime.fromISO(timestamp)
-      .setLocale(locale)
-      .toLocaleString(DateTime.DATE_FULL)
-  }
-  return localeTimestamp
+  return new Intl.DateTimeFormat(locale).format(walletLastUpdatedDate)
 }

@@ -4,7 +4,7 @@ import * as NavigationMenu from "@radix-ui/react-navigation-menu"
 
 import { Button } from "@/components/Buttons"
 
-import { NAV_PY, SECTION_LABELS } from "@/lib/constants"
+import { MAIN_NAV_ID, NAV_PY, SECTION_LABELS } from "@/lib/constants"
 
 import type { NavSections } from "../types"
 
@@ -35,7 +35,12 @@ const Menu = ({ sections, ...props }: NavMenuProps) => {
         delayDuration={0}
       >
         <NavigationMenu.List asChild>
-          <UnorderedList display="flex" listStyleType="none" m="0">
+          <UnorderedList
+            id={MAIN_NAV_ID}
+            display="flex"
+            listStyleType="none"
+            m="0"
+          >
             {SECTION_LABELS.map((sectionKey) => {
               const { label, items } = sections[sectionKey]
               const isActive = activeSection === sectionKey

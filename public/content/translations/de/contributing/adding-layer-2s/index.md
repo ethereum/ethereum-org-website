@@ -78,7 +78,7 @@ _Wir betrachten andere Skalierungslösungen, die nicht Ethereum für Datenverfü
 
 **Links zu dApps im Ebene-2-Ökosystem**
 
-- Wir möchten unseren Benutzern Informationen bieten, was sie auf dieser Ebene 2 erwarten können. (z. B. https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- Wir möchten unseren Benutzern Informationen bieten, was sie auf dieser Ebene 2 erwarten können. (z. B. https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Token-Vertragslisten**
 

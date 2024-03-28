@@ -31,7 +31,7 @@ lang: ar
 
 - [EEA](https://entethalliance.org/) _تحالف إيثريوم للمؤسسات هي منظمة معايير يدعمها أحد الأعضاء يتمثل ميثاقها في تطوير مواصفات سلسلة الكتل المفتوحة التي تدعم التجانس والعمل المشترك للشركات والمستهلكين في جميع انخاء العالم. يتكون مجتمعنا العالمي من الأعضاء من القادة والمتبنين والمبتكرين والمطورين والشركات الذين يتعاونون فيما بينهم لإنشاء موقع مفتوح لامركزي لصالح الجميع._
 
-- [مؤسسة Hyperledger](https://hyperledger.org) _Hyperledger هو جهد تعاوني مفتوح المصدر إُنشئ لتطوير تقنيات سلسلة الكتل على مستوى قطاعات الصناعة. وهو تعاون عالمي، تستضيفه مؤسسة Linux، بما في ذلك قادة في التمويل والأعمال المصرفية وإنترنت الأشياء وسلاسل الإمداد والتصنيع والتكنولوجيا._ _لدى المؤسسة بعض المشاريع تعمل فيها باستخدام حزمة إيثريوم:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+- [مؤسسة Hyperledger](https://hyperledger.org) _Hyperledger هو جهد تعاوني مفتوح المصدر إُنشئ لتطوير تقنيات سلسلة الكتل على مستوى قطاعات الصناعة. وهو تعاون عالمي، تستضيفه مؤسسة Linux، بما في ذلك قادة في التمويل والأعمال المصرفية وإنترنت الأشياء وسلاسل الإمداد والتصنيع والتكنولوجيا._ _لدى المؤسسة بعض المشاريع تعمل فيها باستخدام حزمة إيثريوم:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - Hyperledger Burrow
 
 ## خدمات ترّكز علي المؤسسات {#enterprise-focused-services}
 
@@ -45,7 +45,6 @@ lang: ar
 ## البروتوكول والبنية التحتية {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _عميل إيثريوم مفتوح المصدر تم تطويره بموجب ترخيص Apache 2.0 ومكتوب بلغة Java_
-- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _عميل سلسلة كتل قياسي لديه مترجم عقد ذكي بإذن مسبق تم تطويره جزئيًا حسب مواصفات جهاز إيثريوم الافتراضي (EVM)_
 - [Infura](https://infura.io/) _API وصول API القابل للتوسع إلى إيثريوم وشبكات IPFS_
 - [Kaleido](https://kaleido.io/) _منصة كاملة الحزم لبناء وتشغيل الأنظمة الأيكولوجية المؤسسية الهجينة عبر السحابة_
 - [Autonity](https://www.clearmatics.com/about/) _مجموعة بروتوكولات تنفذ بروتوكولات p2p وتوفر برامج وبنية تحتية خاصة بالعميل_

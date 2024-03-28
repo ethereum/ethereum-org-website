@@ -16,7 +16,9 @@ lang: uk
 
 ## Ресурси Ethereum.org {#ethereum-org}
 
-Ethereum.org перекладено на більше ніж 40 мов, які ви можете знайти на нашій [сторінці мов](/languages).
+Ethereum.org перекладено на більше ніж 40 мов, які ви можете знайти на нашій сторінці мов.
+
+![Language selector menu](./language-selector-menu.png)
 
 Якщо ви володієте кількома мовами й хочете допомогти нам охопити більше людей, ви також можете долучитися до програми перекладу [ethereum.org](/contributing/translation-program/#translation-program) і допомогти нам перекласти вебсайт.
 

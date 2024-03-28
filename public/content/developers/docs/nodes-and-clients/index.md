@@ -135,11 +135,13 @@ This table summarizes the different clients. All of them pass [client tests](htt
 
 | Client                                          | Language | Operating systems     | Networks                           | Sync strategies                    | State pruning   |
 | ----------------------------------------------- | -------- | --------------------- | ---------------------------------- | ---------------------------------- | --------------- |
-| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Goerli           | Snap, Full                         | Archive, Pruned |
-| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Snap (without serving), Fast, Full | Archive, Pruned |
-| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Snap, Fast, Full                   | Archive, Pruned |
-| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Full                               | Archive, Pruned |
-| [Reth](https://github.com/paradigmxyz/reth)     | Rust     | Linux, Windows, macOS | Mainnet, Sepolia, Goerli, and more | Full                               | Archive, Pruned |
+| [Geth](https://geth.ethereum.org/)              | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky           | Snap, Full                         | Archive, Pruned |
+| [Nethermind](http://nethermind.io/)             | C#, .NET | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap (without serving), Fast, Full | Archive, Pruned |
+| [Besu](https://besu.hyperledger.org/en/stable/) | Java     | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Fast, Full                   | Archive, Pruned |
+| [Erigon](https://github.com/ledgerwatch/erigon) | Go       | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Full                               | Archive, Pruned |
+| [Reth](https://github.com/paradigmxyz/reth) _(beta)_     | Rust     | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Full                               | Archive, Pruned |
+| [EthereumJS](https://github.com/ethereumjs/ethereumjs-monorepo) _(beta)_     | TypeScript     | Linux, Windows, macOS | Mainnet, Sepolia, Holesky | Snap, Full, Light                               |  |
+
 
 For more on supported networks, read up on [Ethereum networks](/developers/docs/networks/).
 

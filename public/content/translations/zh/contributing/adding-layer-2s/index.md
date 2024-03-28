@@ -76,7 +76,7 @@ _我们认为，其他不使用以太坊来实现数据可用性或安全性的�
 
 **二层网络生态系统去中心化应用程序链接**
 
-- 我们希望能够提供有关用户可以在此二层网络上执行哪些操作的信息 （例如 https://portal.arbitrum.one/、https://www.optimism.io/apps/all）。
+- 我们希望能够提供有关用户可以在此二层网络上执行哪些操作的信息 （例如 https://portal.arbitrum.io/、https://www.optimism.io/apps）。
 
 **代币合约列表**
 

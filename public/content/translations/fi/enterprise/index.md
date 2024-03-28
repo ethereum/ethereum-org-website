@@ -32,7 +32,7 @@ Monet organisaatiot ovat tehneet yhteistyötä Ethereumin yritysystävällisyyde
 
 - [EEA](https://entethalliance.org/) _The Enterprise Ethereum Alliance on jäsenlähtöinen standardointiorganisaatio, jonka tavoitteena on kehittää avointen lohkoketjumääritysten yhdenmukaistamista ja yhteentoimivuutta yrityksille ja kuluttajille maailmanlaajuisesti. Kansainvälisen yhteisön jäsenet ovat johtajia, adoptoijia, innovaattoreita, kehittäjiä ja yrityksiä, joiden yhteisenä tavoitteena on luoda avoin, hajautettu verkko kaikkien hyödyksi._
 
-- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger on avoimen lähdekoodin yhteistyöprojekti, joka on luotu edistämään toimialariippumattomia lohkoketjuteknologioita. Se on The Linux Foundationin isännöimänä globaali yhteistyöverkosto, johon kuuluu finanssialan, pankkimaailman, IoT:n, toimitusketjujen, tuotannon ja teknologian johtavia toimijoita._ _Säätiöllä on joitakin projekteja, jotka toimivat Ethereum stackissa:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger on avoimen lähdekoodin yhteistyöprojekti, joka on luotu edistämään toimialariippumattomia lohkoketjuteknologioita. Se on The Linux Foundationin isännöimänä globaali yhteistyöverkosto, johon kuuluu finanssialan, pankkimaailman, IoT:n, toimitusketjujen, tuotannon ja teknologian johtavia toimijoita._ _Säätiöllä on joitakin projekteja, jotka toimivat Ethereum stackissa:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - Hyperledger Burrow
 
 ## Yrityksille suunnatut palvelut {#enterprise-focused-services}
 
@@ -46,7 +46,6 @@ Seuraavat projektit tarjoavat lohkoketjupalveluja yritystason järjestelmille:
 ## Protokolla ja Infrastruktuuri {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _avoimella lähdekoodilla oleva Ethereum-asiakasohjelma, joka on kehitetty Apache 2.0 -lisenssillä ja kirjoitettu Javalla_
-- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _modulaarinen lohkoketjuasiakasohjelma oikeutetulla älysopimustulkilla, osittain kehitetty Ethereum Virtual Machinen (EVM) määritysten mukaan_
 - [Infura](https://infura.io/) _skaalattava API-yhteys Ethereumiin ja IPFS-verkkoihin_
 - [Kaleido](https://kaleido.io/) _full-stack-alusta cross-cloud, hybridi yritysekosysteemien rakentamiseen ja ajamiseen_
 - [Autonity](https://www.clearmatics.com/about/) _protokollakokoelma, joka toteuttaa p2p-protokollat ja tarjoaa asiakasohjelmiston ja infrastruktuurin_

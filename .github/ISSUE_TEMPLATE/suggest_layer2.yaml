@@ -100,7 +100,7 @@ body:
     id: layer_2_dapp_ecosystem
     attributes:
       label: Link to dapp ecosystem (if applicable)
-      description: "Please provide a link to the dapp ecosystem. (ex: https://portal.arbitrum.one/, https://www.optimism.io/apps/all)"
+      description: "Please provide a link to the dapp ecosystem. (ex: https://portal.arbitrum.io/, https://www.optimism.io/apps)"
   - type: input
     id: layer_2_token_contract_list
     attributes:

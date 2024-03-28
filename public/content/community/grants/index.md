@@ -18,7 +18,6 @@ These programs support the broad Ethereum ecosystem by offering grants to a wide
 - [MetaCartel](https://www.metacartel.org/grants/) - _Dapp development, DAO creation_
 - [Moloch DAO](https://www.molochdao.com/) - _Privacy, layer 2 scaling, client security, and more_
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google spreadsheet of organizations offering grants_
-- [Crunchbase for Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _Filter and search for grants by category, use case, amount, and more. Contribute to help others find the right grant._
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) - _Grants to support Ethereum-related academic work_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks has compiled a comprehensive directory of all grants, RFPs, and bug bounties._
 
@@ -36,7 +35,6 @@ These projects have created their own grants for projects aimed at developing an
 - [Swarm Foundation Grants Program](https://my.ethswarm.org/grants) - _[Swarm Foundation](https://www.ethswarm.org/) ecosystem_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/) ecosystem_
 - [Uniswap Grants Program](https://www.uniswapfoundation.org/grants) – _[Uniswap](https://uniswap.org/) community_
-- [Web3 Grants](https://web3grants.net) - _An extensive list of web3/crypto related grant programs_
 
 ## Quadratic funding {#quadratic-funding}
 

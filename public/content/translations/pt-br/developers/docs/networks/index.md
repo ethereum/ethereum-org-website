@@ -60,7 +60,6 @@ As duas redes de testes públicas que os desenvolvedores dos clientes estão atu
 - [Faucet do Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet do Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet da Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
-- [Faucet da rede de teste | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(suporte a longo prazo)_ {#goerli}
 

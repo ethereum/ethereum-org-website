@@ -32,7 +32,7 @@ Některé organizace vyvinuly společné úsilí směřující ke zlepšení pod
 
 - [EEA](https://entethalliance.org/) _Enterprise Ethereum Alliance je organizace, jejíž členové vytvářejí standardy pro vývoj otevřených blockchainových specifikací s cílem sjednocovat a propojovat řešení pro podniky i jejich zákazníky po celém světě. Naše globální komunita se skládá z vedoucích osobností, prvních uživatelů, inovátorů, vývojářů a podniků, které spolupracují na vytvoření otevřeného, decentralizovaného webu ve prospěch všech._
 
-- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger je společné open source úsilí o vytvoření pokročilých blockchainových technologií pro podnikové využití. Je to globální spolupráce zastřešená nadací The Linux Foundation a zahrnující vedoucí postavy z bankovnictví a finančního sektoru, Internetu věcí, dodavatelských řetězců, výroby a technologií._ _Některé projekty v této nadaci jsou určeny pro Ethereum:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger je společné open source úsilí o vytvoření pokročilých blockchainových technologií pro podnikové využití. Je to globální spolupráce zastřešená nadací The Linux Foundation a zahrnující vedoucí postavy z bankovnictví a finančního sektoru, Internetu věcí, dodavatelských řetězců, výroby a technologií._ _Některé projekty v této nadaci jsou určeny pro Ethereum:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - Hyperledger Burrow
 
 ## Podnikově zaměřené služby {#enterprise-focused-services}
 
@@ -46,7 +46,6 @@ Následující projekty poskytují blockchainové služby pro firemní systémy:
 ## Protokol a infrastruktura {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _open-source Ethereum klient vyvinutý pod licencí Apache 2.0 a napsaný v Javě_
-- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _modulární blockchain klient s interpreterem chytrých kontraktů s kontrolovaným přístupem, částečně vyvinutým podle specifikace virtuálního stroje Ethereum (EVM)_
 - [Infura](https://infura.io/) _škálovatelné API pro přístup k sítím Ethereum a IPFS_
 - [Kaleido](https://kaleido.io/) _kompletní platforma pro budování a provoz mezicloudových, hybridních firemních ekosystémů_
 - [Autonity](https://www.clearmatics.com/about/) _sada protokolů, která implementuje p2p protokoly a poskytuje klientský software a infrastrukturu_

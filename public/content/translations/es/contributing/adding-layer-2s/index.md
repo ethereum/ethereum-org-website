@@ -78,7 +78,7 @@ _No consideramos que otras soluciones de escalabilidad que no utilicen Ethereum 
 
 **Enlaces a dapps en el ecosistema de capa 2**
 
-- Queremos ser capaces de proporcionar información sobre lo que los usuarios pueden llegar a hacer en esta capa 2. (p. ej., https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- Queremos ser capaces de proporcionar información sobre lo que los usuarios pueden llegar a hacer en esta capa 2. (p. ej., https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Lista de contratos de tókenes**
 

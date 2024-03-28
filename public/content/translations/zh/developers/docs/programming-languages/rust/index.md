@@ -42,7 +42,7 @@ incomplete: true
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _与类似以太坊的网络交互的外部帐户集合_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _以太坊快速共识层客户端_
 - [ Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _使用 WebAssembly 的确定性子集对以太坊智能合约执行层建议的重新设计_
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API 参考_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API 参考_
 - [Solaris](https://github.com/paritytech/sol-rs) - _使用本机 Parity 客户端以太坊虚拟机的 Solidity 智能合约单元测试工具。_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _以太坊虚拟机的 Rust 实现_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust 语言的 Wavelet 智能合约_

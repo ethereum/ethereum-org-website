@@ -55,6 +55,7 @@
   "page-eth-underpins": "ETH underpins the Ethereum financial system",
   "page-eth-underpins-desc": "Not satisfied with payments, the Ethereum community is building a whole financial system that's <a href=\"/glossary/#peer-to-peer-network\">peer-to-peer</a> and accessible to everyone.",
   "page-eth-underpins-desc-2": "You can use ETH as collateral to generate entirely different cryptocurrency tokens on Ethereum. Plus you can borrow, lend and earn interest on ETH and other ETH-backed tokens.",
+  "page-eth-weth": "Wrapped ether (WETH) is used to extend the functionality of ETH to work with other tokens and applications. <a href=\"/wrapped-eth\">Learn more about WETH</a>.",
   "page-eth-uses": "Uses for ETH grow every day",
   "page-eth-uses-desc": "Because Ethereum is programmable, developers can shape ETH in countless ways.",
   "page-eth-uses-desc-2": "Back in 2015, all you could do was send ETH from one Ethereum account to another. Here are just some of things you can do today.",

@@ -14,7 +14,7 @@ Jumuiya ya Ethereum inahusisha watu wa asili tofauti na wenye ujuzi wa kila aina
 - [Tafuta fadhila kwenye Gitcoin](https://gitcoin.co/), fanyia kazi itilafu ndogo ama kubwa na ujipatie kripto!
 - Shiriki kwenye[ETHGlobal](http://ethglobal.co/)hackathon iliyokaribu nawe!
 - Vinjari juu ya [miradi inayohusiana na taaluma yako au lugha ya usimbuajiutakayochagua.](/developers/docs/programming-languages/)
-- Tazama au shiriki kwenye [mikutano ya wasimbuaji wa ndani](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Tazama au shiriki kwenye [mikutano ya wasimbuaji wa ndani](https://www.youtube.com/@EthereumProtocol)
 - [Orodha pendekezwa ya kuunga mkono Ikolojia ya Ethereum](https://esp.ethereum.foundation/wishlist/) - maeneo amabayo Ikolojia ya Ethereum inatafuta maombi ya fedha kwa ajili ya vifaa, nyaraka, na miundombinu
 - [Daraja la Web3](https://www.web3bridge.com/) - jiunge na wapenzi wa web3 kwenye mpango wa kutambua, kujifunza, na kuunga mkono mamia ya wasanidi programu na wanachama Afrika
 

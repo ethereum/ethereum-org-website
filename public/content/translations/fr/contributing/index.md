@@ -77,7 +77,7 @@ Si votre contribution est fusionnée au contenu d'ethereum.org, nous vous remett
 ### Comment l'obtenir {#how-to-claim}
 
 1. Rejoignez notre [serveur Discord](https://discord.gg/ethereum-org).
-2. Collez un lien vers votre contribution dans le `# 🥇poaps`[canal](https://discord.com/channels/714888181740339261/804005643211898911).
+2. Collez un lien vers votre contribution dans le `# |proof-of-contribution`[canal](https://discord.com/channels/714888181740339261/1212737737916948530).
 3. Attendez qu'un membre de notre équipe vous envoie un lien vers votre POAP.
 4. Récupérez votre POAP !
 

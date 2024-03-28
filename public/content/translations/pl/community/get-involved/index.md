@@ -16,7 +16,7 @@ Zacznij od zapoznania się z misją i wartościami ethereum.org w naszym [kodeks
 - [Szukaj ofert nagród za wyszukiwanie błędów (bounties) na platformie Gitcoin](https://gitcoin.co/), pracuj nad małym lub poważniejszym błędem technicznym i zarabiaj kryptowaluty!
 - Weź udział w hakatonie [ETHGlobal](http://ethglobal.co/) w pobliżu Twojego miejsca zamieszkania!
 - Sprawdź [projekty związane z Twoją dziedziną lub wybranym językiem programowania](/developers/docs/programming-languages/)
-- Oglądaj lub bierz udział w spotkaniach [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Oglądaj lub bierz udział w spotkaniach [Core Dev calls](https://www.youtube.com/@EthereumProtocol)
 - [Program Ecosystem Support](https://esp.ethereum.foundation/wishlist/) - w ramach którego aktywnie wspierane są pomysły, projekty i inicjatywy członków społeczności, jak również przyznawane dotacje w dziedzinach takich jak: narzędzia (tooling), dokumentacja (documentation) i infrastruktura (infrastructure).
 - Program [Web3Bridge](https://www.web3bridge.com/) dołącz do ambitnej społeczności web3 w jej dążeniu do zidentyfikowania, wyszkolenia i wsparcia setek developerów i członków społeczności w całej Afryce
 - Dołącz do [Discorda Ethereum Cat Herders](https://discord.io/EthCatHerders)

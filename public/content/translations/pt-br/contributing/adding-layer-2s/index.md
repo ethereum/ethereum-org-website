@@ -78,7 +78,7 @@ _Não consideramos outras soluções de dimensionamento que não usam o Ethereum
 
 **Links para dapps no ecossistema da camada 2**
 
-- Queremos ser capazes de fornecer informações sobre o que os usuários podem esperar fazer nessa camada 2. (por exemplo, https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- Queremos ser capazes de fornecer informações sobre o que os usuários podem esperar fazer nessa camada 2. (por exemplo, https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Listas de contratos de token**
 

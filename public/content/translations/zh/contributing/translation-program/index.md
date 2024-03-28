@@ -37,7 +37,7 @@ Ethereum.org 翻译计划旨在通过将 Ethereum.org 和其他以太坊内容�
 ### 我们迄今取得的进展 {#our-progress}
 
 - [超过 **4,700** 名翻译人员参与](/contributing/translation-program/contributors/)
-- [网站支持 **52** 种语言](/languages/)
+- 网站支持 **52** 种语言
 - [2022 年翻译了** 300 万**字](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />

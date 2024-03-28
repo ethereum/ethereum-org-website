@@ -74,7 +74,7 @@ Ethereum.org 网站，像开放的以太坊一样，也是一个开源项目。 
 ### 如何领取 {#how-to-claim}
 
 1. 加入我们的 [Discord 服务器](https://discord.gg/ethereum-org)。
-2. 在 `#🥇 | poaps` [频道](https://discord.com/channels/714888181740339261/804005643211898911)中粘贴指向你的贡献的链接。
+2. 在 `#🥇 | proof-of-contribution` [频道](https://discord.com/channels/714888181740339261/1212737737916948530)中粘贴指向你的贡献的链接。
 3. 等待我们的团队成员向您发送 POAP 徽章领取链接。
 4. 领取您的 POAP 徽章！
 

@@ -15,6 +15,7 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Ethereum.org homepage](/)
 - Main navbar
 - Footer links
+- Language support
 
 ## 2) Essential pages {#essential-pages}
 
@@ -40,7 +41,6 @@ Below is a breakdown of the website pages each content bucket contains.
 - [Developers' Home](/developers/)
 - [Developer learning tools](/developers/learning-tools/)
 - [Developer local environment setup](/developers/local-environment/)
-- [Language support](/languages/)
 
 ## 5) Use case pages {#use-case-pages}
 

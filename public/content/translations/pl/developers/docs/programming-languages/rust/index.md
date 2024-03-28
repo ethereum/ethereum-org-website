@@ -42,7 +42,7 @@ Potrzebujesz bardziej podstawowych informacji? Sprawdź na [ethereum.org/learn](
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Kolekcja zewnętrznych źródeł interakcji z siecią podobną do ethereum._
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API referencja_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API referencja_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Wdrażanie maszyny wirtualnej Rust Ethereum_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _Ethereum Rust klient_

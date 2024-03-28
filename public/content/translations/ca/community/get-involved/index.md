@@ -14,7 +14,7 @@ La comunitat Ethereum inclou gent de diferents àmbits i amb diferents habilitat
 - [Trobeu una recompensa en Gitcoin](https://gitcoin.co/), treballeu en un problema tècnic gran o petit, guanyeu criptoactius!
 - Assistiu a una convenció de programadors [ETHGlobal](http://ethglobal.co/) al vostre voltant!
 - Doneu una ullada a [projectes relacionats amb la vostra àrea de coneixements o de llenguatge de programació de la vostra elecció](/developers/docs/programming-languages/)
-- Mireu o participeu en les [trucades de desenvolupament bàsic](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Mireu o participeu en les [trucades de desenvolupament bàsic](https://www.youtube.com/@EthereumProtocol)
 - [Llistat de preferits del programa de suport a l'ecosistema](https://esp.ethereum.foundation/wishlist/) - eines, documentació i àrees d'infraestructura on el Programa de suport a l'ecosistema d'Ethereum cerca activament sol·licituds de subvenció
 - [Web3Bridge](https://www.web3bridge.com/) - uniu- vos a la comunitat web3 aspirant en la seva iniciativa d'identificar, entrenar i donar suport a centenars de desenvolupadors i membres de la comunitat arreu d'Àfrica
 

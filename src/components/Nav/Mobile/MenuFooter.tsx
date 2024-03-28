@@ -10,6 +10,8 @@ import {
 
 import LanguagePicker from "@/components/LanguagePicker"
 
+import { MOBILE_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
+
 import FooterButton from "./FooterButton"
 import FooterItemText from "./FooterItemText"
 
@@ -67,7 +69,11 @@ const MenuFooter = ({
             opacity: 0.4,
           }} // TODO: Replace with overlay component
         >
-          <MenuButton as={FooterButton} icon={BsTranslate}>
+          <MenuButton
+            as={FooterButton}
+            icon={BsTranslate}
+            name={MOBILE_LANGUAGE_BUTTON_NAME}
+          >
             <FooterItemText>{t("languages")}</FooterItemText>
           </MenuButton>
         </LanguagePicker>

@@ -152,4 +152,4 @@ Si vous voulez surveiller les prix du gaz et pouvoir envoyer votre ETH à moindr
 - [Preuve d'enjeu contre preuve de travail](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Des Stratégies pour Optimiser la Consommation de Gas, pour les Développeurs](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [documentation EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [Ressources EIP-1559 de Time Beiko](https://hackmd.io/@timbeiko/1559-resources).
+- [Ressources EIP-1559 de Tim Beiko](https://hackmd.io/@timbeiko/1559-resources).

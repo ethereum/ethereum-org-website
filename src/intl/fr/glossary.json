@@ -11,7 +11,7 @@
   "api-definition": "Une interface de programmation d'application (API) est un ensemble de définitions sur la manière d'utiliser un logiciel. Une API se situe entre une application et un serveur web, et facilite le transfert de données entre eux.",
   "asic-term": "ASIC",
   "asic-definition": "Circuit intégré spécifique à une application. Il s'agit généralement d'un circuit intégré conçu sur mesure pour le minage de crypto-monnaies.",
-  "assert-term": "asset",
+  "assert-term": "assert",
   "assert-definition": "Dans <a href=\"/glossary/#solidity\">Solidity</a>, `assert(false)` compile vers `0xfe`, un opcode invalide, qui utilise tout le <a href=\"/glossary/#gas\">gaz</a> restant et annule tous les changements. Quand une déclaration `assert()` échoue, quelque chose de très mauvais et d'inattendu est en train de se produire, et vous devrez corriger votre code. Vous devriez utiliser `assert()` pour éviter des conditions qui ne devraient jamais se produire. <a href=\"/developers/docs/smart-contracts/security/\">En savoir plus sur la sécurité des contrats intelligents</a>.",
   "attestation-term": "Attestation",
   "attestation-definition": "Une affirmation faite par une entité que quelque chose est vrai. Dans le contexte d'Ethereum, les validateurs de consensus doivent affirmer ce qu'ils pensent être l'état de la chaîne. À certains moments, chaque validateur est responsable de la publication de différentes attestations qui déclarent formellement son point de vue sur la chaîne, y compris le dernier point de contrôle finalisé et la tête actuelle de la chaîne. <a href=\"/developers/docs/consensus-mechanisms/pos/attestations/\">En savoir plus sur les attestations</a>.",

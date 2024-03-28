@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react"
+import { useBreakpointValue } from "@chakra-ui/react"
 
-import { BaseLink } from "@/components/Link"
+import { Button } from "@/components/Buttons"
+
+import {
+  DESKTOP_LANGUAGE_BUTTON_NAME,
+  HAMBURGER_BUTTON_ID,
+  MOBILE_LANGUAGE_BUTTON_NAME,
+} from "@/lib/constants"
 
 const Morpher = () => {
   const [state, setState] = useState({
@@ -118,16 +125,47 @@ const Morpher = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  const handleMobileClick = () => {
+    if (!document) return
+    ;(document.getElementById(HAMBURGER_BUTTON_ID) as HTMLButtonElement).click()
+    setTimeout(
+      () =>
+        (
+          document.querySelector(
+            `button[name="${MOBILE_LANGUAGE_BUTTON_NAME}"`
+          ) as HTMLButtonElement
+        ).click(),
+      1
+    )
+  }
+  const handleDesktopClick = () => {
+    if (!document) return
+    ;(
+      document.querySelector(
+        `button[name="${DESKTOP_LANGUAGE_BUTTON_NAME}"`
+      ) as HTMLButtonElement
+    ).click()
+  }
+
+  const handleClick =
+    useBreakpointValue({
+      base: handleMobileClick,
+      md: handleDesktopClick,
+    }) || handleDesktopClick
+
   return (
-    <BaseLink
+    <Button
+      w="fit-content"
+      mx="auto"
+      variant="ghost"
       textDecor="none"
       fontSize="md"
       color="body.medium"
       _hover={{ color: "primary.base" }}
-      to="/languages/"
+      onClick={handleClick}
     >
-      <span>{state.text}</span>
-    </BaseLink>
+      {state.text}
+    </Button>
   )
 }
 

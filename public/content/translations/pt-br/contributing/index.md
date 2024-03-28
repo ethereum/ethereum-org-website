@@ -77,8 +77,8 @@ Se a sua contribuição for incluída no ethereum.org, cunharemos um POAP único
 
 ### Como solicitar seu POAP {#how-to-claim}
 
-1. Entre em nosso [servidor do Discord](https://discord.gg/premid).
-2. Cole o link com sua contribuição no `#🥇| ` [canal poaps](https://discord.com/channels/714888181740339261/804005643211898911).
+1. Entre em nosso [servidor do Discord](/discord/).
+2. Cole o link com sua contribuição no `#🥇| ` [canal proof-of-contribution](https://discord.com/channels/714888181740339261/1212737737916948530).
 3. Espere que um membro de nossa equipe envie um link para o seu POAP.
 4. Solicite seu POAP!
 

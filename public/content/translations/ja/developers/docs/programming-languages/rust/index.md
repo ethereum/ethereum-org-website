@@ -43,7 +43,7 @@ incomplete: true
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _イーサリアムライクのネットワークとやり取りするための extern のコレクション_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _高速イーサリアムコンセンサスレイヤークライアント_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly の決定論的サブセットを使用して、イーサリアムスマートコントラクト実行レイヤーを再設計する提案_
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API リファレンス_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API リファレンス_
 - [Solaris](https://github.com/paritytech/sol-rs) - _ネイティブ Parity クライアント EVM を使用した Solidity スマートコントラクトのユニットテストハーネス_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust のイーサリアム仮想マシンの実装_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust で書かれた Wavelet スマートコントラクト_

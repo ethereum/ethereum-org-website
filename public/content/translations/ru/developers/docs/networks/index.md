@@ -60,7 +60,6 @@ lang: ru
 - [Кран Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Кран Infura Sepolia](https://www.infura.io/faucet)
 - [Кран Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
-- [Кран тестовой сети | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(долгосрочная поддержка)_ {#goerli}
 

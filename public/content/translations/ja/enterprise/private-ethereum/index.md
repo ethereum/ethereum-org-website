@@ -24,4 +24,3 @@ lang: ja
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _Apache 2.0 ライセンスの基で開発されたオープンソースのイーサリアムクライアントで、Java で書かれており、PoW、PoA(IBFT、IBFT 2.0、Etherhash、Clike)を含むいくつかの合意形成アルゴリズムを含んでいる。 その包括的な権限スキームは、コンソーシアム環境での使用に特化した設計となっている。_
 - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _イーサリアム仮想マシン (EVM) の仕様に部分的に合わせて開発された認可制のスマートコントラクトのインタプリタを備えた、モジュール型のブロックチェーンクライアント_
 - [Kaleido](https://kaleido.io/) _クロスクラウドでハイブリッドなエンタープライズエコシステムの構築と実行のためのフルスタックプラットフォーム_
-- [Quorum](https://consensys.net/quorum/) _プライバシー、権限、パフォーマンスを有効化する高度なエンタープライズ向け機能を備えた、イーサリアムベースのオープンソースのエンタープライズ向けブロックチェーンプラットフォーム_

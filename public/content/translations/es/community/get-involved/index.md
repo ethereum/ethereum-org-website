@@ -16,7 +16,7 @@ Le sugerimos que comience enterándose de la misión y los valores de ethereum.o
 - [Encuentre una recompensa en Gitcoin](https://gitcoin.co/), ¡solucione problemas técnicos sencillos o complejos y gane criptomonedas!
 - ¡Participe en un hackaton (o encuentro de programadores) [ETHGlobal](http://ethglobal.co/) cerca de donde viveo
 - Consulte [los proyectos relacionados con su área especialidad o el lenguaje de programación de su elección](/developers/docs/programming-languages/).
-- Mire o participe en las [reuniones Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Mire o participe en las [reuniones Core Dev](https://www.youtube.com/@EthereumProtocol)
 - [Lista de deseos del Programa de apoyo al ecosistema](https://esp.ethereum.foundation/wishlist/): herramientas, documentación e infraestructura donde el Programa de apoyo al ecosistema de Ethereum está buscando activamente propuestas para becar.
 - [Web3Bridge](https://www.web3bridge.com/): únase a la iniciativa de la inspiradora comunidad web3 para buscar, formar y apoyar a cientos de desarrolladores y miembros de la comunidad en toda África.
 - Únase a [Ethereum Cat Herders en Discord](https://discord.io/EthCatHerders)

@@ -18,7 +18,6 @@ Ezek a programok a kiterjed Ethereum-ökoszisztémát támogatják és a projekt
 - [MetaCartel](https://www.metacartel.org/grants/) – _Dapp fejlesztése, DAO létrehozása_
 - [Moloch DAO](https://www.molochdao.com/) – _Adatvédelem, L2 skálázás, kliensbiztonság és más területek_
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _A támogatást ajánló szervezetek listája Google-táblázatban_
-- [Crunchbase for Web3 Grants](https://www.cryptoneur.xyz/web3-grants) – _Támogatások szűrése és keresése kategória, alkalmazási terület, összeg és egyéb alapján. Segítsen, hogy mások is megtalálják a megfelelő támogatást._
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) – _Az Ethereummal kapcsolatos akadémiai munkák támogatása_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) – _A Blockworks egy átfogó jegyzéket hozott létre, lefedve az összes támogatást, változtatási javaslatot (RFP) és hibavadászatot._
 
@@ -35,7 +34,6 @@ Projektek által adott támogatás olyanoknak, akik az adott technológiát fejl
 - [SKALE Network Grants Program](https://skale.space/developers#grants) – _[SKALE Network](https://skale.space/) ökoszisztéma_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) ökoszisztéma_
 - [Uniswap Grants Program](https://www.uniswapfoundation.org/apply-for-a-grant) – _[Uniswap](https://uniswap.org/) közösség_
-- [Web3-támogatások](https://web3grants.net) – _A web3/kripto területén futó támogatási programok kimerítő listája_
 
 ## Kvadratikus finanszírozás {#quadratic-funding}
 

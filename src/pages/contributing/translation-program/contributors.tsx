@@ -61,10 +61,9 @@ const ContentHeading = (props: HeadingProps) => (
 )
 
 const Contributors = () => {
-  const { t } = useTranslation([
-    "page-contributing-translation-program-contributors",
-    "page-languages",
-  ])
+  const { t } = useTranslation(
+    "page-contributing-translation-program-contributors"
+  )
   const router = useRouter()
 
   // TODO: Remove specific user checks once Acolad has updated their usernames
@@ -149,9 +148,9 @@ const Contributors = () => {
           )}
         </Text>
         <Text>
-          {t("page-languages:page-languages-interested")}{" "}
+          {t("common:page-languages-interested")}{" "}
           <InlineLink href="/contributing/translation-program/">
-            {t("page-languages:page-languages-learn-more")}
+            {t("common:page-languages-learn-more")}
           </InlineLink>
           .
         </Text>
@@ -177,9 +176,9 @@ const Contributors = () => {
             })}
         </SimpleGrid>
         <Text>
-          {t("page-languages:page-languages-interested")}{" "}
+          {t("common:page-languages-interested")}{" "}
           <InlineLink href="/contributing/translation-program/">
-            {t("page-languages:page-languages-learn-more")}
+            {t("common:page-languages-learn-more")}
           </InlineLink>
           .
         </Text>

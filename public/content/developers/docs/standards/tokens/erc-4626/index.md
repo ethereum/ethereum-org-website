@@ -195,7 +195,7 @@ event Withdraw(
     address indexed receiver,
     address indexed owner,
     uint256 assets,
-    uint256 share
+    uint256 shares
 )
 ```
 

@@ -31,7 +31,7 @@ Vďaka spolupráci s rôznymi organizáciami sa nám Ethereum podarilo pripravi�
 
 - [EEA](https://entethalliance.org/) _Enterprise Ethereum Alliance je členská štandardizačná organizácia, ktorej cieľom je vyvíjať otvorené špecifikácie blockchainu, ktoré podporujú harmonizáciu a spoluprácu podnikov a spotrebiteľov na celom svete. Naša globálna komunita členov pozostáva z lídrov, používateľov, inovátorov, vývojárov aj podnikateľov, ktorí spolupracujú pri vytváraní otvoreného decentralizovaného webu v prospech všetkých._
 
-- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger je open source iniciatíva založená na spolupráci, ktorá sa zameriava na pokrokové technológie blockchainu pokrývajúce rôzne odvetvia. Jej základom je globálna spolupráca, ktorú zastrešuje nadácia The Linux Foundation a zahŕňa lídrov v oblasti financií, bankovníctva, internetu vecí, dodávateľských reťazcov, výroby a technológií._ _Nadácia má niekoľko projektov, ktoré pracujú s Ethereom:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger je open source iniciatíva založená na spolupráci, ktorá sa zameriava na pokrokové technológie blockchainu pokrývajúce rôzne odvetvia. Jej základom je globálna spolupráca, ktorú zastrešuje nadácia The Linux Foundation a zahŕňa lídrov v oblasti financií, bankovníctva, internetu vecí, dodávateľských reťazcov, výroby a technológií._ _Nadácia má niekoľko projektov, ktoré pracujú s Ethereom:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - Hyperledger Burrow
 
 ## Služby zamerané na podniky {#enterprise-focused-services}
 
@@ -45,7 +45,6 @@ Nasledujúce projekty poskytujú blockchainové služby pre podnikové systémy:
 ## Protokol a infraštruktúra {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _open-source klient Etherea vyvinutý pod licenciou Apache 2.0 a napísaný v jazyku Java_
-- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _modulárny blockchainový klient so schváleným prekladačom smart kontraktov, čiastočne vyvinutý podľa špecifikácie Ethereum Virtual Machine (EVM)_
 - [Infura](https://infura.io/) _škálovateľný prístup API do sietí Etherea a IPFS_
 - [Kaleido](https://kaleido.io/) _platforma na vytváranie a prevádzku medzi-cloudových hybridných podnikových ekosystémov_
 - [Autonity](https://www.clearmatics.com/about/) _sada protokolov, ktorá implementuje protokoly p2p a poskytuje klientsky softvér a infraštruktúru_

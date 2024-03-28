@@ -16,7 +16,9 @@ Ismer valamilyen oktatási anyagot az anyanyelvén? [Adjon be egy kérést](http
 
 ## Ethereum.org források {#ethereum-org}
 
-Az Ethereum.org oldalait 40 nyelven olvashatja a [nyelvek oldalon](/languages).
+Az Ethereum.org oldalait 40 nyelven olvashatja a nyelvek oldalon.
+
+![Language selector menu](./language-selector-menu.png)
 
 Ha Ön kétnyelvű és segítene nekünk, hogy több embert érjünk el, akkor közreműködhet az [ethereum.org Fordítói programban](/contributing/translation-program/#translation-program) és segíthet lefordítani a weboldalt.
 

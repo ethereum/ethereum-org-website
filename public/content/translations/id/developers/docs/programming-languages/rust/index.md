@@ -42,7 +42,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Koleksi eksternal untuk berinteraksi dengan jaringan seperti Ethereum._
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _Referensi API OASIS_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Referensi API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Implementasi Mesin Virtual Ethereum Rust_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _Klient Rust Ethereum_

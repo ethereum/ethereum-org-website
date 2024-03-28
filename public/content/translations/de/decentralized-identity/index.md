@@ -49,7 +49,7 @@ Dezentralisierte Identifikatoren werden auf sogenannten dezentralen Ledgern (Blo
 
 ## Was ermöglicht dezentralisierte Identifikatoren? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Öffentliche Schlüssel-Infrastruktur (Public Key Infrastructure, PKI) {#public-key-infrastructure}
+### 1. Öffentliche Schlüssel-Infrastruktur (Public Key Infrastructure, PKI) {#public-key-cryptography}
 
 Öffentliche Schlüssel-Infrastruktur (PKI) ist ein Maß zur Informationssicherheit, die einen [öffentlichen Schlüssel](/glossary/#public-key) und [einen privaten Schlüssel](/glossary/#private-key) für eine Entität generiert. Öffentliche Schlüssel-Kryptografie wird in Blockchain-Netzwerken verwendet, um Benutzeridentitäten zu authentifizieren und das Eigentum an digitalen Gütern nachzuweisen.
 

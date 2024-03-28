@@ -40,7 +40,13 @@ const GlossaryDefinition = ({
           transform={components}
         />
       </OldHeading>
-      <Text {...textStyles}>
+      {/**
+       * `as="span"` prevents hydration warnings for strings that contain
+       * elements that cannot be nested inside `p` tags, like `ul` tags
+       * (found in some Glossary definition).
+       * TODO: Develop a better solution to handle this case.
+       */}
+      <Text as="span" {...textStyles}>
         <Translation
           id={term + "-definition"}
           options={options}

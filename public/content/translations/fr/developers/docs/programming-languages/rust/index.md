@@ -43,7 +43,7 @@ Besoin d’une approche plus élémentaire ? Consultez [ethereum.org/learn](/le
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Collection d'éléments externes pour interagir avec un réseau de type Ethereum_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Client rapide de la couche de consensus d'Ethereum_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _Proposition de refonte de la couche d'exécution des contrats intelligents d'Ethereum en utilisant un sous-ensemble déterministe de WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _Référence de l'API OASIS_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Référence de l'API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Exploiter le test unitaire des contrats intelligents Solidity utilisant l'EVM natif du client Parity._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Implémentation en Rust de machines virtuelles Ethereum_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Contrats intelligents Wavelet sous Rust_

@@ -16,7 +16,9 @@ lang: ja
 
 ## ethereum.org のリソース {#ethereum-org}
 
-ethereum.org は[言語ページ](/languages)に記載されている、40 以上の言語に翻訳されています。
+ethereum.org は言語ページに記載されている、40 以上の言語に翻訳されています。
+
+![Language selector menu](./language-selector-menu.png)
 
 バイリンガルで、イーサリアムをより多くの人に知ってもらいたいと思われる方は、ぜひ[ethereum.org 翻訳プログラム](/contributing/translation-program/#translation-program)に参加し、ウェブサイトの翻訳にご協力ください。
 
