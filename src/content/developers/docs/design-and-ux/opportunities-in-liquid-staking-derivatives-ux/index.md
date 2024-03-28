@@ -31,7 +31,7 @@ Specifically, 224,000 users staked $1024 or less, and 125,000 users staked betwe
 
 **Staking pool projects tend to communicate to each user the same way. This is wrong.**
 
-A user with 1 ETH and 100 ETH has a different risk profile/strategy they are thinking about. **This creates an opportunity to offer a tailored and targeted product to the unique needs** instead of trying to attract anyone and fail.
+A user with 1 ETH and 100 ETH has a different risk profile/strategy they are thinking about. **This creates an opportunity to offer a tailored and targeted product to the unique needs** instead of trying to attract everyone and fail.
 
 ![Example of strategies](./2.png)
 
