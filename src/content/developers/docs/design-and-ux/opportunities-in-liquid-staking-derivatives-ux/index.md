@@ -4,7 +4,7 @@ description: Navigating the Challenges and Opportunities in Liquid Staking Deriv
 lang: en
 ---
 
-In the ever-evolving landscape, Liquid Staking Derivatives (LSDs) have emerged as a significant area of interest. Newer LSD projects should focus their attention more on user experience in order to succeed.
+In the dynamic world of decentralized finance (DeFi), Liquid Staking Derivatives (LSDs) have carved out a niche, promising both liquidity and participation in network security. Newer LSD projects should focus their attention more on user experience in order to succeed.
 
 ## The Staking Pool Challenge  {#the-staking-pool-challenge}
 Newer staking pools often find themselves in a tight spot when competing against established players in the market. These larger players command substantial liquidity, making it **challenging for new entrants** to attract users and offer competitive yields.
@@ -17,11 +17,11 @@ A few major players have established a stronghold in the LST (Liquid Staking Tok
 
 ## Understanding User Behavior  {#understanding-user-behavior}
 
-Surprisingly, **65% of users do nothing with their LST** (October 2023). This finding highlights a potential gap in user engagement. While projects discuss complex Liquid Staking Strategies, even the most simple ones are often **not attractive to users**.
+Surprisingly, **65% of users do nothing with their LST** (October 2023). This finding highlights a potential gap in user interest. While projects discuss complex Liquid Staking Strategies, even the most simple ones are often **not attractive to users**.
 
 ![Example of strategies](./2.png)
 
-Staking pool projects tend to communicate to each user the same way, disregarding the unique contexts. This is wrong.
+The conventional one-size-fits-all communication approach fails to recognize the diverse needs and contexts of individual users. For instance:
 
 - 224k users staked $1024 or less
 - 125k users staked between $1024 and $32k
@@ -36,20 +36,17 @@ The disparity in how investors understand and use Liquid staking points to a nee
 A well-designed UX can demystify these concepts and make the investment process more intuitive and accessible.
 
 **Where are your users? How can you get in front of them? How can you understand their desires?**
-Coinbase is a great example as they originally started with no liquid staking token and are now one of the largest staking pools (regardless of charging more than some competition). The reason for that was simply having access to the users. 
+Consider Coinbase's trajectory: starting without a liquid staking option, it has grown to one of the premier staking pools by focusing on user accessibility and convenience, despite its higher fees.
 
 ## User Research  {#user-research}
 
 Most projects should ask these questions:
 
-- Do your users care about your LST strategies?
-- What are users doing with their LST?
-- What would motivate them to move from a competitor?
-- What is most important for the user?
-- What user segments is your staking pool targeting?
-- What new communication channels should you explore to access new pools of users?
+- Do your users value your LST strategies?
+- How are users utilizing their LST?
+- What could prompt them to switch from a competitor?
+- Which aspects do users prioritize?
+- Who are the target segments for your staking pool?
+- Which new communication avenues could you explore to reach untapped user groups?
 
-As the market evolves,**it will be crucial for new projects to focus on clear, simple, and user-friendly platforms**.
-
-Understanding and catering to user behavior will be **vital** in building successful and sustainable staking pools in the competitive landscape of DeFi.
-
+As the DeFi landscape evolves, the imperative for LSD projects to cultivate clear, straightforward, and user-centric platforms becomes increasingly apparent. Tuning into and addressing user behaviors and preferences is critical to developing successful, enduring staking pools amidst DeFi's competitive ecosystem.
