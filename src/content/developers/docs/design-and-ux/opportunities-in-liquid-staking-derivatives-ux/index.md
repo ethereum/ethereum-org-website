@@ -45,18 +45,12 @@ Surprisingly, **65% of users do nothing with their LST**. (October 2023)
 This finding highlights a potential gap in user engagement and addresses the issue that everyone is leaning into more complex Liquid Staking Strategies when even the most simple ones are **not attractive to users**.
 
 ## The Importance of UX  {#importance-of-ux}
-The disparity in how investors understand and use Liquid staking points to a need for better UX design. 
-
-The concept of rebasing (1 LSD = 1 ETH) versus reward-bearing LSDs (1 LSD = ? ETH) can be confusing.
-
-Issues like full deposit queues further complicate the user's journey. 
+The disparity in how investors understand and use Liquid staking points to a need for better UX design. The concept of rebasing (1 LSD = 1 ETH) versus reward-bearing LSDs (1 LSD = ? ETH) can be confusing. Issues like full deposit queues further complicate the user's journey. 
 
 A well-designed UX can demystify these concepts and make the investment process more intuitive and accessible.
 
 **Where are your users? How can you get in front of them? How can you understand their desires?**
 Coinbase is a great example as they originally started with no liquid staking token and are now one of the largest staking pools (and charge more than the competition)
-
-The market, while promising, is fraught with challenges that require **strategic thinking** and **user-centric solutions**. 
 
 ## User Research  {#user-research}
 
@@ -68,7 +62,7 @@ Most projects should ask these questions:
 - What do you know about the risks and rewards associated with staking?
 - Who is your staking pool targeting?
 
-As the market evolves,** it will be crucial for new projects to focus on clear, simple, and user-friendly platforms**.
+As the market evolves,**it will be crucial for new projects to focus on clear, simple, and user-friendly platforms**.
 
 Understanding and catering to user behavior will be **vital** in building successful and sustainable staking pools in the competitive landscape of DeFi.
 
