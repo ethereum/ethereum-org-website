@@ -17,20 +17,7 @@ const Accordion = ({ label, children }: AccordionProps) => (
     <AccordionItem border="none">
       {({ isExpanded }) => (
         <>
-          <AccordionButton
-            outline="none"
-            border="4px"
-            borderColor="transparent"
-            _hover={{ bg: "primary.lowContrast" }}
-            _expanded={{ bg: "primary.lowContrast" }}
-            _focus={{
-              border: "4px",
-              borderColor: "primary.lowContrast",
-              borderRadius: "md",
-            }}
-            py="2"
-            px={{ base: 2, md: 4 }}
-          >
+          <AccordionButton>
             <Box as="span" flex="1">
               {label}
             </Box>
@@ -40,7 +27,7 @@ const Accordion = ({ label, children }: AccordionProps) => (
               <AccordionIcon transform="rotate(270deg)" />
             )}
           </AccordionButton>
-          <AccordionPanel p={{ base: 2, md: 4 }}>{children}</AccordionPanel>
+          <AccordionPanel>{children}</AccordionPanel>
         </>
       )}
     </AccordionItem>
