@@ -37,7 +37,7 @@ Leggi di più sulla [missione e visione](/contributing/translation-program/missi
 ### I nostri progressi finora {#our-progress}
 
 - [**Oltre 5.100** traduttori](/contributing/translation-program/contributors/)
-- [**54** lingue presenti sul sito](/languages/)
+- **54** lingue presenti sul sito
 - [**3 milioni** di parole tradotte nel 2022](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
