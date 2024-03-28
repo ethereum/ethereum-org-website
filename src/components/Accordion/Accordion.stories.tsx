@@ -9,7 +9,7 @@ const meta: Meta<AccordionType> = {
   title: "Molecules / Disclosure Content / Accordions",
   component: Accordion,
   args: {
-    label: "Accordion label",
+    label: "Label text of the accordion",
     children: "Accordion child content",
   },
 } satisfies Meta<AccordionType>
