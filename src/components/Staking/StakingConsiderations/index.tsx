@@ -75,7 +75,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
   }
 
   return (
-    <Flex flexDir={{ base: "column", md: "row" }}>
+    <Flex flexDir={{ base: "column", md: "row" }} gap={8}>
       <ButtonDropdown list={dropdownLinks} hideFrom={mdBp} />
       {/* TODO: Improve a11y */}
       <Box flex={1} hideBelow={mdBp}>
@@ -89,17 +89,27 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                   handleSelection(idx)
                   trackCustomEvent(matomo)
                 }}
-                py={1}
                 cursor="pointer"
-                display="table"
-                w="full"
                 h={8}
                 p="3"
                 mb="0"
                 _hover={activeStyles}
                 position="relative"
                 {...(idx === activeIndex
-                  ? activeStyles
+                  ? {
+                      bg: "primary.base",
+                      color: "background.base",
+                      _after: {
+                        content: `''`,
+                        position: "absolute",
+                        height: 0,
+                        width: 0,
+                        top: 0,
+                        insetInlineStart: "100%",
+                        border: "1rem solid transparent",
+                        borderInlineStartColor: "primary.base",
+                      },
+                    }
                   : { color: "primary.base" })}
               >
                 {title}
