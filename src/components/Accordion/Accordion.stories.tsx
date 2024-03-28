@@ -1,6 +1,7 @@
-import Accordion from "."
-import { Meta, StoryObj } from "@storybook/react"
 import { VStack } from "@chakra-ui/react"
+import { Meta, StoryObj } from "@storybook/react"
+
+import Accordion from "."
 
 type AccordionType = typeof Accordion
 
