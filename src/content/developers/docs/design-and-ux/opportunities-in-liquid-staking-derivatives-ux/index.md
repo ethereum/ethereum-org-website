@@ -15,13 +15,15 @@ These larger players command substantial liquidity, making it challenging for ne
 
 A few major players have established a stronghold in the LST (Liquid Staking Tokens) market. This dominance poses a significant barrier for newer pools trying to carve out their niche.
 
-So, why do new pools obsess over liquidity when it's a fight they cannot win?
+**Why do new pools obsess over liquidity when it's a fight they cannot win?**
 
 ## Complexity vs. Clarity  {#complexity-vs-clarity}
 In an attempt to differentiate themselves, many new pools are turning to intricate staking setups. 
 This often results in complex systems that may need to be clarified for users, creating potential barriers to adoption. 
 
 **The need for simplicity and clarity must be balanced in attracting and retaining users.**
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1xw3CL_YxuY?si=InGDNhRcK1PcyQWC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Understanding User Behavior  {#understanding-user-behavior}
 
