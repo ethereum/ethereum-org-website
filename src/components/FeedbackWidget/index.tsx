@@ -53,6 +53,7 @@ const FeedbackWidget = () => {
             boxShadow="tableItemBox"
             me={24}
             bottom={{ base: `${bottomOffset + 5}rem`, lg: 20 }}
+            data-testid="feedback-widget-modal"
           >
             <Box
               w="min(300px, calc(100% - 1rem))"
