@@ -35,7 +35,7 @@ A user with 1 ETH and 100 ETH has a different risk profile/strategy they are thi
 
 ![Example of strategies](./2.png)
 
-- 224k users staked $1924 or less
+- 224k users staked $1024 or less
 - 125k users staked between $1024 and $32k
 - 24k users staked between $32k to $1 million
 - Exchange users average around $600 
