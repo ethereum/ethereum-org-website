@@ -552,5 +552,14 @@
     "location": "South East Asia",
     "description": "Bringing developers onchain to build the future of the internet.",
     "imageUrl": "https://ethglobal.com/og.png"
+  },
+  {
+    "title": "ETH Uruguay",
+    "startDate": "2024-05-16",
+    "endDate": "2024-05-18",
+    "to": "www.ethereumuruguay.org",
+    "location": "Montevideo, Uruguay",
+    "description": "Building together for a decentralized future.",
+    "imageUrl": "https://uploads-ssl.webflow.com/6463b2b2401a64107c84634f/6463f95db5abb4d10aeabfb5_eth-uy-logo-3.png"
   }
 ]
