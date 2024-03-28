@@ -40,7 +40,7 @@ A user with 1 ETH and 100 ETH has a different risk profile/strategy they are thi
 - 24k users staked between $32k to $1 million
 - Exchange users average around $600 
 
-Surprisingly, 65% of users need to actively manage their stETH to increase yield. (October 2023)
+Surprisingly, **65% of users do nothing with their LST**. (October 2023)
 
 This finding highlights a potential gap in user engagement and addresses the issue that everyone is leaning into more complex Liquid Staking Strategies when even the most simple ones are **not attractive to users**.
 
