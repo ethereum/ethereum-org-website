@@ -38,7 +38,7 @@ export const getRequiredNamespacesForPage = (
   path: string,
   layout?: string | undefined
 ) => {
-  const baseNamespaces = ["common", "page-languages"]
+  const baseNamespaces = ["common"]
 
   const requiredNamespacesForPath = getRequiredNamespacesForPath(path)
   const requiredNamespacesForLayout = getRequiredNamespacesForLayout(layout)

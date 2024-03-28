@@ -41,7 +41,6 @@ import dapps from "@/public/doge-computer.png"
 import oneinch from "@/public/exchanges/1inch.png"
 import bancor from "@/public/exchanges/bancor.png"
 import kyber from "@/public/exchanges/kyber.png"
-import loopring from "@/public/exchanges/loopring.png"
 import hero from "@/public/get-eth.png"
 import wallet from "@/public/wallet.png"
 
@@ -367,6 +366,9 @@ const GetEthPage = ({
           <ButtonLink href="/wallets/find-wallet/">
             {t("page-get-eth-get-wallet-btn")}
           </ButtonLink>
+          <InfoBanner isWarning>
+            <Translation id="page-get-eth:page-get-eth-dexs-desc-4" />
+          </InfoBanner>
         </LeftColumn>
         <RightColumn>
           <OldHeading

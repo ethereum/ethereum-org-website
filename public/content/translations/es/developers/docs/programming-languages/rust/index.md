@@ -42,7 +42,7 @@ Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprov
 - [pwasm-ethereum:](https://github.com/paritytech/pwasm-ethereum) _colección de recursos externos para interactuar con redes similares a Ethereum_
 - [Lighthouse:](https://github.com/sigp/lighthouse) _cliente de capa de consenso de Ethereum rápido_
 - [Ethereum WebAssembly:](https://ewasm.readthedocs.io/en/mkdocs/) _rediseño propuesto de la capa de ejecución de contratos inteligentes de Ethereum utilizando un subconjunto determinístico de WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/): _referencia de la API de OASIS_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html): _referencia de la API de OASIS_
 - [Solaris:](https://github.com/paritytech/sol-rs) _arnés de pruebas unitarias de contratos inteligentes de Solidity usando la Parity Client EVM nativa._
 - [SputnikVM:](https://github.com/rust-blockchain/evm) _implementación de máquina virtual de Ethereum de Rust_
 - [Wavelet:](https://wavelet.perlin.net/docs/smart-contracts) _contrato inteligente de Wavelet en Rust_

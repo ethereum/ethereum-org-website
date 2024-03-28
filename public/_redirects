@@ -173,3 +173,5 @@
 /*/guides/how-to-register-an-ethereum-account /:splat/guides/how-to-create-an-ethereum-account/ 301!
 
 /*/deprecated-software /:splat/dapps/ 301!
+
+/*/languages /:splat/contributing/translation-program/ 301!
