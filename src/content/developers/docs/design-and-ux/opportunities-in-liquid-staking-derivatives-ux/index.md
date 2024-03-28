@@ -46,8 +46,7 @@ Most projects should ask these questions:
 - What are users doing with their LST?
 - What would motivate them to move from a competitor?
 - What is most important for the user?
-- What do you know about the risks and rewards associated with staking?
-- Who is your staking pool targeting?
+- What user segments is your staking pool targeting?
 - What new communication channels should you explore to access new pools of users?
 
 As the market evolves,**it will be crucial for new projects to focus on clear, simple, and user-friendly platforms**.
