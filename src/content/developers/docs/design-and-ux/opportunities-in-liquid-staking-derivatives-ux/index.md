@@ -29,7 +29,7 @@ This often results in complex systems that may need to be clarified for users, c
 
 Specifically, 224,000 users staked $1024 or less, and 125,000 users staked between $1024 to $32,000, demonstrating the varied investment strategies in play (October 2023)
 
-**Staking pools tend to talk to each user the same way. This is wrong.**
+**Staking pool projects tend to communicate to each user the same way. This is wrong.**
 
 A user with 1 ETH and 100 ETH has a different risk profile/strategy yhey are thinking about. **This creates an opportunity to offer a targeted product to the unique needs**.
 
