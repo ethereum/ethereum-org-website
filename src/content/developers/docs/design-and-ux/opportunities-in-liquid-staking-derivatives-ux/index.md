@@ -23,9 +23,9 @@ Surprisingly, **65% of users do nothing with their LST** (October 2023). This fi
 
 The conventional one-size-fits-all communication approach fails to recognize the diverse needs and contexts of individual users. For instance:
 
-- 224k users staked $1024 or less
-- 125k users staked between $1024 and $32k
-- 24k users staked between $32k to $1 million
+- 282k users staked $1024 or less
+- 227k users staked between $1024 and $32k
+- 44k users staked between $32k to $1 million
 - Exchange users average around $600 
 
 A user with 1 ETH and 100 ETH has a **different risk profile/strategy** they are thinking about. **This creates an opportunity to offer a tailored and targeted product to the unique needs of specific user segment**.
