@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "8.0.0",
+  "version": "8.4.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -17,6 +17,7 @@
     "chromatic": "chromatic --project-token fee8e66c9916",
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
+    "events-import": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/events-import.ts",
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts"
   },
   "dependencies": {
@@ -25,8 +26,8 @@
     "@docsearch/react": "^3.5.2",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
+    "@radix-ui/react-navigation-menu": "^1.1.4",
     "@socialgouv/matomo-next": "^1.8.0",
-    "clipboard": "^2.0.11",
     "embla-carousel-react": "^7.0.0",
     "ethereum-blockies-base64": "^1.0.2",
     "focus-trap-react": "^10.2.3",
@@ -36,7 +37,7 @@
     "i18next": "^23.6.0",
     "lodash.merge": "^4.6.2",
     "lodash.shuffle": "^4.2.0",
-    "luxon": "^3.4.3",
+    "lodash.union": "^4.6.0",
     "next": "13.4.8",
     "next-i18next": "^14.0.3",
     "next-mdx-remote": "^3.0.8",
@@ -49,7 +50,7 @@
     "react-i18next": "^13.3.1",
     "react-icons": "^4.10.1",
     "react-lite-youtube-embed": "^2.4.0",
-    "react-select": "^4.3.0",
+    "react-select": "5.8.0",
     "reading-time": "^1.5.0",
     "recharts": "^2.7.3",
     "remark-gfm": "^3.0.1",
@@ -66,7 +67,6 @@
     "@storybook/testing-library": "0.2.2",
     "@svgr/webpack": "^8.1.0",
     "@types/hast": "^3.0.0",
-    "@types/luxon": "^3.3.2",
     "@types/node": "^20.4.2",
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
@@ -85,7 +85,7 @@
     "storybook": "7.6.6",
     "storybook-react-i18next": "^2.0.9",
     "ts-node": "^10.9.1",
-    "typescript": "^5.1.6",
+    "typescript": "^5.4.2",
     "unified": "^10.0.0",
     "unist-util-visit": "^5.0.0"
   },

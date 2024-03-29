@@ -60,7 +60,7 @@ Although Web3's killer features aren't isolated and don't fit into neat categori
 
 Web3 gives you ownership of your digital assets in an unprecedented way. For example, say you're playing a web2 game. If you purchase an in-game item, it is tied directly to your account. If the game creators delete your account, you will lose these items. Or, if you stop playing the game, you lose the value you invested into your in-game items.
 
-Web3 allows for direct ownership through [non-fungible tokens (NFTs)](/nft/). No one, not even the game's creators, has the power to take away your ownership. And, if you stop playing, you can sell or trade your in-game items on open markets and recoup their value.
+Web3 allows for direct ownership through [non-fungible tokens (NFTs)](/glossary/#nft). No one, not even the game's creators, has the power to take away your ownership. And, if you stop playing, you can sell or trade your in-game items on open markets and recoup their value.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Learn more about NFTs</div>
@@ -83,7 +83,7 @@ Web 2.0 requires content creators to trust platforms not to change the rules, bu
 
 As well as owning your data in Web3, you can own the platform as a collective, using tokens that act like shares in a company. DAOs let you coordinate decentralized ownership of a platform and make decisions about its future.
 
-DAOs are defined technically as agreed-upon smart contracts that automate decentralized decision-making over a pool of resources (tokens). Users with tokens vote on how resources get spent, and the code automatically performs the voting outcome.
+DAOs are defined technically as agreed-upon [smart contracts](/glossary/#smart-contract) that automate decentralized decision-making over a pool of resources (tokens). Users with tokens vote on how resources get spent, and the code automatically performs the voting outcome.
 
 However, people define many Web3 communities as DAOs. These communities all have different levels of decentralization and automation by code. Currently, we are exploring what DAOs are and how they might evolve in the future.
 
@@ -98,16 +98,12 @@ However, people define many Web3 communities as DAOs. These communities all have
 
 Traditionally, you would create an account for every platform you use. For example, you might have a Twitter account, a YouTube account, and a Reddit account. Want to change your display name or profile picture? You have to do it across every account. You can use social sign-ins in some cases, but this presents a familiar problem—censorship. In a single click, these platforms can lock you out of your entire online life. Even worse, many platforms require you to trust them with personally identifiable information to create an account.
 
-Web3 solves these problems by allowing you to control your digital identity with an Ethereum address and ENS profile. Using an Ethereum address provides a single login across platforms that is secure, censorship-resistant, and anonymous.
-
-<ButtonLink to="https://login.xyz/">
-  Sign-in with Ethereum
-</ButtonLink>
+Web3 solves these problems by allowing you to control your digital identity with an Ethereum address and [Ethereum Name Service (ENS)](/glossary/#ens) profile. Using an Ethereum address provides a single login across platforms that is secure, censorship-resistant, and anonymous.
 
 ### Native payments {#native-payments}
 
 Web2's payment infrastructure relies on banks and payment processors, excluding people without bank accounts or those who happen to live within the borders of the wrong country.
-Web3 uses tokens like [ETH](/eth/) to send money directly in the browser and requires no trusted third party.
+Web3 uses tokens like [ETH](/glossary/#ether) to send money directly in the browser and requires no trusted third party.
 
 <ButtonLink to="/eth/">
   More on ETH
@@ -119,7 +115,7 @@ Despite the numerous benefits of Web3 in its current form, there are still many 
 
 ### Accessibility {#accessibility}
 
-Important Web3 features, like Sign-in with Ethereum, are already available for anyone to use at zero cost. But, the relative cost of transactions is still prohibitive to many. Web3 is less likely to be utilized in less-wealthy, developing nations due to high transaction fees. On Ethereum, these challenges are being solved through [the roadmap](/roadmap/) and [layer 2 scaling solutions](/developers/docs/scaling/). The technology is ready, but we need higher levels of adoption on layer 2 to make Web3 accessible to everyone.
+Important Web3 features, like Sign-in with Ethereum, are already available for anyone to use at zero cost. But, the relative cost of transactions is still prohibitive to many. Web3 is less likely to be utilized in less-wealthy, developing nations due to high transaction fees. On Ethereum, these challenges are being solved through [the roadmap](/roadmap/) and [layer 2 scaling solutions](/glossary/#layer-2). The technology is ready, but we need higher levels of adoption on layer 2 to make Web3 accessible to everyone.
 
 ### User experience {#user-experience}
 

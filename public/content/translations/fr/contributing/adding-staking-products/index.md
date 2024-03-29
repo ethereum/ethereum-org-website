@@ -87,7 +87,7 @@ Pour tout logiciel personnalisé ou contrat intelligent impliqué :
 
 Pour les produits logiciels liés à la configuration de nœuds ou de clients, la gestion ou la migration :
 
-**Quels clients de la couche de consensus (c'est-à-dire Lighthouse, Teku, Nimbus, Prysm) sont pris en charge ?**
+**Quels clients de la couche de consensus (c'est-à-dire  Lighthouse, Teku, Nimbus, Prysm) sont pris en charge ?**
 
 - Quels sont les clients pris en charge ? L'utilisateur peut-il choisir ?
 - Ceci est utilisé pour déterminer le score « multi-client » des produits.

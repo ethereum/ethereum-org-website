@@ -122,7 +122,7 @@ const TranslatorAcknowledgements = () => {
               {t(
                 "page-contributing-translation-program-acknowledgements-acknowledgement-page-3"
               )}{" "}
-              <InlineLink to="/contributing/translation-program/contributors/">
+              <InlineLink href="/contributing/translation-program/contributors/">
                 {t(
                   "page-contributing-translation-program-acknowledgements-acknowledgement-page-link"
                 )}
@@ -283,7 +283,7 @@ const TranslatorAcknowledgements = () => {
             {t(
               "page-contributing-translation-program-acknowledgements-how-to-claim-1"
             )}{" "}
-            <InlineLink to="https://discord.gg/CetY6Y4">
+            <InlineLink href="/discord/">
               {t(
                 "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord"
               )}

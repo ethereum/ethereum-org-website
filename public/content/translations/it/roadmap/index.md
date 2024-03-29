@@ -3,7 +3,7 @@ title: Roadmap di Ethereum
 description: Il percorso verso una maggiore scalabilità, sicurezza e sostenibilità per Ethereum.
 lang: it
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /heroes/roadmap-hub-hero.jpg
 alt: "Roadmap di Ethereum"
 summaryPoints:
 buttons:
@@ -59,7 +59,7 @@ Ethereum riceve aggiornamenti regolari che migliorano la sua scalabilità, sicur
 
 <RoadmapImageContent title="Come viene definita la tabella di marcia">
 
-La tabella di marcia è principalmente il risultato di anni di lavoro da parte di ricercatori e sviluppatori - perché il protocollo è molto tecnico - ma qualsiasi persona motivata può partecipare. Le idee di solito iniziano come discussioni su un forum come [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) o il server Eth R&D discord. Possono essere risposte a nuove vulnerabilità che vengono scoperte, suggerimenti da parte di organizzazioni che lavorano nel livello dell'applicazione (come dapps e borse) o da attriti conosciuti per gli utenti finali (come costi o velocità di transazione). Quando queste idee maturano, possono essere proposte come [Ethereum Improvement Proposals](https://eips.ethereum.org/). Tutto questo viene fatto in pubblico in modo che chiunque della comunità possa esprimere la propria opinione in qualsiasi momento.
+La tabella di marcia è principalmente il risultato di anni di lavoro da parte di ricercatori e sviluppatori - perché il protocollo è molto tecnico - ma qualsiasi persona motivata può partecipare. Le idee di solito iniziano come discussioni su un forum come [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://ethereum-magicians.org/) o sul server discord Eth R&D. Possono essere risposte a nuove vulnerabilità che vengono scoperte, suggerimenti da parte di organizzazioni che lavorano nel livello dell'applicazione (come dapps e borse) o da attriti conosciuti per gli utenti finali (come costi o velocità di transazione). Quando queste idee maturano, possono essere proposte come [Ethereum Improvement Proposals](https://eips.ethereum.org/). Tutto questo viene fatto in pubblico in modo che chiunque della comunità possa esprimere la propria opinione in qualsiasi momento.
 
 [Ulteriori informazioni sulla governance di Ethereum](/governance/)
 

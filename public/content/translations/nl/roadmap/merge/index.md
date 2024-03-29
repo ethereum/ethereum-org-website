@@ -17,13 +17,13 @@ summaryPoint4: Vroeger noemden we dit "de docking."
 
 ## Wat is de merge? {#what-is-the-docking}
 
-Het is belangrijk om te onthouden dat aanvankelijk de [Beacon Chain](/roadmap/beacon-chain/) apart werd verzonden van het [hoofdnet](/glossary/#mainnet) - de keten die we vandaag gebruiken. Het Ethereum-hoofdnet blijft beveiligd door [proof-of-work](/ontwikkelaars/docs/consensus-mechanismen/pow/), zelfs terwijl de Beacon Chain parallel draait met [proof-of-stake](/ontwikkelaars/docs/consensus-mechanisms/pos/). De merge is het moment wanneer beide systemen eindelijk samenkomen.
+Het is belangrijk om te onthouden dat aanvankelijk de [Beacon Chain](/roadmap/beacon-chain/) apart werd verzonden van het [hoofdnet](/glossary/#mainnet) - de keten die we vandaag gebruiken. Het Ethereum-hoofdnet blijft beveiligd door [proof-of-work](/developers/docs/consensus-mechanisms/pow/), zelfs terwijl de Beacon Chain parallel draait met [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). De merge is het moment wanneer beide systemen eindelijk samenkomen.
 
 Stel je voor dat Ethereum een ruimteschip is dat nog niet helemaal klaar is voor een interstellaire reis. Met de Beacon Chain heeft de gemeenschap een nieuwe motor en een geharde romp gebouwd. Als het zover is, zal het huidige schip aan dit nieuwe systeem koppelen en samensmelten tot één schip, klaar om serieuze lichtjaren te overbruggen en het heelal in te gaan.
 
 ## Samenvoegen met het hoofdnet {#docking-mainnet}
 
-Als het klaar is, zal het Ethereum-hoofdnet "fuseren" met de Beacon Chain en zijn eigen shard worden die proof-of-stake gebruikt in plaats van [proof-of-work](/ontwikkelaars/docs/consensus-mechanismen/pow/).
+Als het klaar is, zal het Ethereum-hoofdnet "fuseren" met de Beacon Chain en zijn eigen shard worden die proof-of-stake gebruikt in plaats van [proof-of-work](/developers/docs/consensus-mechanisms/pow/).
 
 Het hoofdnet zal de mogelijkheid om slimme contracten uit te voeren in het proof-of-stake systeem brengen, plus de volledige geschiedenis en huidige staat van Ethereum, om ervoor te zorgen dat de overgang soepel verloopt voor alle ETH-houders en -gebruikers.
 
@@ -41,7 +41,7 @@ Alle Ethereum-upgrades zijn ietwat met elkaar verbonden. Laten we daarom samenva
 
 ### De merge en de Beacon Chain {#docking-and-beacon-chain}
 
-Zodra de merge plaatsvindt, zullen stakers worden toegewezen om het Ethereum-hoofdnet te valideren. [Mining](/ontwikkelaars/docs/consensus-mechanismen/pow/mining/) zal niet langer nodig zijn, dus miners zullen waarschijnlijk hun inkomsten investeren in het staken in het nieuwe proof-of-stake systeem.
+Zodra de merge plaatsvindt, zullen stakers worden toegewezen om het Ethereum-hoofdnet te valideren. [Mining](/developers/docs/consensus-mechanisms/pow/mining/) zal niet langer nodig zijn, dus miners zullen waarschijnlijk hun inkomsten investeren in het staken in het nieuwe proof-of-stake systeem.
 
 <ButtonLink to="/roadmap/beacon-chain/">
   De Baken Ketting

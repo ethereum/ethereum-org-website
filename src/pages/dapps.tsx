@@ -1,4 +1,10 @@
-import { type ComponentPropsWithRef, useEffect, useRef, useState } from "react"
+import React, {
+  type ComponentPropsWithRef,
+  ReactNode,
+  useEffect,
+  useRef,
+  useState,
+} from "react"
 import { type GetStaticProps } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
@@ -42,6 +48,7 @@ import ProductCard from "@/components/ProductCard"
 import ProductListComponent, {
   type ProductListProps,
 } from "@/components/ProductList"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -85,7 +92,6 @@ import loopring from "@/public/dapps/loopring.png"
 import marble from "@/public/dapps/marble.png"
 import matcha from "@/public/dapps/matcha.png"
 import mirror from "@/public/dapps/mirror.png"
-import multichain from "@/public/dapps/multichain.png"
 import nexus from "@/public/dapps/nexus.png"
 import nifty from "@/public/dapps/nifty.png"
 import opensea from "@/public/dapps/opensea.png"
@@ -103,11 +109,10 @@ import sablier from "@/public/dapps/sablier.png"
 import set from "@/public/dapps/set.png"
 import spatial from "@/public/dapps/spatial.png"
 import spruce from "@/public/dapps/spruce.png"
-import dai from "@/public/dapps/stabledai.png"
 import status from "@/public/dapps/status.png"
+import summerfi from "@/public/dapps/summerfi.png"
 import superrare from "@/public/dapps/superrare.png"
 import synthetix from "@/public/dapps/synthetix.png"
-import uniswapec from "@/public/dapps/uni.png"
 import uniswap from "@/public/dapps/uni.png"
 import xmtp from "@/public/dapps/xmtp.png"
 import yearn from "@/public/dapps/yearn.png"
@@ -115,7 +120,6 @@ import zapper from "@/public/dapps/zapper.png"
 import zerion from "@/public/dapps/zerion.png"
 import developers from "@/public/developers-eth-blocks.png" // Handled inside Callout => height=200
 import doge from "@/public/doge-computer.png" // HERO, full? 624px
-import ogImage from "@/public/doge-computer.png" // PageMetadata, src only
 import oneinch from "@/public/exchanges/1inch.png"
 import magicians from "@/public/magicians.png"
 import wallet from "@/public/wallet.png" // width=300
@@ -422,7 +426,7 @@ interface Category {
   benefits?: Array<{
     emoji: string
     title: string
-    description: string
+    description: ReactNode
   }>
 }
 
@@ -602,7 +606,9 @@ const DappsPage = () => {
         {
           emoji: ":scales:",
           title: t("page-dapps-finance-benefits-3-title"),
-          description: t("page-dapps-finance-benefits-3-description"),
+          description: (
+            <Translation id="page-dapps:page-dapps-finance-benefits-3-description" />
+          ),
         },
         {
           emoji: ":chains:",
@@ -708,11 +714,11 @@ const DappsPage = () => {
       alt: t("page-dapps-compound-logo-alt"),
     },
     {
-      title: "Oasis",
-      description: t("page-dapps-dapp-description-oasis"),
-      link: "https://oasis.app/",
-      image: dai,
-      alt: t("page-dapps-oasis-logo-alt"),
+      title: "Summer.fi",
+      description: t("page-dapps-dapp-description-summerfi"),
+      link: "https://summer.fi/",
+      image: summerfi,
+      alt: t("page-dapps-summerfi-logo-alt"),
     },
     {
       title: "PWN",
@@ -1210,13 +1216,6 @@ const DappsPage = () => {
 
   const bridges = [
     {
-      title: "Multichain",
-      description: t("page-dapps-dapp-description-multichain"),
-      link: "https://multichain.xyz/",
-      image: multichain,
-      alt: t("page-dapps-multichain-logo-alt"),
-    },
-    {
       title: "Rubic",
       description: t("page-dapps-dapp-description-rubic"),
       link: "https://rubic.exchange/",
@@ -1264,7 +1263,7 @@ const DappsPage = () => {
       name: "Uniswap",
       description: t("page-dapps-editors-choice-uniswap"),
       url: "https://uniswap.exchange/swap",
-      image: uniswapec,
+      image: uniswap,
       alt: t("page-dapps-uniswap-logo-alt"),
       background: "#212f46",
       type: CategoryType.FINANCE,
@@ -1334,18 +1333,15 @@ const DappsPage = () => {
     <Page>
       <PageMetadata
         title={t("common:decentralized-applications-dapps")}
-        description={t("common:page-dapps-desc")}
-        image={ogImage.src}
+        description={t("page-dapps-desc")}
+        image="/doge-computer.png"
       />
       <PageHero content={heroContent} />
       <Divider />
       <Content>
         <StyledH2>{t("common:get-started")}</StyledH2>
         <Text>
-          {t("page-dapps-get-started-subtitle")}{" "}
-          <GlossaryTooltip termKey="transaction-fee">
-            {t("transaction-fees")}
-          </GlossaryTooltip>
+          <Translation id="page-dapps:page-dapps-get-started-subtitle" />
         </Text>
         <Row>
           <StepBoxContainer>
@@ -1651,11 +1647,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-collectibles-title")}{" "}
-                  <Emoji
-                    fontSize="5xl"
-                    ms={"0.5rem"}
-                    text=":frame_with_picture:"
-                  />
+                  <Emoji fontSize="5xl" ms={2} text=":frame_with_picture:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-collectibles-description")}</Subtitle>
               </Column>
@@ -1859,7 +1851,7 @@ const DappsPage = () => {
           <Text textAlign={{ base: "left", sm: "center" }} maxW="800px" mb={4}>
             {t("page-dapps-magic-behind-dapps-description")}
           </Text>
-          <InlineLink to="/what-is-ethereum/">
+          <InlineLink href="/what-is-ethereum/">
             {t("page-dapps-magic-behind-dapps-link")}
           </InlineLink>
         </Flex>
@@ -1867,7 +1859,9 @@ const DappsPage = () => {
         <Row>
           <LeftColumn>
             <H2>{t("page-dapps-how-dapps-work-title")}</H2>
-            <Text>{t("page-dapps-how-dapps-work-p1")}</Text>
+            <Text>
+              <Translation id="page-dapps:page-dapps-how-dapps-work-p1" />
+            </Text>
             <Text>{t("page-dapps-how-dapps-work-p2")}</Text>
             <Text>{t("page-dapps-how-dapps-work-p3")}</Text>
             <DocLink to="/developers/docs/dapps/">

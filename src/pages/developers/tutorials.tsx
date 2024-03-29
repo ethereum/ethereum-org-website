@@ -33,7 +33,7 @@ import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getTutorialsData } from "@/lib/utils/md"
-import { getLocaleTimestamp, INVALID_DATETIME } from "@/lib/utils/time"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import {
   filterTutorialsByLang,
@@ -126,9 +126,10 @@ export interface ITutorial {
 
 const published = (locale: string, published: string) => {
   const localeTimestamp = getLocaleTimestamp(locale as Lang, published)
-  return localeTimestamp !== INVALID_DATETIME ? (
+  return localeTimestamp !== "Invalid Date" ? (
     <span>
-      <Emoji text=":calendar:" fontSize="sm" ms={2} me={2} /> {localeTimestamp}
+      <Emoji text=":calendar:" fontSize="sm" ms={2} me={2} />
+      {localeTimestamp}
     </span>
   ) : null
 }
@@ -217,6 +218,7 @@ const TutorialPage = ({
         )}
       />
       <Heading
+        as="h1"
         fontStyle="normal"
         fontWeight="semibold"
         fontFamily="monospace"
@@ -246,7 +248,7 @@ const TutorialPage = ({
         </Heading>
         <Text>
           <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />{" "}
-          <InlineLink to="/contributing/content-resources/">
+          <InlineLink href="/contributing/content-resources/">
             <Translation id="page-developers-tutorials:page-tutorial-listing-policy" />
           </InlineLink>
         </Text>
@@ -472,8 +474,10 @@ const TutorialPage = ({
               </Flex>
               <Text color="text200" fontSize="sm" textTransform="uppercase">
                 <Emoji text=":writing_hand:" fontSize="sm" me={2} />
-                {tutorial.author} •
-                {published(locale!, tutorial.published ?? "")}
+                {tutorial.author}
+                {tutorial.published ? (
+                  <> •{published(locale!, tutorial.published!)}</>
+                ) : null}
                 {tutorial.timeToRead && (
                   <>
                     {" "}

@@ -11,7 +11,7 @@ import type {
 } from "@/lib/types"
 
 import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
-import { languages } from "@/lib/utils/translations"
+import { filterRealLocales, languages } from "@/lib/utils/translations"
 
 import progressDataJson from "@/data/translationProgress.json"
 
@@ -23,8 +23,8 @@ export const useLanguagePicker = (
   handleClose?: () => void,
   menuState?: UseDisclosureReturn
 ) => {
-  const { t } = useTranslation("page-languages")
-  const { locale, locales } = useRouter()
+  const { t } = useTranslation("common")
+  const { locale, locales: rawLocales } = useRouter()
   const refs = {
     inputRef: useRef<HTMLInputElement>(null),
     firstItemRef: useRef<HTMLAnchorElement>(null),
@@ -35,8 +35,18 @@ export const useLanguagePicker = (
 
   const [filteredNames, setFilteredNames] = useState<LocaleDisplayInfo[]>([])
 
+  // Used to only send one matomo event for users who focus the filter input
+  const [hasFocusedInput, setHasFocusedInput] = useState(false)
+
+  // Reset if user switches languages
+  useEffect(() => {
+    setHasFocusedInput(false)
+  }, [locale])
+
   // perform all the filtering and mapping when the filter value change
   useEffect(() => {
+    const locales = filterRealLocales(rawLocales)
+
     // Get the preferred languages for the users browser
     const navLangs = typeof navigator !== "undefined" ? navigator.languages : []
 
@@ -88,9 +98,11 @@ export const useLanguagePicker = (
       const targetName = i18nConfigTarget || fallbackTarget
 
       if (!sourceName || !targetName) {
-        throw new Error(
-          "Missing language display name, locale: " + localeOption
-        )
+        console.warn("Missing language display name:", {
+          localeOption,
+          sourceName,
+          targetName,
+        })
       }
 
       // English will not have a dataItem
@@ -106,10 +118,24 @@ export const useLanguagePicker = (
               (dataItem!.words.approved / dataItem!.words.total) * 100
             ) || 0
 
-      if (progressData.length === 0)
-        throw new Error(
-          "Missing translation progress data; check GitHub action"
-        )
+      const isBrowserDefault = browserLocales.includes(localeOption)
+
+      const returnData: Partial<LocaleDisplayInfo> = {
+        localeOption,
+        sourceName: sourceName ?? localeOption,
+        targetName: targetName ?? localeOption,
+        englishName,
+        isBrowserDefault,
+      }
+
+      if (progressData.length < 1) {
+        console.warn(`Missing translation progress data; check GitHub action`)
+        return {
+          ...returnData,
+          approvalProgress: 0,
+          wordsApproved: 0,
+        } as LocaleDisplayInfo
+      }
 
       const totalWords = progressData[0].words.total
 
@@ -118,17 +144,11 @@ export const useLanguagePicker = (
           ? totalWords || 0
           : dataItem?.words.approved || 0
 
-      const isBrowserDefault = browserLocales.includes(localeOption)
-
       return {
-        localeOption,
+        ...returnData,
         approvalProgress,
-        sourceName,
-        targetName,
-        englishName,
         wordsApproved,
-        isBrowserDefault,
-      }
+      } as LocaleDisplayInfo
     }
 
     const displayNames: LocaleDisplayInfo[] =
@@ -149,7 +169,7 @@ export const useLanguagePicker = (
             .includes(filterValue.toLowerCase())
       )
     )
-  }, [filterValue, locale, locales, t])
+  }, [filterValue, locale, rawLocales, t])
 
   const { isOpen, ...menu } = useDisclosure()
 
@@ -186,6 +206,21 @@ export const useLanguagePicker = (
     )
   }
 
+  /**
+   * Send Matomo event when user focuses in the filter input.
+   * Only send once per user per session per language
+   * @returns void
+   */
+  const handleInputFocus = (): void => {
+    if (hasFocusedInput) return
+    trackCustomEvent({
+      ...eventBase,
+      eventAction: "Filter input",
+      eventName: "Focused inside filter input",
+    })
+    setHasFocusedInput(true)
+  }
+
   return {
     t,
     refs,
@@ -193,5 +228,6 @@ export const useLanguagePicker = (
     filterValue,
     setFilterValue,
     filteredNames,
+    handleInputFocus,
   }
 }

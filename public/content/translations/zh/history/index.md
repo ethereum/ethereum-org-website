@@ -27,11 +27,11 @@ sidebarDepth: 1
 
 ## 2023 年 {#2023}
 
-### 上海升级 {#shanghai}
+### 上海嘉佩乐 (“Shapella”) {#shapella}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### 摘要 {#shanghai-summary}
+#### 上海总结 {#shanghai-summary}
 
 上海升级将质押提款引入执行层。 上海升级与卡佩拉升级同时进行，使区块能够接受提款操作，因此质押人可以将以太币从信标链提取到执行层。
 
@@ -49,13 +49,7 @@ sidebarDepth: 1
 
 - [阅读上海升级规范](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### 卡佩拉升级 {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### 摘要 {#capella-summary}
+#### 卡佩拉总结 {#capella-summary}
 
 卡佩拉升级是共识层（信标链）的第三次重大升级，实现了质押提款。 卡佩拉与上海同步升级执行层并启用了质押提款功能。
 

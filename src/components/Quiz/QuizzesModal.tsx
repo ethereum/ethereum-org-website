@@ -1,12 +1,4 @@
-import {
-  Center,
-  Modal as ChakraModal,
-  ModalCloseButton,
-  ModalContent,
-  ModalContentProps,
-  ModalOverlay,
-  ModalProps,
-} from "@chakra-ui/react"
+import { Center, ModalContentProps } from "@chakra-ui/react"
 
 import { QuizStatus } from "@/lib/types"
 

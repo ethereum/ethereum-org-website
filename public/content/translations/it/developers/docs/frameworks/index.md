@@ -22,12 +22,14 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 
 ## Framework disponibili {#available-frameworks}
 
-**Truffle:** **_ ambiente di sviluppo, framework di test, pipeline di sviluppo e altri strumenti_**
+**Foundry** - **_Foundry è un toolkit dalla straordinaria velocità, portatile e modulare per lo sviluppo di applicazioni di Ethereum._**
 
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
+- [Installa Foundry](https://book.getfoundry.sh/)
+- [Guida a Foundry](https://book.getfoundry.sh/)
+- [Chat della community di Foundry su Telegram](https://t.me/foundry_support)
+- [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
-**Hardhat:** **_ ambiente di sviluppo Ethereum per professionisti_**
+**Hardhat:** **_ambiente di sviluppo Ethereum per professionisti_**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
@@ -37,22 +39,11 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [Documentazione](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Brownie:** **_ ambiente di sviluppo e framework per il test basati su Python _**
-
-- [Documentazione](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/eth-brownie/brownie)
-
 **Web3j -** **_Una piattaforma per sviluppare applicazioni della blockchain sulla JVM_**
 
 - [Home page](https://www.web3labs.com/web3j-sdk)
 - [Documentazione](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
-
-**OpenZeppelin SDK:** **_Il kit di strumenti definitivo per i contratti intelligenti: una suite di strumenti per aiutarti a sviluppare, compilare, aggiornare, distribuire e interagire con i contratti intelligenti_**
-
-- [SDK OpenZeppelin](https://openzeppelin.com/sdk/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [Forum della community](https://forum.openzeppelin.com/c/support/17)
 
 **Create Eth App -** **_Crea app per Ethereum con un comando. Offre una vasta scelta di framework per l'interfaccia utente e modelli DeFI tra cui scegliere._**
 
@@ -68,7 +59,7 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [Sito Web](https://tenderly.co/)
 - [Documentazione](https://docs.tenderly.co/ethereum-development-practices)
 
-**The Graph:** **_ The Graph per interrogare efficientemente i dati della blockchain_**
+**The Graph -** **_ The Graph per interrogare efficientemente i dati della blockchain_**
 
 - [Sito Web](https://thegraph.com/)
 - [Tutorial](/developers/tutorials/the-graph-fixing-web3-data-querying/)
@@ -79,19 +70,13 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [GitHub](https://github.com/alchemyplatform)
 - [Discord](https://discord.com/invite/A39JVCM)
 
-**Foundry -** **_Un toolkit velocissimo, portatile e modulare per lo sviluppo di applicazioni di Ethereum scritte in Rust._**
-
-- [Documentazione](https://book.getfoundry.sh/)
-- [GitHub](https://github.com/gakonst/foundry/)
-- [Strumenti per Foundry](https://github.com/crisgarner/awesome-foundry)
-
-**NodeReal**: **_Piattaforma di sviluppo per Ethereum._**
+**NodeReal -** **_Piattaforma di sviluppo per Ethereum._**
 
 - [Nodereal.io](https://nodereal.io/)
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**SDK di thirdweb -** **_Sviluppa applicazioni web3 che possono interagire con i tuoi contratti intelligenti usando i nostri potenti SDK e CLI._**
+**thirdweb SDK -** **_Sviluppa applicazioni web3 che possono interagire con i tuoi contratti intelligenti usando i nostri potenti SDK e CLI._**
 
 - [Documentazione](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
@@ -101,6 +86,25 @@ Prima di iniziare a studiare i framework, raccomandiamo la lettura della nostra 
 - [chainstack.com](https://www.chainstack.com/)
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
+
+**Brownie -** **_ Ambiente di sviluppo e framework per il test basati su Python _**
+
+- [Documentazione](https://eth-brownie.readthedocs.io/en/latest/)
+- [GitHub](https://github.com/eth-brownie/brownie)
+- **Brownie non è al momento mantenuto**
+
+**Truffle -** **_ Ambiente di sviluppo, framework di test, pipeline di sviluppo e altri strumenti_**
+
+- [trufflesuite.com](https://www.trufflesuite.com/)
+- [GitHub](https://github.com/trufflesuite/truffle)
+- **Lo sviluppo di Truffle è terminato**: [leggi di più](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
+
+**OpenZeppelin SDK -** **_Il kit di strumenti definitivo per i contratti intelligenti: una suite di strumenti per aiutarti a sviluppare, compilare, aggiornare, distribuire e interagire con i contratti intelligenti_**
+
+- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [Forum della community](https://forum.openzeppelin.com/c/support/17)
+- **Lo sviluppo di OpenZeppelin SDK è terminato**
 
 ## Letture consigliate {#further-reading}
 

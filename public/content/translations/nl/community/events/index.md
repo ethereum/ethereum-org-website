@@ -5,7 +5,7 @@ lang: nl
 hideEditButton: true
 ---
 
-## Aankomende evenementen {#events}
+# Aankomende evenementen {#events}
 
 **Elke maand zijn er grote Ethereum-evenementen over de hele wereld.** Overweeg om er in de buurt een bij te wonen om meer mensen in de gemeenschap te ontmoeten, te leren over kansen op werk en nieuwe vaardigheden te ontwikkelen.
 

@@ -1,4 +1,4 @@
-import { merge } from "lodash"
+import merge from "lodash/merge"
 import { cssVar, SystemStyleObject, theme } from "@chakra-ui/react"
 
 const {
@@ -20,6 +20,7 @@ const {
   List: listDefaultTheme,
   Menu: menuDefaultTheme,
   Modal: modalDefaultTheme,
+  Popover: popoverDefaultTheme,
   Radio: radioDefaultTheme,
   Select: selectDefaultTheme,
   Spinner: spinnerDefaultTheme,
@@ -48,6 +49,7 @@ export {
   listDefaultTheme,
   menuDefaultTheme,
   modalDefaultTheme,
+  popoverDefaultTheme,
   radioDefaultTheme,
   selectDefaultTheme,
   spinnerDefaultTheme,

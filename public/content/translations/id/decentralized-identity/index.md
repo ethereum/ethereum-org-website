@@ -49,7 +49,7 @@ Tanda pengenal terdesentralisasi disimpan pada buku besar yang terdistribusi (ra
 
 ## Apa yang menjadikan tanda pengenal terdesentralisasi mungkin? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastruktur kunci publik (PKI) {#public-key-infrastructure}
+### 1. Infrastruktur kunci publik (PKI) {#public-key-cryptography}
 
 Infrastruktur kunci publik (PKI) adalah suatu informasi pengukuran keamanan yang menciptakan sebuah [kunci publik](/glossary/#public-key) dan [kunci pribadi](/glossary/#private-key) untuk sebuah entitas. Kriptografi dari kunci publik digunakan pada jaringan rantai blok untuk mengautentikasi identitas pengguna dan membuktikan kepemilikan dari aset digital.
 
@@ -151,7 +151,7 @@ Identitas terdesentralisasi dapat membantu menciptakan komunitas daring yang beb
 
 Serangan Sybil mengacu pada individu manusia yang menipu suatu sistem untuk berpikir bahwa mereka adalah beberapa orang untuk meningkatkan pengaruhnya. [Aplikasi grant-giving](https://gitcoin.co/grants/) yang menggunakan [voting kuadrat](https://www.radicalxchange.org/concepts/plural-voting/) rentan terhadap serangan Sybil ini karena nilai grant meningkat ketika lebih banyak orang memilihnya, mendorong pengguna untuk membagi kontribusi mereka mewakili banyak identitas. Identitas terdesentralisasi membantu mencegah hal ini dengan meningkatkan bobot pada setiap peserta untuk membuktikan bahwa mereka benar-benar manusia, meski sering kali tanpa harus mengungkapkan informasi pribadi tertentu.
 
-## Identitas terdesentralisasi {#use-decentralized-identity}
+## Gunakan identitas terdesentralisasi {#use-decentralized-identity}
 
 Ada banyak proyek ambisius yang menggunakan Ethereum sebagai landasan untuk solusi identitas terdesentralisasi, diantaranya:
 
@@ -161,6 +161,7 @@ Ada banyak proyek ambisius yang menggunakan Ethereum sebagai landasan untuk solu
 - **[Proof of Humanity (PoH)](https://www.proofofhumanity.id)** - _Bukti Kemanusiaan adalah sistem verifikasi identitas sosial yang dibangun di Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Jaringan identitas sosial open source yang terdesentralisasi, berupaya mereformasi verifikasi identitas melalui pembuatan dan analisis grafik sosial._
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _Aggregator identitas digital terdesentralisasi._
+- **[walt.id](https://walt.id)** — _Infrastruktur identitas dan dompet sumber terbuka terdesentralisasi yang memungkinkan pengembang dan organisasi mengoptimalkan manfaat identitas mandiri dan NFT/SBT._
 
 ## Bacaan lebih lanjut {#further-reading}
 
@@ -170,6 +171,7 @@ Ada banyak proyek ambisius yang menggunakan Ethereum sebagai landasan untuk solu
 - [Apa itu Ethereum ERC725? Manajemen Identitas Mandiri di Rantai Blok](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [Bagaimana Rantai Blok Dapat Memecahkan Masalah Identitas Digital](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [Apa Itu Identitas Terdesentralisasi Dan Mengapa Anda Harus Peduli?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Pendahuluan tentang Identitas Terdesentralisasi](https://walt.id/white-paper/digital-identity) — _Dominik Beron_
 
 ### Video {#videos}
 
@@ -177,9 +179,11 @@ Ada banyak proyek ambisius yang menggunakan Ethereum sebagai landasan untuk solu
 - [Masuk dengan Ethereum dan Identitas Terdesentralisasi dengan Ceramic, IDX, React, dan 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _Tutorial YouTube tentang membangun sistem manajemen identitas untuk membuat, membaca, dan memperbarui profil pengguna menggunakan dompet Ethereum mereka oleh Nader Dabit_
 - [BrightID - Identitas Terdesentralisasi di Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Episode podcast Bankless membahas BrightID, solusi identitas terdesentralisasi untuk Ethereum_
 - [Internet Di Luar Rantai: Identitas yang terdesentralisasi & Kredensial yang Dapat Diverifikasi](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Presentasi EthDenver 2022 oleh Evin McMullen
+- [Penjelasan tentang Kredensial Terverifikasi](https://www.youtube.com/watch?v=ce1IdSr-Kig) - Video penjelasan di YouTube dengan demo oleh Tamino Baumann
 
 ### Komunitas {#communities}
 
 - [Aliansi ERC-725 di GitHub](https://github.com/erc725alliance) — _Pendukung standar ERC725 untuk mengelola identitas pada rantai blok Ethereum_
 - [Server Discord SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Komunitas untuk para penggemar dan pengembang yang bekerja pada sign-in dengan Ethereum_
 - [Lab Veramo](https://discord.gg/sYBUXpACh4) — _Komunitas developer yang berkontribusi membangun kerangka kerja untuk memungkinkan verifikasi data untuk aplikasi_
+- [wailt.id](https://discord.com/invite/AW8AgqJthZ) — _Komunitas pengembang dan pembuat sistem mengerjakan berbagai kasus penggunaan identitas terdesentralisasi pada berbagai industri_

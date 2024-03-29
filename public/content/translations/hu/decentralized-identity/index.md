@@ -8,7 +8,7 @@ sidebarDepth: 2
 image: /eth-gif-cat.png
 summaryPoint1: A hagyományos identitásrendszerek központosították az azonosítók kiadását, karbantartását és ellenőrzését.
 summaryPoint2: A decentralizált identitás megszünteti a centralizált harmadik felektől való függőséget.
-summaryPoint3: A kriptonak köszönhetően, a felhasználóknak újra van eszközük, hogy tárolják és kezeljék a saját azonosítójukat és tanúsítványaikat.
+summaryPoint3: A kriptónak köszönhetően, a felhasználóknak újra van eszközük, hogy tárolják és kezeljék a saját azonosítójukat és tanúsítványaikat.
 ---
 
 A virtuális identitás az életünk minden részét meghatározza napjainkban. Online szolgáltatások használata, bankszámla nyitás, szavazás a választásokon, ingatlan vásárlása, munkavállalás – mindegyikhez az identitás igazolása szükséges.
@@ -49,7 +49,7 @@ A decentralizált azonosítókat elosztott főkönyveken (blokklánc) vagy peer-
 
 ## Mi teszi lehetővé a decentralizált azonosítók használatát? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Nyilvánoskulcs-infrastruktúra (PKI) {#public-key-infrastructure}
+### 1. Nyilvánoskulcs-infrastruktúra (PKI) {#public-key-cryptography}
 
 A nyilvánoskulcs-infrastruktúra (PKI) egy olyan információbiztonsági lépés, amely az entitás számára egy [nyilvános kulcsot](/glossary/#public-key) és egy [privát kulcsot](/glossary/#private-key) hoz létre. A nyilvános kulcson alapuló kriptográfiát a blokklánchálózatok arra használják, hogy igazolják a felhasználók identitását és a digitális eszközök tulajdonjogát.
 

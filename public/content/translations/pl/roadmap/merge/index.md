@@ -135,7 +135,7 @@ title="Błędne przekonanie: „w wyniku fuzji nie udało się obniżyć opłat 
 contentPreview="False. The Merge was a change of consensus mechanism, not an expansion of network capacity, and was never intended to lower gas fees.">
 Opłaty za gaz są wypadkową zapotrzebowania na sieć i jej przepustowości. W wyniku Połączenia zrezygnowano z mechanizmu proof-of-work, przechodząc na mechanizm konsensusu proof-of-stake, ale nie zmieniono znacząco żadnych parametrów, które bezpośrednio wpływają na przepustowość sieci.
 
-W ramach [planu działania skoncentrowanego na pakietach zbiorczych](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) wysiłki koncentrują się na zwiększeniu aktywności użytkowników w [warstwie 2](/warstwa-2/), przy jednoczesnym umożliwieniu działania sieci głównej w warstwie 1 jako bezpiecznej, zdecentralizowanej warstwy rozliczenia, zoptymalizowanej do przechowywania danych pakietów zbiorczych, co pomoże uczynić transakcje na pakietach zbiorczych wykładniczo tańszymi. Przejście na proof-of-stake jest kluczowym prekursorem realizacji tego celu. [Więcej o gazie i opłatach](/developers/docs/gas/)
+W ramach [planu działania skoncentrowanego na pakietach zbiorczych](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) wysiłki koncentrują się na zwiększeniu aktywności użytkowników w [warstwie 2](/layer-2/), przy jednoczesnym umożliwieniu działania sieci głównej w warstwie 1 jako bezpiecznej, zdecentralizowanej warstwy rozliczenia, zoptymalizowanej do przechowywania danych pakietów zbiorczych, co pomoże uczynić transakcje na pakietach zbiorczych wykładniczo tańszymi. Przejście na proof-of-stake jest kluczowym prekursorem realizacji tego celu. [Więcej o gazie i opłatach](/developers/docs/gas/)
 </ExpandableCard>
 
 <ExpandableCard
@@ -210,7 +210,7 @@ Bądź na bieżąco dzięki [zagadnieniu planowania uaktualnienia Shanghai w ser
 
 ### Połączenie i sharding {#merge-and-data-sharding}
 
-Pierwotnie planowano prace nad shardingiem przed Połączeniem, aby rozwiązać problem skalowalności. Jednak wraz z rozwojem [rozwiązań skalujących warstwę 2](/warstwa-2/) priorytet przesunął się na zamianę mechanizmu proof-of-work na proof-of-stake.
+Pierwotnie planowano prace nad shardingiem przed Połączeniem, aby rozwiązać problem skalowalności. Jednak wraz z rozwojem [rozwiązań skalujących warstwę 2](/layer-2/) priorytet przesunął się na zamianę mechanizmu proof-of-work na proof-of-stake.
 
 Plany dotyczące shardingu szybko ewoluują, ale ze względu na rozwój i sukces technologii warstwy 2 do skalowania wykonania transakcji plany shardingu przesunęły się w kierunku znalezienia optymalnego sposobu rozłożenia ciężaru przechowywania skompresowanych calldata z kontraktów pakietów zbiorczych, co pozwala na wykładniczy wzrost przepustowości sieci. Nie byłoby to możliwe bez wcześniejszego przejścia na proof-of-stake.
 

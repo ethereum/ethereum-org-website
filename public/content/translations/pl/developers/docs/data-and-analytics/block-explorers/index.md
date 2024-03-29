@@ -17,7 +17,7 @@ Powinieneś zrozumieć podstawowe pojęcia Ethereum, abyś mógł zrozumieć dan
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/)
 - [Blockchair](https://blockchair.com/ethereum) – _dostępne również w języku hiszpańskim, francuskim, włoskim, niderlandzkim, portugalskim, rosyjskim, chińskim i farsi_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
 
 ## Dane {#data}
@@ -245,7 +245,7 @@ Dane najwyższego poziomu Eth2 obejmują:
 ## Eksploratory bloków {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) – eksplorator bloków, którego możesz użyć do pobrania danych dla głównej sieci Ethereum, sieci testowej Ropsten, sieci testowej Kovan, sieci testowej Rinkeby i sieci testowej Goerli.
-- [Blockscout](https://blockscout.com/) – koncentruje się na następujących sieciach:
+- [Blockscout](https://eth.blockscout.com/) – koncentruje się na następujących sieciach:
   - xDai – mądre połączenie technologii stablecoin DAI MakerDAO, a także technologii łańcucha bocznego POA i tokenbridge.
   - POA – łańcuch boczny i autonomiczna sieć zabezpieczona przez grupę zaufanych walidatorów. Wszyscy walidatorzy w sieci są notariuszami Stanów Zjednoczonych, a ich informacje są publicznie dostępne.
   - POA Sokol Testnet.

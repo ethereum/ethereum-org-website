@@ -1,5 +1,3 @@
-/en/ / 301!
-
 /discord https://discord.gg/ethereum-org 301!
 
 /*/discord https://discord.gg/ethereum-org 301!
@@ -150,8 +148,6 @@
 
 /*/eth2 /:splat/upgrades/ 301!
 
-/*/developers/docs/layer-2-scaling /:splat/developers/docs/scaling 301!
-
 /*/developers/docs/scaling/layer-2-rollups /:splat/developers/docs/scaling 301!
 
 /*/about/web-developer /:splat/about/#open-jobs 301!
@@ -176,4 +172,6 @@
 
 /*/guides/how-to-register-an-ethereum-account /:splat/guides/how-to-create-an-ethereum-account/ 301!
 
-/en/stablecoins /stablecoins 301!
+/*/deprecated-software /:splat/dapps/ 301!
+
+/*/languages /:splat/contributing/translation-program/ 301!

@@ -5,7 +5,7 @@ lang: pt-br
 summaryPoints:
   - Danksharding é uma melhoria em diversas fases para melhorar a escalabilidade e a capacidade do Ethereum.
   - A primeira fase, Proto-Danksharding, adiciona blobs de dados aos blocos
-  - Os blods de dados oferecem uma maneira mais barata para os rollups publicarem dados no Ethereum e esses custos podem ser repassados aos usuários na forma de taxas de transação mais baixas.
+  - Os blobs de dados oferecem uma maneira mais barata para os rollups publicarem dados no Ethereum e esses custos podem ser repassados aos usuários na forma de taxas de transação mais baixas.
   - Posteriormente, o Danksharding completo distribuirá a responsabilidade pela verificação dos blobs de dados em subconjuntos de nós, o que dimensionará ainda mais o Ethereum para mais de 100.000 transações por segundo.
 ---
 
@@ -15,7 +15,7 @@ summaryPoints:
 
 ## O que é Proto-Danksharding? {#what-is-protodanksharding}
 
-Proto-Danksharding, também conhecido como [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), é uma maneira para os [rollups](/layer2/#rollups) adicionarem dados mais baratos aos blocos. O nome vem dos dois pesquisadores que propuseram a ideia: Dankrad Feist e Protolambda. Atualmente, os rollups são limitados quanto ao preço das transações aos usuários pelo fato de publicarem as transações em `CALLDATA`. Isso é caro porque o processamento é feito por todos os nós do Ethereum e permanece na cadeia para sempre, embora os rollups só precisem dos dados por um breve período. Proto-Danksharding introduz blobs de dados que podem ser enviados e anexados aos blocos. Os dados nesses blobs não são acessíveis à EVM e são excluídos automaticamente após um período fixo (1 a 3 meses). Isso significa que os rollups podem enviar os dados de uma maneira muito mais barata e repassar a economia aos usuários finais na forma de transações mais baratas.
+Proto-Danksharding, também conhecido como [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), é uma maneira para os [rollups](/layer-2/#rollups) adicionarem dados mais baratos aos blocos. O nome vem dos dois pesquisadores que propuseram a ideia: Dankrad Feist e Protolambda. Atualmente, os rollups são limitados quanto ao preço das transações aos usuários pelo fato de publicarem as transações em `CALLDATA`. Isso é caro porque o processamento é feito por todos os nós do Ethereum e permanece na cadeia para sempre, embora os rollups só precisem dos dados por um breve período. Proto-Danksharding introduz blobs de dados que podem ser enviados e anexados aos blocos. Os dados nesses blobs não são acessíveis à EVM e são excluídos automaticamente após um período fixo (1 a 3 meses). Isso significa que os rollups podem enviar os dados de uma maneira muito mais barata e repassar a economia aos usuários finais na forma de transações mais baratas.
 
 <ExpandableCard title="Por que as blobs tornam os rollups mais baratos?" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 

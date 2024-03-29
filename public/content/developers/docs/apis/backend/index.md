@@ -25,7 +25,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [alchemy.com](https://www.alchemy.com/)
 - [Documentation](https://docs.alchemyapi.io/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
 **BlockCypher -** **_Ethereum Web APIs._**
 
@@ -36,7 +36,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [blastapi.io](https://blastapi.io/)
 - [Documentation](https://docs.blastapi.io)
-- [Discord](https://discord.com/invite/VPkWESgtvV)
+- [Discord](https://discord.gg/bwarelabs)
 
 **Infura -** **_The Ethereum API as a service._**
 
@@ -84,7 +84,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [quicknode.com](https://quicknode.com)
 - [Documentation](https://www.quicknode.com/docs)
-- [Discord](https://discord.gg/NaR7TtpvJq)
+- [Discord](https://discord.gg/quicknode)
 
 **Python Tooling -** **_Variety of libraries for Ethereum interaction via Python._**
 
@@ -135,12 +135,17 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [NOWNodes.io](https://nownodes.io/)
 - [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
 
+**Node RPC - _Cost-effective EVM JSON RPC provider_**
+
+- [noderpc.xyz](https://www.noderpc.xyz/)
+- [Documentation](https://docs.noderpc.xyz/)
+
 **Moralis -** **_Enterprise-Grade EVM API Provider._**
 
 - [moralis.io](http://moralis.io)
 - [Documentation](https://docs.moralis.io/)
 - [GitHub](https://github.com/MoralisWeb3)
-- [Discord](https://discord.com/invite/KYswaxwEtg)
+- [Discord](https://moralis.io/joindiscord/)
 - [Forum](https://forum.moralis.io/)
 
 **Chainbase -** **_All-in-one web3 data infrastructure for Ethereum._**

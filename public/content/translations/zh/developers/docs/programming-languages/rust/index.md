@@ -17,7 +17,7 @@ incomplete: true
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [编写您的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [编写你的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## 初学者文章 {#beginner-articles}
@@ -25,7 +25,6 @@ incomplete: true
 - [选择以太坊客户端](https://www.trufflesuite.com/docs/truffle/reference/choosing-an-ethereum-client)
 - [Rust 以太坊客户端](https://openethereum.github.io/) \* **注意 OpenEthereum [已被废弃](https://medium.com/openethereum/gnosis-joins-erigon-formerly-turbo-geth-to-release-next-gen-ethereum-client-c6708dd06dd)并已停止维护。** 请谨慎使用，最好切换至其他客户端实现。
 - [使用 Rust 向以太坊发送交易](https://kauri.io/#collections/A%20Hackathon%20Survival%20Guide/sending-ethereum-transactions-with-rust/)
-- [Parity 以太坊客户端智能合约简介](https://wiki.parity.io/Smart-Contracts)
 - [如何用 Rust Wasm 为 Kovan 编写合约的分步教程](https://github.com/paritytech/pwasm-tutorial)
 
 ## 面向中等程度用户的文章 {#intermediate-articles}
@@ -36,7 +35,6 @@ incomplete: true
 - [使用 JavaScript 和 Rust 搭建去中心化聊天室](https://medium.com/perlin-network/build-a-decentralized-chat-using-javascript-rust-webassembly-c775f8484b52)
 - [使用 Vue.js 和 Rust 构建一个去中心化待办事项应用程序](https://medium.com/@jjmace01/build-a-decentralized-todo-app-using-vue-js-rust-webassembly-5381a1895beb)
 
-- [Secret Contracts 介绍](https://blog.enigma.co/getting-started-with-enigma-an-intro-to-secret-contracts-cdba4fe501c2)
 - [使用 Rust 构建区块链](https://blog.logrocket.com/how-to-build-a-blockchain-in-rust/)
 
 ## Rust 项目和工具 {#rust-projects-and-tools}
@@ -44,7 +42,7 @@ incomplete: true
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _与类似以太坊的网络交互的外部帐户集合_
 - [Lighthouse](https://github.com/sigp/lighthouse) - _以太坊快速共识层客户端_
 - [ Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) - _使用 WebAssembly 的确定性子集对以太坊智能合约执行层建议的重新设计_
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API 参考_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API 参考_
 - [Solaris](https://github.com/paritytech/sol-rs) - _使用本机 Parity 客户端以太坊虚拟机的 Solidity 智能合约单元测试工具。_
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _以太坊虚拟机的 Rust 实现_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust 语言的 Wavelet 智能合约_
@@ -52,9 +50,9 @@ incomplete: true
 - [Ethers_rs](https://github.com/gakonst/ethers-rs)- _以太坊库和钱包的实现_
 - [SewUp](https://github.com/second-state/SewUp) - _一个帮助用户用 Rust 语言构建以太坊 Webassembly 合约的库，正如在公共后端中开发一样_
 - [Substreams](https://github.com/streamingfast/substreams) - _并行化区块链数据索引技术_
-- [Reth](https://github.com/paradigmxyz/reth) - Reth 即 Rust 以太坊简称的发音，是新的以太坊全节点实现
+- [Reth](https://github.com/paradigmxyz/reth) - Reth 即 Rust Ethereum 简称的发音，是新的以太坊全节点实现
 
-想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
+想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。
 
 ## Rust 社区贡献者 {#rust-community-contributors}
 

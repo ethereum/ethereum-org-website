@@ -16,7 +16,9 @@ Conosci una risorsa formativa nella tua lingua? [Apri una segnalazione](https://
 
 ## Risorse di Ethereum.org {#ethereum-org}
 
-Ethereum.org è tradotto in modo nativo in oltre 40 lingue che puoi trovare nella nostra [pagina dedicata alle lingue](/languages).
+Ethereum.org è tradotto in modo nativo in oltre 40 lingue che puoi trovare nella nostra pagina dedicata alle lingue.
+
+![Language selector menu](./language-selector-menu.png)
 
 Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere coinvolto nel [Programma di Traduzione ethereum.org](/contributing/translation-program/#translation-program) e aiutarci a tradurre il sito web.
 
@@ -72,7 +74,7 @@ Se sei bilingue e vuoi aiutarci a raggiungere più persone, puoi anche essere co
 - [Gwei.cz](https://gwei.cz) - community locale sul Web3, crea contenuti educativi, organizza eventi online e di persona
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - Guida per principianti di Ethereum
 - [DAO Příručka](https://dao.gwei.cz/) - guida per principianti alle DAO
-- [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Padroneggiare Ethereum in ceco
+- [Mastering Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Padroneggiare Ethereum in ceco
 
 ### Francese {#fr}
 
