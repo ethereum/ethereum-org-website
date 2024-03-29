@@ -1257,7 +1257,7 @@ See [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x29c", "0x24"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
 Result see [eth_getTransactionByHash](#eth_gettransactionbyhash)
