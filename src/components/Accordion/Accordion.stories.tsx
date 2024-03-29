@@ -1,4 +1,4 @@
-import { VStack } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import Accordion from "."
