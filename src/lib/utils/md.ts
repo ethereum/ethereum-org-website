@@ -56,6 +56,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/blocks",
     "/developers/docs/bridges",
     "/developers/docs/consensus-mechanisms",
+    "/developers/docs/consensus-mechanisms/poa",
     "/developers/docs/consensus-mechanisms/pos",
     "/developers/docs/consensus-mechanisms/pos/attack-and-defense",
     "/developers/docs/consensus-mechanisms/pos/attestations",
