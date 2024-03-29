@@ -10,6 +10,7 @@ export const fetchGFIs = async () => {
   url.searchParams.append("state", "open")
   url.searchParams.append("sort", "created")
   url.searchParams.append("direction", "desc")
+  url.searchParams.append("assignee", "none")
   url.searchParams.append("per_page", "10")
 
   try {
