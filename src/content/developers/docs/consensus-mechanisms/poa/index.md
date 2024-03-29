@@ -24,19 +24,19 @@ clique standard simply make a use of the obsolete headers: extradata that was us
 
 ## Attack vectors {#attack-vectors}
 
-### Attack vector: Malicious signer
+### Malicious signers {#malicious-signers}
 
-It may happen that a malicious user gets added to the list of signers, or that a signer key/machine is compromised. In such a scenario the protocol needs to be able to defend itself against reorganizations and spamming. The proposed solution is that given a list of N authorized signers, any signer may only mint 1 block out of every K. This ensures that damage is limited, and the remainder of the miners can vote out the malicious user.
+It may happen that a malicious user gets added to the list of signers, or that a signing key/machine is compromised. In such a scenario the protocol needs to be able to defend itself against reorganizations and spamming. The proposed solution is that given a list of N authorized signers, any signer may only mint 1 block out of every K. This ensures that damage is limited, and the remainder of the miners can vote out the malicious user.
 
-### Attack vector: Censoring signer
+### Censoring signers {#censoring-signers}
 
-Another interesting attack vector is if a signer (or group of signers) attempts to censor out blocks that vote on removing them from the authorization list. To work around this, we restrict the allowed minting frequency of signers to 1 out of N/2. This ensures that malicious signers need to control at least 51% of signing accounts, at which case it’s game over anyway.
+Another interesting attack vector is if a signer (or group of signers) attempts to censor blocks that vote on removing them from the authorization list. To work around this, the allowed minting frequency of signers is restricted to 1 out of N/2. This ensures that malicious signers need to control at least 51% of signing accounts, at which point they would effectively become the new source-of-truth for the chain.
 
-### Attack vector: Spamming signer
+### Spamming signers {#spamming-signers}
 
-A final small attack vector is that of malicious signers injecting new vote proposals inside every block they mint. Since nodes need to tally up all votes to create the actual list of authorized signers, they need to track all votes through time. Without placing a limit on the vote window, this could grow slowly, yet unbounded. The solution is to place a ~~moving~~ window of W blocks after which votes are considered stale. ~~A sane window might be 1-2 epochs.~~ We’ll call this an epoch.
+Another small attack vector is malicious signers injecting new vote proposals inside every block they mint. Since nodes need to tally up all votes to create the actual list of authorized signers, they need to track all votes through time. Without placing a limit on the vote window, this could grow slowly, yet unbounded. The solution is to place a _moving_ window of W blocks after which votes are considered stale. _A reasonable window might be 1-2 epochs._
 
-### Attack vector: Concurrent blocks
+### Concurrent blocks {#concurrent-blocks}
 
 If the number of authorized signers are N, and we allow each signer to mint 1 block out of K, then at any point in time N-K+1 miners are allowed to mint. To avoid these racing for blocks, every signer would add a small random “offset” to the time it releases a new block. This ensures that small forks are rare, but occasionally still happen (as on the main net). If a signer is caught abusing it’s authority and causing chaos, it can be voted out.
 
