@@ -1,18 +1,26 @@
 import Emoji from "react-emoji-render"
-import { Avatar, Flex, HStack, SimpleGrid, Stack, Text } from "@chakra-ui/react"
+import {
+  Avatar,
+  Flex,
+  HStack,
+  SimpleGrid,
+  SimpleGridProps,
+  Stack,
+  Text,
+} from "@chakra-ui/react"
 
 import type { GHIssue } from "@/lib/types"
 
 import InlineLink from "../Link"
 import Tag from "../Tag"
 
-type IssuesListProps = {
+type IssuesListProps = SimpleGridProps & {
   issues: GHIssue[]
 }
 
-const IssuesList = ({ issues }: IssuesListProps) => {
+const IssuesList = ({ issues, ...props }: IssuesListProps) => {
   return (
-    <SimpleGrid columns={[1, null, 2]} spacing={4}>
+    <SimpleGrid columns={[1, null, 2]} spacing={4} {...props}>
       {issues.map((issue) => (
         <Stack
           key={issue.title}
@@ -28,6 +36,7 @@ const IssuesList = ({ issues }: IssuesListProps) => {
                 name={issue.user.login}
                 src={issue.user.avatar_url}
                 w="32px"
+                h="32px"
               />
               <Text>by {issue.user.login}</Text>
             </HStack>

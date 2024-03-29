@@ -50,11 +50,13 @@ The ethereum.org website, like Ethereum more broadly, is an open-source project.
 
 _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/ethereum-org)
 
-## Issues that need a contributor right now
+## Good first issues to start contributing
 
-This is a list issues you could get started with. To see full list go to our [GitHub repository](https://github.com/ethereum/ethereum-org-website/issues). 
+These are few current tasks that you could help us solve and take responsibility for. For most you will need GitHub account as most changes to the website are made through GitHub. Check out full list on GitHub: 43 design issues, 23 content , 112 dev
 
-<IssuesList issues={gfissues} />
+<IssuesList issues={gfissues} mb={4} />
+
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">See all tasks</ButtonLink>
 
 ## How to work on ethereum.org {#how-to-update-content}
 
