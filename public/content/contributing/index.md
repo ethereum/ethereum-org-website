@@ -47,9 +47,9 @@ We are a welcoming community that will help you grow and educate in the Ethereum
 
 Any questions? 🤔 Join our [Discord server](https://discord.gg/ethereum-org)
 
-## Good first issues to start contributing
+## Good first tasks to start contributing
 
-These are few current tasks that you could help us solve and take responsibility for. For most you will need GitHub account as most changes to the website are made through GitHub. Check out full list on GitHub: 43 design issues, 23 content , 112 dev
+These are few current tasks that you could help us solve and take responsibility for. For most you will need GitHub account as most changes to the website are made through GitHub.
 
 <IssuesList issues={gfissues} my={8} />
 
