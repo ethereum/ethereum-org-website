@@ -41,7 +41,11 @@ const IssuesList = ({ issues, ...props }: IssuesListProps) => {
               <Text>by {issue.user.login}</Text>
             </HStack>
 
-            <InlineLink href={issue.html_url} textDecor="none">
+            <InlineLink
+              href={issue.html_url}
+              textDecor="none"
+              fontWeight="bold"
+            >
               {issue.title}
             </InlineLink>
           </Stack>

@@ -51,7 +51,7 @@ Any questions? 🤔 Join our [Discord server](https://discord.gg/ethereum-org)
 
 These are few current tasks that you could help us solve and take responsibility for. For most you will need GitHub account as most changes to the website are made through GitHub. Check out full list on GitHub: 43 design issues, 23 content , 112 dev
 
-<IssuesList issues={gfissues} mb={4} />
+<IssuesList issues={gfissues} my={8} />
 
 <ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">See all tasks</ButtonLink>
 
