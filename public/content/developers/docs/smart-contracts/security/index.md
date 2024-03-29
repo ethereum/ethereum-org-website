@@ -496,8 +496,6 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[OpenZeppelin](https://www.openzeppelin.com/security-audits)** - _Smart contract security company providing security audits for distributed systems._
 
-- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
-
 - **[Runtime Verification](https://runtimeverification.com/)** - _Security company specializing in formal modeling and verification of smart contracts._
 
 - **[Hacken](https://hacken.io)** - _Web3 cybersecurity auditor bringing the 360-degree approach to blockchain security._
@@ -511,6 +509,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[CodeHawks](https://codehawks.com/)** - _Competitive audits platform hosting smart contracts auditing competitions for security researchers._
 
 - **[Cyfrin](https://www.cyfrin.io/)** - _Blockchain security and web3 education firm focused on EVM and Vyper based protocols._
+
+- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
 
 ### Bug bounty platforms {#bug-bounty-platforms}
 
