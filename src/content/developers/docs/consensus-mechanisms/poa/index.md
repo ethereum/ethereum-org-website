@@ -18,7 +18,7 @@ The Proof-of-Authority simply requires to trust a subset of authorized signers t
 
 The Proof-of-Authority has different implementations, but the ethereum standard implementation is clique that implements [eip-225](https://eips.ethereum.org/EIPS/eip-225), it has the most developer-friendly and easy to implement standard that all clients syncing types are supported, unlike a previously used implementation (Aura) that was implemented in openethereum, which fast,light syncing are not supported because smart contracts are used to store the authorized signers, clique instead only reuse obsoleted headers to solve the issues related to voting to add and remove signers.
 
-## how it works {#how-it-works}
+## How it works {#how-it-works}
 
 clique standard simply make a use of the obsolete headers: extradata that was used only for fun, miner became obsolete as there are no miners in POA, and nonce became also obsolete because the authorities the order of users transactions, extradata is used to store the authorized signers set, miner and nonce are used to vote for adding or removing signers from the network, where every epoch transition flushes all pending votes. The block proposal is selected sequentially for each block, but in fact any other authorized signer can propose block even if it's not his turn, but they have limit of signing only one block between K blocks when N are the authorized signers.
 
