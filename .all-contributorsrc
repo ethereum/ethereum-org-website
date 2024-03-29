@@ -11634,6 +11634,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "bh2smith",
+      "name": "Benjamin Smith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11778116?v=4",
+      "profile": "https://github.com/bh2smith",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
