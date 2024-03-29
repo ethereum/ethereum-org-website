@@ -1,6 +1,6 @@
 import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
 import { Box, Flex, Text } from "@chakra-ui/react"
+import { Meta, StoryObj } from "@storybook/react"
 
 import Alert from "."
 

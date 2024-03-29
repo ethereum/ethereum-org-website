@@ -11,7 +11,7 @@ We recommend setting this up when running the project locally, as we use the Git
 
 ```sh
 # .env Example:
-GATSBY_GITHUB_TOKEN_READ_ONLY=48f84de812090000demo00000000697cf6e6a059
+NEXT_PUBLIC_GITHUB_TOKEN_READ_ONLY=48f84de812090000demo00000000697cf6e6a059
 ```
 
 2. Add Etherscan API token (free)
@@ -24,14 +24,4 @@ GATSBY_GITHUB_TOKEN_READ_ONLY=48f84de812090000demo00000000697cf6e6a059
 ```sh
 # .env Example:
 ETHERSCAN_API_KEY=K6NUTARFJZJCIXHF1F1E1YGJZ8RQ29BE4U
-```
-
-3. Add DeFiPulse API token (free)
-
-> - [Follow this guide](https://docs.defipulse.com/quick-start-guide) to create an account and get your DeFiPulse API token
-> - Copy & paste your Active API Key from DeFiPulse into `.env`
-
-```sh
-# .env Example:
-DEFI_PULSE_API_KEY=4953aaf7966dad9c129397e197a0630ed0594f66962dd5fb058972b250da
 ```

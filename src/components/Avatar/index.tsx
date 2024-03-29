@@ -1,17 +1,17 @@
 import * as React from "react"
+import { RxExternalLink } from "react-icons/rx"
 import {
   Avatar as ChakraAvatar,
   AvatarProps,
   Center,
-  CenterProps,
-  FlexProps,
   forwardRef,
   LinkBox,
   LinkOverlay,
   LinkProps,
   ThemingProps,
 } from "@chakra-ui/react"
-import { RxExternalLink } from "react-icons/rx"
+
+import { useRtlFlip } from "../../hooks/useRtlFlip"
 import { BaseLink } from "../Link"
 
 type AssignAvatarProps = Required<Pick<AvatarProps, "name" | "src">> &
@@ -26,6 +26,7 @@ type AvatarLinkProps = AssignAvatarProps &
 
 const Avatar = forwardRef<AvatarLinkProps, "div" | "a">((props, ref) => {
   const { href, src, name, size = "md", label, direction = "row" } = props
+  const { flipForRtl } = useRtlFlip()
 
   const avatarProps = {
     src,
@@ -56,7 +57,7 @@ const Avatar = forwardRef<AvatarLinkProps, "div" | "a">((props, ref) => {
           {...linkProps}
         >
           {label}
-          <RxExternalLink />
+          <RxExternalLink transform={flipForRtl} />
         </LinkOverlay>
         <ChakraAvatar {...avatarProps} />
       </LinkBox>

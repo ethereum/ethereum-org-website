@@ -1,10 +1,10 @@
 import React, { ReactNode } from "react"
 import {
-  Tabs as ChakraTabs,
-  TabList,
   Tab,
-  TabPanels,
+  TabList,
   TabPanel,
+  TabPanels,
+  Tabs as ChakraTabs,
 } from "@chakra-ui/react"
 
 interface Tab {
@@ -12,12 +12,12 @@ interface Tab {
   content: ReactNode
 }
 
-export interface IProps {
+export type TabsProps = {
   tabs: Array<Tab>
   onTabClick?: (tabIndex: number) => void
 }
 
-const Tabs: React.FC<IProps> = ({ tabs, onTabClick }) => {
+const Tabs = ({ tabs, onTabClick }: TabsProps) => {
   const handleTabClick = (index: number) => {
     if (onTabClick) {
       onTabClick(index)

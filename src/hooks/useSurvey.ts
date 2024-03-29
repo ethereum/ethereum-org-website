@@ -1,14 +1,13 @@
 import { useMemo } from "react"
+import { useRouter } from "next/router"
 
-const location = typeof window !== "undefined" ? window.location.href : ""
+import { SITE_URL } from "@/lib/constants"
 
-export type Survey = {
-  url: string
-  prompt: string
-}
-
-export const useSurvey = (feedbackSubmitted: boolean) =>
-  useMemo((): string | null => {
+export const useSurvey = (feedbackSubmitted: boolean) => {
+  const { asPath } = useRouter()
+  const { href: url } = new URL(asPath, SITE_URL)
+  return useMemo((): string | null => {
     if (!feedbackSubmitted) return null
-    return `https://iwokuhuz.paperform.co//?url=${location}`
-  }, [feedbackSubmitted, location])
+    return `https://iwokuhuz.paperform.co//?url=${url}`
+  }, [feedbackSubmitted, url])
+}

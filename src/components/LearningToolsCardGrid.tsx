@@ -1,16 +1,12 @@
-// Library imports
 import React from "react"
 import { Grid } from "@chakra-ui/react"
-// Component imports
+
+import { LearningToolsCardGridProps } from "@/lib/types"
+
 import ProductCard from "./ProductCard"
 import Translation from "./Translation"
-// Type imports
-import { LearningToolsCardGridProps } from "../types"
 
-// Component
-const LearningToolsCardGrid: React.FC<LearningToolsCardGridProps> = ({
-  category,
-}) => {
+const LearningToolsCardGrid = ({ category }: LearningToolsCardGridProps) => {
   return (
     <Grid
       templateColumns="repeat(auto-fill, minmax(min(100%, 280px), 1fr))"

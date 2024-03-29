@@ -1,11 +1,11 @@
-import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
 import { Stack } from "@chakra-ui/react"
+import { Meta, StoryObj } from "@storybook/react"
+
 import BreadcrumbsComponent from "."
 
-type BreadcumbsType = typeof BreadcrumbsComponent
+type BreadcrumbsType = typeof BreadcrumbsComponent
 
-const meta: Meta<BreadcumbsType> = {
+const meta: Meta<BreadcrumbsType> = {
   title: "Molecules / Navigation / Breadcrumbs",
   component: BreadcrumbsComponent,
 }

@@ -25,6 +25,7 @@
   "page-what-is-ethereum-energy-consumption-chart-legend": "Consommation d'énergie annuelle en TWh/an",
   "page-upgrades-post-merge-banner-governance-ood": "Certains contenus sur cette page sont périmés depuis la fusion. Veuillez éditer un PR sur GitHub si vous souhaitez contribuer.",
   "energy-consumption-chart-global-data-centers-label": "Centres de données globaux",
+  "energy-consumption-chart-airbnb-label": "Airbnb",
   "energy-consumption-gold-mining-cbeci-label": "Extraction d'or",
   "energy-consumption-chart-btc-pow-label": "BTC PoW",
   "energy-consumption-chart-netflix-label": "Netflix",
