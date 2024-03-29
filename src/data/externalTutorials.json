@@ -1,5 +1,25 @@
 [
   {
+    "url": "https://updraft.cyfrin.io/courses/security",
+    "title": "Learn Smart Contract Auditing, Security, and DeFi",
+    "description": "The ultimate web3 security course for all those looking to be top smart contract developer or security researchers. We teach you all the cutting edge skills needed to make web3 safer and start a successful career in web3 security.",
+    "author": "Cyfrin Updraft",
+    "authorGithub": "https://github.com/PatrickAlphaC",
+    "tags": [
+      "solidity",
+      "smart contracts",
+      "video",
+      "oracles",
+      "foundry",
+      "defi",
+      "fuzzing"
+    ],
+    "skillLevel": "advanced",
+    "timeToRead": "1320",
+    "lang": "en",
+    "publishDate": "12/13/2023"
+  },
+  {
     "url": "https://youtu.be/umepbfKp5rI",
     "title": "Learn Solidity, Blockchain Development, & Smart Contracts using Foundry",
     "description": "This course will give you a full introduction to all of the core concepts related to blockchain, smart contracts, Solidity, ERC20s, Foundry, DeFi, Chainlink, Ethereum, upgradable smart contracts, DAOs, IPFS, and more. Follow along with the videos and you'll be a blockchain wizard in no time!",
@@ -458,5 +478,72 @@
     "skillLevel": "beginner",
     "lang": "en",
     "publishDate": "03/22/2023"
+  },
+  {
+    "url": "https://veridelisi.medium.com/learn-opcodes-7bd28d5f0d1b",
+    "title": "Learn EVM Opcodes Series",
+    "description": "Welcome to the comprehensive series on understanding Ethereum Virtual Machine (EVM) Opcodes",
+    "author": "Engin YILMAZ @veridelisi",
+    "authorGithub": "https://github.com/veridelisi",
+    "tags": [
+      "opcodes",
+      "foundry",
+      "smart contracts",
+      "solidity",
+      "yul",
+      "storage",
+      "memory"
+    ],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "publishDate": "03/08/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/escrow-contract-with-solidity",
+    "title": "Build an escrow contract with Solidity and Replit",
+    "description": "Learn how to build a simple escrow smart contract, which will include deploying your own non-fungible token (NFT) and learning more about Solidity on Ethereum.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["solidity", "smart contracts", "erc-721"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "20",
+    "publishDate": "03/24/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/build-a-robot-nft",
+    "title": "Build a robot NFT with Solidity and Replit (part 1)",
+    "description": "Learn how to create a simple generative art NFT, ReplBots, with part 1 focusing on the smart contract deployment.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["solidity", "smart contracts", "erc-721", "nft"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "20",
+    "publishDate": "03/24/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/build-a-robot-nft-p2",
+    "title": "Build a robot NFT with Solidity and Replit (part 2)",
+    "description": "Continues from part 1 where you can learn how to create a frontend interface for your NFT application.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["javascript", "frontend"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "15",
+    "publishDate": "03/24/2023"
+  },
+  {
+    "url": "https://docs.replit.com/tutorials/web3/build-smart-contract-oracle",
+    "title": "Build a smart contract oracle with Solidity, Node.js, and Replit",
+    "description": "Learn how to use oracles in smart contracts and how oracles work internally, and gain experience with hybrid on-and-off chain systems.",
+    "author": "replit",
+    "authorGithub": "https://github.com/replit",
+    "tags": ["solidity", "oracles", "javascript"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "30",
+    "publishDate": "03/24/2023"
   }
 ]

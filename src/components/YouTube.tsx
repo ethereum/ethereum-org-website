@@ -1,5 +1,8 @@
 import React from "react"
-import { AspectRatio } from "@chakra-ui/react"
+import LiteYouTubeEmbed from "react-lite-youtube-embed"
+import { Box } from "@chakra-ui/react"
+
+import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css"
 
 /**
  * @param {id} ID of the YouTube video
@@ -11,32 +14,26 @@ import { AspectRatio } from "@chakra-ui/react"
  * @returns Embedded YouTube video component
  */
 
-export interface IProps {
+type YouTubeProps = {
   id: string
   start?: string
   title?: string
 }
 
-const YouTube: React.FC<IProps> = ({ id, start = "0", title = "YouTube" }) => {
-  const startQuery = parseInt(start) > 0 ? `?start=${start}` : ""
-  const baseUrl = "https://www.youtube.com/embed/"
-  const src = baseUrl + id + startQuery
+const YouTube = ({ id, start = "0", title = "YouTube" }: YouTubeProps) => {
+  const params = new URLSearchParams()
+  ;+start > 0 && params.set("start", start)
   return (
-    <AspectRatio as="figure" maxW="560px" ratio={16 / 9} my={8}>
-      <iframe
-        src={src}
-        frameBorder="0"
+    <Box as="figure" maxW={560} my={8}>
+      <LiteYouTubeEmbed
+        aspectHeight={9}
+        aspectWidth={16}
+        id={id}
         title={title}
-        allow="
-      accelerometer;
-      autoplay;
-      clipboard-write;
-      encrypted-media;
-      gyroscope;
-      picture-in-picture"
-        allowFullScreen
+        params={params.toString()}
+        noCookie
       />
-    </AspectRatio>
+    </Box>
   )
 }
 
