@@ -1,7 +1,7 @@
 # This is the source file for developer documentation nav links
 # Each `id` value should map to an equivalent key in src/intl/${lang}.json file
 
-# To display item as a collapsable directory vs. a link
+# To display item as a collapsible directory vs. a link
 # use the `path` property (of the directory) vs. the `to` property
 - id: docs-nav-readme
   to: /developers/docs/
@@ -34,7 +34,7 @@
       description: docs-nav-evm-description
       items:
         - id: docs-nav-opcodes
-          to: /developers/docs/evm/opcodes
+          to: /developers/docs/evm/opcodes/
     - id: docs-nav-gas
       to: /developers/docs/gas/
       description: docs-nav-gas-description
@@ -51,11 +51,11 @@
         - id: docs-nav-node-architecture
           to: /developers/docs/nodes-and-clients/node-architecture/
         - id: docs-nav-light-clients
-          to: /developers/docs/nodes-and-clients/light-clients
+          to: /developers/docs/nodes-and-clients/light-clients/
         - id: docs-nav-archive-nodes
           to: /developers/docs/nodes-and-clients/archive-nodes/
         - id: docs-nav-bootnodes
-          to: /developers/docs/nodes-and-clients/bootnodes
+          to: /developers/docs/nodes-and-clients/bootnodes/
     - id: docs-nav-networks
       to: /developers/docs/networks/
       description: docs-nav-networks-description
@@ -70,12 +70,12 @@
               to: /developers/docs/consensus-mechanisms/pow/mining/
               items:
                 - id: docs-nav-mining-algorithms
-                  to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/
+                  to: /developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/
                   items:
                     - id: docs-nav-dagger-hashimoto
-                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto
+                      to: /developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/
                     - id: docs-nav-ethash
-                      to: /developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash
+                      to: /developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/
         - id: docs-nav-proof-of-stake
           to: /developers/docs/consensus-mechanisms/pos/
           items:
@@ -84,7 +84,7 @@
             - id: docs-nav-weak-subjectivity
               to: /developers/docs/consensus-mechanisms/pos/weak-subjectivity/
             - id: docs-nav-attestations
-              to: /developers/docs/consensus-mechanisms/pos/attestations
+              to: /developers/docs/consensus-mechanisms/pos/attestations/
             - id: docs-nav-rewards-and-penalties
               to: /developers/docs/consensus-mechanisms/pos/rewards-and-penalties/
             - id: docs-nav-attack-and-defense
@@ -92,11 +92,11 @@
             - id: docs-nav-keys
               to: /developers/docs/consensus-mechanisms/pos/keys/
             - id: docs-nav-pos-vs-pow
-              to: /developers/docs/consensus-mechanisms/pos/pos-vs-pow
+              to: /developers/docs/consensus-mechanisms/pos/pos-vs-pow/
             - id: docs-nav-block-proposal
               to: /developers/docs/consensus-mechanisms/pos/block-proposal/
             - id: docs-nav-pos-faqs
-              to: /developers/docs/consensus-mechanisms/pos/faqs
+              to: /developers/docs/consensus-mechanisms/pos/faqs/
 - id: docs-nav-ethereum-stack
   path: /developers/docs/
   items:
@@ -216,7 +216,7 @@
         - id: docs-nav-scaling-optimistic-rollups
           to: /developers/docs/scaling/optimistic-rollups/
         - id: docs-nav-scaling-zk-rollups
-          to: /developers/docs/scaling/zk-rollups
+          to: /developers/docs/scaling/zk-rollups/
         - id: docs-nav-scaling-channels
           to: /developers/docs/scaling/state-channels/
         - id: docs-nav-scaling-sidechains
