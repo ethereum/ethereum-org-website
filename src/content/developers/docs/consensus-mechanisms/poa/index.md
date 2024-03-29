@@ -16,7 +16,7 @@ Proof-of-Authority is a modified version of [proof-of-stake](/developers/docs/co
 
 Proof-of-authority requires trusting a set of authorized signers that are set in the [genesis block](/glossary/#genesis-block). In most current implementations, all authorized signers retain equal power and privileges when determining consensus of the chain. The idea behind reputation staking is every authorized signer is well-known to everyone through things like know-your customer (KYC), or by having a well-known organization be the only signer. This way if a signer does anything wrong, their identity is known.
 
-The Proof-of-Authority has different implementations, but the ethereum standard implementation is clique that implements [eip-225](https://eips.ethereum.org/EIPS/eip-225), it has the most developer-friendly and easy to implement standard that all clients syncing types are supported, unlike a previously used implementation (Aura) that was implemented in openethereum, which fast,light syncing are not supported because smart contracts are used to store the authorized signers, clique instead only reuse obsoleted headers to solve the issues related to voting to add and remove signers.
+Proof-of-authority has different implementations, but the standard Ethereum implementation is **clique**, which implements [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique is developer-friendly and an easy-to-implement standard, supporting all client syncing types.
 
 ## How it works {#how-it-works}
 
