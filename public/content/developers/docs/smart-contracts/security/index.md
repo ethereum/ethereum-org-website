@@ -510,6 +510,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Cyfrin](https://www.cyfrin.io/)** - _Blockchain security and web3 education firm focused on EVM and Vyper based protocols._
 
+- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
+
 ### Bug bounty platforms {#bug-bounty-platforms}
 
 - **[Immunefi](https://immunefi.com/)** - _Bug bounty platform for smart contracts and DeFi projects, where security researchers review code, disclose vulnerabilities, get paid, and make crypto safer._
