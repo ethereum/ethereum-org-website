@@ -20,8 +20,8 @@ type Story = StoryObj<AccordionType>
 
 export const Basic: Story = {
   render: (args) => (
-    <VStack>
+    <Box width="full" maxWidth="268px">
       <Accordion {...args} />
-    </VStack>
+    </Box>
   ),
 }
