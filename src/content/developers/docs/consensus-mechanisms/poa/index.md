@@ -51,7 +51,7 @@ If the number of authorized signers are N, and we allow each signer to mint 1 bl
 ## Further Reading {#further-reading}
 
 - [EIP-225](https://eips.ethereum.org/EIPS/eip-225) _Clique standard_
-- [proof of authority study](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md) _Cryptoeconomics_
+- [Proof of authority study](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md) _Cryptoeconomics_
 - [What is Proof of Authority](https://forum.openzeppelin.com/t/proof-of-authority/3577) _OpenZeppelin_
 - [Proof of Authority Explained](https://academy.binance.com/en/articles/proof-of-authority-explained) _binance_
 - [PoA in blockchain](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
