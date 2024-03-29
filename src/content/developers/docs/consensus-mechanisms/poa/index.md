@@ -40,7 +40,7 @@ A final small attack vector is that of malicious signers injecting new vote prop
 
 If the number of authorized signers are N, and we allow each signer to mint 1 block out of K, then at any point in time N-K+1 miners are allowed to mint. To avoid these racing for blocks, every signer would add a small random “offset” to the time it releases a new block. This ensures that small forks are rare, but occasionally still happen (as on the main net). If a signer is caught abusing it’s authority and causing chaos, it can be voted out.
 
-## PROS AND CONS {#pros-and-cons}
+## Pros and cons {#pros-and-cons}
 
 | Pros                                                                                                                                                      | Cons                                                                                                                                                  |
 | --------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
