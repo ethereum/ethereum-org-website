@@ -1,42 +1,33 @@
-import React, { useState, createRef, useContext } from "react"
-import { useI18next } from "gatsby-plugin-react-i18next"
-import {
-  Box,
-  Fade,
-  Flex,
-  Heading,
-  Icon,
-  List,
-  ListItem,
-} from "@chakra-ui/react"
+import React, { createRef, useContext, useState } from "react"
 import { MdExpandMore } from "react-icons/md"
+import { Box, Fade, Flex, Icon, ListItem } from "@chakra-ui/react"
 
-import Link, { IProps as LinkProps } from "../Link"
+import { BaseLink, type LinkProps } from "../Link"
 
-import { useOnClickOutside } from "../../hooks/useOnClickOutside"
-import { getDirection } from "../../utils/translations"
-import { Lang } from "../../utils/languages"
+import { NavSectionDetail } from "./types"
 
-import { ISection } from "./types"
+import { useOnClickOutside } from "@/hooks/useOnClickOutside"
 
 const NavLink = (props: LinkProps) => (
-  <Link
+  <BaseLink
     color="text200"
     display="block"
     textDecor="none"
     py={2}
     px={4}
+    fontWeight="normal"
     _hover={{
       textDecor: "none",
       color: "primary.base",
       svg: { fill: "currentColor" },
     }}
+    _visited={{}}
     sx={{ svg: { fill: "currentColor" } }}
     {...props}
   />
 )
 
-interface IDropdownContext {
+type DropdownContext = {
   isOpen: boolean
   toggle: () => void
   close: () => void
@@ -46,24 +37,17 @@ interface IDropdownContext {
   ) => void
 }
 
-const DropdownContext = React.createContext<IDropdownContext | null>(null)
+const DropdownContext = React.createContext<DropdownContext | null>(null)
 
-export interface IProps {
+export type NavDropdownProps = {
   children?: React.ReactNode
-  section: ISection
-  hasSubNav: boolean
+  section: NavSectionDetail
 }
 
-const NavDropdown: React.FC<IProps> & {
-  Item: typeof Item
-  Link: typeof Link
-  Title: typeof Title
-} = ({ children, section, hasSubNav }) => {
+const NavDropdown = ({ children, section }: NavDropdownProps) => {
   const [isOpen, setIsOpen] = useState(false)
-  const { language } = useI18next()
-  const ref = createRef<HTMLLIElement>()
 
-  const direction = getDirection(language as Lang)
+  const ref = createRef<HTMLLIElement>()
 
   const toggle = () => setIsOpen((isOpen) => !isOpen)
   const close = () => setIsOpen(false)
@@ -88,7 +72,7 @@ const NavDropdown: React.FC<IProps> & {
     }
   }
 
-  const ariaLabel = section.ariaLabel || section.text
+  const ariaLabel = section.ariaLabel || section.label
 
   return (
     <DropdownContext.Provider
@@ -104,7 +88,6 @@ const NavDropdown: React.FC<IProps> & {
       >
         <Flex
           as="span"
-          dir={direction}
           onClick={() => toggle()}
           onKeyDown={onKeyDownHandler}
           tabIndex={0}
@@ -119,7 +102,7 @@ const NavDropdown: React.FC<IProps> & {
             },
           }}
         >
-          {section.text}
+          {section.label}
           <Icon
             as={MdExpandMore}
             color="text200"
@@ -134,10 +117,8 @@ const NavDropdown: React.FC<IProps> & {
           bg="dropdownBackground"
           border="1px"
           borderColor="dropdownBorder"
-          m={0}
-          mt={hasSubNav ? "-4.5rem" : -4}
+          mt="1"
           position="absolute"
-          top="100%"
           py={4}
           borderRadius="base"
           width="auto"
@@ -149,12 +130,12 @@ const NavDropdown: React.FC<IProps> & {
   )
 }
 
-interface IItemProp {
+type ItemProps = {
   children?: React.ReactNode
   isLast?: boolean
 }
 
-const Item: React.FC<IItemProp> = ({ children, isLast = false, ...rest }) => {
+const Item = ({ children, isLast = false, ...rest }: ItemProps) => {
   const context = useContext(DropdownContext)
 
   return (
@@ -174,11 +155,11 @@ const Item: React.FC<IItemProp> = ({ children, isLast = false, ...rest }) => {
   )
 }
 
-interface ITitleProps {
+type TitleProps = {
   children?: React.ReactNode
 }
 
-const Title: React.FC<ITitleProps> = (props) => {
+const Title = (props: TitleProps) => {
   return (
     <Box
       as="span"
@@ -194,8 +175,4 @@ const Title: React.FC<ITitleProps> = (props) => {
   )
 }
 
-NavDropdown.Item = Item
-NavDropdown.Link = NavLink
-NavDropdown.Title = Title
-
-export default NavDropdown
+export default Object.assign(NavDropdown, { Link: NavLink, Item, Title })

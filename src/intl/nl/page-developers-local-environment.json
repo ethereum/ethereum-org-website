@@ -1,6 +1,8 @@
 {
   "page-local-environment-brownie-desc": "Een op Python gebaseerd ontwikkel- en testraamwerk voor slimme contracten gericht op de Ethereum Virtual Machine.",
   "page-local-environment-brownie-logo-alt": "Brownie logo",
+  "page-local-environment-kurtosis-desc": "Een container-gebaseerde toolkit voor het configureren en opstarten van een multi-client Ethereum-testnet voor de snelle lokale ontwikkeling, prototyping en testen van dApps.",
+  "page-local-environment-kurtosis-logo-alt": "Kurtosis-logo",
   "page-local-environment-epirus-desc": "Een platform voor het ontwikkelen, implementeren en monitoren van blockchain-applicaties op de Java Virtual Machine.",
   "page-local-environment-epirus-logo-alt": "Epirus logo",
   "page-local-environment-eth-app-desc": "Maak door Ethereum aangedreven apps met één commando. Wordt geleverd met een breed aanbod aan UI frameworks en DeFi templates om uit te kiezen.",

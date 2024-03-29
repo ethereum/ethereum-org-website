@@ -51,7 +51,7 @@
   "page-developers-meta-desc": "이더리움에서 개발하는 개발자를 위한 문서, 튜토리얼, 도구가 준비되어 있습니다.",
   "page-developers-mev-desc": "최대 추출 가능 값(MEV)에 대한 소개",
   "page-developers-mev-link": "최대 추출 가능 값(MEV)",
-  "page-developers-mining-desc": "새로운 블록이 생성되고 합의에 이르는 과정",
+  "page-developers-mining-desc": "작업 증명을 사용하여 새로운 블록을 생성하고 합의에 도달하는 방법을 설명합니다.",
   "page-developers-mining-link": "채굴",
   "page-developers-mining-algorithms-desc": "이더리움 채굴 알고리즘 정보",
   "page-developers-mining-algorithms-link": "채굴 알고리즘",
@@ -92,5 +92,6 @@
   "page-developers-data-structures-and-encoding": "데이터 구조 및 인코딩",
   "page-developers-data-structures-and-encoding-link": "데이터 구조 및 인코딩",
   "page-developers-data-structures-and-encoding-desc": "이더리움 스택에서 사용되는 데이터 구조 및 인코딩 스키마 소개",
-  "alt-eth-blocks": "ETH 기호처럼 구성되고 있는 블록의 그림"
+  "alt-eth-blocks": "ETH 기호처럼 구성되고 있는 블록의 그림",
+  "page-assets-doge": "디앱을 사용하는 Doge"
 }

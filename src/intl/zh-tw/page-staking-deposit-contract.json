@@ -2,8 +2,8 @@
   "page-staking-deposit-contract-address": "質押存款合約地址",
   "page-staking-deposit-contract-address-caption": "我們添加一些空格使得這個地址更容易閱讀",
   "page-staking-deposit-contract-address-check-btn": "查看存款合約地址",
-  "page-staking-deposit-contract-checkbox1": "我已使用啟動面板來設定我的以太坊驗證程式。",
-  "page-staking-deposit-contract-checkbox2": "我明白，我需要使用啟動面板來進行質押。簡單地向這個地址轉賬無法奏效。",
+  "page-staking-deposit-contract-checkbox1": "我已使用啟動面板來設定我的以太坊驗證者。",
+  "page-staking-deposit-contract-checkbox2": "我明白，我需要使用啟動面板來進行質押。簡單地向這個地址轉帳無法奏效。",
   "page-staking-deposit-contract-checkbox3": "我將向其他來源核對存款合約地址。",
   "page-staking-deposit-contract-confirm-address": "確認展示地址",
   "page-staking-deposit-contract-copied": "已複製地址",
@@ -16,12 +16,13 @@
   "page-staking-deposit-contract-meta-title": "以太坊質押存款合約地址",
   "page-staking-deposit-contract-read-aloud": "大聲讀出地址",
   "page-staking-deposit-contract-reveal-address-btn": "展示地址",
-  "page-staking-deposit-contract-staking": "若要質押你的以太幣，你必須使用專屬的啟動面板產品並遵循指示。直接發送以太幣到此頁面上的地址，將不會使你成爲一個質押者，反而會導致交易失敗。",
+  "page-staking-deposit-contract-staking": "若要質押你的以太幣，你必須使用專屬的啟動面板產品並遵循指示。直接發送以太幣到此頁面上的地址，這並不會使你成爲一個質押者，反而會導致交易失敗。",
   "page-staking-deposit-contract-staking-check": "檢查這些來源",
   "page-staking-deposit-contract-staking-check-desc": "我們預計其中有很多的虛假地址和詐騙事件。為了安全起見，請按照此頁面上的地址核對你所使用的質押合約地址。我們建議你也使用其他可信來源進行複查。",
   "page-staking-deposit-contract-staking-more-link": "更多質押相關訊息",
   "page-staking-deposit-contract-stop-reading": "停止閲讀",
   "page-staking-deposit-contract-subtitle": "這是以太坊質押合約的地址。質押時，使用此頁面確認你正向正確的地址發送資金。",
   "page-staking-deposit-contract-warning": "仔細檢查每個字元。",
-  "page-staking-deposit-contract-warning-2": "向此地址發送資金將不會起作用，不會使你成為一個質押者。你必須遵循啟動面板的指示。"
+  "page-staking-deposit-contract-warning-2": "向此地址發送資金將不會起作用，並不會使你成為一個質押者。你必須遵循啟動面板的指示。",
+  "page-staking-deposit-contract-title": "查看存款合約地址"
 }

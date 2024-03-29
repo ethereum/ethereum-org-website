@@ -6,9 +6,9 @@ _Please read carefully if adding or altering any written language content_
 
 How to prepare your content for translation depends on whether you're working on a simple Markdown/MDX page or a React component page.
 
-**- MDX pages (`/src/content/page/`)**
+**- MDX pages (`public/content/page/`)**
 
-Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `/src/content/` with the name of the page, then place index markdown file (ie. `index.md`) within the new folder.
+Markdown will be translated as whole pages of content, so no specific action is required. Simply create a new folder within `public/content/` with the name of the page, then place index markdown file (ie. `index.md`) within the new folder.
 
 **- React component page**
 
@@ -52,7 +52,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 
   - _tl;dr Each individual JSON entry should be a complete phrase by itself_
 
-- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `gatsby-plugin-react-i18next`
+- This is done using the `Translation` component. However there is an alternative method for regular JS: using the `t` function from `next-i18next`
 
   - **Method one: `<Translation />` component (preferred if only needed in JSX)**
 
@@ -66,7 +66,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
   - **Method two: `t()`**
 
     ```tsx
-    import { useTranslation } from "gatsby-plugin-react-i18next"
+    import { useTranslation } from "next-i18next"
 
     // Utilize anywhere in JS using
     const { t } = useTranslation()
@@ -85,7 +85,7 @@ Markdown will be translated as whole pages of content, so no specific action is 
 // Example
 import React, { useState, useEffect } from "react"
 
-const ComponentName: React.FC = (props) => {
+const ComponentName = () => {
   // useState hook for managing state variables
   const [greeting, setGreeting] = useState("")
 
@@ -104,7 +104,7 @@ export default ComponentName
 
 We use [Chakra UI](https://chakra-ui.com/).
 
-`src/@chakra-ui/gatsby-plugin/theme.ts` - Holds all the theme configuration. This is where you can find the colors, fonts, component themes, variants, etc.
+`src/@chakra-ui/theme.ts` - Holds all the theme configuration. This is where you can find the colors, fonts, component themes, variants, etc.
 
 - Wrappers or layout divs
 
@@ -149,7 +149,7 @@ Use [the Chakra default breakpoints](https://chakra-ui.com/docs/styled-system/th
 <Text color="primary.base" bg="background.base" />
 ```
 
-> Note the dotted notation. In Chakra, the values are referred to as "semantic tokens" and the new theme applies a nested structure of like tokens for better organization. See [semanticTokens.ts](../src/%40chakra-ui/gatsby-plugin/semanticTokens.ts)
+> Note the dotted notation. In Chakra, the values are referred to as "semantic tokens" and the new theme applies a nested structure of like tokens for better organization. See [semanticTokens.ts](../src/@chakra-ui/semanticTokens.ts)
 
 > Note 2: all the previous colors defined in the old theme `src/theme.ts` were
 > ported into the new theme for compatibility reasons. Those colors will
@@ -177,55 +177,10 @@ import { BsQuestionSquareFill } from "react-icons/bs"
 ;<Icon as={BsQuestionSquareFill} />
 ```
 
-## Image loading and API calls using GraphQL
+## Using custom `Image` component
 
-- [Gatsby + GraphQL](https://www.gatsbyjs.com/docs/graphql/) used for loading of images and preferred for API calls (in lieu of REST, if possible/practical). Utilizes static page queries that run at build time, not at run time, optimizing performance.
-- Image loading example:
-
-```tsx
-import { graphql } from "gatsby"
-
-export const query = graphql`
-  query {
-    hero: file(relativePath: { eq: "developers-eth-blocks.png" }) {
-      childImageSharp {
-        gatsbyImageData(
-          width: 800
-          layout: FIXED
-          placeholder: BLURRED
-          quality: 100
-        )
-      }
-    }
-  }
-`
-// These query results get passed as an object `props.data` to your component
-```
-
-- API call example:
+[Next Image](https://nextjs.org/docs/pages/api-reference/components/image) is the component of choice to handle responsive images. However, we use a custom version of this component that is properly optimized with Chakra. This way we can use style props from Chakra but still be able to forward common or Next Image-specific props to the component for correct usage and rendering.
 
 ```tsx
-import { graphql } from "gatsby"
-
-export const repoInfo = graphql`
-  fragment repoInfo on GitHub_Repository {
-    stargazerCount
-    languages(orderBy: { field: SIZE, direction: DESC }, first: 2) {
-      nodes {
-        name
-      }
-    }
-    url
-  }
-`
-export const query = graphql`
-  query {
-    hardhatGitHub: github {
-      repository(owner: "nomiclabs", name: "hardhat") {
-        ...repoInfo
-      }
-    }
-  }
-`
-// These query results get passed as an object `props.data` to your component
+import { Image } from "@/components/Image"
 ```
