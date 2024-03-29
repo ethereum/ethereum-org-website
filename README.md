@@ -16,7 +16,7 @@ This is the repo for the [ethereum.org](https://ethereum.org) website, a resourc
 
 ## Looking for the Ethereum blockchain's code?
 
-If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations](https://ethereum.org/en/developers/docs/nodes-and-clients/#execution-clients)
+If you're looking for the Ethereum blockchain itself, there is no single repo. Instead, Ethereum has multiple implementations of the protocol written in different programming languages for security and diversity. [Check out the different implementations](https://ethereum.org/en/developers/docs/nodes-and-clients/#execution-clients).
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
@@ -94,8 +94,8 @@ yarn dev
 
 - Open this directory in your favorite text editor / IDE, and see your changes live by visiting `localhost:3000` from your browser
 - Pro Tip:
-  - Explore scripts within `package.json` for more build options
-  - Get **faster** production builds by building only one language. E.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English
+  - Explore scripts within `package.json` for more build options.
+  - Get **faster** production builds by building only one language, e.g. in your `.env` file, set `BUILD_LOCALES=en` to build the content only in English.
 
 By default the script will build all the languages (complete list in `i18n.config.json`).
 
@@ -105,7 +105,7 @@ By default the script will build all the languages (complete list in `i18n.confi
 git commit -m "brief description of changes [Fixes #1234]"
 ```
 
-4. Push to your GitHub account
+4. Push to your GitHub account.
 
 ```sh
 git push
@@ -113,18 +113,18 @@ git push
 
 ### 5. Submit your PR
 
-- After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo
+- After your changes are committed to your GitHub fork, submit a pull request (PR) to the `dev` branch of the `ethereum/ethereum-org-website` repo.
 - In your PR description, reference the issue it resolves (see [linking a pull request to an issue using a keyword](https://docs.github.com/en/free-pro-team@latest/github/managing-your-work-on-github/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword))
   - ex. `Updates out of date content [Fixes #1234]`
-- Netlify (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.: ![Netlify deploy preview](public/preview-deploy.png)
+- Netlify (our hosting service for build previews) deploys all PRs to a publicly accessible preview URL, e.g.: ![Netlify deploy preview](public/preview-deploy.png).
 - _Confirm your Netlify preview deploy looks & functions as expected_
 - Why not say hi and draw attention to your PR in [our discord server](https://discord.gg/ethereum-org)?
 
 ### 6. Wait for review
 
 - The website team reviews every PR
-- See [how decisions are made on content changes](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made)
-- Acceptable PRs will be approved & merged into the `dev` branch
+- See [how decisions are made on content changes](https://ethereum.org/en/contributing/#how-decisions-about-the-site-are-made).
+- Acceptable PRs will be approved & merged into the `dev` branch.
 
 Learn more about how we review pull requests [here](docs/review-process.md).
 
@@ -132,7 +132,7 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 
 - `master` is continually synced to Netlify and will automatically deploy new commits to ethereum.org
 - Learn more about how we deploy the site [here](docs/deploy-process.md)
-- You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights
+- You can [view the history of releases](https://github.com/ethereum/ethereum-org-website/releases), which include PR highlights.
 
 <hr style="margin-top: 3em; margin-bottom: 3em;">
 
@@ -147,11 +147,11 @@ Learn more about how we review pull requests [here](docs/review-process.md).
 ### ethereum.org 2022 Contributor POAP
 
 - If you have committed any changes in 2022 so far that were merged into our repo, you have a POAP waiting!
-- This includes our dedicated translators on Crowdin
+- This includes our dedicated translators on Crowdin.
 
   [![Discord](https://img.shields.io/discord/714888181740339261?color=1C1CE1&label=Claim%20Your%20POAP!%20%7C%20Discord%20%F0%9F%91%8B%20&style=flat)](https://discord.gg/ethereum-org)
 
-- 👆 To claim your Contributor POAP, join our Discord server and paste a link to your contribution in the `#🥇 | proof-of-contribution` [channel](https://discord.com/channels/714888181740339261/1212737737916948530)
+- 👆 To claim your Contributor POAP, join our Discord server and paste a link to your contribution in the `#🥇 | proof-of-contribution` [channel](https://discord.com/channels/714888181740339261/1212737737916948530).
 
 - A member of our team will verify the request and DM you with a personalized link to claim your own freshly minted POAP collectible!
 
