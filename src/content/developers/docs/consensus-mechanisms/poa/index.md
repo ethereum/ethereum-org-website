@@ -56,7 +56,7 @@ If the number of authorized signers are N, and we allow each signer to mint 1 bl
 - [Proof of Authority Explained](https://academy.binance.com/en/articles/proof-of-authority-explained) _binance_
 - [PoA in blockchain](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
 - [Clique explained](https://medium.com/@Destiner/clique-cross-client-proof-of-authority-algorithm-for-ethereum-8b2a135201d)
-- [deprecated PoA, Aura specification](https://openethereum.github.io/Chain-specification)
+- [Deprecated PoA, Aura specification](https://openethereum.github.io/Chain-specification)
 - [IBFT 2.0, another PoA implementation](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
 
 ### Videos {#videos}
