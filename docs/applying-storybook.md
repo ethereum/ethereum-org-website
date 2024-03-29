@@ -57,7 +57,7 @@ export const Basic: Story = {
 
 **Note**: with the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e. `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/7.0/react/writing-stories/naming-components-and-hierarchy)
 
-Also, please view the figma file for the [proposed structure for the Design System](https://www.figma.com/file/Ne3iAassyfAcJ0AlgqioAP/DS-to-storybook-structure?type=design&node-id=42%3A50&mode=design&t=RGkyouvTilzF42y0-1) to provide the correct groupings.
+Also, please view the Figma file for the [proposed structure for the Design System](https://www.figma.com/file/Ne3iAassyfAcJ0AlgqioAP/DS-to-storybook-structure?type=design&node-id=42%3A50&mode=design&t=RGkyouvTilzF42y0-1) to provide the correct groupings.
 
 We will maintain this structure for every story file, regardless of simplicity.
 
