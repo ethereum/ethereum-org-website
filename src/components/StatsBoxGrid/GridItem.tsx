@@ -1,7 +1,7 @@
-import { kebabCase } from "lodash"
+import kebabCase from "lodash/kebabCase"
 import { MdInfoOutline } from "react-icons/md"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
-import { Box, Flex, Icon, Text, VStack } from "@chakra-ui/react"
+import { Box, Flex, Icon, Text } from "@chakra-ui/react"
 
 import type { StatsBoxMetric } from "@/lib/types"
 
@@ -16,7 +16,7 @@ import Translation from "../Translation"
 const tooltipContent = (metric: StatsBoxMetric) => (
   <div>
     <Translation id="data-provided-by" />{" "}
-    <InlineLink to={metric.apiUrl}>{metric.apiProvider}</InlineLink>
+    <InlineLink href={metric.apiUrl}>{metric.apiProvider}</InlineLink>
   </div>
 )
 
@@ -32,22 +32,29 @@ export const GridItem = ({ metric }: GridItemProps) => {
   const value = hasError ? (
     <StatErrorMessage />
   ) : (
-    <VStack>
-      <Box>
+    <Box display="inline">
+      <Box
+        fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
+        display="inline"
+        lineHeight="100%"
+      >
         {state.value}{" "}
+      </Box>
+      <Box display="inline">
         <Tooltip content={tooltipContent(metric)}>
-          <Icon
-            as={MdInfoOutline}
-            boxSize={6}
-            fill="text"
-            me={2}
-            _hover={{ fill: "primary.base" }}
-            _active={{ fill: "primary.base" }}
-            _focus={{ fill: "primary.base" }}
-          />
+          <Box as="span" display="inline-block">
+            <Icon
+              as={MdInfoOutline}
+              boxSize={6}
+              fill="text"
+              _hover={{ fill: "primary.base" }}
+              _active={{ fill: "primary.base" }}
+              _focus={{ fill: "primary.base" }}
+            />
+          </Box>
         </Tooltip>
       </Box>
-    </VStack>
+    </Box>
   )
 
   // Returns either 90 or 30-day data range depending on `range` selection
@@ -149,15 +156,16 @@ export const GridItem = ({ metric }: GridItemProps) => {
           {chart}
         </Box>
       )}
-      <Flex justifyContent="space-between">
+      <Flex
+        justifyContent="space-between"
+        position="relative"
+        alignItems="flex-end"
+      >
         <Box
-          fontSize={{ base: "max(8.8vw, 48px)", lg: "min(4.4vw, 4rem)" }}
           fontWeight={600}
           color="text"
           flexWrap="wrap"
           textOverflow="ellipsis"
-          lineHeight="1.6rem"
-          mb="2"
         >
           {value}
         </Box>

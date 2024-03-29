@@ -99,7 +99,7 @@ Der von Ihnen gewählte Synchronisierungsmodus und Client wirken sich auf den Sp
 
 - Hinweis: Erigon bietet keine Snap-Synchronisation, aber Full Pruning ist möglich (ca. 500 GB)
 
-Bei Konsens-Clients hängt der Platzbedarf auch von der Client-Implementierung und den aktivierten Funktionen (z. B. Validator Slasher) ab, im Allgemeinen werden jedoch weitere 200 GB für Beacon-Daten benötigt. Mit einer großen Anzahl von Validatoren steigt auch die Bandbreitenbelastung. [Details zu den Anforderungen an Konsensclients finden Sie in dieser Analyse](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e).
+Bei Konsens-Clients hängt der Platzbedarf auch von der Client-Implementierung und den aktivierten Funktionen (z. B. Validator Slasher) ab, im Allgemeinen werden jedoch weitere 200 GB für Beacon-Daten benötigt. Mit einer großen Anzahl von Validatoren steigt auch die Bandbreitenbelastung. [Details zu den Anforderungen an Konsensclients finden Sie in dieser Analyse](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
 
 #### Plug-and-Play-Lösungen {#plug-and-play}
 

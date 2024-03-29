@@ -31,7 +31,7 @@ En del samarbetesansträngningar för att göra Ethereum företagsvänligt har u
 
 - [EEA](https://entethalliance.org/) _Enterprise Ethereum Alliance är en medlemsdriven standardiseringsorganisation vars charter är att utveckla öppna blockchain-specifikationer, som driver harmonisering och driftskompatibilitet för företag och konsumenter över hela världen. Vår globala medlemsgemenskap består av ledare, användare, innovatörer, utvecklare, och företag som samarbetar för att skapa en öppen, decentraliserad webb till nytta för alla._
 
-- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger är resultatet av ett öppen källkod-samarbete som skapades för att avancera branschöverskridande blockchain-teknik. Det är ett globalt samarbete som anordnas av Linux Foundation, inklusive ledare inom ekonomi, bank, sakernas internet, leverantörskedjor, tillverkning och teknik._ _Stiftelsen har några projekt som fungerar med Ethereum-stacken:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger är resultatet av ett öppen källkod-samarbete som skapades för att avancera branschöverskridande blockchain-teknik. Det är ett globalt samarbete som anordnas av Linux Foundation, inklusive ledare inom ekonomi, bank, sakernas internet, leverantörskedjor, tillverkning och teknik._ _Stiftelsen har några projekt som fungerar med Ethereum-stacken:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - Hyperledger Burrow
 
 ## Enterprise-fokuserade tjänster {#enterprise-focused-services}
 
@@ -45,7 +45,6 @@ Följande projekt tillhandahåller blockchain-tjänster för system för storfö
 ## Protokoll och infrastruktur {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _öppen källkod Ethereum-klient utvecklad under Apache 2.0-licens och skriven i Java_
-- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _modulär blockchain-klient med en tillståndsgiven smart kontrakt-tolk som delvis utvecklats enligt specifikationen för Ethereum Virtual Machine (EVM)_
 - [Infura](https://infura.io/) _skalbar API-åtkomst till Ethereum och IPFS-nätverk_
 - [Kaleido](https://kaleido.io/) _full-stackplattform för att bygga och köra över moln och ekosystem för hybridföretag_
 - [Autonity](https://www.clearmatics.com/about/) _protokollsvit som implementerar p2p-protokoll och ger klientprogramvara och infrastruktur_

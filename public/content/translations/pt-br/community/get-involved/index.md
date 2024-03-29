@@ -16,7 +16,7 @@ Comece lendo sobre a missão e os valores da ethereum.org no nosso [código de c
 - [ Seja recompensado no Gitcoin](https://gitcoin.co/), resolva problemas técnicos pequenos ou grandes, ganhe criptomoedas!
 - Participe de uma hackathon [ETHGlobal](http://ethglobal.co/) perto de você!
 - Dê uma olhada nos [projetos relacionados à sua área de conhecimento ou linguagem de programação favorito](/developers/docs/programming-languages/)
-- Assista ou participe das [reuniões do núcleo de desenvolvedores](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Assista ou participe das [reuniões do núcleo de desenvolvedores](https://www.youtube.com/@EthereumProtocol)
 - [Lista de desejos do Programa de apoio ao ecossistema](https://esp.ethereum.foundation/wishlist/): ferramentas, documentação e áreas de infraestrutura onde o Programa de suporte ao ecossistema do Ethereum está ativamente buscando aplicativos
 - [Web3Bridge](https://www.web3bridge.com/): participe da promissora comunidade da web3 em sua iniciativa de identificar, treinar e oferecer suporte a centenas de desenvolvedores e membros da comunidade em toda a África
 - Junte-se ao [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)

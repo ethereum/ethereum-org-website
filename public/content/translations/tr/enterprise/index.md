@@ -51,7 +51,7 @@ Ethereum'u işletme dostu hâle getirmek için farklı kuruluşlar tarafından b
 - [Blast](https://blastapi.io/), _Ethereum Arşiv Ana Ağı'na ve Test Ağlarına RPC/WSS API'leri sağlayan bir API platformudur._
 - [Blockapps](https://blockapps.net/), _STRATO platformunu oluşturan İşletme Ethereum protokolünün, araçlarının ve API'lerinin uygulanması_
 - [Chainstack](https://chainstack.com/), _herkese açık ve izole müşteri bulutlarında barındırılan ana ağ ve test ağı Ethereum altyapısı_
-- [ConsenSys](https://consensys.net/), _Ethereum üzerine geliştirme için bir dizi ürün ve aracın yanı sıra danışmanlık ve özel geliştirme hizmetleri sağlar_
+- [ConsenSys](https://consensys.io/), _Ethereum üzerine geliştirme için bir dizi ürün ve aracın yanı sıra danışmanlık ve özel geliştirme hizmetleri sağlar_
 - [Envision Blockchain](https://envisionblockchain.com/), _Ethereum Ana Ağı'nda uzmanlaşmış kurumsal odaklı danışmanlık ve geliştirme hizmetleri sağlar_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager), _Güvenilir iş ortakları ağınız genelinde RFQ'ları, sözleşmeleri, satın alma emirlerini ve faturaları düzenleyerek bir tedarik iş akışı sağlar_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu), _Apache 2.0 lisansı altında geliştirilen, Java ile yazılmış kurumsal odaklı açık kaynaklı bir Ethereum istemcisi_
@@ -68,7 +68,7 @@ Ethereum'u işletme dostu hâle getirmek için farklı kuruluşlar tarafından b
 ### Araçlar ve kütüphaneler {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum Veri Analizi Platformu_
-- [Sirato](https://www.web3labs.com/sirato), _Web3 Labs'den Ethereum ile uyumlu herkese açık ve özel ağlara yönelik bir veri ve analiz platformu_
+- [Chainlens](https://www.chainlens.com/), _Web3 Labs'den Ethereum ile uyumlu herkese açık ve özel ağlara yönelik bir veri ve analiz platformu_
 - [Ernst & Young'ın "Nightfall"u](https://github.com/EYBlockchain/nightfall) _özel işlemler için bir araç takımı_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _bir web3 sağlayıcısıyla kullanılacak bir işlem imzalama uygulaması_
 - [Tenderly](https://tenderly.co/)_gerçek zamanlı analizler sağlayan, özel ağlar için destek sunarak uyarılarda bulunan ve izleme gerçekleştiren bir Veri Platformudur_
@@ -102,13 +102,12 @@ Herkese açık Ethereum Ana Ağı üzerinde geliştirilmiş işletme uygulamalar
 
 - [Tinlake](https://tinlake.centrifuge.io/), _faturalar, ipotekler veya sürekli akış telif ücretleri gibi jetonlaştırılmış gerçek dünya varlıkları yoluyla alacak finansmanı_
 - [RealT](https://realt.co/), _dünya genelindeki yatırımcılar tamamen uyumlu, kesirli, jetonlaştırılmış mülkiyet ile ABD emlak piyasasından satın alım yapabilirler._
-- [AgroToken](https://agrotoken.io/en/), _tarımsal ürünlerin jetonlaştırılması ve alım satımı_
+- [AgroToken](https://agrotoken.io/en/home), _tarımsal ürünlerin jetonlaştırılması ve alım satımı_
 - [Fasset](https://www.fasset.com/), _sürdürülebilir altyapıyı destekleyen bir platform_
 
 ### Verilerin noter tasdiki {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/), _kesinleşmiş kredilerin ayrıntıları karma hale getirilir ve Ana Ağ'a kaydedilir_
-- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html), _veri bütünlüğü, indekslenen verilerin karmalarını düzenli aralıklarla Ana Ağ'a yazarak sağlanabilir_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news), _İtalya'nın en büyük haber ajansı sahte haberlerle mücadele ediyor ve okuyucuların haberleri Ana Ağ'a kaydederek haberlerin kaynağını doğrulamasını sağlıyor_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency), _kurumsal mesuliyeti ve güveni sağlamak için Ethereum'daki basın bültenlerini günlüğe kaydeder_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum), _saatlerin kökenini ve onarım geçmişini Ethereum'a kaydeder_
@@ -116,13 +115,11 @@ Herkese açık Ethereum Ana Ağı üzerinde geliştirilmiş işletme uygulamalar
 
 ### Tedarik zinciri {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs), _konşimento ve belge transfer sağlayıcısıdır_
 - [Morpheus.network](https://morpheus.network/), _Ethereum Ana Ağı'nda noter tasdikli verilerle özel zincirlerin bir karışımını uygulayan tedarik zinciri otomasyon platformudur; Kanadalı gıda, petrol ve gaz distribütörü Federated Co-op Ltd. ve Arjantinli evcil hayvan maması sağlayıcısı Vitalcan tarafından kullanılır_
 - [Minespider](https://www.minespider.com/), _tedarik zinciri takibi_
 - [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager). _güvenilir iş ortaklarından oluşan ağınızda RFQ'ler, sözleşmeler, alım emirleri ve faturalar düzenleyerek şirketlerin tedarik iş akışına dahil olmalarını sağlar_
 - [Treum](https://treum.io/), _blokzincir teknolojisini kullanarak tedarik zincirlerine şeffaflık, izlenebilirlik ve ticaret kolaylığı getirir_
 - [TradeTrust](https://www.tradetrust.io/), _uluslararası nakliye için elektronik Konşimentoları (eBL'ler) doğrular_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability), _her yeni bira partisi için NFT'ler üreterek tedarik zincirinde daha fazla görünürlük ve verimlilik sağlar_
 
 ### Sigorta {#insurance}
 

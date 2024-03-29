@@ -37,7 +37,7 @@ ethereum.org 翻訳プログラムの詳細については、[ミッションと
 ### これまでの進捗 {#our-progress}
 
 - [**4,700 人**以上の翻訳者](/contributing/translation-program/contributors/)
-- [**52**言語に対応](/languages/)
+- **52**言語に対応
 - [**300 万**語翻訳(2022 年時点)](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
