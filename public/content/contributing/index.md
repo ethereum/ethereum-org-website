@@ -54,7 +54,7 @@ _Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/ether
 
 This is a list issues you could get started with. To see full list go to our [GitHub repository](https://github.com/ethereum/ethereum-org-website/issues). 
 
-<TableIssues />
+<IssuesList issues={gfissues} />
 
 ## How to work on ethereum.org {#how-to-update-content}
 

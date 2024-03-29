@@ -647,3 +647,22 @@ export type FooterLinkSection = {
   title: TranslationKey
   links: FooterLink[]
 }
+
+// GitHub API
+export type GHIssue = {
+  title: string
+  html_url: string
+  created_at: string
+  user: {
+    login: string
+    html_url: string
+    avatar_url: string
+  }
+  labels: GHLabel[]
+}
+
+export type GHLabel = {
+  id: number
+  name: string
+  color: string
+}

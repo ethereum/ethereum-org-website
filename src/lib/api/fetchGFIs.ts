@@ -1,28 +1,16 @@
+import type { GHIssue } from "../types"
+
 const owner = "ethereum"
 const repo = "ethereum-org-website"
 const label = "good first issue"
 
-type GHIssue = {
-  title: string
-  html_url: string
-  created_at: string
-  user: {
-    login: string
-    html_url: string
-    avatar_url: string
-  }
-  labels: GHLabel[]
-}
-
-type GHLabel = {
-  name: string
-  color: string
-}
-
-export const fetchGFIs = async (since: string) => {
-  const url = `https://api.github.com/repos/${owner}/${repo}/issues?labels=${encodeURIComponent(
-    label
-  )}&since=${since}&state=open&sort=created&direction=desc`
+export const fetchGFIs = async () => {
+  const url = new URL(`https://api.github.com/repos/${owner}/${repo}/issues`)
+  url.searchParams.append("labels", label)
+  url.searchParams.append("state", "open")
+  url.searchParams.append("sort", "created")
+  url.searchParams.append("direction", "desc")
+  url.searchParams.append("per_page", "10")
 
   try {
     const response = await fetch(url, {
