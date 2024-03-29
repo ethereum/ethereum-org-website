@@ -22,7 +22,7 @@ The Proof-of-Authority has different implementations, but the ethereum standard 
 
 clique standard simply make a use of the obsolete headers: extradata that was used only for fun, miner became obsolete as there are no miners in POA, and nonce became also obsolete because the authorities the order of users transactions, extradata is used to store the authorized signers set, miner and nonce are used to vote for adding or removing signers from the network, where every epoch transition flushes all pending votes. The block proposal is selected sequentially for each block, but in fact any other authorized signer can propose block even if it's not his turn, but they have limit of signing only one block between K blocks when N are the authorized signers.
 
-## PROOF-OF-AUTHORITY AND SECURITY {#poa-security}
+## Attack vectors {#attack-vectors}
 
 ### Attack vector: Malicious signer
 
