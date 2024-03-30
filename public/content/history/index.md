@@ -119,6 +119,7 @@ EIP-7514 brings a tightening to the issuance of ETH by capping the "churn" rate 
 </ExpandableCard>
 
 - [Read the Deneb upgrade specifications](https://github.com/ethereum/consensus-specs/blob/dev/specs/deneb/)
+- [Cancun-Deneb ("Dencun") FAQ](/roadmap/dencun/)
 
 <Divider />
 
