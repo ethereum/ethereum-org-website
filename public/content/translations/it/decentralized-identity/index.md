@@ -49,7 +49,7 @@ Gli identificativi decentralizzati sono memorizzati su libri mastri distribuiti 
 
 ## Cosa rende possibili gli identificativi decentralizzati? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastruttura a Chiave Pubblica (PKI) {#public-key-infrastructure}
+### 1. Infrastruttura a Chiave Pubblica (PKI) {#public-key-cryptography}
 
 L'infrastruttura a chiave pubblica (PKI) è una misura di sicurezza delle informazioni che genera una [chiave pubblica](/glossary/#public-key) e una [chiave privata](/glossary/#private-key), per un'entità. La criittografia della chiave pubblica è utilizzata nelle reti blockchain per autenticare le identità degli utenti e dimostrare la proprietà delle risorse digitali.
 
@@ -161,6 +161,7 @@ Esistono molti progetti ambiziosi che utilizzano Ethereum come base, per le solu
 - **[Prova di Umanità](https://www.proofofhumanity.id)**: _La Prova di Umanità (o PoH), è un sistema di verifica dell'identità sociale, basato su Ethereum._
 - **[BrightID](https://www.brightid.org/)**: _Una rete decentralizzata e open source di identità sociale, ideata per riformare la verifica dell'identità tramite la creazione e analisi di un grafico sociale._
 - **[Passaporto di Prova di Personalità](https://proofofpersonhood.com/)**: _Un aggregatore decentralizzato di identità digitali._
+- **[walt.id](https://walt.id)**: _Infrastruttura open source di identità decentralizzata e portafoglio che consente a sviluppatori e organizzazioni di sfruttare l'identità auto-sovrana e gli NFT/SBT._
 
 ## Lettura consigliate {#further-reading}
 
@@ -170,16 +171,19 @@ Esistono molti progetti ambiziosi che utilizzano Ethereum come base, per le solu
 - [Cos'è l'ERC-725 di Ethereum? Gestione dell'Identità Sovrana Personale sulla Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [Come la Blockchain potrebbe risolvere il problema dell'Identità Digitale](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [Cos'è l'Identità Decentralizzata e Perché Dovrebbe Interessarti?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Introduzione all'Identità decentralizzata](https://walt.id/white-paper/digital-identity) - _Dominik Beron_
 
 ### Video {#videos}
 
 - [Identità Decentralizzata (Sessione Live Bonus)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Un ottimo video esplicativo sull'identità decentralizzata, di Andreas Antonopolous_
 - [Accedi con Ethereum e l'Identità Decentralizzata con Ceramic, IDX, React e 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _Tutorial di YouTube sulla creazione di un sistema di gestione dell'identità, per creare, leggere e aggiornare il profilo di un utente, utilizzandone il portafoglio di Ethereum; di Nader Dabit_
 - [BrightID: Identità Decentralizzata su Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Episodio del podcast "Bankless", incentrato su BrightID, una soluzione di identità decentralizzata per Ethereum_
-- [L'Internet esterno alla Catena: Identità Decentralizzata e Credenziali Verificabili](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — Presentazione dell'EthDenver del 2022, di Evin McMullen
+- [L'Internet esterno alla Catena: Identità Decentralizzata e Credenziali Verificabili](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — _Presentazione dell'EthDenver del 2022, di Evin McMullen_
+- [Credenziali verificabili spiegate](https://www.youtube.com/watch?v=ce1IdSr-Kig) _Video esplicativo su YouTube con dimostrazione di Tamino Baumann_
 
 ### Community {#communities}
 
 - [ERC-725 Alliance su GitHub](https://github.com/erc725alliance) — _Sostenitori dello standard ERC-725 per la gestione dell'identità sulla blockchain di Ethereum_
 - [Server Discord di SpruceID](https://discord.com/invite/Sf9tSFzrnt) — _Community per appassionati e sviluppatori, al lavoro su "Accedi con Ethereum"_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Una community di sviluppatori, che contribuiscono alla creazione di un quadro per i dati verificabili per le applicazioni_
+- [walt.id](https://discord.com/invite/AW8AgqJthZ) -- _Una comunità di sviluppatori e costruttori che lavorano a casi d'uso dell'identità decentralizzata che coinvolgono diversi settori_

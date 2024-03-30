@@ -31,7 +31,7 @@ const MenuItem = forwardRef(({ displayInfo, ...props }: ItemProps, ref) => {
     wordsApproved,
     isBrowserDefault,
   } = displayInfo
-  const { t } = useTranslation("page-languages")
+  const { t } = useTranslation("common")
   const { asPath, locale } = useRouter()
   const isCurrent = localeOption === locale
 

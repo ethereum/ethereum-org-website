@@ -362,16 +362,6 @@ const RunANodePage = () => {
           eventName: "learn more",
         },
       },
-      {
-        content: t("page-run-a-node-hero-cta-2"),
-        toId: "getting-started",
-        variant: "outline",
-        matomo: {
-          eventCategory: "run a node hero buttons",
-          eventAction: "click",
-          eventName: "lets dive in",
-        },
-      },
     ],
   }
 
@@ -446,6 +436,7 @@ const RunANodePage = () => {
       <PageMetadata
         title={t("page-run-a-node-title")}
         description={t("page-run-a-node-meta-description")}
+        image="/run-a-node/ethereum-inside.png"
       />
       <HeroContainer>
         <Box pb="8">
@@ -490,7 +481,9 @@ const RunANodePage = () => {
           background="runNodeGradient2"
           forceOpen
         >
-          <Text>{t("page-run-a-node-who-copy-1")}</Text>
+          <Text>
+            <Translation id="page-run-a-node:page-run-a-node-who-copy-1" />
+          </Text>
           <Text>{t("page-run-a-node-who-copy-2")}</Text>
           <Text>{t("page-run-a-node-who-copy-3")}</Text>
           <StrongParagraph>
@@ -543,7 +536,7 @@ const RunANodePage = () => {
                   )}
                 </Text>
               </Text>
-              <InlineLink to="/developers/docs/nodes-and-clients/run-a-node/">
+              <InlineLink href="/developers/docs/nodes-and-clients/run-a-node/">
                 {t("page-run-a-node-getting-started-software-section-1-link")}
               </InlineLink>
             </ColumnFill>
@@ -580,7 +573,7 @@ const RunANodePage = () => {
                 {t("page-run-a-node-getting-started-software-section-3a")}
               </Text>
               <Text>
-                {t("page-run-a-node-getting-started-software-section-3b")}
+                <Translation id="page-run-a-node:page-run-a-node-getting-started-software-section-3b" />
               </Text>
             </ColumnFill>
             <ColumnNarrow>
@@ -798,7 +791,7 @@ const RunANodePage = () => {
             <ButtonContainer>
               <ButtonLink
                 leftIcon={<FaDiscord />}
-                to="https://discord.gg/c28an8dA5k"
+                to="https://discord.com/invite/dappnode"
               >
                 {t("page-run-a-node-community-link-1")}
               </ButtonLink>
@@ -822,19 +815,19 @@ const RunANodePage = () => {
         <H2>{t("page-run-a-node-further-reading-title")}</H2>
         <ul>
           <li>
-            <InlineLink to="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
+            <InlineLink href="https://github.com/ethereumbook/ethereumbook/blob/develop/03clients.asciidoc#should-i-run-a-full-node">
               {t("page-run-a-node-further-reading-1-link")}
             </InlineLink>{" "}
             -{" "}
             <Text as="i">{t("page-run-a-node-further-reading-1-author")}</Text>
           </li>
           <li>
-            <InlineLink to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
+            <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest/">
               {t("page-run-a-node-further-reading-2-link")}
             </InlineLink>
           </li>
           <li>
-            <InlineLink to="https://vitalik.eth.limo/general/2021/05/23/scaling.html">
+            <InlineLink href="https://vitalik.eth.limo/general/2021/05/23/scaling.html">
               {t("page-run-a-node-further-reading-3-link")}
             </InlineLink>{" "}
             -{" "}
@@ -869,7 +862,7 @@ const RunANodePage = () => {
         </Column>
       </StakingCalloutContainer>
       <Content>
-        <H3 id="plan-on-staking">
+        <H3 id="plan-on-staking" display="flex" alignItems="center">
           <Emoji text=":cut_of_meat:" fontSize="2em" me="4" />
           {t("page-run-a-node-staking-plans-title")}
         </H3>
@@ -878,27 +871,18 @@ const RunANodePage = () => {
         </Text>
         <Text>
           {t("page-run-a-node-staking-plans-ethstaker-link-description")} -{" "}
-          <InlineLink to="https://youtu.be/C2wwu1IlhDc">
+          <InlineLink href="https://youtu.be/C2wwu1IlhDc">
             {t("page-run-a-node-staking-plans-ethstaker-link-label")}
           </InlineLink>
         </Text>
-        <H3 id="rasp-pi">
+        <H3 id="rasp-pi" display="flex" alignItems="center">
           <Emoji text=":pie:" fontSize="2em" me="4" />
           {t("page-run-a-node-rasp-pi-title")}
         </H3>
         <Text>{t("page-run-a-node-rasp-pi-description")}</Text>
         <ul>
           <li>
-            <InlineLink to="https://docs.dappnode.io/user/quick-start/Core/installation#arm">
-              {t("page-run-a-node-rasp-pi-note-1-link")}
-            </InlineLink>{" "}
-            -{" "}
-            <Text as="i">
-              {t("page-run-a-node-rasp-pi-note-1-description")}
-            </Text>
-          </li>
-          <li>
-            <InlineLink to="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
+            <InlineLink href="https://ethereum-on-arm-documentation.readthedocs.io/en/latest">
               {t("page-run-a-node-rasp-pi-note-2-link")}
             </InlineLink>{" "}
             -{" "}
@@ -907,7 +891,7 @@ const RunANodePage = () => {
             </Text>
           </li>
           <li>
-            <InlineLink to="/developers/tutorials/run-node-raspberry-pi">
+            <InlineLink href="/developers/tutorials/run-node-raspberry-pi">
               {t("page-run-a-node-rasp-pi-note-3-link")}
             </InlineLink>{" "}
             -{" "}

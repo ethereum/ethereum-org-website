@@ -1,49 +1,48 @@
-import { useRef, useState } from "react"
-import { shuffle } from "lodash"
+import { useEffect, useRef, useState } from "react"
 import { GetStaticProps } from "next"
 import { useRouter } from "next/router"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
+  calc,
   Center,
-  Drawer,
-  DrawerBody,
-  DrawerCloseButton,
-  DrawerContent,
-  DrawerHeader,
-  DrawerOverlay,
   Flex,
-  Hide,
-  Show,
   Text,
   useDisclosure,
   useTheme,
 } from "@chakra-ui/react"
 
-import { BasePageProps, ChildOnlyProp } from "@/lib/types"
+import { BasePageProps, ChildOnlyProp, WalletData } from "@/lib/types"
 
 import BannerNotification from "@/components/BannerNotification"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import { Button } from "@/components/Buttons"
+import { MobileFiltersMenu } from "@/components/FindWallet/MobileFiltersMenu"
+import WalletFilterPersona from "@/components/FindWallet/WalletFilterPersona"
 import WalletFilterSidebar from "@/components/FindWallet/WalletFilterSidebar"
 import WalletTable from "@/components/FindWallet/WalletTable"
-import { FilterBurgerIcon } from "@/components/icons/wallets/FilterBurgerIcon"
 import { Image } from "@/components/Image"
+import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
-import { trackCustomEvent } from "@/lib/utils/matomo"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+import {
+  getNonSupportedLocaleWallets,
+  getSupportedLocaleWallets,
+} from "@/lib/utils/wallets"
 
-import walletData from "@/data/wallets/wallet-data"
+import {
+  DEFAULT_LOCALE,
+  NAV_BAR_PX_HEIGHT,
+  WALLETS_FILTERS_DEFAULT,
+} from "@/lib/constants"
 
-import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
-
-import FindWalletHeroImage from "@/public/wallets/find-wallet-hero.png"
+import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
+import HeroImage from "@/public/wallets/wallet-hero.png"
 
 const Subtitle = ({ children }: ChildOnlyProp) => (
   <Text
@@ -56,37 +55,6 @@ const Subtitle = ({ children }: ChildOnlyProp) => (
     {children}
   </Text>
 )
-
-const filterDefault = {
-  android: false,
-  ios: false,
-  linux: false,
-  windows: false,
-  macOS: false,
-  firefox: false,
-  chromium: false,
-  hardware: false,
-  open_source: false,
-  non_custodial: false,
-  hardware_support: false,
-  walletconnect: false,
-  rpc_importing: false,
-  nft_support: false,
-  connect_to_dapps: false,
-  staking: false,
-  swaps: false,
-  layer_2: false,
-  gas_fee_customization: false,
-  ens_support: false,
-  erc_20_support: false,
-  buy_crypto: false,
-  withdraw_crypto: false,
-  multisig: false,
-  social_recovery: false,
-  eip_1559_support: false,
-}
-
-export type FiltersType = typeof filterDefault
 
 export const getStaticProps = (async ({ locale }) => {
   const lastDeployDate = getLastDeployDate()
@@ -107,20 +75,36 @@ export const getStaticProps = (async ({ locale }) => {
 }) satisfies GetStaticProps<BasePageProps>
 
 const FindWalletPage = () => {
-  const randomizedWalletData = shuffle(walletData)
-  const { pathname } = useRouter()
+  const { pathname, locale } = useRouter()
   const theme = useTheme()
   const { t } = useTranslation("page-wallets-find-wallet")
+
   const resetWalletFilter = useRef(() => {})
-  const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
-  const [filters, setFilters] = useState(filterDefault)
+
+  const [filters, setFilters] = useState(WALLETS_FILTERS_DEFAULT)
   const [selectedPersona, setSelectedPersona] = useState(NaN)
+  const [supportedLanguage, setSupportedLanguage] = useState(DEFAULT_LOCALE)
+
+  const { isOpen: showMobileSidebar, onOpen, onClose } = useDisclosure()
+
+  const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
+  const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
+  const [randomizedWalletData, setRandomizedWalletData] = useState<
+    WalletData[]
+  >(supportedLocaleWallets.concat(noSupportedLocaleWallets))
+
+  // If any wallet supports user's locale, show them (shuffled) at the top and then the remaining ones
+  useEffect(() => {
+    setRandomizedWalletData(
+      supportedLocaleWallets.concat(noSupportedLocaleWallets)
+    )
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
     updatedFilters[key] = !updatedFilters[key]
     setFilters(updatedFilters)
-    setSelectedPersona(NaN)
   }
 
   const updateFilterOptions = (keys, value) => {
@@ -129,12 +113,12 @@ const FindWalletPage = () => {
       updatedFilters[key] = value
     }
     setFilters(updatedFilters)
-    setSelectedPersona(NaN)
   }
 
   const resetFilters = () => {
     setSelectedPersona(NaN)
-    setFilters(filterDefault)
+    setFilters(WALLETS_FILTERS_DEFAULT)
+    setSupportedLanguage(DEFAULT_LOCALE)
   }
 
   return (
@@ -142,6 +126,7 @@ const FindWalletPage = () => {
       <PageMetadata
         title={t("page-find-wallet-meta-title")}
         description={t("page-find-wallet-meta-description")}
+        image="/wallets/wallet-hero.png"
       />
 
       <BannerNotification shouldShow={true}>
@@ -149,7 +134,7 @@ const FindWalletPage = () => {
       </BannerNotification>
 
       <Flex
-        direction={{ base: "column-reverse", sm: "row" }}
+        direction={{ base: "column", sm: "row" }}
         position="relative"
         w="full"
         p={12}
@@ -166,12 +151,17 @@ const FindWalletPage = () => {
             {t("page-find-wallet-title")}
           </OldHeading>
           <Subtitle>{t("page-find-wallet-description")}</Subtitle>
-          <Subtitle>{t("page-find-wallet-desc-2")}</Subtitle>
+          <Subtitle>
+            {t("page-find-wallet-desc-2")}{" "}
+            <InlineLink to="/wallets">
+              {t("page-find-wallet-desc-2-wallets-link")}
+            </InlineLink>
+          </Subtitle>
         </Box>
         <Center w={{ base: "full", sm: "50%" }}>
           <Image
-            src={FindWalletHeroImage}
-            width={600}
+            src={HeroImage}
+            width={500}
             alt=""
             priority
             style={{
@@ -181,125 +171,80 @@ const FindWalletPage = () => {
         </Center>
       </Flex>
 
-      <Hide above="lg">
-        <Box
-          display={{ base: "block", lg: "none" }}
-          position="sticky"
-          top={NAV_BAR_PX_HEIGHT}
-          bg="background.base"
-          w="full"
-          zIndex="docked"
-          py="5px"
+      {/* Wallet Personas */}
+      <Box px={{ base: 4, "2xl": 0 }}>
+        <OldHeading
+          as="h3"
+          fontSize="xl"
+          fontWeight="bold"
+          lineHeight={1.4}
+          mt={0}
+          mb={3}
         >
-          <Button
-            rightIcon={<FilterBurgerIcon />}
-            variant="outline"
-            borderInlineStart="none"
-            borderInlineStartRadius="none"
-            gap={4}
-            sx={{
-              svg: {
-                boxSize: 8,
-                line: { stroke: "primary.base" },
-                circle: { stroke: "primary.base" },
-              },
-            }}
-            onClick={() => {
-              showMobileSidebar ? onClose() : onOpen()
-              trackCustomEvent({
-                eventCategory: "MobileFilterToggle",
-                eventAction: `Tap MobileFilterToggle`,
-                eventName: `show mobile filters ${!showMobileSidebar}`,
-              })
-            }}
-          >
-            <Box>
-              <Text>{t("page-find-wallet-filters")}</Text>
-              <Text fontSize="sm" lineHeight="14px" color="body.medium">
-                {Object.values(filters).reduce(
-                  (acc, filter) => (filter ? acc + 1 : acc),
-                  0
-                )}{" "}
-                {t("page-find-wallet-active")}
-              </Text>
-            </Box>
-          </Button>
-        </Box>
-        <Drawer
-          isOpen={showMobileSidebar}
-          placement="start"
-          onClose={onClose}
-          size="sm"
-        >
-          <DrawerOverlay />
-          <DrawerContent>
-            <DrawerHeader mb={4}>
-              <DrawerCloseButton />
-            </DrawerHeader>
-            <DrawerBody position="relative">
-              <WalletFilterSidebar
-                position="absolute"
-                inset={2}
-                overflow="auto"
-                {...{
-                  filters,
-                  resetWalletFilter,
-                  updateFilterOption,
-                  updateFilterOptions,
-                  resetFilters,
-                  selectedPersona,
-                  setFilters,
-                  setSelectedPersona,
-                }}
-              />
-            </DrawerBody>
-          </DrawerContent>
-        </Drawer>
-      </Hide>
+          {t("page-find-wallet-personas-title")}
+        </OldHeading>
 
-      <Flex px={{ base: 0, md: 8 }} pt={4} pb={6} gap={6}>
-        <Show above="lg">
-          <WalletFilterSidebar
-            maxW="330px"
-            top={NAV_BAR_PX_HEIGHT}
-            {...{
-              filters,
-              resetWalletFilter,
-              updateFilterOption,
-              updateFilterOptions,
-              resetFilters,
-              selectedPersona,
-              setFilters,
-              setSelectedPersona,
-            }}
+        <WalletFilterPersona
+          resetFilters={resetFilters}
+          setFilters={setFilters}
+          selectedPersona={selectedPersona}
+          setSelectedPersona={setSelectedPersona}
+          showMobileSidebar={showMobileSidebar}
+        />
+      </Box>
+
+      {/* Context value is updated when using the language filter */}
+      <WalletSupportedLanguageContext.Provider
+        value={{ supportedLanguage, setSupportedLanguage }}
+      >
+        {/* Mobile filters menu */}
+        <Box hideFrom="lg">
+          <MobileFiltersMenu
+            filters={filters}
+            resetWalletFilter={resetWalletFilter}
+            updateFilterOption={updateFilterOption}
+            updateFilterOptions={updateFilterOptions}
+            resetFilters={resetFilters}
+            selectedPersona={selectedPersona}
+            setFilters={setFilters}
+            setSelectedPersona={setSelectedPersona}
+            showMobileSidebar={showMobileSidebar}
+            onOpen={onOpen}
+            onClose={onClose}
           />
-        </Show>
-        <Box
-          w="full"
-          sx={{
-            scrollbarWidth: "thin",
-            scrollbarColor: `${theme.colors.lightBorder} ${theme.colors.background}`,
-
-            "::-webkit-scrollbar": {
-              width: 2,
-            },
-            "::-webkit-scrollbar-track": {
-              bg: "background.base",
-            },
-            "::-webkit-scrollbar-thumb": {
-              bgColor: "lightBorder",
-              borderRadius: "base",
-              border: "2px solid",
-              borderColor: "background.base",
-            },
-            table: {
-              m: 0,
-            },
-          }}
-        >
-          <WalletTable filters={filters} walletData={randomizedWalletData} />
         </Box>
-      </Flex>
+
+        <Box px={{ md: 4, "2xl": 0 }}>
+          <Flex pt={4} pb={6} gap={6}>
+            {/* Filters sidebar */}
+            <WalletFilterSidebar
+              hideBelow="lg"
+              top={calc(NAV_BAR_PX_HEIGHT).subtract("2px").toString()}
+              {...{
+                filters,
+                resetWalletFilter,
+                updateFilterOption,
+                updateFilterOptions,
+                resetFilters,
+                selectedPersona,
+                setFilters,
+                setSelectedPersona,
+              }}
+            />
+
+            {/* Wallets table */}
+            <Box mt={0.5} w="full">
+              <WalletTable
+                filters={filters}
+                resetFilters={resetFilters}
+                resetWalletFilter={resetWalletFilter}
+                walletData={randomizedWalletData}
+                onOpen={onOpen}
+              />
+            </Box>
+          </Flex>
+        </Box>
+      </WalletSupportedLanguageContext.Provider>
     </Flex>
   )
 }

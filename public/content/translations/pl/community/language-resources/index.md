@@ -16,7 +16,9 @@ Znasz zasoby edukacyjne w swoim języku? [Stwórz zgłoszenie](https://github.co
 
 ## Zasoby ethereum.org {#ethereum-org}
 
-Ethereum.org jest natywnie przetłumaczone na ponad 40 języków, które można znaleźć na naszej [stronie języków](/languages).
+Ethereum.org jest natywnie przetłumaczone na ponad 40 języków, które można znaleźć na naszej stronie języków.
+
+![Language selector menu](./language-selector-menu.png)
 
 Jeśli jesteś dwujęzyczny i chcesz pomóc nam dotrzeć do większej liczby osób, możesz również zaangażować się w [Program Tłumaczeń ethereum.org](/contributing/translation-program/#translation-program) i pomóc nam przetłumaczyć naszą stronę.
 

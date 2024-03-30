@@ -99,7 +99,7 @@ sidebarDepth: 2
 
 - 注意：Erigon 未提供快照同步，但可以进行完全修剪 (~500GB)
 
-对于共识客户端，空间要求也取决于客户端实现和启用的功能（例如验证者、罚没者），但通常需要另外 200GB 磁盘空间存储信标数据。 由于验证者数量巨大，带宽负载也会增加。 你可以[在此分析中找到关于共识客户端要求的详细信息](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e)。
+对于共识客户端，空间要求也取决于客户端实现和启用的功能（例如验证者、罚没者），但通常需要另外 200GB 磁盘空间存储信标数据。 由于验证者数量巨大，带宽负载也会增加。 你可以[在此分析中找到关于共识客户端要求的详细信息](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
 
 #### 即插即用解决方案 {#plug-and-play}
 

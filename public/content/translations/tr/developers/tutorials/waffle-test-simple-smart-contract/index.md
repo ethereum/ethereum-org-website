@@ -200,4 +200,4 @@ Waffle ile akıllı sözleşmeleri test etmenin ilk büyük adımını tamamlad�
 
 - [ERC20 sözleşmelerini Waffle ile test etme](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
 - [Waffle: Dinamik taklit ve sözleşme çağrılarını test etme](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
-- [Hardhat ve ethers ile Waffle'da merhaba dünya öğreticisi](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)
+- [Hardhat ve ethers ile Waffle'da merhaba dünya öğreticisi](/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/)

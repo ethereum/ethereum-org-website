@@ -76,7 +76,7 @@ Before diving into frameworks, we recommend you first read through our introduct
 
 - [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.com/invite/A39JVCM)
+- [Discord](https://discord.com/invite/alchemyplatform)
 
 **NodeReal -** **_Ethereum Development Platform._**
 
@@ -113,6 +113,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [Community Forum](https://forum.openzeppelin.com/c/support/17)
 - **OpenZeppelin SDK development has ended**
+
+**Catapulta -** **_Multi-chain smart contracts deployment tool, automate verifications in block explorers, keep track deployed smart contracts and share deployment reports, plug-n-play for Foundry and Hardhat projects._**
+
+- [Website](https://catapulta.sh/)
+- [Documentation](https://catapulta.sh/docs)
+- [Github](https://github.com/catapulta-sh)
 
 ## Further reading {#further-reading}
 

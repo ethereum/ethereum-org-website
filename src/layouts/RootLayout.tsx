@@ -26,10 +26,10 @@ export const RootLayout = ({
 }: Root) => {
   const { locale, asPath } = useRouter()
 
-  const CONTRIBUTING = "/contributing"
+  const CONTRIBUTING = "/contributing/"
   const isUntranslatedContributingPage =
     asPath.includes(CONTRIBUTING) &&
-    !(asPath.endsWith(CONTRIBUTING) || asPath.includes("/translation-program"))
+    !(asPath.endsWith(CONTRIBUTING) || asPath.includes("/translation-program/"))
 
   const isLegal =
     isUntranslatedContributingPage ||
@@ -50,7 +50,7 @@ export const RootLayout = ({
     <Container mx="auto" maxW={oldTheme.variables.maxPageWidth}>
       <SkipLink />
 
-      <Nav path={asPath} />
+      <Nav />
 
       <TranslationBanner
         shouldShow={shouldShowTranslationBanner}

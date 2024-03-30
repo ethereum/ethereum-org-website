@@ -1,24 +1,31 @@
 ---
-title: Contrato inteligente de Hola, mundo para principiantes
+title: Contrato inteligente Hello World para principiantes
 description: Tutorial introductorio para redactar e implementar un contrato inteligente sencillo en Ethereum.
 author: "elanh"
 tags:
-  - "solidity"
+  - "solidez"
   - "Hardhat"
   - "alchemy"
   - "contratos inteligentes"
-  - "empezar"
   - "implementación"
 skill: beginner
 lang: es
 published: 2021-03-31
 ---
 
-Si es nuevo en el desarrollo de cadena de bloques y no sabe por dónde empezar, o si solo quiere entender cómo implementar e interactuar con contratos inteligentes, esta es su guía. Abordaremos cómo crear e implementar un contrato inteligente sencillo en la red de prueba Ropsten usando una billetera virtual ([MetaMask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) y [Alchemy](https://alchemyapi.io/eth) (no se preocupe si aún no entiende lo que significa todo esto, lo explicaremos).
+Si es nuevo en el desarrollo de cadena de bloques y no sabe por dónde empezar, o si solo quiere entender cómo implementar e interactuar con contratos inteligentes, esta es su guía. Abordaremos cómo crear e implementar un contrato inteligente sencillo en la red de prueba Goerli usando una billetera virtual ([Metamask](https://metamask.io/)), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org/) y [Alchemy](https://alchemyapi.io/eth) (no se preocupe si aún no entiende lo que significa todo esto: lo explicaremos).
 
-En la parte 2 de este tutorial veremos cómo interactuar con nuestro contrato inteligente una vez implementado y en la parte 3 trataremos cómo publicarlo en Etherscan.
+> **Advertencia**
+> 
+> 🚧 Aviso de baja
+> 
+> Para toda esta guía, se está usando la red de prueba Goerli para crear e implementar un contrato inteligente. Sin embargo, tenga en cuenta que la Ethereum Foundation ha anuciado que [Goerli pronto se dará de baja](https://www.alchemy.com/blog/goerli-faucet-deprecation).
+> 
+> Recomendamos usar [Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) y el [grifo de Sepolia](https://sepoliafaucet.com/) para este tutorial.
 
-Si tiene alguna pregunta, no dude en consultar [Alchemy Discord](https://discord.gg/gWuC7zB)!
+En la [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) de este tutorial repasaremos cómo podemos interactuar con nuestro contrato inteligente una vez que se implemente aquí, y en [parte 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan) mostraremos cómo publicarlo en Etherscan.
+
+Si tiene alguna pregunta, no dude en consultar el [Discord de Alchemy](https://discord.gg/gWuC7zB).
 
 ## Paso 1: Conectarse a la red Ethereum {#step-1}
 
@@ -26,13 +33,13 @@ Hay muchas maneras de hacer solicitudes a la cadena Ethereum. Por simplicidad, u
 
 ## Paso 2: Crear su aplicación (y llave API) {#step-2}
 
-Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API creando una aplicación. Esto nos permitirá hacer peticiones a la red de pruebas de Ropsten. Si no está familiarizado con las redes de pruebas, revise [la página](/developers/docs/networks/).
+Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API creando una aplicación. Esto nos permitirá hacer solicitudes a la red de prueba Goerli. Si no está familiarizado con las redes de prueba, revise [esta página](/developers/docs/networks/).
 
-1.  Navegue a la página «Crear App» en su tablero Alchemy pasando el cursor sobre «Apps» en la barra de navegación y haciendo clic en «Crear App».
+1.  Navegue a la página «Crear app» (Crear aplicación) en su tablero Alchemy pasando el cursor sobre «Apps» en la barra de navegación y haciendo click en «Crear app».
 
 ![Crear la aplicación Hola, mundo](./hello-world-create-app.png)
 
-2. Designe a su aplicación «Hola, mundo», y escriba una breve descripción, seleccione «Staging» para el ambiente (usado para la contabilidad de tu aplicación), y escoja «Ropsten» para su red.
+2. Nombre su aplicación “Hello World”, ofrezca una descripción corta, seleccione “Staging” para el entorno (usado para la contabilidad de su aplicación) y seleccione “Goerli” para la red.
 
 ![Crear App visualizar Hola, mundo](./create-app-view-hello-world.png)
 
@@ -40,44 +47,44 @@ Una vez que haya creado una cuenta de Alchemy, puede generar una clave de API cr
 
 ## Paso 3: Crear una cuenta Ethereum (dirección) {#step-3}
 
-Necesitamos tener una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos MetaMask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Más información en [transacciones](/developers/docs/transactions/).
+Necesitamos tener una cuenta Ethereum para enviar y recibir transacciones. Para este tutorial, usaremos Metamask, una cartera virtual en el navegador usada para manejar la dirección de su cuenta Ethereum. Más información sobre las [transacciones](/developers/docs/transactions/).
 
-Puede descargar y crear una cuenta MetaMask gratis [aquí](https://metamask.io/download.html). Cuando esté creando una cuenta, o ya tenga una, asegúrese de cambiar a la «Red de pruebas de Robsten» en la parte superior derecha ( para que no tratemos con dinero real).
+Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download.html). Cuando esté creando una cuenta, o si ya tiene una, asegúrese de cambiar a la “red de prueba Goerli” en la parte superior derecha (para no operar con dinero real).
 
-![ejemplo de MetaMask Ropsten](./metamask-ropsten-example.png)
+![ejemplo de Metamask Ropsten](./metamask-ropsten-example.png)
 
 ## Paso 4: Agregar ether de un Faucet {#step-4}
 
-Para desarrollar nuestro contrato inteligente en la red de prueba, necesitaremos ETH de prueba. Para obtener sus ETH de prueba, puede ir a [Ropsten faucet](https://faucet.dimensions.network/) e introducir la dirección de su cuenta de Ropsten, y hacer click en «Enviar Ropsten ETH». Puede llevar algo de tiempo recibir su ETH de prueba debido a la congestión de la red. ¡Deberían aparecer los ETH en su cuenta de MetaMask poco después!
+Para implementar nuestro contrato inteligente en la red de prueba, necesitaremos algo de Eth falso. Para obtener Eth puede ir al [grifo de Goerli](https://goerlifaucet.com/), iniciar sesión en su cuenta de Alchemy e introducir la dirección de su billetera; luego haga clic en "Send Me Eth." para enviárselo. Puede llevar algo de tiempo recibir el Eth de prueba debido a la congestión de la red. (Al momento de escribir esto, el envío tardó cerca de 30 minutos). Debería ver su Eth en su cuenta de MetaMask a la brevedad.
 
 ## Paso 5: Comprobar su balance {#step-5}
 
-Para comprobar que nuestro balance este ahí, hagamos una solicitud de [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance)usando [la herramienta de composición de Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto hará que aparezca la cantidad de ETH en nuestra billetera. Después de introducir la dirección de su cuenta de MetaMask y hacer click en «Enviar Solicitud», debería ver una respuesta como esta:
+Para comprobar que nuestro balance este ahí, hagamos una solicitud de [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando [la herramienta de composición de Alchemy](https://composer.alchemyapi.io?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto hará que aparezca la cantidad de ETH en nuestra billetera. Después de introducir la dirección de su cuenta de Metamask y hacer click en «Enviar Solicitud», debería ver una respuesta como esta:
 
 ```json
 { "jsonrpc": "2.0", "id": 0, "result": "0x2B5E3AF16B1880000" }
 ```
 
-> **NOTA:**Este resultado es en wei no en ETH. Wei se usa como la denominación más pequeña de ether. La conversión de Wei a ETH es: 1 ETH = 10<sup>18</sup>wei. Entonces si queremos convertir 0x2B5E3AF16B1880000 a decimales obtenemos 5\*10¹⁸, que es igual a 5 ETH.
->
-> ¡Fiu! Nuestro dinero de prueba esta todo ahí <Emoji text=":money_mouth_face:" size={1} />.
+> **NOTA:** Este resultado es en wei, no en ETH. Wei se usa como la denominación más pequeña de Ether. La conversión de wei a ETH es: 1 eth = 10<sup>18</sup> wei. Entonces si queremos convertir 0x2B5E3AF16B1880000 a decimales, obtenemos 5\*10¹⁸, que equivale a 5 ETH.
+> 
+> ¡Fiu! Nuestro dinero de prueba está todo ahí <Emoji text=":money_mouth_face:" size={1} />.
 
 ## Paso 6: Iniciar nuestro proyecto {#step-6}
 
-Primero, necesitaremos crear un a carpeta para nuestro proyecto. Vaya a su línea de comando y teclee:
+Primero, necesitaremos crear una carpeta para nuestro proyecto. Vaya a su línea de comando y escriba:
 
 ```
 mkdir hello-world
 cd hello-world
 ```
 
-Ahora que estamos dentro de nuestra carpeta de proyecto, utulizaremos `npm init` a fin de inicializar el proyecto. Si no tiene instalado npm, siga [estas instrucciones](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (también necesitaremos Node.js así que ¡descárgueselo también!).
+Ahora que estamos dentro de nuestra carpeta de proyecto, usaremos `npm init` a fin de inicializar el proyecto. Si no tiene instalado npm, siga [estas instrucciones](https://docs.alchemyapi.io/alchemy/guides/alchemy-for-macs#1-install-nodejs-and-npm) (también necesitaremos Node.js, así que descárgueselo también).
 
 ```
 npm init
 ```
 
-Realmente no importa la respuesta que dé a las preguntas de instalación, aquí le mostramos cómo lo hicimos nosotros:
+Realmente no importa cómo responda las preguntas de instalación; aquí le mostramos cómo lo hicimos nosotros:
 
 ```
 package name: (hello-world)
@@ -104,13 +111,13 @@ About to write to /Users/.../.../.../hello-world/package.json:
 }
 ```
 
-Aprueba el paquete.json y ¡estamos listos para comenzar!
+Apruebe el package.json y listo.
 
-## Paso 7: Descargar [Hardhat](https://hardhat.org/getting-started/#overview){#step-7}
+## Paso 7: Descargar [Hardhat](https://hardhat.org/getting-started/#overview) {#step-7}
 
-Hardhat es un entorno de desarrollo para compilar, desplegar, probar y depurar su software Ethereum. Ayuda a los desarrolladores para construir contratos inteligentes y dApps localmente antes de desplegarlos en la cadena en vivo.
+Hardhat es un entorno de desarrollo para compilar, implementar, probar y depurar su software de Ethereum. Ayuda a los desarrolladores cuando crean contratos inteligentes y dApps localmente antes de la implementación en la cadena real.
 
-Dentro de nuestro proyecto `hello-world` ejecuta:
+Dentro de nuestro proyecto `hello-world`, ejecute:
 
 ```
 npm install --save-dev hardhat
@@ -171,26 +178,26 @@ Abra el proyecto Hola, mundo en su editor favorito (nosotros preferimos [VSCode]
 
 ```solidity
 // Especifica la versión de Solidity, utilizando la versión semántica.
-// Más información: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragmma
-pragma solidity ^0.5.10;
+// Learn more: https://solidity.readthedocs.io/en/v0.5.10/layout-of-source-files.html#pragma
+pragma solidity ^0.7.0;
 
-// Define un contrato llamado `HelloWorld`.
-// Un contrato es una colección de funciones y datos (su estado). Una vez desplegado, un contrato reside en una dirección específica en la blockchain de Ethereum. Más información: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Defines a contract named `HelloWorld`.
+// Un contrato es una colección de funciones y datos (su estado). Una vez desplegado, un contrato reside en una dirección específica en la blockchain de Ethereum. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
-    // Declara una variable de estado `message` del tipo `string`.
-   // Las variables de estado son variables cuyos valores se almacenan permanentemente en el almacenamiento del contrato. La palabra clave `public` hace que las variables sean accesibles desde fuera de un contrato y crea una función que otros contratos o clientes pueden llamar para acceder al valor.
+   // Declares a state variable `message` of type `string`.
+   // Las variables de estado son variables cuyos valores se almacenan permanentemente en el almacenamiento del contrato. The keyword `public` makes variables accessible from outside a contract and creates a function that other contracts or clients can call to access the value.
    string public message;
 
-    // Similar a muchos idiomas orientados a objetos basados en clases, un constructor es una función especial que sólo se ejecuta cuando se crea un contrato.
-   // Los constructores se utilizan para inicializar los datos del contrato. Más información: https://solidity.readthedocs.io/es/v0.5.10/contracts.html#constructors
-    constructor(string memory initMessage) public {
+   // Similar to many class-based object-oriented languages, a constructor is a special function that is only executed upon contract creation.
+   // Los constructores se utilizan para inicializar los datos del contrato. Learn more:https://solidity.readthedocs.io/en/v0.5.10/contracts.html#constructors
+   constructor(string memory initMessage) {
 
-        // Acepta un argumento de cadena `initMessage` y establece el valor en la variable de almacenamiento `message` del contrato).
+      // Accepts a string argument `initMessage` and sets the value into the contract's `message` storage variable).
       message = initMessage;
-    }
+   }
 
-    // Una función pública que acepta un argumento de cadena y actualiza la variable de almacenamiento `message`.
+   // A public function that accepts a string argument and updates the `message` storage variable.
    function update(string memory newMessage) public {
       message = newMessage;
    }
@@ -199,13 +206,13 @@ contract HelloWorld {
 
 Es un contrato inteligente muy sencillo que almacena un mensaje al momento de la creación y puede actualizarse con la función `update`.
 
-## Paso 11: Conectar MetaMask & Alchemy a su proyecto {#step-11}
+## Paso 11: Conectar Metamask & Alchemy a su proyecto {#step-11}
 
-Hemos creado una billetera de MetaMask, una cuenta de Alchemy y escrito nuestro contrato inteligente, ahora es momento de conectarlos entre sí.
+Hemos creado una billetera de Metamask, una cuenta de Alchemy y escrito nuestro contrato inteligente, ahora es momento de conectarlos entre sí.
 
 Cada transacción enviada desde su billetera virtual requiere una firma utilizando su clave privada única. Para proporcionar este permiso a nuestro programa, podemos almacenar de manera segura nuestra clave privada (y clave Alchemy API) en un archivo de entorno.
 
-> Para saber más sobre el envío de transacciones, consulte[este tutorial](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) sobre el envío de transacciones usando web3.
+> Si quiere ahondar sobre el envío de transacciones, consulte [este tutorial](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) sobre el envío de transacciones usando web3.
 
 Primero, instale el paquete dotenv en su directorio de proyecto:
 
@@ -213,7 +220,7 @@ Primero, instale el paquete dotenv en su directorio de proyecto:
 npm install dotenv --save
 ```
 
-Después, cree un archivo `.env` en el directorio raíz de nuestro proyecto, y añádale la llave inteligente de MetaMask y la API URL de HTTP Alchemy.
+Después, cree un archivo `.env` en el directorio raíz de nuestro proyecto, y añádale la llave inteligente de Metamask y la API URL de HTTP Alchemy.
 
 - Siga [estas instrucciones](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key) para exportar su llave privada
 - Abajo se le indica cómo obtener la API URL de HTTP Alchemy
@@ -225,8 +232,8 @@ Copie la API URL Alchemy
 Su `.env` debería verse así:
 
 ```
-API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
-PRIVATE_KEY = "your-metamask-private-key"
+API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
+PRIVATE_KEY = "tu-clave privada-metamask"
 ```
 
 Para conectarlos efectivamente a nuestro código, vincularemos estas variables en nuestro `hardhat.config.js` en el paso 13.
@@ -266,10 +273,10 @@ const { API_URL, PRIVATE_KEY } = process.env;
 */
 module.exports = {
    solidity: "0.7.3",
-   defaultNetwork: "ropsten",
+   defaultNetwork: "goerli",
    networks: {
       hardhat: {},
-      ropsten: {
+      goerli: {
          url: API_URL,
          accounts: [`0x${PRIVATE_KEY}`]
       }
@@ -330,7 +337,7 @@ Ejecutar `deploy()` en una `ContractFactory` iniciará el despliegue, y obtendr�
 ¡Por fin estamos listos para desplegar nuestro contrato inteligente! Desde la linea de comandos, ejecute:
 
 ```
-npx hardhat run scripts/deploy.js --network ropsten
+hardhat npx ejecuta scripts/deploy.js --network goerli
 ```
 
 Debería mostrarse algo parecido a esto:
@@ -339,11 +346,11 @@ Debería mostrarse algo parecido a esto:
 Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 ```
 
-Si vamos a la dirección [Ropsten etherscan](https://ropsten.etherscan.io/) y buscamos la dirección de nuestro contrato, podremos comprobar que se ha desplegado correctamente. El objeto de la transacción tendrá un aspecto parecido a esto:
+Si vamos a la [Goerli etherscan](https://goerli.etherscan.io/) y buscamos la dirección de nuestro contrato, podremos comprobar que se ha implementado correctamente. El objeto de la transacción tendrá un aspecto parecido a esto:
 
 ![contrato etherscan](./etherscan-contract.png)
 
-La dirección `From` debe coincidir con su cuenta de MetaMask y la dirección de envío especificará «creación de contrato», pero al hacer click en la transacción veremos nuestra dirección en el campo `To`:
+La dirección `From` debe coincidir con su cuenta de Metamask y la dirección de envío especificará «creación de contrato», pero al hacer click en la transacción veremos nuestra dirección en el campo `To`:
 
 ![transacción etherscan](./etherscan-transaction.png)
 
@@ -351,7 +358,7 @@ La dirección `From` debe coincidir con su cuenta de MetaMask y la dirección de
 
 Para entender lo que está pasando internamente, vayamos a la pestaña de Explorer en nuestro [panel Alchemy](https://dashboard.alchemyapi.io/explorer). Si tiene varias aplicaciones de Alchemy, asegúrese de filtrar por aplicación y seleccionar «Hola, mundo». ![Explorador Hola, mundo](./hello-world-explorer.png)
 
-Aquí verá un puñado de ejecuciones JSON-RPC que Hardhat/Ethers hizo internamente por nosotros cuando ejecutamos a la función `.deploy()`. Dos solicitudes importantes a tener en cuenta aquí son [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), que es la solicitud de escribir nuestro contrato en la cadena Ropsten, y [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash) que es una solicitud para leer información sobre nuestra transacción a partir de un hash (un patrón típico cuando realizamos transacciones). Para saber más sobre el envío de transacciones, consulte el siguiente tutorial [Enviar transacciones usando Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
+Aquí verá un puñado de ejecuciones JSON-RPC que Hardhat/Ethers hizo internamente por nosotros cuando ejecutamos a la función `.deploy()`. Dos solicitudes importantes aquí son [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), que es la solicitud para escribir nuestro contrato en la cadena de Goerli, y [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), que consiste en una solicitud para obtener la información de nuestra transacción de acuerdo con un hash proporcionado (un patrón típico cuando realizamos transacciones). Para saber más sobre el envío de transacciones, consulte el siguiente tutorial [Enviar transacciones usando Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/)
 
 Aquí acaba la parte 1 de este tutorial, en la parte 2, [Interacción con nuestro contrato inteligente](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#part-2-interact-with-your-smart-contract), actualizaremos nuestro mensaje inicial, y en la parte 3 [Publicación de nuestro contrato inteligente en Etherscan](https://docs.alchemyapi.io/alchemy/tutorials/hello-world-smart-contract#optional-part-3-publish-your-smart-contract-to-etherscan), veremos como publicar para que todo el mundo sepa cómo interactuar con él.
 

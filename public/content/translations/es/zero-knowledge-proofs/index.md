@@ -4,7 +4,7 @@ description: Introducción no técnica a pruebas de conocimiento cero para princ
 lang: es
 ---
 
-## ¿Qué son las pruebas de conocimiento cero? {#what-are-zk-proofs}
+# ¿Qué son las pruebas de conocimiento cero? {#what-are-zk-proofs}
 
 Una prueba de conocimiento cero es una forma de probar la validez de una sentencia sin revelar la sentencia en sí. El "probador" (también conocido como tirador de pruebas) es la parte que intenta probar o demostrar una afirmación, mientras que el "verificador" es el responsable de validarla.
 

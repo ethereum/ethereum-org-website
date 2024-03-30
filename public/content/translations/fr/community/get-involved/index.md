@@ -16,7 +16,7 @@ Commencez à lire la mission et les valeurs d'ethereum.org dans notre [code de c
 - [Trouvez une prime sur Gitcoin](https://gitcoin.co/), travaillez sur un petit ou gros problème technique, gagnez de la crypto !
 - Participez à un hackathon [ETHGlobal](http://ethglobal.co/) près de chez vous !
 - Consultez les [projets liés à votre domaine d'expertise ou au langage de programmation de votre choix](/developers/docs/programming-languages/)
-- Regardez ou participez aux [appels Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Regardez ou participez aux [appels Core Dev](https://www.youtube.com/@EthereumProtocol)
 - [Liste de souhaits du programme de soutien à l'écosystème](https://esp.ethereum.foundation/wishlist/) - domaines d'outillage, de documentation et d'infrastructure où le programme de soutien à l'écosystème Ethereum recherche activement des demandes de subvention
 - [Web3Bridge](https://www.web3bridge.com/) - rejoignez la communauté Web3 en herbe dans son initiative visant à identifier, former et soutenir des centaines de développeurs et de membres de la communauté à travers l'Afrique
 - Rejoignez le [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
@@ -135,4 +135,4 @@ Les « DAO » sont des organisations autonomes décentralisées. Ces groupes t
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Communauté axée sur le financement du développement d'Ethereum_
 - [Guilde Raid](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collectif de constructeurs Web3_
 
-À chaque fois et quelle que soit la façon dont vous contribuez à ethereum.org, pensez à respecter le [code de conduite](/community/code-of-conduct) !
+À chaque fois et quelle que soit la façon dont vous contribuez à ethereum.org, pensez à respecter le [code de conduite](/community/code-of-conduct)!
