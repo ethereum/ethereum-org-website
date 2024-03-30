@@ -4,17 +4,17 @@ This documentation outlines the current process for how issues are triaged for t
 
 ## Issue creation process
 
-Whenever a new issue is opened, it will automatically be labeled with a `needs-triage` label. The `needs-triage` label means that the core team needs to look at the issue, and nobody should work on it yet to avoid unnecessary work. This label will be removed after the issue has been triaged by a core contributor.
+Whenever a new issue is opened, it will automatically be labeled with a `needs triage 📥` label. The `needs triage 📥` label means that the core team needs to look at the issue, and nobody should work on it yet to avoid unnecessary work. This label will be removed after the issue has been triaged by a core contributor.
 
 ## Triage process
 
-The core team will review issues with the `needs-triage` label within 5 days. In order for an issue to be considered triaged, one of the following will need to happen:
+The core team will review issues with the `needs triage 📥` label within 5 days. In order for an issue to be considered triaged, one of the following will need to happen:
 
 1. The issue will be closed if it is not needed, a duplicate, or spam.
 2. If an issue needs more discussion, the `GH grooming` tag will be added, and the issue will be discussed next GitHub grooming. After this call, action items will be recorded and the issue will be considered triaged.
 3. The issue is labeled with the appropriate tags for work needed (ex: `design required`, `dev required`, etc.) and open it up for assignment. More on this below.
 
-After an issue has been triaged, the `needs-triage` label will be removed from the issue.
+After an issue has been triaged, the `needs triage 📥` label will be removed from the issue.
 
 ## Assignment process
 

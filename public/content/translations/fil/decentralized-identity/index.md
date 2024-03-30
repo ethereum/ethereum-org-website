@@ -49,7 +49,7 @@ Ang mga decentralized identifier ay sino-store sa mga distributed ledger (blockc
 
 ## Paano naging posible ang mga decentralized identifier? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Public Key Infrastructure (PKI) {#public-key-infrastructure}
+### 1. Public Key Infrastructure (PKI) {#public-key-cryptography}
 
 Ang public-key infrastructure (PKI) ay isang hakbang para sa seguridad ng impormasyon na bumubuo ng [pampublikong key](/glossary/#public-key) at [ pribadong key](/glossary/#private-key) para sa isang entity. Ang public-key cryptography ay ginagamit sa mga blockchain network upang patunayan ang identity ng user at patunayan ang pagmamay-ari sa mga digital asset.
 

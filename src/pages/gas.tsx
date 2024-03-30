@@ -119,7 +119,9 @@ const GasPage = () => {
   const benefits = [
     {
       emoji: "🪪",
-      description: t("page-gas-benefits-1-description"),
+      description: (
+        <Translation id="page-gas:page-gas-benefits-1-description" />
+      ),
     },
     {
       emoji: ":money_with_wings:",
@@ -189,7 +191,9 @@ const GasPage = () => {
               {t("page-gas-what-are-gas-fees-header")}
             </H2>
             <Text>{t("page-gas-what-are-gas-fees-text-1")}</Text>
-            <Text>{t("page-gas-what-are-gas-fees-text-2")}</Text>
+            <Text>
+              <Translation id="page-gas:page-gas-what-are-gas-fees-text-2" />
+            </Text>
           </Box>
 
           <Box
@@ -256,11 +260,13 @@ const GasPage = () => {
           >
             <H3 mt={0}>{t("page-gas-what-causes-high-gas-fees-header")}</H3>
             <Text>{t("page-gas-what-causes-high-gas-fees-text-1")}</Text>
-            <Text>{t("page-gas-what-causes-high-gas-fees-text-2")}</Text>
+            <Text>
+              <Translation id="page-gas:page-gas-what-causes-high-gas-fees-text-2" />
+            </Text>
             <Text>{t("page-gas-what-causes-high-gas-fees-text-3")}</Text>
             <Text>
               {t("page-gas-want-to-dive-deeper")}{" "}
-              <InlineLink to="/developers/docs/gas/">
+              <InlineLink href="/developers/docs/gas/">
                 {t("page-gas-check-out-the-developer-docs")}
               </InlineLink>
             </Text>
@@ -289,8 +295,8 @@ const GasPage = () => {
               <H2 mt={0}>{t("page-gas-why-do-we-need-gas-header")}</H2>
               <Text>{t("page-gas-why-do-we-need-gas-text")}</Text>
             </Box>
-            {benefits.map((benefit) => (
-              <Box key={benefit.description} minWidth="full" my={2}>
+            {benefits.map((benefit, index) => (
+              <Box key={index} minWidth="full" my={2}>
                 <HorizontalCard
                   key={benefit.emoji}
                   emoji={benefit.emoji}
