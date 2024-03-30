@@ -4,7 +4,7 @@ description: An explanation of the proof-of-authority consensus protocol and its
 lang: en
 ---
 
-proof-of-authority (PoA) the modified version of proof-of-stake and the most used consensus mechanism in testnet networks, it has several implementations with the most well known implementation clique.
+Proof-of-Authority is a reputation-based consensus algorithm that is a modified version of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). It is mostly used by private chains, testnets, and local development networks. PoA is a reputation-based consensus algorithm that requires trusting a set of authorized signers to produce blocks, instead of a stake-based mechanism in PoS.
 
 ## Prerequisites {#prerequisites}
 
@@ -14,13 +14,13 @@ To better understand this page, we recommend you first read up on [transactions]
 
 Proof-of-Authority is a modified version of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) that is a reputation-based consensus algorithm instead of stake-based mechanism in POS. The term has been introduced for the first time in 2017 by Gavin Wood, and this consensus algorithm has been mostly used by private chains, testnets and local development networks, as it overcomes the need for high quality resources as POW does, and overcomes the scalability issues with POS by having small subset of nodes storing the blockchian and producing blocks.
 
-Proof-of-authority requires trusting a set of authorized signers that are set in the [genesis block](/glossary/#genesis-block). In most current implementations, all authorized signers retain equal power and privileges when determining consensus of the chain. The idea behind reputation staking is every authorized signer is well-known to everyone through things like know-your customer (KYC), or by having a well-known organization be the only signer. This way if a signer does anything wrong, their identity is known.
+Proof-of-authority requires trusting a set of authorized signers that are set in the [genesis block](/glossary/#genesis-block). In most current implementations, all authorized signers retain equal power and privileges when determining consensus of the chain. The idea behind reputation staking is every authorized validator is well-known to everyone through things like know-your customer (KYC), or by having a well-known organization be the only validator. This way if a validator does anything wrong, their identity is known.
 
 Proof-of-authority has different implementations, but the standard Ethereum implementation is **clique**, which implements [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique is developer-friendly and an easy-to-implement standard, supporting all client syncing types.
 
 ## How it works {#how-it-works}
 
-clique standard simply make a use of the obsolete headers: extradata that was used only for fun, miner became obsolete as there are no miners in POA, and nonce became also obsolete because the authorities the order of users transactions, extradata is used to store the authorized signers set, miner and nonce are used to vote for adding or removing signers from the network, where every epoch transition flushes all pending votes. The block proposal is selected sequentially for each block, but in fact any other authorized signer can propose block even if it's not his turn, but they have limit of signing only one block between K blocks when N are the authorized signers.
+In PoA, a set of authorized signers are selected to create new blocks. The signers are selected based on their reputation, and they are the only ones allowed to create new blocks. The signers are selected in a round-robin fashion, and each signer is allowed to create a block in a specific time frame. The block creation time is fixed, and the signers are required to create a block within that time frame. If a signer fails to create a block within the time frame, the next signer in the list is allowed to create a block.
 
 ## Attack vectors {#attack-vectors}
 
@@ -38,7 +38,7 @@ Another small attack vector is malicious signers injecting new vote proposals in
 
 ### Concurrent blocks {#concurrent-blocks}
 
-If the number of authorized signers are N, and we allow each signer to mint 1 block out of K, then at any point in time N-K+1 miners are allowed to mint. To avoid these racing for blocks, every signer would add a small random “offset” to the time it releases a new block. This ensures that small forks are rare, but occasionally still happen (as on the main net). If a signer is caught abusing it’s authority and causing chaos, it can be voted out.
+In a Proof-of-Authority (PoA) network, if for example there are 10 authorized signers and each signer is allowed to create 1 block out of 20, then at any given time, 11 miners can create blocks. To prevent them from racing to create blocks, each signer adds a small random "offset" to the time they release a new block. This reduces the occurrence of small forks but still allows occasional forks, as seen on the Ethereum Mainnet. If a signer misuses their authority and causes disruptions, they can be voted out of the network.
 
 ## Pros and cons {#pros-and-cons}
 
@@ -59,9 +59,11 @@ If the number of authorized signers are N, and we allow each signer to mint 1 bl
 - [Deprecated PoA, Aura specification](https://openethereum.github.io/Chain-specification)
 - [IBFT 2.0, another PoA implementation](https://besu.hyperledger.org/stable/private-networks/concepts/poa)
 
-### Videos {#videos}
+### More of a visual learner? {#visual-learner}
 
-- [Visual explanation of Proof of Authority](https://youtu.be/Mj10HSEM5_8)
+Watch a visual explanation of proof-of-authority:
+
+<YouTube id="Mj10HSEM5_8" />
 
 ## Related Topics {#related-topics}
 
