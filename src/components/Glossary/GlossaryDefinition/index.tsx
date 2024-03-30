@@ -1,12 +1,10 @@
-import { ComponentProps } from "react"
-import { CiLink } from "react-icons/ci"
-import { Box, type HeadingProps, Icon, Link, Text } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 
+import { ComponentProps } from "react"
+import { DEFAULT_GLOSSARY_NS } from "@/lib/constants"
 import InlineLink from "@/components/Link"
 import OldHeading from "@/components/OldHeading"
 import Translation from "@/components/Translation"
-
-import { DEFAULT_GLOSSARY_NS } from "@/lib/constants"
 
 interface GlossaryDefinitionProps {
   term: string
@@ -25,57 +23,29 @@ const GlossaryDefinition = ({
   size = "md",
   options = { ns: DEFAULT_GLOSSARY_NS },
 }: GlossaryDefinitionProps) => {
-  const textStyles = size === "sm" ? { mb: 0 } : {}
+  const headingStyles =
+    size === "sm"
+      ? { fontSize: "md", mt: 0, mb: 2 }
+      : { fontSize: { base: "xl", md: "2xl" } }
 
-  const IdAnchor = ({ id }: { id?: string }) => {
-    if (!id) return null
-    return (
-      <Link
-        href={"#" + id}
-        position="absolute"
-        insetInlineEnd="100%"
-        aria-label={id.replaceAll("-", " ") + " permalink"}
-        opacity={0}
-        _groupHover={{ opacity: 1 }}
-        _focus={{ opacity: 1 }}
-        transition="opacity 0.1s ease-in-out"
-      >
-        <Icon as={CiLink} fontSize="xl" me="1" />
-      </Link>
-    )
-  }
-  const headingPropsForAnchor = (id?: string): HeadingProps => {
-    if (!id) return {}
-    return {
-      scrollMarginTop: 28,
-      id,
-      "data-group": true,
-      position: "relative",
-    } as HeadingProps
-  }
-  const commonHeadingProps = (id?: string): HeadingProps => ({
-    fontWeight: 700,
-    lineHeight: 1.4,
-    ...headingPropsForAnchor(id),
-  })
-  const Heading3 = ({ id, children, ...rest }: HeadingProps) => (
-    <OldHeading as="h3" {...commonHeadingProps(id)} fontSize="2xl" {...rest}>
-      <IdAnchor id={id} />
-      {children}
-    </OldHeading>
-  )
+  const textStyles = size === "sm" ? { mb: 0 } : {}
 
   return (
     <Box textAlign="start">
-      <Heading3 id={term}>
+      <OldHeading as="h3" lineHeight={1.4} id={term} {...headingStyles}>
         <Translation
           id={term + "-term"}
           options={options}
           transform={components}
         />
-      </Heading3>
-
-      <Text {...textStyles}>
+      </OldHeading>
+      {/**
+       * `as="span"` prevents hydration warnings for strings that contain
+       * elements that cannot be nested inside `p` tags, like `ul` tags
+       * (found in some Glossary definition).
+       * TODO: Develop a better solution to handle this case.
+       */}
+      <Text as="span" {...textStyles}>
         <Translation
           id={term + "-definition"}
           options={options}
