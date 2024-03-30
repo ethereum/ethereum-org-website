@@ -14,13 +14,19 @@ To better understand this page, we recommend you first read up on [transactions]
 
 Proof-of-Authority is a modified version of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) that is a reputation-based consensus algorithm instead of stake-based mechanism in POS. The term has been introduced for the first time in 2017 by Gavin Wood, and this consensus algorithm has been mostly used by private chains, testnets and local development networks, as it overcomes the need for high quality resources as POW does, and overcomes the scalability issues with POS by having small subset of nodes storing the blockchian and producing blocks.
 
-Proof-of-authority requires trusting a set of authorized signers that are set in the [genesis block](/glossary/#genesis-block). In most current implementations, all authorized signers retain equal power and privileges when determining consensus of the chain. The idea behind reputation staking is every authorized validator is well-known to everyone through things like know-your customer (KYC), or by having a well-known organization be the only validator. This way if a validator does anything wrong, their identity is known.
+Proof-of-authority requires trusting a set of authorized signers that are set in the [genesis block](/glossary/#genesis-block). In most current implementations, all authorized signers retain equal power and privileges when determining consensus of the chain. The idea behind reputation staking is every authorized validator is well-known to everyone through things like know-your customer (KYC), or by having a well-known organization being the only validator. This way if a validator does anything wrong, their identity is known.
 
-Proof-of-authority has different implementations, but the standard Ethereum implementation is **clique**, which implements [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique is developer-friendly and an easy-to-implement standard, supporting all client syncing types.
+Proof-of-authority has different implementations, but the standard Ethereum implementation is **clique**, which implements [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique is developer-friendly and an easy-to-implement standard, supporting all client syncing types. Other implementations include [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) and [Aura](https://openethereum.github.io/Chain-specification).
 
 ## How it works {#how-it-works}
 
-In PoA, a set of authorized signers are selected to create new blocks. The signers are selected based on their reputation, and they are the only ones allowed to create new blocks. The signers are selected in a round-robin fashion, and each signer is allowed to create a block in a specific time frame. The block creation time is fixed, and the signers are required to create a block within that time frame. If a signer fails to create a block within the time frame, the next signer in the list is allowed to create a block.
+In PoA, a set of authorized signers are selected to create new blocks. The signers are selected based on their reputation, and they are the only ones allowed to create new blocks. The signers are selected in a round-robin fashion, and each signer is allowed to create a block in a specific time frame. The block creation time is fixed, and the signers are required to create a block within that time frame.
+
+The voting process is done by the signers themselves. Each signer votes for the addition or removal of a signer in their block when they create a new block. The votes are tallied up by the nodes, and the signers are added or removed based on the votes reaching a certain threshold `SIGNER_LIMIT`.
+
+There may be a situation where small forks occur, the difficulty of a block depends on whether the block was signed in turn or out of turn. “In turn” blocks have difficulty 2, and “out of turn” blocks have difficulty 1. In the case of small forks, the chain with most of the signers sealing blocks “in turn” will accumulate the most difficulty and win.
+
+
 
 ## Attack vectors {#attack-vectors}
 
