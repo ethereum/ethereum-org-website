@@ -28,8 +28,6 @@ An internal API is also used for inter-client communication within a node - that
 
 [Read the full JSON-RPC API spec on GitHub](https://github.com/ethereum/execution-apis).
 
-You can also use the [interactive JSON-RPC API playground](https://ethereum-json-rpc.com).
-
 ## Conventions {#conventions}
 
 ### Hex value encoding {#hex-encoding}
@@ -134,6 +132,10 @@ A handful of core JSON-RPC methods require data from the Ethereum network, and f
 - [eth_getTransactionReceipt](#eth_gettransactionreceipt)
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
+
+## JSON-RPC API Playground
+
+You can use the [playground tool](https://ethereum-json-rpc.com) to discover and try out the API methods. It also shows you which methods and networks are supported by various node providers.
 
 ## JSON-RPC API Methods {#json-rpc-methods}
 
