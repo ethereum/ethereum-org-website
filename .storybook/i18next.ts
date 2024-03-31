@@ -1,6 +1,5 @@
 import i18n, { Resource } from "i18next"
-import { initReactI18next } from "gatsby-plugin-react-i18next"
-import fs from "fs"
+import { initReactI18next } from "react-i18next"
 
 export const baseLocales = {
   en: { title: "English", left: "En" },
@@ -15,36 +14,38 @@ const ns = [
   "glossary",
   "page-about",
   "page-index",
+  "page-learn",
   "page-upgrades",
   "page-developers-index",
 ]
 const supportedLngs = Object.keys(baseLocales)
 
 /**
- * Taking the ns array and combining all the ids
- * under a single ns per language, set to the default of "translation"
+ * Taking the ns array and generating those files for each language available.
  */
 const resources: Resource = ns.reduce((acc, n) => {
   supportedLngs.forEach((lng) => {
     if (!acc[lng]) acc[lng] = {}
+
     try {
       acc[lng] = {
-        translation: {
-          ...acc[lng].translation,
-
+        ...acc[lng],
+        [n]: {
+          ...acc[lng][n],
           ...require(`../src/intl/${lng}/${n}.json`),
         },
       }
     } catch {
       acc[lng] = {
-        translation: {
-          ...acc[lng].translation,
-
+        ...acc[lng],
+        [n]: {
+          ...acc[lng][n],
           ...require(`../src/intl/en/${n}.json`),
         },
       }
     }
   })
+
   return acc
 }, {})
 

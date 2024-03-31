@@ -1,0 +1,14 @@
+{
+  "/content/contributing/translation-program/translatathon/untranslated.png": {
+    "hash": "3b96f7aa",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAACCAYAAABR7VzxAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAR0lEQVR4nGPYuXHj/9iYmP9Kyir//QMC/1+4ePE/seDly5f/GRbNnv0/PS39v5S0zH8jE9P/u/fs+f/x06f/z54/J4hBlgEAbChrP5Qg/DAAAAAASUVORK5CYII="
+  },
+  "/content/contributing/translation-program/translatathon/translated.png": {
+    "hash": "e3508821",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAACCAYAAABR7VzxAAAACXBIWXMAABYlAAAWJQFJUiTwAAAARUlEQVR4nGNYu2HZfw9vz/8c3Dz/FRSV/p8+ffo/seD3nz//GWbMnvI/OCz0v4qK2n9NTa3/27fv+P/585f/z5+/IAoDANmcakO7dqG4AAAAAElFTkSuQmCC"
+  },
+  "/content/contributing/translation-program/translatathon/approved.png": {
+    "hash": "3679fde5",
+    "base64": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAACCAYAAABR7VzxAAAACXBIWXMAABYlAAAWJQFJUiTwAAAAQElEQVR4nGP49fvb/4rKyv+SklL/ff38/p87d+4/KYDh3v17/7u6u//b2Nr9Dw4N/b97997/b968/f/o0WOiMABgWW4hwWba0QAAAABJRU5ErkJggg=="
+  }
+}

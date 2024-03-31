@@ -1,4 +1,16 @@
 import React from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import {
+  Bar,
+  BarChart,
+  Cell,
+  LabelList,
+  Legend,
+  ResponsiveContainer,
+  Text,
+  XAxis,
+} from "recharts"
 import {
   Box,
   Center,
@@ -6,21 +18,12 @@ import {
   useBreakpointValue,
   useToken,
 } from "@chakra-ui/react"
-import {
-  BarChart,
-  Bar,
-  Cell,
-  Text,
-  XAxis,
-  LabelList,
-  ResponsiveContainer,
-  Legend,
-} from "recharts"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Translation from "./Translation"
+import type { Lang } from "@/lib/types"
 
-interface ITickProps {
+import { isLangRightToLeft } from "@/lib/utils/translations"
+
+type CustomTickProps = {
   x: number
   y: number
   payload: { value: number | string }
@@ -48,13 +51,11 @@ const RechartText = chakra(Text, {
       "maxLines",
     ].includes(prop)
 
-    if (isValidRechartProp) return true
-
-    return false
+    return isValidRechartProp
   },
 })
 
-const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
+const CustomTick = ({ x, y, payload }: CustomTickProps) => {
   return (
     <g transform={`translate(${x},${y})`}>
       <RechartText
@@ -73,32 +74,33 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
   )
 }
 
-const EnergyConsumptionChart: React.FC = () => {
-  const { t } = useTranslation()
-
+const EnergyConsumptionChart = () => {
+  const { t } = useTranslation("page-what-is-ethereum")
   const textColor = useToken("colors", "text")
+  const { locale } = useRouter()
+  const isRtl = isLangRightToLeft(locale as Lang)
 
   const data = useBreakpointValue<Data>({
     base: [
       {
         name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 200,
+        amount: 190,
         color: "#FF0000",
       },
       {
         name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 131,
+        amount: 149,
         color: "#F2A900",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 78,
-        color: "#C1B6F5",
       },
       {
         name: t("energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
+      },
+      {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
       },
       {
         name: t("energy-consumption-chart-eth-pos-label"),
@@ -109,8 +111,13 @@ const EnergyConsumptionChart: React.FC = () => {
     sm: [
       {
         name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 200,
+        amount: 190,
         color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#D7B14A",
       },
       {
         name: t("energy-consumption-gold-mining-cbeci-label"),
@@ -118,18 +125,13 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#F2A900",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 131,
-        color: "#D7B14A",
-      },
-      {
         name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 78,
+        amount: 21,
         color: "#C1B6F5",
       },
       {
         name: t("energy-consumption-chart-netflix-label"),
-        amount: 0.451,
+        amount: 0.457,
         color: "#E50914",
       },
       {
@@ -141,8 +143,13 @@ const EnergyConsumptionChart: React.FC = () => {
     md: [
       {
         name: t("energy-consumption-chart-global-data-centers-label"),
-        amount: 200,
+        amount: 190,
         color: "#FF0000",
+      },
+      {
+        name: t("energy-consumption-chart-btc-pow-label"),
+        amount: 149,
+        color: "#D7B14A",
       },
       {
         name: t("energy-consumption-gold-mining-cbeci-label"),
@@ -150,23 +157,23 @@ const EnergyConsumptionChart: React.FC = () => {
         color: "#D7B14A",
       },
       {
-        name: t("energy-consumption-chart-btc-pow-label"),
-        amount: 131,
-        color: "#D7B14A",
-      },
-      {
-        name: t("energy-consumption-chart-eth-pow-label"),
-        amount: 78,
-        color: "#C1B6F5",
-      },
-      {
         name: t("energy-consumption-chart-gaming-us-label"),
         amount: 34,
         color: "#71BB8A",
       },
       {
+        name: t("energy-consumption-chart-eth-pow-label"),
+        amount: 21,
+        color: "#C1B6F5",
+      },
+      {
+        name: "Google",
+        amount: 19,
+        color: "#E50914",
+      },
+      {
         name: t("energy-consumption-chart-netflix-label"),
-        amount: 0.451,
+        amount: 0.457,
         color: "#E50914",
       },
       {
@@ -195,7 +202,7 @@ const EnergyConsumptionChart: React.FC = () => {
             margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
             barGap={15}
             barSize={38}
-            data={data}
+            data={isRtl ? data?.reverse() : data}
           >
             <XAxis
               dataKey="name"
@@ -207,7 +214,7 @@ const EnergyConsumptionChart: React.FC = () => {
             <Legend
               content={
                 <Box textAlign="center" color="text" fontWeight="600" mt={8}>
-                  <Translation id="page-what-is-ethereum-energy-consumption-chart-legend" />
+                  {t("page-what-is-ethereum-energy-consumption-chart-legend")}
                 </Box>
               }
             />

@@ -1,80 +1,81 @@
-import * as React from "react"
+import ReactSelect, { ActionMeta, GroupBase, Props } from "react-select"
 import {
-  Select as ChakraSelect,
-  SelectProps as ChakraSelectProps,
+  createStylesContext,
+  type SystemStyleObject,
   ThemingProps,
+  useMultiStyleConfig,
 } from "@chakra-ui/react"
 
-interface SelectProps
-  extends Omit<ChakraSelectProps, "defaultValue">,
-    Pick<ThemingProps<"Select">, "variant"> {
-  defaultValue?: { label: string; value: string; [x: string]: any }
-  onChange(selectedOption: any | ""): void
-  placeholder?: string
-  options: Record<string, any>[]
-}
+import { components, reactSelectAnatomyKeys } from "./innerComponents"
 
-const Select = (props: SelectProps) => {
-  const { options, defaultValue, placeholder, onChange, ...rest } = props
+const [ReactSelectStylesProvider, useReactSelectStyles] =
+  createStylesContext("ReactSelect")
 
-  const [selectedOption, setSelectedOption] = React.useState(
-    defaultValue?.value
-  )
+export const useSelectStyles = useReactSelectStyles as () => Record<
+  (typeof reactSelectAnatomyKeys)[number],
+  SystemStyleObject
+>
 
-  const flatObject = options
-    .map((option) => {
-      if (Object.hasOwn(option, "options")) {
-        return option.options
-      }
+/**
+ * Type for onChange handler in the `Select` component
+ *
+ * Specifically declared for single selects.
+ *
+ * @see https://react-select.com/typescript#onchange
+ *
+ * @typeParam Option - The object type in the array
+ * @param newValue - The object returned from the payload
+ * @param actionMeta - The set of actions that can be run on change
+ */
+export type SelectOnChange<Option> = (
+  newValue: Option | null,
+  actionMeta: ActionMeta<Option>
+) => void
 
-      return option
-    })
-    .flat()
-
-  const handleOnChange: React.ChangeEventHandler<HTMLSelectElement> = (e) => {
-    const selectedValue = e.target.value
-    const isPlaceholder = selectedValue === ""
-
-    setSelectedOption(selectedValue)
-
-    const selectedOptionData = flatObject.find(
-      (option) => option.value === selectedValue
-    )
-
-    if (!selectedOptionData && !isPlaceholder) return
-
-    onChange(selectedOptionData ?? "")
-  }
-
+/**
+ * Custom Built Version of the `react-select` single-select component.
+ *
+ * A styles provider wraps the original `Select` to send Chakra styles straight to the
+ * custom internal components which are code-split into their own file.
+ * See `./innerComponents.tsx`
+ *
+ * You can use the Chakra `variant` prop to declare a variant from the extended theme,
+ * and use any valid props sent to the `Select` component.
+ *
+ * @see {@link https://react-select.com/props#select-props} for the list of valid props
+ *
+ * `WARNING`: the  `unstyled`, and `menuPlacement` props are locked and should not be altered, per Design System.
+ */
+const Select = <
+  Option,
+  Group extends GroupBase<Option> = GroupBase<Option>,
+  IsMulti extends boolean = false
+>({
+  variant,
+  ...rest
+}: Omit<Props<Option, IsMulti, Group>, "unstyled" | "menuPlacement"> & {
+  variant?: ThemingProps<"ReactSelect">["variant"]
+}) => {
+  const styles = useMultiStyleConfig("ReactSelect", {
+    variant,
+  })
   return (
-    <ChakraSelect
-      value={selectedOption}
-      placeholder={placeholder}
-      onChange={handleOnChange}
-      data-peer
-      sx={{
-        '& option[value=""]': {
-          color: "bodyLight",
-        },
-      }}
-      {...rest}
-    >
-      {options.map((option, idx) => {
-        return Object.hasOwn(option, "options") ? (
-          <optgroup key={idx} label={option.optGroupLabel}>
-            {option.options.map(({ label, value }) => (
-              <option key={value} value={value}>
-                {label}
-              </option>
-            ))}
-          </optgroup>
-        ) : (
-          <option key={idx} value={option.value}>
-            {option.label}
-          </option>
-        )
-      })}
-    </ChakraSelect>
+    <ReactSelectStylesProvider value={styles}>
+      <ReactSelect
+        components={components}
+        styles={{
+          singleValue: (base) => ({
+            ...base,
+            // Force text overflow at smaller widths when inline with other select components
+            position: "absolute",
+          }),
+        }}
+        isSearchable={false}
+        {...rest}
+        unstyled
+        menuPlacement="bottom"
+      />
+    </ReactSelectStylesProvider>
   )
 }
 
