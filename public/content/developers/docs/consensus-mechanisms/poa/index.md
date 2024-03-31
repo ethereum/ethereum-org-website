@@ -26,8 +26,6 @@ The voting process is done by the signers themselves. Each signer votes for the 
 
 There may be a situation where small forks occur, the difficulty of a block depends on whether the block was signed in turn or out of turn. “In turn” blocks have difficulty 2, and “out of turn” blocks have difficulty 1. In the case of small forks, the chain with most of the signers sealing blocks “in turn” will accumulate the most difficulty and win.
 
-
-
 ## Attack vectors {#attack-vectors}
 
 ### Malicious signers {#malicious-signers}
