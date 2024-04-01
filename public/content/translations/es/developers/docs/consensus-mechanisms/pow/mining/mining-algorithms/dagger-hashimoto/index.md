@@ -143,7 +143,7 @@ El algoritmo utilizado para generar el conjunto de DAG usado para calcular el tr
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
     from pyethereum import chain_manager
-    if num <= 0:
+    if n <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:
         prevhash = chain_manager.index.get_block_by_number(n - 1)
@@ -186,7 +186,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
         shifted_A = hash_output_A >> i
         transaction = shifted_A % len(list_of_transactions)
         txid_mix ^= list_of_transactions[transaction] << i
-    return txid_max ^ (nonce << 192)
+    return txid_mix ^ (nonce << 192)
 ```
 
 Desafortunadamente, aunque Hashimoto se considera de RAM difícil, se basa en la aritmética de 256 bits, que tiene una sobrecarga computacional considerable. Sin embargo, Dagger-Hashimoto solo utiliza los 64 bits menos significativos al indexar su conjunto de datos para abordar este problema.
