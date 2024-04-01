@@ -175,9 +175,9 @@ Cuando la cadena de baliza se fusionó con la capa de ejecución de Ethereum el 
 
 La gobernanza en Ethereum no está estrictamente definida. Muchos participantes de la comunidad tienen diversas perspectivas al respecto. Aquí nombramos algunas de ellas:
 
-- [Notas sobre la gobernanza en la cadena de bloques](https://vitalik.eth.limo/general/2017/12/17/voting.html) – _Vitalik Buterin_
+- [Notas sobre la gobernanza de la cadena de bloques](https://vitalik.eth.limo/general/2017/12/17/voting.html), _Vitalik Buterin_
 - [¿Cómo funciona la gobernanza de Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Cómo funciona la gobernanza de Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) - _Micah Zoltu_
 - [¿Qué es un desarrollador del núcleo de Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Gobernanza, parte 2: la plutocracia sigue siendo mala](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
-- [Más allá de la gobernanza de votación con monedas](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_
+- [Gobernanza, parte 2: La plutocracia todavía es mala](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html), _Vitalik Buterin_
+- [Más allá de la gobernanza de la votación de monedas](https://vitalik.eth.limo/general/2021/08/16/voting3.html), _Vitalik Buterin_

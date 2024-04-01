@@ -49,7 +49,7 @@ Los identificadores descentralizados se almacenan en las cadenas de bloques o re
 
 ## ¿Qué hace que los identificadores descentralizados sean posibles? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infraestructura de clave pública (ICP) {#public-key-cryptography}
+### 1. Infraestructura de clave pública (ICP) {#public-key-infrastructure}
 
 La infraestructura de clave pública (ICP) es una medida de seguridad de la información que genera una [clave pública](/glossary/#public-key) y una [clave privada](/glossary/#private-key) para una entidad. La criptografía de clave pública se utiliza en las redes de cadena de bloques para autenticar las identidades del usuario y demostrar la propiedad de los activos digitales.
 
@@ -109,7 +109,7 @@ He aquí un ejemplo que ilustra cómo podrían funcionar en la práctica los cer
 
 ### Los tókenes Souldbound y la identidad {#soulbound}
 
-[Los tókenes Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT no transferibles) pueden utilizarse para recopilar información única en una cartera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección particular de Ethereum que podría incluir tókenes representando logros (ej. terminar algún curso en línea específico o pasar un umbral de puntuación en un juego) o participación en la comunidad.
+[Los tókenes de Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT no transferibles) podrían utilizarse para recopilar información exclusiva de una cartera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección particular de Ethereum que podría incluir tókenes representando logros (ej. terminar algún curso en línea específico o pasar un umbral de puntuación en un juego) o participación en la comunidad.
 
 ## Beneficios de una identidad descentralizada  {#benefits-of-decentralized-identity}
 
