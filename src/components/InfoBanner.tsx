@@ -1,11 +1,11 @@
-import React from "react"
-import { Flex, FlexProps, LightMode } from "@chakra-ui/react"
+import type { ReactNode } from "react"
+import { Flex, type FlexProps, LightMode } from "@chakra-ui/react"
 
-import Emoji from "./Emoji"
-import Text from "./OldText"
+import Emoji from "@/components/Emoji"
+import Text from "@/components/OldText"
 
-export interface IProps extends FlexProps {
-  children?: React.ReactNode
+type InfoBannerProps = FlexProps & {
+  children?: ReactNode
   className?: string
   emoji?: string
   isWarning?: boolean
@@ -14,22 +14,22 @@ export interface IProps extends FlexProps {
   title?: string
 }
 
-const InfoBanner: React.FC<IProps> = ({
+const InfoBanner = ({
   children,
   className,
   emoji,
-  isWarning = false,
-  shouldCenter = false,
-  shouldSpaceBetween = false,
+  isWarning,
+  shouldCenter,
+  shouldSpaceBetween,
   title,
   ...props
-}) => {
+}: InfoBannerProps) => {
   const banner = (
     <LightMode>
       <Flex
         align="center"
-        p={6}
-        borderRadius={"sm"}
+        p="6"
+        borderRadius="sm"
         maxW={shouldCenter ? "55rem" : "100%"}
         sx={{
           ":not(button)": {
@@ -44,7 +44,7 @@ const InfoBanner: React.FC<IProps> = ({
           <Emoji
             flexGrow="0"
             flexShrink="0"
-            mr={{ base: 0, sm: 6 }}
+            me={{ base: 0, sm: 6 }}
             mb={{ base: 2, sm: 0 }}
             alignSelf={{ base: "flex-start", sm: "auto" }}
             text={emoji}
@@ -58,7 +58,7 @@ const InfoBanner: React.FC<IProps> = ({
           justify={shouldSpaceBetween ? "space-between" : "auto"}
         >
           {title && (
-            <Text fontSize="lg" fontWeight="700">
+            <Text fontSize="lg" fontWeight="bold">
               {title}
             </Text>
           )}

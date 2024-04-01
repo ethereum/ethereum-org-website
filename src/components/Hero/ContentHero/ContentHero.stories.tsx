@@ -1,10 +1,11 @@
-import * as React from "react"
+import { useTranslation } from "next-i18next"
 import { Meta, StoryObj } from "@storybook/react"
+
 import ContentHeroComponent, { ContentHeroProps } from "."
-import { IGatsbyImageData } from "gatsby-plugin-image"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
 type ContentHeroType = typeof ContentHeroComponent
+
+import contentHeroImg from "../../../../public/mainnet.png"
 
 const meta = {
   title: "Organisms / Layouts / Hero",
@@ -13,7 +14,7 @@ const meta = {
     layout: "none",
   },
   argTypes: {
-    heroImgSrc: {
+    heroImg: {
       table: {
         disable: true,
       },
@@ -23,29 +24,10 @@ const meta = {
 
 export default meta
 
-// Comes from the original compiled querying
-const mockGatsbyImgData: IGatsbyImageData = {
-  layout: "constrained",
-  images: {
-    fallback: {
-      src: "/mainnet.png",
-      sizes: "100vw",
-    },
-    sources: [
-      {
-        srcSet: "/mainnet.png",
-        type: "image/webp",
-        sizes: "100vw",
-      },
-    ],
-  },
-  width: 1,
-  height: 1,
-}
-
 export const ContentHero: StoryObj = {
   render: () => {
-    const { t } = useTranslation()
+    // eslint-disable-next-line react-hooks/rules-of-hooks
+    const { t } = useTranslation("page-learn")
 
     const buttons: ContentHeroProps["buttons"] = [
       {
@@ -69,7 +51,7 @@ export const ContentHero: StoryObj = {
     return (
       <ContentHeroComponent
         breadcrumbs={{ slug: "/en/run-a-node/" }}
-        heroImgSrc={mockGatsbyImgData}
+        heroImg={contentHeroImg}
         title={t("hero-header")}
         description={t("hero-subtitle")}
         buttons={buttons}

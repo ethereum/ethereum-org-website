@@ -8,6 +8,7 @@ import {
   VStack,
 } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+
 import Translation from "../Translation"
 
 type HeadingType = typeof HeadingComponent
@@ -67,13 +68,13 @@ const headingScale: Array<HeadingProps> = [
 
 export const Heading: Story = {
   args: {
-    children: <Translation id="page-index-title" />,
+    children: <Translation id="page-index:page-index-title" />,
   },
   render: (args) => (
     <VStack w="full">
       <Box>
-        Adjust the viewport to below "md" to see the font size and line height
-        change
+        Adjust the viewport to below &quot;md&quot; to see the font size and
+        line height change
       </Box>
       <Stack>
         {headingScale.map((obj, idx) => (
@@ -81,10 +82,10 @@ export const Heading: Story = {
             <HeadingComponent
               as="span"
               flex="1"
-              textAlign="right"
+              textAlign="end"
               size={obj.size}
             >
-              {obj.size || "xl"}
+              {(obj.size as string) || "xl"}
             </HeadingComponent>
             <HeadingComponent flex="3" {...obj}>
               {args.children}

@@ -1,5 +1,5 @@
-import { EthTokenIcon, DaiTokenIcon, UniTokenIcon } from "./icons"
 import { TokenBalance } from "./WalletHome/interfaces"
+import { DaiTokenIcon, EthTokenIcon, UniTokenIcon } from "./icons"
 
 export const SIMULATOR_ID = "sim"
 

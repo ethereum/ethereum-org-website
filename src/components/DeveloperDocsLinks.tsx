@@ -1,35 +1,37 @@
 import React from "react"
 import { ListItem, UnorderedList } from "@chakra-ui/react"
-import Translation from "./Translation"
-import InlineLink from "./Link"
-import docLinks from "../data/developer-docs-links.yaml"
 
-export interface IProps {
+import InlineLink from "@/components/Link"
+import Translation from "@/components/Translation"
+
+import docLinks from "@/data/developer-docs-links.yaml"
+
+export type DeveloperDocsLinksProps = {
   headerId: string
 }
 
-const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
+const DeveloperDocsLinks = ({ headerId }: DeveloperDocsLinksProps) => (
   <React.Fragment>
     {docLinks
       .filter(({ id }) => id.includes(headerId))
       .map(({ items, id }) => (
-        <UnorderedList ml={6} spacing={3} key={id}>
+        <UnorderedList ms={6} spacing={3} key={id}>
           {items &&
             items.map(({ id, to, path, description, items }) => (
               <ListItem key={id}>
                 {to || path ? (
                   <InlineLink to={to || path}>
-                    <Translation id={id} />
+                    <Translation id={`page-developers-docs:${id}`} />
                   </InlineLink>
                 ) : (
-                  <Translation id={id} />
+                  <Translation id={`page-developers-docs:${id}`} />
                 )}
                 <i>
                   {" – "}
-                  <Translation id={description} />
+                  <Translation id={`page-developers-docs:${description}`} />
                 </i>
                 <UnorderedList
-                  ml={6}
+                  ms={6}
                   mt={3}
                   spacing={3}
                   style={{ listStyleType: "circle" }}
@@ -38,7 +40,7 @@ const DeveloperDocsLinks: React.FC<IProps> = ({ headerId }) => (
                     items.map(({ id, to, path }) => (
                       <ListItem key={id}>
                         <InlineLink to={to || path}>
-                          <Translation id={id} />
+                          <Translation id={`page-developers-docs:${id}`} />
                         </InlineLink>
                       </ListItem>
                     ))}
