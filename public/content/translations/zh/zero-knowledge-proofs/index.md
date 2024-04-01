@@ -4,7 +4,7 @@ description: 面向初学者的非技术性零知识证明介绍
 lang: zh
 ---
 
-# 什么是零知识证明？ {#what-are-zk-proofs}
+## 什么是零知识证明？ {#what-are-zk-proofs}
 
 零知识证明是能够在不披露声明本身的情况下，验证声明有效性的一种方法。 “证明者”是试图证明声明的一方，而“验证者”则负责验证声明。
 
@@ -203,7 +203,7 @@ ZK-STARK 由于使用抗碰撞的哈希值进行加密，被认为不受量子�
 ## 延伸阅读 {#further-reading}
 
 - [计算机科学家分 5 级难度解释一个概念 | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Wired YouTube 频道_
-- [零知识证明用例概述](https://appliedzkp.org/#Projects) — _隐私和扩展探索团队_
+- [零知识证明用例概述](https://pse.dev/projects) — _Privacy and Scaling Explorations Team_
 - [SNARKs 与 STARKS 与 递归 SNARK](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Overviews_
 - [零知识证明：改善区块链上的隐私](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARK — 一个现实的零知识例子和深入研究](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_

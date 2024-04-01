@@ -19,15 +19,15 @@ EF 不是一家公司，甚至不是传统的非营利组织。 他们的作用�
 
 [生态系统支持计划](https://esp.ethereum.foundation/) 旨在向广大以太坊社区内的项目和实体提供财政和非财政支持来加速生态系统的成长。 生态系统支持计划是对原始以太坊赠款计划的扩展，该计划主要侧重于财务支持。
 
-在[esp.ethereum.foundation](https://esp.ethereum.foundation/)可以了解更多关于生态系统支持计划，曾经的赠款接收者和申请过程。 您也可以查看 [生态系统支持计划博客](https://blog.ethereum.org/category/ecosystem-support-program/) 或关注 [@EF_ESP](https://twitter.com/EF_ESP) 获取他们的最新消息和公告。
+在[esp.ethereum.foundation](https://esp.ethereum.foundation/)可以了解更多关于生态系统支持计划，曾经的赠款接收者和申请过程。 你也可以查看 [生态系统支持计划博客](https://blog.ethereum.org/category/ecosystem-support-program/) 或关注 [@EF_ESP](https://twitter.com/EF_ESP) 获取他们的最新消息和公告。
 
 ### 测试版 {#devcon}
 
 从 2014 年开始，以太坊基金会开始组织“测试版”——所有以太坊开发人员、研究人员、思想家和开发人员的年度会议。
 
-从会议开始以来，您每年都可以在 [archive.devcon.org](https://archive.devcon.org/) 访问会议的视频内容。
+从会议开始以来，你每年都可以在 [archive.devcon.org](https://archive.devcon.org/) 访问会议的视频内容。
 
-在[devcon.org](https://devcon.org/)可以学到更多，查看[Devcon Blog](https://devcon.org/en/blogs/)，或者关注[@efdevcon](https://twitter.com/EFDevcon) 获得最新通知。
+访问 [devcon.org](https://devcon.org/) 了解详情，查看 [Devcon 博客](https://devcon.org/en/blogs/)，或关注 [@efdevcon](https://twitter.com/EFDevcon) 了解最新公告。
 
 ### Fellowship 计划 {#fellowship-program}
 
