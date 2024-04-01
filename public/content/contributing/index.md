@@ -17,26 +17,26 @@ We are a welcoming community that will help you grow and educate in the Ethereum
 
 ## Ways to contribute {#ways-to-contribute}
 
-### Translations
+**Translations**
 - [Join the translation program](/contributing/translation-program/) – Help us bring ethereum.org to new languages
 
-### Development    
+**Development**
 - [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues) – Work we've identified that needs doing
 
-### Design
+**Design**
 - [Help design the website](/contributing/design/) Designers of all levels can contribute to improve the website
 
-### Content
+**Content**
 - [Create/edit content](/contributing/#how-to-update-content) – Suggest new pages or make tweaks to what's here already
 - [Add community resources](/contributing/content-resources/) – Add a helpful article or resource to a relevant page
 - [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
 - [Add a glossary term](/contributing/adding-glossary-terms/) – Help us continue to expand the Ethereum [glossary](/glossary/)
 - [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
 
-### Feature ideas
+**Feature ideas**
 - [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Let us know about any ideas you have for a new feature or design
 
-### Product listings      
+**Product listings**
 - [Add an exchange](/contributing/adding-exchanges/) – Add an exchange to our [exchange finder](/get-eth/#country-picker)
 - [Add a product](/contributing/adding-products/) – Add a dapp or wallet to a relevant page
 - [Add developer tools](/contributing/adding-developer-tools/) – Add a developer tool to a relevant page
