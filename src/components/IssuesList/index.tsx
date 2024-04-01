@@ -25,8 +25,8 @@ type IssuesListProps = SimpleGridProps & {
 function pickTagColorsByColorMode(color: string, colorMode: ColorMode) {
   if (colorMode === "dark") {
     return {
-      color: `#${color}`,
-      bgColor: `#${color}22`,
+      color: getContrastYIQ(`#${color}`),
+      bgColor: `#${color}90`,
     }
   } else {
     return {
