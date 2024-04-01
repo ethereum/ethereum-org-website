@@ -1789,6 +1789,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/shubhisaran"><img src="https://avatars.githubusercontent.com/u/113500663?v=4?s=100" width="100px;" alt="Shubhi Saran"/><br /><sub><b>Shubhi Saran</b></sub></a><br /><a href="#tool-shubhisaran" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/bh2smith"><img src="https://avatars.githubusercontent.com/u/11778116?v=4?s=100" width="100px;" alt="Benjamin Smith"/><br /><sub><b>Benjamin Smith</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Abh2smith" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://hector.im"><img src="https://avatars.githubusercontent.com/u/12469549?v=4?s=100" width="100px;" alt="Héctor Chong"/><br /><sub><b>Héctor Chong</b></sub></a><br /><a href="#content-Hector-Chong" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
