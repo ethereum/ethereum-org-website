@@ -18,7 +18,7 @@ incomplete: true
 - [イーサリアムにおけるガバナンス入門](/governance/)
 - [イーサリアムにおけるガバナンスの概説](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019年3月31日、ボリス・マン作成。_
 - [イーサリアムにおけるプロトコル開発のガバナンスならびにネットワークアップグレードの調整](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020年3月23日、ハドソン・ジェイムソン作成。_
-- [イーサリアム・コアデベロッパー・ミーティングの全プレイリスト](https://www.youtube.com/@EthereumProtocol) _（YouTubeのプレイリスト）_
+- [イーサリアム・コアデベロッパー・ミーティングの全プレイリスト](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _（YouTubeのプレイリスト）_
 
 ## 標準規格の種類 {#types-of-standards}
 
