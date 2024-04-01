@@ -14,9 +14,9 @@ To better understand this page, we recommend you first read up on [transactions]
 
 Proof-of-Authority is a modified version of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) that is a reputation-based consensus algorithm instead of stake-based mechanism in POS. The term has been introduced for the first time in 2017 by Gavin Wood, and this consensus algorithm has been mostly used by private chains, testnets and local development networks, as it overcomes the need for high quality resources as POW does, and overcomes the scalability issues with POS by having small subset of nodes storing the blockchian and producing blocks.
 
-Proof-of-authority requires trusting a set of authorized signers that are set in the [genesis block](/glossary/#genesis-block). In most current implementations, all authorized signers retain equal power and privileges when determining consensus of the chain. The idea behind reputation staking is every authorized validator is well-known to everyone through things like know-your customer (KYC), or by having a well-known organization being the only validator. This way if a validator does anything wrong, their identity is known.
+Proof-of-Authority requires trusting a set of authorized signers that are set in the [genesis block](/glossary/#genesis-block). In most current implementations, all authorized signers retain equal power and privileges when determining consensus of the chain. The idea behind reputation staking is every authorized validator is well-known to everyone through things like know-your customer (KYC), or by having a well-known organization being the only validator. This way if a validator does anything wrong, their identity is known.
 
-Proof-of-authority has different implementations, but the standard Ethereum implementation is **clique**, which implements [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique is developer-friendly and an easy-to-implement standard, supporting all client syncing types. Other implementations include [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) and [Aura](https://openethereum.github.io/Chain-specification).
+Proof-of-Authority has different implementations, but the standard Ethereum implementation is **clique**, which implements [EIP-225](https://eips.ethereum.org/EIPS/eip-225). Clique is developer-friendly and an easy-to-implement standard, supporting all client syncing types. Other implementations include [IBFT 2.0](https://besu.hyperledger.org/stable/private-networks/concepts/poa) and [Aura](https://openethereum.github.io/Chain-specification).
 
 ## How it works {#how-it-works}
 
@@ -55,7 +55,7 @@ In a Proof-of-Authority (PoA) network, if for example there are 10 authorized si
 ## Further Reading {#further-reading}
 
 - [EIP-225](https://eips.ethereum.org/EIPS/eip-225) _Clique standard_
-- [Proof of authority study](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md) _Cryptoeconomics_
+- [Proof of Authority study](https://github.com/cryptoeconomics-study/website/blob/master/docs/sync/2.4-lecture.md) _Cryptoeconomics_
 - [What is Proof of Authority](https://forum.openzeppelin.com/t/proof-of-authority/3577) _OpenZeppelin_
 - [Proof of Authority Explained](https://academy.binance.com/en/articles/proof-of-authority-explained) _binance_
 - [PoA in blockchain](https://medium.com/techskill-brew/proof-of-authority-or-poa-in-blockchain-part-11-blockchain-series-be15b3321cba)
@@ -65,7 +65,7 @@ In a Proof-of-Authority (PoA) network, if for example there are 10 authorized si
 
 ### More of a visual learner? {#visual-learner}
 
-Watch a visual explanation of proof-of-authority:
+Watch a visual explanation of Proof-of-Authority:
 
 <YouTube id="Mj10HSEM5_8" />
 
