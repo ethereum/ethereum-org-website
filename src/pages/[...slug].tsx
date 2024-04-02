@@ -20,7 +20,7 @@ import type {
   Layout,
   LayoutMappingType,
   NextPageWithLayout,
-  TocNodeType,
+  ToCItem,
 } from "@/lib/types"
 
 import mdComponents from "@/components/MdComponents"
@@ -31,7 +31,6 @@ import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
-import { remapTableOfContents } from "@/lib/utils/toc"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import {
@@ -50,9 +49,9 @@ import {
   useCasesComponents,
   UseCasesLayout,
 } from "@/layouts"
-import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
-import remarkInferToc from "@/lib/rehype/remarkInferToc"
+import remarkHeadingIds from "@/lib/remark/remarkHeadingIds"
+import remarkInferToc from "@/lib/remark/remarkInferToc"
 
 interface Params extends ParsedUrlQuery {
   slug: string[]
@@ -114,21 +113,21 @@ export const getStaticProps = (async (context) => {
   const mdPath = join("/content", ...params.slug)
   const mdDir = join("public", mdPath)
 
-  let tocNodeItems: TocNodeType[] = []
-  const tocCallback = (toc: TocNodeType): void => {
-    tocNodeItems = "items" in toc ? toc.items : []
+  let tocItems: ToCItem[] = []
+  const tocCallback = (toc: ToCItem): void => {
+    tocItems = "items" in toc ? toc.items! : []
   }
   const mdxSource = await serialize(markdown.content, {
     mdxOptions: {
       remarkPlugins: [
         // Required since MDX v2 to compile tables (see https://mdxjs.com/migrating/v2/#gfm)
         remarkGfm,
-        [remarkInferToc, { callback: tocCallback }],
+        // Must be before `remarkInferToc` to remove any trailing `{#id}` from the headings
+        [remarkHeadingIds],
+        // Min depth of 2 to skip h1s from ToC
+        [remarkInferToc, { callback: tocCallback, minDepth: 2 }],
       ],
-      rehypePlugins: [
-        [rehypeImg, { dir: mdDir, srcPath: mdPath, locale }],
-        [rehypeHeadingIds],
-      ],
+      rehypePlugins: [[rehypeImg, { dir: mdDir, srcPath: mdPath, locale }]],
     },
   })
 
@@ -140,7 +139,6 @@ export const getStaticProps = (async (context) => {
   }
 
   const timeToRead = readingTime(markdown.content)
-  const tocItems = remapTableOfContents(tocNodeItems, mdxSource.compiledSource)
   const slug = `/${params.slug.join("/")}/`
   const lastUpdatedDate = getLastModifiedDate(slug, locale!)
   const lastDeployDate = getLastDeployDate()

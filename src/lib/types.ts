@@ -238,6 +238,7 @@ export type ToCItem = {
 }
 
 export type IRemarkTocOptions = {
+  minDepth?: Options["maxDepth"]
   maxDepth?: Options["maxDepth"]
   callback: (toc: TocNodeType) => void
 }

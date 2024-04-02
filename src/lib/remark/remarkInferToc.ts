@@ -1,13 +1,21 @@
-import type { BlockContent, DefinitionContent, ListItem } from "mdast"
+import cloneDeep from "lodash/cloneDeep"
+import type {
+  BlockContent,
+  DefinitionContent,
+  Heading,
+  ListItem,
+  Parent,
+} from "mdast"
 import { toc } from "mdast-util-toc"
 import type { List, Nodes } from "mdast-util-toc/lib"
 import type { Plugin } from "unified"
-import { visit } from "unist-util-visit"
+import { SKIP, visit } from "unist-util-visit"
 
 import type { IRemarkTocOptions, ToCNodeEntry, TocNodeType } from "@/lib/types"
 
 const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
-  const { callback, maxDepth }: IRemarkTocOptions = {
+  const { callback, minDepth, maxDepth }: IRemarkTocOptions = {
+    minDepth: 1,
     maxDepth: 6,
     ...options,
   }
@@ -66,10 +74,27 @@ const remarkInferToc: Plugin<[IRemarkTocOptions]> = (options) => {
   }
 
   return (tree) => {
-    const generatedToC = toc(tree as Nodes, { maxDepth })
+    // remove all headings with depth less than minDepth before generating ToC
+    // bc `toc()` does not support minDepth
+    if (minDepth) {
+      // clone tree to avoid mutating the original
+      tree = cloneDeep(tree)
 
-    if (generatedToC.map) {
-      const processedToC = processToC(generatedToC.map, {})
+      visit(tree, `heading`, (node: Heading, index: number, parent: Parent) => {
+        if (node.depth < minDepth) {
+          // Remove headings with depth less than minDepth
+          // Idea taken from https://unifiedjs.com/learn/recipe/remove-node/
+          parent.children.splice(index, 1, ...node.children)
+          // Do not traverse `node`, continue at the node *now* at `index`.
+          return [SKIP, index]
+        }
+      })
+    }
+
+    const table = toc(tree as Nodes, { maxDepth })
+
+    if (table.map) {
+      const processedToC = processToC(table.map, {})
       callback(processedToC)
     }
   }

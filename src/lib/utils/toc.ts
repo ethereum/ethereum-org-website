@@ -1,6 +1,9 @@
+import GithubSlugger from "github-slugger"
 import { ListProps } from "@chakra-ui/react"
 
 import type { ToCItem, TocNodeType } from "@/lib/types"
+
+const slugger = new GithubSlugger()
 
 // RegEx patterns
 const customIdRegEx = /^.+(\s*\{#([^\}]+?)\}\s*)$/
@@ -12,8 +15,7 @@ const h1RegEx = /mdx\("h1"/g
  * @param s Any string
  * @returns Lowercased string with spaces replaced with hyphens (kebab-casing)
  */
-const slugify = (s: string): string =>
-  encodeURIComponent(String(s).trim().toLowerCase().replace(/\s+/g, "-"))
+export const slugify = (s: string): string => slugger.slug(s)
 
 /**
  * Parse a heading ID from a heading string. If the heading contains a custom ID,
