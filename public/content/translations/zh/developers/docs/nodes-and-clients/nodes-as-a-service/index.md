@@ -252,7 +252,7 @@ sidebarDepth: 2
   - 功能
     - 去中心化的远程过程调用协议和市场
     - 每天 100 万个请求的免费套餐（每个端点，最多 2 个）
-    - [公共端点](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [公共端点](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ 计划（如果你每天需要超过 100 万个请求）
     - 支持超过 15 条区块链
     - 6400 多个节点为应用程序服务并赚取 POKT
