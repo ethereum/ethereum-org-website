@@ -26,7 +26,7 @@ const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
             options={{ ns: "glossary-tooltip" }}
           />
         }
-        onOpen={() => {
+        onBeforeOpen={() => {
           trackCustomEvent({
             eventCategory: "Glossary Tooltip",
             eventAction: cleanPath(asPath),

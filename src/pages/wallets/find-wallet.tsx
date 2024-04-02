@@ -134,7 +134,7 @@ const FindWalletPage = () => {
       </BannerNotification>
 
       <Flex
-        direction={{ base: "column-reverse", sm: "row" }}
+        direction={{ base: "column", sm: "row" }}
         position="relative"
         w="full"
         p={12}

@@ -503,7 +503,6 @@ export interface WalletData {
   image: StaticImageData
   brand_color: string
   url: string
-  wallet_live_date: string
   active_development_team: boolean
   languages_supported: string[]
   twitter: string

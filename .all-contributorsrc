@@ -4809,7 +4809,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/20266893?v=4",
       "profile": "http://www.technobunnies.com",
       "contributions": [
-        "doc"
+        "doc",
+        "maintenance"
       ]
     },
     {
@@ -11614,6 +11615,52 @@
       "profile": "https://github.com/melpomene",
       "contributions": [
         "bug"
+      ]
+    },
+    {
+      "login": "AyumuKasuga",
+      "name": "Andrei Kostakov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/700142?v=4",
+      "profile": "https://t.me/AyumuKasuga",
+      "contributions": [
+        "content",
+        "doc"
+      ]
+    },
+    {
+      "login": "shubhisaran",
+      "name": "Shubhi Saran",
+      "avatar_url": "https://avatars.githubusercontent.com/u/113500663?v=4",
+      "profile": "https://github.com/shubhisaran",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "bh2smith",
+      "name": "Benjamin Smith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11778116?v=4",
+      "profile": "https://github.com/bh2smith",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Hector-Chong",
+      "name": "Héctor Chong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12469549?v=4",
+      "profile": "http://hector.im",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "nakmr",
+      "name": "nace.kimura",
+      "avatar_url": "https://avatars.githubusercontent.com/u/145886319?v=4",
+      "profile": "https://github.com/nakmr",
+      "contributions": [
+        "content"
       ]
     }
   ],

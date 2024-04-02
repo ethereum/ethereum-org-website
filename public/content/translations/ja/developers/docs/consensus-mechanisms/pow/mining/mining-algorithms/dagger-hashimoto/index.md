@@ -143,7 +143,7 @@ def quick_calc(params, seed, p):
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
     from pyethereum import chain_manager
-    if num <= 0:
+    if n <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:
         prevhash = chain_manager.index.get_block_by_number(n - 1)
@@ -186,7 +186,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
         shifted_A = hash_output_A >> i
         transaction = shifted_A % len(list_of_transactions)
         txid_mix ^= list_of_transactions[transaction] << i
-    return txid_max ^ (nonce << 192)
+    return txid_mix ^ (nonce << 192)
 ```
 
 残念ながら、ハシモトは RAM の消費が多いとみなされています。256 ビット演算に依存しており、計算にかなりのオーバーヘッドがあります。 しかし、ダガーハシモトでは、この問題に対処するため、最下位 64 ビットのみを使用してデータセットのインデックスを作成します。
