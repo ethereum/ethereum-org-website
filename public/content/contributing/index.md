@@ -10,11 +10,6 @@ Ethereum.org is an open-source run project with **12 000+** contributors that he
 
 We are a welcoming community that will help you grow and educate in the Ethereum ecosystem while also meaningfully contribute and get relevant practical experience!
 
-<InfoBanner shouldCenter emoji=":tada:">
-  Claim your POAP token! If you contributed to ethereum.org in 2024, there's a unique POAP waiting for you.{" "}
-  <a href="#poap">More on POAPs</a>
-</InfoBanner>
-
 ## Ways to contribute {#ways-to-contribute}
 
 **Translations**
@@ -57,7 +52,7 @@ These are few current tasks that you could help us solve and take responsibility
 
 ## How to work on ethereum.org {#how-to-update-content}
 
-Whether you're adding to the site, creating content or working on open issues, you'll need a [GitHub](https://github.com) account.
+If you wish to contribute in the [Translation Program](/contributing/translation-program/), we ask you to create an account on [Crowdin](https://crowdin.com/project/ethereum-org). For everything else – adding or editing content or visuals to the website, fixing bugs, working on open tasks – you will need a [GitHub](https://github.com/) account.
 
 All updates are made via the GitHub PR process. This means you create a local copy of the website, make your changes and request to merge your changes. If you've never done this before, follow the instructions at the bottom of our [GitHub repository](https://github.com/ethereum/ethereum-org-website).
 
@@ -89,24 +84,24 @@ Only use your original work or content that you have permission to use when cont
 
 We have low barrier to entry issues on our GitHub repository specifically designed for developers who are new to open-source labelled [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
-## Claim your contributor POAP {#poap}
+## Claim your Onchain Achievement Token (OAT) {#oat}
 
-If your contribution gets merged into ethereum.org, we'll mint you a unique contributors POAP. A Proof of Attendance Protocol (POAP) token is on-chain proof that you helped make the ecosystem a little more awesome.
+If your contribution gets merged into ethereum.org, you will have a change to claim a special badge on Galxe. An Onchain Achievement Token (OAT) is a proof that you helped make the ecosystem a little more awesome.
 
-[More on POAPs](https://www.poap.xyz/)
+[More on OATs](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
 
-### How to claim {#how-to-claim}
-
+### How to claim
 1. Join our [Discord server](https://discord.gg/ethereum-org).
 2. Paste a link to your contribution in the `#🥇 | proof-of-contribution` channel
-3. Wait for a member of our team to send you a link to your POAP.
-4. Claim your POAP!
+3. Wait for a member of our team to send you a link to your OAT.
+4. Claim your OAT!
 
-You should only use self-custody wallets to claim POAPs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your POAPs.
+You should only use self-custody wallets to claim OATs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your OATs.
 
 ## Claim your GitPOAP {#claim-gitpoap}
 
 GitPOAP will also automatically recognize your merged contribution and let you mint a separate unique contributors POAP on their platform itself!
+
 
 ### How to claim {#how-to-claim}
 
