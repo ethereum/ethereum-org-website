@@ -163,6 +163,7 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _A decentralized, open-source social identity network seeking to reform identity verification through the creation and analysis of a social graph._
 - **[walt.id](https://walt.id)** — _Open source decentralized identity and wallet infrastructure that enables developers and organizations to leverage self-sovereign identity and NFTs/SBTs._
+- **[Masca](https://masca.io/)** — _Open source decentralized identity wallet implemented as MetaMask Snap that enables users and developers to leverage DIDs and VCs._
 
 ## Further reading {#further-reading}
 
