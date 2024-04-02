@@ -65,7 +65,7 @@ Alice 和 Bob 要进行一场自行车比赛。 假设 Alice 和 Bob 打赌 $10 
 - [稳定币](/stablecoins/)
 - [创建和分发独特的数字资产](/nft/)
 - [自动、开放的货币交易所](/get-eth/#dex)
-- [去中心化游戏](/dapps/?category=gaming#explore)
+- [去中心化游戏](/dapps/?category=gaming)
 - [自动赔付的保单](https://etherisc.com/)
 - [允许创建定制、可互操作货币的标准](/developers/docs/standards/tokens/)
 

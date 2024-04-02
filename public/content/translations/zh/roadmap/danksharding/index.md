@@ -15,7 +15,7 @@ summaryPoints:
 
 ## 什么是 Proto-Danksharding？ {#what-is-protodanksharding}
 
-Proto-Danksharding，也称为 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)，是一种让[卷叠](/layer-2/#rollups)以更经济的方式向区块添加数据的方法。 这一名称来自提出这个想法的两位研究人员：Protolambda 和 Dankrad Feist。 目前，卷叠在降低用户交易的成本方面受到了限制，因为它们是将交易发布在 `CALLDATA` 中。 这是一种昂贵的方法，因为数据需要经所有以太坊节点处理，并且永远存在于链上，即使卷叠只在很短的时间需要这些数据。 Proto-Danksharding 引入了可以发送并附加到区块上的数据二进制大对象。 这些二进制大对象中的数据不可通过以太坊虚拟机访问，并且在固定的时间（1-3 个月）后会自动删除。 这意味着卷叠可以更经济的方式发送其数据，节省的费用会让最终用户的交易更加便宜。
+Proto-Danksharding，也称为 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)，是一种让[卷叠](/layer2/#rollups)以更经济的方式向区块添加数据的方法。 这一名称来自提出这个想法的两位研究人员：Protolambda 和 Dankrad Feist。 目前，卷叠在降低用户交易的成本方面受到了限制，因为它们是将交易发布在 `CALLDATA` 中。 这是一种昂贵的方法，因为数据需要经所有以太坊节点处理，并且永远存在于链上，即使卷叠只在很短的时间需要这些数据。 Proto-Danksharding 引入了可以发送并附加到区块上的数据二进制大对象。 这些二进制大对象中的数据不可通过以太坊虚拟机访问，并且在固定的时间（1-3 个月）后会自动删除。 这意味着卷叠可以更经济的方式发送其数据，节省的费用会让最终用户的交易更加便宜。
 
 <ExpandableCard title="为什么二进制大对象能让卷叠更经济？" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 
@@ -69,7 +69,7 @@ Danksharding 全面实现了从 Proto-Danksharding 开始的卷叠扩展。 Dank
 
 </ExpandableCard>
 
-<ExpandableCard title="为什么 Danksharding 要求进行数据可用性采样？" eventCateogry="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="为什么 Danksharding 要求进行数据可用性采样？" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 要求进行数据可用性采样是为了让验证者快速、高效地验证二进制大对象数据。 通过数据可用性采样，验证者可以非常确定二进制大对象数据是否可用和正确提交。 每个验证者都可以随机在几个数据点采样并创建证明，这意味着验证者不必核对整个二进制大对象。 如果有数据丢失，可以快速识别并拒绝二进制大对象。
 
@@ -77,7 +77,7 @@ Danksharding 全面实现了从 Proto-Danksharding 开始的卷叠扩展。 Dank
 
 ### 当前进展 {#current-progress}
 
-完全实现 Danksharding 还需要几年时间。 但是，Proto-Danksharding 的实现应该比较快。 在本文章撰写时（2023 年 2 月），KZG 仪式仍然在开放并且至今已经吸引了超过 50,000 名贡献者。 Proto-Danksharding 的[以太坊改进提案](https://eips.ethereum.org/EIPS/eip-4844)已经成熟，规范已商定，客户端已经创建了原型，目前正在测试中并准备投入生产。 下一步将在公共测试网上实施一些更改。 你可以使用[EIP 4844 准备情况检查表](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status)跟踪最新信息。
+完全实现 Danksharding 还需要几年时间。 但是，Proto-Danksharding 的实现应该比较快。 在本文章撰写时（2023 年 2 月），KZG 仪式仍然在开放并且至今已经吸引了超过 50,000 名贡献者。 Proto-Danksharding 的[以太坊改进提案](https://eips.ethereum.org/EIPS/eip-4844)已经成熟，规范已商定，客户端已经创建了原型，目前正在测试中并准备投入生产。 下一步将在公共测试网上实施一些更改。 你可以查阅 [EIP 4844 准备情况检查表](https://github.com/ethereum/pm/blob/master/Dencun/4844-readiness-checklist.md)了解最新动态。
 
 ### 延伸阅读 {#further-reading}
 
