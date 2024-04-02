@@ -252,7 +252,7 @@ Voici une liste des fournisseurs de nœuds Ethereum les plus populaires. N'hési
   - Fonctionnalités
     - Protocole RPC décentralisé et marketplace
     - 1 million de requêtes gratuites par jour (par point de terminaison, max 2)
-    - [Points de terminaison publics](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [Points de terminaison publics](https://docs.pokt.network/developers/public-endpoints)
     - Programme Pre-Stake+ (si vous avez besoin de plus d'1 million de requêtes par jour)
     - Plus de 15 blockchains prises en charge
     - Plus de 6 400 nœuds alimentent POKT pour répondre aux besoins des applications
