@@ -12,6 +12,7 @@ export const baseLocales = {
 const ns = [
   "common",
   "glossary",
+  "learn-quizzes",
   "page-about",
   "page-index",
   "page-learn",
@@ -48,6 +49,7 @@ const resources: Resource = ns.reduce((acc, n) => {
 
   return acc
 }, {})
+console.log("🚀 ~ constresources:Resource=ns.reduce ~ resources:", resources)
 
 i18n.use(initReactI18next).init({
   debug: true,

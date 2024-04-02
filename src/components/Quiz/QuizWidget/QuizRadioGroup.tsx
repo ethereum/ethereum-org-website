@@ -43,7 +43,12 @@ export const QuizRadioGroup = () => {
     onChange: handleSelection,
   })
 
-  const { answers, correctAnswerId, prompt } = questions[currentQuestionIndex]
+  const {
+    answers,
+    correctAnswerId,
+    prompt,
+    id: questionId,
+  } = questions[currentQuestionIndex]
 
   // Memoized values
   const explanation = useMemo<TranslationKey>(() => {
@@ -73,7 +78,7 @@ export const QuizRadioGroup = () => {
         {t(prompt)}
       </Text>
 
-      <Stack spacing="4">
+      <Stack spacing="4" data-testid="question-group" id={questionId}>
         {answers.map(({ id, label }, idx) => {
           const display =
             !answerStatus || id === selectedAnswer ? "inline-flex" : "none"
@@ -140,6 +145,8 @@ const CustomRadio = ({
     color: isAnswerVisible ? getAnswerColor() : undefined,
   }
 
+  const radioInputProps = getInputProps({ id: INPUT_ID })
+
   return (
     <>
       <chakra.label
@@ -149,6 +156,8 @@ const CustomRadio = ({
         w="full"
       >
         <HStack
+          data-testid="quiz-question-answer"
+          id={radioInputProps.value}
           {...getRadioProps()}
           // Override: `aria-hidden` is marked true in `getRadioProps`
           aria-hidden="false"
@@ -181,7 +190,7 @@ const CustomRadio = ({
           <span>{label}</span>
         </HStack>
       </chakra.label>
-      <input {...getInputProps({ id: INPUT_ID })} />
+      <input {...radioInputProps} />
     </>
   )
 }
