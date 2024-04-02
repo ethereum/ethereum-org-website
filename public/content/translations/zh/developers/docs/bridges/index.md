@@ -75,13 +75,9 @@ lang: zh
 - **交易对手风险 –** 一些链桥采用可信设计，这要求用户依靠一种假设，即验证者不会串通起来窃取用户的资金。 用户需要信任这些第三方参与者，这使他们面临一些风险，比如跑路、审查和其他恶意活动。
 - **未解决的问题 –** 考虑到链桥处于发展阶段初期，还有许多关于链桥在不同市场条件下如何表现的问题都尚未解决，如网络拥塞期和在发生网络级攻击或状态回滚等不可预见的事件时。 这种不确定性带来了一定的风险，且风险程度目前仍然未知。
 
-
-
 ## 去中心化应用程序如何使用链桥？ {#how-can-dapps-use-bridges}
 
 下面介绍一些实际应用，在这些应用中，开发者可以考虑链桥并让他们的去中心化应用程序跨链：
-
-
 
 ### 集成桥接 {#integrating-bridges}
 
@@ -106,13 +102,9 @@ lang: zh
 
 如果去中心化应用程序计划集成链桥或聚合器，那么根据集成的深度会有不同的选择。 例如，如果只是进行前端集成以改善用户上手体验，去中心化应用程序将集成小组件。 然而，如果整合是为了探索更深层次的跨链策略，如质押、流动性矿池等，去中心化应用程序就集成软件开发工具包或应用程序接口。
 
-
-
 ### 在多条链上部署去中心化应用程序 {#deploying-a-dapp-on-multiple-chains}
 
 要在多条链上部署去中心化应用程序，开发者可以使用 [Alchemy](https://www.alchemy.com/)、[安全帽](https://hardhat.org/)、[Truffle](https://trufflesuite.com/)、[Moralis](https://moralis.io/) 等开发平台。 这些平台通常提供可组合的插件，能够支持去中心化应用程序跨链。 例如，开发者可以使用[安全帽部署插件](https://github.com/wighawag/hardhat-deploy)提供的确定性部署代理。
-
-
 
 #### 例子：
 
@@ -120,20 +112,14 @@ lang: zh
 - [构建跨链非同质化代币市场](https://youtu.be/WZWCzsB1xUE)
 - [Moralis：构建跨链非同质化代币去中心化应用程序](https://www.youtube.com/watch?v=ehv70kE1QYo)
 
-
-
 ### 监控跨链合约活动 {#monitoring-contract-activity-across-chains}
 
 要监控跨链合约活动，开发者可以使用子图和 Tenderly 等开发者平台实时观察智能合约。 这类平台上还有一些工具，提供更强大的跨链活动数据监控功能，例如，检查有没有[合约触发的事件](https://docs.soliditylang.org/en/v0.8.14/contracts.html?highlight=events#events)等。
-
-
 
 #### 工具
 
 - [图表](https://thegraph.com/en/)
 - [Tenderly](https://tenderly.co/)
-
-
 
 ## 延伸阅读 {#further-reading}
 
