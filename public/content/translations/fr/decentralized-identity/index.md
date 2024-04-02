@@ -37,7 +37,7 @@ Ces exemples traditionnels d’identifiants sont publiés, détenus et contrôl�
 
 Une attestation est une déclaration faite par une entité sur une autre entité. Si vous vivez aux États-Unis, le permis de conduire qui vous a été délivré par le Department of Motor Vehicles (ministère des véhicules à moteur) (une entité) atteste que vous (une autre entité) êtes légalement autorisé à conduire une voiture.
 
-Les attestations sont différentes des identifiants. Une attestation _contient_des identifiants pour référencer une identité particulière et émet une revendication à propos d'un attribut lié à cette identité. Ainsi, votre permis de conduire a des identifiants (nom, date de naissance, adresse) mais est aussi l'attestation de votre droit légal de conduire.
+Les attestations sont différentes des identifiants. Une attestation _contient_ des identifiants pour référencer une identité particulière et émet une revendication à propos d'un attribut lié à cette identité. Ainsi, votre permis de conduire a des identifiants (nom, date de naissance, adresse) mais est aussi l'attestation de votre droit légal de conduire.
 
 ### Que sont les identifiants décentralisés ? {#what-are-decentralized-identifiers}
 
