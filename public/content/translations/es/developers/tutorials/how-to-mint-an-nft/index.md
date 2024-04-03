@@ -3,9 +3,8 @@ title: Como acuñar un NFT (parte 2/3 de la serie de tutoriales de NFT)
 description: Este tutorial describe como acuñar un NFT en la cadena de bloques de Ethereum usando nuestro contrato inteligente y Web3.
 author: "Sumi Mudgil"
 tags:
-  - "NFT"
   - "ERC-721"
-  - "alchemy"
+  - "Alchemy"
   - "solidity"
   - "contratos inteligentes"
 skill: beginner
@@ -15,15 +14,15 @@ published: 2021-04-22
 
 [Beeple](https://www.nytimes.com/2021/03/11/arts/design/nft-auction-christies-beeple.html): 69 millones de $ [3Lau](https://www.forbes.com/sites/abrambrown/2021/03/03/3lau-nft-nonfungible-tokens-justin-blau/?sh=5f72ef64643b): 11 millones de $ [Grimes](https://www.theguardian.com/music/2021/mar/02/grimes-sells-digital-art-collection-non-fungible-tokens): 6 millones de $
 
-Todos ellos acuñaron sus NFT usando la poderosa API de Alchemy. En este tutorial, le enseñaremos a hacer lo mismo en < 10 minutos.
+Todos ellos acuñaron sus NFT usando la potente API de Alchemy. En este tutorial, le enseñaremos a hacer lo mismo en < 10 minutos.
 
-«Acuñar un NFT» es el acto de publicar una instancia única de su token ERC-721 en la cadena de bloques. Usando nuestro contrato inteligente de la [parte 1 de esta serie de tutoriales NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/), hagamos flexibles nuestras habilidades Web3 y acuñemos un NFT. Al finalizar este tutorial, será capaz de localizar tantos NFT como se le antojen (¡o su billetera alcance!).
+«Acuñar un NFT» es el acto de publicar una instancia única de su token ERC-721 en la cadena de bloques. Usando nuestro contrato inteligente de la [parte 1 de esta serie de tutoriales sobre NFT](/developers/tutorials/how-to-write-and-deploy-an-nft/), hagamos flexibles nuestras habilidades Web3 y acuñemos un NFT. Al finalizar este tutorial, será capaz de localizar tantos NFT como se le antojen (¡o su billetera alcance!).
 
 ¡Comencemos!
 
 ## Paso 1: Instalar Web3 {#install-web3}
 
-Si siguió el primer tutorial sobre cómo crear su contrato inteligente NFT, entonces ya está familiarizado con el uso de Ethers.js. Web3 es similar a Ethers, ya que es una biblioteca usada para crear solicitudes en la cadena de bloques de Ethereum de manera simple. En este tutorial, usaremos [Alchemy web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), que es una biblioteca de Web3 mejorada que ofrece reintentos automáticos y soporte robusto de WebSocket.
+Si siguió el primer tutorial sobre cómo crear su contrato inteligente NFT, entonces ya está familiarizado con el uso de Ethers.js. Web3 es similar a Ethers, ya que es una biblioteca usada para crear solicitudes en la cadena de bloques de Ethereum de manera simple. En este tutorial usaremos [Alchemy Web3](https://docs.alchemyapi.io/alchemy/documentation/alchemy-web3), que es una biblioteca Web3 mejorada que ofrece reintentos automáticos y un soporte robusto para WebSocket.
 
 En el directorio de inicio de su proyecto ejecute:
 
@@ -31,9 +30,9 @@ En el directorio de inicio de su proyecto ejecute:
 npm install @alch/alchemy-web3
 ```
 
-## Paso 2: Crear un archivo `mint-nft.js` {#create-mintnftjs}
+## Paso 2: Crear un archvio `mint-nft.js` {#create-mintnftjs}
 
-Dentro de su directorio de scripts, cree un archivo `mint-nft.js` file y añada las siguientes líneas de código:
+Dentro de su directorio de scripts, cree el archivo `mint-nft.js` y añada las siguientes líneas de código:
 
 ```js
 require("dotenv").config()
@@ -42,7 +41,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 ```
 
-## Paso 3: Obtener su contrato ABI {#contract-abi}
+## Paso 3: Obtener la ABI de su contrato {#contract-abi}
 
 Nuestro contrato ABI (las siglas en inglés de Aplicación de Interfaz Binaria) es la interfaz para interactuar con nuestro contrato inteligente. Puede profundizar [aquí](https://docs.alchemyapi.io/alchemy/guides/eth_getlogs#what-are-ab-is) acerca de los contratos ABI. Hardhat genera automáticamente una ABI para nosotros y la guarda en el archivo `MyNFT.json`. Para poder usarlo, necesitaremos analizar el contenido añadiendo las siguientes líneas de código a nuestro archivo `mint-nft.js`:
 
@@ -56,7 +55,7 @@ Si quiere ver la ABI puede hacerlo en su propia consola:
 console.log(JSON.stringify(contract.abi))
 ```
 
-Para ejecutar `mint-nft.js` y ver su ABI impresa en la consola, abra la ventana del terminal y ejecute:
+Para ejecutar `mint-nft.js` y ver su ABI impresa en la consola, vaya a la ventana del terminal y ejecute:
 
 ```js
 node scripts/mint-nft.js
@@ -64,7 +63,7 @@ node scripts/mint-nft.js
 
 ## Paso 4: Configurar los metadatos para su NFT usando IPFS {#config-meta}
 
-Si recuerda, como mencionamos en la parte 1 de nuestro tutorial, nuestra función de contrato inteligente `mintNFT` aplica un parámetro tokenURI que debe resolverse en un documento JSON que describe los metadatos del NFT, que es realmente lo que le da vida al NFT, permitiéndole tener propiedades configurables, como nombre, descripción e imagen, entre otros atributos.
+Si recuerda la primera parte de nuestro tutorial, nuestra función `mintNFT` del contrato inteligente toma un parámetro de tokenURI que debe resolverse en un documento JSON que describe los metadatos de NFT —que es lo que realmente hace que el NFT cobre vida— permitiéndole tener propiedades configurables, como su nombre, descripción, imagen y otros atributos.
 
 > _Interplanetary File System (IPFS) es un protocolo de red descentralizado y de red entre pares para guardar y compartir datos en un sistema de archivos distribuido._
 
@@ -74,13 +73,13 @@ Una vez que haya creado una cuenta:
 
 - Navegue hasta la página de «Files» (Archivos) y haga clic en botón azul «Upload» (Subir) en la parte superior izquierda de la página.
 
-- Subir una imagen a Pinata: esta será la imagen del activo para su NFT. Dele a su activo el nombre que desee.
+- Suba una imagen a Pinata: este será el recurso de imagen para su NFT. Dele a su activo el nombre que desee.
 
-- Una vez subido, verá la info dentro de la tabla en la página ''Files''. También verá una columna CID. Puede copiar el CID haciendo clic en el botón copiar junto a él. Puede ver el activo subido en `https://gateway.pinata.cloud/ipfs/<CID>`. Para ejemplo, puede ver la imagen que usamos en IPFS [aquí](https://gateway.pinata.cloud/ipfs/QmarPqdEuzh5RsWpyH2hZ3qSXBCzC5RyK3ZHnFkAsk7u2f).
+- Una vez subida, verá la info dentro de la tabla en la página «Files» (Archivos). También verá una columna CID. Puede copiar el CID haciendo clic en el botón copiar junto a él. Puede ver el activo subido en `https://gateway.pinata.cloud/ipfs/<CID>`. Por ejemplo, puede ver la imagen que usamos en IPFS [aquí](https://gateway.pinata.cloud/ipfs/QmZdd5KYdCFApWn7eTZJ1qgJu18urJrP9Yh1TZcZrZxxB5).
 
 He aquí un resumen de los pasos descritos anteriormente para aquellos que tienen memoria visual:
 
-![Como subir su imagen a Pinata](https://gateway.pinata.cloud/ipfs/Qmcdt5VezYzAJDBc4qN5JbANy5paFg9iKDjq8YksRvZhtL)
+![Como subir su imagen a Pinata](./instructionsPinata.gif)
 
 Ahora, vamos a subir otro documento más a Pinata. Pero antes de hacer eso, necesitamos ¡crearlo!
 
@@ -112,16 +111,16 @@ Una vez que haya terminado de editar el archivo JSON, guárdelo y súbalo a Pina
 
 ## Paso 5: Crear una instancia de su contrato {#instance-contract}
 
-Seguidamente, para interactuar con nuestro contrato, necesitamos crear una instancia de él en nuestro código. Para hacerlo, necesitaremos nuestra dirección de contrato, que podemos obtener de la implementación o [Etherscan](https://ropsten.etherscan.io/) buscando la dirección que usó para implementar el contrato.
+Seguidamente, para interactuar con nuestro contrato, necesitamos crear una instancia de él en nuestro código. Para hacerlo, necesitaremos nuestra dirección de contrato, que podemos obtener de la implementación o [Etherscan](https://sepolia.etherscan.io/) buscando la dirección que usó para implementar el contrato.
 
-![Ver la dirección de su contrato en Etherscan](./viewContractEtherscan.png)
+![Ver la dirección de su contrato en Etherscan](./view-contract-etherscan.png)
 
-En el ejemplo anterior, la dirección de nuestro contrato es 0x81c587EB0fE773404c42c1d2666b5f557C470eED.
+En el ejemplo anterior, nuestra dirección de contrato es 0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778.
 
-A continuación, utilizaremos el [método de contrato Web3](https://docs.web3js.org/api/web3-eth-contract/class/Contract) para crear nuestro contrato usando ABI y la dirección. En su archivo `mint-nft.js`, añada lo siguiente:
+A continuación, utilizaremos el [método de contrato web3](https://docs.web3js.org/api/web3-eth-contract/class/Contract) para crear nuestro contrato usando la ABI y la dirección. En el archivo `mint-nft.js`, añada lo siguiente:
 
 ```js
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 ```
@@ -130,10 +129,10 @@ const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 Ahora, para crear y enviar transacciones en la cadena de Ethereum, usaremos la dirección de su cuenta pública de Ethereum para obtener la cuenta nonce (que explicaremos a continuación).
 
-Añada su clave pública al archivo `.env`, si ha hecho la parte 1 del tutorial, nuestro archivo `.env` debería verse así:
+Añada su clave pública a su archivo `.env`: si completó la parte 1 del tutorial, nuestro archivo `.env` ahora debería ser algo parecido a esto:
 
 ```js
-API_URL = "https://eth-ropsten.alchemyapi.io/v2/your-api-key"
+API_URL = "https://eth-sepolia.g.alchemy.com/v2/your-api-key"
 PRIVATE_KEY = "your-private-account-address"
 PUBLIC_KEY = "your-public-account-address"
 ```
@@ -152,13 +151,13 @@ Primero, vamos a definir una función llamada `mintNFT(tokenData)` y crear nuest
 
 - `'to': contractAddress`: El contrato con el que queremos interactuar y enviar la transacción
 
-- `'nonce': nonce`: La cuenta nonce con el número de transacciones enviadas desde nuestra dirección
+- `'nonce': nonce`: la cuenta nonce con el número de transacciones enviadas desde nuestra dirección
 
 - `'gas': estimatedGas`: El gas estimado que necesitamos para completar la transacción
 
 - `'data': nftContract.methods.mintNFT(PUBLIC_KEY, md).encodeABI()`: El cálculo que deseamos realizar en esta transacción, que en este caso es acuñar un NFT
 
-Su <code>mint-nft.js</code> debería verse así:
+Su archivo `mint-nft.js` debería ser algo parecido a esto:
 
 ```js
    require('dotenv').config();
@@ -170,7 +169,7 @@ Su <code>mint-nft.js</code> debería verse así:
    const web3 = createAlchemyWeb3(API_URL);
 
    const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json");
-   const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED";
+   const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778";
    const nftContract = new web3.eth.Contract(contract.abi, contractAddress);
 
    async function mintNFT(tokenURI) {
@@ -203,7 +202,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 async function mintNFT(tokenURI) {
@@ -245,9 +244,9 @@ async function mintNFT(tokenURI) {
 }
 ```
 
-## Paso 9: Ejecutar `mintNFT` y después ejecutar el nodo `mint-nft.js` {#call-mintnft-fn}
+## Paso 9: Activar el `mintNFT` y ejecutar el nodo `mint-nft.js` {#call-mintnft-fn}
 
-¿Recuerda el `metadata.json` que cargó en Pinata? Obtenga su código hash de Pinata y pase el siguiente parámetro a la función `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
+¿Recuerda el `metadata.json` que ha subido a Pinata? Obtenga su hashcode de Pinata y escriba lo siguiente como parámetro de la función `mintNFT` `https://gateway.pinata.cloud/ipfs/<metadata-hash-code>`
 
 Así es cómo se puede obtener el código hash:
 
@@ -269,7 +268,7 @@ const { createAlchemyWeb3 } = require("@alch/alchemy-web3")
 const web3 = createAlchemyWeb3(API_URL)
 
 const contract = require("../artifacts/contracts/MyNFT.sol/MyNFT.json")
-const contractAddress = "0x81c587EB0fE773404c42c1d2666b5f557C470eED"
+const contractAddress = "0x5a738a5c5fe46a1fd5ee7dd7e38f722e2aef7778"
 const nftContract = new web3.eth.Contract(contract.abi, contractAddress)
 
 async function mintNFT(tokenURI) {
@@ -315,16 +314,16 @@ mintNFT("ipfs://QmYueiuRNmL4MiA2GwtVMm6ZagknXnSpQnB3z2gWbz36hP")
 
 Ahora, ejecute `node scripts/mint-nft.js` para implementar su NFT. Después de un par de segundos, debería aparecer una respuesta como esta en su terminal:
 
-    The hash of your transaction is: 0x10e5062309de0cd0be7edc92e8dbab191aa2791111c44274483fa766039e0e00
+    El hash de tu transacción es: 0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
+    
+    ¡Revisa el Mempool de Alchemy para ver el estado de tu transacción!
 
-    Check Alchemy's Mempool to view the status of your transaction!
+A continuación, visite su [zona de espera de Alchemy](https://dashboard.alchemyapi.io/mempool) para ver el estado de su transacción (ya sea que esté pendiente, haya sido minada o desechada por la red). Si su transacción se cuelga, también es útil comprobar [Sepolia Etherscan](https://sepolia.etherscan.io/) y buscar el hash de su transacción.
 
-A continuación, visite su [zona de espera de Alchemy](https://dashboard.alchemyapi.io/mempool) para ver el estado de su transacción (ya sea que esté pendiente, haya sido minada o desechada por la red). Si su transacción ha sido descartada, también es de ayuda comprobar[Ropsten Etherscan](https://ropsten.etherscan.io/) y buscar el hash de su transacción.
-
-![Ver el hash de transacción de su NFT en Etherscan](./viewNFTEtherscan.png)_Ver el hash de transacción de su NFT en Etherscan_
+![Ver el hash de transacción de su NFT en Etherscan](./view-nft-etherscan.png)_Ver el hash de transacción de su NFT en Etherscan_
 
 ¡Y eso es todo! Ahora ha implementado y acuñado un NFT en la cadena de bloques de Ethereum <Emoji text=":money_mouth_face:" size={1} />
 
-¡Usando el `mint-nft.js` puede acuñar tantos NFT como desee (¡y su cartera le permita!) Solo asegúrese de pasar un nuevo tokenURI que describa los metadatos del NFT (de lo contrario, terminará haciendo un montón de idénticos con ID diferentes).
+Con el `mint-nft.js` puede acuñar todos los NFT que quiera (o que su cartera le permita). Solo asegúrese de pasar un nuevo tokenURI que describa los metadatos del NFT (de lo contrario, terminará haciendo un montón de idénticos con ID diferentes).
 
 ¡Seguramente le gustaría mostrar su NFT en su cartera, por tanto no se pierda la [parte 3: Cómo ver su NFT en su cartera](/developers/tutorials/how-to-view-nft-in-metamask/)!

@@ -54,7 +54,7 @@ Un contrato inteligente es un código que reside en la blockchain de Ethereum y 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 - [Ejemplo de DApp](https://punkwallet.io/)
 
-**Crear una aplicación Ethereum*: crear aplicaciones Ethereum con un comando. ***
+**Crear una aplicación Ethereum_: crear aplicaciones Ethereum con un comando. _**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 
@@ -63,7 +63,7 @@ Un contrato inteligente es un código que reside en la blockchain de Ethereum y 
 - [oneclickdapp.com](https://oneclickdapp.com)
 - [GitHub](https://github.com/oneclickdapp/oneclickdapp-v1)
 
-**Etherflow*: herramienta FOSS para que los desarrolladores de Ethereum prueben sus nodos, así como para componer & y depurar las llamadas RPC desde el navegador.*|**
+**Etherflow_: herramienta FOSS para que los desarrolladores de Ethereum prueben sus nodos, así como para componer & y depurar las llamadas RPC desde el navegador._|**
 
 - [etherflow.quiknode.io](https://etherflow.quiknode.io/)
 - [GitHub](https://github.com/abunsen/etherflow)
