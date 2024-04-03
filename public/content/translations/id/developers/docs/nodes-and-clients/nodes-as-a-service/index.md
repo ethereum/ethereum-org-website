@@ -151,7 +151,7 @@ Berikut ini adalah daftar beberapa penyedia node Ethereum paling populer, jangan
   - Fitur
     - Protokol dan Pasar RPC terdesentralisasi
     - 1 Juta Permintaan Per Hari untuk Layanan Gratis (per titik akhir, maks. 2)
-    - [Endpoint Publik](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [Endpoint Publik](https://docs.pokt.network/developers/public-endpoints)
     - Pra-Penaruhan+ Program (jika Anda memerlukan lebih dari 1 Juta permintaan per hari)
     - Didukung 15+ Blockchain
     - 6400+ Node yang menghasilkan POKT untuk aplikasi layanan

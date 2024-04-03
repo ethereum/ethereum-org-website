@@ -433,7 +433,7 @@ Consider creating a service to run your clients automatically on startup. For ex
 
 You need to keep your client software up-to-date with the latest security patches, features, and [EIPs](/eips/). Especially before [hard forks](/history/), make sure you are running the correct client versions.
 
-> Before important network updates, EF publishes a post on its [blog](https://blog.ethereum.org). You can [subscribe to these announcements](https://groups.google.com/a/ethereum.org/g/announcements) to get a notification to your mail when your node needs an update.
+> Before important network updates, EF publishes a post on its [blog](https://blog.ethereum.org). You can [subscribe to these announcements](https://blog.ethereum.org/category/protocol#subscribe) to get a notification to your mail when your node needs an update.
 
 Updating clients is very simple. Each client has specific instructions in their documentation, but the process is generally just to download the latest version and restart the client with the new executable. The client should pick up where it left off, but with the updates applied.
 

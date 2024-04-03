@@ -6,7 +6,7 @@ lang: zh
 
 智能合约是一种在以太坊某个地址上运行的程序。 它们是由数据和函数组成的，可以在收到交易时执行。 以下概述一个智能合约的组成。
 
-## 前置要求 {#prerequisites}
+## 前提条件 {#prerequisites}
 
 确保你已经先阅读了[智能合约](/developers/docs/smart-contracts/)。 本文档假设你已经熟悉某种编程语言，例如 JavaScript 或 Python。
 
@@ -100,7 +100,7 @@ function update_name(string value) public {
 - 函数声明为 `public`，意味着任何人都能访问它
 - 函数没有被声明为 `view`，因此它可以修改合约状态
 
-### View 函数 {#view-functions}
+### 视图函数 {#view-functions}
 
 这些函数保证不会修改合约数据的状态。 常见的示例是 "getter" 函数 - 例如，它可以用于接收用户的余额。
 
@@ -204,7 +204,7 @@ contract ExampleDapp {
 
 事件可以让你通过前端或其它订阅应用与你的智能合约通信。 当交易被挖矿执行时，智能合约可以触发事件并且将日志写入区块链，然后前端可以进行处理。
 
-## 附带说明的例子 {#annotated-examples}
+## 附带注解的示例 {#annotated-examples}
 
 这是一些用 Solidity 写的例子。 如果希望运行这些代码，你可以在 [Remix](http://remix.ethereum.org) 中调试。
 
