@@ -5,7 +5,7 @@ import type { CommonHeroProps } from "@/lib/types"
 import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
 
-export type HubHeroProps = Omit<CommonHeroProps, "breadcrumbs">
+export type HubHeroProps = Omit<CommonHeroProps, "breadcrumbs" | "blurDataURL">
 
 const HubHero = ({
   heroImg,

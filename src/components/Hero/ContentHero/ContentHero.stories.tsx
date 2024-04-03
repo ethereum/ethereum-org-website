@@ -49,7 +49,9 @@ export const ContentHero: StoryObj = {
     return (
       <ContentHeroComponent
         breadcrumbs={{ slug: "/en/run-a-node/" }}
-        heroImg="/mainnet.png"
+        heroImg="/upgrades/merge.png"
+        // Can not properly hardcode this URL. So it's left blank
+        blurDataURL=""
         title={t("hero-header")}
         description={t("hero-subtitle")}
         buttons={buttons}

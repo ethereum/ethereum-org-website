@@ -1,4 +1,3 @@
-import type { StaticImageData } from "next/image"
 import { useTranslation } from "next-i18next"
 import { Box, Heading, Stack, Text, VStack } from "@chakra-ui/react"
 

@@ -392,6 +392,10 @@ export type CommonHeroProps<
    */
   heroImg: HeroImg
   /**
+   * File path for the image to show on prerender.
+   */
+  blurDataURL: string
+  /**
    * Object of props to render the `Breadcrumbs` component.
    */
   breadcrumbs: BreadcrumbsProps
