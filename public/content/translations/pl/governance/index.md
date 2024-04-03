@@ -2,7 +2,6 @@
 title: Zarządzanie Ethereum
 description: Wprowadzenie do sposobu podejmowania decyzji w sprawie Ethereum.
 lang: pl
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Wprowadzenie do zarządzania Ethereum {#introduction}

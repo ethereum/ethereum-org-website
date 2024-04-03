@@ -6,7 +6,6 @@
   "page-upgrades-shards-date": "~2023",
   "page-upgrades-pbs": "Pas imminent - attendez 2024/25",
   "page-upgrades-post-merge-banner-tutorial-ood": "Ce tutoriel est obsolète depuis la fusion et peut ne pas fonctionner. Veuillez éditer un PR sur GitHub si vous souhaitez contribuer.",
-  "page-upgrades-post-merge-banner-governance-ood": "Certains contenus sur cette page sont périmés depuis la fusion. Veuillez éditer un PR sur GitHub si vous souhaitez contribuer.",
   "page-upgrades-upgrades-guide": "Guide des mises à niveau d'Ethereum",
   "page-upgrades-upgrades-docking": "La Fusion",
   "page-upgrades-shard-title": "Fragmentation",

@@ -2,7 +2,6 @@
 title: イーサリアムのガバナンス
 description: イーサリアムに関する決定がどのように行われるかについてのご紹介
 lang: ja
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # イーサリアムのガバナンスの概要 {#introduction}

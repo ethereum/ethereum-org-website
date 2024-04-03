@@ -2,7 +2,6 @@
 title: Ethereum-Governance
 description: Eine Einführung in die Entscheidungsfindung bei Ethereum
 lang: de
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Governance bei Ethereum – eine Einführung {#introduction}
