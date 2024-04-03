@@ -38,7 +38,11 @@ const ContentHero = (props: ContentHeroProps) => {
             <Heading as="h1" size="2xl">
               {title}
             </Heading>
-            <Text fontSize="lg">{description}</Text>
+            {typeof description === "string" ? (
+              <Text fontSize="lg">{description}</Text>
+            ) : (
+              description
+            )}
             {buttons && (
               <HStack spacing="4">
                 {buttons.map((button, idx) => {

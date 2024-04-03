@@ -417,7 +417,7 @@ export type CommonHeroProps<
   /**
    * Preface text about the content in the given page
    */
-  description: string
+  description: ReactNode
 }
 
 // Learning Tools

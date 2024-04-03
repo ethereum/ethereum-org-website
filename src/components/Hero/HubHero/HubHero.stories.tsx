@@ -62,7 +62,7 @@ export const HubHero: StoryObj<typeof meta> = {
       <HubHeroComponent
         title={t(title)}
         header={t(header)}
-        description={t(description)}
+        description={t(description as string)}
         buttons={buttons}
         {...props}
       />
