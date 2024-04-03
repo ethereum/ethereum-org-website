@@ -5,13 +5,17 @@ lang: zh
 sidebarDepth: 2
 ---
 
-默克尔帕特里夏字典树提供了一种经过加密认证的数据结构，可用于存储所有 `(key, value)` 对。
+以太坊的状态（全体帐户、余额与智能合约）被编码进一个特殊版本的数据结构中，在计算机科学中，这种数据结构通常称为默克尔树。 这种结构可用于许多加密学应用，因为它在树中保存的所有单独数据之间创建了可验证的关系，产生一个可用于证明数据的单独**根**值。
 
-默克尔帕特里夏字典树是完全确定性的，这意味着有相同 `(key, value)` 对的字典树肯定是完全相同的，就连最后一个字节也相同。 这代表它们有着相同的根哈希，让插入、查找和删除操作具有难以企及的 `O(log(n))` 效率。 此外，相较于更复杂的基于比较的其他字典树（如红黑树），默克尔帕特里夏树更易于理解和编码。
+以太坊的数据结构是一个“修改版默克尔帕特里夏字典树”，之所以这样命名，不仅是因为它引入了 PATRICIA 算法（检索用字母数字编码的信息的实用算法）的一些特性，也由于它旨在实现含有以太坊状态的值的高效数据**检索**。
+
+默克尔帕特里夏字典树是确定性的并可通过密码学验证：生成状态根的唯一方式是从每个单独的状态进行计算，且两个相同的状态可以通过比较根哈希和父节点哈希（_默克尔证明_）而轻松证明相同。 相反，也无法用同一根哈希创建两个不同的状态，任何用不同值修改状态的尝试都会产生不同的状态根哈希。 理论上，这种结构在插入、查找和删除操作上的效率达到了超乎寻常的 `O(log(n))`。
+
+在不久的将来，以太坊计划迁移到[沃克尔树](https://ethereum.org/en/roadmap/verkle-trees)结构，这将为未来的协议改进开创更多新的可能性。
 
 ## 前提条件 {#prerequisites}
 
-为了更好地理解本文，具备以下基础知识将有所帮助：[哈希](https://en.wikipedia.org/wiki/Hash_function)、[默克尔树](https://en.wikipedia.org/wiki/Merkle_tree)、[字典树](https://en.wikipedia.org/wiki/Trie)和[序列化](https://en.wikipedia.org/wiki/Serialization)。
+为了更好地理解本文，具备以下基础知识将有所帮助：[哈希](https://en.wikipedia.org/wiki/Hash_function)、[默克尔树](https://en.wikipedia.org/wiki/Merkle_tree)、[字典树](https://en.wikipedia.org/wiki/Trie)和[序列化](https://en.wikipedia.org/wiki/Serialization)。 本文从描述基本的[基数树](https://en.wikipedia.org/wiki/Radix_tree)开始，并逐步介绍使以太坊数据结构更为优化的必要修改措施。
 
 ## 基数树 {#basic-radix-tries}
 

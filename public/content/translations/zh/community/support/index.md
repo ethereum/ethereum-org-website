@@ -30,7 +30,7 @@ lang: zh
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加入 [ethereum.org Discord](https://discord.gg/rZz26QWfCg)，我们会尝试帮助你。_
+_这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加入 [ethereum.org Discord](https://discord.gg/ethereum-org)，我们会尽力提供帮助。_
 
 正在寻找以太坊钱包？ [深入了解我们完整的以太坊钱包列表](/wallets/find-wallet/)。
 
@@ -53,7 +53,7 @@ _这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加�
 
 以下是一些比较常见的例子：
 
-- [Solidity](https://gitter.im/ethereum/solidity/)
+- [Solidity](https://gitter.im/ethereum/solidity)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [安全帽](https://discord.gg/xtrMGhmbfZ)
@@ -93,13 +93,13 @@ _这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加�
 
 以太坊上发送的交易是不可逆的。 如果你将以太币发送到错误的钱包，很遗憾，没有办法追回这些资金。 以太坊不属于任何中心化组织、实体或个人，这意味着没有人可以逆转交易。 因此，在发送交易之前，一定要仔细检查你的交易，这一点至关重要。
 
-### 如何获取以太坊的赠品？ {#giveaway-scam}
+### 如何领取以太坊的赠品？ {#giveaway-scam}
 
 以太坊赠品是用来窃取你以太币的骗局。 不要被看起来好得令人难以置信的优惠所诱惑 — 如果你将以太币发送到赠品地址，你不但收不到赠品，还将无法追回你的资金。
 
 [关于预防诈骗的更多信息](/security/#common-scams)
 
-### 我的交易被卡住了 {#stuck-transaction}
+### 我的交易卡住了 {#stuck-transaction}
 
 如果你提交的交易费低于网络需求，以太坊上的交易有时会被卡住。 许多钱包提供了一个选项，即以更高的交易费重新提交同一项交易，使该交易得以处理。 或者，你可以发送交易到你自己的地址，并使用与待定交易相同的随机数，以取消待定交易。
 
@@ -107,10 +107,10 @@ _这并不是完整的列表。 需要帮助寻找特定钱包的支持？ 加�
 
 [如何取消待定以太坊交易](https://info.etherscan.com/how-to-cancel-ethereum-pending-transactions/)
 
-### 我如何开采以太坊？ {#mining-ethereum}
+### 我如何在以太坊挖矿？ {#mining-ethereum}
 
 以太坊不再支持挖矿。 在以太坊从工作量证明过渡到权益证明后，挖矿就终止了。 现在，以太坊使用验证者而不是矿工。 验证者质押以太币并通过保护以太坊安全获得质押奖励。
 
-#### 我如何成为质押人/验证者？ {#become-validator}
+### 我如何成为质押人/验证者？ {#become-validator}
 
 要成为验证者，你必须在以太坊存款合约中质押 32 个以太币并搭建一个验证节点。 更多信息见[质押界面](/staking)和[质押启动版](https://launchpad.ethereum.org/)。
