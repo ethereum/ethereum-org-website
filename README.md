@@ -1791,6 +1791,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/bh2smith"><img src="https://avatars.githubusercontent.com/u/11778116?v=4?s=100" width="100px;" alt="Benjamin Smith"/><br /><sub><b>Benjamin Smith</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Abh2smith" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://hector.im"><img src="https://avatars.githubusercontent.com/u/12469549?v=4?s=100" width="100px;" alt="Héctor Chong"/><br /><sub><b>Héctor Chong</b></sub></a><br /><a href="#content-Hector-Chong" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/nakmr"><img src="https://avatars.githubusercontent.com/u/145886319?v=4?s=100" width="100px;" alt="nace.kimura"/><br /><sub><b>nace.kimura</b></sub></a><br /><a href="#content-nakmr" title="Content">🖋</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/WuRuiLei2023"><img src="https://avatars.githubusercontent.com/u/149141323?v=4?s=100" width="100px;" alt="WuRuiLei2023"/><br /><sub><b>WuRuiLei2023</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AWuRuiLei2023" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
