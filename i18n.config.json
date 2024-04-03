@@ -419,7 +419,7 @@
     "code": "ta",
     "crowdinCode": "ta",
     "name": "Tamil",
-    "localName": "తెలుగు",
+    "localName": "தமிழ்",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
@@ -427,7 +427,7 @@
     "code": "te",
     "crowdinCode": "te",
     "name": "Telugu",
-    "localName": "தமிழ்",
+    "localName": "తెలుగు",
     "langDir": "ltr",
     "dateFormat": "MM/DD/YYYY"
   },
