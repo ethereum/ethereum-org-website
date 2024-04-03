@@ -173,7 +173,7 @@ contract Oracle {
       uint currentQuorum = 0;
 
       //iterate through oracle list and check if enough oracles(minimum quorum)
-      //have voted the same answer has the current one
+      //have voted the same answer as the current one
       for(uint i = 0; i < totalOracleCount; i++){
         bytes memory a = bytes(currRequest.answers[i]);
         bytes memory b = bytes(_valueRetrieved);
@@ -236,7 +236,7 @@ contract Oracle {
 
 #### インセンティブと両立しにくい {#poor-incentive-compatibility}
 
-集中型のオラクルでは、データ提供者に対して正確／未改変の情報を送信するようにインセンティブを提要する仕組みが存在しないか、設計が不十分な場合が少なくありません。 正確性に対してオラクルに支払っても、公正であることが保証されるわけではありません。 この問題は、スマートコントラクトによって管理される金額が増加するにつれて大きくなります。
+集中型のオラクルでは、データ提供者に対して正確／未改変の情報を送信するようにインセンティブを提要する仕組みが存在しないか、設計が不十分な場合が少なくありません。 正確であるがゆえにオラクルに支払っても、必ずしも公正であるとは限りません。 この問題は、スマートコントラクトによって管理される金額が増加するにつれて大きくなります。
 
 ### 分散型のオラクル {#decentralized-oracles}
 
