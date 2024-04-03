@@ -5,8 +5,6 @@ import ContentHeroComponent, { ContentHeroProps } from "."
 
 type ContentHeroType = typeof ContentHeroComponent
 
-import contentHeroImg from "../../../../public/mainnet.png"
-
 const meta = {
   title: "Organisms / Layouts / Hero",
   component: ContentHeroComponent,
@@ -51,7 +49,7 @@ export const ContentHero: StoryObj = {
     return (
       <ContentHeroComponent
         breadcrumbs={{ slug: "/en/run-a-node/" }}
-        heroImg={contentHeroImg}
+        heroImg="/mainnet.png"
         title={t("hero-header")}
         description={t("hero-subtitle")}
         buttons={buttons}

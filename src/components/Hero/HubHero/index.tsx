@@ -5,13 +5,15 @@ import type { CommonHeroProps } from "@/lib/types"
 import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
 
+export type HubHeroProps = Omit<CommonHeroProps, "breadcrumbs">
+
 const HubHero = ({
   heroImg,
   title,
   header,
   description,
   buttons,
-}: CommonHeroProps) => {
+}: HubHeroProps) => {
   if (buttons && buttons.length > 2) {
     throw new Error(
       "Can not have more than two call-to-action buttons in this hero component."

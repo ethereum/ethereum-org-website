@@ -1,15 +1,13 @@
 import { Box, Heading, HStack, SimpleGrid, Stack, Text } from "@chakra-ui/react"
 
-import { CommonHeroProps } from "@/lib/types"
+import type { CommonHeroProps } from "@/lib/types"
 
-import Breadcrumbs, { BreadcrumbsProps } from "@/components/Breadcrumbs"
+import Breadcrumbs from "@/components/Breadcrumbs"
 import { Image } from "@/components/Image"
 
 import { CallToAction } from "../CallToAction"
 
-export interface ContentHeroProps extends Omit<CommonHeroProps, "header"> {
-  breadcrumbs: BreadcrumbsProps
-}
+export type ContentHeroProps = Omit<CommonHeroProps<string>, "header">
 
 const ContentHero = (props: ContentHeroProps) => {
   const { breadcrumbs, heroImg, buttons, title, description } = props

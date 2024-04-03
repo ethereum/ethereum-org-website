@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import HubHeroComponent from "./"
+import HubHeroComponent, { type HubHeroProps } from "./"
 
 type HubHeroType = typeof HubHeroComponent
 
@@ -24,8 +24,6 @@ const meta = {
 
 export default meta
 
-import { CommonHeroProps } from "@/lib/types"
-
 import learnHubHeroImg from "../../../../public/heroes/learn-hub-hero.png"
 
 export const HubHero: StoryObj<typeof meta> = {
@@ -40,7 +38,7 @@ export const HubHero: StoryObj<typeof meta> = {
     // eslint-disable-next-line react-hooks/rules-of-hooks
     const { t } = useTranslation()
 
-    const buttons: CommonHeroProps["buttons"] = [
+    const buttons: HubHeroProps["buttons"] = [
       {
         content: t("page-learn:hero-button-lets-get-started"),
         toId: "what-is-crypto-ethereum",
