@@ -79,7 +79,7 @@ lang: zh
 
 ## 设计体系 {#design-systems}
 
-- [乐观设计](https://www.figma.com/@oplabs) (Figma)
+- [乐观设计](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.org 设计体系](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity，来自 Polygon 的设计体系](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
 - [Kleros 设计体系](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)

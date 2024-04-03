@@ -79,7 +79,7 @@ Vegyen részt a szakmai közösség által irányított szervezetekben, vagy csa
 
 ## Tervezési rendszerek {#design-systems}
 
-- [Optimism Design](https://www.figma.com/@oplabs) (Figma)
+- [Optimism Design](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.org tervezési rendszer](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity – a Polygon tervezési rendszere](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
 - [Kleros tervezési rendszer](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)

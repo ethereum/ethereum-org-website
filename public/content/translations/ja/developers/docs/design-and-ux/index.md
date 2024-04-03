@@ -77,7 +77,7 @@ lang: ja
 
 ## デザインシステム {#design-systems}
 
-- [オプティミズムデザイン](https://www.figma.com/@oplabs) (Figma)
+- [オプティミズムデザイン](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.orgデザインシステム](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity: ポリゴンによるWeb3デザインシステム](https://finity.polygon.technology/) (Figma)
 - [ENSデザインシステム](https://thorin.ens.domains/)
