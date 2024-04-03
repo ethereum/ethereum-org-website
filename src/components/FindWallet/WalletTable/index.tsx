@@ -309,7 +309,15 @@ const WalletTable = ({
             sliceSize
           )
 
-          const showMoreInfo = (wallet) => {
+          const showMoreInfo = (wallet, event) => {
+            // Prevent expanding the wallet more info section when clicking on the "Visit website" button
+            let classList = event?.target?.classList
+            if (
+              Object.values(classList)?.includes("chakra-button") ||
+              Object.values(classList)?.includes("css-1bbj57d")
+            ) {
+              return
+            }
             updateMoreInfo(wallet.key)
             // Log "more info" event only on expanding
             wallet.moreInfo &&
@@ -328,9 +336,11 @@ const WalletTable = ({
               <Wallet
                 // Make wallets more info section open on 'Enter'
                 onKeyUp={(e) => {
-                  if (e.key === "Enter") showMoreInfo(wallet)
+                  if (e.key === "Enter") showMoreInfo(wallet, e)
                 }}
-                onClick={() => showMoreInfo(wallet)}
+                onClick={(e) => {
+                  showMoreInfo(wallet, e)
+                }}
               >
                 <Td lineHeight="revert">
                   <Flex
