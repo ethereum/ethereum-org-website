@@ -21,6 +21,7 @@ import BeaconChainActions from "@/components/BeaconChainActions"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import FeedbackCard from "@/components/FeedbackCard"
+import { ContentHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import { BaseLink } from "@/components/Link"
@@ -121,7 +122,7 @@ const LastUpdated = (props: ChildOnlyProp) => (
     pt={4}
     mb={0}
     borderTop="1px"
-    borderColor="border"
+    borderColor="body.dark"
     {...props}
   />
 )
@@ -183,38 +184,30 @@ export const UpgradeLayout = ({
 
   return (
     <Container dir={contentNotTranslated ? "ltr" : "unset"}>
-      <HeroContainer>
-        <TitleCard>
-          <Breadcrumbs slug={slug} startDepth={1} mt={2} mb="8" />
-          <Title>{frontmatter.title}</Title>
-          <Box>
-            <List listStyleType="disc">
-              {summaryPoints.map((point, idx) => (
-                <SummaryPoint key={idx}>{point}</SummaryPoint>
-              ))}
-            </List>
-          </Box>
-          {lastUpdatedDate && (
-            <LastUpdated>
-              {t("common:page-last-updated")}:{" "}
-              {getLocaleTimestamp(locale as Lang, lastUpdatedDate)}
-            </LastUpdated>
-          )}
-        </TitleCard>
-        {frontmatter.image && (
-          <Image
-            src={frontmatter.image}
-            blurDataURL={frontmatter.blurDataURL}
-            alt={frontmatter.alt}
-            width={816}
-            height={525}
-            style={{ objectFit: "cover" }}
-            priority
-            flex={{ base: "1 1 100%", md: "none" }}
-            alignSelf={{ base: "center", md: "flex-end" }}
-          />
-        )}
-      </HeroContainer>
+      <ContentHero
+        breadcrumbs={{ slug, startDepth: 1 }}
+        title={frontmatter.title}
+        description={
+          <>
+            <Box>
+              <List listStyleType="disc">
+                {summaryPoints.map((point, idx) => (
+                  <SummaryPoint key={idx}>{point}</SummaryPoint>
+                ))}
+              </List>
+            </Box>
+            {lastUpdatedDate && (
+              <LastUpdated>
+                {t("common:page-last-updated")}:{" "}
+                {getLocaleTimestamp(locale as Lang, lastUpdatedDate)}
+              </LastUpdated>
+            )}
+          </>
+        }
+        heroImg={frontmatter.image}
+        blurDataURL={frontmatter.blurDataURL}
+      />
+
       <MoreContent to={"#" + MAIN_CONTENT_ID}>
         <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
       </MoreContent>
