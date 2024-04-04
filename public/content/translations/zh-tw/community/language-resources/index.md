@@ -16,7 +16,9 @@ lang: zh-tw
 
 ## Ethereum.org 資源 {#ethereum-org}
 
-Ethereum.org 已翻譯為 40 多種語言，你可以在我們的[語言頁面](/languages)上找到這些語言。
+Ethereum.org 已翻譯為 40 多種語言，你可以在我們的語言頁面上找到這些語言。
+
+![Language selector menu](./language-selector-menu.png)
 
 如果你會使用兩種語言，而且想幫助我們宣傳，讓更多人知道，你也可以參與 [ethereum.org 翻譯計劃](/contributing/translation-program/#translation-program)，幫助我們翻譯該網站。
 

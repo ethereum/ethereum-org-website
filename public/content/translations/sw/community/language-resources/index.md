@@ -16,7 +16,9 @@ Je, unajua chanzo cha elimu ya Ethereum cha lugha yako? [Fungua suala](https://g
 
 ## Vyanzo vya Ethereum.org {#ethereum-org}
 
-Ethereum.org imetafsiriwa kwenda kwenye lugha zaidi ya 40 unazoweza kupata kwenye [ukurasa wetu wa lugha](/languages).
+Ethereum.org imetafsiriwa kwenda kwenye lugha zaidi ya 40 unazoweza kupata kwenye ukurasa wetu wa lugha.
+
+![Language selector menu](./language-selector-menu.png)
 
 Kama unazungumza lugha zaidi ya moja na ungependa kutusaidia kufikia watu wengi zaidi, unaweza kujihusisha nasi kwenye[Programu ya Ufasiri wa ethereum.org](/contributing/translation-program/#translation-program) na kutusaidia kutafsiri tovuti yetu.
 

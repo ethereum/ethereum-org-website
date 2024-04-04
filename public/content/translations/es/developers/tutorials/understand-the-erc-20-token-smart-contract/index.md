@@ -1,12 +1,11 @@
 ---
 title: Entender el contrato inteligente de token ERC
-description: Una introducción para ejecutar su primer contrato inteligente en la red de prueba de Ethereum
+description: Una intoducción a publicar tu primer contrato inteligente en una red de prueba de Ethereum
 author: "jdourlens"
 tags:
-  - "smart contracts"
+  - "contratos inteligentes"
   - "tókenes"
-  - "solidity"
-  - "Empezar"
+  - "Solidity"
   - "erc-20"
 skill: beginner
 lang: es

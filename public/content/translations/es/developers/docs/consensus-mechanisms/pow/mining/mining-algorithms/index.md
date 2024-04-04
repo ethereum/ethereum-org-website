@@ -5,7 +5,7 @@ lang: es
 ---
 
 <InfoBanner emoji=":wave:">
-La prueba de trabajo ya no es parte de la base del mecanismo de consenso de Ethereum, esto quiere decir que el minado ha sido apagado. En cambio, Ethereum está asegurado por validadores que participan en ETH. Puede comenzar su participación con ETH hoy. Descubrá más cosas sobre <a href='/roadmap/merge/'>La fusión</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>la prueba de participación (PoS)</a> y <a href='/staking/'>la participación</a>. Esta página es solo de interés histórico.
+La prueba de trabajo ya no es parte de la base del mecanismo de consenso de Ethereum, esto quiere decir que el minado ha sido apagado. En cambio, Ethereum está asegurado por validadores que participan en ETH. Puede comenzar su participación con ETH hoy. Descubrá más cosas sobre <a href='/roadmap/merge/'>La Fusión</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>la prueba de participación (PoS)</a> y <a href='/staking/'>la participación</a>. Esta página es solo de interés histórico.
 </InfoBanner>
 
 La minería de Ethereum utilizo un algoritmo conocido como Ethash. La idea fundamental del algoritmo es que un minero intenta encontrar un contador nonce usando el cálculo computacional en bruto, de esta forma el hash resultante es menor que el umbral determinado por la dificultad calculada. Este nivel de dificultad se puede ajustar de forma dinámica, permitiendo que la producción de bloques ocurra en un intervalo regular.
@@ -24,13 +24,13 @@ Dagger Hashimoto fue un algoritmo de investigación precursor para la minería d
 
 Dagger-Hashimoto utilizó versiones modificadas de los algoritmos Dagger y Hashimoto. La diferencia entre Dagger Hashimoto y Hashimoto es que, en lugar de usar la cadena de bloques como fuente de datos, Dagger Hashimoto utiliza un conjunto de datos generados a medida, que se actualiza en función de los datos de bloque cada N bloques. El conjunto de datos se genera utilizando el algoritmo Dagger, lo que permite calcular de manera eficiente un subconjunto específico de cada nonce para el algoritmo de verificación del cliente ligero. La diferencia entre Dagger Hashimoto y Dagger es que, a diferencia del Dagger original, el conjunto de datos utilizado para consultar el bloque es semipermanente y solo se actualiza a intervalos ocasionales (por ejemplo, una vez por semana). Esto significa que la parte del esfuerzo de generar el conjunto de datos es cercana a cero, por lo que los argumentos de Sergio Lerner con respecto a las aceleraciones de memoria compartida se vuelven insignificantes.
 
-Descubra más sobre [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
+Descubra más sobre [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto).
 
 ## Ethash {#ethash}
 
 Ethash era el algoritmo de minería que en realidad se usaba en la verdadera red principal de Ethereum bajo la estructura de prueba de trabajo, que ahora ha quedado obsoleta. Ethash fue esencialmente el nuevo nombre dado a una versión específica de Dagger-Hashimoto después de que el algoritmo se actualizara considerablemente, aunque aun heredando los principios fundamentales de su predecesor. La red principal de Ethereum solo usó Ethash - Dagger Hashimoto era una versión de R&D del algoritmo de minería que fue reemplazado antes de que comenzara la minería en la red principal de Ethereum.
 
-Descubra más sobre [Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash).
+Descubra más sobre [Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
 
 ## Más información {#further-reading}
 

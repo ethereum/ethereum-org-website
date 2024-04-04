@@ -51,10 +51,10 @@ Our design system makes designing ethereum.org fun and easy. If you are an exper
 
 1. Select an issue to work on from [design system board](https://github.com/ethereum/ethereum-org-website/labels/design%20system) on GitHub or create a new one.
 2. Request the selected issue to be assigned to you.
-3. Start designing the requested component in figma.
+3. Start designing the requested component in Figma.
 4. Share it with the design team on GitHub once you need review or guidance.
 5. The design team will review.
-6. The Design team will incorporate the changes in the main file and publish the file to the community.
+6. The design team will incorporate the changes in the main file and publish the file to the community.
 
 ### <Emoji text=":six:" size={1} /> &nbsp;Write design-related content on the website {#write-design-articles}
 
@@ -64,7 +64,7 @@ The Ethereum developer community is strong, but the design community is falling 
 2. Go to our GitHub repository and [raise an issue](https://github.com/ethereum/ethereum-org-website/issues/new) proposing a topic (do not write the content yet).
 3. Wait for the design team to approve.
 4. Once approved, write the content.
-5. Submit it in the corresponding GH issue.
+5. Submit it in the corresponding GitHub issue.
 
 ### <Emoji text=":seven:" size={1} /> &nbsp;Draw new illustrations {#prepare-illustrations}
 

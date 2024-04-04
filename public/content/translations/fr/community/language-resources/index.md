@@ -16,7 +16,9 @@ Vous connaissez une ressource éducative dans votre langue ? [Ouvrez un ticket](
 
 ## Ressources d'Ethereum.org {#ethereum-org}
 
-Ethereum.org est traduit d'emblée dans plus de 40 langues, que vous pouvez trouver sur notre [page des langues](/languages).
+Ethereum.org est traduit d'emblée dans plus de 40 langues, que vous pouvez trouver sur notre page des langues.
+
+![Language selector menu](./language-selector-menu.png)
 
 Si vous êtes bilingue et que vous souhaitez nous aider à toucher davantage de personnes, vous pouvez aussi contribuer au [Programme de traduction d'Ethereum.org](/contributing/translation-program/#translation-program) afin de nous aider à traduire le site.
 

@@ -6,7 +6,7 @@ lang: ja
 
 ## フレームワーク入門 {#introduction-to-frameworks}
 
-本格的な dapp を構築するには、 さまざまな技術が必要になります。 ソフトウェアフレームワークには、必要な機能の多くが含まれています。 あるいは、好きなツールで作業できるように簡単なプラグインシステムが備わっています。
+本格的なdappを構築するには、 さまざまな技術が必要になります。 ソフトウェアフレームワークには、必要な機能の多くが含まれています。 あるいは、好きなツールで作業できるように簡単なプラグインシステムが備わっています。
 
 フレームワークには、すぐに使用できる機能が数多く用意されています。例えば、以下のようなものです。
 
@@ -14,7 +14,7 @@ lang: ja
 - スマートコントラクトをコンパイルしてテストするためのユーティリティ
 - 同じプロジェクト/リポジトリ内でユーザー側のアプリケーションを構築するために使用できる、クライアント開発アドオン
 - イーサリアムネットワーク(ローカルで実行されているインスタンスまたはイーサリアムのパブリックネットワーク)に接続し、コントラクトをデプロイするための設定
-- 分散型アプリケーションの配布 - IPFS などのストレージオプションとの統合
+- 分散型アプリケーションの配布 - IPFSなどのストレージオプションとの統合
 
 ## 前提知識 {#prerequisites}
 
@@ -22,11 +22,11 @@ lang: ja
 
 ## 利用可能なフレームワーク {#available-frameworks}
 
-**Foundry -** **_Foundry は、イーサリアムアプリケーション開発のための、迅速でポータブルなモジュラー型ツールキットです。_**
+**Foundry -** **_Foundryは、イーサリアムアプリケーション開発のための、迅速でポータブルなモジュラー型ツールキットです。_**
 
-- [Foundry をインストールする](https://book.getfoundry.sh/)
-- [Foundry ブック](https://book.getfoundry.sh/)
-- [テレグラムの Foundry コミュニティチャット](https://t.me/foundry_support)
+- [Foundryをインストールする](https://book.getfoundry.sh/)
+- [Foundryブック](https://book.getfoundry.sh/)
+- [テレグラムのFoundryコミュニティチャット](https://t.me/foundry_support)
 - [Awesome Foundry](https://github.com/crisgarner/awesome-foundry)
 
 **Hardhat -** **_プロフェッショナルのためのイーサリアム開発環境_**
@@ -39,13 +39,13 @@ lang: ja
 - [ドキュメント](https://docs.apeworx.io/ape/stable/)
 - [GitHub](https://github.com/ApeWorX/ape)
 
-**Web3j -** **_JVM 上でブロックチェーンアプリケーションを開発するためのプラットフォーム_**
+**Web3j -** **_JVM上でブロックチェーンアプリケーションを開発するためのプラットフォーム_**
 
 - [ホームページ](https://www.web3labs.com/web3j-sdk)
 - [ドキュメント](https://docs.web3j.io)
 - [GitHub](https://github.com/web3j/web3j)
 
-**Create Eth App -** **_単一のコマンドで、イーサリアムで稼動するアプリケーションを作成可能。 豊富な選択肢を提供する UI フレームワークと DeFi テンプレートが付属。_**
+**Create Eth App -** **_単一のコマンドで、イーサリアムで稼動するアプリケーションを作成可能。 豊富な選択肢を提供するUIフレームワークとDeFiテンプレートが付属。_**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [テンプレート](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
@@ -54,7 +54,7 @@ lang: ja
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
-**Tenderly -** **_ブロックチェーンデベロッパーがスマートコントラクトを構築、テスト、デバッグ、監視、操作し、dApp UX を改善できる Web3 開発プラットフォーム。_**
+**Tenderly -** **_ブロックチェーンデベロッパーがスマートコントラクトを構築、テスト、デバッグ、監視、操作し、dApp UXを改善できるWeb3開発プラットフォーム。_**
 
 - [ウェブサイト](https://tenderly.co/)
 - [ドキュメント](https://docs.tenderly.co/ethereum-development-practices)
@@ -76,7 +76,7 @@ lang: ja
 - [GitHub](https://github.com/node-real)
 - [Discord](https://discord.gg/V5k5gsuE)
 
-**サードウェブ SDK -** **_強力な SDK と CLI を使ってスマートコントラクトとやり取りする Web3 アプリケーションを構築。_**
+**サードウェブSDK -** **_強力なSDKとCLIを使ってスマートコントラクトとやり取りするWeb3アプリケーションを構築。_**
 
 - [ドキュメント](https://portal.thirdweb.com/sdk/)
 - [GitHub](https://github.com/thirdweb-dev/)
@@ -87,24 +87,24 @@ lang: ja
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Brownie -** **_Python ベースの開発環境とテストフレームワーク。_**
+**Brownie -** **_Pythonベースの開発環境とテストフレームワーク。_**
 
 - [ドキュメント](https://eth-brownie.readthedocs.io/en/latest/)
 - [GitHub](https://github.com/eth-brownie/brownie)
-- **Brownie のメンテナンス終了**
+- **Brownieのメンテナンス終了**
 
 **Truffle -** **_開発環境、テストフレームワーク、ビルドパイプライン、その他のツール。_**
 
 - [trufflesuite.com](https://www.trufflesuite.com/)
 - [GitHub](https://github.com/trufflesuite/truffle)
-- **Truffle 開発の終了** - [詳細について](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
+- **Truffle開発の終了** - [詳細について](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
 
 **OpenZeppelin SDK -** **_究極のスマートコントラクトツールキット。スマートコントラクトの開発、コンパイル、アップグレード、デプロイ、インタラクションを支援するツール群。_**
 
 - [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
 - [コミュニティフォーラム](https://forum.openzeppelin.com/c/support/17)
-- **OpenZeppelin SDK 開発の終了**
+- **OpenZeppelin SDK開発の終了**
 
 ## 参考文献 {#further-reading}
 
