@@ -56,7 +56,7 @@ const StablecoinsTable = ({
       mb={8}
       minW="720px"
     >
-      <Thead bg="ednBackground" color="text200">
+      <Thead bg="background.highlight" color="text200">
         <Tr borderBottom={`1px solid ${textColor}`} mb="1px">
           {columns.map((column, idx) => (
             <Th
@@ -94,12 +94,12 @@ const StablecoinsTable = ({
             _hover={{
               textDecoration: "none",
               borderBottom: `1px solid ${textColor}`,
-              bg: "primary200"
+              bg: "background.highlight"
             }}
             _focus={{
               borderBottom: `1px solid ${textColor}`,
-              bg: "primary200",
-              color: "black300",
+              bg: "background.base",
+              color: "body.base",
             }}
           >
             <Td>
