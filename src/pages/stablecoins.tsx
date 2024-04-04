@@ -614,7 +614,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           <InfoBanner emoji="⚠️" isWarning>
             {t("page-stablecoins-algorithmic-disclaimer")}
           </InfoBanner>
-          <Text>
+          <Text py={4}>
             {t("page-stablecoins-top-coins-intro")}{" "}
             {t("page-stablecoins-top-coins-intro-code")}
           </Text>
