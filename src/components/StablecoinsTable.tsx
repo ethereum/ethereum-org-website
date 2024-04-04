@@ -62,7 +62,6 @@ const StablecoinsTable = ({
               py={5}
               fontWeight="bold" 
               fontSize="md"
-              fontWeight="normal"
               letterSpacing="normal"
             >
               {column}
