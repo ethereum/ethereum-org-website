@@ -31,6 +31,7 @@ import { dateToString } from "@/lib/utils/date"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getLastModifiedDate } from "@/lib/utils/gh"
 import { getContent, getContentBySlug } from "@/lib/utils/md"
+import { runOnlyOnce } from "@/lib/utils/runOnlyOnce"
 import { remapTableOfContents } from "@/lib/utils/toc"
 import {
   filterRealLocales,
@@ -53,6 +54,7 @@ import {
   useCasesComponents,
   UseCasesLayout,
 } from "@/layouts"
+import { fetchGFIs } from "@/lib/api/fetchGFIs"
 import rehypeHeadingIds from "@/lib/rehype/rehypeHeadingIds"
 import rehypeImg from "@/lib/rehype/rehypeImg"
 import remarkInferToc from "@/lib/rehype/remarkInferToc"
@@ -104,7 +106,13 @@ export const getStaticPaths = (({ locales }) => {
 type Props = Omit<Parameters<LayoutMappingType[Layout]>[0], "children"> &
   SSRConfig & {
     mdxSource: MDXRemoteSerializeResult
+    gfissues: Awaited<ReturnType<typeof fetchGFIs>>
   }
+
+// Fetch external API data once to avoid hitting rate limit
+const gfIssuesDataFetch = runOnlyOnce(async () => {
+  return await fetchGFIs()
+})
 
 export const getStaticProps = (async (context) => {
   const params = context.params!
@@ -170,6 +178,8 @@ export const getStaticProps = (async (context) => {
 
   const requiredNamespaces = getRequiredNamespacesForPage(slug, layout)
 
+  const gfissues = await gfIssuesDataFetch()
+
   return {
     props: {
       ...(await serverSideTranslations(locale!, requiredNamespaces)),
@@ -183,22 +193,26 @@ export const getStaticProps = (async (context) => {
       timeToRead: Math.round(timeToRead.minutes),
       tocItems,
       crowdinContributors,
+      gfissues,
     },
   }
 }) satisfies GetStaticProps<Props, Params>
 
 const ContentPage: NextPageWithLayout<
   InferGetStaticPropsType<typeof getStaticProps>
-> = ({ mdxSource, layout }) => {
+> = ({ mdxSource, layout, gfissues }) => {
   // TODO: Address component typing error here (flip `FC` types to prop object types)
   // @ts-expect-error
   const components: Record<string, React.ReactNode> = {
     ...mdComponents,
     ...componentsMapping[layout],
   }
+
+  // Global scope for MDX components
+  const scope = { gfissues }
   return (
     <>
-      <MDXRemote {...mdxSource} components={components} />
+      <MDXRemote {...mdxSource} components={components} scope={scope} />
     </>
   )
 }
