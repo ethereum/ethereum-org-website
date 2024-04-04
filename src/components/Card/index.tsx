@@ -30,7 +30,7 @@ const Card = ({ emoji, title, description, children, ...props }: CardProps) => (
             {title}
           </Heading>
         )}
-        {description && <Text opacity={0.8}>{description}</Text>}
+        {description && <Text>{description}</Text>}
       </Stack>
     </Stack>
     {children}

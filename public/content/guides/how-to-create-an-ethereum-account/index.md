@@ -6,7 +6,7 @@ lang: en
 
 # How to create an Ethereum account
 
-Anyone can create an Ethereum account at any time, for free. There are several ways, but the easiest and most common way is to use an app known as a wallet. Wallets create and secure the keys that enable you to use Ethereum. You can use your wallet to send transactions, check your token balances and connect to apps built on Ethereum, such as token exchanges, games, NFT marketplaces and more. Some "web2" apps now allow you to sign in with Ethereum too.
+Anyone can create an Ethereum account at any time, for free. There are several ways, but the easiest and most common way is to use an app known as a wallet. Wallets create and secure the [keys](/glossary/#key) that enable you to use Ethereum. You can use your wallet to send transactions, check your token balances and connect to apps built on Ethereum, such as token exchanges, games, [NFT](/glossary/#nft) marketplaces and more. Some "web2" apps now allow you to sign in with Ethereum too.
 
 Unlike opening a new account with a company, creating an Ethereum account is done freely, privately and without requiring permission. Accounts are controlled by keys that your wallet software helps you create, and are not issued by a third party, nor stored in a central registry.
 
@@ -28,7 +28,7 @@ There are also other profile filters to cater to your needs. These are examples 
 
 Once you have decided on a specific wallet, visit their official website or app store, download and install it. All of them should be free.
 
-## Step 3: Open the app and generate or import your Ethereum account
+## Step 3: Open the app and create your Ethereum account
 
 The first time you open your new wallet you might be asked to choose between creating a new account or importing an existing one. Click on the new account creation.
 
@@ -61,7 +61,7 @@ No, you cannot. Bitcoin and ether exist on two separate networks (i.e. different
 
 ### If I own an ETH address, do I own the same address on other blockchains?
 
-You can use the same address on all blockchains that use similar underlying software to Ethereum (known as 'EVM-compatible'). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains, like Bitcoin, implement a completely separate set of network rules and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on which blockchains are supported.
+You can use the same [address](/glossary/#address) on all blockchains that use similar underlying software to Ethereum (known as 'EVM-compatible'). This [list](https://chainlist.org/) will show you which blockchains you can use with the same address. Some blockchains, like Bitcoin, implement a completely separate set of network rules and you will need a different address with a different format. If you have a smart contract wallet you should check its product website for more info on which blockchains are supported.
 
 ### Is having my own wallet safer than keeping my funds on an exchange?
 

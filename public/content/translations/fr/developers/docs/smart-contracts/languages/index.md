@@ -23,7 +23,7 @@ La connaissance de langages de programmation comme JavaScript ou Python peut vou
 
 - Un langage orienté objet et de haut niveau pour la mise en œuvre de contrats intelligents.
 - Un langage à accolades principalement influencé par C++.
-- Typé statistiquement (le type d'une variable est connu au moment de la compilation)
+- Typé statiquement (le type d'une variable est connu au moment de la compilation)
 - Prend en charge les éléments suivants :
   - Héritage : Vous pouvez prolonger d'autres contrats.
   - Bibliothèques : Vous pouvez créer du code réutilisable que vous pouvez appeler à partir de différents contrats, comme les fonctions statiques d'une classe statique dans d'autres langages de programmation orientés objets.
