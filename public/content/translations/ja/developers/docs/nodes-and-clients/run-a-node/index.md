@@ -99,7 +99,7 @@ sidebarDepth: 2
 
 - 注: エリゴンにはスナップ同期機能はありませんが、フルプルーニングは可能です(約500GB)
 
-コンセンサスクライアントの必要な容量は、クライアントの実装や有効にした機能(バリデータスラッシャーなど)によって変わりますが、概ねビーコンデータ用にさらに200GB必要です。 また、多数のバリデータを実行すると、帯域幅への負荷も大きくなります。 [こちら](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)に、本分析のコンセンサスクライアントの要件詳細が記載されています。
+コンセンサスクライアントの必要な容量は、クライアントの実装や有効にした機能(バリデータスラッシャーなど)によって変わりますが、概ねビーコンデータ用にさらに200GB必要です。 また、多数のバリデータを実行すると、帯域幅への負荷も大きくなります。 [こちら](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e)に、本分析のコンセンサスクライアントの要件詳細が記載されています。
 
 #### プラグ・アンド・プレイ・ソリューション {#plug-and-play}
 
@@ -165,7 +165,7 @@ Raspberry PiのようなARMアーキテクチャのシングルボードコン�
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
 
-バリデータを実行しているコンセンサスノードにとって、[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は重要です。 マジョリティのバリデータが単一のクライアントを実行していると、ネットワークのセキュリティが危険にさらされます。 そのため、マイノリティクライアントを選択することをお勧めします。
+バリデータを実行しているコンセンサスノードにとって、[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は重要です。 大多数のバリデータが単一のクライアントを実行していると、ネットワークのセキュリティが危険にさらされます。 そのため、マイノリティクライアントを選択することをお勧めします。
 
 [最新のネットワーククライアントの使用状況](https://clientdiversity.org/)を参照し、[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity)についてご覧ください。
 

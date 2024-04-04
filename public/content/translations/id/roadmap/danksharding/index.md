@@ -69,7 +69,7 @@ Pemisahan pengusul-pembuat diperlukan untuk mencegah keharusan validator individ
 
 </ExpandableCard>
 
-<ExpandableCard title="Mengapa Danksharding memerlukan pengambilan sampel ketersediaan data?" eventCateogry="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="Mengapa Danksharding memerlukan pengambilan sampel ketersediaan data?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 Pengambilan sampel ketersediaan data diperlukan oleh validator untuk dengan cepat dan efisien memverifikasi data blob. Dengan menggunakan pengambilan sampel ketersediaan data, para validator dapat yakin bahwa data blob tersedia dan tercatat dengan benar. Setiap validator dapat secara acak memilih beberapa titik data dan membuat bukti, artinya tidak ada validator yang harus memeriksa seluruh blob. Jika ada data yang hilang, hal itu akan segera teridentifikasi dan blob akan ditolak.
 
@@ -77,7 +77,7 @@ Pengambilan sampel ketersediaan data diperlukan oleh validator untuk dengan cepa
 
 ### Kemajuan saat ini {#current-progress}
 
-Danksharding penuh masih beberapa tahun lagi. Namun, Proto-Danksharding seharusnya tiba dalam waktu yang relatif singkat. Pada saat penulisan (Feb 2023), upacara KZG masih terbuka dan telah menarik lebih dari 50.000 kontributor. [EIP](https://eips.ethereum.org/EIPS/eip-4844) untuk Proto-Danksharding sudah siap, spesifikasinya disetujui, dan klien telah mengimplementasikan prototipe yang saat ini sedang diuji dan disiapkan untuk produksi. Langkah selanjutnya adalah menerapkan perubahan tersebut di jaringan percobaan publik. Anda dapat tetap mendapatkan informasi terkini dengan menggunakan [daftar periksa kesiapan EIP 4844](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status).
+Danksharding penuh masih beberapa tahun lagi. Namun, Proto-Danksharding seharusnya tiba dalam waktu yang relatif singkat. Pada saat penulisan (Feb 2023), upacara KZG masih terbuka dan telah menarik lebih dari 50.000 kontributor. [EIP](https://eips.ethereum.org/EIPS/eip-4844) untuk Proto-Danksharding sudah siap, spesifikasinya disetujui, dan klien telah mengimplementasikan prototipe yang saat ini sedang diuji dan disiapkan untuk produksi. Langkah selanjutnya adalah menerapkan perubahan tersebut di jaringan percobaan publik. Anda bisa terus mendapatkan info terbaru menggunakan [daftar periksa kesiapan EIP 4844](https://github.com/ethereum/pm/blob/master/Dencun/4844-readiness-checklist.md).
 
 ### Bacaan lebih lanjut {#further-reading}
 

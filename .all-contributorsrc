@@ -10984,7 +10984,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/9151261?v=4",
       "profile": "https://github.com/aslikaya",
       "contributions": [
-        "doc"
+        "doc",
+        "maintenance"
       ]
     },
     {
@@ -11661,6 +11662,24 @@
       "profile": "https://github.com/nakmr",
       "contributions": [
         "content"
+      ]
+    },
+    {
+      "login": "WuRuiLei2023",
+      "name": "WuRuiLei2023",
+      "avatar_url": "https://avatars.githubusercontent.com/u/149141323?v=4",
+      "profile": "https://github.com/WuRuiLei2023",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "radeksvarz",
+      "name": "Radek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6020891?v=4",
+      "profile": "http://www.edukids.cz",
+      "contributions": [
+        "eventOrganizing"
       ]
     }
   ],

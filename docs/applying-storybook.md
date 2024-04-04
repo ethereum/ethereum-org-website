@@ -18,7 +18,7 @@ It's as easy as running `yarn storybook` to boot up a dedicated localhost to see
 
 ## Setting up a component's stories
 
-> 🚨 NOTE: This project uses Storybook v7. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started/install) if you need any additional details
+> 🚨 NOTE: This project uses Storybook v7, using the Component Story Format v3 and the `satisfies` keyword to define the type of the meta object. The following documentation outlines preferences in setup as it relates to this version. You can refer to the [main docs](https://storybook.js.org/docs/get-started) if you need any additional details
 
 A Storybook "story" is an instance of a component in a certain state or with certain parameters applied to show an alternative version of the component.
 
@@ -57,9 +57,11 @@ export const Basic: Story = {
 
 **Note**: with the `title` option, we write this based on the groupings set by the Design System. Groupings are declared with forward slashes. (i.e. `Atoms / Form / Input`). See the Storybook docs for details on [Naming conventions](https://storybook.js.org/docs/7.0/react/writing-stories/naming-components-and-hierarchy)
 
+Also, please view the Figma file for the [proposed structure for the Design System](https://www.figma.com/file/Ne3iAassyfAcJ0AlgqioAP/DS-to-storybook-structure?type=design&node-id=42%3A50&mode=design&t=RGkyouvTilzF42y0-1) to provide the correct groupings.
+
 We will maintain this structure for every story file, regardless of simplicity.
 
-Should the component accept props on all or some renders, you can provide an `args` prop for each story and supply the necessary data. And if there is children, use the `render` prop to pass the args and supply children elements.
+Should the component accept props on all or some renders, you can provide an `args` prop for each story and supply the necessary data. This can be done in place of the render if only a single instance of the given component is needed with no other components. If the `children` prop is used, it can still be used in the `args` prop.
 
 Let's say for a `Button` component with different style variants...
 
@@ -77,15 +79,15 @@ export default meta
 type Story = StoryObj<typeof meta>;
 
 export const Solid: Story = {
-  render: (args) => <Button {...args}>A Button</Button>,
   args: {
     variant: 'solid',
+    children: 'A Button'
   }
 }
 export const Outline: Story = {
-  render: (args) => <Button {...args}>A Button</Button>,
   args: {
     variant: 'outline',
+    children: 'A Button'
   }
 }
 
@@ -94,25 +96,50 @@ export const Outline: Story = {
  * they should be shown under one story, so they can be seen side-by-side in the GUI
  * for reviewers to easily compare.
  * This can also be done for various sizes or other like alterations
+ *
+ * 🚨 If prop content is supplied directly to the component and the `args` prop is not used,
+ * do not use the `StoryObj` type. This is especially important when a story rendering multiple versions
+ * of the component.
  */
 
 // Assuming `solid` is the default variant in the Chakra theme config
-export const Variants = () => (
-  <VStack>
-    <Button>A Solid Button</Button>
-    <Button variant="outline">An Outline Button</Button>
-    <Button variant="unstyled">An Unstyled Button</Button>
-  </VStack>
-)
+export const Variants = {
+  render: () => (
+    <VStack>
+      <Button>A Solid Button</Button>
+      <Button variant="outline">An Outline Button</Button>
+      <Button variant="unstyled">An Unstyled Button</Button>
+    </VStack>
+  )
+}
 ```
 
-If only one story is provided for a component, the name of the exported object should match the name in the `title` meta option. (If the title is `Atoms / Form / Button` then the object should be named `Button`) This will hoist the display name up to the parent level in the Storybook dashboard's sidebar.
+### Story file containing a single story
+
+If only one story is provided for a component, the name of the exported object should match the name in the `title` meta option. (If the title is `Atoms / Form / Button` then the object should be named `Button`) This will hoist the display name up to the parent level in the Storybook dashboard's sidebar. This will also mean you have to rename the import of the component. Call it `ButtonComponent`, say.
+
+```tsx
+import ButtonComponent from "."
+
+const meta = {
+  title: "Atoms / Form / Button",
+  component: ButtonComponent,
+} satisfies Meta<typeof ButtonComponent>
+
+export default meta
+
+export const Button: StoryObj<typeof meta> = {
+  render: () => <ButtonComponent />,
+}
+```
 
 As you go and make adjustments to the component itself or it's variant styles, Storybook will hot reload and those changes will appear in the stories that emphasize them.
 
 ## Storybook Dashboard
 
 The dashboard where you view each story has a number of different addons available to check the story thoroughly.
+
+![Screenshot of Storybook Dashboard for Ethereum.org](https://github.com/ethereum/ethereum-org-website/assets/65234762/7dea7692-6a6d-4f1c-b7cb-db177bcab44d)
 
 Outlined below are each area going from left to right in the selections.
 

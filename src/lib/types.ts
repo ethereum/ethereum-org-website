@@ -115,6 +115,7 @@ export type Lang =
   | "sr"
   | "sw"
   | "ta"
+  | "te"
   | "th"
   | "tk"
   | "tr"
