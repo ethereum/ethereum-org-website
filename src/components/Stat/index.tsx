@@ -3,12 +3,12 @@ import type { IconType } from "react-icons/lib"
 import { MdInfoOutline, MdWarning } from "react-icons/md"
 import { Flex, HStack, Icon, Text } from "@chakra-ui/react"
 
+import { NULL_VALUE } from "@/lib/constants"
+
 import Tooltip, { type TooltipProps } from "../Tooltip"
 
-const nullValue = <>&mdash;</>
-
 const initialContent = {
-  contentValue: nullValue,
+  contentValue: NULL_VALUE,
   tooltipIcon: MdInfoOutline,
 }
 
@@ -28,7 +28,7 @@ const Stat = ({ tooltipProps, value, label, isError }: StatProps) => {
   React.useEffect(() => {
     if (isError) {
       return setContent({
-        contentValue: nullValue,
+        contentValue: NULL_VALUE,
         tooltipIcon: MdWarning,
       })
     }
