@@ -1,4 +1,4 @@
-import * as React from "react"
+import { useEffect, useState } from "react"
 import type { IconType } from "react-icons/lib"
 import { MdInfoOutline, MdWarning } from "react-icons/md"
 import { Flex, HStack, Icon, Text } from "@chakra-ui/react"
@@ -20,12 +20,12 @@ export type StatProps = {
 }
 
 const Stat = ({ tooltipProps, value, label, isError }: StatProps) => {
-  const [content, setContent] = React.useState<{
+  const [content, setContent] = useState<{
     contentValue: string | JSX.Element
     tooltipIcon: IconType
   }>(initialContent)
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isError) {
       return setContent({
         contentValue: NULL_VALUE,
