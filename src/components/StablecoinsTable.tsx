@@ -94,8 +94,7 @@ const StablecoinsTable = ({
             _hover={{
               textDecoration: "none",
               borderBottom: `1px solid ${textColor}`,
-              bg: "primary200",
-              color: "black300",
+              bg: "primary200"
             }}
             _focus={{
               borderBottom: `1px solid ${textColor}`,
