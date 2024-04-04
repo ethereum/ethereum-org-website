@@ -60,6 +60,7 @@ const StablecoinsTable = ({
             <Th
               key={idx}
               py={5}
+              fontWeight="bold" 
               fontSize="md"
               fontWeight="normal"
               letterSpacing="normal"
@@ -98,16 +99,16 @@ const StablecoinsTable = ({
             }}
           >
             <Td>
-              <Flex align="center">
+              <Flex align="center" pt={2}>
                 {image && <Image src={image} alt="" me={4} boxSize={6} />}
                 <>{name}</>
               </Flex>
             </Td>
             <Td>
-              <Flex align="center">{marketCap}</Flex>
+              <Flex align="center" pt={2}>{marketCap}</Flex>
             </Td>
             <Td>
-              <Flex align="center">{stablecoinsType[type]}</Flex>
+              <Flex align="center" pt={2}>{stablecoinsType[type]}</Flex>
             </Td>
             {url && (
               <Td textAlign="end">
