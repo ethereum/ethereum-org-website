@@ -7,7 +7,7 @@ import i18n, { baseLocales } from "./i18next"
 
 const extendedTheme = extendBaseTheme(theme)
 
-const chakraBreakpointArray = Object.entries(extendedTheme.breakpoints)
+export const chakraBreakpointArray = Object.entries(extendedTheme.breakpoints)
 
 const preview: Preview = {
   globals: {
@@ -21,6 +21,22 @@ const preview: Preview = {
       matchers: {
         color: /(background|color)$/i,
         date: /Date$/i,
+      },
+    },
+    chromatic: {
+      modes: {
+        ...chakraBreakpointArray.reduce<{ [x: string]: { viewport: string } }>(
+          (arr, curr) => {
+            const [token] = curr
+            return {
+              ...arr,
+              [token]: {
+                viewport: token,
+              },
+            }
+          },
+          {}
+        ),
       },
     },
     backgrounds: {
