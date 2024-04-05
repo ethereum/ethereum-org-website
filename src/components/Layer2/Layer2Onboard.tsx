@@ -3,11 +3,9 @@ import { StaticImageData } from "next/image"
 import { useTranslation } from "next-i18next"
 import {
   Box,
-  chakra,
   Flex,
   ListItem,
   SimpleGrid,
-  Stack,
   UnorderedList,
 } from "@chakra-ui/react"
 

@@ -7,8 +7,10 @@ import { DropdownOption, WalletFilter } from "@/lib/types"
 import { WalletMoreInfoCategory } from "./WalletMoreInfoCategory"
 import { WalletSocialLinks } from "./WalletSocialLinks"
 
+import type { WalletMoreInfoData } from "@/hooks/useWalletTable"
+
 type WalletMoreInfoProps = {
-  wallet: Record<string, any>
+  wallet: WalletMoreInfoData
   filters: WalletFilter
   idx: number
   featureDropdownItems: DropdownOption[]

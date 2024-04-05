@@ -29,6 +29,8 @@ const getIconFromName = (
 ): ComponentType<SVGProps<SVGElement>> => {
   const {
     [imageName + "GlyphIcon"]: Icon,
+    // ! This throws a hidden type error
+    // "Require statement not part of import statement." `@typescript-eslint/no-var-requires`
   } = require("@/components/icons/staking")
   return Icon
 }

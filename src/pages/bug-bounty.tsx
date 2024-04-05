@@ -13,7 +13,6 @@ import {
 
 import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
-import BugBountyBanner from "@/components/Banners/BugBountyBanner"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import BugBountyCards from "@/components/BugBountyCards"
 import ButtonLink from "@/components/Buttons/ButtonLink"
