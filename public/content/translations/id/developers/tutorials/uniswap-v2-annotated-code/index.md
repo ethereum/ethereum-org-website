@@ -909,7 +909,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Kebanyakan dari kontrak-kontrak ini, kita telah menemuinya sebelumnya, atau cukup jelas. Satu-satunya pengecualian adalah `IWETH.sol`. Uniswap v2 membuat perdagangan untuk pasangan apa pun dari token ERC-20, tetapi ether (ETH) sendiri bukanlah token ERC-20. Mendahului standar dan ditransfer melalui mekanisme unik. Untuk mengaktifkan penggunaan ETH dalam kontrak yang menerapkan token ERC-20, orang-orang menemukan kontrak [wrapped ether (WETH)](https://weth.io/). Anda mengirimkan ETH ke kontrak ini, dan mencetaknya untuk Anda dalam jumlah WETH yang setara. Atau, Anda dapat membakar WETH, dan mendapatkan kembali ETH.
+Kebanyakan dari kontrak-kontrak ini, kita telah menemuinya sebelumnya, atau cukup jelas. Satu-satunya pengecualian adalah `IWETH.sol`. Uniswap v2 membuat perdagangan untuk pasangan apa pun dari token ERC-20, tetapi ether (ETH) sendiri bukanlah token ERC-20. Mendahului standar dan ditransfer melalui mekanisme unik. Untuk mengaktifkan penggunaan ETH dalam kontrak yang menerapkan token ERC-20, orang-orang menemukan kontrak [wrapped ether (WETH)](https://weth.tkn.eth.limo/). Anda mengirimkan ETH ke kontrak ini, dan mencetaknya untuk Anda dalam jumlah WETH yang setara. Atau, Anda dapat membakar WETH, dan mendapatkan kembali ETH.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {
