@@ -59,12 +59,12 @@ lang: zh
 
 ## 优点和缺点 {#pros-and-cons}
 
-| 优点                                                                                                                                           | 缺点                                                               |
-| ---------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
+| 优点                                                                         | 缺点                                |
+| -------------------------------------------------------------------------- | --------------------------------- |
 | 质押使个人更容易参与其中保障网络的安全，促进去中心化。 验证者节点可以在普通笔记本电脑上运行。 质押池让用户可以在没有 32 个以太币的情况下质押。 | 与工作量证明相比，权益证明仍处于起步阶段，并且经过的实践检验较少。 |
-| 权益质押更加去中心化。 规模经济不像适用于工作量证明挖矿那样适用于权益证明。                                                                    | 实现权益证明比实现工作量证明更加复杂。                             |
-| 权益证明的加密经济安全性高于工作量证明                                                                                                         | 用户需要运行三种软件才能参与以太坊的权益证明。                     |
-| 需要发行较少的新以太币就可以激励网络参与者                                                                                                     |                                                                    |
+| 权益质押更加去中心化。 规模经济不像适用于工作量证明挖矿那样适用于权益证明。                                     | 实现权益证明比实现工作量证明更加复杂。               |
+| 权益证明的加密经济安全性高于工作量证明                                                        | 用户需要运行三种软件才能参与以太坊的权益证明。           |
+| 需要发行较少的新以太币就可以激励网络参与者                                                      |                                   |
 
 ### 与工作量证明相比 {#comparison-to-proof-of-work}
 
@@ -79,10 +79,10 @@ lang: zh
 
 ## 延伸阅读 {#further-reading}
 
-- [Proof of Stake FAQ](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [权益证明机制常见问题](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [What is Proof of Stake](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [What Proof of Stake Is And Why It Matters](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [为什么采用权益证明（2020 年 11 月）](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [为什么采用权益证明机制（2020 年 11 月）](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [权益证明：我如何爱上弱主观性](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [权益证明以太坊的攻击和防御](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [权益证明设计原则](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_

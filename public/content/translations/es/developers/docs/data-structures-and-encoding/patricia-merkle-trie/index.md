@@ -5,13 +5,17 @@ lang: es
 sidebarDepth: 2
 ---
 
-Un Merkle Patricia Trie proporciona una estructura de datos autenticada criptográficamente que se puede utilizar para almacenar todos los pares `(key, value)`.
+El estado del Ethereum (el total de todas las cuentas, saldos y contratos inteligentes) está codificado en una versión especial de la estructura de datos, conocida conmúnmente en informática como el árbol de Merkle. Esta estructura es útil para muchas aplicaciones en criptografía, porque crea una relación verificable entre todas las piezas individuales de datos enredadas en el árbol, lo que da como resultado un solo valor **root** que se puede utilizar para probar cosas sobre los datos.
 
-Los Merkle Patricia Tries son totalmente deterministas, lo que significa que se garantiza que los tries con los mismos pares `(key, value)` sean idénticos, hasta el último byte. Esto significa que tienen el mismo hash raíz, proporcionando el santo grial de eficiencia `O(log(n))` para inserciones, búsquedas y eliminaciones. Además, son más fáciles de entender y codificar que las alternativas más complejas basadas en la comparación, como los árboles rojo-negro.
+La estructura de datos de Ethereum es un «trie Merkle-Patricia modificado», llamado así porque toma prestadas algunas características de PATRICIA (las siglas en inglés del algoritmo práctico para recuperar información codificada en alfanumérico), y porque está diseñado para la recuperación eficiente de datos ****de los elementos que componen el estado de Ethereum.
+
+Un trie de Merkle-Patricia es determinista y criptográficamente verificable: la única manera de generar una raíz de estado es calculándola a partir de cada pieza individual del estado, y dos estados que son idénticos se pueden probar fácilmente comparando el hash raíz y los hashes que lo llevaron a él (_una prueba de Merkle_). Por el contrario, no hay forma de crear dos estados diferentes con el mismo hash raíz, y cualquier intento de modificar el estado con diferentes valores dará como resultado un hash raíz de estado diferente. En teoría, esta estructura proporciona el «santo grial» de `O(log(n))` eficiencia para inserciones, búsquedas y eliminaciones.
+
+En un futuro próximo, Ethereum planea migrar a una estructura de [árbol Verkle](https://ethereum.org/en/roadmap/verkle-trees), lo que abrirá muchas y nuevas posibilidades para futuras mejoras del protocolo.
 
 ## Requisitos previos {#prerequisites}
 
-Para entender mejor esta página, sería útil tener un conocimiento básico de [hashes](https://en.wikipedia.org/wiki/Hash_function), [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) y [serialization](https://en.wikipedia.org/wiki/Serialization).
+Para entender mejor esta página, sería útil tener un conocimiento básico de [hashes](https://en.wikipedia.org/wiki/Hash_function), [Merkle trees](https://en.wikipedia.org/wiki/Merkle_tree), [tries](https://en.wikipedia.org/wiki/Trie) y [serialization](https://en.wikipedia.org/wiki/Serialization). Este artículo comienza con una descripción de un [árbol de radix básico](https://en.wikipedia.org/wiki/Radix_tree), luego introduce gradualmente las modificaciones necesarias para la estructura de datos más optimizada de Ethereum.
 
 ## Radix tries básicos {#basic-radix-tries}
 
@@ -201,7 +205,7 @@ Hay un trie de estado global, y se actualiza cada vez que un cliente procesa un 
 
 ### Trie de almacenamiento (storage) {#storage-trie}
 
-El trie de almacenamiento es donde residen _todos_ los datos del contrato. Hay un trie de almacenamiento separado para cada cuenta. Para recuperar valores en posiciones de almacenamiento específicas en una dirección determinada, se requieren la dirección de almacenamiento, la posición entera de los datos almacenados en el almacenamiento y el ID del bloque. Estos se pueden pasar como argumentos al `eth_getStorageAt` definido en la API JSON-RPC, por ejemplo, para recuperar los datos en la ranura de almacenamiento 0 para la dirección `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
+El trie de almacenamiento es donde residen _todos_  los datos del contrato. Hay un trie de almacenamiento separado para cada cuenta. Para recuperar valores en posiciones de almacenamiento específicas en una dirección determinada, se requieren la dirección de almacenamiento, la posición entera de los datos almacenados en el almacenamiento y el ID del bloque. Estos se pueden pasar como argumentos al `eth_getStorageAt` definido en la API JSON-RPC, por ejemplo, para recuperar los datos en la ranura de almacenamiento 0 para la dirección `0x295a70b2de5e3953354a6a8344e616ed314d7251`:
 
 ```
 curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": ["0x295a70b2de5e3953354a6a8344e616ed314d7251", "0x0", "latest"], "id": 1}' localhost:8545

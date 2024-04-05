@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { reverse, sortBy } from "lodash"
+import reverse from "lodash/reverse"
+import sortBy from "lodash/sortBy"
 import { useTranslation } from "next-i18next"
 import {
   Box,

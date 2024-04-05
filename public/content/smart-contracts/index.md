@@ -6,11 +6,15 @@ lang: en
 
 # Introduction to smart contracts {#introduction-to-smart-contracts}
 
-Smart contracts are the fundamental building blocks of Ethereum's application layer. They are computer programs stored on the blockchain that follow "if this then that" logic, and are guaranteed to execute according to the rules defined by its code, which cannot be changed once created.
+Smart contracts are the fundamental building blocks of Ethereum's application layer. They are computer programs stored on the [blockchain](/glossary/#blockchain) that follow "if this then that" logic, and are guaranteed to execute according to the rules defined by its code, which cannot be changed once created.
 
 Nick Szabo coined the term "smart contract". In 1994, he wrote [an introduction to the concept](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), and in 1996 he wrote [an exploration of what smart contracts could do](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Szabo envisioned a digital marketplace where automatic, cryptographically-secure processes enable transactions and business functions to happen without trusted intermediaries. Smart contracts on Ethereum put this vision into practice.
+Szabo envisioned a digital marketplace where automatic, [cryptographically-secure](/glossary/#cryptography) processes enable transactions and business functions to happen without trusted intermediaries. Smart contracts on Ethereum put this vision into practice.
+
+Watch Finematics explain smart contracts:
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## Trust in conventional contracts {#trust-and-contracts}
 
@@ -60,20 +64,14 @@ Finally, like traditional contracts, you can check what's in a smart contract be
 
 Smart contracts can do essentially anything that computer programs can do.
 
-They can perform computations, create currency, store data, mint NFTs, send communications and even generate graphics. Here are some popular, real-world examples:
+They can perform computations, create currency, store data, mint [NFTs](/glossary/#nft), send communications and even generate graphics. Here are some popular, real-world examples:
 
 - [Stablecoins](/stablecoins/)
 - [Creating and distributing unique digital assets](/nft/)
 - [An automatic, open currency exchange](/get-eth/#dex)
-- [Decentralized gaming](/dapps/?category=gaming)
+- [Decentralized gaming](/dapps/?category=gaming#explore)
 - [An insurance policy that pays out automatically](https://etherisc.com/)
 - [A standard that lets people create customized, interoperable currencies](/developers/docs/standards/tokens/)
-
-## More of a visual learner? {#visual-learner}
-
-Watch Finematics explain smart contracts:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## Further reading {#further-reading}
 

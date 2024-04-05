@@ -166,7 +166,7 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
       bgColor="ednBackground"
       height="auto"
       w="full"
-      display={{ base: "block", lg: "none" }}
+      hideFrom="lg"
     >
       <Center
         as={motion.div}

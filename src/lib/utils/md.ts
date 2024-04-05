@@ -68,9 +68,9 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/consensus-mechanisms/pos/weak-subjectivity",
     "/developers/docs/consensus-mechanisms/pow/",
     "/developers/docs/consensus-mechanisms/pow/mining",
-    "/developers/docs/consensus-mechanisms/pow/mining-algorithms",
-    "/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto",
-    "/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash",
+    "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms",
+    "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto",
+    "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash",
     "/developers/docs/dapps",
     "/developers/docs/data-and-analytics",
     "/developers/docs/data-and-analytics/block-explorers",
@@ -197,6 +197,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers",
     "/developers/tutorials/waffle-test-simple-smart-contract",
     "/developers/tutorials/yellow-paper-evm",
+    "/developers/tutorials/creating-a-wagmi-ui-for-your-contract",
     // Static (68/68) ✅
     "/about",
     "/bridges",
@@ -252,6 +253,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/privacy-policy",
     "/roadmap/account-abstraction",
     "/roadmap/danksharding",
+    "/roadmap/dencun",
     "/roadmap/merge/issuance",
     "/roadmap/pbs",
     "/roadmap/secret-leader-election",
@@ -264,6 +266,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/terms-of-use",
     "/web3",
     "/whitepaper",
+    "/wrapped-eth",
     "/zero-knowledge-proofs",
   ]
 

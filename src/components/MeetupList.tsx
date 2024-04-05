@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { sortBy } from "lodash"
+import sortBy from "lodash/sortBy"
 import {
   Box,
   Flex,
@@ -153,7 +153,7 @@ const MeetupList = () => {
         {!filteredMeetups.length && (
           <InfoBanner emoji=":information_source:">
             <Translation id="page-community-meetuplist-no-meetups" />{" "}
-            <InlineLink to="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
+            <InlineLink href="https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json">
               <Translation id="page-community-please-add-to-page" />
             </InlineLink>
           </InfoBanner>

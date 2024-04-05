@@ -18,7 +18,7 @@ ERC-4626 是优化和统一收益资金库技术参数的标准。 它为表示�
 
 ## 前提条件 {#prerequisites}
 
-为了更好地理解这个页面，我们建议您首先阅读[代币标准](/developers/docs/standards/tokens/)和 [ERC-20](/developers/docs/standards/tokens/erc-20/)。
+为了更好地理解这个页面，我们建议你首先阅读[代币标准](/developers/docs/standards/tokens/)和 [ERC-20](/developers/docs/standards/tokens/erc-20/)。
 
 ## ERC-4626 的函数和功能： {#body}
 
@@ -134,7 +134,7 @@ function withdraw(uint256 assets, address receiver, address owner) public return
 function maxRedeem(address owner) public view returns (uint256)
 ```
 
-此函数返回可以通过 [`redeem`](#redeem) 调用从 `owner` 余额中赎回的最大份额数量。
+此函数返回可以通过 [`redeem`](#redeem) 调用从 `owner` 余额中赎回的最大份额。
 
 #### previewRedeem {#previewredeem}
 
@@ -150,7 +150,7 @@ function previewRedeem(uint256 shares) public view returns (uint256)
 function redeem(uint256 shares, address receiver, address owner) public returns (uint256 assets)
 ```
 
-此函数从 `owner` 赎回特定数量的 `shares` 并将标的代币的 `assets` 从资金库发送到 `receiver`。
+此函数从 `owner` 赎回特定数量的 `shares` 并将底层代币的 `assets` 从资金库发送到 `receiver`。
 
 #### totalSupply {#totalsupply}
 
@@ -204,4 +204,4 @@ event Withdraw(
 ## 延伸阅读 {#further-reading}
 
 - [EIP-4626：代币化资金库标准](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHub Repo](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [ERC-4626: GitHub Repo](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)

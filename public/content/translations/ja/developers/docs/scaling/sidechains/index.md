@@ -62,7 +62,7 @@ sidebarDepth: 3
 
 - [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
-- [Gnosis Chain（旧 xDai）](https://www.gnosischain.com/)
+- [Gnosis Chain（旧 xDai](https://www.gnosischain.com/)
 - [Loom Network](https://loomx.io/)
 - [Metis Andromeda](https://www.metis.io/)
 

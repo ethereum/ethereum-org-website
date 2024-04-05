@@ -9,7 +9,7 @@
   "page-contributing-translation-program-acknowledgements-cert-title": "证书",
   "page-contributing-translation-program-acknowledgements-cert-1": "我们要感谢我们的翻译人员，并支持他们的职业道路。考虑到这一点，我们设计了 ethereum.org 翻译人员证书。",
   "page-contributing-translation-program-acknowledgements-cert-2": "该证书是为专业和想入行的翻译人员准备的，他们希望以此作为参考，证明他们在翻译技术内容方面的专业知识，或者仅仅是展示他们对以太坊的无私奉献。",
-  "page-contributing-translation-program-acknowledgements-cert-3": "如果您为翻译计划做出了贡献，并且至少有 5,000 字翻译内容获得核准，您可以写信给我们 (translations@ethereum.org) 申请翻译人员证书。您的信息应包括指向您的 Crowdin 帐户的链接和您的全名（或别名，随您喜欢），我们会将这些信息添加到证书上。",
+  "page-contributing-translation-program-acknowledgements-cert-3": "如果你为翻译计划做出了贡献，并且至少有 5,000 字翻译内容获得核准，你可以写信给我们 (translations@ethereum.org) 申请翻译人员证书。你的信息应包括指向你的 Crowdin 帐户的链接和你的全名（或别名，随你喜欢），我们会将这些信息添加到证书上。",
   "page-contributing-translation-program-acknowledgements-hero-image-alt": "翻译计划柴犬英雄图片",
   "page-contributing-translation-program-acknowledgements-meta-description": "对我们的翻译人员所做的所有出色工作表示感谢",
   "page-contributing-translation-program-acknowledgements-meta-title": "致谢翻译人员",
@@ -31,12 +31,12 @@
   "page-contributing-translation-program-acknowledgements-poaps-title": "POAP 徽章",
   "page-contributing-translation-program-acknowledgements-1": "我们所有的翻译人员都有资格获得 POAP（出席证明协议）– 这是一种非同质化代币，证明他们参与了 ethereum.org 翻译计划。",
   "page-contributing-translation-program-acknowledgements-2": "我们根据翻译人员的活跃度，为他们提供了一些不同的 POAP 徽章",
-  "page-contributing-translation-program-acknowledgements-3": "如果您在 Crowdin 为翻译工作做出了贡献，我们会给您发放 POAP 徽章。",
+  "page-contributing-translation-program-acknowledgements-3": "如果你在 Crowdin 为翻译工作做出了贡献，我们会给你发放 POAP 徽章。",
   "page-contributing-translation-program-acknowledgements-how-to-claim-title": "如何领取",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1": "加入我们",
   "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord": "Discord 服务器",
   "page-contributing-translation-program-acknowledgements-how-to-claim-2": "在 #🥇 | poaps 频道中粘贴指向你的 Crowdin 帐户的链接。",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "等待我们的团队成员向您发送 POAP 徽章领取链接。",
-  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "领取您的 POAP 徽章！",
-  "page-contributing-translation-program-acknowledgements-4": "您应该只使用自我保管的钱包来领取 POAP 徽章。不要使用交易所账户或其他您不持有私钥的账户，因为这些账户将不允许您访问和管理您的 POAP 徽章。"
+  "page-contributing-translation-program-acknowledgements-how-to-claim-3": "等待我们的团队成员向你发送 POAP 徽章领取链接。",
+  "page-contributing-translation-program-acknowledgements-how-to-claim-4": "领取你的 POAP 徽章！",
+  "page-contributing-translation-program-acknowledgements-4": "你应该只使用自我保管的钱包来领取 POAP 徽章。不要使用交易所帐户或其他你不持有私钥的帐户，因为这些帐户将不允许你访问和管理你的 POAP 徽章。"
 }

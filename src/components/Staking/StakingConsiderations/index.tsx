@@ -37,17 +37,9 @@ const IndicatorGroup = ({
     return <WarningProductGlyphIcon style={style} />
   }
   return (
-    <VStack
-      spacing={2}
-      flex={1}
-      width={{ base: "fit-content", sm: "max-content" }}
-    >
+    <VStack spacing={2} flex={1}>
       <IndicatorIcon style={styleObj} />
-      <Text
-        fontSize="xs"
-        textAlign="center"
-        width={{ base: "fit-content", sm: "max-content" }}
-      >
+      <Text fontSize="xs" textAlign="center" maxW="{40}">
         <Translation id={label} />
       </Text>
     </VStack>
@@ -76,8 +68,14 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
     activeIndex,
   } = useStakingConsiderations({ page })
 
+  const activeStyles = {
+    bg: "background.highlight",
+    color: "body.base",
+    transition: "background 0.5s, color 0.5s"
+  }
+
   return (
-    <Flex flexDir={{ base: "column", md: "row" }} gap={8}>
+    <Flex flexDir={{ base: "column", md: "row" }}>
       <ButtonDropdown list={dropdownLinks} hideFrom={mdBp} />
       {/* TODO: Improve a11y */}
       <Box flex={1} hideBelow={mdBp}>
@@ -92,25 +90,16 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
                   trackCustomEvent(matomo)
                 }}
                 py={1}
-                px={2}
                 cursor="pointer"
+                display="table"
+                w="full"
                 h={8}
+                p="3"
+                mb="0"
+                _hover={activeStyles}
                 position="relative"
                 {...(idx === activeIndex
-                  ? {
-                      bg: "primary.base",
-                      color: "background.base",
-                      _after: {
-                        content: `''`,
-                        position: "absolute",
-                        height: 0,
-                        width: 0,
-                        top: 0,
-                        insetInlineStart: "100%",
-                        border: "1rem solid transparent",
-                        borderInlineStartColor: "primary.base",
-                      },
-                    }
+                  ? activeStyles
                   : { color: "primary.base" })}
               >
                 {title}
@@ -122,7 +111,7 @@ const StakingConsiderations = ({ page }: StakingConsiderationsProps) => {
       <Flex
         alignItems="center"
         flexDir="column"
-        bg="offBackground"
+        bg="background.highlight"
         flex={2}
         minH="410px"
         p={6}

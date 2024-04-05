@@ -1,12 +1,10 @@
-import { ReactNode } from "react"
+import { ReactNode, useContext } from "react"
+import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
 import { MdExpandLess, MdExpandMore } from "react-icons/md"
-import Select from "react-select"
 import {
   Box,
-  calc,
-  chakra,
+  ContainerProps,
   Flex,
   FlexProps,
   forwardRef,
@@ -14,30 +12,42 @@ import {
   keyframes,
   SimpleGrid,
   SimpleGridProps,
+  Stack,
   Table,
   TableProps,
   Td,
+  Text,
   Th,
   Tr,
 } from "@chakra-ui/react"
 
-import { ChildOnlyProp } from "@/lib/types"
+import { ChildOnlyProp, WalletData, WalletFilter } from "@/lib/types"
 
-import { useWalletTable } from "@/components/FindWallet/WalletTable/useWalletTable"
+import { ButtonLink } from "@/components/Buttons"
 import { WalletMoreInfo } from "@/components/FindWallet/WalletTable/WalletMoreInfo"
-import {
-  GreenCheckProductGlyphIcon,
-  WarningProductGlyphIcon,
-} from "@/components/icons/staking"
+import { DevicesIcon, LanguagesIcon } from "@/components/icons/wallets"
 import { Image } from "@/components/Image"
-import InlineLink, { LinkProps } from "@/components/Link"
-import Text from "@/components/OldText"
+import Tag from "@/components/Tag"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import {
+  formatSupportedLanguages,
+  getSupportedLanguages,
+  getWalletPersonas,
+  walletsListingCount,
+} from "@/lib/utils/wallets"
 
-import { WalletData } from "@/data/wallets/wallet-data"
+import {
+  DEFAULT_LOCALE,
+  NAV_BAR_PX_HEIGHT,
+  NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN,
+} from "@/lib/constants"
 
-import { NAV_BAR_PX_HEIGHT } from "@/lib/constants"
+import { SupportedLanguagesTooltip } from "./SupportedLanguagesTooltip"
+import { WalletEmptyState } from "./WalletEmptyState"
+
+import { WalletSupportedLanguageContext } from "@/contexts/WalletSupportedLanguageContext"
+import { useWalletTable } from "@/hooks/useWalletTable"
 
 const Container = (props: TableProps) => (
   <Table
@@ -54,11 +64,11 @@ const Container = (props: TableProps) => (
   />
 )
 
-const WalletContainer = (props: ChildOnlyProp) => (
+const WalletContainer = (props: ChildOnlyProp & ContainerProps) => (
   <Container
     borderBottom="1px"
     borderColor="lightBorder"
-    _hover={{ bg: "chakra-subtle-bg", transition: "0.5s all" }}
+    _hover={{ bg: "background.highlight", transition: "0.5s all" }}
     {...props}
   />
 )
@@ -67,7 +77,10 @@ const Grid = forwardRef<SimpleGridProps, "tr">((props, ref) => (
   <SimpleGrid
     as={Tr}
     ref={ref}
-    templateColumns={{ base: "60% auto 0% 0% 5%", md: "40% auto auto auto 5%" }}
+    templateColumns={{
+      base: "60% auto 0% 0% 5%",
+      md: "100% auto auto auto auto",
+    }}
     w="full"
     columnGap={2}
     alignItems="center"
@@ -80,18 +93,11 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
     bg="background.base"
     borderBottom="1px"
     borderColor="primary.base"
-    templateColumns={{
-      base: "auto",
-      sm: "60% auto 0% 0% 5%",
-      md: "40% auto auto auto 5%",
-    }}
+    templateColumns="auto"
     rowGap={{ base: 4, sm: 0 }}
     p={2}
     position="sticky"
-    top={{
-      base: calc(NAV_BAR_PX_HEIGHT).add("4rem").toString(),
-      lg: NAV_BAR_PX_HEIGHT,
-    }}
+    top={NAV_BAR_PX_HEIGHT}
     zIndex={1}
     sx={{
       th: {
@@ -119,9 +125,10 @@ const WalletContentHeader = (props: ChildOnlyProp) => (
 
 const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
   <Grid
+    tabIndex={0}
     ref={ref}
     cursor="pointer"
-    py="25px"
+    py={4}
     px={{ base: 4, lg: 1 }}
     sx={{
       p: {
@@ -136,104 +143,19 @@ const Wallet = forwardRef<ChildOnlyProp, "tr">((props, ref) => (
         hideBelow: "md",
       },
     }}
+    templateColumns="auto"
     {...props}
   />
 ))
-
-const ChakraSelect = chakra((props: { className?: string }) => (
-  <Select {...props} />
-))
-const StyledSelect = (props) => (
-  <ChakraSelect
-    w="full"
-    sx={{
-      ".react-select": {
-        "&__control": {
-          bg: "searchBackground",
-          border: "1px",
-          borderColor: "text",
-          cursor: "pointer",
-          pe: "0.3rem",
-          transition: "0.5s all",
-
-          ".react-select__value-container": {
-            ".react-select__single-value": {
-              color: "text",
-            },
-          },
-
-          ".react-select__indicators": {
-            ".react-select__indicator-separator": {
-              bg: "none",
-            },
-            ".react-select__indicator": {
-              color: "text",
-              p: 0,
-            },
-          },
-
-          "&:hover, &--is-focused": {
-            bg: "primary.base",
-            borderColor: "primary.base",
-
-            ".react-select__value-container": {
-              ".react-select__single-value": {
-                color: "background.base",
-              },
-            },
-
-            ".react-select__indicators": {
-              ".react-select__indicator": {
-                color: "background.base",
-              },
-            },
-          },
-        },
-
-        "&__placeholder": {
-          color: "text200",
-        },
-
-        "&__single-value, &__menu, &__input": {
-          color: "text",
-        },
-
-        "&__menu": {
-          bg: "searchBackground",
-        },
-
-        "&__option": {
-          "&:hover, &--is-focused": {
-            bg: "selectHover",
-          },
-          _active: {
-            bg: "selectActive",
-            color: "buttonColor !important",
-          },
-
-          "&--is-selected": {
-            bg: "primary.base",
-            color: "buttonColor",
-            _hover: {
-              bg: "primary.base",
-            },
-          },
-        },
-      },
-    }}
-    {...props}
-  />
-)
 
 const FlexInfo = (props: FlexProps) => (
   <Flex
-    alignItems="center"
     gap={4}
     ps="0.3rem"
     sx={{
       p: {
         p: 0,
-        fontSize: "1.2rem",
+        fontSize: "xl",
         fontWeight: "bold",
         "& + p": {
           mt: "0.1rem",
@@ -271,6 +193,7 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
     cursor="pointer"
     justifyContent="center"
     height="full"
+    mt={{ base: 10, md: 0 }}
     sx={{
       "&.fade": {
         animation: `${fadeOut} 0.375s`,
@@ -280,293 +203,268 @@ const FlexInfoCenter = (props: { children: ReactNode; className?: string }) => (
   />
 )
 
-const SocialLink = (props: LinkProps) => (
-  <InlineLink
-    display="flex"
-    height={8}
-    alignItems="center"
-    verticalAlign="middle"
-    transform="scale(1)"
-    transition="transform 0.1s"
-    _hover={{
-      transform: "scale(1.15)",
-    }}
-    {...props}
-  />
-)
-
-// Types
-export interface DropdownOption {
-  label: string
-  value: string
-  filterKey: string
-  category: string
-  icon: ReactNode
-}
-
-// Constants
-const firstCol = "firstCol"
-const secondCol = "secondCol"
-const thirdCol = "thirdCol"
-
-export interface WalletTableProps {
-  filters: Record<string, boolean>
+export type WalletTableProps = {
+  filters: WalletFilter
+  resetFilters: () => void
+  resetWalletFilter: React.MutableRefObject<() => void>
   walletData: WalletData[]
+  onOpen: () => void
 }
 
-const WalletTable = ({ filters, walletData }: WalletTableProps) => {
+const WalletTable = ({
+  filters,
+  resetFilters,
+  resetWalletFilter,
+  walletData,
+  onOpen,
+}: WalletTableProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
+  const { locale } = useRouter()
   const {
     featureDropdownItems,
-    filteredFeatureDropdownItems,
     filteredWallets,
-    setFirstFeatureSelect,
-    setSecondFeatureSelect,
-    setThirdFeatureSelect,
-    updateDropdown,
     updateMoreInfo,
-    firstFeatureSelect,
-    secondFeatureSelect,
-    thirdFeatureSelect,
     walletCardData,
   } = useWalletTable({ filters, t, walletData })
+
+  // Context API
+  const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
 
   return (
     <Container>
       <WalletContentHeader>
-        <Th>
-          {filteredWallets.length === walletCardData.length ? (
-            <Text as="span">
-              {t("page-find-wallet-showing-all-wallets")} (
-              <strong>{walletCardData.length}</strong>)
+        <Th sx={{ textAlign: "start !important" }}>
+          <Flex justifyContent="space-between" px={{ base: 2.5, md: 0 }}>
+            {/* Displayed on mobile only */}
+            <Text
+              hideFrom="lg"
+              lineHeight={1.6}
+              fontSize="md"
+              color="primary.base"
+              textTransform="uppercase"
+              cursor="pointer"
+              onClick={onOpen}
+              as="button"
+            >
+              {`${t("page-find-wallet-filters")} (${
+                walletsListingCount(filters) +
+                (supportedLanguage === DEFAULT_LOCALE ? 0 : 1)
+              })`}
             </Text>
-          ) : (
-            <Text as="span">
-              {t("page-find-wallet-showing")}{" "}
-              <strong>
-                {filteredWallets.length} / {walletCardData.length}
-              </strong>{" "}
-              {t("page-find-wallet-wallets")}
-            </Text>
-          )}
-        </Th>
-        <Th>
-          <Text as="span" hideFrom="sm" fontSize="md" whiteSpace="nowrap">
-            {t("page-find-wallet-choose-features")}
-          </Text>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setFirstFeatureSelect, firstCol)
-            }}
-            defaultValue={firstFeatureSelect}
-            isSearchable={false}
-          />
-        </Th>
-        <Th>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setSecondFeatureSelect, secondCol)
-            }}
-            defaultValue={secondFeatureSelect}
-            isSearchable={false}
-          />
-        </Th>
-        <Th>
-          <StyledSelect
-            className="react-select-container"
-            classNamePrefix="react-select"
-            options={[
-              {
-                label: t("page-find-choose-to-compare"),
-                options: [...filteredFeatureDropdownItems],
-              },
-            ]}
-            onChange={(selectedOption) => {
-              updateDropdown(selectedOption, setThirdFeatureSelect, thirdCol)
-            }}
-            defaultValue={thirdFeatureSelect}
-            isSearchable={false}
-          />
+
+            {filteredWallets.length === walletCardData.length ? (
+              <Text ps={{ base: 2, md: 0 }} as="span">
+                {t("page-find-wallet-showing-all-wallets")} (
+                <strong>{walletCardData.length}</strong>)
+              </Text>
+            ) : (
+              <Text ps={{ base: 2, md: 0 }} as="span">
+                {t("page-find-wallet-showing")}{" "}
+                <strong>
+                  {filteredWallets.length} / {walletCardData.length}
+                </strong>{" "}
+                {t("page-find-wallet-wallets")}
+              </Text>
+            )}
+          </Flex>
         </Th>
       </WalletContentHeader>
-      {filteredWallets.map((wallet, idx) => {
-        const deviceLabels: Array<string> = []
+      {filteredWallets.length === 0 && (
+        <WalletEmptyState
+          resetFilters={resetFilters}
+          resetWalletFilter={resetWalletFilter}
+        />
+      )}
 
-        wallet.ios && deviceLabels.push(t("page-find-wallet-iOS"))
-        wallet.android && deviceLabels.push(t("page-find-wallet-android"))
-        wallet.linux && deviceLabels.push(t("page-find-wallet-linux"))
-        wallet.windows && deviceLabels.push(t("page-find-wallet-windows"))
-        wallet.macOS && deviceLabels.push(t("page-find-wallet-macOS"))
-        wallet.chromium && deviceLabels.push(t("page-find-wallet-chromium"))
-        wallet.firefox && deviceLabels.push(t("page-find-wallet-firefox"))
-        wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
+      {filteredWallets.length > 0 &&
+        filteredWallets.map((wallet, idx) => {
+          const deviceLabels: Array<string> = []
 
-        return (
-          <WalletContainer key={wallet.key}>
-            <Wallet
-              onClick={() => {
-                updateMoreInfo(wallet.key)
-                // Log "more info" event only on expanding
-                wallet.moreInfo &&
-                  trackCustomEvent({
-                    eventCategory: "WalletMoreInfo",
-                    eventAction: `More info wallet`,
-                    eventName: `More info ${wallet.name}`,
-                  })
-              }}
+          wallet.ios && deviceLabels.push(t("page-find-wallet-iOS"))
+          wallet.android && deviceLabels.push(t("page-find-wallet-android"))
+          wallet.linux && deviceLabels.push(t("page-find-wallet-linux"))
+          wallet.windows && deviceLabels.push(t("page-find-wallet-windows"))
+          wallet.macOS && deviceLabels.push(t("page-find-wallet-macOS"))
+          wallet.chromium && deviceLabels.push(t("page-find-wallet-chromium"))
+          wallet.firefox && deviceLabels.push(t("page-find-wallet-firefox"))
+          wallet.hardware && deviceLabels.push(t("page-find-wallet-hardware"))
+
+          const walletPersonas = getWalletPersonas(wallet)
+          const hasPersonasLabels = walletPersonas.length > 0
+          const hasDeviceLabels = deviceLabels.length > 0
+          const hasAllLabels = hasPersonasLabels && hasDeviceLabels
+
+          // Supported languages
+          const supportedLanguages = getSupportedLanguages(
+            wallet.languages_supported,
+            locale!
+          )
+          const numberOfSupportedLanguages = supportedLanguages.length
+          const sliceSize = NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN
+          const rest = numberOfSupportedLanguages - sliceSize
+          const restText = `${rest > 0 ? "+" : ""} ${rest > 0 ? rest : ""}`
+
+          const formattedSupportedLanguages = formatSupportedLanguages(
+            supportedLanguages,
+            sliceSize
+          )
+
+          const showMoreInfo = (wallet) => {
+            updateMoreInfo(wallet.key)
+            // Log "more info" event only on expanding
+            wallet.moreInfo &&
+              trackCustomEvent({
+                eventCategory: "WalletMoreInfo",
+                eventAction: `More info wallet`,
+                eventName: `More info ${wallet.name}`,
+              })
+          }
+
+          return (
+            <WalletContainer
+              key={wallet.key}
+              bg={wallet.moreInfo ? "background.highlight" : "transparent"}
             >
-              <Td lineHeight="revert">
-                <FlexInfo>
-                  <Box>
-                    <Image
-                      src={wallet.image}
-                      alt=""
-                      objectFit="contain"
-                      boxSize="56px"
-                    />
-                  </Box>
-                  <Box>
-                    <Text>{wallet.name}</Text>
-                    <Text
-                      hideBelow="sm"
-                      color="text200"
-                      fontSize="0.7rem"
-                      lineHeight="0.85rem"
+              <Wallet
+                // Make wallets more info section open on 'Enter'
+                onKeyUp={(e) => {
+                  if (e.key === "Enter") showMoreInfo(wallet)
+                }}
+                onClick={() => showMoreInfo(wallet)}
+              >
+                <Td lineHeight="revert">
+                  <Flex
+                    justifyContent="space-between"
+                    alignItems="center"
+                    w="100%"
+                  >
+                    <FlexInfo
+                      w={{ base: "100%", md: "auto" }}
+                      ps={{ base: 0, md: 1.5 }}
                     >
-                      {deviceLabels.join(" | ")}
-                    </Text>
-                    {deviceLabels.map((label) => (
-                      <Text
-                        key={label}
-                        hideFrom="md"
-                        fontSize="0.7rem"
-                        lineHeight="0.85rem"
-                        color="text200"
-                      >
-                        {label}
-                      </Text>
-                    ))}
-                    <Box mt={4}>
-                      <Flex gap="0.8rem">
-                        <SocialLink
-                          to={wallet.url}
-                          hideArrow
-                          customEventOptions={{
-                            eventCategory: "WalletExternalLinkList",
-                            eventAction: `Go to wallet`,
-                            eventName: `Website: ${wallet.name} ${idx}`,
-                            eventValue: JSON.stringify(filters),
-                          }}
-                        >
-                          <Icon as={FaGlobe} fontSize="2xl" />
-                        </SocialLink>
-                        {wallet.twitter && (
-                          <SocialLink
-                            to={wallet.twitter}
-                            hideArrow
-                            customEventOptions={{
-                              eventCategory: "WalletExternalLinkList",
-                              eventAction: `Go to wallet`,
-                              eventName: `Twitter: ${wallet.name} ${idx}`,
-                              eventValue: JSON.stringify(filters),
-                            }}
+                      <Box w={{ base: "100%", md: "auto" }}>
+                        <Flex alignItems="start">
+                          {/* Wallet image */}
+                          <Stack
+                            w={{ base: "24px", md: "56px" }}
+                            h={{ base: "24px", md: "56px" }}
+                            me={4}
                           >
-                            <Icon
-                              as={FaTwitter}
-                              color="#1da1f2"
-                              fontSize="2xl"
+                            <Image
+                              src={wallet.image}
+                              alt=""
+                              height={56}
+                              objectFit="contain"
                             />
-                          </SocialLink>
-                        )}
-                        {wallet.discord && (
-                          <SocialLink
-                            to={wallet.discord}
-                            hideArrow
-                            customEventOptions={{
-                              eventCategory: "WalletExternalLinkList",
-                              eventAction: `Go to wallet`,
-                              eventName: `Discord: ${wallet.name} ${idx}`,
-                              eventValue: JSON.stringify(filters),
-                            }}
-                          >
-                            <Icon
-                              as={FaDiscord}
-                              color="#7289da"
-                              fontSize="2xl"
-                            />
-                          </SocialLink>
-                        )}
-                      </Flex>
-                    </Box>
+                          </Stack>
+
+                          <Text lineHeight={1.2} fontSize="xl !important">
+                            {wallet.name}
+                          </Text>
+                        </Flex>
+
+                        <Stack mt={{ base: 2, md: -6 }} ms={{ md: "72px" }}>
+                          {/* Wallet Personas supported */}
+                          {hasPersonasLabels && (
+                            <Flex gap={1.5} wrap="wrap">
+                              {walletPersonas.map((persona) => (
+                                <Tag key={persona} label={t(persona)} />
+                              ))}
+                            </Flex>
+                          )}
+
+                          <Stack gap={2} mb={{ base: 0, md: 3 }}>
+                            {/* Device labels */}
+                            {hasDeviceLabels && (
+                              <Flex
+                                alignItems="center"
+                                gap={3}
+                                display={hasDeviceLabels ? "flex" : "none"}
+                              >
+                                <Icon as={DevicesIcon} fontSize="2xl" />
+
+                                <Text
+                                  fontSize="md !important"
+                                  fontWeight="normal !important"
+                                >
+                                  {deviceLabels.join(" · ")}
+                                </Text>
+                              </Flex>
+                            )}
+
+                            {/* Supported languages */}
+                            <Flex alignItems="center" gap={3}>
+                              <Icon as={LanguagesIcon} fontSize="2xl" />
+
+                              <Text
+                                fontSize="md !important"
+                                fontWeight="normal !important"
+                              >
+                                {/* Show up to 5 supported languages and use a tooltip for the rest */}
+                                {`${formattedSupportedLanguages}`}{" "}
+                                {rest > 0 && (
+                                  <SupportedLanguagesTooltip
+                                    supportedLanguages={supportedLanguages}
+                                    restText={restText}
+                                  />
+                                )}
+                              </Text>
+                            </Flex>
+                          </Stack>
+
+                          {/* Wallet Website Button (desktop) */}
+                          <Box display={{ base: "none", md: "block" }}>
+                            <ButtonLink
+                              to={wallet.url}
+                              variant="outline"
+                              w="auto"
+                              isExternal
+                              size="sm"
+                            >
+                              {t("page-find-wallet-visit-website")}
+                            </ButtonLink>
+                          </Box>
+                        </Stack>
+                      </Box>
+                    </FlexInfo>
+
+                    <FlexInfoCenter>
+                      <Box>
+                        <Icon
+                          as={wallet.moreInfo ? MdExpandLess : MdExpandMore}
+                          color="primary.base"
+                          fontSize={{ base: "5xl", md: "4xl" }}
+                        />
+                      </Box>
+                    </FlexInfoCenter>
+                  </Flex>
+                  {/* Wallet Website Button (mobile) */}
+                  <Box display={{ base: "block", md: "none" }} mt={6} w="100%">
+                    <ButtonLink
+                      to={wallet.url}
+                      variant="outline"
+                      w="100%"
+                      isExternal
+                      size="sm"
+                    >
+                      {t("page-find-wallet-visit-website")}
+                    </ButtonLink>
                   </Box>
-                </FlexInfo>
-              </Td>
-              <Td>
-                <FlexInfoCenter className={firstCol}>
-                  {wallet[firstFeatureSelect.filterKey!] ? (
-                    <GreenCheckProductGlyphIcon />
-                  ) : (
-                    <WarningProductGlyphIcon />
-                  )}
-                </FlexInfoCenter>
-              </Td>
-              <Td>
-                <FlexInfoCenter className={secondCol}>
-                  {wallet[secondFeatureSelect.filterKey!] ? (
-                    <GreenCheckProductGlyphIcon />
-                  ) : (
-                    <WarningProductGlyphIcon />
-                  )}
-                </FlexInfoCenter>
-              </Td>
-              <Td>
-                <FlexInfoCenter className={thirdCol}>
-                  {wallet[thirdFeatureSelect.filterKey!] ? (
-                    <GreenCheckProductGlyphIcon />
-                  ) : (
-                    <WarningProductGlyphIcon />
-                  )}
-                </FlexInfoCenter>
-              </Td>
-              <Td>
-                <FlexInfoCenter>
-                  <Box>
-                    <Icon
-                      as={wallet.moreInfo ? MdExpandLess : MdExpandMore}
-                      color="primary.base"
-                      fontSize="2xl"
-                    />
-                  </Box>
-                </FlexInfoCenter>
-              </Td>
-            </Wallet>
-            {wallet.moreInfo && (
-              <WalletMoreInfo
-                wallet={wallet}
-                filters={filters}
-                idx={idx}
-                featureDropdownItems={featureDropdownItems}
-              />
-            )}
-          </WalletContainer>
-        )
-      })}
+                </Td>
+              </Wallet>
+
+              {wallet.moreInfo && (
+                <WalletMoreInfo
+                  wallet={wallet}
+                  filters={filters}
+                  idx={idx}
+                  featureDropdownItems={featureDropdownItems}
+                  hasAllLabels={hasAllLabels}
+                />
+              )}
+            </WalletContainer>
+          )
+        })}
     </Container>
   )
 }

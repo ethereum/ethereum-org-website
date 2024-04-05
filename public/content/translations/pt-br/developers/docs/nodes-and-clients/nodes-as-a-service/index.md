@@ -41,7 +41,7 @@ O principal benefício para usar um serviço de nós é não ter de gastar tempo
 
 Executar seus próprios nós pode ser muito caro, quer seja de armazenamento, largura de banda, quer de tempo de engenharia. Dispor de mais nós ao dimensionar, atualizar nós para as versões mais recentes e garantir a consistência dos estados pode roubar tempo para criar e usar recursos no seu produto web3 desejado.
 
-## Quais são os benefícios do uso do serviço de nós? {#cons-of-using-a-node-service}
+## Quais são os contras do uso do serviço de nós? {#cons-of-using-a-node-service}
 
 Usando um serviço nó você está centralizando o aspecto da infraestrutura do seu produto. Por esse motivo, os projetos que dão à descentralização a maior importância podem preferir nós de auto-hospedagem a terceirizar o serviço a terceiros.
 
@@ -252,7 +252,7 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
   - Recursos
     - Protocolo RPC descentralizado e mercado
     - 1 milhão de solicitações gratuitas por dia (por ponto de extremidade, máx. 2)
-    - [Pontos de extremidade públicos](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [Pontos de extremidade públicos](https://docs.pokt.network/developers/public-endpoints)
     - Programa Pre-Stake+ (se você precisar de mais de 1 milhão de solicitações por dia)
     - Mais de 15 blockchains compatíveis
     - Mais de 6.400 nós com ganhos de POKT a serviço dos aplicativos

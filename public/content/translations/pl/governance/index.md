@@ -175,9 +175,9 @@ Kiedy łańcuch śledzący połączył się z warstwą wykonawczą Ethereum 15 w
 
 Zarządzanie w Ethereum nie jest jednoznacznie zdefiniowane. Perspektywy na ten temat różnią się wśród różnych uczestników społeczności. Oto kilka z nich:
 
-- [Uwagi na temat zarządzania blockchainem](https://vitalik.eth.limo/general/2017/12/17/voting.html) — _Vitalik Buterin_
+- [Więcej o zarządzaniu blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) – _Vitalik Buterin_
 - [Jak działa zarządzanie Ethereum?](https://cryptotesters.com/blog/ethereum-governance) — _Cryptotesters_
 - [Jak działa zarządzanie Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) — _Micah Zoltu_
 - [Czym jest główny deweloper Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) — _Hudson Jameson_
-- [Zarządzanie, część 2: plutokracja wciąż jest zła](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) — _Vitalik Buterin_
-- [Wyjście poza zarządzanie głosowaniem monetami](https://vitalik.eth.limo/general/2021/08/16/voting3.html) — _Vitalik Buterin_
+- [Zarządzanie, część 2: plutokracja jest nadal zła](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
+- [Wyjście poza zarządzanie głosowaniem monetami](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_

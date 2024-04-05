@@ -103,11 +103,12 @@ _この動画の説明では、「レイヤー2」という用語をオフチェ
 - [ロールアップを重視したイーサリアム・ロードマップ](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _ヴィタリック・ブテリン作成。_
 - [イーサリアムのレイヤー2スケーリング・ソリューションに関する最新のアナリティクス](https://www.l2beat.com/)
 - [イーサリアムの様々なレイヤー2のスケーリングソリューションを評価する：比較のフレームワーク](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [ロールアップに関する不完全ガイド](https://vitalik.ca/general/2021/01/05/rollup.html)
+- [ロールアップに関する不完全ガイド](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [イーサリアムを活用したゼロ知識ロールアップ：ワールドビーター](https://hackmd.io/@canti/rkUT0BD8K)
 - [オプティミスティック・ロールアップ とゼロ知識ロールアップの比較](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [ゼロ知識によるブロックチェーンのスケーラビリティ](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [ロールアップとデータシャードを組み合わせる手段が、高スケーラビリティを実現する唯一のサステナブルなソリューションである理由](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
-- [有意義なレイヤー3とはどのようなものか？](https://vitalik.ca/general/2022/09/17/layer_3.html)
+- [有意義なレイヤー3とはどのようなものか？](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
+- [データ可用性か、あるいは： ロールアップで心配することを止めてイーサリアムを愛するようになった仕組み](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
 
 _役に立ったコミュニティリソースがあれば、 ぜひこのページに追加してください。_

@@ -136,8 +136,9 @@ const AddressCard = (props: ChildOnlyProp) => {
   )
 }
 
-const Address = (props: ChildOnlyProp) => (
+const Address = forwardRef<ChildOnlyProp, "div">((props, ref) => (
   <Box
+    ref={ref}
     fontFamily="monospace"
     borderRadius="sm"
     fontSize="2rem"
@@ -147,7 +148,7 @@ const Address = (props: ChildOnlyProp) => (
     mb={4}
     {...props}
   />
-)
+))
 
 const CopyButton = (props: ButtonProps) => (
   <Button
@@ -352,7 +353,7 @@ const DepositContractPage = () => {
           <OldHeading>{t("page-staking-deposit-contract-h2")}</OldHeading>
           <Text>
             {t("page-staking-deposit-contract-staking")}{" "}
-            <InlineLink to="/staking/">
+            <InlineLink href="/staking/">
               {t("page-staking-deposit-contract-staking-more-link")}
             </InlineLink>
           </Text>
@@ -479,7 +480,7 @@ const DepositContractPage = () => {
               <InfoBanner isWarning emoji=":warning:">
                 <div>
                   {t("page-staking-deposit-contract-warning-2")}{" "}
-                  <InlineLink to="https://launchpad.ethereum.org">
+                  <InlineLink href="https://launchpad.ethereum.org">
                     {t("page-staking-deposit-contract-launchpad-2")}
                   </InlineLink>
                 </div>

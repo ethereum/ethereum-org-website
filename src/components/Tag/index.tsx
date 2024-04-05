@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react"
 
 export interface EthTagProps extends TagProps {
-  label: string
+  label: React.ReactNode
   isCloseable?: boolean
   leftIcon?: React.ElementType
   rightIcon?: React.ElementType
