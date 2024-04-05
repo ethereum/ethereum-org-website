@@ -6,47 +6,45 @@ import { ONE, TIMEOUT_DURATION_MS, ZERO } from "./constants"
 
 export const getLastQuarter = (): { from: string; to: string } => {
   const now = new Date()
+
   // Months per quarter
   const MPQ = 12 / 4
+
   // Get current quarter
-  const currentQ = Math.floor(now.getMonth() / MPQ)
+  const currentQ = Math.floor(now.getUTCMonth() / MPQ)
+
   // Get start of current quarter
-  const timezoneOffset = now.getTimezoneOffset()
-  const hours = -(timezoneOffset / 60)
-  const currentQStart = new Date(now.getFullYear(), currentQ * MPQ, 1, hours)
-  // Get end of last quarter, 1 less than start of current
-  const lastQEnd = currentQStart
-  lastQEnd.setDate(lastQEnd.getDate() - 1)
+  const currentQStart = new Date(now.getUTCFullYear(), currentQ * MPQ)
+  currentQStart.setUTCHours(0)
+
   // Get start of last quarter
-  const lastQStart = new Date(lastQEnd)
-  lastQStart.setMonth(lastQStart.getMonth() - MPQ)
-  lastQStart.setDate(lastQStart.getDate() + 1)
+  const lastQStart = new Date(currentQStart)
+  lastQStart.setUTCMonth(lastQStart.getUTCMonth() - MPQ)
 
   // Return ISO strings of start and end of last quarter
   return {
     from: lastQStart.toISOString(),
-    to: lastQEnd.toISOString(),
+    to: currentQStart.toISOString(),
   }
 }
 
 export const getLastMonth = (): { from: string; to: string } => {
   const now = new Date()
   // Get current month
-  const currentM = now.getMonth()
+  const currentM = now.getUTCMonth()
   // Get start of current month
-  const timezoneOffset = now.getTimezoneOffset()
-  const hours = -(timezoneOffset / 60)
-  const currentMStart = new Date(now.getFullYear(), currentM, 1, hours)
-  // Get end of last month, 1 less than start of current
-  const lastMEnd = currentMStart
-  lastMEnd.setDate(lastMEnd.getDate() - 1)
+  const currentMStart = new Date(now.getUTCFullYear(), currentM)
+  currentMStart.setUTCDate(1)
+  currentMStart.setUTCHours(0)
+
   // Get start of last month
-  const lastMStart = new Date(lastMEnd)
-  lastMStart.setMonth(lastMStart.getMonth() - 1)
+  const lastMStart = new Date(currentMStart)
+  lastMStart.setUTCMonth(lastMStart.getUTCMonth() - 1)
+
   // Return ISO strings of start and end of last month
   return {
     from: lastMStart.toISOString(),
-    to: lastMEnd.toISOString(),
+    to: currentMStart.toISOString(),
   }
 }
 
