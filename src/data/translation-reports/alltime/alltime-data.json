@@ -29011,7 +29011,7 @@
     "username": "GoForceX",
     "fullName": "GoForceX",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15073799/medium/a33ad8c1e01cf31890babace80908193.png",
-    "totalCosts": 4496,
+    "totalCosts": 4870,
     "langs": [
       "Chinese Simplified"
     ]
@@ -30041,7 +30041,7 @@
     "username": "HiroyukiNaito",
     "fullName": "Hiroyuki Naito (HiroyukiNaito)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg",
-    "totalCosts": 254785,
+    "totalCosts": 254992,
     "langs": [
       "Japanese",
       "Turkish"
@@ -34768,7 +34768,7 @@
     "username": "MGETH",
     "fullName": "MGETH",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15194310/medium/7729d9dbda8c9420c26f689b4a2b2918.jpg",
-    "totalCosts": 89938,
+    "totalCosts": 90399,
     "langs": [
       "Spanish (Modern)"
     ]
@@ -44345,6 +44345,15 @@
     "totalCosts": 0,
     "langs": [
       "Russian"
+    ]
+  },
+  {
+    "username": "vahidyolme",
+    "fullName": "Vahid Yolme (vahidyolme)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16312854/medium/59bb121788a2cce1aea7a36a5a3fcddf.jpeg",
+    "totalCosts": 22,
+    "langs": [
+      "Persian"
     ]
   },
   {

@@ -984,7 +984,7 @@
     "username": "AleCox1980",
     "fullName": "Alexia (AleCox1980)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16293112/medium/3cc05399e6a1c894db05b1b9eb0ff61d.jpeg",
-    "totalCosts": 4007,
+    "totalCosts": 4395,
     "langs": [
       "Spanish (Modern)",
       "Italian"
@@ -1557,7 +1557,7 @@
     "username": "HiroyukiNaito",
     "fullName": "Hiroyuki Naito (HiroyukiNaito)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15208868/medium/4ed4a0a0659f1c63e52f395079aeb3c4.jpg",
-    "totalCosts": 21311,
+    "totalCosts": 21708,
     "langs": [
       "Japanese"
     ]
@@ -2128,7 +2128,7 @@
     "username": "queenie0815",
     "fullName": "Queenie Chang (queenie0815)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15954333/medium/589465a479a53254001094f2a4322a0f.png",
-    "totalCosts": 443,
+    "totalCosts": 543,
     "langs": [
       "Chinese Traditional"
     ]
@@ -2383,6 +2383,15 @@
     "totalCosts": 2102,
     "langs": [
       "Galician"
+    ]
+  },
+  {
+    "username": "waseemjala65",
+    "fullName": "Waseem JA (waseemjala65)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16304914/medium/10f65ab57ab94cf712cca6343a064c2f.png",
+    "totalCosts": 13,
+    "langs": [
+      "Arabic"
     ]
   },
   {
@@ -2678,6 +2687,15 @@
     ]
   },
   {
+    "username": "awaqawaqawaq",
+    "fullName": "why w (awaqawaqawaq)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16305066/medium/febb7c36c1e23a133cc7a9ed3718af9e.jpeg",
+    "totalCosts": 7,
+    "langs": [
+      "Chinese Simplified"
+    ]
+  },
+  {
     "username": "wosek_",
     "fullName": "wosek_",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15894449/medium/a1d92e3a822252a09f842a8a5451c403.jpg",
@@ -2690,7 +2708,7 @@
     "username": "Xeift",
     "fullName": "xeift.eth (Xeift)",
     "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/15399006/medium/4b4638642287027a89529ecb11074e44.png",
-    "totalCosts": 5666,
+    "totalCosts": 5725,
     "langs": [
       "Chinese Traditional"
     ]
@@ -2892,6 +2910,15 @@
     "totalCosts": 0,
     "langs": [
       "Chinese Simplified"
+    ]
+  },
+  {
+    "username": "shseo80",
+    "fullName": "서신희 (shseo80)",
+    "avatarUrl": "https://crowdin-static.downloads.crowdin.com/avatar/16305434/medium/e36a53b231a61fce14401b8c348ae508.png",
+    "totalCosts": 8,
+    "langs": [
+      "Korean"
     ]
   }
 ]
