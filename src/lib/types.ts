@@ -278,6 +278,74 @@ type TranslatedStats = {
   total: number
 }
 
+/**
+ * Translation cost report
+ */
+type DateRange = { from: string; to: string }
+type Total = { total: number }
+type Cost = {
+  tmMatch: { "100": number; perfect: number }
+  mtMatch: { "100": string }
+  suggestionMatch: { "100": number }
+  total: number
+  default: { noMatch: number }
+}
+
+type CrowdinUser = {
+  id: number
+  username: string
+  fullName: string
+  avatarUrl: string
+  roleTitle: string
+}
+
+type CostItem = {
+  approvalCosts: Total
+  preTranslated: Cost
+  savings: Omit<Cost, "default">
+  totalCosts: number
+  translationCosts: Cost
+}
+
+type ReportLanguageItem = {
+  id: string
+  name: string
+  roleTitle: string
+}
+
+type ReportLanguage = CostItem & {
+  approvalRate: number
+  approved: Total
+  language: ReportLanguageItem
+  targetTranslated: Cost
+  translated: Cost
+  translatedByMt: Cost
+  translationRates: Omit<Cost, "total">
+}
+
+type DataItem = CostItem & {
+  user: CrowdinUser
+  languages: ReportLanguage[]
+}
+
+export type TranslationCostReport = CostItem & {
+  name: string
+  url: string
+  unit: string
+  dateRange: DateRange
+  currency: string
+  data: DataItem[]
+}
+
+export type CostLeaderboardData = Pick<
+  CrowdinUser,
+  "username" | "fullName" | "avatarUrl"
+> &
+  Pick<CostItem, "totalCosts"> & {
+    langs: string[]
+  }
+
+// TODO: Deprecate AllTimeData
 export type AllTimeData = {
   name: string
   url: string
