@@ -158,7 +158,7 @@ sidebarDepth: 2
     - [公共端点](https://eth.drpc.org)
     - 免费共享归档节点
 - [**GetBlock**](https://getblock.io/)
-  - [相关文档](https://getblock.io/docs/get-started/authentication-with-api-key/)
+  - [文档](https://getblock.io/docs/get-started/authentication-with-api-key/)
   - 特性
     - 访问超过 40 个区块链节点
     - 4 万个每日免费请求
@@ -243,7 +243,7 @@ sidebarDepth: 2
     - 访问超过 50 个区块链节点
     - 免费应用程序接口密钥
     - 区块浏览器
-    - 应用程序接口响应时间 ⩽ 1 秒
+    - 应用程序接口响应时间 ⩽ 1秒
     - 全天候支持团队
     - 个人帐户经理
     - 共享、归档、备份和专用节点
@@ -252,7 +252,7 @@ sidebarDepth: 2
   - 功能
     - 去中心化的远程过程调用协议和市场
     - 每天 100 万个请求的免费套餐（每个端点，最多 2 个）
-    - [公共端点](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [公共端点](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ 计划（如果你每天需要超过 100 万个请求）
     - 支持超过 15 条区块链
     - 6400 多个节点为应用程序服务并赚取 POKT
@@ -320,7 +320,7 @@ sidebarDepth: 2
     - 简单的访问密钥管理
     - 通过聊天、电邮和 Discord 提供专门的工程支持
 - [**Watchdata**](https://watchdata.io/)
-  - [相关文档](https://docs.watchdata.io/)
+  - [文档](https://docs.watchdata.io/)
   - 特性
     - 数据可靠性
     - 不间断连接，不会出现停机
@@ -331,7 +331,7 @@ sidebarDepth: 2
     - 资源扩容
     - 处理速度快
 - [**ZMOK**](https://zmok.io/)
-  - [相关文档](https://docs.zmok.io/)
+  - [文档](https://docs.zmok.io/)
   - 特性
     - 前台运行即服务
     - 带有搜索/过滤方法的全局交易内存池
@@ -339,7 +339,7 @@ sidebarDepth: 2
     - 最快获取新区块和读取区块链
     - 每个应用程序接口调用的最优价格保证
 - [**Chainbase**](https://www.chainbase.com/)
-  - [相关文档](https://docs.chainbase.com)
+  - [文档](https://docs.chainbase.com)
   - 特性
     - 高可用性、高速和可扩展的远程过程调用服务
     - 多链支持
@@ -349,7 +349,7 @@ sidebarDepth: 2
 
 [**Zeeve**](https://www.zeeve.io/)
 
-- [相关文档](https://www.zeeve.io/docs/)
+- [文档](https://www.zeeve.io/docs/)
 - 特性
   - 企业级无代码自动化平台，提供区块链节点和网络的部署、监控和管理
   - 超过 30 种支持的协议与集成，种类还在增加
@@ -361,7 +361,7 @@ sidebarDepth: 2
 
 [**Tokenview**](https://services.tokenview.io/)
 
-- [相关文档](https://services.tokeniew/docs?type=nodeService)
+- [文档](https://services.tokeniew/docs?type=nodeService)
 - 特性
   - 全天候技术支持和开发者 Telegram 社区
   - 多链支持（比特币、以太坊、Tron、BNB Smart Chain 和以太坊经典）

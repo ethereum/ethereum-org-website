@@ -378,7 +378,7 @@ Label yang diberikan ke beberapa [EIP](#eip) yang berusaha untuk menentukan stan
 
 Sebuah algoritma [bukti kerja](#pow) yang digunakan pada Ethereum sebelum bertransisi ke [bukti taruhan](#pos).
 
-[Baca lebih lanjut](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
+[Baca lebih lanjut](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)
 
 ### ether {#ether}
 

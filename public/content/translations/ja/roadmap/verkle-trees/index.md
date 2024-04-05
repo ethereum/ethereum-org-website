@@ -49,12 +49,13 @@ summaryPoints:
 
 バークルツリーのテストネットはすでに稼働していますが、バークルツリーをサポートするために必要なクライアントの更新はまだたくさん残っています。 コントラクトをテストネットにデプロイしたり、テストネットでクライアントを実行したりすることで、開発を進めるお手伝いができます。
 
-[ビバリーヒルズ・バークルテストネットの探索](https://beverlyhills.ethpandaops.io)
+[ Verkle Gen Devnet 2テストネットを探索する](https://verkle-gen-devnet-2.ethpandaops.io/)
 
-[Guillaume BalletによるCondrieuバークルテストネットの説明をご覧ください](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (Condrieuテストネットはプルーフ・オブ・ワークでしたが、現在は[Kaustinenテストネット](https://kaustinen.ethdevops.io)に置き換えらていることにご注意ください)。
+[Guillaume BalletによるCondrieuバークルテストネットの説明をご覧ください](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (Condrieuテストネットはプルーフ・オブ・ワークでしたが、現在はVerkle Gen Devnet 2テストネットに置き換えらていることにご注意ください)。
 
 ## 参考文献 {#further-reading}
 
+- [ステートレスのためのバークルツリー](https://verkle.info/)
 - [ダンクラッド・フィーストによるPEEPanEIPでのバークルツリーの説明](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume BalletによるETHGlobalでのバークルツリーの説明](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [Devcon6でのGuillaume Balletによる「バークルツリーがイーサリアムを効率的にする仕組み」](https://www.youtube.com/watch?v=Q7rStTKwuYs)

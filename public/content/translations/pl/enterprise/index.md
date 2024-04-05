@@ -51,7 +51,7 @@ Różne organizacje podjęły pewne wspólne działania, aby uczynić Ethereum p
 
 - [Alchemia](https://alchemyapi.io/) _dostarcza usługi API i narzędzia do budowania i monitorowania aplikacji w Ethereum_
 - [Blockapps](https://blockapps.net/) _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
-- [ConsenSys](https://consensys.net/) _zapewnia szereg produktów i narzędzi do budowania na Ethereum, a także doradztwo i niestandardowe usługi programistyczne _
+- [ConsenSys](https://consensys.io/) _zapewnia szereg produktów i narzędzi do budowania na Ethereum, a także doradztwo i niestandardowe usługi programistyczne _
 - [Envision Blockchain](https://envisionblockchain.com/) _zapewnia usługi konsultingowe i programistyczne zorientowane na przedsiębiorstwa, specjalizujące się w sieciach głównych Ethereum_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _zapewnia przepływ pracy poprzez wystawianie zapytań ofertowych, umów, zamówień zakupu i faktury w Twojej sieci zaufanych partnerów biznesowych_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ukierunkowany na przedsiębiorstwa klient Ethereum typu open source opracowany na licencji Apache 2.0 i napisany w Javie_
@@ -126,14 +126,12 @@ Oto niektóre aplikacje dla przedsiębiorstw, które zostały wdrożone w public
 ### Notarialne poświadczenie danych {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _szczegóły sfinalizowanych pożyczek są zhaszowane i zarejestrowane w sieci głównej_
-- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _integralność danych może być zapewnione przez okresowe zapisywanie hashów zindeksowanych danych do sieci głównej_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _największa włoska agencja informacyjna walcząca z fałszywymi wiadomościami i umożliwiająca odbiorcom weryfikację pochodzenia wiadomości poprzez rejestrowanie ich w sieci głównej_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _rejestruje informacje prasowe dotyczące Ethereum, aby zapewnić odpowiedzialność i zaufanie korporacyjne_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _rejestruje pochodzenie i historie napraw zegarków w Ethereum_
 
 ### Łańcuch dostaw {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _dostawca listu przewozowego i transferu dokumentów_
 - [Morpheus.network](https://morpheus.network/) _platforma automatyzacji łańcucha dostaw, która implementuje hybrydę prywatnych łańcuchów z danymi poświadczonymi notarialnie w sieci głównej Ethereum, i jest używany przez firmy takie jak kanadyjski dystrybutor żywności, ropy i gazu Federated Co-op Ltd. i argentyński dostawca karmy dla zwierząt Vitalcan_
 - [Minespider](https://www.minespider.com/) _śledzenie łańcucha dostaw_
 - [ShipChain](https://shipchain.io) _publiczny łańcuch boczny Ethereum i system korporacyjny zapewniający widoczność i zaufanie łańcucha dostaw, zwłaszcza w przypadku logistyki multimodalnej_

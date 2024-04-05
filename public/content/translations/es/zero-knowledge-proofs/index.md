@@ -4,7 +4,7 @@ description: Introducción no técnica a pruebas de conocimiento cero para princ
 lang: es
 ---
 
-# ¿Qué son las pruebas de conocimiento cero? {#what-are-zk-proofs}
+## ¿Qué son las pruebas de conocimiento cero? {#what-are-zk-proofs}
 
 Una prueba de conocimiento cero es una forma de probar la validez de una sentencia sin revelar la sentencia en sí. El "probador" (también conocido como tirador de pruebas) es la parte que intenta probar o demostrar una afirmación, mientras que el "verificador" es el responsable de validarla.
 
@@ -203,10 +203,10 @@ ZK-STARK se considera inmune a la amenaza de la informática cuántica, ya que u
 ## Para mayor información {#further-reading}
 
 - [Científico informático explica un concepto en 5 niveles de dificultad | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Canal de YouTube de Wired_
-- [Descripción general de casos de uso de las pruebas de conocimiento cero](https://appliedzkp.org/#Projects) — _Equipo de Privacy and Scaling Explorations_
+- [Descripción general de los casos de uso para pruebas de conocimiento cero](https://pse.dev/projects): _Equipo de exploración de privacidad y escalabilidad_
 - [SNARKs vs. STARKs vs. SNARKs recursivos](https://www.alchemy.com/overviews/snarks-vs-starks) — _Descripciones generales de Alchemy_
 - [Prueba de conocimiento cero: mejorar la privacidad en una cadena de bloques](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [SNARK de conocimiento cero: ejemplo realista de conocimiento cero y análisis detallado](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [STARK de conocimiento cero: crear confianza verificable incluso contra ordenadores cuánticos](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Introducción aproximada sobre cómo son posibles los SNARK de conocimiento cero](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Una introducción aproximada a cómo son posibles los zk-SNARK](https://vitalik.eth.limo/general/2021/01/26/snarks.html), _Vitalik Buterin_
 - [Qué es la prueba de conocimiento cero y su rol en las cadenas de bloques](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

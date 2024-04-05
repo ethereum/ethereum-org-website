@@ -151,7 +151,7 @@ Iată o listă cu unii dintre cei mai cunoscuți furnizori de noduri Ethereum; n
   - Caracteristici
     - Protocol RPC descentralizat și piață de desfacere
     - Nivel gratuit de 1 milion de cereri pe zi (per punct final, maxim 2)
-    - [Puncte finale publice](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [Puncte finale publice](https://docs.pokt.network/developers/public-endpoints)
     - Programul Pre-Mizare (dacă aveți nevoie de mai mult de 1M de solicitări pe zi)
     - 15+ blockchain-uri acceptate
     - 6400+ Noduri care câștigă POKT pentru servirea aplicațiilor

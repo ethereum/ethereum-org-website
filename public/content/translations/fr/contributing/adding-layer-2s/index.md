@@ -78,7 +78,7 @@ _Nous ne considérons pas comme relevant de la couche 2 les autres solutions d'�
 
 **Liens vers des dApps dans l'écosystème de la Couche 2**
 
-- Nous voulons être en mesure de fournir des informations sur ce que les utilisateurs peuvent s'attendre à pouvoir faire sur cette Couche 2. (ex. : https://portal.arbitrum.one/, https://www.optimism.io/apps/all)
+- Nous voulons être en mesure de fournir des informations sur ce que les utilisateurs peuvent s'attendre à pouvoir faire sur cette Couche 2. (ex. : https://portal.arbitrum.io/, https://www.optimism.io/apps)
 
 **Listes de contrat de jetons**
 
