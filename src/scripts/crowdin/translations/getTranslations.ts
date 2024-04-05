@@ -1,10 +1,11 @@
 import fs from "fs"
 
+import { checkMarkdown } from "../../markdownChecker"
 import crowdin from "../api-client/crowdinClient"
 import { main as crowdinImport } from "../import/main"
 import type { BucketsList } from "../import/types"
 
-import { DOT_CROWDIN, FILE_PATH } from "./constants"
+import { DOT_CROWDIN, FILE_PATH, SUMMARY_PATH } from "./constants"
 import { decompressFile, downloadFile, getBuckets } from "./utils"
 
 import "dotenv/config"
@@ -40,6 +41,10 @@ async function main() {
 
     // Run Crowdin import script with buckets from Notion
     crowdinImport(buckets)
+
+    // Check markdown
+    checkMarkdown(SUMMARY_PATH)
+
   } catch (error: unknown) {
     console.error((error as Error).message)
   }
