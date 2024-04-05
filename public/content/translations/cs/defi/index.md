@@ -47,7 +47,7 @@ Jedním z nejlepších způsobů, jak vidět potenciál DeFi je pochopit problé
 | Trhy jsou vždy otevřené.                                                                                        | Trhy se zavírají, protože zaměstnanci potřebují přestávky.                                                                                        |
 | Je postaveno na transparentnosti – kdokoli se může podívat na data produktu a zkontrolovat, jak systém funguje. | Finanční instituce jsou uzavřeným účetnictvím: nemůžete je požádat o nahlédnutí do jejich úvěrové historie, záznamu o spravovaných aktivech apod. |
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Objevte DeFi aplikace
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Zní to zvláštně... "Proč bych chtěl programovat své peníze"? Toto je vš
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Prozkoumejte naše návrhy pro DeFi aplikace a vyzkoušet je, pokud jste v Ethereu noví.</div>
-  <ButtonLink to="/dapps/?category=finance#explore">
+  <ButtonLink to="/dapps/?category=finance">
     Objevte DeFi aplikace
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ Existuje decentralizovaná alternativa k většině finančních služeb. Ethere
 
 Protože je Ethereum blockchain, je navržen pro zasílání bezpečných a celosvětových transakcí. Stejně jako Bitcoin umožňuje Ethereum posílat peníze po celém světě stejně snadno jako poslat e-mail. Stačí zadat příjemcovo [ENS jméno](/nft/#nft-domains) (např. bob.eth) nebo adresu jeho účtu z vaší peněženky a vaše platba mu (obvykle) během několika minut přijde. Chcete-li posílat nebo přijímat platby, budete potřebovat [peněženku](/wallets/).
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Zobrazit platební decentralizované aplikace
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Půjčování peněz od decentralizovaných poskytovatelů má dvě hlavní vari
 - Peer-to-peer, což znamená, že si dlužník půjčí přímo od konkrétního věřitele.
 - Poolové půjčky, kde věřitelé poskytují finanční prostředky (likviditu) do poolu, ze kterého si poté dlužníci mohou půjčovat.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Zobrazit decentralizované aplikace na půjčky
 </ButtonLink>
 
@@ -183,7 +183,7 @@ Půjčováním kryptoměn můžete vydělávat na úrocích a sledovat růst sv�
 - Váš aDai se bude zvyšovat na základě úrokových sazeb a v peněžence uvidíte rostoucí zůstatek. V závislosti na RPSN bude zůstatek ve vaší peněžence po několika dnech nebo dokonce hodinách činit například 100,1234!
 - Kdykoli si můžete vybrat částku běžných Dai, která se rovná vašemu zůstatku aDai.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Zobrazit decentralizované aplikace na půjčování
 </ButtonLink>
 
@@ -211,7 +211,7 @@ Na Ethereu jsou tisíce tokenů. Decentralizované burzy (DEXy) umožňují obch
 
 Chcete-li se například zúčastnit bezztrátové loterie PoolTogether (popsané výše), budete potřebovat token Dai nebo USDC. Tyto DEXy vám umožní vyměnit ETH za tyto tokeny a zase zpět, až budete hotovi.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Zobrazit burzy tokenů
 </ButtonLink>
 
@@ -223,7 +223,7 @@ Pro obchodníky, kteří mají rádi větší kontrolu, jsou k dispozici pokroč
 
 Když používáte centralizovanou burzu, musíte svá aktiva před obchodem uložit a důvěřovat jí, že se o ně postará. Zatímco jsou vaše aktiva uložena, jsou v ohrožení, protože centralizované burzy jsou atraktivním cílem pro hackery.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Zobrazit decentralizované aplikace na obchodování
 </ButtonLink>
 
@@ -235,7 +235,7 @@ Na Ethereu existují produkty pro správu fondů, které se snaží rozšířit 
 
 Dobrým příkladem je fond [DeFi Pulse Index (DPI)](https://defipulse.com/blog/defi-pulse-index/). Jedná se o fond, který se automaticky rebalancuje, aby vaše portfolio vždy zahrnovalo [nejlepší DeFi tokeny podle tržní kapitalizace](https://www.coingecko.com/en/defi). Nikdy se nemusíte starat o žádné podrobnosti a z fondu můžete vybírat, kdykoli se vám zachce.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Zobrazit investiční decentralizované aplikace
 </ButtonLink>
 
@@ -249,7 +249,7 @@ Ethereum je ideální platformou pro crowdfunding:
 - Je transparentní, takže sponzoři mohou prokázat, kolik peněz se podařilo vybrat. Později můžete dokonce sledovat, jak je s prostředky vynaloženo.
 - Sponzoři mohou nastavit automatické vracení peněz, například pokud není dodržen určitý termín a minimální částka.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Zobrazit decentralizované aplikace na crowdfunding
 </ButtonLink>
 
@@ -276,7 +276,7 @@ Cílem decentralizovaného pojištění je zlevnit pojištění, urychlit výpla
 
 Ethereum produkty, stejně jako ostatní software, mohou trpět chybami a zneužíváním. Mnoho pojišťovacích produktů v této oblasti se nyní zaměřuje na ochranu uživatelů před ztrátou finančních prostředků. Existují ale i projekty, které začínají vytvářet krytí pro všechno, co nám život může přinést. Dobrým příkladem je projekt společnosti Etherisc Crop, jehož cílem je [ochránit drobné zemědělce v Keni před suchem a povodněmi](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Decentralizované pojištění může poskytnout levnější krytí zemědělcům, kteří jsou často z tradičního pojištění vyřazeni.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Zobrazit decentralizované aplikace na pojištění
 </ButtonLink>
 
@@ -286,7 +286,7 @@ Ethereum produkty, stejně jako ostatní software, mohou trpět chybami a zneuž
 
 Vzhledem k tomuto všemu potřebujete mít přehled o všech svých investicích, půjčkách a obchodech. Existuje celá řada produktů, které umožňují koordinovat všechny aktivity DeFi z jednoho místa. V tom spočívá krása otevřené architektury DeFi. Týmy mohou vytvořit rozhraní, ve kterých můžete nejen vidět své zůstatky napříč produkty, ale také používat jejich funkce. Mohlo by se vám to hodit, až budete prozkoumávat další části DeFi.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Zobrazit decentralizované aplikace na portfolia
 </ButtonLink>
 

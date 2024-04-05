@@ -276,7 +276,7 @@ Etherscanにアクセスするとコントラクトのオペコードを入手�
 |    10 | PUSH1 0xe0   | 0xE0 (((First word (256 bits) of the call data))) |
 |    12 | SHR          | (((first 32 bits (4 bytes) of the call data)))    |
 
-Etherscanでは、`1C`が未知のオペコードとなっていますが、これは[Etherscanでこの機能が作成された後に追加された](https://eips.ethereum.org/EIPS/eip-145)ため、まだ反映がされていないのが理由です。 An [up to date opcode table](https://github.com/wolflo/evm-opcodes) shows us that this is shift right
+Etherscanでは、`1C`が未知のオペコードとなっていますが、これは[Etherscanでこの機能が作成された後に追加された](https://eips.ethereum.org/EIPS/eip-145)ため、まだ反映がされていないのが理由です。 [最新のオペコードテーブル](https://github.com/wolflo/evm-opcodes)では、これが右シフトであることが示されています
 
 | オフセット | オペコード            | スタック                                                                                                     |
 | -----:| ---------------- | -------------------------------------------------------------------------------------------------------- |

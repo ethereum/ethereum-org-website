@@ -4,13 +4,14 @@ description: マージについて - イーサリアムメインネットへの�
 lang: ja
 template: upgrade
 image: /upgrades/merge.png
+alt:
 summaryPoint1: イーサリアムメインネットは現在プルーフ・オブ・ステークを使用していますが、これまではそうではありませんでした。
 summaryPoint2: 旧プルーフ・オブ・ワークのメカニズムからプルーフ・オブ・ステークへのアップグレードはマージと呼ばれます。
 summaryPoint3: マージとは、元のイーサリアムメインネットが、ビーコンチェーンとよばれる別のプルーフ・オブ・ステークのブロックチェーンと統合(マージ)し、1つのチェーンになったことを意味します。
-summaryPoint4: マージによりイーサリアムのエネルギー消費が最大99.95%削減されました。
+summaryPoint4: マージによりイーサリアムのエネルギー消費が99.95%削減されました。
 ---
 
-<UpgradeStatus dateKey="page-upgrades-beacon-date">
+<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
   マージは、2022年9月15日に行われました。 これにより、イーサリアムはプルーフ・オブ・ステーク・コンセンサスへの移行を完了し、公式にプルーフ・オブ・ワークは廃止されました。この移行により、エネルギー消費量が最大99.95%削減されました。
 </UpgradeStatus>
 

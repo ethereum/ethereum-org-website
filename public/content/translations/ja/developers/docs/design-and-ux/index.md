@@ -28,14 +28,15 @@ lang: ja
 | <Badge colorScheme="green">暗号通過へのオンボーディング</Badge>    | [CRADL: 暗号通貨の勉強会](https://docs.google.com/presentation/d/1R9nFuzA-R6SxaGCKhoMbE4Vxe0JxQSTiHXind3LVq_w/edit?usp=sharing)                                              |
 | <Badge colorScheme="green">暗号通過へのオンボーディング</Badge>    | [ビットコインUXレポート](https://github.com/patestevao/BitcoinUX-report/blob/master/report.md)                                                                                 |
 | <Badge colorScheme="green">暗号通過へのオンボーディング</Badge>    | [ConSensys: 2023年の世界におけるWeb3への認識に関する状態](https://consensys.io/insight-report/web3-and-crypto-global-survey-2023)                                                      |
+| <Badge colorScheme="green">暗号通過へのオンボーディング</Badge>    | [NEAR: 導入へのプロセスを加速](https://drive.google.com/file/d/1VuaQP4QSaQxR5ddQKTMGI0b0rWdP7uGn/view)                                                                          |
 | <Badge colorScheme="purple">ステーキング</Badge>           | [ステーキング: 主要なトレンド、要点、予測 - ETHステーカー](https://lookerstudio.google.com/u/0/reporting/cafcee00-e1af-4148-bae8-442a88ac75fa/page/p_ja2srdhh2c?s=hmbTWDh9hJo)               |
 | <Badge colorScheme="purple">ステーキング</Badge>           | [複数のアプリのステーキング](https://github.com/threshold-network/UX-User-Research/blob/main/Multi-App%20Staking%20(MAS)/iterative-user-study/MAS%20Iterative%20User%20Study.pdf) |
 | <Badge colorScheme="red">自律分散型組織</Badge>             | [2022年DAOリサーチのアップデート: DAOビルダーが必要なことは何か？](https://blog.aragon.org/2022-dao-research-update/)                                                                          |
 | <Badge colorScheme="pink">分散型金融(DeFi)</Badge>        | [2023年のDefiの状態](https://stateofdefi.org/)                                                                                                                            |
 | <Badge colorScheme="pink">分散型金融(DeFi)</Badge>        | [カバレッジプール](https://github.com/threshold-network/UX-User-Research/tree/main/Keep%20Coverage%20Pool)                                                                   |
 | <Badge colorScheme="pink">分散型金融(DeFi)</Badge>        | [ConSensys: 2022年DeFiユーザーリサーチレポート](https://cdn2.hubspot.net/hubfs/4795067/ConsenSys%20Codefi-Defi%20User%20ResearchReport.pdf)                                       |
-| <Badge colorScheme="gray">Metaverse</Badge>          | [メタバース: ユーザーリサーチレポート](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                           |
-| <Badge colorScheme="gray">Metaverse</Badge>          | [Going on Safari: メタバースでのユーザリサーチ](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (27分間のビデオ)             |
+| <Badge colorScheme="gray">メタバース</Badge>              | [メタバース: ユーザーリサーチレポート](https://www.politico.com/f/?id=00000187-7685-d820-a7e7-7e85d1420000)                                                                           |
+| <Badge colorScheme="gray">メタバース</Badge>              | [Going on Safari: メタバースでのユーザリサーチ](https://archive.devcon.org/archive/watch/6/going-on-safari-researching-users-in-the-metaverse/?tab=YouTube) (27分間のビデオ)             |
 | <Badge colorScheme="blue">Ethereum.org UXの状況</Badge> | [ユーザビリティとユーザ満足度調査ダッシュボード - Ethereum.org](https://lookerstudio.google.com/reporting/0a189a7c-a890-40db-a5c6-009db52c81c9)                                             |
 
 ## Web3のデザイン {#design-for-web3}
@@ -46,6 +47,7 @@ lang: ja
 - [Web3デザインパターン](https://www.web3designpatterns.io/)- 実際のWeb3製品から収集されたデザインパターンのライブラリ
 - [W3design.io](https://w3design.io/) - エコシステム内のさまざまなプロジェクトのUIフローを収集したライブラリ
 - [Neueux.com](https://neueux.com/apps) - 多様なフィルタリングオプションを備えたユーザーフローのUIライブラリ
+- [Web3ユーザビリティの危機：知っておくべきこととは](https://www.youtube.com/watch?v=oBSXT_6YDzg) - デベロッパー中心のプロジェクト構築の落とし穴に関するパネルディスカッション (34分のビデオ)
 
 ## Web3デザインのケーススタディ {#design-case-studies}
 
@@ -79,8 +81,9 @@ lang: ja
 
 - [オプティミズムデザイン](https://www.figma.com/@oplabs) (Figma)
 - [Ethereum.orgデザインシステム](https://www.figma.com/@ethdotorg) (Figma)
-- [Finity: ポリゴンによるWeb3デザインシステム](https://finity.polygon.technology/) (Figma)
+- [Finity、Polygonによるデザインシステム](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
+- [Klerosデザインシステム](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)
 - [ENSデザインシステム](https://thorin.ens.domains/)
 - [Mirrorデザインシステム](https://degen-xyz.vercel.app/)
 
-**このページに掲載されている記事の内容やプロジェクトを公式に推薦しているわけではありません**。情報提供のみを目的としています。 [掲載ポリシー](/contributing/design/adding-design-resources)の基準に基づいて、このページにリンクを追加しています。 このページへプロジェクトや記事を追加したい場合は、 [GitHub](https://github.com/ethereum/ethereum-org-website/blob/dev/src/content/developers/docs/design-and-ux/index.md)にあるこのページを編集してください。
+**このページに掲載されている記事の内容やプロジェクトを公式に推薦しているわけではありません**。情報提供のみを目的としています。 [掲載ポリシー](/contributing/design/adding-design-resources)の基準に基づいて、このページにリンクを追加しています。 プロジェクトおよび記事を追加したい場合は、[GitHub](https://github.com/ethereum/ethereum-org-website/blob/dev/public/content/developers/docs/design-and-ux/index.md)にあるこのページを編集してください。

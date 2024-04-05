@@ -4,90 +4,79 @@ description: Informasi dasar yang Anda perlukan untuk memahami konsumsi energi E
 lang: id
 ---
 
-# Konsumsi Energi Ethereum {#introduction}
+# Pengeluaran energi Ethereum {#proof-of-stake-energy}
 
-Pengeluaran energi Ethereum saat ini dengan [bukti kerja](/developers/docs/consensus-mechanisms/#proof-of-work) terlalu besar dan tidak berkelanjutan. Menyelesaikan masalah pengeluaran energi tanpa mengorbankan keamanan dan desentralisasi adalah tantangan teknis yang signifikan dan telah menjadi fokus penelitian dan pengembangan selama bertahun - tahun. Mari kita jelajahi alasan mengapa membangun Ethereum memiliki dampak tinggi terhadap lingkungan dan bagaimana peningkatan jaringan ke [bukti taruhan](/developers/docs/consensus-mechanisms/pos) akan secara dramatis mengubah ini.
+Ethereum adalah rantai blok hijau. Mekanisme konsensus [bukti taruhan](/developers/docs/consensus-mechanisms/pos) Ethereum menggunakan ETH dan bukannya [energi untuk mengamankan jaringan](/developers/docs/consensus-mechanisms/pow). Konsumsi energi Ethereum sekitar [~0,0026 TWh/thn](https://carbon-ratings.com/eth-report-2022) di seluruh jaringan global.
 
-## Energi mengamankan jaringan {#energy-secures-the-network}
+Perkiraan konsumsi energi untuk Ethereum berasal dari studi [CCRI (Crypto Carbon Ratings Institute)](https://carbon-ratings.com). Mereka menghasilkan estimasi bottom-up dari konsumsi listrik dan jejak karbon jaringan Ethereum ([lihat laporannya](https://carbon-ratings.com/eth-report-2022)). Mereka mengukur konsumsi listrik dari berbagai titik yang berbeda dengan berbagai konfigurasi perangkat keras dan perangkat lunak klien. Perkiraan **2.601 MWh** (0,0026 TWh) untuk konsumsi listrik tahunan jaringan sesuai dengan emisi karbon tahunan sebesar **870 ton CO2e** dengan menggunakan faktor intensitas karbon spesifik regional. Nilai ini berubah ketika simpul masuk dan keluar dari jaringan - Anda dapat melacak menggunakan estimasi rata-rata 7 hari bergulir oleh [Indeks Keberlanjutan Jaringan Rantai Blok Cambridge](https://ccaf.io/cbnsi/ethereum) (perhatikan bahwa mereka menggunakan metode yang sedikit berbeda untuk estimasi mereka - perinciannya tersedia di situs mereka).
 
-Transaksi pada rantai blok Ethereum divalidasi oleh [para penambang](/developers/docs/consensus-mechanisms/pow/mining). Para penambang mengumpulkan transaksi ke dalam blok berurutan dan menambahkannya ke dalam rantai blok Ethereum. Blok baru disiarkan ke semua operator node lainnya yang menjalankan transaksi secara independen dan memverifikasi bahwa itu valid. Kecurangan dalam bentuk apa pun muncul sebagai inkonsistensi di antara node. Blok jujur ditambahkan ke rantai blok dan menjadi bagian yang tak dapat diubah dari sejarah.
+Untuk mengkontekstualisasikan konsumsi energi Ethereum, kita dapat membandingkan estimasi tahunan untuk beberapa produk dan industri lain. Hal ini membantu kita untuk lebih memahami apakah estimasi untuk Ethereum tinggi atau rendah.
 
-Kemampuan penambang mana pun untuk menambahkan blok baru hanya bekerja jika ada biaya terkait penambangan dan ketidakpastian tentang node spesifik mana yang mengirimkan blok berikutnya. Kondisi ini dipenuhi dengan memaksakan bukti kerja (PoW). Agar dapat mengirimkan blok transaksi, seorang penambang harus menyelesaikan teka-teki komputasional arbitrari secara lebih cepat dari penambang lainnya. Menyelesaikan teka-teki ini menghasilkan kompetisi di antara penambang dan biaya dalam bentuk pengeluaran energi. Agar berhasil menipu rantai blok, seorang penambang jahat harus secara konsisiten memenangkan perlombaan bukti kerja, yang sangat tidak mungkin dan sangat memakan biaya.
+<EnergyConsumptionChart />
 
-Ethereum telah menggunakan bukti kerja sejak awal. Berpindah dari bukti kerja dan ke bukti taruhan selalu menjadi tujuan fundamental Ethereum. Namun, mengembangkan sistem bukti taruhan yang mengikuti prinsip inti keamanan dan desentralisasi Ethereum bukanlah mudah. Ini membutuhkan begitu banyak penelitian dan terobosan dalam kriptografi, ekonomi kripto, dan desain mekanisme untuk sampai pada titik di mana transisi dimungkinkan.
+Grafik di atas menampilkan perkiraan konsumsi energi tahunan dalam TWh/thn untuk Ethereum, dibandingkan dengan beberapa industri lainnya. Estimasi yang diberikan bersumber dari informasi yang tersedia untuk umum, yang diakses pada bulan Juli 2023, dengan tautan ke sumber-sumber yang tersedia pada tabel di bawah ini.
 
-## Pemakaian energi bukti kerja {#proof-of-work}
+|                        | Konsumsi energi tahunan (TWh) | Perbandingan dengan PoS Ethereum |                                                                                      Sumber                                                                                       |
+|:---------------------- |:-----------------------------:|:--------------------------------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
+| Pusat data global      |              190              |             73,000x              |                                    [sumber](https://www.iea.org/commentaries/data-centres-and-energy-from-global-headlines-to-local-headaches)                                    |
+| Bitcoin                |              149              |             53,000x              |                                                                 [sumber](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
+| Penambangan emas       |              131              |             50,000x              |                                                                 [sumber](https://ccaf.io/cbnsi/cbeci/comparisons)                                                                 |
+| Bermain game di AS\* |              34               |             13,000x              |                 [sumber](https://www.researchgate.net/publication/336909520_Toward_Greener_Gaming_Estimating_National_Energy_Use_and_Energy_Efficiency_Potential)                 |
+| PoW Ethereum           |              21               |              8,100x              |                                                                    [sumber](https://ccaf.io/cbnsi/ethereum/1)                                                                     |
+| Google                 |              19               |              7,300x              |                                           [sumber](https://www.gstatic.com/gumdrop/sustainability/google-2022-environmental-report.pdf)                                           |
+| Netflix                |             0,457             |               176x               | [sumber](https://assets.ctfassets.net/4cd45et68cgf/7B2bKCqkXDfHLadrjrNWD8/e44583e5b288bdf61e8bf3d7f8562884/2021_US_EN_Netflix_EnvironmentalSocialGovernanceReport-2021_Final.pdf) |
+| PayPal                 |             0.26              |               100x               |                                  [sumber](https://s202.q4cdn.com/805890769/files/doc_downloads/global-impact/CDP_Climate_Change_PayPal-(1).pdf)                                   |
+| AirBnB                 |             0.02              |                8x                |                               [sumber](https://s26.q4cdn.com/656283129/files/doc_downloads/governance_doc_updated/Airbnb-ESG-Factsheet-(Final).pdf)                               |
+| **PoS Ethereum**       |          **0,0026**           |              **1x**              |                                                               [sumber](https://carbon-ratings.com/eth-report-2022)                                                                |
 
-Bukti kerja adalah cara yang kuat untuk mengamankan jaringan dan menegakkan perubahan jujur pada rantai blok, tetapi bermasalah karena beberapa alasan. Karena hak untuk menambang membutuhkan penyelesaian teka-teki komputasional arbitrari, para penambang dapat meningkatkan peluang keberhasilan mereka dengan menginvestasikan pada perangkat keras yang lebih kuat. Insentif ini menyebabkan perlombaan senjata dengan para penambang yang memperoleh peralatan menambang yang semakin boros tenaga. Protokol bukti kerja Ethereum saat ini memiliki total konsumsi daya tahunan kira - kira sama dengan Finlandia <sup>[^1]</sup> dan jejak karbon yang serupa dengan Swiss<sup>[^1]</sup>.
+\*Mencakup perangkatan pengguna akhir seperti PC, laptop, dan konsol game.
 
-## Bukti taruhan {#proof-of-stake}
+Sangatlah rumit untuk mendapatkan estimasi yang akurat untuk konsumsi energi, terutama jika apa yang diukur memiliki rantai pasokan yang kompleks atau detail penyebaran yang memengaruhi efisiensinya. Misalnya, perkiraan konsumsi energi untuk Netflix dan Google bervariasai, tergantung pada apakah mereka hanya menyertakan energi yang digunakan untuk memelihara sistem mereka dan mengirmkan konten kepada pengguna (_pengeluaran langsung_) atau apakah mereka menyertakan pengeluaran yang diperlukan untuk memproduksi konten, menjalankan kantor korporat, mengiklankan, dan sebagainya (_pengeluaran tidak langsung_). Pengeluaran tidak langsung juga dapat mencakup energi yang dibutuhkan untuk mengonsumsi konten di perangkat pengguna akhir seperti TV, komputer, dan ponsel.
 
-Masa depan yang lebih ramah lingkungan untuk Ethereum sedang dibangun dalam [bentuk rantai **bukti taruhan (PoS)**](/roadmap/beacon-chain/). Di bawah [bukti taruhan](/developers/docs/consensus-mechanisms/pos/), penyelesaian teka-teki arbitrari tidak diperlukan. Menghilangkan penyelesaian teka-teki secara drastis mengurangi pemakaian energi yang diperlukan untuk mengamankan jaringan. Para penambang digantikan oleh para validator yang melakukan fungsi yang sama, kecuali alih-alih membayarkan aset mereka di muka dalam bentuk daya komputasional, mereka menaruhkan ETH sebagai jaminan terhadap perilaku curang. Jika validator malas (luring ketika mereka seharusnya memenuhi beberapa tugas validator) ETH mereka yang ditaruhkan dapat secara perlahan berkurang, sedangkan perilaku curang yang dapat dibuktikan menyebabkan aset yang ditaruhkan "dipotong". Ini sangat mendorong partisipasi aktif dan jujur dalam mengamankan jaringan.
+Perkiraan di atas bukanlah perbandingan yang tepat. Jumlah pengeluaran tidak langsung yang diperhitungkan berbeda-beda menurut sumber, dan jarang menyertakan energi dari perangkat pengguna akhir. Setiap sumber yang mendasari menyertakan detail selengkapnya tentang apa yang akan diukur.
 
-Sama dengan bukti kerja, entitas yang jahat akan mengharuskan setidaknya 51% total ETH yang ditaruhkan dalam jaringan untuk mengeksekusi [serangan 51%](/glossary/#51%-attack). Namun, tidak seperti pada bukti kerja, di mana kerugian potensial dari serangan yang gagal hanya merupakan biaya pembuatan daya hash yang diperlukan untuk menambang, pada bukti taruhan, kerugian yang mungkin dari suatu serangan adalah seluruh jumlah ETH yang digunakan sebagai jaminan. Struktur yang tidak mendukung ini memungkinkan keamanan jaringan dengan bukti taruhan, sekaligus menghapus kebutuhan untuk memakai energi pada komputasi arbitrari. Penjelasan lengkap dari keamanan jaringan di bawah bukti taruhan dapat ditemukan [di sini](/developers/docs/consensus-mechanisms/pos/) dan [di sini](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html).
+Tabel dan grafik di atas juga menyertakan perbandingan dengan Bitcoin dan bukti kerja Ethereum. Penting untuk dicatat bahwa konsumsi energi jaringan bukti kerja tidaklah statis dan berubah dari hari ke hari. Perkiraan juga bisa sangat bervariasi antar sumber. Topik ini menarik berbagai [perdebatan](https://www.coindesk.com/business/2020/05/19/the-last-word-on-bitcoins-energy-consumption/), bukan hanya mengenai jumlah energi yang dikonsumsi, tetapi juga mengenai sumber energi tersebut dan etika terkait. Konsumsi energi tidak selalu dapat dipetakan secara tepat ke jejak lingkungan karena proyek yang berbeda dapat menggunakan sumber energi yang berbeda, termasuk proporsi energi terbarukan yang lebih sedikit atau lebih banyak. Misalnya, [Indeks Konsumsi Listrik Bitcoin Cambridge](https://ccaf.io/cbnsi/cbeci/comparisons) mengindikasikan bahwa permintaan jaringan Bitcoin secara teoritis dapat ditenagai oleh pembakaran gas atau listrik yang akan hilang dalam transmisi dan distribusi. Rute Ethereum menuju keberlanjutan adalah dengan mengganti bagian jaringan yang haus energi dengan alternatif yang ramah lingkungan.
 
-## Penggabungan {#the-merge}
+Anda dapat menelusuri konsumsi energi dan perkiraan emisi karbon untuk banyak industri di [situs Indeks Keberlanjutan Jaringan Rantai Blok Cambridge](https://ccaf.io/cbnsi/ethereum).
 
-Ada rantai bukti taruhan fungsional yang disebut [Rantai Suar](/roadmap/beacon-chain/) yang telah beoperasi sejak Desember 2020 yang menunjukkan kemungkinan penerapan protokol bukti taruhan. Penggabungan merujuk pada titik waktu ketika Ethereum meninggalkan bukti kerja dan sepenuhnya mengadopsi bukti taruhan. Penggabungan diharapkan terjadi ~Q3/Q4 2022. [Selengkapnya tentang penggabungan](/roadmap/merge/).
+## Perkiraan per transaksi {#per-transaction-estimates}
 
-## Pemakaian energi bukti taruhan {#proof-of-stake-energy}
+Banyak artikel yang memperkirakan pengeluaran energi "per-transaksi" untuk rantai blok. Hal ini dapat menyesatkan karena energi yang dibutuhkan untuk mengajukan dan memvalidasi sebuah blok tidak bergantung pada jumlah transaksi di dalamnya. Masalahnya bukan pada unit pengeluaran energi per transaksi yang mengimplikasikan bahwa lebih sedikit transaksi akan menghasilkan pengeluaran energi yang lebih kecil dan sebaliknya. Selain itu, estimasi per-transaksi sangat sensitif terhadap bagaimana keluaran transaksi rantai blok didefinisikan, dan mengutak-atik definisi ini dapat dimainkan untuk membuat nilainya tampak lebih besar atau lebih kecil.
 
-Selain membangun kepercayaan diri dalam mekanisme bukti taruhan, Rantai Suar juga memungkinkan perkiraan penggunaan energi Ethereum setelah penggabungan. [Perkiraan baru-baru ini](https://blog.ethereum.org/2021/05/18/country-power-no-more/) menunjukkan bahwa penggabungan ke bukti taruhan dapat menyebabkan pengurangan sebesar 99,95% untuk total penggunaan energi, dengan bukti taruhan yang ~2000x lebih efisien secara energi ketimbang bukti kerja. Pemakaian energi Ethereum akan kira-kira sama dengan biaya menjalankan satu komputer rumah untuk setiap node di jaringan.
+Di Ethereum, misalnya, keluaran transaksi tidak hanya dari lapisan dasar - ini juga merupakan jumlah keluaran transaksi dari semua rollup "[lapisan ke-2](/layer-2/)". Lapisan ke-2 umumnya tidak disertakan dalam perhitungan, tetapi dengan memperhitungkan energi tambahan yang dikonsumsi oleh pengurut (kecil) dan jumlah transaksi yang mereka proses (besar), kemungkinan besar akan mengurangi estimasi per transaksi secara drastis. Inilah salah satu alasan mengapa perbandingan konsumsi energi per transaksi di seluruh platform dapat menyesatkan.
 
-![gambar](energy_use_per_transaction.png)
+## Utang karbon Ethereum {#carbon-debt}
 
-<p style={{ textAlign: "center" }}><small><i>Perkiraan konsumsi energi PoW per tx yang digunakan dalam gambar berdasarkan <a href="https://blog.ethereum.org/2021/05/18/country-power-no-more/" target="_blank" rel="noopener noreferrer">data Mei 2021</a>, pada waktu penulisan sumber yang sama menunjukkan hingga <a href="https://digiconomist.net/ethereum-energy-consumption" target="_blank" rel="noopener noreferrer">175,56 Kwh</a></i></small></p>
+Pengeluaran energi Ethereum sangat rendah, tetapi tidak selalu demikian. Ethereum pada awalnya menggunakan bukti kerja yang memiliki biaya lingkungan yang jauh lebih besar dibandingkan dengan mekanisme bukti taruhan saat ini.
 
-Mari kita bandingkan angka-angka ini dengan layanan seperti Visa. 100.000 transaksi Visa menggunakan 149kWh energi<sup>[^2]</sup>. Dengan mengasumsikan sharding telah diimplementasikan, kecepatan transaksi Ethereum saat ini (15 transaksi per detik) akan bertambah paling tidak 64x (jumlah shard), tidak termasuk optimisasi tambahan dari rollup. Perkiraan realistis untuk Ethereum bershard setelah penggabungan dengan rollup adalah [25.000 - 100.000](https://twitter.com/VitalikButerin/status/1312905884549300224?s=20) transaksi per detik. Kita dapat menggunakan informasi ini untuk memperkirakan pemakaian energi maksimum dan minimum per 100.000 transaksi.
+Sejak awal, Ethereum berencana untuk mengimplementasikan mekanisme konsensus berbasis bukti taruhan, tetapi untuk melakukannya tanpa mengorbankan keamanan dan desentralisasi, diperlukan waktu bertahun-tahun untuk melakukan penelitian dan pengembangan yang terfokus. Oleh karena itu, mekanisme bukti kerja digunakan untuk memulai jaringan. Bukti kerja mengharuskan para penambang untuk menggunakan perangkat keras komputasi mereka untuk menghitung sebuah nilai, mengeluarkan energi dalam prosesnya.
 
-- 25.000 transaksi per detik.
-- `100.000 / 25.000 = 4` detik untuk memroses 100.000 transaksi.
+![Membandingkan konsumsi energi Ethereum sebelum dan sesudah Penggabungan, menggunakan Menara Eiffel (tinggi 330 meter) di sebelah kiri untuk melambangkan konsumsi energi yang tinggi sebelum Penggabungan, dan figur Lego kecil setinggi 4 cm di sebelah kanan untuk melambangkan pengurangan dramatis dalam penggunaan energi setelah Penggabungan](energy_consumption_pre_post_merge.png)
 
-Kami juga dapat mengestimasikan pemakaian energi Ethereum per detik, yang membuat estimasi konservatif bahwa ada 10.000 validator aktif yang mengamankan jaringan (terdapat lebih dari [250.000 validator Rantai Suar](https://beaconscan.com/) saat ini, namun banyak validator dapat beroperasi pada satu node tunggal. Saat ini, diestimasikan bahwa terdapat 3.000-4.000 node individu, sehingga 10.000 adalah estimasi konservatif untuk setelah penggabungan):
+CCRI memperkirakan bahwa Penggabungan mengurangi konsumsi listrik tahunan Ethereum hingga lebih dari **99,988%**. Demikian juga, jejak karbon Ethereum berkurang sekitar **99,992%** (dari 11,016,000 menjadi 870 ton CO2e). Untuk menempatkan hal ini dalam perspektif, pengurangan emisi seperti pergi dari ketinggian Menara Eiffel ke sebuah figur mainan plastik kecil, seperti yang diilustrasikan pada gambar di atas. Hasilnya, biaya lingkungan untuk mengamankan jaringan berkurang secara drastis. Pada saat yang sama, keamanan jaringan diyakini telah meningkat.
 
-`pemakaian harian 1,44kWh * 10.000 node jaringan = 14.400kWh` per hari. Ada 86.400 detik dalam satu hari, sehingga `14.400 / 86.400 = 0,1667 kWh` per detik.
+## Lapisan aplikasi hijau {#green-applications}
 
-Jika kita mengalikannya dengan jumlah waktu yang diperlukan untuk memroses 100.000 transaksi: `0,1667 * 4 = 0,667 kWh`.
+Meskipun konsumsi energi Ethereum sangat rendah, ada juga komunitas [**keuangan regeneratif (ReFi)**](/refi/) yang substansial, terus berkembang, dan sangat aktif yang dibangun di Ethereum. Aplikasi ReFi menggunakan komponen DeFi untuk membangun aplikasi keuangan yang memiliki eksternalitas positif yang bermanfaat bagi lingkungan. ReFi adalah bagian dari gerakan ["solarpunk"](https://en.wikipedia.org/wiki/Solarpunk) yang lebih luas yang selaras dengan Ethereum dan bertujuan untuk memadukan kemajuan teknologi dan pengelolaan lingkungan. Sifat Ethereum yang terdesentralisasi, tanpa izin, dan dapat disusun menjadikannya lapisan dasar yang ideal untuk komunitas ReFi dan solarpunk.
 
-Ini ~0,4% dari energi yang digunakan oleh Visa untuk jumlah transaksi yang sama, atau pengurangan pemakaian energi sebesar faktor dari ~225 yang dibandingkan dengan jaringan bukti kerja Ethereum saat ini.
-
-Mengulangi kalkulasi dengan transaksi maksimum per detik menghasilkan 0,1667 kWh per detik yang kira - kira 0,1% dari pemakaian energi Visa, atau pengurangan sebesar ~894x.
-
-_Catatan: tidak sepenuhnya akurat untuk membuat perbandingan berdasarkan jumlah transaksi karena pemakaian energi Ethereum berbasis waktu. Pemakaian energi Ethereum adalah sama dalam 1 menit terlepas dari apakah melakukan 1 atau 1.000 transaksi._
-
-_Kita juga harus mempertimbangkan bahwa Ethereum tidaklah terbatas pada transaksi keuangan sederhana, tetapi juga adalah platform lengkap yang dibangun untuk kontrak pintar dan aplikasi terdesentralisasi._
-
-## Ethereum yang lebih ramah lingkungan {#green-ethereum}
-
-Sekalipun pemakaian energi Ethereum secara historis telah menjadi penting, telah ada investasi waktu dan kepintaran yang besar dari pengembang untuk perpindahan dari validasi blok yang boros energi ke yang efisien secara energi. Mengambil kutipan [Bankless](http://podcast.banklesshq.com/), cara terbaik untuk mengurangi energi yang dipakai oleh bukti kerja adalah cukup dengan "mematikannya", yang merupakan pendekatan yang telah diambil Ethereum dengan komitmen.
+Platform pendanaan barang publik asli Web3 seperti [Gitcoin](https://gitcoin.co) menjalankan putaran iklim untuk menstimulasi pembangunan yang sadar lingkungan pada lapisan aplikasi Ethereum. Melalui pengembangan inisiatif-inisiatif ini (dan yang lainnya, misalnya [DeSci](/desci/)), Ethereum menjadi teknologi yang positif bagi lingkungan dan sosial.
 
 <InfoBanner emoji=":evergreen_tree:">
-  Jika Anda menganggap status ini tidak benar atau dapat dibuat lebih akurat lagi, silhkan mengajukan masalah atau PR. Ini merupakan perkiraan oleh tim ethereum.org yang dibuat dengan menggunakan informasi yang dapat diakses secara publik dan roadmap Ethereum saat ini. Pernyataan ini tidak mewakili suatu janji resmi dari Yayasan Ethereum.
+  Jika menurut Anda halaman ini dapat dibuat lebih akurat, silakan ajukan masalah atau PR. Statistik di halaman ini adalah perkiraan berdasarkan data yang tersedia untuk umum - statistik ini tidak mewakili pernyataan atau janji resmi dari tim ethereum.org, atau Ethereum Foundation.
 </InfoBanner>
 
 ## Bacaan lebih lanjut {#further-reading}
 
-- [Nilai kekuatan sebuah negara, tidak lagi](https://blog.ethereum.org/2021/05/18/country-power-no-more/) – _Carl Beekhuizen, 18 Mei 2021_
+- [Indeks Keberlanjutan Jaringan Rantai Blok Cambridge](https://ccaf.io/cbnsi/ethereum)
+- [Laporan Gedung Putih tentang rantai blok bukti kerja](https://www.whitehouse.gov/wp-content/uploads/2022/09/09-2022-Crypto-Assets-and-Climate-Report.pdf)
+- [Emisi Ethereum: Perkiraan dari Bawah ke Atas](https://kylemcdonald.github.io/ethereum-emissions/) - _Kyle McDonald_
+- [Indeks Konsumsi Energi Ethereum](https://digiconomist.net/ethereum-energy-consumption/) - _Digiconomist_
+- [ETHMerge.com](https://ethmerge.com/) - _[@InsideTheSim](https://twitter.com/InsideTheSim)_
+- [Penggabungan - Implikasi pada Konsumsi Listrik dan Jejak Karbon Jaringan Ethereum](https://carbon-ratings.com/eth-report-2022) - _CCRI_
 - [Konsumsi energi Ethereum](https://mirror.xyz/jmcook.eth/ODpCLtO4Kq7SCVFbU4He8o8kXs418ZZDTj0lpYlZkR8)
-- [Emisi Ethereum: Suatu Perkiraan Bottom-up](https://kylemcdonald.github.io/ethereum-emissions/) _ Kyle McDonald_
-- [Indeks Konsumsi Energi Ethereum](https://digiconomist.net/ethereum-energy-consumption/) – _Digiconomist_
-- [ETHMerge.com](https://ethmerge.com/) — *[@InsideTheSim](https://twitter.com/InsideTheSim)*
 
-## Topik Terkait {#related-topics}
+## Topik terkait {#related-topics}
 
 - [Visi Ethereum](/roadmap/vision/)
 - [Rantai Suar](/roadmap/beacon-chain)
 - [Penggabungan](/roadmap/merge/)
-- [Sharding](/roadmap/beacon-chain/)
-
-### Catatan kaki dan sumber referensi {#footnotes-and-sources}
-
-#### 1. Konsumsi energi bukti kerja Ethereum {#fn-1}
-
-[Konsumsi Energi oleh Country inc. Ethereum (TWh Tahunan)](https://digiconomist.net/ethereum-energy-consumption)
-
-#### 2. Pemakaian energi Visa {#fn-2}
-
-[Rata-rata konsumsi energi jaringan Bitcoin per transaksi dibandingkan dengan jaringan VISA pada tahun 2020, Statista](https://www.statista.com/statistics/881541/bitcoin-energy-consumption-transaction-comparison-visa/)
-
-[Laporan keuangan Visa Q4 2020](https://s1.q4cdn.com/050606653/files/doc_financials/2020/q4/Visa-Inc.-Q4-2020-Operational-Performance-Data.pdf)

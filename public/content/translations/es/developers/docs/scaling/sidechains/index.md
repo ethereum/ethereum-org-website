@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 Una cadena lateral (sidechain) es una cadena de bloques separada que funciona independientemente de Ethereum,  mientras que, a su vez, está conectada a la red principal de Ethereum por un puente bidireccional. Las cadenas laterales pueden tener parámetros de bloque y [algoritmos de consenso](/developers/docs/consensus-mechanisms/) separados, los cuales a menudo están diseñados para el procesamiento eficiente de las transacciones. El uso de una cadena lateral implica compensaciones no obstante, ya que no heredan las propiedades de seguridad de Ethereum. A diferencia de las [soluciones de escalado de capa 2](/layer-2/), las cadenas laterales no publican de vuelta en la red principal de Ethereum cambios de estado y datos de transacciones.
 
-Las cadenas laterales también sacrifican algo de descentralización o seguridad para alcanzar un alto rendimiento ([trilema de escalabilidad](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Sin embargo, Ethereum está comprometido a escalar sin tener que comprometer su descentralización y seguridad como se indica en su [declaración de visión](/roadmap/vision/) para actualizaciones.
+Las cadenas laterales también sacrifican alguna medida de descentralización o seguridad para lograr un alto rendimiento ([trilema de escalabilidad](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Sin embargo, Ethereum está comprometido a escalar sin tener que comprometer su descentralización y seguridad como se indica en su [declaración de visión](/roadmap/vision/) para actualizaciones.
 
 ## ¿Cómo funcionan las cadenas laterales? {#how-do-sidechains-work}
 

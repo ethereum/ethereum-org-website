@@ -1,6 +1,6 @@
 ---
 title: Bloques
-description: "Una visión general de los bloques de la blockchain de Ethereum: su estructura de datos, por qué son necesarios y cómo se fabrican."
+description: 'Una visión general de los bloques de la blockchain de Ethereum: su estructura de datos, por qué son necesarios y cómo se fabrican.'
 lang: es
 ---
 
@@ -40,7 +40,7 @@ La prueba de participación (PoS) consiste en lo siguiente:
 Hay mucha información contenida en un bloque. En los niveles más altos, un bloque contiene las siguientes características:
 
 | Campo            | Descripción                                                         |
-| :--------------- | :------------------------------------------------------------------ |
+|:---------------- |:------------------------------------------------------------------- |
 | `ranura`         | la ranura a la que pertenece el bloque                              |
 | `proposer_index` | la ID del validador que propone el bloque                           |
 | `parent_root`    | el hash del bloque anterior                                         |
@@ -50,7 +50,7 @@ Hay mucha información contenida en un bloque. En los niveles más altos, un blo
 El `cuerpo` del bloque contiene una serie de características:
 
 | Campo                | Descripción                                                          |
-| :------------------- | :------------------------------------------------------------------- |
+|:-------------------- |:-------------------------------------------------------------------- |
 | `randao_reveal`      | un valor utilizado para seleccionar el siguiente bloque propuesto    |
 | `eth1_data`          | información sobre el contrato de depósito                            |
 | `grafiti`            | datos arbitrarios usados para etiquetar bloques                      |
@@ -65,7 +65,7 @@ El `cuerpo` del bloque contiene una serie de características:
 El campo `certificaciones` contiene una lista con todas las certificaciones del bloque. Las certificaciones poseen su propia tipología y contienen diversos tipos de información. Cada atestación contiene:
 
 | Campo              | Descripción                                                         |
-| :----------------- | :------------------------------------------------------------------ |
+|:------------------ |:------------------------------------------------------------------- |
 | `aggregation_bits` | una lista de los validadores que participaron en esta certificación |
 | `datos`            | una terminal con múltiples subcampos                                |
 | `firma`            | firma añadida de todos los validadores que certifican               |
@@ -73,7 +73,7 @@ El campo `certificaciones` contiene una lista con todas las certificaciones del 
 El campo `datos` en la `certificación` contiene lo siguiente:
 
 | Campo               | Descripción                                                |
-| :------------------ | :--------------------------------------------------------- |
+|:------------------- |:---------------------------------------------------------- |
 | `ranura`            | el ranura a la que se refiere la certificación             |
 | `índice`            | índices para certificar validadores                        |
 | `beacon_block_root` | el hash raíz del bloque de baliza que contiene este objeto |
@@ -85,7 +85,7 @@ Ejecutar transacciones en `execution_payload` actualizará el estado general. To
 El `execution_payload_header` contiene los siguientes campos:
 
 | Campo               | Descripción                                                               |
-| :------------------ | :------------------------------------------------------------------------ |
+|:------------------- |:------------------------------------------------------------------------- |
 | `parent_hash`       | hash del bloque principal                                                 |
 | `fee_recipient`     | dirección de cuenta para pagar comisiones de transacción a                |
 | `state_root`        | hash raíz para el estado global después de aplicar cambios en este bloque |
@@ -105,7 +105,7 @@ El `execution_payload_header` contiene los siguientes campos:
 El propio `execution_payload` contiene lo siguiente (observe que esto es idéntico al encabezamiento, excepto que en lugar del hash raíz de las transacciones incluye la lista real de transacciones e información de retiradas):
 
 | Campo              | Descripción                                                               |
-| :----------------- | :------------------------------------------------------------------------ |
+|:------------------ |:------------------------------------------------------------------------- |
 | `parent_hash`      | hash del bloque padre                                                     |
 | `fee_recipient`    | dirección de la cuenta para pagar las tarifas de transacción a            |
 | `state_root`       | hash raíz para el estado global después de aplicar cambios en este bloque |
@@ -125,7 +125,7 @@ El propio `execution_payload` contiene lo siguiente (observe que esto es idénti
 La lista de `retiradas` contiene objetos de `retirada` estructurados de la siguiente manera:
 
 | Campo            | Descripción                                          |
-| :--------------- | :--------------------------------------------------- |
+|:---------------- |:---------------------------------------------------- |
 | `dirección`      | dirección de la cuenta que ha realizado una retirada |
 | `amount`         | cantidad de la retirada                              |
 | `índice`         | valor del índice de la retirada                      |

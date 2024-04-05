@@ -175,7 +175,7 @@ _注：任何个人都可以属于多个组（如：协议开发者可以支持�
 
 以太坊的治理并没有严格定义。 各社区参与者对此有着不同的看法。 以下是其中一部分：
 
-- [关于区块链管理的说明](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [关于区块链治理的说明](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [以太坊治理如何发挥作用？](https://cryptotesters.com/blog/ethereum-governance) - _Cryptotestters_
 - [以太坊治理如何发挥作用](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a)- _Micah Zoltu_
 - [什么是以太坊核心开发者？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/)- _Hudson Jameson_
