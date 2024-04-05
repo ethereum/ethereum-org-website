@@ -60,7 +60,7 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
         me={2}
       />
       {contributor.user && (
-        <InlineLink to={contributor.user.url}>
+        <InlineLink href={contributor.user.url}>
           @{contributor.user.login}
         </InlineLink>
       )}
@@ -69,7 +69,7 @@ const Contributor = ({ contributor }: { contributor: Author }) => {
   )
 }
 
-export interface FileContributorsProps extends FlexProps {
+export type FileContributorsProps = FlexProps & {
   editPath?: string
   contributors: Author[]
   loading: boolean
@@ -77,13 +77,13 @@ export interface FileContributorsProps extends FlexProps {
   lastEdit: string
 }
 
-const FileContributors: React.FC<FileContributorsProps> = ({
+const FileContributors = ({
   contributors,
   loading,
   error,
   lastEdit,
   ...props
-}) => {
+}: FileContributorsProps) => {
   const [isModalOpen, setModalOpen] = useState(false)
   const { locale } = useRouter()
 
@@ -146,8 +146,8 @@ const FileContributors: React.FC<FileContributorsProps> = ({
           <Skeleton isLoaded={!loading}>
             <Text m={0} color="text200">
               <Translation id="last-edit" />:{" "}
-              {lastContributor.user && (
-                <InlineLink to={lastContributor.user.url}>
+              {lastContributor.user?.url && (
+                <InlineLink href={lastContributor.user.url}>
                   @{lastContributor.user.login}
                 </InlineLink>
               )}

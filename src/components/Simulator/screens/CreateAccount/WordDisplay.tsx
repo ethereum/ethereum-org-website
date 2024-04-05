@@ -49,17 +49,16 @@ const wordStyleVariants = {
 
 export type WordStyleVariant = keyof typeof wordStyleVariants
 
-interface IProps
-  extends Pick<ListItemProps, "children">,
-    Omit<BoxProps, "children"> {
-  variant: WordStyleVariant
-}
+type WordDisplayProps = Pick<ListItemProps, "children"> &
+  Omit<BoxProps, "children"> & {
+    variant: WordStyleVariant
+  }
 
-export const WordDisplay: React.FC<IProps> = ({
+export const WordDisplay = ({
   children,
   variant,
   ...boxProps
-}) => (
+}: WordDisplayProps) => (
   <Box {...wordStyleVariants[variant]} {...boxProps}>
     <ListItem fontSize="sm" lineHeight={9} mb={0} listStylePos="inside">
       {children}

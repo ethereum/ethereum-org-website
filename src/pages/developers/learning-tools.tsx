@@ -1,4 +1,4 @@
-import { shuffle } from "lodash"
+import shuffle from "lodash/shuffle"
 import { GetStaticProps } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -122,7 +122,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/developers/learning-tools"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 

@@ -233,8 +233,6 @@ Erigon (в прошлом — Turbo-Geth) представляет собой о
 
 `geth --syncmode "light"`
 
-Для получения дополнительной информации ознакомьтесь с руководством по [запуску легкого узла Geth](/developers/tutorials/run-light-node-geth/).
-
 **Настройка полной синхронизации с архивом в [Besu](https://besu.hyperledger.org/)**
 
 `besu --sync-mode=FULL`
@@ -312,5 +310,4 @@ Erigon (в прошлом — Turbo-Geth) представляет собой о
 
 ## Связанные руководства {#related-tutorials}
 
-- [Запуск узла с помощью Geth](/developers/tutorials/run-light-node-geth/) _— как загрузить, установить и запустить Geth. О синхронизаторах, консоли JavaScript и многом другом._
 - [Превратите свой Raspberry Pi 4 в узел валидатора, просто прошив карту MicroSD: руководство по установке](/developers/tutorials/run-node-raspberry-pi/) _— прошейте свой Raspberry Pi 4, подключите кабель Ethernet, подключите SSD-диск и включите устройство, чтобы превратить Raspberry Pi 4 в полноценный узел Ethereum, работающий на уровне исполнения (Mainnet) и/или на уровне консенсуса (Beacon Chain / validator)._

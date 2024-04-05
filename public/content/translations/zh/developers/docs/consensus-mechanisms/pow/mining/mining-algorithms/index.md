@@ -24,13 +24,13 @@ Dagger Hashimoto 是以太坊挖矿的先导研究算法，现已被 Ethash 取�
 
 Dagger-Hashimoto 是在 Dagger 和 Hashimoto 的基础上改进而来的以太币挖矿算法。 Dagger Hashimoto 和 Hashimoto 的差别在于，Dagger Hashimoto 的数据来源并非是区块链，而是自定义生成的数据集，这些数据集将基于所有 N 区块上的区块数据进行更新。 这些数据集采用 Dagger 算法生成，可为轻量级客户端的验证算法高效计算特定于每个随机数的子集。 Dagger Hashimoto 算法和 Dagger 算法的差别在于，与原来的 Dagger 不同，用于查询区块的数据集只是暂时的，只会偶尔更新（例如每周更新一次）。 这意味着生成数据集的工作量接近于零，所以 Sergio Lerner 关于共享内存加速的论据变得微不足道。
 
-详细了解 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto)。
+详细了解 [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto)。
 
 ## Ethash {#ethash}
 
 Ethash 是在现已弃用的工作量证明架构下，实际用于真正的以太坊主网的挖矿算法。 Ethash 实际上是为 Dagger Hashimoto 算法进行重要更新后的一个特殊版本命名的新名称，但它仍然继承了其前身的基本原理。 以太坊主网只使用过 Ethash - Dagger Hashimoto 是挖矿算法的研发版本，在以太坊主网上开始挖矿之前被取代。
 
-[详细了解 Ethash](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)。
+[详细了解 Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)。
 
 ## 延伸阅读 {#further-reading}
 

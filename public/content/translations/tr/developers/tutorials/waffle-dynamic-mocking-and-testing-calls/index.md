@@ -10,7 +10,7 @@ tags:
   - "taklit"
 skill: intermediate
 lang: tr
-published: 2020-11-04
+published: 2020-11-14
 ---
 
 ## Bu öğretici ne ile ilgili? {#what-is-this-tutorial-about}
@@ -295,4 +295,4 @@ Bu öğreticinin kaynak kodu [burada](https://github.com/EthWorks/Waffle/tree/ma
 
 Ayrıca ilginizi çekebilecek öğreticiler:
 
-- [Waffle ile akıllı sözleşmeleri test etme](/developers/tutorials/testing-smart-contract-with-waffle/)
+- [Waffle ile akıllı sözleşmeleri test etme](/developers/tutorials/waffle-test-simple-smart-contract/)

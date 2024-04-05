@@ -6,7 +6,7 @@ tags:
   - "SQL"
   - "Sorgulama"
   - "İşlemler"
-skill: advanced
+skill: beginner
 lang: tr
 published: 2021-05-11
 source: paulapivat.com

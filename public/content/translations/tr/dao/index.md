@@ -156,7 +156,7 @@ _Protokollerin ve merkeziyetsiz uygulamaların merkeziyetsiz gelişimi ve yönet
 - [DAO Destekli bir Dijital Topluluk Nasıl Başlatılır](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Bir DAO nedir?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Holografik Mutabakat Nedir?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO'lar Vitalik'e göre özerk kuruluşlarda ademi merkeziyetçiliğin önemli olduğu şirketler değildir:](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAO'lar Vitalik'e göre özerk kuruluşlarda ademi merkeziyetçiliğin önemli olduğu şirketler değildir:](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO'lar, DAC'ler, DA'lar ve Daha Fazlası: Tamamlanmamış Terminoloji Rehberi](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blogu](https://blog.ethereum.org)
 
 ### Videolar {#videos}

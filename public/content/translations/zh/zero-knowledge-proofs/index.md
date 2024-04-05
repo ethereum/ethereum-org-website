@@ -203,10 +203,10 @@ ZK-STARK 由于使用抗碰撞的哈希值进行加密，被认为不受量子�
 ## 延伸阅读 {#further-reading}
 
 - [计算机科学家分 5 级难度解释一个概念 | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Wired YouTube 频道_
-- [零知识证明用例概述](https://appliedzkp.org/#Projects) — _隐私和扩展探索团队_
+- [零知识证明用例概述](https://pse.dev/projects) — _Privacy and Scaling Explorations Team_
 - [SNARKs 与 STARKS 与 递归 SNARK](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Overviews_
 - [零知识证明：改善区块链上的隐私](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARK — 一个现实的零知识例子和深入研究](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK — 创建可验证的信任，即使面对量子计算机](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [关于如何让 zk-SNARK 成为可能的大致介绍](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [关于如何让 zk-SNARK 成为可能的大致介绍](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [什么是零知识证明以及它在区块链中的角色](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

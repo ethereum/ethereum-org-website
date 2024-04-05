@@ -175,9 +175,9 @@ Quando ocorreu a fusão da Beacon Chain com a camada de execução do Ethereum e
 
 A governança na Ethereum não está definida de forma rígida. Vários participantes da comunidade têm diversas perspectivas sobre isso. Aqui estão alguns deles:
 
-- [Notas sobre governaça da Blockchain](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Notas sobre governaça da Blockchain](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Como funciona a governança Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Criptotesters_
 - [Como funciona a governança Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [O que é um desenvolvedor principal Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
-- [Governança, Parte 2: A plutocracia ainda é uma desvantagem](https://vitalik.ca/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
-- [Indo além da governança por meio da votação com moedas.](https://vitalik.ca/general/2021/08/16/voting3.html) – _Vitalik Buterin_
+- [Governança, Parte 2: A plutocracia ainda é uma desvantagem](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
+- [Indo além da governança por meio da votação com moedas.](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_

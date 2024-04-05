@@ -40,7 +40,7 @@ Proof-of-Stake bedeutet Folgendes:
 Ein Block enthält viele verschiedene Informationen. Auf oberster Ebene enthält ein Block folgende Felder:
 
 | Feld                | Beschreibung                                                |
-| :------------------ | :---------------------------------------------------------- |
+|:------------------- |:----------------------------------------------------------- |
 | `Zeitspanne (Slot)` | Der Slot, zu dem der Block gehört                           |
 | `proposer_index`    | Die ID des Validators, der den Block vorschlägt             |
 | `parent_root`       | Der Hash des vorausgehenden Blocks                          |
@@ -50,7 +50,7 @@ Ein Block enthält viele verschiedene Informationen. Auf oberster Ebene enthält
 Der `Body` eines Blocks enthält selbst mehrere Felder:
 
 | Feld                 | Beschreibung                                                                     |
-| :------------------- | :------------------------------------------------------------------------------- |
+|:-------------------- |:-------------------------------------------------------------------------------- |
 | `randao_reveal`      | Ein Wert, der zur Auswahl des nächsten Block-Vorschlagenden verwendet wird       |
 | `eth1_data`          | Informationen zum Einzahlungsvertrag                                             |
 | `graffiti`           | Beliebige Daten, die zum Markieren von Blöcken verwendet werden                  |
@@ -65,7 +65,7 @@ Der `Body` eines Blocks enthält selbst mehrere Felder:
 Das Feld `attestations` enthält eine Liste aller Attestierungen im Block. Attestierungen haben ihren eigenen Datentyp der mehrere Datenteile enthält. Jede Attestierung enthält:
 
 | Feld               | Beschreibung                                                              |
-| :----------------- | :------------------------------------------------------------------------ |
+|:------------------ |:------------------------------------------------------------------------- |
 | `aggregation_bits` | Eine Liste der Validatoren, die an dieser Attestierung teilgenommen haben |
 | `daten`            | Ein Container mit mehreren Unterfeldern                                   |
 | `signature`        | Kollektivsignatur aller bescheinigenden Validatoren                       |
@@ -73,7 +73,7 @@ Das Feld `attestations` enthält eine Liste aller Attestierungen im Block. Attes
 Das Feld `data` in `attestation` enthält folgende Elemente:
 
 | Feld                | Beschreibung                                                |
-| :------------------ | :---------------------------------------------------------- |
+|:------------------- |:----------------------------------------------------------- |
 | `Zeitspanne (Slot)` | Der Slot, auf den sich die Attestierung bezieht             |
 | `Index`             | Indizes für die bescheinigenden Validatoren                 |
 | `beacon_block_root` | Der Stamm-Hash des Beacon-Blocks, der dieses Objekt enthält |
@@ -85,7 +85,7 @@ Die Ausführung der Transaktionen in der `execution_payload` aktualisiert den gl
 Der `execution_payload_header` enthält die folgenden Felder:
 
 | Feld                  | Beschreibung                                                                          |
-| :-------------------- | :------------------------------------------------------------------------------------ |
+|:--------------------- |:------------------------------------------------------------------------------------- |
 | `übergeordneter_hash` | Hash des übergeordneten Blocks                                                        |
 | `fee_recipient`       | Kontoadresse, an die die Transaktionsgebühren gezahlt werden                          |
 | `state_root`          | Stamm-Hash für den globalen Zustand nach der Anwendung der Änderungen in diesem Block |
@@ -105,7 +105,7 @@ Der `execution_payload_header` enthält die folgenden Felder:
 Die `execution_payload` selbst enthält Folgendes (das ist identisch zum Header, außer dass es anstatt des Stamm-Hash der Transaktionen die Liste der Transaktions- und Abhebungsinformationen enthält) :
 
 | Feld                  | Beschreibung                                                                          |
-| :-------------------- | :------------------------------------------------------------------------------------ |
+|:--------------------- |:------------------------------------------------------------------------------------- |
 | `übergeordneter_hash` | Hash des übergeordneten Blocks                                                        |
 | `fee_recipient`       | Kontoadresse, an die die Transaktionsgebühren gezahlt werden                          |
 | `state_root`          | Stamm-Hash für den globalen Zustand nach der Anwendung der Änderungen in diesem Block |
@@ -125,7 +125,7 @@ Die `execution_payload` selbst enthält Folgendes (das ist identisch zum Header,
 Die Liste `withdrawals` enthält `withdrawal`-Objekte, die wie folgt strukturiert sind:
 
 | Feld             | Beschreibung                                   |
-| :--------------- | :--------------------------------------------- |
+|:---------------- |:---------------------------------------------- |
 | `address`        | Kontoadresse, für die die Abhebung erfolgt ist |
 | `amount`         | Abgehobener Betrag                             |
 | `Index`          | Abhebungsindexwert                             |

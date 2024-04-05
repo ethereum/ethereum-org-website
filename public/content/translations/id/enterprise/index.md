@@ -33,7 +33,7 @@ Banyak bisnis dan konsorsium telah menyebarkan blockchain pribadi yang diizinkan
 
 Perusahaan telah bereksperimen dengan teknologi blockchain sejak sekitar 2016, ketika proyek Hyperledger, Quorum, dan Corda diluncurkan. Fokusnya terutama pada blockchain perusahaan privat yang diizinkan, tapi sejak awal 2019 ada perubahan dalam pemikiran tentang blockchain publik vs privat untuk aplikasi bisnis. Sebuah [survei](https://assets.ey.com/content/dam/ey-sites/ey-com/en_gl/topics/blockchain/ey-public-blockchain-opportunity-snapshot.pdf) yang diadakan oleh Forrester menunjukkan bahwa "Responden survey ... melihat potensi ini, dengan 75% mengatakan bahwa mereka kemungkinan besar akan memanfaatkan blockchain publik di masa depan, dan hampir sepertiga mengatakan mereka sangat mungkin melakukan itu". Paul Brody dari EY telah [membahas](https://www.youtube.com/watch?v=-ycu5vGDdZw&feature=youtu.be&t=3668) tentang keuntungan membangun pada blockchain publik, yang (bergantung pada aplikasi) bisa mencakup keamanan/kekebalan yang lebih kuat, transparansi, biaya total kepemilikan yang lebih rendah, dan kemampuan untuk bekerja sama dengan semua aplikasi lainnya yang juga ada di Jaringan Utama (efek jaringan). Berbagi kerangka acuan umum antar perusahaan menghindari munculnya sejumlah silo terisolasi yang tidak perlu yang tidak bisa saling berkomunikasi dan berbagi atau sinkron satu sama lain.
 
-Pengembangan lainnya yang menggeser fokus ke blockchain publik adalah [Lapisan 2](/developers/docs/scaling/layer-2). Lapisan 2 terutama untuk kategori teknologi skalabilitas yang membuat aplikasi throughput tinggi mungkin ada di rantai publik. Tetapi solusi Lapisan 2 juga bisa [mengatasi beberapa tantangan lainnya yang mendorong pengembang perusahaan memilih rantai privat di masa lalu](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
+Pengembangan lainnya yang menggeser fokus ke blockchain publik adalah [Lapisan 2](/developers/docs/scaling/#layer-2-scaling). Lapisan 2 terutama untuk kategori teknologi skalabilitas yang membuat aplikasi throughput tinggi mungkin ada di rantai publik. Tetapi solusi Lapisan 2 juga bisa [mengatasi beberapa tantangan lainnya yang mendorong pengembang perusahaan memilih rantai privat di masa lalu](https://entethalliance.org/how-ethereum-layer-2-scaling-solutions-address-barriers-to-enterprises-building-on-mainnet/).
 
 Protokol Baseline adalah salah satu proyek utama yang menentukan satu protokol yang memungkinkan kolaborasi rahasia dan rumit di antara perusahaan tanpa meninggalkan data sensitif apa pun secara on-chain. Proyek ini telah mendapatkan [momentum](https://www.oasis-open.org/2020/08/26/baseline-protocol-achieves-key-milestone-with-release-of-v0-1-implementation-for-enterprise/) signifikan sepanjang 2020.
 
@@ -52,7 +52,7 @@ Beberapa usaha kolaboratif untuk membuat Ethereum ramah bagi perusahaan telah di
 - [Alchemy](https://www.alchemy.com/) _menyediakan layanan dan peralatan API untuk membangun dan mengawasi aplikasi di Ethereum_
 - [Blockapps](https://blockapps.net/) _implementasi protokol Enterprise Ethereum, peralatan, dan API yang membentuk platform STRATO_
 - [Chainstack](https://chainstack.com/) _infrastruktur jaringan utama dan testnet Ethereum yang dihost di cloud pelanggan publik dan terisolasi_
-- [ConsenSys](https://consensys.net/) _menyediakan daftar produk dan peralatan untuk membangun di Ethereum, maupun layanan konsultasi dan pengembangan kustom_
+- [ConsenSys](https://consensys.io/) _menyediakan daftar produk dan peralatan untuk membangun di Ethereum, maupun layanan konsultasi dan pengembangan kustom_
 - [Envision Blockchain](https://envisionblockchain.com/) _menyediakan layanan konsultasi dan pengembangan yang berfokus pada perusahaan yang dikhususkan di Jaringan Utama Ethereum_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _menyediakan alur kerja pengadaan dengan menerbitkan RFQ, kontrak, pesanan pembelian, dan faktur di keseluruhan jaringan partner bisnis terpercaya Anda_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _sebuah klien Ethereum sumber terbuka berfokus pada perusahaan yang dikembangkan di bawah lisensi Apache 2.0 dan ditulis dalam bahasa Java_
@@ -130,7 +130,6 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 ### Notarisasi data {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _detail pinjaman terakhir di-hash dan dicatat di Jaringan Utama_
-- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _integritas data bisa dipastikan secara berkala dengan menulis hash dari data diindeks di Jaringan Utama_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _agensi berita terbesar di Italia yang melawan berita palsu dan memungkinkan pembaca memverifikasi sumber berita dengan mencatatnya di Jaringan Utama_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _mencatat rilis berita di Ethereum untuk memastikan akuntabilitas dan kepercayaan perusahaan_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _mencatat sumber dan riwayat perbaikan pengawasan di Ethereum_
@@ -138,7 +137,6 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 
 ### Rantai pasokan {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _penyedia konosemen dan pemindahan dokumen_
 - [Morpheus.network](https://morpheus.network/) _platform otomatisasi rantai pasokan yang mengimplementasikan gabungan rantai privat dengan data ternotarisasi di Jaringan Utama Ethereum, dan digunakan oleh perusahaan seperti distributor makanan, minyak, dan gas di Kanada yaitu Federated Co-op Ltd. dan penyedia makanan binatang peliharaan di Argentina Vitalcan_
 - [Minespider](https://www.minespider.com/) _pelacakan rantai pasokan_
 - [ShipChain](https://shipchain.io) _sidechain Ethereum publik dan sistem perusahaan untuk visibilitas dan kepercayaan rantai pasokan, khususnya untuk logistik multimodal_
@@ -146,7 +144,6 @@ Berikut adalah beberapa aplikasi perusahaan yang telah digunakan pada Jaringan U
 - [Pengadaan Jaringan EY OpsChain](https://blockchain.ey.com/products/contract-manager) _memungkinkan perusahaan terlibat dalam sebuah alur kerja pengadaan dengan menerbitkan RFQ, kontrak, pemesanan pembelian, dan faktur di keseluruhan jaringan dari rekan bisnis terpercaya Anda_
 - [Treum](https://treum.io/) _menghadirkan transparansi, keterlacakan, dan kemampuan untuk diperdagangan pada rantai pasokan, menggunakan teknologi blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _memverifikasi electronic Bills of Lading (eBLs) untuk pengiriman internasional_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _mencetak NFT untuk setiap batch bir baru, memungkinkan visibilitas dan efisiensi yang lebih baik di seluruh rantai pasokan_
 
 ### Kredensial dan sertifikasi {#credentials}
 

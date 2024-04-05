@@ -6,17 +6,17 @@ import { BaseLink } from "@/components/Link"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-export interface IPropsTableOfContentsLink {
+export type TableOfContentsLinkProps = {
   depth: number
   item: ToCItem
   activeHash?: string
 }
 
-const Link: React.FC<IPropsTableOfContentsLink> = ({
+const Link = ({
   depth,
   item: { title, url },
   activeHash,
-}) => {
+}: TableOfContentsLinkProps) => {
   const { flipForRtl } = useRtlFlip()
   const isActive = activeHash === url
   const isNested = depth === 2

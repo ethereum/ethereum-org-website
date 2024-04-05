@@ -4,6 +4,8 @@ description: Alapvető szabályok az ethereum.org oldalain.
 lang: hu
 ---
 
+# Magatartási szabályok {#conduct-intro}
+
 ## Misszió {#mission}
 
 A legátfogóbb és legelérhetőbb tudásközpont kifejlesztése és fenntartása az Ethereum számára.
@@ -52,7 +54,7 @@ Az elfogadhatatlan viselkedések például:
 
 - Fizikai erőszak, azzal való fenyegetés vagy támogatása bármilyen formában
 - Szexualitással kapcsolatos beszéd vagy kép használata, illetve ilyen jellegű közeledés
-- Egy másik személy eljátszása, vagy rosszhiszeműen azt állítani, hogy egy személlyel vagy szervezettel kapcsolatban áll valaki.
+- Egy másik ember megszemélyesítése, vagy rosszhiszeműen azt állítani, hogy egy személlyel vagy szervezettel kapcsolatban áll valaki
 - Zavaró, derogáló kommentek, személyes vagy politikai támadások
 - Más tag zaklatása nyilvános vagy privát csatornákon
 - Mások privát információinak nyilvánossá tétele, mint fizikai vagy elektronikus cím, kifejezett kérése nélkül

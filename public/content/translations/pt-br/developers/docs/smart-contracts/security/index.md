@@ -470,13 +470,13 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 
 ### Ferramentas para monitorar contratos inteligentes {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/sentinel)** - _Uma ferramenta para monitorar e responder automaticamente a eventos, funções e parâmetros de transação em seus contratos inteligentes._
+- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _Uma ferramenta para monitorar e responder automaticamente a eventos, funções e parâmetros de transação em seus contratos inteligentes._
 
 - **[Alerta leve e em tempo real](https://tenderly.co/alerting/)** - _Uma ferramenta para receber notificações em tempo real quando eventos incomuns ou inesperados acontecem em seus contratos inteligentes ou carteiras._
 
 ### Ferramentas para administração segura de contratos inteligentes {#smart-contract-administration-tools}
 
-- **[Administrador do OpenZeppelin Defender](https://docs.openzeppelin.com/defender/admin)** - _Interface para gerenciar a administração de contrato inteligente, incluindo controles de acesso, atualizações e pausas._
+- **[Administrador do OpenZeppelin Defender](https://docs.openzeppelin.com/defender/v1/admin)** - _Interface para gerenciar a administração de contrato inteligente, incluindo controles de acesso, atualizações e pausas._
 
 - **[Safe](https://safe.global/)** - _Carteira de contrato inteligente em execução na Ethereum, que requer um número mínimo de pessoas para aprovar uma transação antes que ela possa ocorrer (M-de-N)._
 
@@ -503,6 +503,8 @@ Se você planeja consultar um oráculo on-chain para preços de ativos, consider
 - **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _Serviços de auditoria Solidity e Cairo que garantem a integridade dos contratos inteligentes e a segurança dos usuários em toda a Ethereum e Starknet._
 
 - **[HashEx](https://hashex.org/)** – _O HashEx se dedica a blockchain e auditoria de contrato inteligente para garantir a segurança de criptomoedas, fornecendo serviços como desenvolvimento de contrato inteligente, teste de penetração e consultoria em blockchain._
+
+- **[Code4rena](https://code4rena.com/)** - _Plataforma de auditoria competitiva que incentiva especialistas em segurança de contratos inteligentes a encontrar vulnerabilidades e ajudar a tornar a web3 mais segura._
 
 ### Plataformas de recompensa de bugs {#bug-bounty-platforms}
 

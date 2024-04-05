@@ -4,6 +4,8 @@ description: Ethereum.org alanlarında ulaşmaya çalıştığımız basit stand
 lang: tr
 ---
 
+# Davranış kuralları {#conduct-intro}
+
 ## Misyon {#mission}
 
 Ethereum için en kapsayıcı ve erişilebilir bilgi merkezini kurmak ve sürdürmek.
@@ -52,7 +54,7 @@ Katılımcılar tarafından gerçekleştirilen kabul edilemez davranışlar:
 
 - Fiziksel şiddet, fiziksel şiddet ile tehdit etmek ya da her türlü fiziksel şiddete yatkınlık
 - Taciz dili veya görselleri kullanmak ya da istenmeyen/tek taraflı fiziksel ilgide bulunmak
-- Başka bir bireyin kimliğine bürünmek veya bir kişi ya da kuruluşla dürüst olmayan bir şekilde bağlantı iddia etmek.
+- Başka bir bireyin kimliğine bürünmek veya bir kişi ya da kuruluşla dürüst olmayan bir şekilde bağlantı iddia etmek
 - Dalga geçen, küçümseyen, hakaret içeren yorumlar ve kişisel ya da politik saldırılar
 - Diğer topluluk üyelerini genel veya özel kanallarda taciz etmek
 - Açık bir izin söz konusu olmadan diğer insanların kişisel bilgilerini paylaşmak, örneğin elektronik adres ve somut adres

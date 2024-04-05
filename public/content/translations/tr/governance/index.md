@@ -175,9 +175,9 @@ Tanım ve geliştirme uygulamaları her zaman tamamen açık kaynak olsa da, yuk
 
 Ethereum'daki yönetişimin katı kuralları yoktur. Çeşitli topluluk katılımcıları bu konuda farklı bakış açılarına sahiptir. İşte bunlardan birkaçı:
 
-- [Blok Zinciri Yönetişimi Üzerine Notlar](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Blok Zinciri Yönetişimi Üzerine Notlar](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Ethereum yönetişimi nasıl çalışır?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Ethereum yönetişimin çalışması](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Ethereum çekirdek geliştiricisi nedir?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Yönetişim, 2. Bölüm: Plütokrasi Hâlâ Kötü](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Parayla oylama yönetişiminin ötesine geçmek](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Yönetişim, 2. Bölüm: Plütokrasi Hâlâ Kötü](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Parayla oylama yönetişiminin ötesine geçmek](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

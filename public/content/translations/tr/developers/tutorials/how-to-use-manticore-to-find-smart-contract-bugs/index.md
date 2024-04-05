@@ -9,7 +9,7 @@ tags:
   - "güvenlik"
   - "test etmek"
   - "resmi doğrulama"
-skill: advanced
+skill: beginner
 published: 2020-01-13
 source: Güvenli sözleşmeler oluşturmak
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
@@ -177,7 +177,7 @@ Manticore, bilgileri bir `mcore_*` dizininde çıkaracaktır. Diğerlerinin yan�
 Burada Manticore, aşağıdakilere karşılık gelen 7 test senaryosu bulur (dosya adı sırası değişebilir):
 
 |                      |      İşlem 0       |       İşlem 1       | İşlem 2             | Sonuç  |
-| :------------------: | :----------------: | :-----------------: | ------------------- | :----: |
+|:--------------------:|:------------------:|:-------------------:| ------------------- |:------:|
 | **test_00000000.tx** | Sözleşme oluşturma |       f(!=65)       | f(!=65)             |  STOP  |
 | **test_00000001.tx** | Sözleşme oluşturma | fallback fonksiyonu |                     | REVERT |
 | **test_00000002.tx** | Sözleşme oluşturma |                     |                     | RETURN |

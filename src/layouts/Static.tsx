@@ -7,9 +7,11 @@ import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
+import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
+import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
@@ -55,7 +57,6 @@ const ListItem = (props: ChildOnlyProp) => (
 
 // Static layout components
 export const staticComponents = {
-  a: Link,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
@@ -65,6 +66,7 @@ export const staticComponents = {
   Contributors,
   EnergyConsumptionChart,
   GlossaryDefinition,
+  GlossaryTooltip,
   Icon,
   Link,
   Logo,
@@ -76,28 +78,28 @@ export const staticComponents = {
   UpcomingEventsList,
 }
 
-interface IProps
-  extends ChildOnlyProp,
-    Pick<
-      MdPageContent,
-      "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
-    > {
-  frontmatter: StaticFrontmatter
-}
-export const StaticLayout: React.FC<IProps> = ({
+type StaticLayoutProps = ChildOnlyProp &
+  Pick<
+    MdPageContent,
+    "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+  > & {
+    frontmatter: StaticFrontmatter
+  }
+export const StaticLayout = ({
   children,
   frontmatter,
   slug,
   tocItems,
   lastUpdatedDate,
   contentNotTranslated,
-}) => {
-  const { locale } = useRouter()
+}: StaticLayoutProps) => {
+  const { locale, asPath } = useRouter()
 
   const absoluteEditPath = getEditPath(slug)
 
   return (
     <Box w="full">
+      <DevconGrantsBanner pathname={asPath} />
       <Flex
         justifyContent="space-between"
         w="full"
@@ -107,7 +109,7 @@ export const StaticLayout: React.FC<IProps> = ({
         pt={{ base: 8, lg: 16 }}
         dir={contentNotTranslated ? "ltr" : "unset"}
       >
-        <Box>
+        <Box w="full">
           {slug === "/guides/" ? (
             <HubHero
               heroImg={GuideHeroImage}
@@ -118,13 +120,15 @@ export const StaticLayout: React.FC<IProps> = ({
           ) : (
             <>
               <Breadcrumbs slug={slug} mb="8" />
-              <Text
-                color="text200"
-                dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
-              >
-                <Translation id="page-last-updated" />:{" "}
-                {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
-              </Text>
+              {lastUpdatedDate && (
+                <Text
+                  color="text200"
+                  dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
+                >
+                  <Translation id="page-last-updated" />:{" "}
+                  {getLocaleTimestamp(locale as Lang, lastUpdatedDate)}
+                </Text>
+              )}
             </>
           )}
 

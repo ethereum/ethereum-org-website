@@ -175,9 +175,9 @@ _یادداشت: هر فردی می‌تواند عضوی از چند گروه �
 
 حاکمیت در اتریوم تعریف دشواری ندارد. مشارکت‌کنندگانِ جوامع مختلف دیدگاه‌های مختلفی درباره‌ی آن دارند. چند نمونه از آن‌ها در ادامه ذکر شده است:
 
-- [یادداشت‌هایی درباره ی حاکمیت زنجیره‌ی بلوکی](https://vitalik.ca/general/2017/12/17/voting.html) - _ویتالیک بوترین_
+- [یادداشت‌هایی درباره ی حاکمیت زنجیره‌ی بلوکی](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _ویتالیک بوترین_
 - [حاکمیت اتریوم چگونه کار می‌کند؟](https://cryptotesters.com/blog/ethereum-governance) - _Cryptotesters_
 - [چگونگی کارکرد حاکمیت اتریوم](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) - _میکا زولتو_
 - [توسعه‌دهنده‌ اصلی اتریوم چیست؟](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _هادسون جیمز_
-- [حاکمیت، قسمت دوم: پلوتوکراسی همچنان بد است](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _ویتالیک بوترین_
-- [حرکت ورای حاکمیت رأی‌گیری با کوین](https://vitalik.ca/general/2021/08/16/voting3.html) - _ویتالیک بوترین_
+- [حاکمیت، قسمت دوم: پلوتوکراسی همچنان بد است](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _ویتالیک بوترین_
+- [حرکت ورای حاکمیت رأی‌گیری با کوین](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _ویتالیک بوترین_

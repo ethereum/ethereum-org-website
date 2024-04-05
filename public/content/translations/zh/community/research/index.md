@@ -71,7 +71,7 @@ lang: zh
 - [状态到期路径](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [沃克尔树和状态到期提案](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [历史数据管理](https://eips.ethereum.org/EIPS/eip-4444)
-- [沃克尔树](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [沃克尔树](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [数据可用性采样](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## 客户端开发 {#client-development}

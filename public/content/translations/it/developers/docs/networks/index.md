@@ -59,7 +59,7 @@ Le due reti di prova pubbliche che gli sviluppatori di client stanno mantenendo 
 - [Faucet Coinbase Wallet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Faucet Alchemy Sepolia](https://sepoliafaucet.com/)
 - [Faucet Infura Sepolia](https://www.infura.io/faucet)
-- [Faucet Sepolia di Chainstack](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
 
 #### Goerli _(supporto a lungo termine)_ {#goerli}
 
@@ -111,6 +111,14 @@ Una rete di prova per [Optimism](https://www.optimism.io/).
 - [Faucet Paradigm](https://faucet.paradigm.xyz/)
 - [Faucet Coinbase Wallet | Optimism Goerli](https://coinbase.com/faucets/optimism-goerli-faucet)
 
+#### Starknet Goerli {#starknet-goerli}
+
+Una rete di prova per [Starknet](https://www.starknet.io).
+
+##### Faucet
+
+- [Faucet di Starknet](https://faucet.goerli.starknet.io)
+
 ## Reti private {#private-networks}
 
 Una rete Ethereum è una rete privata se i relativi nodi non sono connessi a una rete pubblica (ossia Rete principale o una rete di prova). In questo contesto, privato significa solo riservato o isolato, e non protetto o sicuro.
@@ -129,7 +137,7 @@ Se una rete Ethereum pubblica è come la rete Internet pubblica, una rete di con
 
 ## Strumenti correlati {#related-tools}
 
-- Elenco di [Chainlist](https://chainlist.org/) _ di reti EVM per connettere portafogli e fornitori all'ID della Catena e ID di Rete appropriati._
+- [Chainlist](https://chainlist.org/) _Elenco di reti EVM per connettere portafogli e fornitori all'ID della Catena e ID di Rete appropriati._
 - [Catene basate su EVM](https://github.com/ethereum-lists/chains) _Repository di GitHub di metadati della catena che alimentano Chainlist._
 
 ## Letture consigliate {#further-reading}

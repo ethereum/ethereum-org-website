@@ -8,7 +8,7 @@ sidebarDepth: 2
 image: /eth-gif-cat.png
 summaryPoint1: A hagyományos identitásrendszerek központosították az azonosítók kiadását, karbantartását és ellenőrzését.
 summaryPoint2: A decentralizált identitás megszünteti a centralizált harmadik felektől való függőséget.
-summaryPoint3: A kriptonak köszönhetően, a felhasználóknak újra van eszközük, hogy tárolják és kezeljék a saját azonosítójukat és tanúsítványaikat.
+summaryPoint3: A kriptónak köszönhetően, a felhasználóknak újra van eszközük, hogy tárolják és kezeljék a saját azonosítójukat és tanúsítványaikat.
 ---
 
 A virtuális identitás az életünk minden részét meghatározza napjainkban. Online szolgáltatások használata, bankszámla nyitás, szavazás a választásokon, ingatlan vásárlása, munkavállalás – mindegyikhez az identitás igazolása szükséges.
@@ -49,7 +49,7 @@ A decentralizált azonosítókat elosztott főkönyveken (blokklánc) vagy peer-
 
 ## Mi teszi lehetővé a decentralizált azonosítók használatát? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Nyilvánoskulcs-infrastruktúra (PKI) {#public-key-infrastructure}
+### 1. Nyilvánoskulcs-infrastruktúra (PKI) {#public-key-cryptography}
 
 A nyilvánoskulcs-infrastruktúra (PKI) egy olyan információbiztonsági lépés, amely az entitás számára egy [nyilvános kulcsot](/glossary/#public-key) és egy [privát kulcsot](/glossary/#private-key) hoz létre. A nyilvános kulcson alapuló kriptográfiát a blokklánchálózatok arra használják, hogy igazolják a felhasználók identitását és a digitális eszközök tulajdonjogát.
 
@@ -109,7 +109,7 @@ A következő példa bemutatja, hogyan működik a láncon belüli tanúsítás 
 
 ### Egyénhez kötött tokenek és identitás {#soulbound}
 
-Az [egyénhez kötött tokeneket](https://vitalik.ca/general/2022/01/26/soulbound.html) (nem átadható NFT-k) arra lehet használni, hogy egy adott tárcához tartozó egyedi információkat gyűjtsenek. Ez gyakorlatilag létrehoz egy egyedi, láncon belüli identitást, amely egy adott Ethereum-címhez kötődik, és eredményeket (mint egy online tanfolyam elvégzése vagy egy játékban elért szint) vagy közösségi részvételt jelentő tokeneket foglal magába.
+Az [egyénhez kötött tokeneket](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (nem átadható NFT-k) arra lehet használni, hogy egy adott tárcához tartozó egyedi információkat gyűjtsenek. Ez gyakorlatilag létrehoz egy egyedi, láncon belüli identitást, amely egy adott Ethereum-címhez kötődik, és eredményeket (mint egy online tanfolyam elvégzése vagy egy játékban elért szint) vagy közösségi részvételt jelentő tokeneket foglal magába.
 
 ## A decentralizált identitás előnyei {#benefits-of-decentralized-identity}
 
@@ -161,6 +161,7 @@ Számtalan ambiciózus projekt használja az Ethereumot a decentralizált identi
 - **[Proof of Humanity](https://www.proofofhumanity.id)** – _Az emberség igazolása (PoH) egy közösségi identitás igazolására készült rendszer, mely az Ethereumra épül._
 - **[BrightID](https://www.brightid.org/)** – _Egy decentralizált, nyílt forráskódú, közösségi identitási hálózat, amely új módot keres az azonosításra egy közösségi gráf megalkotásával és elemzésével._
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _Egy decentralizált, digitális identitásgyűjtemény._
+- **[walt.id](https://walt.id)** – _Nyílt forráskódú, decentralizált identitás- és tárcainfrastruktúra, amely lehetővé teszi a fejlesztőknek és szervezeteknek, hogy kihasználják a szuverén identitást, valamint az NFT-ket/SBT-ket._
 
 ## További olvasnivaló {#further-reading}
 
@@ -170,6 +171,7 @@ Számtalan ambiciózus projekt használja az Ethereumot a decentralizált identi
 - [Mi az az Ethereum ERC725? Független identitáskezelés a blokkláncon](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [Hogyan tudja a blokklánc megoldani a digitális identitás problémáját](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [Mi az a decentralizált identitás és miért érdemes figyelembe venni?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Bevezetés a decentralizált identitás világába](https://walt.id/white-paper/digital-identity) – _Dominik Beron_
 
 ### Videók {#videos}
 
@@ -177,9 +179,11 @@ Számtalan ambiciózus projekt használja az Ethereumot a decentralizált identi
 - [Az Ethereumba való bejelentkezés és a decentralizált identitás témája a Ceramic, IDX, React és 3ID Connect használatával](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _YouTube útmutató a személyazonosítási rendszer kiépítéséről, mely az Ethereum-tárca alapján létrehozza, kiolvassa és frissíti a felhasználó profilját – Nader Dabit_
 - [BrightID – Decentralizált identitás az Ethereumon](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Bankless podcast epizód a BrightID-ról, ami egy decentralizált identitási megoldás az Ethereumon_
 - [A láncon kívüli internet: decentralizált identitás és igazolható bizonyítványok (VC)](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 Evin McMullen prezentációja
+- [A hitelesítő adatok bemutatása](https://www.youtube.com/watch?v=ce1IdSr-Kig) – YouTube magyarázó videó példával Tamino Baumanntól
 
 ### Közösségek {#communities}
 
 - [ERC-725 szövetség a GitHubon](https://github.com/erc725alliance) — _Az ERC725 szabvány támogatói, mely az Ethereum-blokkláncon való identitáskezelést célozza_
 - [SpruceID Discord-szerver](https://discord.com/invite/Sf9tSFzrnt) — _Rajongók és fejlesztők közössége, akik az Ethereumba való bejelentkezés funkcióján dolgoznak_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Fejlesztői közösség, melynek célja az alkalmazásokhoz szükséges igazolható adatok keretrendszerének kidolgozása_
+- [walt.id](https://discord.com/invite/AW8AgqJthZ) – _Fejlesztők és építők közössége, akik a decentralizált identitás számtalan iparágban való felhasználási területeivel foglalkoznak_

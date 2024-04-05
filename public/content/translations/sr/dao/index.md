@@ -156,7 +156,7 @@ _Obično se koristi za decentralizovani razvoj i upravljanje protokolima i decen
 - [Kako pokrenuti digitalnu zajednicu koja koristi tehnologiju DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Šta je DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) — [Coinmarketcap](https://coinmarketcap.com)
 - [Šta je holografski konsenzus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) – [DAOstack](https://daostack.io/)
-- [DAO-i nisu korporacije: gde decentralizacija u autonomnim organizacijama ima značaj, autor: Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAO-i nisu korporacije: gde decentralizacija u autonomnim organizacijama ima značaj, autor: Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO-i, DAC-i, DA-i i još mnogo toga: nedovršen vodič kroz terminologiju](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) – [Ethereum Blog](https://blog.ethereum.org)
 
 ### Videos {#videos}

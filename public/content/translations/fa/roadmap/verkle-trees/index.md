@@ -49,17 +49,18 @@ summaryPoints:
 
 در حال حاضر شبکه‌های تست درختان ورکل هم‌اکنون برقرار و درحال اجراست، اما هنوز هم جای به‌روزرسانی‌هایی اساسی روی کلاینت‌ها دارد که برای پشتیبانی از درختان ورکل نیاز است. می‌توانید با به‌کارگیری قراردادها در شبکه‌های تست یا اجرای کلاینت‌های شبکه تست، پیشرفت آن را سرعت دهید.
 
-[درباره شبکه تست «بِورلی هیلز ورکل» کاوش کنید](https://beverlyhills.ethpandaops.io)
+[شبکه آزمایشی Verkle Gen Devnet 2 را کاوش کنید](https://verkle-gen-devnet-2.ethpandaops.io/)
 
-[تماشاگر Guillaume Ballet باشید که توضیحاتی را درباره شبکه تست Condrieu Verkle می‌دهد](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (توجه داشته باشید که شبکه تست Condrieu با روش اثبات کار فعالیت می‌کرد و اکنون [شبکه تست Kaustinen‏](https://kaustinen.ethdevops.io) جای آن را گرفته است).
+[ Condrieu Verkle Guillaume Ballet را تماشا کنید شبکه آزمایشی Condrieu Verkle را توضیح دهید](https://www.youtube.com/watch?v=cPLHFBeC0Vg)(توجه داشته باشید که شبکه آزمایشی Condrieu اثبات کار بود و اکنون توسط Verkle Gen Devnet 2 testnet جایگزین شده است).
 
 ## بیشتر بخوانید {#further-reading}
 
+- [درختان Verkle برای بی‌تابعیتی](https://verkle.info/)
 - [Dankrad Feist درباره درختان ورکل روی PEEPanEIP توضیح می‌دهد](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet درباره درختان ورکل در ETHGlobal توضیح می‌دهد](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [«چگونه درختان ورکل اتریوم را مختصر و مفید می‌کنند» از Guillaume Ballet در دِوکان 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam از ETHDenver 2020 درباره کلاینت‌های بی‌حالت می‌گوید](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [Dankrad Fiest در پادکست Zero Knowledge، درباره درختان ورکل و بی‌حالتی توضیح می‌دهد](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
-- [Vitalik Buterin درباره درختان ورکل می‌گوید](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Vitalik Buterin درباره درختان ورکل می‌گوید](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist درباره درختان ورکل می‌گوید](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [مستندات مربوط به EIP درختان ورکل](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

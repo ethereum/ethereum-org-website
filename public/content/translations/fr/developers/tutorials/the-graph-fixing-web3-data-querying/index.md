@@ -124,7 +124,7 @@ Ici, vous pouvez définir plusieurs contrats et handlers. Une configuration typi
 
 Pour des raisons de commodité, vous pouvez également utiliser un outil de template comme Mustache. Ensuite, vous allez créer un template `subgraph.template.yaml` et y insérez les adresses basées sur les derniers déploiements. Pour un exemple plus avancé, vous pouvez consulter le [répertoire de subgraphs Aave](https://github.com/aave/aave-protocol/tree/master/thegraph).
 
-Et la documentation complète peut être consultée ici : https://thegraph.com/docs/define-a-subgraph#the-subgraph-manifest.
+Et la documentation complète peut être consultée [ici](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
 ```yaml
 specVersion: 0.0.1
@@ -167,7 +167,7 @@ Le schéma est la définition des données GraphQL. Il vous permettra de défini
 - BigInt
 - BigDecimal
 
-Vous pouvez également utiliser des entités comme type pour définir des relations. Dans notre exemple, nous définissons une relation « un à plusieurs » pour les paris d'un joueur. Le ! signifie que la valeur ne peut pas être vide. La documentation complète est disponible ici : https://thegraph.com/docs/define-a-subgraph#the-graphql-schema.
+Vous pouvez également utiliser des entités comme type pour définir des relations. Dans notre exemple, nous définissons une relation « un à plusieurs » pour les paris d'un joueur. Le ! signifie que la valeur ne peut pas être vide. La documentation complète peut être consultée [ici](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
 ```graphql
 type Bet @entity {
@@ -196,7 +196,7 @@ Puis nous créons une nouvelle entité Bet. L'ID pour cela sera `event.transacti
 
 Enfin, nous pouvons mettre à jour l'entité du Player avec toutes les données. Les tableaux ne peuvent pas être poussés directement, mais doivent être mis à jour comme indiqué ici. Nous utilisons l'ID pour référencer le pari. Et `.save()` est requis à la fin pour stocker une entité.
 
-La documentation complète est disponible ici : https://thegraph.com/docs/define-a-subgraph#writing-mappings. Vous pouvez également ajouter une sortie de journalisation au fichier de mapping, voir [ici](https://thegraph.com/docs/assemblyscript-api#api-reference).
+La documentation complète est disponible ici : https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Vous pouvez également ajouter une sortie de journalisation au fichier de mapping, voir [ici](https://thegraph.com/docs/assemblyscript-api#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"
@@ -293,24 +293,21 @@ Mais il nous manque une dernière pièce du puzzle et c'est le serveur. Vous pou
 
 ### Graph Explorer : le service hébergé {#graph-explorer-the-hosted-service}
 
-Le moyen le plus simple est d'utiliser le service hébergé. Suivez les instructions [ici](https://thegraph.com/docs/deploy-a-subgraph) pour déployer un subgraph. Pour de nombreux projets, vous pouvez trouver des subgraphs existants dans l'explorateur sur https://thegraph.com/explorer/.
+Le moyen le plus simple est d'utiliser le service hébergé. Suivez les instructions [ici](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) pour déployer un subgraph. Pour de nombreux projets, vous pouvez trouver des subgraphs existants dans [l'explorateur](https://thegraph.com/explorer/).
 
 ![Le Graph-Explorer](./thegraph-explorer.png)
 
 ### Exécuter votre propre nœud {#running-your-own-node}
 
-Vous pouvez également exécuter votre propre nœud : https://github.com/graphprotocol/graph-node#quick-start. Une raison d'agir de la sorte peut être d'utiliser un réseau qui n'est pas pris en charge par le service hébergé. Actuellement supportés : Mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI et Sokol.
+Sinon, vous pouvez faire tourner votre propre nœud. Documentation [ici](https://github.com/graphprotocol/graph-node#quick-start). Une raison d'agir de la sorte peut être d'utiliser un réseau qui n'est pas pris en charge par le service hébergé. Les réseaux actuellement pris en charge [sont disponibles ici](https://thegraph.com/docs/en/developing/supported-networks/).
 
 ## Un avenir décentralisé {#the-decentralized-future}
 
-GraphQL prend également en charge les flux pour les nouveaux événements à venir. Ce n'est pas encore entièrement supporté par The Graph, mais la sortie est imminente.
+GraphQL prend également en charge les flux pour les nouveaux événements à venir. Ceux-ci sont pris en charge par The Graph par le biais de [Substreams](https://thegraph.com/docs/en/substreams/) qui est actuellement en version bêta ouverte.
 
-Un aspect manquant reste toutefois la décentralisation. The Graph envisage des projets futurs pour devenir un protocole entièrement décentralisé. Voici deux excellents articles expliquant le plan plus en détail :
-
-- https://thegraph.com/blog/the-graph-network-in-depth-part-1
-- https://thegraph.com/blog/the-graph-network-in-depth-part-2
+En [2021](https://thegraph.com/blog/mainnet-migration/), The Graph a commencé sa transition vers un réseau d'indexation décentralisé. Vous pouvez en savoir plus sur l'architecture de ce réseau d'indexation décentralisé [ici](https://thegraph.com/docs/en/network/explorer/).
 
 Les deux aspects clés sont :
 
-1. Les utilisateurs paieront les indexeurs pour les requêtes.
-2. Les indexeurs mettront en jeu des jetons Graph (GRT).
+1. Les utilisateurs paient les indexeurs pour les requêtes.
+2. Les indexeurs mettront en jeu des jetons The Graph (GRT).

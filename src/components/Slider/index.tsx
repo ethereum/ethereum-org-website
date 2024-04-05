@@ -3,14 +3,16 @@ import useEmblaCarousel from "embla-carousel-react"
 import { MdChevronLeft, MdChevronRight } from "react-icons/md"
 import { Box, Center, Flex, IconButton, Stack } from "@chakra-ui/react"
 
+import { ChildOnlyProp } from "@/lib/types"
+
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-export interface IProps {
+export type SliderProps = {
   children?: React.ReactNode
   onSlideChange?: (slideIndex: number) => void
 }
 
-const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
+const Slider = ({ children, onSlideChange }: SliderProps) => {
   const { flipForRtl, direction } = useRtlFlip()
   const [emblaRef, embla] = useEmblaCarousel({ direction })
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false)
@@ -127,7 +129,7 @@ const Slider: React.FC<IProps> = ({ children, onSlideChange }) => {
   )
 }
 
-export const EmblaSlide: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const EmblaSlide = ({ children }: ChildOnlyProp) => {
   return (
     <Box
       position="relative"

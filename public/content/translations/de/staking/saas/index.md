@@ -22,7 +22,7 @@ Staking-as-a-Service („SaaS“) stellt eine Kategorie von Staking-Diensten dar
 Das Ethereum-Protokoll unterstützt keine Delegation von Staking, daher wurden diese Serviceleistungen aufgebaut, um die entsprechende Nachfrage zu befriedigen. Wenn Sie über 32 ETH zum Staking verfügen, sich aber davor scheuen, mit Hardware umzugehen, bieten SaaS-Dienste Ihnen die Möglichkeit, den schwierigen Teil zu delegieren, während Sie native Blockbelohnungen erhalten.
 
 <CardGrid>
-  <Card title="Ihr eigener Validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Ihr eigener Validator" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="Einfach starten" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="Schränken Sie Ihr Risiko ein" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>
@@ -47,7 +47,7 @@ Nachfolgend finden Sie einige verfügbare SaaS-Anbieter. Verwenden Sie die obige
 
 <StakingProductsCardGrid category="saas" />
 
-Hinweis: Es ist wichtig, dass sie die [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienste, die nachweislich die Nutzung von Mehrheits-Clients einschränken, sind gekennzeichnet mit <em style={{ textTransform: "uppercase" }}>"Vielfalt der Ausführungskunden"</em> and <em style={{ textTransform: "uppercase" }}>"Vielfalt der Konsenskunden"</em>.
+Hinweis: Es ist wichtig, dass sie die [Client-Diversität](/developers/docs/nodes-and-clients/client-diversity/) unterstützen, denn das erhöht die Netzsicherheit und begrenzt Ihre Risiken. Dienste, die nachweislich die Nutzung von Mehrheits-Clients einschränken, sind gekennzeichnet mit <em style={{ textTransform: "uppercase" }}>"Vielfalt der Ausführungs-Clients"</em> and <em style={{ textTransform: "uppercase" }}>"Vielfalt der Konsens-Clients"</em>.
 
 ### Schlüssel-Generatoren
 
@@ -91,4 +91,5 @@ Für weitere Informationen zu Garantien oder Versicherungsoptionen sowie zur Anl
 
 ## Weiterführende Informationen {#further-reading}
 
+- [Das Ethereum-Staking-Verzeichnis](https://www.staking.directory/) - _Eridian und Spacesider_
 - [Bewertung von Staking-Diensten](https://www.attestant.io/posts/evaluating-staking-services/) – _Jim McDonald 2020_

@@ -109,7 +109,7 @@ Számos olyan opció érhető el, amely biztosan kielégíti minden igényét. A
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Olyan szolgáltatót válasszon, aki komolyan veszi a [kliensek diverzitását](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok az eszközök, melyek a kisebbségi kliens beállítást támogatják, a <em style={{ textTransform: "uppercase" }}>többklienses</em> jellemzővel vannak jelölve
+Olyan szolgáltatót válasszon, aki komolyan veszi a [kliensek diverzitását](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok az eszközök, amelyek a kisebbségi kliens beállítást támogatják, a <em style={{ textTransform: "uppercase" }}>többklienses</em> jellemzővel vannak jelölve
 
 ### Kulcsgenerátorok
 
@@ -195,6 +195,7 @@ A teljes egyenleg visszavonásához végig kell menni a validátorkiléptetési 
 
 ## További olvasnivaló {#further-reading}
 
+- [Ethereum letétbe helyezési jegyzék](https://www.staking.directory/) – _Eridian és Spacesider_
 - [Az Ethereum-kliens diverzitásának problémája](https://hackernoon.com/ethereums-client-diversity-problem) – _@emmanuelawosika 2022._
 - [A kliensdiverzitás támogatása](https://www.attestant.io/posts/helping-client-diversity/) – _Jim McDonald 2022._
 - [Kliensdiverzitás az Ethereum konszenzus rétegén](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) – _jmcook.eth 2022._

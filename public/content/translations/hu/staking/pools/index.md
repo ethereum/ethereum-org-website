@@ -26,7 +26,7 @@ A [bevezetés a letétbe helyezésbe](/staking/) során elhangzott előnyök mel
 <CardGrid>
   <Card title="Alacsony küszöb a csatlakozásnál" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Helyezzen letétbe ma" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="letéti tokenek" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Letéti tokenek" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -53,14 +53,14 @@ Számos olyan opció érhető el, amely biztosan kielégíti minden igényét. A
 
 <StakingProductsCardGrid category="pools" />
 
-Olyan szolgáltatást válasszon, amely komolyan veszi a [kliensek diverzitását](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>sokrétű végrehajtás</em> és <em style={{ textTransform: "uppercase" }}>sokrétű konszenzus</em>
+Olyan szolgáltatást válasszon, amely komolyan veszi a [kliensek diverzitását](/developers/docs/nodes-and-clients/client-diversity/), mert ez egyszerre javítja a hálózat biztonságát, és csökkenti az Ön kockázatát. Azok a szolgáltatók, akik korlátozzák a többségi klienseket használatát, a következő jellemzők alapján szűrhetők ki: <em style={{ textTransform: "uppercase" }}>végrehajtási kliens sokrétűsége</em> és <em style={{ textTransform: "uppercase" }}>konszenzusos kliens sokrétűgése</em>
 
 Hiányolja valamelyik letétbe helyezési eszközt? Ha a [terméklistázó szabályzat](/contributing/adding-staking-products/) alapján úgy véli, hogy egy adott eszköz illeszkedne ide, akkor jelezze felénk.
 
 ## Gyakran ismételt kérdések {#faq}
 
 <ExpandableCard title="Hogyan kapok jutalmakat?">
-A letétbe helyezők ERC-20 letéti tokeneket kapnak, melyek a letétbe adott ETH-t képviselik, megnövelve azt a jutalmakkal. A különféle alapok a letéti jutalmakat különböző módon adják át a felhasználóknak, a folyamat lényege ugyanakkor közös.
+A letétbe helyezők ERC-20 letéti tokeneket kapnak, és ezeket a letétbe adott ETH-t képviselik, megnövelve azt a jutalmakkal. A különféle alapok a letéti jutalmakat különböző módon adják át a felhasználóknak, a folyamat lényege ugyanakkor közös.
 </ExpandableCard>
 
 <ExpandableCard title="Mikor tudom visszavonni a letétemet?">
@@ -81,5 +81,6 @@ Néhány letéti alap sokkal decentralizáltabb, amikor az általuk használt cs
 
 ## További olvasnivaló {#further-reading}
 
+- [Ethereum letétbe helyezési jegyzék](https://www.staking.directory/) – _Eridian és Spacesider_
 - [Letétbe helyezés a Rocket Poollal – Áttekintés](https://docs.rocketpool.net/guides/staking/overview.html) – _RocketPool docs_
 - [Letétbe helyezés az Ethereumon a Lidoval](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Lido help docs_

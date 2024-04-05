@@ -156,7 +156,7 @@ _सामान्यत: प्रोटोकॉल आणि dapps च्य
 - [DAO-सक्षम डिजिटल समुदाय कसा सुरू करावा](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [DAO म्हणजे काय?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [होलोग्राफिक कॉन्सेन्सस म्हणजे काय?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO कॉर्पोरेशन नाहीत: जेथे विटालिकद्वारे स्वायत्त संस्थांमध्ये विकेंद्रीकरण महत्त्वाचे आहे](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAO कॉर्पोरेशन नाहीत: जेथे विटालिकद्वारे स्वायत्त संस्थांमध्ये विकेंद्रीकरण महत्त्वाचे आहे](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA आणि बरेच काही: एक अपूर्ण शब्दावली मार्गदर्शक](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum ब्लॉग](https://blog.ethereum.org)
 
 ### Videos {#videos}

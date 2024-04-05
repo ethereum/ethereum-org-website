@@ -3,9 +3,7 @@ import { Box } from "@chakra-ui/react"
 
 import CardList, { type CardListItem } from "@/components/CardList"
 
-export interface IProps {}
-
-const MergeArticleList: React.FC<IProps> = () => {
+const MergeArticleList = () => {
   const { t } = useTranslation(["page-upgrades", "page-upgrades-index"])
 
   const reads: CardListItem[] = [

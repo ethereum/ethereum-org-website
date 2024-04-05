@@ -22,7 +22,7 @@ import docLinks from "@/data/developer-docs-links.yaml"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-const TextDiv: React.FC<FlexProps> = ({ children, ...props }) => (
+const TextDiv = ({ children, ...props }: FlexProps) => (
   <Flex
     direction="column"
     justify="space-between"
@@ -58,8 +58,8 @@ const CardLink = ({ docData, isPrev, contentNotTranslated }: CardLinkProps) => {
     <LinkBox
       as={Flex}
       alignItems="center"
-      mt={4}
-      w="262px"
+      w="full"
+      flex="1"
       h="82px"
       bg="background.base"
       border="1px"
@@ -128,13 +128,16 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
   // Find index that matches current page
   let currentIndex = 0
   for (let i = 0; i < docsArray.length; i++) {
-    if (asPath.indexOf(docsArray[i].to) > -1) {
+    if (
+      asPath.indexOf(docsArray[i].to) >= 0 &&
+      asPath.length === docsArray[i].to.length
+    ) {
       currentIndex = i
     }
   }
 
   // Extract previous and next doc based on current index +/- 1
-  const previousDoc = currentIndex - 1 > 0 ? docsArray[currentIndex - 1] : null
+  const previousDoc = currentIndex - 1 >= 0 ? docsArray[currentIndex - 1] : null
   const nextDoc =
     currentIndex + 1 < docsArray.length ? docsArray[currentIndex + 1] : null
 
@@ -142,7 +145,14 @@ const DocsNav = ({ contentNotTranslated }: DocsNavProps) => {
     <Flex
       as="nav"
       aria-label="Paginate to document"
-      direction={{ base: "column-reverse", md: "row" }}
+      direction={{
+        base: "column-reverse",
+        md: "row",
+        lg: "column-reverse",
+        xl: "row",
+      }}
+      mt="8"
+      gap="4"
       justify="space-between"
       alignItems={{ base: "center", md: "flex-start" }}
     >

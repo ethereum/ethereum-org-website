@@ -5,7 +5,7 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
 import { Box, Flex, Icon, Stack, Text, useDisclosure } from "@chakra-ui/react"
 
-import { BasePageProps, QuizStatus } from "@/lib/types"
+import { BasePageProps, QuizKey, QuizStatus } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -17,7 +17,6 @@ import QuizzesList from "@/components/Quiz/QuizzesList"
 import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
-import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -40,7 +39,7 @@ const handleGHAdd = () =>
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/quizzes")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -56,11 +55,11 @@ export const getStaticProps = (async ({ locale }) => {
 const QuizzesHubPage: NextPage<
   InferGetStaticPropsType<typeof getStaticProps>
 > = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("learn-quizzes")
 
   const [userStats, updateUserStats] = useLocalQuizData()
   const [quizStatus, setQuizStatus] = useState<QuizStatus>("neutral")
-  const [currentQuiz, setCurrentQuiz] = useState(INITIAL_QUIZ)
+  const [currentQuiz, setCurrentQuiz] = useState<QuizKey>(INITIAL_QUIZ)
   const { onOpen, isOpen, onClose } = useDisclosure()
 
   const commonQuizListProps = useMemo(
@@ -75,13 +74,14 @@ const QuizzesHubPage: NextPage<
   return (
     <Box as={MainArticle}>
       <PageMetadata
-        title={t("quizzes-title")}
+        title={t("common:quizzes-title")}
         description={t("quizzes-subtitle")}
+        image="/heroes/quizzes-hub-hero.png"
       />
       <HubHero
-        title={t("quizzes-title")}
-        description={t("learn-quizzes:quizzes-subtitle")}
-        header={t("learn-quizzes:test-your-knowledge")}
+        title={t("common:quizzes-title")}
+        description={t("quizzes-subtitle")}
+        header={t("test-your-knowledge")}
         heroImg={HeroImage}
       />
       <QuizzesModal isOpen={isOpen} onClose={onClose} quizStatus={quizStatus}>
@@ -98,14 +98,14 @@ const QuizzesHubPage: NextPage<
             <Box>
               <QuizzesList
                 content={ethereumBasicsQuizzes}
-                headingId={t("learn-quizzes:basics")}
-                descriptionId={t("learn-quizzes:basics-description")}
+                headingId={t("basics")}
+                descriptionId={t("basics-description")}
                 {...commonQuizListProps}
               />
               <QuizzesList
                 content={usingEthereumQuizzes}
-                headingId={t("learn-quizzes:using-ethereum")}
-                descriptionId={t("learn-quizzes:using-ethereum-description")}
+                headingId={t("using-ethereum")}
+                descriptionId={t("using-ethereum-description")}
                 {...commonQuizListProps}
               />
             </Box>
@@ -120,11 +120,11 @@ const QuizzesHubPage: NextPage<
             >
               <Box>
                 <Text align={{ base: "center", xl: "left" }} fontWeight="bold">
-                  <Translation id="learn-quizzes:want-more-quizzes" />
+                  {t("want-more-quizzes")}
                 </Text>
 
                 <Text align={{ base: "center", xl: "left" }}>
-                  <Translation id="learn-quizzes:contribute" />
+                  {t("contribute")}
                 </Text>
               </Box>
               <ButtonLink
@@ -135,7 +135,7 @@ const QuizzesHubPage: NextPage<
               >
                 <Flex alignItems="center">
                   <Icon as={FaGithub} color="text" boxSize={6} me={2} />
-                  <Translation id="learn-quizzes:add-quiz" />
+                  {t("add-quiz")}
                 </Flex>
               </ButtonLink>
             </Flex>

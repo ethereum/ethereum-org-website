@@ -18,61 +18,98 @@ A keretrendszerek olyan dobozon-kívüli funkciókat kínálnak, melyekkel:
 
 ## Előfeltételek {#prerequisites}
 
-Mielőtt elmerülnél a keretrendszerekben, javasoljuk, hogy olvasd át a bevezetés a [dappokba](/developers/docs/dapps/) és a [Ethereum stack](/developers/docs/ethereum-stack/) cikkeket.
+Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezetés a [dappokba](/developers/docs/dapps/) és a [Ethereum stack](/developers/docs/ethereum-stack/) cikkeket.
 
 ## Elérhető keretrendszerek {#available-frameworks}
 
-**Truffle -** **_Egy fejlesztői környezet, testing keretrendszer, build pipeline, és további eszközök tartoznak bele._**
+**Foundry** – **_A Foundry egy gyors, hordozható és moduláris eszközrendszer az Ethereum alkalmazásfejlesztésre._**
 
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [GitHub](https://github.com/trufflesuite/truffle)
+- [Foundry telepítése](https://book.getfoundry.sh/)
+- [Foundry könyv](https://book.getfoundry.sh/)
+- [Foundry közösségi csevegés Telegramon](https://t.me/foundry_support)
+- [Lenyűgöző Foundry](https://github.com/crisgarner/awesome-foundry)
 
-**Epirus -** **_Egy platform blokklánc alkalmazások fejlesztésére, telepítésére és monitorozására a JVM-en_**
-
-- [Honlap](https://www.web3labs.com/epirus)
-- [Dokumentáció](https://docs.epirus.io)
-- [GitHub](https://github.com/epirus-io/epirus-cli)
-
-**Hardhat -** **_Ethereum fejlesztői környezet profiknak_**
+**Hardhat -** **_Ethereum fejlesztői környezet profiknak._**
 
 - [hardhat.org](https://hardhat.org)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 
-**OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: Egy eszköztár okosszerződések fejlesztéséhez, összeállításához, továbbfejlesztéséhez, telepítéséhez és az okosszerződésekkel való interakciókhoz._**
+**Ape -** **_Az okosszerződés-fejlesztői eszköz a pythonisták, adattudósok és biztonsági szakértők számára._**
 
-- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
-- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
-- [Közösségi Fórum](https://forum.openzeppelin.com/c/support/17)
+- [Dokumentáció](https://docs.apeworx.io/ape/stable/)
+- [GitHub](https://github.com/ApeWorX/ape)
 
-**Brownie -** **_Python alapú fejlesztői környezet és testing keretrendszer._**
+**Web3j -** **_Platform a blokklánc alkalmazások fejlesztésére a JVM-n._**
 
-- [Dokumentáció](https://eth-brownie.readthedocs.io/en/latest/)
-- [GitHub](https://github.com/eth-brownie/brownie)
+- [Honlap](https://www.web3labs.com/web3j-sdk)
+- [Dokumentáció](https://docs.web3j.io)
+- [GitHub](https://github.com/web3j/web3j)
 
-**Create Eth App -** **_Készíts Ethereum alapú appokat egy paranccsal. UI keretek és DeFi sablonok széles választékával rendelkezik, amelyek közül választhatsz._**
+**Create Eth App -** **_Készítsen Ethereum-alapú appokat egy paranccsal. UI-keretrendszerek és DeFi-sablonok széles választék._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 - [Sablonok](https://github.com/PaulRBerg/create-eth-app/tree/develop/templates)
 
-**scaffold-eth -** **_Hardhat + Create Eth App: minden, amire szükséged van, hogy elkezdj okosszerződések által működtetett decentralizált alkalmazásokat fejleszteni._**
+**Scaffold-Eth -** **_Ethers.js + Hardhat + React komponensek és hook-ok web3-hoz: minden, amire szükség van, hogy el tudjon kezdeni okosszerződések által működtetett decentralizált alkalmazásokat fejleszteni._**
 
 - [GitHub](https://github.com/austintgriffith/scaffold-eth)
 
-**The Graph -** **_Blokklánc adatok hatékony lekérdezése a The Graph-fal_**
+**Tenderly -** **_Web3 fejlesztői platform, amely lehetővé teszi a blokklánc-fejlesztőknek, hogy okosszerződéseket építsenek, teszteljenek, debuggoljanak, felügyeljenek és üzemeltessenek, illetve fejlesszék a dapp UX-t._**
+
+- [Honlap](https://tenderly.co/)
+- [Dokumentáció](https://docs.tenderly.co/ethereum-development-practices)
+
+**The Graph -** **_Blokkláncadatok hatékony lekérdezése a The Graph segítségével._**
 
 - [Honlap](https://thegraph.com/)
 - [Útmutató](/developers/tutorials/the-graph-fixing-web3-data-querying/)
 
 **Alchemy -** **_Ethereum Fejlesztési Platform._**
 
-- [alchemyapi.io](https://alchemyapi.io/)
+- [alchemy.com](https://www.alchemy.com/)
 - [GitHub](https://github.com/alchemyplatform)
-- [Discord](https://discord.gg/kwqVnrA)
+- [Discord](https://discord.com/invite/A39JVCM)
+
+**NodeReal -** **_Ethereum fejlesztői platform._**
+
+- [Nodereal.io](https://nodereal.io/)
+- [GitHub](https://github.com/node-real)
+- [Discord](https://discord.gg/V5k5gsuE)
+
+**thirdweb SDK -** **_Építsen web3 alkalmazásokat, amelyek interakcióba lépnek az okosszerződésével az erőteljes SDK-kat és CLI-t használva._**
+
+- [Dokumentáció](https://portal.thirdweb.com/sdk/)
+- [GitHub](https://github.com/thirdweb-dev/)
+
+**Chainstack -** **_Web3 (Ethereum és egyéb) fejlesztői platform._**
+
+- [chainstack.com](https://www.chainstack.com/)
+- [GitHub](https://github.com/chainstack)
+- [Discord](https://discord.gg/BSb5zfp9AT)
+
+**Brownie -** **_Python-alapú fejlesztői környezet és tesztelési keretrendszer._**
+
+- [Dokumentáció](https://eth-brownie.readthedocs.io/en/latest/)
+- [GitHub](https://github.com/eth-brownie/brownie)
+- **A Brownie karbantartása jelenleg szünetel**
+
+**Truffle -** **_Fejlesztői környezet, tesztelési keretrendszer, folyamatépítő és további eszközök._**
+
+- [trufflesuite.com](https://www.trufflesuite.com/)
+- [GitHub](https://github.com/trufflesuite/truffle)
+- **A Truffle fejlesztése befejeződött** – [további információk](https://twitter.com/trufflesuite/status/1704946902393860589?t=NlIWeLTbBSAaJmS5uUAhSA&s=19)
+
+**OpenZeppelin SDK -** **_The Ultimate Smart Contract Toolkit: egy eszköztár okosszerződések fejlesztéséhez, összeállításához, továbbfejlesztéséhez, telepítéséhez és az okosszerződésekkel való interakciókhoz._**
+
+- [OpenZeppelin SDK](https://openzeppelin.com/sdk/)
+- [GitHub](https://github.com/OpenZeppelin/openzeppelin-sdk)
+- [Közösségi Fórum](https://forum.openzeppelin.com/c/support/17)
+- **Az OpenZeppelin SDK fejlesztése befejeződött**
 
 ## További olvasnivaló {#further-reading}
 
-_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_
 
 ## Kapcsolódó témák {#related-topics}
 
-- [Állíts fel egy helyi fejlesztői környezetet](/developers/local-environment/)
+- [Helyi fejlesztői környezet felállítása](/developers/local-environment/)

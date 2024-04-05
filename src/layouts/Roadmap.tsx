@@ -66,18 +66,17 @@ export const roadmapComponents = {
   RoadmapImageContent,
 }
 
-interface IProps
-  extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> {
-  frontmatter: RoadmapFrontmatter
-}
-export const RoadmapLayout: React.FC<IProps> = ({
+type RoadmapLayoutProps = ChildOnlyProp &
+  Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> & {
+    frontmatter: RoadmapFrontmatter
+  }
+export const RoadmapLayout = ({
   children,
   frontmatter,
   slug,
   tocItems,
   contentNotTranslated,
-}) => {
+}: RoadmapLayoutProps) => {
   // TODO: Replace with direct token implementation after UI migration is completed
   const lgBp = useToken("breakpoints", "lg")
 

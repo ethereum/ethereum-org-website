@@ -5,8 +5,9 @@ import { Flex, type FlexProps, Icon, Text } from "@chakra-ui/react"
 import { FAKE_DEMO_ADDRESS } from "../constants"
 import { NotificationPopover } from "../NotificationPopover"
 
-interface IProps extends Omit<FlexProps, "children"> {}
-export const AddressPill: React.FC<IProps> = ({ ...btnProps }) => (
+type AddressPillProps = Omit<FlexProps, "children">
+
+export const AddressPill = ({ ...btnProps }: AddressPillProps) => (
   <NotificationPopover
     title="Example walkthrough"
     content="Share your address (public identifier) from your own wallet when finished here"

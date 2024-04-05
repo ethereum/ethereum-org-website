@@ -71,7 +71,7 @@ lang: fa
 - [مسیرهای منقضی شدن وضعیت](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [طرح Verkel و منقضی شدن وضعیت](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [مدیریت تاریخچه فعالیت‌ها](https://eips.ethereum.org/EIPS/eip-4444)
-- [درختان ورکل](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [درختان ورکل](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [نمونه‌گیری دسترسی داده‌ها](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## توسعه کاربر {#client-development}

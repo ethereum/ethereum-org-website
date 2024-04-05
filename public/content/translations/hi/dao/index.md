@@ -156,7 +156,7 @@ _आम तौर पर विकेन्द्रीकृत विकास
 - [DAO-संचालित डिजिटल समुदाय कैसे शुरू करें](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [DAO क्या है?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [कॉइनमार्केटकैप](https://coinmarketcap.com)
 - [क्या है होलोग्राफिक सहमति?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO निगम नहीं हैं: जहां विटालिक द्वारा स्वायत्त संगठनों में विकेंद्रीकरण मायने रखता है](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAO निगम नहीं हैं: जहां विटालिक द्वारा स्वायत्त संगठनों में विकेंद्रीकरण मायने रखता है](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA और बहुत कुछ: एक अधूरी शब्दावली गाइड](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [इथेरियम ब्लॉग](https://blog.ethereum.org)
 
 ### वीडियो {#videos}

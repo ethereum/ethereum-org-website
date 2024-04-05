@@ -65,5 +65,5 @@ Mire este vídeo en el que Justin Drake explica los beneficios de la prueba de p
 ## Más información {#further-reading}
 
 - [La filosofía de diseño de la prueba de participación de Vitalik](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51)
-- [Preguntas frecuentes sobre la prueba de participación de Vitalik](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Preguntas frecuentes sobre la prueba de participación de Vitalik](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 - [Vídeo «Una explicación sencilla» sobre la diferencia entre PoS y PoW](https://www.youtube.com/watch?v=M3EFi_POhps)

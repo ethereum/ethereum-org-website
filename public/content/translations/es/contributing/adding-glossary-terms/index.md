@@ -23,4 +23,4 @@ Los nuevos términos de glosario se evaluarán a tenor de los siguientes criteri
 
 ## Añada su término {#how-decisions-about-the-site-are-made}
 
-Si desea añadir un término de glosario de ethereum.org y cumple con los requisitos, [cree una incidencia en GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?template=suggest_glossary_term.md).
+Si desea añadir un término de glosario de ethereum.org y cumple con los requisitos, [cree una incidencia en GitHub](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_glossary_term.yaml).

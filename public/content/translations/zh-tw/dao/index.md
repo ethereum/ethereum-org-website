@@ -28,13 +28,13 @@ summaryPoint3: 一個將資產投入特定事業的安全場所。
 
 ### 比較 {#dao-comparison}
 
-| 去中心化自治組織                                   | 傳統組織                                               |
-| -------------------------------------------------- | ------------------------------------------------------ |
-| 通常是扁平組織，而且完全民主。                     | 通常等級嚴明。                                         |
-| 任何更改都需要成員投票決定後才能實施。             | 視組織結構而定，可能由部分人進行決策，也可能投票表決。 |
-| 不需要可信的中間人便能自動統計投票、執行結果。     | 如果允許投票，會在內部計票，而且投票結果必須人工執行。 |
-| 以去中心化方式自動提供服務（例如慈善基金的分配）。 | 需要人工處理，或集中管控自動處理，易受操縱。           |
-| 所有活動皆完全公開透明。                           | 活動通常是隱密進行，公開程度有限。                     |
+| 去中心化自治組織                  | 傳統組織                        |
+| ------------------------- | --------------------------- |
+| 通常是扁平組織，而且完全民主。           | 通常等級嚴明。                     |
+| 任何更改都需要成員投票決定後才能實施。       | 視組織結構而定，可能由部分人進行決策，也可能投票表決。 |
+| 不需要可信的中間人便能自動統計投票、執行結果。   | 如果允許投票，會在內部計票，而且投票結果必須人工執行。 |
+| 以去中心化方式自動提供服務（例如慈善基金的分配）。 | 需要人工處理，或集中管控自動處理，易受操縱。      |
+| 所有活動皆完全公開透明。              | 活動通常是隱密進行，公開程度有限。           |
 
 ### 去中心化自治組織範例 {#dao-examples}
 
@@ -73,7 +73,7 @@ summaryPoint3: 一個將資產投入特定事業的安全場所。
 
 #### 知名案例 {#governance-example}
 
-[以太坊域名服務](https://claim.ens.domains/delegate-ranking)——以太坊域名服務持有者可將其選票分配給積極代表他們參與活動的社群成員。
+[以太坊名稱服務](https://claim.ens.domains/delegate-ranking) — 以太坊名稱服務持有者可將其選票分配給積極代表他們參與活動的社群成員。
 
 ### 自動交易治理 {#governance-example}
 
@@ -156,7 +156,7 @@ _通常用於協定和去中心化應用程式的去中心化開發及治理，�
 - [如何創立由去中心化自治組織支援的數位社群](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [什麼是去中心化自治組織？](https://coinmarketcap.com/alexandria/article/what-is-a-dao)– [Coinmarketcap](https://coinmarketcap.com)
 - [什麼是全局共識？](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c)- [DAOstack](https://daostack.io/)
-- [Vitalik，《去中心化自治組織並非法人團體：去中心化在自治組織裡的重要之處》](https://vitalik.ca/general/2022/09/20/daos.html)
+- [Vitalik，《去中心化自治組織並非法人團體：去中心化在自治組織裡的重要之處》](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [去中心化自治組織、去中心化自治公司、去中心化應用程式等：不完整術語指引](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [以太坊部落格](https://blog.ethereum.org)
 
 ### 影片 {#videos}

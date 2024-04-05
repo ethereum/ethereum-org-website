@@ -7,9 +7,9 @@ incomplete: true
 
 ## 标准概述 {#standards-overview}
 
-以太坊社区已经采用了许多标准，这有助于在项目的不同实现中保持统一的兼容性（例如[以太坊客户](/developers/docs/nodes-and-clients/)和钱包），并确保智能合约和 dapps 仍保持兼容。
+以太坊社区已经采用了许多标准，这有助于在项目的不同实现中保持互操作性（例如[以太坊客户端](/developers/docs/nodes-and-clients/)和钱包），并确保智能合约和去中心化应用程序保持可组合性。
 
-通常，标准作为[以太坊改进提议](/eips/) (EIP) 提出，由社区成员通过[标准流程](https://eips.ethereum.org/EIPS/eip-1)讨论确定。
+通常，标准作为[以太坊改进提案](/eips/) (EIP) 提出，由社区成员通过[标准流程](https://eips.ethereum.org/EIPS/eip-1)讨论确定。
 
 - [以太坊改进提案介绍](/eips/)
 - [EIP 列表](https://eips.ethereum.org/)
@@ -18,7 +18,7 @@ incomplete: true
 - [以太坊治理简介](/governance/)
 - [以太坊治理概述](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _2019 年 3 月 31 日 - Boris Mann_
 - [以太坊协议开发治理和网络升级协调](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _2020 年 3 月 23 日 - Hudson Jameson_
-- [以太坊核心开发者会议播放列表](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)_（YouTube 播放列表）_
+- [以太坊核心开发者会议播放列表](https://www.youtube.com/@EthereumProtocol)_（YouTube 播放列表）_
 
 ## 标准的类型 {#types-of-standards}
 
@@ -40,10 +40,10 @@ EIP 有 3 种类型：
 ### 代币标准 {#token-standards}
 
 - [ERC-20](/developers/docs/standards/tokens/erc-20/) - 同质化（可互换）代币的标准接口，比如投票代币、质押代币或虚拟货币。
-  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - 为 ERC-20 代币定义一个代币接口，支持在转账函数或 transferFrom 函数后执行接收者代码，或批准后执行消费者代码。
+  - [ERC-1363](https://eips.ethereum.org/EIPS/eip-1363) - 为 ERC-20 代币定义一个代币接口，支持在转账函数或 transferFrom 函数后执行接收者代码，或在批准后执行消费者代码。
 - [ERC-721](/developers/docs/standards/tokens/erc-721/) - 非同质化代币的标准接口，比如艺术作品或歌曲的契约。
   - [ERC-2309](https://eips.ethereum.org/EIPS/eip-2309) - 使用连续的代币标识符创建/转移一个或多个非同质化代币时，触发的标准事件。
-  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - EIP-721 消费者角色的接口扩展
+  - [ERC-4400](https://eips.ethereum.org/EIPS/eip-4400) - EIP-721 消费者角色的接口扩展。
   - [ERC-4907](https://eips.ethereum.org/EIPS/eip-4907) - 为 ERC-721 代币添加一个具有受限权限的限时角色。
 - [ERC-777](/developers/docs/standards/tokens/erc-777/) - **（不推荐）**在 ERC-20 基础上改进的代币标准。
 - [ERC-1155](/developers/docs/standards/tokens/erc-1155/) - 可包含同质化和非同质化资产的代币标准。
@@ -53,6 +53,6 @@ EIP 有 3 种类型：
 
 ## 延伸阅读 {#further-reading}
 
-- [以太坊改进提议 (EIP)](/eips/)
+- [以太坊改进提案 (EIP)](/eips/)
 
 _还有哪些社区资源对你有所帮助？ 请编辑本页面并添加！_

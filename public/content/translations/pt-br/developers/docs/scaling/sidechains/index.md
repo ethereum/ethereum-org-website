@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 Uma sidechain é uma blockchain separada que se executa independente do Ethereum e está conectada à rede principal do Ethereum por uma bridge nos dois sentidos. As sidechains podem ter parâmetros de blocos separados e [algoritmos de consenso](/developers/docs/consensus-mechanisms/), que são geralmente projetados para um processamento eficiente de transações. Entretanto, usar uma sidechain tem vantagens e desvantagens, já que elas não herdam as propriedades de segurança do Ethereum. Ao contrário das [soluções de dimensionamento da camada 2](/layer-2/), as sidechains não publicam alterações no estado e dados de transação de volta à rede principal do Ethereum.
 
-As sidechains também sacrificam alguma medida de descentralização ou segurança para alcançar alta vazão de dados ([trilema do dimensionamento](https://vitalik.ca/general/2021/05/23/scaling.html)). O Ethereum, no entanto, comprometeu-se a dimensionar sem comprometer a descentralização e a segurança, conforme descrito na sua [declaração de visão](/roadmap/vision/) relacionada a atualizações.
+As sidechains também sacrificam alguma medida de descentralização ou segurança para alcançar alta vazão de dados ([trilema do dimensionamento](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). O Ethereum, no entanto, comprometeu-se a dimensionar sem comprometer a descentralização e a segurança, conforme descrito na sua [declaração de visão](/roadmap/vision/) relacionada a atualizações.
 
 ## Como funcionam as sidechains? {#how-do-sidechains-work}
 
@@ -18,7 +18,7 @@ As sidechains são blockchains independentes, com diferentes histórias, roteiro
 Uma das qualidades que tornam as sidechains únicas (ou seja, diferentes do Ethereum) é o algoritmo de consenso usado. As sidechains não contam com o Ethereum para consenso e podem escolher protocolos de consenso alternativos que atendam às suas necessidades. Alguns exemplos de algoritmos de consenso usados nas sidechains incluem:
 
 - [Prova de autoridade](https://wikipedia.org/wiki/Proof_of_authority)
-- [Prova de participação delegada](https://en.bitcoinwiki.org/wiki/DPoS)
+- [Prova de participação delegada](https://en.bitcoin.it/wiki/Delegated_proof_of_stake)
 - [Tolerância a falhas bizantinas](https://decrypt.co/resources/byzantine-fault-tolerance-what-is-it-explained).
 
 Como o Ethereum, as sidechains têm nós de validação que verificam e processam transações, produzem blocos e armazenam o estado da blockchain. Os validadores são também responsáveis por manterem o consenso em toda a rede e protegê-la contra ataques maliciosos.

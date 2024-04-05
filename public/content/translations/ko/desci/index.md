@@ -12,7 +12,7 @@ summaryPoint2: 과학자들이 자금을 모으고, 실험을 실행하고, 데�
 summaryPoint3: 열린 과학 운동을 기반으로 합니다.
 ---
 
-## 탈중앙화 과학(DeFi)이란 무엇인가요? {#what-is-desci}
+## 탈중앙화 과학(DeSci)이란 무엇인가요? {#what-is-desci}
 
 탈중앙화 과학(DeSci)은 Web3 스택을 사용하여 과학 지식을 공정하고 공평하게 자금 조달, 생성, 검토, 신용, 저장 및 보급하기 위한 공공 인프라를 구축하는 것을 목표로 하는 운동입니다.
 
@@ -68,7 +68,7 @@ DeSci는 Web2 학계를 디지털 세계로 전환하기 위한 과학적 도구
 
 연구에 따르면 보조금 검토 패널은 다른 패널에 주어진 동일한 제안이 매우 다른 결과를 가지고 있기 때문에 고품질 제안을 선택하는 데 열악한 역할을 합니다. 자금이 더 부족해짐에 따라, 그것은 더 지적으로 보수적인 프로젝트를 가진 더 많은 고위 연구자들의 더 작은 풀에 집중되었습니다. 그 효과는 비뚤어진 보상을 확고히 하고 혁신을 억누르는 경쟁적인 자금 조달 환경을 조성했습니다.
 
-Web3는 DAO와 Web3가 광범위하게 개발한 다양한 보상 모델을 실험함으로써 이 깨진 자금 조달 모델을 혼란에 빠뜨릴 가능성이 있습니다. [소급 공공재 자금 조달](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [이차 자금 조달](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [다오 운영 방식](https://www.antler.co/blog/daos-and-web3-governance) 그리고 [토큰화된 보상구조](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)는 과학 자금에 혁명을 일으킬 수 있는 Web3 도구 중 일부입니다.
+Web3는 DAO와 Web3가 광범위하게 개발한 다양한 보상 모델을 실험함으로써 이 깨진 자금 조달 모델을 혼란에 빠뜨릴 가능성이 있습니다. [소급 공공재 자금 조달](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [이차 자금 조달](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [다오 운영 방식](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) 그리고 [토큰화된 보상구조](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)는 과학 자금에 혁명을 일으킬 수 있는 Web3 도구 중 일부입니다.
 
 ### IP 소유권 및 개발 {#ip-ownership}
 
@@ -76,7 +76,7 @@ Web3는 DAO와 Web3가 광범위하게 개발한 다양한 보상 모델을 실�
 
 NFT가 향후 거래에 대한 수익을 원래 작성자에게 다시 전달할 수 있는 것과 같은 방식으로 연구자, 관리 기관(예: DAO) 또는 데이터를 수집한 주체에게 보상하기 위해 투명한 가치 귀속 체인을 설정할 수 있습니다.
 
-[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6)는 또한 수행 중인 연구 실험의 분산된 데이터 저장소의 열쇠 역할을 할 수 있으며 NFT 및 [DeFi](/defi/) 금융화(금융에서 대출 풀 및 가치 평가까지)에 연결할 수 있습니다. 또한 [VitaDAO](https://www.vitadao.com/)와 같은 DAO와 같은 본질적으로 온체인 단체가 온 체인에서 직접 연구를 수행할 수 있습니다. 양도할 수 없는 ["soulbound" 토큰](https://vitalik.ca/general/2022/01/26/soulbound.html)의 출현은 또한 개인이 이더리움 주소와 연결된 경험과 자격 증명을 증명할 수 있도록 함으로써 DeFi 에서 중요한 역할을 할 수 있습니다.
+[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6)는 또한 수행 중인 연구 실험의 분산된 데이터 저장소의 열쇠 역할을 할 수 있으며 NFT 및 [DeFi](/defi/) 금융화(금융에서 대출 풀 및 가치 평가까지)에 연결할 수 있습니다. 또한 [VitaDAO](https://www.vitadao.com/)와 같은 DAO와 같은 본질적으로 온체인 단체가 온 체인에서 직접 연구를 수행할 수 있습니다. 양도할 수 없는 ["soulbound" 토큰](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)의 출현은 또한 개인이 이더리움 주소와 연결된 경험과 자격 증명을 증명할 수 있도록 함으로써 DeFi 에서 중요한 역할을 할 수 있습니다.
 
 ### 데이터 저장, 액세스 및 아키텍처 {#data-storage}
 

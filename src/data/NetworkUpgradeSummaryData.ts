@@ -1,32 +1,21 @@
-interface NetworkUpgradeProps {
-  dateTimeAsString: string
-  ethPriceInUSD: number
-  waybackLink: string
-  blockNumber?: number
-  epochNumber?: number
-  slotNumber?: number
-}
+import type { NetworkUpgradeData } from "@/lib/types"
 
-export interface NetworkUpgradeSummaryDataProps {
-  [key: string]: NetworkUpgradeProps
-}
-
-const NetworkUpgradeSummaryData: NetworkUpgradeSummaryDataProps = {
-  shanghai: {
+const NetworkUpgradeSummaryData: NetworkUpgradeData = {
+  dencun: {
+    dateTimeAsString: "2024-03-13T13:55:35.000Z",
+    ethPriceInUSD: 3984,
+    waybackLink:
+      "https://web.archive.org/web/20240312070259/https://ethereum.org/en/",
+    blockNumber: 19426587,
+    epochNumber: 269568,
+    slotNumber: 269568 * 32,
+  },
+  shapella: {
     dateTimeAsString: "2023-04-12T22:27:35.000Z",
     ethPriceInUSD: 1917,
     waybackLink:
       "https://web.archive.org/web/20230411044526/https://ethereum.org/en/",
     blockNumber: 17034870,
-    epochNumber: undefined,
-    slotNumber: undefined,
-  },
-  capella: {
-    dateTimeAsString: "2023-04-12T22:27:35.000Z",
-    ethPriceInUSD: 1917,
-    waybackLink:
-      "https://web.archive.org/web/20230411044526/https://ethereum.org/en/",
-    blockNumber: undefined,
     epochNumber: 194048,
     slotNumber: 6209536,
   },

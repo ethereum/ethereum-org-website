@@ -18,7 +18,7 @@ Proof-of-stake requires nodes, known as validators, to explicitly submit a crypt
 
 Proof-of-work is much more energy-hungry because electricity is burned in the mining process. Proof-of-stake, on the other hand, requires only a very small amount of energy - Ethereum validators can even run on a low-powered device such as Raspberry Pi. Ethereum's proof-of-stake mechanism is thought to be more secure than proof-of-work because the cost to attack is greater, and the consequences to an attacker are more severe.
 
-Proof-of-work versus proof-of-stake is a contentious topic. [Vitalik Buterin's blog](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) and the debate between Justin Drake and Lyn Alden give a good summary of the arguments.
+Proof-of-work versus proof-of-stake is a contentious topic. [Vitalik Buterin's blog](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) and the debate between Justin Drake and Lyn Alden give a good summary of the arguments.
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -89,7 +89,7 @@ Stake grinding is a category of attack on proof-of-stake networks where the atta
 Social slashing is the ability of the community to coordinate a fork of the blockchain in response to an attack. It enables the community to recover from an attacker finalizing a dishonest chain. Social slashing can also be used against censorship attacks.
 
 - [More on social slashing](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin on social slashing](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik Buterin on social slashing](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## Will I get slashed? {#will-i-get-slashed}
 
@@ -101,7 +101,7 @@ As a validator, it is very difficult to get slashed unless you deliberately enga
 
 The nothing-at-stake problem is a conceptual issue with some proof-of-stake mechanisms where there are only rewards and no penalties. If there is nothing at stake, a pragmatic validator is equally happy to attest to any, or even multiple, forks of the blockchain, as this increases their rewards. Ethereum gets around this using finality conditions and slashing to ensure one canonical chain.
 
-[More on the nothing-at-stake problem](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[More on the nothing-at-stake problem](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## What is a fork choice algorithm? {#what-is-a-fork-choice-algorithm}
 

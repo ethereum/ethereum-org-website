@@ -68,7 +68,7 @@ A jelenlegi elterjedt modell a tudományos tevékenységek finanszírozására a
 
 Az elemzések kimutatták, hogy ezek a bizottságok kvázi alkalmatlanok arra, hogy kiválasszák a jó minőségű jelentkezéseket, mivel ugyanazt a jelentkezést más-más bizottságok teljesen másképpen ítélik meg. Mivel a finanszírozási keretek szűkösek, ezért a tudományos tevékenység az idősebb kutatók kis csoportjára szűkül le, akik konzervatívabb projekteken dolgoznak. Ennek következtében egy szélsőségesen versenyző finanszírozási helyzet alakult ki, mely torz ösztönzésekkel és fullasztó innovációkkal jár.
 
-A web3 képes arra, hogy megbontsa ezt a megtört, torz finanszírozási modellt azáltal, hogy különféle ösztönzési módszereket tud alkalmazni, melyeket a DAO-k és a web3 résztvevők már széles körben alkalmaznak. [A retroaktív közjó-finanszírozás](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [a kvadratikus finanszírozás](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [a DAO-k általi irányítás](https://www.antler.co/blog/daos-and-web3-governance) és [a tokenizált ösztönzési struktúrák](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) csak néhány web3-eszköz, melyek forradalmasítani tudnák a tudományos finanszírozás világát.
+A web3 képes arra, hogy megbontsa ezt a megtört, torz finanszírozási modellt azáltal, hogy különféle ösztönzési módszereket tud alkalmazni, melyeket a DAO-k és a web3 résztvevők már széles körben alkalmaznak. [A retroaktív közjó-finanszírozás](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [a kvadratikus finanszírozás](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [a DAO-k általi irányítás](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) és [a tokenizált ösztönzési struktúrák](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) csak néhány web3-eszköz, melyek forradalmasítani tudnák a tudományos finanszírozás világát.
 
 ### A szellemi tulajdon (IP) birtoklása és fejlesztése {#ip-ownership}
 
@@ -76,7 +76,7 @@ A szellemi tulajdon (IP) nagy probléma a hagyományos tudomány területén: on
 
 Ugyanazon a módon, ahogy az NFT-k képesek a jövőbeli tranzakciók után is fizetni az eredeti alkotónak, lehetséges transzparens értékteremtő láncokat meghatározni arra, hogy a kutatókat, az irányító szerveket (mint a DAO) vagy akár a kutatási adatokat biztosító személyeket díjazzák.
 
-[Az IP-NFT-k](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) arra is használhatók, hogy a kutatási kísérletek decentralizált adattárháza jöjjön létre, és bekerüljön az NFT- és [DeFi](/defi/)-alapú finanszírozásba (a töredékes forrásoktól a kölcsönalapok és az értékfelmérés felé mozdulva). Az eredetileg is láncon belül létező entitások, mint a DAO-k, például a [VitaDAO](https://www.vitadao.com/), végezhet kutatást közvetlenül a láncon. A nem átadható, [egyénhez kötött (soulbound) tokenek](https://vitalik.ca/general/2022/01/26/soulbound.html) kifejlődése szintén fontos lehet a DeSci számára, hogy a tudósok az Ethereum-címükhöz kapcsoltan bizonyítani tudják tapasztalataikat és hitelesítő adataikat.
+[Az IP-NFT-k](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) arra is használhatók, hogy a kutatási kísérletek decentralizált adattárháza jöjjön létre, és bekerüljön az NFT- és [DeFi](/defi/)-alapú finanszírozásba (a töredékes forrásoktól a kölcsönalapok és az értékfelmérés felé mozdulva). Az eredetileg is láncon belül létező entitások, mint a DAO-k, például a [VitaDAO](https://www.vitadao.com/), végezhet kutatást közvetlenül a láncon. A nem átadható, [egyénhez kötött (soulbound) tokenek](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) kifejlődése szintén fontos lehet a DeSci számára, hogy a tudósok az Ethereum-címükhöz kapcsoltan bizonyítani tudják tapasztalataikat és hitelesítő adataikat.
 
 ### Adattárolás, adatelérés és architektúra {#data-storage}
 
@@ -103,7 +103,7 @@ Fedezze fel a projekteket és csatlakozzon a DeSci közösségéhez.
 - [OceanDAO: az adattal kapcsolatos tudományok DAO által irányított finanszírozása](https://oceanprotocol.com/dao)
 - [Opscientia: nyílt, decentralizált, tudományos munkafolyamatok](https://opsci.io/research/)
 - [LabDAO: fehérjék számítógépes szimulációja](https://alphafodl.vercel.app/)
-- [Bio.xyz: finanszírozás szerzése a biotechnológiai DAO-jához vagy decentralizált tudományos projektjéhez](https://www.molecule.to/)
+- [Bio.xyz: finanszírozás szerzése a biotechnológiai DAO-jához vagy decentralizált tudományos projektjéhez](https://www.bio.xyz/)
 - [ResearchHub: tudományos eredmények publikálása és azok megvitatása munkatársaival](https://www.researchhub.com/)
 - [VitaDAO: hosszútávú kutatások finanszírozása a szponzorált kutatási megállapodások alapján](https://www.vitadao.com/)
 - [Fleming Protocol: nyílt forráskódú adatgazdaság, amely fűti a kollaboratív orvosbiológiai felfedezéseket](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

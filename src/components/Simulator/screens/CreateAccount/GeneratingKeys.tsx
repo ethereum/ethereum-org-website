@@ -3,7 +3,8 @@ import { motion } from "framer-motion"
 import { PiCheckThin } from "react-icons/pi"
 import { Flex, Grid, Icon, Spinner, Text } from "@chakra-ui/react"
 
-import { PhoneScreenProps } from "../../interfaces"
+import type { PhoneScreenProps } from "@/lib/types"
+
 import { ProgressCta } from "../../ProgressCta"
 
 import {
@@ -13,14 +14,14 @@ import {
   WORD_GENERATION_SPINNER_DURATION,
 } from "./constants"
 
-interface IProps extends PhoneScreenProps {
+type GeneratingKeysProps = PhoneScreenProps & {
   generateNewWords: () => void
 }
-export const GeneratingKeys: React.FC<IProps> = ({
+export const GeneratingKeys = ({
   nav,
   ctaLabel,
   generateNewWords,
-}) => {
+}: GeneratingKeysProps) => {
   const { progressStepper } = nav
   const [loading, setLoading] = useState(true)
   const [complete, setComplete] = useState(false)

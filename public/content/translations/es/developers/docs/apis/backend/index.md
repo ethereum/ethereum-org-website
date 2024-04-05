@@ -53,7 +53,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 - [Coinbase Cloud Node](https://www.coinbase.com/cloud/products/node)
 - [Documentación](https://docs.cloud.coinbase.com/node/reference/welcome-to-node)
 
-**DataHub by Figment:\*\*** _Servicios de API web3 con redes de prueba y la red principal de Ethereum._\*\*
+**DataHub by Figment:**** _Servicios de API web3 con redes de prueba y la red principal de Ethereum._**
 
 - [DataHub](https://www.figment.io/datahub)
 - [Documentación](https://docs.figment.io/introduction/what-is-datahub)
@@ -154,7 +154,7 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 - [GetBlock.io](https://getblock.io/)
 - [Documentación](https://getblock.io/docs/)
 
-**BlockPi:\*\***_ Proporcione servicios RPC más eficientes y rápidos._\*\*
+**BlockPi:****_ Proporcione servicios RPC más eficientes y rápidos._**
 
 - [blockpi.io](https://blockpi.io/)
 - [Documentación](https://docs.blockpi.io/)
@@ -164,8 +164,8 @@ Estas bibliotecas eliminan en gran parte la complejidad de interactuar directame
 **Tokenview:** **_La plataforma general de API de Blockchain Multi-Crypto._**
 
 - [services.tokenview.io](https://services.tokenview.io/)
-- [Documentación](https://services.tokeniew/docs?type=api)
-- [Github](https://github.com/Tokenview)
+- [Documentación](https://services.tokenview.io/docs?type=api)
+- [GitHub](https://github.com/Tokenview)
 
 ## Más información {#further-reading}
 

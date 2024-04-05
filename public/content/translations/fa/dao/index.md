@@ -156,7 +156,7 @@ _معمولاً برای توسعه و حاکمیت غیرمتمرکز پروت�
 - [چگونه انجمن دیجیتالی تحت پشتیبانی DAO ایجاد کنیم؟](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [DAO چیست؟](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [اجماع هولوگرافیک چیست؟](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAOها شرکت نیستند: جایی که تمرکززدایی در سازمان های خودمختار از سوی Vitalik اهمیت دارد](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAOها شرکت نیستند: جایی که تمرکززدایی در سازمان های خودمختار از سوی Vitalik اهمیت دارد](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO، DAC، DA و موارد دیگر: راهنمای اصطلاحات ناقص](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [بلاگ اتریوم](https://blog.ethereum.org)
 
 ### ویدیوها {#videos}

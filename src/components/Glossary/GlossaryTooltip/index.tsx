@@ -1,34 +1,53 @@
 import React, { ReactNode } from "react"
-import { Text, useBreakpointValue } from "@chakra-ui/react"
+import { useRouter } from "next/router"
+import { Box, Text } from "@chakra-ui/react"
 
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import Tooltip from "@/components/Tooltip"
 
-interface IProps {
+import { trackCustomEvent } from "@/lib/utils/matomo"
+import { cleanPath } from "@/lib/utils/url"
+
+type GlossaryTooltipProps = {
   children: ReactNode
   termKey: string
 }
 
-const GlossaryTooltip: React.FC<IProps> = ({ children, termKey }) => {
-  const isLargeScreen = useBreakpointValue({ base: false, lg: true })
+const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
+  const { asPath } = useRouter()
 
-  return isLargeScreen ? (
-    <Tooltip content={<GlossaryDefinition term={termKey} size="sm" />}>
-      <Text
-        as="u"
-        textDecorationStyle="dotted"
-        textUnderlineOffset="3px"
-        _hover={{
-          textDecorationColor: "primary.hover",
-          color: "primary.hover",
+  return (
+    <Box display="inline-block">
+      <Tooltip
+        content={
+          <GlossaryDefinition
+            term={termKey}
+            size="sm"
+            options={{ ns: "glossary-tooltip" }}
+          />
+        }
+        onBeforeOpen={() => {
+          trackCustomEvent({
+            eventCategory: "Glossary Tooltip",
+            eventAction: cleanPath(asPath),
+            eventName: termKey,
+          })
         }}
-        cursor="help"
       >
-        {children}
-      </Text>
-    </Tooltip>
-  ) : (
-    <Text as="span">{children}</Text>
+        <Text
+          as="u"
+          textDecorationStyle="dotted"
+          textUnderlineOffset="3px"
+          _hover={{
+            textDecorationColor: "primary.hover",
+            color: "primary.hover",
+          }}
+          cursor="help"
+        >
+          {children}
+        </Text>
+      </Tooltip>
+    </Box>
   )
 }
 

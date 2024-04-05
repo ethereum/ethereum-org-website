@@ -18,7 +18,7 @@ Se preferisci un approccio più visivo, consulta la guida di Luka per l'impostaz
 
 Dovrai accedere al tuo profilo di Crowdin o registrarti se non ne hai già uno. Per iscriversi bastano un account di posta elettronica e una password.
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   Unisciti al progetto
 </ButtonLink>
 

@@ -84,6 +84,6 @@ _Zauważ, że w wyjaśnieniu w filmie termin „Warstwa 2” jest używany w odn
 
 - [Aktualne analizy dotyczące rozwiązań skalowania warstwy 2 dla Ethereum](https://www.l2beat.com/)
 - [Ocena rozwiązań skalowania warstwy 2 Ethereum: schemat porównawczy](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Niekompletny przewodnik po pakietach zbiorczych](https://vitalik.ca/general/2021/01/05/rollup.html)
+- [Niekompletny przewodnik po pakietach zbiorczych](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 
 _Znasz jakieś zasoby społeczności, które Ci pomogły? Wyedytuj tę stronę i dodaj je!_

@@ -9,6 +9,7 @@ import {
   Icon,
   List,
   ListItem,
+  Skeleton,
   Text,
   useToken,
 } from "@chakra-ui/react"
@@ -133,22 +134,21 @@ export const upgradeComponents = {
   BeaconChainActions,
 }
 
-interface IProps
-  extends ChildOnlyProp,
-    Pick<
-      MdPageContent,
-      "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
-    > {
-  frontmatter: UpgradeFrontmatter
-}
-export const UpgradeLayout: React.FC<IProps> = ({
+type UpgradeLayoutProps = ChildOnlyProp &
+  Pick<
+    MdPageContent,
+    "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+  > & {
+    frontmatter: UpgradeFrontmatter
+  }
+export const UpgradeLayout = ({
   children,
   frontmatter,
   slug,
   tocItems,
   lastUpdatedDate,
   contentNotTranslated,
-}) => {
+}: UpgradeLayoutProps) => {
   const { t } = useTranslation("page-upgrades")
   const { locale } = useRouter()
 
@@ -194,10 +194,12 @@ export const UpgradeLayout: React.FC<IProps> = ({
               ))}
             </List>
           </Box>
-          <LastUpdated>
-            {t("common:page-last-updated")}:{" "}
-            {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
-          </LastUpdated>
+          {lastUpdatedDate && (
+            <LastUpdated>
+              {t("common:page-last-updated")}:{" "}
+              {getLocaleTimestamp(locale as Lang, lastUpdatedDate)}
+            </LastUpdated>
+          )}
         </TitleCard>
         {frontmatter.image && (
           <Image
