@@ -19,17 +19,17 @@ import "dotenv/config"
 const projectId = Number(process.env.CROWDIN_PROJECT_ID) || 363359
 
 const dates = {
-  allTime: {
-    from: ALL_TIME_START,
-    to: new Date().toISOString(),
+  month: {
+    from: getLastMonth().from,
+    to: getLastMonth().to,
   },
   quarter: {
     from: getLastQuarter().from,
     to: getLastQuarter().to,
   },
-  month: {
-    from: getLastMonth().from,
-    to: getLastMonth().to,
+  allTime: {
+    from: ALL_TIME_START,
+    to: new Date().toISOString(),
   },
 }
 
@@ -37,7 +37,9 @@ const reports = Object.keys(dates)
 
 async function main() {
   // Log calculated dates being used for report generation
-  console.log(dates)
+  console.table(dates)
+
+  const summary = {}
 
   for (const report of reports) {
     // Generate a report for the given date range
@@ -63,11 +65,29 @@ async function main() {
     const data = parseData(json)
 
     // Write parsed data to file system
-    fs.writeFileSync(
-      join(DATA_SAVE_PATH, report, `${report}-data.json`).toLowerCase(),
-      JSON.stringify(data, null, 2)
-    )
+    const filePath = join(
+      DATA_SAVE_PATH,
+      report,
+      `${report}-data.json`
+    ).toLowerCase()
+    fs.writeFileSync(filePath, JSON.stringify(data, null, 2))
+
+    // Add report to summary table
+    summary[report] = {
+      reportId,
+      from: dates[report].from,
+      to: dates[report].to,
+      filePath,
+    }
   }
+
+  // Write summary table
+  fs.writeFileSync(
+    join(DATA_SAVE_PATH, "leaderboard-import-summary.json"),
+    JSON.stringify(summary, null, 2)
+  )
+
+  console.table(summary, ["filePath"])
 }
 
 main()
