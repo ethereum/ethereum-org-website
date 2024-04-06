@@ -1,9 +1,3 @@
-## Console flags
-
-- `-b,--buckets`: Prints buckets overview and exits
-- `-v,--verbose`: Prints verbose console logs
-- `-f,--full`: Prints full name of buckets in summary
-
 ## Instructions for use
 
 1. Run `yarn crowdin-clean` to initialize fresh ./.crowdin folder. This can also be used to erase contents when finished.
