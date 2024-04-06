@@ -34,7 +34,7 @@ async function main() {
 
     // Delete .zip file once decompressed
     fs.rmSync(FILE_PATH)
-    console.log("Removed download from:", FILE_PATH)
+    console.log("🗑️ Removed download from:", FILE_PATH)
 
     // Get the list of buckets from Notion
     const buckets = (await getBuckets()) as BucketsList
@@ -44,7 +44,6 @@ async function main() {
 
     // Check markdown
     checkMarkdown(SUMMARY_PATH)
-
   } catch (error: unknown) {
     console.error((error as Error).message)
   }

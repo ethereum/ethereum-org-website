@@ -29,8 +29,7 @@ jobs:
           git config --global user.name "GitHub Action"
 
       - name: Fetch latest dev
-        run: |
-          git fetch origin dev
+        run: git fetch origin dev
 
       - name: Run script
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getTranslations.ts
@@ -39,4 +38,4 @@ jobs:
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
 
       - name: Process commits and PRs by language
-        run: bash ./src/scripts/postLangPRs.sh 
+        run: bash ./src/scripts/postLangPRs.sh
