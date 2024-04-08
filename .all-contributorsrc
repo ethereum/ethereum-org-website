@@ -11709,6 +11709,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "Vid201",
+      "name": "Vid Kersic",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38610409?v=4",
+      "profile": "https://github.com/Vid201",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
