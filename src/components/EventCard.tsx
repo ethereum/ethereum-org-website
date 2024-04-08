@@ -93,7 +93,7 @@ const EventCard = ({
       <Heading as="h3" marginTop={0} fontWeight="semibold" lineHeight={1.4}>
         {title}
       </Heading>
-      <Text opacity={0.8}>{description}</Text>
+      <Text>{description}</Text>
       <ButtonLink to={to}>View Event</ButtonLink>
     </Box>
   </Box>

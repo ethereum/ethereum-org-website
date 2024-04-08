@@ -59,9 +59,9 @@ Ethereum ditingkatkan secara rutin untuk meningkatkan skalabilitas, keamanan, at
 
 <RoadmapImageContent title="Cara penetapan peta jalan">
 
-Peta jalan ini sebagian besar adalah hasil kerja bertahun-tahun dari para peneliti dan pengembang - karena protokol ini sangat teknis - tetapi setiap orang yang berminat boleh ikut serta. Ide-ide biasanya dimulai dari diskusi di forum seperti [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://ethereum-magicians.org/) atau server discord Eth R&D. Ide-ide tersebut mungkin tanggapan terhadap kerentanan baru yang ditemukan, saran dari organisasi yang bekerja di lapisan aplikasi (seperti dapps dan bursa pertukaran) atau dari perselisihan yang diketahui oleh pengguna akhir (seperti biaya atau kecepatan transaksi). Ketika sudah matang, ide-ide ini dapat diusulkan sebagai [Proposal Peningkatan Ethereum](https://eips.ethereum.org/). Semua ini dilakukan di ruang publik sehingga setiap anggota komunitas dapat memberi masukan kapan saja.
+Peta jalan ini sebagian besar adalah hasil kerja bertahun-tahun dari para peneliti dan pengembang - karena protokol ini sangat teknis - tetapi setiap orang yang berminat boleh ikut serta. Ide-ide biasanya dimulai dari diskusi di forum seperti [ethresear.ch](https://ethresear.ch/), [Ethereum magicians](https://www.figma.com/exit?url=https%3A%2F%2Fethereum-magicians.org%2F) atau server discord Eth R&D. Ide-ide tersebut mungkin tanggapan terhadap kerentanan baru yang ditemukan, saran dari organisasi yang bekerja di lapisan aplikasi (seperti dapps dan bursa pertukaran) atau dari perselisihan yang diketahui oleh pengguna akhir (seperti biaya atau kecepatan transaksi). Ketika sudah matang, ide-ide ini dapat diusulkan sebagai [Proposal Peningkatan Ethereum](https://eips.ethereum.org/). Semua ini dilakukan di ruang publik sehingga setiap anggota komunitas dapat memberi masukan kapan saja.
 
-[Selengkapnya tentang tata kelola Ethereum](/governance/)
+[Selengkapnya tentang pemerintahan Ethereum](/governance/)
 
 </RoadmapImageContent>
 
@@ -114,4 +114,4 @@ Sharding adalah pemecahan rantai blok Ethereum agar subset validator hanya berta
 - [Pemilihan pemimpin rahasia](/roadmap/secret-leader-election) - Kriptografi cerdas dapat digunakan untuk memastikan agar identitas pengusul blok terkini tidak diumumkan kepada publik sehingga melindunginya dari beberapa jenis serangan tertentu.
 - [Abstraksi akun](/roadmap/account-abstraction) - Abstraksi akun adalah suatu tingkat peningkatan yang mendukung dompet kontrak pintar secara asli di Ethereum, sebagai pengganti penggunaan middleware yang rumit.
 - [Pohon Verkle](/roadmap/verkle-trees) - Pohon Verkle adalah struktur data yang dapat digunakan untuk mengaktifkan klien tanpa keadaan di Ethereum. Klien "tanpa keadaan" ini hanya membutuhkan ruang penyimpanan yang sangat kecil, tetapi masih dapat memverifikasi blok baru.
-- [Keadaan tanpa keadaan](/roadmap/statelessness) - klien tanpa keadaan akan dapat memverifikasi blok baru tanpa harus menyimpan data dalam jumlah besar. Hal ini akan memberikan semua manfaat menjalankan simpul dengan biaya yang sangat kecil dibandingkan dengan biaya yang berlaku saat ini.
+- [Keadaan tanpa kewarganegaraan](/roadmap/statelessness) - Klien keadaan tanpa kewarganegaraan akan dapat memverifikasi blok baru tanpa harus menyimpan data dalam jumlah besar. Hal ini akan memberikan semua manfaat menjalankan simpul dengan biaya yang sangat kecil dibandingkan dengan biaya yang berlaku saat ini.

@@ -16,7 +16,9 @@ Kendi dilinizde bir eğitim kaynağı mı biliyorsunuz? [Listeye eklemek için](
 
 ## Ethereum.org kaynakları {#ethereum-org}
 
-Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dile yerel olarak çevrilmiştir.
+Ethereum.org, diller sayfamızda bulabileceğiniz 40'tan fazla dile yerel olarak çevrilmiştir.
+
+![Language selector menu](./language-selector-menu.png)
 
 İki dilliyseniz ve daha fazla kişiye ulaşmamıza yardımcı olmak istiyorsanız, [ethereum.org Çeviri Programı](/contributing/translation-program/#translation-program)na da katılarak web sitesini tercüme etmemize yardımcı olabilirsiniz.
 

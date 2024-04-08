@@ -909,7 +909,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-A maioria deles já discutimos antes ou são bastante óbvios. A única exceção é `IWETH.sol`. O Uniswap v2 permite trocas por qualquer par de tokens ERC-20, mas o ether (ETH) em si não é um token ERC-20. Ele é anterior ao padrão e é transferido por meio de mecanismos únicos. Para permitir o uso de ETH em contratos que se aplicam a tokens ERC-20, foi criado o contrato [wrapped ether (WETH)](https://weth.io/). Você envia ETH a esse contrato, e ele cunha um valor equivalente de WETH para você. Você também pode queimar WETH e recuperar ETH.
+A maioria deles já discutimos antes ou são bastante óbvios. A única exceção é `IWETH.sol`. O Uniswap v2 permite trocas por qualquer par de tokens ERC-20, mas o ether (ETH) em si não é um token ERC-20. Ele é anterior ao padrão e é transferido por meio de mecanismos únicos. Para permitir o uso de ETH em contratos que se aplicam a tokens ERC-20, foi criado o contrato [wrapped ether (WETH)](https://weth.tkn.eth.limo/). Você envia ETH a esse contrato, e ele cunha um valor equivalente de WETH para você. Você também pode queimar WETH e recuperar ETH.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {

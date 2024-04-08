@@ -4,7 +4,7 @@ description: Tetap aman di Ethereum
 lang: id
 ---
 
-# Keamanan Ethereum dan pencegahan penipuan {#introduction}
+# Keamanan ethereum dan pencegahan penipuan {#introduction}
 
 Dengan berkembangnya ketertarikan pada mata uang digital, mempelajari cara terbaik menggunakan mata uang digital menjadi perlu. Mata uang digital dapat menjadi menyenangkan dan menarik, tetapi juga ada risiko serius. Jika Anda mengerjakan sejumlah pekerjaan awal ini, Anda dapat mengurangi risiko tersebut.
 
@@ -24,7 +24,7 @@ Contoh kata sandi yang lemah: CuteFluffyKittens!
 Contoh kata sandi yang kuat: ymv\*azu.EAC8eyp8umf
 ```
 
-Beberapa kesalahan yang sering terjadi adalah penggunaan kata sandi yang sangat mudah ditebak atau ditemukan melalui [rekayasa sosial](<https://wikipedia.org/wiki/Social_engineering_(security)>). Menyertakan nama pembantu ibu Anda, nama anak atau hewan peliharaan Anda, atau tanggal lahir dalam kata sandi Anda tidaklah aman dan meningkatkan resiko kata sandi Anda diretas.
+Beberapa kesalahan yang sering terjadi adalah penggunaan kata sandi yang sangat mudah ditebak atau ditemukan melalui [rekayasa sosial](https://wikipedia.org/wiki/Social_engineering_(security)). Menyertakan nama pembantu ibu Anda, nama anak atau hewan peliharaan Anda, atau tanggal lahir dalam kata sandi Anda tidaklah aman dan meningkatkan resiko kata sandi Anda diretas.
 
 #### Beberapa langkah yang perlu diperhatikan dalam membentuk kata sandi: {#good-password-practices}
 
@@ -55,8 +55,8 @@ Mengingat kata sandi yang kuat dan unik untuk setiap akun tidaklah ideal. Pengat
 
 - [Bitwarden](https://bitwarden.com/)
 - [KeePass](https://keepass.info/)
-- [LastPass](https://www.lastpass.com/)
 - [1Password](https://1password.com/)
+- Atau coba lihat [pengelola kata sandi yang direkomendasikan](https://www.privacytools.io/secure-password-manager) lainnya
 
 ### Menggunakan Autentikasi Dua Faktor {#two-factor-authentication}
 
@@ -137,7 +137,7 @@ Dengan menangkap layar frase seed atau kunci pribadi, Anda berisiko mensinkronis
 
 ### Gunakan dompet perangkat keras {#use-hardware-wallet}
 
-Dompet perangkat keras menyediakan penyimpanan offline untuk kunci pribadi. Mereka dianggap sebagai opsi dompet paling aman untuk menyimpan kunci pribadi Anda.
+Dompet perangkat keras menyediakan penyimpanan offline untuk kunci pribadi. Mereka dianggap sebagai pilihan dompet yang paling aman untuk menyimpan kunci pribadi Anda: kunci pribadi Anda tidak pernah terhubung ke internet dan tetap aman di perangkat Anda.
 
 Menjaga kunci pribadi tetap offline secara besar-besaran mengurangi risiko diretas, bahkan jika peretas menguasai komputer Anda.
 
@@ -158,6 +158,8 @@ Saat berinteraksi dengan kontrak pintar, jangan izinkan batas pembelanjaan tak t
 
 Banyak dompet Ethereum menawarkan perlindungan batas untuk melindungi dari akun yang terkuras.
 
+[Cara mencabut akses smart contract ke dana kripto anda](/guides/how-to-revoke-token-access/)
+
 <Divider />
 
 ## Penipuan umum {#common-scams}
@@ -165,18 +167,18 @@ Banyak dompet Ethereum menawarkan perlindungan batas untuk melindungi dari akun 
 Penipu selalu mencari cara untuk mengambil dana dari Anda. Tidak mungkin menghentikan penipu sepenuhnya, tetapi kami dapat membuatnya kurang efektif dengan mengetahui sebagian besar teknik yang digunakan. Ada banyak variasi penipuan ini, tetapi umumnya mengikuti pola tingkat tinggi yang sama. Jika tidak ada yang lain, ingat:
 
 - selalu skeptis
-- tidak ada yang akan memberi Anda ETH gratis atau diskon!
+- tidak ada yang akan memberi Anda ETH gratis atau diskon
 - tidak ada yang membutuhkan akses ke kunci pribadi atau informasi pribadi Anda
 
 ### Penipuan berhadiah {#giveaway}
 
 Salah satu penipuan paling umum dalam mata uang kripto adalah penipuan giveaway. Penipuan giveaway dapat mengambil banyak bentuk, tetapi premis umumnya adalah bahwa jika Anda mengirim ETH ke alamat dompet yang disediakan, Anda akan menerima kembali ETH Anda tetapi berlipat ganda. *Untuk alasan ini, ini juga dikenal sebagai penipuan 2-untuk-1.*
 
-Penipuan ini biasanya menetapkan waktu terbatas kesempatan untuk mengklaim giveaway untuk mendorong pengambilan keputusan yang buruk dan menciptakan rasa urgensi palsu.
+Penipuan ini biasanya menetapkan kesempatan dalam waktu terbatas untuk mengklaim hadiah agar menyebabkan pengambilan keputusan yang buruk dan menciptakan rasa urgensi palsu.
 
 #### Peretasan media sosial {#social-media-hacks}
 
-Riwayat tinggi dari versi ini terjadi pada Juli 2020, ketika akun Twitter selebritas dan organisasi terkemuka diretas. Peretas secara bersamaan memposting hadiah Bitcoin di akun yang diretas. Meskipun tweet yang menipu dengan cepat diketahui dan dihapus, para peretas masih berhasil lolos dengan 11 bitcoin (atau $ 500.000 pada September 2021)
+Riwayat tinggi dari versi ini terjadi pada Juli 2020, ketika akun Twitter selebritas dan organisasi terkemuka diretas. Peretas secara bersamaan memposting hadiah Bitcoin di akun yang diretas. Meskipun tweet yang menipu dengan cepat diketahui dan dihapus, para peretas masih berhasil lolos dengan 11 bitcoin (atau $500.000 pada September 2021).
 
 ![Penipuan di Twitter](./appleTwitterScam.png)
 
@@ -210,11 +212,19 @@ Sebagai aturan umum, staf tidak akan pernah berkomunikasi dengan Anda melalui sa
   </div>
 </InfoBanner>
 
+### Penipuan token 'Eth2' {#eth2-token-scam}
+
+Menjelang [Penggabungan](/roadmap/merge/), penipu memanfaatkan kebingungan seputar istilah 'Eth2' untuk mencoba meminta pengguna menukar ETH mereka dengan token 'ETH2'. Tidak ada 'ETH2', dan tidak ada token sah lain yang diperkenalkan bersamaan dengan Penggabungan. ETH yang Anda miliki sebelum Penggabungan masih sama dengan ETH yang sekarang. **Tidak perlu melakukan tindakan apa pun yang terkait dengan ETH Anda untuk akun peralihan dari bukti kerja ke bukti kepemilikan**.
+
+Penipu mungkin muncul dalam bentuk "bantuan", memberi tahu Anda bahwa jika Anda mendepositkan ETH Anda, Anda akan menerima 'ETH2' kembali. Tidak ada [dukungan Ethereum resmi](/community/support/), dan tidak ada token baru. Jangan pernah membagikan frasa benih dompet Anda dengan siapa pun.
+
+_Catatan: Ada token/ticker turunan yang mungkin mewakili ETH yang dipertaruhkan (mis. rETH dari Rocket Pool, stETH dari Lido, ETH2 dari Coinbase), tetapi ini bukanlah sesuatu yang Anda butuhkan untuk "memindahkan ke."_
+
 ### Penipuan phishing {#phishing-scams}
 
 Penipuan phishing adalah sudut lain yang semakin umum yang akan digunakan scammer untuk mencoba mencuri dana dompet Anda.
 
-Beberapa email phishing meminta pengguna untuk mengeklik tautan yang akan mengarahkan mereka kembali ke situs web tiruan, meminta mereka memasukkan frase awal, mengatur ulang kata sandi, atau mengirim ETH. Orang lain mungkin meminta Anda untuk secara tidak sadar memasang malware untuk menginfeksi komputer Anda dan memberikan akses kepada scammers ke file komputer Anda.
+Beberapa email phishing meminta pengguna untuk mengklik tautan yang akan mengarahkan mereka kembali ke situs web tiruan, meminta mereka memasukkan frase benih, mengatur ulang kata sandi, atau mengirim ETH. Orang lain mungkin meminta Anda untuk secara tidak sadar memasang malware untuk menginfeksi komputer Anda dan memberikan akses kepada scammers ke file komputer Anda.
 
 Jika Anda menerima email dari pengirim yang tidak dikenal, ingatlah:
 
@@ -236,9 +246,9 @@ Broker penipu ini menemukan target mereka dengan menggunakan akun palsu di YouTu
 
 ### Penipuan pool penambangan crypto {#mining-pool-scams}
 
-Penipuan pool penambangan melibatkan orang-orang yang menghubungi Anda tanpa diminta, dan mengklaim bahwa Anda dapat menghasilkan keuntungan besar dengan bergabung dengan pool penambangan Ethereum. Penipu akan membuat klaim dan tetap berhubungan dengan Anda selama waktu yang dibutuhkan. Pada dasarnya, penipu akan mencoba dan meyakinkan Anda bahwa ketika Anda bergabung dengan pool penambangan Ethereum, mata uang kripto Anda akan digunakan untuk membuat ETH dan Anda akan dibayar dividen dalam bentuk ETH. Apa yang akhirnya terjadi adalah, Anda akan melihat bahwa mata uang kripto Anda menghasilkan keuntungan kecil. Ini hanya untuk memancing Anda berinvestasi lebih banyak. Akhirnya, semua dana Anda akan dikirim ke alamat yang tidak diketahui dan scammer akan hilang atau dalam beberapa kasus akan terus berhubungan seperti yang terjadi dalam kasus baru-baru ini.
+Mulai September 2022, menambang di Ethereum sudah tidak bisa dilakukan lagi. Namun, penipuan yang terkait dengan kelompok penambangan masih ada. Penipuan kelompok penambangan terjadi ketika seseorang menghubungi Anda tanpa Anda memintanya, lalu mengatakan bahwa Anda bisa mendapatkan keuntungan besar dengan bergabung dalam kelompok penambangan Ethereum. Penipu akan membuat klaim dan tetap berhubungan dengan Anda selama waktu yang dibutuhkan. Pada dasarnya, penipu akan mencoba dan meyakinkan Anda bahwa ketika Anda bergabung dengan pool penambangan Ethereum, mata uang kripto Anda akan digunakan untuk membuat ETH dan Anda akan dibayar dividen dalam bentuk ETH. Apa yang akhirnya terjadi adalah, Anda akan melihat bahwa mata uang kripto Anda menghasilkan keuntungan kecil. Ini hanya untuk memancing Anda berinvestasi lebih banyak. Pada akhirnya, semua dana Anda akan dikirim ke alamat yang tidak dikenal, dan si penipu entah akan menghilang atau dalam beberapa kasus akan terus berhubungan seperti yang terjadi dalam kasus baru-baru ini.
 
-Intinya, waspadalah terhadap orang-orang yang menghubungi Anda di media sosial yang meminta Anda untuk menjadi bagian dari mining pool. Setelah Anda kehilangan crypto Anda, itu hilang.
+Intinya, waspadalah terhadap orang-orang yang menghubungi Anda di media sosial yang meminta Anda untuk menjadi bagian dari penambangan pool. Setelah Anda kehilangan crypto Anda, itu hilang.
 
 Beberapa hal yang perlu diingat:
 
@@ -246,21 +256,13 @@ Beberapa hal yang perlu diingat:
 - Lakukan riset Anda tentang staking, kumpulan likuiditas, atau cara lain untuk menginvestasikan crypto Anda
 - Jarang, jika pernah, skema seperti itu sah. Jika ya, mereka mungkin akan menjadi arus utama dan Anda pasti pernah mendengarnya.
 
-[Seorang pria kehilangan $200rb dalam penipuan pool penambangan](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
-
-### Penipuan token 'Eth2' {#eth2-token-scam}
-
-Dengan [penggabungan](/roadmap/merge/) yang akan datang pada tahun 2022, para penipu telah memanfaatkan kebingungan seputar istilah 'Eth2' untuk mencoba dan membuat pengguna menukarkan ETH mereka dengan 'ETH2' token. Tidak ada 'ETH2' atau token baru lainnya yang diperkenalkan dengan penggabungan. ETH yang Anda miliki hari ini akan tetap menjadi ETH yang sama setelah penggabungan, dan tidak perlu menukar ETH Anda untuk penggabungan.
-
-Penipu mungkin muncul dalam bentuk "dukungan" yang memberi tahu Anda jika Anda menyetor ETH, Anda akan menerima kembali 'ETH2'. Tidak ada [dukungan Ethereum resmi](/community/support/), dan tidak ada token baru. Jangan pernah membagikan frasa awal dompet Anda dengan siapa pun.
-
-_Catatan: Ada token/ticker turunan yang mungkin mewakili ETH yang dipertaruhkan (mis. rETH dari Rocket Pool, stETH dari Lido, ETH2 dari Coinbase), tetapi ini bukanlah sesuatu yang Anda butuhkan untuk "memindahkan ke."_
+[Seorang pria kehilangan $200 ribu dalam penipuan pool penambangan](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
 
 ### Penipuan airdrop {#airdrop-scams}
 
-Penipuan airdrop melibatkan proyek penipuan dengan memasukkan aset (NFT, token) ke dompet Anda dan mengirim Anda ke situs web scam untuk mengklaim aset yang dijatuhkan melalui udara. Anda akan diminta untuk masuk dengan dompet Ethereum Anda dan "menyetujui" transaksi saat mencoba mengklaim. Transaksi ini membahayakan akun Anda dengan mengirimkan kunci publik dan privat Anda ke penipu. Bentuk alternatif penipuan ini mungkin mengharuskan Anda mengonfirmasi transaksi yang mengirimkan dana ke akun penipu.
+Penipuan Airdrop melibatkan proyek penipuan dengan memasukkan aset (NFT, token) ke dompet Anda dan mengirim Anda ke situs web scam untuk mengklaim aset yang dijadikan Airdrop. Anda akan diminta untuk masuk dengan dompet Ethereum Anda dan "menyetujui" transaksi saat mencoba mengklaim. Transaksi ini membahayakan akun Anda dengan mengirimkan kunci publik dan privat Anda ke penipu. Bentuk alternatif penipuan ini mungkin mengharuskan Anda mengonfirmasi transaksi yang mengirimkan dana ke akun penipu.
 
-[Lebih lanjut tentang penipuan airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+[Lebih lanjut tentang penipuan Airdrop](https://www.youtube.com/watch?v=LLL_nQp1lGk)
 
 <Divider />
 
@@ -268,7 +270,6 @@ Penipuan airdrop melibatkan proyek penipuan dengan memasukkan aset (NFT, token) 
 
 ### Keamanan web {#reading-web-security}
 
-- [Inilah mengapa Anda tidak boleh menggunakan teks untuk autentikasi dua faktor](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
 - [Hingga 3 juta perangkat terinfeksi oleh pengaya Chrome dan Edge yang mengandung malware](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
 - [Cara Membuat Kata Sandi yang Kuat — Yang Anda Tidak Akan Lupakan](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
 - [Apa itu kunci keamanan?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
@@ -276,11 +277,15 @@ Penipuan airdrop melibatkan proyek penipuan dengan memasukkan aset (NFT, token) 
 ### Keamanan kripto {#reading-crypto-security}
 
 - [Melindungi diri Anda dan dana Anda](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [4 Cara Tetap Aman di Crypto](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [Masalah keamanan pada perangkat lunak komunikasi kripto yang umum](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media) - _Salus_
 - [Panduan Keamanan Untuk Dummies Dan Orang Pintar Juga](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Keamanan Crypto: Sandi dan Otentikasi](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 
 ### Edukasi penipuan {#reading-scam-education}
 
+- [Panduan: Cara mengidentifikasi token penipuan](/guides/how-to-id-scam-tokens/)
 - [Tetap Aman: Penipuan Umum](https://support.mycrypto.com/staying-safe/common-scams) - _MyCrypto_
-- [Menghindari Penipuan](https://bitcoin.org/en/scams) _Bitcoin.org_
+- [Menghindari penipuan](https://bitcoin.org/en/scams) - _Bitcoin.org_
+- [Utasan Twitter tentang Email dan Pesan Penipuan Umum Kripto](https://twitter.com/tayvano_/status/1516225457640787969) - _Taylor Monahan_
+
+<QuizWidget quizKey="security" />

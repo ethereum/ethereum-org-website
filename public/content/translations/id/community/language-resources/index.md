@@ -16,7 +16,9 @@ Tahu sumber daya edukasi dalam bahasa Anda? [Buka masalah](https://github.com/et
 
 ## Sumber Daya Ethereum.org {#ethereum-org}
 
-Ethereum.org diterjemahkan oleh penutur asli ke lebih dari 40 bahasa yang dapat Anda temukan di [halaman bahasa](/languages) kami.
+Ethereum.org diterjemahkan oleh penutur asli ke lebih dari 40 bahasa yang dapat Anda temukan di halaman bahasa kami.
+
+![Language selector menu](./language-selector-menu.png)
 
 Jika Anda adalah dwibahasawan dan dapat menolong kami menjangkau lebih banyak orang, Anda juga dapat terlibat dalam [Program Penerjemahan ethereum.org](/contributing/translation-program/#translation-program) dan menolong kami menerjemahkan situs web.
 

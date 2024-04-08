@@ -87,22 +87,22 @@ Por último, al decidir si incluir o no una biblioteca, considera su uso general
 
 ## Herramientas relacionadas {#related-tools}
 
-**Contratos de OpenZeppelin: \*\***_La biblioteca más popular para el desarrollo seguro de contratos inteligentes._\*\*
+**Contratos de OpenZeppelin: ****_La biblioteca más popular para el desarrollo seguro de contratos inteligentes._**
 
 - [Documentación](https://docs.openzeppelin.com/contracts/)
 - [GitHub](https://github.com/OpenZeppelin/openzeppelin-contracts)
 - [Foro de la comunidad](https://forum.openzeppelin.com/c/general/16)
 
-**DappSys: \*\***_Bloques de creación simples, flexibles y seguros para contratos inteligentes. _\*\*
+**DappSys: ****_Bloques de creación simples, flexibles y seguros para contratos inteligentes. _**
 
 - [Documentación](https://dappsys.readthedocs.io/)
 - [GitHub](https://github.com/dapphub/dappsys)
 
-**HQ20: \*\***_Un proyecto de Solidity con contratos, bibliotecas y ejemplos para ayudarte a construir aplicaciones distribuidas con todas las características para el mundo real._\*\*
+**HQ20: ****_Un proyecto de Solidity con contratos, bibliotecas y ejemplos para ayudarte a construir aplicaciones distribuidas con todas las características para el mundo real._**
 
 - [GitHub](https://github.com/HQ20/contracts)
 
-**Web3 Solidity SDK -\*\***_Proporciona las herramientas necesarias para construir contratos inteligentes personalizados de forma eficiente_\*\*
+**thirdweb Solidity SDK:****_ Proporciona las herramientas necesarias para crear contratos inteligentes personalizados de forma eficiente_**
 
 - [Documentación](https://portal.thirdweb.com/solidity/)
 - [GitHub](https://github.com/thirdweb-dev/contracts)
@@ -114,4 +114,4 @@ Por último, al decidir si incluir o no una biblioteca, considera su uso general
 
 ## Más lectura {#further-reading}
 
-_¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._

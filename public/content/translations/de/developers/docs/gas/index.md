@@ -152,4 +152,4 @@ Wenn Sie die Gaspreise überwachen möchten, damit Sie Ihre ETH günstiger versc
 - [Proof-of-Stake und Proof-of-Work im Vergleich](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Strategien für Programmierer zur Optimierung des Gasverbrauchs](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Spezifikationen zu EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [Ressourcen von Time Beiko zu EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
+- [Ressourcen von Tim Beiko zu EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
