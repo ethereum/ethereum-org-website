@@ -1551,6 +1551,14 @@ const DappsPage = () => {
                 />
               </RightColumn>
             </TwoColumnContent>
+            <Box>
+              <ButtonLink
+                to="https://www.ethereum-ecosystem.com/apps"
+                title={t("page-dapps:page-dapps-explore-1")}
+              >
+                {t("page-dapps:page-dapps-explore-title")}
+              </ButtonLink>
+            </Box>
             <CalloutBanner
               mt={32}
               mx={0}
@@ -1767,6 +1775,18 @@ const DappsPage = () => {
             </TwoColumnContent>
           </Content>
         )}
+        {selectedCategory !== CategoryType.FINANCE && (
+          <Content>
+            <Box>
+              <ButtonLink
+                to="https://www.ethereum-ecosystem.com/apps"
+                title={t("page-dapps:page-dapps-explore-1")}
+              >
+                {t("page-dapps:page-dapps-explore-title")}
+              </ButtonLink>
+            </Box>
+          </Content>
+        )}
         {/* General content for all categories */}
         <Content>
           <CenterDivider />
@@ -1815,26 +1835,6 @@ const DappsPage = () => {
               )}
             </Box>
           )}
-        </Content>
-        {/* Explore Ecosystem Section */}
-        <Content>
-          <CenterDivider />
-          <CalloutBanner
-            mt={0}
-            mx={0}
-            mb={{ base: 0, lg: 16 }}
-            titleKey={"page-dapps:page-dapps-explore-title"}
-            descriptionKey={"page-dapps:page-dapps-explore-1"}
-            image={exploring}
-            imageWidth={300}
-            alt={t("page-dapps-explore-callout-image-alt")}
-          >
-            <Box>
-              <ButtonLink to="https://www.ethereum-ecosystem.com/apps">
-                {t("page-dapps:page-dapps-explore-2")}
-              </ButtonLink>
-            </Box>
-          </CalloutBanner>
         </Content>
       </FullWidthContainer>
       <Content>
