@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { shuffle } from "lodash"
+import shuffle from "lodash/shuffle"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
@@ -12,7 +12,7 @@ import { useTranslation } from "next-i18next"
 // import squarelink from "@/public/wallets/squarelink.png"
 // import trust from "@/public/wallets/trust.png"
 import type { ImageProps } from "@/components/Image"
-import { ReactSelectOnChange } from "@/components/ReactSelect"
+import { SelectOnChange } from "@/components/Select"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -39,6 +39,7 @@ import itezcom from "@/public/exchanges/itezcom.png"
 import korbit from "@/public/exchanges/korbit.png"
 import kraken from "@/public/exchanges/kraken.png"
 import kucoin from "@/public/exchanges/kucoin.png"
+import matrixport from "@/public/exchanges/matrixport.png"
 import moonpay from "@/public/exchanges/moonpay.png"
 import mtpelerin from "@/public/exchanges/mtpelerin.png"
 import okx from "@/public/exchanges/okx.png"
@@ -66,15 +67,16 @@ type ExchangeKey =
   | "gemini"
   | "huobiglobal"
   | "itezcom"
+  | "korbit"
   | "kraken"
   | "kucoin"
-  | "mtpelerin"
+  | "matrixport"
   | "moonpay"
+  | "mtpelerin"
   | "okx"
   | "rain"
   | "shakepay"
   | "wazirx"
-  | "korbit"
 
 type ExchangeDetail = {
   name: string
@@ -208,6 +210,12 @@ const exchanges: ExchangeDetails = {
     image: huobiglobal,
     usaExceptions: [],
   },
+  matrixport: {
+    name: "Matrixport",
+    url: "https://www.matrixport.com/",
+    image: matrixport,
+    usaExceptions: [],
+  },
   itezcom: {
     name: "Itez",
     url: "https://itez.com/",
@@ -295,7 +303,7 @@ export const useCentralizedExchanges = () => {
     }))
     .sort((a, b) => a.value.localeCompare(b.value))
 
-  const handleSelectChange: ReactSelectOnChange<ExchangeByCountryOption> = (
+  const handleSelectChange: SelectOnChange<ExchangeByCountryOption> = (
     selectedOption
   ) => {
     if (!selectedOption) return

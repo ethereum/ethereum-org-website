@@ -69,7 +69,7 @@ Danksharding 全面实现了从 Proto-Danksharding 开始的卷叠扩展。 Dank
 
 </ExpandableCard>
 
-<ExpandableCard title="为什么 Danksharding 要求进行数据可用性采样？" eventCateogry="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="为什么 Danksharding 要求进行数据可用性采样？" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 要求进行数据可用性采样是为了让验证者快速、高效地验证二进制大对象数据。 通过数据可用性采样，验证者可以非常确定二进制大对象数据是否可用和正确提交。 每个验证者都可以随机在几个数据点采样并创建证明，这意味着验证者不必核对整个二进制大对象。 如果有数据丢失，可以快速识别并拒绝二进制大对象。
 
@@ -77,7 +77,7 @@ Danksharding 全面实现了从 Proto-Danksharding 开始的卷叠扩展。 Dank
 
 ### 当前进展 {#current-progress}
 
-完全实现 Danksharding 还需要几年时间。 但是，Proto-Danksharding 的实现应该比较快。 在本文章撰写时（2023 年 2 月），KZG 仪式仍然在开放并且至今已经吸引了超过 50,000 名贡献者。 Proto-Danksharding 的[以太坊改进提案](https://eips.ethereum.org/EIPS/eip-4844)已经成熟，规范已商定，客户端已经创建了原型，目前正在测试中并准备投入生产。 下一步将在公共测试网上实施一些更改。 你可以使用[EIP 4844 准备情况检查表](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status)跟踪最新信息。
+完全实现 Danksharding 还需要几年时间。 但是，Proto-Danksharding 的实现应该比较快。 在本文章撰写时（2023 年 2 月），KZG 仪式仍然在开放并且至今已经吸引了超过 50,000 名贡献者。 Proto-Danksharding 的[以太坊改进提案](https://eips.ethereum.org/EIPS/eip-4844)已经成熟，规范已商定，客户端已经创建了原型，目前正在测试中并准备投入生产。 下一步将在公共测试网上实施一些更改。 你可以查阅 [EIP 4844 准备情况检查表](https://github.com/ethereum/pm/blob/master/Dencun/4844-readiness-checklist.md)了解最新动态。
 
 ### 延伸阅读 {#further-reading}
 

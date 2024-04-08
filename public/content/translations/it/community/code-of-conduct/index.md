@@ -54,7 +54,7 @@ Esempi di comportamenti inaccettabili da parte dei partecipanti sono:
 
 - Violenza fisica, minaccia di violenza fisica o incitamento alla violenza fisica di qualsiasi tipo
 - Utilizzare un linguaggio o un immaginario sessualizzato o imporre attenzioni sessuali indesiderate
-- Fingersi un'altra persona o dichiarare in altro modo disonesto l'affiliazione a una persona o a un'organizzazione.
+- Fingersi un'altra persona o dichiarare in altro modo disonesto l'affiliazione a una persona o a un'organizzazione
 - Trolling, commenti offensivi/dispregiativi e attacchi personali o politici
 - Molestare altri membri della community in canali pubblici o privati
 - Pubblicare informazioni private altrui, come un indirizzo fisico o elettronico, senza un'autorizzazione esplicita

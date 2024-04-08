@@ -109,7 +109,7 @@ He aquí un ejemplo que ilustra cómo podrían funcionar en la práctica los cer
 
 ### Los tókenes Souldbound y la identidad {#soulbound}
 
-[Los tókenes Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT no transferibles) pueden utilizarse para recopilar información única en una cartera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección particular de Ethereum que podría incluir tókenes representando logros (ej. terminar algún curso en línea específico o pasar un umbral de puntuación en un juego) o participación en la comunidad.
+[Los tókenes de Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT no transferibles) podrían utilizarse para recopilar información exclusiva de una cartera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección particular de Ethereum que podría incluir tókenes representando logros (ej. terminar algún curso en línea específico o pasar un umbral de puntuación en un juego) o participación en la comunidad.
 
 ## Beneficios de una identidad descentralizada  {#benefits-of-decentralized-identity}
 

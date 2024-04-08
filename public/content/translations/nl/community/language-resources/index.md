@@ -16,7 +16,9 @@ Weet u van een educatieve bron in uw taal? [Open een probleem](https://github.co
 
 ## Bronnen van Ethereum.org {#ethereum-org}
 
-Ethereum.org wordt vertaald in meer dan 40 talen die u kunt vinden op onze [taalpagina](/languages).
+Ethereum.org wordt vertaald in meer dan 40 talen die u kunt vinden op onze taalpagina.
+
+![Language selector menu](./language-selector-menu.png)
 
 Als u tweetalig bent en ons wilt helpen meer mensen te bereiken, kunt u ook betrokken raken bij het [vertalingsprogramma van ethereum.org](/contributing/translation-program/#translation-program) en ons helpen met het vertalen van de website.
 

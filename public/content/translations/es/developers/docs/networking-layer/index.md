@@ -1,5 +1,5 @@
 ---
-title: Capa de red
+title: "Ninguna llave\nBloque el texto del elemento (div)\nXpath: /div[@id=front-matter]/ul/li[1]/div[2]"
 description: Introducción a la capa de red de Ethereum.
 lang: es
 sidebarDepth: 2
@@ -125,7 +125,7 @@ Tanto los clientes de consenso como los de ejecución se ejecutan en paralelo. N
 
 A continuación se muestra un resumen del flujo de control, con la pila de red relevante entre paréntesis.
 
-### Cuando el cliente de consenso no es productor de bloques:
+### Cuando el cliente de consenso no es productor de bloques: {#when-consensus-client-is-not-block-producer}
 
 - El cliente de consenso recibe un bloque a través del protocolo de gossiping de bloques (p2p de consenso)
 - El cliente de consenso valida previamente el bloque, es decir, se asegura de que llegue de un remitente válido con los metadatos correctos
@@ -134,7 +134,7 @@ A continuación se muestra un resumen del flujo de control, con la pila de red r
 - La capa de ejecución pasa los datos de validación a la capa de consenso, bloque que ahora se considera validado (conexión local RPC)
 - La capa de consenso añade un bloque a la cabeza de su propia cadena de bloques y hace una verificación, transmitiendo la verificación en la red (p2p de consenso)
 
-### Cuando el cliente de consenso es productor de bloques:
+### Cuando el cliente de consenso es productor de bloques: {#when-consensus-client-is-block-producer}
 
 - El cliente de consenso recibe un aviso de que es el próximo productor de bloques (p2p de consenso)
 - La capa de consenso invoca el método `create block` en el cliente de ejecución (RPC local)

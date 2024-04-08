@@ -58,7 +58,7 @@ lang: ja
 
 ## 現在の進行状況 {#current-progress}
 
-SSFはまだ研究段階です。 [バークルツリー](/roadmap/verkle-trees/)や[ダンクシャーディング](/roadmap/danksharding/)などの他の大きなアップグレードが完了してから、数年後になるかもしれません。
+SSFはまだ研究段階です。 [バークルツリー](/roadmap/verkle-trees/)や[ダンクシャーディング](/roadmap/danksharding])などの他の大きなアップグレードが完了してから、数年後になるかもしれません。
 
 ## 参考文献 {#further-reading}
 

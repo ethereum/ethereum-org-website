@@ -26,11 +26,11 @@ Procurando por futuras melhorias de protocolo? [Saiba mais sobre as próximas at
 
 ## 2023 {#2023}
 
-### Shanghai {#shanghai}
+### Shanghai-Capella ("Shapella") {#shapella}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### Resumo {#shanghai-summary}
+#### Resumo de Shanghai {#shanghai-summary}
 
 A atualização Shanghai trouxe saques de stake para a camada de execução. Em conjunto com a atualização Capella, isso permitiu que os blocos aceitassem operações de saque, o que permite que os stakers saquem seu ETH da Beacon Chain para a camada de execução.
 
@@ -46,13 +46,7 @@ A atualização Shanghai trouxe saques de stake para a camada de execução. Em 
 
 - [Leia a especificação de atualização Shangai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### Capella {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### Resumo {#capella-summary}
+#### Resumo de Capella {#capella-summary}
 
 A atualização Capella foi a terceira maior atualização para a camada de consenso (Beacon Chain) e permitiu saques de stake. Capella ocorreu em sincronia com a atualização da camada de execução, Shanghai, e ativou a funcionalidade de saque de stake.
 

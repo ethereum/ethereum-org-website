@@ -61,6 +61,7 @@ IPFS is a distributed system for storing and accessing files, websites, applicat
 - [IPFS Scan](https://ipfs-scan.io) _(IPFS pinning explorer)_
 - [4EVERLAND](https://www.4everland.org/)_（IPFS pinning service）_
 - [Filebase](https://filebase.com) _(IPFS Pinning Service)_
+- [Spheron Network](https://spheron.network/) _(IPFS/Filecoin pinning service)_
 
 SWARM is a decentralized data storage and distribution technology with a storage incentive system and a storage rent price oracle.
 
@@ -197,6 +198,12 @@ Proof-of-stake based:
 - [Kaleido](https://kaleido.io/)
 - [Documentation](https://docs.kaleido.io/kaleido-services/ipfs/)
 - [GitHub](https://github.com/kaleido-io)
+
+**Spheron Network - _Spheron is a platform-as-a-service (PaaS) designed for dApps looking to launch their applications on decentralized infra with best performance. It provides compute, decentralized storage, CDN & web hosting out of the box._**
+
+- [spheron.network](https://spheron.network/)
+- [Documentation](https://docs.spheron.network/)
+- [GitHub](https://github.com/spheronFdn)
 
 ## Further reading {#further-reading}
 

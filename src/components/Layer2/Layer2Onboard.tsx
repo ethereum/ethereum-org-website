@@ -28,8 +28,7 @@ import { ButtonLink } from "../Buttons"
 import InlineLink from "../Link"
 import OldHeading from "../OldHeading"
 import Text from "../OldText"
-import ReactSelect, { ReactSelectOnChange } from "../ReactSelect"
-import { StyledSelect as Select } from "../SharedStyledComponents"
+import Select, { SelectOnChange } from "../Select"
 
 const Flex50 = (props: ChildOnlyProp) => (
   <Box flex={{ base: "100%", md: "50%" }} {...props} />
@@ -174,7 +173,7 @@ const Layer2Onboard = ({
     },
   } as const
 
-  const handleLayer2SelectChange: ReactSelectOnChange<Layer2Option> = (
+  const handleLayer2SelectChange: SelectOnChange<Layer2Option> = (
     selectedOption
   ) => {
     if (!selectedOption) return
@@ -188,7 +187,7 @@ const Layer2Onboard = ({
     setSelectedL2(selectedOption.l2)
   }
 
-  const handleExchangeOnboard: ReactSelectOnChange<
+  const handleExchangeOnboard: SelectOnChange<
     ExchangeOption | CexOnboardOption
   > = (selectedOption) => {
     if (!selectedOption) return
@@ -235,14 +234,14 @@ const Layer2Onboard = ({
             <H4>{t("layer-2-onboard-wallet-title")}</H4>
             <Text>{t("layer-2-onboard-wallet-1")}</Text>
             <Text>
-              <InlineLink to="/bridges/">
+              <InlineLink href="/bridges/">
                 {t("layer-2-more-on-bridges")}
               </InlineLink>
             </Text>
           </Box>
           {/* LeftSelected */}
           <Box mt="auto">
-            <ReactSelect
+            <Select
               instanceId="layer2-left-selected"
               placeholder={t("layer-2-onboard-wallet-input-placeholder")}
               options={layer2Options}
@@ -258,14 +257,14 @@ const Layer2Onboard = ({
             <Text>{t("layer-2-onboard-exchange-1")}</Text>
             <Text>
               {t("layer-2-onboard-exchange-2")}{" "}
-              <InlineLink to="/wallets/find-wallet/">
+              <InlineLink href="/wallets/find-wallet/">
                 {t("layer-2-onboard-find-a-wallet")}
               </InlineLink>
             </Text>
           </Box>
           {/* RightSelect */}
           <Box mt="auto">
-            <ReactSelect
+            <Select
               instanceId="exchange-onboard-select"
               options={[
                 {

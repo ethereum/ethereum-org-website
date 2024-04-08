@@ -10,100 +10,6 @@ Rising interest in cryptocurrency brings with it growing risk from scammers and 
 
 <Divider />
 
-## Web security 101 {#web-security}
-
-### Use strong passwords {#use-strong-passwords}
-
-[Over 80% of account hacks are a result of weak or stolen passwords](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). A long combination of characters, numbers and symbols will help keep your accounts secure.
-
-A common mistake is using a combination of a few common, related words. Passwords like this are insecure because they are prone to a hacking technique called [dictionary attack](https://wikipedia.org/wiki/Dictionary_attack).
-
-```md
-Example of a weak password: CuteFluffyKittens!
-
-Example of a strong password: ymv\*azu.EAC8eyp8umf
-```
-
-Another common mistake is using passwords that can be easily guessed or discovered through [social engineering](<https://wikipedia.org/wiki/Social_engineering_(security)>). Including your mother's maiden name, the names of your children or pets, or dates of birth in your password will increase the risk of getting hacked.
-
-#### Good password practices: {#good-password-practices}
-
-- Make passwords as long as allowed by either your password generator or the form you're filling out
-- Use a mixture of uppercase, lowercase, numbers and symbols
-- Don't use personal details, such as family names, in your password
-- Avoid common words
-
-[More on creating strong passwords](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
-
-### Use unique passwords for everything {#use-unique-passwords}
-
-A strong password that has been revealed in a data breach is no longer a strong password. The website [Have I Been Pwned](https://haveibeenpwned.com) allows you to check if your accounts were involved in any public data breaches. If they have, **change those passwords immediately**. Using unique passwords for every account lowers the risk of hackers getting access to all of your accounts if one of your passwords is compromised.
-
-### Use a password manager {#use-password-manager}
-
-<InfoBanner emoji=":bulb:">
-  <div>
-    Using a password manager takes care of creating strong, unique passwords and remembering them! We <strong>strongly</strong> recommend using one, and most of them are free!
-  </div>
-</InfoBanner>
-
-Remembering strong, unique passwords for every account you have isn't ideal. A password manager offers a secure, encrypted store for all your passwords that you can access through one strong master password. They also suggest strong passwords when signing up for a new service, so you don't have to create your own. Many password managers will also tell you if you have been involved in a data breach, allowing you to change the passwords before any malicious attacks.
-
-![Example of using a password manager](./passwordManager.png)
-
-#### Try a password manager: {#try-password-manager}
-
-- [Bitwarden](https://bitwarden.com/)
-- [KeePass](https://keepass.info/)
-- [1Password](https://1password.com/)
-- Or check out other [recommended password managers](https://www.privacytools.io/secure-password-manager)
-
-### Use Two-Factor Authentication {#two-factor-authentication}
-
-You may sometimes be asked to authenticate your identity through unique proofs. These are known as **factors**. The three main factors are:
-
-- Something you know (such as a password or security question)
-- Something you are (such as a fingerprint or iris/facial scanner)
-- Something you own (a security key or authentication app on your phone)
-
-Using **Two-Factor Authentication (2FA)** provides an additional *security factor* for your online accounts. 2FA ensures that merely having your password is not enough to access an account. Most commonly, the second factor is a randomized 6-digit code, known as a **time-based one-time password (TOTP)**, that you can access through an authenticator app such as Google Authenticator or Authy. These work as a "something you own" factor because the seed that generates the timed code is stored on your device.
-
-<InfoBanner emoji=":lock:">
-  <div>
-    Note: Using SMS-based 2FA is susceptible to 
-    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
-      SIM jacking
-    </a>
-     and is not secure. For the best security, use a service like{" "}
-    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
-      Google Authenticator
-    </a>
-     or <a href="https://authy.com/">Authy</a>.
-  </div>
-</InfoBanner>
-
-#### Security keys {#security-keys}
-
-A security key is a more advanced and secure type of 2FA. Security keys are physical hardware authentication devices that work like authenticator apps. Using a security key is the most secure way to 2FA. Many of these keys utilize the FIDO Universal 2nd Factor (U2F) standard. [Learn more about FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
-
-Watch more on 2FA:
-
-<YouTube id="m8jlnZuV1i4" start="3479" />
-
-### Uninstall browser extensions {#uninstall-browser-extensions}
-
-Browser extensions, like Chrome extensions or Add-ons for Firefox, can improve browser functionality but also come with risks. By default, most browser extensions ask for access to 'read and change site data', allowing them to do almost anything with your data. Chrome extensions are always automatically updated, so a previously safe extension may update later to include malicious code. Most browser extensions are not trying to steal your data, but you should be aware that they can.
-
-#### Stay safe by: {#browser-extension-safety}
-
-- Only install browser extensions from trusted sources
-- Removing unused browser extensions
-- Install Chrome extensions locally to stop auto-updating (Advanced)
-
-[More on the risks of browser extensions](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
-
-<Divider />
-
 ## Crypto security 101 {#crypto-security}
 
 ### Level up your knowledge {#level-up-your-knowledge}
@@ -274,6 +180,100 @@ Some things to remember:
 Airdrop scams involve a scam project airdropping an asset (NFT, token) into your wallet and sending you to a scam website to claim the airdropped asset. You will get prompted to sign in with your Ethereum wallet and "approve" a transaction when attempting to claim. This transaction compromises your account by sending your public and private keys to the scammer. An alternative form of this scam may have you confirm a transaction that sends funds to the scammer's account.
 
 [More on airdrop scams](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+
+<Divider />
+
+## Web security 101 {#web-security}
+
+### Use strong passwords {#use-strong-passwords}
+
+[Over 80% of account hacks are a result of weak or stolen passwords](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). A long combination of characters, numbers and symbols will help keep your accounts secure.
+
+A common mistake is using a combination of a few common, related words. Passwords like this are insecure because they are prone to a hacking technique called dictionary attack.
+
+```md
+Example of a weak password: CuteFluffyKittens!
+
+Example of a strong password: ymv\*azu.EAC8eyp8umf
+```
+
+Another common mistake is using passwords that can be easily guessed or discovered through [social engineering](<https://wikipedia.org/wiki/Social_engineering_(security)>). Including your mother's maiden name, the names of your children or pets, or dates of birth in your password will increase the risk of getting hacked.
+
+#### Good password practices: {#good-password-practices}
+
+- Make passwords as long as allowed by either your password generator or the form you're filling out
+- Use a mixture of uppercase, lowercase, numbers and symbols
+- Don't use personal details, such as family names, in your password
+- Avoid common words
+
+[More on creating strong passwords](https://terranovasecurity.com/how-to-create-a-strong-password-in-7-easy-steps/)
+
+### Use unique passwords for everything {#use-unique-passwords}
+
+A strong password that has been revealed in a data breach is no longer a strong password. The website [Have I Been Pwned](https://haveibeenpwned.com) allows you to check if your accounts were involved in any public data breaches. If they have, **change those passwords immediately**. Using unique passwords for every account lowers the risk of hackers getting access to all of your accounts if one of your passwords is compromised.
+
+### Use a password manager {#use-password-manager}
+
+<InfoBanner emoji=":bulb:">
+  <div>
+    Using a password manager takes care of creating strong, unique passwords and remembering them! We <strong>strongly</strong> recommend using one, and most of them are free!
+  </div>
+</InfoBanner>
+
+Remembering strong, unique passwords for every account you have isn't ideal. A password manager offers a secure, encrypted store for all your passwords that you can access through one strong master password. They also suggest strong passwords when signing up for a new service, so you don't have to create your own. Many password managers will also tell you if you have been involved in a data breach, allowing you to change the passwords before any malicious attacks.
+
+![Example of using a password manager](./passwordManager.png)
+
+#### Try a password manager: {#try-password-manager}
+
+- [Bitwarden](https://bitwarden.com/)
+- [KeePass](https://keepass.info/)
+- [1Password](https://1password.com/)
+- Or check out other [recommended password managers](https://www.privacytools.io/secure-password-manager)
+
+### Use Two-Factor Authentication {#two-factor-authentication}
+
+You may sometimes be asked to authenticate your identity through unique proofs. These are known as **factors**. The three main factors are:
+
+- Something you know (such as a password or security question)
+- Something you are (such as a fingerprint or iris/facial scanner)
+- Something you own (a security key or authentication app on your phone)
+
+Using **Two-Factor Authentication (2FA)** provides an additional *security factor* for your online accounts. 2FA ensures that merely having your password is not enough to access an account. Most commonly, the second factor is a randomized 6-digit code, known as a **time-based one-time password (TOTP)**, that you can access through an authenticator app such as Google Authenticator or Authy. These work as a "something you own" factor because the seed that generates the timed code is stored on your device.
+
+<InfoBanner emoji=":lock:">
+  <div>
+    Note: Using SMS-based 2FA is susceptible to 
+    <a href="https://www.vice.com/en/article/3kx4ej/sim-jacking-mobile-phone-fraud">
+      SIM jacking
+    </a>
+     and is not secure. For the best security, use a service like{" "}
+    <a href="https://mashable.com/article/how-to-set-up-google-authenticator">
+      Google Authenticator
+    </a>
+     or <a href="https://authy.com/">Authy</a>.
+  </div>
+</InfoBanner>
+
+#### Security keys {#security-keys}
+
+A security key is a more advanced and secure type of 2FA. Security keys are physical hardware authentication devices that work like authenticator apps. Using a security key is the most secure way to 2FA. Many of these keys utilize the FIDO Universal 2nd Factor (U2F) standard. [Learn more about FIDO U2F](https://www.yubico.com/authentication-standards/fido-u2f/).
+
+Watch more on 2FA:
+
+<YouTube id="m8jlnZuV1i4" start="3479" />
+
+### Uninstall browser extensions {#uninstall-browser-extensions}
+
+Browser extensions, like Chrome extensions or Add-ons for Firefox, can improve browser functionality but also come with risks. By default, most browser extensions ask for access to 'read and change site data', allowing them to do almost anything with your data. Chrome extensions are always automatically updated, so a previously safe extension may update later to include malicious code. Most browser extensions are not trying to steal your data, but you should be aware that they can.
+
+#### Stay safe by: {#browser-extension-safety}
+
+- Only install browser extensions from trusted sources
+- Removing unused browser extensions
+- Install Chrome extensions locally to stop auto-updating (Advanced)
+
+[More on the risks of browser extensions](https://www.kaspersky.co.uk/blog/browser-extensions-security/12750/)
 
 <Divider />
 

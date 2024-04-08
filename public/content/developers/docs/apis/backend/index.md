@@ -98,6 +98,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Docs](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
+**ethers-kt -** **_Async, high-performance Kotlin/Java/Android library for EVM-based blockchains._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Examples](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Rivet -** **_Ethereum and Ethereum Classic APIs as a service powered by open source software._**
 
 - [rivet.cloud](https://rivet.cloud)
@@ -134,6 +140,11 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 - [NOWNodes.io](https://nownodes.io/)
 - [Documentation](https://documenter.getpostman.com/view/13630829/TVmFkLwy#intro)
+
+**Node RPC - _Cost-effective EVM JSON RPC provider_**
+
+- [noderpc.xyz](https://www.noderpc.xyz/)
+- [Documentation](https://docs.noderpc.xyz/)
 
 **Moralis -** **_Enterprise-Grade EVM API Provider._**
 

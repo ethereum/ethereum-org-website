@@ -18,7 +18,7 @@ Normalmente se introducen estándares como [Propuestas de mejora de Ethereum](/e
 - [Introducción a la Gobernanza de Ethereum](/governance/)
 - [Resumen de gobernanza de Ethereum](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _31 de marzo de 2019, Mann Boris_
 - [Gobernanza de desarrollo del protocolo de Ethereum y coordinación de actualización de la red](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _23 de marzo de 2020, Hudson Jameson_
-- [Lista de reproducción de todas las reuniones de desarrolladores principales de Ethereum](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(lista de reproducción de YouTube)_
+- [Lista de reproducción de todas las reuniones de desarrolladores principales de Ethereum](https://www.youtube.com/@EthereumProtocol) _(lista de reproducción de YouTube)_
 
 ## Tipos de estándares {#types-of-standards}
 

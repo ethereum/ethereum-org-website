@@ -11,6 +11,7 @@ import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
+import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
@@ -56,7 +57,6 @@ const ListItem = (props: ChildOnlyProp) => (
 
 // Static layout components
 export const staticComponents = {
-  a: Link,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
@@ -66,6 +66,7 @@ export const staticComponents = {
   Contributors,
   EnergyConsumptionChart,
   GlossaryDefinition,
+  GlossaryTooltip,
   Icon,
   Link,
   Logo,
@@ -119,13 +120,15 @@ export const StaticLayout = ({
           ) : (
             <>
               <Breadcrumbs slug={slug} mb="8" />
-              <Text
-                color="text200"
-                dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
-              >
-                <Translation id="page-last-updated" />:{" "}
-                {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
-              </Text>
+              {lastUpdatedDate && (
+                <Text
+                  color="text200"
+                  dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
+                >
+                  <Translation id="page-last-updated" />:{" "}
+                  {getLocaleTimestamp(locale as Lang, lastUpdatedDate)}
+                </Text>
+              )}
             </>
           )}
 

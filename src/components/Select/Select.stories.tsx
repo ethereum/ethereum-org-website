@@ -1,38 +1,50 @@
-import * as React from "react"
-import { VStack } from "@chakra-ui/react"
+import { Box, HStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import SelectComponent from "./"
+import Select from "."
 
-const selectData = [
-  { label: "Ethereum", value: "eth" },
-  { label: "Bitcoin", value: "bit" },
-  { label: "Dogecoin", value: "doge" },
-]
+type SelectType = typeof Select
 
-type SelectType = typeof SelectComponent
-
-const meta: Meta<SelectType> = {
-  title: "Atoms / Form / Select",
-  component: SelectComponent,
-}
+const meta = {
+  title: "Atoms / Form / Dropdown",
+  component: Select,
+  decorators: [
+    (Story) => (
+      <Box w="lg">
+        <Story />
+      </Box>
+    ),
+  ],
+} satisfies Meta<SelectType>
 
 export default meta
 
-type Story = StoryObj<SelectType>
+type Story = StoryObj<typeof meta>
 
-export const Select: Story = {
+export const Dropdown: Story = {
   args: {
-    minW: "223px",
-    options: selectData,
-    onChange(selectedOption) {
-      console.log(selectedOption)
-    },
+    options: [
+      {
+        options: [
+          { label: "Ethereum", value: "eth" },
+          { label: "Bitcoin", value: "bit" },
+          { label: "Dogecoin", value: "doge" },
+        ],
+      },
+      {
+        label: "Layer2 Options",
+        options: [
+          { label: "Mainnet", value: "mainnet" },
+          { label: "Arbitrum", value: "arbitrum" },
+          { label: "Optimism", value: "optimism" },
+        ],
+      },
+    ],
   },
   render: (args) => (
-    <VStack spacing={8}>
-      <SelectComponent {...args} />
-      <SelectComponent variant="flushed" {...args} />
-    </VStack>
+    <HStack spacing={4}>
+      <Select {...args} />
+      <Select {...args} variant="outline" />
+    </HStack>
   ),
 }

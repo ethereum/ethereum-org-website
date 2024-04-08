@@ -35,7 +35,7 @@ lang: zh
 - [Solidity 语言网站](https://soliditylang.org/)
 - [Solidity 示例](https://docs.soliditylang.org/en/latest/solidity-by-example.html)
 - [GitHub](https://github.com/ethereum/solidity/)
-- [Solidity Gitter Chatroom](https://gitter.im/ethereum/solidity/) 桥接到 [Solidity Matrix Chatroom](https://matrix.to/#/#ethereum_solidity:gitter.im)
+- 桥接到 [Solidity Matrix 聊天室](https://matrix.to/#/#ethereum_solidity:gitter.im)的 [Solidity Gitter 聊天室](https://gitter.im/ethereum/solidity)
 - [备忘单](https://reference.auditless.com/cheatsheet)
 - [Solidity 博客](https://blog.soliditylang.org/)
 - [Solidity Twitter](https://twitter.com/solidity_lang)
