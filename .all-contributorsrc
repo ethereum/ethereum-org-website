@@ -11682,6 +11682,15 @@
       "contributions": [
         "eventOrganizing"
       ]
+    },
+    {
+      "login": "bhargavkakadiya",
+      "name": "Bhargav kakadiya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26486494?v=4",
+      "profile": "https://github.com/bhargavkakadiya",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
