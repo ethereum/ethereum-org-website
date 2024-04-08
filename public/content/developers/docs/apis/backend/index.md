@@ -20,7 +20,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 ## Available libraries {#available-libraries}
 
-### Infrastructure and Node Services {#infrastructure-and-node-services}
+### Infrastructure and node services {#infrastructure-and-node-services}
 
 **Alchemy -** **_Ethereum Development Platform._**
 
@@ -86,7 +86,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://docs.zmok.io/)
 - [Discord](https://discord.gg/fAHeh3ka6s)
 
-### Development Tools {#development-tools}
+### Development tools {#development-tools}
 
 **ethers-kt -** **_Async, high-performance Kotlin/Java/Android library for EVM-based blockchains._**
 
@@ -119,7 +119,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Docs](https://docs.web3j.io/)
 - [Gitter](https://gitter.im/web3j/web3j)
 
-### Blockchain Services {#blockchain-services}
+### Blockchain services {#blockchain-services}
 
 **BlockCypher -** **_Ethereum Web APIs._**
 
