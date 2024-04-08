@@ -79,7 +79,7 @@ lang: ja
 
 ## デザインシステム {#design-systems}
 
-- [オプティミズムデザイン](https://www.figma.com/@oplabs) (Figma)
+- [オプティミズムデザイン](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.orgデザインシステム](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity、Polygonによるデザインシステム](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
 - [Klerosデザインシステム](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)
