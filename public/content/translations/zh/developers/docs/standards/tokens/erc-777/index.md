@@ -36,7 +36,7 @@ ERC-777 是一个同质化代币标准，是对现有 [ERC-20](/developers/docs/
 
 该标准还解决了 ERC-20 中和 `decimals` 有关的混乱。 这次澄清提升了开发者体验。
 
-### 后向兼容 ERC-20 {#backwards-compatibility-with-erc-20}
+### 后向兼容ERC-20 {#backwards-compatibility-with-erc-20}
 
 可以和 ERC-777 合约互动，就好像它们是 ERC-20 合约一样。
 

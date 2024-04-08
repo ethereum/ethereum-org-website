@@ -49,12 +49,13 @@ summaryPoints:
 
 沃克尔树测试网已经启动并运行，但要支持沃克尔树，还需要对客户端进行大量更新。 你可以通过在测试网部署智能合约或运行测试网客户端来帮助加速这一进程。
 
-[探索 Beverly Hills 沃克尔树测试网](https://beverlyhills.ethpandaops.io)
+[探索 Verkle Gen Devnet 2 测试网](https://verkle-gen-devnet-2.ethpandaops.io/)
 
-[观看 Guillaume Ballet 关于 Condrieu 沃克尔树测试网的讲解](https://www.youtube.com/watch?v=cPLHFBeC0Vg)（注意：Condrieu 测试网采用工作量证明，现已被 [Kaustinen 测试网](https://kaustinen.ethdevops.io)取代）。
+[观看 Guillaume Ballet 讲解 Condrieu 沃克尔测试网](https://www.youtube.com/watch?v=cPLHFBeC0Vg)（注意，Condrieu 测试网采用工作量证明机制，现已被 Verkle Gen Devnet 2 测试网取代）。
 
 ## 延伸阅读 {#further-reading}
 
+- [沃克尔树实现无状态](https://verkle.info/)
 - [Dankrad Feist 在 PEEPanEIP 上关于沃克尔树的讲解](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet 在 ETHGlobal 上关于沃克尔树的讲解](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [Guillaume Ballet 在 Devcon 6 上的演讲“沃克尔树如何让以太坊变得高效精简”](https://www.youtube.com/watch?v=Q7rStTKwuYs)

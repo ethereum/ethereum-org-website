@@ -74,14 +74,8 @@ const getBattleTestedFlag = (
   halfYearAgo.setDate(now.getDate() - 183)
   oneYearAgo.setDate(now.getDate() - 365)
 
-  if (halfYearAgo > launchDate) {
-    return FlagType.CAUTION
-  }
-
-  if (oneYearAgo > launchDate) {
-    return FlagType.VALID
-  }
-
+  if (oneYearAgo > launchDate) return FlagType.VALID
+  if (halfYearAgo > launchDate) return FlagType.CAUTION
   return FlagType.WARNING
 }
 

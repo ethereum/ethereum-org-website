@@ -88,6 +88,12 @@ These libraries abstract away much of the complexity of interacting directly wit
 
 ### Development Tools {#development-tools}
 
+**ethers-kt -** **_Async, high-performance Kotlin/Java/Android library for EVM-based blockchains._**
+
+- [GitHub](https://github.com/Kr1ptal/ethers-kt)
+- [Examples](https://github.com/Kr1ptal/ethers-kt/tree/master/examples)
+- [Discord](https://discord.gg/rx35NzQGSb)
+
 **Nethereum -** **_An open source .NET integration library for blockchain._**
 
 - [GitHub](https://github.com/Nethereum/Nethereum)
