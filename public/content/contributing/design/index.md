@@ -6,7 +6,7 @@ lang: en
 
 # Design contribution to ethereum.org {#design-contributions}
 
-Design is a critical component of any project, and by devoting your time and design skills to Ethereum.org, you can help to improve the user experience for our visitors. Contributing to an open-source project provides an opportunity to gain relevant experience and develop your skills in a collaborative environment. You will have the chance to work with other designers, developers, and community members, all of whom will have their own unique perspectives and insights.
+Design is a critical component of any project, and by devoting your time and design skills to ethereum.org, you can help to improve the user experience for our visitors. Contributing to an open-source project provides an opportunity to gain relevant experience and develop your skills in a collaborative environment. You will have the chance to work with other designers, developers, and community members, all of whom will have their own unique perspectives and insights.
 
 Ultimately, this is a great way to build a diverse and impressive portfolio that showcases your design skills.
 
@@ -30,7 +30,7 @@ Provide feedback on our website by:
 
 ### <Emoji text=":three:" size={1} /> &nbsp;Find design related issues on the website and report them {#report-design-issues}
 
-Ethereum.org is a fast growing website with many features and content. Some of the UI can easily become obsolete or could be improved. If you encounter any such instance, please report it so that it gets our attention.
+ethereum.org is a fast growing website with many features and content. Some of the UI can easily become obsolete or could be improved. If you encounter any such instance, please report it so that it gets our attention.
 
 1. Go through the website and pay attention to its design.
 2. Take screenshots and notes if you see any visual or UX issues.
