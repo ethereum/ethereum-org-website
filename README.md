@@ -1797,6 +1797,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ArtificialPB"><img src="https://avatars.githubusercontent.com/u/4672155?v=4?s=100" width="100px;" alt="ArtificialPB"/><br /><sub><b>ArtificialPB</b></sub></a><br /><a href="#tool-ArtificialPB" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/Pedrojok01"><img src="https://avatars.githubusercontent.com/u/77141890?v=4?s=100" width="100px;" alt="Pedrojok01"/><br /><sub><b>Pedrojok01</b></sub></a><br /><a href="#maintenance-Pedrojok01" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
