@@ -94,8 +94,10 @@ const Nav = () => {
             ms={{ base: 3, xl: 8 }}
           >
             <Menu hideBelow="md" sections={linkSections} />
-            <Flex alignItems="center"/*  justifyContent="space-between" */>
-              <Search {...searchModalDisclosure} />
+            <Flex alignItems="center" /*  justifyContent="space-between" */>
+              {/* Temporarily hide search for now until we resolve issues with the API key */}
+              {/* <Search {...searchModalDisclosure} /> */}
+
               {/* Desktop */}
               <HStack hideBelow="md" gap="0">
                 <IconButton

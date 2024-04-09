@@ -39,8 +39,9 @@ const MenuFooter = ({
       py={0}
       mt="auto"
     >
-      <Grid templateColumns="repeat(3, 1fr)" w="full">
-        <FooterButton
+      <Grid templateColumns="repeat(2, 1fr)" w="full">
+        {/* Temporarily hide search for now until we resolve issues with the API key */}
+        {/* <FooterButton
           icon={MdSearch}
           onClick={() => {
             // Workaround to ensure the input for the search modal can have focus
@@ -49,7 +50,8 @@ const MenuFooter = ({
           }}
         >
           <FooterItemText>{t("search")}</FooterItemText>
-        </FooterButton>
+        </FooterButton> */}
+
         <FooterButton icon={ThemeIcon} onClick={toggleColorMode}>
           <FooterItemText>{t(themeLabelKey)}</FooterItemText>
         </FooterButton>
