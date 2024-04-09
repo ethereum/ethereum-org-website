@@ -141,15 +141,19 @@ export const parseData = (json: TranslationCostReport): CostLeaderboardData[] =>
     })
     .filter(({ username, fullName }) => {
       // TODO: Remove specific user checks once Acolad has updated their usernames
+      const lUser = username.toLowerCase()
+      const lFull = (username + fullName).toLowerCase()
       const isBlocked =
-        username === "ethdotorg" ||
-        username.includes("LQS_") ||
-        username.includes("REMOVED_USER") ||
-        (username + fullName).includes("Aco_") ||
-        (username + fullName).includes("Acc_") ||
-        username === "Finnish_Sandberg" ||
-        username === "Norwegian_Sandberg" ||
-        username === "Swedish_Sandberg"
+        lUser.includes("lqs_") ||
+        lUser.includes("removed_user") ||
+        lFull.includes("aco_") ||
+        lFull.includes("acc_") ||
+        [
+          "ethdotorg",
+          "finnish_sandberg",
+          "norwegian_sandberg",
+          "swedish_sandberg",
+        ].includes(lUser)
       return !isBlocked
     })
 
