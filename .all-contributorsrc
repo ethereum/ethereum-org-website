@@ -11718,6 +11718,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "futantan",
+      "name": "Tantan Fu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6268441?v=4",
+      "profile": "http://www.futantan.com",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
