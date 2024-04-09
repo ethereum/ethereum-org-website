@@ -424,6 +424,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "te",
+    "crowdinCode": "te",
+    "name": "Telugu",
+    "localName": "తెలుగు",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "tk",
     "crowdinCode": "tk",
     "name": "Turkmen",

@@ -45,3 +45,5 @@ Langkah kedua ini dikenal sebagai ["Danksharding"](/roadmap/danksharding/). Kemu
 ## Kemajuan saat ini {#current-progress}
 
 Proto-Danksharding kemungkinan besar akan menjadi salah satu item peta perjalanan awal yang akan diimplementasikan. Langkah-langkah komputasi terdesentralisasi yang diperlukan untuk menyiapkannya sudah berjalan dan beberapa klien telah mengimplementasikan prototipe untuk menangani data blob. Danksharding penuh kemungkinan masih akan berlangsung beberapa tahun lagi, karena hal ini bergantung pada beberapa item peta perjalanan lainnya yang harus diselesaikan terlebih dahulu. Desentralisasi infrastruktur rollup kemungkinan besar akan menjadi proses yang bertahap - ada banyak rollup berbeda yang membangun sistem yang sedikit berbeda dan akan sepenuhnya terdesentralisasi dengan kecepatan yang berbeda.
+
+<QuizWidget quizKey="scaling" />

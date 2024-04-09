@@ -51,7 +51,7 @@ Diferentes organizaciones han emprendido iniciativas de colaboración para que E
 - [Blast](https://blastapi.io/)_es una plataforma API que proporciona API RPC/WSS para la red principal del archivo de Ethereum y redes de prueba._
 - Implementación de [blockapps](https://blockapps.net/) _ del protocolo de Ethereum para empresas, herramientas y API, que forman la plataforma STRATO._
 - [Chainstack](https://chainstack.com/) _es la red principal y red de prueba Ethereum alojada en & nubes públicas aisladas de clientes._
-- [ConsenSys](https://consensys.io/) _proporciona una gama de productos y herramientas para construir en Ethereum, así como servicios de asesoramiento y desarrollo personalizado._
+- [ConsenSys](https://consensys.net/) _proporciona una gama de productos y herramientas para construir en Ethereum, así como servicios de asesoramiento y desarrollo personalizado._
 - [Envision Blockchain](https://envisionblockchain.com/) _proporciona servicios de consultoría y desarrollo enfocados a empresas, especializándose en la red principal de Ethereum._
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _proporciona un flujo de trabajo de compras mediante la emisión de RFQ, contratos, órdenes de compra y facturas a través de su red de socios comerciales de confianza._
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ es un cliente Ethereum de código abierto enfocado en empresas, desarrollado bajo licencia Apache 2.0 y escrito en Java._
@@ -68,7 +68,7 @@ Diferentes organizaciones han emprendido iniciativas de colaboración para que E
 ### Herramientas y bibliotecas {#tooling-and-libraries}
 
 - [Alethio:](https://explorer.aleth.io/) _plataforma de análisis de datos de Ethereum_
-- [Chainlens](https://www.chainlens.com/)_es una plataforma de datos y análisis para redes públicas y privadas de Web3 Labs compatibles con Ethereum._
+- [Sirato](https://www.web3labs.com/sirato)_es una plataforma de datos y análisis para redes públicas y privadas de Web3 Labs compatibles con Ethereum._
 - [Ernst & Nightfall's "Nightfall"](https://github.com/EYBlockchain/nightfall) _: un conjunto de herramientas para realizar transacciones privadas_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _: una aplicación de firmado de transacción para utilizarse con un proveedor de web3_
 - [Anteriormente](https://tenderly.co/) _era una plataforma de datos que proporciona análisis en tiempo real, alertas y monitoreo con soporte para redes privadas._
@@ -102,12 +102,13 @@ Estas son algunas de las aplicaciones empresariales que se han apoyándose en la
 
 - [Tinlake](https://tinlake.centrifuge.io/) _recibe financiación mediante activos tokenizados del mundo real como facturas, hipotecas o recaudaciones por derechos de autor en retransmisiones._
 - [RealT](https://realt.co/) _Los inversores de todo el mundo pueden comprar en el mercado inmobiliario estadounidense a través de una propiedad completamente compatible, fraccionada y tokenizada._
-- [AgroToken](https://agrotoken.io/en/home) _tokenizar y comerciar con productos agrícolas._
+- [AgroToken](https://agrotoken.io/en/) _tokenizar y comerciar con productos agrícolas._
 - [Fasset](https://www.fasset.com/) _es una plataforma para apoyar la infraestructura sostenible._
 
 ### Notarización de datos {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _los detalles de los préstamos finalizados se cifran y se registran en la red principal._
+- [La integridad de los datos de Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _se puede garantizar escribiendo periódicamente el código de los datos indexados a la red principal._
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _es la agencia de noticias más grande de Italia, lucha contra noticias falsas y permite a los lectores verificar el origen de las noticias registrándolas en la red principal._
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _registra comunicados de prensa en Ethereum para asegurar la responsabilidad corporativa y la confianza._
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _registra la procedencia y el historial de reparación de relojes en Ethereum._
@@ -115,11 +116,13 @@ Estas son algunas de las aplicaciones empresariales que se han apoyándose en la
 
 ### Cadena de suministro {#supply-chain}
 
+- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _es la factura de embarque y proveedor de transferencia de documentos._
 - [Morfeo. network](https://morpheus.network/) _es una plataforma de automatización de cadena de suministro que implementa un híbrido de cadenas privadas con datos notariados en la red principal de Ethereum. La utilizan empresas como el distribuidor canadiense de alimentos, petróleo y gas Federated Co-op Ltd. y el proveedor argentino de comida para animales domésticos Vitalcan._
 - [Minespider](https://www.minespider.com/) _se encarga del seguimiento de la cadena de suministro._
 - [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) _proporciona un flujo de trabajo de compras mediante la emisión de RFQ, contratos, órdenes de compra y facturas a través de su red de socios comerciales de confianza._
 - [Treum](https://treum.io/) _ofrece transparencia, trazabilidad y comerciabilidad para cadenas de suministro mediante la tecnología de cadena de bloques._
 - [TradeTrust](https://www.tradetrust.io/) _verifica facturas electrónicas de Lading (eBLs) para envío internacionales._
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _acuña NFT por cada nuevo lote de cerveza, lo que permite una mayor visibilidad y eficiencia en toda su cadena de suministros._
 
 ### Seguros {#insurance}
 

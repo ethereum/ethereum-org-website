@@ -20,7 +20,7 @@ En cambio, el objetivo de las ReFi es solucionar problemas ambientales, comunale
 
 Uno de los fundamentos de ReFi es el concepto de economías regenerativas, liderado por John Fullerton del Instituto de Capital. Él propuso [ocho principios interconectados](https://capitalinstitute.org/8-principles-regenerative-economy/) subyacentes a la salud sistémica:
 
-![Ocho principios interconectados](/refi-regenerative-economy-diagram.png)
+![Ocho principios interconectados](refi-regenerative-economy-diagram.png)
 
 Los proyectos de ReFi adoptan estos principios usando [contratos inteligentes](/developers/docs/smart-contracts/) y [finanzas descentralizadas (DeFi)](/defi/) por medio de aplicaciones que incentivan comportamientos regenerativos, como por ejemplo, la restauración de ecosistemas degradados y la facilitación de una colaboración a gran escala en temas globales, como el cambio climático y la pérdida de la biodiversidad.
 

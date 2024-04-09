@@ -4,11 +4,9 @@ import {
   CheckboxGroup,
   VStack,
 } from "@chakra-ui/react"
-import { Meta, StoryObj } from "@storybook/react"
+import { Meta } from "@storybook/react"
 
-type CheckboxType = typeof CheckboxComponent
-
-const meta: Meta<CheckboxType> = {
+const meta = {
   title: "Atoms / Form / Checkbox",
   component: CheckboxComponent,
   parameters: {
@@ -17,15 +15,13 @@ const meta: Meta<CheckboxType> = {
       expanded: false,
     },
   },
-}
+} satisfies Meta<typeof CheckboxComponent>
 
 export default meta
 
-type Story = StoryObj<CheckboxType>
-
 const DEFAULT_VAL = "checked"
 
-export const Checkbox: Story = {
+export const Checkbox = {
   render: () => (
     <CheckboxGroup defaultValue={[DEFAULT_VAL]}>
       <VStack spacing={4} align="flex-start">

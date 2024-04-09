@@ -65,7 +65,7 @@ Se pueden realizar cálculos, crear una divisa, almacenar datos, acuñar NFT, en
 - [Monedas estables](/stablecoins/)
 - [Crear y distribuir activos digitales únicos](/nft/)
 - [Un cambio de divisas automático y abierto](/get-eth/#dex)
-- [Juegos descentralizados](/dapps/?category=gaming#explore)
+- [Juegos descentralizados](/dapps/?category=gaming)
 - [Una póliza de seguro que paga automáticamente](https://etherisc.com/)
 - [Un estándar que permite a las personas crear divisas interoperables y personalizadas](/developers/docs/standards/tokens/)
 

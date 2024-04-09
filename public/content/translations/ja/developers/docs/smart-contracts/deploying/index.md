@@ -27,7 +27,7 @@ lang: ja
 
 ### スマートコントラクトをデプロイする手順 {#steps-to-deploy}
 
-The specific steps involved will depend on the development framework in question. For example, you can check out [Hardhat's documentation on deploying your contracts](https://hardhat.org/guides/deploying.html) or [Foundry's documentation on deploying and verifying a smart contract](https://book.getfoundry.sh/forge/deploying). Once deployed, your contract will have an Ethereum address like other [accounts](/developers/docs/accounts/) and can be verified using [source code verification tools](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
+具体的な手順は、使っている開発フレームワークによって異なります。 実例は、[コントラクトのデプロイに関するHardhatのドキュメント](https://hardhat.org/guides/deploying.html)または [スマートコントラクトのデプロイと検証に関するFoundryのドキュメント](https://book.getfoundry.sh/forge/deploying)をご確認ください。 デプロイされると、他の [アカウント](/developers/docs/accounts/)と同様に、コントラクトには、イーサリアムアドレスが設定されます。また、[ソースコード検証ツール](/developers/docs/smart-contracts/verifying/#source-code-verification-tools)を使って検証することができます。
 
 ## 関連ツール {#related-tools}
 

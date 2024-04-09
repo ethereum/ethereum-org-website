@@ -52,7 +52,7 @@ Mielőtt elmerülne a keretrendszerekben, javasoljuk, hogy olvassa át a bevezet
 
 **Scaffold-Eth -** **_Ethers.js + Hardhat + React komponensek és hook-ok web3-hoz: minden, amire szükség van, hogy el tudjon kezdeni okosszerződések által működtetett decentralizált alkalmazásokat fejleszteni._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_Web3 fejlesztői platform, amely lehetővé teszi a blokklánc-fejlesztőknek, hogy okosszerződéseket építsenek, teszteljenek, debuggoljanak, felügyeljenek és üzemeltessenek, illetve fejlesszék a dapp UX-t._**
 
