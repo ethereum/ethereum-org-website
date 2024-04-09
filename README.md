@@ -1799,6 +1799,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ArtificialPB"><img src="https://avatars.githubusercontent.com/u/4672155?v=4?s=100" width="100px;" alt="ArtificialPB"/><br /><sub><b>ArtificialPB</b></sub></a><br /><a href="#tool-ArtificialPB" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Pedrojok01"><img src="https://avatars.githubusercontent.com/u/77141890?v=4?s=100" width="100px;" alt="Pedrojok01"/><br /><sub><b>Pedrojok01</b></sub></a><br /><a href="#maintenance-Pedrojok01" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Vid201"><img src="https://avatars.githubusercontent.com/u/38610409?v=4?s=100" width="100px;" alt="Vid Kersic"/><br /><sub><b>Vid Kersic</b></sub></a><br /><a href="#tool-Vid201" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.futantan.com"><img src="https://avatars.githubusercontent.com/u/6268441?v=4?s=100" width="100px;" alt="Tantan Fu"/><br /><sub><b>Tantan Fu</b></sub></a><br /><a href="#maintenance-futantan" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
