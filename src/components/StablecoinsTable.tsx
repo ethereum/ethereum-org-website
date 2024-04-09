@@ -47,21 +47,15 @@ const StablecoinsTable = ({
   }
 
   return (
-    <Table
-      variant="unstyled"
-      my={8}
-      bg="background.base"
-      mb={8}
-      minW="720px"
-    >
-      <Thead bg="background.highlight" color="text200">
-        <Tr mb="1px">
+    <Table variant="unstyled" my={8} bg="background.base" mb={8} minW="720px">
+      <Thead bg="background.highlight" color="body.medium">
+        <Tr>
           {columns.map((column, idx) => (
             <Th
               key={idx}
-              py={5}
-              fontWeight="bold" 
+              fontWeight="bold"
               fontSize="md"
+              verticalAlign="inherit"
               letterSpacing="normal"
             >
               {column}
@@ -90,25 +84,21 @@ const StablecoinsTable = ({
             color="text"
             _hover={{
               textDecoration: "none",
-              bg: "background.highlight"
+              bg: "background.highlight",
             }}
             _focus={{
               bg: "background.base",
               color: "body.base",
             }}
           >
-            <Td>
-              <Flex align="center" pt={2}>
+            <Td verticalAlign="middle">
+              <Flex>
                 {image && <Image src={image} alt="" me={4} boxSize={6} />}
                 <>{name}</>
               </Flex>
             </Td>
-            <Td>
-              <Flex align="center" pt={2}>{marketCap}</Flex>
-            </Td>
-            <Td>
-              <Flex align="center" pt={2}>{stablecoinsType[type]}</Flex>
-            </Td>
+            <Td verticalAlign="middle">{marketCap}</Td>
+            <Td verticalAlign="middle">{stablecoinsType[type]}</Td>
             {url && (
               <Td textAlign="end">
                 <ButtonLink to={url} size="sm">
