@@ -52,7 +52,7 @@ lang: ja
 
 **Scaffold-Eth -** **_Scaffold-Eth - Ethers.js + Hardhat + React components and hooks for web3: スマートコントラクトを利用した分散型アプリケーションの構築を始めるために必要なすべてを網羅。_**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_ブロックチェーンデベロッパーがスマートコントラクトを構築、テスト、デバッグ、監視、操作し、dApp UXを改善できるWeb3開発プラットフォーム。_**
 
