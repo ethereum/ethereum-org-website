@@ -174,4 +174,6 @@
 
 /*/deprecated-software /:splat/dapps/ 301!
 
+/developers/docs/smart-contracts/languages /developers/docs/smart-contracts/languages 200
+
 /*/languages /:splat/contributing/translation-program/ 301!
