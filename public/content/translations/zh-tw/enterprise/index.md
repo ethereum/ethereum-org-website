@@ -32,7 +32,7 @@ lang: zh-tw
 - [EEA](https://entethalliance.org/) _Ethereum 企業聯盟是會員制導向的組職，主要為商業活動和全世界的消費者開發一個強調協作以及互通的區塊鏈。 我們的組織由領導人、採用者、創新者、開發者、以及企業所組成，目標是共同開創一個開放、去中心化的網路。_
 
 - [Hyperledger Foundation](https://hyperledger.org) _Hyperledger 是一個開放原始碼資源，目的在共同打造跨產業的區塊鏈科技。 這是一項全球性的合作計畫，由 Linux 基金會主持，其中包含財經、銀行、物聯網、供應鏈、製造業以及科技方面的領袖參與其中\_\_。Linux 基金會也有與 Ethereum 合作的計畫：_ -[Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu)
-- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+- Hyperledger Burrow
 
 ## 企業聚焦的服務 {#enterprise-focused-services}
 
@@ -46,7 +46,6 @@ lang: zh-tw
 ## 協定以及基礎建設 {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _以 Apache 2.0 許可開發並用 Java 編寫的開源以太坊客戶端_
-- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _模块化区块链客户端，带有经过许可的智能合约解释器，根据以太坊虚拟机（EVM）规范而开发_
 - [Infura](https://infura.io/) _對以太坊和 IPFS 網絡的可擴展 API 訪問_
 - [Kaleido](https://kaleido.io/) _用於構建和運行跨雲、混合式企業生態系統的全棧平台_
 - [Autonity](https://www.clearmatics.com/about/) _實現 p2p 協議並提供客戶端軟件和基礎結構的協議套件_

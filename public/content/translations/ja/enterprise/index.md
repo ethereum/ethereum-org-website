@@ -51,7 +51,7 @@ Hyperledger、Quorum、Corda プロジェクトが開始された 2016 年頃か
 - [Blast](https://blastapi.io/) _イーサリアムアーカイブのメインネットおよびテストネットの RPC/WSS API を提供する API プラットフォーム_
 - [Blockapps](https://blockapps.net/) _STRATO プラットフォームを構成するエンタープライズイーサリアムプロトコル、ツール、API の実装_
 - [Chainstack](https://chainstack.com/) _メインネットおよびテストネットのイーサリアムインフラストラクチャをパブリックおよび隔離されたカスタマークラウドでホスト_
-- [ConsenSys](https://consensys.net/) _イーサリアム上で構築するためのさまざまなプロダクトとツール、ならびにコンサルティングとカスタム開発サービスを提供_
+- [ConsenSys](https://consensys.io/) _イーサリアム上で構築するためのさまざまなプロダクトとツール、ならびにコンサルティングとカスタム開発サービスを提供_
 - [Envision Blockchain](https://envisionblockchain.com/) _イーサリアムメインネットに特化したエンタープライズ向けコンサルティングおよび開発サービスを提供_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _ 信頼できるビジネスパートナーのネットワーク全体で、RFQ、コントラクト、発注書、請求書を発行することにより、調達ワークフローを提供_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _Java で書かれた Apache 2.0 ライセンスに基づくオープンソースのエンタープライズ向けイーサリアムクライアント_
@@ -66,7 +66,7 @@ Hyperledger、Quorum、Corda プロジェクトが開始された 2016 年頃か
 ### ツールとライブラリ {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _イーサリアムデータ分析プラットフォーム_
-- [Sirato](https://www.web3labs.com/sirato) _Web3 Labs によるパブリックとプライベートイーサリアム互換ネットワークのためのデータおよび分析プラットフォーム_
+- [Chainlens](https://www.chainlens.com/) _Web3 Labs によるパブリックとプライベートイーサリアム互換ネットワークのためのデータおよび分析プラットフォーム_
 - [Ernst & Young's ‘Nightfall’](https://github.com/EYBlockchain/nightfall) _プライベートトランザクション用のツールキット_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _Web3 プロバイダーで使用するトランザクション署名のアプリケーション_
 - [Tenderly](https://tenderly.co/) _プライベートネットワークをサポートするリアルタイムの分析、アラート、モニタリングを提供するデータプラットフォーム。_
@@ -100,13 +100,12 @@ Hyperledger、Quorum、Corda プロジェクトが開始された 2016 年頃か
 
 - [Tinlake](https://tinlake.centrifuge.io/) *請求書、住宅ローン、ストリーミングロイヤリティ*などのトークン化された現実世界の資産を通じた債権ファイナンス
 - [RealT](https://realt.co/) _世界中の投資家は、完全に準拠した分割かつトークン化された所有権を通じて、米国の不動産市場に参入可能_
-- [AgroToken](https://agrotoken.io/en/) _農産物のトークン化と取引_
+- [AgroToken](https://agrotoken.io/en/home) _農産物のトークン化と取引_
 - [Fasset](https://www.fasset.com/) _持続可能なインフラをサポートするためのプラットフォーム_
 
 ### データの公証化 {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _確定されたローンの詳細はハッシュ化され、メインネットに記録されます_
-- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _ データ整合性は、インデックスされたデータのハッシュを定期的にメインネットに書き込むことで保証されます_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _イタリア最大の報道機関が偽のニュースと戦い、読者がニュースのソースをメインネットに記録することで検証できるようにします_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _企業の説明責任と信頼性を確保するために、イーサリアムのプレスリリースを記録します_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _イーサリアムでの腕時計の証明書と修理履歴を記録します_
@@ -114,13 +113,11 @@ Hyperledger、Quorum、Corda プロジェクトが開始された 2016 年頃か
 
 ### サプライチェーン {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _船荷証券および書類転送プロバイダー_
 - [Morpheus.network](https://morpheus.network/) _イーサリアムメインネット上で公証データを用いたハイブリッドなプライベートチェーンを実現するサプライチェーン自動化プラットフォーム。カナダの食品・石油・ガス販売会社 Federated Co-op Ltd.やアルゼンチンのペットフード会社 Vitalcan などが採用_
 - [Minespider](https://www.minespider.com/) _サプライチェーン追跡_
 - [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) _信頼できるビジネスパートナーのネットワーク全体で、RFQ、コントラクト、発注書、請求書を発行することにより、企業は調達ワークフローに従事可能_
 - [Treum](https://treum.io/) _ブロックチェーン技術を使用して、透明性、トレーサビリティ、トレーダビリティをサプライチェーンに配置_
 - [TradeTrust](https://www.tradetrust.io/) _海外発送向けの電子船荷証券(eBL)を検証_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _新しいビールの製造単位ごとに NFT を発行して、サプライチェーン全体の透明性と効率性を向上_
 
 ### 保険 {#insurance}
 

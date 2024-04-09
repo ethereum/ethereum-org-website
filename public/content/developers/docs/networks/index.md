@@ -61,7 +61,7 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
-- [Testnet Faucet | Sepolia](https://testnet-faucet.com/sepolia/)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 #### Goerli _(long-term support)_ {#goerli}
 
@@ -89,6 +89,7 @@ Goerli is a testnet for testing validating and staking. The Goerli network is op
 - [All That Node Goerli Faucet](https://www.allthatnode.com/faucet/ethereum.dsrv)
 - [Coinbase Wallet Faucet | Goerli](https://coinbase.com/faucets/ethereum-goerli-faucet)
 - [Chainstack Goerli faucet](https://faucet.chainstack.com/goerli-faucet)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 To launch a Validator on Goerli testnet, use ethstaker's ["cheap goerli validator" launchpad](https://goerli.launchpad.ethstaker.cc/en/).
 

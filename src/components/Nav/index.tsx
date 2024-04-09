@@ -22,6 +22,8 @@ import LanguagePicker from "@/components/LanguagePicker"
 import { BaseLink } from "@/components/Link"
 import Search from "@/components/Search"
 
+import { DESKTOP_LANGUAGE_BUTTON_NAME, NAV_PY } from "@/lib/constants"
+
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
 import { useNav } from "./useNav"
@@ -69,7 +71,7 @@ const Nav = () => {
         borderColor="rgba(0, 0, 0, 0.1)"
         height="4.75rem"
         justifyContent="center"
-        py={4}
+        py={NAV_PY}
         px={{ base: 4, xl: 8 }}
       >
         <Flex
@@ -97,7 +99,7 @@ const Nav = () => {
             <Flex alignItems="center" /*  justifyContent="space-between" */>
               {/* Temporarily hide search for now until we resolve issues with the API key */}
               {/* <Search {...searchModalDisclosure} /> */}
-
+        
               {/* Desktop */}
               <HStack hideBelow="md" gap="0">
                 <IconButton
@@ -126,6 +128,7 @@ const Nav = () => {
                 >
                   <MenuButton
                     as={Button}
+                    name={DESKTOP_LANGUAGE_BUTTON_NAME}
                     ref={languagePickerRef}
                     variant="ghost"
                     color="body.base"

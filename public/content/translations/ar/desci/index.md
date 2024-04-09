@@ -68,7 +68,7 @@ summaryPoint3: يعتمد على حركة العلوم المفتوحة.
 
 أظهرت الدراسات أن لجان مراجعة المنح تقوم بعمل ضعيف في اختيار المقترحات عالية الجودة، لأن المقترحات نفسها المقدمة إلى اللجان المختلفة لها نتائج مختلفة تمامًا. نظرًا لأن التمويل أصبح أكثر ندرة، فقد تركز على مجموعة أصغر من كبار الباحثين الذين لديهم مشاريع أكثر تحفظًا من الناحية الفكرية. وقد أدى التأثير إلى خلق مشهد تمويل شديد التنافسية، مما أدى إلى ترسيخ الحوافز الضارة وخنق الابتكار.
 
-Web3 لديه القدرة على تعطيل نموذج التمويل المعطل هذا من خلال تجربة نماذج الحوافز المختلفة التي طورتها DAOs وWeb3 على نطاق واسع. [تمويل السلع العامة بأثر رجعي](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)، [التمويل الرباعي](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)، [حوكمة DAO](https://www.antler.co/blog/daos-and-web3-governance) و[هياكل الحوافز الرمزية](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) هي بعض أدوات Web3 التي يمكن أن تحدث ثورة في تمويل العلوم.
+Web3 لديه القدرة على تعطيل نموذج التمويل المعطل هذا من خلال تجربة نماذج الحوافز المختلفة التي طورتها DAOs وWeb3 على نطاق واسع. [تمويل السلع العامة بأثر رجعي](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)، [التمويل الرباعي](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)، [حوكمة DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) و[هياكل الحوافز الرمزية](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) هي بعض أدوات Web3 التي يمكن أن تحدث ثورة في تمويل العلوم.
 
 ### ملكية الملكية الفكرية وتطويرها {#ip-ownership}
 

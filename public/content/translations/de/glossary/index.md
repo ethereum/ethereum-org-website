@@ -378,7 +378,7 @@ Eine Kennzeichnung, die einigen [EIPs](#eip) zugewiesen wurde, die versuchen, ei
 
 Ein [Proof-Work](#pow)-Algorithmus, der bei Ethereum verwendet wurde, bevor er zu [Proof-of-Stake](#pos) gewechselt ist.
 
-[Weiterlesen](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash)
+[Weiterlesen](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash)
 
 ### Ether {#ether}
 
