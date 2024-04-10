@@ -334,8 +334,7 @@ const WalletTable = ({
                 }}
                 onClick={(e) => {
                   if (
-                    (e.target as HTMLTableRowElement).tagName === "A" ||
-                    (e.target as HTMLTableRowElement).tagName === "svg"
+                    (e.target as HTMLElement).matches("a, a svg")
                   )
                     return
                   showMoreInfo(wallet)
