@@ -252,7 +252,7 @@ Segue uma lista de alguns dos fornecedores de nós para Ethereum mais populares.
   - Recursos
     - Protocolo RPC descentralizado e mercado
     - 1 milhão de solicitações gratuitas por dia (por ponto de extremidade, máx. 2)
-    - [Pontos de extremidade públicos](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [Pontos de extremidade públicos](https://docs.pokt.network/developers/public-endpoints)
     - Programa Pre-Stake+ (se você precisar de mais de 1 milhão de solicitações por dia)
     - Mais de 15 blockchains compatíveis
     - Mais de 6.400 nós com ganhos de POKT a serviço dos aplicativos

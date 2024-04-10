@@ -1,12 +1,10 @@
 ---
 title: Cómo visualizar su NFT en su cartera (parte 3/3 de la serie de tutoriales de NFT)
-description: Este tutorial explica cómo visualizar un NFT en MetaMask
+description: '¡Este tutorial describe cómo ver un NFT existente en MetaMask!'
 author: "Sumi Mudgil"
 tags:
-  - "NFT"
   - "ERC-721"
-  - "Alchemy"
-  - "tókenes no fungibles"
+  - "Alquimia"
   - "Solidity"
 skill: beginner
 lang: es
@@ -19,15 +17,15 @@ Este tutorial es la parte 3/3 en la serie de tutoriales NFT, donde vemos nuestro
 
 Como requisito previo, ya debería tener MetaMask en su móvil instalado e incluir la cuenta a la que ha acuñado su NFT: puede obtener la aplicación gratis para [iOS](https://apps.apple.com/us/app/metamask-blockchain-wallet/id1438144202) o [Android](https://play.google.com/store/apps/details?id=io.metamask&hl=en_US&gl=US).
 
-## Paso 1: Establecer su red en Ropsten {#set-network-to-ropsten}
+## Paso 1: Configurar su red a Sepolia {#set-network-to-sepolia}
 
-En la parte superior de la aplicación, pulse el botón «Wallet» (Cartera) después de lo cual se le pedirá que seleccione una red. Como nuestro NFT se acuñó en la red Ropsten, lo más lógico es que seleccione Ropsten como su red.
+En la parte superior de la aplicación, pulse el botón «Wallet» (Cartera) después de lo cual se le pedirá que seleccione una red. Cómo nuestro NFT se minó en la red de Sepolia, tiene que seleccionar Sepolia como su red.
 
-![Cómo configurar Ropsten como su red móvil MetaMask](./goerliMetamask.gif)
+![Cómo establecer Sepolia como su red en la versión móvil de MetaMask](./goerliMetamask.gif)
 
 ## Paso 2: Añadir su coleccionable a MetaMask {#add-nft-to-metamask}
 
-Una vez que esté en la red Ropsten, seleccione la pestaña «Collectibles» (Coleccionables) a la derecha y añada la dirección del contrato inteligente NFT y el identificador de token ERC-721 de su NFT, que podrá encontrar en Etherscan basándose en el hash de transacción de su NFT desplegado en la parte II de nuestro tutorial.
+Una vez esté en la red Sepolia, seleccione la prestaña «Coleccionables» en la derecha y añada la dirección del contrato inteligente del NFT y la ID del token ERC-721 de su NFT, el cuál debería de poder encontrar en Etherscan, a partir del hash de su transacción del NFT implementado en la Parte II de nuestro tutorial.
 
 ![Cómo encontrar el hash de su transacción y el ID de token ERC-721](./findNFTEtherscan.png)
 

@@ -117,7 +117,7 @@ ZK-STARKはさらに量子コンピュータに対してもセキュリティを
 
 ZKロールアップのノードは、トランザクションが一定数に達すると、これらをバッチ化した上で、証明サーキット向けのインプットをコンパイルして簡潔なゼロ知識証明としてコンパイルします。 このゼロ知識証明には、以下が含まれます：
 
-- A Merkle tree root comprising all the transactions in the batch.
+- バッチに含まれるすべてのトランザクションで構成されるマークルツリールート。
 - 各トランザクションが当該バッチに含まれることを証明するマークル証明。
 - トランザクションにおける送信者／受信者ペアのアカウントが、ロールアップのステートツリーに含まれることを証明するマークル証明。
 - 各トランザクションに対する状態更新を適用した後の状態ルートの更新により得られる、プロセスの中間における状態ルートのセット（つまり、送信者アカウントの残高減と受信者アカウントの残高増）。
@@ -238,11 +238,11 @@ FinematicsによるZKロールアップの説明動画をご覧ください：
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scrollは、ネイティブのzkEVMを搭載したイーサリアムのレイヤー2ソリューションを開発中のテクノロジー企業です。_
 
-- **[Taiko](https://taiko.xyz)** - _Taikoは、分散型でイーサリアム等価のゼロ知識ロールアップ([タイプ1のゼロ知識イーサリアム仮想マシン](https://vitalik.ca/general/2022/08/04/zkevm.html))_です。
+- **[Taiko](https://taiko.xyz)** - _Taiko は分散型のイーサリアム等価のゼロ知識ロールアップです ([タイプ1のZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))_。
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
+- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync Eraは、Matter Labsが独自開発したzkEVMを搭載するEVM互換のゼロ知識ロールアップです_。
 
-- **[Starknet](https://starkware.co/starknet/)** - _StarkNet is an EVM-compatible layer 2 scaling solution built by StarkWare._
+- **[Starknet](https://starkware.co/starknet/)** - _StarkNetは、StarkWareによって開発されたEVM互換のレイヤー2スケーリングソリューションです。_
 
 ## ZKロールアップの参考文献 {#further-reading-on-zk-rollups}
 
@@ -252,5 +252,5 @@ FinematicsによるZKロールアップの説明動画をご覧ください：
 - [zkEVMとは何か？](https://www.alchemy.com/overviews/zkevm)
 - [zkEVMのイントロダクション](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [有益なzkEVM関連リソース](https://github.com/LuozhuZhang/awesome-zkevm)
-- [ZK-SNARKの仕組み](https://vitalik.ca/general/2017/02/01/zk_snarks.html)
-- [SNARKはどのように実現されているのか？](https://vitalik.ca/general/2021/01/26/snarks.html)
+- [ZK-SNARKの仕組み](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
+- [SNARKはどのように実現されているのか？](https://vitalik.eth.limo/general/2021/01/26/snarks.html)
