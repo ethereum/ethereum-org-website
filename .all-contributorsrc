@@ -11736,6 +11736,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Destiner",
+      "name": "Timur Badretdinov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4247901?v=4",
+      "profile": "https://destiner.io",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
