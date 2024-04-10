@@ -169,7 +169,7 @@ These libraries abstract away much of the complexity of interacting directly wit
 - [Documentation](https://services.tokenview.io/docs?type=api)
 - [GitHub](https://github.com/Tokenview)
 
-=**Watchdata -** **_Provide simple and reliable API access to Ethereum blockchain._**
+**Watchdata -** **_Provide simple and reliable API access to Ethereum blockchain._**
 
 - [Watchdata](https://watchdata.io/)
 - [Documentation](https://docs.watchdata.io/)
