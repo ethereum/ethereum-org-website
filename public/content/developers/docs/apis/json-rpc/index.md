@@ -133,6 +133,10 @@ A handful of core JSON-RPC methods require data from the Ethereum network, and f
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
 
+## JSON-RPC API Playground
+
+You can use the [playground tool](https://ethereum-json-rpc.com) to discover and try out the API methods. It also shows you which methods and networks are supported by various node providers.
+
 ## JSON-RPC API Methods {#json-rpc-methods}
 
 ### web3_clientVersion {#web3_clientversion}
