@@ -2,11 +2,12 @@ import fs from "fs"
 
 import { checkMarkdown } from "../../markdownChecker"
 import crowdin from "../api-client/crowdinClient"
-import { main as crowdinImport } from "../import/main"
-import type { BucketsList } from "../import/types"
+import crowdinImport from "../import/main"
 
 import { DOT_CROWDIN, FILE_PATH, SUMMARY_PATH } from "./constants"
-import { decompressFile, downloadFile, getBuckets } from "./utils"
+import getApprovedBuckets from "./getApprovedBuckets"
+import type { BucketsList } from "./types"
+import { decompressFile, downloadFile } from "./utils"
 
 import "dotenv/config"
 
@@ -36,8 +37,7 @@ async function main() {
     fs.rmSync(FILE_PATH)
     console.log("🗑️ Removed download from:", FILE_PATH)
 
-    // Get the list of buckets from Notion
-    const buckets = (await getBuckets()) as BucketsList
+    const buckets = (await getApprovedBuckets()) as BucketsList
 
     // Run Crowdin import script with buckets from Notion
     crowdinImport(buckets)

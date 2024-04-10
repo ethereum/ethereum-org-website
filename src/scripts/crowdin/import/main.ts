@@ -15,7 +15,7 @@ const USER_OVERRIDE: BucketsList = {
   // EXAMPLE: es: [1, 10, 12, 14],
 }
 
-export const main = (userOverride: BucketsList = USER_OVERRIDE) => {
+const main = (userOverride: BucketsList = USER_OVERRIDE) => {
   console.log("User overrides:", userOverride) // TODO: Remove?
 
   // If first time, create directory for user
@@ -46,3 +46,5 @@ export const main = (userOverride: BucketsList = USER_OVERRIDE) => {
 
   handleSummary(importSelection, trackers)
 }
+
+export default main
