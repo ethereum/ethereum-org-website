@@ -51,7 +51,7 @@ lang: zh-tw
 
 **Scaffold-ETH _- 透過可適應你的智慧型合約的前端，快速體驗 Solidity。_**
 
-- [Github](https://github.com/austintgriffith/scaffold-eth)
+- [Github](https://github.com/scaffold-eth/scaffold-eth-2)
 - [範例去中心化應用程式](https://punkwallet.io/)
 
 **Create Eth App _- 通過一條指令建立以太坊支援的應用程式。_**

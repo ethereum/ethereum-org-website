@@ -8,7 +8,7 @@ lang: zh
 
 我们想要确保上架的资源是最好的，让用户能够安全放心地浏览二层网络空间。
 
-任何人都可以提出向 ethereum.org 添加二层网络的建议。 如果有遗漏的二层网络，**[请提出建议](https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md)！**
+任何人都可以提出向 ethereum.org 添加二层网络的建议。 如果有遗漏的二层网络，**[请提出建议](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml)！**
 
 我们目前在以下页面上架了二层网络：
 
@@ -50,6 +50,8 @@ _我们认为，其他不使用以太坊来实现数据可用性或安全性的�
 
 **项目上线日期**
 
+- 二层网络已在主网上“上线”超过 6 个月
+
 - 未经用户实战测试的较新项目不太可能上架。
 
 **外部安全审核**
@@ -90,6 +92,6 @@ _我们认为，其他不使用以太坊来实现数据可用性或安全性的�
 
 如果你想将二层网络添加到 ethereum.org，请在 GitHub 上创建一个提议。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?&template=suggest_layer2.md">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_layer2.yaml">
   创建一个提议
 </ButtonLink>

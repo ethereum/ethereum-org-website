@@ -6,7 +6,7 @@ lang: pl
 
 # Mosty blockchain {#prerequisites}
 
-_Web3 przekształcił się w ekosystem blockchainów warstwy 1 i rozwiązań skalujących warstwy 2, z których każdy ma unikalne możliwości i kompromisy. Wraz ze wzrostem liczby protokołów blockchain, rośnie [zapotrzebowanie na przenoszenie aktywów pomiędzy łańcuchami](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>). Aby zaspokoić to zapotrzebowanie, potrzebujemy mostów._
+_Web3 przekształcił się w ekosystem blockchainów warstwy 1 i rozwiązań skalujących warstwy 2, z których każdy ma unikalne możliwości i kompromisy. Wraz ze wzrostem liczby protokołów blockchain, rośnie [zapotrzebowanie na przenoszenie aktywów pomiędzy łańcuchami](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)). Aby zaspokoić to zapotrzebowanie, potrzebujemy mostów._
 
 <Divider />
 
@@ -30,7 +30,7 @@ Mosty istnieją do łączenia sieci blockchain, umożliwiając transfer informac
 
 Mosty umożliwiają:
 
-- międzyłańcuchowy transfer aktywów i informacji
+- międzyłańcuchowy transfer aktywów i informacji.
 - zdecentralizowanym aplikacjom uzyskiwanie dostępu do mocnych stron różnych blockchainów — zwiększając w ten sposób ich możliwości (ponieważ protokoły mają teraz więcej miejsca na innowacje).
 - użytkownikom uzyskać dostęp do nowych platform i czerpać korzyści z różnych łańcuchów.
 - deweloperom z różnych ekosystemów blockchainowych współpracę i tworzenie nowych platform dla użytkowników.

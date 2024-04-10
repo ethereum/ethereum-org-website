@@ -6,53 +6,53 @@ lang: en
 
 # Contributing to ethereum.org 🦄 {#contributing-to-ethereumorg}
 
-The ethereum.org website, like Ethereum more broadly, is an open-source project. So if you want to help improve [our portal to Ethereum](/about/), here's how you can help out.
+Ethereum.org is an open-source run project with **12 000+** contributors that help translate, write, design and maintain the website.
 
-<InfoBanner shouldCenter emoji=":tada:">
-  Claim your POAP token! If you contributed to ethereum.org in 2022, there's a unique POAP waiting for you.{" "}
-  <a href="#poap">More on POAPs</a>
-</InfoBanner>
+We are a welcoming community that will help you grow and educate in the Ethereum ecosystem while also meaningfully contribute and get relevant practical experience!
 
 ## Ways to contribute {#ways-to-contribute}
 
-- [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues)
-  _– Work we've identified that needs doing_
-- [Join the translation program](/contributing/translation-program/)
-  _– Help us bring ethereum.org to new languages_
-- [Help design the website](/contributing/design/)
-  _– Designers of all levels can contribute to improve the website_
-- [Add community resources](/contributing/content-resources/)
-  _– Add a helpful article or resource to a relevant page_
-- [Add a product](/contributing/adding-products/)
-  _– Add a dapp or wallet to a relevant page_
-- [Add developer tools](/contributing/adding-developer-tools/)
-  _– Add a developer tool to a relevant page_
-- [Add an exchange](/contributing/adding-exchanges/)
-  _– Add an exchange to our [exchange finder](/get-eth/#country-picker)_
-- [Improve our research](https://www.notion.so/efdn/Ethereum-org-User-Persona-Memo-b44dc1e89152457a87ba872b0dfa366c)
-  _– Let us know your feedback on our research or contribute your own_
-- [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=)
-  _– Let us know about any ideas you have for a new feature or design_
-- [Add a glossary term](/contributing/adding-glossary-terms)
-  _– Help us continue to expand the Ethereum [glossary](/glossary/)_
-- [Create/edit content](/contributing/#how-to-update-content)
-  _– Suggest new pages or make tweaks to what's here already_
-- [Add a layer 2](/contributing/adding-layer-2s/)
-  _– Add a layer 2 to a relevant page_
-- [Add a staking product or service](/contributing/adding-staking-products/)
-  _– Add a project that helps facilitate solo staking, pooled staking, or staking as a service_
-- [Add a wallet](/contributing/adding-wallets/)
-  _– Add a wallet for the [find wallets page](/wallets/find-wallet/)_
-- [Suggest a project for our DeSci page](/contributing/adding-desci-projects/)
-  _- Add a project built on Ethereum that contributes to decentralized science_
-- [Quizzes](/contributing/quizzes/) _- Add, update, and delete quiz question banks for a relevant page_
-- [Suggest a design resource](/contributing/design/adding-design-resources/) _- Add, update, and delete helpful design resources_
+**Translations**
+- [Join the translation program](/contributing/translation-program/) – Help us bring ethereum.org to new languages
 
-_Any questions?_ 🤔 Reach out on our [Discord server](https://discord.gg/ethereum-org)
+**Development**
+- [Work on an open issue](https://github.com/ethereum/ethereum-org-website/issues) – Work we've identified that needs doing
+
+**Design**
+- [Help design the website](/contributing/design/) Designers of all levels can contribute to improve the website
+
+**Content**
+- [Create/edit content](/contributing/#how-to-update-content) – Suggest new pages or make tweaks to what's here already
+- [Add community resources](/contributing/content-resources/) – Add a helpful article or resource to a relevant page
+- [Suggest a design resource](/contributing/design/adding-design-resources/) – Add, update, and delete helpful design resources
+- [Add a glossary term](/contributing/adding-glossary-terms/) – Help us continue to expand the Ethereum [glossary](/glossary/)
+- [Quizzes](/contributing/quizzes/) – Add, update, and delete quiz question banks for a relevant page
+
+**Feature ideas**
+- [Request a feature](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=) – Let us know about any ideas you have for a new feature or design
+
+**Product listings**
+- [Add an exchange](/contributing/adding-exchanges/) – Add an exchange to our [exchange finder](/get-eth/#country-picker)
+- [Add a product](/contributing/adding-products/) – Add a dapp or wallet to a relevant page
+- [Add developer tools](/contributing/adding-developer-tools/) – Add a developer tool to a relevant page
+- [Add a layer 2](/contributing/adding-layer-2s/) – Add a layer 2 to a relevant page
+- [Add a staking product or service](/contributing/adding-staking-products/) – Add a project that helps facilitate solo staking, pooled staking, or staking as a service
+- [Add a wallet](/contributing/adding-wallets/) – Add a wallet for the [find wallets page](/wallets/find-wallet/)
+- [Suggest a project for our DeSci page](/contributing/adding-desci-projects/) – Add a project built on Ethereum that contributes to decentralized science
+
+Any questions? 🤔 Join our [Discord server](https://discord.gg/ethereum-org)
+
+## Good first tasks to start contributing
+
+These are few current tasks that you could help us solve and take responsibility for. For most you will need GitHub account as most changes to the website are made through GitHub.
+
+<IssuesList issues={gfissues} my={8} />
+
+<ButtonLink href="https://github.com/ethereum/ethereum-org-website/issues">See all tasks</ButtonLink>
 
 ## How to work on ethereum.org {#how-to-update-content}
 
-Whether you're adding to the site, creating content or working on open issues, you'll need a [GitHub](https://github.com) account.
+If you wish to contribute in the [Translation Program](/contributing/translation-program/), we ask you to create an account on [Crowdin](https://crowdin.com/project/ethereum-org). For everything else – adding or editing content or visuals to the website, fixing bugs, working on open tasks – you will need a [GitHub](https://github.com/) account.
 
 All updates are made via the GitHub PR process. This means you create a local copy of the website, make your changes and request to merge your changes. If you've never done this before, follow the instructions at the bottom of our [GitHub repository](https://github.com/ethereum/ethereum-org-website).
 
@@ -84,24 +84,24 @@ Only use your original work or content that you have permission to use when cont
 
 We have low barrier to entry issues on our GitHub repository specifically designed for developers who are new to open-source labelled [good first issue](https://github.com/ethereum/ethereum-org-website/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
-## Claim your contributor POAP {#poap}
+## Claim your Onchain Achievement Token (OAT) {#oat}
 
-If your contribution gets merged into ethereum.org, we'll mint you a unique contributors POAP. A Proof of Attendance Protocol (POAP) token is on-chain proof that you helped make the ecosystem a little more awesome.
+If your contribution gets merged into ethereum.org, you will have a change to claim a special badge on [Galxe](https://galxe.com/ethereumorg/). An Onchain Achievement Token (OAT) is a proof that you helped make the ecosystem a little more awesome.
 
-[More on POAPs](https://www.poap.xyz/)
+[More on OATs](https://help.galxe.com/en/articles/7067290-galxe-oats-reward-and-celebrate-achievements)
 
-### How to claim {#how-to-claim}
-
+### How to claim
 1. Join our [Discord server](https://discord.gg/ethereum-org).
 2. Paste a link to your contribution in the `#🥇 | proof-of-contribution` channel
-3. Wait for a member of our team to send you a link to your POAP.
-4. Claim your POAP!
+3. Wait for a member of our team to send you a link to your OAT.
+4. Claim your OAT!
 
-You should only use self-custody wallets to claim POAPs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your POAPs.
+You should only use self-custody wallets to claim OATs. Do not use exchange accounts or other accounts you do not hold the private keys to, as these will not allow you to access and manage your OATs.
 
 ## Claim your GitPOAP {#claim-gitpoap}
 
 GitPOAP will also automatically recognize your merged contribution and let you mint a separate unique contributors POAP on their platform itself!
+
 
 ### How to claim {#how-to-claim}
 

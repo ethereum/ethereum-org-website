@@ -276,7 +276,7 @@ Etherscanにアクセスするとコントラクトのオペコードを入手�
 |    10 | PUSH1 0xe0   | 0xE0 (((First word (256 bits) of the call data))) |
 |    12 | SHR          | (((first 32 bits (4 bytes) of the call data)))    |
 
-Etherscanでは、`1C`が未知のオペコードとなっていますが、これは[Etherscanでこの機能が作成された後に追加された](https://eips.ethereum.org/EIPS/eip-145)ため、まだ反映がされていないのが理由です。 An [up to date opcode table](https://github.com/wolflo/evm-opcodes) shows us that this is shift right
+Etherscanでは、`1C`が未知のオペコードとなっていますが、これは[Etherscanでこの機能が作成された後に追加された](https://eips.ethereum.org/EIPS/eip-145)ため、まだ反映がされていないのが理由です。 [最新のオペコードテーブル](https://github.com/wolflo/evm-opcodes)では、これが右シフトであることが示されています
 
 | オフセット | オペコード            | スタック                                                                                                     |
 | -----:| ---------------- | -------------------------------------------------------------------------------------------------------- |
@@ -662,7 +662,7 @@ def unknown2e7ba6ef(uint256 _param1, uint256 _param2, uint256 _param3, array _pa
 
 下の2行は、Storage[2] も呼び出すコントラクトであることを示しています。 [コンストラクタのトランザクションを見ると](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange)、このコントラクトは[0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)であり、[ソースコードがEtherscanにアップロードされている](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code)ラップドイーサ(WETH)コントラクトであることが分かります。
 
-このコントラクトは、`_param2`にETHを送金しようとしていると思われます。 送金できれば問題ありません。 送金できない場合は、[ラップドイーサ(WETH)](https://weth.io/)を送金しようとします。 `_param2`が外部所有アカウント(EOA)である場合、必ずETHを受け取ることができますが、コントラクトはETHの受け取りを拒否することができます。 しかし、ラップドイーサ(WETH)はERC-20であるため、コントラクトは受け取りを拒否できません。
+このコントラクトは、`_param2`にETHを送金しようとしていると思われます。 送金できれば問題ありません。 送金できない場合は、[ラップドイーサ(WETH)](https://weth.tkn.eth.limo/)を送金しようとします。 `_param2`が外部所有アカウント(EOA)である場合、必ずETHを受け取ることができますが、コントラクトはETHの受け取りを拒否することができます。 しかし、ラップドイーサ(WETH)はERC-20であるため、コントラクトは受け取りを拒否できません。
 
 ```python
   ...

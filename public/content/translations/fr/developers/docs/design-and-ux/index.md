@@ -75,7 +75,7 @@ Participez à des organisations professionnelles communautaires ou rejoignez des
 
 ## Concevoir des systèmes {#design-systems}
 
-- [Conception d'Optimism](https://www.figma.com/@oplabs) (Figma)
+- [Conception d'Optimism](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.org Conception de system](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, un système de design pour Web3 par Polygon](https://finity.polygon.technology/) (Figma)
 - [Architecture du système ENS](https://thorin.ens.domains/)

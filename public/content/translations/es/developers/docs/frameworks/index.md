@@ -52,7 +52,7 @@ Antes de profundizar en los marcos o frameworks, le recomendamos que lea nuestra
 
 **Scaffold-Eth:** **_Componentes y hooks para web3 de Ethers.js + Hardhat + React; todo lo que necesita para comenzar a crear aplicaciones descentralizadas impulsadas por contratos inteligentes._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly:** **_Plataforma de desarrollo web3 que permite a los desarrolladores de cadena de bloques crear, probar, depurar, monitorear y operar contratos inteligentes y mejorar la experiencia de usuario de dapps._**
 

@@ -60,6 +60,7 @@ Les deux réseaux de test publics que les développeurs de clients conservent ac
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Robinet Sepolia Chainstack](https://faucet.chainstack.com/sepolia-faucet)
+- [Robinet pour le réseau de test Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(support à long terme)_ {#goerli}
 

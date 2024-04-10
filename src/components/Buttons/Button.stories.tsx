@@ -11,9 +11,7 @@ import Button from "./Button"
 import ButtonLink from "./ButtonLink"
 import IconButton from "./IconButton"
 
-type ButtonType = typeof Button
-
-const meta: Meta<ButtonType> = {
+const meta = {
   title: "Atoms / Form / Buttons",
   component: Button,
   args: {
@@ -27,11 +25,11 @@ const meta: Meta<ButtonType> = {
       if: { arg: "variant", neq: "solid" },
     },
   },
-}
+} satisfies Meta<typeof Button>
 
 export default meta
 
-type Story = StoryObj<ButtonType>
+type Story = StoryObj<typeof meta>
 
 const variants: ThemingProps<"Button">["variant"][] = [
   "solid",
