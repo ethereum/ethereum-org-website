@@ -22,7 +22,7 @@ O Programa de Tradução do ethereum.org está aberto e qualquer um pode contrib
 
 _Junte-se ao [ethereum.org Discord](/discord/) para colaborar com traduções, fazer perguntas, compartilhar comentários e ideias ou juntar-se a um grupo de tradução._
 
-<ButtonLink to="https://crowdin.com/project/ethereum-org/">
+<ButtonLink to="https://crowdin.com/project/ethereum-org/invite">
   Comece a traduzir
 </ButtonLink>
 
@@ -36,8 +36,8 @@ Leia mais sobre a [missão e visão](/contributing/translation-program/mission-a
 
 ### Nosso progresso até agora {#our-progress}
 
-- [**Mais de 5.000** tradutores](/contributing/translation-program/contributors/)
-- [**54** idiomas presentes no site](/languages/)
+- [**5.100 +** tradutores](/contributing/translation-program/contributors/)
+- **54** idiomas presentes no site
 - [**3 milhões** de palavras traduzidas em 2022](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
@@ -73,11 +73,11 @@ Se você está contribuindo para o Programa de Tradução ou pensando em se envo
 - [Guia do editor online do Crowdin](https://support.crowdin.com/online-editor/) _ — um guia detalhado sobre como usar o editor online do Crowdin e algumas funcionalidades avançadas do Crowdin_
 - [Pacotes de conteúdo](/contributing/translation-program/content-buckets/) _ — quais páginas estão incluídas em cada pacote de conteúdo do ethereum.org_
 
-Para outras ferramentas úteis de tradução, comunidades de tradutores e postagens no blog do Programa de Tradução, visite a [Página de recursos](/contribuindo/tradução-programa/recursos/).
+Para outras ferramentas úteis de tradução, comunidades de tradutores e postagens no blog do Programa de Tradução, visite a [Página de recursos](/contributing/translation-program/resources/).
 
 ## Envolva-se {#get-in-touch}
 
-Você tem alguma dúvida? Ou quer colaborar com nossa equipe e outros tradutores? Publique no canal #translations do nosso [servidor Discord do ethereum.org](https://discord.gg/ethereum-org)
+Você tem alguma dúvida? Ou quer colaborar com nossa equipe e outros tradutores? Publique no canal #translations do nosso [servidor Discord do ethereum.org](https://discord.gg/6WX7E97)
 
 Você também pode entrar em contato conosco por meio do e-mail translations@ethereum.org
 

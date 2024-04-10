@@ -51,22 +51,24 @@ Diversas organizações trabalharam juntas para tornar o Ethereum amigável para
 - O [Blast](https://blastapi.io/) _é uma plataforma de API que fornece APIs RPC/WSS para a Rede principal e as Redes de teste para o arquivo do Ethereum._
 - [Blockapps](https://blockapps.net/) _é uma implementação do protocolo Ethereum para empresas, com ferramentas e APIs que formam a plataforma STRATO_
 - O [Chainstack](https://chainstack.com/) _é a infraestrutura da rede principal e da rede de testes do Ethereum hospedada em nuvens de clientes isolados e públicos_
-- O [ConsenSys](https://consensys.net/) _fornece uma variedade de produtos e ferramentas para construção no Ethereum, bem como serviços de consultoria e desenvolvimento personalizado_
+- O [ConsenSys](https://consensys.io/) _fornece uma variedade de produtos e ferramentas para construção no Ethereum, bem como serviços de consultoria e desenvolvimento personalizado_
 - O [Envision Blockchain](https://envisionblockchain.com/) _fornece serviços de consultoria e desenvolvimento com foco empresarial especializados na Rede principal Ethereum_
 - O [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _fornece um fluxo de trabalho de aquisição, emitindo contratos da RFQ, ordens de compra e faturas em sua rede de parceiros de negócios confiáveis_
 - O [Hyperledger Besu](https://www.hyperledger.org/use/besu) _é um cliente Ethereum de código aberto desenvolvido sob licença Apache 2.0 e escrito em Java_
 - O [Infura](https://infura.io/) _é uma API escalável de acesso às redes Ethereum e IPFS_
 - O [Kaleido](https://kaleido.io/) _é uma plataforma de desenvolvimento focada em empresas que oferece uma cadeia de blocos simplificada e aplicativos de ativos digitais_
+- [NodeReal](https://nodereal.io/) _fornece infraestrutura de blockchain escalável e a API do provedor de serviços para o ecossistema Web3_
 - O [Provide](https://provide.services/) _fornece infraestrutura e APIs para aplicativos Web3 para empresas_
 - O [QuickNode](https://www.quicknode.com/) _fornece nós confiáveis e rápidos com APIs de alto nível como NFT API, Token API, entre outras, enquanto entrega um pacote unificado de produtos e soluções de nível empresarial_
 - [Tenderly](https://tenderly.co) _é uma plataforma de desenvolvimento Web3 que fornece blocos de depuração de infraestrutura, observação e construção para desenvolvimento, teste, monitoramento e operação de contratos inteligentes_
 - A [Unibright](https://unibright.io/) _é uma equipe de especialistas, arquitetos, desenvolvedores e consultores da blockchain, com mais de 20 anos de experiência em processos de negócios e integração_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _é um provedor de serviços gerenciados espalhado por locais compartilhados na Europa e na Ásia. Opera e monitora seus nós de forma segura e confiável_
+- [Zeeve](https://www.zeeve.io/) _fornece uma variedade de produtos e ferramentas de criação no Ethereum, além de infraestrutura e APIs para aplicativos Web3 para empresas._
 
 ### Ferramentas e bibliotecas {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Plataforma de Análise de Dados do Ethereum_
-- [Sirato](https://www.web3labs.com/sirato) _uma plataforma de dados e análises para redes públicas e privadas Ethereum compatíveis da Web3 Labs_
+- [Chainlens](https://www.chainlens.com/) _uma plataforma de dados e análises para redes públicas e privadas Ethereum compatíveis da Web3 Labs_
 - [Ernst & Young ‘Nightfall’](https://github.com/EYBlockchain/nightfall) _é um conjunto de ferramentas para transações privadas_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _é um aplicativo de assinatura de transações para ser usado com um provedor web3_
 - [Tenderly](https://tenderly.co/) _é uma plataforma de dados que fornece análise em tempo real, alertando e monitorando com suporte a redes privadas_
@@ -100,13 +102,12 @@ Aqui estão alguns dos aplicativos corporativos que foram construídos em cima d
 
 - [Tinlake](https://tinlake.centrifuge.io/) _ – financiamento de recebíveis por meio de ativos reais gerados por token, como faturas, hipotecas ou royalties de streaming_
 - [RealT](https://realt.co/) _ – investidores em todo o mundo podem comprar no mercado imobiliário dos EUA por meio de uma propriedade totalmente compatível, fracionada e gerada por token._
-- [AgroToken](https://agrotoken.io/en/) _ – gerando tokens e negociando commodities agrícolas_
+- [AgroToken](https://agrotoken.io/en/home) _ – gerando tokens e negociando commodities agrícolas_
 - [Fasset](https://www.fasset.com/) _ – uma plataforma para apoiar a infraestrutura sustentável_
 
 ### Autenticação de dados {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _ – detalhes dos empréstimos finalizados com hash e registrados na Mainnet_
-- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _ – a integridade dos dados pode ser garantida escrevendo periodicamente hashes de dados indexados para a Mainnet_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _ – a maior agência de notícias da Itália luta contra notícias falsas e permite que os leitores verifiquem a origem das notícias gravando-as na Mainnet_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _ – logs da imprensa comunicados na Ethereum para garantir a responsabilidade e a confiança corporativas_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _ – registra a proveniência dos registros e o histórico de reparos dos relógios no Ethereum_
@@ -114,13 +115,11 @@ Aqui estão alguns dos aplicativos corporativos que foram construídos em cima d
 
 ### Cadeia de abastecimento {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _ – provedor de conhecimento de embarque marítimo e transferência de documentos_
 - [Morpheus.network](https://morpheus.network/) _ – plataforma de automação de cadeia de suprimentos que implementa um sistema híbrido de cadeias privadas com dados autenticados na Ethereum Mainnet, sendo usada por empresas como a Federated Co-op Ltd., distribuidora canadense de alimentos, petróleo e gás, e a Vitalcan, fornecedora argentina de alimentos para animais._
 - [Minespider](https://www.minespider.com/) _ – rastreamento da cadeia de suprimentos_
 - [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) _ – permite que as empresas participem de um fluxo de processo de aquisição, emitindo pedidos de cotação (RFQ), contratos, ordens de compra e faturas para toda a sua rede de parceiros de negócios confiáveis_
 - [Treum](https://treum.io/) _ – traz transparência, capacidade de rastreio e negociação para cadeias de abastecimento, usando a tecnologia de blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _ – verifica conhecimentos de embarque marítimo eletrônicos (eBLs) para envio internacional_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _ – cunha NFTs para cada lote de cerveja, permitindo maior visibilidade e eficiência ao longo de sua cadeia de suprimentos_
 
 ### Seguros {#insurance}
 

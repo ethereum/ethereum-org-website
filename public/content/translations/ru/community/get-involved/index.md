@@ -16,7 +16,7 @@ lang: ru
 - [Получите награду на Gitcoin](https://gitcoin.co/), поработайте над незначительной или серьезной технической проблемой, заработайте криптовалюту!
 - Посетите ближайший к вам хакатон [ETHGlobal](http://ethglobal.co/)!
 - Ознакомьтесь с [проектами в вашей компетенции или на языке программирования по вашему выбору](/developers/docs/programming-languages/)
-- [Онлайн-встречи Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w): смотрите или поучаствуйте сами
+- [Онлайн-встречи Core Dev](https://www.youtube.com/@EthereumProtocol): смотрите или поучаствуйте сами
 - [Список предпочтений для программы поддержки экосистемы](https://esp.ethereum.foundation/wishlist/) — сферы инструментария, документации и инфраструктуры, в которых активно ищут заявителей на гранты в рамках программы поддержки экосистемы Ethereum
 - [Web3Bridge](https://www.web3bridge.com/) — присоединяйтесь к амбициозному сообществу web3 в их инициативе по выявлению, обучению и поддержке сотен разработчиков и членов сообщества по всей Африке
 - Присоединяйтесь к [Discord-каналу Ethereum Cat Herders](https://discord.io/EthCatHerders)
@@ -28,7 +28,7 @@ lang: ru
 - Составьте или рассмотрите предложение по улучшению Ethereum (EIP)
   - Составьте EIP
     1. Представьте свою идею на [Ethereum Magicians](https://ethereum-magicians.org)
-    2. Прочтите [EIP-1](https://eip.ethereum.org/EIPS/eip-1) — **да, это _весь_ документ.**
+    2. Прочтите [EIP-1](https://eips.ethereum.org/EIPS/eip-1). **Да, это _весь_ документ.**
     3. Следуйте указаниям из документа EIP-1. Ссылайтесь на него при составлении черновика.
   - Узнайте, как стать [редактором EIP](https://eips.ethereum.org/EIPS/eip-5069)
     - Теперь вы можете рассматривать EIP других участников! Просматривайте [открытые запросы на включение изменений с тегом `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Давайте обратную связь относительно технических аспектов по ссылке `discussion-to`.

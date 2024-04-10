@@ -17,7 +17,7 @@ summaryPoints:
 
 單獨質押指執行一個連線至網際網路的[以太坊節點](/run-a-node/)並存入 32 個以太幣，以啟用一個[驗證者](#faq)，使你能夠直接參與網路共識。
 
-**單獨質押提高了以太坊網路的去中心化**，使以太坊更加無懼審查並能更可靠地抵禦攻擊。 其他質押方法可能無法以同樣的方式幫助網路。 單獨質押是保護以太坊的最佳質押方案。
+**單獨質押提高了以太坊網路的去中心化**，使以太坊更加無懼審查並能更可靠地抵禦攻擊。 其他質押方法可能無法以同樣的方式協助網路。 單獨質押是保護以太坊的最佳質押方案。
 
 以太坊節點由執行層 (EL) 用戶端和共識層 (CL) 用戶端組成。 這類用戶端是一套共同運作的軟體加上一組有效的簽名金鑰，可驗證交易和區塊、證明正確的區塊鏈頭、匯總證明並提交區塊。
 
@@ -41,7 +41,7 @@ summaryPoints:
 
 <InfoGrid>
 <ExpandableCard title="必讀事項" eventCategory="SoloStaking" eventName="clicked required reading">
-在操作自己的節點時，你應該花一些時間學習如何使用你選擇的軟體， 包括閱讀相關文件，以及了解這些開發團隊的溝通管道。
+在操作自己的節點時，你應該花一些時間學習如何使用你選擇的軟體。 包括閱讀相關文件，以及了解這些開發團隊的溝通管道。
 
 越是了解你在執行的軟體以及權益證明的運作原理，你作為質押者的風險就越小，也越容易解決節點運作過程中可能出現的問題。
 </ExpandableCard>
@@ -59,11 +59,11 @@ summaryPoints:
 </ExpandableCard>
 
 <ExpandableCard title="維護" eventCategory="SoloStaking" eventName="clicked maintenance">
-硬體偶爾會出現故障，網路連線會中斷，用戶端軟體偶爾也需要升級。 節點維護是不可避免的，你偶爾需要留意， 最好能隨時掌握預期的網路升級或其他重要的用戶端升級。
+硬體偶爾會出現故障，網路連線會中斷，用戶端軟體偶爾也需要升級。 節點維護是不可避免的，你偶爾需要留意。 最好能隨時掌握預期的網路升級或其他重要的用戶端升級。
 </ExpandableCard>
 
 <ExpandableCard title="可靠的運行時間" eventCategory="SoloStaking" eventName="clicked reliable uptime">
-你的酬勞和你的驗證者在線上並提供正確證明的時間成正比。 停機會導致一定程度的罰金，這和有多少其他驗證者同時離線成正比，但<a href="#faq">不會導致罰沒</a>。 頻寬也很重要，因為如果沒有及時收到證明，酬勞就會減少。 要求可能有所差異，但建議上傳和下載速率至少都要有 10 Mb/s。
+你的酬勞與你的驗證者上線並提供正確證明的時間成正比。 停機會導致一定程度的罰金，這和有多少其他驗證者同時離線成正比，但<a href="#faq">不會導致罰沒</a>。 頻寬也很重要，因為如果沒有及時收到證明，酬勞就會減少。 要求可能有所差異，但建議上傳和下載速率至少都要有 10 Mb/s。
 </ExpandableCard>
 
 <ExpandableCard title="罰沒風險" eventCategory="SoloStaking" eventName="clicked slashing risk">
@@ -81,7 +81,7 @@ summaryPoints:
 
 在活躍期間，你將獲得以太幣獎勵，這些獎勵將定期存入你的提款地址。
 
-如果需要，你可以退出驗證者，如此一來就不必一直在線上，但也不會再有任何酬勞。 然後，你的餘額將被提取到你在設置過程中指定的提款地址。
+如果需要，你可以退出驗證者，如此一來就不必一直上線，但也不會再有任何酬勞。 然後，你的餘額將被提取到你在設置過程中指定的提款地址。
 
 [更多關於提取質押代幣的資訊](/staking/withdrawals/)
 
@@ -109,7 +109,7 @@ summaryPoints:
 
 <StakingProductsCardGrid category="nodeTools" />
 
-切記，選擇[非主流用戶端](/developers/docs/nodes-and-clients/client-diversity/)極為重要，因為這可以提高網路的安全性，降低你的風險。 可讓你設定非主流用戶端的工具稱為<em style={{ textTransform: "uppercase" }}>「多重用戶端」</em>。
+切記，選擇[非主流用戶端](/developers/docs/nodes-and-clients/client-diversity/)極為重要，因為這可以提高網路的安全性，降低你的風險。 可讓你設定非主流使用者端的工具稱為<em style={{ textTransform: "uppercase" }}>「多重使用者端」</em>。
 
 ### 金鑰產生器
 
@@ -117,7 +117,7 @@ summaryPoints:
 
 <StakingProductsCardGrid category="keyGen" />
 
-關於我們遺漏的質押工具，你有什麼推薦嗎？ 請參閱我們的[產品刊登政策](/contributing/adding-staking-products/)，如果合適，請提交以供審核。
+關於我們遺漏的質押工具，你有要推薦的嗎？ 請參閱我們的[產品刊登政策](/contributing/adding-staking-products/)，如果合適，請提交以供審核。
 
 ## 探索單獨質押指南 {#staking-guides}
 
@@ -167,7 +167,7 @@ summaryPoints:
 <ExpandableCard title="哪一個用戶端最好？">
 各用戶端的效能和使用者介面可能略有不同，因為每個用戶端都是由不同的團隊使用不同程式語言開發的。 這表示沒有「最好的」用戶端。 所有生產環境的用戶端都是優秀的軟體，會執行相同的核心功能來與區塊鏈同步和互動。
 
-由於所有生產環境用戶端的基本功能都相同，因此實際上選擇<strong>非主流用戶端</strong>非常重要；「非主流」意指網路上大多數驗證者都「不是」使用該用戶端。 這聽起來可能有悖直覺，但執行主流或絕對主流用戶端會使你在該用戶端出現錯誤時面臨更高的罰沒風險。 執行非主流用戶端可以大幅降低這些風險。
+由於所有生產環境用戶端的基本功能都相同，因此選擇<strong>非主流用戶端</strong>其實非常重要；「非主流」意指網路上大多數驗證者都「沒」使用該用戶端。 這聽起來可能有悖直覺，但執行主流或絕對主流用戶端會使你在該用戶端出現錯誤時面臨更高的罰沒風險。 執行非主流用戶端可以大幅降低這些風險。
 
 <a href="https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA">詳細了解為什麼用戶端多元化如此重要</a>
 </ExpandableCard>
@@ -175,7 +175,7 @@ summaryPoints:
 <ExpandableCard title="我可以只用 VPS（虛擬私人伺服器）嗎？">
 雖然虛擬私人伺服器 (VPS) 可以作為家用硬體的替代品，但驗證者用戶端的實體存取和位置<em>有其重要性</em>。 Amazon Web Services 或 Digital Ocean 等集中式雲端解決方案提供了不必擁有和運作硬體的便利，但代價是網路集中化。
 
-在一個集中式雲端儲存解決方案上執行的驗證者用戶端越多，對這些使用者而言就越危險。 如果發生任何事件導致這些供應商離綫，無論是由於攻擊、監管要求，抑或僅因為電源/網際網路中斷，都將導致依賴此伺服器的所有驗證者用戶端同時離綫。
+在一個集中式雲端儲存解決方案上執行的驗證者用戶端越多，對這些使用者而言就越危險。 如果發生任何事件導致這些供應商離線，無論是由於攻擊、監管要求，抑或僅因為電源/網際網路中斷，都將導致依賴此伺服器的所有驗證者用戶端同時離線。
 
 離線罰金與同時離線的其他驗證者數量成正比。 使用虛擬私人伺服器會大幅提高承受更嚴重的離線罰金的風險，甚至如果發生大量當機，還會增加二次懲罰或罰沒的風險。 為了將你自己的風險和網路風險降至最低，我們強烈鼓勵使用者取得並操作自己的硬體。
 </ExpandableCard>
@@ -184,7 +184,7 @@ summaryPoints:
 
 在信標鏈中進行任何類型的提款都需要設置提款憑證。
 
-新質押者在生成金鑰和存款時就設置了提款憑證。 尚未設置此憑證的現有質押者可以升級其金鑰以支持此功能。
+新質押者在生成金鑰和存款時就設置了提款憑證。 尚未設置此憑證的現有質押者可以升級其金鑰以支援此功能。
 
 設置提款憑證後，酬勞支付（扣除初始 32 個以太幣後的累積以太幣）將定期自動分配到提款地址。
 
@@ -195,9 +195,10 @@ summaryPoints:
 
 ## 延伸閱讀 {#further-reading}
 
+- [以太坊質押目錄](https://www.staking.directory/) - _Eridian 和 Spacesider_
 - [以太坊用戶端的多元化問題](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [幫助用戶端多元化](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [以太坊共識層的用戶端多元化](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_
 - [如何購買以太坊驗證者硬體](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [按部就班：如何加入以太坊 2.0 測試網](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _Butta_
-- [以太坊 2.0 罰沒預防技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020_
+- [以太坊 2 罰沒預防技巧](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Raul Jordan 2020 年_

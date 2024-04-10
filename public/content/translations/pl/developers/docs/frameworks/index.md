@@ -56,7 +56,7 @@ Przed zagłębieniem się w frameworki zalecamy przeczytanie naszego wprowadzeni
 
 **scaffold-eth —** **_Hardhat + Create Eth App: wszystko, czego potrzebujesz, aby rozpocząć budowanie zdecentralizowanych aplikacji opartych na inteligentnych kontraktach._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **The Graph —** **_protokół Graph do efektywnego odpytywania danych blockchainu_**
 

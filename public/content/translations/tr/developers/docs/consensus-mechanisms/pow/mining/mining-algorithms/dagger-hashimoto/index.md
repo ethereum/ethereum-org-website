@@ -4,7 +4,7 @@ description: Dagger-Hashimoto algoritmasına detaylı bir bakış.
 lang: tr
 ---
 
-Dagger-Hashimoto, Ethereum'un madencilik algoritması için orijinal araştırma uygulaması ve şartnamesiydi. Dagger-Hashimoto'nun yerini [Ethash](#ethash) aldı. 15 Eylül 2022'de gerçekleşen [Birleşim'den](/updates/merge) sonra madencilik tamamen durdurulmuştur. O zamandan beri Ethereum [hisse ispatı](/developers/docs/consensus-mechanisms/pos) mekanizmasını kullanmaktadır. Bu sayfa sadece bilgilendirme içindir - burdaki bilgi Birleşim sonrası Ethereum için geçerli değildir.
+Dagger-Hashimoto, Ethereum'un madencilik algoritması için orijinal araştırma uygulaması ve şartnamesiydi. Dagger-Hashimoto'nun yerini [Ethash](#ethash) aldı. 15 Eylül 2022'de gerçekleşen [Birleşim'den](/roadmap/merge/) sonra madencilik tamamen durdurulmuştur. O zamandan beri Ethereum [hisse ispatı](/developers/docs/consensus-mechanisms/pos) mekanizmasını kullanmaktadır. Bu sayfa sadece bilgilendirme içindir - burdaki bilgi Birleşim sonrası Ethereum için geçerli değildir.
 
 ## Ön koşullar {#prerequisites}
 
@@ -143,7 +143,7 @@ Bir blok için çalışmayı hesaplamak için kullanılan DAG setini oluşturmak
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
     from pyethereum import chain_manager
-    if num <= 0:
+    if n <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:
         prevhash = chain_manager.index.get_block_by_number(n - 1)
@@ -186,7 +186,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
         shifted_A = hash_output_A >> i
         transaction = shifted_A % len(list_of_transactions)
         txid_mix ^= list_of_transactions[transaction] << i
-    return txid_max ^ (nonce << 192)
+    return txid_mix ^ (nonce << 192)
 ```
 
 Ne yazık ki, Hashimoto RAM zor olarak kabul edilirken, önemli hesaplama yükü olan 256-bit aritmetik kullanır. Ancak Dagger-Hashimoto, bu sorunu çözmek için veri kümesini indekslerken yalnızca en az önemli 64 biti kullanır.

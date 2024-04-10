@@ -10,7 +10,7 @@ Das Ethereum-Protokoll selbst dient ausschließlich dem Zweck, den kontinuierlic
 
 ## Voraussetzungen {#prerequisites}
 
-Um den EVM zu verstehen, sind ein paar grundlegende Kenntnisse der gängigen Informatikterminologie wie [Bytes](https://wikipedia.org/wiki/Byte), [Speicher](https://wikipedia.org/wiki/Computer_memory) und [Stack](<https://wikipedia.org/wiki/Stack_(abstract_data_type)>) notwendig. Es wäre auch hilfreich, wenn Sie sich mit Kryptografie-/Blockchain-Konzepten wie [Hash-Funktionen](https://wikipedia.org/wiki/Cryptographic_hash_function) und dem [Merkle-Baum](https://wikipedia.org/wiki/Merkle_tree) auskennen.
+Um den EVM zu verstehen, sind ein paar grundlegende Kenntnisse der gängigen Informatikterminologie wie [Bytes](https://wikipedia.org/wiki/Byte), [Speicher](https://wikipedia.org/wiki/Computer_memory) und [Stack](https://wikipedia.org/wiki/Stack_(abstract_data_type)) notwendig. Es wäre auch hilfreich, wenn Sie sich mit Kryptografie-/Blockchain-Konzepten wie [Hash-Funktionen](https://wikipedia.org/wiki/Cryptographic_hash_function) und dem [Merkle-Baum](https://wikipedia.org/wiki/Merkle_tree) auskennen.
 
 ## Vom Ledger zur Zustandsmaschine {#from-ledger-to-state-machine}
 
@@ -46,7 +46,7 @@ Die EVM wird als [Stackmaschine](https://wikipedia.org/wiki/Stack_machine) mit e
 
 Während der Ausführung behält die EVM einen transienten _-Speicher_ (als wortadressiertes Byte-Array), der zwischen Transaktionen nicht vorhanden ist.
 
-Verträge enthalten jedoch eine Merkle-Patricia*-Speicher*-Trie (als wortadressierbares Wort-Array), mit der das betreffende Konto und ein Teil des globalen Zustands verbunden sind.
+Verträge enthalten jedoch eine Merkle-Patricia_-Speicher_-Trie (als wortadressierbares Wort-Array), mit der das betreffende Konto und ein Teil des globalen Zustands verbunden sind.
 
 Kompilierter Smart-Contract-Bytecode wird als eine Anzahl von EVM-[Opcodes ausgeführt](/developers/docs/evm/opcodes), die standardmäßige Stackoperationen wie `XOR`, `UND`, `ADD`, `SUB` etc. ausführen. Die EVM implementiert auch eine Reihe von Blockchain-spezifischen Stack-Operationen, wie `ADDRESS`, `BALANCE`, `BLOCKHASH` usw.
 
@@ -64,6 +64,7 @@ Während der siebenjährigen Geschichte von Ethereum hat die EVM mehrere Revisio
 - [evmone](https://github.com/ethereum/evmone) - _C++_
 - [ethereumjs-vm](https://github.com/ethereumjs/ethereumjs-vm) - _JavaScript_
 - [eEVM](https://github.com/microsoft/eevm) - _C++_
+- [revm](https://github.com/bluealloy/revm) - _Rust_
 
 ## Weiterführende Informationen {#further-reading}
 

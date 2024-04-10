@@ -35,7 +35,7 @@ sidebarDepth: 2
 - 对于值在 `[0x00, 0x7f]`（十进制 `[0, 127]`）范围内的单个字节，该字节即是它自己的递归长度前缀编码。
 - 否则，如果字符串的长度为 0-55 个字节，则递归长度前缀编码包含一个值为 **0x80**（十进制 128）的单字节，加上该字符串之后字符串的长度。 因此，第一个字节的范围是 `[0x80, 0xb7]`（十进制 `[128, 183]`）。
 - 如果字符串的长度超过 55 个字节，则递归长度前缀编码由一个值为 **0xb7**（十进制为 183）的单个字节，加上二进制字符串长度的以字节为单位的长度，后跟字符串的长度，然后是字符串。 例如，一个长 1024 字节的字符串将被编码为 `\xb9\x04\x00`（十进制 `185, 4, 0`）后跟该字符串。 在这里，`0xb9` (183 + 2 = 185) 为第一个字节，然后是表示实际字符串长度的 2 个字节 `0x0400`（十进制 1024）。 因此，第一个字节的范围是 `[0xb8, 0xbf]`（十进制 `[184, 191]`）。
-- 如果列表的总有效载荷长度（即其所有经过递归长度前缀编码的项目的组合长度）为 0-55 个字节，则递归长度前缀编码包含一个值为 **0xc0** 的单字节，加上列表长度，后跟一串项目递归长度前缀编码。 因此，第一个字节的范围是 `[0xc0, 0xf7]`（十进制 `[192, 247]`）。
+- 如果列表的总有效载荷长度（即其所有经过递归长度前缀编码的项目的组合长度）为 0-55 个字节，则递归长度前缀编码包含一个值为 **0xc0** 的单字节，加上有效载荷长度，后跟一串项目的递归长度前缀编码。 因此，第一个字节的范围是 `[0xc0, 0xf7]`（十进制 `[192, 247]`）。
 - 如果列表的总有效载荷长度超过 55 个字节，则递归长度前缀编码包含一个值为 **0xf7** 的单字节，加上二进制格式的有效载荷长度的以字节为单位的长度，后跟有效载荷的长度，然后是项目递归长度前缀编码串。 因此，第一个字节的范围是 `[0xf8, 0xff]`（十进制 `[248, 255]`）。
 
 对应的代码为：
@@ -43,27 +43,27 @@ sidebarDepth: 2
 ```python
 def rlp_encode(input):
     if isinstance(input,str):
-        if len(input) == 1 and ord(input) < 0x80: return input
-        else: return encode_length(len(input), 0x80) + input
-    elif isinstance(input,list):
+        if len(input) == 1 and ord(input) < 0x80:
+            return input
+        return encode_length(len(input), 0x80) + input
+    elif isinstance(input, list):
         output = ''
-        for item in input: output += rlp_encode(item)
+        for item in input:
+            output += rlp_encode(item)
         return encode_length(len(output), 0xc0) + output
 
-def encode_length(L,offset):
+def encode_length(L, offset):
     if L < 56:
          return chr(L + offset)
     elif L < 256**8:
          BL = to_binary(L)
          return chr(len(BL) + offset + 55) + BL
-    else:
-         raise Exception("input too long")
+     raise Exception("input too long")
 
 def to_binary(x):
     if x == 0:
         return ''
-    else:
-        return to_binary(int(x / 256)) + chr(x % 256)
+    return to_binary(int(x / 256)) + chr(x % 256)
 ```
 
 ## 示例 {#examples}
@@ -113,7 +113,7 @@ def rlp_decode(input):
         output = instantiate_str(substr(input, offset, dataLen))
     elif type is list:
         output = instantiate_list(substr(input, offset, dataLen))
-    output + rlp_decode(substr(input, offset + dataLen))
+    output += rlp_decode(substr(input, offset + dataLen))
     return output
 
 def decode_length(input):
@@ -137,8 +137,7 @@ def decode_length(input):
         lenOfListLen = prefix - 0xf7
         listLen = to_integer(substr(input, 1, lenOfListLen))
         return (1 + lenOfListLen, listLen, list)
-    else:
-        raise Exception("input does not conform to RLP encoding form")
+    raise Exception("input does not conform to RLP encoding form")
 
 def to_integer(b):
     length = len(b)
@@ -146,8 +145,7 @@ def to_integer(b):
         raise Exception("input is null")
     elif length == 1:
         return ord(b[0])
-    else:
-        return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
+    return ord(substr(b, -1)) + to_integer(substr(b, 0, -1)) * 256
 ```
 
 ## 延伸阅读 {#further-reading}

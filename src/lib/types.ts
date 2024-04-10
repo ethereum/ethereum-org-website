@@ -4,6 +4,7 @@ import type { AppProps } from "next/app"
 import { StaticImageData } from "next/image"
 import { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
+import { Icon } from "@chakra-ui/react"
 
 import type {
   DocsFrontmatter,
@@ -20,6 +21,8 @@ import { SimulatorNav } from "@/components/Simulator/interfaces"
 
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
+
+import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
 import { layoutMapping } from "@/pages/[...slug]"
 
@@ -59,10 +62,13 @@ export type Layout = keyof LayoutMappingType
 
 export type Lang =
   | "en"
+  | "am"
   | "ar"
   | "az"
+  | "be"
   | "bg"
   | "bn"
+  | "bs"
   | "ca"
   | "cs"
   | "da"
@@ -71,6 +77,7 @@ export type Lang =
   | "es"
   | "fa"
   | "fi"
+  | "fil"
   | "fr"
   | "gl"
   | "gu"
@@ -78,6 +85,7 @@ export type Lang =
   | "hi"
   | "hr"
   | "hu"
+  | "hy-am"
   | "id"
   | "ig"
   | "it"
@@ -85,13 +93,15 @@ export type Lang =
   | "ka"
   | "kk"
   | "km"
+  | "kn"
   | "ko"
   | "lt"
   | "ml"
   | "mr"
   | "ms"
-  | "nl"
   | "nb"
+  | "ne-np"
+  | "nl"
   | "pcm"
   | "ph"
   | "pl"
@@ -105,7 +115,9 @@ export type Lang =
   | "sr"
   | "sw"
   | "ta"
+  | "te"
   | "th"
+  | "tk"
   | "tr"
   | "uk"
   | "ur"
@@ -155,7 +167,8 @@ export type RawQuestion = {
 
 export type QuestionBank = Record<string, RawQuestion>
 export type QuestionKey = keyof typeof allQuestionData
-export type AnswerKey = typeof allQuestionData[QuestionKey]["answers"][number]["id"]
+export type AnswerKey =
+  (typeof allQuestionData)[QuestionKey]["answers"][number]["id"]
 
 export type Question = RawQuestion & {
   id: QuestionKey
@@ -192,7 +205,10 @@ export type QuizKey = keyof typeof allQuizData
 type HasScoredPerfect = boolean
 type QuestionsCorrect = number
 
-export type CompletedQuizzes = Record<QuizKey, [HasScoredPerfect, QuestionsCorrect]>
+export type CompletedQuizzes = Record<
+  QuizKey,
+  [HasScoredPerfect, QuestionsCorrect]
+>
 
 export type UserStats = {
   score: number
@@ -238,37 +254,12 @@ export type LocaleContributions = {
 }
 
 // Crowdin translation progress
-type Language = {
-  id: string
-  name: string
-  editorCode: string
-  twoLettersCode: string
-  threeLettersCode: string
-  locale: string
-  androidCode: string
-  osxCode: string
-  osxLocale: string
-  pluralCategoryNames: string[]
-  pluralRules: string
-  pluralExamples: string[]
-  textDirection: string
-  dialectOf: unknown
-}
-
-type CountSummary = {
-  total: number
-  translated: number
-  preTranslateAppliedTo: number
-  approved: number
-}
-
 export type ProjectProgressData = {
-  languageId: string,
-  language?: Language,
-  words: CountSummary,
-  phrases: CountSummary,
-  translationProgress: number
-  approvalProgress: number
+  languageId: string
+  words: {
+    total: number
+    approved: number
+  }
 }
 
 export type LocaleDisplayInfo = {
@@ -329,7 +320,6 @@ export type AllTimeData = {
   }>
 }
 
-
 // GitHub contributors
 export type Commit = {
   commit: {
@@ -368,8 +358,8 @@ export type ToCNodeEntry = {
 export type TocNodeType =
   | ToCNodeEntry
   | {
-    items: TocNodeType[]
-  }
+      items: TocNodeType[]
+    }
 
 export type ToCItem = {
   title: string
@@ -435,12 +425,12 @@ export type TimestampedData<T> = {
 
 export type MetricDataValue<Data, Value> =
   | {
-    error: string
-  }
+      error: string
+    }
   | {
-    data: Data
-    value: Value
-  }
+      data: Data
+      value: Value
+    }
 
 export type EtherscanNodeResponse = {
   result: {
@@ -504,4 +494,175 @@ export type CommunityConference = {
   description: string
   startDate: string
   endDate: string
+  imageUrl: string
+}
+
+// Wallets
+export interface WalletData {
+  last_updated: string
+  name: string
+  image: StaticImageData
+  brand_color: string
+  url: string
+  active_development_team: boolean
+  languages_supported: string[]
+  twitter: string
+  discord: string
+  reddit: string
+  telegram: string
+  ios: boolean
+  android: boolean
+  linux: boolean
+  windows: boolean
+  macOS: boolean
+  firefox: boolean
+  chromium: boolean
+  hardware: boolean
+  open_source: boolean
+  repo_url: string
+  non_custodial: boolean
+  security_audit: string[]
+  scam_protection: boolean
+  hardware_support: boolean
+  rpc_importing: boolean
+  nft_support: boolean
+  connect_to_dapps: boolean
+  staking: boolean
+  swaps: boolean
+  multichain?: boolean
+  layer_2: boolean
+  gas_fee_customization: boolean
+  ens_support: boolean
+  erc_20_support: boolean
+  buy_crypto: boolean
+  withdraw_crypto: boolean
+  multisig: boolean
+  social_recovery: boolean
+  onboard_documentation: string
+  documentation: string
+  mpc?: boolean
+  new_to_crypto?: boolean
+}
+
+export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
+
+export interface WalletFilterData {
+  title: TranslationKey
+  filterKey?: string
+  description: TranslationKey | ""
+}
+
+export type FilterOption = {
+  title: string
+  items: Array<{
+    title: string
+    icon: typeof Icon
+    description: string
+    filterKey: string | undefined
+    showOptions: boolean | undefined
+    options:
+      | Array<{
+          name: string
+          filterKey?: string
+          inputType: "checkbox"
+        }>
+      | []
+  }>
+}
+
+export interface WalletPersonas {
+  title: string
+  description: string
+  presetFilters: {
+    android: boolean
+    ios: boolean
+    linux: boolean
+    windows: boolean
+    macOS: boolean
+    firefox: boolean
+    chromium: boolean
+    hardware: boolean
+    open_source: boolean
+    non_custodial: boolean
+    hardware_support: boolean
+    rpc_importing: boolean
+    nft_support: boolean
+    connect_to_dapps: boolean
+    staking: boolean
+    swaps: boolean
+    layer_2: boolean
+    gas_fee_customization: boolean
+    ens_support: boolean
+    erc_20_support: boolean
+    buy_crypto: boolean
+    withdraw_crypto: boolean
+    multisig: boolean
+    social_recovery: boolean
+    new_to_crypto?: boolean
+  }
+}
+
+export interface DropdownOption {
+  label: string
+  value: string
+  filterKey: string
+  category: string
+}
+
+export type WalletSupportedLanguageContextType = {
+  supportedLanguage: string
+  setSupportedLanguage: (language: string) => void
+}
+
+// Historical upgrades
+type NetworkUpgradeDetails = {
+  blockNumber?: number
+  epochNumber?: number
+  slotNumber?: number
+} & (
+  | {
+      isPending: true
+      dateTimeAsString?: string
+      ethPriceInUSD?: never
+      waybackLink?: never
+    }
+  | {
+      ethPriceInUSD: number
+      waybackLink: string
+      dateTimeAsString: string
+      isPending?: never
+    }
+)
+
+export type NetworkUpgradeData = Record<string, NetworkUpgradeDetails>
+
+// Footer
+export type FooterLink = {
+  to: string
+  text: TranslationKey
+  isPartiallyActive?: boolean
+}
+
+export type FooterLinkSection = {
+  title: TranslationKey
+  links: FooterLink[]
+}
+
+// GitHub API
+export type GHIssue = {
+  title: string
+  html_url: string
+  created_at: string
+  user: {
+    login: string
+    html_url: string
+    avatar_url: string
+  }
+  labels: GHLabel[]
+}
+
+export type GHLabel = {
+  id: number
+  name: string
+  color: string
 }

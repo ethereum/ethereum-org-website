@@ -16,7 +16,7 @@ Machen Sie sich zunächst mit der Mission und den Grundsätze von ethereum.org i
 - [Finden Sie ein Bounty auf Gitcoin](https://gitcoin.co/), arbeiten Sie an kleinen und großen technischen Problemen und verdienen Sie Kryptowährung.
 - Besuchen Sie ein [ETHGlobal](http://ethglobal.co/)-Hakathon in Ihrer Nähe.
 - Schauen Sie sich an, welche [Projekte im Zusammenhang mit Ihrem Fachgebiet oder der Programmiersprache Ihrer Wahl](/developers/docs/programming-languages/) es gibt
-- Nehmen Sie teil an den [Core DEV-Calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) oder sehen Sie sie sich an
+- Nehmen Sie teil an den [Core DEV-Calls](https://www.youtube.com/@EthereumProtocol) oder sehen Sie sie sich an
 - [Wunschliste des Ethereum Ecosystem-Supportprogramms](https://esp.ethereum.foundation/wishlist/) – Tools, Dokumentation und Infrastrukturbereiche, für die das Ethereum Ecosystem-Supportprogramm aktiv nach Förderern sucht
 - [Web3Bridge](https://www.web3bridge.com/) – beteiligen Sie sich an der Initiative der aufstrebenden web3-Community, Hunderte von Entwicklern und Mitgliedern der Community in ganz Afrika zu finden, zu schulen und zu unterstützen
 - Trete dem [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) bei
@@ -28,7 +28,7 @@ Haben Sie einen Hintergrund in Mathematik, Kryptographie oder Wirtschaftswissens
 - Ethereum-Verbesserungsvorschläge formulieren oder prüfen
   - Ein EIP schreiben
     1. Reichen Sie Ihre Idee auf [Ethereum Magicians](https://ethereum-magicians.org) ein.
-    2. Lesen Sie [EIP-1](https://eip.ethereum.org/EIPS/eip-1) – **Ja, das ist das _ganze_ Dokument**.
+    2. Lesen Sie [EIP-1](https://eips.ethereum.org/EIPS/eip-1) – **Ja, das ist das _ganze_ Dokument**.
     3. Folgen Sie den Anweisungen in EIP-1. Beziehen Sie sich auf die darin enthaltenen Informationen, während Sie Ihren Entwurf schreiben.
   - Erfahren Sie, wie Sie ein [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069) werden.
     - Sie können direkt in das Peer-Review von EIPs einsteigen. Sehen Sie [Öffnen von PRs mit dem `e-review`-Tag](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Geben Sie technisches Feedback über den `discussion-to`-Link.
@@ -62,7 +62,7 @@ Wenn Sie kein Entwickler sind, ist es nicht ganz so einfach, herauszufinden, wo 
 ### Ethereum-Inhalte in Ihre Muttersprache übersetzen {#translate-ethereum}
 
 - ethereum.org unterhält ein Übersetzungsprogramm, über das die Website und andere Ressourcen in viele verschiedene Sprachen übersetzt werden.
-- Wie Sie sich beteiligen können, erfahren Sie [hier](/Beitrag/Übersetzungsprogramm).
+- Wie Sie sich beteiligen können, erfahren Sie [hier](/contributing/translation-program/).
 
 ### Einen Knoten ausführen {#run-a-node}
 

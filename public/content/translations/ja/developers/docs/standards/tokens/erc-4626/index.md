@@ -6,21 +6,21 @@ lang: ja
 
 ## はじめに {#introduction}
 
-ERC-4626 は、利回りボールトの技術的なパラメータを最適化し、統一するための規格です。 この規格は、ボールトに含まれる単一の ERC-20 トークンをどれだけ所有しているかを示すトークン化利回りボールトを作成するための標準 API を提供します。 ERC-4626 はさらに、ERC-20 に基づくトークン化ボールトのオプション拡張機能として、トークンの預入／引出および残高の読み取りといった基本的な機能を提供します。
+ERC-4626は、利回りボールトの技術的なパラメータを最適化し、統一するための規格です。 この規格は、ボールトに含まれる単一のERC-20トークンをどれだけ所有しているかを示すトークン化利回りボールトを作成するための標準APIを提供します。 ERC-4626はさらに、ERC-20に基づくトークン化ボールトのオプション拡張機能として、トークンの預入／引出および残高の読み取りといった基本的な機能を提供します。
 
-**利回りボールトにおける ERC-4626 の役割**
+**利回りボールトにおけるERC-4626の役割**
 
 レンディング市場、アグリゲータ、および内部で利回りが得られるトークンは、ユーザーが様々な戦略を駆使して暗号資産トークンから最適な利回りを獲得する上で有益です。 これらの戦略はそれぞれがわずかな違いを持つため、エラーが発生しやすい場合や開発リソースを浪費してしまう場合があります。
 
-利回りボールトのデベロッパーは、ERC-4626 を活用することで、より一貫性が高く堅牢な実装パターンを実現できるため、アプリケーションとの統合にかかる作業を軽減し、様々なアプリケーションにおいて利回りを獲得できるようにするための別途の取り組みを削減することができます。
+利回りボールトのデベロッパーは、ERC-4626を活用することで、より一貫性が高く堅牢な実装パターンを実現できるため、アプリケーションとの統合にかかる作業を軽減し、様々なアプリケーションにおいて利回りを獲得できるようにするための別途の取り組みを削減することができます。
 
-ERC-4626 トークンの詳細については、[EIP-4626](https://eips.ethereum.org/EIPS/eip-4626)をご覧ください。
+ERC-4626トークンの詳細については、[EIP-4626](https://eips.ethereum.org/EIPS/eip-4626)をご覧ください。
 
 ## 前提知識 {#prerequisites}
 
 この記事をよく理解するには、まず[トークン規格](/developers/docs/standards/tokens/)および[ERC-20](/developers/docs/standards/tokens/erc-20/)に目を通すことをおすすめします。
 
-## ERC-4626 の機能と特長: {#body}
+## ERC-4626の機能と特長: {#body}
 
 ### メソッド {#methods}
 
@@ -62,7 +62,7 @@ function convertToAssets(uint256 shares) public view returns (uint256 assets)
 function maxDeposit(address receiver) public view returns (uint256)
 ```
 
-この関数は、`receiver`が 1 回の[`deposit`](#deposit)呼び出しで入金できる原資産の上限を返します。
+この関数は、`receiver`が1回の[`deposit`](#deposit)呼び出しで入金できる原資産の上限を返します。
 
 #### previewDeposit {#previewdeposit}
 
@@ -110,7 +110,7 @@ function mint(uint256 shares, address receiver) public returns (uint256 assets)
 function maxWithdraw(address owner) public view returns (uint256)
 ```
 
-この関数は、1 回の[`withdraw`](#withdraw)呼び出しにより、`owner`残高から引き出し可能な原資産アセットの上限を返します。
+この関数は、1回の[`withdraw`](#withdraw)呼び出しにより、`owner`残高から引き出し可能な原資産アセットの上限を返します。
 
 #### previewWithdraw {#previewwithdraw}
 
@@ -204,4 +204,4 @@ event Withdraw(
 ## 参考文献 {#further-reading}
 
 - [EIP-4626: トークン化ボールト規格](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHub リポジトリ](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)
+- [ERC-4626: GitHubリポジトリ](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)

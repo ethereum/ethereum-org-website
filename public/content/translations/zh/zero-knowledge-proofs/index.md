@@ -203,7 +203,7 @@ ZK-STARK 由于使用抗碰撞的哈希值进行加密，被认为不受量子�
 ## 延伸阅读 {#further-reading}
 
 - [计算机科学家分 5 级难度解释一个概念 | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Wired YouTube 频道_
-- [零知识证明用例概述](https://appliedzkp.org/#Projects) — _隐私和扩展探索团队_
+- [零知识证明用例概述](https://pse.dev/projects) — _Privacy and Scaling Explorations Team_
 - [SNARKs 与 STARKS 与 递归 SNARK](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Overviews_
 - [零知识证明：改善区块链上的隐私](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARK — 一个现实的零知识例子和深入研究](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_

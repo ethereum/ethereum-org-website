@@ -61,7 +61,7 @@ Tam teşekküllü bir dapp inşa etmek teknolojinin farklı parçalarını gerek
 
 **Scaffold-Eth -** **_Web3 için Ethers.js + Hardhat + React bileşenleri ve kancaları: akıllı sözleşmeler tarafından güçlendirilen merkeziyetsiz uygulamalar inşa etmeye başlamanız için ihtiyaç duyduğunuz her şey._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_Blok zincir geliştiricilerinin akıllı sözleşmeler oluşturmasını, test etmesini, hata ayıklamasını, izlemesini ve çalıştırmasını ve dapp UX'i geliştirmesini sağlayan Web3 geliştirme platformu._**
 

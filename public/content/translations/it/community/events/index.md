@@ -5,7 +5,7 @@ lang: it
 hideEditButton: true
 ---
 
-## Eventi in arrivo {#events}
+# Eventi in arrivo {#events}
 
 **Ogni mese, ci sono importanti eventi Ethereum in tutto il mondo.** Prendi in considerazione di partecipare a un evento vicino a te per incontrare altre persone nella community, conoscere le opportunità di lavoro e sviluppare nuove competenze.
 

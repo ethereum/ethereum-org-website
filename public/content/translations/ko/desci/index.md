@@ -12,7 +12,7 @@ summaryPoint2: 과학자들이 자금을 모으고, 실험을 실행하고, 데�
 summaryPoint3: 열린 과학 운동을 기반으로 합니다.
 ---
 
-## 탈중앙화 과학(DeFi)이란 무엇인가요? {#what-is-desci}
+## 탈중앙화 과학(DeSci)이란 무엇인가요? {#what-is-desci}
 
 탈중앙화 과학(DeSci)은 Web3 스택을 사용하여 과학 지식을 공정하고 공평하게 자금 조달, 생성, 검토, 신용, 저장 및 보급하기 위한 공공 인프라를 구축하는 것을 목표로 하는 운동입니다.
 
@@ -68,7 +68,7 @@ DeSci는 Web2 학계를 디지털 세계로 전환하기 위한 과학적 도구
 
 연구에 따르면 보조금 검토 패널은 다른 패널에 주어진 동일한 제안이 매우 다른 결과를 가지고 있기 때문에 고품질 제안을 선택하는 데 열악한 역할을 합니다. 자금이 더 부족해짐에 따라, 그것은 더 지적으로 보수적인 프로젝트를 가진 더 많은 고위 연구자들의 더 작은 풀에 집중되었습니다. 그 효과는 비뚤어진 보상을 확고히 하고 혁신을 억누르는 경쟁적인 자금 조달 환경을 조성했습니다.
 
-Web3는 DAO와 Web3가 광범위하게 개발한 다양한 보상 모델을 실험함으로써 이 깨진 자금 조달 모델을 혼란에 빠뜨릴 가능성이 있습니다. [소급 공공재 자금 조달](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [이차 자금 조달](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [다오 운영 방식](https://www.antler.co/blog/daos-and-web3-governance) 그리고 [토큰화된 보상구조](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)는 과학 자금에 혁명을 일으킬 수 있는 Web3 도구 중 일부입니다.
+Web3는 DAO와 Web3가 광범위하게 개발한 다양한 보상 모델을 실험함으로써 이 깨진 자금 조달 모델을 혼란에 빠뜨릴 가능성이 있습니다. [소급 공공재 자금 조달](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [이차 자금 조달](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [다오 운영 방식](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) 그리고 [토큰화된 보상구조](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)는 과학 자금에 혁명을 일으킬 수 있는 Web3 도구 중 일부입니다.
 
 ### IP 소유권 및 개발 {#ip-ownership}
 

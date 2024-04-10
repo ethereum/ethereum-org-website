@@ -4,6 +4,8 @@ description: 我們在 ethereum.org 努力追求的基本標準。
 lang: zh-tw
 ---
 
+# 行為守則 {#conduct-intro}
+
 ## 使命 {#mission}
 
 開發及維護最詳盡、最易存取的以太坊知識中心。

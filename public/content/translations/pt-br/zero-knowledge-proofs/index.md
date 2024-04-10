@@ -4,7 +4,7 @@ description: Uma introdução não técnica às provas de conhecimento zero para
 lang: pt-br
 ---
 
-## O que são provas de conhecimento zero? {#what-are-zk-proofs}
+# O que são provas de conhecimento zero? {#what-are-zk-proofs}
 
 Uma prova de conhecimento zero é uma forma de provar a validade de uma afirmação sem a revelar. O “provador” é a parte que tenta provar uma reivindicação, enquanto o “verificador” é responsável pela validação da reivindicação.
 

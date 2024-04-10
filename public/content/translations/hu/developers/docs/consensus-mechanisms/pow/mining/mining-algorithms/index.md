@@ -24,13 +24,13 @@ A [Hashimoto](http://diyhpl.us/%7Ebryan/papers2/bitcoin/meh/hashimoto.pdf) egy o
 
 A Dagger-Hashimoto a Dagger és a Hashimoto algoritmusok módosított változatát használta. A Dagger-Hashimoto és a Hashimoto között az a különbség, hogy nem blokkláncot használ adatforrásként, hanem egy személyre szabott adathalmazt, amely a blokkadatokból frissül minden N-edik blokknál. Az adathalmaz a Dagger-algoritmussal készült, amellyel hatékonyan lehetett minden nonce-ra egy alhalmazt kikalkulálni a könnyű kliens ellenőrzéshez. A Dagger-Hashimoto és a Dagger közötti különbség az, hogy a blokklekérdezéshez használt adathalmaz félig állandó, és esetileg frissítik (például hetente). Így az adathalmaz létrehozásának erőfeszítése nullához közelít, így a megosztott memória felgyorsításával kapcsolatos problémák (lásd Sergio Lerner) elhanyagolhatóvá váltak.
 
-Bővebben a [Dagger-Hashimoto-ról](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto).
+Bővebben a [Dagger-Hashimoto-ról](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto).
 
 ## Ethash {#ethash}
 
 Az Ethash az a bányászati algoritmus, melyet az Ethereum főhálózaton használtak a ma már kivezetett proof-of-work architektúrában. Az Ethash az új neve a Dagger-Hashimoto egy specifikus verziójának, mivel azt jelentősen megváltoztatták, de mégis megmaradtak az alapvető elvei az elődjének. Az Ethereum-főhálózat csak az Ethasht használta, mivel Dagger-Hashimoto a kutatás-fejlesztés idején működött, és még a bányászat megkezdése előtt lecserélték.
 
-[Bővebben az Ethashről](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash).
+[Bővebben az Ethashről](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash).
 
 ## További olvasnivaló {#further-reading}
 

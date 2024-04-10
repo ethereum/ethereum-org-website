@@ -16,7 +16,9 @@ Znasz zasoby edukacyjne w swoim języku? [Stwórz zgłoszenie](https://github.co
 
 ## Zasoby ethereum.org {#ethereum-org}
 
-Ethereum.org jest natywnie przetłumaczone na ponad 40 języków, które można znaleźć na naszej [stronie języków](/languages).
+Ethereum.org jest natywnie przetłumaczone na ponad 40 języków, które można znaleźć na naszej stronie języków.
+
+![Language selector menu](./language-selector-menu.png)
 
 Jeśli jesteś dwujęzyczny i chcesz pomóc nam dotrzeć do większej liczby osób, możesz również zaangażować się w [Program Tłumaczeń ethereum.org](/contributing/translation-program/#translation-program) i pomóc nam przetłumaczyć naszą stronę.
 
@@ -72,7 +74,7 @@ Jeśli jesteś dwujęzyczny i chcesz pomóc nam dotrzeć do większej liczby os�
 - [Gwei.cz](https://gwei.cz) — lokalna społeczność skupiona wokół Web3, tworzy treści edukacyjne, organizuje wydarzenia online i stacjonarne
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) — przewodnik Ethereum dla początkujących
 - [DAO Příručka](https://dao.gwei.cz/) — przewodnik dla początkujących o DAO
-- [Mastering Ethereum](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) — doskonalenie Ethereum po czesku
+- [Mastering Ethereum](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) — doskonalenie Ethereum po czesku
 
 ### Francuski {#fr}
 

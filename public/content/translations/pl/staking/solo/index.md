@@ -9,7 +9,7 @@ alt: Nosorożec Leslie na własnym chipie komputerowym.
 sidebarDepth: 2
 summaryPoints:
   - Otrzymuj maksymalne nagrody bezpośrednio z protokołu za utrzymywanie prawidłowego działania walidatora w trybie online
-  - Uruchamiaj sprzęt domowy i osobiście zwiększaj bezpieczeństwo i decentralizację sieci Ethereum
+  - Korzystaj z własnego sprzętu i osobiście zwiększaj bezpieczeństwo i decentralizację sieci Ethereum
   - Wyeliminuj potrzebę zaufania i nigdy nie rezygnuj z kontroli nad kluczami do swoich funduszy
 ---
 
@@ -109,7 +109,7 @@ Dostępnych jest wiele opcji ułatwiających konfigurację. Skorzystaj z powyżs
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Należy pamiętać o znaczeniu wybrania [klienta mniejszościowego](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Narzędzia, które pozwalają na konfigurację klienta mniejszościowego są oznaczone jako <em style={{ textTransform: "uppercase" }}>„multi-klient”.</em>
+Należy pamiętać o znaczeniu wybrania [klienta mniejszościowego](/developers/docs/nodes-and-clients/client-diversity/), ponieważ poprawia to bezpieczeństwo sieci i ogranicza ryzyko. Narzędzia, które pozwalają na konfigurację klienta mniejszościowego, są oznaczone jako <em style={{ textTransform: "uppercase" }}>„multi-klient”.</em>
 
 ### Generatory kluczy
 
@@ -195,9 +195,12 @@ Aby odblokować i otrzymać całe saldo z powrotem, należy również zakończy�
 
 ## Dalsza lektura {#further-reading}
 
+- [Katalog stakingu Ethereum](https://www.staking.directory/) — _Eridian i Spacesider_
 - [Problem różnorodności klientów Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) — _@emmanuelawosika 2022 r._
 - [Wspieranie różnorodności klientów](https://www.attestant.io/posts/helping-client-diversity/) — _Jim McDonald 2022 r._
 - [Różnorodność klientów w warstwie konsensusu Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) — _jmcook.eth 2022 r._
 - [Zakup sprzętu do walidacji Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) — _EthStaker 2022 r._
 - [Krok po kroku: jak dołączyć do sieci testowej Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) — _Butta_
 - [Wskazówki dotyczące zapobieganiu cięciu Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) — _Raul Jordan 2020 r._
+
+<QuizWidget quizKey="solo-staking" />
