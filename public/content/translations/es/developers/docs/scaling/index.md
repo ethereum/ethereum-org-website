@@ -109,5 +109,6 @@ _Obsérvese que la explicación del video utiliza el término "Capa 2" para refe
 - [Escalabilidad de la cadena de bloques de conocimiento cero](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Por qué los rollups y los fragmentos de datos son la única solución sustentable para la alta escalabilidad](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
 - [¿Qué tipo de capas 3 tienen sentido?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
+- [Disponibilidad De Datos O: Cómo Los Rollups Aprendieron A Dejar De Preocuparse Y Amar A Ethereum](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups)
 
 _¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._

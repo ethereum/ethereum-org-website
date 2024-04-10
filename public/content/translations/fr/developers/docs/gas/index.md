@@ -55,7 +55,7 @@ Chaque bloc a des frais de base qui servent de prix de réserve. Pour être éli
 Les frais de base sont calculés par une formule qui compare la taille du bloc précédent (la quantité de gaz utilisée pour toutes les transactions) avec la taille cible. Les frais de base augmenteront d'un maximum de 12,5 % par bloc si la taille du bloc cible est dépassée. D'un point de vue économique, cette croissance exponentielle ne permet pas de garder indéfiniment des blocs de grande taille.
 
 | Numéro de bloc | Gaz inclus | Augmentation des frais | Frais de base actuels |
-| -------------- | ---------: | ---------------------: | --------------------: |
+| -------------- | ----------:| ----------------------:| ---------------------:|
 | 1              |       15 M |                    0 % |              100 gwei |
 | 2              |        30M |                    0 % |              100 gwei |
 | 3              |       30 M |                 12,5 % |            112,5 gwei |
@@ -70,7 +70,7 @@ D'apres la table ci-dessus - afin de créer une transaction sur le bloc numéro 
 Il est également important de noter qu'il est peu probable que nous assistions à des pics prolongés de blocs complets en raison de la vitesse à laquelle les frais de base augmentent avant un bloc complet.
 
 | Numéro de bloc | Gaz inclus | Augmentation des frais | Frais de base actuels |
-| -------------- | ---------: | ---------------------: | --------------------: |
+| -------------- | ----------:| ----------------------:| ---------------------:|
 | 30             |       30 M |                 12,5 % |          2 705,6 gwei |
 | ...            |        ... |                 12,5 % |                   ... |
 | 50             |       30 M |                 12,5 % |         28 531,3 gwei |
@@ -125,7 +125,7 @@ Sur le réseau Ethereum, la façon dont les frais de transaction sont calculés 
 
 Disons qu'Alice devait payer à Marc la somme d'1 ETH. Dans la transaction, la limite de gaz est de 21 000 unités et le prix du gaz est de 200 gwei.
 
-Les frais totaux auraient été les suivants : `Gas units (limit) * Gas price per unit` (unités de gaz (limite) _ Prix du gaz par unité) soit `21 000 _ 200 = 4 200 000 gwei` ou 0,0042 ETH
+Les frais totaux auraient été les suivants : `Gas units (limit) * Gas price per unit` (unités de gaz (limite) * Prix du gaz par unité) soit `21 000 * 200 = 4 200 000 gwei` ou 0,0042 ETH
 
 La mise en œuvre de [EIP-1559](https://eips.ethereum.org/EIPS/eip-1559) dans la mise à niveau de Londres a rendu le mécanisme de frais de transaction plus complexe, mais a rendu les frais de gaz plus prévisibles, ce qui s'est traduit par un marché des frais de transaction plus efficace. Les utilisateurs peuvent soumettre des transactions avec un`PrixMaximumParUnitéDeGaz`, ce que cela signifie c'est que les utilisateurs pourront eux-mêmes décider du montant qu'ils sont prêts à payer pour l'exécution de la transaction, et ce, en toute connaissance de cause du prix maximum de gaz à payer sur le marché. Un prix soumis supérieur à celui du marché, ne sera pas pris en compte, et le cas écheant, vous ne recevrez pas de communication ni de rémunération. (`PrixMinimumParUnitéDeGaz`).
 

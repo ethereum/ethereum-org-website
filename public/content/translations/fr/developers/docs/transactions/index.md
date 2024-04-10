@@ -1,6 +1,6 @@
 ---
 title: Transactions
-description: "Présentation des transactions Ethereum : leur fonctionnement, leur structure de données et comment les envoyer via une application."
+description: 'Présentation des transactions Ethereum : leur fonctionnement, leur structure de données et comment les envoyer via une application.'
 lang: fr
 ---
 
@@ -23,7 +23,7 @@ Les transactions requièrent des frais et doivent être incluses dans un bloc va
 Une transaction soumise comprend les informations suivantes :
 
 - `depuis` - l'adresse de l'expéditeur qui signera la transaction. On aura donc une adresse émettrice, car les contrats et les adresses (Accounts) ne vous permettront pas d'envoyer des transactions.
-- `recipient` : adresse de réception (S'il s'agit d'un compte externe, la transaction va transférer la valeur. S'il s'agit d'un compte de contrat, la transaction exécutera le code du contrat.)
+- `to` : l'adresse de réception (S'il s'agit d'un compte externe, la transaction va transférer la valeur. S'il s'agit d'un compte de contrat, la transaction exécutera le code du contrat.)
 - `signature` : identifiant de l'expéditeur. Cette signature est générée lorsque la clé privée de l'expéditeur signe la transaction, et confirme que l'expéditeur a autorisé cette transaction.
 - `nonce` -, il s'agit d'une machine à travers laquelle un nombre maximum d'essais consécutifs est réalisé, il qualifie aussi le numéro de transactions dans la liste des transactions sortantes depuis votre adresse
 - `valeur` - montants de l'Ether (ETH) à transférer de l'expéditeur au destinataire (libellé en WEI parallèlement à la valeur de l'Ether, qui atteint les 1e+18wei)
@@ -99,7 +99,7 @@ Exemple de réponse :
 }
 ```
 
-- dans la Structure de Données Récursives (SDR), la transaction signée prend essentiellement la forme d'une séquence d'instructions codées``. [Préfixe de longueur récursive (RLP)](/developers/docs/data-structures-and-encoding/rlp)
+- dans la Structure de Données Récursives (SDR), la transaction signée prend essentiellement la forme d'une séquence d'instructions codées`` [rlp](/developers/docs/data-structures-and-encoding/rlp)
 - `tx` est la transaction signée sous la forme JSON
 
 Grâce au hachage de la signature, il est possible de prouver de façon cryptographique que la transaction provient de l'expéditeur et qu'elle a été soumise au réseau.

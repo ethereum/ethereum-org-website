@@ -68,7 +68,8 @@ As is the fluid nature of Ethereum, teams and products come and go and innovatio
 - ensure that all wallets and dapps listed still fulfil our criteria
 - verify there aren't products that have been suggested that meet more of our criteria than the ones currently listed
 
-Ethereum.org is maintained by the open source community & we rely on the community to help keep this up to date. If you notice any information about listed wallets that needs to be updated, please [open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) or [pull request](https://github.com/ethereum/ethereum-org-website/pulls)!
+ethereum.org is maintained by the open source community & we rely on the community to help keep this up to date. If you notice any information about listed wallets that needs to be updated, please [open an issue](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=wallet+%3Apurse%3A&template=suggest_wallet.yaml) or [pull request](https://github.com/ethereum/ethereum-org-website/pulls)!
+
 
 ## Terms of use {#terms-of-use}
 

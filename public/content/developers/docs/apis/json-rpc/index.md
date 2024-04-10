@@ -133,6 +133,10 @@ A handful of core JSON-RPC methods require data from the Ethereum network, and f
 - [eth_getUncleByBlockHashAndIndex](#eth_getunclebyblockhashandindex)
 - [eth_getUncleByBlockNumberAndIndex](#eth_getunclebyblocknumberandindex)
 
+## JSON-RPC API Playground
+
+You can use the [playground tool](https://ethereum-json-rpc.com) to discover and try out the API methods. It also shows you which methods and networks are supported by various node providers.
+
 ## JSON-RPC API Methods {#json-rpc-methods}
 
 ### web3_clientVersion {#web3_clientversion}
@@ -1246,8 +1250,8 @@ Returns information about a transaction by block number and transaction index po
 
 ```js
 params: [
-  "0x29c", // 668
-  "0x0", // 0
+  "0x9c47cf", // 10241999
+  "0x24", // 36
 ]
 ```
 
@@ -1258,7 +1262,7 @@ See [eth_getTransactionByHash](#eth_gettransactionbyhash)
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
 Result see [eth_getTransactionByHash](#eth_gettransactionbyhash)
@@ -1367,7 +1371,7 @@ Returns information about a uncle of a block by number and uncle index position.
 
 **Parameters**
 
-1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe""`, `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - the uncle's index position.
 
 ```js

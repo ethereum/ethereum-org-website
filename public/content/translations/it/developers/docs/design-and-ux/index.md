@@ -74,7 +74,7 @@ Partecipate ad organizzazioni professionali guidate dalla community o unitevi a 
 
 ## Sistemi di progettazione {#Design-systems}
 
-- [Progettazione di Optimism](https://www.figma.com/@oplabs) (Figma)
+- [Progettazione di Optimism](https://www.figma.com/@optimism) (Figma)
 - [Sistema di progettazione di Ethereum.org](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, un sistema di progettazione per il web3 su Polygon](https://finity.polygon.technology/) (Figma)
 - [Sistema di progettazione ENS](https://thorin.ens.domains/)

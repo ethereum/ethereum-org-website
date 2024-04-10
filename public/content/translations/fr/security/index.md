@@ -104,7 +104,7 @@ Les extensions de navigateur comme les extensions Chrome ou les modules complém
 L'une des principales raisons pour lesquelles les gens se font arnaquer dans l'univers des cryptomonnaies est souvent le manque de compréhension. Par exemple, si vous ne comprenez pas que le réseau Ethereum est décentralisé et n'appartient à personne, il est facile de devenir la cible de quelqu'un qui prétend faire partie de l'équipe de support et qui vous promet de vous rendre vos ETH perdus en échange de vos clés privées. S'informer sur le fonctionnement d'Ethereum est un investissement qui en vaut la peine.
 
 <DocLink to="/what-is-ethereum/">
-  Qu'est-ce qu'Ethereum ?
+  Qu'est-ce qu'Ethereum?
 </DocLink>
 
 <DocLink to="/eth/">

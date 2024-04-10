@@ -19,7 +19,7 @@ Commencez à lire la mission et les valeurs d'ethereum.org dans notre [code de c
 - Regardez ou participez aux [appels Core Dev](https://www.youtube.com/@EthereumProtocol)
 - [Liste de souhaits du programme de soutien à l'écosystème](https://esp.ethereum.foundation/wishlist/) - domaines d'outillage, de documentation et d'infrastructure où le programme de soutien à l'écosystème Ethereum recherche activement des demandes de subvention
 - [Web3Bridge](https://www.web3bridge.com/) - rejoignez la communauté Web3 en herbe dans son initiative visant à identifier, former et soutenir des centaines de développeurs et de membres de la communauté à travers l'Afrique
-- Rejoignez le [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
+- Rejoignez le Discord [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Chercheurs et universitaires <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
@@ -33,7 +33,7 @@ Avez-vous une formation en mathématiques, en cryptographie ou en économie ? V
   - Apprenez comment devenir un [Rédacteur d'EIP](https://eips.ethereum.org/EIPS/eip-5069)
     - Vous pouvez participer à une revue des EIP par les pairs dès maintenant ! Trouvez [des PR ouvertes comportant le libellé `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Fournissez un retour technique sur le lien `discussion-to`.
   - Participez à la [Gouvernance des EIP](https://github.com/ethereum-cat-herders/EIPIP)
-    - Rejoignez le [Discord Ethereum Cat Herders](https://discord.io/EthCatHerders)
+    - Rejoignez le Discord [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Plus d'infos les EIP](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - une série de primes de recherche de grande valeur, où vous pouvez gagner >100 000 USD
 - [Ethresear.ch](https://ethresear.ch) - le principal forum de recherche d'Ethereum et le forum le plus influent au monde pour la cryptoéconomie
@@ -103,6 +103,7 @@ L'écosystème Ethereum a pour mission de financer des biens publics et des proj
 - [Emplois ethereum.org](/about/#open-jobs)
 - [Offres d'emploi de l'Ethereum Foundation (Lever)](https://jobs.lever.co/ethereumfoundation)
 - [Offres d'emploi de l'Ethereum Foundation (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [JobStash](https://jobstash.xyz)
 - [Offres Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
 - [Offres Crypto.jobs](https://crypto.jobs/)
 - [Carrières chez ConsenSys](https://consensys.net/careers/)
@@ -121,18 +122,18 @@ Les « DAO » sont des organisations autonomes décentralisées. Ces groupes t
 
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promouvoir le concept de DAO dans le domaine non technologique et aider les personnes à créer de la valeur grâce au DAO_
 - [Développeur DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Communauté de constructeurs qui croient en la propriété collective d'Internet_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Collectif de développement Web3 indépendant travaillant en tant que DAO_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - *Collectif de développement Web3 indépendant travaillant en tant que DAO*
 - [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _ Développement décentralisé & gouvernance des applications décentralisées (dApps) & protocoles_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Gouvernance communautaire de DAOhaus_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - *Gouvernance communautaire de DAOhaus*
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Franchise de super-héros appartenant à la Communauté_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Ingénierie juridique_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Communauté artistique_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Incubateur DAO_
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Venture pour des projets de crypto pré-amorçage_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Mécaniques de jeu MMORPG pour la vraie vie_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Marques de vêtements digiphysiques_
+- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - *Ingénierie juridique*
+- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - *Communauté artistique*
+- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - *Incubateur DAO*
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - *Venture pour des projets de crypto pré-amorçage*
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - *Mécaniques de jeu MMORPG pour la vraie vie*
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - *Marques de vêtements digiphysiques*
 - [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Projets dirigés par des femmes_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Communauté axée sur le financement du développement d'Ethereum_
-- [Guilde Raid](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Collectif de constructeurs Web3_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - *Communauté axée sur le financement du développement d'Ethereum*
+- [Guilde Raid](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - *Collectif de constructeurs Web3*
 
-À chaque fois et quelle que soit la façon dont vous contribuez à ethereum.org, pensez à respecter le [code de conduite](/community/code-of-conduct)!
+À chaque fois et quelle que soit la façon dont vous contribuez à ethereum.org, pensez à respecter le [code de conduite](/community/code-of-conduct) !

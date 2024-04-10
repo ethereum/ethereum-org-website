@@ -18,7 +18,7 @@ EIP memainkan peranan penting bagaimana perubahan terjadi dan terdokumentasi di 
 
 Setiap peningkatan jaringan terdiri dari sekumpulan EIP yang harus diimplementasikan oleh masing-masing [klien Ethereum](/learn/#clients-and-nodes) di jaringan. Ini berarti bahwa untuk tetap berada dalam konsensus dengan klien lain di Jaringan Utama Ethereum, pengembang klien harus memastikan bahwa mereka telah menerapkan semua EIP yang diperlukan.
 
-Seiring dengan menyediakan spesifikasi teknis untuk perubahan, EIP adalah unit di mana tata kelola terjadi di Ethereum: siapa pun bebas untuk mengusulkan EIP, kemudian beragam pemangku kepentingan di dalam komunitas akan berdebat untuk menentukan apakah usulan itu harus diadopsi sebagai standar atau dimasukkan ke dalam peningkatan jaringan. Karena EIP non-inti tidak harus diadopsi oleh semua aplikasi (misalnya, dimungkinkan untuk membuat token yang dapat dipertukarkan yang tidak mengimplementasikan EIP-20), tetapi EIP inti harus diadopsi secara luas (karena semua simpulhar us ditingkatkan untuk tetap menjadi bagian dari jaringan yang sama), EIP inti membutuhkan konsensus yang lebih luas di dalam komunitas dibandingkan dengan EIP non-inti.
+Seiring dengan menyediakan spesifikasi teknis untuk perubahan, EIP adalah unit di mana pemerintahan terjadi di Ethereum: siapa pun bebas untuk mengusulkan EIP, kemudian beragam pemangku kepentingan di dalam komunitas akan berdebat untuk menentukan apakah usulan itu harus diadopsi sebagai standar atau dimasukkan ke dalam peningkatan jaringan. Karena EIP non-inti tidak harus diadopsi oleh semua aplikasi (misalnya, dimungkinkan untuk membuat token yang dapat dipertukarkan yang tidak mengimplementasikan EIP-20), tetapi EIP inti harus diadopsi secara luas (karena semua simpulhar us ditingkatkan untuk tetap menjadi bagian dari jaringan yang sama), EIP inti membutuhkan konsensus yang lebih luas di dalam komunitas dibandingkan dengan EIP non-inti.
 
 ## Riwayat EIP {#history-of-eips}
 
@@ -66,6 +66,6 @@ Siapa pun dapat membuat EIP. Sebelum mengirimkan proposal, seseorang harus memba
 
 <cite class="citation">
 
-Isi halaman yang disediakan ini merupakan bagian dari [Tata Kelola Pengembangan Protokol Ethereum dan Peningkatan Jaringan Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) oleh Hudson Jameson
+Isi halaman yang disediakan ini merupakan bagian dari [Pemerintahan Pengembangan Protokol Ethereum dan Peningkatan Jaringan Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) oleh Hudson Jameson
 
 </cite>

@@ -66,7 +66,7 @@ ETHでトランザクションフィーを支払う必要があるDappを作成�
 ## 関連トピック {#related-tutorials}
 
 - [コントラクトの構成可能性: イーサリアムスマートコントラクト開発のビルディングブロック](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
-- [create-eth-appを使用したDappフロントエンドの始動](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _- create-eth-appを使用して、一般的なスマートコントラクトを使用する、すぐに利用可能なアプリを作成する方法の概要_
+- [create-eth-appを使用したDappフロントエンド開発の始動](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/) _- create-eth-appを使用して、一般的なスマートコントラクトを組み込んだ、すぐに利用可能なアプリを作成する方法の概要_
 
 ## 参考文献 {#further-reading}
 
