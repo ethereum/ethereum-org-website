@@ -51,7 +51,7 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 - [Blast](https://blastapi.io/): _una piattaforma API che fornisce API RPC/WSS per la Rete Principale e le Reti di Prova dell'Archivio di Ethereum._
 - [Blockapps](https://blockapps.net/) _implementazione del protocollo Enterprise Ethereum, strumenti e API che formano la piattaforma STRATO_
 - [Chainstack](https://chainstack.com/) _infrastruttura per rete principale e rete di prova di Ethereum ospitata in cloud pubblici e isolati dei clienti_
-- [ConsenSys](https://consensys.net/) _offre una gamma di prodotti e strumenti per sviluppare su Ethereum, oltre a servizi di consulenza e sviluppo personalizzato_
+- [ConsenSys](https://consensys.io/) _offre una gamma di prodotti e strumenti per sviluppare su Ethereum, oltre a servizi di consulenza e sviluppo personalizzato_
 - [Envision Blockchain](https://envisionblockchain.com/) _fornisce consulenza e servizi di sviluppo incentrati sulle imprese specializzati nella rete principale di Ethereum_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _offre un flusso di lavoro per gli acquisti rilasciando RFQ, contratti, ordini di acquisto e fatture attraverso la rete di business partner certificati dell'azienda_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _client Ethereum open source aziendale sviluppato con licenza Apache 2.0 e scritto in Java_
@@ -68,7 +68,7 @@ Alcuni sforzi collaborativi per rendere la rete Ethereum aziendale più intuitiv
 ### Strumenti e librerie {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Piattaforma di analisi dei dati di Ethereum_
-- [Sirato](https://www.web3labs.com/sirato) _una piattaforma specializzata nell'analisi dei dati per reti pubbliche e private abilitate a Ethereum realizzata da Labs nel Web3_
+- [Chainlens](https://www.chainlens.com/) _una piattaforma specializzata nell'analisi dei dati per reti pubbliche e private abilitate a Ethereum realizzata da Labs nel Web3_
 - [Ernst & Young's ‘Nightfall'](https://github.com/EYBlockchain/nightfall) _kit di strumenti per transazioni private_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _applicazione per la firma delle transazioni da usare con un provider web3_
 - [Tenderly](https://tenderly.co/) _una Piattaforma di dati che fornisce analitiche in tempo reale, avvisando e monitorando con supporto alle reti private_
@@ -102,13 +102,12 @@ Ecco alcuni esempi di applicazioni aziendali che sono stati estesi alla rete pub
 
 - [Tinlake](https://tinlake.centrifuge.io/) _sconti commerciali tramite risorse tokenizzate del mondo reale quali fatture, mutui o royalty in streaming_
 - [RealT](https://realt.co/) _investitori in tutto il mondo possono acquistare nel mercato immobiliare statunitense attraverso una proprietà completamente conforme, frazionale, tokenizzata_
-- [AgroToken](https://agrotoken.io/en/) _tokenizzazione e trading di materie prime agricole_
+- [AgroToken](https://agrotoken.io/en/home) _tokenizzazione e trading di materie prime agricole_
 - [Fasset](https://www.fasset.com/) _piattaforma per supportare le infrastrutture sostenibili_
 
 ### Autenticazione dei dati {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _i dettagli dei prestiti finalizzati sono associati ad hash e registrati sulla rete principale_
-- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _l'integrità dei dati può essere assicurata scrivendo periodicamente hash di dati indicizzati nella rete principale_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _la maggiore agenzia di stampa italiana combatte contro le fake news e consente ai lettori di verificare l'origine delle notizie registrandole sulla rete principale_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _registra le conferenze stampa su Ethereum per assicurare l'affidabilità e la fiducia aziendale_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _registra la provenienza e lo storico delle riparazioni degli orologi su Ethereum_
@@ -116,13 +115,11 @@ Ecco alcuni esempi di applicazioni aziendali che sono stati estesi alla rete pub
 
 ### Catena d'approvvigionamento {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _fornitore di polizze di carico e trasferimento di documenti_
 - [Morpheus.network](https://morpheus.network/): _Piattaforma di automazione della filiera che implementa un ibrido di catene private con dati autenticati sulla Rete Principale di Ethereum ed è in uso da aziende come il distributore di alimenti, olio e carburanti canadese Federated Co-op Ltd. e il fornitore argentino di alimenti per animali domestici Vitalcan_
 - [Minespider](https://www.minespider.com/) _monitoraggio della catena di approvvigionamento_
 - [EY OpsChain Network Procurement](https://blockchain.ey.com/products/contract-manager) _consente alle aziende di interagire in un flusso di lavoro di approvvigionamento emettendo richieste di preventivo, contratti, ordini d'acquisto e fatture sulla rete di partner aziendali fidati_
 - [Treum](https://treum.io/) _assicura trasparenza, tracciabilità e commerciabilità alle catene d'approvvigionamento usando la tecnologia della blockchain_
 - [TradeTrust](https://www.tradetrust.io/) _verifica le Polizze di Carico (B/L) per le spedizioni internazionali_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _conia NFT per ogni nuovo lotto di birra, consentendo una maggiore visibilità ed efficienza lungo l'intera catena di approvvigionamento_
 
 ### Assicurazioni {#insurance}
 

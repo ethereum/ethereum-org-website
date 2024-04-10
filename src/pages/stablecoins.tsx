@@ -34,6 +34,7 @@ import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
 import Tooltip from "@/components/Tooltip"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
@@ -46,6 +47,7 @@ import {
   fetchEthereumEcosystemData,
   fetchEthereumStablecoinsData,
 } from "@/lib/api/stablecoinsData"
+import summerfiImg from "@/public/dapps/summerfi.png"
 import dogeComputerImg from "@/public/doge-computer.png"
 // -- daps
 import aaveImg from "@/public/stablecoins/aave.png"
@@ -108,7 +110,7 @@ export const getStaticProps = (async ({ locale }) => {
   const stablecoins = {
     USDT: { type: FIAT, url: "https://tether.to/" },
     USDC: { type: FIAT, url: "https://www.coinbase.com/usdc" },
-    DAI: { type: CRYPTO, url: "https://kb.oasis.app/help/what-is-dai" },
+    DAI: { type: CRYPTO, url: "https://makerdao.com/en/" },
     BUSD: { type: FIAT, url: "https://www.binance.com/en/busd" },
     PAX: { type: FIAT, url: "https://www.paxos.com/pax/" },
     TUSD: { type: FIAT, url: "https://www.trusttoken.com/trueusd" },
@@ -236,12 +238,12 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
   const { t } = useTranslation("page-stablecoins")
 
   const tooltipContent = (
-    <div>
-      {t("data-provided-by")}{" "}
-      <InlineLink to="https://www.coingecko.com/en/api">
+    <Box>
+      {t("common:data-provided-by")}{" "}
+      <InlineLink href="https://www.coingecko.com/en/api">
         coingecko.com
       </InlineLink>
-    </div>
+    </Box>
   )
 
   const features = [
@@ -291,6 +293,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
     {
       title: t("page-stablecoins-algorithmic"),
       description: t("page-stablecoins-algorithmic-description"),
+      disclaimer: t("page-stablecoins-algorithmic-disclaimer"),
       emoji: ":chart_with_downwards_trend:",
       pros: [
         t("page-stablecoins-algorithmic-pro-1"),
@@ -307,19 +310,27 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
   const tokens = [
     {
       emoji: ":globe_showing_americas:",
-      description: t("page-stablecoins-stablecoins-feature-1"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-1" />
+      ),
     },
     {
       emoji: ":chart_with_upwards_trend:",
-      description: t("page-stablecoins-stablecoins-feature-2"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-2" />
+      ),
     },
     {
       emoji: ":handshake:",
-      description: t("page-stablecoins-stablecoins-feature-3"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-3" />
+      ),
     },
     {
       emoji: ":key:",
-      description: t("page-stablecoins-stablecoins-feature-4"),
+      description: (
+        <Translation id="page-stablecoins:page-stablecoins-stablecoins-feature-4" />
+      ),
     },
   ]
 
@@ -344,11 +355,11 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
     },
     {
       background: "linear-gradient(135deg, #c7efe6 0%, #eeeac7 100%)",
-      url: "https://oasis.app",
-      alt: t("oasis-logo"),
-      image: daiLargeImg,
+      url: "https://summer.fi/",
+      alt: t("summerfi-logo"),
+      image: summerfiImg,
       width: "80px",
-      name: "Oasis",
+      name: "Summer.fi",
       description: t("page-stablecoins-stablecoins-dapp-description-4"),
     },
   ]
@@ -403,6 +414,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       <PageMetadata
         title={t("page-stablecoins-title")}
         description={t("page-stablecoins-meta-description")}
+        image="/stablecoins/hero.png"
       />
       <PageHero isReverse content={heroContent} />
       <Divider />
@@ -422,7 +434,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             <H2 mt={0}>{t("page-stablecoins-why-stablecoins")}</H2>
             <Text>
               {t("page-stablecoins-prices-definition")}{" "}
-              <InlineLink to="#how">
+              <InlineLink href="#how">
                 {t("page-stablecoins-prices-definition-how")}
               </InlineLink>
             </Text>
@@ -436,8 +448,8 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
           mb={8}
         >
           <Box w="full" margin={{ base: "auto 0", lg: "0 2rem 0" }}>
-            {tokens.map((token) => (
-              <Box key={token.description} minWidth="full" my={2}>
+            {tokens.map((token, index) => (
+              <Box key={index} minWidth="full" my={2}>
                 <HorizontalCard
                   emoji={token.emoji}
                   description={token.description}
@@ -479,12 +491,12 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             <Text>{t("page-stablecoins-find-stablecoin-intro")}</Text>
             <ul>
               <li>
-                <InlineLink to="#how">
+                <InlineLink href="#how">
                   {t("page-stablecoins-find-stablecoin-types-link")}
                 </InlineLink>
               </li>
               <li>
-                <InlineLink to="#explore">
+                <InlineLink href="#explore">
                   {t("page-stablecoins-find-stablecoin-how-to-get-them")}
                 </InlineLink>
               </li>
@@ -599,12 +611,15 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               <Icon ms={2} fill="'text" name="info" boxSize={4} />
             </Tooltip>
           </H3>
+          <InfoBanner emoji="⚠️" isWarning mb="4">
+            {t("page-stablecoins-algorithmic-disclaimer")}
+          </InfoBanner>
           <Text>
             {t("page-stablecoins-top-coins-intro")}{" "}
             {t("page-stablecoins-top-coins-intro-code")}
           </Text>
         </Box>
-        <Box px={8} py={4} width="full" overflowX="scroll">
+        <Box px={8} py={4} width="full" overflowX="auto">
           <StablecoinsTable
             columns={tableColumns}
             content={markets}
@@ -688,7 +703,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             </Text>
             <Text as="em">
               {t("page-stablecoins-bank-apy-source")}{" "}
-              <InlineLink to="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
+              <InlineLink href="https://www.nytimes.com/2020/09/18/your-money/savings-interest-rates.html">
                 {t("page-stablecoins-bank-apy-source-link")}
               </InlineLink>
             </Text>
@@ -712,21 +727,21 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
             />
           ))}
         </Grid>
-        <InfoBanner isWarning shouldCenter>
-          <H3 mt={0} mb={4}>
-            {t("page-stablecoins-research-warning-title")}
-          </H3>
-          {t("page-stablecoins-research-warning")}
-        </InfoBanner>
       </Content>
       <Divider />
       <Content id="how">
         <H2 mt={0}>{t("page-stablecoins-types-of-stablecoin")}</H2>
+        <InfoBanner emoji="⚠️" isWarning>
+          <H3 mt={0} mb={4}>
+            {t("page-stablecoins-research-warning-title")}
+          </H3>
+          {t("page-stablecoins-algorithmic-disclaimer")}
+        </InfoBanner>
         <StablecoinBoxGrid items={features} />
       </Content>
       <Box id="tools" py={12} px={8} w="full">
         <H2>{t("page-stablecoins-tools-title")}</H2>
-        
+
         <Flex
           alignItems="flex-start"
           width="full"

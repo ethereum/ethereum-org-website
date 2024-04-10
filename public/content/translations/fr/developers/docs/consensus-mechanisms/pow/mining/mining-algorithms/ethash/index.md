@@ -8,7 +8,7 @@ lang: fr
    Ethash était l'algorithme de minage par preuve de travail d'Ethereum. La preuve de travail est maintenant **arrêtée entièrement** et Ethereum est maintenant sécurisé en utilisant <a href="/developers/docs/consensus-mechanisms/pos/">la preuve d'enjeu</a> à la place. En savoir plus sur <a href="/roadmap/merge/">La Fusion</a>, <a href="/developers/docs/consensus-mechanisms/pos/">la preuve d'enjeu</a> et la <a href="/staking/">mise en jeu</a>. Cette page n'a qu'un intérêt historique !  
 </InfoBanner>
 
-[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) est une version modifiée de l'algorithme [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto). La preuve de travail d'Ethash est une [mémoire solide](https://wikipedia.org/wiki/Memory-hard_function), qui était censée rendre l'algorithme ASIC plus résistant. Les Ethash ASIC ont finalement été développés, mais le minage via GPU restait encore une option viable jusqu’à ce que la preuve de travail soit désactivée. Ethash est toujours utilisé pour miner d'autres jetons sur des réseaux autres qu'Ethereum fonctionnant avec la preuve de travail.
+[Ethash](https://github.com/ethereum/wiki/wiki/Ethash) est une version modifiée de l'algorithme [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto). La preuve de travail d'Ethash est une [mémoire solide](https://wikipedia.org/wiki/Memory-hard_function), qui était censée rendre l'algorithme ASIC plus résistant. Les Ethash ASIC ont finalement été développés, mais le minage via GPU restait encore une option viable jusqu’à ce que la preuve de travail soit désactivée. Ethash est toujours utilisé pour miner d'autres jetons sur des réseaux autres qu'Ethereum fonctionnant avec la preuve de travail.
 
 ## Comment fonctionne Ethash ? {#how-does-ethash-work}
 
@@ -44,7 +44,7 @@ ACCESSES = 64                     # number of accesses in hashimoto loop
 
 ### L'utilisation de 'SHA3' {#sha3}
 
-Le développement d'Ethereum a coïncidé avec le développement de la norme SHA3, et le processus de normes a réalisé un changement tardif dans le remplissage de l'algorithme de hachage finalisé de sorte que les hachages Ethereum "sha3_256" et "sha3_512" ne soient pas des hashs sha3 standard, mais une variante appelée souvent « Keccak-256 » et « Keccak-512 » dans d'autres contextes. Voir la discussion en exemple [ici](https://eips.ethereum.org/EIPS-1803), [ici](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), ou [ici](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
+Le développement d'Ethereum a coïncidé avec le développement de la norme SHA3, et le processus de normes a réalisé un changement tardif dans le remplissage de l'algorithme de hachage finalisé de sorte que les hachages Ethereum "sha3_256" et "sha3_512" ne soient pas des hashs sha3 standard, mais une variante appelée souvent « Keccak-256 » et « Keccak-512 » dans d'autres contextes. Voir la discussion, par exemple [ici](https://eips.ethereum.org/EIPS/eip-1803), [ici](http://ethereum.stackexchange.com/questions/550/which-cryptographic-hash-function-does-ethereum-use), ou [ici](http://bitcoin.stackexchange.com/questions/42055/what-is-the-approach-to-calculate-an-ethereum-address-from-a-256-bit-private-key/42057#42057).
 
 Veuillez garder cela à l'esprit, car les hachages « sha3 » sont mentionnés dans la description de l'algorithme ci-dessous.
 

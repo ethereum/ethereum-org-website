@@ -4,12 +4,10 @@ import { Meta, StoryObj } from "@storybook/react"
 
 import ButtonTwoLinesComponent from "."
 
-type ComponentType = typeof ButtonTwoLinesComponent
-
 const meta = {
   title: "Atoms / Form / Buttons / ButtonTwoLines",
   component: ButtonTwoLinesComponent,
-} satisfies Meta<ComponentType>
+} satisfies Meta<typeof ButtonTwoLinesComponent>
 
 export default meta
 

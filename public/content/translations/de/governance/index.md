@@ -175,9 +175,9 @@ Am 15. September 2022 wurde die Fusion der Beacon Chain mit der Ethereum-Ausfüh
 
 Governance in Ethereum ist nicht starr definiert. Verschiedene Teilnehmer der Community haben unterschiedliche Ansichten dazu. Hier sind einige davon:
 
-- [Erläuterungen zur Blockchain-Governance](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Notes on Blockchain Governance (Anmerkungen zur Blockchain-Verwaltung)](https://vitalik.eth.limo/general/2017/12/17/voting.html) – _Vitalik Buterin_
 - [Wie funktioniert die Ethereum-Governance?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Wie Ethereum Governance funktioniert](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Was ist ein Ethereum Core Entwickler?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Governance, Teil 2: Plutokratie ist immer noch schlecht](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Governance per Münzabstimmung überwinden](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Governance, Part 2: Plutocracy Is Still Bad (Verwaltung, Teil 2: Plutokratie ist immer noch schlecht](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
+- [Moving beyond coin voting governance (Über die Verwaltung der Tokenabstimmung hinaus gehen)](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_

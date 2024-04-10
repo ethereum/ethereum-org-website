@@ -4,6 +4,8 @@ description: Die grundlegenden Standards, die wir für alle Bereiche von ethereu
 lang: de
 ---
 
+# Verhaltenskodex {#conduct-intro}
+
 ## Mission {#mission}
 
 Die Entwicklung und Pflege der umfassendsten und barrierefreien Wissensplattform für Ethereum.

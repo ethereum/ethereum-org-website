@@ -74,7 +74,7 @@ Profesyonel, topluluk destekli organizasyonlara veya tasarım gruplarına katıl
 
 ## Tasarım Sistemleri {#Design-systems}
 
-- [Optimism Design](https://www.figma.com/@oplabs) (Figma)
+- [Optimism Design](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.org Tasarım sistemi](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, Polygon tarafından Web3 için geliştirilen bir tasarım sistemi](https://finity.polygon.technology/) (Figma)
 - [ENS Tasarım sistemi](https://thorin.ens.domains/)

@@ -51,7 +51,7 @@ Az okosszerződés olyan kód, mely az Ethereum blokkláncon fut és pontosan ú
 
 **Scaffold-ETH _– Próbálja ki a Solidity megoldást olyan frontenddel, amely illeszkedik az Ön okosszerződéséhez._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Példa egy dappra](https://punkwallet.io/)
 
 **Create Eth App _– Hozzon létre Ethereum-alapú alkalmazásokat egy paranccsal._**

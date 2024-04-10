@@ -16,7 +16,7 @@ lang: ru
 - [Получите награду на Gitcoin](https://gitcoin.co/), поработайте над незначительной или серьезной технической проблемой, заработайте криптовалюту!
 - Посетите ближайший к вам хакатон [ETHGlobal](http://ethglobal.co/)!
 - Ознакомьтесь с [проектами в вашей компетенции или на языке программирования по вашему выбору](/developers/docs/programming-languages/)
-- [Онлайн-встречи Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w): смотрите или поучаствуйте сами
+- [Онлайн-встречи Core Dev](https://www.youtube.com/@EthereumProtocol): смотрите или поучаствуйте сами
 - [Список предпочтений для программы поддержки экосистемы](https://esp.ethereum.foundation/wishlist/) — сферы инструментария, документации и инфраструктуры, в которых активно ищут заявителей на гранты в рамках программы поддержки экосистемы Ethereum
 - [Web3Bridge](https://www.web3bridge.com/) — присоединяйтесь к амбициозному сообществу web3 в их инициативе по выявлению, обучению и поддержке сотен разработчиков и членов сообщества по всей Африке
 - Присоединяйтесь к [Discord-каналу Ethereum Cat Herders](https://discord.io/EthCatHerders)

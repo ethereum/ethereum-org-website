@@ -31,13 +31,13 @@ import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
 import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
+import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
 import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
 import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import eth from "@/public/eth.png"
-import ogImage from "@/public/eth.png"
 import ethCat from "@/public/eth-gif-cat.png"
 import defi from "@/public/finance_transparent.png"
 import ethereum from "@/public/what-is-ethereum.png"
@@ -309,12 +309,12 @@ const EthPage = () => {
     {
       emoji: ":woman_technologist:",
       title: t("page-eth-yours"),
-      description: t("page-eth-yours-desc"),
+      description: <Translation id="page-eth:page-eth-yours-desc" />,
     },
     {
       emoji: ":shield:",
       title: t("page-eth-cryptography"),
-      description: t("page-eth-cryptography-desc"),
+      description: <Translation id="page-eth:page-eth-cryptography-desc" />,
     },
     {
       emoji: ":handshake:",
@@ -372,12 +372,6 @@ const EthPage = () => {
       description: "Anthony Sassano",
       caption: t("page-eth-last-updated"),
     },
-    {
-      link: "https://support.mycrypto.com/how-to/getting-started/how-to-buy-ether-with-usd",
-      title: t("page-eth-how-to-buy"),
-      description: "MyCrypto",
-      caption: t("page-eth-how-to-buy-caption"),
-    },
   ]
 
   return (
@@ -385,7 +379,7 @@ const EthPage = () => {
       <PageMetadata
         title={t("page-eth-whats-eth-meta-title")}
         description={t("page-eth-whats-eth-meta-desc")}
-        image={ogImage.src}
+        image="/eth.png"
       />
       <Content>
         <HeroContainer>
@@ -426,8 +420,8 @@ const EthPage = () => {
           </CardContainer>
           <InfoBanner emoji=":wave:" shouldCenter>
             <Text as="b">{t("page-eth-buy-some")}</Text>{" "}
-            {t("page-eth-buy-some-desc")}{" "}
-            <InlineLink to="/what-is-ethereum/">
+            <Translation id="page-eth:page-eth-buy-some-desc" />{" "}
+            <InlineLink href="/what-is-ethereum/">
               {t("page-eth-more-on-ethereum-link")}
             </InlineLink>
             {t("page-eth-period")}
@@ -444,13 +438,13 @@ const EthPage = () => {
             <Text>{t("page-eth-fuels-desc")}</Text>
             <Text>{t("page-eth-fuels-desc-2")}</Text>
             <Text>
-              {t("page-eth-fuels-desc-3")}{" "}
+              <Translation id="page-eth:page-eth-fuels-desc-3" />{" "}
               <Text as="strong">{t("page-eth-powers-ethereum")}</Text>
               {t("page-eth-period")}
             </Text>
             <Text>
               {t("page-eth-fuels-staking")}{" "}
-              <InlineLink to="/staking/">
+              <InlineLink href="/staking/">
                 {t("page-eth-fuels-more-staking")}
               </InlineLink>
             </Text>
@@ -464,7 +458,9 @@ const EthPage = () => {
           <TextDivider />
           <Box>
             <H4>{t("page-eth-underpins")}</H4>
-            <Text>{t("page-eth-underpins-desc")}</Text>
+            <Text>
+              <Translation id="page-eth:page-eth-underpins-desc" />
+            </Text>
             <Text>{t("page-eth-underpins-desc-2")}</Text>
             <CentralActionCard
               to="/defi/"
@@ -472,6 +468,9 @@ const EthPage = () => {
               description={t("page-eth-whats-defi-description")}
               image={defi}
             />
+            <InfoBanner isWarning>
+              <Translation id="page-eth:page-eth-weth" />
+            </InfoBanner>
           </Box>
           <TextDivider />
           <Box>
@@ -480,25 +479,25 @@ const EthPage = () => {
             <Text>{t("page-eth-uses-desc-2")} </Text>
             <UnorderedList>
               <ListItem>
-                <InlineLink to="https://sablier.com">
+                <InlineLink href="https://sablier.com">
                   {t("page-eth-stream-link")}
                 </InlineLink>{" "}
                 – {t("page-eth-uses-desc-3")}
               </ListItem>
               <ListItem>
-                <InlineLink to="/get-eth/#dex">
+                <InlineLink href="/get-eth/#dex">
                   {t("page-eth-trade-link-2")}
                 </InlineLink>{" "}
                 – {t("page-eth-uses-desc-4")}
               </ListItem>
               <ListItem>
-                <InlineLink to="https://app.compound.finance/">
+                <InlineLink href="https://app.compound.finance/">
                   {t("page-eth-earn-interest-link")}
                 </InlineLink>{" "}
                 – {t("page-eth-uses-desc-5")}
               </ListItem>
               <ListItem>
-                <InlineLink to="/stablecoins/">
+                <InlineLink href="/stablecoins/">
                   {t("page-eth-stablecoins-link")}
                 </InlineLink>{" "}
                 – {t("page-eth-uses-desc-6")}

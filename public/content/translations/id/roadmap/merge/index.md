@@ -4,7 +4,7 @@ description: Pelajari tentang Penggabungan - ketika Jaringan Utama Ethereum meng
 lang: id
 template: upgrade
 image: /upgrades/merge.png
-alt: 
+alt:
 summaryPoint1: Jaringan Utama Ethereum menggunakan bukti taruhan, tetapi tidak selalu demikian.
 summaryPoint2: Peningkatan dari mekanisme bukti kerja yang asli menjadi bukti taruhan disebut Penggabungan.
 summaryPoint3: Penggabungan mengacu pada penggabungan Jaringan Utama Ethereum asli dengan rantai blok bukti taruhan terpisah yang disebut Rantai Suar, yang sekarang ada sebagai satu rantai.
@@ -188,7 +188,7 @@ Untuk mengurangi kebingungan, komunitas telah memperbarui istilah-istilah beriku
 - 'Eth1' sekarang adalah 'lapisan eksekusi', yang menangani transaksi dan eksekusi.
 - 'Eth2' sekarang adalah 'lapisan konsensus', yang menangani konsensus bukti taruhan.
 
-Pembaruan terminologi ini hanya mengubah konvensi penamaan; ini tidak mengubah tujuan atau peta jalan Ethereum.
+Pembaruan terminologi ini hanya mengubah konvensi penamaan; ini tidak mengubah tujuan atau peta perjalanan Ethereum.
 
 [Pelajari selengkapnya tentang penamaan ulang 'Eth2'](https://blog.ethereum.org/2022/01/24/the-great-eth2-renaming/)
 

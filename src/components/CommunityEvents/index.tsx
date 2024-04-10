@@ -1,4 +1,3 @@
-import { DateTime, DateTimeFormatOptions } from "luxon"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { FaDiscord } from "react-icons/fa"
@@ -12,6 +11,7 @@ import {
   Icon,
 } from "@chakra-ui/react"
 
+import type { Lang } from "@/lib/types"
 import type { CommunityEvent } from "@/lib/interfaces"
 
 import { ButtonLink } from "@/components/Buttons"
@@ -21,6 +21,7 @@ import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
+import { getLocaleTimestamp } from "@/lib/utils/time"
 
 const matomoEvent = (buttonType: string) => {
   trackCustomEvent({
@@ -30,30 +31,15 @@ const matomoEvent = (buttonType: string) => {
   })
 }
 
-const renderEventDateTime = (
-  date: string,
-  language: string,
-  params: DateTimeFormatOptions = {
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-    hour12: false,
-    hour: "numeric",
-    minute: "numeric",
-  }
-) => {
-  return DateTime.fromISO(date).setLocale(language).toLocaleString(params)
-}
-
-interface EventProps {
+type EventProps = {
   event: CommunityEvent
-  language: string
   type: "upcoming" | "past"
 }
 
-const Event = ({ event, language, type }: EventProps) => {
+const Event = ({ event, type }: EventProps) => {
+  const { locale } = useRouter()
   const { date, title, calendarLink } = event
-  const params: DateTimeFormatOptions = {
+  const options: Intl.DateTimeFormatOptions = {
     year: "numeric",
     month: "short",
     day: "numeric",
@@ -63,11 +49,11 @@ const Event = ({ event, language, type }: EventProps) => {
     <Grid gap={6} templateColumns="auto 1fr" mb={4}>
       <GridItem>
         <Text color="body.medium" m={0}>
-          {renderEventDateTime(date, language, params)}
+          {getLocaleTimestamp(locale! as Lang, date, options)}
         </Text>
       </GridItem>
       <GridItem>
-        <InlineLink to={calendarLink} onClick={() => matomoEvent(type)}>
+        <InlineLink href={calendarLink} onClick={() => matomoEvent(type)}>
           {title}
         </InlineLink>
       </GridItem>
@@ -130,9 +116,17 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
                   {reversedUpcomingEventData[0].title}
                 </Text>
                 <Text m={0} fontSize="xl">
-                  {renderEventDateTime(
+                  {getLocaleTimestamp(
+                    locale! as Lang,
                     reversedUpcomingEventData[0].date,
-                    locale!
+                    {
+                      year: "numeric",
+                      month: "long",
+                      day: "numeric",
+                      hour12: false,
+                      hour: "numeric",
+                      minute: "numeric",
+                    }
                   )}
                 </Text>
                 <Text color="body.medium" fontSize="md">
@@ -177,14 +171,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
           <Divider mb={4} />
           {reversedUpcomingEventData.slice(1).length ? (
             reversedUpcomingEventData.slice(1).map((item, idx) => {
-              return (
-                <Event
-                  key={idx}
-                  event={item}
-                  language={locale!}
-                  type="upcoming"
-                />
-              )
+              return <Event key={idx} event={item} type="upcoming" />
             })
           ) : (
             <Text mx="auto">
@@ -197,9 +184,7 @@ const CommunityEvents = ({ events }: CommunityEventsProps) => {
           <Divider mb={4} />
           {reversedPastEventData.length ? (
             reversedPastEventData.map((item, idx) => {
-              return (
-                <Event key={idx} event={item} language={locale!} type="past" />
-              )
+              return <Event key={idx} event={item} type="past" />
             })
           ) : (
             <Text mx="auto">
