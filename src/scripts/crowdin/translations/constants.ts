@@ -8,3 +8,5 @@ export const FILE_PATH = resolve(CROWDIN_DATA_DIR, SAVE_FILE)
 
 export const SUMMARY_SAVE_FILE = "import-summary.json"
 export const SUMMARY_PATH = resolve(CROWDIN_DATA_DIR, SUMMARY_SAVE_FILE)
+
+export const APPROVAL_THRESHOLD = 100
