@@ -14,7 +14,8 @@ const STARTING_BRANCH = execSync("git rev-parse --abbrev-ref HEAD", {
   encoding: "utf-8",
 }).trim()
 
-for (let lang of LANGUAGES) {
+const TEST_LANGUAGE_SET = ["el", "es"] //! TODO: Remove for production
+for (let lang of TEST_LANGUAGE_SET /* LANGUAGES */) {
   const gitStatus = execSync(`git status -s | grep -E "/${lang}/" | wc -l`, {
     encoding: "utf-8",
   }).trim()
@@ -28,8 +29,7 @@ for (let lang of LANGUAGES) {
   execSync(`git add public/content/translations/${lang}`)
   execSync(`git add src/intl/${lang}`)
   execSync(`git commit -m "${MESSAGE}"`)
-  // Uncomment the following line when ready to push branches to GitHub
-  // execSync(`git push origin ${BRANCH_NAME}`)
+  execSync(`git push origin ${BRANCH_NAME}`)
 
   type Lang = string
   type QASummary = Record<Lang, string[]>
@@ -46,13 +46,12 @@ Thank you to everyone contributing to translate ethereum.org ❤️
 ## Markdown QA checker alerts
 ${qaResults}`
 
-  // Uncomment the following lines when ready to create the PRs
-  // execSync(`gh auth login --with-token ${process.env.GITHUB_TOKEN}`)
-  // execSync(`gh pr create \
-  //   --base dev \
-  //   --head ${BRANCH_NAME} \
-  //   --title ${MESSAGE} \
-  //   --body "${prBody}"`)
+  execSync(`gh auth login --with-token ${process.env.GITHUB_TOKEN}`)
+  execSync(`gh pr create \
+    --base dev \
+    --head ${BRANCH_NAME} \
+    --title ${MESSAGE} \
+    --body "${prBody}"`)
 
   execSync(`git checkout ${STARTING_BRANCH}`)
 }
