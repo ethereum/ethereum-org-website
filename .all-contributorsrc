@@ -11745,6 +11745,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "finxter",
+      "name": "Finxter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57671493?v=4",
+      "profile": "https://blog.finxter.com/",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
