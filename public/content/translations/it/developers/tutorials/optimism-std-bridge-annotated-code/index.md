@@ -7,7 +7,7 @@ tags:
   - "ponte"
   - "livello 2"
 skill: intermediate
-published: 2022-03-30
+published: 30-03-2022
 lang: it
 ---
 
@@ -498,7 +498,7 @@ import { SafeERC20 } from "@openzeppelin/contracts/token/ERC20/utils/SafeERC20.s
 1. Ripristino
 2. Restituzione di `false`
 
-Gestire entrambi i casi renderebbe il nostro codice più complicato, quindi, invece, usiamo [`SafeERC20` di OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol), che si assicura che [tutti i fallimenti portino a un ripristino](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96).
+Gestire entrambi i casi renderebbe il nostro codice più complicato, quindi, invece, usiamo [`SafeERC20` di OpenZeppelin](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol), che si assicura che [tutti i fallimenti portino a  un ripristino](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/utils/SafeERC20.sol#L96).
 
 ```solidity
 /**
@@ -671,13 +671,13 @@ I messaggi interdominio funzionano chiamando il contratto di destinazione passan
 
 In questo caso il messaggio chiama [la funzione `finalizeDeposit`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148) con questi parametri:
 
-| Parametro | Valore                         | Significato                                                                                                                                     |
-| --------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| \_l1Token | address(0)                     | Valore speciale che sta per ETH (che non è un token ERC-20) su L1                                                                               |
+| Parametro   | Valore                           | Significato                                                                                                                                     |
+| ----------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| \_l1Token | address(0)                       | Valore speciale che sta per ETH (che non è un token ERC-20) su L1                                                                               |
 | \_l2Token | Lib_PredeployAddresses.OVM_ETH | Il contratto L2 che gestisce ETH su Optimism, `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` (questo contratto è solo per uso interno a Optimism) |
 | \_from    | \_from                         | L'indirizzo su L1 che invia gli ETH                                                                                                             |
 | \_to      | \_to                           | L'indirizzo su L2 che riceve gli ETH                                                                                                            |
-| amount    | msg.value                      | Importo di wei inviato (già inviato al ponte)                                                                                                   |
+| amount      | msg.value                        | Importo di wei inviato (già inviato al ponte)                                                                                                   |
 | \_data    | \_data                         | Data aggiuntiva da allegare al deposito                                                                                                         |
 
 ```solidity

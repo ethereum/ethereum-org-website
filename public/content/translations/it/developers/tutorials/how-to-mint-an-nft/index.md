@@ -316,7 +316,7 @@ Ora, esegui `scripts/mint-nft.js` per distribuire il tuo NFT. Dopo qualche secon
 
     L'hash della tua transazione è:
     0x301791fdf492001fcd9d5e5b12f3aa1bbbea9a88ed24993a8ab2cdae2d06e1e8
-
+    
     Consulta il Mempool di Alchemy per visualizzare lo stato della tua transazione!
 
 Vai quindi alla tua [mempool di Alchemy](https://dashboard.alchemyapi.io/mempool) per vedere lo stato della transazione (se è sospesa, minata o eliminata dalla rete). Se la tua transazione è stata eliminata, è utile dare un'occhiata anche su [Sepolia Etherscan](https://sepolia.etherscan.io/) e cercare l'hash della tua transazione.

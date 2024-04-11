@@ -5,7 +5,7 @@ author: Ori Pomerantz
 lang: it
 tags:
   - "livello 2"
-skill: intermediate
+skill: intermedio
 published: 2022-04-01
 ---
 
@@ -43,7 +43,7 @@ La stragrande maggioranza delle transazioni, accede a un contratto da un conto p
 Tuttavia, l'ABI è stata progettata per il L1, dove un byte di calldata costa approssimativamente quanto quattro operazioni aritmetiche, non per il L2 dove un byte di calldata costa più di un migliaio di operazioni aritmetiche. Ad esempio, [ecco una transazione di trasferimento ERC-20](https://kovan-optimistic.etherscan.io/tx/0x7ce4c144ebfce157b4de99d8ad53a352ae91b57b3fa06d8a1c79439df6bfa998). I calldata sono divisi come segue:
 
 | Sezione                   | Lunghezza |  Byte | Byte sprecati | Gas sprecato | Byte necessari | Gas necessario |
-| ------------------------- | --------: | ----: | ------------: | -----------: | -------------: | -------------: |
+| ------------------------- | ---------:| -----:| -------------:| ------------:| --------------:| --------------:|
 | Selettore della funzione  |         4 |   0-3 |             3 |           48 |              1 |             16 |
 | Zeri                      |        12 |  4-15 |            12 |           48 |              0 |              0 |
 | Indirizzo di destinazione |        20 | 16-35 |             0 |            0 |             20 |            320 |
@@ -228,7 +228,7 @@ Per questo contratto specifico supponiamo che il numero massimo di token che chi
 In generale, un trasferimento richiede 35 byte di calldata:
 
 | Sezione                   | Lunghezza |  Byte |
-| ------------------------- | --------: | ----: |
+| ------------------------- | ---------:| -----:|
 | Selettore della funzione  |         1 |     0 |
 | Indirizzo di destinazione |        32 |  1-32 |
 | Importo                   |         2 | 33-34 |

@@ -9,9 +9,9 @@ tags:
   - "truffle"
   - "ganache"
   - "Smart Contract"
-skill: intermediate
+skill: intermedio
 lang: it
-published: 2020-12-31
+published: 31-12-2020
 source: github.com
 sourceUrl: https://github.com/strykerin/DeFi-Token-Farm
 ---

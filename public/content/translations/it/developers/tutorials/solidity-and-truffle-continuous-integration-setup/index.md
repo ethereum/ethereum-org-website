@@ -9,8 +9,8 @@ tags:
   - "test"
   - "truffle"
   - "ganache"
-skill: intermediate
-published: 2020-06-05
+skill: intermedio
+published: 05-06-2020
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration
 ---

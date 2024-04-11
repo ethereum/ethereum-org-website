@@ -8,10 +8,10 @@ tags:
   - "websocket"
   - "query"
   - "javascript"
-skill: beginner
+skill: principiante
 source: Documentazione di Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
-published: 2020-12-01
+published: 01-12-2020
 ---
 
 Questa è una guida entry level su come utilizzare Websocket e Alchemy per fare richieste alla blockchain Ethereum.
@@ -83,7 +83,7 @@ Mentre l'iscrizione è attiva, ricevi eventi che sono oggetti con i seguenti cam
 - `jsonrpc`: sempre "2.0"
 - `method`: sempre "eth_subscription"
 - `params`: un oggetto con i campi seguenti:
-  - `subscription`: ID dell'iscrizione restituito dalla chiamata `eth_subscription` che ha creato questa iscrizione.
+  - `subscription`: L'ID di iscrizione restituito dalla chiamata a `eth_subscribe`, che ha creato questa iscrizione.
   - `result`: oggetto i cui contenuti variano in base al tipo di iscrizione.
 
 #### Tipi di iscrizione {#subscription-types}

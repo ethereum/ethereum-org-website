@@ -20,7 +20,7 @@ La verifica del contratto intelligente consente di studiare cosa faccia un contr
 
 Esistono delle parti del codice sorgente che non influenzano il bytecode compilato, quali commenti o nomi delle variabili. Ciò significa che due codici sorgente con nomi delle variabili e commenti differenti sarebbero entrambi capaci di verificare lo stesso contratto. Così, un utente malevolo può aggiungere commenti ingannevoli o dare nomi di variabili fuorvianti nel codice sorgente e far verificare il contratto con un codice sorgente differente da quello originale.
 
-È possibile evitarlo aggiungendo dei dati aggiuntivi al bytecode, che servano da _garanzia crittografica_ per l'esattezza del codice sorgente, e come un'_impronta digitale_ delle informazioni di compilazione. Le informazioni necessarie si trovano nei [metadati del contratto di Solidity](https://docs.soliditylang.org/en/v0.8.15/metadata.html), e l'hash di questo file è aggiunto al bytecode di un contratto. Puoi vederlo in azione nel [playground dei metadati](https://playground.sourcify.dev)
+È possibile evitarlo aggiungendo ulteriori dati al bytecode, che servano da _garanzia crittografica_ per l'esattezza del codice sorgente, e da _impronta digitale_ delle informazioni di compilazione. Le informazioni necessarie si trovano nei [metadati del contratto di Solidity](https://docs.soliditylang.org/en/v0.8.15/metadata.html), e l'hash di questo file è aggiunto al bytecode di un contratto. Puoi vederlo in azione nel [playground dei metadati](https://playground.sourcify.dev)
 
 Il file dei metadati contiene le informazioni sulla compilazione del contratto, inclusi i file sorgente e i loro hash. Ciò significa che, se una delle impostazioni di compilazione o persino un byte in uno dei file sorgente cambiano, il file dei metadati cambia. Di conseguenza, anche l'hash del file dei metadati, aggiunto al bytecode, cambia. Ciò significa che se il bytecode di un contratto + l'hash dei metadati aggiunto corrisponde al codice sorgente e alle impostazioni di compilazione indicati, possiamo essere certi che sia esattamente lo stesso codice sorgente utilizzato nella compilazione originale e che nemmeno un singolo byte sia differente.
 
@@ -34,7 +34,7 @@ La mancanza di fiducia è senza dubbio la più grande premessa per i contratti i
 
 Perché un contratto intelligente sia senza fiducia, il suo codice dovrebbe essere disponibile per la verifica indipendente. Mentre il bytecode compilato per ogni contratto intelligente è pubblicamente disponibile sulla blockchain, il linguaggio di basso livello è difficile da comprendere, sia per gli sviluppatori che per gli utenti.
 
-I progetti riducono le ipotesi di fiducia pubblicando il codice sorgente dei propri contratti. Ma questo comporta un altro problema: è difficile verificare che il codice sorgente pubblicato corrisponda al bytecode del contratto. In questo scenario, il valore di mancanza di fiducia è perduto poiché gli utenti devono fidarsi del fatto che gli sviluppatori non modifichino la logica aziendale di un contratto (modificando il bytecode) prima di distribuirlo sulla blockchain.
+I progetti riducono le ipotesi di fiducia pubblicando il codice sorgente dei propri contratti. Ma ciò comporta un altro problema: è difficile verificare che il codice sorgente pubblicato corrisponda al bytecode del contratto. In questo scenario, il valore di mancanza di fiducia è perduto poiché gli utenti devono fidarsi del fatto che gli sviluppatori non modifichino la logica aziendale di un contratto (modificando il bytecode) prima di distribuirlo sulla blockchain.
 
 Gli strumenti di verifica del codice sorgente forniscono garanzie che i file del codice sorgente di un contratto intelligente corrispondano al codice assembly. Il risultato è un ecosistema senza fiducia, in cui gli utenti non si fidano ciecamente di terze parti e verificano piuttosto il codice prima di depositare fondi in un contratto.
 
@@ -104,5 +104,4 @@ L'utilizzo del plugin Hardhat di Tenderly consente di avere maggiore controllo s
 
 ## Letture consigliate {#further-reading}
 
-- [Come verificare il codice sorgente dei contratti intelligenti di Ethereum](https://developpaper.com/how-to-verify-the-source-code-of-ethereum-smart-contract/)
 - [Verificare il codice sorgente del contratto](https://programtheblockchain.com/posts/2018/01/16/verifying-contract-source-code/)

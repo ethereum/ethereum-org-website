@@ -9,8 +9,8 @@ tags:
   - "sicurezza"
   - "test"
   - "verifica formale"
-skill: advanced
-published: 2020-01-13
+skill: avanzato
+published: 13-01-2020
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
 ---
@@ -177,7 +177,7 @@ Manticore restituirà le informazioni un una directory `mcore_*`. In questa dire
 Qui Manticore trova 7 test case che corrispondono a (l'ordine dei nomi dei file potrebbe variare):
 
 |                      |      Transazione 0      |    Transazione 1     | Transazione 2        | Risultato |
-| :------------------: | :---------------------: | :------------------: | -------------------- | :-------: |
+|:--------------------:|:-----------------------:|:--------------------:| -------------------- |:---------:|
 | **test_00000000.tx** | Creazione del contratto |       f(!=65)        | f(!=65)              |   STOP    |
 | **test_00000001.tx** | Creazione del contratto | funzione di fallback |                      |  REVERT   |
 | **test_00000002.tx** | Creazione del contratto |                      |                      |  RETURN   |

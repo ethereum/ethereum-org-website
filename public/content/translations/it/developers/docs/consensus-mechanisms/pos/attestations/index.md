@@ -50,9 +50,15 @@ Il ciclo di vita dell'attestazione è delineato nel seguente schema:
 
 ## Ricompense {#rewards}
 
-I validatori sono ricompensati per l'invio delle attestazioni. La ricompensa dell'attestazione dipende da due variabili, la `base reward` (ricompensa di base) e l'`inclusion delay` (ritardo d'inclusione). Il miglior caso per il ritardo d'inclusione è che sia pari a 1.
+I validatori sono ricompensati per l'invio delle attestazioni. La ricompensa d'attestazione dipende dai flag di partecipazione (sorgente, destinazione e testa), dalla ricompensa di base e dal tasso di partecipazione.
 
-`ricompensa d'attestazione = 7/8 x ricompensa di base x (1/ritardo d'inclusione)`
+Ogni flag di partecipazione può essere vero o falso, a seconda dell'attestazione inviata e del suo ritardo di inclusione.
+
+Lo scenario migliore si verifica quando tutti i flag sono veri, nel qual caso un validatore guadagnerà (per flag corretto):
+
+`ricompensa += ricompensa di base * peso dei flag * tasso di attestazione del flag / 64`
+
+Il tasso di attestazione dei flag si misura utilizzando la somma dei bilanci effettivi di tutti i validatori attestanti, per il dato flag confrontato al saldo effettivo attivo totale.
 
 ### Ricompensa di base {#base-reward}
 
@@ -81,6 +87,6 @@ Si noti che in alcuni casi un aggregatore fortunato potrebbe anche diventare il 
 ## Lettura consigliate {#further-reading}
 
 - [Le attestazioni nelle specifiche del consenso annotate da Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [Le attestazioni su eth2book.info](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [Le attestazioni su eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
 _Conosci una risorsa pubblica che ti è stata utile? Modifica questa pagina e aggiungila!_

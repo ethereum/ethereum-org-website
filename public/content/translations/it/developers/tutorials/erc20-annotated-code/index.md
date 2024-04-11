@@ -6,8 +6,8 @@ lang: it
 tags:
   - "Solidity"
   - "erc-20"
-skill: beginner
-published: 2021-03-09
+skill: principiante
+published: 09-03-2021
 ---
 
 ## Introduzione {#introduction}
@@ -525,7 +525,7 @@ Per evitare questo problema, queste due funzioni (`increaseAllowance` e `decreas
 A:
 
 | Transazione di Alice       | Nonce di Alice | Transazione di Bill          | Nonce di Bill | Tolleranza di Bill | Entrate totali di Bill da Alice |
-| -------------------------- | -------------: | ---------------------------- | ------------: | -----------------: | ------------------------------- |
+| -------------------------- | --------------:| ---------------------------- | -------------:| ------------------:| ------------------------------- |
 | approve(Bill, 5)           |             10 |                              |               |                  5 | 0                               |
 |                            |                | transferFrom(Alice, Bill, 5) |        10,123 |                  0 | 5                               |
 | increaseAllowance(Bill, 5) |             11 |                              |               |            0+5 = 5 | 5                               |
@@ -534,7 +534,7 @@ A:
 B:
 
 | Transazione di Alice       | Nonce di Alice | Transazione di Bill           | Nonce di Bill | Tolleranza di Bill | Entrate totali di Bill da Alice |
-| -------------------------- | -------------: | ----------------------------- | ------------: | -----------------: | ------------------------------: |
+| -------------------------- | --------------:| ----------------------------- | -------------:| ------------------:| -------------------------------:|
 | approve(Bill, 5)           |             10 |                               |               |                  5 |                               0 |
 | increaseAllowance(Bill, 5) |             11 |                               |               |           5+5 = 10 |                               0 |
 |                            |                | transferFrom(Alice, Bill, 10) |        10,124 |                  0 |                              10 |

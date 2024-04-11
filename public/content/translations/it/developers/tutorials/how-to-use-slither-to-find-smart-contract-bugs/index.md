@@ -9,7 +9,7 @@ tags:
   - "sicurezza"
   - "test"
   - "analisi statica"
-skill: advanced
+skill: avanzato
 published: 2020-06-09
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither

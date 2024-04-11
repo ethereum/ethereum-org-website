@@ -5,7 +5,7 @@ author: Ori Pomerantz
 tags:
   - "solidity"
 skill: intermediate
-published: 2021-05-01
+published: 01-05-2021
 lang: it
 ---
 
@@ -743,7 +743,7 @@ Questa è la funzione principale della factory, per creare uno scambio in pari t
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Vogliamo che l'indirizzo del nuovo scambio sia deterministico, quindi calcolabile in anticipo al di fuori della catena (questo può essere utile per le [transazioni di livello 2](/developers/docs/scaling/)). Per farlo, dobbiamo avere un ordine coerente degli indirizzi del token, indipendentemente dall'ordine in cui li abbiamo ricevuti, quindi li ordiniamo qui.
+Vogliamo che l'indirizzo del nuovo scambio sia deterministico, quindi calcolabile in anticipo al di fuori della catena (questo può essere utile per le [transazioni di livello 2](/developers/docs/layer-2-scaling/)). Per farlo, dobbiamo avere un ordine coerente degli indirizzi del token, indipendentemente dall'ordine in cui li abbiamo ricevuti, quindi li ordiniamo qui.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
@@ -800,7 +800,7 @@ Queste due funzioni consentono a `feeSetter` di controllare il destinatario dell
 
 ### UniswapV2ERC20.sol {#UniswapV2ERC20}
 
-[Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementa il token di liquidità ERC-20. È simile al [contratto ERC-20 di OpenZeppelin](/developers/tutorials/erc20-annotated-code), quindi spiegherò solo le differenze: la funzionalità `permit`.
+[Questo contratto](https://github.com/Uniswap/uniswap-v2-core/blob/master/contracts/UniswapV2ERC20.sol) implementa il token di liquidità ERC-20. È simile al [contratto ERC-20 di OpenZeppelin ](/developers/tutorials/erc20-annotated-code), quindi spiegherò solo le differenze: la funzionalità `permit`.
 
 Le transazioni su Ethereum costano ether (ETH), equivalente al denaro reale. Se hai dei token ERC-20 ma non ETH, non puoi inviare transazioni, quindi non puoi farci nulla. Una soluzione per evitare questo problema sono le [meta-transazioni](https://docs.uniswap.org/contracts/v2/guides/smart-contract-integration/supporting-meta-transactions). Il proprietario dei token firma una transazione che consente a chiunque altro di prelevare token al di fuori della catena e li invia al destinatario tramite Internet. Il destinatario, che ha ETH a disposizione, invia il permesso per conto del proprietario.
 
