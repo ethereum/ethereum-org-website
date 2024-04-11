@@ -31,11 +31,13 @@ jobs:
       - name: Fetch latest dev
         run: git fetch origin dev
 
-      - name: Run script
+      - name: Get translations
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getTranslations.ts
         env:
           CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
 
-      - name: Process commits and PRs by language
-        run: bash ./src/scripts/postLangPRs.sh
+      - name: Process commits and post PRs by language
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/postLangPRs.ts
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
