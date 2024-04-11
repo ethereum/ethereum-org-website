@@ -230,6 +230,16 @@ const WalletTable = ({
   // Context API
   const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
 
+  const handleStickyFiltersClick = () => {
+    onOpen()
+
+    trackCustomEvent({
+      eventCategory: "MobileFilterToggle",
+      eventAction: "Tap MobileFilterToggle - sticky",
+      eventName: "show mobile filters true",
+    })
+  }
+
   return (
     <Container>
       <WalletContentHeader>
@@ -243,7 +253,7 @@ const WalletTable = ({
               color="primary.base"
               textTransform="uppercase"
               cursor="pointer"
-              onClick={onOpen}
+              onClick={handleStickyFiltersClick}
               as="button"
             >
               {`${t("page-find-wallet-filters")} (${
