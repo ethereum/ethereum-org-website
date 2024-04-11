@@ -1,5 +1,6 @@
 import { execSync } from "child_process"
-import { readFileSync, unlinkSync } from "fs"
+import { readFileSync, unlinkSync, writeFileSync } from "fs"
+import path from "path"
 
 import i18n from "../../../../i18n.config.json"
 
@@ -37,6 +38,7 @@ for (let lang of TEST_LANGUAGE_SET /* LANGUAGES */) {
   const qaResults = summaryJson[lang]
     ? summaryJson[lang].join("\n")
     : "No QA issues found"
+
   const prBody = `## Description
 This PR was automatically created to import Crowdin translations.
 This workflows runs on the first of every month at 16:20 (UTC).
@@ -46,11 +48,16 @@ Thank you to everyone contributing to translate ethereum.org ❤️
 ## Markdown QA checker alerts
 ${qaResults}`
 
+  const tempPath = path.resolve(process.cwd(), "body.txt")
+  writeFileSync(tempPath, prBody)
+
   execSync(`gh pr create \
-    --base dev \
-    --head ${BRANCH_NAME} \
-    --title ${MESSAGE} \
-    --body "${prBody}"`)
+  --base dev \
+  --head ${BRANCH_NAME} \
+  --title ${MESSAGE} \
+  --body-file body.txt`)
+
+  unlinkSync(tempPath)
 
   execSync(`git checkout ${STARTING_BRANCH}`)
 }
