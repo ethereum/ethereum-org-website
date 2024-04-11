@@ -9,7 +9,7 @@ tags:
   - "truffle"
   - "ganache"
   - "contrats intelligents"
-skill: intermediate
+skill: intermédiaire
 lang: fr
 published: 2020-12-31
 source: github.com

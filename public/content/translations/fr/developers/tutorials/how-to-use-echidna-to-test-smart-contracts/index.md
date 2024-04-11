@@ -9,7 +9,7 @@ tags:
   - "sécurité"
   - "test"
   - "fuzzing"
-skill: advanced
+skill: sujets avancés
 published: 2020-04-10
 source: Créer des contrats sécurisés
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/echidna
@@ -45,7 +45,7 @@ Echidna est un fuzzer basé sur les propriétés que nous avons décrit dans nos
 
 ### Fuzzing (test à données aléatoires) {#fuzzing}
 
-Le [Fuzzing](https://wikipedia.org/wiki/Fuzzing) est une technique bien connue dans la communauté concernée par la sécurité. Il consiste à générer des entrées plus ou moins aléatoires pour trouver des bogues dans le programme. Les fuzzers pour les logiciels traditionnels (comme [AFL](http://lcamtuf.coredump.cx/afl/) ou [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) sont connus pour être des outils efficaces quant au repérage des bogues.
+Le [Fuzzing](https://wikipedia.org/wiki/Fuzzing) est une technique bien connue dans la communauté concernée par la sécurité. Elle consiste à générer des entrées plus ou moins aléatoires pour trouver des bogues dans le programme. Les fuzzers pour les logiciels traditionnels (comme [AFL](http://lcamtuf.coredump.cx/afl/) ou [LibFuzzer](https://llvm.org/docs/LibFuzzer.html)) sont connus pour être des outils efficaces quant au repérage des bogues.
 
 Au-delà de la génération purement aléatoire d'entrées, il existe de nombreuse techniques et stratégies pour générer de bonnes contributions, y compris :
 

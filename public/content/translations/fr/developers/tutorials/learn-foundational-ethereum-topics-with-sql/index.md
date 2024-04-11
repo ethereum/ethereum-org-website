@@ -6,7 +6,7 @@ tags:
   - "SQL"
   - "Requêtes"
   - "Transactions"
-skill: beginner
+skill: débutant
 lang: fr
 published: 2021-05-11
 source: paulapivat.com

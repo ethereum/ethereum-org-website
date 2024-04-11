@@ -8,7 +8,7 @@ tags:
   - "nœuds"
   - "requêtes"
   - "alchemy"
-skill: beginner
+skill: débutant
 lang: fr
 published: 2020-10-30
 source: Moyen

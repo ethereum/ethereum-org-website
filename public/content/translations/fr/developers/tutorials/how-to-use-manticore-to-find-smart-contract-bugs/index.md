@@ -9,7 +9,7 @@ tags:
   - "sécurité"
   - "test"
   - "vérification formelle"
-skill: advanced
+skill: avancé
 published: 2020-01-13
 source: Créer des contrats sécurisés
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/manticore
@@ -177,7 +177,7 @@ Le type de donnée que Manticore produira comme résultat sera de type dossier `
 Ici, Manticore a trouvé 7 cas de test, qui correspondent à (l'ordre des noms de fichier peut changer) :
 
 |                      |      Transaction 0       |    Transaction 1    | Transaction 2       | Résultat |
-| :------------------: | :----------------------: | :-----------------: | ------------------- | :------: |
+|:--------------------:|:------------------------:|:-------------------:| ------------------- |:--------:|
 | **test_00000000.tx** | La création des contrats |       f(!=65)       | f(!=65)             |   STOP   |
 | **test_00000001.tx** |   Création du contrat    | fonction de secours |                     |  REVERT  |
 | **test_00000002.tx** |   Création du contrat    |                     |                     |  RETOUR  |

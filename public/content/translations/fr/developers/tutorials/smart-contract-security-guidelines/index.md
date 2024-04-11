@@ -6,7 +6,7 @@ tags:
   - "solidity"
   - "contrats intelligents"
   - "sécurité"
-skill: intermediate
+skill: moyen
 lang: fr
 published: 2020-09-06
 source: Créer des contrats sécurisés
@@ -35,7 +35,7 @@ La documentation peut être écrite à différents niveaux et devrait être mise
 
 Nous avons discuté des différentes solutions de mise à niveau dans [notre blogpost](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/). Faites un choix délibéré de prendre en charge la possibilité de mise à niveau ou non avant de rédiger un code. La décision influencera la façon dont vous structurerez notre code. En général, nous recommandons :
 
-- **Favoriser [la migration de contract](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/) plutôt que la mise à niveau.** Le système de migration présente bon nombre des mêmes avantages que l'évolutif, sans ses inconvénients.
+- **Privilégier la [migration contractuelle](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/) plutôt que l'évolutivité.** Les systèmes de migration présentent les mêmes avantages que les systèmes évolutifs, mais sans leurs inconvénients.
 - **Utilisation du modèle de séparation des données par rapport à celui du delegatecallproxy.** Si votre projet a une séparation d'abstraction claire, la possibilité de mise à niveau à l'aide de la séparation des données ne nécessitera que quelques ajustements. Le delegatecallproxy nécessite une expertise EVM et est très exposé aux erreurs.
 - **Documentez la procédure de migration/mise à niveau avant le déploiement.** Si vous devez réagir sous pression sans aucune instructions, vous ferez des erreurs. Écrivez la procédure à suivre à l'avance. Cela devrait inclure :
   - Les appels qui initient les nouveaux contrats

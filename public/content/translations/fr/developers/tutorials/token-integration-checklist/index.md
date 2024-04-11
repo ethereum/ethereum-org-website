@@ -8,8 +8,8 @@ tags:
   - "contrats intelligents"
   - "sécurité"
   - "jetons"
-skill: intermediate
-published: 2020-08-13
+skill: intermédiaire
+published: 13-/8/2020
 source: Créer des contrats sécurisés
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---

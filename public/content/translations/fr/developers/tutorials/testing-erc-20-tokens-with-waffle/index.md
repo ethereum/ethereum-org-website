@@ -8,9 +8,10 @@ tags:
   - "solidity"
   - "test"
   - "erc-20"
-skill: intermediate
+skill: intermédiaire
 lang: fr
-published: 2020-10-16
+sidebar: true
+published: 16/10/2020
 ---
 
 Dans ce tutoriel, vous apprendrez comment :

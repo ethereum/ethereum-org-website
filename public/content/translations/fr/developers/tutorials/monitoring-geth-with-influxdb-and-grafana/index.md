@@ -5,9 +5,9 @@ author: "Mario Havel"
 tags:
   - "clients"
   - "nœuds"
-skill: intermediate
+skill: intermédiaire
 lang: fr
-published: 2021-01-13
+published: 13-01-2021
 ---
 
 Ce tutoriel vous aidera à mettre en place une surveillance de votre nœud Geth afin de mieux comprendre ses performances et identifier les problèmes potentiels.

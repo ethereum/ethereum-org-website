@@ -6,8 +6,8 @@ tags:
   - "solidity"
   - "bridge"
   - "Couche 2"
-skill: intermediate
-published: 2022-03-30
+skill: intermédiaire
+published: 30/03/2022
 lang: fr
 ---
 
@@ -47,7 +47,7 @@ La passerelle dispose de deux flux principaux :
 
 ### Flux de retrait {#withdrawal-flow}
 
-#### Couche 2 {#withdrawal-flow-layer-2}
+#### Niveau 2 {#withdrawal-flow-layer-2}
 
 1. Le retirant appelle la passerelle de connexion L2 (`withdraw` ou `withdrawTo`)
 2. La passerelle de connexion L2 brûle le nombre approprié de jetons appartenant à `msg.sender`
@@ -671,13 +671,13 @@ La façon dont les messages transversaux fonctionnent est que le contrat de dest
 
 Le message ici est destiné à appeler [la fonction `finalizeDeposit`](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148) avec ces paramètres :
 
-| Paramètre | Valeur                         | Signification                                                                                                                                         |
-| --------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
-| \_l1Token | address(0)                     | Valeur spéciale pour représenter ETH (qui n'est pas un jeton ERC-20) sur L1                                                                           |
+| Paramètre   | Valeur                           | Signification                                                                                                                                         |
+| ----------- | -------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
+| \_l1Token | address(0)                       | Valeur spéciale pour représenter ETH (qui n'est pas un jeton ERC-20) sur L1                                                                           |
 | \_l2Token | Lib_PredeployAddresses.OVM_ETH | Le contrat L2 qui gère ETH sur Optimism, `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000` (ce contrat est destiné à un usage Optimism uniquement interne) |
 | \_from    | \_from                         | L'adresse sur L1 qui envoie l'ETH                                                                                                                     |
 | \_to      | \_to                           | L'adresse sur L2 qui reçoit l'ETH                                                                                                                     |
-| amount    | msg.value                      | Montant de Wei envoyé (qui a déjà été envoyé sur la passerelle)                                                                                       |
+| amount      | msg.value                        | Montant de Wei envoyé (qui a déjà été envoyé sur la passerelle)                                                                                       |
 | \_data    | \_data                         | Date supplémentaire à joindre au dépôt                                                                                                                |
 
 ```solidity
@@ -1060,7 +1060,7 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
     address public l1TokenBridge;
 ```
 
-Conserver la trace de l'adresse de la passerelle de connexion L1. Notez que contrairement à l'équivalent pour L1, ici nous \_ avons besoin \_de cette variable. L'adresse de la passerelle L1 n'est pas connue à l'avance.
+Conserver la trace de l'adresse de la passerelle de connexion L1. Notez que contrairement à l'équivalent pour L1, ici nous _ avons besoin _de cette variable. L'adresse de la passerelle L1 n'est pas connue à l'avance.
 
 ```solidity
 

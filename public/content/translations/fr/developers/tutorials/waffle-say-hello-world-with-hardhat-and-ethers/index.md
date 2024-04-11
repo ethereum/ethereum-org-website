@@ -1,5 +1,5 @@
 ---
-title: 'Tutoriel pour "dire bonjour au monde" avec hardhat et ethers'
+title: "Tutoriel pour \"dire bonjour au monde\" avec hardhat et ethers"
 description: Réalisez votre premier projet Waffle avec hardhat et ethers.js
 author: "MiZiet"
 tags:
@@ -11,7 +11,7 @@ tags:
   - "ethers.js"
 skill: beginner
 lang: fr
-published: 2020-10-16
+published: 16/10/2020
 ---
 
 Dans ce tutoriel [Waffle](https://ethereum-waffle.readthedocs.io), nous apprendrons comment créer un simple contrat intelligent "Hello world", en utilisant [hardhat](https://hardhat.org/) et [ethers.js](https://docs.ethers.io/v5/). Ensuite nous apprendrons conmment ajouter une nouvelle fonctionnalité à notre contrat intelligent et comment la tester avec « Waffle ».
@@ -73,7 +73,7 @@ MyWaffleProject
 │   └── sample-script.js
 ├── test
 │   └── sample-test.js
-├── .gitattributs
+├── .gitattributes
 ├── .gitignore
 ├── hardhat.config.js
 └── package.json

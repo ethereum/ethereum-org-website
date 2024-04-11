@@ -9,7 +9,7 @@ tags:
   - "sécurité"
   - "test"
   - "analyse statique"
-skill: advanced
+skill: avancé
 published: 2020-06-09
 source: Créer des contrats sécurisés
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
@@ -169,7 +169,7 @@ Dans le code suivant, `variable_a` est dépendant de `variable_b`:
 variable_a = variable_b + 1;
 ```
 
-Slither est livré avec des capacités intégrées grâce à sa représentation intermédiaire (discutée dans une section ultérieure).
+Slither est livré avec des capacités intégrées <a href="https://github.com/crytic/slither/wiki/de dépendance des données></a> grâce à sa représentation intermédiaire (discutée dans une section ultérieure).
 
 Un exemple d'utilisation de la dépendance des données peut être trouvé dans le [dangereux détecteur strict d'égalité](https://github.com/crytic/slither/wiki/Detector-Documentation#dangerous-strict-equalities). Ici, Slither recherchera une comparaison stricte de l'égalité avec une valeur dangereuse ([incorrect_strict_equality. y#L86-L87](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L86-L87)), et informera l'utilisateur qu'il doit utiliser `>=` ou `<=` au lieu de `==`, pour empêcher un attaquant de piéger le contrat. Entre autres, le détecteur considérera comme dangereux la valeur de retour d'un appel à `balanceOf(address)` ([incorrect_strict_equality. y#L63-L64](https://github.com/crytic/slither/blob/6d86220a53603476f9567c3358524ea4db07fb25/slither/detectors/statements/incorrect_strict_equality.py#L63-L64)), et utilisera le moteur de dépendance de données pour suivre son utilisation.
 

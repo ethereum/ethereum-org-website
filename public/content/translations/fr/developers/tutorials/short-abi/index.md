@@ -5,8 +5,8 @@ author: Ori Pomerantz
 lang: fr
 tags:
   - "Couche 2"
-skill: intermediate
-published: 2022-04-01
+skill: intermédiaire
+published: 01/04/2022
 ---
 
 ## Introduction {#introduction}
@@ -43,7 +43,7 @@ La grande majorité des transactions accèdent à un contrat provenant d'un comp
 Cependant, l'ABI a été conçu pour L1, où un octet de données d'appels coûte approximativement la même chose que quatre opérations arithmétiques, et non pas pour L2 où un octet de données d'appel coûte plus de mille opérations arithmétiques. Par exemple, [voici une transaction de transfert ERC-20](https://kovan-optimistic.etherscan.io/tx/0x7ce4c144ebfce157b4de99d8ad53a352ae91b57b3fa06d8a1c79439df6bfa998). Les données d'appel sont divisées ainsi :
 
 | Section                | Longueur | Bytes | Octets gaspillés | Gaz gaspillé | Octets nécessaires | Gaz nécessaire |
-| ---------------------- | -------: | ----: | ---------------: | -----------: | -----------------: | -------------: |
+| ---------------------- | --------:| -----:| ----------------:| ------------:| ------------------:| --------------:|
 | Sélecteur de fonction  |        4 |   0-3 |                3 |           48 |                  1 |             16 |
 | Zéros                  |       12 |  4-15 |               12 |           48 |                  0 |              0 |
 | Adresse de destination |       20 | 16-35 |                0 |            0 |                 20 |            320 |
@@ -148,7 +148,7 @@ Nous utilisons ici [l'opcode CALLDATALOAD](https://www.evm.codes/#35) pour lire 
         _retVal = _retVal >> (256-length*8);
 ```
 
-Seuls les octets de `longueur` les plus significatives font partie du champ, donc nous [décalons vers la droite](https://en.wikipedia.org/wiki/Logical_shift) pour nous débarrasser des autres valeurs. Ceci présente l'avantage supplémentaire de déplacer la valeur à droite du champ, il s'agit donc de la valeur elle-même plutôt que la valeur multipliée par 256<sup>quelque chose</sup>.
+Seuls les octets de `length` les plus significatives font partie du champ, donc nous [décalons vers la droite](https://en.wikipedia.org/wiki/Logical_shift) pour nous débarrasser des autres valeurs. Ceci présente l'avantage supplémentaire de déplacer la valeur à droite du champ, il s'agit donc de la valeur elle-même plutôt que la valeur multipliée par 256<sup>quelque chose</sup>.
 
 ```solidity
 
@@ -228,7 +228,7 @@ Pour ce contrat particulier, nous supposons que le nombre maximum de jetons que 
 Dans l'ensemble, un transfert prend 35 octets de données d'appel :
 
 | Section                | Longueur | Bytes |
-| ---------------------- | -------: | ----: |
+| ---------------------- | --------:| -----:|
 | Sélecteur de fonction  |        1 |     0 |
 | Adresse de destination |       32 |  1-32 |
 | Montant                |        2 | 33-34 |
@@ -397,7 +397,7 @@ Ceci est une [fonction `modifier`](https://www.tutorialspoint.com/solidity/solid
       require(msg.sender == proxy);
 ```
 
-Tout d'abord, vérifier que nous avons été appelés par le proxy et personne d'autre. Dans le cas contraire, `annuler`.
+Tout d'abord, vérifier que nous avons été appelés par le proxy et personne d'autre. Dans le cas contraire, `revert`.
 
 ```solidity
       _;

@@ -8,9 +8,9 @@ tags:
   - "solidity"
   - "test"
   - "bouchonnage"
-skill: intermediate
+skill: moyen
 lang: fr
-published: 2020-11-14
+published: 14/11/2020
 ---
 
 ## À quoi sert ce tutoriel ? {#what-is-this-tutorial-about}
@@ -295,4 +295,4 @@ Le code source de ce tutoriel est disponible [ici](https://github.com/EthWorks/W
 
 Voici d'autres tutoriels qui pourraient vous intéresser :
 
-- [Tester des contrats intelligents avec Waffle](/developers/tutorials/waffle-test-simple-smart-contract/)
+- [Tester des contrats intelligents avec Waffle](/developers/tutorials/testing-smart-contract-with-waffle/)

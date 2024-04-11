@@ -8,7 +8,7 @@ tags:
   - "contrats intelligents"
   - "oracles"
 skill: beginner
-published: 2021-06-29
+published: 29/06/2021
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/
 ---
@@ -65,7 +65,7 @@ constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {
 
 function setBtcPrice() public {
     bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
-    bytes32 _queryID = keccak256(_b);
+    bytes32 _queryId = keccak256(_b);
 
     uint256 _timestamp;
     bytes _value;

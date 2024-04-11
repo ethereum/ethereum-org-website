@@ -7,7 +7,7 @@ tags:
   - "erc-721"
   - "solidity"
   - "jetons"
-skill: intermediate
+skill: moyen
 lang: fr
 published: 2020-03-19
 source: Hackernoon

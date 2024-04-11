@@ -7,7 +7,7 @@ tags:
   - "remix"
   - "solidity"
   - "déploiement"
-skill: beginner
+skill: débutant
 lang: fr
 published: 2020-04-03
 source: EthereumDev
@@ -53,7 +53,7 @@ Si vous êtes un habitué de la programmation, vous pouvez facilement deviner ce
 
 - Ligne 4 : Nous définissons un contrat portant le nom `Counter`.
 - Ligne 7 : Notre contrat stocke un entier non signé nommé `count` commençant à 0.
-- Ligne 10 : La première fonction va modifier l'état du contrat et `incrémenter()` notre variable `count`.
+- Ligne 10 : La première fonction va modifier l'état du contrat et `incrément()` notre variable `count`.
 - Ligne 15 : La seconde fonction permet de lire la valeur de la variable `count` en dehors du contrat intelligent. Notez que, comme nous avons défini notre variable `count` comme étant publique, ce n'est pas nécessaire mais est montré comme exemple.
 
 Tout cela pour notre premier contrat intelligent simple. Comme vous le savez peut-être, il ressemble à une classe des langages OOP (Object-Oriented Programming) comme Java ou C++. Il est maintenant temps de jouer avec notre contrat.
@@ -84,7 +84,7 @@ Une fois que vous êtes sur l’écran "déployer et exécuter", vérifiez que l
 
 Une fois que vous avez cliqué sur le bouton « Déployer », vous verrez votre contrat apparaître en bas de page. Cliquez sur la flèche à gauche pour la développer pour voir le contenu de notre contrat. Ceci est notre variable `counter`, notre fonction `increment()` et l'accesseur `getCounter()`.
 
-Si vous cliquez sur le bouton `count` ou `getCount` , il récupérera le contenu de la variable `count` du contrat et l'affichera. Comme nous n'avons pas encore appelé la fonction `incrément` , elle devrait afficher 0.
+Si vous cliquez sur le bouton `count` ou `getCount` , il récupérera le contenu de la variable `count` du contrat et l'affichera. Comme nous n'avons pas encore appelé la fonction `increment` , elle devrait afficher 0.
 
 ![Le bouton de fonction dans le compilateur solidity de Remix](./remix-function-button.png)
 

@@ -50,9 +50,15 @@ Le cycle de vie de l'attestation est décrit dans le schéma ci-dessous :
 
 ## Récompenses {#rewards}
 
-Les validateurs sont récompensés pour avoir soumis des attestations. La récompense d'attestation dépend de deux variables, la `récompense de base` et le `délai d'inclusion`. Le meilleur argument en faveur du retard d'inclusion est d'être égal à 1.
+Les validateurs sont récompensés pour avoir soumis des attestations. La récompense d'attestation dépend des drapeaux de participation (source, cible et chef), de la récompense de base et du taux de participation.
 
-`récompense d'attestation = 7/8 x récompense de base x (retard 1/inclusion)`
+Chacun des drapeaux de participation peut être vrai ou faux, en fonction de l'attestation soumise et de son retard d'inscription.
+
+Le meilleur scénario est celui où les trois drapeaux sont vrais, auquel cas un validateur gagnerait (par drapeau correct) :
+
+`reward += base reward * flag weight * flag attesting rate / 64`
+
+Le taux d'attestation de l'indicateur est mesuré en utilisant la somme des soldes effectifs de tous les validateurs attestant pour l'indicateur donné par rapport au solde effectif actif total.
 
 ### Récompense de base {#base-reward}
 
@@ -81,6 +87,6 @@ Notez que, dans certains cas, un agrégateur chanceux peut aussi devenir le prop
 ## Complément d'information {#further-reading}
 
 - [Attestations dans la spécification du consensus annoté de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [Attestations dans eth2book.info](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [Attestations dans eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
 _Une ressource communautaire vous a aidé ? Modifiez cette page et ajoutez-la !_

@@ -5,7 +5,7 @@ author: "jdourlens"
 tags:
   - "web3.js"
   - "javascript"
-skill: beginner
+skill: débutant
 lang: fr
 published: 2020-04-11
 source: EthereumDev
@@ -39,7 +39,7 @@ Maintenant que nous avons importé la bibliothèque au sein du projet, nous devo
 const web3 = new Web3("http://localhost:8545")
 ```
 
-Si vous souhaitez accéder directement à un nœud hébergé, vous pouvez utiliser Infura. Vous pouvez également utiliser les programmes gratuits fournis par [Cloudflare](https://cloudflare-eth.com/), [Moralis](https://moralis.io), ou [Alchimie](https://alchemy.com/ethereum):
+Si vous souhaitez directement accéder à un nœud hébergé, vous pouvez trouver des options sur les [nœuds en tant que service](/developers/docs/nodes-and-clients/nodes-as-a-service).
 
 ```js
 const web3 = new Web3("https://cloudflare-eth.com")
