@@ -30,8 +30,7 @@ const processLocale = (locale: string) => {
   execSync(`git add public/content/translations/${locale}`)
   execSync(`git add src/intl/${locale}`)
   execSync(`git commit -m "${MESSAGE}"`)
-  // Uncomment the following line when ready to push branches to GitHub
-  // execSync(`git push origin ${BRANCH_NAME}`)
+  execSync(`git push origin ${BRANCH_NAME}`)
 
   const summaryJson: QASummary = JSON.parse(readFileSync(SUMMARY_PATH, "utf-8"))
   const qaResults = summaryJson[locale]
@@ -50,12 +49,11 @@ ${qaResults}`
   const bodyWritePath = path.resolve(process.cwd(), "body.txt")
   writeFileSync(bodyWritePath, prBody)
 
-  // Uncomment the following lines when ready to create the PRs
-  // execSync(`gh pr create \
-  // --base dev \
-  // --head ${BRANCH_NAME} \
-  // --title "${MESSAGE}" \
-  // --body-file body.txt`)
+  execSync(`gh pr create \
+  --base dev \
+  --head ${BRANCH_NAME} \
+  --title "${MESSAGE}" \
+  --body-file body.txt`)
 
   unlinkSync(bodyWritePath)
 
