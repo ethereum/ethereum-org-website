@@ -7,9 +7,9 @@ tags:
   - "tókenes"
   - "Solidity"
   - "erc-20"
-skill: beginner
+skill: principiante
 lang: es
-published: 2020-04-05
+published: 05/04/2020
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/aprenda-sobre-el-contrato-erc20tokens/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"

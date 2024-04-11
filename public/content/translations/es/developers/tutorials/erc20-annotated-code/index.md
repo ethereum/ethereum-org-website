@@ -6,13 +6,13 @@ lang: es
 tags:
   - "solidity"
   - "erc-20"
-skill: beginner
+skill: principiante
 published: 2021-03-09
 ---
 
 ## Introducción {#introduction}
 
-Uno de los usos más comunes para Ethereum es que un grupo cree un token intercambiable, en cierto sentido su propia moneda. Estos tókenes normalmente siguen un estándar, el [ERC-20](/developers/docs/standards/tokens/erc-20/). Este estándar permite escribir herramientas, como reservas de liquidez y carteras, que funcionan con todos los tókenes ERC-20. En este artículo analizaremos la implementación de [OpenZeppelin Solidity ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), así como la [definición de interfaz](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
+Uno de los usos más comunes para Ethereum es que un grupo cree un token intercambiable, en cierto sentido su propia moneda. Estos tókenes normalmente siguen un estándar, el [ERC-20 ](/developers/docs/standards/tokens/erc-20/). Este estándar permite escribir herramientas, como reservas de liquidez y carteras, que funcionan con todos los tókenes ERC-20. En este artículo analizaremos la implementación de [OpenZeppelin Solidity ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol), así como la [ definición de interfaz](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol).
 
 Este es un código fuente anotado. Si quiere implementar ERC-20, [lea este tutorial](https://docs.openzeppelin.com/contracts/2.x/erc20-supply).
 
@@ -631,7 +631,7 @@ Hay dos maneras de usar este contrato:
 
 El segundo método es mucho mejor pues el código ERC de OpenZeppelin ya ha sido auditado y demostrado ser seguro. Cuando utiliza la herencia queda claro cuáles son las funciones que modifica, y para confiar en su contrato, la gente sólo necesita auditar esas funciones específicas.
 
-A menudo es útil realizar una función cada vez que los tókenes cambian de mano. Sin embargo,`_transfer` es una función muy importante y es posible escribirla de forma insegura (ver abajo), así que lo mejor no anularlo. La solución es `_beforeTokenTransfer`, una función de [gancho](https://wikipedia.org/wiki/Hooking). Puede anular esta función y se activará en cada transferencia.
+A menudo es útil realizar una función cada vez que los tókenes cambian de mano. Sin embargo,`_transfer` es una función muy importante y es posible escribirla de forma insegura (ver abajo), así que lo mejor no anularlo. La solución es `_beforeTokenTransfer`, una función de gancho [](https://wikipedia.org/wiki/Hooking). Puede anular esta función y se activará en cada transferencia.
 
 &nbsp;
 

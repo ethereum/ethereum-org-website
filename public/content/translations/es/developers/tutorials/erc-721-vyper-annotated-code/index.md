@@ -5,17 +5,17 @@ author: Ori Pomerantz
 lang: es
 tags:
   - "vyper"
-  - "ERC-721"
+  - "eRC-721"
   - "python"
-skill: beginner
-published: 2021-04-01
+skill: principiante
+published: 01-04-2021
 ---
 
 ## Introducción {#introduction}
 
-La norma [ERC-721](/developers/docs/standards/tokens/erc-721/) sirve para mantener la propiedad de los tókenes no fungibles (o NFT). Los tókenes [ERC-20](/developers/docs/standards/tokens/erc-20/) actúan como mercancía, porque no hay diferencia entre tókenes individuales. En contraste, los tókenes ERC-721 están diseñados para activos similares, pero no identicos, tales como [catcartoons](https://www.cryptokitties.co/) o títulos a diferentes piezas de bienes inmuebles.
+La norma [ERC-721 ](/developers/docs/standards/tokens/erc-721/) sirve para mantener la propiedad de los tókenes no fungibles (o NFT). Los tókenes [ERC-20](/developers/docs/standards/tokens/erc-20/) actúan como mercancía, porque no hay diferencia entre tókenes individuales. En contraste, los tókenes ERC-721 están diseñados para activos similares, pero no identicos, tales como [catcartoons](https://www.cryptokitties.co/) o títulos a diferentes piezas de bienes inmuebles.
 
-En este artículo analizaremos [el contrato ERC-721 de Ryuya Nakamura](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy). Este contrato está escrito en [Vyper](https://vyper.readthedocs.io/en/latest/index.html), un lenguaje de contrato similar a Python diseñado para hacer más difícil escribir código inseguro que en Solidity.
+En este artículo analizaremos [ el contrato ERC-721 de Ryuya Nakamura](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy). Este contrato está escrito en [Vyper](https://vyper.readthedocs.io/en/latest/index.html), un lenguaje de contrato similar a Python diseñado para hacer más difícil escribir código inseguro que en Solidity.
 
 ## El contrato {#contract}
 

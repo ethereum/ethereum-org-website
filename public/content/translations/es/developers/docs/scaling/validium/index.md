@@ -153,7 +153,8 @@ Múltiples proyectos proporcionan implementaciones de Validium y voliciones que 
 
 **Matter Labs zkPorter:**_zkPorter es un protocolo de escalado de capa 2 que aborda la disponibilidad de datos con un enfoque híbrido que combina las ideas de zkRollup y el sharding. Puede soportar arbitrariamente muchos fragmentos (shards), cada uno con su propia política de disponibilidad de datos. _
 
-- [Documentación](https://docs.zksync.io/zkevm/#what-is-zkporter)
+- [Blog](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
+- [Documentación](https://docs.zksync.io/zk-stack/concepts/hyperchains-hyperscaling.html#logical-state-partitions-in-zk-porters)
 - [Sitio web](https://zksync.io/)
 
 ## Más información {#further-reading}

@@ -6,7 +6,7 @@ tags:
   - "solidity"
   - "contratos inteligentes"
   - "seguridad"
-skill: intermediate
+skill: intermedio
 lang: es
 published: 2020-09-06
 source: Desarrollando smart contracts
@@ -33,9 +33,9 @@ La documentación se puede escribir en diferentes niveles y debe actualizarse al
 
 ### Capacidad de mejora {#upgradeability}
 
-Analizamos diferentes soluciones de mejora en [nuestra entrada de blog](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/). Tome una decisión deliberada de si admitir la capacidad de mejora o no antes de escribir cualquier código. La decisión influirá en cómo estructurar el código. En general, se recomienda:
+Analizamos diferentes soluciones de mejora en [nuestra entrada de blog](https://blog.trailofbits.com/2018/09/05/contract-upgrade-anti-patterns/). Tome una decisión deliberada de si admitir la capacidad de mejora o no antes de escribir cualquier código. La decisión influirá en la forma en que estructura su código. En general, se recomienda:
 
-- **Favorecer la [migración de contratos](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/) sobre la mejora o actualización.** El sistema de migración tiene muchas de las mismas ventajas que el sistema actualizable, sin sus desventajas o inconvenientes.
+- **Favoreciendo [migración de contratos](https://blog.trailofbits.com/2018/10/29/how-contract-migration-works/) sobre la capacidad de actualización. ** Los sistemas de migración tienen muchas de las mismas ventajas que los que se pueden actualizar, sin sus inconvenientes.
 - **Utilizar el patrón de separación de datos por sobre delegatecallproxy.** Si el proyecto tiene una clara separación de abstracción, la mejora mediante la separación de datos requerirá solo de unos pocos ajustes. delegatecallproxy requiere conocimientos sobre la EVM y es altamente propenso a errores.
 - **Documentar el procedimiento de migración/actualización antes de la implementación.** Si tiene que reaccionar bajo presión sin ninguna directriz, cometerá errores. Escriba el procedimiento a seguir con antelación. Debe incluir:
   - Las llamadas que inician los nuevos contratos
