@@ -320,6 +320,14 @@ const WalletTable = ({
               })
           }
 
+          const handleClick = (walletName: string) => {
+            trackCustomEvent({
+              eventCategory: "WalletExternalLinkList",
+              eventAction: "Tap main button",
+              eventName: `${walletName}`,
+            })
+          }
+
           return (
             <WalletContainer
               key={wallet.key}
@@ -420,6 +428,7 @@ const WalletTable = ({
                               w="auto"
                               isExternal
                               size="sm"
+                              onClick={() => handleClick(wallet.name)}
                             >
                               {t("page-find-wallet-visit-website")}
                             </ButtonLink>
@@ -446,6 +455,7 @@ const WalletTable = ({
                       w="100%"
                       isExternal
                       size="sm"
+                      onClick={() => handleClick(wallet.name)}
                     >
                       {t("page-find-wallet-visit-website")}
                     </ButtonLink>
