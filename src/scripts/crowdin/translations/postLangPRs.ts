@@ -51,7 +51,6 @@ ${qaResults}`
   writeFileSync(bodyWritePath, prBody)
 
   // Uncomment the following lines when ready to create the PRs
-  // execSync(`gh auth login --with-token ${process.env.GITHUB_TOKEN}`)
   // execSync(`gh pr create \
   // --base dev \
   // --head ${BRANCH_NAME} \
