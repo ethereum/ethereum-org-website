@@ -50,9 +50,15 @@ El ciclo de vida de la certificación se describe en el siguiente esquema:
 
 ## Recompensas {#rewards}
 
-Se recompensa a los validadores por presentar certificaciones. La recompensa de certificación depende de dos variable: la `recompensa de base` y el `retraso de inclusión`. El mejor caso para el retraso de inclusión es que sea igual a 1.
+Se recompensa a los validadores por presentar certificaciones. La recompensa de la atestación depende de las banderas de participación (fuente, objetivo y cabeza), la recompensa base y la tasa de participación.
 
-`attestation reward = 7/8 x base reward x (1/inclusion delay)`
+Cada una de las banderas de participación puede ser verdadera o falsa, dependiendo de la atestación presentada y de su retraso en la inclusión.
+
+El mejor escenario ocurre cuando las tres banderas son ciertas, en cuyo caso un validador ganaría (por bandera correcta):
+
+`recompensa += recompensa base * peso de la bandera * tasa de atestación de la bandera / 64`
+
+La tasa de atestación de la bandera se mide utilizando la suma de los saldos efectivos de todos los validadores de atestación para la bandera dada, en comparación con el saldo efectivo activo total.
 
 ### La recompensa de base {#base-reward}
 
@@ -81,6 +87,6 @@ Tenga en cuenta que en algunos casos un agregador afortunado también puede conv
 ## Más lecturas {#further-reading}
 
 - [Certificaciones en la especificación de consenso anotada de Vitalik](https://github.com/ethereum/annotated-spec/blob/master/phase0/beacon-chain.md#attestationdata)
-- [Certificaciones en eth2book.info](https://eth2book.info/altair/part3/containers/dependencies#attestationdata)
+- [Certificaciones en eth2book.info](https://eth2book.info/capella/part3/containers/dependencies/#attestationdata)
 
 _¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._

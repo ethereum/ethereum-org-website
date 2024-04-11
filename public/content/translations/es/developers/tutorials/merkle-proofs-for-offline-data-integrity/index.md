@@ -4,7 +4,7 @@ description: Asegurar la integridad de los datos en la cadena para los datos que
 author: Ori Pomerantz
 tags:
   - "almacenamiento"
-skill: advanced
+skill: recursos avanzados
 lang: es
 published: 2021-12-30
 ---

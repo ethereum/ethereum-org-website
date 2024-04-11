@@ -69,7 +69,6 @@
   "page-upgrades-bug-bounty-type-4": "Inconsistencias de cálculos o parámetros",
   "page-upgrades-bug-bounty-types": "Tipos de errores",
   "page-upgrades-bug-bounty-validity": "En el ámbito",
-  "page-upgrades-bug-bounty-validity-desc": "Nuestro programa de recompensas por errores abarca de principio a fin: desde la solidez de los protocolos (como el modelo de consenso de cadena de bloques, los protocolos alámbricos y p2p, la prueba de participación, etc.) y el cumplimiento del protocolo/implementación hasta la seguridad de la red y la integridad del consenso. La seguridad clásica del cliente, así como la seguridad de las primitivas criptográficas también forman parte del programa. En caso de duda, envíe un correo electrónico a bounty@ethereum.org y pregúntenos.",
   "page-upgrades-bug-bounty-card-critical": "Crítico",
   "page-upgrades-bug-bounty-card-critical-risk": "Enviar un error de riesgo crítico",
   "page-upgrades-bug-bounty-card-h2": "Medio",

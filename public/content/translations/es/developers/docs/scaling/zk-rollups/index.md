@@ -1,5 +1,5 @@
 ---
-title: Rollups de conocimiento cero
+title: Zero-knowledge Rollups
 description: 'Introducción a las pruebas de conocimiento cero: una solución de escalabilidad que utiliza la comunidad de Ethereum.'
 lang: es
 ---
@@ -232,7 +232,7 @@ Existen múltiples implementaciones de ZK-rollups que pueden integrarse en sus d
 
 Los proyectos que trabajan en zkEVM incluyen:
 
-- **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)**: _Applied ZKP es un proyecto financiado por Ethereum Foundation para desarrollar un ZK-rollup compatible con EVM y un mecanismo para generar pruebas de validez para los bloques de Ethereum. _
+- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM is a project funded by the Ethereum Foundation to develop an EVM-compatible ZK-rollup and a mechanism for generating validity proofs for Ethereum blocks._
 
 - **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)**: _es un ZK Rollup descentralizado en la red principal de Ethereum que trabaja en una máquina virtual Ethereum de conocimiento cero (zkEVM) que ejecuta transacciones de Ethereum de una manera transparente, incluidos contratos inteligentes con validaciones a prueba de conocimiento cero. _
 
@@ -240,7 +240,7 @@ Los proyectos que trabajan en zkEVM incluyen:
 
 - **[Taiko](https://taiko.xyz)**: _Taiko es un complemento ZK descentralizado y equivalente a Ethereum (un [Tipo 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html)). _
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)**: _ZkSync Era es un ZK Rollup compatible con EVM creado por Matter Labs, impulsado por su propio zkEVM. _
+- **[ZKSync](https://docs.zksync.io/)** - _ZkSync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
 
 - **[Starknet](https://starkware.co/starknet/)**: _StarkNet es una solución de escalabilidad de capa 2 compatible con EVM creada por StarkWare. _
 

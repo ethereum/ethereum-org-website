@@ -7,9 +7,9 @@ tags:
   - "remezcla"
   - "solidity"
   - "implementación"
-skill: beginner
+skill: principiante
 lang: es
-published: 2020-04-03
+published: 03/04/2020
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/deploying-your-first-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"

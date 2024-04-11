@@ -9,8 +9,8 @@ tags:
   - "seguridades"
   - "pruebas"
   - "análisis estático"
-skill: advanced
-published: 2020-06-09
+skill: avanzado
+published: 2020/06/09
 source: Desarrollando smart contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis/slither
 ---

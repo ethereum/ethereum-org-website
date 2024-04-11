@@ -9,9 +9,9 @@ tags:
   - "pruebas"
   - "hardhat"
   - "ethers.js"
-skill: beginner
+skill: principiante
 lang: es
-published: 2020-10-16
+published: 16/10/2020
 ---
 
 En este tutorial de [Waffle](https://ethereum-waffle.readthedocs.io), aprenderemos cómo configurar un proyecto de contrato inteligente simple "Hola, Mundo" usando [hardhat](https://hardhat.org/) y [ethers](https://docs.ethers.io/v5/). Luego aprenderemos cómo añadir una nueva funcionalidad a nuestro contrato inteligente y cómo hacer pruebas con Waffle.
@@ -73,7 +73,7 @@ MyWaffleProject
 │   └── sample-script.js
 ├── test
 │   └── sample-test.js
-├── .gitattributs
+├── .gitattributes
 ├── .gitignore
 ├── hardhat.config.js
 └── package.json
