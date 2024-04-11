@@ -74,7 +74,7 @@ Then navigate to the deploy and run transactions screen:
 
 ![The deploy icon in the Remix toolbar](./remix-deploy.png)
 
-Once you are on the "deploy and run" transactions screen, double check that your contract name appears and click on Deploy. As you can see on the top of the page, the current environment is “JavaScript VM” that means that we’ll deploy and interact with our smart contract on a local test blockchain to be able to test faster and without any fees.
+Once you are on the "deploy and run transactions" screen, double check that your contract name appears and click on Deploy. As you can see on the top of the page, the current environment is “JavaScript VM” that means that we’ll deploy and interact with our smart contract on a local test blockchain to be able to test faster and without any fees.
 
 ![The deploy button in the Remix solidity compiler](./remix-deploy-button.png)
 
