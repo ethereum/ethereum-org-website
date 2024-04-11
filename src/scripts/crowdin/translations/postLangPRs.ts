@@ -46,7 +46,6 @@ Thank you to everyone contributing to translate ethereum.org ❤️
 ## Markdown QA checker alerts
 ${qaResults}`
 
-  execSync(`gh auth login --with-token ${process.env.GITHUB_TOKEN}`)
   execSync(`gh pr create \
     --base dev \
     --head ${BRANCH_NAME} \
