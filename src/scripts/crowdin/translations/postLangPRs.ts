@@ -15,7 +15,7 @@ const STARTING_BRANCH = execSync("git rev-parse --abbrev-ref HEAD", {
   encoding: "utf-8",
 }).trim()
 
-const TEST_LANGUAGE_SET = ["el", "es"] //! TODO: Remove for production
+const TEST_LANGUAGE_SET = ["fr", "it"] //! TODO: Remove for production
 for (let lang of TEST_LANGUAGE_SET /* LANGUAGES */) {
   const gitStatus = execSync(`git status -s | grep -E "/${lang}/" | wc -l`, {
     encoding: "utf-8",
