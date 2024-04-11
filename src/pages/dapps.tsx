@@ -35,7 +35,6 @@ import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
 import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink, { BaseLink } from "@/components/Link"
@@ -1551,14 +1550,18 @@ const DappsPage = () => {
                 />
               </RightColumn>
             </TwoColumnContent>
-            <Box>
-              <ButtonLink
-                to="https://www.ethereum-ecosystem.com/apps"
-                title={t("page-dapps:page-dapps-explore-1")}
-              >
-                {t("page-dapps:page-dapps-explore-title")}
-              </ButtonLink>
-            </Box>
+            <Content>
+              <Text m={0}>{t("page-dapps:page-dapps-explore-title")}</Text>
+              <Text m={0}>
+                <InlineLink href="https://www.ethereum-ecosystem.com/apps">
+                  {t("page-dapps:page-dapps-explore-1")}
+                </InlineLink>
+              </Text>
+              <Text m={0}>
+                <Emoji text=":warning:" fontSize="1xl" me={2} flexShrink={0} />
+                {t("page-dapps:page-dapps-explore-2")}
+              </Text>
+            </Content>
             <CalloutBanner
               mt={32}
               mx={0}
@@ -1777,14 +1780,16 @@ const DappsPage = () => {
         )}
         {selectedCategory !== CategoryType.FINANCE && (
           <Content>
-            <Box>
-              <ButtonLink
-                to="https://www.ethereum-ecosystem.com/apps"
-                title={t("page-dapps:page-dapps-explore-1")}
-              >
-                {t("page-dapps:page-dapps-explore-title")}
-              </ButtonLink>
-            </Box>
+            <Text m={0}>{t("page-dapps:page-dapps-explore-title")}</Text>
+            <Text m={0}>
+              <InlineLink href="https://www.ethereum-ecosystem.com/apps">
+                {t("page-dapps:page-dapps-explore-1")}
+              </InlineLink>
+            </Text>
+            <Text m={0}>
+              <Emoji text=":warning:" fontSize="1xl" me={2} flexShrink={0} />
+              {t("page-dapps:page-dapps-explore-2")}
+            </Text>
           </Content>
         )}
         {/* General content for all categories */}
