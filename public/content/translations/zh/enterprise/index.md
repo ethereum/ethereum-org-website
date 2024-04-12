@@ -25,7 +25,7 @@ lang: zh
 
 - 区块链安全/不可变性——区块链能否抵制被篡改是由其协商一致性的算法决定的。 以太网主网的安全是由世界各地的个人和矿工管理的数千个独立节点间的交互保证的。 私有链通常有少数几个节点，由一个或几个组织控制。 这些节点可以被严格地控制，但少数节点重写链上信息或进行欺诈性交易的行为必须受到惩罚。
 - 性能——由于私有的以太坊可能使用具有特殊硬件要求和不同共识算法的高性能节点，例如 POA 等。它们可能在基准层（第一层）实现较高的交易吞吐量。 在以太网主网上，使用[第二层扩容解决方案](/developers/docs/scaling/#layer-2-scaling)可以实现高吞吐量。
-- 成本——经营私有链的成本主要是建立和管理这条链所花费的精力及运行它的服务器。 虽然与以太网连接没有成本，但每笔交易都有 gas 成本，必须在 Ether 支付。 目前正在开发交易转发器（又名 gas 站），以消除最终用户甚至企业在交易中直接使用 Ether 的必要性。 一些[分析](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf)显示，在以太坊主网上运行应用程序的总成本可能低于运行私有链。
+- 成本——经营私有链的成本主要是建立和管理这条链所花费的精力及运行它的服务器。 虽然与以太网连接没有成本，但每笔交易都有燃料成本，必须在 Ether 支付。 目前正在开发交易转发器（又名燃料站），以消除最终用户甚至企业在交易中直接使用 Ether 的必要性。 一些[分析](https://github.com/EYBlockchain/fundamental-cost-of-ownership/blob/master/EY%20Total%20Cost%20of%20Ownership%20for%20Blockchain%20Solutions.pdf)显示，在以太坊主网上运行应用程序的总成本可能低于运行私有链。
 - 节点权限——只有授权的节点可以加入私有链。 任何人都可以在以太坊主链上设置一个节点。
 - 隐私——访问写入私有链的数据可以通过限制访问网络来控制，并更加细粒度地进行访问控制和私有交易。 任何人都可以查看写入到主网一层的所有数据，所以敏感信息应该脱链存储、传输或者加密。 一些实现了以上设想的设计模式已经出现（如 Baseline、Aztec），以及能够保持数据分割的二层解决方案。
 
@@ -47,21 +47,23 @@ lang: zh
 
 ### 产品和服务 {#products-and-services}
 
-- [Alchemy](https://www.alchemy.com/) _提供了 API 服务和工具，用于构建和监控以太坊上的应用程序_
-- [Blast](https://blastapi.io/) _为以太坊存档主网和测试网提供远程过程调用/网络套接字应用程序接口的应用程序接口平台_
-- [Blockapps](https://blockapps.net/) _通过部署企业级以太坊协议、工具和 API 形成 STRATO 平台_
-- [Chainstack](https://chainstack.com/) _主网和测试网以太坊基础设施托管在公共及孤立的客户云中_
-- [ConsenSys](https://consensys.io/) _为以太坊上的开发提供了一系列工具和产品，同时还提供咨询和定制开发服务_
-- [Envision Blockchain](https://envisionblockchain.com/) _专注于以太坊主网，并提供针对企业的咨询和开发服务_
-- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _提供了一个采购流程，让用户在信任的业务合作伙伴网络中发出报价申请、合约、订单和发票_
-- [Hyperledger Besu](https://www.hyperledger.org/use/besu) _是一个针对企业的开源以太坊客户端，它依据 Apache 2.0 许可证开发并用 Java 语言编写_
-- [Infura](https://infura.io/) _对以太坊和 IPFS 网络的可调用的 API 访问_
-- [Kaleido](https://kaleido.io/) _个面向企业的开发平台，提供简化的区块链和数字资产应用程序_
-- [Provide](https://provide.services/) _为 企业级 Web3 应用程序提供基础架构和应用程序接口_
-- [QuickNode](https://www.quicknode.com/) _通过非同质化代币应用程序接口、代币应用程序接口等高级应用程序接口提供可靠、快速的节点，同时提供统一的产品套件和企业级解决方案_
-- [Tenderly](https://tenderly.co) _Web3 开发平台，为开发、测试、监控和操作智能合约提供调试、可观察性和基础设施构建块_
-- [Unibright](https://unibright.io/) _支拥有 20 多年业务流程和整合经验的团队，成员包括区块链专家、架构师、开发者和咨询人员_
+- [Alchemy](https://www.alchemy.com/) _ 提供了 API 服务和工具，用于构建和监控以太坊上的应用程序_
+- [Blast](https://blastapi.io/)_ 为以太坊存档主网和测试网提供远程过程调用/网络套接字应用程序接口的应用程序接口平台_
+- [Blockapps](https://blockapps.net/) _通过部署企业级以太坊协议、工具和应用程序接口形成 STRATO 平台_
+- [Chainstack](https://chainstack.com/) _ 主网和测试网以太坊基础设施托管在公共及孤立的客户云中_
+- [ConsenSys](https://consensys.net/)_ 为以太坊上的开发提供了一系列工具和产品，同时还提供咨询和定制开发服务_
+- [Envision Blockchain](https://envisionblockchain.com/)_ 专注于以太坊主网，并提供针对企业的咨询和开发服务_
+- [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _ 提供了一个采购流程，让用户在信任的业务合作伙伴网络中发出报价申请、合约、订单和发票_
+- [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ 是一个针对企业的开源以太坊客户端，它依据 Apache 2.0 许可证开发并用 Java 语言编写_
+- [Infura](https://infura.io/) _对以太坊和星际文件系统网络进行可扩展的应用程序接口访问_
+- [Kaleido](https://kaleido.io/) _ 一个面向企业的开发平台，提供简化的区块链和数字资产应用程序_
+- [NodeReal](https://nodereal.io/) _为 Web3 生态系统提供可扩展的区块链基础设施和应用程序接口服务提供商_
+- [Provide](https://provide.services/) _为 企业级 Web3 应用程序提供基础设施和应用程序接口_
+- [QuickNode](https://www.quicknode.com/) _ 通过非同质化代币应用程序接口、代币应用程序接口等高级应用程序接口提供可靠、快速的节点，同时提供统一的产品套件和企业级解决方案_
+- [Tenderly](https://tenderly.co) _一个 Web3 开发平台，为开发、测试、监控和操作智能合约提供调试、可观测性和基础设施构建块_
+- [Unibright](https://unibright.io/) _一支拥有 20 多年业务流程和整合经验的团队，成员包括区块链专家、架构师、开发者和咨询人员_
 - [Zero Services GmbH](https://www.zeroservices.eu/) _在欧洲和亚洲的联合地点提供托管服务。 安全可靠地运营和监控你的节点_
+- [Zeeve](https://www.zeeve.io/) _为在以太坊上构建应用程序提供一系列产品和工具，还为企业级 Web3 应用程序提供基础设施和应用程序接口。_
 
 ### 工具和库 {#tooling-and-libraries}
 
@@ -100,12 +102,13 @@ lang: zh
 
 - [Tinlake](https://tinlake.centrifuge.io/) _通过代币化的实体资产（如发票、抵押或流媒体版权费等）进行应收款项融资_
 - [RealT](https://realt.co/) _全球各地的投资者可以通过完全合规、代币化的部分所有权在美国房地产市场购买房产。_
-- [AgroToken](https://agrotoken.io/en/home) _农产品代币化和交易_
+- [AgroToken](https://agrotoken.io/en/) _农产品代币化和交易_
 - [Fasset](https://www.fasset.com/) _支持可持续基础设施的平台_
 
 ### 数据公证 {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _对最终贷款的详细信息进行哈希处理并记录在主网上_
+- [Slusk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _数据完整性可以通过定期将索引数据的哈希值写入主网来确保_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _意大利最大的新闻机构与假新闻作斗争，并使读者能够通过在主网上录制这些新闻故事来验证其来源_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _在以太坊上记录新闻稿，以确保公司的责任和信用_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _在以太坊上记录手表的来源和修理记录_
@@ -113,11 +116,13 @@ lang: zh
 
 ### 供应链 {#supply-chain}
 
+- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _提单和单证传输提供者_
 - [Morphosus.network](https://morpheus.network/) _供应链自动化平台，通过以太坊主网上的公证数据实现了私有链的聚合，加拿大食品、石油与天然气经销商 Federated Co-op Ltd. 和阿根廷宠物食品供应商 Vitalcan 等企业目前都在使用该平台_
 - [Minespider](https://www.minespider.com/) _供应链跟踪_
 - [EY OpsChain Contract Manager](https://blockchain.ey.com/products/contract-manager) _让企业通过在信任的业务合作伙伴网络中发出报价申请、合约、订单和发票，参与采购流程_
 - [Treum](https://treum.io/) _使用区块链技术为供应链带来透明度、可追溯性和可交易性_
-- [TradeTrust](https://www.tradetrust.io/) _验证国际运输中的电子提单 (eBL)_
+- [TradeTrust](https://www.tradetrust.io/) _ 验证国际运输中的电子提单 (eBL)_
+- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability) _ 可为每批新酿造的啤酒铸造非同质化代币，提高整条供应链的可见性和效率_
 
 ### 保险 {#insurance}
 

@@ -48,7 +48,7 @@
   "page-gas-table-header-2": "使用的燃料单位",
   "page-gas-table-item-1-transaction-type": "发送以太币",
   "page-gas-table-item-2-transaction-type": "发送 ERC-20 代币",
-  "page-gas-table-item-3-transaction-type": "转移和非同质化代币",
+  "page-gas-table-item-3-transaction-type": "转移非同质化代币",
   "page-gas-table-item-4-transaction-type": "在 Uniswap 兑换代币",
   "page-gas-faq-header": "常见问题",
   "page-gas-faq-question-1-q": "谁获得了我的交易的燃料费？",

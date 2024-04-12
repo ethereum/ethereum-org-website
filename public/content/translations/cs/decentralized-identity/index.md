@@ -49,7 +49,7 @@ Decentralizované identifikátory jsou uloženy v distribuovaných účetních k
 
 ## Co umožňuje decentralizované identifikátory? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infrastruktura veřejných klíčů (PKI) {#public-key-cryptography}
+### 1. Infrastruktura veřejných klíčů (PKI) {#public-key-infrastructure}
 
 Infrastruktura veřejných klíčů (PKI) je opatřením v oblasti informační bezpečnosti, které pro entitu vytváří [veřejný klíč](/glossary/#public-key) a [privátní klíč](/glossary/#private-key). Kryptografie veřejných klídů se využívá v sítích blockchainu k ověření totožnosti uživatelů a k prokázání vlastnictví digitálních majetků.
 
@@ -109,7 +109,7 @@ Zde je příklad toho, jak by mohla fungovat blockchainová atestace v praxi:
 
 ### Soulbound tokeny a identity {#soulbound}
 
-[Soulbound tokeny](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (nepřenosné NFT) by mohly být použity ke shromažďování informací jedinečných pro konkrétní peněženku. To efektivně vytváří jedinečnou blockchainovou identitu vázanou na konkrétní Ethereum adresu, která by mohla zahrnovat tokeny reprezentující úspěchy (např.: dokončení daného online kurzu nebo dosažení nového skóre ve hře) nebo komunitní účasti.
+[Soulbound tokeny](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (nepřenosné NFT) lze použít ke shromažďování informací jedinečných pro konkrétní peněženku. To efektivně vytváří jedinečnou blockchainovou identitu vázanou na konkrétní Ethereum adresu, která by mohla zahrnovat tokeny reprezentující úspěchy (např.: dokončení daného online kurzu nebo dosažení nového skóre ve hře) nebo komunitní účasti.
 
 ## Výhody decentralizované identity {#benefits-of-decentralized-identity}
 
@@ -161,6 +161,7 @@ Existuje mnoho ambiciózních projektů, které využívají Ethereum jako zákl
 - **[Proof of Humanity](https://www.proofofhumanity.id)** – _Proof of Humanity (nebo PoH) je systém pro ověřování sociální identity postavený na Ethereu._
 - **[BrightID](https://www.brightid.org/)** – _Decentralizovaná síť sociální identity s veřejně dostupným zdrojovým kódem usilující o reformu ověřování identity vytvořením a analýzou sociálního grafu._
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** – _Decentralizovaný agregátor digitální identity._
+- **[walt.id](https://walt.id)** - _Open source decentralizovaná identita a peněženková infrastruktura, která umožňuje vývojářům a organizacím využívat vlastní suverénní identitu a NFT/SBT._
 
 ## Další informace {#further-reading}
 
@@ -170,6 +171,7 @@ Existuje mnoho ambiciózních projektů, které využívají Ethereum jako zákl
 - [Co je Ethereum ERC725? Samostatně suverénní správa identity na Blockchainu](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam Town_
 - [Jak by blockchain mohl vyřešit problém digitální identity](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [Co je decentralizovaná identita a proč by vás měla zajímat?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Úvod do decentralizované identity](https://walt.id/white-paper/digital-identity) - _Dominik Beron_
 
 ### Videa {#videos}
 
@@ -177,9 +179,11 @@ Existuje mnoho ambiciózních projektů, které využívají Ethereum jako zákl
 - [Přihlaste se pomocí Etherea a decentralizované identity s Ceramic, IDX, React, a 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) – _YouTube tutorial na vytváření systému správy identity pro tvorbu, čtení a aktualizaci uživatelského profilu pomocí jejich Ethereum peněženky od Nadera Dabita_
 - [BrightID – Decentralizovaná identita na Ethereu](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _epizoda podcastu Bankless o BrightID, decentralizovaném řešení identity pro Ethereum_
 - [Internet mimo blockchain: Decentralizovaná identita & Ověřitelné údaje](https://www.youtube.com/watch?v=EZ_Bb6j87mg) – EthDenver 2022 prezentace Evina McMullena
+- [Vysvětlení ověřitelných pověření](https://www.youtube.com/watch?v=ce1IdSr-Kig) - Vysvětlující video na YouTube s demo ukázkou od Tamina Baumanna
 
 ### Komunity {#communities}
 
 - [Aliance ERC-725 na GitHubu](https://github.com/erc725alliance) – _Stoupenci normy ERC725 pro správu identity na blockchainu Ethereum_
 - [SpruceID Discord server](https://discord.com/invite/Sf9tSFzrnt) – _Komunita pro nadšence a vývojáře pracující na přihlášení s Ethereem_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) – _Komunita vývojářů podílejících se na budování rámce pro ověřitelná data pro aplikace_
+- [walt.id](https://discord.com/invite/AW8AgqJthZ) — _Komunika vývojářů a builderů pracující na praktickém použití decentralizované identity napříč různými obory_

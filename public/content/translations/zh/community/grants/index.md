@@ -18,6 +18,7 @@ lang: zh
 - [MetaCartel](https://www.metacartel.org/grants/) - _去中心化应用程序开发、去中心化自治组织创建_
 - [Moloch 去中心化自治组织](https://www.molochdao.com/) - _隐私、二层网络扩容、客户端安全性等_
 - [去中心化自治组织资助](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _资助组织的 Google 电子表格_
+- [Crunchbase for Web3 资助](https://www.cryptoneur.xyz/web3-grants) - _按类别、用例、金额等筛选和搜索资助。 致力于帮助他人找到合适的资助。_
 - [学术资助](https://esp.ethereum.foundation/academic-grants) - _为以太坊相关学术工作提供资助_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworks 编译了一份包含所有资助、提案征求和漏洞悬赏的完整名录。_
 
@@ -34,6 +35,7 @@ lang: zh
 - [SKALE 网络资助方案](https://skale.space/developers#grants) - _[SKALE 网络](https://skale.space/)生态系统_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) 生态系统_
 - [Uniswap 资助方案](https://www.uniswapfoundation.org/apply-for-a-grant) - _[Uniswap](https://uniswap.org/) 社区_
+- [Web3 Grants](https://web3grants.net) - _Web3/ 加密货币相关资助方案详尽清单_
 
 ## 二次方融资 {#quadratic-funding}
 

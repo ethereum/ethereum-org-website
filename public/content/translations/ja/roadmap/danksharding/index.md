@@ -69,7 +69,7 @@ KZGセレモニーは、イーサリアムコミュニティ全体から多く�
 
 </ExpandableCard>
 
-<ExpandableCard title="なぜダンクシャーディングには、データ可用性サンプリングが必要なのですか？" eventCateogry="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="なぜダンクシャーディングには、データ可用性サンプリングが必要なのですか？" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 データ可用性サンプリングは、バリデータがブロブデータを迅速かつ効率的に検証するために必要です。 データ可用性サンプリングによって、バリデータは、ブロブデータが利用可能であり、正しくコミットされていることを確認できます。 具体的には、バリデータは、いくつかのデータ点をランダムにサンプリングして、そのデータがきちんと保存されていることを確認します。つまり、ブロブ全体をチェックする必要はありません。 データが欠落していた場合、すぐに特定してそのブロブを拒否することができます。
 
@@ -77,7 +77,7 @@ KZGセレモニーは、イーサリアムコミュニティ全体から多く�
 
 ### 現在の進行状況 {#current-progress}
 
-完全なダンクシャーディングは、数年先を予定していますが、 プロトダンクシャーディングは、近日にリリースされます。 この記事の執筆時点(2023年2月)において、KZGセレモニーはまだ開催中であり、これまでに5万人以上の参加者を集めています。 プロトダンクシャーディングの[EIP](https://eips.ethereum.org/EIPS/eip-4844)は完成に近づいており、仕様も合意に至っています。現在、クライアントのテストが行われており、本番環境に導入するためのプロトタイプが実装されています。 次のステップは、公開テストネット上で変更を実装することです。 [EIP 4844準備チェックリスト](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status)を参照しながら準備しましょう。
+完全なダンクシャーディングは、数年先を予定していますが、 プロトダンクシャーディングは、近日にリリースされます。 この記事の執筆時点(2023年2月)において、KZGセレモニーはまだ開催中であり、これまでに5万人以上の参加者を集めています。 プロトダンクシャーディングの[EIP](https://eips.ethereum.org/EIPS/eip-4844)は完成に近づいており、仕様も合意に至っています。現在、クライアントのテストが行われており、本番環境に導入するためのプロトタイプが実装されています。 次のステップは、公開テストネット上で変更を実装することです。 [EIP 4844準備チェックリスト](https://github.com/ethereum/pm/blob/master/Dencun/4844-readiness-checklist.md)を使うことで、最新の状況を把握することができます。
 
 ### 参考文献 {#further-reading}
 

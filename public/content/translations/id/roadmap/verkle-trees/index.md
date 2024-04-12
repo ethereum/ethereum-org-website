@@ -49,12 +49,13 @@ Pohon Verkle adalah pasangan `(key,value)`, di mana kunci adalah elemen 32 byte 
 
 Jaringan percobaan pohon Verkle sudah aktif dan berjalan, tetapi masih ada pembaruan dalam jumlah besar yang harus dilakukan oleh klien agar dapat mendukung pohon Verkle. Anda dapat membantu mempercepat kemajuan dengan menggunakan kontrak ke jaringan percobaan atau menjalankan klien jaringan percobaan.
 
-[Telusuri jaringan percobaan Beverly Hills Verkle](https://beverlyhills.ethpandaops.io)
+[Jelajahi jaringan percobaan Verkle Gen Devnet 2](https://verkle-gen-devnet-2.ethpandaops.io/)
 
-[Tonton penjelasan Guillaume Ballet tentang jaringan percobaan Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (perhatikan bahwa jaringan percobaan Condrieu menggunakan konsep bukti kerja dan sekarang telah digantikan oleh [jaringan percobaan Kaustinen](https://kaustinen.ethdevops.io)).
+[Tonton penjelasan Guillaume Ballet tentang jaringan percobaan Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (perhatikan bahwa jaringan percobaan Condrieu menggunakan konsep bukti kerja dan sekarang telah digantikan oleh jaringan percobaan Verkle Gen Devnet 2).
 
 ## Bacaan lebih lanjut {#further-reading}
 
+- [Pohon Verkle untuk Keadaan Tanpa Kewarganegaraan](https://verkle.info/)
 - [Dankrad Feist menjelaskan pohon Verkle di PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet menjelaskan pohon verkle di ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Cara pohon Verkle menjadikan Ethereum ramping dan efektif" oleh Guillaume Ballet di Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)

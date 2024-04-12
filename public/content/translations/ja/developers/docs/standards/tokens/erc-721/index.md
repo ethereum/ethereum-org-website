@@ -54,11 +54,11 @@ ERC-721（Ethereum Request for Comments 721）は、ウィリアム・エント�
     event ApprovalForAll(address indexed _owner, address indexed _operator, bool _approved);
 ```
 
-### 例 {#web3py-example}
+### 実例： {#web3py-example}
 
 イーサリアムネットワークにおけるERC-721トークンコントラクトを詳しく検討することで、ネットワークをシンプルにする上でこれらの規格がいかに重要であるかが理解できるでしょう。 ERC-721トークンを対象とするインターフェイスを開発するには、コントラクトのアブリケーション・バイナリ・インターフェイス（ABI）があれば十分です。 これからつまずかないように簡略化されたABIを使用した例をお見せします。
 
-#### Web3.pyの例 {#web3py-example}
+#### Web3.pyの実例： {#web3py-example}
 
 最初に、 Pythonライブラリの[Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation)がインストールされていることを確認してください:
 

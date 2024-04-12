@@ -252,7 +252,7 @@ sidebarDepth: 2
   - 機能
     - 分散型RPCプロトコルとマーケットプレイス
     - 1日あたり100万件のリクエストができる無料ティア(エンドポイントあたり最大2件)
-    - [パブリックエンドポイント](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [パブリックエンドポイント](https://docs.pokt.network/developers/public-endpoints)
     - プレステーク+プログラム(1日に100万件を超えるリクエストが必要な場合)
     - 15以上のブロックチェーン対応
     - アプリケーションへのサービスでPOKTを獲得する6400以上のノード
