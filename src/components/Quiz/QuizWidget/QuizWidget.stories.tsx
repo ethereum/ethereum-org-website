@@ -90,3 +90,51 @@ export const QuizWidgetAllCorrect: StoryObj<typeof meta> = {
     })
   },
 }
+
+export const QuizWidgetAllIncorrect: StoryObj<typeof meta> = {
+  args: {
+    quizKey: "layer-2",
+  },
+  render: (args) => <StandaloneQuizWidget {...args} />,
+
+  play: async ({ canvasElement, step }) => {
+    const canvas = within(canvasElement)
+
+    const quizWidget = canvas.getByTestId("quiz-widget")
+    await expect(quizWidget).toBeInTheDocument()
+
+    await waitFor(() =>
+      expect(canvas.getByTestId("check-answer-button")).toBeDisabled()
+    )
+
+    await step("Answer some questions incorrectly", async () => {
+      for (let i = 0; i < layer2QuestionBank.length; i++) {
+        const questionGroupId = canvas.getByTestId("question-group").id
+        const questionAnswers = canvas.getAllByTestId("quiz-question-answer")
+        const currentQuestionBank = layer2QuestionBank.find(
+          ({ id }) => id === questionGroupId
+        )!
+        await userEvent.click(
+          questionAnswers.find(
+            (answer) => answer.id !== currentQuestionBank.correctAnswer
+          )!
+        )
+
+        await userEvent.click(canvas.getByTestId("check-answer-button"))
+        await expect(
+          canvas.getByTestId("answer-status-incorrect")
+        ).toBeInTheDocument()
+
+        if (i === layer2QuestionBank.length - 1) {
+          await userEvent.click(canvas.getByTestId("see-results-button"))
+        } else {
+          await userEvent.click(canvas.getByTestId("next-question-button"))
+        }
+      }
+    })
+
+    await step("Check for failed results page", async () => {
+      await expect(canvasElement).toHaveTextContent("Your results")
+    })
+  },
+}
