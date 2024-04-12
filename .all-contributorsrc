@@ -10750,7 +10750,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/30328618?v=4",
       "profile": "https://www.darigovresearch.com/",
       "contributions": [
-        "content"
+        "content",
+        "bug"
       ]
     },
     {
@@ -11680,6 +11681,98 @@
       "profile": "http://www.edukids.cz",
       "contributions": [
         "eventOrganizing"
+      ]
+    },
+    {
+      "login": "bhargavkakadiya",
+      "name": "Bhargav kakadiya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26486494?v=4",
+      "profile": "https://github.com/bhargavkakadiya",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ArtificialPB",
+      "name": "ArtificialPB",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4672155?v=4",
+      "profile": "https://github.com/ArtificialPB",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "Pedrojok01",
+      "name": "Pedrojok01",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77141890?v=4",
+      "profile": "https://github.com/Pedrojok01",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Vid201",
+      "name": "Vid Kersic",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38610409?v=4",
+      "profile": "https://github.com/Vid201",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "futantan",
+      "name": "Tantan Fu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6268441?v=4",
+      "profile": "http://www.futantan.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Dharmik79",
+      "name": "Dharmik Dholariya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61613931?v=4",
+      "profile": "https://dharmik79.github.io/portfolio.github.io/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Destiner",
+      "name": "Timur Badretdinov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4247901?v=4",
+      "profile": "https://destiner.io",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "finxter",
+      "name": "Finxter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57671493?v=4",
+      "profile": "https://blog.finxter.com/",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "croath",
+      "name": "Croath Liu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1398729?v=4",
+      "profile": "http://croath.com",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "HayattiQ",
+      "name": "Hayatti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5105841?v=4",
+      "profile": "https://github.com/HayattiQ",
+      "contributions": [
+        "content",
+        "bug"
       ]
     }
   ],
