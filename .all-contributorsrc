@@ -11754,6 +11754,16 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "croath",
+      "name": "Croath Liu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1398729?v=4",
+      "profile": "http://croath.com",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
