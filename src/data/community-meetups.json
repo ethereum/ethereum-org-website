@@ -484,5 +484,11 @@
     "emoji": ":canada:",
     "location": "Edmonton",
     "link": "https://www.meetup.com/ethereum-edmonton-meetup/"
-  }
+  },
+  {
+    "title": "BeerFi Prague - Web3 on-chain dev Meetup",
+    "emoji": ":czech_republic:",
+    "location": "Prague",
+    "link": "https://www.meetup.com/web3-on-chain-dev-meetup-group/"
+  }    
 ]

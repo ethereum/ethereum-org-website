@@ -153,7 +153,7 @@ Volitionsは、ゼロ知識ロールアップとバリディアムチェーン�
 
 **Matter Labs zkPorter**- _zkPorterは、ゼロ知識ロールアップとシャーディングを結合したハイブリッド型のアプローチによりデータ化要請を追跡する、レイヤー2のスケーリング・プロトコルです。 任意の数のシャードをサポートしており、シャードごとに異なるデータ可用性ポリシーを定めることができます。_
 
-- [ドキュメント](https://docs.zksync.io/zk-stack/concepts/hyperchains-hyperscaling.html#logical-state-partitions-in-zk-porters)
+- [ドキュメント](https://docs.zksync.io/zkevm/#what-is-zkporter)
 - [ウェブサイト](https://zksync.io/)
 
 ## 参考文献 {#further-reading}

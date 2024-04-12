@@ -4,7 +4,7 @@ description: Les normes de base que nous nous efforçons de respecter dans les e
 lang: fr
 ---
 
-# Code de conduite {#conduct-intro}
+# Code de conduite {#code-of-conduct}
 
 ## Mission {#mission}
 

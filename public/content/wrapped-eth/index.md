@@ -41,7 +41,7 @@ You pay gas fees to wrap or unwrap ETH using the WETH contract.
 
 <ExpandableCard title="Is WETH safe?" eventCategory="/wrapped-eth" eventName="clicked Is WETH safe?">
 
-WETH is generally considered secure because it is based on a simple, battle-tested smart contract. The WETH contract has also beeen formally verified, which is the highest security standard for smart contracts on Ethereum.
+WETH is generally considered secure because it is based on a simple, battle-tested smart contract. The WETH contract has also been formally verified, which is the highest security standard for smart contracts on Ethereum.
 
 </ExpandableCard>
 
@@ -61,6 +61,6 @@ Besides the [canonical implementation of WETH](https://etherscan.io/token/0xc02a
 
 ## Further reading {#further-reading}
 
-- [WTF is WETH?](https://weth.io/)
+- [WTF is WETH?](https://weth.tkn.eth.limo/)
 - [WETH token information on Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
 - [Formal Verification of WETH](https://zellic.io/blog/formal-verification-weth)

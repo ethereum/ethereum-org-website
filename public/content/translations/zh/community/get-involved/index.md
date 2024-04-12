@@ -19,7 +19,7 @@ lang: zh
 - 观看或参与[核心开发人员电话会议](https://www.youtube.com/@EthereumProtocol)
 - [生态系统支持计划的愿望清单](https://esp.ethereum.foundation/wishlist/) - 适用于工具、文档和基础设施领域，以太坊生态系统支持计划正在积极寻求这些领域的资助申请
 - [Web3Bridge](https://www.web3bridge.com/) - 加入有抱负的 web3 社区，一起积极寻找、培训和支持整个非洲的数百名开发人员和社区成员
-- 加入[以太坊牧猫人组织 Discord](https://discord.io/EthCatHerders)
+- 加入[以太坊猫牧人组织 Discord](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## 研究人员 & 学者 <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
@@ -33,7 +33,7 @@ lang: zh
   - 了解如何成为[以太坊改进提案编辑人员](https://eips.ethereum.org/EIPS/eip-5069)
     - 你现在即可对以太坊改进提案进行同行评审！ 请参阅[打开带有 `e-review` 标签的同行评审](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review)。 在 `discussion-to` 链接上提供技术反馈。
   - 参与[以太坊改进提案治理](https://github.com/ethereum-cat-herders/EIPIP)
-    - 加入[以太坊牧猫人组织 Discord](https://discord.io/EthCatHerders)
+    - 加入[以太坊猫牧人组织 Discord](https://discord.com/invite/Nz6rtfJ8Cu)
   - [关于以太坊改进提案的更多信息](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - 一系列高额研究奖金，让你可以赚取超过 $100,000 USD
 - [Ethresear.ch](https://ethresear.ch) - 以太坊的主要研究论坛，也是世界上最具影响力的加密经济学论坛
@@ -103,6 +103,7 @@ lang: zh
 - [ethereum.org 招聘职位](/about/#open-jobs)
 - [以太坊基金会职位公告栏 (Lever)](https://jobs.lever.co/ethereumfoundation)
 - [以太坊基金会职位公告栏 (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [JobStash](https://jobstash.xyz)
 - [Cryptocurrency 招聘职位](https://cryptocurrencyjobs.co/ethereum/)
 - [Crypto.jobs](https://crypto.jobs/)
 - [ConsenSys 职业机会](https://consensys.net/careers/)

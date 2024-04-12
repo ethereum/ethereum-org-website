@@ -18,7 +18,7 @@ Decentralizovaná věda (DeSci) je směr, jehož cílem je vybudovat veřejnou i
 
 Cílem DeSci je vytvořit ekosystém, v němž jsou vědci motivováni k otevřenému sdílení svého výzkumu a získávání uznání za svou práci a který zároveň umožňuje každému snadný přístup k výzkumu a přispívání do výzkumu. DeSci vychází z myšlenky, že vědecké poznatky by měly být přístupné všem a že proces vědeckého výzkumu by měl být transparentní. DeSci vytváří decentralizovanější a distribuovanější model vědeckého výzkumu, který je odolnější vůči cenzuře a kontrole ze strany centrálních autorit. DeSci věří, že decentralizací přístupu k financování, vědeckým nástrojům a komunikačním kanálům vytvoří prostředí, kde budou moci vzkvétat nové a nekonvenční myšlenky.
 
-Decentralizovaná věda umožňuje rozmanitější zdroje financování (od [DAO](/dao/) [přes kvadratické financování](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) až po crowdfunding a další), přístupnější data a metody a motivaci k reprodukovatelnosti.
+Decentralizovaná věda umožňuje rozmanitější zdroje financování (od [DAO](/dao/) a [kvadratického financování](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) až po crowdfunding a další), přístupnější data a metody a motivaci k reprodukovatelnosti.
 
 ### Juan Benet – Hnutí DeSci
 
@@ -68,7 +68,7 @@ Současný standardní model financování vědy spočívá v tom, že jednotliv
 
 Studie ukázaly, že hodnotící panely pro udělování grantů nedokážou dobře vybírat kvalitní návrhy, protože stejné návrhy poskytnuté různým panelům mají zcela odlišné výsledky. Vzhledem k tomu, že financování je stále vzácnější, koncentrovalo se do menší skupiny zkušenějších výzkumníků s intelektuálně konzervativnějšími projekty. Tento efekt vytvořil hyperkonkurenční prostředí pro financování, posilující nepřirozené podněty a brzdící inovace.
 
-Web3 má potenciál narušit tento nefungující model financování tím, že experimentuje s různými modely podnětů vyvinutými DAO a Web3 obecně. [Retroaktivní financování veřejných statků](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [kvadratické financování](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [řízení DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) a [tokenizované struktury podnětů](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) jsou některé z nástrojů Web3, které by mohly zásadně změnit financování vědy.
+Web3 má potenciál narušit tento nefungující model financování tím, že experimentuje s různými modely podnětů vyvinutými DAO a Web3 obecně. [Retroaktivní financování veřejných statků](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [kvadratické financování](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [řízení DAO](https://www.antler.co/blog/daos-and-web3-governance) a [tokenizované struktury podnětů](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) jsou některé z nástrojů Web3, které by mohly zásadně změnit financování vědy.
 
 ### Vlastnictví a vývoj IP {#ip-ownership}
 
@@ -76,7 +76,7 @@ Duševní vlastnictví (IP) je v tradiční vědě velkým problémem: počínaj
 
 Podobně jako NFT mohou posílat budoucí příjmy z transakcí zpět původnímu tvůrci, můžete vytvořit transparentní řetězce přiřazující ocenění, abyste odměňovali výzkumníky, řídící orgány (jako DAO) nebo dokonce subjekty, jejichž data jsou shromažďována.
 
-[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) mohou také fungovat jako klíč k decentralizovanému datovému úložišti prováděných výzkumných experimentů a spojení do finančního systému NFT a [DeFi](/defi/) (od frakcionace po úvěrové fondy a ocenění). Také nativně umožňují entitám na blockchainu, jako jsou DAO, například [VitaDAO](https://www.vitadao.com/), provádět výzkum přímo na blockchainu. Příchod nezaměnitelných [„soulbound“ tokenů](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) může také sehrát důležitou roli v oblasti DeSci tím, že jednotlivcům umožní prokázat své zkušenosti a kvalifikace spojené s jejich adresou na Ethereu.
+[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) mohou také fungovat jako klíč k decentralizovanému datovému úložišti prováděných výzkumných experimentů a spojení do finančního systému NFT a [DeFi](/defi/) (od frakcionace po úvěrové fondy a ocenění). Také nativně umožňují entitám na blockchainu, jako jsou DAO, například [VitaDAO](https://www.vitadao.com/), provádět výzkum přímo na blockchainu. Důležitou roli v DeSci může hrát také příchod nepřenosných ["soulbound" tokenů](https://vitalik.eth.limo/general/2022/01/26/soulbound.html), které jednotlivcům umožní prokázat své zkušenosti a kvalifikace spojené s jejich Ethereum adresou.
 
 ### Ukládání dat, přístup a architektura {#data-storage}
 
@@ -103,7 +103,7 @@ Podívejte se na níže uvedené projekty a zapojte se do DeSci komunity.
 - [OceanDAO: Financování řízené DAO pro vědu zabývající se daty](https://oceanprotocol.com/dao)
 - [Opscientia: Otevřené decentralizované vědecké pracovní postupy](https://opsci.io/research/)
 - [LabDAO: Skládejte bílkoviny in-silico](https://alphafodl.vercel.app/)
-- [Bio.xyz: Získejte financování pro svůj biotechnologický DAO nebo DeSci projekt](https://www.molecule.to/)
+- [Bio.xyz: Získejte financování pro svůj biotechnologický DAO nebo DeSci projekt](https://www.bio.xyz/)
 - [ResearchHub: Publikujte vědecké výsledky a zapojte se do konverzace s kolegy](https://www.researchhub.com/)
 - [VitaDAO: Získávejte financování prostřednictvím sponzorovaných smluv o výzkumu pro výzkum dlouhověkosti](https://www.vitadao.com/)
 - [Fleming Protocol: Open-source datová ekonomika, která podporuje spolupracující biomedicinské objevy](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

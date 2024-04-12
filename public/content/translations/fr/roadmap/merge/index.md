@@ -4,8 +4,9 @@ description: En savoir plus sur La Fusion - quand le réseau principal Ethereum 
 lang: fr
 template: upgrade
 image: /upgrades/merge.png
+alt:
 summaryPoint1: Le réseau principal Ethereum utilise la preuve d'enjeu, mais cela n'a pas toujours été le cas.
-summaryPoint2: La mise à niveau du mécanisme original de preuve de travail à celui de la preuve d'enjeu s'appelle La Fusion.
+summaryPoint2: La mise à niveau du mécanisme original de preuve de travail à celui de la preuve d'enjeu a été appelé La Fusion.
 summaryPoint3: La Fusion fait référence à la fusion du réseau principal original Ethereum avec une blockchain distincte de preuve d'enjeu appelée la Chaîne phare, qui existe maintenant sous la forme d'une chaîne unique.
 summaryPoint4: La Fusion a réduit la consommation d'énergie d'Ethereum de ~99,95 %.
 ---

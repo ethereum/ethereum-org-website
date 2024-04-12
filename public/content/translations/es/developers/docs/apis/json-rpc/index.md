@@ -165,7 +165,7 @@ Muestra el Keccak-256 (_no_ el SHA3-256 estandarizado) de los datos dados.
 
 **Parámetros**
 
-1. `DATA`: Los datos para convertir en un hash SHA3
+1. `DATA`: los datos por convertir en un hash SHA3
 
 ```js
 params: ["0x68656c6c6f20776f726c64"]
@@ -386,7 +386,7 @@ Muestra la dirección coinbase del cliente.
 
 Ninguno
 
-**Regresa**
+**Retornos**
 
 `DATA`, 20 bytes - la dirección actual de Coinbase.
 
@@ -411,7 +411,7 @@ Muestra el ID de cadena utilizado para firmar transacciones protegidas contra re
 
 Ninguno
 
-**Regresa**
+**Retornos**
 
 `chainId`: valor hexadecimal como una cadena que representa el número entero del ID de cadena actual.
 
@@ -436,7 +436,7 @@ Aparece `true` si el cliente está minando activamente nuevos bloques. Esto solo
 
 Ninguno
 
-**Regresa**
+**Retornos**
 
 `Boolean`: muestra `true` si cliente está minando, de lo contrario aparece `falso`.
 
@@ -461,7 +461,7 @@ Retorna el número de hashes por segundo con los que el nodo está minando. Esto
 
 Ninguno
 
-**Regresa**
+**Retornos**
 
 `QUANTITY`: número de hashes por segundo.
 
@@ -486,7 +486,7 @@ Devuelve un estimado del precio actual por gas en wei. Por ejemplo, el cliente B
 
 Ninguno
 
-**Regresa**
+**Retornos**
 
 `CANTIDAD`: número entero del precio actual de gas en wei.
 
@@ -511,7 +511,7 @@ Retorna una lista de direcciones de propiedad del cliente.
 
 Ninguno
 
-**Regresa**
+**Retornos**
 
 `Array of DATA`, 20 Bytes - direcciones de propiedad del cliente.
 
@@ -536,7 +536,7 @@ Retorna el número de bloque más reciente.
 
 Ninguno
 
-**Regresa**
+**Retornos**
 
 `QUANTITY`: número entero del número de bloque actual en el que se encuentra el cliente.
 
@@ -566,7 +566,7 @@ Retorna el saldo de la cuenta de la dirección dada.
 params: ["0x407d73d8a49eeb85d32cf465507dd71d507100c1", "latest"]
 ```
 
-**Regresa**
+**Retornos**
 
 `QUANTITY`: número entero del saldo actual en wei.
 
@@ -593,7 +593,7 @@ Retorna el valor de una posición de almacenamiento en una dirección dada.
 2. `QUANTITY`: número entero de la posición en el almacenamiento.
 3. `QUANTITY|TAG`: número de bloque entero o la cadena `"latest"`, `"earliest"` o `"pending"` , consulte el [parámetro de bloque predeterminado](/developers/docs/apis/json-rpc/#default-block)
 
-**Regresa**
+**Retornos**
 
 `DATA`: el valor de esta posición de almacenamiento.
 
@@ -620,7 +620,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 Recuperar un elemento del mapa es más difícil. La posición de un elemento de un mapa se calcula con:
 
 ```js
-keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
+keccack(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
 Esto signifíca que para recuperar el almacenamiento en pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] necesitamos calcular la posición con:
@@ -666,7 +666,7 @@ params: [
 ]
 ```
 
-**Regresa**
+**Retornos**
 
 `QUANTITY`: número entero de las transacciones enviadas desde esta dirección.
 
@@ -695,7 +695,7 @@ Muestra el número de transacciones en un bloque de un bloque que coinicide con 
 params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 ```
 
-**Regresa**
+**Retornos**
 
 `QUANTITY`: número entero de transacciones de este bloque.
 
@@ -726,7 +726,7 @@ params: [
 ]
 ```
 
-**Regresa**
+**Retornos**
 
 `QUANTITY`: número entero de transacciones de este bloque.
 
@@ -755,7 +755,7 @@ Muestra el número de tíos en un bloque a partir de un bloque que coincide con 
 params: ["0xb903239f8543d04b5dc1ba6579132b143087c68db1b2168786408fcbce568238"]
 ```
 
-**Regresa**
+**Retornos**
 
 `QUANTITY`: número entero de «tíos» en este bloque.
 
@@ -786,7 +786,7 @@ params: [
 ]
 ```
 
-**Regresa**
+**Retornos**
 
 `QUANTITY`: número entero de «tíos» en este bloque.
 
@@ -819,7 +819,7 @@ params: [
 ]
 ```
 
-**Regresa**
+**Retornos**
 
 `DATA`: el código de una dirección dada.
 
@@ -849,7 +849,7 @@ Nota: La dirección con la que se firma debe estar desbloqueada.
 1. `DATA`, 20 Bytes - dirección
 2. `DATA`, N Bytes - mensaje a firmar
 
-**Regresa**
+**Retornos**
 
 `DATA`: Firma
 
@@ -883,7 +883,7 @@ Firma una transacción que pueda enviarse a la red más adelante usando [eth_sen
 - `data`: `DATA`: el código compilado de un contrato O el hash del método de firma invocado y los parámetros codificados.
 - `nonce`: `QUANTITY`: (opcional) Entero del nonce. Esto permitirá sobrescribir sus propias transacciones pendientes que usen el mismo nonce.
 
-**Regresa**
+**Retornos**
 
 `DATA`, el objeto transaccional codificado con RLP y firmado por la cuenta en específico.
 
@@ -930,7 +930,7 @@ params: [
 ]
 ```
 
-**Regresa**
+**Retornos**
 
 `DATA`, 32 Bytes - El hash de la transacción el hash cero si la transacción no está disponible aún.
 
@@ -963,7 +963,7 @@ params: [
 ]
 ```
 
-**Regresa**
+**Retornos**
 
 `DATA`, 32 Bytes - El hash de la transacción el hash cero si la transacción no está disponible aún.
 
@@ -999,7 +999,7 @@ Ejecuta una nueva llamada de mensaje inmediatamente sin crear una transacción e
 
 2. `QUANTITY|TAG`: número de bloque entero o la cadena `"latest"`, `"earliest"` o `"pending"` , consulte el [parámetro de bloque predeterminado](/developers/docs/apis/json-rpc/#default-block)
 
-**Regresa**
+**Retornos**
 
 `DATA`: el valor de un contrato ejecutado.
 
@@ -1024,7 +1024,7 @@ Genera y retorna el valor estimado de gas necesario para permitir que se complet
 
 Consulte los parámetros [eth_call](#eth_call), excepto que todas las propiedades sean opcionales. Si no se especifica ningún límite de gas, geth usa el límite de gas del bloque pendiente como límite superior. Como resultado, la estimación devuelta podría no ser suficiente para ejecutar la llamada/transacción cuando la cantidad de gas sea mayor que el límite de gas del bloque pendiente.
 
-**Regresa**
+**Retornos**
 
 `QUANTITY`: monto de gas usado.
 
@@ -1057,7 +1057,7 @@ params: [
 ]
 ```
 
-**Regresa**
+**Retornos**
 
 `Object`: Un objeto de bloque, o `null` cuando no se encuentra ningún bloque:
 
@@ -1157,7 +1157,7 @@ Muestra la información acerca de una transacción requerida por el hash de tran
 params: ["0x88df016429689c079f3b2f6ad39fa052532c56795b733da78a91ebe6a713944b"]
 ```
 
-**Regresa**
+**Retornos**
 
 `Object`: un objeto de transacción, o `null` cuando no se encontró la transacción:
 
@@ -1242,8 +1242,8 @@ Muestra información acerca de una transacción por número de bloque y la posic
 
 ```js
 params: [
-  "0x9c47cf", // 10241999
-  "0x24", // 36
+  "0x29c", // 668
+  "0x0", // 0
 ]
 ```
 
@@ -1253,7 +1253,7 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
 ```
 
 Resultado ver [eth_getTransactionByHash](#eth_gettransactionbyhash)

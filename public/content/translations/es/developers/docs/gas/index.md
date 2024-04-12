@@ -55,7 +55,7 @@ Cada bloque tiene una tarifa base que funciona como precio de reserva. Para que 
 La tarifa base se calcula mediante una fórmula que compara el tamaño del bloque anterior (la cantidad de gas usado para todas las transacciones) con el tamaño esperado. La tarifa base aumentará un máximo de 12,5 % por bloque si se supera el tamaño esperado del mismo. Este crecimiento exponencial hace que no sea económicamente rentable que el tamaño de los bloques permanezca elevado indefinidamente.
 
 | Número de bloque | Gas incluido | Incremento de la tarifa | Tarifa de base actual |
-| ---------------- | -----------: | ----------------------: | --------------------: |
+| ---------------- | ------------:| -----------------------:| ---------------------:|
 | 1                |         15 M |                     0 % |              100 gwei |
 | 2                |         30 M |                     0 % |              100 gwei |
 | 3                |         30 M |                  12,5 % |            112,5 gwei |
@@ -70,7 +70,7 @@ Siguiendo la tabla anterior, para crear una transacción en el bloque número 9,
 También cabe saber que es improbable que veamos un pico de incremento de bloques llenos, debido a la velocidad con que la tarifa base aumenta antes de que este se llene.
 
 | Número de bloque | Gas incluido | Incremento de comisión | Comisión base actual |
-| ---------------- | -----------: | ---------------------: | -------------------: |
+| ---------------- | ------------:| ----------------------:| --------------------:|
 | 30               |         30 M |                 12,5 % |         2.705,6 gwei |
 | ...              |          ... |                 12,5 % |                  ... |
 | 50               |         30 M |                 12,5 % |        28.531,3 gwei |
@@ -152,4 +152,4 @@ Si desea supervisar las tarifas de gas, para poder enviar sus ETH por menos, pue
 - [Prueba de participación frente a prueba de trabajo](https://blockgeeks.com/guides/proof-of-work-vs-proof-of-stake/)
 - [Estrategias de optimización de gas para desarrolladores](https://www.alchemy.com/overviews/solidity-gas-optimization)
 - [Documentacion sobre EIP-1559](https://eips.ethereum.org/EIPS/eip-1559).
-- [ Recursos de Tim Beiko sobre EIP-1559](https://hackmd.io/@timbeiko/1559-resources).
+- [ Recursos de Time Beiko sobre EIP-1559](https://hackmd.io/@timbeiko/1559-resources).

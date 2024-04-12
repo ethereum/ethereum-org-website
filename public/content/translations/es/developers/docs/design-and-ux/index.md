@@ -77,7 +77,7 @@ Involúcrese en organizaciones profesionales impulsadas por la comunidad o únas
 
 ## Sistemas de diseño {#design-systems}
 
-- [Optimism Design](https://www.figma.com/@oplabs) (Figma)
+- [Optimism Design](https://www.figma.com/@optimism) (Figma)
 - [Sistema de diseño de Ethereum.org](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, un sistema de diseño para Web3 de Polygon](https://finity.polygon.technology/) (Figma)
 - [Sitema de diseño para ENS](https://thorin.ens.domains/)
