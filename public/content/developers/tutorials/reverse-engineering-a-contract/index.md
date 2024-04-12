@@ -660,7 +660,7 @@ This is how a contract transfers its own ETH to another address (contract or ext
 
 The bottom two lines tell us that Storage[2] is also a contract that we call. If we [look at the constructor transaction](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange) we see that this contract is [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), a Wrapped Ether contract [whose source code has been uploaded to Etherscan](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code).
 
-So it looks like the contracts attempts to send ETH to `_param2`. If it can do it, great. If not, it attempts to send [WETH](https://weth.io/). If `_param2` is an externally owned account (EOA) then it can always receive ETH, but contracts can refuse to receive ETH. However, WETH is ERC-20 and contracts can't refuse to accept that.
+So it looks like the contracts attempts to send ETH to `_param2`. If it can do it, great. If not, it attempts to send [WETH](https://weth.tkn.eth.limo/). If `_param2` is an externally owned account (EOA) then it can always receive ETH, but contracts can refuse to receive ETH. However, WETH is ERC-20 and contracts can't refuse to accept that.
 
 ```python
   ...

@@ -230,6 +230,16 @@ const WalletTable = ({
   // Context API
   const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
 
+  const handleStickyFiltersClick = () => {
+    onOpen()
+
+    trackCustomEvent({
+      eventCategory: "MobileFilterToggle",
+      eventAction: "Tap MobileFilterToggle - sticky",
+      eventName: "show mobile filters true",
+    })
+  }
+
   return (
     <Container>
       <WalletContentHeader>
@@ -243,7 +253,7 @@ const WalletTable = ({
               color="primary.base"
               textTransform="uppercase"
               cursor="pointer"
-              onClick={onOpen}
+              onClick={handleStickyFiltersClick}
               as="button"
             >
               {`${t("page-find-wallet-filters")} (${
@@ -318,6 +328,14 @@ const WalletTable = ({
                 eventAction: `More info wallet`,
                 eventName: `More info ${wallet.name}`,
               })
+          }
+
+          const handleWalletWebsiteClick = (walletName: string) => {
+            trackCustomEvent({
+              eventCategory: "WalletExternalLinkList",
+              eventAction: "Tap main button",
+              eventName: `${walletName}`,
+            })
           }
 
           return (
@@ -420,6 +438,9 @@ const WalletTable = ({
                               w="auto"
                               isExternal
                               size="sm"
+                              onClick={() =>
+                                handleWalletWebsiteClick(wallet.name)
+                              }
                             >
                               {t("page-find-wallet-visit-website")}
                             </ButtonLink>
@@ -446,6 +467,7 @@ const WalletTable = ({
                       w="100%"
                       isExternal
                       size="sm"
+                      onClick={() => handleWalletWebsiteClick(wallet.name)}
                     >
                       {t("page-find-wallet-visit-website")}
                     </ButtonLink>

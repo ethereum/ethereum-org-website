@@ -28,7 +28,7 @@ More on [Dagger-Hashimoto](/developers/docs/consensus-mechanisms/pow/mining/mini
 
 ## Ethash {#ethash}
 
-Ethash was the mining algorithm that was actually used on the real Ethereum Mainnet under the now deprecated proof-of-work architecture. Ethash was effectively a new name given to a specific version of Dagger-Hashimoto after the algorithm got significantly updated, whilst still inheriting the fundamental principles of its predecessor. Ethereum Mainnet only ever used Ethash - Dagger Hashimoto was an R&D version of the mining algorithm that was superseded before mining started on Ethereum mainnet.
+Ethash was the mining algorithm that was actually used on the real Ethereum Mainnet under the now deprecated proof-of-work architecture. Ethash was effectively a new name given to a specific version of Dagger-Hashimoto after the algorithm got significantly updated, whilst still inheriting the fundamental principles of its predecessor. Ethereum Mainnet only ever used Ethash - Dagger Hashimoto was an R&D version of the mining algorithm that was superseded before mining started on Ethereum Mainnet.
 
 [More on Ethash](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash).
 
