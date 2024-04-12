@@ -662,7 +662,7 @@ Bir sözleşme kendi ETH'sini başka bir adrese (sözleşme ya da harici olarak 
 
 En alttaki iki satır, bize Storage[2]'ın da çağrı yaptığımız bir sözleşme olduğunu söyler. [Oluşturucu işlemine bakarsak](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange) bu sözleşmenin [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), [kaynak kodu Etherscan'e yüklenmiş bir Paketlenmiş Ether sözleşmesi olduğunu görürüz](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code).
 
-Sözleşme, `_param2`'ye ETH göndermeye çalışıyor gibi görünüyor. Eğer yapabilirse, çok iyi. Yapamazsa, [WETH](https://weth.io/) göndermeye çalışacak. Eğer `_param2` dışarıdan sahip olunan hesap (EOA) ise, her zaman ETH alabilir, fakat sözleşmeler ETH almayı reddedebilir. Bununla birlikte, WETH bir ERC-20'dir ve sözleşmeler bunu kabul etmeyi reddedemez.
+Sözleşme, `_param2`'ye ETH göndermeye çalışıyor gibi görünüyor. Eğer yapabilirse, çok iyi. Yapamazsa, [WETH](https://weth.tkn.eth.limo/) göndermeye çalışacak. Eğer `_param2` dışarıdan sahip olunan hesap (EOA) ise, her zaman ETH alabilir, fakat sözleşmeler ETH almayı reddedebilir. Bununla birlikte, WETH bir ERC-20'dir ve sözleşmeler bunu kabul etmeyi reddedemez.
 
 ```python
   ...

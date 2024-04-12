@@ -87,7 +87,7 @@ Now let's look at a better solution.
 
 ## Let me introduce you to GraphQL {#let-me-introduce-to-you-graphql}
 
-First let's talk about GraphQL, originally designed and implemented by Facebook. You might be familiar with the traditional Rest API model. Now imagine instead you could write a query for exactly the data that you wanted:
+First let's talk about GraphQL, originally designed and implemented by Facebook. You might be familiar with the traditional REST API model. Now imagine instead you could write a query for exactly the data that you wanted:
 
 ![GraphQL API vs. REST API](./graphql.jpg)
 

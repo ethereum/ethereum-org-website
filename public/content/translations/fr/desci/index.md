@@ -76,7 +76,7 @@ La propriété intellectuelle (PI) pose problème dans la science traditionnelle
 
 De la même manière que les NFT peuvent transmettre les recettes de futures transactions au créateur initial, vous pouvez établir des chaînes d'attribution de valeur transparentes pour récompenser les chercheurs, les organes directeurs (les DAO par exemple), ou même les personnes dont les données sont collectées.
 
-Les [NFT liés à la PI](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) peuvent également servir de clé d'accès à un référentiel de données décentralisé relatif aux expériences de recherche en cours, et puiser dans les NFT et le financement de la [DeFi](/defi/) (de la fractionalisation aux groupes de prêt et à l'estimation de la valeur). Ils permettent également aux entités nativement en chaîne, telles que les DAO comme [VitaDAO](https://www.vitadao.com/), de mener des recherches directement en chaîne. Les [jetons « soulbound » non transférables](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) peuvent également jouer un rôle important en matière de DeSci en permettant aux individus d'apporter la preuve de leur expérience et leurs identifiants liés à leur adresse Ethereum.
+Les [NFT liés à la PI](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) peuvent également servir de clé d'accès à un référentiel de données décentralisé relatif aux expériences de recherche en cours, et puiser dans les NFT et le financement de la [DeFi](/defi/) (de la fractionalisation aux groupes de prêt et à l'estimation de la valeur). Ils permettent également aux entités nativement en chaîne, telles que les DAO comme [VitaDAO](https://www.vitadao.com/), de mener des recherches directement en chaîne. Les [jetons « soulbound »](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)non transférables peuvent également jouer un rôle important en matière de DeSci en permettant aux individus d'apporter la preuve de leur expérience et leurs identifiants liés à leur adresse Ethereum.
 
 ### Stockage de données, accès et architecture {#data-storage}
 
@@ -103,7 +103,7 @@ Explorer les projets et rejoindre la communauté DeSci.
 - [OceanDAO : source de financement régi par une DAO pour les études scientifiques liées aux données](https://oceanprotocol.com/dao)
 - [Opscientia : flux de travaux scientifiques décentralisés ouverts](https://opsci.io/research/)
 - [LabDAO : plier une protéine in-silico](https://alphafodl.vercel.app/)
-- [Bio.xyz : financer votre projet DAO ou desci biotech](https://www.molecule.to/)
+- [Bio.xyz : financer votre projet DAO ou desci biotech](https://www.bio.xyz/)
 - [Research Hub: publier un résultat scientifique et engager une conversation avec les pairs](https://www.researchhub.com/)
 - [VitaDAO : recevoir des fonds pour mener des recherches sur la longévité par le biais d'accords de recherche sponsorisés](https://www.vitadao.com/)
 - [Protocole Fleming : économie de données open-source qui alimente la découverte biomédicale collaborative](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)

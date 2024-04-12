@@ -261,7 +261,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Decentralized RPC Protocol and Marketplace
     - 1M Requests Per Day Free Tier (per endpoint, max 2)
-    - [Public Endpoints](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [Public Endpoints](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ Program (if you need more than 1M requests per day)
     - 15+ Blockchains Supported
     - 6400+ Nodes earning POKT for serving applications

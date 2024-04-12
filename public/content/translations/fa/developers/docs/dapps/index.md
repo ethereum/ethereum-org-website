@@ -51,7 +51,7 @@ lang: fa
 
 **Scaffold-ETH _- به‌سرعت Solidity را با استفاده از یک فرانت‌اند که با قرارداد هوشمندتان سازگار است آزمایش کنید._**
 
-- [گیت‌هاب](https://github.com/austintgriffith/scaffold-eth)
+- [گیت‌هاب](https://github.com/scaffold-eth/scaffold-eth-2)
 - [dapp نمونه](https://punkwallet.io/)
 
 **برنامه‌ی اتریومی بسازید _- با یک فرمان برنامه‌های بر پایه‌ی اتریوم بسازید._**

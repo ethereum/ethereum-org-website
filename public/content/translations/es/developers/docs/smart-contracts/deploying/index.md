@@ -12,7 +12,7 @@ Para implementar un contrato inteligente, envías una transacción de Ethereum q
 
 Deberías entender las [redes Ethereum](/developers/docs/networks/), [las transacciones](/developers/docs/transactions/) y la [anatomía de los contratos inteligentes](/developers/docs/smart-contracts/anatomy/) antes de implementar contratos inteligentes.
 
-Implementar un contrato también cuesta Ether (ETH), ya que se almacenan en la cadena de bloques, así que debería estar familiarizado con el [gas y las comisiones](/developers/docs/gas/) en Ethereum.
+Implementar un contrato también cuesta Ether (ETH), ya que se almacenan en la cadena de bloques, así que le recomendamos familiarizarse con el [gas y las comisiones](/developers/docs/gas/) en Ethereum.
 
 Finalmente, necesitará compilar su contrato antes de implementarlo, así que asegúrese de leer acerca de la [compilación de contratos inteligentes](/developers/docs/smart-contracts/compiling/).
 
@@ -20,16 +20,14 @@ Finalmente, necesitará compilar su contrato antes de implementarlo, así que as
 
 ### Lo que necesitarás {#what-youll-need}
 
-- El código de bytes de su contrato: esto se genera mediante la [compilación](/developers/docs/smart-contracts/compiling/).
+- El bytecode de su contrato: se genera mediante la [compilación](/devElopers/docs/smart-contracts/compiling/).
 - Ether para gas: Tú pondrás tu límite de gas como cualquier otra transacción; por eso, debes tener en cuenta que la implementación de un contrato inteligente de Ethereum necesitará mucho más gas que una transferencia simple de ETH.
-- un script o plugin para implementación.
-- acceso a un [nodo de Ethereum](/developers/docs/nodes-and-clients/), ya sea ejecutando el suyo propio, conectandose a un nodo público, o mediante una llave API usando un [servicio de nodo](/developers/docs/nodes-and-clients/nodes-as-a-service/) como Infura o Alchemy
+- un script o complemento de implementación
+- acceso a un [nodo de Ethereum](/developers/docs/nodes-and-clients/), ya sea ejecutando el suyo propio, conectándose a un nodo público o mediante una clave de API usando un [servicio de nodo](/developers/docs/nodes-and-clients/nodes-as-a-service/)
 
 ### Pasos para implementar un contrato inteligente {#steps-to-deploy}
 
-Los pasos específicos involucrados dependerán de las herramientas que utilice. Para dar un ejemplo, consulte [Documentacion de Hardhat sobre cómo implementar sus contratos](https://hardhat.org/guides/deploying.html) o [Documentacion de Truffle sobre las redes e implementación de aplicaciones](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment). Estas son dos de las más populares herramientas para la implementación de contratos inteligentes, que implican escribir un script para manejar los pasos de la implementación.
-
-Una vez implementado, su contrato tendrá una dirección de Ethereum como otras [cuentas](/developers/docs/accounts/).
+Los pasos específicos involucrados dependerán del marco de desarrollo en cuestión. Por ejemplo, puede consultar la documentación de Hardhat[ sobre la implementación de sus contratos](https://hardhat.org/guides/deploying.html) o la documentación de [Foundry sobre la implementación y verificación de un contrato inteligente](https://book.getfoundry.sh/forge/deploying). Una vez implementado, su contrato tendrá una dirección de Ethereum como otras [cuentas](/developers/docs/accounts/) y se puede verificar utilizando [herramientas de verificación de código fuente](/developers/docs/smart-contracts/verifying/#source-code-verification-tools).
 
 ## Herramientas relacionadas {#related-tools}
 
@@ -37,25 +35,19 @@ Una vez implementado, su contrato tendrá una dirección de Ethereum como otras 
 
 - [Remix](https://remix.ethereum.org)
 
-**Tenderly: _plataforma de desarrollo Web3 que proporciona bloques de desarrollo de depuración, observabilidad y infraestructura para desarrollar, probar, monitorear y operar contratos inteligentes_.**
+**Tenderly: _plataforma de desarrollo web3 que proporciona bloques de desarrollo de depuración, observabilidad y infraestructura para desarrollar, probar, monitorear y operar contratos inteligentes_.**
 
 - [tenderly.co](https://tenderly.co/)
 - [Documentación](https://docs.tenderly.co/)
 - [GitHub](https://github.com/Tenderly)
 - [Discord](https://discord.gg/eCWjuvt)
 
-**Hardhat: _un entorno de desarrollo para compilar, implementar, probar y depurar su software de Ethereum_.**
+**Hardhat: _entorno de desarrollo para compilar, implementar, probar y depurar su software de Ethereum_.**
 
 - [hardhat.org](https://hardhat.org/getting-started/)
 - [Documentos sobre cómo implementar sus contratos](https://hardhat.org/guides/deploying.html)
 - [GitHub](https://github.com/nomiclabs/hardhat)
 - [Discord](https://discord.com/invite/TETZs2KK4k)
-
-**Truffle:** **_Un entorno de desarrollo y de pruebas, un proceso de creación y otras herramientas._**
-
-- [trufflesuite.com](https://www.trufflesuite.com/)
-- [Documentos sobre redes e implementación de aplicaciones](https://www.trufflesuite.com/docs/truffle/advanced/networks-and-app-deployment)
-- [GitHub](https://github.com/trufflesuite/truffle)
 
 **thirdweb:_ implemente fácilmente cualquier contrato en cualquier cadena compatible con EVM, usando un solo comando_.**
 
@@ -73,7 +65,7 @@ Una vez implementado, su contrato tendrá una dirección de Ethereum como otras 
 - [https://docs.openzeppelin.com/learn/deploying-and-interacting](https://docs.openzeppelin.com/learn/deploying-and-interacting) - _OpenZeppelin_
 - [Implemente sus contratos con Hardhat:](https://hardhat.org/guides/deploying.html) _Nomic Labs_
 
-_¿Conoces algún recurso en la comunidad que te haya servido de ayuda? Edita esta página y añádelo._
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
 ## Temas relacionados {#related-topics}
 

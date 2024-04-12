@@ -18,7 +18,6 @@ lang: fa
 - [MetaCartel‏](https://www.metacartel.org/grants/) - _توسعه‌ی Dapp، ساخت DAO‏_
 - [Moloch DAO](https://www.molochdao.com/) - _حریم خصوصی، مقیاس‌پذیری لایه‌ی 2، امنیت کاربر و غیره_
 - [ کمک‌های مالی DAO‏](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _صفحه‌گسترده Google از سازمان‌های ارائه‌دهنده‌ی کمک‌های مالی_
-- [‏Crunchbase برای کمک‌های مالی Web3‏](https://www.cryptoneur.xyz/web3-grants)-_کمک‌های مالی را بر اساس دسته، کاربرد، مبلغ، و غیره فیلتر و جستجو کنید. کمک کنید که دیگران کمک مالی مناسب خود را بهتر بیابند._
 - [کمک‌های مالی تحصیلی](https://esp.ethereum.foundation/academic-grants)-_کمک‌های مالی برای تحقیقات آکادمیک مربوط به اتریوم_
 - [‏Blockworks Grantfarm‏](https://blockworks.co/grants/programs) - _‏Blockworks یک مجموعه جامع از تمامی کمک‌های مالی، RFPها، و پاداش‌های گزارش اشکالات._
 
@@ -35,7 +34,6 @@ lang: fa
 - [برنامه کمک‌های مالی شبکه SKALE‏](https://skale.space/developers#grants) - _[اکوسیستم شبکه](https://skale.space/)‏SKALE‏_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _اکوسیستم [‏The Graph‏](https://thegraph.com/)_
 - [برنامه کمک‌های مالی Uniswap‏](https://www.uniswapfoundation.org/apply-for-a-grant) - _[جامعه](https://uniswap.org/)‏Uniswap‏_
-- [کمک‌های مالی Web3‏](https://web3grants.net) - _یک فهرست گسترده از برنامه‌های کمک‌های مالی مرتبط با web3/رمزارز_
 
 ## کمک مالی درجه‌ی دوم {#quadratic-funding}
 

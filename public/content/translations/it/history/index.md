@@ -27,11 +27,11 @@ Stai cercando i prossimi aggiornamenti di protocollo? [Scopri di più sui prossi
 
 ## 2023 {#2023}
 
-### Shanghai {#shanghai}
+### Shanghai-Capella ("Shapella") {#shapella}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### Riepilogo {#shanghai-summary}
+#### Riepilogo di Shanghai {#shanghai-summary}
 
 L'aggiornamento di Shanghai ha portato i prelievi di staking al livello d'esecuzione. Insieme all'aggiornamento Capella, questo abiliterà i blocchi ad accettare le operazioni di prelievo, che consentono agli staker di prelevare i propri ETH dalla Beacon Chain al livello d'esecuzione.
 
@@ -49,13 +49,7 @@ L'aggiornamento di Shanghai ha portato i prelievi di staking al livello d'esecuz
 
 - [Leggi le specifiche dell'aggiornamento Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### Capella {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### Riepilogo {#capella-summary}
+#### Riepilogo di Capella {#capella-summary}
 
 L'aggiornamento di Capella è il terzo aggiornamento principale al livello del consenso (Beacon Chain) e ha abilitato i prelievi di staking. Capella è avvenuto contemporaneamente all'aggiornamento del livello di esecuzione di Shanghai, e ha reso disponibili le funzioni di prelievo da staking.
 
@@ -310,7 +304,8 @@ La diramazione Instanbul:
 
 La diramazione Constantinople:
 
-- Ha assicurato che la blockchain non si bloccasse prima dell'[implementazione del Proof-of-Stake](#beacon-chain-genesis).
+- Ha ridotto le ricompense del [mining](/developers/docs/consensus-mechanisms/pow/mining/) dei blocchi da 3 a 2 ETH.
+- Ha assicurato che la blockchain non si bloccasse prima dell'[implementazione del proof-of-stake](#beacon-chain-genesis).
 - Ha ottimizzato il costo del [carburante](/glossary/#gas) di certe azioni nell'[EVM](/developers/docs/ethereum-stack/#ethereum-virtual-machine).
 - Ha aggiunto la capacità di interagire con gli indirizzi non ancora creati.
 
@@ -322,7 +317,7 @@ La diramazione Constantinople:
   <li><a href="https://eips.ethereum.org/EIPS/eip-145">EIP-145</a> – <em>ottimizza i costi di certe azioni su catena.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1014">EIP-1014</a> – <em>consente di interagire con gli indirizzi che devono ancora essere creati.</em></li>
   <li><a href="https://eips.ethereum.org/EIPS/eip-1052">EIP-1052</a> – <em>ottimizza i costi di certe azioni su catena.</em></li>
-  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>si assicura che la blockchain non si congeli prima del proof-of-stake.</em></li>
+  <li><a href="https://eips.ethereum.org/EIPS/eip-1234">EIP-1234</a> – <em>assicura che la blockchain non si congeli prima del proof-of-stake e riduce la ricompensa per blocco da 3 a 2 ETH.</em></li>
 </ul>
 
 </ExpandableCard>
@@ -422,7 +417,7 @@ La diramazione Tangerine Whistle è stata la prima risposta agli attacchi di den
 
 #### Riepilogo {#dao-fork-summary}
 
-La diramazione OAD è stata pensata come risposta all'[attacco OAD del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/), durante il quale un contratto [OAD](/glossary/#dao) non sicuro fu svuotato di oltre 3,6 milioni di ETH in un solo attacco. La diramazione ha spostato i fondi dal contratto difettoso a un [nuovo contratto](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) con una sola funzione: il prelievo. Chi aveva perso fondi ha potuto prelevare 1 ETH per ogni 100 token OAD nel proprio portafoglio.
+La diramazione OAD è stata pensata come risposta all'[attacco OAD del 2016](https://www.coindesk.com/learn/understanding-the-dao-attack/), durante il quale un contratto [OAD](/glossary/#dao) non protetto è stato privato di oltre 3,6 milioni di ETH in un solo attacco. La diramazione ha spostato i fondi dal contratto difettoso a un [nuovo contratto](https://etherscan.io/address/0xbf4ed7b27f1d666546e30d74d50d173d20bca754) con una sola funzione: il prelievo. Chi aveva perso fondi ha potuto prelevare 1 ETH per ogni 100 token OAD nel proprio portafoglio.
 
 Questa iniziativa è stata votata dalla community di Ethereum. Ogni titolare di ETH ha potuto votare tramite una transazione su [una piattaforma di voto](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). La decisione di creare la diramazione ha ottenuto oltre l'85% dei voti.
 

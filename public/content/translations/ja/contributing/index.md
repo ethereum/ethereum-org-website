@@ -73,7 +73,7 @@ GitHub リポジトリには、オープンソースに初めて触れるデベ�
 ### 申請方法 {#how-to-claim}
 
 1. [Discord サーバー](https://discord.gg/ethereum-org)に参加します。
-2. `#🥇 | poaps`[チャンネル](https://discord.com/channels/714888181740339261/804005643211898911)にあなたの投稿へのリンクを貼り付けます。
+2. `#🥇 | proof-of-contribution`[チャンネル](https://discord.com/channels/714888181740339261/1212737737916948530)にあなたの投稿へのリンクを貼り付けます。
 3. 出席証明プロトコル(POAP)へのリンクが送られるまでお待ちください。
 4. 出席証明プロトコル(POAP)を受け取ります。
 
