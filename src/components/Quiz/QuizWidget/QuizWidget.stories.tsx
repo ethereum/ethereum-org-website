@@ -24,6 +24,13 @@ type QuizWidgetType = typeof StandaloneQuizWidget
 const meta = {
   title: "QuizWidget",
   component: StandaloneQuizWidget,
+  argTypes: {
+    quizKey: {
+      table: {
+        disable: true,
+      },
+    },
+  },
 } satisfies Meta<QuizWidgetType>
 
 export default meta
