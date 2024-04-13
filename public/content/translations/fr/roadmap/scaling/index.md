@@ -45,3 +45,5 @@ Cette seconde étape est nommée [« Danksharding »](/roadmap/danksharding/). I
 ## Progrès actuels {#current-progress}
 
 La solution Proto-Danksharding sera probablement l’un des premiers éléments de la feuille de route à mettre en œuvre. Les étapes de calcul décentralisé nécessaires à sa mise en place sont déjà entamées, et plusieurs clients ont établi des prototypes qui gèrent les données blob. Or, la mise en œuvre complète de la solution Danksharding reste peu évidente avant plusieurs années, tant celle-ci dépend de la réalisation de plusieurs autres éléments de la feuille de route devant être concrétisés en première instance. La décentralisation de l'infrastructure de rollup sera probablement un processus progressif : il existe de nombreux rollups différents qui construisent des systèmes légèrement différents et seront entièrement décentralisés à des rythmes différents.
+
+<QuizWidget quizKey="scaling" />

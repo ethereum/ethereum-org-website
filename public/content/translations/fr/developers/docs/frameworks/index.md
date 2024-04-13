@@ -52,7 +52,7 @@ Avant de plonger dans les infrastructures, nous vous recommandons de commencer p
 
 **Scaffold-eth -** **_Les composants Ethers.js + Hardhat + React et les boucles pour web3 : tout ce dont vous avez besoin pour commencer à bâtir des applications décentralisées alimentées par des contrats intelligents._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Probablement -** **_Plateforme de développement Web3 qui permet aux développeurs de blockchain de construire, tester, déboger, surveiller et gérer des contrats intelligents et améliorer la DApp UX._**
 

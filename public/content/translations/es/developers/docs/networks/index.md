@@ -38,7 +38,7 @@ Las dos redes públicas de prueba que los desarrolladores de clientes están man
 
 #### Sepolia {#sepolia}
 
-\*\*\*\*Sepolia es la red de prueba predeterminada recomendada para el desarrollo de aplicaciones. La red Sepolia utiliza un conjunto de validadores autorizados. Es bastante nueva, lo que significa que su estado e historia son bastante limitados. Esto significa que la red se sincroniza rápidamente y que ejecutar un nodo requiere menos almacenamiento. Esto es útil para los usuarios que quieren activar rápidamente un nodo e interactuar directamente con la red.
+****Sepolia es la red de prueba predeterminada recomendada para el desarrollo de aplicaciones. La red Sepolia utiliza un conjunto de validadores autorizados. Es bastante nueva, lo que significa que su estado e historia son bastante limitados. Esto significa que la red se sincroniza rápidamente y que ejecutar un nodo requiere menos almacenamiento. Esto es útil para los usuarios que quieren activar rápidamente un nodo e interactuar directamente con la red.
 
 - Conjunto de validadores cerrado, controlado por el cliente y equipos de prueba
 - Nueva red de prueba, menos aplicaciones implementadas que otras redes de prueba
@@ -56,10 +56,11 @@ Las dos redes públicas de prueba que los desarrolladores de clientes están man
 - [QuickNode Sepolia Faucet](https://faucet.quicknode.com/drip)
 - [Grabteeth](https://grabteeth.xyz/)
 - [PoW faucet](https://sepolia-faucet.pk910.de/)
-- [Coinbase Wallet Faucet | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
+- [Faucet de cartera Coinbase | Sepolia](https://coinbase.com/faucets/ethereum-sepolia-faucet)
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Faucet Infura Sepolia](https://www.infura.io/faucet)
 - [Faucet Chainstack Sepolia](https://faucet.chainstack.com/sepolia-faucet)
+- [Faucet de red de prueba | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(soporte a largo plazo)_ {#goerli}
 

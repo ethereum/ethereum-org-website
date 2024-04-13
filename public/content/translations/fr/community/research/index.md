@@ -69,7 +69,7 @@ La couche d'exécution s'occupe de l'exécution des transactions, de l'exécutio
 - [Optimisation des bases de données](https://github.com/ledgerwatch/erigon/blob/devel/docs/programmers_guide/db_faq.md)
 - [Expiration de l'état](https://notes.ethereum.org/@vbuterin/state_expiry_eip)
 - [Vers l'expédition de l'état](https://hackmd.io/@vbuterin/state_expiry_paths)
-- [Proposition pour l'expiration Verkel et d'état](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
+- [Proposition pour l'expiration Verkele et d'état](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Gestion de l'historique](https://eips.ethereum.org/EIPS/eip-4444)
 - [Arbres Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Échantillonnage de la disponibilité des données](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)

@@ -79,7 +79,7 @@ Get involved in professional community-driven organizations or join design group
 
 ## Design Systems {#design-systems}
 
-- [Optimism Design](https://www.figma.com/@oplabs) (Figma)
+- [Optimism Design](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.org Design system](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, a design system by Polygon](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
 - [Kleros Design System](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)

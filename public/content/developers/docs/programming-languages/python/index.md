@@ -51,13 +51,10 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 - [Web3.py](https://github.com/ethereum/web3.py) - _Python library for interacting with Ethereum_
 - [Vyper](https://github.com/ethereum/vyper/) - _Pythonic Smart Contract Language for the EVM_
 - [Ape](https://github.com/ApeWorX/ape) - _The smart contract development tool for Pythonistas, Data Scientists, and Security Professionals_
-- [Brownie](https://github.com/eth-brownie/brownie) - _Python framework for deploying, testing and interacting with Ethereum smart contracts_
 - [py-evm](https://github.com/ethereum/py-evm) - _implementation of the Ethereum Virtual Machine_
 - [eth-tester](https://github.com/ethereum/eth-tester) - _tools for testing Ethereum-based applications_
 - [eth-utils](https://github.com/ethereum/eth-utils/) - _utility functions for working with Ethereum related codebases_
 - [py-solc-x](https://pypi.org/project/py-solc-x/) - _Python wrapper around the solc solidity compiler with 0.5.x support_
-- [py-wasm](https://github.com/ethereum/py-wasm) - _Python implementation of the web assembly interpreter_
-- [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementation of the Ethereum P2P stack_
 - [pymaker](https://github.com/makerdao/pymaker) - _Python API for Maker contracts_
 - [siwe](https://github.com/spruceid/siwe-py) - _Sign in with Ethereum (siwe) for Python_
 - [Web3 DeFi for Ethereum integrations](https://github.com/tradingstrategy-ai/web3-ethereum-defi) - _A Python package with ready integrations for ERC-20, Uniswap and other popular projects_
@@ -66,6 +63,9 @@ Need a more basic primer first? Check out [ethereum.org/learn](/learn/) or [ethe
 
 - [Trinity](https://github.com/ethereum/trinity) - _Ethereum Python client_
 - [Mamba](https://github.com/arjunaskykok/mamba) - _framework to write, compile, and deploy smart contracts written in Vyper language_
+- [Brownie](https://github.com/eth-brownie/brownie) - _Python framework for deploying, testing and interacting with Ethereum smart contracts_
+- [pydevp2p](https://github.com/ethereum/pydevp2p) - _implementation of the Ethereum P2P stack_
+- [py-wasm](https://github.com/ethereum/py-wasm) - _Python implementation of the web assembly interpreter_
 
 Looking for more resources? Check out [ethereum.org/developers](/developers/).
 
@@ -86,4 +86,4 @@ The following Ethereum-based projects use tools mentioned on this page. The rela
 
 ## Other aggregated lists {#other-aggregated-lists}
 
-The Vyper wiki has an [incredible list of resources for Vyper](https://github.com/ethereum/vyper/wiki/Vyper-tools-and-resources)
+The Vyper wiki has an [incredible list of resources for Vyper](https://github.com/vyperlang/vyper/wiki/Vyper-tools-and-resources)

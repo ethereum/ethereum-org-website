@@ -1242,8 +1242,8 @@ Restituisce informazioni su una transazione per hash del blocco e posizione dell
 
 ```js
 params: [
-  "0x29c", // 668
-  "0x0", // 0
+  "0x9c47cf", // 10241999
+  "0x24", // 36
 ]
 ```
 
@@ -1253,7 +1253,7 @@ params: [
 
 ```js
 // Richiesta
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
 Risultato vedi [eth_getBlockByHash](#eth_gettransactionbyhash)

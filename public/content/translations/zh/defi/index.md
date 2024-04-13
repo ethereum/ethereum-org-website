@@ -47,7 +47,7 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 | 交易时间 24 小时不间断。                    | 根据人工作息时间制定交易时间。                      |
 | 建立在透明基础上 - 任何人都可以查看产品数据并检查系统运行状况。 | 金融机构是闭门造车：你不能要求查看他们的贷款历史，管理资产的记录，等等。 |
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   探索去中心化金融应用程序
 </ButtonLink>
 
@@ -65,7 +65,7 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>如果你不熟悉以太坊，请尝试我们推荐的去中心化金融应用程序。</div>
-  <ButtonLink to="/dapps/?category=finance#explore">
+  <ButtonLink to="/dapps/?category=finance">
     探索去中心化金融应用程序
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ summaryPoint3: 基于开源技术，任何人都可以来编程。
 
 作为一个区块链，以太坊设计用于让用户在全球范围内安全地发送交易。 与比特币一样，以太坊使得向世界各地发送资金就像发送电子邮件一样容易。 只需从钱包中输入收款人的 [ENS 名称](/nft/#nft-domains)（如 bob.eth）或他们的帐户地址，你的付款（通常）将在几分钟内直接到达对方帐户。 要发送或接收付款，你将需要一个[钱包](/wallets/)。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   查看支付 dapp
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 - 点对点，意味着借款人将直接从特定贷款人那里借款。
 - 基于资金池，贷款人向借款人可以借贷的资金池提供资金（流动性）。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   查看借款 dapp
 </ButtonLink>
 
@@ -183,7 +183,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 - 你的 aDai 将根据利率增加，你可以看到钱包里的余额在增长。 根据 APR，你的钱包余额在几天甚至几小时后会显示为 100.1234 这样的数字。
 - 你可以随时提取与 aDai 余额等额的普通 Dai。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   查看借款 dapp
 </ButtonLink>
 
@@ -211,7 +211,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 例如，如果你想使用无损彩票 PoolTogether（如上所述），则需要类似 Dai 或 USDC 的代币。 DEX 允许你将以太币换成这些代币，并在完成交易后再换回来。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   查看代币兑换
 </ButtonLink>
 
@@ -223,7 +223,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 使用中心化交易所时，你必须在交易前存入资产，并相信交易所会妥善处理这些资产。 当你存入资产时，它们会面临风险，因为中心化交易所对黑客来说是诱人目标。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   查看更多交易 dapp
 </ButtonLink>
 
@@ -235,7 +235,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 一个很好的示例是[去中心化金融指数基金](https://defipulse.com/blog/defi-pulse-index/)。 这是一支自动再平衡基金，可确保你的投资组合总是包含[市值最高的去中心化金融代币](https://www.coingecko.com/en/defi)。 你无需管理任何细节，并且可以随时从基金中提款。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   查看投资去中心化应用程序
 </ButtonLink>
 
@@ -249,7 +249,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 - 公开透明，募捐者可以证明已经筹集了多少资金。 你甚至可以在以后的工作中追踪资金的使用情况。
 - 募捐者可以设置自动退款，例如，如果有未达到特定的最后期限和最低金额，就可以自动退款。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   查看更多众筹去中心化应用程序
 </ButtonLink>
 
@@ -276,7 +276,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 就像任何软件一样，以太坊产品也可能出现漏洞。 因此，目前该领域中的许多保险产品都致力于保护用户免受资金损失。 然而，一些项目开始构建全面覆盖我们生活中可能出现的各种情况的保险方案。 Etherisc 的作物保护就是一个很好的例子，其目的是[保护肯尼亚的小农户对抗干旱和洪水侵袭](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc)。 去中心化保险可以为那些经常被传统保险拒之门外的农民提供更便宜的保险。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   查看保险去中心化应用程序
 </ButtonLink>
 
@@ -286,7 +286,7 @@ Dai 或 USDC 等代币的价值和美元的差距通常保持在几美分以内�
 
 拥有了这么多种服务，你需要一种方法来跟踪跟踪所有投资、贷款和交易。 有许多产品可以让你集中协调所有去中心化金融活动。 这就是去中心化金融开放架构的魅力所在。 团队可以创建界面，你不仅可以看到各个产品中的余额，也可以使用其功能。 当你探索更多的去中心化金融时，可能会发现这个很有用。
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   查看投资组合去中心化应用程序
 </ButtonLink>
 

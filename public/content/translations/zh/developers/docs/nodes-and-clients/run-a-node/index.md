@@ -90,16 +90,16 @@ sidebarDepth: 2
 
 你选择的同步模式和客户端将影响磁盘空间要求，但我们估计了下面每种客户端需要的磁盘空间。
 
-| 客户端     | 磁盘大小（快照同步） | 磁盘大小（完整归档） |
-| ---------- | -------------------- | -------------------- |
-| Geth       | 500GB+               | 12TB 以上            |
-| Nethermind | 500GB+               | 12TB 以上            |
-| Besu       | 800GB 以上           | 12TB 以上            |
-| Erigon     | 未提供               | 2.5TB 以上           |
+| 客户端        | 磁盘大小（快照同步） | 磁盘大小（完整归档） |
+| ---------- | ---------- | ---------- |
+| Geth       | 500GB+     | 12TB 以上    |
+| Nethermind | 500GB+     | 12TB 以上    |
+| Besu       | 800GB 以上   | 12TB 以上    |
+| Erigon     | 未提供        | 2.5TB 以上   |
 
 - 注意：Erigon 未提供快照同步，但可以进行完全修剪 (~500GB)
 
-对于共识客户端，空间要求也取决于客户端实现和启用的功能（例如验证者、罚没者），但通常需要另外 200GB 磁盘空间存储信标数据。 由于验证者数量巨大，带宽负载也会增加。 你可以[在此分析中找到关于共识客户端要求的详细信息](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc)。
+对于共识客户端，空间要求也取决于客户端实现和启用的功能（例如验证者、罚没者），但通常需要另外 200GB 磁盘空间存储信标数据。 由于验证者数量巨大，带宽负载也会增加。 你可以[在此分析中找到关于共识客户端要求的详细信息](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e)。
 
 #### 即插即用解决方案 {#plug-and-play}
 
@@ -151,7 +151,7 @@ sidebarDepth: 2
 ##### 执行客户端
 
 - [Besu](https://github.com/hyperledger/besu/releases)
-- [Erigon](https://github.com/ledgerwatch/erigon#usage)（不提供预构建的二进制文件，必须编译）
+- [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
 
@@ -165,7 +165,7 @@ sidebarDepth: 2
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
 
-[客户端多样性](/developers/docs/nodes-and-clients/client-diversity/)对于运行验证者的共识节点来说至关重要。 如果大多数验证者都在运行单一客户端实现，那么网络安全就会面临风险。 因此，我们建议考虑选择非主流客户端。
+[客户端多样性](/developers/docs/nodes-and-clients/client-diversity/)对于运行验证者的共识节点来说至关重要。 如果大多数验证者都在运行单一客户端实现，网络安全就会面临风险。 因此，我们建议考虑选择非主流客户端。
 
 [查看最新的网络客户端使用情况](https://clientdiversity.org/)，并了解关于[客户端多样性](/developers/docs/nodes-and-clients/client-diversity)的更多信息。
 
@@ -421,7 +421,7 @@ teku --network mainnet \
 - 强制关闭会破坏数据库，这可能需要你重新同步整个节点。
 - 客户端将无法与网络同步，重启后，客户端需要重新同步。 虽然节点可以从它最近一次关闭的位置开始同步，但此过程需要的时间取决于它离线的时间。
 
-*但是，共识层的验证者节点就需要一直在线。*验证者节点离线将影响所有依赖它的服务。 如果你是为了*质押*而运行节点，应该尽可能地减少停机时间。
+_但是，共识层的验证者节点就需要一直在线。_验证者节点离线将影响所有依赖它的服务。 如果你是为了_质押_而运行节点，应该尽可能地减少停机时间。
 
 #### 创建客户端服务 {#creating-client-services}
 

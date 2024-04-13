@@ -52,7 +52,7 @@ lang: zh
 
 **Scaffold-Eth -** **_Ethers.js + 安全帽 + React 组件和 web3 钩子函数：构建智能合约支持的去中心化应用程序所需的一切资源，这里都有。_**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **Tenderly -** **_Web3 开发平台，可帮助区块链开发者构建、测试、调试、监测和操作智能合约并改善去中心化应用程序的用户体验。_**
 

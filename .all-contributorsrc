@@ -4809,7 +4809,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/20266893?v=4",
       "profile": "http://www.technobunnies.com",
       "contributions": [
-        "doc"
+        "doc",
+        "maintenance"
       ]
     },
     {
@@ -10749,7 +10750,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/30328618?v=4",
       "profile": "https://www.darigovresearch.com/",
       "contributions": [
-        "content"
+        "content",
+        "bug"
       ]
     },
     {
@@ -10983,7 +10985,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/9151261?v=4",
       "profile": "https://github.com/aslikaya",
       "contributions": [
-        "doc"
+        "doc",
+        "maintenance"
       ]
     },
     {
@@ -11624,6 +11627,123 @@
       "contributions": [
         "content",
         "doc"
+      ]
+    },
+    {
+      "login": "shubhisaran",
+      "name": "Shubhi Saran",
+      "avatar_url": "https://avatars.githubusercontent.com/u/113500663?v=4",
+      "profile": "https://github.com/shubhisaran",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "bh2smith",
+      "name": "Benjamin Smith",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11778116?v=4",
+      "profile": "https://github.com/bh2smith",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Hector-Chong",
+      "name": "Héctor Chong",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12469549?v=4",
+      "profile": "http://hector.im",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "nakmr",
+      "name": "nace.kimura",
+      "avatar_url": "https://avatars.githubusercontent.com/u/145886319?v=4",
+      "profile": "https://github.com/nakmr",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "WuRuiLei2023",
+      "name": "WuRuiLei2023",
+      "avatar_url": "https://avatars.githubusercontent.com/u/149141323?v=4",
+      "profile": "https://github.com/WuRuiLei2023",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "radeksvarz",
+      "name": "Radek",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6020891?v=4",
+      "profile": "http://www.edukids.cz",
+      "contributions": [
+        "eventOrganizing"
+      ]
+    },
+    {
+      "login": "bhargavkakadiya",
+      "name": "Bhargav kakadiya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26486494?v=4",
+      "profile": "https://github.com/bhargavkakadiya",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "ArtificialPB",
+      "name": "ArtificialPB",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4672155?v=4",
+      "profile": "https://github.com/ArtificialPB",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "Pedrojok01",
+      "name": "Pedrojok01",
+      "avatar_url": "https://avatars.githubusercontent.com/u/77141890?v=4",
+      "profile": "https://github.com/Pedrojok01",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Vid201",
+      "name": "Vid Kersic",
+      "avatar_url": "https://avatars.githubusercontent.com/u/38610409?v=4",
+      "profile": "https://github.com/Vid201",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "futantan",
+      "name": "Tantan Fu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/6268441?v=4",
+      "profile": "http://www.futantan.com",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "Dharmik79",
+      "name": "Dharmik Dholariya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/61613931?v=4",
+      "profile": "https://dharmik79.github.io/portfolio.github.io/",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "Destiner",
+      "name": "Timur Badretdinov",
+      "avatar_url": "https://avatars.githubusercontent.com/u/4247901?v=4",
+      "profile": "https://destiner.io",
+      "contributions": [
+        "tool"
       ]
     }
   ],
