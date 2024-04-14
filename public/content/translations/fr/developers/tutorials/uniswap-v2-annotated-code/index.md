@@ -4,7 +4,7 @@ description: Comment fonctionne le contrat Uniswap-v2 ? Pourquoi est-il écrit d
 author: Ori Pomerantz
 tags:
   - "solidity"
-skill: intermediate
+skill: intermédiaire
 published: 2021-05-01
 lang: fr
 ---
@@ -743,7 +743,7 @@ C'est la fonction principale de l'usine : créer un échange de paires entre deu
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Nous souhaitons que l'adresse du nouvel échange soit déterminable de sorte qu'elle puisse être calculée à l'avance hors chaîne (cela peut être utile pour [les transactions de couche 2](/developers/docs/scaling/)). Pour cela, nous devons avoir les adresses de jetons dans un ordre cohérent indépendant de l'ordre dans lequel nous les avons reçus. Aussi les trions-nous ici.
+Nous souhaitons que l'adresse du nouvel échange soit déterminable de sorte qu'elle puisse être calculée à l'avance hors chaîne (cela peut être utile pour [les transactions de couche 2](/developers/docs/layer-2-scaling/)). Pour cela, nous devons avoir les adresses de jetons dans un ordre cohérent indépendant de l'ordre dans lequel nous les avons reçus. Aussi les trions-nous ici.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
