@@ -4449,6 +4449,13 @@
   dependencies:
     "@types/ms" "*"
 
+"@types/decompress@^4.2.7":
+  version "4.2.7"
+  resolved "https://registry.yarnpkg.com/@types/decompress/-/decompress-4.2.7.tgz#604f69b69d519ecb74dea1ea0829f159b85e1332"
+  integrity sha512-9z+8yjKr5Wn73Pt17/ldnmQToaFHZxK0N1GHysuk/JIPT8RIdQeoInM01wWPgypRcvb6VH1drjuFpQ4zmY437g==
+  dependencies:
+    "@types/node" "*"
+
 "@types/detect-port@^1.3.0":
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/@types/detect-port/-/detect-port-1.3.5.tgz#deecde143245989dee0e82115f3caba5ee0ea747"
