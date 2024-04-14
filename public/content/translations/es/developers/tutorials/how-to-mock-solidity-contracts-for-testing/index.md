@@ -8,8 +8,8 @@ tags:
   - "contratos Inteligentes"
   - "pruebas"
   - "simular"
-skill: intermediate
-published: 2020-05-02
+skill: intermediario
+published: 02-05-2020
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---
@@ -24,7 +24,7 @@ Puede escribir una lógica de configuración de prueba compleja cada vez que el 
 
 ## Ejemplo: ERC20 privado {#example-private-erc20}
 
-Usamos el ejemplo de un contrato ERC-20 que tiene un tiempo inicial privado. El propietario puede administrar usuarios privados y solo ellos estarán autorizados a recibir tókenes al principio. Una vez transcurrido un periodo específico, cualquiera podrá usar los tókenes. Si le pica la curiosidad, estamos usando el hook [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/3.x/extending-contracts#using-hooks) de los nuevos contratos v3 de OpenZeppelin.
+Usamos el ejemplo de un contrato ERC-20 que tiene un tiempo inicial privado. El propietario puede administrar usuarios privados y solo ellos estarán autorizados a recibir tókenes al principio. Una vez transcurrido un periodo específico, cualquiera podrá usar los tókenes. Si le pica la curiosidad, estamos usando el gancho [`_beforeTokenTransfer`](https://docs.openzeppelin.com/contracts/3.x/extending-contracts#using-hooks) de los nuevos contratos v3 de OpenZeppelin.
 
 ```solidity
 pragma solidity ^0.6.0;
