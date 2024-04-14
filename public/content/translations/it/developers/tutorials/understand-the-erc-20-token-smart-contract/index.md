@@ -9,7 +9,7 @@ tags:
   - "erc-20"
 skill: beginner
 lang: it
-published: 2020-04-05
+published: 05-04-2020
 source: EthereumDev
 sourceUrl: https://ethereumdev.io/understand-the-erc20-token-smart-contract/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"

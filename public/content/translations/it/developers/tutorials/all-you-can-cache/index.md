@@ -6,8 +6,8 @@ tags:
   - "livello 2"
   - "memorizzazione nella cache"
   - "archiviazione"
-skill: intermediate
-published: 2022-09-15
+skill: intermedio
+published: 15-09-2022
 lang: it
 ---
 
@@ -28,7 +28,7 @@ Per semplicità supponiamo che tutti i parametri delle transazioni siano `uint25
 3. Per qualsiasi altro valore, prendi i primi quattro bit come numero di byte aggiuntivi e gli ultimi quattro come i bit più significativi della chiave di cache. Ecco alcuni esempi:
 
    | Byte nei calldata | Chiave della cache |
-   | :---------------- | -----------------: |
+   |:----------------- | ------------------:|
    | 0x0F              |               0x0F |
    | 0x10,0x10         |               0x10 |
    | 0x12,0xAC         |             0x02AC |
@@ -785,9 +785,9 @@ Una cosa che non ottieni con i test in Solidity è il codice in JavaScript che p
 
 4. Modifica `.env` per la tua configurazione:
 
-   | Parametro           | Valore                                                                                                                                                                               |
-   | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-   | MNEMONIC            | La frase mnemonica per un account avente abbastanza ETH da pagare per una transazione. [Puoi ottenere ETH gratuiti per la rete Goerli di Optimism qui](https://optimismfaucet.xyz/). |
+   | Parametro             | Valore                                                                                                                                                                               |
+   | --------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+   | MNEMONIC              | La frase mnemonica per un account avente abbastanza ETH da pagare per una transazione. [Puoi ottenere ETH gratuiti per la rete Goerli di Optimism qui](https://optimismfaucet.xyz/). |
    | OPTIMISM_GOERLI_URL | URL per Goerli di Optimism. L'endpoint pubblico, `https://goerli.optimism.io`, è limitato ma sufficiente per ciò che ci occorre qui                                                  |
 
 5. Esegui `index.js`.
