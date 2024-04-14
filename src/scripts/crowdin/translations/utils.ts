@@ -65,31 +65,3 @@ export const getBuckets = async (): Promise<BucketsList> => {
 
   return Object.fromEntries(dummyBucketsList)
 }
-
-export const transformData = ({
-  data: { path, id, updatedAt },
-}: DataDirectoryItem): ParsedItem => {
-  const bucketLabel = path.split("/")[1]
-  const [number, title] = bucketLabel.split(") ")
-  return { bucket: { number, title }, id, updatedAt }
-}
-
-export const sortByBucketNumber = (a: ParsedItem, b: ParsedItem) =>
-  parseInt(a.bucket.number) - parseInt(b.bucket.number)
-
-export const reduceToLatest = (acc: ParsedItem[], curr: ParsedItem) => {
-  const existing = acc.find((item) => item.bucket.number === curr.bucket.number)
-  if (!existing) return [...acc, curr]
-
-  const existingDate = new Date(existing.updatedAt).getTime()
-  const currDate = new Date(curr.updatedAt).getTime()
-  if (existingDate >= currDate) return acc
-
-  const update = acc.filter((item) => item.bucket.number !== curr.bucket.number)
-  return [...update, curr]
-}
-
-export const removeUpdatedAt = (item: ParsedItem) => {
-  const { updatedAt, ...rest } = item
-  return rest
-}

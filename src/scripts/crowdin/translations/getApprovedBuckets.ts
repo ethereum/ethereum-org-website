@@ -1,41 +1,23 @@
 import i18n from "../../../../i18n.config.json"
+import bucketDirs from "../../../data/crowdin/translation-buckets-dirs.json"
+import { CROWDIN_API_MAX_LIMIT } from "../../../lib/constants"
 import crowdin from "../api-client/crowdinClient"
 
 import { APPROVAL_THRESHOLD } from "./constants"
-import type {
-  BucketsList,
-  DirectoryAsBucket,
-  ListProjectDirectoryResponse,
-} from "./types"
-import {
-  reduceToLatest,
-  removeUpdatedAt,
-  sortByBucketNumber,
-  transformData,
-} from "./utils"
+import type { BucketsList } from "./types"
 
 async function getApprovedBuckets(): Promise<BucketsList> {
   const projectId = Number(process.env.CROWDIN_PROJECT_ID) || 363359
 
-  const projectDirectories =
-    (await crowdin.sourceFilesApi.listProjectDirectories(projectId, {
-      limit: 200,
-    })) as ListProjectDirectoryResponse
-
-  const latest: DirectoryAsBucket[] = projectDirectories.data
-    .map(transformData)
-    .sort(sortByBucketNumber)
-    .reduce(reduceToLatest, [])
-    .map(removeUpdatedAt)
-
   const bucketsList: BucketsList = {}
 
-  for (const bucketDir of latest) {
+  // TODO: Consider regenerating bucketDirs list on each run for fidelity
+  for (const bucketDir of bucketDirs) {
     const directoryProgress =
       await crowdin.translationStatusApi.getDirectoryProgress(
         projectId,
         bucketDir.id,
-        { limit: 200 }
+        { limit: CROWDIN_API_MAX_LIMIT }
       )
 
     const onlyApproved = directoryProgress.data.filter(
@@ -50,7 +32,7 @@ async function getApprovedBuckets(): Promise<BucketsList> {
 
       if (!bucketsList[code]) bucketsList[code] = []
 
-      const n = parseInt(bucketDir.bucket.number)
+      const n = parseInt(bucketDir.name.substring(0, 2))
       bucketsList[code].push(n)
     }
   }
