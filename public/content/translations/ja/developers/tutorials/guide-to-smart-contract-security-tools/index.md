@@ -7,7 +7,7 @@ tags:
   - "Solidity"
   - "スマートコントラクト"
   - "セキュリティ"
-skill: intermediate
+skill: 中級
 published: 2020-09-07
 source: セキュアなコントラクトの開発
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis

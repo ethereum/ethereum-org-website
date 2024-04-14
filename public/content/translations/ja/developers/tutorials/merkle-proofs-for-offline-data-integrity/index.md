@@ -4,7 +4,7 @@ description: オフチェーンに大部分が保存されているデータに�
 author: Ori Pomerantz
 tags:
   - "ストレージ"
-skill: advanced
+skill: 詳細
 lang: ja
 published: 2021-12-30
 ---

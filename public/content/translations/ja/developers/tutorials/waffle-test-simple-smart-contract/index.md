@@ -7,7 +7,7 @@ tags:
   - "Solidity"
   - "Waffle"
   - "テスト"
-skill: beginner
+skill: 初級
 lang: ja
 published: 2021-02-26
 ---
