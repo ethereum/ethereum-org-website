@@ -909,7 +909,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-其中大部分我们都曾遇到过，或相当明显。 一个例外是 `IWETH.sol`。 Uniswapv2 允许兑换任意一对 ERC-20 代币，但以太币 (ETH) 本身并不是 ERC-20 代币。 它早于该标准出现，并采用独特的机制转换。 为了在适用于 ERC-20 代币的合约中使用以太币，人们制定出[包装以太币 (WETH)](https://weth.io/) 合约。 你发送以太币到该合约，它会为您铸造相同金额的包装以太币。 或者您可以销毁包装以太币，然后换回以太币。
+其中大部分我们都曾遇到过，或相当明显。 一个例外是 `IWETH.sol`。 Uniswapv2 允许兑换任意一对 ERC-20 代币，但以太币 (ETH) 本身并不是 ERC-20 代币。 它早于该标准出现，并采用独特的机制转换。 为了在适用于 ERC-20 代币的合约中使用以太币，人们制定出[包装以太币 (WETH)](https://weth.tkn.eth.limo/) 合约。 你发送以太币到该合约，它会为您铸造相同金额的包装以太币。 或者您可以销毁包装以太币，然后换回以太币。
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {

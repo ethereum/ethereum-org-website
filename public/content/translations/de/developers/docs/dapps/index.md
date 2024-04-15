@@ -51,7 +51,7 @@ Ein Smart Contract ist ein Code, der auf der Ethereum-Blockchain existiert und g
 
 **Scaffold-ETH _- Experimentiere schnell mit Solidity, indem du ein Frontend verwendest, das sich an deinen Smart Contract anpasst._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Beispiel-Dapp](https://punkwallet.io/)
 
 **Eth App erstellen _– Erstelle Ethereum-gestützte Apps mit einem Befehl._**
