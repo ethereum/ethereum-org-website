@@ -145,6 +145,15 @@ export async function getTranslatedMarkdownPaths() {
   return languages
 }
 
+function log(
+  message: string,
+  level: "warn" | "error" | "log",
+  summary: string[]
+) {
+  summary.push(message)
+  console[level](message)
+}
+
 function processFrontmatter(
   path: string,
   lang: string,
@@ -154,53 +163,65 @@ function processFrontmatter(
   const frontmatter = matter(file).data
 
   if (!frontmatter.title) {
-    summary.push(`Missing 'title' frontmatter at: ${path}`)
+    log(`Missing 'title' frontmatter at: ${path}`, "warn", summary)
   }
   // Description commented out as there are a lot of them missing :-)!
   // if (!frontmatter.description) {
   //   summary.push(`Missing 'description' frontmatter at: ${path}`)
   // }
   if (!frontmatter.lang) {
-    summary.push(`Missing 'lang' frontmatter at: ${path}, Expected: ${lang}'`)
+    log(
+      `Missing 'lang' frontmatter at: ${path}, Expected: ${lang}'`,
+      "error",
+      summary
+    )
   } else if (!(frontmatter.lang === lang)) {
-    summary.push(
-      `Invalid 'lang' frontmatter at: ${path}, Expected: ${lang}', Received: ${frontmatter.lang}`
+    log(
+      `Invalid 'lang' frontmatter at ${path}: Expected: ${lang}'. Received: ${frontmatter.lang}.`,
+      "error",
+      summary
     )
   }
 
   if (frontmatter.emoji) {
     if (!/^:\S+:$/.test(frontmatter.emoji)) {
-      summary.push(`Frontmatter for 'emoji' is invalid at ${path}`)
+      log(`Frontmatter for 'emoji' is invalid at ${path}`, "error", summary)
     }
   }
 
   if (frontmatter.sidebar) {
-    summary.push(`Unexpected 'sidebar' frontmatter at ${path}`)
+    log(`Unexpected 'sidebar' frontmatter at ${path}`, "error", summary)
   }
 
   if (path.includes("/tutorials/")) {
     if (!frontmatter.published) {
-      summary.push(`Missing 'published' frontmatter at ${path}:`)
+      log(`Missing 'published' frontmatter at ${path}:`, "warn", summary)
     } else {
       try {
         let stringDate = frontmatter.published.toISOString().slice(0, 10)
         const dateIsFormattedCorrectly = TUTORIAL_DATE_REGEX.test(stringDate)
 
         if (!dateIsFormattedCorrectly) {
-          summary.push(
-            `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
+          log(
+            `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`,
+            "warn",
+            summary
           )
         }
       } catch (e) {
-        summary.push(
-          `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`
+        log(
+          `Invalid 'published' frontmatter at ${path}: Expected: 'YYYY-MM-DD' Received: ${frontmatter.published}`,
+          "warn",
+          summary
         )
       }
     }
 
     if (!["beginner", "intermediate", "advanced"].includes(frontmatter.skill)) {
-      summary.push(
-        `Skill frontmatter '${frontmatter.skill}' must be: beginner, intermediate, or advanced at: ${path}:`
+      log(
+        `Skill frontmatter '${frontmatter.skill}' must be: beginner, intermediate, or advanced at: ${path}:`,
+        "log",
+        summary
       )
     }
   }
@@ -214,7 +235,7 @@ function processMarkdown(path: string, summary: string[]) {
 
   while ((brokenLinkMatch = BROKEN_LINK_REGEX.exec(markdownFile))) {
     const lineNumber = getLineNumber(markdownFile, brokenLinkMatch.index)
-    summary.push(`Broken link found: ${path}:${lineNumber}`)
+    log(`Broken link found: ${path}:${lineNumber}`, "warn", summary)
 
     // if (!BROKEN_LINK_REGEX.global) break
   }
@@ -224,7 +245,7 @@ function processMarkdown(path: string, summary: string[]) {
   // Check for invalid links
   while ((invalidLinkMatch = INVALID_LINK_REGEX.exec(markdownFile))) {
     const lineNumber = getLineNumber(markdownFile, invalidLinkMatch.index)
-    summary.push(`Invalid link found: ${path}:${lineNumber}`)
+    log(`Invalid link found: ${path}:${lineNumber}`, "warn", summary)
   }
 
   let linkTextMissingMatch: RegExpExecArray | null
@@ -232,7 +253,7 @@ function processMarkdown(path: string, summary: string[]) {
   // Check for links missing text
   while ((linkTextMissingMatch = LINK_TEXT_MISSING_REGEX.exec(markdownFile))) {
     const lineNumber = getLineNumber(markdownFile, linkTextMissingMatch.index)
-    summary.push(`Link text missing: ${path}:${lineNumber}`)
+    log(`Link text missing: ${path}:${lineNumber}`, "warn", summary)
   }
 
   let incorrectImagePathMatch: RegExpExecArray | null
@@ -247,7 +268,7 @@ function processMarkdown(path: string, summary: string[]) {
         markdownFile,
         incorrectImagePathMatch.index
       )
-      summary.push(`Incorrect image path: ${path}:${lineNumber}`)
+      log(`Incorrect image path: ${path}:${lineNumber}`, "warn", summary)
     }
   }
 
@@ -273,7 +294,11 @@ function processMarkdown(path: string, summary: string[]) {
 
       while ((htmlTagMatch = htmlTagRegex.exec(markdownFile))) {
         const lineNumber = getLineNumber(markdownFile, htmlTagMatch.index)
-        summary.push(`Warning: ${tag} tag in markdown at ${path}:${lineNumber}`)
+        log(
+          `Warning: ${tag} tag in markdown at ${path}:${lineNumber}`,
+          "warn",
+          summary
+        )
 
         if (!htmlTagRegex.global) break
       }
@@ -290,7 +315,11 @@ function processMarkdown(path: string, summary: string[]) {
       markdownFile,
       whiteSpaceInLinkTextMatch.index
     )
-    summary.push(`Warning: White space in link found: ${path}:${lineNumber}`)
+    log(
+      `Warning: White space in link found: ${path}:${lineNumber}`,
+      "warn",
+      summary
+    )
   }
 
   checkMarkdownSpellingMistakes(path, markdownFile, SPELLING_MISTAKES, summary)
@@ -313,8 +342,10 @@ function checkMarkdownSpellingMistakes(
 
     while ((spellingMistakeMatch = mistakeRegex.exec(file))) {
       const lineNumber = getLineNumber(file, spellingMistakeMatch.index)
-      summary.push(
-        `Spelling mistake "${mistake}" found at ${path}:${lineNumber}`
+      log(
+        `Spelling mistake "${mistake}" found at ${path}:${lineNumber}`,
+        "warn",
+        summary
       )
     }
 
@@ -353,7 +384,6 @@ export function checkMarkdown(summaryWritePath?: string) {
     if (!summary[lang].length) delete summary[lang]
   }
 
-  console.table(summary)
   summaryWritePath && writeSummary(summary, summaryWritePath)
 }
 
