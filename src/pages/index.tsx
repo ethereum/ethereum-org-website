@@ -1,5 +1,6 @@
 import { ReactNode, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -24,8 +25,6 @@ import type { CommunityEventsReturnType } from "@/lib/interfaces"
 import ActionCard from "@/components/ActionCard"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
-import Codeblock from "@/components/Codeblock"
-import CodeModal from "@/components/CodeModal"
 import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
@@ -120,8 +119,6 @@ const StyledActionCard = chakra(ActionCard, {
     margin: 0,
   },
 })
-
-const StyledCodeModal = chakra(CodeModal)
 
 const StyledTitleCardList = chakra(TitleCardList)
 
@@ -333,6 +330,15 @@ const HomePage = ({
   ]
 
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
+
+  //
+  const Codeblock = dynamic(() => import("@/components/Codeblock"), {
+    ssr: false,
+  })
+  const CodeModal = dynamic(() => import("@/components/CodeModal"), {
+    ssr: false,
+  })
+  const StyledCodeModal = chakra(CodeModal)
 
   return (
     <Flex
