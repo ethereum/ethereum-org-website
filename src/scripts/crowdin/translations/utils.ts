@@ -7,7 +7,7 @@ import ReadableStream from "stream/web"
 
 import decompress from "decompress"
 
-import { SUMMARY_PATH } from "./constants"
+import { STARTING_BRANCH, SUMMARY_PATH } from "./constants"
 import { QASummary } from "./types"
 
 export const downloadFile = async (url: string, writePath: string) => {
@@ -48,19 +48,16 @@ export const processLocale = (locale: string) => {
     .toLocaleString("default", { month: "long" })
     .toLowerCase()
   const timestamp = new Date().toISOString().replace(/[^0-9]/g, "")
-  const startingBranch = execSync("git rev-parse --abbrev-ref HEAD", {
-    encoding: "utf-8",
-  }).trim()
 
-  const BRANCH_NAME = `${month}-${locale}-${timestamp}`
-  const MESSAGE = `chore: import translations for ${locale}`
+  const branchName = `${month}-${locale}-${timestamp}`
+  const message = `chore: import translations for ${locale}`
 
-  execSync(`git checkout -b ${BRANCH_NAME}`)
+  execSync(`git checkout -b ${branchName}`)
   execSync("git reset .")
   execSync(`git add public/content/translations/${locale}`)
   execSync(`git add src/intl/${locale}`)
-  execSync(`git commit -m "${MESSAGE}"`)
-  execSync(`git push origin ${BRANCH_NAME}`)
+  execSync(`git commit -m "${message}"`)
+  execSync(`git push origin ${branchName}`)
 
   const summaryJson: QASummary = JSON.parse(readFileSync(SUMMARY_PATH, "utf-8"))
   const qaResults = summaryJson[locale]
@@ -96,8 +93,8 @@ ${qaResults}
   const prUrl = execSync(
     `gh pr create \
     --base dev \
-    --head ${BRANCH_NAME} \
-    --title "${MESSAGE}" \
+    --head ${branchName} \
+    --title "${message}" \
     --body-file body.txt`,
     { encoding: "utf-8" }
   ).trim()
@@ -117,5 +114,5 @@ ${qaResults}
 
   unlinkSync(bodyWritePath)
 
-  execSync(`git checkout ${startingBranch}`)
+  execSync(`git checkout ${STARTING_BRANCH}`)
 }
