@@ -18,6 +18,7 @@
     "crowdin-clean": "rm -rf .crowdin && mkdir .crowdin",
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
     "events-import": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/events-import.ts",
+    "crowdin-needs-review": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/reports/wordsNeedingReview.ts",
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts"
   },
   "dependencies": {
