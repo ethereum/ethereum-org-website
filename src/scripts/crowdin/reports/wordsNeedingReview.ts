@@ -13,6 +13,12 @@ type SummaryItem = [code: string, bucket: string, needsReview: number]
  * Report in CSV format with columns: Language, Bucket Name, Words needing review.
  * To run:
  * - Ensure CROWDIN_API_KEY is set in the .env file (.env.local will not work)
+ *    1. https://crowdin.com/settings#api-key
+ *    2. Click: "New token"
+ *    3. Give token a name
+ *    4. Select "Translation Status" under "Projects" for scope
+ *    5. Click: "Create" and authenticate
+ *    6. Copy the token to the .env file
  * - Can be run with `yarn crowdin-needs-review`
  * - Results are saved to src/data/crowdin/report.csv
  * - Report is git ignored, and should not be committed
