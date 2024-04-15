@@ -40,7 +40,7 @@ export const decompressFile = async (filePath: string, targetDir: string) => {
   console.log("✅ Decompression complete.")
 }
 
-export const processLocale = (locale: string) => {
+export const processLocale = (locale: string, buckets: number[]) => {
   const gitStatus = execSync(`git status -s | grep -E "/${locale}/" | wc -l`, {
     encoding: "utf-8",
   }).trim()
@@ -71,6 +71,11 @@ export const processLocale = (locale: string) => {
   This workflows runs on the first of every month at 16:20 (UTC).
 
   Thank you to everyone contributing to translate ethereum.org ❤️
+
+  ## Content buckets imported
+  ${new Intl.ListFormat("en", { type: "conjunction" }).format(
+    buckets.map(String)
+  )}
 
   ## Markdown QA checker alerts
   ${

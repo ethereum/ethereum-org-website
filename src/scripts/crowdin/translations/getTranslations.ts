@@ -4,7 +4,7 @@ import { checkMarkdown } from "../../markdownChecker"
 import crowdin from "../api-client/crowdinClient"
 import crowdinImport from "../import/main"
 
-import { DOT_CROWDIN, FILE_PATH, SUMMARY_PATH } from "./constants"
+import { BUCKETS_PATH, DOT_CROWDIN, FILE_PATH, SUMMARY_PATH } from "./constants"
 import getApprovedBuckets from "./getApprovedBuckets"
 import type { BucketsList } from "./types"
 import { decompressFile, downloadFile } from "./utils"
@@ -38,6 +38,9 @@ async function main() {
     console.log("🗑️ Removed download from:", FILE_PATH)
 
     const buckets = (await getApprovedBuckets()) as BucketsList
+
+    // Save buckets for use in PR body later
+    fs.writeFileSync(BUCKETS_PATH, JSON.stringify(buckets, null, 2))
 
     // Run Crowdin import script with buckets from Notion
     crowdinImport(buckets)

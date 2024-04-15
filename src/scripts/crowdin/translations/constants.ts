@@ -9,6 +9,9 @@ export const FILE_PATH = resolve(CROWDIN_DATA_DIR, SAVE_FILE)
 export const SUMMARY_SAVE_FILE = "import-summary.json"
 export const SUMMARY_PATH = resolve(CROWDIN_DATA_DIR, SUMMARY_SAVE_FILE)
 
+export const BUCKETS_IMPORTED_FILE = "buckets-imported.json"
+export const BUCKETS_PATH = resolve(CROWDIN_DATA_DIR, BUCKETS_IMPORTED_FILE)
+
 export const APPROVAL_THRESHOLD = 100
 
 export const STARTING_BRANCH = "dev"
