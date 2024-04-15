@@ -40,6 +40,25 @@ export const decompressFile = async (filePath: string, targetDir: string) => {
   console.log("✅ Decompression complete.")
 }
 
+const getQAMessage = (locale: string) => {
+  const summaryJson: QASummary = JSON.parse(readFileSync(SUMMARY_PATH, "utf-8"))
+  const qaResults = summaryJson[locale]
+    ? summaryJson[locale].map((s) => "- " + s).join("\n")
+    : null
+
+  if (!qaResults) return "No QA issues found"
+  return `
+\`\`\`shell
+yarn markdown-checker
+\`\`\`l
+
+<details><summary>Unfold for ${summaryJson[locale].length} result(s)</summary>
+
+${qaResults}
+</details>
+`
+}
+
 export const processLocale = (locale: string, buckets: number[]) => {
   const gitStatus = execSync(`git status -s | grep -E "/${locale}/" | wc -l`, {
     encoding: "utf-8",
@@ -61,11 +80,6 @@ export const processLocale = (locale: string, buckets: number[]) => {
   execSync(`git commit -m "${message}"`)
   execSync(`git push origin ${branchName}`)
 
-  const summaryJson: QASummary = JSON.parse(readFileSync(SUMMARY_PATH, "utf-8"))
-  const qaResults = summaryJson[locale]
-    ? summaryJson[locale].map((s) => "- " + s).join("\n")
-    : null
-
   const prBody = `## Description
   This PR was automatically created to import Crowdin translations.
   This workflows runs on the first of every month at 16:20 (UTC).
@@ -78,20 +92,8 @@ export const processLocale = (locale: string, buckets: number[]) => {
   )}
 
   ## Markdown QA checker alerts
-  ${
-    qaResults
-      ? `
-      \`\`\`shell
-      yarn markdown-checker
-      \`\`\`l
-
-      <details><summary>Unfold for ${summaryJson[locale].length} result(s)</summary>
-
-  ${qaResults}
-  </details>
+  ${getQAMessage(locale)}
   `
-      : "No QA issues found"
-  }`
 
   const bodyWritePath = path.resolve(process.cwd(), "body.txt")
   writeFileSync(bodyWritePath, prBody)
