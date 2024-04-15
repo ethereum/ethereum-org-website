@@ -57,8 +57,12 @@ async function main() {
     })
   }
 
+  // Sort first by language code, then by bucket name
+  const sorted = reportSummary.sort((a, b) =>
+    a[0] === b[0] ? a[1].localeCompare(b[1]) : a[0].localeCompare(b[0])
+  )
   // Transform to çsv string
-  const csvArray = reportSummary.map((item) => item.join(","))
+  const csvArray = sorted.map((item) => item.join(","))
   // Insert header names at beginning of csv array
   csvArray.unshift("Language,Bucket Name,Words needing review")
   const csv = csvArray.join("\n")
