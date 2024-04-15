@@ -23,22 +23,6 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
-    chromatic: {
-      modes: {
-        ...chakraBreakpointArray.reduce<{ [x: string]: { viewport: string } }>(
-          (arr, curr) => {
-            const [token] = curr
-            return {
-              ...arr,
-              [token]: {
-                viewport: token,
-              },
-            }
-          },
-          {}
-        ),
-      },
-    },
     backgrounds: {
       disable: true,
     },
