@@ -24,13 +24,10 @@ import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
 import ButtonLink from "@/components/Buttons/ButtonLink"
-import CalloutBanner from "@/components/CalloutBanner"
-import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
@@ -331,7 +328,7 @@ const HomePage = ({
 
   const cardBoxShadow = useToken("colors", "cardBoxShadow")
 
-  //
+  // Lazy-load these components on initial load
   const Codeblock = dynamic(() => import("@/components/Codeblock"), {
     ssr: false,
   })
@@ -339,6 +336,18 @@ const HomePage = ({
     ssr: false,
   })
   const StyledCodeModal = chakra(CodeModal)
+  const StatsBoxGrid = dynamic(() => import("@/components/StatsBoxGrid"), {
+    ssr: false,
+  })
+  const CommunityEvents = dynamic(
+    () => import("@/components/CommunityEvents"),
+    {
+      ssr: false,
+    }
+  )
+  const CalloutBanner = dynamic(() => import("@/components/CalloutBanner"), {
+    ssr: false,
+  })
 
   return (
     <Flex
