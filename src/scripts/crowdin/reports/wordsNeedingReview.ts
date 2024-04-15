@@ -8,6 +8,15 @@ import crowdinClient from "../api-client/crowdinClient"
 
 type SummaryItem = [code: string, bucket: string, needsReview: number]
 
+/**
+ * Generates a report of words needing review for each content bucket in all languages.
+ * Report in CSV format with columns: Language, Bucket Name, Words needing review.
+ * To run:
+ * - Ensure CROWDIN_API_KEY is set in the .env file (.env.local will not work)
+ * - Can be run with `yarn crowdin-needs-review`
+ * - Results are saved to src/data/crowdin/report.csv
+ * - Report is git ignored, and should not be committed
+ */
 async function main() {
   const projectId = Number(process.env.CROWDIN_PROJECT_ID) || 363359
 
