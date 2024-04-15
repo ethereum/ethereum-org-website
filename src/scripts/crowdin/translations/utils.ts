@@ -1,11 +1,13 @@
 import { execSync } from "child_process"
-import fs, { unlinkSync, writeFileSync } from "fs"
+import fs, { readFileSync, unlinkSync, writeFileSync } from "fs"
 import path from "path"
 import { Readable } from "stream"
 import { finished } from "stream/promises"
 import ReadableStream from "stream/web"
 
 import decompress from "decompress"
+
+import { INTL_JSON_DIR, TRANSLATIONS_DIR } from "../../../lib/constants"
 
 import { STARTING_BRANCH, SUMMARY_PATH } from "./constants"
 import { QASummary } from "./types"
@@ -54,8 +56,8 @@ export const processLocale = (locale: string) => {
 
   execSync(`git checkout -b ${branchName}`)
   execSync("git reset .")
-  execSync(`git add public/content/translations/${locale}`)
-  execSync(`git add src/intl/${locale}`)
+  execSync(`git add ${TRANSLATIONS_DIR}/${locale}`)
+  execSync(`git add ${INTL_JSON_DIR}/${locale}`)
   execSync(`git commit -m "${message}"`)
   execSync(`git push origin ${branchName}`)
 
@@ -65,26 +67,26 @@ export const processLocale = (locale: string) => {
     : null
 
   const prBody = `## Description
-This PR was automatically created to import Crowdin translations.
-This workflows runs on the first of every month at 16:20 (UTC).
+  This PR was automatically created to import Crowdin translations.
+  This workflows runs on the first of every month at 16:20 (UTC).
 
-Thank you to everyone contributing to translate ethereum.org ❤️
+  Thank you to everyone contributing to translate ethereum.org ❤️
 
-## Markdown QA checker alerts
-${
-  qaResults
-    ? `
-    \`\`\`shell
-    yarn markdown-checker
-    \`\`\`l
+  ## Markdown QA checker alerts
+  ${
+    qaResults
+      ? `
+      \`\`\`shell
+      yarn markdown-checker
+      \`\`\`l
 
-    <details><summary>Unfold for ${summaryJson[locale].length} results</summary>
+      <details><summary>Unfold for ${summaryJson[locale].length} result(s)</summary>
 
-${qaResults}
-</details> 
-`
-    : "No QA issues found"
-}`
+  ${qaResults}
+  </details>
+  `
+      : "No QA issues found"
+  }`
 
   const bodyWritePath = path.resolve(process.cwd(), "body.txt")
   writeFileSync(bodyWritePath, prBody)
@@ -92,10 +94,10 @@ ${qaResults}
   // Create GitHub PR and get the PR URL from the output
   const prUrl = execSync(
     `gh pr create \
-    --base dev \
-    --head ${branchName} \
-    --title "${message}" \
-    --body-file body.txt`,
+      --base dev \
+      --head ${branchName} \
+      --title "${message}" \
+      --body-file body.txt`,
     { encoding: "utf-8" }
   ).trim()
   console.log(`PR created: ${prUrl}`)
@@ -106,8 +108,8 @@ ${qaResults}
   const updatedBody =
     prBody +
     `\n\n## Preview link
-  - [${previewUrl}](${previewUrl})
-  `
+    - [${previewUrl}](${previewUrl})
+    `
   // Update PR with new body
   writeFileSync(bodyWritePath, updatedBody)
   execSync(`gh pr edit ${prNumber} --body-file ${bodyWritePath}`)
