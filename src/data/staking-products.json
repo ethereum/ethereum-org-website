@@ -748,6 +748,43 @@
         "eventAction": "Clicked",
         "eventName": "Clicked RockX go to link"
       }
+    },
+    {
+      "name": "Everstake Institutional",
+      "imageName": "Everstake",
+      "hue": 43,
+      "launchDate": "2023-03-31",
+      "url": "https://eth.everstake.one/",
+      "audits": [
+        {
+          "name": "Blaize",
+          "url": "https://blaize.tech/clients/smart-contract-security-audit-for-everstake/"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 10,
+      "monthlyFeeUnit": "% rewards",
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": true, 
+      "isPermissionless": false,
+      "pctMajorityExecutionClient": 100,
+      "pctMajorityConsensusClient": 100,
+      "isSelfCustody": true,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.gg/PqrbhKNpA5",
+        "twitter": "https://twitter.com/everstake_pool",
+        "medium": "https://medium.com/everstake"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Everstake Institution go to link"
+      }
     }
   ],
   "pools": [
