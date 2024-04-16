@@ -13,7 +13,6 @@ Ethereum topluluğu, birçok farklı geçmişe ve beceriye sahip insanları içe
 ## Geliştiriciler <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - [ethereum.org/developers/](/developers/) adresinden Ethereum hakkında bilgi edinin ve Ethereum'u deneyin
-- [Gitcoin'de bir ödül bulun](https://gitcoin.co/), küçük veya büyük bir teknik sorun üzerinde çalışın ve kripto kazanın!
 - Yakınınızdaki bir [ETHGlobal](http://ethglobal.co/) hackathon'una katılın!
 - Uzmanlık alanınızla veya seçtiğiniz programlama diliyle ilgili [projeleri inceleyin](/developers/docs/programming-languages/)
 - [Core Dev çağrılarını](https://www.youtube.com/@EthereumProtocol) izleyin veya bunlara katılın

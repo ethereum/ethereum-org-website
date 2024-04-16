@@ -13,7 +13,6 @@ Machen Sie sich zunächst mit der Mission und den Grundsätze von ethereum.org i
 ## Entwickler <Emoji text=":computer." size={1} /> {#developers}
 
 - Erfahren Sie mehr über Ethereum auf [ethereum.org/developers/](/developers/)
-- [Finden Sie ein Bounty auf Gitcoin](https://gitcoin.co/), arbeiten Sie an kleinen und großen technischen Problemen und verdienen Sie Kryptowährung.
 - Besuchen Sie ein [ETHGlobal](http://ethglobal.co/)-Hakathon in Ihrer Nähe.
 - Schauen Sie sich an, welche [Projekte im Zusammenhang mit Ihrem Fachgebiet oder der Programmiersprache Ihrer Wahl](/developers/docs/programming-languages/) es gibt
 - Nehmen Sie teil an den [Core DEV-Calls](https://www.youtube.com/@EthereumProtocol) oder sehen Sie sie sich an
