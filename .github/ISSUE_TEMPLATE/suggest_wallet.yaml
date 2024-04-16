@@ -245,8 +245,8 @@ body:
     attributes:
       label: Does the wallet support bridging directly?
       description: Please provide documentation on bridging.
-      validations:
-        required: true
+    validations:
+      required: true
   - type: input
     id: wallet_multi_chain_support
     attributes:
