@@ -84,7 +84,7 @@ body:
     attributes:
       label: Is the wallet available in multiple languages?
       description: Please list languages that the wallet actively supports.
-    validation:
+    validations:
       required: true
   - type: textarea
     id: wallet_socials
