@@ -310,8 +310,6 @@ const WalletTable = ({
           )
 
           const showMoreInfo = (wallet) => {
-            // Prevent expanding the wallet more info section when clicking on the "Visit website" button
-
             updateMoreInfo(wallet.key)
             // Log "more info" event only on expanding
             wallet.moreInfo &&
@@ -333,6 +331,7 @@ const WalletTable = ({
                   if (e.key === "Enter") showMoreInfo(wallet)
                 }}
                 onClick={(e) => {
+                  // Prevent expanding the wallet more info section when clicking on the "Visit website" button
                   if (
                     (e.target as HTMLElement).matches("a, a svg")
                   )
