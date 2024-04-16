@@ -13,7 +13,6 @@ Commencez à lire la mission et les valeurs d'ethereum.org dans notre [code de c
 ## Développeurs <Emoji text=":computer:" size={1} /> {#developers}
 
 - Découvrez et essayez Ethereum sur [ethereum.org/developers/](/developers/)
-- [Trouvez une prime sur Gitcoin](https://gitcoin.co/), travaillez sur un petit ou gros problème technique, gagnez de la crypto !
 - Participez à un hackathon [ETHGlobal](http://ethglobal.co/) près de chez vous !
 - Consultez les [projets liés à votre domaine d'expertise ou au langage de programmation de votre choix](/developers/docs/programming-languages/)
 - Regardez ou participez aux [appels Core Dev](https://www.youtube.com/@EthereumProtocol)
