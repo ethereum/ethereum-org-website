@@ -19,7 +19,7 @@ body:
     validations:
       required: true
   - type: dropdown
-    id: wallet_hardware_support
+    id: wallet_type
     attributes:
       label: What type of wallet?
       options:
