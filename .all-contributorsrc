@@ -11745,6 +11745,35 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "finxter",
+      "name": "Finxter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/57671493?v=4",
+      "profile": "https://blog.finxter.com/",
+      "contributions": [
+        "ideas"
+      ]
+    },
+    {
+      "login": "croath",
+      "name": "Croath Liu",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1398729?v=4",
+      "profile": "http://croath.com",
+      "contributions": [
+        "doc",
+        "code"
+      ]
+    },
+    {
+      "login": "HayattiQ",
+      "name": "Hayatti",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5105841?v=4",
+      "profile": "https://github.com/HayattiQ",
+      "contributions": [
+        "content",
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,

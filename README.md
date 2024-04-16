@@ -1802,6 +1802,11 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://www.futantan.com"><img src="https://avatars.githubusercontent.com/u/6268441?v=4?s=100" width="100px;" alt="Tantan Fu"/><br /><sub><b>Tantan Fu</b></sub></a><br /><a href="#maintenance-futantan" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://dharmik79.github.io/portfolio.github.io/"><img src="https://avatars.githubusercontent.com/u/61613931?v=4?s=100" width="100px;" alt="Dharmik Dholariya"/><br /><sub><b>Dharmik Dholariya</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3ADharmik79" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://destiner.io"><img src="https://avatars.githubusercontent.com/u/4247901?v=4?s=100" width="100px;" alt="Timur Badretdinov"/><br /><sub><b>Timur Badretdinov</b></sub></a><br /><a href="#tool-Destiner" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://blog.finxter.com/"><img src="https://avatars.githubusercontent.com/u/57671493?v=4?s=100" width="100px;" alt="Finxter"/><br /><sub><b>Finxter</b></sub></a><br /><a href="#ideas-finxter" title="Ideas, Planning, & Feedback">🤔</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://croath.com"><img src="https://avatars.githubusercontent.com/u/1398729?v=4?s=100" width="100px;" alt="Croath Liu"/><br /><sub><b>Croath Liu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=croath" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=croath" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/HayattiQ"><img src="https://avatars.githubusercontent.com/u/5105841?v=4?s=100" width="100px;" alt="Hayatti"/><br /><sub><b>Hayatti</b></sub></a><br /><a href="#content-HayattiQ" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AHayattiQ" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
