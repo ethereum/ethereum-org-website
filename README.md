@@ -1807,6 +1807,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://croath.com"><img src="https://avatars.githubusercontent.com/u/1398729?v=4?s=100" width="100px;" alt="Croath Liu"/><br /><sub><b>Croath Liu</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=croath" title="Documentation">📖</a> <a href="https://github.com/ethereum/ethereum-org-website/commits?author=croath" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/HayattiQ"><img src="https://avatars.githubusercontent.com/u/5105841?v=4?s=100" width="100px;" alt="Hayatti"/><br /><sub><b>Hayatti</b></sub></a><br /><a href="#content-HayattiQ" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AHayattiQ" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/JeffreyJoel"><img src="https://avatars.githubusercontent.com/u/72028836?v=4?s=100" width="100px;" alt="Jeffrey Owoloko"/><br /><sub><b>Jeffrey Owoloko</b></sub></a><br /><a href="#maintenance-JeffreyJoel" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
