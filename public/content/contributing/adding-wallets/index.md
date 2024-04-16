@@ -26,8 +26,9 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 - **Honest and accurate listing information** - it is expected that any suggested listings from projects come with honest and accurate information. Products that falsify listing information, such as declaring your product is “open source” when it is not, will be removed.
 - **Point of contact** - A point of contact for the wallet will greatly help us get accurate information when changes are made. This will keep updating ethereum.org manageable when gathering future information.
 - **EIP-1559 (type 2) transactions** - your wallet must support EIP-1559 (type 2) transactions.
+- **Good user experience** - While UX is subjective, if several core team members test the product and find it difficult to use, we reserve the right to reject the wallet and will instead provide useful suggestions to improve. This is done to protect our user base that is mostly comprised of beginners. 
 
-### Product removals: {#tproduct-removals}
+### Product removals: {#product-removals}
 
 - **Updated information** - Wallet providers are responsible for resubmitting their wallet information every 6 months to ensure validity and relavance of provided information (even if there are no changes to their product). If the product team fails to do so, ethereum.org reserves the right to remove the project from the page. 
 
