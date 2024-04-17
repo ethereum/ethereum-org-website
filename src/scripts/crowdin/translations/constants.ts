@@ -13,5 +13,3 @@ export const BUCKETS_IMPORTED_FILE = "buckets-imported.json"
 export const BUCKETS_PATH = resolve(CROWDIN_DATA_DIR, BUCKETS_IMPORTED_FILE)
 
 export const APPROVAL_THRESHOLD = 100
-
-export const STARTING_BRANCH = "dev"

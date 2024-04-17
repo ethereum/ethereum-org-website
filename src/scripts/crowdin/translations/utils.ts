@@ -9,7 +9,7 @@ import decompress from "decompress"
 
 import { INTL_JSON_DIR, TRANSLATIONS_DIR } from "../../../lib/constants"
 
-import { STARTING_BRANCH, SUMMARY_PATH } from "./constants"
+import { SUMMARY_PATH } from "./constants"
 import { QASummary } from "./types"
 
 export const downloadFile = async (url: string, writePath: string) => {
@@ -72,7 +72,9 @@ export const processLocale = (locale: string, buckets: number[]) => {
 
   const branchName = `${month}-${locale}-${timestamp}`
   const message = `chore: import translations for ${locale}`
-
+  const startingBranch = execSync("git branch --show-current", {
+    encoding: "utf-8",
+  }).trim()
   execSync(`git checkout -b ${branchName}`)
   execSync("git reset .")
   execSync(`git add ${TRANSLATIONS_DIR}/${locale}`)
@@ -123,5 +125,5 @@ export const processLocale = (locale: string, buckets: number[]) => {
 
   unlinkSync(bodyWritePath)
 
-  execSync(`git checkout ${STARTING_BRANCH}`)
+  execSync(`git checkout ${startingBranch}`)
 }
