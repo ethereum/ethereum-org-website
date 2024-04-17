@@ -7,7 +7,7 @@ tags:
   - "alchemy"
   - "Solidity"
   - "スマートコントラクト"
-skill: beginner
+skill: 初級
 lang: ja
 published: 2021-04-22
 ---

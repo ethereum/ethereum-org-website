@@ -5,7 +5,7 @@ author: Ori Pomerantz
 lang: ja
 tags:
   - "ERC-20"
-skill: beginner
+skill: 初級
 published: 2022-08-15
 ---
 
