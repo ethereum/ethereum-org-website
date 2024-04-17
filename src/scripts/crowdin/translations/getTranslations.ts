@@ -3,10 +3,10 @@ import fs from "fs"
 import { checkMarkdown } from "../../markdownChecker"
 import crowdin from "../api-client/crowdinClient"
 import crowdinImport from "../import/main"
+import type { BucketsList } from "../import/types"
 
 import { BUCKETS_PATH, DOT_CROWDIN, FILE_PATH, SUMMARY_PATH } from "./constants"
 import getApprovedBuckets from "./getApprovedBuckets"
-import type { BucketsList } from "./types"
 import { decompressFile, downloadFile } from "./utils"
 
 import "dotenv/config"
