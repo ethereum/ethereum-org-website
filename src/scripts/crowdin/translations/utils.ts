@@ -50,7 +50,7 @@ const getQAMessage = (locale: string) => {
   return `
 \`\`\`shell
 yarn markdown-checker
-\`\`\`l
+\`\`\`
 
 <details><summary>Unfold for ${summaryJson[locale].length} result(s)</summary>
 
@@ -89,9 +89,7 @@ export const processLocale = (locale: string, buckets: number[]) => {
   Thank you to everyone contributing to translate ethereum.org ❤️
 
   ## Content buckets imported
-  ${new Intl.ListFormat("en", { type: "conjunction" }).format(
-    buckets.map(String)
-  )}
+  ${buckets.sort((a, b) => a - b).join(", ")}
 
   ## Markdown QA checker alerts
   ${getQAMessage(locale)}
@@ -117,7 +115,7 @@ export const processLocale = (locale: string, buckets: number[]) => {
   const updatedBody =
     prBody +
     `\n\n## Preview link
-    - [${previewUrl}](${previewUrl})
+[${previewUrl}](${previewUrl})
     `
   // Update PR with new body
   writeFileSync(bodyWritePath, updatedBody)
