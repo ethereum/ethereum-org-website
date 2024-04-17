@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
 import {
   Box,
   type BoxProps,
@@ -9,10 +8,10 @@ import {
   Icon,
   List,
   ListItem,
-  Skeleton,
   Text,
   useToken,
 } from "@chakra-ui/react"
+import { MdExpandMore } from "@react-icons/all-files/md/MdExpandMore"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"

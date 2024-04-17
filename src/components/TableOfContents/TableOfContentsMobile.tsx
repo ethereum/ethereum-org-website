@@ -1,6 +1,5 @@
 import React from "react"
 import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
 import {
   Box,
   chakra,
@@ -8,10 +7,10 @@ import {
   Flex,
   Icon,
   List,
-  Show,
   useDisclosure,
   useToken,
 } from "@chakra-ui/react"
+import { MdExpandMore } from "@react-icons/all-files/md/MdExpandMore"
 
 import type { ToCItem } from "@/lib/types"
 

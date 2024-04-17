@@ -1,8 +1,8 @@
-import { ReactNode, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
 import { Box, HStack, Icon } from "@chakra-ui/react"
+import { MdExpandMore } from "@react-icons/all-files/md/MdExpandMore"
 
 import { ChildOnlyProp } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"

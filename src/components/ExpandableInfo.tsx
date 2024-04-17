@@ -1,6 +1,5 @@
 import { motion } from "framer-motion"
 import type { ReactNode } from "react"
-import { MdExpandMore } from "react-icons/md"
 import {
   type BackgroundProps,
   Box,
@@ -14,6 +13,7 @@ import {
   useDisclosure,
   VStack,
 } from "@chakra-ui/react"
+import { MdExpandMore } from "@react-icons/all-files/md/MdExpandMore"
 
 import { Image, type ImageProps } from "@/components/Image"
 import Text from "@/components/OldText"
