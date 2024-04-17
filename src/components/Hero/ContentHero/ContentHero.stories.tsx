@@ -1,17 +1,23 @@
 import { useTranslation } from "next-i18next"
 import { Meta, StoryObj } from "@storybook/react"
 
+import { allModes } from "../../../../.storybook/modes"
+import contentHeroImg from "../../../../public/mainnet.png"
+
 import ContentHeroComponent, { ContentHeroProps } from "."
 
 type ContentHeroType = typeof ContentHeroComponent
-
-import contentHeroImg from "../../../../public/mainnet.png"
 
 const meta = {
   title: "Organisms / Layouts / Hero",
   component: ContentHeroComponent,
   parameters: {
     layout: "none",
+    chromatic: {
+      modes: {
+        ...allModes,
+      },
+    },
   },
   argTypes: {
     heroImg: {
