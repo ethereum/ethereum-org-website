@@ -2,7 +2,6 @@ import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentProps, ReactNode } from "react"
-import { FaDiscord } from "react-icons/fa"
 import {
   Box,
   type BoxProps,
@@ -13,6 +12,7 @@ import {
   type HeadingProps,
   type Icon as ChakraIcon,
 } from "@chakra-ui/react"
+import { FaDiscord } from "@react-icons/all-files/fa/FaDiscord"
 
 import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 

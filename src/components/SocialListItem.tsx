@@ -1,5 +1,4 @@
 import {
-  FaDiscord,
   FaGlobe,
   FaRedditAlien,
   FaStackExchange,
@@ -7,6 +6,7 @@ import {
   FaYoutube,
 } from "react-icons/fa"
 import { Box, Flex, Icon } from "@chakra-ui/react"
+import { FaDiscord } from "@react-icons/all-files/fa/FaDiscord"
 
 const socialColors = {
   reddit: "#ff4301",

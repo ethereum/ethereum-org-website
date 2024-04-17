@@ -1,7 +1,9 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGlobe, FaTwitter } from "react-icons/fa"
+import { FaGlobe } from "react-icons/fa"
 import { Flex, Heading, Icon, Stack, Text } from "@chakra-ui/react"
+import { FaDiscord } from "@react-icons/all-files/fa/FaDiscord"
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 
 import { Lang, WalletFilter } from "@/lib/types"
 

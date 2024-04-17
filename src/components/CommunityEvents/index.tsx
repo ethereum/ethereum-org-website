@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { FaDiscord } from "react-icons/fa"
 import {
   Box,
   Center,
@@ -10,6 +9,7 @@ import {
   GridItem,
   Icon,
 } from "@chakra-ui/react"
+import { FaDiscord } from "@react-icons/all-files/fa/FaDiscord"
 
 import type { Lang } from "@/lib/types"
 import type { CommunityEvent } from "@/lib/interfaces"

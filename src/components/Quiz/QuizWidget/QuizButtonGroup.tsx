@@ -1,7 +1,6 @@
 import { useMemo } from "react"
-import { useRouter } from "next/navigation"
-import { FaTwitter } from "react-icons/fa"
 import { Center, Icon } from "@chakra-ui/react"
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 
 import { Button } from "@/components/Buttons"
 import Translation from "@/components/Translation"

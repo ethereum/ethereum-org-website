@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { FaTwitter } from "react-icons/fa"
 import {
   Box,
   Circle,
@@ -15,6 +14,7 @@ import {
   Text,
   UnorderedList,
 } from "@chakra-ui/react"
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 
 import { CompletedQuizzes, QuizShareStats } from "@/lib/types"
 

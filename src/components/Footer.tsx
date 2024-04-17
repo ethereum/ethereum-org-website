@@ -1,6 +1,5 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { FaDiscord, FaGithub, FaTwitter } from "react-icons/fa"
 import {
   Box,
   Flex,
@@ -10,6 +9,9 @@ import {
   ListItem,
   SimpleGrid,
 } from "@chakra-ui/react"
+import { FaDiscord } from "@react-icons/all-files/fa/FaDiscord"
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
+import { FaTwitter } from "@react-icons/all-files/fa/FaTwitter"
 
 import type { FooterLink, FooterLinkSection, Lang } from "@/lib/types"
 
