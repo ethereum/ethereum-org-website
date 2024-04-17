@@ -8,9 +8,9 @@ tags:
   - "nodos"
   - "consulta"
   - "Alchemy"
-skill: beginner
+skill: principiante
 lang: es
-published: 2020-10-30
+published: 30/10/2020
 source: Medio
 sourceUrl: https://medium.com/alchemy-api/getting-started-with-ethereum-development-using-alchemy-c3d6a45c567f
 ---
@@ -151,4 +151,4 @@ El último número de bloque es el 11043912
 
 ¿No sabe por dónde seguir ahora? ¡Pruebe a implementar su primer contrato inteligente y entrar en materia con algo de programación de Solidity en nuestra [Guía sobre contratos inteligentes abierta a todos los públicos](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract) o pruebe su panel de conocimiento con la [aplicación de prueba del panel](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Regístrese gratis en Alchemy](https://auth.alchemyapi.io/signup), eche un vistazo a nuestra [documentación](https://docs.alchemyapi.io/) y para estar al tanto de las últimas novedades, síganos en [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Regístrese gratis en Alchemy](https://auth.alchemyapi.io/signup), eche un vistazo a nuestra documentación [](https://docs.alchemyapi.io/) y para estar al tanto de las últimas novedades, síganos en [Twitter](https://twitter.com/AlchemyPlatform)_.
