@@ -12,6 +12,7 @@ function postLangPRs() {
   if (!bucketsList) throw new Error("Failed to read buckets list.")
 
   for (const locale of locales) {
+    if (!bucketsList[locale]) return
     processLocale(locale, bucketsList[locale])
   }
 }
