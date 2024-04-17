@@ -1,5 +1,4 @@
 import { useTranslation } from "next-i18next"
-import { MdInfoOutline } from "react-icons/md"
 import {
   Box,
   Heading,
@@ -8,6 +7,7 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react"
+import { MdInfoOutline } from "@react-icons/all-files/md/MdInfoOutline"
 
 import { DropdownOption } from "@/lib/types"
 

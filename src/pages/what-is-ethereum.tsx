@@ -2,7 +2,6 @@ import { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { MdInfoOutline } from "react-icons/md"
 import {
   Box,
   type BoxProps,
@@ -15,6 +14,7 @@ import {
   ListItem,
   UnorderedList,
 } from "@chakra-ui/react"
+import { MdInfoOutline } from "@react-icons/all-files/md/MdInfoOutline"
 
 import type {
   BasePageProps,

@@ -1,7 +1,8 @@
 import * as React from "react"
-import { MdInfoOutline, MdLanguage } from "react-icons/md"
+import { MdLanguage } from "react-icons/md"
 import { TbSquareRoundedNumber8Filled } from "react-icons/tb"
 import { Box, HStack, Link, VStack } from "@chakra-ui/react"
+import { MdInfoOutline } from "@react-icons/all-files/md/MdInfoOutline"
 import { Meta, StoryObj } from "@storybook/react"
 
 import Tag, { EthTagProps } from "."

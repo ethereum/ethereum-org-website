@@ -1,6 +1,5 @@
 import React, { useState } from "react"
 import { motion } from "framer-motion"
-import { MdInfoOutline } from "react-icons/md"
 import {
   Button,
   Icon,
@@ -10,9 +9,9 @@ import {
   type PopoverBodyProps,
   PopoverCloseButton,
   PopoverContent,
-  PopoverHeader,
   PopoverTrigger,
 } from "@chakra-ui/react"
+import { MdInfoOutline } from "@react-icons/all-files/md/MdInfoOutline"
 
 import { PulseAnimation } from "./PulseAnimation"
 

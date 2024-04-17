@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { MdInfoOutline } from "react-icons/md"
 import {
   Box,
   Flex,
@@ -10,6 +9,7 @@ import {
   Icon,
   Text,
 } from "@chakra-ui/react"
+import { MdInfoOutline } from "@react-icons/all-files/md/MdInfoOutline"
 
 import type { LoadingState } from "@/lib/types"
 
