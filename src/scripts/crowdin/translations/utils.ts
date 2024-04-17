@@ -111,7 +111,7 @@ export const processLocale = (locale: string, buckets: number[]) => {
 
   // Update the PR that was just posted to include the Netlify preview link
   const prNumber = prUrl.split("/").pop()
-  const previewUrl = `https://deploy-preview-${prNumber}--ethereumorg.netlify.app/`
+  const previewUrl = `https://deploy-preview-${prNumber}--ethereumorg.netlify.app/${locale}/`
   const updatedBody =
     prBody +
     `\n\n## Preview link
