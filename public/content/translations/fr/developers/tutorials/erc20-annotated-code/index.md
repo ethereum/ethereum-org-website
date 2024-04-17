@@ -7,7 +7,7 @@ tags:
   - "solidity"
   - "erc-20"
 skill: beginner
-published: 2021-03-09
+published: 09 mars 2021
 ---
 
 ## Introduction {#introduction}

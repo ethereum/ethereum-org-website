@@ -7,7 +7,7 @@ tags:
   - "jetons"
   - "solidity"
   - "erc-20"
-skill: beginner
+skill: débutant
 lang: fr
 published: 2020-04-05
 source: EthereumDev

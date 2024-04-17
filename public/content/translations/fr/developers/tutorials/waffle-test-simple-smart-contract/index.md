@@ -9,7 +9,7 @@ tags:
   - "test"
 skill: beginner
 lang: fr
-published: 2021-02-26
+published: 26/02/2021
 ---
 
 ## Dans ce tutoriel, vous apprendrez à {#in-this-tutorial-youll-learn-how-to}
@@ -92,7 +92,7 @@ Exécutez `yarn build`. Cela fera apparaître le dossier `build` avec le contrat
 
 ## Configuration du test {#test-setup}
 
-Tester avec Waffle nécessite d'utiliser des correspondances Chai et Mocha, vous devez donc [les ajouter](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) à votre projet. Lancez la mise à jour de votre paquet package.json, et ajoutez le `texte`d'entrée, dans la partie modèle:
+Tester avec Waffle nécessite d'utiliser des correspondances Chai et Mocha, vous devez donc [les ajouter](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) à votre projet. Lancez la mise à jour de votre paquet package.json, et ajoutez le `texte`d'entrée, dans la partie modèle <<scripts>> :
 
 ```json
 "scripts": {
@@ -200,4 +200,4 @@ Vous avez fait votre premier (grand) pas vers les tests des contrats intelligent
 
 - [Tester ERC20 avec Waffle](/developers/tutorials/testing-erc-20-tokens-with-waffle/)
 - [Waffle : Bouchonnage dynamique et tests de contrats](/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/#gatsby-focus-wrapper)
-- [Tutoriel pour "dire bonjour au monde" avec hardhat et ethers](/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/)
+- [Tutoriel pour "dire bonjour au monde" avec hardhat et ethers](/developers/tutorials/waffle-hello-world-with-buidler-tutorial/)
