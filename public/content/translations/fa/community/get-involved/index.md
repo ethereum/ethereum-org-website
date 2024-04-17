@@ -13,7 +13,6 @@ lang: fa
 ## توسعه‌دهندگان <Emoji text=":computer:" size={1} /> {#developers}
 
 - در [ethereum.org/developers/](/developers/) درباره اتریوم یاد بگیرید و آن را امتحان کنید
-- [یک جایزه در Gitcoin پیدا کنید](https://gitcoin.co/)، روی یک مشکل فنی کوچک یا بزرگ کار کنید، ارز دیجیتال کسب کنید!
 - در یک هکاتون [ETHGlobal](http://ethglobal.co/) در نزدیکی خود شرکت کنید!
 - [پروژه‌های مرتبط با حوزه‌ی تخصصی یا زبان برنامه‌نویسی انتخابی خود را بررسی کنید](/developers/docs/programming-languages/)
 - [تماس‌های Core Dev](https://www.youtube.com/@EthereumProtocol) را تماشا کنید و یا در آن شرکت کنید
