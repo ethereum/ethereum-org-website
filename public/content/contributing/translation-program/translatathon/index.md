@@ -18,10 +18,10 @@ We invite you to join us in breaking down language barriers and making ethereum.
 
 ### When {#when}
 
-- Application period: August 1st - August 15th
-- Translation period: August 16th - August 23rd
-- Evaluation & QA period: August 23rd - August 30th
-- Results announcement: August 31st
+- Application period: August 1st - August 15th, 2023
+- Translation period: August 16th - August 23rd, 2023
+- Evaluation & QA period: August 23rd - August 30th, 2023
+- Results announcement: August 31st, 2023
 
 ### Where {#where}
 
