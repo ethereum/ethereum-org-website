@@ -6,8 +6,8 @@ tags:
   - "capa 2"
   - "guardar en caché"
   - "almacenamiento"
-skill: intermediate
-published: 2022-09-15
+skill: intermedio
+published: 15-9-2022
 lang: es
 ---
 

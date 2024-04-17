@@ -6,9 +6,9 @@ tags:
   - "contratos inteligentes"
   - "seguridades"
   - "solidity"
-skill: intermediate
+skill: intermedio
 lang: es
-published: 2020-09-07
+published: 07-09-2020
 source: Desarrollando smart contracts
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/workflow.md
 ---
