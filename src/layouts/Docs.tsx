@@ -23,6 +23,7 @@ import BannerNotification from "@/components/BannerNotification"
 import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
+import GitHubContributors from "@/components/GitHubContributors"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
@@ -253,12 +254,6 @@ export const DocsLayout = ({
     frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   // Components lazy-loading
-  const GitHubContributors = dynamic(
-    () => import("@/components/GitHubContributors"),
-    {
-      ssr: false,
-    }
-  )
   const CrowdinContributors = dynamic(
     () => import("@/components/CrowdinContributors"),
     {
