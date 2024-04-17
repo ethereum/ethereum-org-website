@@ -9,7 +9,6 @@ import {
   Icon,
   List,
   ListItem,
-  Skeleton,
   Text,
   useToken,
 } from "@chakra-ui/react"

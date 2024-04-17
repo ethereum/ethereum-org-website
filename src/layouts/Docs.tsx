@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import {
   Badge,
@@ -20,16 +21,8 @@ import type { DocsFrontmatter, MdPageContent } from "@/lib/interfaces"
 
 import BannerNotification from "@/components/BannerNotification"
 import { ButtonLink } from "@/components/Buttons"
-import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
-import Codeblock from "@/components/Codeblock"
-import CrowdinContributors from "@/components/CrowdinContributors"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
-import DocsNav from "@/components/DocsNav"
-import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
-import GitHubContributors from "@/components/GitHubContributors"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
@@ -46,8 +39,8 @@ import SideNavMobile from "@/components/SideNavMobile"
 import { mdxTableComponents } from "@/components/Table"
 import TableOfContents from "@/components/TableOfContents"
 import Translation from "@/components/Translation"
-import YouTube from "@/components/YouTube"
 
+// import YouTube from "@/components/YouTube"
 import { getEditPath } from "@/lib/utils/editPath"
 
 // Utils
@@ -138,9 +131,7 @@ const OrderedList = (props: ListProps) => (
   <ChakraOrderedList ms="1.45rem" {...props} />
 )
 
-const ListItem = (props: ListItemProps) => (
-  <ChakraListItem {...props} />
-)
+const ListItem = (props: ListItemProps) => <ChakraListItem {...props} />
 
 // Apply styles for classes within markdown here
 const Content = (props: ChildOnlyProp) => {
@@ -181,6 +172,29 @@ const BackToTop = (props: ChildOnlyProp) => (
     </Link>
   </Flex>
 )
+
+// Components lazy-loading
+const Codeblock = dynamic(() => import("@/components/Codeblock"), {
+  ssr: false,
+})
+const CallToContribute = dynamic(
+  () => import("@/components/CallToContribute"),
+  {
+    ssr: false,
+  }
+)
+const Emoji = dynamic(() => import("@/components/Emoji"), {
+  ssr: false,
+})
+const GlossaryTooltip = dynamic(
+  () => import("@/components/Glossary/GlossaryTooltip"),
+  {
+    ssr: false,
+  }
+)
+const YouTube = dynamic(() => import("@/components/YouTube"), {
+  ssr: false,
+})
 
 export const docsComponents = {
   h1: H1,
@@ -237,6 +251,26 @@ export const DocsLayout = ({
     "data" in gitHubLastEdit ? gitHubLastEdit.data : lastUpdatedDate
   const useGitHubContributors =
     frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
+
+  // Components lazy-loading
+  const GitHubContributors = dynamic(
+    () => import("@/components/GitHubContributors"),
+    {
+      ssr: false,
+    }
+  )
+  const CrowdinContributors = dynamic(
+    () => import("@/components/CrowdinContributors"),
+    {
+      ssr: false,
+    }
+  )
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
+  const DocsNav = dynamic(() => import("@/components/DocsNav"), {
+    ssr: false,
+  })
 
   return (
     <Page>

@@ -1,4 +1,5 @@
 import { ComponentProps } from "react"
+import dynamic from "next/dynamic"
 import { CiLink } from "react-icons/ci"
 import {
   Badge,
@@ -24,26 +25,20 @@ import ButtonDropdown, {
   type ButtonDropdownProps,
 } from "@/components/ButtonDropdown"
 import { ButtonLink } from "@/components/Buttons"
-import Contributors from "@/components/Contributors"
 import Link from "@/components/Link"
 import MarkdownImage from "@/components/MarkdownImage"
 import OldHeading from "@/components/OldHeading"
 import { mdxTableComponents } from "@/components/Table"
-import TooltipLink from "@/components/TooltipLink"
-import YouTube from "@/components/YouTube"
 
-import GlossaryTooltip from "./Glossary/GlossaryTooltip"
 import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
 import Card from "./Card"
 import DocLink from "./DocLink"
-import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
 import FeaturedText from "./FeaturedText"
 import InfoBanner from "./InfoBanner"
 import IssuesList from "./IssuesList"
 import LocaleDateTime from "./LocaleDateTime"
 import MainArticle from "./MainArticle"
-import VideoIframe from "./VideoIframe"
 
 /**
  * Base HTML elements
@@ -148,6 +143,13 @@ export const HR = () => (
     bg="border"
   />
 )
+
+const TooltipLink = dynamic(() => import("@/components/TooltipLink"), {
+  ssr: false,
+})
+const VideoIframe = dynamic(() => import("@/components/VideoIframe"), {
+  ssr: false,
+})
 
 // All base html element components
 export const htmlElements = {
@@ -261,6 +263,23 @@ export const MobileButtonDropdown = (
 ) => <StyledButtonDropdown mb={0} {...props} />
 
 export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+
+// Components lazy-loading
+const Contributors = dynamic(() => import("@/components/Contributors"), {
+  ssr: false,
+})
+const YouTube = dynamic(() => import("@/components/YouTube"), {
+  ssr: false,
+})
+const GlossaryTooltip = dynamic(
+  () => import("@/components/Glossary/GlossaryTooltip"),
+  {
+    ssr: false,
+  }
+)
+const Emoji = dynamic(() => import("@/components/Emoji"), {
+  ssr: false,
+})
 
 // All custom React components
 export const reactComponents = {
