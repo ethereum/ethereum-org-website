@@ -64,6 +64,7 @@ export const useWalletPersonas = () => {
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
+        new_to_crypto: false,
       },
     },
     {
@@ -94,6 +95,7 @@ export const useWalletPersonas = () => {
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
+        new_to_crypto: false,
       },
     },
     {
@@ -124,6 +126,7 @@ export const useWalletPersonas = () => {
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
+        new_to_crypto: false,
       },
     },
     {
@@ -154,6 +157,7 @@ export const useWalletPersonas = () => {
         withdraw_crypto: false,
         multisig: false,
         social_recovery: false,
+        new_to_crypto: false,
       },
     },
   ]

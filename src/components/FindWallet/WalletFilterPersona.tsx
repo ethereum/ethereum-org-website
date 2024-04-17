@@ -1,4 +1,4 @@
-import { MdCircle } from "react-icons/md"
+import { MdCheckBox } from "react-icons/md"
 import {
   Box,
   Flex,
@@ -19,9 +19,31 @@ import { useWalletPersonas } from "../../hooks/useWalletPersonas"
 type WalletFilterPersonaProps = {
   resetFilters: () => void
   setFilters: React.Dispatch<React.SetStateAction<WalletFilter>>
-  selectedPersona: number
-  setSelectedPersona: React.Dispatch<React.SetStateAction<number>>
+  selectedPersona: number[]
+  setSelectedPersona: React.Dispatch<React.SetStateAction<number[]>>
   showMobileSidebar: boolean
+}
+
+const computeFilters = (
+  selectedPersonas: number[],
+  personas: WalletPersonas[]
+) => {
+  if (selectedPersonas.length === 0) return {}
+
+  const firstPersona = personas[selectedPersonas[0]]
+  const initialFilters = firstPersona.presetFilters
+  return selectedPersonas
+    .slice(1)
+    .reduce((filters: { [key: string]: boolean }, personaId) => {
+      const persona = personas[personaId]
+      if (!persona) return filters
+
+      return Object.fromEntries(
+        Object.entries(filters).map(([key, value]) => {
+          return [key, value && persona.presetFilters[key]]
+        })
+      )
+    }, initialFilters)
 }
 
 const WalletFilterPersona = ({
@@ -33,24 +55,25 @@ const WalletFilterPersona = ({
 }: WalletFilterPersonaProps) => {
   const personas = useWalletPersonas()
   const handleSelectPersona = (idx: number, persona: WalletPersonas) => {
-    if (idx === selectedPersona) {
-      resetFilters()
-
+    let newSelectedPersonas
+    if (selectedPersona.includes(idx)) {
+      newSelectedPersonas = selectedPersona.filter((persona) => persona !== idx)
       trackCustomEvent({
         eventCategory: "UserPersona",
         eventAction: `${persona.title}`,
         eventName: `${persona.title} false`,
       })
     } else {
-      setSelectedPersona(idx)
-      setFilters(persona.presetFilters)
-
+      newSelectedPersonas = [...selectedPersona, idx]
       trackCustomEvent({
         eventCategory: "UserPersona",
         eventAction: `${persona.title}`,
         eventName: `${persona.title} true`,
       })
     }
+    setSelectedPersona(newSelectedPersonas)
+    const newFilters = computeFilters(newSelectedPersonas, personas)
+    setFilters(newFilters as WalletFilter)
   }
 
   return (
@@ -95,16 +118,19 @@ const WalletFilterPersona = ({
               <Flex gap={2} mb={showMobileSidebar ? 0 : 1} px={1.5}>
                 <Box role="radio" aria-label={`${persona.title} filter`}>
                   <Icon
-                    as={MdCircle}
-                    borderRadius="full"
+                    as={MdCheckBox}
                     boxSize={2.5}
                     my={0}
                     mx={1}
                     fill={
-                      selectedPersona === idx ? "primary.base" : "transparent"
+                      selectedPersona.includes(idx)
+                        ? "primary.base"
+                        : "transparent"
                     }
                     background={
-                      selectedPersona === idx ? "primary.base" : "transparent"
+                      selectedPersona.includes(idx)
+                        ? "primary.base"
+                        : "transparent"
                     }
                     outline="1.5px solid"
                     outlineColor="primary.base"
@@ -135,7 +161,9 @@ const WalletFilterPersona = ({
               {!showMobileSidebar && (
                 <Text
                   p="0.4rem"
-                  color={selectedPersona === idx ? "body.base" : "body.medium"}
+                  color={
+                    selectedPersona.includes(idx) ? "body.base" : "body.medium"
+                  }
                   fontSize="sm"
                   fontWeight="normal"
                   transition="0.5s all"
