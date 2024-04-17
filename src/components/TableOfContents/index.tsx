@@ -1,5 +1,4 @@
 import { useTranslation } from "next-i18next"
-import { FaGithub } from "react-icons/fa"
 import {
   Box,
   BoxProps,
@@ -9,6 +8,7 @@ import {
   ListItem,
   useToken,
 } from "@chakra-ui/react"
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 
 import type { ToCItem } from "@/lib/types"
 

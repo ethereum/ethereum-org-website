@@ -3,7 +3,6 @@ import type { GetStaticProps, InferGetStaticPropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { FaGithub } from "react-icons/fa"
 import {
   Box,
   chakra,
@@ -17,6 +16,7 @@ import {
   Stack,
   useToken,
 } from "@chakra-ui/react"
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 
 import { AllMetricData, BasePageProps, ChildOnlyProp, Lang } from "@/lib/types"
 import type { CommunityEventsReturnType } from "@/lib/interfaces"

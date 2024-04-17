@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react"
-import { FaGithub } from "react-icons/fa"
 import { Flex, FlexProps, Icon, useToken } from "@chakra-ui/react"
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 
 import { ChildOnlyProp } from "@/lib/types"
 

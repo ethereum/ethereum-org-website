@@ -2,8 +2,8 @@ import { useMemo, useState } from "react"
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { FaGithub } from "react-icons/fa"
 import { Box, Flex, Icon, Stack, Text, useDisclosure } from "@chakra-ui/react"
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 
 import { BasePageProps, QuizKey, QuizStatus } from "@/lib/types"
 

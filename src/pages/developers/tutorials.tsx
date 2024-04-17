@@ -3,7 +3,6 @@ import { GetStaticProps, InferGetServerSidePropsType } from "next"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
-import { FaGithub } from "react-icons/fa"
 import {
   Badge,
   Box,
@@ -13,6 +12,7 @@ import {
   Heading,
   useToken,
 } from "@chakra-ui/react"
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 
 import { BasePageProps, Lang } from "@/lib/types"
 

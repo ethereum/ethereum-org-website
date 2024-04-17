@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
-import { FaGithub } from "react-icons/fa"
 import { Center, Flex, Icon } from "@chakra-ui/react"
+import { FaGithub } from "@react-icons/all-files/fa/FaGithub"
 
 import Emoji from "./Emoji"
 import { BaseLink, LinkProps } from "./Link"
