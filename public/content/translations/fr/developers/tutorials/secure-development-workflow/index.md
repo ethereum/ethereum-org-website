@@ -6,7 +6,7 @@ tags:
   - "contrats intelligents"
   - "sécurité"
   - "solidity"
-skill: intermediate
+skill: intermédiaire
 lang: fr
 published: 2020-09-07
 source: Créer des contrats sécurisés

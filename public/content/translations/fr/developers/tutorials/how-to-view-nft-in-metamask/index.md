@@ -6,9 +6,9 @@ tags:
   - "ERC-721"
   - "alchemy"
   - "Solidity"
-skill: beginner
+skill: débutant
 lang: fr
-published: 2021-04-22
+published: 22/04/2021
 ---
 
 Ce tutoriel est la Partie 3/3 de la série de tutoriels NFT où l'on visualise nos NFT fraîchement créés. Vous pouvez toutefois utiliser le tutoriel général pour n'importe quel jeton ERC-721 en utilisant MetaMask, y compris sur le réseau principal ou un testnet. Si vous souhaitez apprendre à créer votre propre NFT sur Ethereum, veuillez consulter [la Partie 1 relative à la façon d'Écrire & Déployer un contrat intelligent NFT](/developers/tutorials/how-to-write-and-deploy-an-nft) !

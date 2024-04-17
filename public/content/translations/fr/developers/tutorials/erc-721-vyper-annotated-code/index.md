@@ -8,7 +8,7 @@ tags:
   - "erc-721"
   - "python"
 skill: beginner
-published: 2021-04-01
+published: 01/04/2021
 ---
 
 ## Introduction {#introduction}

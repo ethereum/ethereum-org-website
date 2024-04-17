@@ -7,7 +7,7 @@ tags:
   - "alchemy"
   - "solidity"
   - "contrats intelligents"
-skill: beginner
+skill: débutant
 lang: fr
 published: 2021-04-22
 ---
@@ -87,7 +87,7 @@ La manière dont vous répondez à ces questions d'installation a peu d'importan
     author:
     license: (ISC)
     About to write to /Users/thesuperb1/Desktop/my-nft/package.json:
-
+    
     {
       "name": "my-nft",
       "version": "1.0.0",
