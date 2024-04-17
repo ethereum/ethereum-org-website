@@ -6,9 +6,9 @@ tags:
   - "transazioni"
   - "web3.js"
   - "alchemy"
-skill: beginner
+skill: principiante
 lang: it
-published: 2020-11-04
+published: 04-11-2020
 source: documentazione Alchemy
 sourceUrl: https://docs.alchemy.com/alchemy/tutorials/sending-txs
 ---
