@@ -1,6 +1,5 @@
 import React, { MouseEvent, useState } from "react"
 import { useTranslation } from "next-i18next"
-import { MdMenu } from "react-icons/md"
 import {
   Button,
   ButtonProps,
@@ -9,6 +8,7 @@ import {
   MenuItem,
   MenuList,
 } from "@chakra-ui/react"
+import { MdMenu } from "@react-icons/all-files/md/MdMenu"
 
 // Utils
 import { trackCustomEvent } from "@/lib/utils/matomo"
