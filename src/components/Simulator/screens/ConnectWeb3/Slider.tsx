@@ -1,13 +1,15 @@
-import { Box, Flex, Grid, Icon, Text } from "@chakra-ui/react"
 import React from "react"
 import { motion } from "framer-motion"
-import { EthGlyphIcon } from "../../icons"
 import { PiCheckThin } from "react-icons/pi"
+import { Box, Flex, Grid, Icon, Text, TextProps } from "@chakra-ui/react"
 
-interface IProps {
+import { EthGlyphIcon } from "../../icons"
+
+type SliderProps = Pick<TextProps, "children"> & {
   isConnected: boolean
+  displayUrl: string
 }
-export const Slider: React.FC<IProps> = ({ isConnected }) => {
+export const Slider = ({ isConnected, displayUrl, children }: SliderProps) => {
   const ICON_SIZE = "4.5rem" as const
   return (
     <>
@@ -62,13 +64,13 @@ export const Slider: React.FC<IProps> = ({ isConnected }) => {
                 transition={{ delay: 0.15 }}
               >
                 <Text textAlign="center" px={{ base: 4, md: 8 }}>
-                  You're logged in!
+                  You&apos;re logged in!
                 </Text>
               </motion.div>
             </Flex>
           ) : (
             <>
-              <Text textAlign="center" fontWeight="bold" fontSize="lg">
+              <Text textAlign="center" fontWeight="bold" fontSize="lg" mb={4}>
                 Connect account?
               </Text>
               {/* URL Pill */}
@@ -96,14 +98,11 @@ export const Slider: React.FC<IProps> = ({ isConnected }) => {
                   />
                 </Grid>
                 <Text mb={0} me={0.5}>
-                  app.example.com
+                  {displayUrl}
                 </Text>
               </Flex>
               {/* Information */}
-              <Text>
-                Connecting to the website will not share any personal
-                information with the site owners.
-              </Text>
+              <Text>{children}</Text>
             </>
           )}
         </Flex>
