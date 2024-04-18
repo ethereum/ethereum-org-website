@@ -1810,6 +1810,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JeffreyJoel"><img src="https://avatars.githubusercontent.com/u/72028836?v=4?s=100" width="100px;" alt="Jeffrey Owoloko"/><br /><sub><b>Jeffrey Owoloko</b></sub></a><br /><a href="#maintenance-JeffreyJoel" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/colmck"><img src="https://avatars.githubusercontent.com/u/73862596?v=4?s=100" width="100px;" alt="Colin McKerracher"/><br /><sub><b>Colin McKerracher</b></sub></a><br /><a href="#maintenance-colmck" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/writegr"><img src="https://avatars.githubusercontent.com/u/167099595?v=4?s=100" width="100px;" alt="writegr"/><br /><sub><b>writegr</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Awritegr" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/richardgreg"><img src="https://avatars.githubusercontent.com/u/35255909?v=4?s=100" width="100px;" alt="Cardo"/><br /><sub><b>Cardo</b></sub></a><br /><a href="#maintenance-richardgreg" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
