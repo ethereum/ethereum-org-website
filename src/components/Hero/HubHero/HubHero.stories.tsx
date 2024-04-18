@@ -3,7 +3,7 @@ import { useTranslation } from "next-i18next"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { allModes } from "../../../../.storybook/modes"
+import { viewportModes } from "../../../../.storybook/modes"
 
 import HubHeroComponent from "./"
 
@@ -16,7 +16,7 @@ const meta = {
     layout: "none",
     chromatic: {
       modes: {
-        ...allModes,
+        ...viewportModes,
       },
     },
   },

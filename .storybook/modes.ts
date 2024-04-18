@@ -1,4 +1,4 @@
-export const allModes = {
+export const viewportModes = {
   base: {
     viewport: "base",
   },
@@ -17,4 +17,8 @@ export const allModes = {
   "2xl": {
     viewport: "2xl",
   },
+}
+
+export const allModes = {
+  ...viewportModes,
 }
