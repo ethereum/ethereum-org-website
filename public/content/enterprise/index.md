@@ -125,7 +125,7 @@ Here are some of the enterprise applications that have been built on top of the 
 - [Fabrica](https://www.fabrica.land/) _a platform for digitizing real estate assets, enabling DeFi borrowing and property trading 
 - [Fasset](https://www.fasset.com/) _a platform for supporting sustainable infrastructure_
 - [Nori](https://nori.com/) _open source market infrastructure to allow for carbon removal projects to measure and monetize their activity_
-- [Propy](https://propy.com/) _a platform to to automate residential real estate transactions with smart contracts_
+- [Propy](https://propy.com/) _a platform to automate residential real estate transactions with smart contracts_
 - [RealT](https://realt.co/) _investors around the globe can buy into the US real estate market through fully-compliant, fractional, tokenized ownership_
 - [Rubey](https://www.rubey.be/) _a platform that tokenizes high-end art to make it accessible to retail investors_
 - [Swarm](https://swarm.com/) _a platform focused on the digitization and trading of real-world assets in a regulatory compliant manner_
@@ -171,7 +171,7 @@ Here are some of the enterprise applications that have been built on top of the 
 
 ### Entertainment, NFTs, and Loyalty
 
-- [Adidas Virtual Gear](https://www.adidas.com/metaverse) _a virtal gear NFT collection_
+- [Adidas Virtual Gear](https://www.adidas.com/metaverse) _a virtual gear NFT collection_
 - [The British Museum's Sandbox](https://decrypt.co/150405/british-museum-enter-metaverse-via-sandbox) _an NFT collection_
 - [Fruitlab](https://fruitlab.com/) _a platform for gamers to earn from watching, sharing and playing online games_
 - [Nike Swoosh](https://www.swoosh.nike/) _an NFT platform_
