@@ -1,7 +1,8 @@
 import * as React from "react"
 import { RiInformationLine } from "react-icons/ri"
-import { Box, HStack } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
+import { expect, fireEvent, waitFor, within } from "@storybook/test"
 
 import InlineLink from "../Link"
 import Translation from "../Translation"
@@ -24,10 +25,27 @@ const meta = {
   args: {
     content: <TooltipContent />,
     children: (
-      <Box as="span">
+      <Box as="span" data-testid="tooltip-icon">
         <RiInformationLine />
       </Box>
     ),
+  },
+  argTypes: {
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+    content: {
+      table: {
+        disable: true,
+      },
+    },
+    onBeforeOpen: {
+      table: {
+        disable: true,
+      },
+    },
   },
 } satisfies Meta<TooltipType>
 
@@ -35,17 +53,21 @@ export default meta
 
 type Story = StoryObj<typeof meta>
 
-export const Tooltip: Story = {
-  render: (args) => (
-    <HStack>
-      <TooltipComponent {...args} />
-    </HStack>
-  ),
-}
+export const Basic: Story = {}
 
-// for chromatic visual testing
-export const AlwaysOpen: Story = {
-  args: {
-    isOpen: true,
+// for chromatic story snapshot showing the rendered popover
+export const OnOpen: Story = {
+  play: async ({ canvasElement }) => {
+    // Add delay for snapshot capture of the popover
+    const canvas = within(canvasElement)
+    const canvasParent = within(canvasElement.parentElement!)
+
+    const tooltipIcon = canvas.getByTestId("tooltip-icon")
+
+    fireEvent.mouseOver(tooltipIcon)
+
+    await waitFor(async () => {
+      await expect(canvasParent.getByTestId("tooltip-popover")).toBeVisible()
+    })
   },
 }
