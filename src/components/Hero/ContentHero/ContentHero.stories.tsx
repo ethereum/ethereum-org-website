@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { viewportModes } from "../../../../.storybook/modes"
+import { langViewportModes } from "../../../../.storybook/modes"
 import contentHeroImg from "../../../../public/mainnet.png"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
@@ -15,7 +15,7 @@ const meta = {
     layout: "none",
     chromatic: {
       modes: {
-        ...viewportModes,
+        ...langViewportModes,
       },
     },
   },

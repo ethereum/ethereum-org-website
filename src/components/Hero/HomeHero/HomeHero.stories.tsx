@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Meta, StoryObj } from "@storybook/react"
 
-import { viewportModes } from "../../../../.storybook/modes"
+import { langViewportModes } from "../../../../.storybook/modes"
 import homeHeroImg from "../../../../public/home/hero.png"
 
 import HomeHeroComponent from "."
@@ -15,7 +15,7 @@ const meta = {
     layout: "none",
     chromatic: {
       modes: {
-        ...viewportModes,
+        ...langViewportModes,
       },
     },
   },

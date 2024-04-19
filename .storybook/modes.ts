@@ -19,6 +19,45 @@ export const viewportModes = {
   },
 }
 
+export const langModes = {
+  en: {
+    locale: "en",
+  },
+  zh: {
+    locale: "zh",
+  },
+  ru: {
+    locale: "ru",
+  },
+  uk: {
+    locale: "uk",
+  },
+}
+
+type LangViewModeObj = {
+  [key: string]: { viewport: string; locale: string }
+}
+
+export const langViewportModes = Object.entries(
+  viewportModes
+).reduce<LangViewModeObj>((arr, curr) => {
+  const [viewKey, viewVal] = curr
+
+  const currLangViewObj = {} as LangViewModeObj
+
+  Object.entries(langModes).forEach(([langKey, langVal]) => {
+    currLangViewObj[`${langKey}-${viewKey}`] = {
+      viewport: viewVal.viewport,
+      locale: langVal.locale,
+    }
+  })
+
+  return {
+    ...arr,
+    ...currLangViewObj,
+  }
+}, {})
+
 export const allModes = {
-  ...viewportModes,
+  ...langViewportModes,
 }
