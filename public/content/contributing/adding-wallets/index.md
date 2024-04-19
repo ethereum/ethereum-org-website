@@ -30,7 +30,7 @@ Wallets are rapidly changing in Ethereum. We've tried to create a fair framework
 
 ### Product removals {#product-removals}
 
-- **Updated information** - Wallet providers are responsible for resubmitting their wallet information every 6 months to ensure validity and relevance of provided information (even if there are no changes to their product). If the product team fails to do so, ethereum.org reserves the right to remove the project from the page. 
+- **Updated information** - Wallet providers are responsible for resubmitting their wallet information every 6 months to ensure validity and relevance of provided information (even if there are no changes to their product). If the product team fails to do so, ethereum.org may remove the project from the page. 
 
 ### Other criteria: the nice-to-haves {#the-nice-to-haves}
 
