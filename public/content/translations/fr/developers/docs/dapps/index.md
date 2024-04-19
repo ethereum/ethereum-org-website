@@ -51,7 +51,7 @@ Un contrat intelligent est un code présent sur la blockchain Ethereum qui fonct
 
 **Scaffold-ETH _- Expérimentez rapidement avec Solidity en utilisant un frontend qui s'adapte à votre contrat intelligent._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Exemple dApp](https://punkwallet.io/)
 
 **Créez une App Eth _- Créez des applications sous Ethereum en une seule commande._**

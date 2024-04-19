@@ -1,6 +1,6 @@
 ---
 title: Transacciones
-description: "Descripción general sobre las transacciones de Ethereum: Cómo funcionan, su estructura de datos y cómo enviarlas a través de una aplicación."
+description: 'Descripción general sobre las transacciones de Ethereum: Cómo funcionan, su estructura de datos y cómo enviarlas a través de una aplicación.'
 lang: es
 ---
 
@@ -23,7 +23,7 @@ Las transacciones requieren una tarifa y deben incluirse en un bloque validado. 
 Una transacción enviada incluye la siguiente información:
 
 - `desde`: la dirección del remitente, que firmará la transacción. Esta será una cuenta de titularidad externa, ya que las cuentas contractuales no pueden enviar transacciones.
-- `Destinatario`: la transacción destinataria (en caso de que sea una cuenta de titularidad externa, la transacción transferirá valor. Si se trata de un contrato, la transacción ejecutará el código del contrato).
+- `a`: la dirección de recepción (si es una cuenta de propiedad externa, la transacción transferirá valor. Si se trata de un contrato, la transacción ejecutará el código del contrato).
 - `Firma`: identificador del remitente. Se genera cuando la clave privada del remitente firma la transacción y confirma que el remitente ha autorizado esta transacción.
 - `Nonce`: un contador que se incrementa secuencialmente y que indica el número de transacción de la cuenta.
 - `Valor`: cantidad de ETH a transferir del remitente al destinatario (denominada en WEI, donde 1ETH equivale a 1e+18wei).

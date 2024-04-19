@@ -11,10 +11,9 @@ Comunitatea Ethereum include persoane din medii și cu competențe diferite. Fie
 ## Dezvoltatori <Emoji text=":computer:" size={1} /> {#developers}
 
 - Aflați despre Ethereum și testați-l la adresa [ethereum.org/developers/](/developers/)
-- [Găsiți o recompensă pe Gitcoin](https://gitcoin.co/), lucrați la o problemă tehnică mică sau mare, câștigați cripto!
 - Participați la „hackathon-ul” [ETHGlobal](http://ethglobal.co/) din apropiere!
 - Consultați [proiectele legate de domeniul dvs. de experiență sau de limbajul de programare preferat](/developers/docs/programming-languages/)
-- Vizionați sau participați la [apeluri Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) pe YouTube
+- Vizionați sau participați la [apeluri Core Dev](https://www.youtube.com/@EthereumProtocol) pe YouTube
 - [Lista de dorințe a Programului de sprijinire a ecosistemului](https://esp.ethereum.foundation/wishlist/) - instrumente, documentație și domenii de infrastructură pentru care Programul de sprijinire a ecosistemului caută în mod activ granturi
 - [Web3Bridge](https://www.web3bridge.com/) - alăturați-vă comunității aspirante web3, în inițiativa lor de a identifica, instrui și sprijini sute de dezvoltatori și membri ai comunității din întreaga Africă
 

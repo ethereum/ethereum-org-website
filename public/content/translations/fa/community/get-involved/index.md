@@ -13,10 +13,9 @@ lang: fa
 ## توسعه‌دهندگان <Emoji text=":computer:" size={1} /> {#developers}
 
 - در [ethereum.org/developers/](/developers/) درباره اتریوم یاد بگیرید و آن را امتحان کنید
-- [یک جایزه در Gitcoin پیدا کنید](https://gitcoin.co/)، روی یک مشکل فنی کوچک یا بزرگ کار کنید، ارز دیجیتال کسب کنید!
 - در یک هکاتون [ETHGlobal](http://ethglobal.co/) در نزدیکی خود شرکت کنید!
 - [پروژه‌های مرتبط با حوزه‌ی تخصصی یا زبان برنامه‌نویسی انتخابی خود را بررسی کنید](/developers/docs/programming-languages/)
-- [تماس‌های Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) را تماشا کنید و یا در آن شرکت کنید
+- [تماس‌های Core Dev](https://www.youtube.com/@EthereumProtocol) را تماشا کنید و یا در آن شرکت کنید
 - [فهرست نیازمندی‌های برنامه پشتیبانی اکوسیستم](https://esp.ethereum.foundation/wishlist/) - ابزار، اسناد و مناطق زیرساختی که در آن برنامه حمایت از اکوسیستم اتوریوم فعالانه به دنبال کمک به برنامه‌های کمکی است
 - [Web3Bridge](https://www.web3bridge.com/) - برای شناسایی، آموزش و حمایت از صدها توسعه‌دهنده و اعضای انجمن در سراسر آفریقا به جامعه‌ی مشتاق web3 بپیوندید
 - به [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) بپیوندید

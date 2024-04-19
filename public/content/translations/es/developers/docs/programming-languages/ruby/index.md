@@ -5,7 +5,7 @@ lang: es
 incomplete: false
 ---
 
-<FeaturedText>Aprende cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Rust.</FeaturedText>
+<FeaturedText>Aprenda cómo desarrollar para Ethereum mediante proyectos y herramientas basados en Rust.</FeaturedText>
 
 Utiliza Ethereum para crear aplicaciones descentralizadas (o "dapps"), que aprovechan las ventajas de las criptomonedas y la tecnología de blockchain. Estas dapps pueden ser trustless, lo que significa que, una vez implementadas en Ethereum, siempre se ejecutan tal y como se programaron. Controlan activos digitales para crear nuevos tipos de aplicaciones financieras. Estas aplicaciones pueden ser descentralizadas, es decir, ninguna entidad o persona las controla y, por lo tanto, son prácticamente imposibles de censurar.
 

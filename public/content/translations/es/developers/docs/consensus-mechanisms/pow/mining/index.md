@@ -5,7 +5,7 @@ lang: es
 ---
 
 <InfoBanner emoji=":wave:">
-La prueba de trabajo ya no es la base del mecanismo de consenso de Ethereum, lo que significa que la minería se ha desactivado. En lugar de ello, Ethereum está asegurado por validadores que participan en ETH. Puede comenzar hoy mismo a participar en ETH. Descubrá más cosas sobre <a href='/roadmap/merge/'>La fusión</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>la prueba de participación (PoS)</a> y <a href='/staking/'>la participación</a>. Esta página es para interés histórico solamente.
+La prueba de trabajo ya no es la base del mecanismo de consenso de Ethereum, lo que significa que la minería se ha desactivado. En lugar de ello, Ethereum está asegurado por validadores que participan en ETH. Puede comenzar hoy mismo a participar en ETH. Descubrá más cosas sobre <a href='/roadmap/merge/'>La Fusión</a>, <a href='/developers/docs/consensus-mechanisms/pos/'>la prueba de participación (PoS)</a> y <a href='/staking/'>la participación</a>. Esta página es para interés histórico solamente.
 </InfoBanner>
 
 ## Requisitos previos {#prerequisites}
@@ -60,7 +60,7 @@ Cada transacción se mina una vez (es decir, se incluye en un nuevo bloque y se 
 
 La minería de bloques en la prueba de trabajo era probabilística, lo que significaba que a veces se publicaban dos bloques válidos simultáneamente debido a la latencia de la red. En este caso, el protocolo tenía que determinar la cadena más larga (y, por tanto, más "válida") y, al mismo tiempo, garantizar la equidad hacia los mineros recompensando parcialmente el bloque válido propuesto no incluido. Esto fomentó una mayor descentralización de la red, ya que los mineros más pequeños, que podrían enfrentarse a una mayor latencia, aún podrían generar beneficios a través de recompensas por bloque [ommer](/glossary/#ommer).
 
-El término «ommer» es el término de género neutral preferido para el hermano de un bloque padre, aunque algunas veces, se le denomina «tío». **Desde el paso de Ethereum a la Prueba de Participación, los bloques Ommer ya no se minan**ya que sólo se elige un proponente en cada puesto. Puede ver este cambio consultando la página[tabla histórica](https://ycharts.com/indicators/ethereum_uncle_rate)de los bloques Ommer minados.
+«Ommer» es el término de género neutro preferido para referirse al hermano de un bloque padre, aunque algunas veces, se le denomina «tío». **Desde el paso de Ethereum a la Prueba de Participación, los bloques Ommer ya no se minan**ya que sólo se elige un proponente en cada puesto. Puede ver este cambio consultando la página[tabla histórica](https://ycharts.com/indicators/ethereum_uncle_rate)de los bloques Ommer minados.
 
 ## Una demostración visual {#a-visual-demo}
 
@@ -70,9 +70,9 @@ Observe a Austin mientras le guía por el proceso de minado y la cadena de bloqu
 
 ## El algoritmo de minería {#mining-algorithm}
 
-Ethereum Mainnet sólo ha usado un algoritmo de minería- ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash/). Ethhash fue el sucesor de un algoritmo de R&D original conocido como ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto/).
+Ethereum Mainnet sólo ha usado un algoritmo de minería- ['Ethash'](/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash/). Ethhash fue el sucesor de un algoritmo de R&D original conocido como ['Dagger-Hashimoto'](/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto/).
 
-[Más información sobre los algoritmos de minería](/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/).
+[Más información sobre los algoritmos de minería](/developers/docs/consensus-mechanisms/pow/mining-algorithms/).
 
 ## Temas relacionados {#related-topics}
 

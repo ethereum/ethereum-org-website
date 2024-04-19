@@ -15,7 +15,7 @@ summaryPoints:
 
 ## 什麼是 Proto-Danksharding？ {#what-is-protodanksharding}
 
-Proto-Danksharding 又稱 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)，是使[卷軸](/layer2/#rollups)新增資料到區塊更便宜的方法。 這個名稱來自提出這個想法的兩位研究人員：Protolambda 和 Dankrad Feist。 目前，由於卷軸在 `CALLDATA` 中發佈交易，因此卷軸的使用者交易成本受到限制。 這個成本很高，因為資料由所有以太坊節點處理並永遠存在於鏈上，即使卷軸只需要短暫使用這些資料。 Proto-Danksharding 引入了可傳送並附加到區塊的資料二進位大型物件。 這些二進位大型物件中的資料無法被以太坊虛擬機存取，並且會在一段固定時間（1 到 3 個月）後自動刪除。 這表示卷軸可以更便宜地傳送資料，並以更便宜的交易形式將節省的費用轉給終端使用者。
+Proto-Danksharding 又稱 [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844)，是使[卷軸](/layer-2/#rollups)新增資料到區塊更便宜的方法。 這個名稱來自提出這個想法的兩位研究人員：Protolambda 和 Dankrad Feist。 目前，由於卷軸在 `CALLDATA` 中發佈交易，因此卷軸的使用者交易成本受到限制。 這個成本很高，因為資料由所有以太坊節點處理並永遠存在於鏈上，即使卷軸只需要短暫使用這些資料。 Proto-Danksharding 引入了可傳送並附加到區塊的資料二進位大型物件。 這些二進位大型物件中的資料無法被以太坊虛擬機存取，並且會在一段固定時間（1 到 3 個月）後自動刪除。 這表示卷軸可以更便宜地傳送資料，並以更便宜的交易形式將節省的費用轉給終端使用者。
 
 <ExpandableCard title="為什麼二進位大型物件能夠降低卷軸成本？" eventCategory="/roadmap/danksharding" eventName="clicked why do blocks make rollups cheaper?">
 

@@ -8,7 +8,7 @@ description: 在 ethereum.org 上上架内容资源的标准
 
 我们不能涵盖关于以太坊的所有内容，所以我们试着展示一些由社群创造的精彩文章、教程、简报、工作展示板和其他内容资源。 这些资源常为用户可能感兴趣的问题提供更深入的信息。
 
-如果您覺得某個頁麵中需要添加一個內容資源，請隨時在適當的地方提出建議。
+如果你覺得某個頁麵中需要添加一個內容資源，請隨時在適當的地方提出建議。
 
 ## 我们如何做出决定 {#how-we-decide}
 
@@ -23,10 +23,10 @@ description: 在 ethereum.org 上上架内容资源的标准
 
 ---
 
-## 添加您的内容资源 {#add-your-content-resource}
+## 添加你的内容资源 {#add-your-content-resource}
 
-如果您想要将内容资源添加到 ethereum.org，并且该内容资源符合标准，请在 GitHub 上创建一个提议。
+如果你想要将内容资源添加到 ethereum.org，并且该内容资源符合标准，请在 GitHub 上创建一个提议。
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A&projects=&template=feature_request.yaml&title=Feature+request">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=Type%3A+Feature&template=feature_request.yaml&title=">
   创建一个提议
 </ButtonLink>
