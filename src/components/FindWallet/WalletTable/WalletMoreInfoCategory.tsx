@@ -66,6 +66,7 @@ export const WalletMoreInfoCategory = ({
                 listStyleType="none"
                 display="flex"
                 mb={2}
+                alignItems="center"
                 width={{ base: "auto", xl: "full" }}
                 sx={{
                   p: {
@@ -86,21 +87,20 @@ export const WalletMoreInfoCategory = ({
               >
                 <ListIcon as={FeatureIcon}></ListIcon>
 
-                <Text px={1} lineHeight={1}>
+                <Text as="span" whiteSpace="nowrap" px={1} lineHeight={1}>
                   {feature.label}
+                  <Tooltip
+                    content={
+                      <Text color="body.base !important">
+                        {t(walletFilterData[feature.filterKey].description)}
+                      </Text>
+                    }
+                  >
+                    <Box as="span" ms="2">
+                      <Icon as={MdInfoOutline} color={featureColor} />
+                    </Box>
+                  </Tooltip>
                 </Text>
-
-                <Tooltip
-                  content={
-                    <Text color="body.base !important">
-                      {t(walletFilterData[feature.filterKey].description)}
-                    </Text>
-                  }
-                >
-                  <Box as="span">
-                    <Icon as={MdInfoOutline} color={featureColor} />
-                  </Box>
-                </Tooltip>
               </ListItem>
             )
         })}
