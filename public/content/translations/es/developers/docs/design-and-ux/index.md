@@ -12,7 +12,7 @@ lang: es
 
 El diseño efectivo va más allá de la creación de interfaces de usuario visualmente atractivas. Implica obtener una comprensión profunda de las necesidades, los objetivos y los factores impulsores del usuario. Por lo tanto, recomendamos encarecidamente que todos los diseñadores adopten un proceso de diseño, como el [**proceso de doble diamante**](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)), para garantizar que su trabajo sea deliberado e intencional.
 
-- [La Web3 necesita más investigadores y diseñadores de experiencia de usuario](https://akasha.org/blog/2022/10/11/akasha-conversation-09-web3-ux-researchers-and-designers): visión general de la madurez actual del diseño
+- [La Web3 necesita más investigadores y diseñadores de experiencia de usuario](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers): visión general de la madurez actual del diseño
 - [Guía sencilla para la investigación de la experiencia de usuario en la Web3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1): guía sencilla sobre cómo investigar
 - [Cómo abordar las decisiones de experiencia de usuario en Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/): breve descripción de la investigación cuantitativa y cualitativa y las diferencias entre los dos (video, 6 min)
 - [Ser investigador de UX en Web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849): visión personal de lo que es ser un investigador de experiencia de usuario en Web3
@@ -77,7 +77,7 @@ Involúcrese en organizaciones profesionales impulsadas por la comunidad o únas
 
 ## Sistemas de diseño {#design-systems}
 
-- [Optimism Design](https://www.figma.com/@oplabs) (Figma)
+- [Optimism Design](https://www.figma.com/@optimism) (Figma)
 - [Sistema de diseño de Ethereum.org](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, un sistema de diseño para Web3 de Polygon](https://finity.polygon.technology/) (Figma)
 - [Sitema de diseño para ENS](https://thorin.ens.domains/)

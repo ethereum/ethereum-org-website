@@ -51,7 +51,7 @@ Akıllı sözleşme, Ethereum blok zincirinde yaşayan ve tam olarak programland
 
 **Scaffold-ETH _- Akıllı sözleşmenize adapte olan bir ön uç kullanarak Solidity ile hızlıca deney yapın._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Örnek dapp](https://punkwallet.io/)
 
 **Create Eth App _- Tek komutla Ethereum destekli uygulamalar oluşturun._**

@@ -44,7 +44,7 @@ Başlamadan önce temel bilgilere mi ihtiyacınız var? [ethereum.org/learn](/le
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Ethereum benzeri ağlar ile etkileşim kurmak için hariciler koleksiyonu._
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Hızlı Ethereum fikir birliği katmanı istemcisi_
 - [Ethereum WebAssemmbly](https://ewasm.readthedocs.io/en/mkdocs/) - _WebAssembly'nin karar verici bir alt takımı kullanılarak Ethereum akıllı sözleşme yürütüm katmanının yeniden tasarımının önerilmesi_
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API referansı_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API referansı_
 - [Solaris](https://github.com/paritytech/sol-rs) - _Yerli Parity İstemci EVM'si kullanılarak Solidity Akıllı Sözleşme birim testi teçhizatı._
 - [SputnikVM](https://github.com/rust-blockchain/evm) - _Rust Ethereum Sanal Makinesi Uygulaması_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Rust'ta Wavelet sakıllı sözleşme_

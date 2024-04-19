@@ -16,7 +16,6 @@ import {
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
-import PostMergeBanner from "@/components/Banners/PostMergeBanner"
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
@@ -165,18 +164,15 @@ export const tutorialsComponents = {
   StyledDivider,
   YouTube,
 }
-interface TutorialLayoutProps
-  extends ChildOnlyProp,
-    Pick<
-      MdPageContent,
-      | "tocItems"
-      | "lastUpdatedDate"
-      | "crowdinContributors"
-      | "contentNotTranslated"
-    > {
-  frontmatter: TutorialFrontmatter
-  timeToRead: number
-}
+type TutorialLayoutProps = ChildOnlyProp &
+  Pick<
+    MdPageContent,
+    "tocItems" | "crowdinContributors" | "contentNotTranslated"
+  > &
+  Required<Pick<MdPageContent, "lastUpdatedDate">> & {
+    frontmatter: TutorialFrontmatter
+    timeToRead: number
+  }
 
 export const TutorialLayout = ({
   children,
@@ -191,20 +187,14 @@ export const TutorialLayout = ({
   const absoluteEditPath = getEditPath(relativePath)
 
   const borderColor = useToken("colors", "border")
-  const postMergeBannerTranslationString =
-    frontmatter.postMergeBannerTranslation as TranslationKey | null
   const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
-  const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
+  const intlLastEdit =
+    "data" in gitHubLastEdit ? gitHubLastEdit.data! : lastUpdatedDate
   const useGitHubContributors =
     frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
   return (
     <>
-      {!!frontmatter.showPostMergeBanner && (
-        <PostMergeBanner
-          translationString={postMergeBannerTranslationString!}
-        />
-      )}
       <Flex
         w="100%"
         borderBottom={`1px solid ${borderColor}`}
@@ -226,7 +216,7 @@ export const TutorialLayout = ({
           {useGitHubContributors ? (
             <GitHubContributors
               relativePath={relativePath}
-              lastUpdatedDate={lastUpdatedDate!}
+              lastUpdatedDate={lastUpdatedDate}
             />
           ) : (
             <CrowdinContributors

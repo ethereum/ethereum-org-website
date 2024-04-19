@@ -60,7 +60,6 @@ A két nyilvános teszthálózat, amelyet a kliens fejlesztők jelenleg fenntart
 - [Alchemy Sepolia csap](https://sepoliafaucet.com/)
 - [Infura Sepolia csap](https://www.infura.io/faucet)
 - [Chainstack Sepolia csap](https://faucet.chainstack.com/sepolia-faucet)
-- [Testnet csap | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(hosszútávú támogatás)_ {#goerli}
 

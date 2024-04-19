@@ -1,5 +1,5 @@
 ---
-title: Stakowanie w puli
+title: Staking łączony
 description: Przegląd tego, jak rozpocząć korzystanie ze stakowania ETH w puli
 lang: pl
 template: staking

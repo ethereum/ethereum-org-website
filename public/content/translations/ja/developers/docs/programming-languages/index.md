@@ -12,18 +12,18 @@ lang: ja
 
 以下から使用したい開発言語を選択して、プロジェクト、リソース、仮想コミュニティを見つけられます。
 
-- [Dart デベロッパーのためのイーサリアム](/developers/docs/programming-languages/dart/)
-- [Delphi デベロッパーのためのイーサリアム](/developers/docs/programming-languages/delphi/)
-- [.NET デベロッパーのためのイーサリアム](/developers/docs/programming-languages/dot-net/)
-- [Go デベロッパーのためのイーサリアム](/developers/docs/programming-languages/golang/)
-- [Java デベロッパーのためのイーサリアム](/developers/docs/programming-languages/java/)
-- [JavaScript デベロッパーのためのイーサリアム](/developers/docs/programming-languages/javascript/)
-- [Python デベロッパーのためのイーサリアム](/developers/docs/programming-languages/python/)
-- [Ruby デベロッパーのためのイーサリアム](/developers/docs/programming-languages/ruby/)
-- [Rust デベロッパーのためのイーサリアム](/developers/docs/programming-languages/rust/)
+- [Dartデベロッパーのためのイーサリアム](/developers/docs/programming-languages/dart/)
+- [Delphiデベロッパーのためのイーサリアム](/developers/docs/programming-languages/delphi/)
+- [.NETデベロッパーのためのイーサリアム](/developers/docs/programming-languages/dot-net/)
+- [Goデベロッパーのためのイーサリアム](/developers/docs/programming-languages/golang/)
+- [Javaデベロッパーのためのイーサリアム](/developers/docs/programming-languages/java/)
+- [JavaScriptデベロッパーのためのイーサリアム](/developers/docs/programming-languages/javascript/)
+- [Pythonデベロッパーのためのイーサリアム](/developers/docs/programming-languages/python/)
+- [Rubyデベロッパーのためのイーサリアム](/developers/docs/programming-languages/ruby/)
+- [Rustデベロッパーのためのイーサリアム](/developers/docs/programming-languages/rust/)
 
 ### 使いたい言語がサポートされていなかった場合 {#other-lang}
 
 上記以外のプログラミング言語について、リソースや仮想コミュニティへのリンクを追加したい場合は、[問題をオープンする](https://github.com/ethereum/ethereum-org-website/issues/new/choose)ことによって、新しいページをリクエストできます。
 
-現在サポートされていない言語でブロックチェーンのインタフェースのコードを記述したい場合は、[JSON-RPC インターフェース](/developers/docs/apis/json-rpc/)を使用してイーサリアムネットワークに接続できます。 このインターフェースは、TCP/IP を使用できるすべての言語で利用可能です。
+現在サポートされていない言語でブロックチェーンのインタフェースのコードを記述したい場合は、[JSON-RPCインターフェース](/developers/docs/apis/json-rpc/)を使用してイーサリアムネットワークに接続できます。 このインターフェースは、TCP/IPを使用できるすべての言語で利用可能です。

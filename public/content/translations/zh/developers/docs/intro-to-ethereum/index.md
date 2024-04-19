@@ -16,7 +16,7 @@ lang: zh
 
 以太坊采用[权益证明共识机制](/developers/docs/consensus-mechanisms/pos/)。 任何想在链上添加新区块的人都必须质押以太币（以太坊原生货币）做为抵押品并运行验证者软件。 接着，可以随机选择这些“验证者”来提出区块，再由其他验证者检查并添加到区块链中。 存在一种奖励和惩罚体系，有力地激励参与者尽可能地诚实和保持在线。
 
-如果你想了解如何对区块链数据进行哈希运算并随后附加到区块引用的历史记录中，请务必查看 Anders Brownworth 进行的[这个演示](https://andersbrownworth.com/blockchain/blockchain)并观看下方的相关视频。
+如果你想了解如何对区块链数据进行哈希运算并随后附加到区块引用的历史记录中，请务必查看Anders Brownworth 进行的[这个演示](https://andersbrownworth.com/blockchain/blockchain)并观看下方的相关视频。
 
 观看 Anders 介绍区块链中的哈希：
 

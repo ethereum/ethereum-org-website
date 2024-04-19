@@ -61,7 +61,7 @@ Framework-urile sunt prevăzute cu numeroase funcționalități predefinite, cum
 
 **Scaffold-Eth -** **_Ethers.js + Hardhat + componente și hook-uri React pentru web3: tot ce aveţi nevoie pentru a începe să construiţi aplicații descentralizate acţionate de contractele inteligente._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **The Graph -** **_The Graph for querying blockchain data efficiently._**
 

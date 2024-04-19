@@ -81,3 +81,4 @@ DACは一部のバリディアムでも使われています。 DACは、デー�
 - [データ可用性委員会（DAC）](https://medium.com/starkware/data-availability-e5564c416424)
 - [プルーフ・オブ・ステークを用いたデータ可用性委員会.](https://blog.matter-labs.io/zkporter-a-breakthrough-in-l2-scaling-ed5e48842fbf)
 - [データの取り出し可能性問題の解決策](https://notes.ethereum.org/@vbuterin/data_sharding_roadmap#Who-would-store-historical-data-under-sharding)
+- [データ可用性か、あるいは： ロールアップで心配することを止めてイーサリアムを愛するようになった仕組み](https://ethereum2077.substack.com/p/data-availability-in-ethereum-rollups) 

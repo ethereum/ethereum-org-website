@@ -13,10 +13,9 @@ Start by reading about the ethereum.org mission and values in our [code of condu
 ## Developers <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Learn about and try Ethereum at [ethereum.org/developers/](/developers/)
-- [Find a bounty on Gitcoin](https://gitcoin.co/), work on a small or large technical issue, earn crypto!
 - Attend an [ETHGlobal](http://ethglobal.co/) hackathon near you!
 - Check out [projects related to your area of expertise or programming language of choice](/developers/docs/programming-languages/)
-- Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Watch or participate in the [Core Dev calls](https://www.youtube.com/@EthereumProtocol)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
 - Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)

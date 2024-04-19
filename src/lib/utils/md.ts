@@ -253,6 +253,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/privacy-policy",
     "/roadmap/account-abstraction",
     "/roadmap/danksharding",
+    "/roadmap/dencun",
     "/roadmap/merge/issuance",
     "/roadmap/pbs",
     "/roadmap/secret-leader-election",
@@ -265,6 +266,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/terms-of-use",
     "/web3",
     "/whitepaper",
+    "/wrapped-eth",
     "/zero-knowledge-proofs",
   ]
 

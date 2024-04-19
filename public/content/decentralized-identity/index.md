@@ -91,11 +91,11 @@ Decentralized identifiers are stored on distributed ledgers ([blockchains](/glos
 
 ## What makes decentralized identifiers possible? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Public Key Infrastructure (PKI) {#public-key-infrastructure}
+### 1. Public Key Cryptography {#public-key-cryptography}
 
-Public-key infrastructure (PKI) is an information security measure that generates a [public key](/glossary/#public-key) and [private key](/glossary/#private-key) for an entity. Public-key [cryptography](/glossary/#cryptography) is used in blockchain networks to authenticate user identities and prove ownership of digital assets.
+Public-key cryptography is an information security measure that generates a [public key](/glossary/#public-key) and [private key](/glossary/#private-key) for an entity. Public-key [cryptography](/glossary/#cryptography) is used in blockchain networks to authenticate user identities and prove ownership of digital assets.
 
-Some decentralized identifiers, such as an Ethereum account, have public and private keys. The public key identifies the account's controller, while the private keys can sign and decrypt messages for this account. PKI provides proofs needed to authenticate entities and prevent impersonation and use of fake identities, using [cryptographic signatures](https://andersbrownworth.com/blockchain/public-private-keys/) to verify all claims.
+Some decentralized identifiers, such as an Ethereum account, have public and private keys. The public key identifies the account's controller, while the private keys can sign and decrypt messages for this account. Public key cryptography provides proofs needed to authenticate entities and prevent impersonation and use of fake identities, using [cryptographic signatures](https://andersbrownworth.com/blockchain/public-private-keys/) to verify all claims.
 
 ### 2. Decentralized datastores {#decentralized-datastores}
 
@@ -163,6 +163,7 @@ There are many ambitious projects using Ethereum as a foundation for decentraliz
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (or PoH) is a social identity verification system built on Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _A decentralized, open-source social identity network seeking to reform identity verification through the creation and analysis of a social graph._
 - **[walt.id](https://walt.id)** — _Open source decentralized identity and wallet infrastructure that enables developers and organizations to leverage self-sovereign identity and NFTs/SBTs._
+- **[Masca](https://masca.io/)** — _Open source decentralized identity wallet implemented as MetaMask Snap that enables users and developers to leverage DIDs and VCs._
 
 ## Further reading {#further-reading}
 

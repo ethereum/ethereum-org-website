@@ -165,7 +165,7 @@ Raspberry PiのようなARMアーキテクチャのシングルボードコン�
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
 
-バリデータを実行しているコンセンサスノードにとって、[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は重要です。 マジョリティのバリデータが単一のクライアントを実行していると、ネットワークのセキュリティが危険にさらされます。 そのため、マイノリティクライアントを選択することをお勧めします。
+バリデータを実行しているコンセンサスノードにとって、[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity/)は重要です。 大多数のバリデータが単一のクライアントを実行していると、ネットワークのセキュリティが危険にさらされます。 そのため、マイノリティクライアントを選択することをお勧めします。
 
 [最新のネットワーククライアントの使用状況](https://clientdiversity.org/)を参照し、[クライアントの多様性](/developers/docs/nodes-and-clients/client-diversity)についてご覧ください。
 
