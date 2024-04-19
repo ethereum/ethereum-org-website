@@ -2,7 +2,6 @@
 title: Ethereum Yönetişimi
 description: Ethereum ile ilgili kararların nasıl alındığına giriş.
 lang: tr
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Ethereum yönetişimine giriş {#introduction}

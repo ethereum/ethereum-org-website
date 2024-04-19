@@ -2,7 +2,6 @@
 title: Kdo řídí Ethereum
 description: Úvod do rozhodování o Ethereu.
 lang: cs
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Úvod do správy Etherea {#introduction}
