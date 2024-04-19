@@ -30,7 +30,7 @@ Mit [GraphQL](https://graphql.org/) können Entwickler jede der kuratierten offe
 
 ## Client-Diversität
 
-Die [Client-Vielfalt](/developers/docs/nodes-and-clients/client-diversity/) ist wichtig für die allgemeine Sicherheit des Ethereum-Netzwerks, da sie die Widerstandsfähigkeit gegen Fehler und Schwachstellen gewährleistet. Es gibt inzwischen mehrere Dashboards zur Client-Vielfalt, darunter [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://rated.network), [execution-diversity.info](https://execution-diversity.info/) und [Ethernodes](https://ethernodes.org/).
+Die [Client-Vielfalt](/developers/docs/nodes-and-clients/client-diversity/) ist wichtig für die allgemeine Sicherheit des Ethereum-Netzwerks, da sie die Widerstandsfähigkeit gegen Fehler und Schwachstellen gewährleistet. Es gibt inzwischen mehrere Dashboards zur Client-Vielfalt, darunter [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://rated.network), [supermajority.info](https://supermajority.info//) und [Ethernodes](https://ethernodes.org/).
 
 ## Dune Analytics {#dune-analytics}
 
