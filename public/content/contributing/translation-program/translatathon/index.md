@@ -40,7 +40,7 @@ Office hours, workshops, team formation and FAQ sessions will be hosted on the [
 
 #### Application period {#applications}
 
-The application period will be open from **August 1st** to **August 15th**, 2023
+The application period will be open from **August 1st** to **August 15th**, 2023.
 
 All participants in the Translatathon are required to apply in order to participate and compete for prizes.
 
