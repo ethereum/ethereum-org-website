@@ -58,7 +58,7 @@
   },
   "devDependencies": {
     "@chakra-ui/storybook-addon": "5.1.0",
-    "@netlify/plugin-nextjs": "^4.41.3",
+    "@netlify/plugin-nextjs": "^5.1.2",
     "@storybook/addon-essentials": "7.6.6",
     "@storybook/addon-interactions": "7.6.6",
     "@storybook/addon-links": "7.6.6",
