@@ -230,6 +230,16 @@ const WalletTable = ({
   // Context API
   const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
 
+  const handleStickyFiltersClick = () => {
+    onOpen()
+
+    trackCustomEvent({
+      eventCategory: "MobileFilterToggle",
+      eventAction: "Tap MobileFilterToggle - sticky",
+      eventName: "show mobile filters true",
+    })
+  }
+
   return (
     <Container>
       <WalletContentHeader>
@@ -243,7 +253,7 @@ const WalletTable = ({
               color="primary.base"
               textTransform="uppercase"
               cursor="pointer"
-              onClick={onOpen}
+              onClick={handleStickyFiltersClick}
               as="button"
             >
               {`${t("page-find-wallet-filters")} (${
@@ -320,6 +330,14 @@ const WalletTable = ({
               })
           }
 
+          const handleWalletWebsiteClick = (walletName: string) => {
+            trackCustomEvent({
+              eventCategory: "WalletExternalLinkList",
+              eventAction: "Tap main button",
+              eventName: `${walletName}`,
+            })
+          }
+
           return (
             <WalletContainer
               key={wallet.key}
@@ -330,7 +348,14 @@ const WalletTable = ({
                 onKeyUp={(e) => {
                   if (e.key === "Enter") showMoreInfo(wallet)
                 }}
-                onClick={() => showMoreInfo(wallet)}
+                onClick={(e) => {
+                  // Prevent expanding the wallet more info section when clicking on the "Visit website" button
+                  if (
+                    (e.target as HTMLElement).matches("a, a svg")
+                  )
+                    return
+                  showMoreInfo(wallet)
+                }}
               >
                 <Td lineHeight="revert">
                   <Flex
@@ -420,6 +445,9 @@ const WalletTable = ({
                               w="auto"
                               isExternal
                               size="sm"
+                              onClick={() =>
+                                handleWalletWebsiteClick(wallet.name)
+                              }
                             >
                               {t("page-find-wallet-visit-website")}
                             </ButtonLink>
@@ -446,6 +474,7 @@ const WalletTable = ({
                       w="100%"
                       isExternal
                       size="sm"
+                      onClick={() => handleWalletWebsiteClick(wallet.name)}
                     >
                       {t("page-find-wallet-visit-website")}
                     </ButtonLink>
