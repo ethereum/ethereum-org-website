@@ -13,7 +13,7 @@ import {
   useToken,
 } from "@chakra-ui/react"
 
-import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
+import type { ChildOnlyProp } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
 import { ButtonLink } from "@/components/Buttons"
