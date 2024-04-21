@@ -77,6 +77,27 @@ export const STATUS_COLORS = {
         },
       },
     },
+    highContrast: {
+      [$badgeBg.variable]: "colors.body.light",
+      [$badgeColor.variable]: "colors.body.base",
+      "&:any-link": {
+        _hover: {
+          [$badgeBg.variable]: "colors.body.light",
+          [$badgeColor.variable]: "colors.body.medium",
+          [$tagBoxshadowColor.variable]: "colors.background.highlight",
+          boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
+        },
+        _focusWithin: {
+          [$badgeBg.variable]: "colors.body.light",
+          [$badgeColor.variable]: "colors.body.medium",
+          outlineColor: "primary.hover",
+        },
+        _active: {
+          [$badgeBg.variable]: "colors.body.light",
+          [$badgeColor.variable]: "colors.body.medium",
+        },
+      },
+    },
   },
   tag: {
     subtle: {
