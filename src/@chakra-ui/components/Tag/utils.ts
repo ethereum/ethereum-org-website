@@ -45,7 +45,7 @@ export const STATUS_COLORS = {
         _focusWithin: {
           [$badgeBg.variable]: "colors.primary.light",
           [$badgeColor.variable]: "colors.body.medium",
-          outlineColor: "colors.body.medium",
+          outlineColor: "primary.hover",
         },
         _active: {
           [$badgeBg.variable]: "colors.primary.hover",
