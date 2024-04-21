@@ -13,7 +13,6 @@ lang: el
 ## Προγραμματιστές <Emoji text=":computer:" size={1} /> {#developers}
 
 - Μάθετε σχετικά και δοκιμάστε το Ethereum στο [ethereum.org/developers/](/developers/).
-- [Εντοπίστε ένα σφάλμα στο Gitcoin](https://gitcoin.co/), εργαστείτε σε ένα μικρό ή μεγάλο τεχνικό ζήτημα και κερδίστε κρυπτονομίσματα!
 - Παρακολουθήστε ένα [ETHGlobal](http://ethglobal.co/) hackathon κοντά σας!
 - Δείτε τα [έργα που σχετίζονται με τον τομέα που γνωρίζετε καλύτερα ή τη γλώσσα προγραμματισμού της επιλογής σας](/developers/docs/programming-languages/).
 - Παρακολουθήστε ή συμμετέχετε στις [Συγκεντρώσεις των βασικών προγραμματιστών](https://www.youtube.com/@EthereumProtocol).
