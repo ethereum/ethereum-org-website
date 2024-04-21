@@ -2,7 +2,6 @@
 title: حاکمیت اتریوم
 description: مقدمه‌ای بر چگونگی تصمیم‌گیری برای اتریوم.
 lang: fa
-postMergeBannerTranslation: صفحه-ارتقای-بعد-ادغام-بنر-حکومت-وود
 ---
 
 # مقدمه‌ای بر حاکمیت اتریوم {#introduction}

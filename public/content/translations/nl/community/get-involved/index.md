@@ -11,7 +11,6 @@ De Ethereum-gemeenschap omvat mensen met verschillende achtergronden en vaardigh
 ## Ontwikkelaars <Emoji text=":computer:" size={1} />→ {#developers}
 
 - Leer meer over en probeer Ethereum op [ethereum.org/developers/](/developers/)
-- [Vind een premie op Gitcoin](https://gitcoin.co/), werk aan een klein of groot technisch probleem, verdien crypto!
 - Doe mee aan een [ETHGlobal](http://ethglobal.co/) hackathon bij u in de buurt!
 - Bekijk [projecten gerelateerd aan uw gebied van expertise of programmeertaal van keuze](/developers/docs/programming-languages/)
 - Bekijk of neem deel aan [Core Dev calls](https://www.youtube.com/@EthereumProtocol)

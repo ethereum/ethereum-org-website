@@ -13,7 +13,6 @@ lang: zh
 ## 开发人员 <Emoji text=":computer:" size={1} /> {#developers}
 
 - 访问 [ethereum.org/developers/](/developers/)，了解和尝试使用以太坊
-- [在 Gitcoin 上查找悬赏](https://gitcoin.co/)，解决一个或大或小的技术问题，赚取加密货币！
 - 参加你附近的一个 [ETHGlobal](http://ethglobal.co/) 黑客马拉松活动！
 - 查看[与你的专业领域或所选编程语言相关的项目](/developers/docs/programming-languages/)
 - 观看或参与[核心开发人员电话会议](https://www.youtube.com/@EthereumProtocol)
