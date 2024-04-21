@@ -395,5 +395,21 @@ export const STATUS_COLORS = {
         },
       },
     },
+    highContrast: {
+      [$badgeBg.variable]: "colors.attention.light",
+      [$badgeColor.variable]: "colors.attention.base",
+      "&:any-link": {
+        _hover: {
+          [$tagBoxshadowColor.variable]: "colors.attention.base",
+          boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
+        },
+        _focusWithin: {
+          outlineColor: $badgeColor.reference,
+        },
+        _active: {
+          boxShadow: "none",
+        },
+      },
+    },
   },
 }
