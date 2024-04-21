@@ -320,6 +320,22 @@ export const STATUS_COLORS = {
         },
       },
     },
+
+    highContrast: {
+      [$badgeBg.variable]: "colors.error.light",
+      [$badgeColor.variable]: "colors.error.base",
+      "&:any-link": {
+        _hover: {
+          boxShadow: `2px 2px 0 ${$badgeColor.reference}`,
+        },
+        _focusWithin: {
+          outlineColor: $badgeColor.reference,
+        },
+        _active: {
+          boxShadow: "none",
+        },
+      },
+    },
   },
   warning: {
     subtle: {
