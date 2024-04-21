@@ -6,6 +6,7 @@ import {
   PopoverContent,
   PopoverProps,
   PopoverTrigger,
+  Portal,
   useDisclosure,
 } from "@chakra-ui/react"
 
@@ -67,10 +68,12 @@ const Tooltip: React.FC<IProps> = ({
       {...rest}
     >
       <PopoverTrigger>{children}</PopoverTrigger>
-      <PopoverContent>
-        <PopoverArrow />
-        <PopoverBody>{content}</PopoverBody>
-      </PopoverContent>
+      <Portal>
+        <PopoverContent>
+          <PopoverArrow />
+          <PopoverBody>{content}</PopoverBody>
+        </PopoverContent>
+      </Portal>
     </Popover>
   )
 }

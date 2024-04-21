@@ -11,7 +11,6 @@ Comunitatea Ethereum include persoane din medii și cu competențe diferite. Fie
 ## Dezvoltatori <Emoji text=":computer:" size={1} /> {#developers}
 
 - Aflați despre Ethereum și testați-l la adresa [ethereum.org/developers/](/developers/)
-- [Găsiți o recompensă pe Gitcoin](https://gitcoin.co/), lucrați la o problemă tehnică mică sau mare, câștigați cripto!
 - Participați la „hackathon-ul” [ETHGlobal](http://ethglobal.co/) din apropiere!
 - Consultați [proiectele legate de domeniul dvs. de experiență sau de limbajul de programare preferat](/developers/docs/programming-languages/)
 - Vizionați sau participați la [apeluri Core Dev](https://www.youtube.com/@EthereumProtocol) pe YouTube

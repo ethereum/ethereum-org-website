@@ -3,7 +3,6 @@ import { WalletData } from "@/lib/types"
 import OneInchWalletImage from "@/public/wallets/1inch.png"
 import AlphaWalletImage from "@/public/wallets/alpha.png"
 import AmbireImage from "@/public/wallets/ambire.png"
-import ApexImage from "@/public/wallets/apex.png"
 import ArgentImage from "@/public/wallets/argent.png"
 import AuroxImage from "@/public/wallets/aurox.png"
 import BitkeepImage from "@/public/wallets/bitkeep.png"
@@ -1566,49 +1565,6 @@ export const walletsData: WalletData[] = [
     onboard_documentation: "https://help.onekey.so/hc/en-us",
     documentation: "https://developer.onekey.so/guide/introduction",
     new_to_crypto: true,
-  },
-  {
-    last_updated: "2023-01-25",
-    name: "Apex",
-    image: ApexImage,
-    brand_color: "CF9500",
-    url: "https://apexwallet.xyz/",
-    active_development_team: true,
-    languages_supported: ["en"],
-    twitter: "https://twitter.com/ApexWallet",
-    discord: "",
-    reddit: "",
-    telegram: "",
-    ios: false,
-    android: false,
-    linux: false,
-    windows: false,
-    macOS: false,
-    firefox: false,
-    chromium: true,
-    hardware: false,
-    open_source: false,
-    repo_url: "",
-    non_custodial: true,
-    security_audit: ["audited by Bishop Fox"],
-    scam_protection: false,
-    hardware_support: false,
-    rpc_importing: true,
-    nft_support: true,
-    connect_to_dapps: true,
-    staking: false,
-    swaps: false,
-    multichain: true,
-    layer_2: true,
-    gas_fee_customization: false,
-    ens_support: true,
-    erc_20_support: true,
-    buy_crypto: false,
-    withdraw_crypto: false,
-    multisig: false,
-    social_recovery: false,
-    onboard_documentation: "https://docs.apexwallet.xyz/docs/getting-started",
-    documentation: "https://docs.apexwallet.xyz/docs/getting-started",
   },
   {
     last_updated: "2023-04-21",
