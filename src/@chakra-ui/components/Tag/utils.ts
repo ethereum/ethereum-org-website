@@ -45,7 +45,7 @@ export const STATUS_COLORS = {
         _focusWithin: {
           [$badgeBg.variable]: "colors.primary.light",
           [$badgeColor.variable]: "colors.body.medium",
-          outlineColor: "primary.hover",
+          outlineColor: "colors.body.medium",
         },
         _active: {
           [$badgeBg.variable]: "colors.primary.hover",
@@ -158,6 +158,27 @@ export const STATUS_COLORS = {
         },
         _active: {
           boxShadow: "none",
+        },
+      },
+    },
+    highContrast: {
+      [$badgeBg.variable]: "colors.background.highlight",
+      [$badgeColor.variable]: "colors.primary.highContrast",
+      "&:any-link": {
+        _hover: {
+          [$badgeBg.variable]: "colors.primary.lowContrast",
+          [$badgeColor.variable]: "colors.primary.highContrast",
+          [$tagBoxshadowColor.variable]: "colors.background.highlight",
+          boxShadow: `2px 2px 0 ${$tagBoxshadowColor.reference}`,
+        },
+        _focusWithin: {
+          [$badgeBg.variable]: "colors.primary.lowContrast",
+          [$badgeColor.variable]: "colors.primary.highContrast",
+          outlineColor: "colors.primary.highContrast",
+        },
+        _active: {
+          [$badgeBg.variable]: "colors.primary.lowContrast",
+          [$badgeColor.variable]: "colors.primary.highContrast",
         },
       },
     },
