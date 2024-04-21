@@ -10,7 +10,7 @@ We want to make sure we show a variety of wallets covering the feature-rich land
 
 Anyone is free to suggest adding a wallet on ethereum.org. If there's a wallet that we have missed, please suggest it!
 
-Anyone is free to suggest a new wallet. Wallets are currently listed on:
+Wallets are currently listed on:
 
 - [ethereum.org/wallets/find-wallet/](/wallets/find-wallet/)
 - [ethereum.org/wallets/](/wallets/)

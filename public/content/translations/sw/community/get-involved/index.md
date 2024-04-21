@@ -11,7 +11,6 @@ Jumuiya ya Ethereum inahusisha watu wa asili tofauti na wenye ujuzi wa kila aina
 ## Wasimbuaji <Emoji text=":computer:" size={1} /> {#developers}
 
 - Jifunze kuhusu Ethereum na ijaribishe kwenye [etehereum.org/developers/](/developers/)
-- [Tafuta fadhila kwenye Gitcoin](https://gitcoin.co/), fanyia kazi itilafu ndogo ama kubwa na ujipatie kripto!
 - Shiriki kwenye[ETHGlobal](http://ethglobal.co/)hackathon iliyokaribu nawe!
 - Vinjari juu ya [miradi inayohusiana na taaluma yako au lugha ya usimbuajiutakayochagua.](/developers/docs/programming-languages/)
 - Tazama au shiriki kwenye [mikutano ya wasimbuaji wa ndani](https://www.youtube.com/@EthereumProtocol)

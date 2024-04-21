@@ -2,7 +2,6 @@
 title: इथेरियम शासन
 description: इथेरियम से संबंधित निर्णय कैसे किए जाते हैं।
 lang: hi
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # इथेरियम शासन का परिचय {#introduction}
