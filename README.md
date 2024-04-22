@@ -1815,6 +1815,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="http://rashidma.com"><img src="https://avatars.githubusercontent.com/u/8257719?v=4?s=100" width="100px;" alt="Rashid Ma"/><br /><sub><b>Rashid Ma</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Amcmoodoo" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://prestwi.ch"><img src="https://avatars.githubusercontent.com/u/10149425?v=4?s=100" width="100px;" alt="James Prestwich"/><br /><sub><b>James Prestwich</b></sub></a><br /><a href="#content-prestwich" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
