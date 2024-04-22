@@ -11820,6 +11820,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "mcmoodoo",
+      "name": "Rashid Ma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8257719?v=4",
+      "profile": "http://rashidma.com",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
