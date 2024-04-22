@@ -91,7 +91,8 @@ export const LanguageSupportFilter = () => {
               color="inherit"
               fontWeight="inherit"
               fontSize="inherit"
-              p={0}
+              px={0}
+              py={0}
               textAlign="initial"
               _hover={{ background: "transparent" }}
             >
