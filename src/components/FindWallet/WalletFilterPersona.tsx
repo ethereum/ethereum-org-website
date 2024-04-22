@@ -40,7 +40,7 @@ const computeFilters = (
 
       return Object.fromEntries(
         Object.entries(filters).map(([key, value]) => {
-          return [key, value && persona.presetFilters[key]]
+          return [key, value || persona.presetFilters[key]]
         })
       )
     }, initialFilters)
