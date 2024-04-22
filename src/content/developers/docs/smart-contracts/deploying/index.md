@@ -55,9 +55,10 @@ The specific steps involved will depend on the development framework in question
 
 **Crossmint - _Enterprise-grade web3 development platform to deploy smart contracts, enable credit-card and cross chain payments, and use APIs to create, distribute, sell, store, and edit NFTs._**
 
-- [crossmint.com](https://www.crossmint.com/?utm_source=backlinks)
-- [Documentation](https://docs.crossmint.com/?utm_source=backlinks)
-- [Discord](https://discord.com/invite/crossmint/?utm_source=backlinks)
+- [crossmint.com](https://www.crossmint.com)
+- [Documentation](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+- [Blog](https://blog.crossmint.com)
 
 ## Related tutorials {#related-tutorials}
 
