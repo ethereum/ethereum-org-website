@@ -242,7 +242,12 @@ const TutorialPage = ({
         <Translation id="page-developers-tutorials:page-tutorial-subtitle" />
       </Text>
 
-      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen} dir={dir}>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        size="xl"
+        contentProps={{ dir }}
+      >
         <Heading fontSize="2rem" lineHeight="1.4" mb={4}>
           <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
         </Heading>
