@@ -65,6 +65,11 @@ body:
       description: Please provide a date when the wallet was usable by the public
     validations:
       required: true
+  - type: textarea
+    id: wallet_user_fees
+    attributes:
+      label: When are the fees users may be paying for using your wallet product?
+      description: eg) 1% service fee for swapping, bridging functionality, flat fee for all transactions
   - type: input
     id: wallet_active_development_team
     attributes:
