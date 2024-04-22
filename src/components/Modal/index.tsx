@@ -1,6 +1,7 @@
 import React from "react"
 import {
   Button,
+  HStack,
   Modal as ChakraModal,
   ModalBody,
   ModalCloseButton,
@@ -31,8 +32,10 @@ const Modal = ({
       <ModalOverlay />
 
       <ModalContent {...contentProps}>
-        <ModalHeader>{title}</ModalHeader>
-        <ModalCloseButton />
+        <HStack>
+          <ModalHeader>{title}</ModalHeader>
+          <ModalCloseButton />
+        </HStack>
         <ModalBody>{children}</ModalBody>
         {actionButtonLabel && (
           <ModalFooter>

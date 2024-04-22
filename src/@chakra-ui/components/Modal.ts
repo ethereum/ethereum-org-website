@@ -23,17 +23,15 @@ export const Modal = defineMultiStyleConfig({
         boxShadow: "none",
       },
       header: {
+        flex: "1",
         padding: "0",
         fontWeight: "bold",
         fontSize: "2xl",
-        minHeight: "6",
         me: "8",
       },
       closeButton: {
-        boxSize: "8",
+        position: "static",
         color: "body.base",
-        top: "8",
-        insetInlineEnd: "8",
       },
       body: {
         padding: "0",
