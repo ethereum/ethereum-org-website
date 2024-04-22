@@ -48,7 +48,23 @@ export const Modal = defineMultiStyleConfig({
       },
     })
   ),
-  sizes: defaultSizes,
+  sizes: {
+    ...defaultSizes,
+    full: {
+      dialog: {
+        h: "full",
+        minH: "unset",
+        maxH: {
+          base: "calc(100vh - 1rem)",
+          md: "min(calc(100vh - 2rem), 792px)",
+        },
+        maxW: {
+          base: "calc(100vw - 1rem)",
+          md: "min(calc(100vw - 2rem), 1000px)",
+        },
+      },
+    },
+  },
 
   defaultProps: {
     ...defaultProps,
