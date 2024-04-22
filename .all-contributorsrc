@@ -11866,6 +11866,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "juliettech13",
+      "name": "juliettech",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19226636?v=4",
+      "profile": "https://juliet.tech",
+      "contributions": [
+        "tutorial"
+      ]
     }
   ],
   "contributorsPerLine": 7,
