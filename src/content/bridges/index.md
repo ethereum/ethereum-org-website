@@ -16,7 +16,7 @@ Blockchain bridges work just like the bridges we know in the physical world. Jus
 
 Let's consider an example:
 
-You're from the USA and are planning a trip to Europe, where only EUR is accepted. You can use a currency exchange for a small fee to exchange your USD for EUR.
+You're from the USA and are planning a trip to Europe. You have USD, but you need EUR to spend. To exchange your USD for EUR you can use a currency exchange for a small fee.
 
 But, what do you do if you want to make a similar exchange to use a different blockchain? Let's say you want to exchange ETH on Ethereum Mainnet for ETH on [Arbitrum](https://arbitrum.io/). Like the currency exchange we made for EUR, we need a mechanism to move our ETH from Ethereum to Arbitrum. Bridges make such a transaction possible. In this case, [Arbitrum has a native bridge](https://bridge.arbitrum.io/) that can transfer ETH from Mainnet onto Arbitrum.
 
@@ -57,7 +57,7 @@ If you have ETH on Ethereum Mainnet and you want to explore an alt L1 to try out
 
 ### Own native crypto assets {#own-native}
 
-Let’s say you want to own native Bitcoin (BTC), but you only have funds on Ethereum Mainnet. To gain exposure to BTC on Ethereum, you can buy Wrapped Bitcoin (WBTC). However, WBTC is an ERC-20 token native to the Ethereum network, which means it’s an Ethereum version of Bitcoin and not the original asset on the Bitcoin blockchain. To own a native BTC, you would have to bridge your assets from Ethereum to Bitcoin using a bridge. This will bridge your WBTC and convert it into a native BTC. Alternatively, you might own BTC and want to use it in Ethereum DeFi protocols. This would require bridging the other way, from BTC to WBTC which can then be used as an asset on Ethereum.
+Let’s say you want to own native Bitcoin (BTC), but you only have funds on Ethereum Mainnet. To gain exposure to BTC on Ethereum, you can buy Wrapped Bitcoin (WBTC). However, WBTC is an ERC-20 token native to the Ethereum network, which means it’s an Ethereum version of Bitcoin and not the original asset on the Bitcoin blockchain. To own native BTC, you would have to bridge your assets from Ethereum to Bitcoin using a bridge. This will bridge your WBTC and convert it into a native BTC. Alternatively, you might own BTC and want to use it in Ethereum DeFi protocols. This would require bridging the other way, from BTC to WBTC which can then be used as an asset on Ethereum.
 
 <InfoBanner shouldCenter emoji=":bulb:">
   You can also do all of the above using a <a href="/get-eth/">centralized exchange</a>. However, unless your funds are already on an exchange, it would involve multiple steps, and you’d likely be better off using a bridge.
