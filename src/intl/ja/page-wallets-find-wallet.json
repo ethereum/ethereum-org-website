@@ -90,5 +90,6 @@
   "page-find-wallet-browser-desc": "ブラウザ拡張機能付きウォレット",
   "page-find-wallet-device": "デバイス",
   "page-find-choose-to-compare": "比較",
-  "page-find-wallet-choose-features": "機能を選択"
+  "page-find-wallet-choose-features": "機能を選択",
+  "page-find-wallet-reset-filters": "フィルターをリセット"
 }

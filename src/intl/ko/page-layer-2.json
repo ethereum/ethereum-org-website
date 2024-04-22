@@ -123,6 +123,7 @@
   "zksync-description": "zkSync는 Matter Labs에서 개발한 사용자 중심의 영지식 롤업 플랫폼입니다. 이더리움을 위한 확장 솔루션이며 이미 이더리움 메인넷에서 사용되고 있습니다. 결제, 토큰 교환 및 NFT 발행을 지원합니다.",
   "zkspace-description": "ZKSpace 플랫폼은 세 가지 주요 부분인 ZKSwap(ZK롤업 기술을 활용한 레이어 2 AMM DEX), ZKSquare(지급결제 서비스), ZKSea(NFT 마켓플레이스)로 구성됩니다.",
   "aztec-description": "Aztec 네트워크는 이더리움의 첫 번째 비공개 영지식 롤업이며 분산형 애플리케이션이 정보를 보호하고 확장할 수 있도록 합니다.",
+  "starknet-description": "스타크넷은 검증 롤업 레이어2입니다. 이는 많은 양을 처리할 수 있으며 가스 비용이 저렴하고 이더리움 레이어1의 보안 수준을 유지합니다.",
   "layer-2-note": "참고:",
   "layer-2-ecosystem-portal": "생태계 포털",
   "layer-2-token-lists": "토큰 목록",
