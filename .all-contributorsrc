@@ -11838,6 +11838,15 @@
       "contributions": [
         "content"
       ]
+    },
+    {
+      "login": "daiwt",
+      "name": "Dai Wentao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26290219?v=4",
+      "profile": "https://github.com/daiwt",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
