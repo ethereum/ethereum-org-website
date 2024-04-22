@@ -60,6 +60,7 @@ lang: zh
 - [Alchemy Sepolia 水龙头](https://sepoliafaucet.com/)
 - [Infura Sepolia 水龙头](https://www.infura.io/faucet)
 - [Chainstack Sepolia 水龙头](https://faucet.chainstack.com/sepolia-faucet)
+- [Testnet Faucet | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _（长期支持）_ {#goerli}
 

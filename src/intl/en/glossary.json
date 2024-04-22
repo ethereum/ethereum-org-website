@@ -146,7 +146,7 @@
   "erc-term": "Ethereum Request for Comments (ERC)",
   "erc-definition": "ERC (<strong>Ethereum Request for Comments</strong>) is a type of technical documentation used in the Ethereum community to propose new standards of usage for the Ethereum network.<br /><br />These proposals can cover a wide range of topics, including new token standards (like ERC-20 used for tokens and ERC-721 for NFTs).",
   "ethash-term": "Ethash",
-  "ethash-definition": "A <a href=\"/glossary/#pow\">proof-of-work</a> algorithm that was used on Ethereum before it transitioned to <a href=\"/glossary/#pos\">proof-of-stake. <a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">Read more</a>",
+  "ethash-definition": "A <a href=\"/glossary/#pow\">proof-of-work</a> algorithm that was used on Ethereum before it transitioned to <a href=\"/glossary/#pos\">proof-of-stake</a>. <a href=\"/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash\">Read more</a>",
   "ether-term": "Ether",
   "ether-definition": "The native cryptocurrency of Ethereum, commonly referred to as “ETH”. It is used to cover transaction fees when using Ethereum ecosystem and applications. <a href=\"/eth/\">More on ether</a>.",
   "events-term": "Events",

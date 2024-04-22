@@ -12,7 +12,7 @@ Hai prima bisogno di una conoscenza più di base del web3? Dai un'occhiata al [*
 
 La progettazione efficace va oltre la creazione di interfacce utente accattivanti a livello visivo. Si tratta di comprendere a fondo i bisogni, gli obiettivi e i fattori trainanti dell'utente. Pertanto, consigliamo fortemente che tutti i progettisti adottino un processo di progettazione come il [**processo del doppio diamante**](<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)>), per assicurare che il loro lavoro sia consapevole e intenzionale.
 
-- [Il Web3 necessita di più ricercatori e progettisti di UX](https://akasha.org/blog/2022/10/11/akasha-conversation-09-web3-ux-researchers-and-designers) - Una panoramica dell'attuale maturità della progettazione
+- [Il Web3 necessita di più ricercatori e progettisti di UX](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) - Una panoramica dell'attuale maturità della progettazione
 - [Una guida semplice alla ricerca UX](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - Una semplice guida su come fare ricerca
 - [Come affrontare le decisioni di UX nel Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - Una breve panoramica di ricerca quantitativa e qualitativa e le differenze tra queste due (video, 6 minuti)
 - [Essere un ricercatore ux nel web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - Un punto di vista personale su cosa significhi essere un ricercatore UX nel web3
@@ -74,7 +74,7 @@ Partecipate ad organizzazioni professionali guidate dalla community o unitevi a 
 
 ## Sistemi di progettazione {#Design-systems}
 
-- [Progettazione di Optimism](https://www.figma.com/@oplabs) (Figma)
+- [Progettazione di Optimism](https://www.figma.com/@optimism) (Figma)
 - [Sistema di progettazione di Ethereum.org](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, un sistema di progettazione per il web3 su Polygon](https://finity.polygon.technology/) (Figma)
 - [Sistema di progettazione ENS](https://thorin.ens.domains/)

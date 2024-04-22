@@ -23,7 +23,7 @@ lang: zh
 所提交的交易包括下列信息：
 
 - `from` - 发送者的地址，该地址将签署交易。 这将是一个外部帐户，因为合约帐户不能发送交易。
-- `recipient` – 接收地址（如果是外部帐户，交易将传输值。 如果是合约帐户，交易将执行合约代码）
+- `to` — 接收地址（如果是外部帐户，交易将传输值。 如果是合约帐户，交易将执行合约代码）
 - `signature` – 发送者的标识符。 当发送者的私钥签署交易并确保发送者已授权此交易时，生成此签名。
 - `nonce` - 一个有序递增的计数器，表示来自帐户的交易数量
 - `value` – 发送者向接收者转移的以太币数量（面值为 WEI，1 个以太币 = 1e+18wei）
@@ -174,7 +174,7 @@ Alice 的帐户将会增加 **+1.0 ETH**
 
 <YouTube id="er-0ihqFQB0" />
 
-## Typed Transaction Envelope 交易 {#typed-transaction-envelope}
+## Typed Transaction Envelope交易 {#typed-transaction-envelope}
 
 以太坊最初有一种交易形式。 每笔交易都包含 Nonce、燃料价格、燃料限制、目的地地址、价值、数据、v、r 和 s。 这些字段为 [RLP 编码](/developers/docs/data-structures-and-encoding/rlp/)，看起来像这样：
 
