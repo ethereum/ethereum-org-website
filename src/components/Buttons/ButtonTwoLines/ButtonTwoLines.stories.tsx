@@ -1,15 +1,13 @@
-import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
 import { BiCircle } from "react-icons/bi"
 import { Stack } from "@chakra-ui/react"
-import ButtonTwoLinesComponent from "."
+import { Meta, StoryObj } from "@storybook/react"
 
-type ComponentType = typeof ButtonTwoLinesComponent
+import ButtonTwoLinesComponent from "."
 
 const meta = {
   title: "Atoms / Form / Buttons / ButtonTwoLines",
   component: ButtonTwoLinesComponent,
-} satisfies Meta<ComponentType>
+} satisfies Meta<typeof ButtonTwoLinesComponent>
 
 export default meta
 
@@ -27,7 +25,7 @@ export const ButtonTwoLines: Story = {
       <ButtonTwoLinesComponent {...args} />
       <ButtonTwoLinesComponent
         {...args}
-        iconAlignment="right"
+        iconAlignment="end"
         size="sm"
         reverseTextOrder
       />

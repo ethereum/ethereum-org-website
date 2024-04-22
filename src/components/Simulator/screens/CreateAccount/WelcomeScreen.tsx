@@ -1,11 +1,12 @@
-import { Flex, Icon, Text } from "@chakra-ui/react"
-import { motion } from "framer-motion"
 import React from "react"
+import { motion } from "framer-motion"
+import { Flex, Icon, Text } from "@chakra-ui/react"
+
 import { EthGlyphIcon } from "../../icons"
 
 const MotionFlex = motion(Flex)
 
-export const WelcomeScreen: React.FC = () => (
+export const WelcomeScreen = () => (
   <MotionFlex
     direction="column"
     alignItems="center"

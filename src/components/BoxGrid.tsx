@@ -1,21 +1,21 @@
 import React, { useState } from "react"
 import { Box, Flex, GridItem, SimpleGrid } from "@chakra-ui/react"
 
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
+
 import Emoji from "./Emoji"
-import Text from "./OldText"
 import OldHeading from "./OldHeading"
+import Text from "./OldText"
 
-import { MatomoEventOptions, trackCustomEvent } from "../utils/matomo"
-
-export interface IBoxItem {
+export interface BoxItem {
   emoji: string
   title: string
   description: string
   matomo: MatomoEventOptions
 }
 
-export interface IProps {
-  items: Array<IBoxItem>
+export type BoxGridProps = {
+  items: Array<BoxItem>
 }
 
 // Represent string as 32-bit integer
@@ -40,7 +40,7 @@ const colors = [
   "gridPurple",
 ]
 
-const BoxGrid: React.FC<IProps> = ({ items }) => {
+const BoxGrid = ({ items }: BoxGridProps) => {
   const [indexOpen, setOpenIndex] = useState(0)
 
   return (

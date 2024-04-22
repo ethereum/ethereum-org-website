@@ -1,4 +1,16 @@
 import React from "react"
+import { useRouter } from "next/router"
+import { useTranslation } from "next-i18next"
+import {
+  Bar,
+  BarChart,
+  Cell,
+  LabelList,
+  Legend,
+  ResponsiveContainer,
+  Text,
+  XAxis,
+} from "recharts"
 import {
   Box,
   Center,
@@ -6,21 +18,12 @@ import {
   useBreakpointValue,
   useToken,
 } from "@chakra-ui/react"
-import {
-  BarChart,
-  Bar,
-  Cell,
-  Text,
-  XAxis,
-  LabelList,
-  ResponsiveContainer,
-  Legend,
-} from "recharts"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
-import Translation from "./Translation"
+import type { Lang } from "@/lib/types"
 
-interface ITickProps {
+import { isLangRightToLeft } from "@/lib/utils/translations"
+
+type CustomTickProps = {
   x: number
   y: number
   payload: { value: number | string }
@@ -48,13 +51,11 @@ const RechartText = chakra(Text, {
       "maxLines",
     ].includes(prop)
 
-    if (isValidRechartProp) return true
-
-    return false
+    return isValidRechartProp
   },
 })
 
-const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
+const CustomTick = ({ x, y, payload }: CustomTickProps) => {
   return (
     <g transform={`translate(${x},${y})`}>
       <RechartText
@@ -73,10 +74,11 @@ const CustomTick: React.FC<ITickProps> = ({ x, y, payload }) => {
   )
 }
 
-const EnergyConsumptionChart: React.FC = () => {
-  const { t } = useTranslation()
-
+const EnergyConsumptionChart = () => {
+  const { t } = useTranslation("page-what-is-ethereum")
   const textColor = useToken("colors", "text")
+  const { locale } = useRouter()
+  const isRtl = isLangRightToLeft(locale as Lang)
 
   const data = useBreakpointValue<Data>({
     base: [
@@ -200,7 +202,7 @@ const EnergyConsumptionChart: React.FC = () => {
             margin={{ top: 30, right: 30, bottom: 30, left: 30 }}
             barGap={15}
             barSize={38}
-            data={data}
+            data={isRtl ? data?.reverse() : data}
           >
             <XAxis
               dataKey="name"
@@ -212,7 +214,7 @@ const EnergyConsumptionChart: React.FC = () => {
             <Legend
               content={
                 <Box textAlign="center" color="text" fontWeight="600" mt={8}>
-                  <Translation id="page-what-is-ethereum-energy-consumption-chart-legend" />
+                  {t("page-what-is-ethereum-energy-consumption-chart-legend")}
                 </Box>
               }
             />

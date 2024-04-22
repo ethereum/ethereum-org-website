@@ -1,19 +1,22 @@
 import React, { useState } from "react"
-import { PhoneScreenProps } from "../../interfaces"
-import { WordList } from "./WordList"
-import { WordSelectorButtons } from "./WordSelectorButtons"
-import { ProgressCta } from "../../ProgressCta"
 import { Box, Text } from "@chakra-ui/react"
 
-interface IProps extends PhoneScreenProps {
+import { PhoneScreenProps } from "@/lib/types"
+
+import { ProgressCta } from "../../ProgressCta"
+
+import { WordList } from "./WordList"
+import { WordSelectorButtons } from "./WordSelectorButtons"
+
+type InteractiveWordSelectorProps = PhoneScreenProps & {
   words: Array<string>
 }
 
-export const InteractiveWordSelector: React.FC<IProps> = ({
+export const InteractiveWordSelector = ({
   words,
   ctaLabel,
   nav,
-}) => {
+}: InteractiveWordSelectorProps) => {
   const { progressStepper } = nav
   const [wordsSelected, setWordsSelected] = useState(0)
   return (

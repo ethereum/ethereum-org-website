@@ -20,6 +20,10 @@
   "page-tutorials-meta-description": "Busque y explore en los tutoriales de la comunidad Ethereum por tema.",
   "page-tutorial-external-link": "Externo",
   "page-tutorials-meta-title": "Tutoriales de desarrollo de Ethereum",
+  "page-tutorial-beginner": "Principiante",
+  "page-tutorial-intermediate": "Intermedio",
+  "page-tutorial-advanced": "Avanzado",
   "page-find-wallet-try-removing": "Intente eliminar una o dos características",
-  "page-find-wallet-clear": "Limpiar filtros"
+  "page-find-wallet-clear": "Limpiar filtros",
+  "page-tutorials-env-banner": "¡No corra riesgos! <code>.env</code>! Asegúrese de no compartir ni exponer nunca su archivo <code>.env</code> con nadie, ya que de lo contrario estará compartiendo sus secretos. Si está utilizando el control de la versión, añada su <code>.env</code> al archivo <a href=\"https://git-scm.com/docs/gitignore\">gitignore</a>."
 }

@@ -1,15 +1,11 @@
-// Libraries
-import React from "react"
-
-// Components
-import CardList, { CardListItem } from "../CardList"
+import { useTranslation } from "next-i18next"
 import { Stack } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
 
-export interface IProps {}
+import CardList, { type CardListItem } from "@/components/CardList"
 
-const StakingGuides: React.FC<IProps> = () => {
-  const { t } = useTranslation()
+const StakingGuides = () => {
+  const { t } = useTranslation("page-staking")
+
   const guides: CardListItem[] = [
     {
       title: t("page-staking-guide-title-coincashew-ethereum"),

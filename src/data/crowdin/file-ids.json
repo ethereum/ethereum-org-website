@@ -292,6 +292,10 @@
     "path": "/glossary/index.md"
   },
   {
+    "id": 8208,
+    "path": "/glossary/glossary.json"
+  },
+  {
     "id": 2646,
     "path": "/page-developers-tutorials.json"
   },
@@ -1098,10 +1102,6 @@
   {
     "id": 2966,
     "path": "/about/index.md"
-  },
-  {
-    "id": 8031,
-    "path": "/deprecated-software/index.md"
   },
   {
     "id": 8037,
