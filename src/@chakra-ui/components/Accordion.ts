@@ -1,24 +1,40 @@
-import { defineStyleConfig } from "@chakra-ui/react"
+import { accordionAnatomy } from "@chakra-ui/anatomy"
+import { createMultiStyleConfigHelpers } from "@chakra-ui/react"
 
-import { accordionDefaultTheme, defineMergeStyles } from "./components.utils"
+const { defineMultiStyleConfig, definePartsStyle } =
+  createMultiStyleConfigHelpers(accordionAnatomy.keys)
 
-export const Accordion = defineStyleConfig({
-  baseStyle: defineMergeStyles(accordionDefaultTheme.baseStyle, {
-    button: {
-      _hover: { bg: "background.highlight", color: "primary.hover" },
-      _focus: {
-        outline: "4px solid var(--eth-colors-primary-hover)",
-        outlineOffset: "-4px",
-        bg: "background.highlight",
-        color: "primary.hover",
-        borderRadius: "md",
-      },
-      _expanded: { bg: "background.highlight" },
-      py: "2",
-      px: { base: 2, md: 4 },
+const baseStyle = definePartsStyle({
+  button: {
+    py: "2",
+    px: { base: "2", md: "4" },
+    gap: "2",
+    _hover: { bg: "background.highlight", color: "primary.hover" },
+    _focus: {
+      outline: "4px solid",
+      outlineColor: "primary.hover",
+      outlineOffset: -1,
+      bg: "background.highlight",
+      color: "primary.hover",
+      borderRadius: "base",
     },
-    panel: {
-      p: { base: 2, md: 4 },
+    _expanded: {
+      bg: "background.highlight",
+      color: "primary.highContrast",
+      svg: { transform: "rotate(180deg)" },
     },
-  }),
+  },
+  panel: {
+    mt: "2",
+    p: { base: 2, md: 4 },
+    fontSize: "sm",
+  },
+  icon: {
+    fontSize: "2xl",
+    transform: "rotate(270deg)",
+  },
+})
+
+export const Accordion = defineMultiStyleConfig({
+  baseStyle,
 })
