@@ -28,6 +28,7 @@ import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
+import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
@@ -336,9 +337,7 @@ const HomePage = ({
     ssr: false,
   })
   const StyledCodeModal = chakra(CodeModal)
-  const StatsBoxGrid = dynamic(() => import("@/components/StatsBoxGrid"), {
-    ssr: false,
-  })
+
   const CommunityEvents = dynamic(
     () => import("@/components/CommunityEvents"),
     {
