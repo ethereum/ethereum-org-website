@@ -1,6 +1,7 @@
-// Libraries
 import React, { useState } from "react"
-import { reverse, sortBy } from "lodash"
+import reverse from "lodash/reverse"
+import sortBy from "lodash/sortBy"
+import { useTranslation } from "next-i18next"
 import {
   Box,
   Button as ChakraButton,
@@ -11,12 +12,10 @@ import {
   useRadioGroup,
 } from "@chakra-ui/react"
 
-// Components
 import Emoji from "./Emoji"
-import Translation from "./Translation"
 import Text from "./OldText"
 
-export interface IProps {
+export type TranslationLeaderboardProps = {
   monthData: any
   quarterData: any
   allTimeData: any
@@ -40,8 +39,7 @@ const Button = (props) => {
       bg="transparent"
       w={{ base: "full", lg: "initial" }}
       justifyContent="center"
-      ml={{ base: "0", lg: "2" }}
-      mr={{ base: "0", lg: "2" }}
+      mx={{ base: "0", lg: "2" }}
       _hover={{
         color: "primary.base",
         borderColor: "primary.base",
@@ -114,11 +112,11 @@ const sortAndFilterData = (data) => {
   )
 }
 
-const TranslationLeaderboard: React.FC<IProps> = ({
+const TranslationLeaderboard = ({
   monthData,
   quarterData,
   allTimeData,
-}) => {
+}: TranslationLeaderboardProps) => {
   const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
   const tableItemBoxShadow = useColorModeValue(
     "tableItemBox.light",
@@ -148,6 +146,10 @@ const TranslationLeaderboard: React.FC<IProps> = ({
     onChange: updateDateRangeType,
   })
 
+  const { t } = useTranslation(
+    "page-contributing-translation-program-acknowledgements"
+  )
+
   return (
     <Box>
       <Flex
@@ -159,19 +161,25 @@ const TranslationLeaderboard: React.FC<IProps> = ({
         w="full"
       >
         <RadioCard key="monthData" {...getRadioProps({ value: "monthData" })}>
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view" />
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-month-view"
+          )}
         </RadioCard>
         <RadioCard
           key="quarterData"
           {...getRadioProps({ value: "quarterData" })}
         >
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view" />
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-quarter-view"
+          )}
         </RadioCard>
         <RadioCard
           key="allTimeData"
           {...getRadioProps({ value: "allTimeData" })}
         >
-          <Translation id="page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view" />
+          {t(
+            "page-contributing-translation-program-acknowledgements-translation-leaderboard-all-time-view"
+          )}
         </RadioCard>
       </Flex>
       <Box bg="background.base" boxShadow={tableBoxShadow} w="full" mb={8}>
@@ -192,14 +200,18 @@ const TranslationLeaderboard: React.FC<IProps> = ({
             <Flex
               flexDirection="row"
               alignItems="center"
-              mr={8}
+              me={8}
               overflowWrap="anywhere"
             >
-              <Translation id="page-contributing-translation-program-acknowledgements-translator" />
+              {t(
+                "page-contributing-translation-program-acknowledgements-translator"
+              )}
             </Flex>
           </Flex>
-          <Flex minW="20%" flexDirection="row" alignItems="left">
-            <Translation id="page-contributing-translation-program-acknowledgements-total-words" />
+          <Flex minW="20%" flexDirection="row" alignItems="start">
+            {t(
+              "page-contributing-translation-program-acknowledgements-total-words"
+            )}
           </Flex>
         </Flex>
         {leaderboardData[dateRangeType]
@@ -239,7 +251,7 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                 <Flex>
                   {emoji ? (
                     <Box w={10}>
-                      <Emoji mr={4} fontSize="2rem" text={emoji} />
+                      <Emoji me={4} fontSize="2rem" text={emoji} />
                     </Box>
                   ) : (
                     <Box w={10} opacity="0.4">
@@ -249,11 +261,11 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                   <Flex
                     flexDirection="row"
                     alignItems="center"
-                    mr={8}
+                    me={8}
                     overflowWrap="anywhere"
                   >
                     <Img
-                      mr={4}
+                      me={4}
                       h={{ base: "30px", sm: 10 }}
                       w={{ base: "30px", sm: 10 }}
                       borderRadius="50%"
@@ -268,10 +280,10 @@ const TranslationLeaderboard: React.FC<IProps> = ({
                     </Box>
                   </Flex>
                 </Flex>
-                <Flex minW="20%" flexDirection="row" alignItems="left">
+                <Flex minW="20%" flexDirection="row" alignItems="start">
                   <Emoji
                     display={{ base: "none", sm: "block" }}
-                    mr={2}
+                    me={2}
                     fontSize="2xl"
                     text={":writing:"}
                   />
@@ -297,13 +309,11 @@ const TranslationLeaderboard: React.FC<IProps> = ({
             textAlign="center"
             fontWeight={{ base: "semibold", md: "normal" }}
           >
-            <Translation
-              id={
-                filterAmount === 10
-                  ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
-                  : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
-              }
-            />
+            {t(
+              filterAmount === 10
+                ? "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-more"
+                : "page-contributing-translation-program-acknowledgements-translation-leaderboard-show-less"
+            )}
           </Text>
         </Button>
       </Flex>

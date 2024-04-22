@@ -1,16 +1,18 @@
-import { Box, type BoxProps, Text, Flex } from "@chakra-ui/react"
 import React from "react"
+import { Box, type BoxProps, Flex, Text } from "@chakra-ui/react"
+
 import { getMaxFractionDigitsUsd } from "../utils"
+
 import { AddressPill } from "./AddressPill"
 
-interface IProps extends BoxProps {
+type WalletBalanceProps = BoxProps & {
   usdAmount?: number
 }
 
-export const WalletBalance: React.FC<IProps> = ({
+export const WalletBalance = ({
   usdAmount = 0,
   ...boxProps
-}) => (
+}: WalletBalanceProps) => (
   <Box zIndex={1} {...boxProps}>
     <Text textAlign="center" color="body.medium" mb={{ base: 2, md: 4 }}>
       Your total

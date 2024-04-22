@@ -1,15 +1,9 @@
-import { TranslationKey } from "../../utils/translations"
+import type { WalletFilterData } from "@/lib/types"
 
-interface WalletFilter {
-  title: TranslationKey
-  filterKey: string | undefined
-  description: TranslationKey | ""
-}
-
-const walletFilterData: { [key: string]: WalletFilter } = {
+const walletFilterData: { [key: string]: WalletFilterData } = {
   mobile: {
     title: "page-find-wallet-mobile",
-    description: "page-find-wallet-mobile-desc",
+    description: "",
     filterKey: undefined,
   },
   android: {
@@ -24,7 +18,7 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   },
   desktop: {
     title: "page-find-wallet-desktop",
-    description: "page-find-wallet-desktop-desc",
+    description: "",
     filterKey: undefined,
   },
   linux: {
@@ -44,7 +38,7 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   },
   browser: {
     title: "page-find-wallet-browser",
-    description: "page-find-wallet-browser-desc",
+    description: "",
     filterKey: undefined,
   },
   firefox: {
@@ -59,7 +53,7 @@ const walletFilterData: { [key: string]: WalletFilter } = {
   },
   hardware: {
     title: "page-find-wallet-hardware",
-    description: "page-find-wallet-hardware-desc",
+    description: "",
     filterKey: "hardware",
   },
   open_source: {
@@ -76,11 +70,6 @@ const walletFilterData: { [key: string]: WalletFilter } = {
     title: "page-find-wallet-hardware-wallet-support",
     description: "page-find-wallet-hardware-wallet-support-desc",
     filterKey: "hardware_support",
-  },
-  walletconnect: {
-    title: "page-find-wallet-walletconnect",
-    description: "page-find-wallet-walletconnect-desc",
-    filterKey: "walletconnect",
   },
   rpc_importing: {
     title: "page-find-wallet-rpc-importing",
@@ -126,11 +115,6 @@ const walletFilterData: { [key: string]: WalletFilter } = {
     title: "page-find-wallet-token-importing",
     description: "page-find-wallet-token-importing-desc",
     filterKey: "erc_20_support",
-  },
-  eip_1559_support: {
-    title: "page-find-wallet-fee-optimization",
-    description: "page-find-wallet-fee-optimization-desc",
-    filterKey: "eip_1559_support",
   },
   buy_crypto: {
     title: "page-find-wallet-buy-crypto",

@@ -1,22 +1,24 @@
 import React from "react"
-import { Button, Flex, type FlexProps, ButtonProps } from "@chakra-ui/react"
 import { motion } from "framer-motion"
+import { Button, ButtonProps, Flex, type FlexProps } from "@chakra-ui/react"
+
 import { ClickAnimation } from "./ClickAnimation"
 import { PulseAnimation } from "./PulseAnimation"
 
 const MotionFlex = motion(Flex)
 
-interface IProps extends FlexProps, Pick<ButtonProps, "isDisabled"> {
-  isAnimated?: boolean
-  progressStepper: () => void
-}
-export const ProgressCta: React.FC<IProps> = ({
+type ProgressCtaProps = FlexProps &
+  Pick<ButtonProps, "isDisabled"> & {
+    isAnimated?: boolean
+    progressStepper: () => void
+  }
+export const ProgressCta = ({
   isAnimated = false,
   progressStepper,
   isDisabled,
   children,
   ...flexProps
-}) => (
+}: ProgressCtaProps) => (
   <MotionFlex
     py={10}
     px={6}

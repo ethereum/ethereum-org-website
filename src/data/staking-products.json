@@ -501,11 +501,11 @@
       "monthlyFee": 8,
       "monthlyFeeUnit": "%",
       "isFoss": false,
-      "hasBugBounty": false,
+      "hasBugBounty": true,
       "isTrustless": false,
-      "isPermissionless": false,
-      "pctMajorityExecutionClient": null,
-      "pctMajorityConsensusClient": null,
+      "isPermissionless": true,
+      "pctMajorityExecutionClient": 49.9,
+      "pctMajorityConsensusClient": 33,
       "isSelfCustody": false,
       "platforms": ["Browser"],
       "ui": ["GUI"],
@@ -747,6 +747,39 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked RockX go to link"
+      }
+    },
+    {
+      "name": "Consensys Staking",
+      "imageName": "ConsensysStaking",
+      "hue": 231,
+      "launchDate": "2020-12-01",
+      "url": "https://consensys.io/staking",
+      "audits": [
+        {
+          "name": "SOC2 and Penttests",
+          "url": "https://app.drata.com/trust/9cbca327-0c38-11ee-865f-029d78a187d9"
+        }
+      ],
+      "minEth": 32,
+      "additionalStake": null,
+      "additionalStakeUnit": null,
+      "monthlyFee": 8,
+      "monthlyFeeUnit": "%",
+      "isFoss": false,
+      "hasBugBounty": true,
+      "isTrustless": false,
+      "isPermissionless": false,
+      "pctMajorityExecutionClient": 95,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": false,
+      "platforms": ["macOS", "Windows"],
+      "ui": ["GUI", "API"],
+      "socials": {},
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked ConsensysStaking go to link"
       }
     }
   ],
@@ -1060,6 +1093,44 @@
         "eventCategory": "StakingProductCard",
         "eventAction": "Clicked",
         "eventName": "Clicked Bedrock go to link"
+      }
+    },
+    {
+      "name": "Everstake",
+      "imageName": "Everstake",
+      "hue": 43,
+      "launchDate": "2023-09-14",
+      "url": "https://stake.everstake.one/ethereum/",
+      "audits": [
+        {
+          "name": "ChainSecurity 2023",
+          "url": "https://chainsecurity.com/security-audit/everstake-eth-b2c-staking/"
+        },
+        {
+          "name": "Ackee 2023",
+          "url": "https://ackeeblockchain.com/blog/everstake-ethereum-staking-protocol-audit-summary/"
+        }
+      ],
+      "minEth": 0.1,
+      "feePercentage": 10,
+      "tokens": [],
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": true,
+      "hasPermissionlessNodes": false,
+      "pctMajorityExecutionClient": 50,
+      "pctMajorityConsensusClient": 100,
+      "platforms": ["Browser", "Wallet"],
+      "ui": ["GUI"],
+      "socials": {
+        "discord": "https://discord.gg/NvcW47V3Xb",
+        "twitter": "https://twitter.com/everstake_pool",
+        "medium": "https://medium.com/everstake"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Everstake (pool) go to link"
       }
     }
   ]
