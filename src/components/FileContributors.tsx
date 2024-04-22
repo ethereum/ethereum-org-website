@@ -4,10 +4,7 @@ import {
   Avatar,
   Flex,
   FlexProps,
-  Heading,
   ListItem,
-  ModalBody,
-  ModalHeader,
   Skeleton as ChakraSkeleton,
   SkeletonCircle as ChakraSkeletonCircle,
   UnorderedList,
@@ -43,7 +40,7 @@ const SkeletonCircle = (props) => (
 
 const ContributorList = ({ children }: { children: React.ReactNode }) => {
   return (
-    <UnorderedList maxH="2xs" m={0} mt={6} overflowY="scroll">
+    <UnorderedList m={0} mt={6}>
       {children}
     </UnorderedList>
   )
@@ -102,26 +99,20 @@ const FileContributors = ({
 
   return (
     <>
-      <Modal isOpen={isModalOpen} setIsOpen={setModalOpen}>
-        <ModalHeader py={0}>
-          <Heading m={0}>
-            <Translation id="contributors" />
-          </Heading>
-        </ModalHeader>
-
-        <ModalBody>
-          <Translation id="contributors-thanks" />
-          {contributors ? (
-            <ContributorList>
-              {contributors.map((contributor) => (
-                <Contributor
-                  contributor={contributor}
-                  key={contributor.email}
-                />
-              ))}
-            </ContributorList>
-          ) : null}
-        </ModalBody>
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setModalOpen(false)}
+        size={{ base: "full", md: "xl" }}
+        title={<Translation id="contributors" />}
+      >
+        <Translation id="contributors-thanks" />
+        {contributors ? (
+          <ContributorList>
+            {contributors.map((contributor) => (
+              <Contributor contributor={contributor} key={contributor.email} />
+            ))}
+          </ContributorList>
+        ) : null}
       </Modal>
 
       <Flex

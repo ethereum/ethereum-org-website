@@ -245,12 +245,12 @@ const TutorialPage = ({
       <Modal
         isOpen={isModalOpen}
         onClose={() => setModalOpen(false)}
-        size="xl"
+        size={{ base: "full", md: "xl" }}
         contentProps={{ dir }}
-      >
-        <Heading fontSize="2rem" lineHeight="1.4" mb={4}>
+        title={
           <Translation id="page-developers-tutorials:page-tutorial-submit-btn" />
-        </Heading>
+        }
+      >
         <Text>
           <Translation id="page-developers-tutorials:page-tutorial-listing-policy-intro" />{" "}
           <InlineLink href="/contributing/content-resources/">
@@ -260,11 +260,7 @@ const TutorialPage = ({
         <Text>
           <Translation id="page-developers-tutorials:page-tutorial-submit-tutorial" />
         </Text>
-        <Flex
-          flexDirection={{ base: "column", md: "initial" }}
-          maxH={{ base: 64, md: "initial" }}
-          overflowY={{ base: "scroll", md: "initial" }}
-        >
+        <Flex flexDirection={{ base: "column", md: "initial" }}>
           <Flex
             borderWidth="1px"
             borderStyle="solid"

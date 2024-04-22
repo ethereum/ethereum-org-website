@@ -14,7 +14,7 @@ import {
 
 export type ModalProps = ChakraModalProps & {
   children?: React.ReactNode
-  title?: string
+  title?: React.ReactNode
   actionButtonLabel?: string
   contentProps?: ModalContentProps
 }
