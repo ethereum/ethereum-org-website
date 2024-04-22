@@ -11829,6 +11829,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "prestwich",
+      "name": "James Prestwich",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10149425?v=4",
+      "profile": "https://prestwi.ch",
+      "contributions": [
+        "content"
+      ]
     }
   ],
   "contributorsPerLine": 7,
