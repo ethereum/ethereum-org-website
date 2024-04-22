@@ -13,7 +13,6 @@ Kezdje azzal, hogy elolvassa az ethereum.org misszióját és értékeit a [maga
 ## Fejlesztők <Emoji text=":computer:" size={1} /> {#developers}
 
 - Tanuljon az Ethereumról és próbálja ki az [ethereum.org/developers/](/developers/) oldalon
-- [Nyerjen jutalmat a Gitcoin-on](https://gitcoin.co/) azáltal, hogy kisebb-nagyobb technikai problémákon dolgozik, és kapjon érte kriptót!
 - Vegyen részt egy Önhöz közel eső [ETHGlobal](http://ethglobal.co/) hackathonon!
 - Nézze meg azokat a [projekteket, melyek a szakterületéhez vagy a választott programnyelvéhez kapcsolódnak](/developers/docs/programming-languages/)
 - Vegyen részt a [protokollfejlesztők megbeszélésein (Core Dev calls)](https://www.youtube.com/@EthereumProtocol)
