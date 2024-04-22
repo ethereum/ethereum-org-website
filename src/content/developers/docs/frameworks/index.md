@@ -95,11 +95,11 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
-**Crossmint -** **_The leading enterprise-grade web3 development platform, that allows you to build NFT applications without requiring any blockchain experience or holding cryptocurrency, and making the blockchain invisible to end users. The platform offers a one-stop-shop for most of your NFT infrastructure needs across all major chains EVM Chains(and others), including creating, distributing, selling, storing digital assets, and offering post-mint utility._**
+**Crossmint -** **_Enterprise-grade web3 development platform, that allows you to build NFT applications on all major chains EVM Chains(and others)._**
 
-- [Website](https://www.crossmint.com/?utm_source=backlinks)
-- [Documentation](https://docs.crossmint.com/?utm_source=backlinks)
-- [Discord](https://discord.com/invite/crossmint/?utm_source=backlinks)
+- [Website](https://www.crossmint.com)
+- [Documentation](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
 
 **Brownie -** **_Python-based development environment and testing framework._**
 
