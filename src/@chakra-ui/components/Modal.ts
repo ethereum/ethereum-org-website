@@ -15,21 +15,19 @@ const {
 export const Modal = defineMultiStyleConfig({
   baseStyle: definePartsStyle((props) =>
     defineMergeStyles(defaultBaseStyle?.(props), {
-      overlay: {
-        bg: "gray.500",
-      },
       dialog: {
         bg: "background.base",
         gap: "4",
         padding: "8",
-        maxW: "464px",
-        borderRadius: "md",
+        borderRadius: "base",
         boxShadow: "none",
       },
       header: {
-        padding: 0,
+        padding: "0",
         fontWeight: "bold",
         fontSize: "2xl",
+        minHeight: "6",
+        me: "8",
       },
       closeButton: {
         boxSize: "8",
@@ -38,15 +36,15 @@ export const Modal = defineMultiStyleConfig({
         insetInlineEnd: "8",
       },
       body: {
-        padding: 0,
+        padding: "0",
         fontWeight: "normal",
         fontSize: "md",
       },
       footer: {
-        gap: "8px",
-        px: 0,
-        pt: 8,
-        pb: 0,
+        gap: "2",
+        px: "0",
+        pt: "8",
+        pb: "0",
       },
     })
   ),

@@ -124,7 +124,7 @@ const CustomRadio = ({
   })
 
   const buttonBg = useMemo<string>(() => {
-    if (!state.isChecked) return "body.inverted"
+    if (!state.isChecked) return "background.highlight"
     if (!isAnswerVisible) return "primary.base"
     if (!isSelectedCorrect) return "error.base"
     return "success.base"

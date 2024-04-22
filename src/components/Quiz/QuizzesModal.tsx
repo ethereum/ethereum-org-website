@@ -20,7 +20,7 @@ const QuizzesModal = ({
 }: QuizzesModalProps) => {
   const getStatusColor = (): ModalContentProps["bg"] => {
     if (quizStatus === "neutral") {
-      return "neutral"
+      return "background.base"
     }
     if (quizStatus === "success") {
       return "success.neutral"
@@ -31,8 +31,9 @@ const QuizzesModal = ({
   return (
     <Modal
       isOpen={isQuizModalOpen}
-      setIsOpen={onQuizModalClose}
+      onClose={onQuizModalClose}
       size={{ base: "full", md: "xl" }}
+      contentProps={{ bg: getStatusColor() }}
       {...props}
     >
       <Center m={0} bg={getStatusColor()} py="16">
