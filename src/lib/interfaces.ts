@@ -30,7 +30,6 @@ export interface SharedFrontmatter {
 }
 
 export interface StaticFrontmatter extends SharedFrontmatter {
-  postMergeBannerTranslation?: string
   hideEditButton?: boolean
 }
 
@@ -97,9 +96,7 @@ export interface TutorialFrontmatter extends SharedFrontmatter {
   skill: string
   published: string
   address?: string
-  postMergeBannerTranslation?: string
   hideEditButton?: boolean
-  showPostMergeBanner?: boolean
 }
 
 export interface MdPageContent {

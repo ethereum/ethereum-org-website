@@ -8224,7 +8224,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/32320988?v=4",
       "profile": "https://crowdin.com/profile/hiroyukinaito",
       "contributions": [
-        "doc"
+        "doc",
+        "maintenance"
       ]
     },
     {
@@ -11780,6 +11781,42 @@
       "name": "Jeffrey Owoloko",
       "avatar_url": "https://avatars.githubusercontent.com/u/72028836?v=4",
       "profile": "https://github.com/JeffreyJoel",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "colmck",
+      "name": "Colin McKerracher",
+      "avatar_url": "https://avatars.githubusercontent.com/u/73862596?v=4",
+      "profile": "https://github.com/colmck",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "writegr",
+      "name": "writegr",
+      "avatar_url": "https://avatars.githubusercontent.com/u/167099595?v=4",
+      "profile": "https://github.com/writegr",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "richardgreg",
+      "name": "Cardo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35255909?v=4",
+      "profile": "https://github.com/richardgreg",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "shravanandoria",
+      "name": "shravanandoria",
+      "avatar_url": "https://avatars.githubusercontent.com/u/36509067?v=4",
+      "profile": "https://www.linkedin.com/in/shravan-andoria/",
       "contributions": [
         "maintenance"
       ]

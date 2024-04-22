@@ -2,7 +2,6 @@
 title: Gobernanza de Ethereum
 description: Introducción sobre cómo se toman las decisiones relativas a Ethereum
 lang: es
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Introducción a la gobernanza de Ethereum {#introduction}
