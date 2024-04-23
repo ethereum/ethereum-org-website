@@ -20,7 +20,7 @@ type SummaryItem = [code: string, bucket: string, needsReview: number]
  *    5. Click: "Create" and authenticate
  *    6. Copy the token to the .env file
  * - Can be run with `yarn crowdin-needs-review`
- * - Results are saved to src/data/crowdin/report.csv
+ * - Results are saved to src/data/crowdin/bucketsAwaitingReviewReport.csv
  * - Report is git ignored, and should not be committed
  */
 async function main() {
@@ -68,7 +68,10 @@ async function main() {
   const csv = csvArray.join("\n")
 
   // Write csv to file to fs
-  const csvPath = path.resolve(process.cwd(), "src/data/crowdin/report.csv")
+  const csvPath = path.resolve(
+    process.cwd(),
+    "src/data/crowdin/bucketsAwaitingReviewReport.csv"
+  )
   fs.writeFileSync(csvPath, csv)
 
   // Log summary

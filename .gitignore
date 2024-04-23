@@ -54,4 +54,4 @@ robots.txt
 .vscode
 
 # Crowdin report output
-src/data/crowdin/report.csv
+src/data/crowdin/bucketsAwaitingReviewReport.csv
