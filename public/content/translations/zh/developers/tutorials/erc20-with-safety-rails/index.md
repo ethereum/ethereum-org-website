@@ -6,7 +6,7 @@ lang: zh
 tags:
   - "erc-20"
 skill: beginner
-published: 2022年8月15日
+published: 2022-08-15
 ---
 
 ## 简介 {#introduction}
@@ -141,7 +141,7 @@ OpenZeppelin 提供两种机制来实现管理访问：
 
 冻结和解冻合约需要几处更改：
 
-- [](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)从地址到[布尔值](https://en.wikipedia.org/wiki/Boolean_data_type)的映射来追踪哪些地址被冻结。 所有值的初始值都是 0，对于布尔值来说，它被解释为“false”。 这正是我们想要的，因为默认情况下帐户不会被冻结。
+- 从地址到[布尔值](https://en.wikipedia.org/wiki/Boolean_data_type)的[映射](https://www.tutorialspoint.com/solidity/solidity_mappings.htm)来追踪哪些地址被冻结。 所有值的初始值都是 0，对于布尔值来说，它被解释为“false”。 这正是我们想要的，因为默认情况下帐户不会被冻结。
 
   ```solidity
       mapping(address => bool) public frozenAccounts;
