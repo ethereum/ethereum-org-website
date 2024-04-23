@@ -6,11 +6,15 @@ lang: pl
 
 # Wprowadzenie do inteligentnych kontraktów {#introduction-to-smart-contracts}
 
-Inteligentne kontrakty są podstawowymi elementami składowymi warstwy aplikacji Ethereum. Są to programy komputerowe przechowywane na blockchainie, które działają zgodnie z logiką „jeśli to, to tamto” i mają gwarancję działania zgodnie z zasadami określonymi przez ich kod, którego nie można zmienić po utworzeniu.
+Inteligentne kontrakty są podstawowymi elementami składowymi warstwy aplikacji Ethereum. They are computer programs stored on the [blockchain](/glossary/#blockchain) that follow "if this then that" logic, and are guaranteed to execute according to the rules defined by its code, which cannot be changed once created.
 
 Termin „inteligentny kontrakt” stworzył Nick Szabo. W 1994 r. napisał [wprowadzenie do tej koncepcji](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), a w 1996 r. opisał [badania na temat możliwości inteligentnych kontraktów i tego co mogą zrobić](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Szabo wyobraził sobie cyfrowy rynek, na którym automatyczne, kryptograficznie bezpieczne procesy umożliwiają przeprowadzanie transakcji i funkcji biznesowych bez zaufanych pośredników. Inteligentne kontrakty na Ethereum wprowadzają tę wizję w życie.
+Szabo envisioned a digital marketplace where automatic, [cryptographically-secure](/glossary/#cryptography) processes enable transactions and business functions to happen without trusted intermediaries. Inteligentne kontrakty na Ethereum wprowadzają tę wizję w życie.
+
+Zobacz, jak Finematics tłumaczy inteligentne kontrakty:
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## Zaufanie do konwencjonalnych kontraktów {#trust-and-contracts}
 
@@ -60,7 +64,7 @@ Wreszcie, podobnie jak w przypadku tradycyjnych kontraktów, możesz sprawdzić,
 
 Inteligentne kontrakty mogą robić zasadniczo wszystko, co robią programy komputerowe.
 
-Mogą wykonywać obliczenia, tworzyć walutę, przechowywać dane, wybijać NFT, wysyłać komunikaty, a nawet generować grafikę. Oto kilka popularnych, rzeczywistych przykładów:
+They can perform computations, create currency, store data, mint [NFTs](/glossary/#nft), send communications and even generate graphics. Oto kilka popularnych, rzeczywistych przykładów:
 
 - [Stablecoiny](/stablecoins/)
 - [Tworzenie i dystrybucja unikalnych zasobów cyfrowych](/nft/)
@@ -68,12 +72,6 @@ Mogą wykonywać obliczenia, tworzyć walutę, przechowywać dane, wybijać NFT,
 - [Zdecentralizowane gry](/dapps/?category=gaming#explore)
 - [Polisa ubezpieczeniowa automatycznie wypłacająca odszkodowanie](https://etherisc.com/)
 - [Standard umożliwiający tworzenie niestandardowych, interoperacyjnych walut](/developers/docs/standards/tokens/)
-
-## Jesteś raczej wzrokowcem? {#visual-learner}
-
-Zobacz, jak Finematics tłumaczy inteligentne kontrakty:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## Dalsza lektura {#further-reading}
 
