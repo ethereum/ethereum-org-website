@@ -89,7 +89,7 @@ lang: el
 
 ## Υπεύθυνοι διαχείρισης προϊόντων <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Το οικοσύστημα του Ethereum χρειάζεται το ταλέντο σας! Πολλές εταιρείες προσλαμβάνουν υπεύθυνο διαχείρισης προϊόντων. Αν θέλετε να ξεκινήσετε συμβάλλοντας σε ένα έργο ανοικτού κώδικα, έρθετε σε επαφή με το [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ή το [MetaCartel](https://www.metacartel.org/)
+- Το οικοσύστημα του Ethereum χρειάζεται το ταλέντο σας! Πολλές εταιρείες προσλαμβάνουν υπεύθυνο διαχείρισης προϊόντων. Αν θέλετε να ξεκινήσετε συμβάλλοντας σε ένα έργο ανοικτού κώδικα, έρθετε σε επαφή με το [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ή το [RaidGuild](https://www.raidguild.org/)
 
 ## Μάρκετινγκ <Emoji text=":megaphone:" size={1} /> {#marketing}
 

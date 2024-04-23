@@ -16,7 +16,6 @@ lang: ja
 
 - [EF エコシステム・サポート・プログラム](https://esp.ethereum.foundation) - _ユニバーサルツール、インフラストラクチャ、研究、公共財を対象とした、イーサリアムにプラスとなるオープンソース・プロジェクトへの資金提供_
 - [イーサリアム RFP](https://github.com/ethereum/requests-for-proposals) - _イーサリアム・ファウンデーションによるイーサリアムエコシステムにおける作業とプロジェクトの提案依頼_
-- [MetaCartel](https://www.metacartel.org/grants/) - _分散型アプリ(Dapp)開発、分散型自律組織(DAO)作成_
 - [Moloch DAO](https://www.molochdao.com/) - _プライバシー、レイヤー 2 スケーリング、クライアントセキュリティなど_
 - [公開されている助成プログラム](https://opengrants.com/explore)
 - [分散型自律組織(DAO)の助成](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成プログラムを提供する組織の Google スプレッドシート_

@@ -77,7 +77,7 @@ ETH をステーキングすると、イーサリアムネットワークの保�
 
 ## プロダクトマネージャー <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- イーサリアムエコシステムは皆さんの才能が必要です。 多くの企業がプロダクトマネージャーの求人を行っています。 オープンソースプロジェクトへの貢献を始めたい場合は、[Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)または[MetaCartel](https://www.metacartel.org/)にご連絡ください。
+- イーサリアムエコシステムは皆さんの才能が必要です。 多くの企業がプロダクトマネージャーの求人を行っています。 オープンソースプロジェクトへの貢献を始めたい場合は、[Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)または[RaidGuild](https://www.raidguild.org/)にご連絡ください。
 
 ## マーケティング <Emoji text=":megaphone:" size={1} /> {#marketing}
 

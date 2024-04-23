@@ -89,7 +89,7 @@ Az Ethereum-ökoszisztéma missziója, hogy közjóval kapcsolatos és nagy hat�
 
 ## Termékmenedzserek <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Az Ethereum-ökoszisztémának az Ön tehetségére is szüksége van! Számos cég keres ilyen pozícióra munkaerőt. Ha szeretne egy nyílt forráskódú projektben közreműködni, keresse meg az [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) vagy [MetaCartel](https://www.metacartel.org/) csapatokat
+- Az Ethereum-ökoszisztémának az Ön tehetségére is szüksége van! Számos cég keres ilyen pozícióra munkaerőt. Ha szeretne egy nyílt forráskódú projektben közreműködni, keresse meg az [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) vagy [RaidGuild](https://www.raidguild.org/) csapatokat
 
 ## Marketing <Emoji text=":megaphone:" size={1} /> {#marketing}
 

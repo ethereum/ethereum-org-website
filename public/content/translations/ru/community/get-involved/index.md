@@ -89,7 +89,7 @@ lang: ru
 
 ## Менеджеры по продукту <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Экосистема Ethereum ищет таланты! Многие компании готовы нанимать менеджеров по продукту. Если вы хотите принять участие в проекте с открытым исходным кодом, свяжитесь с [группой Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) или [MetaCartel](https://www.metacartel.org/)
+- Экосистема Ethereum ищет таланты! Многие компании готовы нанимать менеджеров по продукту. Если вы хотите принять участие в проекте с открытым исходным кодом, свяжитесь с [группой Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) или [RaidGuild](https://www.raidguild.org/)
 
 ## Маркетинг <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 

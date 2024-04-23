@@ -89,7 +89,7 @@ L'ecosistema Ethereum ha come missione di finanziare beni pubblici e progetti di
 
 ## Product Manager <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- L'ecosistema Ethereum ha bisogno del tuo talento! Molte aziende sono alla ricerca di product manager. Se vuoi cominciare a contribuire ad un progetto open source, contatta [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [MetaCartel](https://www.metacartel.org/)
+- L'ecosistema Ethereum ha bisogno del tuo talento! Molte aziende sono alla ricerca di product manager. Se vuoi cominciare a contribuire ad un progetto open source, contatta [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [RaidGuild](https://www.raidguild.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} /> {#marketing}
 
