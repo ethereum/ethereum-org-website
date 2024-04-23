@@ -120,7 +120,7 @@ const variantHighContrast = definePartsStyle((props) => {
     container: {
       ...defaultStyles?.container,
       boxShadow: "none",
-      borderColor: $badgeColor.reference,
+
       // Remove default dark mode styles
       _dark: {},
       ...statusStyles.container,
