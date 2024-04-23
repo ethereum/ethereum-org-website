@@ -11894,6 +11894,15 @@
         "content",
         "bug"
       ]
+    },
+    {
+      "login": "rohit-710",
+      "name": "Rohit Ramesh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/70317502?v=4",
+      "profile": "https://bento.me/rohitramesh",
+      "contributions": [
+        "tool"
+      ]
     }
   ],
   "contributorsPerLine": 7,
