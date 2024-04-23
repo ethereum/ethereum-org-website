@@ -89,7 +89,7 @@ El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proye
 
 ## Gestores de producto <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
-- ¡El ecosistema Ethereum necesita su valía! Muchas empresas están contratando a personal para puestos de gestión de productos. Si quiere empezar contribuyendo a un proyecto de código abierto, póngase en contacto con [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [MetaCartel](https://www.metacartel.org/).
+- ¡El ecosistema Ethereum necesita su valía! Muchas empresas están contratando a personal para puestos de gestión de productos. Si quiere empezar contribuyendo a un proyecto de código abierto, póngase en contacto con [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [RaidGuild](https://www.raidguild.org/).
 
 ## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 

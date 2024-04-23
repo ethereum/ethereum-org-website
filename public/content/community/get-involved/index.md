@@ -89,7 +89,7 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 
 ## Product Managers <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
-- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) or [MetaCartel](https://www.metacartel.org/)
+- The Ethereum ecosystem needs your talents! Many companies are hiring for product manager roles. If you want to start by contributing to an open source project, get in touch with the [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) or [RaidGuild](https://www.raidguild.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 

@@ -89,7 +89,7 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 
 ## Ürün Yöneticileri <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Ethereum ekosisteminin yeteneklerinize ihtiyacı var! Birçok şirket, ürün yöneticisi rolleri için çalışan arıyor. Açık kaynak kodlu bir projeye katkıda bulunarak başlamak istiyorsanız [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) veya [MetaCartel](https://www.metacartel.org/) adresleriyle iletişime geçin
+- Ethereum ekosisteminin yeteneklerinize ihtiyacı var! Birçok şirket, ürün yöneticisi rolleri için çalışan arıyor. Açık kaynak kodlu bir projeye katkıda bulunarak başlamak istiyorsanız [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) veya [RaidGuild](https://www.raidguild.org/) adresleriyle iletişime geçin
 
 ## Pazarlama <Emoji text=":megaphone:" size={1} /> {#marketing}
 

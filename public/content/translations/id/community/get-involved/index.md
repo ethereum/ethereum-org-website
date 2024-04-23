@@ -73,7 +73,7 @@ Ekosistem Ethereum bertujuan mendanai fasilitas publik dan proyek yang berdampak
 
 ## Manajer Produk <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Ekosistem Ethereum memerlukan talenta Anda! Banyak perusahaan mencari posisi manajer produk. Jika Anda ingin memulai dengan berkontribusi terhadap suatu proyek sumber terbuka, hubungi [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) atau [MetaCartel](https://www.metacartel.org/)
+- Ekosistem Ethereum memerlukan talenta Anda! Banyak perusahaan mencari posisi manajer produk. Jika Anda ingin memulai dengan berkontribusi terhadap suatu proyek sumber terbuka, hubungi [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) atau [RaidGuild](https://www.raidguild.org/)
 
 ## Pemasaran <Emoji text=":megaphone:" size={1} /> {#marketing}
 

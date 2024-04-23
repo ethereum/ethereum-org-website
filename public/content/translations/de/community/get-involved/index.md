@@ -89,7 +89,7 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und w
 
 ## Produktmanager <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Das Ethereum-Ökosystem braucht Ihr Talent. Viele Unternehmen stellen Produktmanager ein. Wenn Sie mit der Mitarbeit an einem Open-Source-Projekt beginnen möchten, wenden Sie sich an die [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) oder [MetaCartel](https://www.metacartel.org/).
+- Das Ethereum-Ökosystem braucht Ihr Talent. Viele Unternehmen stellen Produktmanager ein. Wenn Sie mit der Mitarbeit an einem Open-Source-Projekt beginnen möchten, wenden Sie sich an die [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) oder [RaidGuild](https://www.raidguild.org/).
 
 ## Marketing <Emoji text=":megaphone:" size={1} /> {#marketing}
 

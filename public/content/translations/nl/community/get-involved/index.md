@@ -77,7 +77,7 @@ Het Ethereum-ecosysteem is op een missie om publieke goederen en waardevolle pro
 
 ## Productbeheerders <Emoji text=":fountain_pen:" size={1} /> ½ {#product-managers}
 
-- Het Ethereum-ecosysteem heeft uw talenten nodig! Veel bedrijven huren productmanagers in. Als u wilt beginnen met bij te dragen aan een open-source project, neem dan contact op met de [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) of met [MetaCartel](https://www.metacartel.org/)
+- Het Ethereum-ecosysteem heeft uw talenten nodig! Veel bedrijven huren productmanagers in. Als u wilt beginnen met bij te dragen aan een open-source project, neem dan contact op met de [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) of met [RaidGuild](https://www.raidguild.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} />≤ {#marketing}
 

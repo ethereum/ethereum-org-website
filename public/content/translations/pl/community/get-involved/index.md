@@ -89,7 +89,7 @@ Ekosystem Ethereum ma misję finansowania dóbr publicznych i wpływowych projek
 
 ## Menedżerowie produktu (Product Managers) <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Ekosystem Ethereum potrzebuje twoich talentów! Wiele firm zatrudnia na stanowiska menedżerów produktu. Jeśli chcesz zacząć od przyczynienia się do projektu open source, skontaktuj się z [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) lub [MetaCartel](https://www.metacartel.org/)
+- Ekosystem Ethereum potrzebuje twoich talentów! Wiele firm zatrudnia na stanowiska menedżerów produktu. Jeśli chcesz zacząć od przyczynienia się do projektu open source, skontaktuj się z [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) lub [RaidGuild](https://www.raidguild.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} /> {#marketing}
 

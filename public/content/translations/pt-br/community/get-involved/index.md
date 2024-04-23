@@ -89,7 +89,7 @@ O objetivo do ecossistema Ethereum é financiar bens públicos e projetos com im
 
 ## Gerentes de produto <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- O ecossistema do Ethereum precisa de suas habilidades! Muitas empresas estão contratando para as funções de gerente de produtos. Se você quer começar contribuindo com um projeto de código aberto, entre em contato com o [Ethereum Gat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ou [MetaCartel](https://www.metacartel.org/)
+- O ecossistema do Ethereum precisa de suas habilidades! Muitas empresas estão contratando para as funções de gerente de produtos. Se você quer começar contribuindo com um projeto de código aberto, entre em contato com o [Ethereum Gat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ou [RaidGuild](https://www.raidguild.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 

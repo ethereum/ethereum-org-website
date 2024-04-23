@@ -89,7 +89,7 @@ lang: zh
 
 ## 产品经理 <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
-- 以太坊生态系统需要有才之士！ 许多公司正在招聘产品经理。 如果你想从为开源项目做贡献开始，请联系 [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) 或 [MetaCartel](https://www.metacartel.org/)
+- 以太坊生态系统需要有才之士！ 许多公司正在招聘产品经理。 如果你想从为开源项目做贡献开始，请联系 [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) 或 [RaidGuild](https://www.raidguild.org/)
 
 ## 市场营销 <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 

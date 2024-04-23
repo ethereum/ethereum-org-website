@@ -89,7 +89,7 @@ lang: fa
 
 ## مدیران محصول <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
-- اکوسیستم اتریوم به استعدادهای شما نیاز دارد! بسیاری از شرکت‌ها در حال استخدام برای سمت مدیر محصول هستند. اگر می‌خواهید با مشارکت در یک پروژه‌ی متن‌باز شروع کنید، با [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) یا [MetaCartel](https://www.metacartel.org/) در تماس باشید
+- اکوسیستم اتریوم به استعدادهای شما نیاز دارد! بسیاری از شرکت‌ها در حال استخدام برای سمت مدیر محصول هستند. اگر می‌خواهید با مشارکت در یک پروژه‌ی متن‌باز شروع کنید، با [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) یا [RaidGuild](https://www.raidguild.org/) در تماس باشید
 
 ## بازاریابی <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 

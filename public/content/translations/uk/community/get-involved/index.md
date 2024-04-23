@@ -77,7 +77,7 @@ lang: uk
 
 ## Менеджери з продукту <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Екосистемі Ethereum потрібні ваші таланти! Багато компаній готові наймати менеджерів із продукту. Якщо ви хочете взяти участь у проєкті з відкритим вихідним кодом, зверніться до [групи Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) або [MetaCartel](https://www.metacartel.org/)
+- Екосистемі Ethereum потрібні ваші таланти! Багато компаній готові наймати менеджерів із продукту. Якщо ви хочете взяти участь у проєкті з відкритим вихідним кодом, зверніться до [групи Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) або [RaidGuild](https://www.raidguild.org/)
 
 ## Маркетинг <Emoji text=":megaphone:" size={1} /> {#marketing}
 

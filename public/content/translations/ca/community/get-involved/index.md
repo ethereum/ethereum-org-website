@@ -73,7 +73,7 @@ L'ecosistema Ethereum té com a missió aportar fons a béns públics i projecte
 
 ## Gestors de producte <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- L'ecosistema Ethereum necessita els vostres talents! Diverses companyies estan demanant perfils de gestor de producte. Si voleu començar contribuint en un projecte de programari obert, poseu-vos en contacte amb [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [MetaCartel](https://www.metacartel.org/)
+- L'ecosistema Ethereum necessita els vostres talents! Diverses companyies estan demanant perfils de gestor de producte. Si voleu començar contribuint en un projecte de programari obert, poseu-vos en contacte amb [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [RaidGuild](https://www.raidguild.org/)
 
 ## Màrqueting <Emoji text=":megaphone:" size={1} /> {#marketing}
 
