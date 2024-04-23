@@ -11912,6 +11912,15 @@
       "contributions": [
         "ideas"
       ]
+    },
+    {
+      "login": "lightclient",
+      "name": "lightclient",
+      "avatar_url": "https://avatars.githubusercontent.com/u/14004106?v=4",
+      "profile": "https://github.com/lightclient",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
