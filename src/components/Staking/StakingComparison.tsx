@@ -1,18 +1,18 @@
-import React from "react"
+import { useTranslation } from "next-i18next"
 import { Box, Flex, Heading, useTheme } from "@chakra-ui/react"
 
-import InlineLink from "../Link"
-import Translation from "../Translation"
-import Text from "../OldText"
-import OldHeading from "../OldHeading"
+import type { StakingPage, TranslationKey } from "@/lib/types"
 
-import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
-import { TranslationKey } from "../../utils/translations"
 import {
   StakingGlyphCloudIcon,
   StakingGlyphCPUIcon,
   StakingGlyphTokenWalletIcon,
-} from "../icons/staking"
+} from "@/components/icons/staking"
+import InlineLink from "@/components/Link"
+import OldHeading from "@/components/OldHeading"
+import Text from "@/components/OldText"
+
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
 interface DataType {
   title: TranslationKey
@@ -23,16 +23,15 @@ interface DataType {
   glyph: JSX.Element
 }
 
-type StakingTypePage = "solo" | "saas" | "pools"
-
-export interface IProps {
-  page: StakingTypePage
+export type StakingComparisonProps = {
+  page: StakingPage
   className?: string
 }
 
-const StakingComparison: React.FC<IProps> = ({ page, className }) => {
+const StakingComparison = ({ page, className }: StakingComparisonProps) => {
   const theme = useTheme()
   const { stakingGold, stakingGreen, stakingBlue } = theme.colors
+  const { t } = useTranslation("page-staking")
 
   const solo: DataType = {
     title: "page-staking-dropdown-solo",
@@ -73,7 +72,7 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
     ),
   }
   const data: {
-    [key in StakingTypePage]: (DataType & {
+    [key in StakingPage]: (DataType & {
       content: TranslationKey
     })[]
   } = {
@@ -143,18 +142,16 @@ const StakingComparison: React.FC<IProps> = ({ page, className }) => {
             )}
             <Box>
               <Heading as="h3" fontSize="2xl" color={color} mb={2}>
-                <Translation id={title} />
+                {t(title)}
               </Heading>
-              <Text>
-                <Translation id={content} />
-              </Text>
+              <Text>{t(content)}</Text>
               <InlineLink
                 onClick={() => {
                   trackCustomEvent(matomo)
                 }}
                 to={to}
               >
-                <Translation id={linkText} />
+                {t(linkText)}
               </InlineLink>
             </Box>
           </Flex>

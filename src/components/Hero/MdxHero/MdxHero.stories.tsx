@@ -1,7 +1,7 @@
-import * as React from "react"
-import { Meta, StoryObj } from "@storybook/react"
-import MdxHeroComponent from "./"
 import { HStack } from "@chakra-ui/react"
+import { Meta, StoryObj } from "@storybook/react"
+
+import MdxHeroComponent from "./"
 
 type MdxHeroType = typeof MdxHeroComponent
 

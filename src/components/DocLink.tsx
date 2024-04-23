@@ -1,25 +1,28 @@
-import React from "react"
+import { AiOutlineArrowRight } from "react-icons/ai"
 import {
-  Icon,
   Box,
   Flex,
+  Icon,
   LinkBox,
   LinkOverlay,
   useToken,
 } from "@chakra-ui/react"
-import { AiOutlineArrowRight } from "react-icons/ai"
+
 import Emoji from "./Emoji"
 import { BaseLink } from "./Link"
 import Text from "./OldText"
 
-export interface IProps {
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
+export type DocLinkProps = {
   children?: React.ReactNode
   to: string
   isExternal?: boolean
 }
 
-const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
+const DocLink = ({ to, children, isExternal = false }: DocLinkProps) => {
   const linkBoxShadowColor = useToken("colors", "primary.base")
+  const { flipForRtl } = useRtlFlip()
 
   return (
     <LinkBox
@@ -41,9 +44,10 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
         flexDirection="row"
         flex={1}
         justifyContent="space-between"
+        data-group
       >
         <Flex align="center">
-          <Emoji fontSize="md" mr={4} text=":page_with_curl:" />
+          <Emoji fontSize="md" me={4} text=":page_with_curl:" />
         </Flex>
         <Box flex={1} flexDirection="column">
           <LinkOverlay
@@ -68,9 +72,10 @@ const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
           _groupHover={{
             fill: "primary.base",
             transition: "transform 0.1s",
-            transform: "scale(1.2)",
+            transform: `${flipForRtl} scale(1.2)`,
             rotate: isExternal ? "-45deg" : "0",
           }}
+          transform={flipForRtl}
         />
       </Flex>
     </LinkBox>
