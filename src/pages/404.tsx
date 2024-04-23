@@ -1,19 +1,43 @@
-import React from "react"
-import { graphql, PageProps } from "gatsby"
+import type { GetStaticProps } from "next"
+import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, Heading, Text } from "@chakra-ui/react"
 
-import InlineLink from "../components/Link"
-import Translation from "../components/Translation"
+import { BasePageProps } from "@/lib/types"
 
-const NotFoundPage = (props: PageProps) => (
+import InlineLink from "@/components/Link"
+import MainArticle from "@/components/MainArticle"
+import Translation from "@/components/Translation"
+
+import { existsNamespace } from "@/lib/utils/existsNamespace"
+import { getLastDeployDate } from "@/lib/utils/getLastDeployDate"
+import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
+
+export const getStaticProps = (async ({ locale }) => {
+  const requiredNamespaces = getRequiredNamespacesForPage("/")
+
+  // Want to check common namespace, so looking at requiredNamespaces[0]
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[0])
+
+  const lastDeployDate = getLastDeployDate()
+
+  return {
+    props: {
+      ...(await serverSideTranslations(locale!, requiredNamespaces)),
+      contentNotTranslated,
+      lastDeployDate,
+    },
+  }
+}) satisfies GetStaticProps<BasePageProps>
+
+const NotFoundPage = () => (
   <Flex flexDir="column" align="center" w="full" mt={16} mb={0} mx="auto">
-    <Box py={4} px={8} w="full">
+    <Box as={MainArticle} py={4} px={8} w="full">
       <Heading as="h1" size="2xl" my={8}>
         <Translation id="we-couldnt-find-that-page" />
       </Heading>
       <Text mb={8}>
         <Translation id="try-using-search" />{" "}
-        <InlineLink to="/">
+        <InlineLink href="/">
           <Translation id="return-home" />
         </InlineLink>
         .
@@ -23,19 +47,3 @@ const NotFoundPage = (props: PageProps) => (
 )
 
 export default NotFoundPage
-
-export const query = graphql`
-  query NotFoundPage($languagesToFetch: [String!]!) {
-    locales: allLocale(
-      filter: { language: { in: $languagesToFetch }, ns: { in: ["common"] } }
-    ) {
-      edges {
-        node {
-          ns
-          data
-          language
-        }
-      }
-    }
-  }
-`
