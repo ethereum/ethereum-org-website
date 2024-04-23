@@ -119,7 +119,7 @@ _Normalmente se utiliza para organizaciones más estrechas, centradas en el ser 
 
 [MolochDAO](http://molochdao.com/) – MolochDAO se centra en la financiación de proyectos Ethereum. Requieren una propuesta de membresía para que el grupo pueda evaluar si tiene la experiencia y el capital necesarios para emitir juicios informados sobre posibles subvenciones. No se puede simplemente comprar acceso a la DAO en el mercado abierto.
 
-### Adhesión de miembros basada en la reputación {#reputation-based-membership}
+### Inscripción basada en la reputación {#reputation-based-membership}
 
 La reputación representa una prueba de participación y otorga poder de voto en la DAO. A diferencia de la adhesión de miembros basada en tókenes o en la participación, las DAO basadas en la reputación no transfieren la propiedad a colaboradores. La reputación no puede comprarse, transferirse ni delegarse; los miembros de la DAO deben ganarse la reputación mediante la participación. La votación en cadena se realiza sin permisos y los potenciales miembros pueden presentar propuestas libremente para unirse a la DAO y solicitar reputación y tókenes como recompensa a cambio de su contribución.
 
@@ -131,7 +131,7 @@ _Suele usarse para el desarrollo descentralizado y la gobernanza de protocolos y
 
 ## Crear/unirse a una DAO {#join-start-a-dao}
 
-### Unirse a una DAO {#join-a-dao}
+### Únase a una DAO {#join-a-dao}
 
 - [Comunidad Ethereum y DAO](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [Lista de DAOHaus de las DAO](https://app.daohaus.club/explore)
@@ -156,7 +156,7 @@ _Suele usarse para el desarrollo descentralizado y la gobernanza de protocolos y
 - [Cómo empezar una comunidad digital con una DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [¿Qué es una DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [¿Qué es el consenso holográfico?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [Las DAO no son corporaciones: donde la descentralización en organizaciones autónomas importa, por Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [Las DAO no son corporaciones: donde la descentralización en organizaciones autónomas importa, por Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA y más: una guía de terminología incompleta](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Blog de Ethereum](https://blog.ethereum.org)
 
 ### Vídeos {#videos}

@@ -12,7 +12,7 @@ Un intercambio de tókenes en un intercambio involucra a dos activos diferentes 
 
 **Requisitos previos:**
 
-- tener una cartera de criptomonedas, para ello puede seguir esta tutorial:[ Como «registrar» una cuenta de Ethereum](/guides/how-to-register-an-ethereum-account/)
+- tenga su propia cartera de criptomonedas, para ello puede seguir este tutorial:[ Como «registrar» una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/)
 - añadir fondos a su cartera
 
 ## 1. Conecte su cartera al intercambio descentralizado (DEX) que prefiera

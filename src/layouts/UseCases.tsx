@@ -30,9 +30,10 @@ import {
 } from "@/components/MdComponents"
 import TableOfContents from "@/components/TableOfContents"
 
+import { getEditPath } from "@/lib/utils/editPath"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 
-import { EDIT_CONTENT_URL, MAIN_CONTENT_ID } from "@/lib/constants"
+import { MAIN_CONTENT_ID } from "@/lib/constants"
 
 const HeroContainer = (props: ChildOnlyProp) => (
   <Flex
@@ -49,7 +50,6 @@ const HeroContainer = (props: ChildOnlyProp) => (
 
 const TitleCard = (props: ChildOnlyProp) => {
   const boxShadow = useToken("colors", "cardBoxShadow")
-
   return (
     <Flex
       bg={{ base: "ednBackground", lg: "background.base" }}
@@ -64,8 +64,8 @@ const TitleCard = (props: ChildOnlyProp) => {
       p={8}
       position={{ base: "relative", lg: "absolute" }}
       top={{ base: "unset", lg: 24 }}
-      insetInlineStart={{ base: 0, lg: 24 }}
       bottom={{ base: 0, lg: "unset" }}
+      insetInlineStart={{ base: 0, lg: 24 }}
       insetInlineEnd={{ base: 0, lg: "unset" }}
       {...props}
     />
@@ -77,24 +77,24 @@ export const useCasesComponents = {
   // Export empty object if none needed
 }
 
-interface IProps
-  extends ChildOnlyProp,
-    Pick<MdPageContent, "slug" | "tocItems"> {
-  frontmatter: UseCasesFrontmatter
-}
-export const UseCasesLayout: React.FC<IProps> = ({
+type UseCasesLayoutProps = ChildOnlyProp &
+  Pick<MdPageContent, "slug" | "tocItems" | "contentNotTranslated"> & {
+    frontmatter: UseCasesFrontmatter
+  }
+export const UseCasesLayout = ({
   children,
   frontmatter,
   slug,
   tocItems,
-}) => {
+  contentNotTranslated,
+}: UseCasesLayoutProps) => {
   const { asPath: relativePath } = useRouter()
   const { t } = useTranslation("template-usecase")
   const lgBp = useToken("breakpoints", "lg")
 
   const summaryPoints = getSummaryPoints(frontmatter)
 
-  const absoluteEditPath = `${EDIT_CONTENT_URL}${relativePath}`
+  const absoluteEditPath = getEditPath(relativePath)
 
   // Assign hero styling, default to "defi"
   let useCase = "defi"
@@ -176,7 +176,11 @@ export const UseCasesLayout: React.FC<IProps> = ({
   }
 
   return (
-    <Box position="relative" width="full">
+    <Box
+      position="relative"
+      width="full"
+      dir={contentNotTranslated ? "ltr" : "unset"}
+    >
       <BannerNotification shouldShow zIndex="sticky" hideBelow={lgBp}>
         <Emoji text=":pencil:" fontSize="2xl" me={4} flexShrink={0} />
         <Text m={0}>
@@ -207,6 +211,7 @@ export const UseCasesLayout: React.FC<IProps> = ({
         </TitleCard>
         <Image
           src={frontmatter.image}
+          blurDataURL={frontmatter.blurDataURL}
           alt={frontmatter.alt || ""}
           width={1200}
           height={610}

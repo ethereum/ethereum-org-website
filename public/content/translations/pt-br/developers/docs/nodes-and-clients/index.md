@@ -20,7 +20,7 @@ Um "nó" é qualquer instância de software do cliente Ethereum que esteja conec
 - O cliente de execução (também conhecido como Execution Engine, cliente EL ou anteriormente cliente Eth1) ouve novas transações transmitidas na rede, executa-as na EVM e mantém o estado mais recente e o banco de dados de todos os dados atuais do Ethereum.
 - O cliente de consenso (também conhecido como Beacon Node, cliente CL ou anteriormente cliente Eth2) implementa o algoritmo de consenso de prova de participação, o qual permite que a rede realize um acordo com base nos dados validados do cliente de execução. Há também um terceiro pedaço de software, conhecido como 'validador' que pode ser adicionado ao cliente de consenso, permitindo que um nó participe na segurança da rede.
 
-Estes clientes trabalham juntos para manter rastreabilidade da cabeça da cadeia Ethereum e permitir usuários interagir com a rede Ethereum. O desenho modular com várias peças de software trabalhando em conjunto é chamado de [complexidade encapsulada](https://vitalik.ca/general/2022/02/28/complexity.html). Esta abordagem facilitou executar o [The Merge](/roadmap/merge) perfeitamente, faz softwares clientes mais fáceis de manter e desenvolver, e permite reusar clientes individuais, por exemplo, no [ecossistema camada 2](/layer-2/).
+Estes clientes trabalham juntos para manter rastreabilidade da cabeça da cadeia Ethereum e permitir usuários interagir com a rede Ethereum. O desenho modular com várias peças de software trabalhando em conjunto é chamado de [complexidade encapsulada](https://vitalik.eth.limo/general/2022/02/28/complexity.html). Esta abordagem facilitou executar o [The Merge](/roadmap/merge) perfeitamente, faz softwares clientes mais fáceis de manter e desenvolver, e permite reusar clientes individuais, por exemplo, no [ecossistema camada 2](/layer-2/).
 
 ![Execução de acoplamento e clientes de consenso](./eth1eth2client.png) Diagrama simplificado de uma execução associada e de um cliente de consenso.
 
@@ -136,6 +136,7 @@ Essa tabela resume os diferentes clientes. Todos eles passam por [testes de clie
 | [Nethermind](http://nethermind.io/)             | C#, .NET                 | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Instantâneo (sem servidor), Rápido, Completo | Arquivo, Removido |
 | [Besu](https://besu.hyperledger.org/en/stable/) | Java                     | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Instantâneo, Rápido, Completo                | Arquivo, Removido |
 | [Erigon](https://github.com/ledgerwatch/erigon) | Go                       | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Completo                                     | Arquivo, Removido |
+| [Reth](https://github.com/paradigmxyz/reth)     | Rust                     | Linux, Windows, macOS | Rede principal, Sepolia, Goerli, e outras | Completo                                     | Arquivo, Removido |
 
 Para saber mais sobre redes suportadas, leia sobre as [redes Ethereum](/developers/docs/networks/).
 

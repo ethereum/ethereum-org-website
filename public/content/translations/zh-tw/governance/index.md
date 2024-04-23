@@ -2,7 +2,6 @@
 title: 以太坊管理體系
 description: 以太坊決策方式的簡介。
 lang: zh-tw
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # 以太坊管理體系的簡介 {#introduction}
@@ -75,13 +74,13 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 > 此階段可能產生以下結果：
 
-> - 未來升級網路時會考慮此 以太坊改進提案
+> - 未來升級網路時會考慮此以太坊改進提案
 > - 將請求進行技術變更
 > - 如果非當務之急，或相對於開發工作而言，改善程度不夠顯著，可能會被拒絕
 
 3. **朝最終提案進行迭代：**收到所有利益相關方的回饋意見後，你很可能需要對初始提案進行修改，以提高安全性或更加滿足多種使用者的需求。 當以太坊改進提案納入你認為必須納入的所有變更，你需要再次提供給協定開發者。 之後將進入此流程的下個步驟；或是出現新的問題，提案必須再迭代一輪。
 
-4. **網路升級中納入以太坊改進提案**：假設以太坊改進提案已核准、測試及實作，以太坊改進提案會被安排為網路升級的一部分。 由於網路升級的協調成本很高（每個人需同步升級)，升級通常會將以太坊改進提案綁搭在一起。
+4. **網路升級中納入以太坊改進提案**：假設以太坊改進提案已核准、測試及實作，以太坊改進提案會被安排為網路升級的一部分。 由於網路升級的協調成本很高（每個人需同步升級），升級通常會將以太坊改進提案綁搭在一起。
 
 5. **網路升級啟動**：啟動網路升級後，以太坊改進提案將能在以太坊網路上線。 _注意：網路升級通常會先在測試網上啟動，之後才在以太坊主網上啟動。_
 
@@ -175,9 +174,9 @@ _注意：任何人都能參與多個組別，例如，協定開發者可以支�
 
 以太坊管理體系的定義並不嚴謹。 不同社群參與者對其看法不一。 其中包括：
 
-- [區塊鏈管理體系筆記](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [區塊鏈管理體系筆記](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [以太坊管理體系如何運作？](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [以太坊管理體系如何運作](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [以太坊核心開發者為何？](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [管理體系，第二部分：金權政治仍舊令人搖頭](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [跳脫貨幣投票管理體系](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [管理體系，第二部分：金權政治仍舊令人搖頭](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [跳脫貨幣投票管理體系](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

@@ -5,7 +5,7 @@ lang: zh
 incomplete: true
 ---
 
-<div class="featured">学习如何使用并通过基于 Java 的项目及工具参与以太坊的开发</div>
+<FeaturedText>学习如何使用并通过基于 Java 的项目及工具参与以太坊的开发</FeaturedText>
 
 使用以太坊来创建去中心化应用程序（或称“dapp”），发挥加密货币和区块链技术的优势。 这些去中心化应用程序可以是值得信赖的，也即一旦被部署到以太坊上，它们将总是按程序运行。 这些应用程序可以控制数字资产，以便创造新的金融应用； 它们可以是去中心化的，也即没有任何单一实体或个人能够控制它们，而且它们几乎是不可能被审查的。
 
@@ -17,7 +17,7 @@ incomplete: true
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [编写您的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [编写你的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 
 ## 使用以太坊客户端 {#working-with-ethereum-clients}
@@ -31,7 +31,7 @@ incomplete: true
 - [监听以太坊智能合约事件](https://kauri.io/article/760f495423db42f988d17b8c145b0874/listening-for-ethereum-smart-contract-events-in-java)
 - [使用 Besu (Pantheon)， Linux 下的 Java 以太坊客户端](https://kauri.io/article/276dd27f1458443295eea58403fd6965/using-pantheon-the-java-ethereum-client-with-linux)
 - [在 Java 集成测试中运行一个 Hyperledger Besu (Pantheon) 节点](https://kauri.io/article/7dc3ecc391e54f7b8cbf4e5fa0caf780/running-a-pantheon-node-in-java-integration-tests)
-- [Web3j 备忘单](<https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c>)
+- [Web3j 备忘单](https://kauri.io/web3j-cheat-sheet-(java-ethereum)/5dfa1ea941ac3d0001ce1d90/c)
 
 ## 面向中等程度用户的文章 {#intermediate-articles}
 

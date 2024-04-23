@@ -12,39 +12,29 @@ import {
   Portal,
 } from "@chakra-ui/react"
 
-interface IProps
-  extends Omit<PopoverContentProps, "children">,
-    Pick<PopoverProps, "placement"> {
-  children: ReactNode
-}
-export const NotificationPopover: React.FC<IProps> = ({
+type NotificationPopoverProps = Omit<PopoverContentProps, "children"> &
+  Pick<PopoverProps, "placement"> & {
+    children: ReactNode
+  }
+export const NotificationPopover = ({
   placement,
   children,
   content,
   title,
   ...restProps
-}) => {
+}: NotificationPopoverProps) => {
   return (
     <Popover placement={placement}>
       <PopoverTrigger>{children}</PopoverTrigger>
-        <PopoverContent
-          bg="background.highlight"
-          px={4}
-          py={2}
-          maxW="15rem"
-          borderRadius="base"
-          boxShadow="tooltip"
-          fontSize="xs"
-          {...restProps}
-        >
-          <Flex gap={2}>
-            <PopoverHeader fontWeight="bold" mb={2} flex={1} mt={0.5}>
-              {title || ""}
-            </PopoverHeader>
-            <PopoverCloseButton ms="auto" />
-          </Flex>
-          <PopoverBody>{content}</PopoverBody>
-        </PopoverContent>
+      <PopoverContent px={4} py={2} maxW="15rem" fontSize="xs" {...restProps}>
+        <Flex gap={2}>
+          <PopoverHeader fontWeight="bold" mb={2} flex={1} mt={0.5} p={0}>
+            {title || ""}
+          </PopoverHeader>
+          <PopoverCloseButton ms="auto" />
+        </Flex>
+        <PopoverBody p={0}>{content}</PopoverBody>
+      </PopoverContent>
     </Popover>
   )
 }

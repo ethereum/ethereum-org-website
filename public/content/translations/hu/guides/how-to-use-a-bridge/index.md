@@ -10,7 +10,7 @@ Ha sok tranzakció fut egyszerre az Ethereumon, akkor drágább a hálózatot ha
 
 **Feltételek:**
 
-- rendelkeznie kell egy kriptotárcával – ehhez kövesse a következő útmutatót: [Hogyan lehet létrehozni Ethereum számlát](/guides/how-to-register-an-ethereum-account/)
+- rendelkeznie kell egy kriptotárcával – ehhez kövesse a következő útmutatót: [Hogyan lehet létrehozni Ethereum-számlát](/guides/how-to-create-an-ethereum-account/)
 - lennie kell pénzeszközöknek a tárcájában
 
 ## 1. Határozza meg, hogy melyik L2 hálózatot szeretné használni

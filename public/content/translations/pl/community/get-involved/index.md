@@ -13,10 +13,9 @@ Zacznij od zapoznania się z misją i wartościami ethereum.org w naszym [kodeks
 ## Deweloperzy <Emoji text=":computer:" size={1} /> {#developers}
 
 - Ucz się i wypróbuj Ethereum na stronie [ethereum.org/developers/](/developers/)
-- [Szukaj ofert nagród za wyszukiwanie błędów (bounties) na platformie Gitcoin](https://gitcoin.co/), pracuj nad małym lub poważniejszym błędem technicznym i zarabiaj kryptowaluty!
 - Weź udział w hakatonie [ETHGlobal](http://ethglobal.co/) w pobliżu Twojego miejsca zamieszkania!
 - Sprawdź [projekty związane z Twoją dziedziną lub wybranym językiem programowania](/developers/docs/programming-languages/)
-- Oglądaj lub bierz udział w spotkaniach [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Oglądaj lub bierz udział w spotkaniach [Core Dev calls](https://www.youtube.com/@EthereumProtocol)
 - [Program Ecosystem Support](https://esp.ethereum.foundation/wishlist/) - w ramach którego aktywnie wspierane są pomysły, projekty i inicjatywy członków społeczności, jak również przyznawane dotacje w dziedzinach takich jak: narzędzia (tooling), dokumentacja (documentation) i infrastruktura (infrastructure).
 - Program [Web3Bridge](https://www.web3bridge.com/) dołącz do ambitnej społeczności web3 w jej dążeniu do zidentyfikowania, wyszkolenia i wsparcia setek developerów i członków społeczności w całej Afryce
 - Dołącz do [Discorda Ethereum Cat Herders](https://discord.io/EthCatHerders)
@@ -28,7 +27,7 @@ Czy masz doświadczenie w matematyce, kryptografii lub ekonomii? Może zainteres
 - Napisz lub zrecenzuj Propozycję Ulepszenia Ethereum
   - Napisz EIP
     1. Przedstaw swój pomysł na [Ethereum Magicians](https://ethereum-magicians.org)
-    2. Przeczytaj [EIP-1](https://eip.ethereum.org/EIPS/eip-1) — **Tak, jest to _cały_ dokument.**
+    2. Przeczytaj [EIP-1](https://eips.ethereum.org/EIPS/eip-1) — **Tak, jest to _cały_ dokument.**
     3. Postępuj zgodnie z instrukcjami w EIP-1. Odwołaj się do niego podczas pisania wersji wstępnej.
   - Dowiedz się jak zostać [edytorem EIP](https://eips.ethereum.org/EIPS/eip-5069)
     - Możesz już teraz recenzować EIP! Zobacz [otwarte pull requesty (PR) z tagiem `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Przekaż techniczną opinię na temat linku `discussion-to`.

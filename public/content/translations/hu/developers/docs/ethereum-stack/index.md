@@ -4,17 +4,17 @@ description: Egy áttekintő az Ethereum stack különböző rétegeiről és ar
 lang: hu
 ---
 
-Mint bármely szoftver stack az "Ethereum stack" változni fog projektről projektre az üzleti céljaidtól függően.
+Mint bármely szoftverstack, az „Ethereum-stack” is változni fog projektről projektre az Ön céljaitól függően.
 
 Vannak azonban alap Ethereum technológiák, melyek segítenek egy mentális modellt szolgáltatni arról, hogy a szoftver alkalmazások hogyan lépnek interakcióba az Ethereum blokklánccal. A stack rétegeinek megértése segíteni fog megérteni az Ethereum szoftver projektekbe történő integrálásának különböző módjait.
 
 ## Első szint: Ethereum Virtuális Gép {#ethereum-virtual-machine}
 
-Az [Ethereum Virtuális Gép (EVM)](/developers/docs/evm/) egy futtatókörnyezet az Ethereumon okosszerződések számára. Az Ethereum blokkláncon minden okosszerződést és állapot változást [tranzakciók](/developers/docs/transactions/) hajtanak végre. Az EVM kezeli az összes tranzakció feldolgozását az Ethereum hálózaton.
+Az [Ethereum virtuális gép (EVM)](/developers/docs/evm/) egy futtatókörnyezet az Ethereumon az okosszerződések számára. Az Ethereum blokkláncon minden okosszerződést és állapot változást [tranzakciók](/developers/docs/transactions/) hajtanak végre. Az EVM kezeli az összes tranzakció feldolgozását az Ethereum hálózaton.
 
 Mint bármilyen virtuális gép esetében, az EVM egy absztrakciós szintet hoz létre a kód végrehajtás és a végrehajtó gép (egy Ethereum csomópont) között. Az EVM jelenleg több ezer csomóponton fut szerte a világban.
 
-A háttérben az EVM opcode utasítások sorozatát használja meghatározott feladatok végrehajtásához. Ez a (140 egyedi) opcode teszi Turing-teljessé az EVM-et, mely azt jelenti, hogy az EVM szinte bármit ki tud számítani, ha elegendő erőforrással rendelkezik.
+A háttérben az EVM opcode utasítások sorozatát használja meghatározott feladatok végrehajtásához. Ez a (140 egyedi) operációs kód lehetővé teszi az EVM számára, hogy [Turing-teljes](https://en.wikipedia.org/wiki/Turing_completeness) legyen, tehát az EVM bármit ki tud számolni, ha elég erőforrás áll rendelkezésre.
 
 Dapp fejlesztőként nem kell sokat tudnod az EVM-ről azon kívül, hogy létezik és megbízhatóan működteti az összes Ethereum alkalmazást állásidő nélkül.
 
@@ -24,17 +24,17 @@ Az [okosszerződések](/developers/docs/smart-contracts/) olyan futtatható prog
 
 Az okosszerződéseket specifikus [programozási nyelveken](/developers/docs/smart-contracts/languages/) írják, melyek EVM bájtkódra fordítódnak (alacsony szintű gépi instrukciók, melyeket opcode-nak nevezünk).
 
-Az okosszerződések nem csak nyílt forráskódú könyvtáraknak felelnek meg, hanem lényegében nyílt API szolgáltatásokként működnek, melyek 24/7-ben futnak és nem lehet őket leállítani. Az okosszerződések nyilvános függvényeket szolgáltatnak, melyeket az alkalmazások ([dappok](/developers/docs/dapps/)) engedély nélkül meghívhatnak. Bármely alkalmazás integrálhatja a telepített okosszerződéseket, hogy funkciókat illesszen össze (mint például adat feedek vagy decentralizált tőzsdék). Bárki telepíthet új okosszerződéseket az Ethereumra, hogy tetszőleges funkcionalitást adjon, mely egyezik az alkalmazás szükségleteivel.
+Az okosszerződések nem csak nyílt forráskódú könyvtáraknak felelnek meg, hanem lényegében nyílt API szolgáltatásokként működnek, melyek 24/7-ben futnak és nem lehet őket leállítani. Az okosszerződések nyilvános függvényeket szolgáltatnak, amelyeket a felhasználók és az alkalmazások ([dappok](/developers/docs/dapps/)) engedély nélkül meghívhatnak. Bármelyik alkalmazás összekapcsolható a működő okosszerződésekkel, hogy valamilyen funkcionalitást alkosson, mint például [adatok használata](/developers/docs/oracles/), illetve támogassa a tokenek átváltását. Bárki telepíthet új okosszerződéseket az Ethereumra, hogy tetszőleges funkcionalitást adjon, mely egyezik az alkalmazás szükségleteivel.
 
 Dapp fejlesztőként csak akkor kell okosszerződéseket írnod, ha szeretnél egyedi funkciókat hozzáadni az Ethereum blokklánchoz. Hamar rájöhetsz, hogy a projekted legtöbb célját elérheted csupán a létező okosszerződések integrálásával, például ha szeretnéd használni a stablecoin fizetéseket vagy lehetővé tenni a tokenek decentralizált cseréjét.
 
 ## Harmadik szint: Ethereum csomópontok {#ethereum-nodes}
 
-Ahhoz, hogy egy alkalmazás interakcióba lépjen az Ethereum blokklánccal (vagyis képes legyen blokklánc adatok olvasására és/vagy tranzakció küldésre a hálózatra), rá kell csatlakoznia egy [Ethereum csomópontra](/developers/docs/nodes-and-clients/).
+Ahhoz, hogy az alkalmazás az Ethereum-blokklánccal működni tudjon, egy [Ethereum-csomóponthoz](/developers/docs/nodes-and-clients/) kell kapcsolódnia. Egy ilyen csomópont lehetővé teszi, hogy elérje a blokkláncon lévő adatokat és/vagy tranzakciókat küldjön a hálózatnak.
 
-Az Ethereum csomópontok egy szoftvert - Ethereum klienst - futtató számítógépek. Egy kliens egy Ethereum implementáció, mely hitelesíti az összes tranzakciót az egyes blokkokban, így a hálózat biztonságos marad az adatok pedig pontosak. Az Ethereum csomópontok MAGUK az Ethereum blokklánc. Kollektívan tárolják az Ethereum blokklánc állapotát és konszenzust érnek el a tranzakciókon, melyek a blokklánc állapotot megváltoztatják.
+Az Ethereum csomópontok egy szoftvert - Ethereum klienst - futtató számítógépek. Egy kliens egy Ethereum implementáció, mely hitelesíti az összes tranzakciót az egyes blokkokban, így a hálózat biztonságos marad az adatok pedig pontosak. **Az Ethereum-csomópontok összessége az Ethereum-blokklánc**. Kollektívan tárolják az Ethereum blokklánc állapotát és konszenzust érnek el a tranzakciókon, melyek a blokklánc állapotot megváltoztatják.
 
-Hogyha összekapcsolod az alkalmazásodat egy Ethereum csomóponttal (JSON RPC-n keresztül), akkor az alkalmazásod képes lesz adatokat leolvasni a blokkláncról (például felhasználói számla egyenlegek), illetve új tranzakciókat közvetíteni a hálózatra (például ETH átutalás felhasználói számlák között vagy okosszerződés függvények futtatása).
+Hogyha összekapcsolja az alkalmazást egy Ethereum-csomóponttal ([JSON RPC-n](/developers/docs/apis/json-rpc/) keresztül), akkor az alkalmazás képes lesz adatokat leolvasni a blokkláncról (például felhasználóiszámla-egyenlegek), illetve új tranzakciókat közvetíteni a hálózatra (például ETH-átutalás felhasználói számlák között, illetve okosszerződés-függvények futtatása).
 
 ## Négyes szint: Ethereum kliens API-ok {#ethereum-client-apis}
 
@@ -55,5 +55,7 @@ Ahogy ezeket a felhasználói felületeket fejleszted lényegében nem változot
 Nézd meg az útmutatónkat, hogy[felállítsd egy helyi fejlesztői környezetet](/developers/local-environment/) az Ethereum alkalmazásodnak.
 
 ## További olvasnivaló {#further-reading}
+
+- [A web 3.0 alkalmazások architektúrája](https://www.preethikasireddy.com/post/the-architecture-of-a-web-3-0-application) – _Preethi Kasireddy_
 
 _Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_

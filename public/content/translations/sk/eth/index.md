@@ -6,11 +6,11 @@ lang: sk
 
 # Čo je ether (ETH)? {#what-is-ether-eth}
 
-<div class="featured">
+<FeaturedText>
 
 ** ETH je vlastná mena Etherea ** Táto stránka poskytuje základné informácie, ktoré vám pomôžu začať používať ETH.
 
-</div>
+</FeaturedText>
 
 ## Čo je ETH a ako ho viem získať? {#what-is-eth-and-how-do-i-get-it}
 

@@ -4,6 +4,8 @@ description: Linee guida e requisiti per assicurare la qualità dei materiali di
 lang: it
 ---
 
+# Aggiungere risorse di progettazione {#adding-design-resources}
+
 Chiunque può suggerire nuovi materiali di progettazione per il [design e l'UX nella pagina Web3](/developers/docs/design-and-ux/).
 
 Si prega di notare che questa pagina si occupa di fornire il valore dell'utente agli aspiranti designer in Web3. La sezione di progettazione non serve per pubblicizzare i tuoi servizi, prodotti o piattaforme.

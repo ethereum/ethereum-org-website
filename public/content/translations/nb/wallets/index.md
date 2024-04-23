@@ -6,11 +6,11 @@ lang: nb
 
 # Ethereum-lommebøker {#ethereum-wallets}
 
-<div class="featured">
+<FeaturedText>
 
 **Vil du lære mer om Ethereum-lommebøker?** Denne siden vil forklare det grunnleggende og gi deg noen få enkle valg.
 
-</div>
+</FeaturedText>
 
 ## Hva er en Ethereum-lommebok, og hvilken burde jeg bruke? {#what-is-an-ethereum-wallet-and-which-one-should-i-use}
 

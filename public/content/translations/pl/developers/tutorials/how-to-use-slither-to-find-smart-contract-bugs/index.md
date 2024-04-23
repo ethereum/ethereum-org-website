@@ -64,7 +64,7 @@ python3 script.py
 slither project_paths
 ```
 
-Oprócz detektorów, Slither ma możliwości przeglądania kodu poprzez swoje narzędzia [drukarki](https://github.com/crytic/slither#printers) i [](https://github.com/crytic/slither#tools).
+Oprócz detektorów, Slither ma możliwości przeglądania kodu poprzez swoje [drukarki](https://github.com/crytic/slither#printers) i [narzędzia](https://github.com/crytic/slither#tools).
 
 Użyj [crytic.io](https://crytic.io), aby uzyskać dostęp do prywatnych detektorów i integracji GitHub.
 

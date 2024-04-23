@@ -13,13 +13,12 @@ Start by reading about the ethereum.org mission and values in our [code of condu
 ## Developers <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Learn about and try Ethereum at [ethereum.org/developers/](/developers/)
-- [Find a bounty on Gitcoin](https://gitcoin.co/), work on a small or large technical issue, earn crypto!
 - Attend an [ETHGlobal](http://ethglobal.co/) hackathon near you!
 - Check out [projects related to your area of expertise or programming language of choice](/developers/docs/programming-languages/)
-- Watch or participate in the [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Watch or participate in the [Core Dev calls](https://www.youtube.com/@EthereumProtocol)
 - [Ecosystem Support Program's wishlist](https://esp.ethereum.foundation/wishlist/) - tooling, documentation, and infrastructure areas where the Ethereum Ecosystem Support Program is actively seeking grant applications
 - [Web3Bridge](https://www.web3bridge.com/) - join the aspiring web3 community in their initiative to identify, train, and support hundreds of developers and community members throughout Africa
-- Join the [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
+- Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Researchers & Academics <Emoji text=":mag:" size={1} />‍ {#researchers-and-academics}
 
@@ -33,7 +32,7 @@ Do you have a background in mathematics, cryptography, or economics? You might b
   - Learn how to become an [EIP Editor](https://eips.ethereum.org/EIPS/eip-5069)
     - You can peer-review EIPs right now! See [open PRs with the `e-review` tag](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Provide technical feedback on the `discussion-to` link.
   - Participate in [EIP Governance](https://github.com/ethereum-cat-herders/EIPIP)
-    - Join the [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
+    - Join the [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
   - [More on EIPs](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - a series of high-value research bounties, where you can earn >$100,000 USD
 - [Ethresear.ch](https://ethresear.ch) - Ethereum’s primary forum for research, and the world’s most influential forum for cryptoeconomics
@@ -103,12 +102,11 @@ The Ethereum ecosystem is on a mission to fund public goods and impactful projec
 - [ethereum.org jobs](/about/#open-jobs)
 - [Ethereum Foundation job board (Lever)](https://jobs.lever.co/ethereumfoundation)
 - [Ethereum Foundation job board (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [JobStash](https://jobstash.xyz)
 - [Cryptocurrency Jobs](https://cryptocurrencyjobs.co/ethereum/)
-- [Crypto.jobs](https://crypto.jobs/)
 - [Careers at ConsenSys](https://consensys.net/careers/)
 - [Crypto Jobs List](https://cryptojobslist.com/ethereum-jobs)
 - [Bankless jobs board](https://pallet.xyz/list/bankless/jobs)
-- [useWeb3 Jobs](https://www.useweb3.xyz/jobs)
 - [Web3 Jobs](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)

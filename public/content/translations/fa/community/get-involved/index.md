@@ -13,10 +13,9 @@ lang: fa
 ## توسعه‌دهندگان <Emoji text=":computer:" size={1} /> {#developers}
 
 - در [ethereum.org/developers/](/developers/) درباره اتریوم یاد بگیرید و آن را امتحان کنید
-- [یک جایزه در Gitcoin پیدا کنید](https://gitcoin.co/)، روی یک مشکل فنی کوچک یا بزرگ کار کنید، ارز دیجیتال کسب کنید!
 - در یک هکاتون [ETHGlobal](http://ethglobal.co/) در نزدیکی خود شرکت کنید!
 - [پروژه‌های مرتبط با حوزه‌ی تخصصی یا زبان برنامه‌نویسی انتخابی خود را بررسی کنید](/developers/docs/programming-languages/)
-- [تماس‌های Core Dev](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) را تماشا کنید و یا در آن شرکت کنید
+- [تماس‌های Core Dev](https://www.youtube.com/@EthereumProtocol) را تماشا کنید و یا در آن شرکت کنید
 - [فهرست نیازمندی‌های برنامه پشتیبانی اکوسیستم](https://esp.ethereum.foundation/wishlist/) - ابزار، اسناد و مناطق زیرساختی که در آن برنامه حمایت از اکوسیستم اتوریوم فعالانه به دنبال کمک به برنامه‌های کمکی است
 - [Web3Bridge](https://www.web3bridge.com/) - برای شناسایی، آموزش و حمایت از صدها توسعه‌دهنده و اعضای انجمن در سراسر آفریقا به جامعه‌ی مشتاق web3 بپیوندید
 - به [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) بپیوندید
@@ -28,7 +27,7 @@ lang: fa
 - نوشتن یا بررسی یک پیشنهاد بهبود اتریوم
   - یک EIP (پیشنهاد بهبود اتریوم) بنویسید
     1. ایده خود را در [Ethereum Magicians](https://ethereum-magicians.org) ارسال کنید
-    2. [EIP-1](https://eip.ethereum.org/EIPS/eip-1) را بخوانید - **بله، این _کل_ سند است.**
+    2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1) را بخوانید - **بله، این _کل_ سند است.**
     3. دستورالعمل ها را در EIP-1 دنبال کنید. در حین نگارش پیش نویس، به آن ارجاع دهید.
   - یاد بگیرید که چگونه یک [ویرایشگر EIP](https://eips.ethereum.org/EIPS/eip-5069) شوید
     - حالا می توانید EIPها را مورد بازبینی قرار دهید! [PRهای موجود با تگ`e-review` را مشاهده کنید](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). بازخورد فنی را با کلیک بر `discussion-to` ثبت کنید.
@@ -121,18 +120,18 @@ lang: fa
 
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _مفهوم DAO را در زمینه غیر فناوری ترویج می‌کند و به مردم کمک در ایجاد ارزش از طریق DAO کمک می‌کند_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _جامعه‌ی سازندگانی که به مالکیت جمعی اینترنت اعتقاد دارند_
-- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _شرکت جمعی توسعه‌ی Web3 Freelancer که به‌عنوان DAO کار می‌کند_
+- [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - *شرکت جمعی توسعه‌ی Web3 Freelancer که به‌عنوان DAO کار می‌کند*
 - [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _توسعه‌ی غیرمتمرکز و حاکمیت dAppها و پروتکل‌ها_
-- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _حاکمیت اجتماعی DAOhaus_
+- [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - *حاکمیت اجتماعی DAOhaus*
 - [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _فرانچایز ابرقهرمانی متعلق به انجمن_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _مهندسی حقوقی_
-- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _جامعه‌ی هنری_
-- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _مرکز پرورش DAO_
-- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _سرمایه گذاری برای پروژه های کریپتو پیش از آغاز به کار_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _مکانیزم‌های بازی‌های MMORPG در زمان حال_
-- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _برندهای پوشاک دیجیتالی_
+- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - *مهندسی حقوقی*
+- [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - *جامعه‌ی هنری*
+- [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - *مرکز پرورش DAO*
+- [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - *سرمایه گذاری برای پروژه های کریپتو پیش از آغاز به کار*
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - *مکانیزم‌های بازی‌های MMORPG در زمان حال*
+- [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - *برندهای پوشاک دیجیتالی*
 - [ΜΓΔ](https://metagammadelta.com/) (متا گاما دلتا) [@metagammadelta](https://twitter.com/metagammadelta) - _پروژه‌های تحت هدایت زنان_
-- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _جامعه‌ای با تمرکز بر تأمین مالی توسعه‌ی اتریوم_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _مجموعه‌ی سازندگان Web3_
+- [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - *جامعه‌ای با تمرکز بر تأمین مالی توسعه‌ی اتریوم*
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - *مجموعه‌ی سازندگان Web3*
 
 لطفا هر زمان خواستید در ethereum.org مشارکت کنید به یاد داشته باشید از [منشور اخلاقی](/community/code-of-conduct) ethereum.org پیروی کنید!

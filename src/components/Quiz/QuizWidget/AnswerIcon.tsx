@@ -7,7 +7,7 @@ import { CorrectIcon, IncorrectIcon, TrophyIcon } from "../../icons/quiz"
 
 import { AnswerStatus } from "./useQuizWidget"
 
-interface AnswerIconProps {
+type AnswerIconProps = {
   answerStatus: AnswerStatus
 }
 
@@ -16,9 +16,7 @@ interface AnswerIconProps {
  *
  * Defaults to the `TrophyIcon` prior to answering a question
  */
-export const AnswerIcon = ({
-  answerStatus
-}: AnswerIconProps) => {
+export const AnswerIcon = ({ answerStatus }: AnswerIconProps) => {
   const commonProps = {
     color: "neutral",
   }

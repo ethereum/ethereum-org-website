@@ -5,7 +5,7 @@ lang: pt-br
 incomplete: true
 ---
 
-<div class="featured">Aprenda a desenvolver para Ethereum usando projetos e ferramentas baseados no Go</div>
+<FeaturedText>Aprenda a desenvolver para Ethereum usando projetos e ferramentas baseados no Go</FeaturedText>
 
 Use Ethereum para criar aplicativos descentralizados (ou "dapps"). Esses dapps podem ser muito confiáveis, o que significa que uma vez que eles são implantados na rede Ethereum, sempre serão executados como programados. São descentralizados, o que significa que funcionam em uma rede peer-to-peer e não há um único ponto de fracasso. Nenhuma entidade ou pessoa os controla e é praticamente impossível censurar. Podem controlar os activos digitais para criar novos tipos de aplicações financeiras.
 

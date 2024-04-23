@@ -19,9 +19,10 @@ import { Heading } from "./Heading"
 import { Input } from "./Input"
 import { Link } from "./Link"
 import { Modal } from "./Modal"
+import { Popover } from "./Popover"
 import { Progress } from "./Progress"
 import { Radio } from "./Radio"
-import { Select } from "./Select"
+import { ReactSelect } from "./ReactSelect"
 import { Switch } from "./Switch"
 import { Table } from "./Table"
 import { Tabs } from "./Tabs"
@@ -48,9 +49,10 @@ export default {
   Link,
   Menu: menuDefaultTheme,
   Modal,
+  Popover,
   Progress,
   Radio,
-  Select,
+  ReactSelect,
   Spinner: spinnerDefaultTheme,
   Switch,
   Table,

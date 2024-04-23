@@ -38,8 +38,9 @@ import lightThemeCertificateImg from "@/public/certificates/light-certificate.pn
 import dogeComputerImg from "@/public/doge-computer.png"
 import whatIsEthereumImg from "@/public/what-is-ethereum.png"
 
-
-const Content = (props: BoxProps) => <Box as={MainArticle} py={4} px={10} w="full" {...props} />
+const Content = (props: BoxProps) => (
+  <Box as={MainArticle} py={4} px={10} w="full" {...props} />
+)
 
 const ContentHeading = (props: HeadingProps) => (
   <OldHeading lineHeight={1.4} {...props} />
@@ -52,7 +53,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/contributing/translation-program/acknowledgements"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {
@@ -99,8 +100,8 @@ const TranslatorAcknowledgements = () => {
           direction={{ base: "column", lg: "row" }}
           align={{ base: "flex-start", lg: "normal" }}
           w="full"
-          ml={0}
-          mr={{ base: 0, lg: 8 }}
+          ms={0}
+          me={{ base: 0, lg: 8 }}
         >
           {/* LEFT COLUMN */}
           <Box
@@ -121,7 +122,7 @@ const TranslatorAcknowledgements = () => {
               {t(
                 "page-contributing-translation-program-acknowledgements-acknowledgement-page-3"
               )}{" "}
-              <InlineLink to="/contributing/translation-program/contributors/">
+              <InlineLink href="/contributing/translation-program/contributors/">
                 {t(
                   "page-contributing-translation-program-acknowledgements-acknowledgement-page-link"
                 )}
@@ -215,7 +216,7 @@ const TranslatorAcknowledgements = () => {
               display: { sm: "flex" },
               justifyContent: { sm: "center" },
               flexDirection: { sm: "column" },
-              ml: { sm: 4 },
+              ms: { sm: 4 },
             },
             p: {
               mb: 0,
@@ -248,14 +249,14 @@ const TranslatorAcknowledgements = () => {
         </Flex>
       </Content>
 
-      <Content id="poap">
+      <Content id="oats">
         <ContentHeading
           as="h2"
           fontSize={{ base: "2xl", md: "2rem" }}
           fontWeight={600}
         >
           {t(
-            "page-contributing-translation-program-acknowledgements-poaps-title"
+            "page-contributing-translation-program-acknowledgements-oats-title"
           )}
         </ContentHeading>
         <Text>
@@ -282,7 +283,7 @@ const TranslatorAcknowledgements = () => {
             {t(
               "page-contributing-translation-program-acknowledgements-how-to-claim-1"
             )}{" "}
-            <InlineLink to="https://discord.gg/CetY6Y4">
+            <InlineLink href="/discord/">
               {t(
                 "page-contributing-translation-program-acknowledgements-how-to-claim-1-discord"
               )}

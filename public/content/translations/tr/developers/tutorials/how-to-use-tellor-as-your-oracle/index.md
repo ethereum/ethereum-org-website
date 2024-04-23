@@ -7,7 +7,7 @@ tags:
   - "solidity"
   - "akıllı kontratlar"
   - "kâhinler"
-skill: beginner
+skill: intermediate
 published: 2021-06-29
 source: Tellor Belgeleri
 sourceUrl: https://docs.tellor.io/tellor/

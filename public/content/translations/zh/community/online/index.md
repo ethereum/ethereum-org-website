@@ -29,8 +29,8 @@ lang: zh
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - Web3 创作者社区，构建者、业界人士和以太坊爱好者在这里聚会。 我们热衷于 Web3 的开发、设计和文化。 来吧，我们一起来构建。</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - 有关 Solidity 开发的聊天 (Gitter)</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - 有关 Solidity 开发的聊天 (Matrix)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">以太坊堆栈交易所</Link> _- 问答论坛_</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- 去中心化问答论坛_</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">以太坊堆栈交易所</Link> *- 问答论坛*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *- 去中心化问答论坛*</SocialListItem>
 
 ## YouTube 和 Twitter {#youtube-and-twitter}
 
@@ -41,7 +41,7 @@ lang: zh
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
+<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
   <div>
     <ButtonLink to="/community/get-involved/#decentralized-autonomous-organizations-daos">
       了解更多有关去中心化自治组织的信息

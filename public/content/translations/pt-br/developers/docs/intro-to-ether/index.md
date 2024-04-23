@@ -26,7 +26,7 @@ A criptomoeda oferece suporte a um mecanismo de preços para o poder de computa�
 
 Portanto, mesmo que um aplicativo malicioso tenha enviado um ciclo infinito, a transação acabaria sem ether e terminaria, permitindo que a rede voltasse ao normal.
 
-É [comum](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [confundir](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum e ether — quando as pessoas se referem ao "preço do Ethereum", estão descrevendo o preço do ether.
+[É](https://www.reuters.com/article/us-crypto-currencies-lending-insight-idUSKBN25M0GP#:~:text=price%20of%20ethereum) [comum](https://abcnews.go.com/Business/bitcoin-slumps-week-low-amid-renewed-worries-chinese/story?id=78399845#:~:text=cryptocurrencies%20including%20ethereum) [confundir](https://www.cnn.com/2021/03/14/tech/nft-art-buying/index.html#:~:text=price%20of%20ethereum) Ethereum e ether — quando as pessoas se referem ao "preço do Ethereum", estão descrevendo o preço do ether.
 
 ## Como cunhar ether {#minting-ether}
 
@@ -65,7 +65,7 @@ Quando o endereço do destinatário é um [contrato inteligente](/developers/doc
 
 ## Como consultar saldos de ether {#querying-ether}
 
-Os usuários podem consultar o saldo de ether de qualquer conta [](/developers/docs/accounts/) inspecionando o campo `saldo` da conta que mostra participações de ether denominadas em wei.
+Os usuários podem consultar o saldo de ether de qualquer [conta](/developers/docs/accounts/) inspecionando o campo `saldo` da conta que mostra participações de ether denominadas em wei.
 
 [Etherscan](https://etherscan.io) é uma ferramenta popular para consultar saldos de endereços através de um aplicativo baseado na Web. Por exemplo, [esta página Etherscan](https://etherscan.io/address/0xde0b295669a9fd93d5f28d9ec85e40f4cb697bae) mostra o saldo da Fundação Ethereum. Os saldos das contas também podem ser consultados usando carteiras ou diretamente fazendo solicitações aos nós.
 

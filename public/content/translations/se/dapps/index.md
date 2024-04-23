@@ -6,11 +6,11 @@ lang: se
 
 # Använda Ethereum {#use-ethereum-applications}
 
-<div class="featured">
+<FeaturedText>
 
 **Vill du komma igång med Ethereum?** Det finns hundratals decentraliserade appar (dapps) byggda på Ethereum som du kan använda idag.
 
-</div>
+</FeaturedText>
 
 ## Hur du använder en app byggd på Ethereum {#how-to-use-an-application-built-on-ethereum}
 

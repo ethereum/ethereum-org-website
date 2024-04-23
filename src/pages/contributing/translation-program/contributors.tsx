@@ -1,6 +1,6 @@
 import { useRouter } from "next/router"
 import { GetStaticProps } from "next/types"
-import { SSRConfig, useTranslation } from "next-i18next"
+import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
   Box,
@@ -12,7 +12,7 @@ import {
   UnorderedList,
 } from "@chakra-ui/react"
 
-import { BasePageProps } from "@/lib/types"
+import { AllTimeData, BasePageProps, Unpacked } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
 import FeedbackCard from "@/components/FeedbackCard"
@@ -28,8 +28,11 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 
 import allTimeData from "../../../data/translation-reports/alltime/alltime-data.json"
 
-type Props = SSRConfig & {
-  lastDeployDate: string
+type TranslatorDataType = {
+  user: {
+    username: Unpacked<AllTimeData["data"]>["user"]["username"]
+    fullName: Unpacked<AllTimeData["data"]>["user"]["fullName"]
+  }
 }
 
 export const getStaticProps = (async ({ locale }) => {
@@ -39,7 +42,7 @@ export const getStaticProps = (async ({ locale }) => {
     "/contributing/translation-program/contributors"
   )
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   return {
     props: {
@@ -50,52 +53,52 @@ export const getStaticProps = (async ({ locale }) => {
   }
 }) satisfies GetStaticProps<BasePageProps>
 
-const Content = (props: BoxProps) => <Box as={MainArticle} py={4} px={10} w="full" {...props} />
+const Content = (props: BoxProps) => (
+  <Box as={MainArticle} py={4} px={10} w="full" {...props} />
+)
 const ContentHeading = (props: HeadingProps) => (
   <OldHeading lineHeight={1.4} {...props} />
 )
 
 const Contributors = () => {
-  const { t } = useTranslation([
-    "page-contributing-translation-program-contributors",
-    "page-languages",
-  ])
+  const { t } = useTranslation(
+    "page-contributing-translation-program-contributors"
+  )
   const router = useRouter()
 
   // TODO: Remove specific user checks once Acolad has updated their usernames
-  const translatorData =
-    allTimeData.data.flatMap(
-      // use flatMap to get cleaner object types withouts nulls
-      (item) => {
-        const user = item?.user
-        if (!user) return []
+  const translatorData = (
+    allTimeData as AllTimeData
+  ).data.flatMap<TranslatorDataType>(
+    // use flatMap to get cleaner object types withouts nulls
+    (item) => {
+      const user = item.user
 
-        const userName = user.username
-        if (!userName) return []
+      const userName = user.username
 
-        const fullName = user.fullName ?? ""
+      const fullName = user.fullName
 
-        return userName !== "ethdotorg" &&
-          !userName.includes("LQS_") &&
-          !userName.includes("REMOVED_USER") &&
-          !userName.includes("Aco_") &&
-          !fullName.includes("Aco_") &&
-          !userName.includes("Acc_") &&
-          !fullName.includes("Acc_") &&
-          userName !== "Finnish_Sandberg" &&
-          userName !== "Norwegian_Sandberg" &&
-          userName !== "Swedish_Sandberg"
-          ? [
-              {
-                user: {
-                  username: userName,
-                  fullName: fullName,
-                },
+      return userName !== "ethdotorg" &&
+        !userName.includes("LQS_") &&
+        !userName.includes("REMOVED_USER") &&
+        !userName.includes("Aco_") &&
+        !fullName.includes("Aco_") &&
+        !userName.includes("Acc_") &&
+        !fullName.includes("Acc_") &&
+        userName !== "Finnish_Sandberg" &&
+        userName !== "Norwegian_Sandberg" &&
+        userName !== "Swedish_Sandberg"
+        ? [
+            {
+              user: {
+                username: userName,
+                fullName: fullName,
               },
-            ]
-          : []
-      }
-    ) ?? []
+            },
+          ]
+        : []
+    }
+  )
 
   return (
     <Flex direction="column" align="center" w="full">
@@ -145,9 +148,9 @@ const Contributors = () => {
           )}
         </Text>
         <Text>
-          {t("page-languages:page-languages-interested")}{" "}
-          <InlineLink to="/contributing/translation-program/">
-            {t("page-languages:page-languages-learn-more")}
+          {t("common:page-languages-interested")}{" "}
+          <InlineLink href="/contributing/translation-program/">
+            {t("common:page-languages-learn-more")}
           </InlineLink>
           .
         </Text>
@@ -173,9 +176,9 @@ const Contributors = () => {
             })}
         </SimpleGrid>
         <Text>
-          {t("page-languages:page-languages-interested")}{" "}
-          <InlineLink to="/contributing/translation-program/">
-            {t("page-languages:page-languages-learn-more")}
+          {t("common:page-languages-interested")}{" "}
+          <InlineLink href="/contributing/translation-program/">
+            {t("common:page-languages-learn-more")}
           </InlineLink>
           .
         </Text>

@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 Yan zincir, Ethereum'dan bağımsız çalışan ve Ethereum Ana Ağı'na bir köprü ile bağlı olan ayrı bir blokzincirdir. Yan zincirler farklı blok parametrelerine ve genellikle işlemlerin verimli işlenmesi için tasarlanmış [mutabakat algoritmalarına](/developers/docs/consensus-mechanisms/) sahip olabilirler. Ethereum'un güvenlik özelliklerini taşımadığı için yan zincir kullanmanın artıları ve eksileri vardır. [Katman 2 ölçeklendirme çözümlerinin](/layer-2/) aksine, yan zincirler işlem bilgilerini ve durum değişikliklerini Ethereum Ana Ağı'na göndermezler.
 
-Yan zincirler daha çok işlem hacmi için merkeziyetsizlikten veya güvenlikten de ödün verirler ([ölçeklendirme üçlü çelişmesi](https://vitalik.ca/general/2021/05/23/scaling.html)). Bununla birlikte, yükseltmeler için [vizyon bildirisinde](/roadmap/vision/) özetlendiği üzere Ethereum, merkeziyetsizlikten ve güvenlikten ödün vermeyen ölçeklendirme amacıyla geliştirilmiştir.
+Yan zincirler daha çok işlem hacmi için merkeziyetsizlikten veya güvenlikten de ödün verirler ([ölçeklendirme üçlü çelişmesi](https://vitalik.eth.limo/general/2021/05/23/scaling.html)). Bununla birlikte, yükseltmeler için [vizyon bildirisinde](/roadmap/vision/) özetlendiği üzere Ethereum, merkeziyetsizlikten ve güvenlikten ödün vermeyen ölçeklendirme amacıyla geliştirilmiştir.
 
 ## Yan zincirler nasıl çalışır? {#how-do-sidechains-work}
 

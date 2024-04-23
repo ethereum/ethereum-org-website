@@ -6,11 +6,11 @@ lang: fi
 
 # Ethereumin käyttö {#using-ethereum}
 
-<div class="featured">
+<FeaturedText>
 
 **Haluatko aloittaa Ethereumin käytön?** Saatavilla on satoja Ethereumilla luotuja hajautettuja sovelluksia (decentralized applications, "dapps"), joita voit käyttää jo tänään.
 
-</div>
+</FeaturedText>
 
 ## Ethereumilla luodun sovelluksen käyttäminen {#how-to-use-an-application-built-on-ethereum}
 

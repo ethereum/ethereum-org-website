@@ -156,7 +156,7 @@ _Karaniwan itong ginagamit para sa decentralized development at pamamahala ng mg
 - [Paaano Magsimula ng DAO na Pinapagana ng Digital na Komunidad](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Ano ang DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Ano ang Holographic Consensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [Ang mga DAO ay hindi mga korporasyon: kung saan mahalaga ang decentralization sa mga autonomous na organisasyon, gawa ni Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [Ang mga DAO ay hindi mga korporasyon: kung saan mahalaga ang decentralization sa mga autonomous na organisasyon, gawa ni Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [Mga DAO, DAC, DA at Iba pa: Isang Hindi Kumpletong Gabay sa Terminolohiya](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
 ### Videos {#videos}

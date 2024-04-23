@@ -51,7 +51,7 @@ Kontrak pintar adalah kode yang ada di blockchain Ethereum dan berjalan persis s
 
 **Scaffold-ETH _- Eksperimen cepat dengan Solidity menggunakan frontend yang disesuaikan dengan kontrak pintar Anda._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Contoh dapp](https://punkwallet.io/)
 
 **Buat Aplikasi Eth _- Buat aplikasi yang didukung Ethereum dengan satu perintah._**

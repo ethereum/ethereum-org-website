@@ -5,7 +5,7 @@ lang: tr
 incomplete: true
 ---
 
-<div class="featured">Python tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin</div>
+<FeaturedText>Python tabanlı projeler ve araçlarla nasıl Ethereum için geliştireceğinizi öğrenin</FeaturedText>
 
 Use Ethereum to create decentralized applications (or "dapps") that utilize the benefits of cryptocurrency and blockchain technology. Bu dapp'ler güvenilir olabilir, yani Ethereum'a dağıtıldıktan sonra her zaman programlandığı gibi çalışırlar. Yeni tür finansal uygulamalar oluşturmak için dijital varlıkları kontrol edebilirler. Merkeziyetsiz olabilirler, yani hiç bir kurum veya kişi onları kontrol edemez ve sansürlenmeleri neredeyse imkansızdır.
 
@@ -82,7 +82,7 @@ Aşağıdaki Ethereum tabanlı projeler bu sayfada bahsedilen araçları kullan�
 ## Python Topluluk tartışması {#python-community-contributors}
 
 - Web3.py ve diğer Python çerçeve tartışmaları için [Ethereum Python Topluluk Discord'u](https://discord.gg/9zk7snTfWe)
-- Vyper akıllı sözleşme programlama ile ilgili tartışmalar için [Vyper Discord'u](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>)
+- Vyper akıllı sözleşme programlama ile ilgili tartışmalar için [Vyper Discord'u](https://discord.gg/SdvKC79cJk)
 
 ## Diğer Toplu Listeler {#other-aggregated-lists}
 

@@ -16,7 +16,7 @@ lang: zh
 
 ## 前提条件 {#prerequisites}
 
-为了更好地理解这一页面的内容，我们建议您先阅读[代币标准](/developers/docs/standards/tokens/)、[ERC-20](/developers/docs/standards/tokens/erc-20/) 和 [ERC-721](/developers/docs/standards/tokens/erc-721/)。
+为了更好地理解这一页面的内容，我们建议你先阅读[代币标准](/developers/docs/standards/tokens/)、[ERC-20](/developers/docs/standards/tokens/erc-20/) 和 [ERC-721](/developers/docs/standards/tokens/erc-721/)。
 
 ## ERC-1155 的功能和特点： {#body}
 
@@ -68,7 +68,7 @@ function balanceOfBatch(
 ) external view returns (uint256[] memory);
 ```
 
-调用余额查询更简单的是，我们可以在单次调用中获取多个余额。 参数中传递所有者账户数组和代币的 id 数组。
+调用余额查询更简单的是，我们可以在单次调用中获取多个余额。 参数中传递所有者帐户数组和代币的 id 数组。
 
 例如，对于给出的 `_ids=[3, 6, 13]` 和 `_owners=[0xbeef..., 0x1337..., 0x1111...]`，返回值将为：
 
@@ -99,7 +99,7 @@ function isApprovedForAll(
 
 查看当前的审批状态可以通过 `isApprovedForAll` 完成。 如你所见，要么全部批准，要么不批准。 不能定义要批准代币的数量，甚至代币类型。
 
-这是考虑到简洁性而故意设计的。 您只能批准一个地址的所有代币。
+这是考虑到简洁性而故意设计的。 你只能批准一个地址的所有代币。
 
 ### 接收钩子 {#receive-hook}
 
@@ -123,13 +123,13 @@ bytes4(keccak256("onERC1155BatchReceived(address,address,uint256[],uint256[],byt
 
 ### 支持非同质化代币 {#nft-support}
 
-当供应量仅为 1 时，代币本质上就是一个非同质化的代币 (NFT)。 按照 ERC-721 的标准，您可以定义一个元数据网址。 客户端可以读取并修改网址，请参阅[这里](https://eips.ethereum.org/EIPS/eip-1155#metadata)。
+当供应量仅为 1 时，代币本质上就是一个非同质化的代币 (NFT)。 按照 ERC-721 的标准，你可以定义一个元数据网址。 客户端可以读取并修改网址，请参阅[这里](https://eips.ethereum.org/EIPS/eip-1155#metadata)。
 
 ### 安全转账规则 {#safe-transfer-rule}
 
 在前面的解释中，我们已经提到过一些安全转账规则。 现在我们来看一下最重要的规则：
 
-1. 调用者必须获得批准才能从 `_from` 的账户地址消费代币，或者调用者账户地址必须与 `_from` 的账户地址相同。
+1. 调用者必须获得批准才能从 `_from` 的帐户地址消费代币，或者调用者帐户地址必须与 `_from` 的帐户地址相同。
 2. 在以下情况下，转账调用将回退
    1. `_to` 地址为 0；
    2. `_ids` 的长度与 `_values` 的长度不同；

@@ -103,7 +103,7 @@ _Rețineți că explicația din videoclip folosește termenul "Nivelul 2" pentru
 - [O foaie de parcurs Ethereum centrată pe rollup-uri](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [Analize actualizate privind soluțiile de scalare de nivel 2 pentru Ethereum](https://www.l2beat.com/)
 - [Evaluarea soluțiilor de scalare a nivelului 2 pentru Ethereum: Un framework de comparație](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Un ghid incomplet pentru rollup-uri](https://vitalik.ca/general/2021/01/05/rollup.html)
+- [Un ghid incomplet pentru rollup-uri](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [ZK-rollup-urile acţionate de Ethereum: campionii lumii](https://hackmd.io/@canti/rkUT0BD8K)
 - [Rollup-urile Optimistic în comparaţie cu ZK Rollup-urile](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Zero-Knowledge Blockchain Scalability](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)

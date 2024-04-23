@@ -17,7 +17,7 @@ import {
   SelfCustodyIcon,
   TrustlessIcon,
 } from "@/components/icons/staking"
-import { IProps as StakingConsiderationsProps } from "@/components/Staking/StakingConsiderations"
+import { StakingConsiderationsProps } from "@/components/Staking/StakingConsiderations"
 
 import { MatomoEventOptions } from "@/lib/utils/matomo"
 
@@ -405,17 +405,17 @@ export const useStakingConsiderations = ({
   const indicatorSvgStyle = { width: 20, height: "auto" }
   const StyledSvg = !!Svg
     ? chakra(Svg, {
-      baseStyle: {
-        path: {
-          fill: "text",
+        baseStyle: {
+          path: {
+            fill: "text",
+          },
         },
-      },
-    })
+      })
     : chakra("div", {
-      baseStyle: {
-        display: "none",
-      },
-    })
+        baseStyle: {
+          display: "none",
+        },
+      })
 
   return {
     title,

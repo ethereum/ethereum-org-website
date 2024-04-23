@@ -13,7 +13,11 @@ export const QuizConfetti = () => {
     <>
       <StarConfettiIcon {...commonProps} insetInlineStart={0} />
 
-      <StarConfettiIcon {...commonProps} insetInlineEnd={0} transform="scaleX(-100%)" />
+      <StarConfettiIcon
+        {...commonProps}
+        insetInlineEnd={0}
+        transform="scaleX(-100%)"
+      />
     </>
   )
 }

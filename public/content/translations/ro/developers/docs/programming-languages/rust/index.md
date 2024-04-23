@@ -5,7 +5,7 @@ lang: ro
 incomplete: true
 ---
 
-<div class="featured">Învăţaţi să programaţi pentru Ethereum folosind proiecte și instrumente Rust</div>
+<FeaturedText>Învăţaţi să programaţi pentru Ethereum folosind proiecte și instrumente Rust</FeaturedText>
 
 Folosiţi Ethereum pentru a crea aplicații descentralizate („dapp”) care valorifică avantajele criptomonedelor și ale tehnologiei blockchain. Aceste aplicații dapp pot fi demne de încredere, întrucât, odată implementate pe Ethereum, vor rula întotdeauna așa cum au fost programate. Pot controla active digitale pentru a crea noi tipuri de aplicații financiare. Pot fi descentralizate, adică nicio entitate sau persoană nu le poate controla și sunt aproape imposibil de cenzurat.
 
@@ -43,7 +43,7 @@ Aveţi nevoie de o scurtă introducere? Accesaţi [ethereum.org/learn](/learn/) 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Colecție de biblioteci pentru interacțiuni cu rețele ca Ethereum._
 - [Lighthouse](https://github.com/sigp/lighthouse) - _Fast Ethereum consensus layer client_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _Referință API OASIS_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Referință API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Implementare Rust a mașinii virtuale Ethereum_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _Contract inteligent Wavelet în Rust_

@@ -37,7 +37,7 @@ Ces exemples traditionnels d’identifiants sont publiés, détenus et contrôl�
 
 Une attestation est une déclaration faite par une entité sur une autre entité. Si vous vivez aux États-Unis, le permis de conduire qui vous a été délivré par le Department of Motor Vehicles (ministère des véhicules à moteur) (une entité) atteste que vous (une autre entité) êtes légalement autorisé à conduire une voiture.
 
-Les attestations sont différentes des identifiants. Une attestation \_contient_des identifiants pour référencer une identité particulière et émet une revendication à propos d'un attribut lié à cette identité. Ainsi, votre permis de conduire a des identifiants (nom, date de naissance, adresse) mais est aussi l'attestation de votre droit légal de conduire.
+Les attestations sont différentes des identifiants. Une attestation _contient_ des identifiants pour référencer une identité particulière et émet une revendication à propos d'un attribut lié à cette identité. Ainsi, votre permis de conduire a des identifiants (nom, date de naissance, adresse) mais est aussi l'attestation de votre droit légal de conduire.
 
 ### Que sont les identifiants décentralisés ? {#what-are-decentralized-identifiers}
 
@@ -109,7 +109,7 @@ Voici un exemple pour montrer comment les attestations sur la chaîne pourraient
 
 ### Jetons d'âme et identité {#soulbound}
 
-[Les jetons d'âme](https://vitalik.ca/general/2022/01/26/soulbound.html) (NFT non transférables) pourraient être utilisés pour collecter des informations propres à un portefeuille spécifique. Cela crée effectivement une identité unique sur la chaîne, liée à une adresse Ethereum particulière, qui peut inclure des jetons représentant des réalisations (par exemple, terminer un cours en ligne spécifique ou atteindre un score seuil dans un jeu) ou la participation à une communauté.
+[Les jetons d'âme](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT non transférables) pourraient être utilisés pour collecter des informations propres à un portefeuille spécifique. Cela crée effectivement une identité unique sur la chaîne, liée à une adresse Ethereum particulière, qui peut inclure des jetons représentant des réalisations (par exemple, terminer un cours en ligne spécifique ou atteindre un score seuil dans un jeu) ou la participation à une communauté.
 
 ## Avantages d'une identité décentralisée {#benefits-of-decentralized-identity}
 
@@ -161,6 +161,9 @@ Il existe de nombreux projets ambitieux utilisant Ethereum comme base pour des s
 - **[Preuve d'humanité](https://www.proofofhumanity.id)** - _Preuve d'humanité (ou PoH) est un système de vérification d'identité sociale construit sur Ethereum._
 - **[BrightID](https://www.brightid.org/)** - _Un réseau d'identité sociale décentralisé et open-source qui cherche à réformer la vérification d'identité par la création et l'analyse d'un graphe social._
 - **[Passeport de preuve d'identité ](https://proofofpersonhood.com/)** - _Un agrégateur d'identité numérique décentralisé._
+- **walt.id** — _Infrastructure décentralisée et open source d'identité et de portefeuille qui permet aux développeurs et aux organisations de tirer parti de l'identité souveraine et des NFT/SBT._ 
+  
+  
 
 ## Complément d'information {#further-reading}
 

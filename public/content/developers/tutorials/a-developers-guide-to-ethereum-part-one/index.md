@@ -40,7 +40,7 @@ There are many ways to describe Ethereum, but at its heart is a blockchain. Bloc
 
 Each [block](/developers/docs/blocks/) has a reference to the block that came before it; the `parentHash` is simply the hash of the previous block.
 
-<div class="featured">Note: Ethereum makes regular use of <a href="https://wikipedia.org/wiki/Hash_function">hash functions</a> to produce fixed-size values (“hashes”). Hashes play an important role in Ethereum, but you can safely think of them as unique IDs for now.</div>
+<FeaturedText>Note: Ethereum makes regular use of <a href="https://wikipedia.org/wiki/Hash_function">hash functions</a> to produce fixed-size values (“hashes”). Hashes play an important role in Ethereum, but you can safely think of them as unique IDs for now.</FeaturedText>
 
 ![A diagram depicting a blockchain including the data inside  each block](./blockchain-diagram.png)
 
@@ -56,7 +56,7 @@ This new decentralized tech stack has spawned new developer tools. Such tools ex
 
 Python developers that want to interact with Ethereum are likely to reach for [Web3.py](https://web3py.readthedocs.io/). Web3.py is a library that greatly simplifies the way you connect to an Ethereum node, then send and receive data from it.
 
-<div class="featured">Note: “Ethereum node” and “Ethereum client” are used interchangeably. In either case, it refers to the software that a participant in the Ethereum network runs. This software can read block data, receive updates when new blocks are added to the chain, broadcast new transactions, and more. Technically, the client is the software, the node is the computer running the software.</div>
+<FeaturedText>Note: “Ethereum node” and “Ethereum client” are used interchangeably. In either case, it refers to the software that a participant in the Ethereum network runs. This software can read block data, receive updates when new blocks are added to the chain, broadcast new transactions, and more. Technically, the client is the software, the node is the computer running the software.</FeaturedText>
 
 [Ethereum clients](/developers/docs/nodes-and-clients/) can be configured to be reachable by [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, or Websockets, so Web3.py will need to mirror this configuration. Web3.py refers to these connection options as **providers**. You’ll want to choose one of the three providers to link the Web3.py instance with your node.
 
@@ -78,7 +78,7 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 In this walkthrough, we’ll just be working within a Python interpreter. We won't be creating any directories, files, classes or functions.
 
-<div class="featured">Note: In the examples below, commands that begin with `$` are intended to be run in the terminal. (Do not type the `$`, it just signifies the start of the line.)</div>
+<FeaturedText>Note: In the examples below, commands that begin with `$` are intended to be run in the terminal. (Do not type the `$`, it just signifies the start of the line.)</FeaturedText>
 
 First, install [IPython](https://ipython.org/) for a user-friendly environment to explore in. IPython offers tab completion, among other features, making it much easier to see what’s possible within Web3.py.
 
@@ -128,7 +128,7 @@ Besides being a gateway to Ethereum, the [Web3](https://web3py.readthedocs.io/en
 
 In an Ethereum application, you will commonly need to convert currency denominations. The Web3 module provides a couple of helper methods just for this: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) and [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
-<div class="featured">
+<FeaturedText>
 Note: Computers are notoriously bad at handling decimal math. To get around this, developers often store dollar amounts in cents. For example, an item with a price of $5.99 may be stored in the database as 599.
 
 A similar pattern is used when handling transactions in <b>ether</b>. However, instead of two decimal points, ether has 18! The smallest denomination of ether is called <b>wei</b>, so that’s the value specified when sending transactions.
@@ -137,7 +137,7 @@ A similar pattern is used when handling transactions in <b>ether</b>. However, i
 
 1 wei = 0.000000000000000001 ether
 
-</div>
+</FeaturedText>
 
 Try converting some values to and from wei. Note that [there are names for many of the denominations](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) in between ether and wei. One of the better known among them is **gwei**, as it’s often how transaction fees are represented.
 
@@ -293,7 +293,7 @@ The latter looks good! The balance went from 1,000,000 to 1,000,003 ether. But w
 
 More on [gas](/developers/docs/gas/#post-london)
 
-<div class="featured">Note: On the public network, transaction fees are variable based on network demand and how quickly you'd like a transaction to be processed. If you're interested in a breakdown of how fees are calculated, see my earlier post on <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">how transactions are included in a block</a>.</div>
+<FeaturedText>Note: On the public network, transaction fees are variable based on network demand and how quickly you'd like a transaction to be processed. If you're interested in a breakdown of how fees are calculated, see my earlier post on <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">how transactions are included in a block</a>.</FeaturedText>
 
 ## And breathe {#and-breathe}
 

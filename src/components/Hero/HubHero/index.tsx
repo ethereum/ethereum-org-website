@@ -5,11 +5,15 @@ import type { CommonHeroProps } from "@/lib/types"
 import { CallToAction } from "@/components/Hero/CallToAction"
 import { Image } from "@/components/Image"
 
-const HubHero = (props: CommonHeroProps) => {
-  const { heroImg, title, header, description, buttons } = props
-
+const HubHero = ({
+  heroImg,
+  title,
+  header,
+  description,
+  buttons,
+}: CommonHeroProps) => {
   if (buttons && buttons.length > 2) {
-    throw Error(
+    throw new Error(
       "Can not have more than two call-to-action buttons in this hero component."
     )
   }
@@ -37,7 +41,7 @@ const HubHero = (props: CommonHeroProps) => {
         borderRadius={{ xl: "base" }}
         bg={{ xl: "hubHeroContentBg" }}
         position={{ xl: "absolute" }}
-        insetStart={{ xl: "8" }}
+        insetInlineStart={{ xl: "8" }}
         maxW={{ xl: "sm" }}
         top={{ xl: "50%" }}
         transform={{ xl: "translateY(-50%)" }}
@@ -45,21 +49,25 @@ const HubHero = (props: CommonHeroProps) => {
         backdropBlur={{ xl: "base" }}
         wordBreak="break-word"
       >
-        <Heading
-          as="h1"
-          size="sm"
-          color="body.medium"
-          fontWeight="normal"
-          textTransform="uppercase"
-        >
-          {title}
-        </Heading>
+        {title ? (
+          <Heading
+            as="h1"
+            size="sm"
+            color="body.medium"
+            fontWeight="normal"
+            textTransform="uppercase"
+          >
+            {title}
+          </Heading>
+        ) : null}
         <Stack
           alignSelf="center"
           spacing={{ base: "2", md: "1" }}
           maxW="container.md"
         >
-          <Heading size="2xl">{header}</Heading>
+          <Heading as={title ? "h2" : "h1"} size="2xl">
+            {header}
+          </Heading>
           <Text size="lg">{description}</Text>
         </Stack>
         <HStack justify={{ md: "center", xl: "start" }} spacing="4">

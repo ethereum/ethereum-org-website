@@ -11,10 +11,9 @@ Komunitas Ethereum meliputi orang-orang dari beragam latar belakang dan kemampua
 ## Pengembang <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Pelajari tentang dan cobalah Ethereum di [ethereum.org/developers/](/developers/)
-- [Temukan hadiah bounty di Gitcoin](https://gitcoin.co/), selesaikan masalah teknis kecil atau besar, dapatkan kripto!
 - Datanglah ke hackathon [ETHGlobal](http://ethglobal.co/) di dekat Anda!
 - Lihat [proyek yang terkait dengan bidang keahlian atau bahasa pemrograman pilihan Anda](/developers/docs/programming-languages/)
-- Tonton atau berpartisipasilah dalam [Panggilan Dev Core](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Tonton atau berpartisipasilah dalam [Panggilan Dev Core](https://www.youtube.com/@EthereumProtocol)
 - [Daftar keinginan Program Dukungan Ekosistem](https://esp.ethereum.foundation/wishlist/) - perangkat, dokumentasi, dan area infrastruktur tempat Program Dukungan Ekosistem Ethereum secara aktif mencari pengajuan hibah
 - [Web3Bridge](https://www.web3bridge.com/) - bergabunglah dengan komunitas web3 yang bervisi dalam inisiatif mereka untuk mengenali, melatih, dan mendukung ratusan pengembang dan anggota komunitas di seluruh Afrika
 

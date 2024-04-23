@@ -1,6 +1,6 @@
 ---
 title: Identidad descentralizada
-description: "¿Qué es la identidad descentralizada y por qué es importante?"
+description: '¿Qué es la identidad descentralizada y por qué es importante?'
 lang: es
 template: use-cases
 emoji: ":id:"
@@ -91,7 +91,7 @@ Este es un escenario hipotético para explicar los certificados fuera de la cade
 
 ### Certificaciones fuera de cadena con acceso permanente {#offchain-attestations-with-persistent-access}
 
-Bajo este sistema, los cerficados se transforman en un archivo JSON y son almacenados off-chain (idealmente en una [plataforma de cloud descentralizada](/developers/docs/storage/) como IPFS o Swarm). Sin embargo, un hash [](/glossary/#hash) del archivo JSON se almacena en cadena y se enlaza con un CPI mediante un registro en la cadena. El CPI asociado podría ser el del emisor del certificado o el destinatario.
+Bajo este sistema, los cerficados se transforman en un archivo JSON y son almacenados off-chain (idealmente en una [plataforma de cloud descentralizada](/developers/docs/storage/) como IPFS o Swarm). Sin embargo, un [hash](/glossary/#hash) del archivo JSON se almacena en cadena y se enlaza con un CPI mediante un registro en la cadena. El CPI asociado podría ser el del emisor del certificado o el destinatario.
 
 Este enfoque permite que las certificaciones obtengan permanencia basada en la cadena de bloques, manteniendo la información de reclamaciones cifrada y verificable. También permite la divulgación selectiva, ya que el titular de la clave privada puede descifrar la información.
 
@@ -109,9 +109,9 @@ He aquí un ejemplo que ilustra cómo podrían funcionar en la práctica los cer
 
 ### Los tókenes Souldbound y la identidad {#soulbound}
 
-[Los tókenes Soulbound](https://vitalik.ca/general/2022/01/26/soulbound.html) (NFT no transferibles) pueden utilizarse para recopilar información única en una cartera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección particular de Ethereum que podría incluir tókenes representando logros (ej. terminar algún curso en línea específico o pasar un umbral de puntuación en un juego) o participación en la comunidad.
+[Los tókenes de Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFT no transferibles) podrían utilizarse para recopilar información exclusiva de una cartera específica. Esto crea efectivamente una identidad única en cadena vinculada a una dirección particular de Ethereum que podría incluir tókenes representando logros (ej. terminar algún curso en línea específico o pasar un umbral de puntuación en un juego) o participación en la comunidad.
 
-## Beneficios de una identidad descentralizada {#benefits-of-decentralized-identity}
+## Beneficios de una identidad descentralizada  {#benefits-of-decentralized-identity}
 
 1. La identidad descentralizada aumenta el control individual de la información identificativa. Los identificadores y certificados descentralizados pueden ser verificados sin depender de autoridades centralizadas o servicios de terceros.
 
@@ -161,6 +161,7 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (o PoH) es un sistema de verificación de identidad social construido en Ethereum._
 - **[Brillo](https://www.brightid.org/)** - _Una red de identidad social descentralizada y de código abierto que busca reformar la verificación de identidad a través de la creación y el análisis de un gráfico social._
 - **[Proof-of-personhood Passport](https://proofofpersonhood.com/)** - _Un agregador de identidad digital descentralizado._
+- **[walt.id](https://walt.id)**: _ infraestructura de cartera e identidad descentralizadas de código abierto que permiten a los desarrolladores y organizaciones aprovechar la identidad autosoberana y los NFT/SBT._
 
 ## Para profundizar sobre el tema {#further-reading}
 
@@ -170,16 +171,19 @@ Hay muchos proyectos ambiciosos que utilizan Ethereum como base para soluciones 
 - [¿Qué es Ethereum ERC725? Administración propia y soberana de identidades en la cadena de bloques](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Ciudad de Sam_
 - [Cómo la cadena de bloques podría resolver el problema de la identidad digital](https://time.com/6142810/proof-of-humanity/) — _Andrew R. Chow_
 - [¿Qué es la identidad descentralizada y por qué merece tu atención?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Introducción a la identidad descentralizada](https://walt.id/white-paper/digital-identity), _Dominik Beron_
 
 ### Vídeos {#videos}
 
 - [Identidad descentralizada (bonificación de sesión Livestream)](https://www.youtube.com/watch?v=ySHNB1za_SE&t=539s) — _Un vídeo muy aclarador de la identidad descentralizada explicado por Andreas_
 - [Iniciar sesión con Ethereum e Identity descentralizada con Ceramic, IDX, React, y 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _tutorial de YouTube sobre la construcción de un sistema de gestión de identidad para crear, leer, y actualizar el perfil de un usuario usando su cartera Ethereum por Nader Dabit_
 - [BrightID - Identidad descentralizada en Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _episodio de pódcast Bankless abordando BrightID, una solución de identidad descentralizada para Ethereum_
-- [Internet fuera de la cadena: Credenciales descentralizadas y verificables](https://www.youtube.com/watch?v=Ez_Bb6j87mg) — _EthDenver 2022 presentación de Evin McMullen_
+- [Internet fuera de la cadena: Credenciales descentralizadas y verificables](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 presentación de Evin McMullen
+- [Credenciales verificables explicadas](https://www.youtube.com/watch?v=ce1IdSr-Kig), Vídeo explicativo de YouTube con una demostración realizada por Tamino Baumann
 
 ### Comunidades {#communities}
 
 - [ERC-725 Alianza en GitHub](https://github.com/erc725alliance) — _Partidarios del estándar ERC725 para gestionar la identidad en la cadena de bloques Ethereum_
 - [Servidor SpruceID Discord](https://discord.com/invite/Sf9tSFzrnt) — _Comunidad para entusiastas y desarrolladores que trabajan en SpruceID con Ethereum_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Una comunidad de desarrolladores que contribuyen a la construcción de un marco para datos verificables para aplicaciones_
+- [walt.id](https://discord.com/invite/AW8AgqJthZ): _una comunidad de desarrolladores y constructores que se ocupan de los casos de uso para las identidades descentralizadas en varias industrias._

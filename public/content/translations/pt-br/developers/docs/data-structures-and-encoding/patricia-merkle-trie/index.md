@@ -7,7 +7,7 @@ sidebarDepth: 2
 
 Uma árvore Merkle Patricia fornece uma estrutura de dados criptograficamente autenticada que pode ser usada para armazenar todas as ligações `(key, value)`.
 
-Árvores Merkle Patricia são totalmente determinísticas, o que significa que há a garantia de que árvores com as mesmas ligações `(key, value)` são idênticas – até o último byte. Isto significa que elas têm o mesmo hash raiz, fornecendo a máxima eficiência `o(log(n))` para inserções, buscas e exclusões. Além disso, elas são mais simples de entender e codificar do que alternativas mais complexas baseadas em comparação, como as árvores vermelho-pretas.
+A Merkle Patricia Tries é totalmente determinística, significando que Tries - testes - com a mesma ligação `(key, value)` são com certeza idênticas - até o último byte. Isto significa que elas têm o mesmo hash raiz, fornecendo a máxima eficiência `o(log(n))` para inserções, buscas e exclusões. Além disso, elas são mais simples de entender e codificar do que alternativas mais complexas baseadas em comparação, como as árvores vermelho-pretas.
 
 ## Pré-requisitos {#prerequisites}
 
@@ -25,7 +25,7 @@ Onde `i0 ... in` representa o símbolo do alfabeto (muitas vezes binário ou hex
 
 Digamos que você queria usar uma estrutura de dados da árvore radix para persistir em uma ordem em um conjunto de pares de valor-chave. Para encontrar o valor atualmente relacionado com a chave `dog` na árvore, primeiro você converteria `dog` em letras do alfabeto (dando `64 6f 67`), e então desceria pela árvore seguindo o caminho até encontrar o valor. Ou seja, você começa por procurar o hash raiz em uma base de dados texto chave/valor para encontrar o nó raiz da árvore. Ele é representado como uma matriz de chaves apontando para outros nós. Use o valor no índice `6` como uma chave e procure na base chave/valor para obter o nó um nível abaixo. Em seguida, escolha o índice `4` para procurar o próximo valor, depois escolha o índice `6` e assim por diante. Uma vez tendo seguido o caminho: `root-> 6 -> 4 -> 6 -> 15 -> 6 -> 7`, procure o valor do nó e retorne o resultado.
 
-Há uma diferença entre buscar algo na árvore e no banco de dados base subjacente (chave/valor). Ambos definem combinações chave/valor, mas o banco de dados subjacente pode realizar uma busca tradicional de uma chave em 1 etapa. Procurar uma chave na árvore requer várias buscas no banco de dados subjacente para obter o valor final descrito acima. Vamos nos referir a este último como um `path` para eliminar ambiguidade.
+Há uma diferença entre buscar algo na árvore e no banco de dados base subjacente (chave/valor). Ambos definem arranjos chave/valor, mas o DB subjacente pode fazer uma tradicional busca de 1 passo pela chave. Procurar uma chave na árvore requer várias buscas no banco de dados subjacente para obter o valor final descrito acima. Vamos nos referir a este último como um `path` para eliminar ambiguidade.
 
 As operações de atualização e exclusão em árvores radix são simples, e podem ser definidas da seguinte forma:
 
@@ -62,9 +62,9 @@ As operações de atualização e exclusão em árvores radix são simples, e po
                 return hash(newnode)
 ```
 
-Uma árvore Radix "Merkle" é construída ligando os nós usando digests de hash criptográficos gerados deterministicamente. Este endereçamento de conteúdo (em banco de dados de chave/valor `key == keccak256(rlp(value))`) fornece autenticação criptográfica dos dados armazenados. Se o hash raiz de uma determinada árvore for conhecido publicamente, então, qualquer um poderá fornecer uma prova de que a árvore inclui um determinado valor em um caminho específico, fornecendo os hashes de cada nó que se junta a um valor específico para a raiz da árvore.
+Uma árvore Radix "Merkle" é construída ligando os nós usando digests de hash criptográficos gerados deterministicamente. Este endereçamento de conteúdo (no BD chave/valor `key == keccak256(rlp(value))`) fornece uma integridade criptográfica garantida do dado armazenado. Se o hash raiz de um Trie - teste - determinado for conhecido publicamente, então, qualquer um com acesso aos dados da folha subjacente poderá fornecer uma prova de que o Trie - teste - inclui um determinado valor em um caminho específico, fornecendo os hashes de cada nódulo que se junta a um valor específico para a raiz da árvore.
 
-É impossível para um atacante fornecer uma prova de um par `(path, value)` que não exista, já que o hash raiz é, em última análise, baseado em todos os hashes abaixo dele. Qualquer modificação subjacente alteraria o hash raiz.
+É impossível para um atacante fornecer uma prova de um par `(path, value)` que não exista, já que o hash raiz é, em última análise, baseado em todos os hashes abaixo dele. Qualquer modificação subjacente alteraria o hash raiz. Você pode pensar no hash como uma representação comprimida de informações estruturais sobre os dados, seguros pela proteção pré-imagem da função de hash.
 
 Vamos nos referir a uma unidade atômica de uma árvore de radix (por exemplo, um único caractere hexadecimal, ou número binário de 4 bits) como um "nibble". Ao percorrerem um caminho um nibble de cada vez, conforme descrito acima, os nós podem fazer referência a 16 filhos, no máximo, mas incluir um elemento `value`. Portanto, nós os representamos como uma faixa de comprimento 17. Chamamos esses arrays de 17 elementos de "branch nodes".
 
@@ -232,6 +232,8 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 
 {"jsonrpc":"2.0","id":1,"result":"0x000000000000000000000000000000000000000000000000000000000000162e"}
 ```
+
+Nota: O `storageRoot` para uma conta Ethereum está vazio pelo padrão se ele não for uma conta de contrato.
 
 ### Árvore de transações {#transaction-trie}
 

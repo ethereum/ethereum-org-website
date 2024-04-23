@@ -52,7 +52,7 @@ const Card = ({
   caption,
   link,
   image,
-  imageWidth = 20, // Set 20px as default image width, can be overrided if needed
+  imageWidth = 20, // Set 20px as default image width, can be overridden if needed
   alt,
   ...props
 }: CardProps) => {
@@ -70,6 +70,7 @@ const Card = ({
           <LinkOverlay
             as={BaseLink}
             href={link}
+            isExternal={isExternal}
             hideArrow
             color="text"
             textDecoration="none"

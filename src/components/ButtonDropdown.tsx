@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react"
+import React, { MouseEvent, useState } from "react"
 import { useTranslation } from "next-i18next"
 import { MdMenu } from "react-icons/md"
 import {
@@ -33,12 +33,13 @@ export interface List {
   items: Array<ListItem>
 }
 
-export interface IProps extends ButtonProps {
+export type ButtonDropdownProps = ButtonProps & {
   list: List
 }
 
-const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
+const ButtonDropdown = ({ list, ...rest }: ButtonDropdownProps) => {
   const { t } = useTranslation("common")
+  const [selectedItem, setSelectedItem] = useState(list.text)
   const handleClick = (
     e: MouseEvent<HTMLElement>,
     item: ListItem,
@@ -54,6 +55,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
       e.preventDefault()
       callback(idx)
     }
+    setSelectedItem(item.text)
   }
 
   return (
@@ -65,7 +67,7 @@ const ButtonDropdown: React.FC<IProps> = ({ list, ...rest }) => {
         _active={{ bg: "transparent" }}
         {...rest}
       >
-        {t(list.text)}
+        {t(selectedItem)}
       </MenuButton>
       <MenuList
         py={2}

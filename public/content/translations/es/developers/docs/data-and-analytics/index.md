@@ -1,6 +1,6 @@
 ---
 title: Datos y análisis
-description: "¿Cómo obtener datos y análisis en cadena para usarlos en tus dapps?"
+description: '¿Cómo obtener datos y análisis en cadena para usarlos en tus dapps?'
 lang: es
 ---
 
@@ -30,8 +30,7 @@ Usando [GraphQL](https://graphql.org/), los desarrolladores pueden consultar cua
 
 ## Diversidad de clientes
 
-La [diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity/) es importante para la salud general de la red de Ethereum porque esta provee resistencia a errores y exploits. Ahora hay varios paneles de diversidad de clientes, incluidos [clientdiversity.org](https://clientdiversity.org/), [ated.network](https://rated.network), [execution-diversity.info](https://execution-diversity.info/) y
-Ethernodes.
+La [diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity/) es importante para la salud general de la red de Ethereum porque esta provee resistencia a errores y exploits. Ahora hay varios paneles de diversidad de clientes, incluidos [clientdiversity.org](https://clientdiversity.org/), [ated.network](https://www.rated.network), [execution-diversity.info](https://execution-diversity.info/) y [Ethernodes](https://ethernodes.org/).
 
 ## Dune Analytics {#dune-analytics}
 

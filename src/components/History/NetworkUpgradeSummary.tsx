@@ -11,11 +11,11 @@ import NetworkUpgradeSummaryData from "../../data/NetworkUpgradeSummaryData"
 import Emoji from "../Emoji"
 import InlineLink from "../Link"
 
-interface IProps {
+type NetworkUpgradeSummaryProps = {
   name: string
 }
 
-const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
+const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
   const [formattedUTC, setFormattedUTC] = useState("")
   const { locale } = useRouter()
   const localeForStatsBoxNumbers = getLocaleForNumberFormat(locale as Lang)
@@ -33,7 +33,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
 
   // calculate date format only on the client side to avoid hydration issues
   useEffect(() => {
-    const date = new Date(dateTimeAsString as any)
+    const date = new Date(dateTimeAsString as string)
     const formattedDate = date.toLocaleString(locale, {
       timeZone: "UTC",
       month: "short",
@@ -48,10 +48,10 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
-      <Flex>
+      <Flex whiteSpace="pre-wrap">
         <Emoji fontSize="sm" me={2} text=":bricks:" />
         {t(translationKey)}:{" "}
-        <InlineLink to={`${explorerUrl}${number}`}>
+        <InlineLink href={`${explorerUrl}${number}`}>
           {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
         </InlineLink>
       </Flex>
@@ -60,7 +60,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
 
   return (
     <Stack>
-      {formattedUTC && (
+      {dateTimeAsString && (
         <Flex>
           <Emoji fontSize="sm" me={2} text=":calendar:" />
           <Text fontFamily="monospace">{formattedUTC}</Text>
@@ -97,7 +97,7 @@ const NetworkUpgradeSummary: React.FC<IProps> = ({ name }) => {
       {waybackLink && (
         <Flex>
           <Emoji fontSize="sm" me={2} text=":desktop_computer:" />
-          <InlineLink to={waybackLink}>
+          <InlineLink href={waybackLink}>
             {t("page-history:page-history-ethereum-org-wayback")}
           </InlineLink>
         </Flex>

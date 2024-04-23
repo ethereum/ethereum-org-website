@@ -6,7 +6,7 @@ tags:
   - "solidity"
   - "akıllı sözleşmeler"
   - "güvenlik"
-skill: beginner
+skill: intermediate
 lang: tr
 published: 2020-09-06
 source: Güvenli sözleşmeler oluşturmak

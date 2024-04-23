@@ -156,7 +156,7 @@ _Käytetään tyypillisesti protokollien ja dAppsin hajautettuun kehittämiseen 
 - [Miten aloittaa oma DAO-pohjainen digitaalinen yhteisö](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Mikä DAO on?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Mitä tarkoittaa holograafinen konsensus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) – [DAOstack](https://daostack.io/)
-- [DAOt eivät ole yrityksiä: kuinka hajauttaminen itsenäisissä organisaatioissa luo vaikuttavuutta, Vitalikia mukaellen](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAOt eivät ole yrityksiä: kuinka hajauttaminen itsenäisissä organisaatioissa luo vaikuttavuutta, Vitalikia mukaellen](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAOs, DACs, DAs and More: An Incomplete Terminology Guide – DAOt, DACt, DAt ja muita vastaavia: Epätäydellinen terminologia -opas](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
 ### Videoita {#videos}

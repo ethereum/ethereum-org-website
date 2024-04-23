@@ -5,11 +5,11 @@ lang: id
 incomplete: true
 ---
 
-<div class="featured">
+<FeaturedText>
 
 Pelajari cara menjadi pengembang untuk Ethereum menggunakan bahasa pemrograman Delphi
 
-</div>
+</FeaturedText>
 
 Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang menggunakan keuntungan teknologi mata uang kripto dan blockchain. Dapp ini dapat dipercaya, yang berarti setelah diterapkan ke Ethereum, dapp akan selalu berjalan seperti yang telah diprogramkan. Dapp dapat mengontrol aset digital untuk membuat aplikasi keuangan jenis baru. Dapp juga terdesentralisasi, yang berarti tidak ada entitas atau orang yang mengontrolnya dan hampir mustahil untuk disensor.
 

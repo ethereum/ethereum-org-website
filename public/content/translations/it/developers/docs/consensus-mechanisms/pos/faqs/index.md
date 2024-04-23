@@ -18,7 +18,7 @@ Il proof-of-stake richiede che i nodi, noti come validatori, inviino esplicitame
 
 Il proof-of-work consuma molta più energia perché il processo di mining consumata elettricità. Il proof-of-stake, d'altra parte, richiede soltanto una piccola quantità di energia: i validatori di Ethereum possono essere eseguiti persino su un dispositivo a bassa potenza, come un Raspberry Pi. Il meccanismo di proof-of-stake di Ethereum è concepito per essere più sicuro del proof-of-work, perché il costo dell'attacco è maggiore e le conseguenze sono più severe.
 
-Il confronto proof-of-work vs. proof-of-stake è un argomento controverso. [Il blog di Vitalik Buterin](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) e il dibattito tra Justin Drake e Lyn Alden hanno dato una buona sintesi delle argomentazioni.
+Il confronto proof-of-work vs. proof-of-stake è un argomento controverso. [Il blog di Vitalik Buterin](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) e il dibattito tra Justin Drake e Lyn Alden hanno dato una buona sintesi delle argomentazioni.
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -89,7 +89,7 @@ La frantumazione dello stake è una categoria di attacco alle reti di proof-of-s
 Il taglio sociale è l'abilità della community di coordinare una diramazione blockchain in risposta a un attacco. Consente alla community di riprendersi da un utente malevolo che finalizza una catena disonesta. Il taglio sociale è anche utilizzabile contro gli attacchi di censura.
 
 - [Maggiori informazioni sul taglio sociale](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin sul taglio sociale](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik Buterin sul taglio sociale](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## Riceverò un taglio? {#will-i-get-slashed}
 
@@ -101,7 +101,7 @@ Come validatore, è molto difficile essere tagliato a meno che non si adottino d
 
 Il problema del "nulla in staking" è un problema concettuale con alcuni meccanismi di proof-of-stake in cui esistono solo ricompense e nessuna sanzione. Se non c'è nulla in staking, un validatore pragmatico è altrettanto felice di attestare qualsiasi, o persino più, diramazioni della blockchain, perché questo aumenta le sue ricompense. Ethereum aggira tale problema utilizzando le condizioni di finalità e il taglio per assicurare una catena canonica.
 
-[Maggiori informazioni sul problema di "nulla in staking"](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[Maggiori informazioni sul problema di "nulla in staking"](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## Cos'è un algoritmo di scelta della diramazione? {#what-is-a-fork-choice-algorithm}
 

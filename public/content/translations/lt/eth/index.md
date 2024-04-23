@@ -6,11 +6,11 @@ lang: lt
 
 # Kas yra Ether (ETH)? {#what-is-ether-eth}
 
-<div class="featured">
+<FeaturedText>
 
 **ETH yra Ethereum valiuta** Šiame puslapyje rasite pagrindinę informaciją, kuri reikalinga norint pradėti naudotis ETH.
 
-</div>
+</FeaturedText>
 
 ## Kas yra ETH ir kaip jį gauti? {#what-is-eth-and-how-do-i-get-it}
 

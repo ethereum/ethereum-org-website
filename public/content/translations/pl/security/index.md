@@ -24,7 +24,7 @@ Przykład słabego hasła: CuteFluffyKittens!
 Przykład silnego hasła: ymv\*azu.EAC8eyp8umf
 ```
 
-Innym częstym błędem jest używanie haseł, które można łatwo odgadnąć lub poznać używając [inżynierii społecznej](<https://wikipedia.org/wiki/Social_engineering_(security)>). Umieszczanie w haśle nazwiska panieńskiego matki, imion dzieci lub zwierząt domowych lub dat urodzenia nie jest bezpieczne i zwiększa ryzyko złamania hasła.
+Innym częstym błędem jest używanie haseł, które można łatwo odgadnąć lub poznać używając [inżynierii społecznej](https://wikipedia.org/wiki/Social_engineering_(security)). Umieszczanie w haśle nazwiska panieńskiego matki, imion dzieci lub zwierząt domowych lub dat urodzenia nie jest bezpieczne i zwiększa ryzyko złamania hasła.
 
 #### Dobre praktyki haseł: {#good-password-practices}
 
@@ -60,7 +60,7 @@ Zapamiętywanie silnych, unikalnych haseł do każdego posiadanego konta nie jes
 
 ### Używaj uwierzytelniania dwuskładnikowego {#two-factor-authentication}
 
-Aby udowodnić, że faktycznie jesteś osobą, za która się podajesz, istnieją różne unikalne dowody, które można wykorzystać do uwierzytelnienia. Są one znane jako **czynniki**, a trzy główne czynniki to:
+Aby potwierdzić swoją tożsamość, można użyć różnych unikalnych dowodów służących do uwierzytelniania. Są one znane jako **czynniki**, a trzy główne czynniki to:
 
 - Coś, co znasz (np. hasło lub pytanie zabezpieczające)
 - Coś, czym jesteś (np. odcisk palca lub skaner tęczówki/twarzy)
@@ -270,7 +270,6 @@ Oszustwa airdrop polegają na tym, że oszust rozdaje aktywa (NFT, token) do por
 
 ### Bezpieczeństwo sieci {#reading-web-security}
 
-- [Oto dlaczego nie należy używać SMS-ów do uwierzytelniania dwuskładnikowego](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) — _The Verge_
 - [Nawet 3 miliony urządzeń zainfekowanych złośliwym oprogramowaniem w dodatkach do Chrome i Edge](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) — _Dan Goodin_
 - [Jak stworzyć silne hasło, którego nie zapomnisz](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) — _AVG_
 - [Czym jest klucz bezpieczeństwa?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) — _Coinbase_
@@ -278,7 +277,7 @@ Oszustwa airdrop polegają na tym, że oszust rozdaje aktywa (NFT, token) do por
 ### Bezpieczeństwo kryptograficzne {#reading-crypto-security}
 
 - [Ochranianie siebie i swoich funduszy](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) — _MyCrypto_
-- [4 sposoby na zachowanie bezpieczeństwa w kryptowalutach](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) — _CoinDesk_
+- [Kwestie bezpieczeństwa w popularnym oprogramowaniu do komunikacji kryptograficznej](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media) — _Salus_
 - [Przewodnik bezpieczeństwa dla ludzi opornych i inteligentnych](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) — _MyCrypto_
 - [Bezpieczeństwo kryptograficzne: hasła i uwierzytelnianie](https://www.youtube.com/watch?v=m8jlnZuV1i4) — _Andreas M. Antonopoulos_
 

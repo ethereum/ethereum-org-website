@@ -252,7 +252,7 @@ Bir düğüm hizmeti kullanarak, ürününüzün altyapı yönünü merkezileşt
   - Özellikler
     - Merkeziyetsiz RPC Protokolü ve Pazar
     - Günlük 1 Milyon Talep Bulunan Ücretsiz Katman (uç nokta başına maks. 2)
-    - [Genel Uç Noktalar](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [Genel Uç Noktalar](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ Programı (günde 1 milyondan fazla talebe ihtiyacınız varsa)
     - 15'ten Fazla Blok Zinciri Desteklenir
     - Uygulamalara hizmet ederek POKT kazanan 6400'den fazla Düğüm

@@ -5,7 +5,7 @@ lang: de
 incomplete: true
 ---
 
-<div class="featured">Erfahren Sie, wie Sie mit Python-basierten Projekten und Tools für Ethereum entwickeln können</div>
+<FeaturedText>Erfahren Sie, wie Sie mit Python-basierten Projekten und Tools für Ethereum entwickeln können</FeaturedText>
 
 Sie können mit Ethereum dezentrale Anwendungen (oder "dApps") erstellen, die von den Vorteilen der Kryptowährung und der Blockchain-Technologie profitieren. Solche dApps sind vertrauenswürdig. Das bedeutet, dass sie, sobald sie auf Ethereum hochgeladen wurden, immer exakt wie programmiert ausgeführt werden. Darüber lassen sich digitale Vermögenswerte verwalten und neuartige Finanzanwendungen erschaffen. Sie können dezentralisiert sein. Das bedeutet, dass keine einzelne Einheit oder Person sie kontrollieren kann. Damit ist es fast unmöglich, sie zu zensieren.
 
@@ -82,7 +82,7 @@ Die folgenden Ethereum-basierten Projekte verwenden die auf dieser Seite erwähn
 ## Python Community-Diskussionen {#python-community-contributors}
 
 - [Ethereum Python Community Discord](https://discord.gg/9zk7snTfWe) für Web3.py und andere Python Framework-Diskussionen
-- [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>) für Diskussionen zu Vyper Smart Contract-Programmierung
+- [Vyper Discord](https://discord.gg/SdvKC79cJk) für Diskussionen zu Vyper Smart Contract-Programmierung
 
 ## Andere aggregierte Listen {#other-aggregated-lists}
 

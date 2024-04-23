@@ -43,7 +43,7 @@ Ethereum poate fi descris în mai multe feluri, dar în esență este un blockch
 
 Fiecare [bloc](/developers/docs/blocks/) conține o referință la blocul precedent; `„parentHash”` este pur și simplu hash-ul blocului anterior.
 
-<div class="featured">Observaţie: Ethereum utilizează în mod regulat <a href="https://en.wikipedia.org/wiki/Hash_function">funcții hash</a> pentru a produce valori de mărime fixă („hash-uri”). Hash-urile joacă un rol important în Ethereum, dar deocamdată puteți să le consideraţi niște ID-uri unice.</div>
+<FeaturedText>Observaţie: Ethereum utilizează în mod regulat <a href="https://en.wikipedia.org/wiki/Hash_function">funcții hash</a> pentru a produce valori de mărime fixă („hash-uri”). Hash-urile joacă un rol important în Ethereum, dar deocamdată puteți să le consideraţi niște ID-uri unice.</FeaturedText>
 
 ![O diagramă care ilustrează un blockchain, inclusiv datele din interiorul fiecărui bloc](./blockchain-diagram.png)
 
@@ -59,7 +59,7 @@ Această nouă stivă tehnologică descentralizată a generat noi instrumente pe
 
 Dezvoltatorii Python care vor să interacționeze cu Ethereum vor căuta probabil să utilizeze [Web3.py](https://web3py.readthedocs.io/). Web3.py este o bibliotecă ce simplifică mult felul în care vă conectați la un nod Ethereum, după care trimiteți și primiți date de la acesta.
 
-<div class="featured">Observaţie: noţiunile de „nod Ethereum” și „client Ethereum” sunt utilizate ca sinonime. În ambele cazuri, se referă la software-ul rulat de un participant la rețeaua Ethereum. Acest software poate să citească datele blocurilor, să primească actualizări când se adaugă noi blocuri în lanț („minate”), să transmită noi tranzacții și multe altele.</div>
+<FeaturedText>Observaţie: noţiunile de „nod Ethereum” și „client Ethereum” sunt utilizate ca sinonime. În ambele cazuri, se referă la software-ul rulat de un participant la rețeaua Ethereum. Acest software poate să citească datele blocurilor, să primească actualizări când se adaugă noi blocuri în lanț („minate”), să transmită noi tranzacții și multe altele.</FeaturedText>
 
 [Clienții Ethereum](/developers/docs/nodes-and-clients/) pot fi configurați pentru a fi accesați prin [IPC](https://en.wikipedia.org/wiki/Inter-process_communication), HTTP sau Websockets, astfel încât Web3.py va trebui să reflecte aceste configurații. Web3.py se referă la aceste opțiuni de conectare ca **furnizori (providers)**. Va trebui să alegeți unul dintre cei trei furnizori pentru a conecta instanța Web3.py la nodul dvs.
 
@@ -81,7 +81,7 @@ w3.eth.sendTransaction({'from': ..., 'to': ..., 'value': ...})
 
 În această prezentare vom lucra doar în cadrul unui interpretator Python. Nu vom crea niciun dosar, fișier, nici clase sau funcții.
 
-<div class="featured">Observaţie: În exemplele de mai jos, comenzile care încep cu „$” sunt destinate a fi rulate în terminal. (Nu tastați „$”, acesta semnifică doar începutul liniei.)</div>
+<FeaturedText>Observaţie: În exemplele de mai jos, comenzile care încep cu „$” sunt destinate a fi rulate în terminal. (Nu tastați „$”, acesta semnifică doar începutul liniei.)</FeaturedText>
 
 Mai întâi instalați [IPython](https://ipython.org/) pentru a explora într-un mediu ușor de utilizat. IPython oferă, printre alte funcţionalităţi, completarea filei, ceea ce face mult mai ușor de văzut ce este posibil în Web3.py.
 
@@ -129,7 +129,7 @@ Pe lângă faptul că este un portal de acces la Ethereum, modulul [Web3](https:
 
 Într-o aplicație Ethereum va trebui în mod normal să convertiți denominațiile monetare. Modulul Web3 oferă câteva metode ajutătoare exact pentru acest lucru: [fromWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.fromWei) și [toWei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.toWei).
 
-<div class="featured">
+<FeaturedText>
 Observaţie: Computerele sunt extraordinar de slabe la manipularea zecimalelor în matematică. Pentru a rezolva această problemă, dezvoltatorii stochează adesea sumele de dolari în cenți. De exemplu, un articol cu un preț de 5,99 dolari poate fi stocat în baza de date ca fiind 599.
 
 Un model similar este utilizat la gestionarea tranzacțiilor în <b>ether</b>. Numai că, în loc de două zecimale, ether-ul are 18! Cea mai mică denominație de ether se numește <b>wei</b>, prin urmare aceasta este valoarea specificată la trimiterea tranzacțiilor.
@@ -138,7 +138,7 @@ Un model similar este utilizat la gestionarea tranzacțiilor în <b>ether</b>. N
 
 1 wei = 0.00000000000000000000000001 ether
 
-</div>
+</FeaturedText>
 
 Încercați să convertiți câteva valori în și din wei. Rețineți că [există și alte denumiri pentru numeroasele denominații](https://web3py.readthedocs.io/en/stable/examples.html#converting-currency-denominations) între ether și wei. Una din cele mai cunoscute dintre ele este **gwei**, deoarece este adesea modalitatea de reprezentare a taxelor de tranzacție.
 
@@ -287,7 +287,7 @@ Out[13]: 1000003000000000000000000
 
 Acesta din urmă arată bine! Soldul a trecut de la 1.000.000 la 1.000.003 ether. Dar ce s-a întâmplat cu primul cont? Se pare că a pierdut ceva mai mult de trei ether. Din nefericire, nimic nu este gratuit în viaţă, iar utilizarea rețelei publice Ethereum necesită să vă recompensați colegii pentru rolul lor de sprijin. A fost dedusă o mică taxă de tranzacție de 21000 de wei din contul care a efectuat tranzacția.
 
-<div class="featured">Observaţie: În rețeaua publică, taxele de tranzacție sunt variabile în funcție de cererea rețelei și de rapiditatea cu care doriți ca o tranzacție să fie procesată. Dacă vă interesează o defalcare a modului în care sunt calculate taxele, consultați postarea mea anterioară despre <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">cum sunt incluse tranzacțiile într-un bloc</a>.</div>
+<FeaturedText>Observaţie: În rețeaua publică, taxele de tranzacție sunt variabile în funcție de cererea rețelei și de rapiditatea cu care doriți ca o tranzacție să fie procesată. Dacă vă interesează o defalcare a modului în care sunt calculate taxele, consultați postarea mea anterioară despre <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">cum sunt incluse tranzacțiile într-un bloc</a>.</FeaturedText>
 
 ## Și respirați {#and-breathe}
 

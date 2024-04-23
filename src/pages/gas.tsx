@@ -100,7 +100,7 @@ const H3 = (props: HeadingProps) => (
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/gas")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 
@@ -119,7 +119,9 @@ const GasPage = () => {
   const benefits = [
     {
       emoji: "🪪",
-      description: t("page-gas-benefits-1-description"),
+      description: (
+        <Translation id="page-gas:page-gas-benefits-1-description" />
+      ),
     },
     {
       emoji: ":money_with_wings:",
@@ -177,7 +179,7 @@ const GasPage = () => {
           align={{ base: "center", lg: "flex-start" }}
           w="full"
         >
-          <Box flex="60%" w="full" mr={{ base: "auto", lg: 2 }}>
+          <Box flex="60%" w="full" me={{ base: "auto", lg: 2 }}>
             <InfoBanner mb={8} title={t("page-gas-summary-title")}>
               <UnorderedList>
                 <ListItem>{t("page-gas-summary-item-1")}</ListItem>
@@ -189,7 +191,9 @@ const GasPage = () => {
               {t("page-gas-what-are-gas-fees-header")}
             </H2>
             <Text>{t("page-gas-what-are-gas-fees-text-1")}</Text>
-            <Text>{t("page-gas-what-are-gas-fees-text-2")}</Text>
+            <Text>
+              <Translation id="page-gas:page-gas-what-are-gas-fees-text-2" />
+            </Text>
           </Box>
 
           <Box
@@ -250,17 +254,19 @@ const GasPage = () => {
         >
           <Box
             w="full"
-            ml={{ base: "auto", lg: 0 }}
-            mr={{ base: "auto", lg: 16 }}
+            ms={{ base: "auto", lg: 0 }}
+            me={{ base: "auto", lg: 16 }}
             flex="60%"
           >
             <H3 mt={0}>{t("page-gas-what-causes-high-gas-fees-header")}</H3>
             <Text>{t("page-gas-what-causes-high-gas-fees-text-1")}</Text>
-            <Text>{t("page-gas-what-causes-high-gas-fees-text-2")}</Text>
+            <Text>
+              <Translation id="page-gas:page-gas-what-causes-high-gas-fees-text-2" />
+            </Text>
             <Text>{t("page-gas-what-causes-high-gas-fees-text-3")}</Text>
             <Text>
               {t("page-gas-want-to-dive-deeper")}{" "}
-              <InlineLink to="/developers/docs/gas/">
+              <InlineLink href="/developers/docs/gas/">
                 {t("page-gas-check-out-the-developer-docs")}
               </InlineLink>
             </Text>
@@ -282,15 +288,15 @@ const GasPage = () => {
           direction={{ base: "column", lg: "row" }}
           align="flex-start"
           width="full"
-          mr={{ base: 0, lg: 8 }}
+          me={{ base: 0, lg: 8 }}
         >
-          <Box w="full" mr={{ base: "auto", lg: "8" }}>
+          <Box w="full" me={{ base: "auto", lg: "8" }}>
             <Box>
               <H2 mt={0}>{t("page-gas-why-do-we-need-gas-header")}</H2>
               <Text>{t("page-gas-why-do-we-need-gas-text")}</Text>
             </Box>
-            {benefits.map((benefit) => (
-              <Box key={benefit.description} minWidth="full" my={2}>
+            {benefits.map((benefit, index) => (
+              <Box key={index} minWidth="full" my={2}>
                 <HorizontalCard
                   key={benefit.emoji}
                   emoji={benefit.emoji}
@@ -313,16 +319,16 @@ const GasPage = () => {
       </Content>
       <Content mb={{ base: 16, lg: 32 }}>
         <Flex direction={{ base: "column", lg: "row" }} align="flex-start">
-          <Box w="full" mr={{ base: "auto", lg: 8 }}>
+          <Box w="full" me={{ base: "auto", lg: 8 }}>
             <Flex alignItems="flex-start">
               <H2 mt={0}>{t("page-gas-how-is-gas-calculated-header")}</H2>
 
-              <Pill mt={1.5} ml={4} background="warning">
+              <Pill mt={1.5} ms={4} background="warning">
                 {t("page-gas-advanced")}
               </Pill>
             </Flex>
             <Text>{t("page-gas-how-is-gas-calculated-text-1")}</Text>
-            <UnorderedList ml={6} spacing={3}>
+            <UnorderedList ms={6} spacing={3}>
               <ListItem>
                 <Translation id="page-gas:page-gas-how-is-gas-calculated-item-1" />
               </ListItem>
@@ -331,7 +337,7 @@ const GasPage = () => {
               </ListItem>
               <ListItem>
                 <Translation id="page-gas:page-gas-how-is-gas-calculated-item-3" />
-                <UnorderedList ml={6} spacing={3} styleType="none">
+                <UnorderedList ms={6} spacing={3} styleType="none">
                   <ListItem color="body.medium" fontSize="sm">
                     <Translation id="page-gas:page-gas-how-is-gas-calculated-list-item-1" />
                   </ListItem>

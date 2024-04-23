@@ -16,7 +16,9 @@ Kendi dilinizde bir eğitim kaynağı mı biliyorsunuz? [Listeye eklemek için](
 
 ## Ethereum.org kaynakları {#ethereum-org}
 
-Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dile yerel olarak çevrilmiştir.
+Ethereum.org, diller sayfamızda bulabileceğiniz 40'tan fazla dile yerel olarak çevrilmiştir.
+
+![Language selector menu](./language-selector-menu.png)
 
 İki dilliyseniz ve daha fazla kişiye ulaşmamıza yardımcı olmak istiyorsanız, [ethereum.org Çeviri Programı](/contributing/translation-program/#translation-program)na da katılarak web sitesini tercüme etmemize yardımcı olabilirsiniz.
 
@@ -72,7 +74,7 @@ Ethereum.org, [diller sayfamızda](/languages) bulabileceğiniz 40'tan fazla dil
 - [Gwei.cz](https://gwei.cz) - Web3 etrafında yerel topluluk, eğitim içeriği oluşturur, çevrimiçi ve yüz yüze etkinlikler düzenler
 - [Gwei.cz Příručka](https://prirucka.gwei.cz/) - yeni başlayanlar için Ethereum rehberi
 - [DAO Příručka](https://dao.gwei.cz/) - DAO'lara yeni başlayanlar için rehber
-- [Ethereum'da Uzmanlaşma](https://ipfs.infura-ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Çekçe Ethereum'da Uzmanlaşmak
+- [Ethereum'da Uzmanlaşma](https://ipfs.io/ipfs/bafybeidvuxhnsgfx3tncpfxheqglkjwmdxclknlgd7s7qggd2a6bzgb27m) - Çekçe Ethereum'da Uzmanlaşmak
 
 ### Fransızca {#fr}
 

@@ -8,7 +8,7 @@ lang: es
 
 Queremos asegurarnos de que incluimos los mejores recursos posibles al tiempo que velamos por la seguridad y confianza de nuestros usuarios.
 
-Cualquiera es libre de sugerir un producto o servicio de participación que añadir a ethereum.org. Si hay alguno que hayamos olvidado, **[ le rogamos que nos lo indique.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service)**
+Cualquiera es libre de sugerir un producto o servicio de participación que añadir a ethereum.org. Si hay alguno que hayamos olvidado, **[ le rogamos que nos lo indique.](https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml)**
 
 Actualmente incluimos productos y servicios de participación en las siguientes páginas:
 
@@ -20,7 +20,7 @@ La prueba de participación ha estado disponible en la cadena de baliza desde el
 
 ## El marco de decisión {#the-decision-framework}
 
-La decisión de incluir un producto en la lista de ethereum.org no depende de un único factor. Se tendrán en cuenta múltiples criterios de forma conjunta a la hora de decidir incluir un producto o servicio. Cuantos más criterios se cumplan, más probable será que se incluyan.
+La decisión de incluir un producto en la lista de ethereum.org no depende de un único factor. Se tendrán en cuenta múltiples criterios de forma conjunta a la hora de decidir incluir un producto o servicio. Cuantos más criterios se cumplan, más probabilidad hay de que sean incluídos.
 
 **En primer lugar, ¿qué categoría de producto o servicio es?**
 
@@ -29,7 +29,7 @@ La decisión de incluir un producto en la lista de ethereum.org no depende de un
 - Participación como servicio (SaaS)
 - Reserva de participación
 
-Actualmente solo se incluyen productos o servicios en estas categorías.
+Por el momento, sólo se incluyen los productos o servicios en las siguientes categorías.
 
 ### Criterios de inclusión {#criteria-for-inclusion}
 
@@ -49,6 +49,11 @@ Las productos o servicios de participación se evaluarán según los siguientes 
 
 - ¿Qué pasos de la experiencia de usuario requieren confiar en los humanos, ya sea para guardar las claves de sus fondos o para distribuir ganancias de forma adecuada?
 - Esto se usa para determinar la puntuación de «fiabilidad» del producto o servicios.
+
+**¿El proyecto proporciona información correcta y fiable?**
+
+- Es importante que las funcionalidades de la página de los productos esten al día, sean correctas y que no contengan información que pueda confundir. Especialmente, si tienen relación con el protoccolo de Ethereum u otras tecnologías afines.
+- Los envíos que contengan información errónea, detalles obsoletos o declaraciones posiblemente erróneas sobre Ethereum u otros asuntos pertinentes no se incluirán o se eliminarán, en el caso de que ya estuvieran incluidos.
 
 **¿Qué plataformas se admiten?**
 
@@ -82,14 +87,14 @@ Para cualquier software personalizado o contratos inteligentes involucrados:
 
 Para productos de software relacionados con la configuración de nodo o cliente, administración o migración:
 
-**¿Qué clientes de capa de consenso (por ejemplo, Lighthouse, Teku, Nimbus, Prysm) se admiten?**
+**¿Qué clientes de la capa de consenso (por ejemplo, Lighthouse, Teku, Nimbus, Prysm) se permiten? **
 
 - ¿Qué clientes se admiten? ¿Puede elegir el usuario?
 - Esto se utiliza para determinar la puntuación «multicliente» de los productos.
 
 #### Participación como servicio {#staking-as-a-service}
 
-Para [listados de participación como servicio](/staking/saas/) (es decir, operación de modo delegado):
+Para [staking-as-a-service listings](/staking/saas/) (es decir, operaciones del nodo a un tercero)
 
 **¿Cuáles son las tarifas asociadas con el uso del servicio?**
 
@@ -108,8 +113,8 @@ Para [listados de participación como servicio](/staking/saas/) (es decir, opera
 
 **¿Cuál es la diversidad de clientes en el nodo que se está operando?**
 
-- ¿Qué porcentaje de claves de validador está ejecutando el cliente de una capa de consenso (CL)?
-- A partir de la última edición, Prysm es el cliente de la capa de consenso que está siendo gestionada por una mayoría de operadores de nodo, lo que es peligroso para la red. Si más del 33 % de la red utiliza actualmente algún cliente de CL, solicitamos datos relacionados con su uso.
+- ¿Qué porcentaje de claves de validador está siendo ejecutado por la parte mayoritaria de clientes de una capa de consenso (CL)?
+- A partir de la última edición, Prysm es el cliente de la capa de consenso que está siendo gestionado por una mayoría de operadores de nodos, lo que es peligroso para la red. Si más del 33 % de la red utiliza actualmente algún cliente de CL, solicitamos datos relacionados con su uso.
 - Esto se utiliza para determinar la puntuación «multicliente» de los productos.
 
 #### Reserva de participación {#staking-pool}
@@ -166,6 +171,6 @@ La lógica del código y los pesos para estos criterios están actualmente conte
 
 Si quiere añadir un producto o servicio de participación a ethereum.org, cree una incidencia en GitHub.
 
-<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml&title=Suggest+a+staking+product+or+service">
+<ButtonLink to="https://github.com/ethereum/ethereum-org-website/issues/new?assignees=&labels=feature+%3Asparkles%3A%2Ccontent+%3Afountain_pen%3A&template=suggest_staking_product.yaml">
   Crear una incidencia
 </ButtonLink>

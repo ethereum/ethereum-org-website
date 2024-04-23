@@ -10,12 +10,16 @@ import {
 
 import { QuizStatus } from "@/lib/types"
 
-interface IProps extends Omit<ModalProps, "isCentered" | "scrollBehavior"> {
+type QuizzesModalProps = Omit<ModalProps, "isCentered" | "scrollBehavior"> & {
   children: React.ReactNode
   quizStatus: QuizStatus
 }
 
-const QuizzesModal: React.FC<IProps> = ({ children, quizStatus, ...rest }) => {
+const QuizzesModal = ({
+  children,
+  quizStatus,
+  ...props
+}: QuizzesModalProps) => {
   const getStatusColor = (): ModalContentProps["bg"] => {
     if (quizStatus === "neutral") {
       return "neutral"
@@ -31,12 +35,12 @@ const QuizzesModal: React.FC<IProps> = ({ children, quizStatus, ...rest }) => {
       isCentered
       size={{ base: "full", md: "xl" }}
       scrollBehavior="inside"
-      {...rest}
+      {...props}
     >
       <ModalOverlay bg="blackAlpha.700" />
 
       <Center as={ModalContent} m={0} bg={getStatusColor()} py="16">
-        <ModalCloseButton size="lg" p="6" />
+        <ModalCloseButton size="lg" p="6" zIndex="1"/>
         {children}
       </Center>
     </ChakraModal>

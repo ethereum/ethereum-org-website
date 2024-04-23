@@ -14,10 +14,7 @@ import QRLight from "@/public/qr-code-ethereum-org-light.png"
 const MotionBox = motion(Box)
 
 export const ReceiveEther = () => {
-  const qrImage = useColorModeValue(
-    QRLight,
-    QRDark,
-  )
+  const qrImage = useColorModeValue(QRLight, QRDark)
 
   const SPACING = { base: 3, md: 5 }
   const QR_SIZE = { base: "80px", md: "120px" }

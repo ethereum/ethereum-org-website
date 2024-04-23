@@ -238,7 +238,7 @@ Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok ZK toplamal
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll, Ethereum için yerel bir zkEVM Katman 2 Çözümü üretmek üzerine çalışan, teknoloji odaklı bir şirkettir._
 
-- **[Taiko](https://taiko.xyz)** - _Taiko; merkeziyetsiz, Ethereum eşdeğeri bir ZK-toplamasıdır (bir [Tip 1 ZK-EVM](https://vitalik.ca/general/2022/08/04/zkevm.html))._
+- **[Taiko](https://taiko.xyz)** - _Taiko; merkeziyetsiz, Ethereum eşdeğeri bir ZK-toplamasıdır (bir [Tip 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
 - **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0, Matter Labs tarafından geliştirilen ve kendi zkEVM'si desteklenen EVM uyumlu bir ZK Toplamasıdır._
 
@@ -250,5 +250,5 @@ Merkeziyetsiz uygulamalarınıza entegre edebileceğiniz birden çok ZK toplamal
 - [zkEVM nedir?](https://www.alchemy.com/overviews/zkevm)
 - [zkEVM'ye giriş](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [Müthiş zkEVM kaynakları](https://github.com/LuozhuZhang/awesome-zkevm)
-- [Yakın planda ZK-SNARK'lar](https://vitalik.ca/general/2017/02/01/zk_snarks.html)
-- [SNARK'lar nasıl mümkündür?](https://vitalik.ca/general/2021/01/26/snarks.html)
+- [Yakın planda ZK-SNARK'lar](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
+- [SNARK'lar nasıl mümkündür?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)

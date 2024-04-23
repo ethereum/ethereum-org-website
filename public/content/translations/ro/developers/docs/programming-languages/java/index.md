@@ -5,7 +5,7 @@ lang: ro
 incomplete: true
 ---
 
-<div class="featured">Învvăţaţi să programaţi pe Ethereum folosind proiecte și instrumente Java</div>
+<FeaturedText>Învvăţaţi să programaţi pe Ethereum folosind proiecte și instrumente Java</FeaturedText>
 
 Folosiţi Ethereum pentru a crea aplicații descentralizate („dapp”) care valorifică avantajele criptomonedelor și ale tehnologiei blockchain. Aceste aplicații descentralizate pot fi demne de încredere, întrucât odată implementate pe Ethereum, vor rula întotdeauna așa cum au fost programate. Pot controla active digitale pentru a crea noi tipuri de aplicații financiare. Pot fi descentralizate, astfel încât nu pot fi controlate de către o singură entitate sau persoană și sunt aproape imposibil de cenzurat.
 

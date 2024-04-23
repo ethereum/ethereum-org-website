@@ -40,7 +40,13 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 import oldship from "@/public/upgrades/oldship.png"
 
 const Page = (props: ChildOnlyProp) => (
-  <Flex as={MainArticle} direction="column" align="center" w="full" {...props} />
+  <Flex
+    as={MainArticle}
+    direction="column"
+    align="center"
+    w="full"
+    {...props}
+  />
 )
 
 const PageDivider = () => (
@@ -113,7 +119,7 @@ const TrilemmaContent = (props: ChildOnlyProp) => (
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/roadmap/vision")
 
-  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[1])
+  const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[2])
 
   const lastDeployDate = getLastDeployDate()
 

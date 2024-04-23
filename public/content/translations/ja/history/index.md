@@ -13,7 +13,7 @@ sidebarDepth: 1
 
 フォークとは、ネットワークに必要となる大規模な技術アップグレードや変更のことで、通常は[イーサリアム改善提案 (EIPs)](/eips/)に基づいて、プロトコルの「規約」を変更するものです。
 
-従来の中央集権型のソフトウェアにおいてアップグレードが必要になった場合、企業はエンドユーザのために新バージョンを公開します。 中央集権型の所有権がないブロックチェーンでは、仕組みが異なります。 [イーサリアムクライアント](/developers/docs/nodes-and-clients/)が新しいフォークルールを実装するには、ソフトウェアのアップデートが必要となります。 さらに、ブロック作成者(プルーフ・オブ・ワークの世界ではマイナー、プルーフ・オブ・ステークの世界ではバリデータ)とノードは、ブロックを作成し、新しいルールに照らし合わせて検証しなければなりません。 [合意メカニズムの詳細](/developers/docs/consenus-mechanisms/)
+従来の中央集権型のソフトウェアにおいてアップグレードが必要になった場合、企業はエンドユーザのために新バージョンを公開します。 中央集権型の所有権がないブロックチェーンでは、仕組みが異なります。 [イーサリアムクライアント](/developers/docs/nodes-and-clients/)が新しいフォークルールを実装するには、ソフトウェアのアップデートが必要となります。 さらに、ブロック作成者(プルーフ・オブ・ワークの世界ではマイナー、プルーフ・オブ・ステークの世界ではバリデータ)とノードは、ブロックを作成し、新しいルールに照らし合わせて検証しなければなりません。 [合意メカニズムの詳細](/developers/docs/consensus-mechanisms/)
 
 これらのルール変更により、ネットワークに一時的な分断が生じる可能性があります。 新規ブロックは、新しいルールもしくは古いルールに基づいて生成できます。 フォークは事前に合意されることが一般的で、クライアントが一斉に変更を採用し、アップグレードされたフォークがメインチェーンとなります。 しかし、まれにフォークをめぐる意見の相違により、ネットワークが永久に分断してしまうことがあります。最も有名な例は、[DAO フォーク](#dao-fork)によるイーサリアムクラシックの誕生です。
 </ExpandableCard>
@@ -28,9 +28,9 @@ sidebarDepth: 1
 
 ### 上海(_予定_) {#shanghai}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />タイムスタンプ: Apr-12-2023 22:27:35 +UTC<br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ブロック番号: TBD<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH 価格: TBD<br />
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} />タイムスタンプ: Apr-12-2023 22:27:35 +UTC<br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />ブロック番号: TBD<br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: TBD<br />
 
-<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/">ethereum.org on waybackmachine</a> -->
+<!-- <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/">ethereum.org on waybackmachine</a> -->
 
 #### 要約 {#shanghai-summary}
 
@@ -52,9 +52,9 @@ sidebarDepth: 1
 
 ### カペラ(_予定_) {#capella}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} />タイムスタンプ: Apr-12-2023 22:27:35 +UTC<br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />エポック番号: 194048(スロット 6209536)<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH 価格: TBD<br />
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} />タイムスタンプ: Apr-12-2023 22:27:35 +UTC<br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />エポック番号: 194048(スロット 6209536)<br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: TBD<br />
 
-<!-- <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/en/">ethereum.org on waybackmachine</a> -->
+<!-- <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/{}/https://ethereum.org/en/">ethereum.org on waybackmachine</a> -->
 
 #### 要約 {#capella-summary}
 
@@ -73,7 +73,7 @@ sidebarDepth: 1
 
 ### パリ(マージ) {#paris}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Sep-15-2022 06:42:42 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ブロック番号: <a href="https://etherscan.io/block/15537394">15537394</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH 価格: $1,472 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220915075314/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /><code>Sep-15-2022 06:42:42 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />ブロック番号: <a href="https://etherscan.io/block/15537394">15537394</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: $1,472 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220915075314/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#paris-summary}
 
@@ -92,7 +92,7 @@ sidebarDepth: 1
 
 ### ベラトリックス {#bellatrix}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Sep-06-2022 11:34:47 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />エポック番号: 144,896<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH 価格: $1,558 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220906112525/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /><code>Sep-06-2022 11:34:47 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />エポック番号: 144,896<br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: $1,558 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220906112525/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#bellatrix-summary}
 
@@ -104,7 +104,7 @@ sidebarDepth: 1
 
 ### グレイ・グレイシャー {#gray-glacier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ブロック番号: <a href="https://etherscan.io/block/15050000">15,050,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH 価格: $1,069 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /><code>Jun-30-2022 10:54:04 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />ブロック番号: <a href="https://etherscan.io/block/15050000">15,050,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: $1,069 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20220630094629/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#gray-glacier-summary}
 
@@ -124,7 +124,7 @@ sidebarDepth: 1
 
 ### アロー・グレイシャー {#arrow-glacier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ブロック番号: <a href="https://etherscan.io/block/13773000">13,773,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH 価格: $4111 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /><code>Dec-09-2021 07:55:23 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />ブロック番号: <a href="https://etherscan.io/block/13773000">13,773,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: $4111 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211207064430/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#arrow-glacier-summary}
 
@@ -143,7 +143,7 @@ sidebarDepth: 1
 
 ### アルタイル {#altair}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} />エポック番号: 74,240<br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} />ETH 価格: $4024 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /><code>Oct-27-2021 10:56:23 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} />エポック番号: 74,240<br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} />ETH 価格: $4024 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20211026174951/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#altair-summary}
 
@@ -151,7 +151,7 @@ sidebarDepth: 1
 
 - [アルタイルのアップデート仕様を読む](https://github.com/ethereum/consensus-specs/tree/dev/specs/altair)
 
-#### <emoji text=":tada:" size={1} mr="0.5rem" />豆知識 {#altair-fun-fact}
+#### <emoji text=":tada:" size={1} me="0.5rem" />豆知識 {#altair-fun-fact}
 
 アルタイルは、正確な実装時間があらかじめ設定された最初の主要なネットワークアップグレードでした。 それまでのアップグレードはすべて、ブロックタイムにばらつきがあるプルーフ・オブ・ワーク・チェーン上のブロック番号に基づいていました。 ビーコンチェーンは、プルーフ・オブ・ワークを必要としない代わりに、バリデータがブロックを提案できる 32 秒の「スロット」からなる時間ベースのエポックシステムで動作します。 こうした理由から、エポック 74,240 に到達してアルタイルが実装されるタイミングを把握することができたのです。
 
@@ -161,7 +161,7 @@ sidebarDepth: 1
 
 ### ロンドン {#london}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/12965000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $2621 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Aug-05-2021 12:33:42 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/12965000">12,965,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $2621 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210805124609/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#london-summary}
 
@@ -185,7 +185,7 @@ sidebarDepth: 1
 
 ### ベルリン {#berlin}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/12244000">12,244,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $2454 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Apr-15-2021 10:07:03 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/12244000">12,244,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $2454 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20210415093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#berlin-summary}
 
@@ -209,7 +209,7 @@ sidebarDepth: 1
 
 ### ビーコンチェーンの誕生 {#beacon-chain-genesis}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ビーコンチェーンのブロック番号: <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $586.23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Dec-01-2020 12:00:35 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ビーコンチェーンのブロック番号: <a href="https://beaconscan.com/slot/1">1</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $586.23 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201207184633/https://www.ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#beacon-chain-genesis-summary}
 
@@ -225,7 +225,7 @@ sidebarDepth: 1
 
 ### ステーキングのデポジットコントラクトのデプロイ {#staking-deposit-contract}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-14-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/11052984">11,052,984</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $379.04 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Oct-14-2020 09:22:52 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/11052984">11,052,984</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $379.04 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20201104235727/https://ethereum.org/en/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#deposit-contract-summary}
 
@@ -241,7 +241,7 @@ sidebarDepth: 1
 
 ### ミュア・グレイシャー {#muir-glacier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/9200000">9,200,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $127.18 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Jan-02-2020 08:30:49 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/9200000">9,200,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $127.18 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20200103093618/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#muir-glacier-summary}
 
@@ -262,7 +262,7 @@ sidebarDepth: 1
 
 ### イスタンブール (Istanbul) {#istanbul}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/9069000">9,069,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $151.06 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Dec-08-2019 12:25:09 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/9069000">9,069,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $151.06 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20191216101254if*/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#istanbul-summary}
 
@@ -291,7 +291,7 @@ sidebarDepth: 1
 
 ### コンスタンティノープル {#constantinople}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/7280000">7,280,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $136.29 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Feb-28-2019 07:52:04 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/7280000">7,280,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $136.29 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20190415163751/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#constantinople-summary}
 
@@ -318,7 +318,7 @@ sidebarDepth: 1
 
 ### ビザンチウム {#byzantium}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/4370000">4,370,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $334.23 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Oct-16-2017 05:22:11 AM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/4370000">4,370,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $334.23 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20171017201143/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#byzantium-summary}
 
@@ -351,7 +351,7 @@ sidebarDepth: 1
 
 ### スプリニアスドラゴン (Spurious Dragon) {#spurious-dragon}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/2675000">2,675,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $9.84 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Nov-22-2016 04:15:44 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/2675000">2,675,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $9.84 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161127154654/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#spurious-dragon-summary}
 
@@ -376,7 +376,7 @@ sidebarDepth: 1
 
 ### タンジェリンホイッスル {#tangerine-whistle}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/2463000">2,463,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Oct-18-2016 01:19:31 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/2463000">2,463,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20161030043727/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#tangerine-whistle-summary}
 
@@ -397,7 +397,7 @@ sidebarDepth: 1
 
 ### DAO フォーク {#dao-fork}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/1920000">1,920,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $12.54 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Jul-20-2016 01:20:40 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/1920000">1,920,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $12.54 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160803215306/https://ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#dao-fork-summary}
 
@@ -413,7 +413,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ### ホームステッド {#homestead}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/1150000">1,150,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Mar-14-2016 06:49:53 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/1150000">1,150,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $12.50 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20160313203843/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#homestead-summary}
 
@@ -435,7 +435,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ### フロンティアソーイング {#frontier-thawing}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/200000">200,000</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $1.24 USD<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Sep-07-2015 09:33:09 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/200000">200,000</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: $1.24 USD<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150912193811/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#frontier-thawing-summary}
 
@@ -448,7 +448,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ### フロンティア {#frontier}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> ETH 価格: N/A<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <code>Jul-30-2015 03:26:13 PM +UTC</code><br /> <Emoji text=":bricks:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ブロック番号: <a href="https://etherscan.io/block/0">0</a><br /> <Emoji text=":money_bag:" size={1} me={"0.5rem"} mb={"0.5rem"} /> ETH 価格: N/A<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20150802035735/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 #### 要約 {#frontier-summary}
 
@@ -462,7 +462,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ### イーサの販売 {#ether-sale}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2014 年 7 月 22 日～ 9 月 2 日<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> 2014 年 7 月 22 日～ 9 月 2 日<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140804235628/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 イーサは正式に 42 日間販売され、 BTC での購入も可能でした。
 
@@ -472,7 +472,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ### イエローペーパーのリリース {#yellowpaper}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2014 年 4 月 1 日<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> 2014 年 4 月 1 日<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140509173418/https://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 ギャビン・ウッド博士によって作成されたイエローペーパーには、イーサリアムプロトコルの技術的定義が記されています。
 
@@ -484,7 +484,7 @@ DAO 事件はプロトコルの不具合によるものではなかったため�
 
 ### ホワイトペーパーのリリース {#whitepaper}
 
-<emoji text=":calendar:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> 2013 年 11 月 27 日<br /> <Emoji text=":desktop_computer:" size={1} mr={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
+<emoji text=":calendar:" size={1} me={"0.5rem"} mb={"0.5rem"} /> 2013 年 11 月 27 日<br /> <Emoji text=":desktop_computer:" size={1} me={"0.5rem"} mb={"0.5rem"} /> <a href="https://web.archive.org/web/20140208030136/http://www.ethereum.org/">waybackmachine 上の ethereum.org</a>
 
 この概要論文は、元々はイーサリアム創始者のヴィタリック・ブテリンにより 2013 年に発表されました。2015 年にプロジェクトが始動する前のことです。
 

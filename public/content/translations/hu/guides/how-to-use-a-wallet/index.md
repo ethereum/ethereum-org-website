@@ -6,7 +6,7 @@ lang: hu
 
 # Hogyan használja a tárcát
 
-Ismerje meg, hogyan működnek a tárca alapvető funkciói. Ha Ön még nem rendelkezik tárcával, akkor nézze meg a [Hogyan lehet Ethereum számlát létrehozni](/guides/how-to-create-an-ethereum-account/) című útmutatót.
+Ismerje meg, hogyan működnek a tárca alapvető funkciói. Ha még nem rendelkezik tárcával, akkor tekintse meg a [Hogyan lehet Ethereum-számlát létrehozni](/guides/how-to-create-an-ethereum-account/) című útmutatót.
 
 ## Nyissa ki tárcáját
 
@@ -51,7 +51,7 @@ Az Ön címe minden Ethereum-projekt esetében azonos. Nem kell regisztrálnia k
 
 1. Látogasson el bármelyik projekt oldalára.
 2. Ha a projekt oldala csak egy tájékoztató leírás, akkor kattintson az Alkalmazás megnyitása gombra a menüben, ami elvezeti Önt a valódi alkalmazáshoz.
-3. Az alkalmazásban kattintson a „Kapcsolódás” gombra
+3. Az alkalmazáson belül kattintson a „Kapcsolódás” gombra.
 
 ![Gomb a felhasználó számára, melynek segítségével tárcájával a weboldalhoz kapcsolódhat](./connect1.png)
 

@@ -5,7 +5,7 @@ lang: id
 incomplete: true
 ---
 
-<div class="featured">Pelari cara menjadi pengembang untuk Ethereum menggunakan proyek dan peralatan berbasis Rust</div>
+<FeaturedText>Pelari cara menjadi pengembang untuk Ethereum menggunakan proyek dan peralatan berbasis Rust</FeaturedText>
 
 Gunakan Ethereum untuk membuat aplikasi terdesentralisasi (atau "dapp") yang menggunakan keuntungan teknologi mata uang kripto dan blockchain. Dapp ini dapat dipercaya, yang berarti setelah diterapkan ke Ethereum, dapp akan selalu berjalan seperti yang telah diprogramkan. Dapp dapat mengontrol aset digital untuk membuat aplikasi keuangan jenis baru. Dapp juga terdesentralisasi, yang berarti tidak ada entitas atau orang yang mengontrolnya dan hampir mustahil untuk disensor.
 
@@ -42,7 +42,7 @@ Perlu penjelasan yang lebih mendasar? Kunjungi [ethereum.org/learn](/learn/) ata
 
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) - _Koleksi eksternal untuk berinteraksi dengan jaringan seperti Ethereum._
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/)
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _Referensi API OASIS_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _Referensi API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs)
 - [SputnikVM](https://github.com/sorpaas/rust-evm) - _Implementasi Mesin Virtual Ethereum Rust_
 - [Parity](https://github.com/paritytech/parity-ethereum) - _Klient Rust Ethereum_

@@ -156,7 +156,7 @@ _Obyvkle používané na decentralizovaném vývoji a řízení protokolů a dec
 - [Jak založit komunitu založenou na DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [Co je to DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [Co je holografický konsenzus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO nejsou korporace: kde na decentralizaci v autonomních organizacích záleží od Vitalika](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAO nejsou korporace: kde na decentralizaci v autonomních organizacích záleží od Vitalika](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA a další: Neúplná příručka terminologie](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
 ### Videa {#videos}

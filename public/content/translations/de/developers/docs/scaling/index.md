@@ -103,7 +103,7 @@ _Beachten Sie, dass in der Erklärung im Video der Begriff „Layer 2" für alle
 - [Eine Rollup-zentrische Ethereum Roadmap](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698)_Vitalik Buterin_
 - [Aktuelle Analysen zu Layer 2 Skalierungslösungen für Ethereum](https://www.l2beat.com/)
 - [Evaluierung von Ethereum Layer 2 Skalierungslösungen: Ein Vergleichsrahmen](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Ein unvollständiger Leitfaden für Rollups](https://vitalik.ca/general/2021/01/05/rollup.html)
+- [Ein unvollständiger Leitfaden für Rollups](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Ethereum-betriebene ZK-Rollups: Weltmeister](https://hackmd.io/@canti/rkUT0BD8K)
 - [Optimistische Rollups ggü. ZK-Rollups](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Zero-Knowledge Blockchain Skalierung](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)

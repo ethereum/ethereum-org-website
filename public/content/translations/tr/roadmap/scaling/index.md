@@ -32,7 +32,7 @@ Proto-Danksharding sayesinde, blob işlemlerinin Ethereum'un bir parçası olmas
 
 Blob verilerinin genişlemesinin ikinci aşaması karmaşıktır çünkü ağdaki toplama verisinin mevcudiyetini kontrol etmek için yeni metotlar gerektirir ve bu, doğrulayıcıların blok oluşturma ve blok önerme sorumluluklarını ayırmalarına dayanır. Aynı zamanda, doğrulayıcıların blob verisinin küçük alt kümelerini doğruladıklarını kriptografik olarak kanıtlamak için bir yol gerekir.
 
-İkinci adım [“Danksharding”](/roadmap/danksharding/) olarak bilinir. Tam olarak uygulanmasına muhtemelen birkaç yıl var. Danksharding [blok oluşturma ve blok önermenin yanında](/roadmap/pbs), [veri kullanılabilirliği örneklendirmesi (DAS)](/developers/docs/data-availability) şeklinde adlandırılan, her seferinde rastgele birkaç kilobayt örneklendirme ile verilerin kullanılabildiği ve kullanılabilirliği verimli bir şekilde doğrulayan yeni ağ tasarımlarına dayanır.
+İkinci adım [“Danksharding”](/roadmap/danksharding/) olarak bilinir. Tam olarak uygulanmasına muhtemelen birkaç yıl var. Danksharding [blok oluşturma ve blok önermenin yanında,](/roadmap/pbs) [veri kullanılabilirliği örneklendirmesi (DAS)](/developers/docs/data-availability) şeklinde adlandırılan, her seferinde rastgele birkaç kilobayt örneklendirme ile verilerin kullanılabildiği ve kullanılabilirliği verimli bir şekilde doğrulayan yeni ağ tasarımlarına dayanır.
 
 <ButtonLink variant="outline-color" to="/roadmap/danksharding/">Danksharding hakkında daha fazlası</ButtonLink>
 

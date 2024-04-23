@@ -5,11 +5,11 @@ lang: fr
 incomplete: true
 ---
 
-<div class="featured">
+<FeaturedText>
 
 Apprendre à développer pour Ethereum avec le langage de programmation Delphi
 
-</div>
+</FeaturedText>
 
 Utilisez Ethereum pour créer des applications décentralisées (ou « dApps ») qui tirent parti de la technologie de la blockchain et des cryptomonnaies. Ces dApps sont dignes de confiance, ce qui signifie que dès qu'elles sont déployées sur Ethereum, elles fonctionnent toujours comme prévu. Elles peuvent contrôler les actifs numériques afin de créer de nouveaux types d'applications financières. Elles peuvent être décentralisées, ce qui signifie qu'aucune personne ni entité ne les contrôle et qu'il est pratiquement impossible de les censurer.
 

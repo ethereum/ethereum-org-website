@@ -5,7 +5,7 @@ lang: pt-br
 incomplete: false
 ---
 
-<div class="featured">Aprenda a desenvolver para Ethereum usando projetos e ferramentas baseados em Ruby.</div>
+<FeaturedText>Aprenda a desenvolver para Ethereum usando projetos e ferramentas baseados em Ruby.</FeaturedText>
 
 Utilize Ethereum para criar aplicações descentralizadas ("dapps") que utilizam os benefícios das criptomoedas e tecnologias de cadeia de blocos. Esses dapps podem ser confiáveis, o que significa que, uma vez implantados na Ethereum, eles sempre serão executados conforme programado. Eles podem controlar ativos digitais para criar novos tipos de aplicações financeiros. Eles podem ser descentralizados, o que significa que nenhuma entidade ou pessoa os controla sendo, portanto, praticamente impossíveis de serem censurados.
 

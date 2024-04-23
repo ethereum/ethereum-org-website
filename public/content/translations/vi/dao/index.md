@@ -156,7 +156,7 @@ _Thường được sử dụng để phát triển và quản lí phi tập tru
 - [Làm thế nào để khởi phát một cộng đồng số hoạt động dựa trên DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) - [DAOhaus](https://daohaus.club/)
 - [DAO là gì?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) - [Coinmarketcap](https://coinmarketcap.com)
 - [Đồng thuận đa chiều là gì?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [DAO không phải là công ty: Khi sự phân quyền trong tổ chức tự trị có vai trò quan trọng, theo Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [DAO không phải là công ty: Khi sự phân quyền trong tổ chức tự trị có vai trò quan trọng, theo Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA và Nhiều Hơn Nữa: Hướng Dẫn Thuật Ngữ Không Hoàn Chỉnh](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
 ### Video {#videos}

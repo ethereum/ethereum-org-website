@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react"
-import { shuffle } from "lodash"
+import { useEffect, useState } from "react"
+import shuffle from "lodash/shuffle"
 
 import type { TranslationKey } from "@/lib/types"
 
@@ -50,9 +50,7 @@ const appList: Array<App> = [
   },
 ]
 
-export interface IProps {}
-
-const RandomAppList: React.FC<IProps> = () => {
+const RandomAppList = () => {
   const [randomAppList, setRandomAppList] = useState<Array<App>>([])
 
   useEffect(() => {
@@ -64,7 +62,7 @@ const RandomAppList: React.FC<IProps> = () => {
     <ul>
       {randomAppList.map((item, idx) => (
         <li key={idx}>
-          <InlineLink to={item.url}>{item.name}</InlineLink>
+          <InlineLink href={item.url}>{item.name}</InlineLink>
           , <Translation id={item.description} />
         </li>
       ))}

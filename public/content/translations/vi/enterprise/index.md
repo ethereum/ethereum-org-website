@@ -7,7 +7,7 @@ sidebarDepth: 1
 
 # Ethereum cho Doanh nghiệp {#ethereum-for-enterprise}
 
-<div class="featured">Hướng dẫn, bài viết và công cụ về chuỗi khối Ethereum công cộng và riêng tư cho doanh nghiệp.</div>
+<FeaturedText>Hướng dẫn, bài viết và công cụ về chuỗi khối Ethereum công cộng và riêng tư cho doanh nghiệp.</FeaturedText>
 
 ## Vì sao nên sử dụng Enterprise Ethereum? {#why-enterprise-ethereum}
 
@@ -32,7 +32,7 @@ Một số nỗ lực hợp tác để làm cho doanh nghiệp Ethereum thân th
 
 - [EEA -](https://entethalliance.org/) _Enterprise Ethereum Alliance là một tổ chức tiêu chuẩn do thành viên điều hành, có điều lệ là phát triển các thông số kỹ thuật chuỗi khối mở, hướng đến sự hài hòa và khả năng tương tác cho các doanh nghiệp và người tiêu dùng trên toàn thế giới. Cộng đồng thành viên toàn cầu của chúng tôi gồm các nhà lãnh đạo, người tiếp nhận, nhà đổi mới, nhà phát triển và doanh nghiệp cộng tác để tạo ra một trang web mở, phi tập trung vì lợi ích của mọi người._
 
-- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger là một nỗ lực hợp tác mã nguồn mở được tạo ra để thúc đẩy các công nghệ chuỗi khối công nghiệp chéo. Đây là sự hợp tác toàn cầu, được tổ chức bởi Quỹ Linux, bao gồm các nhà lãnh đạo về tài chính, ngân hàng, Internet vạn vật, chuỗi cung ứng, sản xuất và Công nghệ._ _Nền tảng này có một số dự án hoạt động với Ethereum Stack:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow)
+- [Hyperledger Foundation](https://hyperledger.org) _Hyperledger là một nỗ lực hợp tác mã nguồn mở được tạo ra để thúc đẩy các công nghệ chuỗi khối công nghiệp chéo. Đây là sự hợp tác toàn cầu, được tổ chức bởi Quỹ Linux, bao gồm các nhà lãnh đạo về tài chính, ngân hàng, Internet vạn vật, chuỗi cung ứng, sản xuất và Công nghệ._ _Nền tảng này có một số dự án hoạt động với Ethereum Stack:_ - [Hyperledger Besu](https://www.hyperledger.org/blog/2019/08/29/announcing-hyperledger-besu) - Hyperledger Burrow
 
 ## Dịch vụ tập trung vào doanh nghiệp {#enterprise-focused-services}
 
@@ -46,7 +46,6 @@ Các dự án sau đây cung cấp dịch vụ chuỗi khối cho các hệ th�
 ## Giao thức và cơ sở hạ tầng {#protocol-and-infrastructure}
 
 - [Hyperledger Besu](https://www.hyperledger.org/projects/besu) _ứng dụng Ethereum mã nguồn mở được phát triển theo giấy phép Apache 2.0 và được viết bằng Java_
-- [Hyperledger Burrow](https://www.hyperledger.org/projects/hyperledger-burrow) _ứng dụng chuỗi khối với trình thông dịch hợp đồng thông minh được phép phát triển một phần theo đặc điểm kỹ thuật của Máy ảo Ethereum (EVM)_
 - [Infura](https://infura.io/) _truy cập API có thể mở rộng vào mạng Ethereum và IPFS_
 - [Kaleido](https://kaleido.io/) _nền tảng đầy đủ để xây dựng và chạy hệ sinh thái đám mây chéo, doanh nghiệp kết hợp_
 - [Autonity](https://www.clearmatics.com/about/) _bộ giao thức thực hiện các giao thức p2p và cung cấp phần mềm và cơ sở hạ tầng của ứng dụng_

@@ -114,12 +114,12 @@ Dengan memperluas perhitungan ini, kami dapat memperkirakan waktu yang dibutuhka
 <TableContainer>
 
 | Jumlah penarikan | Waktu untuk menyelesaikan |
-| :--------------: | :-----------------------: |
-|     400.000      |         3.5 hari          |
-|     500.000      |         4.3 hari          |
-|     600.000      |         5.2 hari          |
-|     700.000      |         6.1 hari          |
-|     800.000      |         7.0 hari          |
+| :-------------------: | :--------------: |
+|        400.000        |     3.5 hari     |
+|        500.000        |     4.3 hari     |
+|        600.000        |     5.2 hari     |
+|        700.000        |     6.1 hari     |
+|        800.000        |     7.0 hari     |
 
 </TableContainer>
 
@@ -194,7 +194,7 @@ eventCategory="FAQ"
 eventAction="I operate a validator. Where can I find more information on enabling withdrawals?"
 eventName="read more">
 
-Operator validator disarankan untuk mengunjungi halaman <a href="https://launchpad.ethereum.org/withdrawals/">Penarikan Landasan Peluncuran Penaruhan</a> tempat Anda akan menemukan detail lebih lanjut tentang cara mempersiapkan validator Anda untuk melakukan penarikan. yang dipersiapkan, waktu aksi, dan detail lebih lanjut tentang cara kerja penarikan.
+Operator validator disarankan mengunjungi halaman <a href="https://launchpad.ethereum.org/withdrawals/">Penarikan Landasan Peluncuran Penaruhan</a>, tempat Anda akan menemukan detail selengkapnya tentang cara menyiapkan validator Anda untuk penarikan, penetapan waktu aksi, dan detail selengkapnya tentang fungsi penarikan.
 
 Untuk mencoba pengaturan Anda di jaringan percobaan terlebih dahulu, kunjungi <a href="https://goerli.launchpad.ethereum.org">Landasan Peluncuran Penaruhan Jaringan Percobaan Goerli</a> untuk memulai.
 
@@ -214,5 +214,5 @@ Tidak. Setelah validator keluar dan saldo penuhnya telah ditarik, setiap dana ta
 - [EIP-4895: Rantai suar mendorong penarikan sebagai operasi](https://eips.ethereum.org/EIPS/eip-4895)
 - [Penggembala Kucing Ethereum - Shanghai](https://www.ethereumcatherders.com/shanghai_upgrade/index.html)
 - [PEEPanEIP #94: Penarikan ETH yang Dipertaruhkan (Pengujian) dengan Potuz & Hsiao-Wei Wang](https://www.youtube.com/watch?v=G8UstwmGtyE)
-- [PEEPanEIP#68: EIP-4895: Rantai Suar mendorong penarikan sebagai operasi bersama Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
+- [PEEPanEIP#68: EIP-4895: Rantai suar mendorong penarikan sebagai operasi bersama Alex Stokes](https://www.youtube.com/watch?v=CcL9RJBljUs)
 - [Memahami Saldo Efektif Validator](https://www.attestant.io/posts/understanding-validator-effective-balance/)

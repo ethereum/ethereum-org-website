@@ -5,7 +5,7 @@ lang: pt-br
 incomplete: true
 ---
 
-<div class="featured">Aprenda a desenvolver para Ethereum utilizando projetos e ferramentas baseados em Rust</div>
+<FeaturedText>Aprenda a desenvolver para Ethereum utilizando projetos e ferramentas baseados em Rust</FeaturedText>
 
 Utilize Ethereum para criar aplicações descentralizadas ("dapps") que utilizam os benefícios das criptomoedas e tecnologias de cadeia de blocos. Esses dapps podem ser muito confiáveis, o que significa que uma vez que eles são implantados na rede Ethereum, sempre serão executados como programados. Eles podem controlar ativos digitais a fim de criar novos tipos de aplicações financeiras. Eles podem ser descentralizados, o que significa que nenhuma entidade ou pessoa os controla sendo portanto praticamente impossíves de serem censurados.
 
@@ -44,7 +44,7 @@ Precisa de uma introdução geral? Confira [ethereum.org/learn](/learn/) ou [eth
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) — _Coleção de externos para interagir com uma rede análoga ao Ethereum._
 - [Lighthouse](https://github.com/sigp/lighthouse) — _Cliente rápido da camada de consenso do Ethereum_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) — _Proposta de reformulação da camada de execução de contrato inteligente do Ethereum usando um subconjunto determinístico do WebAssembly_
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _referência da API OASIS_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _referência da API OASIS_
 - [Solaris](https://github.com/paritytech/sol-rs) — _Agente de teste unitário dos contratos inteligentes no Solidity usando o EVM nativo do cliente Parity._
 - [SputnikVM](https://github.com/rust-blockchain/evm) — _Implementação da Máquina Virtual do Ethereum no Rust_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) - _smart contract Wavelet em Rust_

@@ -5,7 +5,7 @@ lang: it
 incomplete: true
 ---
 
-<div class="featured">Scopri come sviluppare per Ethereum usando progetti e strumenti basati su Go</div>
+<FeaturedText>Scopri come sviluppare per Ethereum usando progetti e strumenti basati su Go</FeaturedText>
 
 Usa Ethereum per creare applicazioni decentralizzate (o "dapp"). Queste dapp sono attendibili perché, una volta "caricate" su Ethereum, vengono eseguite sempre come sono state programmate. Sono decentralizzate, significa che sono eseguite su una rete peer-to-peer e non esiste un punto di errore singolo. Nessun ente o persona le controlla e sono quasi impossibili da censurare. Possono controllare risorse digitali in modo da creare nuovi tipi di applicazioni.
 

@@ -27,11 +27,11 @@ Vaya directamente a la información sobre algunas de las actualizaciones anterio
 
 ## 2023 {#2023}
 
-### Shanghai {#shanghai}
+### Shanghai-Capella {#shapella}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### Resumen {#shanghai-summary}
+#### Resumen de Shangai {#shanghai-summary}
 
 La actualizacion Shangai permite retirar la participación a la capa de ejecución. Junto con la actualización Capella, habilitó los bloques para aceptar las operaciones de retirada, que permitieran a los interesados retirar sus ETH provenientes de la cadena de baliza para ejecutarlos posteriormente.
 
@@ -49,13 +49,7 @@ La actualizacion Shangai permite retirar la participación a la capa de ejecuci�
 
 - [Lea la especificación de la actualización Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### Capella {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### Resumen {#capella-summary}
+#### Resumen de Capella {#capella-summary}
 
 La actualizacion Capella es la tercera actualización importante a la capa de consenso (cadena de baliza), que le permite retirar su participación. Capella se produjo de forma sincrónica a la actualización de la capa de ejecución, Shanghai, y activó la funcionalidad de retirada de participaciones.
 
@@ -97,7 +91,7 @@ El paso de la cadena de bloque de la prueba de trabajo a la [dificultad total te
 
 #### Resumen {#bellatrix-summary}
 
-La actualización Bellatrix fue la segunda actualización programada para la [cadena de baliza](/roadmap/beacon-chain), como prepración de la cadena para [La Fusión](/roadmap/merge/). Incorpora penalizaciones del validador a sus valores completos por inactividad y recortes por malas conductas. Bellatrix también incluye una actualización de las reglas de elección de la bifurcación para preparar la cadena de cara a La Fusión y la transición del último bloque de prueba de trabajo al primer bloque de prueba de participación. Esto incluye sensibilizar a los clientes sobre la dificultad total de la terminal [](/glossary/#terminal-total-difficulty) de 58750000000000000000000.
+La actualización Bellatrix fue la segunda actualización programada para la [cadena de baliza](/roadmap/beacon-chain), como prepración de la cadena para [La Fusión](/roadmap/merge/). Incorpora penalizaciones del validador a sus valores completos por inactividad y recortes por malas conductas. Bellatrix también incluye una actualización de las reglas de elección de la bifurcación para preparar la cadena de cara a La Fusión y la transición del último bloque de prueba de trabajo al primer bloque de prueba de participación. Esto incluye sensibilizar a los clientes sobre la dificultad [total de la terminal](/glossary/#terminal-total-difficulty) de 58750000000000000000000.
 
 - [Lea las especificaciones de actualización Bellatrix](https://github.com/ethereum/consensus-specs/tree/dev/specs/bellatrix)
 
@@ -462,7 +456,7 @@ Homestead: la bifurcación con perspectivas de futuro. Incluyó varios cambios d
 
 #### Resumen {#frontier-thawing-summary}
 
-La bifurcación de deshielo Frontier elevó el limite del [gas](/glossary/#gas) de 5.000 por [bloque](/glossary/#block) y fijó el precio por defecto en 51 [gwei](/glossary/#gwei). Esto permitió que se realizaran transacciones que requiriesen 21.000 unidades de gas. La bomba de dificultad [](/glossary/#difficulty-bomb)se introdujo para asegurar un futuro de bifurcación dura a la [prueba de participación](/glossary/#pos).
+La bifurcación de deshielo Frontier elevó el limite del [gas](/glossary/#gas) de 5.000 por [bloque](/glossary/#block) y fijó el precio por defecto en 51 [gwei](/glossary/#gwei). Esto permitió que se realizaran transacciones que requiriesen 21.000 unidades de gas. La [bomba de dificultad](/glossary/#difficulty-bomb)se introdujo para asegurar un futuro de bifurcación dura a la [prueba de participación](/glossary/#pos).
 
 - [Leer el anuncio de Ethereum Foundation](https://blog.ethereum.org/2015/08/04/the-thawing-frontier/)
 - [Lea la actualización 1 del protocolo de Ethereum](https://blog.ethereum.org/2015/08/04/ethereum-protocol-update-1/)

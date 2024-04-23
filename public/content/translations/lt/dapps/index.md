@@ -6,11 +6,11 @@ lang: lt
 
 # Ethereum naudojimas {#using-ethereum}
 
-<div class="featured">
+<FeaturedText>
 
 **Norite pradėti naudoti Ethereum?** Su Ethereum sukurta šimtai decentralizuotų programų (dapps), kurias galite naudoti šiandien.
 
-</div>
+</FeaturedText>
 
 ## Kaip naudoti su Ethereum sukurtą programą {#how-to-use-an-application-built-on-ethereum}
 

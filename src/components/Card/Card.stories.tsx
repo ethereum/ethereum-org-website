@@ -4,7 +4,7 @@ import { Meta, StoryFn } from "@storybook/react"
 
 import { Button } from "@/components/Buttons"
 
-import Card, { IProps } from "."
+import Card, { CardProps } from "."
 
 export default {
   component: Card,
@@ -20,7 +20,7 @@ export default {
 export const Default: StoryFn<typeof Card> = (args) => {
   const { t } = useTranslation("page-developers-index")
 
-  const defaultProps: IProps = {
+  const defaultProps: CardProps = {
     emoji: ":woman_student:",
     title: t("page-developers-learn"),
     description: t("page-developers-learn-desc"),

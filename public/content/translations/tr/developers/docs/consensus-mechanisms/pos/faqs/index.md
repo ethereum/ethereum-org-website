@@ -18,7 +18,7 @@ Hisse ispatı, doğrulayıcılar olarak bilinen düğümlerin, açıkça bir kri
 
 İş ispatı, madencilik sürecinde elektrik tüketildiği için çok daha fazla enerji tüketimine neden olur. Öte yandan, hisse ispatı ise sadece çok az bir enerji miktarı gerektirir - Ethereum doğrulayıcıları, hatta Raspberry Pi gibi düşük güçlü cihazlarda bile çalışabilir. Ethereum'un hisse ispatı mekanizması, iş ispatına göre daha güvenli olarak düşünülmektedir çünkü saldırmak için gerekli maliyet daha yüksektir ve saldırganın karşılaşacağı sonuçlar daha ciddidir.
 
-İş ispatı ile hisse ispatı arasındaki farklılıklar tartışmalı bir konudur. [Vitalik Buterin'in blogu](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) ve Justin Drake ile Lyn Alden arasındaki tartışma, argümanların iyi bir özetini sunmaktadır.
+İş ispatı ile hisse ispatı arasındaki farklılıklar tartışmalı bir konudur. [Vitalik Buterin'in blogu](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-are-the-benefits-of-proof-of-stake-as-opposed-to-proof-of-work) ve Justin Drake ile Lyn Alden arasındaki tartışma, argümanların iyi bir özetini sunmaktadır.
 
 <YouTube id="1m12zgJ42dI" />
 
@@ -89,7 +89,7 @@ Kilit öğütme, saldırganın kendi doğrulayıcılarını lehine seçici algor
 Sosyal cezalandırma, topluluğun bir saldırıya yanıt olarak blok zincirin bir çatalını yönetme yeteneğidir. Bu, topluluğun, bir saldırının dürüst olmayan bir zinciri kesinleştirmesinin ardından kurtulmasını sağlar. Sosyal cezalandırma, sansür saldırılarına karşı da kullanılabilir.
 
 - [Sosyal cezalandırma hakkında daha fazlası](https://ercwl.medium.com/the-case-for-social-slashing-59277ff4d9c7)
-- [Vitalik Buterin'in sosyal cezalandırma hakkındaki görüşleri](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
+- [Vitalik Buterin'in sosyal cezalandırma hakkındaki görüşleri](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-proof-of-stake)
 
 ## Cezalandırılacak mıyım? {#will-i-get-slashed}
 
@@ -101,7 +101,7 @@ Bir doğrulayıcı olarak, kasıtlı olarak kötü niyetli davranışlarda bulun
 
 Riske atmama sorunu, bazı hisse ispatı mekanizmalarında yalnızca ödüllerin ve cezaların olmadığı bir kavramsal sorundur. Eğer hiçbir şey riske atılmamışsa, faydacı bir doğrulayıcı, ödüllerini artırdığı için herhangi bir blok zincir çatalına veya hatta birden çok çatala tanıklık etmekten eşit derecede memnun olur. Ethereum, tek bir kanonik zinciri sağlamak için kesinlik koşullarını ve cezalandırmayı kullanarak bunu aşar.
 
-[Riske atmama hakkında daha fazlası](https://vitalik.ca/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
+[Riske atmama hakkında daha fazlası](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html#what-is-the-nothing-at-stake-problem-and-how-can-it-be-fixed)
 
 ## Çatal seçim algoritması nedir? {#what-is-a-fork-choice-algorithm}
 

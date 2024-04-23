@@ -2,7 +2,7 @@
 title: Preparação do Ethereum para o futuro
 description: Essas melhorias consolidam o Ethereum como a camada de base resiliente e descentralizada para o futuro, seja ele qual for.
 lang: pt-br
-image: ..//roadmap/roadmap-future.png
+image: /roadmap/roadmap-future.png
 alt: "Planejamento Ethereum"
 template: roadmap
 ---

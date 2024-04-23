@@ -68,9 +68,9 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/docs/consensus-mechanisms/pos/weak-subjectivity",
     "/developers/docs/consensus-mechanisms/pow/",
     "/developers/docs/consensus-mechanisms/pow/mining",
-    "/developers/docs/consensus-mechanisms/pow/mining-algorithms",
-    "/developers/docs/consensus-mechanisms/pow/mining-algorithms/dagger-hashimoto",
-    "/developers/docs/consensus-mechanisms/pow/mining-algorithms/ethash",
+    "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms",
+    "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/dagger-hashimoto",
+    "/developers/docs/consensus-mechanisms/pow/mining/mining-algorithms/ethash",
     "/developers/docs/dapps",
     "/developers/docs/data-and-analytics",
     "/developers/docs/data-and-analytics/block-explorers",
@@ -197,6 +197,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers",
     "/developers/tutorials/waffle-test-simple-smart-contract",
     "/developers/tutorials/yellow-paper-evm",
+    "/developers/tutorials/creating-a-wagmi-ui-for-your-contract",
     // Static (68/68) ✅
     "/about",
     "/bridges",
@@ -234,7 +235,6 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/contributing/translation-program/translatathon",
     "/contributing/translation-program/translators-guide",
     "/cookie-policy",
-    "/deprecated-software",
     "/eips",
     "/energy-consumption",
     "/enterprise",
@@ -253,6 +253,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/privacy-policy",
     "/roadmap/account-abstraction",
     "/roadmap/danksharding",
+    "/roadmap/dencun",
     "/roadmap/merge/issuance",
     "/roadmap/pbs",
     "/roadmap/secret-leader-election",
@@ -265,6 +266,7 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
     "/terms-of-use",
     "/web3",
     "/whitepaper",
+    "/wrapped-eth",
     "/zero-knowledge-proofs",
   ]
 
@@ -348,28 +350,38 @@ export const getContent = (dir: string) => {
 }
 
 export const getTutorialsData = (locale: string): ITutorial[] => {
-  const fullPath = join(CURRENT_CONTENT_DIR, locale !== 'en' ? `translations/${locale!}` : '', 'developers/tutorials')
+  const fullPath = join(
+    CURRENT_CONTENT_DIR,
+    locale !== "en" ? `translations/${locale!}` : "",
+    "developers/tutorials"
+  )
   let tutorialData: ITutorial[] = []
 
   if (fs.existsSync(fullPath)) {
     const languageTutorialFiles = fs.readdirSync(fullPath)
 
     tutorialData = languageTutorialFiles.map((dir) => {
-      const filePath = join(CURRENT_CONTENT_DIR, locale !== 'en' ? `translations/${locale!}` : '', 'developers/tutorials', dir, 'index.md')
+      const filePath = join(
+        CURRENT_CONTENT_DIR,
+        locale !== "en" ? `translations/${locale!}` : "",
+        "developers/tutorials",
+        dir,
+        "index.md"
+      )
       const fileContents = fs.readFileSync(filePath, "utf8")
       const { data, content } = matter(fileContents)
       const frontmatter = data as Frontmatter
-      
+
       return {
         to: join(`/${locale}/developers/tutorials`, dir),
         title: frontmatter.title,
         description: frontmatter.description,
-        author: frontmatter.author || '',
+        author: frontmatter.author || "",
         tags: frontmatter.tags,
         skill: frontmatter.skill as Skill,
         timeToRead: Math.round(readingTime(content).minutes),
         published: dateToString(frontmatter.published),
-        lang: frontmatter.lang, 
+        lang: frontmatter.lang,
         isExternal: false,
       }
     })

@@ -5,7 +5,7 @@ lang: pt-br
 incomplete: true
 ---
 
-<div class="featured">Aprenda a desenvolver para Ethereum utilizando projetos e ferramentas baseados em Python</div>
+<FeaturedText>Aprenda a desenvolver para Ethereum utilizando projetos e ferramentas baseados em Python</FeaturedText>
 
 Utilize Ethereum para criar aplicações descentralizadas ("dapps") que utilizam os benefícios das criptomoedas e tecnologias de cadeia de blocos. Esses dapps podem ser muito confiáveis, o que significa que uma vez que eles são implantados na rede Ethereum, sempre serão executados como programados. Eles podem controlar ativos digitais a fim de criar novos tipos de aplicações financeiras. Eles podem ser descentralizados, o que significa que nenhuma entidade ou pessoa os controla sendo, portanto, praticamente impossíveis de serem censurados.
 
@@ -82,7 +82,7 @@ Os seguintes projetos baseados na Ethereum usam ferramentas mencionadas nesta p�
 ## Comunidade de discussão Python {#python-community-contributors}
 
 - [Comunidade Discord Python Ethereum](https://discord.gg/9zk7snTfWe) Para discussões sobre Web3.py e outros frameworks Python
-- [Vyper Discord](<[https://discord.gg/9zk7snTfWe](https://discord.gg/SdvKC79cJk)>) Para discussão sobre programação de contrato inteligente com Vyper
+- [Vyper Discord](https://discord.gg/SdvKC79cJk) Para discussão sobre programação de contrato inteligente com Vyper
 
 ## Demais listas agregadas {#other-aggregated-lists}
 

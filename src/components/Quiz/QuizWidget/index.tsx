@@ -1,5 +1,6 @@
 import { Dispatch, SetStateAction, useEffect, useRef } from "react"
 import {
+  calc,
   Center,
   Heading,
   Spinner,
@@ -8,7 +9,7 @@ import {
   VStack,
 } from "@chakra-ui/react"
 
-import { QuizStatus, UserStats } from "@/lib/types"
+import type { QuizKey, QuizStatus, UserStats } from "@/lib/types"
 
 import Translation from "@/components/Translation"
 
@@ -24,8 +25,10 @@ import { QuizRadioGroup } from "./QuizRadioGroup"
 import { QuizSummary } from "./QuizSummary"
 import { useQuizWidget } from "./useQuizWidget"
 
+import { useRtlFlip } from "@/hooks/useRtlFlip"
+
 type CommonProps = {
-  quizKey: string
+  quizKey: QuizKey
   updateUserStats: Dispatch<SetStateAction<UserStats>>
 }
 
@@ -36,7 +39,7 @@ type StandaloneQuizProps = CommonProps & {
 }
 
 type QuizPageProps = CommonProps & {
-  currentHandler: (nextKey: string) => void
+  currentHandler: (nextKey: QuizKey) => void
   statusHandler: (status: QuizStatus) => void
   isStandaloneQuiz?: false
 }
@@ -69,9 +72,11 @@ const QuizWidget = ({
     setCurrentQuestionAnswerChoice,
   } = useQuizWidget({ quizKey, updateUserStats })
 
+  const { isRtl } = useRtlFlip()
+
   const quizPageProps = useRef<
     | (Required<Pick<QuizWidgetProps, "currentHandler" | "statusHandler">> & {
-        nextQuiz: string | undefined
+        nextQuiz: QuizKey | undefined
       })
     | false
   >(false)
@@ -129,7 +134,7 @@ const QuizWidget = ({
           top={{ base: 2, md: 0 }}
           insetInlineStart={{ md: "50%" }}
           transform="auto"
-          translateX={{ md: "-50%" }}
+          translateX={{ md: calc.multiply("50%", isRtl ? 1 : -1) }}
           translateY={{ md: "-50%" }}
         >
           <AnswerIcon answerStatus={answerStatus} />

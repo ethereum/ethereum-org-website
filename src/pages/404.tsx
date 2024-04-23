@@ -15,6 +15,7 @@ import { getRequiredNamespacesForPage } from "@/lib/utils/translations"
 export const getStaticProps = (async ({ locale }) => {
   const requiredNamespaces = getRequiredNamespacesForPage("/")
 
+  // Want to check common namespace, so looking at requiredNamespaces[0]
   const contentNotTranslated = !existsNamespace(locale!, requiredNamespaces[0])
 
   const lastDeployDate = getLastDeployDate()

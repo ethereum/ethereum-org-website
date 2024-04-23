@@ -49,7 +49,7 @@ Ang mga decentralized identifier ay sino-store sa mga distributed ledger (blockc
 
 ## Paano naging posible ang mga decentralized identifier? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Public Key Infrastructure (PKI) {#public-key-infrastructure}
+### 1. Public Key Infrastructure (PKI) {#public-key-cryptography}
 
 Ang public-key infrastructure (PKI) ay isang hakbang para sa seguridad ng impormasyon na bumubuo ng [pampublikong key](/glossary/#public-key) at [ pribadong key](/glossary/#private-key) para sa isang entity. Ang public-key cryptography ay ginagamit sa mga blockchain network upang patunayan ang identity ng user at patunayan ang pagmamay-ari sa mga digital asset.
 
@@ -109,7 +109,7 @@ Narito ang isang halimbawa upang ipakita kung paano gumagana ang mga on-chain na
 
 ### Soulbound tokens at identity {#soulbound}
 
-Puwedeng gamitin ang [soulbound tokens](https://vitalik.ca/general/2022/01/26/soulbound.html)(mga non-transferable na NFT) upang kolektahin ang impormasyon na partikular sa isang wallet. Epektibo itong gumagawa ng natatanging on-chain na identity patungo sa isang partikular na Ethereum address na maaaring kinabibilangan ng mga token na kumakatawan sa mga napagtagumpayan (hal. pagtatapos ng ilang partikular na online na kurso o paglampas sa isang threshold score sa isang laro) o pakikilahok sa komunidad.
+Puwedeng gamitin ang [soulbound tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)(mga non-transferable na NFT) upang kolektahin ang impormasyon na partikular sa isang wallet. Epektibo itong gumagawa ng natatanging on-chain na identity patungo sa isang partikular na Ethereum address na maaaring kinabibilangan ng mga token na kumakatawan sa mga napagtagumpayan (hal. pagtatapos ng ilang partikular na online na kurso o paglampas sa isang threshold score sa isang laro) o pakikilahok sa komunidad.
 
 ## Mga benepisyo ng decentralized identity {#benefits-of-decentralized-identity}
 

@@ -156,7 +156,7 @@ _عادةً ما تُستخدم للتطوير وتقديم الإرشادات �
 - [كيفية إنشاء مجتمع رقمي مدعوم بواسطة منظمة مستقلة لامركزية](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
 - [ما هي المنظمة المستقلة اللامركزية؟](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
 - [ما هو إجماع الآراء المجسَّم؟](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
-- [المنظمات المستقلة اللامركزية ليست مجموعة شركات: حيث تهمّ اللامركزية في المنظمات المستقلة وفقًا لـ Vitalik](https://vitalik.ca/general/2022/09/20/daos.html)
+- [المنظمات المستقلة اللامركزية ليست مجموعة شركات: حيث تهمّ اللامركزية في المنظمات المستقلة وفقًا لـ Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [منظمات DAO وDAC وDA والمزيد: دليل مصطلحات غير مكتمل](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [مدونة إثيريوم](https://blog.ethereum.org)
 
 ### مقاطع الفيديو {#videos}

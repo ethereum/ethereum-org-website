@@ -1,7 +1,7 @@
 import fs from "fs"
 import path from "path"
 
-import { ResponseObject,SourceFilesModel } from "@crowdin/crowdin-api-client"
+import { ResponseObject, SourceFilesModel } from "@crowdin/crowdin-api-client"
 
 import {
   CROWDIN_API_MAX_LIMIT,

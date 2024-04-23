@@ -18,7 +18,7 @@ summaryPoint3: Az ökológiailag hasznos eszközök drasztikus skálázási lehe
 
 Ehelyett a ReFi arra törekszik, hogy regeneratív ciklusok létrehozásával környezeti, közösségi és szociális problémákat oldjon meg. Ezek a rendszerek egyszerre teremtenek értéket a résztvevőknek, valamint az ökoszisztéma és a közösségek javait szolgálják.
 
-A ReFi egyik alapköve a regeneratív gazdaság koncepciója, melyet John Fullerton fogalmazott meg a [Capital Institute intézettől](https://capitalinstitute.org). Nyolc összefüggő elvet javasolt, melyek megalapozzák a rendszer egészségét:
+A ReFi egyik alapköve a regeneratív gazdaság koncepciója, amelyet John Fullerton fogalmazott meg a Capital Institute intézettől. Az ő javaslata [nyolc egymással összefüggő elv,](https://capitalinstitute.org/8-principles-regenerative-economy/) amelyet egy rendszerszintű egészségi állapot támaszt alá:
 
 ![A nyolc összefüggő elv](refi-regenerative-economy-diagram.png)
 

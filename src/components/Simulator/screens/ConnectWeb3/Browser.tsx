@@ -4,17 +4,17 @@ import { BsTriangle } from "react-icons/bs"
 import { IoEllipsisHorizontalSharp } from "react-icons/io5"
 import { PiMagnifyingGlass } from "react-icons/pi"
 import { TbWorldWww } from "react-icons/tb"
-import { Box, Flex,type FlexProps, Icon, Text } from "@chakra-ui/react"
+import { Box, Flex, type FlexProps, Icon, Text } from "@chakra-ui/react"
 
 import { BASE_ANIMATION_DELAY_SEC } from "../../constants"
 import { NotificationPopover } from "../../NotificationPopover"
 
 import { EXAMPLE_APP_URL } from "./constants"
 
-interface IProps extends FlexProps {
+type BrowserProps = FlexProps & {
   progressStepper: () => void
 }
-export const Browser: React.FC<IProps> = ({ progressStepper, ...props }) => {
+export const Browser = ({ progressStepper, ...props }: BrowserProps) => {
   const [typing, setTyping] = useState(false)
   useEffect(() => {
     const timeout = setTimeout(() => {

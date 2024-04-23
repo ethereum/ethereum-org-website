@@ -4,7 +4,7 @@ description: A zero-knowledge bizonyítékok nem technikai bemutatása kezdők s
 lang: hu
 ---
 
-## Mik azok a zero-knowledge (nullaismeret-alapú) bizonyítékok? {#what-are-zk-proofs}
+# Mik azok a zero-knowledge (nullaismeret-alapú) bizonyítékok? {#what-are-zk-proofs}
 
 A zero-knowledge bizonyíték annak módja, hogy egy állítás érvényességét úgy igazoljuk, hogy magát az állítást nem fedjük fel. A bizonyító próbálja az állítást elfogadtatni, miközben az ellenőrző felelős annak validálásáért.
 
@@ -176,7 +176,7 @@ A MACI használatához ugyanakkor _muszáj_ megbízni a koordinátorban, hogy ne
 
 Ha a koordinátor jóhiszeműen jár el, akkor a MACI egy kiváló eszköz arra, hogy garantálja a láncon belüli szavazás szentesítését. Ez megmagyarázza a népszerűségét a kvadratikus finanszírozási alkalmazásokban (mint amilyen a [clr.fund](https://clr.fund/#/about/maci)), ami nagy mértékben függ az egyének szavazásának integritásától.
 
-[Bővebben a MACI-ról](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
+[Bővebben a MACI-ról](https://privacy-scaling-explorations.github.io/maci/).
 
 ## A zero-knowledge bizonyítékok hátulütői {#drawbacks-of-using-zero-knowledge-proofs}
 
@@ -208,5 +208,5 @@ A ZK-STARK immunis a kvantumszámítógépek fenyegetésére, mert ütközésál
 - [Zero-Knowledge bizonyíték: az adatbiztonság javítása a blokkláncon](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARK-ok — Egy valós zero-knowledge példa és mélyebb elemzése](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK-ok — Igazolható bizalom létrehozása, még a kvantumszámítógépekkel szemben is](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Egy hozzávetőleges áttekintés, hogyan lehetségesek a zk-SNARK-ok](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Egy hozzávetőleges áttekintés, hogyan lehetségesek a zk-SNARK-ok](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Mi az a zero-knowledge bizonyíték és mi a szerepe a blokkláncon?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

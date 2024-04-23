@@ -14,13 +14,13 @@ import Text from "./OldText"
 
 import { useRtlFlip } from "@/hooks/useRtlFlip"
 
-export interface IProps {
+export type DocLinkProps = {
   children?: React.ReactNode
   to: string
   isExternal?: boolean
 }
 
-const DocLink: React.FC<IProps> = ({ to, children, isExternal = false }) => {
+const DocLink = ({ to, children, isExternal = false }: DocLinkProps) => {
   const linkBoxShadowColor = useToken("colors", "primary.base")
   const { flipForRtl } = useRtlFlip()
 

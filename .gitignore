@@ -49,3 +49,6 @@ robots.txt
 
 # .crowdin folder used as temp forlder for crowdin-import script
 .crowdin
+
+# vscode workplace configuration
+.vscode

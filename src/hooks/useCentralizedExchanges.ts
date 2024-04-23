@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { shuffle } from "lodash"
+import shuffle from "lodash/shuffle"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 
@@ -12,6 +12,7 @@ import { useTranslation } from "next-i18next"
 // import squarelink from "@/public/wallets/squarelink.png"
 // import trust from "@/public/wallets/trust.png"
 import type { ImageProps } from "@/components/Image"
+import { SelectOnChange } from "@/components/Select"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
@@ -38,6 +39,7 @@ import itezcom from "@/public/exchanges/itezcom.png"
 import korbit from "@/public/exchanges/korbit.png"
 import kraken from "@/public/exchanges/kraken.png"
 import kucoin from "@/public/exchanges/kucoin.png"
+import matrixport from "@/public/exchanges/matrixport.png"
 import moonpay from "@/public/exchanges/moonpay.png"
 import mtpelerin from "@/public/exchanges/mtpelerin.png"
 import okx from "@/public/exchanges/okx.png"
@@ -65,15 +67,16 @@ type ExchangeKey =
   | "gemini"
   | "huobiglobal"
   | "itezcom"
+  | "korbit"
   | "kraken"
   | "kucoin"
-  | "mtpelerin"
+  | "matrixport"
   | "moonpay"
+  | "mtpelerin"
   | "okx"
   | "rain"
   | "shakepay"
   | "wazirx"
-  | "korbit"
 
 type ExchangeDetail = {
   name: string
@@ -207,6 +210,12 @@ const exchanges: ExchangeDetails = {
     image: huobiglobal,
     usaExceptions: [],
   },
+  matrixport: {
+    name: "Matrixport",
+    url: "https://www.matrixport.com/",
+    image: matrixport,
+    usaExceptions: [],
+  },
   itezcom: {
     name: "Itez",
     url: "https://itez.com/",
@@ -278,16 +287,26 @@ const exchanges: ExchangeDetails = {
 export const useCentralizedExchanges = () => {
   const { locale } = useRouter()
   const { t } = useTranslation("page-get-eth")
-  const [selectedCountry, setSelectedCountry] = useState<ExchangeByCountryOption | null>()
+  const [selectedCountry, setSelectedCountry] =
+    useState<ExchangeByCountryOption | null>()
 
   const placeholderString = t("page-get-eth-exchanges-search")
 
   // Add `value` & `label` for Select component, sort alphabetically
-  const selectOptions: ExchangeByCountryOption[] = Object.entries(exchangeData as ExchangeData)
-    .map(([country, exchanges]) => ({ value: country, label: country, exchanges }))
+  const selectOptions: ExchangeByCountryOption[] = Object.entries(
+    exchangeData as ExchangeData
+  )
+    .map(([country, exchanges]) => ({
+      value: country,
+      label: country,
+      exchanges,
+    }))
     .sort((a, b) => a.value.localeCompare(b.value))
 
-  const handleSelectChange = (selectedOption: ExchangeByCountryOption): void => {
+  const handleSelectChange: SelectOnChange<ExchangeByCountryOption> = (
+    selectedOption
+  ) => {
+    if (!selectedOption) return
     trackCustomEvent({
       eventCategory: `Country input`,
       eventAction: `Selected`,
@@ -298,10 +317,11 @@ export const useCentralizedExchanges = () => {
 
   const exchangesArray = Object.keys(exchanges) as ExchangeKey[]
 
-  const formatList = (values: string[]): string => new Intl.ListFormat(locale, {
-    style: 'long',
-    type: 'conjunction',
-  }).format(values)
+  const formatList = (values: string[]): string =>
+    new Intl.ListFormat(locale, {
+      style: "long",
+      type: "conjunction",
+    }).format(values)
 
   // Construct arrays for CardList
   let filteredExchanges: FilteredData[] = []
@@ -311,9 +331,7 @@ export const useCentralizedExchanges = () => {
     // Filter to exchanges that serve selected Country
     filteredExchanges = shuffle(
       exchangesArray
-        .filter(
-          (exchange) => selectedCountry?.exchanges.includes(exchange)
-        )
+        .filter((exchange) => selectedCountry?.exchanges.includes(exchange))
         // Format array for <CardList/>
         .map((exchange) => {
           // Add state exceptions if Country is USA
@@ -322,7 +340,9 @@ export const useCentralizedExchanges = () => {
           if (selectedCountry.value === UNITED_STATES) {
             const { usaExceptions } = exchanges[exchange]
             if (usaExceptions.length > 0) {
-              description = `${t("page-get-eth-exchanges-except")} ${formatList(usaExceptions)}`
+              description = `${t("page-get-eth-exchanges-except")} ${formatList(
+                usaExceptions
+              )}`
             }
           }
           return {

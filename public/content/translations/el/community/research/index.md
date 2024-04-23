@@ -71,7 +71,7 @@ lang: el
 - [Διαδρομές για τη λήξη κατάστασης.](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Πρόταση λήξης κατάστασης και Verkel.](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [Διαχείριση ιστορικού.](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle Trees.](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Verkle Trees.](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Δειγματοληψία διαθεσιμότητας δεδομένων](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Ανάπτυξη εφαρμογής πελάτη {#client-development}

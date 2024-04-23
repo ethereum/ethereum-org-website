@@ -8,7 +8,7 @@ I blocchi costituiscono le unità fondamentali della blockchain. I blocchi sono 
 
 ## Prerequisiti {#prerequisites}
 
-L'azione di proporre un blocco fa parte del protocollo di proof-of-stake. Per aiutarti a comprendere questa pagina, ti consigliamo di leggere a riguardo del [proof-of-stake](src/content/developers/docs/consensus-mechanisms/pos/) e dell'[architettura dei blocchi](src/content/developers/docs/blocks/).
+L'azione di proporre un blocco fa parte del protocollo di proof-of-stake. Per aiutarti a comprendere questa pagina, ti consigliamo di leggere a riguardo del [proof-of-stake](/developers/docs/consensus-mechanisms/pos/) e dell'[architettura dei blocchi](/developers/docs/blocks/).
 
 ## Chi produce i blocchi? {#who-produces-blocks}
 
@@ -64,6 +64,6 @@ Il propositore del blocco riceve il pagamento per il proprio lavoro. Esiste una 
 
 - [Introduzione ai blocchi](/developers/docs/blocks/)
 - [Introduzione al proof-of-stake](/developers/docs/consensus-mechanisms/pos/)
-- [Specifiche del consenso di Ethereum](https://www.github.com/ethereum/consensus-specs)
+- [Specifiche del consenso di Ethereum](https://github.com/ethereum/consensus-specs)
 - [Introduzione a Gasper](/developers/docs/consensus-mechanisms/pos/)
 - [Aggiornare Ethereum](https://eth2book.info/)

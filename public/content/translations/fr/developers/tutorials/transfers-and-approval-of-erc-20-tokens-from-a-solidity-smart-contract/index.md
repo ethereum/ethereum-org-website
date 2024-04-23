@@ -17,7 +17,7 @@ address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 Dans le tutoriel précédent, nous avons étudié [l'anatomie d'un jeton ERC-20 dans Solidity](/developers/tutorials/understand-the-erc-20-token-smart-contract/) sur la blockchain Ethereum. Dans cet article, nous allons voir comment nous pouvons utiliser un contrat intelligent pour interagir avec un jeton en utilisant le langage Solidity.
 
-Pour ce contrat intelligent, nous allons créer un échange décentralisé vraiment factice où un utilisateur peut échanger de l'Ethereum contre notre jeton [ERC-20](/developers/docs/standards/tokens/erc-20/) nouvellement déployé.
+Pour ce contrat intelligent, nous allons créer un échange décentralisé très rudimentaire où un utilisateur pourra échanger de l'Ether contre notre nouveau [jeton ERC-20](/developers/docs/standards/tokens/erc-20/) récemment déployé.
 
 Pour ce tutoriel, nous utiliserons le code que nous avons écrit dans le tutoriel précédent comme base. Notre DEX instanciera une instance du contrat dans son constructeur et effectuera les opérations de :
 
@@ -196,7 +196,7 @@ function sell(uint256 amount) public {
 }
 ```
 
-Si tout fonctionne, vous devriez voir 2 événements (un `Transfer` et `Sold`) dans la transaction et votre solde de jetons et Ethereum mis à jour.
+Si tout fonctionne correctement, vous devriez voir 2 événements (un `Transfer` et `Sold`) dans la transaction, ainsi que la mise à jour de votre solde de jetons et de votre solde d'Ether.
 
 ![Deux événements dans la transaction : le transfert et la vente](./transfer-and-sold-events.png)
 

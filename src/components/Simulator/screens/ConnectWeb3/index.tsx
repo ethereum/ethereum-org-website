@@ -7,6 +7,8 @@ import {
 } from "react-icons/ri"
 import { Box, Button, Flex, Icon, Text } from "@chakra-ui/react"
 
+import type { PhoneScreenProps } from "@/lib/types"
+
 import { Image } from "@/components/Image"
 
 import { useEthPrice } from "../../../../hooks/useEthPrice"
@@ -16,7 +18,6 @@ import {
   FALLBACK_ETH_PRICE,
   USD_RECEIVE_AMOUNT,
 } from "../../constants"
-import type { PhoneScreenProps } from "../../interfaces"
 import { NotificationPopover } from "../../NotificationPopover"
 import { ProgressCta } from "../../ProgressCta"
 import { WalletHome } from "../../WalletHome"
@@ -29,7 +30,7 @@ import { Web3App } from "./Web3App"
 
 import NFTImage from "@/public/deep-panic.png"
 
-export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
+export const ConnectWeb3 = ({ nav, ctaLabel }: PhoneScreenProps) => {
   const { progressStepper, step } = nav
   const NFTs = [
     {
@@ -141,7 +142,12 @@ export const ConnectWeb3: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
                 Your collection (1)
               </Text>
               <Flex gap={2} mb={6}>
-                <Image src={NFTs[0].image} width={120} height={120} alt="NFT Image" />
+                <Image
+                  src={NFTs[0].image}
+                  width={120}
+                  height={120}
+                  alt="NFT Image"
+                />
                 <NotificationPopover
                   title="Example walkthrough"
                   content="These are some things you could do as the owner of your NFTs"

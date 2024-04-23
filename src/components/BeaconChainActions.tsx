@@ -1,6 +1,8 @@
 import { useTranslation } from "next-i18next"
 import { Box, Flex } from "@chakra-ui/react"
 
+import { ChildOnlyProp } from "@/lib/types"
+
 import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
 import CardList, { type CardListItem } from "@/components/CardList"
@@ -10,7 +12,7 @@ import Translation from "@/components/Translation"
 import beaconchain from "@/public/upgrades/beaconchainemoji.png"
 import beaconscan from "@/public/upgrades/etherscan.png"
 
-const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+const H3 = ({ children }: ChildOnlyProp) => (
   <OldHeading
     as="h3"
     fontSize="2xl"
@@ -22,7 +24,7 @@ const H3: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   </OldHeading>
 )
 
-const BeaconChainActions: React.FC = () => {
+const BeaconChainActions = () => {
   const { t } = useTranslation(["page-upgrades-index", "page-upgrades"])
 
   const datapoints: CardListItem[] = [

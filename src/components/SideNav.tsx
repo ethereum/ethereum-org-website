@@ -4,6 +4,7 @@ import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
 import { Box, HStack, Icon } from "@chakra-ui/react"
 
+import { ChildOnlyProp } from "@/lib/types"
 import { DeveloperDocsLink } from "@/lib/interfaces"
 
 import { BaseLink, LinkProps } from "@/components/Link"
@@ -32,7 +33,7 @@ const innerLinksVariants = {
   },
 }
 
-const LinkContainer: React.FC<{ children: ReactNode }> = ({ children }) => {
+const LinkContainer = ({ children }: ChildOnlyProp) => {
   return (
     <HStack
       w="full"
@@ -63,13 +64,13 @@ const SideNavLink = ({ children, ...props }: LinkProps) => {
   )
 }
 
-export interface IPropsNavLink {
+export type NavLinkProps = {
   item: DeveloperDocsLink
   path: string
   isTopLevel?: boolean
 }
 
-const NavLink: React.FC<IPropsNavLink> = ({ item, path, isTopLevel }) => {
+const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
   const { t } = useTranslation("page-developers-docs")
   const isLinkInPath =
     isTopLevel || path.includes(item.to) || path.includes(item.path)
@@ -151,12 +152,12 @@ const SideNav = ({ path }: SideNavProps) => {
     <Box
       as="nav"
       position="sticky"
-      top="7.25rem"
+      top="19"
       pt={8}
       pb={16}
       h="calc(100vh - 80px)" // TODO take footer into account for height?
-      w="calc((100% - 1448px) / 2 + 298px)"
-      minW="298px"
+      w="calc((100% - 1448px) / 2 + 256px)"
+      minW="256px"
       overflowY="auto"
       transition="transform 0.2s ease"
       bgColor="background.base"

@@ -4,6 +4,8 @@ description: Gli standard di base che ci impegniamo a rispettare negli spazi di 
 lang: it
 ---
 
+# Codice di condotta {#conduct-intro}
+
 ## Missione {#mission}
 
 Sviluppare e mantenere l'hub più completo ed accessibile di conoscenza Ethereum.
@@ -52,7 +54,7 @@ Esempi di comportamenti inaccettabili da parte dei partecipanti sono:
 
 - Violenza fisica, minaccia di violenza fisica o incitamento alla violenza fisica di qualsiasi tipo
 - Utilizzare un linguaggio o un immaginario sessualizzato o imporre attenzioni sessuali indesiderate
-- Fingersi un'altra persona o dichiarare in altro modo disonesto l'affiliazione a una persona o a un'organizzazione.
+- Fingersi un'altra persona o dichiarare in altro modo disonesto l'affiliazione a una persona o a un'organizzazione
 - Trolling, commenti offensivi/dispregiativi e attacchi personali o politici
 - Molestare altri membri della community in canali pubblici o privati
 - Pubblicare informazioni private altrui, come un indirizzo fisico o elettronico, senza un'autorizzazione esplicita

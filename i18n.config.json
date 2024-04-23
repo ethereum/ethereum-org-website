@@ -297,7 +297,7 @@
   },
   {
     "code": "ne-np",
-    "crowdinCode": "ne-np",
+    "crowdinCode": "ne-NP",
     "name": "Nepali",
     "localName": "नेपाली",
     "langDir": "ltr",
@@ -424,6 +424,14 @@
     "dateFormat": "MM/DD/YYYY"
   },
   {
+    "code": "te",
+    "crowdinCode": "te",
+    "name": "Telugu",
+    "localName": "తెలుగు",
+    "langDir": "ltr",
+    "dateFormat": "MM/DD/YYYY"
+  },
+  {
     "code": "tk",
     "crowdinCode": "tk",
     "name": "Turkmen",
@@ -457,7 +465,7 @@
   },
   {
     "code": "ur",
-    "crowdinCode": "ur",
+    "crowdinCode": "ur-IN",
     "name": "Urdu",
     "localName": "اردو",
     "langDir": "rtl",
