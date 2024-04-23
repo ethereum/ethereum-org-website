@@ -141,7 +141,7 @@ export const layer2Data: Rollups = {
       ecosystemPortal: "",
       tokenLists: "",
       noteKey: "",
-      purpose: ["tokens", "nft"],
+      purpose: ["universal"],
       descriptionKey: "zksync-description",
       image: zkSyncImage,
       background: "#11142b",
