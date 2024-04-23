@@ -128,7 +128,7 @@
   "zksync-description": "zkSync is a ZK Rollup that aims to scale Ethereum and its values to mass market adopption without degrading security or decentralization.",
   "zkspace-description": "ZKSpace platform consists of three main parts: a layer 2 AMM DEX utilizing ZK-Rollups technology called ZKSwap, a payment service called ZKSquare, and an NFT marketplace called ZKSea.",
 =======
-  "zksync-description": "zkSync is a ZK Rollup that aims to scale Ethereumv and its values to mainstream adption, without degrading security or decentralization.",
+  "zksync-description": "zkSync is a ZK Rollup that aims to scale Ethereum and its values to mainstream adption, without degrading security or decentralization.",
   "zkspace-description": "The ZKSpace platform consists of three main parts: a layer 2 AMM DEX utilizing ZK-Rollups technology called ZKSwap, a payment service called ZKSquare, and an NFT marketplace called ZKSea.",
 >>>>>>> lumi
   "aztec-description": "Aztec Network is the first private zk-rollup on Ethereum, enabling decentralized applications to access privacy and scale.",
