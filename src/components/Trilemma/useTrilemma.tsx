@@ -1,6 +1,7 @@
-import React, { useState } from "react"
-import Translation from "../Translation"
-import { IProps as CardProps } from "../Card"
+import { useState } from "react"
+import { useTranslation } from "next-i18next"
+
+import { CardProps } from "../Card"
 
 /**
  * The `selection` param accepted values for the click handler
@@ -12,6 +13,8 @@ export type HandleClickParam =
   | "isScalableAndSecure"
 
 export const useTrilemma = () => {
+  const { t } = useTranslation("page-roadmap-vision")
+
   const [state, setState] = useState({
     isDecentralizedAndSecure: false,
     isDecentralizedAndScalable: false,
@@ -72,20 +75,20 @@ export const useTrilemma = () => {
     })
   }
 
-  let cardTitle = <Translation id="page-roadmap-vision-trilemma-title-1" />
-  let cardText = <Translation id="page-roadmap-vision-trilemma-press-button" />
+  let cardTitle = t("page-roadmap-vision-trilemma-title-1")
+  let cardText = t("page-roadmap-vision-trilemma-press-button")
   if (isEthereum) {
-    cardTitle = <Translation id="page-roadmap-vision-trilemma-title-2" />
-    cardText = <Translation id="page-roadmap-vision-trilemma-cardtext-1" />
+    cardTitle = t("page-roadmap-vision-trilemma-title-2")
+    cardText = t("page-roadmap-vision-trilemma-cardtext-1")
   } else if (state.isDecentralizedAndSecure) {
-    cardTitle = <Translation id="page-roadmap-vision-trilemma-title-3" />
-    cardText = <Translation id="page-roadmap-vision-trilemma-cardtext-2" />
+    cardTitle = t("page-roadmap-vision-trilemma-title-3")
+    cardText = t("page-roadmap-vision-trilemma-cardtext-2")
   } else if (state.isDecentralizedAndScalable) {
-    cardTitle = <Translation id="page-roadmap-vision-trilemma-title-4" />
-    cardText = <Translation id="page-roadmap-vision-trilemma-cardtext-3" />
+    cardTitle = t("page-roadmap-vision-trilemma-title-4")
+    cardText = t("page-roadmap-vision-trilemma-cardtext-3")
   } else if (state.isScalableAndSecure) {
-    cardTitle = <Translation id="page-roadmap-vision-trilemma-title-5" />
-    cardText = <Translation id="page-roadmap-vision-trilemma-cardtext-4" />
+    cardTitle = t("page-roadmap-vision-trilemma-title-5")
+    cardText = t("page-roadmap-vision-trilemma-cardtext-4")
   }
 
   return {

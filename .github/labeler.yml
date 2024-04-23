@@ -1,34 +1,42 @@
-"review needed :eyes:":
+"needs review 👀":
   - src/**/*
+  - public/*
 
-"documentation :book:":
+"documentation 📖":
   - README.md
 
-"tooling :wrench:":
+"tooling 🔧":
   - .github/**/*
   - src/scripts/*
-  - netlify.toml
+  - src/lib/*
+  - src/hooks/*
 
-"dependencies :package:":
+"dependencies 📦":
   - package.json
   - yarn.lock
 
-"internal :house:":
-  - gatsby-browser.js
-  - gatsby-config.js
-  - gatsby-node.js
-  - gatsby-ssr.js
+"internal 🏠":
   - .all-contributorsrc
+  - i18n.config.json
+  - next.config.js
+  - next-i18next.config,js
+  - next-sitemap.config.js
+  - tsconfig.json
+  - .nvmrc
+  - .eslintignore
+  - .eslintrc.json
+  - .prettierignore
+  - .prettierrc
+  - netlify.toml
 
-"translation :earth_africa:":
+"translation 🌍":
   - src/content/translations/**/*
-  - src/intl/*
-  - src/utils/translations.js
+  - src/intl/**/*
+  - src/lib/utils/translations.ts
 
-"content :fountain_pen:":
+"content 🖋️":
   - src/pages/*
-  - src/pages-conditional/*
-  - src/content/**/*
+  - public/content/**/*
 
-"event :date:":
+"event 📅":
   - src/data/community-events.json
