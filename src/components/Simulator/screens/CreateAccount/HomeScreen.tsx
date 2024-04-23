@@ -1,12 +1,20 @@
 import React from "react"
-import { Grid, Icon, GridProps, Box, useColorModeValue } from "@chakra-ui/react"
-import { MdArrowDownward } from "react-icons/md"
-import type { SimulatorNavProps } from "../../interfaces"
-import { EthGlyphIcon } from "../../icons"
 import { AnimatePresence, motion } from "framer-motion"
+import { MdArrowDownward } from "react-icons/md"
+import { Box, Grid, GridProps, Icon, useColorModeValue } from "@chakra-ui/react"
 
-interface IProps extends GridProps, SimulatorNavProps {}
-export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {
+import type { SimulatorNavProps } from "@/lib/types"
+
+import { EthGlyphIcon } from "../../icons"
+
+type HomeScreenProps = GridProps & SimulatorNavProps
+
+export const HomeScreen = ({ nav, ...props }: HomeScreenProps) => {
+  const gridShadow = useColorModeValue(
+    "0 0 7px 0 var(--eth-colors-blackAlpha-800)",
+    "0 0 7px 0 var(--eth-colors-whiteAlpha-800)"
+  )
+
   const { step } = nav
   const ICON_COUNT = 8
   const sharedIconStyles = {
@@ -44,10 +52,7 @@ export const HomeScreen: React.FC<IProps> = ({ nav, ...props }) => {
             transitionDuration="0.3s"
             bg="body.base"
             borderColor="body.base"
-            boxShadow={useColorModeValue(
-              "0 0 7px 0 var(--eth-colors-blackAlpha-800)",
-              "0 0 7px 0 var(--eth-colors-whiteAlpha-800)"
-            )}
+            boxShadow={gridShadow}
             _hover={{
               outline: "2px solid var(--eth-colors-primary-hover)",
               outlineOffset: "2px",

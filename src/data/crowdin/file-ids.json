@@ -469,7 +469,7 @@
   },
   {
     "id": 6247,
-    "path": "/developers/tutorials/send-token-ethersjs/index.md"
+    "path": "/developers/tutorials/send-token-etherjs/index.md"
   },
   {
     "id": 6432,
@@ -497,7 +497,7 @@
   },
   {
     "id": 3116,
-    "path": "/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/index.md"
+    "path": "/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/index.md"
   },
   {
     "id": 3120,
@@ -1102,10 +1102,6 @@
   {
     "id": 2966,
     "path": "/about/index.md"
-  },
-  {
-    "id": 8031,
-    "path": "/deprecated-software/index.md"
   },
   {
     "id": 8037,

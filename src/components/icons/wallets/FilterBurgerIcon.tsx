@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import * as React from "react"
 import { createIcon } from "@chakra-ui/react"
 

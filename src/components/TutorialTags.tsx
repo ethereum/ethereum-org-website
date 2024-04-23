@@ -1,5 +1,5 @@
-import { Badge } from "@chakra-ui/react"
 import React from "react"
+import { Badge } from "@chakra-ui/react"
 
 // Represent string as 32-bit integer
 const hashCode = (string) => {
@@ -25,11 +25,11 @@ const colors = [
   "tagPink",
 ] as const
 
-export interface IProps {
+export type TutorialTagsProps = {
   tags: Array<string>
 }
 
-const TutorialTags: React.FC<IProps> = ({ tags }) => {
+const TutorialTags = ({ tags }: TutorialTagsProps) => {
   return (
     <>
       {tags.map((tag, idx) => {

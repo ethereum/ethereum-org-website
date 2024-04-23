@@ -1,30 +1,30 @@
 import React from "react"
+import { useTranslation } from "next-i18next"
 import { Heading, useColorModeValue, VStack } from "@chakra-ui/react"
 
-import Translation from "./Translation"
-import Text from "./OldText"
+import type { TranslationKey } from "@/lib/types"
 
-import { TranslationKey } from "../utils/translations"
+import Text from "./OldText"
 
 export interface IStyledContainer {
   isShipped: boolean
 }
 
-export interface IProps {
+export type UpgradeStatusProps = {
   children?: React.ReactNode
   dateKey: TranslationKey
   isShipped?: boolean
 }
 
-const UpgradeStatus: React.FC<IProps> = ({
+const UpgradeStatus = ({
   dateKey,
   children,
   isShipped = false,
-}) => {
+}: UpgradeStatusProps) => {
   const border = useColorModeValue("none", "2px solid")
   const darkBorderColor = isShipped ? "#3fb181" : "#a4a4ff"
-
   const borderColor = useColorModeValue(undefined, darkBorderColor)
+  const { t } = useTranslation("page-staking")
 
   return (
     <VStack
@@ -45,10 +45,10 @@ const UpgradeStatus: React.FC<IProps> = ({
       width="100%"
     >
       <Heading fontSize="sm" fontWeight="normal" textTransform="uppercase">
-        <Translation id="consensus-when-shipping" />
+        {t("common:consensus-when-shipping")}
       </Heading>
       <Text fontSize="2.5rem" fontWeight="bold" lineHeight="100%">
-        <Translation id={dateKey} />
+        {t(dateKey)}
       </Text>
       <Text fontSize="xl">{children}</Text>
     </VStack>
