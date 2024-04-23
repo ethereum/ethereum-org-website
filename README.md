@@ -1827,6 +1827,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://bento.me/rohitramesh"><img src="https://avatars.githubusercontent.com/u/70317502?v=4?s=100" width="100px;" alt="Rohit Ramesh"/><br /><sub><b>Rohit Ramesh</b></sub></a><br /><a href="#tool-rohit-710" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/gsalzer"><img src="https://avatars.githubusercontent.com/u/13353518?v=4?s=100" width="100px;" alt="Gernot Salzer"/><br /><sub><b>Gernot Salzer</b></sub></a><br /><a href="#ideas-gsalzer" title="Ideas, Planning, & Feedback">🤔</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lightclient"><img src="https://avatars.githubusercontent.com/u/14004106?v=4?s=100" width="100px;" alt="lightclient"/><br /><sub><b>lightclient</b></sub></a><br /><a href="#maintenance-lightclient" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/GarenWoo"><img src="https://avatars.githubusercontent.com/u/126687110?v=4?s=100" width="100px;" alt="Garen Woo"/><br /><sub><b>Garen Woo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AGarenWoo" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
