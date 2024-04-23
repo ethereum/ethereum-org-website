@@ -11903,6 +11903,15 @@
       "contributions": [
         "tool"
       ]
+    },
+    {
+      "login": "gsalzer",
+      "name": "Gernot Salzer",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13353518?v=4",
+      "profile": "https://github.com/gsalzer",
+      "contributions": [
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
