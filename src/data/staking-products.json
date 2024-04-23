@@ -778,6 +778,7 @@
         "eventName": "Clicked Figment go to link"
       }
     },
+    {
       "name": "Consensys Staking",
       "imageName": "ConsensysStaking",
       "hue": 231,
