@@ -11,7 +11,6 @@ La comunitat Ethereum inclou gent de diferents àmbits i amb diferents habilitat
 ## Desenvolupadors <Emoji text=":computer:" size={1} /> {#developers}
 
 - Descobriu i proveu Ethereum en [ethereum.org/developers/](/developers/)
-- [Trobeu una recompensa en Gitcoin](https://gitcoin.co/), treballeu en un problema tècnic gran o petit, guanyeu criptoactius!
 - Assistiu a una convenció de programadors [ETHGlobal](http://ethglobal.co/) al vostre voltant!
 - Doneu una ullada a [projectes relacionats amb la vostra àrea de coneixements o de llenguatge de programació de la vostra elecció](/developers/docs/programming-languages/)
 - Mireu o participeu en les [trucades de desenvolupament bàsic](https://www.youtube.com/@EthereumProtocol)

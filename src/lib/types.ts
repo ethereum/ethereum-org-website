@@ -372,12 +372,14 @@ export type IRemarkTocOptions = {
   callback: (toc: TocNodeType) => void
 }
 
+type HeroButtonProps = Omit<CallToActionProps, "index">
+
 export type CommonHeroProps = {
   heroImg: StaticImageData
   header: string
   title: string
   description: string
-  buttons?: [CallToActionProps, CallToActionProps?]
+  buttons?: [HeroButtonProps, HeroButtonProps?]
 }
 
 // Learning Tools

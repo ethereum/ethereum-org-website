@@ -13,7 +13,6 @@ lang: ru
 ## Разработчики <Emoji text=":computer:" size={1} /> {#developers}
 
 - Узнайте подробнее об Ethereum на [ethereum.org/developers/](/developers/) и попробуйте использовать
-- [Получите награду на Gitcoin](https://gitcoin.co/), поработайте над незначительной или серьезной технической проблемой, заработайте криптовалюту!
 - Посетите ближайший к вам хакатон [ETHGlobal](http://ethglobal.co/)!
 - Ознакомьтесь с [проектами в вашей компетенции или на языке программирования по вашему выбору](/developers/docs/programming-languages/)
 - [Онлайн-встречи Core Dev](https://www.youtube.com/@EthereumProtocol): смотрите или поучаствуйте сами

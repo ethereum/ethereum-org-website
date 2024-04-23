@@ -11,7 +11,6 @@ lang: uk
 ## Розробники <Emoji text=":computer:" size={1} /> {#developers}
 
 - Дізнайтеся докладніше про Ethereum на [ethereum.org/developers/](/developers/) і спробуйте використовувати
-- [Знайдіть винагороду на Gitcoin](https://gitcoin.co/), попрацюйте з незначною або серйозною технічною проблемою, заробіть криптовалюту!
 - Відвідайте хакатон [ETHGlobal](http://ethglobal.co/) поруч із вами!
 - Ознайомтеся з [проєктами, що стосуються вашої галузі знань або вибраної мови програмування](/developers/docs/programming-languages/)
 - Дивіться [онлайн-зустрічі розробників](https://www.youtube.com/@EthereumProtocol) або беріть у них участь

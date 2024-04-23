@@ -11,7 +11,6 @@ lang: ja
 ## デベロッパー<Emoji text=":computer:" size={1} /> {#developers}
 
 - [ethereum.org/developers/](/developers/) - イーサリアムについての学習
-- [Gitcoin](https://gitcoin.co/) - 大小規模の技術問題に取り組み、暗号通貨の報酬を獲得
 - [ETHGlobal](http://ethglobal.co/) - お近くの ETHGlobal ハッカソンへの参加
 - [自分の専門分野や好きなプログラミング言語に関連するプロジェクト](/developers/docs/programming-languages/)の確認
 - [Core Dev calls](https://www.youtube.com/@EthereumProtocol) - 動画の視聴および参加
