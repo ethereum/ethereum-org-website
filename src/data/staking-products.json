@@ -750,6 +750,35 @@
       }
     },
     {
+      "name": "Figment",
+      "imageName": "Figment",
+      "hue": 52,
+      "launchDate": "2021-12-31",
+      "url": "https://figment.io/",
+      "audits": [],
+      "minEth": 32,
+      "monthlyFee": 30,
+      "monthlyFeeUnit": "% execution rewards",
+      "isFoss": false,
+      "hasBugBounty": false,
+      "isTrustless": false,
+      "isPermissionless": false,
+      "pctMajorityExecutionClient": 50,
+      "pctMajorityConsensusClient": 0,
+      "isSelfCustody": false,
+      "platforms": ["Browser"],
+      "ui": ["GUI"],
+      "socials": {
+        "twitter": "https://twitter.com/Figment_io",
+        "linkedin": "https://www.linkedin.com/company/figment-io"
+      },
+      "matomo": {
+        "eventCategory": "StakingProductCard",
+        "eventAction": "Clicked",
+        "eventName": "Clicked Figment go to link"
+      }
+    },
+    {
       "name": "Consensys Staking",
       "imageName": "ConsensysStaking",
       "hue": 231,
