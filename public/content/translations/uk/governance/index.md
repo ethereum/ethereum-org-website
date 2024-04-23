@@ -2,7 +2,6 @@
 title: Управління Ethereum
 description: Коротко про те, як приймаються рішення щодо Ethereum.
 lang: uk
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Вступ до керування Ethereum {#introduction}

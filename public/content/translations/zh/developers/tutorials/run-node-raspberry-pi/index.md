@@ -12,7 +12,6 @@ skill: advanced
 published: 2022-06-10
 source: Ethereum on ARM
 sourceUrl: https://ethereum-on-arm-documentation.readthedocs.io/en/latest/kiln/kiln-testnet.html
-postMergeBannerTranslation: page-upgrades-post-merge-banner-tutorial-ood
 ---
 
 **Ethereum on Arm 是一个定制 Linux 映像，它可以将树莓派转变成以太坊节点。**

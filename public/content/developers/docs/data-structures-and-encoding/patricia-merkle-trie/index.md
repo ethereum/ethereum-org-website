@@ -35,13 +35,11 @@ The update and delete operations for radix tries can be defined as follows:
 
 ```
     def update(node,path,value):
+        curnode = db.get(node) if node else [ NULL ] * 17
+        newnode = curnode.copy()
         if path == '':
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newnode[-1] = value
         else:
-            curnode = db.get(node) if node else [ NULL ] * 17
-            newnode = curnode.copy()
             newindex = update(curnode[path[0]],path[1:],value)
             newnode[path[0]] = newindex
         db.put(hash(newnode),newnode)

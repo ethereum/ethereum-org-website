@@ -27,11 +27,11 @@ Vous cherchez les prochaines mises à jour de protocole ? [Découvrez les mises 
 
 ## 2023 {#2023}
 
-### Shanghai {#shanghai}
+### Shanghai-Capella ("Shapella") {#shapella}
 
-<NetworkUpgradeSummary name="shanghai" />
+<NetworkUpgradeSummary name="shapella" />
 
-#### Résumé {#shanghai-summary}
+#### Résumé de Shanghai {#shanghai-summary}
 
 La mise à jour Shanghai a ouvert la voie à des opérations de retrait et de basculement vers la couche d'exécution Couplée à la mise à jour Capella, cette mise à jour permet aux blocs d'accepter des opérations de retrait, permettant ainsi aux validateurs de retirer leur ETH de la chaîne phare et de le basculer vers la couche d'exécution.
 
@@ -49,13 +49,7 @@ La mise à jour Shanghai a ouvert la voie à des opérations de retrait et de ba
 
 - [Lire les spécificités de la mise à jour Shanghai](https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/shanghai.md)
 
----
-
-### Capella {#capella}
-
-<NetworkUpgradeSummary name="capella" />
-
-#### Résumé {#capella-summary}
+#### Résumé de Capella {#capella-summary}
 
 La mise à jour Capella est la troisième mise à jour majeure vers la couche de consensus (Chaine phare). Elle a permis d'effectuer des retraits de mise en jeu. Capella est entrée en action en même temps que la mise à niveau de la couche d'exécution, Shanghai, et a activé la fonctionnalité de retrait de mise en jeu.
 

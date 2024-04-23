@@ -143,7 +143,7 @@ L'algoritmo usato per generare la serie di DAG usati per calcolare il lavoro per
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
     from pyethereum import chain_manager
-    if num <= 0:
+    if n <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:
         prevhash = chain_manager.index.get_block_by_number(n - 1)
@@ -186,7 +186,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
         shifted_A = hash_output_A >> i
         transaction = shifted_A % len(list_of_transactions)
         txid_mix ^= list_of_transactions[transaction] << i
-    return txid_max ^ (nonce << 192)
+    return txid_mix ^ (nonce << 192)
 ```
 
 Sfortunatamente, anche se Hashimoto è considerato gravoso per la RAM, si affida a un'aritmetica a 256 bit, che richiede molti calcoli. Per risolvere questo problema, Dagger-Hashimoto usa comunque solo i 64 bit meno significativi, indicizzando il proprio dataset.
@@ -294,7 +294,7 @@ Per certi valori di `P` e `w`, la funzione `pow(x, w, P)` potrebbe avere molte c
 Dato che `P` è primo, allora è possibile scegliere un'appropriata `w` per una funzione di hashing di esponenziazione modulare usando il seguente risultato:
 
 > Osservazione 3. Prendiamo `P` come numero primo; `w` e `P-1` sono coprimi se e solo se per ogni `a` e `b` in `ℤ/Pℤ`:
->
+> 
 > <center>
 >   `aʷ mod P ≡ bʷ mod P` se e solo se `a mod P ≡ b mod P`
 > </center>

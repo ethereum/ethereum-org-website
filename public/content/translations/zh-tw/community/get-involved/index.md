@@ -13,10 +13,9 @@ lang: zh-tw
 ## 程式開發人員<Emoji text=":computer:" size={1} /> {#developers}
 
 - 造訪 [ethereum.org/developers/](/developers/)，瞭解和嘗試使用以太坊
-- [從 Gitcoin 獲得賞金](https://gitcoin.co/)，透過解決大小技術問題來賺取加密貨幣！
 - 參加你附近的 [ETHGlobal](http://ethglobal.co/) 駭客松活動。
 - 留意[與你的專業領域或偏好的編程語言有關的專案](/developers/docs/programming-languages/)
-- 觀看或參與[核心開發者會議](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- 觀看或參與[核心開發者會議](https://www.youtube.com/@EthereumProtocol)
 - [以太坊生態系統支持計劃願望清單](https://esp.ethereum.foundation/wishlist/) - 以太坊生態系統支持計劃正積極尋找工具、文件和基礎設施領域的資助申請
 - [Web3Bridge](https://www.web3bridge.com/) - 加入有抱負的 Web3 社群，一起積極尋找、培訓和支持整個非洲數百名開發人員和社群成員
 - 加入[以太坊牧貓人組織 Discord](https://discord.io/EthCatHerders)

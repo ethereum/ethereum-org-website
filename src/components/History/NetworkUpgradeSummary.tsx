@@ -33,7 +33,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   // calculate date format only on the client side to avoid hydration issues
   useEffect(() => {
-    const date = new Date(dateTimeAsString as any)
+    const date = new Date(dateTimeAsString as string)
     const formattedDate = date.toLocaleString(locale, {
       timeZone: "UTC",
       month: "short",
@@ -48,11 +48,11 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   const blockTypeTranslation = (translationKey, explorerUrl, number) => {
     return (
-      <Flex whiteSpace='pre-wrap'>
+      <Flex whiteSpace="pre-wrap">
         <Emoji fontSize="sm" me={2} text=":bricks:" />
         {t(translationKey)}:{" "}
-        <InlineLink to={`${explorerUrl}${number}`}>
-         {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
+        <InlineLink href={`${explorerUrl}${number}`}>
+          {new Intl.NumberFormat(localeForStatsBoxNumbers).format(number)}
         </InlineLink>
       </Flex>
     )
@@ -60,7 +60,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
 
   return (
     <Stack>
-      {formattedUTC && (
+      {dateTimeAsString && (
         <Flex>
           <Emoji fontSize="sm" me={2} text=":calendar:" />
           <Text fontFamily="monospace">{formattedUTC}</Text>
@@ -97,7 +97,7 @@ const NetworkUpgradeSummary = ({ name }: NetworkUpgradeSummaryProps) => {
       {waybackLink && (
         <Flex>
           <Emoji fontSize="sm" me={2} text=":desktop_computer:" />
-          <InlineLink to={waybackLink}>
+          <InlineLink href={waybackLink}>
             {t("page-history:page-history-ethereum-org-wayback")}
           </InlineLink>
         </Flex>
