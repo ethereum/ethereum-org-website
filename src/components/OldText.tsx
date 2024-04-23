@@ -1,5 +1,4 @@
-import * as React from "react"
-import { Text, TextProps } from "@chakra-ui/react"
+import { Text, type TextProps } from "@chakra-ui/react"
 
 /**
  * @deprecated To be removed in favor of new Chakra Text theme

@@ -123,6 +123,7 @@
   "zksync-description": "zkSync, Matter Labs-dan istifadəçi mərkəzli zk toplama platformasıdır. Bu, artıq Ethereum şəbəkəsində yaşayan Ethereum üçün bir miqyaslandırma həlldir. Ödənişləri, token dəyişdirmələrini və NFT zərbini dəstəkləyir.",
   "zkspace-description": "ZKSpace platforması üç əsas hissədən ibarətdir: ZKSwap adlı ZK-Rollups texnologiyasından istifadə edən 2 AMM DEX qat, ZKSquare adlı ödəniş xidməti və ZKSea adlı NFT bazarı.",
   "aztec-description": "Aztec Network Ethereum-da mərkəzləşdirilməmiş tətbiqlərə məxfilik və miqyas əldə etməyə imkan verən ilk şəxsi zk-toplamadır.",
+  "starknet-description": "Starknet, bir lay 2 Validity Rollup'dır. O, yüksək ötürmə qabiliyyətini, aşağı qaz xərclərini təmin edir və Ethereum lay 1 təhlükəsizlik səviyyələrini saxlayır.",
   "layer-2-note": "Qeydlər:",
   "layer-2-ecosystem-portal": "Ekosistem Portalı",
   "layer-2-token-lists": "Token siyahıları",
