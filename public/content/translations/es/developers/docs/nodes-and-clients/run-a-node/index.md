@@ -99,7 +99,7 @@ El modo de sincronización que elija afectará a los requisitos de espacio. No o
 
 - Nota: Erigon no realiza la sincronización rápida, pero permite llevar a cabo la limpieza completa (~500 GB).
 
-Para clientes de consenso, la necesidad de espacio también depende de la implementación del cliente y las características habilitadas (p. ej., validador-recortador), pero generalmente necesitan otros 200 GB para datos de baliza. Con un gran número de validadores, la carga de ancho de banda también crece. Puede encontrar [detalles sobre los requisitos del cliente de consenso en este análisis](https://mirror.xyz/0x934e6B4D7eee305F8C9C42b46D6EEA09CcFd5EDc/b69LBy8p5UhcGJqUAmT22dpvdkU-Pulg2inrhoS9Mbc).
+Para clientes de consenso, la necesidad de espacio también depende de la implementación del cliente y las características habilitadas (p. ej., validador-recortador), pero generalmente necesitan otros 200 GB para datos de baliza. Con un gran número de validadores, la carga de ancho de banda también crece. Puede encontrar [detalles sobre los requisitos del cliente de consenso en este análisis](https://medium.com/@migalabs/analysis-of-ethereum-2-consensus-clients-dfede8e0145e).
 
 #### Soluciones de conectar y usar (Plug-and-Play) {#plug-and-play}
 
@@ -151,7 +151,7 @@ He aquí las páginas de publicación de los clientes donde puede encontrar sus 
 ##### Clientes de ejecución
 
 - [Besu](https://github.com/hyperledger/besu/releases)
-- [Erigon](https://github.com/ledgerwatch/erigon#usage) (no proporciona un binario precompilado, se tiene que compilar)
+- [Erigon](https://github.com/ledgerwatch/erigon/releases)
 - [Geth](https://geth.ethereum.org/downloads/)
 - [Nethermind](https://downloads.nethermind.io/)
 
@@ -165,7 +165,7 @@ También vale la pena señalar que la diversidad del cliente es un [problema en 
 - [Prysm](https://github.com/prysmaticlabs/prysm/releases/latest)
 - [Teku](https://github.com/ConsenSys/teku/releases)
 
-[La diversidad del cliente](/developers/docs/nodes-and-clients/client-diversity/) es crítica para los nodos de consenso en ejecución de validadores. Si la mayoría de los validadores está ejecutando una implementación de un solo cliente, la seguridad de la red está en riesgo. Por lo tanto, se recomienda considerar la elección de un cliente minoritario.
+[La diversidad del cliente](/developers/docs/nodes-and-clients/client-diversity/) es crítica para los nodos de consenso en ejecución de validadores. Si la mayoría de los validadores están ejecutando una implementación de un solo cliente, la seguridad de la red está en riesgo. Por lo tanto, se recomienda considerar la elección de un cliente minoritario.
 
 [Vea el último uso de cliente de red](https://clientdiversity.org/) y descubra más cosas sobre la[diversidad de clientes](/developers/docs/nodes-and-clients/client-diversity).
 

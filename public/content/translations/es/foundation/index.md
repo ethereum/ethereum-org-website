@@ -27,7 +27,7 @@ Desde 2014, Ethereum Foundation ha organizado Devcon, la conferencia anual para 
 
 Puede acceder al contenido en vídeo de las presentaciones de la conferencia para cada año desde su inicio en el [sitio](https://archive.devcon.org/).
 
-Obtenga más información en [devcon.org](https://devcon.org/), consulte el blog [Devcon](https://blog.ethereum.org/category/events/), o siga [@efdevcon](https://twitter.com/EFDevcon) para ver los últimos anuncios.
+Obtenga más información en [devcon.org](https://devcon.org/), eche un vistazo al [Blog de Devcon](https://devcon.org/en/blogs/), o siga [@efdevcon](https://twitter.com/EFDevcon) para ver las últimas notificaciones.
 
 ### Programa de becas {#fellowship-program}
 

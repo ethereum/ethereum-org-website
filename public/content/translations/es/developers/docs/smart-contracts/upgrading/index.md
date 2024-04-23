@@ -74,7 +74,7 @@ El uso de los patrones de proxy requiere una comprensión de la función **deleg
 
 De la [documentación de Solidity](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries):
 
-> _Existe una variante especial de una llamada de mensaje, llamada **delegatecall**, que es idéntica a una llamada de mensaje, aparte del hecho de que el código en la dirección de destino se ejecuta en el contexto (es decir, en la dirección) del contrato de llamada y `msg.sender` y `msg.value` no cambian sus valores.\_\_Esto significa que un contrato puede cargar dinámicamente código de una dirección diferente en tiempo de ejecución. El almacenamiento, la dirección actual y el saldo todavía se refieren al contrato de llamada, solo se toma el código de la dirección llamada._
+> _Existe una variante especial de una llamada de mensaje, llamada **delegatecall**, que es idéntica a una llamada de mensaje, aparte del hecho de que el código en la dirección de destino se ejecuta en el contexto (es decir, en la dirección) del contrato de llamada y `msg.sender` y `msg.value` no cambian sus valores.__Esto significa que un contrato puede cargar dinámicamente código de una dirección diferente en tiempo de ejecución. El almacenamiento, la dirección actual y el saldo todavía se refieren al contrato de llamada, solo se toma el código de la dirección llamada._
 
 El contrato de proxy sabe invocar `delegatecall` cada vez que un usuario llama a una función porque tiene una función `fallback` integrada. En la programación de Solidity, la [función fallback](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function) se ejecuta cuando una llamada a una función no coincide con las funciones especificadas en un contrato.
 

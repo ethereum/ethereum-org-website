@@ -611,7 +611,7 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
               <Icon ms={2} fill="'text" name="info" boxSize={4} />
             </Tooltip>
           </H3>
-          <InfoBanner emoji="⚠️" isWarning>
+          <InfoBanner emoji="⚠️" isWarning mb="4">
             {t("page-stablecoins-algorithmic-disclaimer")}
           </InfoBanner>
           <Text>

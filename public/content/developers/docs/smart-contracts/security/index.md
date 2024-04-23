@@ -214,7 +214,7 @@ Decentralized governance can be beneficial, especially because it aligns the int
 
 One way of preventing problems related to on-chain governance is to [use a timelock](https://blog.openzeppelin.com/protect-your-users-with-smart-contract-timelocks/). A timelock prevents a smart contract from executing certain actions until a specific amount of time passes. Other strategies include assigning a “voting weight” to each token based on how long it has been locked up for, or measuring the voting power of an address at a historical period (for example, 2-3 blocks in the past) instead of the current block. Both methods reduce the possibility of quickly amassing voting power to swing on-chain votes.
 
-More on [designing secure governance systems](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/) and [different voting mechanisms in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos).
+More on [designing secure governance systems](https://blog.openzeppelin.com/smart-contract-security-guidelines-4-strategies-for-safer-governance-systems/), [different voting mechanisms in DAOs](https://hackernoon.com/governance-is-the-holy-grail-for-daos), and [the common DAO attack vectors leveraging DeFi](https://dacian.me/dao-governance-defi-attacks) in the shared links.
 
 ### 8. Reduce complexity in code to a minimum {#reduce-code-complexity}
 
@@ -468,6 +468,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[ABI Encoder](https://abi.hashex.org/)** - _A free online service for encoding your Solidity contract functions and constructor arguments._
 
+- **[Aderyn](https://github.com/Cyfrin/aderyn)** - _Solidity Static Analyzer, traversing the Abstract Syntax Trees (AST) to pinpoint suspected vulnerabilities and printing out issues in an easy-to-consume markdown format._
+
 ### Tools for monitoring smart contracts {#smart-contract-monitoring-tools}
 
 - **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _A tool for automatically monitoring and responding to events, functions, and transaction parameters on your smart contracts._
@@ -508,7 +510,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[CodeHawks](https://codehawks.com/)** - _Competitive audits platform hosting smart contracts auditing competitions for security researchers._
 
-- **[Cyfrin](https://www.cyfrin.io/)** - _Blockchain security and web3 education firm focused on EVM and Vyper based protocols._
+- **[Cyfrin](https://cyfrin.io)** - _Web3 security powerhouse, incubating crypto security through products and smart contract auditing services._
 
 - **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
 
@@ -547,6 +549,8 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 - **[Solidity Docs: Security Considerations](https://docs.soliditylang.org/en/v0.8.16/security-considerations.html)** - _Guidelines for writing secure smart contracts with Solidity._
 
 - **[Smart Contract Security Verification Standard](https://github.com/securing/SCSVS)** - _Fourteen-part checklist created to standardize the security of smart contracts for developers, architects, security reviewers and vendors._
+
+- **[Learn Smart Contract Security and Auditing](https://updraft.cyfrin.io/courses/security) - _Ultimate smart contract security and auditing course, created for smart contract developers looking to level up their security best practices and become security researchers._
 
 ### Tutorials on smart contract security {#tutorials-on-smart-contract-security}
 

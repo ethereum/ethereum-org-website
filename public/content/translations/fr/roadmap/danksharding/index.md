@@ -69,7 +69,7 @@ La séparation entre les validateurs et les constructeurs de blocs est nécessai
 
 </ExpandableCard>
 
-<ExpandableCard title="Pourquoi le Danksharding nécessite-t-il un échantillonnage de disponibilité des données ?" eventCateogry="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
+<ExpandableCard title="Pourquoi le Danksharding nécessite-t-il un échantillonnage de disponibilité des données ?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require data availability sampling?">
 
 L'échantillonnage de la disponibilité des données est nécessaire pour que les validateurs puissent vérifier rapidement et efficacement les données de blobs. En utilisant l'échantillonnage de la disponibilité des données, les validateurs peuvent être tout à fait certains que les données de blobs étaient disponibles et que les engagements étaient corrects. Chaque validateur peut échantillonner au hasard quelques points de données et en créer une preuve, ce qui signifie qu'aucun validateur n'a à vérifier l'intégralité du blob. Si des données sont manquantes, elles seront rapidement identifiées et le blob sera rejeté.
 
@@ -77,7 +77,7 @@ L'échantillonnage de la disponibilité des données est nécessaire pour que le
 
 ### Progrès actuels {#current-progress}
 
-L'implémentation complète du Danksharding prendra encore plusieurs années. Cependant, le Proto-Danksharding devrait arriver bientôt. Au moment où sont écrites ces lignes (février 2023), la cérémonie KZG est toujours ouverte et a jusqu'à présent attiré plus de 50 000 contributeurs. L'[EIP](https://eips.ethereum.org/EIPS/eip-4844) pour Proto-Danksharding est mature, la spécification est convenue et les clients ont implémenté des prototypes qui sont actuellement en cours de test et rendu prêt pour la production. La prochaine étape consiste à mettre en œuvre ces changements sur un réseau de test public. Vous pouvez rester informé en suivant [l'avancement de l'EIP 4844](https://github.com/ethereum/pm/blob/master/Breakout-Room/4844-readiness-checklist.md#client-implementation-status).
+L'implémentation complète du Danksharding prendra encore plusieurs années. Cependant, le Proto-Danksharding devrait arriver bientôt. Au moment où sont écrites ces lignes (février 2023), la cérémonie KZG est toujours ouverte et a jusqu'à présent attiré plus de 50 000 contributeurs. L'[EIP](https://eips.ethereum.org/EIPS/eip-4844) pour Proto-Danksharding est mature, la spécification est convenue et les clients ont implémenté des prototypes qui sont actuellement en cours de test et rendu prêt pour la production. La prochaine étape consiste à mettre en œuvre ces changements sur un réseau de test public. Vous pouvez vous tenir au courant en utilisant la [Liste de contrôle de l'EIP 4844](https://github.com/ethereum/pm/blob/master/Dencun/4844-readiness-checklist.md).
 
 ### Complément d'information {#further-reading}
 

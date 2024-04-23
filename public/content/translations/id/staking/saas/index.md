@@ -91,4 +91,5 @@ Hubungi penyedia SaaS secara individu untuk mendapatkan informasi lebih lanjut t
 
 ## Bacaan lebih lanjut {#further-reading}
 
+- [Direktori Penaruhan Ethereum](https://www.staking.directory/) - _Eridian dan Spacesider_
 - [Menilai Layanan Penaruhan](https://www.attestant.io/posts/evaluating-staking-services/) - _Jim McDonald 2020_

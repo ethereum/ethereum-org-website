@@ -5,13 +5,17 @@ lang: zh
 sidebarDepth: 2
 ---
 
-默克尔帕特里夏字典树提供了一种经过加密认证的数据结构，可用于存储所有 `(key, value)` 对。
+以太坊的状态（全体帐户、余额与智能合约）被编码进一个特殊版本的数据结构中，在计算机科学中，这种数据结构通常称为默克尔树。 这种结构可用于许多加密学应用，因为它在树中保存的所有单独数据之间创建了可验证的关系，产生一个可用于证明数据的单独**根**值。
 
-默克尔帕特里夏字典树是完全确定性的，这意味着有相同 `(key, value)` 对的字典树肯定是完全相同的，就连最后一个字节也相同。 这代表它们有着相同的根哈希，让插入、查找和删除操作具有难以企及的 `O(log(n))` 效率。 此外，相较于更复杂的基于比较的其他字典树（如红黑树），默克尔帕特里夏树更易于理解和编码。
+以太坊的数据结构是一个“修改版默克尔帕特里夏字典树”，之所以这样命名，不仅是因为它引入了 PATRICIA 算法（检索用字母数字编码的信息的实用算法）的一些特性，也由于它旨在实现含有以太坊状态的值的高效数据**检索**。
+
+默克尔帕特里夏字典树是确定性的并可通过密码学验证：生成状态根的唯一方式是从每个单独的状态进行计算，且两个相同的状态可以通过比较根哈希和父节点哈希（_默克尔证明_）而轻松证明相同。 相反，也无法用同一根哈希创建两个不同的状态，任何用不同值修改状态的尝试都会产生不同的状态根哈希。 理论上，这种结构在插入、查找和删除操作上的效率达到了超乎寻常的 `O(log(n))`。
+
+在不久的将来，以太坊计划迁移到[沃克尔树](https://ethereum.org/en/roadmap/verkle-trees)结构，这将为未来的协议改进开创更多新的可能性。
 
 ## 前提条件 {#prerequisites}
 
-为了更好地理解本文，具备以下基础知识将有所帮助：[哈希](https://en.wikipedia.org/wiki/Hash_function)、[默克尔树](https://en.wikipedia.org/wiki/Merkle_tree)、[字典树](https://en.wikipedia.org/wiki/Trie)和[序列化](https://en.wikipedia.org/wiki/Serialization)。
+为了更好地理解本文，具备以下基础知识将有所帮助：[哈希](https://en.wikipedia.org/wiki/Hash_function)、[默克尔树](https://en.wikipedia.org/wiki/Merkle_tree)、[字典树](https://en.wikipedia.org/wiki/Trie)和[序列化](https://en.wikipedia.org/wiki/Serialization)。 本文从描述基本的[基数树](https://en.wikipedia.org/wiki/Radix_tree)开始，并逐步介绍使以太坊数据结构更为优化的必要修改措施。
 
 ## 基数树 {#basic-radix-tries}
 
@@ -160,14 +164,14 @@ sidebarDepth: 2
 
 ### 前缀树示例 {#example-trie}
 
-假定我们想要包含四个路径/值对 `('do', 'verb')`、`('dog', 'puppy')`、`('doge', 'coin')`、`('horse', 'stallion')` 的前缀树。
+假定我们想要包含四个路径/值对 `('do', 'verb')`、`('dog', 'puppy')`、`('doge', 'coins')`、`('horse', 'stallion')` 的前缀树。
 
 首先，我们将路径和值都转换为 `bytes`。 在下方代码中，_路径_的实际字节代表用 `<>` 表示。而_值_仍然显示为字符串，用 `''` 表示，以便于理解（值也应为 `bytes`）：
 
 ```
     <64 6f> : 'verb'
     <64 6f 67> : 'puppy'
-    <64 6f 67 65> : 'coin'
+    <64 6f 67 65> : 'coins'
     <68 6f 72 73 65> : 'stallion'
 ```
 
@@ -176,12 +180,12 @@ sidebarDepth: 2
 ```
     rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
-    hashB:    [ <00 6f>, hashD ]
-    hashD:    [ <>, <>, <>, <>, <>, <>, hashE, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
-    hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
+    hashB:    [ <00 6f>, hashC ]
+    hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
+    hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-当一个节点在另一个节点内部引用时，包含的是 `H(rlp.encode(x))`，其中 `H(x) = keccak256(x) if len(x) > > = 32 else x` 和 `rlp.encode` 是[递归长度前缀](/developers/docs/data-structures-and-encoding/rlp)编码函数。
+当一个节点在另一个节点内部引用时，包含的是 `H(rlp.encode(node))`，其中 `H(x) = keccak256(x) if len(x) > > = 32 else x` 和 `rlp.encode` 是[递归长度前缀](/developers/docs/data-structures-and-encoding/rlp)编码函数。
 
 请注意，更新前缀树时，_如果_新创建节点的长度 >= 32，则需要将键/值对 `(keccak256(x), x)` 存储在一个持久的查询表中。 然而，如果节点比这短，则不需要存储任何数据，因为函数 f(x) = x 是可逆的。
 

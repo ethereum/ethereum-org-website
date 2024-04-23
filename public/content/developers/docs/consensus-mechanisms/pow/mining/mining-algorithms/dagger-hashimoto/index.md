@@ -143,7 +143,7 @@ The algorithm used to generate the set of DAGs used to compute the work for a bl
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
     from pyethereum import chain_manager
-    if num <= 0:
+    if n <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:
         prevhash = chain_manager.index.get_block_by_number(n - 1)
@@ -186,7 +186,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
         shifted_A = hash_output_A >> i
         transaction = shifted_A % len(list_of_transactions)
         txid_mix ^= list_of_transactions[transaction] << i
-    return txid_max ^ (nonce << 192)
+    return txid_mix ^ (nonce << 192)
 ```
 
 Unfortunately, while Hashimoto is considered RAM hard, it relies on 256-bit arithmetic, which has considerable computational overhead. However, Dagger-Hashimoto only uses the least significant 64 bits when indexing its dataset to address this issue.
@@ -281,7 +281,7 @@ Hence `x` must be a multiplicative identity of `ℤ/nℤ`, which is unique. Sinc
 
 The order of `x` cannot be `2` unless `x = P-1`, since this would violate that `P` is prime.
 
-From the above proposition, we can recognize that iterating `(picker * init) % P` will have a cycle length of at least `(P-1)/2`. This is because we selected `P` to be a safe prime approximately equal to be a higher power of two, and `init` is in the interval `[2,2**256+1]`. Given the magnitude fo `P`, we should never expect a cycle from modular exponentiation.
+From the above proposition, we can recognize that iterating `(picker * init) % P` will have a cycle length of at least `(P-1)/2`. This is because we selected `P` to be a safe prime approximately equal to be a higher power of two, and `init` is in the interval `[2,2**256+1]`. Given the magnitude of `P`, we should never expect a cycle from modular exponentiation.
 
 When we are assigning the first cell in the DAG (the variable labeled `init`), we compute `pow(sha3(seed) + 2, 3, P)`. At first glance, this does not guarantee that the result is neither `1` nor `P-1`. However, since `P-1` is a safe prime, we have the following additional assurance, which is a corollary of Observation 1:
 

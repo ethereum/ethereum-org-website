@@ -115,6 +115,7 @@ export type Lang =
   | "sr"
   | "sw"
   | "ta"
+  | "te"
   | "th"
   | "tk"
   | "tr"
@@ -371,12 +372,14 @@ export type IRemarkTocOptions = {
   callback: (toc: TocNodeType) => void
 }
 
+type HeroButtonProps = Omit<CallToActionProps, "index">
+
 export type CommonHeroProps = {
   heroImg: StaticImageData
   header: string
   title: string
   description: string
-  buttons?: [CallToActionProps, CallToActionProps?]
+  buttons?: [HeroButtonProps, HeroButtonProps?]
 }
 
 // Learning Tools
@@ -645,4 +648,23 @@ export type FooterLink = {
 export type FooterLinkSection = {
   title: TranslationKey
   links: FooterLink[]
+}
+
+// GitHub API
+export type GHIssue = {
+  title: string
+  html_url: string
+  created_at: string
+  user: {
+    login: string
+    html_url: string
+    avatar_url: string
+  }
+  labels: GHLabel[]
+}
+
+export type GHLabel = {
+  id: number
+  name: string
+  color: string
 }

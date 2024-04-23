@@ -11,6 +11,8 @@ export const TRANSLATED_IMAGES_DIR = "/content/translations"
 export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
 export const INTL_JSON_DIR = "src/intl"
 
+export const NULL_VALUE = "—"
+
 // i18n
 export const DEFAULT_LOCALE = "en"
 export const FAKE_LOCALE = "default"

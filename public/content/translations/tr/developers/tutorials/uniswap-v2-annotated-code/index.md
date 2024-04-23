@@ -909,7 +909,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Bunların çoğuyla ya daha önce karşılaştık ya da çoğu oldukça açık. `IWETH.sol` tek istisnadır. Uniswap v2, herhangi bir çift ERC-20 jetonu için takasa izin verir ancak ether'in (ETH) kendisi bir ERC-20 jetonu değildir. Standarttan öncesine tarihlidir ve benzersiz mekanizmalar ile aktarılır. ERC-20 jetonları için geçerli olan sözleşmelerde ETH kullanımını etkinleştirmek için insanlar [paketlenmiş ether (WETH)](https://weth.io/) sözleşmesini bulmuştur. Bu sözleşmeye ETH gönderirsiniz ve size eş değer miktarda WETH basar. Veya WETH'yi yakabilir ve ETH'yi geri alabilirsiniz.
+Bunların çoğuyla ya daha önce karşılaştık ya da çoğu oldukça açık. `IWETH.sol` tek istisnadır. Uniswap v2, herhangi bir çift ERC-20 jetonu için takasa izin verir ancak ether'in (ETH) kendisi bir ERC-20 jetonu değildir. Standarttan öncesine tarihlidir ve benzersiz mekanizmalar ile aktarılır. ERC-20 jetonları için geçerli olan sözleşmelerde ETH kullanımını etkinleştirmek için insanlar [paketlenmiş ether (WETH)](https://weth.tkn.eth.limo/) sözleşmesini bulmuştur. Bu sözleşmeye ETH gönderirsiniz ve size eş değer miktarda WETH basar. Veya WETH'yi yakabilir ve ETH'yi geri alabilirsiniz.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {

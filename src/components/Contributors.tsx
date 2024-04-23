@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react"
 import shuffle from "lodash/shuffle"
 import { Box, Flex, Image, LinkBox, LinkOverlay } from "@chakra-ui/react"
 
@@ -14,8 +15,14 @@ export interface Contributor {
   contributions: Array<string>
 }
 
+const allContributors = JSON.parse(data)
+
 const Contributors = () => {
-  const contributorsList = shuffle(JSON.parse(data).contributors)
+  const [contributorsList, setContributorsList] = useState<Contributor[]>([])
+
+  useEffect(() => {
+    setContributorsList(shuffle(allContributors.contributors))
+  }, [])
 
   return (
     <>

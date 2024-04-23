@@ -2,7 +2,6 @@
 title: Az Ethereum irányítása
 description: Annak bemutatása, hogy az Ethereummal kapcsolatos döntések hogyan születnek meg.
 lang: hu
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Bevezetés az Ethereum irányításába {#introduction}
