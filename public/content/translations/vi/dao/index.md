@@ -44,261 +44,117 @@ Chúng có những ngân khố riêng mà không ai có thẩm quyền tiếp c�
 - **Collective ownership** – you could purchase physical or digital assets and members can vote on how to use them.
 - **Ventures and grants** – you could create a venture fund that pools investment capital and votes on ventures to back. Tiền lời sau đó có thể được tái phân bổ cho những thành viên của tổ chức (DAO).
 
-<iframe src="https://embed.ted.com/talks/lang/en/scott_fitsimones_could_a_dao_build_the_next_great_city" ></p>
+## Những tổ chức tự trị phi tập trung (DAO) hoạt động như thế nào? {#how-daos-work}
 
-<h2 id="how-daos-work" spaces-before="0">
-  Những tổ chức tự trị phi tập trung (DAO) hoạt động như thế nào?
-</h2>
+The backbone of a DAO is its [smart contract](/glossary/#smart-contract), which defines the rules of the organization and holds the group's treasury. Một khi hợp đồng đã được kích hoạt trên Ethereum, không ai có thể thay đổi luật chơi ngoại trừ bằng một cuộc bỏ phiếu. Nếu bất kì ai cố gắng làm một điều gì đó nằm ngoài phạm vi của luật chơi và logic trong đoạn mã đã được lập trình, hành động đó sẽ thất bại. Và bởi vì ngân khố cũng được định nghĩa bởi hợp đồng thông minh nên không ai có thể dùng tiền mà không có sự chấp thuận của nhóm. Điều này đồng nghĩa với việc những tổ chức tự trị phi tập trung (DAO) không cần một thẩm quyền trung ương. Thay vào đó, tổ chức sẽ đưa ra quyết định tập thể và các khoản chi được thông qua một cách tự động khi đã đủ số phiếu.
 
-<p spaces-before="0">
-  The backbone of a DAO is its <a href="/glossary/#smart-contract">smart contract</a>, which defines the rules of the organization and holds the group's treasury. Một khi hợp đồng đã được kích hoạt trên Ethereum, không ai có thể thay đổi luật chơi ngoại trừ bằng một cuộc bỏ phiếu. Nếu bất kì ai cố gắng làm một điều gì đó nằm ngoài phạm vi của luật chơi và logic trong đoạn mã đã được lập trình, hành động đó sẽ thất bại. Và bởi vì ngân khố cũng được định nghĩa bởi hợp đồng thông minh nên không ai có thể dùng tiền mà không có sự chấp thuận của nhóm. Điều này đồng nghĩa với việc những tổ chức tự trị phi tập trung (DAO) không cần một thẩm quyền trung ương. Thay vào đó, tổ chức sẽ đưa ra quyết định tập thể và các khoản chi được thông qua một cách tự động khi đã đủ số phiếu.
-</p>
+Cách tổ chức này là có thể vì những hợp đồng thông minh trở nên không thể bị thay đổi một khi chúng đã được kích hoạt trên Ethereum. Bạn không thể chỉnh sửa những đoạn mã trong hợp đồng (những điều luật của DAO) mà không bị người khác phát hiện vì tất cả đều được công khai.
 
-<p spaces-before="0">
-  Cách tổ chức này là có thể vì những hợp đồng thông minh trở nên không thể bị thay đổi một khi chúng đã được kích hoạt trên Ethereum. Bạn không thể chỉnh sửa những đoạn mã trong hợp đồng (những điều luật của DAO) mà không bị người khác phát hiện vì tất cả đều được công khai.
-</p>
+## Ethereum và những tổ chức tự trị phi tập trung (DAO) {#ethereum-and-daos}
 
-<h2 id="ethereum-and-daos" spaces-before="0">
-  Ethereum và những tổ chức tự trị phi tập trung (DAO)
-</h2>
+Ethereum là nền tảng hoàn hảo cho những tổ chức tự trị phi tập trung (DAO) bởi một số lý do sau:
 
-<p spaces-before="0">
-  Ethereum là nền tảng hoàn hảo cho những tổ chức tự trị phi tập trung (DAO) bởi một số lý do sau:
-</p>
+- Ethereum’s own consensus is decentralized and established enough for organizations to trust the network.
+- Mã của hợp đồng thông minh không thể chỉnh sửa được một khi được kích hoạt, kể cả bởi những người chủ sở hữu của nó. Điều này cho phép tổ chức tự trị phi tập trung (DAO) vận hành bởi những luật chơi đã được lập trình từ ban đầu.
+- Các hợp đồng thông minh có thể gửi/nhận tiền. Không có chúng, bạn sẽ cần một bên trung gian đủ tin cậy để quản lý ngân khố của nhóm.
+- Cộng đồng của Ethereum mang tính tương hỗ nhiều hơn là cạnh tranh. Điều này cho phép các phương pháp hay nhất và những hệ thống bổ trợ được ra đời một cách nhanh chóng.
 
-<ul>
-  <li>
-    Ethereum’s own consensus is decentralized and established enough for organizations to trust the network.
-  </li>
-  <li>
-    Mã của hợp đồng thông minh không thể chỉnh sửa được một khi được kích hoạt, kể cả bởi những người chủ sở hữu của nó. Điều này cho phép tổ chức tự trị phi tập trung (DAO) vận hành bởi những luật chơi đã được lập trình từ ban đầu.
-  </li>
-  <li>
-    Các hợp đồng thông minh có thể gửi/nhận tiền. Không có chúng, bạn sẽ cần một bên trung gian đủ tin cậy để quản lý ngân khố của nhóm.
-  </li>
-  <li>
-    Cộng đồng của Ethereum mang tính tương hỗ nhiều hơn là cạnh tranh. Điều này cho phép các phương pháp hay nhất và những hệ thống bổ trợ được ra đời một cách nhanh chóng.
-  </li>
-</ul>
+## Các pháp chế của DAO {#dao-governance}
 
-<h2 id="dao-governance" spaces-before="0">
-  Các pháp chế của DAO
-</h2>
+Có rất nhiều yếu tố cần xem xét khi điều hành một DAO, chẳng hạn như cách thức bỏ phiếu và đề xuất hoạt động.
 
-<p spaces-before="0">
-  Có rất nhiều yếu tố cần xem xét khi điều hành một DAO, chẳng hạn như cách thức bỏ phiếu và đề xuất hoạt động.
-</p>
+### Sự uỷ quyền {#governance-delegation}
 
-<h3 id="governance-delegation" spaces-before="0">
-  Sự uỷ quyền
-</h3>
+Sự uy quyền giống như phiên bản DAO của đại diện nền dân chủ. Các chủ sở hữu Token ủy quyền phiếu bầu cho những người dùng tự đề cử và cam kết đảm bảo quản trị giao thức và luôn cập nhật thông tin.
 
-<p spaces-before="0">
-  Sự uy quyền giống như phiên bản DAO của đại diện nền dân chủ. Các chủ sở hữu Token ủy quyền phiếu bầu cho những người dùng tự đề cử và cam kết đảm bảo quản trị giao thức và luôn cập nhật thông tin.
-</p>
+#### Một ví dụ phổ biến {#governance-example}
 
-<h4 id="governance-example" spaces-before="0">
-  Một ví dụ phổ biến
-</h4>
+[ENS](https://claim.ens.domains/delegate-ranking) – ENS holders can delegate their votes to engaged community members to represent them.
 
-<p spaces-before="0">
-  <a href="https://claim.ens.domains/delegate-ranking">ENS</a> – ENS holders can delegate their votes to engaged community members to represent them.
-</p>
+### Quản lý giao dịch tự động {#governance-example}
 
-<h3 id="governance-example" spaces-before="0">
-  Quản lý giao dịch tự động
-</h3>
+Ở nhiều DAO, các giao dịch sẽ được thực hiện tự động nếu một số thành viên bỏ phiếu đồng ý.
 
-<p spaces-before="0">
-  Ở nhiều DAO, các giao dịch sẽ được thực hiện tự động nếu một số thành viên bỏ phiếu đồng ý.
-</p>
+#### Một ví dụ nổi tiếng {#governance-example}
 
-<h4 id="governance-example" spaces-before="0">
-  Một ví dụ nổi tiếng
-</h4>
+[Nouns](https://nouns.wtf) – In Nouns DAO, a transaction is automatically executed if a quorum of votes is met and a majority votes affirmative, as long as it is not vetoed by the founders.
 
-<p spaces-before="0">
-  <a href="https://nouns.wtf">Nouns</a> – In Nouns DAO, a transaction is automatically executed if a quorum of votes is met and a majority votes affirmative, as long as it is not vetoed by the founders.
-</p>
+### Quản trị đa chữ ký {#governance-example}
 
-<h3 id="governance-example" spaces-before="0">
-  Quản trị đa chữ ký
-</h3>
+While DAOs may have thousands of voting members, funds can live in a [wallet](/glossary/#wallet) shared by 5-20 active community members who are trusted and usually doxxed (public identities known to the community). After a vote, the [multisig](/glossary/#multisig) signers execute the will of the community.
 
-<p spaces-before="0">
-  While DAOs may have thousands of voting members, funds can live in a <a href="/glossary/#wallet">wallet</a> shared by 5-20 active community members who are trusted and usually doxxed (public identities known to the community). After a vote, the <a href="/glossary/#multisig">multisig</a> signers execute the will of the community.
-</p>
+## Các luật của DAO {#dao-laws}
 
-<h2 id="dao-laws" spaces-before="0">
-  Các luật của DAO
-</h2>
+Vào năm 1977, Wyoming đã phát minh ra LLC để bảo vệ các doanh nhân và giới hạn quyền của họ. Gần đây nhất, họ đã đi tiên phong trong luật DAO thiết lập tư cách pháp lý cho DAO. Hiện tại Wyoming, Vermont và quần đảo Virgin đã có đạo luật DAO dưới một số hình thức.
 
-<p spaces-before="0">
-  Vào năm 1977, Wyoming đã phát minh ra LLC để bảo vệ các doanh nhân và giới hạn quyền của họ. Gần đây nhất, họ đã đi tiên phong trong luật DAO thiết lập tư cách pháp lý cho DAO. Hiện tại Wyoming, Vermont và quần đảo Virgin đã có đạo luật DAO dưới một số hình thức.
-</p>
+### Một ví dụ phổ biến {#law-example}
 
-<h3 id="law-example" spaces-before="0">
-  Một ví dụ phổ biến
-</h3>
+[CityDAO](https://citydao.io) – CityDAO đã sử dụng luật DAO của Wyoming để mua 40 mẫu đất gần Công viên Quốc gia Yellowstone.
 
-<p spaces-before="0">
-  <a href="https://citydao.io">CityDAO</a> – CityDAO đã sử dụng luật DAO của Wyoming để mua 40 mẫu đất gần Công viên Quốc gia Yellowstone.
-</p>
+## Hội viên của tổ chức tự trị phi tập trung (DAO membership) {#dao-membership}
 
-<h2 id="dao-membership" spaces-before="0">
-  Hội viên của tổ chức tự trị phi tập trung (DAO membership)
-</h2>
+Có những mô hình khác nhau cho hội viên của một tổ chức tự trị phi tập trung (DAO). Hội viên có thể quyết định việc bỏ phiếu vận hành như thế nào cũng như phần cốt lõi khác của DAO.
 
-<p spaces-before="0">
-  Có những mô hình khác nhau cho hội viên của một tổ chức tự trị phi tập trung (DAO). Hội viên có thể quyết định việc bỏ phiếu vận hành như thế nào cũng như phần cốt lõi khác của DAO.
-</p>
+### Hội viên dựa trên token {#token-based-membership}
 
-<h3 id="token-based-membership" spaces-before="0">
-  Hội viên dựa trên token
-</h3>
+Usually fully [permissionless](/glossary/#permissionless), depending on the token used. Mostly these governance tokens can be traded permissionlessly on a [decentralized exchange](/glossary/#dex). Một số khác có thể kiếm được thông qua cung cấp thanh khoản hoặc một vài cơ chế 'proof of work' khác. Dù bằng cách nào thì việc nắm giữ token giúp người sở hữu có quyền bỏ phiếu.
 
-<p spaces-before="0">
-  Usually fully <a href="/glossary/#permissionless">permissionless</a>, depending on the token used. Mostly these governance tokens can be traded permissionlessly on a <a href="/glossary/#dex">decentralized exchange</a>. Một số khác có thể kiếm được thông qua cung cấp thanh khoản hoặc một vài cơ chế 'proof of work' khác. Dù bằng cách nào thì việc nắm giữ token giúp người sở hữu có quyền bỏ phiếu.
-</p>
+_Token thường được dùng để quản trị những giao thức phi tập trung lớn hoặc/và chính những token đó._
 
-<p spaces-before="0">
-  <em x-id="4">Token thường được dùng để quản trị những giao thức phi tập trung lớn hoặc/và chính những token đó.</em>
-</p>
+#### Một ví dụ phổ biến {#token-example}
 
-<h4 id="token-example" spaces-before="0">
-  Một ví dụ phổ biến
-</h4>
+[MakerDAO](https://makerdao.com) – Token của MakerDAO là MKR có sẵn trên các sàn giao dịch phi tập trung và bất kỳ ai cũng có thể mua để có quyền biểu quyết đối với tương lai của giao thức Maker.
 
-<p spaces-before="0">
-  <a href="https://makerdao.com">MakerDAO</a> – Token của MakerDAO là MKR có sẵn trên các sàn giao dịch phi tập trung và bất kỳ ai cũng có thể mua để có quyền biểu quyết đối với tương lai của giao thức Maker.
-</p>
+### Hội viên dựa trên cổ phần {#share-based-membership}
 
-<h3 id="share-based-membership" spaces-before="0">
-  Hội viên dựa trên cổ phần
-</h3>
+Những tổ chức tự trị phi tập trung (DAO) dựa trên cổ phần cần đến sự cho phép nhiều hơn nhưng vẫn rất cởi mở. Bất kỳ ai cũng có thể đề xuất gia nhập DAO, bằng cách đóng góp cho tổ chức giá trị nào đó, thường dưới dạng token hoặc lao động. Cổ phần đại diện cho quyền bổ phiếu và quyền sở hữu trực tiếp. Hội viên có thể rời bỏ bất cứ lúc nào và được giữ toàn bộ ngân khố tương đương tỉ lệ hội viên đó nắm giữ.
 
-<p spaces-before="0">
-  Những tổ chức tự trị phi tập trung (DAO) dựa trên cổ phần cần đến sự cho phép nhiều hơn nhưng vẫn rất cởi mở. Bất kỳ ai cũng có thể đề xuất gia nhập DAO, bằng cách đóng góp cho tổ chức giá trị nào đó, thường dưới dạng token hoặc lao động. Cổ phần đại diện cho quyền bổ phiếu và quyền sở hữu trực tiếp. Hội viên có thể rời bỏ bất cứ lúc nào và được giữ toàn bộ ngân khố tương đương tỉ lệ hội viên đó nắm giữ.
-</p>
+_Hình thức này thường được dùng cho những tổ chức có sự gắn kết cao và xoay quanh con người như những quỹ từ thiện, công đoàn và câu lạc bộ đầu tư. Nó cũng có thể quản trị những giao thức và token._
 
-<p spaces-before="0">
-  <em x-id="4">Hình thức này thường được dùng cho những tổ chức có sự gắn kết cao và xoay quanh con người như những quỹ từ thiện, công đoàn và câu lạc bộ đầu tư. Nó cũng có thể quản trị những giao thức và token.</em>
-</p>
+#### Một ví dụ phổ biến {#share-example}
 
-<h4 id="share-example" spaces-before="0">
-  Một ví dụ phổ biến
-</h4>
+[MolochDAO](http://molochdao.com/) – MolochDAO is focused on funding Ethereum projects. Moloch yêu cầu hội viên tiềm năng nộp một đề xuất tham gia. Dự trên đề xuất đó, Moloch có thể đánh giá liệu bạn có kĩ năng chuyên môn và tài chính cần thiết để đưa ra những phán quyết sáng suốt về những ứng viên tương lai hay không. Bạn không thể mua quyền truy cập DAO trên một sàn dịch mở.
 
-<p spaces-before="0">
-  <a href="http://molochdao.com/">MolochDAO</a> – MolochDAO is focused on funding Ethereum projects. Moloch yêu cầu hội viên tiềm năng nộp một đề xuất tham gia. Dự trên đề xuất đó, Moloch có thể đánh giá liệu bạn có kĩ năng chuyên môn và tài chính cần thiết để đưa ra những phán quyết sáng suốt về những ứng viên tương lai hay không. Bạn không thể mua quyền truy cập DAO trên một sàn dịch mở.
-</p>
+### Tư cách hội viên dựa trên uy tín {#reputation-based-membership}
 
-<h3 id="reputation-based-membership" spaces-before="0">
-  Tư cách hội viên dựa trên uy tín
-</h3>
+Độ uy tín đại diện cho bằng chứng về sự tham gia và trao quyền biểu quyết trong DAO. Không giống như token hoặc tư cách hội viên dựa trên cổ phần, các DAO dựa trên uy tín không thể chuyển quyền sở hữu cho những người đóng góp. Độ uy tín không thể mua, chuyển nhượng hoặc ủy quyền; hội viên DAO phải xây dựng uy tín qua sự đóng góp. Bỏ phiếu trên chuỗi không yêu cầu sự cho phép và các hội viên tiềm năng có thể tự do gửi đề xuất tham gia DAO và yêu cầu độ uy tín và token như một phần thưởng để đổi lấy những đóng góp của họ.
 
-<p spaces-before="0">
-  Độ uy tín đại diện cho bằng chứng về sự tham gia và trao quyền biểu quyết trong DAO. Không giống như token hoặc tư cách hội viên dựa trên cổ phần, các DAO dựa trên uy tín không thể chuyển quyền sở hữu cho những người đóng góp. Độ uy tín không thể mua, chuyển nhượng hoặc ủy quyền; hội viên DAO phải xây dựng uy tín qua sự đóng góp. Bỏ phiếu trên chuỗi không yêu cầu sự cho phép và các hội viên tiềm năng có thể tự do gửi đề xuất tham gia DAO và yêu cầu độ uy tín và token như một phần thưởng để đổi lấy những đóng góp của họ.
-</p>
+_Typically used for decentralized development and governance of protocols and [dapps](/glossary/#dapp), but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc._
 
-<p spaces-before="0">
-  <em x-id="4">Typically used for decentralized development and governance of protocols and <a href="/glossary/#dapp">dapps</a>, but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc.</em>
-</p>
+#### Một ví dụ phổ biến {#reputation-example}
 
-<h4 id="reputation-example" spaces-before="0">
-  Một ví dụ phổ biến
-</h4>
+[DXdao](https://DXdao.eth.link) - DXdao là một tổ chức có quyền xây dựng và quản lý toàn cầu các giao thức và ứng dụng phi tập trung kể từ năm 2019. It leverages reputation-based governance and [holographic consensus](/glossary/#holographic-consensus) to coordinate and manage funds, meaning no one can buy their way into influencing its future.
 
-<p spaces-before="0">
-  <a href="https://DXdao.eth.link">DXdao</a> - DXdao là một tổ chức có quyền xây dựng và quản lý toàn cầu các giao thức và ứng dụng phi tập trung kể từ năm 2019. It leverages reputation-based governance and <a href="/glossary/#holographic-consensus">holographic consensus</a> to coordinate and manage funds, meaning no one can buy their way into influencing its future.
-</p>
+## Gia nhập / khởi phát một tổ chức tự trị phi tập trung (DAO) {#join-start-a-dao}
 
-<h2 id="join-start-a-dao" spaces-before="0">
-  Gia nhập / khởi phát một tổ chức tự trị phi tập trung (DAO)
-</h2>
+### Gia nhập một tổ chức tự trị phi tập trung (DAO) {#join-a-dao}
 
-<h3 id="join-a-dao" spaces-before="0">
-  Gia nhập một tổ chức tự trị phi tập trung (DAO)
-</h3>
+- [Những DAO trên Ethereum](/community/get-involved/#decentralized-autonomous-organizations-daos)
+- [Danh sách các DAO của DAOHaus](https://app.daohaus.club/explore)
+- [Danh sách các DAO của Tally.xyz](https://www.tally.xyz)
 
-<ul>
-  <li>
-    <a href="/community/get-involved/#decentralized-autonomous-organizations-daos">Những DAO trên Ethereum</a>
-  </li>
-  <li>
-    <a href="https://app.daohaus.club/explore">Danh sách các DAO của DAOHaus</a>
-  </li>
-  <li>
-    <a href="https://www.tally.xyz">Danh sách các DAO của Tally.xyz</a>
-  </li>
-</ul>
+### Khởi tạo một DAO {#start-a-dao}
 
-<h3 id="start-a-dao" spaces-before="0">
-  Khởi tạo một DAO
-</h3>
+- [Kêu gọi một DAO với DAOHaus](https://app.daohaus.club/summon)
+- [Bắt đầu một Governor DAO với Tally](https://www.tally.xyz/add-a-dao)
+- [Tạo ra một DAO được hỗ trợ bởi Aragon](https://aragon.org/product)
+- [Khởi phát một thuộc địa](https://colony.io/)
+- [Tạo một DAO với sự đồng thuận đa chiều DAOstack](https://alchemy.daostack.io/daos/create)
 
-<ul>
-  <li>
-    <a href="https://app.daohaus.club/summon">Kêu gọi một DAO với DAOHaus</a>
-  </li>
-  <li>
-    <a href="https://www.tally.xyz/add-a-dao">Bắt đầu một Governor DAO với Tally</a>
-  </li>
-  <li>
-    <a href="https://aragon.org/product">Tạo ra một DAO được hỗ trợ bởi Aragon</a>
-  </li>
-  <li>
-    <a href="https://colony.io/">Khởi phát một thuộc địa</a>
-  </li>
-  <li>
-    <a href="https://alchemy.daostack.io/daos/create">Tạo một DAO với sự đồng thuận đa chiều DAOstack</a>
-  </li>
-</ul>
+## Đọc thêm {#further-reading}
 
-<h2 id="further-reading" spaces-before="0">
-  Đọc thêm
-</h2>
+### Những bài viết về DAO {#dao-articles}
 
-<h3 id="dao-articles" spaces-before="0">
-  Những bài viết về DAO
-</h3>
+- [DAO là gì?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [Ngôi nhà của các DAO](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) - [Metagame](https://wiki.metagame.wtf/)
+- [Một DAO là gì và để làm gì?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) - [DAOhaus](https://daohaus.club/)
+- [Làm thế nào để khởi phát một cộng đồng số hoạt động dựa trên DAO](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) - [DAOhaus](https://daohaus.club/)
+- [DAO là gì?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) - [Coinmarketcap](https://coinmarketcap.com)
+- [Đồng thuận đa chiều là gì?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) - [DAOstack](https://daostack.io/)
+- [DAO không phải là công ty: Khi sự phân quyền trong tổ chức tự trị có vai trò quan trọng, theo Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
+- [DAO, DAC, DA và Nhiều Hơn Nữa: Hướng Dẫn Thuật Ngữ Không Hoàn Chỉnh](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
-<ul>
-  <li>
-    <a href="https://aragon.org/dao">DAO là gì?</a> – <a href="https://aragon.org/">Aragon</a>
-  </li>
-  <li>
-    <a href="https://wiki.metagame.wtf/docs/great-houses/house-of-daos">Ngôi nhà của các DAO</a> - <a href="https://wiki.metagame.wtf/">Metagame</a>
-  </li>
-  <li>
-    <a href="https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for">Một DAO là gì và để làm gì?</a> - <a href="https://daohaus.club/">DAOhaus</a>
-  </li>
-  <li>
-    <a href="https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a">Làm thế nào để khởi phát một cộng đồng số hoạt động dựa trên DAO</a> - <a href="https://daohaus.club/">DAOhaus</a>
-  </li>
-  <li>
-    <a href="https://coinmarketcap.com/alexandria/article/what-is-a-dao">DAO là gì?</a> - <a href="https://coinmarketcap.com">Coinmarketcap</a>
-  </li>
-  <li>
-    <a href="https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c">Đồng thuận đa chiều là gì?</a> - <a href="https://daostack.io/">DAOstack</a>
-  </li>
-  <li>
-    <a href="https://vitalik.eth.limo/general/2022/09/20/daos.html">DAO không phải là công ty: Khi sự phân quyền trong tổ chức tự trị có vai trò quan trọng, theo Vitalik</a>
-  </li>
-  <li>
-    <a href="https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide">DAO, DAC, DA và Nhiều Hơn Nữa: Hướng Dẫn Thuật Ngữ Không Hoàn Chỉnh</a> - <a href="https://blog.ethereum.org">Ethereum Blog</a>
-  </li>
-</ul>
+### Các đoạn video {#videos}
 
-<h3 id="videos" spaces-before="0">
-  Các đoạn video
-</h3>
-
-<ul>
-  <li>
-    <a href="https://youtu.be/KHm0uUPqmVE">DAO đóng vai trò gì trong tiền mã hóa?</a>
-  </li>
-  <li>
-    <a href="https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city">Một DAO có thể tạo nên một thành phố được không?</a> - <a href="https://www.ted.com/">TED</a>
-  </li>
-</ul>
+- [DAO đóng vai trò gì trong tiền mã hóa?](https://youtu.be/KHm0uUPqmVE)
+- [Một DAO có thể tạo nên một thành phố được không?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) - [TED](https://www.ted.com/)
