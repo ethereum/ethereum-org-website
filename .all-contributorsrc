@@ -11717,7 +11717,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/38610409?v=4",
       "profile": "https://github.com/Vid201",
       "contributions": [
-        "tool"
+        "tool",
+        "bug"
       ]
     },
     {
@@ -11819,6 +11820,79 @@
       "profile": "https://www.linkedin.com/in/shravan-andoria/",
       "contributions": [
         "maintenance"
+      ]
+    },
+    {
+      "login": "mcmoodoo",
+      "name": "Rashid Ma",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8257719?v=4",
+      "profile": "http://rashidma.com",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "prestwich",
+      "name": "James Prestwich",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10149425?v=4",
+      "profile": "https://prestwi.ch",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "daiwt",
+      "name": "Dai Wentao",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26290219?v=4",
+      "profile": "https://github.com/daiwt",
+      "contributions": [
+        "bug"
+      ]
+    },
+    {
+      "login": "beetrootkid",
+      "name": "kuhant",
+      "avatar_url": "https://avatars.githubusercontent.com/u/34025634?v=4",
+      "profile": "https://github.com/beetrootkid",
+      "contributions": [
+        "tool"
+      ]
+    },
+    {
+      "login": "LucasAschenbach",
+      "name": "Lucas Aschenbach",
+      "avatar_url": "https://avatars.githubusercontent.com/u/37406743?v=4",
+      "profile": "https://github.com/LucasAschenbach",
+      "contributions": [
+        "content"
+      ]
+    },
+    {
+      "login": "juliettech13",
+      "name": "juliettech",
+      "avatar_url": "https://avatars.githubusercontent.com/u/19226636?v=4",
+      "profile": "https://juliet.tech",
+      "contributions": [
+        "tutorial"
+      ]
+    },
+    {
+      "login": "0xayot",
+      "name": "0xayot",
+      "avatar_url": "https://avatars.githubusercontent.com/u/101125111?v=4",
+      "profile": "https://github.com/0xayot",
+      "contributions": [
+        "doc"
+      ]
+    },
+    {
+      "login": "lgaroche",
+      "name": "Louis",
+      "avatar_url": "https://avatars.githubusercontent.com/u/13414533?v=4",
+      "profile": "https://github.com/lgaroche",
+      "contributions": [
+        "content",
+        "bug"
       ]
     }
   ],
