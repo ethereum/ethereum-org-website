@@ -6,7 +6,6 @@
   "page-upgrades-shards-date": "~2023",
   "page-upgrades-pbs": "Not imminent - expect 2024/25",
   "page-upgrades-post-merge-banner-tutorial-ood": "This tutorial is out of date after the merge and may not work. Please raise a PR if you would like to contribute.",
-  "page-upgrades-post-merge-banner-governance-ood": "Some content on this page is out-of-date after the merge. Please raise a PR if you would like to contribute.",
   "page-upgrades-upgrades-guide": "Guide to Ethereum upgrades",
   "page-upgrades-upgrades-docking": "The Merge",
   "page-upgrades-shard-title": "Sharding",

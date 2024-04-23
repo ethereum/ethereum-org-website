@@ -204,4 +204,4 @@ event Withdraw(
 ## 参考文献 {#further-reading}
 
 - [EIP-4626: トークン化ボールト規格](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHubリポジトリ](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)
+- [ERC-4626: GitHubリポジトリ](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)

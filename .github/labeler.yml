@@ -1,21 +1,21 @@
-"review needed :eyes:":
+"needs review 👀":
   - src/**/*
   - public/*
 
-"documentation :book:":
+"documentation 📖":
   - README.md
 
-"tooling :wrench:":
+"tooling 🔧":
   - .github/**/*
   - src/scripts/*
   - src/lib/*
   - src/hooks/*
 
-"dependencies :package:":
+"dependencies 📦":
   - package.json
   - yarn.lock
 
-"internal :house:":
+"internal 🏠":
   - .all-contributorsrc
   - i18n.config.json
   - next.config.js
@@ -29,14 +29,14 @@
   - .prettierrc
   - netlify.toml
 
-"translation :earth_africa:":
+"translation 🌍":
   - src/content/translations/**/*
   - src/intl/**/*
   - src/lib/utils/translations.ts
 
-"content :fountain_pen:":
+"content 🖋️":
   - src/pages/*
   - public/content/**/*
 
-"event :date:":
+"event 📅":
   - src/data/community-events.json

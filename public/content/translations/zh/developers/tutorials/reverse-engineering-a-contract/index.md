@@ -664,7 +664,7 @@ def unknown2e7ba6ef(uint256 _param1, uint256 _param2, uint256 _param3, array _pa
 
 下面两行表明 Storage[2] 也是我们调用的合约。 如果我们[查阅构造函数交易](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange)，就会看到此合约是 [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)，即一个封装的以太币合约，[其源代码已经上传到 Etherscan](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code)。
 
-是的，看起来这些合约试图将以太币发送到 `_param2`。 如果它可以做到，那就太好了。 如果做不到，它会尝试发送 [WETH](https://weth.io/)。 如果 `_param2` 是外部帐户(EOA)，那么它总是可以收到以太币，但合约帐户可以拒绝接收以太币。 但是，WETH 是 ERC-20，合约不能拒绝接受。
+是的，看起来这些合约试图将以太币发送到 `_param2`。 如果它可以做到，那就太好了。 如果做不到，它会尝试发送 [WETH](https://weth.tkn.eth.limo/)。 如果 `_param2` 是外部帐户(EOA)，那么它总是可以收到以太币，但合约帐户可以拒绝接收以太币。 但是，WETH 是 ERC-20，合约不能拒绝接受。
 
 ```python
   ...

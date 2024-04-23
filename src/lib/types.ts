@@ -116,6 +116,7 @@ export type Lang =
   | "sr"
   | "sw"
   | "ta"
+  | "te"
   | "th"
   | "tk"
   | "tr"
@@ -372,6 +373,8 @@ export type IRemarkTocOptions = {
   callback: (toc: TocNodeType) => void
 }
 
+type HeroButtonProps = Omit<CallToActionProps, "index">
+
 /**
  * General props to be picked or omitted for any of the hero components
  *
@@ -405,7 +408,7 @@ export type CommonHeroProps<
    *
    * The hero can render no buttons or up to and no more than two.
    */
-  buttons?: [CallToActionProps, CallToActionProps?]
+  buttons?: [HeroButtonProps, HeroButtonProps?]
   /**
    * The primary title of the page
    */
@@ -686,4 +689,23 @@ export type FooterLink = {
 export type FooterLinkSection = {
   title: TranslationKey
   links: FooterLink[]
+}
+
+// GitHub API
+export type GHIssue = {
+  title: string
+  html_url: string
+  created_at: string
+  user: {
+    login: string
+    html_url: string
+    avatar_url: string
+  }
+  labels: GHLabel[]
+}
+
+export type GHLabel = {
+  id: number
+  name: string
+  color: string
 }

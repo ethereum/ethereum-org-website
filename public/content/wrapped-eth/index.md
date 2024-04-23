@@ -61,6 +61,6 @@ Besides the [canonical implementation of WETH](https://etherscan.io/token/0xc02a
 
 ## Further reading {#further-reading}
 
-- [WTF is WETH?](https://weth.io/)
+- [WTF is WETH?](https://weth.tkn.eth.limo/)
 - [WETH token information on Etherscan](https://etherscan.io/token/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2)
 - [Formal Verification of WETH](https://zellic.io/blog/formal-verification-weth)
