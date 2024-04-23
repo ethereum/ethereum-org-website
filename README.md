@@ -1820,6 +1820,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/beetrootkid"><img src="https://avatars.githubusercontent.com/u/34025634?v=4?s=100" width="100px;" alt="kuhant"/><br /><sub><b>kuhant</b></sub></a><br /><a href="#tool-beetrootkid" title="Tools">🔧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/LucasAschenbach"><img src="https://avatars.githubusercontent.com/u/37406743?v=4?s=100" width="100px;" alt="Lucas Aschenbach"/><br /><sub><b>Lucas Aschenbach</b></sub></a><br /><a href="#content-LucasAschenbach" title="Content">🖋</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/0xayot"><img src="https://avatars.githubusercontent.com/u/101125111?v=4?s=100" width="100px;" alt="0xayot"/><br /><sub><b>0xayot</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=0xayot" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/lgaroche"><img src="https://avatars.githubusercontent.com/u/13414533?v=4?s=100" width="100px;" alt="Louis"/><br /><sub><b>Louis</b></sub></a><br /><a href="#content-lgaroche" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Algaroche" title="Bug reports">🐛</a></td>
     </tr>
   </tbody>
 </table>
