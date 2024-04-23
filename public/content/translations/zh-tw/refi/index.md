@@ -14,21 +14,23 @@ summaryPoint3: 大幅擴展生態效益資產（如已驗證碳權）的工具
 
 ## 什麼是再生金融 (ReFi)？ {#what-is-refi}
 
-**再生金融 (ReFi)** 是建立在區塊鏈上的一整套想法及工具，目標是建立再生經濟，而非榨取或剝削式經濟。 榨取式系統最終會耗盡可用資源並崩潰；若沒有再生機制，這套系統便缺乏恢復力。 再生金融在此假設下運作：貨幣價值的創造必須脫離以非永續的手段，從我們星球及社群抽取資源。
+**Regenerative finance (ReFi)** is a set of tools and ideas built on top of [blockchains](/glossary/#blockchain), that aim to create economies which are regenerative, rather than extractive or exploitative. 榨取式系統最終會耗盡可用資源並崩潰；若沒有再生機制，這套系統便缺乏恢復力。 再生金融在此假設下運作：貨幣價值的創造必須脫離以非永續的手段，從我們星球及社群抽取資源。
 
 相對的，再生金融的目標是透過建立再生循環以解決環境、公共或社會問題。 這些系統為參與者創造了價值，同時也有益於生態系統及社群。
 
 再生金融的其中一個基礎是由 Capital Institute 的 John Fullerton 所提出的再生經濟概念。 他提出了支撐系統健康的[八項相互關聯的原則](https://capitalinstitute.org/8-principles-regenerative-economy/)：
 
-![八個關聯原則](./refi-regenerative-economy-diagram.png)
+![八個關聯原則](refi-regenerative-economy-diagram.png)
 
-再生金融專案透過[智慧型合約](/developers/docs/smart-contracts/)及[去中心化金融 (DeFi)](/defi/) 應用程式來實現這些原則，從而獎勵可再生行為，例如復原衰退的生態系統及促進氣候變遷及生物多樣性減損等國際性議題的大規模合作。
+ReFi projects realize these principles using [smart contracts](/glossary/#smart-contract) and [decentralized finance (DeFi)](/glossary/#defi) applications to incentivize regenerative behaviors, e.g. restoring degraded ecosystems, and facilitate large-scale collaboration on global issues such as climate change and biodiversity loss.
 
 再生金融也和[去中心化科研 (DeSci)](/desci/) 運動重疊，此運動將以太坊當成融資、創建、審查、信貸、儲存及傳播科學知識的平臺。 去中心化科研工具有益於開發可驗證的再生活動實作及監控之標準及實踐，例如：植樹、消除海洋中的塑膠垃圾，或復原衰退的生態系統等再生活動。
 
+<YouTube id="La52dDzBt2k" />
+
 ## 碳權代幣化 {#tokenization-of-carbon-credits}
 
-**[自願性碳交易市場 (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** 是為專案融資的一種機制，此等專案必須對碳排放產生經驗證的正向影響，能減少持續進行中的碳排放，或消除已排放到大氣中的溫室氣體。 此等專案在經過驗證後會收到稱為「碳權」的資產，碳權可出售給願意支持氣候行動的個人或組織。
+The **[voluntary carbon market (VCM)](https://climatefocus.com/so-what-voluntary-carbon-market-exactly/)** is a mechanism for funding projects that make a verified positive impact on carbon emissions, either reducing ongoing emissions, or removing greenhouse gases already emitted from the atmosphere. 此等專案在經過驗證後會收到稱為「碳權」的資產，碳權可出售給願意支持氣候行動的個人或組織。
 
 除了自願性碳交易市場外，也有若干政府批准的官方碳交易市場（「規範市場」），目標是透過特定司法管轄區（如國家或地區）的法律或法規來制定碳權價格，控制可分配的許可供應量。 規範市場能獎勵其司法管轄區內的汙染排放者減少碳排放，但無法消除已被排放的溫室氣體。
 
@@ -47,7 +49,7 @@ summaryPoint3: 大幅擴展生態效益資產（如已驗證碳權）的工具
 - **流動性集中於少數流動池中**，任何人都能在裡面自由交易。 大型組織或個人可以直接在流動池中交易，不用手動尋找買家/賣家，也不需要支付參與費用或預先註冊。
 - **所有交易都記錄在公開的區塊鏈上**。 數位碳交易市場中一出現碳權交易，每筆交易活動的路徑永遠都能被追蹤。
 - **交易幾乎即時完成**。 透過傳統市場獲得大量碳權可能會花上數天或數週的時間，但在數位碳交易市場中只需幾秒即可實現。
-- **交易活動不需要中間人**，中間人還會向你收取高額費用。 根據分析公司的資料，數位碳權[與同等的傳統碳權相比，成本降低了 62%](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne)。
+- **交易活動不需要中間人**，中間人還會向你收取高額費用。 Digital carbon credits represent a significant cost reduction compared to traditional credits.
 - **數位碳交易市場既可擴張**，亦可滿足個人及跨國公司的需求。
 
 ### 數位碳交易市場的核心元件 {#key-components-dcm}
@@ -61,7 +63,7 @@ summaryPoint3: 大幅擴展生態效益資產（如已驗證碳權）的工具
 2. 碳權跨鏈橋，又稱 代幣轉換器，提供了代表傳統登記處中的碳權並將其轉移到數位碳交易市場的技術。 著名例子包括 [Toucan Protocol](https://toucan.earth/)、[C3](https://c3.app/) 和 [Moss.Earth](https://moss.earth/)。
 3. 整合服務是一種向使用者端提供碳減排和/或移除碳權的服務，讓使用者可以宣稱碳權對環境的效益，並與全世界分享他們對氣候行動的支援。
 
-像是 [Klima Infinity](https://www.klimadao.finance/infinity) 和 [Senken](https://senken.io/) 提供了第三方開發的各種專案，並在既定標準（如 Verra）下發行；其他如 [Nori](https://nori.com/) 就只提供了以其自家碳權標準開發的特定專案，由他們發行這些專案，他們也為之準備了自己的專門市場。
+Some such as [Klima Infinity](https://www.klimadao.finance/infinity) and [Senken](https://senken.io/) offer a wide variety of projects developed by third parties and issued under established standards like Verra; others like [Nori](https://nori.com/) only offer specific projects developed under their own carbon credit standard, which they issue and for which they have their own dedicated marketplace.
 
 4. 基礎設施促使碳交易市場整體供應鏈的影響和效益隨之擴張。 [KlimaDAO](http://klimadao.finance/) 將流動性當成公共物品（允許任何人以透明的價格買賣碳權）供應，透過獎勵來提高碳交易市場和碳註銷（指碳權的配額永久減少）的吞吐量，並提供簡單易用的可交互運作工具來存取相關資料，以及收購和註銷各種代幣化碳權。
 

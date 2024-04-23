@@ -6,11 +6,15 @@ lang: zh-tw
 
 # 智慧型合約簡介 {#introduction-to-smart-contracts}
 
-智慧型合約是以太坊應用程式層的基本構成要素。 這些合約是儲存在區塊鏈上的電腦程式，其跟從「條件式」的設計邏輯，且保證依程式碼所定義的規則來執行，程式碼一經建立即無法變更。
+智慧型合約是以太坊應用程式層的基本構成要素。 They are computer programs stored on the [blockchain](/glossary/#blockchain) that follow "if this then that" logic, and are guaranteed to execute according to the rules defined by its code, which cannot be changed once created.
 
 Nick Szabo 率先提出「智慧型合約」一詞。 他在 1994 年撰寫了[這個概念](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html)，並在 1996 年撰寫了[《探索智慧型合約可以做什麼》](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html)。
 
-Szabo 設想了一種數位市場，無需透過可信的中介，即能以自動化、透過加密方法保障安全的流程實現交易和業務功能。 以太坊上的智慧型合約讓此一願景付諸實踐。
+Szabo envisioned a digital marketplace where automatic, [cryptographically-secure](/glossary/#cryptography) processes enable transactions and business functions to happen without trusted intermediaries. 以太坊上的智慧型合約讓此一願景付諸實踐。
+
+觀看 Finematics 講解智慧型合約：
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## 傳統合約內的信任 {#trust-and-contracts}
 
@@ -22,7 +26,7 @@ Alice 和 Bob 進行一場自行車比賽。 Alice 和 Bob 打賭 10 美金，�
 
 這個搞笑的範例說明了非智慧型協議會發生的問題。 即使已符合協議的條件（即，你是比賽的獲勝者），你還得相信對方會履行協議（也就是支付賭注）。
 
-## 數位自動販賣機 {#vending-machine}
+## 數位販賣機 {#vending-machine}
 
 用簡單的比喻來說，智慧型合約就像一台自動販賣機，只要提供特定的輸入，就保證會得到預先設定好的輸出。
 
@@ -60,7 +64,7 @@ Alice 和 Bob 進行一場自行車比賽。 Alice 和 Bob 打賭 10 美金，�
 
 基本上，智慧型合約可以做到所有電腦程式都能做到的事。
 
-它們可以執行計算、創建貨幣、儲存資料、鑄造非同質化代幣、傳送通訊內容，甚至產生圖形。 以下是一些真實世界流行的範例：
+They can perform computations, create currency, store data, mint [NFTs](/glossary/#nft), send communications and even generate graphics. 以下是一些真實世界流行的範例：
 
 - [穩定幣](/stablecoins/)
 - [建立和分發唯一的數位資產](/nft/)
@@ -68,12 +72,6 @@ Alice 和 Bob 進行一場自行車比賽。 Alice 和 Bob 打賭 10 美金，�
 - [去中心化遊戲](/dapps/?category=gaming#explore)
 - [自動理賠的保單](https://etherisc.com/)
 - [讓人們建立自訂、可互相流通的貨幣的標準](/developers/docs/standards/tokens/)
-
-## 想透過視覺方式學習？ {#visual-learner}
-
-觀看 Finematics 講解智慧型合約：
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## 了解更多 {#further-reading}
 
