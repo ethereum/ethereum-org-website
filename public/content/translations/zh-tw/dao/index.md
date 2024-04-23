@@ -28,13 +28,13 @@ summaryPoint3: 一個將資產投入特定事業的安全場所。
 
 ### 比較 {#dao-comparison}
 
-| 去中心化自治組織                  | 傳統組織                        |
-| ------------------------- | --------------------------- |
-| 通常是扁平組織，而且完全民主。           | 通常等級嚴明。                     |
-| 任何更改都需要成員投票決定後才能實施。       | 視組織結構而定，可能由部分人進行決策，也可能投票表決。 |
-| 不需要可信的中間人便能自動統計投票、執行結果。   | 如果允許投票，會在內部計票，而且投票結果必須人工執行。 |
-| 以去中心化方式自動提供服務（例如慈善基金的分配）。 | 需要人工處理，或集中管控自動處理，易受操縱。      |
-| 所有活動皆完全公開透明。              | 活動通常是隱密進行，公開程度有限。           |
+| 去中心化自治組織                                   | 傳統組織                                               |
+| -------------------------------------------------- | ------------------------------------------------------ |
+| 通常是扁平組織，而且完全民主。                     | 通常等級嚴明。                                         |
+| 任何更改都需要成員投票決定後才能實施。             | 視組織結構而定，可能由部分人進行決策，也可能投票表決。 |
+| 不需要可信的中間人便能自動統計投票、執行結果。     | 如果允許投票，會在內部計票，而且投票結果必須人工執行。 |
+| 以去中心化方式自動提供服務（例如慈善基金的分配）。 | 需要人工處理，或集中管控自動處理，易受操縱。           |
+| 所有活動皆完全公開透明。                           | 活動通常是隱密進行，公開程度有限。                     |
 
 ### 去中心化自治組織範例 {#dao-examples}
 
@@ -44,261 +44,117 @@ summaryPoint3: 一個將資產投入特定事業的安全場所。
 - **共同擁有權** – 您可以購買實體或虛擬資產，且組織成員可以對如何使用資產進行投票。
 - **風險投資和捐款** – 您可以成立風險基金，透過該基金匯集投資資本並投票進行商業投資。 後續收益可以分配給相應的去中心化自治組織成員。
 
-<iframe src="https://embed.ted.com/talks/lang/en/scott_fitsimones_could_a_dao_build_the_next_great_city" ></p>
+## 去中心化自治組織如何運作？ {#how-daos-work}
 
-<h2 id="how-daos-work" spaces-before="0">
-  去中心化自治組織如何運作？
-</h2>
+去中心化自治組織背後的運作架構為其[智能合約](/glossary/#smart-contract)，智能合約定義組織的規則，並對該團體的金庫進行規範。 一旦在以太坊上部署合約，除非投票通過，否則不能修改規則。 任何不符合程式碼規則和邏輯的行為都會失效。 由於資金庫也是以智慧型合約定義，因此任何人都無法不經團體核准而挪用資金。 這意味著去中心化自治組織不需要中心化管理機構。 相反地，團體會共同做出決定，而付款會在投票通過之後自動獲得授權。
 
-<p spaces-before="0">
-  去中心化自治組織背後的運作架構為其<a href="/glossary/#smart-contract">智能合約</a>，智能合約定義組織的規則，並對該團體的金庫進行規範。 一旦在以太坊上部署合約，除非投票通過，否則不能修改規則。 任何不符合程式碼規則和邏輯的行為都會失效。 由於資金庫也是以智慧型合約定義，因此任何人都無法不經團體核准而挪用資金。 這意味著去中心化自治組織不需要中心化管理機構。 相反地，團體會共同做出決定，而付款會在投票通過之後自動獲得授權。
-</p>
+之所以能夠做到這一點，是因為智慧型合約一旦部署於以太坊，就無法被篡改。 一切都是公開的，只要有人修改程式碼（去中心化自治組織的規則）就會被發現。
 
-<p spaces-before="0">
-  之所以能夠做到這一點，是因為智慧型合約一旦部署於以太坊，就無法被篡改。 一切都是公開的，只要有人修改程式碼（去中心化自治組織的規則）就會被發現。
-</p>
+## 以太坊與去中心化自治組織 {#ethereum-and-daos}
 
-<h2 id="ethereum-and-daos" spaces-before="0">
-  以太坊與去中心化自治組織
-</h2>
+以太坊為去中心化自治組織提供了極佳的基礎，原因如下：
 
-<p spaces-before="0">
-  以太坊為去中心化自治組織提供了極佳的基礎，原因如下：
-</p>
+- 以太坊本身的共識足夠去中心化，同時建立已久，足以讓組織信任其網路。
+- 智慧型合約程式碼部署後便無法修改，即使是所有人亦然。 這使得去中心化自治組織可以完全按照程式設定的規則運作。
+- 智慧型合約可以發送/接收資金。 如果少了這點，你就需要可信的中間人來管理團體的資金。
+- 事實證明，比起競爭，以太坊社群更趨向合作，使得最佳做法和支援系統得以快速發展。
 
-<ul>
-  <li>
-    以太坊本身的共識足夠去中心化，同時建立已久，足以讓組織信任其網路。
-  </li>
-  <li>
-    智慧型合約程式碼部署後便無法修改，即使是所有人亦然。 這使得去中心化自治組織可以完全按照程式設定的規則運作。
-  </li>
-  <li>
-    智慧型合約可以發送/接收資金。 如果少了這點，你就需要可信的中間人來管理團體的資金。
-  </li>
-  <li>
-    事實證明，比起競爭，以太坊社群更趨向合作，使得最佳做法和支援系統得以快速發展。
-  </li>
-</ul>
+## 去中心化自治組織的治理 {#dao-governance}
 
-<h2 id="dao-governance" spaces-before="0">
-  去中心化自治組織的治理
-</h2>
+管理去中心化自治組織時有許多考量，例如投票及提案該如何運作。
 
-<p spaces-before="0">
-  管理去中心化自治組織時有許多考量，例如投票及提案該如何運作。
-</p>
+### 授權 {#governance-delegation}
 
-<h3 id="governance-delegation" spaces-before="0">
-  授權
-</h3>
+授權類似去中心化自治組織版本的代議民主。 代幣持有者向自我提名、並承諾管理協議且掌握最新消息的使用者分配選票。
 
-<p spaces-before="0">
-  授權類似去中心化自治組織版本的代議民主。 代幣持有者向自我提名、並承諾管理協議且掌握最新消息的使用者分配選票。
-</p>
+#### 知名案例 {#governance-example}
 
-<h4 id="governance-example" spaces-before="0">
-  知名案例
-</h4>
+[以太坊域名服務](https://claim.ens.domains/delegate-ranking) — 以太坊域名服務持有者可將其選票分配給積極代表他們參與活動的社群成員。
 
-<p spaces-before="0">
-  <a href="https://claim.ens.domains/delegate-ranking">以太坊域名服務</a> — 以太坊域名服務持有者可將其選票分配給積極代表他們參與活動的社群成員。
-</p>
+### 自動交易治理 {#governance-example}
 
-<h3 id="governance-example" spaces-before="0">
-  自動交易治理
-</h3>
+在許多去中心化自治組織中，如達規定人數的成員投予同意，交易將被自動執行。
 
-<p spaces-before="0">
-  在許多去中心化自治組織中，如達規定人數的成員投予同意，交易將被自動執行。
-</p>
+#### 知名案例 {#governance-example}
 
-<h4 id="governance-example" spaces-before="0">
-  知名案例
-</h4>
+[Nouns](https://nouns.wtf) – Nouns DAO 中，如票數達規定數量且大多數票投予同意，只要不被創辦人所否決，一筆交易會自動被執行。
 
-<p spaces-before="0">
-  <a href="https://nouns.wtf">Nouns</a> – Nouns DAO 中，如票數達規定數量且大多數票投予同意，只要不被創辦人所否決，一筆交易會自動被執行。
-</p>
+### 多簽治理 {#governance-example}
 
-<h3 id="governance-example" spaces-before="0">
-  多簽治理
-</h3>
+雖然去中心化自治組織可有上千名的投票成員，資金可存在於一個由 5-20 名被信任且通常資訊公開（由社群所知的公開身份）的活躍社群成員所共享的[錢包](/glossary/#wallet)中。 投票後，[多簽](/glossary/#multisig)簽署人會執行社群的意願。
 
-<p spaces-before="0">
-  雖然去中心化自治組織可有上千名的投票成員，資金可存在於一個由 5-20 名被信任且通常資訊公開（由社群所知的公開身份）的活躍社群成員所共享的<a href="/glossary/#wallet">錢包</a>中。 投票後，<a href="/glossary/#multisig">多簽</a>簽署人會執行社群的意願。
-</p>
+## 去中心化自治組織相關法律 {#dao-laws}
 
-<h2 id="dao-laws" spaces-before="0">
-  去中心化自治組織相關法律
-</h2>
+1977 年，懷俄明州創造了有限責任公司制度以保護創業家並限定其責任。 更近期，懷俄明州首創去中心化自治組織相關法律，給予去中心化自治組織法律地位。 目前懷俄明州、佛蒙特州，以及維京群島皆某種程度上具去中心化自治組織相關法律。
 
-<p spaces-before="0">
-  1977 年，懷俄明州創造了有限責任公司制度以保護創業家並限定其責任。 更近期，懷俄明州首創去中心化自治組織相關法律，給予去中心化自治組織法律地位。 目前懷俄明州、佛蒙特州，以及維京群島皆某種程度上具去中心化自治組織相關法律。
-</p>
+### 知名案例 {#law-example}
 
-<h3 id="law-example" spaces-before="0">
-  知名案例
-</h3>
+[CityDAO](https://citydao.io)——CityDAO 透過懷俄明州去中心化自治組織的相關法律購買了黃石國家公園附近 40 英畝的地。
 
-<p spaces-before="0">
-  <a href="https://citydao.io">CityDAO</a>——CityDAO 透過懷俄明州去中心化自治組織的相關法律購買了黃石國家公園附近 40 英畝的地。
-</p>
+## 去中心化自治組織成員 {#dao-membership}
 
-<h2 id="dao-membership" spaces-before="0">
-  去中心化自治組織成員
-</h2>
+成為去中心化自治組織的成員有多個模式。 成員可以決定投票方式和去中心化自治組織的其他重要事務。
 
-<p spaces-before="0">
-  成為去中心化自治組織的成員有多個模式。 成員可以決定投票方式和去中心化自治組織的其他重要事務。
-</p>
+### 代幣型成員 {#token-based-membership}
 
-<h3 id="token-based-membership" spaces-before="0">
-  代幣型成員
-</h3>
+通常完全[無需許可](/glossary/#permissionless)，視代幣而定。 這類治理代幣大部分都能在[去中心化交易所](/glossary/#dex)無需許可的自由交易。 只有少部分必須透過提供流動性或其他某些「工作量證明」來賺取。 無論是哪一種方式，只要持有代幣就能獲得投票權。
 
-<p spaces-before="0">
-  通常完全<a href="/glossary/#permissionless">無需許可</a>，視代幣而定。 這類治理代幣大部分都能在<a href="/glossary/#dex">去中心化交易所</a>無需許可的自由交易。 只有少部分必須透過提供流動性或其他某些「工作量證明」來賺取。 無論是哪一種方式，只要持有代幣就能獲得投票權。
-</p>
+通常用於治理廣泛的去中心化協定及/或代幣本身。
 
-<p spaces-before="0">
-  <em x-id="4">通常用於治理廣泛的去中心化協定及/或代幣本身。</em>
-</p>
+#### 知名案例 {#token-example}
 
-<h4 id="token-example" spaces-before="0">
-  知名案例
-</h4>
+[MakerDAO](https://makerdao.com)——MakerDAO 的代幣 MKR 在去中心化交易所普遍可得，且任何人皆可買進投票權來決定 Maker 協議的未來。
 
-<p spaces-before="0">
-  <a href="https://makerdao.com">MakerDAO</a>——MakerDAO 的代幣 MKR 在去中心化交易所普遍可得，且任何人皆可買進投票權來決定 Maker 協議的未來。
-</p>
+### 股份型成員 {#share-based-membership}
 
-<h3 id="share-based-membership" spaces-before="0">
-  股份型成員
-</h3>
+股份型去中心化自治組織擁有更多權力，但仍然相當公開。 任何潛在的會員都可以申請加入去中心化自治組織，通常會以代幣或工作的形式提供有價值的貢獻。 股份直接代表投票權及所有權。 成員可以隨時帶著自己所佔的股份退出。
 
-<p spaces-before="0">
-  股份型去中心化自治組織擁有更多權力，但仍然相當公開。 任何潛在的會員都可以申請加入去中心化自治組織，通常會以代幣或工作的形式提供有價值的貢獻。 股份直接代表投票權及所有權。 成員可以隨時帶著自己所佔的股份退出。
-</p>
+_通常用於關係較為緊密、以人為中心的組織，例如慈善機構、勞工團體、投資組織等， 也可以治理協定及代幣。_
 
-<p spaces-before="0">
-  <em x-id="4">通常用於關係較為緊密、以人為中心的組織，例如慈善機構、勞工團體、投資組織等， 也可以治理協定及代幣。</em>
-</p>
+#### 知名案例 {#share-example}
 
-<h4 id="share-example" spaces-before="0">
-  知名案例
-</h4>
+[MolochDAO](http://molochdao.com/)——MolochDAO 致力於資助以太坊專案。 想加入為成員必須提出申請，以便團體評估你是否具備必要的專業知識和資金來對潛在的受資助者作出明智判斷。 你無法直接在公開市場購買加入該去中心化自治組織的權限。
 
-<p spaces-before="0">
-  <a href="http://molochdao.com/">MolochDAO</a>——MolochDAO 致力於資助以太坊專案。 想加入為成員必須提出申請，以便團體評估你是否具備必要的專業知識和資金來對潛在的受資助者作出明智判斷。 你無法直接在公開市場購買加入該去中心化自治組織的權限。
-</p>
+### 信譽型成員 {#reputation-based-membership}
 
-<h3 id="reputation-based-membership" spaces-before="0">
-  信譽型成員
-</h3>
+信譽代表參與證明，並能授予去中心化自治組織的投票權。 不同於代幣型或股份型成員，信譽型去中心化自治組織不會將所有權轉讓給貢獻者。 信譽不能購買、移轉或授權；去中心化自治組織成員必須透過參與來獲得信譽。 鏈上投票是開放式的，潛在成員可以自由提出加入去中心化自治組織的申請，並要求獲得信譽和代幣作為貢獻的獎勵。
 
-<p spaces-before="0">
-  信譽代表參與證明，並能授予去中心化自治組織的投票權。 不同於代幣型或股份型成員，信譽型去中心化自治組織不會將所有權轉讓給貢獻者。 信譽不能購買、移轉或授權；去中心化自治組織成員必須透過參與來獲得信譽。 鏈上投票是開放式的，潛在成員可以自由提出加入去中心化自治組織的申請，並要求獲得信譽和代幣作為貢獻的獎勵。
-</p>
+_Typically used for decentralized development and governance of protocols and <a href="/glossary/#dapp">dapps</a>, but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc._
 
-<p spaces-before="0">
-  <em x-id="4">Typically used for decentralized development and governance of protocols and <a href="/glossary/#dapp">dapps</a>, but also well suited to a diverse set of organizations like charities, worker collectives, investment clubs, etc.</em>
-</p>
+#### 知名案例 {#reputation-example}
 
-<h4 id="reputation-example" spaces-before="0">
-  知名案例
-</h4>
+<a href="https://DXdao.eth.link">DXdao</a> – DXdao 是一個全球主權聯合組織，自 2019 年以來一直致力於建構與治理去中心化協定和應用程式。 It leverages reputation-based governance and <a href="/glossary/#holographic-consensus">holographic consensus</a> to coordinate and manage funds, meaning no one can buy their way into influencing its future.
 
-<p spaces-before="0">
-  <a href="https://DXdao.eth.link">DXdao</a> – DXdao 是一個全球主權聯合組織，自 2019 年以來一直致力於建構與治理去中心化協定和應用程式。 It leverages reputation-based governance and <a href="/glossary/#holographic-consensus">holographic consensus</a> to coordinate and manage funds, meaning no one can buy their way into influencing its future.
-</p>
+## 參與/建立去中心化自治組織 {#join-start-a-dao}
 
-<h2 id="join-start-a-dao" spaces-before="0">
-  參與/建立去中心化自治組織
-</h2>
+### 加入去中心化自治組織 (DAO) {#join-a-dao}
 
-<h3 id="join-a-dao" spaces-before="0">
-  加入去中心化自治組織 (DAO)
-</h3>
+- [以太坊社群去中心化自治組織](/community/get-involved/#decentralized-autonomous-organizations-daos)
+- [DAOHaus 的去中心化自治組織清單](https://app.daohaus.club/explore)
+- [Tally.xyz 的去中心化自治組織清單](https://www.tally.xyz)
 
-<ul>
-  <li>
-    <a href="/community/get-involved/#decentralized-autonomous-organizations-daos">以太坊社群去中心化自治組織</a>
-  </li>
-  <li>
-    <a href="https://app.daohaus.club/explore">DAOHaus 的去中心化自治組織清單</a>
-  </li>
-  <li>
-    <a href="https://www.tally.xyz">Tally.xyz 的去中心化自治組織清單</a>
-  </li>
-</ul>
+### 建立去中心化自治組織 {#start-a-dao}
 
-<h3 id="start-a-dao" spaces-before="0">
-  建立去中心化自治組織
-</h3>
+- [使用 DAOHaus 建立去中心化自治組織](https://app.daohaus.club/summon)
+- [使用 Tally 建立治理者型去中心化自治組織](https://www.tally.xyz/add-a-dao)
+- [建立由 Aragon 支援的去中心化自治組織](https://aragon.org/product)
+- [建立 colony](https://colony.io/)
+- [使用 DAOstack 全局共識建立去中心化自治組織](https://alchemy.daostack.io/daos/create)
 
-<ul>
-  <li>
-    <a href="https://app.daohaus.club/summon">使用 DAOHaus 建立去中心化自治組織</a>
-  </li>
-  <li>
-    <a href="https://www.tally.xyz/add-a-dao">使用 Tally 建立一個治理者型去中心化自治組織</a>
-  </li>
-  <li>
-    <a href="https://aragon.org/product">建立由 Aragon 支援的去中心化自治組織</a>
-  </li>
-  <li>
-    <a href="https://colony.io/">建立 colony</a>
-  </li>
-  <li>
-    <a href="https://alchemy.daostack.io/daos/create">使用 DAOstack 全局共識建立去中心化自治組織</a>
-  </li>
-</ul>
+## 延伸閱讀 {#further-reading}
 
-<h2 id="further-reading" spaces-before="0">
-  延伸閱讀
-</h2>
+### 去中心化自治組織相關文章 {#dao-articles}
 
-<h3 id="dao-articles" spaces-before="0">
-  去中心化自治組織相關文章
-</h3>
+- [什麼是去中心化自治組織？](https://aragon.org/dao)– [Aragon](https://aragon.org/)
+- [去中心化自治組織之家](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
+- [何謂去中心化自治組織？它有何用途？](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for)– [DAOhaus](https://daohaus.club/)
+- [如何創立由去中心化自治組織支援的數位社群](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
+- [什麼是去中心化自治組織？](https://coinmarketcap.com/alexandria/article/what-is-a-dao)– [Coinmarketcap](https://coinmarketcap.com)
+- [全局共識是什麼？](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c)– [DAOstack](https://daostack.io/)
+- [Vitalik，《去中心化自治組織並非法人團體：去中心化在自治組織裡的重要之處》](https://vitalik.eth.limo/general/2022/09/20/daos.html)
+- [去中心化自治組織、去中心化自治公司、去中心化應用程式等：不完整術語指引](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [以太坊部落格](https://blog.ethereum.org)
 
-<ul>
-  <li>
-    <a href="https://aragon.org/dao">什麼是去中心化自治組織？</a>– <a href="https://aragon.org/">Aragon</a>
-  </li>
-  <li>
-    <a href="https://wiki.metagame.wtf/docs/great-houses/house-of-daos">去中心化自治組織之家</a> – <a href="https://wiki.metagame.wtf/">Metagame</a>
-  </li>
-  <li>
-    <a href="https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for">何謂去中心化自治組織？它有何用途？</a>– <a href="https://daohaus.club/">DAOhaus</a>
-  </li>
-  <li>
-    <a href="https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a">如何創立由去中心化自治組織支援的數位社群</a> – <a href="https://daohaus.club/">DAOhaus</a>
-  </li>
-  <li>
-    <a href="https://coinmarketcap.com/alexandria/article/what-is-a-dao">什麼是去中心化自治組織？</a>– <a href="https://coinmarketcap.com">Coinmarketcap</a>
-  </li>
-  <li>
-    <a href="https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c">什麼是全局共識？</a>- <a href="https://daostack.io/">DAOstack</a>
-  </li>
-  <li>
-    <a href="https://vitalik.eth.limo/general/2022/09/20/daos.html">Vitalik，《去中心化自治組織並非法人團體：去中心化在自治組織裡的重要之處》</a>
-  </li>
-  <li>
-    <a href="https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide">去中心化自治組織、去中心化自治公司、去中心化應用程式等：不完整術語指引</a> - <a href="https://blog.ethereum.org">以太坊部落格</a>
-  </li>
-</ul>
+### 影片 {#videos}
 
-<h3 id="videos" spaces-before="0">
-  影片
-</h3>
-
-<ul>
-  <li>
-    <a href="https://youtu.be/KHm0uUPqmVE">什麼是加密貨幣世界的去中心化自治組織？</a>
-  </li>
-  <li>
-    <a href="https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city">一個去中心化自治組織是否能建立一座城市？</a>– <a href="https://www.ted.com/">TED</a>
-  </li>
-</ul>
+- [什麼是加密貨幣世界的去中心化自治組織？](https://youtu.be/KHm0uUPqmVE)
+- [一個去中心化自治組織是否能建立一座城市？](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city)– [TED](https://www.ted.com/)
