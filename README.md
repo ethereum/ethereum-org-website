@@ -1825,6 +1825,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lgaroche"><img src="https://avatars.githubusercontent.com/u/13414533?v=4?s=100" width="100px;" alt="Louis"/><br /><sub><b>Louis</b></sub></a><br /><a href="#content-lgaroche" title="Content">🖋</a> <a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3Algaroche" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://bento.me/rohitramesh"><img src="https://avatars.githubusercontent.com/u/70317502?v=4?s=100" width="100px;" alt="Rohit Ramesh"/><br /><sub><b>Rohit Ramesh</b></sub></a><br /><a href="#tool-rohit-710" title="Tools">🔧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/gsalzer"><img src="https://avatars.githubusercontent.com/u/13353518?v=4?s=100" width="100px;" alt="Gernot Salzer"/><br /><sub><b>Gernot Salzer</b></sub></a><br /><a href="#ideas-gsalzer" title="Ideas, Planning, & Feedback">🤔</a></td>
     </tr>
   </tbody>
 </table>
