@@ -492,8 +492,6 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[Trail of Bits](https://www.trailofbits.com/)** - _Cybersecurity company that combines security research with an attacker mentality to reduce risk and fortify code._
 
-- **[Cyfrin](https://cyfrin.io)** - _Web3 security powerhouse, incubating crypto security through products and smart contract auditing services._
-
 - **[PeckShield](https://peckshield.com/)** - _Blockchain security company offering products and services for the security, privacy, and usability of the entire blockchain ecosystem._
 
 - **[QuantStamp](https://quantstamp.com/)** - _Auditing service facilitating the mainstream adoption of blockchain technology through security and risk assessment services._
@@ -512,7 +510,7 @@ If you plan on querying an on-chain oracle for asset prices, consider using one 
 
 - **[CodeHawks](https://codehawks.com/)** - _Competitive audits platform hosting smart contracts auditing competitions for security researchers._
 
-- **[Cyfrin](https://www.cyfrin.io/)** - _Blockchain security and web3 education firm focused on EVM and Vyper based protocols._
+- **[Cyfrin](https://cyfrin.io)** - _Web3 security powerhouse, incubating crypto security through products and smart contract auditing services._
 
 - **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3 security firm offering security audits for blockchain systems through a team of experienced auditors and best-in-class tools._
 
