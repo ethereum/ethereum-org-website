@@ -1,6 +1,7 @@
 import React from "react"
-import { Box } from "@chakra-ui/react"
 import LiteYouTubeEmbed from "react-lite-youtube-embed"
+import { Box } from "@chakra-ui/react"
+
 import "react-lite-youtube-embed/dist/LiteYouTubeEmbed.css"
 
 /**

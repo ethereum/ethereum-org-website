@@ -37,7 +37,6 @@
   "page-wallets-seed-phrase": "Ghi lại cụm từ khởi tạo",
   "page-wallets-seed-phrase-desc": "Ví thường sẽ cung cấp cho bạn một cụm từ khởi tạo và bạn cần ghi lại vào nơi nào đó thật an toàn. Đây là cách duy nhất giúp bạn khôi phục ví.",
   "page-wallets-seed-phrase-example": "Dưới đây là ví dụ:",
-  "page-wallets-seed-phrase-snippet": "there aeroplane curve vent formation doge possible product distinct under spirit lamp",
   "page-wallets-seed-phrase-write-down": "Không lưu cụm từ trên máy tính. Ghi lại vào nơi an toàn.",
   "page-wallets-slogan": "Nắm giữ chìa khóa mở ra tương lai số của bạn",
   "page-wallets-stay-safe": "Làm thế nào để bảo đảm an toàn tài chính",
@@ -62,6 +61,6 @@
   "page-wallets-your-ethereum-account-desc": "Ví là cửa sổ giúp bạn tiếp cận vào tài khoản Ethereum của mình – số dư, lịch sử giao dịch và nhiều nội dung khác. Tuy nhiên, bạn có thể hoán đổi nhà cung cấp ví bất kỳ lúc nào.",
   "page-wallets-your-login": "Phương tiện đăng nhập vào các ứng dụng Ethereum",
   "page-wallets-your-login-desc": "Ví cho phép bạn kết nối với các ứng dụng bất kỳ bằng tài khoản Ethereum của mình. Ví giống như một phương tiện đăng nhập mà bạn có thể sử dụng trên nhiều ứng dụng.",
-  "additional-reading-how-to-create-an-ethereum-account": "How to create an Ethereum account",
+  "additional-reading-how-to-create-an-ethereum-account": "Cách tạo tài khoản Ethereum",
   "additional-reading-how-to-use-a-wallet": "Cách để sử dụng ví"
 }
