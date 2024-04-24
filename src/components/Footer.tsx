@@ -9,6 +9,7 @@ import {
   List,
   ListItem,
   SimpleGrid,
+  Text,
 } from "@chakra-ui/react"
 
 import type { FooterLink, FooterLinkSection, Lang } from "@/lib/types"
@@ -23,19 +24,16 @@ const socialLinks = [
     icon: FaGithub,
     to: "https://github.com/ethereum/ethereum-org-website",
     ariaLabel: "GitHub",
-    color: "#333",
   },
   {
     icon: FaTwitter,
     to: "https://twitter.com/ethdotorg",
     ariaLabel: "Twitter",
-    color: "#1DA1F2",
   },
   {
     icon: FaDiscord,
     to: "https://discord.gg/ethereum-org",
     ariaLabel: "Discord",
-    color: "#7289da",
   },
 ]
 
@@ -325,7 +323,7 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
     _hover: hoverStyles,
     sx: {
       "& svg": {
-        fill: "text200",
+        fill: "body.medium",
       },
     },
   }
@@ -339,25 +337,25 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
         flexWrap="wrap"
       >
         {lastDeployDate && (
-          <Box color="text200">
+          <Text>
             <Translation id="website-last-updated" />:{" "}
             {getLocaleTimestamp(locale as Lang, lastDeployDate)}
-          </Box>
+          </Text>
         )}
         <Box my={4}>
-          {socialLinks.map(({ to, ariaLabel, icon, color }) => (
+          {socialLinks.map(({ to, ariaLabel, icon }) => (
             <BaseLink
               key={to}
               href={to}
               hideArrow
-              color="secondary"
+              color="body.base"
               aria-label={ariaLabel}
               ms="4"
+              _focus={{ color: "primary.base" }}
             >
               <Icon
                 as={icon}
                 _hover={{
-                  color,
                   transition:
                     "color 0.2s ease-in-out, transform 0.2s ease-in-out",
                 }}

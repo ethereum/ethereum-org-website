@@ -15,7 +15,6 @@ lang: zh-tw
 這些計劃通過向各種專案提供資助來支援開放的以太坊生態系統。 其中包括可擴展性、社群建設、安全性、隱私等方面的解決方案。 這些贈款並不專門針對任何一個以太坊平台，如果你不確定，可以從這裡開始。
 
 - [EF 生態系統支援計劃](https://esp.ethereum.foundation) - _資助有益於以太坊的開源專案，特別關注通用工具、基礎設施、研究和公共產品_
-- [MetaCartel](https://www.metacartel.org/grants/) - _開發去中心化應用程式、創建去中心化自治組織_
 - [Moloch DAO](https://www.molochdao.com/) - _隱私性、二層網路擴容、用戶端安全性等_
 - [去中心化自治組織資助計畫](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _有關資助機構的 Google 試算表_
 - [學術資助](https://esp.ethereum.foundation/academic-grants) - _支援以太坊相關學術工作的資助計劃_

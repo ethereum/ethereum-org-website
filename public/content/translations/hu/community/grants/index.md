@@ -15,7 +15,6 @@ A listát a közösség tartja karban. Ha bármit hiányol vagy nem talál helye
 Ezek a programok a kiterjed Ethereum-ökoszisztémát támogatják és a projektek széles körének ajánlanak finanszírozást. Mint a skálázási megoldások, közösségépítés, biztonság, adatvédelem és még sok más. Nem kötődnek valamelyik platformhoz, és mindig jó kiindulópont, ha valamiért Ön bizonytalan a támogatások témájában.
 
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) – _Nyílt forráskódú projektek finanszírozása: fókuszban az egyetemes eszközök, infrastruktúra, kutatás és közjavak_
-- [MetaCartel](https://www.metacartel.org/grants/) – _Dapp fejlesztése, DAO létrehozása_
 - [Moloch DAO](https://www.molochdao.com/) – _Adatvédelem, L2 skálázás, kliensbiztonság és más területek_
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _A támogatást ajánló szervezetek listája Google-táblázatban_
 - [Academic Grants](https://esp.ethereum.foundation/academic-grants) – _Az Ethereummal kapcsolatos akadémiai munkák támogatása_

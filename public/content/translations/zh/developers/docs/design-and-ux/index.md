@@ -12,7 +12,7 @@ lang: zh
 
 有效的设计不仅仅是创建赏心悦目的用户界面。 还涉及到深入了解用户的需求、目标以及驱动因素。 因此，我们强烈建议所有设计师采用一种设计流程，例如[**双钻流程**](https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model))，以确保其设计经过深思熟虑且有意为之。
 
-- [Web3 需要更多用户体验研究人员和设计师](https://akasha.org/blog/2022/10/11/akasha-conversation-09-web3-ux-researchers-and-designers) - 当前设计成熟度概述
+- [Web3 需要更多用户体验研究人员和设计师](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) - 当前设计成熟度概述
 - [在 Web3 中进行用户体验研究的简明指南](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - 研究方法简明指南
 - [如何在 Web3 中进行用户体验决策](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - 定量和定性研究简要概述及两者之间的区别（6 分钟视频）
 - [在 Web3 中担任用户体验研究人员](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - 在 Web3 中担任用户体验研究人员的感受之个人看法

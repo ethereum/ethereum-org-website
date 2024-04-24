@@ -197,7 +197,7 @@ export const UseCasesLayout = ({
           <Box>
             <UnorderedList ms="1.45rem">
               {summaryPoints.map((point, idx) => (
-                <ListItem key={idx} color="text300" mb={0}>
+                <ListItem key={idx} mb={0}>
                   {point}
                 </ListItem>
               ))}

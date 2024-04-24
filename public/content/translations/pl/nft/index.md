@@ -20,7 +20,7 @@ Unikalność każdego NFT umożliwia tokenizację rzeczy takich jak dzieła arty
 
 <YouTube id="Xdkkux6OxfM" />
 
-## Internet rzeczy {#internet-of-assets}
+## Internet aktywów {#internet-of-assets}
 
 NFT i Ethereum rozwiązują niektóre z problemów występujących w dzisiejszym Internecie. Ponieważ wszystko staje się coraz bardziej cyfrowe, istnieje potrzeba odtworzenia właściwości przedmiotów fizycznych, takich jak rzadkość, unikalność i dowód własności w sposób, który nie jest kontrolowany przez centralną organizację. Dzięki NFT możesz na przykład posiadać plik muzyczny mp3 we wszystkich aplikacjach opartych na Ethereum i nie być przywiązanym do konkretnej aplikacji muzycznej danej firmy, takiej jak Spotify lub Apple Music. Możesz posiadać nazwę w mediach społecznościowych, którą możesz sprzedać lub wymienić, ale nie może ona zostać samowolnie odebrana przez dostawcę platformy.
 
