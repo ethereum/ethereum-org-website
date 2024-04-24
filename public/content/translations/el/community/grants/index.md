@@ -15,10 +15,8 @@ lang: el
 Αυτά τα προγράμματα υποστηρίζουν το ευρύ οικοσύστημα Ethereum προσφέροντας επιχορηγήσεις σε ένα ευρύ φάσμα έργων. Αυτά περιλαμβάνουν λύσεις για την επεκτασιμότητα, τη δημιουργία κοινότητας, την ασφάλεια, την ιδιωτικότητα και πολλά άλλα. Αυτές οι επιχορηγήσεις δεν είναι συγκεκριμένες για καμία πλατφόρμα Ethereum και είναι ένα καλό μέρος για να ξεκινήσετε εάν δεν είστε σίγουροι.
 
 - [Πρόγραμμα Υποστήριξης Οικοσυστήματος EF](https://esp.ethereum.foundation) - _Χρηματοδότηση έργων ανοιχτού κώδικα που ωφελούν το Ethereum, με ιδιαίτερη έμφαση στα γενικά εργαλεία, τις υποδομές, την έρευνα και τα δημόσια αγαθά_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Ανάπτυξη Dapp, δημιουργία DAO_
 - [Moloch DAO](https://www.molochdao.com/) - _Απόρρητο, αναβάθμιση επιπέδου 2, ασφάλεια πελάτη και πολλά άλλα_
 - [Χορηγίες DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Υπολογιστικό φύλλο Google για οργανισμούς που προσφέρουν επιχορηγήσεις_
-- [Crunchbase για επιχορηγήσεις Web3](https://www.cryptoneur.xyz/web3-grants) - _Φιλτράρισμα και αναζήτηση επιχορηγήσεων ανά κατηγορία, περίπτωση χρήσης, ποσό και πολλά άλλα. Συνεισφέρετε για να βοηθήσετε και άλλους να βρουν τη σωστή επιχορήγηση._
 - [Ακαδημαϊκές υποτροφίες](https://esp.ethereum.foundation/academic-grants) - _Χορηγίες για την υποστήριξη ακαδημαϊκής εργασίας που σχετίζεται με το Ethereum_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Η Blockworks έχει συντάξει έναν ολοκληρωμένο κατάλογο με όλες τις επιχορηγήσεις, τα RFP και τις αμοιβές εύρεσης σφαλμάτων._
 
@@ -35,7 +33,6 @@ lang: el
 - [Πρόγραμμα επιχορήγησης δικτύου SKALE](https://skale.space/developers#grants) - _[SKALE](https://skale.space/)δίκτυο οικοσυστήματος_
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/) οικοσύστημα _
 - [Πρόγραμμα επιχορήγησης Uniswap](https://www.uniswapfoundation.org/apply-for-a-grant) - _[Κοινότητα Uniswap](https://uniswap.org/)_
-- [Χορηγίες Web3](https://web3grants.net) - _Μια εκτενής λίστα προγραμμάτων επιχορήγησης που σχετίζονται με το web3/crypto_
 
 ## Τετραγωνική χρηματοδότηση {#quadratic-funding}
 

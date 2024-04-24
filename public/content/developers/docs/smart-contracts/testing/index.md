@@ -238,7 +238,7 @@ Still, you can further increase the possibility of catching contract vulnerabili
 
 Audits are performed by auditors experienced at finding cases of security flaws and poor development practices in smart contracts. An audit will usually include testing (and possibly formal verification) as well as a manual review of the entire codebase.
 
-Conversely, a bug bounty program usually involves involves offering a financial reward to an individual (commonly described as [whitehat hackers](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>)) that discovers a vulnerability in a smart contract and discloses it to developers. Bug bounties are similar to audits since it involves asking others to help find defects in smart contracts.
+Conversely, a bug bounty program usually involves offering a financial reward to an individual (commonly described as [whitehat hackers](<https://en.wikipedia.org/wiki/White_hat_(computer_security)>)) that discovers a vulnerability in a smart contract and discloses it to developers. Bug bounties are similar to audits since it involves asking others to help find defects in smart contracts.
 
 The major difference is that bug bounty programs are open to the wider developer/hacker community and attract a broad class of ethical hackers and independent security professionals with unique skills and experience. This may be an advantage over smart contract audits that mainly rely on teams who may possess limited or narrow expertise.
 
@@ -269,6 +269,8 @@ The major difference is that bug bounty programs are open to the wider developer
 - **[Slither](https://github.com/crytic/slither)** - _Python-based Solidity static analysis framework for finding vulnerabilities, enhancing code comprehension, and writing custom analyses for smart contracts._
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** - _Linter for enforcing style and security best practices for the Solidity smart contract programming language._
+
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** - _Rust-based static analyzer specifically designed for Web3 smart contract security and development._
 
 #### Dynamic analysis tools {#dynamic-analysis-tools}
 

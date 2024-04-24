@@ -56,7 +56,7 @@ Sebelum menyelami kerangka kerja, kami menyarankan Anda terlebih dahulu membaca 
 
 **Scaffold-Eth -** **_Komponen Ethers.js + Hardhat + React dan pengait untuk web3: semua yang Anda butuhkan untuk mulai membangun aplikasi terdesentralisasi yang didukung oleh kontrak pintar._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 
 **The Graph -** **_Grafik untuk membuat kueri data blockchain secara efisien_**
 

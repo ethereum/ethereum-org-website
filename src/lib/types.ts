@@ -4,6 +4,7 @@ import type { AppProps } from "next/app"
 import { StaticImageData } from "next/image"
 import { SSRConfig } from "next-i18next"
 import type { ReactElement, ReactNode } from "react"
+import { Icon } from "@chakra-ui/react"
 
 import type {
   DocsFrontmatter,
@@ -20,6 +21,8 @@ import { SimulatorNav } from "@/components/Simulator/interfaces"
 
 import allQuizData from "@/data/quizzes"
 import allQuestionData from "@/data/quizzes/questionBank"
+
+import { WALLETS_FILTERS_DEFAULT } from "./constants"
 
 import { layoutMapping } from "@/pages/[...slug]"
 
@@ -112,6 +115,7 @@ export type Lang =
   | "sr"
   | "sw"
   | "ta"
+  | "te"
   | "th"
   | "tk"
   | "tr"
@@ -368,12 +372,14 @@ export type IRemarkTocOptions = {
   callback: (toc: TocNodeType) => void
 }
 
+type HeroButtonProps = Omit<CallToActionProps, "index">
+
 export type CommonHeroProps = {
   heroImg: StaticImageData
   header: string
   title: string
   description: string
-  buttons?: [CallToActionProps, CallToActionProps?]
+  buttons?: [HeroButtonProps, HeroButtonProps?]
 }
 
 // Learning Tools
@@ -490,4 +496,175 @@ export type CommunityConference = {
   description: string
   startDate: string
   endDate: string
+  imageUrl: string
+}
+
+// Wallets
+export interface WalletData {
+  last_updated: string
+  name: string
+  image: StaticImageData
+  brand_color: string
+  url: string
+  active_development_team: boolean
+  languages_supported: string[]
+  twitter: string
+  discord: string
+  reddit: string
+  telegram: string
+  ios: boolean
+  android: boolean
+  linux: boolean
+  windows: boolean
+  macOS: boolean
+  firefox: boolean
+  chromium: boolean
+  hardware: boolean
+  open_source: boolean
+  repo_url: string
+  non_custodial: boolean
+  security_audit: string[]
+  scam_protection: boolean
+  hardware_support: boolean
+  rpc_importing: boolean
+  nft_support: boolean
+  connect_to_dapps: boolean
+  staking: boolean
+  swaps: boolean
+  multichain?: boolean
+  layer_2: boolean
+  gas_fee_customization: boolean
+  ens_support: boolean
+  erc_20_support: boolean
+  buy_crypto: boolean
+  withdraw_crypto: boolean
+  multisig: boolean
+  social_recovery: boolean
+  onboard_documentation: string
+  documentation: string
+  mpc?: boolean
+  new_to_crypto?: boolean
+}
+
+export type WalletFilter = typeof WALLETS_FILTERS_DEFAULT
+
+export interface WalletFilterData {
+  title: TranslationKey
+  filterKey?: string
+  description: TranslationKey | ""
+}
+
+export type FilterOption = {
+  title: string
+  items: Array<{
+    title: string
+    icon: typeof Icon
+    description: string
+    filterKey: string | undefined
+    showOptions: boolean | undefined
+    options:
+      | Array<{
+          name: string
+          filterKey?: string
+          inputType: "checkbox"
+        }>
+      | []
+  }>
+}
+
+export interface WalletPersonas {
+  title: string
+  description: string
+  presetFilters: {
+    android: boolean
+    ios: boolean
+    linux: boolean
+    windows: boolean
+    macOS: boolean
+    firefox: boolean
+    chromium: boolean
+    hardware: boolean
+    open_source: boolean
+    non_custodial: boolean
+    hardware_support: boolean
+    rpc_importing: boolean
+    nft_support: boolean
+    connect_to_dapps: boolean
+    staking: boolean
+    swaps: boolean
+    layer_2: boolean
+    gas_fee_customization: boolean
+    ens_support: boolean
+    erc_20_support: boolean
+    buy_crypto: boolean
+    withdraw_crypto: boolean
+    multisig: boolean
+    social_recovery: boolean
+    new_to_crypto?: boolean
+  }
+}
+
+export interface DropdownOption {
+  label: string
+  value: string
+  filterKey: string
+  category: string
+}
+
+export type WalletSupportedLanguageContextType = {
+  supportedLanguage: string
+  setSupportedLanguage: (language: string) => void
+}
+
+// Historical upgrades
+type NetworkUpgradeDetails = {
+  blockNumber?: number
+  epochNumber?: number
+  slotNumber?: number
+} & (
+  | {
+      isPending: true
+      dateTimeAsString?: string
+      ethPriceInUSD?: never
+      waybackLink?: never
+    }
+  | {
+      ethPriceInUSD: number
+      waybackLink: string
+      dateTimeAsString: string
+      isPending?: never
+    }
+)
+
+export type NetworkUpgradeData = Record<string, NetworkUpgradeDetails>
+
+// Footer
+export type FooterLink = {
+  to: string
+  text: TranslationKey
+  isPartiallyActive?: boolean
+}
+
+export type FooterLinkSection = {
+  title: TranslationKey
+  links: FooterLink[]
+}
+
+// GitHub API
+export type GHIssue = {
+  title: string
+  html_url: string
+  created_at: string
+  user: {
+    login: string
+    html_url: string
+    avatar_url: string
+  }
+  labels: GHLabel[]
+}
+
+export type GHLabel = {
+  id: number
+  name: string
+  color: string
 }

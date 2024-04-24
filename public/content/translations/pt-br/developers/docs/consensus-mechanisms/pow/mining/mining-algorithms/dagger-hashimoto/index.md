@@ -4,7 +4,7 @@ description: O algoritmo Dagger-Hashimoto em detalhes
 lang: pt-br
 ---
 
-Dagger-Hashimoto foi a implementação original de pesquisa e especificação para o algoritmo de mineração do Ethereum. Dagger-Hashimoto foi substituído por [Ethash](#ethash). A mineração foi completamente desligada na [Fusão](/updates/merge) no dia 15 de setembro de 2022. Desde então, o Ethereum foi protegido usando um mecanismo [prova de participação](/developers/docs/consensus-mechanisms/pos). Esta página é para fins históricos. As informações aqui não são mais relevantes para o Ethereum posterior à Fusão.
+Dagger-Hashimoto foi a implementação original de pesquisa e especificação para o algoritmo de mineração do Ethereum. Dagger-Hashimoto foi substituído por [Ethash](#ethash). A mineração foi completamente desligada na [Fusão](/roadmap/merge/) no dia 15 de setembro de 2022. Desde então, o Ethereum foi protegido usando um mecanismo [prova de participação](/developers/docs/consensus-mechanisms/pos). Esta página é para fins históricos. As informações aqui não são mais relevantes para o Ethereum posterior à Fusão.
 
 ## Pré-Requisitos {#prerequisites}
 
@@ -143,7 +143,7 @@ O algoritmo usado para gerar o conjunto de DAGs usados para computar o trabalho 
 def get_prevhash(n):
     from pyethereum.blocks import GENESIS_PREVHASH
     from pyethereum import chain_manager
-    if num <= 0:
+    if n <= 0:
         return hash_to_int(GENESIS_PREVHASH)
     else:
         prevhash = chain_manager.index.get_block_by_number(n - 1)
@@ -186,7 +186,7 @@ def orig_hashimoto(prev_hash, merkle_root, list_of_transactions, nonce):
         shifted_A = hash_output_A >> i
         transaction = shifted_A % len(list_of_transactions)
         txid_mix ^= list_of_transactions[transaction] << i
-    return txid_max ^ (nonce << 192)
+    return txid_mix ^ (nonce << 192)
 ```
 
 Infelizmente, enquanto Hashimoto é considerado de uso intenso de RAM, ele depende da aritmética de 256 bits, o que tem uma sobrecarga computacional considerável. No entanto, Dagger-Hashimoto usa apenas os 64 bits menos significativos ao indexar seu conjunto de dados para resolver esta questão.

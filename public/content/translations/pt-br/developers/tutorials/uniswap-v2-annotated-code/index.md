@@ -743,7 +743,7 @@ Essa é a função principal da fábrica, para criar um par de troca entre dois 
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Queremos que o endereço da nova troca seja determinante, para poder ser calculado antecipadamente fora da cadeia (isso pode ser útil para [transações com camada 2](/developers/docs/layer-2-scaling/)). Para isso, precisamos ter uma ordem consistente dos endereços dos tokens, independente da ordem na qual nós os recebemos, então os classificamos aqui.
+Queremos que o endereço da nova troca seja determinante, para poder ser calculado antecipadamente fora da cadeia (isso pode ser útil para [transações com camada 2](/developers/docs/scaling/)). Para isso, precisamos ter uma ordem consistente dos endereços dos tokens, independente da ordem na qual nós os recebemos, então os classificamos aqui.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
@@ -909,7 +909,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-A maioria deles já discutimos antes ou são bastante óbvios. A única exceção é `IWETH.sol`. O Uniswap v2 permite trocas por qualquer par de tokens ERC-20, mas o ether (ETH) em si não é um token ERC-20. Ele é anterior ao padrão e é transferido por meio de mecanismos únicos. Para permitir o uso de ETH em contratos que se aplicam a tokens ERC-20, foi criado o contrato [wrapped ether (WETH)](https://weth.io/). Você envia ETH a esse contrato, e ele cunha um valor equivalente de WETH para você. Você também pode queimar WETH e recuperar ETH.
+A maioria deles já discutimos antes ou são bastante óbvios. A única exceção é `IWETH.sol`. O Uniswap v2 permite trocas por qualquer par de tokens ERC-20, mas o ether (ETH) em si não é um token ERC-20. Ele é anterior ao padrão e é transferido por meio de mecanismos únicos. Para permitir o uso de ETH em contratos que se aplicam a tokens ERC-20, foi criado o contrato [wrapped ether (WETH)](https://weth.tkn.eth.limo/). Você envia ETH a esse contrato, e ele cunha um valor equivalente de WETH para você. Você também pode queimar WETH e recuperar ETH.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {

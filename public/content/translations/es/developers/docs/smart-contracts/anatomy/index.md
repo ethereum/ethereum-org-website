@@ -1,6 +1,6 @@
 ---
 title: Anatomía de los contratos inteligentes
-description: "Una mirada en profundidad a la anatomía de un contacto inteligente: Sus funciones, datos y variables."
+description: 'Una mirada en profundidad a la anatomía de un contacto inteligente: Sus funciones, datos y variables.'
 lang: es
 ---
 
@@ -76,7 +76,7 @@ De una forma simplista, las funciones pueden obtener información o establecer i
 Existen dos tipos de llamadas de funciones:
 
 - `Internas`: Estas no crean una llamada a la EVM.
-  - Sólo se puede acceder a las funciones internas y a las variables de estado internamente (es decir, desde el contrato actual o los contratos que derivan de él)
+  - Solo se puede acceder a las funciones internas y a las variables de estado internamente (es decir, desde el contrato actual o los contratos que derivan de él)
 - `Externas`: Estas crean una llamada a la EVM.
   - Las funciones externas forman parte de la interfaz del contrato, lo que significa que se pueden llamar desde otros contratos y a través de transacciones. Una función externa `f` no puede llamarse internamente (es decir, `f()` no funciona, pero `this.f()` funciona).
 
@@ -131,7 +131,7 @@ Qué se considera modificar un estado:
 7. Usar llamadas de bajo nivel.
 8. Utilizando un ensamblaje en línea que contiene ciertos códigos de operador.
 
-### Constructor (funciones) {#constructor-functions}
+### Funciones de constructor {#constructor-functions}
 
 Las funciones `constructor` solo se ejecutan una vez cuando el contrato es implementado por primera vez. Al igual que ocurre con `constructor` en muchos otros lenguajes de programación basados en clases, estas funciones a menudo inicializan variables de estado a sus valores especificados.
 
@@ -169,7 +169,7 @@ Esto permite que los contratos envíen ETH a otras cuentas.
 
 ## Funciones de escritura {#writing-functions}
 
-Tu función necesita:
+Su función necesita:
 
 - parámetro de la variable y tipo de variable (si acepta parámetros)
 - declaraciónde variable interna/externa
@@ -201,15 +201,15 @@ contract ExampleDapp {
 
 Un contrato completo podría verse así. Aquí la función `constructor` proporciona un valor inicial para la variable `dapp_name`.
 
-## Eventos y logs {#events-and-logs}
+## Eventos y registros {#events-and-logs}
 
-Los eventos le permiten comunicarse con su contrato inteligente desde su front-end u otras aplicaciones de suscripción. Cuando se mina una transacción, los contratos inteligentes pueden emitir eventos y escribir registros en la cadena de bloques que el front-end puede procesar.
+Los eventos le permiten comunicarse con su contrato inteligente desde su front-end u otras aplicaciones de suscripción. Cuando se mina una transacción, los contratos inteligentes pueden emitir eventos y escribir registros en la cadena de bloques que el front-end pueda procesar.
 
-## Ejemplos agregados {#annotated-examples}
+## Ejemplos anotados {#annotated-examples}
 
-Estos son algunos ejemplos escritos en Solidity. Si quiere experimentar con el código, puede interactuar ellos en [Remix](http://remix.ethereum.org).
+Estos son algunos ejemplos escritos en Solidity. Si quiere experimentar con el código, puede interactuar con ellos en [Remix](http://remix.ethereum.org).
 
-### Hola mundo {#hello-world}
+### Hello World {#hello-world}
 
 ```solidity
 // Especifica la versión de Solidity, utilizando la versión semántica.
@@ -328,7 +328,7 @@ import "../node_modules/@openzeppelin/contracts/math/SafeMath.sol";
 // Más información: https://solidity.readthedocs.io/en/v0.5.10/contracts.html#inheritance
 contract CryptoPizza is IERC721, ERC165 {
     // Utiliza la librería SafeMath de OpenZeppelin para realizar operaciones aritméticas de forma segura.
-    // Más información:
+    // Más información: 
 https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
     using SafeMath for uint256;
 
@@ -640,7 +640,7 @@ https://docs.openzeppelin.com/contracts/3. /api/math#SafeMath
 }
 ```
 
-## Leer más {#further-reading}
+## Más información {#further-reading}
 
 Revise la documentación de Solidity y Vyper para ver una descripción más completa de los contratos inteligentes:
 

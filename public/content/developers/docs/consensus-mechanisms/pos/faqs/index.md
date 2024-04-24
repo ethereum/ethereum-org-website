@@ -74,7 +74,7 @@ Validators have to stake ETH so that they have something to lose if they misbeha
 
 ## How are validators selected? {#how-are-validators-selected}
 
-A single validator is pseudo-randomly chosen to propose a block in each slot using an algorithm called RANDAO that mixes a hash from the block proposer with a seed that gets updated every block. This value is used to select a specific validator from the total validator set. The validator selection is fixed four epochs in advance.
+A single validator is pseudo-randomly chosen to propose a block in each slot using an algorithm called RANDAO that mixes a hash from the block proposer with a seed that gets updated every block. This value is used to select a specific validator from the total validator set. The validator selection is fixed two epochs in advance.
 
 [More on validator selection](/developers/docs/consensus-mechanisms/pos/block-proposal)
 

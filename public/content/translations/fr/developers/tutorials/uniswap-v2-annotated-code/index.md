@@ -743,7 +743,7 @@ C'est la fonction principale de l'usine : créer un échange de paires entre deu
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Nous souhaitons que l'adresse du nouvel échange soit déterminable de sorte qu'elle puisse être calculée à l'avance hors chaîne (cela peut être utile pour [les transactions de couche 2](/developers/docs/layer-2-scaling/)). Pour cela, nous devons avoir les adresses de jetons dans un ordre cohérent indépendant de l'ordre dans lequel nous les avons reçus. Aussi les trions-nous ici.
+Nous souhaitons que l'adresse du nouvel échange soit déterminable de sorte qu'elle puisse être calculée à l'avance hors chaîne (cela peut être utile pour [les transactions de couche 2](/developers/docs/scaling/)). Pour cela, nous devons avoir les adresses de jetons dans un ordre cohérent indépendant de l'ordre dans lequel nous les avons reçus. Aussi les trions-nous ici.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
@@ -909,7 +909,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Nous avons déjà rencontrés auparavant la plupart d'entre eux ou ils sont assez évidents. La seule exception est `IWETH.sol`. Uniswap v2 permet l'échange de n'importe quelle paire de jetons ERC-20 mais l'éther (ETH), en lui-même, n'est pas un jeton ERC-20. Il est antérieur à la norme et est transféré par des mécanismes spécifiques. Pour activer l'utilisation d'ETH dans les contrats qui s'appliquent aux jetons ERC-20, les programmeurs ont l'habitude d'utiliser le contrat [wrapped ether (WETH)](https://weth.io/). Vous envoyez ce contrat ETH, et il va frapper un montant équivalent de WETH. Vous pouvez également brûler WETH, et récupérer de l'ETH en retour.
+Nous avons déjà rencontrés auparavant la plupart d'entre eux ou ils sont assez évidents. La seule exception est `IWETH.sol`. Uniswap v2 permet l'échange de n'importe quelle paire de jetons ERC-20 mais l'éther (ETH), en lui-même, n'est pas un jeton ERC-20. Il est antérieur à la norme et est transféré par des mécanismes spécifiques. Pour activer l'utilisation d'ETH dans les contrats qui s'appliquent aux jetons ERC-20, les programmeurs ont l'habitude d'utiliser le contrat [wrapped ether (WETH)](https://weth.tkn.eth.limo/). Vous envoyez ce contrat ETH, et il va frapper un montant équivalent de WETH. Vous pouvez également brûler WETH, et récupérer de l'ETH en retour.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {

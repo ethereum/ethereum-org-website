@@ -15,7 +15,6 @@ Elle est supervisée par notre communauté. S'il y a quelque chose manquant ou i
 Ces programmes soutiennent le vaste écosystème Ethereum en offrant des subventions à un large éventail de projets. Il s'agit notamment de solutions pour l'évolutivité, la création de communautés, la sécurité, la confidentialité, etc. Ces subventions ne sont pas spécifiques à une seule plateforme Ethereum et constituent un bon point de départ si vous n'êtes pas sûr.
 
 - [Programme de soutien de l'écosystème EF](https://esp.ethereum.foundation) - _Financement de projets open source qui bénéficient à Ethereum, avec un intérêt particulier pour les outils universels, l'infrastructure, la recherche et les biens publics_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Développement de DApp, création DAO_
 - [DAO Moloch](https://www.molochdao.com/) - _Confidentialité, mise à l'échelle de la couche 2, sécurité du client, etc._
 - [Subventions DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Feuille de calcul Google regroupant les organisations offrant des subventions_
 - [Crunchbase pour les financements Web3](https://www.cryptoneur.xyz/web3-grants) - _Filtrer et rechercher des subventions par catégorie, cas d'utilisation, montant et bien plus encore. Contribuez à aider les autres à trouver la bonne subvention._

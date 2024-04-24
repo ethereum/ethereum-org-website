@@ -662,7 +662,7 @@ C’est ainsi qu’un contrat transfère son propre ETH à une autre adresse (co
 
 Les deux dernières lignes nous disent que Stockage[2] est également un contrat que nous appelons. Si nous [regardons la transaction constructeur](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange) nous voyons que ce contrat est [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), un contrat de Wrapped Ether[dont le code source a été téléchargé sur Etherscan](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code).
 
-Il semble donc que les contrats tentent d'envoyer de l'ETH à `_param2`. S'ils peuvent le faire, très bien. Sinon, il tente d'envoyer [WETH](https://weth.io/). Si `_param2` est un compte externe (EOA) alors il peut toujours recevoir de l'ETH, mais les contrats peuvent refuser de recevoir de l'ETH. Cependant, WETH est ERC-20 et les contrats ne peuvent pas refuser de l'accepter.
+Il semble donc que les contrats tentent d'envoyer de l'ETH à `_param2`. S'ils peuvent le faire, très bien. Sinon, il tente d'envoyer [WETH](https://weth.tkn.eth.limo/). Si `_param2` est un compte externe (EOA) alors il peut toujours recevoir de l'ETH, mais les contrats peuvent refuser de recevoir de l'ETH. Cependant, WETH est ERC-20 et les contrats ne peuvent pas refuser de l'accepter.
 
 ```python
   ...

@@ -38,7 +38,7 @@ export const layer2Data: Rollups = {
     {
       name: "Arbitrum One",
       website: "https://arbitrum.io/",
-      developerDocs: "https://developer.arbitrum.io/",
+      developerDocs: "https://docs.arbitrum.io/welcome/get-started",
       l2beat: "https://l2beat.com/projects/arbitrum/",
       bridge: "https://bridge.arbitrum.io/",
       bridgeWallets: ["MetaMask", "WalletConnect", "Coinbase Wallet"],
@@ -54,12 +54,12 @@ export const layer2Data: Rollups = {
     {
       name: "Optimism",
       website: "https://optimism.io/",
-      developerDocs: "https://community.optimism.io/docs/developers/",
+      developerDocs: "https://docs.optimism.io/",
       l2beat: "https://l2beat.com/projects/optimism/",
-      bridge: "https://app.optimism.io/bridge",
+      bridge: "https://app.optimism.io/bridge/deposit",
       bridgeWallets: ["MetaMask", "WalletConnect", "Coinbase Wallet"],
       blockExplorer: "https://optimistic.etherscan.io/",
-      ecosystemPortal: "https://www.optimism.io/apps/all",
+      ecosystemPortal: "https://www.optimism.io/apps",
       tokenLists:
         "https://tokenlists.org/token-list?url=https://static.optimism.io/optimism.tokenlist.json",
       noteKey: "layer-2-optimism-note",
@@ -105,7 +105,7 @@ export const layer2Data: Rollups = {
     {
       name: "Loopring",
       website: "https://loopring.org/#/",
-      developerDocs: "https://docs.loopring.io/en/",
+      developerDocs: "https://docs.loopring.io/",
       l2beat: "https://l2beat.com/projects/loopring/",
       bridge: "https://loopring.io/#/layer2",
       bridgeWallets: ["MetaMask", "WalletConnect"],
@@ -121,9 +121,9 @@ export const layer2Data: Rollups = {
     {
       name: "zkSync",
       website: "https://zksync.io/",
-      developerDocs: "https://zksync.io/dev/",
+      developerDocs: "https://docs.zksync.io/",
       l2beat: "https://l2beat.com/projects/zksync/",
-      bridge: "https://wallet.zksync.io/account",
+      bridge: "https://portal.zksync.io/bridge/",
       bridgeWallets: [
         "MetaMask",
         "WalletConnect",
@@ -137,7 +137,7 @@ export const layer2Data: Rollups = {
         "Torus",
         "Coinbase Wallet",
       ],
-      blockExplorer: "https://zkscan.io/",
+      blockExplorer: "https://explorer.zksync.io/",
       ecosystemPortal: "",
       tokenLists: "",
       noteKey: "",
@@ -148,7 +148,7 @@ export const layer2Data: Rollups = {
     },
     {
       name: "ZKSpace",
-      website: "https://zks.org",
+      website: "https://zkbase.org/",
       developerDocs: "https://en.wiki.zks.org/",
       l2beat: "https://l2beat.com/projects/zkswap/",
       bridge: "https://zks.app/wallet/token",
@@ -188,7 +188,7 @@ export const layer2Data: Rollups = {
     {
       name: "Starknet",
       website: "https://www.starknet.io",
-      developerDocs: "https://docs.starknet.io",
+      developerDocs: "https://docs.starknet.io/documentation/",
       l2beat: "https://l2beat.com/scaling/projects/starknet",
       bridge: "https://starkgate.starknet.io",
       bridgeWallets: [

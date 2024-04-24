@@ -109,7 +109,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 ### 靈魂綁定代幣和身分 {#soulbound}
 
-[靈魂綁定代幣](https://vitalik.ca/general/2022/01/26/soulbound.html)（不可轉讓的非同質化代幣）可以用於收集特定錢包的獨有資訊。 這有效地創建了綁定到特定以太坊地址的唯一鏈上身分，這可能包括代表成就的代幣（例如完成某些特定的線上課程或在遊戲中超過分數門檻）或社區參與代幣。
+[靈魂綁定代幣](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)（不可轉移的非同質化代幣）可用於收集特定錢包的獨有資訊。 這有效地創建了綁定到特定以太坊地址的唯一鏈上身分，這可能包括代表成就的代幣（例如完成某些特定的線上課程或在遊戲中超過分數門檻）或社區參與代幣。
 
 ## 去中心化身分的好處 {#benefits-of-decentralized-identity}
 
@@ -129,7 +129,7 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 去中心化身分有許多潛在的使用案例：
 
-### 1. 通用登入 {#universal-dapp-logins}
+### 1.  通用登入 {#universal-dapp-logins}
 
 去中心化身分可以使用[去中心化驗證](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/)，有助於替代基於密碼的登入方式。 服務提供商可以向使用者簽發身分證明，這些證明可以儲存在以太坊錢包中。 一個身分證明範例是[非同質化代幣](/nft/)，可以授與持有者訪問線上社群的權利。
 

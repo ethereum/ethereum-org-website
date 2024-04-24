@@ -3,7 +3,7 @@ title: 以太坊開發藍圖
 description: 以太坊實現更高可擴容性、安全性和永續性的路徑。
 lang: zh-tw
 template: roadmap
-image: /roadmap/roadmap-main.png
+image: /heroes/roadmap-hub-hero.jpg
 alt: "以太坊開發藍圖"
 summaryPoints:
 buttons:

@@ -50,7 +50,7 @@ export const RootLayout = ({
     <Container mx="auto" maxW={oldTheme.variables.maxPageWidth}>
       <SkipLink />
 
-      <Nav path={asPath} />
+      <Nav />
 
       <TranslationBanner
         shouldShow={shouldShowTranslationBanner}

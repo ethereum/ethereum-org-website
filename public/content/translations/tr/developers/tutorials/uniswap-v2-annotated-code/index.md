@@ -743,7 +743,7 @@ Bu, fabrikanın ana işlevidir, yani iki ERC-20 token'ı arasında bir eş takas
         (address token0, address token1) = tokenA < tokenB ? (tokenA, tokenB) : (tokenB, tokenA);
 ```
 
-Zincir dışında önceden hesaplanabilmesi için yeni takasın adresinin deterministik olmasını istiyoruz (bu, [katman 2 işlemleri](/developers/docs/layer-2-scaling/) için yararlı olabilir). Bunu yapabilmek için onları aldığımız sıraya bakmaksızın jeton adreslerinin tutarlı bir sırasına sahip olmamız gerekir, bu yüzden de onları burada sıralarız.
+Zincir dışında önceden hesaplanabilmesi için yeni takasın adresinin deterministik olmasını istiyoruz (bu, [katman 2 işlemleri](/developers/docs/scaling/) için yararlı olabilir). Bunu yapabilmek için onları aldığımız sıraya bakmaksızın jeton adreslerinin tutarlı bir sırasına sahip olmamız gerekir, bu yüzden de onları burada sıralarız.
 
 ```solidity
         require(token0 != address(0), 'UniswapV2: ZERO_ADDRESS');
@@ -909,7 +909,7 @@ import './interfaces/IERC20.sol';
 import './interfaces/IWETH.sol';
 ```
 
-Bunların çoğuyla ya daha önce karşılaştık ya da çoğu oldukça açık. `IWETH.sol` tek istisnadır. Uniswap v2, herhangi bir çift ERC-20 jetonu için takasa izin verir ancak ether'in (ETH) kendisi bir ERC-20 jetonu değildir. Standarttan öncesine tarihlidir ve benzersiz mekanizmalar ile aktarılır. ERC-20 jetonları için geçerli olan sözleşmelerde ETH kullanımını etkinleştirmek için insanlar [paketlenmiş ether (WETH)](https://weth.io/) sözleşmesini bulmuştur. Bu sözleşmeye ETH gönderirsiniz ve size eş değer miktarda WETH basar. Veya WETH'yi yakabilir ve ETH'yi geri alabilirsiniz.
+Bunların çoğuyla ya daha önce karşılaştık ya da çoğu oldukça açık. `IWETH.sol` tek istisnadır. Uniswap v2, herhangi bir çift ERC-20 jetonu için takasa izin verir ancak ether'in (ETH) kendisi bir ERC-20 jetonu değildir. Standarttan öncesine tarihlidir ve benzersiz mekanizmalar ile aktarılır. ERC-20 jetonları için geçerli olan sözleşmelerde ETH kullanımını etkinleştirmek için insanlar [paketlenmiş ether (WETH)](https://weth.tkn.eth.limo/) sözleşmesini bulmuştur. Bu sözleşmeye ETH gönderirsiniz ve size eş değer miktarda WETH basar. Veya WETH'yi yakabilir ve ETH'yi geri alabilirsiniz.
 
 ```solidity
 contract UniswapV2Router02 is IUniswapV2Router02 {

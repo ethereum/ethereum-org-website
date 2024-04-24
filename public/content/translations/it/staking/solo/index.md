@@ -109,7 +109,7 @@ Esistono una varietà di opzioni disponibili per aiutarti con la tua configurazi
 
 <StakingProductsCardGrid category="nodeTools" />
 
-Ricorda l'importanza di scegliere un [client di minoranza](/developers/docs/nodes-and-clients/client-diversity/), poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare il client di minoranza sono denotati come <em style={{ textTransform: "uppercase" }}>"multi-client".</em>
+Ricorda l'importanza di scegliere un [client di minoranza](/developers/docs/nodes-and-clients/client-diversity/), poiché migliora la sicurezza della rete e limita i tuoi rischi. Gli strumenti che ti consentono di configurare il client di minoranza sono contrassegnati come <em style={{ textTransform: "uppercase" }}>"multi-client".</em>
 
 ### Generatori di chiavi
 
@@ -195,6 +195,7 @@ Per sbloccare e ricevere il tuo intero saldo, devi inoltre completare il process
 
 ## Approfondimenti {#further-reading}
 
+- [The Ethereum Staking Directory](https://www.staking.directory/) - _Eridian and Spacesider_
 - [Problema di diversità dei client di Ethereum](https://hackernoon.com/ethereums-client-diversity-problem) - _@emmanuelawosika 2022_
 - [Aiutare la diversità dei client](https://www.attestant.io/posts/helping-client-diversity/) - _Jim McDonald 2022_
 - [La diversità del client sul livello di consenso di Ethereum](https://mirror.xyz/jmcook.eth/S7ONEka_0RgtKTZ3-dakPmAHQNPvuj15nh0YGKPFriA) - _jmcook.eth 2022_

@@ -72,7 +72,7 @@ event Approval(address indexed _owner, address indexed _spender, uint256 _value)
 
 #### Web3.py 示例 {#web3py-example}
 
-首先，请确保您已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
+首先，请确保你已安装 [Web3.py](https://web3py.readthedocs.io/en/stable/quickstart.html#installation) Python 库：
 
 ```
 pip install web3
@@ -146,3 +146,4 @@ print("Addr Balance:", addr_balance)
 - [EIP-20：ERC-20 代币标准](https://eips.ethereum.org/EIPS/eip-20)
 - [OpenZeppelin - 代币](https://docs.openzeppelin.com/contracts/3.x/tokens#ERC20)
 - [OpenZeppelin - ERC-20 实施](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/ERC20.sol)
+- [Alchemy - Solidity ERC20 代币指南](https://www.alchemy.com/overviews/erc20-solidity)

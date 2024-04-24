@@ -232,7 +232,7 @@ Multiple implementations of ZK-rollups exist that you can integrate into your da
 
 Projects working on zkEVMs include:
 
-- **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _Applied ZKP is a project funded by the Ethereum Foundation to develop an EVM-compatible ZK-rollup and a mechanism for generating validity proofs for Ethereum blocks._
+- **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVM is a project funded by the Ethereum Foundation to develop an EVM-compatible ZK-rollup and a mechanism for generating validity proofs for Ethereum blocks._
 
 - **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _is a decentralized ZK Rollup on the Ethereum mainnet working on a zero-knowledge Ethereum Virtual Machine (zkEVM) that executes Ethereum transactions in a transparent way, including smart contracts with zero-knowledge-proof validations._
 
@@ -240,7 +240,7 @@ Projects working on zkEVMs include:
 
 - **[Taiko](https://taiko.xyz)** - _Taiko is a decentralized, Ethereum-equivalent ZK-rollup (a [Type 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
+- **[ZKSync](https://docs.zksync.io/)** - _ZkSync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
 
 - **[Starknet](https://starkware.co/starknet/)** - _StarkNet is an EVM-compatible layer 2 scaling solution built by StarkWare._
 
@@ -250,6 +250,7 @@ Projects working on zkEVMs include:
 - [What are zero-knowledge rollups?](https://alchemy.com/blog/zero-knowledge-rollups)
 - [STARKs vs SNARKs](https://consensys.net/blog/blockchain-explained/zero-knowledge-proofs-starks-vs-snarks/)
 - [What is a zkEVM?](https://www.alchemy.com/overviews/zkevm)
+- [ZK-EVM types: Ethereum-equivalent, EVM-equivalent, Type 1, Type 4, and other cryptic buzzwords](https://taiko.mirror.xyz/j6KgY8zbGTlTnHRFGW6ZLVPuT0IV0_KmgowgStpA0K4)
 - [Intro to zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [Awesome-zkEVM resources](https://github.com/LuozhuZhang/awesome-zkevm)
 - [ZK-SNARKS under the hood](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)

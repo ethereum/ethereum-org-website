@@ -13,10 +13,9 @@ Machen Sie sich zunächst mit der Mission und den Grundsätze von ethereum.org i
 ## Entwickler <Emoji text=":computer." size={1} /> {#developers}
 
 - Erfahren Sie mehr über Ethereum auf [ethereum.org/developers/](/developers/)
-- [Finden Sie ein Bounty auf Gitcoin](https://gitcoin.co/), arbeiten Sie an kleinen und großen technischen Problemen und verdienen Sie Kryptowährung.
 - Besuchen Sie ein [ETHGlobal](http://ethglobal.co/)-Hakathon in Ihrer Nähe.
 - Schauen Sie sich an, welche [Projekte im Zusammenhang mit Ihrem Fachgebiet oder der Programmiersprache Ihrer Wahl](/developers/docs/programming-languages/) es gibt
-- Nehmen Sie teil an den [Core DEV-Calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) oder sehen Sie sie sich an
+- Nehmen Sie teil an den [Core DEV-Calls](https://www.youtube.com/@EthereumProtocol) oder sehen Sie sie sich an
 - [Wunschliste des Ethereum Ecosystem-Supportprogramms](https://esp.ethereum.foundation/wishlist/) – Tools, Dokumentation und Infrastrukturbereiche, für die das Ethereum Ecosystem-Supportprogramm aktiv nach Förderern sucht
 - [Web3Bridge](https://www.web3bridge.com/) – beteiligen Sie sich an der Initiative der aufstrebenden web3-Community, Hunderte von Entwicklern und Mitgliedern der Community in ganz Afrika zu finden, zu schulen und zu unterstützen
 - Trete dem [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) bei
@@ -62,7 +61,7 @@ Wenn Sie kein Entwickler sind, ist es nicht ganz so einfach, herauszufinden, wo 
 ### Ethereum-Inhalte in Ihre Muttersprache übersetzen {#translate-ethereum}
 
 - ethereum.org unterhält ein Übersetzungsprogramm, über das die Website und andere Ressourcen in viele verschiedene Sprachen übersetzt werden.
-- Wie Sie sich beteiligen können, erfahren Sie [hier](/Beitrag/Übersetzungsprogramm).
+- Wie Sie sich beteiligen können, erfahren Sie [hier](/contributing/translation-program/).
 
 ### Einen Knoten ausführen {#run-a-node}
 
@@ -90,7 +89,7 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und w
 
 ## Produktmanager <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Das Ethereum-Ökosystem braucht Ihr Talent. Viele Unternehmen stellen Produktmanager ein. Wenn Sie mit der Mitarbeit an einem Open-Source-Projekt beginnen möchten, wenden Sie sich an die [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) oder [MetaCartel](https://www.metacartel.org/).
+- Das Ethereum-Ökosystem braucht Ihr Talent. Viele Unternehmen stellen Produktmanager ein. Wenn Sie mit der Mitarbeit an einem Open-Source-Projekt beginnen möchten, wenden Sie sich an die [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) oder [RaidGuild](https://www.raidguild.org/).
 
 ## Marketing <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -122,16 +121,13 @@ Das Ethereum-Ökosystem hat es sich zur Aufgabe gemacht, das Allgemeinwohl und w
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Verbreiten Sie das DAO-Konzept in nicht-technischen Bereichen und helfen Sie anderen bei der Wertschöpfung durch DAO_
 - [Entwickler-DAO](https://www.developerdao.com/) [@entwickler_dao](https://twitter.com/developer_dao) – _Gemeinschaft aus Erstellern, die an das kollektive Eigentum am Internet glauben_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) – _Web3-Entwicklungskollektiv aus Freiberuflern, das als DAO arbeitet_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Dezentrale Entwicklung & Verwaltung von dApps & Protokollen_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Gemeinschaftsverwaltung von DAOHaus_
-- [Held DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Von der Gemeinschaft geführte Superhelden-Franchise_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Rechtstechnik_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Rechtstechnik_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) – _Kunstgemeinschaft_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) – _DAO-Inkubator_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) – _Venture für vorinstallierte Kryptoprojekte_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) – _MMORPG-Spielmechanismen für das echte Leben_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) – _Digi-physische Modemarken_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) – _Von Frauen geführte Projekte_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) – _Gemeinschaft zur Finanzierung der Entwicklung von Ethereum_
 - [Raid-Gilde](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) – _Kollektiv von Web3-Erstellern_
 

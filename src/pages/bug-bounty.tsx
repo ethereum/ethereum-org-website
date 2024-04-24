@@ -456,8 +456,7 @@ const BugBountiesPage = () => {
         title={t("page-upgrades-bug-bounty-meta-title")}
         description={t("page-upgrades-bug-bounty-meta-description")}
       />
-      {/* TODO: Remove two weeks prior to scheduled mainnet Dencun hardfork */}
-      <BugBountyBanner />
+      {/* INFO: Uncomment this to enable Bug Bounty Banner: <BugBountyBanner /> */}
       <Content>
         <HeroCard>
           <HeroContainer>
@@ -530,7 +529,9 @@ const BugBountiesPage = () => {
       <StyledGrayContainer id="rules">
         <Content>
           <H2>{t("page-upgrades-bug-bounty-validity")}</H2>
-          <Text>{t("page-upgrades-bug-bounty-validity-desc")}</Text>
+          <Text>
+            <Translation id="page-bug-bounty:page-upgrades-bug-bounty-validity-desc" />
+          </Text>
           <StyledCardContainer>
             <StyledCard
               emoji=":ledger:"

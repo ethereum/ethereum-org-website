@@ -7,8 +7,6 @@ import {
   Flex,
   type FlexProps,
   type HeadingProps,
-  ListItem as ChakraListItem,
-  type ListItemProps,
   type ListProps,
   OrderedList as ChakraOrderedList,
   UnorderedList as ChakraUnorderedList,
@@ -138,10 +136,6 @@ const OrderedList = (props: ListProps) => (
   <ChakraOrderedList ms="1.45rem" {...props} />
 )
 
-const ListItem = (props: ListItemProps) => (
-  <ChakraListItem color="text300" {...props} />
-)
-
 // Apply styles for classes within markdown here
 const Content = (props: ChildOnlyProp) => {
   const mdBreakpoint = useToken("breakpoints", "md")
@@ -150,7 +144,7 @@ const Content = (props: ChildOnlyProp) => {
     <Box
       as={MainArticle}
       flex={`1 1 ${mdBreakpoint}`}
-      maxW={{ base: "full", lg: mdBreakpoint }}
+      w={{ base: "full", lg: "0" }}
       pt={{ base: 32, md: 12 }}
       pb={{ base: 8, md: 16 }}
       px={{ base: 8, md: 16 }}
@@ -190,7 +184,6 @@ export const docsComponents = {
   p: Paragraph,
   ul: UnorderedList,
   ol: OrderedList,
-  li: ListItem,
   pre: Codeblock,
   ...mdxTableComponents,
   Badge,
@@ -206,18 +199,18 @@ export const docsComponents = {
   YouTube,
 }
 
-interface DocsLayoutProps
-  extends Pick<
-      MdPageContent,
-      | "slug"
-      | "tocItems"
-      | "lastUpdatedDate"
-      | "crowdinContributors"
-      | "contentNotTranslated"
-    >,
-    ChildOnlyProp {
-  frontmatter: DocsFrontmatter
-}
+type DocsLayoutProps = Pick<
+  MdPageContent,
+  | "slug"
+  | "tocItems"
+  | "lastUpdatedDate"
+  | "crowdinContributors"
+  | "contentNotTranslated"
+> &
+  Required<Pick<MdPageContent, "lastUpdatedDate">> &
+  ChildOnlyProp & {
+    frontmatter: DocsFrontmatter
+  }
 
 export const DocsLayout = ({
   children,
@@ -233,7 +226,8 @@ export const DocsLayout = ({
   const absoluteEditPath = getEditPath(relativePath)
 
   const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
-  const intlLastEdit = "data" in gitHubLastEdit ? gitHubLastEdit.data! : ""
+  const intlLastEdit =
+    "data" in gitHubLastEdit ? gitHubLastEdit.data : lastUpdatedDate
   const useGitHubContributors =
     frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
 
@@ -252,7 +246,7 @@ export const DocsLayout = ({
           {useGitHubContributors ? (
             <GitHubContributors
               relativePath={relativePath}
-              lastUpdatedDate={lastUpdatedDate!}
+              lastUpdatedDate={lastUpdatedDate}
             />
           ) : (
             <CrowdinContributors

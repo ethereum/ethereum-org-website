@@ -1,5 +1,5 @@
 import { useRouter } from "next/router"
-import { Box, chakra, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
+import { Box, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, StaticFrontmatter } from "@/lib/interfaces"
@@ -11,6 +11,7 @@ import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
+import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
@@ -50,22 +51,17 @@ const Heading4 = (props: HeadingProps) => (
   <MdHeading4 fontSize={{ base: "md", md: "xl" }} {...props} />
 )
 
-const ListItem = (props: ChildOnlyProp) => (
-  <chakra.li color="text300" {...props} />
-)
-
 // Static layout components
 export const staticComponents = {
-  a: Link,
   h1: Heading1,
   h2: Heading2,
   h3: Heading3,
   h4: Heading4,
-  li: ListItem,
   Callout,
   Contributors,
   EnergyConsumptionChart,
   GlossaryDefinition,
+  GlossaryTooltip,
   Icon,
   Link,
   Logo,
@@ -119,13 +115,15 @@ export const StaticLayout = ({
           ) : (
             <>
               <Breadcrumbs slug={slug} mb="8" />
-              <Text
-                color="text200"
-                dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
-              >
-                <Translation id="page-last-updated" />:{" "}
-                {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
-              </Text>
+              {lastUpdatedDate && (
+                <Text
+                  color="text200"
+                  dir={isLangRightToLeft(locale as Lang) ? "rtl" : "ltr"}
+                >
+                  <Translation id="page-last-updated" />:{" "}
+                  {getLocaleTimestamp(locale as Lang, lastUpdatedDate)}
+                </Text>
+              )}
             </>
           )}
 
