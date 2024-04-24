@@ -22,7 +22,7 @@ A letétbe helyezés, mint szolgáltatás (SaaS) egy olyan lehetőség, amikor a
 Az Ethereum-protokoll eredendően nem támogatja a letétbe helyezés delegálását, így ezek a szolgáltatások képesek ellátni ezt az igényt. Ha Ön letétbe helyezne 32 ETH-t, de nem szeretne a hardveres részével foglalkozni, az SaaS lehetővé teszi, hogy ezt a részét átadja másnak, miközben részesül a blokkjutalmakból.
 
 <CardGrid>
-  <Card title="Saját validátor" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />    
+  <Card title="Saját validátor" emoji=":desktop_computer:" description="Deposit your own 32 ETH to activate your own set of signing keys that will participate in Ethereum consensus. Monitor your progress with dashboards to watch those ETH rewards accumulate." />
   <Card title="Könnyű kezdés" emoji="🏁" description="Forget about hardware specs, setup, node maintenance and upgrades. SaaS providers let you outsource the hard part by uploading your own signing credentials, allowing them to run a validator on your behalf, for a small cost." />
   <Card title="Behatárolt kockázat" emoji=":shield:" description="In many cases users do not have to give up access to the keys that enable withdrawing or transferring staked funds. These are different from the signing keys, and can be stored separately to limit (but not eliminate) your risk as a staker." />
 </CardGrid>

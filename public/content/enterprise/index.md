@@ -64,6 +64,7 @@ Some collaborative efforts to make Ethereum enterprise friendly have been made b
 - [Blockapps](https://blockapps.net/) - _implementation of the Enterprise Ethereum protocol, tooling and APIs that form the STRATO platform_
 - [Chainstack](https://chainstack.com/) - _mainnet and testnet Ethereum infrastructure hosted in public & isolated customer clouds_
 - [ConsenSys](https://consensys.io/) - _provides a range of products and tools for building on Ethereum, as well as consulting and custom development services_
+- [Crossmint](http://crossmint.com/) _Enterprise-grade web3 development platform to deploy smart contracts, enable credit-card and cross chain payments, and use APIs to create, distribute, sell, store, and edit NFTs._
 - [Envision Blockchain](https://envisionblockchain.com/) - _provides enterprise focused consulting and development services specializing in Ethereum Mainnet_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) - _provides a procurement workflow by issuing RFQ’s, contracts, purchase orders, and invoices across your network of trusted business partners_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) - _an enterprise focused open-source Ethereum client developed under the Apache 2.0 license and written in Java_

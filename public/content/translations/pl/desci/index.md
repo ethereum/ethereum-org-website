@@ -18,7 +18,7 @@ Zdecentralizowana nauka (DeSci) jest ruchem, który ma na celu zbudowanie public
 
 DeSci ma na celu stworzenie ekosystemu, w którym naukowcy są zachęcani do otwartego dzielenia się swoimi badaniami i otrzymują uznanie za swoją pracę, jednocześnie umożliwiając każdemu łatwy dostęp do badań i uczestniczenie w nich. DeSci działa w oparciu o ideę, że wiedza naukowa powinna być dostępna dla każdego, a proces badań naukowych powinien być przejrzysty. DeSci tworzy bardziej zdecentralizowany i rozproszony model badań naukowych, dzięki czemu są one bardziej odporne na cenzurę i kontrolę ze strony władz centralnych. DeSci to środowisko, w którym nowe i niekonwencjonalne pomysły mogą się rozwijać poprzez decentralizację dostępu do finansowania, narzędzi naukowych i kanałów komunikacji.
 
-Zdecentralizowana nauka pozwala na bardziej zróżnicowane źródła finansowania (od [DAO](/dao/), [kwadratowych darowizn](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) do finansowania społecznościowego i nie tylko), bardziej dostępne dane i metody oraz poprzez zapewnienie zachęt do odtwarzalności.
+Zdecentralizowana nauka pozwala na bardziej zróżnicowane źródła finansowania (od [DAO](/dao/) i [kwadratowych darowizn](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) po finansowanie społecznościowe i nie tylko), większą dostępność danych i metod oraz zapewnienie zachęt do odtwarzalności.
 
 ### Juan Benet — ruch DeSci
 
@@ -68,7 +68,7 @@ Obecny standardowy model finansowania nauki polega na tym, że osoby fizyczne lu
 
 Badania wykazały, że zespoły ds. przeglądu dotacji nie wykonują dobrej pracy w zakresie wyboru wniosków wysokiej jakości, ponieważ te same wnioski przekazane różnym zespołom przynoszą diametralnie różne wyniki. W miarę jak środki finansowe stają się coraz bardziej ograniczone, koncentrują się na mniejszej puli starszych naukowców proponujących projekty bardziej konserwatywne pod względem intelektualnym. Efektem tego jest powstanie hiperkonkurencyjnego systemu finansowania, który utrwala niepożądane zachęty i tłumi innowacje.
 
-Web3 ma potencjał, aby zakłócić ten wadliwy model finansowania poprzez eksperymentowanie z różnymi modelami motywacyjnymi opracowanymi przez DAO i Web3 w szerokim zakresie. [Finansowanie ze środków publicznych obowiązujące wstecz](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [finansowanie kwadratowe](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [zarządzanie DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) i [struktury motywacyjne oparte na tokenach](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) to przykłady narzędzi Web3, które mogą zrewolucjonizować finansowanie nauki.
+Web3 ma potencjał, aby zakłócić ten wadliwy model finansowania poprzez eksperymentowanie z różnymi modelami motywacyjnymi opracowanymi przez DAO i Web3 w szerokim zakresie. [Wsteczne finansowanie dóbr publicznych](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c), [finansowanie kwadratowe](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531), [zarządzanie DAO](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead) i [tokenizowane struktury motywacyjne](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design) to tylko niektóre z narzędzi Web3, które mogą zrewolucjonizować finansowanie nauki.
 
 ### Własność i rozwój własności intelektualnej (IP) {#ip-ownership}
 
@@ -92,22 +92,18 @@ Przeglądaj projekty i dołącz do społeczności DeSci.
 
 - [DeSci.Global: globalne wydarzenia i kalendarz spotkań](https://desci.global)
 - [Łańcuch bloków dla Science Telegram](https://t.me/BlockchainForScience)
-- [Molecule: finansuj i zdobywaj fundusze na swoje projekty badawcze](https://discover.molecule.to/)
+- [Molecule: finansuj i zdobywaj fundusze na swoje projekty badawcze](https://www.molecule.xyz/)
 - [VitaDAO: uzyskuj środki finansowe w ramach sponsorowanych umów badawczych na długotrwałe badania](https://www.vitadao.com/)
 - [Research Hub: wysyłaj wyniki naukowe i angażuj się w rozmowy z partnerami](https://www.researchhub.com/)
 - [LabDAO: projektuj białka in-silico (za pomocą komputera)](https://alphafodl.vercel.app/)
 - [dClimate API: przeszukuj dane klimatyczne zebrane przez zdecentralizowaną społeczność](https://api.dclimate.net/)
 - [Fundacja DeSci: konstruktor narzędzi do publikowania DeSci](https://descifoundation.org/)
 - [DeSci.World: jedno miejsce dla użytkowników do przeglądania i angażowania się w zdecentralizowaną naukę](https://desci.world)
-- [Protokół Fleminga: gospodarka danymi typu open-source, która wspiera wspólne odkrycia biomedyczne](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [OceanDAO: DAO finansuje naukę związaną z danymi](https://oceanprotocol.com/dao)
+- [OceanDAO: DAO finansuje naukę związaną z danymi](https://oceanprotocol.com/)
 - [Opscientia: otwarty, zdecentralizowany przepływ prac naukowych](https://opsci.io/research/)
-- [LabDAO: projektuj białka in-silico (za pomocą komputera)](https://alphafodl.vercel.app/)
 - [Bio.xyz: zdobądź fundusze na swój biotechnologiczny projekt DAO lub desci](https://www.bio.xyz/)
-- [Research Hub: wysyłaj wyniki naukowe i angażuj się w rozmowy z partnerami](https://www.researchhub.com/)
-- [VitaDAO: uzyskuj środki finansowe w ramach sponsorowanych umów badawczych na długotrwałe badania](https://www.vitadao.com/)
-- [Protokół Fleminga: gospodarka danymi typu open-source, która wspiera wspólne odkrycia biomedyczne](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [Laboratorium aktywnego wnioskowania](https://www.activeinference.org/)
+- [Protokół Fleminga: gospodarka danymi typu open-source, która wspiera wspólne odkrycia biomedyczne](http://flemingprotocol.io/)
+- [Active Inference Institute](https://www.activeinference.org/)
 - [CureDAO: wspólnotowa platforma ds. zdrowia precyzyjnego](https://docs.curedao.org/)
 - [IdeaMarkets: umożliwia zapewnienie zdecentralizowanej wiarygodności naukowej](https://ideamarket.io/)
 - [Laboratoria DeSci](https://www.desci.com/)
@@ -121,9 +117,8 @@ Mile widziane są propozycje nowych projektów do umieszczenia na liście — za
 - [Problem dla DeSci](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [Przewodnik po DeSci](https://future.com/what-is-decentralized-science-aka-desci/)
 - [Zdecentralizowane zasoby naukowe](https://www.vincentweisser.com/decentralized-science)
-- [IP-NFT Biopharma firmy Molecule — opis techniczny](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
+- [IP-NFT Biopharma firmy Molecule — opis techniczny](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [Budowanie Trustless Systems of Science autorstwa Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
-- [Pojawienie się organizacji DAO Biotech](https://molecule.to/blog/the-emergence-of-biotech-daos)
 - [Paul Kohlhaas — DeSci: Przyszłość zdecentralizowanej nauki (podcast)](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
 - [Ontologia aktywnego wnioskowania dla zdecentralizowanej nauki: od sytuacyjnego wyczuwania do wspólnoty epistemicznej](https://zenodo.org/record/6320575)
 - [DeSci: Przyszłość badań naukowych autorstwa Samuela Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)

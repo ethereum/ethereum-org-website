@@ -89,7 +89,7 @@ El ecosistema de Ethereum tiene la misión de financiar bienes públicos y proye
 
 ## Gestores de producto <Emoji text=":fountain_pen:" size={1} />‍ {#product-managers}
 
-- ¡El ecosistema Ethereum necesita su valía! Muchas empresas están contratando a personal para puestos de gestión de productos. Si quiere empezar contribuyendo a un proyecto de código abierto, póngase en contacto con [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [MetaCartel](https://www.metacartel.org/).
+- ¡El ecosistema Ethereum necesita su valía! Muchas empresas están contratando a personal para puestos de gestión de productos. Si quiere empezar contribuyendo a un proyecto de código abierto, póngase en contacto con [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [RaidGuild](https://www.raidguild.org/).
 
 ## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
@@ -121,16 +121,13 @@ Las «DAO» son organizaciones autónomas descentralizadas. Estos grupos aprovec
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Fomente el concepto DAO en un terreno que no sea técnico y ayude a que la gente cree valor a través de las DAO_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao): _Comunidad de desarrolladores que creen en la propiedad colectiva de Internet_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech): _Colectivo independiente de desarrollo de Web3 que funciona como una DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_): _Desarrollo descentralizado y gobernanza en DApps y protocolos._
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit): _Comunidad de gobernanza de DAOhaus_
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao): _Franquicia de imágenes superhero de propiedad comunitaria_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO): _Ingeniería jurídica_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO): _Ingeniería jurídica_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial): _Comunidad artística_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel): _Vivero de DAO_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO): _Iniciativa de prelanzamiento de proyectos de criptomonedas_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam): _Mecánica de juego MMORPG aplicada a la vida real_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory): _Marcas de ropa «digifísicas»_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta): _Proyectos dirigidos por mujeres_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO): _Comunidad centrada en la financiación del desarrollo de Ethereum_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild): _Colectivo de desarrolladores de Web3_
 

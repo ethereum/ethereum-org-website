@@ -14,11 +14,11 @@ summaryPoint3: Egy biztonságos hely, ahol pénzét adott célokra fordíthatja.
 
 ## Mik azok a DAO-k? {#what-are-daos}
 
-A DAO egy kollektívan tulajdonolt, blokklánc által irányított szervezet, amely egy közös cél megvalósítására törekszik.
+A DAO egy közös tulajdonú szervezet, amely egy közös küldetésért dolgozik.
 
 A DAO-k lehetőséget biztosítanak számunkra, hogy hozzánk hasonló elhivatottságú emberekkel dolgozzunk a világ minden tájáról anélkül, hogy egy központi vezetőre bíznánk a pénzügyi és operatív működtetést. Nincs olyan vezérigazgató, aki a kedve szerint költhetné el az alapokat, vagy olyan pénzügyi vezető, aki manipulálhatná a könyvelést. Helyette a kódba épített, blokkláncon alapuló szabályok határozzák meg, hogyan működik a szervezet és kerülnek elköltésre az alapok.
 
-Beépített pénztárakkal rendelkeznek, amelyekhez a csoport jóváhagyása nélkül senkinek sincs jogosultsága hozzáférni. A döntéseket szavazatokkal és javaslatokkal hozzák meg, így biztosítva, hogy mindenki hangot adhasson véleményének a szervezeten belül és minden nyomon követhető legyen a blokkláncon.
+Beépített pénztárakkal rendelkeznek, amelyekhez a csoport jóváhagyása nélkül senkinek sincs jogosultsága hozzáférni. A döntéseket a javaslatok és a szavazás szabályozzák, így biztosítva, hogy a szervezetben mindenki megszólaljon, és minden átláthatóan, [on-láncon](/glossary/#on-chain) történjen.
 
 ## Miért van szükségünk DAO-kra? {#why-dao}
 
@@ -40,26 +40,22 @@ Ennek köszönhetően rengeteg lehetőség nyílik meg a globális együttműkö
 
 Annak érdekében, hogy még érthetőbbé tegyük a DAO-k működését, az alábbiakban néhány példán keresztül bemutatjuk, mire is használhatók:
 
-- Adománygyűjtés – adományokat fogadhat a világ minden tájáról, és szavazás alapján eldönthető, hogy azokat mire fordítsák.
-- Közös tulajdonlás – fizikai vagy digitális eszközöket szerezhet be, melyek felhasználásáról a tagok szavaznak.
-- Kockázati tőke és támogatás – létrehozhat egy kockázatitőke-alapot, mely befektetési tőkét gyűjt, és szavazással válaszhatók ki a támogatandó vállalkozások. A visszaérkező összegeket pedig később szétoszthatják a DAO tagjai között.
+- **Egy jótékonysági szervezet** – adományokat fogadhat el a világon bárkitől, és szavazhat arról, hogy mely célokat finanszírozza.
+- **Közös tulajdonjog** – vásárolhat fizikai vagy digitális eszközöket, és a tagok szavazhatnak a használatukról.
+- **Kockázati tőke és támogatás** – létrehozhat egy kockázatitőke-alapot, mely befektetési tőkét gyűjt, és szavazással válaszhatók ki a támogatandó vállalkozások. A visszaérkező összegeket pedig később szétoszthatják a DAO tagjai között.
 
 ## Hogyan működnek a DAO-k? {#how-daos-work}
 
-A DAO szíve az az okosszerződés, mely meghatározza a szervezet szabályait és kezeli a csoport vagyonát. Amint a szerződés életbe lép az Ethereumon, csakis szavazás útján lehet módosítani a szabályokat. Ha valaki olyat próbál tenni, ami nem szerepel a szabályokban és a programlogikában, az meghiúsul. Mivel a társaság pénzügyeit is az okosszerződés határozza meg, ezért a csoport jóváhagyása nélkül senki sem költheti el a pénzösszegeket. Tehát a DAO-nak nincs szüksége központi hatóságra. Ehelyett a csoport közösen hoz döntéseket, a kifizetések pedig automatikusan jóváhagyásra kerülnek a szavazás eredményeként.
+A DAO gerincét az [intelligens szerződés](/glossary/#smart-contract) adja, amely meghatározza a szervezet szabályait és birtokolja a csoport pénztárát. Amint a szerződés életbe lép az Ethereumon, csakis szavazás útján lehet módosítani a szabályokat. Ha valaki olyat próbál tenni, ami nem szerepel a szabályokban és a programlogikában, az meghiúsul. Mivel a társaság pénzügyeit is az okosszerződés határozza meg, ezért a csoport jóváhagyása nélkül senki sem költheti el a pénzösszegeket. Tehát a DAO-nak nincs szüksége központi hatóságra. Ehelyett a csoport közösen hoz döntéseket, a kifizetések pedig automatikusan jóváhagyásra kerülnek a szavazás eredményeként.
 
 Mindez azért lehetséges, mert az okosszerződést nem lehet önkényesen megváltoztatni vagy meghamisítani, amikor már életbe lépett az Ethereumon. Senki sem tudja módosítani a programkódot (a DAO szabályait) anélkül, hogy mások azt észre ne vennék, mivel minden nyilvános.
-
-<DocLink to="/smart-contracts/">
-  Többet az okos szerződésekről
-</DocLink>
 
 ## Az Ethereum és a DAO-k {#ethereum-and-daos}
 
 Az Ethereum tökéletes alapot szolgáltat a DAO-knak számtalan okból kifolyólag:
 
 - Az Ethereum saját konszenzusmechanizmusa kellőképpen kiterjedt és megalapozott ahhoz, hogy a szervezetek megbízzanak a hálózatban.
-- Az okosszerződés tartalmát nem lehet módosítani, miután életbe lépett, még a tulajdonosok módosíthatják azt. Ennek következtében a DAO a meghatározott szabályok alapján fog működni.
+- Az okosszerződés tartalmát nem lehet módosítani, miután életbe lépett, még a tulajdonosok sem módosíthatják azt. Ennek következtében a DAO a meghatározott szabályok alapján fog működni.
 - Az okosszerződések képesek pénzeszközöket küldeni és fogadni. Enélkül szükség lenne egy megbízható közvetítőre, aki a csoport eszközeit kezelné.
 - Az Ethereum közössége bizonyítottan együttműködő, nem versenyszellemű, így a bevált gyakorlatok és a támogatórendszerek gyorsan kialakulnak.
 
@@ -73,7 +69,7 @@ A delegáció vagy felhatalmazás a DAO verziója a képviselőalapú demokráci
 
 #### Egy híres példa {#governance-example}
 
-[ENS](https://claim.ens.domains/delegate-ranking) – az ENS-szel rendelkezők delegálhatják szavazati jogaikat a közösség elkötelezett tagjainak, hogy képviseljék őket.
+[ENS](https://claim.ens.domains/delegate-ranking) – Az ENS-tulajdonosok átruházhatják szavazataikat a közösség elkötelezett tagjaira, hogy képviseljék őket.
 
 ### Automatikus tranzakciókon alapuló irányítás {#governance-example}
 
@@ -81,11 +77,11 @@ Számos DAO-nál a tranzakciók automatikusan végrehajtódnak, ha a tagok hatá
 
 #### Egy híres példa {#governance-example}
 
-[Nouns](https://nouns.wtf) – A Nouns DAO-ban a tranzakciók automatikusan végbemennek, ha határozatképes létszám van jelen, a szavazatok többsége igenlő, illetve az alapítók nem vétózzák meg.
+[Főnevek](https://nouns.wtf) – A Nouns DAO-ban a tranzakció automatikusan végrehajtásra kerül, ha a szavazatok határozatképessége teljesül, és a többség igennel szavaz, mindaddig, amíg az alapítók nem vétózzák meg.
 
 ### Több aláírásos irányítás {#governance-example}
 
-Miközben a DAO-knak ezernyi szavazattal rendelkező tagja lehet, az alapítványoknál lehetséges, hogy 5–20 aktív közösségi tag tartozik egy tárcához, akik az alapítvány megbízottjai, a személyazonosságukat pedig általában ismeri a közösség (doxxed). A szavazás után a kijelölt aláírók hajtják végre a közösség akaratát.
+Míg a DAO-k több ezer szavazati joggal rendelkező taggal rendelkezhetnek, az alapok egy [pénztárcában](/glossary/#wallet) élhetnek, amelyen 5-20 aktív közösségtag osztozik, akikben megbíznak és általában doxxelnek (a közösség által ismert nyilvános identitások). Szavazás után a [multisig](/glossary/#multisig) aláírók végrehajtják a közösség akaratát.
 
 ## A DAO törvényei {#dao-laws}
 
@@ -101,7 +97,7 @@ A DAO-tagságra különféle modellek léteznek. A tagság meghatározza a szava
 
 ### Tokenalapú tagság {#token-based-membership}
 
-Általában teljesen engedélymentes, a használt tokenen alapszik. Ezekkel az irányítási tokenekkel többnyire engedély nélkül lehet kereskedni a decentralizált tőzsdén. Más tokenek megszerzéséhez likviditást kell biztosítani vagy más munkaigazolás (proof-of-work) szükséges. Bármelyik módon is jut hozzá, a token maga biztosítja a szavazati jogot.
+Általában teljesen [engedély nélküli](/glossary/#permissionless), a használt tokentől függően. Ezekkel az irányítási tokenekkel többnyire engedély nélkül lehet kereskedni [decentralizált tőzsdén](/glossary/#dex). Más tokenek megszerzéséhez likviditást kell biztosítani vagy más munkaigazolás (proof-of-work) szükséges. Bármelyik módon is jut hozzá, a token maga biztosítja a szavazati jogot.
 
 _Főleg arra használják, hogy kiterjedt, decentralizált protokollokat és/vagy magukat a tokeneket irányítsák ezáltal._
 
@@ -117,21 +113,21 @@ _Főleg a szorosabb szerveződésű, emberközpontú szervezetek használják, m
 
 #### Egy híres példa {#share-example}
 
-[MolochDAO](http://molochdao.com/) – A MolochDAO az Ethereum-projektek támogatásával foglalkozik. A tagságot kérvényezni kell, melynek alapján a csoport eldönti, vajon az új tag rendelkezik a szükséges szakértelemmel és tőkével, hogy megfelelő döntést tudjon hozni a lehetséges támogatottakról. Nem lehetséges megvásárolni a DAO-tagságot a piacon.
+[MolochDAO](http://molochdao.com/) – A MolochDAO az Ethereum projektek finanszírozására összpontosít. A tagságot kérvényezni kell, melynek alapján a csoport eldönti, vajon az új tag rendelkezik a szükséges szakértelemmel és tőkével, hogy megfelelő döntést tudjon hozni a lehetséges támogatottakról. Nem lehetséges megvásárolni a DAO-tagságot a piacon.
 
 ### Reputációalapú tagság {#reputation-based-membership}
 
 A reputáció a részvételt igazolja és szavazati jogot biztosít a DAO-ban. A token- és részesedésalapú tagsággal ellentétben a reputációalapú DAO nem ad tulajdonjogot a közreműködőknek. A reputációt nem lehet megvenni, átadni vagy delegálni; a DAO tagok a részvételükkel nyerik el azt. A láncon belüli szavazás nem engedélyhez kötött, a leendő tagok szabadon kérvényezhetik a DAO-hoz való csatlakozást, illetve azt, hogy a közreműködésükért cserébe reputációt és tokent kapjanak.
 
-_Főleg a protokollok és decentralizált alkalmazások (dapp) decentralizált fejlesztésére és irányítására használják, de ugyanúgy jól alkalmazható a különféle szervezeteknél, mint adománygyűjtés, munkaközösségek, befektetési klubok stb._
+_Jellemzően protokollok és [dapp-ok](/glossary/#dapp) decentralizált fejlesztésére és irányítására használják, de kiválóan alkalmas különféle szervezetek, például jótékonysági szervezetek, munkavállalói kollektívák, befektetési klubok stb._
 
 #### Egy híres példa {#reputation-example}
 
-[DXdao](https://DXdao.eth.link) – A DXdao egy független globális csoportosulás, amely 2019 óta épít és irányít decentralizált protokollokat és alkalmazásokat. Reputációalapú irányítást és holografikus konszenzust (szavazási módszer) használ arra, hogy forrásokat koordináljon és menedzseljen, tehát senki sem tudja megvásárolni a tagságot azért, hogy befolyásolja a DAO működését.
+[DXdao](https://DXdao.eth.link) – A DXdao egy független globális csoportosulás, amely 2019 óta épít és irányít decentralizált protokollokat és alkalmazásokat. A hírnév alapú kormányzást és a [holografikus konszenzust](/glossary/#holographic-consensus) kihasználja az alapok koordinálásához és kezeléséhez, ami azt jelenti, hogy senki sem vásárolhatja meg magát a jövőjének befolyásolásában.
 
 ## Csatlakozás DAO-hoz / DAO indítása {#join-start-a-dao}
 
-### DAO-hoz csatlakozás {#join-a-dao}
+### Csatlakozzon egy DAO-hoz {#join-a-dao}
 
 - [Az Ethereum-közösséghez tartozó DAO-k](/community/get-involved/#decentralized-autonomous-organizations-daos)
 - [DAOHaus által listázott DAO-k](https://app.daohaus.club/explore)
@@ -150,7 +146,6 @@ _Főleg a protokollok és decentralizált alkalmazások (dapp) decentralizált f
 ### DAO-ról szóló cikkek {#dao-articles}
 
 - [Mi az a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
-- [A DAO kézikönyv](https://daohandbook.xyz)
 - [DAO-k háza](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
 - [Mi az a DAO és mire jó?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
 - [Hogyan lehet létrehozni egy DAO által működtetett digitális közösséget](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
