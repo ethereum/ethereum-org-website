@@ -18,10 +18,13 @@ import { toPosixPath } from "./relativePath"
 
 import { ITutorial } from "@/pages/developers/tutorials"
 
-const CURRENT_CONTENT_DIR = join(process.cwd(), CONTENT_DIR)
+function getCurrentDir() {
+  return join(process.cwd(), CONTENT_DIR)
+}
 
 const getPostSlugs = (dir: string, files: string[] = []) => {
-  const contentDir = join(CURRENT_CONTENT_DIR, dir)
+  const cdir = getCurrentDir()
+  const contentDir = join(cdir, dir)
   // Temporal list of content pages allowed to be compiled
   // When a content page is migrated (and he components being used), should be added to this list
   const temporalAllowedPages = [
@@ -290,14 +293,12 @@ const getPostSlugs = (dir: string, files: string[] = []) => {
       if (fileExtension === ".md") {
         // If it is a .md file (allowed content page), push the path to the files array
         for (const page of temporalAllowedPages) {
-          const fullPagePath = join(CURRENT_CONTENT_DIR, page)
+          const fullPagePath = join(cdir, page)
 
           if (name.includes(fullPagePath)) {
             files.push(
               toPosixPath(
-                fullPagePath
-                  .replace(CURRENT_CONTENT_DIR, "")
-                  .replace("/index.md", "")
+                fullPagePath.replace(cdir, "").replace("/index.md", "")
               )
             )
           }
@@ -320,7 +321,8 @@ export const getContentBySlug = (slug: string) => {
     }
   }
 
-  let fullPath = toPosixPath(join(CURRENT_CONTENT_DIR, realSlug))
+  const dir = getCurrentDir()
+  let fullPath = toPosixPath(join(dir, realSlug))
   let contentNotTranslated = false
 
   // If content is not translated, use english content fallback
@@ -350,8 +352,9 @@ export const getContent = (dir: string) => {
 }
 
 export const getTutorialsData = (locale: string): ITutorial[] => {
+  const dir = getCurrentDir()
   const fullPath = join(
-    CURRENT_CONTENT_DIR,
+    dir,
     locale !== "en" ? `translations/${locale!}` : "",
     "developers/tutorials"
   )
@@ -362,7 +365,7 @@ export const getTutorialsData = (locale: string): ITutorial[] => {
 
     tutorialData = languageTutorialFiles.map((dir) => {
       const filePath = join(
-        CURRENT_CONTENT_DIR,
+        dir,
         locale !== "en" ? `translations/${locale!}` : "",
         "developers/tutorials",
         dir,
