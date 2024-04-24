@@ -1,12 +1,9 @@
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
 import {
   Box,
   type BoxProps,
-  Flex,
   type FlexProps,
-  Icon,
   List,
   ListItem,
   Text,
@@ -21,7 +18,6 @@ import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import FeedbackCard from "@/components/FeedbackCard"
 import { ContentHero } from "@/components/Hero"
 import LeftNavBar from "@/components/LeftNavBar"
-import { BaseLink } from "@/components/Link"
 import {
   ContentContainer,
   MobileButton,
@@ -35,29 +31,12 @@ import UpgradeStatus from "@/components/UpgradeStatus"
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
-import { MAIN_CONTENT_ID } from "@/lib/constants"
-
 const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
 
 type ContainerProps = Pick<BoxProps, "children" | "dir">
 
 const Container = (props: ContainerProps) => (
   <Box position="relative" {...props} />
-)
-
-const MoreContent = (props: ChildOnlyProp & { to: string }) => (
-  <Flex
-    hideBelow="lg"
-    as={BaseLink}
-    bg="ednBackground"
-    justify="center"
-    p={4}
-    w="full"
-    _hover={{
-      bg: "background.base",
-    }}
-    {...props}
-  />
 )
 
 const LastUpdated = (props: ChildOnlyProp) => (
@@ -152,9 +131,6 @@ export const UpgradeLayout = ({
         heroImg={frontmatter.image}
         blurDataURL={frontmatter.blurDataURL}
       />
-      <MoreContent to={"#" + MAIN_CONTENT_ID}>
-        <Icon as={MdExpandMore} fontSize="2xl" color="secondary" />
-      </MoreContent>
       <Page>
         {/* TODO: Switch to `above="lg"` after completion of Chakra Migration */}
         <LeftNavBar
