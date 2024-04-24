@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import type { IconType } from "react-icons/lib"
 import { MdInfoOutline, MdWarning } from "react-icons/md"
-import { Flex, HStack, Icon, Text } from "@chakra-ui/react"
+import { Box, chakra, Flex, HStack, Icon, Text } from "@chakra-ui/react"
 
 import { NULL_VALUE } from "@/lib/constants"
 
@@ -44,7 +44,9 @@ const Stat = ({ tooltipProps, value, label, isError }: StatProps) => {
         <Text as="span">{label}</Text>
         {!!tooltipProps && (
           <Tooltip {...tooltipProps}>
-            <Icon as={content.tooltipIcon} />
+            <chakra.button display='flex' color="inherit">
+              <Icon as={content.tooltipIcon} />
+            </chakra.button>
           </Tooltip>
         )}
       </HStack>
