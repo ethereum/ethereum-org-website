@@ -52,7 +52,7 @@
   "page-gas-table-item-4-transaction-type": "在 Uniswap 進行兌換",
   "page-gas-faq-header": "常見問題",
   "page-gas-faq-question-1-q": "誰將獲得我在交易中支付的燃料費？",
-  "page-gas-faq-question-1-a-1": "燃料費中的主要部分，也就是基本費用會被協議銷毀（燒毀）。至於優先費用，假如包含在你的交易裏，則將支付給提出你的交易的驗證者。",
+  "page-gas-faq-question-1-a-1": "燃料費中的大部分（基本費用）會被協議銷毀（燃燒）。若交易中包含了優先費，則會發放給提交你的交易的驗證者。",
   "page-gas-faq-question-1-a-2": "你可以在<a href=\"/developers/docs/gas/\">燃料開發者文件</a>中瞭解該過程的詳細説明。",
   "page-gas-faq-question-2-q": "我需要用以太幣支付燃料費用嗎？",
   "page-gas-faq-question-2-a-1": "是的。以太坊上的所有燃料費都必須使用原生以太幣貨幣支付。",

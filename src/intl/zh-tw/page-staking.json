@@ -187,7 +187,7 @@
   "page-staking-section-comparison-requirements-title": "要求",
   "page-staking-section-comparison-solo-requirements-li1": "你必須存入 32 個以太幣",
   "page-staking-section-comparison-solo-requirements-li2": "在連接到網際網路時，維護運行以太坊執行用戶端和共識用戶端的硬體設備",
-  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://goerli.launchpad.ethereum.org\" target=\"_blank\">質押啓動面板</a>將引導你完成整個流程和硬體設備要求",
+  "page-staking-section-comparison-solo-requirements-li3": "<a href=\"https://holesky.launchpad.ethereum.org\" target=\"_blank\">質押啟動面板</a>將引導你完成整個流程和了解硬體需求",
   "page-staking-section-comparison-saas-requirements-li1": "存入 32 個以太幣並在幫助下產生你的金鑰",
   "page-staking-section-comparison-saas-requirements-li2": "安全地儲存你的金鑰",
   "page-staking-section-comparison-saas-requirements-li3": "其他服務已妥善處理，但特定服務將有所不同",
