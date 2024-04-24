@@ -9,7 +9,7 @@ tags:
   - "测试"
   - "模拟"
 skill: intermediate
-published: 2020年05月02日
+published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts
 ---
