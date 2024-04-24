@@ -1829,6 +1829,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/lightclient"><img src="https://avatars.githubusercontent.com/u/14004106?v=4?s=100" width="100px;" alt="lightclient"/><br /><sub><b>lightclient</b></sub></a><br /><a href="#maintenance-lightclient" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/GarenWoo"><img src="https://avatars.githubusercontent.com/u/126687110?v=4?s=100" width="100px;" alt="Garen Woo"/><br /><sub><b>Garen Woo</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AGarenWoo" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AbiPrescott"><img src="https://avatars.githubusercontent.com/u/140613896?v=4?s=100" width="100px;" alt="Abi Prescott"/><br /><sub><b>Abi Prescott</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AAbiPrescott" title="Bug reports">🐛</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/skyminelabs"><img src="https://avatars.githubusercontent.com/u/57817726?v=4?s=100" width="100px;" alt="skyminelabs"/><br /><sub><b>skyminelabs</b></sub></a><br /><a href="#maintenance-skyminelabs" title="Maintenance">🚧</a></td>
     </tr>
   </tbody>
 </table>
