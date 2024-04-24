@@ -160,14 +160,19 @@ The base fee will be burned **-0.00399 ETH**
 
 Validator keeps the tip **+0.000210 ETH**
 
-In case of an interaction with a smart contract there is 2 cases possible:
-1. A `view` or `pure` function (as described in [solidity documentation](https://docs.soliditylang.org/en/v0.8.23/contracts.html#view-functions)) is called from an EOA. In that specific case, no gas will be paid by the caller and the result will be returned. The underlying RPC call for this scenario is [eth_call](https://ethereum.org/en/developers/docs/apis/json-rpc#eth_call)
-2. In any other cases gas will be paid by the caller. Which mean: calling a `view` or `pure` function internally (ie: not from an EAO) will cost gas.
 
 ![Diagram showing how unused gas is refunded](./gas-tx.png)
 _Diagram adapted from [Ethereum EVM illustrated](https://takenobu-hs.github.io/downloads/ethereum_evm_illustrated.pdf)_
 
 Any gas not used in a transaction is refunded to the user account.
+
+### Smart contract interactions {#smart-contract-interactions}
+
+Gas is required for any transaction that alters the state of a smart contract.
+
+Therefore, calling a [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) or [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) function from an EOA will not require any gas. The underlying RPC call for this scenario is [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
+
+However calling a `view` or `pure` function internally (ie: from the contract itself or from another contract) will cost gas.
 
 ## Transaction lifecycle {#transaction-lifecycle}
 
