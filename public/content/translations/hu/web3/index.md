@@ -97,7 +97,11 @@ Ugyanakkor számos Web3-közösséget is DAO-ként definiálnak. Ezek a közöss
 
 Hagyományos módon minden platformra egy külön profilt kell létrehozni. Például Ön külön Twitter-, YouTube- és Reddit-profillal is rendelkezik. Meg szeretné változtatni a nevét vagy a képét? Minden egyes eszközön meg kell tennie. Használhat közösségimédia-alapú azonosítást néhány esetben, ez viszont visszamutat a korábbi témára, a cenzúrára. Ezek a platformok egyetlen kattintással kizárhatják Önt a teljes közösségi életéből. Ami még rosszabb, hogy ezek a platformok személyes azonosítókat kérnek el a profil létrehozásához.
 
-A Web3 megoldja ezeket a problémákat azáltal, hogy lehetővé teszi digitális személyazonosságának vezérlését Ethereum-címmel és [Ethereum névszolgáltatás (ENS)](/glossary/#ens) profillal. Az Ethereum-cím használata egyszerre biztosít hozzáférést az összes platformhoz, ami biztonságos, ellenáll a cenzúrának és anonim.
+A web3 úgy kezeli ezt, hogy mindenki kontrollálja a saját digitális személyazonosságát az Ethereum-cím és az ENS (Ethereum Névszolgáltatás) profil révén. Az Ethereum-cím használata egyszerre biztosít hozzáférést az összes platformhoz, ami biztonságos, ellenáll a cenzúrának és anonim.
+
+<ButtonLink to="https://login.xyz/">
+  Bejelentkezés az Ethereummal
+</ButtonLink>
 
 ### Saját fizetési rendszer {#native-payments}
 

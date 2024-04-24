@@ -54,7 +54,7 @@ Mindez azért lehetséges, mert az okosszerződést nem lehet önkényesen megv�
 
 Az Ethereum tökéletes alapot szolgáltat a DAO-knak számtalan okból kifolyólag:
 
-- Az Ethereum saját konszenzusa decentralizált és eléggé megalapozott ahhoz, hogy a szervezetek megbízhassanak a hálózatban.
+- Az Ethereum saját konszenzusmechanizmusa kellőképpen kiterjedt és megalapozott ahhoz, hogy a szervezetek megbízzanak a hálózatban.
 - Az okosszerződés tartalmát nem lehet módosítani, miután életbe lépett, még a tulajdonosok sem módosíthatják azt. Ennek következtében a DAO a meghatározott szabályok alapján fog működni.
 - Az okosszerződések képesek pénzeszközöket küldeni és fogadni. Enélkül szükség lenne egy megbízható közvetítőre, aki a csoport eszközeit kezelné.
 - Az Ethereum közössége bizonyítottan együttműködő, nem versenyszellemű, így a bevált gyakorlatok és a támogatórendszerek gyorsan kialakulnak.
