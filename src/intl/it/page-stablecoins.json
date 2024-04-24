@@ -39,6 +39,7 @@
   "page-stablecoins-accordion-less": "Meno",
   "page-stablecoins-accordion-more": "Altro",
   "page-stablecoins-accordion-requirements": "Cosa ti servirà",
+  "page-stablecoins-accordion-swap-dapp-intro": "Se possiedi già degli ETH e un portafoglio, puoi utilizzare queste dapp per scambiarli con delle Stablecoin.",
   "page-stablecoins-accordion-swap-dapp-link": "Di più sulle piattaforme di scambio decentralizzate",
   "page-stablecoins-accordion-swap-dapp-title": "Dapp per scambiare i token",
   "page-stablecoins-accordion-swap-editors-tip": "Consigli degli editori",
@@ -117,7 +118,10 @@
   "page-stablecoins-stablecoins-dapp-description-2": "Presta stablecoin e matura interessi e $COMP, il token di Compound.",
   "page-stablecoins-stablecoins-dapp-description-3": "Una piattaforma di trading in cui puoi maturare interessi sulle tue DAI e USDC.",
   "page-stablecoins-stablecoins-dapp-description-4": "Un'app progettata per risparmiare sulle DAI.",
+  "page-stablecoins-stablecoins-feature-1": "Le Stablecoin sono globali e possono essere inviate via Internet. Sono facili da ricevere e inviare, una volta che possiedi un conto di Ethereum.",
   "page-stablecoins-stablecoins-feature-2": "La domanda per le Stablecoin è elevata, quindi, puoi maturare interessi, prestando le tue. Assicurati di essere consapevole dei rischi, prima di procedere al prestito.",
+  "page-stablecoins-stablecoins-feature-3": "Le stablecoin sono scambiabili per ETH e altri token di Ethereum. Molte dapp si affidano alle stablecoin.",
+  "page-stablecoins-stablecoins-feature-4": "Le Stablecoin sono protette dalla crittografia. Nessuno può forgiare transazioni per tuo conto.",
   "page-stablecoins-stablecoins-meta-description": "Introduzione agli stablecoin Ethereum: cosa sono, come ottenerli e perché sono importanti.",
   "page-stablecoins-stablecoins-table-header-column-1": "Valuta",
   "page-stablecoins-stablecoins-table-header-column-2": "Capitalizzazione di mercato",
@@ -158,5 +162,6 @@
   "loopring-logo": "Logo di Loopring",
   "makerdao-logo": "Logo di MakerDao",
   "matcha-logo": "Logo di Matcha",
+  "oasis-logo": "Logo di Oasis",
   "uniswap-logo": "Logo di Uniswap"
 }
