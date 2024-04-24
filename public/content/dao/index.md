@@ -125,7 +125,7 @@ _Typically used for decentralized development and governance of protocols and [d
 
 #### A famous example {#reputation-example}
 
-[DXdao](https://DXdao.eth.link) – DXdao is a global sovereign collective building and governing decentralized protocols and applications since 2019. It leverages reputation-based governance and [holographic consensus](/glossary/#holographic-consensus) to coordinate and manage funds, meaning no one can buy their way into influencing its future.
+[DXdao](https://DXdao.eth.limo) – DXdao was a global sovereign collective building and governing decentralized protocols and applications since 2019. It leveraged reputation-based governance and [holographic consensus](/glossary/#holographic-consensus) to coordinate and manage funds, meaning no one could buy their way into influencing its future or governance. 
 
 ## Join / start a DAO {#join-start-a-dao}
 
