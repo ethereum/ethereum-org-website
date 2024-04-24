@@ -73,7 +73,7 @@ L'ecosistema Ethereum té com a missió aportar fons a béns públics i projecte
 
 ## Gestors de producte <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- L'ecosistema Ethereum necessita els vostres talents! Diverses companyies estan demanant perfils de gestor de producte. Si voleu començar contribuint en un projecte de programari obert, poseu-vos en contacte amb [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [MetaCartel](https://www.metacartel.org/)
+- L'ecosistema Ethereum necessita els vostres talents! Diverses companyies estan demanant perfils de gestor de producte. Si voleu començar contribuint en un projecte de programari obert, poseu-vos en contacte amb [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) o [RaidGuild](https://www.raidguild.org/)
 
 ## Màrqueting <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -99,17 +99,15 @@ L'ecosistema Ethereum té com a missió aportar fons a béns públics i projecte
 
 Les «DAO» són organitzacions autònomes descentralitzades. Aquests grups aprofiten la tecnologia Ethereum per facilitar l'organització i la col·laboració. Per exemple, per controlar la pertinença, votar les propostes o gestionar els actius grupals. Com que les DAO són encara experimentals, us ofereixen oportunitats de trobar grups amb els quals us pugueu identificar, trobar col·laboradors i augmentar el vostre impacte dins la comunitat Ethereum. [Més informació sobre les DAO](/dao/)
 
-- [LexDAO](https://lexdao.coop)[@lex_DAO](https://twitter.com/lex_DAO) - _Enginyeria legal_
+- [LexDAO](https://lexdao.org)[@lex_DAO](https://twitter.com/lex_DAO) - _Enginyeria legal_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Comunitat artística_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Incubadora DAO_
 - [MetaCartel Ventures](https://metacartel.xyz) [ @VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Inversions en projectes criptogràfics prellavor_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Mecànica del joc per a la vida real MMORPG_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Marques de roba Digiphysical_
 - [MolochDAO](https://molochdao.com)[@MolochDAO](https://twitter.com/MolochDAO) -_Comunitat enfocada a donar suport a desenvolupaments en Ethereum_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Projectes liderats per dones_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Col·lectiu de constructors de Web3_
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promou el concepte DAO en un camp no tècnic i ajuda a la gent a crear valor a través de les DAO._
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Col·lectiu de desenvolupament de Web3 autònom treballant com una DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) -_Comunitat de governança de DAOhaus_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Comunitat de constructors que creuen en la propietat col·lectiva d'internet_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Decentralized development & governance of dApps & protocols_

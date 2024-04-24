@@ -15,7 +15,6 @@ lang: ja
 これらのプログラムは、広範囲のプロジェクトに助成金を提供し、イーサリアムエコシステムを幅広くサポートするものです。 拡張性、コミュニティ構築、セキュリティ、プライバシーなどのソリューションが対象となり、 どれか1つのイーサリアムプラットフォームに固有の助成プログラムではありません。 不明な場合は、まずはこちらから始めてみてください。
 
 - [EFエコシステム・サポート・プログラム](https://esp.ethereum.foundation) - _ユニバーサルツール、インフラストラクチャ、研究、公共財を対象とした、イーサリアムにプラスとなるオープンソース・プロジェクトへの資金提供_
-- [MetaCartel](https://www.metacartel.org/grants/) - _分散型アプリ(Dapp)開発、分散型自律組織(DAO)作成_
 - [Moloch DAO](https://www.molochdao.com/) - _プライバシー、レイヤー2スケーリング、クライアントセキュリティなど_
 - [分散型自律組織(DAO)の助成](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成プログラムを提供する組織のGoogleスプレッドシート_
 - [Crunchbase for Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _カテゴリ、ユースケース、金額などで助成金をフィルターして検索できます。 他の人が適切に助成金を見つけられるように貢献。_

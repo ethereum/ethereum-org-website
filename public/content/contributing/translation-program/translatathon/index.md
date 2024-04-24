@@ -16,6 +16,10 @@ We invite you to join us in breaking down language barriers and making ethereum.
 
 ## Overview {#overview}
 
+<InfoBanner emoji=":calendar:">
+  This event has passed. <a href="https://twitter.com/ethdotorg">Stay tuned for the next events</a>.
+</InfoBanner>
+
 ### When {#when}
 
 - Application period: August 1st - August 15th, 2023
@@ -35,7 +39,7 @@ Office hours, workshops, team formation and FAQ sessions will be hosted on the [
 
 #### Application period {#applications}
 
-The application period will be open from **August 1st** to **August 15th** 2023.
+The application period will be open from **August 1st** to **August 15th**, 2023.
 
 All participants in the Translatathon are required to apply in order to participate and compete for prizes.
 

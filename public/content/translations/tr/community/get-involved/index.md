@@ -89,7 +89,7 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 
 ## Ürün Yöneticileri <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Ethereum ekosisteminin yeteneklerinize ihtiyacı var! Birçok şirket, ürün yöneticisi rolleri için çalışan arıyor. Açık kaynak kodlu bir projeye katkıda bulunarak başlamak istiyorsanız [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) veya [MetaCartel](https://www.metacartel.org/) adresleriyle iletişime geçin
+- Ethereum ekosisteminin yeteneklerinize ihtiyacı var! Birçok şirket, ürün yöneticisi rolleri için çalışan arıyor. Açık kaynak kodlu bir projeye katkıda bulunarak başlamak istiyorsanız [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) veya [RaidGuild](https://www.raidguild.org/) adresleriyle iletişime geçin
 
 ## Pazarlama <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -121,16 +121,13 @@ Ethereum ekosistemi, kamu mallarını ve etkili projeleri finanse etme misyonuna
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _DAO konseptinin teknoloji harici alanlarda tanıtılması ve insanların DAO aracılığıyla değer yaratmalarına yardım edilmesi_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _İnternetin ortaklaşa sahipliğine inanan yapımcıların topluluğu_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _DAO olarak çalışan bir freelancer Web3 geliştirme kolektifi_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Merkeziyetsiz geliştirme & dapps yöneti̇mi̇ & protokolleri_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOHaus'un topluluk yönetimi_
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Topluluk sahibi süper kahraman franchise_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Hukuk mühendisliği_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Hukuk mühendisliği_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Sanat topluluğu_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO kuluçkası_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Başlangıç öncesi kripto projeleri için girişimler_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Gerçek Hayat için MMORPG Oyun Mekanikleri_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Dijifiziksel Giyim Firmaları_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Kadınlar tarafından yürütülen projeler_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Ethereum geliştirmelerini desteklemeye odaklı bir topluluk_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3 yapımcılar kolektifi_
 
