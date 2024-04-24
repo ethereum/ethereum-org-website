@@ -14,11 +14,11 @@ summaryPoint3: 以開放科學運動為原則。
 
 ## 什麼是去中心化科研 (DeSci)？ {#what-is-desci}
 
-Decentralized science (DeSci) is a movement that aims to build public infrastructure for funding, creating, reviewing, crediting, storing, and disseminating scientific knowledge fairly and equitably using the [Web3](/glossary/#web3) stack.
+去中心化科研 (DeSci) 是一項利用 Web3 技術開發的公共基礎設施來推行的科學運動，以公平且公正合理的方式融資、研發、審核、認證、存檔以及推廣科學知識。
 
 去中心化科研的目標是創建一個生態系統，鼓勵科學家公開分享研究計畫，在開放任何人輕易獲得甚至參與研究的同時，肯定該科學家的貢獻。 去中心化科研的理念是：所有人都有獲得科學知識的權利，因此科學研究過程應該透明化。 去中心化科研正在開創一種更去中心化且廣泛的科學研究模型，使其更能抵抗中心化管理機構的審查與控制。 去中心化科研的目標是，藉由融資、科研工具與交流渠道的去中心化，為跳脫框架的新點子開創出一個能夠欣欣向榮的環境。
 
-Decentralized science allows for more diverse funding sources (from [DAOs](/glossary/#dao), [quadratic donations](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531) to crowdfunding and more), more accessible data and methods, and by providing incentives for reproducibility.
+去中心化科研允許更多樣化的資金來源（從[去中心化自治組織](/dao/)、[二次方捐贈](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)到衆籌等等)，讓數據和方法更易獲取，并提供可重複性的激勵措施。
 
 ### Juan Benet - 去中心化科研運動
 
@@ -28,30 +28,30 @@ Decentralized science allows for more diverse funding sources (from [DAOs](/glos
 
 這份有待補充的清單列出了科學領域中的關鍵問題，以及去中心化科研所能提供的協助方案
 
-| **去中心化科研**                                                                                                            | **傳統科研**                                                                                                      |
-| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
-| Distribution of funds is **determined by the public** using mechanisms such as quadratic donations or DAOs.           | Small, closed, **centralized groups** control the distribution of funds.                                      |
-| You collaborate with peers from **all over the globe** in dynamic teams.                                              | Funding organizations and home institutions **limit** your collaborations.                                    |
-| Funding decisions are made online and **transparently**. 會探索全新的融資機制。                                                  | Funding decisions are made with a long turnaround time and **limited transparency**. 融資機制有限。                  |
-| Sharing laboratory services is made easier and more transparent using [Web3](/glossary/#web3) technology.             | Sharing laboratory resources is often **slow and opaque**.                                                    |
-| **New models for publishing** can be developed that use Web3 primitives for trust, transparency and universal access. | You publish through established pathways frequently acknowledged as **inefficient, biased and exploitative**. |
-| You can **earn tokens and reputation for peer-reviewing** work.                                                       | Your **peer-review work is unpaid**, benefiting for-profit publishers.                                        |
-| **You own the intellectual property (IP)** you generate and distribute it according to transparent terms.             | **Your home institution owns the IP** you generate. 知識產權無法透明地獲得。                                              |
-| **Sharing all of the research**, including the data from unsuccessful efforts, by having all steps on-chain.          | **Publication bias** means that researchers are more likely to share experiments that had successful results. |
+| **去中心化科研**                          | **傳統科研**                                |
+| ----------------------------------- | --------------------------------------- |
+| 使用平方募資或去中心化自治組織等機制的公眾決定了資金的去向。      | 小型、封閉、中心化團體負責管控資金去向。                    |
+| 你能夠與世界各地的同儕展開活潑的合作。                 | 合作計畫受資助方和所屬機構限制。                        |
+| 資金決策在線上進行且透明度高。 會探索全新的融資機制。         | 資金決策較為耗時且透明度不足。 融資機制有限。                 |
+| 利用 Web3 基礎單元更簡單且公開地分享實驗室服務。         | 分享實驗室資源的過程較為遲緩且透明度不足。                   |
+| 利用 Web3 基礎單元研發出可靠、透明且能與全球共享的全新發表模式。 | 只能藉由既有途徑發表研究，而這些途徑通常被認為缺乏效率、帶有偏見且有剝削傾向。 |
+| 你可以藉由同儕審查工作獲得代幣與聲望。                 | 同儕審查工作是無償的，只有商業出版商能獲益。                  |
+| 你產生的知識產權 (IP) 歸你所有且能根據透明條款加以分配。     | 你產生的知識產權歸屬於你所在的機構。 知識產權無法透明地獲得。         |
+| 所有研究步驟將在鏈上公佈，無論研究成功與否，所有研究資料均在鏈上共享。 | 出版社不夠公正，導致研究者傾向只分享成功的實驗。                |
 
 ## 以太坊與去中心化科研 {#ethereum-and-desci}
 
-去中心化科研系統需要健全的保全，將金錢與交易開銷減到最低，還要有能夠開發各種應用程式的豐富生態系統。 Ethereum provides everything needed for building a decentralized science technology.
+去中心化科研系統需要健全的保全，將金錢與交易開銷減到最低，還要有能夠開發各種應用程式的豐富生態系統。 以太坊提供建立去中心化科研基礎所需的一切。
 
 ## 去中心化科研的使用案例 {#use-cases}
 
-DeSci is building the scientific toolset to onboard traditional academia into the digital world. 以下是 Web3 可爲科學領域提供的使用案例。
+去中心化科研正在構建科學研究工具組件，以便將 Web2 學術應用納入數位世界。 以下是 Web3 可爲科學領域提供的使用案例。
 
 ### 學術發表 {#publishing}
 
-現行科學研究發表模式備受質疑，因為這種模式由出版方主導，而出版方又仰賴科學家、審查者與編輯的無償勞動，卻又收取高昂的發表費用。 大眾讀者通常藉由稅收間接支付了該研究的費用，卻往往無法閱讀相同作品，除非再次付款給出版方。 The total fees for publishing individual science papers are often five figures ($USD), undermining the whole concept of scientific knowledge as a [public good](/glossary/#public-goods) while generating enormous profits for a small group of publishers.
+現行科學研究發表模式備受質疑，因為這種模式由出版方主導，而出版方又仰賴科學家、審查者與編輯的無償勞動，卻又收取高昂的發表費用。 大眾讀者通常藉由稅收間接支付了該研究的費用，卻往往無法閱讀相同作品，除非再次付款給出版方。 發表單篇科學論文的費用通常高達五位數（美元），不但辜負科學知識作為[公共財產](https://www.econlib.org/library/Enc/PublicGoods.html)的使命，還為一小撮出版者帶來龐大利潤。
 
-目前的免費公開平台通常是預印伺服器，[例如 ArXiv](https://arxiv.org/)。 然而，這些平台缺乏質量把關，無[防範女巫攻擊的機制](/glossary/#anti-sybil)，且通常不會追蹤文章等級指標，換言之，它們通常只供在投稿至傳統出版社之前流通作品。 SciHub 也提供免費瀏覽已發表的學術論文，但此途徑並不合法，且須待出版社收取報酬並將論文納入嚴格的版權法之後才得以在網站發布。 這開啟了一道關鍵缺口，也就是內建合法機制與激勵模型的開放式科學論文與資料。 Web3 能提供建立這種系統的工具。
+目前的免費公開平台通常是預印伺服器，[例如 ArXiv](https://arxiv.org/)。 然而，這些平台缺乏質量把關，無[防範女巫攻擊的機制](https://csrc.nist.gov/glossary/term/sybil_attack)，且通常不會追蹤文章等級指標，換言之，它們通常只供在投稿至傳統出版社之前流通作品。 SciHub 也提供免費瀏覽已發表的學術論文，但此途徑並不合法，且須待出版社收取報酬並將論文納入嚴格的版權法之後才得以在網站發布。 這開啟了一道關鍵缺口，也就是內建合法機制與激勵模型的開放式科學論文與資料。 Web3 能提供建立這種系統的工具。
 
 ### 可重複性與可複製性 {#reproducibility-and-replicability}
 
@@ -60,11 +60,11 @@ DeSci is building the scientific toolset to onboard traditional academia into th
 - 可重複的研究結果可由相同的團隊使用相同的方式多次達成。
 - 可複製的研究結果可由不同的團隊以相同的實驗方案達成。
 
-全新的 Web3-內建工具可以確保科學發現以可重複性與可複製性為基礎。 我們可將優質的科學融入到學術界的技術體系中。 Web3 offers the ability to create [attestations](/glossary/#attestation) for each analysis component: the raw data, the computational engine, and the application result. 共識系統的美妙之處在於，當這些要素由可靠的網路機制維護運作時，所有網路參與者都可以負責再次運算並驗證每一項結果。
+全新的 Web3-內建工具可以確保科學發現以可重複性與可複製性為基礎。 我們可將優質的科學融入到學術界的技術體系中。 Web3 有能力驗證原始資料、計算引擎以及應用結果等分析要素。 共識系統的美妙之處在於，當這些要素由可靠的網路機制維護運作時，所有網路參與者都可以負責再次運算並驗證每一項結果。
 
 ### 資金來源 {#funding}
 
-目前資助科學的標準模式是個人或科學家團體向資助機構提出書面申請。 小部分值得信賴的人為申請表評分，並面試這一小撮申請人，再給予資金。 Aside from creating bottlenecks that lead to sometimes **years of waiting** time between applying for and receiving a grant, this model is known to be highly **vulnerable to the biases, self-interests and politics** of the review panel.
+目前資助科學的標準模式是個人或科學家團體向資助機構提出書面申請。 小部分值得信賴的人為申請表評分，並面試這一小撮申請人，再給予資金。 這個模式不但容易造成瓶頸，導致申請和獲得資助之間有時需要等待好幾年，還被認為極易受到審查小組的偏見、自我利益和政治因素的影響。
 
 研究顯示，同一個提案被提交到不同的小組時，結果卻大相徑庭，可見資助審查小組難以選出高品質提案。 隨著資金變得越來越稀缺，這些款項都集中在少數資深研究者與較為保守的研究計劃上。 這導致了一個各方為資金搶破頭的環境，還鞏固了不健康的激勵措施，並抑制創新。
 
@@ -72,11 +72,11 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 
 ### 知識產權所有權和開發 {#ip-ownership}
 
-知識產權 (IP) 是傳統科學的一個大問題：從被困在大學或閒置在生物技術公司中，乃至難以估值。 然而，Web3 使用[非同質化代幣 (NFT)](/glossary/#nft)解決數位資產（例如科學數據或文章）的所有權，這是 Web3 非常擅長的。
+知識產權 (IP) 是傳統科學的一個大問題：從被困在大學或閒置在生物技術公司中，乃至難以估值。 然而，Web3 使用[非同質化代幣 (NFT)](/nft/)解決數位資產（例如科學數據或文章）的所有權，這是 Web3 非常擅長的。
 
 就像非同質化代幣可以將未來交易的收入返還給原創作者一樣，你可以建立透明的價值歸屬鏈來獎勵研究人員、管理機構（如去中心化自治組織），甚至是資料被收集的研究對象。
 
-[IP-NFTs](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) can also function as a key to a decentralized data repository of the research experiments being undertaken, and plug into NFT and [DeFi](/glossary/#defi) financialization (from fractionalization to lending pools and value appraisal). 它還允許如 [VitaDAO](https://www.vitadao.com/) 這樣的去中心化自治組織等鏈上原生實體直接在鏈上進行研究。 不可轉讓的[「靈魂綁定」代幣](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)的出現，將可能在去中心化科研中扮演重要的角色，使個人能證明其與以太坊地址連結的個人經驗和證書。
+[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) 還是將正在進行的實驗之資料庫去中心化的關鍵，還可以插入非同質化代幣與 [DeFi](/defi/) 金融化（從資產分割到借貸池與價值評估）。 它還允許如 [VitaDAO](https://www.vitadao.com/) 這樣的去中心化自治組織等鏈上原生實體直接在鏈上進行研究。 不可轉讓的[「靈魂綁定」代幣](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)的出現，將可能在去中心化科研中扮演重要的角色，使個人能證明其與以太坊地址連結的個人經驗和證書。
 
 ### 資料儲存、存取和架構 {#data-storage}
 

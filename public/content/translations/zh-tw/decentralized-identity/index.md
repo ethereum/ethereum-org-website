@@ -13,15 +13,13 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 現如今，身分幾乎支撐著我們生活的方方面面。 使用線上服務、開設銀行帳戶、選舉投票、購買房產、就業，所有這些事情都需要證明你的身分。
 
-然而，傳統的身分管理系統長期以來一直依賴於中心化中間機構來發行、持有和控制你的身分識別和[身分證明](/glossary/#attestation)。 這意味著你無法掌控自己身分的相關資訊，也無法決定誰能夠存取你的個人身分資訊 (PII)，以及各方擁有多大的訪問權限。
+然而，傳統的身分管理系統長期以來一直依賴於中心化中間機構來發行、持有和控制你的身分識別和[身分證明](#what-are-attestations)。 這意味著你無法掌控自己身分的相關資訊，也無法決定誰能夠存取你的個人身分資訊 (PII)，以及各方擁有多大的訪問權限。
 
 為了解決這些問題，我們在以太坊等公共區塊鏈上構建了去中心化身分系統。 去中心化身分允許每個人管理他們的身分相關資訊。 借助去中心化身分解決方案，_你_可以建立身分識別、聲明和持有你的身分證明，而無需依賴於中央機構，例如服務提供方或是政府。
 
 ## 什麼是身分認同？ {#what-is-identity}
 
 身分意味著個人的自我意識，由獨特的特徵定義。 身分是指作為一個_個體_，即一個獨特的人類實體。 身分也可以是指其他非人類的實體，例如組織或機構。
-
-<YouTube id="Ew-_F-OtDFI" />
 
 ## 什麼是身分識別？ {#what-are-identifiers}
 
@@ -35,46 +33,6 @@ summaryPoint3: 多虧了加密技術，使用者現在擁有了再次發行、�
 
 這些傳統的身分識別範例，均由中央實體發行、持有和控制。 你需要獲得政府的許可才能更改你的姓名，或者需要獲得社交媒體平台的許可才能更改你的名稱。
 
-## 去中心化身分的好處 {#benefits-of-decentralized-identity}
-
-1. 去中心化身分增加了個人對身分識別資訊的掌握。 可以在無需依賴中心化機構和第三方服務的情況下，驗證去中心化身分識別和身分證明。
-
-2. 去中心化身分解決方案為驗證和管理使用者身分，提供了一種去信任、無縫且保護隱私的方法。
-
-3. 去中心化身分利用區塊鏈技術，在不同方之間建立信任，並提供加密擔保來驗證身分證明的有效性。
-
-4. 去中心化身分使得身分資料具有可便攜性。 使用者將身分證明和身分識別儲存在行動裝置錢包中，並可以分享給他們選擇的任一夥伴。 去中心化身分識別和身分證明不會被鎖在發行組織的資料庫中。
-
-5. Decentralized identity should work well with emerging [zero-knowledge](/glossary/#zk-proof) technologies that will enable individuals to prove they own or have done something without revealing what that thing is. 這可以成為一種將信任與隱私結合在一起的強而有力方案，適用於投票等應用方面。
-
-6. Decentralized identity enables [anti-Sybil](/glossary/#anti-sybil) mechanisms to identify when one individual human is pretending to be multiple humans to game or spam some system.
-
-## 去中心化身分使用案例 {#decentralized-identity-use-cases}
-
-去中心化身分有許多潛在的使用案例：
-
-### 1. 通用登入 {#universal-dapp-logins}
-
-Decentralized identity can help replace password-based logins with decentralized authentication. 服務提供商可以向使用者簽發身分證明，這些證明可以儲存在以太坊錢包中。 一個身分證明範例是[非同質化代幣](/glossary/#nft)，可以授與持有者訪問線上社群的權利。
-
-[使用以太坊登入](https://login.xyz/)功能將允許伺服器能夠確認使用者的以太坊帳戶，並從他們的帳戶地址中獲取所需的身分證明。 這意味著使用者無需記住冗長的密碼，就能夠訪問平台和網站，進而改善使用者的線上體驗。
-
-### 2. 「認識客戶」驗證 {#kyc-authentication}
-
-許多線上服務的使用，需要提供個人的身分證明和憑證，例如駕駛執照或國家護照。 但這種方式是有問題的，因為使用者的私人資訊有可能會被洩露，並且服務提供商無法驗證身分證明的真實性。
-
-去中心化身分使公司能夠跳過傳統的[了解你的客戶 (KYC)](https://en.wikipedia.org/wiki/Know_your_customer) 流程，並透過可驗證憑證來核實使用者身分。 這降低了身份管理的成本，並防止使用偽造文件。
-
-### 3 投票和線上社群 {#voting-and-online-communities}
-
-線上投票和社交媒體是去中心化身分的兩個新應用。 線上投票方案容易受到操縱，尤其是在惡意行為者創建虛假身分進行投票的情況下。 要求個人提供鏈上身分證明可以提高線上投票過程的完整性。
-
-去中心化身分可以幫助創建沒有虛假帳戶的線上社群。 例如，每個用使用者可能必須使用鏈上身分系統，如以太坊名稱服務，來驗證他們的身分，從而減少機器人的可能性。
-
-### 4 反女巫保護 {#sybil-protection}
-
-女巫攻擊是指個人欺騙系統使某個系統認為他們是多個人而增加他們的影響力。 Grant-giving applications that use [quadratic voting](/glossary/#quadratic-voting) are vulnerable to these Sybil attacks because the value of a grant is increased when more individuals vote for it, incentivizing users to split their contributions across many identities. 去中心化身分透過增加每位參與者的負擔來證明他們是真正的人，這有助於防止這種情況發生，而且通常也不必透露具體的私人資訊。
-
 ## 什麼是身分證明 {#what-are-attestations}
 
 身分證明是由一個實體提出的關於另一個實體的聲明。 如果你居住在美國，你的駕駛執照是由機動車輛管理局（一個實體）發布，它證明你（另一個實體）在法律上允許駕駛汽車。
@@ -85,17 +43,17 @@ Decentralized identity can help replace password-based logins with decentralized
 
 你的法定姓名或電子郵件地址等傳統身分識別依賴於第三方——政府和電子郵件提供商。 去中心化身分識別 (DID) 則不同－它們不由任何中央實體發行、管理或控制。
 
-去中心化身分識別由個人發行、持有和控制。 An [Ethereum account](/glossary/#account) is an example of a decentralized identifier. 你可以根據需要建立任意數量的帳戶，無需任何人的許可，也無需將它們儲存在中央註冊系統中。
+去中心化身分識別由個人發行、持有和控制。 [以太坊帳戶](/developers/docs/accounts/)，就是去中心化身分識別的一個例子。 你可以根據需要建立任意數量的帳戶，無需任何人的許可，也無需將它們儲存在中央註冊系統中。
 
-Decentralized identifiers are stored on distributed ledgers ([blockchains](/glossary/#blockchain)) or [peer-to-peer networks](/glossary/#peer-to-peer-network). 這使得去中心化身分識別 (DID) 具有[全球唯一性、高可用的可解析性、和加密驗證性](https://w3c-ccg.github.io/did-primer/)。 去中心化身份識別可與不同的實體相關聯，包含個人、組織或政府機構。
+去中心化身分識別儲存在分散式帳本（區塊鏈）上，或點對點的網路上。 這使得去中心化身分識別 (DID) 具有[全球唯一性、高可用的可解析性、和加密驗證性](https://w3c-ccg.github.io/did-primer/)。 去中心化身份識別可與不同的實體相關聯，包含個人、組織或政府機構。
 
 ## 什麼讓去中心化身分識別成為可能？ {#what-makes-decentralized-identifiers-possible}
 
-### 1.  Public Key Cryptography {#public-key-cryptography}
+### 1. 公鑰基礎設施 (PKI) {#public-key-infrastructure}
 
-Public-key cryptography is an information security measure that generates a [public key](/glossary/#public-key) and [private key](/glossary/#private-key) for an entity. Public-key [cryptography](/glossary/#cryptography) is used in blockchain networks to authenticate user identities and prove ownership of digital assets.
+公鑰基礎設施 (PKI) 是一種資訊安全措施，可為一個實體產生一組[公鑰](/glossary/#public-key)和[私鑰](/glossary/#private-key)。 公鑰密碼學在區塊鏈網路中用於驗證使用者身分並證明數位資產的所有權。
 
-一些去中心化身分識別，如以太坊帳戶，都有著公鑰與私鑰。 公鑰用於識別帳戶的控制者，而私鑰則可以簽署和解密此帳戶的訊息。 Public key cryptography provides proofs needed to authenticate entities and prevent impersonation and use of fake identities, using [cryptographic signatures](https://andersbrownworth.com/blockchain/public-private-keys/) to verify all claims.
+一些去中心化身分識別，如以太坊帳戶，都有著公鑰與私鑰。 公鑰用於識別帳戶的控制者，而私鑰則可以簽署和解密此帳戶的訊息。 公鑰基礎設施使用[加密簽名](https://andersbrownworth.com/blockchain/public-private-keys/)來驗證所有聲明，提供所需證明來驗證實體身分以及防止冒充和使用虛假身分。
 
 ### 2. 去中心化資料儲存 {#decentralized-datastores}
 
@@ -139,7 +97,7 @@ Public-key cryptography is an information security measure that generates a [pub
 
 ### 鏈上身分證明 {#onchain-attestations}
 
-On-chain attestations are held in [smart contracts](/glossary/#smart-contract) on the Ethereum blockchain. 智慧型合約（充當註冊系統）將身分證明對應到相關的鏈上去中心化身分識別（公開金鑰）。
+鏈上身份證明保存在以太坊區塊鏈上的[智慧型合約](/developers/docs/smart-contracts/)中。 智慧型合約（充當註冊系統）將身分證明對應到相關的鏈上去中心化身分識別（公開金鑰）。
 
 以下範例展示了鏈上身分證明在實踐中的使用方式：
 
@@ -151,7 +109,47 @@ On-chain attestations are held in [smart contracts](/glossary/#smart-contract) o
 
 ### 靈魂綁定代幣和身分 {#soulbound}
 
-[Soulbound tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) ([non-transferable NFTs](/glossary/#nft)) could be used to collect information unique to a specific wallet. 這有效地創建了綁定到特定以太坊地址的唯一鏈上身分，這可能包括代表成就的代幣（例如完成某些特定的線上課程或在遊戲中超過分數門檻）或社區參與代幣。
+[靈魂綁定代幣](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)（不可轉移的非同質化代幣）可用於收集特定錢包的獨有資訊。 這有效地創建了綁定到特定以太坊地址的唯一鏈上身分，這可能包括代表成就的代幣（例如完成某些特定的線上課程或在遊戲中超過分數門檻）或社區參與代幣。
+
+## 去中心化身分的好處 {#benefits-of-decentralized-identity}
+
+1. 去中心化身分增加了個人對身分識別資訊的掌握。 可以在無需依賴中心化機構和第三方服務的情況下，驗證去中心化身分識別和身分證明。
+
+2. 去中心化身分解決方案為驗證和管理使用者身分，提供了一種去信任、無縫且保護隱私的方法。
+
+3. 去中心化身分利用區塊鏈技術，在不同方之間建立信任，並提供加密擔保來驗證身分證明的有效性。
+
+4. 去中心化身分使得身分資料具有可便攜性。 使用者將身分證明和身分識別儲存在行動裝置錢包中，並可以分享給他們選擇的任一夥伴。 去中心化身分識別和身分證明不會被鎖在發行組織的資料庫中。
+
+5. 去中心化身分與新興的零知識證明技術應具有良好的配合，這將使個人能夠證明他們擁有某物或做過某些事，而無需透露那是什麼。 這可以成為一種將信任與隱私結合在一起的強而有力方案，適用於投票等應用方面。
+
+6. 去中心化身分能夠防範女巫機制，可識別一人假裝多人來玩遊戲或向某個系統發送垃圾郵件。
+
+## 去中心化身分使用案例 {#decentralized-identity-use-cases}
+
+去中心化身分有許多潛在的使用案例：
+
+### 1.  通用登入 {#universal-dapp-logins}
+
+去中心化身分可以使用[去中心化驗證](https://www.ibm.com/blogs/blockchain/2018/10/decentralized-identity-an-alternative-to-password-based-authentication/)，有助於替代基於密碼的登入方式。 服務提供商可以向使用者簽發身分證明，這些證明可以儲存在以太坊錢包中。 一個身分證明範例是[非同質化代幣](/nft/)，可以授與持有者訪問線上社群的權利。
+
+[使用以太坊登入](https://login.xyz/)功能將允許伺服器能夠確認使用者的以太坊帳戶，並從他們的帳戶地址中獲取所需的身分證明。 這意味著使用者無需記住冗長的密碼，就能夠訪問平台和網站，進而改善使用者的線上體驗。
+
+### 2. 「認識客戶」驗證 {#kyc-authentication}
+
+許多線上服務的使用，需要提供個人的身分證明和憑證，例如駕駛執照或國家護照。 但這種方式是有問題的，因為使用者的私人資訊有可能會被洩露，並且服務提供商無法驗證身分證明的真實性。
+
+去中心化身分使公司能夠跳過傳統的[了解你的客戶 (KYC)](https://en.wikipedia.org/wiki/Know_your_customer) 流程，並透過可驗證憑證來核實使用者身分。 這降低了身份管理的成本，並防止使用偽造文件。
+
+### 3 投票和線上社群 {#voting-and-online-communities}
+
+線上投票和社交媒體是去中心化身分的兩個新應用。 線上投票方案容易受到操縱，尤其是在惡意行為者創建虛假身分進行投票的情況下。 要求個人提供鏈上身分證明可以提高線上投票過程的完整性。
+
+去中心化身分可以幫助創建沒有虛假帳戶的線上社群。 例如，每個用使用者可能必須使用鏈上身分系統，如以太坊名稱服務，來驗證他們的身分，從而減少機器人的可能性。
+
+### 4 反女巫保護 {#sybil-protection}
+
+女巫攻擊是指個人欺騙系統使某個系統認為他們是多個人而增加他們的影響力。 [捐款應用程式](https://gitcoin.co/grants/)使用[平方投票法](https://www.radicalxchange.org/concepts/plural-voting/)很容易受到這些女巫攻擊，因為當更多人投票支持時，捐款的價值就會增加，從而激勵使用者將他們的貢獻分配給多個身分。 去中心化身分透過增加每位參與者的負擔來證明他們是真正的人，這有助於防止這種情況發生，而且通常也不必透露具體的私人資訊。
 
 ## 使用去中心化身分 {#use-decentralized-identity}
 
@@ -162,6 +160,7 @@ On-chain attestations are held in [smart contracts](/glossary/#smart-contract) o
 - **[以太坊證明服務 (EAS)](https://attest.sh/)** - _一種去中心化分類帳/協議，用於對任何事物進行鏈上或鏈下證明。_
 - **[人性證明](https://www.proofofhumanity.id)** - _人性證明 (PoH) 是建立在以太坊上的社交身分驗證系統。_
 - **[BrightID](https://www.brightid.org/)** - _一個去中心化的開源社交身分網路，旨在通過創建和分析社交圖譜來改革身分驗證。_
+- **[人格證明護照](https://proofofpersonhood.com/)** - _一個去中心化的數位身分聚合器。_
 - **[walt.id](https://walt.id)** — _一種使開發者和組織能夠利用自主權身份、非同質化代幣/魂縛代幣的開源去中心化身份及錢包基礎設施。_
 
 ## 延伸閱讀 {#further-reading}
