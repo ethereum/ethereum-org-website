@@ -11930,6 +11930,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "AbiPrescott",
+      "name": "Abi Prescott",
+      "avatar_url": "https://avatars.githubusercontent.com/u/140613896?v=4",
+      "profile": "https://github.com/AbiPrescott",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7,
