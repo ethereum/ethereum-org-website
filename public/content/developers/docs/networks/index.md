@@ -51,6 +51,7 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [GitHub](https://github.com/eth-clients/sepolia)
 - [Otterscan](https://sepolia.otterscan.io/)
 - [Etherscan](https://sepolia.etherscan.io)
+- [Blockscout](https://eth-sepolia.blockscout.com/)
 
 ##### Faucets
 
@@ -61,7 +62,6 @@ The Sepolia network uses a permissioned validator set. It's fairly new, meaning 
 - [Alchemy Sepolia faucet](https://sepoliafaucet.com/)
 - [Infura Sepolia faucet](https://www.infura.io/faucet)
 - [Chainstack Sepolia faucet](https://faucet.chainstack.com/sepolia-faucet)
-- [Testnet Faucet | Sepolia](https://testnet-faucet.com/sepolia/)
 
 #### Goerli _(long-term support)_ {#goerli}
 
@@ -78,6 +78,7 @@ Goerli is a testnet for testing validating and staking. The Goerli network is op
 - [Website](https://goerli.net/)
 - [GitHub](https://github.com/eth-clients/goerli)
 - [Etherscan](https://goerli.etherscan.io)
+- [Blockscout](https://eth-goerli.blockscout.com/)
 
 ##### Faucets
 

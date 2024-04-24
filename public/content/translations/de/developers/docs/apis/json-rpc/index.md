@@ -575,7 +575,7 @@ curl -X POST --data '{"jsonrpc":"2.0", "method": "eth_getStorageAt", "params": [
 Das Abrufen eines Elements aus der Karte ist schwieriger. Die Position eines Elements in der Karte wird berechnet mit:
 
 ```js
-keccack(LeftPad32(key, 0), LeftPad32(map position, 0))
+keccak(LeftPad32(key, 0), LeftPad32(map position, 0))
 ```
 
 Das bedeutet, um den Speicher auf pos1["0x391694e7e0b0cce554cb130d723a9d27458f9298"] abzurufen, müssen wir die Position berechnen mit:
@@ -1195,8 +1195,8 @@ Gibt Informationen über eine Transaktion anhand der Blocknummer und der Transak
 
 ```js
 params: [
-  "0x29c", // 668
-  "0x0", // 0
+  "0x9c47cf", // 10241999
+  "0x24", // 36
 ]
 ```
 
@@ -1206,7 +1206,7 @@ params: [
 
 ```js
 // Request
-curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x29c", "0x0"],"id":1}'
+curl -X POST --data '{"jsonrpc":"2.0","method":"eth_getTransactionByBlockNumberAndIndex","params":["0x9c47cf", "0x24"],"id":1}'
 ```
 
 Ergebnis siehe [eth_getTransactionByHash](#eth_gettransactionbyhash)

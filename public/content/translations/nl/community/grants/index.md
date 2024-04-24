@@ -16,7 +16,6 @@ Deze programma's ondersteunen het brede Ethereum-ecosysteem door subsidies aan t
 
 - [EF Ecosystem Support Program](https://esp.ethereum.foundation) - _Financieren van open source-projecten waar Ethereum van profiteert, met een bijzondere nadruk op universele tools, infrastructuur, onderzoek en collectieve goederen_
 - [Ethereum RFPs](https://github.com/ethereum/requests-for-proposals) - _Verzoeken om voorstellen door de Ethereum Foundation voor werk en projecten in het Ethereum-ecosysteem_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Dapp-ontwikkeling, DAO-creatie_
 - [Moloch DAO](https://www.molochdao.com/) - _Privacy, laag 2-schaling, klantbeveiliging en meer_
 - [Open subsidies](https://opengrants.com/explore)
 - [DAO Grants](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Google-spreadsheet van organisaties die subsidies aanbieden_
@@ -36,7 +35,6 @@ Deze projecten hebben hun eigen beurzen gecreëerd voor projecten die gericht zi
 - [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)-ecosysteem_
 - [UMA Grants Program](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/)-ontwikkelaarsondersteuning_
 - [Uniswap Grants Program](https://www.unigrants.org/) - _[Uniswap](https://uniswap.org/)-gemeenschap_
-- [Web3 Grants](https://web3grants.net) - _Een uitgebreide lijst van web3-/cryptogerelateerde subsidieprogramma's_
 
 ## Kwadratische financiering {#quadratic-funding}
 

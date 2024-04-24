@@ -62,7 +62,7 @@ Las pruebas no interactivas representaron un avance para la tecnología de conoc
 
 ### Tipos de pruebas de conocimiento cero {#types-of-zero-knowledge-proofs}
 
-#### ZK-SNARKs {#zk-snarks}
+#### ZK-SNARK {#zk-snarks}
 
 ZK-SNARK es el acrónimo en inglés de **argumento de conocimiento sucinto no interactivo de conocimiento cero** (Zero-Knowledge Succinct Non-Interactive Argument of Knowledge). El protocolo ZK-SNARK tiene las siguientes cualidades:
 
@@ -82,7 +82,7 @@ El [cálculo de varias partes (CMP)](https://en.wikipedia.org/wiki/Secure_multi-
 
 Las configuraciones de confianza requieren que los usuarios confíen en los participantes en la generación de parámetros. Sin embargo, el desarrollo de ZK-STARK ha permitido protocolos de prueba que funcionen con una configuración sin confianza.
 
-#### ZK-STARKs {#zk-starks}
+#### ZK-STARK {#zk-starks}
 
 ZK-STARK es el acrónimo en inglés de **argumento de conocimiento transparente escalable de conocimiento cero** (Zero-Knowledge Scalable Transparent Argument of Knowledge). Los ZK-STARK son similares a los ZK-SNARK, salvo que son:
 
@@ -176,7 +176,7 @@ Usar la MACI _requiere_ confiar en que el coordinador no complote con los soborn
 
 Pero en los casos en que el coordinador sea honesto, la MACI representa una herramienta potente para garantizar la legalidad de la votación en cadena. Esto explica su popularidad entre las aplicaciones de financiación cuadrática (por ejemplo, [clr.fund](https://clr.fund/#/about/maci)) que dependen en gran medida de la integridad de las opciones de votación de cada individuo.
 
-[Obtenga más información sobre la MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
+[Obtenga más información sobre la MACI](https://privacy-scaling-explorations.github.io/maci/).
 
 ## Inconvenientes del uso de las pruebas de conocimiento cero {#drawbacks-of-using-zero-knowledge-proofs}
 
@@ -203,10 +203,10 @@ ZK-STARK se considera inmune a la amenaza de la informática cuántica, ya que u
 ## Para mayor información {#further-reading}
 
 - [Científico informático explica un concepto en 5 niveles de dificultad | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Canal de YouTube de Wired_
-- [Descripción general de casos de uso de las pruebas de conocimiento cero](https://appliedzkp.org/#Projects) — _Equipo de Privacy and Scaling Explorations_
+- [Descripción general de los casos de uso para pruebas de conocimiento cero](https://pse.dev/projects): _Equipo de exploración de privacidad y escalabilidad_
 - [SNARKs vs. STARKs vs. SNARKs recursivos](https://www.alchemy.com/overviews/snarks-vs-starks) — _Descripciones generales de Alchemy_
 - [Prueba de conocimiento cero: mejorar la privacidad en una cadena de bloques](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [SNARK de conocimiento cero: ejemplo realista de conocimiento cero y análisis detallado](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [STARK de conocimiento cero: crear confianza verificable incluso contra ordenadores cuánticos](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Introducción aproximada sobre cómo son posibles los SNARK de conocimiento cero](https://vitalik.ca/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Una introducción aproximada a cómo son posibles los zk-SNARK](https://vitalik.eth.limo/general/2021/01/26/snarks.html), _Vitalik Buterin_
 - [Qué es la prueba de conocimiento cero y su rol en las cadenas de bloques](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

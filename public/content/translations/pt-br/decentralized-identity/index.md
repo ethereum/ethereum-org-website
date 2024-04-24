@@ -49,7 +49,7 @@ Os identificadores descentralizados são armazenados em livros-razões distribu�
 
 ## O que torna os identificadores descentralizados possíveis? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Infraestrutura de chave pública (PKI) {#public-key-infrastructure}
+### 1. Infraestrutura de chave pública (PKI) {#public-key-cryptography}
 
 A infraestrutura de chave pública (PKI) é uma medida de segurança da informação que gera uma [chave pública](/glossary/#public-key) e uma [ chave privada](/glossary/#private-key) para uma entidade. A criptografia de chave pública é usada em redes blockchain para autenticar identidades de usuários e provar a propriedade de ativos digitais.
 
@@ -109,7 +109,7 @@ Aqui está um exemplo para mostrar como os atestados on-chain podem funcionar na
 
 ### Tokens Soulbound e identidade {#soulbound}
 
-[Tokens Soulbound](https://vitalik.ca/general/2022/01/26/soulbound.html) (NFTs não transferíveis) podem ser usados para coletar informações exclusivas de uma carteira específica. Isso cria efetivamente uma identidade única on-chain vinculada a um endereço Ethereum específico que pode incluir tokens que representam conquistas (por exemplo, terminar algum curso on-line específico ou passar uma pontuação mínima em um jogo) ou participação da comunidade.
+[Tokens Soulbound](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (NFTs não transferíveis) podem ser usados para coletar informações exclusivas de uma carteira específica. Isso cria efetivamente uma identidade única on-chain vinculada a um endereço Ethereum específico que pode incluir tokens que representam conquistas (por exemplo, terminar algum curso on-line específico ou passar uma pontuação mínima em um jogo) ou participação da comunidade.
 
 ## Benefícios da identidade descentralizada {#benefits-of-decentralized-identity}
 

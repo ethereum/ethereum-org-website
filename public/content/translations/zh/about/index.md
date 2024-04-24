@@ -84,17 +84,17 @@ ethereum.org 是一个面向以太坊社区的开源公共网站和教育资源�
 
 ### 3. ethereum.org 不是普通的商品网站 🦄 {#core-principles-3}
 
-以太坊是一个庞然大物：它包括社区、技术、思想和意识形态等等。 这意味着该网站需要应对许多不同的用户旅程，比如“需要特定工具的开发者”和“刚刚购买了一些以太币却不知道钱包为何物的新人”。 “区块链平台最好的网站是什么样的呢？”，这是一个开放性问题，而我们是先行者。 构建它仍需要不断地试验。
+以太坊是一个庞然大物：它包括社区、技术、思想和意识形态等等。 这意味着网站需要处理许多不同的用户历程，从“需要特定工具的开发者”到“刚刚购买了一些以太币却不知道钱包是什么的新手”，不一而足。 “哪个网站是了解和学习区块链平台的最佳网站？”，这仍然是一个有争论的问题，但我们是先驱。 构建它仍需要不断地试验。
 
 ## 产品路线图 {#roadmap}
 
 为了使我们的工作更易于了解，并促进更多的社区合作，ethereum.org 核心团队发布了一份季度目标路线图概览。
 
-[查看我们的 2023 年 第 1 季度产品路线图](https://github.com/ethereum/ethereum-org-website/issues/9090)
+[查看我们的 2024 年 第 1 季度产品路线图](https://github.com/ethereum/ethereum-org-website/issues/12005)
 
 **这看起来怎么样？**我们始终感谢为我们的路线图提供的反馈 - 如有改进之处，请告诉我们! 我们欢迎社区里的任何人提出想法和建议。
 
-**想要参与吗？**[了解更多关于贡献的信息](/contributing/)，[在 Twitter 上联系我们](https://twitter.com/ethdotorg)或加入我们在 [ Discord 服务器](https://discord.gg/ethereum-org)上的社区讨论。
+**想要参与吗？**[了解更多关于做贡献的信息](/contributing/)，[在 Twitter 上联系我们](https://twitter.com/ethdotorg)或加入我们在 [ Discord 服务器](https://discord.gg/ethereum-org)上的社区讨论。
 
 ## 设计原则 {#design-principles}
 
@@ -104,7 +104,7 @@ ethereum.org 是一个面向以太坊社区的开源公共网站和教育资源�
 
 我们创建并发布了一个[设计体系](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System?node-id=0%3A1&t=QBt9RkhpPqzE3Aa6-1)，用来加快功能上线的速度，并让社区成员参与 ethereum.org 的开放设计。
 
-想要参与吗？[欢迎在 Figma ](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) 以及 [GitHub issue](https://github.com/ethereum/ethereum-org-website/issues/6284) 上关注我们，并在我们的 [#design Discord 频道](https://discord.gg/ethereum-org)与我们对话。
+想要参与吗？[在 Figma 中关注](https://www.figma.com/file/NrNxGjBL0Yl1PrNrOT8G2B/ethereum.org-Design-System) [GitHub 问题](https://github.com/ethereum/ethereum-org-website/issues/6284) 并加入我们在 [#design Discord 频道](https://discord.gg/ethereum-org)中的讨论。
 
 ## 风格指南 {#style-guide}
 
@@ -118,6 +118,6 @@ ethereum.org 是一个面向以太坊社区的开源公共网站和教育资源�
 
 虽然该网站是开源的并且任何人都可以改进它，但我们确实有一个专职团队，负责 ethereum.org 和以太坊基金会的其他 Web 项目。
 
-我们会在这里发布空缺的职位。 如果你在这里看不到适合自己的职位，请前往[我们的 Discord 服务器](https://discord.gg/ethereum-org)，告诉我们你想如何与我们合作！
+我们会在这里发布空缺的职位。 如果在这里看不到适合你的角色，请访问[我们的 Discord 服务器](https://discord.gg/ethereum-org)，告诉我们你的合作意向！
 
 你想找除了 ethereum.org 团队以外的工作？ [查看其他与以太坊相关的工作](/community/get-involved/#ethereum-jobs/)。

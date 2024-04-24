@@ -20,7 +20,7 @@ lang: fa
   اصول اتریوم را بیاموزید
 </DocLink>
 
-علیرغم عدم پشتیبانی رسمی، بسیاری از گروه‌ها، جوامع و پروژه‌ها در سراسر اکوسیستم اتریوم با کمال میل به شما کمک می‌کنند و شما می‌توانید اطلاعات و منابع مفید زیادی را در این صفحه بیابید. هنوز سؤالی دارید؟ به [دیسکورد ethereum.org](/discord/) بپیوندید، و ما سعی می‌کنیم کمکتان کنیم.
+علیرغم عدم پشتیبانی رسمی، بسیاری از گروه‌ها، جوامع و پروژه‌ها در سراسر اکوسیستم اتریوم با کمال میل به شما کمک می‌کنند و شما می‌توانید اطلاعات و منابع مفید زیادی را در این صفحه بیابید.  هنوز سؤالی دارید؟ به [دیسکورد ethereum.org](/discord/) بپیوندید، و ما سعی می‌کنیم کمکتان کنیم.
 
 ## پشتیبانی کیف پول {#wallet-support}
 
@@ -39,7 +39,7 @@ _این یک فهرست جامع نیست. برای پیدا کردن پشتیب
 ساختن می‌تواند سخت باشد. در اینجا برخی از فضاهای متمرکز توسعه با توسعه‌دهندگان باتجربه‌ای وجود دارند که خوشحال می‌شوند به شما کمکی کنند.
 
 - [دانشگاه شیمی](https://university.alchemy.com/#starter_code)
-- [دیسکورد CryptoDevs](https://discord.gg/Z9TA39m8Yu)
+- [دیسکورد CryptoDevs](https://discord.com/invite/5W5tVb3)
 - [StackExchange اتریوم](https://ethereum.stackexchange.com/)
 - [StackOverflow](https://stackoverflow.com/questions/tagged/web3)
 - [دانشگاه Web3](https://www.web3.university/)
@@ -53,7 +53,7 @@ _این یک فهرست جامع نیست. برای پیدا کردن پشتیب
 
 در اینجا برخی از نمونه‌های محبوب آورده شده است:
 
-- [Solidity](https://gitter.im/ethereum/solidity)
+- [Solidity](https://gitter.im/ethereum/solidity/)
 - [ethers.js](https://discord.gg/6jyGVDK6Jx)
 - [web3.js](https://discord.gg/GsABYQu4sC)
 - [Hardhat](https://discord.gg/xtrMGhmbfZ)
@@ -65,7 +65,7 @@ _این یک فهرست جامع نیست. برای پیدا کردن پشتیب
 
 اگر از یک گره یا یک اعتبارسنج استفاده می‌کنید، در اینجا چند انجمن وجود دارد که به شما در شروع کار کمک می‌کنند.
 
-- [دیسکورد EthStaker](https://discord.io/ethstaker)
+- [دیسکورد EthStaker](https://discord.gg/ethstaker)
 - [ردیت EthStaker](https://www.reddit.com/r/ethstaker)
 
 اکثر تیم‌هایی که کلاینت های اتریومی را می‌سازند، فضاهای اختصاصی و عمومی دارند که می‌توانید از آنها پشتیبانی دریافت کنید و سؤال بپرسید.

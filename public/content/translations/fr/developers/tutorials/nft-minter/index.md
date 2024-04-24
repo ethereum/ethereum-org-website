@@ -477,7 +477,7 @@ Le texte des champs « Lien vers l'actif », « Nom » et « Description » comp
 
 Pour stocker nos métadonnées sur IPFS, nous allons utiliser [Pinata](https://pinata.cloud/), une API et une boîte à outils IPFS très pratique. Dans l'étape suivante, nous vous expliquerons exactement comment faire !
 
-## Utiliser Pintata pour épingler vos métadonnées sur IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
+## Utiliser Pinata pour épingler vos métadonnées sur IPFS {#use-pinata-to-pin-your-metadata-to-IPFS}
 
 Si vous n'avez pas de compte [Pinata](https://pinata.cloud/), créez-vous un compte gratuit [ici](https://pinata.cloud/signup) et suivez les étapes pour vérifier votre mail et votre compte.
 

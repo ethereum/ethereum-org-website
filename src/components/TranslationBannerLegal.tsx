@@ -12,15 +12,15 @@ import Emoji from "./Emoji"
 import Text from "./OldText"
 import Translation from "./Translation"
 
-export interface IProps {
+export type TranslationBannerLegalProps = {
   shouldShow: boolean
   originalPagePath: string
 }
 
-const TranslationBannerLegal: React.FC<IProps> = ({
+const TranslationBannerLegal = ({
   shouldShow,
   originalPagePath,
-}) => {
+}: TranslationBannerLegalProps) => {
   // Default to isOpen being false, and let the useEffect set this.
   const [isOpen, setIsOpen] = useState(false)
   const [cardBoxShadow, text] = useToken("colors", ["cardBoxShadow", "text"])

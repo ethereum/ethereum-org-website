@@ -49,17 +49,18 @@ Pohon Verkle adalah pasangan `(key,value)`, di mana kunci adalah elemen 32 byte 
 
 Jaringan percobaan pohon Verkle sudah aktif dan berjalan, tetapi masih ada pembaruan dalam jumlah besar yang harus dilakukan oleh klien agar dapat mendukung pohon Verkle. Anda dapat membantu mempercepat kemajuan dengan menggunakan kontrak ke jaringan percobaan atau menjalankan klien jaringan percobaan.
 
-[Telusuri jaringan percobaan Beverly Hills Verkle](https://beverlyhills.ethpandaops.io)
+[Jelajahi jaringan percobaan Verkle Gen Devnet 2](https://verkle-gen-devnet-2.ethpandaops.io/)
 
-[Tonton penjelasan Guillaume Ballet tentang jaringan percobaan Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (perhatikan bahwa jaringan percobaan Condrieu menggunakan konsep bukti kerja dan sekarang telah digantikan oleh [jaringan percobaan Kaustinen](https://kaustinen.ethdevops.io)).
+[Tonton penjelasan Guillaume Ballet tentang jaringan percobaan Condrieu Verkle](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (perhatikan bahwa jaringan percobaan Condrieu menggunakan konsep bukti kerja dan sekarang telah digantikan oleh jaringan percobaan Verkle Gen Devnet 2).
 
 ## Bacaan lebih lanjut {#further-reading}
 
+- [Pohon Verkle untuk Keadaan Tanpa Kewarganegaraan](https://verkle.info/)
 - [Dankrad Feist menjelaskan pohon Verkle di PEEPanEIP](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet menjelaskan pohon verkle di ETHGlobal](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - ["Cara pohon Verkle menjadikan Ethereum ramping dan efektif" oleh Guillaume Ballet di Devcon 6](https://www.youtube.com/watch?v=Q7rStTKwuYs)
 - [Piper Merriam tentang klien tanpa keadaan dari ETHDenver 2020](https://www.youtube.com/watch?v=0yiZJNciIJ4)
 - [Dankrad Fiest menjelaskan pohon Verkle dan kondisi tanpa keadaan di podcast Zero Knowledge](https://zeroknowledge.fm/episode-202-stateless-ethereum-verkle-tries-with-dankrad-feist/)
-- [Vitalik Buterin tentang pohon Verkle](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Vitalik Buterin tentang pohon Verkle](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Dankrad Feist tentang pohon Verkle](https://dankradfeist.de/ethereum/2021/06/18/verkle-trie-for-eth1.html)
 - [Dokumentasi EIP pohon Verkle](https://notes.ethereum.org/@vbuterin/verkle_tree_eip#Illustration)

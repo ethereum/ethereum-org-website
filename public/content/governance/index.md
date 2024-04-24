@@ -2,7 +2,6 @@
 title: Ethereum Governance
 description: An introduction to how decisions about Ethereum are made.
 lang: en
-postMergeBannerTranslation: page-upgrades-post-merge-banner-governance-ood
 ---
 
 # Introduction to Ethereum governance {#introduction}
@@ -121,7 +120,7 @@ Forks are when major technical upgrades or changes need to be made to the networ
 
 The DAO fork was in response to the [2016 DAO attack](https://www.coindesk.com/understanding-dao-hack-journalists) where an insecure [DAO](/glossary/#dao) contract was drained of over 3.6 million ETH in a hack. The fork moved the funds from the faulty contract to a new contract allowing anyone who lost funds in the hack to recover them.
 
-This course of action was voted on by the Ethereum community. Any ETH holder was able to vote via a transaction on [a voting platform](http://v1.carbonvote.com/). The decision to fork reached over 85% of the votes.
+This course of action was voted on by the Ethereum community. Any ETH holder was able to vote via a transaction on [a voting platform](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). The decision to fork reached over 85% of the votes.
 
 It's important to note that whilst the protocol did fork to revert the hack, the weight the vote carried in deciding to fork is debatable for a few reasons:
 
@@ -175,9 +174,9 @@ When the Beacon Chain merged with the Ethereum execution layer on September 15th
 
 Governance in Ethereum isn’t rigidly defined. Various community participants have diverse perspectives on it. Here are a few of them:
 
-- [Notes on Blockchain Governance](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Notes on Blockchain Governance](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [How does Ethereum Governance work?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [How Ethereum governance works](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [What is an Ethereum core developer?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Governance, Part 2: Plutocracy Is Still Bad](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Moving beyond coin voting governance](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Governance, Part 2: Plutocracy Is Still Bad](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Moving beyond coin voting governance](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

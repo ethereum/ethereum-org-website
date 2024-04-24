@@ -5,7 +5,7 @@ author: Ori Pomerantz
 lang: tr
 tags:
   - "katman 2"
-skill: beginner
+skill: intermediate
 published: 2022-04-01
 ---
 
@@ -43,7 +43,7 @@ Bunu yazarken, Optimism'de L2 gazının maliyeti 0,001 [Gwei](/developers/docs/g
 Bununla birlikte ABI, bir çağrı verisi baytının maliyetinin yaklaşık olarak dört aritmetik işlemle aynı olduğu L1 için tasarlanmıştır; bir çağrı verisi baytının bin aritmetik işlemden daha pahalı olduğu L2 için değil. Örneğin, [bir ERC-20 transfer işlemini burada bulabilirsiniz](https://kovan-optimistic.etherscan.io/tx/0x7ce4c144ebfce157b4de99d8ad53a352ae91b57b3fa06d8a1c79439df6bfa998). Çağrı verisi şu şekilde bölünür:
 
 | Bölüm            | Uzunluk | Baytlar | Harcanan bayt | Harcanan gaz | Gereken bayt | Gereken gaz |
-| ---------------- | ------: | ------: | ------------: | -----------: | -----------: | ----------: |
+| ---------------- | -------:| -------:| -------------:| ------------:| ------------:| -----------:|
 | Fonksiyon seçici |       4 |     0-3 |             3 |           48 |            1 |          16 |
 | Sıfırlar         |      12 |    4-15 |            12 |           48 |            0 |           0 |
 | Varış adresi     |      20 |   16-35 |             0 |            0 |           20 |         320 |
@@ -228,7 +228,7 @@ Bu spesifik sözleşme için birinin isteyebileceği maksimum jeton sayısının
 Ortalama olarak bir transfer 35 bayt kadar çağrı verisi kaplar:
 
 | Bölüm            | Uzunluk |  Bayt |
-| ---------------- | ------: | ----: |
+| ---------------- | -------:| -----:|
 | Fonksiyon seçici |       1 |     0 |
 | Varış adresi     |      32 |  1-32 |
 | Miktar           |       2 | 33-34 |

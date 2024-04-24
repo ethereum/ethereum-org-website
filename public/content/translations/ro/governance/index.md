@@ -174,9 +174,9 @@ Când Lanțul Beacon se va uni cu nivelul execuției în Ethereum, procesul de g
 
 Guvernanța în Ethereum nu este definită rigid. Diverși participanți ai comunității au perspective diferite în această privință. Iată câteva dintre acestea:
 
-- [Note cu privire la Guvernanța Blockchain-ului](https://vitalik.ca/general/2017/12/17/voting.html) - _Vitalik Buterin_
+- [Note cu privire la Guvernanța Blockchain-ului](https://vitalik.eth.limo/general/2017/12/17/voting.html) - _Vitalik Buterin_
 - [Cum funcționează guvernanța în Ethereum?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Cum funcționează guvernarea în Ethereum](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Ce este un dezvoltator de bază în Ethereum?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) - _Hudson Jameson_
-- [Guvernanța, Partea a 2-a: Plutocrația este încă gravă](https://vitalik.ca/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
-- [Depășirea guvernării prin votul cu monede](https://vitalik.ca/general/2021/08/16/voting3.html) - _Vitalik Buterin_
+- [Guvernanța, Partea a 2-a: Plutocrația este încă gravă](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) - _Vitalik Buterin_
+- [Depășirea guvernării prin votul cu monede](https://vitalik.eth.limo/general/2021/08/16/voting3.html) - _Vitalik Buterin_

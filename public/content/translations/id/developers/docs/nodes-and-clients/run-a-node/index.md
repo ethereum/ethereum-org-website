@@ -88,7 +88,7 @@ Sebelum memulai perangkat lunak klien Ethereum, lakukan pemeriksaan terakhir bah
 - Sistem memiliki waktu dan tanggal yang tepat.
 - Router dan firewall Anda menerima koneksi pada port pendengar. Secara default, klien Ethereum menggunakan port pendengar (TCP) dan port penemuan (UDP), keduanya pada 30303 secara default.
 
-Jalankan klien Anda pada testnet terlebih dahulu untuk menolong memastikan semuanya bekerja dengan benar. [Menjalankan node ringan Geth](/developers/tutorials/run-light-node-geth/) seharusnya membantu. Anda perlu mendeklarasikan pengaturan klien mana pun yang bukan default pada awalnya. Anda dapat menggunakan bendera atau berkas konfigurasi untuk mendeklarasikan konfigurasi yang diinginkan. Lihat dokumentasi klien Anda untuk eksekusi Klien khusus yang akan memulai fungsi inti, titik akhir terpilihnya, dan mulai mencari peer. Setelah berhasil menemukan peer, klien memulai sinkronisasi. Data rantai blok saat ini akan tersedia setelah klien berhasil disinkronisasikan dengan state saat ini.
+Jalankan klien Anda pada testnet terlebih dahulu untuk menolong memastikan semuanya bekerja dengan benar. Anda perlu mendeklarasikan pengaturan klien mana pun yang bukan default pada awalnya. Anda dapat menggunakan bendera atau berkas konfigurasi untuk mendeklarasikan konfigurasi yang diinginkan. Lihat dokumentasi klien Anda untuk eksekusi Klien khusus yang akan memulai fungsi inti, titik akhir terpilihnya, dan mulai mencari peer. Setelah berhasil menemukan peer, klien memulai sinkronisasi. Data rantai blok saat ini akan tersedia setelah klien berhasil disinkronisasikan dengan state saat ini.
 
 ### Menggunakan klien {#using-the-client}
 

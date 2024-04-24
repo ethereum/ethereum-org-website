@@ -204,4 +204,4 @@ Où `sender` est l'utilisateur qui a déclenché le retrait et échangé `shares
 ## Complément d'information {#further-reading}
 
 - [EIP-4626 : Standard de coffre-fort tokenisé](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626 : Répertoire GitHub](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)
+- [ERC-4626 : Répertoire GitHub](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

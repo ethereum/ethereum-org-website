@@ -6,7 +6,7 @@ lang: es
 
 # Cómo utilizar una cartera
 
-Domine el funcionamiento de todas las funciones básicas de su cartera. Si aún no tiene una, eche un vistazo a nuestra guía [Cómo crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/).
+Domine el funcionamiento de todas las funciones básicas de su cartera. Si aún no tiene una, revise [nuestra guía sobre cómo crear una cuenta de Ethereum](/guides/how-to-create-an-ethereum-account/).
 
 ## Abra su cartera
 
@@ -51,7 +51,7 @@ Su dirección será la misma en todos los proyectos de Ethereum. No tiene que re
 
 1. Visite la web de cualquier proyecto.
 2. Si la página de inicio es sólo una descripción estática del proyecto, debería poder hacer clic en el botón «Abrir la aplicación» en el menú que le redirigirá a la web real de la aplicación.
-3. Una vez dentro de la aplicación, haga clic en «Conectar».
+3. Una vez que se encuentre dentro de la aplicación haga click en «Conectar».
 
 ![Botón que permite al usuario conectar la web con una cartera](./connect1.png)
 

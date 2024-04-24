@@ -22,26 +22,26 @@ lang: ja
 ## チャットルーム {#chat-rooms}
 
 <SocialListItem socialIcon="discord"><Link to="https://discord.com/invite/Nz6rtfJ8Cu">Ethereum Cat Herders</Link> - イーサリアム開発プロジェクトの管理支援に関するコミュニティ</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - ETHGlobal が運営する Discord チャット: 世界中のイーサリアムハッカーのオンラインコミュニティ</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - イーサリアム開発に関する Discord コミュニティ</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - イーサリアム開発プロジェクトの管理支援に関するコミュニティ</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">ethereum.org ウェブサイトチーム</Link> - ethereum.org ウェブ開発とデザインのコミュニティチャット</SocialListItem>
-<SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - 事業者、業界のリーダー、イーサリアム愛好家が集う、Web3 のクリエイターのコミュニティ。 Web3 開発、設計、文化に熱心。 参加して一緒に開発しましょう。</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - Solidity 開発のチャット(Gitter)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - Solidity 開発のチャット(Matrix) </SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _- 質疑応答フォーラム_</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- 分散型の質疑応答フォーラム_</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://ethglobal.co/discord">Ethereum Hackers</Link> - ETHGlobalが運営するDiscordチャット: 世界中のイーサリアムハッカーのオンラインコミュニティ</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/5W5tVb3">CryptoDevs</Link> - イーサリアム開発に関するDiscordコミュニティ</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethstaker">EthStaker Discord</Link> - コミュニティが運営するステーカーおよびステーカーになるこを考えている人向けのガイダンス、教育、サポート、リソース</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.gg/ethereum-org">ethereum.orgウェブサイトチーム</Link> - ethereum.orgウェブ開発とデザインのコミュニティチャット</SocialListItem>
+<SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - 事業者、業界のリーダー、イーサリアム愛好家が集う、Web3のクリエイターのコミュニティ。 Web3開発、設計、文化に熱心です。 参加して一緒に開発しましょう。</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - Solidity開発に関するチャット(Gitter)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Gitter</Link> - Solidity開発に関するチャット(Matrix)</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *- 質疑応答フォーラム*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *- 分散型の質疑応答フォーラム*</SocialListItem>
 
-## YouTube と Twitter {#youtube-and-twitter}
+## YouTubeとTwitter {#youtube-and-twitter}
 
 <SocialListItem socialIcon="youtube"><Link to="https://www.youtube.com/c/EthereumFoundation">イーサリアム・ファウンデーション</Link> - イーサリアム・ファウンデーションの最新情報</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethereum">@ethereum</Link> - イーサリアム・ファウンデーションの公式アカウント</SocialListItem>
 <SocialListItem socialIcon="twitter"><Link to="https://twitter.com/ethdotorg">@ethdotorg</Link> - 日々拡大するグローバルコミュニティのために作られたイーサリアムへのポータル</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">影響力のあるイーサリアムに関する Twitter アカウントリスト</Link></SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://hive.one/c/ethereum?page=1">影響力のあるイーサリアムに関するTwitterアカウントリスト</Link></SocialListItem>
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
+<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
   <div>
     <ButtonLink to="/community/get-involved/#decentralized-autonomous-organizations-daos">
       非代替性トークン(NFT)の詳細

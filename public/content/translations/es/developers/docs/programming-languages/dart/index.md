@@ -14,7 +14,7 @@ incomplete: true
   2.  Cómo escribir un contrato inteligente en [Solidity](https://soliditylang.org/)
   3.  Cómo escribir una interfaz de usuario en Dart
 - [Crear una dapp móvil con Flutter](https://medium.com/dash-community/building-a-mobile-dapp-with-flutter-be945c80315a) es mucho más breve, lo que puede ser mejor si ya sabe lo básico.
-- Si prefiere aprender mirando un video, puede ver [Construya su primera app de cadena de bloques en Flutter](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), que dura una hora.
+- Si prefiere aprender viendo un video, puedes ver [Construya su primera aplicación de Flutter con la cadena de bloques](https://www.youtube.com/watch?v=3Eeh3pJ6PeA), que dura aproximadamente una hora
 - Si es impaciente, tal vez prefiera [Crear una app decentralizada de cadena de bloques con Flutter y Dart en Ethereum](https://www.youtube.com/watch?v=jaMFEOCq_1s), que dura solo veinte minutos.
 - [Integrar MetaMask en aplicación de Flutter](https://youtu.be/8qzVDje3IWk): este video corto le enseña los pasos para integrar MetaMask en sus aplicaciones de Flutter.
 

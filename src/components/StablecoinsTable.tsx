@@ -24,13 +24,17 @@ export interface TableRow {
   url?: string
 }
 
-export interface IProps {
+export type StablecoinsTableProps = {
   columns: Array<string>
   content: Array<TableRow>
   hasError: boolean
 }
 
-const StablecoinsTable: React.FC<IProps> = ({ columns, content, hasError }) => {
+const StablecoinsTable = ({
+  columns,
+  content,
+  hasError,
+}: StablecoinsTableProps) => {
   const [textColor] = useToken("colors", ["text"])
   const { flipForRtl } = useRtlFlip()
   const { t } = useTranslation("page-stablecoins")
@@ -43,23 +47,15 @@ const StablecoinsTable: React.FC<IProps> = ({ columns, content, hasError }) => {
   }
 
   return (
-    <Table
-      variant="unstyled"
-      my={8}
-      borderRadius="sm"
-      border={`1px solid ${textColor}`}
-      bg="background.base"
-      mb={8}
-      minW="720px"
-    >
-      <Thead bg="ednBackground" color="text200">
-        <Tr borderBottom={`1px solid ${textColor}`} mb="1px">
+    <Table variant="unstyled" my={8} bg="background.base" mb={8} minW="720px">
+      <Thead bg="background.highlight" color="body.medium">
+        <Tr>
           {columns.map((column, idx) => (
             <Th
               key={idx}
-              py={5}
+              fontWeight="bold"
               fontSize="md"
-              fontWeight="normal"
+              verticalAlign="inherit"
               letterSpacing="normal"
             >
               {column}
@@ -86,31 +82,23 @@ const StablecoinsTable: React.FC<IProps> = ({ columns, content, hasError }) => {
           <Tr
             key={idx}
             color="text"
-            borderBottom={`1px solid ${textColor}`}
             _hover={{
               textDecoration: "none",
-              borderBottom: `1px solid ${textColor}`,
-              bg: "primary200",
-              color: "black300",
+              bg: "background.highlight",
             }}
             _focus={{
-              borderBottom: `1px solid ${textColor}`,
-              bg: "primary200",
-              color: "black300",
+              bg: "background.base",
+              color: "body.base",
             }}
           >
-            <Td>
-              <Flex align="center">
+            <Td verticalAlign="middle">
+              <Flex>
                 {image && <Image src={image} alt="" me={4} boxSize={6} />}
                 <>{name}</>
               </Flex>
             </Td>
-            <Td>
-              <Flex align="center">{marketCap}</Flex>
-            </Td>
-            <Td>
-              <Flex align="center">{stablecoinsType[type]}</Flex>
-            </Td>
+            <Td verticalAlign="middle">{marketCap}</Td>
+            <Td verticalAlign="middle">{stablecoinsType[type]}</Td>
             {url && (
               <Td textAlign="end">
                 <ButtonLink to={url} size="sm">

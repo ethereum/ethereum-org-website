@@ -52,10 +52,6 @@ const Title = (props: ChildOnlyProp) => (
   />
 )
 
-const SummaryPoint = (props: ChildOnlyProp) => (
-  <ListItem color="text300" mb={0} {...props} />
-)
-
 type ContainerProps = Pick<BoxProps, "children" | "dir">
 
 const Container = (props: ContainerProps) => (
@@ -133,22 +129,21 @@ export const upgradeComponents = {
   BeaconChainActions,
 }
 
-interface IProps
-  extends ChildOnlyProp,
-    Pick<
-      MdPageContent,
-      "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
-    > {
-  frontmatter: UpgradeFrontmatter
-}
-export const UpgradeLayout: React.FC<IProps> = ({
+type UpgradeLayoutProps = ChildOnlyProp &
+  Pick<
+    MdPageContent,
+    "slug" | "tocItems" | "lastUpdatedDate" | "contentNotTranslated"
+  > & {
+    frontmatter: UpgradeFrontmatter
+  }
+export const UpgradeLayout = ({
   children,
   frontmatter,
   slug,
   tocItems,
   lastUpdatedDate,
   contentNotTranslated,
-}) => {
+}: UpgradeLayoutProps) => {
   const { t } = useTranslation("page-upgrades")
   const { locale } = useRouter()
 
@@ -190,14 +185,16 @@ export const UpgradeLayout: React.FC<IProps> = ({
           <Box>
             <List listStyleType="disc">
               {summaryPoints.map((point, idx) => (
-                <SummaryPoint key={idx}>{point}</SummaryPoint>
+                <ListItem key={idx}>{point}</ListItem>
               ))}
             </List>
           </Box>
-          <LastUpdated>
-            {t("common:page-last-updated")}:{" "}
-            {getLocaleTimestamp(locale as Lang, lastUpdatedDate!)}
-          </LastUpdated>
+          {lastUpdatedDate && (
+            <LastUpdated>
+              {t("common:page-last-updated")}:{" "}
+              {getLocaleTimestamp(locale as Lang, lastUpdatedDate)}
+            </LastUpdated>
+          )}
         </TitleCard>
         {frontmatter.image && (
           <Image

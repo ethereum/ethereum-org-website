@@ -18,10 +18,10 @@ import { Template } from "./Template"
 import type { PathId, SimulatorData } from "./types"
 import { getValidPathId } from "./utils"
 
-interface IProps extends Pick<FlexProps, "children"> {
+type SimulatorProps = Pick<FlexProps, "children"> & {
   data: SimulatorData
 }
-export const Simulator: React.FC<IProps> = ({ children, data }) => {
+export const Simulator = ({ children, data }: SimulatorProps) => {
   const router = useRouter()
 
   // Track step

@@ -103,11 +103,11 @@ _Videodaki açıklamanın "Katman 2" terimini tüm zincir dışı ölçeklendirm
 - [Toplama merkezli bir Ethereum yol haritası](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [Ethereum için Katman 2 ölçeklendirme çözümlerinde güncel analitikler](https://www.l2beat.com/)
 - [Ethereum katman 2 Ölçeklendirme Çözümlerini Değerlendirme: Bir Karşılaştırma Çerçevesi](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Toplamalar için Tamamlanmamış Bir Kılavuz](https://vitalik.ca/general/2021/01/05/rollup.html)
+- [Toplamalar için Tamamlanmamış Bir Kılavuz](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [Ethereum destekli ZK-Toplamaları: Dünya Liderleri](https://hackmd.io/@canti/rkUT0BD8K)
 - [İyimser Toplamalar ile ZK Toplamalarının Karşılaştırması](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Sıfır Bilgi Blok Zinciri Ölçeklendirilebilirliği](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)
 - [Toplamalar + veri parçalarının, yüksek ölçeklenebilirlik için tek sürdürülebilir çözüm olma nedeni](https://polynya.medium.com/why-rollups-data-shards-are-the-only-sustainable-solution-for-high-scalability-c9aabd6fbb48)
-- [Hangi tür Katman 3'ler kulağa mantıklı geliyor?](https://vitalik.ca/general/2022/09/17/layer_3.html)
+- [Hangi tür Katman 3'ler kulağa mantıklı geliyor?](https://vitalik.eth.limo/general/2022/09/17/layer_3.html)
 
 _Size yardımcı olan bir topluluk kaynağı biliyor musunuz? Bu sayfayı düzenleyin ve ekleyin!_

@@ -4,9 +4,9 @@ description: 安全的以太坊智能合约构建准则概述
 lang: zh
 ---
 
-智能合约极为灵活，能够控制大量的价值和数据，并在区块链上运行基于代码的不可改变逻辑。 因而，一个由无需信任的去中心化应用程序构成的生态系统应运而生且充满活力，它具备了许多传统系统所没有的优势。 同时，这也给攻击者提供了利用智能合约中的漏洞来获利的机会。
+智能合约极为灵活，能够控制大量的价值和数据，并在区块链上运行基于代码的不可改变逻辑。 因而，一个由去信任的去中心化应用程序构成的生态系统应运而生且充满活力，它具备了许多传统系统所没有的优势。 同时，这也给攻击者提供了利用智能合约中的漏洞来获利的机会。
 
-公共区块链（比如以太坊）使智能合约的安全性问题变的更加复杂。 已部署的合约代码*通常*无法更改因而不能给安全问题打补丁，并且由于这种不可变性，从智能合约中盗取的资产极难追踪并且绝大多数无法挽回。
+公共区块链（比如以太坊）使智能合约的安全性问题变的更加复杂。 已部署的合约代码_通常_无法更改因而不能给安全问题打补丁，并且由于这种不可变性，从智能合约中盗取的资产极难追踪并且绝大多数无法挽回。
 
 虽然统计数据有所差异，但据估计，由于智能合约的安全缺陷而被盗窃或丢失的资产总额肯定超过了 10 亿美元。 其中包括几次著名事件，比如 [DAO 攻击事件](https://hackingdistributed.com/2016/06/18/analysis-of-the-dao-exploit/)（360 万个以太币被盗，按照当前价格计算总金额超过 10 亿美元）、[Parity 多重签名钱包攻击事件](https://www.coindesk.com/30-million-ether-reported-stolen-parity-wallet-breach)（黑客窃取了 3000 万美元）以及 [Parity 钱包冻结问题](https://www.theguardian.com/technology/2017/nov/08/cryptocurrency-300m-dollars-stolen-bug-ether)（价值超过 3 亿美元的以太币遭到永久锁定）。
 
@@ -26,7 +26,7 @@ lang: zh
 
 #### 所有权模式 {#ownable-pattern}
 
-在所有权模式中，在合约创建过程中将地址设置为合约的“所有者”。 受保护的函数都分配有 `OnlyOwner` 修饰符，这样可以确保合约在执行函数之前验证调用地址的身份。 从合约所有者以外的其他地址调用受保护的函数，始终会被回滚，阻止不必要的访问。
+在所有权模式中，在合约创建过程中将地址设置为合约的“所有者”。 受保护的函数都分配有 `OnlyOwner` 修改器，这样可以确保合约在执行函数之前验证调用地址的身份。 从合约所有者以外的其他地址调用受保护的函数，始终会被回滚，阻止不必要的访问。
 
 #### 基于角色的访问控制 {#role-based-access-control}
 
@@ -120,13 +120,13 @@ contract VendingMachine {
 
 ### 6. 实施可靠的灾难恢复计划 {#implement-disaster-recovery-plans}
 
-设计安全的访问控制、使用函数修饰符以及其他建议能够提高智能合约的安全性，但这些并不能排除恶意利用的可能性。 构建安全的智能合约需要“做好失败准备”，并制定好应变计划有效地应对攻击。 适当的灾难恢复计划应包括以下部分或全部内容：
+设计安全的访问控制、使用函数修改器以及其他建议能够提高智能合约的安全性，但这些并不能排除恶意利用的可能性。 构建安全的智能合约需要“做好失败准备”，并制定好应变计划有效地应对攻击。 适当的灾难恢复计划应包括以下部分或全部内容：
 
 #### 合约升级 {#contract-upgrades}
 
 虽然以太坊智能合约默认是不可变的，但通过使用升级模式可以实现一定程度的可变性。 如果重大缺陷导致合约不可用并且部署新逻辑是最可行的选择，有必要升级合约。
 
-合约升级机制的原理有所不同，但“代理模式”是智能合约升级最常见的方法之一。 代理模式将应用程序的状态和逻辑拆分到*两个*合约中。 第一个合约（称为“代理合约”）存储状态变量（如用户余额），而第二个合约（称为"逻辑合约"）存放执行合约函数的代码。
+合约升级机制的原理有所不同，但“代理模式”是智能合约升级最常见的方法之一。 代理模式将应用程序的状态和逻辑拆分到_两个_合约中。 第一个合约（称为“代理合约”）存储状态变量（如用户余额），而第二个合约（称为"逻辑合约"）存放执行合约函数的代码。
 
 帐户与代理合约互动，代理合约通过[`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries)的低级调用将所有功能调用分发给逻辑合约。 与普通的消息调用不同，`delegatecall()` 确保在逻辑的合约地址上运行的代码是在调用合约的语境下执行。 这意味着逻辑合约将始终写入代理的存储空间（而非自身存储空间），并且 `msg.sender` 和 `msg.value` 的原始值保持不变。
 
@@ -146,7 +146,7 @@ contract VendingMachine {
 
 3. 可以访问紧急停止功能的实体，可将布尔变量设置为 `true`。 为防止恶意行为，对此功能的调用可以限制给一个可信地址（如合约所有者）。
 
-一旦合约操作触发紧急停止，某些函数将无法调用。 这是通过把一些函数包装在引用该全局变量的修饰符中实现的。 以下[示例](https://github.com/fravoll/solidity-patterns/blob/master/EmergencyStop/EmergencyStop.sol)描述了该模式在合约中的实现：
+一旦合约操作触发紧急停止，某些函数将无法调用。 这是通过把一些函数包装在引用该全局变量的修改器中实现的。 以下[示例](https://github.com/fravoll/solidity-patterns/blob/master/EmergencyStop/EmergencyStop.sol)描述了该模式在合约中的实现：
 
 ```solidity
 // 本代码未经专业审计，对安全性和正确性不做任何承诺。 如需使用，风险自负。
@@ -192,7 +192,7 @@ contract EmergencyStop {
 
 - 布尔值 `isStopped` 开始时求值为 `false`，但当合约进入紧急模式时求值为 `true`。
 
-- 函数修饰符 `onlyWhenStopped` 和 `stoppedInEmergency` 检查 `isStopped` 变量。 `stoppedInEmergency` 用于控制在合约有漏洞时应该无法访问的函数（如 `deposit()`）。 对这些函数的调用将仅仅进行回滚而已。
+- 函数修改器 `onlyWhenStopped` 和 `stoppedInEmergency` 检查 `isStopped` 变量。 `stoppedInEmergency` 用于控制在合约有漏洞时应该无法访问的函数（如 `deposit()`）。 对这些函数的调用将仅仅进行回滚而已。
 
 `onlyWhenStopped` 用于在紧急情况下应该可调用的函数（如 `emergencyWithdraw()`）。 此类函数可以帮助解决问题，因此它们不在“受限制函数”之列。
 
@@ -259,7 +259,7 @@ contract Victim {
 2. 将资金发送给调用地址
 3. 将其余额重置为 0，防止用户再提取
 
-`Victim` 合约中的 `withdraw()` 函数遵循“检查-交互-效果”模式。 它*检查*执行所需的条件是否满足（例如，用户的以太币余额是否为正值）并通过向调用者的地址发送以太币来执行*交互*，然后再应用交易的*效果*（例如减少用户的余额）。
+`Victim` 合约中的 `withdraw()` 函数遵循“检查-交互-效果”模式。 它_检查_执行所需的条件是否满足（例如，用户的以太币余额是否为正值）并通过向调用者的地址发送以太币来执行_交互_，然后再应用交易的_效果_（例如减少用户的余额）。
 
 如果从外部帐户调用 `withdraw()`，该函数将按预期执行：`msg.sender.call.value()` 向调用方发送以太币。 然而，如果 `msg.sender` 是智能合约帐户调用 `withdraw()`，使用 `msg.sender.call.value()` 发送资金还将使存储在该地址的代码运行。
 
@@ -286,7 +286,7 @@ contract Victim {
 2. 将 1 个以太币存入 Victim 合约
 3. 提取存储在该智能合约中的 1 个以太币
 
-这里没有什么问题，只是 `Attacker` 有另一个函数，如果传入的 `msg.sender.call.value` 调用剩余的燃料超过 40000，它就再次调用 `Victim` 中的 `withdraw()` 函数。 这使得 `Attacker` 能够重入 `Victim` 合约并在第一次调用 `withdraw` 函数结束*之前*提取更多资金。 这个循环如下所示：
+这里没有什么问题，只是 `Attacker` 有另一个函数，如果传入的 `msg.sender.call.value` 调用剩余的燃料超过 40000，它就再次调用 `Victim` 中的 `withdraw()` 函数。 这使得 `Attacker` 能够重入 `Victim` 合约并在第一次调用 `withdraw` 函数结束_之前_提取更多资金。 这个循环如下所示：
 
 ```solidity
 - Attacker 的外部帐户使用 1 个以太币调用 `Attacker.beginAttack()`
@@ -320,9 +320,9 @@ contract NoLongerAVictim {
 }
 ```
 
-该合约对用户的余额执行*检查*，应用 `withdraw()` 函数的*效果*（将用户的余额重置为 0）并继续执行*交互*（将以太币发送到用户的地址）。 这确保了合约在外部调用之前更新其存储空间，消除了导致第一次攻击的重入攻击的条件。 `Attacker` 合约可能仍然可以回调 `NoLongerAVictim`，但由于 `balances[msg.sender]` 已设置为 0，额外的提取将引发错误。
+该合约对用户的余额执行_检查_，应用 `withdraw()` 函数的_效果_（将用户的余额重置为 0）并继续执行_交互_（将以太币发送到用户的地址）。 这确保了合约在外部调用之前更新其存储空间，消除了导致第一次攻击的重入攻击的条件。 `Attacker` 合约可能仍然可以回调 `NoLongerAVictim`，但由于 `balances[msg.sender]` 已设置为 0，额外的提取将引发错误。
 
-另一种方案是使用互斥锁（通常称为“mutex”)，它锁定一部分合约状态直到函数调用完成。 互斥锁是通过布尔变量实现的，该变量在函数执行之前设置为 `true`，在调用完成后回滚为 `false`。 如下面的例子所示，使用互斥锁可以防止函数在初始调用仍在进行时不受到递归调用，从而有效地阻止重入攻击。
+另一种方案是使用互斥锁（通常称为“mutex”），它锁定一部分合约状态直到函数调用完成。 互斥锁是通过布尔变量实现的，该变量在函数执行之前设置为 `true`，在调用完成后回滚为 `false`。 如下面的例子所示，使用互斥锁可以防止函数在初始调用仍在进行时不受到递归调用，从而有效地阻止重入攻击。
 
 ```solidity
 pragma solidity ^0.7.0;
@@ -466,17 +466,17 @@ contract Attack {
 
 - **[Fork Checker](https://forkchecker.hashex.org/)** - _免费的在线工具，用于检查所有关于分叉合同的现有信息。_
 
-- **[ABI 编码器](https://abi.hashex.org/)** - _免费在线服务，用于编码您的 Solidity 合约函数和构造函数参数。_
+- **[ABI 编码器](https://abi.hashex.org/)** - _免费在线服务，用于编码你的 Solidity 合约函数和构造函数参数。_
 
 ### 智能合约监测工具 {#smart-contract-monitoring-tools}
 
-- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/sentinel)** - _一种用于自动监测和响应智能合约中事件、函数和交易参数的工具。_
+- **[OpenZeppelin Defender Sentinels](https://docs.openzeppelin.com/defender/v1/sentinel)** - _一种用于自动监测和响应智能合约中事件、函数和交易参数的工具。_
 
 - **[Tenderly Real-Time Alerting](https://tenderly.co/alerting/)** - _一种在智能合约或钱包发生异常或意外事件时，为你获取实时通知的工具。_
 
 ### 智能合约的安全管理工具 {#smart-contract-administration-tools}
 
-- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/admin)** - _进行智能合约管理的管理界面，包括控制访问、升级和暂停功能。_
+- **[OpenZeppelin Defender Admin](https://docs.openzeppelin.com/defender/v1/admin)** - _用于智能合约管理的管理界面，包括访问控制、升级和暂停功能。_
 
 - **[Safe](https://safe.global/)** - _在以太坊上运行的智能合约钱包，需要最少人数批准交易后交易才能进行 (M-of-N)。_
 
@@ -538,7 +538,7 @@ contract Attack {
 
 - **[Solidity 模式](https://fravoll.github.io/solidity-patterns/)** - _面向智能合约编程语言 Solidity 的安全模式和最佳实践实用合集。_
 
-- **[Solidity 文档：安全性注意事项](https://docs.soliditylang.org/en/v0.8.16/security-considerations.html)** - _用 Solidity 编写安全智能合约的准则。_
+- **[Solidity文档：安全性注意事项](https://docs.soliditylang.org/en/v0.8.16/security-considerations.html)** - _用Solidity编写安全智能合约的准则。_
 
 - **[智能合约安全验证标准](https://github.com/securing/SCSVS)** - _旨在确立智能合约安全性标准的第十四部分检查清单，面向开发者、架构师、安全审核者和供应商。_
 

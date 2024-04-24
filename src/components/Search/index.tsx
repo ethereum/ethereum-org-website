@@ -1,4 +1,5 @@
 import { useRef } from "react"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdSearch } from "react-icons/md"
@@ -21,13 +22,26 @@ import { sanitizeHitTitle } from "@/lib/utils/sanitizeHitTitle"
 import { sanitizeHitUrl } from "@/lib/utils/url"
 
 import SearchButton from "./SearchButton"
-import SearchModal from "./SearchModal"
 
 import "@docsearch/css"
 
+const SearchModal = dynamic(() => import("./SearchModal"))
+
 export const SearchIconButton = forwardRef<IconButtonProps, "button">(
   (props, ref) => (
-    <Button ref={ref} variant="ghost" isSecondary px={1.5} {...props}>
+    <Button
+      ref={ref}
+      variant="ghost"
+      isSecondary
+      px={2}
+      _hover={{
+        color: "primary.base",
+        transform: "rotate(5deg)",
+        transition: "transform 0.2s ease-in-out",
+      }}
+      transition="transform 0.2s ease-in-out"
+      {...props}
+    >
       <MdSearch />
     </Button>
   )

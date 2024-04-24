@@ -4,16 +4,16 @@ import FileContributors from "@/components/FileContributors"
 
 import { useClientSideGitHubContributors } from "@/hooks/useClientSideGitHubContributors"
 
-export interface IProps extends FlexProps {
+export type GitHubContributors = FlexProps & {
   relativePath: string
   editPath?: string
   lastUpdatedDate: string
 }
 
-const GitHubContributors: React.FC<IProps> = ({
+const GitHubContributors = ({
   relativePath,
   lastUpdatedDate,
-}) => {
+}: GitHubContributors) => {
   const state = useClientSideGitHubContributors(relativePath)
 
   return (

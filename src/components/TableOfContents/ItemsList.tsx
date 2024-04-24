@@ -4,20 +4,20 @@ import type { ToCItem } from "@/lib/types"
 
 import ToCLink from "@/components/TableOfContents/TableOfContentsLink"
 
-export interface IPropsItemsList extends ChakraProps {
+export type ItemsListProps = ChakraProps & {
   items: Array<ToCItem>
   depth: number
   maxDepth: number
   activeHash?: string
 }
 
-const ItemsList: React.FC<IPropsItemsList> = ({
+const ItemsList = ({
   items,
   depth,
   maxDepth,
   activeHash,
   ...rest
-}) => {
+}: ItemsListProps) => {
   if (depth > maxDepth) return null
 
   return (

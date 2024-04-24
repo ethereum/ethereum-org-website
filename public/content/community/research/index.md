@@ -71,7 +71,7 @@ The execution layer is concerned with executing transactions, running the [Ether
 - [Paths to state expiry](https://hackmd.io/@vbuterin/state_expiry_paths)
 - [Verkle and state expiry proposal](https://notes.ethereum.org/@vbuterin/verkle_and_state_expiry_proposal)
 - [History management](https://eips.ethereum.org/EIPS/eip-4444)
-- [Verkle Trees](https://vitalik.ca/general/2021/06/18/verkle.html)
+- [Verkle Trees](https://vitalik.eth.limo/general/2021/06/18/verkle.html)
 - [Data availability sampling](https://github.com/ethereum/research/wiki/A-note-on-data-availability-and-erasure-coding)
 
 ## Client Development {#client-development}
@@ -133,6 +133,10 @@ One particular area of layer 2 that requires more research and development is sa
 ### Sharding {#sharding}
 
 Sharding Ethereum's blockchain has long been part of the development roadmap. However, new scaling solutions such as "Danksharding" are currently taking center stage.
+
+The precursor to full Danksharding known as Proto-Danksharding went live with the Cancun-Deneb ("Dencun") network upgrade.
+
+[More about the Dencun upgrade](/roadmap/dencun/)
 
 #### Background reading {#background-reading-4}
 

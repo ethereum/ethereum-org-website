@@ -7,7 +7,7 @@ incomplete: true
 
 <FeaturedText>学习如何使用基于 Go 的项目和工具参与以太坊的开发</FeaturedText>
 
-使用以太坊创建去中心化应用（即"dapps"）。 这些去中心化应用程序可被信任，意味着一旦被部署到以太坊上，它们将总是按既定程序运行。 它们是去中心化的，意味着它们运行在一个点对点网络中并且不存在单点故障。 不存在单一实体或者个人可以控制它们，它们也几乎不可能被审查。 它们可以通过控制数字资产来创建新的应用。
+使用以太坊创建去中心化应用程序（即"dapps"）。 这些去中心化应用程序可被信任，意味着一旦被部署到以太坊上，它们将总是按既定程序运行。 它们是去中心化的，意味着它们运行在一个点对点网络中并且不存在单点故障。 不存在单一实体或者个人可以控制它们，它们也几乎不可能被审查。 它们可以通过控制数字资产来创建新的应用。
 
 ## 智能合约和 Solidity 语言入门 {#getting-started-with-smart-contracts-and-solidity}
 
@@ -17,7 +17,7 @@ incomplete: true
 
 - [区块链详解](https://kauri.io/article/d55684513211466da7f8cc03987607d5/blockchain-explained)
 - [理解智能合约](https://kauri.io/article/e4f66c6079e74a4a9b532148d3158188/ethereum-101-part-5-the-smart-contract)
-- [编写您的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
+- [编写你的第一个智能合约](https://kauri.io/article/124b7db1d0cf4f47b414f8b13c9d66e2/remix-ide-your-first-smart-contract)
 - [学习如何编写和部署 Solidity](https://kauri.io/article/973c5f54c4434bb1b0160cff8c695369/understanding-smart-contract-compilation-and-deployment)
 - [智能合约教程](https://github.com/ethereum/go-ethereum/wiki/Contract-Tutorial)
 
@@ -27,7 +27,7 @@ incomplete: true
 - [开始使用 Geth](https://medium.com/@tzhenghao/getting-started-with-geth-c1a30b8d6458)
 - [使用 Golang 连接到以太坊](https://www.youtube.com/watch?v=-7uChuO_VzM)
 - [使用 Golang 部署以太坊智能合约](https://www.youtube.com/watch?v=pytGqQmDslE)
-- [一步步教您测试和部署以太坊 Go 语言智能合约](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
+- [一步步教你测试和部署以太坊 Go 语言智能合约](https://hackernoon.com/a-step-by-step-guide-to-testing-and-deploying-ethereum-smart-contracts-in-go-9fc34b178d78)
 - [电子书：使用 Go 开发以太坊](https://goethereumbook.org/) - _使用 Go 开发以太坊应用程序_
 
 ## 面向中等程度用户的文章和文档 {#intermediate-articles-and-docs}
@@ -57,7 +57,7 @@ incomplete: true
 - [Erigon](https://github.com/ledgerwatch/erigon) - _Go 以太坊的更快衍生品，专注于归档节点_
 - [Golem](https://github.com/golemfactory/golem) - _Golem 正在创建一个算力全球市场_
 - [Quorum](https://github.com/jpmorganchase/quorum) - _支持数据隐私的许可型以太坊实现_
-- [Prysm](https://github.com/prysmaticlabs/prysm) - _以太坊 ‘Serenity’2.0 Go 实现_
+- [Prysm](https://github.com/prysmaticlabs/prysm) - _以太坊 'Serenity' 2.0 Go 实现_
 - [Eth Tweet](https://github.com/yep/eth-tweet) - _去中心化 Twitter：运行在以太坊区块链上的微博客服务_
 - [Plasma MVP Golang](https://github.com/kyokan/plasma) — _Golang 实现以及最小可执行 Plasma 规范拓展_
 - [Open Ethereum Mining Pool](https://github.com/sammy007/open-ethereum-pool) - _以太坊开源矿池_
@@ -66,7 +66,7 @@ incomplete: true
 - [Geth Light Client](https://github.com/zsfelfoldi/go-ethereum/wiki/Geth-Light-Client) - _轻量级以太坊子协议的 Geth 实现_
 - [以太坊 Golang 软件开发工具包](https://github.com/everFinance/goether) - _Golang 中的简单以太坊钱包实现和实用程序_
 
-想要获取更多的资源？ 请浏览 [ethereum.org/developers](/developers/)。
+想要获取更多的资源？ 请查看 [ethereum.org/developers](/developers/)。
 
 ## Go 社区贡献者 {#go-community-contributors}
 

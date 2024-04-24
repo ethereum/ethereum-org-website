@@ -103,7 +103,7 @@ _Upoštevajte, da razlaga v videu izraz "plast 2" uporablja za naslavljanje vseh
 - [Načrt Ethereum, osredotočen na zvitke](https://ethereum-magicians.org/t/a-rollup-centric-ethereum-roadmap/4698) _Vitalik Buterin_
 - [Aktualna analiza o rešitvah za širjenje Ethereuma s plastjo 2](https://www.l2beat.com/)
 - [Ocena rešitev za širjenje Ethereuma s plastjo 2: primerjalni okvir](https://medium.com/matter-labs/evaluating-ethereum-l2-scaling-solutions-a-comparison-framework-b6b2f410f955)
-- [Nepopoln vodnik po zvitkih](https://vitalik.ca/general/2021/01/05/rollup.html)
+- [Nepopoln vodnik po zvitkih](https://vitalik.eth.limo/general/2021/01/05/rollup.html)
 - [ZK-zvitki, ki jih poganja Ethereum: World Beaters](https://hackmd.io/@canti/rkUT0BD8K)
 - [Optimistični zvitki proti ZK-zvitkom](https://limechain.tech/blog/optimistic-rollups-vs-zk-rollups/)
 - [Razširljivost blokovne verige brez znanja](https://ethworks.io/assets/download/zero-knowledge-blockchain-scaling-ethworks.pdf)

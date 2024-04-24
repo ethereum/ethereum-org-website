@@ -167,7 +167,7 @@ Lo schema è la definizione dei dati di GraphQL. Ti consentirà di definire qual
 - BigInt
 - BigDecimal
 
-Puoi anche usare le entità come tipo per definire le relazioni. Nel nostro esempio definiamo una relazione 1 a tanti dal giocatore alle scommesse. Il punto esclamativo ! significa che il valore non può essere vuoto. La documentazione completa può essere consultata [qui](https://thegraph.com/docs/define-a-subgraph#the-graphql-schema).
+Puoi anche usare le entità come tipo per definire le relazioni. Nel nostro esempio definiamo una relazione 1 a tanti dal giocatore alle scommesse. Il punto esclamativo ! significa che il valore non può essere vuoto. La documentazione completa può essere consultata [qui](https://thegraph.com/docs/en/developing/creating-a-subgraph/#the-subgraph-manifest).
 
 ```graphql
 type Bet @entity {
@@ -196,7 +196,7 @@ Poi creiamo una nuova entità Bet. L'id sarà `event.transaction.hash.toHex() + 
 
 Infine possiamo aggiornare l'entità Player con tutti i dati. Non è possibile eseguire direttamente il push degli array, bensì devono essere aggiornati come indicato qui. Usiamo l'id per fare riferimento alla scommessa. E occorre aggiungere `.save()` alla fine per memorizzare un'entità.
 
-La documentazione completa è consultabile qui: https://thegraph.com/docs/define-a-subgraph#writing-mappings. Puoi anche aggiungere l'output di registrazione al file di mapping, vedi [qui](https://thegraph.com/docs/assemblyscript-api#api-reference).
+La documentazione completa può essere consultata qui: https://thegraph.com/docs/en/developing/creating-a-subgraph/#writing-mappings. Puoi anche aggiungere l'output di registrazione al file di mapping, vedi [qui](https://thegraph.com/docs/assemblyscript-api#api-reference).
 
 ```typescript
 import { Bet, Player } from "../generated/schema"
@@ -293,24 +293,21 @@ Ma ci manca l'ultimo pezzo del puzzle: il server. Puoi eseguirlo personalmente o
 
 ### Graph Explorer: il servizio ospitato {#graph-explorer-the-hosted-service}
 
-Il modo più semplice è usare il servizio di hosting. Segui le istruzioni [qui](https://thegraph.com/docs/deploy-a-subgraph) per distribuire un subgraph. Per molti progetti è possibile trovare i sottografi esistenti [nell'esploratore](https://thegraph.com/explorer/).
+Il modo più semplice è usare il servizio di hosting. Segui le istruzioni [qui](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) per distribuire un subgraph. Per molti progetti è possibile trovare i sottografi esistenti [nell'esploratore](https://thegraph.com/explorer/).
 
 ![Explorer di The Graph](./thegraph-explorer.png)
 
 ### Esecuzione di un nodo personalizzato {#running-your-own-node}
 
-In alternativa, può eseguire il suo nodo personale. Documenti [qui](https://github.com/graphprotocol/graph-node#quick-start). Un motivo per farlo potrebbe essere l'uso di una rete non supportata dal servizio di hosting. Sono correntemente supportate Mainnet, Kovan, Rinkeby, Ropsten, Goerli, PoA-Core, xDAI e Sokol.
+In alternativa, può eseguire il suo nodo personale. Documenti [qui](https://github.com/graphprotocol/graph-node#quick-start). Un motivo per farlo potrebbe essere l'uso di una rete non supportata dal servizio di hosting. Le reti attualmente supportate [possono essere trovate qui](https://thegraph.com/docs/en/developing/supported-networks/).
 
 ## Il futuro decentralizzato {#the-decentralized-future}
 
-GraphQL supporta i flussi e anche nuovi eventi in ingresso che non sono ancora supportati completamente da The Graph, ma saranno presto rilasciati.
+GraphQL supporta i flussi e anche nuovi eventi in ingresso Queste sono supportate su The Graph [Substreams](https://thegraph.com/docs/en/substreams/) che è attualmente in fase open beta.
 
-Un aspetto ancora mancante è la decentralizzazione. The Graph ha piani futuri per diventare un protocollo completamente decentralizzato. Di seguito sono elencati due ottimi articoli che spiegano il piano in modo più dettagliato:
-
-- https://thegraph.com/blog/the-graph-network-in-depth-part-1
-- https://thegraph.com/blog/the-graph-network-in-depth-part-2
+Nel [2021](https://thegraph.com/blog/mainnet-migration/) The Graph ha iniziato la sua transizione per diventare una rete di indicizzazione decentralizzata. Puoi leggere di più sull'architettura di questa rete di indicizzazione decentralizzata [qui](https://thegraph.com/docs/en/network/explorer/).
 
 Due aspetti chiave sono:
 
-1. Gli utenti pagheranno gli indicizzatori per le query.
-2. Gli indicizzatori saranno token di Graph (GRT) in staking.
+1. Gli utenti pagano gli indicizzatori per le query.
+2. Gli indicizzatori faranno staking di Graph Token (GRT).

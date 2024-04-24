@@ -47,7 +47,7 @@ Een van de beste manieren om het potentieel van DeFi in te zien is het begrijpen
 | De markten zijn altijd open.                                                                                                        | De markten sluiten omdat werknemers ook pauze's nodig hebben.                                                                                                  |
 | Het is gebaseerd op transparantie – iedereen kan de gegevens van een product bekijken en inspecteren hoe het systeem in elkaar zit. | Financiële instellingen zijn gesloten boeken: je kunt ze niet vragen om de geschiedenis van hun leningen, om een overzicht van hun beheerde activa, enzovoort. |
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Verken DeFi apps
 </ButtonLink>
 
@@ -65,7 +65,7 @@ Dit klinkt vreemd... "Waarom zou ik mijn geld willen programmeren"? Dit is echte
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Verken onze suggesties voor DeFi-applicaties om uit te proberen als u nieuw bent bij Ethereum.</div>
-  <ButtonLink to="/dapps/?category=finance">
+  <ButtonLink to="/dapps/?category=finance#explore">
     Verken DeFi-apps
   </ButtonLink>
 </InfoBanner>
@@ -92,7 +92,7 @@ Er is een gedecentraliseerd alternatief voor de meeste financiële diensten. Maa
 
 Als blockchain is Ethereum ontworpen voor het op veilige en mondiale manier verzenden van transacties. Net als Bitcoin, maakt Ethereum het verzenden van geld over de hele wereld zo eenvoudig als het verzenden van een e-mail. Voer gewoon de [ENS-naam](/nft/#nft-domains) (zoals bob.eth) van uw ontvanger in of het accountadres van hun portemonnee, en uw betaling zal (doorgaans) direct in minuten naar hen gaan. Om betalingen te kunnen verzenden en/of ontvangen, heeft u een [portemonnee](/wallets/) nodig.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Zie betaling-dapps
 </ButtonLink>
 
@@ -123,7 +123,7 @@ Het lenen van geld van gedecentraliseerde aanbieders komt in twee hoofdvarianten
 - Peer-to-peer, wat betekent dat een lener direct van een specifieke kredietgever zal lenen.
 - Poolgebaseerd, waarbij kredietgevers fondsen (liquiditeit) aan een pool verstrekken waar leners van kunnen lenen.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Zie dapps voor lenen
 </ButtonLink>
 
@@ -183,7 +183,7 @@ U kunt rente verdienen op uw crypto door het uit te lenen en uw geld in realtime
 - Uw aDai zal toenemen op basis van de rente en u zult uw saldo zien groeien in uw portemonnee. Afhankelijk van de APR, zal uw portemonneesaldo na een paar dagen of zelfs uren veranderen in iets als 100,1234!
 - U kunt op elk gewenst moment een hoeveelheid normale Dai opnemen die gelijk is aan uw aDai-saldo.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Bekijk uitleen-dapps
 </ButtonLink>
 
@@ -211,7 +211,7 @@ Er zijn duizenden tokens op Ethereum. Gedecentraliseerde exchanges (DEX's) laten
 
 Als u bijvoorbeeld de no-loss loterij PoolTogether wilt gebruiken (hierboven beschreven), heeft u een token nodig zoals Dai of USDC. Met deze DEX's kunt u uw ETH wisselen voor deze tokens en weer terug wanneer u klaar bent.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Bekijk token exchanges
 </ButtonLink>
 
@@ -223,7 +223,7 @@ Er zijn meer geavanceerde opties voor handelaren die van een beetje meer control
 
 Wanneer u een gecentraliseerde exchange gebruikt, moet u uw geld storten vóór de transactie en erop vertrouwen dat de instelling goed voor het geld zal zorgen. Terwijl uw activa gestort worden, lopen ze risico omdat gecentraliseerde beurzen aantrekkelijke doelwitten zijn voor hackers.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Bekijk trading dapps
 </ButtonLink>
 
@@ -235,7 +235,7 @@ Er zijn producten voor fondsbeheer op Ethereum die zullen proberen uw portefeuil
 
 Een goed voorbeeld is het [DeFi Pulse Index-fonds (DPI)](https://defipulse.com/blog/defi-pulse-index/). Dit is een fonds dat automatisch in evenwicht blijft om ervoor te zorgen dat je portfolio altijd [de beste DeFi-tokens volgens marktkapitalisatie bevat](https://www.coingecko.com/en/defi). U hoeft nooit enige gegevens te beheren en u kunt zich uit het fonds terugtrekken wanneer u dat maar wilt.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Bekijk investering-dapps
 </ButtonLink>
 
@@ -249,7 +249,7 @@ Ethereum is een ideaal platform voor crowdfunding:
 - Het is transparant zodat fondsenwervers kunnen aantonen hoeveel geld er is bijeengebracht. U kunt zelfs achterhalen hoe het geld later wordt uitgegeven.
 - Fundraisers kunnen automatische restituties instellen als er bijvoorbeeld een specifieke deadline en minimumbedrag is waar niet aan voldaan wordt.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Zie crowdfunding dapps
 </ButtonLink>
 
@@ -276,7 +276,7 @@ Gedecentraliseerde verzekeringen zijn bedoeld om verzekering goedkoper en snelle
 
 Ethereum-producten, zoals elke software, kunnen lijden onder bugs en exploits. Op dit moment zijn veel verzekeringsproducten op het netwerk dus gericht op de bescherming van hun gebruikers tegen geldverliezen. Er zijn echter projecten die dekking beginnen op te bouwen voor alles wat het leven ons aan moeilijkheden kan geven. Een goed voorbeeld hiervan is de dekking Etherisc voor gewassen die erop gericht is [kleine boeren in Kenia te beschermen tegen droogte en overstromingen](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). Gedecentraliseerde verzekeringen kunnen boeren die vaak uit de traditionele verzekering worden geprijsd, goedkopere dekking aanbieden.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Zie verzekering-dapps
 </ButtonLink>
 
@@ -286,7 +286,7 @@ Ethereum-producten, zoals elke software, kunnen lijden onder bugs en exploits. O
 
 Met alle drukte die u heeft, heeft u een manier nodig om al uw investeringen, leningen en transacties bij te houden. Er zijn een heleboel producten waarmee u al uw DeFi-activiteiten vanaf één plaats kunt coördineren. Dit is het mooie van de open architectuur van DeFi. Teams kunnen interfaces bouwen waar u uw saldo voor alle producten niet alleen kunt zien, u kunt hun functies ook nog eens gebruiken. U vindt dit misschien nuttig terwijl u meer kennis over Defi opbouwt.
 
-<ButtonLink to="/dapps/?category=finance">
+<ButtonLink to="/dapps/?category=finance#explore">
   Bekijk portfolio-dapps
 </ButtonLink>
 

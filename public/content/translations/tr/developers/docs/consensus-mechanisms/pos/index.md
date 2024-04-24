@@ -79,10 +79,10 @@ Ethereum hep bir hisse ispat ağı değildi. Ethereum başlatıldığı zaman i�
 
 ## Daha fazla bilgi {#further-reading}
 
-- [Hisse ispatı SSS](https://vitalik.ca/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
+- [Hisse ispatı SSS](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _Vitalik Buterin_
 - [Hisse İspatı Nedir?](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ ConsenSys_
 - [Hisse İspatı Nedir ve Neden Önemlidir?](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _Vitalik Buterin_
-- [Neden Hisse İspatı (Kasım 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _Vitalik Buterin_
+- [Neden Hisse İspatı (Kasım 2020)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _Vitalik Buterin_
 - [Hisse İspatı: Zayıf Öznelliği Sevmeyi Nasıl Öğrendim](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _Vitalik Buterin_
 - [Ethereum hisse ispatının saldırı ve savunması](https://mirror.xyz/jmcook.eth/YqHargbVWVNRQqQpVpzrqEQ8IqwNUJDIpwRP7SS5FXs)
 - [Bir Hisse İspatı Tasarım Felsefesi](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _Vitalik Buterin_

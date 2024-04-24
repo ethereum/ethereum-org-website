@@ -9,18 +9,18 @@ import type { TokenBalance } from "../../WalletHome/interfaces"
 
 const ICON_SIZE = "4.5rem" as const
 
-interface IProps {
+type SuccessProps = {
   tokenBalances: Array<TokenBalance>
   sentEthAmount: number
   ethPrice: number
   recipient: string
 }
-export const Success: React.FC<IProps> = ({
+export const Success = ({
   tokenBalances,
   sentEthAmount,
   ethPrice,
   recipient,
-}) => {
+}: SuccessProps) => {
   const [txPending, setTxPending] = useState(true)
   const [showWallet, setShowWallet] = useState(false)
   const [categoryIndex, setCategoryIndex] = useState(0)

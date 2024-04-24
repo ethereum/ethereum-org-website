@@ -204,4 +204,4 @@ event Withdraw(
 ## Daha fazla okuma {#further-reading}
 
 - [EIP-4626: Tokenize edilmiş kasa Standartı](https://eips.ethereum.org/EIPS/eip-4626)
-- [ERC-4626: GitHub Deposu](https://github.com/Rari-Capital/solmate/blob/main/src/mixins/ERC4626.sol)
+- [ERC-4626: GitHub Deposu](https://github.com/transmissions11/solmate/blob/main/src/tokens/ERC4626.sol)

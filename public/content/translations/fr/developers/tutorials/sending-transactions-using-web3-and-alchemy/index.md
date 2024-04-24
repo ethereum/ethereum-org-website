@@ -23,7 +23,7 @@ Comme la plupart des développeurs blockchain débutants, vous avez peut-être f
 
 ### 1\. Alchemy ne stocke pas vos clés privées {#alchemy-does-not-store-your-private-keys}
 
-- Cela signifie qu'Alchemy ne peut pas signer et envoyer des transactions en votre nom. Ceci pour des raisons de sécurité. Alchemy ne vous demandera jamais de partager votre clé privée, et vous ne devriez jamais partager votre clé privée avec un nœud hébergé (ni avec quiconque d'ailleurs).
+- Cela signifie qu'Alchemy ne peut pas signer et envoyer des transactions en votre nom. Ceci pour  des raisons de sécurité. Alchemy ne vous demandera jamais de partager votre clé privée, et vous ne devriez jamais partager votre clé privée avec un nœud hébergé (ni avec quiconque d'ailleurs).
 - Vous pouvez lire sur la blockchain en utilisant l'API Alchemy, mais pour y écrire vous devrez utiliser quelque chose d'autre afin de signer vos transactions par le biais d'Alchemy (c'est le cas pour tous les [services d'accès à la blockchain](/developers/docs/nodes-and-clients/nodes-as-a-service/)).
 
 ### 2\. Qu'est-ce qu'un « signataire » ? {#what-is-a-signer}
@@ -33,7 +33,7 @@ Comme la plupart des développeurs blockchain débutants, vous avez peut-être f
 
 ### 3\. Pourquoi dois-je signer mes transactions? {#why-do-i-need-to-sign-my-transactions}
 
-- Chaque utilisateur qui veut envoyer une transaction sur le réseau Ethereum doit signer la transaction (en utilisant sa clé privée), afin de valider l'origine de la transaction.
+- Chaque utilisateur souhaitant envoyer une transaction sur le réseau Ethereum doit signer la transaction (à l'aide de sa clé privée), afin de valider que l'origine de la transaction est bien celle qu'elle prétend être.
 - Il est très important de protéger cette clé privée, car le fait d'y avoir accès vous donne le contrôle total de votre compte Ethereum, ce qui vous permet (ou à quiconque y ayant accès) d'effectuer des transactions en votre nom.
 
 ### 4\. Comment protéger ma clé privée ? {#how-do-i-protect-my-private-key}
@@ -54,9 +54,14 @@ C'est ce que nous utiliserons dans notre tutoriel.
 ### 6\. Qu'est-ce que la bibliothèque web3 ? {#what-is-the-web3-library}
 
 - Web3.js est une bibliothèque de wrapper autour des appels standard JSON-RPC qui est couramment utilisée dans le développement Ethereum.
-- Il existe de nombreuses bibliothèques web3 pour différents langages de programmation. Dans ce tutoriel, nous utiliserons [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), écrit en JavaScript. Vous trouverez d'autres alternatives [ici](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries).
+- Il existe de nombreuses bibliothèques web3 pour différents langages de programmation. Dans ce tutoriel, nous utiliserons [Alchemy Web3](https://docs.alchemy.com/reference/api-overview), écrit en JavaScript. Vous pouvez explorer d'autres options [ici](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries), telles que [ethers.js](https://docs.ethers.org/v5/).
 
 Bon, maintenant que nous avons clarifié ces points, passons au tutoriel. N'hésitez pas à poser des questions à tout moment sur le [discord](https://discord.gg/gWuC7zB) d'Alchemy !
+
+### 7\. Comment envoyer des transactions sécurisées, optimisées en termes de gaz et privées ? {how-to-send-secure-gas-optimized-and-private-transactions}
+
+- [Alchemy propose une suite d'APIs de transaction.](https://docs.alchemy.com/reference/transact-api-quickstart). Vous pouvez les utiliser pour envoyer des transactions renforcées, simuler des transactions avant qu'elles ne se produisent, envoyer des transactions privées et d'autres optimisées en termes de gaz
+- Vous pouvez également utiliser l'[API Notify](https://docs.alchemy.com/docs/alchemy-notify) pour être alerté lorsque votre transaction est retirée du mempool et ajoutée à la chaîne
 
 **NOTE :** Ce guide nécessite un compte Alchemy, une adresse Ethereum ou un portefeuille MetaMask, ainsi que l'installation de NodeJs et npm. Si ce n’est pas le cas, procédez comme suit :
 
@@ -66,15 +71,15 @@ Bon, maintenant que nous avons clarifié ces points, passons au tutoriel. N'hés
 
 ## Étapes pour envoyer votre transaction {#steps-to-sending-your-transaction}
 
-### 1\. Créer une application Alchemy sur le réseau de test Rinkeby {#create-an-alchemy-app-on-the-rinkeby-testnet}
+### 1\. Créer une application Alchemy sur le réseau de test Sepolia {#create-an-alchemy-app-on-the-sepolia-testnet}
 
-Naviguez vers votre [tableau de bord d'Alchemy](https://dashboard.alchemyapi.io/) et créez une nouvelle application, en choisissant Rinkeby (ou tout autre réseau de test) comme réseau.
+Naviguez vers votre [tableau de bord d'Alchemy](https://dashboard.alchemyapi.io/) et créez une nouvelle application, en choisissant Sepolia (ou tout autre réseau de test) comme réseau.
 
-### 2\. Demander de l'ETH via le réseau Rinkeby {#request-eth-from-rinkeby-faucet}
+### 2\. Demander de l'ETH via le robinet Sepolia {#request-eth-from-sepolia-faucet}
 
-Suivez les instructions sur le réseau [Rinkeby](https://www.rinkebyfaucet.com/) pour recevoir de l'ETH. Veillez à bien d'inclure votre adresse Ethereum **Rinkeby** (depuis Metamask) et pas d'un autre réseau. Après avoir suivi les instructions, vérifiez que vous avez reçu l'ETH dans votre portefeuille.
+Suivez les instructions sur le robinet [Alchemy Sepolia](https://www.sepoliafaucet.com/) pour recevoir de l'ETH. Assurez-vous d'inclure votre adresse Ethereum **Sepolia** (depuis MetaMask) et non celle d'un autre réseau. Après avoir suivi les instructions, vérifiez que vous avez reçu l'ETH dans votre portefeuille.
 
-### 3\. Créer un nouveau dossier projet et `cd`("change directory" en ligne de commande) dans celui-ci {#create-a-new-project-direction}
+### 3\. Créez un nouveau répertoire de projet et placez-y un `cd` {#create-a-new-project-direction}
 
 Créez un nouveau répertoire de projet à partir de la ligne de commande (terminal pour macs) et naviguez dans celui-ci :
 
@@ -86,6 +91,8 @@ cd sendtx-example
 ### 4\. Installer Alchemy Web3 (ou n'importe quelle autre bibliothèque web3) {#install-alchemy-web3}
 
 Exécutez la commande suivante dans votre dossier projet pour installer [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) :
+
+Notez que si vous souhaitez utiliser la bibliothèque ethers.js, [suivez les instructions ici](https://docs.alchemy.com/docs/how-to-send-transactions-on-ethereum).
 
 ```
 npm install @alch/alchemy-web3
@@ -101,7 +108,7 @@ npm install dotenv --save
 
 ### 6\. Créer le fichier `.env` {#create-the-dotenv-file}
 
-Créez un fichier `.env` dans votre répertoire de projet et ajoutez les éléments suivants (en remplaçant «`your-api-url`» et «`your-private-key`»)
+Créez un fichier `.env` dans votre répertoire de projet et ajoutez les éléments suivants (en remplaçant «` your-api-URL `» et « `your-private-key` »)
 
 - Pour trouver l’URL de votre API Alchemy, accédez à la page des détails de l’application que vous venez de créer sur votre tableau de bord, cliquez sur « View Key » (Voir clé) dans le coin supérieur droit et saisissez l’URL HTTP.
 - Pour trouver votre clé privée sur MetaMask, consultez ce [guide](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
@@ -111,13 +118,13 @@ API_URL = "your-api-url"
 PRIVATE_KEY = "your-private-key"
 ```
 
-<InfoBanner isWarning={true}>
+<InfoBanner isWarning>
 Ne propagez pas le fichier <code>.env</code> ! Assurez-vous de ne jamais partager ou exposer votre fichier <code>.env</code> avec quiconque, car vous compromettez vos secrets en le faisant. Si vous utilisez le contrôle de version, ajoutez votre <code>.env</code> à un fichier <a href="https://git-scm.com/docs/gitignore">gitignore</a>.
 </InfoBanner>
 
 ### 7\. Créer le fichier `sendTx.js` {#create-sendtx-js}
 
-Super, maintenant que nous avons protégé nos données sensibles dans un fichier `.env`, commençons à coder. Pour notre exemple d'envoi de transaction, nous renverrons l'ETH via le réseau Rinkeby.
+Super, maintenant que nous avons protégé nos données sensibles dans un fichier `.env`, commençons à coder. Pour notre exemple d'envoi de transaction, nous renverrons l'ETH via le robinet Sepolia.
 
 Créez un fichier `sendTx.js`, dans lequel nous allons configurer et envoyer notre exemple de transaction et ajoutez-y les lignes de code suivantes :
 
@@ -158,11 +165,11 @@ Veillez à remplacer l'adresse sur la **ligne 6** par votre propre adresse publi
 Avant de nous lancer dans l’exécution de ce code, parlons ici de certains de ses composants.
 
 - `nonce` : La spécification nonce est utilisée pour garder une trace du nombre de transactions envoyées depuis votre adresse. Nous en avons besoin pour des raisons de sécurité et pour éviter [les attaques par répétition](https://docs.alchemyapi.io/resources/blockchain-glossary#account-nonce). Pour obtenir le nombre de transactions envoyées à partir de votre adresse, nous utilisons [getTransactionCount](https://docs.alchemyapi.io/documentation/alchemy-api-reference/json-rpc#eth_gettransactioncount).
-- `transaction` : L'objet transaction intègre certains aspects que nous avons besoin de spécifier.
-  - `to` : C'est l'adresse à laquelle nous voulons envoyer l'ETH. Dans notre cas, nous renvoyons l'ETH au faucet [Rinkeby](https://faucet.rinkeby.io/) auquel nous avons initialement fait la demande.
+- `transaction` : L'objet de la transaction présente quelques aspects que nous devons spécifier
+  - `to` : C'est l'adresse à laquelle nous voulons envoyer l'ETH. Dans notre cas, nous renvoyons l'ETH au robinet [Sepolia](https://sepoliafaucet.com/) auquel nous avons initialement fait la demande.
   - `value` : C'est le montant que nous souhaitons envoyer, spécifié en Wei où 10^18 Wei = 1 ETH.
-  - `gas` : Il existe plusieurs façons de déterminer la bonne quantité de gaz à inclure dans votre transaction. Alchemy dispose même d'un [webhook du prix du gaz](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1) pour vous avertir lorsque le prix du gaz tombe sous un certain seuil. Pour les transactions sur le réseau principal, il est bon dee recourir à un estimateur de gaz comme [ETH Gas Station](https://ethgasstation.info/) pour déterminer la bonne quantité de gaz à intégrer. 21 000 est la quantité minimale de gaz qu'une opération sur Ethereum va utiliser, ainsi pour s'assurer que notre transaction sera exécutée, nous utiliserons ici 30 000 unités.
-  - `nonce` : voir la définition ci-dessus. Nonce commence à compter à partir de zéro.
+  - `gas` : Il existe plusieurs façons de déterminer la bonne quantité de gaz à inclure dans votre transaction. Alchemy dispose même d'un [lien de rappel du prix du gaz](https://docs.alchemyapi.io/guides/alchemy-notify#address-activity-1) pour vous avertir lorsque le prix du gaz tombe sous un certain seuil. Pour les transactions sur le réseau principal, il est bon de recourir à un estimateur de gaz comme [ETH Gas Station](https://ethgasstation.info/) pour déterminer la bonne quantité de gaz à intégrer. 21 000 est la quantité minimale de gaz qu'une opération sur Ethereum va utiliser. Ainsi, pour s'assurer que notre transaction sera exécutée, nous utiliserons ici 30 000 unités.
+  - `nonce` : voir la définition de nonce ci-dessus. Nonce commence à compter à partir de zéro.
   - [OPTIONAL] données : Utilisé pour envoyer des informations supplémentaires avec votre transfert ou pour appeler un contrat intelligent. Non requis pour les transferts de solde. Consultez la note ci-dessous.
 - `signedTx` : Pour signer l'objet de notre transaction nous utiliserons la méthode `signTransaction` avec notre `PRIVATE_KEY`
 - `sendSignedTransaction` : Une fois que nous disposons d'une transaction signée, nous pouvons l'envoyer pour être intégrée dans un bloc ultérieur en utilisant `sendSignedTransaction`.
@@ -186,7 +193,7 @@ node sendTx.js
 
 Ouvrez la page [Mempool](https://dashboard.alchemyapi.io/mempool) dans votre tableau de bord Alchemy et filtrez avec l'application que vous avez créée pour trouver votre transaction. C'est là que nous pouvons observer le passage de l'état de notre transaction de l'état en attente à l'état miné (si la transaction a abouti) ou à l'état abandonné en cas d'échec. Veillez à opter pour « All » (Tous) afin de visualiser les transactions « mined » (minées), « pending » (en attente) et « dropped » (abandonnées). Vous pouvez également trouver votre transaction en recherchant les transactions envoyées à l'adresse `0x31b98d14007bdee637298086988a0bbd31184523`.
 
-Pour voir les détails de votre transaction une fois que vous l'avez trouvée, sélectionnez le tx, hash qui devrait vous amener à une vue qui ressemble à ceci :
+Pour afficher les détails de votre transaction une fois que vous l'avez trouvée, sélectionnez le hachage tx, qui devrait vous amener à une vue qui ressemble à ceci :
 
 ![Capture d'écran Mempool watcher](./mempool.png)
 

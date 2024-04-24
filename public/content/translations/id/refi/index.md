@@ -18,7 +18,7 @@ summaryPoint3: Alat untuk meningkatkan skala aset manfaat ekologi secara drastis
 
 Sebaliknya, ReFi bertujuan untuk memecahkan masalah lingkungan, komunal, atau sosial dengan menciptakan siklus regeneratif. Sistem ini menciptakan nilai bagi para partisipan-partisipan sekaligus memberi manfaat bagi ekosistem dan masyarakat.
 
-Salah satu dasar dari ReFi adalah konsep ekonomi regeneratif yang dipelopori oleh John Fullerton dari [Capital Institute](https://capitalinstitute.org). Dia mengusulkan delapan prinsip yang saling berhubungan yang mendasari kesehatan sistemik:
+Salah satu fondasi ReFi adalah konsep ekonomi regeneratif yang dirintis oleh John Fullerton dari Capital Institute. Ia mengusulkan [delapan prinsip saling terkait](https://capitalinstitute.org/8-principles-regenerative-economy/) yang melandasi kesehatan sistemis:
 
 ![Delapan prinsip yang saling terhubung](./refi-regenerative-economy-diagram.png)
 

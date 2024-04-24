@@ -7,17 +7,18 @@ import { PulseAnimation } from "./PulseAnimation"
 
 const MotionFlex = motion(Flex)
 
-interface IProps extends FlexProps, Pick<ButtonProps, "isDisabled"> {
-  isAnimated?: boolean
-  progressStepper: () => void
-}
-export const ProgressCta: React.FC<IProps> = ({
+type ProgressCtaProps = FlexProps &
+  Pick<ButtonProps, "isDisabled"> & {
+    isAnimated?: boolean
+    progressStepper: () => void
+  }
+export const ProgressCta = ({
   isAnimated = false,
   progressStepper,
   isDisabled,
   children,
   ...flexProps
-}) => (
+}: ProgressCtaProps) => (
   <MotionFlex
     py={10}
     px={6}

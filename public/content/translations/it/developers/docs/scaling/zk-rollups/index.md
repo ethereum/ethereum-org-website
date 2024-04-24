@@ -30,7 +30,7 @@ L'architettura principale del rollup ZK si compone dei seguenti componenti:
 
 2. **Macchina virtuale (VM) off-chain**: benché il protocollo del rollup ZK risieda su Ethereum, l'esecuzione della transazione e l'archiviazione di stato si verificano su una macchina virtuale separata e indipendente dall'[EVM](/developers/docs/evm/). Questa VM off-chain è l'ambiente di esecuzione per le transazioni sul rollup ZK e serve da livello secondario o "livello 2" per il protocollo rollup ZK. Le prove di validità verificate sulla Rete principale di Ethereum garantiscono la correttezza delle transizioni di stato nella VM off-chain.
 
-I rollup ZK sono "soluzioni di ridimensionamento ibride": protocolli off-chain che operano indipendentemente ma derivano la sicurezza da Ethereum. Nello specifico, la rete di Ethereum impone la validità degli aggiornamenti di stato sul rollup ZK e garantisce la disponibilità dei dati dietro ogni aggiornamento allo stato del rollup. Di conseguenza, i rollup ZK sono considerevolmente più sicuri delle soluzioni di ridimensionamento off-chain, come le [sidechain](/developers/docs/scaling/sidechains/), responsabili delle proprie proprietà di sicurezza, o i [validium](/developers/docs/scaling/validiums/), che pur verificando le transazioni su Ethereum con le prove di validità, memorizzano altrove i dati della transazione.
+I rollup ZK sono "soluzioni di ridimensionamento ibride": protocolli off-chain che operano indipendentemente ma derivano la sicurezza da Ethereum. Nello specifico, la rete di Ethereum impone la validità degli aggiornamenti di stato sul rollup ZK e garantisce la disponibilità dei dati dietro ogni aggiornamento allo stato del rollup. Di conseguenza, i rollup ZK sono considerevolmente più sicuri delle soluzioni di ridimensionamento off-chain, come le [sidechain](/developers/docs/scaling/sidechains/), responsabili delle proprie proprietà di sicurezza, o i [validium](/developers/docs/scaling/validium/), che pur verificando le transazioni su Ethereum con le prove di validità, memorizzano altrove i dati della transazione.
 
 I rollup ZK si affidano al protocollo principale di Ethereum per quanto segue:
 
@@ -238,7 +238,7 @@ I progetti che stanno lavorando alle zkEVM includono:
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scroll è un'azienda orientata alla tecnologia che sta lavorando alla creazione di una Soluzione di Livello 2 dello zkEVM nativa per Ethereum._
 
-- **[Taiko](https://taiko.xyz)** - _Taiko è un rollup ZK decentralizzato ed equivalente a Ethereum (un [Tipo 1 ZK-EVM](https://vitalik.ca/general/2022/08/04/zkevm.html))._
+- **[Taiko](https://taiko.xyz)** - _Taiko è un rollup ZK decentralizzato ed equivalente a Ethereum (un [Tipo 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html))._
 
 - **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync 2.0 è un rollup ZK compatibile con l'EVM creato da Matter Labs, basato sulla propria zkEVM._
 
@@ -250,5 +250,5 @@ I progetti che stanno lavorando alle zkEVM includono:
 - [What is a zkEVM?](https://www.alchemy.com/overviews/zkevm)
 - [Intro to zkEVM](https://hackmd.io/@yezhang/S1_KMMbGt)
 - [Awesome-zkEVM resources](https://github.com/LuozhuZhang/awesome-zkevm)
-- [ZK-SNARKS under the hood](https://vitalik.ca/general/2017/02/01/zk_snarks.html)
-- [How are SNARKs possible?](https://vitalik.ca/general/2021/01/26/snarks.html)
+- [ZK-SNARKS under the hood](https://vitalik.eth.limo/general/2017/02/01/zk_snarks.html)
+- [How are SNARKs possible?](https://vitalik.eth.limo/general/2021/01/26/snarks.html)

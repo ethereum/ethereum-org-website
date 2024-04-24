@@ -84,11 +84,11 @@ incomplete: true
 
 ## بیشتر بخوانید {#further-reading}
 
-- [سؤالات متداول درباره‌ی اثبات سهام](https://vitalik.ca/general/2017/12/31/pos_faq.html) _ویتالیک بوترین_
+- [سؤالات متداول درباره‌ی اثبات سهام](https://vitalik.eth.limo/general/2017/12/31/pos_faq.html) _ویتالیک بوترین_
 - [اثبات سهام چیست؟](https://consensys.net/blog/blockchain-explained/what-is-proof-of-stake/) _ConsenSys_
 - [اثبات سهام چیست و چرا اهمیت دارد](https://bitcoinmagazine.com/culture/what-proof-of-stake-is-and-why-it-matters-1377531463) _ویتالیک بوترین_
 - [ توضیحات زنجیره‌ی بیکن اتریوم 2.0 که باید اول بخوانید](https://ethos.dev/beacon-chain/) _Ethos.dev_
-- [چرا اثبات سهام (نوامبر 2020)](https://vitalik.ca/general/2020/11/06/pos2020.html) _ویتالیک بوترین_
+- [چرا اثبات سهام (نوامبر 2020)](https://vitalik.eth.limo/general/2020/11/06/pos2020.html) _ویتالیک بوترین_
 - [اثبات سهام: چگونه یاد گرفتم که سویه‌گیری خفیف را دوست داشته باشم](https://blog.ethereum.org/2014/11/25/proof-stake-learned-love-weak-subjectivity/) _ ویتالیک بوترین_
 - [فلسفه‌ی طراحی اثبات سهام](https://medium.com/@VitalikButerin/a-proof-of-stake-design-philosophy-506585978d51) _ویتالیک بوترین_
 

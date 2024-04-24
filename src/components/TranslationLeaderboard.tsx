@@ -1,5 +1,6 @@
 import React, { useState } from "react"
-import { reverse, sortBy } from "lodash"
+import reverse from "lodash/reverse"
+import sortBy from "lodash/sortBy"
 import { useTranslation } from "next-i18next"
 import {
   Box,
@@ -14,7 +15,7 @@ import {
 import Emoji from "./Emoji"
 import Text from "./OldText"
 
-export interface IProps {
+export type TranslationLeaderboardProps = {
   monthData: any
   quarterData: any
   allTimeData: any
@@ -111,11 +112,11 @@ const sortAndFilterData = (data) => {
   )
 }
 
-const TranslationLeaderboard: React.FC<IProps> = ({
+const TranslationLeaderboard = ({
   monthData,
   quarterData,
   allTimeData,
-}) => {
+}: TranslationLeaderboardProps) => {
   const tableBoxShadow = useColorModeValue("tableBox.light", "tableBox.dark")
   const tableItemBoxShadow = useColorModeValue(
     "tableItemBox.light",

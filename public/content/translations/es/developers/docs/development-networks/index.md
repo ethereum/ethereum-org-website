@@ -70,7 +70,7 @@ El paquete de Kurtosis de Ethereum crea una instancia local de una red de prueba
 
 - [Paquete de red Ethereum](https://github.com/kurtosis-tech/eth-network-package)
 - [Sitio web](https://www.kurtosis.com/)
-- [Github](https://github.com/kurtosis-tech/kurtosis)
+- [GitHub](https://github.com/kurtosis-tech/kurtosis)
 - [Documentación](https://docs.kurtosis.com/)
 
 ## Leer más {#further-reading}

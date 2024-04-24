@@ -49,7 +49,7 @@ Dezentralisierte Identifikatoren werden auf sogenannten dezentralen Ledgern (Blo
 
 ## Was ermöglicht dezentralisierte Identifikatoren? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Öffentliche Schlüssel-Infrastruktur (Public Key Infrastructure, PKI) {#public-key-infrastructure}
+### 1. Öffentliche Schlüssel-Infrastruktur (Public Key Infrastructure, PKI) {#public-key-cryptography}
 
 Öffentliche Schlüssel-Infrastruktur (PKI) ist ein Maß zur Informationssicherheit, die einen [öffentlichen Schlüssel](/glossary/#public-key) und [einen privaten Schlüssel](/glossary/#private-key) für eine Entität generiert. Öffentliche Schlüssel-Kryptografie wird in Blockchain-Netzwerken verwendet, um Benutzeridentitäten zu authentifizieren und das Eigentum an digitalen Gütern nachzuweisen.
 
@@ -109,7 +109,7 @@ Im Folgenden zeigt ein Beispiel, wie On-Chain-Attestierungen in der Praxis funkt
 
 ### Seelengebundene Token und Identität {#soulbound}
 
-[Seelengebundene Token](https://vitalik.ca/general/2022/01/26/soulbound.html) (nicht übertragbare NFTs) können verwendet werden, um Informationen zu sammeln, die eindeutig auf eine bestimmte Wallet zutreffen. Dies erzeugt eine einzigartige On-Chain-Identität, die an eine bestimmte Ethereum-Adresse gebunden ist, die Token enthalten könnte, welche wiederum bestimmte Leistungen (z. B. Abschluss eines bestimmten Online-Kurses oder das Bestehen eines Schwellenwertes in einem Spiel) oder eine Gemeinschaftsbeteiligung darstellen.
+[Seelengebundene Token](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (nicht übertragbare NFTs) können verwendet werden, um Informationen zu sammeln, die eindeutig auf eine bestimmte Wallet zutreffen. Dies erzeugt eine einzigartige On-Chain-Identität, die an eine bestimmte Ethereum-Adresse gebunden ist, die Token enthalten könnte, welche wiederum bestimmte Leistungen (z. B. Abschluss eines bestimmten Online-Kurses oder das Bestehen eines Schwellenwertes in einem Spiel) oder eine Gemeinschaftsbeteiligung darstellen.
 
 ## Vorteile dezentralisierter Identitäten {#benefits-of-decentralized-identity}
 
@@ -161,6 +161,7 @@ Es gibt viele ehrgeizige Projekte, die Ethereum als Grundlage für dezentrale Id
 - **[Proof of Humanity](https://www.proofofhumanity.id)** - _Proof of Humanity (Beweis des Menschseins) ist ein auf Ethereum basierendes System zur Überprüfung der sozialen Identität._
 - **[BrightID](https://www.brightid.org/)**- _Ein dezentralisiertes quelloffenes Netzwerk zur sozialen Identität, das versucht, die Identitätsüberprüfung durch die Schaffung und Analyse eines sozialen Diagramms zu reformieren._
 - **[Personennachweis-Passport](https://proofofpersonhood.com/)** - _Ein dezentraler digitaler Identitätsaggregator._
+- **[walt.id](https://walt.id)** — _Open-Source-Infrastruktur für dezentrale Identität und Wallets, die es Entwicklern und Organisationen ermöglicht, selbstbestimmte Identität und NFTs/SBTs zu nutzen._
 
 ## Weiterführende Informationen {#further-reading}
 
@@ -170,6 +171,7 @@ Es gibt viele ehrgeizige Projekte, die Ethereum als Grundlage für dezentrale Id
 - [Was ist Ethereum ERC725? Eigenständiges Identitätsmanagement in der Blockchain](https://cryptoslate.com/what-is-erc725-self-sovereign-identity-management-on-the-blockchain/) — _Sam-Stadt_
 - [Wie die Blockchain das Problem der digitalen Identität lösen könnte](https://time.com/6142810/proof-of-humanity/)— _Andrew R. Chow_
 - [Was sind dezentralisierte Identitäten und warum sollten sie Sie interessieren?](https://web3.hashnode.com/what-is-decentralized-identity) — _Emmanuel Awosika_
+- [Einführung in die dezentrale Identität](https://walt.id/white-paper/digital-identity) – _Dominik Beron_
 
 ### Videos {#videos}
 
@@ -177,9 +179,11 @@ Es gibt viele ehrgeizige Projekte, die Ethereum als Grundlage für dezentrale Id
 - [Anmelden mit Ethereum und dezentralisierter Identität mit Ceramic, IDX, React, und 3ID Connect](https://www.youtube.com/watch?v=t9gWZYJxk7c) — _YouTube-Tutorial zum Aufbau eines Identitätsmanagementsystems zum Erstellen, Lesen und Aktualisieren des Profils von Benutzern mit ihrer Ethereum-Wallet von Nader Dabit_
 - [BrightID - Dezentralisierte Identität auf Ethereum](https://www.youtube.com/watch?v=D3DbMFYGRoM) — _Podcast Bankless Episode über BrightID, eine dezentrale Identitätslösung für Ethereum_
 - [Das Off-Chain-Internet: Dezentralisierte Identität & Überprüfbare Berechtigungsnachweise](https://www.youtube.com/watch?v=EZ_Bb6j87mg) — EthDenver 2022 Präsentation von Evin McMullen
+- [Erklärung zu überprüfbaren Anmeldeinformationen](https://www.youtube.com/watch?v=ce1IdSr-Kig) – YouTube-Erklärvideo mit Demo von Tamino Baumann
 
 ### Communities {#communities}
 
 - [ERC-725 Allianz auf GitHub](https://github.com/erc725alliance) — _Unterstützer des ERC725-Standards zur Identitätsverwaltung in der Ethereum-Blockchain_
 - [SpruceID Discord Server](https://discord.com/invite/Sf9tSFzrnt) — _Community für Enthusiasten und Entwickler, die am Anmelden mit Ethereum arbeiten_
 - [Veramo Labs](https://discord.gg/sYBUXpACh4) — _Eine Community von Entwicklern, die zum Aufbau eines Rahmens für überprüfbare Daten für Anwendungen beitragen_
+- [walt.id](https://discord.com/invite/AW8AgqJthZ) – _Eine Gemeinschaft von Entwicklern und Erstellern, die an Anwendungsfällen für dezentrale Identität in verschiedenen Branchen arbeiten_

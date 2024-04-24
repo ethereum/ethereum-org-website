@@ -49,7 +49,7 @@ Merkeziyetsiz tanımlayıcılar dağıtık defterlerde (blok zincirler) veya eş
 
 ## Merkeziyetsiz tanımlayıcıları mümkün kılan nedir? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Açık Anahtar Altyapısı (AAA) {#public-key-infrastructure}
+### 1. Açık Anahtar Altyapısı (AAA) {#public-key-cryptography}
 
 Açık Anahtar altyapısı (AAA) bir kuruluş veya birey için bir [açık anahtar](/glossary/#public-key) ve bir de [özel anahtar](/glossary/#private-key) oluşturan güvenlik önlemidir. Açık anahtar kriptografisi blok zincir ağlarında kullanıcı hesaplarını ve dijital varlıkların mülkiyetini doğrulamak için kullanılır.
 
@@ -109,7 +109,7 @@ Burada, zincir üstündeki tasdiklerin uygulamada nasıl çalışabileceğine bi
 
 ### Soulbound token'lar ve kimlik {#soulbound}
 
-[Soulbound token'lar](https://vitalik.ca/general/2022/01/26/soulbound.html) (aktarılamaz NFT'ler), belirli bir cüzdana özgü bilgileri toplamak için kullanılabilir. Bu, başarıları (örneğin, belirli bir çevrimiçi kursu bitirme veya bir oyunda bir eşik puanını geçme) veya topluluk katılımını temsil eden tokenleri içerebilen belirli bir Ethereum adresine bağlı benzersiz bir zincir-üstü kimlik oluşturur.
+[Soulbound token'lar](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (aktarılamaz NFT'ler), belirli bir cüzdana özgü bilgileri toplamak için kullanılabilir. Bu, başarıları (örneğin, belirli bir çevrimiçi kursu bitirme veya bir oyunda bir eşik puanını geçme) veya topluluk katılımını temsil eden tokenleri içerebilen belirli bir Ethereum adresine bağlı benzersiz bir zincir-üstü kimlik oluşturur.
 
 ## Merkeziyetsiz kimliğin avantajları {#benefits-of-decentralized-identity}
 

@@ -49,7 +49,7 @@ Gedecentraliseerde identificatiekenmerken worden opgeslagen op gedistribueerde l
 
 ## Wat maakt gedecentraliseerde identificatiekenmerken mogelijk? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Publieke sleutel-infrastructuur (PKI) {#public-key-infrastructure}
+### 1. Publieke sleutel-infrastructuur (PKI) {#public-key-cryptography}
 
 Publieke sleutel-infrastructuur (PKI) is een informatiebeveiligingsmaatregel die een [publieke sleutel](/glossary/#public-key) en [privé-sleutel](/glossary/#private-key) voor een entiteit genereert. Publieke sleutel-cryptografie wordt gebruikt in blockchain-netwerken om gebruikersidentiteiten te verifiëren en eigendom van digitale activa te bewijzen.
 
@@ -109,7 +109,7 @@ Hier is een voorbeeld om te laten zien hoe on-chain attesten in de praktijk zoud
 
 ### Zielsgebonden tokens en identiteit {#soulbound}
 
-[Zielsgebonden tokens](https://vitalik.ca/general/2022/01/26/soulbound.html) (niet-overdraagbare NFT's) kunnen worden gebruikt om informatie te verzamelen die uniek is voor een specifieke portemonnee. Dit creëert in feite een unieke on-chain identiteit gekoppeld aan een bepaald Ethereum-adres, dat tokens kan bevatten die prestaties (bijv. het voltooien van een specifieke online cursus of het verbreken van een score in een game) of deelname aan een gemeenschap vertegenwoordigen.
+[Zielsgebonden tokens](https://vitalik.eth.limo/general/2022/01/26/soulbound.html) (niet-overdraagbare NFT's) kunnen worden gebruikt om informatie te verzamelen die uniek is voor een specifieke portemonnee. Dit creëert in feite een unieke on-chain identiteit gekoppeld aan een bepaald Ethereum-adres, dat tokens kan bevatten die prestaties (bijv. het voltooien van een specifieke online cursus of het verbreken van een score in een game) of deelname aan een gemeenschap vertegenwoordigen.
 
 ## Voordelen van gedecentraliseerde identiteit {#benefits-of-decentralized-identity}
 

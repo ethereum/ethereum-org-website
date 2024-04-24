@@ -1,12 +1,12 @@
 ---
-title: Blok zincir köprülerine giriş
+title: Blokzincir köprülerine giriş
 description: Köprüler, kullanıcıların varlıklarını farklı blok zincirler üstünde taşımalarını sağlar
 lang: tr
 ---
 
 # Blokzincir köprüleri {#prerequisites}
 
-_Web3 L1 blok zincirler ve L2 ölçeklendirme çözümlerinin her birinin benzersiz yetenek ve ödünlestirmelerle tasarlandığı bir ekosisteme evrilmiştir. Blok zincir protokol sayısı arttıkça, [varlıkları zincirler arasında aktarma talebi](<https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)>) de artmıştır. Bu talebi karşılamak için köprülere ihtiyacımız var._
+_Web3 L1 blok zincirler ve L2 ölçeklendirme çözümlerinin her birinin benzersiz yetenek ve ödünlestirmelerle tasarlandığı bir ekosisteme evrilmiştir. Blok zincir protokol sayısı arttıkça, [varlıkları zincirler arasında aktarma talebi](https://dune.xyz/eliasimos/Bridge-Away-(from-Ethereum)) de artmıştır. Bu talebi karşılamak için köprülere ihtiyacımız var._
 
 <Divider />
 
@@ -30,7 +30,7 @@ Köprüler blok zincirleri birbirine bağlamak, aralarında bilgi ve token'ları
 
 Köprüler şunu etkinleştirir:
 
-- bilgi ve varlıkların zincirler arasında iletimini
+- bilgi ve varlıkların zincirler arası transferi.
 - dApp'ların birden çok blok zincirin güçlü yanını kullanmalarını - (protokoller şimdi inovasyon için daha fazla tasarım alanına sahipler) böylece kabiliyetlerini geliştirmelerini.
 - kullanıcıların yeni platformlara erişmelerini ve farklı zincirlerin faydalarını kullanmalarını.
 - farklı blok zincir ekosistemlerinden geliştiricilerin iş birliği yapmasını ve kullanıcılar için yeni platformlar inşa etmelerini sağlar.

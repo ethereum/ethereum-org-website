@@ -4,7 +4,7 @@ description: Un introduzione "non tecnica" per i principianti sulle prove a cono
 lang: it
 ---
 
-## Cosa sono le prove a conoscenza zero? {#what-are-zk-proofs}
+# Cosa sono le prove a conoscenza zero? {#what-are-zk-proofs}
 
 Una prova a conoscenza zero è un modo per provare la validità di una dichiarazione senza rivelarla. Il 'dimostratore' è la parte che tenta di provare una rivendicazione, mentre il 'validatore' è responsabile della sua convalida.
 
@@ -176,7 +176,7 @@ L'utilizzo di MACI _richiede_ la fiducia nel fatto che il coordinatore sia collu
 
 Ma nei casi in cui il coordinatore rimane onesto, la MACI rappresenta un potente strumento a garanzia della legittimità del voto on-chain. Ciò spiega la sua popolarità tra le applicazioni di finanziamento quadratico (es., [clr.fund](https://clr.fund/#/about/maci)) che fanno molto affidamento sull'integrità delle scelte di voto di ogni individuo.
 
-Scopri di più riguardo a [MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
+[Maggiori informazioni su MACI](https://privacy-scaling-explorations.github.io/maci/).
 
 ## Svantaggi dell'utilizzo delle prove a conoscenza zero {#drawbacks-of-using-zero-knowledge-proofs}
 
@@ -208,5 +208,5 @@ Le ZK-STARK sono considerate immuni alla minaccia dei computer quantistici, poic
 - [Una prova a conoscenza zero: migliorare la privacy su una Blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/): _Dmitry Lavrenov_
 - [zk-SNARK: un esempio e approfondimento realistico sulla conoscenza zero realistica](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK: creare fiducia verificabile, persino contro i computer quantistici](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Un'introduzione approssimativa a come sono possibili le ZK-SNARK](https://vitalik.ca/general/2021/01/26/snarks.html).- _Vitalik Buterin_
+- [Un'introduzione approssimativa a come sono possibili le ZK-SNARK](https://vitalik.eth.limo/general/2021/01/26/snarks.html).- _Vitalik Buterin_
 - [Cos'è la prova a conoscenza zero e qual è il suo ruolo nella Blockchain?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) - _LeewayHertz_

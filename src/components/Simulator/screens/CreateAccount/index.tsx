@@ -1,8 +1,9 @@
 import React, { useState } from "react"
 
+import type { PhoneScreenProps } from "@/lib/types"
+
 import { generateInvalidSafeSeed } from "@/lib/utils/generateSeed"
 
-import type { PhoneScreenProps } from "../../interfaces"
 import { ProgressCta } from "../../ProgressCta"
 import { WalletHome } from "../../WalletHome"
 
@@ -13,10 +14,7 @@ import { InteractiveWordSelector } from "./InteractiveWordSelector"
 import { RecoveryPhraseNotice } from "./RecoveryPhraseNotice"
 import { WelcomeScreen } from "./WelcomeScreen"
 
-export const CreateAccount: React.FC<PhoneScreenProps> = ({
-  nav,
-  ctaLabel,
-}) => {
+export const CreateAccount = ({ nav, ctaLabel }: PhoneScreenProps) => {
   const { progressStepper, step } = nav
   const [words, setWords] = useState<Array<string>>(generateInvalidSafeSeed())
   const [categoryIndex, setCategoryIndex] = useState(0)

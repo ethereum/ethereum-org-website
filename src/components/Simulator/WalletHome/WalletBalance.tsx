@@ -5,14 +5,14 @@ import { getMaxFractionDigitsUsd } from "../utils"
 
 import { AddressPill } from "./AddressPill"
 
-interface IProps extends BoxProps {
+type WalletBalanceProps = BoxProps & {
   usdAmount?: number
 }
 
-export const WalletBalance: React.FC<IProps> = ({
+export const WalletBalance = ({
   usdAmount = 0,
   ...boxProps
-}) => (
+}: WalletBalanceProps) => (
   <Box zIndex={1} {...boxProps}>
     <Text textAlign="center" color="body.medium" mb={{ base: 2, md: 4 }}>
       Your total

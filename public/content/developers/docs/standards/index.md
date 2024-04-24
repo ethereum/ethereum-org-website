@@ -18,7 +18,7 @@ Typically standards are introduced as [Ethereum Improvement Proposals](/eips/) (
 - [Introduction to Ethereum Governance](/governance/)
 - [Ethereum Governance Overview](https://web.archive.org/web/20201107234050/https://blog.bmannconsulting.com/ethereum-governance/) _March 31, 2019 - Boris Mann_
 - [Ethereum Protocol Development Governance and Network Upgrade Coordination](https://hudsonjameson.com/2020-03-23-ethereum-protocol-development-governance-and-network-upgrade-coordination/) _March 23, 2020 - Hudson Jameson_
-- [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) _(YouTube Playlist)_
+- [Playlist of all Ethereum Core Dev Meetings](https://www.youtube.com/@EthereumProtocol) _(YouTube Playlist)_
 
 ## Types of standards {#types-of-standards}
 
