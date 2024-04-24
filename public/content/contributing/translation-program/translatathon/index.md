@@ -17,8 +17,7 @@ We invite you to join us in breaking down language barriers and making ethereum.
 ## Overview {#overview}
 
 <InfoBanner emoji=":calendar:">
-  This event has passed. Stay tuned for the next events{" "}
-  <a href="https://twitter.com/ethdotorg">here</a>.
+  This event has passed. <a href="https://twitter.com/ethdotorg">Stay tuned for the next events</a>.
 </InfoBanner>
 
 ### When {#when}
