@@ -17,11 +17,9 @@ import type { ChildOnlyProp, Lang } from "@/lib/types"
 import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 
 import BeaconChainActions from "@/components/BeaconChainActions"
-import Breadcrumbs from "@/components/Breadcrumbs"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import FeedbackCard from "@/components/FeedbackCard"
 import { ContentHero } from "@/components/Hero"
-import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import { BaseLink } from "@/components/Link"
 import {
@@ -32,7 +30,6 @@ import {
 } from "@/components/MdComponents"
 import MergeArticleList from "@/components/MergeArticleList"
 import MergeInfographic from "@/components/MergeInfographic"
-import OldHeading from "@/components/OldHeading"
 import UpgradeStatus from "@/components/UpgradeStatus"
 
 import { getSummaryPoints } from "@/lib/utils/getSummaryPoints"
@@ -42,34 +39,10 @@ import { MAIN_CONTENT_ID } from "@/lib/constants"
 
 const Page = (props: FlexProps) => <MdPage sx={{}} {...props} />
 
-const Title = (props: ChildOnlyProp) => (
-  <OldHeading
-    as="h1"
-    fontSize="2.5rem"
-    fontWeight="bold"
-    lineHeight={1.4}
-    mt={0}
-    {...props}
-  />
-)
-
 type ContainerProps = Pick<BoxProps, "children" | "dir">
 
 const Container = (props: ContainerProps) => (
   <Box position="relative" {...props} />
-)
-
-const HeroContainer = (props: ChildOnlyProp) => (
-  <Flex
-    justify="flex-end"
-    direction={{ base: "column-reverse", lg: "row" }}
-    bg="cardGradient"
-    boxShadow="inset 0px -1px 0px rgba(0, 0, 0, 0.1)"
-    minH="608px"
-    maxH={{ base: "full", lg: "608px" }}
-    w="full"
-    {...props}
-  />
 )
 
 const MoreContent = (props: ChildOnlyProp & { to: string }) => (
@@ -86,29 +59,6 @@ const MoreContent = (props: ChildOnlyProp & { to: string }) => (
     {...props}
   />
 )
-
-const TitleCard = (props: ChildOnlyProp) => {
-  const cardBoxShadow = useToken("colors", "cardBoxShadow")
-
-  return (
-    <Flex
-      direction="column"
-      justify="flex-start"
-      position={{ base: "relative", lg: "absolute" }}
-      bg={{ base: "ednBackground", lg: "background.base" }}
-      border="1px"
-      borderColor="border"
-      borderRadius="sm"
-      boxShadow={{ lg: cardBoxShadow }}
-      maxW={{ base: "full", lg: "640px" }}
-      p={8}
-      top={{ lg: 24 }}
-      insetInlineStart={{ lg: 24 }}
-      zIndex={10}
-      {...props}
-    />
-  )
-}
 
 const LastUpdated = (props: ChildOnlyProp) => (
   <Text
