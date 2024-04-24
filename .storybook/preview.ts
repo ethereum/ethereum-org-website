@@ -1,11 +1,15 @@
 import { extendBaseTheme } from "@chakra-ui/react"
 import type { Preview } from "@storybook/react"
+import isChromatic from "chromatic/isChromatic"
 
 import theme from "../src/@chakra-ui/theme"
 
 import i18n, { baseLocales } from "./i18next"
 
 import "../src/styles/global.css"
+import { MotionGlobalConfig } from "framer-motion"
+
+MotionGlobalConfig.skipAnimations = isChromatic()
 
 const extendedTheme = extendBaseTheme(theme)
 

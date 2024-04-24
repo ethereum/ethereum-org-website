@@ -20,6 +20,6 @@
       "@/public/*": ["./public/*"]
     }
   },
-  "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["./src/**/*", "next-env.d.ts", "**/*.ts", "**/*.tsx", ".storybook/**/*"],
   "exclude": ["node_modules", "./public", "./src/intl"]
 }
