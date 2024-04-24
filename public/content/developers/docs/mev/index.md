@@ -20,6 +20,8 @@ In theory MEV accrues entirely to validators because they are the only party tha
 
 Validators do get a portion of the full MEV amount anyway because searchers are willing to pay high gas fees (which go to the validator) in exchange for higher likelihood of inclusion of their profitable transactions in a block. Assuming searchers are economically rational, the gas fee that a searcher is willing to pay will be an amount up to 100% of the searcher's MEV (because if the gas fee was higher, the searcher would lose money).
 
+![Screenshot from 2024-04-24 00-30-49](https://github.com/ethereum/ethereum-org-website/assets/99739569/a6a92c68-32db-4730-979b-0b2dae79b47a)
+
 With that, for some highly competitive MEV opportunities, such as [DEX arbitrage](#mev-examples-dex-arbitrage), searchers may have to pay 90% or even more of their total MEV revenue in gas fees to the validator because so many people want to run the same profitable arbitrage trade. This is because the only way to guarantee that their arbitrage transaction runs is if they submit the transaction with the highest gas price.
 
 ### Gas golfing {#mev-extraction-gas-golfing}
