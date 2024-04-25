@@ -1,14 +1,37 @@
 name: Lighthouse CI
-on: push
+
+on:
+  push:
+    branches:
+      - master
+      - staging
+      - performance/**
+      - testlighthouseci # tmp - just to test the workflow in the current branch
+
 jobs:
   lighthouse:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v4
+      - name: Wait for Netlify Deploy
+        uses: probablyup/wait-for-netlify-action@3.2.0
+        id: waitForDeployment
+        with:
+          site_id: "e8f2e766-888b-4954-8500-1b647d84db99"
+        env:
+          NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v11
         with:
-          urls: "https://ethereum.org/en/"
+          urls: |
+            ${{ steps.netlify.outputs.url }}/en/
+            ${{ steps.netlify.outputs.url }}/en/wallets/find-wallet/
+            ${{ steps.netlify.outputs.url }}/en/staking/
+            ${{ steps.netlify.outputs.url }}/en/whitepaper/
+            ${{ steps.netlify.outputs.url }}/en/nft/
+            ${{ steps.netlify.outputs.url }}/en/developers/docs/intro-to-ethereum/
+            ${{ steps.netlify.outputs.url }}/en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/
           runs: 3 # run three times
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
