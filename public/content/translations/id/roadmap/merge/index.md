@@ -11,7 +11,7 @@ summaryPoint3: Penggabungan mengacu pada penggabungan Jaringan Utama Ethereum as
 summaryPoint4: Penggabungan ini mengurangi konsumsi energi Ethereum sebesar ~99,95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Penggabungan telah dilaksanakan pada tanggal 15 September 2022. Hal ini menyelesaikan transisi Ethereum ke konsensus bukti taruhan, yang secara resmi tidak lagi menggunakan bukti kerja dan mengurangi konsumsi energi sebesar ~99,95%.
 </UpgradeStatus>
 
