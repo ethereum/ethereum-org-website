@@ -1371,7 +1371,7 @@ Returns information about a uncle of a block by number and uncle index position.
 
 **Parameters**
 
-1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe""`, `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
+1. `QUANTITY|TAG` - a block number, or the string `"earliest"`, `"latest"`, `"pending"`, `"safe"`, `"finalized"`, as in the [default block parameter](/developers/docs/apis/json-rpc/#default-block).
 2. `QUANTITY` - the uncle's index position.
 
 ```js

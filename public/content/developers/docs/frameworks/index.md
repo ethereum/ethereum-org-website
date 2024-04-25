@@ -101,6 +101,12 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [GitHub](https://github.com/chainstack)
 - [Discord](https://discord.gg/BSb5zfp9AT)
 
+**Crossmint -** **_Enterprise-grade web3 development platform, that allows you to build NFT applications on all major chains EVM Chains(and others)._**
+
+- [Website](https://www.crossmint.com)
+- [Documentation](https://docs.crossmint.com)
+- [Discord](https://discord.com/invite/crossmint)
+
 **Brownie -** **_Python-based development environment and testing framework._**
 
 - [Documentation](https://eth-brownie.readthedocs.io/en/latest/)

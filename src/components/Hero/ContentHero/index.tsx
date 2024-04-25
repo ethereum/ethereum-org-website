@@ -38,7 +38,7 @@ const ContentHero = (props: ContentHeroProps) => {
             <HStack spacing="4">
               {buttons!.map((button, idx) => {
                 if (!button) return
-                return <CallToAction key={idx} {...button} />
+                return <CallToAction key={idx} index={idx} {...button} />
               })}
             </HStack>
           </Stack>
