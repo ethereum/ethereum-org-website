@@ -144,7 +144,7 @@ export const layer2Data: Rollups = {
       purpose: ["universal"],
       descriptionKey: "zksync-description",
       image: zkSyncImage,
-      background: "#11142b",
+      background: "black",
     },
     {
       name: "ZKSpace",
