@@ -13,6 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+      - uses: actions/checkout@v4
       - name: Sleep for 45 minutes
         run: sleep 2700
       - name: Wait for Netlify Deploy
