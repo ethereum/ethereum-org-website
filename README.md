@@ -1831,6 +1831,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/AbiPrescott"><img src="https://avatars.githubusercontent.com/u/140613896?v=4?s=100" width="100px;" alt="Abi Prescott"/><br /><sub><b>Abi Prescott</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/issues?q=author%3AAbiPrescott" title="Bug reports">🐛</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/skyminelabs"><img src="https://avatars.githubusercontent.com/u/57817726?v=4?s=100" width="100px;" alt="skyminelabs"/><br /><sub><b>skyminelabs</b></sub></a><br /><a href="#maintenance-skyminelabs" title="Maintenance">🚧</a></td>
     </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://olorunsogo-portfolio-sand.vercel.app/"><img src="https://avatars.githubusercontent.com/u/99739569?v=4?s=100" width="100px;" alt="sogobanwo"/><br /><sub><b>sogobanwo</b></sub></a><br /><a href="#maintenance-sogobanwo" title="Maintenance">🚧</a></td>
+    </tr>
   </tbody>
 </table>
 
