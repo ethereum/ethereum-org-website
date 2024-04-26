@@ -28,13 +28,13 @@ jobs:
         uses: treosh/lighthouse-ci-action@v11
         with:
           urls: |
-            ${{ steps.netlify.outputs.url }}/en/
-            ${{ steps.netlify.outputs.url }}/en/wallets/find-wallet/
-            ${{ steps.netlify.outputs.url }}/en/staking/
-            ${{ steps.netlify.outputs.url }}/en/whitepaper/
-            ${{ steps.netlify.outputs.url }}/en/nft/
-            ${{ steps.netlify.outputs.url }}/en/developers/docs/intro-to-ethereum/
-            ${{ steps.netlify.outputs.url }}/en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/
+            ${{ steps.waitForDeployment.outputs.url }}/en/
+            ${{ steps.waitForDeployment.outputs.url }}/en/wallets/find-wallet/
+            ${{ steps.waitForDeployment.outputs.url }}/en/staking/
+            ${{ steps.waitForDeployment.outputs.url }}/en/whitepaper/
+            ${{ steps.waitForDeployment.outputs.url }}/en/nft/
+            ${{ steps.waitForDeployment.outputs.url }}/en/developers/docs/intro-to-ethereum/
+            ${{ steps.waitForDeployment.outputs.url }}/en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/
           runs: 3 # run three times
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
