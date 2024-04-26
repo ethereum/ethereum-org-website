@@ -9,9 +9,8 @@ async function main() {
   await getAndSaveDirectories()
   const directoryIds = getDirectoryIds()
   await fetchAndSaveFileIds(directoryIds)
-  // temp remove
-  // const translatedMarkdownPaths = await getTranslatedMarkdownPaths()
-  // await getTranslationCostsReports(translatedMarkdownPaths)
+  const translatedMarkdownPaths = await getTranslatedMarkdownPaths()
+  await getTranslationCostsReports(translatedMarkdownPaths)
 }
 
 main()
