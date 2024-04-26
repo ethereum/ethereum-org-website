@@ -14,14 +14,14 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-      - name: Sleep for 45 minutes
-        run: sleep 2700
+      - name: Sleep for 60 minutes
+        run: sleep 3600
       - name: Wait for Netlify Deploy
         uses: probablyup/wait-for-netlify-action@3.2.0
         id: waitForDeployment
         with:
           site_id: "e8f2e766-888b-4954-8500-1b647d84db99"
-          max_timeout: 5400
+          max_timeout: 900
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
       - name: Audit URLs using Lighthouse
