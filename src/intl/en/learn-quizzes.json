@@ -353,7 +353,7 @@
   "i003-c-explanation": "Changes require voting by the members. Services offered are handled automatically in a decentralized manner.",
   "i003-d-label": "Restricted regarding who can suggest changes",
   "i003-d-explanation": "Usually, every DAO member can suggest changes.",
-  "i004-prompt": "What is essential about Smart Contracts for DAOs?",
+  "i004-prompt": "What is essential about smart contracts for DAOs?",
   "i004-a-label": "The smart contract code can be modified",
   "i004-a-explanation": "Once the contract is live on Ethereum, no one can change the rules except by a vote. This allows the DAO to run by the rules it was programmed with.",
   "i004-b-label": "It has an individual owner who retains authority to make changes and send from the treasury.",
