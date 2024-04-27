@@ -1,4 +1,4 @@
-import { extendBaseTheme } from "@chakra-ui/react"
+import { extendBaseTheme, usePrefersReducedMotion } from "@chakra-ui/react"
 import type { Preview } from "@storybook/react"
 import isChromatic from "chromatic/isChromatic"
 
@@ -31,6 +31,9 @@ const preview: Preview = {
     },
     backgrounds: {
       disable: true,
+    },
+    chromatic: {
+      prefersReducedMotion: "reduce",
     },
     chakra: {
       theme: extendedTheme,
