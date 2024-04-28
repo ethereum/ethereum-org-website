@@ -20,10 +20,10 @@ type SIZE_SCALE = { [key in (typeof HEADING_SIZES)[number]]: SCALE_VALUE }
 const lineHeightScale: SIZE_SCALE = {
   "4xl": "6xs",
   "3xl": ["6xs", null, null, "5xs"],
-  "2xl": ["4xs", null, null, "5xs"],
+  "2xl": ["4xs", null, null, "6xs"],
   xl: ["2xs", null, null, "4xs"],
-  lg: ["2xs", null, null, "3xs"],
-  md: "xs",
+  lg: ["2xs", null, null, "4xs"],
+  md: ["xs", null, null, "4xs"],
   sm: "base",
   xs: "base",
 }
