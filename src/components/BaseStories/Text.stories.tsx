@@ -21,6 +21,16 @@ const meta = {
   component: Text,
   parameters: {
     layout: "none",
+    chromatic: {
+      modes: {
+        sm: {
+          viewport: "sm",
+        },
+        "2xl": {
+          viewport: "2xl",
+        },
+      },
+    },
   },
   decorators: [
     (Story) => (

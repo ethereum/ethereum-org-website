@@ -16,6 +16,16 @@ const meta = {
   component: HeadingComponent,
   parameters: {
     layout: null,
+    chromatic: {
+      modes: {
+        sm: {
+          viewport: "sm",
+        },
+        "2xl": {
+          viewport: "2xl",
+        },
+      },
+    },
   },
   decorators: [
     (Story) => (
