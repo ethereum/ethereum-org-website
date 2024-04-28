@@ -7,8 +7,6 @@ import {
   Flex,
   type FlexProps,
   type HeadingProps,
-  ListItem as ChakraListItem,
-  type ListItemProps,
   type ListProps,
   OrderedList as ChakraOrderedList,
   UnorderedList as ChakraUnorderedList,
@@ -138,10 +136,6 @@ const OrderedList = (props: ListProps) => (
   <ChakraOrderedList ms="1.45rem" {...props} />
 )
 
-const ListItem = (props: ListItemProps) => (
-  <ChakraListItem {...props} />
-)
-
 // Apply styles for classes within markdown here
 const Content = (props: ChildOnlyProp) => {
   const mdBreakpoint = useToken("breakpoints", "md")
@@ -190,7 +184,6 @@ export const docsComponents = {
   p: Paragraph,
   ul: UnorderedList,
   ol: OrderedList,
-  li: ListItem,
   pre: Codeblock,
   ...mdxTableComponents,
   Badge,

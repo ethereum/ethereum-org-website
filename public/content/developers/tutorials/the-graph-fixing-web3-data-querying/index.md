@@ -242,7 +242,7 @@ export function handleNewBet(event: PlacedBet): void {
 
 ## Using it in the Frontend {#using-it-in-the-frontend}
 
-Using something like Apollo Boost, you can easily integrate The Graph in your React dapp (or Apollo-Vue). Especially when using React hooks and Apollo, fetching data is as simple as writing a single GraphQl query in your component. A typical setup might look like this:
+Using something like Apollo Boost, you can easily integrate The Graph in your React dapp (or Apollo-Vue). Especially when using React hooks and Apollo, fetching data is as simple as writing a single GraphQL query in your component. A typical setup might look like this:
 
 ```javascript
 // See all subgraphs: https://thegraph.com/explorer/

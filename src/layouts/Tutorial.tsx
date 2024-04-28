@@ -3,7 +3,6 @@ import {
   Badge,
   Box,
   type BoxProps,
-  chakra,
   Divider,
   Flex,
   type HeadingProps,
@@ -124,10 +123,6 @@ const Paragraph = (props: TextProps) => (
   <Text as="p" mt={8} mb={4} mx={0} color="text300" fontSize="md" {...props} />
 )
 
-const ListItem = (props) => {
-  return <chakra.li color="text300" {...props} />
-}
-
 const KBD = (props) => {
   const borderColor = useToken("colors", "primary.base")
 
@@ -150,7 +145,6 @@ export const tutorialsComponents = {
   h4: Heading4,
   p: Paragraph,
   kbd: KBD,
-  li: ListItem,
   pre: Codeblock,
   ...mdxTableComponents,
   Badge,

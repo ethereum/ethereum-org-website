@@ -11,7 +11,7 @@ summaryPoint3: Fuziunea se referă la fuziunea dintre Rețeaua principală Ether
 summaryPoint4: Fuziunea a redus consumul de energie al Ethereum cu aproximativ 99,95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Fuziunea a avut loc în 15 septembrie 2022. Aceasta a finalizat tranziția Ethereum la consensul cu dovada mizei, scoțând din uz oficial dovada muncii și reducând consumul de energie cu aproximativ 99,95%.
 </UpgradeStatus>
 

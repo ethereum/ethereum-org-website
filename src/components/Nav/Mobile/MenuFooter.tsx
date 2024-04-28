@@ -41,7 +41,7 @@ const MenuFooter = ({
       py={0}
       mt="auto"
     >
-      <Grid templateColumns="repeat(3, 1fr)" w="full">
+      <Grid templateColumns="repeat(2, 1fr)" w="full">
         <FooterButton
           icon={MdSearch}
           onClick={() => {
@@ -52,6 +52,7 @@ const MenuFooter = ({
         >
           <FooterItemText>{t("search")}</FooterItemText>
         </FooterButton>
+
         <FooterButton icon={ThemeIcon} onClick={toggleColorMode}>
           <FooterItemText>{t(themeLabelKey)}</FooterItemText>
         </FooterButton>

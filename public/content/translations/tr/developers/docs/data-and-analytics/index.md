@@ -30,7 +30,7 @@ Geliştiriciler, [GraphQL](https://graphql.org/)'u kullanarak, alt grafikler ola
 
 ## İstemci çeşitliliği
 
-[İstemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity/), Ethereum ağı için genel sağlık açısından önemlidir çünkü hatalara veya açıklardan kaynaklanabilecek istismar ve sorunlara karşı esneklik veya direnç sağlar. Şu anda [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://rated.network/), [execution-diversity.info](https://execution-diversity.info/) ve [Ethernodes](https://ethernodes.org/) dahil olmak üzere çeşitli istemci çeşitliliği gösterge panelleri bulunmaktadır.
+[İstemci çeşitliliği](/developers/docs/nodes-and-clients/client-diversity/), Ethereum ağı için genel sağlık açısından önemlidir çünkü hatalara veya açıklardan kaynaklanabilecek istismar ve sorunlara karşı esneklik veya direnç sağlar. Şu anda [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://rated.network/), [supermajority.info](https://supermajority.info//) ve [Ethernodes](https://ethernodes.org/) dahil olmak üzere çeşitli istemci çeşitliliği gösterge panelleri bulunmaktadır.
 
 ## Dune Analytics {#dune-analytics}
 

@@ -11,7 +11,7 @@ hideEditButton: true
 
 <UpcomingEventsList/>
 
-これはコミュニティにより、維持されているイベントのリストですが、すべてのイベントを網羅するものではありません。 リストに追加すべきイーサリアムのイベントをご存じの場合は、 [ぜひ追加してください](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.json)。
+これはコミュニティにより、維持されているイベントのリストですが、すべてのイベントを網羅するものではありません。 リストに追加すべきイーサリアムのイベントをご存じの場合は、 [こちら](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-events.ts)に加えてください！
 
 ## イーサリアムのミートアップ {#meetups}
 
@@ -19,6 +19,6 @@ hideEditButton: true
 
 <MeetupList />
 
-自分自身でミートアップを開催することにご興味がある場合は、 ConsenSys のイニシアチブで、イーサリアムのミートアップ・コミュニティをサポートしている[BUIDL Network](https://consensys.net/developers/buidlnetwork/)をチェックしてみてください。
+自分自身でミートアップを開催することにご興味がある場合は、 ConsenSysのイニシアチブで、イーサリアムのミートアップ・コミュニティをサポートしている[BUIDL Network](https://consensys.net/developers/buidlnetwork/)をチェックしてみてください。
 
 これはコミュニティにより作成されたリストで、すべてを網羅するものではありません。 こちらの[イーサリアムのミートアップ](https://www.meetup.com/topics/ethereum/)からさらに多くのミートアップを見つけることができます。 このリストに追加すべき、アクティブなミートアップグループをご存知の場合は、 [ぜひ追加してください](https://github.com/ethereum/ethereum-org-website/blob/dev/src/data/community-meetups.json)。

@@ -11,7 +11,7 @@ summaryPoint3: Под слиянием понимается объединени
 summaryPoint4: Слияние уменьшило потребление энергии Ethereum на ~99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Слияние было выполнено 15 сентября 2022 года. Это завершило переход Ethereum к консенсусу на основе доказательства владения с официальным отказом от доказательства работы и сокращением энергопотребления на ~99,95 %.
 </UpgradeStatus>
 

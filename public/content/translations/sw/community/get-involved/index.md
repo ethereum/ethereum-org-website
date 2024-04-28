@@ -73,7 +73,7 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 
 ## Wasimamizi wa bidhaa <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Ikolijia ya Ethereum inahitaji talanta zako! Makampuni mengi yanatoa ajira kwa wasimsmizi wa bidhaa. Kama unataka kuanza kwa kuchangia kwenye mradi wa vyanzo huria, wasiliana na [Wafugaji wa Paka wa Ethereum](https://discord.com/invite/Nz6rtfJ8Cu) ama [MetaCartel](https://www.metacartel.org/)
+- Ikolijia ya Ethereum inahitaji talanta zako! Makampuni mengi yanatoa ajira kwa wasimsmizi wa bidhaa. Kama unataka kuanza kwa kuchangia kwenye mradi wa vyanzo huria, wasiliana na [Wafugaji wa Paka wa Ethereum](https://discord.com/invite/Nz6rtfJ8Cu) ama [RaidGuild](https://www.raidguild.org/)
 
 ## Masoko <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -102,15 +102,12 @@ Ikolojia ya Ethereum iko njiani katika kufadhili bidhaa za umma na miradi inayol
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Tangaza dhana ya DAO katika nyanja zisizo za kiufundi na usaidie watu kupata thamani kupitia DAO._
 - [Msanidi DAO](https://www.developerdao.com/) [@Msanidi_dao](https://twitter.com/developer_dao) - _Jumuiya ya wajenzi wanaoamini katika umiliki wa ushirika wa mtandao_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Mfanyakazi huru wa Web3 akiafanya kazi kama DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Uundaji wa ugatiuzi& Utawala wa dApps& itifaki_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Utawala wa jumuiya ya DAOhaus_
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Superhero franchiseinayomilikiwa na jamii_
-- [LexDAO](https://lexdao.coop)[@lex_DAO](https://twitter.com/lex_DAO) - _Uhandisi wa kisheria_
+- [LexDAO](https://lexdao.org)[@lex_DAO](https://twitter.com/lex_DAO) - _Uhandisi wa kisheria_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Jumuiya ya wasanii_
 - [MetaCartel](https://metacartel.org) [@Metaa_Cartel](https://twitter.com/Meta_Cartel) - _kiota cha DAO_
 - [Ubia wa MetaCartel](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Ubia wa kripto za kabla ya kuanzishwa_
 - [MetaMchezo](https://metagame.wtf) [@MetaShamba](https://twitter.com/MetaFam) - _MMORPG makanika ya Mchezo kwenye maisha halisi_
 - [KiwandaMeta](https://metafactory.ai) [@KiwandaMeta](https://twitter.com/TheMetaFactory) - _Chapa ya Mavazi ya Nusu dijiti na halisi_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _miradi ilioongozwa na wanawake_
 - [Moloch](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Jumuiya inayolenga kutegemeza uboreshwaji wa Ethereum_
 - [Chama cha Uvamizi](https://raidguild.org) [@ChamachaUmavimizi](https://twitter.com/RaidGuild) - _Mkusanyiko wa wajenzi wa Web3_
