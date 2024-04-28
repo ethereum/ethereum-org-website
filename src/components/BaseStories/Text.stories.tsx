@@ -23,8 +23,8 @@ const meta = {
     layout: "none",
     chromatic: {
       modes: {
-        sm: {
-          viewport: "sm",
+        md: {
+          viewport: "md",
         },
         "2xl": {
           viewport: "2xl",
