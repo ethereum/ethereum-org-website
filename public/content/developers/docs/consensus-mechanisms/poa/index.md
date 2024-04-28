@@ -4,7 +4,7 @@ description: An explanation of the proof-of-authority consensus protocol and its
 lang: en
 ---
 
-Proof-of-Authority is a reputation-based consensus algorithm that is a modified version of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). It is mostly used by private chains, testnets, and local development networks. PoA is a reputation-based consensus algorithm that requires trusting a set of authorized signers to produce blocks, instead of a stake-based mechanism in PoS.
+**Proof-of-authority (PoA)** is a reputation-based consensus algorithm that is a modified version of [proof-of-stake](/developers/docs/consensus-mechanisms/pos/). It is mostly used by private chains, testnets, and local development networks. PoA is a reputation-based consensus algorithm that requires trusting a set of authorized signers to produce blocks, instead of a stake-based mechanism in PoS.
 
 ## Prerequisites {#prerequisites}
 
