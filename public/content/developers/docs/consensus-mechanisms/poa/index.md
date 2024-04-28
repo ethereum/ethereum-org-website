@@ -32,7 +32,7 @@ There may be a situation where small forks occur, the difficulty of a block depe
 
 It may happen that a malicious user gets added to the list of signers, or that a signing key/machine is compromised. In such a scenario the protocol needs to be able to defend itself against reorganizations and spamming. The proposed solution is that given a list of N authorized signers, any signer may only mint 1 block out of every K. This ensures that damage is limited, and the remainder of the miners can vote out the malicious user.
 
-### Censoring signers {#censoring-signers}
+### Censorship {#censorship-attack}
 
 Another interesting attack vector is if a signer (or group of signers) attempts to censor blocks that vote on removing them from the authorization list. To work around this, the allowed minting frequency of signers is restricted to 1 out of N/2. This ensures that malicious signers need to control at least 51% of signing accounts, at which point they would effectively become the new source-of-truth for the chain.
 
