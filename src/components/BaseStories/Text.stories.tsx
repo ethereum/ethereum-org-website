@@ -21,16 +21,6 @@ const meta = {
   component: Text,
   parameters: {
     layout: "none",
-    chromatic: {
-      modes: {
-        md: {
-          viewport: "md",
-        },
-        "2xl": {
-          viewport: "2xl",
-        },
-      },
-    },
   },
   decorators: [
     (Story) => (
@@ -155,6 +145,18 @@ export const Link: StoryObj<typeof ChakraLink> = {
 }
 
 export const BodyCopy: Story = {
+  parameters: {
+    chromatic: {
+      modes: {
+        md: {
+          viewport: "md",
+        },
+        "2xl": {
+          viewport: "2xl",
+        },
+      },
+    },
+  },
   render: () => (
     <Box maxW="prose" px="4">
       <Text>
