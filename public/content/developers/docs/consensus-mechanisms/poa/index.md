@@ -65,7 +65,7 @@ In a Proof-of-Authority (PoA) network, if for example there are 10 authorized si
 
 ### More of a visual learner? {#visual-learner}
 
-Watch a visual explanation of Proof-of-Authority:
+Watch a visual explanation of proof-of-authority:
 
 <YouTube id="Mj10HSEM5_8" />
 
