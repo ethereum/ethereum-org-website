@@ -36,7 +36,7 @@ It may happen that a malicious user gets added to the list of signers, or that a
 
 Another interesting attack vector is if a signer (or group of signers) attempts to censor blocks that vote on removing them from the authorization list. To work around this, the allowed minting frequency of signers is restricted to 1 out of N/2. This ensures that malicious signers need to control at least 51% of signing accounts, at which point they would effectively become the new source-of-truth for the chain.
 
-### Spamming signers {#spamming-signers}
+### Spam {#spam-attack}
 
 Another small attack vector is malicious signers injecting new vote proposals inside every block they mint. Since nodes need to tally up all votes to create the actual list of authorized signers, they need to track all votes through time. Without placing a limit on the vote window, this could grow slowly, yet unbounded. The solution is to place a _moving_ window of W blocks after which votes are considered stale. _A reasonable window might be 1-2 epochs._
 
