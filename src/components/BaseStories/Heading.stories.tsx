@@ -65,10 +65,7 @@ const headingScale: Array<HeadingProps> = [
 ]
 
 export const Heading: Story = {
-  args: {
-    children: <Translation id="page-index:page-index-title" />,
-  },
-  render: (args) => (
+  render: () => (
     <VStack w="full">
       <Box>
         Adjust the viewport to below &quot;md&quot; to see the font size and
@@ -86,7 +83,7 @@ export const Heading: Story = {
               {(obj.size as string) || "xl"}
             </HeadingComponent>
             <HeadingComponent flex="3" {...obj}>
-              {args.children}
+              <Translation id="page-index:page-index-title" />
             </HeadingComponent>
           </Flex>
         ))}
