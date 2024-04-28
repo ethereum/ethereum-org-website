@@ -118,7 +118,7 @@ function sortMarkdownPathsIntoLanguages(
     const langIndex = path.indexOf(translationDir) + translationDir.length
 
     // RegEx to grab the root of the path (e.g. the lang code for translated files)
-    const regex = /^([^\/]+)\//
+    const regex = /^([^/]+)\//
     const match = path.substring(langIndex).match(regex)
     const lang = isTranslation && match && match.length > 1 ? match[1] : "en"
 
@@ -226,10 +226,7 @@ function processMarkdown(path: string) {
 
   // Check for links missing text
   while ((linkTextMissingMatch = LINK_TEXT_MISSING_REGEX.exec(markdownFile))) {
-    const lineNumber = getLineNumber(
-      markdownFile,
-      linkTextMissingMatch.index
-    )
+    const lineNumber = getLineNumber(markdownFile, linkTextMissingMatch.index)
     console.warn(`Link text missing: ${path}:${lineNumber}`)
   }
 

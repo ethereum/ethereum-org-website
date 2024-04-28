@@ -34,6 +34,7 @@ walletMnemonic.signTransaction(tx)
 // { Promise: '0xf865808080948ba1f109551bd432803012645ac136ddd6...dfc' }
 
 // Connect to the Ethereum network using a provider
+// eslint-disable-next-line no-undef
 const wallet = walletMnemonic.connect(provider)
 
 // Query the network

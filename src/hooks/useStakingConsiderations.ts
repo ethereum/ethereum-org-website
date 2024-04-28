@@ -403,7 +403,7 @@ export const useStakingConsiderations = ({
   }
 
   const indicatorSvgStyle = { width: 20, height: "auto" }
-  const StyledSvg = !!Svg
+  const StyledSvg = Svg
     ? chakra(Svg, {
         baseStyle: {
           path: {
