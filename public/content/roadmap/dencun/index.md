@@ -48,6 +48,7 @@ While regular Ethereum nodes will always hold the _current state_ of the network
 _Historical_ blob data may be desired for a variety of reasons and can be stored and accessed using several decentralized protocols:
 
 - **Third-party indexing protocols**, such as The Graph, store this data through a decentralized network of node operators incentivized by crypto-economic mechanisms.
+- **[Blocknative Blob Archive](https://docs.blocknative.com/blocknative-data-archive/blob-archive)** stores all blobs that enter the mempool (confirmed on-chain or not) on the Ethereum network. Blob history accessable via API.
 - **BitTorrent** is a decentralized protocol where volunteers can hold and distribute this data to others.
 - **[Ethereum portal network](/developers/docs/networking-layer/portal-network/)** aims to provide access to all Ethereum data through a decentralized network of node operators by distributing data among participants akin to BitTorrent.
 - **Individual users** are always free to store their own copies of any data they wish for historical reference.
