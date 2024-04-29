@@ -23,17 +23,17 @@
   [[plugins.inputs.audits]]
     path = "/en/"
   [[plugins.inputs.audits]]
-    url = "/en/wallets/find-wallet/"
+    path = "/en/wallets/find-wallet/"
   [[plugins.inputs.audits]]
-    url = "/en/staking/"
+    path = "/en/staking/"
   [[plugins.inputs.audits]]
-    url = "/en/whitepaper/"
+    path = "/en/whitepaper/"
   [[plugins.inputs.audits]]
-    url = "/en/nft/"
+    path = "/en/nft/"
   [[plugins.inputs.audits]]
-    url = "/en/developers/docs/intro-to-ethereum/"
+    path = "/en/developers/docs/intro-to-ethereum/"
   [[plugins.inputs.audits]]
-    url = "/en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
+    path = "/en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
 
 [functions]
   included_files = [
