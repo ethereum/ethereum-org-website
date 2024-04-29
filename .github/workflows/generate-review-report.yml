@@ -24,7 +24,7 @@ jobs:
       - name: Run script
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/reports/generateReviewReport.ts
         env:
-          CROWDIN_API_KEY: ${{ secrets.CROWDIN_TRANSLATION_STATUS_API_KEY }}
+          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
 
       - name: Upload output as artifact
