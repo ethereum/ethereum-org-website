@@ -21,19 +21,19 @@
   package = "@netlify/plugin-lighthouse"
 
   [[plugins.inputs.audits]]
-    path = "/en/"
+    path = "en/"
   [[plugins.inputs.audits]]
-    path = "/en/wallets/find-wallet/"
+    path = "en/wallets/find-wallet/"
   [[plugins.inputs.audits]]
-    path = "/en/staking/"
+    path = "en/staking/"
   [[plugins.inputs.audits]]
-    path = "/en/whitepaper/"
+    path = "en/whitepaper/"
   [[plugins.inputs.audits]]
-    path = "/en/nft/"
+    path = "en/nft/"
   [[plugins.inputs.audits]]
-    path = "/en/developers/docs/intro-to-ethereum/"
+    path = "en/developers/docs/intro-to-ethereum/"
   [[plugins.inputs.audits]]
-    path = "/en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
+    path = "en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/"
 
 [functions]
   included_files = [
