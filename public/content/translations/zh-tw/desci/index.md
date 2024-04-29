@@ -68,7 +68,7 @@ summaryPoint3: 以開放科學運動為原則。
 
 研究顯示，同一個提案被提交到不同的小組時，結果卻大相徑庭，可見資助審查小組難以選出高品質提案。 隨著資金變得越來越稀缺，這些款項都集中在少數資深研究者與較為保守的研究計劃上。 這導致了一個各方為資金搶破頭的環境，還鞏固了不健康的激勵措施，並抑制創新。
 
-Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型，因而有可能改善這種糟糕的融資模型。 Web3 工具包括[追溯性公共財產資金](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)、[平方募資法](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)、[去中心化自治組織治理](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead)和[代幣化激勵結構](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)，這些都可以徹底改變科研融資現況。
+Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型，因而有可能改善這種糟糕的融資模型。 [追溯性公共財募資](https://medium.com/ethereum-optimism/retroactive-public-goods-funding-33c9b7d00f0c)、[平方募資](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2003531)、[去中心化自治組織治理](https://www.antler.co/blog/daos-and-web3-governance-the-promise-implications-and-challenges-ahead)及[代幣化激勵結構](https://cdixon.org/2017/05/27/crypto-tokens-a-breakthrough-in-open-network-design)都是科學募資的革命性 Web3 工具。
 
 ### 知識產權所有權和開發 {#ip-ownership}
 
@@ -76,7 +76,7 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 
 就像非同質化代幣可以將未來交易的收入返還給原創作者一樣，你可以建立透明的價值歸屬鏈來獎勵研究人員、管理機構（如去中心化自治組織），甚至是資料被收集的研究對象。
 
-[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) 還是將正在進行的實驗之資料庫去中心化的關鍵，還可以插入非同質化代幣與 [DeFi](/defi/) 金融化（從資產分割到借貸池與價值評估）。 它還允許如 [VitaDAO](https://www.vitadao.com/) 這樣的去中心化自治組織等鏈上原生實體直接在鏈上進行研究。 不可轉移的[「靈魂綁定」代幣](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)的出現，允許個人證明他們的經驗和證書與他們的以太坊地址相關聯，因而也可能在去中心化科研中發揮重要作用。
+[IP-NFT](https://medium.com/molecule-blog/ip-nfts-for-researchers-a-new-biomedical-funding-paradigm-91312d8d92e6) 還是將正在進行的實驗之資料庫去中心化的關鍵，還可以插入非同質化代幣與 [DeFi](/defi/) 金融化（從資產分割到借貸池與價值評估）。 它還允許如 [VitaDAO](https://www.vitadao.com/) 這樣的去中心化自治組織等鏈上原生實體直接在鏈上進行研究。 不可轉讓的[「靈魂綁定」代幣](https://vitalik.eth.limo/general/2022/01/26/soulbound.html)的出現，將可能在去中心化科研中扮演重要的角色，使個人能證明其與以太坊地址連結的個人經驗和證書。
 
 ### 資料儲存、存取和架構 {#data-storage}
 
@@ -92,22 +92,18 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 
 - [DeSci.Global：全球活動和聚會行事曆](https://desci.global)
 - [Blockchain for Science Telegram](https://t.me/BlockchainForScience)
-- [Molecule：資助你的研究計畫或為其募資](https://discover.molecule.to/)
+- [Molecule：資助你的研究計畫或為其募資](https://www.molecule.xyz/)
 - [VitaDAO：藉由受贊助的長壽研究協議獲得資金](https://www.vitadao.com/)
 - [ResearchHub：發布科學成果並與同行交流](https://www.researchhub.com/)
 - [LabDAO：在電腦中折疊蛋白質](https://alphafodl.vercel.app/)
 - [dClimate API：查詢去中心化社群收集的氣候數據](https://api.dclimate.net/)
 - [DeSci Foundation：去中心化科研發表工具生成器](https://descifoundation.org/)
 - [DeSci.World：供使用者查看、參與去中心化科研的單一窗口](https://desci.world)
-- [Fleming Protocol：推動協作生物醫學發現的開源式資料經濟](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [OceanDAO：管理資料相關科學資金的去中心化自治組織](https://oceanprotocol.com/dao)
+- [OceanDAO：管理資料相關科學資金的去中心化自治組織](https://oceanprotocol.com/)
 - [Opscientia：開放的去中心化科研工作流程](https://opsci.io/research/)
-- [LabDAO：在電腦中折疊蛋白質](https://alphafodl.vercel.app/)
 - [Bio.xyz：為你的生物技術去中心化自治組織或去中心化科研專案募資](https://www.bio.xyz/)
-- [ResearchHub：發布科學成果並與同行交流](https://www.researchhub.com/)
-- [VitaDAO：藉由受贊助的長壽研究協議獲得資金](https://www.vitadao.com/)
-- [Fleming Protocol：推動協作生物醫學發現的開源式資料經濟](https://medium.com/@FlemingProtocol/a-data-economy-for-patient-driven-biomedical-innovation-9d56bf63d3dd)
-- [主動推論實驗室](https://www.activeinference.org/)
+- [Fleming Protocol：推動協作生物醫學發現的開源式資料經濟](http://flemingprotocol.io/)
+- [Active Inference Institute](https://www.activeinference.org/)
 - [CureDAO：社群所有的精準健康平台](https://docs.curedao.org/)
 - [IdeaMarkets：實現去中心化的科學可信度](https://ideamarket.io/)
 - [去中心化科研實驗室](https://www.desci.com/)
@@ -121,9 +117,8 @@ Web3 廣泛試驗過去中心化自治組織和 Web3 開發的不同激勵模型
 - [去中心化科研的重要性](https://gitcoin.co/blog/desci-the-case-for-decentralised-science/)
 - [去中心化科研指南](https://future.com/what-is-decentralized-science-aka-desci/)
 - [去中心化科研資源](https://www.vincentweisser.com/decentralized-science)
-- [Molecule 的生物製藥 IP-NFT - 技術性說明](https://molecule.to/blog/molecules-biopharma-ip-nfts-a-technical-description)
+- [Molecule 的生物製藥 IP-NFT - 技術性說明](https://www.molecule.xyz/blog/molecules-biopharma-ip-nfts-a-technical-description)
 - [建立無需信任機制的科學系統 作者：Jon Starr](https://medium.com/@jringo/building-systems-of-trustless-science-1cd2d072f673)
-- [生物技術去中心化自治組織的湧現](https://molecule.to/blog/the-emergence-of-biotech-daos)
 - [Paul Kohlhaas - DeSci：去中心化科研的未來（播客）](https://anchor.fm/andrew-steinwold/episodes/Paul-Kohlhaas---DeSci-The-Future-of-Decentralized-Science---Zima-Red-ep-117-e1h683a)
 - [一種去中心化科研的主動推論本體論：從情境式意義建構到知識共同體](https://zenodo.org/record/6320575)
 - [去中心化科研：研究領域的未來　作者：Samuel Akinosho](https://lucidsamuel.medium.com/desci-the-future-of-research-b76cfc88c8ec)

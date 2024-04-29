@@ -698,7 +698,7 @@ These two functions are wrappers around `_initiateETHDeposit`, the function that
 ```
 
 The way that cross domain messages work is that the destination contract is called with the message as its calldata.
-Solidity contracts always interpret their calldata is accordance with
+Solidity contracts always interpret their calldata in accordance with
 [the ABI specifications](https://docs.soliditylang.org/en/v0.8.12/abi-spec.html).
 The Solidity function [`abi.encodeWithSelector`](https://docs.soliditylang.org/en/v0.8.12/units-and-global-variables.html#abi-encoding-and-decoding-functions) creates that calldata.
 
@@ -722,7 +722,7 @@ The message here is to call [the `finalizeDeposit` function](https://github.com/
 | \_from    | \_from                         | The address on L1 that sends the ETH                                                                                                         |
 | \_to      | \_to                           | The address on L2 that receives the ETH                                                                                                      |
 | amount    | msg.value                      | Amount of wei sent (which has already been sent to the bridge)                                                                               |
-| \_data    | \_data                         | Additional date to attach to the deposit                                                                                                     |
+| \_data    | \_data                         | Additional data to attach to the deposit                                                                                                     |
 
 ```solidity
         // Send calldata into L2

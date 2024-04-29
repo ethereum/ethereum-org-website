@@ -125,7 +125,7 @@ Geth is preconfigured to report metrics to a Grafana dashboard which can be view
 
 ## Validators {#validators}
 
-A validator can also be optionally added to the consensus client. The validator software allows your node to participate actively in consensus and provides the network with cryptoeconomic security. You get rewarded for this work in ETH. To run a validator, you must first have 32 ETH, which must be deposited into the deposit contract. **This is a long-term commitment - it is not yet possible to withdraw this ETH!**. The deposit can be made by following the step-by-step guide on the [Launchpad](https://launchpad.ethereum.org/). Do this on a desktop/laptop, but do not generate keys — this can be done directly on the Raspberry Pi.
+A validator can also be optionally added to the consensus client. The validator software allows your node to participate actively in consensus and provides the network with cryptoeconomic security. You get rewarded for this work in ETH. To run a validator, you must first have 32 ETH, which must be deposited into the deposit contract. The deposit can be made by following the step-by-step guide on the [Launchpad](https://launchpad.ethereum.org/). Do this on a desktop/laptop, but do not generate keys — this can be done directly on the Raspberry Pi.
 
 Open a terminal on the Raspberry Pi and run the following command to generate the deposit keys:
 
@@ -134,6 +134,8 @@ sudo apt-get update
 sudo apt-get install staking-deposit-cli
 cd && deposit new-mnemonic --num_validators 1
 ```
+
+(Or download the [staking-deposit-cli](https://github.com/ethereum/staking-deposit-cli) to run on an airgapped machine, and run the `deposit new-mnemnonic` command)
 
 Keep the mnemonic phrase safe! The command above generated two files in the node's keystore: the validator keys and a deposit data file. The deposit data needs to be uploaded into the launchpad, so it must be copied from the Raspberry Pi to the desktop/laptop. This can be done using an ssh connection or any other copy/paste method.
 

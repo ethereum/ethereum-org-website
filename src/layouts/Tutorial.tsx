@@ -3,7 +3,6 @@ import {
   Badge,
   Box,
   type BoxProps,
-  chakra,
   Divider,
   Flex,
   type HeadingProps,
@@ -16,7 +15,6 @@ import {
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
 import type { MdPageContent, TutorialFrontmatter } from "@/lib/interfaces"
 
-import PostMergeBanner from "@/components/Banners/PostMergeBanner"
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
@@ -125,10 +123,6 @@ const Paragraph = (props: TextProps) => (
   <Text as="p" mt={8} mb={4} mx={0} color="text300" fontSize="md" {...props} />
 )
 
-const ListItem = (props) => {
-  return <chakra.li color="text300" {...props} />
-}
-
 const KBD = (props) => {
   const borderColor = useToken("colors", "primary.base")
 
@@ -151,7 +145,6 @@ export const tutorialsComponents = {
   h4: Heading4,
   p: Paragraph,
   kbd: KBD,
-  li: ListItem,
   pre: Codeblock,
   ...mdxTableComponents,
   Badge,
@@ -188,8 +181,6 @@ export const TutorialLayout = ({
   const absoluteEditPath = getEditPath(relativePath)
 
   const borderColor = useToken("colors", "border")
-  const postMergeBannerTranslationString =
-    frontmatter.postMergeBannerTranslation as TranslationKey | null
   const gitHubLastEdit = useClientSideGitHubLastEdit(relativePath)
   const intlLastEdit =
     "data" in gitHubLastEdit ? gitHubLastEdit.data! : lastUpdatedDate
@@ -198,11 +189,6 @@ export const TutorialLayout = ({
 
   return (
     <>
-      {!!frontmatter.showPostMergeBanner && (
-        <PostMergeBanner
-          translationString={postMergeBannerTranslationString!}
-        />
-      )}
       <Flex
         w="100%"
         borderBottom={`1px solid ${borderColor}`}

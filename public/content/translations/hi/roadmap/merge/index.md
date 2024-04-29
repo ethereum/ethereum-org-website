@@ -11,7 +11,7 @@ summaryPoint3: मर्ज का आशय है ओरिजिनल एथ
 summaryPoint4: मर्ज ने एथेरियम की ऊर्जा खपत को ~99.95% तक कम कर दिया।
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   मर्ज को 15 सितंबर, 2022 को निष्पादित किया गया था। इसने एथेरियम के हिस्सेदारी के सबूत सहमति के ट्रांजिशन को पूरा किया, आधिकारिक तौर पर काम के सबूत को हटा दिया और ऊर्जा की खपत को ~99.95% तक कम कर दिया।
 </UpgradeStatus>
 

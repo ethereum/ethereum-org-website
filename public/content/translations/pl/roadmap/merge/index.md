@@ -11,7 +11,7 @@ summaryPoint3: Połączenie odnosi się do połączenia pierwotnej sieci główn
 summaryPoint4: Połączenie zmniejszyło zużycie energii przez Ethereum o około 99,95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Połączenie zostało przeprowadzone w dniu 15 września 2022 r. Zakończyło to przejście Ethereum na konsensus proof-of-stake i oficjalną rezygnację z mechanizmu proof-of-work, skutkujące zmniejszeniem zużycia energii o około 99,95%.
 </UpgradeStatus>
 

@@ -49,12 +49,13 @@ A Verkle-fák `key, value` (kulcs, érték) párokból állnak, ahol a kulcsok 3
 
 A Verkle-fa teszthálózatai már működnek, de jelentős mértékű kliensfrissítésre van még szükség ahhoz, hogy támogatni tudják ezt az adatstruktúrát. Ön is segíthet a fejlesztés meggyorsításában, ha szerződéseket hoz létre a teszthálózaton és klienseket működtet a teszthez.
 
-[Fedezze fel a Beverly Hills Verkle-teszthálózatot](https://beverlyhills.ethpandaops.io)
+[Fedezze fel a Verkle Gen Devnet 2 teszthálózatot](https://verkle-gen-devnet-2.ethpandaops.io/)
 
-[Tekintse meg, ahogy Guillaume Ballet bemutatja a Condrieu Verkle-teszthálózatot](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (a Condrieu teszthálózat még a proof-of-work mechanizmus szerint működött, és mára már a [Kaustinen teszthálózat](https://kaustinen.ethdevops.io) váltotta fel).
+[Tekintse meg, ahogy Guillaume Ballet bemutatja a Condrieu Verkle-teszthálózatot](https://www.youtube.com/watch?v=cPLHFBeC0Vg) (a Condrieu teszthálózat még a proof-of-work mechanizmus szerint működött, és mára már Verkle Gen Devnet 2 teszthálózat váltotta fel).
 
 ## További olvasnivaló {#further-reading}
 
+- [Verkle-fák a státusztalanság megvalósításához](https://verkle.info/)
 - [Dankrad Feist magyarázata a Verkle-fákról a PEEPanEIP csatornán](https://www.youtube.com/watch?v=RGJOQHzg3UQ)
 - [Guillaume Ballet magyarázata a Verkle-fákról az ETHGlobal rendezvényen](https://www.youtube.com/watch?v=f7bEtX3Z57o)
 - [„Hogyan segítenek a Verkle-fák abban, hogy az Ethereum áttekinthető és egyszerű legyen?” – Guillaume Ballet előadása a Devcon 6 rendezvényen](https://www.youtube.com/watch?v=Q7rStTKwuYs)
