@@ -243,7 +243,7 @@ export const DocsLayout = ({
         <SideNav path={relativePath} />
         <Content>
           <H1 id="top">{frontmatter.title}</H1>
-          {useGitHubContributors ? (
+          {/* {useGitHubContributors ? (
             <GitHubContributors
               relativePath={relativePath}
               lastUpdatedDate={lastUpdatedDate}
@@ -254,7 +254,7 @@ export const DocsLayout = ({
               lastUpdatedDate={intlLastEdit}
               contributors={crowdinContributors}
             />
-          )}
+          )} */}
           <TableOfContents
             slug={slug}
             editPath={absoluteEditPath}
