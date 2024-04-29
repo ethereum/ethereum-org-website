@@ -1,5 +1,7 @@
 const { PHASE_DEVELOPMENT_SERVER } = require("next/constants")
 
+const withBundleAnalyzer = require("@next/bundle-analyzer")()
+
 const { i18n } = require("./next-i18next.config")
 
 const LIMIT_CPUS = Number(process.env.LIMIT_CPUS || 2)
@@ -21,7 +23,7 @@ module.exports = (phase, { defaultConfig }) => {
   let nextConfig = {
     ...defaultConfig,
     reactStrictMode: true,
-    webpack: (config) => {
+    webpack: (config, { isServer }) => {
       config.module.rules.push({
         test: /\.ya?ml$/,
         use: "yaml-loader",
@@ -30,6 +32,18 @@ module.exports = (phase, { defaultConfig }) => {
         test: /\.svg$/,
         use: "@svgr/webpack",
       })
+
+      if (!isServer) {
+        config.optimization.splitChunks = {
+          cacheGroups: {
+            framerMotion: {
+              test: /[\\/]node_modules[\\/]framer-motion[\\/]/,
+              name: "framer-motion",
+              chunks: "all",
+            },
+          },
+        }
+      }
 
       return config
     },
@@ -44,5 +58,7 @@ module.exports = (phase, { defaultConfig }) => {
     nextConfig = { ...nextConfig, experimental }
   }
 
-  return nextConfig
+  return process.env.ANALYZE === "true"
+    ? withBundleAnalyzer(nextConfig)
+    : nextConfig
 }
