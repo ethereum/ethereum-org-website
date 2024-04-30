@@ -63,12 +63,16 @@ jobs:
                 `*Lighthouse ran on [${Object.keys(links)[0]}](${Object.keys(links)[0]})*`
             ].join('\n')
              core.setOutput("comment", comment);
-
+      - name: Find current PR # Find the PR associated with this push, if there is one.
+        uses: jwalton/gh-find-current-pr@v1.3.3
+        id: findPr
+        with:
+          state: open
       - name: Add Lighthouse stats as comment
         id: comment_to_pr
         uses: marocchino/sticky-pull-request-comment@v2.0.0
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          number: ${{ github.event.pull_request.number }}
+          number: ${{ steps.findPr.outputs.number }}
           header: lighthouse
           message: ${{ steps.format_lighthouse_score.outputs.comment }}
