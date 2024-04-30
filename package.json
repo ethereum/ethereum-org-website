@@ -20,6 +20,7 @@
     "crowdin-import": "ts-node src/scripts/crowdin-import.ts",
     "markdown-checker": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/markdownChecker.ts",
     "events-import": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/events-import.ts",
+    "crowdin-needs-review": "ts-node -O '{ \"module\": \"commonjs\" }' src/scripts/crowdin/reports/generateReviewReport.ts",
     "theme": "chakra-cli tokens ./src/@chakra-ui/theme.ts",
     "theme:watch": "chakra-cli tokens ./src/@chakra-ui/theme.ts --watch"
   },
