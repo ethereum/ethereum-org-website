@@ -40,6 +40,4 @@ async function getApprovedBuckets(): Promise<BucketsList> {
   return bucketsList
 }
 
-getApprovedBuckets()
-
 export default getApprovedBuckets

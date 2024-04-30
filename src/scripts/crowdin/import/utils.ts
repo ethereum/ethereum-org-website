@@ -2,6 +2,7 @@ import { copyFileSync, existsSync, mkdirSync, readdirSync } from "fs"
 import { join } from "path"
 
 import i18Config from "../../../../i18n.config.json"
+import { INTL_JSON_DIR, TRANSLATIONS_DIR } from "../../../lib/constants"
 import { DOT_CROWDIN } from "../translations/constants"
 
 import { BucketsList, SelectionItem, SummaryItem, TrackerObject } from "./types"
@@ -18,26 +19,26 @@ export const getCrowdinCode = (code: string): string =>
  * to their corresponding destinations in the repo. Function is called
  * again recursively for subdirectories.
  *
- * @param _path An absolute path to the directory being scraped.
+ * @param path An absolute path to the directory being scraped.
  * @param contentSubpath The subpath deep to the lang-code directory,
  * used to construct destination for markdown content files
  * @param repoLangCode Language code used within the repo
  * @returns void
  */
 export const scrapeDirectory = (
-  _path: string,
+  path: string,
   contentSubpath: string,
   repoLangCode: string,
   trackers: TrackerObject
 ): void => {
-  if (!existsSync(_path)) return
-  const ls: string[] = readdirSync(_path).filter(
+  if (!existsSync(path)) return
+  const ls: string[] = readdirSync(path).filter(
     (dir: string) => !dir.startsWith(".")
   )
   ls.forEach((item: string) => {
-    const source: string = join(_path, item)
+    const source: string = join(path, item)
     if (item.endsWith(".json")) {
-      const jsonDestDirPath: string = join("src", "intl", repoLangCode)
+      const jsonDestDirPath: string = join(INTL_JSON_DIR, repoLangCode)
       if (!existsSync(jsonDestDirPath))
         mkdirSync(jsonDestDirPath, { recursive: true })
       const jsonDestinationPath: string = join(jsonDestDirPath, item)
@@ -50,9 +51,7 @@ export const scrapeDirectory = (
       item.endsWith(".xlsx")
     ) {
       const mdDestDirPath: string = join(
-        "public",
-        "content",
-        "translations",
+        TRANSLATIONS_DIR,
         repoLangCode,
         contentSubpath
       )
@@ -65,7 +64,7 @@ export const scrapeDirectory = (
     } else {
       // If another directory, recursively call `scrapeDirectory`
       scrapeDirectory(
-        `${_path}/${item}`,
+        `${path}/${item}`,
         `${contentSubpath}/${item}`,
         repoLangCode,
         trackers
@@ -126,14 +125,14 @@ export const processLanguage = (
     error: "",
   }
   // Initialize working directory and check for existence
-  const _path: string = join(DOT_CROWDIN, crowdinLangCode)
-  if (!existsSync(_path)) {
+  const path: string = join(DOT_CROWDIN, crowdinLangCode)
+  if (!existsSync(path)) {
     trackers.langs[
       repoLangCode
     ].error = `Path doesn't exist for lang ${crowdinLangCode}`
     return
   }
-  const langLs: string[] = readdirSync(_path)
+  const langLs: string[] = readdirSync(path)
   // Iterate over each selected bucket, scraping contents with `scrapeDirectory`
   buckets.forEach((bucket) =>
     processBucket(bucket, crowdinLangCode, repoLangCode, langLs, trackers)

@@ -59,7 +59,10 @@ ${qaResults}
 `
 }
 
-export const processLocale = (locale: string, buckets: number[]) => {
+export const createLocaleTranslationPR = (
+  locale: string,
+  buckets: number[]
+) => {
   const gitStatus = execSync(`git status -s | grep -E "/${locale}/" | wc -l`, {
     encoding: "utf-8",
   }).trim()
