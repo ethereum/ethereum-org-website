@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
+import { MdChevronRight } from "react-icons/md"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
@@ -113,14 +113,7 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <Icon
-              as={MdExpandMore}
-              // display by default the icon in this position `>` (close state)
-              // this will prevent the icon from rotating when the page loads
-              transform="rotate(-90deg)"
-              boxSize={6}
-              color="secondary"
-            />
+            <Icon as={MdChevronRight} boxSize={6} color="secondary" />
           </Box>
         </LinkContainer>
         <Box
@@ -197,12 +190,7 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
           variants={dropdownIconContainerVariant}
           animate={isOpen ? "open" : "closed"}
         >
-          <Icon
-            as={MdExpandMore}
-            transform="rotate(-90deg)"
-            boxSize={6}
-            color="secondary"
-          />
+          <Icon as={MdChevronRight} boxSize={6} color="secondary" />
         </Box>
       </Center>
       <AnimatePresence>
