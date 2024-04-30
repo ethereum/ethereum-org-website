@@ -1,3 +1,4 @@
+import { getI18n, useTranslation } from "react-i18next"
 import type { Meta, StoryObj } from "@storybook/react"
 import { expect, userEvent, waitFor, within } from "@storybook/test"
 
@@ -41,7 +42,12 @@ export const QuizWidgetAllCorrect: StoryObj<typeof meta> = {
   },
   render: (args) => <StandaloneQuizWidget {...args} />,
 
-  play: async ({ canvasElement, step }) => {
+  play: async ({ canvasElement, step, args }) => {
+    const { t } = getI18n()
+
+    const translatedQuizKey = t(args.quizKey, { ns: "common" })
+    const translatedPassedQuiz = t("passed", { ns: "learn-quizzes" })
+
     const canvas = within(canvasElement)
 
     const quizWidget = canvas.getByTestId("quiz-widget")
@@ -49,7 +55,7 @@ export const QuizWidgetAllCorrect: StoryObj<typeof meta> = {
 
     await waitFor(() =>
       expect(canvas.getByTestId("answer-status-null")).toHaveTextContent(
-        "Layer 2"
+        translatedQuizKey
       )
     )
 
@@ -84,7 +90,7 @@ export const QuizWidgetAllCorrect: StoryObj<typeof meta> = {
     })
 
     await step("Check for successful results page", async () => {
-      await expect(canvasElement).toHaveTextContent("You passed the quiz!")
+      await expect(canvasElement).toHaveTextContent(translatedPassedQuiz)
     })
   },
 }
