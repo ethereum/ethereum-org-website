@@ -2,7 +2,7 @@ import * as React from "react"
 import { RiInformationLine } from "react-icons/ri"
 import { Box } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
-import { expect, fireEvent, userEvent, waitFor, within } from "@storybook/test"
+import { expect, userEvent, waitFor, within } from "@storybook/test"
 
 import InlineLink from "../Link"
 import Translation from "../Translation"
@@ -49,9 +49,9 @@ const meta = {
   },
   decorators: [
     (Story) => (
-      <Box position="relative">
+      <div>
         <Story />
-      </Box>
+      </div>
     ),
   ],
 } satisfies Meta<TooltipType>
