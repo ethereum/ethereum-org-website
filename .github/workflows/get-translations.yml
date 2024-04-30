@@ -2,7 +2,7 @@ name: Import Crowdin translations
 
 on:
   schedule:
-    - cron: "20 16 1 * *"
+    - cron: "20 16 1 * *" # Runs at 4:20 PM on the first day of every month
   workflow_dispatch:
 
 jobs:
