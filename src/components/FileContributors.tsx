@@ -8,8 +8,7 @@ import {
   ListItem,
   ModalBody,
   ModalHeader,
-  Skeleton as ChakraSkeleton,
-  SkeletonCircle as ChakraSkeletonCircle,
+  SkeletonText,
   UnorderedList,
   useBreakpointValue,
   VStack,
@@ -34,13 +33,7 @@ const skeletonColorProps = {
   endColor: "searchBackgroundEmpty",
 }
 
-const Skeleton = (props) => (
-  <ChakraSkeleton {...skeletonColorProps} borderRadius="md" {...props} />
-)
-
-const SkeletonCircle = (props) => (
-  <ChakraSkeletonCircle {...skeletonColorProps} {...props} />
-)
+const Skeleton = (props) => <SkeletonText {...skeletonColorProps} {...props} />
 
 const ContributorList = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -114,16 +107,18 @@ const FileContributors = ({
 
         <ModalBody>
           <Translation id="contributors-thanks" />
-          {contributors ? (
-            <ContributorList>
-              {contributors.map((contributor) => (
-                <Contributor
-                  contributor={contributor}
-                  key={contributor.email}
-                />
-              ))}
-            </ContributorList>
-          ) : null}
+          <Skeleton noOfLines="4" mt="4" isLoaded={!loading}>
+            {contributors ? (
+              <ContributorList>
+                {contributors.map((contributor) => (
+                  <Contributor
+                    contributor={contributor}
+                    key={contributor.email}
+                  />
+                ))}
+              </ContributorList>
+            ) : null}
+          </Skeleton>
         </ModalBody>
       </Modal>
 
@@ -138,28 +133,24 @@ const FileContributors = ({
         <Flex me={4} alignItems="center" flex="1">
           {isDesktop && (
             <>
-              <SkeletonCircle size="10" me={4} isLoaded={!loading}>
-                <Avatar
-                  height="40px"
-                  width="40px"
-                  src={lastContributor.avatarUrl}
-                  name={lastContributor.name}
-                  me={2}
-                />
-              </SkeletonCircle>
+              <Avatar
+                height="40px"
+                width="40px"
+                src={lastContributor.avatarUrl}
+                name={lastContributor.name}
+                me={2}
+              />
 
-              <Skeleton isLoaded={!loading}>
-                <Text m={0} color="text200">
-                  <Translation id="last-edit" />:{" "}
-                  {lastContributor.user?.url && (
-                    <InlineLink href={lastContributor.user.url}>
-                      @{lastContributor.user.login}
-                    </InlineLink>
-                  )}
-                  {!lastContributor.user && <span>{lastContributor.name}</span>}
-                  , {getLocaleTimestamp(locale as Lang, lastEdit)}
-                </Text>
-              </Skeleton>
+              <Text m={0} color="text200">
+                <Translation id="last-edit" />:{" "}
+                {lastContributor.user?.url && (
+                  <InlineLink href={lastContributor.user.url}>
+                    @{lastContributor.user.login}
+                  </InlineLink>
+                )}
+                {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
+                {getLocaleTimestamp(locale as Lang, lastEdit)}
+              </Text>
             </>
           )}
         </Flex>
