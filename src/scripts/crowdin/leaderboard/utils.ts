@@ -8,7 +8,7 @@ export const getLastQuarter = (): { from: string; to: string } => {
   const now = new Date()
 
   // Months per quarter
-  const MPQ = 12 / 4
+  const MPQ = 3
 
   // Get current quarter
   const currentQ = Math.floor(now.getUTCMonth() / MPQ)

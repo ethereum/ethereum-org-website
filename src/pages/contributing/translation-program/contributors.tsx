@@ -13,10 +13,8 @@ import {
 } from "@chakra-ui/react"
 
 import {
-  AllTimeData,
   BasePageProps,
   CostLeaderboardData,
-  Unpacked,
 } from "@/lib/types"
 
 import Breadcrumbs from "@/components/Breadcrumbs"
