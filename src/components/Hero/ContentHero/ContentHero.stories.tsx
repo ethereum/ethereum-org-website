@@ -1,9 +1,10 @@
-import { useTranslation } from "next-i18next"
 import { Meta, StoryObj } from "@storybook/react"
 
 import ContentHeroComponent, { ContentHeroProps } from "."
 
 type ContentHeroType = typeof ContentHeroComponent
+
+import { getI18n } from "react-i18next"
 
 import contentHeroImg from "../../../../public/mainnet.png"
 
@@ -25,13 +26,21 @@ const meta = {
 export default meta
 
 export const ContentHero: StoryObj = {
+  parameters: {
+    // Set asPath in mock router so the Breadcrums component can render
+    // the "home" text with correct translation
+    nextjs: {
+      router: {
+        asPath: "/en",
+      },
+    },
+  },
   render: () => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const { t } = useTranslation("page-learn")
+    const { t } = getI18n()
 
     const buttons: ContentHeroProps["buttons"] = [
       {
-        content: t("hero-button-lets-get-started"),
+        content: t("hero-button-lets-get-started", { ns: "page-learn" }),
         toId: "what-is-crypto-ethereum",
         matomo: {
           eventCategory: "learn hub hero buttons",
@@ -50,10 +59,10 @@ export const ContentHero: StoryObj = {
     ]
     return (
       <ContentHeroComponent
-        breadcrumbs={{ slug: "/en/run-a-node/" }}
+        breadcrumbs={{ slug: "/run-a-node/" }}
         heroImg={contentHeroImg}
-        title={t("hero-header")}
-        description={t("hero-subtitle")}
+        title={t("hero-header", { ns: "page-learn" })}
+        description={t("hero-subtitle", { ns: "page-learn" })}
         buttons={buttons}
       />
     )

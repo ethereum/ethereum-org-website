@@ -35,12 +35,12 @@ const ContentHero = (props: ContentHeroProps) => {
               {title}
             </Heading>
             <Text fontSize="lg">{description}</Text>
-            <HStack spacing="4">
+            <Stack direction={{ base: "column", md: "row" }} spacing="4">
               {buttons!.map((button, idx) => {
                 if (!button) return
                 return <CallToAction key={idx} index={idx} {...button} />
               })}
-            </HStack>
+            </Stack>
           </Stack>
           {/* TODO:
            * Add conditional Big Stat box here
