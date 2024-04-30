@@ -47,13 +47,11 @@ export const QuizWidgetAllCorrect: StoryObj<typeof meta> = {
     const quizWidget = canvas.getByTestId("quiz-widget")
     await expect(quizWidget).toBeInTheDocument()
 
-    // TODO: would like to add this check to confirm translation is working
-    // currently broken here, despite it working fine in prod
-    // await waitFor(() =>
-    //   expect(canvas.getByTestId("answer-status-null")).toHaveTextContent(
-    //     "Layer 2"
-    //   )
-    // )
+    await waitFor(() =>
+      expect(canvas.getByTestId("answer-status-null")).toHaveTextContent(
+        "Layer 2"
+      )
+    )
 
     await waitFor(() =>
       expect(canvas.getByTestId("check-answer-button")).toBeDisabled()

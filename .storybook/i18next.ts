@@ -58,6 +58,7 @@ i18n.use(initReactI18next).init({
   react: { useSuspense: false },
   supportedLngs,
   resources,
+  defaultNS: "common",
 })
 
 export default i18n
