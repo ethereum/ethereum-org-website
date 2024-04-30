@@ -10,7 +10,7 @@ const baseStyle = definePartsStyle({
     px: { base: "2", md: "4" },
     gap: "2",
     _hover: { bg: "background.highlight", color: "primary.hover" },
-    _focus: {
+    _focusVisible: {
       outline: "4px solid",
       outlineColor: "primary.hover",
       outlineOffset: -1,
