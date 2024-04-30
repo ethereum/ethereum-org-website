@@ -1,14 +1,15 @@
-name: Import Crowdin translations
+name: Crowdin CI
 
 on:
   schedule:
     - cron: "20 16 1 * *" # Runs at 4:20 PM on the first day of every month
-  workflow_dispatch:
+  workflow_dispatch: # Can be dispatched manually
 
 jobs:
-  create_pr:
+  create_approved_language_bucket_prs:
     runs-on: ubuntu-latest
     steps:
+      # Set up environment
       - name: Check out code
         uses: actions/checkout@v3
 
@@ -31,16 +32,34 @@ jobs:
       - name: Fetch latest dev
         run: git fetch origin dev
 
+      - name: Authenticate GitHub CLI
+        run: |
+          echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
+
+      # Build and prepare translations
+      - name: Build Crowdin project
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/triggerBuild.ts
+        env:
+          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+
+      - name: Sleep while Crowdin build finishes
+        run: sleep 3600 # in seconds (1 hour)
+
+      - name: Get latest translation bucket directory ids
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getBucketDirectoryIds.ts
+        env:
+          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+
+      # Import approved translations
       - name: Get translations
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getTranslations.ts
         env:
           CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
           CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
 
-      - name: Authenticate GitHub CLI
-        run: |
-          echo ${{ secrets.GITHUB_TOKEN }} | gh auth login --with-token
-
+      # Post updates as language-specific PRs
       - name: Process commits and post PRs by language
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/postLangPRs.ts
         env:
