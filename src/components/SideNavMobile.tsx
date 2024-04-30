@@ -108,11 +108,19 @@ const NavLink = ({ item, path, toggle }: NavLinkProps) => {
           <Box
             as={motion.div}
             cursor="pointer"
+            display="flex"
             onClick={() => setIsOpen(!isOpen)}
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
           >
-            <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+            <Icon
+              as={MdExpandMore}
+              // display by default the icon in this position `>` (close state)
+              // this will prevent the icon from rotating when the page loads
+              transform="rotate(-90deg)"
+              boxSize={6}
+              color="secondary"
+            />
           </Box>
         </LinkContainer>
         <Box
@@ -185,10 +193,16 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
         <Box
           as={motion.div}
           cursor="pointer"
+          display="flex"
           variants={dropdownIconContainerVariant}
           animate={isOpen ? "open" : "closed"}
         >
-          <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+          <Icon
+            as={MdExpandMore}
+            transform="rotate(-90deg)"
+            boxSize={6}
+            color="secondary"
+          />
         </Box>
       </Center>
       <AnimatePresence>

@@ -13,13 +13,13 @@ import docLinks from "../data/developer-docs-links.yaml"
 
 export const dropdownIconContainerVariant = {
   open: {
-    rotate: 0,
+    rotate: 90,
     y: 3,
     transition: {
       duration: 0.4,
     },
   },
-  closed: { rotate: -90, y: 0 },
+  closed: { rotate: 0, y: 0 },
 }
 
 const innerLinksVariants = {
@@ -105,8 +105,14 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
             cursor="pointer"
+            display="flex"
           >
-            <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+            <Icon
+              as={MdExpandMore}
+              transform="rotate(-90deg)"
+              boxSize={6}
+              color="secondary"
+            />
           </Box>
         </LinkContainer>
         <Box
