@@ -24,13 +24,13 @@ async function main() {
 
     const progress = response.data.map(
       ({ data }) =>
-      ({
-        languageId: data.languageId,
-        words: {
-          approved: data.words.approved,
-          total: data.words.total,
-        },
-      } as ProjectProgressData)
+        ({
+          languageId: data.languageId,
+          words: {
+            approved: data.words.approved,
+            total: data.words.total,
+          },
+        } as ProjectProgressData)
     )
 
     fs.writeFileSync(
