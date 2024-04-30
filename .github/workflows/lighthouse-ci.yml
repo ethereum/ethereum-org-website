@@ -17,24 +17,58 @@ jobs:
       - name: Sleep for 60 minutes
         run: sleep 3600
       - name: Wait for Netlify Deploy
+        id: netlify_deploy
         uses: probablyup/wait-for-netlify-action@3.2.0
-        id: waitForDeployment
         with:
           site_id: "e8f2e766-888b-4954-8500-1b647d84db99"
           max_timeout: 900
         env:
           NETLIFY_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
       - name: Audit URLs using Lighthouse
+        id: lighthouse_audit
         uses: treosh/lighthouse-ci-action@v11
         with:
           urls: |
-            ${{ steps.waitForDeployment.outputs.url }}/en/
-            ${{ steps.waitForDeployment.outputs.url }}/en/wallets/find-wallet/
-            ${{ steps.waitForDeployment.outputs.url }}/en/staking/
-            ${{ steps.waitForDeployment.outputs.url }}/en/whitepaper/
-            ${{ steps.waitForDeployment.outputs.url }}/en/nft/
-            ${{ steps.waitForDeployment.outputs.url }}/en/developers/docs/intro-to-ethereum/
-            ${{ steps.waitForDeployment.outputs.url }}/en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/
+            ${{ steps.netlify_deploy.outputs.url }}/en/
+            ${{ steps.netlify_deploy.outputs.url }}/en/wallets/find-wallet/
+            ${{ steps.netlify_deploy.outputs.url }}/en/staking/
+            ${{ steps.netlify_deploy.outputs.url }}/en/whitepaper/
+            ${{ steps.netlify_deploy.outputs.url }}/en/nft/
+            ${{ steps.netlify_deploy.outputs.url }}/en/developers/docs/intro-to-ethereum/
+            ${{ steps.netlify_deploy.outputs.url }}/en/developers/tutorials/creating-a-wagmi-ui-for-your-contract/
           runs: 3 # run three times
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
+      - name: Format lighthouse score
+        id: format_lighthouse_score
+        uses: actions/github-script@v3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const result = ${{ steps.lighthouse_audit.outputs.manifest }}[0].summary
+            const links = ${{ steps.lighthouse_audit.outputs.links }}
+            const formatResult = (res) => Math.round((res * 100))
+            Object.keys(result).forEach(key => result[key] = formatResult(result[key]))
+            const score = res => res >= 90 ? '🟢' : res >= 50 ? '🟠' : '🔴'
+            const comment = [
+                `⚡️ [Lighthouse report](${Object.values(links)[0]}) for the changes in this PR:`,
+                '| Category | Score |',
+                '| --- | --- |',
+                `| ${score(result.performance)} Performance | ${result.performance} |`,
+                `| ${score(result.accessibility)} Accessibility | ${result.accessibility} |`,
+                `| ${score(result['best-practices'])} Best practices | ${result['best-practices']} |`,
+                `| ${score(result.seo)} SEO | ${result.seo} |`,
+                `| ${score(result.pwa)} PWA | ${result.pwa} |`,
+                ' ',
+                `*Lighthouse ran on [${Object.keys(links)[0]}](${Object.keys(links)[0]})*`
+            ].join('\n')
+             core.setOutput("comment", comment);
+
+      - name: Add Lighthouse stats as comment
+        id: comment_to_pr
+        uses: marocchino/sticky-pull-request-comment@v2.0.0
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          number: ${{ github.event.pull_request.number }}
+          header: lighthouse
+          message: ${{ steps.format_lighthouse_score.outputs.comment }}
