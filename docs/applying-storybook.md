@@ -165,6 +165,8 @@ Chromatic is a visual testing tool that scans every possible UI state across bro
 
 When creating a story, Chromatic creates a "snapshot" of it and sets it as a baseline. This baseline is also approved or denied before merging into the project. Whenever there are changes that affect the component, Chromatic will create a new snapshot to analyze. If there are changes, Chromatic will provide them for a reviewer to accept or decline, and be able to provide any further comments.
 
+### Story Modes
+
 Depending on the component, we might look for more than just one snapshot per story. In some cases, we might want multiple snapshots showing the story rendered at various viewport widths or in different languages, a combination of both, etc. These are referred to as [Story Modes](https://www.chromatic.com/docs/modes/). Examples of applicable components include the `Footer` and the `HubHero`.
 
 You will currently find the setup of these modes in [the `./storybook/modes.ts` file](../.storybook/modes.ts)
@@ -211,3 +213,20 @@ parameters: {
   }
 }
 ```
+
+### Disabling Snapshots
+
+There may be instances where we would like to save a story for visual testing in local development, but do not want to capture snapshots for regressions. In these cases, enable the `disableSnapshot` option.
+
+This can be applied at any level (project, component, story)
+
+```ts
+// At any level
+parameters: {
+  chromatic: {
+    disableSnapshot: true
+  }
+}
+```
+
+> 🚨 NOTE: This will be notated ahead of time by the team which stories should not receive snapshots.
