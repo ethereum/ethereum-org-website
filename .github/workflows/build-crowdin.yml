@@ -2,7 +2,7 @@ name: Build Crowdin project
 
 on:
   schedule:
-    - cron: "20 04 1 * *"
+    - cron: "20 04 1 * *" # Runs at 4:20 AM on the first day of every month
   workflow_dispatch:
 
 jobs:
