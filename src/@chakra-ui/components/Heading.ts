@@ -34,7 +34,7 @@ const fontSizeScale: SIZE_SCALE = {
   "2xl": ["4xl", null, null, "5xl"],
   xl: ["3xl", null, null, "4xl"],
   lg: ["2xl", null, null, "3xl"],
-  md: "xl",
+  md: "lg",
   sm: "md",
   xs: "sm",
 }
