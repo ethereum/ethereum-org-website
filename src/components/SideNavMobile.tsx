@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
+import { MdKeyboardArrowRight, MdExpandMore } from "react-icons/md"
 import { Box, Center, HStack, Icon } from "@chakra-ui/react"
 
 import type { ChildOnlyProp, TranslationKey } from "@/lib/types"
@@ -183,12 +183,10 @@ const SideNavMobile = ({ path }: SideNavMobileProps) => {
       >
         <Box me={2}>{t(pageTitleId)}</Box>
         <Box
-          as={motion.div}
           cursor="pointer"
-          variants={dropdownIconContainerVariant}
-          animate={isOpen ? "open" : "closed"}
         >
-          <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+          <Icon as={MdKeyboardArrowRight} boxSize={6} color="secondary"   style={{ display: "block", transform: isOpen ? "rotate(90deg)" : "rotate(0deg)",     transition: "transform 0.3s ease-in-out" }}/>
+
         </Box>
       </Center>
       <AnimatePresence>
