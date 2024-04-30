@@ -15,7 +15,7 @@ export const getCrowdinCode = (code: string): string =>
   i18Config.filter((lang) => lang.code === code)?.[0]?.crowdinCode || code
 
 /**
- * Reads `ls` file contents of `_path`, moving .md and .json files
+ * Reads `ls` file contents of `path`, moving .md and .json files
  * to their corresponding destinations in the repo. Function is called
  * again recursively for subdirectories.
  *
