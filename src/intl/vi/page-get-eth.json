@@ -14,6 +14,7 @@
   "page-get-eth-dex-desc": "Nếu bạn muốn nắm nhiều quyền kiểm soát hơn, hãy mua ETH bằng việc sử dụng hợp đồng thông minh. Với DEX (sàn giao dịch phi tập trung), bạn có thể giao dịch mà không cần giao quyền kiểm soát tiền của mình cho một tổ chức phi tập trung.",
   "page-get-eth-peers": "Nhận ETH từ bạn bè của bạn",
   "page-get-eth-peers-desc": "Một khi có tài khoản Ethereum, tất cả những gì bạn cần làm là chia sẻ địa chỉ ví của mình để bắt đầu gửi và nhận ETH (và các token khác) ngang hàng.",
+  "page-get-eth-staking": "Phần thưởng góp cổ phần",
   "page-get-eth-staking-desc": "Nếu bạn đã có một số ETH, bạn có thể kiếm thêm bằng cách chạy nút xác thực. Bạn được trả tiền để thực hiện công việc xác minh này trong ETH.",
   "page-get-eth-earn": "Kiếm ETH",
   "page-get-eth-earn-desc": "Bạn có thể kiếm ETH bằng cách làm việc cho DAO hoặc các tổ chức thanh toán bằng tiền điện tử, giành phần thưởng, tìm lỗi phần mềm, và hơn thế nữa.",

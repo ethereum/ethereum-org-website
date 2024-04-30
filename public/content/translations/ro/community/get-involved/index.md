@@ -73,7 +73,7 @@ Ecosistemul Ethereum are ca misiune să finanțeze bunurile publice și proiecte
 
 ## Managerii de produse <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Ecosistemul Ethereum are nevoie de talentele dumneavoastră! Multe companii angajează pe posturi de manager de produs. Dacă doriți să începeți să contribuiți la un proiect open-source, luați legătura cu [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) sau [MetaCartel](https://www.metacartel.org/)
+- Ecosistemul Ethereum are nevoie de talentele dumneavoastră! Multe companii angajează pe posturi de manager de produs. Dacă doriți să începeți să contribuiți la un proiect open-source, luați legătura cu [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) sau [RaidGuild](https://www.raidguild.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} />‍ {#marketing}
 
@@ -99,17 +99,15 @@ Ecosistemul Ethereum are ca misiune să finanțeze bunurile publice și proiecte
 
 „DAO-urile” sunt organizații autonome descentralizate. Aceste grupuri folosesc tehnologia Ethereum pentru a facilita organizarea și colaborarea. De exemplu, pentru a controla membrii, a vota propuneri sau a gestiona activele puse în comun. Deși organizațiile DAO sunt încă experimentale, ele vă oferă oportunități pentru a găsi grupuri cu care să vă identificați, a găsi colaboratori și a vă mări impactul asupra comunității Ethereum. [Mai multe despre DAO-uri](/dao/)
 
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Inginerie juridică_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Inginerie juridică_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Comunitatea artistică_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Incubator DAO_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Inițiativă pentru proiecte criptografice pre-seed_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Mecanici de joc MMORPG pentru viața reală_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Mărci de îmbrăcăminte digifizică_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Comunitate orientată pe finanțarea dezvoltării în Ethereum_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Proiecte coordonate de femei_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Colective de dezvoltatori Web3_
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Promovați conceptul DAO în domeniul non-tehnic și ajutați oamenilor să creeze valoare printr-o organizație DAO_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Colectiv de dezvoltatori Web3 liber profesioniști care lucrează ca o organizație DAO_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Guvernanța comunitară a DAOhaus_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Comunitate de dezvoltatori care cred în proprietatea colectivă a internetului_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Decentralized development & governance of dApps & protocols_

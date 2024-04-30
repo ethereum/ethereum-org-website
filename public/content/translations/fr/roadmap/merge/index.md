@@ -11,7 +11,7 @@ summaryPoint3: La Fusion fait référence à la fusion du réseau principal orig
 summaryPoint4: La Fusion a réduit la consommation d'énergie d'Ethereum de ~99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   La Fusion a été réalisée le 15 septembre 2022. Cette étape a permis à Ethereum de passer à un consensus de preuve d'enjeu, de rendre officiellement obsolète la preuve de travail et de réduire sa consommation d'énergie d'environ 99,95 %.
 </UpgradeStatus>
 

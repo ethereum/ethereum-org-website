@@ -164,14 +164,14 @@ Aquí está el código extendido para obtener un nodo en el Merkle Patricia trie
 
 ### Ejemplo de Trie {#example-trie}
 
-Supongamos que queremos un trie que contenga cuatro pares ruta/valor `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
+Supongamos que queremos un trie que contenga cuatro pares ruta/valor `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
 En primer lugar, convertimos tanto las rutas como los valores en `bytes`. A continuación, las representaciones reales de bytes para _rutas_ se denotan con `<>`, aunque los _valores_ todavía se muestran como cadenas, denotadas por `''`, para facilitar la comprensión (estos también en realidad serían `bytes`):
 
 ```
     <64 6f> : 'verb'
     <64 6f 67> : 'puppy'
-    <64 6f 67 65> : 'coin'
+    <64 6f 67 65> : 'coins'
     <68 6f 72 73 65> : 'stallion'
 ```
 
@@ -180,12 +180,12 @@ Ahora, construimos un trie con los siguientes pares clave/valor en la base de da
 ```
     rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
-    hashB:    [ <00 6f>, hashD ]
-    hashD:    [ <>, <>, <>, <>, <>, <>, hashE, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
-    hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
+    hashB:    [ <00 6f>, hashC ]
+    hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
+    hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Cuando se hace referencia a un nodo dentro de otro nodo, lo que se incluye es `H(rlp.encode(x))`, donde `H(x) = keccak256(x) if len(x) >= 32 else x` y `rlp.encode` es la función de codificación [RLP](/developers/docs/data-structures-and-encoding/rlp).
+Cuando se hace referencia a un nodo dentro de otro nodo, lo que se incluye es `H(rlp.encode(node))`, donde `H(x) = keccak256(x) if len(x) >= 32 else x` y `rlp.encode` es la función de codificación [RLP](/developers/docs/data-structures-and-encoding/rlp).
 
 Tenga en cuenta que al actualizar un trie, es necesario almacenar el par clave/valor `(keccak256(x), x)` en una tabla de búsqueda persistente _si_ el nodo recién creado tiene una longitud >= 32. Sin embargo, si el nodo es más corto, no es necesario almacenar nada, ya que la función f(x) = x es reversible.
 

@@ -22,7 +22,7 @@ Alice 和 Bob 進行一場自行車比賽。 Alice 和 Bob 打賭 10 美金，�
 
 這個搞笑的範例說明了非智慧型協議會發生的問題。 即使已符合協議的條件（即，你是比賽的獲勝者），你還得相信對方會履行協議（也就是支付賭注）。
 
-## 數位自動販賣機 {#vending-machine}
+## 數位販賣機 {#vending-machine}
 
 用簡單的比喻來說，智慧型合約就像一台自動販賣機，只要提供特定的輸入，就保證會得到預先設定好的輸出。
 
@@ -65,7 +65,7 @@ Alice 和 Bob 進行一場自行車比賽。 Alice 和 Bob 打賭 10 美金，�
 - [穩定幣](/stablecoins/)
 - [建立和分發唯一的數位資產](/nft/)
 - [自動、開放的貨幣交易所](/get-eth/#dex)
-- [去中心化遊戲](/dapps/?category=gaming#explore)
+- [去中心化遊戲](/dapps/?category=gaming)
 - [自動理賠的保單](https://etherisc.com/)
 - [讓人們建立自訂、可互相流通的貨幣的標準](/developers/docs/standards/tokens/)
 

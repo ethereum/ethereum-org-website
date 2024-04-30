@@ -52,6 +52,7 @@ const MenuFooter = ({
         >
           <FooterItemText>{t("search")}</FooterItemText>
         </FooterButton>
+
         <FooterButton icon={ThemeIcon} onClick={toggleColorMode}>
           <FooterItemText>{t(themeLabelKey)}</FooterItemText>
         </FooterButton>
