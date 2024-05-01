@@ -4,9 +4,9 @@ description: 有关使用WebSocket和Alchemy进行JSON-RPC请求并订阅事件�
 author: "Elan Halpern"
 lang: zh
 tags:
-  - "Alchemy"
+  - "alchemy"
   - "websocket"
-  - "查询"
+  - "querying"
   - "javascript"
 skill: beginner
 source: Alchemy 文档
@@ -14,21 +14,21 @@ sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
 published: 2020-12-01
 ---
 
-这是有关使用 WebSocket 和 Alchemy 向以太坊区块链发出请求的入门级指南。
+这是有关使用WebSocket和Alchemy向以太坊区块链发出请求的入门级指南。
 
-## WebSocket 与 HTTP {#websockets-vs-http}
+## WebSocket与HTTP {#websockets-vs-http}
 
-与 HTTP 不同的是，使用 WebSocket，您无需要需要特定信息时持续进行请求。 WebSocket 为您维护网络连接（如果操作正确）并侦听变化。
+与HTTP不同的是，使用WebSocket，你无需要需要特定信息时持续进行请求。 WebSocket为你维护网络连接（如果操作正确）并侦听变化。
 
-与任何网络连接一样，您不应该假设 WebSocket 将永远保持打开状态而不会中断，但是正确地手动处理丢弃的连接和重新连接可能很难做到正确。 WebSocket 的另一个缺点是，您在响应中不会得到 HTTP 状态码，而只会得到错误消息。
+与任何网络连接一样，你不应该假设WebSocket将永远保持打开状态而不会中断，但是正确地手动处理丢弃的连接和重新连接可能很难做到正确。 WebSocket的另一个缺点是，你在响应中不会得到HTTP状态码，而只会得到错误消息。
 
 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview) 自动添加对 WebSocket 连接失败的处理并重试，无需进行配置。
 
 ## 试试看 {#try-it-out}
 
-测试 WebSocket 最简单的方式是安装命令行工具来进行 WebSocket 请求，例如[wscat](https://github.com/websockets/wscat)。 使用 wscat，您可以发送如下请求：
+测试WebSocket最简单的方式是安装命令行工具来进行WebSocket请求，例如[wscat](https://github.com/websockets/wscat)。 使用wscat，你可以发送如下请求：
 
-_注意：如果您有 Alchemy 帐户，则可以将`demo`替换成自己的 API 密钥。 [点击此处注册免费 Alchemy 帐户！](https://auth.alchemyapi.io/signup)_
+_注意：如果你有Alchemy帐户，则可以将`demo`替换成自己的API密钥。 [点击此处注册免费 Alchemy 帐户！](https://auth.alchemyapi.io/signup)_
 
 ```
 wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
@@ -39,17 +39,17 @@ wscat -c wss://eth-mainnet.ws.alchemyapi.io/ws/demo
 
 ```
 
-## 如何使用 WebSocket {#how-to-use-websockets}
+## 如何使用WebSocket {#how-to-use-websockets}
 
-首先，使用应用的 WebSocket URL 打开 WebSocket 您可以在[您的仪表板](https://dashboard.alchemyapi.io/)中打开应用的页面并点击“View Key”来找到您的应用的 WebSocket URL。 请注意，您的应用的 WebSocket URL 与其 HTTP 请求的 URL 不同，但两者都可以通过点击“View Key”找到。
+首先，使用应用的WebSocket URL打开WebSocket 你可以在[你的仪表板](https://dashboard.alchemyapi.io/)中打开应用的页面并点击“View Key”来找到你的应用的 WebSocket URL。 请注意，你的应用的 WebSocket URL 与其 HTTP 请求的 URL 不同，但两者都可以通过点击“View Key”找到。
 
-![在您的Alchemy仪表板中的何处可找到您的WebSocket URL](./use-websockets.gif)
+![在你的Alchemy仪表板中的何处可找到你的WebSocket URL](./use-websockets.gif)
 
-[Alchemy API 参考](https://docs.alchemyapi.io/documentation/alchemy-api-reference/)中列出的的任何 API 都可以通过 WebSocket 使用。 为此，请使用与 HTTP POST 请求正文相同的有效载荷，而不是通过 WebSocket 发送该有效负载。
+[Alchemy API参考](https://docs.alchemyapi.io/documentation/alchemy-api-reference/)中列出的的任何API都可以通过WebSocket使用。 为此，请使用与HTTP POST请求正文相同的有效载荷，而不是通过WebSocket发送该有效负载。
 
-## 使用 Web3 {#with-web3}
+## 使用Web3 {#with-web3}
 
-在使用像 Web3 这样的客户端库时过渡到 WebSocket 是很简单的。 在实例化您的 Web3 客户端时，只需传递 WebSocket URL 而不是 HTTP URL。 例如：
+在使用像Web3这样的客户端库时过渡到WebSocket是很简单的。 在实例化你的Web3客户端时，只需传递WebSocket URL而不是HTTP URL。 例如：
 
 ```js
 const web3 = new Web3("wss://eth-mainnet.ws.alchemyapi.io/ws/your-api-key")
@@ -59,7 +59,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 ## 订阅 API {#subscription-api}
 
-当通过 WebSocket 连接时，您可以使用两个额外的方法：`eth_subscribe`和`eth_unsubscribe`。 这些方法将允许您侦听特定事件并立即收到通知。
+当通过WebSocket连接时，你可以使用两个额外的方法：`eth_subscribe`和`eth_unsubscribe`。 这些方法将允许你侦听特定事件并立即收到通知。
 
 ### `eth_subscribe` {#eth-subscribe}
 
@@ -74,23 +74,23 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 #### 返回 {#returns}
 
-订阅 ID：此 ID 将附加到任何收到的事件 并且也可用于通过`eth_unsubscribe`取消订阅。
+订阅 ID：此ID将附加到任何收到的事件 并且也可用于通过`eth_unsubscribe`取消订阅。
 
 #### 订阅事件 {#subscription-events}
 
-当订阅处于活动状态时，您将收到包含以下字段的对象事件：
+当订阅处于活动状态时，你将收到包含以下字段的对象事件：
 
 - `jsonrpc`：始终为“2.0”
 - `method`：始终为“eth_subscription”
 - `params`：具有以下字段的对象：
-  - `subscription`：由创建此订阅的`eth_subscription`调用返回的订阅 ID。
+  - `subscription`：由创建此订阅的 `eth_subscribe` 调用返回的订阅 ID。
   - `result`：其内容因订阅类型而异的对象。
 
 #### 订阅类型 {#subscription-types}
 
 1. `alchemy_newFullPendingTransactions`
 
-返回被添加到待定状态的所有交易的交易信息。 此订阅类型订阅待处理交易，类似于标准 Web3 调用`web3.eth.subscribe("pendingTransactions")`，但不同之处是它触发*完整的交易信息*，而不只是交易哈希。
+返回被添加到待定状态的所有交易的交易信息。 此订阅类型订阅待处理交易，类似于标准 Web3 调用`web3.eth.subscribe("pendingTransactions")`，但不同之处是它触发_完整的交易信息_，而不只是交易哈希。
 
 示例：
 
@@ -127,7 +127,7 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 每当向链中添加新标头时（包括在链重组期间）都会触发事件。
 
-发生链重组时，此订阅将触发一个事件，其中包含新链的所有新标头。 具体地说，这意味着您可能会看到多个高度相同的标头，当发生这种情况时，应该将后一个标头视为重组后的正确标头。
+发生链重组时，此订阅将触发一个事件，其中包含新链的所有新标头。 具体地说，这意味着你可能会看到多个高度相同的标头，当发生这种情况时，应该将后一个标头视为重组后的正确标头。
 
 示例：
 
@@ -178,10 +178,10 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 主题规范的一些示例：
 
 - `[]`：任何允许的主题。
-- `[A]`: A 位置第一个位置（以及后面任何位置）。
-- `[null, B]`：任何内容位置第一个位置的，B 位于第二个位置（以及后面任何位置）。
-- `[A, B]`：A 位于第一个位置的，B 位于第二个位置（以及后面任何位置）。
-- `[[A、B]、[A、B]]`：（A 或 B）位于第一个位置，（A 或 B）位于第二个位置（以及后面任何位置）。
+- `[A]`: A位置第一个位置（以及后面任何位置）。
+- `[null, B]`：任何内容位置第一个位置的，B位于第二个位置（以及后面任何位置）。
+- `[A, B]`：A位于第一个位置的，B位于第二个位置（以及后面任何位置）。
+- `[[A、B]、[A、B]]`：（A或B）位于第一个位置，（A或B）位于第二个位置（以及后面任何位置）。
 
 示例：
 
@@ -215,11 +215,11 @@ web3.eth.getBlockNumber().then(console.log) // -> 7946893
 
 参数
 
-1. 先前从`eth_comment`调用返回的订阅 ID。
+1. 先前从`eth_comment`调用返回的订阅ID。
 
 返回
 
-如果订阅成功取消则为`true`，或者，如果没有具有给定 ID 的订阅，则为`false`。
+如果订阅成功取消则为`true`，或者，如果没有具有给定ID的订阅，则为`false`。
 
 示例：
 
