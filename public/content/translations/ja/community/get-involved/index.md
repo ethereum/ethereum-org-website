@@ -8,23 +8,36 @@ lang: ja
 
 イーサリアムのコミュニティには、デベロッパー、アーティスト、会計士など、さまざまな背景とスキルを持つ人々が集っており、 誰でも参加できます。 コミュニティへの参加を始めるにあたって、下記のリストを参考にしてください。
 
+まずは、[行動規範](/community/code-of-conduct)に記載されているethereum.orgのミッションとバリューについて読むことから始めましょう。
+
 ## デベロッパー<Emoji text=":computer:" size={1} /> {#developers}
 
 - [ethereum.org/developers/](/developers/) - イーサリアムについての学習
-- [ETHGlobal](http://ethglobal.co/) - お近くの ETHGlobal ハッカソンへの参加
+- [Gitcoin](https://gitcoin.co/) - 大小規模の技術問題に取り組み、暗号通貨の報酬を獲得
+- [ETHGlobal](http://ethglobal.co/) - お近くのETHGlobalハッカソンへの参加
 - [自分の専門分野や好きなプログラミング言語に関連するプロジェクト](/developers/docs/programming-languages/)の確認
-- [Core Dev calls](https://www.youtube.com/@EthereumProtocol) - 動画の視聴および参加
+- [Core Dev calls](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w) - 動画の視聴および参加
 - [エコシステム・サポート・プログラムのウィッシュリスト](https://esp.ethereum.foundation/wishlist/) - イーサリアムのエコシステム・サポート・プログラムが助成金の申請を募集しているツール、ドキュメント、インフラストラクチャ分野
-- [Web3Bridge](https://www.web3bridge.com/) - アフリカ全土の何百人ものデベロッパーやコミュニティメンバーを特定し、トレーニングし、サポートする、意欲的な Web3 コミュニティの取り組み
-- [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)への参加
+- [Web3Bridge](https://www.web3bridge.com/) - アフリカ全土の何百人ものデベロッパーやコミュニティメンバーを特定し、トレーニングし、サポートする、意欲的なWeb3コミュニティの取り組み
+- [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)に加わりましょう。
 
 ## 研究者および学者<Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
 数学、暗号技術、または経済学に関する学術的なバックグランドを持っている方は、 イーサリアムのエコシステムで行われている最先端の取り組みをご覧ください。
 
-- [Challenges.ethereum.org](https://challenges.ethereum.org/) - 10 万米ドルまでの高額報酬を獲得できる研究
+- イーサリアム改善提案の執筆およびレビュー
+  - EIPの執筆
+    1. [イーサリアム・マジシャンズ](https://ethereum-magicians.org)へアイデアの提出
+    2. [EIP-1](https://eips.ethereum.org/EIPS/eip-1) **を読んでください。これが_すべての_ドキュメント**です。
+    3. EIP-1の指示に従います。 草案を書く際の参考にしてください。
+  - [EIP編集者](https://eips.ethereum.org/EIPS/eip-5069)になる方法を学ぶ
+    - いつでもEIPをピアレビューできます。  [`e-review`タグが付いたオープンなプルリクエスト](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review)を参照してください。 `discussion-to`リンクで技術的なフィードバックを提供してください。
+  - [EIP ガバナンス](https://github.com/ethereum-cat-herders/EIPIP)への参加
+    - [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)に加わりましょう。
+  - [イーサリアム改善提案(EIP)の詳細](/eips/)
+- [Challenges.ethereum.org](https://challenges.ethereum.org/) - 10万米ドルまでの高額報酬を獲得できる研究
 - [Ethresear.ch](https://ethresear.ch) - イーサリアム研究の主要なフォーラムであり、暗号経済学の世界で最も影響力のあるフォーラム
-- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - 研究者との Q&A シリーズ。 次のパートが始まるたびに、誰でも質問を投稿可能
+- [EF Research AMA](https://old.reddit.com/r/ethereum/comments/vrx9xe/ama_we_are_ef_research_pt_8_07_july_2022) - 研究者とのQ&Aシリーズ。  次のパートが始まるたびに、誰でも質問を投稿可能
 - [エコシステム・サポート・プログラムのウィッシュリスト](https://esp.ethereum.foundation/wishlist/) - イーサリアムのエコシステム・サポート・プログラムが助成金の申請を募集している研究分野
 
 [研究が活発な領域を探索](/community/research/)
@@ -39,8 +52,8 @@ lang: ja
 
 ### イーサリアムに関するコンテンツの執筆 {#write-content}
 
-- 平易な言葉でイーサリアムの価値を説明できる、優れたライターが必要です。
-- 自分自身の記事を公開する準備ができていない場合は、のようなコミュニティリソースの既存のコンテンツに貢献するか、ethereum.org に新しいコンテンツをご提案ください。
+- 簡単な言葉でイーサリアムの価値を説明できる、優れたライターが必要です。
+- 自分自身の記事を公開する準備ができていない場合は、 コミュニティリソースの既存のコンテンツに貢献するか、[ethereum.orgに新しいコンテンツをご提案ください](/contributing/)！
 
 ### コミュニティ会議の記録 {#take-notes}
 
@@ -48,7 +61,7 @@ lang: ja
 
 ### イーサリアムコンテンツの母国語への翻訳 {#translate-ethereum}
 
-- ethereum.org では、ウェブサイトやその他のリソースをさまざまな言語に翻訳する翻訳プログラムがあります。
+- ethereum.orgでは、ウェブサイトやその他のリソースをさまざまな言語に翻訳する翻訳プログラムがあります。
 - 参加方法は[こちら](/contributing/translation-program)をご確認ください。
 
 ### ノードの運用 {#run-a-node}
@@ -57,9 +70,9 @@ lang: ja
 
 - [ノードの運用方法の詳細](/developers/docs/nodes-and-clients/run-a-node/)
 
-### ETH のステーキング {#staking}
+### ETHのステーキング {#staking}
 
-ETH をステーキングすると、イーサリアムネットワークの保護に貢献しながら、報酬を獲得することができます。
+ETHをステーキングすると、イーサリアムネットワークの保護に貢献しながら、報酬を獲得することができます。
 
 - [ステーキングの詳細](/staking/)
 
@@ -72,12 +85,12 @@ ETH をステーキングすると、イーサリアムネットワークの保�
 
 ## 金融専門家および会計士 <Emoji text=":chart_with_upwards_trend:" size={1} /> {#financial-professionals}
 
-- イーサリアムは、代替金融システムを提供するプロトコルとアプリケーションのネットワークである「分散型金融 (DeFi) 」エコシステムの本拠地です。 金融業界の方は、[DeFi Llama](https://defillama.com/) または [DeFiPrime](https://defiprime.com)で分散型金融(DeFi)アプリをご確認ください。
+- イーサリアムは、代替金融システムを提供するプロトコルとアプリケーションのネットワークである「分散型金融 (DeFi) 」エコシステムの本拠地です。 金融業界の方は、[DeFi Llama](https://defillama.com/)または [DeFiPrime](https://defiprime.com)で分散型金融(DeFi)アプリをご確認ください。
 - ETH、トークン、分散型金融(DeFi)など、イーサリアムのアセットは、新しい会計上の問題を数多くもたらします。 会計士の方は、[Rotki](https://rotki.com/)のような、暗号通貨ユーザーの簿記や会計に関する問題解決を目指しているプロジェクトをぜひ一度ご確認ください。
 
 ## プロダクトマネージャー <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- イーサリアムエコシステムは皆さんの才能が必要です。 多くの企業がプロダクトマネージャーの求人を行っています。 オープンソースプロジェクトへの貢献を始めたい場合は、[Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)または[MetaCartel](https://www.metacartel.org/)にご連絡ください。
+- イーサリアムエコシステムは皆さんの才能が必要です。 多くの企業がプロダクトマネージャーの求人を行っています。 オープンソースプロジェクトへの貢献を始めたい場合は、[Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)または[RaidGuild](https://www.raidguild.org/)にご連絡ください。
 
 ## マーケティング <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -90,15 +103,16 @@ ETH をステーキングすると、イーサリアムネットワークの保�
 - [ethereum.org](/about/#open-jobs)
 - [イーサリアム・ファウンデーションの求人掲示板(Lever)](https://jobs.lever.co/ethereumfoundation)
 - [イーサリアム・ファウンデーションの求人掲示板(BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [JobStash](https://jobstash.xyz)
 - [暗号通貨の求人](https://cryptocurrencyjobs.co/ethereum/)
-- [Crypto.jobs](https://crypto.jobs/)
-- [ConsenSys の求人](https://consensys.net/careers/)
+- [ConsenSysの求人](https://consensys.net/careers/)
 - [暗号通貨求人リスト](https://cryptojobslist.com/ethereum-jobs)
-- [Bankless 求人掲示板](https://pallet.xyz/list/bankless/jobs)
-- [useWeb3 の求人](https://www.useweb3.xyz/jobs)
-- [Web3 の求人](https://web3.career)
+- [Bankless求人掲示板](https://pallet.xyz/list/bankless/jobs)
+- [Web3の求人](https://web3.career)
 - [Web3 Army](https://web3army.xyz/)
 - [Crypto Valley Jobs](https://cryptovalley.jobs/)
+- [イーサリアムの人材募集](https://startup.jobs/ethereum-jobs)
+- [CryptoJobster](https://cryptojobster.com/tag/ethereum/)
 
 ## 分散型自律組織(DAO)への参加 {#decentralized-autonomous-organizations-daos}
 
@@ -107,15 +121,14 @@ ETH をステーキングすると、イーサリアムネットワークの保�
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _非技術分野で分散型自律組織(DAO)の概念をプロモーションし、価値の創造を支援_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _インターネットは共同所有されるべきという信念を共有するデベロッパーコミュニティ_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _分散型自律組織(DAO)として機能しているフリーランスの Web3 開発共同体_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _分散型開発、分散型アプリ(Dapp)のガバナンスとプロトコル_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhaus のコミュニティガバナンス_
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _コミュニティにより所有されているスーパーヒーロー・フランチャイズ_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _リーガル・エンジニアリング_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _リーガル・エンジニアリング_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _アート・コミュニティ_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _分散型自律組織(DAO)インキュベータ_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _プレシード暗号プロジェクトのベンチャー_
-- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _実際の MMORPG ゲームメカニクス_
+- [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _実際のMMORPGゲームメカニクス_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _デジ・フィジカルのアパレルブランド_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _女性主導のプロジェクト_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _イーサリアム開発の資金調達に注力するコミュニティ_
-- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3 デベロッパーの共同体_
+- [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3デベロッパーの共同体_
+
+ethereum.orgに貢献するときは、いつでも、どのような形であれethereum.org の[行動規範](/community/code-of-conduct)を必ず遵守することを忘れずに！

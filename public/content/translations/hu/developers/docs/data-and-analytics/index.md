@@ -30,7 +30,7 @@ A [GraphQL](https://graphql.org/) lekérdezési nyelv használatával a fejleszt
 
 ## Kliensdiverzitás
 
-A [kliensdiverzitás](/developers/docs/nodes-and-clients/client-diversity/) rendkívül fontos az egész Ethereum-hálózat átfogó egészsége szempontjából, mivel védelmet biztosít a hibák és támadások ellen. Számos kliensdiverzitásról szóló kimutatás elérhető, mint a [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [execution-diversity.info](https://execution-diversity.info/) és az [Ethernodes](https://ethernodes.org/).
+A [kliensdiverzitás](/developers/docs/nodes-and-clients/client-diversity/) rendkívül fontos az egész Ethereum-hálózat átfogó egészsége szempontjából, mivel védelmet biztosít a hibák és támadások ellen. Számos kliensdiverzitásról szóló kimutatás elérhető, mint a [clientdiversity.org](https://clientdiversity.org/), [rated.network](https://www.rated.network), [supermajority.info](https://supermajority.info//) és az [Ethernodes](https://ethernodes.org/).
 
 ## Dune Analytics {#dune-analytics}
 

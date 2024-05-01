@@ -1,7 +1,7 @@
 {
   "page-local-environment-brownie-desc": "Khung thử nghiệm và phát triển dựa trên Python cho các hợp đồng thông minh nhắm mục tiêu đến máy ảo Ethereum.",
   "page-local-environment-brownie-logo-alt": "Logo của Brownie",
-  "page-local-environment-kurtosis-desc": "Một bộ công cụ dựa vào vùng chứa để dễ cấu hình và tạo ra một testnet nhiều ứng dụng khách của Ethereum, để triển khai ứng dụng phi tập trung cục bộ nhanh, tạo nguyên mẫu và thử nghiệm.",
+  "page-local-environment-kurtosis-desc": "Một bộ công cụ dựa vào vùng chứa để dễ cấu hình và tạo ra một mạng thử nghiệm nhiều ứng dụng khách của Ethereum, để triển khai ứng dụng phi tập trung cục bộ nhanh, tạo nguyên mẫu và thử nghiệm.",
   "page-local-environment-kurtosis-logo-alt": "Logo của Kurtosis",
   "page-local-environment-epirus-desc": "Nền tảng phát triển, triển khai và giám sát các ứng dụng chuỗi khối trên Máy ảo Java.",
   "page-local-environment-epirus-logo-alt": "Logo của Epirus",

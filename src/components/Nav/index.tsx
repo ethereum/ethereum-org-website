@@ -98,6 +98,7 @@ const Nav = () => {
             <Menu hideBelow="md" sections={linkSections} />
             <Flex alignItems="center" /*  justifyContent="space-between" */>
               <Search {...searchModalDisclosure} />
+
               {/* Desktop */}
               <HStack hideBelow="md" gap="0">
                 <IconButton

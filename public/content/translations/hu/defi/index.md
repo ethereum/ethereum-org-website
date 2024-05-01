@@ -47,7 +47,7 @@ A DeFi-ban rejlő lehetőségeket talán úgy lehet legjobban megragadni, ha meg
 | A pénzpiacok mindig nyitva vannak.                                                                                  | A pénzpiacok bezárnak, mert az alkalmazottaknak pihenésre van szükségük.                                                           |
 | Az átláthatóságra épül – bárki megtekintheti az adott termék adatait és megvizsgálhatja, hogyan működik a rendszer. | A pénzügyi intézmények zárt könyvek számunkra: nem kérheti el senki a hitelezési feljegyzéseiket, az eszközeik leltárát stb.       |
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Fedezze fel a DeFi alkalmazásokat
 </ButtonLink>
 
@@ -55,7 +55,7 @@ A DeFi-ban rejlő lehetőségeket talán úgy lehet legjobban megragadni, ha meg
 
 A Bitcoin több szempontból is az első DeFi alkalmazás volt. A Bitcoin lehetővé tette, hogy a felhasználó valóban birtokolja és kontrollálja az értéket, és elküldje azt a világon bárhova. Ehhez pedig egy olyan módszert adott egy nagy létszámú, egymásban nem bízó csoport kezébe, amellyel közvetítő megbízása nélkül egyezhetnek meg a számlafőkönyv tartalmán. A Bitcoin mindenki számára nyitott és senki sem tudja megváltoztatni a szabályait. A szabályai, ahogy a végessége és a nyitottsága is bele van kódolva a technológiába. Ez teljesen eltér a hagyományos pénzügyektől, ahol a kormány pénzt nyomtathat, mely csökkenti a megtakarítások értékét, a cégek pedig lezárhatják a pénzügyi piacokat.
 
-Az Ethereum is erre épít. A Bitcoinhoz hasonlóan a szabályokat nem változtathatja meg senki, és mindenkinek van hozzáférése. Ezen felül a digitális pénzt programozhatóvá teszi az [okosszerződések](/glossary#smart-contract) által, így az értékek tárolásán és küldésén kívül sok másra is alkalmas.
+Az Ethereum is erre épít. A Bitcoinhoz hasonlóan a szabályokat nem változtathatja meg senki, és mindenkinek van hozzáférése. Ezen felül a digitális pénzt programozhatóvá teszi az [okosszerződések](/glossary/#smart-contract) által, így az értékek tárolásán és küldésén kívül sok másra is alkalmas.
 
 <YouTube id="qFBYB4W2tqU" />
 
@@ -65,7 +65,7 @@ Ez furcsán hangzik... „miért akarnám programozni a pénzemet”? Ez azonban
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tekintse át azokat a DeFi alkalmazásokat, melyeket kipróbálásra javaslunk, amennyiben Ön most ismerkedik az Ethereummal.</div>
-  <ButtonLink to="/dapps/?category=finance#explore">
+  <ButtonLink to="/dapps/?category=finance">
     Fedezze fel a DeFi alkalmazásokat
   </ButtonLink>
 </InfoBanner>
@@ -90,9 +90,9 @@ A legtöbb pénzügyi szolgáltatásnak létezik decentralizált alternatívája
 
 ### Azonnali pénzküldés a világ bármelyik pontjára {#send-money}
 
-Az Ethereum-blokklánc úgy van kialakítva, hogy biztonságosan és globálisan kezeljen tranzakciókat. A Bitcoinhoz hasonlóan az Ethereumon is olyan könnyen lehet pénzt utalni, akár egy e-mailt elküldeni. Csak írja be a fogadó fél [ENS-nevét](/nft/#nft-domains) (például bob.eth) vagy számlacímét a tárcájában, és az utalás közvetlenül megérkezik hozzá általában percek alatt. Az utalások küldéséhez vagy fogadásához szükség van egy [tárcára](/wallets/).
+Az Ethereum-blokklánc úgy van kialakítva, hogy biztonságosan és globálisan kezeljen tranzakciókat. A Bitcoinhoz hasonlóan az Ethereumon is olyan könnyen lehet pénzt utalni, akár egy e-mailt elküldeni. Csak írja be a fogadó fél [ENS-nevét](/glossary/#ens) (például bob.eth) vagy számlacímét a tárcájában, és az utalás közvetlenül megérkezik hozzá általában percek alatt. Az utalások küldéséhez vagy fogadásához szükség van egy [tárcára](/wallets/).
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Tovább a fizetési dappokhoz
 </ButtonLink>
 
@@ -100,7 +100,7 @@ Az Ethereum-blokklánc úgy van kialakítva, hogy biztonságosan és globálisan
 
 Az Ethereumon pénzáramoltatásra is lehetőség van. Ez lehetővé teszi, hogy valós időben kapja meg valaki a fizetését, így a pénzeszközei mindig rendelkezésre állnak. Vagy kölcsönözhet is valamit addig, amíg azt használja, mint egy tárolóhely vagy elektromos robogó.
 
-Ha pedig nem akar [ETH-t](/eth/) küldeni vagy áramoltatni, mert annak változhat az értéke, akkor alternatív valuták is rendelkezésre állnak az Ethereumon: ezek a stabil érmék.
+Ha pedig nem akar [ETH-t](/glossary/#ether) küldeni vagy áramoltatni, mert annak változhat az értéke, akkor alternatív valuták is rendelkezésre állnak az Ethereumon: ezek a [stabil érmék](/glossary/#stablecoin).
 
 <Divider />
 
@@ -110,7 +110,7 @@ A kriptovaluta változékonysága számos pénzügyi termék és általános kö
 
 Az olyan érmék értéke, mint a Dai vagy a USDC, csak néhány centtel változik. Ezért tökéletesen megfelelnek a munkabér kifizetésre vagy a kiskereskedelem számára. Dél-Amerikában számtalan ember használt stabil érméket, hogy megvédje a megtakarításait, amikor a kormányzat által kibocsátott valuták bizonytalan helyzetbe kerültek.
 
-<ButtonLink to="/stablecoins/">
+<ButtonLink href="/stablecoins/">
   Bővebben a stabil érmékről
 </ButtonLink>
 
@@ -123,7 +123,7 @@ A kölcsönfelvétel a decentralizált szolgáltatóktól kétféle módon való
 - Peer-to-peer (P2P), amikor a kölcsön felvevője közvetlenül egy meghatározott kölcsönadótól kap pénzt.
 - Gyűjtőszámlás (pool), amikor a kölcsönadó pénzeszközt biztosít (likviditás) a gyűjtőszámlának, amelytől a kölcsönvevők pénzt tudnak szerezni.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Tovább a kölcsönfelvételi dappokhoz
 </ButtonLink>
 
@@ -133,7 +133,7 @@ Számos előnye van annak, ha decentralizált kölcsönadót használunk...
 
 Manapság a pénz kölcsönadása és -vétele az abban résztvevő egyének köré rendeződik. A bank tudni akarja, hogy vissza fogja-e fizetni a kölcsönt annak igénylője, mielőtt odaítélné neki.
 
-A decentralizált kölcsönzésnél a feleknek nem kell azonosítaniuk magukat. Ehelyett a kölcsönvevő fedezetet ad, melyet a kölcsönadó automatikusan megkap, ha a kölcsönt nem fizeti vissza. Néhány kölcsönadó NFT-ket is elfogad fedezet gyanánt. Az NFT-k olyan okiratok, melyek egy egyedi eszközhöz kapcsolódnak, mint például egy festmény. [Bővebben az NFT-kről](/nft/)
+A decentralizált kölcsönzésnél a feleknek nem kell azonosítaniuk magukat. Ehelyett a kölcsönvevő fedezetet ad, melyet a kölcsönadó automatikusan megkap, ha a kölcsönt nem fizeti vissza. Néhány kölcsönadó [NFT-ket](/glossary/#nft) is elfogad fedezet gyanánt. Az NFT-k olyan okiratok, melyek egy egyedi eszközhöz kapcsolódnak, mint például egy festmény. [Bővebben az NFT-kről](/nft/)
 
 Így anélkül lehet pénzt kölcsönözni, hogy hitelellenőrzést kellene végezni vagy személyes információkat átadni.
 
@@ -168,7 +168,9 @@ Ha a B tőzsdén lévő kínálat hirtelen lezuhan, és a felhasználó nem tudo
 
 Ha a hagyományos pénzügyi világban szeretne ugyanilyen ügyletet végrehajtani, akkor hatalmas pénzösszegre van szüksége. Ezek a pénzkereső stratégiák csak azoknak elérhetők, akik már most is vagyonosak. A villámkölcsön egy olyan jövőt fest elénk, melyben a pénzcsinálásnak nem előfeltétele az, hogy az ember vagyonos legyen.
 
-[Bővebben a villámkölcsönökről](https://aave.com/flash-loans/)
+<ButtonLink isSecondary href="https://aave.com/flash-loans/">
+  Bővebben a villámkölcsönökről
+</ButtonLink>
 
 <Divider />
 
@@ -180,10 +182,10 @@ A rendelkezésére álló kriptovaluta kölcsönadásával kamatot kaphat, így 
 
 - Kölcsönadja a rendelkezésére álló 100 Dai-t, ami egy [stabil érme](/stablecoins/), egy olyan termékért, mint az Aave.
 - Kap 100 Aave Dai-t (aDai), mely egy token, és a kölcsönadott Dai-t reprezentálja.
-- Az aDai növekedni fog a kamatráta alapján, így Ön láthatja, ahogy az egyenlege növekszik a tárcájában. Az éves ráta (APR) függvényében az Ön tárcaegyenlege akár néhány napon vagy órán belül már 100,1234 összeget mutathat!
+- Az aDai növekedni fog a kamatráta alapján, így Ön láthatja, ahogy az egyenlege növekszik a tárcájában. Az [éves ráta (APR)](/glossary/#apr) függvényében az Ön tárcaegyenlege akár néhány napon vagy órán belül már 100,1234 összeget mutathat!
 - Bármikor visszavonhat bármekkora Dai összeget, ami megegyezik az Ön aDai egyenlegével.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Tovább a kölcsönadási dappokhoz
 </ButtonLink>
 
@@ -199,7 +201,7 @@ A veszteség nélküli lottók, mint a PoolTogether, szórakoztató és innovat�
 
 A rendelkezésre álló nyeremény abból a kamatból keletkezik, amit a jegyvásárláson összegyűjtött összeg kölcsönadásából szereznek, ahogy azt a fenti példa is mutatja.
 
-<ButtonLink isSecondary to="https://pooltogether.com">
+<ButtonLink isSecondary href="https://pooltogether.com">
   Próbálja ki a PoolTogether lehetőséget
 </ButtonLink>
 
@@ -211,7 +213,7 @@ Az Ethereumon ezernyi token elérhető. A decentralizált tőzsdék (DEX) lehet�
 
 Például, ha Ön szeretné használni a veszteség nélküli lottózást, a PoolTogether-t (ahogy fentebb írtuk), szüksége lesz Dai vagy USDC tokenre. A decentralizált tőzsdén átválthatja a kívánt ETH-összeget ezekre a tokenekre, majd vissza, amikor végzett az ügylettel.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Tovább a tokenes tőzsdékre
 </ButtonLink>
 
@@ -223,7 +225,7 @@ Haladóbb lehetőségek is rendelkezésre állnak azoknak a kereskedőknek, akik
 
 A centralizált tőzsdéken ehhez képest letétbe kell helyezni az eszközöket a kereskedés előtt, és meg kell bízni bennük, hogy azt megfelelően kezelik. Miközben az eszköz letétben van náluk, nincs biztonságban, mert a centralizált tőzsdék a hackerek kedvelt célpontjai.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Tovább a kereskedő dappokhoz
 </ButtonLink>
 
@@ -233,9 +235,9 @@ A centralizált tőzsdéken ehhez képest letétbe kell helyezni az eszközöket
 
 Az Ethereumon találhatók olyan alapkezelő termékek, melyek az Ön által választott stratégia mentén megpróbálják megnövelni portfóliója értékét. Mindez automata, mindenki számára nyitott, és nem igényel kezelőt, aki a profitból levenné a saját részét.
 
-Egy jó példa erre a [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). Ez az alap automatikusan kiigazítja az Ön portfólióját, hogy az állandóan [a legjobb DeFi-tokeneket tartalmazza az aktuális piaci értékük alapján](https://www.coingecko.com/en/defi). Önnek nem kell foglalkoznia a részletekkel, és bármikor visszavonhatja pénzeszközeit az alapból.
+Egy jó példa erre a [DeFi Pulse Index fund (DPI)](https://defipulse.com/blog/defi-pulse-index/). Ez az alap automatikusan kiigazítja az Ön portfólióját, hogy az állandóan a legjobb DeFi-tokeneket tartalmazza az aktuális piaci értékük alapján. Önnek nem kell foglalkoznia a részletekkel, és bármikor visszavonhatja pénzeszközeit az alapból.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Tovább a befektetési dappokhoz
 </ButtonLink>
 
@@ -249,7 +251,7 @@ Az Ethereum egy tökéletes platform arra, hogy a közösség segítségével fi
 - Átlátható, így az adománygyűjtők igazolni tudják, hogy mennyi pénz jött össze. Azt is nyomon lehet követni, hogy a pénz hogyan lett elköltve.
 - Az adománygyűjtők automatikus visszatérítést is be tudnak állítani, például ha egy adott határidőre nem jön össze a minimális összeg.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Tovább a közösségi finanszírozás dappokhoz
 </ButtonLink>
 
@@ -266,7 +268,9 @@ A kvadratikus finanszírozás gondoskodik arról, hogy azok a projektek kapják 
 
 Eszerint az A projekt, mely 100 adományt kapott, egyenként 1 $ értékben, több finanszírozást kaphat az alapból, mint a B projekt, mely egyetlen adományt kapott 10 000 $ értékben (a kapott összeg az alap méretén múlik).
 
-[Bővebben a kvadratikus finanszírozásról](https://wtfisqf.com)
+<ButtonLink href="https://wtfisqf.com">
+  Bővebben a kvadratikus finanszírozásról
+</ButtonLink>
 
 <Divider />
 
@@ -276,7 +280,7 @@ A decentralizált biztosítások célja, hogy azok olcsóbbak, sokkal átláthat
 
 Az Ethereum termékei, mint bármelyik szoftver, tartalmazhatnak hibákat és sebezhető pontokat. Emiatt jelenleg sok biztosítási megoldás a felhasználók eszközeinek elvesztése ellen ad védelmet. Ugyanakkor vannak olyan projektek, melyek elkezdtek kialakítani az élet többi eseményére vonatkozóan is biztosításokat. Egy jó példa erre az Etherisc's Crop biztosítása, melynek célja [a kisméretű, kenyai gazdálkodók védelme az aszály és az árvíz ellen](https://blog.etherisc.com/etherisc-teams-up-with-chainlink-to-deliver-crop-insurance-in-kenya-137e433c29dc). A decentralizált biztosítás olcsóbb megoldást tud kínálni a gazdálkodóknak, akiknek a hagyományos biztosítók általában megfizethetetlenek.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Tovább a biztosítási dappokhoz
 </ButtonLink>
 
@@ -286,7 +290,7 @@ Az Ethereum termékei, mint bármelyik szoftver, tartalmazhatnak hibákat és se
 
 Amikor ennyi minden zajlik, Önnek is szüksége lehet egy olyan megoldásra, mellyel a befektetéseit, kölcsöneit és kereskedéseit figyelemmel követheti. Rengeteg olyan termék elérhető, melyekkel egyetlen helyről tudja az összes DeFi tevékenységét koordinálni. Ez a DeFi nyílt architektúrájának szépsége. A csapatok olyan interface-eket építenek, melyekkel nemcsak az összes termék kapcsán láthatja az egyenlegét, hanem használhatja azok tulajdonságait is. Amint Ön is jobban elmélyül a DeFi világában, hasznosnak fogja ezt találni.
 
-<ButtonLink to="/dapps/?category=finance#explore">
+<ButtonLink to="/dapps/?category=finance">
   Tovább a portfóliós dappokhoz
 </ButtonLink>
 
@@ -320,11 +324,13 @@ A DeFi-t a következő rétegek szerint értelmezheti:
 3. A protokollok – az [okosszerződések](/glossary/#smart-contract), melyek a műveleteket biztosítják, mint amilyen például egy szolgáltatás az eszközök decentralizált kölcsönadására.
 4. [Az alkalmazások](/dapps/) – azok a termékek, melyek révén kezeljük és elérjük a protokollokat.
 
+Megjegyzés: a legtöbb DeFi alkalmazás az [ERC-20 szabványt](/glossary/#erc-20) használja. A DeFi alkalmazások beburkolják az ETH-t és így becsomagolt ethert (WETH) használnak. [Bővebben a becsomagolt etherről](/wrapped-eth).
+
 ## Építse Ön is a DeFi-t {#build-defi}
 
 A DeFi egy nyílt forráskódú kezdeményezés. A kapcsolódó protokollok és alkalmazások mind nyitottak az Ön számára, hogy megvizsgálja azokat, elágazásokat készítsen azokból vagy továbbfejlessze azokat. A rétegezett struktúra következtében (melynek részei ugyanarra az alap blokkláncra épülnek és ugyanazokat az eszközöket használják) a protokollokat össze lehet kötni, hogy egyedi lehetőségeket aknázzunk ki.
 
-<ButtonLink to="/developers/docs/dapps/">
+<ButtonLink href="/developers/docs/dapps/">
   Bővebben a dappok építéséről
 </ButtonLink>
 
@@ -334,7 +340,6 @@ A DeFi egy nyílt forráskódú kezdeményezés. A kapcsolódó protokollok és 
 
 - [DeFi Prime](https://defiprime.com/)
 - [DeFi Llama](https://defillama.com/)
-- [DeFi Rate](https://defirate.com/)
 
 ### Cikkek a DeFi-ról {#defi-articles}
 
@@ -348,5 +353,5 @@ A DeFi egy nyílt forráskódú kezdeményezés. A kapcsolódó protokollok és 
 
 ### Közösségek {#communities}
 
-- [DeFi Llama Discord-szerver](https://discord.gg/buPFYXzDDd)
+- [DeFi Llama Discord-szerver](https://discord.defillama.com/)
 - [DeFi Pulse Discord-szerver](https://discord.gg/Gx4TCTk)

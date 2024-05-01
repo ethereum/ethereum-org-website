@@ -89,7 +89,7 @@ Ekosystem Ethereum ma misję finansowania dóbr publicznych i wpływowych projek
 
 ## Menedżerowie produktu (Product Managers) <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Ekosystem Ethereum potrzebuje twoich talentów! Wiele firm zatrudnia na stanowiska menedżerów produktu. Jeśli chcesz zacząć od przyczynienia się do projektu open source, skontaktuj się z [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) lub [MetaCartel](https://www.metacartel.org/)
+- Ekosystem Ethereum potrzebuje twoich talentów! Wiele firm zatrudnia na stanowiska menedżerów produktu. Jeśli chcesz zacząć od przyczynienia się do projektu open source, skontaktuj się z [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) lub [RaidGuild](https://www.raidguild.org/)
 
 ## Marketing <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -121,16 +121,13 @@ Ekosystem Ethereum ma misję finansowania dóbr publicznych i wpływowych projek
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) — _Promowanie koncepcji DAO w obszarach nietechnologicznych i pomaganie ludziom w tworzeniu wartości przez DAO_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) — _Społeczność twórców, którzy wierzą w zbiorową własność internetu_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) — _Niezależny kolektyw deweloperski działający jako DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) — _Zdecentralizowany rozwój i zarządzanie zdecentralizowanymi aplikacjami i protokołami_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) — _Społeczne zarządzanie DAOhaus_
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) — _Należąca do społeczności franczyza superbohaterów_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) — _Inżynieria prawna_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) — _Inżynieria prawna_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) — _Społeczność artystyczna_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) — _Inkubator DAO_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) — _Przedsięwzięcie dla projektów kryptowalutowych pre-seed_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) — _Mechanika gier MMORPG w prawdziwym życiu_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) — _Cyfrowo-fizyczne marki odzieżowe_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) — _Projekty prowadzone przez kobiety_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) — _Społeczność skupiona na finansowaniu rozwoju Ethereum_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) — _Kolektyw twórców Web3_
 

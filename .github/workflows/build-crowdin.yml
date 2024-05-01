@@ -1,0 +1,30 @@
+name: Build Crowdin project
+
+on:
+  schedule:
+    - cron: "20 04 1 * *" # Runs at 4:20 AM on the first day of every month
+  workflow_dispatch:
+
+jobs:
+  create_pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: yarn install
+
+      - name: Install ts-node
+        run: yarn global add ts-node
+
+      - name: Run script
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/triggerBuild.ts
+        env:
+          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
