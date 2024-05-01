@@ -51,33 +51,43 @@ jobs:
             const manifests = ${{ steps.lighthouse_audit.outputs.manifest }};
             const links = ${{ steps.lighthouse_audit.outputs.links }};
             const formatResult = (res) => Math.round((res * 100));
-
-
-            console.log('Total manifests', manifests.length);
-            console.log('Total links', links.length);
+          
+            console.log('Total manifests:', manifests.length);
+            console.log('Total links:', links.length);
             console.log('Manifests:', JSON.stringify(manifests, null, 2));
-            
+          
             let comment = [
               '| Page | Performance | Accessibility | Best practices | SEO | PWA |',
               '| --- | --- | --- | --- | --- | --- |',
             ];
-        
-            // Assuming links and manifests are aligned in order
-            links.forEach((link, index) => {
-              const result = manifests[index].summary;
-              Object.keys(result).forEach(key => result[key] = formatResult(result[key]));
-              const score = res => res >= 90 ? '🟢' : res >= 50 ? '🟠' : '🔴';
-              
-              comment.push(
-                `| [Link](${link}) | ${score(result.performance)} ${result.performance} | ${score(result.accessibility)} ${result.accessibility} | ${score(result['best-practices'])} ${result['best-practices']} | ${score(result.seo)} ${result.seo} | ${score(result.pwa)} ${result.pwa} |`
-              );
+          
+            links.forEach(link => {
+              const relevantManifests = manifests.filter(manifest => manifest.url === link);
+              const results = relevantManifests.map(manifest => manifest.summary);
+              const averagedResults = {};
+          
+              if (results.length > 0) {
+                Object.keys(results[0]).forEach(key => {
+                  averagedResults[key] = formatResult(
+                    results.reduce((acc, cur) => acc + cur[key], 0) / results.length
+                  );
+                });
+          
+                const score = res => res >= 90 ? '🟢' : res >= 50 ? '🟠' : '🔴';
+          
+                comment.push(
+                  `| [Link](${link}) | ${score(averagedResults.performance)} ${averagedResults.performance} | ${score(averagedResults.accessibility)} ${averagedResults.accessibility} | ${score(averagedResults['best-practices'])} ${averagedResults['best-practices']} | ${score(averagedResults.seo)} ${averagedResults.seo} | ${score(averagedResults.pwa)} ${averagedResults.pwa} |`
+                );
+              } else {
+                console.error('No results found for URL:', link);
+              }
             });
-        
+          
             comment.push(
               ' ',
               '*Lighthouse scores are calculated based on the latest audit results*'
             );
-        
+          
             comment = comment.join('\n');
             core.setOutput("comment", comment);
       - name: Find current PR # Find the PR associated with this push, if there is one.
