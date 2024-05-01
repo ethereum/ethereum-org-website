@@ -41,7 +41,7 @@
     "lodash.merge": "^4.6.2",
     "lodash.shuffle": "^4.2.0",
     "lodash.union": "^4.6.0",
-    "next": "^14.2.2",
+    "next": "^14.2.3",
     "next-i18next": "^14.0.3",
     "next-mdx-remote": "^3.0.8",
     "next-sitemap": "^4.2.3",
