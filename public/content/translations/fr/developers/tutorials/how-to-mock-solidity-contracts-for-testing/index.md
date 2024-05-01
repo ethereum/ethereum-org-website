@@ -6,9 +6,9 @@ lang: fr
 tags:
   - "solidity"
   - "contrats intelligents"
-  - "tests"
-  - "simulation"
-skill: intermediate
+  - "test"
+  - "bouchonnage"
+skill: moyen
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

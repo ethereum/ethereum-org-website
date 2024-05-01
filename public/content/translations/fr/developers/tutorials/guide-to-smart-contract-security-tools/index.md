@@ -7,7 +7,7 @@ tags:
   - "solidity"
   - "contrats intelligents"
   - "sécurité"
-skill: intermediate
+skill: moyen
 published: 2020-09-07
 source: Créer des contrats sécurisés
 sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/program-analysis
