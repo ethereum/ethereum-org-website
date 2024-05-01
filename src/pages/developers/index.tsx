@@ -167,15 +167,12 @@ const SpeedRunEthereumBanner = ({
       maxW={{ base: "lg", xl: "xl" }}
       top={{ base: "25", xl: "50" }}
       wordBreak="break-word"
+      alignItems="flex-start"
     >
       <Heading as="h2" size="xl">
         {title}
       </Heading>
-      <Box>
-        <ButtonLink href="https://speedrunethereum.com/" w="auto">
-          {linkLabel}
-        </ButtonLink>
-      </Box>
+      <ButtonLink href="https://speedrunethereum.com/">{linkLabel}</ButtonLink>
     </Stack>
   </Box>
 )
