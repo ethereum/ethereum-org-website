@@ -22,6 +22,18 @@ const meta = {
   parameters: {
     layout: "none",
   },
+  argTypes: {
+    children: {
+      table: {
+        disable: true,
+      },
+    },
+    fontWeight: {
+      table: {
+        disable: true,
+      },
+    },
+  },
   decorators: [
     (Story) => (
       <Center minH="100vh">
