@@ -11,19 +11,19 @@ const sizes = {
   }),
   "4xl": defineStyle({
     fontSize: "4xl",
-    lineHeight: "sm",
+    lineHeight: "4xs",
   }),
   "3xl": defineStyle({
     fontSize: "3xl",
-    lineHeight: "sm",
+    lineHeight: "2xs",
   }),
   "2xl": defineStyle({
     fontSize: "2xl",
-    lineHeight: "sm",
+    lineHeight: "2xs",
   }),
   xl: defineStyle({
     fontSize: "xl",
-    lineHeight: "sm",
+    lineHeight: "xs",
   }),
   lg: defineStyle({
     fontSize: "lg",

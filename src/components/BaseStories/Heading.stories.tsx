@@ -43,10 +43,6 @@ type Story = StoryObj<typeof meta>
 const headingScale: Array<HeadingProps> = [
   {
     as: "h1",
-    size: "4xl",
-  },
-  {
-    as: "h1",
     size: "3xl",
   },
   {
@@ -81,7 +77,7 @@ export const Heading: Story = {
         Adjust the viewport to below &quot;md&quot; to see the font size and
         line height change
       </Box>
-      <Stack>
+      <Stack width="full">
         {headingScale.map((obj, idx) => (
           <Flex key={idx} gap="6">
             <HeadingComponent
