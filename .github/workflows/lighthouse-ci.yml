@@ -61,25 +61,26 @@ jobs:
               '| --- | --- | --- | --- | --- | --- |',
             ];
 
-            Object.values(links).forEach(link => {
-              const relevantManifests = manifests.filter(manifest => manifest.url === link);
+            Object.entries(links).forEach(([pageUrl, reportUrl]) => {
+              const relevantManifests = manifests.filter(manifest => manifest.url === pageUrl);
               const results = relevantManifests.map(manifest => manifest.summary);
               const averagedResults = {};
-          
+            
               if (results.length > 0) {
                 Object.keys(results[0]).forEach(key => {
                   averagedResults[key] = formatResult(
                     results.reduce((acc, cur) => acc + cur[key], 0) / results.length
                   );
                 });
-          
+            
                 const score = res => res >= 90 ? '🟢' : res >= 50 ? '🟠' : '🔴';
-          
+                const urlForTable = pageUrl.includes('/en/') ? pageUrl.substring(pageUrl.indexOf('/en/')) : pageUrl;
+            
                 comment.push(
-                  `| [Link](${link}) | ${score(averagedResults.performance)} ${averagedResults.performance} | ${score(averagedResults.accessibility)} ${averagedResults.accessibility} | ${score(averagedResults['best-practices'])} ${averagedResults['best-practices']} | ${score(averagedResults.seo)} ${averagedResults.seo} | ${score(averagedResults.pwa)} ${averagedResults.pwa} |`
+                  `| [${urlForTable}](${reportUrl}) | ${score(averagedResults.performance)} ${averagedResults.performance} | ${score(averagedResults.accessibility)} ${averagedResults.accessibility} | ${score(averagedResults['best-practices'])} ${averagedResults['best-practices']} | ${score(averagedResults.seo)} ${averagedResults.seo} | ${score(averagedResults.pwa)} ${averagedResults.pwa} |`
                 );
               } else {
-                console.error('No results found for URL:', link);
+                console.error('No results found for URL:', pageUrl);
               }
             });
           
