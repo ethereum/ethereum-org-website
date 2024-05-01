@@ -18,10 +18,15 @@
   package = "@netlify/plugin-nextjs"
 
 [functions]
-  included_files = [
-    "./src/intl/**/*",
-    "!./public/**/*",
-    "!./node_modules/@swc/core-linux-x64-musl/**/*",
-    "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/amp-context*",
-    "node_modules/next/dist/server/future/route-modules/pages/vendored/contexts/head-manager-context*",
-  ]
+
+  [functions.___netlify-odb-handler]
+    included_files = [
+      "./src/intl/**/*",
+      "!./public/**/*",
+    ]
+
+  [functions.___netlify-handler]
+    included_files = [
+      "./src/intl/**/*",
+      "!./public/**/*",
+    ]
