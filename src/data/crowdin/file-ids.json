@@ -1,59 +1,11 @@
 [
   {
-    "id": 2558,
-    "path": "/page-index.json"
-  },
-  {
-    "id": 2660,
-    "path": "/common.json"
-  },
-  {
-    "id": 2560,
-    "path": "/page-developers-index.json"
-  },
-  {
-    "id": 2630,
-    "path": "/page-languages.json"
-  },
-  {
-    "id": 2648,
-    "path": "/page-developers-local-environment.json"
-  },
-  {
-    "id": 2650,
-    "path": "/page-developers-learning-tools.json"
-  },
-  {
     "id": 5559,
     "path": "/dao/index.md"
   },
   {
-    "id": 6374,
-    "path": "/page-run-a-node.json"
-  },
-  {
-    "id": 6512,
-    "path": "/page-layer-2.json"
-  },
-  {
-    "id": 2628,
-    "path": "/page-stablecoins.json"
-  },
-  {
-    "id": 2654,
-    "path": "/page-dapps.json"
-  },
-  {
     "id": 5565,
     "path": "/nft/index.md"
-  },
-  {
-    "id": 5567,
-    "path": "/template-usecase.json"
-  },
-  {
-    "id": 2652,
-    "path": "/page-developers-docs.json"
   },
   {
     "id": 2716,
@@ -102,54 +54,6 @@
   {
     "id": 7597,
     "path": "/developers/docs/evm/opcodes/index.md"
-  },
-  {
-    "id": 7767,
-    "path": "/developers/docs/accounts/accounts.svg"
-  },
-  {
-    "id": 7769,
-    "path": "/developers/docs/transactions/gas-tx.svg"
-  },
-  {
-    "id": 7771,
-    "path": "/developers/docs/transactions/tx.svg"
-  },
-  {
-    "id": 7773,
-    "path": "/developers/docs/blocks/tx-block.svg"
-  },
-  {
-    "id": 7775,
-    "path": "/developers/docs/evm/evm.svg"
-  },
-  {
-    "id": 7777,
-    "path": "/developers/docs/evm/gas.svg"
-  },
-  {
-    "id": 8171,
-    "path": "/developers/docs/accounts/accounts.svg.xlsx"
-  },
-  {
-    "id": 8173,
-    "path": "/developers/docs/blocks/tx-block.svg.xlsx"
-  },
-  {
-    "id": 8175,
-    "path": "/developers/docs/evm/evm.svg.xlsx"
-  },
-  {
-    "id": 8177,
-    "path": "/developers/docs/evm/gas.svg.xlsx"
-  },
-  {
-    "id": 8179,
-    "path": "/developers/docs/transactions/gas-tx.svg.xlsx"
-  },
-  {
-    "id": 8181,
-    "path": "/developers/docs/transactions/tx.svg.xlsx"
   },
   {
     "id": 2722,
@@ -292,14 +196,6 @@
     "path": "/glossary/index.md"
   },
   {
-    "id": 8208,
-    "path": "/glossary/glossary.json"
-  },
-  {
-    "id": 2646,
-    "path": "/page-developers-tutorials.json"
-  },
-  {
     "id": 3002,
     "path": "/developers/tutorials/calling-a-smart-contract-from-javascript/index.md"
   },
@@ -348,28 +244,8 @@
     "path": "/community/language-resources/index.md"
   },
   {
-    "id": 6193,
-    "path": "/community/page-community.json"
-  },
-  {
     "id": 8019,
     "path": "/community/code-of-conduct/index.md"
-  },
-  {
-    "id": 8023,
-    "path": "/community/research/index.md"
-  },
-  {
-    "id": 2620,
-    "path": "/page-upgrades-index.json"
-  },
-  {
-    "id": 2634,
-    "path": "/page-roadmap-vision.json"
-  },
-  {
-    "id": 2640,
-    "path": "/page-upgrades-get-involved.json"
   },
   {
     "id": 2926,
@@ -382,10 +258,6 @@
   {
     "id": 2950,
     "path": "/eips/index.md"
-  },
-  {
-    "id": 6127,
-    "path": "/page-upgrades.json"
   },
   {
     "id": 7515,
@@ -552,14 +424,6 @@
     "path": "/contributing/translation-program/index.md"
   },
   {
-    "id": 6177,
-    "path": "/contributing/page-contributing-translation-program-acknowledgements.json"
-  },
-  {
-    "id": 6181,
-    "path": "/contributing/page-contributing-translation-program-contributors.json"
-  },
-  {
     "id": 6388,
     "path": "/contributing/index.md"
   },
@@ -660,24 +524,8 @@
     "path": "/developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md"
   },
   {
-    "id": 7797,
-    "path": "/developers/docs/networking-layer/cons_client_net_layer.svg"
-  },
-  {
     "id": 8011,
     "path": "/developers/docs/networking-layer/portal-network/index.md"
-  },
-  {
-    "id": 8201,
-    "path": "/developers/docs/networking-layer/cons_client_net_layer.svg.xlsx"
-  },
-  {
-    "id": 2636,
-    "path": "/page-staking.json"
-  },
-  {
-    "id": 2642,
-    "path": "/page-staking-deposit-contract.json"
   },
   {
     "id": 6518,
@@ -698,26 +546,6 @@
   {
     "id": 7919,
     "path": "/staking/dvt/index.md"
-  },
-  {
-    "id": 2622,
-    "path": "/page-what-is-ethereum.json"
-  },
-  {
-    "id": 2624,
-    "path": "/page-wallets.json"
-  },
-  {
-    "id": 2626,
-    "path": "/page-wallets-find-wallet.json"
-  },
-  {
-    "id": 2632,
-    "path": "/page-get-eth.json"
-  },
-  {
-    "id": 2644,
-    "path": "/page-eth.json"
   },
   {
     "id": 5563,
@@ -744,38 +572,6 @@
     "path": "/zero-knowledge-proofs/index.md"
   },
   {
-    "id": 7759,
-    "path": "/web3/web1.svg"
-  },
-  {
-    "id": 7761,
-    "path": "/web3/web2.svg"
-  },
-  {
-    "id": 7763,
-    "path": "/web3/web3.svg"
-  },
-  {
-    "id": 7765,
-    "path": "/energy-consumption/energy_consumption_pre_post_merge.svg"
-  },
-  {
-    "id": 8163,
-    "path": "/energy-consumption/energy_consumption_pre_post_merge.svg.xlsx"
-  },
-  {
-    "id": 8165,
-    "path": "/web3/web1.svg.xlsx"
-  },
-  {
-    "id": 8167,
-    "path": "/web3/web2.svg.xlsx"
-  },
-  {
-    "id": 8169,
-    "path": "/web3/web3.svg.xlsx"
-  },
-  {
     "id": 5561,
     "path": "/defi/index.md"
   },
@@ -800,10 +596,6 @@
     "path": "/refi/index.md"
   },
   {
-    "id": 7471,
-    "path": "/page-learn.json"
-  },
-  {
     "id": 7521,
     "path": "/guides/index.md"
   },
@@ -826,10 +618,6 @@
   {
     "id": 7541,
     "path": "/guides/how-to-use-a-wallet/index.md"
-  },
-  {
-    "id": 7543,
-    "path": "/learn-quizzes.json"
   },
   {
     "id": 8027,
@@ -866,38 +654,6 @@
   {
     "id": 7621,
     "path": "/developers/docs/nodes-and-clients/node-architecture/index.md"
-  },
-  {
-    "id": 7779,
-    "path": "/developers/docs/nodes-and-clients/eth1eth2client.svg"
-  },
-  {
-    "id": 7781,
-    "path": "/developers/docs/nodes-and-clients/nodes.svg"
-  },
-  {
-    "id": 7783,
-    "path": "/developers/docs/nodes-and-clients/run-a-node/diagram.svg"
-  },
-  {
-    "id": 7785,
-    "path": "/developers/docs/nodes-and-clients/node-architecture/node-architecture-text-background.svg"
-  },
-  {
-    "id": 8183,
-    "path": "/developers/docs/nodes-and-clients/node-architecture/node-architecture-text-background.svg.xlsx"
-  },
-  {
-    "id": 8185,
-    "path": "/developers/docs/nodes-and-clients/run-a-node/diagram.svg.xlsx"
-  },
-  {
-    "id": 8187,
-    "path": "/developers/docs/nodes-and-clients/et1eth2client.svg.xlsx"
-  },
-  {
-    "id": 8189,
-    "path": "/developers/docs/nodes-and-clients/nodes.svg.xlsx"
   },
   {
     "id": 2702,
@@ -940,40 +696,8 @@
     "path": "/developers/docs/consensus-mechanisms/pos/block-proposal/index.md"
   },
   {
-    "id": 7787,
-    "path": "/developers/docs/consensus-mechanisms/pos/attestations/attestation_schematic.svg"
-  },
-  {
-    "id": 7789,
-    "path": "/developers/docs/consensus-mechanisms/pos/attack-and-defense/reorg-schematic.svg"
-  },
-  {
-    "id": 7791,
-    "path": "/developers/docs/consensus-mechanisms/pos/keys/multiple-keys.svg"
-  },
-  {
-    "id": 7793,
-    "path": "/developers/docs/consensus-mechanisms/pos/keys/validator-key-schematic.svg"
-  },
-  {
     "id": 7927,
     "path": "/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md"
-  },
-  {
-    "id": 8191,
-    "path": "/developers/docs/consensus-mechanisms/pos/attack-and-defense/reorg-schematic.svg.xlsx"
-  },
-  {
-    "id": 8193,
-    "path": "/developers/docs/consensus-mechanisms/pos/attestations/attestation_schematic.svg.xlsx"
-  },
-  {
-    "id": 8195,
-    "path": "/developers/docs/consensus-mechanisms/pos/keys/multiple-keys.svg.xlsx"
-  },
-  {
-    "id": 8197,
-    "path": "/developers/docs/consensus-mechanisms/pos/keys/validator-key-schematic.svg.xlsx"
   },
   {
     "id": 2710,
@@ -1040,16 +764,8 @@
     "path": "/developers/docs/smart-contracts/upgrading/index.md"
   },
   {
-    "id": 7795,
-    "path": "/developers/docs/smart-contracts/verifying/source-code-verification.svg"
-  },
-  {
     "id": 7801,
     "path": "/developers/docs/smart-contracts/verifying/index.md"
-  },
-  {
-    "id": 8199,
-    "path": "/developers/docs/smart-contracts/verifying/source-code-verification.svg.xlsx"
   },
   {
     "id": 2756,
@@ -1080,14 +796,6 @@
     "path": "/developers/docs/scaling/optimistic-rollups/index.md"
   },
   {
-    "id": 2656,
-    "path": "/page-assets.json"
-  },
-  {
-    "id": 2658,
-    "path": "/page-about.json"
-  },
-  {
     "id": 2680,
     "path": "/enterprise/index.md"
   },
@@ -1102,10 +810,6 @@
   {
     "id": 2966,
     "path": "/about/index.md"
-  },
-  {
-    "id": 8037,
-    "path": "/page-bug-bounty.json"
   },
   {
     "id": 2986,

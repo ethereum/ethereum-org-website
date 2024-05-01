@@ -91,7 +91,7 @@ Trong khi DAO có thể có hàng ngàn thành viên bỏ phiếu, tài khoản 
 
 Vào năm 1977, Wyoming đã phát minh ra LLC để bảo vệ các doanh nhân và giới hạn quyền của họ. Gần đây nhất, họ đã đi tiên phong trong luật DAO thiết lập tư cách pháp lý cho DAO. Hiện tại Wyoming, Vermont và quần đảo Virgin đã có đạo luật DAO dưới một số hình thức.
 
-### Một ví dụ nổi tiếng {#law-example}
+### Một ví dụ phổ biến {#law-example}
 
 [CityDAO](https://citydao.io) – CityDAO đã sử dụng luật DAO của Wyoming để mua 40 mẫu đất gần Công viên Quốc gia Yellowstone.
 
@@ -105,7 +105,7 @@ Thường hoàn toàn không cần sự cho phép, tùy thược vào loại tok
 
 _Token thường được dùng để quản trị những giao thức phi tập trung lớn hoặc/và chính những token đó._
 
-#### Một ví dụ nổi tiếng {#token-example}
+#### Một ví dụ phổ biến {#token-example}
 
 [MakerDAO](https://makerdao.com) – Token của MakerDAO là MKR có sẵn trên các sàn giao dịch phi tập trung và bất kỳ ai cũng có thể mua để có quyền biểu quyết đối với tương lai của giao thức Maker.
 
@@ -115,7 +115,7 @@ Những tổ chức tự trị phi tập trung (DAO) dựa trên cổ phần c�
 
 _Hình thức này thường được dùng cho những tổ chức có sự gắn kết cao và xoay quanh con người như những quỹ từ thiện, công đoàn và câu lạc bộ đầu tư. Nó cũng có thể quản trị những giao thức và token._
 
-#### Một ví dụ nổi tiếng {#share-example}
+#### Một ví dụ phổ biến {#share-example}
 
 [MolochDAO](http://molochdao.com/) - Tổ chức tự trị phi tập trung Moloch chuyên về đầu tư cho các dự án liên quan đến Ethereum. Moloch yêu cầu hội viên tiềm năng nộp một đề xuất tham gia. Dự trên đề xuất đó, Moloch có thể đánh giá liệu bạn có kĩ năng chuyên môn và tài chính cần thiết để đưa ra những phán quyết sáng suốt về những ứng viên tương lai hay không. Bạn không thể mua quyền truy cập DAO trên một sàn dịch mở.
 
@@ -125,7 +125,7 @@ _Hình thức này thường được dùng cho những tổ chức có sự g�
 
 _Thường được sử dụng để phát triển và quản lí phi tập trung các giao thức và ứng dụng phi tập trung, nhưng cũng rất phù hợp với một loạt các tổ chức như tổ chức từ thiện, tập thể công nhân, câu lạc bộ đầu tư, v.v._
 
-#### Một ví dụ nổi tiếng {#reputation-example}
+#### Một ví dụ phổ biến {#reputation-example}
 
 [DXdao](https://DXdao.eth.link) - DXdao là một tổ chức có quyền xây dựng và quản lý toàn cầu các giao thức và ứng dụng phi tập trung kể từ năm 2019. Nó thúc đẩy quản trị dựa trên quyền lực và sự đồng thuận đa chiều để điều phối và quản lý các quỹ, có nghĩa là không ai có thể dùng tiền để ảnh hưởng đến nó sau này.
 
@@ -137,7 +137,7 @@ _Thường được sử dụng để phát triển và quản lí phi tập tru
 - [Danh sách các DAO của DAOHaus](https://app.daohaus.club/explore)
 - [Danh sách các DAO của Tally.xyz](https://www.tally.xyz)
 
-### Khởi phát một DAO {#start-a-dao}
+### Khởi tạo một DAO {#start-a-dao}
 
 - [Kêu gọi một DAO với DAOHaus](https://app.daohaus.club/summon)
 - [Bắt đầu một Governor DAO với Tally](https://www.tally.xyz/add-a-dao)
@@ -159,7 +159,7 @@ _Thường được sử dụng để phát triển và quản lí phi tập tru
 - [DAO không phải là công ty: Khi sự phân quyền trong tổ chức tự trị có vai trò quan trọng, theo Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
 - [DAO, DAC, DA và Nhiều Hơn Nữa: Hướng Dẫn Thuật Ngữ Không Hoàn Chỉnh](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) - [Ethereum Blog](https://blog.ethereum.org)
 
-### Video {#videos}
+### Các đoạn video {#videos}
 
 - [DAO đóng vai trò gì trong tiền mã hóa?](https://youtu.be/KHm0uUPqmVE)
 - [Một DAO có thể tạo nên một thành phố được không?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) - [TED](https://www.ted.com/)

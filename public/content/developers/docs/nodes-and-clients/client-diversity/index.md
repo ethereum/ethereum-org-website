@@ -92,7 +92,7 @@ Several dashboards give real-time client diversity statistics for the execution 
 - [clientdiversity.org](https://clientdiversity.org/)
   **Execution layer:**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Further reading {#further-reading}

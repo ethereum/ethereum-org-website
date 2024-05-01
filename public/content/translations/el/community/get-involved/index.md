@@ -89,7 +89,7 @@ lang: el
 
 ## Υπεύθυνοι διαχείρισης προϊόντων <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Το οικοσύστημα του Ethereum χρειάζεται το ταλέντο σας! Πολλές εταιρείες προσλαμβάνουν υπεύθυνο διαχείρισης προϊόντων. Αν θέλετε να ξεκινήσετε συμβάλλοντας σε ένα έργο ανοικτού κώδικα, έρθετε σε επαφή με το [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ή το [MetaCartel](https://www.metacartel.org/)
+- Το οικοσύστημα του Ethereum χρειάζεται το ταλέντο σας! Πολλές εταιρείες προσλαμβάνουν υπεύθυνο διαχείρισης προϊόντων. Αν θέλετε να ξεκινήσετε συμβάλλοντας σε ένα έργο ανοικτού κώδικα, έρθετε σε επαφή με το [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ή το [RaidGuild](https://www.raidguild.org/)
 
 ## Μάρκετινγκ <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -121,16 +121,13 @@ lang: el
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Προώθηση της έννοιας DAO σε μη τεχνολογικό πεδίο και να βοηθήσει τους ανθρώπους να δημιουργήσουν αξίες μέσω ενός DAO_
 - [Προγραμματιστής DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Κοινότητα δημιουργών που πιστεύουν στη συλλογική ιδιοκτησία του διαδικτύου_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Ελεύθεροι επαγγελματίες προγραμματισμού Web3 που λειτουργούν ως ένας DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Αποκεντρωμένη ανάπτυξη & διακυβέρνηση dapps & πρωτόκολλων_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Κοινοτική διακυβέρνηση DAOhaus_
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Community owned superhero franchise_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Κοινότητα Τέχνης_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO incubator_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Χρηματοδότηση έργων κρυπτονομισμάτων σε αρχικό στάδιο_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Μηχανική παιχνιδιού MMORPG για Πραγματική Ζωή_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Digiphysical Apparel Brands_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Γυναικεία έργα_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Επικέντρωση της κοινότητας στη χρηματοδότηση ανάπτυξης Ethereum_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Συλλογικότητα δημιουργών Web3_
 

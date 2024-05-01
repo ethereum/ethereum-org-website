@@ -77,7 +77,7 @@ lang: uk
 
 ## Менеджери з продукту <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Екосистемі Ethereum потрібні ваші таланти! Багато компаній готові наймати менеджерів із продукту. Якщо ви хочете взяти участь у проєкті з відкритим вихідним кодом, зверніться до [групи Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) або [MetaCartel](https://www.metacartel.org/)
+- Екосистемі Ethereum потрібні ваші таланти! Багато компаній готові наймати менеджерів із продукту. Якщо ви хочете взяти участь у проєкті з відкритим вихідним кодом, зверніться до [групи Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) або [RaidGuild](https://www.raidguild.org/)
 
 ## Маркетинг <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -109,15 +109,12 @@ DAO — це децентралізовані автономні організ�
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) — _просування концепції децентралізованої автономної організації (DAO) у нетехнологічних сферах і допомога в створенні вартості за допомогою DAO_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) — _спільнота розробників, які вірять у колективне володіння Інтернетом_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) — _колектив розробників-фрилансерів Web3, які працюють як DAO_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) — _децентралізована розробка й управління програмами dApps і протоколами_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) — _управління спільнотою DAOhaus_
-- [Герой DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) — _спільнота, що створила франшизу супергероїв_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) — _розробки в галузі юридичних питань_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) — _розробки в галузі юридичних питань_
 - [Махі X](https://machix.com) [@MachiXОfficial](https://twitter.com/MachiXOfficial) — _спільнота митців_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) — _інкубатор DAO _
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) — _венчурний капітал для попереднього етапу криптовалютних проєктів_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) — _механіка ігор MMORPG для реального життя_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) — _бренди цифро-фізичних речей_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) — _проєкти, якими керують жінки_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) — _спільнота, орієнтована на фінансування розробки Ethereum_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) — _колектив розробників Web3_

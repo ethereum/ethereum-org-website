@@ -11,7 +11,7 @@ summaryPoint3: A Fusão se refere à fusão original da Rede Principal do Ethere
 summaryPoint4: A Fusão reduziu o consumo de energia do Ethereum em ~99,95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   A Fusão foi executada em 15 de setembro de 2022. Isto completou a transição do Ethereum para o consenso de prova de participação, depreciando oficialmente a prova de trabalho, e reduzindo o consumo de energia em ~99,95%.
 </UpgradeStatus>
 
