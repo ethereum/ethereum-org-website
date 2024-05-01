@@ -160,8 +160,6 @@ const SpeedRunEthereumBanner = ({
     <Stack
       spacing={{ base: "3", md: "4" }}
       p={{ base: "4", lg: "8" }}
-      textAlign="start"
-      borderRadius="base"
       position="absolute"
       insetInlineStart="8"
       maxW={{ base: "lg", xl: "xl" }}
