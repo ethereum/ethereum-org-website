@@ -53,19 +53,26 @@ jobs:
             const formatResult = (res) => Math.round((res * 100))
             Object.keys(result).forEach(key => result[key] = formatResult(result[key]))
             const score = res => res >= 90 ? '🟢' : res >= 50 ? '🟠' : '🔴'
-            const comment = [
-                `⚡️ [Lighthouse report](${Object.values(links)[0]}) for the changes in this PR:`,
-                '| Category | Score |',
-                '| --- | --- |',
-                `| ${score(result.performance)} Performance | ${result.performance} |`,
-                `| ${score(result.accessibility)} Accessibility | ${result.accessibility} |`,
-                `| ${score(result['best-practices'])} Best practices | ${result['best-practices']} |`,
-                `| ${score(result.seo)} SEO | ${result.seo} |`,
-                `| ${score(result.pwa)} PWA | ${result.pwa} |`,
-                ' ',
-                `*Lighthouse ran on [${Object.keys(links)[0]}](${Object.keys(links)[0]})*`
-            ].join('\n')
-             core.setOutput("comment", comment);
+        
+            let comment = [
+              '| Page | Performance | Accessibility | Best practices | SEO | PWA |',
+              '| --- | --- | --- | --- | --- | --- |',
+            ]
+        
+            Object.values(links).forEach(link => {
+              comment.push(
+                `| [Link](${link}) | ${score(result.performance)} ${result.performance} | ${score(result.accessibility)} ${result.accessibility} | ${score(result['best-practices'])} ${result['best-practices']} | ${score(result.seo)} ${result.seo} | ${score(result.pwa)} ${result.pwa} |`
+              )
+            });
+        
+            comment.push(
+              ' ',
+              '*Lighthouse scores are calculated based on the latest audit results*'
+            );
+        
+            // Join all parts of the comment into a single string
+            comment = comment.join('\n')
+            core.setOutput("comment", comment);
       - name: Find current PR # Find the PR associated with this push, if there is one.
         uses: jwalton/gh-find-current-pr@v1.3.3
         id: findPr
