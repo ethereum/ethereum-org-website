@@ -6,7 +6,6 @@ on:
       - master
       - staging
       - performance/**
-      - testlighthouseci # tmp - just to test the workflow in the current branch
 
 jobs:
   lighthouse:
