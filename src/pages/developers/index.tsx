@@ -151,9 +151,9 @@ const SpeedRunEthereumBanner = ({
       src={SpeedRunEthereumImage}
       alt="SpeedRunEthereum banner"
       sizes="100vw"
-      style={{ width: "100vw", objectFit: "cover" }}
+      style={{ width: "100vw", objectFit: "cover", objectPosition: "20%" }}
       h={{
-        base: "420px",
+        base: "450px",
         xl: "auto",
       }}
     />
