@@ -6,7 +6,7 @@ lang: ja
 tags:
   - "python"
   - "web3.py"
-skill: beginner
+skill: 初級
 published: 2020-09-08
 source: Snake charmers
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
@@ -39,9 +39,9 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 }
 ```
 
-各[ブロック](/developers/docs/blocks/)は、その前のブロックを参照します。`parentHash`は、単に前のブロックのハッシュ値です。
+各[ブロック](/developers/docs/blocks/)は、その前のブロックを参照します。`parentHash`は、単に前のブロックのハッシュ値です。<FeaturedText>注: イーサリアムは
 
-<FeaturedText>注: イーサリアムは [ハッシュ関数](https://wikipedia.org/wiki/Hash_function)を定期的に使用して、固定サイズの値(ハッシュ)を生成します。 イーサリアムではハッシュ値が重要な役割を果たしますが、今のところは固有のIDと考えておくとよいでしょう。</FeaturedText>
+[ハッシュ関数](https://wikipedia.org/wiki/Hash_function)を定期的に使用して、固定サイズの値(ハッシュ)を生成します。 イーサリアムではハッシュ値が重要な役割を果たしますが、今のところは固有のIDと考えておくとよいでしょう。</FeaturedText>
 
 ![ブロックチェーンと各ブロック内のデータを表す図](./blockchain-diagram.png)
 
@@ -284,9 +284,9 @@ Out[13]: 1000003000000000000000000
 
 2つ目のアカウントの残高は、 1,000,000 ETHから1,000,003 ETHに増えているので、正しいようです。 1つ目のアカウントはどうなったのでしょうか? 3 ETHより少し多い金額が失われたようです。 残念ながら、人生にはタダというものはなく、イーサリアムのパブリックネットワークを利用するには、そのサポート役であるピアに対価を支払う必要があります。 トランザクションを送信したアカウントから、少額のトランザクションフィーが差し引かれました。このフィーは、消費されたガスの量(ETH送金では21000単位のガス)にベースフィーを掛けたものです。ベースフィーは、ネットワークのアクティビティに加えて、ブロック内にトランザクションを含めるバリデータに送信されるチップによって異なります。
 
-[ガスの詳細](/developers/docs/gas/#post-london)
+[ガスの詳細](/developers/docs/gas/#post-london)<FeaturedText>注: パブリックネットワークにおいてトランザクションフィーは、ネットワークの需要やどれだけ迅速にトランザクションを処理する必要があるのかによって変動します。 フィー(手数料)の計算方法の内訳に興味がある場合は、
 
-<FeaturedText>注: パブリックネットワークにおいてトランザクションフィーは、ネットワークの需要やどれだけ迅速にトランザクションを処理する必要があるのかによって変動します。 フィー(手数料)の計算方法の内訳に興味がある場合は、[ブロックに含まれるトランザクションの仕組み](https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f)に関する以前の投稿をご覧ください。</FeaturedText>
+[ブロックに含まれるトランザクションの仕組み](https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f)に関する以前の投稿をご覧ください。</FeaturedText>
 
 ## ちょっと一息 {#and-breathe}
 

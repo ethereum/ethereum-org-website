@@ -7,7 +7,7 @@ tags:
   - "Vyper"
   - "ERC-721"
   - "Python"
-skill: beginner
+skill: 初級
 published: 2021-04-01
 ---
 

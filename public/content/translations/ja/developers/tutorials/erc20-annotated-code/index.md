@@ -6,7 +6,7 @@ lang: ja
 tags:
   - "Solidity"
   - "erc-20"
-skill: beginner
+skill: 初級
 published: 2021-03-09
 ---
 
@@ -46,7 +46,7 @@ Solidity言語は現在も急速に進化しており、新しいバージョン
 
 ```solidity
 /**
- * EIP で定義された ERC20 規格の @dev インターフェース。
+ * @dev Interface of the ERC20 standard as defined in the EIP.
  */
 ```
 

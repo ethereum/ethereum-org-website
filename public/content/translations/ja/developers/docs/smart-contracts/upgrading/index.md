@@ -74,7 +74,7 @@ lang: ja
 
 [Solidityのドキュメント](https://docs.soliditylang.org/en/latest/introduction-to-smart-contracts.html#delegatecall-callcode-and-libraries)の引用:
 
-> **delegatecall**という特別な可変メッセージ呼び出しがあります。**delegatecall**は、ターゲットアドレスのコードが、呼び出し側コントラクトのコンテキスト(例: アドレス)で実行されることを除けば、メッセージ呼び出しと同一です。また、`msg.sender`と`msg.value`の値は変わりません。__これは、コントラクトが実行時に、別のアドレスからコードを動的にロードできることを意味します。 つまり、ストレージ、現在のアドレス、残高は呼び出し元のコントラクトを参照しており、 コードのみが呼び出し先のアドレスから取得されます_。
+> **delegatecall**という特別な可変メッセージ呼び出しがあります。**delegatecall**は、ターゲットアドレスのコードが、呼び出し側コントラクトのコンテキスト(例: アドレス)で実行されることを除けば、メッセージ呼び出しと同一です。また、`msg.sender`と`msg.value`の値は変わりません。__これは、コントラクトが実行時に、別のアドレスからコードを動的にロードできることを意味します。 つまり、ストレージ、現在のアドレス、残高は呼び出し元のコントラクトを参照しており、 コードのみが呼び出し先のアドレスから取得されます_。</p> </blockquote> 
 > 
 > プロキシコントラクトには、`fallback`関数が組み込まれているため、ユーザーが関数を呼び出すたびに`delegatecall`をが呼び出されていることがわかります。 Solidityプログラミングでは、コントラクトの関数呼び出しが指定した関数と一致しない場合、[フォールバック関数](https://docs.soliditylang.org/en/latest/contracts.html#fallback-function)が実行されます。
 > 

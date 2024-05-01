@@ -8,7 +8,7 @@ tags:
   - "スマートコントラクト"
   - "検証"
   - "署名(signing)"
-skill: advanced
+skill: 中級
 published: 2023-01-12
 ---
 
