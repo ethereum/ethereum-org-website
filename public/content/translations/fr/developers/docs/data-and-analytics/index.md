@@ -30,7 +30,7 @@ En utilisant [GraphQL](https://graphql.org/), les développeurs peuvent interrog
 
 ## Diversité des clients
 
-[La diversité du client](/developers/docs/nodes-and-clients/client-diversity/) est importante pour la santé globale du réseau Ethereum, car elle fournit de la résilience aux bogues et aux exploitations. Il y a maintenant plusieurs tableaux de bord de la diversité de clients dont [clientdiversity.org](https://clientdiversity.org/), [rated.etwork](https://www.rated.network), [execution-diversity.info](https://execution-diversity.info/), [et Ethernodes](https://ethernodes.org/).
+[La diversité du client](/developers/docs/nodes-and-clients/client-diversity/) est importante pour la santé globale du réseau Ethereum, car elle fournit de la résilience aux bogues et aux exploitations. Il y a maintenant plusieurs tableaux de bord de la diversité de clients dont [clientdiversity.org](https://clientdiversity.org/), [rated.etwork](https://www.rated.network), [supermajority.info](https://supermajority.info//), [et Ethernodes](https://ethernodes.org/).
 
 ## Dune Analytics {#dune-analytics}
 

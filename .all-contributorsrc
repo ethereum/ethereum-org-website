@@ -11774,7 +11774,8 @@
       "profile": "https://github.com/HayattiQ",
       "contributions": [
         "content",
-        "bug"
+        "bug",
+        "maintenance"
       ]
     },
     {
@@ -11945,6 +11946,15 @@
       "name": "skyminelabs",
       "avatar_url": "https://avatars.githubusercontent.com/u/57817726?v=4",
       "profile": "https://github.com/skyminelabs",
+      "contributions": [
+        "maintenance"
+      ]
+    },
+    {
+      "login": "sogobanwo",
+      "name": "sogobanwo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/99739569?v=4",
+      "profile": "https://olorunsogo-portfolio-sand.vercel.app/",
       "contributions": [
         "maintenance"
       ]

@@ -70,7 +70,7 @@ Then click on the compile button:
 
 You can choose to select the “Auto compile” option so the contract will always be compiled when you save the content on the text editor.
 
-Then navigate to the deploy and run transactions screen:
+Then navigate to the "deploy and run transactions" screen:
 
 ![The deploy icon in the Remix toolbar](./remix-deploy.png)
 

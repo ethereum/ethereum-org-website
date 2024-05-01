@@ -59,7 +59,7 @@ Habár a Web3 lenyűgöző vonásai nem különülnek el ennyire és nem is töm
 
 A Web3 sosem látott módon ad a felhasználóknak képességet arra, hogy digitális eszközeiket saját maguk birtokolják. Tegyük fel, hogy Ön egy web2-es játékot játszik. Ha egy játékon belüli tételt megvásárol, akkor az közvetlenül a profiljához kapcsolódik. De ha a játék készítői törlik ezt a profilt, akkor elveszíti azokat a tételeket. Ha pedig nem játszik tovább, akkor elveszíti az értéket, amit azokba a tételekbe fektetett.
 
-A Web3 közvetlen tulajdonjogot ad [nem helyettesíthető tokenek (NFT)](/nft/) révén. Senki, még a játék készítői sem tudják elvenni ezt a jogot. Ha abbahagyja a játékot, akkor el tudja adni, kereskedni tud azokkal a nyitott piacokon és visszaszerezni az értékét.
+A Web3 közvetlen tulajdonjogot ad [nem helyettesíthető tokenek (NFT)](/glossary/#nft) révén. Senki, még a játék készítői sem tudják elvenni ezt a jogot. Ha abbahagyja a játékot, akkor el tudja adni, kereskedni tud azokkal a nyitott piacokon és visszaszerezni az értékét.
 
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tudjon meg többet az NFT-kről</div>
@@ -82,7 +82,7 @@ A web2-nél az alkotóknak meg kell bízni a platformban, hogy nem változtatja 
 
 Az adatok feletti tulajdonjog mellett a web3 a platformot is birtokolni lehet, mint egy gyűjthető dolgot, olyan tokenek révén, melyek egy cégben való részesedésként működnek. A DAO segít koordinálni a platform decentralizált tulajdonlását és döntéseket hozni a jövőt illetően.
 
-Ezek olyan okosszerződések, melyek automatizálják a decentralizált döntéshozást egy adott finanszírozási forrás felett (tokenek). A tokennel rendelkező felhasználók szavaznak, hogy hogyan költsék el a forrásokat, a programkód pedig automatikusan végrehajtja azt.
+A DAO-kat technikailag úgy határozzák meg, mint megállapodás szerinti [intelligens szerződéseket](/glossary/#smart-contract), amelyek automatizálják a decentralizált döntéshozatalt egy erőforráskészlet (token) felett. A tokennel rendelkező felhasználók szavaznak, hogy hogyan költsék el a forrásokat, a programkód pedig automatikusan végrehajtja azt.
 
 Ugyanakkor számos Web3-közösséget is DAO-ként definiálnak. Ezek a közösségek más-más szintű decentralizációval és automatizációval rendelkeznek. Jelenleg még vizsgáljuk, hogy mi is az a DAO és hova fejlődik a jövőben.
 
@@ -97,7 +97,7 @@ Ugyanakkor számos Web3-közösséget is DAO-ként definiálnak. Ezek a közöss
 
 Hagyományos módon minden platformra egy külön profilt kell létrehozni. Például Ön külön Twitter-, YouTube- és Reddit-profillal is rendelkezik. Meg szeretné változtatni a nevét vagy a képét? Minden egyes eszközön meg kell tennie. Használhat közösségimédia-alapú azonosítást néhány esetben, ez viszont visszamutat a korábbi témára, a cenzúrára. Ezek a platformok egyetlen kattintással kizárhatják Önt a teljes közösségi életéből. Ami még rosszabb, hogy ezek a platformok személyes azonosítókat kérnek el a profil létrehozásához.
 
-A Web3 úgy kezeli ezt, hogy mindenki kontrollálja a saját digitális személyazonosságát az Ethereum-cím és az ENS (Ethereum Névszolgáltatás) profil révén. Az Ethereum-cím használata egyszerre biztosít hozzáférést az összes platformhoz, ami biztonságos, ellenáll a cenzúrának és anonim.
+A web3 úgy kezeli ezt, hogy mindenki kontrollálja a saját digitális személyazonosságát az Ethereum-cím és az ENS (Ethereum Névszolgáltatás) profil révén. Az Ethereum-cím használata egyszerre biztosít hozzáférést az összes platformhoz, ami biztonságos, ellenáll a cenzúrának és anonim.
 
 <ButtonLink to="https://login.xyz/">
   Bejelentkezés az Ethereummal
@@ -105,7 +105,7 @@ A Web3 úgy kezeli ezt, hogy mindenki kontrollálja a saját digitális személy
 
 ### Saját fizetési rendszer {#native-payments}
 
-A web2 fizetési infrastruktúra a bankokra és fizetési szolgáltatókra támaszkodik, kizárva azokat, akik nem rendelkeznek bankszámlával, vagy éppen nem olyan országban élnek. A Web3 tokeneket használ, mint amilyen az [ETH](/eth/), hogy közvetlen módon tudjon pénzt küldeni, és nem kell hozzá harmadik fél.
+A web2 fizetési infrastruktúra a bankokra és fizetési szolgáltatókra támaszkodik, kizárva azokat, akik nem rendelkeznek bankszámlával, vagy éppen nem olyan országban élnek. A Web3 tokeneket használ, mint amilyen az [ETH](/glossary/#ether), hogy közvetlen módon tudjon pénzt küldeni, és nem kell hozzá harmadik fél.
 
 <ButtonLink to="/eth/">
   Többet az ETH-ről
@@ -117,7 +117,7 @@ A Web3 számos előnye mellett még mindig vannak korlátok, amit az ökosziszt�
 
 ### Hozzáférhetőség {#accessibility}
 
-Az olyan fontos Web3-funkciók, mint a bejelentkezés az Ethereummal, már mindenki számára elérhetők ingyenesen. A tranzakciók költsége viszont még mindig sokakat kizár. A Web3-at a magas tranzakciós díjai miatt kevésbé tudják a szegényebb, fejlődő országok használni. Az Ethereumon ezeket a kihívásokat a [tervezett fejlesztések](/roadmap/) és [a második blokkláncréteg (L2) skálázási megoldásai](/developers/docs/scaling/) fogják kezelni. A technológia készen áll, az L2-n még magasabb felhasználási számot kell elérni ahhoz, hogy mindenkinek elérhető legyen a Web3.
+Az olyan fontos Web3-funkciók, mint a bejelentkezés az Ethereummal, már mindenki számára elérhetők ingyenesen. A tranzakciók költsége viszont még mindig sokakat kizár. A Web3-at a magas tranzakciós díjai miatt kevésbé tudják a szegényebb, fejlődő országok használni. Az Ethereumon ezeket a kihívásokat [az ütemterv](/roadmap/) és a [2. rétegbeli skálázási megoldások](/glossary/#layer-2) oldják meg. A technológia készen áll, az L2-n még magasabb felhasználási számot kell elérni ahhoz, hogy mindenkinek elérhető legyen a Web3.
 
 ### Felhasználói tapasztalat {#user-experience}
 
@@ -139,7 +139,7 @@ A Web3 egy fiatal és gyorsan fejlődő ökoszisztéma. Gavin Wood 2014-ben alko
 
 Ez még csak a kezdete annak, hogy az internet jobbá váljon a Web3-mal, és ahogy az alapot nyújtó infrastruktúra fejlődik, a web jövője igen bíztatónak tűnik.
 
-## Hogyan lehet ebben részt venni {#get-involved}
+## Hogyan lehet részt venni {#get-involved}
 
 - [Tárca szerzése](/wallets/)
 - [Találjon egy közösséget](/community/)
