@@ -48,21 +48,29 @@ jobs:
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const result = ${{ steps.lighthouse_audit.outputs.manifest }}[0].summary
-            const links = ${{ steps.lighthouse_audit.outputs.links }}
-            const formatResult = (res) => Math.round((res * 100))
-            Object.keys(result).forEach(key => result[key] = formatResult(result[key]))
-            const score = res => res >= 90 ? '🟢' : res >= 50 ? '🟠' : '🔴'
-        
+            const manifests = ${{ steps.lighthouse_audit.outputs.manifest }};
+            const links = ${{ steps.lighthouse_audit.outputs.links }};
+            const formatResult = (res) => Math.round((res * 100));
+
+
+            console.log('Total manifests', manifests.length);
+            console.log('Total links', links.length);
+            console.log('Manifests:', JSON.stringify(manifests, null, 2));
+            
             let comment = [
               '| Page | Performance | Accessibility | Best practices | SEO | PWA |',
               '| --- | --- | --- | --- | --- | --- |',
-            ]
+            ];
         
-            Object.values(links).forEach(link => {
+            // Assuming links and manifests are aligned in order
+            links.forEach((link, index) => {
+              const result = manifests[index].summary;
+              Object.keys(result).forEach(key => result[key] = formatResult(result[key]));
+              const score = res => res >= 90 ? '🟢' : res >= 50 ? '🟠' : '🔴';
+              
               comment.push(
                 `| [Link](${link}) | ${score(result.performance)} ${result.performance} | ${score(result.accessibility)} ${result.accessibility} | ${score(result['best-practices'])} ${result['best-practices']} | ${score(result.seo)} ${result.seo} | ${score(result.pwa)} ${result.pwa} |`
-              )
+              );
             });
         
             comment.push(
@@ -70,8 +78,7 @@ jobs:
               '*Lighthouse scores are calculated based on the latest audit results*'
             );
         
-            // Join all parts of the comment into a single string
-            comment = comment.join('\n')
+            comment = comment.join('\n');
             core.setOutput("comment", comment);
       - name: Find current PR # Find the PR associated with this push, if there is one.
         uses: jwalton/gh-find-current-pr@v1.3.3
