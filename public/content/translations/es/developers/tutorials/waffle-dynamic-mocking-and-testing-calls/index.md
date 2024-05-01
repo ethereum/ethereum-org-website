@@ -10,7 +10,7 @@ tags:
   - "simular"
 skill: intermediate
 lang: es
-published: 2020-11-14
+published: 14-11-2020
 ---
 
 ## ¿De qué trata este tutorial? {#what-is-this-tutorial-about}
@@ -198,7 +198,7 @@ describe("Am I Rich Already", () => {
 })
 ```
 
-Escribamos las primera prueba del contrato `AmIRichAlready`. ¿De qué crees que debería ser nuestra prueba? ¡Sí, tienes razón! Deberíamos comprobar si ya somos ricos :)
+Escribamos la primera prueba para el contrato `AmIRichAlready`. ¿De qué crees que debería ser nuestra prueba? ¡Sí, tienes razón! Deberíamos comprobar si ya somos ricos :)
 
 Pero espera un segundo. ¿Cómo sabrá nuestro contrato simulado que valores devolver? No hemos implementado ninguna lógica para la función `balanceOf()`. Nuevamente, Waffle nos puede ayudar. Nuestro contrato simulado tiene algunas cosas nuevas:
 
@@ -223,7 +223,7 @@ Separemos esta prueba en partes:
 
 Estamos listos para liberar a la bestia:
 
-![Pasando una prueba](test-one.png)
+![Pasando una prueba](./test-one.png)
 
 Así que la prueba funciona, pero... todavía hay margen de mejora. La función `balanceOf()` siempre devolverá 999999. Podemos mejorarla especificando un monedero para el cual la función devolverá algo, como un contrato real:
 
@@ -295,4 +295,4 @@ El código fuente de este tutorial puedes econtrarlo [aquí](https://github.com/
 
 Otros tutoriales que podrían interesarte:
 
-- [Probar contratos inteligentes con Waffle](/developers/tutorials/waffle-test-simple-smart-contract/)
+- [Probar contratos inteligentes con Waffle](/developers/tutorials/testing-smart-contract-with-waffle/)

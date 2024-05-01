@@ -211,7 +211,7 @@ Para mintear nuestros NFTs (o firmar cualquier transacción en la cadena de bloq
 
 ### Compruebe su saldo {#check-your-balance}
 
-Para verificar que nuestro saldo esté ahí, realicemos una solicitud [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando la [herramienta de compositor de Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto devolverá la cantidad de Eth en nuestra billetera. Después de introducir la dirección de su cuenta de Metamask y hacer clic en «Send Request», debería ver una respuesta como esta:
+Para verificar que nuestro saldo esté ahí, realicemos una solicitud [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando la [herramienta de compositor de Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto devolverá la cantidad de Eth en nuestra billetera. Después de introducir la dirección de su cuenta de Metamask y hacer clic en «Send Request» (Enviar Solicitud), debería ver una respuesta como esta:
 
 ```text
 {"jsonrpc": "2.0", "id": 0, "result": "0xde0b6b3a7640000"}
@@ -274,7 +274,7 @@ export const connectWallet = async () => {
 
 Analicemos lo que hace este código:
 
-Primero, nuestra función revisa si `window.ethereum` está activado en su navegador.
+Primero, nuestra función revisa si `window.ehtereum` está activado en su navegador.
 
 `window.ethereum` es una API global inyectada por MetaMask y otros proveedores de billeteras que permite a los sitios web solicitar las cuentas de Ethereum de los usuarios. En caso de aprobación, puede leer información de la cadena de bloques a la que el usuario se encuentra conectado y sugerir al usuario que firme mensajes y transacciones. Revise la [documentación de MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) para obtener más información.
 
@@ -597,7 +597,7 @@ Vaya a la página "Create App" en el panel de Alchemy colocando el cursor sobre 
 
 Asigne un nombre a la aplicación (nosotros elegimos "Mi primer NFT"), ofrezca una descripción, seleccione "Staging" para el Entorno usado para la contabilidad de la aplicación y seleccione "Ropsten" para la red.
 
-¡Haga clic en «Crear app» y ya está! Su aplicación debería aparecer en la siguiente tabla.
+¡Haga clic en «Crear app» y eso es todo! Su aplicación debería aparecer en el tablero de abajo.
 
 ¡Genial! Ahora que hemos creado la URL HTTP de la API de Alchemy, cópiela en el portapapeles...
 
@@ -865,8 +865,8 @@ Un último paso...
 
 Para recapitular, al crear un minteador de NFT, ha aprendido correctamente cómo:
 
-- Conectar a MetaMask a través del frontend de su proyecto
-- Llamar a métodos de contrato inteligente desde tu frontend
+- Establecer conexión con MetaMask a través del proyecto de frontend
+- Invocar métodos de contrato inteligente desde su frontend
 - Firmar transacciones usando MetaMask
 
 Seguramente le gustaría poder mostrar los NFT minteados a través de su dapp en su billetera, así que asegúrese de revisar nuestro tutorial rápido [Cómo ver su NFT en su billetera](https://docs.alchemyapi.io/alchemy/tutorials/how-to-write-and-deploy-a-nft-smart-contract/how-to-view-your-nft-in-your-wallet).

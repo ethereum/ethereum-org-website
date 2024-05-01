@@ -57,7 +57,7 @@ Si crea un dapp que requiere que las transacciones se paguen en ETH, puede permi
 
 ### Gobernanza {#governance}
 
-Crear sistemas de gobernanza a medida para una [DAO](/dao/) puede ser costoso y consumir mucho tiempo. En su lugar, se podría utilizar un kit de herramientas de gobernanza de código abierto, como Aragon Client, para arrancar la DAO y poder crear rápidamente un marco de gobernanza.
+Crear sistemas de gobernanza a medida para una [DAO](/dao/) puede ser costoso y consumir mucho tiempo. En su lugar, se podría utilizar un kit de herramientas de gobernanza de código abierto, como <0">Aragon Client</a>, para arrancar la DAO y poder crear rápidamente un marco de gobernanza.
 
 ### Gestión de identidades {#identity-management}
 
@@ -65,12 +65,11 @@ En lugar de crear un sistema de autenticación personalizado o usar proveedores 
 
 ## Tutoriales relacionados {#related-tutorials}
 
-- [Componibilidad de los contratos: bloques fundamentales para el desarrollo de contratos inteligentes de Ethereum](https://www.decentlabs.io/blog/contract-composability-the-building-blocks-of-ethereum-smart-contract-development)
 - [Comience con el desarrollo del fontend de su DApp con create-eth-app:](/developers/tutorials/kickstart-your-dapp-frontend-development-with-create-eth-app/)_ un resumen sobre cómo usar create-eth-app para crear aplicaciones con contratos inteligentes populares previamente formulados. _
 
 ## Más información {#further-reading}
 
-_¿Conoce algún recurso en la comunidad que le haya servido de ayuda? Edita esta página y añádelo._
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
 - [Componibilidad es innovación](https://future.a16z.com/how-composability-unlocks-crypto-and-everything-else/)
 - [Por qué la componibilidad es importante para la Web3](https://hackernoon.com/why-composability-matters-for-web3)

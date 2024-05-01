@@ -56,7 +56,7 @@ Los validadores crean bloques. Un validador se selecciona aleatoriamente en cada
 
 Un sistema de prueba de participación es criptoeconómicamente seguro, porque un atacante que intente tomar el control de la cadena debe destruir una cantidad masiva de ETH. Un sistema de recompensas alienta a participantes individuales a comportarse honestamente, y las penalizaciones desaniman a los participantes a actuar malintencionadamente.
 
-Más información sobre la [prueba de participación](/developers/docs/consensus-mechanisms/pos/).
+Más información sobre la [prueba de participación](developers/docs/consensus-mechanisms/pos/).
 
 ### Una guía visual {#types-of-consensus-video}
 
@@ -82,7 +82,7 @@ Ethereum utiliza un mecanismo de consenso conocido como [Gasper](/developers/doc
 - [Sobre la seguridad y el rendimiento de las cadenas de bloques de prueba de trabajo](https://eprint.iacr.org/2016/555.pdf)
 - [Fallo bizantino](https://en.wikipedia.org/wiki/Byzantine_fault)
 
-_¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
 ## Temas relacionados {#related-topics}
 

@@ -7,7 +7,7 @@ tags:
   - "remezcla"
   - "solidity"
   - "implementación"
-skill: beginner
+skill: principiante
 lang: es
 published: 2020-04-03
 source: EthereumDev

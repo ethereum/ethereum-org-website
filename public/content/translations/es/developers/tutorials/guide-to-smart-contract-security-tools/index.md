@@ -5,8 +5,8 @@ author: "Trailofbits"
 lang: es
 tags:
   - "solidity"
-  - "contratos Inteligentes"
-  - "seguridades"
+  - "contratos inteligentes"
+  - "seguridad"
 skill: intermediate
 published: 2020-09-07
 source: Desarrollar contratos seguros
@@ -15,19 +15,19 @@ sourceUrl: https://github.com/crytic/building-secure-contracts/tree/master/progr
 
 Vamos a usar tres técnicas distintas para el análisis de pruebas y programas:
 
-- **Análisis estático con [Slither](/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/).** Todas las rutas del programa se abordan y analizan al mismo tiempo, a través de diferentes presentaciones del programa (por ejemplo, control-flow-graph).
-- **Fuzzing (auditorías de seguridad) con [Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/).** El código se ejecuta con una generación pseudoaleatoria de transacciones. El fuzzer tratará de encontrar una secuencia de transacciones para infringir una propiedad determinada.
+- **Análisis estático con [Slither](/ developers / tutorials / how-to-use-slither-to-find-smart-contract-bugs /). ** Todas las rutas del programa se abordan y analizan al mismo tiempo, a través de diferentes presentaciones del programa (por ejemplo, control-flow-graph).
+- **Fuzzing (auditorías de seguridad) con [Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/). ** El código se ejecuta con una generación pseudoaleatoria de transacciones. El fuzzer tratará de encontrar una secuencia de transacciones para infringir una propiedad determinada.
 - **Ejecución simbólica con [Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/).** Una técnica de verificación formal, que traduce cada ruta de ejecución a una fórmula matemática, en la que se pueden comprobar las restricciones superiores.
 
-Cada técnica tiene ventajas y obstáculos que serán útiles en <a href="#determining-security-properties">casos específicos</a>:
+Cada técnica tiene ventajas y obstáculos que serán útiles en <a href=“#determining-security-properties”>casos específicos</a>:
 
-| Técnica                          | Herramienta | Uso                               | Velocidad | Errores perdidos | Falsas alarmas |
-| -------------------------------- | ----------- | --------------------------------- | --------- | ---------------- | -------------- |
-| Análisis estáticos               | Slither     | CLI & scripts                     | segundos  | moderado         | bajo           |
-| Fuzzing (auditoría de seguridad) | Echidna     | Propiedades de Solidity           | minutos   | bajo             | ninguno        |
-| Ejecución simbólica              | Manticore   | Propiedades de Solidity & scripts | horas     | ninguno      | ninguno        |
+| Técnica             | Herramienta | Uso                               | Velocidad | Errores perdidos | Falsas alarmas |
+| ------------------- | ----------- | --------------------------------- | --------- | ---------------- | -------------- |
+| Análisis estáticos  | Slither     | CLI & scripts                     | segundos  | moderado         | bajo           |
+| Fuzzing             | Echidna     | Propiedades de Solidity           | minutos   | bajo             | ninguno        |
+| Ejecución simbólica | Manticore   | Propiedades de Solidity & scripts | horas     | ninguno\*      | ninguno        |
 
-si todas las rutas son exploradas sin tiempo de espera
+\* si todas las rutas son exploradas sin tiempo de espera
 
 **Slither** analiza los contratos en segundos, sin embargo, el análisis estático puede conducir a falsas alarmas y será menos adecuado para comprobaciones complejas (ej., controles aritméticos). Ejecute Slither a través de la API para acceder a los detectores incorporados o a través de la API para comprobaciones definidas por el usuario.
 
@@ -88,7 +88,7 @@ Las áreas extensas que suelen ser relevantes para los contratos inteligentes in
 
 ### Hoja de trucos para selección de herramientas {#tool-selection-cheatsheet}
 
-| Componente              | Herramientas                | Ejemplos                                                                                                                                                                                                                                                              |
+| Componente              | Herramientas                | Examples                                                                                                                                                                                                                                                              |
 | ----------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Máquina de estado       | Echidna, Manticore          |                                                                                                                                                                                                                                                                       |
 | Control de acceso       | Slither, Echidna, Manticore | [Ejercicio 2 de Slither](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/slither/exercise2.md), [Ejercicio 2 de Echidna](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-2.md)     |

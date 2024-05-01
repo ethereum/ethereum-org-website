@@ -9,7 +9,7 @@ tags:
   - "ethers.js"
   - "The Graph"
   - "defi"
-skill: beginner
+skill: principiante
 lang: es
 published: 2020-04-27
 source: soliditydeveloper.com
@@ -65,7 +65,7 @@ Una vez tenga un subgrafo, este le permitirá escribir una sencilla consulta en 
 
 ### Apollo {#apollo}
 
-Gracias a la integración con [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puedes integrar fácilmente el grafo en tu dapp de React. Especialmente al usar [hooks de React y Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), obtener datos es tan sencillo como escribir una única consulta GraphQL en su componente:
+Gracias a la integración con [Apollo Boost](https://www.apollographql.com/docs/react/get-started/), puedes integrar fácilmente el grafo en tu dapp de React. Especialmente al usar [ganchos de React y Apollo](https://www.apollographql.com/blog/apollo-client-now-with-react-hooks-676d116eeae2), obtener datos es tan sencillo como escribir una única consulta GraphQL en su componente:
 
 ```js
 const { loading, error, data } = useQuery(myGraphQlQuery)
@@ -99,7 +99,7 @@ Cuando integra Aave con _create-eth-app_, ya obtiene una [integración de subgra
 
 [Uniswap](https://uniswap.exchange/) es un sistema de intercambio descentralizado (DEX). Los usuarios que aporten liquidez pueden ganar comisiones, aportando los tókenes o el ether requeridos para ambos lados de una operación. Es de uso generalizado y, por lo tanto, tiene una de las mayores cantidades de liquidez para una gama muy amplia de tókenes. Puede integrarlo fácilmente en su DApp para, por ejemplo, permitir a los usuarios intercambiar sus ETH por DAI.
 
-Por desgracia, al cierre de editorial de este artículo, la integración es sólo para Uniswap v1 y no para el [v2 publicado recientemente](https://uniswap.org/blog/uniswap-v2/).
+Por desgracia, al cierre de editorial de este artículo, la integración es sólo para Uniswap v1 y no para el [v2 publicado recientemente ](https://uniswap.org/blog/uniswap-v2/).
 
 ### Sablier {#sablier}
 
