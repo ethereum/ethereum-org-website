@@ -96,7 +96,7 @@ Az ethereum.org csapat negyedéves ütemtervet publikál az aktuális célokról
 
 **Szeretne Ön is részt venni?** [Tudjon meg többet a közreműködésről](/contributing/), [kövessen minket Twitteren](https://twitter.com/ethdotorg), vagy csatlakozzon a közösségi megbeszélésekhez a [Discord szerveren](https://discord.gg/ethereum-org).
 
-## Tervezési elvek {#design-principles}
+## Design principles {#design-principles}
 
 A honlappal kapcsolatos tartalmi és dizájn jellegű megbeszéléseket a [dizájnelvek](/contributing/design-principles/) vezérlik.
 

@@ -8,7 +8,7 @@ Amikor egy [integrált fejlesztői környezet (IDE)](https://wikipedia.org/wiki/
 
 ## Web alapú IDE-k {#web-based-ides}
 
-Ha szeretnél eljátszadozni a kóddal, mielőtt [felállítanál egy helyi fejlesztői környezetet](/developers/local-environment/), ezek a webes alkalmazások egyénre szabottak az Ethereum okosszerződések fejlesztésére.
+Ha szeretne eljátszani a kóddal, mielőtt [felállítana egy helyi fejlesztői környezetet](/developers/local-environment/), a következő webes alkalmazások az Ethereum okosszerződések fejlesztésére letteki kialakítva.
 
 **[Remix](https://remix.ethereum.org/)** – **_Webalapú IDE beépített statikus analízissel, és egy teszt blokklánc virtuális géppel._**
 
@@ -68,4 +68,4 @@ A legtöbb megalapozott IDE-nek vannak beépített pluginjai, amelyek tovább fo
 
 - [Ethereum IDEs](https://www.alchemy.com/list-of/web3-ides-on-ethereum) _ – Alchemy listája az Ethereum IDE-okról_
 
-_Ismersz olyan közösségi anyagot, amely segített neked? Módosítsd az oldalt és add hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_

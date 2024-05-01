@@ -89,7 +89,7 @@ Ugyanakkor számos Web3-közösséget is DAO-ként definiálnak. Ezek a közöss
 <InfoBanner shouldSpaceBetween emoji=":eyes:">
   <div>Tudjon meg többet a DAO-król</div>
   <ButtonLink to="/dao/">
-    További információk a DAO-król
+    Bővebben a DAO-król
   </ButtonLink>
 </InfoBanner>
 
@@ -97,11 +97,7 @@ Ugyanakkor számos Web3-közösséget is DAO-ként definiálnak. Ezek a közöss
 
 Hagyományos módon minden platformra egy külön profilt kell létrehozni. Például Ön külön Twitter-, YouTube- és Reddit-profillal is rendelkezik. Meg szeretné változtatni a nevét vagy a képét? Minden egyes eszközön meg kell tennie. Használhat közösségimédia-alapú azonosítást néhány esetben, ez viszont visszamutat a korábbi témára, a cenzúrára. Ezek a platformok egyetlen kattintással kizárhatják Önt a teljes közösségi életéből. Ami még rosszabb, hogy ezek a platformok személyes azonosítókat kérnek el a profil létrehozásához.
 
-A web3 úgy kezeli ezt, hogy mindenki kontrollálja a saját digitális személyazonosságát az Ethereum-cím és az ENS (Ethereum Névszolgáltatás) profil révén. Az Ethereum-cím használata egyszerre biztosít hozzáférést az összes platformhoz, ami biztonságos, ellenáll a cenzúrának és anonim.
-
-<ButtonLink to="https://login.xyz/">
-  Bejelentkezés az Ethereummal
-</ButtonLink>
+A Web3 megoldja ezeket a problémákat azáltal, hogy lehetővé teszi digitális személyazonosságának vezérlését Ethereum-címmel és [Ethereum névszolgáltatás (ENS)](/glossary/#ens) profillal. Az Ethereum-cím használata egyszerre biztosít hozzáférést az összes platformhoz, ami biztonságos, ellenáll a cenzúrának és anonim.
 
 ### Saját fizetési rendszer {#native-payments}
 
@@ -144,7 +140,7 @@ Ez még csak a kezdete annak, hogy az internet jobbá váljon a Web3-mal, és ah
 - [Tárca szerzése](/wallets/)
 - [Találjon egy közösséget](/community/)
 - [Fedezze fel a Web3-alkalmazásokat](/dapps/)
-- [DAO-hoz csatlakozás](/dao/)
+- [Csatlakozzon egy DAO-hoz](/dao/)
 - [Építsen a Web3-ra](/developers/)
 
 ## További olvasnivaló {#further-reading}
@@ -153,7 +149,7 @@ A Web3 nincs szigorúan definiálva. A közösségek különböző résztvevői 
 
 - [Mi az a Web3? Áttekintés a jövő decentralizált internetéről](https://www.freecodecamp.org/news/what-is-web3/) – _Nader Dabit_
 - [A Web3 értelmezése](https://medium.com/l4-media/making-sense-of-web-3-c1a9e74dcae) – _Josh Stark_
-- [Miért számít a Web3](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
+- [Miért számít a Web3 ](https://future.a16z.com/why-web3-matters/) — _Chris Dixon_
 - [Miért fontos a decentralizáció](https://onezero.medium.com/why-decentralization-matters-5e3f79f7638e) – _Chris Dixon_
 - [A Web3 világa](https://a16z.com/wp-content/uploads/2021/10/The-web3-Readlng-List.pdf) – _a16z_
 - [A Web3 vita](https://www.notboring.co/p/the-web3-debate?s=r) – _Packy McCormick_

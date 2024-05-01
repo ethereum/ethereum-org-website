@@ -75,4 +75,4 @@ Az [Etherscan](https://etherscan.io) egy népszerű eszköz arra, hogy egy webal
 - [Ethereum fehérkönyv](/whitepaper/): Az eredeti javaslat az Ethereum megalkotására. A jelen dokumentum az ether lényegét és a kialakításának célját írja le.
 - [Gwei-kalkulátor](https://www.alchemy.com/gwei-calculator): Használja ezt a gwei-kalkulátort, hogy könnyedén váltson wei, gwei és ether címleteket. Egyszerűen adja meg az összeget weiben, gweiben vagy ETH-ban, és automatikusan kiszámolja az átváltást.
 
-_Ismersz olyan közösségi anyagot, mely segített neked? Módosítsd az oldalt és add hozzá!_
+_Van olyan közösségi erőforrása, amely segített Önnek? Szerkessze ezt az oldalt, és adja hozzá!_

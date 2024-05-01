@@ -36,7 +36,7 @@ A web3-at jelenleg több dolog is korlátozza:
 - Elérhetőség – a modern webböngészők nem elég integráltak ahhoz, hogy a web3-at a legtöbb felhasználó elérhesse.
 - Költség – a legtöbb sikeres dapp csak a kódjának csak egy kis hányadát teszi fel a blokkláncra, mivel ez elég költséges.
 
-## Centralizáció vs decentralizáció {#centralization-vs-decentralization}
+## Centralizáció versus decentralizáció {#centralization-vs-decentralization}
 
 Az alábbi táblázatban felsoroljuk a centralizált és decentralizált digitális hálózatok néhány széleskörű előnyét és hátrányát.
 

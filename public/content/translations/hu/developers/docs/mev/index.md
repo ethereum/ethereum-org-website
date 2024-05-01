@@ -6,7 +6,7 @@ lang: hu
 
 A maximális kinyerhető érték (MEV) arra utal, hogy a blokk létrehozásából kapható sztenderd blokkjutalmon és a gázdíjakon felül plusz értéket lehet szerezni a tranzakciók blokkba helyezésével, kizárásával és a sorrendek megváltoztatásával.
 
-## Bányászattal kivonható érték {#miner-extractable-value}
+## Maximálisan kinyerhető érték (MEV) {#maximal-extractable-value}
 
 A maximálisan kinyerhető értéket először a [proof-of-work (munkaigazolás)](/developers/docs/consensus-mechanisms/pow/) kontextusában alkalmazták, és ezért „bányászattal kivonható értékként” emlegették. Mivel a proof-of-work esetében a bányászok ellenőrzik a tranzakciók felvételét, kizárását és sorrendjét. [A Beolvadás](/roadmap/merge) során áttértek a proof-of-stake (letéti igazolás) mechanizmusára, és ezeket a szerepeket a validátorok látják el, a bányászat pedig nem része az Ethereum protokolljának. Értékkinyerési módszerek azonban továbbra is léteznek, ezért jelenleg a „maximálisan kinyerhető érték” kifejezést használjuk.
 
@@ -120,7 +120,7 @@ Amint azt kifejtettük, a MEV negatív hatással van az általános felhasznál�
 
 ### Validátorcentralizáció {#validator-centralization}
 
-A Beolvadás utáni Ethereumban a validátorok (miután 32 ETH értékű letétet helyeztek el) konszenzusra jutnak a Beacon lánchoz hozzáadott blokkok érvényességéről. A 32 ETH sokak számára elérhetetlen lehet, ezért megvalósíthatóbb [egy letéti alaphoz való csatlakozás](/staking/pools/). Mindazonáltal az [önálló letétbe helyezők](/staking/solo/) egészséges eloszlása ideális, mivel enyhíti a validátorok centralizációját és javítja az Ethereum biztonságát.
+A Beolvadás utáni Ethereumban a validátorok (miután 32 ETH értékű letétet helyeztek el) konszenzusra jutnak a Beacon lánchoz hozzáadott blokkok érvényességéről. A 32 ETH sokak számára elérhetetlen lehet, ezért megvalósíthatóbb [egy letéti alaphoz való csatlakozás ](/staking/pools/). Mindazonáltal az [önálló letétbe helyezők](/staking/solo/) egészséges eloszlása ideális, mivel enyhíti a validátorok centralizációját és javítja az Ethereum biztonságát.
 
 A MEV-kivonás vélhetően képes felgyorsítani a validátorok centralizációját. Ez részben azért van így, mert a validátorok [kevesebbet keresnek a blokkelőterjesztésért](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply), mint a bányászatért, a MEV-kivonás jelentősen [befolyásolhatja a validátorok bevételeit](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) a Beolvadás után.
 
