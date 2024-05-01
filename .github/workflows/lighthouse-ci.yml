@@ -53,15 +53,15 @@ jobs:
             const formatResult = (res) => Math.round((res * 100));
           
             console.log('Total manifests:', manifests.length);
-            console.log('Total links:', links.length);
             console.log('Manifests:', JSON.stringify(manifests, null, 2));
+            console.log('Links:', JSON.stringify(links, null, 2));
           
             let comment = [
               '| Page | Performance | Accessibility | Best practices | SEO | PWA |',
               '| --- | --- | --- | --- | --- | --- |',
             ];
-          
-            links.forEach(link => {
+
+            Object.values(links).forEach(link => {
               const relevantManifests = manifests.filter(manifest => manifest.url === link);
               const results = relevantManifests.map(manifest => manifest.summary);
               const averagedResults = {};
