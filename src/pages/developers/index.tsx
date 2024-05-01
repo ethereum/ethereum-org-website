@@ -146,7 +146,7 @@ const SpeedRunEthereumBanner = ({
   title: string
   linkLabel: string
 }) => (
-  <Box position="relative" mb={12}>
+  <Box position="relative" mb={{ xl: 12 }}>
     <Image
       src={SpeedRunEthereumImage}
       alt="SpeedRunEthereum banner"
