@@ -35,7 +35,7 @@ const HubHero = ({
         }}
       />
       <Stack
-        spacing={{ base: "3", md: "4" }}
+        spacing="4"
         p={{ base: "4", lg: "8" }}
         textAlign={{ base: "center", xl: "start" }}
         borderRadius={{ xl: "base" }}
