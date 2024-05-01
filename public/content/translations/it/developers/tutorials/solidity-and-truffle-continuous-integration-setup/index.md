@@ -4,12 +4,12 @@ description: Come configurare Travis o Circle CI per il test con Truffle insieme
 author: Markus Waas
 lang: it
 tags:
-  - "Solidity"
-  - "contratto intelligente"
+  - "solidity"
+  - "contratti intelligenti"
   - "test"
   - "truffle"
   - "ganache"
-skill: intermediate
+skill: intermedio
 published: 2020-06-05
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration

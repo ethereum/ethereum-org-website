@@ -4,8 +4,8 @@ description: La blockchain è come un database ma senza SQL. Contiene tutti i da
 author: Markus Waas
 lang: it
 tags:
-  - "Solidity"
-  - "contratto intelligente"
+  - "solidity"
+  - "contratti intelligenti"
   - "query"
   - "the graph"
   - "create-eth-app"
@@ -293,7 +293,7 @@ Ma ci manca l'ultimo pezzo del puzzle: il server. Puoi eseguirlo personalmente o
 
 ### Graph Explorer: il servizio ospitato {#graph-explorer-the-hosted-service}
 
-Il modo più semplice è usare il servizio di hosting. Segui le istruzioni [qui](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) per distribuire un subgraph. Per molti progetti è possibile trovare i sottografi esistenti [nell'esploratore](https://thegraph.com/explorer/).
+Il modo più semplice è usare il servizio di hosting. Segui le istruzioni [qui](https://thegraph.com/docs/en/deploying/deploying-a-subgraph-to-hosted/) per distribuire un subgraph. Per molti progetti è possibile trovare i sottografi esistenti nell'esploratore [](https://thegraph.com/explorer/).
 
 ![Explorer di The Graph](./thegraph-explorer.png)
 

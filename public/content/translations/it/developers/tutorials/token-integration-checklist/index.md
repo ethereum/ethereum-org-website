@@ -4,12 +4,12 @@ description: Elenco di controllo degli aspetti da tenere presente quando si inte
 author: "Trailofbits"
 lang: it
 tags:
-  - "Solidity"
-  - "Smart Contract"
+  - "solidity"
+  - "contratti intelligenti"
   - "sicurezza"
-  - "tokens"
-skill: intermediate
-published: 2020-08-13
+  - "token"
+skill: intermedio
+published: 13-08-2020
 source: Creare contratti sicuri
 sourceUrl: https://github.com/crytic/building-secure-contracts/blob/master/development-guidelines/token_integration.md
 ---

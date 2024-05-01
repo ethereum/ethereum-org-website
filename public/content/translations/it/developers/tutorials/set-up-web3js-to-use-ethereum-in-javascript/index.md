@@ -5,7 +5,7 @@ author: "jdourlens"
 tags:
   - "web3.js"
   - "javascript"
-skill: beginner
+skill: principiante
 lang: it
 published: 2020-04-11
 source: EthereumDev

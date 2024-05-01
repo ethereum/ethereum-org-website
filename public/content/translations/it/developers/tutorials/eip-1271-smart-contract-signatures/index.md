@@ -8,8 +8,8 @@ tags:
   - "contratti intelligenti"
   - "verifica"
   - "firma"
-skill: intermediate
-published: 2023-01-12
+skill: intermedio
+published: 12-01-2023
 ---
 
 Lo standard [EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) permette ai contratti intelligenti di verificare le firme.

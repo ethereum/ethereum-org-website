@@ -8,9 +8,9 @@ tags:
   - "Solidity"
   - "test"
   - "simulazione"
-skill: intermediate
+skill: intermedio
 lang: it
-published: 2020-11-14
+published: 14-11-2020
 ---
 
 ## A cosa serve questo tutorial? {#what-is-this-tutorial-about}
@@ -216,7 +216,7 @@ it("returns false if the wallet has less than 1000000 tokens", async () => {
 })
 ```
 
-Dividiamo il test in due parti:
+Suddividiamo questo test in più parti:
 
 1. Impostiamo il contratto ERC20 simulato per restituire il saldo di 999999 token.
 2. Controlliamo se il metodo `contract.check()` restituisce `false`.
@@ -295,4 +295,4 @@ Il codice sorgente di questo tutorial si può trovare [qui](https://github.com/E
 
 Altri tutorial che potrebbero interessarti:
 
-- [Test di Smart Contract con Waffle](/developers/tutorials/waffle-test-simple-smart-contract/)
+- [Test di Smart Contract con Waffle](/developers/tutorials/testing-smart-contract-with-waffle/)

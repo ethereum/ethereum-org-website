@@ -11,7 +11,7 @@ tags:
   - "ethers.js"
 skill: beginner
 lang: it
-published: 2020-10-16
+published: 16-10-2020
 ---
 
 In questo tutorial di [Waffle](https://ethereum-waffle.readthedocs.io), impareremo come configurare un semplice progetto di smart contract "Hello World" usando [hardhat](https://hardhat.org/) e [ethers.js](https://docs.ethers.io/v5/). Quindi impareremo come aggiungere una nuova funzionalità allo smart contract e come testarla con Waffle.
@@ -73,7 +73,7 @@ MyWaffleProject
 │   └── sample-script.js
 ├── test
 │   └── sample-test.js
-├── .gitattributs
+├── .gitattributes
 ├── .gitignore
 ├── hardhat.config.js
 └── package.json
