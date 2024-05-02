@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import {
   Badge,
@@ -27,7 +28,6 @@ import CrowdinContributors from "@/components/CrowdinContributors"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import GitHubContributors from "@/components/GitHubContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
@@ -138,9 +138,7 @@ const OrderedList = (props: ListProps) => (
   <ChakraOrderedList ms="1.45rem" {...props} />
 )
 
-const ListItem = (props: ListItemProps) => (
-  <ChakraListItem {...props} />
-)
+const ListItem = (props: ListItemProps) => <ChakraListItem {...props} />
 
 // Apply styles for classes within markdown here
 const Content = (props: ChildOnlyProp) => {
@@ -237,6 +235,11 @@ export const DocsLayout = ({
     "data" in gitHubLastEdit ? gitHubLastEdit.data : lastUpdatedDate
   const useGitHubContributors =
     frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Page>
