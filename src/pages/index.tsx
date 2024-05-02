@@ -24,6 +24,8 @@ import type { CommunityEventsReturnType } from "@/lib/interfaces"
 
 import ActionCard from "@/components/ActionCard"
 import ButtonLink from "@/components/Buttons/ButtonLink"
+import CalloutBanner from "@/components/CalloutBanner"
+import CommunityEvents from "@/components/CommunityEvents"
 import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -337,16 +339,6 @@ const HomePage = ({
     ssr: false,
   })
   const StyledCodeModal = chakra(CodeModal)
-
-  const CommunityEvents = dynamic(
-    () => import("@/components/CommunityEvents"),
-    {
-      ssr: false,
-    }
-  )
-  const CalloutBanner = dynamic(() => import("@/components/CalloutBanner"), {
-    ssr: false,
-  })
 
   return (
     <Flex
