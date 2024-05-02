@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  create_pr:
+  import_crowdin_and_create_prs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
