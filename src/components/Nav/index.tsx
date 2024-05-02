@@ -1,5 +1,4 @@
 import { useRef } from "react"
-import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
@@ -19,6 +18,7 @@ import {
 
 import { IconButton } from "@/components/Buttons"
 import { EthHomeIcon } from "@/components/icons"
+import LanguagePicker from "@/components/LanguagePicker"
 import { BaseLink } from "@/components/Link"
 import Search from "@/components/Search"
 
@@ -59,11 +59,6 @@ const Nav = () => {
     "Switch to Dark Theme",
     "Switch to Light Theme"
   )
-
-  // Lazy-load these components on initial load
-  const LanguagePicker = dynamic(() => import("@/components/LanguagePicker"), {
-    ssr: false,
-  })
 
   return (
     <Box position="sticky" top={0} zIndex="sticky" width="full">
