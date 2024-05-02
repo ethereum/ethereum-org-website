@@ -44,7 +44,9 @@ Another small attack vector is malicious signers injecting new vote proposals in
 
 ### Concurrent blocks {#concurrent-blocks}
 
-In a Proof-of-Authority (PoA) network, if for example there are 10 authorized signers and each signer is allowed to create 1 block out of 20, then at any given time, 11 miners can create blocks. To prevent them from racing to create blocks, each signer adds a small random "offset" to the time they release a new block. This reduces the occurrence of small forks but still allows occasional forks, as seen on the Ethereum Mainnet. If a signer misuses their authority and causes disruptions, they can be voted out of the network.
+In a (PoA) network, When there are N authorized signers, each signer is allowed to mint 1 block out of K, which means that N-K+1 miners are allowed to mint at any given point in time. To prevent these miners from racing for blocks, each signer should add a small random "offset" to the time it releases a new block. Although this process ensures that small forks are rare, occasional forks can still happen, just like mainent. If a signer is found to be abusing its power and causing chaos, the other signers can vote them out.
+
+If for example there are 10 authorized signers and each signer is allowed to create 1 block out of 20, then at any given time, 11 miners can create blocks. To prevent them from racing to create blocks, each signer adds a small random "offset" to the time they release a new block. This reduces the occurrence of small forks but still allows occasional forks, as seen on the Ethereum Mainnet. If a signer misuses their authority and causes disruptions, they can be voted out of the network.
 
 ## Pros and cons {#pros-and-cons}
 
