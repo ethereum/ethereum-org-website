@@ -53,7 +53,7 @@ Vui lòng lưu ý tầm quan trọng của [máy khách đa dạng](/developers/
 
 <StakingProductsCardGrid category="keyGen" />
 
-Bạn có đề xuất nào về một nhà cung cấp tùy chọn đặt cọc dưới dạng dịch vụ mà chúng tôi còn thiếu không? Hãy xem [ chính sách danh sách sản phẩm ](/contributing/adding-staking-products/) của chúng tôi để xem liệu nó có phù hợp hay không và gửi nó để được xem xét.
+Bạn có đề xuất nào về một nhà cung cấp tùy chọn đặt cọc dưới dạng dịch vụ mà chúng tôi còn thiếu không? Hãy xem [chính sách danh sách sản phẩm](/contributing/adding-staking-products/) của chúng tôi để xem liệu nó có phù hợp hay không và gửi nó để được xem xét.
 
 ## Frequently asked questions {#faq}
 

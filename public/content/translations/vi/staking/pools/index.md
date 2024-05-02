@@ -55,7 +55,7 @@ Có nhiều tùy chọn có sẵn để giúp bạn thiết lập. Sử dụng c
 
 Xin lưu ý tầm quan trọng của việc chọn một dịch vụ chấp nhận [đa dạng máy khách](/developers/docs/nodes-and-clients/client-diversity/), vì nó cải thiện tính bảo mật của mạng và hạn chế rủi ro cho bạn. Các dịch vụ có dấu hiệu hạn chế sử dụng máy khách đa số được đánh dấu bằng <em style={{ textTransform: "uppercase" }}>"đa dạng máy khách thực thi"</em> và <em style={{ textTransform: "uppercase" }}>"đa dạng máy khách đồng thuận."</em>
 
-Bạn có đề xuất về một công cụ đặt cọc mà chúng tôi còn thiếu không? Hãy xem [ chính sách danh sách sản phẩm ](/contributing/adding-staking-products/) của chúng tôi để xem liệu nó có phù hợp hay không và gửi nó để được xem xét.
+Bạn có đề xuất về một công cụ đặt cọc mà chúng tôi còn thiếu không? Hãy xem [chính sách danh sách sản phẩm](/contributing/adding-staking-products/) của chúng tôi để xem liệu nó có phù hợp hay không và gửi nó để được xem xét.
 
 ## Frequently asked questions {#faq}
 

@@ -117,7 +117,7 @@ Có thể dùng các công cụ này cho [CLI đặt cọc](https://github.com/e
 
 <StakingProductsCardGrid category="keyGen" />
 
-Bạn có đề xuất về một công cụ đặt cọc mà chúng tôi còn thiếu không? Hãy xem [ chính sách danh sách sản phẩm ](/contributing/adding-staking-products/) của chúng tôi để xem liệu nó có phù hợp hay không và gửi nó để được xem xét.
+Bạn có đề xuất về một công cụ đặt cọc mà chúng tôi còn thiếu không? Hãy xem [chính sách danh sách sản phẩm](/contributing/adding-staking-products/) của chúng tôi để xem liệu nó có phù hợp hay không và gửi nó để được xem xét.
 
 ## Tìm hiểu nội dung hướng dẫn đặt cọc một mình {#staking-guides}
 
