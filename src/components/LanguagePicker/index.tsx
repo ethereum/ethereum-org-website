@@ -146,10 +146,7 @@ const LanguagePicker = ({
                 }}
                 onFocus={handleInputFocus}
               />
-              <InputRightElement
-                hideBelow="md"
-                cursor="text"
-              >
+              <InputRightElement hideBelow="md" cursor="text">
                 <Kbd
                   fontSize="sm"
                   lineHeight="none"

@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import { BsTranslate } from "react-icons/bs"
 import { MdBrightness2, MdSearch, MdWbSunny } from "react-icons/md"
@@ -7,8 +8,6 @@ import {
   MenuButton,
   useColorModeValue,
 } from "@chakra-ui/react"
-
-import LanguagePicker from "@/components/LanguagePicker"
 
 import { MOBILE_LANGUAGE_BUTTON_NAME } from "@/lib/constants"
 
@@ -29,6 +28,11 @@ const MenuFooter = ({
   const { t } = useTranslation("common")
   const ThemeIcon = useColorModeValue(MdBrightness2, MdWbSunny)
   const themeLabelKey = useColorModeValue("dark-mode", "light-mode")
+
+  // Lazy-load these components on initial load
+  const LanguagePicker = dynamic(() => import("@/components/LanguagePicker"), {
+    ssr: false,
+  })
 
   return (
     <DrawerFooter
