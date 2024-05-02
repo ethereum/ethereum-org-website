@@ -1,5 +1,6 @@
 import { ReactNode, useState } from "react"
 import type { GetStaticProps, InferGetStaticPropsType } from "next"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -31,7 +32,6 @@ import HomeHero from "@/components/Hero/HomeHero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
-import StatsBoxGrid from "@/components/StatsBoxGrid"
 import TitleCardList, { ITitleCardItem } from "@/components/TitleCardList"
 import Translation from "@/components/Translation"
 
@@ -68,6 +68,11 @@ import infrastructurefixed from "@/public/infrastructure_transparent.png"
 import merge from "@/public/upgrades/merge.png"
 import robotfixed from "@/public/wallet-cropped.png"
 import ethereum from "@/public/what-is-ethereum.png"
+
+const StatsBoxGrid = dynamic(() => import("@/components/StatsBoxGrid"), {
+  ssr: false,
+  loading: () => <div>Loading...</div>,
+})
 
 const SectionHeading = (props: HeadingProps) => (
   <Heading
