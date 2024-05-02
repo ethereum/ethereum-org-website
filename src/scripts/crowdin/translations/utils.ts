@@ -56,6 +56,8 @@ yarn markdown-checker
 
 ${qaResults}
 </details>
+
+@coderabbitai review
 `
 }
 
