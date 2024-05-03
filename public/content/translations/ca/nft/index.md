@@ -12,7 +12,7 @@ summaryPoint2: Els NFT estan donant més poder als creadors de contingut que mai
 summaryPoint3: Impulsats per petits contractes a la cadena de blocs d'Ethereum.
 ---
 
-## What are NFTs? {#what-are-nfts}
+## Què són els NFTs? {#what-are-nfts}
 
 Els NFT són testimonis que són **individualment únics**. Cada NFT té propietats diferents (no fungibles) i probablement escasses. Això és diferent de testimonis com [ETH](/glossary/#ether) o altres testimonis basats en Ethereum com USDC on cada testimoni és idèntic i té les mateixes propietats ("fungible"). No us ha d'importar quin bitllet de dòlar específic (o ETH) teniu a la cartera, perquè tots són idèntics i valen el mateix. No obstant això, _us importa_ quin NFT específic posseiu, perquè tots tenen propietats individuals que els distingeixen dels altres ("no fungibles").
 
@@ -37,7 +37,7 @@ Així és com es veu una internet de NFT comparada amb la internet que la majori
 | **Els creadors poden vendre el seu treball a qualsevol lloc** i poden accedir a un mercat global.                                                                                              | Els creadors confien en la infraestructura i la distribució de les plataformes que utilitzen. Aquests estan sovint subjectes a condicions d'ús i a **restriccions geogràfiques**. |
 | Els creadors de NFT **poden conservar els drets de propietat** sobre el seu propi treball, i els drets del programa directament en el contracte de NFT.                                        | Les plataformes, com **els serveis de música en "streaming", retenen la majora dels beneficis de les seves vendes**.                                                              |
 
-## Per què s'utilitzen els NFT? {#nft-use-cases}
+## Per a què s'utilitzen els NFT? {#nft-use-cases}
 
 Els NFT són útils per a moltes coses, com ara:
 
