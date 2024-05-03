@@ -22,9 +22,9 @@ published: 2021-03-09
 
 ![ERC-20 接口说明](erc20_interface.png)
 
-如果您是一位经验丰富的程序员，您可能记得在 [Java](https://www.w3schools.com/java/java_interface.asp) 中，甚至在 [C 头文件](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html) 中看到过类似的构造。
+如果你是一位经验丰富的程序员，你可能记得在 [Java](https://www.w3schools.com/java/java_interface.asp) 中，甚至在 [C 头文件](https://gcc.gnu.org/onlinedocs/cpp/Header-Files.html) 中看到过类似的构造。
 
-这是来自 OpenZeppelin 的 [ERC-20 接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) 的定义。 这是将[人类可读标准](https://eips.ethereum.org/EIPS/eip-20)转换为 Solidity 代码。 当然， 接口本身并不定义*如何*做事。 这一点在下文合约的源代码中作了解释。
+这是来自 OpenZeppelin 的 [ERC-20 接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol) 的定义。 这是将[人类可读标准](https://eips.ethereum.org/EIPS/eip-20)转换为 Solidity 代码。 当然， 接口本身并不定义_如何_做事。 这一点在下文合约的源代码中作了解释。
 
 &nbsp;
 
@@ -32,7 +32,7 @@ published: 2021-03-09
 // SPDX-License-Identifier: MIT
 ```
 
-Solidity 文件中一般需要标识软件许可证。 [您可以在这里看到许可证列表](https://spdx.org/licenses/)。 如果需要不同的 许可证，只需在注释中加以说明。
+Solidity 文件中一般需要标识软件许可证。 [你可以在这里看到许可证列表](https://spdx.org/licenses/)。 如果需要不同的 许可证，只需在注释中加以说明。
 
 &nbsp;
 
@@ -71,7 +71,7 @@ interface IERC20 {
 
 此函数标记为 `external`，表示[它只能从合约之外调用](https://docs.soliditylang.org/en/v0.7.0/cheatsheet.html#index-2)。 它返回的是合约中代币的总供应量 这个值按以太坊中最常见的类型返回，即无符号的 256 位（256 位是 以太坊虚拟机的原生字长宽度）。 此函数也是视图 `view` 类型，这意味着它不会改变合约状态，这样它可以在单个节点上执行，而不需要在区块链的每个节点上执行。 这类函数不会生成交易，也不会消耗[燃料](/developers/docs/gas/)。
 
-**注意：**理论上讲，合约创建者可能会通过返回比实际数量少的总供应量来做骗局，让每个代币 比实际看起来更有价值。 然而，这种担忧忽视了区块链的真正内涵。 所有在区块链上发生的事情都要通过每个节点 进行验证。 为了实现这一点，每个合约的机器语言代码和存储都可以在每个节点上找到。 虽然无需发布您的合约代码，但这样其它人都不会认真对待您，除非您发布源代码和用于编译的 Solidity 版本，这样人们可以用它来验证您提供的机器语言代码。 例如，请查看[此合约](https://etherscan.io/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD#code)。
+**注意：**理论上讲，合约创建者可能会通过返回比实际数量少的总供应量来做骗局，让每个代币 比实际看起来更有价值。 然而，这种担忧忽视了区块链的真正内涵。 所有在区块链上发生的事情都要通过每个节点 进行验证。 为了实现这一点，每个合约的机器语言代码和存储都可以在每个节点上找到。 虽然无需发布你的合约代码，但这样其它人都不会认真对待你，除非你发布源代码和用于编译的 Solidity 版本，这样人们可以用它来验证你提供的机器语言代码。 例如，请查看[此合约](https://etherscan.io/address/0xa530F85085C6FE2f866E7FdB716849714a89f4CD#code)。
 
 &nbsp;
 
@@ -82,7 +82,7 @@ interface IERC20 {
     function balanceOf(address account) external view returns (uint256);
 ```
 
-顾名思义，`balanceOf` 返回一个账户的余额。 以太坊帐户在 Solidity 中通过 `address` 类型识别，该类型有 160 位。 它也是 `external` 和 `view` 类型。
+顾名思义，`balanceOf` 返回一个帐户的余额。 以太坊帐户在 Solidity 中通过 `address` 类型识别，该类型有 160 位。 它也是 `external` 和 `view` 类型。
 
 &nbsp;
 
@@ -143,7 +143,7 @@ interface IERC20 {
     function approve(address spender, uint256 amount) external returns (bool);
 ```
 
-`approve` 函数创建了一个许可额度。 请务必阅读关于 如何避免函数被滥用的信息。 在以太坊中，您可以控制自己交易的顺序， 但无法控制其他方交易的执行顺序， 除非在看到其他方的交易发生之前 不提交您自己的交易。
+`approve` 函数创建了一个许可额度。 请务必阅读关于 如何避免函数被滥用的信息。 在以太坊中，你可以控制自己交易的顺序， 但无法控制其他方交易的执行顺序， 除非在看到其他方的交易发生之前 不提交你自己的交易。
 
 &nbsp;
 
@@ -257,7 +257,7 @@ contract ERC20 is Context, IERC20 {
 
 ```
 
-此行将 `SafeMath` 库附加到 `uint256` 类型。 您可以在 [此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)找到此程序库。
+此行将 `SafeMath` 库附加到 `uint256` 类型。 你可以在 [此处](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/math/SafeMath.sol)找到此程序库。
 
 ### 变量的定义 {#variable-definitions}
 
@@ -277,7 +277,7 @@ contract ERC20 is Context, IERC20 {
     映射 (address => mapping (address => uint256)) private _allowances;
 ```
 
-此变量，`_allowances` 存储之前提到过的许可限额。 第一个索引是 代币的所有者，第二个索引是获得许可限额的合约。 要查询地址 A 可以 从地址 B 账户中支出的额度，请使用 `_allowances[B][A]`。
+此变量，`_allowances` 存储之前提到过的许可限额。 第一个索引是 代币的所有者，第二个索引是获得许可限额的合约。 要查询地址 A 可以 从地址 B 帐户中支出的额度，请使用 `_allowances[B][A]`。
 
 &nbsp;
 
@@ -301,7 +301,7 @@ contract ERC20 is Context, IERC20 {
 
 解决方案是保持整数值，但是计数时使用一个价值非常小的分数代币， 而不是真正的代币。 就以太币而言，分数代币称为 wei，10^18 个 wei 等于一个 以太币。 在撰写本文时，10,000,000,000,000 wei 约等于一美分或欧分。
 
-应用程序需要知道如何显示代币余额。 如果某位用户有 3,141,000,000,000,000,000 wei，那是否是 3.14 个以太币？ 31.41 个以太币？ 还是 3,141 个以太币？ 对于以太币，10^18 个 wei 等于 1 个以太币，但对于您的 代币，您可以选择一个不同的值。 如果无法合理拆分代币，您可以将 `_decimals` 值设为零。 如果想要使用与以太币相同的标准，请使用 **18**。
+应用程序需要知道如何显示代币余额。 如果某位用户有 3,141,000,000,000,000,000 wei，那是否是 3.14 个以太币？ 31.41 个以太币？ 还是 3,141 个以太币？ 对于以太币，10^18 个 wei 等于 1 个以太币，但对于你的 代币，你可以选择一个不同的值。 如果无法合理拆分代币，你可以将 `_decimals` 值设为零。 如果想要使用与以太币相同的标准，请使用 **18**。
 
 ### 构造函数 {#the-constructor}
 
@@ -364,17 +364,17 @@ contract ERC20 is Context, IERC20 {
 
 返回类型为 `string memory`，意味着返回在内存中存储的字符串。 变量，如 字符串，可以存储在三个位置：
 
-|          | 有效时间   | 合约访问 | 燃料成本                           |
-| -------- | ---------- | -------- | ---------------------------------- |
-| 内存     | 函数调用   | 读/写    | 几十到几百不等（距离越远费用越高） |
-| 调用数据 | 函数调用   | 只读     | 不可用作返回类型，只可用作函数参数 |
-| 存储     | 直到被修改 | 读/写    | 高（读取需要 800，写入需要 2 万）  |
+|      | 有效时间  | 合约访问 | 燃料成本                |
+| ---- | ----- | ---- | ------------------- |
+| 内存   | 函数调用  | 读/写  | 几十到几百不等（距离越远费用越高）   |
+| 调用数据 | 函数调用  | 只读   | 不可用作返回类型，只可用作函数参数   |
+| 存储   | 直到被修改 | 读/写  | 高（读取需要 800，写入需要 2万） |
 
 在这种情况下，`memory` 是最好的选择。
 
 ### 读取代币信息 {#read-token-information}
 
-这些是提供代币信息的函数，不管是总量还是 账户余额。
+这些是提供代币信息的函数，不管是总量还是 帐户余额。
 
 ```solidity
     /**
@@ -398,7 +398,7 @@ contract ERC20 is Context, IERC20 {
     }
 ```
 
-读取一个帐户的余额。 请注意，任何人都可以查看他人账户的余额。 试图隐藏此信息没有意义，因为它在每个节点上 都是可见的。 _区块链上没有秘密_
+读取一个帐户的余额。 请注意，任何人都可以查看他人帐户的余额。 试图隐藏此信息没有意义，因为它在每个节点上 都是可见的。 _区块链上没有秘密_
 
 ### 代币转账 {#transfer-tokens}
 
@@ -430,7 +430,7 @@ contract ERC20 is Context, IERC20 {
 
 ### 许可额度函数 {#allowance-functions}
 
-这些是实现许可额度功能的函数：`allowance`、`approve`、`transferFrom` 和 `_approve`。 此外，除基本标准外，OpenZeppelin 实现还包含了一些能够提高 安全性的功能：`increaseAllowance` 和 `decreaseAllowance`。
+这些是实现许可额度功能的函数：`allowance`、`approve`、`transferFrom` 和 `_approve`。 此外，除基本标准外，OpenZeppelin 实现还包含了一些能够提高 安全性的功能：`increaseAllowance` 和 ` decreaseAllowance `。
 
 #### 许可额度函数 {#allowance}
 
@@ -471,7 +471,7 @@ contract ERC20 is Context, IERC20 {
     }
 ```
 
-我们使用内部函数尽量减少发生状态变化之处。 *任何*可以改变状态的 函数都是一种潜在的安全风险，需要对其安全性进行审核。 这样我们就能减少出错的机会。
+我们使用内部函数尽量减少发生状态变化之处。 _任何_可以改变状态的 函数都是一种潜在的安全风险，需要对其安全性进行审核。 这样我们就能减少出错的机会。
 
 #### TransferFrom 函数 {#transferFrom}
 
@@ -509,35 +509,35 @@ contract ERC20 is Context, IERC20 {
 
 #### OpenZeppelin 安全加法 {#openzeppelin-safety-additions}
 
-将许可额度从一个非零值设定为另一个非零值是有危险的， 因为您只能控制自己的交易顺序，而无法控制其他人的交易顺序。 假设现在有两个用户，天真的 Alice 和不诚实的 Bill。 Alice 想要从 Bill 处获取一些服务， 她认为值五个代币，所以她给了 Bill 五个代币的许可额度。
+将许可额度从一个非零值设定为另一个非零值是有危险的， 因为你只能控制自己的交易顺序，而无法控制其他人的交易顺序。 假设现在有两个用户，天真的 Alice 和不诚实的 Bill。 Alice 想要从 Bill 处获取一些服务， 她认为值五个代币，所以她给了 Bill 五个代币的许可额度。
 
 之后有了一些变化，Bill 的价格提高到了十个代币。 Alice 仍然想要购买服务，就发送了一笔交易，将 Bill 的许可额度设置为 10。 当 Bill 在交易池中看到这个新的交易时， 他就会发送一笔交易，以花费 Alice 的五个代币，并且设定高得多的 燃料价格，这样就会更快挖矿。 这样的话，Bill 可以先花五个代币，然后 当 Alice 的新许可额度放款后，他就可以再花费十个代币，这样总共花费了 15 个代币， 超过了 Alice 本欲授权的金额。 这种技术叫做 [抢先交易](https://consensys.github.io/smart-contract-best-practices/attacks/#front-running)
 
-| Alice 的交易      | Alice 的随机数 | Bill 的交易                   | Bill 的随机数 | Bill 的许可额度 | Bill 从 Alice 处获得的总收入 |
-| ----------------- | -------------- | ----------------------------- | ------------- | --------------- | ---------------------------- |
-| approve(Bill, 5)  | 10             |                               |               | 5               | 0                            |
-|                   |                | transferFrom(Alice, Bill, 5)  | 10,123        | 0               | 5                            |
-| approve(Bill, 10) | 11             |                               |               | 10              | 5                            |
-|                   |                | transferFrom(Alice, Bill, 10) | 10,124        | 0               | 15                           |
+| Alice 的交易         | Alice 的随机数 | Bill 的交易                      | Bill 的随机数 | Bill 的许可额度 | Bill 从 Alice 处获得的总收入 |
+| ----------------- | ---------- | ----------------------------- | --------- | ---------- | -------------------- |
+| approve(Bill, 5)  | 10         |                               |           | 5          | 0                    |
+|                   |            | transferFrom(Alice, Bill, 5)  | 10,123    | 0          | 5                    |
+| approve(Bill, 10) | 11         |                               |           | 10         | 5                    |
+|                   |            | transferFrom(Alice, Bill, 10) | 10,124    | 0          | 15                   |
 
-为了避免这个问题，有两个函数（`increaseAllowance` 和 `decreaseAllowance`）使您 能够修改指定数额的许可额度。 所以，如果 Bill 已经花费了五个代币， 他就只能再花五个代币。 根据时间的不同，有两种方法可以生效， 这两种方法都会使 Bill 最终只得到十个代币：
+为了避免这个问题，有两个函数（`increaseAllowance` 和 `decreaseAllowance`）使你 能够修改指定数额的许可额度。 所以，如果 Bill 已经花费了五个代币， 他就只能再花五个代币。 根据时间的不同，有两种方法可以生效， 这两种方法都会使 Bill 最终只得到十个代币：
 
 A：
 
-| Alice 的交易               | Alice 的随机数 | Bill 的交易                  | Bill 的随机数 | Bill 的许可额度 | Bill 从 Alice 处获得的总收入 |
-| -------------------------- | -------------: | ---------------------------- | ------------: | --------------: | ---------------------------- |
-| approve(Bill, 5)           |             10 |                              |               |               5 | 0                            |
-|                            |                | transferFrom(Alice, Bill, 5) |        10,123 |               0 | 5                            |
-| increaseAllowance(Bill, 5) |             11 |                              |               |         0+5 = 5 | 5                            |
-|                            |                | transferFrom(Alice, Bill, 5) |        10,124 |               0 | 10                           |
+| Alice 的交易                  | Alice 的随机数 | Bill 的交易                     | Bill 的随机数 | Bill 的许可额度 | Bill 从 Alice 处获得的总收入 |
+| -------------------------- | ----------:| ---------------------------- | ---------:| ----------:| -------------------- |
+| approve(Bill, 5)           |         10 |                              |           |          5 | 0                    |
+|                            |            | transferFrom(Alice, Bill, 5) |    10,123 |          0 | 5                    |
+| increaseAllowance(Bill, 5) |         11 |                              |           |    0+5 = 5 | 5                    |
+|                            |            | transferFrom(Alice, Bill, 5) |    10,124 |          0 | 10                   |
 
 B：
 
-| Alice 的交易               | Alice 的随机数 | Bill 的交易                   | Bill 的随机数 | Bill 的许可额度 | Bill 从 Alice 处获得的总收入 |
-| -------------------------- | -------------: | ----------------------------- | ------------: | --------------: | ---------------------------: |
-| approve(Bill, 5)           |             10 |                               |               |               5 |                            0 |
-| increaseAllowance(Bill, 5) |             11 |                               |               |        5+5 = 10 |                            0 |
-|                            |                | transferFrom(Alice, Bill, 10) |        10,124 |               0 |                           10 |
+| Alice 的交易                  | Alice 的随机数 | Bill 的交易                      | Bill 的随机数 | Bill 的许可额度 | Bill 从 Alice 处获得的总收入 |
+| -------------------------- | ----------:| ----------------------------- | ---------:| ----------:| --------------------:|
+| approve(Bill, 5)           |         10 |                               |           |          5 |                    0 |
+| increaseAllowance(Bill, 5) |         11 |                               |           |   5+5 = 10 |                    0 |
+|                            |            | transferFrom(Alice, Bill, 10) |    10,124 |          0 |                   10 |
 
 ```solidity
     /**
@@ -607,7 +607,7 @@ B：
     function _transfer(address sender, address recipient, uint256 amount) internal virtual {
 ```
 
-`_transfer` 这个函数将代币从一个账户转到另一个账户。 有两个函数调用它，分别是 `transfer`（从发送人本人账户发送）和 `transferFrom`（使用许可额度，从其他人的账户发送）。
+`_transfer` 这个函数将代币从一个帐户转到另一个帐户。 有两个函数调用它，分别是 `transfer`（从发送人本人帐户发送）和 `transferFrom`（使用许可额度，从其他人的帐户发送）。
 
 &nbsp;
 
@@ -628,11 +628,11 @@ B：
 使用该合约有两种方法：
 
 1. 将其作为模板，编写自己的代码
-1. [从它继承](https://www.bitdegree.org/learn/solidity-inheritance)一个合约，并且重写您需要修改的函数
+1. [从它继承](https://www.bitdegree.org/learn/solidity-inheritance)一个合约，并且重写你需要修改的函数
 
-第二种方法要好得多，因为 OpenZeppelin ERC-20 代码已经过审核，其安全性也已得到证实。 当您的合约继承它时， 可以清楚地表明修改了哪些函数，只需要审核这些特定的函数，人们就会信任您的合约。
+第二种方法要好得多，因为 OpenZeppelin ERC-20 代码已经过审核，其安全性也已得到证实。 当你的合约继承它时， 可以清楚地表明修改了哪些函数，只需要审核这些特定的函数，人们就会信任你的合约。
 
-代币每次易手时，通常都需要调用一个函数。 然而，`_transfer` 是一个非常重要的函数， 重新编写可能会不安全（见下文），所以最好不要重写。 解决方案是重写 `_beforeTokenTransfer` 函数，这是一个[挂钩函数](https://wikipedia.org/wiki/Hooking)。 您可以重写此函数，之后每次转账都会调用它。
+代币每次易手时，通常都需要调用一个函数。 然而，`_transfer` 是一个非常重要的函数， 重新编写可能会不安全（见下文），所以最好不要重写。 解决方案是重写 `_beforeTokenTransfer` 函数，这是一个[挂钩函数](https://wikipedia.org/wiki/Hooking)。 你可以重写此函数，之后每次转账都会调用它。
 
 &nbsp;
 
@@ -654,7 +654,7 @@ B：
 
 #### \_mint 和 \_burn 函数 {#\_mint-and-\_burn}
 
-这两个函数（`_mint` 和 `_burn`）修改代币的总供应量。 它们都是内部函数，在原有合约中没有任何调用它们的函数。 因此，仅通过继承合约并添加您自己的逻辑， 来决定在什么条件下可以铸造新代币或消耗现有代币时， 它们才是有用的。
+这两个函数（`_mint` 和 `_burn`）修改代币的总供应量。 它们都是内部函数，在原有合约中没有任何调用它们的函数。 因此，仅通过继承合约并添加你自己的逻辑， 来决定在什么条件下可以铸造新代币或消耗现有代币时， 它们才是有用的。
 
 **注意：**每一个 ERC-20 代币都通过自己的业务逻辑来决定代币管理。 例如，一个固定供应总量的合约可能只在构造函数中调用 `_mint`，而从不调用 `_burn`。 一个销售代币的合约 将在支付时调用 `_mint`，并大概在某个时间点调用 `_burn`， 以避免过快的通货膨胀。
 
@@ -758,7 +758,7 @@ B：
     }
 ```
 
-此函数修改了 `>_decimals` 变量，此变量用于设置用户接口如何计算金额。 您应该从构造函数里面调用。 在之后的任何时候调用都是不正当的， 应用程序一般不会处理。
+此函数修改了 `>_decimals` 变量，此变量用于设置用户接口如何计算金额。 你应该从构造函数里面调用。 在之后的任何时候调用都是不正当的， 应用程序一般不会处理。
 
 ### 钩子 {#hooks}
 
@@ -789,9 +789,9 @@ B：
 复习一下，这些是我认为此合约中最重要的概念（你们的看法可能与我不同）
 
 - _区块链上没有秘密_ 智能合约可以访问的任何信息 都可以提供给全世界。
-- 您可以控制自己交易的订单，但在其他人的交易发生时， 则不能控制。 这就是为什么更改许可额度时会有风险，因为它 允许消费者花掉这两个许可额度的总和。
-- `uint256` 类型值的溢出。 换言之，_0-1=2^256-1_。 如果这不是预期的 行为，您必须自行检查（或使用 SafeMath 库执行该服务）。 请注意， [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html) 中对此进行了更改。
+- 你可以控制自己交易的订单，但在其他人的交易发生时， 则不能控制。 这就是为什么更改许可额度时会有风险，因为它 允许消费者花掉这两个许可额度的总和。
+- `uint256` 类型值的溢出。 换言之，_0-1=2^256-1_。 如果这不是预期的 行为，你必须自行检查（或使用 SafeMath 库执行该服务）。 请注意， [Solidity 0.8.0](https://docs.soliditylang.org/en/breaking/080-breaking-changes.html) 中对此进行了更改。
 - 将特定类型变量的状态改变放在一个特定的地方，这样可以使审核更容易。 这就是我们使用以下等函数的原因，例如 `_approve` 函数，它可以被`approve`、`transferFrom`、 `increaseAllowance` 和 `decreaseAllowance` 调用。
 - 状态更改应为最小操作单元，其中没有任何其他动作 （如在 `_transfer` 中所见）。 这是因为在状态更改期间，会出现不一致的情况。 例如， 在减少发送人的余额，和增加接收人的余额之间， 代币总量会小于应有总量。 如果在这两个时刻之间有任何操作， 特别是调用不同的合约，则可能出现滥用。
 
-现在您已经了解了 OpenZeppelin ERC-20 合约是怎么编写的， 尤其是如何使之更加安全，您即可编写自己的安全合约和应用程序。
+现在你已经了解了 OpenZeppelin ERC-20 合约是怎么编写的， 尤其是如何使之更加安全，你即可编写自己的安全合约和应用程序。

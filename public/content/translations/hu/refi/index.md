@@ -14,7 +14,7 @@ summaryPoint3: Az ökológiailag hasznos eszközök drasztikus skálázási lehe
 
 ## Mik azok a regeneratív pénzügyek (ReFi)? {#what-is-refi}
 
-**A regeneratív pénzügyek (ReFi)** olyan blokkláncra épülő eszközök és eszmék összessége, melyek célja a regeneratív gazdaságok kialakítása a kitermelési vagy kizsákmányolási helyett. A kizsákmányoláson alapuló rendszerek végül felélik a rendelkezésre álló erőforrásokat és összeomlanak; a regeneratív mechanizmusok nélkül nem bírnak kellő rugalmassággal. A ReFi azon a feltételezésen alapszik, hogy a pénzügyi érték létrehozását el kell választani a bolygó és a közösségek erőforrásainak nem fenntartható kizsákmányolásától.
+**A regeneratív pénzügyek (ReFi)** olyan [blokkláncra](/glossary/#blockchain) épülő eszközök és eszmék összessége, melyek célja a regeneratív gazdaságok kialakítása a kitermelési vagy kizsákmányolási helyett. A kizsákmányoláson alapuló rendszerek végül felélik a rendelkezésre álló erőforrásokat és összeomlanak; a regeneratív mechanizmusok nélkül nem bírnak kellő rugalmassággal. A ReFi azon a feltételezésen alapszik, hogy a pénzügyi érték létrehozását el kell választani a bolygó és a közösségek erőforrásainak nem fenntartható kizsákmányolásától.
 
 Ehelyett a ReFi arra törekszik, hogy regeneratív ciklusok létrehozásával környezeti, közösségi és szociális problémákat oldjon meg. Ezek a rendszerek egyszerre teremtenek értéket a résztvevőknek, valamint az ökoszisztéma és a közösségek javait szolgálják.
 
@@ -22,9 +22,11 @@ A ReFi egyik alapköve a regeneratív gazdaság koncepciója, amelyet John Fulle
 
 ![A nyolc összefüggő elv](refi-regenerative-economy-diagram.png)
 
-A ReFi projektek ezeket az elveket valósítják meg az [okosszerződések](/developers/docs/smart-contracts/) és [a decentralizált pénzügyek (DeFi)](/defi/) alkalmazásainak segítségével, hogy ösztönözzék a regeneratív viselkedéseket, mint amilyen a lepusztult ökoszisztémák visszaállítása, illetve a nagy léptékű együttműködés elősegítése olyan globális problémák esetén, mint a klímaváltozás és a biodiverzitás-csökkenés.
+A ReFi projektek ezeket az elveket valósítják meg az [okosszerződések](/glossary/#smart-contract) és [a decentralizált pénzügyek (DeFi)](/glossary/#defi) alkalmazásainak segítségével, hogy ösztönözzék a regeneratív viselkedéseket, mint amilyen a lepusztult ökoszisztémák visszaállítása, illetve a nagy léptékű együttműködés elősegítése olyan globális problémák esetén, mint a klímaváltozás és a biodiverzitás-csökkenés.
 
 A ReFi egyúttal átfedésben van a [decentralizált tudomány (DeSci)](/desci/) mozgalommal, mely az Ethereumot használja platformként a tudományos ismeretek finanszírozása, létrehozása, értékelése, hitelesítése, tárolása és terjesztése céljából. A DeSci eszközök hasznosak lehetnek ahhoz, hogy a regeneratív tevékenységek (faültetés, a műanyagok összegyűjtése az óceánból, lepusztult ökoszisztémák visszaállítása) bevezetését és monitorozását igazolható szabványokkal és gyakorlatokkal támasszák alá.
+
+<YouTube id="La52dDzBt2k" />
 
 ## A karbonkreditek tokenizálása {#tokenization-of-carbon-credits}
 
@@ -47,7 +49,7 @@ A ReFi-projektek blokklánc technológiát használnak arra, hogy a hagyományos
 - **A likviditás néhány alapban koncentrálódik,** amelyekkel bárki szabadon kereskedhet. A nagy szervezetek és az egyéni felhasználók ugyanúgy hasznosíthatják ezeket az alapokat, és nem kell hozzá kereskedőt fogadniuk, részvételi díjat fizetniük vagy regisztrálniuk.
 - **Az összes tranzakció nyilvános blokkláncokon kerül rögzítésre**. Minden egyes karbonkredit mozgása nyomon követhető onnantól kezdve, hogy a DCM-en elérhetővé válik.
 - **A tranzakciósebesség szinte azonnali**. A hagyományos piacokon napokig vagy hetekig tartana nagyobb mennyiségű karbonkredit beszerzése, amit a DCM-en pillanatok alatt el lehet érni.
-- **A kereskedés közvetítők nélkül zajlik**, akik nagy díjakat számolnának fel ezért. A digitális karbonkreditek [62%-os költséghatékonyságot jelentenek a hagyományos kreditekhez képest](https://www.klimadao.finance/blog/klimadao-analysis-of-the-base-carbon-tonne), derül ki egy elemzőcég adataiból.
+- **A kereskedés közvetítők nélkül zajlik**, akik nagy díjakat számolnának fel ezért. A digitális karbonkreditek jelentős költségcsökkentést jelentenek a hagyományos kreditekhez képest.
 - **A DCM skálázható** és képes egyaránt kielégíteni az egyének és a multinacionális vállalatok igényeit.
 
 ### A digitális karbonpiac (DCM) fő komponensei {#key-components-dcm}

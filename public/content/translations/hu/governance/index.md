@@ -120,7 +120,7 @@ Az elágazások akkor jönnek létre, amikor komoly technikai változások tört
 
 A DAO-elágazás volt a válasz egy [2016-os DAO-támadásra](https://www.coindesk.com/understanding-dao-hack-journalists), amikor egy sebezhető [DAO](/glossary/#dao) szerződésből 3,6 millió ETH-t ürítettek le a támadás során. Az elágazás a pénzeszközöket a hibás szerződésből egy újba tette át, hogy a támadás során károsultak kaphassanak belőle.
 
-Ennek az akciónak a kezelését megszavazták az Ethereum közösségen belül. Bármely ETH tulajdonos szavazhatott egy tranzakción keresztül [egy szavazási platformon](http://v1.carbonvote.com/). Az elágazás mellett több mint a szavazók 85%-a voksolt.
+Ennek az akciónak a kezelését megszavazták az Ethereum közösségen belül. Bármely ETH tulajdonos szavazhatott egy tranzakción keresztül [egy szavazási platformon](https://web.archive.org/web/20170620030820/http://v1.carbonvote.com/). Az elágazás mellett több mint a szavazók 85%-a voksolt.
 
 Fontos megjegyezni, hogy miközben a protokoll tényleg elágazott, hogy visszafordítsa a támadást, a szavazás súlya megkérdőjelezhető:
 
@@ -160,7 +160,7 @@ Amikor a Beacon-lánc egyesült az Ethereum végrehajtási réteggel 2022. szept
 
 <Divider />
 
-## Hogyan lehet ebben részt venni? {#get-involved}
+## Hogyan lehet részt venni? {#get-involved}
 
 - [Javasoljon egy EIP-t](/eips/#participate)
 - [Vitassa meg a jelenlegi javaslatokat](https://ethereum-magicians.org/)
@@ -178,5 +178,5 @@ Az Ethereumban az irányítás nincs szigorúan definiálva. A közösség kül�
 - [Hogyan működik az Ethereum irányítása?](https://cryptotesters.com/blog/ethereum-governance) – _Cryptotesters_
 - [Hogyan működik az Ethereum irányítása](https://medium.com/coinmonks/how-ethereum-governance-works-71856426b63a) – _Micah Zoltu_
 - [Kik az az Ethereum protokollfejlesztői?](https://hudsonjameson.com/2020-06-22-what-is-an-ethereum-core-developer/) – _Hudson Jameson_
-- [Irányítás – 2. rész: a plutokrácia, vagyis a gazdagok általi irányítás még mindig nem az igazi](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
-- [Túllépni az érmealapú szavazáson](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_
+- [Irányítás, 2. rész: A plutokrácia még mindig rossz](https://vitalik.eth.limo/general/2018/03/28/plutocracy.html) – _Vitalik Buterin_
+- [Túl az érmealapú szavazásra épülő irányításon](https://vitalik.eth.limo/general/2021/08/16/voting3.html) – _Vitalik Buterin_

@@ -90,7 +90,7 @@ Plusieurs tableaux de bord donnent des statistiques en temps réel de la diversi
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/) **Couche d'exécution :**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Complément d'information {#further-reading}
