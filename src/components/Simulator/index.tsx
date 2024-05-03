@@ -2,19 +2,20 @@ import React, { useEffect, useMemo, useState } from "react"
 import { useRouter } from "next/router"
 import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
 
+import { Explanation } from "@/components/Simulator/Explanation"
+import { PathButton } from "@/components/Simulator/PathButton"
+import { Phone } from "@/components/Simulator/Phone"
+import { SimulatorModal } from "@/components/Simulator/SimulatorModal"
+import { Template } from "@/components/Simulator/Template"
+
 import { trackCustomEvent } from "@/lib/utils/matomo"
 
 import { PATH_ID_QUERY_PARAM, SIMULATOR_ID } from "./constants"
-import { Explanation } from "./Explanation"
 import type {
   SimulatorDetails,
   SimulatorNav,
   SimulatorPathSummary,
 } from "./interfaces"
-import { PathButton } from "./PathButton"
-import { Phone } from "./Phone"
-import { SimulatorModal } from "./SimulatorModal"
-import { Template } from "./Template"
 import type { PathId, SimulatorData } from "./types"
 import { getValidPathId } from "./utils"
 
