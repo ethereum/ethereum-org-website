@@ -4,7 +4,7 @@ description: Uniswap-v2コントラクトの仕組み、 コントラクトの�
 author: Ori Pomerantz
 tags:
   - "Solidity"
-skill: 中級
+skill: intermediate
 published: 2021-05-01
 lang: ja
 ---

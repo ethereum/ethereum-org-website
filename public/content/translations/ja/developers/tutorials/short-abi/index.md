@@ -5,7 +5,7 @@ author: Ori Pomerantz
 lang: ja
 tags:
   - "レイヤー2"
-skill: 中級
+skill: intermediate
 published: 2022-04-01
 ---
 

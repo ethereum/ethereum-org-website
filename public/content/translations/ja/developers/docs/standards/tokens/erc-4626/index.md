@@ -86,7 +86,7 @@ function deposit(uint256 assets, address receiver) public returns (uint256 share
 function maxMint(address receiver) public view returns (uint256)
 ```
 
-この関数は、`receiver</code<a href="#mint">による1回の<a href="#mint">mint`</a>の呼び出しにより、ミント可能なシェア数の上限を返します。
+この関数は、`receiver` による1回の [`mint`](#mint) の呼び出しにより、ミント可能なシェア数の上限を返します。
 
 #### previewMint {#previewmint}
 

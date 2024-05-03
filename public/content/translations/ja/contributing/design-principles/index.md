@@ -10,7 +10,7 @@ description: ethereum.orgのデザインとコンテンツに関する原則
 
 本原則は、サイトの見た目、雰囲気、掲載するコンテンツに関するものです。
 
-[etherem.orgへの貢献にあたって、まずはこちら](/contributing/)を読んでください。
+[ethereum.orgへの貢献にあたって、まずはこちら](/contributing/)を読んでください。
 
 ## デザイン原則とは {#ways-to-contribute}
 

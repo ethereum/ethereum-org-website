@@ -94,7 +94,7 @@ ethereum.orgコアチームは、私たちの取り組みへのアクセスを�
 
 **いかがでしょうか?**ロードマップに関するフィードバックをお待ちしております。私たちが取り組むべきことについてご意見があれば、お知らせください。 コミュニティからのアイデアやPRをお待ちしています。
 
-**参加を希望されますか?** [貢献の詳細](/contributing/)をご参照ください。[Twitter](https://twitter.com /ethdotorg)で連絡いただくか、[Discordサーバー](https://discord.gg/ethereum-org)のコミュニティディスカッションに参加してください。
+**参加を希望されますか?** [貢献の詳細](/contributing/)をご参照ください。[Twitter](https://twitter.com/ethdotorg)で連絡いただくか、[Discordサーバー](https://discord.gg/ethereum-org)のコミュニティディスカッションに参加してください。
 
 ## デザイン原則 {#design-principles}
 

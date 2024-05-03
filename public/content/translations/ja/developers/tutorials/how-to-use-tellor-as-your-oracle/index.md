@@ -7,7 +7,7 @@ tags:
   - "Solidity"
   - "スマートコントラクト"
   - "オラクル"
-skill: 初級
+skill: beginner
 published: 2021-06-29
 source: Tellor Docs
 sourceUrl: https://docs.tellor.io/tellor/

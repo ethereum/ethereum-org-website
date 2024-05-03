@@ -5,7 +5,7 @@ author: "Mario Havel"
 tags:
   - "クライアント"
   - "ノード"
-skill: 中級
+skill: intermediate
 lang: ja
 published: 2021-01-13
 ---

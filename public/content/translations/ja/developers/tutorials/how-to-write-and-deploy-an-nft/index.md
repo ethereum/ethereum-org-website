@@ -345,6 +345,6 @@ Yassss！ イーサリアム(テストネット)チェーンにNFTスマート�
 
 ![Alchemy のエクスプローラーダッシュボードで「内部」で行われた通話を表示する](./alchemy-explorer-goerli.png)
 
-ここでは、 .deploy() 関数を呼び出した際に、Hardhat/Ethers が内部で作った JSON-RPC の呼び出しをいくつか見ることができます。 ここで呼び出している2つの重要なJSON-RPCは、実際にSepoliaチェーン上でコントラクトを書き込むリクエストの[eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction)と、(トランザクションを送信する際の典型的なパターンである) ハッシュを与えられたトランザクションに関する情報を読み取るリクエスト[eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash)です。 トランザクションの送信の詳細については、このチュートリアルの [ Web3 を使用したトランザクションの送信 ](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) をご覧ください。
+ここでは、 .deploy() 関数を呼び出した際に、Hardhat/Ethers が内部で作った JSON-RPC の呼び出しをいくつか見ることができます。 ここで呼び出している2つの重要なJSON-RPCは、実際にSepoliaチェーン上でコントラクトを書き込むリクエストの[eth_sendRawTransaction](/developers/docs/apis/json-rpc/#eth_sendrawtransaction)と、(トランザクションを送信する際の典型的なパターンである) ハッシュを与えられたトランザクションに関する情報を読み取るリクエスト[eth_getTransactionByHash](/developers/docs/apis/json-rpc/#eth_gettransactionbyhash)です。 トランザクションの送信の詳細については、このチュートリアルの [Web3 を使用したトランザクションの送信](/developers/tutorials/sending-transactions-using-web3-and-alchemy/) をご覧ください。
 
 以上がこのチュートリアルのパート1です。 [パート2](/developers/tutorials/how-to-mint-an-nft/) では、NFT を発行することで実際にスマートコントラクトとやりとりをします。そして、[パート3](/developers/tutorials/how-to-view-nft-in-metamask/) では、Etherreum ウォレット内の NFT を確認する方法を示します！

@@ -7,7 +7,7 @@ tags:
   - "erc-721"
   - "Solidity"
   - "トークン"
-skill: 中級
+skill: intermediate
 lang: ja
 published: 2020-03-19
 source: Hackernoon

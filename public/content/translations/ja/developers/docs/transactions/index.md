@@ -99,7 +99,7 @@ Gethのようなイーサリアムクライアントは、この署名プロセ�
 }
 ```
 
-- `raw`は、[再帰長プレフィックス(RLP)](/developers/docs/data- Structures-and-encoding/rlp)エンコード形式の署名されたトランザクション
+- `raw`は、[再帰長プレフィックス(RLP)](/developers/docs/data-structures-and-encoding/rlp)エンコード形式の署名されたトランザクション
 - `tx`はJSON形式の署名されたトランザクション
 
 署名ハッシュでトランザクションが送信者から送信され、ネットワークに送信されたことを暗号的に証明することができます。
@@ -176,7 +176,7 @@ Aliceのアカウントに **+1.0 ETH**振り込み
 
 ## 型付トランザクションエンベロープ(Typed Transaction Envelope) {#typed-transaction-envelope}
 
-イーサリアムは当初、トランザクション形式は1つのみでした。 各トランザクションには、ノンス (nonce)、ガス代、ガスリミット、toアドレス、値、データ、v、r、sがあります。 これらのフィールドは、以下のように[RLPエンコード](/developers/docs/data- Structures-and-encoding/rlp/)されています。
+イーサリアムは当初、トランザクション形式は1つのみでした。 各トランザクションには、ノンス (nonce)、ガス代、ガスリミット、toアドレス、値、データ、v、r、sがあります。 これらのフィールドは、以下のように[RLPエンコード](/developers/docs/data-structures-and-encoding/rlp/)されています。
 
 `RLP([nonce, gasPrice, gasLimit, to, value, data, v, r, s])`
 

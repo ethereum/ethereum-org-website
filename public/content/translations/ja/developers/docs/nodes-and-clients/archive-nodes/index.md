@@ -56,7 +56,7 @@ sidebarDepth: 2
 
 ## 推奨実行環境
 
-アーカイブノードは、[ノードの実行における一般的な推奨事項](/developers/docs/nodes-and-clients/run-a-node/)とは異なり、ハードウェアとメンテナンスの要件がより厳しくなっています。 そのため、エリゴンの[主要な機能](https://github.com/ledgerwatch/erigon#key-features)を考慮すると、[エリゴン](/developers/docs/nodes- and-clients/#erigon)のクライアント実装を使うのが最も実用的であると言えます。
+アーカイブノードは、[ノードの実行における一般的な推奨事項](/developers/docs/nodes-and-clients/run-a-node/)とは異なり、ハードウェアとメンテナンスの要件がより厳しくなっています。 そのため、エリゴンの[主要な機能](https://github.com/ledgerwatch/erigon#key-features)を考慮すると、[エリゴン](/developers/docs/nodes-and-clients/#erigon)のクライアント実装を使うのが最も実用的であると言えます。
 
 ### ハードウェア
 

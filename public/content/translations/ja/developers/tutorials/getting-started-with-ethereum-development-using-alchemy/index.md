@@ -75,7 +75,7 @@ _**注意：** [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainnet.a
 
 **すでにクライアントをインストール済みの場合は、** 現在のノードプロバイダーのURLを、APIキーを含むAlchemyのURL（ `"https://eth-mainnet.alchemyapi.io/v2/your-api-key"`など）に変更します。
 
-**_注意：_** 以下のスクリプトは、 コマンドラインで実行するのではなく、**ノードコンテキスト**または**ファイルに保存した形で**実行する必要があります。 Nodeまたはnpmがインストールされていない場合は、Mac用設定ガイド [](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs) をご覧ください。
+**_注意：_** 以下のスクリプトは、 コマンドラインで実行するのではなく、**ノードコンテキスト**または**ファイルに保存した形で**実行する必要があります。 Nodeまたはnpmがインストールされていない場合は、[Mac用設定ガイド](https://app.gitbook.com/@alchemyapi/s/alchemy/guides/alchemy-for-macs) をご覧ください。
 
 Alchemyと統合可能な[Web3ライブラリ](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)は無数に存在しますが、このチュートリアルでは、Alchemyとシームレスに動作するように構築・設定されたweb3.jsの完全互換版である[Alchemy Web3](https://docs.alchemy.com/reference/api-overview)をお勧めします。 Alchemy Web3は、自動リトライや WebScoket に対する充実したサポートなどの利点を持っています。
 

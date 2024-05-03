@@ -18,12 +18,12 @@ lang: ja
 
 自分のアドレスに接続されたスマートコントラクトを閲覧したり、無効にさせることが可能なウェブサイトもあります。 以下のようなウェブサイトにアクセスし、ウォレットに接続してください。
 
-- [Ethallowance (イーサアラウアンス) ](https://ethallowance.com/) (イーサリアム)
-- [Etherscan (イーサスキャン) ](https://etherscan.io/tokenapprovalchecker) (イーサリアム)
-- [Cointool (コインツール) ](https://cointool.app/approve/eth)(複数のネットワーク)
-- [Revoke (リボーク) ](https://revoke.cash/) (複数のネットワーク)
-- [Unrekt (アンレクト) ](https://app.unrekt.net/)(複数のネットワーク)
-- [EverRevoke (エバーリボーク) ](https://everrise.com/everrevoke/)(複数のネットワーク)
+- [Ethallowance (イーサアラウアンス)](https://ethallowance.com/) (イーサリアム)
+- [Etherscan (イーサスキャン)](https://etherscan.io/tokenapprovalchecker) (イーサリアム)
+- [Cointool (コインツール)](https://cointool.app/approve/eth) (複数のネットワーク)
+- [Revoke (リボーク)](https://revoke.cash/) (複数のネットワーク)
+- [Unrekt (アンレクト)](https://app.unrekt.net/) (複数のネットワーク)
+- [EverRevoke (エバーリボーク)](https://everrise.com/everrevoke/) (複数のネットワーク)
 
 ## ステップ 2: ウォレットを接続する
 

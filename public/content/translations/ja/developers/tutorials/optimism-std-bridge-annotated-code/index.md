@@ -6,7 +6,7 @@ tags:
   - "Solidity"
   - "ブリッジ"
   - "レイヤー2"
-skill: 中級
+skill: intermediate
 published: 2022-03-30
 lang: ja
 ---
@@ -992,7 +992,7 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
 
 L2のブリッジは、ERC-165を健全性チェックとして用いて、資産を送信するのに用いるERC-20コントラクトが `IL2StandardERC20`であるか確認します。
 
-**注意：不正なコントラクトが`supportsInterface`に対して虚偽の値を返すことを防ぐメカニズムは含まれていないため、これはセキュリティ保護のメカニズム_ではなく_、健全性チェックのメカニズムです。</p>
+**注意：不正なコントラクトが`supportsInterface`に対して虚偽の値を返すことを防ぐメカニズムは含まれていないため、これはセキュリティ保護のメカニズム_ではなく_、健全性チェックのメカニズムです。
 
 ```solidity
     // slither-disable-next-line external-function

@@ -60,7 +60,7 @@ sidebarDepth: 3
 
 複数のプロジェクトにおいて、Dappと統合できるサイドチェーン実装が提供されています。
 
-- [Polygon PoS ](https://polygon.technology/solutions/polygon-pos)
+- [Polygon PoS](https://polygon.technology/solutions/polygon-pos)
 - [Skale](https://skale.network/)
 - [Gnosis Chain（旧 xDai）](https://www.gnosischain.com/)
 - [Loom Network](https://loomx.io/)

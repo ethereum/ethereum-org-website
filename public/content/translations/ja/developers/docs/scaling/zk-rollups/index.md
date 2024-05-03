@@ -234,7 +234,7 @@ FinematicsによるZKロールアップの説明動画をご覧ください：
 
 - **[zkEVM](https://github.com/privacy-scaling-explorations/zkevm-specs)** - _zkEVMは、イーサリアム・ファウンデーションによる資金提供に基づき、EVM互換のZKロールアップならびにイーサリアムブロックに対する有効性証明を生成するメカニズムを開発するプロジェクトです。_
 
-- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _イーサリアムメインネット上の分散型ゼロ知識ロールアップであり、ゼロ知識証明による検証が可能なスマートコントラクトなど、イーサリアムのトランザクションを透明性が高い方法で実行するゼロ知識イーサリアム仮想マシン(zkEVM)の開発に取り組んでいます。</p></li>
+- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** - _イーサリアムメインネット上の分散型ゼロ知識ロールアップであり、ゼロ知識証明による検証が可能なスマートコントラクトなど、イーサリアムのトランザクションを透明性が高い方法で実行するゼロ知識イーサリアム仮想マシン(zkEVM)の開発に取り組んでいます。_
 
 - **[Scroll](https://scroll.io/blog/zkEVM)** - _Scrollは、ネイティブのzkEVMを搭載したイーサリアムのレイヤー2ソリューションを開発中のテクノロジー企業です。_
 
@@ -242,7 +242,7 @@ FinematicsによるZKロールアップの説明動画をご覧ください：
 
 - **[ZKSync](https://docs.zksync.io/)** - _ZkSync Eraは、Matter Labsが独自開発したzkEVMを搭載するEVM互換のゼロ知識ロールアップです_。
 
-- **[Starknet](https://starkware.co/starknet/)** - _StarkNetは、StarkWareによって開発されたEVM互換のレイヤー2スケーリングソリューションです。_</ul>
+- **[Starknet](https://starkware.co/starknet/)** - _StarkNetは、StarkWareによって開発されたEVM互換のレイヤー2スケーリングソリューションです。_
 
 ## ZKロールアップの参考文献 {#further-reading-on-zk-rollups}
 

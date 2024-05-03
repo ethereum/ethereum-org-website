@@ -462,7 +462,7 @@ Provider、Signer、Contractの詳細については、[ethers.jsドキュメン
 
 `initMessage = "Hello world!"`を使用してコントラクトをデプロイしたことを思い出せますでしょうか？ ここでは、スマートコントラクトに保存されているメッセージを読み取り、コンソールに出力します。
 
-JavaScriptでは、ネットワークとのやり取りで非同期関数を使います。 非同期関数の詳細については、[この記事の中ほど](https://blog.bitsrc.io/ Understanding-asynchronous-javascript-the-event-loop-74cd408419ff)をご覧ください。
+JavaScriptでは、ネットワークとのやり取りで非同期関数を使います。 非同期関数の詳細については、[この記事の中ほど](https://blog.bitsrc.io/Understanding-asynchronous-javascript-the-event-loop-74cd408419ff)をご覧ください。
 
 以下のコードを使用して、スマートコントラクトの`message`関数を呼び出し、initメッセージを読み取ります。
 
