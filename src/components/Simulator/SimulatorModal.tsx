@@ -16,13 +16,15 @@ type SimulatorModalProps = ModalContentProps &
     children?: React.ReactNode
   }
 
-export const SimulatorModal = ({
+const SimulatorModal = ({
   isOpen,
   onClose,
   children,
   size,
   ...restProps
 }: SimulatorModalProps) => {
+  console.log("LOADING MODAL")
+
   return (
     <ChakraModal
       isOpen={isOpen}
@@ -60,3 +62,4 @@ export const SimulatorModal = ({
     </ChakraModal>
   )
 }
+export default SimulatorModal
