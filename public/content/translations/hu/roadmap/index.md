@@ -16,13 +16,13 @@ buttons:
     variant: vázlat
 ---
 
-Az Ethereum jelenleg is a globális koordináció erőteljes platformja, de még mindig szükség van további fejlesztésekre. Az ambiciózus fejlesztéseknek köszönhetően a jelenlegi forma helyett egy teljesen skálázható és maximálisan rugalmas Ethereum-platform fog kibontakozni. Ezeket a fejlesztéseket az Ethereum útiterve ismerteti.
+Az Ethereum jelenleg is a globális koordináció erőteljes platformja, de még mindig szükség van további fejlesztésekre. Az ambiciózus fejlesztéseknek köszönhetően a jelenlegi forma helyett egy teljesen skálázható és maximálisan rugalmas Ethereum-platform fog kibontakozni. Ezeket a fejlesztéseket az Ethereum ütemterve ismerteti.
 
 **A korábbi Ethereum-fejlesztéseket [Az Ethereum története](/history/) oldalon láthatja**
 
 ## Milyen változások várhatók az Ethereumon? {#what-changes-are-coming}
 
-Az Ethereum útiterve a jövőbeli, protokollt érintő specifikus fejlesztéseket vázolja fel. Összességében ez az útiterv a következő előnyöket hozza el az Ethereum felhasználói számára:
+Az Ethereum ütemterve a jövőbeli, protokollt érintő, specifikus fejlesztéseket vázolja fel. Összességében ez az ütemterv a következő előnyöket hozza el az Ethereum felhasználói számára:
 
 <CardGrid>
   <RoadmapActionCard
@@ -55,13 +55,13 @@ Az Ethereum útiterve a jövőbeli, protokollt érintő specifikus fejlesztések
   />
 </CardGrid>
 
-## Miért van szüksége az Ethereumnak egy útitervre? {#why-does-ethereum-need-a-roadmap}
+## Miért van szüksége az Ethereumnak egy ütemtervre? {#why-does-ethereum-need-a-roadmap}
 
 Az Ethereumot folyamatosan fejlesztik, hogy javítsák a skálázhatóságot, a biztonságot vagy a fenntarthatóságot. Az Ethereum egyik fő erőssége az, hogy képes a kutatás és fejlesztés során felmerült új ötleteket bevezetni. Ez az alkalmazkodóképesség adja az Ethereum rugalmasságát, hogy kezelni tudja a felmerülő kihívásokat és lépést tudjon tartani a legfejlettebb technológiai áttörésekkel.
 
-<RoadmapImageContent title="Hogyan határozzák meg az útitervet">
+<RoadmapImageContent title="Hogyan határozzák meg az ütemtervet">
 
-Az útiterv a kutatók és fejlesztők több évnyi munkájának eredménye, mivel a protokoll maga nagyon technikai, de emellett bárki, aki elég elkötelezett, részt vehet benne. Az ötletek általában beszélgetés formájában kezdődnek a fórumokon, mint amilyen az [ethresear.ch](https://ethresear.ch/), [Ethereum varázslói](https://ethereum-magicians.org/) vagy az Eth R&D discord szerver. Ezek lehetnek válaszok az újonnan feltár gyenge pontokra, az alkalmazási rétegen működő szervezetek javaslatai (mint a dappok és tőzsdék), vagy a felhasználók ismert problémái (mint a költségek vagy a tranzakciósebességek). Miután ezeket az ötleteket kellőképpen körüljárták, javaslatot készíthetnek belőlük: [Ethereum-fejlesztési javaslatok (EIP)](https://eips.ethereum.org/). Ez az egész folyamat nyilvános, így a közösség bármelyik tagja mérlegelheti a javaslatokat.
+Az ütemterv a kutatók és fejlesztők több évnyi munkájának eredménye, mivel a protokoll maga nagyon technikai, de emellett bárki, aki elég elkötelezett, részt vehet benne. Az ötletek általában beszélgetés formájában kezdődnek a fórumokon, mint amilyen az ethresear.ch (https://ethresear.ch/), az Ethereum Magicians (https://ethereum-magicians.org/) vagy az Eth R&D discord szerver. Ezek lehetnek válaszok az újonnan feltár gyenge pontokra, az alkalmazási rétegen működő szervezetek javaslatai (mint a dappok és tőzsdék), vagy a felhasználók ismert problémái (mint a költségek vagy a tranzakciósebességek). Miután ezeket az ötleteket kellőképpen körüljárták, javaslatot készíthetnek belőlük: [Ethereum-fejlesztési javaslatok (EIP)](https://eips.ethereum.org/). Ez az egész folyamat nyilvános, így a közösség bármelyik tagja mérlegelheti a javaslatokat.
 
 [Bővebben az Ethereum irányításáról](/governance/)
 
@@ -70,42 +70,42 @@ Az útiterv a kutatók és fejlesztők több évnyi munkájának eredménye, miv
 <InfoBanner mb={8}>
   <h4 style={{ marginTop: 0 }}>Mi volt az ETH2?</h4>
 
-  <p>Az „Eth2” kifejezéssel az Ethereum jövőjére hivatkoztak, mielőtt még áttért volna a proof-of-stake mechanizmusra, de <strong>elhagyták ezt a kifejezést, hogy sokkal pontosabb terminológiát használjanak helyette</strong>. Eredetileg az átállás előtti és utáni állapot megkülönböztetésére használták, vagy néha a különböző Ethereum-kliensekre (a végrehajtási kliensek néha ETH1-kliensként, a konszenzuskliensek pedig ETH2-kliensként jelentek meg).</p>
+  <p>Az „Eth2” kifejezéssel az Ethereum jövőjére hivatkoztak, mielőtt még áttért volna a <a href="/glossary/#pos">proof-of-stake</a> mechanizmusra, de <strong>elhagyták ezt a kifejezést, hogy sokkal pontosabb terminológiát használjanak helyette</strong>. Eredetileg az átállás előtti és utáni állapot megkülönböztetésére használták, vagy néha a különböző Ethereum-kliensekre (a <a href="/glossary/#execution-client">végrehajtási kliensek</a> néha ETH1-kliensként, a <a href="/glossary/#consensus-client">konszenzuskliensek</a> pedig ETH2-kliensként jelentek meg).</p>
 
 </InfoBanner>
 
-## Fog változni az Ethereum útiterve? {#will-ethereums-roadmap-change-over-time}
+## Fog változni az Ethereum ütemterve? {#will-ethereums-roadmap-change-over-time}
 
-Igen, szinte biztosan. Az útiterv az Ethereum jelenlegi fejlesztési tervezete, amely rövid- és hosszútávú újításokat is magában foglal. Az útiterv várhatóan változni fog, amikor új információk és technológiák válnak elérhetővé.
+Igen, szinte biztosan. Az ütemterv az Ethereum jelenlegi fejlesztési tervezete, amely rövid- és hosszútávú újításokat is magában foglal. Az ütemterv várhatóan változni fog, amikor új információk és technológiák válnak elérhetővé.
 
-Az útiterv olyan, mint a fejlesztési szándékok készlete, vagyis a kutatók és a fejlesztők által feltételezett legoptimálisabb út az Ethereum számára.
+Az ütemterv olyan, mint a fejlesztési szándékok készlete, vagyis a kutatók és a fejlesztők által feltételezett legoptimálisabb út az Ethereum számára.
 
-## Mikor vezetik be az útiterv összes fejlesztését? {#when-will-the-roadmap-be-finished}
+## Mikor vezetik be az ütemterv összes fejlesztését? {#when-will-the-roadmap-be-finished}
 
-Az Ethereum több fejlesztést is eszközöl a közeljövőben (pl. a letétek kivonási lehetőségét is); más tervek kisebb prioritással bírnak, és valószínűleg nem kerülnek bevezetésre a következő 5-10 évben (pl. a kvantumszámítógépnek való ellenállás). A fejlesztésekhez nehéz lenne pontos időpontot hozzárendelni, mivel számos útitervelem fejlesztése párhuzamosan folyik és különböző sebességgel valósulnak meg. Egy adott fejlesztés prioritása külső tényezők miatt (pl. a kvantumszámítógépek teljesítményének és elérhetőségének hirtelen fejlődése fontosabbá teszi az ezeknek ellenálló kriptográfiát) is változhat.
+Az Ethereum több fejlesztést is eszközöl a közeljövőben (pl. a letétek kivonási lehetőségét is); más tervek kisebb prioritással bírnak, és valószínűleg nem kerülnek bevezetésre a következő 5-10 évben (pl. a kvantumszámítógépnek való ellenállás). A fejlesztésekhez nehéz lenne pontos időpontot hozzárendelni, mivel az ütemterv számos elemének kifejlesztése párhuzamosan folyik és különböző sebességgel valósulnak meg. Egy adott fejlesztés prioritása külső tényezők miatt (pl. a kvantumszámítógépek teljesítményének és elérhetőségének hirtelen fejlődése fontosabbá teszi az ezeknek ellenálló kriptográfiát) is változhat.
 
 Az Ethereum fejlesztésre úgy is tekinthetünk, mint a biológiai fejlődésre. Az a hálózat sokkal sikeresebb lehet, amelyik alkalmazkodik az új kihívásokhoz és fenntartja fittségét, mint az, amely ellenáll a változásnak, ugyanakkor a jó teljesítmény, skálázhatóság és biztonság elérése után egyre kevesebb protokollváltoztatásra lesz szükség.
 
 ## Van-e bármi teendője a felhasználóknak a fejlesztések bevezetésekor? {#do-i-have-to-do-anything-when-there-is-an-upgrade}
 
-A fejlesztések általában nem érintik a felhasználókat, kivéve, hogy jobb felhasználói élményt, biztonságosabb protokollt és több <i>opciót</i> biztosítanak az Ethereummal való kapcsolódásra. A felhasználók nem vesznek aktívan részt a fejlesztések bevezetésében, és semmit se kell tenniük az eszközeik biztosításához. A csomópontok működtetőinek frissíteni kell a klienseiket, hogy felkészüljenek a fejlesztés bevezetésére. Néhány fejlesztés az alkalmazásfejlesztők számára is változást jelent. Például az olyan fejlesztések esetében, amelyek a korábbi adatok elérhetőségét érintik, az alkalmazásfejlesztőknek máshonnan kell beszerezniük az előzményadatokat.
+A fejlesztések általában nem érintik a felhasználókat, kivéve, hogy jobb felhasználói élményt, biztonságosabb protokollt és több <i>opciót</i> biztosítanak az Ethereummal való kapcsolódásra. **A rendszeres felhasználóknak nem kell aktívan részt venniük a frissítésben, és semmit sem kell tenniük** eszközeik biztonsága érdekében. A [csomópont](/glossary/#node) operátoroknak frissíteniük kell ügyfeleiket, hogy felkészüljenek a frissítésre. Néhány fejlesztés az alkalmazásfejlesztők számára is változást jelent. Például az olyan fejlesztések esetében, amelyek a korábbi adatok elérhetőségét érintik, az alkalmazásfejlesztőknek máshonnan kell beszerezniük az előzményadatokat.
 
 ## Mi a helyzet a Verge, Splurge stb. fejlesztésekkel? {#what-about-the-verge-splurge-etc}
 
-[Vitalik Buterin az Ethereum útitervének egy olyan vízióját javasolta](https://twitter.com/VitalikButerin/status/1588669782471368704), amelyen a fejlesztések kategóriákba vannak sorolva az alapján, hogy miként hatnak az Ethereum architektúrájára. Ennek részei:
+[Vitalik Buterin az Ethereum ütemtervének egy olyan vízióját javasolta](https://twitter.com/VitalikButerin/status/1588669782471368704), amelyen a fejlesztések kategóriákba vannak sorolva az alapján, hogy miként hatnak az Ethereum architektúrájára. Ennek részei:
 
-- A Beolvadás: a proof-of-work mechanizmusról a proof-of-stake mechanizmusra való áttérés fejlesztései
-- Surge: az összevont tranzakciók által hozott skálázhatóság és az adatsharding fejlesztései
-- Scourge: a cenzúrának való ellenálláshoz, a decentralizációhoz és a MEV-ből eredő protokollkockázatokhoz kapcsolódó fejlesztések
-- Verge: a könnyebb blokkellenőrzéshez kapcsolódó fejlesztések
-- Purge: a csomópontok számításainak költségcsökkentéséről és a protokollegyszerűsítésről szóló fejlesztések
-- Splurge: egyéb fejlesztések, amelyek nem illeszkednek az előző kategóriákba.
+- **Az összevonás**: a [munkaigazolásról](/glossary/#pow) a [tét igazolására](/glossary/#pos) való átállással kapcsolatos frissítések
+- **The Surge**: a méretezhetőséghez kapcsolódó frissítések [összegzésekkel](/glossary/#rollups) és adatfelosztással
+- **A csapás**: a [MEV](/glossary/#mev) cenzúraellenállásával, decentralizációjával és protokollkockázataival kapcsolatos frissítések
+- **The Verge**: a [blokkok](/glossary/#block) egyszerűbb ellenőrzéséhez kapcsolódó frissítések
+- **A tisztítás**: a csomópontok futtatásának számítási költségeinek csökkentésével és a protokoll egyszerűsítésével kapcsolatos frissítések
+- **The Splurge**: egyéb frissítések, amelyek nem illeszkednek jól az előző kategóriákba.
 
 Ezen terminológia helyett inkább egyszerűbb és felhasználóközpontú modellt használunk. Ennek ellenére a vízió ugyanaz, amit Vitalik javasolt, csak egyszerűbb szavakkal hivatkozunk rá.
 
 ## Mi a helyzet a shardinggal? {#what-about-sharding}
 
-A sharding lényege, hogy az Ethereum blokkláncot felosztanák, hogy a validátorok csoportjai csak a teljes adat egy töredékéért lennének felelősek. Ez volt az eredeti elképzelés az Ethereum skálázhatóságára vonatkozóan. Azonban a második blokkláncréteg (L2) összevont tranzakciói sokkal gyorsabban fejlődtek, és már így is komoly skálázást tettek lehetővé, amely tovább fokozódik a Proto-Danksharding bevezetésével. Tehát a shard-láncokra nincs többé szükség, ez a fejlesztés már nem része az útitervnek.
+A sharding lényege, hogy az Ethereum blokkláncot felosztanák, hogy a validátorok csoportjai csak a teljes adat egy töredékéért lennének felelősek. Ez volt az eredeti elképzelés az Ethereum skálázhatóságára vonatkozóan. Azonban a második blokkláncréteg (L2) összevont tranzakciói sokkal gyorsabban fejlődtek, és már így is komoly skálázást tettek lehetővé, amely tovább fokozódik a Proto-Danksharding bevezetésével. Tehát a shard-láncokra nincs többé szükség, ez a fejlesztés már nem része az ütemtervnek.
 
 ## Specifikus technikai fejlesztéseket keres? {#looking-for-specific-technical-upgrades}
 

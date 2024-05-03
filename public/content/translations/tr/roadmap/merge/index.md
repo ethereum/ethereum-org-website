@@ -11,7 +11,7 @@ summaryPoint3: Birleşim, esas Ethereum Ana Ağı'nın İşaret Zinciri olarak a
 summaryPoint4: Birleşim, Ethereum'un enerji tüketimini ~%99,95 oranında azalttı.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Birleşim 15 Eylül 2022 de gerçekleştirildi. Bu, iş ispatını resmi olarak kullanım dışı bırakarak ve enerji tüketimini yaklaşık %99,95 azaltarak Ethereum'un iş ispatı mutabakatına geçişini tamamladı.
 </UpgradeStatus>
 

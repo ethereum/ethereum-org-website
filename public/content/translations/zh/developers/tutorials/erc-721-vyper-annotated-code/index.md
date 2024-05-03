@@ -33,7 +33,7 @@ from vyper.interfaces import ERC721
 implements: ERC721
 ```
 
-ERC-721 接口内置在 Vyper 语言中。 [您可以点击此处查看代码定义。](https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py) 接口定义是用 Python 而不是 Vyper 编写的，因为接口不仅在区块链内使用， 而且在外部客户端向区块链发送交易时也使用，而客户端可能 是用 Python 编写的。
+ERC-721 接口内置在 Vyper 语言中。 [你可以点击此处查看代码定义。](https://github.com/vyperlang/vyper/blob/master/vyper/builtin_interfaces/ERC721.py) 接口定义是用 Python 而不是 Vyper 编写的，因为接口不仅在区块链内使用， 而且在外部客户端向区块链发送交易时也使用，而客户端可能 是用 Python 编写的。
 
 第一行导入接口，第二行指定我们在这里执行它。
 
@@ -47,7 +47,7 @@ interface ERC721Receiver:
 
 ERC-721 支持两类转账：
 
-- `transferFrom`，让发送者指定任何目的地地址并让发送者 承担转账责任。 这意味着您可以转账到一个无效的地址，在这种情况下，NFT 将永远丢失。
+- `transferFrom`，让发送者指定任何目的地地址并让发送者 承担转账责任。 这意味着你可以转账到一个无效的地址，在这种情况下，NFT 将永远丢失。
 - `safeTransferFrom`，检查目的地址是否是合约。 如果是，ERC-721 合约 将会询问接收合约是否要接收这笔 NFT 转账。
 
 接收合约必须执行 `ERC721Receiver` 才能回应 `safeTransferFrom` 请求。
@@ -112,7 +112,7 @@ event Approval:
     tokenId: indexed(uint256)
 ```
 
-ERC-721 批准与 ERC-20 限额类似。 特定地址只允许转移特定 代币。 这就形成了一种合约在接受代币时作出回应的机制。 合约不能侦听 事件，所以如果您只是把代币转移给合约，它们不会“知道”这笔转账。 因此，代币所有者 首先提交批准，然后向合约发送请求：“我批准你转移 代币 X，请执行......”。
+ERC-721 批准与 ERC-20 限额类似。 特定地址只允许转移特定 代币。 这就形成了一种合约在接受代币时作出回应的机制。 合约不能侦听 事件，所以如果你只是把代币转移给合约，它们不会“知道”这笔转账。 因此，代币所有者 首先提交批准，然后向合约发送请求：“我批准你转移 代币 X，请执行......”。
 
 这是一种设计选择，使 ERC-721 标准与 ERC-20 标准类似。 由于 ERC-721 代币 为非同质化代币，合约还可以通过查看代币的所有权来确定 它得到了一个特定代币。
 
@@ -129,7 +129,7 @@ event ApprovalForAll:
     approved: bool
 ```
 
-有时候，拥有一个能够管理某个帐户所有特定类型代币（由一个特定合约 管理的所有代币）的*运营者*是很有用的，这类似于委托书。 例如，我可能想把这样一种权力赋予一个合约，即 检查我是否已经 6 个月没有联系它了，如果属实，就会把我的资产分配给我的继承者（如果他们中一人要求这样做，合约在没有 被交易调用时什么都做不了）。 在 ERC-20 中，我们只需给继承合约提供一个高限额即可。 但这对 ERC-721 不起作用，因为代币是非同质化的。 这是对应的。
+有时候，拥有一个能够管理某个帐户所有特定类型代币（由一个特定合约 管理的所有代币）的_运营者_是很有用的，这类似于委托书。 例如，我可能想把这样一种权力赋予一个合约，即 检查我是否已经 6 个月没有联系它了，如果属实，就会把我的资产分配给我的继承者（如果他们中一人要求这样做，合约在没有 被交易调用时什么都做不了）。 在 ERC-20 中，我们只需给继承合约提供一个高限额即可。 但这对 ERC-721 不起作用，因为代币是非同质化的。 这是对应的。
 
 `approved` 值表示事件是等待批准，还是等待撤回批准。
 
@@ -161,7 +161,7 @@ ownerToNFTokenCount: HashMap[address, uint256]
 ownerToOperators: HashMap[address, HashMap[address, bool]]
 ```
 
-一个帐户可能有多个运营者。 仅有 `HashMap` 不足以跟踪它们，因为每个键都会生成单一值。 然而，可以将 `HashMap[address, bool]` 作为值。 默认情况下，每个地址的都值是 `False`，这意味着它 不是运营者。 您可以根据需要将值设置为 `True`。
+一个帐户可能有多个运营者。 仅有 `HashMap` 不足以跟踪它们，因为每个键都会生成单一值。 然而，可以将 `HashMap[address, bool]` 作为值。 默认情况下，每个地址的都值是 `False`，这意味着它 不是运营者。 你可以根据需要将值设置为 `True`。
 
 ```python
 # @dev Address of minter, who can mint a token
@@ -202,7 +202,7 @@ def __init__():
     """
 ```
 
-在 Python 和 Vyper 中，通过指定多行字符串（以 `"""` 起始和结束），您还可以创建注释，但不能以任何方式使用它。 这些注释也可以包括 [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) 注释。
+在 Python 和 Vyper 中，通过指定多行字符串（以 `"""` 起始和结束），你还可以创建注释，但不能以任何方式使用它。 这些注释也可以包括 [NatSpec](https://vyper.readthedocs.io/en/latest/natspec.html) 注释。
 
 ```python
     self.supportedInterfaces[ERC165_INTERFACE_ID] = True
@@ -221,7 +221,7 @@ def __init__():
 @external
 ```
 
-函数定义前面以 (`@`) 开头的这些关键词称为*修饰符*。 它们 规定能够调用函数的环境。
+函数定义前面以 (`@`) 开头的这些关键词称为_修改器_。 它们 规定能够调用函数的环境。
 
 - `@view` 指定此函数为 view 函数。
 - `@external` 指定该特定函数可以由交易及其它合约调用。
@@ -295,7 +295,7 @@ def getApproved(_tokenId: uint256) -> address:
     return self.idToApprovals[_tokenId]
 ```
 
-注意，`getApproved` *可以*返回零。 如果代币有效，则返回 `self.idToApprovals[_tokenId]`。 如果没有批准者，该值为 0。
+注意，`getApproved` _可以_返回零。 如果代币有效，则返回 `self.idToApprovals[_tokenId]`。 如果没有批准者，该值为 0。
 
 ```python
 @view
@@ -323,7 +323,7 @@ def isApprovedForAll(_owner: address, _operator: address) -> bool:
 @internal
 ```
 
-修饰符 `@internal` 表示该函数只能由 同一合约内的其他函数访问。 按照惯例，这些函数名称也以下划线 (`_`) 开头。
+修改器 `@internal` 表示该函数只能由 同一合约内的其他函数访问。 按照惯例，这些函数名称也以下划线 (`_`) 开头。
 
 ```python
 def _isApprovedOrOwner(_spender: address, _tokenId: uint256) -> bool:
@@ -347,7 +347,7 @@ def _isApprovedOrOwner(_spender: address, _tokenId: uint256) -> bool:
 2. 该地址经批准可以使用该代币
 3. 该地址是代表代币所有者的运营者
 
-上面的函数可以是一个视图函数，因为它并不改变状态。 为了降低运营成本，任何*可以* 成为视图函数的函数都*应该*成为视图函数。
+上面的函数可以是一个视图函数，因为它并不改变状态。 为了降低运营成本，任何_可以_ 成为视图函数的函数都_应该_成为视图函数。
 
 ```python
 @internal
@@ -451,7 +451,7 @@ def transferFrom(_from: address, _to: address, _tokenId: uint256):
     self._transferFrom(_from, _to, _tokenId, msg.sender)
 ```
 
-此函数允许您向任意地址转账。 除非该地址是用户或是知道如何转移代币的 合约，否则您转移的任何代币都将卡在该地址中变得毫无用处。
+此函数允许你向任意地址转账。 除非该地址是用户或是知道如何转移代币的 合约，否则你转移的任何代币都将卡在该地址中变得毫无用处。
 
 ```python
 @external
@@ -485,7 +485,7 @@ def safeTransferFrom(
     if _to.is_contract: # check if `_to` is a contract address
 ```
 
-首先检查地址是否为合约（如果有代码）。 如果不是，假定它是一个用户 地址，并且该用户能够使用或转移代币。 但不要让该地址 给您一种虚假的安全感。 如果您将代币转移到一个没有人知道私钥的地址，即使使用了 `safeTransferFrom`，也可能损失代币。
+首先检查地址是否为合约（如果有代码）。 如果不是，假定它是一个用户 地址，并且该用户能够使用或转移代币。 但不要让该地址 给你一种虚假的安全感。 如果你将代币转移到一个没有人知道私钥的地址，即使使用了 `safeTransferFrom`，也可能损失代币。
 
 ```python
         returnValue: bytes32 = ERC721Receiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data)
@@ -518,7 +518,7 @@ def approve(_approved: address, _tokenId: uint256):
     assert _approved != owner
 ```
 
-根据惯例，如果您不想要批准者，可以指定零地址而不是您自己。
+根据惯例，如果你不想要批准者，可以指定零地址而不是你自己。
 
 ```python
     # Check requirements
@@ -527,7 +527,7 @@ def approve(_approved: address, _tokenId: uint256):
     assert (senderIsOwner or senderIsApprovedForAll)
 ```
 
-要设置批准，您可以是所有者，也可以是所有者授权的运营者。
+要设置批准，你可以是所有者，也可以是所有者授权的运营者。
 
 ```python
     # Set the approval
@@ -578,7 +578,7 @@ def mint(_to: address, _tokenId: uint256) -> bool:
     assert msg.sender == self.minter
 ```
 
-只有铸币者（创建 ERC-721 合约的帐户）可以铸造新代币。 如果我们将来想改变铸币者的 身份，这可能会成为一个问题。 在生产合约 中，您可能需要一个函数，允许 铸币者将铸币者特权转让给其他人。
+只有铸币者（创建 ERC-721 合约的帐户）可以铸造新代币。 如果我们将来想改变铸币者的 身份，这可能会成为一个问题。 在生产合约 中，你可能需要一个函数，允许 铸币者将铸币者特权转让给其他人。
 
 ```python
     # Throws if `_to` is zero address
@@ -616,17 +616,17 @@ def burn(_tokenId: uint256):
 
 # 使用此合约 {#using-contract}
 
-与 Solidity 相比，Vyper 中没有继承。 这种有意而为之的设计选择，是为了使代码 更清晰，从而更容易受保护。 因此，要创建您自己的 Vyper ERC-721 合约，您可以 利用[此合约](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy)，并修改 它以实现想要的业务逻辑。
+与 Solidity 相比，Vyper 中没有继承。 这种有意而为之的设计选择，是为了使代码 更清晰，从而更容易受保护。 因此，要创建你自己的 Vyper ERC-721 合约，你可以 利用[此合约](https://github.com/vyperlang/vyper/blob/master/examples/tokens/ERC721.vy)，并修改 它以实现想要的业务逻辑。
 
 # 总结 {#conclusion}
 
 回顾一下，下面是此合约中最重要的几点：
 
 - 要通过安全转账方式接收 ERC-721 代币，合约必须实现 `ERC721Receiver` 接口。
-- 即使使用了安全转账方式，如果您将代币发送到私钥未知 的地址，代币仍然会被卡住。
+- 即使使用了安全转账方式，如果你将代币发送到私钥未知 的地址，代币仍然会被卡住。
 - 当操作出现问题时，最好 `revert` 该调用，而不是只返回 失败值。
 - 有了所有者，ERC-721 代币才存在。
-- 有三种经过授权的 NFT 转账方式。 您可以是所有者，可以针对特定代币获得批准， 或者可以是所有者全部代币的运营者。
+- 有三种经过授权的 NFT 转账方式。 你可以是所有者，可以针对特定代币获得批准， 或者可以是所有者全部代币的运营者。
 - 过去的事件只在区块链之外可见。 区块链中运行的代码无法看到它们。
 
 现在去实现安全的 Vyper 合约吧。

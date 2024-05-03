@@ -1,4 +1,5 @@
 import { useState } from "react"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import {
   Avatar,
@@ -8,9 +9,9 @@ import {
   ListItem,
   ModalBody,
   ModalHeader,
-  Skeleton as ChakraSkeleton,
-  SkeletonCircle as ChakraSkeletonCircle,
+  SkeletonText,
   UnorderedList,
+  useBreakpointValue,
   VStack,
 } from "@chakra-ui/react"
 
@@ -18,7 +19,6 @@ import type { Author, Lang } from "@/lib/types"
 
 import { Button } from "@/components/Buttons"
 import InlineLink from "@/components/Link"
-import Modal from "@/components/Modal"
 import Text from "@/components/OldText"
 import Translation from "@/components/Translation"
 
@@ -33,13 +33,7 @@ const skeletonColorProps = {
   endColor: "searchBackgroundEmpty",
 }
 
-const Skeleton = (props) => (
-  <ChakraSkeleton {...skeletonColorProps} borderRadius="md" {...props} />
-)
-
-const SkeletonCircle = (props) => (
-  <ChakraSkeletonCircle {...skeletonColorProps} {...props} />
-)
+const Skeleton = (props) => <SkeletonText {...skeletonColorProps} {...props} />
 
 const ContributorList = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -87,6 +81,13 @@ const FileContributors = ({
   const [isModalOpen, setModalOpen] = useState(false)
   const { locale } = useRouter()
 
+  const isDesktop = useBreakpointValue({ base: false, md: true })
+
+  // Lazy load Modal component
+  const Modal = dynamic(() => import("@/components/Modal"), {
+    ssr: false,
+  })
+
   if (error) return null
   const lastContributor: Author = contributors.length
     ? contributors[0]
@@ -111,16 +112,18 @@ const FileContributors = ({
 
         <ModalBody>
           <Translation id="contributors-thanks" />
-          {contributors ? (
-            <ContributorList>
-              {contributors.map((contributor) => (
-                <Contributor
-                  contributor={contributor}
-                  key={contributor.email}
-                />
-              ))}
-            </ContributorList>
-          ) : null}
+          <Skeleton noOfLines="4" mt="4" isLoaded={!loading}>
+            {contributors ? (
+              <ContributorList>
+                {contributors.map((contributor) => (
+                  <Contributor
+                    contributor={contributor}
+                    key={contributor.email}
+                  />
+                ))}
+              </ContributorList>
+            ) : null}
+          </Skeleton>
         </ModalBody>
       </Modal>
 
@@ -133,49 +136,48 @@ const FileContributors = ({
         {...props}
       >
         <Flex me={4} alignItems="center" flex="1">
-          <SkeletonCircle size="10" me={4} isLoaded={!loading}>
-            <Avatar
-              height="40px"
-              width="40px"
-              src={lastContributor.avatarUrl}
-              name={lastContributor.name}
-              me={2}
-            />
-          </SkeletonCircle>
+          {isDesktop && (
+            <>
+              <Avatar
+                height="40px"
+                width="40px"
+                src={lastContributor.avatarUrl}
+                name={lastContributor.name}
+                me={2}
+              />
 
-          <Skeleton isLoaded={!loading}>
-            <Text m={0} color="text200">
-              <Translation id="last-edit" />:{" "}
-              {lastContributor.user?.url && (
-                <InlineLink href={lastContributor.user.url}>
-                  @{lastContributor.user.login}
-                </InlineLink>
-              )}
-              {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
-              {getLocaleTimestamp(locale as Lang, lastEdit)}
-            </Text>
-          </Skeleton>
+              <Text m={0} color="text200">
+                <Translation id="last-edit" />:{" "}
+                {lastContributor.user?.url && (
+                  <InlineLink href={lastContributor.user.url}>
+                    @{lastContributor.user.login}
+                  </InlineLink>
+                )}
+                {!lastContributor.user && <span>{lastContributor.name}</span>},{" "}
+                {getLocaleTimestamp(locale as Lang, lastEdit)}
+              </Text>
+            </>
+          )}
         </Flex>
 
         <VStack align="stretch" justifyContent="space-between" spacing={2}>
-          <Skeleton isLoaded={!loading} mt={{ base: 4, md: 0 }}>
-            <Button
-              variant="outline"
-              bg="background.base"
-              border={0}
-              onClick={() => {
-                setModalOpen(true)
-                trackCustomEvent({
-                  eventCategory: "see contributors",
-                  eventAction: "click",
-                  eventName: "click",
-                })
-              }}
-              w={{ base: "full", md: "inherit" }}
-            >
-              <Translation id="see-contributors" />
-            </Button>
-          </Skeleton>
+          <Button
+            variant="outline"
+            bg="background.base"
+            border={0}
+            mb={{ base: 4, md: 0 }}
+            onClick={() => {
+              setModalOpen(true)
+              trackCustomEvent({
+                eventCategory: "see contributors",
+                eventAction: "click",
+                eventName: "click",
+              })
+            }}
+            w={{ base: "full", md: "inherit" }}
+          >
+            <Translation id="see-contributors" />
+          </Button>
         </VStack>
       </Flex>
     </>

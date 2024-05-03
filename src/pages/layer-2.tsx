@@ -138,7 +138,6 @@ const Layer2Page = () => {
       {
         content: t("layer-2-hero-button-1"),
         toId: "what-is-layer-2",
-        variant: "solid",
         matomo: {
           eventCategory: "layer 2 hero buttons",
           eventAction: "click",
@@ -148,7 +147,6 @@ const Layer2Page = () => {
       {
         content: t("layer-2-hero-button-2"),
         toId: "use-layer-2",
-        variant: "outline",
         matomo: {
           eventCategory: "layer 2 hero buttons",
           eventAction: "click",

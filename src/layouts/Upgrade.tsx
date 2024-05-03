@@ -52,10 +52,6 @@ const Title = (props: ChildOnlyProp) => (
   />
 )
 
-const SummaryPoint = (props: ChildOnlyProp) => (
-  <ListItem color="text300" mb={0} {...props} />
-)
-
 type ContainerProps = Pick<BoxProps, "children" | "dir">
 
 const Container = (props: ContainerProps) => (
@@ -194,7 +190,7 @@ export const UpgradeLayout = ({
           <Box>
             <List listStyleType="disc">
               {summaryPoints.map((point, idx) => (
-                <SummaryPoint key={idx}>{point}</SummaryPoint>
+                <ListItem key={idx}>{point}</ListItem>
               ))}
             </List>
           </Box>

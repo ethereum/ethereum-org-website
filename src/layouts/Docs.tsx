@@ -8,8 +8,6 @@ import {
   Flex,
   type FlexProps,
   type HeadingProps,
-  ListItem as ChakraListItem,
-  type ListItemProps,
   type ListProps,
   OrderedList as ChakraOrderedList,
   UnorderedList as ChakraUnorderedList,
@@ -98,7 +96,7 @@ const H1 = (props: HeadingProps) => (
     {...baseHeadingStyle}
     fontSize={{ base: "2rem", md: "2.5rem" }}
     mt={{ base: 0, md: 8 }}
-    mb={{ base: 4, md: 8 }}
+    mb="8"
     {...props}
   />
 )
@@ -136,8 +134,6 @@ const OrderedList = (props: ListProps) => (
   <ChakraOrderedList ms="1.45rem" {...props} />
 )
 
-const ListItem = (props: ListItemProps) => <ChakraListItem {...props} />
-
 // Apply styles for classes within markdown here
 const Content = (props: ChildOnlyProp) => {
   const mdBreakpoint = useToken("breakpoints", "md")
@@ -147,7 +143,7 @@ const Content = (props: ChildOnlyProp) => {
       as={MainArticle}
       flex={`1 1 ${mdBreakpoint}`}
       w={{ base: "full", lg: "0" }}
-      pt={{ base: 32, md: 12 }}
+      pt={{ base: 8, md: 12 }}
       pb={{ base: 8, md: 16 }}
       px={{ base: 8, md: 16 }}
       m="0 auto"
@@ -197,7 +193,6 @@ export const docsComponents = {
   p: Paragraph,
   ul: UnorderedList,
   ol: OrderedList,
-  li: ListItem,
   pre: Codeblock,
   ...mdxTableComponents,
   Badge,

@@ -21,7 +21,6 @@ import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
 import InlineLink, { BaseLink } from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
-import Modal from "@/components/Modal"
 import OldHeading from "@/components/OldHeading"
 import Text from "@/components/OldText"
 import PageMetadata from "@/components/PageMetadata"
@@ -203,6 +202,11 @@ const TutorialPage = ({
 
   // Lazy-load on initial load
   const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
+
+  // Lazy load Modal component
+  const Modal = dynamic(() => import("@/components/Modal"), {
     ssr: false,
   })
 

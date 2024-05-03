@@ -53,7 +53,7 @@ export const useClientSideGitHubContributors = (
 
         const authorSet = new Set<string>()
 
-        ;[...oldCommits, ...newCommits]
+        ;[...newCommits, ...oldCommits]
           .filter(({ author }) => author)
           .forEach(({ author, commit }) => {
             const entry: Author = {

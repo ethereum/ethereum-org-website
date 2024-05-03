@@ -160,14 +160,14 @@ sidebarDepth: 2
 
 ### ツリーの例 {#example-trie}
 
-次の4つのパスバリューのペアを含むツリーが必要だとします。 `('do', 'verb')`、`('dog', 'puppy')`、`('doge', 'coin')`、`('horse', 'stallion')`
+次の4つのパスバリューのペアを含むツリーが必要だとします。 `('do', 'verb')`、`('dog', 'puppy')`、`('doge', 'coins')`、`('horse', 'stallion')`
 
 まず、パスと値(バリュー)の両方を`bytes`に変換します。 以下では、_paths_を実際のバイト表現 `<>`によって表示しています。しかし、 _values_は、分かりやすいように文字列として`''`で表示しています(実際は`bytes`) 。
 
 ```
     <64 6f> : 'verb'
     <64 6f 67> : 'puppy'
-    <64 6f 67 65> : 'coin'
+    <64 6f 67 65> : 'coins'
     <68 6f 72 73 65> : 'stallion'
 ```
 
@@ -176,12 +176,12 @@ sidebarDepth: 2
 ```
     rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
-    hashB:    [ <00 6f>, hashD ]
-    hashD:    [ <>, <>, <>, <>, <>, <>, hashE, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
-    hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
+    hashB:    [ <00 6f>, hashC ]
+    hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
+    hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-1つのノードが内部の別のノードから参照されるとき、含まれているのは、`H(rlp.encode(x))`であり、`H(x) = keccak256(x) if len(x) >= 32 else x`と`rlp.encode`は、[RLP](/developers/docs/data-structures-and-encoding/rlp)エンコーディング関数です。
+1つのノードが内部の別のノードから参照されるとき、含まれているのは、`H(rlp.encode(node))`であり、`H(x) = keccak256(x) if len(x) >= 32 else x`と`rlp.encode`は、[RLP](/developers/docs/data-structures-and-encoding/rlp)エンコーディング関数です。
 
 ツリーを更新するとき、新しく作成されたノードの長さが32以上の_場合_、キーバリューのペア`(keccak256(x), x)`を永続的なルックアップテーブルに格納する必要があることに注意してください。 ただし、ノードがそれよりも短い場合、関数 function f(x) = x は可逆であるため、何も格納する必要はありません。
 

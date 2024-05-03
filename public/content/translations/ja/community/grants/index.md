@@ -12,30 +12,30 @@ lang: ja
 
 ## イーサリアムエコシステム全般 {#broad-ethereum-ecosystem}
 
-これらのプログラムは、広範囲のプロジェクトに助成金を提供し、イーサリアムエコシステムを幅広くサポートするものです。 拡張性、コミュニティ構築、セキュリティ、プライバシーなどのソリューションが対象となり、 どれか 1 つのイーサリアムプラットフォームに固有の助成プログラムではありません。 不明な場合は、まずはこちらから始めてみてください。
+これらのプログラムは、広範囲のプロジェクトに助成金を提供し、イーサリアムエコシステムを幅広くサポートするものです。 拡張性、コミュニティ構築、セキュリティ、プライバシーなどのソリューションが対象となり、 どれか1つのイーサリアムプラットフォームに固有の助成プログラムではありません。 不明な場合は、まずはこちらから始めてみてください。
 
-- [EF エコシステム・サポート・プログラム](https://esp.ethereum.foundation) - _ユニバーサルツール、インフラストラクチャ、研究、公共財を対象とした、イーサリアムにプラスとなるオープンソース・プロジェクトへの資金提供_
-- [イーサリアム RFP](https://github.com/ethereum/requests-for-proposals) - _イーサリアム・ファウンデーションによるイーサリアムエコシステムにおける作業とプロジェクトの提案依頼_
-- [MetaCartel](https://www.metacartel.org/grants/) - _分散型アプリ(Dapp)開発、分散型自律組織(DAO)作成_
-- [Moloch DAO](https://www.molochdao.com/) - _プライバシー、レイヤー 2 スケーリング、クライアントセキュリティなど_
-- [公開されている助成プログラム](https://opengrants.com/explore)
-- [分散型自律組織(DAO)の助成](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成プログラムを提供する組織の Google スプレッドシート_
-- [レイヤー 2 助成](https://esp.ethereum.foundation/layer-2-grants) - _ レイヤー 2 アプリケーション、分析、教育をサポートするイーサリアム・ファウンデーションがスポンサーの助成プログラム_
+- [EFエコシステム・サポート・プログラム](https://esp.ethereum.foundation) - _ユニバーサルツール、インフラストラクチャ、研究、公共財を対象とした、イーサリアムにプラスとなるオープンソース・プロジェクトへの資金提供_
+- [Moloch DAO](https://www.molochdao.com/) - _プライバシー、レイヤー2スケーリング、クライアントセキュリティなど_
+- [分散型自律組織(DAO)の助成](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成プログラムを提供する組織のGoogleスプレッドシート_
+- [Crunchbase for Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _カテゴリ、ユースケース、金額などで助成金をフィルターして検索できます。 他の人が適切に助成金を見つけられるように貢献。_
+- [学術助成金](https://esp.ethereum.foundation/academic-grants) - _イーサリアム関連の学術研究をサポートする助成金_
+- [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworksは、すべての助成金、RFP、バグ報奨金をディレクトリとしてまとめています。_
 
 ## 固有のプロジェクト {#project-specific}
 
 下記は、独自のテクノロジーの開発とテストを目的とした、プロジェクトに特化した助成プログラムです。
 
 - [Aave Grants Program](https://aavegrants.org/) – _[Aave](https://aave.com/)の分散型自律組織(DAO)助成プログラム_
-- [Balancer](https://balancergrants.notion.site/Balancer-Community-Grants-23e562c5bc4347cd8304637bff0058e6) – _[Balancer](https://balancer.fi/)エコシステムファンド_
-- [Chainlink 助成プログラム](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) コミュニティ助成プログラム_
-- [Compound 助成プログラム](https://compoundgrants.org/) – _[Compound](https://compound.finance/)金融エコシステム_
-- [Lido Ecosystem Grants Organisation (LEGO)](https://lego.lido.fi/) – _[Lido](https://lido.fi/)金融エコシステム_
-- [MetaMask プログラム](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/)従業員主導の DAO 助成プログラム_
-- [mStable](https://docs.mstable.org/advanced/grants-program) - _[mStable](https://mstable.org/)コミュニティ_
-- [The Graph](https://airtable.com/shrdfvnFvVch3IOVm) – _[The Graph](https://thegraph.com/)エコシステム_
-- [UMA 助成プログラム](https://grants.umaproject.org/) - _[UMA](https://umaproject.org/)デベロッパーサポート_
-- [Uniswap Grants Program](https://www.unigrants.org/) – _[Uniswap](https://uniswap.org/)コミュニティ_
+- [Balancer](https://grants.balancer.community/) – _[Balancer](https://balancer.fi/)エコシステムファンド_
+- [Chainlink助成プログラム](https://chain.link/community/grants) - _[Chainlink](https://chain.link/) コミュニティ助成プログラム_
+- [分散型助成金プログラム](https://governance.decentraland.org/grants/) – _[分散型](https://decentraland.org/)DAOメタバース_
+- [Lido Ecosystem Grants Organisation (LEGO)](https://lido.fi/lego) – _[Lido](https://lido.fi/)金融エコシステム_
+- [MetaMaskプログラム](https://metamaskgrants.org/) - _[MetaMask](https://metamask.io/)従業員主導のDAO助成プログラム_
+- [SKALE Network助成金プログラム](https://skale.space/developers#grants) - _[SKALE Network](https://skale.space/)エコシステム_
+- [Swarm Foundation助成金プログラム](https://my.ethswarm.org/grants) - _[Swarm Foundation](https://www.ethswarm.org/)エコシステム_
+- [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/)エコシステム_
+- [ユニスワップ助成金プログラム](https://www.uniswapfoundation.org/grants) – _[ユニスワップ](https://uniswap.org/)コミュニティ_
+- [Web3助成プログラム](https://web3grants.net) - _Web3/暗号資産関連の助成プログラムの広範なリスト_
 
 ## クオドラティック・ファンディング {#quadratic-funding}
 
