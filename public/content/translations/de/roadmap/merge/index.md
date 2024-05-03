@@ -10,7 +10,7 @@ summaryPoint3: Die Zusammenführung bezieht sich auf das ursprüngliche Ethereum
 summaryPoint4: Die Zusammenführung reduzierte Ethereums Energieverbrauch um ca. 99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Die Zusammenführung wurde am 15. September 2022 durchgeführt. Dies vervollständigte Ethereums Übergang zu Proof-of-Stake, was Proof-of-Work offiziell abschaffte und den Energieverbrauch um ~99,95 % verringert hat.
 </UpgradeStatus>
 

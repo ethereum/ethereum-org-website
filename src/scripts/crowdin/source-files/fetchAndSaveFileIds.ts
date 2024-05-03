@@ -31,14 +31,12 @@ async function fetchFileIdsForDirectory(
       return []
     }
 
-    return response.data.map(
-      (item: ResponseObject<SourceFilesModel.File>): FileItem => {
-        return {
-          id: item.data.id,
-          path: item.data.path,
-        }
-      }
-    )
+    return response.data
+    .map((item: ResponseObject<SourceFilesModel.File>): FileItem => ({
+      id: item.data.id,
+      path: item.data.path,
+    }))
+    .filter((file: FileItem) => file.path.endsWith('.md')); // filter out non-md files
   } catch (error: unknown) {
     if (error instanceof Error) {
       console.error(

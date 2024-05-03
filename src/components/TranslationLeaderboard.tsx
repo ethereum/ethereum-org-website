@@ -12,14 +12,10 @@ import {
   useRadioGroup,
 } from "@chakra-ui/react"
 
+import type { CostLeaderboardData } from "@/lib/types"
+
 import Emoji from "./Emoji"
 import Text from "./OldText"
-
-export type TranslationLeaderboardProps = {
-  monthData: any
-  quarterData: any
-  allTimeData: any
-}
 
 const Button = (props) => {
   return (
@@ -82,34 +78,13 @@ const RadioCard = (props) => {
   )
 }
 
-const filterLeaderboardUsers = (item) => {
-  const username = item.user.username.toLowerCase()
-  const fullName = item.user.fullName?.toLowerCase() || ""
+const sortAndFilterData = (data: CostLeaderboardData[]) =>
+  reverse(sortBy(data, ({ totalCosts }) => totalCosts))
 
-  const excludedUsernames = new Set([
-    "ethdotorg",
-    "finnish_sandberg",
-    "norwegian_sandberg",
-    "swedish_sandberg",
-  ])
-
-  return (
-    !excludedUsernames.has(username) &&
-    !username.includes("lqs_") &&
-    !username.includes("removed_user") &&
-    !username.includes("aco_") &&
-    !fullName.includes("aco_") &&
-    !username.includes("aco-") &&
-    !fullName.includes("aco-") &&
-    !username.includes("acc_") &&
-    !fullName.includes("acc_")
-  )
-}
-
-const sortAndFilterData = (data) => {
-  return reverse(sortBy(data, ({ user }) => user.totalCosts)).filter(
-    filterLeaderboardUsers
-  )
+type TranslationLeaderboardProps = {
+  allTimeData: CostLeaderboardData[]
+  monthData: CostLeaderboardData[]
+  quarterData: CostLeaderboardData[]
 }
 
 const TranslationLeaderboard = ({
@@ -124,9 +99,9 @@ const TranslationLeaderboard = ({
   )
 
   const leaderboardData = {
-    monthData: sortAndFilterData(monthData.data),
-    quarterData: sortAndFilterData(quarterData.data),
-    allTimeData: sortAndFilterData(allTimeData.data),
+    monthData: sortAndFilterData(monthData),
+    quarterData: sortAndFilterData(quarterData),
+    allTimeData: sortAndFilterData(allTimeData),
   }
 
   const [filterAmount, updateFilterAmount] = useState(10)
@@ -216,11 +191,8 @@ const TranslationLeaderboard = ({
         </Flex>
         {leaderboardData[dateRangeType]
           .slice(0, filterAmount)
-          .map((item, idx) => {
-            const { user, languages } = item
-            const sortedLanguages = reverse(
-              sortBy(languages, ({ language }) => language.totalCosts)
-            )
+          .map((item: CostLeaderboardData, idx: number) => {
+            const { username, avatarUrl, totalCosts, langs } = item
 
             let emoji: string | null = null
             if (idx === 0) {
@@ -270,12 +242,12 @@ const TranslationLeaderboard = ({
                       w={{ base: "30px", sm: 10 }}
                       borderRadius="50%"
                       display={{ base: "none", s: "block" }}
-                      src={user.avatarUrl}
+                      src={avatarUrl}
                     />
                     <Box maxW={{ base: "100px", sm: "none" }}>
-                      {user.username}
+                      {username}
                       <Text m={0} display="block" fontSize="sm" opacity="0.6">
-                        {sortedLanguages[0].language.name}
+                        {langs[0]}
                       </Text>
                     </Box>
                   </Flex>
@@ -287,7 +259,7 @@ const TranslationLeaderboard = ({
                     fontSize="2xl"
                     text={":writing:"}
                   />
-                  {user.totalCosts}
+                  {totalCosts}
                 </Flex>
               </Flex>
             )
