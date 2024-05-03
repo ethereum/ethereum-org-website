@@ -10,7 +10,6 @@ import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
 import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
-import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
@@ -56,6 +55,13 @@ const ListItem = (props: ChildOnlyProp) => (
 
 const GlossaryTooltip = dynamic(
   () => import("@/components/Glossary/GlossaryTooltip"),
+  {
+    ssr: false,
+  }
+)
+
+const GlossaryDefinition = dynamic(
+  () => import("@/components/Glossary/GlossaryDefinition"),
   {
     ssr: false,
   }
