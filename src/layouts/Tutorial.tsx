@@ -21,7 +21,6 @@ import PostMergeBanner from "@/components/Banners/PostMergeBanner"
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
-import Codeblock from "@/components/Codeblock"
 import CrowdinContributors from "@/components/CrowdinContributors"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
@@ -142,6 +141,10 @@ const KBD = (props) => {
     />
   )
 }
+
+const Codeblock = dynamic(() => import("@/components/Codeblock"), {
+  ssr: false,
+})
 
 export const tutorialsComponents = {
   a: TooltipLink,

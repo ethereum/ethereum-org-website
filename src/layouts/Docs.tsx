@@ -23,7 +23,6 @@ import BannerNotification from "@/components/BannerNotification"
 import { ButtonLink } from "@/components/Buttons"
 import CallToContribute from "@/components/CallToContribute"
 import Card from "@/components/Card"
-import Codeblock from "@/components/Codeblock"
 import CrowdinContributors from "@/components/CrowdinContributors"
 import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
@@ -179,6 +178,10 @@ const BackToTop = (props: ChildOnlyProp) => (
     </Link>
   </Flex>
 )
+
+const Codeblock = dynamic(() => import("@/components/Codeblock"), {
+  ssr: false,
+})
 
 export const docsComponents = {
   h1: H1,
