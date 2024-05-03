@@ -41,7 +41,7 @@ sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-
 
 各[ブロック](/developers/docs/blocks/)は、その前のブロックを参照します。`parentHash`は、単に前のブロックのハッシュ値です。<FeaturedText>注: イーサリアムは
 
-[ハッシュ関数](https://wikipedia.org/wiki/Hash_function)を定期的に使用して、固定サイズの値(ハッシュ)を生成します。 イーサリアムではハッシュ値が重要な役割を果たしますが、今のところは固有のIDと考えておくとよいでしょう。</FeaturedText>
+<FeaturedText>注: イーサリアムは [ハッシュ関数](https://wikipedia.org/wiki/Hash_function)を定期的に使用して、固定サイズの値(ハッシュ)を生成します。 イーサリアムではハッシュ値が重要な役割を果たしますが、今のところは固有のIDと考えておくとよいでしょう。</FeaturedText>
 
 ![ブロックチェーンと各ブロック内のデータを表す図](./blockchain-diagram.png)
 
