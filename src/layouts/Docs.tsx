@@ -28,7 +28,6 @@ import DeveloperDocsLinks from "@/components/DeveloperDocsLinks"
 import DocsNav from "@/components/DocsNav"
 import Emoji from "@/components/Emoji"
 import GitHubContributors from "@/components/GitHubContributors"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import Link from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
@@ -182,6 +181,13 @@ const BackToTop = (props: ChildOnlyProp) => (
 const Codeblock = dynamic(() => import("@/components/Codeblock"), {
   ssr: false,
 })
+
+const GlossaryTooltip = dynamic(
+  () => import("@/components/Glossary/GlossaryTooltip"),
+  {
+    ssr: false,
+  }
+)
 
 export const docsComponents = {
   h1: H1,

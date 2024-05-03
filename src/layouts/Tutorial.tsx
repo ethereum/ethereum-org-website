@@ -25,7 +25,6 @@ import CrowdinContributors from "@/components/CrowdinContributors"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
 import GitHubContributors from "@/components/GitHubContributors"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
 import MainArticle from "@/components/MainArticle"
 import {
@@ -145,6 +144,13 @@ const KBD = (props) => {
 const Codeblock = dynamic(() => import("@/components/Codeblock"), {
   ssr: false,
 })
+
+const GlossaryTooltip = dynamic(
+  () => import("@/components/Glossary/GlossaryTooltip"),
+  {
+    ssr: false,
+  }
+)
 
 export const tutorialsComponents = {
   a: TooltipLink,

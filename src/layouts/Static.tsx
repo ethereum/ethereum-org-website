@@ -11,7 +11,6 @@ import Contributors from "@/components/Contributors"
 import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
 import NetworkUpgradeSummary from "@/components/History/NetworkUpgradeSummary"
 import Link from "@/components/Link"
@@ -53,6 +52,13 @@ const Heading4 = (props: HeadingProps) => (
 
 const ListItem = (props: ChildOnlyProp) => (
   <chakra.li color="text300" {...props} />
+)
+
+const GlossaryTooltip = dynamic(
+  () => import("@/components/Glossary/GlossaryTooltip"),
+  {
+    ssr: false,
+  }
 )
 
 // Static layout components

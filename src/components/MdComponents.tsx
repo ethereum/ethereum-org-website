@@ -1,4 +1,5 @@
 import { ComponentProps } from "react"
+import dynamic from "next/dynamic"
 import { CiLink } from "react-icons/ci"
 import {
   Badge,
@@ -32,7 +33,6 @@ import { mdxTableComponents } from "@/components/Table"
 import TooltipLink from "@/components/TooltipLink"
 import YouTube from "@/components/YouTube"
 
-import GlossaryTooltip from "./Glossary/GlossaryTooltip"
 import { StandaloneQuizWidget } from "./Quiz/QuizWidget"
 import Card from "./Card"
 import DocLink from "./DocLink"
@@ -261,6 +261,13 @@ export const MobileButtonDropdown = (
 ) => <StyledButtonDropdown mb={0} {...props} />
 
 export const Divider = () => <Box my={16} w="10%" h={1} bgColor="homeDivider" />
+
+const GlossaryTooltip = dynamic(
+  () => import("@/components/Glossary/GlossaryTooltip"),
+  {
+    ssr: false,
+  }
+)
 
 // All custom React components
 export const reactComponents = {

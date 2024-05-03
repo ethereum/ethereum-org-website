@@ -1,4 +1,5 @@
 import React from "react"
+import dynamic from "next/dynamic"
 import {
   ListItem,
   OrderedList,
@@ -8,7 +9,6 @@ import {
 } from "@chakra-ui/react"
 
 import Emoji from "../components/Emoji"
-import GlossaryTooltip from "../components/Glossary/GlossaryTooltip"
 import Link from "../components/Link"
 import {
   CONNECT_WEB3,
@@ -29,6 +29,13 @@ import { CONTACTS } from "../components/Simulator/screens/SendReceive/constants"
 import type { SimulatorData } from "../components/Simulator/types"
 
 const Text = (props: TextProps) => <ChakraText mb={4} {...props} />
+
+const GlossaryTooltip = dynamic(
+  () => import("@/components/Glossary/GlossaryTooltip"),
+  {
+    ssr: false,
+  }
+)
 
 export const walletOnboardingSimData: SimulatorData = {
   [CREATE_ACCOUNT]: {
