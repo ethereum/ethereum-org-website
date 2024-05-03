@@ -163,7 +163,7 @@ const SpeedRunEthereumBanner = ({
       position="absolute"
       insetInlineStart={{ md: "8" }}
       maxW={{ base: "lg", xl: "xl" }}
-      top={{ base: "25", xl: "50" }}
+      top={{ base: "0", md: "50" }}
       wordBreak="break-word"
       alignItems="flex-start"
     >
