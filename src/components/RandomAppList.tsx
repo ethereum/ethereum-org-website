@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import shuffle from "lodash/shuffle"
+import shuffle from "lodash.shuffle"
 
 import type { TranslationKey } from "@/lib/types"
 

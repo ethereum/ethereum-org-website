@@ -1,4 +1,4 @@
-import merge from "lodash/merge"
+import merge from "lodash.merge"
 import { GetStaticProps } from "next"
 import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"

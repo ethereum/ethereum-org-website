@@ -1,4 +1,4 @@
-import shuffle from "lodash/shuffle"
+import shuffle from "lodash.shuffle"
 import { GetStaticProps } from "next"
 import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
