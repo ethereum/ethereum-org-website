@@ -33,7 +33,6 @@ import ProductList from "@/components/ProductList"
 import StablecoinAccordion from "@/components/StablecoinAccordion"
 import StablecoinBoxGrid from "@/components/StablecoinBoxGrid"
 import StablecoinsTable from "@/components/StablecoinsTable"
-import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -411,6 +410,10 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
 
   // Lazy-load on initial load
   const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
+
+  const Tooltip = dynamic(() => import("@/components/Tooltip"), {
     ssr: false,
   })
 

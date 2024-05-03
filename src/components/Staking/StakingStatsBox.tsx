@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
@@ -7,7 +8,6 @@ import type { ChildOnlyProp, Lang, StakingStatsData } from "@/lib/types"
 
 import InlineLink from "@/components/Link"
 import Text from "@/components/OldText"
-import Tooltip from "@/components/Tooltip"
 
 import { getLocaleForNumberFormat } from "@/lib/utils/translations"
 
@@ -46,6 +46,10 @@ const Label = ({ children }: ChildOnlyProp) => (
     {children}
   </Flex>
 )
+
+const Tooltip = dynamic(() => import("@/components/Tooltip"), {
+  ssr: false,
+})
 
 // BeaconchainTooltip component
 const BeaconchainTooltip = ({ children }: ChildOnlyProp) => (

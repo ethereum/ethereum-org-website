@@ -1,6 +1,5 @@
-import { Box, Text } from "@chakra-ui/react"
-
-import Tooltip from "@/components/Tooltip"
+import dynamic from "next/dynamic"
+import { Text } from "@chakra-ui/react"
 
 import { formatSupportedLanguages } from "@/lib/utils/wallets"
 
@@ -19,6 +18,10 @@ export const SupportedLanguagesTooltip = ({
   const tooltipContent = formatSupportedLanguages(
     supportedLanguages.slice(NUMBER_OF_SUPPORTED_LANGUAGES_SHOWN)
   )
+
+  const Tooltip = dynamic(() => import("@/components/Tooltip"), {
+    ssr: false,
+  })
 
   return (
     <Tooltip content={tooltipContent}>

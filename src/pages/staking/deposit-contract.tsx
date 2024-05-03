@@ -32,7 +32,6 @@ import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import OldHeading from "@/components/OldHeading"
 import PageMetadata from "@/components/PageMetadata"
-import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -343,6 +342,10 @@ const DepositContractPage = () => {
 
   // Lazy-load on initial load
   const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
+
+  const Tooltip = dynamic(() => import("@/components/Tooltip"), {
     ssr: false,
   })
 

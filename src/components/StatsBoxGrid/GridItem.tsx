@@ -1,4 +1,5 @@
 import kebabCase from "lodash/kebabCase"
+import dynamic from "next/dynamic"
 import { MdInfoOutline } from "react-icons/md"
 import { Area, AreaChart, ResponsiveContainer, XAxis, YAxis } from "recharts"
 import { Box, Flex, Icon, Text } from "@chakra-ui/react"
@@ -10,7 +11,6 @@ import { RANGES } from "@/lib/constants"
 import InlineLink from "../Link"
 import OldText from "../OldText"
 import StatErrorMessage from "../StatErrorMessage"
-import Tooltip from "../Tooltip"
 import Translation from "../Translation"
 
 const tooltipContent = (metric: StatsBoxMetric) => (
@@ -28,6 +28,10 @@ export const GridItem = ({ metric }: GridItemProps) => {
   const { title, description, state, buttonContainer, range } = metric
   const hasError = "error" in state
   const hasData = "data" in state
+
+  const Tooltip = dynamic(() => import("@/components/Tooltip"), {
+    ssr: false,
+  })
 
   const value = hasError ? (
     <StatErrorMessage />

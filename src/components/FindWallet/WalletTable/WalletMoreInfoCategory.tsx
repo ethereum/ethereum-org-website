@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
 import {
@@ -16,7 +17,6 @@ import {
   WarningProductGlyphIcon,
 } from "@/components/icons/staking"
 import Text from "@/components/OldText"
-import Tooltip from "@/components/Tooltip"
 
 import walletFilterData from "@/data/wallets/wallet-filters"
 
@@ -34,6 +34,10 @@ export const WalletMoreInfoCategory = ({
   sectionName,
 }: WalletMoreInfoCategoryProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
+
+  const Tooltip = dynamic(() => import("@/components/Tooltip"), {
+    ssr: false,
+  })
 
   return (
     <Box mx={{ base: 0, md: 0, lg: 2 }} w="100%">

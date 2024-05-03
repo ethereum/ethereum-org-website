@@ -47,7 +47,6 @@ import { StandaloneQuizWidget } from "@/components/Quiz/QuizWidget"
 import Slider, { EmblaSlide } from "@/components/Slider"
 import StatErrorMessage from "@/components/StatErrorMessage"
 import Tabs from "@/components/Tabs"
-import Tooltip from "@/components/Tooltip"
 import Translation from "@/components/Translation"
 
 import { existsNamespace } from "@/lib/utils/existsNamespace"
@@ -307,6 +306,10 @@ const WhatIsEthereumPage = ({
 
   // Lazy-load on initial load
   const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
+
+  const Tooltip = dynamic(() => import("@/components/Tooltip"), {
     ssr: false,
   })
 
