@@ -1,5 +1,6 @@
 import { ReactNode } from "react"
 import { GetStaticProps } from "next"
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -16,7 +17,6 @@ import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
 import Card, { CardProps } from "@/components/Card"
-import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
@@ -211,6 +211,11 @@ const paths: Array<IDevelopersPath> = [
 
 const DevelopersPage = () => {
   const { t } = useTranslation("page-developers-index")
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Page>

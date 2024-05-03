@@ -1,5 +1,6 @@
 import { ComponentPropsWithRef } from "react"
 import { GetStaticProps } from "next"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -17,7 +18,6 @@ import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import CardList from "@/components/CardList"
-import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard, {
   HorizontalCardProps,
 } from "@/components/HorizontalCard"
@@ -265,6 +265,11 @@ const WalletsPage = () => {
       link: "/guides/how-to-use-a-wallet/",
     },
   ]
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Page>

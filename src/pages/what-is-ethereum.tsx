@@ -1,4 +1,5 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -36,7 +37,6 @@ import ButtonLink from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
-import FeedbackCard from "@/components/FeedbackCard"
 import { Image, type ImageProps } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
@@ -304,6 +304,11 @@ const WhatIsEthereumPage = ({
       </InlineLink>
     </div>
   )
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Flex

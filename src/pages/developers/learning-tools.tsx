@@ -1,5 +1,6 @@
 import shuffle from "lodash/shuffle"
 import { GetStaticProps } from "next"
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, HeadingProps } from "@chakra-ui/react"
@@ -8,7 +9,6 @@ import { BasePageProps, ChildOnlyProp, LearningTool } from "@/lib/types"
 
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
-import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import LearningToolsCardGrid from "@/components/LearningToolsCardGrid"
 import MainArticle from "@/components/MainArticle"
@@ -394,6 +394,11 @@ const LearningToolsPage = () => {
       subjects: ["Solidity", "web3"],
     },
   ]
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Page>

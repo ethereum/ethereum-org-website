@@ -1,4 +1,5 @@
 import { GetStaticProps, InferGetStaticPropsType } from "next"
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -12,7 +13,6 @@ import {
 import { BasePageProps, ChildOnlyProp } from "@/lib/types"
 import { Framework } from "@/lib/interfaces"
 
-import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
 import Heading from "@/components/OldHeading"
@@ -85,6 +85,11 @@ const LocalEnvironmentPage = ({
   frameworksList,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { t } = useTranslation("page-developers-local-environment")
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Flex direction="column" alignItems="center" w="full" mx="auto" mt={16}>

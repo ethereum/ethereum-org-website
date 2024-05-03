@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next"
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -17,7 +18,6 @@ import ActionCard from "@/components/ActionCard"
 import ButtonLink, { ButtonLinkProps } from "@/components/Buttons/ButtonLink"
 import Callout from "@/components/Callout"
 import Card from "@/components/Card"
-import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import MainArticle from "@/components/MainArticle"
@@ -220,6 +220,11 @@ const CommunityPage = () => {
     description: t("page-community-hero-subtitle"),
     heroImg: communityHeroImg,
   }
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Page>

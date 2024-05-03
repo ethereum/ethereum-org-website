@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import {
   Badge,
@@ -24,7 +25,6 @@ import Codeblock from "@/components/Codeblock"
 import CrowdinContributors from "@/components/CrowdinContributors"
 import Emoji from "@/components/Emoji"
 import EnvWarningBanner from "@/components/EnvWarningBanner"
-import FeedbackCard from "@/components/FeedbackCard"
 import GitHubContributors from "@/components/GitHubContributors"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import InfoBanner from "@/components/InfoBanner"
@@ -195,6 +195,11 @@ export const TutorialLayout = ({
     "data" in gitHubLastEdit ? gitHubLastEdit.data! : lastUpdatedDate
   const useGitHubContributors =
     frontmatter.lang === DEFAULT_LOCALE || crowdinContributors.length === 0
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <>

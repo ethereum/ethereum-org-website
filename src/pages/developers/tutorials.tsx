@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from "react"
 import { GetStaticProps, InferGetServerSidePropsType } from "next"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -18,7 +19,6 @@ import { BasePageProps, Lang } from "@/lib/types"
 
 import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import InlineLink, { BaseLink } from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
 import Modal from "@/components/Modal"
@@ -200,6 +200,12 @@ const TutorialPage = ({
   }
 
   const dir = contentNotTranslated ? "ltr" : "unset"
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
+
   return (
     <Flex
       as={MainArticle}

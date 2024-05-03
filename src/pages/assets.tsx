@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -15,7 +16,6 @@ import {
 import type { BasePageProps, ChildOnlyProp } from "@/lib/types"
 
 import AssetDownload from "@/components/AssetDownload"
-import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
@@ -139,6 +139,12 @@ const AssetsPage = () => {
     ethDiamondBlack,
     ethDiamondPurple
   )
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
+
   return (
     <Flex direction="column" width="full">
       <PageMetadata

@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next"
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import type { ComponentProps } from "react"
@@ -21,7 +22,6 @@ import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import EthPriceCard from "@/components/EthPriceCard"
 import EthVideo from "@/components/EthVideo"
-import FeedbackCard from "@/components/FeedbackCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
@@ -373,6 +373,11 @@ const EthPage = () => {
       caption: t("page-eth-last-updated"),
     },
   ]
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Page>

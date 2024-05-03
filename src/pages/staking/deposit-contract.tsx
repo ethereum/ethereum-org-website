@@ -1,6 +1,7 @@
 import { ReactNode, useEffect, useState } from "react"
 import makeBlockie from "ethereum-blockies-base64"
 import { type GetStaticProps } from "next"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -26,7 +27,6 @@ import ButtonLink, {
 import CardList from "@/components/CardList"
 import CopyToClipboard from "@/components/CopyToClipboard"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
@@ -336,9 +336,16 @@ const DepositContractPage = () => {
   const textToSpeechText = state.isSpeechActive
     ? t("page-staking-deposit-contract-stop-reading")
     : t("page-staking-deposit-contract-read-aloud")
+
   const textToSpeechEmoji = state.isSpeechActive
     ? ":speaker_high_volume:"
     : ":speaker:"
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
+
   return (
     <Box as={MainArticle} w="100%">
       <FlexBox>

@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -18,7 +19,6 @@ import ButtonLink from "@/components/Buttons/ButtonLink"
 import CalloutBanner from "@/components/CalloutBanner"
 import DataProductCard from "@/components/DataProductCard"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
@@ -408,6 +408,11 @@ const StablecoinsPage = ({ markets, marketsHasError }) => {
       alt: "Stablecoins.wtf",
     },
   ]
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Page as={MainArticle}>

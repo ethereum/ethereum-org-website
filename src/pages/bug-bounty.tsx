@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
@@ -21,7 +22,6 @@ import Card from "@/components/Card"
 import CardList from "@/components/CardList"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import { Image, type ImageProps } from "@/components/Image"
 import Leaderboard from "@/components/Leaderboard"
 import InlineLink from "@/components/Link"
@@ -450,6 +450,12 @@ const BugBountiesPage = () => {
   const iconImageProps = {
     width: 60,
   }
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
+
   return (
     <Page>
       <PageMetadata

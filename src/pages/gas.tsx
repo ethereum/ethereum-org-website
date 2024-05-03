@@ -1,4 +1,5 @@
 import { ComponentPropsWithRef } from "react"
+import dynamic from "next/dynamic"
 import { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -27,7 +28,6 @@ import Callout from "@/components/Callout"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
 import HorizontalCard from "@/components/HorizontalCard"
 import { Image } from "@/components/Image"
@@ -150,6 +150,11 @@ const GasPage = () => {
       },
     ],
   }
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Page>

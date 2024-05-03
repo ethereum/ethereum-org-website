@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next"
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -24,7 +25,6 @@ import OriginalCard, {
   type CardProps as OriginalCardProps,
 } from "@/components/Card"
 import DocLink from "@/components/DocLink"
-import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import { Image, type ImageProps } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
@@ -207,6 +207,11 @@ const LearnPage = () => {
     height: 200,
     style: { width: "auto", objectFit: "cover" },
   }
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Box position="relative" w="full">

@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import type { GetStaticProps, InferGetStaticPropsType } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -19,7 +20,6 @@ import type { CardListItem } from "@/components/CardList"
 import CardList from "@/components/CardList"
 import CentralizedExchanges from "@/components/CentralizedExchanges"
 import EthPriceCard from "@/components/EthPriceCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
@@ -174,6 +174,11 @@ const GetEthPage = ({
     base: "full",
     sm: "60%",
     md: "50%",
+  })
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
   })
 
   return (

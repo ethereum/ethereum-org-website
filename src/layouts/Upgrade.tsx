@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
@@ -9,7 +10,6 @@ import {
   Icon,
   List,
   ListItem,
-  Skeleton,
   Text,
   useToken,
 } from "@chakra-ui/react"
@@ -20,7 +20,6 @@ import type { MdPageContent, UpgradeFrontmatter } from "@/lib/interfaces"
 import BeaconChainActions from "@/components/BeaconChainActions"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import type { List as ButtonDropdownList } from "@/components/ButtonDropdown"
-import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import { BaseLink } from "@/components/Link"
@@ -180,6 +179,11 @@ export const UpgradeLayout = ({
   }
 
   const lgBreakpoint = useToken("breakpoints", "lg")
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Container dir={contentNotTranslated ? "ltr" : "unset"}>

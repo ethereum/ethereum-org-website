@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import type { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -20,7 +21,6 @@ import { Button, ButtonLink } from "@/components/Buttons"
 import Emoji from "@/components/Emoji"
 import ExpandableCard from "@/components/ExpandableCard"
 import ExpandableInfo from "@/components/ExpandableInfo"
-import FeedbackCard from "@/components/FeedbackCard"
 import {
   DecentralizationGlyphIcon,
   DownloadGlyphIcon,
@@ -430,6 +430,11 @@ const RunANodePage = () => {
       alt: t("page-run-a-node-glyph-alt-sovereignty"),
     },
   ]
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <GappedPage>

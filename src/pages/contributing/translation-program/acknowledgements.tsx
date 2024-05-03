@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { GetStaticProps } from "next/types"
 import { useTranslation } from "next-i18next"
@@ -16,7 +17,6 @@ import { BasePageProps } from "@/lib/types"
 
 import ActionCard from "@/components/ActionCard"
 import Breadcrumbs from "@/components/Breadcrumbs"
-import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
@@ -74,6 +74,11 @@ const TranslatorAcknowledgements = () => {
     lightThemeCertificateImg,
     darkThemeCertificateImg
   )
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Flex direction="column" align="center" w="full">

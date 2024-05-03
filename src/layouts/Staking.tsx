@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import {
   Box,
@@ -18,7 +19,6 @@ import type { MdPageContent, StakingFrontmatter } from "@/lib/interfaces"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import DocLink from "@/components/DocLink"
-import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import {
@@ -249,6 +249,11 @@ export const StakingLayout = ({
       },
     ],
   }
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Box

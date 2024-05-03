@@ -1,5 +1,6 @@
 import { ReactNode } from "react"
 import { GetStaticProps, InferGetStaticPropsType } from "next"
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { Box, Flex, Grid, HeadingProps, useToken } from "@chakra-ui/react"
@@ -16,7 +17,6 @@ import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import ButtonLink, { ButtonLinkProps } from "@/components/Buttons/ButtonLink"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import LeftNavBar from "@/components/LeftNavBar"
 import InlineLink from "@/components/Link"
 import {
@@ -362,6 +362,11 @@ const StakingPage = ({
   const tocArray = Object.keys(tocItems).map((key) => {
     const { id, title } = tocItems[key as keyof typeof tocItems]
     return { title, url: "#" + id }
+  })
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
   })
 
   return (

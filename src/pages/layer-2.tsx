@@ -1,5 +1,6 @@
 import merge from "lodash/merge"
 import { GetStaticProps } from "next"
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import {
@@ -24,7 +25,6 @@ import type {
 import { ButtonLink } from "@/components/Buttons"
 import Card from "@/components/Card"
 import ExpandableCard from "@/components/ExpandableCard"
-import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
@@ -64,6 +64,7 @@ import WhatIsEthereumImage from "@/public/what-is-ethereum.png"
 type ContentBoxProps = BoxProps & {
   isLightGrayBg?: boolean
 }
+
 const ContentBox = ({ isLightGrayBg, ...rest }: ContentBoxProps) => (
   <Box
     px={8}
@@ -247,6 +248,11 @@ const Layer2Page = () => {
       },
     ],
   }
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Flex as={MainArticle} flexDirection="column" alignItems="center">

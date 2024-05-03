@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { Box, chakra, Flex, type HeadingProps, Icon } from "@chakra-ui/react"
 
@@ -9,7 +10,6 @@ import Callout from "@/components/Callout"
 import Contributors from "@/components/Contributors"
 import DevconGrantsBanner from "@/components/DevconGrantsBanner"
 import EnergyConsumptionChart from "@/components/EnergyConsumptionChart"
-import FeedbackCard from "@/components/FeedbackCard"
 import GlossaryDefinition from "@/components/Glossary/GlossaryDefinition"
 import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { HubHero } from "@/components/Hero"
@@ -96,6 +96,11 @@ export const StaticLayout = ({
   const { locale, asPath } = useRouter()
 
   const absoluteEditPath = getEditPath(slug)
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Box w="full">

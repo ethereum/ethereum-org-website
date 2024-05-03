@@ -1,4 +1,5 @@
 import { GetStaticProps } from "next"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -21,7 +22,6 @@ import Breadcrumbs from "@/components/Breadcrumbs"
 import ButtonLink from "@/components/Buttons/ButtonLink"
 import Card from "@/components/Card"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink from "@/components/Link"
 import MainArticle from "@/components/MainArticle"
@@ -156,6 +156,11 @@ const VisionPage = () => {
     image: oldship,
     alt: t("page-eth-whats-eth-hero-alt"),
   }
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Page>

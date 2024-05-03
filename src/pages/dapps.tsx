@@ -6,6 +6,7 @@ import React, {
   useState,
 } from "react"
 import { type GetStaticProps } from "next"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
@@ -33,9 +34,7 @@ import CalloutBanner from "@/components/CalloutBanner"
 import Card from "@/components/Card"
 import DocLink from "@/components/DocLink"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import GhostCard from "@/components/GhostCard"
-import GlossaryTooltip from "@/components/Glossary/GlossaryTooltip"
 import { Image } from "@/components/Image"
 import InfoBanner from "@/components/InfoBanner"
 import InlineLink, { BaseLink } from "@/components/Link"
@@ -1329,6 +1328,12 @@ const DappsPage = () => {
       },
     ],
   }
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
+
   return (
     <Page>
       <PageMetadata

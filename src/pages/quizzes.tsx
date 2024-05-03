@@ -1,5 +1,6 @@
 import { useMemo, useState } from "react"
 import { GetStaticProps, InferGetStaticPropsType, NextPage } from "next"
+import dynamic from "next/dynamic"
 import { useTranslation } from "next-i18next"
 import { serverSideTranslations } from "next-i18next/serverSideTranslations"
 import { FaGithub } from "react-icons/fa"
@@ -8,7 +9,6 @@ import { Box, Flex, Icon, Stack, Text, useDisclosure } from "@chakra-ui/react"
 import { BasePageProps, QuizKey, QuizStatus } from "@/lib/types"
 
 import { ButtonLink } from "@/components/Buttons"
-import FeedbackCard from "@/components/FeedbackCard"
 import { HubHero } from "@/components/Hero"
 import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
@@ -70,6 +70,11 @@ const QuizzesHubPage: NextPage<
     }),
     [onOpen, userStats]
   )
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Box as={MainArticle}>

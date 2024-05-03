@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { useTranslation } from "next-i18next"
 import { MdExpandMore } from "react-icons/md"
@@ -17,7 +18,6 @@ import type { MdPageContent, UseCasesFrontmatter } from "@/lib/interfaces"
 import BannerNotification from "@/components/BannerNotification"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import Emoji from "@/components/Emoji"
-import FeedbackCard from "@/components/FeedbackCard"
 import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
 import InlineLink, { BaseLink } from "@/components/Link"
@@ -174,6 +174,11 @@ export const UseCasesLayout = ({
       },
     ],
   }
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Box

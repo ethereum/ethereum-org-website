@@ -1,3 +1,4 @@
+import dynamic from "next/dynamic"
 import {
   Box,
   Center,
@@ -15,7 +16,6 @@ import type { MdPageContent, RoadmapFrontmatter } from "@/lib/interfaces"
 import Breadcrumbs from "@/components/Breadcrumbs"
 import { List as ButtonDropdownList } from "@/components/ButtonDropdown"
 import { Button, ButtonLink } from "@/components/Buttons"
-import FeedbackCard from "@/components/FeedbackCard"
 import HubHero from "@/components/Hero/HubHero"
 import { Image } from "@/components/Image"
 import LeftNavBar from "@/components/LeftNavBar"
@@ -131,6 +131,11 @@ export const RoadmapLayout = ({
       },
     ],
   }
+
+  // Lazy-load on initial load
+  const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
 
   return (
     <Box position="relative" dir={contentNotTranslated ? "ltr" : "unset"}>
