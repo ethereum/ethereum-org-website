@@ -6,11 +6,15 @@ lang: hu
 
 # Bevezetés az okosszerződésekbe {#introduction-to-smart-contracts}
 
-Az okosszerződések az Ethereum alkalmazási rétegének alapvető építőkockái. Ezek olyan számítógépes programok, melyek a blokkláncon találhatók, feltételeket követve működnek (ha ez van, akkor ezt csinálom), és garantáltan a programkódja által definiált szabályok alapján végez műveleteket. E szabályokat nem lehet megváltoztatni, miután a szerződés életbe lépett.
+Az okosszerződések az Ethereum alkalmazási rétegének alapvető építőkockái. Ezek olyan számítógépes programok, melyek a [blokkláncon](/glossary/#blockchain) találhatók, feltételeket követve működnek (ha ez van, akkor ezt csinálom), és garantáltan a programkódja által definiált szabályok alapján végez műveleteket. E szabályokat nem lehet megváltoztatni, miután a szerződés életbe lépett.
 
 Az okosszerződés kifejezést Nick Szabo alkotta meg. 1994-ben írt egy cikket a [a koncepció lényegéről](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart.contracts.html), majd 1996-ban tovább taglalta, hogy [mire képes az okosszerződés](https://www.fon.hum.uva.nl/rob/Courses/InformationInSpeech/CDROM/Literature/LOTwinterschool2006/szabo.best.vwh.net/smart_contracts_2.html).
 
-Szabo egy olyan digitális piacteret képzelt el, ahol automatikus, kriptográfiailag biztosított folyamatok lehetővé teszik tranzakciók és üzleti funkciók működését megbízott közvetítők nélkül. Az okosszerződések ezt a víziót valósítják meg az Ethereumon.
+Szabo egy olyan digitális piacteret képzelt el, ahol automatikus, [kriptográfiailag biztosított](/glossary/#cryptography) folyamatok lehetővé teszik tranzakciók és üzleti funkciók működését megbízott közvetítők nélkül. Az okosszerződések ezt a víziót valósítják meg az Ethereumon.
+
+Nézze meg a videót, melyben a Finematics elmagyarázza az okosszerződések lényegét:
+
+<YouTube id="pWGLtjG-F5c" />
 
 ## Bizalom a hagyományos szerződésekben {#trust-and-contracts}
 
@@ -60,20 +64,14 @@ Végül a hagyományos szerződéshez hasonlóan Ön ellenőrizheti az okosszerz
 
 Az okosszerződések lényegében mindent végre tudnak hajtani, amit egy számítógépes program tud.
 
-Többek között képesek számításokat végezni, valutát létrehozni, adatot tárolni, NFT-ket kreálni (minting), üzeneteket küldeni és még ábrát vagy grafikont is tudnak készíteni. Következzen néhány népszerű példa a való életből:
+Többek között képesek számításokat végezni, valutát létrehozni, adatot tárolni, [NFT-ket](/glossary/#nft) kreálni (minting), üzeneteket küldeni és még ábrát vagy grafikont is tudnak készíteni. Következzen néhány népszerű példa a való életből:
 
 - [Stablecoin-ok](/stablecoins/)
 - [Egyedi digitális eszközök létrehozása és szétosztása](/nft/)
 - [Automatikus, nyílt valutaátváltás](/get-eth/#dex)
-- [Decentralizált játékok](/dapps/?category=gaming#explore)
+- [Decentralizált játékok](/dapps/?category=gaming)
 - [Biztosítási szerződés, mely automatikus kifizetést alkalmaz](https://etherisc.com/)
 - [Szabvány, melyet alapul véve az emberek egyéni, interoperábilis valutákat hoznak létre](/developers/docs/standards/tokens/)
-
-## Ön inkább vizuális típus? {#visual-learner}
-
-Nézze meg a videót, melyben a Finematics elmagyarázza az okosszerződések lényegét:
-
-<YouTube id="pWGLtjG-F5c" />
 
 ## További olvasnivaló {#further-reading}
 
