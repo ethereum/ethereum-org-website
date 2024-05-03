@@ -14,7 +14,6 @@ import MainArticle from "@/components/MainArticle"
 import PageMetadata from "@/components/PageMetadata"
 import QuizWidget from "@/components/Quiz/QuizWidget"
 import QuizzesList from "@/components/Quiz/QuizzesList"
-import QuizzesModal from "@/components/Quiz/QuizzesModal"
 import QuizzesStats from "@/components/Quiz/QuizzesStats"
 import { useLocalQuizData } from "@/components/Quiz/useLocalQuizData"
 
@@ -73,6 +72,10 @@ const QuizzesHubPage: NextPage<
 
   // Lazy-load on initial load
   const FeedbackCard = dynamic(() => import("@/components/FeedbackCard"), {
+    ssr: false,
+  })
+
+  const QuizzesModal = dynamic(() => import("@/components/Quiz/QuizzesModal"), {
     ssr: false,
   })
 
