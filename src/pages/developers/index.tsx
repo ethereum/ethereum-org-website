@@ -167,7 +167,7 @@ const SpeedRunEthereumBanner = ({
       wordBreak="break-word"
       alignItems="flex-start"
     >
-      <Heading as="h2" size="xl">
+      <Heading>
         {title}
       </Heading>
       <ButtonLink href="https://speedrunethereum.com/">{linkLabel}</ButtonLink>
