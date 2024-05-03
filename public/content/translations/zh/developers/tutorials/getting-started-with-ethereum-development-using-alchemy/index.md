@@ -75,9 +75,7 @@ _**注意：**将 [https://eth-mainnet.alchemyapi.io/v2/demo](https://eth-mainne
 
 **如果你已有客户端，** 将你当前的节点提供商的 URL 更改为你的 API 密钥的 Alchemy URL： `“https://eth-mainnet.alchemyapi.io/v2/your-api-key”`
 
-**_注意：_**下面的脚本需要在一个**节点环境**中运行或**保存到一个文件运行**，而不是通过命令行运行。 如果你尚未安装节点或npm ，请查看此</a>适用于mac的快速设置指南
-
-。</p> 
+**_注意：_**下面的脚本需要在一个**节点环境**中运行或**保存到一个文件运行**，而不是通过命令行运行。 如果你尚未安装节点或npm ，请查看此适用于mac的快速设置指南。
 
 许多 [Web3 库](https://docs.alchemyapi.io/guides/getting-started#other-web3-libraries)都可以和 Alchemy 集成。但是，我们建议使用 [Alchemy Web3](https://docs.alchemy.com/reference/api-overview)，它是 web3.js 的替代插件，可与 Alchemy 无缝协作。 这个库有很多优点，例如自动重试和可靠的WebSocket支持。
 
