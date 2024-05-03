@@ -10,7 +10,6 @@ tags:
   - "erc-20"
 skill: intermediate
 lang: zh
-sidebar: true
 published: 2020-10-16
 ---
 
@@ -1136,4 +1135,4 @@ it("Send transaction changes sender and receiver balances", async () => {
 
 **你可以在[这里](https://github.com/VladStarostenko/tutorial-for-ethereum-org-website)找到本教程的代码。**
 
-**更多关于 `Waffle` 的文档可在</a>这里获取 。</strong></p>
+**更多关于 `Waffle` 的文档可在这里获取 。
