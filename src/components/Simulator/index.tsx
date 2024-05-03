@@ -1,11 +1,11 @@
 import React, { useEffect, useMemo, useState } from "react"
+import dynamic from "next/dynamic"
 import { useRouter } from "next/router"
 import { Flex, type FlexProps, Grid } from "@chakra-ui/react"
 
 import { Explanation } from "@/components/Simulator/Explanation"
 import { PathButton } from "@/components/Simulator/PathButton"
 import { Phone } from "@/components/Simulator/Phone"
-import { SimulatorModal } from "@/components/Simulator/SimulatorModal"
 import { Template } from "@/components/Simulator/Template"
 
 import { trackCustomEvent } from "@/lib/utils/matomo"
@@ -22,6 +22,14 @@ import { getValidPathId } from "./utils"
 type SimulatorProps = Pick<FlexProps, "children"> & {
   data: SimulatorData
 }
+
+const SimulatorModal = dynamic(
+  () => import("@/components/Simulator/SimulatorModal"),
+  {
+    ssr: false,
+  }
+)
+
 export const Simulator = ({ children, data }: SimulatorProps) => {
   const router = useRouter()
 
