@@ -1,15 +1,10 @@
 import * as React from "react"
-import {
-  Box,
-  Flex,
-  Heading as HeadingComponent,
-  HeadingProps,
-  Stack,
-  VStack,
-} from "@chakra-ui/react"
+import { Box, Flex, HeadingProps, Stack, VStack } from "@chakra-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 import Translation from "../Translation"
+
+import HeadingComponent from "."
 
 const meta = {
   title: "Atoms / Typography / Heading",
@@ -31,14 +26,6 @@ export default meta
 type Story = StoryObj<typeof meta>
 
 const headingScale: Array<HeadingProps> = [
-  {
-    as: "h1",
-    size: "4xl",
-  },
-  {
-    as: "h1",
-    size: "3xl",
-  },
   {
     as: "h1",
     size: "2xl",
@@ -81,11 +68,13 @@ export const Heading: Story = {
               as="span"
               flex="1"
               textAlign="end"
+              // Explicit size value passed because the element rendered is not a heading
               size={obj.size}
             >
               {(obj.size as string) || "xl"}
             </HeadingComponent>
-            <HeadingComponent flex="3" {...obj}>
+            {/* The render does not have an explicit `size` passed to use the default instead */}
+            <HeadingComponent as={obj.as} flex="3">
               {args.children}
             </HeadingComponent>
           </Flex>
