@@ -73,7 +73,14 @@ const WalletFilterPersona = ({
     }
     setSelectedPersona(newSelectedPersonas)
     const newFilters = computeFilters(newSelectedPersonas, personas)
-    setFilters(newFilters as WalletFilter)
+    setFilters((prevFilters) => {
+      const combinedFilters = Object.fromEntries(
+        Object.entries(prevFilters).map(([key, value]) => {
+          return [key, value || newFilters[key]]
+        })
+      )
+      return combinedFilters as WalletFilter
+    })
   }
 
   return (
