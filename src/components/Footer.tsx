@@ -19,6 +19,8 @@ import Translation from "@/components/Translation"
 
 import { getLocaleTimestamp } from "@/lib/utils/time"
 
+import { GoToTopButton } from "./GoToTopButton"
+
 const socialLinks = [
   {
     icon: FaGithub,
@@ -336,34 +338,56 @@ const Footer = ({ lastDeployDate }: FooterProps) => {
         alignItems="center"
         flexWrap="wrap"
       >
+        <GoToTopButton />
+
         {lastDeployDate && (
-          <Text>
-            <Translation id="website-last-updated" />:{" "}
-            {getLocaleTimestamp(locale as Lang, lastDeployDate)}
-          </Text>
-        )}
-        <Box my={4}>
-          {socialLinks.map(({ to, ariaLabel, icon }) => (
-            <BaseLink
-              key={to}
-              href={to}
-              hideArrow
-              color="body.base"
-              aria-label={ariaLabel}
-              ms="4"
-              _focus={{ color: "primary.base" }}
+          <>
+            <Text
+              fontSize="sm"
+              fontStyle="italic"
+              color="body.medium"
+              m="auto"
+              display={{ base: "none", md: "block" }}
             >
-              <Icon
-                as={icon}
-                _hover={{
-                  transition:
-                    "color 0.2s ease-in-out, transform 0.2s ease-in-out",
-                }}
-                fontSize="4xl"
-              />
-            </BaseLink>
-          ))}
-        </Box>
+              <Translation id="website-last-updated" />:{" "}
+              {getLocaleTimestamp(locale as Lang, lastDeployDate)}
+            </Text>
+
+            <Box my={4}>
+              {socialLinks.map(({ to, ariaLabel, icon }) => (
+                <BaseLink
+                  key={to}
+                  href={to}
+                  hideArrow
+                  color="body.base"
+                  aria-label={ariaLabel}
+                  ms="4"
+                  _focus={{ color: "primary.base" }}
+                >
+                  <Icon
+                    as={icon}
+                    _hover={{
+                      transition:
+                        "color 0.2s ease-in-out, transform 0.2s ease-in-out",
+                    }}
+                    fontSize="4xl"
+                  />
+                </BaseLink>
+              ))}
+            </Box>
+
+            <Text
+              fontSize="sm"
+              fontStyle="italic"
+              color="body.medium"
+              m="auto"
+              display={{ base: "block", md: "none" }}
+            >
+              <Translation id="website-last-updated" />:
+              {getLocaleTimestamp(locale as Lang, lastDeployDate)}
+            </Text>
+          </>
+        )}
       </Flex>
       <SimpleGrid
         gap={4}
