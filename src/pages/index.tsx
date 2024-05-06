@@ -607,10 +607,10 @@ const HomePage = ({
           })}
         </CardContainer>
         <CalloutBanner
-          titleKey={"page-index:page-index-contribution-banner-title"}
-          descriptionKey={
+          title={t("page-index:page-index-contribution-banner-title")}
+          description={t(
             "page-index:page-index-contribution-banner-description"
-          }
+          )}
           image={finance}
           imageWidth={600}
           alt={t("page-index:page-index-contribution-banner-image-alt")}

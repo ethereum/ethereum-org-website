@@ -20,8 +20,8 @@ const StakingCommunityCallout = (props: StakingCommunityCalloutProps) => {
       {...props}
       image={image}
       alt={t("page-staking-image-alt")}
-      titleKey={"page-staking-join-community"}
-      descriptionKey={"page-staking-join-community-desc"}
+      title={t("page-staking-join-community")}
+      description={t("page-staking-join-community-desc")}
       imageWidth={350}
     >
       <Flex gap={4} direction={{ base: "column", md: "row" }}>

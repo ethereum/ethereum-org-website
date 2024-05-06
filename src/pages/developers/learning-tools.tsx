@@ -455,12 +455,12 @@ const LearningToolsPage = () => {
             alt={t(
               "page-developers-learning-tools:page-index-tout-enterprise-image-alt"
             )}
-            titleKey={
+            title={t(
               "page-developers-learning-tools:page-learning-tools-documentation"
-            }
-            descriptionKey={
+            )}
+            description={t(
               "page-developers-learning-tools:page-learning-tools-documentation-desc"
-            }
+            )}
           >
             <Box>
               <ButtonLink to="/developers/docs/">
