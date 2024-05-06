@@ -1,7 +1,7 @@
-import { ReactNode, useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import { motion } from "framer-motion"
 import { useTranslation } from "next-i18next"
-import { MdExpandMore } from "react-icons/md"
+import { MdChevronRight } from "react-icons/md"
 import { Box, HStack, Icon } from "@chakra-ui/react"
 
 import { ChildOnlyProp } from "@/lib/types"
@@ -13,13 +13,12 @@ import docLinks from "../data/developer-docs-links.yaml"
 
 export const dropdownIconContainerVariant = {
   open: {
-    rotate: 0,
-    y: 3,
+    rotate: 90,
     transition: {
       duration: 0.4,
     },
   },
-  closed: { rotate: -90, y: 0 },
+  closed: { rotate: 0 },
 }
 
 const innerLinksVariants = {
@@ -105,8 +104,9 @@ const NavLink = ({ item, path, isTopLevel }: NavLinkProps) => {
             variants={dropdownIconContainerVariant}
             animate={isOpen ? "open" : "closed"}
             cursor="pointer"
+            display="flex"
           >
-            <Icon as={MdExpandMore} boxSize={6} color="secondary" />
+            <Icon as={MdChevronRight} boxSize={6} color="secondary" />
           </Box>
         </LinkContainer>
         <Box
