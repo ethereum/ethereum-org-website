@@ -39,9 +39,9 @@ Ci sono molti modi per descrivere Ethereum, ma il suo fulcro è costituito dalla
 }
 ```
 
-Ogni [blocco](/developers/docs/blocks/) contiene un riferimento al blocco precedente; il `parentHash` è semplicemente l'hash del blocco precedente.<FeaturedText>Nota: Ethereum utilizza regolarmente le 
+Ogni [blocco](/developers/docs/blocks/) contiene un riferimento al blocco precedente; il `parentHash` è semplicemente l'hash del blocco precedente.
 
-[funzioni di hash](https://wikipedia.org/wiki/Hash_function) per produrre valori di dimensioni fisse ("hash"). Gli hash hanno un ruolo importante su Ethereum, ma puoi tranquillamente vederli come degli ID univoci, per ora.</FeaturedText>
+<FeaturedText>Nota: Ethereum fa uso regolare delle <a href="https://wikipedia.org/wiki/Hash_function">funzioni di hash</a> per produrre valori di dimensioni fisse ("hash"). Gli hash giocano un ruolo importante in Ethereum, ma per il momento puoi tranquillamente vederli come ID unici.</FeaturedText>
 
 ![Un diagramma raffigurante una blockchain che include i dati in ogni blocco](./blockchain-diagram.png)
 
@@ -55,7 +55,9 @@ L'unico modo per la blockchain di verificare che il denaro sia realmente inviato
 
 Questa nuova tecnologia decentralizzata ha generato nuovi strumenti per sviluppatori. Questi esistono in molti linguaggi di programmazione, ma per il momento guarderemo attraverso la lente di Python. Per ribadire: anche se Python non è il tuo linguaggio preferito, non dovrebbe esser troppo difficile proseguire.
 
-Gli sviluppatori di Python che desiderano interagire con Ethereum, probabilmente sceglieranno [Web3.py](https://web3py.readthedocs.io/). Web3.py è una libreria che semplifica notevolmente la connessione a un nodo di Ethereum e l'invio e la ricezione di dati da esso.<FeaturedText>Nota che "nodo di Ethereum" e "client di Ethereum" sono utilizzati come sinonimi. Ad ogni modo, si riferisce al software eseguito da un partecipante alla rete di Ethereum. Questo software può leggere i dati del blocco, ricevere aggiornamenti quando dei nuovi blocchi sono aggiunti alla catena, trasmettere nuove transazioni, e altro ancora. Tecnicamente, il client è il software, il nodo è il computer che esegue il software.</FeaturedText>
+Gli sviluppatori di Python che desiderano interagire con Ethereum, probabilmente sceglieranno [Web3.py](https://web3py.readthedocs.io/). Web3.py è una libreria che semplifica notevolmente la connessione a un nodo di Ethereum e l'invio e la ricezione di dati da esso.
+
+<FeaturedText>Nota: "nodo di Ethereum" e "client di Ethereum" sono usati in modo intercambiabile. Ad ogni modo, ci riferiamo al software eseguito da un partecipante alla rete di Ethereum. Questo software può leggere i dati del blocco, ricevere aggiornamenti quando i nuovi blocchi sono aggiunti alla catena, trasmettere le nuove transazioni e tanto altro. Tecnicamente, il client è il software, il nodo è il computer che esegue il software.</FeaturedText>
 
 I [client di Ethereum](/developers/docs/nodes-and-clients/) sono configurabili per esser raggiungibili da [IPC](https://wikipedia.org/wiki/Inter-process_communication), HTTP, o Websocket, quindi Web3.py dovrà rispecchiare tale configurazione. Web3.py si riferisce a queste opzioni di connessione come **provider**. Occorre scegliere uno dei tre provider per collegare l'istanza di Web3.py al tuo nodo.
 
@@ -75,7 +77,9 @@ w3.eth.send_transaction({'from': ..., 'to': ..., 'value': ...})
 
 ## Installazione {#installation}
 
-In questa guida, lavoreremo solo all'interno di un interprete Python. Non creeremo cartelle, file, classi o funzioni.<FeaturedText>Nota: Nei seguenti esempi, i comandi che iniziano per `$` sono intesi da eseguirsi nel terminale. (Non digitare `$`, indica esclusivamente l'inizio della riga.)</FeaturedText>
+In questa guida, lavoreremo solo all'interno di un interprete Python. Non creeremo cartelle, file, classi o funzioni.
+
+<FeaturedText>Nota: Negli esempi seguenti, i comandi che iniziano con "$" sono intesi come da eseguire nel terminale. (Non occorre digitare "$", indica solo l'inizio della riga.)</FeaturedText>
 
 Innanzi tutto, installa [IPython](https://ipython.org/) per un ambiente user-friendly da esplorare. IPython offre il completamento delle schede, tra le altre funzionalità, facilitando notevolmente la visualizzazione di cosa è possibile in Web3.py.
 
@@ -126,9 +130,9 @@ Oltre all'essere un gateway per Ethereum, il modulo [Web3](https://web3py.readth
 In un'applicazione di Ethereum, normalmente occorre convertire le denominazioni delle valute. Il modulo Web3 fornisce un paio di metodi di supporto appositamente per questo: [from_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.from_wei) e [to_wei](https://web3py.readthedocs.io/en/stable/web3.main.html#web3.Web3.to_wei).
 
 <FeaturedText>
-Nota: I computer sono notoriamente inefficaci nella gestione della matematica decimale. Per evitarlo, spesso, gli sviluppatori memorizzano gli importi di dollari in centesimi. Ad esempio, un articolo con un prezzo di $5,99, potrebbe essere memorizzato nel database come 599.
+Nota: I computer sono notoriamente inefficaci nella gestione della matematica decimale. Per aggirare ciò, gli sviluppatori archiviano spesso importi di dollari in centesimi. Per esempio, un oggetto con un prezzo di $5,99 potrebbe esser memorizzato nel database come 599.
 
-Un simile schema viene utilizzato nella gestione delle transazioni in <b>ether</b>. Tuttavia, invece di due punti decimali, ether ne ha 18! La denominazione più piccola di ether è detta <b>wei</b>, cioè il valore specificato inviando delle transazioni.
+Uno schema simile è usato per gestire le transazioni in <b>ether</b>. Tuttavia, invece di due punti decimali, ether ne ha 18! La più piccola denominazione di ether è chiamata <b>wei</b>, ovvero il valore specificato inviando le transazioni.
 
 1 ether = 1000000000000000000 wei
 
@@ -284,10 +288,10 @@ Out[13]: 1000003000000000000000000
 
 Quest'ultima parte sembra a posto! Il saldo è passato da 1.000.000 a 1.000.003 ether. Ma cosa è successo al primo account? Sembra aver perso lievemente di più di tre ether. Ahimè, niente nella vita è gratis e per usare la rete pubblica di Ethereum occorre compensare i tuoi pari per il loro ruolo di supporto. Una piccola commissione di transazione è stata detratta dall'account che ha inviato la transazione: si tratta dell'importo di gas bruciato (21000 unità di gas per un trasferimento di ETH), moltiplicato per una commissione di base che varia a seconda dell'attività della rete, più una mancia inviata al validatore che include la transazione in un blocco.
 
-Maggiori informazioni sul [gas](/developers/docs/gas/#post-london)<FeaturedText>Nota: Sulla rete pubblica, le commissioni sulle transazioni sono variabili basate sulla domanda di rete e su quanto rapidamente vorreste che una transazione fosse elaborata. Se sei interessato a una ripartizione di come sono calcolate le commissioni, vedi il mio post precedente su 
+Maggiori informazioni sul [gas](/developers/docs/gas/#post-london)
 
-[come sono incluse le transazioni in un blocco](https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f).</FeaturedText>
+<FeaturedText>Nota: Sulla rete pubblica, le commissioni di transazione sono variabili in base alla domanda della rete ella rapidità con cui vorresti che una transazione fosse elaborata. Se sei interessato a una ripartizione di come sono calcolate le commissioni, vedi il mio post precedente su <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">come sono incluse le transazioni in un blocco</a>.</FeaturedText>
 
 ## E respira {#and-breathe}
 
-Ci siamo soffermati su questo argomento per un po' di tempo, quindi sembra un buon momento per prendersi una pausa. L'argomento non è esaurito e continueremo a parlarne nella seconda parte di questa serie. Alcuni concetti che affronteremo: connettersi a un nodo reale, contratti intelligenti e token. Hai  domande d'approfondimento? Fammelo sapere! Il tuo feedback influenzerà il contenuto della seconda parte. Le richieste sono benvenute tramite [Twitter](https://twitter.com/wolovim).
+Ci siamo soffermati su questo argomento per un po' di tempo, quindi sembra un buon momento per prendersi una pausa. L'argomento non è esaurito e continueremo a parlarne nella seconda parte di questa serie. Alcuni concetti che affronteremo: connettersi a un nodo reale, contratti intelligenti e token. Hai domande d'approfondimento? Fammelo sapere! Il tuo feedback influenzerà il contenuto della seconda parte. Le richieste sono benvenute tramite [Twitter](https://twitter.com/wolovim).
