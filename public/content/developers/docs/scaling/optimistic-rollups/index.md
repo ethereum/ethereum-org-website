@@ -98,7 +98,7 @@ Here is [an example](https://etherscan.io/tx/0x9102bfce17c58b5fc1c974c24b6bb7a92
 
 Some rollups now use blobs to post batches of transactions to Ethereum. 
 
-Blobs are non-modifiable and non-persistent (just like `calldata`) but are not included in the blockchain's history logs. EIP-4844 blobs expire after 18 days. For more information on blobs, see [Data Availability.](/developers/docs/data-availability/)
+Blobs are non-modifiable and non-persistent (just like `calldata`) but are pruned from history after ~18 days. For more information on blobs, see [Danksharding](/roadmap/danksharding).
 
 ### State commitments {#state-commitments}
 
