@@ -9,6 +9,9 @@
   # Default build command.
   command = "yarn build"
 
+[build.environment]
+  NEXT_FORCE_EDGE_IMAGES="true"
+
 [[headers]]
   for = "/*"
   [headers.values]
