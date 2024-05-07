@@ -22,7 +22,7 @@ import LanguagePicker from "@/components/LanguagePicker"
 import { BaseLink } from "@/components/Link"
 import Search from "@/components/Search"
 
-import { NAV_PY } from "@/lib/constants"
+import { DESKTOP_LANGUAGE_BUTTON_NAME, NAV_PY } from "@/lib/constants"
 
 import Menu from "./Menu"
 import MobileNavMenu from "./Mobile"
@@ -98,6 +98,7 @@ const Nav = () => {
             <Menu hideBelow="md" sections={linkSections} />
             <Flex alignItems="center" /*  justifyContent="space-between" */>
               <Search {...searchModalDisclosure} />
+
               {/* Desktop */}
               <HStack hideBelow="md" gap="0">
                 <IconButton
@@ -126,6 +127,7 @@ const Nav = () => {
                 >
                   <MenuButton
                     as={Button}
+                    name={DESKTOP_LANGUAGE_BUTTON_NAME}
                     ref={languagePickerRef}
                     variant="ghost"
                     color="body.base"

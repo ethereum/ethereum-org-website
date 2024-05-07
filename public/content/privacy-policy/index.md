@@ -109,7 +109,7 @@ We may use this information as well as other information you voluntarily provide
 
 We may process the data by name in order to record your reservation as you have requested, to contact you in case of a question or problem and to ensure correct payment.
 
-The legal basis for the data processing for this purpose lies in the fulfilment of an agreement in accordance with Art. 6 Par. 1 lit. b GDPR.
+The legal basis for the data processing for this purpose lies in the fulfillment of an agreement in accordance with Art. 6 Par. 1 lit. b GDPR.
 
 **4. Other parties who have access to information we collect**
 
@@ -117,7 +117,7 @@ With the exception of the provider(s) of our Websites, we do not make your perso
 
 Personal data collected via the Websites may be passed on to and/or accessed by the Website service provider(s). The Websites may be hosted on servers in the US. The transfer of data is for the purpose of providing and maintaining the functionality of our Websites. This is our legitimate interest in the sense of Art. 6 Par. 1 lit f GDPR.
 
-If you pay by credit card through the Websites, we may forward your credit card information to the credit card issuer and the credit card acquirer. If you choose to pay by credit card, you may be asked to provide all the necessary information. The legal basis for passing on the data lies in the fulfilment of an agreement in the sense of Art. 6 Par. Lit. b GDPR.
+If you pay by credit card through the Websites, we may forward your credit card information to the credit card issuer and the credit card acquirer. If you choose to pay by credit card, you may be asked to provide all the necessary information. The legal basis for passing on the data lies in the fulfillment of an agreement in the sense of Art. 6 Par. Lit. b GDPR.
 
 **5. International transfer of personal data**
 

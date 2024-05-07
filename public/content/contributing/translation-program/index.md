@@ -37,7 +37,7 @@ Read more about the ethereum.org Translation Program [mission and vision](/contr
 ### Our progress so far {#our-progress}
 
 - [**5,600 +** translators](/contributing/translation-program/contributors/)
-- [**62** languages live on site](/languages/)
+- **62** languages live on site
 - [**3 million** words translated in 2023](/contributing/translation-program/acknowledgements/)
 
 <TranslationChartImage />
@@ -51,9 +51,9 @@ We want to acknowledge our translators and support them on their career paths. H
 
 If you have contributed to the Translation Program and at least 5,000 of your translated words have been approved, you are eligible for an ethereum.org translator certificate. [More on certificates](/contributing/translation-program/acknowledgements/#certificate)
 
-#### POAPs {#poaps}
+#### OATs {#oats}
 
-All of our translators are eligible for a POAP (Proof of Attendance Protocol) - an NFT that proves their contribution to the ethereum.org Translation Program. [More on POAPs](/contributing/translation-program/acknowledgements/#poap)
+Contributors to the Translation Program are eligible for different OATs (onchain achievement tokens) based on their number of translated words in 2024. OATs are NFTs that prove your contribution to the ethereum.org Translation Program. [More on OATs](/contributing/translation-program/acknowledgements/#oats)
 
 #### Translator acknowledgements {#translator-acknowledgements}
 

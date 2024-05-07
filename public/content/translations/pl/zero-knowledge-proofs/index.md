@@ -176,7 +176,7 @@ Korzystanie z MACI _wymaga_ zaufania koordynatorowi, że nie jest w zmowie z prz
 
 Jednak w przypadku, w którym koordynator pozostaje uczciwy, MACI stanowi potężne narzędzie gwarantujące uczciwość głosowania w łańcuchu. Wyjaśnia to jego popularność wśród aplikacji finansowania kwadratowego (np. [clr.fund](https://clr.fund/#/about/maci)), które polegają głównie na uczciwości wyboru każdej osoby w głosowaniu.
 
-[Dowiedz się więcej o MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
+[Dowiedz się więcej o MACI](https://privacy-scaling-explorations.github.io/maci/).
 
 ## Wady korzystania z dowodów wiedzy zerowej {#drawbacks-of-using-zero-knowledge-proofs}
 
@@ -203,10 +203,10 @@ ZK-STARK jest uważany za odporny na zagrożenia związane z obliczeniami kwanto
 ## Przeczytaj także {#further-reading}
 
 - [Informatyk wyjaśnia jedno pojęcie na 5 poziomach trudności | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) — _Kanał Wired na YouTubie_
-- [Przegląd przypadków użycia dowodów wiedzy zerowej](https://appliedzkp.org/#Projects) — _Drużyna do spraw eksploracji prywatności i skalowania_
+- [Przegląd przypadków użycia dowodów wiedzy zerowej](https://pse.dev/projects) — _Zespół ds. prywatności i eksploracji skalowania_
 - [SNARK kontra STARK kontra Rekursywny SNARK](https://www.alchemy.com/overviews/snarks-vs-starks) — _Przegląd Alchemy_
 - [Dowód wiedzy zerowej: poprawa prywatności w blockchainie](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARK — Realistyczny przykład wiedzy zerowej i dogłębna analiza](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARK — Twórz weryfikowalne zaufanie, nawet względem komputerów kwantowych](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Przybliżone wprowadzenie do tego, w jaki sposób możliwe są dowody zk-SNARK](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Przybliżone wprowadzenie do tego, dlaczego zk-SNARK są możliwe](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Czym jest dowód wiedzy zerowej i jaka jest jego rola w blockchainie?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

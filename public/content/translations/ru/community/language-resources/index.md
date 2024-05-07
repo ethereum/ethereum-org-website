@@ -16,7 +16,9 @@ lang: ru
 
 ## Ресурсы Ethereum.org {#ethereum-org}
 
-Проект Ethereum.org переведен носителями на более чем 40 языков, список которых вы найдете на нашей [странице языков](/languages).
+Проект Ethereum.org переведен носителями на более чем 40 языков, список которых вы найдете на нашей странице языков.
+
+![Language selector menu](./language-selector-menu.png)
 
 Если вы говорите на двух языках и хотите помочь нам привлечь больше людей, вы также можете принять участие в [программе перевода ethereum.org](/contributing/translation-program/#translation-program) и помочь нам с переводом сайта.
 

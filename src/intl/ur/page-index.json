@@ -39,7 +39,7 @@
   "page-index-developers-button": "ڈویلپر پورٹل",
   "page-index-developers-code-examples": "کوڈ کی مثالیں",
   "page-index-developers-code-example-title-0": "آپ کا ذاتی بینک",
-  "page-index-developers-code-example-description-0": "آپ اپنے پروگرام کردہ لاجک کے ذریعے چلنے والا بینک بنا سکتے ہیں۔",
+  "page-index-developers-code-example-description-0": "آپ اپنی پروگرام کردہ لاجک کے ذریعے چلنے والا بینک بنا سکتے ہیں۔",
   "page-index-developers-code-example-title-1": "آپ کی اپنی کرنسی",
   "page-index-developers-code-example-description-1": "آپ ایپلیکیشنز کے مابین منتقل اور استعمال ہونے والے ٹوکنز بنا سکتے ہیں۔",
   "page-index-developers-code-example-title-2": "JavaScript Ethereum والیٹ",
@@ -50,6 +50,7 @@
   "page-index-network-stats-subtitle": "نیٹ ورک کے تازہ ترین اعداد و شمار",
   "page-index-network-stats-eth-price-description": "ایتھر (ETH) کی قیمت (USD)",
   "page-index-network-stats-eth-price-explainer": "1 ایتھر کی تازہ ترین قیمت۔ آپ کم از کم 0.000000000000000001 پر خرید سکتے ہیں – آپ کو 1 پورا ETH خریدنے کی ضرورت نہیں ہے۔",
+  "page-index-network-stats-total-eth-staked-explainer": "ETH کی کل تعداد جو فی الحال اسٹیک کی جا رہی ہے اور نیٹ ورک کو محفوظ کر رہی ہے۔",
   "page-index-network-stats-tx-day-description": "آج ہی ٹرانزیکشنز کریں",
   "page-index-network-stats-tx-day-explainer": "گزشتہ 24 گھنٹوں میں نیٹ ورک پر کامیابی سے مکمل ہونے والی ٹرانزیکشنز کی تعداد۔",
   "page-index-network-stats-value-defi-description": "DeFi (USD) میں مقفل قدر",
@@ -73,5 +74,15 @@
   "page-index-nft": "اثاثوں کا انٹرنیٹ",
   "page-index-nft-description": "Ethereum صرف ڈیجیٹل پیسے تک محدود نہیں ہے۔ آپ کے پاس موجود ہر چیز کی نمائندگی، تجارت کی جا سکتی ہے اور اسے نان فنجیبل ٹوکنز (NFTs) کے طور پر استعمال کیا جا سکتا ہے۔ آپ اپنے فن کو ٹوکنائز کر سکتے ہیں اور ہر بار اس کی دوبارہ فروخت پر خود بخود رائلٹی حاصل کر سکتے ہیں۔ یا قرض لینے کے لیے آپ کے پاس موجود کسی چیز کےعوض ٹوکن استعمال کریں۔ امکانات ہر وقت بڑھ رہے ہیں۔",
   "page-index-nft-button": "مزید نان فنجیبل ٹوکنز (NFTs) کے بارے میں",
-  "page-index-nft-alt": "ایتھر (Eth) کا لوگو ہولوگرام کے ذریعے دکھایا جا رہا ہے۔"
+  "page-index-nft-alt": "ایتھر (Eth) کا لوگو ہولوگرام کے ذریعے دکھایا جا رہا ہے۔",
+  "community-events-content-heading": "ethereum.org کمیونٹی میں شامل ہوں",
+  "community-events-content-1": "ہمارے <a href=\"/discord/\">Discord سرور</a> پر تقریباً <strong>40 000 اراکین</strong> میں شامل ہوں۔",
+  "community-events-content-2": "Ethereum.org کی ترقی اور اہم ایکوسسٹم خبروں پر دلچسپ اپ ڈیٹس کے لیے ہماری ماہانہ کمیونٹی کالز میں شامل ہوں۔ سوالات پوچھنے، خیالات کا اشتراک کرنے، اور تاثرات فراہم کرنے کا موقع حاصل کریں - یہ فروغ پزیر Ethereum کمیونٹی کا حصہ بننے کا بہترین موقع ہے۔",
+  "community-events-next-event": "اگلا ایونٹ",
+  "community-events-no-events-planned": "کوئی ایونٹ منصوبہ بند نہیں ہے",
+  "community-events-upcoming-calls": "آنے والی کالز",
+  "community-events-no-upcoming-calls": "کوئی آنے والی کالز نہیں ہیں",
+  "community-events-previous-calls": "پچھلی کالز",
+  "community-events-there-are-no-past-calls": "ماضی کی کوئی کالیں نہیں ہیں",
+  "community-events-add-to-calendar": "کیلنڈر میں شامل کریں"
 }

@@ -11,7 +11,6 @@ Komunitas Ethereum meliputi orang-orang dari beragam latar belakang dan kemampua
 ## Pengembang <Emoji text=":computer:" size={1} />‍ {#developers}
 
 - Pelajari tentang dan cobalah Ethereum di [ethereum.org/developers/](/developers/)
-- [Temukan hadiah bounty di Gitcoin](https://gitcoin.co/), selesaikan masalah teknis kecil atau besar, dapatkan kripto!
 - Datanglah ke hackathon [ETHGlobal](http://ethglobal.co/) di dekat Anda!
 - Lihat [proyek yang terkait dengan bidang keahlian atau bahasa pemrograman pilihan Anda](/developers/docs/programming-languages/)
 - Tonton atau berpartisipasilah dalam [Panggilan Dev Core](https://www.youtube.com/@EthereumProtocol)
@@ -74,7 +73,7 @@ Ekosistem Ethereum bertujuan mendanai fasilitas publik dan proyek yang berdampak
 
 ## Manajer Produk <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Ekosistem Ethereum memerlukan talenta Anda! Banyak perusahaan mencari posisi manajer produk. Jika Anda ingin memulai dengan berkontribusi terhadap suatu proyek sumber terbuka, hubungi [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) atau [MetaCartel](https://www.metacartel.org/)
+- Ekosistem Ethereum memerlukan talenta Anda! Banyak perusahaan mencari posisi manajer produk. Jika Anda ingin memulai dengan berkontribusi terhadap suatu proyek sumber terbuka, hubungi [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) atau [RaidGuild](https://www.raidguild.org/)
 
 ## Pemasaran <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -99,14 +98,13 @@ Ekosistem Ethereum bertujuan mendanai fasilitas publik dan proyek yang berdampak
 
 "DAOs" adalah organisasi otonom terdesentralisasi. Kelompok ini memanfaatkan teknologi Ethereum untuk memfasilitasi organisasi dan kolaborasi. Sebagai contoh, untuk mengontrol keanggotaan, mengambil suara untuk proposal, atau mengelola aset bersama. Sekalipun masih bersifat eksperimental, DAOs menawarkan peluang bagi Anda untuk menemukan kelompok yang sesuai dengan Anda, menemukan kolaborator, dan memperbesar dampak Anda di komunitas Ethereum. [Selengkapnya tentang DAOs](/dao/)
 
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Rekayasa hukum_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Rekayasa hukum_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Komunitas seni_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _Inkubator DAO_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Usaha patungan untuk proyek kripto pre-seed_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Mekanika Permainan MMORPG untuk Kehidupan Nyata_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Merek Pakaian Digiphysical_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Komunitas yang berfokus pada pendanaan pengembangan Ethereum_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Proyek yang diprakarsai wanita_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Kelompok para pengembang Web3_
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Mempromosikan konsep DAO dalam bidang non-teknis dan menolong orang-orang menciptakan nilai melalui DAO._
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Kelompok pekerja lepas pengembangan Web3 yang bekerja sebagai DAO_

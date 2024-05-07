@@ -160,14 +160,14 @@ Aqui está o código estendido para obter um nó na árvore Merkle Patricia:
 
 ### Árvore de exemplo {#example-trie}
 
-Suponha que nós queremos uma árvore contendo quatro pares de caminho/valor `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
+Suponha que nós queremos uma árvore contendo quatro pares de caminho/valor `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
 Primeiro, convertemos ambos caminhos e valores para `bytes`. Abaixo, representações reais em bytes para _caminhos_ são indicadas por `<>`, embora _valores_ ainda sejam mostrados como strings, denotado por `''`, para melhor compreensão (eles, também, seriam `bytes`):
 
 ```
     <64 6f> : 'verb'
     <64 6f 67> : 'puppy'
-    <64 6f 67 65> : 'coin'
+    <64 6f 67 65> : 'coins'
     <68 6f 72 73 65> : 'stallion'
 ```
 
@@ -176,12 +176,12 @@ Agora, construímos uma árvore com os seguintes pares chave/valor no banco de d
 ```
     rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
-    hashB:    [ <00 6f>, hashD ]
-    hashD:    [ <>, <>, <>, <>, <>, <>, hashE, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
-    hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
+    hashB:    [ <00 6f>, hashC ]
+    hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
+    hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Quando um nó é referenciado dentro de outro nó, o que é incluído é `H(rlp. ncode(x))`, onde `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp. ncode` é a função de codificação [RLP](/developers/docs/data-structures-and-encoding/rlp).
+Quando um nó é referenciado dentro de outro nó, o que é incluído é `H(rlp. ncode(node))`, onde `H(x) = keccak256(x) if len(x) >= 32 else x` e `rlp. ncode` é a função de codificação [RLP](/developers/docs/data-structures-and-encoding/rlp).
 
 Observe que, ao atualizar uma árvore, é necessário armazenar o par chave/valor `(keccak256(x), x)` em uma tabela de pesquisa persistente _se_ o nó recém-criado tem comprimento >= 32. Entretanto, se o nó é menor do que isso, não é preciso armazenar nada, já que a função f(x) = x é reversível.
 

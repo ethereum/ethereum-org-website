@@ -15,7 +15,6 @@ Diese Liste wird von unserer Community verwaltet. Wenn Informationen fehlen oder
 Diese Programme unterstützen das breit gefächerte Ethereum-Ökosystem, indem sie Finanzierungen für zahlreiche Projekte bereitstellen. Dazu gehören unter anderem Lösungen zu Skalierbarkeit, Community-Aufbau, Sicherheit und Privatsphäre. Diese Fördermaßnahmen sind nicht spezifisch für eine bestimmte Ethereum-Plattform und sind ein guter Ausgangspunkt, wenn Sie unsicher sind.
 
 - [EF-Ökosystem Unterstützungsprogramm](https://esp.ethereum.foundation) - _Finanzierung von Open-Source-Projekten, die Ethereum zugutekommen, mit besonderem Fokus auf universelle Werkzeuge, Infrastruktur, Forschung und öffentliche Güter_
-- [MetaCartel](https://www.metacartel.org/grants/) - _DApp-Entwicklung, DAO-Erstellung_
 - [Moloch DAO](https://www.molochdao.com/) – _Datenschutz, Layer-2-Skalierung, Client-Sicherheit und mehr_
 - [DAO-Zuschüsse](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) – _Google-Tabelle der Organisationen, die Zuschüsse anbieten_
 - [Akademische Stipendien](https://esp.ethereum.foundation/academic-grants) – _Stipendien zur Untstützung akademischer Arbeiten in Bezug auf Ethereum_

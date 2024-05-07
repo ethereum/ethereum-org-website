@@ -15,7 +15,6 @@ Bu liste topluluğumuz tarafından hazırlanmıştır. Eksik veya yanlış bir �
 Bu programlar geniş bir proje yelpazesine hibeler sağlayarak geniş Ethereum ekosistemini desteklerler. Bunlar ölçeklenebilirlik, topluluk kurma, güvenlik, gizlilik gibi birçoğu için çözümleri kapsar. Bu hibeler herhangi bir Ethereum platformuna özel değildir ve emin değilseniz başlamak için iyi yerlerdir.
 
 - [EF Ekosistem Destek Programı](https://esp.ethereum.foundation) - _Temel odağı evrensel araçlar, altyapı, araştırma ve kamu yararı olmak üzere; Ethereum'a katkı sağlayan açık kaynak projeleri finanse eder_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Dapp geliştirme, DAO oluşturma_
 - [Moloch DAO](https://www.molochdao.com/) - _Gizlilik, katman 2 ölçeklendirme, istemci güvenliği ve dahası_
 - [DAO Hibeleri](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _Hibe sunan organizasyonların Google tablosu_
 - [Akademik Hibeler](https://esp.ethereum.foundation/academic-grants) - _Ethereum ile ilgili akademik çalışmaları desteklemek için hibeler_

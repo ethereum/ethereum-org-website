@@ -1,59 +1,11 @@
 [
   {
-    "id": 2558,
-    "path": "/page-index.json"
-  },
-  {
-    "id": 2660,
-    "path": "/common.json"
-  },
-  {
-    "id": 2560,
-    "path": "/page-developers-index.json"
-  },
-  {
-    "id": 2630,
-    "path": "/page-languages.json"
-  },
-  {
-    "id": 2648,
-    "path": "/page-developers-local-environment.json"
-  },
-  {
-    "id": 2650,
-    "path": "/page-developers-learning-tools.json"
-  },
-  {
     "id": 5559,
     "path": "/dao/index.md"
   },
   {
-    "id": 6374,
-    "path": "/page-run-a-node.json"
-  },
-  {
-    "id": 6512,
-    "path": "/page-layer-2.json"
-  },
-  {
-    "id": 2628,
-    "path": "/page-stablecoins.json"
-  },
-  {
-    "id": 2654,
-    "path": "/page-dapps.json"
-  },
-  {
     "id": 5565,
     "path": "/nft/index.md"
-  },
-  {
-    "id": 5567,
-    "path": "/template-usecase.json"
-  },
-  {
-    "id": 2652,
-    "path": "/page-developers-docs.json"
   },
   {
     "id": 2716,
@@ -102,54 +54,6 @@
   {
     "id": 7597,
     "path": "/developers/docs/evm/opcodes/index.md"
-  },
-  {
-    "id": 7767,
-    "path": "/developers/docs/accounts/accounts.svg"
-  },
-  {
-    "id": 7769,
-    "path": "/developers/docs/transactions/gas-tx.svg"
-  },
-  {
-    "id": 7771,
-    "path": "/developers/docs/transactions/tx.svg"
-  },
-  {
-    "id": 7773,
-    "path": "/developers/docs/blocks/tx-block.svg"
-  },
-  {
-    "id": 7775,
-    "path": "/developers/docs/evm/evm.svg"
-  },
-  {
-    "id": 7777,
-    "path": "/developers/docs/evm/gas.svg"
-  },
-  {
-    "id": 8171,
-    "path": "/developers/docs/accounts/accounts.svg.xlsx"
-  },
-  {
-    "id": 8173,
-    "path": "/developers/docs/blocks/tx-block.svg.xlsx"
-  },
-  {
-    "id": 8175,
-    "path": "/developers/docs/evm/evm.svg.xlsx"
-  },
-  {
-    "id": 8177,
-    "path": "/developers/docs/evm/gas.svg.xlsx"
-  },
-  {
-    "id": 8179,
-    "path": "/developers/docs/transactions/gas-tx.svg.xlsx"
-  },
-  {
-    "id": 8181,
-    "path": "/developers/docs/transactions/tx.svg.xlsx"
   },
   {
     "id": 2722,
@@ -292,38 +196,6 @@
     "path": "/glossary/index.md"
   },
   {
-    "id": 8208,
-    "path": "/glossary/glossary.json"
-  },
-  {
-    "id": 2646,
-    "path": "/page-developers-tutorials.json"
-  },
-  {
-    "id": 3002,
-    "path": "/developers/tutorials/calling-a-smart-contract-from-javascript/index.md"
-  },
-  {
-    "id": 3006,
-    "path": "/developers/tutorials/understand-the-erc-20-token-smart-contract/index.md"
-  },
-  {
-    "id": 6221,
-    "path": "/developers/tutorials/how-to-write-and-deploy-an-nft/index.md"
-  },
-  {
-    "id": 6223,
-    "path": "/developers/tutorials/how-to-mint-an-nft/index.md"
-  },
-  {
-    "id": 6225,
-    "path": "/developers/tutorials/how-to-view-nft-in-metamask/index.md"
-  },
-  {
-    "id": 6239,
-    "path": "/developers/tutorials/uniswap-v2-annotated-code/index.md"
-  },
-  {
     "id": 5557,
     "path": "/community/grants/index.md"
   },
@@ -348,28 +220,8 @@
     "path": "/community/language-resources/index.md"
   },
   {
-    "id": 6193,
-    "path": "/community/page-community.json"
-  },
-  {
     "id": 8019,
     "path": "/community/code-of-conduct/index.md"
-  },
-  {
-    "id": 8023,
-    "path": "/community/research/index.md"
-  },
-  {
-    "id": 2620,
-    "path": "/page-upgrades-index.json"
-  },
-  {
-    "id": 2634,
-    "path": "/page-roadmap-vision.json"
-  },
-  {
-    "id": 2640,
-    "path": "/page-upgrades-get-involved.json"
   },
   {
     "id": 2926,
@@ -384,164 +236,28 @@
     "path": "/eips/index.md"
   },
   {
-    "id": 6127,
-    "path": "/page-upgrades.json"
-  },
-  {
     "id": 7515,
     "path": "/roadmap/merge/issuance/index.md"
-  },
-  {
-    "id": 7713,
-    "path": "/roadmap/account-abstraction/index.md"
-  },
-  {
-    "id": 7717,
-    "path": "/roadmap/danksharding/index.md"
   },
   {
     "id": 7721,
     "path": "/roadmap/future-proofing/index.md"
   },
   {
-    "id": 7725,
-    "path": "/roadmap/pbs/index.md"
-  },
-  {
     "id": 7729,
     "path": "/roadmap/scaling/index.md"
-  },
-  {
-    "id": 7733,
-    "path": "/roadmap/secret-leader-election/index.md"
   },
   {
     "id": 7737,
     "path": "/roadmap/security/index.md"
   },
   {
-    "id": 7741,
-    "path": "/roadmap/single-slot-finality/index.md"
-  },
-  {
-    "id": 7745,
-    "path": "/roadmap/statelessness/index.md"
-  },
-  {
     "id": 7749,
     "path": "/roadmap/user-experience/index.md"
   },
   {
-    "id": 7753,
-    "path": "/roadmap/verkle-trees/index.md"
-  },
-  {
     "id": 7803,
     "path": "/roadmap/index.md"
-  },
-  {
-    "id": 3018,
-    "path": "/developers/tutorials/transfers-and-approval-of-erc-20-tokens-from-a-solidity-smart-contract/index.md"
-  },
-  {
-    "id": 3036,
-    "path": "/developers/tutorials/the-graph-fixing-web3-data-querying/index.md"
-  },
-  {
-    "id": 3082,
-    "path": "/developers/tutorials/run-node-raspberry-pi/index.md"
-  },
-  {
-    "id": 3088,
-    "path": "/developers/tutorials/interact-with-other-contracts-from-solidity/index.md"
-  },
-  {
-    "id": 3124,
-    "path": "/developers/tutorials/downsizing-contracts-to-fight-the-contract-size-limit/index.md"
-  },
-  {
-    "id": 3128,
-    "path": "/developers/tutorials/a-developers-guide-to-ethereum-part-one/index.md"
-  },
-  {
-    "id": 6227,
-    "path": "/developers/tutorials/hello-world-smart-contract/index.md"
-  },
-  {
-    "id": 6247,
-    "path": "/developers/tutorials/send-token-etherjs/index.md"
-  },
-  {
-    "id": 6432,
-    "path": "/developers/tutorials/nft-minter/index.md"
-  },
-  {
-    "id": 7308,
-    "path": "/developers/tutorials/reverse-engineering-a-contract/index.md"
-  },
-  {
-    "id": 8003,
-    "path": "/developers/tutorials/yellow-paper-evm/index.md"
-  },
-  {
-    "id": 2980,
-    "path": "/developers/tutorials/logging-events-smart-contracts/index.md"
-  },
-  {
-    "id": 3100,
-    "path": "/developers/tutorials/getting-started-with-ethereum-development-using-alchemy/index.md"
-  },
-  {
-    "id": 3110,
-    "path": "/developers/tutorials/waffle-test-simple-smart-contract/index.md"
-  },
-  {
-    "id": 3116,
-    "path": "/developers/tutorials/kickstart-your-dapp-frontend-development-wth-create-eth-app/index.md"
-  },
-  {
-    "id": 3120,
-    "path": "/developers/tutorials/how-to-mock-solidity-contracts-for-testing/index.md"
-  },
-  {
-    "id": 3138,
-    "path": "/developers/tutorials/sending-transactions-using-web3-and-alchemy/index.md"
-  },
-  {
-    "id": 3144,
-    "path": "/developers/tutorials/secure-development-workflow/index.md"
-  },
-  {
-    "id": 3160,
-    "path": "/developers/tutorials/guide-to-smart-contract-security-tools/index.md"
-  },
-  {
-    "id": 6243,
-    "path": "/developers/tutorials/erc20-annotated-code/index.md"
-  },
-  {
-    "id": 6245,
-    "path": "/developers/tutorials/merkle-proofs-for-offline-data-integrity/index.md"
-  },
-  {
-    "id": 6267,
-    "path": "/developers/tutorials/erc-721-vyper-annotated-code/index.md"
-  },
-  {
-    "id": 7627,
-    "path": "/developers/tutorials/erc20-with-safety-rails/index.md"
-  },
-  {
-    "id": 7631,
-    "path": "/developers/tutorials/all-you-can-cache/index.md"
-  },
-  {
-    "id": 7995,
-    "path": "/developers/tutorials/eip-1271-smart-contract-signatures/index.md"
-  },
-  {
-    "id": 7999,
-    "path": "/developers/tutorials/hello-world-smart-contract-fullstack/index.md"
   },
   {
     "id": 5553,
@@ -552,14 +268,6 @@
     "path": "/contributing/translation-program/index.md"
   },
   {
-    "id": 6177,
-    "path": "/contributing/page-contributing-translation-program-acknowledgements.json"
-  },
-  {
-    "id": 6181,
-    "path": "/contributing/page-contributing-translation-program-contributors.json"
-  },
-  {
     "id": 6388,
     "path": "/contributing/index.md"
   },
@@ -568,44 +276,8 @@
     "path": "/contributing/design-principles/index.md"
   },
   {
-    "id": 6398,
-    "path": "/contributing/adding-developer-tools/index.md"
-  },
-  {
-    "id": 6400,
-    "path": "/contributing/adding-exchanges/index.md"
-  },
-  {
-    "id": 6404,
-    "path": "/contributing/adding-glossary-terms/index.md"
-  },
-  {
-    "id": 6408,
-    "path": "/contributing/adding-products/index.md"
-  },
-  {
     "id": 6412,
     "path": "/contributing/translation-program/translators-guide/index.md"
-  },
-  {
-    "id": 6416,
-    "path": "/contributing/content-resources/index.md"
-  },
-  {
-    "id": 6446,
-    "path": "/contributing/adding-layer-2s/index.md"
-  },
-  {
-    "id": 6448,
-    "path": "/contributing/adding-staking-products/index.md"
-  },
-  {
-    "id": 7565,
-    "path": "/contributing/adding-wallets/index.md"
-  },
-  {
-    "id": 7569,
-    "path": "/contributing/adding-desci-projects/index.md"
   },
   {
     "id": 7581,
@@ -622,14 +294,6 @@
   {
     "id": 7935,
     "path": "/contributing/design/index.md"
-  },
-  {
-    "id": 7939,
-    "path": "/contributing/design/adding-design-resources/index.md"
-  },
-  {
-    "id": 8007,
-    "path": "/contributing/quizzes/index.md"
   },
   {
     "id": 6568,
@@ -660,24 +324,8 @@
     "path": "/developers/docs/data-structures-and-encoding/web3-secret-storage-definition/index.md"
   },
   {
-    "id": 7797,
-    "path": "/developers/docs/networking-layer/cons_client_net_layer.svg"
-  },
-  {
     "id": 8011,
     "path": "/developers/docs/networking-layer/portal-network/index.md"
-  },
-  {
-    "id": 8201,
-    "path": "/developers/docs/networking-layer/cons_client_net_layer.svg.xlsx"
-  },
-  {
-    "id": 2636,
-    "path": "/page-staking.json"
-  },
-  {
-    "id": 2642,
-    "path": "/page-staking-deposit-contract.json"
   },
   {
     "id": 6518,
@@ -700,26 +348,6 @@
     "path": "/staking/dvt/index.md"
   },
   {
-    "id": 2622,
-    "path": "/page-what-is-ethereum.json"
-  },
-  {
-    "id": 2624,
-    "path": "/page-wallets.json"
-  },
-  {
-    "id": 2626,
-    "path": "/page-wallets-find-wallet.json"
-  },
-  {
-    "id": 2632,
-    "path": "/page-get-eth.json"
-  },
-  {
-    "id": 2644,
-    "path": "/page-eth.json"
-  },
-  {
     "id": 5563,
     "path": "/governance/index.md"
   },
@@ -732,10 +360,6 @@
     "path": "/security/index.md"
   },
   {
-    "id": 6428,
-    "path": "/web3/index.md"
-  },
-  {
     "id": 7320,
     "path": "/bridges/index.md"
   },
@@ -744,64 +368,16 @@
     "path": "/zero-knowledge-proofs/index.md"
   },
   {
-    "id": 7759,
-    "path": "/web3/web1.svg"
-  },
-  {
-    "id": 7761,
-    "path": "/web3/web2.svg"
-  },
-  {
-    "id": 7763,
-    "path": "/web3/web3.svg"
-  },
-  {
-    "id": 7765,
-    "path": "/energy-consumption/energy_consumption_pre_post_merge.svg"
-  },
-  {
-    "id": 8163,
-    "path": "/energy-consumption/energy_consumption_pre_post_merge.svg.xlsx"
-  },
-  {
-    "id": 8165,
-    "path": "/web3/web1.svg.xlsx"
-  },
-  {
-    "id": 8167,
-    "path": "/web3/web2.svg.xlsx"
-  },
-  {
-    "id": 8169,
-    "path": "/web3/web3.svg.xlsx"
-  },
-  {
     "id": 5561,
     "path": "/defi/index.md"
   },
   {
+    "id": 6428,
+    "path": "/web3/index.md"
+  },
+  {
     "id": 6440,
     "path": "/smart-contracts/index.md"
-  },
-  {
-    "id": 7314,
-    "path": "/social-networks/index.md"
-  },
-  {
-    "id": 7316,
-    "path": "/decentralized-identity/index.md"
-  },
-  {
-    "id": 7461,
-    "path": "/desci/index.md"
-  },
-  {
-    "id": 8035,
-    "path": "/refi/index.md"
-  },
-  {
-    "id": 7471,
-    "path": "/page-learn.json"
   },
   {
     "id": 7521,
@@ -826,10 +402,6 @@
   {
     "id": 7541,
     "path": "/guides/how-to-use-a-wallet/index.md"
-  },
-  {
-    "id": 7543,
-    "path": "/learn-quizzes.json"
   },
   {
     "id": 8027,
@@ -866,38 +438,6 @@
   {
     "id": 7621,
     "path": "/developers/docs/nodes-and-clients/node-architecture/index.md"
-  },
-  {
-    "id": 7779,
-    "path": "/developers/docs/nodes-and-clients/eth1eth2client.svg"
-  },
-  {
-    "id": 7781,
-    "path": "/developers/docs/nodes-and-clients/nodes.svg"
-  },
-  {
-    "id": 7783,
-    "path": "/developers/docs/nodes-and-clients/run-a-node/diagram.svg"
-  },
-  {
-    "id": 7785,
-    "path": "/developers/docs/nodes-and-clients/node-architecture/node-architecture-text-background.svg"
-  },
-  {
-    "id": 8183,
-    "path": "/developers/docs/nodes-and-clients/node-architecture/node-architecture-text-background.svg.xlsx"
-  },
-  {
-    "id": 8185,
-    "path": "/developers/docs/nodes-and-clients/run-a-node/diagram.svg.xlsx"
-  },
-  {
-    "id": 8187,
-    "path": "/developers/docs/nodes-and-clients/et1eth2client.svg.xlsx"
-  },
-  {
-    "id": 8189,
-    "path": "/developers/docs/nodes-and-clients/nodes.svg.xlsx"
   },
   {
     "id": 2702,
@@ -940,40 +480,8 @@
     "path": "/developers/docs/consensus-mechanisms/pos/block-proposal/index.md"
   },
   {
-    "id": 7787,
-    "path": "/developers/docs/consensus-mechanisms/pos/attestations/attestation_schematic.svg"
-  },
-  {
-    "id": 7789,
-    "path": "/developers/docs/consensus-mechanisms/pos/attack-and-defense/reorg-schematic.svg"
-  },
-  {
-    "id": 7791,
-    "path": "/developers/docs/consensus-mechanisms/pos/keys/multiple-keys.svg"
-  },
-  {
-    "id": 7793,
-    "path": "/developers/docs/consensus-mechanisms/pos/keys/validator-key-schematic.svg"
-  },
-  {
     "id": 7927,
     "path": "/developers/docs/consensus-mechanisms/pos/pos-vs-pow/index.md"
-  },
-  {
-    "id": 8191,
-    "path": "/developers/docs/consensus-mechanisms/pos/attack-and-defense/reorg-schematic.svg.xlsx"
-  },
-  {
-    "id": 8193,
-    "path": "/developers/docs/consensus-mechanisms/pos/attestations/attestation_schematic.svg.xlsx"
-  },
-  {
-    "id": 8195,
-    "path": "/developers/docs/consensus-mechanisms/pos/keys/multiple-keys.svg.xlsx"
-  },
-  {
-    "id": 8197,
-    "path": "/developers/docs/consensus-mechanisms/pos/keys/validator-key-schematic.svg.xlsx"
   },
   {
     "id": 2710,
@@ -1040,16 +548,8 @@
     "path": "/developers/docs/smart-contracts/upgrading/index.md"
   },
   {
-    "id": 7795,
-    "path": "/developers/docs/smart-contracts/verifying/source-code-verification.svg"
-  },
-  {
     "id": 7801,
     "path": "/developers/docs/smart-contracts/verifying/index.md"
-  },
-  {
-    "id": 8199,
-    "path": "/developers/docs/smart-contracts/verifying/source-code-verification.svg.xlsx"
   },
   {
     "id": 2756,
@@ -1080,14 +580,6 @@
     "path": "/developers/docs/scaling/optimistic-rollups/index.md"
   },
   {
-    "id": 2656,
-    "path": "/page-assets.json"
-  },
-  {
-    "id": 2658,
-    "path": "/page-about.json"
-  },
-  {
     "id": 2680,
     "path": "/enterprise/index.md"
   },
@@ -1104,83 +596,91 @@
     "path": "/about/index.md"
   },
   {
-    "id": 8037,
-    "path": "/page-bug-bounty.json"
+    "id": 7314,
+    "path": "/social-networks/index.md"
   },
   {
-    "id": 2986,
-    "path": "/developers/tutorials/how-to-use-slither-to-find-smart-contract-bugs/index.md"
+    "id": 7316,
+    "path": "/decentralized-identity/index.md"
   },
   {
-    "id": 2994,
-    "path": "/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/index.md"
+    "id": 7461,
+    "path": "/desci/index.md"
   },
   {
-    "id": 2998,
-    "path": "/developers/tutorials/smart-contract-security-guidelines/index.md"
+    "id": 8035,
+    "path": "/refi/index.md"
   },
   {
-    "id": 3010,
-    "path": "/developers/tutorials/token-integration-checklist/index.md"
+    "id": 7713,
+    "path": "/roadmap/account-abstraction/index.md"
   },
   {
-    "id": 3024,
-    "path": "/developers/tutorials/waffle-dynamic-mocking-and-testing-calls/index.md"
+    "id": 7717,
+    "path": "/roadmap/danksharding/index.md"
   },
   {
-    "id": 3056,
-    "path": "/developers/tutorials/deploying-your-first-smart-contract/index.md"
+    "id": 7725,
+    "path": "/roadmap/pbs/index.md"
   },
   {
-    "id": 3070,
-    "path": "/developers/tutorials/waffle-say-hello-world-with-hardhat-and-ethers/index.md"
+    "id": 7733,
+    "path": "/roadmap/secret-leader-election/index.md"
   },
   {
-    "id": 3074,
-    "path": "/developers/tutorials/how-to-implement-an-erc721-market/index.md"
+    "id": 7741,
+    "path": "/roadmap/single-slot-finality/index.md"
   },
   {
-    "id": 3092,
-    "path": "/developers/tutorials/using-websockets/index.md"
+    "id": 7745,
+    "path": "/roadmap/statelessness/index.md"
   },
   {
-    "id": 3148,
-    "path": "/developers/tutorials/solidity-and-truffle-continuous-integration-setup/index.md"
+    "id": 7753,
+    "path": "/roadmap/verkle-trees/index.md"
   },
   {
-    "id": 3156,
-    "path": "/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/index.md"
+    "id": 6398,
+    "path": "/adding-developer-tools/index.md"
   },
   {
-    "id": 3164,
-    "path": "/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/index.md"
+    "id": 6400,
+    "path": "/adding-exchanges/index.md"
   },
   {
-    "id": 6241,
-    "path": "/developers/tutorials/create-and-deploy-a-defi-app/index.md"
+    "id": 6404,
+    "path": "/adding-glossary-terms/index.md"
   },
   {
-    "id": 6259,
-    "path": "/developers/tutorials/how-to-use-tellor-as-your-oracle/index.md"
+    "id": 6408,
+    "path": "/adding-products/index.md"
   },
   {
-    "id": 6261,
-    "path": "/developers/tutorials/learn-foundational-ethereum-topics-with-sql/index.md"
+    "id": 6416,
+    "path": "/content-resources/index.md"
   },
   {
-    "id": 6263,
-    "path": "/developers/tutorials/monitoring-geth-with-influxdb-and-grafana/index.md"
+    "id": 6446,
+    "path": "/adding-layer-2s/index.md"
   },
   {
-    "id": 6265,
-    "path": "/developers/tutorials/testing-erc-20-tokens-with-waffle/index.md"
+    "id": 6448,
+    "path": "/adding-staking-products/index.md"
   },
   {
-    "id": 6436,
-    "path": "/developers/tutorials/optimism-std-bridge-annotated-code/index.md"
+    "id": 7565,
+    "path": "/adding-wallets/index.md"
   },
   {
-    "id": 7304,
-    "path": "/developers/tutorials/short-abi/index.md"
+    "id": 7569,
+    "path": "/adding-desci-projects/index.md"
+  },
+  {
+    "id": 7939,
+    "path": "/design/adding-design-resources/index.md"
+  },
+  {
+    "id": 8007,
+    "path": "/quizzes/index.md"
   }
 ]

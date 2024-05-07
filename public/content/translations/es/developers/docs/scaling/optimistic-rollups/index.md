@@ -208,7 +208,7 @@ Como se explicó, los rollups optimistas publican datos de transacciones comprim
 
 La cadena principal de Ethereum pone límites a la cantidad de bloques de datos que pueden contener, denominados en unidades de gas (el [tamaño promedio del bloque](/developers/docs/blocks/#block-size) es de 15 millones de gas). Si bien esto restringe la cantidad de gas que puede usar cada transacción, también significa que podemos aumentar las transacciones procesadas por bloque reduciendo los datos relacionados con las transacciones, mejorando directamente la escalabilidad.
 
-Los rollups optimistas utilizan varias técnicas para lograr la compresión de los datos de las transacciones y mejorar las tasas de TPS. Por ejemplo, este [artículo](https://vitalik.eth.limo/general/2021/01/05/rollup.html) compara los datos que una transacción de usuario básica (enviando ether) genera en la red principal con la cantidad de datos que genera la misma transacción en un rollup:
+Los rollups optimistas utilizan varias técnicas para lograr la compresión de los datos de las transacciones y mejorar las tasas de TPS. Por ejemplo, este [artículo](https://vitalik.eth.limo/general/2021/01/05/rollup.html) compara los datos que una transacción básica de usuario (envío de ether) genera en la red principal con la cantidad de datos que genera la misma transacción en un rollup:
 
 | Parámetro     | Ethereum (L1)           | Rollup (L2)   |
 | ------------- | ----------------------- | ------------- |
@@ -258,7 +258,6 @@ Existen múltiples implementaciones de rollups optimistas que puede integrar en 
 ## Bibliografía para profundizar sobre los rollups optimistas
 
 - [¿Cómo funcionan los rollups optimistas? (La guía completa)](https://www.alchemy.com/overviews/optimistic-rollups)
-- [Todo lo que debe saber sobre rollups optimistas](https://research.paradigm.xyz/rollups)
 - [Guía esencial sobre Arbitrum](https://newsletter.banklesshq.com/p/the-essential-guide-to-arbitrum)
 - [¿Cómo funcionan realmente los rollup optimistas?](https://www.paradigm.xyz/2021/01/how-does-optimisms-rollup-really-work)
 - [Análisis detallado de OVM](https://medium.com/ethereum-optimism/ovm-deep-dive-a300d1085f52)

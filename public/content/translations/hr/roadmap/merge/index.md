@@ -11,7 +11,7 @@ summaryPoint3: Spajanjem je spojena izvorna glavna mreža Ethereumu sa zasebnim 
 summaryPoint4: Spajanjem je potrošnja energije Ethereuma smanjena za približno 99,95 %.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   Spajanje je provedeno 15. rujna 2022. Dovršeni prijelaz Ethereuma na konsenzus dokaza uloga službeno je zamijenio dokaz rada i smanjio potrošnju energije za približno 99,95 %.
 </UpgradeStatus>
 

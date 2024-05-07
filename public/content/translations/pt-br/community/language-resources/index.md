@@ -16,7 +16,9 @@ Conhece algum recurso educacional em sua língua? [Abra uma solicitação](https
 
 ## Recursos em Ethereum.org {#ethereum-org}
 
-Ethereum.org é traduzido nativamente para mais de 40 idiomas que você pode encontrar em nossa [página de idiomas](/languages).
+Ethereum.org é traduzido nativamente para mais de 40 idiomas que você pode encontrar em nossa página de idiomas.
+
+![Language selector menu](./language-selector-menu.png)
 
 Se você for bilíngue e deseja nos ajudar a alcançar mais pessoas, também pode fazer parte do [Programa de tradução da ethereum.org](/contributing/translation-program/#translation-program) e nos ajudar a traduzir o site.
 

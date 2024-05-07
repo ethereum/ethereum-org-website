@@ -89,6 +89,8 @@
   "layer-2-go-to": "Go to",
   "layer-2-tools-title": "Tools to be effective on layer 2",
   "layer-2-tools-l2beat-description": "L2BEAT is a great resource for looking at technical risk assessments of layer 2 projects. We recommend checking out their resources when researching specific layer 2 projects.",
+  "layer-2-tools-growthepie-description": "Curated analytics about Ethereun layer 2s",
+  "layer-2-tools-ethereumecosystem-description": "Unofficial Ecosystem page of Ethereum and its Layer 2s including Base, Optimism, and Starknet featuring hundreds of dApps and tools.",
   "layer-2-tools-growthepie-description": "Curated analytics about Ethereum layer 2s",
   "layer-2-tools-l2fees-description": "L2 Fees lets you see the current cost (denominated in USD) for doing transactions on different layer 2s.",
   "layer-2-tools-chainlist-description": "Chainlist is a great resource for importing network RPC's into supporting wallets. You will find RPC's for layer 2 projects here to help get you connected.",

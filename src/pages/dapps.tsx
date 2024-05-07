@@ -1647,11 +1647,7 @@ const DappsPage = () => {
               <Column>
                 <StyledH2>
                   {t("page-dapps-collectibles-title")}{" "}
-                  <Emoji
-                    fontSize="5xl"
-                    ms={"0.5rem"}
-                    text=":frame_with_picture:"
-                  />
+                  <Emoji fontSize="5xl" ms={2} text=":frame_with_picture:" />
                 </StyledH2>
                 <Subtitle>{t("page-dapps-collectibles-description")}</Subtitle>
               </Column>

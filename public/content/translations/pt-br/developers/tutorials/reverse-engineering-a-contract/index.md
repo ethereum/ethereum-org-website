@@ -662,7 +662,7 @@ Sabemos que `unknown2eb4a7ab` é na verdade a função `merkleRoot()`, então es
 
 As duas linhas mais abaixo nos dizem que o Armazenamento[2] também é um contrato que chamamos. Se nós [olharmos a transação do construtor](https://etherscan.io/tx/0xa1ea0549fb349eb7d3aff90e1d6ce7469fdfdcd59a2fd9b8d1f5e420c0d05b58#statechange), veremos que este contrato é o [0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2), um contrato de Ether encapsulado [cujo código-fonte foi carregado no Etherscan](https://etherscan.io/address/0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2#code).
 
-Assim, parece que os contratos tentam enviar ETH para `_param2`. Se puder fazer isso, ótimo. Se não, ele tenta enviar [WETH](https://weth.io/). Se `_param2` for uma conta de propriedade externa (EOA), então ele sempre pode receber ETH, mas os contratos podem se recusar a receber ETH. No entanto, WETH é ERC-20 e os contratos não podem se recusar a aceitar isso.
+Assim, parece que os contratos tentam enviar ETH para `_param2`. Se puder fazer isso, ótimo. Se não, ele tenta enviar [WETH](https://weth.tkn.eth.limo/). Se `_param2` for uma conta de propriedade externa (EOA), então ele sempre pode receber ETH, mas os contratos podem se recusar a receber ETH. No entanto, WETH é ERC-20 e os contratos não podem se recusar a aceitar isso.
 
 ```python
   ...
