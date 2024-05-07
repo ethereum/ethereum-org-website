@@ -1193,9 +1193,7 @@ Si `window.ethereum` _no está_ presente, eso significa que MetaMask no está in
 
 Ahora, si `window.ethereum` _está_ presente, las cosas se ponen interesantes.
 
-Al utilizar un bucle de intentar/atrapar, intentaremos conectarnos a MetaMask ejecutando
-
-window.ethereum.request({ method: "eth_requestAccounts" });</code>. La invocación de esta función abrirá MetaMask en el navegador, donde se le solicitará al usuario conectar su billetera a su dapp.</p> 
+Al utilizar un bucle de intentar/atrapar, intentaremos conectarnos a MetaMask ejecutando [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). La invocación de esta función abrirá MetaMask en el navegador, donde se le solicitará al usuario conectar su billetera a su dapp.
 
 - Si el usuario decide conectarse, `method: "eth_requestAccounts"` devolverá una matriz que contiene todas las direcciones de cuenta del usuario que se conectaron a la DApp. De igual manera, nuestra función `connectWallet` devolverá un objeto JSON que contine la _primera_ `address` de este arreglo \(ver la línea 9\) y un mensaje de `status` que solicita al usuario escribir un mensaje al contrato inteligente.
 - Si el usuario rechaza la conexión, el objeto JSON tendrá una cadena vacía para la `address` devuelta y un mensaje de `status` donde se refleje que el usuario rechazó la conexión.

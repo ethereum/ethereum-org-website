@@ -6,7 +6,7 @@ lang: es
 tags:
   - "python"
   - "web3.py"
-skill: principiante
+skill: beginner
 published: 2020-09-08
 source: Encantadores de serpientes
 sourceUrl: https://snakecharmers.ethereum.org/a-developers-guide-to-ethereum-pt-1/
@@ -39,9 +39,9 @@ Hay muchas maneras de describir Ethereum, pero en su esencia es una cadena de bl
 }
 ```
 
-Cada [bloque](/developers/docs/blocks/) tiene una referencia al bloque anterior; el `parentHash` es el hash a ese bloque previo.<FeaturedText>Nota: Ethereum hace un uso regular de las 
+Cada [bloque](/developers/docs/blocks/) tiene una referencia al bloque anterior; el `parentHash` es el hash a ese bloque previo.
 
-[funciones hash](https://wikipedia.org/wiki/Hash_function) para producir valores de tamaño fijo («hashes»). Los hashes desempeñan un importante papel en Ethereum; por ahora, puede considerarlos como identificadores únicos.</FeaturedText>
+<FeaturedText>Nota: Ethereum hace un uso regular de las <a href="https://wikipedia.org/wiki/Hash_function">funciones hash</a> para producir valores de tamaño fijo («hashes»). Los hashes desempeñan un importante papel en Ethereum; por ahora, puede considerarlos como identificadores únicos.</FeaturedText>
 
 ![Un diagrama que representa a la cadena de bloques incluyendo datos dentro de cada bloque](./blockchain-diagram.png)
 
@@ -284,9 +284,9 @@ Out[13]: 1000003000000000000000000
 
 ¡El último parece ser correcto! El saldo ha pasado de 1.000.000 a 1.000.003 ether. Pero, ¿qué pasó con la primera cuenta? Parece que perdió algo más de tres ether. Desafortunadamente, nada en esta vida es gratis; hacer uso de la red pública de Ethereum requiere compensar a las personas que cumplen con su rol de apoyo. Se dedujo una pequeña comisión de transacción de la cuenta que envió la transacción: esta comisión es la cantidad de gas quemado (21.000 unidades de gas para una transferencia de ETH) multiplicada por una tarifa base que varía según la actividad de la red más una propina que va al validador que incluye la transacción en un bloque.
 
-Más información sobre el [gas](/developers/docs/gas/#post-london)<FeaturedText>Nota: en la red pública, el coste de las comisiones por transacción es variable, este se basa en la demanda de la red y en la rapidez con la que se desee procesar una transacción. Si quiere saber cómo se calculan las comisiones, lea mi artículo anterior, en donde describo 
+Más información sobre el [gas](/developers/docs/gas/#post-london)
 
-[cómo se incluyen las transacciones en un bloque](https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f).</FeaturedText>
+<FeaturedText>Nota: en la red pública, el coste de las comisiones por transacción es variable, este se basa en la demanda de la red y en la rapidez con la que se desee procesar una transacción. Si quiere saber cómo se calculan las comisiones, lea mi artículo anterior, en donde describo <a href="https://medium.com/ethereum-grid/ethereum-101-how-are-transactions-included-in-a-block-9ae5f491853f">cómo se incluyen las transacciones en un bloque</a>.</FeaturedText>
 
 ## Tómese un respiro {#and-breathe}
 

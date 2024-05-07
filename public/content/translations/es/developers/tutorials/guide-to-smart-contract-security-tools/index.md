@@ -19,7 +19,7 @@ Vamos a usar tres técnicas distintas para el análisis de pruebas y programas:
 - **Fuzzing (auditorías de seguridad) con [Echidna](/developers/tutorials/how-to-use-echidna-to-test-smart-contracts/).** El código se ejecuta con una generación pseudoaleatoria de transacciones. El fuzzer tratará de encontrar una secuencia de transacciones para infringir una propiedad determinada.
 - **Ejecución simbólica con [Manticore](/developers/tutorials/how-to-use-manticore-to-find-smart-contract-bugs/).** Una técnica de verificación formal, que traduce cada ruta de ejecución a una fórmula matemática, en la que se pueden comprobar las restricciones superiores.
 
-Cada técnica tiene ventajas y obstáculos que serán útiles en <a href=“#determining-security-properties”>casos específicos</a>:
+Cada técnica tiene ventajas y obstáculos que serán útiles en [casos específicos](#determining-security-properties):
 
 | Técnica             | Herramienta | Uso                               | Velocidad | Errores perdidos | Falsas alarmas |
 | ------------------- | ----------- | --------------------------------- | --------- | ---------------- | -------------- |
