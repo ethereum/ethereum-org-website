@@ -18,7 +18,7 @@ A DAO egy közös tulajdonú szervezet, amely egy közös küldetésért dolgozi
 
 A DAO-k lehetőséget biztosítanak számunkra, hogy hozzánk hasonló elhivatottságú emberekkel dolgozzunk a világ minden tájáról anélkül, hogy egy központi vezetőre bíznánk a pénzügyi és operatív működtetést. Nincs olyan vezérigazgató, aki a kedve szerint költhetné el az alapokat, vagy olyan pénzügyi vezető, aki manipulálhatná a könyvelést. Helyette a kódba épített, blokkláncon alapuló szabályok határozzák meg, hogyan működik a szervezet és kerülnek elköltésre az alapok.
 
-Beépített pénztárakkal rendelkeznek, amelyekhez a csoport jóváhagyása nélkül senkinek sincs jogosultsága hozzáférni. A döntéseket a javaslatok és a szavazás szabályozzák, így biztosítva, hogy a szervezetben mindenki megszólaljon, és minden átláthatóan, [láncon belül](/glossary/#on-chain) történjen.
+Beépített pénztárakkal rendelkeznek, amelyekhez a csoport jóváhagyása nélkül senkinek sincs jogosultsága hozzáférni. A döntéseket a javaslatok és a szavazás szabályozzák, így biztosítva, hogy a szervezetben mindenki megszólaljon, és minden átláthatóan, [on-láncon](/glossary/#on-chain) történjen.
 
 ## Miért van szükségünk DAO-kra? {#why-dao}
 
@@ -44,261 +44,117 @@ Annak érdekében, hogy még érthetőbbé tegyük a DAO-k működését, az al�
 - **Közös tulajdonjog** – vásárolhat fizikai vagy digitális eszközöket, és a tagok szavazhatnak a használatukról.
 - **Kockázati tőke és támogatás** – létrehozhat egy kockázatitőke-alapot, mely befektetési tőkét gyűjt, és szavazással válaszhatók ki a támogatandó vállalkozások. A visszaérkező összegeket pedig később szétoszthatják a DAO tagjai között.
 
-<iframe src="https://embed.ted.com/talks/lang/en/scott_fitsimones_could_a_dao_build_the_next_great_city" ></p>
+## Hogyan működnek a DAO-k? {#how-daos-work}
 
-<h2 id="how-daos-work" spaces-before="0">
-  Hogyan működnek a DAO-k?
-</h2>
+A DAO gerincét az [intelligens szerződés](/glossary/#smart-contract) adja, amely meghatározza a szervezet szabályait és birtokolja a csoport pénztárát. Amint a szerződés életbe lép az Ethereumon, csakis szavazás útján lehet módosítani a szabályokat. Ha valaki olyat próbál tenni, ami nem szerepel a szabályokban és a programlogikában, az meghiúsul. Mivel a társaság pénzügyeit is az okosszerződés határozza meg, ezért a csoport jóváhagyása nélkül senki sem költheti el a pénzösszegeket. Tehát a DAO-nak nincs szüksége központi hatóságra. Ehelyett a csoport közösen hoz döntéseket, a kifizetések pedig automatikusan jóváhagyásra kerülnek a szavazás eredményeként.
 
-<p spaces-before="0">
-  A DAO gerincét az <a href="/glossary/#smart-contract">intelligens szerződés</a> adja, amely meghatározza a szervezet szabályait és birtokolja a csoport pénztárát. Amint a szerződés életbe lép az Ethereumon, csakis szavazás útján lehet módosítani a szabályokat. Ha valaki olyat próbál tenni, ami nem szerepel a szabályokban és a programlogikában, az meghiúsul. Mivel a társaság pénzügyeit is az okosszerződés határozza meg, ezért a csoport jóváhagyása nélkül senki sem költheti el a pénzösszegeket. Tehát a DAO-nak nincs szüksége központi hatóságra. Ehelyett a csoport közösen hoz döntéseket, a kifizetések pedig automatikusan jóváhagyásra kerülnek a szavazás eredményeként.
-</p>
+Mindez azért lehetséges, mert az okosszerződést nem lehet önkényesen megváltoztatni vagy meghamisítani, amikor már életbe lépett az Ethereumon. Senki sem tudja módosítani a programkódot (a DAO szabályait) anélkül, hogy mások azt észre ne vennék, mivel minden nyilvános.
 
-<p spaces-before="0">
-  Mindez azért lehetséges, mert az okosszerződést nem lehet önkényesen megváltoztatni vagy meghamisítani, amikor már életbe lépett az Ethereumon. Senki sem tudja módosítani a programkódot (a DAO szabályait) anélkül, hogy mások azt észre ne vennék, mivel minden nyilvános.
-</p>
+## Az Ethereum és a DAO-k {#ethereum-and-daos}
 
-<h2 id="ethereum-and-daos" spaces-before="0">
-  Az Ethereum és a DAO-k
-</h2>
+Az Ethereum tökéletes alapot szolgáltat a DAO-knak számtalan okból kifolyólag:
 
-<p spaces-before="0">
-  Az Ethereum tökéletes alapot szolgáltat a DAO-knak számtalan okból kifolyólag:
-</p>
+- Az Ethereum saját konszenzusmechanizmusa kellőképpen kiterjedt és megalapozott ahhoz, hogy a szervezetek megbízzanak a hálózatban.
+- Az okosszerződés tartalmát nem lehet módosítani, miután életbe lépett, még a tulajdonosok sem módosíthatják azt. Ennek következtében a DAO a meghatározott szabályok alapján fog működni.
+- Az okosszerződések képesek pénzeszközöket küldeni és fogadni. Enélkül szükség lenne egy megbízható közvetítőre, aki a csoport eszközeit kezelné.
+- Az Ethereum közössége bizonyítottan együttműködő, nem versenyszellemű, így a bevált gyakorlatok és a támogatórendszerek gyorsan kialakulnak.
 
-<ul>
-  <li>
-    Az Ethereum saját konszenzusa decentralizált és eléggé megalapozott ahhoz, hogy a szervezetek megbízhassanak a hálózatban.
-  </li>
-  <li>
-    Az okosszerződés tartalmát nem lehet módosítani, miután életbe lépett, még a tulajdonosok sem módosíthatják azt. Ennek következtében a DAO a meghatározott szabályok alapján fog működni.
-  </li>
-  <li>
-    Az okosszerződések képesek pénzeszközöket küldeni és fogadni. Enélkül szükség lenne egy megbízható közvetítőre, aki a csoport eszközeit kezelné.
-  </li>
-  <li>
-    Az Ethereum közössége bizonyítottan együttműködő, nem versenyszellemű, így a bevált gyakorlatok és a támogatórendszerek gyorsan kialakulnak.
-  </li>
-</ul>
+## A DAO irányítása {#dao-governance}
 
-<h2 id="dao-governance" spaces-before="0">
-  A DAO irányítása
-</h2>
+A DAO irányításakor számtalan szempontot figyelembe kell venni, mint például a szavazás menete és a javaslatok kezelése.
 
-<p spaces-before="0">
-  A DAO irányításakor számtalan szempontot figyelembe kell venni, mint például a szavazás menete és a javaslatok kezelése.
-</p>
+### Delegáció {#governance-delegation}
 
-<h3 id="governance-delegation" spaces-before="0">
-  Delegáció
-</h3>
+A delegáció vagy felhatalmazás a DAO verziója a képviselőalapú demokráciának. A tokenek birtokosai átadják szavazati jogaikat olyan felhasználóknak, akik vállalják, hogy felügyelik a protokollt és tájékozódnak az ügyeket illetően.
 
-<p spaces-before="0">
-  A delegáció vagy felhatalmazás a DAO verziója a képviselőalapú demokráciának. A tokenek birtokosai átadják szavazati jogaikat olyan felhasználóknak, akik vállalják, hogy felügyelik a protokollt és tájékozódnak az ügyeket illetően.
-</p>
+#### Egy híres példa {#governance-example}
 
-<h4 id="governance-example" spaces-before="0">
-  Egy híres példa
-</h4>
+[ENS](https://claim.ens.domains/delegate-ranking) – Az ENS-tulajdonosok átruházhatják szavazataikat a közösség elkötelezett tagjaira, hogy képviseljék őket.
 
-<p spaces-before="0">
-  <a href="https://claim.ens.domains/delegate-ranking">ENS</a> – Az ENS-tulajdonosok átruházhatják szavazataikat a közösség elkötelezett tagjaira, hogy képviseljék őket.
-</p>
+### Automatikus tranzakciókon alapuló irányítás {#governance-example}
 
-<h3 id="governance-example" spaces-before="0">
-  Automatikus tranzakciókon alapuló irányítás
-</h3>
+Számos DAO-nál a tranzakciók automatikusan végrehajtódnak, ha a tagok határozatképes létszámban megszavazzák azt.
 
-<p spaces-before="0">
-  Számos DAO-nál a tranzakciók automatikusan végrehajtódnak, ha a tagok határozatképes létszámban megszavazzák azt.
-</p>
+#### Egy híres példa {#governance-example}
 
-<h4 id="governance-example" spaces-before="0">
-  Egy híres példa
-</h4>
+[Főnevek](https://nouns.wtf) – A Nouns DAO-ban a tranzakció automatikusan végrehajtásra kerül, ha a szavazatok határozatképessége teljesül, és a többség igennel szavaz, mindaddig, amíg az alapítók nem vétózzák meg.
 
-<p spaces-before="0">
-  <a href="https://nouns.wtf">Főnevek</a> – A Nouns DAO-ban a tranzakció automatikusan végrehajtásra kerül, ha a szavazatok határozatképessége teljesül, és a többség igennel szavaz, mindaddig, amíg az alapítók nem vétózzák meg.
-</p>
+### Több aláírásos irányítás {#governance-example}
 
-<h3 id="governance-example" spaces-before="0">
-  Több aláírásos irányítás
-</h3>
+Míg a DAO-k több ezer szavazati joggal rendelkező taggal rendelkezhetnek, az alapok egy [pénztárcában](/glossary/#wallet) élhetnek, amelyen 5-20 aktív közösségtag osztozik, akikben megbíznak és általában doxxelnek (a közösség által ismert nyilvános identitások). Szavazás után a [multisig](/glossary/#multisig) aláírók végrehajtják a közösség akaratát.
 
-<p spaces-before="0">
-  Míg a DAO-k több ezer szavazati joggal rendelkező taggal rendelkezhetnek, az alapok egy <a href="/glossary/#wallet">pénztárcában</a> élhetnek, amelyen 5-20 aktív közösségtag osztozik, akikben megbíznak és általában doxxelnek (a közösség által ismert nyilvános identitások). Szavazás után a <a href="/glossary/#multisig">multisig</a> aláírók végrehajtják a közösség akaratát.
-</p>
+## A DAO törvényei {#dao-laws}
 
-<h2 id="dao-laws" spaces-before="0">
-  A DAO törvényei
-</h2>
+1977-ben Wyoming megalkotta a korlátolt felelősségű társasági formát, mely megvédi a vállalkozót és behatárolja a felelősségi körüket. Nemrég elsőként hozták létre a DAO-kra vonatkozó törvényt, mely jogi státuszt ad a DAO-knak. Jelenleg Wyoming, Vermont és a Virgin-szigetek rendelkeznek DAO-törvénnyel valamilyen formában.
 
-<p spaces-before="0">
-  1977-ben Wyoming megalkotta a korlátolt felelősségű társasági formát, mely megvédi a vállalkozót és behatárolja a felelősségi körüket. Nemrég elsőként hozták létre a DAO-kra vonatkozó törvényt, mely jogi státuszt ad a DAO-knak. Jelenleg Wyoming, Vermont és a Virgin-szigetek rendelkeznek DAO-törvénnyel valamilyen formában.
-</p>
+### Egy híres példa {#law-example}
 
-<h3 id="law-example" spaces-before="0">
-  Egy híres példa
-</h3>
+[CityDAO](https://citydao.io) – A CityDAO 40 hektár földet vett a Yellowstone Nemzeti Park közelében Wyoming DAO-törvényével élve.
 
-<p spaces-before="0">
-  <a href="https://citydao.io">CityDAO</a> – A CityDAO 40 hektár földet vett a Yellowstone Nemzeti Park közelében Wyoming DAO-törvényével élve.
-</p>
+## DAO-tagság {#dao-membership}
 
-<h2 id="dao-membership" spaces-before="0">
-  DAO-tagság
-</h2>
+A DAO-tagságra különféle modellek léteznek. A tagság meghatározza a szavazás menetét, illetve a DAO más kulcsfontosságú részleteit.
 
-<p spaces-before="0">
-  A DAO-tagságra különféle modellek léteznek. A tagság meghatározza a szavazás menetét, illetve a DAO más kulcsfontosságú részleteit.
-</p>
+### Tokenalapú tagság {#token-based-membership}
 
-<h3 id="token-based-membership" spaces-before="0">
-  Tokenalapú tagság
-</h3>
+Általában teljesen [engedély nélküli](/glossary/#permissionless), a használt tokentől függően. Ezekkel az irányítási tokenekkel többnyire engedély nélkül lehet kereskedni [decentralizált tőzsdén](/glossary/#dex). Más tokenek megszerzéséhez likviditást kell biztosítani vagy más munkaigazolás (proof-of-work) szükséges. Bármelyik módon is jut hozzá, a token maga biztosítja a szavazati jogot.
 
-<p spaces-before="0">
-  Általában teljesen <a href="/glossary/#permissionless">engedély nélküli</a>, a használt tokentől függően. Ezekkel az irányítási tokenekkel többnyire engedély nélkül lehet kereskedni <a href="/glossary/#dex">decentralizált tőzsdén</a>. Más tokenek megszerzéséhez likviditást kell biztosítani vagy más munkaigazolás (proof-of-work) szükséges. Bármelyik módon is jut hozzá, a token maga biztosítja a szavazati jogot.
-</p>
+_Főleg arra használják, hogy kiterjedt, decentralizált protokollokat és/vagy magukat a tokeneket irányítsák ezáltal._
 
-<p spaces-before="0">
-  <em x-id="4">Főleg arra használják, hogy kiterjedt, decentralizált protokollokat és/vagy magukat a tokeneket irányítsák ezáltal.</em>
-</p>
+#### Egy híres példa {#token-example}
 
-<h4 id="token-example" spaces-before="0">
-  Egy híres példa
-</h4>
+[MakerDAO](https://makerdao.com) – A MakerDAO tokenje, az MKR, széles körben elérhető a decentralizált tőzsdéken, s bárki beszerezheti azokat, hogy szavazati jogot nyerjen a Maker protokoll jövőjére vonatkozóan.
 
-<p spaces-before="0">
-  <a href="https://makerdao.com">MakerDAO</a> – A MakerDAO tokenje, az MKR, széles körben elérhető a decentralizált tőzsdéken, s bárki beszerezheti azokat, hogy szavazati jogot nyerjen a Maker protokoll jövőjére vonatkozóan.
-</p>
+### Részesedésalapú tagság {#share-based-membership}
 
-<h3 id="share-based-membership" spaces-before="0">
-  Részesedésalapú tagság
-</h3>
+A részesedésalapú DAO-k sokkal inkább engedélyhez kötöttek, de még mindig elég nyitottak. Bármelyik leendő tag beadhat egy csatlakozási kérvényt, melyben általában felajánl valamilyen értéket tokenek vagy elvégzendő munka (például számítási kapacitás) formájában. A részesedés közvetlen szavazati és tulajdonjogot jelent. A tagok bármikor kiléphetnek az arányos részesedésükkel együtt.
 
-<p spaces-before="0">
-  A részesedésalapú DAO-k sokkal inkább engedélyhez kötöttek, de még mindig elég nyitottak. Bármelyik leendő tag beadhat egy csatlakozási kérvényt, melyben általában felajánl valamilyen értéket tokenek vagy elvégzendő munka (például számítási kapacitás) formájában. A részesedés közvetlen szavazati és tulajdonjogot jelent. A tagok bármikor kiléphetnek az arányos részesedésükkel együtt.
-</p>
+_Főleg a szorosabb szerveződésű, emberközpontú szervezetek használják, mint az adománygyűjtők, munkaközösségek és befektetési klubok. Ezt is használhatják protokollok és tokenek irányítására._
 
-<p spaces-before="0">
-  <em x-id="4">Főleg a szorosabb szerveződésű, emberközpontú szervezetek használják, mint az adománygyűjtők, munkaközösségek és befektetési klubok. Ezt is használhatják protokollok és tokenek irányítására.</em>
-</p>
+#### Egy híres példa {#share-example}
 
-<h4 id="share-example" spaces-before="0">
-  Egy híres példa
-</h4>
+[MolochDAO](http://molochdao.com/) – A MolochDAO az Ethereum projektek finanszírozására összpontosít. A tagságot kérvényezni kell, melynek alapján a csoport eldönti, vajon az új tag rendelkezik a szükséges szakértelemmel és tőkével, hogy megfelelő döntést tudjon hozni a lehetséges támogatottakról. Nem lehetséges megvásárolni a DAO-tagságot a piacon.
 
-<p spaces-before="0">
-  <a href="http://molochdao.com/">MolochDAO</a> – A MolochDAO az Ethereum projektek finanszírozására összpontosít. A tagságot kérvényezni kell, melynek alapján a csoport eldönti, vajon az új tag rendelkezik a szükséges szakértelemmel és tőkével, hogy megfelelő döntést tudjon hozni a lehetséges támogatottakról. Nem lehetséges megvásárolni a DAO-tagságot a piacon.
-</p>
+### Reputációalapú tagság {#reputation-based-membership}
 
-<h3 id="reputation-based-membership" spaces-before="0">
-  Reputációalapú tagság
-</h3>
+A reputáció a részvételt igazolja és szavazati jogot biztosít a DAO-ban. A token- és részesedésalapú tagsággal ellentétben a reputációalapú DAO nem ad tulajdonjogot a közreműködőknek. A reputációt nem lehet megvenni, átadni vagy delegálni; a DAO tagok a részvételükkel nyerik el azt. A láncon belüli szavazás nem engedélyhez kötött, a leendő tagok szabadon kérvényezhetik a DAO-hoz való csatlakozást, illetve azt, hogy a közreműködésükért cserébe reputációt és tokent kapjanak.
 
-<p spaces-before="0">
-  A reputáció a részvételt igazolja és szavazati jogot biztosít a DAO-ban. A token- és részesedésalapú tagsággal ellentétben a reputációalapú DAO nem ad tulajdonjogot a közreműködőknek. A reputációt nem lehet megvenni, átadni vagy delegálni; a DAO tagok a részvételükkel nyerik el azt. A láncon belüli szavazás nem engedélyhez kötött, a leendő tagok szabadon kérvényezhetik a DAO-hoz való csatlakozást, illetve azt, hogy a közreműködésükért cserébe reputációt és tokent kapjanak.
-</p>
+_Jellemzően protokollok és [dapp-ok](/glossary/#dapp) decentralizált fejlesztésére és irányítására használják, de kiválóan alkalmas különféle szervezetek, például jótékonysági szervezetek, munkavállalói kollektívák, befektetési klubok stb._
 
-<p spaces-before="0">
-  <em x-id="4">Jellemzően protokollok és <a href="/glossary/#dapp">dapp-ok</a> decentralizált fejlesztésére és irányítására használják, de kiválóan alkalmas különféle szervezetek, például jótékonysági szervezetek, munkavállalói kollektívák, befektetési klubok stb. számára is</em>
-</p>
+#### Egy híres példa {#reputation-example}
 
-<h4 id="reputation-example" spaces-before="0">
-  Egy híres példa
-</h4>
+[DXdao](https://DXdao.eth.link) – A DXdao egy független globális csoportosulás, amely 2019 óta épít és irányít decentralizált protokollokat és alkalmazásokat. A hírnév alapú kormányzást és a [holografikus konszenzust](/glossary/#holographic-consensus) kihasználja az alapok koordinálásához és kezeléséhez, ami azt jelenti, hogy senki sem vásárolhatja meg magát a jövőjének befolyásolásában.
 
-<p spaces-before="0">
-  <a href="https://DXdao.eth.link">DXdao</a> – A DXdao egy független globális csoportosulás, amely 2019 óta épít és irányít decentralizált protokollokat és alkalmazásokat. A hírnév alapú kormányzást és a <a href="/glossary/#holographic-consensus">holografikus konszenzust</a> kihasználja az alapok koordinálásához és kezeléséhez, ami azt jelenti, hogy senki sem vásárolhatja meg magát a jövőjének befolyásolásában.
-</p>
+## Csatlakozás DAO-hoz / DAO indítása {#join-start-a-dao}
 
-<h2 id="join-start-a-dao" spaces-before="0">
-  Csatlakozás DAO-hoz / DAO indítása
-</h2>
+### Csatlakozzon egy DAO-hoz {#join-a-dao}
 
-<h3 id="join-a-dao" spaces-before="0">
-  Csatlakozzon egy DAO-hoz
-</h3>
+- [Az Ethereum-közösséghez tartozó DAO-k](/community/get-involved/#decentralized-autonomous-organizations-daos)
+- [DAOHaus által listázott DAO-k](https://app.daohaus.club/explore)
+- [Tally.xyz által listázott DAO-k](https://www.tally.xyz)
 
-<ul>
-  <li>
-    <a href="/community/get-involved/#decentralized-autonomous-organizations-daos">Az Ethereum-közösséghez tartozó DAO-k</a>
-  </li>
-  <li>
-    <a href="https://app.daohaus.club/explore">DAOHaus által listázott DAO-k</a>
-  </li>
-  <li>
-    <a href="https://www.tally.xyz">Tally.xyz által listázott DAO-k</a>
-  </li>
-</ul>
+### DAO indítása {#start-a-dao}
 
-<h3 id="start-a-dao" spaces-before="0">
-  DAO indítása
-</h3>
+- [Indítson DAO-t a DAOHaus-szal](https://app.daohaus.club/summon)
+- [Indítson irányító DAO-t a Tally-vel](https://www.tally.xyz/add-a-dao)
+- [Hozzon létre egy Aragon által működtetett DAO-t](https://aragon.org/product)
+- [Hozzon létre csoportot a Colony-val](https://colony.io/)
+- [Indítson DAO-t a DAOstack által biztosított holografikus konszenzussal](https://alchemy.daostack.io/daos/create)
 
-<ul>
-  <li>
-    <a href="https://app.daohaus.club/summon">Indítson DAO-t a DAOHaus-szal</a>
-  </li>
-  <li>
-    <a href="https://www.tally.xyz/add-a-dao">Indítson irányító DAO-t a Tally-vel</a>
-  </li>
-  <li>
-    <a href="https://aragon.org/product">Hozzon létre egy Aragon által működtetett DAO-t</a>
-  </li>
-  <li>
-    <a href="https://colony.io/">Hozzon létre csoportot a Colony-val</a>
-  </li>
-  <li>
-    <a href="https://alchemy.daostack.io/daos/create">Indítson DAO-t a DAOstack által biztosított holografikus konszenzussal</a>
-  </li>
-</ul>
+## További információ {#further-reading}
 
-<h2 id="further-reading" spaces-before="0">
-  További olvasnivaló
-</h2>
+### DAO-ról szóló cikkek {#dao-articles}
 
-<h3 id="dao-articles" spaces-before="0">
-  DAO-ról szóló cikkek
-</h3>
+- [Mi az a DAO?](https://aragon.org/dao) – [Aragon](https://aragon.org/)
+- [DAO-k háza](https://wiki.metagame.wtf/docs/great-houses/house-of-daos) – [Metagame](https://wiki.metagame.wtf/)
+- [Mi az a DAO és mire jó?](https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for) – [DAOhaus](https://daohaus.club/)
+- [Hogyan lehet létrehozni egy DAO által működtetett digitális közösséget](https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a) – [DAOhaus](https://daohaus.club/)
+- [Mi az a DAO?](https://coinmarketcap.com/alexandria/article/what-is-a-dao) – [Coinmarketcap](https://coinmarketcap.com)
+- [Mi az a holografikus konszenzus?](https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c) – [DAOstack](https://daostack.io/)
+- [A DAO-k nem vállalatok: hol van a legnagyobb jelentősége a decentralizációnak az autonóm szervezetekben – Vitalik](https://vitalik.eth.limo/general/2022/09/20/daos.html)
+- [DAO, DAC, DA és mások: egy nem teljes terminológiai útmutató](https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide) – [Ethereum Blog](https://blog.ethereum.org)
 
-<ul>
-  <li>
-    <a href="https://aragon.org/dao">Mi az a DAO?</a> – <a href="https://aragon.org/">Aragon</a>
-  </li>
-  <li>
-    <a href="https://wiki.metagame.wtf/docs/great-houses/house-of-daos">DAO-k háza</a> – <a href="https://wiki.metagame.wtf/">Metagame</a>
-  </li>
-  <li>
-    <a href="https://daohaus.substack.com/p/-what-is-a-dao-and-what-is-it-for">Mi az a DAO és mire jó?</a> – <a href="https://daohaus.club/">DAOhaus</a>
-  </li>
-  <li>
-    <a href="https://daohaus.substack.com/p/four-and-a-half-steps-to-start-a">Hogyan lehet létrehozni egy DAO által működtetett digitális közösséget</a> – <a href="https://daohaus.club/">DAOhaus</a>
-  </li>
-  <li>
-    <a href="https://coinmarketcap.com/alexandria/article/what-is-a-dao">Mi az a DAO?</a> – <a href="https://coinmarketcap.com">Coinmarketcap</a>
-  </li>
-  <li>
-    <a href="https://medium.com/daostack/holographic-consensus-part-1-116a73ba1e1c">Mi az a holografikus konszenzus?</a> – <a href="https://daostack.io/">DAOstack</a>
-  </li>
-  <li>
-    <a href="https://vitalik.eth.limo/general/2022/09/20/daos.html">A DAO-k nem vállalatok: hol van a legnagyobb jelentősége a decentralizációnak az autonóm szervezetekben – Vitalik</a>
-  </li>
-  <li>
-    <a href="https://blog.ethereum.org/2014/05/06/daos-dacs-das-and-more-an-incomplete-terminology-guide">DAO, DAC, DA és mások: egy nem teljes terminológiai útmutató</a> – <a href="https://blog.ethereum.org">Ethereum Blog</a>
-  </li>
-</ul>
+### Videók {#videos}
 
-<h3 id="videos" spaces-before="0">
-  Videók
-</h3>
-
-<ul>
-  <li>
-    <a href="https://youtu.be/KHm0uUPqmVE">Mit jelent a DAO a kripto világában?</a>
-  </li>
-  <li>
-    <a href="https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city">Felépíthet egy várost egy DAO?</a> – <a href="https://www.ted.com/">TED</a>
-  </li>
-</ul>
+- [Mit jelent a DAO a kripto világában?](https://youtu.be/KHm0uUPqmVE)
+- [Felépíthet egy várost egy DAO?](https://www.ted.com/talks/scott_fitsimones_could_a_dao_build_the_next_great_city) – [TED](https://www.ted.com/)
