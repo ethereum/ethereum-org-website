@@ -462,9 +462,7 @@ Per saperne di più su fornitori, firmatari e contratti consultare la [documenta
 
 Ricordi quando abbiamo distribuito il nostro contratto con il `initMessage = "Hello world!"`? Ora andremo a leggere il messaggio memorizzato nel nostro contratto intelligente e a stamparlo nella console.
 
-In JavaScript, quando si interagisce con le reti vengono usate funzioni asincrone. Per saperne di più sulle funzioni asincrone,
-
-leggi questo articolo di Medium/a>.</p> 
+In JavaScript, quando si interagisce con le reti vengono usate funzioni asincrone. Per saperne di più sulle funzioni asincrone, [leggi questo articolo di Medium](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff).
 
 Usa il codice qui sotto per chiamare la funzione `message` nel nostro contratto intelligente e leggere il messaggio init:
 
