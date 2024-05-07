@@ -73,13 +73,6 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Website](https://tenderly.co/)
 - [Documentation](https://docs.tenderly.co/ethereum-development-practices)
 
-**Wake -** **_All-in-one Python framework for contracts testing, fuzzing, deployment, vulnerability scanning and code navigation._**
-
-- [Homepage](https://getwake.io/)
-- [Documentation](https://ackeeblockchain.com/wake/docs/latest/)
-- [GitHub](https://github.com/Ackee-Blockchain/wake)
-- [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
-
 **The Graph -** **_The Graph for querying blockchain data efficiently._**
 
 - [Website](https://thegraph.com/)
@@ -138,6 +131,13 @@ Before diving into frameworks, we recommend you first read through our introduct
 - [Website](https://catapulta.sh/)
 - [Documentation](https://catapulta.sh/docs)
 - [Github](https://github.com/catapulta-sh)
+
+**Wake -** **_All-in-one Python framework for contracts testing, fuzzing, deployment, vulnerability scanning and code navigation._**
+
+- [Homepage](https://getwake.io/)
+- [Documentation](https://ackeeblockchain.com/wake/docs/latest/)
+- [GitHub](https://github.com/Ackee-Blockchain/wake)
+- [VS Code Extension](https://marketplace.visualstudio.com/items?itemName=AckeeBlockchain.tools-for-solidity)
 
 ## Further reading {#further-reading}
 
