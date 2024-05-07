@@ -92,7 +92,7 @@ Exécutez `yarn build`. Cela fera apparaître le dossier `build` avec le contrat
 
 ## Configuration du test {#test-setup}
 
-Tester avec Waffle nécessite d'utiliser des correspondances Chai et Mocha, vous devez donc [les ajouter](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) à votre projet. Lancez la mise à jour de votre paquet package.json, et ajoutez le `texte`d'entrée, dans la partie modèle <<scripts>> :
+Tester avec Waffle nécessite d'utiliser des correspondances Chai et Mocha, vous devez donc [les ajouter](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) à votre projet. Lancez la mise à jour de votre paquet package.json, et ajoutez le `texte`d'entrée, dans la partie modèle:
 
 ```json
 "scripts": {

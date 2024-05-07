@@ -60,7 +60,7 @@ _Note : en raison de la congestion du réseau, cela peut prendre un certain temp
 
 Pour revérifier que l'ETH est dans votre portefeuille, créons une requête
 
-en utilisant [l'outil Composer d'Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Cela va renvoyer la quantité d'ETH dans notre portefeuille. Pour en savoir plus, consultez [le court tutoriel d'Alchemy sur la manière d'utiliser l'outil Composer](https://youtu.be/r6sjRxBZJuU).</p> 
+en utilisant [l'outil Composer d'Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Cela va renvoyer la quantité d'ETH dans notre portefeuille. Pour en savoir plus, consultez [le court tutoriel d'Alchemy sur la manière d'utiliser l'outil Composer](https://youtu.be/r6sjRxBZJuU).
 
 Entrez votre adresse de compte MetaMask et cliquez sur **Envoyer la demande**. Vous verrez une réponse qui ressemble au morceau de code ci-dessous.
 

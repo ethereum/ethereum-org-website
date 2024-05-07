@@ -263,7 +263,7 @@ Dans l'[EVM](/developers/docs/evm/), toute zone de stockage non initialisée est
             return bytes.concat(bytes1(uint8(_key)));
 ```
 
-Les simples octets sont les plus simples. Nous utilisons simplement [bytes.concat</code>](https://docs.soliditylang.org/en/v0.8.16/types.html#the-functions-bytes-concat-and-string-concat) pour convertir un type `bytes` en un tableau d'octets de n'importe quelle longueur. Malgré le nom, cela fonctionne quand même lorsqu'un seul argument est fourni.
+Les simples octets sont les plus simples. Nous utilisons simplement [bytes.concat](https://docs.soliditylang.org/en/v0.8.16/types.html#the-functions-bytes-concat-and-string-concat) pour convertir un type `bytes` en un tableau d'octets de n'importe quelle longueur. Malgré le nom, cela fonctionne quand même lorsqu'un seul argument est fourni.
 
 ```solidity
         // Two byte value, encoded as 0x1vvv
