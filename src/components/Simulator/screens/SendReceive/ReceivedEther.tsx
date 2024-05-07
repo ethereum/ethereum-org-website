@@ -1,25 +1,27 @@
-import { Flex, Icon, Text } from "@chakra-ui/react"
-import { AnimatePresence, motion } from "framer-motion"
 import React, { useEffect, useMemo, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 import { MdClose, MdInfo } from "react-icons/md"
-import { SimulatorNavProps } from "../../interfaces"
-import type { TokenBalance } from "../../WalletHome/interfaces"
-import { WalletHome } from "../../WalletHome"
-import { getMaxFractionDigitsUsd } from "../../utils"
+import { Flex, Icon, Text } from "@chakra-ui/react"
 
-interface IProps extends SimulatorNavProps {
+import type { SimulatorNavProps } from "@/lib/types"
+
+import { getMaxFractionDigitsUsd } from "../../utils"
+import { WalletHome } from "../../WalletHome"
+import type { TokenBalance } from "../../WalletHome/interfaces"
+
+type ReceivedEtherProps = SimulatorNavProps & {
   defaultTokenBalances: Array<TokenBalance>
   ethReceiveAmount: number
   ethPrice: number
   sender?: string
 }
-export const ReceivedEther: React.FC<IProps> = ({
+export const ReceivedEther = ({
   nav,
   defaultTokenBalances,
   ethReceiveAmount,
   ethPrice,
   sender,
-}) => {
+}: ReceivedEtherProps) => {
   const [received, setReceived] = useState(false)
   const [hideToast, setHideToast] = useState(false)
   const showToast = received && !hideToast
@@ -54,7 +56,7 @@ export const ReceivedEther: React.FC<IProps> = ({
             }
           : token
       ),
-    [ethPrice]
+    [defaultTokenBalances, ethPrice, ethReceiveAmount]
   )
 
   const tokenBalances = received ? tokensWithEthBalance : defaultTokenBalances

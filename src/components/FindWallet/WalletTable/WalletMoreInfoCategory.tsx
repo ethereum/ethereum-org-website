@@ -1,18 +1,29 @@
-import * as React from "react"
-import { Box, Flex, Heading, HStack, Icon } from "@chakra-ui/react"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import { useTranslation } from "next-i18next"
 import { MdInfoOutline } from "react-icons/md"
+import {
+  Box,
+  Heading,
+  Icon,
+  ListIcon,
+  ListItem,
+  UnorderedList,
+} from "@chakra-ui/react"
 
-import Text from "../../OldText"
-import Tooltip from "../../Tooltip"
-import { DropdownOption } from "./useWalletTable"
+import { DropdownOption } from "@/lib/types"
 
-import walletFilterData from "../../../data/wallets/wallet-filters"
+import {
+  GreenCheckProductGlyphIcon,
+  WarningProductGlyphIcon,
+} from "@/components/icons/staking"
+import Text from "@/components/OldText"
+import Tooltip from "@/components/Tooltip"
 
-interface WalletMoreInfoCategoryProps {
+import walletFilterData from "@/data/wallets/wallet-filters"
+
+type WalletMoreInfoCategoryProps = {
   wallet: any
   orderedFeatureDropdownItems: DropdownOption[]
-  headingLabel: any
+  headingLabel: string
   sectionName: string
 }
 
@@ -22,42 +33,44 @@ export const WalletMoreInfoCategory = ({
   headingLabel,
   sectionName,
 }: WalletMoreInfoCategoryProps) => {
-  const { t } = useTranslation()
+  const { t } = useTranslation("page-wallets-find-wallet")
 
   return (
-    <Box width="full" mt={12} _first={{ mt: 2 }}>
-      <Heading
-        as="h4"
-        lineHeight={1.4}
-        fontSize="md"
-        fontWeight={500}
-        color="primary.base"
-        mx="0.2rem"
-        mb={2}
-      >
+    <Box mx={{ base: 0, md: 0, lg: 2 }} w="100%">
+      {/* Category label */}
+      <Heading as="h4" lineHeight={1.4} fontSize="md" fontWeight="bold" mb={2}>
         {headingLabel}
       </Heading>
-      <Flex gap={2} wrap="wrap">
+
+      {/* Supported features */}
+      <UnorderedList m={0}>
         {orderedFeatureDropdownItems.map((feature) => {
           const featureColor = wallet[feature.filterKey!] ? "text" : "secondary"
+          const FeatureIcon = () => (
+            <Icon
+              as={
+                wallet[feature.filterKey!]
+                  ? GreenCheckProductGlyphIcon
+                  : WarningProductGlyphIcon
+              }
+              fontSize="md"
+              color={featureColor}
+            />
+          )
+
           if (feature.category === sectionName)
             return (
-              <HStack
+              <ListItem
                 key={feature.label}
-                spacing="0.2rem"
                 fontSize="0.9rem"
-                lineHeight={1}
-                p="0.2rem"
-                mx={4}
-                width="200px"
+                listStyleType="none"
+                display="flex"
+                mb={2}
+                width={{ base: "auto", xl: "full" }}
                 sx={{
                   p: {
                     color: featureColor,
-                    flex: "none",
                     mb: 0,
-                    textDecor: wallet[feature.filterKey!]
-                      ? "none"
-                      : "line-through",
                   },
                   "span + p": {
                     textDecor: "none",
@@ -66,30 +79,32 @@ export const WalletMoreInfoCategory = ({
                     svg: {
                       width: 6,
                       fill: "secondary",
-                      pr: 2,
+                      pe: 2,
                     },
                   },
                 }}
               >
-                <Icon
-                  as={feature.icon}
-                  fontSize="1.75rem"
-                  color={featureColor}
-                />
-                <p>{feature.label}</p>
+                <ListIcon as={FeatureIcon}></ListIcon>
+
+                <Text px={1} lineHeight={1}>
+                  {feature.label}
+                </Text>
+
                 <Tooltip
                   content={
-                    <Text lineHeight={1.2}>
+                    <Text color="body.base !important">
                       {t(walletFilterData[feature.filterKey].description)}
                     </Text>
                   }
                 >
-                  <Icon as={MdInfoOutline} color={featureColor} />
+                  <Box as="span">
+                    <Icon as={MdInfoOutline} color={featureColor} />
+                  </Box>
                 </Tooltip>
-              </HStack>
+              </ListItem>
             )
         })}
-      </Flex>
+      </UnorderedList>
     </Box>
   )
 }

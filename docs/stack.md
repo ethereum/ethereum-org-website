@@ -2,40 +2,37 @@
 
 - [Node.js](https://nodejs.org/)
 - [Yarn package manager](https://yarnpkg.com/cli/install)
-- [Gatsby](https://www.gatsbyjs.org/)
-  - Manages page builds and deployment
-  - Configurable in `gatsby-node.ts`, `gatsby-browser.ts`, `gatsby-config.ts`, and `gatsby-ssr.ts`
-  - [Gatsby Tutorial](https://www.gatsbyjs.com/docs/tutorial/)
-  - [Gatsby Docs](https://www.gatsbyjs.org/docs/)
+- [NextJS](https://nextjs.org/)
+  - React framework that provides some goodies out of the box (pages router, SSG, SSR, i18n support, Image component, etc)
+  - Configurable in `next.config.js`
+  - [NextJS Tutorial](https://nextjs.org/learn)
+  - [NextJS Docs](https://nextjs.org/docs)
 - [React](https://reactjs.org/) - A JavaScript library for building component-based user interfaces
 - [Typescript](https://www.typescriptlang.org/) - TypeScript is a strongly typed programming language that builds on JavaScript
 - [Chakra UI](https://chakra-ui.com/) - A UI library (Migration in progress)
-- [GraphQL](https://graphql.org/) - A query language for APIs
 - [Algolia](https://www.algolia.com/) - Site indexing, rapid intra-site search results, and search analytics. [Learn more on how we implement Algolia for site search](./docs/ALGOLIA_DOCSEARCH.md).
   - Primary implementation: `/src/components/Search/index.ts`
 - [Crowdin](https://crowdin.com/) - crowdsourcing for our translation efforts (See "Translation initiative" below)
 - [GitHub Actions](https://github.com/features/actions) - Manages CI/CD, and issue tracking
 - [Netlify](https://www.netlify.com/) - DNS management and primary host for `master` build.
-- [Gatsby Cloud](https://www.gatsbyjs.com/) - Site builds and automatic preview deployments for all pull requests
 - [Storybook](https://storybook.js.org/) - For UI development, testing, and documentation. Check out [our storybook!](https://dev--63b7ea99632763723c7f4d6b.chromatic.com/)
 - [Chromatic](https://www.chromatic.com/) - Visual testing & UI reviews. Visit [our chromatic project](https://www.chromatic.com/builds?appId=63b7ea99632763723c7f4d6b)
 
 ## Code structure
 
-| Folder                                   | Primary use                                                                                                                                                                                                         |
-| ---------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `/src`                                   | Main source folder for development                                                                                                                                                                                  |
-| `/src/assets`                            | Image assets                                                                                                                                                                                                        |
-| `/src/components`                        | React components that do not function as standalone pages                                                                                                                                                           |
-| `/src/content`                           | Markdown/MDX files for site content stored here. <br>For example: `ethereum.org/en/about/` is built from `src/content/about/index.md` <br>The markdown files are parsed and rendered by `src/templates/static.ts`\* |
-| `/src/content/developers/docs`           | \*Markdown files in here use the Docs template: `src/templates/docs.ts`                                                                                                                                             |
-| `/src/content/developers/tutorials`      | \*Markdown files in here use the Tutorial template: `src/templates/tutorial.ts`                                                                                                                                     |
-| `/src/data`                              | General data files importable by components                                                                                                                                                                         |
-| `/src/hooks`                             | Custom React hooks                                                                                                                                                                                                  |
-| `/src/intl`                              | Language translation JSON files                                                                                                                                                                                     |
-| `/src/lambda`                            | Lambda function scripts for API calls                                                                                                                                                                               |
-| `/src/pages`<br>`/src/pages-conditional` | React components that function as standalone pages. <br>For example: `ethereum.org/en/wallets/find-wallet` is built from `src/pages/wallets/find-wallet.ts`                                                         |
-| `/src/scripts`<br>`/src/utils`           | Custom utility scripts                                                                                                                                                                                              |
-| `/src/styles`                            | Stores `layout.css` which contains root level css styling                                                                                                                                                           |
-| `/src/templates`                         | TSX templates that define layouts of different regions of the site                                                                                                                                                  |
-| `/src/theme.ts`                          | Declares site color themes, breakpoints and other constants (try to utilize these colors first)                                                                                                                     |
+| Folder                                 | Primary use                                                                                                                                                                                                                                                           |
+| -------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `/src`                                 | Main source folder for development.                                                                                                                                                                                                                                   |
+| `/public/assets`                       | Image assets.                                                                                                                                                                                                                                                         |
+| `/src/components`                      | React components that do not function as standalone pages.                                                                                                                                                                                                            |
+| `/public/content`                      | Markdown/MDX files for site content stored here. <br>For example: `ethereum.org/en/about/` is built from `public/content/about/index.md` <br>The markdown files are parsed by `[...slug].tsx` and rendered using the proper layout in `ContentPage.getLayout` method. |
+| `/public/content/developers/docs`      | \*Markdown files in here use the Docs layout: `src/layouts/Docs.tsx`                                                                                                                                                                                                  |
+| `/public/content/developers/tutorials` | \*Markdown files in here use the Tutorial layout: `src/layouts/Tutorial.tsx`                                                                                                                                                                                          |
+| `/src/data`                            | General data files importable by components.                                                                                                                                                                                                                          |
+| `/src/hooks`                           | Custom React hooks.                                                                                                                                                                                                                                                   |
+| `/src/intl`                            | Language translation JSON files.                                                                                                                                                                                                                                      |
+| `/src/pages/api`                       | NextJS API Routes (https://nextjs.org/docs/pages/building-your-application/routing/api-routes)                                                                                                                                                                        |
+| `/src/pages`                           | React components that function as standalone pages.                                                                                                                                                                                                                   |
+| `/src/scripts`<br>`/src/lib/utils`     | Custom utility scripts.                                                                                                                                                                                                                                               |
+| `src/@chakra-ui`                       | Stores `theme.ts` which contains our custom Chakra theme, along with src/@chakra-ui/`semanticTokens.ts` (dark/light mode tokens) and custom Chakra components styles.                                                                                                 |
+| `src/layouts`                          | NextJS layouts (https://nextjs.org/docs/pages/building-your-application/routing/pages-and-layouts#with-typescript) that define layouts of different regions of the site.                                                                                              |
