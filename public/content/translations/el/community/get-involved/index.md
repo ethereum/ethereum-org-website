@@ -13,12 +13,13 @@ lang: el
 ## Προγραμματιστές <Emoji text=":computer:" size={1} /> {#developers}
 
 - Μάθετε σχετικά και δοκιμάστε το Ethereum στο [ethereum.org/developers/](/developers/).
+- [Εντοπίστε ένα σφάλμα στο Gitcoin](https://gitcoin.co/), εργαστείτε σε ένα μικρό ή μεγάλο τεχνικό ζήτημα και κερδίστε κρυπτονομίσματα!
 - Παρακολουθήστε ένα [ETHGlobal](http://ethglobal.co/) hackathon κοντά σας!
 - Δείτε τα [έργα που σχετίζονται με τον τομέα που γνωρίζετε καλύτερα ή τη γλώσσα προγραμματισμού της επιλογής σας](/developers/docs/programming-languages/).
-- Παρακολουθήστε ή συμμετέχετε στις [Συγκεντρώσεις των βασικών προγραμματιστών](https://www.youtube.com/@EthereumProtocol).
-- [Λίστα επιθυμιών του Προγράμματος Υποστήριξης Οικοσυστήματος](https://esp.ethereum.foundation/wishlist/) - περιοχές εργαλείων, τεκμηρίωσης και υποδομής όπου το Πρόγραμμα Υποστήριξης Οικοσυστημάτων Ethereum αναζητά ενεργά αιτήσεις χορήγησης
-- [Web3Bridge](https://www.web3bridge.com/) - ένταξη στη φιλοδοξία της κοινότητας web3 και την πρωτοβουλία τους να εντοπίσουν, να εκπαιδεύσουν και να υποστηρίξουν εκατοντάδες προγραμματιστές και μέλη της κοινότητας σε όλη την Αφρική
-- Εγγραφείτε στο [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
+- Παρακολουθήστε ή συμμετάσχετε σε μια συνάντηση [Core Dev](https://www.youtube.com/@EthereumProtocol).
+- [Λίστα επιθυμιών του Προγράμματος Υποστήριξης Οικοσυστήματος](https://esp.ethereum.foundation/wishlist/) - περιοχές εργαλείων, τεκμηρίωσης και υποδομής όπου το Πρόγραμμα Υποστήριξης Οικοσυστημάτων Ethereum αναζητά ενεργά αιτήσεις χορήγησης.
+- [Web3Bridge](https://www.web3bridge.com/) - ένταξη στη φιλοδοξία της κοινότητας web3 και την πρωτοβουλία τους να εντοπίσουν, να εκπαιδεύσουν και να υποστηρίξουν εκατοντάδες προγραμματιστές και μέλη της κοινότητας σε όλη την Αφρική.
+- Εγγραφείτε στο [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
 
 ## Ερευνητές & Ακαδημαϊκοί <Emoji text=":mag:" size={1} /> {#researchers-and-academics}
 
@@ -32,7 +33,7 @@ lang: el
   - Μάθετε πως να γίνετε [συντάκτης EIP](https://eips.ethereum.org/EIPS/eip-5069)
     - Μπορείτε να αξιολογήσετε τα EIP χρηστών! Δείτε το [ανοιχτές PR με την ετικέτα `e-review`](https://github.com/ethereum/EIPs/pulls?q=is%3Apr+is%3Aopen+label%3Ae-review). Υποβάλλετε τεχνικά σχόλια για τον σύνδεσμο `discussion-to`.
   - Συμμετέχετε στη [διακυβέρνηση EIP](https://github.com/ethereum-cat-herders/EIPIP)
-    - Εγγραφείτε στο [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders)
+    - Εγγραφείτε στο [Ethereum Cat Herders Discord](https://discord.com/invite/Nz6rtfJ8Cu)
   - [Περισσότερα για τα EIP](/eips/)
 - [Challenges.ethereum.org](https://challenges.ethereum.org/) - Μια σειρά από υψηλής αξίας ερευνητικά προγράμματα, όπου μπορείτε να κερδίσετε >$100,000 USD
 - [Ethresear.ch](https://ethresear.ch) - Το κύριο φόρουμ έρευνας του Ethereum και το πιο σημαντικό φόρουμ των κρυπτοοικονομικών στον κόσμο
@@ -89,7 +90,7 @@ lang: el
 
 ## Υπεύθυνοι διαχείρισης προϊόντων <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Το οικοσύστημα του Ethereum χρειάζεται το ταλέντο σας! Πολλές εταιρείες προσλαμβάνουν υπεύθυνο διαχείρισης προϊόντων. Αν θέλετε να ξεκινήσετε συμβάλλοντας σε ένα έργο ανοικτού κώδικα, έρθετε σε επαφή με το [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ή το [RaidGuild](https://www.raidguild.org/)
+- Το οικοσύστημα του Ethereum χρειάζεται το ταλέντο σας! Πολλές εταιρείες προσλαμβάνουν υπεύθυνο διαχείρισης προϊόντων. Αν θέλετε να ξεκινήσετε συμβάλλοντας σε ένα έργο ανοικτού κώδικα, έρθετε σε επαφή με το [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) ή το [MetaCartel](https://www.metacartel.org/)
 
 ## Μάρκετινγκ <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -102,12 +103,11 @@ lang: el
 - [Θέσεις εργασίας στο ethereum.org](/about/#open-jobs)
 - [Θέσεις εργασίας Ιδρύματος Ethereum (Lever)](https://jobs.lever.co/ethereumfoundation)
 - [Θέσεις εργασίας Ιδρύματος Ethereum (BambooHR)](https://ethereum.bamboohr.com/jobs/)
+- [JobStash](https://jobstash.xyz)
 - [Θέσεις εργασίας Κρυπτονομισματική](https://cryptocurrencyjobs.co/ethereum/)
-- [Crypto.jobs](https://crypto.jobs/)
 - [Σταδιαδρομία στην ConsenSys](https://consensys.net/careers/)
 - [Θέσεις εργασίας για Κρυπτονομίσματα](https://cryptojobslist.com/ethereum-jobs)
 - [Θέσεις εργασίας Bankless](https://pallet.xyz/list/bankless/jobs)
-- [θέσεις εργασίας useWeb3](https://www.useweb3.xyz/jobs)
 - [Θέσεις εργασίας Web3](https://web3.career)
 - [Στρατός Web3](https://web3army.xyz/)
 - [Θέσεις εργγασίας Crypto Valley](https://cryptovalley.jobs/)
@@ -121,13 +121,16 @@ lang: el
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _Προώθηση της έννοιας DAO σε μη τεχνολογικό πεδίο και να βοηθήσει τους ανθρώπους να δημιουργήσουν αξίες μέσω ενός DAO_
 - [Προγραμματιστής DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _Κοινότητα δημιουργών που πιστεύουν στη συλλογική ιδιοκτησία του διαδικτύου_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _Ελεύθεροι επαγγελματίες προγραμματισμού Web3 που λειτουργούν ως ένας DAO_
+- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _Αποκεντρωμένη ανάπτυξη & διακυβέρνηση dapps & πρωτόκολλων_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _Κοινοτική διακυβέρνηση DAOhaus_
-- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
+- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _Community owned superhero franchise_
+- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _Legal engineering_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Κοινότητα Τέχνης_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _DAO incubator_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _Χρηματοδότηση έργων κρυπτονομισμάτων σε αρχικό στάδιο_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _Μηχανική παιχνιδιού MMORPG για Πραγματική Ζωή_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _Digiphysical Apparel Brands_
+- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _Γυναικεία έργα_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _Επικέντρωση της κοινότητας στη χρηματοδότηση ανάπτυξης Ethereum_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Συλλογικότητα δημιουργών Web3_
 
