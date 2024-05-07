@@ -4,7 +4,7 @@ description: Assurer l'intégrité des données en chaîne pour les données sto
 author: Ori Pomerantz
 tags:
   - "stockage"
-skill: avancé
+skill: advanced
 lang: fr
 published: 2021-12-30
 ---

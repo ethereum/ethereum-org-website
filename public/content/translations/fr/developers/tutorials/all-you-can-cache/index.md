@@ -6,8 +6,8 @@ tags:
   - "Couche 2"
   - "mise en cache"
   - "stockage"
-skill: moyen
-published: 15/09/2022
+skill: intermediate
+published: 2022-09-15
 lang: fr
 ---
 

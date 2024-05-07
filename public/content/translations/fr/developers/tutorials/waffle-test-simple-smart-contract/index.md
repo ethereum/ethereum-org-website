@@ -9,7 +9,7 @@ tags:
   - "test"
 skill: beginner
 lang: fr
-published: 26/02/2021
+published: 2021-02-26
 ---
 
 ## Dans ce tutoriel, vous apprendrez à {#in-this-tutorial-youll-learn-how-to}

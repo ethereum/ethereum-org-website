@@ -8,7 +8,7 @@ tags:
   - "contrats intelligents"
   - "test"
   - "bouchonnage"
-skill: moyen
+skill: intermediate
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

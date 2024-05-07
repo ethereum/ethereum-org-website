@@ -9,7 +9,7 @@ tags:
   - "ethers.js"
   - "the graph"
   - "DeFi"
-skill: débutant
+skill: beginner
 lang: fr
 published: 2020-04-27
 source: soliditydeveloper.com

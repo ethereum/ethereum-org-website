@@ -13,7 +13,7 @@ tags:
   - "transactions"
 skill: beginner
 lang: fr
-published: 25/10/2021
+published: 2021-10-25
 ---
 
 Ce guide s'adresse à vous si vous êtes novice en matière de développement blockchain et que vous ne savez pas par où commencer ou comment déployer et interagir avec les contrats intelligents. Nous allons parcourir la création et le déploiement d'un contrat intelligent simple sur le réseau de test de Goerli à l'aide de [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org), et [Alchemy](https://alchemyapi.io/eth) .
