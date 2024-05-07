@@ -39,9 +39,9 @@ Hay muchas maneras de describir Ethereum, pero en su esencia es una cadena de bl
 }
 ```
 
-Cada [bloque](/developers/docs/blocks/) tiene una referencia al bloque anterior; el `parentHash` es el hash a ese bloque previo.<FeaturedText>Nota: Ethereum hace un uso regular de las 
+Cada [bloque](/developers/docs/blocks/) tiene una referencia al bloque anterior; el `parentHash` es el hash a ese bloque previo.
 
-[funciones hash](https://wikipedia.org/wiki/Hash_function) para producir valores de tamaño fijo («hashes»). Los hashes desempeñan un importante papel en Ethereum; por ahora, puede considerarlos como identificadores únicos.</FeaturedText>
+<FeaturedText>Nota: Ethereum hace un uso regular de las <a href="https://wikipedia.org/wiki/Hash_function">funciones hash</a> para producir valores de tamaño fijo («hashes»). Los hashes desempeñan un importante papel en Ethereum; por ahora, puede considerarlos como identificadores únicos.</FeaturedText>
 
 ![Un diagrama que representa a la cadena de bloques incluyendo datos dentro de cada bloque](./blockchain-diagram.png)
 

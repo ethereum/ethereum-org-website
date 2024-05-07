@@ -25,9 +25,9 @@ Cada técnica tiene ventajas y obstáculos que serán útiles en <a href=“#det
 | ------------------- | ----------- | --------------------------------- | --------- | ---------------- | -------------- |
 | Análisis estáticos  | Slither     | CLI & scripts                     | segundos  | moderado         | bajo           |
 | Fuzzing             | Echidna     | Propiedades de Solidity           | minutos   | bajo             | ninguno        |
-| Ejecución simbólica | Manticore   | Propiedades de Solidity & scripts | horas     | ninguno\*      | ninguno        |
+| Ejecución simbólica | Manticore   | Propiedades de Solidity & scripts | horas     | ninguno      | ninguno        |
 
-\* si todas las rutas son exploradas sin tiempo de espera
+- si todas las rutas son exploradas sin tiempo de espera
 
 **Slither** analiza los contratos en segundos, sin embargo, el análisis estático puede conducir a falsas alarmas y será menos adecuado para comprobaciones complejas (ej., controles aritméticos). Ejecute Slither a través de la API para acceder a los detectores incorporados o a través de la API para comprobaciones definidas por el usuario.
 
@@ -88,7 +88,7 @@ Las áreas extensas que suelen ser relevantes para los contratos inteligentes in
 
 ### Hoja de trucos para selección de herramientas {#tool-selection-cheatsheet}
 
-| Componente              | Herramientas                | Examples                                                                                                                                                                                                                                                              |
+| Componente              | Herramientas                | Ejemplos                                                                                                                                                                                                                                                              |
 | ----------------------- | --------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Máquina de estado       | Echidna, Manticore          |                                                                                                                                                                                                                                                                       |
 | Control de acceso       | Slither, Echidna, Manticore | [Ejercicio 2 de Slither](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/slither/exercise2.md), [Ejercicio 2 de Echidna](https://github.com/crytic/building-secure-contracts/blob/master/program-analysis/echidna/Exercise-2.md)     |
