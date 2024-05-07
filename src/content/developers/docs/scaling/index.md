@@ -56,7 +56,7 @@ Rollups perform transaction execution outside layer 1 and then the data is poste
 
 There are two types of rollups with different security models:
 
-- **Optimistic rollups**: assume transactions are valid by default and only run the computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge. [More on Optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
+- **Optimistic rollups**: assumes transactions are valid by default and only runs computation, via a [**fraud proof**](/glossary/#fraud-proof), in the event of a challenge. [More on Optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
 - **Zero-knowledge rollups**: runs computation off-chain and submits a [**validity proof**](/glossary/#validity-proof) to the chain. [More on zero-knowledge rollups](/developers/docs/scaling/zk-rollups/).
 
 #### State channels {#channels}
