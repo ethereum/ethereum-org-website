@@ -7,7 +7,7 @@ sidebarDepth: 3
 
 ## Scaling overview {#scaling-overview}
 
-As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested, and implemented that take different approaches to achieve similar goals.
+As the number of people using Ethereum has grown, the blockchain has reached certain capacity limitations. This has driven up the cost of using the network, creating the need for "scaling solutions." There are multiple solutions being researched, tested and implemented that take different approaches to achieve similar goals.
 
 The main goal of scalability is to increase transaction speed (faster finality) and transaction throughput (higher number of transactions per second) without sacrificing decentralization or security (more on the [Ethereum vision](/roadmap/vision/)). On the layer 1 Ethereum blockchain, high demand leads to slower transactions and nonviable [gas prices](/developers/docs/gas/). Increasing the network capacity in terms of speed and throughput is fundamental to the meaningful and mass adoption of Ethereum.
 
