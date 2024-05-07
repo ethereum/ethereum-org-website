@@ -50,7 +50,7 @@ PROPOSER_WEIGHT uint64(8)
 
 Questi pesi ammontano a 64. La ricompensa è calcolata come la somma dei pesi applicabili, divisa per 64. Un validatore che ha effettuato tempestivi voti sull'origine, sula destinazione e sulla testa, ha proposto un blocco e ha partecipato a una commissione di sincronizzazione, potrebbe ricevere `64/64 * base_reward == base_reward`. Tuttavia, solitamente un validatore non è un propositore di blocchi, quindi la sua ricompensa massima è `64-8 /64 * base_reward == 7/8 * base_reward`. I validatori che non sono propositori di blocchi né partecipano a una commissione di sincronizzazione possono ricevere `64-8-2 / 64 * base_reward == 6.75/8 * base_reward`.
 
-È prevista una ricompensa aggiuntiva per incentivare attestazioni rapide. Questa è la `inclusion_delay_reward`. Ha un valore pari alla `base_reward`, moltiplicata per `1/delay`, dove `delay` è il numero di slot che separano la proposta e l'attestazione del blocco. Ad esempio, se l'attestazione è inviata entro uno slot della proposta del blocco, l'attestatore riceve `base_reward * 1/1 == base_reward`. Se l'attestazione arriva nello slot successivo, l'attestatore riceve `base_reward * 1/2` e così via.
+È prevista una ricompensa aggiuntiva per incentivare attestazioni rapide. Questa è la `inclusion_delay_reward`. Ha un valore pari alla `base_reward`, moltiplicata per `1/delay`, dove `delay` è il numero di slot che separano la proposta e l'attestazione del blocco. Ad esempio, se l'attestazione è inviata entro uno slot della proposta del blocco, l'attestatore riceve `base_reward * 1/1 == base_reward`. Se l'attestazione arriva nello slot successivo, l'attestatore riceve `base_reward * 1/2`, e così via.
 
 I propositori di blocchi ricevono `8 / 64 * base_reward` per **ogni attestazione valida** inclusa nel blocco, quindi il valore effettivo della ricompensa scala con il numero di validatori attestanti. I propositori di blocchi, inoltre, possono incrementare la propria ricompensa includendo prova del comportamento scorretto di altri validatori nel loro blocco proposto. Queste ricompense sono le "carote" che incoraggiano l'onestà del validatore. Un propositore di blocchi che include il taglio sarà ricompensato con `slashed_validators_effective_balance / 512`.
 
@@ -78,7 +78,7 @@ Se il livello del consenso ha superato più di quattro epoche senza finalizzare,
 
 Il design di ricompense, sanzioni e frazionamenti del meccanismo di consenso incoraggia i singoli validatori a comportarsi correttamente. Tuttavia, da tali scelte di progettazione emerge un sistema che incentiva fortemente la distribuzione equa dei validatori tra i vari client e dovrebbe disincentivare fortemente il dominio di un singolo client.
 
-## Ulteriori letture {#further-reading}
+## Letture consigliate {#further-reading}
 
 - [Aggiornare Ethereum: Il livello d'incentivazione](https://eth2book.info/altair/part2/incentives)
 - [Incentivi nel protocollo ibrido Casper di Ethereum](https://arxiv.org/pdf/1903.04205.pdf)

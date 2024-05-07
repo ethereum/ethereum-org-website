@@ -400,7 +400,7 @@ Cambia il valore solo se necessario. Le variabili di stato risiedono nella memor
 @internal
 def _transferFrom(_from: address, _to: address, _tokenId: uint256, _sender: address):
     """
-    @dev Esegui il trasferimento di un NFT.
+    @dev Execute transfer of a NFT.
          Throws unless `msg.sender` is the current owner, an authorized operator, or the approved
          address for this NFT. (NOTE: `msg.sender` not allowed in private function so pass `_sender`.)
          Throws if `_to` is the zero address.
