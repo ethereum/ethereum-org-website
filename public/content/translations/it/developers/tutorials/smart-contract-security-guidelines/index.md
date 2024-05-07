@@ -6,7 +6,7 @@ tags:
   - "solidity"
   - "smart contract"
   - "sicurezza"
-skill: intermedio
+skill: intermediate
 lang: it
 published: 2020-09-06
 source: Creare contratti sicuri

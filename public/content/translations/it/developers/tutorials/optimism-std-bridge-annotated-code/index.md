@@ -6,7 +6,7 @@ tags:
   - "solidity"
   - "ponte"
   - "livello 2"
-skill: intermedio
+skill: intermediate
 published: 2022-03-30
 lang: it
 ---

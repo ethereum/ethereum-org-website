@@ -4,7 +4,7 @@ description: Garantire l'integrità dei dati sulla catena per i dati memorizzati
 author: Ori Pomerantz
 tags:
   - "archiviazione"
-skill: avanzato
+skill: advanced
 lang: it
 published: 2021-12-30
 ---

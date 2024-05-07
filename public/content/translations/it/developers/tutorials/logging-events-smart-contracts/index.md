@@ -7,7 +7,7 @@ tags:
   - "remix"
   - "solidity"
   - "eventi"
-skill: intermedio
+skill: intermediate
 lang: it
 published: 2020-04-03
 source: EthereumDev

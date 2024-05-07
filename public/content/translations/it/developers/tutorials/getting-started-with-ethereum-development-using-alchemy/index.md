@@ -8,7 +8,7 @@ tags:
   - "nodi"
   - "query"
   - "alchemy"
-skill: principiante
+skill: beginner
 lang: it
 published: 2020-10-30
 source: Medio

@@ -7,7 +7,7 @@ tags:
   - "remix"
   - "Solidity"
   - "distribuzione"
-skill: principiante
+skill: beginner
 lang: it
 published: 2020-04-03
 source: EthereumDev

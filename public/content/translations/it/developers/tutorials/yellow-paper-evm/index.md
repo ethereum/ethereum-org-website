@@ -4,7 +4,7 @@ description: Comprendere la parte dello Yellow Paper che spiega la macchina virt
 author: "qbzzt"
 tags:
   - "evm"
-skill: intermedio
+skill: intermediate
 lang: it
 published: 2022-05-15
 ---
@@ -27,11 +27,7 @@ Il termine _stato del sistema_ comprende tutto ciò che è necessario sapere sul
 
 Una [macchina di Turing](https://en.wikipedia.org/wiki/Turing_machine) è un modello computazionale. In sostanza, si tratta di una versione semplificata di un computer, che ha dimostrato di avere la stessa capacità di eseguire calcoli di un normale computer (una macchina di Turing può calcolare tutto ciò che può calcolare un computer e viceversa). Questo modello facilita la dimostrazione di vari teoremi su cosa è e cosa non è computabile.
 
-Il termine
-
-Turing equivalente/a> indica un computer che può eseguire gli stessi calcoli di una macchina di Turing. Le macchine di Turing possono entrare in loop infiniti, mentre l'EVM non può farlo perché finirebbe il carburante, quindi è solo quasi Turing equivalente.</p> 
-
-
+Il termine Turing equivalente indica un computer che può eseguire gli stessi calcoli di una macchina di Turing. Le macchine di Turing possono entrare in loop infiniti, mentre l'EVM non può farlo perché finirebbe il carburante, quindi è solo quasi Turing equivalente.
 
 ## 9.1 Nozioni di base {#91-basics}
 

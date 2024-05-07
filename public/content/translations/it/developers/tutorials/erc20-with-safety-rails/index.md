@@ -6,7 +6,7 @@ lang: it
 tags:
   - "erc-20"
 skill: beginner
-published: 15-08-2022
+published: 2022-08-15
 ---
 
 ## Introduzione {#introduction}

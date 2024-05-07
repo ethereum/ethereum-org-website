@@ -8,7 +8,7 @@ tags:
   - "contratti intelligenti"
   - "test"
   - "simulazione"
-skill: intermedio
+skill: intermediate
 published: 2020-05-02
 source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/mocking-contracts

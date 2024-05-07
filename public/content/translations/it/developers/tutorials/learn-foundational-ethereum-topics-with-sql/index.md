@@ -6,7 +6,7 @@ tags:
   - "SQL"
   - "Interrogazioni"
   - "Transazioni"
-skill: principiante
+skill: beginner
 lang: it
 published: 2021-05-11
 source: paulapivat.com

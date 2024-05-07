@@ -8,9 +8,9 @@ tags:
   - "Solidity"
   - "test"
   - "simulazione"
-skill: intermedio
+skill: intermediate
 lang: it
-published: 14-11-2020
+published: 2020-11-14
 ---
 
 ## A cosa serve questo tutorial? {#what-is-this-tutorial-about}

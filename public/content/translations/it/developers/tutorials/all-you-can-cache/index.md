@@ -6,8 +6,8 @@ tags:
   - "livello 2"
   - "memorizzazione nella cache"
   - "archiviazione"
-skill: intermedio
-published: 15-09-2022
+skill: intermediate
+published: 2022-09-15
 lang: it
 ---
 

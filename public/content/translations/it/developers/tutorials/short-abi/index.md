@@ -5,7 +5,7 @@ author: Ori Pomerantz
 lang: it
 tags:
   - "livello 2"
-skill: intermedio
+skill: intermediate
 published: 2022-04-01
 ---
 

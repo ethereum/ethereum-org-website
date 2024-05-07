@@ -5,7 +5,7 @@ author: "Mario Havel"
 tags:
   - "client"
   - "nodi"
-skill: intermedio
+skill: intermediate
 lang: it
 published: 2021-01-13
 ---

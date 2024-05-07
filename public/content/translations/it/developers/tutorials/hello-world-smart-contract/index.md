@@ -21,7 +21,7 @@ Se hai appena iniziato con lo sviluppo blockchain e non sai da dove cominciare, 
 > 
 > Per l'intera guida, la rete di test Goerli viene utilizzata per creare e distribuire un contratto intelligente. Tuttavia, tieni presente che la Ethereum Foundation ha annunciato che [Goerli sarà presto abbandonata](https://www.alchemy.com/blog/goerli-faucet-deprecation).
 > 
-> Ti consigliamo di utilizzare [Sepolia](https://sepoliafaucet.com/) e il [faucet di Sepolia ](https://www.alchemy.com/overviews/sepolia-testnet) per questo tutorial.
+> Ti consigliamo di utilizzare [Sepolia](https://sepoliafaucet.com/) e il [faucet di Sepolia](https://www.alchemy.com/overviews/sepolia-testnet) per questo tutorial.
 
 Nella [parte 2](https://docs.alchemy.com/docs/interacting-with-a-smart-contract) di questo tutorial, esamineremo come possiamo interagire con il nostro contratto intelligente una volta distribuito e, nella [parte 3](https://docs.alchemy.com/docs/submitting-your-smart-contract-to-etherscan), copriremo come pubblicarlo su Etherscan.
 

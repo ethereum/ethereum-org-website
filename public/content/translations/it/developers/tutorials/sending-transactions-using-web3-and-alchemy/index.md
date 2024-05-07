@@ -6,7 +6,7 @@ tags:
   - "transazioni"
   - "web3.js"
   - "alchemy"
-skill: principiante
+skill: beginner
 lang: it
 published: 2020-11-04
 source: documentazione Alchemy

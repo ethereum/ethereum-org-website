@@ -13,7 +13,7 @@ tags:
   - "transazioni"
 skill: beginner
 lang: it
-published: 25-10-2021
+published: 2021-10-25
 ---
 
 Questa guida fa per te se hai appena iniziato con lo sviluppo sulla blockchain e non sai da dove cominciare o come distribuire e interagire con i contratti intelligenti. Esamineremo la creazione e la distribuzione di un semplice contratto intelligente sulla rete di prova di Goerli, utilizzando  [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org) e [Alchemy](https://alchemyapi.io/eth).

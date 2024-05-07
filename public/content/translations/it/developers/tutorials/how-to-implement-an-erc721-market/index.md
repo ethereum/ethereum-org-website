@@ -7,7 +7,7 @@ tags:
   - "erc-721"
   - "Solidity"
   - "token"
-skill: intermedio
+skill: intermediate
 lang: it
 published: 2020-03-19
 source: Hackernoon
