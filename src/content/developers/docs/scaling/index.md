@@ -43,7 +43,7 @@ A specific layer 2 instance may be open and shared by many applications, or may 
 
 #### Why is layer 2 needed? {#why-is-layer-2-needed}
 
-- Increased transactions per second greatly improve user experience and reduce network congestion on Mainnet Ethereum.
+- Increased transactions per second greatly improves user experience, and reduces network congestion on Mainnet Ethereum.
 - Transactions are rolled up into a single transaction to Mainnet Ethereum, reducing gas fees for users and making Ethereum more inclusive and accessible for people everywhere.
 - Any updates to scalability should not be at the expense of decentralization or security – layer 2 builds on top of Ethereum.
 - There are application-specific layer 2 networks that bring their own set of efficiencies when working with assets at scale.
