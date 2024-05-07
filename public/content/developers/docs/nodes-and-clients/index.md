@@ -172,7 +172,11 @@ Nethermind is an Ethereum implementation created with the C# .NET tech stack, li
 
 Nethermind also has [detailed documentation](https://docs.nethermind.io), strong dev support, an online community and 24/7 support available for premium users.
 
-### EthereumJS {#ethereumjs}
+### In development {#execution-in-development}
+
+This clients are still in earlier stages or development and are not yet recommended for production use.
+
+#### EthereumJS {#ethereumjs}
 
 The EthereumJS Execution Client (EthereumJS) is written in TypeScript and composed of a number of packages, including core Ethereum primitives represented by the the Block, Transaction, and Merkle-Patricia Trie classes and core client components including an implementation of the Ethereum Virtual Machine (EVM), a blockchain class, and the DevP2P networking stack.
 
