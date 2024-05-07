@@ -117,7 +117,7 @@ export const Variants: StoryObj = {
 
 ### Story file containing a single story
 
-If only one story is provided for a component, the name of the exported object should match the name in the `title` meta option. (If the title is `Atoms / Form / Button` then the story should be named `Button`) This will hoist the display name up to the parent level in the Storybook dashboard's sidebar. This will also mean you have to rename the import of the component. Call it `ButtonComponent`, say.
+If only one story is provided for a component, the name of the exported object should match the name in the `title` meta option. For example, if the title is `Atoms / Form / Button` then the story should be named `Button`. This will hoist the display name up to the parent level in the Storybook dashboard's sidebar. This will also mean you have to rename the import of the component. Call it `ButtonComponent`, say.
 
 ```tsx
 import ButtonComponent from "."
