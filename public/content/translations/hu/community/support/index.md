@@ -30,7 +30,7 @@ Gondjai vannak a tárcájával? A legtöbb tárcának van dedikált támogatói 
 - [Argent](https://support.argent.xyz/hc/)
 - [MyEtherWallet](https://help.myetherwallet.com/)
 
-_Ez nem egy teljes lista. Segítségre van szüksége, hogy megtalálja az adott tárca támogatói csapatát? Csatlakozzon az [ethereum.org Discord](https://discord.gg/rZz26QWfCg) csatornához, és megpróbálunk segíteni._
+_Ez nem egy teljes lista. Segítségre van szüksége, hogy megtalálja az adott tárca támogatói csapatát? Csatlakozzon az [ethereum.org discord](https://discord.gg/ethereum-org) csatornához, és megpróbálunk segíteni._
 
 Ethereum-tárcát keres? [Fedezze fel az Ethereum-tárcák teljes választékát](/wallets/find-wallet/).
 

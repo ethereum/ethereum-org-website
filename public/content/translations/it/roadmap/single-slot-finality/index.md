@@ -50,7 +50,7 @@ Tuttavia, la verifica non è la vera impasse: è l'aggregazione della firma a sf
 
 ## Qual è il ruolo della regola di scelta della biforcazione nello SSF? {#role-of-the-fork-choice-rule}
 
-Il meccanismo del consenso odierno si affida a un rigoroso accoppiamento tra il dispositivo di finalità (l'algoritmo che determina se i 2/3 dei validatori hanno attestato a una certa catena) e la regola di scelta della biforcazione (l'algoritmo che decide quale catena è quella corretta, quando ci sono più opzioni). L'algoritmo di scelta della biforcazione considera soltanto i blocchi \_dall'\_ultimo blocco finalizzato. Sotto lo SSF, non ci sarebbe alcun blocco da considerare per la regola di scelta della biforcazione, poiché la finalità si verifica nello stesso spazio in cui è proposto il blocco. Ciò significa che sotto lo SSF, l'algoritmo di scelta \_o\_\_\_ il dispositivo di finalità sarebbero attivi in ogni momento. Il dispositivo di finalità finalizzerebbe i blocchi in cui i 2/3 dei validatori erano online e stavano attestando in modo onesto. Se un blocco non riuscisse a superare la soglia dei 2/3, la regola di scelta della biforcazione entrerebbe in gioco per determinare quale catena seguire. Questo, inoltre, crea un'opportunità per mantenere il meccanismo di perdita dell'inattività che recupera una catena in cui >1/3 dei validatori è offline, sebbene con delle sfumature aggiuntive.
+Il meccanismo del consenso odierno si affida a un rigoroso accoppiamento tra il dispositivo di finalità (l'algoritmo che determina se i 2/3 dei validatori hanno attestato a una certa catena) e la regola di scelta della biforcazione (l'algoritmo che decide quale catena è quella corretta, quando ci sono più opzioni). L'algoritmo di scelta della biforcazione considera soltanto i blocchi _dall'_ultimo blocco finalizzato. Sotto lo SSF, non ci sarebbe alcun blocco da considerare per la regola di scelta della biforcazione, poiché la finalità si verifica nello stesso spazio in cui è proposto il blocco. Ciò significa che sotto lo SSF, l'algoritmo di scelta _o___ il dispositivo di finalità sarebbero attivi in ogni momento. Il dispositivo di finalità finalizzerebbe i blocchi in cui i 2/3 dei validatori erano online e stavano attestando in modo onesto. Se un blocco non riuscisse a superare la soglia dei 2/3, la regola di scelta della biforcazione entrerebbe in gioco per determinare quale catena seguire. Questo, inoltre, crea un'opportunità per mantenere il meccanismo di perdita dell'inattività che recupera una catena in cui >1/3 dei validatori è offline, sebbene con delle sfumature aggiuntive.
 
 ## Questioni irrisolte {#outstanding-issues}
 
@@ -58,7 +58,7 @@ Il problema con il ridimensionamento dell'aggregazione, aumentando il numero di 
 
 ## Stato attuale {#current-progress}
 
-Lo SSF è nella fase di ricerca. Non dovrebbe essere distribuito per svariati anni, possibilmente dopo altri aggiornamenti sostanziali come gli [alberi di Verkle](/roadmap/verkle-trees/) e il [Danksharding](/roadmap/danksharding]).
+Lo SSF è nella fase di ricerca. Non dovrebbe essere distribuito per svariati anni, possibilmente dopo altri aggiornamenti sostanziali come gli [alberi di Verkle](/roadmap/verkle-trees/) e il [Danksharding](/roadmap/danksharding/).
 
 ## Letture consigliate {#further-reading}
 

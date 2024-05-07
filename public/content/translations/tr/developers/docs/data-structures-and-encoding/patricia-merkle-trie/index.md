@@ -160,14 +160,14 @@ Merkle Patricia dijital ağacında bir düğüm almak için genişletilmiş kod:
 
 ### Örnek Dijital Ağaç {#example-trie}
 
-Dört yol/değer çifti içeren bir dijital ağaç istediğimizi varsayalım: `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coin')`, `('horse', 'stallion')`.
+Dört yol/değer çifti içeren bir dijital ağaç istediğimizi varsayalım: `('do', 'verb')`, `('dog', 'puppy')`, `('doge', 'coins')`, `('horse', 'stallion')`.
 
 İlk olarak, hem yolları hem de değerleri `bytes`' dönüştürürüz. Aşağıda, daha kolay anlaşılması için _yollar_ için gerçek bayt gösterimleri `<>` ile gösterilirken _değerler_ hala `''` dizeler olarak gösterilir(bunlar da aslında `byte` olacaktır):
 
 ```
     <64 6f> : 'verb'
     <64 6f 67> : 'puppy'
-    <64 6f 67 65> : 'coin'
+    <64 6f 67 65> : 'coins'
     <68 6f 72 73 65> : 'stallion'
 ```
 
@@ -176,12 +176,12 @@ Dört yol/değer çifti içeren bir dijital ağaç istediğimizi varsayalım: `(
 ```
     rootHash: [ <16>, hashA ]
     hashA:    [ <>, <>, <>, <>, hashB, <>, <>, <>, [ <20 6f 72 73 65>, 'stallion' ], <>, <>, <>, <>, <>, <>, <>, <> ]
-    hashB:    [ <00 6f>, hashD ]
-    hashD:    [ <>, <>, <>, <>, <>, <>, hashE, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
-    hashE:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coin' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
+    hashB:    [ <00 6f>, hashC ]
+    hashC:    [ <>, <>, <>, <>, <>, <>, hashD, <>, <>, <>, <>, <>, <>, <>, <>, <>, 'verb' ]
+    hashD:    [ <17>, [ <>, <>, <>, <>, <>, <>, [ <35>, 'coins' ], <>, <>, <>, <>, <>, <>, <>, <>, <>, 'puppy' ] ]
 ```
 
-Bir düğüme başka bir düğüm içinde başvurulduğunda, dahil edilenler `H(rlp.encode(x))` olur, burada `H(x) = keccak256(x) if len(x) > = 32 else x` ve `rlp.encode`, [RLP](/developers/docs/data-structures-and-encoding/rlp) kodlama işlevidir.
+Bir düğüme başka bir düğüm içinde başvurulduğunda, dahil edilenler `H(rlp.encode(node))` olur, burada `H(x) = keccak256(x) if len(x) > = 32 else x` ve `rlp.encode`, [RLP](/developers/docs/data-structures-and-encoding/rlp) kodlama işlevidir.
 
 Bir dijital ağacı güncellerken _eğer_ yeni oluşturulan düğümün uzunluğu >= 32 ise, `(keccak 256 (x), x)` anahtar/değer çiftini kalıcı bir arama tablosunda saklamanız gerektiğini unutmayın. Bununla birlikte düğüm bundan daha kısaysa, f (x) = x işlevi tersine çevrilebilir olduğundan hiçbir şeyin depolanmasına gerek yoktur.
 

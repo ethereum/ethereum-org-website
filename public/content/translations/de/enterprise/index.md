@@ -52,7 +52,7 @@ Verschiedene Organisationen unternahmen gemeinsame Anstrengungen, um Ethereum un
 - [Alchemy](https://www.alchemy.com/)_ bietet API-Dienste und Tools für die Entwicklung und das Monitoring von Anwendungen auf Ethereum_
 - [Blockapps](https://blockapps.net/) _Implementierung des Enterprise-Ethereum-Protokolls, von Tools und APIs, die die STRATO-Plattform bilden_
 - [Chainstack](https://chainstack.com/)_ öffentlich gehostete Mainnet- und Testnetz-Ethereum-Infrastruktur und isolierte Kunden-Clouds_
-- [ConsenSys](https://consensys.net/) _ bietet eine Reihe von Produkten und Tools für das Aufbauen auf Ethereum sowie Beratungs- und Custom-Development-Dienste_
+- [ConsenSys](https://consensys.io/) _ bietet eine Reihe von Produkten und Tools für das Aufbauen auf Ethereum sowie Beratungs- und Custom-Development-Dienste_
 - [Envision Blockchain](https://envisionblockchain.com/)_ bietet unternehmensorientierte Beratungs- und Entwicklungsdienstleistungen, die auf das Ethereum-Mainnet spezialisiert sind_
 - [EY OpsChain](https://blockchain.ey.com/products/contract-manager) _ bietet einen Beschaffungsworkflow durch die Ausgabe von RFQs, Verträgen, Bestellungen und Rechnungen im Netzwerk von vertrauenswürdigen Geschäftspartnern_
 - [Hyperledger Besu](https://www.hyperledger.org/use/besu) _ ein unternehmensorientierter Open-Source-Ethereum-Client, entwickelt unter der Apache-2.0-Lizenz und in Java geschrieben_
@@ -64,7 +64,7 @@ Verschiedene Organisationen unternahmen gemeinsame Anstrengungen, um Ethereum un
 ### Tools und Bibliotheken {#tooling-and-libraries}
 
 - [Alethio](https://explorer.aleth.io/) _Ethereum-Data-Analytics-Plattform_
-- [Epirus](https://www.web3labs.com/epirus) _eine Plattform zur Entwicklung, Bereitstellung und Überwachung von Blockchain-Anwendungen durch Web3 Labs_
+- [Chainlens](https://www.chainlens.com/) _eine Plattform zur Entwicklung, Bereitstellung und Überwachung von Blockchain-Anwendungen durch Web3 Labs_
 - [Ernst & Youngs 'Nightfall'](https://github.com/EYBlockchain/nightfall) _ein Toolkit für private Transaktionen_
 - [EthSigner](https://github.com/ConsenSys/ethsigner) _eine Transaktionssignierungsanwendung zur Verwendung mit einem Web3-Anbieter_
 - [Tenderly](https://tenderly.co/) _, eine Datenplattform, die Echtzeit-Analysen, Alarmierung und Überwachung mit Unterstützung für private Netzwerke bereitstellt_
@@ -131,7 +131,6 @@ Nachfolgend werden einige der Anwendungen für Unternehmen aufgelistet, die bisl
 ### Notarisierung von Daten {#notarization-of-data}
 
 - [BBVA](https://www.ledgerinsights.com/bbva-blockchain-loan-banking-tech-award/) _Details von finalisierten Darlehen werden gehasht und im Hauptnetz aufgezeichnet_
-- [Splunk](https://www.splunk.com/en_us/blog/security/the-newest-data-attack.html) _Datenintegrität kann durch periodisches Schreiben von Hashes indexierter Daten in das Mainnet gewährleistet werden_
 - [ANSA](https://cointelegraph.com/news/italys-top-news-agency-uses-blockchain-to-fight-fake-coronavirus-news) _Italiens größte Nachrichtenagentur kämpft gegen gefälschte Nachrichten und ermöglicht es Lesern, den Ursprung der Nachrichten zu überprüfen, indem sie im Mainnet aufgezeichnet werden_
 - [Verizon](https://decrypt.co/46745/verizon-news-press-releases-ethereum-full-transparency) _protokolliert Pressemitteilungen auf Ethereum, um die Rechenschaftspflicht und das Vertrauen von Unternehmen zu gewährleisten_
 - [Breitling](https://www.coindesk.com/breitling-arianee-all-new-watches-ethereum) _erfasst den Herkunfts- und Reparaturverlauf von Uhren auf Ethereum_
@@ -139,14 +138,12 @@ Nachfolgend werden einige der Anwendungen für Unternehmen aufgelistet, die bisl
 
 ### Lieferkette {#supply-chain}
 
-- [CargoX](https://cargox.io/press-releases/full/cargox-becomes-first-public-blockchain-ethereum-bill-lading-provider-approved-international-group-pi-clubs) _Bill of Lading und Dokumententransferanbieter_
 - [Morpheus.network](https://morpheus.network/) _Lieferketten-Automatisierungsplattform, die einen Hybrid aus privaten Blockchains mit notarisierten Daten im Ethereum-Mainnet implementiert und von Unternehmen wie Canadian Food, Oil & Gas Distributor Federated Co-op Ltd. und vom argentinischen Haustierspeiseanbieter Vitalcan verwendet wird._
 - [Minespider](https://www.minespider.com/) _Lieferketten-Tracking_
 - [Folge unseren Fasern](https://www.followourfibre.com) _Viskose-Lieferkettenverfolgbarkeit_
 - [EY OpsChain Netzwerkbeschaffung](https://blockchain.ey.com/products/contract-manager) _bietet einen Beschaffungsworkflow durch die Ausgabe von RFQs, Verträgen, Bestellungen und Rechnungen in Ihrem Netzwerk vertrauenswürdiger Geschäftspartner_
 - [Treum](https://treum.io/) _bringt Transparenz, Rückverfolgbarkeit und Handelbarkeit in Lieferketten mithilfe der Blockchain-Technologie_
 - [TradeTrust](https://www.tradetrust.io/) _überprüft elektronische Frachtbriefe (eBLs) für den internationalen Versand_
-- [Birra Peroni](https://www.ey.com/en_gl/news/2021/05/birra-peroni-is-the-first-industrial-organization-to-mint-unique-non-fungible-tokens-using-ey-opschain-traceability)_ prägt für jede neue Charge Bier NFTs, was eine größere Transparenz und Effizienz in der gesamten Lieferkette ermöglicht_
 
 ### Referenzen und Zertifizierungen {#credentials}
 

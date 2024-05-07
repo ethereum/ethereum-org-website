@@ -252,7 +252,7 @@ Ecco una lista di alcuni dei più popolari fornitori di nodi Ethereum. Aggiungin
   - Caratteristiche
     - Protocollo RPC e mercato decentralizzati
     - Livello con 1 milione di richieste giornaliere gratuite (per endpoint, max. 2)
-    - [Endpoint pubblici](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [Endpoint pubblici](https://docs.pokt.network/developers/public-endpoints)
     - Programma Pre-Stake+ (se servono più di 1 milione di richieste al giorno)
     - Più di 15 blockchain supportate
     - Più di 6.400 nodi che guadagnano POKT a servizio delle applicazioni

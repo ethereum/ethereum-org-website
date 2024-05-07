@@ -90,7 +90,7 @@ Verschiedene Dashboards geben Echtzeit-Statistiken zur Client-Vielfalt für die 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/) **Ausführungsebene:**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Weiterführende Informationen {#further-reading}

@@ -76,6 +76,15 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
     - Trace/Debug namespace available
     - Automated updates
     - Technical support
+- [**Amazon Managed Blockchain**](https://aws.amazon.com/managed-blockchain/)
+  - [Docs](https://aws.amazon.com/managed-blockchain/resources/)
+  - Features
+    - Fully managed Ethereum nodes
+    - Available in six regions
+    - JSON-RPC over HTTP and secure WebSockets
+    - Supports 3 chains
+    - SLAs, AWS Support 24/7
+    - Go-ethereum and Lighthouse
 - [**Ankr**](https://www.ankr.com/)
   - [Docs](https://docs.ankr.com/)
   - Features
@@ -252,7 +261,7 @@ Here is a list of some of the most popular Ethereum node providers, feel free to
   - Features
     - Decentralized RPC Protocol and Marketplace
     - 1M Requests Per Day Free Tier (per endpoint, max 2)
-    - [Public Endpoints](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [Public Endpoints](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+ Program (if you need more than 1M requests per day)
     - 15+ Blockchains Supported
     - 6400+ Nodes earning POKT for serving applications

@@ -12,7 +12,7 @@ Need a more basic understanding of web3 first? Check out [**Learn hub**](/learn/
 
 Effective design goes beyond creating visually appealing user interfaces. It involves gaining a deep understanding of the user's needs, objectives, and driving factors. Therefore, we highly recommend that all designers adopt a design process, such as the [**double diamond process**](<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)>), to ensure that their work is deliberate and intentional.
 
-- [Web3 needs more UX Researchers and Designers](https://akasha.org/blog/2022/10/11/akasha-conversation-09-web3-ux-researchers-and-designers) - An overview of current design maturity
+- [Web3 needs more UX Researchers and Designers](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) - An overview of current design maturity
 - [A simple guide to UX Research in web3](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - Simple guide how to do research
 - [How to Approach UX Decisions in Web3](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - A brief overview of quantitative and qualitative research and the differences between the two (video, 6 min)
 - [Being a ux researcher in web3](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - A personal view on what it is like being a UX researcher in web3
@@ -79,7 +79,7 @@ Get involved in professional community-driven organizations or join design group
 
 ## Design Systems {#design-systems}
 
-- [Optimism Design](https://www.figma.com/@oplabs) (Figma)
+- [Optimism Design](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.org Design system](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, a design system by Polygon](https://www.figma.com/community/file/1073921725197233598/finity-design-system) (Figma)
 - [Kleros Design System](https://www.figma.com/community/file/999852250110186964/kleros-design-system) (Figma)

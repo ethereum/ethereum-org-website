@@ -24,7 +24,7 @@ Beispiel eines schwachen Kennworts: SüßeWeicheKätzchen!
 Beispiel eines starken Kennworts: ymv\*azu.EAC8eyp8umf
 ```
 
-Ein weiter häufiger Fehler ist die Verwendung von Kennwörtern, die leicht erraten oder durch [Social Engineering](<https://wikipedia.org/wiki/Social_engineering_(security)>) herausgefunden werden können. Dazu gehören der Mädchenname Ihrer Mutter, die Namen Ihrer Kinder oder Tiere oder Geburtsdaten. Das ist nicht sicher und erhöht das Risiko, dass Ihr Kennwort gehackt wird.
+Ein weiter häufiger Fehler ist die Verwendung von Kennwörtern, die leicht erraten oder durch [Social Engineering](https://wikipedia.org/wiki/Social_engineering_(security)) herausgefunden werden können. Dazu gehören der Mädchenname Ihrer Mutter, die Namen Ihrer Kinder oder Tiere oder Geburtsdaten. Das ist nicht sicher und erhöht das Risiko, dass Ihr Kennwort gehackt wird.
 
 #### Guter Umgang mit Kennwörtern: {#good-password-practices}
 
@@ -66,7 +66,7 @@ Um zu beweisen, dass Sie tatsächlich Sie sind, gibt es verschiedene eindeutige 
 - Etwas, das nur Sie sind (wie ein Fingerabdruck oder ein Iris-/Gesichts-Scan)
 - Etwas, das nur Sie besitzen (wie ein Sicherheitsschlüssel, oder eine Authentifizierungs-App auf Ihrem Smartphone)
 
-Die Verwendung der **Zwei-Faktor-Authentifizierung (2FA)** bietet einen zusätzlichen _Sicherheitsfaktor_ für Ihre Online-Konten. Damit reicht die Kenntnis Ihres Kennworts allein (etwas, das nur Sie wissen) nicht aus, um auf ein Konto zuzugreifen. Meist ist der zweite Faktor ein zufälliger 6-stelliger Code, bekannt als ein **zeitabhängiges einmaliges Kennwort (Time-based One-time Password, TOTP)**, auf das Sie über eine Authentifizierungs-App wie Google Authenticator oder Authy Zugriff haben. Solche Apps funktionieren als „etwas, das Sie besitzen“-Faktor, da der Seed, der den Zeitcode generiert, auf Ihrem Gerät gespeichert ist.
+Die Verwendung der **Zwei-Faktor-Authentifizierung (2FA)** bietet einen zusätzlichen *Sicherheitsfaktor* für Ihre Online-Konten. Damit reicht die Kenntnis Ihres Kennworts allein (etwas, das nur Sie wissen) nicht aus, um auf ein Konto zuzugreifen. Meist ist der zweite Faktor ein zufälliger 6-stelliger Code, bekannt als ein **zeitabhängiges einmaliges Kennwort (Time-based One-time Password, TOTP)**, auf das Sie über eine Authentifizierungs-App wie Google Authenticator oder Authy Zugriff haben. Solche Apps funktionieren als „etwas, das Sie besitzen“-Faktor, da der Seed, der den Zeitcode generiert, auf Ihrem Gerät gespeichert ist.
 
 <InfoBanner emoji=":lock:">
   <div>
@@ -270,15 +270,14 @@ Beim Airdrop-Betrug sendet ein Betrugsprojekt ein Asset (z. B. ein NFT/Token) pe
 
 ### Web-Sicherheit {#reading-web-security}
 
-- [Aus diesem Grund sollten Sie keine SMS-Nachrichten für die 2FA benutzen](https://www.theverge.com/2017/9/18/16328172/sms-two-factor-authentication-hack-password-bitcoin) - _The Verge_
-- [Bis zu drei Millionen Geräte mit Malware-infizierten Chrome- und Edge-Add-ons infiziert](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) - _Dan Goodin_
-- [So erstellen Sie ein starkes Passwort, dass Sie nicht wieder vergessen](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) - _AVG_
-- [Was ist ein Sicherheitsschlüssel?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) - _Coinbase_
+- [Up to 3 million devices infected by malware-laced Chrome and Edge add-ons](https://arstechnica.com/information-technology/2020/12/up-to-3-million-devices-infected-by-malware-laced-chrome-and-edge-add-ons/) (Bis zu 3 Millionen Geräte durch Malware-verseuchte Chrome- und Edge-Add-ons infiziert) – _Dan Goodin_
+- [How to Create a Strong Password — That You Won’t Forget](https://www.avg.com/en/signal/how-to-create-a-strong-password-that-you-wont-forget) (So erstellen Sie ein starkes Passwort, dass Sie nicht vergessen) – _AVG_
+- [What is a security key?](https://help.coinbase.com/en/coinbase/getting-started/verify-my-account/security-keys-faq) (Was ist ein Sicherheitsschlüssel?) – _Coinbase_
 
 ### Kryptosicherheit {#reading-crypto-security}
 
 - [Schützen Sie sich und Ihr Geld](https://support.mycrypto.com/staying-safe/protecting-yourself-and-your-funds) - _MyCrypto_
-- [Vier Wege, um in der Kryptoszene sicher zu bleiben](https://www.coindesk.com/tech/2021/04/20/4-ways-to-stay-safe-in-crypto/) - _CoinDesk_
+- [Sicherheitsprobleme in gängiger Krypto-Kommunikationssoftware](https://docs.salusec.io/untitled/web3-penetration-test/risks-in-social-media) – _Salus_
 - [Sicherheitshandbuch für Dummies und erfahrene Personen](https://medium.com/mycrypto/mycryptos-security-guide-for-dummies-and-smart-people-too-ab178299c82e) - _MyCrypto_
 - [Kryptosicherheit: Kennwörter und Authentifizierung](https://www.youtube.com/watch?v=m8jlnZuV1i4) - _Andreas M. Antonopoulos_
 

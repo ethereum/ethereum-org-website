@@ -79,7 +79,7 @@ Regardless of the method you use, when including a library, always keep an eye o
 
 Using a smart contract library for your project has several benefits. First and foremost, it saves you time by providing you with ready-to-use building blocks you can include in your system, rather than having to code them yourself.
 
-Security is also a major plus. Open source smart contract libraries are also often heavily scrutinized. Given many projects depend on them, there is a strong incentive by the community to keep them under constant review. It's much more common to find errors in application code than in reusable contract libraries. Some libraries also undergo [external audits](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audit) for additional security.
+Security is also a major plus. Open source smart contract libraries are also often heavily scrutinized. Given many projects depend on them, there is a strong incentive by the community to keep them under constant review. It's much more common to find errors in application code than in reusable contract libraries. Some libraries also undergo [external audits](https://github.com/OpenZeppelin/openzeppelin-contracts/tree/master/audits) for additional security.
 
 However, using smart contract libraries carry the risk of including code you are not familiar with into your project. It's tempting to import a contract and include it directly into your project, but without a good understanding of what that contract does, you may be inadvertently introducing an issue in your system due to an unexpected behavior. Always make sure to read the documentation of the code you are importing, and then review the code itself before making it a part of your project!
 

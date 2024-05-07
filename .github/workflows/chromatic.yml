@@ -16,6 +16,7 @@ on:
       - "src/pages/**/*"
       - "src/layouts/**/*"
       - "src/@chakra-ui/**/*"
+      - ".storybook/**/*"
 
 # List of jobs
 jobs:

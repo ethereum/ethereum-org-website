@@ -4,6 +4,8 @@ description: Join the first ethereum.org Translatathon to contribute to ethereum
 lang: en
 ---
 
+# Ethereum.org Translatathon {#introduction}
+
 Welcome to the first ever ethereum.org Translatathon!
 
 A translatathon is a collaborative and competitive hackathon-style event where individuals and teams compete for prizes by translating ethereum.org content into different languages.
@@ -14,12 +16,16 @@ We invite you to join us in breaking down language barriers and making ethereum.
 
 ## Overview {#overview}
 
+<InfoBanner emoji=":calendar:">
+  This event has passed. <a href="https://twitter.com/ethdotorg">Stay tuned for the next events</a>.
+</InfoBanner>
+
 ### When {#when}
 
-- Application period: August 1st - August 15th
-- Translation period: August 16th - August 23rd
-- Evaluation & QA period: August 23rd - August 30th
-- Results announcement: August 31st
+- Application period: August 1st - August 15th, 2023
+- Translation period: August 16th - August 23rd, 2023
+- Evaluation & QA period: August 23rd - August 30th, 2023
+- Results announcement: August 31st, 2023
 
 ### Where {#where}
 
@@ -33,7 +39,7 @@ Office hours, workshops, team formation and FAQ sessions will be hosted on the [
 
 #### Application period {#applications}
 
-The application period will be open from **August 1st** to **August 15th**
+The application period will be open from **August 1st** to **August 15th**, 2023.
 
 All participants in the Translatathon are required to apply in order to participate and compete for prizes.
 

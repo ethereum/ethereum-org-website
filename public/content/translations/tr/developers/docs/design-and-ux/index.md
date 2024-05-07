@@ -12,7 +12,7 @@ Ethereum ile tasarımda yeni misiniz? Burası sizin için doğru yer. Ethereum t
 
 Etkili tasarım, görsel olarak çekici kullanıcı arayüzleri yaratmanın ötesinde bir anlam ifade eder. Kullanıcı ihtiyaçları, hedefleri ve itici faktörleri hakkında derin bir anlayış kazandırır. Bu yüzden, işlerini bilinçli ve bir amaca yönelik gerçekleştirdiklerinden emin olmaları için tüm tasarımcılara, [**çift karolu süreç**](<https://en.wikipedia.org/wiki/Double_Diamond_(design_process_model)>) gibi bir tasarım sürecini benimsemelerini şiddetle tavsiye ediyoruz.
 
-- [Web3 daha çok Kullanıcı Deneyimi Araştırmacısına ve Tasarımcıya ihtiyaç duyuyor](https://akasha.org/blog/2022/10/11/akasha-conversation-09-web3-ux-researchers-and-designers) - Mevcut tasarım olgunlaşma sürecine genel bakış
+- [Web3 daha çok Kullanıcı Deneyimi Araştırmacısına ve Tasarımcıya ihtiyaç duyuyor](https://blog.akasha.org/akasha-conversations-9-web3-needs-more-ux-researchers-and-designers) - Mevcut tasarım olgunlaşma sürecine genel bakış
 - [Web3'te Kullanıcı Deneyimi Araştırması için basit bir kılavuz](https://uxplanet.org/a-complete-guide-to-ux-research-for-web-3-0-products-d6bead20ebb1) - Nasıl araştırma yapılacağına dair basit bir kılavuz
 - [Web3'te Kullanıcı Deneyimi Kararlarına Nasıl Yaklaşılır?](https://archive.devcon.org/archive/watch/6/data-empathy-how-to-approach-ux-decisions-in-web3/) - Nicel ile nitel araştırmaya ve ikisi arasındaki farklara kısa bir genel bakış (video, 6 dak.)
 - [Web3'te kullanıcı deneyimi araştırmacısı olmak](https://medium.com/@georgia.rakusen/what-its-like-being-a-user-researcher-in-web3-6a4bcc096849) - Web3'te kullanıcı deneyimi araştırmacısı olmaya dair kişisel bir bakış açısı
@@ -74,7 +74,7 @@ Profesyonel, topluluk destekli organizasyonlara veya tasarım gruplarına katıl
 
 ## Tasarım Sistemleri {#Design-systems}
 
-- [Optimism Design](https://www.figma.com/@oplabs) (Figma)
+- [Optimism Design](https://www.figma.com/@optimism) (Figma)
 - [Ethereum.org Tasarım sistemi](https://www.figma.com/@ethdotorg) (Figma)
 - [Finity, Polygon tarafından Web3 için geliştirilen bir tasarım sistemi](https://finity.polygon.technology/) (Figma)
 - [ENS Tasarım sistemi](https://thorin.ens.domains/)

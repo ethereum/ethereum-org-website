@@ -51,10 +51,10 @@ Un contratto intelligente è codice che risiede sulla blockchain di Ethereum e o
 
 **Scaffold-ETH _ Sperimenta rapidamente con Solidity utilizzando un frontend che si adatta al tuo contratto intelligente._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Esempio di dApp](https://punkwallet.io/)
 
-**Crea Eth App*- Crea app basate su Ethereum con un comando.***
+**Crea Eth App_- Crea app basate su Ethereum con un comando._**
 
 - [GitHub](https://github.com/paulrberg/create-eth-app)
 

@@ -59,7 +59,9 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
           <AccordionButton
             justifyContent="space-between"
             alignItems="center"
-            p={0}
+            px="0"
+            py="0"
+            _expanded={{ background: "transparent" }}
             _hover={{ background: "ednBackground" }}
           >
             <Flex
@@ -103,7 +105,9 @@ export const AccordionCustomItem = (props: AccordionCustomItemProps) => {
             borderColor="border"
             mb="-1px"
             mx="-1px"
-            p={0}
+            mt="0"
+            p="0"
+            fontSize="md"
           >
             <Flex
               p={8}
