@@ -14,7 +14,7 @@ You should have read and understood our pages on [Ethereum scaling](/developers/
 
 ## What is an optimistic rollup? {#what-is-an-optimistic-rollup}
 
-An optimistic rollup is an approach to scaling Ethereum that involves moving computation and state storage off-chain. Optimistic rollups execute transactions outside of Ethereum, but post transaction data to Mainnet as `calldata` or in [EIP-4844 blobs.](/roadmap/danksharding/)
+An optimistic rollup is an approach to scaling Ethereum that involves moving computation and state storage off-chain. Optimistic rollups execute transactions outside of Ethereum, but post transaction data to Mainnet as `calldata` or in [blobs](/roadmap/danksharding/).
 
 Optimistic rollup operators bundle multiple off-chain transactions together in large batches before submitting to Ethereum. This approach enables spreading fixed costs across multiple transactions in each batch, reducing fees for end-users. Optimistic rollups also use compression techniques to reduce the amount of data posted on Ethereum.
 
