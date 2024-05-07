@@ -3,6 +3,7 @@ name: Close Stale Issues
 on:
   schedule:
     - cron: "0 8 * * *"
+  workflow_dispatch:
 
 jobs:
   stale:
@@ -14,5 +15,6 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           stale-issue-label: "Status: Stale"
           stale-issue-message: "This issue is stale because it has been open 30 days with no activity."
+          stale-pr-message: "This issue is stale because it has been open 30 days with no activity."
           days-before-stale: 30
           days-before-close: 5
