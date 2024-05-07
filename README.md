@@ -1835,6 +1835,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://olorunsogo-portfolio-sand.vercel.app/"><img src="https://avatars.githubusercontent.com/u/99739569?v=4?s=100" width="100px;" alt="sogobanwo"/><br /><sub><b>sogobanwo</b></sub></a><br /><a href="#maintenance-sogobanwo" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/liuye20240304"><img src="https://avatars.githubusercontent.com/u/162123251?v=4?s=100" width="100px;" alt="liuye20240304"/><br /><sub><b>liuye20240304</b></sub></a><br /><a href="https://github.com/ethereum/ethereum-org-website/commits?author=liuye20240304" title="Documentation">📖</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://zksync.io"><img src="https://avatars.githubusercontent.com/u/149794418?v=4?s=100" width="100px;" alt="Daniel Lumi"/><br /><sub><b>Daniel Lumi</b></sub></a><br /><a href="#maintenance-zk-Lumi" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ZakGriffith"><img src="https://avatars.githubusercontent.com/u/12072395?v=4?s=100" width="100px;" alt="Zak G"/><br /><sub><b>Zak G</b></sub></a><br /><a href="#tutorial-ZakGriffith" title="Tutorials">✅</a></td>
     </tr>
   </tbody>
 </table>
