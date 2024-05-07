@@ -218,7 +218,7 @@ Ha Önnek új az Ethereum és nem programozott okosszerződésnyelveken, akkor a
 **Yul+**
 
 - A Yul alacsony szintű, nagy hatékonyságú kiterjesztése.
-- Eredetileg az [optimista összesítéses ](/developers/docs/scaling/optimistic-rollups/) szerződésként fejlesztették ki.
+- Eredetileg az [optimista összesítéses](/developers/docs/scaling/optimistic-rollups/) szerződésként fejlesztették ki.
 - A Yul+ egy kísérleti fejlesztési javaslatként is tekinthető, melyhez új funkciók tartoznak.
 
 ### Fontos linkek {#important-links-2}

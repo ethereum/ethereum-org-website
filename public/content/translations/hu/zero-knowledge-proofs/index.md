@@ -204,7 +204,7 @@ A ZK-STARK immunis a kvantumszámítógépek fenyegetésére, mert ütközésál
 
 ## További olvasnivaló {#further-reading}
 
-- [A zero-knowledge bizonyítékok alkalmazási területeinek áttekintése ](https://pse.dev/projects) — _Privacy and Scaling Explorations Team_
+- [A zero-knowledge bizonyítékok alkalmazási területeinek áttekintése](https://pse.dev/projects) — _Privacy and Scaling Explorations Team_
 - [A SNARK-ok, a STARK-ok és a rekurzív SNARK-ok összehasonlítása](https://www.alchemy.com/overviews/snarks-vs-starks) — _Alchemy Overviews_
 - [Zero-Knowledge bizonyíték: az adatbiztonság javítása a blokkláncon](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARK-ok — Egy valós zero-knowledge példa és mélyebb elemzése](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_

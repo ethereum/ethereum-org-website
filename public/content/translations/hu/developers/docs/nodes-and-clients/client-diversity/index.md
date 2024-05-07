@@ -9,7 +9,7 @@ Az Ethereum-csomópont viselkedését az általa használt kliensszoftver irány
 
 ## Előfeltételek {#prerequisites}
 
-Ha Önnek még újdonság ez a téma, akkor tekintse meg a [Csomópontok és kliensek](/developers/docs/nodes-and-clients/) című áttekintést. A [végrehajtási réteg ](/glossary/#execution-layer) és a [konszenzusréteg](/glossary/#consensus-layer) definícióját megtalálja a glosszáriumban.
+Ha Önnek még újdonság ez a téma, akkor tekintse meg a [Csomópontok és kliensek](/developers/docs/nodes-and-clients/) című áttekintést. A [végrehajtási réteg](/glossary/#execution-layer) és a [konszenzusréteg](/glossary/#consensus-layer) definícióját megtalálja a glosszáriumban.
 
 ## Miért vannak különböző kliensek? {#why-multiple-clients}
 

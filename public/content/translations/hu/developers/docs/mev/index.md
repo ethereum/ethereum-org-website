@@ -120,7 +120,7 @@ Amint azt kifejtettük, a MEV negatív hatással van az általános felhasznál�
 
 ### Validátorcentralizáció {#validator-centralization}
 
-A Beolvadás utáni Ethereumban a validátorok (miután 32 ETH értékű letétet helyeztek el) konszenzusra jutnak a Beacon lánchoz hozzáadott blokkok érvényességéről. A 32 ETH sokak számára elérhetetlen lehet, ezért megvalósíthatóbb [egy letéti alaphoz való csatlakozás ](/staking/pools/). Mindazonáltal az [önálló letétbe helyezők](/staking/solo/) egészséges eloszlása ideális, mivel enyhíti a validátorok centralizációját és javítja az Ethereum biztonságát.
+A Beolvadás utáni Ethereumban a validátorok (miután 32 ETH értékű letétet helyeztek el) konszenzusra jutnak a Beacon lánchoz hozzáadott blokkok érvényességéről. A 32 ETH sokak számára elérhetetlen lehet, ezért megvalósíthatóbb [egy letéti alaphoz való csatlakozás](/staking/pools/). Mindazonáltal az [önálló letétbe helyezők](/staking/solo/) egészséges eloszlása ideális, mivel enyhíti a validátorok centralizációját és javítja az Ethereum biztonságát.
 
 A MEV-kivonás vélhetően képes felgyorsítani a validátorok centralizációját. Ez részben azért van így, mert a validátorok [kevesebbet keresnek a blokkelőterjesztésért](/roadmap/merge/issuance/#how-the-merge-impacts-ETH-supply), mint a bányászatért, a MEV-kivonás jelentősen [befolyásolhatja a validátorok bevételeit](https://github.com/flashbots/eth2-research/blob/main/notebooks/mev-in-eth2/eth2-mev-calc.ipynb) a Beolvadás után.
 

@@ -98,7 +98,7 @@ Az Ethereum-ökoszisztéma missziója, hogy közjóval kapcsolatos és nagy hat�
 
 ## Ethereum-álláslehetőségek {#ethereum-jobs}
 
-**Szeretne munkát találni az Ehtereum világában?**
+**Szeretne munkát találni az Ethereum világában?**
 
 - [ethereum.org jobs](/about/#open-jobs)
 - [Ethereum Foundation job board (Lever)](https://jobs.lever.co/ethereumfoundation)

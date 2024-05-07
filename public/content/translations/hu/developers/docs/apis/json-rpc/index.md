@@ -81,7 +81,7 @@ A defaultBlock paraméter a következők lehetnek:
 
 ## Példák
 
-Ebben a leírásban példákat mutatunk be, hogyan lehet használni az egyéni JSON_RPC API végpontokat a parancssoreszközzel, ami a [curl](https://curl.se). Ezek az egyéni végpontpéldák a [Curl példák ](#curl-examples) szekciókban találhatók alább. Ezek után bemutatunk egy [példát az elejétől a végéig](#usage-example) egy okosszerződés átfordítására és telepítésére egy Geth csomópont, a JSON_RPC API és a curl használatával.
+Ebben a leírásban példákat mutatunk be, hogyan lehet használni az egyéni JSON_RPC API végpontokat a parancssoreszközzel, ami a [curl](https://curl.se). Ezek az egyéni végpontpéldák a [Curl példák](#curl-examples) szekciókban találhatók alább. Ezek után bemutatunk egy [példát az elejétől a végéig](#usage-example) egy okosszerződés átfordítására és telepítésére egy Geth csomópont, a JSON_RPC API és a curl használatával.
 
 ## Példák a curlre {#curl-examples}
 
