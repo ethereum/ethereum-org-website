@@ -90,7 +90,7 @@ ETHをステーキングすると、イーサリアムネットワークの保�
 
 ## プロダクトマネージャー <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- イーサリアムエコシステムは皆さんの才能が必要です。 多くの企業がプロダクトマネージャーの求人を行っています。 オープンソースプロジェクトへの貢献を始めたい場合は、[Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)または[MetaCartel](https://www.metacartel.org/)にご連絡ください。
+- イーサリアムエコシステムは皆さんの才能が必要です。 多くの企業がプロダクトマネージャーの求人を行っています。 オープンソースプロジェクトへの貢献を始めたい場合は、[Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu)または[RaidGuild](https://www.raidguild.org/)にご連絡ください。
 
 ## マーケティング <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -121,16 +121,13 @@ ETHをステーキングすると、イーサリアムネットワークの保�
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) - _非技術分野で分散型自律組織(DAO)の概念をプロモーションし、価値の創造を支援_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) - _インターネットは共同所有されるべきという信念を共有するデベロッパーコミュニティ_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) - _分散型自律組織(DAO)として機能しているフリーランスのWeb3開発共同体_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) - _分散型開発、分散型アプリ(Dapp)のガバナンスとプロトコル_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) - _DAOhausのコミュニティガバナンス_
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) - _コミュニティにより所有されているスーパーヒーロー・フランチャイズ_
 - [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) - _リーガル・エンジニアリング_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _アート・コミュニティ_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) - _分散型自律組織(DAO)インキュベータ_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) - _プレシード暗号プロジェクトのベンチャー_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) - _実際のMMORPGゲームメカニクス_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) - _デジ・フィジカルのアパレルブランド_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) - _女性主導のプロジェクト_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) - _イーサリアム開発の資金調達に注力するコミュニティ_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) - _Web3デベロッパーの共同体_
 
