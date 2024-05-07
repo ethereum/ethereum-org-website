@@ -11979,6 +11979,15 @@
       "contributions": [
         "maintenance"
       ]
+    },
+    {
+      "login": "ZakGriffith",
+      "name": "Zak G",
+      "avatar_url": "https://avatars.githubusercontent.com/u/12072395?v=4",
+      "profile": "https://github.com/ZakGriffith",
+      "contributions": [
+        "tutorial"
+      ]
     }
   ],
   "contributorsPerLine": 7,
