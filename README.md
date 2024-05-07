@@ -1837,6 +1837,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://zksync.io"><img src="https://avatars.githubusercontent.com/u/149794418?v=4?s=100" width="100px;" alt="Daniel Lumi"/><br /><sub><b>Daniel Lumi</b></sub></a><br /><a href="#maintenance-zk-Lumi" title="Maintenance">🚧</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/ZakGriffith"><img src="https://avatars.githubusercontent.com/u/12072395?v=4?s=100" width="100px;" alt="Zak G"/><br /><sub><b>Zak G</b></sub></a><br /><a href="#tutorial-ZakGriffith" title="Tutorials">✅</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://fanniebarskhian.com"><img src="https://avatars.githubusercontent.com/u/42990794?v=4?s=100" width="100px;" alt="Fannie Barskhian"/><br /><sub><b>Fannie Barskhian</b></sub></a><br /><a href="#maintenance-barskhianfannie" title="Maintenance">🚧</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ksdumont"><img src="https://avatars.githubusercontent.com/u/51958351?v=4?s=100" width="100px;" alt="Keith Dumont"/><br /><sub><b>Keith Dumont</b></sub></a><br /><a href="#content-ksdumont" title="Content">🖋</a></td>
     </tr>
   </tbody>
 </table>
