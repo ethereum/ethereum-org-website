@@ -10,7 +10,7 @@ Wenn eine hohe Auslastung auf Ethereum herrscht, kann es teuer werden. Eine Lös
 
 **Voraussetzung:**
 
-- Haben Sie eine Krypto-Wallet. Sie können diesem Tutorium folgen: [Wie man ein Ethereum-Konto anmelden kann](/guides/how-to-create-an-ethereum-account/)
+- Haben Sie eine Krypto-Wallet, können Sie sich dieses Tutorium ansehen: [So "registrieren" Sie ein Ethereum-Konto](/guides/how-to-create-an-ethereum-account/)
 - Laden Sie Ihre Krypto-Wallet auf
 
 ## 1. Bestimmen Sie, welches Layer-2-Netzwerk Sie verwenden möchten

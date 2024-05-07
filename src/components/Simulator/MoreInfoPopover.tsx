@@ -41,18 +41,13 @@ export const MoreInfoPopover = ({ isFirstStep, children }: MoreInfoPopover) => {
         </MotionButton>
       </PopoverTrigger>
       <PopoverContent
-        bg="background.highlight"
         px={4}
         py={6}
         insetStart={{ base: 4, sm: 8 }}
-        maxW={{ base: "calc(100vw - 3rem)", sm: "calc(100vw - 5rem)" }}
-        borderRadius="base"
-        boxShadow="tooltip"
+        w={{ base: "calc(100vw - 3rem)", sm: "calc(100vw - 5rem)" }}
       >
-        <PopoverArrow bg="background.highlight" boxShadow="2xl" />
-        <PopoverHeader mb={2}>
-          <PopoverCloseButton ms="auto" />
-        </PopoverHeader>
+        <PopoverArrow />
+        <PopoverCloseButton ms="auto" />
         <PopoverBody sx={{ "p:last-of-type": { mb: 2 } }}>
           {children}
         </PopoverBody>

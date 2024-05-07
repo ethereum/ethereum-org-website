@@ -13,10 +13,9 @@ Kezdje azzal, hogy elolvassa az ethereum.org misszióját és értékeit a [maga
 ## Fejlesztők <Emoji text=":computer:" size={1} /> {#developers}
 
 - Tanuljon az Ethereumról és próbálja ki az [ethereum.org/developers/](/developers/) oldalon
-- [Nyerjen jutalmat a Gitcoin-on](https://gitcoin.co/) azáltal, hogy kisebb-nagyobb technikai problémákon dolgozik, és kapjon érte kriptót!
 - Vegyen részt egy Önhöz közel eső [ETHGlobal](http://ethglobal.co/) hackathonon!
 - Nézze meg azokat a [projekteket, melyek a szakterületéhez vagy a választott programnyelvéhez kapcsolódnak](/developers/docs/programming-languages/)
-- Vegyen részt a [protokollfejlesztők megbeszélésein (Core Dev calls)](https://www.youtube.com/playlist?list=PLaM7G4Llrb7zfMXCZVEXEABT8OSnd4-7w)
+- Vegyen részt a [protokollfejlesztők megbeszélésein (Core Dev calls)](https://www.youtube.com/@EthereumProtocol)
 - [Ökoszisztémát támogató programok listája](https://esp.ethereum.foundation/wishlist/) – eszközök, dokumentáció és infrastruktúra, ahol az Ethereum-ökoszisztémát támogató programok aktívan várják a támogatásért jelentkezőket
 - [Web3Bridge](https://www.web3bridge.com/) – csatlakozzon az inspiráló web3-közösséghez, mely egész Afrikában fejlesztők és közösségi tagok százait választja ki, tanítja be és támogatja
 - Csatlakozzon a [Ethereum Cat Herders Discord](https://discord.io/EthCatHerders) csatornához
@@ -90,7 +89,7 @@ Az Ethereum-ökoszisztéma missziója, hogy közjóval kapcsolatos és nagy hat�
 
 ## Termékmenedzserek <Emoji text=":fountain_pen:" size={1} /> {#product-managers}
 
-- Az Ethereum-ökoszisztémának az Ön tehetségére is szüksége van! Számos cég keres ilyen pozícióra munkaerőt. Ha szeretne egy nyílt forráskódú projektben közreműködni, keresse meg az [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) vagy [MetaCartel](https://www.metacartel.org/) csapatokat
+- Az Ethereum-ökoszisztémának az Ön tehetségére is szüksége van! Számos cég keres ilyen pozícióra munkaerőt. Ha szeretne egy nyílt forráskódú projektben közreműködni, keresse meg az [Ethereum Cat Herders](https://discord.com/invite/Nz6rtfJ8Cu) vagy [RaidGuild](https://www.raidguild.org/) csapatokat
 
 ## Marketing <Emoji text=":megaphone:" size={1} /> {#marketing}
 
@@ -122,16 +121,13 @@ A DAO-k decentralizált autonóm szervezetek. Ezek az Ethereum technológiára �
 - [DAOSquare](https://www.daosquare.io) [@DAOSquare](https://twitter.com/DAOSquare) – _A DAO koncepció támogatása a nem technikai területeken, illetve hogy az emberek értéket teremtsenek a DAO által_
 - [Developer DAO](https://www.developerdao.com/) [@developer_dao](https://twitter.com/developer_dao) – _Fejlesztők közössége, akik hisznek az internet közös tulajdonlásában_
 - [dOrg](https://dOrg.tech) [@dOrg_tech](https://twitter.com/dOrg_tech) – _egy szabadúszó web3-fejlesztői csapat, amely DAO-ként működik_
-- [DXdao](https://DXdao.eth.link/) [@DXdao](https://twitter.com/DXdao_) – _decentralizált dapp- és protokollfejlesztés, illetve -irányítás_
 - [HausDAO](https://daohaus.club) [@nowdaoit](https://twitter.com/nowdaoit) – _A DAOhaus közösségi irányítása_
-- [Hero DAO](https://herodao.org/) [@hero_dao](https://twitter.com/hero_dao) – _Közösség által tulajdonolt szuperhős franchise_
-- [LexDAO](https://lexdao.coop) [@lex_DAO](https://twitter.com/lex_DAO) – _Jogi szerepkörök_
+- [LexDAO](https://lexdao.org) [@lex_DAO](https://twitter.com/lex_DAO) – _Jogi szerepkörök_
 - [Machi X](https://machix.com) [@MachiXOfficial](https://twitter.com/MachiXOfficial) - _Művészeti közösség_
 - [MetaCartel](https://metacartel.org) [@Meta_Cartel](https://twitter.com/Meta_Cartel) – _DAO inkubátor_
 - [MetaCartel Ventures](https://metacartel.xyz) [@VENTURE_DAO](https://twitter.com/VENTURE_DAO) – _kockázati tőke a korai fázisban lévő kriptoprojektek számára_
 - [MetaGame](https://metagame.wtf) [@MetaFam](https://twitter.com/MetaFam) – _MMORPG játékmechanika a való élethez_
 - [MetaFactory](https://metafactory.ai) [@TheMetaFactory](https://twitter.com/TheMetaFactory) – _Digifizikális ruházati márkák_
-- [ΜΓΔ](https://metagammadelta.com/) (Meta Gamma Delta) [@metagammadelta](https://twitter.com/metagammadelta) – _Nők által vezetett projektek_
 - [MolochDAO](https://molochdao.com) [@MolochDAO](https://twitter.com/MolochDAO) – _Az Ethereum-fejlesztések finanszírozását intéző közösség_
 - [Raid Guild](https://raidguild.org) [@RaidGuild](https://twitter.com/RaidGuild) – _Web3-fejlesztők csoportja_
 

@@ -4,6 +4,8 @@ description: Ethereum.org'daki tasarım materyallerinin kaliteli olmasını sağ
 lang: tr
 ---
 
+# İçerik kaynaklarını ekle {#adding-design-resources}
+
 Herkes [Web3 sayfasında tasarım ve kullanıcı deneyimi](/developers/docs/design-and-ux/) için yeni tasarım materyalleri önerebilir.
 
 Bu sayfanın, hevesli web3 kullanıcıları için değer sunmaya odaklandığını unutmayın. Tasarım bölümü, hizmetleriniz, ürünleriniz ya da platformlarınızın reklamını yapmak için değildir.

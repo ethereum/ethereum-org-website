@@ -68,7 +68,7 @@ Para complicar ainda mais, as transações rejeitadas na bifurcação temporári
 
 ## Uso de energia na prova de trabalho {#energy}
 
-Uma importante crítica à prova de trabalho é a quantidade de energia necessária para manter a rede segura. Para manter a segurança e a descentralização, o Ethereum na prova de trabalho consumia grandes quantidades de energia. Pouco antes de mudar para a prova de participação, os mineradores do Ethereum consumiam coletivamente cerca de 70 TWh/ano (aproximadamente o mesmo que a República Tcheca – de acordo com [digiconomist](https://digiconomist.net) em 18 de julho de 2022).
+Uma importante crítica à prova de trabalho é a quantidade de energia necessária para manter a rede segura. Para manter a segurança e a descentralização, o Ethereum na prova de trabalho consumia grandes quantidades de energia. Pouco antes de mudar para a prova de participação, os mineradores do Ethereum consumiam coletivamente cerca de 70 TWh/ano (aproximadamente o mesmo que a República Tcheca – de acordo com [digiconomist](https://digiconomist.net/) em 18 de julho de 2022).
 
 ## Prós e contras {#pros-and-cons}
 

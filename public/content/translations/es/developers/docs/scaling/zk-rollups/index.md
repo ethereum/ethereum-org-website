@@ -117,7 +117,7 @@ Antes de aceptar transacciones, el operador realizará las comprobaciones habitu
 
 Una vez que el nodo ZK-rollup tiene suficientes transacciones, las añade en un lote y compila las entradas para que el circuito de prueba se compile en una breve prueba de ZK. Esto incluye:
 
-- A Merkle tree root comprising all the transactions in the batch.
+- Una raíz de árbol de Merkle que comprende todas las transacciones del lote.
 - Pruebas de Merkle para transacciones que demuestren su inclusión en el lote.
 - Pruebas de Merkle para cada par remitente-receptor en las transacciones para demostrar que esas cuentas son parte del árbol del estado del rollup.
 - Un conjunto de raíces de estado intermedio, derivadas de la actualización de la raíz de estado después de aplicar actualizaciones de estado para cada transacción (es decir, disminución de las cuentas de remitente y aumento de las cuentas de destinatario).
@@ -238,11 +238,11 @@ Los proyectos que trabajan en zkEVM incluyen:
 
 - **[Scroll](https://scroll.io/blog/zkEVM)**: _Scroll es una empresa impulsada por la tecnología que trabaja en la construcción de una solución nativa zkEVM Layer 2 para Ethereum. _
 
-- **[Taiko](https://taiko.xyz)**: _Taiko es un ZK-rollup descentralizado y equivalente a Ethereum (un [Tipo 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html)). _
+- **[Taiko](https://taiko.xyz)**: _Taiko es un complemento ZK descentralizado y equivalente a Ethereum (un [Tipo 1 ZK-EVM](https://vitalik.eth.limo/general/2022/08/04/zkevm.html)). _
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
+- **[ZKSync](https://docs.zksync.io/zkevm/)**: _ZkSync Era es un ZK Rollup compatible con EVM creado por Matter Labs, impulsado por su propio zkEVM. _
 
-- **[Starknet](https://starkware.co/starknet/)** - _StarkNet is an EVM-compatible layer 2 scaling solution built by StarkWare._
+- **[Starknet](https://starkware.co/starknet/)**: _StarkNet es una solución de escalabilidad de capa 2 compatible con EVM creada por StarkWare. _
 
 ## Bibliografía para profundizar sobre los ZK-rollups {#further-reading-on-zk-rollups}
 

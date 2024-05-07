@@ -54,7 +54,7 @@ const argv = require("minimist")(process.argv.slice(2))
  *
  * 4. Execute script:
  *   1. Execute script by running `yarn crowdin-import`
- *   2. If successful, copy `GATSBY_BUILD_LANGS={langs}` output and paste in
+ *   2. If successful, copy `BUILD_LOCALES={langs}` output and paste in
  *      your `.env`, then build site to test results.
  *
  * *Remember: Revert any working changes to this file before committing Crowdin import
@@ -64,7 +64,6 @@ type BucketsList = { [key: string]: Array<number> }
 const USER_OVERRIDE: BucketsList = {
   // FORMAT: lang_code: [bucket_number, bucket_number, ...],
   // EXAMPLE: es: [1, 10, 12, 14],
-
 }
 
 /******************************
@@ -291,9 +290,7 @@ const scrapeDirectory = (
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
     } else if (
-      item.endsWith(".md") ||
-      item.endsWith(".svg") ||
-      item.endsWith(".xlsx")
+      item.endsWith(".md")
     ) {
       const mdDestDirPath: string = join(
         repoRoot,
@@ -412,7 +409,7 @@ const langsSummary: string = summary.reduce(
 log("Empty buckets:", trackers.emptyBuckets)
 if (summary.length) {
   console.table(summary)
-  console.log("Langs to test:", `\nGATSBY_BUILD_LANGS=en${langsSummary}`)
+  console.log("Langs to test:", `\nBUILD_LOCALES=en${langsSummary}`)
   console.log("🎉 Crowdin import complete.")
 } else {
   console.warn("Nothing imported, see instruction at top of crowdin-imports.ts")

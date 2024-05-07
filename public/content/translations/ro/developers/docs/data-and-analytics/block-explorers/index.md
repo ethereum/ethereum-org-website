@@ -17,7 +17,7 @@ Ar trebui să înțelegeți conceptele de bază ale lui Ethereum ca să vă daţ
 - [Etherchain](https://www.etherchain.org/)
 - [Ethplorer](https://ethplorer.io/) –_Disponibil și în chineză, spaniolă, franceză, turcă, rusă, coreeană și vietnameză_
 - [Blockchair](https://blockchair.com/ethereum) –_Disponibil şi în spaniolă, franceză, italiană, neerlandeză, portugheză, rusă, chineză, și farsi (persană)_
-- [Blockscout](https://blockscout.com/)
+- [Blockscout](https://eth.blockscout.com/)
 - [OKLink](https://www.oklink.com/eth)
 
 ## Date {#data}
@@ -245,7 +245,7 @@ Datele din nivelul cel mai de sus al stratului de consens includ următoarele:
 ## Exploratori de blocuri {#block-explorers}
 
 - [Etherscan](https://etherscan.io/) – un explorator de blocuri pe care îl puteți utiliza pentru Mainnet-ul Ethereum, Testnet-ul Ropsten, Testnet-ul Kovan, Testnet-ul Rinkeby și Testnet-ul Goerli.
-- [Blockscout](https://blockscout.com/) – focuses on the following networks:
+- [Blockscout](https://eth.blockscout.com/) – focuses on the following networks:
   - xDai – o combinație ingenioasă între tehnologia MakerDAO de monede stabile DAI și a tehnologiei POA de sidechain și tokenbridge.
   - POA – Un sidechain şi o reţea autonomă securizată de un grup de validatori de încredere. Toți validatorii din rețea sunt notari din Statele Unite, iar informațiile lor sunt accesibile publicului.
   - Rețea de testare POA Sokol.

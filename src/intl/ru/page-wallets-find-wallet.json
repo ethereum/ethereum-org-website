@@ -90,5 +90,6 @@
   "page-find-wallet-browser-desc": "Кошельки с расширениями для браузеров",
   "page-find-wallet-device": "Устройство",
   "page-find-choose-to-compare": "Выбрать для сравнения",
-  "page-find-wallet-choose-features": "Выберите функции"
+  "page-find-wallet-choose-features": "Выберите функции",
+  "page-find-wallet-reset-filters": "Сбросить фильтры"
 }

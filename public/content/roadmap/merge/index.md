@@ -11,7 +11,7 @@ summaryPoint3: The Merge refers to the original Ethereum Mainnet merging with a 
 summaryPoint4: The Merge reduced Ethereum's energy consumption by ~99.95%.
 ---
 
-<UpgradeStatus dateKey="page-upgrades:page-upgrades-beacon-date">
+<UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">
   The Merge was executed on September 15, 2022. This completed Ethereum's transition to proof-of-stake consensus, officially deprecating proof-of-work and reducing energy consumption by ~99.95%.
 </UpgradeStatus>
 
@@ -27,7 +27,7 @@ Imagine Ethereum is a spaceship that launched before it was quite ready for an i
 
 ## Merging with Mainnet {#merging-with-mainnet}
 
-Proof-of-work secured Ethereum Mainnet from genesis until The Merge. This allowed the Ethereum blockchain we're all used to to come into existence in July 2015 with all its familiar features—transactions, smart contracts, accounts, etc.
+Proof-of-work secured Ethereum Mainnet from genesis until The Merge. This allowed the Ethereum blockchain we're all used to come into existence in July 2015 with all its familiar features—transactions, smart contracts, accounts, etc.
 
 Throughout Ethereum's history, developers prepared for an eventual transition away from proof-of-work to proof-of-stake. On December 1, 2020, the Beacon Chain was created as a separate blockchain to Mainnet, running in parallel.
 

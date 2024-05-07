@@ -114,12 +114,12 @@ En élargissant ce calcul, nous pouvons estimer le temps nécessaire pour traite
 <TableContainer>
 
 | Nombre de retraits | Délai d'exécution |
-| :----------------: | :---------------: |
-|      400 000       |     3,5 jours     |
-|      500 000       |     4,3 jours     |
-|      600 000       |     5,2 jours     |
-|      700 000       |     6,1 jours     |
-|      800 000       |     7,0 jours     |
+| :-------------:|:-------------:|
+| 400 000 | 3,5 jours |
+| 500 000 | 4,3 jours |
+| 600 000 | 5,2 jours |
+| 700 000 | 6,1 jours |
+| 800 000 | 7,0 jours |
 
 </TableContainer>
 

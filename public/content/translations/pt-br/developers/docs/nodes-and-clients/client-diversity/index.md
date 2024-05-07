@@ -31,7 +31,7 @@ A diversidade de clientes também oferece resiliência a ataques. Por exemplo, u
 
 Um erro em um cliente de consenso com mais de 33% dos nós Ethereum poderia impedir a finalização da camada de consenso, e isso deixaria os utilizadores em dúvida com respeito à probabilidade de as transações não serem revertidas ou alteradas em algum momento. Isso seria muito problemático para muitos dos aplicativos construídos em cima do Ethereum, particularmente o DeFi.
 
-<Emoji text="🚨" me="1rem" /> Pior ainda, um bug crítico em um cliente com uma maioria de dois terços poderia fazer com que a cadeia <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain -consensus-fails/" target="_blank">se dividisse e finalizasse incorretamente</a>, gerando um grande conjunto de validadores que ficam presos em uma cadeia inválida. Se quiserem voltar a integrar à cadeia correta, esses validadores enfrentam cortes ou uma lenta e cara retirada e reativação voluntária. A magnitude de uma escala de remoção com o número de nós culpáveis com uma maioria de dois terços reduzido ao máximo (32 ETH).
+<Emoji text="🚨" mr="1rem" /> Pior ainda, um bug crítico em um cliente com uma maioria de dois terços poderia fazer com que a cadeia <a href="https://www.symphonious.net/2021/09/23/what-happens-if-beacon-chain -consensus-fails/" target="_blank">se dividisse e finalizasse incorretamente</a>, gerando um grande conjunto de validadores que ficam presos em uma cadeia inválida. Se quiserem voltar a integrar à cadeia correta, esses validadores enfrentam cortes ou uma lenta e cara retirada e reativação voluntária. A magnitude de uma escala de remoção com o número de nós culpáveis com uma maioria de dois terços reduzido ao máximo (32 ETH).
 
 Embora estes sejam cenários improváveis, o ecossistema Ethereum pode mitigar seus riscos nivelando a distribuição de clientes entre os nós ativos. Idealmente, nenhum cliente de consenso chegaria a uma participação de 33% dos nós totais.
 
@@ -90,7 +90,7 @@ Vários painéis fornecem estatísticas de diversidade de cliente em tempo real 
 - [Rated.network](https://www.rated.network/)
 - [clientdiversity.org](https://clientdiversity.org/) **Camada de execução:**
 
-- [execution-diversity.info](https://execution-diversity.info/)
+- [supermajority.info](https://supermajority.info//)
 - [Ethernodes](https://ethernodes.org/)
 
 ## Leitura adicional {#further-reading}

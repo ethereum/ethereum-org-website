@@ -26,7 +26,7 @@ Selain manfaat yang kami sebutkan dalam [pengantar tentang penaruhan](/staking/)
 <CardGrid>
   <Card title="Hambatan masuk yang rendah" emoji="🐟" description="Not a whale? No problem. Most staking pools let you stake virtually any amount of ETH by joining forces with other stakers, unlike staking solo which requires 32 ETH." />
   <Card title="Taruhan hari ini" emoji=":stopwatch:" description="Staking with a pool is as easy as a token swap. No need to worry about hardware setup and node maintenance. Pools allow you to deposit your ETH which enables node operators to run validators. Rewards are then distributed to contributors minus a fee for node operations." />
-  <Card title="penaruhan token" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
+  <Card title="Penaruhan token" emoji=":droplet:" description="Many staking pools provide a token that represents a claim on your staked ETH and the rewards it generates. This allows you to make use of your staked ETH, e.g. as collateral in DeFi applications." />
 </CardGrid>
 
 <StakingComparison page="pools" />
@@ -81,5 +81,6 @@ Beberapa pilihan pooling lebih terdesentralisasi daripada yang lain dalam hal si
 
 ## Bacaan lebih lanjut {#further-reading}
 
+- [Direktori Penaruhan Ethereum](https://www.staking.directory/) - _Eridian dan Spacesider_
 - [Penruhan dengan Rocket Pool - Ikhtisar Penaruhan](https://docs.rocketpool.net/guides/staking/overview.html) - _Dokumentasi RocketPool_
 - [Penaruhan Ethereum dengan Lido](https://help.lido.fi/en/collections/2947324-staking-ethereum-with-lido) - _Dokumentasi bantuan Lido_

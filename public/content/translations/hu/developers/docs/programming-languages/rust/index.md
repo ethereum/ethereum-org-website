@@ -42,7 +42,7 @@ Szükséged van egy méginkább kezdőknek szóló alapozóra? Tekintse meg az [
 - [pwasm-ethereum](https://github.com/paritytech/pwasm-ethereum) – _Külső elemek gyűjteménye az Ethereum-szerű hálózattal való interakcióhoz_
 - [Lighthouse](https://github.com/sigp/lighthouse) – _Gyors Ethereum-konszenzusrétegkliens_
 - [Ethereum WebAssembly](https://ewasm.readthedocs.io/en/mkdocs/) – _Az Ethereum okosszerződés végrehajtási rétegének javasolt újratervezése a WebAssembly egy determinisztikus részét használva_
-- [oasis_std](https://docs.rs/oasis-std/0.2.7/oasis_std/) - _OASIS API hivatkozás_
+- [oasis_std](https://docs.rs/oasis-std/latest/oasis_std/index.html) - _OASIS API hivatkozás_
 - [Solaris](https://github.com/paritytech/sol-rs) – _Solidity okosszerződések egységtesztelésének irányítása a natív Parity kliens EVM használatával._
 - [SputnikVM](https://github.com/rust-blockchain/evm) – _Rust Ethereum virtuálisgép-implementáció_
 - [Wavelet](https://wavelet.perlin.net/docs/smart-contracts) – _Wavelet okosszerződés Rust-ban_

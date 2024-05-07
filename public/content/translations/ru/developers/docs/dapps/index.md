@@ -51,7 +51,7 @@ lang: ru
 
 **Scaffold-ETH — _быстрый опыт использования Solidity с помощью интерфейса, который адаптируется к вашему умному контракту._**
 
-- [GitHub](https://github.com/austintgriffith/scaffold-eth)
+- [GitHub](https://github.com/scaffold-eth/scaffold-eth-2)
 - [Пример dapp](https://punkwallet.io/)
 
 **Создание приложения Eth — _создавайте приложения на базе Ethereum с помощью одной команды._**

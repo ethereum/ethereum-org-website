@@ -1,6 +1,6 @@
 ---
 title: Rollups de conhecimento zero
-description: "Uma introdução aos rollups de zero conhecimento: uma solução de dimensionamento usada pela comunidade Ethereum."
+description: 'Uma introdução aos rollups de zero conhecimento: uma solução de dimensionamento usada pela comunidade Ethereum.'
 lang: pt-br
 ---
 
@@ -12,7 +12,7 @@ Você deve ler e entender mais sobre em nossa página [Ethereum scaling](/develo
 
 ## O que são rollups de conhecimento zero? {#what-are-zk-rollups}
 
-**Rollups de conhecimento zero (ZK-rollups)** agrupam (ou acumulam) transações em lotes que são executados off-chain. A computação off-chain reduz a quantidade de dados que devem ser publicados na blockchain. Operadores de ZK-rollups submetem um resumo das mudanças necessárias para representar todas as transações em um lote, ao invés de enviar cada transação individualmente. Eles também produzem [provas de validade](/glossary/#validity-proof) para provar a exatidão de suas mudanças. A prova de validade demonstra com certeza criptográfica que as alterações propostas para o estado do Ethereum são verdadeiramente o resultado final da execução de todas as transações do referido lote.
+**Rollups de conhecimento zero (ZK-rollups)** agrupam (ou acumulam) transações em lotes que são executados off-chain. A computação off-chain reduz a quantidade de dados que devem ser publicados na blockchain. Operadores de ZK-rollups submetem um resumo das mudanças necessárias para representar todas as transações em um lote, ao invés de enviar cada transação individualmente. Eles também produzem [provas de validade](/glossary/#validity-proof) para provar a exatidão de suas mudanças.
 
 O estado dos ZK-rollups é mantido por um contrato inteligente implantado na rede Ethereum. Para atualizar este estado, os nós ZK-rollup devem enviar uma prova de validade para verificação. Como mencionado, a prova de validade é uma garantia criptográfica de que a mudança de estado proposta pelo rollup é realmente o resultado da execução de um determinado lote de transações. Isso significa que os ZK-rollups só precisam fornecer provas de validade para finalizar as transações no Ethereum, em vez de publicar todos os dados da transação on-chain, como [optimistic rollups](/developers/docs/scaling/optimistic-rollups/).
 
@@ -117,7 +117,7 @@ Antes de aceitar transações, o operador realizará as verificações habituais
 
 Uma vez que o nó ZK-rollup tenha transações suficientes, ele as agrega em um lote e compila entradas para o circuito de prova para reunir em uma prova ZK sucinta. Isso pode incluir:
 
-- Uma árvore de Merkle composta de todas as transações no lote.
+- A Merkle tree root comprising all the transactions in the batch.
 - Provas de Merkle de transações para provar a inclusão no lote.
 - Provas de Merkle para cada par de destinatário-remetente em transações para provar que essas contas são parte da árvore de estado do rollup.
 - Um conjunto de raízes de estado intermediárias, derivadas da atualização da raiz de estado após a aplicação de atualizações de estado para cada transação (ou seja, diminuindo as contas do remetente e aumentando as contas do destinatário).
@@ -232,13 +232,17 @@ Existem várias implementações de ZK-rollups que você pode integrar aos seus 
 
 Os projetos que trabalham em zkEVMs incluem:
 
-- **[ZKSync](https://docs.zksync.io/zkevm/)**: _o ZkSync 2.0 é um ZK-rollup compatível com EVM sendo desenvolvido pelo Matter Labs, com tecnologia de seu próprio zkEVM._
+- **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)** — _Applied ZKP é um projeto financiado pela Ethereum Foundation para desenvolver um ZK-rollup compatível com EVM e um mecanismo para gerar provas de validade para blocos Ethereum._
 
-- **[Applied ZKP](https://github.com/privacy-scaling-explorations/zkevm-specs)**: _Applied ZKP é um projeto financiado pela Ethereum Foundation para desenvolver um ZK-rollup compatível com EVM e um mecanismo para gerar provas de validade para blocos Ethereum._
+- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)** — _é um ZK-Rollup descentralizado na rede principal do Ethereum que trabalha em uma Máquina Virtual Ethereum de conhecimento zero (zkEVM) e executa transações do Ethereum de maneira transparente, incluindo contratos inteligentes com validações de prova de conhecimento._
 
 - **[Scroll](https://scroll.io/blog/zkEVM)**: _Scroll é uma empresa impulsionada pela tecnologia que trabalha no desenvolvimento de uma solução nativa zkEVM de camada 2 para Ethereum._
 
-- **[Polygon zkEVM](https://polygon.technology/solutions/polygon-zkevm)**: _é um ZK-Rollup descentralizado na rede principal do Ethereum trabalhando em uma Máquina Virtual Ethereum de conhecimento zero (zkEVM) que executa transações Ethereum de maneira transparente, incluindo contratos inteligentes com validações de prova de conhecimento._
+- **[Taiko](https://taiko.xyz)** - _Taiko é um ZK-rollup descentralizado, equivalente ao Ethereum (um [ZK-EVM do Tipo 1](https://vitalik.ca/general/2022/08/04/zkevm.html))._
+
+- **[ZKSync](https://docs.zksync.io/zkevm/)** - _ZkSync Era is an EVM-compatible ZK Rollup built by Matter Labs, powered by its own zkEVM._
+
+- **[Starknet](https://starkware.co/starknet/)** - _StarkNet is an EVM-compatible layer 2 scaling solution built by StarkWare._
 
 ## Leitura adicional sobre leitura de ZK-rollups {#further-reading-on-zk-rollups}
 

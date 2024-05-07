@@ -124,7 +124,7 @@ lang: ru
 - [Введение в блокчейн-мосты](/bridges/)
 - [Виталик о мостах](https://old.reddit.com/r/ethereum/comments/rwojtk/ama_we_are_the_efs_research_team_pt_7_07_january/hrngyk8/)
 - [Статья о блокчейн-мостах](https://medium.com/1kxnetwork/blockchain-bridges-5db6afac44f8)
-- [Значения, заблокированные в мостах](<https://dune.com/eliasimos/Bridge-Away-(from-Ethereum)>)
+- [Значения, заблокированные в мостах](https://dune.com/eliasimos/Bridge-Away-(from-Ethereum))
 
 #### Новейшие исследования {#recent-research-3}
 
@@ -156,7 +156,7 @@ lang: ru
 
 #### Новейшие исследования {#recent-research-5}
 
-- [ecdsa в FGPA](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
+- [ECDSA на основе программируемых пользователем вентильных матриц (FPGA)](https://ethresear.ch/t/does-ecdsa-on-fpga-solve-the-scaling-problem/6738)
 
 ## Безопасность {#security}
 
@@ -346,7 +346,6 @@ lang: ru
 - [Фреймворки для разработчиков](/developers/docs/frameworks/)
 - [Список инструментов для разработчиков с использованием консенсуса](https://github.com/ConsenSys/ethereum-developer-tools-list)
 - [Стандарты токенов](/developers/docs/standards/tokens/)
-- [Biastek: инструменты для Ethereum](https://biastek.com/ethereum-tools/)
 - [CryptoDevHub: инструменты для EVM](https://cryptodevhub.io/wiki/ethereum-virtual-machine-tools)
 
 #### Новейшие исследования {#recent-research-17}

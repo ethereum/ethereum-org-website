@@ -16,7 +16,6 @@ Program-program ini mendukung ekosistem Ethereum yang luas dengan menawarkan hib
 
 - [Program Dukungan Ekosistem EF](https://esp.ethereum.foundation) - _Mendanai proyek sumber terbuka yang menguntungkan Ethereum, dengan fokus khusus pada alat universal, infrastruktur, penelitian, dan barang publik_
 - [RFP Ethereum](https://github.com/ethereum/requests-for-proposals) - _Permintaan Proposal oleh Yayasan Ethereum untuk pekerjaan dan proyek di ekosistem Ethereum_
-- [MetaCartel](https://www.metacartel.org/grants/) - _Pengembangan Dapp, pembuatan DAO_  
   Hibah mulai dari $1K - $8K USD.
 - [Moloch DAO](https://www.molochdao.com/) - _Privasi, penskalaan lapisan 2, keamanan klien, dan lainnya_
 - [Hibah Terbuka](https://opengrants.com/explore)
