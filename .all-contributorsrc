@@ -11970,6 +11970,15 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "zk-Lumi",
+      "name": "Daniel Lumi",
+      "avatar_url": "https://avatars.githubusercontent.com/u/149794418?v=4",
+      "profile": "https://zksync.io",
+      "contributions": [
+        "maintenance"
+      ]
     }
   ],
   "contributorsPerLine": 7,
