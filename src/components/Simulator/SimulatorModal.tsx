@@ -23,8 +23,6 @@ const SimulatorModal = ({
   size,
   ...restProps
 }: SimulatorModalProps) => {
-  console.log("LOADING MODAL")
-
   return (
     <ChakraModal
       isOpen={isOpen}
