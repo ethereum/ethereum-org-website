@@ -1,6 +1,5 @@
-import React from "react"
-import InfoBanner from "./InfoBanner"
-import Translation from "./Translation"
+import InfoBanner from "@/components/InfoBanner"
+import Translation from "@/components/Translation"
 
 const ProductDisclaimer = () => (
   <InfoBanner emoji="⚠️" isWarning>

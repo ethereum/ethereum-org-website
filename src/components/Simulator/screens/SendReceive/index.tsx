@@ -1,24 +1,27 @@
 import React, { useEffect, useMemo, useState } from "react"
-import { ReceiveEther } from "./ReceiveEther"
-import { ReceivedEther } from "./ReceivedEther"
-import { SendEther } from "./SendEther"
-import { SendFromContacts } from "./SendFromContacts"
-import { SendSummary } from "./SendSummary"
-import { Success } from "./Success"
-import { ProgressCta } from "../../ProgressCta"
-import { WalletHome } from "../../WalletHome"
-import { PhoneScreenProps } from "../../interfaces"
-import { CONTACTS } from "./constants"
+
+import type { PhoneScreenProps } from "@/lib/types"
+
+import { useEthPrice } from "../../../../hooks/useEthPrice"
 import {
   ETH_TRANSFER_FEE,
   FALLBACK_ETH_PRICE,
   USD_RECEIVE_AMOUNT,
 } from "../../constants"
 import { defaultTokenBalances } from "../../constants"
-import { useEthPrice } from "../../../../hooks/useEthPrice"
+import { ProgressCta } from "../../ProgressCta"
+import { WalletHome } from "../../WalletHome"
 import type { TokenBalance } from "../../WalletHome/interfaces"
 
-export const SendReceive: React.FC<PhoneScreenProps> = ({ nav, ctaLabel }) => {
+import { CONTACTS } from "./constants"
+import { ReceivedEther } from "./ReceivedEther"
+import { ReceiveEther } from "./ReceiveEther"
+import { SendEther } from "./SendEther"
+import { SendFromContacts } from "./SendFromContacts"
+import { SendSummary } from "./SendSummary"
+import { Success } from "./Success"
+
+export const SendReceive = ({ nav, ctaLabel }: PhoneScreenProps) => {
   const { progressStepper, step } = nav
   const fetchedPrice = useEthPrice()
   const ethPrice = fetchedPrice > 1 ? fetchedPrice : FALLBACK_ETH_PRICE

@@ -1,25 +1,25 @@
-import React from "react"
 import { Button } from "@chakra-ui/react"
-import { ranges } from "./useStatsBoxGrid"
 
-import { MatomoEventOptions, trackCustomEvent } from "../../utils/matomo"
+import { MatomoEventOptions, trackCustomEvent } from "@/lib/utils/matomo"
 
-interface IRangeSelectorProps {
+import { RANGES } from "@/lib/constants"
+
+type RangeSelectorProps = {
   state: string
   setState: (state: string) => void
   matomo: MatomoEventOptions
 }
 
-export const RangeSelector: React.FC<IRangeSelectorProps> = ({
+export const RangeSelector = ({
   state,
   setState,
   matomo,
-}) => (
+}: RangeSelectorProps) => (
   <div>
-    {ranges.map((range, idx) => (
+    {RANGES.map((range, idx) => (
       <Button
         onClick={() => {
-          setState(ranges[idx])
+          setState(RANGES[idx])
           trackCustomEvent(matomo)
         }}
         key={idx}
@@ -39,7 +39,7 @@ export const RangeSelector: React.FC<IRangeSelectorProps> = ({
           opacity: "0.7",
         }}
         size="sm"
-        backgroundColor={state === ranges[idx] ? "homeBoxPurple" : ""}
+        backgroundColor={state === RANGES[idx] ? "homeBoxPurple" : ""}
       >
         {range}
       </Button>
