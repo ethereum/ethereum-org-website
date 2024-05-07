@@ -1,10 +1,10 @@
 ---
 title: La preuve à divulgation nulle de connaissance
-description: Une introduction non technique aux preuves à divulgation nulle de connaissance pour les débutants.
+description: Une introduction non technique aux preuves à divulgation nulle pour les débutants.
 lang: fr
 ---
 
-# Que sont les preuves à divulgation nulle de connaissance ? {#what-are-zk-proofs}
+## En quoi consistent les preuves à divulgation nulle de connaissance ? {#what-are-zk-proofs}
 
 Une preuve à divulgation nulle est un moyen de prouver la validité d'une information sans révéler l'information elle-même. Le « prouveur » est la partie qui tente de prouver une affirmation, tandis que le « vérificateur » est responsable de la validation de l'affirmation.
 
@@ -203,10 +203,10 @@ Le ZK-STARK est considéré comme immunisé contre la menace de l'informatique q
 ## En savoir plus {#further-reading}
 
 - [L'informaticien explique un concept en 5 niveaux de difficulté | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) - _Chaîne YouTube de Wired_
-- [Vue d'ensemble des cas d'utilisation des preuves à divulgation nulle](https://appliedzkp.org/#Projects) — _L'équipe de confidentialité et de mise à l'échelle des explorations_
+- [Vue d'ensemble des cas d'utilisation des preuves à connaissance nulle](https://pse.dev/projects) - _Privacy and Scaling Explorations Team_
 - [SNARKs vs. STARKS vs SNARKs vs. Récursive SNARKs](https://www.alchemy.com/overviews/snarks-vs-starks) — _Aperçu d’Alchemy_
 - [Une preuve à divulgation nulle : Améliorer la confidentialité sur une Blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitry Lavrenov_
 - [zk-SNARKs — Un exemple de preuve à divulgation nulle réaliste et une plongée en profondeur](https://medium.com/coinmonks/zk-snarks-a-realistic-zero-knowledge-example-and-deep-dive-c5e6eaa7131c) — _Adam Luciano_
 - [ZK-STARKs – Créez une confiance vérifiable, même contre Quantum Computers](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) — _Adam Luciano_
-- [Une introduction approximative à la possibilité des zk-SNARKs](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [Une brève introduction à la façon dont les zk-SNARK sont possibles](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
 - [Qu'est-ce que la preuve à divulgation nulle de connaissance et quel est son rôle dans la Blockchain ?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

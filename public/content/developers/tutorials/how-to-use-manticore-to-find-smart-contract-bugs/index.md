@@ -464,7 +464,7 @@ m.transaction(caller=user_account,
 
 #### State constraint {#state-constraint}
 
-Use [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) to add a constraint to a specific state
+Use [state.constrain(constraint)](https://manticore.readthedocs.io/en/latest/states.html?highlight=StateBase#manticore.core.state.StateBase.constrain) to add a constraint to a specific state.
 It can be used to constrain the state after its exploration to check some property on it.
 
 ### Checking Constraint {#checking-constraint}

@@ -11,6 +11,8 @@ export const TRANSLATED_IMAGES_DIR = "/content/translations"
 export const PLACEHOLDER_IMAGE_DIR = "src/data/placeholders"
 export const INTL_JSON_DIR = "src/intl"
 
+export const NULL_VALUE = "—"
+
 // i18n
 export const DEFAULT_LOCALE = "en"
 export const FAKE_LOCALE = "default"
@@ -143,3 +145,7 @@ export const SECTION_LABELS: NavSectionKey[] = [
 
 // Glossary Definition Component
 export const DEFAULT_GLOSSARY_NS = "glossary"
+
+export const HAMBURGER_BUTTON_ID = "mobile-menu-button"
+export const MOBILE_LANGUAGE_BUTTON_NAME = "mobile-language-button"
+export const DESKTOP_LANGUAGE_BUTTON_NAME = "desktop-language-button"

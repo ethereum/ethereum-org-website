@@ -1,6 +1,6 @@
 ---
 title: 通过JavaScript调用智能合约
-description: 以DAI通证为例展示如何通过JavaScript调用智能合约函数
+description: 以DAI代币为例展示如何通过JavaScript调用智能合约函数
 author: jdourlens
 tags:
   - "交易"
@@ -15,15 +15,15 @@ sourceUrl: https://ethereumdev.io/calling-a-smart-contract-from-javascript/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-在本教程中，我们将会看到如何通过 JavaScript 调用[智能合约](/developers/docs/smart-contracts/)。 首先读取智能合约的状态（例如：ERC20 持有者的余额），然后通过通证转账修改区块链的状态。 您首先需要了解[设置 JS 环境与区块链交互](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/)。
+在本教程中，我们将会看到如何通过JavaScript调用[智能合约](/developers/docs/smart-contracts/)。 首先读取智能合约的状态（例如：ERC20持有者的余额），然后通过代币转账修改区块链的状态。 你首先需要了解[设置JS环境与区块链交互](/developers/tutorials/set-up-web3js-to-use-ethereum-in-javascript/)。
 
-在本例中，我们将使用 DAI 通证，基于测试目的，我们将使用 ganache-cli 分叉区块链并解锁一个已经拥有很多 DAI 的地址。
+在本例中，我们将使用DAI代币，基于测试目的，我们将使用ganache-cli分叉区块链并解锁一个已经拥有很多DAI的地址。
 
 ```bash
 ganache-cli -f https://mainnet.infura.io/v3/[YOUR INFURA KEY] -d -i 66 1 --unlock 0x4d10ae710Bd8D1C31bd7465c8CBC3add6F279E81
 ```
 
-要与智能合约交互，我们需要它的地址和 ABI：
+要与智能合约交互，我们需要它的地址和ABI：
 
 ```js
 const ERC20TransferABI = [
@@ -74,7 +74,7 @@ const ERC20TransferABI = [
 const DAI_ADDRESS = "0x6b175474e89094c44da98b954eedeac495271d0f"
 ```
 
-对于此项目，我们剥离完整的 ERC20 ABI ，仅保留`balanceOf`和`transfer`函数，不过您可以在这里获取完整的[ERC20 ABI](https://ethereumdev.io/abi-for-erc20-contract-on-ethereum/)。
+对于此项目，我们剥离完整的ERC20 ABI ，仅保留`balanceOf`和`transfer`函数，不过你可以在这里获取完整的[ERC20 ABI](https://ethereumdev.io/abi-for-erc20-contract-on-ethereum/)。
 
 然后我们需要实例化我们的智能合约：
 
@@ -98,9 +98,9 @@ const receiverAddress = "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 
 ## 调用：从智能合约读取值 {#call-reading-value-from-a-smart-contract}
 
-第一个例子，将调用“常量（constant）”方法并且在 EVM 中执行这个智能合约方法，并不发送任何交易。 为此我们将读取一个地址的 ECR20 余额。 [阅读关于 ECR20 代币的文章](/developers/tutorials/understand-the-erc-20-token-smart-contract/)。
+第一个例子，将调用“常量（constant）”方法并且在EVM中执行这个智能合约方法，并不发送任何交易。 为此我们将读取一个地址的ECR20余额。 [阅读关于 ECR20 代币的文章](/developers/tutorials/understand-the-erc-20-token-smart-contract/)。
 
-您可以访问为其提供 ABI 的实例化智能合约方法，如下所示：`yourContract.methods.methodname`。 通过使用`call`函数，您可以接收执行函数的结果。
+你可以访问为其提供 ABI 的实例化智能合约方法，如下所示：`yourContract.methods.methodname`。 通过使用`call`函数，你可以接收执行函数的结果。
 
 ```js
 daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
@@ -112,11 +112,11 @@ daiToken.methods.balanceOf(senderAddress).call(function (err, res) {
 })
 ```
 
-请记住，DAI ERC20 有 18 位小数，这意味着您需要移除 18 个零才能获得正确的数额。 uint256 将以字符串形式返回，因为 Javascript 不处理大数值。 如果不确定，请了解我们关于 bignumber.js 的教程[如何在 JS 中处理大数](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/)。
+请记住，DAI ERC20有18位小数，这意味着你需要移除18个零才能获得正确的数额。 uint256 将以字符串形式返回，因为 Javascript 不处理大数值。 如果不确定，请了解我们关于bignumber.js的教程[如何在JS中处理大数](https://ethereumdev.io/how-to-deal-with-big-numbers-in-javascript/)。
 
 ## 发送：将交易发送给智能合约函数 {#send-sending-a-transaction-to-a-smart-contract-function}
 
-对于第二个示例，我们将调用 DAI 智能合约的 transfer 函数，发送 10 个 DAI 到第二个地址。 transfer 函数接受两个参数：收件人地址和转账代币的数量：
+对于第二个示例，我们将调用DAI智能合约的transfer函数，发送10个DAI到第二个地址。 transfer函数接受两个参数：收件人地址和转账代币的数量：
 
 ```js
 daiToken.methods

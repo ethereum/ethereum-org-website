@@ -18,7 +18,7 @@ The current time to finality has turned out to be too long. Most users do not wa
 
 ## The decentralization / time / overhead tradeoff {#the-decentralization-time-overhead-tradeoff}
 
-The finality guarantee is not an immediate property of a new block; it takes time for a new block to finalize. The reason for this is that validators representing at least 2/3 of the total staked ETH on the network has to vote for the block ("attest") in order for it to be considered finalized. Each validating node on the network has to process attestations from other nodes in order to know that a block has, or has not, achieved that 2/3 threshold.
+The finality guarantee is not an immediate property of a new block; it takes time for a new block to finalize. The reason for this is that validators representing at least 2/3 of the total staked ETH on the network have to vote for the block ("attest") in order for it to be considered finalized. Each validating node on the network has to process attestations from other nodes in order to know that a block has, or has not, achieved that 2/3 threshold.
 
 The shorter the time allowed to reach finalization, the more computing power is required at each node because the attestation processing has to be done faster. Also, the more validating nodes exist on the network, the more attestations have to be processed for each block, also adding to the processing power required. The more processing power required, the fewer people can participate because more expensive hardware is needed to run each validating node. Increasing the time between blocks lessens the computing power required at each node but also lengthens the time to finality, because attestations are processed more slowly.
 

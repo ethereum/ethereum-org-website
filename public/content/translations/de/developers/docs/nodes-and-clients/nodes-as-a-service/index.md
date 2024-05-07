@@ -252,7 +252,7 @@ Hier ist eine Liste der beliebtesten Ethereum-Nodeanbieter. Fügen Sie gerne neu
   - Eigenschaften
     - Dezentrales RPC-Protokoll und Marktplatz
     - 1 Mio. Anfragen pro Tag für kostenlose Stufen (pro Endpunkt, max. 2)
-    - [Öffentliche Endpunkte](https://docs.pokt.network/home/resources/public-rpc-endpoints)
+    - [Öffentliche Endpunkte](https://docs.pokt.network/developers/public-endpoints)
     - Pre-Stake+-Programm (wenn Sie mehr als 1 Mio. Anfragen pro Tag benötigen)
     - Support für mehr als 15 Blockchains
     - Über 6400 Nodes verdienen POKT für die Bedienung von Anwendungen

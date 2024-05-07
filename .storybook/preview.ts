@@ -5,6 +5,8 @@ import theme from "../src/@chakra-ui/theme"
 
 import i18n, { baseLocales } from "./i18next"
 
+import "../src/styles/global.css"
+
 const extendedTheme = extendBaseTheme(theme)
 
 const chakraBreakpointArray = Object.entries(extendedTheme.breakpoints)
@@ -25,6 +27,11 @@ const preview: Preview = {
     },
     backgrounds: {
       disable: true,
+    },
+    options: {
+      storySort: {
+        order: ["Atoms", "Molecules", "Organisms", "Templates", "Pages"],
+      },
     },
     chakra: {
       theme: extendedTheme,

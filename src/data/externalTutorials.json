@@ -545,5 +545,17 @@
     "lang": "en",
     "timeToRead": "30",
     "publishDate": "03/24/2023"
+  },
+  {
+    "url": "https://docs.alchemy.com/docs/how-to-get-transaction-history-for-an-address-on-ethereum",
+    "title": "How to Get Transaction History for an Address on Ethereum",
+    "description": "Learn how to get the full transaction history for a smart contract or a user address including external, internal, token, ERC-20, ERC-721 and ERC-1155 token transfers in a single request.",
+    "author": "Alchemy",
+    "authorGithub": "https://github.com/alchemyplatform",
+    "tags": ["alchemy", "querying"],
+    "skillLevel": "beginner",
+    "lang": "en",
+    "timeToRead": "10",
+    "publishDate": "07/01/2023"
   }
 ]

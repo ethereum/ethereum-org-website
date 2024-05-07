@@ -1,5 +1,6 @@
 import fs from "fs"
 
+import { CROWDIN_API_MAX_LIMIT } from "../../lib/constants"
 import type { ProjectProgressData } from "../../lib/types"
 
 import crowdin from "./api-client/crowdinClient"
@@ -13,7 +14,7 @@ async function main() {
     const response = await crowdin.translationStatusApi.getProjectProgress(
       projectId,
       {
-        limit: 200,
+        limit: CROWDIN_API_MAX_LIMIT,
       }
     )
 
@@ -24,13 +25,13 @@ async function main() {
 
     const progress = response.data.map(
       ({ data }) =>
-      ({
-        languageId: data.languageId,
-        words: {
-          approved: data.words.approved,
-          total: data.words.total,
-        },
-      } as ProjectProgressData)
+        ({
+          languageId: data.languageId,
+          words: {
+            approved: data.words.approved,
+            total: data.words.total,
+          },
+        } as ProjectProgressData)
     )
 
     fs.writeFileSync(

@@ -4,7 +4,7 @@ description: Eine nicht-technische Einführung in Null-Wissen-Beweise für Anfä
 lang: de
 ---
 
-# Was sind Null-Wissen-Beweise? {#what-are-zk-proofs}
+## Was sind Null-Wissen-Beweise? {#what-are-zk-proofs}
 
 Ein Null-Wissen-Beweis ist eine Methode, um die Gültigkeit einer Aussage zu beweisen, ohne die Aussage selbst offenzulegen. Der „Beweisanführer“ ist die Partei, die versucht, eine Aussage zu beweisen, während der „Verifizierer“ für die Validierung der Aussage verantwortlich ist.
 
@@ -176,7 +176,7 @@ Die Verwendung von MACI _erfordert_ das Vertrauen in den Koordinator, dass er si
 
 Aber in Fällen, in denen der Koordinator ehrlich bleibt, stellt MACI ein mächtiges Werkzeug dar, um die Unversehrtheit der Abstimmung in der Kette zu gewährleisten. Dies erklärt seine Beliebtheit bei quadratischen Finanzierungsanträgen (z. B. [clr.fund](https://clr.fund/#/about/maci)), die sich stark auf die Integrität der Abstimmungsentscheidungen jedes Einzelnen verlassen.
 
-[Erfahren Sie mehr über MACI](https://github.com/privacy-scaling-explorations/maci/blob/master/specs/01_introduction.md).
+[Erfahren Sie mehr über MACI](https://privacy-scaling-explorations.github.io/maci/).
 
 ## Nachteile der Verwendung von Null-Wissen-Beweisen {#drawbacks-of-using-zero-knowledge-proofs}
 
@@ -203,10 +203,9 @@ ZK-STARK gilt als immun gegen die Bedrohung durch Quantencomputer, da es kollisi
 ## Weiterführende Informationen {#further-reading}
 
 - [Informatiker erklärt ein Konzept in 5 Schwierigkeitsgraden | WIRED](https://www.youtube.com/watch?v=fOGdb1CTu5c) – _Wired YouTube-Kanal_
-- [Übersicht über Anwendungsfälle für Null-Wissen-Beweise](https://appliedzkp.org/#Projects) – _Team für Datenschutz- und Skalierungsuntersuchungen_
+- [Übersicht der Anwendungsfälle für Zero-Knowledge Proofs](https://pse.dev/projects) – _Team für Datenschutz- und Skalierungsuntersuchungen_
 - [SNARKs vs. STARKS vs. Rekursive SNARKs](https://www.alchemy.com/overviews/snarks-vs-starks) – _Alchemy-Übersichten_
 - [Ein Null-Wissen-Beweis: Verbesserung des Datenschutzes auf einer Blockchain](https://www.altoros.com/blog/zero-knowledge-proof-improving-privacy-for-a-blockchain/) — _Dmitri Lawrenow_
 - [zk-SNARKs – Ein realistisches Null-Wissen-Beispiel mit Tiefgang](https://medium.com/coinmonks/zk-snarks-ein-realistisches-Zero-Knowledge-Beispiel-und-Deep-Dive-c5e6eaa7131c) – _Adam Luciano_
-- [ZK-STARKs – Schaffen Sie verifizierbares Vertrauen, sogar gegenüber Quantencomputern](https://medium.com/coinmonks/zk-starks-create-verifiable-trust-even-against-quantum-computers-dd9c6a2bb13d) – _Adam Luciano_
-- [Eine ungefähre Einführung, wie zk-SNARKs möglich sind](https://vitalik.eth.limo/general/2021/01/26/snarks.html) — _Vitalik Buterin_
+- [An approximate introduction to how zk-SNARKs are possible (Eine Näherungseinführung in die Realisierbarkeit von zk-SNARKs](https://vitalik.eth.limo/general/2021/01/26/snarks.html) – _Vitalik Buterin_
 - [Was ist Null-Wissen-Beweis und seine Rolle in der Blockchain?](https://www.leewayhertz.com/zero-knowledge-proof-and-blockchain/) — _LeewayHertz_

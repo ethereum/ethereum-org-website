@@ -17,7 +17,7 @@ const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
   const { asPath } = useRouter()
 
   return (
-    <Box display="inline-block">
+    <Box as="span" display="inline-block">
       <Tooltip
         content={
           <GlossaryDefinition
@@ -26,7 +26,7 @@ const GlossaryTooltip = ({ children, termKey }: GlossaryTooltipProps) => {
             options={{ ns: "glossary-tooltip" }}
           />
         }
-        onOpen={() => {
+        onBeforeOpen={() => {
           trackCustomEvent({
             eventCategory: "Glossary Tooltip",
             eventAction: cleanPath(asPath),

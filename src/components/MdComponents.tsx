@@ -40,6 +40,7 @@ import Emoji from "./Emoji"
 import ExpandableCard from "./ExpandableCard"
 import FeaturedText from "./FeaturedText"
 import InfoBanner from "./InfoBanner"
+import IssuesList from "./IssuesList"
 import LocaleDateTime from "./LocaleDateTime"
 import MainArticle from "./MainArticle"
 import VideoIframe from "./VideoIframe"
@@ -282,6 +283,7 @@ export const reactComponents = {
   Page,
   QuizWidget: StandaloneQuizWidget,
   StyledButtonDropdown,
+  IssuesList,
   Title,
   YouTube,
 }

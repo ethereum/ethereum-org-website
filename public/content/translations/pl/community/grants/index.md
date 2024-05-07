@@ -15,7 +15,6 @@ Ta lista jest tworzona przez naszą społeczność. Jeśli czegoś brakuje lub j
 Te programy wspierają rozległy ekosystem Ethereum, oferując granty dla wielu projektów. Obejmują one rozwiązania skalowalności, budowania społeczności, bezpieczeństwa, prywatności i nie tylko. Granty te nie są specyficzne dla żadnej platformy Ethereum i są dobrym miejscem do rozpoczęcia, jeśli nie masz pewności.
 
 - [Program wsparcia ekosystemu prowadzony przez EF](https://esp.ethereum.foundation) — _Finansowanie projektów open source, które przynoszą korzyści Ethereum, ze szczególnym naciskiem na uniwersalne narzędzia, infrastrukturę, badania i dobra publiczne_
-- [MetaCartel](https://www.metacartel.org/grants/) — _rozwój zdecentralizowanych aplikacji, tworzenie DAO_
 - [Moloch DAO](https://www.molochdao.com/) — _prywatność, skalowanie warstwy 2, bezpieczeństwo klienta i nie tylko_
 - [Granty DAO](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) — _arkusz kalkulacyjny Google organizacji oferujących granty_
 - [Granty Akademickie](https://esp.ethereum.foundation/academic-grants) — _granty na wsparcie prac akademickich związanych z Ethereum_

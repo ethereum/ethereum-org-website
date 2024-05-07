@@ -28,7 +28,7 @@ const TableOfContentsLink = ({
       position="relative"
       display="inline-block"
       // `li :last-child` global selector wants to override this without `!important`
-      mb="md !important"
+      mb="4 !important"
       textDecoration="none"
       color="body.medium"
       fontWeight="normal"

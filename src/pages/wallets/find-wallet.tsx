@@ -95,11 +95,15 @@ const FindWalletPage = () => {
 
   // If any wallet supports user's locale, show them (shuffled) at the top and then the remaining ones
   useEffect(() => {
+    const supportedLocaleWallets = getSupportedLocaleWallets(locale!)
+
+    const noSupportedLocaleWallets = getNonSupportedLocaleWallets(locale!)
+
     setRandomizedWalletData(
       supportedLocaleWallets.concat(noSupportedLocaleWallets)
     )
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [])
+  }, [locale])
 
   const updateFilterOption = (key) => {
     const updatedFilters = { ...filters }
@@ -134,7 +138,7 @@ const FindWalletPage = () => {
       </BannerNotification>
 
       <Flex
-        direction={{ base: "column-reverse", sm: "row" }}
+        direction={{ base: "column", sm: "row" }}
         position="relative"
         w="full"
         p={12}
@@ -239,6 +243,7 @@ const FindWalletPage = () => {
                 resetFilters={resetFilters}
                 resetWalletFilter={resetWalletFilter}
                 walletData={randomizedWalletData}
+                onOpen={onOpen}
               />
             </Box>
           </Flex>

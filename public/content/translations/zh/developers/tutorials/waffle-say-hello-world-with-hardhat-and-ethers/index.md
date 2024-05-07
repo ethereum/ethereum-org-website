@@ -1,6 +1,6 @@
 ---
 title: "Waffle使用hardhat和ethers设置hello world的教程"
-description: 使用hardhat和ethers.js制作您的第一个Waffle项目
+description: 使用hardhat和ethers.js制作你的第一个Waffle项目
 author: "MiZiet"
 tags:
   - "waffle"
@@ -79,7 +79,7 @@ MyWaffleProject
 │   └── sample-script.js
 ├── test
 │   └── sample-test.js
-├── .gitattributs
+├── .gitattributes
 ├── .gitignore
 ├── hardhat.config.js
 └── package.json
@@ -87,7 +87,7 @@ MyWaffleProject
 
 ### 现在让我们来谈谈其中一些文件： {#now-lets-talk}
 
-- Greeter.sol - 我们的智能合约是用 solidity 编写的；
+- Greeter.sol - 我们的智能合约是用solidity编写的；
 
 ```solidity
 contract Greeter {
@@ -112,8 +112,8 @@ greeting = _greeting;
 我们的智能合约可以分为三个部分：
 
 1. 构造函数 - 我们在其中声明一个字符串类型变量，名为`greeting`，
-2. 函数 greet - 调用时返回`greeting`的函数，
-3. 函数 setGreeting - 允许我们更改`greeting`值的函数。
+2. 函数greet - 调用时返回`greeting`的函数，
+3. 函数setGreeting - 允许我们更改`greeting`值的函数。
 
 - sample-test.js - 我们的测试文件
 
@@ -122,6 +122,7 @@ describe("Greeter", function () {
   it("Should return the new greeting once it's changed", async function () {
     const Greeter = await ethers.getContractFactory("Greeter")
     const greeter = await Greeter.deploy("Hello, world!")
+
 
     await greeter.deployed()
     expect(await greeter.greet()).to.equal("Hello, world!")
@@ -134,7 +135,7 @@ describe("Greeter", function () {
 
 ### 下一步是编译我们的合约并运行测试： {#compiling-and-testing}
 
-Waffle 测试使用 Mocha（测试框架）与 Chai（一个断言库）。 您只需运行 `npx hardhat test` 并等待以下消息出现。
+Waffle 测试使用 Mocha（测试框架）与 Chai（一个断言库）。 你只需运行 `npx hardhat test` 并等待以下消息出现。
 
 ```bash
 ✓ Should return the new greeting once it's changed
@@ -199,10 +200,10 @@ greeting = _greeting;
 2 passing (2s)
 ```
 
-恭喜！ 您做到了:)
+恭喜！ 你做到了:)
 
 ### 总结 {#conclusion}
 
 我们使用 Waffle、Hardhat 和 ethers.js 制作了一个简单的项目。 我们学习了如何设置项目、添加测试和实现新功能。
 
-欲了解更多用于测试您的智能合约的优秀 chai 匹配器，请查看[官方 Waffle 文档](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html)。
+欲了解更多用于测试你的智能合约的优秀 chai 匹配器，请查看[官方 Waffle 文档](https://ethereum-waffle.readthedocs.io/en/latest/matchers.html)。

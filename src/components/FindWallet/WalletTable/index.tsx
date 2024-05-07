@@ -208,6 +208,7 @@ export type WalletTableProps = {
   resetFilters: () => void
   resetWalletFilter: React.MutableRefObject<() => void>
   walletData: WalletData[]
+  onOpen: () => void
 }
 
 const WalletTable = ({
@@ -215,6 +216,7 @@ const WalletTable = ({
   resetFilters,
   resetWalletFilter,
   walletData,
+  onOpen,
 }: WalletTableProps) => {
   const { t } = useTranslation("page-wallets-find-wallet")
   const { locale } = useRouter()
@@ -228,17 +230,31 @@ const WalletTable = ({
   // Context API
   const { supportedLanguage } = useContext(WalletSupportedLanguageContext)
 
+  const handleStickyFiltersClick = () => {
+    onOpen()
+
+    trackCustomEvent({
+      eventCategory: "MobileFilterToggle",
+      eventAction: "Tap MobileFilterToggle - sticky",
+      eventName: "show mobile filters true",
+    })
+  }
+
   return (
     <Container>
       <WalletContentHeader>
         <Th sx={{ textAlign: "start !important" }}>
           <Flex justifyContent="space-between" px={{ base: 2.5, md: 0 }}>
+            {/* Displayed on mobile only */}
             <Text
               hideFrom="lg"
               lineHeight={1.6}
               fontSize="md"
               color="primary.base"
               textTransform="uppercase"
+              cursor="pointer"
+              onClick={handleStickyFiltersClick}
+              as="button"
             >
               {`${t("page-find-wallet-filters")} (${
                 walletsListingCount(filters) +
@@ -314,6 +330,14 @@ const WalletTable = ({
               })
           }
 
+          const handleWalletWebsiteClick = (walletName: string) => {
+            trackCustomEvent({
+              eventCategory: "WalletExternalLinkList",
+              eventAction: "Tap main button",
+              eventName: `${walletName}`,
+            })
+          }
+
           return (
             <WalletContainer
               key={wallet.key}
@@ -324,7 +348,14 @@ const WalletTable = ({
                 onKeyUp={(e) => {
                   if (e.key === "Enter") showMoreInfo(wallet)
                 }}
-                onClick={() => showMoreInfo(wallet)}
+                onClick={(e) => {
+                  // Prevent expanding the wallet more info section when clicking on the "Visit website" button
+                  if (
+                    (e.target as HTMLElement).matches("a, a svg")
+                  )
+                    return
+                  showMoreInfo(wallet)
+                }}
               >
                 <Td lineHeight="revert">
                   <Flex
@@ -414,6 +445,9 @@ const WalletTable = ({
                               w="auto"
                               isExternal
                               size="sm"
+                              onClick={() =>
+                                handleWalletWebsiteClick(wallet.name)
+                              }
                             >
                               {t("page-find-wallet-visit-website")}
                             </ButtonLink>
@@ -440,6 +474,7 @@ const WalletTable = ({
                       w="100%"
                       isExternal
                       size="sm"
+                      onClick={() => handleWalletWebsiteClick(wallet.name)}
                     >
                       {t("page-find-wallet-visit-website")}
                     </ButtonLink>

@@ -6,17 +6,24 @@ import {
   PopoverContent,
   PopoverProps,
   PopoverTrigger,
+  Portal,
   useDisclosure,
 } from "@chakra-ui/react"
 
 import { isMobile } from "@/lib/utils/isMobile"
 
-export interface IProps extends PopoverProps {
+export interface TooltipProps extends PopoverProps {
   content: ReactNode
   children?: ReactNode
+  onBeforeOpen?: () => void
 }
 
-const Tooltip: React.FC<IProps> = ({ content, children, ...rest }) => {
+const Tooltip = ({
+  content,
+  children,
+  onBeforeOpen,
+  ...rest
+}: TooltipProps) => {
   const { isOpen, onOpen, onClose } = useDisclosure()
 
   // Close the popover when the user scrolls.
@@ -45,10 +52,15 @@ const Tooltip: React.FC<IProps> = ({ content, children, ...rest }) => {
     }
   }, [isOpen, onClose])
 
+  const handleOpen = () => {
+    onBeforeOpen?.()
+    onOpen()
+  }
+
   return (
     <Popover
       isOpen={isOpen}
-      onOpen={onOpen}
+      onOpen={handleOpen}
       onClose={onClose}
       placement="top"
       trigger={isMobile() ? "click" : "hover"}
@@ -56,10 +68,12 @@ const Tooltip: React.FC<IProps> = ({ content, children, ...rest }) => {
       {...rest}
     >
       <PopoverTrigger>{children}</PopoverTrigger>
-      <PopoverContent>
-        <PopoverArrow />
-        <PopoverBody>{content}</PopoverBody>
-      </PopoverContent>
+      <Portal>
+        <PopoverContent>
+          <PopoverArrow />
+          <PopoverBody>{content}</PopoverBody>
+        </PopoverContent>
+      </Portal>
     </Popover>
   )
 }

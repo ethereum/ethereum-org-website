@@ -181,6 +181,14 @@
     "endDate": "2024-04-19"
   },
   {
+    "title": "Road to DEVCON: Zero-Knowledge Proofs Unveiled",
+    "startDate": "2024-04-18",
+    "endDate": "2024-04-18",
+    "to": "https://www.eventbrite.com/e/road-to-devcon-zero-knowledge-proofs-unveiled-tickets-870904467707?aff=ebdsoporgprofile",
+    "location": "Dubai, UAE",
+    "description": "Unleashing the Potential of ZK Technology in an Afternoon. This is a warm-up gathering in the DEVCON ZK field."
+  },
+  {
     "title": "TOKEN2049",
     "startDate": "2024-04-18",
     "endDate": "2024-04-19",
@@ -231,6 +239,14 @@
     "to": "https://www.ethereumbrasil.com/",
     "location": "Rio de Janeiro, Brazil",
     "description": "3rd Edition of ETH Rio. ETH Rio 2024 will bring regulators, builders and businesses to discuss the future of the Brazilian Tokenized Economy based on EVM."
+  },
+  {
+    "title": "ETH Beijing Hackathon",
+    "startDate": "2024-05-17",
+    "endDate": "2024-05-19",
+    "to": "https://www.ethbeijing.xyz/",
+    "location": "Beijing, China",
+    "description": "Second edition of ETH Beijing. The biggest Ethereum community event in Beijing."
   },
   {
     "title": "DappConn",
@@ -544,5 +560,14 @@
     "location": "South East Asia",
     "description": "Bringing developers onchain to build the future of the internet.",
     "imageUrl": "https://ethglobal.com/og.png"
+  },
+  {
+    "title": "ETH Uruguay",
+    "startDate": "2024-05-16",
+    "endDate": "2024-05-18",
+    "to": "www.ethereumuruguay.org",
+    "location": "Montevideo, Uruguay",
+    "description": "Building together for a decentralized future.",
+    "imageUrl": "https://uploads-ssl.webflow.com/6463b2b2401a64107c84634f/6463f95db5abb4d10aeabfb5_eth-uy-logo-3.png"
   }
 ]

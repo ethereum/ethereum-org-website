@@ -16,7 +16,9 @@ Kennen Sie eine Bildungsressource in Ihrer Sprache? [Eröffnen Sie ein Ticket](h
 
 ## Ressourcen von Ethereum.org {#ethereum-org}
 
-Ethereum.org wird muttersprachlich in über 40 Sprachen übersetzt, die Sie auf unserer [Sprachenseite](/languages) finden.
+Ethereum.org wird muttersprachlich in über 40 Sprachen übersetzt, die Sie auf unserer Sprachenseite finden.
+
+![Language selector menu](./language-selector-menu.png)
 
 Wenn Sie zweisprachig sind und uns helfen möchten, mehr Menschen zu erreichen, können Sie sich auch am [Übersetzungprogramm von ethereum.org](/contributing/translation-program/#translation-program) beteiligen und uns bei der Übersetzung der Website helfen.
 

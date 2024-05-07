@@ -11,7 +11,7 @@ lang: hu
 
 Az [Ethereum Alapítvány (EF)](http://ethereum.foundation/) egy non-profit szervezet, melynek célja az [Ethereum](/what-is-ethereum/) és a kapcsolódó technológiák támogatása.
 
-Az Ethereum Alapítvány (EF) nem egy cég, még csak nem is hagyományos non-profit. Feladatuk nem az Ethereum irányítása vagy vezetése, és nem is az egyetlen szervezet, amely finanszírozza az Ethereumhoz kapcsolódó, fontos technológiák fejlesztését. Az EF egy sokkal nagyobb [ökoszisztémának](/community/) a része.
+Az Ethereum Alapítvány (EF) nem egy cég, még csak nem is hagyományos non-profit. Feladatuk nem az Ethereum irányítása vagy vezetése, és nem is az egyetlen szervezetté válás, amely finanszírozza az Ethereumhoz kapcsolódó, fontos technológiák fejlesztését. Az EF egy sokkal nagyobb [ökoszisztémának](/community/) a része.
 
 ## Ethereum Alapítvány Kezdeményezések {#ethereum-foundation-initiatives}
 
@@ -27,11 +27,11 @@ Az Ethereum Alapítvány 2014 óta szervezi a Devcont, az Ethereum éves konfere
 
 Hozzáférhet az összes konferencián elhangzó előadás videójához a kezdetektől az [archive.devcon.org](https://archive.devcon.org/) oldalon.
 
-Tudjon meg többet a [devcon.org](https://devcon.org/) oldalon, tekintse meg a [Devcon Blogot](https://devcon.org/en/blogs/), vagy kövesse a [@efdevcon](https://twitter.com/EFDevcon) csatornát a legfrissebb információkért.
+Tudjon meg többet a [devcon.org](https://devcon.org/) oldalon, tekintse meg a [Devcon blogot](https://devcon.org/en/blogs/), vagy kövesse a [@efdevcon](https://twitter.com/EFDevcon) csatornát a legfrissebb információkért.
 
 ### Ösztöndíjas program {#fellowship-program}
 
-Az [Ethereum Alapítvány Ösztöndíjas Programja](https://fellowship.ethereum.foundation/) egy olyan kezdeményezés, mely a kulturális, nemzeti és gazdasági csoportok egyenlő arányú jelenlétét akarja elősegíteni. A program úgy akarja áthidalni a szakadékokat, hogy kivételes és tehetséges egyéneket azonosít és támogat, hogy lehetővé tegyék azt Ethereum fontosságát e csoportok számára, elhárítsák azokat az akadályokat, amelyek miatt a távolmaradó emberek és közösségek nem tudnak csatlakozni az Ethereum világához, pedig ők jelentik a web3 jövőjét.
+Az [Ethereum Alapítvány Ösztöndíjas Programja](https://fellowship.ethereum.foundation/) egy olyan kezdeményezés, mely a kulturális, nemzeti és gazdasági csoportok egyenlő arányú jelenlétét akarja elősegíteni. A program úgy akarja áthidalni a szakadékokat, hogy kivételes és tehetséges egyéneket keres és támogat, hogy felkeltsék e csoportok Ethereum iránti érdeklődését, elhárítsák azokat az akadályokat, amelyek miatt a távolmaradó emberek és közösségek nem tudnak csatlakozni az Ethereum világához, pedig ők jelentik a web3 jövőjét.
 
 [Tudjon meg többet a fellowship.ethereum.foundation oldalon](https://fellowship.ethereum.foundation/).
 

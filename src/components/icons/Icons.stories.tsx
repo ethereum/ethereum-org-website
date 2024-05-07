@@ -1,6 +1,5 @@
 import * as React from "react"
-import { Center, Flex, SimpleGrid, VStack } from "@chakra-ui/react"
-import { Meta, StoryObj } from "@storybook/react"
+import { Center, Flex, SimpleGrid } from "@chakra-ui/react"
 
 import { EthHomeIcon } from "./EthHomeIcon"
 import { FeedbackGlyphIcon } from "./FeedbackGlyphIcon"
@@ -39,6 +38,7 @@ import {
   DockerGlyphIcon,
   EconomicalIcon,
   EthpoolGlyphIcon,
+  FigmentGlyphIcon,
   GreenCheckProductGlyphIcon,
   KilnGlyphIcon,
   LidoGlyphIcon,
@@ -91,8 +91,7 @@ import {
 
 export default {
   title: "Atoms / Media & Icons / Icons",
-  component: VStack,
-} satisfies Meta<typeof VStack>
+}
 
 const iconsDefinitions = [
   CorrectIcon,
@@ -123,6 +122,7 @@ const iconsDefinitions = [
   DockerGlyphIcon,
   EconomicalIcon,
   EthpoolGlyphIcon,
+  FigmentGlyphIcon,
   GreenCheckProductGlyphIcon,
   P2PGlyphIcon,
   KilnGlyphIcon,
@@ -195,7 +195,7 @@ const items = iconsDefinitions.map((IconDef) => (
   </Flex>
 ))
 
-export const Icons: StoryObj<typeof VStack> = {
+export const Icons = {
   render: () => {
     return <SimpleGrid columns={[2, 2, 3, 5]}>{items}</SimpleGrid>
   },

@@ -5,7 +5,7 @@ author: Markus Waas
 lang: zh
 tags:
   - "solidity"
-  - "智能合同"
+  - "智能合约"
   - "测试"
   - "truffle"
   - "ganache"
@@ -15,13 +15,13 @@ source: soliditydeveloper.com
 sourceUrl: https://soliditydeveloper.com/continuous-integration
 ---
 
-与 Truffle 的持续集成 (CI) 非常适合在实施一组基本测试后进行开发。 它允许您运行非常长的测试。在合并[拉取请求](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)之前确保所有测试通过，并使用其他工具跟踪各种统计数据。
+与 Truffle 的持续集成 (CI) 非常适合在实施一组基本测试后进行开发。 它允许你运行非常长的测试。在合并[拉取请求](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)之前确保所有测试通过，并使用其他工具跟踪各种统计数据。
 
-我们将使用 [Truffle Metacoin Box](https://www.trufflesuite.com/boxes/metacoin) 来设置我们的持续集成。 您可以选择 Travis CI 或 Circle CI。
+我们将使用 [Truffle Metacoin Box](https://www.trufflesuite.com/boxes/metacoin) 来设置我们的持续集成。 你可以选择 Travis CI 或 Circle CI。
 
 ## 设置 Travis CI {#setting-up-travis-ci}
 
-添加 [Travis CI](https://travis-ci.org/) 很简单。 您只需要将 `.travis.yml` 配置文件添加到项目的根目录：
+添加 [Travis CI](https://travis-ci.org/) 很简单。 你只需要将 `.travis.yml` 配置文件添加到项目的根目录：
 
 ```yml
 language: node_js
@@ -37,7 +37,7 @@ script:
   - npm test
 ```
 
-我们现在保持简单，只运行执行 Truffle 单元测试的测试脚本。 但我们有一个问题，在 Travis CI 机器上没有区块链。 一个简单的解决方法是使用命令 `npm install ganache-cli` 安装 ganache-cli，并在测试前运行它。 您可以通过在 `npx truffle test` 调用前添加一个带有 npx `ganache-cli > /dev/null` 行的 bash 脚本来实现这一点。 [完整示例 bash 脚本](https://github.com/gorgos/Truffle-CI-Example/blob/master/scripts/run_tests.sh)。
+我们现在保持简单，只运行执行 Truffle 单元测试的测试脚本。 但我们有一个问题，在 Travis CI 机器上没有区块链。 一个简单的解决方法是使用命令 `npm install ganache-cli` 安装 ganache-cli，并在测试前运行它。 你可以通过在 `npx truffle test` 调用前添加一个带有 npx `ganache-cli > /dev/null` 行的 bash 脚本来实现这一点。 [完整示例 bash 脚本](https://github.com/gorgos/Truffle-CI-Example/blob/master/scripts/run_tests.sh)。
 
 ## 设置 Circle CI {#setting-up-circle-ci}
 
@@ -99,16 +99,16 @@ workflows:
 
 ## 添加 eth-gas-reporter 插件 {#adding-the-eth-gas-reporter-plugin}
 
-Eth-gas-reporter 插件对于记录您的智能合约函数的 gas 成本相当有用。 在您的 CI 中使用它，将进一步有助于在添加拉取请求时显示差异。
+Eth-gas-reporter 插件对于记录你的智能合约函数的燃料成本相当有用。 在你的 CI 中使用它，将进一步有助于在添加拉取请求时显示差异。
 
-### 第 1 步：安装 eth-gas-reporter 插件和 {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
+### 第 1 步：安装 eth-gas-reporter 插件和  {#step-1-install-the-eth-gas-reporter-plugin-and-codechecks}
 
 ```bash
 npm install --save-dev eth-gas-reporter
 npm install --save-dev @codechecks/client
 ```
 
-### 第 2 步：在您的 truffle-config.js 内的 mocha 设置中加入该插件 {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
+### 第 2 步：在你的 truffle-config.js 内的 mocha 设置中加入该插件 {#step-2-add-the-plugin-to-the-mocha-settings-inside-your-truffle-configjs}
 
 [查看选项](https://github.com/cgewecke/eth-gas-reporter#options)
 
@@ -124,7 +124,7 @@ module.exports = {
 };
 ```
 
-### 第 3 步：在您的项目的根目录中添加一个 codechecks.yml {#step-3-add-a-codechecksyml-to-your-projects-root-directory}
+### 第 3 步：在你的项目的根目录中添加一个 codechecks.yml {#step-3-add-a-codechecksyml-to-your-projects-root-directory}
 
 ```yml
 checks:
@@ -142,16 +142,16 @@ checks:
 
 - 使用 [Codechecks](http://codechecks.io/) 创建一个帐户。
 - 将 GitHub 存储库添加到其中。
-- 复制密钥并将 `CC_SECRET=COPIED SECRET` 添加到您的 CI（ [Travis](https://docs.travis-ci.com/user/environment-variables/) 参见这里，[CircleCi](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project) 参见这里）。
+- 复制密钥并将 `CC_SECRET=COPIED SECRET` 添加到你的 CI（ [Travis](https://docs.travis-ci.com/user/environment-variables/) 参见这里，[CircleCi](https://circleci.com/docs/2.0/env-vars/#setting-an-environment-variable-in-a-project) 参见这里）。
 - 现在继续创建拉取请求。
 
-这就完成了。 现在，您将看到一份关于您的拉取请求的 gas 成本变化的报告。
+这就完成了。 现在，你将看到一份关于你的拉取请求的燃料成本变化的报告。
 
 ![Gas 成本报告示例](./gas-reports.png)
 
 ## 添加 solidity-coverage 插件 {#adding-the-solidity-coverage-plugin}
 
-通过 solidity-coverage 插件，您可以检查您的代码路径有多少被您的测试所覆盖。 将此插件添加到您的 CI，设置好后，使用非常方便。
+通过 solidity-coverage 插件，你可以检查你的代码路径有多少被你的测试所覆盖。 将此插件添加到你的 CI，设置好后，使用非常方便。
 
 ### 第 1 步：创建一个 metacoin 项目并安装覆盖工具 {#step-1-create-a-metacoin-project-and-install-coverage-tools}
 
@@ -187,8 +187,8 @@ Solidity coverage 启动了它自己的 ganache-cli，所以我们不必担心�
 
 ## 进一步的想法 {#further-ideas}
 
-- [MythX](https://mythx.io/)：使用 MythX，您可以自动分析智能合约的安全性。 因此， [将其添加到您的 CI](https://blog.mythx.io/howto/mythx-and-continuous-integration-part-1-circleci/) 是非常有意义的。
+- [MythX](https://mythx.io/)：使用 MythX，你可以自动分析智能合约的安全性。 因此， [将其添加到你的 CI](https://blog.mythx.io/howto/mythx-and-continuous-integration-part-1-circleci/) 是非常有意义的。
 - [Linting](https://wikipedia.org/wiki/Lint_%28software%29)：好代码可以在一定程度上通过 linting 工具强制执行。 [Eslint](https://eslint.org/) 非常适合 JavaScript 并且[便于设置](https://eslint.org/docs/user-guide/getting-started)，而 [Solhint](https://protofire.github.io/solhint/) 可用于 Solidity。
-- 长测试：有时您可能想要添加极端测试，例如使用数百名用户测试一个合约。 这需要很长时间。 不要在每次测试运行中都运行它们，而是将它们添加到 CI 中。
+- 长测试：有时你可能想要添加极端测试，例如使用数百名用户测试一个合约。 这需要很长时间。 不要在每次测试运行中都运行它们，而是将它们添加到 CI 中。
 
-这是全部内容了。 持续集成是您开发中非常有用的战略。 您可以在 [Truffle-CI-example](https://github.com/gorgos/Truffle-CI-Example) 查看完整的示例。 请务必移除 Circle-CI 或 Travis，只使用一个就够了！
+这是全部内容了。 持续集成是你开发中非常有用的战略。 你可以在 [Truffle-CI-example](https://github.com/gorgos/Truffle-CI-Example) 查看完整的示例。 请务必移除 Circle-CI 或 Travis，只使用一个就够了！

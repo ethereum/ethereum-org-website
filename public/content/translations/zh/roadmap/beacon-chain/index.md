@@ -4,9 +4,10 @@ description: 了解信标链 - 引入权益证明的以太坊升级。
 lang: zh
 template: upgrade
 image: /upgrades/core.png
-summaryPoint1: 信标链为以太坊生态系统引入了权益证明。
+alt:
+summaryPoint1: 信标链为以太坊生态系统引入了权益证明机制。
 summaryPoint2: 信标链于 2022 年 9 月与原有的以太坊工作量证明链合并。
-summaryPoint3: 信标链引入的共识逻辑和区块广播协议目前保护着以太坊。
+summaryPoint3: 信标链引入了共识逻辑和区块广播协议，为当前的以太坊保驾护航。
 ---
 
 <UpgradeStatus isShipped dateKey="page-upgrades:page-upgrades-beacon-date">

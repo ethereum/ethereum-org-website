@@ -117,7 +117,7 @@ EIP-4337では、ウォレットの動作方法も変わります。 各ウォ�
 - [Devcon Bogota「アカウント抽象化がdAppのゲームチェンジャーになる理由」](https://www.youtube.com/watch?v=OwppworJGzs)
 - [Devcon Bogota「アカウント抽象化ELI5」](https://www.youtube.com/watch?v=QuYZWJj65AY)
 - [ヴィタリックの「アカウント抽象化への道」メモ](https://notes.ethereum.org/@vbuterin/account_abstraction_roadmap#Transaction-inclusion-lists)
-- [ヴィタリックのソーシャルリカバリウォレットに関するブログ投稿](https://vitalik.ca/general/2021/01/11/recovery.html)
+- [ヴィタリックのソーシャルリカバリウォレットに関するブログ投稿](https://vitalik.eth.limo/general/2021/01/11/recovery.html)
 - [EIP-2938のメモ](https://hackmd.io/@SamWilsn/ryhxoGp4D#What-is-EIP-2938)
 - [EIP-2938のドキュメント](https://eips.ethereum.org/EIPS/eip-2938)
 - [EIP-4337のメモ](https://medium.com/infinitism/erc-4337-account-abstraction-without-ethereum-protocol-changes-d75c9d94dc4a)

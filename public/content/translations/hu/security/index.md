@@ -10,13 +10,185 @@ A kriptovaluták iránt nő az érdeklődés, ezért elengedhetetlen megtanulni 
 
 <Divider />
 
+## Kriptobiztonság 101 {#crypto-security}
+
+### Növelje tudását {#level-up-your-knowledge}
+
+A legtipikusabb ok, amiért a kripto világában az emberek csalók áldozatai lesznek, az az ismeret és a működés megértésének hiánya. Például ha valaki nem érti, hogy az Ethereum-hálózat decentralizált és nincs senkinek sem a birtokában, akkor könnyedén elhiheti egy ügyfélszolgálati munkatársat megszemélyesítő csalónak, hogy visszaszerzi az elvesztett ETH a [privát kulcsaiért](/glossary/#private-key) cserébe. Az Ethereum működésének megértése megéri a befektetést.
+
+<DocLink to="/what-is-ethereum/">
+  Mi az Ethereum?
+</DocLink>
+
+<DocLink to="/eth/">
+  Mi az ether?
+</DocLink>
+<Divider />
+
+## Tárcabiztonság {#wallet-security}
+
+### Ne adja ki senkinek a visszaállításhoz szükséges kulcsot {#protect-recovery-phrase}
+
+**Soha, semmilyen okból se ossza meg a visszaállításhoz szükséges kulcsát!**
+
+A tárca visszaállítási kulcsa vagy mondata jelszóként működik az Ethereum-tárcához. Ez az egyetlen dolog, aminek a hiányában valaki nem viszi el az összes eszközt a tárcájából, ha ismeri annak a címét!
+
+<DocLink to="/wallets/">
+  Mi az az Ethereum tárca?
+</DocLink>
+
+#### Ne készítsen képet a visszaállításhoz szükséges mondatáról {#screenshot-recovery-phrase}
+
+A képernyőkép készítésével azt kockáztatja, hogy az szinkronizálódik a felhőbe és elérhetővé válik a támadók számára. A visszaállításhoz szükséges kulcs vagy mondat megszerzése a felhőből egy tipikus támadási forma.
+
+### Használjon hardveres tárcát {#use-hardware-wallet}
+
+A hardveres tárca offline módon tárolja a privát kulcsokat. Ez a legbiztonságosabb tárca a privát kulcsok tárolására: a kulcs sosem kapcsolódik az internethez és teljesen helyben marad az eszközén.
+
+A privát kulcsok offline tartása komoly szinten csökkenti a támadás kockázatát, még ha egy támadó hozzá is fér a számítógépéhez.
+
+#### Próbálja ki a hardveres tárcát: {#try-hardware-wallet}
+
+- [Ledger](https://www.ledger.com/)
+- [Trezor](https://trezor.io/)
+
+### Ellenőrizze kétszer a tranzakciókat küldés előtt {#double-check-transactions}
+
+A rossz tárcába küldött kripto egy tipikus hiba. **Az Ethereumon küldött tranzakció visszafordíthatatlan.** Hacsak nem ismeri a cím tulajdonosát és nem tudja meggyőzni arról, hogy visszaküldje, nincs igazán esélye visszaszerezni azt.
+
+Mindig győződjön meg arról, hogy cím pontosan egyezik a kívánt címmel, mielőtt elküldi a tranzakciót. Az [okosszerződésekkel](/glossary/#smart-contract) való interakciónál is mindig olvassa el a tranzakcióüzenetet, mielőtt aláírja azt.
+
+### Állítson be költségkeretet az okosszerződéshez {#spend-limits}
+
+Az okosszerződéseknél ne engedjen korlátlan költési keretet. A korlátlan költés megengedi az okosszerződésnek, hogy kiürítse az Ön tárcáját. Ehelyett állítsa be pontosan azt az összeget, ami a tranzakcióhoz szükséges.
+
+Számos Ethereum-tárca kínál védelmet keretek beállításával, hogy ne lehessen kiüríteni a tárcát.
+
+[Hogyan vonható vissza, hogy az okosszerződés hozzáférjen a kriptoeszközeihez](/guides/how-to-revoke-token-access/)
+
+<Divider />
+
+## Gyakori csalások {#common-scams}
+
+A csalók folyamatosan keresik a lehetőséget, hogy elvegyék az Ön eszközeit. Nem lehet őket teljesen megállítani, de elérhetjük, hogy kevésbé hassanak ránk, ha ismerjük a trükkjeiket. Ezeknek a csalásoknak számos variációja van, de általánosságban egy mintát követnek. Emlékezzen rá:
+
+- mindig legyen szkeptikus
+- senki sem ad Önnek ETH-t ingyen vagy olcsón
+- senkinek se adja meg a privát kulcsait vagy a személyes információit
+
+### Twitter-hirdetéses adathalászat {#ad-phishing}
+
+![Twitter-hivatkozásos adathalászat](./twitterPhishingScam.png)
+
+Van egy módszer a Twitter (vagyis X) hivatkozás előnézeti funkciójának (kibontása) meghamisítására, amellyel potenciálisan megtéveszthetik a felhasználókat, hogy azt higgyék, egy legitim webhelyet látogatnak meg. Ez a technika a Twitter mechanizmusát használja ki a tweetekben megosztott URL-ek előnézetének létrehozására, és például azt mutathatja, hogy az az _ethereum.org_-tól származik (ahogy a fenti képen), miközben egy rosszindulatú webhelyre irányítja át.
+
+Mindig ellenőrizze, hogy a megfelelő oldalon van-e, különösen egy hivatkozásra kattintás után.
+
+[További információk itt](https://harrydenley.com/faking-twitter-unfurling).
+
+### Ajándékozási csalás {#giveaway}
+
+Az egyik legtipikusabb csalás a kriptovalutákkal az ajándékozás. Számos formában előfordulhat, de a lényege az, hogy ha Ön ETH-t küld a megadott tárcacímre, akkor duplán kapja vissza az ETH-t. *Emiatt 2-t 1-ért csalásnak is nevezik.*
+
+Ez az ajánlat csak limitált időre szól, hogy ne gondolja túl a döntéshozást és a sürgetés érzését keltse.
+
+### Közösségimédia-csalások {#social-media-hacks}
+
+Ennek nagy horderejű esete például 2020. júliusában volt, amikor híres emberek és szervezetek Twitterjét támadták meg. A támadó bitcoin-ajándékozást hirdetett ezeken a számlákon. Habár a megtévesztő üzeneteket gyorsan észrevették és törölték, a támadók még így is szereztek 11 bitcoint (ami 500 000 USD-nek felel meg a 2021. szeptemberi árfolyamon).
+
+![Csalás a Twitteren](./appleTwitterScam.png)
+
+### Hírességek ajándékoznak {#celebrity-giveaway}
+
+A hírességek által kommunikált ajándékozás is tipikus. A csalók egy videóinterjút vagy konferenciabeszélgetést úgy tesznek fel a YouTube-ra, mintha élőben menne, és ennek részeként a híresség egy kriptovaluta-ajándékozást hirdet meg.
+
+Vitalik Buterint és a kriptóban érintett más személyeket (pl. Elon Musk vagy Charles Hoskinson) gyakran használnak így. Ez adja a csalás valódiságának látszatát (furcsa, de ha Vitalik mondja, akkor biztos úgy van!).
+
+**Az ajándékozások mindig csalások. Ha bármilyen pénzt küld ezekre a felhívásokra, azt elveszíti.**
+
+![Csalás a YouTube-on](./youtubeScam.png)
+
+### Támogatási csalások {#support-scams}
+
+A kriptovaluta egy viszonylag fiatal és félreértett technológia. Ezt használja ki az a csalás, amikor ügyfélszolgálatosnak adják ki magukat a népszerű tárcák, tőzsdék vagy blokkláncok kapcsán.
+
+Az interakciók többsége Discordon történik. A támogatást színlelő csalók ezeken a csatornákon keresik azokat, akiknek kérdésük van, majd privát üzenetet küldenek nekik, hogy felajánlják segítségüket. Ráveszik a felhasználót, hogy bízzon meg bennük, majd megszerzik a privát kulcsaikat vagy pénzt küldenek a saját tárcájukba.
+
+![Támogatást ajánló csalás a Discordon](./discordScam.png)
+
+Általános szabály, hogy senki sem kommunikál Önnel privát, nem hivatalos csatornákon. Ezeket tartsa észben, ha támogatásról van szó:
+
+- Sose adja meg a privát kulcsait, kulcsmondatát vagy jelszavait
+- Sose engedje, hogy bárki távolról hozzáférjen a gépéhez
+- Sose kommunikáljon senkivel a szervezet dedikált csatornáin kívül
+
+<InfoBanner emoji=":lock:">
+  <div>
+    Legyen tudatában: hogy a támogatást ajánló csalók gyakran a Discordon jelennek meg, de bármilyen kommunikációs formában ott lehetnek, legyen az chat vagy email.
+  </div>
+</InfoBanner>
+
+### „ETH2” hamis token {#eth2-token-scam}
+
+[Az egyesítés (The Merge)](/roadmap/merge/) közeledtével a csalók kihasználták a zavart az „ETH2” kifejezés körül és próbálták rávenni a felhasználókat, hogy váltsák át az ETH-t „ETH2”-re. Nem létezik ETH2, és a Merge sem vezetett be semmilyen tokent. A Merge előtt és után pontosan ugyanaz az ETH létezik. **Az ETH-szel kapcsolatban semmit se kellett tenni a felhasználóknak, amikor a rendszer [proof-of-work](/glossary/#pow) helyett [proof-of-stake](/glossary/#pos) mechanizmusra állt át**.
+
+A csalók ügyfélszolgálatosként jelennek meg, hogy rávegyék Önt, adja át az ETH-t és „ETH2”-t kap helyette. Nincs [hivatalos Ethereum-ügyfélszolgálat](/community/support/), és nincs új token. Sose ossza meg a tárcához kapcsolódó kulcsmondatot senkivel.
+
+_Megjegyzés: Vannak olyan származékos tokenek, amelyek letétbe helyezett ETH-t képviselnek (pl. rETH a Rocket Pooltól, stETH a Lidotól, ETH2 a Coinbase-től), de ezekre nem kell átállnia._
+
+### Adathalász csalások {#phishing-scams}
+
+Az adathalász csalások is egyre gyakoribbak, hogy a csalók ellopják a tárcák tartalmát.
+
+Néhány ilyen e-mail arra kéri a felhasználót, hogy bizonyos hivatkozásra kattintva lépjen egy weboldalra, adja meg a kulcsmondatát, kérjen új jelszót vagy küldjön ETH-t. Mások olyan rosszindulatú programokat telepítenek a gépére, amivel a csalók hozzáférnek a fájljaihoz.
+
+Ha egy ismeretlen küldőtől kap üzenetet, akkor:
+
+- Sose nyisson meg hivatkozást vagy csatolmányt ismeretlen feladótól
+- Sose árulja el személyes adatait vagy jelszavait senkinek
+- Törölje az ismeretlen feladóktól érkező e-maileket
+
+[Bővebben az adathalász csalások elkerüléséről](https://support.mycrypto.com/staying-safe/mycrypto-protips-how-not-to-get-scammed-during-ico)
+
+### Kriptobrókeres csalás {#broker-scams}
+
+A kriptobrókeres csalók szakembereknek adják ki magukat, akik elkérik az Ön pénzét, hogy befektessék az Ön nevében. Ennek részeként nem reális nyereséget kínálnak. Miután megkapták az összeget, lehetséges, hogy még többet kérnek valamilyen különleges lehetőségre, vagy akár el is tűnnek azonnal.
+
+Ezek a csalók hamis profilokat használnak a YouTube-on, ahol látszólag semleges beszélgetéseket folytatnak. Ezek a beszélgetések nagyon jó értékeléssel rendelkeznek, de ezt mind programok (bot) szavazzák meg nekik, hogy így hitelesebbnek tűnjenek.
+
+**Sose bízzon meg idegeneket az interneten, hogy befektessék a pénzét. El fogja veszíteni a kriptóját.**
+
+![Brókeres csalás a YouTube-on](./brokerScam.png)
+
+### Kriptobányászati csalások {#mining-pool-scams}
+
+2022. szeptembere óta nincs az Ethereumon bányászás. A csalások mégis tovább folytatódnak. A kriptobányászási csalásoknál arra próbálják rávenni az embereket, hogy csatlakozzanak az Ethereum-bányászathoz, ami nagy jövedelmeket hoz. A csaló kapcsolatban marad Önnel egész végig. Valójában meggyőzi Önt arról, hogy ha csatlakozik a bányászászhoz, akkor az ETH egyenlege még több ETH-t hoz létre. Az Ön kriptovalutája tényleg mutathat kis mértékű növekedést. De ez csak azért van, hogy még többet fektessen be. Végül az összes pénzeszközét egy ismeretlen címre küldik, és a csaló eltűnik, vagy akár kapcsolatban is maradhat áldozatával.
+
+Tartózkodjon azoktól, akik a közösségi médiában be akarják Önt vonni a bányászatba. Ha elveszíti a kriptóját, az többé nem kerül vissza.
+
+Ne feledje:
+
+- Legyen óvatos, ha bárki még több pénzt akar csinálni a kriptójából
+- Nézze meg a lehetőségeket a letétbe helyezés, likviditási alapok és más befektetések kapcsán
+- Az ilyen ajánlatok szinte sose valósak. Ha azok lennének, akkor mindenki ezt követné és ezért már hallott volna róla.
+
+[Egy ember 200 000 USD-t vesztett egy kriptobányászási csalásban](https://www.reddit.com/r/CoinBase/comments/r0qe0e/scam_or_possible_incredible_payout/)
+
+### Tokenkiosztási (airdrop) csalások {#airdrop-scams}
+
+A tokenkiosztási (airdrop) csalások során egy hamis projekt eszközt ([NFT](/glossary/#nft), token) dob az Ön tárcájába és egy hamis weboldalra küldi, hogy kérvényezze azokat. Így be kell jelentkeznie az Ethereum-tárcájába és jóváhagynia a tranzakciót. Ez a tranzakció veszélybe sodorja a számláját, mivel a nyilvános és privát kulcsait átadja a csalónak. Az is lehet, hogy egy olyan tranzakciót ír alá, ami a csalónak küldi az Ön pénzeszközeit.
+
+[Bővebben a tokenkiosztási (airdrop) csalásokról](https://www.youtube.com/watch?v=LLL_nQp1lGk)
+
+<Divider />
+
 ## Webbiztonság 101 {#web-security}
 
 ### Használjon erős jelszavakat {#use-strong-passwords}
 
 [A számlatámadások 80%-a a gyenge vagy ellopott jelszavakból ered](https://cloudnine.com/ediscoverydaily/electronic-discovery/80-percent-hacking-related-breaches-related-password-issues-cybersecurity-trends/). Egy hosszú, betűkből, számokból és szimbólumokból álló sorozat a legjobb ahhoz, hogy a számlája biztonságban legyen.
 
-A legtipikusabb hiba az, ha két-három hétköznapi, kapcsolódó szót használnak. Ezek a jelszavak nem biztonságosak, mert lehetővé tesznek egy egyszerű hackelési technikát, az úgynevezett [szótáralapú támadást](https://wikipedia.org/wiki/Dictionary_attack).
+A legtipikusabb hiba az, ha két-három hétköznapi, kapcsolódó szót használnak. Az ehhez hasonló jelszavak nem biztonságosak, mert hajlamosak egy egyszerű hackelési technikára, amelyet szótári támadásként ismerünk.
 
 ```md
 Gyenge jelszó például: AranyosBolyhosCicák!
@@ -170,19 +342,29 @@ A csalók folyamatosan keresik a lehetőséget, hogy elvegyék az Ön eszközeit
 - senki sem ad Önnek ETH-t ingyen vagy olcsón
 - senkinek se adja meg a privát kulcsait vagy a személyes információit
 
+### Twitter-hirdetéses adathalászat {#ad-phishing}
+
+![Twitter-hivatkozásos adathalászat](./twitterPhishingScam.png)
+
+Van egy módszer a Twitter (vagyis X) hivatkozás előnézeti funkciójának (kibontása) meghamisítására, amellyel potenciálisan megtéveszthetik a felhasználókat, hogy azt higgyék, egy legitim webhelyet látogatnak meg. Ez a technika a Twitter mechanizmusát használja ki a tweetekben megosztott URL-ek előnézetének létrehozására, és például azt mutathatja, hogy az az _ethereum.org_-tól származik (ahogy a fenti képen), miközben egy rosszindulatú webhelyre irányítja át.
+
+Mindig ellenőrizze, hogy a megfelelő oldalon van-e, különösen egy hivatkozásra kattintás után.
+
+[További információk itt](https://harrydenley.com/faking-twitter-unfurling).
+
 ### Ajándékozási csalás {#giveaway}
 
 Az egyik legtipikusabb csalás a kriptovalutákkal az ajándékozás. Számos formában előfordulhat, de a lényege az, hogy ha Ön ETH-t küld a megadott tárcacímre, akkor duplán kapja vissza az ETH-t. *Emiatt 2-t 1-ért csalásnak is nevezik.*
 
 Ez az ajánlat csak limitált időre szól, hogy ne gondolja túl a döntéshozást és a sürgetés érzését keltse.
 
-#### Közösségimédia-csalások {#social-media-hacks}
+### Közösségimédia-csalások {#social-media-hacks}
 
 Ennek nagy horderejű esete például 2020. júliusában volt, amikor híres emberek és szervezetek Twitterjét támadták meg. A támadó bitcoin-ajándékozást hirdetett ezeken a számlákon. Habár a megtévesztő üzeneteket gyorsan észrevették és törölték, a támadók még így is szereztek 11 bitcoint (ami 500 000 USD-nek felel meg a 2021. szeptemberi árfolyamon).
 
 ![Csalás a Twitteren](./appleTwitterScam.png)
 
-#### Hírességek ajándékoznak {#celebrity-giveaway}
+### Hírességek ajándékoznak {#celebrity-giveaway}
 
 A hírességek által kommunikált ajándékozás is tipikus. A csalók egy videóinterjút vagy konferenciabeszélgetést úgy tesznek fel a YouTube-ra, mintha élőben menne, és ennek részeként a híresség egy kriptovaluta-ajándékozást hirdet meg.
 
