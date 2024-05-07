@@ -404,7 +404,6 @@ There are multiple oracle applications you can integrate into your Ethereum dapp
 
 **[Supra](https://supra.com/)** - A vertically integrated toolkit of cross-chain solutions that interlink all blockchains, public (L1s and L2s) or private (enterprises), providing decentralized oracle price feeds that can be used for on-chain and off-chain use-cases. 
 
-
 ## Further reading {#further-reading}
 
 **Articles**
