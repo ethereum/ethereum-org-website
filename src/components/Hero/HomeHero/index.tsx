@@ -13,11 +13,13 @@ const HomeHero = ({ heroImg }: HomeHeroProps) => {
   const { t } = useTranslation("page-index")
   return (
     <Box>
-      <Box h={440} position="relative">
+      <Box h={440}>
         <Image
           src={heroImg}
           alt={t("page-index:page-index-hero-image-alt")}
-          fill
+          sizes="100vw"
+          w="full"
+          h="full"
           priority
           style={{ objectFit: "cover" }}
         />
