@@ -16,7 +16,7 @@ sourceUrl: https://ethereumdev.io/interact-with-other-contracts-from-solidity/
 address: "0x19dE91Af973F404EDF5B4c093983a7c6E3EC8ccE"
 ---
 
-En los tutoriales anteriores aprendimos mucho sobre [cómo implementar su primer contrato inteligente](/developers/tutorials/deploying-your-first-smart-contract/) y agregar algunas funciones como [control de acceso con modificadores ](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) o [manejo de errores en Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). En este tutorial aprenderemos cómo implementar un contrato inteligente desde un contrato existente e interactuar con él.
+En los tutoriales anteriores aprendimos mucho sobre [cómo implementar su primer contrato inteligente](/developers/tutorials/deploying-your-first-smart-contract/) y agregar algunas funciones como [control de acceso con modificadores](https://ethereumdev.io/organize-your-code-and-control-access-to-your-smart-contract-with-modifiers/) o [manejo de errores en Solidity](https://ethereumdev.io/handle-errors-in-solidity-with-require-and-revert/). En este tutorial aprenderemos cómo implementar un contrato inteligente desde un contrato existente e interactuar con él.
 
 Vamos a hacer un contrato que permita a cualquiera tener su propio contrato inteligente de `Counter` mediante la creación de una fábrica para tal propósito: se llamará `CounterFactory`. En primer lugar, aquí tenemos el código del contrato inteligente `Counter` inicial:
 

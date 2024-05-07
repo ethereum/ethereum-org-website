@@ -7,7 +7,7 @@ tags:
   - "tókenes"
   - "Solidity"
   - "erc-20"
-skill: principiante
+skill: beginner
 lang: es
 published: 2020-04-05
 source: EthereumDev

@@ -256,7 +256,7 @@ Después de que la función principal retorne, libere el bloqueo.
     }
 ```
 
-Esta función proporciona a los solicitantes el estado actual del intercambio. Nótese que las funciones de Solidity [ pueden proporcionar valores múltiples](https://docs.soliditylang.org/en/v0.8.3/contracts. html#returning-multiple-values).
+Esta función proporciona a los solicitantes el estado actual del intercambio. Nótese que las funciones de Solidity [pueden proporcionar valores múltiples](https://docs.soliditylang.org/en/v0.8.3/contracts.html#returning-multiple-values).
 
 ```solidity
     function _safeTransfer(address token, address to, uint value) private {
@@ -1886,7 +1886,7 @@ library TransferHelper {
 Podemos llamar a un contrato diferente de una de dos maneras:
 
 - Utilice una definición de interfaz para crear una activación de función
-- Utilice la [interfaz binaria de aplicación (ABI) ](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) «manualmente» para crear la activación. Esto es lo que el autor del código decidió hacer.
+- Utilice la [interfaz binaria de aplicación (ABI)](https://docs.soliditylang.org/en/v0.8.3/abi-spec.html) «manualmente» para crear la activación. Esto es lo que el autor del código decidió hacer.
 
 ```solidity
         require(

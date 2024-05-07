@@ -10,7 +10,7 @@ tags:
   - "simular"
 skill: intermediate
 lang: es
-published: 14-11-2020
+published: 2020-11-14
 ---
 
 ## ¿De qué trata este tutorial? {#what-is-this-tutorial-about}

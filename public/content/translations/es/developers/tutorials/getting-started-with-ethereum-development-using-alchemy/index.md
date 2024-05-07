@@ -8,7 +8,7 @@ tags:
   - "nodos"
   - "consultar"
   - "alchemy"
-skill: principiante
+skill: beginner
 lang: es
 published: 2020-10-30
 source: Medio
@@ -151,4 +151,4 @@ The latest block number is 11043912
 
 ¿No sabe por dónde seguir ahora? ¡Pruebe a implementar su primer contrato inteligente y entrar en materia con algo de programación de Solidity en nuestra [Guía sobre contratos inteligentes abierta a todos los públicos](https://docs.alchemyapi.io/tutorials/hello-world-smart-contract) o pruebe su panel de conocimiento con la [aplicación de prueba del panel](https://docs.alchemyapi.io/tutorials/demo-app)!
 
-_[Regístrese gratis en Alchemy](https://auth.alchemyapi.io/signup), eche un vistazo a nuestra documentación [](https://docs.alchemyapi.io/) y para estar al tanto de las últimas novedades, síganos en [Twitter](https://twitter.com/AlchemyPlatform)_.
+_[Regístrese gratis en Alchemy](https://auth.alchemyapi.io/signup), eche un vistazo a nuestra [documentación](https://docs.alchemyapi.io/) y para estar al tanto de las últimas novedades, síganos en [Twitter](https://twitter.com/AlchemyPlatform)_.

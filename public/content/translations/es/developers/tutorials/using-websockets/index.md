@@ -8,10 +8,10 @@ tags:
   - "websockets"
   - "consultar"
   - "javascript"
-skill: principiante
+skill: beginner
 source: Documentos de Alchemy
 sourceUrl: https://docs.alchemyapi.io/guides/using-websockets
-published: 01-12-2020
+published: 2020-12-01
 ---
 
 Esta es una guía de nivel básico sobre el uso de WebSockets y Alchemy para hacer solicitudes a la cadena de bloques de Ethereum.

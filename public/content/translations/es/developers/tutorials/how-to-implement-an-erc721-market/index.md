@@ -146,4 +146,4 @@ Los tableros de anuncios clasificados también resultan ser una herramienta fác
 
 En este artículo, he tratado de conectar la realidad del negocio de los tableros de anuncios clasificados con la implementación tecnológica. Este conocimiento debería ayudarle a crear una visión y un mapa de ruta para la implementación si tiene las habilidades adecuadas.
 
-Como siempre, si quiere crear algo divertido y le gustaría recibir algún consejo, [envíeme un mensaje](https://albertocuesta. es/), será bienvenido. Siempre estoy encantado de ayudar.
+Como siempre, si quiere crear algo divertido y le gustaría recibir algún consejo, [envíeme un mensaje](https://albertocuesta.es/), será bienvenido. Siempre estoy encantado de ayudar.

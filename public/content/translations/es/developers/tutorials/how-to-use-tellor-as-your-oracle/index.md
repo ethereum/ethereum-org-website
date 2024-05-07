@@ -7,8 +7,8 @@ tags:
   - "solidity"
   - "contratos inteligentes"
   - "oráculos"
-skill: principiante
-published: 29/06/2021
+skill: beginner
+published: 2021-06-29
 source: Documentos sobre Tellor
 sourceUrl: https://docs.tellor.io/tellor/
 ---

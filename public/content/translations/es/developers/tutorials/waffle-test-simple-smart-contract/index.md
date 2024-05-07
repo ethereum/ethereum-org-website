@@ -7,9 +7,9 @@ tags:
   - "solidity"
   - "Waffle"
   - "pruebas"
-skill: principiante
+skill: beginner
 lang: es
-published: 26/02/2021
+published: 2021-02-26
 ---
 
 ## En este tutorial aprenderá a: {#in-this-tutorial-youll-learn-how-to}

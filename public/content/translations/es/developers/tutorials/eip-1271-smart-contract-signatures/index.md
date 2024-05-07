@@ -9,7 +9,7 @@ tags:
   - "verificación"
   - "firma"
 skill: intermediate
-published: 12-1-2023
+published: 2023-01-12
 ---
 
 El estándar [EIP-1271](https://eips.ethereum.org/EIPS/eip-1271) permite que los contratos inteligentes verifiquen las firmas.

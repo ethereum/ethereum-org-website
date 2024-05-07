@@ -7,7 +7,7 @@ tags:
   - "guardar en caché"
   - "almacenamiento"
 skill: intermediate
-published: 15-9-2022
+published: 2022-09-15
 lang: es
 ---
 

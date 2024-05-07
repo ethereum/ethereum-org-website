@@ -9,7 +9,7 @@ tags:
   - "pruebas"
   - "hardhat"
   - "ethers.js"
-skill: principiante
+skill: beginner
 lang: es
 published: 2020-10-16
 ---

@@ -5,8 +5,8 @@ author: Ori Pomerantz
 lang: es
 tags:
   - "erc-20"
-skill: principiante
-published: 15-8-2022
+skill: beginner
+published: 2022-08-15
 ---
 
 ## Introducción {#introduction}
@@ -126,8 +126,7 @@ Algunas veces es útil tener un administrador que puede deshacer los errores. Pa
 1. Congelar y descongelar cuentas. Esto puede ser útil, por ejemplo, cuando una cuenta puede verse afectada.
 2. Limpieza de activos.
 
-   Los fraudes algunas veces envían tókenes fraudulentos al contrato de un token real para obtener la legitimidad. Por ejemplo, [consulte aquí](https://optimistic.etherscan.io/token/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe?a=0x420000000000
-0000000000000000000000000042). El contrato ERC-20 legítimo es [0x4200....0042](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042). El fraude que pretende ser legítimo es [0x234....bbe](https://optimistic.etherscan.io/address/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe).
+   Los fraudes algunas veces envían tókenes fraudulentos al contrato de un token real para obtener la legitimidad. Por ejemplo, [consulte aquí](https://optimistic.etherscan.io/token/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe?a=0x4200000000000000000000000000000000000042). El contrato ERC-20 legítimo es [0x4200....0042](https://optimistic.etherscan.io/address/0x4200000000000000000000000000000000000042). El fraude que pretende ser legítimo es [0x234....bbe](https://optimistic.etherscan.io/address/0x2348b1a1228ddcd2db668c3d30207c3e1852fbbe).
 
    También puede que las personas envíen tókenes ERC-20 legítimos a nuestro contrato por error, lo cual es otra razón para querer tener una manera de eliminarlos.
 

@@ -10,7 +10,6 @@ tags:
   - "erc-20"
 skill: intermediate
 lang: es
-sidebar: true
 published: 2020-10-16
 ---
 
@@ -650,7 +649,7 @@ Para comenzar, instale `ethereum-waffle`. En este tutorial usaré `yarn`; para i
  yarn add --dev ethereum-waffle
 ```
 
-## Paso #2: Escribe un contrato inteligente [Link ](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract) {#step-2-write-a-smart-contract}
+## Paso #2: Escribe un contrato inteligente [Link](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-a-contract) {#step-2-write-a-smart-contract}
 
 En este tutorial, usaré el token [ERC20](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/ded2b0a55c9c13731963ab7b85a70c8e73504bab/contracts/token/ERC20/ERC20.sol) de [OpenZeppelin](https://openzeppelin.com).
 
@@ -1022,7 +1021,7 @@ Por lo tanto, necesitamos añadir `Chai` a nuestras dependencias :
  yarn add --dev mocha chai
 ```
 
-### Paso #4.2: Escribe un contrato inteligente de prueba [Link ](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-2}
+### Paso #4.2: Escribe un contrato inteligente de prueba [Link](https://ethereum-waffle.readthedocs.io/en/latest/getting-started.html#writing-tests) {#step-4-2}
 
 Para escribir nuestra prueba necesitamos crear el archivo `BasicToken.test.ts` en nuestro directorio de pruebas.
 

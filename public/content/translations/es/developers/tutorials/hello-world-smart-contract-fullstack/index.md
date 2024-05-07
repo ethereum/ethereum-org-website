@@ -11,9 +11,9 @@ tags:
   - "blockexplorer"
   - "frontend"
   - "transacciones"
-skill: principiante
+skill: beginner
 lang: es
-published: 25-10-2021
+published: 2021-10-25
 ---
 
 Si es nuevo en el desarrollo de la cadena de bloques y no sabe por dónde empezar o cómo implementar e interactuar con contratos inteligentes, esta guía está hecha a su medida. Exploraremos la creación e implementación de un contrato simple e inteligente en la red de prueba de Goerli utilizando [MetaMask](https://metamask.io), [Solidity](https://docs.soliditylang.org/en/v0.8.0/), [Hardhat](https://hardhat.org) y [Alchemy](https://alchemyapi.io/eth).
@@ -462,7 +462,7 @@ Obtenga más información sobre proveedores, firmantes y contratos en la documen
 
 ¿Recuerda cuando implementamos nuestro contrato con el `initMessage = "Hello World!" `? Ahora vamos a leer ese mensaje almacenado en nuestro contrato inteligente e imprimirlo en la consola.
 
-En JavaScript, las funciones asíncronas se utilizan al interactuar con las redes. Para obtener más información sobre las funciones asíncronas, [lea este artículo de medium ](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff).
+En JavaScript, las funciones asíncronas se utilizan al interactuar con las redes. Para obtener más información sobre las funciones asíncronas, [lea este artículo de medium](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff).
 
 Utilice el siguiente código para acttivar la función `message` en nuestro contrato inteligente y leer el mensaje de inicio:
 

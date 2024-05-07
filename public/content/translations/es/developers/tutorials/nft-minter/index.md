@@ -274,7 +274,7 @@ export const connectWallet = async () => {
 
 Analicemos lo que hace este código:
 
-Primero, nuestra función revisa si `window.ehtereum` está activado en su navegador.
+Primero, nuestra función revisa si `window.ethereum` está activado en su navegador.
 
 `window.ethereum` es una API global inyectada por MetaMask y otros proveedores de billeteras que permite a los sitios web solicitar las cuentas de Ethereum de los usuarios. En caso de aprobación, puede leer información de la cadena de bloques a la que el usuario se encuentra conectado y sugerir al usuario que firme mensajes y transacciones. Revise la [documentación de MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) para obtener más información.
 
