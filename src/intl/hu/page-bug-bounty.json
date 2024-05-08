@@ -69,7 +69,7 @@
   "page-upgrades-bug-bounty-type-4": "Számítási vagy paraméter-inkonzisztenciák",
   "page-upgrades-bug-bounty-types": "Hibatípusok",
   "page-upgrades-bug-bounty-validity": "Hatáskörön belül",
-  "page-upgrades-bug-bounty-validity-desc": "A hibavadász programunk teljesen felöleli a folyamatot: a protokollok (például a blokklánckonszenzus-modell, az átutalási és p2p-protokollok, proof-of-stake stb.) stabilitásától és a protokoll/megvalósítás megfelelőségétől kezdve a hálózatbiztonságig és a konszenzusintegritásig. A klasszikus kliensbiztonság és a kriptográfiai primitívek (blokktitkosítók) biztonsága egyaránt része a programnak. Kétség esetén kérdéseit a bounty@ethereum.org címre várjuk.",
+  "page-upgrades-bug-bounty-validity-desc": "A hibavadászprogramunk teljesen felöleli a folyamatot: a protokollok (például a blokklánckonszenzus-modell, az átutalási és p2p-protokollok, proof-of-stake stb.) stabilitásától és a protokoll/megvalósítás megfelelőségétől kezdve a hálózatbiztonságig és a konszenzusintegritásig. A klasszikus kliensbiztonság és a kriptográfiai primitívek (blokktitkosítók) biztonsága egyaránt része a programnak. Kétség esetén kérdéseit a bounty@ethereum.org címre várjuk. Közvetlenül a <a href=\"mailto:bounty@ethereum.org\">bounty@ethereum.org</a> címre is küldhet felfedést/sebezhetőséget, ebben az esetben kérjük, hogy az üzenetet a <a href=\"https://ethereum.org/security_at_ethereum.org.asc\" target=\"_blank\" rel=\"noreferrer\">PGP Key</a> használatával titkosítsa.",
   "page-upgrades-bug-bounty-card-critical": "Kritikus",
   "page-upgrades-bug-bounty-card-critical-risk": "Kritikus kockázatú hiba beadása",
   "page-upgrades-bug-bounty-card-h2": "Közepes",

@@ -290,9 +290,7 @@ const scrapeDirectory = (
       // Update .json tracker
       trackers.langs[repoLangCode].jsonCopyCount++
     } else if (
-      item.endsWith(".md") ||
-      item.endsWith(".svg") ||
-      item.endsWith(".xlsx")
+      item.endsWith(".md")
     ) {
       const mdDestDirPath: string = join(
         repoRoot,

@@ -22,24 +22,24 @@ sourceUrl: https://docs.tellor.io/tellor/
 前提条件：
 
 - ターミナルを操作できる
-- npm がインストール済みである
-- npm を使って、依存関係を管理できる
+- npmがインストール済みである
+- npmを使って、依存関係を管理できる
 
-Tellor は、実装可能かつ開発継続中のオープンソースのオラクルです。 この初心者向けガイドは、Tellor がいかに簡単に導入、稼働できるかを説明するもので、完全に分散化され、検閲耐性を持つオラクルをプロジェクトに追加する方法を学びます。
+Tellorは、実装可能かつ開発継続中のオープンソースのオラクルです。 この初心者向けガイドは、Tellor がいかに簡単に導入、稼働できるかを説明するもので、完全に分散化され、検閲耐性を持つオラクルをプロジェクトに追加する方法を学びます。
 
 ## 概要 {#overview}
 
-Tellor は、オフチェーンのデータポイントの値（例：BTC/USD）を請求できるオラクルシステムです。報告者は、イーサリアムの全スマートコントラクトがアクセスできるオンチェーンのデータバンクに対してこの値を追加するために競います。 このデータバンクへの入力は、ステーキング済みの報告者で構成されるネットワークにより保護されています。 Tellor は、暗号資産経済におけるインセンティブの仕組みを活用し、Tellor のトークン、トリビュート（TRB）、および紛争メカニズムに基づき、正直なデータを提出した報告者に報酬を与え、悪意のユーザーを処罰します。
+Tellorは、オフチェーンのデータポイントの値（例：BTC/USD）を請求できるオラクルシステムです。報告者は、イーサリアムの全スマートコントラクトがアクセスできるオンチェーンのデータバンクに対してこの値を追加するために競います。 このデータバンクへの入力は、ステーキング済みの報告者で構成されるネットワークにより保護されています。 Tellorは、暗号資産経済におけるインセンティブの仕組みを活用し、Tellorのトークン、トリビュート（TRB）、および紛争メカニズムに基づき、正直なデータを提出した報告者に報酬を与え、悪意のユーザーを処罰します。
 
 このチュートリアルでは、以下について説明します：
 
 - 導入および稼働に必要な初回ツールキットの設定方法
 - 簡単な実例に基づくステップごとの説明
-- 現在 Tellor をテストできるネットワークのアドレスリスト
+- 現在Tellorをテストできるネットワークのアドレスリスト
 
-## Tellor を使うには {#usingtellor}
+## Tellorを使うには {#usingtellor}
 
-まず、Tellor をオラクルとして使用するために必要な基本ツールをインストールします。 Tellor のユーザーコントラクトをインストールするには、[このパッケージ](https://github.com/tellor-io/usingtellor)を使ってください。
+まず、Tellorをオラクルとして使用するために必要な基本ツールをインストールします。 Tellorのユーザーコントラクトをインストールするには、[このパッケージ](https://github.com/tellor-io/usingtellor)を使ってください。
 
 `npm install usingtellor`
 
@@ -47,9 +47,9 @@ Tellor は、オフチェーンのデータポイントの値（例：BTC/USD）
 
 うまく行きましたね！ ツールが準備できたので、ビットコイン価格の情報を取得するという単純なエクササイズを実行してみましょう：
 
-### BTC/USD の例 {#btcusd-example}
+### BTC/USDの例 {#btcusd-example}
 
-この「UsingTellor」コントラクトを継承し、Tellor のアドレスをコントラクタの引数として渡します：
+この「UsingTellor」コントラクトを継承し、Tellorのアドレスをコントラクタの引数として渡します：
 
 具体的なコードは、以下のようになります：
 
@@ -59,13 +59,13 @@ import "usingtellor/contracts/UsingTellor.sol";
 contract PriceContract is UsingTellor {
   uint256 public btcPrice;
 
- //このコントラクトは、UsingTellor のすべての関数にアクセスできるようになりました
+ //This Contract now has access to all functions in UsingTellor
 
 constructor(address payable _tellorAddress) UsingTellor(_tellorAddress) public {}
 
 function setBtcPrice() public {
     bytes memory _b = abi.encode("SpotPrice",abi.encode("btc","usd"));
-    bytes32 _queryID = keccak256(_b);
+    bytes32 _queryId = keccak256(_b);
 
     uint256 _timestamp;
     bytes _value;
@@ -79,6 +79,6 @@ function setBtcPrice() public {
 
 コントラクトアドレスの完全なリストについては、[こちら](https://docs.tellor.io/tellor/the-basics/contracts-reference)を参照してください。
 
-利便性のために、UsingTellor のリポジトリには簡単な統合を目的としたバージョンである[Tellor Playground](https://github.com/tellor-io/TellorPlayground)コントラクトが含まれています。 有益な関数のリストについては、 [こちら](https://github.com/tellor-io/sampleUsingTellor#tellor-playground)を参照してください。
+利便性のために、UsingTellorのリポジトリには簡単な統合を目的としたバージョンである[Tellor Playground](https://github.com/tellor-io/TellorPlayground)コントラクトが含まれています。 有益な関数のリストについては、 [こちら](https://github.com/tellor-io/sampleUsingTellor#tellor-playground)を参照してください。
 
-Tellor オラクルをより堅牢に実装したい場合は、[こちらで](https://github.com/tellor-io/usingtellor/blob/master/README.md)利用可能な関数の全リストを確認してください。
+Tellorオラクルをより堅牢に実装したい場合は、[こちらで](https://github.com/tellor-io/usingtellor/blob/master/README.md)利用可能な関数の全リストを確認してください。

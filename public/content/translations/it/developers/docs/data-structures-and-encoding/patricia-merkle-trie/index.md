@@ -5,13 +5,17 @@ lang: it
 sidebarDepth: 2
 ---
 
-Un Trie di Patricia Merkle fornisce una struttura di dati autenticata crittograficamente, utilizzabile per memorizzare tutte le associazioni `(key, value)` (chiave, valore).
+Lo stato di Ethereum (la totalità di tutti i conti, i saldi e i contratti intelligenti) è codificato in una versione speciale della struttura dei dati, nota generalmente in informatica come un Albero di Merkle. Questa struttura è utile per molte applicazioni crittografiche, poiché crea una relazione verificabile tra tutti le singole parti di dati facenti parte dell'albero, dando come risultato un singolo valore di **radice** utilizzabile per provare delle cose sui dati.
 
-I Trie di Patricia Merkle sono interamente deterministici, a significare che è garantito che degli alberi con le stesse associazioni `(key, value)` siano identici, fino all'ultimo byte. Ciò significa che hanno lo stesso hash di root, fornendo il Sacro Graal dell'efficienza di `O(log(n))` per inserimenti, ricerche ed eliminazioni. Inoltre, sono più semplici da comprendere e programmare rispetto alle più complesse alternative basate sul confronto, come gli alberi rosso-nero.
+La struttura dei dati di Ethereum è un 'Trie di Merkle-Patricia modificato', così detto perché prende in prestito alcune funzionalità di PATRICIA (l'Algoritmo Pratico Per Recuperare Informazioni Codificate in Alfanumerico), e poiché è progetttato per il **recupero** efficiente dei dati che costituiscono lo stato di Ethereum.
+
+Un trie di Merkle-Patricia è deterministico e verificabile crittograficamente: il solo modo per generare una radice di stato è calcolandola da ogni singola parte dello stato, e due stati identici sono facilmente dimostrabili confrontando l'hash di radice e gli hash che hanno portato a esso (_una prova di Merkle_). Per contro, non esiste alcun modo per creare due stati differenti con lo stesso hash di radice, e qualsiasi tentativo di modificare lo stato con valori differenti risulterà in un hash della radice di stato differente. Teoricamente, questa struttura rappresenta il 'Sacro Graal' dell'efficienza di `O(log(n))` per inserimenti, ricerche ed eliminazioni.
+
+Nel prossimo futuro, Ethereum prevede di migrare a una struttura ad [Albero di Verkle](https://ethereum.org/en/roadmap/verkle-trees), che aprirà le porte a molte nuove possibilità per le future migliorie al protocollo.
 
 ## Prerequisiti {#prerequisites}
 
-Per meglio comprendere questa pagina, sarebbe utile avere una conoscenza di base di [hash](https://en.wikipedia.org/wiki/Hash_function), [alberi di Merkle](https://en.wikipedia.org/wiki/Merkle_tree), [trie](https://en.wikipedia.org/wiki/Trie) e [serializzazione](https://en.wikipedia.org/wiki/Serialization).
+Per meglio comprendere questa pagina, sarebbe utile avere una conoscenza di base di [hash](https://en.wikipedia.org/wiki/Hash_function), [alberi di Merkle](https://en.wikipedia.org/wiki/Merkle_tree), [trie](https://en.wikipedia.org/wiki/Trie) e [serializzazione](https://en.wikipedia.org/wiki/Serialization). Questo articolo si apre con una descrizione di un [albero radicato](https://en.wikipedia.org/wiki/Radix_tree) di base, introducendo poi gradualmente alle modifiche necessarie per la struttura di dati più ottimizzata di Ethereum.
 
 ## Trie della radice di base {#basic-radix-tries}
 
@@ -62,7 +66,7 @@ Le operazioni di aggiornamento ed eliminazione per gli alberi radicati sono defi
                 return hash(newnode)
 ```
 
-Un albero Radicato di "Merkle" è costruito collegando i nodi utilizzando sinossi di hash crittografici generati deterministicamente. Questo indirizzamento del contenuto (nel DB chiave/valore `key == keccak256(rlp(value))`) fornisce una garanzia dell'integrità crittografica dei dati memorizzati. Se l'hash radice di un dato albero è noto pubblicamente, allora chiunque abbia accesso ai dati delle foglie sottostanti può costruire una prova che l'albero include un dato valore a un percorso specifico, fornendo gli hash di ogni nodo che unisce un valore specifico alla radice dell'albero.
+Un albero Radicato di "Merkle" è costruito collegando i nodi utilizzando sinossi di hash crittografici generati deterministicamente. Questo indirizzamento del contenuto (nel DB chiave/valore `key == keccak256(rlp(value))`) fornisce una garanzia dell'integrità crittografica dei dati memorizzati. Se l'hash radice di un dato albero è noto pubblicamente,  allora chiunque abbia accesso ai dati delle foglie sottostanti può costruire  una prova che l'albero include un dato valore a un percorso specifico, fornendo gli hash di ogni nodo che unisce un valore specifico alla radice dell'albero.
 
 È impossibile, per un utente malevolo, fornire una prova di una coppia `(percorso, valore)` che non esiste, poiché l'hash radice in definitiva si basa su tutti gli hash inferiori. Qualsiasi modifica sottostante modificherebbe l'hash radice. Si può pensare all'hash come una rappresentazione compressa delle informazioni strutturali sui dati, assicurata da una protezione pre-immagine della funzione di hashing.
 
@@ -93,12 +97,12 @@ Attraversando i percorsi in "nibble", potremmo finire con un numero dispari di n
 
 Il flagging sia _della lunghezza del percorso parziale rimanente, dispari o pari,_ sia del _nodo leaf o estensione_, come descritto sopra, risiede nel primo nibble del percorso parziale di qualsiasi nodo di 2 elementi. Il risultato è il seguente:
 
-    char hex    bit    |    parziale tipo nodo     lungh percorso
+    hex char    bits    |    node type partial     path length
     ----------------------------------------------------------
-       0        0000    |       estensione              pari
-       1        0001    |       estensione              dispari
-       2        0010    |   terminazione (leaf)         pari
-       3        0011    |   terminazione (leaf)         dispari
+       0        0000    |       extension              even
+       1        0001    |       extension              odd
+       2        0010    |   terminating (leaf)         even
+       3        0011    |   terminating (leaf)         odd
 
 per la lunghezza del percorso rimanente pari (`0` or `2`), seguirà sempre un altro nibble di "padding" `0`.
 
@@ -112,7 +116,7 @@ per la lunghezza del percorso rimanente pari (`0` or `2`), seguirà sempre un al
             hexarray = [flags] + hexarray
         else:
             hexarray = [flags] + [0] + hexarray
-        // hexarray ha ora una lunghezza pari, il cui primo nibble si compone dei flag.
+        // hexarray now has an even length whose first nibble is the flags.
         o = ''
         for i in range(0,len(hexarray),2):
             o += chr(16 * hexarray[i] + hexarray[i+1])

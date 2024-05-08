@@ -78,7 +78,7 @@ contract VendingMachine {
 
 残念ながら、単体テストを単独で行った場合は、スマートコントラクトのセキュリティを向上させるのに最小限の効果しかありません。 単体テストは、関数がモックデータに対して正しく実行されていることを証明するかもしれませんが、作成されたテストに対してのみ有効であるにすぎません。 これは、見落としたエッジケースや脆弱性の検出を難しくするので、スマートコントラクトの安全性を損なう可能性があります。
 
-より良い方法としては、単体テストと[静的・動的解析](/developers/docs/smart-contracts/testing/#static-dynamic-analysis)を用いて実施するプロパティベースのテストを組み合わせることです。 静的解析は、[制御フローグラフ](https://en.wikipedia.org/wiki/Control-flow_graph)や[抽象構文木](https://deepsource.io/glossary/ast/)といった低レベルな表現を頼りに到達可能なプログラムの状態や実行経路を解析します。 一方、ファジング (fuzzing) などの動的解析手法は、ランダムな入力値でコントラクトコードを実行し、セキュリティプロパティに違反する操作を検出します。
+より良い方法としては、単体テストと[静的・動的解析](/developers/docs/smart-contracts/testing/#static-dynamic-analysis)を用いて実施するプロパティベースのテストを組み合わせることです。 静的解析は、[制御フローグラフ](https://en.wikipedia.org/wiki/Control-flow_graph)や[抽象構文木](https://deepsource.io/glossary/ast/)といった低レベルな表現を頼りに到達可能なプログラムの状態や実行経路を解析します。 一方、[スマートコントラクトファジング](https://www.cyfrin.io/blog/smart-contract-fuzzing-and-invariants-testing-foundry)などの動的解析手法は、ランダムな入力値でコントラクトコードを実行し、セキュリティプロパティに違反する操作を検出します。
 
 [形式検証](/developers/docs/smart-contracts/formal-verification)は、スマートコントラクトのセキュリティプロパティを検証するためのもう一つの手法です。 通常のテストとは異なり、形式検証はスマートコントラクトにエラーがないことを決定的に証明することができます。 これは、望ましいセキュリティプロパティをとらえた形式仕様記述を作成し、コントラクトの形式的モデルがこの仕様に準拠していることを証明することで実現されます。
 
@@ -112,7 +112,7 @@ contract VendingMachine {
 
 - スマートコントラクトのテスト、コンパイル、デプロイに[開発環境](/developers/docs/frameworks/)を使用する
 
-- MythrilやSlitherなど、基本的なコード解析ツールを使用してコードを実行する。 これは、各プルリクエストがマージされる前に実行し、出力の違いを比較しておくのが理想的である
+- [Cyfrin Aaderyn](https://github.com/Cyfrin/aderyn)、Mythril、Slitherなど、基本的なコード解析ツールを使用してコードを実行する。 これは、各プルリクエストがマージされる前に実行し、出力の違いを比較しておくのが理想的である
 
 - コードがエラーなくコンパイルされ、Solidityコンパイラが警告を発していないことを確認する
 
@@ -126,7 +126,7 @@ contract VendingMachine {
 
 イーサリアムスマートコントラクトは、デフォルトではイミュータブル (不変) ですが、アップグレードパターンを用いることで可変性をある程度獲得することが可能です。 コントラクトのアップグレードは、重大な欠陥によって古いコントラクトが使用できなくなり、新しいロジックをデプロイすることが最も現実的な選択肢となる場合に必要になります。
 
-コントラクトのアップグレードのメカニズムは様々ですが、「プロキシパターン」はスマートコントラクトのアップグレードでより一般的なアプローチの一つです。 プロキシパターンは、アプリケーションを「状態」と「ロジック」の_2つの_コントラクトに分割します。 最初のコントラクト (「プロキシコントラクト」と呼ばれる) は、状態変数 (例: ユーザーの残高など) を格納します。一方、2つ目のコントラクトは (「ロジックコントラクト」と呼ばれる) は、コントラクトの関数を実行するためのコードを保持します。
+コントラクトのアップグレードのメカニズムは様々ですが、「プロキシパターン」はスマートコントラクトのアップグレードでより一般的なアプローチの一つです。 [プロキシパターン](https://www.cyfrin.io/blog/upgradeable-proxy-smart-contract-pattern)は、アプリケーションを「状態」と「ロジック」の_2つの_コントラクトに分割します。 最初のコントラクト (「プロキシコントラクト」と呼ばれる) は、状態変数 (例: ユーザーの残高など) を格納します。一方、2つ目のコントラクトは (「ロジックコントラクト」と呼ばれる) は、コントラクトの関数を実行するためのコードを保持します。
 
 アカウントは、プロキシコントラクトとやり取りを行います。プロキシコントラクトは、すべての関数の呼び出しを低レベル呼び出しである[`delegatecall()`](https://docs.soliditylang.org/en/v0.8.16/introduction-to-smart-contracts.html?highlight=delegatecall#delegatecall-callcode-and-libraries)を使ってロジックコントラクトへディスパッチします。 通常のメッセージ呼び出しとは異なり、`delegatecall()`は、 ロジックコントラクトのアドレスで実行されるコードが、呼び出し元コントラクトのコンテキスト内で実行されるようにします。 つまり、ロジックコントラクトは、ロジックのストレージではなく、常にプロキシのストレージに書き込みを行い、元の`msg.sender`や`msg.value`の値は保持されるということです。
 
@@ -235,7 +235,7 @@ EVMは同時実行を許可していません。つまり、メッセージ呼�
 誰でもイーサ (Ether) を入出金できるシンプルなスマートコントラクト (「Victim」) を考えてみましょう。
 
 ```solidity
-// このコントラクトには、脆弱性があります。 プロダクションでは使用しないでください。
+// This contract is vulnerable. Do not use in production
 
 contract Victim {
     mapping (address => uint256) public balances;
@@ -338,7 +338,7 @@ contract MutexPattern {
         locked = false;
     }
     // This function is protected by a mutex, so reentrant calls from within `msg.sender.call` cannot call `withdraw` again.
-    //  `return`ステートメントは、`true`と評価しますが、まだmodifierのステートメントでは`locked = false`と評価します。
+    //  The `return` statement evaluates to `true` but still evaluates the `locked = false` statement in the modifier
     function withdraw(uint _amount) public payable noReentrancy returns(bool) {
         require(balances[msg.sender] >= _amount, "No balance to withdraw.");
 
@@ -414,7 +414,7 @@ contract Attack {
     function attack() public payable {
         timeLock.deposit{value: msg.value}();
         /*
-        「t = 現在のロック時間」ならば、xを以下のようにして求める必要があります。 
+        if t = current lock time then we need to find x such that
         x + t = 2**256 = 0
         so x = -t
         2**256 = type(uint).max + 1
@@ -446,7 +446,7 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 ##### オラクルの改ざんを防ぐ方法
 
-オラクルの改ざんを回避するための最小要件としては、単一障害点を避けるために複数のソースから情報を照会する分散型オラクルネットワークを使用することです。 ほとんどの場合、分散型オラクルにはオラクルノードに正しい情報を報告するよう促す暗号経済的なインセンティブが組み込まれており、集中型オラクルよりも安全性が高くなっています。
+[オラクルの改ざん](https://www.cyfrin.io/blog/price-oracle-manipultion-attacks-with-examples)を回避するための最小要件としては、単一障害点を避けるために複数のソースから情報を照会する分散型オラクルネットワークを使用することです。 ほとんどの場合、分散型オラクルにはオラクルノードに正しい情報を報告するよう促す暗号経済的なインセンティブが組み込まれており、集中型オラクルよりも安全性が高くなっています。
 
 オンチェーンオラクルに資産価格を照会する場合は、時間加重平均価格(TWAP)メカニズムを実装しているものを使用することを検討してください。 [TWAPオラクル](https://docs.uniswap.org/contracts/v2/concepts/core-concepts/oracles)は、ある資産の価格を2つの異なる時点(修正可能)で照会し、得られた平均値に基づいて現在価格を計算します。 長い期間を選択することで、直前に行われた大量の注文が資産価格に影響を与えることができないため、価格の不正操作からプロトコルを保護します。
 
@@ -500,9 +500,15 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 
 - **[Nethermind](https://nethermind.io/smart-contracts-audits)** - _ SolidityとCairoの監査サービスにより、イーサリアムとStarknet全体でスマートコントラクトの整合性とユーザーの安全を確保。_
 
-- **[HashEx](https://hashex.org/)** - _HashExは、ブロックチェーンとスマート コントラクトの監査に焦点を当てており、暗号通貨のセキュリティを確保するためのスマートコントラクト開発、侵入テスト、ブロックチェーンコンサルティングなどのサービスを提供_
+- **[HashEx](https://hashex.org/)** - _HashExは、ブロックチェーンとスマート コントラクトの監査に焦点を当てており、暗号通貨のセキュリティを確保するためのスマートコントラクト開発、侵入テスト、ブロックチェーンコンサルティングなどのサービスを提供。_
 
 - **[Code4rena](https://code4rena.com/)** - _スマートコントラクトセキュリティの専門家へ脆弱性の発見にインセンティブを与え、web3をより安全にすることを支援する競争的な監査プラットフォーム。_
+
+- **[CodeHawks](https://codehawks.com/)** - _優位性のある監査プラットフォームで、セキュリティリサーチャーのスマートコントラクト監査コンペを主催している。_
+
+- **[Cyfrin](https://www.cyfrin.io/)** - _ブロックチェーンセキュリティおよびweb3の教育企業で、EVMやVYperベースのプロトコルに注力している。_
+
+- **[ImmuneBytes](https://www.immunebytes.com//smart-contract-audit/)** - _Web3セキュリティファームで、経験豊富な監査人と最高クラスのツールを通じてブロックチェーンシステムのセキュリティ監査を提供している。_
 
 ### バグ報奨プログラムプラットフォーム {#bug-bounty-platforms}
 
@@ -551,3 +557,5 @@ DEXの価格は正確であることが多く、これは市場の均衡を取�
 - [スマートコントラクトのセキュリティガイドライン](/developers/tutorials/smart-contract-security-guidelines/)
 
 - [トークンコントラクトと任意のトークンを安全に統合する方法](/developers/tutorials/token-integration-checklist/)
+
+- [Cyfrin Updraft - スマートコントラクトセキュリティおよび監査のフルコース](https://updraft.cyfrin.io/courses/security)

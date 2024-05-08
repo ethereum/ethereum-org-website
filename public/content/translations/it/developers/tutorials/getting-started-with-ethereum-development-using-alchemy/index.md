@@ -7,7 +7,7 @@ tags:
   - "ethers.js"
   - "nodi"
   - "query"
-  - "fornisce servizi e strumenti Api per la creazione e il monitoraggio di applicazioni su Ethereum. \nFile: glossario"
+  - "alchemy"
 skill: beginner
 lang: it
 published: 2020-10-30

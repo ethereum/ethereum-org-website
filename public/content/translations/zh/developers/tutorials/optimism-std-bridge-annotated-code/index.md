@@ -13,7 +13,7 @@ lang: zh
 
 [乐观解决方案](https://www.optimism.io/)采用[乐观卷叠](/developers/docs/scaling/optimistic-rollups/)技术。 乐观卷叠能够以比以太坊主网（也称“第一层”）低得多的价格处理交易，因为交易只是由几个节点而非网络上的所有节点处理。 同时所有数据都已写入第一层，因此一切都能够得到证明并重建，并且具有主网的所有完整性和可用性保证。
 
-要在乐观解决方案（或任何其他第二层）上使用第一层资产，需要[桥接](/bridges/#prerequisites)该资产。 实现这一点的一种方法是，用户在第一层上锁定资产（以太币和 [ERC-20 代币](/developers/docs/standards/tokens/erc-20/)是最常见的资产）并收到相应资产，供在第二层上使用。 最后，拥有这些资产的任何人可能想把它们桥接回第一层。 在桥接过程中，资产会在第二层销毁，然后在第一层上发放给用户。
+要在乐观解决方案（或任何其他第二层）上使用第一层资产，需要[桥接](/bridges/#prerequisites)该资产。 实现这一点的一种方法是，用户在一层网络上锁定资产（以太币和 [ERC-20 代币](/developers/docs/standards/tokens/erc-20/)是最常见的资产）并收到供在二层网络上使用的对等资产。 最后，拥有这些资产的任何人可能想把它们桥接回第一层。 在桥接过程中，资产会在第二层销毁，然后在第一层上发放给用户。
 
 这就是[乐观解决方案标准链桥](https://community.optimism.io/docs/developers/bridge/standard-bridge)的工作方式。 在本文中，我们将学习链桥的源代码，看看它如何工作，并将它作为精心编写的 Solidity 代码示例加以研究。
 
@@ -69,13 +69,13 @@ lang: zh
 [此接口在此处定义](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L1/messaging/IL1ERC20Bridge.sol)。 其中包括桥接 ERC-20 代币所需的函数和定义。
 
 ```solidity
-/ SPDX-许可标识符： MIT
+// SPDX-License-Identifier: MIT
 ```
 
 [大多数乐观解决方案代码都是依据 MIT 许可证发布的](https://help.optimism.io/hc/en-us/articles/4411908707995-What-software-license-does-Optimism-use-)。
 
 ```solidity
-实用性 >0.5.0 <0.9.0;
+pragma solidity >0.5.0 <0.9.0;
 ```
 
 编写代码时，Solidity 最新版本为 0.8.12。 在 0.9.0 版发布之前，我们不知道这段代码是否与它兼容。
@@ -84,69 +84,69 @@ lang: zh
 /**
  * @title IL1ERC20Bridge
  */
-接口 IL1ERC20Bridge 然后
-    /**************
-     * 事件 *
+interface IL1ERC20Bridge {
+    /**********
+     * Events *
      **********/
 
-    事件 ERC20DepositInitiated(
+    event ERC20DepositInitiated(
 ```
 
-在乐观解决方案链桥术语中，*存款*是指从第一层转账到第二层，*提款*是指从第二层转账到第一层。
+在乐观解决方案链桥术语中，_存款_是指从第一层转账到第二层，_提款_是指从第二层转账到第一层。
 
 ```solidity
-        地址索引_l1Token,
-        地址索引_l2Token,
+        address indexed _l1Token,
+        address indexed _l2Token,
 ```
 
 大多数情况下，第一层上的 ERC-20 地址与第二层上对应的 ERC-20 地址不同。 [可以在此处参阅代币地址列表](https://static.optimism.io/optimism.tokenlist.json)。 带有 `chainId` 1 的地址在第一层（主网），带有 `chainId` 10 的地址在第二层（乐观解决方案）上。 另两个 `chainId` 值用于 Kovan 测试网络 (42) 和乐观 Kovan 测试网络 (69)。
 
 ```solidity
-        地址索引_from
-        地址到
-        uint256 _amounty,
+        address indexed _from,
+        address _to,
+        uint256 _amount,
         bytes _data
-;
+    );
 ```
 
 可以为转账添加注解，在这种情况下，注解将被添加到报告它们的事件中。
 
 ```solidity
-    事件ERC20提款已完成(
-        地址索引_l1Token,
-        地址索引_l2Token,
-        地址索引_from
-        地址_to
+    event ERC20WithdrawalFinalized(
+        address indexed _l1Token,
+        address indexed _l2Token,
+        address indexed _from,
+        address _to,
         uint256 _amount,
         bytes _data
-);
+    );
 ```
 
 同一链桥合约处理双向转账。 就第一层链桥而言，这意味着存款的初始化和提款的终局化。
 
 ```solidity
 
-    ****************************
-     * 公共函数 *
-     **********************/
+    /********************
+     * Public Functions *
+     ********************/
 
     /**
-     * @dev 获得相应的L2 桥合同的地址。
-     * 对应的L2桥合同的@return 地址。
+     * @dev get the address of the corresponding L2 bridge contract.
+     * @return Address of the corresponding L2 bridge contract.
      */
-    函数 l2TokenBridge() 外部返回 (地址)；
+    function l2TokenBridge() external returns (address);
 ```
 
-并不是真需要此函数，因为在第二层上它是一个预部署的合约，所以它总是位于地址 `0x4200000000000000000000000000000000000010` 处。 使用此函数是为了与第二层链桥对称，因为知道第一层桥的地址*并非*不重要。
+并不是真需要此函数，因为在第二层上它是一个预部署的合约，所以它总是位于地址 `0x4200000000000000000000000000000000000010` 处。 使用此函数是为了与第二层链桥对称，因为知道第一层桥的地址_并非_不重要。
 
 ```solidity
     /**
-     * @dev 将ERC20的金额存入L2上来电者的余额。
-     * @param _l1Token Address of the L1 ERC20 we being sording
+     * @dev deposit an amount of the ERC20 to the caller's balance on L2.
+     * @param _l1Token Address of the L1 ERC20 we are depositing
      * @param _l2Token Address of the L1 respective L2 ERC20
-     * @param _amount Amount of the ERC20 to entorize
-     * @param _l2Gas Gas limit required to complete on L2
-     * @param _data 可选数据转发到 L2。 This data is provided
+     * @param _amount Amount of the ERC20 to deposit
+     * @param _l2Gas Gas limit required to complete the deposit on L2.
+     * @param _data Optional data to forward to L2. This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
      */
@@ -169,7 +169,7 @@ lang: zh
      * @param _to L2 address to credit the withdrawal to.
      * @param _amount Amount of the ERC20 to deposit.
      * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data 可选数据转发到 L2。 This data is provided
+     * @param _data Optional data to forward to L2. This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
      */
@@ -183,7 +183,7 @@ lang: zh
     ) external;
 ```
 
-此函数基本上与 `depositERC20` 相同，但它允许您将 ERC-20 发送到不同的地址。
+此函数基本上与 `depositERC20` 相同，但它允许你将 ERC-20 发送到不同的地址。
 
 ```solidity
     /*************************
@@ -358,7 +358,7 @@ contract CrossDomainEnabled {
     modifier onlyFromCrossDomainAccount(address _sourceDomainAccount) {
 ```
 
-跨域消息传递可以由运行在区块链（以太坊主网或乐观解决方案）上的任何合约使用。 但是每一层都需要链桥。如果信息来自于另一边的链桥，将*只*信任特定信息。
+跨域消息传递可以由运行在区块链（以太坊主网或乐观解决方案）上的任何合约使用。 但是每一层都需要链桥。如果信息来自于另一边的链桥，将_只_信任特定信息。
 
 ```solidity
         require(
@@ -466,7 +466,7 @@ import { IL2ERC20Bridge } from "../../L2/messaging/IL2ERC20Bridge.sol";
 import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 ```
 
-[此接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)让我们控制 ERC-20 合约。 [您可以在此处阅读更多信息](/developers/tutorials/erc20-annotated-code/#the-interface)。
+[此接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/IERC20.sol)让我们控制 ERC-20 合约。 [你可以在此处阅读更多信息](/developers/tutorials/erc20-annotated-code/#the-interface)。
 
 ```solidity
 /* Library Imports */
@@ -485,7 +485,7 @@ import { Lib_PredeployAddresses } from "../../libraries/constants/Lib_PredeployA
 import { Address } from "@openzeppelin/contracts/utils/Address.sol";
 ```
 
-[OpenZeppelin 的地址工具](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol)。 它用于区分合约地址和属于外部账户 (EOA) 的地址。
+[OpenZeppelin 的地址工具](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol)。 它用于区分合约地址和属于外部帐户 (EOA) 的地址。
 
 请注意，这不是一个理想的解决方案，因为无法区分直接调用和合约构造函数的调用，但至少这让我们能够识别和防止一些常见的用户错误。
 
@@ -543,9 +543,9 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     constructor() CrossDomainEnabled(address(0)) {}
 ```
 
-希望能够升级此合约而无需复制存储中的所有变量。 为此，我们使用 [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy)，此合约使用 [`delegatecall`](https://solidity-by-example.org/delegatecall/) 将呼叫转移到地址由代理合约存储的单独联系人（当您升级时，您告诉代理更改该地址）。 当您使用 `delegatecall` 时，存储仍然是*调用*合约的存储，因此合约所有状态变量的值不受影响。
+希望能够升级此合约而无需复制存储中的所有变量。 为此，我们使用 [`Proxy`](https://docs.openzeppelin.com/contracts/3.x/api/proxy)，此合约使用 [`delegatecall`](https://solidity-by-example.org/delegatecall/) 将呼叫转移到地址由代理合约存储的单独联系人（当你升级时，你告诉代理更改该地址）。 当你使用 `delegatecall` 时，存储仍然是_调用_合约的存储，因此合约所有状态变量的值不受影响。
 
-这种模式的结果是不使用 `delegatecall` *调用*的合约的存储，因此传递给它的构造函数值无关紧要。 这就是我们可以为 `CrossDomainEnabled` 构造函数提供一个无意义值的原因。 这也是下面的初始化与构造函数分开的原因。
+这种模式的结果是不使用 `delegatecall` _调用_的合约的存储，因此传递给它的构造函数值无关紧要。 这就是我们可以为 `CrossDomainEnabled` 构造函数提供一个无意义值的原因。 这也是下面的初始化与构造函数分开的原因。
 
 ```solidity
     /******************
@@ -568,9 +568,9 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
 `initialize` 函数只应调用一次。 如果第一层跨域信使或第二层代币链桥的地址发生变化，我们将创建新代理和新链桥来调用它。 这种情况不太可能发生，除非升级整个系统，这非常罕见。
 
-请注意，此函数没有任何机制限制*谁*可以调用它。 这意味着理论上，攻击者可以等到我们部署代理和第一版链桥后，抢在合法用户之前在[前台运行](https://solidity-by-example.org/hacks/front-running/)以使用 `initialize` 函数。 但是有两种方法可以防止这种情况：
+请注意，此函数没有任何机制限制_谁_可以调用它。 这意味着理论上，攻击者可以等到我们部署代理和第一版链桥后，抢在合法用户之前在[前台运行](https://solidity-by-example.org/hacks/front-running/)以使用 `initialize` 函数。 但是有两种方法可以防止这种情况：
 
-1. 如果合约不是由外部账户直接部署，而是[在有另一个合约创建它们的交易中](https://medium.com/upstate-interactive/creating-a-contract-with-a-smart-contract-bdb67c5c8595)部署，那么整个过程可以成为最小操作单元，并且能够在执行任何其他交易之前完成。
+1. 如果合约不是由外部帐户直接部署，而是[在有另一个合约创建它们的交易中](https://medium.com/upstate-interactive/creating-a-contract-with-a-smart-contract-bdb67c5c8595)部署，那么整个过程可以成为最小操作单元，并且能够在执行任何其他交易之前完成。
 2. 如果对 `initialize` 的合法调用失败，总是可以忽略新创建的代理和链桥并创建新的。
 
 ```solidity
@@ -633,7 +633,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
     }
 ```
 
-这两个函数是 `_initiateETHDeposit` 的包装器，\_initiateETHDeposit 处理实际的以太币存款。
+这两个函数是 `_initiateETHDeposit` 的包装器，_initiateETHDeposit 处理实际的以太币存款。
 
 ```solidity
     /**
@@ -642,7 +642,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
      * @param _from Account to pull the deposit from on L1.
      * @param _to Account to give the deposit to on L2.
      * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data 可选数据转发到 L2。 This data is provided
+     * @param _data Optional data to forward to L2. This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
      */
@@ -671,14 +671,14 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
 
 此处的信息用来使用下面的参数调用 [`finalizeDeposit` 函数](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/L2StandardBridge.sol#L141-L148)：
 
-| 参数      | 值                             | 意义                                                                                                                |
-| --------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------- |
-| \_l1Token | address(0)                     | 在第一层上代表以太币（不是 ERC-20 代币）的特殊值                                                                    |
+| 参数          | 值                                | 意义                                                                               |
+| ----------- | -------------------------------- | -------------------------------------------------------------------------------- |
+| \_l1Token | address(0)                       | 在第一层上代表以太币（不是 ERC-20 代币）的特殊值                                                     |
 | \_l2Token | Lib_PredeployAddresses.OVM_ETH | 乐观解决方案上管理以太币的第二层合约 `0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000`（此合约仅供乐观解决方案内部使用） |
-| \_from    | \_from                         | 第一层上发送以太币的地址                                                                                            |
-| \_to      | \_to                           | 第二层上接收以太币的地址                                                                                            |
-| amount    | 值                             | 已发送的 wei 数量（已经发送到链桥的 wei）                                                                           |
-| \_data    | \_data                         | 附加到存款的额外日期                                                                                                |
+| \_from    | \_from                         | 第一层上发送以太币的地址                                                                     |
+| \_to      | \_to                           | 第二层上接收以太币的地址                                                                     |
+| amount      | msg.value                        | 已发送的 wei 数量（已经发送到链桥的 wei）                                                        |
+| \_data    | \_data                         | 附加到存款的额外日期                                                                       |
 
 ```solidity
         // Send calldata into L2
@@ -733,7 +733,7 @@ contract L1StandardBridge is IL1StandardBridge, CrossDomainEnabled {
      * @param _to Account to give the deposit to on L2
      * @param _amount Amount of the ERC20 to deposit.
      * @param _l2Gas Gas limit required to complete the deposit on L2.
-     * @param _data 可选数据转发到 L2。 This data is provided
+     * @param _data Optional data to forward to L2. This data is provided
      *        solely as a convenience for external contracts. Aside from enforcing a maximum
      *        length, these contracts provide no guarantees about its content.
      */
@@ -814,7 +814,7 @@ ERC-20 代币的转账过程不同以太币：
     ) external onlyFromCrossDomainAccount(l2TokenBridge) {
 ```
 
-确保这是一个*合法*信息，来自跨域信使并源自第二层代币链桥。 此函数用于从链桥中提取以太币，因此我们必须确保它仅由授权调用者调用。
+确保这是一个_合法_信息，来自跨域信使并源自第二层代币链桥。 此函数用于从链桥中提取以太币，因此我们必须确保它仅由授权调用者调用。
 
 ```solidity
         // slither-disable-next-line reentrancy-events
@@ -881,11 +881,11 @@ ERC-20 代币的转账过程不同以太币：
 }
 ```
 
-对于早期实现的链桥， 当我们从该实现转移到当前实现时，我们必须转移所有资产。 ERC-20 代币可以转移。 但是，要将以太币转账到合约，您需要得到该合约的批准，`donateETH` 就起到这一作用。
+对于早期实现的链桥， 当我们从该实现转移到当前实现时，我们必须转移所有资产。 ERC-20 代币可以转移。 但是，要将以太币转账到合约，你需要得到该合约的批准，`donateETH` 就起到这一作用。
 
 ## 第二层上的 ERC-20 代币 {#erc-20-tokens-on-l2}
 
-为了使 ERC-20 代币适合标准链桥，它需要允许标准链桥并且*只*允许标准链桥铸造代币。 这是必要的，因为链桥需要确保在乐观解决方案上流通的代币数量和锁定在第一层链桥合约内的代币数量相同。 如果第二层上的代币太多，一些用户将无法将他们的资产桥接到第一层。 我们实际上将重新建立[部分准备金银行制度](https://www.investopedia.com/terms/f/fractionalreservebanking.asp)，而不是一个受信任的链桥。 如果第一层上的代币太多，其中一些代币将永远锁定在链桥合约中，因为不销毁第二层代币就无法释放它们。
+为了使 ERC-20 代币适合标准链桥，它需要允许标准链桥并且_只_允许标准链桥铸造代币。 这是必要的，因为链桥需要确保在乐观解决方案上流通的代币数量和锁定在第一层链桥合约内的代币数量相同。 如果第二层上的代币太多，一些用户将无法将他们的资产桥接到第一层。 我们实际上将重新建立[部分准备金银行制度](https://www.investopedia.com/terms/f/fractionalreservebanking.asp)，而不是一个受信任的链桥。 如果第一层上的代币太多，其中一些代币将永远锁定在链桥合约中，因为不销毁第二层代币就无法释放它们。
 
 ### IL2StandardERC20 {#il2standarderc20}
 
@@ -904,7 +904,7 @@ import { IERC20 } from "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import { IERC165 } from "@openzeppelin/contracts/utils/introspection/IERC165.sol";
 ```
 
-[ERC-165 接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol)用于指定一个合约提供哪些函数。 [您可以在此处参阅该标准](https://eips.ethereum.org/EIPS/eip-165)。
+[ERC-165 接口](https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/introspection/IERC165.sol)用于指定一个合约提供哪些函数。 [你可以在此处参阅该标准](https://eips.ethereum.org/EIPS/eip-165)。
 
 ```solidity
 interface IL2StandardERC20 is IERC20, IERC165 {
@@ -928,7 +928,7 @@ interface IL2StandardERC20 is IERC20, IERC165 {
 
 ### L2StandardERC20 {#L2StandardERC20}
 
-[这是我们对 `IL2StandardERC20` 接口的实现](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol)。 除非您需要某种自定义逻辑，否则您应该使用它。
+[这是我们对 `IL2StandardERC20` 接口的实现](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/standards/L2StandardERC20.sol)。 除非你需要某种自定义逻辑，否则你应该使用它。
 
 ```solidity
 // SPDX-License-Identifier: MIT
@@ -992,7 +992,7 @@ contract L2StandardERC20 is IL2StandardERC20, ERC20 {
 
 第二层链桥使用 ERC-165 作为完整性检查机制，确保它发送资产的 ERC-20 合约是 `IL2StandardERC20`。
 
-**注：**没有任何东西可以阻止流氓合约为 `supportsInterface` 提供虚假应答，所以这是一种完整性检查机制*而不是*安全机制。
+**注：**没有任何东西可以阻止流氓合约为 `supportsInterface` 提供虚假应答，所以这是一种完整性检查机制_而不是_安全机制。
 
 ```solidity
     // slither-disable-next-line external-function
@@ -1031,7 +1031,7 @@ import { IL2ERC20Bridge } from "./IL2ERC20Bridge.sol";
 
 [IL2ERC20Bridge](https://github.com/ethereum-optimism/optimism/blob/develop/packages/contracts/contracts/L2/messaging/IL2ERC20Bridge.sol) 接口与我们上面看到的[第一层等效](#IL1ERC20Bridge)接口非常相似。 有两个明显区别：
 
-1. 在第一层上您发起存款并完成提款。 在此处您发起提款并完成存款。
+1. 在第一层上你发起存款并完成提款。 在此处你发起提款并完成存款。
 2. 在第一层上，有必要区分以太币和 ERC-20 代币。 在第二层上，我们可以对两者使用相同的函数，因为在乐观解决方案上的以太币余额会作为地址为 [0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000](https://optimistic.etherscan.io/address/0xDeadDeAddeAddEAddeadDEaDDEAdDeaDDeAD0000) 的 ERC-20 代币在内部处理。
 
 ```solidity
@@ -1060,7 +1060,7 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
     address public l1TokenBridge;
 ```
 
-跟踪第一层链桥的地址。 请注意，与第一层对应项相比，此处我们*需要*该变量。 第一层链桥的地址事先不为人知。
+跟踪第一层链桥的地址。 请注意，与第一层对应项相比，此处我们_需要_该变量。 第一层链桥的地址事先不为人知。
 
 ```solidity
 
@@ -1138,7 +1138,7 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
         IL2StandardERC20(_l2Token).burn(msg.sender, _amount);
 ```
 
-请注意，我们*不*依赖 `_from` 参数，而是依赖更难伪造的 `msg.sender`（据我所知它无法伪造）。
+请注意，我们_不_依赖 `_from` 参数，而是依赖更难伪造的 `msg.sender`（据我所知它无法伪造）。
 
 ```solidity
 
@@ -1274,4 +1274,4 @@ contract L2StandardBridge is IL2ERC20Bridge, CrossDomainEnabled {
 
 通常，这些链桥的工作方式是在第一层上拥有资产，而且它们会立即为这些资产提供一小笔费用（通常少于标准链桥提款的燃料费用）。 当链桥（或运行链桥的人）预计第一层资产短缺时，它将从第二层转移足够的资产。 由于这些提款的数额非常庞大，大笔的提款费用经分期摊销后，所占百分比要小得多。
 
-希望本文能帮助您更多地了解二层网络如何工作以及如何编写清晰安全的 Solidity 代码。
+希望本文能帮助你更多地了解二层网络如何工作以及如何编写清晰安全的 Solidity 代码。

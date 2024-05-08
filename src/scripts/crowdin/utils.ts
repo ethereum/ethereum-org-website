@@ -8,7 +8,7 @@ export function getDirectoryIdsFromJson() {
   try {
     const filePath = path.join(
       __dirname,
-      "@/data/crowdin/translation-buckets-dirs.json"
+      "../../data/crowdin/translation-buckets-dirs.json"
     )
     const directoriesData = fs.readFileSync(filePath)
     const directories = JSON.parse(directoriesData.toString())

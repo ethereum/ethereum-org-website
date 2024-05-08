@@ -17,7 +17,6 @@ lang: ja
 - [EFエコシステム・サポート・プログラム](https://esp.ethereum.foundation) - _ユニバーサルツール、インフラストラクチャ、研究、公共財を対象とした、イーサリアムにプラスとなるオープンソース・プロジェクトへの資金提供_
 - [Moloch DAO](https://www.molochdao.com/) - _プライバシー、レイヤー2スケーリング、クライアントセキュリティなど_
 - [分散型自律組織(DAO)の助成](https://docs.google.com/spreadsheets/d/1XHc-p_MHNRdjacc8uOEjtPoWL86olP4GyxAJOFO0zxY/edit#gid=0) - _助成プログラムを提供する組織のGoogleスプレッドシート_
-- [Crunchbase for Web3 Grants](https://www.cryptoneur.xyz/web3-grants) - _カテゴリ、ユースケース、金額などで助成金をフィルターして検索できます。 他の人が適切に助成金を見つけられるように貢献。_
 - [学術助成金](https://esp.ethereum.foundation/academic-grants) - _イーサリアム関連の学術研究をサポートする助成金_
 - [Blockworks Grantfarm](https://blockworks.co/grants/programs) - _Blockworksは、すべての助成金、RFP、バグ報奨金をディレクトリとしてまとめています。_
 
@@ -35,7 +34,6 @@ lang: ja
 - [Swarm Foundation助成金プログラム](https://my.ethswarm.org/grants) - _[Swarm Foundation](https://www.ethswarm.org/)エコシステム_
 - [The Graph](https://thegraph.com/ecosystem/grants/) – _[The Graph](https://thegraph.com/)エコシステム_
 - [ユニスワップ助成金プログラム](https://www.uniswapfoundation.org/grants) – _[ユニスワップ](https://uniswap.org/)コミュニティ_
-- [Web3助成プログラム](https://web3grants.net) - _Web3/暗号資産関連の助成プログラムの広範なリスト_
 
 ## クオドラティック・ファンディング {#quadratic-funding}
 

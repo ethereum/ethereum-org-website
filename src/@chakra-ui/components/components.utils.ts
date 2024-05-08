@@ -2,7 +2,6 @@ import merge from "lodash/merge"
 import { cssVar, SystemStyleObject, theme } from "@chakra-ui/react"
 
 const {
-  Accordion: accordionDefaultTheme,
   Alert: alertDefaultTheme,
   Avatar: avatarDefaultTheme,
   Badge: badgeDefaultTheme,
@@ -31,7 +30,6 @@ const {
 } = theme.components
 
 export {
-  accordionDefaultTheme,
   alertDefaultTheme,
   avatarDefaultTheme,
   badgeDefaultTheme,

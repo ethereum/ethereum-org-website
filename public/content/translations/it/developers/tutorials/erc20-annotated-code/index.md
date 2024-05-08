@@ -4,7 +4,7 @@ description: Cosa c'è nel contratto ERC-20 di OpenZeppelin e a cosa serve?
 author: Ori Pomerantz
 lang: it
 tags:
-  - "Solidity"
+  - "solidity"
   - "erc-20"
 skill: beginner
 published: 2021-03-09
@@ -92,7 +92,7 @@ Come dice il nome `balanceOf` restituisce il saldo di un conto. I conti di Ether
      *
      * Returns a boolean value indicating whether the operation succeeded.
      *
-     * Emette un evento {Transfer}.
+     * Emits a {Transfer} event.
      */
     function transfer(address recipient, uint256 amount) external returns (bool);
 ```
@@ -525,7 +525,7 @@ Per evitare questo problema, queste due funzioni (`increaseAllowance` e `decreas
 A:
 
 | Transazione di Alice       | Nonce di Alice | Transazione di Bill          | Nonce di Bill | Tolleranza di Bill | Entrate totali di Bill da Alice |
-| -------------------------- | -------------: | ---------------------------- | ------------: | -----------------: | ------------------------------- |
+| -------------------------- | --------------:| ---------------------------- | -------------:| ------------------:| ------------------------------- |
 | approve(Bill, 5)           |             10 |                              |               |                  5 | 0                               |
 |                            |                | transferFrom(Alice, Bill, 5) |        10,123 |                  0 | 5                               |
 | increaseAllowance(Bill, 5) |             11 |                              |               |            0+5 = 5 | 5                               |
@@ -534,7 +534,7 @@ A:
 B:
 
 | Transazione di Alice       | Nonce di Alice | Transazione di Bill           | Nonce di Bill | Tolleranza di Bill | Entrate totali di Bill da Alice |
-| -------------------------- | -------------: | ----------------------------- | ------------: | -----------------: | ------------------------------: |
+| -------------------------- | --------------:| ----------------------------- | -------------:| ------------------:| -------------------------------:|
 | approve(Bill, 5)           |             10 |                               |               |                  5 |                               0 |
 | increaseAllowance(Bill, 5) |             11 |                               |               |           5+5 = 10 |                               0 |
 |                            |                | transferFrom(Alice, Bill, 10) |        10,124 |                  0 |                              10 |

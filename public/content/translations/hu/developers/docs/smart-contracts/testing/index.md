@@ -270,6 +270,8 @@ A fő különbség az, hogy a hibavadász-programok nyitottak a szélesebb fejle
 
 - **[Ethlint](https://ethlint.readthedocs.io/en/latest/)** – _Linter a stílusra és biztonságra vonatkozó bevált gyakorlatok érvényesítésére a Solidity okosszerződések programozási nyelvéhez._
 
+- **[Cyfrin Aderyn](https://cyfrin.io/tools/aderyn)** – _Rust-alapú statikus elemző, amelyet kifejezetten a web3 okosszerződések biztonságához és fejlesztéséhez terveztek._
+
 #### Dinamikus elemzőeszközök {#dynamic-analysis-tools}
 
 - **[Echidna](https://github.com/crytic/echidna/)** – _Gyors szerződésfuzzer az okosszerződések sebezhetőségének felderítésére tulajdonságalapú teszteléssel._
