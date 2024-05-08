@@ -170,7 +170,7 @@ Returns the total amount of vault shares the `owner` currently has.
 
 ### Map of the interface {#mapOfTheInterface}
 
-![Map of the ERC-4626 interface](./map-of-erc-4626.jpg)
+![Map of the ERC-4626 interface](./map-of-erc-4626.png)
 
 ### Events {#events}
 
