@@ -2,12 +2,17 @@ name: Crowdin CI
 
 on:
   schedule:
-    - cron: "20 16 1 * *" # Runs at 4:20 PM on the first day of every month
+    - cron: "20 4 1 * *" # Runs at 4:20 AM on the first day of every month
   workflow_dispatch: # Can be dispatched manually
 
 jobs:
   create_approved_language_bucket_prs:
     runs-on: ubuntu-latest
+    env:
+      CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
+      CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
     steps:
       # Set up environment
       - name: Check out code
@@ -39,28 +44,17 @@ jobs:
       # Build and prepare translations
       - name: Build Crowdin project
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/triggerBuild.ts
-        env:
-          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
 
-      - name: Sleep while Crowdin build finishes
-        run: sleep 3600 # in seconds (1 hour)
+      - name: Await latest build to finish
+        run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/awaitLatestBuild.ts
 
       - name: Get latest translation bucket directory ids
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getBucketDirectoryIds.ts
-        env:
-          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
 
       # Import approved translations
       - name: Get translations
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/getTranslations.ts
-        env:
-          CROWDIN_API_KEY: ${{ secrets.CROWDIN_API_KEY }}
-          CROWDIN_PROJECT_ID: ${{ secrets.CROWDIN_PROJECT_ID }}
 
       # Post updates as language-specific PRs
       - name: Process commits and post PRs by language
         run: npx ts-node -O '{"module":"commonjs"}' ./src/scripts/crowdin/translations/postLangPRs.ts
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
