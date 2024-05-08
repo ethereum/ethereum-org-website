@@ -170,7 +170,7 @@ Any gas not used in a transaction is refunded to the user account.
 
 Gas is required for any transaction that involves a smart contract.
 
-Therefore, calling a [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) or [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) function from an EOA will not require any gas. The underlying RPC call for this scenario is [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
+Smart contracts can also contain functions known as [`view`](https://docs.soliditylang.org/en/latest/contracts.html#view-functions) or [`pure`](https://docs.soliditylang.org/en/latest/contracts.html#pure-functions) functions, which do not alter the state of the contract. As such, calling these functions from an EOA will not require any gas. The underlying RPC call for this scenario is [`eth_call`](/developers/docs/apis/json-rpc#eth_call)
 
 However calling a `view` or `pure` function internally (ie: from the contract itself or from another contract) will cost gas.
 
