@@ -7,10 +7,8 @@ import {
   Stack,
   VStack,
 } from "@chakra-ui/react"
-import { objectKeys } from "@chakra-ui/utils"
 import { Meta, StoryObj } from "@storybook/react"
 
-import Translation from "../Translation"
 
 const meta = {
   title: "Atoms / Typography / Heading",

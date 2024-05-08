@@ -2,12 +2,13 @@ import fs from "fs"
 import path from "path"
 
 import matter from "gray-matter"
+import minimist from "minimist"
 
 import type { Lang } from "../lib/types"
 
 type Summary = Record<string, string[]>
 
-const argv = require("minimist")(process.argv.slice(2))
+const argv = minimist(process.argv.slice(2))
 
 const LANG_ARG: string | null = argv.lang || null
 const PATH_TO_INTL_MARKDOWN = "./public/content/translations/"
