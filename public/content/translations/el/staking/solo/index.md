@@ -202,3 +202,5 @@ summaryPoints:
 - [Πώς να: Αγοράσετε Υλικά για Επικύρωση στο Ethereum](https://www.youtube.com/watch?v=C2wwu1IlhDc) - _EthStaker 2022_
 - [Βήμα προς βήμα: Πώς να εγγραφείτε στο δίκτυο δοκιμής Ethereum 2.0](https://kb.beaconcha.in/guides/tutorial-eth2-multiclient) - _ Butta_
 - [Συμβουλές πρόληψης κατά της περικοπής Eth2](https://medium.com/prysmatic-labs/eth2-slashing-prevention-tips-f6faa5025f50) - _Ραούλ Τζόρνταν 2020 _
+
+<QuizWidget quizKey="solo-staking" />

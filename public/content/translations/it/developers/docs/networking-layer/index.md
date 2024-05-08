@@ -125,7 +125,7 @@ I client del consenso e d'esecuzione, operano in parallelo. Devono esser conness
 
 Un sommario del flusso di controllo è mostrato di seguito, con indicazione tra parentesi dello stack di rete rilevante.
 
-### Quando il client di consenso non è un produttore di blocchi:
+### Quando il client del consenso non è un produttore di blocchi: {#when-consensus-client-is-not-block-producer}
 
 - Il client di consenso riceve un blocco tramite il protocollo di gossip dei blocchi (consenso p2p)
 - Il client di consenso convalida preventivamente il blocco, ovvero si assicura che provenga da un mittente valido con i metadati corretti
@@ -134,7 +134,7 @@ Un sommario del flusso di controllo è mostrato di seguito, con indicazione tra 
 - Il livello d'esecuzione ripassa i dati di convalida al livello di consenso, blocco ora considerato da convalidare (connessione RPC locale)
 - Il livello di consenso aggiunge il blocco alla testa della propria blockchain e lo attesta, trasmettendo l'attestazione via rete (consenso p2p)
 
-### Quando il client di consenso è un produttore di blocchi:
+### Quando il client del consenso è un produttore di blocchi: {#when-consensus-client-is-block-producer}
 
 - Il client di consenso riceve notifica che è il prossimo produttore di blocchi (consenso p2p)
 - Il livello di consenso chiama il metodo `create block` nel client d'esecuzione (RPC locale)

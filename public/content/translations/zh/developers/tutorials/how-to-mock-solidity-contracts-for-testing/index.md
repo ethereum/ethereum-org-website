@@ -5,7 +5,7 @@ author: Markus Waas
 lang: zh
 tags:
   - "solidity"
-  - "智能合同"
+  - "智能合约"
   - "测试"
   - "模拟"
 skill: intermediate
@@ -87,8 +87,8 @@ contract PrivateERC20Mock is PrivateERC20 {
 
 你将得到以下错误消息之一：
 
-- `PrivateERC20Mock.sol: 类型错误：重写函数缺少"override"修改器。(TypeError: Overriding function is missing "override" specifier.)`
-- `PrivateERC20.sol：类型错误：尝试重写非virtual函数。 你是否忘记了添加“virtual”关键字？(TypeError: Trying to override non-virtual function. Did you forget to add "virtual"?.)`
+- `PrivateERC20Mock.sol: TypeError: Overriding function is missing "override" specifier.`
+- `PrivateERC20.sol: TypeError: Trying to override non-virtual function. Did you forget to add "virtual"?.`
 
 由于使用的是新的 Solidity 0.6 版本，所以必须为可被重写的函数添加 `virtual` 关键字，为执行重写的函数添加 override。 因此，我们为两个 `isPublic` 函数添加这些关键字。
 

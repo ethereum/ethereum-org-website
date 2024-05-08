@@ -1,5 +1,5 @@
 ---
-title: Nem központilag kibocsájtott identitás
+title: Decentralizált identitás
 description: Mi az a nem központilag kibocsátott identitás, és miért fontos?
 lang: hu
 template: use-cases
@@ -91,7 +91,7 @@ A decentralizált azonosítókat elosztott főkönyveken ([blokklánc](/glossary
 
 ## Mi teszi lehetővé a decentralizált azonosítók használatát? {#what-makes-decentralized-identifiers-possible}
 
-### 1. Nyilvánoskulcs-infrastruktúra (PKI) {#public-key-infrastructure}
+### 1. Nyilvánoskulcs-kriptográfia {#public-key-cryptography}
 
 A nyilvánoskulcs-kriptográfia egy olyan információbiztonsági lépés, amely az entitás számára egy [nyilvános kulcsot](/glossary/#public-key) és egy [privát kulcsot](/glossary/#private-key) hoz létre. A nyilvános kulcson alapuló [kriptográfiát](/glossary/#cryptography) a blokklánchálózatok arra használják, hogy igazolják a felhasználók identitását és a digitális eszközök tulajdonjogát.
 

@@ -212,16 +212,16 @@ Inoltre, non sempre per i verificatori di programmi è possibile determinare se 
 
 ### Linguaggi di specifica per la creazione di specifiche formali {#specification-languages}
 
-**Act**: \_\*Act consente la specifica di aggiornamenti d'archiviazione, pre e post condizioni e invarianti del contratto. La sua suite di strumenti contiene inoltre backend di prova in grado di dimostrare molte proprietà tramite Coq, risolutori SMT o hevm.\*\*
+**Act**: _*Act consente la specifica di aggiornamenti d'archiviazione, pre e post condizioni e invarianti del contratto. La sua suite di strumenti contiene inoltre backend di prova in grado di dimostrare molte proprietà tramite Coq, risolutori SMT o hevm.**
 
 - [GitHub](https://github.com/ethereum/act)
 - [Documentazione](https://ethereum.github.io/act/)
 
-**Scribble** - \_\*Scribble trasforma le annotazioni di codice nel linguaggio di specifica di Scribble in asserzioni concrete che verificano la specifica.\*\*
+**Scribble** - _*Scribble trasforma le annotazioni di codice nel linguaggio di specifica di Scribble in asserzioni concrete che verificano la specifica.**
 
 - [Documentazione](https://docs.scribble.codes/)
 
-**Dafny** - \_\*Dafny è un linguaggio di programmazione pronto alla verifica che si basa su annotazioni di alto livello per ragionare sulla correttezza del codice e dimostrarla.\*\*
+**Dafny** - _*Dafny è un linguaggio di programmazione pronto alla verifica che si basa su annotazioni di alto livello per ragionare sulla correttezza del codice e dimostrarla.**
 
 - [GitHub](https://github.com/dafny-lang/dafny)
 
@@ -229,18 +229,18 @@ Inoltre, non sempre per i verificatori di programmi è possibile determinare se 
 
 **Certora Prover** - _Certora Prover è uno strumento automatico di verifica formale per verificare la correttezza del codice nei contratti intelligenti. Le specifiche sono scritte in CVL (Certora Verification Language), con le violazioni di proprietà rilevate utilizzando una combinazione di analisi statica e risoluzione del vincolo._
 
-- [Sito web](https://www.certora.com/)
+- [Sito Web](https://www.certora.com/)
 - [Documentazione](https://docs.certora.com/en/latest/index.html)
 
-**SMTChecker di Solidity** - \_\*SMTChecker di Solidity è un revisore del modello integrato basato sulle SMT (Satisfiability Modulo Theories) e la risoluzione di Horn. Conferma se il codice sorgente di un contratto corrisponde alle specifiche durante la compilazione e controlla staticamente le violazioni delle proprietà di sicurezza.\*\*
+**SMTChecker di Solidity** - _*SMTChecker di Solidity è un revisore del modello integrato basato sulle SMT (Satisfiability Modulo Theories) e la risoluzione di Horn. Conferma se il codice sorgente di un contratto corrisponde alle specifiche durante la compilazione e controlla staticamente le violazioni delle proprietà di sicurezza.**
 
 - [GitHub](https://github.com/ethereum/solidity)
 
-**solc-verify** - \_\*solc-verify è una versione estesa del compilatore di Solidity che può eseguire la verifica formale automatizzata sul codice di Solidity utilizzando le annotazioni e la verifica modulare del programma.\*\*
+**solc-verify** - _*solc-verify è una versione estesa del compilatore di Solidity che può eseguire la verifica formale automatizzata sul codice di Solidity utilizzando le annotazioni e la verifica modulare del programma.**
 
 - [GitHub](https://github.com/SRI-CSL/solidity)
 
-**KEVM** - \_\*KEVM è una semantica formale della Macchina Virtuale di Ethereum (EVM), scritta nel quadro K. KEVM è eseguibile e può dimostrare determinate asserzioni correlate alle proprietà utilizzando la logica di raggiungibilità.\*\*
+**KEVM** - _*KEVM è una semantica formale della Macchina Virtuale di Ethereum (EVM), scritta nel quadro K. KEVM è eseguibile e può dimostrare determinate asserzioni correlate alle proprietà utilizzando la logica di raggiungibilità.**
 
 - [GitHub](https://github.com/runtimeverification/evm-semantics)
 - [Documentazione](https://jellopaper.org/)
@@ -259,12 +259,12 @@ Inoltre, non sempre per i verificatori di programmi è possibile determinare se 
 
 ### Strumenti basati sull'esecuzione simbolica per rilevare modelli vulnerabili nei contratti intelligenti {#symbolic-execution-tools}
 
-**Manticore** - \__Uno strumento per analizzare il bytecode dell'EVM basato sull'esecuzione simbolica_.\*
+**Manticore** - _*Uno strumento per analizzare il bytecode dell'EVM basato sull'esecuzione simbolica*.*
 
 - [GitHub](https://github.com/trailofbits/manticore)
 - [Documentazione](https://github.com/trailofbits/manticore/wiki)
 
-**hevm** - \_\*hevm è un motore di esecuzione simbolica e verificatore di equivalenza per il bytecode dell'EVM.\*\*
+**hevm** - _*hevm è un motore di esecuzione simbolica e verificatore di equivalenza per il bytecode dell'EVM.**
 
 - [GitHub](https://github.com/dapphub/dapptools/tree/master/src/hevm)
 
@@ -273,7 +273,7 @@ Inoltre, non sempre per i verificatori di programmi è possibile determinare se 
 - [GitHub](https://github.com/ConsenSys/mythril-classic)
 - [Documentazione](https://mythril-classic.readthedocs.io/en/develop/)
 
-## Ulteriori letture {#further-reading}
+## Letture consigliate {#further-reading}
 
 - [Come funziona la verifica formale dei contratti intelligenti](https://runtimeverification.com/blog/how-formal-verification-of-smart-contracts-works/)
 - [Come la verifica formale può assicurare contratti intelligenti impeccabili](https://media.consensys.net/how-formal-verification-can-ensure-flawless-smart-contracts-cbda8ad99bd1)

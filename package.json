@@ -1,6 +1,6 @@
 {
   "name": "ethereum-org-website",
-  "version": "8.5.1",
+  "version": "8.5.2",
   "private": true,
   "scripts": {
     "dev": "next dev",

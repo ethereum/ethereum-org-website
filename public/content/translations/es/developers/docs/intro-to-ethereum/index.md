@@ -62,7 +62,7 @@ La secuencia de todos los bloques que se han incorporado a la red Ethereum en la
 
 **Ether (ETH)** es la criptomoneda nativa de Ethereum. Los usuarios pagan ETH a otros usuarios para que se cumplan sus solicitudes de ejecución de su código.
 
-[Más información sobre ETH](/developers/docs/intro-to-ether/)
+[Más sobre ETH](/developers/docs/intro-to-ether/)
 
 ### EVM {#evm}
 
@@ -102,14 +102,14 @@ El volumen de las transacciones es muy alto, por lo que las transacciones se «c
 
 Un fragmento de código reutilizable (un programa) que publica un desarrollador en el entorno EVM. Cualquier persona puede solicitar que el código del contrato inteligente se ejecute al hacer una solicitud de transacción. Como los desarrolladores pueden escribir arbitrariamente aplicaciones ejecutables en la EVM (juegos, mercados, instrumentos financieros, etc.) mediante la publicación de contratos inteligentes, estos suelen denominarse [DApps o Aplicaciones Descentralizadas](/developers/docs/dapps/).
 
-[Más información sobre contratos inteligentes](/developers/docs/smart-contracts/)
+[Más sobre contratos inteligentes](/developers/docs/smart-contracts/)
 
 ## Leer más {#further-reading}
 
 - [Informe oficial de Ethereum](/whitepaper/)
 - [¿Cómo funciona Ethereum de todos modos?](https://www.preethikasireddy.com/post/how-does-ethereum-work-anyway), _Preethi Kasireddy_ (**NB** este recurso todavía es valioso, pero tenga en cuenta que es anterior a [La Fusión](/roadmap/merge) y por lo tanto se refiere al mecanismo de prueba de trabajo de Ethereum - Ethereum es ahora seguro mediante la [prueba de participación](/developers/docs/consensus-mechanisms/pos))
 
-_¿Conoce algún recurso comunitario que le haya sido de ayuda? Edite la página y añádalo._
+_¿Conoce algún recurso de la comunidad que le haya servido de ayuda? Edite esta página y añádalo._
 
 ## Tutoriales relacionados {#related-tutorials}
 

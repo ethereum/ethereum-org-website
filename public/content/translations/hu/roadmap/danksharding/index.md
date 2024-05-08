@@ -15,7 +15,7 @@ A **Danksharding** az a módszer, amivel az Ethereum egy valóban skálázható 
 
 ## Mi az a Proto-Danksharding? {#what-is-protodanksharding}
 
-A Proto-Danksharding, vagy más néven [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), egy olyan módszer a [összevont tranzakciók](/layer2/#rollups) számára, amellyel olcsón tudnak adatokat hozzáadni a blokkokhoz. A név attól a két kutatótól származik, akik ezt a módszert javasolták: Protolambda és Dankrad Feist. Korábban az összevont tranzakciókat a tranzakciók költségének csökkentésében behatárolta az a tény, hogy a tranzakciós adatokat a `CALLDATA` mezőbe posztolják.
+A Proto-Danksharding, más néven [EIP-4844](https://eips.ethereum.org/EIPS/eip-4844), az [összegzések](/layer-2/#rollups) egyik módja annak, hogy olcsóbb adatokat adjanak a blokkokhoz. A név attól a két kutatótól származik, akik ezt a módszert javasolták: Protolambda és Dankrad Feist. Korábban az összevont tranzakciókat a tranzakciók költségének csökkentésében behatárolta az a tény, hogy a tranzakciós adatokat a `CALLDATA` mezőbe posztolják.
 
 Ez egy drága megoldás, mert az Ethereum-csomópontok dolgozzák fel és a láncon örökre élő adat marad, miközben az összevont tranzakcióknak csak egy rövid időre lenne szükségük ezekre. A Proto-Danksharding az adatblobokat vezeti be, amelyeket el lehet küldeni és hozzá lehet csatolni a blokkokhoz. Az ezekben a blobokban lévő adatok nem elérhetők az EVM számára, és automatikusan törlődnek egy meghatározott idő után (a jelen írás idéjén ez 4096 korszak vagy 18 nap). Így az összevont tranzakciók sokkal olcsóbban be tudják küldeni az adatokat, és ez a felhasználóknak olcsóbb tranzakciókat eredményez.
 
@@ -65,7 +65,7 @@ Ha valaki ismeri az elköteleződéshez használt véletlenszerű helyet, akkor 
 
 A Danksharding az összevont tranzakciós skálázási megoldás teljes megvalósítása, amely a Proto-Dankshardinggal kezdődik. A Danksharding az Ethereumon hatalmas helyet teremt az összevont tranzakcióknak, hogy az összecsomagolt tranzakciós adataikat beküldjék. Ezzel az Ethereum képes lesz könnyedén támogatni az egyéni összevont tranzakciók százait, és tranzakciók millióit végrehajtani minden másodpercben.
 
-Ennek az a módja, hogy a blokkokhoz kapcsolt blobokat kiterjeszti a Proto-Danksharding által adott 1-ről 64-re a teljes Danksharding során. A szükséges változások többi része a konszenzus kliensek működését fejleszti, hogy azok képesek legyenek az új, nagy méretű blobokat kezelni. Ezen változások néhány része már benne van az ütemtervben, függetlenül a Danksharding bevezetéstől. Például a Dankshardinghoz szükséges a javaslattevő-építő szétválasztás (PBS) bevezetése. Ez egy olyan fejlesztés, amely szétválasztja a blokkok építését és azok előterjesztését a különböző validátorok között. Ugyanígy az adatelérhetőség-mintázás szükséges a Dankshardinghoz, de az igazán könnyű kliensek fejlesztéséhez is, amelyek nem tárolnak túl sok előzményadatot („státuszmentes kliensek”).
+Ez úgy működik, hogy a blokkokhoz csatolt blobokat a Proto-Danksharding hatról (6) a teljes Dankshardingban 64-re bővítjük. A szükséges változások többi része a konszenzus kliensek működését fejleszti, hogy azok képesek legyenek az új, nagy méretű blobokat kezelni. Ezen változások néhány része már benne van az ütemtervben, függetlenül a Danksharding bevezetéstől. Például a Dankshardinghoz szükséges a javaslattevő-építő szétválasztás (PBS) bevezetése. Ez egy olyan fejlesztés, amely szétválasztja a blokkok építését és azok előterjesztését a különböző validátorok között. Ugyanígy az adatelérhetőség-mintázás szükséges a Dankshardinghoz, de az igazán könnyű kliensek fejlesztéséhez is, amelyek nem tárolnak túl sok előzményadatot („státuszmentes kliensek”).
 
 <ExpandableCard title="Miért van szükség a Dankshardinghoz a javaslattevő-építő szétválasztásra (PBS)?" eventCategory="/roadmap/danksharding" eventName="clicked why does danksharding require proposer-builder separation?">
 
@@ -81,7 +81,7 @@ Adatelérhetőség-mintázásra is szükség van, hogy a validátorok gyorsan é
 
 ### Jelenlegi helyzet {#current-progress}
 
-A teljes Danksharding bevezetéséhez még számos év szükséges. A KZG-ceremónia több mint 140 000 hozzájárulással zárult, és eközben a Proto-Danksharding [EIP](https://eips.ethereum.org/EIPS/eip-4844) megérett, elkészült a specifikációja, amelyet már tesztelnek a teszthálózatokon. Ez a frissítés 2024 márciusában lép életbe az Ethereum fő hálózatán a Deneb + Cancun frissítés részeként. Az [EIP-4844 készenléti ellenőrzőlista](https://github.com/ethereum/pm/blob/master/Dencun/4844-readiness-checklist.md) segítségével naprakész maradhat.
+A teljes Danksharding bevezetéséhez még számos év szükséges. Időközben a KZG ceremóniája több mint 140 000 hozzájárulással zárult, és a Proto-Danksharding [EIP](https://eips.ethereum.org/EIPS/eip-4844)-je lejárt. Ezt a javaslatot az összes teszthálózatban maradéktalanul bevezették, és 2024 márciusában a Cancun-Deneb ("Dencun") hálózatfrissítéssel életbe lépett a Mainnet hálózaton.
 
 ### További olvasnivaló {#further-reading}
 

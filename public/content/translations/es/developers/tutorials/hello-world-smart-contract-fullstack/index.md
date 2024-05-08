@@ -70,7 +70,7 @@ Introduzca la dirección de su cuenta de MetaMask y haga clic en **Send request*
 
 ¡Fiu! Nuestro dinero de prueba está ahí sano y salvo.
 
-### Paso 6: Iniciar nuestro proyecto {#step-6-initialize-our-project}
+### Paso 6: Iniciar su proyecto {#step-6-initialize-our-project}
 
 En primer lugar, tendremos que crear una carpeta para nuestro proyecto. Vaya a su línea de comandos e introduzca lo siguiente.
 
@@ -184,7 +184,7 @@ _Nota: asegúrese de leer los comentarios para entender lo que hace este contrat
 pragma solidity >=0.7.3;
 
 // Defines a contract named `HelloWorld`.
-// Un contrato es una colección de funciones y datos (su estado). Una vez desplegado, un contrato reside en una dirección específica en la blockchain de Ethereum. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Un contrato es una colección de funciones y datos (su estado). Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
    //Emitted when update function is called
@@ -228,7 +228,7 @@ Primero, instale el paquete dotenv en su directorio de proyecto:
 npm install dotenv --save
 ```
 
-A continuación, cree un archivo `.env` en el directorio raíz del proyecto. Añade tu clave privada de MetaMask y la URL de la API de HTTP Alchemy.
+A continuación, cree un archivo `.env` en el directorio raíz del proyecto. Añada su clave privada de MetaMask y la URL de la API de HTTP Alchemy.
 
 Su archivo de entorno debe llamarse `.env` o no se reconocerá como un archivo de entorno.
 
@@ -243,7 +243,7 @@ Su `.env` debería verse así:
 
 ```
 API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
-PRIVATE_KEY = "tu-clave privada-metamask"
+PRIVATE_KEY = "your-metamask-private-key"
 ```
 
 Para conectarlos efectivamente a nuestro código, vincularemos estas variables en nuestro `hardhat.config.js` en el paso 13.
@@ -299,7 +299,7 @@ Desde la linea de comandos, ejecute:
 npx hardhat compile
 ```
 
-Es posible que reciba una advertencia sobre el `identificador de licencia SPDX no proporcionado en el archivo de origen`, pero no hay necesidad de preocuparse por eso, ¡esperemos que todo lo demás se vea bien! Si no es así, siempre puede escribir un mensaje en [Alchemy discord](https://discord.gg/u72VCg3).
+Es posible que reciba una advertencia sobre el `identificador de licencia SPDX no proporcionado en el archivo de origen`, pero no tiene que preocuparse por eso, ¡esperemos que todo lo demás esté bien! Si no es así, siempre puede escribir un mensaje en [Alchemy discord](https://discord.gg/u72VCg3).
 
 ### Paso 15: Escribir nuestro script de despliegue {#step-15-write-our-deploy-script}
 
@@ -330,7 +330,7 @@ Hardhat hace un trabajo increíble al explicar lo que hace cada una de estas lí
 const HelloWorld = await ethers.getContractFactory("HelloWorld")
 ```
 
-Una `ContractFactory` en ethers.js es una abstracción utilizada para implementar nuevos contratos inteligentes, por lo que `HelloWorld` aquí es una [factory](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)) para las instancias de nuestro contrato de Hello World. Cuando se utiliza el complemento `hardhat-ethers` `ContractFactory` y `Contract`, las instancias se conectan al primer firmante (propietario) de forma predeterminada.
+Una `ContractFactory` en ethers.js es una abstracción utilizada para implementar nuevos contratos inteligentes, por lo que `HelloWorld` aquí es una [factory](https://en.wikipedia.org/wiki/Factory_(object-oriented_programming)) a instancias de nuestro contrato de Hello World. Cuando se utiliza el complemento `hardhat-ethers` `ContractFactory` y `Contract`, las instancias se conectan al primer firmante (propietario) de forma predeterminada.
 
 ```javascript
 const hello_world = await HelloWorld.deploy()
@@ -343,7 +343,7 @@ Llamar a `deploy()` en un `ContractFactory` iniciará el despliegue y devolverá
 ¡Por fin estamos listos para desplegar nuestro contrato inteligente! Desde la linea de comandos, ejecute:
 
 ```bash
-hardhat npx ejecuta scripts/deploy.js --network goerli
+npx hardhat run scripts/deploy.js --network goerli
 ```
 
 Debería mostrarse algo parecido a esto:
@@ -354,29 +354,29 @@ Contract deployed to address: 0x6cd7d44516a20882cEa2DE9f205bF401c0d23570
 
 **Por favor, guarde esta dirección**. Lo usaremos más adelante en el tutorial.
 
-Si vamos a la dirección [Ropsten etherscan](https://goerli.etherscan.io) y buscamos la dirección de nuestro contrato, podremos comprobar que se ha desplegado correctamente. El objeto de la transacción tendrá un aspecto parecido a esto:
+Si vamos a la dirección [Goerli etherscan](https://goerli.etherscan.io) y buscamos la dirección de nuestro contrato, podremos comprobar que se ha desplegado correctamente. El objeto de la transacción tendrá un aspecto parecido a esto:
 
 ![](./etherscan-contract.png)
 
-La dirección `from` debe coincidir con la dirección de su cuenta de MetaMask y la dirección `To` dirá **Contrcat creation**. Si hacemos clic en la transacción, veremos la dirección de nuestro contrato en el campo `to`.
+La dirección `From` debe coincidir con la dirección de su cuenta de MetaMask y en la dirección `To` figurará**Contract Creation**. Si hacemos clic en la transacción, veremos la dirección de nuestro contrato en el campo `To`.
 
 ![](./etherscan-transaction.png)
 
 ¡Felicidades! Acabas de implementar un contrato inteligente en una red de pruebas de Ethereum.
 
-Para entender lo que está pasando internamente, vayamos a la pestaña de Explorer en nuestro [panel Alchemy](https://dashboard.alchemyapi.io/explorer). Si tienes varias aplicaciones de Alchemy, asegúrate de filtrar por aplicación y selecciona **Hello World**.
+Para entender lo que está pasando internamente, vayamos a la pestaña de Explorer en nuestro [panel Alchemy](https://dashboard.alchemyapi.io/explorer). Si tiene varias aplicaciones de Alchemy, asegúrese de filtrar por aplicación y seleccione **Hello World**.
 
 ![](./hello-world-explorer.png)
 
-Aquí verás un puñado de métodos JSON-RPC que Hardhat/Ethers hizo bajo el capó para nosotros cuando llamamos a la función `.deploy()`. Dos métodos importantes aquí son [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), que es la solicitud para escribir nuestro contrato en la cadena Goerli, y [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), que es una solicitud para leer información sobre nuestra transacción dado el hash. Para obtener más información sobre el envío de transacciones, consulte [nuestro tutorial sobre el envío de transacciones utilizando Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
+Aquí verá un puñado de métodos JSON-RPC que Hardhat/Ethers hizo internamente para nosotros cuando llamamos a la función `.deploy()`. Dos métodos importantes aquí son [`eth_sendRawTransaction`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_sendrawtransaction), que es la solicitud para escribir nuestro contrato en la cadena Goerli, y [`eth_getTransactionByHash`](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_gettransactionbyhash), que es una solicitud para leer información sobre nuestra transacción dado el hash. Para obtener más información sobre el envío de transacciones, consulte [nuestro tutorial sobre el envío de transacciones utilizando Web3](/developers/tutorials/sending-transactions-using-web3-and-alchemy/).
 
-## Parte 2: Interactúa con tu contrato inteligente {#part-2-interact-with-your-smart-contract}
+## Parte 2: Interactuar con su contrato inteligente {#part-2-interact-with-your-smart-contract}
 
 Ahora que hemos implementado con éxito un contrato inteligente en la red Goerli, aprendamos a interactuar con él.
 
 ### Crear un archivo interact.js {#create-a-interactjs-file}
 
-Este es el archivo donde escribiremos nuestro script de interacción. Utilizaremos la biblioteca Ethers.js que instalaste anteriormente en la Parte 1.
+Este es el archivo donde escribiremos nuestro script de interacción. Utilizaremos la biblioteca Ethers.js que instaló anteriormente en la Parte 1.
 
 Dentro de la carpeta `scripts/`, cree un nuevo archivo llamado `interact.js` y agregue el siguiente código:
 
@@ -388,7 +388,7 @@ const PRIVATE_KEY = process.env.PRIVATE_KEY
 const CONTRACT_ADDRESS = process.env.CONTRACT_ADDRESS
 ```
 
-### Actualiza tu archivo .env {#update-your-env-file}
+### Actualizar su archivo .env {#update-your-env-file}
 
 Utilizaremos nuevas variables de entorno, por lo que tenemos que definirlas en el archivo `.env` que [creamos anteriormente](#step-11-connect-metamask-&-alchemy-to-your-project).
 
@@ -405,9 +405,9 @@ PRIVATE_KEY = "<your-metamask-private-key>"
 CONTRACT_ADDRESS = "0x<your contract address>"
 ```
 
-### Toma tu contrato ABI {#grab-your-contract-ABI}
+### Utilizar su contrato ABI {#grab-your-contract-ABI}
 
-Nuestro contrato [ABI (Interfaz Binaria de Aplicación)](/glossary/#abi) es la interfaz para interactuar con nuestro contrato inteligente. Hardhat genera automáticamente un ABI y lo guarda en `HelloWorld.json`. Para usar el ABI, tendremos que analizar el contenido añadiendo las siguientes líneas de código a nuestro archivo `interact.js`:
+Nuestro contrato [ABI (interfaz binaria de aplicación)](/glossary/#abi) es la interfaz para interactuar con nuestro contrato inteligente. Hardhat genera automáticamente una ABI y la guarda en `HelloWorld.json`. Para usar la ABI, tendremos que analizar el contenido añadiendo las siguientes líneas de código a nuestro archivo `interact.js`:
 
 ```javascript
 // interact.js
@@ -420,18 +420,18 @@ Si quiere ver la ABI puede hacerlo en su propia consola:
 console.log(JSON.stringify(contract.abi))
 ```
 
-Para ver su ABI impreso en la consola, vaya a su terminal y ejecute:
+Para ver su ABI impresa en la consola, vaya a su terminal y ejecute:
 
 ```bash
 npx hardhat run scripts/interact.js
 ```
 
-### Crea una instancia de tu contrato {#create-an-instance-of-your-contract}
+### Crear una instancia de su contrato {#create-an-instance-of-your-contract}
 
 Para interactuar con nuestro contrato, necesitamos crear una instancia de contrato en nuestro código. Para hacerlo con Ethers.js, tendremos que trabajar con tres conceptos:
 
-1. Proveedor: un proveedor de nodos que te da acceso de lectura y escritura a la cadena de bloques
-2. Firmante - representa una cuenta de Ethereum que puede firmar transacciones
+1. Proveedor: un proveedor de nodos que le dé acceso de lectura y escritura a la cadena de bloques.
+2. Firmante: representa una cuenta de Ethereum que puede firmar transacciones.
 3. Contrato: un objeto Ethers.js que representa un contrato específico desplegado en cadena
 
 Utilizaremos el contrato ABI del paso anterior para crear nuestra instancia del contrato:
@@ -458,13 +458,13 @@ const helloWorldContract = new ethers.Contract(
 
 Obtenga más información sobre proveedores, firmantes y contratos en la documentación de [ethers.js](https://docs.ethers.io/v5/).
 
-### Lee el mensaje de inicio {#read-the-init-message}
+### Leer el mensaje de inicio {#read-the-init-message}
 
-Recuerda cuando implementamos nuestro contrato con el `initMessage = "¡Hola mundo!" `? Ahora vamos a leer ese mensaje almacenado en nuestro contrato inteligente e imprimirlo en la consola.
+¿Recuerda cuando implementamos nuestro contrato con el `initMessage = "Hello World!" `? Ahora vamos a leer ese mensaje almacenado en nuestro contrato inteligente e imprimirlo en la consola.
 
 En JavaScript, las funciones asíncronas se utilizan al interactuar con las redes. Para obtener más información sobre las funciones asíncronas, [lea este artículo de medium](https://blog.bitsrc.io/understanding-asynchronous-javascript-the-event-loop-74cd408419ff).
 
-Utilice el siguiente código para llamar a la función `mensaje` en nuestro contrato inteligente y leer el mensaje de inicio:
+Utilice el siguiente código para acttivar la función `message` en nuestro contrato inteligente y leer el mensaje de inicio:
 
 ```javascript
 // interact.js
@@ -488,9 +488,9 @@ The message is: Hello world!
 
 ### Actualizar el mensaje {#update-the-message}
 
-En lugar de solo leer el mensaje, ¡también podemos actualizar el mensaje guardado en nuestro contrato inteligente utilizando la función `update`! Muy chido, ¿verdad?
+En lugar de solo leer el mensaje, ¡también podemos actualizar el mensaje guardado en nuestro contrato inteligente utilizando la función `update`! No está mal, ¿verdad?
 
-Para actualizar el mensaje, podemos llamar directamente a la función `update` en nuestro objeto Contract instanciado:
+Para actualizar el mensaje, podemos activar directamente la función `update` en nuestro objeto Contract instanciado:
 
 ```javascript
 // interact.js
@@ -508,13 +508,13 @@ async function main() {
 main()
 ```
 
-Tenga en cuenta que en la línea 11, hacemos una llamada a `.wait()` en el objeto de transacción devuelto. Esto garantiza que nuestro script espere a que la transacción se mine en la cadena de bloques antes de salir de la función. Si la llamada `.wait()` no está incluida, es posible que el script no vea el valor `message` actualizado en el contrato.
+Tenga en cuenta que en la línea 11, activamos `.wait()` en el objeto de transacción devuelto. Esto garantiza que nuestro script espere a que la transacción se mine en la cadena de bloques antes de salir de la función. Si la activación `.wait()` no está incluida, es posible que el script no vea el valor `message` actualizado en el contrato.
 
-### Lee el nuevo mensaje {#read-the-new-message}
+### Leer el nuevo mensaje {#read-the-new-message}
 
-Deberías poder repetir el [paso anterior](#read-the-init-message) para leer el valor actualizado del `mensaje`. ¡Tómese un momento y vea si puede hacer los cambios necesarios para imprimir ese nuevo valor!
+Debería poder repetir el [paso anterior](#read-the-init-message) para leer el valor actualizado del `message`. ¡Dedique unos instantes y vea si puede hacer los cambios necesarios para imprimir ese nuevo valor!
 
-Si necesitas una pista, así es como debería ser tu archivo `interact.js` en este momento:
+A modo de ayuda visual, así es como debería ser su archivo `interact.js` en este momento:
 
 ```javascript
 // interact.js
@@ -558,7 +558,7 @@ main()
 
 ¡Ahora solo ejecuta el script y deberías poder ver el mensaje antiguo, el estado de la actualización y el nuevo mensaje impreso en tu terminal!
 
-`hardhat npx ejecuta scripts/interact.js --network goerli`
+`npx hardhat run scripts/interact.js --network goerli`
 
 ```
 The message is: Hello World!
@@ -566,11 +566,11 @@ Updating the message...
 The new message is: This is the new message.
 ```
 
-Mientras ejecuta ese script, puede notar que el paso `Actualice el mensaje...` tarda un tiempo en cargarse antes de que se cargue el nuevo mensaje. Eso se debe al proceso de minería; si tiene curiosidad sobre el seguimiento de las transacciones mientras se están minando, visite el [mempool de Alchemy](https://dashboard.alchemyapi.io/mempool) para ver el estado de una transacción. Si se elimina la transacción, también es útil comprobar [Goerli Etherscan](https://goerli.etherscan.io) y buscar el hash de su transacción.
+Mientras ejecuta ese script, puede notar que el paso `Updating the message...` tarda un tiempo en cargarse antes de que se cargue el nuevo mensaje. Eso se debe al proceso de minería; si tiene curiosidad sobre el seguimiento de las transacciones mientras se están minando, visite la [zona de espera de Alchemy](https://dashboard.alchemyapi.io/mempool) para ver el estado de una transacción. Si se elimina la transacción, también es útil comprobar [Goerli Etherscan](https://goerli.etherscan.io) y buscar el hash de su transacción.
 
-## Parte 3: Publica tu contrato inteligente en Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
+## Parte 3: Publicar su contrato inteligente en Etherscan {#part-3-publish-your-smart-contract-to-etherscan}
 
-Hiciste todo el trabajo duro para dar vida a tu contrato inteligente; ¡ahora es el momento de compartirlo con el mundo!
+Ya ha hecho la parte más dura para dar vida a su contrato inteligente; ¡ahora es el momento de compartirlo con el mundo!
 
 Al verificar su contrato inteligente en Etherscan, cualquiera puede ver su código fuente e interactuar con su contrato inteligente. ¡Empecemos!
 
@@ -578,17 +578,17 @@ Al verificar su contrato inteligente en Etherscan, cualquiera puede ver su códi
 
 Se necesita una clave API de Etherscan para verificar que es el propietario del contrato inteligente que está intentando publicar.
 
-Si aún no tienes una cuenta de Etherscan, [regístrate para obtener una cuenta](https://etherscan.io/register).
+Si aún no tiene una cuenta de Etherscan, [regístrese para obtenela](https://etherscan.io/register).
 
 Una vez que haya iniciado sesión, busque su nombre de usuario en la barra de navegación, pase el cursor sobre él y seleccione el botón **Mi perfil**.
 
-En tu página de perfil, deberías ver una barra de navegación lateral. En la barra de navegación lateral, seleccione **Teclas API**. A continuación, presione el botón "Añadir" para crear una nueva clave de API, nombre su aplicación **hello-world**y presione el botón **Crear nueva clave de API**.
+En su página de perfil, debería ver una barra de navegación lateral. En la barra de navegación lateral, seleccione **Teclas API**. A continuación, presione el botón «Añadir» para crear una nueva clave de API, nombre su aplicación **hello-world**y presione el botón **Crear nueva clave de API**.
 
-Su nueva clave de API debería aparecer en la tabla de claves de API. Copia la clave de la API en tu portapapeles.
+Su nueva clave de API debería aparecer en la tabla de claves de API. Copie la clave de la API en su portapapeles.
 
 A continuación, tenemos que añadir la clave de la API de Etherscan a nuestro archivo `.env`.
 
-Después de añadirlo, tu archivo `.env` debería verse así:
+Después de añadirlo, su archivo `.env` debería tener este aspecto:
 
 ```javascript
 API_URL = "https://eth-goerli.alchemyapi.io/v2/your-api-key"
@@ -602,13 +602,13 @@ ETHERSCAN_API_KEY = "your-etherscan-key"
 
 #### Instalar hardhat-etherscan {#install-hardhat-etherscan}
 
-Publicar su contrato en Etherscan usando Hardhat es sencillo. Primero tendrás que instalar el complemento `hardhat-etherscan` para empezar. `hardhat-etherscan` verificará automáticamente el código fuente del contrato inteligente y el ABI en Etherscan. Para añadir esto, en el directorio `hello-world` se ejecuta:
+Publicar su contrato en Etherscan usando Hardhat es sencillo. Primero tendrás que instalar el complemento `hardhat-etherscan` para empezar. `hardhat-etherscan` verificará automáticamente el código fuente del contrato inteligente y el ABI en Etherscan. Para añadirlo, en el directorio `hello-world` se ejecuta:
 
 ```text
 npm install --save-dev @nomiclabs/hardhat-etherscan
 ```
 
-Una vez instalado, incluya la siguiente declaración en la parte superior de su `hardhat.config.js`, y agregue las opciones de configuración de Etherscan:
+Una vez instalado, incluya la siguiente declaración en la parte superior de su `hardhat.config.js`, y añada las opciones de configuración de Etherscan:
 
 ```javascript
 // hardhat.config.js
@@ -637,7 +637,7 @@ module.exports = {
 }
 ```
 
-#### Verifique su contrato inteligente en Etherscan {#verify-your-smart-contract-on-etherscan}
+#### Verificar su contrato inteligente en Etherscan {#verify-your-smart-contract-on-etherscan}
 
 Asegúrese de que todos los archivos estén guardados y de que todas las variables `.env` estén configuradas correctamente.
 
@@ -647,9 +647,9 @@ Ejecute la tarea `verificar`, pasando la dirección del contrato y la red a dond
 npx hardhat verify --network goerli DEPLOYED_CONTRACT_ADDRESS 'Hello World!'
 ```
 
-Asegúrese de que `DEPLOYED_CONTRACT_ADDRESS` sea la dirección de su contrato inteligente implementado en la red de pruebas de Goerli. Además, el argumento final (`'¡Hola mundo!' `) debe ser el mismo valor de cadena utilizado [durante el paso de despliegue en la parte 1](#write-our-deploy-script).
+Asegúrese de que `DEPLOYED_CONTRACT_ADDRESS` sea la dirección de su contrato inteligente implementado en la red de pruebas de Goerli. Además, el argumento final (`'Hello World!' `) debe ser el mismo valor de cadena utilizado [durante el paso de despliegue en la parte 1](#write-our-deploy-script).
 
-Si todo va bien, verás el siguiente mensaje en tu terminal:
+Si todo va bien, aparecerá el siguiente mensaje en su terminal:
 
 ```text
 Successfully submitted source code for contract
@@ -661,40 +661,40 @@ Successfully verified contract HelloWorld on Etherscan.
 https://goerli.etherscan.io/address/<contract-address>#contracts
 ```
 
-¡Felicidades! ¡Tu código de contrato inteligente está en Etherescan!
+¡Felicidades! ¡Su código de contrato inteligente está en Etherescan!
 
-### ¡Echa un vistazo a tu contrato inteligente en Etherscan! {#check-out-your-smart-contract-on-etherscan}
+### ¡Eche un vistazo a su contrato inteligente en Etherscan! {#check-out-your-smart-contract-on-etherscan}
 
 Cuando navegue al enlace proporcionado en su terminal, ¡debería poder ver su código de contrato inteligente y ABI publicado en Etherscan!
 
-**Wahooo - ¡lo hiciste campeón! ¡Ahora cualquiera puede llamar o escribir a tu contrato inteligente! ¡Estamos deseando ver lo que construyes a continuación!**
+**Yuhuuuu ¡logrado, campeón! ¡Ahora cualquiera puede llamar o escribir a su contrato inteligente! ¡Estamos deseando ver lo que construye a continuación!**
 
-## Parte 4 - Integración de su contrato inteligente con la interfaz {#part-4-integrating-your-smart-contract-with-the-frontend}
+## Parte 4: Integrar su contrato inteligente con el frontend {#part-4-integrating-your-smart-contract-with-the-frontend}
 
-Al final de este tutorial, sabrás cómo:
+Al final de este tutorial, sabrá cómo:
 
-- Conecta una cartera MetaMask a tu dapp
-- Leer los datos de su contrato inteligente utilizando la API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
-- Firmar transacciones de Ethereum usando MetaMask
+- Conectar una cartera MetaMask a su DApp.
+- Leer los datos de su contrato inteligente utilizando la API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3).
+- Firmar transacciones de Ethereum usando MetaMask.
 
-Para este dapp, usaremos [React](https://reactjs.org/) como nuestro marco de interfaz; sin embargo, es importante tener en cuenta que no pasaremos mucho tiempo desglosando sus fundamentos, ya que nos centraremos principalmente en llevar la funcionalidad Web3 a nuestro proyecto.
+Para esta DApp, usaremos [React](https://reactjs.org/) como nuestro marco de frontend; sin embargo, es importante tener en cuenta que no pasaremos demasiado tiempo desglosando sus fundamentos, ya que nos centraremos principalmente en llevar la funcionalidad Web3 a nuestro proyecto.
 
-Como requisito previo, debes tener una comprensión de React a nivel principiante. Si no, recomendamos completar el tutorial oficial [Introducción a React](https://reactjs.org/tutorial/tutorial.html).
+Como requisito previo, debe conocimientos de React a nivel principiante. De lo contrario, le recomendamos completar el tutorial oficial [Introducción a React](https://reactjs.org/tutorial/tutorial.html).
 
 ### Clone los archivos de inicio {#clone-the-starter-files}
 
 Primero, vaya al [hello-world-part-four repositorio de GitHub](https://github.com/alchemyplatform/hello-world-part-four-tutorial) para obtener los archivos de inicio de este proyecto y clonar este repositorio en su máquina local.
 
-Abra el repositorio clonado localmente. Tenga en cuenta que contiene dos carpetas: `archivos de inicio` y `completado`.
+Abra el repositorio clonado localmente. Tenga en cuenta que contiene dos carpetas: `starter-files` y `completed`.
 
-- `archivos de inicio`- **estaremos trabajando en este directorio**, conectaremos la interfaz de usuario a su billetera Ethereum y al contrato inteligente que publicamos en Etherscan en [Parte 3](#part-3).
-- `completed`Contiene todo el tutorial completado y solo debe usarse como referencia si te quedas atascado.
+- `starter-files`: **estaremos trabajando en este directorio**, conectaremos la interfaz de usuario a su cartera Ethereum y al contrato inteligente que publicamos en Etherscan en la [Parte 3](#part-3).
+- `completed` contiene todo el tutorial completado y solo debe usarse como referencia si se queda atascado.
 
 A continuación, abra su copia de `starter-files` en su editor de código favorito y luego navegue hasta la carpeta `src`.
 
 Todo el código que escribiremos permanecerá en la carpeta `src`. Editaremos el componente `HelloWorld.js` y los archivos JavaScript `util/interact.js` para dar a nuestro proyecto la funcionalidad Web3.
 
-### Echa un vistazo a los archivos iniciales {#check-out-the-starter-files}
+### Echar un vistazo a los archivos iniciales {#check-out-the-starter-files}
 
 Antes de empezar a codificar, exploremos lo que se nos proporciona en los archivos de inicio.
 
@@ -715,7 +715,7 @@ Una vez que hayan terminado de instalarse, ejecute `npm start` en su terminal:
 npm start
 ```
 
-Al hacerlo, debería abrir [http://localhost:3000/](http://localhost:3000/) en su navegador, donde verá la interfaz de nuestro proyecto. Debe consistir en un campo \(un lugar para actualizar el mensaje almacenado en su contrato inteligente\), un botón "Conectar cartera" y un botón "Actualizar".
+Al hacerlo, debería abrir [http://localhost:3000/](http://localhost:3000/) en su navegador, donde verá la interfaz de nuestro proyecto. Debe consistir en un campo \(un lugar para actualizar el mensaje almacenado en su contrato inteligente\), un botón «Conectar cartera» y un botón «Actualizar».
 
 Si intentas hacer clic en cualquiera de los botones, te darás cuenta de que no funcionan, eso es porque todavía tenemos que programar su funcionalidad.
 
@@ -756,9 +756,9 @@ const [newMessage, setNewMessage] = useState("")
 Esto es lo que representa cada una de las variables:
 
 - `walletAddress`: cadena que almacena la dirección de la billetera del usuario
-- `status`- una cadena que almacena un mensaje útil que guía al usuario sobre cómo interactuar con el dapp
-- `mensaje` - una cadena que almacena el mensaje actual en el contrato inteligente
-- `newMessage` - una cadena que almacena el nuevo mensaje que se escribirá en el contrato inteligente
+- `status`: una cadena que almacena un mensaje útil que guía al usuario sobre cómo interactuar con la DApp.
+- `message`: una cadena que almacena el mensaje actual en el contrato inteligente.
+- `newMessage`: una cadena que almacena el nuevo mensaje que se escribirá en el contrato inteligente.
 
 Después de las variables de estado, verá cinco funciones no implementadas: `useEffect` ,`addSmartContractListener`, `addWalletListener` , `connectWalletPressed` y `onUpdatePressed`. Explicaremos lo que hacen a continuación:
 
@@ -787,10 +787,10 @@ const onUpdatePressed = async () => {
 }
 ```
 
-- [`useEffect`](https://reactjs.org/docs/hooks-effect.html)- este es un gancho de React que se llama después de renderizar su componente. Debido a que tiene una matriz vacía `[]` prop pasada a ella \(ver línea 4\), solo se llamará en el _primer_ renderizado del componente. Aquí cargaremos el mensaje actual almacenado en nuestro contrato inteligente, llamaremos a nuestros oyentes de contrato inteligente y billetera, y actualizaremos nuestra interfaz de usuario para reflejar si una billetera ya está conectada.
-- `addSmartContractListener`- esta función configura un oyente que vigilará el evento `UpdatedMessages` de nuestro contrato de HelloWorld y actualizará nuestra interfaz de usuario cuando se cambie el mensaje en nuestro contrato inteligente.
-- `addWalletListener`- esta función configura un oyente que detecta cambios en el estado de la cartera MetaMask del usuario, como cuando el usuario desconecta su cartera o cambia de dirección.
-- `connectWalletPressed`- esta función se llamará para conectar la cartera MetaMask del usuario a nuestra dapp.
+- [`useEffect`](https://reactjs.org/docs/hooks-effect.html): este es un gancho de React que se activa después de representar su componente. Debido a que tiene una propiedad de de matriz vacía `[]` integrada \(ver línea 4\), solo se activará en la _primera_ representación del componente. Aquí cargaremos el mensaje actual almacenado en nuestro contrato inteligente, activaremos nuestros oyentes de contrato inteligente y cartera, y actualizaremos nuestra interfaz de usuario para reflejar si una cartera ya está conectada.
+- `addSmartContractListener`: esta función configura un oyente que vigilará el evento `UpdatedMessages` de nuestro contrato HelloWorld y actualizará nuestra interfaz de usuario cuando se cambie el mensaje en nuestro contrato inteligente.
+- `addWalletListener`: esta función configura un oyente que detecta cambios en el estado de la cartera MetaMask del usuario, como cuando el usuario desconecta su cartera o cambia de dirección.
+- `connectWalletPressed`: esta función se activará para conectar la cartera MetaMask del usuario a nuestra DApp.
 - `onUpdatePressed` - esta función se llamará cuando el usuario quiera actualizar el mensaje almacenado en el contrato inteligente.
 
 Cerca del final de este archivo, tenemos la interfaz de usuario de nuestro componente.
@@ -835,23 +835,23 @@ return (
 )
 ```
 
-Si escaneas este código con cuidado, te darás cuenta de dónde usamos nuestras diversas variables de estado en nuestra interfaz de usuario:
+Si escanea este código con cuidado, observará dónde usamos nuestras diversas variables de estado en nuestra interfaz de usuario:
 
-- En las líneas 6-12, si la billetera del usuario está conectada \(es decir, `walletAddress.length > 0`\), mostramos una versión truncada del usuario `walletAddress` en el botón con el ID "walletButton;", de lo contrario, simplemente dice "Connect Wallet".
+- En las líneas 6-12, si la cartera del usuario está conectada \(es decir, `walletAddress.length > 0`\), mostramos una versión truncada del usuario `walletAddress` en el botón con el ID «walletButton»; de lo contrario, simplemente figura «Connect Wallet».
 - En la línea 17, mostramos el mensaje actual almacenado en el contrato inteligente, que se captura en la cadena `message`.
-- En las líneas 23-26, utilizamos un [componente controlado](https://reactjs.org/docs/forms.html#controlled-components) para actualizar nuestra variable de estado `newMessage` cuando cambia la entrada en el campo de texto.
+- En las líneas 23-26, utilizamos un [componente controlado](https://reactjs.org/docs/forms.html#controlled-components) para actualizar nuestra variable de estado `newMessage` cuando cambia el contenido del campo de texto.
 
-Además de nuestras variables de estado, también verá que las funciones `connectWalletPressed` y `onUpdatePressed` se llaman cuando se hace clic en los botones con los ID `publishButton` y `walletButton` respectivamente.
+Además de nuestras variables de estado, también verá que las funciones `connectWalletPressed` y `onUpdatePressed` se activan cuando se hace clic en los botones con las ID `publishButton` y `walletButton` respectivamente.
 
 Por último, abordemos dónde se ha añadido este componente `HelloWorld.js`.
 
-Si va al archivo `App.js`, que es el componente principal de React que actúa como contenedor para todos los demás componentes, verá que nuestro componente `HelloWorld.js` se inyecta en la línea 7.
+Si va al archivo `App.js`, que es el componente principal de React que actúa como contenedor para todos los demás componentes, verá que nuestro componente `HelloWorld.js` aparece en la línea 7.
 
-Por último, pero no menos importante, echemos un vistazo a un archivo más proporcionado para usted, el archivo `interact.js`.
+Por último, pero no por ello menos importante, echemos un vistazo a otro archivo que le proporcionamos, el archivo `interact.js`.
 
 #### El archivo `interact.js` {#the-interact-js-file}
 
-Debido a que queremos prescribir el paradigma [M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), querremos un archivo separado que contenga todas nuestras funciones para administrar la lógica, los datos y las reglas de nuestro dapp, y luego poder exportar esas funciones a nuestro frontend \(nuestro componente `HelloWorld.js`\).
+Dado que queremos prescribir el paradigma [M-V-C](https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93controller), deberemos tener un archivo por separado que contenga todas nuestras funciones para administrar la lógica, los datos y las reglas de nuestra DApp, para luego exportar esas funciones a nuestro frontend \(nuestro componente `HelloWorld.js`\).
 
 👆🏽¡Este es el propósito exacto de nuestro archivo `interact.js`!
 
@@ -871,33 +871,33 @@ const getCurrentWalletConnected = async () => {}
 export const updateMessage = async (message) => {}
 ```
 
-Notará en la parte superior del archivo que hemos comentado el objeto `helloWorldContract`. Más adelante en este tutorial, dejaremos de comentar este objeto e instanciaremos nuestro contrato inteligente en esta variable, que luego exportaremos a nuestro componente `HelloWorld.js`.
+Observará en la parte superior del archivo que hemos comentado el objeto `helloWorldContract`. Más adelante en este tutorial, dejaremos de comentar este objeto e instanciaremos nuestro contrato inteligente en esta variable, que luego exportaremos a nuestro componente `HelloWorld.js`.
 
 Las cuatro funciones no implementadas después de nuestro objeto `helloWorldContract` hacen lo siguiente:
 
-- `loadCurrentMessage` - esta función maneja la lógica de cargar el mensaje actual almacenado en el contrato inteligente. Hará una llamada _read_ al contrato inteligente de Hello World utilizando la [API de Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
-- `connectWallet` - esta función conectará el MetaMask del usuario a nuestra dapp.
-- `getCurrentWalletConnected` - esta función comprobará si una cuenta de Ethereum ya está conectada a nuestra dapp al cargar la página y actualizará nuestra interfaz de usuario en consecuencia.
-- `updateMessage` - esta función actualizará el mensaje almacenado en el contrato inteligente. Hará una llamada _write_ al contrato inteligente de Hello World, por lo que la cartera de MetaMask del usuario tendrá que firmar una transacción de Ethereum para actualizar el mensaje.
+- `loadCurrentMessage`: esta función maneja la lógica de cargar el mensaje actual almacenado en el contrato inteligente. Hará leer _read_ el contrato inteligente de Hello World utilizando la [API de Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3).
+- `connectWallet`: esta función conectará el MetaMask del usuario a nuestra DApp.
+- `getCurrentWalletConnected`: esta función comprobará si una cuenta de Ethereum ya está conectada a nuestra DApp al cargar la página y actualizará nuestra interfaz de usuario en consecuencia.
+- `updateMessage`: esta función actualizará el mensaje almacenado en el contrato inteligente. Hará una escritura _write_ al contrato inteligente de Hello World, por lo que la cartera de MetaMask del usuario tendrá que firmar una transacción de Ethereum para actualizar el mensaje.
 
-Ahora que entendemos con qué estamos trabajando, ¡vamos a averiguar cómo leer de nuestro contrato inteligente!
+Ahora que entendemos con qué estamos trabajando, ¡vamos a averiguar cómo leer desde nuestro contrato inteligente!
 
-### Paso 3: Lea de su contrato inteligente {#step-3-read-from-your-smart-contract}
+### Paso 3: Leer desde su contrato inteligente {#step-3-read-from-your-smart-contract}
 
-Para leer de su contrato inteligente, tendrá que configurar con éxito:
+Para leer desde su contrato inteligente, tendrá que configurar con éxito:
 
 - Una conexión API a la cadena Ethereum
 - Una instancia cargada de su contrato inteligente
-- Una función para llamar a su función de contrato inteligente
+- Una función para activar su función de contrato inteligente
 - Un oyente para estar atento a las actualizaciones cuando cambien los datos que esté leyendo del contrato inteligente
 
-Parecen demasiados pasos, ¡pero no te preocupes! ¡Te indicaremos como realizar cada uno de ellos paso a paso! :\)
+Parecen demasiados pasos, ¡pero no se preocupe! ¡Le indicaremos cómo realizar cada uno de ellos paso a paso! :\)
 
 #### Establecer una conexión API con la cadena Ethereum {#establish-an-api-connection-to-the-ethereum-chain}
 
-Recuerdas cómo en el apartado 2 de este tutorial, utilizamos nuestra [llave de Alchemy Web3 para leer desde nuestro contrato inteligente](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library)? También necesitaras una llave de Alchemy Web3 en tu dapp para leer de la cadena de bloques.
+Si lo recuerda, en el apartado 2 de este tutorial, utilizamos nuestra [llave de Alchemy Web3 para leer desde nuestro contrato inteligente](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract/interacting-with-a-smart-contract#step-1-install-web3-library). También necesitara una clave de Alchemy Web3 en tu DApp para leer desde la cadena de bloques.
 
-Si aún no lo tienes, instala primero [Alchemy](https://github.com/alchemyplatform/alchemy-web3) ingresando al directorio de raíz de `starter-files` y ejecutando el siguiente código en tu terminal:
+Si aún no la tienes, instálela primero [Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) navegando al directorio raíz de su `starter-files` y ejecutando el siguiente código en su terminal:
 
 ```text
 npm install @alch/alchemy-web3
@@ -905,21 +905,21 @@ npm install @alch/alchemy-web3
 
 [ Alchemy Web3](https://github.com/alchemyplatform/alchemy-web3) está construido sobre [Web3](https://docs.web3js.org/), de esta manera proporciona metodos mejorados de la API y otros beneficios importantes para que tu vida como desarrollador de Web3 sea mucho más fácil. Se diseñó para requerir una configuración mínima, por lo que puede comenzar a usarla en su aplicación de inmediato.
 
-Luego, instala la librería [dotenv](https://www.npmjs.com/package/dotenv) en tu directorio de proyectos, así tendremos un lugar seguro para almancenar nuestra clave de la API una vez que lo obtengamos.
+Seguidamente, instale la biblioteca [dotenv](https://www.npmjs.com/package/dotenv) en su directorio de proyectos, así tendremos un lugar seguro donde almacenar nuestra clave de la API una vez que la obtengamos.
 
 ```text
 npm install dotenv --save
 ```
 
-Para nuestra dapp, ** utilizaremos nuestra clave para la API de Websockets ** en lugar de nuestra clave para la API HTTP, ya que nos permitirá configurar un listener que detectará cuando el mensaje guardado en el contrato inteligente cambie.
+Para nuestra DApp, ** utilizaremos nuestra clave para la API de Websockets ** en lugar de nuestra clave para la API HTTP, ya que nos permitirá configurar un oyente que detectará cuando el mensaje guardado en el contrato inteligente cambie.
 
-Una vez que tengas la clave de la API, crea un archivo `.env` en tu directorio de raíz y agregale tu url de Alchemy Websockets. Acontinuación, tu archivo `.env` debería verse así:
+Una vez que tenga la clave de la API, cree un archivo `.env` en su directorio de raíz y añadele su URL de Alchemy Websockets. A continuación, su archivo `.env` debería tener este aspecto:
 
 ```javascript
 REACT_APP_ALCHEMY_KEY = wss://eth-goerli.ws.alchemyapi.io/v2/<key>
 ```
 
-¡Estamos listos para poner en marcha nuestra Alchemy Web3 endpoint en nuestra dapp! Volvamos de nuevo a nuestro `interact.js`, que se encuentra anidada dentro de nuestro archivo `util` y agrega el siguiente código al comienzo del archivo:
+¡Estamos listos para poner en marcha nuestra terminal Alchemy Web3 en nuestra DApp! Volvamos de nuevo a nuestro `interact.js`, que se encuentra anidado dentro de nuestro archivo `util` y añada el siguiente código al comienzo del archivo:
 
 ```javascript
 // interact.js
@@ -932,23 +932,23 @@ const web3 = createAlchemyWeb3(alchemyKey)
 //export const helloWorldContract;
 ```
 
-Primero importamos la clave Alchemy de nuestro archivo `.env` y luego pasamos nuestro `alchemyKey` a `createAlchemyWeb3` para establecer nuestra Alchemy Web3 endpoint.
+Primero importamos la clave Alchemy de nuestro archivo `.env` y luego pasamos nuestro `alchemyKey` a `createAlchemyWeb3` para establecer nuestra terminal Alchemy Web3.
 
-Una vez listo el endpoint, ¡es momento de cargar nuestro Contrato inteligente!
+Una vez lista la terminal, ¡es momento de cargar nuestro contrato inteligente!
 
-#### Carga de tu Contrato inteligente Hello World {#loading-your-hello-world-smart-contract}
+#### Cargar su contrato inteligente Hello World {#loading-your-hello-world-smart-contract}
 
-Para cargar tu Contrato inteligente Hello World, necesitaras la dirección del contrato y ABI, puedes encontrar ambos en Etherscan si has completado previamente [ la parte 3 de este tutorial.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
+Para cargar su contrato inteligente Hello World, necesitará la dirección del contrato y ABI, puede encontrar ambos en Etherscan si ha completado previamente [ la Parte 3 de este tutorial.](/developers/tutorials/hello-world-smart-contract-fullstack/#part-3-publish-your-smart-contract-to-etherscan-part-3-publish-your-smart-contract-to-etherscan)
 
-#### Cómo obtener tu contrato ABI de Etherscan {#how-to-get-your-contract-abi-from-etherscan}
+#### Cómo obtener su contrato ABI de Etherscan {#how-to-get-your-contract-abi-from-etherscan}
 
-Si omitiste la parte 3 de este tutorial, puedes utilizar el contrato Hello World con dirección [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). Puedes encontrar su ABI [aquí](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
+Si omitió la Parte 3 de este tutorial, puede utilizar el contrato Hello World con dirección [0x6f3f635A9762B47954229Ea479b4541eAF402A6A](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code). Puedes encontrar su ABI [aquí](https://goerli.etherscan.io/address/0x6f3f635a9762b47954229ea479b4541eaf402a6a#code).
 
-Se necesita un contrato ABI para especificar qué función utilizará un contrato y para asegurar que la función devolverá datos en el formato esperado. Una vez que hayamos copiado nuestro contrato ABI, lo guardaremos como un archivo JSON que se llamará `contract-abi.json` en tu directorio `src`.
+Se necesita un contrato ABI para especificar qué función utilizará un contrato y para asegurar que la función devolverá datos en el formato esperado. Una vez que hayamos copiado nuestro contrato ABI, lo guardaremos como un archivo JSON que se llamará `contract-abi.json` en su directorio `src`.
 
-Tu contrato -abi.json deberá ser guardado en tu carpeta src.
+Deberá guardar su contrato -abi.json en su carpeta src.
 
-Con la dirección de nuestro contrato ABI y AlchemyWeb3 endpoint, podemos utilizar el [contract method](https://docs.web3js.org/api/web3-eth-contract/class/Contract) para cargar una instancia de nuestro Contrato inteligente. Importa tu contrato ABI dentro del archivo `interact.js` y agrega la direción de tu contratro.
+Con la dirección de nuestro contrato ABI y la terminal AlchemyWeb3, podemos utilizar el [contract method](https://docs.web3js.org/api/web3-eth-contract/class/Contract) para cargar una instancia de nuestro contrato inteligente. Importe su contrato ABI dentro del archivo `interact.js` y añada la direción de su contrato.
 
 ```javascript
 // interact.js
@@ -957,7 +957,7 @@ const contractABI = require("../contract-abi.json")
 const contractAddress = "0x6f3f635A9762B47954229Ea479b4541eAF402A6A"
 ```
 
-Ahora podemos suprimir comentario de nuestra variable `helloWorldContract`, y cargar el contrato inteligente utilizando nuestro AlchemyWeb3 endpoint:
+Ahora podemos suprimir comentarios de nuestra variable `helloWorldContract`, y cargar el contrato inteligente utilizando nuestra terminal AlchemyWeb3:
 
 ```javascript
 // interact.js
@@ -967,7 +967,7 @@ export const helloWorldContract = new web3.eth.Contract(
 )
 ```
 
-A modo de repaso, las primeras 12 lineas de tu `interact.js` ahora deberían verse así:
+A modo de repaso, las primeras 12 lineas de su `interact.js` ahora deberían tener este aspecto:
 
 ```javascript
 // interact.js
@@ -988,11 +988,11 @@ export const helloWorldContract = new web3.eth.Contract(
 
 Ahora que tenemos cargado nuestro contrato, ¡podemos implementar nuestra función `loadCurrentMessage`!
 
-#### Implementación de `loadCurrentMessage` en tu archivo `interact.js` {#implementing-loadCurrentMessage-in-your-interact-js-file}
+#### Implementar `loadCurrentMessage` en su archivo `interact.js` {#implementing-loadCurrentMessage-in-your-interact-js-file}
 
-Esta función es muy sencilla. Haremos una simple llamada async Web3 para así leer de nuestro contrato. Nuestra función devolverá el mensaje almacenado en el contrato inteligente:
+Esta función es muy sencilla. Haremos una simple activación asíncrona Web3 para así leer de nuestro contrato. Nuestra función devolverá el mensaje almacenado en el contrato inteligente:
 
-Actualiza el `loadCurrentMessage` en tu archivo `interact.js` de la siguiente manera:
+Actualice el `loadCurrentMessage` en su archivo `interact.js` de la siguiente manera:
 
 ```javascript
 // interact.js
@@ -1015,19 +1015,19 @@ useEffect(async () => {
 }, [])
 ```
 
-Recuerda, solo queremos que nuestro `loadCurrentMessage` sea llamado una sola vez durante la primera renderización del componente. Pronto implementaremos `addSmartContractListener` para que actualice automáticamente la UI cada vez que cambie el mensaje en el contrato inteligente.
+Recuerde, solo queremos que nuestro `loadCurrentMessage` se active una sola vez durante la primera representación del componente. Pronto implementaremos `addSmartContractListener` para que actualice automáticamente la IU cada vez que cambie el mensaje en el contrato inteligente.
 
-Antes de profundizar sobre nuestro listener, ¡revisemos lo que tenemos hasta ahora! Guarda tus archivos `HelloWorld.js` y `interact.js` y luego ve a [http://localhost:3000/](http://localhost:3000/)
+Antes de profundizar sobre nuestro oyente, ¡revisemos lo que tenemos hasta ahora! Guarde sus archivos `HelloWorld.js` y `interact.js` y luego vaya a [http://localhost:3000/](http://localhost:3000/)
 
-Notaras que el mensaje actual ya no dice "Sin conexión a la red". En su lugar reflejará el mensaje almacenado en el contrato inteligente. ¡Fantástico!
+Notará que el mensaje actual ya no dice: «Sin conexión a la red». En su lugar reflejará el mensaje almacenado en el contrato inteligente. ¡Fantástico!
 
-#### Ahora, tu UI debería reflejar el mensaje almacenado en el contrato inteligente {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
+#### Ahora, su IU debería reflejar el mensaje almacenado en el contrato inteligente {#your-UI-should-now-reflect-the-message-stored-in-the-smart-contract}
 
-Hablando del listener...
+Con respecto al oyente...
 
-#### Implementa `addSmartContractListener` {#implement-addsmartcontractlistener}
+#### Implementar `addSmartContractListener` {#implement-addsmartcontractlistener}
 
-Si haces memoria, en el archivo `HelloWorld.sol` que redactamos en [ la parte 1 de esta serie de tutoriales](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), recordaras que existe un evento de contrato inteligente que se llama `UpdatedMessages` y que se emite una vez que la función `update` es utilizada \(ver lineas 9 y 27\):
+Si hace memoria, en el archivo `HelloWorld.sol` que escribimos en [ la Parte 1 de esta serie de tutoriales](https://docs.alchemy.com/alchemy/tutorials/hello-world-smart-contract#step-10-write-our-contract), recordará que existía un evento de contrato inteligente llamado `UpdatedMessages` y que se emite una vez que se utiliza la función `update` \(ver líneas 9 y 27\):
 
 ```javascript
 // HelloWorld.sol
@@ -1037,7 +1037,7 @@ Si haces memoria, en el archivo `HelloWorld.sol` que redactamos en [ la parte 1 
 pragma solidity ^0.7.3;
 
 // Defines a contract named `HelloWorld`.
-// Un contrato es una colección de funciones y datos (su estado). Una vez desplegado, un contrato reside en una dirección específica en la blockchain de Ethereum. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
+// Un contrato es una colección de funciones y datos (su estado). Once deployed, a contract resides at a specific address on the Ethereum blockchain. Learn more: https://solidity.readthedocs.io/en/v0.5.10/structure-of-a-contract.html
 contract HelloWorld {
 
    //Emitted when update function is called
@@ -1065,11 +1065,11 @@ contract HelloWorld {
 }
 ```
 
-Los eventos del contrato inteligente son una forma de comunicar que ha pasado algo \(es decir, hubo un _event_\) en la blockchain que repercutió en tu aplicación front-end. Podría tratarse de un 'listening' para eventos específicos y , al mismo tiempo, sobre las medidas de acción a implementar cuando ocurren.
+Los eventos del contrato inteligente son una forma de comunicar que ha pasado algo \(es decir, que se produjo un _evento_\) en la cadena de bloques que repercutió en su aplicación frontend. Podría tratarse de un «oyente» para eventos específicos y, al mismo tiempo, implementar las medidas de acción oportunas cuando ocurren.
 
-La función `addSmartContractListener` prestará atención a nuestro evento de contrato inteligente Hello World `UpdatedMessages`, y actualizará nuestro UI para que muestre el nuevo mensaje.
+La función `addSmartContractListener` prestará atención a nuestro evento de contrato inteligente Hello World `UpdatedMessages`, y actualizará nuestra IU para que muestre el nuevo mensaje.
 
-Modifica `addSmartContractListener` de la siguiente manera:
+Modifique `addSmartContractListener` de la siguiente manera:
 
 ```javascript
 // HelloWorld.js
@@ -1087,12 +1087,12 @@ function addSmartContractListener() {
 }
 ```
 
-Desmenucemos lo que pasa cuando el listener detecta un evento:
+Desmenucemos lo que pasa cuando el oyente detecta un evento:
 
-- Si ocurre un error al momento de emitir el evento, este se verá reflejado en la UI a través de nuestra variable de estado `status`.
-- Caso contrario, utilizaremos el objeto devuelto `data`. `data.returnValues` es un arreglo indexado a cero donde el primer elemento almancena el mensaje anterior, mientras que el segundo elemento almacena el mensaje actualizado. En conjunto, en un evento eficaz colocaremos nuestro string `message` al mensaje actualizado, resetearemos el string `newMessage`, y actualizaremos nuestra variable de estado `status` para que refleje que un nuevo mensaje se ha publicado en nuestro contrato inteligente.
+- Si ocurre un error en el momento de emitir el evento, este se verá reflejado en la IU a través de nuestra variable de estado `status`.
+- En caso contrario, utilizaremos el objeto devuelto `data`. `data.returnValues` es un arreglo indexado a cero, donde el primer elemento almacena el mensaje anterior, mientras que el segundo elemento almacena el mensaje actualizado. En conjunto, en un evento eficaz colocaremos nuestra cadena `message` en el mensaje actualizado, resetearemos la cadena `newMessage`, y actualizaremos nuestra variable de estado `status` para que refleje que se ha publicado un nuevo mensaje en nuestro contrato inteligente.
 
-Por último, ejecutemos nuestro listener en nuestra función `useEffect` para que se inicialize en la primera devolución del componente `HelloWorld.js`. Entonces, tu función `useEffect` debería verse así:
+Por último, ejecutaremos nuestro oyente en nuestra función `useEffect` para que se inicialice en la primera representación del componente `HelloWorld.js`. Entonces, su función `useEffect` debería tener el siguiente aspecto:
 
 ```javascript
 // HelloWorld.js
@@ -1104,25 +1104,25 @@ useEffect(async () => {
 }, [])
 ```
 
-Ahora que podemos leer de nuestro contrato inteligente, también ¡sería genial descifrar cómo podemos escribirlo! Sin embargo, para escribir en nuestra dapp, primero debemos tener una wallet de Ethereum conectada a la misma.
+Ahora que podemos leer desde nuestro contrato inteligente, lo siguiente sería descifrar cómo podemos escribirlo. Sin embargo, para escribir en nuestra DApp, primero debemos tener una cartera de Ethereum conectada a la misma.
 
-Por lo tanto, la próxima cuestión que abordaremos será crear nuestra wallet de Ethereum \(MetaMask\) para luego conectarla con nuestra dapp.
+Por lo tanto, la próxima cuestión que abordaremos será crear nuestra cartera de Ethereum \(MetaMask\) para luego conectarla con nuestra DApp.
 
-### Paso 4: Crea tu wallet de Ethereum {#step-4-set-up-your-ethereum-wallet}
+### Paso 4: Crear su cartera de Ethereum {#step-4-set-up-your-ethereum-wallet}
 
-Para poder escribir en la chain de Ethereum, los usuarios deben firmar las transacciones utilizando la clave privada de su wallet virtual. Para este tutorial, utilizaremos [MetaMask](https://metamask.io/), una billetera virtual en el browser que se utiliza para administrar la dirección de tu cuenta de Ethereum, ya que hace que la firma de esta transacción sea bastante simple para el usuario final.
+Antes de escribir nada en la cadena de Ethereum, los usuarios deben firmar las transacciones utilizando la clave privada de su cartera virtual. Para este tutorial, utilizaremos [MetaMask](https://metamask.io/), una cartera virtual en el navegador que se utiliza para administrar la dirección de su cuenta de Ethereum, ya que hace que la firma de esta transacción sea bastante simple para el usuario final.
 
 Si quiere más información sobre cómo funcionan las transacciones en Ethereum, eche un vistazo a [esta página](/developers/docs/transactions/) de Ethereum Foundation.
 
 #### Descargar MetaMask {#download-metamask}
 
-Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download.html). Cuando estes creando una cuenta, o si ya tienes una, asegurate de cambiar de “Goerli Test Network” en la parte superior \(para que no se trate de dinero real\).
+Puede descargar y crear una cuenta Metamask gratis [aquí](https://metamask.io/download.html). Cuando esté creando una cuenta, o si ya tiene una, asegúrese de cambiar de «Goerli Test Network» en la parte superior \(para que no se trate de dinero real\).
 
 #### Añada ether a partir de un grifo {#add-ether-from-a-faucet}
 
-Necesitaremos algunos Eth falsos para poder firmar una transacción en la blockchain de Ethereum. Para obtener Eth puedes ir a [FaucETH](https://fauceth.komputing.org) e ingresar la direcciíon de tu cuenta Goerli, haz click en “Request funds”, luego selecciona “Ethereum Testnet Goerli” y por último, haz click en el botón “Request funds” nuevamente. Debería ver el Eth en su cuenta de MetaMask poco después.
+Necesitaremos algunos Eth falsos para poder firmar una transacción en la cadena de bloques de Ethereum. Para obtener Eth, puede ir a [FaucETH](https://fauceth.komputing.org) e introducir la dirección de su cuenta Goerli, haga clic en «Request funds», luego seleccionar «Ethereum Testnet Goerli» y, por último, hacer clic en el botón «Request funds» nuevamente. Debería ver el Eth en su cuenta de MetaMask poco después.
 
-#### Revisa tu saldo {#check-your-balance}
+#### Revisar su saldo {#check-your-balance}
 
 Para verificar que nuestro saldo esté ahí, realicemos una solicitud [eth_getBalance](https://docs.alchemyapi.io/alchemy/documentation/alchemy-api-reference/json-rpc#eth_getbalance) usando la [herramienta de compositor de Alchemy](https://composer.alchemyapi.io/?composer_state=%7B%22network%22%3A0%2C%22methodName%22%3A%22eth_getBalance%22%2C%22paramValues%22%3A%5B%22%22%2C%22latest%22%5D%7D). Esto devolverá la cantidad de Eth en nuestra billetera. Después de introducir la dirección de su cuenta de Metamask y hacer clic en «Send Request» (Enviar Solicitud), debería ver una respuesta como esta:
 
@@ -1140,7 +1140,7 @@ Ahora que nuestra billetera de MetaMask está configurada, vamos a conectar nues
 
 #### Función `connectWallet` {#the-connectWallet-function}
 
-En nuestro archivo `interact.js`, implementaremos la función `connectWallet`, el cual podremos ejecutar en nuestro componente `HelloWorld.js` posteriormente.
+En nuestro archivo `interact.js`, implementaremos la función `connectWallet`, en la cual podremos ejecutar en nuestro componente `HelloWorld.js` posteriormente.
 
 Procedamos a modificar `connectWallet` como se muestra a continuación:
 
@@ -1183,30 +1183,28 @@ export const connectWallet = async () => {
 }
 ```
 
-Entonces ¿Qué hace exactamente este extenso código?
+Entonces, ¿qué hace exactamente este extenso código?
 
-Bueno, en primer lugar, verifica que `window.ethereum` este habilitado en tu navegador.
+Bueno, en primer lugar, verifica que `window.ethereum` esté habilitado en su navegador.
 
-`window.ethereum` es una API global inyectada por MetaMask y otros proveedores de billeteras que permite a los sitios web solicitar las cuentas de Ethereum de los usuarios. Si es aprobado, puede leer información de la blockchain a la que está conectado el usuario y sugerir que este firme mensajes y transacciones. Revise la [documentación de MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) para obtener más información.
+`window.ethereum` es una API global inyectada por MetaMask y otros proveedores de billeteras que permite a los sitios web solicitar las cuentas de Ethereum de los usuarios. Si se aprueba, puede leer información de la cadena de bloques a la que está conectado el usuario y sugerir que este firme mensajes y transacciones. Revise la [documentación de MetaMask](https://docs.metamask.io/guide/ethereum-provider.html#table-of-contents) para obtener más información.
 
 Si `window.ethereum` _no está_ presente, eso significa que MetaMask no está instalado. Esto resulta en la devolución de un objeto JSON, donde el `address` devuelto es una cadena vacía y el objeto JSX `status` muestra que el usuario debe instalar MetaMask.
 
 Ahora, si `window.ethereum` _está_ presente, las cosas se ponen interesantes.
 
-Al utilizar un try/catch loop, intentaremos conectarnos a MetaMask ejecutando
+Al utilizar un bucle de intentar/atrapar, intentaremos conectarnos a MetaMask ejecutando [`window.ethereum.request({ method: "eth_requestAccounts" });`](https://docs.metamask.io/guide/rpc-api.html#eth-requestaccounts). La invocación de esta función abrirá MetaMask en el navegador, donde se le solicitará al usuario conectar su billetera a su dapp.
 
-window.ethereum.request({ method: "eth_requestAccounts" });. La invocación de esta función abrirá MetaMask en el navegador, donde se le solicitará al usuario conectar su billetera a su dapp.
-
-- Si el usuario decide conectarse, `method: "eth_requestAccounts"` devolverá un arreglo que contiene todas las direcciones de cuenta del usuario que se conectaron a la dapp. De igual manera, nuestra función `connectWallet` devolverá un objeto JSON que contine la _primera_ `address` de este arreglo \(ver la línea 9\) y un mensaje de `status` que solicita al usuario escribir un mensaje al contrato inteligente.
+- Si el usuario decide conectarse, `method: "eth_requestAccounts"` devolverá una matriz que contiene todas las direcciones de cuenta del usuario que se conectaron a la DApp. De igual manera, nuestra función `connectWallet` devolverá un objeto JSON que contine la _primera_ `address` de este arreglo \(ver la línea 9\) y un mensaje de `status` que solicita al usuario escribir un mensaje al contrato inteligente.
 - Si el usuario rechaza la conexión, el objeto JSON tendrá una cadena vacía para la `address` devuelta y un mensaje de `status` donde se refleje que el usuario rechazó la conexión.
 
-Una vez escrita la función `connectWallet`, el siguiente paso es ejecutarlo en nuestro componente `HelloWorld.js`.
+Una vez escrita la función `connectWallet`, el siguiente paso es ejecutarla en nuestro componente `HelloWorld.js`.
 
 
 
-#### Agrega la función `connectWallet` a tu componente de UI `HelloWorld.js` {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
+#### Añada la función `connectWallet` a su componente de IU `HelloWorld.js` {#add-the-connectWallet-function-to-your-HelloWorld-js-ui-component}
 
-Dirígitete a la función `onnectWalletPressed` en `HelloWorld.js`, y actualizalo de la siguiente manera:
+Navegue hasta la función `onnectWalletPressed` en `HelloWorld.js`, y actualícela de la siguiente manera:
 
 
 
@@ -1221,27 +1219,27 @@ const connectWalletPressed = async () => {
 ```
 
 
-¿Notas como gran parte de nuestra funcionalidad se abstrae de nuestro componente `HelloWorld.js` del archivo `interact.js`? ¡Esto es así para cumplir con el paradigma M-V-C!
+¿Nota cómo gran parte de nuestra funcionalidad se abstrae de nuestro componente `HelloWorld.js` del archivo `interact.js`? ¡Esto es así para cumplir con el paradigma M-V-C!
 
 En `connectWalletPressed`, simplemente hacemos una llamada en espera a nuestra función `conectWallet` importada y, utilizando su respuesta, actualizamos nuestras variables `status` y `walletAddress` a través de sus hooks de estado.
 
-Guardemos ambos archivos \(`HelloWorld.js` and `interact.js`\) y probemos nuestra UI.
+Guardemos ambos archivos \(`HelloWorld.js` and `interact.js`\) y probemos nuestra IU.
 
-Abre tu navegador con el link [http://localhost:3000/](http://localhost:3000/), y presiona el botón "Conectar Wallet" en el margen superior derecho de la página.
+Abra su navegador con el enlace [http://localhost:3000/](http://localhost:3000/), y pulse el botón «Connect Wallet» en el margen superior derecho de la página.
 
 Si tiene MetaMask instalado, se le debería solicitar conectar su billetera a su dapp. Acepte la invitación para establecer la conexión.
 
-Deberías poder visualizar que, ahora, el botón de wallet muestra que tu dirección está conectada.  ¡Fantástico!
+Debería poder visualizar que, ahora, el botón de la cartera muestra que su dirección está conectada.  ¡Fantástico!
 
 A continuación, pruebe actualizar la página... esto es extraño. Nuestro botón de billetera nos está solicitando conectar MetaMask, aunque ya está conectado...
 
-¡No tengas miedo! Podemos solucionarlo facilmente, implementando `getCurrentWalletConnected` (¿entiendes?). Esto verificará si ya existe una dirección conectada a nuestra dapp y, en consecuencia, actualizará nuestra UI.
+¡No tenga miedo! Podemos solucionarlo fácilmente, implementando `getCurrentWalletConnected` (¿vale?). Esto verificará si ya existe una dirección conectada a nuestra DApp y, en consecuencia, actualizará nuestra IU.
 
 
 
-#### Función `getCurrentWalletConnected` {#the-getcurrentwalletconnected-function}
+#### La función `getCurrentWalletConnected` {#the-getcurrentwalletconnected-function}
 
-Actualiza tu función `getCurrentWalletConnected` en el archivo `interact.js` como se muestra a continuación:
+Actualice su función `getCurrentWalletConnected` en el archivo `interact.js` como se muestra a continuación:
 
 
 
@@ -1295,7 +1293,7 @@ Este código es _bastante_ similar a la función `connectWallet` que escribimos 
 
 La principal diferencia es que, en vez de llamar al método `eth_requestAccount`, que abre MetaMask para que el usuario conecte su billetera, aquí llamamos al método `eth_accounts`, que simplemente devuelve un arreglo que contiene las direcciones de MetaMask que se encuentran conectadas a nuestra dapp.
 
-Para ver esta función, lo podemos ejecutar en nuestra función `useEffect` de nuestro componente `HelloWorld.js`:
+Para ver esta función en acción, la podemos ejecutar en el `useEffect` de nuestro componente `HelloWorld.js`:
 
 
 
@@ -1316,17 +1314,17 @@ useEffect(async () => {
 
 Note que usamos la respuesta de nuestra llamada a `getCurrentWalletConnected` para actualizar nuestras variables de estado `walletAddress` y `status`.
 
-Una vez que agregues este código, refrescaremos la ventana de nuestro navegador.
+Una vez que añada este código, refrescaremos la ventana de nuestro navegador.
 
-¡Magnífico! El botón debería decir que está conectado y mostrar una vista previa de la dirección de su billetera conectada, incluso después de actualizar la página.
+¡Biennnnnn! El botón debería decir que está conectado y mostrar una vista previa de la dirección de su billetera conectada, incluso después de actualizar la página.
 
 
 
-#### Implementa `addWalletListener` {#implement-addwalletlistener}
+#### Implementar `addWalletListener` {#implement-addwalletlistener}
 
 El último paso en la configuración de la billetera de dapp es implementar el oyente de billetera para que nuestra interfaz se actualice cuando el estado de la billetera cambie, por ejemplo, cuando el usuario se desconecte o cambie de cuenta.
 
-En tu archivo `HelloWorld.js`, modifica tu función `addWalletListener` como se ve a continuación:
+En su archivo `HelloWorld.js`, modifique su función `addWalletListener` como se ve a continuación:
 
 
 
@@ -1358,7 +1356,7 @@ function addWalletListener() {
 ```
 
 
-En este punto, apuesto a que ni siquiera necesitas de nuestra ayuda para entender lo que ocurre. Pero, para ser más exhaustivos, desglosémoslo rápidamente:
+Llegados a este punto, apuesto a que ni siquiera necesita de nuestra ayuda para entender lo que ocurre. Pero, para ser más exhaustivos, desglosémoslo rápidamente:
 
 - Primero, nuestra función verifica si `window.ethereum` está habilitado \(esto es si MetaMask está instalado\). 
     - Si no lo está, simplemente establecemos nuestra variable de estado `status` a una cadena JSX que solicite al usuario instalar MetaMask.
@@ -1385,27 +1383,27 @@ useEffect(async () => {
 ```
 
 
-¡Y eso es todo! Hemos terminado de programar toda la funcionalidad de nuestra wallet exitosamente! Nuestra última tarea es actualizar el mensaje almacenado en nuestro contrato inteligente.
+¡Y eso es todo! ¡Hemos terminado de programar toda la funcionalidad de nuestra cartera exitosamente! Nuestra última tarea es actualizar el mensaje almacenado en nuestro contrato inteligente.
 
 
 
-### Paso 6: Implementa la función `updateMessage` {#step-6-implement-the-updateMessage-function}
+### Paso 6: Implementar la función `updateMessage` {#step-6-implement-the-updateMessage-function}
 
-¡Hemos legado final! En el `updateMessage` de tu archivo `interact.js`, haremos lo siguiente:
+Vale, y con esto ¡hemos llegado final! En el `updateMessage` de su archivo `interact.js`, haremos lo siguiente:
 
-1. Asegurate de que el mensaje que deseas publicar en nuestro contrato inteligente sea válido
-2. Firmamos la transacción utilizando MetaMask
-3. Ejecuta esta función desde nuestro componente frontend `HelloWorld.js`
+1. Asegúrese de que el mensaje que desea publicar en nuestro contrato inteligente sea válido.
+2. Firmamos la transacción utilizando MetaMask.
+3. Ejecutamos esta función desde nuestro componente frontend `HelloWorld.js`.
 
-No nos llevará mucho ¡terminemos esta dapp!
+No nos llevará mucho ¡terminemos esta DApp!
 
 
 
 #### Manejo de errores de entrada {#input-error-handling}
 
-Tiene sentido tener algún chequeo de error en el input al comienzo de la función.
+Obviamente, deberíamos hacer alguna comprobación de errores al principio de la función.
 
-Queremos que nuestra función retorne rápido si, no existe una extensión de MetaMask instalada, no existe una wallet conectada \(i.e. the `address` es un string vacío\), o `message` también es un string vacío. Agreguemos el siguiente chequeo de error a `updateMessage`:
+Queremos que nuestra función retorne rápido si, no existe una extensión de MetaMask instalada, no existe una cartera conectada \(p. ej., la `address` es una cadena vacía\), o `message` también es una cadena vacía. Añadamos el siguiente control de errores a `updateMessage`:
 
 
 
@@ -1429,13 +1427,13 @@ export const updateMessage = async (address, message) => {
 ```
 
 
-Ahora que cuenta con un chegueo de error adecuado ¡ha llegado el momento de firmar la transacción con MetaMask!
+Ahora que cuenta con un control de errores adecuado ¡ha llegado el momento de firmar la transacción con MetaMask!
 
 
 
 #### Firma de nuestra transacción {#signing-our-transaction}
 
-Si ya estás cómodo con las transacciones tradicionales web3 de Ethereum, el código que escribiremos a continuación te resultará bastante familiar. Debajo de tu código de chequeo de error, agrega lo siguiente a `pdateMessage`:
+Si se siente cómodo con las transacciones tradicionales en Web3 de Ethereum, el código que escribiremos a continuación le resultará bastante familiar. Debajo de su código de control de errores, añada lo siguiente a `pdateMessage`:
 
 
 
@@ -1482,14 +1480,14 @@ Veamos qué es lo que ocurre.  Primero, establezcamos los parámetros para nuest
 - `from` muestra quién firma la transacción, la variable `address` muestra lo que pasamos a la función
 - `data` contiene la ejecución del método `update` de nuestro contrato inteligente Hello World, que recibe la variable de tipo cadena `message` como una entrada
 
-Luego, realizamos una ejecución en espera, `window.ethereum.request`, donde le pedimos a MetaMask que firme la transacción. Ten en cuenta que, en las lineas 11 y 12, especificamos nuestro método ETH `eth_sendTransaction` y le pasamos `transactionParameters`.
+Luego, realizamos una ejecución en espera, `window.ethereum.request`, donde le pedimos a MetaMask que firme la transacción. Tenga en cuenta que, en las líneas 11 y 12, especificamos nuestro método ETH `eth_sendTransaction` y le pasamos nuestros `transactionParameters`.
 
 En este punto, MetaMask se abrirá en el navegador y solicitará al usuario firmar o rechazar la transacción.
 
-- Si la transacción tiene éxito, la función devolverá un objeto de JSON donde el string JSX `status` le pedirá al usuario que revise Etherscan para obtener más información sobre su transacción.
-- Si la transacción falla, la función devolverá un objeto JSON donde el string `status` transmitirá el mensaje de error.
+- Si la transacción tiene éxito, la función devolverá un objeto de JSON donde la cadena JSX `status` le pedirá al usuario que revise Etherscan para obtener más información sobre su transacción.
+- Si la transacción falla, la función devolverá un objeto JSON donde la cadena `status` transmitirá el mensaje de error.
 
-Entonces, nuestra función `updateMessage` debería verse así:
+Entonces, nuestra función `updateMessage` debería tener el siguiente aspecto:
 
 
 
@@ -1550,7 +1548,7 @@ Por último, necesitamos conectar nuestra función `updateMessage` a nuestro com
 
 
 
-#### Conecta `updateMessage` al frontend `HelloWorld.js` {#connect-updatemessage-to-the-helloworld-js-frontend}
+#### Conectar `updateMessage` al frontend `HelloWorld.js` {#connect-updatemessage-to-the-helloworld-js-frontend}
 
 Nuestra función `onUpdatePressed` deberá realizar una ejecución en espera a la función importada `updateMessage` y modificar la variable de estado `status` para que muestre si funcionó o falló nuestra transacción:
 
@@ -1566,20 +1564,20 @@ const onUpdatePressed = async () => {
 ```
 
 
-Es simple y claro. Y adivina qué... ¡TU DAPP ESTÁ TERMINADA!
+Es simple y claro. Y adivine qué... ¡SU DAPP ESTÁ TERMINADA!
 
-¡Adelante, ve a probar el botón **Update**!
+¡Adelante, vaya a probar el botón **Update**!
 
 
 
-### Crea tu propia dapp personalizada {#make-your-own-custom-dapp}
+### Crear su propia DApp personalizada {#make-your-own-custom-dapp}
 
-¡Bravo! ¡Has llegado al final del tutorial! A modo de repaso, esto es lo que aprendiste:
+¡Bravo! ¡Ha llegado al final del tutorial! A modo de repaso, esto es lo que hemos aprendido:
 
-- como conectar una wallet de MetaMask a tu proyecto dapp
-- Leer los datos de su contrato inteligente utilizando la API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3)
-- Firmar transacciones de Ethereum usando MetaMask
+- Cómo conectar una cartera de MetaMask a su proyecto de DApp
+- Leer los datos de su contrato inteligente utilizando la API [Alchemy Web3](https://docs.alchemy.com/alchemy/documentation/alchemy-web3).
+- Firmar transacciones de Ethereum usando MetaMask.
 
-Ya estás preparado para aplicar los conocimientos que adquiriste en este tutorial, y así, crear tu propio proyecto dapp personalizado! De más está decir que, ante cualquier duda, puedes pedirnos ayuda en [AlchemyDiscord](https://discord.gg/gWuC7zB). 🧙‍♂️
+Ya estás preparado para aplicar los conocimientos que ha adquirido en este tutorial, ¡y así, crear su propio proyecto de DApp personalizada! Está de más decir que, ante cualquier duda, siempre puede pedirnos ayuda en el canal [Discord de Alchemy](https://discord.gg/gWuC7zB). 🧙‍♂️
 
 Cuando finalice este tutorial, cuéntenos cómo fue su experiencia o comparta algún comentario etiquetándonos en Twitter [@alchemyplatform](https://twitter.com/AlchemyPlatform).

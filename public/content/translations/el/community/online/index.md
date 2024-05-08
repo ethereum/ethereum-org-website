@@ -29,8 +29,8 @@ lang: el
 <SocialListItem socialIcon="discord"><Link to="https://discord.matos.club/">Matos Discord</Link> - κοινότητα δημιουργών web3, όπου δημιουργοί, βιομηχανικοί δημιουργοί και λάτρεις του Ethereum κάνουν παρέα. Είμαστε παθιασμένοι με την ανάπτυξη, τον σχεδιασμό και την κουλτούρα web3. Ελάτε να δημιουργήσετε μαζί μας.</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://gitter.im/ethereum/solidity">Solidity Gitter</Link> - συνομιλία για ανάπτυξη με τη solidity (Gitter).</SocialListItem>
 <SocialListItem socialIcon="webpage"><Link to="https://matrix.to/#/#ethereum_solidity:gitter.im">Solidity Matrix</Link> - συνομιλία για ανάπτυξη με τη solidity (Matrix)</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> _- φόρουμ ερωτήσεων και απαντήσεων_</SocialListItem>
-<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> _- αποκεντρωμένο φόρουμ ερωτήσεων και απαντήσεων_</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://ethereum.stackexchange.com/">Ethereum Stack Exchange</Link> *- φόρουμ ερωτήσεων και απαντήσεων*</SocialListItem>
+<SocialListItem socialIcon="webpage"><Link to="https://peeranha.io/">Peeranha</Link> *- αποκεντρωμένο φόρουμ ερωτήσεων και απαντήσεων*</SocialListItem>
 
 ## YouTube και Twitter {#youtube-and-twitter}
 
@@ -41,7 +41,7 @@ lang: el
 
 <Divider />
 
-<Callout emoji=":classical_building:" titleKey="page-community-daos-callout-title" descriptionKey="page-community-daos-callout-description">
+<Callout emoji=":classical_building:" titleKey="page-community:page-community-daos-callout-title" descriptionKey="page-community:page-community-daos-callout-description">
   <div>
     <ButtonLink to="/community/get-involved/#decentralized-autonomous-organizations-daos">
       Μάθετε περισσότερα για τους DAO

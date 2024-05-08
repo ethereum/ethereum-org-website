@@ -393,7 +393,7 @@ const WalletTable = ({
                           {hasPersonasLabels && (
                             <Flex gap={1.5} wrap="wrap">
                               {walletPersonas.map((persona) => (
-                                <Tag key={persona} label={t(persona)} />
+                                <Tag key={persona} label={t(persona)} variant="highContrast" />
                               ))}
                             </Flex>
                           )}
